@@ -1,8 +1,0 @@
-The widespread use of firewalls on the modern Internet, many of the
-packets that traceroute(8) sends out end up being filtered, making it
-impossible to completely trace the path to the destination. However,
-in many cases, these firewalls will permit inbound TCP packets to
-specific ports that hosts sitting behind the firewall are listening for
-connections on. By sending out TCP SYN packets instead of UDP or ICMP
-ECHO packets, tcptraceroute is able to bypass the most common firewall
-filters.

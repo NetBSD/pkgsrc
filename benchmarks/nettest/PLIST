@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
-bin/nettest
-bin/nettestd
-man/man8/nettest.8

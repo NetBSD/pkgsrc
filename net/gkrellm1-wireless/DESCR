@@ -1,4 +1,0 @@
-gkrellmwireless is a plugin for gkrellm that shows the signal
-strength/quality/noise of a wireless ethernet card.
-
-Currently only wi(4) (Lucent ORiNOCO and derivatives) interfaces are supported.

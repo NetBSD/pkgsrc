@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/08/25 19:22:35 jlam Exp $
-
-SHA1 (oaf-0.6.10.tar.bz2) = d8eaff6b3bc953fc4158f55b03ba92cb197518c5
-Size (oaf-0.6.10.tar.bz2) = 435621 bytes
-SHA1 (patch-ac) = 28fd433c41209b9f3355e5f039f4f9d30b940a55
-SHA1 (patch-ag) = 57f54e650bacad8ef82c0165ba395ec225e372dc

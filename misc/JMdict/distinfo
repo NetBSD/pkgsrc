@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/08/23 00:29:35 wiz Exp $
-
-SHA1 (JMdict-2004.02/jmdict_proj_desc.html) = ecf204ff0dbfc6f92016979ffbe0816ed237a08d
-Size (JMdict-2004.02/jmdict_proj_desc.html) = 5030 bytes
-SHA1 (JMdict-2004.02/JMdict.gz) = 5f2db655af7790e03d65c5a0ac1436795d257d90
-Size (JMdict-2004.02/JMdict.gz) = 5830046 bytes
-SHA1 (JMdict-2004.02/JMdict.dtd) = df676669b5dacbf82bb970efc4d96169ab0ee603
-Size (JMdict-2004.02/JMdict.dtd) = 12642 bytes

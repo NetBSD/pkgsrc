@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/10/12 07:32:22 rh Exp $
-
-SHA1 (glchess-0.4.7.tar.gz) = 96f33e75920be067e097a7bcfbe9131a94eb149a
-Size (glchess-0.4.7.tar.gz) = 126979 bytes
-SHA1 (patch-aa) = edbaa29af90d4b5fcfff98df27636686bd7bc7b1
-SHA1 (patch-ab) = 8270b9d23c4103045bb72bdcb5d11311722c8db2

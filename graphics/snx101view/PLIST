@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/05 07:36:58 hamajima Exp $
-bin/snx101shot
-bin/snx101view
-man/cat1/snx101shot.0
-man/cat1/snx101view.0
-man/man1/snx101shot.1
-man/man1/snx101view.1

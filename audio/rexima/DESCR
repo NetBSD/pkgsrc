@@ -1,4 +1,0 @@
-rexima is a curses-based interactive mixer which can also be used
-from the command-line. It runs on any terminal with a screen size
-of 80x24 or greater. It's intended to be a simple, general, usable
-mixer without all the chrome usually present in other mixers.

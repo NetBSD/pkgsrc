@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/07/16 10:56:57 wiz Exp $
-
-SHA1 (dc_gui2-0.75.tar.gz) = ac99b99e292d1646c8f87e5016762795e6f721b1
-Size (dc_gui2-0.75.tar.gz) = 612248 bytes
-SHA1 (patch-aa) = ac14a12d740b030f068b9947f87fc4a29b84313a
-SHA1 (patch-ac) = 5a78d9f28de9b8df1d02c821b39ac14ec00e4622
-SHA1 (patch-af) = c680de415395ac112627e9b55ce5aabdf5f7ece4

@@ -1,3 +1,0 @@
-MIME-tools is a collection of Perl5 MIME:: modules for parsing,
-decoding, and generating single- or multipart (even nested multipart)
-MIME messages.

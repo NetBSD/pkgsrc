@@ -1,6 +1,0 @@
-UCL is a portable lossless data compression library written in ANSI C.
-It implements a number of NRV compression algorithms that achieve an
-excellent compression ratio while allowing very fast decompression.
-
-Compared to LZO, the UCL algorithms achieve a better compression ratio
-but decompression is a little bit slower.

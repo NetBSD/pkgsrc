@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:18:55 zuntum Exp $
-bin/cdpack
-libexec/cdgen.awk
-man/man1/cdpack.1
-man/cat1/cdpack.0

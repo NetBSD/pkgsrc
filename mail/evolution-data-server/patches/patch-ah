@@ -1,14 +1,0 @@
-$NetBSD: patch-ah,v 1.1 2004/11/18 14:20:26 sketch Exp $
-
---- ./calendar/backends/file/e-cal-backend-file-events.c.orig	2003-11-03 18:24:02.000000000 +0000
-+++ ./calendar/backends/file/e-cal-backend-file-events.c	2004-11-18 07:42:17.178309000 +0000
-@@ -30,6 +30,9 @@
- 
- /* Private part of the CalBackendFileEvents structure */
- struct _ECalBackendFileEventsPrivate {
-+#if defined(__SUNPRO_C)
-+	unsigned char a_variable_to_avoid_empty_struct;
-+#endif
- };
- 
- 

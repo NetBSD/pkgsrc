@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:28 wiz Exp $
-
-SHA1 (Wais-2.311.tar.gz) = d918b34ac082ac5b8deb81a13566e41b39242ed2
-Size (Wais-2.311.tar.gz) = 54722 bytes
-SHA1 (patch-aa) = 3deb424eaeaa07efdd3c86a3b5505396d043fdf0
-SHA1 (patch-ab) = 62f5c7bd7d2087f75bd349d0fb2102b5f0f51c77
-SHA1 (patch-ac) = c1ae0bdd9fa016aa53a7f8efe9b029715bfe9da6

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:23 zuntum Exp $
-sbin/fping
-man/man8/fping.8

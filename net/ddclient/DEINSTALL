@@ -1,7 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.2 2003/08/30 20:22:58 jlam Exp $
-
-case ${STAGE} in
-POST-DEINSTALL)
-	${RM} -f @PKG_SYSCONFDIR@/ddclient.cache
-	;;
-esac

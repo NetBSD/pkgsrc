@@ -1,0 +1,65 @@
+This revision of the pkgsrc/mk infrastructure does a lot of cleanup to 
+remove unnecessary ${MAKE} recursion, as well as reorganization to make it 
+easier to read and maintain.  For the most part, the changes should be 
+backwards compatible, and no externally visible variables have changed 
+(except where noted below).
+
+Notable changes:
+
+* Reorganization:  bsd.pkg.mk has a new, cleaner structure that is 
+  explicitly delineated into sections.  It's not perfect, but this provides 
+  a tentative structure for further future cleanups.
+
+* Use of more variable modifiers:  The make(1) modifiers :D and :U are now 
+  used quite a bit more to reduce the visual complexity of chains of .if 
+  blocks.  ::!= and :sh are used for deferred shell evaluation.
+
+* Phase based build:  bsd.prefs.mk defines the new variable PKG_PHASES, 
+  which contains a list of what phases *could* be run in the given make(1) 
+  instance.  This allows for conditional parsing of .mk fragments based on 
+  whether or not the data in question is needed.  (For instance, a recursive 
+  "make fetch" need not include compilation tool definitions.)
+
+* USE_*:  Some parts of bsd.pkg.mk for automatic handling of common 
+  dependencies (USE_PERL5, INFO_FILES, ...) have been factored out into the 
+  new file bsd.pkg.use.mk.
+
+* ALL_ENV:  This new variable is included into all of CONFIGURE_ENV,
+  MAKE_ENV, and SCRIPTS_ENV, to help reduce multiple settings of these
+  individual variables.
+
+* BUILD_DEFS_FIXED:  Like BUILD_DEFS, but the values are assumed to be fixed 
+  (not directly user configurable in mk.conf) and thus will not be printed 
+  in the pre-extract notice about configurable variables.
+
+* BUILD_ENV:  Because there is no longer build recursion within a package's 
+  Makefile, this is only used to propagate environment values to tools via 
+  the wrapper scripts in bsd.wrapper.mk.  These values will not be seen by 
+  non-wrappered programs anymore.
+
+* EVAL_PREFIX:  In order to allow this to be set before the requested 
+  package is installed, this now creates variables that do not call pkg_info 
+  until the variable itself is evaluated.  This means that such variables 
+  should not be used in := expressions or .if/.for arguments.
+
+* PATH/PREPEND_PATH:  Similarly to EVAL_PREFIX, PREPEND_PATH takes effect 
+  when the variable PATH is actually expanded.  So don't use := on PATH; 
+  only add to PREPEND_PATH.
+
+* "depends":  This is a new phase of the build which executes between 
+  "checksum" and "extract".  It factors out the dependency handling into its 
+  own stage, to separate the logic and make it easier to follow in 
+  bsd.pkg.mk.  There is no longer a "pre-install-depends"; things which once 
+  attached tasks to that now use "pre-extract".
+
+* "test":  This is now a true phase of the build which executes between 
+  "build" and "install".  It is skipped automatically if PKGSRC_RUN_TEST is 
+  not set to YES (as before).  Having it as a real phase means that it works 
+  more amicably with the phase-based build framework.
+
+* "show-var-noeval", "show-vars-noeval":  In order to preserve 
+  compatibility, calling "make show-var" will set PKG_PHASES (see above) to 
+  all possible values.  "show-var[s]-noeval" does the same thing, except 
+  that PKG_PHASES is left empty (to exclude unnecessary .mk code).
+
+[More TBD]

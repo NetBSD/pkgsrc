@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/05 21:56:17 rh Exp $
-bin/diction
-bin/style
-man/man1/diction.1
-man/man1/style.1
-share/diction/C
-share/diction/de
-share/diction/en
-@dirrm share/diction

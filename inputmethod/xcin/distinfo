@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/04 08:47:00 uebayasi Exp $
-
-SHA1 (xcin-2.5.3.pre2.tar.gz) = 27e4c47e09c44e92e3a3afc9e08134e1485f6795
-Size (xcin-2.5.3.pre2.tar.gz) = 1433915 bytes
-SHA1 (patch-aa) = f192f038e048d7118ea7969b12e424b5ba9903a9
-SHA1 (patch-ab) = 36c4c9e5ec17a45db62fc08c2d07cc0a9ff72ae2
-SHA1 (patch-ac) = b727da5616ee89e23a9aee86a66b287376f39431
-SHA1 (patch-ad) = c39bea80e15a1283e42855ea8ed25cddf8522b56

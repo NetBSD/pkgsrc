@@ -1,3 +1,0 @@
-p4pr produces a file from the Perforce depot with each line annotated
-with the change, revision, and branch from which it came. It takes
-its time, but the output is invaluable.

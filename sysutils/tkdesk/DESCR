@@ -1,6 +1,0 @@
-TkDesk is a graphical file manager for Unix and the X-Window System. It offers
-a very rich set of file operations and services, and provides the user with an
-immense amount of configurability. TkDesk's configuration flexibility results
-from the use of Tcl/Tk as the primary implementation language. Another benefit
-of using Tcl/Tk is that TkDesk is very portable and runs on virtually any Unix
-platform.

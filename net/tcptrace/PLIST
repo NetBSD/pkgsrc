@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/20 08:28:56 grant Exp $
-bin/tcptrace
-man/man1/tcptrace.1
-share/doc/tcptrace/COPYRIGHT
-share/doc/tcptrace/FAQ
-share/doc/tcptrace/README
-share/doc/tcptrace/README.tput_graphs
-@dirrm share/doc/tcptrace

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:41 zuntum Exp $
-bin/cksfv
-share/doc/cksfv/README
-@dirrm share/doc/cksfv

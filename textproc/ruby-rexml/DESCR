@@ -1,6 +1,0 @@
-REXML is an XML 1.0 compliant, reasonably fast, non-validating XML
-parser. It has an API that is designed to be intuitive,
-straightforward. and terse. REXML includes a tree model parser, a SAX2
-streaming parser, and a pull parser. It also includes a full XPath
-implementation. All of REXML's parsers pass 100% of the Oasis XML
-non-validating tests.

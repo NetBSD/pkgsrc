@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/05/06 17:41:56 jmmv Exp $
-
-Note:  For proper operation, your terminal setting must have "-extproc"
-set.  This can be checked with "stty -a".  Alternatively, you can run
-the script "yacas.sh" instead of directly running the binary program
-"yacas".
-
-===========================================================================

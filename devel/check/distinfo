@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/09/27 20:41:19 cube Exp $
-
-SHA1 (check-0.9.1.tar.gz) = 8fa632d083b6b6fd7ff8cd3bc267d42a92732dcf
-Size (check-0.9.1.tar.gz) = 158743 bytes
-SHA1 (patch-aa) = 959c2a5b72eb722b54b8c486b2a69f8202c0a053

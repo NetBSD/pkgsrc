@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/10/14 15:31:40 tv Exp $
-
-SHA1 (guile-oops-0.9.0.tar.gz) = c5d1473f2e555002c710751db6b5149b3877f339
-Size (guile-oops-0.9.0.tar.gz) = 448313 bytes
-SHA1 (patch-aa) = e85028272aa888d71198afd7f13bd72758dada86

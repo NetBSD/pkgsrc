@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2004/09/21 01:40:17 dmcmahill Exp $
-
-SHA1 (fastcap-2.0-18Sep92.tgz) = 7ad255cfe33c60428e934b87298951829331e4d5
-Size (fastcap-2.0-18Sep92.tgz) = 1392318 bytes
-SHA1 (patch-aa) = 489b5f8716627f9c9297e8d11f1cfb0e1777b3fe
-SHA1 (patch-ab) = 4336ebcb0ba385e6937129735653db20d48d186f
-SHA1 (patch-ac) = 3b3b6d461d5875dfdbaf8af16546887f57279b88
-SHA1 (patch-ad) = a9d971f0990d5cf04651afd73689170ce1eb0f13
-SHA1 (patch-ae) = fd04e26454f89661a02e37fc51770746af108fd1

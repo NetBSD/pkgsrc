@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/03/19 18:21:07 jmmv Exp $
-
-SHA1 (edb-1.0.3.tar.gz) = ebea40d5616f97909e35fb112772bd23ec05d4ea
-Size (edb-1.0.3.tar.gz) = 502287 bytes
-SHA1 (patch-aa) = c09acbee2b445b3b77fd75b8d6264a68fc5bc983

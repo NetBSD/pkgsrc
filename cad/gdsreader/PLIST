@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/14 02:18:25 dmcmahill Exp $
-bin/gdsreader
-share/examples/${PKGNAME}/README
-share/examples/${PKGNAME}/layers.config
-share/examples/${PKGNAME}/test.gds
-@dirrm share/examples/${PKGNAME}

@@ -1,5 +1,0 @@
-  Calamaris parses Squid, NetCache, Inktomi Traffic Server, Oops! proxy server,
-and Novell Internet Caching Service with its relatives (i.e. Compaq Tasksmart)
-logfiles and generates reports about peak-usage, request-methods, status-report
-of incoming and outgoing requests, second and top-level destinations,
-content-types, and performance.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2004/04/28 11:48:54 adam Exp $
-
-SHA1 (openslp-1.0.11.tar.gz) = 222afa54b565b19f0de942f7b686d883c3a9fa2c
-Size (openslp-1.0.11.tar.gz) = 608138 bytes
-SHA1 (patch-aa) = fc8420f9bc0834e7c80cee1a1b3eb551ab6cc9a1
-SHA1 (patch-ab) = 9d9bd52b40ab2ffa6b619bbdf93453f2c9b3aebd

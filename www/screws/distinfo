@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2004/11/22 00:09:46 kristerw Exp $
-
-SHA1 (screws-0.54.tar.gz) = 87114e17d14f092e943a3a29345a532cfa7e3ca5
-Size (screws-0.54.tar.gz) = 828711 bytes
-SHA1 (patch-aa) = e66df78e90ab66cc51060bfeea1f807d95256fc6
-SHA1 (patch-ab) = 5149e050e7eb7b675a97bbf1a789178b0550d853

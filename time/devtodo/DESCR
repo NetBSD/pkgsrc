@@ -1,9 +1,0 @@
-todo is a program aimed specifically at programmers (but usable by
-anybody at the terminal) to aid in day-to-day development.
-
-It maintains a list of items that have yet to be completed. This
-allows the programmer to track outstanding bugs or items that need
-to be completed with very little effort.
-
-Items can be prioritised and can also be displayed in a hierarchy,
-so that one item may depend on another.

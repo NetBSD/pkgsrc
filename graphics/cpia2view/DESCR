@@ -1,4 +1,0 @@
-USB cameras based CPiA2 Utility Programs 0.03 for NetBSD
-
-cpia2shot ... simple image capture program ( output stdout JPEG file )
-cpia2view ... sequential image viewer program ( about 20fps )

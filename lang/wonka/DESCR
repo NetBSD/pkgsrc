@@ -1,5 +1,0 @@
-Wonka is ACUNIA's cleanroom Virtual Machine for the Java(tm) language.
-It is extremely portable and self-contained, and can optionally be
-used with its own real-time executive (OSwaldTM) to provide a complete
-solution for embedded devices.  It is a full implementation of the
-Java language, not just a subset.  And it's Open Source.

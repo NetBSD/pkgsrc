@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:17 jlam Exp $
-lib/xfce4/panel-plugins/libxmms_plugin.la
-share/xfce4/xmms-plugin/xmms-plugin-prev.png
-share/xfce4/xmms-plugin/xmms-plugin-play.png
-share/xfce4/xmms-plugin/xmms-plugin-pause.png
-share/xfce4/xmms-plugin/xmms-plugin-stop.png
-share/xfce4/xmms-plugin/xmms-plugin-next.png
-@dirrm share/xfce4/xmms-plugin

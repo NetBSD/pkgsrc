@@ -1,3 +1,0 @@
-diffstat is a simple filter that reads the output of the diff(1) program, and
-produces a histogram of the total number of lines that were changed.  It is
-useful for scanning a patch file to see which files were changed.

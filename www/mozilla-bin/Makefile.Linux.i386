@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.Linux.i386,v 1.5 2004/01/04 05:01:02 grant Exp $
-
-DISTNAME=	mozilla-i686-pc-linux-gnu-${MOZ_VER}
-
-MOZ_PLATFORM=	linux

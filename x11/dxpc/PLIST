@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:34 zuntum Exp $
-bin/dxpc
-man/man1/dxpc.1

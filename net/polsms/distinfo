@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/07/12 00:32:19 zuntum Exp $
-
-SHA1 (sms-1.9.2d.tar.gz) = df7a75c74a7d45ee7fbfe6a0e833f8118d4d1457
-Size (sms-1.9.2d.tar.gz) = 91251 bytes
-SHA1 (patch-aa) = 78fc9b9c5612d72c589e678a74d24136960cf749
-SHA1 (patch-ab) = f31182167d15faa848dd667476ace0758ee170ac

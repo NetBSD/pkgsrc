@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/05 22:37:41 rh Exp $
-
-SHA1 (lpairs-1.0.tar.gz) = 6b49034ba1af2468034921ea46473267f82ac672
-Size (lpairs-1.0.tar.gz) = 415321 bytes
-SHA1 (patch-aa) = a86973e5cb69750fc8d3ed90c945aefbcc230aac
-SHA1 (patch-ab) = 1ca6c292d1b1cfcaf6dcc6d5c52a299e5e431c4c

@@ -1,2 +1,0 @@
-This perl5 module is for parsing and manipulating DNS zone files. It can be
-used to pull all the resource records into an anonymous hash structure.

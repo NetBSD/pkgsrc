@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.catinstall,v 1.1 2002/01/19 15:12:12 kim Exp $
-man/cat8/chat.0
-man/cat8/pppd.0
-man/cat8/pppstats.0

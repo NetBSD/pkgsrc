@@ -1,5 +1,0 @@
-Text::Substitute substitutes the contents of a hash into a file or text string.
-
-It includes a limited set of conditionals, looping, and the ability
-to include other files. It was designed primarily for generating
-web content.

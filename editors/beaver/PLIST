@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/19 08:36:38 salo Exp $
-bin/beaver
-man/man1/beaver.1
-share/beaver/bl/example1.bl
-share/beaver/bl/example2.bl
-share/beaver/bl/glib.bl
-share/pixmaps/beaver.png
-@dirrm share/beaver/bl
-@dirrm share/beaver

@@ -1,13 +1,0 @@
-$NetBSD: patch-ai,v 1.1 2003/12/30 12:18:56 gavan Exp $
-
---- libgnomevfs/gnome-vfs-handle.c.orig	2001-07-16 19:21:06.000000000 +0100
-+++ libgnomevfs/gnome-vfs-handle.c
-@@ -27,6 +27,8 @@
- #include "gnome-vfs.h"
- #include "gnome-vfs-private.h"
- 
-+#undef tell
-+
- 
- struct GnomeVFSHandle {
- 	/* URI of the file being accessed through the handle.  */

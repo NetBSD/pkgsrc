@@ -1,4 +1,0 @@
-sl is a well-known joke program which shows an animated SL (steam
-locomotive) running across the terminal.
-It is intended to be run when you carelessly type `sl' instead of `ls'.
-Some options of ls(1) are supported.

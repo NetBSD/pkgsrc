@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/12 19:37:08 wiz Exp $
-
-To use "newmkdep" either use "make MKDEP=newmkdep ..." or add an
-assignment like this to "/etc/mk.conf":
-
-MKDEP = newmkdep
-
-===========================================================================

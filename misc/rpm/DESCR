@@ -1,4 +1,0 @@
-This is the Red Hat Package Manager.  It is used to manipulate Red Hat
-packages, much in the same way as the pkg_* tools are used in FreeBSD
-and NetBSD.  rpm's come in their own format, and are typically used in
-the Linux community for binary package administration.

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/14 11:22:40 jmmv Exp $
-
-SHA1 (pekwm-0.1.3.tar.bz2) = be56ab7e293e6ec0801b015e874d34774412ce28
-Size (pekwm-0.1.3.tar.bz2) = 1694563 bytes
-SHA1 (patch-aa) = 02f320d8fa63840a32cc2bb7560323bc9a91b1ac
-SHA1 (patch-ab) = 9067eb28df34833ce715df76be068d8ef5b8b53a
-SHA1 (patch-ac) = ec40e2f7b1fb43283b9c3bb43102cca8c0a3950c
-SHA1 (patch-ad) = 9e874b53a310fe92a5dfca337393a39b84d9c8c1

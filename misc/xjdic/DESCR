@@ -1,4 +1,0 @@
-XJDIC is an  electronic  Japanese-English  dictionary  program  designed  to
-operate  in  the  X11 window environment.  In particular,  it must run in an
-"xterm" environment which has Japanese language support such as provided  by
-"kterm" or internationalized xterm, aixterm, etc.

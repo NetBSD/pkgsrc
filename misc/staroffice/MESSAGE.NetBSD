@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2003/08/16 07:01:51 reed Exp $
-
-  Please note that under NetBSD the program will pop up a requester,
-  complaining that it is unable to load the 'PluginManager' component.
-  This is normal and can be ignored (you can simply click away the
-  requester).
-
-===========================================================================

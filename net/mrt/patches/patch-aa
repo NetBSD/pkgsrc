@@ -1,8 +1,0 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 17:36:43 itojun Exp $
---- configure-	Tue Aug 15 21:09:33 2000
-+++ configure	Tue Aug 15 21:09:46 2000
-@@ -2843,3 +2843,3 @@
-   rm -rf conftest*
--    	    LIBS="$LIBS -L/usr/local/v6/lib -linet6"
-+#    	    LIBS="$LIBS -L/usr/local/v6/lib -linet6"
-             cat >> confdefs.h <<\EOF

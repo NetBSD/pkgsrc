@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/27 15:58:30 agc Exp $
-bin/awka
-include/libawka.h
-lib/libawka.a
-man/man1/awka.1
-man/man5/awka-elm.5
-man/man5/awka-elmref.5

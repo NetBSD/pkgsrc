@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:03:28 zuntum Exp $
-bin/${TARGET_ARCH}-dlltool
-bin/${TARGET_ARCH}-windres
-${TARGET_ARCH}/bin/dlltool
-${TARGET_ARCH}/bin/windres
-${TARGET_ARCH}/include/assert.h

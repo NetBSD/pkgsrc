@@ -1,4 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/03/28 17:42:09 minskim Exp $
-
-SHA1 (tcl-fbsql-1.06/fbsql.c) = c67315d94c80b808246b0a4075b1bcc0b3663a4f
-Size (tcl-fbsql-1.06/fbsql.c) = 22965 bytes

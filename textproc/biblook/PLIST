@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:20 zuntum Exp $
-bin/bibindex
-bin/biblook
-man/man1/bibindex.1
-man/man1/biblook.1

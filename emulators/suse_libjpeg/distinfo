@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/11/25 11:01:15 schmonz Exp $
-
-SHA1 (suse73/i386/libjpeg.rpm) = 28075093237695b4dab0db1478b7d39da645b471
-Size (suse73/i386/libjpeg.rpm) = 153709 bytes
-SHA1 (suse73/ppc/libjpeg.rpm) = aa37720cb758d0833e367e30057456a7c1aee36f
-Size (suse73/ppc/libjpeg.rpm) = 163776 bytes

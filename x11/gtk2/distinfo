@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.33 2004/11/12 06:39:21 jlam Exp $
-
-SHA1 (gtk+-2.4.13.tar.bz2) = d57ad7165317e580cb7fda7719e767232e6697b6
-Size (gtk+-2.4.13.tar.bz2) = 9272024 bytes
-SHA1 (patch-ac) = 42dff743263b141029a814d7dec9fdc5637a3cff

@@ -1,5 +1,0 @@
-This product provides a Photo object and a Photo Folder object for
-managing digital images in Zope.  Photo objects provide multiple
-configurable sizes of the photo.  Photo Folders provide a way to manage a
-group of Photo objects by providing a way to specify display sizes and
-properties for all contained photos.

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/08 15:10:58 uebayasi Exp $
-${EMACS_LISPPREFIX}/rd-mode/rd-mode.el
-${EMACS_LISPPREFIX}/rd-mode/rd-mode.elc
-@dirrm ${EMACS_LISPPREFIX}/rd-mode

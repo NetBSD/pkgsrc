@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/07/29 19:04:58 wiz Exp $
-
-SHA1 (vlc-0.7.2.tar.bz2) = 938eaea128af02451fcbf0305c84ce290c9d8c21
-Size (vlc-0.7.2.tar.bz2) = 4516835 bytes
-SHA1 (patch-aa) = 21a4e5da2ca4f758be1be48e23f28a764a38f1d0

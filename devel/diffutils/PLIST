@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/15 19:42:01 seb Exp $
-bin/${GNU_PROGRAM_PREFIX}cmp
-bin/${GNU_PROGRAM_PREFIX}diff
-bin/${GNU_PROGRAM_PREFIX}diff3
-bin/${GNU_PROGRAM_PREFIX}sdiff
-man/man1/${GNU_PROGRAM_PREFIX}cmp.1
-man/man1/${GNU_PROGRAM_PREFIX}diff.1
-man/man1/${GNU_PROGRAM_PREFIX}diff3.1
-man/man1/${GNU_PROGRAM_PREFIX}sdiff.1

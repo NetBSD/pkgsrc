@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/03/08 23:56:56 minskim Exp $
-
-SHA1 (nam-src-1.10.tar.gz) = 301b5008664b5a153e35d4088edcd836afbd4ee1
-Size (nam-src-1.10.tar.gz) = 4324890 bytes
-SHA1 (patch-aa) = 6178acca56809e546128c0b8d54db4aa6db83e4d
-SHA1 (patch-ab) = 28cda4d9f68e031725016d2c06925394c76e5152
-SHA1 (patch-ac) = b1bbbd86b4750c2e19f2843359df361a6be9b870

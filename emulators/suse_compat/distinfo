@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/11/25 11:01:14 schmonz Exp $
-
-SHA1 (suse73/i386/compat.rpm) = 2f881c8c12c4c75b48e4c28994ace5d58287a52e
-Size (suse73/i386/compat.rpm) = 1932631 bytes
-SHA1 (suse73/ppc/compat.rpm) = 5e3b5f1c8a5095559bcdb498880b7e2ea4907bc7
-Size (suse73/ppc/compat.rpm) = 952231 bytes

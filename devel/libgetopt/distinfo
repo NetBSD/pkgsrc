@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:27 wiz Exp $
-
-SHA1 (getopt_long.c-1.3) = 1cacfb054f19ae8c7ad713caf0ccd02eeb1a4524
-Size (getopt_long.c-1.3) = 12789 bytes
-SHA1 (getopt_long.3-1.3) = 29379706e3537a3a323d16c8ebea8dc9a2bd9ccf
-Size (getopt_long.3-1.3) = 8281 bytes

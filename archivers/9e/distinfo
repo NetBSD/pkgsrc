@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/02/06 15:06:17 yyamano Exp $
-
-SHA1 (9e.tar.gz) = fc966f51a167e4ed3dc371e399bbc8909f074b54
-Size (9e.tar.gz) = 2019 bytes
-SHA1 (patch-aa) = 5d5982bfc544910f3d36eb40a9de9c5caa8432fd
-SHA1 (patch-ab) = 7c81596f86905d6b9a42cab77fbfad6b15c911c3

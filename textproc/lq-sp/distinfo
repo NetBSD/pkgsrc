@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2004/02/17 01:25:00 minskim Exp $
-
-SHA1 (lq-sp-1.3.4.10.tar.gz) = 8a063d747b7b19c42019ad804946f638c09499de
-Size (lq-sp-1.3.4.10.tar.gz) = 568186 bytes
-SHA1 (patch-aa) = 96a1aa51f0503efbf12b9cdb9bf5a90ce6913762
-SHA1 (patch-ab) = b6e5174c65433f35c0a0ef78422b9b10b779ba57

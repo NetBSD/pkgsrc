@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:46 agc Exp $
-
-SHA1 (xlispstat-3-52-18.tar.gz) = 8561065aa916dcdd1b99a461303aa9af86b77a22
-Size (xlispstat-3-52-18.tar.gz) = 1518077 bytes
-SHA1 (patch-ac) = 6d0bc8a123c4978a47e6913c24b81800aba6928b
-SHA1 (patch-ad) = 832133137b104facbd90189e5dd163bb35ff9174

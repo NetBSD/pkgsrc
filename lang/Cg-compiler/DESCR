@@ -1,7 +1,0 @@
-This is the NVIDIA Cg compiler/toolkit for Linux that includes:
-
-    o NVIDIA Cg toolkit documentation
-    o NVIDIA Cg compiler
-    o NVIDIA Cg runtime libraries for OpenGL
-    o Example shaders written in the Cg language
-    o Example applications that use the Cg runtime to manage Cg programs

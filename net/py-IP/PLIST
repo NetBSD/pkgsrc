@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:52 recht Exp $
-${PYSITELIB}/IPy.py
-${PYSITELIB}/IPy.pyc
-${PYSITELIB}/IPy.pyo

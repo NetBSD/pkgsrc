@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/03/20 00:40:15 snj Exp $
-
-SHA1 (compface-1.4.tar.gz) = ca9e0370e595c25c12c446f7c677d2f2e4b7ae7d
-Size (compface-1.4.tar.gz) = 29154 bytes
-SHA1 (patch-aa) = 3f558c32219c6299f07830795098c77fe1e5ff88

@@ -1,3 +1,0 @@
-IceS is a source client for a streaming server. The purpose of this
-client is to provide an audio stream to a streaming server such that
-one or more listeners can access the stream.

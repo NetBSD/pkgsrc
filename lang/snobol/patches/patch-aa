@@ -1,10 +1,0 @@
-$NetBSD: patch-aa,v 1.3 2004/07/10 21:27:46 wiz Exp $
-
---- doc/head.orig	Thu Jan 25 07:23:12 2001
-+++ doc/head	Thu Jan 25 07:22:50 2001
-@@ -0,0 +1,5 @@
-+[This document is publically posted at ftp://ftp.snobol4.com/vanilla.zip
-+ and zipped within PM.EXE as SNOBOL4.MAN.  This is actually for the MSDOS
-+ version of SNOBOL4, but is a very good starting point to learn the Unix
-+ version.  Pardon the references to DOS.  References to code snippets may
-+ be found in vanilla.zip.  This is a NetBSD package, John Refling, 2001.]

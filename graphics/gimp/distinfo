@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.17 2004/11/03 13:29:46 adam Exp $
-
-SHA1 (gimp-2.0.6.tar.bz2) = 0cc4b5ccf277983c67eec5d41d1e2213e983a2f4
-Size (gimp-2.0.6.tar.bz2) = 14097124 bytes
-SHA1 (patch-aa) = 1deb4760ae6b430a8954ca8aacdac75dbf7090f6
-SHA1 (patch-ab) = 92c0bad9401638ceea5da479b023d16b2aed190f
-SHA1 (patch-ad) = 632c34e0fbeda69139b2b674d9c5ef80db40dcca

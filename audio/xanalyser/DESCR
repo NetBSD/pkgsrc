@@ -1,7 +1,0 @@
-The frequency analyser showes the frequency spectrum of the source,
-either separately for both channels or together.   Roughly speaking
-the XY scope draws a plots where the left channel is used for the
-x axis and the right channel for the y axis. Thus a audio signal
-only present on the left channel produces a horizontal line, whereas
-a audio signal only present on the right channel produces a vertical
-line.  Can be used as a PC-Based RTA.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/08/08 12:41:25 wiz Exp $
-
-SHA1 (trn-4.0-test76.tar.gz) = 4741d506d4c2d62a8dbaa5d4fd62cce656abcf3b
-Size (trn-4.0-test76.tar.gz) = 565528 bytes
-SHA1 (patch-ac) = 178f9146921719bccad9716cdce2d8a2b30c5e79
-SHA1 (patch-ad) = 78c18d634cb0861754e1d555a0e514299136ecbc

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/01/13 18:29:52 wiz Exp $
-
-SHA1 (malsync_2.1.1.src.tar.gz) = c2746f25cd7a10409c342f34675dd072b6ea1cdd
-Size (malsync_2.1.1.src.tar.gz) = 171745 bytes
-SHA1 (patch-aa) = 31179e60ebb301a612fc8339795d7e185667005f
-SHA1 (patch-ab) = de38ceb03f777bac1f4612517850e023dee946b7

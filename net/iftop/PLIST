@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/29 03:31:14 xtraeme Exp $
-man/man8/iftop.8
-sbin/iftop

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:45:39 zuntum Exp $
-bin/ttcp
-man/cat1/ttcp.0
-man/man1/ttcp.1

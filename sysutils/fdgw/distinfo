@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/04/19 10:44:28 wennmach Exp $
-
-SHA1 (fdgw-20020130.tar.gz) = 6582981b86a1471facf0c556aef2c2a310dc21a3
-Size (fdgw-20020130.tar.gz) = 121949 bytes
-SHA1 (patch-ae) = 5f001b38a92766c4c1cc9c92c1079dc0567f50d4

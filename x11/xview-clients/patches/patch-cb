@@ -1,9 +1,0 @@
-$NetBSD: patch-cb,v 1.1 2001/12/28 14:58:05 tron Exp $
-
---- olwm/st.c.orig	Tue Jun 29 07:11:58 1993
-+++ olwm/st.c	Fri Dec 28 15:55:43 2001
-@@ -1,4 +1,3 @@
--#ident	"@(#)st.c	26.8	93/06/28 SMI"
- 
- /* This is a general purpose hash table package written by Peter Moore @ UCB. */
- 

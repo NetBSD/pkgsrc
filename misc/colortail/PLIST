@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/13 23:01:42 jschauma Exp $
-bin/colortail
-man/man1/colortail.1
-share/examples/colortail/conf.daemon
-share/examples/colortail/conf.kernel
-share/examples/colortail/conf.messages
-share/examples/colortail/conf.secure
-share/examples/colortail/conf.xferlog
-@dirrm share/examples/colortail

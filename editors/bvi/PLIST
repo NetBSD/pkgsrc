@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/03 21:30:08 ben Exp $
-bin/bmore
-bin/bvedit
-bin/bvi
-bin/bview
-man/man1/bmore.1
-man/man1/bvi.1
-lib/bmore.help

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/11 16:45:26 jlam Exp $
-libexec/courier/authlib/authdaemond.ldap
-share/doc/courier/README.ldap
-share/examples/courier/authldap.schema
-share/examples/courier/authldaprc.dist
-@unexec ${RMDIR} -p %D/share/doc/courier 2>/dev/null || ${TRUE}

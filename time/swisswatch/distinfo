@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:47:15 agc Exp $
-
-SHA1 (swisswatch-0.06.tar.Z) = 19d6af2db2b628b35bc35e2ea5e57aed7a4e3443
-Size (swisswatch-0.06.tar.Z) = 32075 bytes
-SHA1 (patch-aa) = 1a3cc95170c811ccc816c4326fb4f2b1a22e4713

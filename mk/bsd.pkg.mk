@@ -1,117 +1,66 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540 2004/11/17 22:55:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.1 2004/11/22 22:48:04 tv Exp $
 #
 # This file is in the public domain.
 #
 # This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #
 # Please see the NetBSD packages(7) manual page for details on the
-# that variables used in this make file template.
-
-# Default sequence for "all" is:  fetch checksum extract patch configure build
+# variables used in this make file template.
 #
-# Please read the comments in the targets section below, you
-# should be able to use the pre-* or post-* targets/scripts
-# (which are available for every stage except checksum) or
-# override the do-* targets to do pretty much anything you want.
+# Some interesting targets:
 #
-# NEVER override the "regular" targets unless you want to open
-# a major can of worms.
+# all:			Recurses to "make test".
+# show-var:		Show the value of the variable named by VARNAME.
+# show-var-noeval:	Same as show-var, but skips phase-specific evaluations.
+# show-vars:		Show the value of the variables named by VARNAMES.
+# show-vars-noeval:	Same as show-vars, but skips phase-specific evaluations.
 
-##### Include any preferences, if not already included, and common definitions
+############################################################################
+# Include any preferences, if not already included, and common definitions
+############################################################################
+
 .include "../../mk/bsd.prefs.mk"
-
-##### Prevent /etc/mk.conf from being included by a distribution's BSD-style
-##### Makefiles.  We really don't want to pick up settings that are used by
-##### builds in /usr/src, e.g. DESTDIR.
-.if defined(PKGMAKECONF)
-MAKE_ENV+=	MAKECONF=${PKGMAKECONF}
-.else
-MAKE_ENV+=	MAKECONF=/dev/null
-.endif
-
-##### Pass information about desired toolchain to package build.
-.if defined(USETOOLS)
-MAKE_ENV+=	USETOOLS="${USETOOLS}"
-.endif
-
-# This has to come first to avoid showing all BUILD_DEFS added by this
-# Makefile, which are usually not customizable.
-.PHONY: pre-install-depends build-defs-message
-pre-install-depends: build-defs-message
-.if empty(PKGSRC_SHOW_BUILD_DEFS:M[yY][eE][sS])
-build-defs-message:
-.elif !target(build-defs-message)
-build-defs-message: ${WRKDIR}
-.  if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
-.    if !exists(${WRKDIR}/.bdm_done)
-	@${ECHO} "=========================================================================="
-	@${ECHO} "The following variables will affect the build process of this package,"
-	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
-	@${ECHO} ""
-.      for var in ${BUILD_DEFS:O}
-.        if !defined(${var})
-	@${ECHO} "        * ${var} (not defined)"
-.        elif defined(${var}) && empty(${var})
-	@${ECHO} "        * ${var} (defined)"
-.        else
-	@${ECHO} "        * ${var} = ${${var}}"
-.        endif
-.      endfor
-	@${ECHO} ""
-	@${ECHO} "You may want to abort the process now with CTRL-C and change their value"
-	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after"
-	@${ECHO} "the changes."
-	@${ECHO} "=========================================================================="
-	@${TOUCH} ${WRKDIR}/.bdm_done
-.    endif
-.  endif
-.endif
-
-# Fail-safe in the case of circular dependencies
-.if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
-    PKG_FAIL_REASON+="Circular dependency detected"
-.endif
-
-##### Some NetBSD platforms permitted the user to set the binary format while
-##### they were in the process of transitioning to ELF. Packages with BSD-style
-##### make systems need this setting to be passed in.
-.if defined(OBJECT_FMT)
-MAKE_ENV+=	OBJECT_FMT="${OBJECT_FMT}"
-.endif
-
-# Include any hacks necessary for the package to build properly.
 .include "../../mk/bsd.hacks.mk"
 
-# Allow variables to be set on a per-OS basis
-OPSYSVARS+=	CFLAGS CXXFLAGS CPPFLAGS LDFLAGS LIBS
-.for _var_ in ${OPSYSVARS:O}
-.  if defined(${_var_}.${OPSYS})
-${_var_}+=	${${_var_}.${OPSYS}}
-.  elif defined(${_var_}.*)
-${_var_}+=	${${_var_}.*}
-.  endif
-.endfor
+# _PKG_PHASES_WRKDIR is an ordered list of phases which require ${WRKDIR}
+# to exist.  _PKG_PHASES_ALL also includes the phases from before ${WRKDIR}
+# is created.  These macros are used below mainly in .for loops.
 
-# Store the result in the +BUILD_INFO file so we can query for the build
-# options using "pkg_info -Q PKG_OPTIONS <pkg>".
-#
-.if defined(PKG_SUPPORTED_OPTIONS) && defined(PKG_OPTIONS)
-BUILD_DEFS+=            PKG_OPTIONS
+_PKG_PHASES_ALL=	fetch checksum ${_PKG_PHASES_WRKDIR}
+_PKG_PHASES_WRKDIR=	depends extract patch tools wrapper \
+			configure build test install package
+
+# PATH is recalculated below, so save its original incarnation here.
+.if !defined(_PATH_ORIG)
+_PATH_ORIG:=		${PATH}
+MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
 .endif
 
-##### Build crypto packages by default.
-MKCRYPTO?=		yes
+############################################################################
+# Transform package Makefile variables and set defaults
+############################################################################
 
+CHECK_SHLIBS?=		YES	# run check-shlibs after install
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
-REINSTALL?=		NO	# reinstall upon update
-CHECK_SHLIBS?=		YES	# run check-shlibs after install
-SHLIB_HANDLING?=	YES	# do automatic shared lib handling
+MKCRYPTO?=		YES	# build crypto packages by default
 NOCLEAN?=		NO	# don't clean up after update
+REINSTALL?=		NO	# reinstall upon update
+SHLIB_HANDLING?=	YES	# do automatic shared lib handling
+
+### Variant spellings
+
+.if defined(LICENCE) && !defined(LICENSE)
+LICENSE=		${LICENCE}
+.endif
+.if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
+ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
+.endif
+
+### PKGBASE, PKGNAME[_NOREV], PKGVERSION
 
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
-PKGWILDCARD?=		${PKGBASE}-[0-9]*
 .if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
 .  if defined(PKGNAME)
 PKGNAME_NOREV:=		${PKGNAME}
@@ -124,775 +73,78 @@ PKGNAME_NOREV=		${DISTNAME}
 PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
 .endif
-SVR4_PKGNAME?=		${PKGNAME}
 
-_DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
+### PLIST
 
-INTERACTIVE_STAGE?=	none
-
-# PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
-# "overwrite".
-#
-.if (${PKG_INSTALLATION_TYPE} != "pkgviews") && \
-    (${PKG_INSTALLATION_TYPE} != "overwrite")
-PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
-.endif
-
-.if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
-PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
-.endif
-
-# The style of PLISTs that are used by the installed package.
-# Possible: dynamic, static
-#
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PLIST_TYPE?=		dynamic
-.elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+.endif
 PLIST_TYPE?=		static
-.else
-PLIST_TYPE?=		static
-.endif
 
-# PLIST_TYPE can only be one of two values: "dynamic" or "static".  If we
-# don't explicitly ask for "static", assume "dynamic".
-#
-.if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
-PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
-.endif
-
-.if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
-PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
-.endif
-
-.if defined(USE_IMAKE)
-PREPEND_PATH+=		${X11BASE}/bin
-USE_X11BASE?=		implied
-PLIST_SUBST+=		IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}
-PLIST_SUBST+=		IMAKE_MAN_DIR=${IMAKE_MAN_DIR}
-PLIST_SUBST+=		IMAKE_LIBMAN_DIR=${IMAKE_LIBMAN_DIR}
-PLIST_SUBST+=		IMAKE_KERNMAN_DIR=${IMAKE_KERNMAN_DIR}
-PLIST_SUBST+=		IMAKE_FILEMAN_DIR=${IMAKE_FILEMAN_DIR}
-PLIST_SUBST+=		IMAKE_MISCMAN_DIR=${IMAKE_MISCMAN_DIR}
-PLIST_SUBST+=		IMAKE_MAN_SUFFIX=${IMAKE_MAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_LIBMAN_SUFFIX=${IMAKE_LIBMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_KERNMAN_SUFFIX=${IMAKE_KERNMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}
-PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
-.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-MAKE_FLAGS+=		CC="${CC}" CXX="${CXX}"
+.if !defined(PLIST_SRC)
+.  if exists(${PKGDIR}/PLIST.common)
+PLIST_SRC+=		${PKGDIR}/PLIST.common
 .  endif
-.endif
-.if defined(USE_X11BASE)
-USE_X11?=		implied
-.endif
-
-# Set the PREFIX appropriately.
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  if defined(INSTALLATION_PREFIX)
-PREFIX=			${INSTALLATION_PREFIX}
-.  elif defined(USE_X11BASE)
-PREFIX=			${X11PREFIX}
-.  elif defined(USE_CROSSBASE)
-PREFIX=			${CROSSBASE}
-NO_MTREE=		yes
-.  else
-PREFIX=			${LOCALBASE}
+.  if exists(${PKGDIR}/PLIST.${OPSYS})
+PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
+.  elif exists(${PKGDIR}/PLIST)
+PLIST_SRC+=		${PKGDIR}/PLIST
 .  endif
-.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PREFIX=			${DEPOTBASE}/${PKGNAME}
-NO_MTREE=		yes
-.endif
-
-.if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(INSTALLATION_PREFIX)
-PKG_SKIP_REASON=	"INSTALLATION_PREFIX can't be used in a pkgviews package"
-.endif
-
-# If USE_XPKGWEDGE is set, then add a build dependency on xpkgwedge for
-# X11 packages.
-#
-.if defined(USE_X11BASE)
-.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
-BUILD_DEPENDS+=		xpkgwedge>=${_XPKGWEDGE_REQD}:../../pkgtools/xpkgwedge
+.  if exists(${PKGDIR}/PLIST.common_end)
+PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 .  endif
-.endif
+.endif	# !PLIST_SRC
 
-.if empty(DEPOT_SUBDIR)
-PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
-.endif
+### Others
 
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-#
-# _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
-# in pkg_views(1).  It's used by the dynamic PLIST generator to skip
-# adding the named files to the PLIST.
-#
-_PLIST_IGNORE_FILES=	+*			# package metadata files
-_PLIST_IGNORE_FILES+=	info/dir
-.if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
-_PLIST_IGNORE_FILES+=	${INFO_DIR}/dir
-.endif
-_PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
-_PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
-.endif
-BUILD_DEFS+=		_PLIST_IGNORE_FILES
-
-# We need to make sure the buildlink-x11 package is not installed since it
-# breaks builds that use imake.
-#
-.if defined(USE_IMAKE)
-.  if exists(${LOCALBASE}/lib/X11/config/buildlinkX11.def) || \
-      exists(${X11BASE}/lib/X11/config/buildlinkX11.def)
-PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
-	 "    Please deinstall it (pkg_delete buildlink-x11)."
-.  endif
-.endif	# USE_IMAKE
-
-.if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS:Mmake)
-_USE_GMAKE=		yes
-.endif
-
-.if defined(_USE_GMAKE)
-MAKE_PROGRAM=		${GMAKE}
-.elif defined(USE_IMAKE)
-MAKE_PROGRAM=		${_IMAKE_MAKE}
-.else
-MAKE_PROGRAM=		${MAKE}
-.endif
-CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM:T}"
-
-.if defined(PKG_USE_KERBEROS)
-CRYPTO?=		uses Kerberos encryption code
-BUILD_DEFS+=		KERBEROS
-.endif
-
-# Distill the PERL5_REQD list into a single _PERL5_REQD value that is the
-# highest version of Perl required.
-#
-PERL5_REQD+=		5.0
-PERL5_REQD+=		${_OPSYS_PERL_REQD}
-
-_PERL5_STRICTEST_REQD?=	none
-.for _version_ in ${PERL5_REQD}
-.  for _pkg_ in perl-${_version_}
-.    if ${_PERL5_STRICTEST_REQD} == "none"
-_PERL5_PKG_SATISFIES_DEP=	YES
-.      for _vers_ in ${PERL5_REQD}
-.        if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
-_PERL5_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch 'perl>=${_vers_}' ${_pkg_} 2>/dev/null; then \
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-.        endif
-.      endfor
-.      if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
-_PERL5_STRICTEST_REQD=	${_version_}
-.      endif
-.    endif
-.  endfor
-.endfor
-_PERL5_REQD=	${_PERL5_STRICTEST_REQD}
-
-# Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
-# whether we want a build-time or run-time dependency on perl.
-#
-.if defined(USE_PERL5)
-.  if (${USE_PERL5} == "build")
-_PERL5_DEPMETHOD=	BUILD_DEPENDS
-.  else
-USE_PERL5:=		run
-_PERL5_DEPMETHOD=	DEPENDS
-.  endif
-_PERL5_DEPENDS=		{perl>=${_PERL5_REQD},perl-thread>=${_PERL5_REQD}}
-#
-# On platforms that have native pthreads, default to installing the
-# threaded perl.  This can be overridden by explicitly setting
-# PERL5_USE_THREADS.
-#
-.  if exists(/usr/include/pthread.h) && \
-      !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
-PERL5_PKGSRCDIR?=	../../lang/perl58-thread
-.  else
-PERL5_PKGSRCDIR?=	../../lang/perl58
-.  endif
-.  if !defined(BUILDLINK_DEPENDS.perl)
-${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
-.  endif
-.endif
-
-.if defined(USE_PERL5) && (${USE_PERL5} == "run")
-.  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
-.    if exists(${PERL5})
-.      if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
-.        include "${LOCALBASE}/share/mk/bsd.perl.mk"
-.      else
-PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
-			${ECHO} $${installsitelib}
-PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
-			${ECHO} $${installsitearch}
-PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
-			${ECHO} $${installarchlib}
-.      endif # !exists(bsd.perl.mk)
-.      if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_PERL5_PREFIX!=		eval `${PERL5} -V:prefix 2>/dev/null`; \
-			${ECHO} $${prefix}
-PERL5_SITELIB:=		${PERL5_SITELIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
-PERL5_SITEARCH:=	${PERL5_SITEARCH:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
-PERL5_ARCHLIB:=		${PERL5_ARCHLIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
-MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB:Q}
-MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH:Q}
-MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB:Q}
-.      endif # PKG_INSTALLATION_TYPE == "overwrite"
-.    endif   # exists($PERL5)
-.  endif     # !defined(PERL5_*)
-.endif       # USE_PERL5 == run
-
-.if defined(USE_FORTRAN)
-.  if !exists(/usr/bin/f77)
-PKG_FC?=		f2c-f77
-.  endif
-# it is anticipated that once /usr/bin/f77 is more stable that the following
-# default will be changed to f77.  However, in the case where there is no
-# /usr/bin/f77, the default will remain as f2c-f77.
-.for __tmp__ in 1.[5-9]* [2-9].*
-.  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-*} != ""
-PKG_FC?=		f77
-.  endif    # MACHINE_PLATFORM
-.endfor     # __tmp__
-PKG_FC?=	f2c-f77
-.  if  (${PKG_FC} == "f2c-f77")
-# this is a DEPENDS not BUILD_DEPENDS because of the
-# shared Fortran libs
-.    if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-.      include "../../lang/f2c/buildlink3.mk"
-.    else
-DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
-.    endif
-.  endif
-FC=             ${PKG_FC}
-F77=            ${PKG_FC}
-CONFIGURE_ENV+=	F77="${F77}"
-CONFIGURE_ENV+=	FFLAGS="${FFLAGS:M*}"
-MAKE_ENV+=	F77="${F77}"
-MAKE_ENV+=	FC="${FC}"
-.endif
-
-# Automatically increase process limit where necessary for building.
-_ULIMIT_CMD=
-.if defined(UNLIMIT_RESOURCES)
-.  for __tmp__ in ${UNLIMIT_RESOURCES}
-.    if defined(ULIMIT_CMD_${__tmp__})
-_ULIMIT_CMD+=	${ULIMIT_CMD_${__tmp__}} ;
-.    endif
-.  endfor
-.endif
-
-CPPFLAGS+=		${CPP_PRECOMP_FLAGS}
-DEPENDS+=		${USE_USERADD:D${_USER_DEPENDS}}
-DEPENDS+=		${USE_GROUPADD:D${_USER_DEPENDS}}
-
-# If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
-# also pass in a CONFIG_SHELL to avoid picking up bash
-.if defined(GNU_CONFIGURE)
-CONFIG_SHELL?=		${SH}
-CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
-CONFIGURE_ENV+=		LIBS=${LIBS:Q}
-CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
-.  if defined(USE_LIBTOOL) && defined(_OPSYS_MAX_CMDLEN)
-CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
-.  endif
-.endif
-
-#
-# PKG_LIBTOOL is the path to the libtool script installed by libtool-base.
-# _LIBTOOL is the path the libtool used by the build, which could be the
-#	path to a libtool wrapper script.
-# LIBTOOL is the publicly-readable variable that should be used by
-#	Makefiles to invoke the proper libtool.
-#
-PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
-PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
-_LIBTOOL?=		${PKG_LIBTOOL}
-_SHLIBTOOL?=		${PKG_SHLIBTOOL}
-LIBTOOL?=		${PKG_LIBTOOL}
-SHLIBTOOL?=		${PKG_SHLIBTOOL}
-.if defined(USE_LIBTOOL)
-LIBTOOL_REQD?=		1.5.10nb1
-BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
-CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
-.endif
-
-.if defined(BUILD_USES_MSGFMT) && \
-    (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
-BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
-.endif
-
-EXTRACT_COOKIE=		${WRKDIR}/.extract_done
-WRAPPER_COOKIE=		${WRKDIR}/.wrapper_done
-CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
-INSTALL_COOKIE=		${WRKDIR}/.install_done
-TEST_COOKIE=		${WRKDIR}/.test_done
-BUILD_COOKIE=		${WRKDIR}/.build_done
-PATCH_COOKIE=		${WRKDIR}/.patch_done
-TOOLS_COOKIE=		${WRKDIR}/.tools_done
-PACKAGE_COOKIE=		${WRKDIR}/.package_done
-INTERACTIVE_COOKIE=	.interactive_stage
-NULL_COOKIE=		${WRKDIR}/.null
-
-# New message digest defs
+_DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
+ALL_TARGET?=		all
+BUILD_DEFS?=		# empty
+BUILD_DEPENDS?=		# empty
+DEPENDS?=		# empty
+DESCR_SRC?=		${PKGDIR}/DESCR
 DIGEST_ALGORITHM?=	SHA1
-
-# Miscellaneous overridable commands:
-SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
-
-DISTINFO_FILE?=		${.CURDIR}/distinfo
-
-LIBABISUFFIX?=
-
-.if defined(USE_X11)
-X11_LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
-X11_LDFLAGS+=		-L${X11BASE}/lib${LIBABISUFFIX}
-.endif
-.if !empty(USE_BUILDLINK3:M[nN][oO])
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
-LDFLAGS+=		-L${LOCALBASE}/lib
-.  if defined(USE_X11)
-LDFLAGS+=		${X11_LDFLAGS}
-.  endif
-.endif
-MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
-MAKE_ENV+=		LINKER_RPATH_FLAG="${LINKER_RPATH_FLAG}"
-MAKE_ENV+=		COMPILER_RPATH_FLAG="${COMPILER_RPATH_FLAG}"
-MAKE_ENV+=		WHOLE_ARCHIVE_FLAG="${WHOLE_ARCHIVE_FLAG}"
-MAKE_ENV+=		NO_WHOLE_ARCHIVE_FLAG="${NO_WHOLE_ARCHIVE_FLAG}"
-MAKE_ENV+=		LINK_ALL_LIBGCC_HACK="${LINK_ALL_LIBGCC_HACK}"
-
-CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS:M*}" M4="${M4}" YACC="${YACC}"
-CONFIGURE_ENV+=		LINKER_RPATH_FLAG="${LINKER_RPATH_FLAG}"
-CONFIGURE_ENV+=		COMPILER_RPATH_FLAG="${COMPILER_RPATH_FLAG}"
-
-MAKE_FLAGS?=
-MAKEFILE?=		Makefile
-MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
-MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
-MAKE_ENV+=		X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
-MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}" FFLAGS="${FFLAGS}"
-MAKE_ENV+=		X11PREFIX=${X11PREFIX}
-.if defined(CC)
-MAKE_ENV+=		CC="${CC}"
-.endif
-.if defined(CXX)
-MAKE_ENV+=		CXX="${CXX}"
-.endif
-.if defined(CPP) && !defined(NO_EXPORT_CPP)
-MAKE_ENV+=		CPP="${CPP}"
-.endif
-.if defined(CXXFLAGS)
-MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
-.endif
-
-TOUCH_FLAGS?=		-f
-
-# determine if we need a working patch(1).
-.if defined(_OPSYS_GPATCH_REQD) && !empty(_OPSYS_GPATCH_REQD:M[yY][eE][sS])
-_NEED_PATCH=		YES
-.else
-_NEED_PATCH!=		if [ -d ${PATCHDIR} ]; then \
-				if [ "`${ECHO} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*" ]; then \
-					${ECHO} YES; \
-				else \
-					${ECHO} NO; \
-				fi \
-			else \
-				${ECHO} NO; \
-			fi
-.endif
-
-.if defined(PATCHFILES)
-_NEED_PATCH=		YES
-.endif
-
-.if ${_NEED_PATCH} == "YES"
-USE_GNU_TOOLS+=		patch
-.endif
-
-.if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
-PATCH_DEBUG_TMP=	yes
-.else
-PATCH_DEBUG_TMP=	no
-.endif
-
-PATCH_STRIP?=		-p0
-.if ${PATCH_DEBUG_TMP} == "yes"
-PATCH_ARGS?=		-d ${WRKSRC} -E ${PATCH_STRIP}
-.else
-PATCH_ARGS?=		-d ${WRKSRC} --forward --quiet -E ${PATCH_STRIP}
-.endif
-.if defined(BATCH)
-PATCH_ARGS+=		--batch
-.endif
-.if defined(_PATCH_CAN_BACKUP) && (${_PATCH_CAN_BACKUP} == "yes")
-PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
-.endif
-PATCH_FUZZ_FACTOR?=	-F0	# Default to zero fuzz
-
-# The following variables control how "distribution" patches are extracted
-# and applied to the package sources.
-#
-# PATCH_DIST_STRIP is a patch option that sets the pathname strip count.
-# PATCH_DIST_ARGS is the list of arguments to pass to the patch command.
-# PATCH_DIST_CAT is the command that outputs the patch to stdout.
-#
-# For each of these variables, there is a patch-specific variant that
-# may be set, i.e. PATCH_DIST_STRIP.<patch>, PATCH_DIST_ARGS.<patch>,
-# PATCH_DIST_CAT.<patch>.
-#
-PATCH_DIST_STRIP?=		-p0
-.for i in ${PATCHFILES}
-PATCH_DIST_STRIP.${i:S/=/--/}?=	${PATCH_DIST_STRIP}
-.  if defined(PATCH_DIST_ARGS)
-PATCH_DIST_ARGS.${i:S/=/--/}?=	${PATCH_DIST_ARGS}
-.  elif ${PATCH_DEBUG_TMP} == "yes"
-PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
-.  else
-PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
-.  endif
-.endfor
-.if defined(BATCH)
-PATCH_DIST_ARGS+=		--batch
-.  for i in ${PATCHFILES}
-PATCH_DIST_ARGS.${i:S/=/--/}+=	--batch
-.  endfor
-.endif
-.if defined(_PATCH_CAN_BACKUP) && (${_PATCH_CAN_BACKUP} == "yes")
-PATCH_DIST_ARGS+=		${_PATCH_BACKUP_ARG} .orig_dist
-.  for i in ${PATCHFILES}
-PATCH_DIST_ARGS.${i:S/=/--/}+=	${_PATCH_BACKUP_ARG} .orig_dist
-.  endfor
-.endif
-PATCH_DIST_CAT?=	{ case $$patchfile in				\
-			  *.Z|*.gz) ${GZCAT} $$patchfile ;;		\
-			  *.bz2)    ${BZCAT} $$patchfile ;;		\
-			  *)	    ${CAT} $$patchfile ;;		\
-			  esac; }
-.for i in ${PATCHFILES}
-PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
-.endfor
-
-.if empty(PKGSRC_SHOW_PATCH_ERRORMSG:M[yY][eE][sS])
-PKGSRC_PATCH_FAIL=	exit 1
-.else
-PKGSRC_PATCH_FAIL=							\
-if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
-	${ECHO} "==========================================================================";								\
-	${ECHO};							\
-	${ECHO} "Some of the selected build options and/or local patches may be incompatible.";								\
-	${ECHO} "Please try building with fewer options or patches.";	\
-	${ECHO};							\
-	${ECHO} "==========================================================================";								\
-fi; exit 1
-.endif
-
+DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
+DISTINFO_FILE?=		${PKGDIR}/distinfo
+COMMENT?=		(no description)
+CONFIGURE_DIRS?=	${WRKSRC}
+CONFIGURE_SCRIPT?=	./configure
+EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz
-
-# We need bzip2 for PATCHFILES with .bz2 suffix.
-.if defined(PATCHFILES)
-.  if !empty(PATCHFILES:M*.bz2) && ${EXTRACT_SUFX} != ".tar.bz2"
-.    if exists(/usr/bin/bzcat)
-BZCAT=			/usr/bin/bzcat
-.    else
-BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
-.    endif # !exists bzcat
-.  endif
-.endif # defined(PATCHFILES)
-
-# Figure out where the local mtree file is
-.if defined(USE_X11BASE)
-MTREE_FILE?=	${PKGSRCDIR}/mk/${OPSYS}.x11.dist
-.else
-MTREE_FILE?=	${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
-.endif
-
-MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
-
-# Debugging levels for this file, dependent on PKG_DEBUG_LEVEL definition
-# 0 == normal, default, quiet operation
-# 1 == all shell commands echoed before invocation
-# 2 == shell "set -x" operation
-PKG_DEBUG_LEVEL?=	0
-_PKG_SILENT=		@
-_PKG_DEBUG=		# empty
-_PKG_DEBUG_SCRIPT=	# empty
-
-.if ${PKG_DEBUG_LEVEL} > 0
-_PKG_SILENT=		# empty
-.endif
-
-.if ${PKG_DEBUG_LEVEL} > 1
-_PKG_DEBUG=		set -x;
-_PKG_DEBUG_SCRIPT=	${SH} -x
-.endif
-
+INSTALL_TARGET?=	install
+INTERACTIVE_STAGE?=	none
+MAINTAINER?=		tech-pkg@NetBSD.org
+MAKE_FLAGS?=		# empty
+MAKEFILE?=		Makefile
+PKG_SUFX?=		.tgz
+PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
+PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
+PKGREPOSITORYSUBDIR?=	All
+PKGWILDCARD?=		${PKGBASE}-[0-9]*
+SVR4_PKGNAME?=		${PKGNAME}
+USE_DIGEST?=		YES
+USE_GNU_TOOLS?=		# empty
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 
-.if defined(NO_WRKSUBDIR)
-PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
-PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
-.endif # NO_WRKSUBDIR
+BUILD_DEFS_FIXED+=	PKGPATH
+BUILD_DEFS_FIXED+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
+BUILD_DEFS_FIXED+=	CPPFLAGS CFLAGS FFLAGS LDFLAGS
+BUILD_DEFS_FIXED+=	CONFIGURE_ENV CONFIGURE_ARGS
+BUILD_DEFS_FIXED+=	OBJECT_FMT LICENSE RESTRICTED
+BUILD_DEFS_FIXED+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
+BUILD_DEFS_FIXED+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
+BUILD_DEFS_FIXED+=	${OSVERSION_SPECIFIC:DOSVERSION_SPECIFIC}
 
-# A few aliases for *-install targets
-INSTALL_PROGRAM?= 	\
-	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_GAME?=		\
-	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEMODE}
-INSTALL_SCRIPT?= 	\
-	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_LIB?= 		\
-	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_DATA?= 		\
-	${INSTALL} ${COPY} -o ${SHAREOWN} -g ${SHAREGRP} -m ${SHAREMODE}
-INSTALL_GAME_DATA?= 	\
-	${INSTALL} ${COPY} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEDATAMODE}
-INSTALL_MAN?= 		\
-	${INSTALL} ${COPY} -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
-INSTALL_PROGRAM_DIR?= 	\
-	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m ${PKGDIRMODE}
-INSTALL_SCRIPT_DIR?= 	\
-	${INSTALL_PROGRAM_DIR}
-INSTALL_LIB_DIR?= 	\
-	${INSTALL_PROGRAM_DIR}
-INSTALL_DATA_DIR?= 	\
-	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m ${PKGDIRMODE}
-INSTALL_MAN_DIR?= 	\
-	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${PKGDIRMODE}
+### Non-overridable constants
 
-INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}"		\
-		BSD_INSTALL_SCRIPT="${INSTALL_SCRIPT}"			\
-		BSD_INSTALL_LIB="${INSTALL_LIB}"			\
-		BSD_INSTALL_DATA="${INSTALL_DATA}"			\
-		BSD_INSTALL_MAN="${INSTALL_MAN}"			\
-		BSD_INSTALL="${INSTALL}"				\
-		BSD_INSTALL_PROGRAM_DIR="${INSTALL_PROGRAM_DIR}"	\
-		BSD_INSTALL_SCRIPT_DIR="${INSTALL_SCRIPT_DIR}"		\
-		BSD_INSTALL_LIB_DIR="${INSTALL_LIB_DIR}"		\
-		BSD_INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"		\
-		BSD_INSTALL_MAN_DIR="${INSTALL_MAN_DIR}"		\
-		BSD_INSTALL_GAME="${INSTALL_GAME}"			\
-		BSD_INSTALL_GAME_DATA="${INSTALL_GAME_DATA}"
-MAKE_ENV+=	${INSTALL_MACROS}
-SCRIPTS_ENV+=	${INSTALL_MACROS}
-
-# The user can override the NO_PACKAGE by specifying this from
-# the make command line
-.if defined(FORCE_PACKAGE)
-.  undef NO_PACKAGE
-.endif
-
-.if !defined(COMMENT)
-COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO_N} "(no description)") 2>/dev/null
-.endif
-
-DESCR=			${WRKDIR}/.DESCR
-.if !defined(DESCR_SRC)
-DESCR_SRC?=		${PKGDIR}/DESCR
-.endif
-PLIST=			${WRKDIR}/.PLIST
-
-.if ${PLIST_TYPE} == "static"
-# Automatic platform dependent PLIST handling
-.  if !defined(PLIST_SRC)
-.    if exists(${PKGDIR}/PLIST.common)
-PLIST_SRC=		${PKGDIR}/PLIST.common
-.      if exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
-.      endif
-.      if exists(${PKGDIR}/PLIST.common_end)
-PLIST_SRC+=		${PKGDIR}/PLIST.common_end
-.      endif
-.    elif exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
-.    else
-PLIST_SRC=		${PKGDIR}/PLIST
-.    endif
-.  endif
-_PLIST_SRC=		${PLIST_SRC}
-.elif ${PLIST_TYPE} == "dynamic"
-_PLIST_SRC=		# empty, since we're using a dynamic PLIST
-.endif
-
-DLIST=			${WRKDIR}/.DLIST
-DDIR=			${WRKDIR}/.DDIR
-
-
-# Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
-PLIST_SUBST+=	OPSYS=${OPSYS}						\
-		OS_VERSION=${OS_VERSION}				\
-		MACHINE_ARCH=${MACHINE_ARCH}				\
-		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}			\
-		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
-		LN=${LN:Q}						\
-		LOWER_VENDOR=${LOWER_VENDOR}				\
-		LOWER_OPSYS=${LOWER_OPSYS}				\
-		LOWER_OS_VERSION=${LOWER_OS_VERSION}			\
-		PKGBASE=${PKGBASE}					\
-		PKGNAME=${PKGNAME_NOREV}				\
-		PKGLOCALEDIR=${PKGLOCALEDIR}				\
-		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}			\
-		LOCALBASE=${LOCALBASE}					\
-		VIEWBASE=${VIEWBASE}					\
-		X11BASE=${X11BASE}					\
-		X11PREFIX=${X11PREFIX}					\
-		SVR4_PKGNAME=${SVR4_PKGNAME}				\
-		CHGRP=${CHGRP:Q}					\
-		CHMOD=${CHMOD:Q}					\
-		CHOWN=${CHOWN:Q}					\
-		MKDIR=${MKDIR:Q}					\
-		RMDIR=${RMDIR:Q}					\
-		RM=${RM:Q}						\
-		TRUE=${TRUE:Q}						\
-		QMAILDIR=${QMAILDIR}
-.if defined(PERL5_SITELIB)
-PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}
-.endif
-.if defined(PERL5_SITEARCH)
-PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
-.endif
-.if defined(PERL5_ARCHLIB)
-PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
-.endif
-
-# Handle info files
-#
-INFO_FILES?=			# default to no info files to handle
-USE_MAKEINFO?=	no		# default to not using makeinfo
-.if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
-. include "../../mk/texinfo.mk"
-.endif
-
-# CONF_DEPENDS notes a dependency where the config directory for the
-# package matches the dependency's config directory.  CONF_DEPENDS is
-# only meaningful if ${PKG_INSTALLATION_TYPE} == "pkgviews".
-#
-CONF_DEPENDS?=		# empty
-.if !empty(CONF_DEPENDS)
-USE_PKGINSTALL=		yes
-.endif
-
-.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
-.  include "../../mk/bsd.pkg.install.mk"
-.endif
-
-# Set INSTALL_FILE to be the name of any INSTALL file
-.if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
-INSTALL_FILE=		${PKGDIR}/INSTALL
-.endif
-
-# Set DEINSTALL_FILE to be the name of any DEINSTALL file
-.if !defined(DEINSTALL_FILE) && exists(${PKGDIR}/DEINSTALL)
-DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
-.endif
-
-# If MESSAGE hasn't been defined, then set MESSAGE_SRC to be a space-separated
-# list of files to be concatenated together to generate the MESSAGE file.
-#
-.if !defined(MESSAGE_SRC) && !defined(MESSAGE)
-.  if exists(${PKGDIR}/MESSAGE)
-MESSAGE_SRC=		${PKGDIR}/MESSAGE
-.  else
-.    if exists(${PKGDIR}/MESSAGE.common)
-MESSAGE_SRC=		${PKGDIR}/MESSAGE.common
-.    endif
-.    if exists(${PKGDIR}/MESSAGE.${OPSYS})
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
-.    endif
-.    if exists(${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.    endif
-.    if exists(${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.    endif
-.  endif
-.endif
-
-.if defined(MESSAGE_SRC)
-MESSAGE=		${WRKDIR}/.MESSAGE
-
-# Set MESSAGE_SUBST to substitute "${variable}" to "value" in MESSAGE
-MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
-		PREFIX=${PREFIX}					\
-		LOCALBASE=${LOCALBASE}					\
-		VIEWBASE=${VIEWBASE}					\
-		X11PREFIX=${X11PREFIX}					\
-		X11BASE=${X11BASE}					\
-		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}			\
-		ROOT_GROUP=${ROOT_GROUP}				\
-		ROOT_USER=${ROOT_USER}					\
-		QMAILDIR=${QMAILDIR}
-
-MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
-.endif
-
-# If pkgsrc is supposed to ensure that tests are run before installation
-# of the package, then the build targets should be "build test", otherwise
-# just "build" suffices.  _PKGSRC_BUILD_TARGETS is used in the "all",
-# "install", and "uptodate-digest" targets.
-#
-.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
-_PKGSRC_BUILD_TARGETS=	build test
-.else
-_PKGSRC_BUILD_TARGETS=	build
-.endif
-
-# Latest version of digest(1) required for pkgsrc
+# Latest versions of tools required for correct pkgsrc operation.
 DIGEST_REQD=		20010302
+PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20030918}
 
-USE_DIGEST?=	yes
-
-.PHONY: uptodate-digest
-uptodate-digest:
-.if !empty(USE_DIGEST:M[yY][eE][sS])
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
-		{ cd ${PKGSRCDIR}/pkgtools/digest;			\
-		${MAKE} clean;						\
-		if [ -f ${DIGEST} ]; then				\
-			${MAKE} ${MAKEFLAGS} deinstall;			\
-		fi;							\
-		${MAKE} ${MAKEFLAGS} ${_PKGSRC_BUILD_TARGETS};		\
-		if [ -f ${DIGEST} ]; then				\
-			${MAKE} ${MAKEFLAGS} deinstall;			\
-		fi;							\
-		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};			\
-		${MAKE} ${MAKEFLAGS} clean; } 				\
-	fi
-.else
-	@${DO_NADA}
-.endif
-
-# Latest version of pkgtools required for correct pkgsrc operation.
-.if defined(_OPSYS_PKGTOOLS_REQD)
-PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
-.else
-PKGTOOLS_REQD=		20030918
-.endif
-
-# Check that we are using up-to-date pkg_* tools with this file.
-.PHONY: uptodate-pkgtools
-uptodate-pkgtools:
-.	if !defined(NO_PKGTOOLS_REQD_CHECK)
-.		if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
-PKG_FAIL_REASON+='Error: The package tools installed on this system are out of date.'
-PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must update'
-PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
-PKG_FAIL_REASON+=''
-PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
-.		endif
-.	endif
+DDIR=			${WRKDIR}/.DDIR
+DESCR=			${WRKDIR}/.DESCR
+DLIST=			${WRKDIR}/.DLIST
+PLIST=			${WRKDIR}/.PLIST
 
 # Files to create for versioning and build information
 BUILD_VERSION_FILE=	${WRKDIR}/.build_version
@@ -905,173 +157,67 @@ SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 # File to denote "no deletion of a package"
 PRESERVE_FILE=		${WRKDIR}/.PRESERVE
 
-.ifndef PKG_ARGS_COMMON
-PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
-PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
-PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`"
-.  if defined(CONFLICTS) && (${PKG_INSTALLATION_TYPE} == "overwrite")
-PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
-.  endif
-.  ifdef INSTALL_FILE
-PKG_ARGS_COMMON+=	-i ${INSTALL_FILE}
-.  endif
-.  ifdef DEINSTALL_FILE
-PKG_ARGS_COMMON+=	-k ${DEINSTALL_FILE}
-.  endif
-.  ifdef MESSAGE
-PKG_ARGS_COMMON+=	-D ${MESSAGE}
-.  endif
-.  ifndef NO_MTREE
-PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
-.  endif
-.  ifdef PKG_PRESERVE
-PKG_ARGS_COMMON+=	-n ${PRESERVE_FILE}
-.  endif
-
-PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
-PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
-.endif # !PKG_ARGS_COMMON
-
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PKG_ARGS_INSTALL+=	-U	# don't update the pkgdb.byfile.db
-PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
-.endif
-
-PKG_SUFX?=		.tgz
-
-# Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
-# of dependencies for building, and the current target.
-.ifdef SMART_MESSAGES
-_PKGSRC_IN?=		===> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===
-.else
-_PKGSRC_IN?=		===
-.endif
-
-# Used to print all the '===>' style prompts - override this to turn them off.
-ECHO_MSG?=		${ECHO}
-
-# How to do nothing.  Override if you, for some strange reason, would rather
-# do something.
-DO_NADA?=		${TRUE}
-
-ALL_TARGET?=		all
-INSTALL_TARGET?=	install
-
-.if defined(USE_IMAKE) && !defined(NO_INSTALL_MANPAGES)
-INSTALL_TARGET+=	install.man
-.endif
-
-# If this host is behind a filtering firewall, use passive ftp(1)
-.if defined(PASSIVE_FETCH)
-FETCH_BEFORE_ARGS += -p
-.endif
-
-# Check if we got "rman" with XFree86, for packages that need "rman".
-.if defined(USE_RMAN)
-.  if !exists(${X11BASE}/bin/rman)
-DEPENDS+=		rman-3.0.9:../../textproc/rman
-RMAN?=			${LOCALBASE}/bin/rman
-.  else
-RMAN?=			${X11BASE}/bin/rman
-.  endif
-.endif
-
-.if defined(EVAL_PREFIX)
-.  for def in ${EVAL_PREFIX}
-.    if !defined(${def:C/=.*//}_DEFAULT)
-${def:C/=.*//}_DEFAULT=	${X11PREFIX}
-.    endif
-.    if !defined(${def:C/=.*//})
-_depend_${def:C/=.*//} != ${PKG_INFO} -e ${def:C/.*=//} 2>/dev/null; ${ECHO}
-.      if (${_depend_${def:C/=.*//}} == "")
-${def:C/=.*//}=${${def:C/=.*//}_DEFAULT}
-.      else
-_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) | ${AWK} '{ print $$2; exit }'
-${def:C/=.*//}=${_dir_${def:C/=.*//}}
-MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
-.      endif
-.    endif
-.  endfor
-.endif
-
-# Set the CLASSPATH for Java packages.  This must come after EVAL_PREFIX
-# is evaluated because PKG_JAVA_HOME is used in a .if.endif conditional,
-# and its value is indirectly set by EVAL_PREFIX.
-#
-.if defined(USE_JAVA)
-.  if exists(${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES})
-_JAVA_CLASSES_ZIP=	${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES}:
-.  endif
-.  if exists(${PKG_JAVA_HOME}/lib/tools.jar)
-_JAVA_TOOLS_JAR=	${PKG_JAVA_HOME}/lib/tools.jar:
-.  endif
-CLASSPATH?=		${_JAVA_CLASSES_ZIP}${_JAVA_TOOLS_JAR}.
-
-MAKE_ENV+=		CLASSPATH=${CLASSPATH}
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
-.endif
-
-# Include popular master sites
-.include "../../mk/bsd.sites.mk"
-
-.if defined(DIST_SUBDIR)
-_MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}/}
-.  if defined(MASTER_SITE_OVERRIDE)
-_MASTER_SITE_OVERRIDE:=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}/}
-.  endif # MASTER_SITE_OVERRIDE
-.else  # !DIST_SUBDIR
-_MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP}
-.  if defined(MASTER_SITE_OVERRIDE)
-_MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
-.  endif # MASTER_SITE_OVERRIDE
-.endif # DIST_SUBDIR
-
-# Where to put distfiles that don't have any other master site
-MASTER_SITE_LOCAL?= \
-	${MASTER_SITE_BACKUP:=LOCAL_PORTS/} \
-
-# Derived names so that they're easily overridable.
-DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
-
-MAINTAINER?=		tech-pkg@NetBSD.org
-
-ALLFILES?=	${DISTFILES} ${PATCHFILES}
-CKSUMFILES?=	${ALLFILES}
-.for __tmp__ in ${IGNOREFILES}
-CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
+.for targ in ${_PKG_PHASES_WRKDIR}
+${targ}_COOKIE=		${WRKDIR}/.${targ}_done
 .endfor
 
-# List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
-.if defined(DIST_SUBDIR)
-.  if ${CKSUMFILES} != ""
-_CKSUMFILES?=	${CKSUMFILES:S/^/${DIST_SUBDIR}\//}
-.  endif
-.  if !empty(DISTFILES)
-_DISTFILES?=	${DISTFILES:S/^/${DIST_SUBDIR}\//}
-.  else
-_DISTFILES?=	# empty
-.  endif
-.  if defined(IGNOREFILES) && !empty(IGNOREFILES)
-_IGNOREFILES?=	${IGNOREFILES:S/^/${DIST_SUBDIR}\//}
-.  endif
-.  if defined(PATCHFILES) && !empty(PATCHFILES)
-_PATCHFILES?=	${PATCHFILES:S/^/${DIST_SUBDIR}\//}
-.  else
-_PATCHFILES?=	# empty
-.  endif
-.else
-_CKSUMFILES?=	${CKSUMFILES}
-_DISTFILES?=	${DISTFILES}
-_IGNOREFILES?=	${IGNOREFILES}
-_PATCHFILES?=	${PATCHFILES}
-.endif
-_ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
+### Transform USE_* into dependencies
 
-# This is what is actually going to be extracted, and is overridable
-# by user.
-EXTRACT_ONLY?=	${DISTFILES}
+.include "../../mk/bsd.pkg.use.mk"
+
+############################################################################
+# Sanity checks
+############################################################################
+
+# Fail-safe in the case of circular dependencies
+.if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
+PKG_FAIL_REASON+=	"Circular dependency detected"
+.endif
+
+# PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
+# "overwrite".
+.if (${PKG_INSTALLATION_TYPE} != "pkgviews") && \
+    (${PKG_INSTALLATION_TYPE} != "overwrite")
+PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
+.endif
+
+.if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
+PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
+.endif
+
+.if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
+.endif
+
+.if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
+.endif
+
+# Check that we are using up-to-date pkg_* tools with this file.
+.if !defined(NO_PKGTOOLS_REQD_CHECK)
+.  if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
+PKG_FAIL_REASON+='Error: The package tools installed on this system are out of date.'
+PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must update'
+PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
+PKG_FAIL_REASON+=''
+PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
+.  endif
+.endif # NO_PKGTOOLS_REQD_CHECK
+
+.if defined(NO_WRKSUBDIR)
+PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
+PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
+.endif # NO_WRKSUBDIR
+
+# We need to make sure the buildlink-x11 package is not installed since it
+# breaks builds that use imake.
+.if defined(USE_IMAKE)
+.  if exists(${LOCALBASE}/lib/X11/config/buildlinkX11.def) || \
+      exists(${X11BASE}/lib/X11/config/buildlinkX11.def)
+PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
+	 "    Please deinstall it (pkg_delete buildlink-x11)."
+.  endif
+.endif	# USE_IMAKE
 
 .if !defined(CATEGORIES) || !defined(DISTNAME)
 PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
@@ -1107,15 +253,842 @@ PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
 . endif
 .endif
 
-PKGREPOSITORYSUBDIR?=	All
-PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
-PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
+#
+# Many ways to disable a package.
+#
+# Ignore packages that can't be resold if building for a CDROM.
+#
+# Don't build a package if it's restricted and we don't want to
+# get into that.
+#
+# Don't build any package that utilizes strong cryptography, for
+# when the law of the land forbids it.
+#
+# Don't attempt to build packages against X if we don't have X.
+#
+# Don't build a package if it's broken.
+#
 
-CONFIGURE_DIRS?=	${WRKSRC}
-CONFIGURE_SCRIPT?=	./configure
-CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
+.if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
+PKG_FAIL_REASON+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
+         "    "${NO_BIN_ON_CDROM:Q}
+.endif
+.if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
+PKG_FAIL_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
+         "    "${NO_SRC_ON_CDROM:Q}
+.endif
+.if (defined(RESTRICTED) && defined(NO_RESTRICTED))
+PKG_FAIL_REASON+= "${PKGNAME} is restricted:" \
+	 "    "${RESTRICTED:Q}
+.endif
+.if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
+.  if defined(CRYPTO)
+PKG_FAIL_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
+.  endif
+.endif
+.if defined(USE_X11) && !exists(${X11BASE})
+PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
+.endif
+.if defined(BROKEN)
+PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
+.endif
 
-.if defined(GNU_CONFIGURE)
+.if defined(LICENSE)
+.  ifdef ACCEPTABLE_LICENSES
+.    for _lic in ${ACCEPTABLE_LICENSES}
+.      if ${LICENSE} == "${_lic}"
+_ACCEPTABLE=	yes
+.      endif	# LICENSE == _lic
+.    endfor	# _lic
+.  endif	# ACCEPTABLE_LICENSES
+.  ifndef _ACCEPTABLE
+PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
+	 "    To view the license, enter \"${MAKE} show-license\"." \
+	 "    To indicate acceptance, add this line to your /etc/mk.conf:" \
+	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
+.  endif	# _ACCEPTABLE
+.endif		# LICENSE
+
+# Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
+.if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
+.  for __tmp__ in ${ONLY_FOR_PLATFORM}
+.    if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+__PLATFORM_OK?=	yes
+.    endif	# MACHINE_PLATFORM
+.  endfor	# __tmp__
+.else		# !ONLY_FOR_PLATFORM
+__PLATFORM_OK?=	yes
+.endif		# ONLY_FOR_PLATFORM
+.for __tmp__ in ${NOT_FOR_PLATFORM}
+.  if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.    undef __PLATFORM_OK
+.  endif	# MACHINE_PLATFORM
+.endfor		# __tmp__
+.if !defined(__PLATFORM_OK)
+PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+.endif		# !__PLATFORM_OK
+
+.if !defined(NO_SKIP)
+.  if defined(PKG_FAIL_REASON) || defined(PKG_SKIP_REASON)
+_PKG_SKIPPED=	# defined
+.  endif
+.endif
+
+############################################################################
+# Set up build environment
+############################################################################
+
+.if !defined(_PKG_SKIPPED)
+
+# Allow variables to be set on a per-OS basis
+OPSYSVARS+=	CFLAGS CPPFLAGS CXXFLAGS FFLAGS LDFLAGS LIBS
+.  for var in ${OPSYSVARS:O}
+.    if defined(${var}.${OPSYS})
+${var}+=	${${var}.${OPSYS}}
+.    elif defined(${var}.*)
+${var}+=	${${var}.*}
+.    endif
+.  endfor
+
+CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
+DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
+DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
+
+.if !empty(USE_BUILDLINK3:M[nN][oO])
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib
+.endif
+
+ALL_ENV+=	CC=${CC:Q}
+ALL_ENV+=	CFLAGS=${CFLAGS:Q}
+ALL_ENV+=	CPPFLAGS=${CPPFLAGS:Q}
+ALL_ENV+=	CXX=${CXX:Q}
+ALL_ENV+=	CXXFLAGS=${CXXFLAGS:Q}
+ALL_ENV+=	COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG:Q}
+ALL_ENV+=	FFLAGS=${FFLAGS:Q}
+ALL_ENV+=	LDFLAGS=${LDFLAGS:Q}
+ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
+ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
+ALL_ENV+=	PREFIX=${PREFIX}
+
+MAKE_ENV+=	${ALL_ENV}
+MAKE_ENV+=	${NO_EXPORT_CPP:D:UCPP=${CPP:Q}}
+MAKE_ENV+=	LINK_ALL_LIBGCC_HACK=${LINK_ALL_LIBGCC_HACK:Q}
+MAKE_ENV+=	LOCALBASE=${LOCALBASE}
+MAKE_ENV+=	NO_WHOLE_ARCHIVE_FLAG=${NO_WHOLE_ARCHIVE_FLAG:Q}
+MAKE_ENV+=	WHOLE_ARCHIVE_FLAG=${WHOLE_ARCHIVE_FLAG:Q}
+MAKE_ENV+=	X11BASE=${X11BASE}
+MAKE_ENV+=	X11PREFIX=${X11PREFIX}
+
+# Constants to provide a consistent environment for packages using
+# BSD-style Makefiles.
+MAKE_ENV+=	MAKECONF=${PKGMAKECONF:U/dev/null}
+MAKE_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
+MAKE_ENV+=	${USETOOLS:DUSETOOLS=${USETOOLS:Q}}
+
+SCRIPTS_ENV+=	${ALL_ENV}
+SCRIPTS_ENV+=	_PKGSRCDIR=${_PKGSRCDIR}
+SCRIPTS_ENV+=	${BATCH:DBATCH=yes}
+SCRIPTS_ENV+=	CURDIR=${.CURDIR}
+SCRIPTS_ENV+=	DEPENDS=${DEPENDS:Q}
+SCRIPTS_ENV+=	DISTDIR=${DISTDIR}
+SCRIPTS_ENV+=	FILESDIR=${FILESDIR}
+SCRIPTS_ENV+=	LOCALBASE=${LOCALBASE}
+SCRIPTS_ENV+=	PATCHDIR=${PATCHDIR}
+SCRIPTS_ENV+=	PKGSRCDIR=${PKGSRCDIR}
+SCRIPTS_ENV+=	SCRIPTDIR=${SCRIPTDIR}
+SCRIPTS_ENV+=	VIEWBASE=${VIEWBASE}
+SCRIPTS_ENV+=	WRKDIR=${WRKDIR}
+SCRIPTS_ENV+=	WRKSRC=${WRKSRC}
+SCRIPTS_ENV+=	X11BASE=${X11BASE}
+
+# Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
+PLIST_SUBST+=	CHGRP=${CHGRP:Q}
+PLIST_SUBST+=	CHMOD=${CHMOD:Q}
+PLIST_SUBST+=	CHOWN=${CHOWN:Q}
+PLIST_SUBST+=	LN=${LN:Q}
+PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
+PLIST_SUBST+=	LOWER_VENDOR=${LOWER_VENDOR}
+PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
+PLIST_SUBST+=	LOWER_OS_VERSION=${LOWER_OS_VERSION}
+PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
+PLIST_SUBST+=	MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}
+PLIST_SUBST+=	MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}
+PLIST_SUBST+=	MKDIR=${MKDIR:Q}
+PLIST_SUBST+=	OPSYS=${OPSYS}
+PLIST_SUBST+=	OS_VERSION=${OS_VERSION}
+PLIST_SUBST+=	PKGBASE=${PKGBASE}
+PLIST_SUBST+=	PKGNAME=${PKGNAME_NOREV}
+PLIST_SUBST+=	PKGLOCALEDIR=${PKGLOCALEDIR}
+PLIST_SUBST+=	PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}
+PLIST_SUBST+=	QMAILDIR=${QMAILDIR} # XXXTV is this used?
+PLIST_SUBST+=	RM=${RM:Q}
+PLIST_SUBST+=	RMDIR=${RMDIR:Q}
+PLIST_SUBST+=	SVR4_PKGNAME=${SVR4_PKGNAME}
+PLIST_SUBST+=	TRUE=${TRUE:Q}
+PLIST_SUBST+=	VIEWBASE=${VIEWBASE}
+PLIST_SUBST+=	X11BASE=${X11BASE}
+PLIST_SUBST+=	X11PREFIX=${X11PREFIX}
+
+# Automatically increase process limit where necessary for building.
+.  if defined(UNLIMIT_RESOURCES)
+.    for res in ${UNLIMIT_RESOURCES}
+_ULIMIT_CMD+=	${ULIMIT_CMD_${res}:D${ULIMIT_CMD_${res}} ; }
+.    endfor
+.  endif
+
+.endif	# !_PKG_SKIPPED
+
+############################################################################
+# Debug support
+############################################################################
+
+# Debugging levels for this file, dependent on PKG_DEBUG_LEVEL definition
+# 0 == normal, default, quiet operation
+# 1 == all shell commands echoed before invocation
+# 2 == shell "set -x" operation
+PKG_DEBUG_LEVEL?=	0
+_PKG_SILENT=		@
+_PKG_DEBUG=		# empty
+_PKG_DEBUG_SCRIPT=	# empty
+
+.if ${PKG_DEBUG_LEVEL} > 0
+_PKG_SILENT=		# empty
+.endif
+
+.if ${PKG_DEBUG_LEVEL} > 1
+_PKG_DEBUG=		set -x;
+_PKG_DEBUG_SCRIPT=	${SH} -x
+.endif
+
+############################################################################
+# External tools
+############################################################################
+
+# top part not skipped by _PKG_SKIPPED
+
+# Used to print all the '===>' style prompts - override this to turn them off.
+ECHO_MSG?=		${ECHO}
+
+# Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
+# of dependencies for building, and the current target.
+.ifdef SMART_MESSAGES
+_PKGSRC_IN?=		===> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===
+.endif
+_PKGSRC_IN?=		===
+
+DO_NADA?=		${TRUE} # deprecated; for compatibility only
+SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
+TOUCH_FLAGS?=		-f
+
+FETCH_BEFORE_ARGS+=	${PASSIVE_FETCH:D-p}
+
+.if !defined(_PKG_SKIPPED)
+
+INSTALL_DATA?= 		${INSTALL} ${COPY} -o ${SHAREOWN} -g ${SHAREGRP} -m ${SHAREMODE}
+INSTALL_DATA_DIR?= 	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m ${PKGDIRMODE}
+INSTALL_GAME?=		${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEMODE}
+INSTALL_GAME_DATA?= 	${INSTALL} ${COPY} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEDATAMODE}
+INSTALL_LIB?= 		${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+INSTALL_LIB_DIR?= 	${INSTALL_PROGRAM_DIR}
+INSTALL_MAN?= 		${INSTALL} ${COPY} -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
+INSTALL_MAN_DIR?= 	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${PKGDIRMODE}
+INSTALL_PROGRAM?= 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+INSTALL_PROGRAM_DIR?= 	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m ${PKGDIRMODE}
+INSTALL_SCRIPT?= 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+INSTALL_SCRIPT_DIR?= 	${INSTALL_PROGRAM_DIR}
+
+_INSTALL_MACROS=	BSD_INSTALL=${INSTALL:Q}
+.  for mac in DATA GAME LIB MAN PROGRAM SCRIPT
+_INSTALL_MACROS+=	BSD_INSTALL_${mac}=${INSTALL_${mac}:Q}
+_INSTALL_MACROS+=	BSD_INSTALL_${mac}_DIR=${INSTALL_${mac}_DIR:Q}
+CONFIGURE_ENV+=		INSTALL_${mac}=${INSTALL_${mac}:Q}
+CONFIGURE_ENV+=		INSTALL_${mac}_DIR=${INSTALL_${mac}_DIR:Q}
+.  endfor
+MAKE_ENV+=		${_INSTALL_MACROS}
+SCRIPTS_ENV+=		${_INSTALL_MACROS}
+
+.  if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS:Mmake)
+MAKE_PROGRAM=		${GMAKE}
+.  elif defined(USE_IMAKE)
+MAKE_PROGRAM=		${_IMAKE_MAKE}
+.  endif
+MAKE_PROGRAM?=		${MAKE}
+
+MTREE_ARGS?=		-U -f ${MTREE_FILE} -d -e -p
+MTREE_FILE?=		${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
+
+PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
+PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
+PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
+PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`"
+PKG_ARGS_COMMON+=	${INSTALL_FILE:D-i ${INSTALL_FILE}}
+PKG_ARGS_COMMON+=	${DEINSTALL_FILE:D-k ${DEINSTALL_FILE}}
+PKG_ARGS_COMMON+=	${MESSAGE:D-D ${MESSAGE}}
+PKG_ARGS_COMMON+=	${NO_MTREE:D:U-m ${MTREE_FILE}}
+PKG_ARGS_COMMON+=	${PKG_PRESERVE:D-n ${PRESERVE_FILE}}
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+PKG_ARGS_COMMON+=	${CONFLICTS:D-C "${CONFLICTS}"}
+.  endif
+
+PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
+PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
+
+.endif	# !_PKG_SKIPPED
+
+############################################################################
+# External bsd.pkg.mk fragments
+############################################################################
+
+.if !defined(_PKG_SKIPPED)
+
+# CONF_DEPENDS notes a dependency where the config directory for the
+# package matches the dependency's config directory.  CONF_DEPENDS is
+# only meaningful if ${PKG_INSTALLATION_TYPE} == "pkgviews".
+#
+CONF_DEPENDS?=		# empty
+.  if !empty(CONF_DEPENDS)
+USE_PKGINSTALL=		YES
+.  endif
+
+USE_PKGINSTALL?=	NO
+.  if !empty(USE_PKGINSTALL:M[yY][eE][sS])
+.    include "../../mk/bsd.pkg.install.mk"
+.  endif
+
+.endif	# !_PKG_SKIPPED
+
+############################################################################
+# Transform package Makefile variables (overridable by external fragments)
+############################################################################
+
+.if !defined(_PKG_SKIPPED)
+
+# Set INSTALL_FILE to be the name of any INSTALL file
+.  if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
+INSTALL_FILE=		${PKGDIR}/INSTALL
+.  endif
+
+# Set DEINSTALL_FILE to be the name of any DEINSTALL file
+.  if !defined(DEINSTALL_FILE) && exists(${PKGDIR}/DEINSTALL)
+DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
+.  endif
+
+# If MESSAGE hasn't been defined, then set MESSAGE_SRC to be a space-separated
+# list of files to be concatenated together to generate the MESSAGE file.
+#
+.  if !defined(MESSAGE_SRC) && !defined(MESSAGE)
+.    if exists(${PKGDIR}/MESSAGE)
+MESSAGE_SRC=		${PKGDIR}/MESSAGE
+.    else
+.      if exists(${PKGDIR}/MESSAGE.common)
+MESSAGE_SRC=		${PKGDIR}/MESSAGE.common
+.      endif
+.      if exists(${PKGDIR}/MESSAGE.${OPSYS})
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
+.      endif
+.      if exists(${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.      endif
+.      if exists(${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.      endif
+.    endif
+.  endif
+
+.  if defined(MESSAGE_SRC)
+MESSAGE=		${WRKDIR}/.MESSAGE
+
+# Set MESSAGE_SUBST to substitute "${variable}" to "value" in MESSAGE
+MESSAGE_SUBST+=	LOCALBASE=${LOCALBASE}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=	PKGNAME=${PKGNAME}
+MESSAGE_SUBST+=	PREFIX=${PREFIX}
+MESSAGE_SUBST+=	QMAILDIR=${QMAILDIR} # XXXTV is this used?
+MESSAGE_SUBST+=	ROOT_GROUP=${ROOT_GROUP}
+MESSAGE_SUBST+=	ROOT_USER=${ROOT_USER}
+MESSAGE_SUBST+=	VIEWBASE=${VIEWBASE}
+MESSAGE_SUBST+=	X11BASE=${X11BASE}
+MESSAGE_SUBST+=	X11PREFIX=${X11PREFIX}
+
+MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
+.  endif
+
+### Config file related settings - see Packages.txt
+
+PKG_SYSCONFVAR?=	${PKGBASE}
+PKG_SYSCONFSUBDIR?=	# empty
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+PKG_SYSCONFDEPOTBASE=	# empty
+PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
+.  else
+.    if !empty(PKG_SYSCONFBASE:M${PREFIX}) || \
+        !empty(PKG_SYSCONFBASE:M${PREFIX}/*)
+PKG_SYSCONFDEPOTBASE=	# empty
+PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
+.      if !empty(CONF_DEPENDS)
+_PLIST_IGNORE_FILES+=	${PKG_SYSCONFDIR:S,^${PREFIX}/,,}
+.      endif
+.    else
+PKG_SYSCONFDEPOTBASE=	${PKG_SYSCONFBASE}/${DEPOT_SUBDIR}
+PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDEPOTBASE}/${PKGNAME}
+.    endif
+.  endif
+.  if empty(PKG_SYSCONFSUBDIR)
+DFLT_PKG_SYSCONFDIR:=	${PKG_SYSCONFBASEDIR}
+.  else
+DFLT_PKG_SYSCONFDIR:=	${PKG_SYSCONFBASEDIR}/${PKG_SYSCONFSUBDIR}
+.  endif
+PKG_SYSCONFDIR=		${DFLT_PKG_SYSCONFDIR}
+.  if defined(PKG_SYSCONFDIR.${PKG_SYSCONFVAR})
+PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
+PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
+PKG_SYSCONFDEPOTBASE=	# empty
+.  endif
+
+ALL_ENV+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+BUILD_DEFS_FIXED+=	PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
+
+.endif	# !_PKG_SKIPPED
+
+### Checksum and other file handling support
+# not skipped by _PKG_SKIPPED
+
+ALLFILES?=	${DISTFILES} ${PATCHFILES}
+CKSUMFILES?=	${ALLFILES}
+.for __tmp__ in ${IGNOREFILES}
+CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
+.endfor
+
+# List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
+.if defined(DIST_SUBDIR)
+.  if ${CKSUMFILES} != ""
+_CKSUMFILES?=	${CKSUMFILES:S/^/${DIST_SUBDIR}\//}
+.  endif
+.  if !empty(DISTFILES)
+_DISTFILES?=	${DISTFILES:S/^/${DIST_SUBDIR}\//}
+.  else
+_DISTFILES?=	# empty
+.  endif
+.  if defined(IGNOREFILES) && !empty(IGNOREFILES)
+_IGNOREFILES?=	${IGNOREFILES:S/^/${DIST_SUBDIR}\//}
+.  endif
+.  if defined(PATCHFILES) && !empty(PATCHFILES)
+_PATCHFILES?=	${PATCHFILES:S/^/${DIST_SUBDIR}\//}
+.  else
+_PATCHFILES?=	# empty
+.  endif
+.else
+_CKSUMFILES?=	${CKSUMFILES}
+_DISTFILES?=	${DISTFILES}
+_IGNOREFILES?=	${IGNOREFILES}
+_PATCHFILES?=	${PATCHFILES}
+.endif
+_ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
+
+############################################################################
+# Phase `fetch'
+############################################################################
+
+.if !empty(PKG_PHASES:Mfetch) && !defined(_PKG_SKIPPED)
+
+##### Master site selection
+
+.  include "../../mk/bsd.sites.mk"
+
+.  if defined(DIST_SUBDIR)
+_MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}/}
+.    if defined(MASTER_SITE_OVERRIDE)
+_MASTER_SITE_OVERRIDE:=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}/}
+.    endif # MASTER_SITE_OVERRIDE
+.  else  # !DIST_SUBDIR
+_MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP}
+.    if defined(MASTER_SITE_OVERRIDE)
+_MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
+.    endif # MASTER_SITE_OVERRIDE
+.  endif # DIST_SUBDIR
+
+# Where to put distfiles that don't have any other master site
+MASTER_SITE_LOCAL?=	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
+
+##### Make subtargets for "fetch".
+
+#===> check-vulnerable:  Check for any vulnerabilities in the package
+_CHECK_VULNERABLE=							\
+	${SETENV} PKGNAME="${PKGNAME}"					\
+		  PKGBASE="${PKGBASE}"					\
+		${AWK} '/^$$/ { next }					\
+			/^\#.*/ { next }				\
+			$$1 !~ ENVIRON["PKGBASE"] { next }		\
+			{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); } \
+		' < ${PKGVULNDIR}/pkg-vulnerabilities || ${ECHO} 'could not check pkg-vulnerabilities file'
+
+_REAL_TARGETS.fetch+=		check-vulnerable
+.PHONY: check-vulnerable
+check-vulnerable:
+.  if !defined(ALLOW_VULNERABLE_PACKAGES) && !exists(${extract_COOKIE})
+.    if exists(${PKGVULNDIR}/pkg-vulnerabilities)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
+	vul=`${_CHECK_VULNERABLE}`;					\
+	case "$$vul" in							\
+	"")	;;							\
+	*)	${ECHO} "$$vul";					\
+		${ECHO} "or define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
+		${FALSE} ;;						\
+	esac
+.    else
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** No ${PKGVULNDIR}/pkg-vulnerabilities file found,"
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** skipping vulnerability checks. To fix, install"
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** the pkgsrc/security/audit-packages package and run"
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'."
+.    endif
+.  endif
+
+#===> "pre-fetch"
+
+_REAL_TARGETS.fetch+=		pre-fetch
+.PHONY: pre-fetch
+pre-fetch: .OPTIONAL
+
+#===> "do-fetch"
+
+_REAL_TARGETS.fetch+=		do-fetch
+.PHONY: do-fetch
+#do-fetch:
+
+#===> "post-fetch"
+
+_REAL_TARGETS.fetch+=		post-fetch
+.PHONY: post-fetch
+post-fetch: .OPTIONAL
+
+.endif	# !empty(PKG_PHASES:Mfetch) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `checksum'
+############################################################################
+
+# not skipped by _PKG_SKIPPED
+
+#===> uptodate-digest:  Install "digest" if needed.
+# this is also used by `patch' and `make*sum'
+.PHONY: uptodate-digest
+uptodate-digest:
+.if !empty(USE_DIGEST:M[yY][eE][sS])
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
+		{ cd ${PKGSRCDIR}/pkgtools/digest;			\
+		${MAKE} clean;						\
+		if [ -f ${DIGEST} ]; then				\
+			${MAKE} ${MAKEFLAGS} deinstall;			\
+		fi;							\
+		${MAKE} ${MAKEFLAGS} test;				\
+		if [ -f ${DIGEST} ]; then				\
+			${MAKE} ${MAKEFLAGS} deinstall;			\
+		fi;							\
+		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};			\
+		${MAKE} ${MAKEFLAGS} clean; } 				\
+	fi
+.endif
+
+.if !empty(PKG_PHASES:Mchecksum) && !defined(_PKG_SKIPPED)
+
+#===> do-checksum
+
+_REAL_TARGETS.checksum+=	do-checksum
+.PHONY: do-checksum
+do-checksum: .OPTIONAL
+.  if !defined(NO_CHECKSUM) && !exists(${extract_COOKIE})
+do-checksum: uptodate-digest
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${DISTINFO_FILE} ]; then				\
+		${ECHO_MSG} "=> No checksum file.";			\
+	else								\
+		(cd ${DISTDIR}; OK="true";				\
+		  for file in "" ${_CKSUMFILES}; do			\
+		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
+			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
+			if [ "X$$alg" = "X" ]; then			\
+				${ECHO_MSG} "=> No checksum recorded for $$file."; \
+				OK="false";				\
+			else						\
+				CKSUM=`${DIGEST} $$alg < $$file`;	\
+				CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
+				if [ "$$CKSUM2" = "IGNORE" ]; then	\
+					${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
+					${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
+					OK="false";			\
+				elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
+					${ECHO_MSG} "=> Checksum OK for $$file."; \
+				else					\
+					${ECHO_MSG} "=> Checksum mismatch for $$file."; \
+					OK="false";			\
+				fi;					\
+			fi;						\
+		  done;							\
+		  for file in "" ${_IGNOREFILES}; do			\
+		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
+			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
+			if [ "$$CKSUM2" = "" ]; then			\
+				${ECHO_MSG} "=> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
+				OK="false";				\
+			elif [ "$$CKSUM2" != "IGNORE" ]; then		\
+				${ECHO_MSG} "=> Checksum for $$file is not set to IGNORE in checksum file even though"; \
+				${ECHO_MSG} "   the file is in the "'$$'"{IGNOREFILES} list."; \
+				OK="false";				\
+			fi;						\
+		  done;							\
+		  if [ "$$OK" != "true" ]; then				\
+			${ECHO_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
+			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
+			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
+			exit 1;						\
+		  fi) ;							\
+	fi
+.  endif
+
+.endif	# !empty(PKG_PHASES:Mchecksum) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `depends'
+############################################################################
+
+.if !empty(PKG_PHASES:Mdepends) && !defined(_PKG_SKIPPED)
+
+.  if defined(RECOMMENDED)
+.    if !empty(IGNORE_RECOMMENDED:M[nN][oO])
+DEPENDS+=		${RECOMMENDED}
+.    else
+BUILD_DEFS_FIXED+=	IGNORE_RECOMMENDED
+.    endif
+.  endif
+
+# Remove some redundant dependencies from the DEPENDS list.
+.  include "../../mk/reduce-depends.mk"
+
+_REAL_TARGETS.depends+=		depends-message
+
+#===> "install-depends"
+
+_REAL_TARGETS.depends+=		install-depends
+.PHONY: install-depends
+#install-depends:
+
+.endif	# !empty(PKG_PHASES:Mdepends) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `extract'
+############################################################################
+
+.if !empty(PKG_PHASES:Mextract) && !defined(_PKG_SKIPPED)
+
+_REAL_TARGETS.extract+=		extract-message
+
+#===> "build-defs-message"
+# if BUILD_DEFS is non-empty, show a notice the the builder
+
+.  if !empty(PKGSRC_SHOW_BUILD_DEFS:M[yY][eE][sS])
+_REAL_TARGETS.extract+=		build-defs-message
+.PHONY: build-defs-message
+build-defs-message:
+.    if !empty(BUILD_DEFS)
+	@${ECHO} "=========================================================================="
+	@${ECHO} "The following variables will affect the build process of this package,"
+	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
+	@${ECHO} ""
+.      for var in ${BUILD_DEFS}
+.        if !defined(${var})
+	@${ECHO} "        * ${var} (not defined)"
+.        elif defined(${var}) && empty(${var})
+	@${ECHO} "        * ${var} (defined)"
+.        else
+	@${ECHO} "        * ${var} = ${${var}}"
+.        endif
+.      endfor
+	@${ECHO} ""
+	@${ECHO} "You may want to abort the process now with CTRL-C and change their value"
+	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after"
+	@${ECHO} "the changes."
+	@${ECHO} "=========================================================================="
+.    endif
+.  endif
+
+#===> "pre-extract"
+
+_REAL_TARGETS.extract+=		pre-extract
+.PHONY: pre-extract
+pre-extract: .OPTIONAL
+
+#===> "do-extract"
+
+_REAL_TARGETS.extract+=		do-extract
+.PHONY: do-extract
+#do-extract:
+
+#===> "post-extract"
+
+_REAL_TARGETS.extract+=		post-extract
+.PHONY: post-extract
+post-extract: .OPTIONAL
+
+.endif	# !empty(PKG_PHASES:Mextract) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `patch'
+############################################################################
+
+.if !empty(PKG_PHASES:Mpatch) && !defined(_PKG_SKIPPED)
+
+# determine if we need a working patch(1).
+.  if defined(PATCHFILES)
+_NEED_PATCH=		YES
+.  elif defined(_OPSYS_GPATCH_REQD) && !empty(_OPSYS_GPATCH_REQD:M[yY][eE][sS])
+_NEED_PATCH=		YES
+.  else
+_NEED_PATCH!=		if [ -d ${PATCHDIR} ]; then \
+				if [ "`${ECHO} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*" ]; then \
+					${ECHO} YES; \
+				else \
+					${ECHO} NO; \
+				fi \
+			else \
+				${ECHO} NO; \
+			fi
+.  endif
+
+.  if ${_NEED_PATCH} == "YES"
+USE_GNU_TOOLS+=		patch
+.  endif
+
+.  if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
+PATCH_DEBUG_TMP=	yes
+.  endif
+PATCH_DEBUG_TMP?=	no
+
+PATCH_STRIP?=		-p0
+.  if ${PATCH_DEBUG_TMP} == "yes"
+PATCH_ARGS?=		-d ${WRKSRC} -E ${PATCH_STRIP}
+.  endif
+PATCH_ARGS?=		-d ${WRKSRC} --forward --quiet -E ${PATCH_STRIP}
+
+PATCH_ARGS+=		${BATCH:D--batch}
+.  if defined(_PATCH_CAN_BACKUP) && (${_PATCH_CAN_BACKUP} == "yes")
+PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
+.  endif
+PATCH_FUZZ_FACTOR?=	-F0	# Default to zero fuzz
+
+# The following variables control how "distribution" patches are extracted
+# and applied to the package sources.
+#
+# PATCH_DIST_STRIP is a patch option that sets the pathname strip count.
+# PATCH_DIST_ARGS is the list of arguments to pass to the patch command.
+# PATCH_DIST_CAT is the command that outputs the patch to stdout.
+#
+# For each of these variables, there is a patch-specific variant that
+# may be set, i.e. PATCH_DIST_STRIP.<patch>, PATCH_DIST_ARGS.<patch>,
+# PATCH_DIST_CAT.<patch>.
+#
+PATCH_DIST_STRIP?=		-p0
+.  for i in ${PATCHFILES}
+PATCH_DIST_STRIP.${i:S/=/--/}?=	${PATCH_DIST_STRIP}
+.    if defined(PATCH_DIST_ARGS)
+PATCH_DIST_ARGS.${i:S/=/--/}?=	${PATCH_DIST_ARGS}
+.    elif ${PATCH_DEBUG_TMP} == "yes"
+PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
+.    else
+PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
+.    endif
+.  endfor
+.  if defined(BATCH)
+PATCH_DIST_ARGS+=		--batch
+.    for i in ${PATCHFILES}
+PATCH_DIST_ARGS.${i:S/=/--/}+=	--batch
+.    endfor
+.  endif
+.  if defined(_PATCH_CAN_BACKUP) && (${_PATCH_CAN_BACKUP} == "yes")
+PATCH_DIST_ARGS+=		${_PATCH_BACKUP_ARG} .orig_dist
+.    for i in ${PATCHFILES}
+PATCH_DIST_ARGS.${i:S/=/--/}+=	${_PATCH_BACKUP_ARG} .orig_dist
+.    endfor
+.  endif
+PATCH_DIST_CAT?=	{ case $$patchfile in				\
+			  *.Z|*.gz) ${GZCAT} $$patchfile ;;		\
+			  *.bz2)    ${BZCAT} $$patchfile ;;		\
+			  *)	    ${CAT} $$patchfile ;;		\
+			  esac; }
+.  for i in ${PATCHFILES}
+PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
+.  endfor
+
+.  if !empty(PKGSRC_SHOW_PATCH_ERRORMSG:M[yY][eE][sS])
+PKGSRC_PATCH_FAIL=							\
+if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
+	${ECHO} "==========================================================================";								\
+	${ECHO};							\
+	${ECHO} "Some of the selected build options and/or local patches may be incompatible.";								\
+	${ECHO} "Please try building with fewer options or patches.";	\
+	${ECHO};							\
+	${ECHO} "==========================================================================";								\
+fi; exit 1
+.  endif
+PKGSRC_PATCH_FAIL?=	exit 1
+
+.endif	# !empty(PKG_PHASES:Mpatch) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `tools'
+############################################################################
+
+do-tools: .OPTIONAL
+.if !empty(PKG_PHASES:Mtools) && !defined(_PKG_SKIPPED)
+
+.  include "../../mk/tools.mk"
+
+.endif	# !empty(PKG_PHASES:Mtools) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `wrapper'
+############################################################################
+
+do-wrapper: .OPTIONAL
+.if !empty(PKG_PHASES:Mwrapper) && !defined(_PKG_SKIPPED)
+
+# If NO_BUILD is defined, default to not needing a compiler.
+.  if defined(NO_BUILD)
+USE_LANGUAGES?=		# empty
+.  endif
+.  include "../../mk/compiler.mk"
+.  include "../../mk/wrapper/bsd.wrapper.mk"
+
+.endif	# !empty(PKG_PHASES:Mwrapper) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `configure'
+############################################################################
+
+.if !empty(PKG_PHASES:Mconfigure) && !defined(_PKG_SKIPPED)
+
+CONFIGURE_ENV+=		${ALL_ENV}
+CONFIGURE_ENV+=		ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}"
+CONFIGURE_ENV+=		AWK=${AWK:Q}
+CONFIGURE_ENV+=		F77=${FC:Q}
+CONFIGURE_ENV+=		FC=${FC:Q}
+CONFIGURE_ENV+=		INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}"
+CONFIGURE_ENV+=		MAKE=${MAKE_PROGRAM:T:Q}
+CONFIGURE_ENV+=		M4=${M4:Q}
+CONFIGURE_ENV+=		YACC=${YACC:Q}
+
+.  if defined(GNU_CONFIGURE)
+#
+# If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
+# also pass in a CONFIG_SHELL to avoid picking up bash
+#
+CONFIG_SHELL?=		${SH}
+CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
+CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
+CONFIGURE_ENV+=		LIBS=${LIBS:Q}
+CONFIGURE_ENV+=		${USE_LIBTOOL:Dlt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}}
 #
 # GNU_CONFIGURE_PREFIX is the argument to the --prefix option passed to the
 # GNU configure script.
@@ -1124,14 +1097,14 @@ GNU_CONFIGURE_PREFIX?=	${PREFIX}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
 HAS_CONFIGURE=		yes
-.  if defined(USE_X11)
+.    if defined(USE_X11)
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib${LIBABISUFFIX}
-.  endif
+.    endif
 CONFIGURE_HAS_INFODIR?=	yes
-.  if !empty(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
+.    if !empty(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
-.  endif
+.    endif
 #
 # By default, override config.guess and config.sub for GNU configure
 # packages. pkgsrc's updated versions of these scripts allows GNU
@@ -1149,207 +1122,394 @@ CONFIG_SUB_OVERRIDE?=		\
 #
 CONFIG_STATUS_OVERRIDE?=	\
 	config.status */config.status */*/config.status
-.endif
+.  endif
 
+.endif	# !empty(PKG_PHASES:Mconfigure) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `build'
+############################################################################
+
+.if !empty(PKG_PHASES:Mbuild) && !defined(_PKG_SKIPPED)
+
+.endif	# !empty(PKG_PHASES:Mbuild) && !defined(_PKG_SKIPPED)
+
+############################################################################
+# Phase `test'
+############################################################################
+
+.if !empty(PKG_PHASES:Mtest)
+.endif	# !empty(PKG_PHASES:Mtest)
+
+############################################################################
+# Phase `install'
+############################################################################
+
+.if !empty(PKG_PHASES:Minstall)
+
+##### PLIST manipulation
+
+.  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 #
-# Config file related settings - see Packages.txt
+# _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
+# in pkg_views(1).  It's used by the dynamic PLIST generator to skip
+# adding the named files to the PLIST.
 #
-PKG_SYSCONFVAR?=	${PKGBASE}
-PKG_SYSCONFSUBDIR?=	# empty
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-PKG_SYSCONFDEPOTBASE=	# empty
-PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
-.else
-.  if !empty(PKG_SYSCONFBASE:M${PREFIX}) || \
-      !empty(PKG_SYSCONFBASE:M${PREFIX}/*)
-PKG_SYSCONFDEPOTBASE=	# empty
-PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
-.    if !empty(CONF_DEPENDS)
-_PLIST_IGNORE_FILES+=	${PKG_SYSCONFDIR:S,^${PREFIX}/,,}
+_PLIST_IGNORE_FILES=	+*			# package metadata files
+_PLIST_IGNORE_FILES+=	info/dir
+.    if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
+_PLIST_IGNORE_FILES+=	${INFO_DIR}/dir
 .    endif
-.  else
-PKG_SYSCONFDEPOTBASE=	${PKG_SYSCONFBASE}/${DEPOT_SUBDIR}
-PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDEPOTBASE}/${PKGNAME}
+_PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
+_PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
+
+PKG_ARGS_INSTALL+=	-U	# don't update the pkgdb.byfile.db
+PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
+.  endif # PKG_INSTALLATION_TYPE
+
+BUILD_DEFS_FIXED+=	_PLIST_IGNORE_FILES
+
+##### Make subtargets for non-su portion of "install".
+
+#===> "install-check-pkgname"
+
+_REAL_TARGETS.install+=		install-check-pkgname
+.PHONY: install-check-pkgname
+install-check-pkgname:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	extractname=`${CAT} ${extract_COOKIE}`;				\
+	case "$$extractname" in						\
+	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
+	"${PKGNAME}")	;;						\
+	*)	${ECHO_MSG} "*** Warning: Package version $$extractname in ${WRKDIR}"; \
+		${ECHO_MSG} "*** Current version ${PKGNAME} in pkgsrc directory"; \
+		${ECHO_MSG} "*** Cleaning and rebuilding the newer version of the package..."; \
+		${MAKE} clean && ${MAKE} build ;;			\
+	esac
+
+#===> "do-su-install"
+# su to root, then run real-su-install
+
+_REAL_TARGETS.install+=		do-su-install
+
+##### Make subtargets for su portion of "install".
+
+#===> "message"
+# generate ${MESSAGE} from ${MESSAGE_SRC} by substituting
+# for MESSAGE_SUBST entries
+
+_REAL_TARGETS.su-install+=	message
+.PHONY: message
+message: ${MESSAGE}
+.  if defined(MESSAGE)
+${MESSAGE}: ${MESSAGE_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -z "${MESSAGE_SRC}" ]; then				\
+		${ECHO} "${MESSAGE_SRC} not found.";			\
+		${ECHO} "Please set MESSAGE_SRC correctly.";		\
+	else								\
+		${CAT} ${MESSAGE_SRC} |					\
+			${SED} ${MESSAGE_SUBST_SED}			\
+			> ${MESSAGE};					\
+	fi
 .  endif
-.endif
-.if empty(PKG_SYSCONFSUBDIR)
-DFLT_PKG_SYSCONFDIR:=	${PKG_SYSCONFBASEDIR}
-.else
-DFLT_PKG_SYSCONFDIR:=	${PKG_SYSCONFBASEDIR}/${PKG_SYSCONFSUBDIR}
-.endif
-PKG_SYSCONFDIR=		${DFLT_PKG_SYSCONFDIR}
-.if defined(PKG_SYSCONFDIR.${PKG_SYSCONFVAR})
-PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
-PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
-PKG_SYSCONFDEPOTBASE=	# empty
-.endif
 
-CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
-MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
-BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
+#===> "init-install"
+# check for conflicts and create install directories
 
-# Passed to most of script invocations
-SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
-	PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
-	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
-	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
-	_PKGSRCDIR=${_PKGSRCDIR} PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
-	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
-	VIEWBASE=${VIEWBASE}
+_REAL_TARGETS.su-install+=	init-install
+.PHONY: init-install
+init-install:
+.  if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) &&	\
+    (${PKG_INSTALLATION_TYPE} == "overwrite")
+.    if defined(CONFLICTS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RM} -f ${WRKDIR}/.CONFLICTS
+.      for conflict in ${CONFLICTS}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_BEST_EXISTS} \"${conflict}\" || ${TRUE}`";	\
+	if [ X"$$found" != X"" ]; then					\
+		${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS;		\
+	fi
+.      endfor
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -s ${WRKDIR}/.CONFLICTS ]; then				\
+		found=`${SED} -e s'|${_PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
+		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
+		${ECHO_MSG} "*** They install the same files into the same place."; \
+		${ECHO_MSG} "*** Please remove $$found first with pkg_delete(1)."; \
+		${RM} -f ${WRKDIR}/.CONFLICTS;				\
+		exit 1;							\
+	fi
+.    endif	# CONFLICTS
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
+	if [ "$$found" != "" ]; then					\
+		${ECHO_MSG} "${_PKGSRC_IN}> $$found is already installed - perhaps an older version?"; \
+		${ECHO_MSG} "*** If so, you may use either of:"; \
+		${ECHO_MSG} "***  - \"pkg_delete $$found\" and \"${MAKE} reinstall\" to upgrade properly"; \
+		${ECHO_MSG} "***  - \"${MAKE} update\" to rebuild the package and all of its dependencies"; \
+		${ECHO_MSG} "***  - \"${MAKE} replace\" to replace only the package without re-linking"; \
+		${ECHO_MSG} "***    dependencies, risking various problems."; \
+		exit 1;							\
+	fi
+.  endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER && overwrite
+.  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_INFO} -e ${PKGNAME} || ${TRUE}`";			\
+	if [ "$$found" != "" ]; then					\
+		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed."; \
+		exit 1;							\
+	fi
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` -ne ${DEF_UMASK} ]; then \
+		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
+		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
+		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
+	fi
+.  if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Creating installation directories"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for dir in ${INSTALLATION_DIRS}; do				\
+		case $$dir in						\
+		/*)	;;						\
+		*bin|*bin/*|*libexec|*libexec/*)			\
+			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
+		*man/*)							\
+			${INSTALL_MAN_DIR} ${PREFIX}/$$dir ;;		\
+		*)							\
+			${INSTALL_DATA_DIR} ${PREFIX}/$$dir ;;		\
+		esac;							\
+	done
+.  endif	# INSTALLATION_DIRS
+.  if !defined(NO_MTREE)
+	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
+		if [ ! -f ${MTREE_FILE} ]; then				\
+			${ECHO_MSG} "Error: mtree file \"${MTREE_FILE}\" is missing."; \
+			exit 1;						\
+		else							\
+			if [ ! -d ${PREFIX} ]; then			\
+				${MKDIR} ${PREFIX};			\
+			fi;						\
+			${MTREE} ${MTREE_ARGS} ${PREFIX}/;		\
+		fi;							\
+	else								\
+		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
+		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
+	fi
+.  else
+	${_PKG_SILENT}${_PKG_DEBUG}[ -d ${PREFIX} ] || ${MKDIR} ${PREFIX}
+.  endif # !NO_MTREE
 
-.if defined(BATCH)
-SCRIPTS_ENV+=	BATCH=yes
-.endif
+#===> "pre-install-script"
 
-# If NO_BUILD is defined, default to not needing a compiler.
-.if defined(NO_BUILD)
-USE_LANGUAGES?=		# empty
-.endif
+_REAL_TARGETS.su-install+=	pre-install-script
+.PHONY: pre-install-script
+pre-install-script: .OPTIONAL
 
-# Get the proper dependencies and set the PATH to use the compiler
-# named in PKGSRC_COMPILER.
+#===> "pre-install"
+
+_REAL_TARGETS.su-install+=	pre-install
+.PHONY: pre-install
+pre-install: .OPTIONAL
+
+#===> "do-install"
+
+_REAL_TARGETS.su-install+=	do-install
+
+#===> "post-install"
+
+_REAL_TARGETS.su-install+=	post-install
+.PHONY: post-install
+post-install: .OPTIONAL
+
+#===> "plist"
 #
-.include "../../mk/compiler.mk"
+# PLIST must be generated at this late point (instead of
+# depending on it somewhere earlier), because it needs
+# to be created _after_ the {pre,do,post}-install
+# targets are run.
+#
+# We generate _before_ post-install-script is run so
+# that the real config files and rc.d scripts aren't
+# listed in the PLIST.
+#
+_REAL_TARGETS.su-install+=	plist
+.PHONY: plist
+plist: ${PLIST}
 
-.include "../../mk/tools.mk"
+#===> "post-install-script"
 
-.if !defined(NO_WRAPPER)
-.  include "../../mk/wrapper/bsd.wrapper.mk"
-.endif
+_REAL_TARGETS.su-install+=	post-install-script
+.PHONY: post-install-script
+post-install-script: .OPTIONAL
 
-.if defined(RECOMMENDED)
-.  if !empty(IGNORE_RECOMMENDED:M[nN][oO])
-DEPENDS+=		${RECOMMENDED}
-.  else
-BUILD_DEFS+=		IGNORE_RECOMMENDED
+#===> "post-install-man"
+# fixup manpages to match actual installed files
+
+_REAL_TARGETS.su-install+=	post-install-man
+.PHONY: post-install-man
+post-install-man:
+	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
+		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
+		${PLIST} 2>/dev/null || ${TRUE}`;			\
+	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
+		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
+		${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
+		for manpage in $$newmanpages; do			\
+			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
+			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
+				set - `${LS} -l ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
+				shift `expr $$# - 1`;			\
+				${RM} -f ${PREFIX}/$$manpage;		\
+				${LN} -s $${1} ${PREFIX}/$$manpage;	\
+				${RM} ${PREFIX}/$$manpage.gz;		\
+			else						\
+				${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;	\
+			fi;						\
+			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
+				${ECHO_MSG} "$$manpage";		\
+			fi;						\
+		done;							\
+	fi;								\
+	if [ X"${MANCOMPRESSED}" = X"" -a X"${MANZ}" != X"" ]; then	\
+		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
+		${ECHO_MSG} "${_PKGSRC_IN}> Compressing manual pages for ${PKGNAME}"; \
+		for manpage in $$newmanpages; do			\
+			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
+			if [ -h ${PREFIX}/$$manpage ]; then		\
+				set - `${LS} -l ${PREFIX}/$$manpage`; \
+				shift `expr $$# - 1`;			\
+				${RM} -f ${PREFIX}/$$manpage.gz; 	\
+				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
+				${RM} ${PREFIX}/$$manpage;		\
+			else						\
+				${GZIP_CMD} ${PREFIX}/$$manpage;	\
+			fi;						\
+			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
+				${ECHO_MSG} "$$manpage";		\
+			fi;						\
+		done;							\
+	fi
+
+#===> "post-install-shlib"
+
+.  if ${_DO_SHLIB_CHECKS} == "yes"
+.    if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_REAL_TARGETS.su-install+=	post-install-shlib
+.PHONY: post-install-shlib
+post-install-shlib:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
+.    endif
 .  endif
-.endif
 
-# Remove some redundant dependencies from the DEPENDS list.
-.include "../../mk/reduce-depends.mk"
-DEPENDS:=	${REDUCED_DEPENDS}
+#===> "post-install-message"
+# display MESSAGE, if specified
 
-.if defined(USE_DIRS) && !empty(USE_DIRS) && \
-    ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  include "../../mk/dirs.mk"
-.endif
-
-_PREPENDED_TO_PATH?=	# empty
-.for _dir_ in ${PREPEND_PATH}
-.  if empty(_PREPENDED_TO_PATH:M${_dir_})
-_PREPENDED_TO_PATH+=	${_dir_}
-PATH:=			${_dir_}:${PATH}
+.  ifdef MESSAGE
+_REAL_TARGETS.su-install+=	post-install-message
+.PHONY: post-install-message
+post-install-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
+	@${ECHO_MSG} ""
+	@${CAT} ${MESSAGE}
+	@${ECHO_MSG} ""
+.    if !empty(PKGSRC_MESSAGE_RECIPIENTS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	(${ECHO} "The ${PKGNAME} package was installed on `${HOSTNAME_CMD}` at `date`"; \
+	${ECHO} "";							\
+	${ECHO} "Please note the following:";				\
+	${ECHO} "";							\
+	${CAT} ${MESSAGE};						\
+	${ECHO} "") |							\
+	${MAIL_CMD} -s"Package ${PKGNAME} installed on `${HOSTNAME_CMD}`" ${PKGSRC_MESSAGE_RECIPIENTS}
+.    endif
 .  endif
+
+#===> "fake-pkg"
+
+_REAL_TARGETS.su-install+=	fake-pkg
+
+#===> "check-shlibs"
+
+.  if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
+_REAL_TARGETS.su-install+=	check-shlibs
+.  endif
+
+.endif	# !empty(PKG_PHASES:Minstall)
+
+############################################################################
+# Phase `package'
+############################################################################
+
+############################################################################
+# Recursive invocation support
+############################################################################
+
+.for targ in ${_PKG_PHASES_ALL}
+.PHONY: recurse-${targ}
+recurse-${targ}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKGDIR} && ${MAKE} ${targ}
 .endfor
 
-# Add these bits to the environment use when invoking the sub-make
-# processes for build-related phases.
-#
-BUILD_ENV+=	PATH=${PATH:Q}
-BUILD_ENV+=	_PREPENDED_TO_PATH=${_PREPENDED_TO_PATH:Q}
+# Find out the PREFIX of dependencies where the PREFIX is needed at build time.
+.if defined(EVAL_PREFIX)
+.  for def in ${EVAL_PREFIX}
+.    if !defined(${def:C/=.*$//})
+${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
+_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
+${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
+.    endif
+.  endfor
+.endif
 
+# convenience target, to display make variables from command line
+# i.e. "make show-var VARNAME=var", will print var's value
+.PHONY: show-var show-var-noeval
+show-var show-var-noeval:
+	@${ECHO} ${${VARNAME}:Q}
+
+# enhanced version of target above, to display multiple variables
+.PHONY: show-vars show-vars-noeval
+show-vars show-vars-noeval:
+.for VARNAME in ${VARNAMES}
+	@${ECHO} ${${VARNAME}:Q}
+.endfor
+
+PREPEND_PATH?=		# empty
+.if !empty(PREPEND_PATH)
+# This is very Special.  Because PREPEND_PATH is set with += in reverse order,
+# the awk expression reverses the order again (since bootstrap bmake doesn't
+# yet support the :[-1..1] construct).
+_PATH_CMD=		${ECHO} `${ECHO} ${PREPEND_PATH:Q} | ${AWK} '{for (i=NF;i>0;i--) print $$i}'`:${_PATH_ORIG} | ${TR} ' ' :
+PATH=			${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
+.endif
+
+############################################################################
+# User-visible make targets
+############################################################################
+
+# Catch-all targets.
+# Without anything specified, assume "all".  Also allow "dependall" to be
+# specified for those in the habit of using that in NetBSD main source.
+# Recurses to ensure that .if make() conditionals work as expected.
+
+.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+# only invoke "test" if requested; makes SMART_MESSAGES look nicer
+_PKG_ALL_TARGET=	test
+.endif
+
+.PHONY: all dependall
 .MAIN: all
+all dependall: recurse-${_PKG_ALL_TARGET:Ubuild}
 
-# Use aliases, so that all versions of English are acceptable
-.if defined(LICENCE) && !defined(LICENSE)
-LICENSE=	${LICENCE}
-.endif
+### If this package will be skipped, use placebo targets.
 
-.if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
-ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
-.endif
-
-################################################################
-# Many ways to disable a package.
-#
-# Ignore packages that can't be resold if building for a CDROM.
-#
-# Don't build a package if it's restricted and we don't want to
-# get into that.
-#
-# Don't build any package that utilizes strong cryptography, for
-# when the law of the land forbids it.
-#
-# Don't attempt to build packages against X if we don't have X.
-#
-# Don't build a package if it's broken.
-################################################################
-
-.if !defined(NO_SKIP)
-.  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
-PKG_FAIL_REASON+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
-         "    "${NO_BIN_ON_CDROM:Q}
-.  endif
-.  if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
-PKG_FAIL_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
-         "    "${NO_SRC_ON_CDROM:Q}
-.  endif
-.  if (defined(RESTRICTED) && defined(NO_RESTRICTED))
-PKG_FAIL_REASON+= "${PKGNAME} is restricted:" \
-	 "    "${RESTRICTED:Q}
-.  endif
-.  if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
-.    if defined(CRYPTO)
-PKG_FAIL_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
-.    endif
-.  endif
-.  if defined(USE_X11) && !exists(${X11BASE})
-.    if ${X11_TYPE} == "native"
-PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
-.    else
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${X11BASE}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${X11BASE}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} ${PKGDIRMODE} ${X11BASE}
-.    endif
-.  endif
-.  if defined(BROKEN)
-PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
-.  endif
-
-.  if defined(LICENSE)
-.    ifdef ACCEPTABLE_LICENSES
-.      for _lic in ${ACCEPTABLE_LICENSES}
-.        if ${LICENSE} == "${_lic}"
-_ACCEPTABLE=	yes
-.        endif	# LICENSE == _lic
-.      endfor	# _lic
-.    endif	# ACCEPTABLE_LICENSES
-.    ifndef _ACCEPTABLE
-PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
-	 "    To view the license, enter \"${MAKE} show-license\"." \
-	 "    To indicate acceptance, add this line to your /etc/mk.conf:" \
-	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
-.    endif	# _ACCEPTABLE
-.  endif	# LICENSE
-
-# Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
-.  if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
-.    for __tmp__ in ${ONLY_FOR_PLATFORM}
-.      if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-__PLATFORM_OK?=	yes
-.      endif	# MACHINE_PLATFORM
-.    endfor	# __tmp__
-.  else	# !ONLY_FOR_PLATFORM
-__PLATFORM_OK?=	yes
-.  endif	# ONLY_FOR_PLATFORM
-.  for __tmp__ in ${NOT_FOR_PLATFORM}
-.    if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-.      undef __PLATFORM_OK
-.    endif	# MACHINE_PLATFORM
-.  endfor	# __tmp__
-.  if !defined(__PLATFORM_OK)
-PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
-.  endif	# !__PLATFORM_OK
-
-#
-# Now print some error messages that we know we should ignore the pkg
-#
-.  if defined(PKG_FAIL_REASON) || defined(PKG_SKIP_REASON)
-fetch checksum extract patch configure all build install package \
-update install-depends:
-.    if defined(SKIP_SILENT)
-	@${DO_NADA}
-.    else
+.if defined(_PKG_SKIPPED)
+.  for targ in ${_PKG_PHASES_ALL} replace update
+${targ}:
+.    if !defined(SKIP_SILENT)
 	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON} ; \
 	do \
 		${ECHO} "${_PKGSRC_IN}> $$str" ; \
@@ -1358,149 +1518,143 @@ update install-depends:
 .    if defined(PKG_FAIL_REASON)
 	@${FALSE}
 .    endif
-.  endif # SKIP
-.endif # !NO_SKIP
+.  endfor
+.endif	# _PKG_SKIPPED
 
-# Add these defs to the ones dumped into +BUILD_DEFS
-BUILD_DEFS+=	PKGPATH
-BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
-BUILD_DEFS+=	CPPFLAGS CFLAGS FFLAGS LDFLAGS
-BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
-BUILD_DEFS+=	OBJECT_FMT LICENSE RESTRICTED
-BUILD_DEFS+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
-BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
+### Skip specific phases based on package settings.
 
-.if defined(OSVERSION_SPECIFIC)
-BUILD_DEFS+=	OSVERSION_SPECIFIC
-.endif # OSVERSION_SPECIFIC
-
-.PHONY: all
-.if !target(all)
-all: ${_PKGSRC_BUILD_TARGETS}
-.endif
-
-.if !defined(DEPENDS_TARGET)
-.  if make(package)
-DEPENDS_TARGET=	package
-.  elif make(update)
-.    if defined(UPDATE_TARGET) && ${UPDATE_TARGET} == "replace"
-DEPENDS_TARGET=	${UPDATE_TARGET}
-.    else
-DEPENDS_TARGET=	update
-.    endif
-.  elif make(bin-install)
-DEPENDS_TARGET=	bin-install
-.  else
-DEPENDS_TARGET=	reinstall
-.  endif
-.endif
-
-.if !defined(UPDATE_TARGET)
-.  if ${DEPENDS_TARGET} == "update"
-.    if make(package)
-UPDATE_TARGET=	package
-.    else
-UPDATE_TARGET=	install
-.    endif
-.  else
-UPDATE_TARGET=	${DEPENDS_TARGET}
-.  endif
-.endif
-
-UPDATE_RUNNING?=	NO
-
-################################################################
-# The following are used to create easy dummy targets for
-# disabling some bit of default target behavior you don't want.
-# They still check to see if the target exists, and if so don't
-# do anything, since you might want to set this globally for a
-# group of packages in a Makefile.inc, but still be able to
-# override from an individual Makefile.
-################################################################
-
-# Disable checksum
-.PHONY: checksum
-.if (defined(NO_CHECKSUM) || exists(${EXTRACT_COOKIE})) && !target(checksum)
-checksum: fetch
-	@${DO_NADA}
-.endif
-
-# Disable tools
-.PHONY: tools
-.if defined(NO_TOOLS) && !target(tools)
-tools: patch
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${TOOLS_COOKIE}
-.endif
-
-# Disable wrapper
-.PHONY: wrapper
-.if defined(NO_WRAPPER) && !target(wrapper)
-wrapper: tools
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRAPPER_COOKIE}
-.endif
-
-# Disable configure
-.PHONY: configure
-.if defined(NO_CONFIGURE) && !target(configure)
-configure: wrapper
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
-.endif
-
-# Disable build
-.PHONY: build
-.if defined(NO_BUILD) && !target(build)
-build: configure
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
-.endif
-
-# Disable install
-.PHONY: install
-.if defined(NO_INSTALL) && !target(install)
-install: build
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
-.endif
-
-# Disable package
-.PHONY: package
-.if defined(NO_PACKAGE) && !target(package)
-package:
-.  if defined(SKIP_SILENT)
-	@${DO_NADA}
-.  else
+.if defined(NO_PACKAGE) && !defined(FORCE_PACKAGE)
+real-package: .MADE
+.  if !defined(SKIP_SILENT)
 	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
 .  endif
 .endif
 
-################################################################
-# More standard targets start here.
-#
-# These are the body of the build/install framework.  If you are
-# not happy with the default actions, and you can't solve it by
-# adding pre-* or post-* targets/scripts, override these.
-################################################################
+### Real targets.  These don't have any commands attached; they simply defer
+### to other implementation targets below.
 
-###
-### _RESUME_TRANSFER:
-###
-### Macro to resume a previous transfer, needs to have defined
-### the following options in mk.conf:
-###
-### PKG_RESUME_TRANSFERS
-### FETCH_RESUME_ARGS (if FETCH_CMD != default)
-### FETCH_OUTPUT_ARGS (if FETCH_CMD != default)
-###
-### For example if you want to use wget (pkgsrc/net/wget):
-###
-### FETCH_CMD=wget
-### FETCH_RESUME_ARGS=-c
-### FETCH_OUTPUT_ARGS=-O
-###
-### How does it work?
-###
-### FETCH_CMD downloads the file and saves it temporally into $$bfile.temp
-### if the checksum match the correct one, $$bfile.temp is renamed to
-### the original name.
-###
+.if !defined(_PKG_SKIPPED)
+
+.PHONY: ${_PKG_PHASES_ALL} replace undo-replace
+fetch: real-fetch
+checksum: fetch real-checksum
+depends: checksum ${WRKDIR} acquire-depends-lock ${depends_COOKIE} release-depends-lock
+extract: depends acquire-extract-lock ${extract_COOKIE} release-extract-lock
+patch: extract acquire-patch-lock ${patch_COOKIE} release-patch-lock
+tools: patch acquire-tools-lock ${tools_COOKIE} release-tools-lock
+wrapper: tools acquire-wrapper-lock ${wrapper_COOKIE} release-wrapper-lock
+configure: wrapper acquire-configure-lock ${configure_COOKIE} release-configure-lock
+build: configure acquire-build-lock ${build_COOKIE} release-build-lock
+test: build acquire-test-lock ${test_COOKIE} release-test-lock
+install: test acquire-install-lock ${install_COOKIE} release-install-lock
+package: install acquire-package-lock ${package_COOKIE} release-package-lock
+replace: build real-replace
+undo-replace: real-undo-replace
+
+.endif	# !defined(_PKG_SKIPPED)
+
+############################################################################
+# Package maintenance targets
+############################################################################
+
+# Checksumming utilities
+
+.PHONY: makesum
+makesum: recurse-fetch uptodate-digest
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	newfile=${DISTINFO_FILE}.$$$$;					\
+	if [ -f ${DISTINFO_FILE} ]; then				\
+		${GREP} '^.NetBSD' ${DISTINFO_FILE} > $$newfile ||	\
+			(${ECHO_N} "$$" > $$newfile &&			\
+			 ${ECHO_N} "NetBSD" >> $$newfile && 		\
+			 ${ECHO} "$$" >> $$newfile)			\
+	else								\
+		${ECHO_N} "$$" > $$newfile;				\
+		${ECHO_N} "NetBSD" >> $$newfile; 			\
+		${ECHO} "$$" >> $$newfile;				\
+	fi;								\
+	${ECHO} "" >> $$newfile;					\
+	cd ${DISTDIR};							\
+	for sumfile in "" ${_CKSUMFILES}; do				\
+		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
+		${DIGEST} ${DIGEST_ALGORITHM} $$sumfile >> $$newfile;	\
+		${WC} -c $$sumfile | ${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }' >> $$newfile; \
+	done;								\
+	for ignore in "" ${_IGNOREFILES}; do				\
+		if [ "X$$ignore" = "X" ]; then continue; fi;		\
+		${ECHO} "${DIGEST_ALGORITHM} ($$ignore) = IGNORE" >> $$newfile; \
+	done;								\
+	if [ -f ${DISTINFO_FILE} ]; then				\
+		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
+	fi;								\
+	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
+		${RM} -f $$newfile;					\
+		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
+	else								\
+		${MV} $$newfile ${DISTINFO_FILE};			\
+	fi
+
+.PHONY: makepatchsum mps
+makepatchsum mps: uptodate-digest
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	newfile=${DISTINFO_FILE}.$$$$;					\
+	if [ -f ${DISTINFO_FILE} ]; then				\
+		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
+	else \
+		${ECHO_N} "$$" > $$newfile;				\
+		${ECHO_N} "NetBSD" >> $$newfile; 			\
+		${ECHO} "$$" >> $$newfile;				\
+		${ECHO} "" >> $$newfile;				\
+	fi;								\
+	if [ -d ${PATCHDIR} ]; then					\
+		(cd ${PATCHDIR};					\
+		for sumfile in "" patch-*; do				\
+			if [ "X$$sumfile" = "X" ]; then continue; fi;	\
+			if [ "X$$sumfile" = "Xpatch-*" ]; then break; fi; \
+			case $$sumfile in				\
+				patch-local-*) ;;			\
+				*.orig|*.rej|*~) continue ;;		\
+				*)	${ECHO} "${DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${DIGEST_ALGORITHM}`" >> $$newfile;; \
+			esac;						\
+		done);							\
+	fi;								\
+	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
+		${RM} -f $$newfile;					\
+		${ECHO_MSG} "=> distinfo: patches part unchanged.";	\
+	else								\
+		${MV} $$newfile ${DISTINFO_FILE};			\
+	fi
+
+makedistinfo mdi distinfo: makesum makepatchsum
+
+############################################################################
+# XXXTV CUT
+############################################################################
+
+UPDATE_RUNNING?=	NO
+
+#
+# _RESUME_TRANSFER:
+#
+# Macro to resume a previous transfer, needs to have defined
+# the following options in mk.conf:
+#
+# PKG_RESUME_TRANSFERS
+# FETCH_RESUME_ARGS (if FETCH_CMD != default)
+# FETCH_OUTPUT_ARGS (if FETCH_CMD != default)
+#
+# For example if you want to use wget (pkgsrc/net/wget):
+#
+# FETCH_CMD=wget
+# FETCH_RESUME_ARGS=-c
+# FETCH_OUTPUT_ARGS=-O
+#
+# How does it work?
+#
+# FETCH_CMD downloads the file and saves it temporally into $$bfile.temp
+# if the checksum match the correct one, $$bfile.temp is renamed to
+# the original name.
+#
 
 _RESUME_TRANSFER=							\
 	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$file)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
@@ -1670,44 +1824,12 @@ batch-check-distfiles:
 		[ ! -z "${HOMEPAGE}" ] && 				\
 			${ECHO} "*** See ${HOMEPAGE} for more details";	\
 		${ECHO};						\
-		${TOUCH} ${INTERACTIVE_COOKIE};				\
 		${FALSE} ;;						\
 	esac
-
-# check for any vulnerabilities in the package
-# Please do not modify the leading "@" here
-.PHONY: check-vulnerable
-check-vulnerable:
-	@if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
-		${SETENV} PKGNAME="${PKGNAME}"				\
-			  PKGBASE="${PKGBASE}"				\
-			${AWK} '/^$$/ { next }				\
-				/^#.*/ { next }				\
-				$$1 !~ ENVIRON["PKGBASE"] { next }	\
-				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/pkg-vulnerabilities || ${FALSE}; \
-	fi
 
 .PHONY: do-fetch
 .if !target(do-fetch)
 do-fetch:
-.  if !defined(ALLOW_VULNERABLE_PACKAGES)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
-		${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
-		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
-		case "$$vul" in						\
-		"")	;;						\
-		*)	${ECHO} "$$vul";				\
-			${ECHO} "or define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
-			${FALSE} ;;					\
-		esac;							\
-	else								\
-		${ECHO_MSG} "${_PKGSRC_IN}> *** No ${PKGVULNDIR}/pkg-vulnerabilities file found,"; \
-		${ECHO_MSG} "${_PKGSRC_IN}> *** skipping vulnerability checks. To fix, install"; \
-		${ECHO_MSG} "${_PKGSRC_IN}> *** the pkgsrc/security/audit-packages package and run"; \
-		${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'."; \
-	fi
-.  endif
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
@@ -1743,7 +1865,6 @@ do-fetch:
 
 # show both build and run depends directories (non-recursively)
 .PHONY: show-depends-dirs
-.if !target(show-depends-dirs)
 show-depends-dirs:
 	@dlist="";							\
 	thisdir=`${PWD_CMD}`;						\
@@ -1758,10 +1879,8 @@ show-depends-dirs:
 	done;								\
 	cd $$thisdir;							\
 	${ECHO} "$$dlist"
-.endif
 
 # Show all build and run depends, reverse-breadth first, with options.
-.if make(show-all-depends-dirs) || make(show-all-depends-dirs-excl) || make (show-root-dirs)
 
 # "awk" macro to recurse over the dependencies efficiently, never running in
 # the same same directory twice. You may set the following options via "-v":
@@ -1806,46 +1925,29 @@ _RECURSE_DEPENDS_DIRS=							\
 		print							\
 	}
 
+_SHOW_ALL_DEPENDS_DIRS_EXCL=	${AWK} -v NonSelf=1 '${_RECURSE_DEPENDS_DIRS}'
+
 .PHONY: show-all-depends-dirs
-.if make(show-all-depends-dirs)
 show-all-depends-dirs:
 	@${AWK} '${_RECURSE_DEPENDS_DIRS}'
-.endif
-
-.PHONY: show-all-depends-dirs-excl
-.if make(show-all-depends-dirs-excl)
-show-all-depends-dirs-excl:
-	@${AWK} -v NonSelf=1 '${_RECURSE_DEPENDS_DIRS}'
-.endif
 
 .PHONY: show-root-dirs
-.if make(show-root-dirs)
 show-root-dirs:
 	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v RootsOnly=1 '${_RECURSE_DEPENDS_DIRS}'
-.endif
-
-.endif # make(show-{all-depends-dirs{,-excl},root-dirs})
 
 .PHONY: show-distfiles
-.if !target(show-distfiles)
 show-distfiles:
-.  if defined(PKG_FAIL_REASON)
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-.  else
+.if !defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for file in "" ${_CKSUMFILES}; do				\
 		if [ "X$$file" = "X" ]; then continue; fi;		\
 		${ECHO} $$file;						\
 	done
-.  endif
 .endif
 
 .PHONY: show-downlevel
-.if !target(show-downlevel)
 show-downlevel:
-.  if defined(PKG_FAIL_REASON)
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-.  else
+.if !defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
@@ -1855,29 +1957,25 @@ show-downlevel:
 			exit 1;						\
 		fi;							\
 	fi
-.  endif
 .endif
 
 .PHONY: show-installed-depends
-.if !target(show-installed-depends)
 show-installed-depends:
-.  if defined(DEPENDS)
+.if !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
 		echo "$$i =>" `${PKG_BEST_EXISTS} "$$i"` ;		\
 	done
-.  endif
 .endif
 
 .PHONY: show-needs-update
-.if !target(show-needs-update)
 show-needs-update:
-.  if defined(DEPENDS)
+.if !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in `${MAKE} show-all-depends-dirs`; do			\
 		cd ${PKGSRCDIR}/$$i;					\
-		want=`${MAKE} show-var VARNAME=PKGNAME`;		\
-		wild=`${MAKE} show-var VARNAME=PKGWILDCARD`;		\
+		want=`${MAKE} show-var-noeval VARNAME=PKGNAME`;		\
+		wild=`${MAKE} show-var-noeval VARNAME=PKGWILDCARD`;	\
 		have=`${PKG_BEST_EXISTS} "$$wild" || ${TRUE}`;		\
 		if [ -z "$$have" ]; then				\
 			${ECHO} "$$i => (none) => needs install of $$want"; \
@@ -1885,63 +1983,19 @@ show-needs-update:
 			${ECHO} "$$i => $$have => needs update to $$want"; \
 		fi;							\
 	done
-.  endif
 .endif
 
 .PHONY: show-pkgsrc-dir
-.if !target(show-pkgsrc-dir)
 show-pkgsrc-dir:
-.  if defined(PKG_FAIL_REASON)
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-.  else
+.if !defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "X$$found" != "X" ]; then					\
 		${ECHO} ${PKGPATH};					\
 	fi
-.  endif
 .endif
 
 # Extract
-
-# pkgsrc coarse-grained locking definitions and targets
-.if ${PKGSRC_LOCKTYPE} == "none"
-_ACQUIRE_LOCK=	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-_RELEASE_LOCK=	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-.else
-LOCKFILE=	${WRKDIR}/.lockfile
-
-_ACQUIRE_LOCK=								\
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
-	if ${TEST} "$$ppid" = ""; then					\
-		${ECHO} "No parent process ID found.";			\
-		${FALSE};						\
-	fi;								\
-	while true; do							\
-		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE} -a	\
-		     /var/run/dmesg.boot -nt ${LOCKFILE}; then		\
-			${ECHO} "=> Removing stale ${LOCKFILE}";	\
-			${RM} ${LOCKFILE};				\
-		fi;							\
-		${SHLOCK} -f ${LOCKFILE} -p $$ppid && break;		\
-		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\
-		case "${PKGSRC_LOCKTYPE}" in				\
-		once)	exit 1 ;;					\
-		sleep)	sleep ${PKGSRC_SLEEPSECS} ;;			\
-		esac							\
-	done;								\
-	if [ "${PKG_VERBOSE}" != "" ]; then				\
-		${ECHO_MSG} "=> Lock acquired on behalf of process $$ppid"; \
-	fi
-
-_RELEASE_LOCK=								\
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ "${PKG_VERBOSE}" != "" ]; then				\
-		${ECHO_MSG} "=> Lock released on behalf of process `${CAT} ${LOCKFILE}`"; \
-	fi;								\
-	${RM} ${LOCKFILE}
-.endif # PKGSRC_LOCKTYPE
 
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
@@ -1974,12 +2028,8 @@ _EXTRACT_SUFFIXES+=	.zoo
 _EXTRACT_SUFFIXES+=	.bin
 _EXTRACT_SUFFIXES+=	.rar
 
-# If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
-# pulling in the "bzip2" package if necessary.  [Note: this is only for
-# the benefit of pre-1.5 NetBSD systems. "gzcat" on newer systems happily
-# decodes bzip2.]  Do likewise for ".zip" and ".lha" distfiles.
-#
-.if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
+.if (defined(PATCHFILES) && !empty(PATCHFILES:M*.bz2)) || \
+    !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
     !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
 .  if exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat <
@@ -1996,7 +2046,8 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
 .endif
 .if !defined(GZCAT)
-.  if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
+.  if (defined(PATCHFILES) && !empty(PATCHFILES:M*.gz)) || \
+.     !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
       !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
 BUILD_DEPENDS+=         gzip-base>=1.2.4b:../../archivers/gzip-base
 GZCAT=                  ${LOCALBASE}/bin/zcat
@@ -2343,7 +2394,6 @@ SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
 # By adding this target, it makes sure the the above PREREQ's work.
 .PHONY: pre-configure-override
 pre-configure-override: ${_CONFIGURE_PREREQ}
-	@${DO_NADA}
 
 .PHONY: do-configure
 .if !target(do-configure)
@@ -2351,15 +2401,6 @@ do-configure:
 .  if defined(HAS_CONFIGURE)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
-	    AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS:M*}" CPPFLAGS="${CPPFLAGS:M*}" \
-	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS:M*}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS:M*}" \
-	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
-	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
-	    INSTALL_DATA="${INSTALL_DATA}" \
-	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-	    INSTALL_GAME="${INSTALL_GAME}" \
-	    INSTALL_GAME_DATA="${INSTALL_GAME_DATA}" \
-	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ${CONFIG_SHELL} \
 	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .    endfor
@@ -2457,8 +2498,6 @@ do-test:
 .    for DIR in ${TEST_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${TEST_MAKE_FLAGS} -f ${MAKEFILE} ${TEST_TARGET}
 .    endfor
-.  else
-	@${DO_NADA}
 .  endif
 .endif
 
@@ -2478,7 +2517,6 @@ do-install:
 # Package
 
 .PHONY: real-su-package
-.if !target(real-su-package)
 real-su-package: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "${_PKGSRC_IN}> Building binary package for ${PKGNAME}"; \
@@ -2501,28 +2539,24 @@ real-su-package: ${PLIST} ${DESCR}
 		${MAKE} ${MAKEFLAGS} delete-package;			\
 		exit 1;							\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${PACKAGE_COOKIE}
-.  if defined(NO_BIN_ON_CDROM)
+.if defined(NO_BIN_ON_CDROM)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be put on a CD-ROM:"
 	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_CDROM:Q}
-.  endif
-.  if defined(NO_BIN_ON_FTP)
+.endif
+.if defined(NO_BIN_ON_FTP)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be made available through FTP:"
 	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_FTP:Q}
-.  endif
-.  if defined(RECOMMENDED) && !empty(IGNORE_RECOMMENDED:M[yY][eE][sS])
+.endif
+.if defined(RECOMMENDED) && !empty(IGNORE_RECOMMENDED:M[yY][eE][sS])
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: dependency recommendations are being ignored!"
 	@${ECHO_MSG} "${_PKGSRC_IN}>          ${PKGNAME} should not be uploaded nor"
 	@${ECHO_MSG} "${_PKGSRC_IN}>          otherwise be used as a binary package!"
-.  endif
 .endif
 
 # Some support rules for real-su-package
 
 .PHONY: package-links
-.if !target(package-links)
-package-links:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} delete-package-links
+package-links: delete-package-links
 	${_PKG_SILENT}${_PKG_DEBUG}for cat in ${CATEGORIES}; do		\
 		if [ ! -d ${PACKAGES}/$$cat ]; then			\
 			${MKDIR} ${PACKAGES}/$$cat;			\
@@ -2534,191 +2568,15 @@ package-links:
 		${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX};	\
 		${LN} -s ../${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ${PACKAGES}/$$cat; \
 	done;
-.endif
 
 .PHONY: delete-package-links
-.if !target(delete-package-links)
 delete-package-links:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${FIND} ${PACKAGES} -type l -name ${PKGNAME}${PKG_SUFX} -print | ${XARGS} ${RM} -f
-.endif
 
 .PHONY: delete-package
-.if !target(delete-package)
-delete-package:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} delete-package-links
+delete-package: delete-package-links
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
-.endif
-
-.PHONY: real-su-install
-real-su-install: ${MESSAGE}
-.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) &&	\
-    (${PKG_INSTALLATION_TYPE} == "overwrite")
-.  if defined(CONFLICTS)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR}/.CONFLICTS
-.    for conflict in ${CONFLICTS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_BEST_EXISTS} \"${conflict}\" || ${TRUE}`";	\
-	if [ X"$$found" != X"" ]; then					\
-		${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS;		\
-	fi
-.     endfor
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -s ${WRKDIR}/.CONFLICTS ]; then				\
-		found=`${SED} -e s'|${_PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
-		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
-		${ECHO_MSG} "*** They install the same files into the same place."; \
-		${ECHO_MSG} "*** Please remove $$found first with pkg_delete(1)."; \
-		${RM} -f ${WRKDIR}/.CONFLICTS;				\
-		exit 1;							\
-	fi
-.  endif	# CONFLICTS
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
-	if [ "$$found" != "" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}> $$found is already installed - perhaps an older version?"; \
-		${ECHO_MSG} "*** If so, you may use either of:"; \
-		${ECHO_MSG} "***  - \"pkg_delete $$found\" and \"${MAKE} reinstall\" to upgrade properly"; \
-		${ECHO_MSG} "***  - \"${MAKE} update\" to rebuild the package and all of its dependencies"; \
-		${ECHO_MSG} "***  - \"${MAKE} replace\" to replace only the package without re-linking"; \
-		${ECHO_MSG} "***    dependencies, risking various problems."; \
-		exit 1;							\
-	fi
-.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER && overwrite
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e ${PKGNAME} || ${TRUE}`";			\
-	if [ "$$found" != "" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed."; \
-		exit 1;							\
-	fi
-.endif
-	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` -ne ${DEF_UMASK} ]; then \
-		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
-		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
-		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
-	fi
-.if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Creating installation directories"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in ${INSTALLATION_DIRS}; do				\
-		case $$dir in						\
-		/*)	;;						\
-		*bin|*bin/*|*libexec|*libexec/*)			\
-			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
-		*man/*)							\
-			${INSTALL_MAN_DIR} ${PREFIX}/$$dir ;;		\
-		*)							\
-			${INSTALL_DATA_DIR} ${PREFIX}/$$dir ;;		\
-		esac;							\
-	done
-.endif	# INSTALLATION_DIRS
-.if !defined(NO_MTREE)
-	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
-		if [ ! -f ${MTREE_FILE} ]; then				\
-			${ECHO_MSG} "Error: mtree file \"${MTREE_FILE}\" is missing."; \
-			exit 1;						\
-		else							\
-			if [ ! -d ${PREFIX} ]; then			\
-				${MKDIR} ${PREFIX};			\
-			fi;						\
-			${MTREE} ${MTREE_ARGS} ${PREFIX}/;		\
-		fi;							\
-	else								\
-		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
-		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
-	fi
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}[ -d ${PREFIX} ] || ${MKDIR} ${PREFIX}
-.endif # !NO_MTREE
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
-	${_PKG_SILENT}${DO_NADA} \
-		#								\
-		# PLIST must be generated at this late point (instead of	\
-		# depending on it somewhere earlier), because it needs		\
-		# to be created _after_ the {pre,do,post}-install		\
-		# targets are run.						\
-		#								\
-		# We generate _before_ post-install-script is run so		\
-		# that the real config files and rc.d scripts aren't		\
-		# listed in the PLIST.						\
-		#
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
-	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
-		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
-		${PLIST} 2>/dev/null || ${TRUE}`;			\
-	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
-		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
-		for manpage in $$newmanpages; do			\
-			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
-			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
-				set - `${LS} -l ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
-				shift `expr $$# - 1`;			\
-				${RM} -f ${PREFIX}/$$manpage;		\
-				${LN} -s $${1} ${PREFIX}/$$manpage;	\
-				${RM} ${PREFIX}/$$manpage.gz;		\
-			else						\
-				${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;	\
-			fi;						\
-			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
-				${ECHO_MSG} "$$manpage";		\
-			fi;						\
-		done;							\
-	fi;								\
-	if [ X"${MANCOMPRESSED}" = X"" -a X"${MANZ}" != X"" ]; then	\
-		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Compressing manual pages for ${PKGNAME}"; \
-		for manpage in $$newmanpages; do			\
-			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
-			if [ -h ${PREFIX}/$$manpage ]; then		\
-				set - `${LS} -l ${PREFIX}/$$manpage`; \
-				shift `expr $$# - 1`;			\
-				${RM} -f ${PREFIX}/$$manpage.gz; 	\
-				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
-				${RM} ${PREFIX}/$$manpage;		\
-			else						\
-				${GZIP_CMD} ${PREFIX}/$$manpage;	\
-			fi;						\
-			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
-				${ECHO_MSG} "$$manpage";		\
-			fi;						\
-		done;							\
-	fi
-.if ${_DO_SHLIB_CHECKS} == "yes"
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
-.  endif
-.endif
-.ifdef MESSAGE
-	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
-	@${ECHO_MSG} ""
-	@${CAT} ${MESSAGE}
-	@${ECHO_MSG} ""
-.  if !empty(PKGSRC_MESSAGE_RECIPIENTS)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	(${ECHO} "The ${PKGNAME} package was installed on `${HOSTNAME_CMD}` at `date`"; \
-	${ECHO} "";							\
-	${ECHO} "Please note the following:";				\
-	${ECHO} "";							\
-	${CAT} ${MESSAGE};						\
-	${ECHO} "") |							\
-	${MAIL_CMD} -s"Package ${PKGNAME} installed on `${HOSTNAME_CMD}`" ${PKGSRC_MESSAGE_RECIPIENTS}
-.  endif
-.endif
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
-.endif # !NO_PKG_REGISTER
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
-.if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-shlibs
-.endif
 
 
 
@@ -2908,7 +2766,7 @@ do-shlib-handling:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sos=`${EGREP} -h '^.*/lib[^/]+\.so$$' ${PLIST} || ${TRUE}`;	\
 	if [ "$$sos" != "" ]; then					\
-		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
+		shlib_type=`${_GET_SHLIB_TYPE}`;			\
 		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
 			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic $$shlib_type shared object handling]"; \
 		fi;  							\
@@ -3009,13 +2867,13 @@ check-shlibs:
 .endif # NO_PKG_REGISTER
 
 
-.if !target(show-shlib-type)
-# Show the shared lib type being built: one of ELF, a.out, dylib, or none
-.PHONY: show-shlib-type
-show-shlib-type:
-.  if empty(USE_LANGUAGES)
-	@${ECHO} "none"
-.  elif ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
+# Macro to print out the actual shared library type.
+.if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES)
+.  if ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
+.    if (${OBJECT_FMT} == "ELF" || ${OBJECT_FMT} == "a.out")
+_GET_SHLIB_TYPE=	${ECHO} '${OBJECT_FMT}' # speedup if already known
+.    else
+_GET_SHLIB_TYPE=\
 	@cd ${WRKDIR} &&						\
 	sotype=none;							\
 	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
@@ -3025,58 +2883,62 @@ show-shlib-type:
 		case `${FILE_CMD} a.$$$$.out` in			\
 		*ELF*dynamically*)					\
 			sotype=ELF ;;					\
-		*shared*library*)					\
-			sotype="a.out" ;;				\
-		*dynamically*)						\
+		*shared*library*|*dynamically*)				\
 			sotype="a.out" ;;				\
 		esac;							\
 	fi;								\
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
+.    endif
 .  else
-	@${ECHO} ${_OPSYS_SHLIB_TYPE}
-.  endif   # USE_LANGUAGES
+_GET_SHLIB_TYPE=	${ECHO} '${_OPSYS_SHLIB_TYPE}'
+.  endif
 .endif
+_GET_SHLIB_TYPE?=	${ECHO} none
 
-.PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
-.PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
-.PHONY: acquire-install-lock acquire-package-lock
-acquire-extract-lock:
-	${_ACQUIRE_LOCK}
-acquire-patch-lock:
-	${_ACQUIRE_LOCK}
-acquire-tools-lock:
-	${_ACQUIRE_LOCK}
-acquire-wrapper-lock:
-	${_ACQUIRE_LOCK}
-acquire-configure-lock:
-	${_ACQUIRE_LOCK}
-acquire-build-lock:
-	${_ACQUIRE_LOCK}
-acquire-install-lock:
-	${_ACQUIRE_LOCK}
-acquire-package-lock:
-	${_ACQUIRE_LOCK}
+# Not to be used by pkgsrc; available for human inspection only.
+show-shlib-type:
+	@${_GET_SHLIB_TYPE}
 
-.PHONY: release-extract-lock release-patch-lock release-tools-lock
-.PHONY: release-wrapper-lock release-configure-lock release-build-lock
-.PHONY: release-install-lock release-package-lock
-release-extract-lock:
-	${_RELEASE_LOCK}
-release-patch-lock:
-	${_RELEASE_LOCK}
-release-tools-lock:
-	${_RELEASE_LOCK}
-release-wrapper-lock:
-	${_RELEASE_LOCK}
-release-configure-lock:
-	${_RELEASE_LOCK}
-release-build-lock:
-	${_RELEASE_LOCK}
-release-install-lock:
-	${_RELEASE_LOCK}
-release-package-lock:
-	${_RELEASE_LOCK}
+LOCKFILE=	${WRKDIR}/.lockfile
+.for targ in ${_PKG_PHASES_WRKDIR}
+.PHONY: acquire-${targ}-lock release-${targ}-lock
+acquire-${targ}-lock: .OPTIONAL
+release-${targ}-lock: .OPTIONAL
+
+.  if ${PKGSRC_LOCKTYPE} != "none"
+acquire-${targ}-lock:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
+	if ${TEST} "$$ppid" = ""; then					\
+		${ECHO} "No parent process ID found.";			\
+		${FALSE};						\
+	fi;								\
+	while true; do							\
+		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE} -a	\
+		     /var/run/dmesg.boot -nt ${LOCKFILE}; then		\
+			${ECHO} "=> Removing stale ${LOCKFILE}";	\
+			${RM} ${LOCKFILE};				\
+		fi;							\
+		${SHLOCK} -f ${LOCKFILE} -p $$ppid && break;		\
+		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\
+		case "${PKGSRC_LOCKTYPE}" in				\
+		once)	exit 1 ;;					\
+		sleep)	sleep ${PKGSRC_SLEEPSECS} ;;			\
+		esac							\
+	done;								\
+	if [ "${PKG_VERBOSE}" != "" ]; then				\
+		${ECHO_MSG} "=> Lock acquired on behalf of process $$ppid"; \
+	fi
+
+release-${targ}-lock:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ "${PKG_VERBOSE}" != "" ]; then				\
+		${ECHO_MSG} "=> Lock released on behalf of process `${CAT} ${LOCKFILE}`"; \
+	fi;								\
+	${RM} ${LOCKFILE}
+.  endif # PKGSRC_LOCKTYPE
+.endfor
 
 ################################################################
 # Skeleton targets start here
@@ -3087,195 +2949,139 @@ release-package-lock:
 # call the necessary targets/scripts.
 ################################################################
 
-.PHONY: fetch
-.if !target(fetch)
-fetch:
-	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-fetch PKG_PHASE=fetch
+##### *_COOKIE to real-* layer
+
+.for targ in ${_PKG_PHASES_WRKDIR}
+${${targ}_COOKIE}: real-${targ}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >${${targ}_COOKIE}
+.endfor
+
+# mark a stage as complete if its cookie (and all parent cookies) exist
+.if exists(${depends_COOKIE})
+${depends_COOKIE}: .MADE
+.  if exists(${extract_COOKIE})
+${extract_COOKIE}: .MADE
+.    if exists(${patch_COOKIE})
+${patch_COOKIE}: .MADE
+.      if exists(${tools_COOKIE})
+${tools_COOKIE}: .MADE
+.        if exists(${wrapper_COOKIE})
+${wrapper_COOKIE}: .MADE
+.          if exists(${configure_COOKIE})
+${configure_COOKIE}: .MADE
+.            if exists(${build_COOKIE})
+${build_COOKIE}: .MADE
+.              if exists(${test_COOKIE})
+${test_COOKIE}: .MADE
+.                if exists(${install_COOKIE})
+${install_COOKIE}: .MADE
+.                  if exists(${package_COOKIE})
+${package_COOKIE}: .MADE
+.                  endif
+.                endif
+.              endif
+.            endif
+.          endif
+.        endif
+.      endif
+.    endif
+.  endif
 .endif
 
-.PHONY: extract
-.if !target(extract)
-extract: checksum ${WRKDIR} acquire-extract-lock ${EXTRACT_COOKIE} release-extract-lock
+# NO_* for skipping phases
+# XXX this should be a .for loop, but we need the :tu modifier for that
+.if defined(NO_DEPENDS) || (empty(DEPENDS) && empty(BUILD_DEPENDS))
+${depends_COOKIE}: .MADE
+.endif
+.if defined(NO_TOOLS)
+${tools_COOKIE}: .MADE
+.endif
+.if defined(NO_WRAPPER)
+${wrapper_COOKIE}: .MADE
+.endif
+.if defined(NO_CONFIGURE)
+${configure_COOKIE}: .MADE
+.endif
+.if defined(NO_BUILD)
+${build_COOKIE}: .MADE
+.endif
+.if empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+real-test: .MADE
+.endif
+.if defined(NO_INSTALL)
+${install_COOKIE}: .MADE
 .endif
 
-.PHONY: patch
-.if !target(patch)
-patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
-.endif
+##### real-* to actual component target layer
 
-.PHONY: tools
-.if !target(tools)
-tools: patch acquire-tools-lock ${TOOLS_COOKIE} release-tools-lock
-.endif
-
-.PHONY: wrapper
-.if !target(wrapper)
-wrapper: tools acquire-wrapper-lock ${WRAPPER_COOKIE} release-wrapper-lock
-.endif
-
-.PHONY: configure
-.if !target(configure)
-configure: wrapper acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
-.endif
-
-.PHONY: build
-.if !target(build)
-build: configure acquire-build-lock ${BUILD_COOKIE} release-build-lock
-.endif
-
-.PHONY: test
-.if !target(test)
-test: build ${TEST_COOKIE}
-.endif
-
-.PHONY: install
-.if !target(install)
-install: uptodate-pkgtools ${_PKGSRC_BUILD_TARGETS} acquire-install-lock ${INSTALL_COOKIE} release-install-lock
-.endif
-
-.PHONY: package
-.if !target(package)
-package: uptodate-pkgtools install acquire-package-lock ${PACKAGE_COOKIE} release-package-lock
-.endif
-
-.PHONY: replace
-.if !target(replace)
-replace: uptodate-pkgtools build real-replace
-.endif
-
-.PHONY: undo-replace
-.if !target(undo-replace)
-undo-replace: uptodate-pkgtools real-undo-replace
-.endif
-
-${EXTRACT_COOKIE}:
-.if ${INTERACTIVE_STAGE:Mextract} == "extract" && defined(BATCH)
-	@${ECHO} "*** The extract stage of this package requires user interaction"
-	@${ECHO} "*** Please extract manually with \"cd ${PKGDIR} && ${MAKE} extract\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET:Q} PKG_PHASE=extract
-.endif
-
-${PATCH_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch PKG_PHASE=patch
-
-${TOOLS_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-tools PKG_PHASE=tools
-
-${WRAPPER_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
-
-${CONFIGURE_COOKIE}:
-.if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
-	@${ECHO} "*** The configuration stage of this package requires user interaction"
-	@${ECHO} "*** Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure
-.endif
-
-${BUILD_COOKIE}:
-.if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
-	@${ECHO} "*** The build stage of this package requires user interaction"
-	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build
-.endif
-
-${TEST_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
-
-${INSTALL_COOKIE}:
-.if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
-	@${ECHO} "*** The installation stage of this package requires user interaction"
-	@${ECHO} "*** Please install manually with \"cd ${PKGDIR} && ${MAKE} install\""
-	@${TOUCH} ${INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
-.endif
-
-${PACKAGE_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
-
-.PHONY: extract-message patch-message tools-message wrapper-message
-.PHONY: configure-message build-message test-message
-extract-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
-patch-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
-tools-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Overriding tools for ${PKGNAME}"
-wrapper-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Creating toolchain wrappers for ${PKGNAME}"
-configure-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
-build-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Building for ${PKGNAME}"
-test-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Testing for ${PKGNAME}"
-
-.PHONY: extract-cookie patch-cookie tools-cookie wrapper-cookie
-.PHONY: configure-cookie build-cookie test-cookie
-extract-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
-patch-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
-tools-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TOOLS_COOKIE}
-wrapper-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${WRAPPER_COOKIE}
-configure-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
-build-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
-test-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TEST_COOKIE}
-
-.ORDER: pre-fetch do-fetch post-fetch
-.ORDER: extract-message install-depends pre-extract do-extract post-extract extract-cookie
-.ORDER: patch-message pre-patch do-patch post-patch patch-cookie
-.ORDER: tools-message pre-tools do-tools post-tools tools-cookie
-.ORDER: wrapper-message pre-wrapper do-wrapper post-wrapper wrapper-cookie
-.ORDER: configure-message pre-configure pre-configure-override do-configure post-configure configure-cookie
-.ORDER: build-message pre-build do-build post-build build-cookie
-.ORDER: test-message pre-test do-test post-test test-cookie
-
+# Simple dependencies are not used, deliberately, so that it is possible
+# to invoke a single subtarget by hand while working on a new package.
+#
 # Please note that the order of the following targets is important, and
 # should not be modified (.ORDER is not recognised by make(1) in a serial
 # make i.e. without -j n)
-.PHONY: real-fetch real-extract real-patch
-.PHONY: real-tools real-wrapper
-.PHONY: real-configure real-build real-test real-install real-package
-.PHONY: real-replace real-undo-replace
-real-fetch: pre-fetch do-fetch post-fetch
-real-extract: extract-message install-depends pre-extract do-extract post-extract extract-cookie
-real-patch: patch-message pre-patch do-patch post-patch patch-cookie
-real-tools: tools-message pre-tools do-tools post-tools tools-cookie
-real-wrapper: wrapper-message pre-wrapper do-wrapper post-wrapper wrapper-cookie
-real-configure: configure-message pre-configure pre-configure-override do-configure post-configure configure-cookie
-real-build: build-message pre-build do-build post-build build-cookie
-real-test: test-message pre-test do-test post-test test-cookie
-real-install: do-su-install
-real-package: do-su-package
-real-replace: do-su-replace
-real-undo-replace: do-su-undo-replace
 
-_SU_TARGET=								\
-	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then					\
+_REAL_TARGETS.patch=	patch-message pre-patch do-patch post-patch
+_REAL_TARGETS.tools=	tools-message pre-tools do-tools post-tools
+_REAL_TARGETS.wrapper=	wrapper-message pre-wrapper do-wrapper post-wrapper
+_REAL_TARGETS.configure=configure-message pre-configure pre-configure-override do-configure post-configure
+_REAL_TARGETS.build=	build-message pre-build do-build post-build
+_REAL_TARGETS.test=	test-message pre-test do-test post-test
+_REAL_TARGETS.package=	do-su-package
+_REAL_TARGETS.replace=	do-su-replace
+_REAL_TARGETS.undo-replace= do-su-undo-replace
+
+_REAL_TARGETS.su-package=	
+_REAL_TARGETS.su-replace=	
+
+.for targ in extract configure build install
+.  if !empty(INTERACTIVE_STAGE:M${targ}) && defined(BATCH)
+_REAL_TARGETS.${targ}:=	${targ}-is-interactive
+${targ}-is-interactive:
+	@${ECHO} "*** The ${targ} stage of this package requires user interaction"
+	@${ECHO} "*** Please ${targ} manually with \"cd ${PKGDIR} && ${MAKE} ${targ}\""
+	@${FALSE}
+.  endif
+.endfor
+
+.for targ in ${_PKG_PHASES_ALL} replace undo-replace su-install
+.PHONY: real-${targ}
+.ORDER: ${_REAL_TARGETS.${targ}}
+real-${targ}: ${_REAL_TARGETS.${targ}}
+.endfor
+
+##### target internals
+
+_PHASE_MSG.depends=	Verifying dependencies
+_PHASE_MSG.extract=	Extracting
+_PHASE_MSG.patch=	Patching
+_PHASE_MSG.tools=	Overriding tools
+_PHASE_MSG.wrapper=	Creating toolchain wrappers
+_PHASE_MSG.configure=	Configuring
+_PHASE_MSG.build=	Building
+_PHASE_MSG.test=	Testing
+_PHASE_MSG.install=	Installing
+_PHASE_MSG.package=	Packaging
+
+.for targ in ${_PKG_PHASES_WRKDIR}
+.PHONY: ${targ}-message
+${targ}-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> ${_PHASE_MSG.${targ}} for ${PKGNAME}"
+.endfor
+
+.for targ in install package replace undo-replace deinstall
+.PHONY: do-su-${targ}
+do-su-${targ}:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
 		${MAKE} ${MAKEFLAGS} $$realtarget;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
 		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
 		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
 	else								\
-		args="";						\
+		args="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
 		if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then		\
-			args="FORCE_PKG_REGISTER=1";			\
+			args="$$args FORCE_PKG_REGISTER=1";		\
 		fi;							\
 		if [ "X${PKG_DEBUG_LEVEL}" != X"" ]; then		\
 			args="$$args PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL}"; \
@@ -3284,67 +3090,18 @@ _SU_TARGET=								\
 			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to ${targ} ${PKGBASE}."; \
 		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
+		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} real-su-${targ} $$realflags"; \
 	fi
-
-.PHONY: do-su-install
-do-su-install:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extractname=`${CAT} ${EXTRACT_COOKIE}`;				\
-	case "$$extractname" in						\
-	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
-	"${PKGNAME}")	;;						\
-	*)	${ECHO_MSG} "*** Warning: Package version $$extractname in ${WRKDIR}"; \
-		${ECHO_MSG} "*** Current version ${PKGNAME} in pkgsrc directory"; \
-		${ECHO_MSG} "*** Cleaning and rebuilding the newer version of the package..."; \
-		${MAKE} clean && ${MAKE} build ;;			\
-	esac
-	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-install";					\
-	action="install";						\
-	${_SU_TARGET}
-
-.PHONY: do-su-package
-do-su-package:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Packaging ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-package";					\
-	action="package";						\
-	${_SU_TARGET}
-
-.PHONY: do-su-replace
-do-su-replace:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Replacing ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-replace";					\
-	action="replace";						\
-	${_SU_TARGET}
-
-.PHONY: do-su-undo-replace
-do-su-undo-replace:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Undoing Replacement of ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-undo-replace";				\
-	action="undo-replace";						\
-	${_SU_TARGET}
+.endfor
 
 # Empty pre-* and post-* targets
 
-.for name in fetch extract patch tools wrapper configure build test install-script install package
-
-.  if !target(pre-${name})
-pre-${name}:
-	@${DO_NADA}
-.  endif
-
-.  if !target(post-${name})
-post-${name}:
-	@${DO_NADA}
-.  endif
-
+.for targ in fetch ${_PKG_PHASES_WRKDIR} install-script clean distclean
+.PHONY: pre-${targ} post-${targ}
+pre-${targ}: .OPTIONAL
+post-${targ}: .OPTIONAL
 .endfor
 
 # Reinstall
@@ -3352,48 +3109,35 @@ post-${name}:
 # Special target to re-run install
 
 .PHONY: reinstall
-.if !target(reinstall)
 reinstall:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE} ${PLIST}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${install_COOKIE} ${package_COOKIE} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}DEPENDS_TARGET=${DEPENDS_TARGET:Q} ${MAKE} ${MAKEFLAGS} install
-.endif
 
 # Deinstall
 #
 # Special target to remove installation
 
-.PHONY: deinstall do-su-deinstall
-.if !target(deinstall)
+.PHONY: deinstall
 deinstall: do-su-deinstall
 
-.if !target(do-su-deinstall)
-do-su-deinstall: uptodate-pkgtools
-	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGBASE}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-deinstall";					\
-	realflags="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
-	action="deinstall";						\
-	${_SU_TARGET}
-.endif
-
-.  if (${DEINSTALLDEPENDS} != "NO")
-.    if (${DEINSTALLDEPENDS} != "ALL")
+.if (${DEINSTALLDEPENDS} != "NO")
+.  if (${DEINSTALLDEPENDS} != "ALL")
 # used for removing stuff in bulk builds
 real-su-deinstall-flags+=	-r -R
 # used for "update" target
-.    else
+.  else
 real-su-deinstall-flags+=	-r
-.    endif
 .  endif
-.  ifdef PKG_VERBOSE
+.endif
+.ifdef PKG_VERBOSE
 real-su-deinstall-flags+=	-v
-.  endif
-.  ifdef PKG_PRESERVE
-.    if (${UPDATE_RUNNING} == "YES")
+.endif
+.ifdef PKG_PRESERVE
+.  if (${UPDATE_RUNNING} == "YES")
 # used to update w/o removing any files
 real-su-deinstall-flags+=	-N -f
-.    endif
 .  endif
+.endif
 
 .PHONY: real-su-deinstall
 real-su-deinstall:
@@ -3406,19 +3150,18 @@ real-su-deinstall:
 		${ECHO} Running ${PKG_DELETE} ${real-su-deinstall-flags} $$found ; \
 		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
 	fi
-.  if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
+.if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
-.    for pkg in ${BUILD_DEPENDS:C/:.*$//}
+.  for pkg in ${BUILD_DEPENDS:C/:.*$//}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${PKG_BEST_EXISTS} \"${pkg}\" || ${TRUE}`";		\
 	if [ "$$found" != "" ]; then					\
 		${ECHO} Running ${PKG_DELETE} $$found;			\
 		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE}; \
 	fi
-.    endfor
-.  endif # DEINSTALLDEPENDS
-	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
-.endif						# target(deinstall)
+.  endfor
+.endif # DEINSTALLDEPENDS
+	@${RM} -f ${install_COOKIE} ${package_COOKIE}
 
 
 ################################################################
@@ -3542,17 +3285,17 @@ ${DLIST}: ${WRKDIR}
 
 # The 'info' target can be used to display information about a package.
 .PHONY: info
-info: uptodate-pkgtools
+info:
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
 
 # The 'check' target can be used to check an installed package.
 .PHONY: check
-check: uptodate-pkgtools
+check:
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
 
 # The 'list' target can be used to list the files installed by a package.
 .PHONY: list
-list: uptodate-pkgtools
+list:
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
 # Run pkglint:
@@ -3640,18 +3383,11 @@ mirror-distfiles:
 
 # Cleaning up
 
-.PHONY: pre-clean
-.if !target(pre-clean)
-pre-clean:
-	@${DO_NADA}
-.endif
-
 .PHONY: clean
-.if !target(clean)
 clean: pre-clean
-.  if (${CLEANDEPENDS} != "NO") && (defined(BUILD_DEPENDS) || defined(DEPENDS))
+.if (${CLEANDEPENDS} != "NO") && (!empty(BUILD_DEPENDS) || !empty(DEPENDS))
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean-depends
-.  endif
+.endif
 	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -d ${WRKDIR} ]; then					\
@@ -3661,42 +3397,29 @@ clean: pre-clean
 			${ECHO_MSG} "${_PKGSRC_IN}> ${WRKDIR} not writable, skipping"; \
 		fi;							\
 	fi
-.  ifdef WRKOBJDIR
+.ifdef WRKOBJDIR
 	-${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RMDIR} ${BUILD_DIR} 2>/dev/null;				\
 	${RM} -f ${WRKDIR_BASENAME}
-.  endif
 .endif
 
 
 .PHONY: clean-depends
-.if !target(clean-depends)
 clean-depends:
-.  if defined(BUILD_DEPENDS) || defined(DEPENDS)
+.if !empty(BUILD_DEPENDS) || !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for i in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl` ;\
-	do 								\
+	for i in `${_SHOW_ALL_DEPENDS_DIRS_EXCL}`; do			\
 		cd ${.CURDIR}/../../$$i &&				\
 		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
 	done
-.  endif
-.endif
-
-.PHONY: pre-distclean
-.if !target(pre-distclean)
-pre-distclean:
-	@${DO_NADA}
 .endif
 
 
 .PHONY: cleandir
-.if !target(cleandir)
 cleandir: clean
-.endif
 
 
 .PHONY: distclean
-.if !target(distclean)
 distclean: pre-distclean clean
 	${_PKG_SILENT}${ECHO_MSG} "${_PKGSRC_IN}> Dist cleaning for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${_DISTDIR} ]; then		\
@@ -3704,16 +3427,13 @@ distclean: pre-distclean clean
 		${TEST} -z "${DISTFILES}" || ${RM} -f ${DISTFILES};	\
 		${TEST} -z "${PATCHFILES}" || ${RM} -f ${PATCHFILES};	\
 	fi
-.  if defined(DIST_SUBDIR) && exists(DIST_SUBDIR)
+.if defined(DIST_SUBDIR) && exists(DIST_SUBDIR)
 	-${_PKG_SILENT}${_PKG_DEBUG}${RMDIR} ${_DISTDIR}
-.  endif
-	-${_PKG_SILENT}${_PKG_DEBUG}${RM} -f README.html
 .endif
+	-${_PKG_SILENT}${_PKG_DEBUG}${RM} -f README.html
 
 # Prints out a script to fetch all needed files (no checksumming).
 .PHONY: fetch-list
-.if !target(fetch-list)
-
 fetch-list:
 	@${ECHO} '#!/bin/sh'
 	@${ECHO} '#'
@@ -3722,11 +3442,8 @@ fetch-list:
 	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
 	@${ECHO} '#'
 	@${MAKE} ${MAKEFLAGS} fetch-list-recursive
-.endif # !target(fetch-list)
 
 .PHONY: fetch-list-recursive
-.if !target(fetch-list-recursive)
-
 fetch-list-recursive:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs`; do	\
@@ -3742,21 +3459,18 @@ fetch-list-recursive:
 				print block[line] }			\
 		')							\
 	done
-.endif # !target(fetch-list-recursive)
 
 .PHONY: fetch-list-one-pkg
-.if !target(fetch-list-one-pkg)
-
 fetch-list-one-pkg:
-.  if !empty(_ALLFILES)
+.if !empty(_ALLFILES)
 	@${ECHO}
 	@${ECHO} '#'
 	@location=`${PWD_CMD} | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
 		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
 	@${ECHO} '#'
 	@${MKDIR} ${_DISTDIR}
-.    for fetchfile in ${_ALLFILES}
-.      if defined(_FETCH_MESSAGE)
+.  for fetchfile in ${_ALLFILES}
+.    if defined(_FETCH_MESSAGE)
 	@(cd ${_DISTDIR};						\
 	if [ ! -f ${fetchfile:T} ]; then				\
 		${ECHO};						\
@@ -3767,7 +3481,7 @@ fetch-list-one-pkg:
 		${ECHO} '#';						\
 		${ECHO} ${_FETCH_MESSAGE:Q};				\
 	fi)
-.      elif defined(DYNAMIC_MASTER_SITES)
+.    elif defined(DYNAMIC_MASTER_SITES)
 	@(cd ${_DISTDIR};						\
 	if [ ! -f ${fetchfile:T} ]; then				\
 		${ECHO};						\
@@ -3790,7 +3504,7 @@ fetch-list-one-pkg:
 		${ECHO}	done;						\
 		${ECHO} ')';						\
 	fi)
-.      else
+.    else
 	@(cd ${_DISTDIR};						\
 	if [ ! -f ${fetchfile:T} ]; then				\
 		${ECHO};						\
@@ -3808,143 +3522,9 @@ fetch-list-one-pkg:
 		${ECHO} '	${ECHO} ${fetchfile} not fetched';	\
 		${ECHO}	done;						\
 	fi)
-.      endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
-.    endfor
-.  endif # !empty(_ALLFILES)
-.endif # !target(fetch-list-one-pkg)
-
-# Checksumming utilities
-
-.PHONY: makesum
-.if !target(makesum)
-makesum: fetch uptodate-digest
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	newfile=${DISTINFO_FILE}.$$$$;					\
-	if [ -f ${DISTINFO_FILE} ]; then				\
-		${GREP} '^.NetBSD' ${DISTINFO_FILE} > $$newfile ||	\
-			(${ECHO_N} "$$" > $$newfile &&			\
-			 ${ECHO_N} "NetBSD" >> $$newfile && 		\
-			 ${ECHO} "$$" >> $$newfile)			\
-	else								\
-		${ECHO_N} "$$" > $$newfile;				\
-		${ECHO_N} "NetBSD" >> $$newfile; 			\
-		${ECHO} "$$" >> $$newfile;				\
-	fi;								\
-	${ECHO} "" >> $$newfile;					\
-	cd ${DISTDIR};							\
-	for sumfile in "" ${_CKSUMFILES}; do				\
-		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
-		${DIGEST} ${DIGEST_ALGORITHM} $$sumfile >> $$newfile;	\
-		${WC} -c $$sumfile | ${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }' >> $$newfile; \
-	done;								\
-	for ignore in "" ${_IGNOREFILES}; do				\
-		if [ "X$$ignore" = "X" ]; then continue; fi;		\
-		${ECHO} "${DIGEST_ALGORITHM} ($$ignore) = IGNORE" >> $$newfile; \
-	done;								\
-	if [ -f ${DISTINFO_FILE} ]; then				\
-		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
-	fi;								\
-	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
-		${RM} -f $$newfile;					\
-		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
-	else								\
-		${MV} $$newfile ${DISTINFO_FILE};			\
-	fi
-.endif
-
-.if !target(makepatchsum)
-makepatchsum mps: uptodate-digest
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	newfile=${DISTINFO_FILE}.$$$$;					\
-	if [ -f ${DISTINFO_FILE} ]; then				\
-		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
-	else \
-		${ECHO_N} "$$" > $$newfile;				\
-		${ECHO_N} "NetBSD" >> $$newfile; 			\
-		${ECHO} "$$" >> $$newfile;				\
-		${ECHO} "" >> $$newfile;				\
-	fi;								\
-	if [ -d ${PATCHDIR} ]; then					\
-		(cd ${PATCHDIR};					\
-		for sumfile in "" patch-*; do				\
-			if [ "X$$sumfile" = "X" ]; then continue; fi;	\
-			if [ "X$$sumfile" = "Xpatch-*" ]; then break; fi; \
-			case $$sumfile in				\
-				patch-local-*) ;;			\
-				*.orig|*.rej|*~) continue ;;		\
-				*)	${ECHO} "${DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${DIGEST_ALGORITHM}`" >> $$newfile;; \
-			esac;						\
-		done);							\
-	fi;								\
-	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
-		${RM} -f $$newfile;					\
-		${ECHO_MSG} "=> distinfo: patches part unchanged.";	\
-	else								\
-		${MV} $$newfile ${DISTINFO_FILE};			\
-	fi
-.endif
-
-# This target is done by invoking a sub-make so that DISTINFO_FILE gets
-# re-evaluated after the "makepatchsum" target is made. This can be
-# made into:
-#makedistinfo mdi: makepatchsum makesum
-# once a combined distinfo file exists for all packages
-.if !target(makedistinfo)
-makedistinfo mdi distinfo: makepatchsum
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} makesum
-.endif
-
-.PHONY: checksum
-.if !target(checksum)
-checksum: fetch uptodate-digest
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${DISTINFO_FILE} ]; then				\
-		${ECHO_MSG} "=> No checksum file.";			\
-	else								\
-		(cd ${DISTDIR}; OK="true";				\
-		  for file in "" ${_CKSUMFILES}; do			\
-		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
-			if [ "X$$alg" = "X" ]; then			\
-				${ECHO_MSG} "=> No checksum recorded for $$file."; \
-				OK="false";				\
-			else						\
-				CKSUM=`${DIGEST} $$alg < $$file`;	\
-				CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
-				if [ "$$CKSUM2" = "IGNORE" ]; then	\
-					${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
-					${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
-					OK="false";			\
-				elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
-					${ECHO_MSG} "=> Checksum OK for $$file."; \
-				else					\
-					${ECHO_MSG} "=> Checksum mismatch for $$file."; \
-					OK="false";			\
-				fi;					\
-			fi;						\
-		  done;							\
-		  for file in "" ${_IGNOREFILES}; do			\
-		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
-			if [ "$$CKSUM2" = "" ]; then			\
-				${ECHO_MSG} "=> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
-				OK="false";				\
-			elif [ "$$CKSUM2" != "IGNORE" ]; then		\
-				${ECHO_MSG} "=> Checksum for $$file is not set to IGNORE in checksum file even though"; \
-				${ECHO_MSG} "   the file is in the "'$$'"{IGNOREFILES} list."; \
-				OK="false";				\
-			fi;						\
-		  done;							\
-		  if [ "$$OK" != "true" ]; then				\
-			${ECHO_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
-			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
-			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
-			exit 1;						\
-		  fi) ;							\
-	fi
-.endif
-
-
+.    endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
+.  endfor
+.endif # !empty(_ALLFILES)
 
 # List of sites carrying binary pkgs. Variables "rel" and "arch" are
 # replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
@@ -4019,30 +3599,25 @@ PACKAGE_NAME_TYPE?=	name
 HTML_PKGNAME=<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>
 
 .PHONY: package-name
-.if !target(package-name)
 package-name:
-.  if (${PACKAGE_NAME_TYPE} == "html")
+.if (${PACKAGE_NAME_TYPE} == "html")
 	@${ECHO} '<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>'
-.  elif (${PACKAGE_NAME_TYPE} == "svr4")
+.elif (${PACKAGE_NAME_TYPE} == "svr4")
 	@${ECHO} ${SVR4_PKGNAME}
-.  else
+.else
 	@${ECHO} ${PKGNAME}
-.  endif # PACKAGE_NAME_TYPE
-.endif # !target(package-name)
+.endif # PACKAGE_NAME_TYPE
 
 .PHONY: make-readme-html-help
-.if !target(make-readme-html-help)
 make-readme-html-help:
 	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</a>: <TD>'${COMMENT:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g:Q}
-.endif # !target(make-readme-html-help)
 
 # Show (recursively) all the packages this package depends on.
 # If PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
 PACKAGE_DEPENDS_WITH_PATTERNS?=true
 .PHONY: run-depends-list
-.if !target(run-depends-list)
 run-depends-list:
-.  for dep in ${DEPENDS}
+.for dep in ${DEPENDS}
 	@pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://}";					\
 	cd ${.CURDIR};							\
@@ -4055,52 +3630,41 @@ run-depends-list:
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi;							\
 	fi
-.  endfor
-.endif # target(run-depends-list)
+.endfor
 
 # Build a package but don't check the package cookie
 
 .PHONY: repackage
-.if !target(repackage)
 repackage: pre-repackage package
 
 .PHONY: pre-repackage
 pre-repackage:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PACKAGE_COOKIE}
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${package_COOKIE}
 
 # Build a package but don't check the cookie for installation, also don't
 # install package cookie
 
 .PHONY: package-noinstall
-.if !target(package-noinstall)
 package-noinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} PACKAGE_NOINSTALL=yes real-package
-.endif
 
 ################################################################
 # Dependency checking
 ################################################################
 
-.PHONY: install-depends pre-install-depends
-pre-install-depends:
-.if !target(install-depends)
+.PHONY: install-depends
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
-install-depends: uptodate-pkgtools pre-install-depends
-.  if defined(DEPENDS) || defined(BUILD_DEPENDS)
-.    if defined(NO_DEPENDS)
-	@${DO_NADA}
-.    else	# !DEPENDS
-.      for dep in ${DEPENDS} ${BUILD_DEPENDS}
+install-depends:
+.for dep in ${DEPENDS} ${BUILD_DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
 	found=`${PKG_BEST_EXISTS} "$$pkg" || ${TRUE}`;			\
 	if [ "X$$REBUILD_DOWNLEVEL_DEPENDS" != "X" ]; then		\
-		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKGNAME`; \
+		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var-noeval VARNAME=PKGNAME`; \
 		if [ "X$$found" != "X" -a "X$$found" != "X$${pkgname}" ]; then \
 			${ECHO_MSG} "ignoring old installed package \"$$found\""; \
 			found="";					\
@@ -4133,21 +3697,14 @@ install-depends: uptodate-pkgtools pre-install-depends
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
-.      endfor	# DEPENDS
-.    endif	# !NO_DEPENDS
-.  endif	# DEPENDS
-
-.endif
+.endfor	# DEPENDS
 
 .PHONY: build-depends-list
-.if !target(build-depends-list)
 build-depends-list:
-	@for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`;	\
-	do								\
+	@for dir in `${_SHOW_ALL_DEPENDS_DIRS_EXCL}`; do		\
 		(cd ../../$$dir &&					\
 		${MAKE} ${MAKEFLAGS} package-name)			\
 	done
-.endif
 
 # If PACKAGES is set to the default (../../pkgsrc/packages), the current
 # ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
@@ -4155,9 +3712,8 @@ build-depends-list:
 # The PKG_URL is set from FTP_PKG_URL_* or CDROM_PKG_URL_*, depending on
 # the target used to generate the README.html file.
 .PHONY: binpkg-list
-.if !target(binpkg-list)
 binpkg-list:
-	@if ${TEST} -d ${PACKAGES}; then					\
+	@if ${TEST} -d ${PACKAGES}; then				\
 		cd ${PACKAGES};						\
 		case ${.CURDIR} in					\
 		*/pkgsrc/packages)					\
@@ -4205,7 +3761,6 @@ binpkg-list:
 			;;						\
 		esac;							\
 	fi
-.endif
 
 ################################################################
 # Everything after here are internal targets and really
@@ -4220,7 +3775,6 @@ binpkg-list:
 #  not for opsys
 #
 .PHONY: describe
-.if !target(describe)
 describe:
 	@${ECHO_N} "${PKGNAME}|${.CURDIR}|";				\
 	${ECHO_N} "${PREFIX}|";						\
@@ -4252,33 +3806,23 @@ describe:
 		${ECHO_N} "not ${NOT_FOR_OPSYS}";			\
 	fi;								\
 	${ECHO} ""
-.endif
-
-.PHONY: readmes
-.if !target(readmes)
-readmes:	readme
-.endif
 
 # This target is used to generate README.html files
-.PHONY: readme
-.if !target(readme)
 FTP_PKG_URL_HOST?=	ftp://ftp.NetBSD.org
 FTP_PKG_URL_DIR?=	/pub/NetBSD/packages
 
-readme:
+.PHONY: readme readmes
+readme readmes:
 	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
-.endif
 
 # This target is used to generate README.html files, very like "readme"
 # However, a different target was used for ease of use.
-.PHONY: cdrom-readme
-.if !target(cdrom-readme)
 CDROM_PKG_URL_HOST?=	file://localhost
 CDROM_PKG_URL_DIR?=	/usr/pkgsrc/packages
 
+.PHONY: cdrom-readme
 cdrom-readme:
 	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} README.html PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
-.endif
 
 README_NAME=	${TEMPLATES}/README.pkg
 
@@ -4346,48 +3890,28 @@ README.html: .PRECIOUS
 	@${RM} $@.tmp1
 
 .PHONY: show-pkgtools-version
-.if !target(show-pkgtools-version)
 show-pkgtools-version:
 	@${ECHO} ${PKGTOOLS_VERSION}
-.endif
-
-# convenience target, to display make variables from command line
-# i.e. "make show-var VARNAME=var", will print var's value
-.PHONY: show-var
-show-var:
-	@${ECHO} ${${VARNAME}:Q}
-
-# enhanced version of target above, to display multiple variables
-.PHONY: show-vars
-show-vars:
-.for VARNAME in ${VARNAMES}
-	@${ECHO} ${${VARNAME}:Q}
-.endfor
 
 .PHONY: print-build-depends-list
-.if !target(print-build-depends-list)
 print-build-depends-list:
-.  if defined(BUILD_DEPENDS) || defined(DEPENDS)
+.if !empty(BUILD_DEPENDS) || !empty(DEPENDS)
 	@${ECHO_N} 'This package requires package(s) "'
 	@${ECHO_N} `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`
 	@${ECHO} '" to build.'
-.  endif
 .endif
 
 .PHONY: print-run-depends-list
-.if !target(print-run-depends-list)
 print-run-depends-list:
-.  if defined(DEPENDS)
+.if !empty(DEPENDS)
 	@${ECHO_N} 'This package requires package(s) "'
 	@${ECHO_N} `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
 	@${ECHO} '" to run.'
-.  endif
 .endif
 
 # This target is used by the mk/scripts/mkreadme script to generate
 # README.html files
 .PHONY: print-summary-data
-.if !target(print-summary-data)
 print-summary-data:
 	@${ECHO} "depends ${PKGPATH} ${DEPENDS}"
 	@${ECHO} "build_depends ${PKGPATH} ${BUILD_DEPENDS}"
@@ -4416,9 +3940,8 @@ print-summary-data:
 		${ECHO}  "descr ${PKGPATH} /dev/null";				\
 	fi
 	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
-.endif
 
-.if !target(show-license)
+.PHONY: show-license show-licence
 show-license show-licence:
 	@if [ "${LICENSE}" != "" ]; then				\
 		if ${TEST} -f ${PKGSRCDIR}/licenses/${LICENSE}; then	\
@@ -4432,7 +3955,6 @@ show-license show-licence:
 			${ECHO} "See the package description (pkg_info -d ${PKGNAME}) for more information."; \
 		fi							\
 	fi
-.endif
 
 # Stat all the files of one pkg and sum the sizes up.
 #
@@ -4552,9 +4074,9 @@ _PRINT_PLIST_COMMON_DIRS!= 	${AWK} 'BEGIN  {			\
 # XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
 
 _PRINT_PLIST_FILES_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d -print
+	${FIND} ${PREFIX}/. -xdev -newer ${extract_COOKIE} \! -type d -print
 _PRINT_PLIST_DIRS_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print
+	${FIND} ${PREFIX}/. -xdev -newer ${extract_COOKIE} -type d -print
 _PRINT_LA_LIBNAMES=	${SETENV} ECHO=${ECHO:Q} GREP=${GREP:Q} SORT=${SORT:Q} \
 			${SH} ${.CURDIR}/../../mk/scripts/print-la-libnames
 
@@ -4588,12 +4110,11 @@ _PRINT_PLIST_LIBTOOLIZE_FILTER?=	${CAT}
 .endif
 
 .PHONY: print-PLIST
-.if !target(print-PLIST)
 print-PLIST:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${ECHO} '@comment $$'NetBSD'$$'
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
+	shlib_type=`${_GET_SHLIB_TYPE}`;				\
 	case $$shlib_type in 						\
 	"a.out")	genlinks=1 ;;					\
 	*)		genlinks=0 ;;					\
@@ -4645,7 +4166,6 @@ print-PLIST:
 			{ print $$0; }' ;				\
 	done								\
 	| ${AWK} '${_PRINT_PLIST_AWK_SUBST} { print $$0; }'
-.endif # target(print-PLIST)
 
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -4674,7 +4194,6 @@ PKGVIEWS+=	${DEFAULT_VIEW.${PKGBASE}}
 # accordance to the @pkgdep directive in the packing lists.
 
 .PHONY: fake-pkg
-.if !target(fake-pkg)
 fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${PLIST} -o ! -f ${DESCR} ]; then			\
@@ -4686,18 +4205,18 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${RM} -f ${_PKG_DBDIR};					\
 		${MKDIR} ${_PKG_DBDIR};					\
 	fi
-.  if defined(FORCE_PKG_REGISTER)
+.if defined(FORCE_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} delete ${PKGNAME}
-.    if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${_PKG_DBDIR}/${PKGNAME}
-.    endif
 .  endif
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PRESERVE_FILE}
-.  if defined(PKG_PRESERVE)
+.if defined(PKG_PRESERVE)
 	${_PKG_SILENT}${_PKG_DEBUG}${DATE} > ${PRESERVE_FILE}
-.  endif
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	files="";							\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
@@ -4722,19 +4241,19 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		done;							\
 	fi;								\
 	eval ${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${PKGSRCDIR}/||' > ${BUILD_VERSION_FILE}
-.  for def in ${BUILD_DEFS}
+.for def in ${BUILD_DEFS} ${BUILD_DEFS_FIXED}
 	@${ECHO} ${def}=${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
-.  endfor
-.  if !empty(USE_LANGUAGES)
+.endfor
+.if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES)
 	@${ECHO} "CC_VERSION=${CC_VERSION}" >> ${BUILD_INFO_FILE}
-.  endif
-.  if defined(USE_PERL5) && (${USE_PERL5} == "run")
+.endif
+.if defined(USE_PERL5) && (${USE_PERL5} == "run")
 	@${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
-.  endif
-.  ifdef _USE_GMAKE
+.endif
+.if !empty(USE_GNU_TOOLS:Mmake)
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
-.  endif
-.  if ${SHLIB_HANDLING} == "YES" && ${CHECK_SHLIBS} == "YES"
+.endif
+.if ${SHLIB_HANDLING} == "YES" && ${CHECK_SHLIBS} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${LDD}" in						\
 	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;; \
@@ -4770,7 +4289,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${TEST} "$$req" = "" && continue;			\
 		${ECHO} "REQUIRES=$$req" >> ${BUILD_INFO_FILE};		\
 	done
-.  endif
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -4839,11 +4358,10 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			fi;						\
 		done ;;							\
 	esac
-.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && \
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews") && \
       !empty(BUILD_VIEWS:M[yY][eE][sS])
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} build-views
-.  endif	# pkgviews
-.endif		# !fake-pkg
+.endif	# pkgviews
 
 .PHONY: build-views
 build-views: do-su-build-views
@@ -4857,9 +4375,8 @@ do-su-build-views:
 	${_SU_TARGET}
 
 .PHONY: real-su-build-views
-.if !target(real-su-build-views)
 real-su-build-views:
-.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MKDIR} ${LOCALBASE};						\
 	for v in ${PKGVIEWS}; do					\
@@ -4890,9 +4407,6 @@ real-su-build-views:
 		${ECHO} "=> Linking package into $$viewname view";	\
 		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
 	done
-.  else
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-.  endif
 .endif
 
 .PHONY: remove-views
@@ -4907,9 +4421,8 @@ do-su-remove-views:
 	${_SU_TARGET}
 
 .PHONY: real-su-remove-views
-.if !target(real-su-remove-views)
 real-su-remove-views:
-.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for v in ${PKGVIEWS}; do					\
 		case "$$v" in						\
@@ -4919,9 +4432,6 @@ real-su-remove-views:
 		${ECHO} "=> Removing package from $$viewname view";	\
 		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
 	done
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-.  endif
 .endif
 
 # Depend is generally meaningless for arbitrary packages, but if someone wants
@@ -4929,15 +4439,11 @@ real-su-remove-views:
 # the habit of typing `${MAKE} depend all install' as a matter of course.
 #
 .PHONY: depend
-.if !target(depend)
-depend:
-.endif
+depend: .OPTIONAL
 
 # Same goes for tags
 .PHONY: tags
-.if !target(tags)
-tags:
-.endif
+tags: .OPTIONAL
 
 # if automatic manual page compression is done by the package according
 # to MANZ's value, set MANCOMPRESSED if MANZ is set
@@ -4946,7 +4452,7 @@ MANCOMPRESSED=	yes
 MAKE_ENV+=	MANZ="${MANZ}"
 .endif
 
-# generate ${PLIST} from ${_PLIST_SRC} by:
+# generate ${PLIST} from ${PLIST_SRC} by:
 # - substituting for PLIST_SUBST entries
 # - fixing list of man-pages according to MANZ, MANINSTALL.
 # - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
@@ -5074,7 +4580,7 @@ _PLIST_AWK_SCRIPT+=	'
 
 # GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
-#	the contents of ${_PLIST_SRC}.
+#	the contents of ${PLIST_SRC}.
 #
 GENERATE_PLIST?=	${TRUE};
 .if ${PLIST_TYPE} == "dynamic"
@@ -5098,35 +4604,18 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	${CAT} ${_PLIST_SRC}; ${GENERATE_PLIST}
+_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
 .endif
 
-.PHONY: plist
-plist: ${PLIST}
-${PLIST}: ${_PLIST_SRC}
+.if ${PLIST_TYPE} == "static"
+${PLIST}: ${PLIST_SRC}
+.endif
+${PLIST}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${_GENERATE_PLIST} } | ${AWK} ${_PLIST_AWK_SCRIPT}		\
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
 		SHLIB_PLIST_MODE=1
-
-# generate ${MESSAGE} from ${MESSAGE_SRC} by substituting
-# for MESSAGE_SUBST entries
-
-.PHONY: message
-message: ${MESSAGE}
-.ifdef MESSAGE
-${MESSAGE}: ${MESSAGE_SRC}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -z "${MESSAGE_SRC}" ]; then				\
-		${ECHO} "${MESSAGE_SRC} not found.";			\
-		${ECHO} "Please set MESSAGE_SRC correctly.";		\
-	else								\
-		${CAT} ${MESSAGE_SRC} |					\
-			${SED} ${MESSAGE_SUBST_SED}			\
-			> ${MESSAGE};					\
-	fi
-.endif
 
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any

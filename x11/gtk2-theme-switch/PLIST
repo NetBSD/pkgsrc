@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/05 18:08:06 xtraeme Exp $
-bin/gtk2-theme-switch
-man/man1/gtk2-theme-switch.1

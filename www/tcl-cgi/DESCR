@@ -1,6 +1,0 @@
-cgi.tcl, is a set of procedures for writing CGI scripts in Tcl.  The procedures
-implement the code described in the paper "Writing CGI scripts in Tcl" which
-was published in the Proceedings of the Fourth Tcl Workshop (Tcl '96), and can
-be found at: http://www.nist.gov/msidlibrary/doc/libes96c.ps
-
-The cgi.tcl home page is http://expect.nist.gov/cgi.tcl

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/27 16:54:06 seb Exp $
-bin/isync
-man/man1/isync.1
-share/examples/isync/isyncrc.sample
-@dirrm share/examples/isync

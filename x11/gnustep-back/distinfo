@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2004/09/27 01:10:18 rh Exp $
-
-SHA1 (gnustep-back-0.9.4.tar.gz) = 414f64def206959b469277f7f65ce5101b82c49e
-Size (gnustep-back-0.9.4.tar.gz) = 401182 bytes
-SHA1 (patch-aa) = cd01033d18e07d0cfe690f53ff6cea8d768e586b

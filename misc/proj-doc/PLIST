@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/12 12:21:31 jtb Exp $
-share/doc/proj/OF90-284.pdf
-share/doc/proj/PROJ.4.3.I2.pdf
-share/doc/proj/PROJ.4.3.pdf
-share/doc/proj/SWISS.pdf
-@dirrm share/doc/proj

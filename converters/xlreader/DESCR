@@ -1,5 +1,0 @@
-Read data from Excel spread sheets without Microsoft!
-Provides an API to allow any application to read Excel
-documents. Demo interface converts data to tab
-delimited, CSV or SQL inserts. Written in C. Based on
-the the Java version by Andrew Khan.

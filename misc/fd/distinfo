@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2001/12/30 13:46:03 wiz Exp $
-
-SHA1 (FD-1.03u.tar.gz) = 5fd312b801a81400ae10bc3e5630ce315b48c765
-Size (FD-1.03u.tar.gz) = 340097 bytes
-SHA1 (patch-aa) = 7877fcbf53da90e6d10fa57e3c6f55c761e9f11c

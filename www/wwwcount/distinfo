@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/03 13:53:09 agc Exp $
-
-SHA1 (wwwcount2.5.tar.gz) = 374babfc93db3092eda13bda5fd65a372beca4bb
-Size (wwwcount2.5.tar.gz) = 441215 bytes
-SHA1 (patch-aa) = 34295db70d0f2f349dcb6a69db7e1761f76b5ff8
-SHA1 (patch-ab) = f6f71b1428506ab565f127c38096b65408f5bc53
-SHA1 (patch-ae) = e950e48c2f9a8f3da27c8b51267a52d7a7bd704e

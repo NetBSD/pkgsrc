@@ -1,5 +1,0 @@
-ifp-line is part of the ifp-driver project, which aims to be an open-source
-driver for the iRiver iFP line of MP3 players.
-
-It uses the native manager firmware; it does not use nor support the optional
-UMS firmware.

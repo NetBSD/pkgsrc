@@ -1,4 +1,0 @@
-Xfig is a menu-driven tool that allows the user to draw and manipulate objects
-interactively in an X window.  The resulting pictures can be saved, printed
-on postscript printers or converted to a variety of other formats (e.g. to
-allow inclusion in LaTeX documents).

@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/26 12:29:55 jlam Exp $
-
-xcdroast doesn't work as SUID program if linked against GTK+.  Other
-options include making cdrecord SUID or using a wrapper like sudo.
-===========================================================================

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/13 17:45:59 seb Exp $
-lib/libkver.a
-lib/libkver.so
-lib/libkver.so.1
-lib/libkver.so.1.0
-man/cat3/kver.0
-man/man3/kver.3
-${HAS_SYSCTL}sbin/sysctl

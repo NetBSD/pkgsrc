@@ -1,7 +1,0 @@
-Willows TWIN is a GNU software package for emulating the Microsoft
-Win32 API.  It consists of a library set and an emulator program.  The
-emulator program allows the execution of Windows binary applications
-on supported platforms; using the native Intel x86 processors, or
-through the built-in instruction set interpreter.  The native
-libraries allow programmers natively to build Win32 and MFC
-applications from source code.

@@ -1,6 +1,0 @@
-Tex2RTF is a program written by Julian Smart (julian.smart@ukonline.co.uk)
-to convert from a LaTeX subset to four other formats:
-    * Linear RTF, for importing into a wide range of word processors.
-    * Windows Help hypertext RTF, for compilation with HC (Help Compiler).
-    * HTML (Hypertext Markup Language), as used on the World Wide Web.
-    * XLP wxHelp format (the wxWindows toolkit help format).
