@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6589 2004/07/18 06:13:05 markd Exp $
+$NetBSD: CHANGES,v 1.6590 2004/07/18 10:04:43 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3432,3 +3432,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gaim to 0.80 [jmmv 2004-07-17]
 	Added gnetman-20040507 [dmcmahill 2004-07-17]
 	Updated mimedefang to 2.44 [markd 2004-07-18]
+	Updated sylpheed-claws to 0.9.12 [recht 2004-07-18]
