@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/03/02 06:14:48 kim Exp $
+
+--- src/Makefile.in.orig	Sat May  9 22:19:20 1998
++++ src/Makefile.in	Tue Mar  2 01:07:31 1999
+@@ -15,6 +15,7 @@
+ 
+ INSTALL=@INSTALL@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
++INSTALL_SCRIPT=@INSTALL@ -m 0555
+ INSTALL_DATA=@INSTALL_DATA@
+ 
+ PROGS=		remind rem2ps
+@@ -48,11 +49,12 @@
+ 	@CC@ @LDFLAGS@ -o remind $(REMINDOBJS) @LIBS@
+ 
+ install: all
+-	for prog in $(PROGS) $(SCRIPTS) ; do \
++	for prog in $(PROGS) ; do \
+ 		$(INSTALL_PROGRAM) $$prog $(bindir) ; \
+ 	done
+-	-strip $(bindir)/remind
+-	-strip $(bindir)/rem2ps
++	for prog in $(SCRIPTS) ; do \
++		$(INSTALL_SCRIPT) $$prog $(bindir) ; \
++	done
+ 	for man in $(MANS) ; do  \
+ 		$(INSTALL_DATA) $$man $(mandir)/man1 ; \
+ 	done
