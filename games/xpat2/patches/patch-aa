@@ -1,0 +1,59 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/28 18:12:06 jlam Exp $
+
+--- src/Imakefile.orig	Sat May 15 15:02:56 1999
++++ src/Imakefile	Thu Jul 27 13:18:33 2000
+@@ -49,9 +49,9 @@
+ # BINDIR and LIBDIR should be predefined by the templates
+ # BINDIR = /usr/bin/X11
+ # LIBDIR = /usr/lib/X11
+-XPATLIBDIR = /usr/games/lib/xpat
++XPATLIBDIR = $(LIBDIR)/xpat
+ APPDEFSDIR = $(LIBDIR)
+-XPATMANDIR = /usr/man/man6
++XPATMANDIR = $(PREFIX)/man/man6
+ 
+ # This is the name of the log-file, where solved games are stored:
+ # an alternative path would be $(XPATLIBDIR)/xpat.log
+@@ -64,8 +64,10 @@
+ LAPPDEFSDIR = $(HOME)
+ 
+ # xpat2 needs to know where the xpm library resides (if needed)
+-XPMLIB 			= -L$(USRLIBDIR) -lXpm
+-XPMINCLUDE		= -I $(INCDIR)
++XPMLIB 			= -Wl,-R${XPMDIR}/lib -lXpm
++XPMINCLUDE		= -I$(XPMDIR)/include/X11
++
++CFLAGS			+= -DNO_CUSERID
+ 
+ # for the Qt interface, the following paths are needed
+ QTDIR			= /usr/local/qt
+@@ -204,12 +206,12 @@
+ install:: $(MYPROGS)
+ 	mkdirhier $(XPATLIBDIR)
+ 	chmod 755 $(XPATLIBDIR)
+-	for f in $(LANGUAGES); do \
+-	  mkdirhier $(APPDEFSDIR)/$$f/app-defaults; \
+-	  cp ../lib/$$f/XPat $(APPDEFSDIR)/$$f/app-defaults; \
+-	  chmod 755 $(APPDEFSDIR)/$$f/app-defaults; \
+-	  chmod 644 $(APPDEFSDIR)/$$f/app-defaults/XPat; \
+-	done 
++#	for f in $(LANGUAGES); do \
++#	  mkdirhier $(APPDEFSDIR)/$$f/app-defaults; \
++#	  cp ../lib/$$f/XPat $(APPDEFSDIR)/$$f/app-defaults; \
++#	  chmod 755 $(APPDEFSDIR)/$$f/app-defaults; \
++#	  chmod 644 $(APPDEFSDIR)/$$f/app-defaults/XPat; \
++#	done 
+ 	(cd ../lib; tar cf - * | (cd $(XPATLIBDIR); tar xf -))
+ 	chown -R root $(XPATLIBDIR)
+ 	chmod -R a+r $(XPATLIBDIR)
+@@ -217,8 +219,8 @@
+ 	    chmod 755 $(XPATLIBDIR)/$$f; \
+ 	done
+ 	mkdirhier $(XPATMANDIR)
+-	cp xpat2.man $(XPATMANDIR)/xpat2.6x
+-	chmod 644 $(XPATMANDIR)/xpat2.6x
++	cp xpat2.man $(XPATMANDIR)/xpat2.6
++	chmod 644 $(XPATMANDIR)/xpat2.6
+ 
+ ComplexProgramTarget($(MYPROG))
+ InstallAppDefaults(XPat)
