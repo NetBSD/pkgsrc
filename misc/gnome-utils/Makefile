@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2003/01/12 06:49:36 rh Exp $
+# $NetBSD: Makefile,v 1.55 2003/02/18 14:56:00 jmmv Exp $
 
 DISTNAME=		gnome-utils-1.4.1.2
+PKGREVISION=		1
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/1.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,12 +19,11 @@ USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ENV+=		BUILD_GUILE=no
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/gnome-objc/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"

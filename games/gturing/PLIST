@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/04 07:40:37 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/18 14:55:58 jmmv Exp $
 bin/gturing
 share/gnome/apps/Applications/gturing.desktop
 share/gnome/help/gturing/C/figures/mainwin.png
@@ -43,6 +43,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gturing-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gturing-2.0.mo
 share/omf/gturing/gturing-C.omf
 @dirrm share/omf/gturing
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gturing/pixmaps
 @dirrm share/gturing
 @dirrm share/gnome/help/gturing/C/figures

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/15 12:02:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/02/18 14:56:04 jmmv Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-preferences
@@ -150,6 +150,7 @@ share/pixmaps/mailcheck2/tux-anim.png
 @dirrm share/pixmaps/mailcheck2
 @dirrm share/pixmaps/fish2
 @dirrm share/omf/gnome-panel
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/idl/gnome-panel-2.0
 @dirrm share/gnome/panel2
 @dirrm share/gnome/help/workspace-switcher/C/figures

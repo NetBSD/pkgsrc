@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/10 12:41:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/02/18 14:56:05 jmmv Exp $
 bin/mgt-helper
 bin/multi-gnome-terminal
 etc/CORBA/servers/multi-gnome-terminal.gnorba
@@ -166,6 +166,7 @@ share/pixmaps/mgt/multignometerm.png
 share/pixmaps/mgt/panel-folder.png
 @dirrm share/pixmaps/mgt
 @dirrm share/omf/mgt
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/mgt/glade
 @dirrm share/mgt
 @dirrm share/gnome/help/multi-gnome-terminal/no/stylesheet-images

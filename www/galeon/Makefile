@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2003/02/17 14:34:00 taya Exp $
+# $NetBSD: Makefile,v 1.44 2003/02/18 14:56:02 jmmv Exp $
 
 DISTNAME=	galeon-1.2.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+= --with-mozilla-snapshot=1.2
 .include	"../../devel/oaf/buildlink2.mk"
 .include	"../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
 .include	"../../textproc/libxml/buildlink2.mk"
-.include	"../../textproc/scrollkeeper/buildlink2.mk"
+.include	"../../textproc/scrollkeeper/omf.mk"
 .include	"../../sysutils/gnome-vfs/buildlink2.mk"
 .include	"../../www/mozilla/buildlink2.mk"
 .include	"../../x11/gnome-libs/buildlink2.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/17 12:45:29 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/02/18 14:55:57 jmmv Exp $
 bin/glade
 share/doc/glade/README
 share/doc/glade/TODO
@@ -182,8 +182,7 @@ share/omf/glade/user-guide-C.omf
 @dirrm share/pixmaps/glade
 @dirrm share/doc/glade
 @dirrm share/omf/glade
+@comment in scrollkeeper: share/omf
 @dirrm share/glade/gnome
 @dirrm share/glade/gtk
 @dirrm share/glade
-@unexec scrollkeeper-rebuilddb
-@exec scrollkeeper-rebuilddb

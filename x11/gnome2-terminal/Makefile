@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/02/14 21:13:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/18 14:56:04 jmmv Exp $
 #
 
 DISTNAME=		gnome-terminal-2.0.1
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,5 +31,5 @@ GCONF2_SCHEMAS= 	gnome-terminal.schemas
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"

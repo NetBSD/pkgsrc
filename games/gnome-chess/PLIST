@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/01 02:00:14 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/02/18 14:55:58 jmmv Exp $
 bin/gnome-chess
 share/gnome-chess/glade/level.glade
 share/gnome-chess/glade/login.glade
@@ -71,11 +71,10 @@ share/pixmaps/gnome-chess/r.png
 share/pixmaps/gnome-chess/start.png
 @dirrm share/pixmaps/gnome-chess
 @dirrm share/omf/gnome-chess
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gnome-chess-manual/C/stylesheet-images
 @dirrm share/gnome/help/gnome-chess-manual/C/figures
 @dirrm share/gnome/help/gnome-chess-manual/C
 @dirrm share/gnome/help/gnome-chess-manual
 @dirrm share/gnome-chess/glade
 @dirrm share/gnome-chess
-@unexec scrollkeeper-rebuilddb
-@exec scrollkeeper-rebuilddb

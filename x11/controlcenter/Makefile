@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2002/10/19 10:55:00 rh Exp $
+# $NetBSD: Makefile,v 1.45 2003/02/18 14:56:03 jmmv Exp $
 
 DISTNAME=		control-center-1.4.0.4
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/control-center/1.4/}
 
@@ -32,7 +33,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../sysutils/gnome-vfs/buildlink2.mk"
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

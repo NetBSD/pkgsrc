@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/01/12 06:49:37 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/02/18 14:56:00 jmmv Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -720,6 +720,7 @@ share/stripchart/stripchart.params
 @dirrm share/stripchart
 @dirrm share/pixmaps/logview
 @dirrm share/omf/gnome-utils
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/logview
 @dirrm share/gnome/help/stripchart/es/stylesheet-images
 @dirrm share/gnome/help/stripchart/es/figures
@@ -829,5 +830,3 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gcalc
 @dirrm share/gcolorsel/glade
 @dirrm share/gcolorsel
-@unexec scrollkeeper-rebuilddb
-@exec scrollkeeper-rebuilddb
