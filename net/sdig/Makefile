@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:49 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/25 08:16:59 snj Exp $
 
 DISTNAME=	sdig-0.30
 CATEGORIES=	net
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.exploits.org/sdig/
 COMMENT=	Switch Digger finds port assignment for hosts on a switched Ethernet
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -26,7 +26,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sdig.8 ${PREFIX}/man/man8/
 	${INSTALL_DATA} ${WRKSRC}/sdig.conf.5 ${PREFIX}/man/man5/
 
-.include "../../net/net-snmp/buildlink2.mk"
+.include "../../net/net-snmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Note:  this depends on having a MESSAGE file, which we do.
