@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
+$NetBSD: patch-aa,v 1.8 2004/06/17 20:56:56 minskim Exp $
 
---- Makefile.orig	1994-01-26 12:32:33.000000000 -0500
-+++ Makefile	2004-06-06 15:13:31.000000000 -0400
-@@ -20,13 +20,13 @@
+--- Makefile.orig	1994-01-26 11:32:33.000000000 -0600
++++ Makefile
+@@ -20,13 +20,13 @@ RM = rm
  # RM = rm -f
  
  # How to run Make 
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
  
  # You may also want to change the CFLAGS variable, which will be passed on 
  # to all subdirectories.    If you do that, the changes will only work right if you
-@@ -38,7 +38,7 @@
+@@ -38,7 +38,7 @@ FOOBAR-sun4=-Bstatic
  
  STATICFLAG=FOOBAR${HOST_ARCH}
  
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
  # The following is better if you want to make sure you run with SYSV defined
  # CFLAGS = -g -I.  ${$(STATICFLAG)}  -DSYSV
  # Also, for SGI Irix, compile in K&R mode
-@@ -49,9 +49,12 @@
+@@ -49,9 +49,12 @@ CFLAGS = -g -I.  ${$(STATICFLAG)} 
  # LDLIBS variable.
  #
  # For Sun and BSD systems, the following should work...
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
  # On SGI machines, we need -lsun for getpw...(), and -lc_s saves some space.
  # LDLIBS = -lsun -lc_s
  # ISC SysVr3.2.2 has a shared C library and requires libinet.a to resolve
-@@ -72,10 +75,10 @@
+@@ -72,10 +75,10 @@ CONFIGDIR = .
  #	install -s -c $(LOCALBINDIR) $$file
  #
  #INSTALL = cp
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
  #
  # This is where binaries should be copied
  LOCALBINDIR = ${INSTROOT}/bin
-@@ -91,14 +94,22 @@
+@@ -91,23 +94,27 @@ MAN4EXT = 4
  FONTSUFFIX=pcf
  
  # This is where the mailcap file should be put
@@ -81,7 +81,16 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
  	(cd metamail ; $(MAKE)  CONFIGDIR=../${CONFIGDIR}  CFLAGS="${CFLAGS}" CC="${CC}"  LDLIBS="${LDLIBS}")
  	-${RM} bin/metamail
  	(cd bin; ${LN} ../metamail/metamail metamail)
-@@ -117,7 +128,7 @@
+ 	-${RM} bin/mmencode
+ 	(cd bin; ${LN} ../metamail/mmencode mmencode)
+-	-${RM} bin/mimencode
+-	(cd bin; ${LN} ../metamail/mmencode mimencode)
+-	-${RM} man/mimencode.1
+-	(cd man; ${LN} ../man/mmencode.1 mimencode.1)
+ 	-${RM} bin/mailto
+ 	(cd bin; ${LN} ../metamail/mailto mailto)
+ 	-${RM} bin/splitmail
+@@ -117,7 +124,7 @@ basics::
  	(cd bin; ${LN} ../richmail/richtext richtext)
  	-${RM} bin/richtoatk
  	(cd bin; ${LN} ../richmail/richtoatk richtoatk)
@@ -90,7 +99,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
  	-${RM} bin/shownonascii
  	(cd bin; ${LN} ../fonts/shownonascii shownonascii)
  	-${RM} bin/mailto-hebrew
-@@ -125,30 +136,37 @@
+@@ -125,30 +132,39 @@ basics::
  
  install-all: basics 
  	@(cd bin; 				\
@@ -108,6 +117,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
 -	    ${INSTALL} $$file $$target; 	\
 +	    ${BSD_INSTALL_SCRIPT} $$file $$target; 	\
  	done)
++	${LN} -s mmencode ${LOCALBINDIR}/mimencode
  	@(cd man;				\
  	for file in *.1;			\
  	do 					\
@@ -116,6 +126,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/06 19:33:11 jschauma Exp $
 -	    ${CP} $$file $$target; 		\
 +	    ${BSD_INSTALL_MAN} $$file $$target; 		\
  	done)
++	${LN} -s mmencode.1 ${MAN1DIR}/mimencode.1
  	@(cd man;				\
  	for file in *.4;			\
  	do 					\
