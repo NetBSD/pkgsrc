@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2709 2003/07/09 18:22:51 mrg Exp $
+$NetBSD: CHANGES,v 1.2710 2003/07/09 21:00:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2709,3 +2709,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cpuflags to 0.53 [abs 2003-07-09]
 	Updated ircII to 20030709 [mrg 2003-07-09]
 	Updated bozohttpd to 20030622 [mrg 2003-07-09]
+	Updated gaim to 0.64nb2 [jmmv 2003-07-09]
