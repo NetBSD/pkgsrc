@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.311 2003/09/28 20:22:08 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.312 2003/10/03 15:32:55 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -499,11 +499,11 @@ these broken package builds later.
  =============================
 
 Currently, roughly the following requirements are valid for
-1.5/i386:
+1.6.1/i386 as of 20031003:
 
- * Distfiles:                         1500MB (NFS ok)
- * Full set of all binaries:          1000MB (NFS ok)
- * Temp space for compiling:          1500MB (local disk recommended)
+ * Distfiles:                         5 GB (NFS ok)
+ * Full set of all binaries:          5 GB (NFS ok)
+ * Temp space for compiling:          2 GB (local disk recommended)
 
 For 1.5/alpha:
 
