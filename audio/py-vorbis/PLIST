@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/15 15:47:29 minskim Exp $
+${PYSITELIB}/ogg/vorbis.so
