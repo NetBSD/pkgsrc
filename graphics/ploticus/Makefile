@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:42:13 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/20 12:18:16 agc Exp $
 #
 
 DISTNAME=	plsrc210
 PKGNAME=	ploticus-2.10
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	graphics
 MASTER_SITES=	http://ploticus.sourceforge.net/download/
 
@@ -12,6 +11,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://ploticus.sourceforge.net/doc/Welcome.html
 COMMENT=	Versatile data visualization engine
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=	YES
 USE_X11=	YES
 USE_BUILDLINK2=	YES

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:27:24 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:26:49 agc Exp $
 #
 
 DISTNAME=	GutenMark-words-20030107
-WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.sandroid.org/GutenMark/Wordlists/
 DISTFILES=	${WORDLISTS} GutenMark.cfg
@@ -19,6 +18,7 @@ WORDLISTS=	special.words.gz english.names.gz US.places.gz \
 		swedish.words.gz finnish.words.gz nonenglish.words.gz
 SITES_GutenMark.cfg=http://www.sandroid.org/GutenMark/
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${DISTNAME}
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	YES

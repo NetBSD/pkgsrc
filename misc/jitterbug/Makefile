@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 21:49:15 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:21:02 agc Exp $
 
 DISTNAME=	jitterbug-1.6.2
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
 CATEGORIES=	misc
 MASTER_SITES=	ftp://jitterbug.samba.org/pub/jitterbug/
 
@@ -18,6 +17,7 @@ ADDUSER=		${LOCALBASE}/sbin/useradd
 ADDGROUP=		${LOCALBASE}/sbin/groupadd
 .endif
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
 PLIST_SRC=	${WRKDIR}/PLIST-src
 INSTALL_FILE=	${WRKDIR}/INSTALL
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL

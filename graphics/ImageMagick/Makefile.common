@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/20 12:18:15 agc Exp $
 
 IM_MAJOR_VER=		5.5.7
 IM_MINOR_VER=		11
@@ -13,7 +13,6 @@ DISTSUFFIX=		${IM_MAJOR_VER}
 DISTNAME=		ImageMagick-${DISTSUFFIX}
 DISTVERSION=		${DISTSUFFIX:S/-/./}
 
-WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 PKGREVISION=		1
 
 CATEGORIES=		graphics
@@ -22,6 +21,8 @@ MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
 			ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/
 EXTRACT_SUFX=		.tar.bz2
+
+WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.  Users may reenable

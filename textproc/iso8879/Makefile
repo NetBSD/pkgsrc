@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:42:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:26:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
 DISTNAME=	isoENTS
 PKGNAME=	iso8879-1986
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
 EXTRACT_SUFX=	.zip
@@ -14,6 +13,7 @@ MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.iso.ch/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
 
+WRKSRC=		${WRKDIR}
 NO_MTREE=       yes
 USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty

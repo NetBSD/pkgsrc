@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2004/01/04 04:51:47 reed Exp $
+# $NetBSD: Makefile,v 1.48 2004/01/20 12:23:58 agc Exp $
 
 DISTNAME=	xpkgwedge-1.9
-WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,6 +11,7 @@ COMMENT=	Allows X11 pkgs to be built and used outside of $${X11BASE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	# defined
 NO_BUILDLINK=	# defined

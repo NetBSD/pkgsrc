@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:37 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:22:20 agc Exp $
 #
 
 DISTNAME=	fnet.pl-1.4
 PKGNAME=	pfnet-1.4
-WRKSRC=		${WRKDIR}/fnet-1.4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.abattoir.com/pub/
 
@@ -11,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.abattoir.com/~banshee/Tech/
 COMMENT=	Minimal FNET-like ICB client written in Perl
 
+WRKSRC=		${WRKDIR}/fnet-1.4
 USE_PERL5=	# defined
 
 do-build:

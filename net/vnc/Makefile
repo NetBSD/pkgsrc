@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2003/07/17 22:52:00 grant Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/20 12:22:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/vnc_unixsrc
 CATEGORIES=		net x11
 MASTER_SITES=		ftp://ftp.uk.research.att.com/pub/vnc/dist/
 DISTFILES=		vnc-3.3.3r2_unixsrc.tgz \
@@ -21,6 +20,7 @@ COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
 DEPENDS+=		vncviewer-[0-9]*:../../net/vncviewer
 
+WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:22 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:26:50 agc Exp $
 #
 
 DISTNAME=	ispell-sc-ca
 PKGNAME=	ispell-catalan-1.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.softcatala.org/cgi-bin/gaudi/contadorb/load.cgi?/fitxers/linux/
 EXTRACT_SUFX=	.zip
@@ -13,6 +12,8 @@ HOMEPAGE=	http://www.softcatala.org/projectes/myspell/
 COMMENT=	Catalan dictionary for interactive spelling checker
 
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
+
+WRKSRC=		${WRKDIR}
 
 post-extract:
 	( cd ${WRKSRC} 							\

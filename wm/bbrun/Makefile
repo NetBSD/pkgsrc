@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:33:59 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:27:34 agc Exp $
 
 DISTNAME=	bbrun-1.3
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/${DISTNAME}/bbrun
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.dwave.net/~jking/bbrun/
 
@@ -10,6 +9,7 @@ MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://www.dwave.net/~jking/bbrun/
 COMMENT=	Run utility for BlackBox
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/bbrun
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 USE_GMAKE=	YES

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 17:27:55 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:50 agc Exp $
 #
 
 DISTNAME=	Xalan-C_1_0-linux
 PKGNAME=	xalan-c-1.0
-WRKSRC=		${WRKDIR}/xml-xalan/c/src
 CATEGORIES=	textproc
 MASTER_SITES=	http://xml.apache.org/dist/xalan-c/
 
@@ -14,6 +13,7 @@ COMMENT=	The Apache Project's XSLT implementation
 DEPENDS+=	icu>=1.7:../../textproc/icu
 DEPENDS+=	xerces-c>=1.3.0:../../textproc/xerces-c
 
+WRKSRC=		${WRKDIR}/xml-xalan/c/src
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 

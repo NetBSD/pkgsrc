@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/04 03:57:36 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:22:19 agc Exp $
 #
 # todo: set location of [md-]whois.conf and fix in man page too
 # todo: build and install the po/ files and add to PLIST
@@ -7,7 +7,6 @@
 
 DISTNAME=	whois_${VERSION}
 PKGNAME=	md-whois-${VERSION}
-WRKSRC=		${WRKDIR}/whois-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://www.linux.it/~md/software/
 
@@ -17,6 +16,7 @@ COMMENT=	Improved whois client
 
 VERSION=	4.6.9
 
+WRKSRC=		${WRKDIR}/whois-${VERSION}
 USE_PERL5=	build
 USE_GMAKE=	YES
 

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2004/01/07 02:21:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/01/20 12:24:28 agc Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
 PKGREVISION=	1
 GS_VERS=	${BASEGS_VERS}.1
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp2.easysw.com/pub/ghostscript/ \
@@ -23,6 +22,7 @@ CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
 DEPENDS+=	ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_GMAKE=		yes

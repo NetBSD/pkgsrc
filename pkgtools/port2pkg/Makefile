@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/01/10 19:23:41 kristerw Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:23:58 agc Exp $
 #
 
 DISTNAME=	port2pkg-1.11
 PKGREVISION=	3
-WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,6 +12,7 @@ COMMENT=	Convert from a FreeBSD port to a NetBSD package
 
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 
+WRKSRC=		${WRKDIR}
 USE_PERL5=	YES
 
 EXTRACT_ONLY=	# empty

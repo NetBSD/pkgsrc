@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/10/06 16:17:02 taca Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:18:17 agc Exp $
 # FreeBSD: ports/graphics/ruby-opengl/Makefile,v 1.4 2000/09/26 08:01:58 knu Exp
 
 DISTNAME=	rbogl-${VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}opengl-${VERSION:S/c$/.3/}
-WRKSRC=		${WRKDIR}/opengl-${VERSION}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www2.giganet.net/~yoshi/
 
@@ -11,6 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2.giganet.net/~yoshi/
 COMMENT=	OpenGL/GLU/GLUT interface modules for Ruby
 
+WRKSRC=		${WRKDIR}/opengl-${VERSION}
 VERSION=	0.32c
 DIST_SUBDIR=	ruby
 USE_BUILDLINK2=	yes
