@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/06/27 00:29:10 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2000/07/25 05:16:40 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.3
 CATEGORIES=		x11 gnome
@@ -54,6 +54,8 @@ pre-build:
 	cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h
 
 post-install:
+	${MKDIR} -p ${PREFIX}/etc/CORBA/servers
+	${TOUCH} ${PREFIX}/etc/CORBA/servers/.directory
 	${MKDIR} ${LOCALSTATEDIR}
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	cd ${PREFIX}; ${FIND} lib -name 'libgnome.so.*.*' >>${PLIST_SRC}
