@@ -1,14 +1,21 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
-
---- Configure.orig	Thu Apr  3 10:16:13 1997
-+++ Configure	Thu Jun 26 20:13:51 1997
-@@ -206,18 +206,21 @@
+--- Configure.orig	Sun Nov 29 18:21:14 1998
++++ Configure	Sun Nov 29 18:31:58 1998
+@@ -195,18 +195,19 @@
  
  #---------------------------------------------------------------------------
  
 -if(!-f $config_pm && $have_old && !$opt_d)
 - {
 -  $msg = <<EDQ;
+-
+-Ah, I see you already have installed libnet before.
+-
+-Do you want to modify/update your configuration (y|n) ?
+-EDQ
+-
+- $opt_d = 1
+-	unless get_bool($msg,0);
+- }
 +#if(!-f $config_pm && $have_old && !$opt_d)
 +# {
 +#  $msg = <<EDQ;
@@ -21,21 +28,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
 +# $opt_d = 1
 +#	unless get_bool($msg,0);
 +# }
-+#
- 
--Ah, I see you already have installed libnet before.
--
--Do you want to modify/update your configuration (y|n) ?
--EDQ
--
-- $opt_d = 1
--	unless get_bool($msg,0);
-- }
 +$opt_d = 0;
  
  #---------------------------------------------------------------------------
  
-@@ -234,7 +237,8 @@
+@@ -223,7 +224,8 @@
  Do you want me to perform hostname lookups (y|n) ?
  EDQ
  
@@ -45,14 +42,14 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
  
  print <<EDQ unless $cfg{'test_exist'};
  
-@@ -249,71 +253,72 @@
+@@ -238,71 +240,71 @@
  
  #---------------------------------------------------------------------------
  
 -print <<EDQ;
 -
 -The following questions all require a list of host names, separated
--with spaces. If you do not have a host avaliable for any of the
+-with spaces. If you do not have a host available for any of the
 -services, then enter a single space, followed by <CR>. To accept the
 -default, hit <CR>
 -
@@ -60,26 +57,25 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
 +#print <<EDQ;
 +#
 +#The following questions all require a list of host names, separated
-+#with spaces. If you do not have a host avaliable for any of the
++#with spaces. If you do not have a host available for any of the
 +#services, then enter a single space, followed by <CR>. To accept the
 +#default, hit <CR>
 +#
 +#EDQ
  
- $msg = 'Enter a list of avaliable NNTP hosts :';
+ $msg = 'Enter a list of available NNTP hosts :';
  
 -$def = $oldcfg{'nntp_hosts'} ||
 -	[ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
 +#$def = $oldcfg{'nntp_hosts'} ||
 +#	[ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
-+
-+$cfg{'nntp_hosts'} = [ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
  
 -$cfg{'nntp_hosts'} = get_host_list($msg,$def);
++$cfg{'nntp_hosts'} = [ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
  
  #---------------------------------------------------------------------------
  
- $msg = 'Enter a list of avaliable SMTP hosts :';
+ $msg = 'Enter a list of available SMTP hosts :';
  
 -$def = $oldcfg{'smtp_hosts'} ||
 -	[ default_hostname(split(/:/,$ENV{SMTPHOSTS} || ""), 'mailhost') ];
@@ -91,7 +87,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
  
  #---------------------------------------------------------------------------
  
- $msg = 'Enter a list of avaliable POP3 hosts :';
+ $msg = 'Enter a list of available POP3 hosts :';
  
 -$def = $oldcfg{'pop3_hosts'} || [];
 +# $def = $oldcfg{'pop3_hosts'} || [];
@@ -101,17 +97,17 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
  
  #---------------------------------------------------------------------------
  
- $msg = 'Enter a list of avaliable SNPP hosts :';
+ $msg = 'Enter a list of available SNPP hosts :';
  
 -$def = $oldcfg{'snpp_hosts'} || [];
-+# $def = $oldcfg{'snpp_hosts'} || [];
++#$def = $oldcfg{'snpp_hosts'} || [];
  
 -$cfg{'snpp_hosts'} = get_host_list($msg,$def);
 +$cfg{'snpp_hosts'} = [];
  
  #---------------------------------------------------------------------------
  
- $msg = 'Enter a list of avaliable PH Hosts   :'  ;
+ $msg = 'Enter a list of available PH Hosts   :'  ;
  
 -$def = $oldcfg{'ph_hosts'} ||
 -	[ default_hostname('dirserv') ];
@@ -123,39 +119,39 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
  
  #---------------------------------------------------------------------------
  
- $msg = 'Enter a list of avaliable TIME Hosts   :'  ;
+ $msg = 'Enter a list of available TIME Hosts   :'  ;
  
 -$def = $oldcfg{'time_hosts'} || [];
-+# $def = $oldcfg{'time_hosts'} || [];
++#$def = $oldcfg{'time_hosts'} || [];
  
 -$cfg{'time_hosts'} = get_host_list($msg,$def);
 +$cfg{'time_hosts'} = [];
  
  #---------------------------------------------------------------------------
  
- $msg = 'Enter a list of avaliable DAYTIME Hosts   :'  ;
+ $msg = 'Enter a list of available DAYTIME Hosts   :'  ;
  
 -$def = $oldcfg{'daytime_hosts'} || $oldcfg{'time_hosts'};
-+# $def = $oldcfg{'daytime_hosts'} || $oldcfg{'time_hosts'};
++#$def = $oldcfg{'daytime_hosts'} || $oldcfg{'time_hosts'};
  
 -$cfg{'daytime_hosts'} = get_host_list($msg,$def);
 +$cfg{'daytime_hosts'} = [];
  
  #---------------------------------------------------------------------------
  
-@@ -329,9 +334,9 @@
+@@ -318,9 +320,9 @@
  FTP proxy hostname :
  EDQ
  
 -$def = $oldcfg{'ftp_firewall'} || $ENV{FTP_FIREWALL};
-+# $def = $oldcfg{'ftp_firewall'} || $ENV{FTP_FIREWALL};
++#$def = $oldcfg{'ftp_firewall'} || $ENV{FTP_FIREWALL};
  
 -$cfg{'ftp_firewall'} = get_hostname($msg,$def);
 +$cfg{'ftp_firewall'} = $ENV{FTP_FIREWALL};
  
  #---------------------------------------------------------------------------
  
-@@ -352,37 +357,36 @@
+@@ -341,37 +343,37 @@
  
  #---------------------------------------------------------------------------
  
@@ -181,35 +177,34 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:49 agc Exp $
  $msg = "\nShould all FTP connections via a firewall/proxy be passive (y|n) ?";
  
 -$def = $oldcfg{'ftp_ext_passive'} || 0;
--
--$cfg{'ftp_ext_passive'} = get_bool($msg,$def);
-+# $def = $oldcfg{'ftp_ext_passive'} || 0;
++#$def = $oldcfg{'ftp_ext_passive'} || 0;
  
+-$cfg{'ftp_ext_passive'} = get_bool($msg,$def);
 +$cfg{'ftp_ext_passive'} = 0;
  
+ 
 -$def = $oldcfg{'ftp_int_passive'} || 0;
-+# $def = $oldcfg{'ftp_int_passive'} || 0;
++#$def = $oldcfg{'ftp_int_passive'} || 0;
  
  $msg = "\nShould all other FTP connections be passive (y|n) ?";
  
 -$cfg{'ftp_int_passive'} = get_bool($msg,$def);
-+$cfg{'ftp_int_passive'} = 0;
++$cfg{'ftp_int_passive'} = 1;
  
  
  #---------------------------------------------------------------------------
  
--$def = $oldcfg{'inet_domain'} || $ENV{LOCALDOMAIN};
-+# $def = $oldcfg{'inet_domain'} || $ENV{LOCALDOMAIN};
+ $def = $oldcfg{'inet_domain'} || $ENV{LOCALDOMAIN};
  
 -$ans = Prompt("\nWhat is your local internet domain name :",$def);
-+# $ans = Prompt("\nWhat is your local internet domain name :",$def);
++#$ans = Prompt("\nWhat is your local internet domain name :",$def);
  
 -$cfg{'inet_domain'} = ($ans =~ /(\S+)/)[0];
 +$cfg{'inet_domain'} = "";
  
  #---------------------------------------------------------------------------
  
-@@ -398,7 +402,7 @@
+@@ -387,7 +389,7 @@
  Do you want me to run these tests (y|n) ?
  EDQ
  
