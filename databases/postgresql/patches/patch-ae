@@ -10,17 +10,17 @@
 -TK_INCDIR= /home/tools/include
 -TK_LIBDIR= /home/tools/lib
 -TK_LIB= -ltk4.1
-+TCL_INCDIR= /usr/local/include/tcl8.0
-+TCL_LIBDIR= /usr/local/lib
++TCL_INCDIR= ${PREFIX}/include/tcl8.0
++TCL_LIBDIR= ${PREFIX}/lib
 +TCL_LIB= -ltcl80
-+TK_INCDIR= /usr/local/include/tk8.0
-+TK_LIBDIR= /usr/local/lib
++TK_INCDIR= ${PREFIX}/include/tk8.0
++TK_LIBDIR= ${PREFIX}/lib
 +TK_LIB= -ltk80
  
 -X11_INCDIR= /usr/include
 -X11_LIBDIR= /usr/lib
-+X11_INCDIR= /usr/X11R6/include
-+X11_LIBDIR= /usr/X11R6/lib
++X11_INCDIR= ${X11BASE}/include
++X11_LIBDIR= ${X11BASE}/lib
  X11_LIB= -lX11 @SOCKET_LIB@ @NSL_LIB@
  
  
