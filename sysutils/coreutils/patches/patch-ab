@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.5 2004/05/18 19:07:57 tron Exp $
+
+--- lib/mountlist.c.orig	2004-01-26 09:58:12.000000000 +0100
++++ lib/mountlist.c	2004-05-18 20:56:57.000000000 +0200
+@@ -173,6 +173,11 @@
+ 
+ #if MOUNTED_GETMNTINFO
+ 
++# if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++# define statfs				statvfs
++# define HAVE_F_FSTYPENAME_IN_STATFS	1
++# endif
++
+ # if ! HAVE_F_FSTYPENAME_IN_STATFS
+ static char *
+ fstype_to_string (short t)
