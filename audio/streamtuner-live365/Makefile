@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/12/03 00:52:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/13 00:45:21 wiz Exp $
 #
 
 DISTNAME=	streamtuner-live365-0.3.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://savannah.nongnu.org/download/streamtuner/streamtuner-live365.pkg/0.3.2/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/09/01 21:38:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/13 00:45:25 wiz Exp $
 #
 
 .include "${.CURDIR}/Makefile.common"
+PKGREVISION=	1
 
 COMMENT=	Multithreaded GTK2+ ftp client
 

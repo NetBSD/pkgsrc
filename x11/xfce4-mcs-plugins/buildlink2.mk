@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/12/03 05:34:09 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/13 00:45:27 wiz Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-mcs-plugins.
 #
@@ -9,7 +9,7 @@
 XFCE4_MCS_PLUGINS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-mcs-plugins
-BUILDLINK_DEPENDS.xfce4-mcs-plugins?=		xfce4-mcs-plugins>=4.0.1
+BUILDLINK_DEPENDS.xfce4-mcs-plugins?=		xfce4-mcs-plugins>=4.0.1nb1
 BUILDLINK_PKGSRCDIR.xfce4-mcs-plugins?=		../../x11/xfce4-mcs-plugins
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-mcs-plugins=xfce4-mcs-plugins

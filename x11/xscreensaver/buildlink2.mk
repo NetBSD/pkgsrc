@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/10/07 09:43:30 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/13 00:45:27 wiz Exp $
 #
 # This Makefile fragment is included by packages that use xscreensaver.
 #
@@ -9,7 +9,7 @@
 XSCREENSAVER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xscreensaver
-BUILDLINK_DEPENDS.xscreensaver?=		xscreensaver{,-gnome}>=4.11nb1
+BUILDLINK_DEPENDS.xscreensaver?=		xscreensaver{,-gnome}>=4.13nb2
 BUILDLINK_PKGSRCDIR.xscreensaver?=		../../x11/xscreensaver
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xscreensaver=xscreensaver

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/12/08 14:41:40 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/13 00:45:24 wiz Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gst-plugins/0.6/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/11/12 01:31:47 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/13 00:45:22 wiz Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2-ui/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 CONFIGURE_ENV+=	PKG_USE_GTK=yes
 

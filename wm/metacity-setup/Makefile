@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/11/12 01:31:52 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/13 00:45:26 wiz Exp $
 #
 
 DISTNAME=	metacity-setup-0.7.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=metacity-setup/}
 
