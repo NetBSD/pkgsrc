@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2001/09/27 23:18:28 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/29 01:12:43 hubertf Exp $
 
 DISTNAME=	netatalk-1.4b2+asun2.1.3
-PKGNAME=	netatalk-asun-2.1.3nb5
+PKGNAME=	netatalk-asun-2.1.3
+PKGREVISION=	5
 CATEGORIES=	net print
 MASTER_SITES=   ftp://ftp.cobaltnet.com/pub/users/asun/release/ \
 		ftp://ftp.hanse.de/sites/transit/mirror/ftp.u.washington.edu/public/asun/

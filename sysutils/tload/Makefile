@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/05/22 02:59:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/29 01:12:48 hubertf Exp $
 #
 
 DISTNAME=	procps-2.0.6
-PKGNAME=	tload-2.0.6nb1
+PKGNAME=	tload-2.0.6
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://people.redhat.com/johnsonm/procps/
 

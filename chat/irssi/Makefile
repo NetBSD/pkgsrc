@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/11/27 16:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/29 01:12:26 hubertf Exp $
 
 DISTNAME=		irssi-0.7.98.4
-PKGNAME=		${DISTNAME}nb1
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://www.irssi.org/files/
 
