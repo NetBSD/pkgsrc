@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/12/02 14:43:49 kleink Exp $
+# $NetBSD: Makefile,v 1.15 2001/12/05 16:03:57 agc Exp $
 #
 
 DISTNAME=	snort-1.8.3
@@ -19,18 +19,10 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_DIR}/lib
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
-ROOTGROUP=	root
-.endif
-
-ROOTGROUP?=	wheel
-
 #WRKSRC=		${WRKDIR}/snort
 
 post-install:
-	${INSTALL_DATA_DIR} -m 700 -o root -g ${ROOTGROUP} /var/log/snort
+	${INSTALL_DATA_DIR} -m 700 -o ${ROOT_USER} -g ${ROOT_GROUP} /var/log/snort
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snort
 	cd ${WRKSRC} ; \
 	for i in snort.conf *.config *.rules ; do \
