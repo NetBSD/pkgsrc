@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2483 2004/11/26 16:25:28 cube Exp $
+$NetBSD: TODO,v 1.2484 2004/11/26 20:44:55 snj Exp $
 
 Suggested new packages
 ======================
@@ -1371,7 +1371,6 @@ Suggested package updates
 	o xnap-2.5r3
 	o xpad-2.0
 	o xpat2-1.0.7
-	o xpenguins-2.2
 	o xpuyopuyo-0.9.5
 	o xskat-4.0
 	o xtide-2.7.1
