@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.435 2002/11/01 11:40:58 seb Exp $
+$NetBSD: CHANGES,v 1.436 2002/11/01 16:39:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3479,3 +3479,24 @@ Changes to the packages collection and infrastructure in 2002:
 	Added bib2xml-20021006 [rh 2002-11-01]
 	Added wonka-0.9.4 [skrll 2002-11-01]
 	Updated grepmail to 4.80nb1 [seb 2002-11-01]
+	Updated rsynth to 2.0nb1 [wiz 2002-11-01]
+	Updated gnomeicu to 0.96nb3 [wiz 2002-11-01]
+	Updated p5-gdbm to 1.05nb1 [wiz 2002-11-01]
+	Updated php-dba to 4.2.3nb1 [wiz 2002-11-01]
+	Updated py21-gdbm to 0nb1 [wiz 2002-11-01]
+	Updated ruby-gdbm to 1.6.7nb1 [wiz 2002-11-01]
+	Updated tcl-gdbm to 0.8nb1 [wiz 2002-11-01]
+	Updated gdbm_primitive to 1.15nb1 [wiz 2002-11-01]
+	Updated xemacs to 21.1.14nb4 [wiz 2002-11-01]
+	Updated xemacs-current to 21.5.9nb1 [wiz 2002-11-01]
+	Updated sjeng to 11.0nb1 [wiz 2002-11-01]
+	Updated librep to 0.15.1nb2 [wiz 2002-11-01]
+	Updated xfmail to 1.4.7nb2 [wiz 2002-11-01]
+	Updated hypermail to 2.1.4nb1 [wiz 2002-11-01]
+	Updated coda-client to 4.6.6.1nb1 [wiz 2002-11-01]
+	Updated coda-server to 4.6.6.1nb1 [wiz 2002-11-01]
+	Updated kdenetwork to 1.1.2nb2 [wiz 2002-11-01]
+	Updated kdenetwork2 to 2.2.2nb3 [wiz 2002-11-01]
+	Updated polsms to 1.8.9inb1 [wiz 2002-11-01]
+	Updated kdenetwork3 to 3.0.4nb1 [wiz 2002-11-01]
+	Updated ntop2 to 2.1nb1 [wiz 2002-11-01]
