@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8803 2005/01/18 13:38:41 minskim Exp $
+$NetBSD: CHANGES,v 1.8804 2005/01/18 14:18:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -404,3 +404,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cue to 20050110 [itojun 2005-01-18]
 	Updated ImageMagick to 6.1.8-8 [drochner 2005-01-18]
 	Updated awstats to 6.3 [minskim 2005-01-08]
+	Updated netpbm to 10.26.1 [adam 2005-01-08]
