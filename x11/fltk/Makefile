@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2000/11/11 17:49:29 tron Exp $
+# $NetBSD: Makefile,v 1.11 2001/01/02 22:11:17 jlam Exp $
 #
 
-DISTNAME=	fltk-1.0.9-source
+DISTNAME=	fltk-1.0.10-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${PKGNAME:S/fltk-//}
 WRKSRC=		${WRKDIR}/${PKGNAME}
@@ -33,7 +33,12 @@ MAKE_ENV+=	INSTALL_DATA="${INSTALL_DATA}"
 # bump the MINOR when a new version comes out.
 #
 FLTK_MAJOR=	1
-FLTK_MINOR=	3
+FLTK_MINOR=	4
 MAKE_ENV+=	FLTK_MAJOR="${FLTK_MAJOR}" FLTK_MINOR="${FLTK_MINOR}"
+PLIST_SUBST+=	FLTK_MAJOR=${FLTK_MAJOR} FLTK_MINOR=${FLTK_MINOR}
+
+test:
+	@cd ${WRKSRC}/test && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all
 
 .include "../../mk/bsd.pkg.mk"
