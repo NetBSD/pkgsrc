@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- src/cdrom/freebsd/SDL_syscdrom.c.orig	Sun Apr 23 21:43:28 2000
++++ src/cdrom/freebsd/SDL_syscdrom.c	Fri Jun 23 03:53:51 2000
+@@ -27,6 +27,7 @@
+ 
+ /* Functions for system-level CD-ROM audio control */
+ 
++#include <sys/ioctl.h>
+ #include <sys/types.h>
+ #include <stdlib.h>
+ #include <sys/stat.h>

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+
+--- src/audio/Makefile.am.orig	Fri Apr  7 08:29:23 2000
++++ src/audio/Makefile.am	Fri Jun 23 03:53:51 2000
+@@ -3,7 +3,7 @@
+ 
+ noinst_LTLIBRARIES = libaudio.la
+ 
+-EXTRA_SUBDIRS = aix beos irix linux macos openbsd solaris win32
++EXTRA_SUBDIRS = aix beos irix linux macos netbsd openbsd solaris win32
+ 
+ SUBDIRS = @AUDIO_ARCH@
+ 
