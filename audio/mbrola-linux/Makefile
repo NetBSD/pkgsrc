@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/14 04:50:26 proff Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/15 14:53:10 proff Exp $
 
 DISTNAME=	mbrola-linux-301g1
 WRKSRC=		${WRKDIR}
@@ -13,8 +13,7 @@ BUILD_DEPENDS=	unzip:../../archivers/unzip
 
 LICENSE=	non-commercial-use
 
-EXTRACT_CMD=	unzip
-EXTRACT_BEFORE_ARGS=
+EXTRACT_CMD=	unzip ${DOWNLOADED_DISTFILE} 
 
 ONLY_FOR_ARCHS=	i386
 
