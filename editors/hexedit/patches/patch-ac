@@ -1,6 +1,8 @@
---- Makefile.in.orig	Thu Sep 24 18:41:31 1998
-+++ Makefile.in	Thu Oct 14 15:38:52 1999
-@@ -7,6 +7,7 @@
+$NetBSD: patch-ac,v 1.4 1999/11/12 16:07:02 agc Exp $
+
+--- Makefile.in.orig	Wed Feb 17 14:22:57 1999
++++ Makefile.in	Fri Nov 12 16:04:03 1999
+@@ -7,11 +7,18 @@
  
  CC = @CC@
  CFLAGS = @CFLAGS@
@@ -8,13 +10,24 @@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  DEFS = @DEFS@
-@@ -39,7 +40,5 @@
+ INSTALL = @INSTALL@
+ 
++OPSYS!= uname -s
++
++.if ${OPSYS} == "SunOS"
++LIBS+= -lcurses
++.endif
++
+ # Installation directories
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+@@ -39,7 +46,5 @@
  	rm -f Makefile config.cache config.status config.log
  
  install: $(PRODUCT)
 -	$(INSTALL) -d -m 755 $(bindir)
--	$(INSTALL) -s -m 755 -o root $(PRODUCT) $(bindir)
+-	$(INSTALL) -s -m 755 $(PRODUCT) $(bindir)
 -	$(INSTALL) -d -m 755 $(mandir)
--	$(INSTALL) -m 644 -o root $(PRODUCT).1 $(mandir)
+-	$(INSTALL) -m 644 $(PRODUCT).1 $(mandir)
 +	$(BSD_INSTALL_PROGRAM) $(PRODUCT) $(bindir)
 +	$(BSD_INSTALL_DATA) $(PRODUCT).1 $(mandir)
