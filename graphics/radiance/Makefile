@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/16 22:17:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/16 23:20:24 jschauma Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -39,7 +39,8 @@ PKGSRC_ARCH=	8
 
 MAKE_ENV+=	MV="${MV}" RM="${RM}" CP="${CP}"			\
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" 			\
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
+		INSTALL_PROGRAM="${INSTALL_PROGRAM}"			\
+		RANLIB="${RANLIB}" AR="${AR}"
 
 do-configure:
 .for patchee in ${PATCHEES}
@@ -51,7 +52,6 @@ do-configure:
 		${WRKSRC}/${patchee} >	${WRKSRC}/${patchee}.tmp &&	\
 	${MV} ${WRKSRC}/${patchee}.tmp ${WRKSRC}/${patchee}
 .endfor
-	${RM} ${WRKSRC}/lib/.gdb_history
 
 do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} csh ./makeall install
@@ -61,8 +61,6 @@ do-install:
 	cd ${WRKSRC}/radiance && ${PAX} -rw . ${PREFIX}/radiance/
 	${INSTALL_DATA_DIR} ${PREFIX}/radiance/obj
 	cd ${WRKSRC}/obj && ${PAX} -rw . ${PREFIX}/radiance/obj/
-	${INSTALL_DATA_DIR} ${PREFIX}/radiance/lib
-	cd ${WRKSRC}/lib && ${PAX} -rw . ${PREFIX}/radiance/lib/
 	${INSTALL_DATA_DIR} ${PREFIX}/radiance/man
 	cd ${WRKSRC}/doc/man && ${PAX} -rw . ${PREFIX}/radiance/man/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/radiance

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/16 22:17:33 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/16 23:20:24 jschauma Exp $
 
 Make this script run non-interactively.
 
@@ -79,7 +79,7 @@ Make this script run non-interactively.
 -_EOF_
 -echo -n "Choice? "
 -set arch="$<"
-+set arch=9
++set arch=@PKGSRC_ARCH@
  switch ("$arch")
  case 1:			# SPARC Station
  	set arch=sun
