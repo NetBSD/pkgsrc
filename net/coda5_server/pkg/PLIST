@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2001/05/31 22:58:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/06/19 03:42:37 jlam Exp $
 bin/norton
 bin/norton-reinit
 bin/reinit
 etc/coda/server.conf.ex
+etc/rc.d/rc.vice
 sbin/auth2
 sbin/backup
 sbin/backup.sh
