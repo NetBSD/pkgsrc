@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/20 14:15:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/17 01:47:31 dmcmahill Exp $
 #
 
-DISTNAME=	bakoma
+DISTNAME=	bakoma-20010719
 PKGNAME=	bakoma-fonts-1.1
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/cm/ps-type1/}
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+# The "on the fly" distfile creation from CTAN messes up the checksums.
+#MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/cm/ps-type1/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ctan.org/tex-archive/fonts/cm/ps-type1/bakoma/
 COMMENT=	BaKoMa Fonts for TeX
 
-DIST_SUBDIR=		${PKGNAME}
+WRKSRC=			${WRKDIR}/bakoma
 LICENSE+=		no-commercial-use
 NO_SRC_ON_CDROM=	#defined
 NO_BIN_ON_CDROM=	#defined
