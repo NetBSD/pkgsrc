@@ -1,67 +1,80 @@
-$NetBSD: patch-ae,v 1.6 2001/06/19 08:48:57 jlam Exp $
+$NetBSD: patch-ae,v 1.7 2001/08/06 14:20:48 jlam Exp $
 
---- Makefile.in.orig	Wed Dec 29 17:02:40 1999
+--- Makefile.in.orig	Mon Nov 27 11:57:09 2000
 +++ Makefile.in
-@@ -63,17 +63,17 @@
- TERMCAP_LIB = @TERMCAP_LIB@
+@@ -18,6 +18,9 @@
+ RL_LIBRARY_VERSION = @LIBVERSION@
+ RL_LIBRARY_NAME = readline
  
- # For libraries which include headers from other libraries.
--INCLUDES = -I. -I$(srcdir) -I$(includedir)
-+INCLUDES = -I. -I$(srcdir)
- 
- CCFLAGS = $(DEFS) $(LOCAL_DEFS) $(CPPFLAGS) $(INCLUDES) $(LOCAL_CFLAGS) $(CFLAGS)
++SHLIB_MAJOR = @SHLIB_MAJOR@
++SHLIB_MINOR = @SHLIB_MINOR@
++
+ srcdir = @srcdir@
+ VPATH = .:@srcdir@
+ top_srcdir = @top_srcdir@
+@@ -77,11 +80,12 @@
  
  .c.o:
  	${RM} $@
 -	$(CC) -c $(CCFLAGS) $<
-+	${LIBTOOL} --mode=compile $(CC) -c $(CCFLAGS) $<
++	$(LIBTOOL) $(CC) -c $(CCFLAGS) $<
  
  # The name of the main library target.
--LIBRARY_NAME = libreadline.a
--STATIC_LIBS = libreadline.a libhistory.a
-+LIBRARY_NAME = libreadline.la
-+STATIC_LIBS = libreadline.la libhistory.la
+ LIBRARY_NAME = libreadline.a
+ STATIC_LIBS = libreadline.a libhistory.a
++LIBTOOL_LIBS = libreadline.la libhistory.la
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -121,18 +121,17 @@
+@@ -127,6 +131,8 @@
+ 
+ all: static
+ 
++all-la: $(LIBTOOL_LIBS)
++
+ everything: static shared examples
  
  static: $(STATIC_LIBS)
+@@ -136,13 +142,25 @@
+ 	$(AR) $(ARFLAGS) $@ $(OBJECTS)
+ 	-test -n "$(RANLIB)" && $(RANLIB) $@
  
--libreadline.a: $(OBJECTS)
 +libreadline.la: $(OBJECTS)
++	${LIBTOOL} $(RM) $@
++	${LIBTOOL} ${CC} -o $@ ${OBJECTS:.o=.lo}			\
++		-rpath $(libdir)					\
++		-version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
++
+ libhistory.a: $(HISTOBJ) xmalloc.o
  	$(RM) $@
--	$(AR) $(ARFLAGS) $@ $(OBJECTS)
--	-test -n "$(RANLIB)" && $(RANLIB) $@
-+	${LIBTOOL} --mode=link cc -o $@ ${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${READLINE_MAJOR}:${READLINE_MINOR}
- 
--libhistory.a: $(HISTOBJ) xmalloc.o
-+libhistory.la: $(HISTOBJ) xmalloc.o
- 	$(RM) $@
--	$(AR) $(ARFLAGS) $@ $(HISTOBJ) xmalloc.o
--	-test -n "$(RANLIB)" && $(RANLIB) $@
-+	${LIBTOOL} --mode=link cc -o $@ ${HISTOBJ:.o=.lo} xmalloc.lo -rpath ${PREFIX}/lib -version-info ${READLINE_MAJOR}:${READLINE_MINOR}
+ 	$(AR) $(ARFLAGS) $@ $(HISTOBJ) xmalloc.o
+ 	-test -n "$(RANLIB)" && $(RANLIB) $@
  
 -readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
 -	$(CC) $(CCFLAGS) -o $@ ./examples/rl.c ./libreadline.a ${TERMCAP_LIB}
++libhistory.la: $(HISTOBJ) xmalloc.o
++	${LIBTOOL} $(RM) $@
++	${LIBTOOL} ${CC} -o $@ ${HISTOBJ:.o=.lo} xmalloc.lo		\
++		-rpath $(libdir)					\
++		-version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
 +
-+readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.la
-+	${LIBTOOL} --mode=link $(CC) $(CCFLAGS) ${LDFLAGS} -o $@ ./examples/rl.c libreadline.la -ltermcap
++readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./$(LIBRARY_NAME)
++	${LIBTOOL} $(CC) $(CCFLAGS) $(LDFLAGS) -o $@ ./examples/rl.c ./$(LIBRARY_NAME) ${TERMCAP_LIB}
  
- Makefile makefile: config.status $(srcdir)/Makefile.in
- 	CONFIG_FILES=Makefile CONFIG_HEADERS= $(SHELL) ./config.status
-@@ -181,12 +180,8 @@
- maybe-uninstall-headers: uninstall-headers
- 
- install: installdirs $(STATIC_LIBS) install-headers
--	-$(MV) $(libdir)/libreadline.a $(libdir)/libreadline.old
--	$(INSTALL_DATA) libreadline.a $(libdir)/libreadline.a
--	-test -n "$(RANLIB)" && $(RANLIB) -t $(libdir)/libreadline.a
--	-$(MV) $(libdir)/libhistory.a $(libdir)/libhistory.old
--	$(INSTALL_DATA) libhistory.a $(libdir)/libhistory.a
--	-test -n "$(RANLIB)" && $(RANLIB) -t $(libdir)/libhistory.a
-+	${LIBTOOL} --mode=install ${INSTALL_DATA} libreadline.la ${libdir}
-+	${LIBTOOL} --mode=install ${INSTALL_DATA} libhistory.la ${libdir}
+ lint:	force
+ 	$(MAKE) $(MFLAGS) CCFLAGS='$(GCC_LINT_CFLAGS)' static
+@@ -203,6 +221,14 @@
  	-( if test -d doc ; then \
  		cd doc && \
  		${MAKE} ${MFLAGS} infodir=$(infodir) $@; \
++	  fi )
++
++install-la: installdirs $(LIBTOOL_LIBS) install-headers
++	${LIBTOOL} ${INSTALL_DATA} libreadline.la $(libdir)
++	${LIBTOOL} ${INSTALL_DATA} libhistory.la $(libdir)
++	-( if test -d doc ; then \
++		cd doc && \
++		${MAKE} ${MFLAGS} infodir=$(infodir) install; \
+ 	  fi )
+ 
+ installdirs: $(srcdir)/support/mkdirs
