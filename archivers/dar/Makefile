@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:13:04 tv Exp $
-#
+# $NetBSD: Makefile,v 1.9 2004/11/09 13:02:39 adam Exp $
 
-DISTNAME=	dar-2.0.2
-PKGREVISION=	2
+DISTNAME=	dar-2.1.5
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
@@ -16,6 +14,7 @@ USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+UNLIMIT_RESOURCES=	datasize
 
 CONFIGURE_ARGS+=	--disable-nodump-flag
 CONFIGURE_ARGS+=	--disable-dar-static
