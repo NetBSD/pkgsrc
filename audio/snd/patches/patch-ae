@@ -4,11 +4,11 @@
 +# Snd make file for NetBSD, assuming Motif is available (audio currently stubbed out)
 +
 +CC = gcc
-+#CFLAGS = -O2 -DXPM -DHAVE_OSS -I@X11BASE@/include -I@LOCALBASE@/include
-+CFLAGS = -DXPM -DHAVE_OSS -I@X11BASE@/include -I@LOCALBASE@/include
++#CFLAGS = -O2 -DXPM -DHAVE_OSS -I${X11BASE}/include -I${LOCALBASE}/include
++CFLAGS = -DXPM -DHAVE_OSS -I${X11BASE}/include -I${LOCALBASE}/include
 +CFLAGS += -g
 +
-+LIBS = -L/usr/X11R6/lib -lMrm -lXm -lXpm -lXmu -lXt -lXext -lX11 -lm -lossaudio
++LIBS = -L${X11BASE}/lib -lMrm -lXm -lXpm -lXmu -lXt -lXext -lX11 -lm -lossaudio
 +CLM_HEADERS = cmus_prototypes.h cmus.h sound_types.h
 +SND_HEADERS = snd.h snd-0.h snd-1.h snd-ufun.h snd-strings.h sndclm.h
 +SND_X_HEADERS = snd-x0.h snd-x1.h
