@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4827 2004/02/14 17:37:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.4828 2004/02/14 17:57:25 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -828,3 +828,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated flawfinder to 1.24 [wiz 2004-02-14]
 	Updated gnucap to 0.34 [dmcmahill 2004-02-14]
 	Added libxklavier-0.97 [jmmv 2004-02-14]
+	Updated wol to 0.7.0 [uebayasi 2004-02-14]
