@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/02/12 02:35:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BZIP2_BUILDLINK3_MK:=	${BZIP2_BUILDLINK3_MK}+
@@ -38,33 +38,35 @@ BUILDLINK_IS_BUILTIN.bzip2=	NO
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.bzip2=${BUILDLINK_IS_BUILTIN.bzip2}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.bzip2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.bzip2=	YES
-.else
-BUILDLINK_USE_BUILTIN.bzip2=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.bzip2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.bzip2=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.bzip2=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mbzip2) && \
-    !empty(BUILDLINK_IS_BUILTIN.bzip2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.bzip2=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mbzip2)
-BUILDLINK_USE_BUILTIN.bzip2=	NO
-.endif
-
-.if defined(USE_BZIP2)
-BUILDLINK_USE_BUILTIN.bzip2=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.bzip2:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.bzip2=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.bzip2)
+.  if !empty(BUILDLINK_IS_BUILTIN.bzip2:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.bzip2=	YES
+.  else
+BUILDLINK_USE_BUILTIN.bzip2=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.bzip2:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.bzip2=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.bzip2=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mbzip2) && \
+      !empty(BUILDLINK_IS_BUILTIN.bzip2:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.bzip2=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mbzip2)
+BUILDLINK_USE_BUILTIN.bzip2=	NO
+.  endif
+
+.  if defined(USE_BZIP2)
+BUILDLINK_USE_BUILTIN.bzip2=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.bzip2:M[nN][oO])
