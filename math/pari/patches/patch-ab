@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/05/04 17:14:08 jtb Exp $
 
---- config/Makefile.SH.orig	Mon Mar 27 17:43:42 2000
+--- config/Makefile.SH.orig	Mon Mar 27 18:43:42 2000
 +++ config/Makefile.SH
 @@ -80,7 +80,7 @@
  X11)
@@ -70,12 +70,22 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
  	-\$(INSTALL_DATA) $doc/translations \$(MISCDIR)
  	-\$(INSTALL_DATA) $doc/paricfg.tex  \$(MISCDIR)
  	-\$(INSTALL_DATA) $doc/parimacro.tex \$(MISCDIR)
-@@ -311,7 +312,7 @@
+@@ -306,14 +307,13 @@
+ 	-\$(INSTALL_DATA) $doc/refcard.ps   \$(MISCDIR)
+ 
+ install-data:
+-	-mkdir -p \$(DATADIR)
+-	@-for f in $data/*; do \$(INSTALL_DATA)  \$\$f \$(DATADIR); done 2>/dev/null
++#	-mkdir -p \$(DATADIR)
++#	@-for f in $data/*; do \$(INSTALL_DATA)  \$\$f \$(DATADIR); done 2>/dev/null
  
  install-lib-sta: libpari.a
  	-mkdir -p \$(LIBDIR)
 -	-\$(RM) \$(LIBDIR)/libpari.a
+-	\$(INSTALL_DATA) libpari.a \$(LIBDIR)/libpari.a.$version
+-	-\$(LN) libpari.a.$version \$(LIBDIR)/libpari.a
 +#	-\$(RM) \$(LIBDIR)/libpari.a
- 	\$(INSTALL_DATA) libpari.a \$(LIBDIR)/libpari.a.$version
- 	-\$(LN) libpari.a.$version \$(LIBDIR)/libpari.a
++	\$(INSTALL_DATA) libpari.a \$(LIBDIR)
  
+ install-lib-dyn: libpari.$somake
+ 	-mkdir -p \$(LIBDIR)
