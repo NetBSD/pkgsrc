@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/11/28 14:34:07 recht Exp $
+# $NetBSD: Makefile,v 1.29 2004/12/05 17:29:58 cube Exp $
 
 DISTNAME=	cyrus-imapd-2.2.10
 CATEGORIES=	mail
@@ -106,7 +106,7 @@ PLIST_SUBST+=		IDLED=
 PLIST_SUBST+=		IDLED="@comment "
 .endif
 
-MAKEFLAGS+=		PERL=${PERL5}
+MAKE_ENV+=		PERL=${PERL5}
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
