@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/03/11 16:59:04 mjl Exp $
 
---- configure.in.orig	Fri Mar 31 06:36:55 2000
-+++ configure.in	Sun Apr  2 12:03:24 2000
-@@ -256,29 +256,11 @@
- supported_locales="cs de es fr gl it ja ko nl no pt ru se tr fi hr el pl ro da zh_TW.Big5 zh_CN sk"
- supported_wprefs_locales="pt hr fr ko ja cs zh_TW.Big5 es zh_CN fi it ru de"
+--- configure.in.orig	Fri Feb  9 17:05:49 2001
++++ configure.in	Sun Mar 11 17:20:56 2001
+@@ -261,29 +261,11 @@
+ supported_locales="cs de es fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_TW.Big5 zh_CN sk bg hu"
+ supported_wprefs_locales="pt hr fr ko ja cs zh_TW.Big5 es zh_CN fi it ru de bg hu sk"
  
 -for lang in $LINGUAS; do
 -	ok=0
