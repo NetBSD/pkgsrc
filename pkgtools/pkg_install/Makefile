@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2003/09/18 23:42:24 grant Exp $
+# $NetBSD: Makefile,v 1.86 2003/09/18 23:43:37 grant Exp $
 
 # Notes to package maintainers:
 #
@@ -17,7 +17,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package installation and administration tools
 
-USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
