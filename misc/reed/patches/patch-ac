@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/09/02 20:13:28 wiz Exp $
+
+--- src/reed.c.orig	Wed Feb 21 01:14:55 2001
++++ src/reed.c
+@@ -30,8 +30,8 @@
+ int main(int argc, char **argv) {
+   unsigned long speed = 5*TENTH_SECOND;
+   int jump = 1, index, retval = SAME_FILE;
+-  char opt, *fakefilename = NULL;
+-  int valid;
++  char *fakefilename = NULL;
++  int opt, valid;
+   struct stat st;
+   fileNode *node = NULL;
+   if (argc > 1 && !strcmp("--help", argv[1])) {
