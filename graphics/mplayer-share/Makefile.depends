@@ -1,8 +1,6 @@
-# $NetBSD: Makefile.depends,v 1.5 2002/09/27 00:31:01 dillo Exp $
+# $NetBSD: Makefile.depends,v 1.6 2002/09/29 06:37:07 jlam Exp $
 
 DEPENDS+=	mplayer-share-${MPLAYER_PKG_VERSION}${PKGREVISION:Dnb${PKGREVISION}}:../../graphics/mplayer-share
-
-.include "../../lang/gcc/Makefile.gcc"
 
 .if (${OPSYS} == "NetBSD")
 .  include "../../devel/binutils/buildlink2.mk"
@@ -23,6 +21,7 @@ USE_X11=	# defined
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../misc/libdvdread/buildlink2.mk"
 
 .include "../../mk/ossaudio.buildlink2.mk"
