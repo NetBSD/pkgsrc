@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/03/08 12:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/05/03 11:48:35 mjl Exp $
 #
 
-DISTNAME=	Mail-SpamAssassin-2.11
+DISTNAME=	Mail-SpamAssassin-2.20
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5msa
 CATEGORIES=	mail
@@ -9,7 +9,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://spamassassin.taint.org/
+HOMEPAGE=	http://www.spamassassin.org/
 COMMENT=	mail filter to identify spam
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
@@ -19,8 +19,9 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SpamAssassin/.packlist
 
 post-patch:
 	@(cd ${WRKSRC};							\
-	for f in lib/Mail/SpamAssassin/Conf.pm lib/Mail/SpamAssassin.pm ; do \
-		${SED} -e "s,/usr/share,${PREFIX}/share," $$f > $$f.fixed && \
+	for f in README Makefile.PL lib/Mail/SpamAssassin/Conf.pm ; do \
+		${SED} -e "s,/usr/share,${PREFIX}/share," \
+		       -e "s,/etc/mail,${PREFIX}/etc,g" $$f > $$f.fixed && \
 		${MV} $$f.fixed $$f;					\
 	done)
 
