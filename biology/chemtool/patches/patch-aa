@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2001/03/04 17:33:42 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2001/06/30 11:58:47 zuntum Exp $
 
---- Makefile.orig	Tue Feb  6 18:52:54 2001
+--- Makefile.orig	Tue Feb  6 19:52:54 2001
 +++ Makefile
-@@ -1,15 +1,15 @@
+@@ -1,16 +1,16 @@
 -PREFIX=/usr/local
 -LOCALEDIR=/usr/share/locale
 -CFLAGS=-O2 -Wall
@@ -21,10 +21,12 @@ $NetBSD: patch-aa,v 1.3 2001/03/04 17:33:42 jtb Exp $
  
  
 -EXTRA_INCLUDES = `gtk-config --cflags`  # -DDISABLE_NLS
-+EXTRA_INCLUDES = `gtk-config --cflags`  -I${LOCALBASE}/include # -DDISABLE_NLS
- SYS_LIBRARIES = `gtk-config --libs` -lm
+-SYS_LIBRARIES = `gtk-config --libs` -lm
++EXTRA_INCLUDES = `$(GTK_CONFIG) --cflags` # -DDISABLE_NLS
++SYS_LIBRARIES = `$(GTK_CONFIG) --libs` -lm
  
  all: chemtool cht
+ 
 @@ -25,9 +25,9 @@
  	${CC} ${CFLAGS} ${EXTRA_INCLUDES} -c ${SRCS}
  
