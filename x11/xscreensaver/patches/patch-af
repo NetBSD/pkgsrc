@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.13 2003/12/18 13:49:17 atatat Exp $
+
+Make the password dialogue banner display the netbsd PKGREVISION
+number, if there was one.
+
+--- driver/xscreensaver.c.orig	2003-10-07 04:59:40.000000000 -0400
++++ driver/xscreensaver.c
+@@ -478,9 +478,13 @@ set_version_string (saver_info *si, int 
+       *s = '_';
+   }
+ 
+-  si->version = (char *) malloc (5);
++  si->version = (char *) malloc (32);
+   memcpy (si->version, screensaver_id + 17, 4);
+   si->version [4] = 0;
++
++#if PKGREVISION > 0
++  (void)snprintf(si->version, 10, "%.4snb%d", screensaver_id + 17, PKGREVISION);
++#endif
+ }
+ 
+ 
