@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/08/27 13:18:21 garbled Exp $
+--- config.h.orig	Sun Aug  9 01:32:46 1998
++++ config.h	Sun Aug  9 01:37:13 1998
+@@ -48,3 +48,3 @@
+  */
+-/* #define SPECIAL_BSD */
++#define SPECIAL_BSD
+ 
+@@ -231,3 +231,3 @@
+  */
+-#define ALLOW_OLD_SAVEFILES
++/* #define ALLOW_OLD_SAVEFILES */
+ 
