@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/19 14:44:07 agc Exp $
+
+Problems with "test -f symlink" returning true.
+
+--- src/Makefile.in	2001/12/19 13:04:22	1.1
++++ src/Makefile.in	2001/12/19 13:28:42
+@@ -176,7 +176,7 @@
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+-	  if test -f $$p; then \
++	  if test -f $$p -a ! -h $$p; then \
+ 	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+ 	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	  else :; fi; \
