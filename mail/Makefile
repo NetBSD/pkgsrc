@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2004/05/07 13:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2004/05/08 08:50:34 uebayasi Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -43,7 +43,6 @@ SUBDIR+=	evolution12
 SUBDIR+=	exim
 SUBDIR+=	exim-exiscan
 SUBDIR+=	exim-html
-SUBDIR+=	exim-user
 SUBDIR+=	exim3
 SUBDIR+=	exmh
 SUBDIR+=	ezmlm
