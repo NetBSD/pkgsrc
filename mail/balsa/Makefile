@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/04/14 16:15:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.43 2004/04/14 19:30:22 jmmv Exp $
 #
 
 DISTNAME=		balsa-1.4.3
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.balsa.net/
 COMMENT=		GNOME EMail client
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
