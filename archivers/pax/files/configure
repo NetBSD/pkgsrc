@@ -2800,8 +2800,7 @@ done
 
 
 
-
-for ac_header in ctype.h grp.h pwd.h regex.h regexp.h rmt.h stdarg.h
+for ac_header in ctype.h grp.h regex.h regexp.h rmt.h stdarg.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 if eval "test \"\${$as_ac_Header+set}\" = set"; then
