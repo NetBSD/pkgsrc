@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 00:53:57 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/11 03:52:22 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use libbonobo.
 #
@@ -16,6 +16,9 @@ BUILDLINK_DEPENDS+=	libbonobo
 BUILDLINK_PACKAGES+=			libbonobo
 BUILDLINK_DEPENDS.libbonobo+=		libbonobo>=2.4.2
 BUILDLINK_PKGSRCDIR.libbonobo?=		../../devel/libbonobo
+
+BUILDLINK_FILES.libbonobo+=		share/idl/bonobo-2.0/*
+BUILDLINK_FILES.libbonobo+=		share/idl/bonobo-activation-2.0/*
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
