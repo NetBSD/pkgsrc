@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.12 2003/04/11 01:20:44 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.13 2003/04/11 01:23:14 uebayasi Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -29,9 +29,9 @@ EMACS_MK=	# defined
 EMACS_VERSION_DEFAULT?=		emacs21
 .if !defined(USE_XEMACS)
 EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs21nox emacs20
-#EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs21nox xemacs211 emacs20 xemacs215
+#EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
 .else
-EMACS_VERSIONS_ACCEPTED?=	xemacs211 xemacs215
+EMACS_VERSIONS_ACCEPTED?=	xemacs214 xemacs215
 .endif
 
 # Actually BUILDLINK_ means little here...
@@ -39,7 +39,7 @@ EMACS_VERSIONS_ACCEPTED?=	xemacs211 xemacs215
 BUILDLINK_DEPENDS.emacs20?=	emacs>=20.7
 BUILDLINK_DEPENDS.emacs21?=	emacs>=21.2
 BUILDLINK_DEPENDS.emacs21nox?=	emacs-nox11>=21.2
-BUILDLINK_DEPENDS.xemacs211?=	xemacs>=21.1
+BUILDLINK_DEPENDS.xemacs214?=	xemacs>=21.4
 BUILDLINK_DEPENDS.xemacs215?=	xemacs>=21.5
 BUILDLINK_DEPENDS.leim20?=	leim>=20.7
 BUILDLINK_DEPENDS.leim21?=	leim>=21.2
@@ -85,7 +85,7 @@ _EMACS_VERSION_XEMACS_MINOR=	${_EMACS_VERSION_XEMACS:C/^[0-9]*\.//:C/[^0-9].*//}
 _EMACS_VERSION_xemacs215_INSTALLED=	yes
 .elif ${_EMACS_VERSION_XEMACS_MAJOR} == "21" && \
 	${_EMACS_VERSION_XEMACS_MINOR} == "1"
-_EMACS_VERSION_xemacs211_INSTALLED=	yes
+_EMACS_VERSION_xemacs214_INSTALLED=	yes
 .endif
 .endif
 
@@ -125,7 +125,7 @@ FOR.emacs21=		"@comment "
 FOR.emacs21nox=		"@comment "
 FOR.emacs20=		"@comment "
 FOR.xemacs215=		"@comment "
-FOR.xemacs211=		"@comment "
+FOR.xemacs214=		"@comment "
 .if ${_EMACS_VERSION} == "emacs21"
 EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21}:../../editors/emacs
 FOR.emacs21=		""
@@ -147,9 +147,9 @@ DEPENDS+=		${BUILDLINK_DEPENDS.leim20}:../../editors/leim20
 .elif ${_EMACS_VERSION} == "xemacs215"
 EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.xemacs215}:../../editors/xemacs-current
 FOR.xemacs215=		""
-.elif ${_EMACS_VERSION} == "xemacs211"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.xemacs211}:../../editors/xemacs
-FOR.xemacs211=		""
+.elif ${_EMACS_VERSION} == "xemacs214"
+EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.xemacs214}:../../editors/xemacs
+FOR.xemacs214=		""
 .else
 PKG_SKIP_REASON+=	"Accepted versions are: ${EMACS_VERSIONS_ACCEPTED}"
 PKG_SKIP_REASON+=	"No valid Emacs version installed found"
@@ -186,7 +186,7 @@ PLIST_SUBST+=	FOR_emacs21=${FOR.emacs21}
 PLIST_SUBST+=	FOR_emacs21nox=${FOR.emacs21nox}
 PLIST_SUBST+=	FOR_emacs20=${FOR.emacs20}
 PLIST_SUBST+=	FOR_xemacs215=${FOR.xemacs215}
-PLIST_SUBST+=	FOR_xemacs211=${FOR.xemacs211}
+PLIST_SUBST+=	FOR_xemacs214=${FOR.xemacs214}
 
 _REPLACE_EMACS_SED=	-e "1s;^\#!.*emacs;\#!${EMACS_BIN};"
 
