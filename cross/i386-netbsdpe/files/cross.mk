@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.13 2003/04/27 13:50:09 kent Exp $
+#	$NetBSD: cross.mk,v 1.14 2003/09/04 07:16:15 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -137,7 +137,7 @@ gcc-build:
 	${LN} -s ${AS_FOR_TARGET} ${WRKOBJ}/gcc/as
 	${LN} -s ${LD_FOR_TARGET} ${WRKOBJ}/gcc/ld
 	@cd ${WRKOBJ} && make all-libiberty all-binutils all-gas all-ld
-	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} all
+	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} native gcc-cross specs stmp-headers stmp-fixproto libgcc.a libgcc1-test lang.all.cross # all.cross except doc
 .if defined(GCC_CXX) && defined(GCC_CXX_RUNTIME)
 	@cd ${WRKOBJ} && ${GCC_MAKE} configure-target-libio \
 		configure-target-libstdc++ all-target-libio all-target-libstdc++
