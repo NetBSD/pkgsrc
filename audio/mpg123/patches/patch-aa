@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 1998/08/07 10:35:59 agc Exp $
+$NetBSD: patch-aa,v 1.7 1998/08/15 10:58:41 frueauf Exp $
 
---- Makefile.orig	Sun Feb  8 13:23:04 1998
-+++ Makefile	Sat Mar  7 08:39:36 1998
+--- Makefile.orig	Sun Feb  8 19:23:04 1998
++++ Makefile	Sat Aug 15 12:18:14 1998
 @@ -32,6 +32,7 @@
  	@echo "make aix            IBM AIX (tested: 4.2)"
  	@echo "make os2            IBM OS/2"
@@ -10,39 +10,13 @@ $NetBSD: patch-aa,v 1.6 1998/08/07 10:35:59 agc Exp $
  	@echo "make bsdos          BSDI BSD/OS"
  	@echo "make generic        try this one if your system isn't listed above"
  	@echo ""
---- audio_sun.c.orig	Mon Jan  5 06:41:31 1998
-+++ audio_sun.c	Sat Mar  7 08:43:50 1998
-@@ -17,6 +17,8 @@
+@@ -221,7 +222,8 @@
+ 		OBJECTS='decode_i386.o dct64_i386.o getbits_.o audio_sun.o' \
+ 		CFLAGS='-Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
+ 			-funroll-all-loops -ffast-math -DROT_I386 \
+-			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DREAD_MMAP \
++			-DNETBSD' \
+ 		mpg123-make
  
- #include "mpg123.h"
- 
-+extern int outburst;
-+
- #include <sys/filio.h>
- #ifdef SUNOS
- #include <sun/audioio.h>
-@@ -74,6 +76,13 @@
-   }
- 
- #ifndef NETBSD
-+  AUDIO_INITINFO(&ainfo);
-+  if(ioctl(ai->fn, AUDIO_GETINFO, &ainfo) == -1)
-+    return -1;
-+  outburst = ainfo.blocksize;
-+  if(outburst > MAXOUTBURST)
-+    outburst = MAXOUTBURST;
-+
-   AUDIO_INITINFO(&ainfo);
- 
-   switch(ai->output) {
---- buffer.c.orig	Wed Feb 11 15:55:18 1998
-+++ buffer.c	Sat Mar  7 08:40:43 1998
-@@ -48,7 +48,7 @@
- 	for (;;) {
- 		if (intflag) {
- 			intflag = FALSE;
--#if defined(SOLARIS) || defined(__NetBSD__)
-+#if defined(SOLARIS) || defined(NETBSD)
- 			if (param.outmode == DECODE_AUDIO)
- 				audio_queueflush (ai);
- #endif
+ bsdos:
