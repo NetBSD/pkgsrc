@@ -1,4 +1,4 @@
-binutils-\*/\*/tests/\*
-binutils-\*/\*/testsuite/\*
-binutils-\*/etc/\*
-binutils-\*/gas/\*
+binutils-*/*/tests/*
+binutils-*/*/testsuite/*
+binutils-*/etc/*
+binutils-*/gas/*

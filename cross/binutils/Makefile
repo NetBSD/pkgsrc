@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/09/27 17:52:15 fredb Exp $
+# $NetBSD: Makefile,v 1.12 1999/09/28 11:58:07 fredb Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -62,7 +62,8 @@ do-install:
 ENABLE_TARGETS_LIST!=	${ECHO} "${ENABLE_TARGETS}" | ${SED} "s/[ 	][ 	]*/,/g;s/^,*//"
 
 .if defined(EXTRACT_USING_PAX)
-EXTRACT_ELEMENTS=	-c `cat ${FILESDIR}/exclude`
+# XXX Fix this
+#EXTRACT_ELEMENTS=	-c "`${CAT} ${FILESDIR}/exclude`"
 .else
 EXTRACT_ELEMENTS=	-X ${FILESDIR}/exclude
 .endif
