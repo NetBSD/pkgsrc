@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3232 2003/09/04 08:46:52 drochner Exp $
+$NetBSD: CHANGES,v 1.3233 2003/09/04 09:59:29 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3520,3 +3520,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated SDL to 1.2.6 [drochner 2003-09-03]
 	Removed coda-server-4.6.6.1 [drochner 2003-09-03]
 	Removed coda-client-4.6.6.1 [drochner 2003-09-03]
+	Updated sylpheed to 0.9.5 [chris 2003-09-04]

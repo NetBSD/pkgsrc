@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.827 2003/09/04 09:28:24 wiz Exp $
+$NetBSD: TODO,v 1.828 2003/09/04 09:59:32 chris Exp $
 
 Suggested new packages
 ======================
@@ -260,7 +260,6 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
 	o swig-1.3.17 [epg]
-	o sylpheed-0.9.5
 	o t1lib-5.0.0
 	o tcl/tk-8.4.4
 	o tcpreplay-1.4.5
