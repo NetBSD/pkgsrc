@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.3 2004/12/30 17:41:58 wiz Exp $
+
+--- configure.orig	2004-11-02 18:13:19.000000000 +0100
++++ configure
+@@ -19342,6 +19342,9 @@ echo $ECHO_N "checking for GnuPG >= $min
+ 		sed 's/^gpg (GnuPG) \([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
+ 
+ 	  if test "$major" -eq "$req_major"; then
++	     if test "$minor" -gt "$req_minor"; then
++		ok="yes"
++	     fi
+ 	     if test "$minor" -eq "$req_minor"; then
+ 	  	if test "$micro" -ge "$req_micro"; then
+ 		       ok="yes"
