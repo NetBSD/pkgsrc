@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/26 03:57:29 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/28 21:41:21 jlam Exp $
 #
 # This Makefile fragment is included by packages that use SDL.
 #
@@ -42,6 +42,8 @@ BUILDLINK_CONFIG_WRAPPER.SDL=	${BUILDLINK_DIR}/bin/sdl-config
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
 CONFIGURE_ENV+=		SDL_CONFIG="${BUILDLINK_CONFIG_WRAPPER.SDL}"
 .endif
+
+REPLACE_BUILDLINK_SED+=		-e "s|${BUILDLINK_CONFIG_WRAPPER.SDL}|${BUILDLINK_CONFIG.SDL}|g"
 
 pre-configure: ${BUILDLINK_TARGETS.SDL}
 SDL-buildlink: _BUILDLINK_USE
