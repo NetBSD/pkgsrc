@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:36:08 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/09/18 16:25:23 jmmv Exp $
 
 DISTNAME=		glx
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -20,5 +20,5 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 
-.include "../suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

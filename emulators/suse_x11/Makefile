@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 21:36:17 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/09/18 16:25:29 jmmv Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		2
@@ -10,7 +10,7 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for X11 binaries
 
-DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
+DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
 
@@ -45,5 +45,5 @@ post-install:
 		cd ${EMULDIR}/usr/X11R6/lib && ${LN} -sf $$link $${link%.[0-9]};					\
 	done
 
-.include "../suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

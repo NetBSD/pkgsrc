@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:36:09 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/18 16:25:23 jmmv Exp $
 
 DISTNAME=		suse_gtk-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -10,7 +10,7 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for GTK binaries
 
-DEPENDS+=		suse_x11>=${SUSE_VERSION}:../suse_x11
+DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse_x11
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
 
@@ -20,5 +20,5 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		glib.rpm gtk.rpm
 
-.include "../suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

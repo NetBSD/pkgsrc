@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/03/25 15:13:48 cjep Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/18 16:25:18 jmmv Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 SVR4_PKGNAME=		pstgl
 COMMENT=		PostgreSQL database headers and libraries
 
-.include "../postgresql/Makefile.common"
+.include "../../databases/postgresql/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 BUILD_DIRS=		${WRKSRC}/src/include

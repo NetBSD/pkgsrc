@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:36:21 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/18 16:25:31 jmmv Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -80,5 +80,5 @@ post-install:
 	${ECHO} "vmnet1.HostOnlyNetMask = \"255.255.255.0\"";		\
 	) > ${VMWARE_CFG_DIR}/config
 
-.include "../suse_linux/Makefile.application"
+.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2003/04/10 20:10:16 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/09/18 16:25:16 jmmv Exp $
 
 PKGNAME=		postgresql-client-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
 COMMENT=		PostgreSQL database client programs
 
-.include "../postgresql/Makefile.common"
+.include "../../databases/postgresql/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-zlib
@@ -28,7 +28,7 @@ post-install:
 	cd ${PREFIX}/man && 						\
 		${PAX} -O -crzf ${WRKSRC}/doc/man.tar.gz `${GREP} -v ^# ${FILESDIR}/exclude`
 
-.include "../postgresql-lib/buildlink2.mk"
+.include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/08/26 01:43:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/18 16:25:11 jmmv Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
@@ -8,7 +8,7 @@ COMMENT=		GLU polygon tesselation facility for Mesa
 CONFLICTS+=		Mesa-glx-[0-9]*
 CONFLICTS+=		Mesa<3.2.1
 
-.include "../Mesa/Makefile.common"
+.include "../../graphics/Mesa/Makefile.common"
 
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
