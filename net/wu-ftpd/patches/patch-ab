@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.7 1999/12/27 12:14:57 rh Exp $
+
+--- Makefile.in.orig	Mon Dec 27 12:38:27 1999
++++ Makefile.in	Mon Dec 27 12:43:52 1999
+@@ -62,12 +62,13 @@
+ install: all
+ 	@echo installing binaries.
+ 	-@mkdir -p @sbindir@
++	-@mkdir -p @libexecdir@
+ 	-@mkdir -p @bindir@
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpd @sbindir@/in.ftpd
++	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpd @libexecdir@/ftpd
+ 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpshut @sbindir@/ftpshut
+ 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpcount @bindir@/ftpcount
+ 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpwho @bindir@/ftpwho
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ckconfig @sbindir@/ckconfig
++	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ckconfig @sbindir@/ftpckconfig
+ 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftprestart @sbindir@/ftprestart
+ 	@echo installing manpages.
+ 	-@mkdir -p $(mandir)
+@@ -81,5 +82,6 @@
+ #	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpservers.5 $(mandir)/man5/ftpservers.5
+ 	@INSTALL_DATA@ -o bin -g bin -m 644 doc/xferlog.5 $(mandir)/man5/xferlog.5
+ 	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftprestart.8 $(mandir)/man8/ftprestart.8
+-	@if test ! -f @ETCDIR@/ftpaccess; then echo "Since you didn't have a ftpaccess file, the sample has been"; echo "installed to @ETCDIR@/ftpaccess."; echo "You will probably want to edit it."; @INSTALL@ -c -o bin -g bin -m 644 doc/examples/ftpaccess @ETCDIR@/ftpaccess; fi
+-	@if test ! -f @ETCDIR@/ftpconversions; then echo "Since you didn't have a ftpconversions file, the sample has been"; echo "installed to @ETCDIR@/ftpconversions."; echo "You will probably want to edit it."; @INSTALL@ -c -o bin -g bin -m 644 doc/examples/ftpconversions @ETCDIR@/ftpconversions; fi
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftpaccess @prefix@/etc/ftpaccess.example
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftpconversions @prefix@/etc/ftpconversions.example
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftpusers @prefix@/etc/ftpusers.example
