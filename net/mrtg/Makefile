@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2002/11/28 08:57:41 tron Exp $
+# $NetBSD: Makefile,v 1.36 2002/11/28 10:18:14 tron Exp $
 
 DISTNAME=	mrtg-2.9.26b
 PKGNAME=	mrtg-2.9.26.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://gd.tuwien.ac.at/infosys/network/tools/mrtg/pub/ \
