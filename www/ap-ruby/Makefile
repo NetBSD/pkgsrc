@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/24 23:36:02 taca Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/01 14:04:50 taca Exp $
 # $FreeBSD: ports/www/mod_ruby/Makefile,v 1.10 2000/12/31 10:14:53 knu Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -16,7 +16,7 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}eruby>=0.9:../../textproc/ruby-eruby
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 RUBY_REQD=	1.6
-VERSION=	0.9.5
+VERSION=	0.9.6
 
 APXS=		${LOCALBASE}/sbin/apxs
 
@@ -25,6 +25,7 @@ CONFIGURE_SCRIPT= ./configure.rb
 CONFIGURE_ARGS=	--with-apxs="${APXS}" \
 		--with-eruby-includes="${LOCALBASE}/include" \
 		--with-eruby-libraries="${LOCALBASE}/lib"
+INSTALL_TARGET=	site-install
 
 CONF_FILES=	${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf \
 		${LOCALBASE}/etc/httpd/mod_ruby.conf
@@ -37,7 +38,7 @@ post-build:
 	${SED} -e 's|/usr/local/apache/libexec|${LOCALBASE}/lib/httpd|g' \
 		${WRKSRC}/examples/httpd.conf > ${WRKDIR}/mod_ruby.conf
 
-do-install:
+post-install:
 	${APXS} -i -A -n ruby ${WRKSRC}/mod_ruby.so
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/mod_ruby
 	${INSTALL_DATA} ${WRKDIR}/mod_ruby.conf  ${RUBY_EXAMPLESDIR}/mod_ruby
