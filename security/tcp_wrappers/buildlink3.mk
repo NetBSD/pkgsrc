@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TCP_WRAPPERS_BUILDLINK3_MK:=	${TCP_WRAPPERS_BUILDLINK3_MK}+
 
-.if !empty(TCP_WRAPPERS_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(TCP_WRAPPERS_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=			tcp_wrappers
 BUILDLINK_DEPENDS.tcp_wrappers?=	tcp_wrappers>=7.6.1nb1
 BUILDLINK_PKGSRCDIR.tcp_wrappers?=	../../security/tcp_wrappers
 .endif	# TCP_WRAPPERS_BUILDLINK3_MK
@@ -20,30 +21,21 @@ BUILDLINK_IS_BUILTIN.tcp_wrappers=	YES
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.tcp_wrappers:M[yY][eE][sS])
-_NEED_TCP_WRAPPERS=	NO
+BUILDLINK_USE_BUILTIN.tcp_wrappers=	YES
 .endif
 
-.if !defined(_NEED_TCP_WRAPPERS)
+.if !defined(BUILDLINK_USE_BUILTIN.tcp_wrappers)
 .  if !empty(BUILDLINK_IS_BUILTIN.tcp_wrappers:M[nN][oO])
-_NEED_TCP_WRAPPERS=	YES
+BUILDLINK_USE_BUILTIN.tcp_wrappers=	NO
 .  else
-_NEED_TCP_WRAPPERS=	NO
+BUILDLINK_USE_BUILTIN.tcp_wrappers=	YES
 .  endif
-MAKEFLAGS+=	_NEED_TCP_WRAPPERS="${_NEED_TCP_WRAPPERS}"
 .endif
 
-.if ${_NEED_TCP_WRAPPERS} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.tcp_wrappers:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	tcp_wrappers
 .  endif
 .endif
-
-.if !empty(TCP_WRAPPERS_BUILDLINK3_MK:M+)
-.  if ${_NEED_TCP_WRAPPERS} == "YES"
-BUILDLINK_PACKAGES+=		tcp_wrappers
-.  else
-BUILDLINK_PREFIX.tcp_wrappers=	/usr
-.  endif
-.endif	# TCP_WRAPPERS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}

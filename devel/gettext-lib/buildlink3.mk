@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
 
-.if !empty(GETTEXT_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(GETTEXT_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		gettext
 BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 .endif	# GETTEXT_BUILDLINK3_MK
@@ -19,24 +20,28 @@ BUILDLINK_IS_BUILTIN.gettext=	YES
 .  endif
 .endif
 
-.if !empty(BUILDLINK_CHECK_BUILTIN.gettext:M[yY][eE][sS])
-_NEED_GNU_GETTEXT=	NO
+.if defined(USE_GNU_GETTEXT)
+BUILDLINK_USE_BUILTIN.gettext=	NO
 .endif
 
-.if !defined(_NEED_GNU_GETTEXT)
+.if !empty(BUILDLINK_CHECK_BUILTIN.gettext:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.gettext=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.gettext)
 .  if !empty(BUILDLINK_IS_BUILTIN.gettext:M[nN][oO])
-_NEED_GNU_GETTEXT=	YES
+BUILDLINK_USE_BUILTIN.gettext=	NO
 .  else
 #
 # Consider the base system libintl to be gettext-lib-0.10.35nb1.
 #
 _GETTEXT_PKG=		gettext-lib-0.10.35nb1
 _GETTEXT_DEPENDS=	${BUILDLINK_DEPENDS.gettext}
-_NEED_GNU_GETTEXT!=	\
+BUILDLINK_USE_BUILTIN.gettext!=	\
 	if ${PKG_ADMIN} pmatch '${_GETTEXT_DEPENDS}' ${_GETTEXT_PKG}; then \
-		${ECHO} "NO";						\
-	else								\
 		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
 	fi
 #
 # The listed platforms have a broken (for the purposes of pkgsrc) version
@@ -46,11 +51,12 @@ _INCOMPAT_GETTEXT=	SunOS-*-*
 INCOMPAT_GETTEXT?=	# empty
 .    for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
 .      if !empty(MACHINE_PLATFORM:M${_pattern_})
-_NEED_GNU_GETTEXT=	YES
+BUILDLINK_USE_BUILTIN.gettext=	NO
 .      endif
 .    endfor
 .  endif
-MAKEFLAGS+=	_NEED_GNU_GETTEXT=${_NEED_GNU_GETTEXT}
+MAKEFLAGS+=	\
+	BUILDLINK_USE_BUILTIN.gettext="${BUILDLINK_USE_BUILTIN.gettext}"
 .endif
 
 .if !defined(_BLNK_LIBINTL_FOUND)
@@ -63,15 +69,14 @@ _BLNK_LIBINTL_FOUND!=	\
 MAKEFLAGS+=	_BLNK_LIBINTL_FOUND=${_BLNK_LIBINTL_FOUND}
 .endif
 
-.if ${_NEED_GNU_GETTEXT} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.gettext:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	gettext
 .  endif
 .endif
 
 .if !empty(GETTEXT_BUILDLINK3_MK:M+)
-.  if ${_NEED_GNU_GETTEXT} == "YES"
-BUILDLINK_PACKAGES+=	gettext
+.  if !empty(BUILDLINK_USE_BUILTIN.gettext:M[nN][oO])
 _BLNK_LIBINTL=		-lintl
 _GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
 .    if !defined(_GETTEXT_NEEDS_ICONV)
@@ -113,12 +118,12 @@ BUILDLINK_LDADD.gettext?=	${_BLNK_LIBINTL}
 .  if defined(GNU_CONFIGURE)
 LIBS+=			${BUILDLINK_LDADD.gettext}
 CONFIGURE_ENV+=		INTLLIBS="${BUILDLINK_LDADD.gettext}"
-.    if ${_NEED_GNU_GETTEXT} == "NO"
+.    if !empty(BUILDLINK_USE_BUILTIN.gettext:M[yY][eE][sS])
 .      if ${_BLNK_LIBINTL_FOUND} == "YES"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
 .      endif
 .    endif
-.    if ${_NEED_GNU_GETTEXT} == "YES"
+.    if !empty(BUILDLINK_USE_BUILTIN.gettext:M[nN][oO])
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 .    else
 CONFIGURE_ARGS+=	--without-libintl-prefix

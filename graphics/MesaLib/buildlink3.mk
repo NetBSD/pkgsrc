@@ -1,13 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/01/04 23:34:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
 
-.if !empty(MESALIB_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(MESALIB_BUILDLINK3_MK:M+)
 MESA_REQD?=		3.4.2
 
+BUILDLINK_PACKAGES+=		MesaLib
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 .endif	# MESALIB_BUILDLINK3_MK
@@ -22,21 +23,21 @@ BUILDLINK_IS_BUILTIN.MesaLib=	NO
 .  if exists(${_GL_GLX_H}) && exists(${_X11_TMPL})
 BUILDLINK_IS_BUILTIN.MesaLib!=						\
 	if ${GREP} -q BuildGLXLibrary ${_X11_TMPL}; then		\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	else								\
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.MesaLib=${BUILDLINK_IS_BUILTIN.MesaLib}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.MesaLib="${BUILDLINK_IS_BUILTIN.MesaLib}"
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.MesaLib:M[yY][eE][sS])
-_NEED_MESALIB=	NO
+BUILDLINK_USE_BUILTIN.MesaLib=	YES
 .endif
 
-.if !defined(_NEED_MESALIB)
+.if !defined(BUILDLINK_USE_BUILTIN.MesaLib)
 .  if !empty(BUILDLINK_IS_BUILTIN.MesaLib:M[nN][oO])
-_NEED_MESALIB=	YES
+BUILDLINK_USE_BUILTIN.MesaLib=	NO
 .  else
 #
 # Create an appropriate package name for the built-in Mesa/GLX distributed
@@ -47,17 +48,18 @@ _NEED_MESALIB=	YES
 .    include "../../graphics/Mesa/version.mk"
 _MESALIB_PKG=		MesaLib-${_MESA_VERSION}
 _MESALIB_DEPENDS=	${BUILDLINK_DEPENDS.MesaLib}
-_NEED_MESALIB!=	\
+BUILDLINK_USE_BUILTIN.MesaLib!=	\
 	if ${PKG_ADMIN} pmatch '${_MESALIB_DEPENDS}' ${_MESALIB_PKG}; then \
-		${ECHO} "NO";						\
-	else								\
 		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	_NEED_MESALIB="${_NEED_MESALIB}"
-.endif	# _NEED_MESALIB
+MAKEFLAGS+=	\
+	BUILDLINK_USE_BUILTIN.MesaLib="${BUILDLINK_USE_BUILTIN.MesaLib}"
+.endif	# BUILDLINK_USE_BUILTIN.MesaLib
 
-.if ${_NEED_MESALIB} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.MesaLib:M[nN][oO])
 #
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
@@ -69,11 +71,10 @@ BUILDLINK_DEPENDS+=		MesaLib
 .endif
 
 .if !empty(MESALIB_BUILDLINK3_MK:M+)
-.  if ${_NEED_MESALIB} == "YES"
-BUILDLINK_PACKAGES+=		MesaLib
-BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
-.  else
+.  if !empty(BUILDLINK_USE_BUILTIN.MesaLib:M[yY][eE][sS])
 BUILDLINK_PREFIX.MesaLib=	${X11BASE}
+.  else
+BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
 .  endif
 .endif	# MESALIB_BUILDLINK3_MK
 

@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/01/04 23:34:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
 
-.if !empty(XRENDER_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(XRENDER_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		Xrender
 BUILDLINK_DEPENDS.Xrender?=	Xrender>=0.2
 BUILDLINK_PKGSRCDIR.Xrender?=	../../x11/Xrender
 .endif	# XRENDER_BUILDLINK3_MK
@@ -20,21 +21,21 @@ BUILDLINK_IS_BUILTIN.Xrender=	NO
 .  if exists(${_X11_EXTENSIONS_RENDER_H}) && exists(${_X11_TMPL})
 BUILDLINK_IS_BUILTIN.Xrender!=						\
 	if ${GREP} -q BuildRenderLibrary ${_X11_TMPL}; then		\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	else								\
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.Xrender=${BUILDLINK_IS_BUILTIN.Xrender}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.Xrender="${BUILDLINK_IS_BUILTIN.Xrender}"
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.Xrender:M[yY][eE][sS])
-_NEED_XRENDER=	NO
+BUILDLINK_USE_BUILTIN.Xrender=	YES
 .endif
 
-.if !defined(_NEED_XRENDER)
+.if !defined(BUILDLINK_USE_BUILTIN.Xrender)
 .  if !empty(BUILDLINK_IS_BUILTIN.Xrender:M[nN][oO])
-_NEED_XRENDER=	YES
+BUILDLINK_USE_BUILTIN.Xrender=	NO
 .  else
 #
 # Create an appropriate package name for the built-in Xrender distributed
@@ -49,17 +50,18 @@ _XRENDER_MINOR!=	\
 _XRENDER_VERSION=	${_XRENDER_MAJOR}${_XRENDER_MINOR}
 _XRENDER_PKG=		Xrender-${_XRENDER_VERSION}
 _XRENDER_DEPENDS=	${BUILDLINK_DEPENDS.Xrender}
-_NEED_XRENDER!=		\
+BUILDLINK_USE_BUILTIN.Xrender!=		\
 	if ${PKG_ADMIN} pmatch '${_XRENDER_DEPENDS}' ${_XRENDER_PKG}; then \
-		${ECHO} "NO";						\
-	else								\
 		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	_NEED_XRENDER="${_NEED_XRENDER}"
-.endif	# _NEED_XRENDER
+MAKEFLAGS+=	\
+	BUILDLINK_USE_BUILTIN.Xrender="${BUILDLINK_USE_BUILTIN.Xrender}"
+.endif	# BUILDLINK_USE_BUILTIN.Xrender
 
-.if ${_NEED_XRENDER} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.Xrender:M[nN][oO])
 #
 # If we depend on the package, depend on the latest version with a library
 # minor number bump.
@@ -71,9 +73,7 @@ BUILDLINK_DEPENDS+=		Xrender
 .endif
 
 .if !empty(XRENDER_BUILDLINK3_MK:M+)
-.  if ${_NEED_XRENDER} == "YES"
-BUILDLINK_PACKAGES+=		Xrender
-.  else
+.  if !empty(BUILDLINK_USE_BUILTIN.Xrender:M[yY][eE][sS])
 BUILDLINK_PREFIX.Xrender=	${X11BASE}
 .  endif
 .endif	# XRENDER_BUILDLINK3_MK
