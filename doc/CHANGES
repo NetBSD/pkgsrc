@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.57 2002/09/25 15:24:30 abs Exp $
+$NetBSD: CHANGES,v 1.58 2002/09/25 18:34:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2964,3 +2964,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkglint to 3.35 [wiz 2002-09-25]
 	Updated ipadic to 2.4.4nb1 [taca 2002-09-25]
 	Updated cpuflags to 0.34 [abs 2002-09-25]
+	Updated ekg to 20020918 [wiz 2002-09-25]
+	Updated boehm-gc to 6.1 [wiz 2002-09-25]
+	Updated eggdrop to 1.6.10nb1 [wiz 2002-09-25]
