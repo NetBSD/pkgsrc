@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/04 09:06:21 tron Exp $
 #
 
 DISTNAME=	qtarch-2.1-1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://qtarch.sourceforge.net/
 COMMENT=	Graphical dialog editor for the Qt widget set
 
 DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
-DEPENDS+=	png-*:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_X11=	yes
 USE_GMAKE=	yes

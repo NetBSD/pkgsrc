@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/04 09:06:14 tron Exp $
 
 DISTNAME=		xli-1.16nb1
 CATEGORIES=		graphics x11
@@ -10,7 +10,7 @@ DISTFILES=		xli.1.16.tar.gz \
 MAINTAINER=		packages@netbsd.org
 COMMENT=		Version of xloadimage, an X11 Image Loading Utility
 
-DEPENDS+=		png>=1.0.3:../../graphics/png
+DEPENDS+=		png>1.0.9:../../graphics/png
 
 NO_WRKSUBDIR=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/27 17:37:53 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/03/04 09:06:17 tron Exp $
 #
 
 DISTNAME=		cups-${VERS}-3-source
@@ -21,7 +21,7 @@ CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.6:../../graphics/png
+DEPENDS+=		png>1.0.9:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
 USE_GMAKE=		# defined

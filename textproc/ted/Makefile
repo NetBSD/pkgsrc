@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/03/04 09:06:18 tron Exp $
 
 DISTNAME=	ted-2.8.src
 PKGNAME=	ted-2.8
@@ -13,7 +13,7 @@ COMMENT=	X11 based WordPad-like word processor
 
 DEPENDS+=	libungif-*:../../graphics/libungif
 DEPENDS+=       jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 DEPENDS+=       tiff-*:../../graphics/tiff
 
 USE_MOTIF=	YES

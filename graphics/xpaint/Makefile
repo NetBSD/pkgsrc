@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.25 2001/02/16 15:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2001/03/04 09:06:15 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
-#
 
 DISTNAME=       xpaint-2.5.6
 WRKSRC=		${WRKDIR}/xpaint
@@ -13,7 +12,7 @@ COMMENT=	Simple paint program
 
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_IMAKE=      YES
 USE_XPM=	YES

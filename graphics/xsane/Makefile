@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/24 19:10:12 tron Exp $
+# $NetBSD: Makefile,v 1.24 2001/03/04 09:06:15 tron Exp $
 #
 
 DISTNAME=	xsane-0.72
@@ -20,7 +20,7 @@ COMMENT=	New improved frontend for SANE
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	gtk+>=1.2.5:../../x11/gtk
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	gimp>=1.0.4:../../graphics/gimp
 DEPENDS+=	sane-backends>=1.0.4:../../graphics/sane-backends

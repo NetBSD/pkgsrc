@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/02/25 11:10:12 tron Exp $
+# $NetBSD: Makefile,v 1.31 2001/03/04 09:06:17 tron Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0nb4
@@ -11,7 +11,7 @@ COMMENT=	X11 newsreader with support for threading and MIME
 
 DEPENDS+=	faces-1.6.1:../../mail/faces
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 CONFLICTS=	knews-1.0b0
 

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2001/02/16 15:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/03/04 09:06:14 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/08/20 18:56:00 jseger Exp
-#
 
 DISTNAME=       povray31
 PKGNAME=	povray-3.1g
@@ -15,7 +14,7 @@ MAINTAINER=	pooka@netbsd.org
 HOMEPAGE=	http://www.povray.org/
 COMMENT=	Persistence of Vision Ray Tracer
 
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_X11=	yes
 

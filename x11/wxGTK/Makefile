@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/04 09:06:21 tron Exp $
 #
 
 DISTNAME=		wxGTK-2.2.3
@@ -12,7 +12,7 @@ COMMENT=		GTK-based implementation of the wxWindows GUI library
 
 DEPENDS+=		gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.3:../../graphics/png
+DEPENDS+=		png>1.0.9:../../graphics/png
 DEPENDS+=		tiff>=3.5.2:../../graphics/tiff
 
 USE_GMAKE=		# defined

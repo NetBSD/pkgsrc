@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2001/02/16 14:40:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/03/04 09:06:10 tron Exp $
 #
-
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
 # be named "AbiWord Personal" or some name completely unlike AbiSource's
 # registered trademarks.
-#
+
 DISTNAME=	abi-${ABIWORD_VERS}
 PKGNAME=	abiword-personal-${ABIWORD_VERS}
 ABIWORD_VERS=	0.7.10
@@ -21,7 +20,7 @@ COMMENT=	Open Source cross-platform word processor
 BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
 DEPENDS+=	ispell-*:../../textproc/ispell
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_X11=	YES
 USE_XPM=	YES

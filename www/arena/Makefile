@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/02/17 17:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2001/03/04 09:06:19 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.2.8:../../www/libwww
-DEPENDS+=		png>=1.0.6:../../graphics/png
+DEPENDS+=		png>1.0.9:../../graphics/png
 
 GNU_CONFIGURE=		YES
 MAKEFILE=		makefile
