@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/09 06:39:36 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/30 00:29:59 xtraeme Exp $
 
 DISTNAME=	clamav-0.66
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.clamav.net/
 COMMENT=	Anti-virus toolkit
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
@@ -33,7 +33,7 @@ PLIST_SRC=	${PKGDIR}/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-#.include "../../mail/libmilter/buildlink2.mk"
+#.include "../../mail/libmilter/buildlink3.mk"
 #CONFIGURE_ARGS+=	--enable-milter
 #PLIST_SRC+=		${PKGDIR}/PLIST.milter
 .else
@@ -44,9 +44,9 @@ CONFIGURE_ARGS+=	--disable-milter
 post-install:
 	${CHOWN} -R ${CLAMAV_USER}:${CLAMAV_GROUP} ${PREFIX}/share/clamav
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../devel/gmp/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
