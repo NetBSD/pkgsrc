@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/11/10 18:09:07 epg Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/11 18:04:36 epg Exp $
 
-DISTNAME=	SVK-0.25
+DISTNAME=	SVK-0.26
 PKGNAME=	${DISTNAME:S/SVK/svk/}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
@@ -20,7 +19,7 @@ MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip
 DEPENDS+=	p5-subversion>=1.0.4:../../devel/p5-subversion
 DEPENDS+=	p5-Algorithm-Annotate>=0.10:../../devel/p5-Algorithm-Annotate
 DEPENDS+=	p5-Compress-Zlib>=1.33:../../devel/p5-Compress-Zlib
-DEPENDS+=	p5-Data-Hierarchy>=0.19:../../devel/p5-Data-Hierarchy
+DEPENDS+=	p5-Data-Hierarchy>=0.21:../../devel/p5-Data-Hierarchy
 DEPENDS+=	p5-File-BaseDir>=0.02:../../devel/p5-File-BaseDir
 DEPENDS+=	p5-File-Type>=0.22:../../devel/p5-File-Type
 DEPENDS+=	p5-IO-Digest>=0.10:../../devel/p5-IO-Digest
@@ -32,8 +31,8 @@ DEPENDS+=	p5-PerlIO-via-symlink>=0.01:../../devel/p5-PerlIO-via-symlink
 DEPENDS+=	p5-Pod-Escapes>=1.04:../../textproc/p5-Pod-Escapes
 DEPENDS+=	p5-Pod-Simple>=3.02:../../textproc/p5-Pod-Simple
 DEPENDS+=	p5-Regexp-Shellish>=0.93:../../devel/p5-Regexp-Shellish
-DEPENDS+=	p5-SVN-Mirror>=0.48:../../devel/p5-SVN-Mirror
-DEPENDS+=	p5-SVN-Simple>=0.25:../../devel/p5-SVN-Simple
+DEPENDS+=	p5-SVN-Mirror>=0.50:../../devel/p5-SVN-Mirror
+DEPENDS+=	p5-SVN-Simple>=0.26:../../devel/p5-SVN-Simple
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 DEPENDS+=	p5-YAML>=0.35:../../textproc/p5-YAML
 
