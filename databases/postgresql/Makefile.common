@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2000/03/18 17:43:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/05/20 19:32:18 jlam Exp $
 
-DISTNAME=		postgresql-6.5.3
+DISTNAME=		postgresql-${PG_VERS}
+PG_VERS=		7.0
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
@@ -12,8 +13,8 @@ HOMEPAGE=		http://www.PostgreSQL.ORG/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
-USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
+USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
 
 FILESDIR=		${.CURDIR}/../../databases/postgresql/files
 PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
@@ -23,12 +24,21 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
 CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}" \
 			--enable-locale
 
+# PG_MB_ENCODING may be set to any of:
+#
+# SQL_ASCII, EUC_JP, EUC_CN, EUC_KR, EUC_TW, UNICODE, MULE_INTERNAL,
+# LATIN1, LATIN2, LATIN3, LATIN4, LATIN5, KOI8, WIN, ALT
+#
+# This variable controls the language encoding on the backend process.
+
+.if defined(PG_MB_ENCODING)
+CONFIGURE_ARGS+=	--enable-multibyte=${PG_MB_ENCODING}
+.else
+CONFIGURE_ARGS+=	--enable-multibyte	# accept default
+.endif
+
 post-extract:
-	@${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
-	@${LN} -sf bsd.c ${WRKSRC}/backend/port/dynloader/netbsd.c
-	@${LN} -sf bsd.h ${WRKSRC}/backend/port/dynloader/netbsd.h
-	@${LN} -sf bsd.h ${WRKSRC}/include/port/netbsd.h
-	@${LN} -sf Makefile.bsd ${WRKSRC}/makefiles/Makefile.netbsd
+	${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
