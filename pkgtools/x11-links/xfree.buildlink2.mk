@@ -1,4 +1,4 @@
-# $NetBSD: xfree.buildlink2.mk,v 1.7 2003/01/03 10:22:04 tron Exp $
+# $NetBSD: xfree.buildlink2.mk,v 1.8 2003/01/03 10:34:39 tron Exp $
 
 .if !defined(XFREE_BUILDLINK2_MK)
 XFREE_BUILDLINK2_MK=	# defined
@@ -454,6 +454,7 @@ BUILDLINK_FILES.XFree+=	lib/libXcursor.so
 BUILDLINK_FILES.XFree+=	lib/libXcursor.so.1
 BUILDLINK_FILES.XFree+=	lib/libXcursor.so.1.0
 BUILDLINK_FILES.XFree+=	lib/libXdmcp.a
+BUILDLINK_FILES.XFree+=	lib/libXdpms.a
 BUILDLINK_FILES.XFree+=	lib/libXext.a
 BUILDLINK_FILES.XFree+=	lib/libXext.so
 BUILDLINK_FILES.XFree+=	lib/libXext.so.6
