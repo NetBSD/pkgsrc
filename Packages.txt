@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.119 2000/10/17 15:29:47 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.120 2000/10/17 15:51:34 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -696,31 +696,6 @@ directory.  It can be removed by typing
 
 at the shell prompt. Also, this directory is used to keep various
 timestamp files. 
-
-
- 4.7 Importing the package into CVS
- ==================================
-
-Newly created packages should be imported with a vendor tag of "TNF" and
-a release tag of "pkgsrc-base", e.g::
-
-	cvs import pkgsrc/<category>/frobnitz TNF pkgsrc-base
-
-Packages derived from a FreeBSD port should be imported with a vendor tag
-of "FREEBSD" and a release tag of "FreeBSD-current-YYYY-MM-DD" (YYYY-MM-DD
-being the date when the snapshot of the port were taken form the FreeBSD
-tree), and then doing the necessary modifications by normal CVS operations.
-E.g:
-
-	cvs import pkgsrc/<category>/mumbler FREEBSD FreeBSD-current-1998-04-01
-	cvs rm patches/patch-a
-	cvs add patches/patch-aa
-	cvs ci
-
-Please note all package updates/additions in doc/pkg-CHANGES! It's very
-important to keep this file up to date and conforming to the existing
-format, because it will be used by scripts to automatically update pages on
-www.netbsd.org.
 
 
  5 PLIST* issues
@@ -1431,28 +1406,6 @@ debugging aids.
  9 FAQs & features of the package system
  =======================================
 
- 9.1  Packages using GNU autoconfig
- 9.2  Other distrib methods than .tar.gz
- 9.3  Packages not creating their own subdirectory
- 9.4  Custom configuration process
- 9.5  Packages not building in their DISTNAME directory
- 9.6  How to fetch all distfiles at once
- 9.7  How to fetch files from behind a firewall
- 9.8  If your patch contains an RCS ID
- 9.9  How to pull in variables from /etc/mk.conf
- 9.10 Is there a mailing list for pkg-related discussion?
- 9.11 How do i tell "make fetch" to do passive FTP?
- 9.12 Dependencies on other packages
- 9.13 Conflicts with other packages
- 9.14 Software which has a WWW Home Page
- 9.15 How to handle modified distfiles with the 'old' name
- 9.16 What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
- 9.17 How to handle incrementing versions when fixing an existing package
- 9.18 "Could not find bsd.own.mk" - what's wrong?
- 9.19 Restricted packages
- 9.20 Packages using (n)curses
-
-
  9.1 Packages using GNU autoconfig
  =================================
 
@@ -1805,8 +1758,13 @@ Please note that the check for NEED_NCURSES has to be below the
 inclusion of bsd.pkg.mk, since the variable is set there.
 
 
- 10 Submitting
- =============
+ 10 Submitting & Committing
+ ==========================
+
+ 10.1 Submitting your packages
+ =============================
+
+You have to seperate between binary and "normale" (source) packages here:
 
  * precompiled binary packages:
    Our policy is that we accept binaries only from NetBSD developers to
@@ -1827,6 +1785,32 @@ inclusion of bsd.pkg.mk, since the variable is set there.
 
    You will be notified if your send-pr has been addressed so you can remove
    the tar-file. 
+
+
+ 10.2 Committing: Importing the package into CVS
+ ===============================================
+
+This section is only of interrest for NetBSD developers with write access
+to the NetBSD pkgsrc repository. Newly created packages should be imported
+with a vendor tag of "TNF" and a release tag of "pkgsrc-base", e.g:
+
+	cvs import pkgsrc/<category>/frobnitz TNF pkgsrc-base
+
+Packages derived from a FreeBSD port should be imported with a vendor tag
+of "FREEBSD" and a release tag of "FreeBSD-current-YYYY-MM-DD" (YYYY-MM-DD
+being the date when the snapshot of the port were taken form the FreeBSD
+tree), and then doing the necessary modifications by normal CVS operations.
+E.g:
+
+	cvs import pkgsrc/<category>/mumbler FREEBSD FreeBSD-current-1998-04-01
+	cvs rm patches/patch-a
+	cvs add patches/patch-aa
+	cvs ci
+
+Please note all package updates/additions in doc/pkg-CHANGES! It's very
+important to keep this file up to date and conforming to the existing
+format, because it will be used by scripts to automatically update pages on
+www.netbsd.org and other sites.
 
 
  11 A simple example of a package: bison
