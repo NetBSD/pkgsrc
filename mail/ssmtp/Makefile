@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/22 14:45:47 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/08 09:33:19 adam Exp $
 # FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
 #
 # TLS functionality needs testing. Please let me know the result,
@@ -17,21 +17,16 @@ HOMEPAGE=	http://packages.debian.org/testing/mail/ssmtp.html
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/.orig$//}
-USE_BUILDLINK3=		YES
-USE_PKGINSTALL=		YES
-
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-ssl
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
-.include "../../mk/bsd.prefs.mk"
-.if !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-inet6
-.endif
+.include "options.mk"
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-
 CONF_FILES=	${EGDIR}/ssmtp.conf ${PKG_SYSCONFDIR}/ssmtp.conf
 CONF_FILES+=	${EGDIR}/revaliases ${PKG_SYSCONFDIR}/revaliases
 
@@ -62,5 +57,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/revaliases ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
