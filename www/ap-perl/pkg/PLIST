@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/05/01 00:41:47 tv Exp $
-etc/httpd/httpd.conf.modperl
+@comment $NetBSD: PLIST,v 1.6 1999/05/04 20:16:37 tv Exp $
 lib/httpd/mod_perl.so
 lib/perl5/man/man3/Apache.3
 lib/perl5/man/man3/Apache::Constants.3
