@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2003/09/20 07:18:35 jlam Exp $
+$NetBSD: distinfo,v 1.10 2003/11/08 14:50:14 wiz Exp $
 
-SHA1 (oss397l-netbsd-v1.6.1.tar.gz) = fd275886925e2651ebd6b5988bd28cdda0f40b7e
-Size (oss397l-netbsd-v1.6.1.tar.gz) = 1134943 bytes
+SHA1 (oss398b-netbsd-v1.6.1.tar.gz) = 3286a4e7f9a88c1c776baec119d231e35bbf4a7f
+Size (oss398b-netbsd-v1.6.1.tar.gz) = 1140633 bytes

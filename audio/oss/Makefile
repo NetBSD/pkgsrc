@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/30 22:51:12 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/08 14:50:14 wiz Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -10,19 +10,12 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.opensound.com/oss.html
 COMMENT=	Open Sound System(TM) soundcard driver
 
-ONLY_FOR_PLATFORM=	NetBSD-1.[56]-i386 NetBSD-1.[56].*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.6-i386 NetBSD-1.6.*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6_*-i386
 OSVERSION_SPECIFIC=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.5*-i386)
-DISTNAME=		oss${OSS_VERSION:S/.//g}-netbsd-v1.5
-OSS_VERSION=		3.9.7c
-.elif !empty(MACHINE_PLATFORM:MNetBSD-1.6*-i386)
 DISTNAME=		oss${OSS_VERSION:S/.//g}-netbsd-v1.6.1
-OSS_VERSION=		3.9.7l
-.endif
+OSS_VERSION=		3.9.8b
 
 RESTRICTED=		"No re-distribution."
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -37,11 +30,7 @@ NO_CONFIGURE=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
-.if ${OPSYS} == "NetBSD"
 MODSTAT=		/usr/bin/modstat
-.else
-MODSTAT=		${TRUE}
-.endif
 
 CHROOT?=		/usr/sbin/chroot
 OSSLIBDIR=		${PREFIX}/lib/oss
