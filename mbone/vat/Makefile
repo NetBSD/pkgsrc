@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/05/24 20:39:45 tv Exp $
-# FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
+# $NetBSD: Makefile,v 1.25 1999/06/04 15:11:27 mycroft Exp $
 #
 
 DISTNAME=		vat-4.0b2
