@@ -1,0 +1,48 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/08/13 22:03:07 wiz Exp $
+
+--- src/readsfv.c.orig	Thu Aug 10 22:50:02 2000
++++ src/readsfv.c	Thu Aug 10 23:01:30 2000
+@@ -33,12 +33,13 @@
+ 
+ extern int  verbose;
+ 
+-int readsfv(char *fn, char *dir, int nocase)
++int readsfv(char *fn, char *dir, int nocase, int argc, char **argv)
+ {
+   FILE          *fd;
+   DIR           *dirp = NULL;
+   char          buf[512], *end, filename[512], crc[9], path[256];
+   int           file, rval = 0;
++  int           i, check;
+   unsigned long len, val, sfvcrc;
+   struct dirent *dirinfo;
+   
+@@ -79,6 +80,19 @@
+       strncpy(filename, buf, 512);
+       sfvcrc = strtoul(crc, '\0', 16);
+ 
++      if (argc) {
++	check = 0;
++        for (i=0; i<argc; i++) {
++	  if ((nocase == 1 && strcasecmp(argv[i], filename) == 0)
++	      || (nocase == 0 && strcmp(argv[i], filename) == 0)) {
++	    check = 1;
++	    break;
++	  }
++	}
++	if (check == 0)
++	  continue;
++      }
++
+       if (nocase == 1) {
+         len = strlen(filename);
+         while ((dirinfo = readdir(dirp)) != NULL) {
+@@ -126,6 +140,8 @@
+     }
+   }
+   fclose(fd);
++  if (nocase == 1)
++    closedir(dirp);
+ 
+   if (verbose == 1) {
+     if (rval == 0) {
