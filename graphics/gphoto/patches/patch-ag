@@ -1,0 +1,53 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/11/30 00:01:38 dmcmahill Exp $
+
+--- ./casio/configure.c.orig	Thu May 27 14:32:02 1999
++++ ./casio/configure.c	Mon Nov 29 16:16:10 1999
+@@ -226,5 +226,5 @@
+   gtk_signal_connect (GTK_OBJECT (normalSize), "pressed",
+                       GTK_SIGNAL_FUNC (setSize),
+-                      0);
++                      (gpointer) 0);
+ 
+   doubleSize = gtk_radio_button_new_with_label (Size_group, "640 x 480");
+@@ -236,5 +236,5 @@
+   gtk_signal_connect (GTK_OBJECT (doubleSize), "pressed",
+                       GTK_SIGNAL_FUNC (setSize),
+-                      1);
++                      (gpointer) 1);
+ 
+   vbox1 = gtk_vbox_new (FALSE, 0);
+@@ -252,5 +252,5 @@
+   gtk_signal_connect_after (GTK_OBJECT (spd_9600), "pressed",
+                             GTK_SIGNAL_FUNC (on_spd_pressed),
+-                            DEFAULT);
++                            (gpointer) DEFAULT);
+ 
+   spd_19200 = gtk_radio_button_new_with_label (Speed_group, "19200");
+@@ -262,5 +262,5 @@
+   gtk_signal_connect_after (GTK_OBJECT (spd_19200), "pressed",
+                             GTK_SIGNAL_FUNC (on_spd_pressed),
+-                            MID);
++                            (gpointer) MID);
+ 
+   spd_38400 = gtk_radio_button_new_with_label (Speed_group, "38400");
+@@ -272,5 +272,5 @@
+   gtk_signal_connect_after (GTK_OBJECT (spd_38400), "pressed",
+                             GTK_SIGNAL_FUNC (on_spd_pressed),
+-                            HIGH);
++                            (gpointer) HIGH);
+ 
+   spd_57600 = gtk_radio_button_new_with_label (Speed_group, "57600");
+@@ -282,5 +282,5 @@
+   gtk_signal_connect_after (GTK_OBJECT (spd_57600), "pressed",
+                             GTK_SIGNAL_FUNC (on_spd_pressed),
+-                            TOP);
++                            (gpointer) TOP);
+ 
+   spd_115200 = gtk_radio_button_new_with_label (Speed_group, "115200");
+@@ -292,5 +292,5 @@
+   gtk_signal_connect_after (GTK_OBJECT (spd_115200), "pressed",
+                             GTK_SIGNAL_FUNC (on_spd_pressed),
+-                            LIGHT);
++                            (gpointer) LIGHT);
+ 
+   vbox3 = gtk_vbox_new (FALSE, 0);
