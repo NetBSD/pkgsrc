@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2000/01/16 23:28:04 jwise Exp $
+# $NetBSD: Makefile,v 1.139 2000/01/21 17:23:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -168,6 +168,7 @@
 #    SUBDIR += xmold
     SUBDIR += xmon
     SUBDIR += xmove
+    SUBDIR += xmx
     SUBDIR += xneko
     SUBDIR += xp
     SUBDIR += xpmroot
