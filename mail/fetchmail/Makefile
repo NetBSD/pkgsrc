@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 1998/06/18 15:25:24 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/04 04:41:35 mycroft Exp $
 # $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
 #
 
-DISTNAME=       fetchmail-4.3.9
+DISTNAME=       fetchmail-4.5.1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/
 
-MAINTAINER=	ve@sci.fi
+MAINTAINER=	mycroft@netbsd.org
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
@@ -14,7 +14,7 @@ CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(/usr/lib/libkrb.a) && (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
-CONFIGURE_ARGS += --with-kerberos=/usr
+CONFIGURE_ARGS += --with-kerberos=yes
 .endif
 
 FDOC=   ${PREFIX}/share/doc/fetchmail
