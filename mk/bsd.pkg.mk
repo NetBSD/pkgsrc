@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1314 2003/12/05 08:38:15 jdolecek Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1315 2003/12/06 18:47:45 cube Exp $
 #
 # This file is in the public domain.
 #
@@ -1202,9 +1202,19 @@ CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
 .  if ${CKSUMFILES} != ""
 _CKSUMFILES?=	${CKSUMFILES:S/^/${DIST_SUBDIR}\//}
 .  endif
+.  if !empty(DISTFILES)
 _DISTFILES?=	${DISTFILES:S/^/${DIST_SUBDIR}\//}
+.  else
+_DISTFILES?=	# empty
+.  endif
+.  if defined(IGNOREFILES) && !empty(IGNOREFILES)
 _IGNOREFILES?=	${IGNOREFILES:S/^/${DIST_SUBDIR}\//}
+.  endif
+.  if defined(PATCHFILES) && !empty(PATCHFILES)
 _PATCHFILES?=	${PATCHFILES:S/^/${DIST_SUBDIR}\//}
+.  else
+_PATCHFILES?=	# empty
+.  endif
 .else
 _CKSUMFILES?=	${CKSUMFILES}
 _DISTFILES?=	${DISTFILES}
