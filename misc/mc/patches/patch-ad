@@ -226,25 +226,6 @@
   #include <stdio.h>
   
   #include "mad.h"
-*** src/dlg.c.orig	Thu Jun 19 23:30:55 1997
---- src/dlg.c	Thu Jun 19 23:34:19 1997
-***************
-*** 20,26 ****
-  /* "$Id: patch-ad,v 1.1.1.1 1997/10/11 21:54:32 hubertf Exp $" */
-  #include <string.h>
-  #include <stdio.h>
-! #include <malloc.h>
-  #include "tty.h"
-  #include <stdarg.h>
-  #include "mad.h"
---- 20,26 ----
-  /* "$Id: patch-ad,v 1.1.1.1 1997/10/11 21:54:32 hubertf Exp $" */
-  #include <string.h>
-  #include <stdio.h>
-! #include <stdlib.h>
-  #include "tty.h"
-  #include <stdarg.h>
-  #include "mad.h"
 *** src/widget.c.orig	Thu Jun 19 23:31:50 1997
 --- src/widget.c	Thu Jun 19 23:37:42 1997
 ***************
