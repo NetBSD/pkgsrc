@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/08 14:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:55 grant Exp $
 
 DISTNAME=	defendguin-0.0.10
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Clone of the arcade game Defender
 USE_X11=	YES
 USE_BUILDLINK2=	YES
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 MAKE_ENV+=	PREFIX=${LOCALBASE}
 
 .include "../../audio/SDL_mixer/buildlink2.mk"
