@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7279 2004/09/27 23:27:14 seb Exp $
+$NetBSD: CHANGES,v 1.7280 2004/09/28 10:44:46 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4475,3 +4475,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtar to 1.14 [wiz 2004-09-27]
 	Updated check to 0.9.1 [cube 2004-09-27]
 	Added kbarcode-1.8.1 [seb 2004-09-27]
+	Updated chkrootkit to 0.44 [adrianp 2004-09-28]
