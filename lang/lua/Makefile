@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/05 10:06:43 cube Exp $
 
-DISTNAME=	lua-5.0
+DISTNAME=	lua-5.0.1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
