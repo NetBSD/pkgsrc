@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 1998/06/22 12:27:10 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/07/20 13:46:45 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
-DISTNAME=	vile
+DISTNAME=	vile-8.0
 PKGNAME=	xvile-8.0
-WRKSRC=		${WRKDIR}/vile-8.0
 CATEGORIES=	editors
 MASTER_SITES=   ftp://ftp.clark.net/pub/dickey/vile/ \
 		ftp://id.wing.net/pub/pgf/vile/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
