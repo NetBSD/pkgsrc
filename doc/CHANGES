@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4369 2004/01/06 03:36:55 uebayasi Exp $
+$NetBSD: CHANGES,v 1.4370 2004/01/06 12:03:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -59,7 +59,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Net-Server to 0.86 [grant 2004-01-05]
 	Updated cvsup to 16.1.h [xtraeme 2004-01-05]
 	Updated cvsup-gui to 16.1.h [xtraeme 2004-01-05]
-	Updated kochi-tty to 20030823 [uebayasi 2004-01-05]
+	Updated kochi-ttf to 20030823 [uebayasi 2004-01-05]
 	Delete kochi-otf [uebayasi 2004-01-05]
 	Updated libtool to 1.4.20010614nb19 [cube 2004-01-05]
 	Updated lua to 5.0.1 [cube 2004-01-05]
