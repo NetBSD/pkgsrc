@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/11/04 17:07:24 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/12/29 10:37:44 veego Exp $
 
 .if !defined(NET_SNMP_BUILDLINK2_MK)
 NET_SNMP_BUILDLINK2_MK=	# defined
@@ -17,7 +17,7 @@ _UCD_SNMP_INSTALLED!=	${PKG_INFO} -e ucd-snmp || ${ECHO}
 .    include "../../net/ucd-snmp/buildlink2.mk"
 _NEED_NET_SNMP=	NO
 .  endif  # _UCD_SNMP_INSTALLED
-.endif		
+.endif
 
 .if ${_NEED_NET_SNMP} == "YES"
 BUILDLINK_PACKAGES+=		net-snmp
