@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/12/06 18:45:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/02/02 21:53:25 zuntum Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ernie.eit.uni-kl.de/avifile/			\
 		http://www.toon.eu.org/divx/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://divx.euro.ru/
+HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 
 DEPENDS=	win32-codecs>=010122:../../graphics/win32-codecs
