@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/10/09 17:23:16 jdolecek Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/22 08:02:15 grant Exp $
 
 DISTNAME=	freetds-0.61.2
 CATEGORIES=	databases
@@ -10,7 +10,7 @@ COMMENT=	LGPL'd implementation of Sybase's db-lib/ct-lib/ODBC libs
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/freetds

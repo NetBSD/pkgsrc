@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2003/12/23 13:24:40 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/01/22 08:02:16 grant Exp $
 #
 
 DISTNAME?=		libgda-1.0.0
@@ -10,7 +10,7 @@ MAINTAINER?=		sab@posix.org.uk
 HOMEPAGE?=		http://www.gnome-db.org/
 
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
