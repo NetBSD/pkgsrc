@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1383 2004/02/15 21:01:05 minskim Exp $
+$NetBSD: TODO,v 1.1384 2004/02/15 23:28:22 minskim Exp $
 
 Suggested new packages
 ======================
@@ -51,9 +51,9 @@ Suggested new packages
 	tme, Matt Fredette's Sun 2 emulator.
 	http://theory.lcs.mit.edu/~fredette/tme/index.html
 
-	tutos
+	tutos [wip/tutos]
 	the ultimate team organization software
-	http://www.tutos.org [agc is looking at this one]
+	http://www.tutos.org/ [agc is looking at this one]
 
 	xmltv
 	TV viewing manager
