@@ -1,11 +1,6 @@
-$NetBSD: README.Darwin,v 1.1.1.1 2004/03/11 13:03:58 grant Exp $
+$NetBSD: README.Darwin,v 1.2 2004/04/24 19:22:41 danw Exp $
 
-If you are using Mac OS X:
-Before you start, you will need to download and install the Mac OS X Developer
-Tools from Apple's Developer Connection.  See http://developer.apple.com/macosx/
-for details.  Also, make sure you install X11 for Mac OS X and the X11 SDK from
-http://www.apple.com/macosx/x11/download/ if you intend to build packages
-that use the X11 Window System.
+If you are using Mac OS X, please read "README.MacOSX" as well.
 
 Terse instructions:
 
@@ -20,14 +15,10 @@ $ sudo ./bootstrap \
     --pkgdbdir=/Volumes/NetBSD/pkgdb \
     --pkgsrcdir=/Volumes/NetBSD/pkgsrc
 
-Note: if you already have a UFS partition, or have a spare partition[*]
+Note: if you already have a UFS partition, or have a spare partition
 that you can format as UFS, use that instead of the UFS disk image.
 It'll be somewhat faster and will mount automatically at boot time.
 
 (Why can't you just use the HFS+ filesystem you've already got?
 Because pkgsrc currently requires the underlying filesystem to be
 case-sensitive, and HFS+ isn't.)
-
-[*] - If the partition you want to convert to UFS from HFS+ under
-Mac OS X is on the boot disk, then the disk tools won't do anything
-with it.  See "README.MacOSX".
