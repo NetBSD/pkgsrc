@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3863 2003/11/27 09:55:27 tron Exp $
+$NetBSD: CHANGES,v 1.3864 2003/11/27 12:44:12 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4648,3 +4648,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla to 1.5.1 [taya 2003-11-27]
 	Updated MozillaFirebird to 0.7 [taya 2003-11-27]
 	Updated gnupg to 1.2.3nb1 [tron 2003-11-27]
+	Updated silc-client to 1.0 [salo 2003-11-27]
+	Updated silc-client-icb to 0.14nb6 [salo 2003-11-27]
