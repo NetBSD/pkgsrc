@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/29 17:49:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/29 23:49:11 kristerw Exp $
 #
 
 DISTNAME=		gok-0.8.4
@@ -27,7 +27,7 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/gok-1.0.pc.in
 
 GCONF2_SCHEMAS=		gok.schemas
 
-.include "../../wip/at-spi/buildlink2.mk"
+.include "../../devel/at-spi/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libwnck/buildlink2.mk"
