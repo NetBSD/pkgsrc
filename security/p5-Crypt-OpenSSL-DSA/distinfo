@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 22:07:21 heinz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:10 agc Exp $
 
 SHA1 (Crypt-OpenSSL-DSA-0.11.tar.gz) = 22261da8f7125bd52681acc4e6d48f9c97a4191e
+RMD160 (Crypt-OpenSSL-DSA-0.11.tar.gz) = 9b4d9cfb2b8d6c80ae921bd073c1d3ac1945f1ea
 Size (Crypt-OpenSSL-DSA-0.11.tar.gz) = 5415 bytes

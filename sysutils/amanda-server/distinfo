@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/11/12 12:13:45 mjl Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 13:40:50 agc Exp $
 
 SHA1 (amanda-2.4.4p4.tar.gz) = e44b40ea0f8e51336716ab455b27c69f4616d7f6
+RMD160 (amanda-2.4.4p4.tar.gz) = d145a5ebb0df340af6aee0e8a15da6b54dfb3051
 Size (amanda-2.4.4p4.tar.gz) = 1422735 bytes
 SHA1 (patch-aa) = af41269882c8dfdb45bc177a45aa86122443d8df
 SHA1 (patch-ab) = 87e628b0fbcd4174cb63f87ed8eb10a6cc87af46

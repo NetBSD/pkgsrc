@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/12/15 19:34:40 jlam Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 13:10:06 agc Exp $
 
 SHA1 (fressh-0.8.1.tar.bz2) = 4dd0a6d4240337b4726a6a68b17878a45974cf82
+RMD160 (fressh-0.8.1.tar.bz2) = fa1c3444febc0eb73e2367753ed261b30000171c
 Size (fressh-0.8.1.tar.bz2) = 110390 bytes
 SHA1 (patch-aa) = 0b65db8177ffb81084412f9716f73e92920d559c
 SHA1 (patch-ab) = 612c7f5e1541d413f3d336a4330528343f78e420

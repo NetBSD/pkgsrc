@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.26 2004/11/30 00:27:10 xtraeme Exp $
+$NetBSD: distinfo,v 1.27 2005/02/24 13:10:13 agc Exp $
 
 SHA1 (sudo-1.6.8p5.tar.gz) = cb3773d11ffbbc3f485314168061889a2d5add60
+RMD160 (sudo-1.6.8p5.tar.gz) = 8de1f80eab3d4131575f4a6953ac11e5f6e17296
 Size (sudo-1.6.8p5.tar.gz) = 584832 bytes
 SHA1 (patch-aa) = a4f29f2c228eb3b4af0872cf04a00ffdf41c603c
 SHA1 (patch-af) = 870a0f0504449dbb839c8b8c2dfe6505a9c9ec68

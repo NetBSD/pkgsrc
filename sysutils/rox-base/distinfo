@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/21 11:25:07 rh Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:40:56 agc Exp $
 
 SHA1 (rox/rox-base-1.0.2.tgz) = 92fc6b6c04a7e8ce488b374fa3d80b3ae70ebcdc
+RMD160 (rox/rox-base-1.0.2.tgz) = df958591f36516cc7d56faa8ff7462c4160fd79a
 Size (rox/rox-base-1.0.2.tgz) = 266984 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/12/18 13:18:13 xtraeme Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 13:40:50 agc Exp $
 
 SHA1 (atitvout-0.4.tar.gz) = ac0d3f19119fa0c096099f952c9c59ac44ccc840
+RMD160 (atitvout-0.4.tar.gz) = 594fbc3a20362275a2d9b4ca13ae0b7ae761bcf3
 Size (atitvout-0.4.tar.gz) = 27163 bytes
 SHA1 (patch-aa) = 68e79e289b1aadbba3aa1dbf3137fdf90c486afa
 SHA1 (patch-ab) = 7cf654f43489be3ae982b17f458bf733342469b0

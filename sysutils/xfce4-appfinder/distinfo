@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/17 12:48:36 martti Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:40:59 agc Exp $
 
 SHA1 (xfce4-appfinder-4.2.0.tar.gz) = cd877920def6ed363a0ea71130557db20eee583b
+RMD160 (xfce4-appfinder-4.2.0.tar.gz) = 6071f0ae18ad8056f2ac84b5ad75beb38ff68bfa
 Size (xfce4-appfinder-4.2.0.tar.gz) = 439294 bytes

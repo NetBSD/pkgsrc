@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.20 2005/02/21 10:08:22 adam Exp $
+$NetBSD: distinfo,v 1.21 2005/02/24 13:10:08 agc Exp $
 
 SHA1 (nessus-libraries-2.2.3.tar.gz) = 223a6a2549709236ddc6a399c275b47e7163eb41
+RMD160 (nessus-libraries-2.2.3.tar.gz) = d23d84d4e5a3f4fdb17e5501b41f7bffb9a6f32d
 Size (nessus-libraries-2.2.3.tar.gz) = 424219 bytes
 SHA1 (patch-aa) = c525abf1ccfe4c3921609b91e335fa19b0bcab87
 SHA1 (patch-ab) = 982846ca823fb9f83b2d670f61f78b3b61f6d704

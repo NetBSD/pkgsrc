@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.37 2004/11/25 19:25:28 xtraeme Exp $
+$NetBSD: distinfo,v 1.38 2005/02/24 13:10:08 agc Exp $
 
 SHA1 (openssh-3.9p1.tar.gz) = 80b19d83a9d4717f5c38b2d950501e1471f60afc
+RMD160 (openssh-3.9p1.tar.gz) = e4abf280a18e3ae046d0dee19dab919bba8e5568
 Size (openssh-3.9p1.tar.gz) = 854027 bytes
 SHA1 (openssh-3.9p1-hpn.diff) = 1821c590b9b5effa3750ebf0166fe3f22d00faad
 Size (openssh-3.9p1-hpn.diff) = 8387 bytes

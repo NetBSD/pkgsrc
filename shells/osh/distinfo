@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/12/27 21:13:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:14:41 agc Exp $
 
 SHA1 (osh-041028.tar.gz) = ff11fbf22832eb13b8ef4937cdb8e59065794e4a
+RMD160 (osh-041028.tar.gz) = 0e1f4ab1bc0eeaa5d7d1571f08b2095bb68fb7f4
 Size (osh-041028.tar.gz) = 55152 bytes

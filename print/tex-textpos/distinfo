@@ -1,12 +1,17 @@
-$NetBSD: distinfo,v 1.3 2003/03/31 06:48:02 jmc Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:51:45 agc Exp $
 
 SHA1 (textpos/textpos.ins) = e3406f1ec1fa70cb76ac49ede44a21ed5221efac
+RMD160 (textpos/textpos.ins) = a5228d0768e201bd8cef2b8f2dd7df262ff70e34
 Size (textpos/textpos.ins) = 372 bytes
 SHA1 (textpos/LICENCE) = 09fe847dc2c994295c1151c5a508bc74e119e059
+RMD160 (textpos/LICENCE) = 2952b59fcf35ae28a2e992a17575947266e1fa4b
 Size (textpos/LICENCE) = 14965 bytes
 SHA1 (textpos/README) = b2a9851ec9878359aa5addb88a6fe7cc43ec3a32
+RMD160 (textpos/README) = 77645e6602f95f623f1afd33b7c452c20902d7a1
 Size (textpos/README) = 4762 bytes
 SHA1 (textpos/textpos.dtx) = cf4a0834fed990b8a50b4ca91a3fd799650251a0
+RMD160 (textpos/textpos.dtx) = e1ef2db4fe7efcea0e971ef464b2ed165621859c
 Size (textpos/textpos.dtx) = 34531 bytes
 SHA1 (textpos/VERSION) = 79d9e2c9b644339a615c2486b0889837e0475b10
+RMD160 (textpos/VERSION) = 04f743c9e9bdf2d4972de81fa93055c97e06efb9
 Size (textpos/VERSION) = 5 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/11/30 05:58:04 taca Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 13:10:04 agc Exp $
 
 SHA1 (AiCA-0.81.tar.gz) = aa74edda60b29f21cca17ff6b09b07509705db18
+RMD160 (AiCA-0.81.tar.gz) = b898874dc1e904f37f3e22eb6bbbf370c78a156a
 Size (AiCA-0.81.tar.gz) = 703433 bytes
 SHA1 (patch-aa) = 45878a0aa80b3201c4e3e7c4d1fc593412745855
 SHA1 (patch-ab) = 524c4f8ca5daaea0c28d113ddf94fac52c2deeac

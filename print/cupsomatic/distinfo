@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/02/13 18:55:53 jlam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:51:42 agc Exp $
 
 SHA1 (cupsomatic-2.2/cupsomatic) = 51fa0709b6c2d9685a5450b938ce809c42686d3a
+RMD160 (cupsomatic-2.2/cupsomatic) = 8f9f2d62594096b978dbe6dc359b5a4024e6f303
 Size (cupsomatic-2.2/cupsomatic) = 35814 bytes
 SHA1 (patch-aa) = 566607e0703d8a4216d47cbada4cf9329c94e9e4

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/06/05 11:24:27 markd Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:51:42 agc Exp $
 
 SHA1 (dvipdfm-0.13.2c.tar.gz) = db6a45179e60c865dae18d5c6ec084ac64cb4088
+RMD160 (dvipdfm-0.13.2c.tar.gz) = 722fe72e527a0c832c1de58cf8ccc3667e5bcfd9
 Size (dvipdfm-0.13.2c.tar.gz) = 216661 bytes
 SHA1 (patch-aa) = f28e08543df3be82aad225cdc1fada86978210bc

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/01/13 19:48:50 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:10:06 agc Exp $
 
 SHA1 (gpass-0.4.4.tar.gz) = 3b9e91e497cfee2854bef5e42a36fc31874493fb
+RMD160 (gpass-0.4.4.tar.gz) = 3dac8175a3d09dbfcfd11aa79d73934a9079ef61
 Size (gpass-0.4.4.tar.gz) = 415166 bytes
 SHA1 (patch-aa) = 773b024a7a217efbafabe35fbe81e325f9c93589
 SHA1 (patch-ab) = dd89c4f88923a51455f00027ac5ca61d8faf53b1

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/14 01:12:54 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:40:55 agc Exp $
 
 SHA1 (nrg2iso-0.2.tar.gz) = ae7131504c57bdf817848f8193ddd48fa3cf3b2d
+RMD160 (nrg2iso-0.2.tar.gz) = 22d6dcf9c1acb3927011947e4ddff1a519744d9e
 Size (nrg2iso-0.2.tar.gz) = 8377 bytes

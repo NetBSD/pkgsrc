@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2005/01/24 15:22:16 kei Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 12:51:44 agc Exp $
 
 SHA1 (teTeX/tetex-src-2.0.2.tar.gz) = 6445206b14d659458ee352df78d2c2daf8e88ab3
+RMD160 (teTeX/tetex-src-2.0.2.tar.gz) = 9bbb274c0598547bcecb00ff48e459d41bc65e93
 Size (teTeX/tetex-src-2.0.2.tar.gz) = 11745933 bytes
 SHA1 (patch-aa) = 77feabef32c612ac5d0250b1e4db50a3fc497990
 SHA1 (patch-ab) = 964e7e09867b605db6e448226b04dd7d63551dfa

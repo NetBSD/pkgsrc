@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/10/01 15:17:58 mcr Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:11 agc Exp $
 
 SHA1 (Tie-EncryptedHash-1.1.tar.gz) = e5d4e631b62cf2af55cb1ccce9354294b6c60d4a
+RMD160 (Tie-EncryptedHash-1.1.tar.gz) = b0abcba8e5f8fc34c0c333fde94e65f74d99bd6c
 Size (Tie-EncryptedHash-1.1.tar.gz) = 10714 bytes

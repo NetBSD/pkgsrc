@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/09/08 12:00:09 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 13:14:41 agc Exp $
 
 SHA1 (posh_0.3.9.tar.gz) = 8ae9e3b0dee08b2a6ccd694000fad49cec3678b0
+RMD160 (posh_0.3.9.tar.gz) = 0362c8171a169c09908718892275dd7dc1558c4b
 Size (posh_0.3.9.tar.gz) = 727145 bytes
 SHA1 (patch-aa) = bdd8ffb67ccd60064b0fb5bda7935001f6807380

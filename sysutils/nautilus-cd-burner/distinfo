@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/12/28 21:58:33 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:40:55 agc Exp $
 
 SHA1 (nautilus-cd-burner-2.8.6.tar.bz2) = bd24825526cd8909b29b875188e3a4af730ab8d8
+RMD160 (nautilus-cd-burner-2.8.6.tar.bz2) = 102af76543bf32b0a4c6071d3677b8d0b5ebb2ea
 Size (nautilus-cd-burner-2.8.6.tar.bz2) = 545573 bytes
 SHA1 (patch-aa) = e3a00bb52a0327f0f7587c4ea7030128adc70fb8
 SHA1 (patch-ab) = df9449617dcb2d759af503d054d29bee9f1234b4

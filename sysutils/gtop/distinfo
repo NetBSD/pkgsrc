@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2003/10/14 20:58:38 tron Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 13:40:53 agc Exp $
 
 SHA1 (gtop-1.0.13.tar.gz) = 114b3068c6c66b7cd582c6bfe2d1143957ae5a19
+RMD160 (gtop-1.0.13.tar.gz) = 39cbacba2c0dbbbd923557d900232d5143e510d6
 Size (gtop-1.0.13.tar.gz) = 823015 bytes
 SHA1 (patch-aa) = 5f17676fc7fca9cf8b99dc02fd34142f99ff5fd3
 SHA1 (patch-ab) = d97ba2e37838cd93be8b1d33ebdfe81d6d64b1d1

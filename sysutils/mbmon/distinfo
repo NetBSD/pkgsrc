@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.10 2004/11/28 11:26:44 hira Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 13:40:54 agc Exp $
 
 SHA1 (xmbmon205.tar.gz) = 4fc4b1442a6e638b2c5cbcf9b26ca17465b0da70
+RMD160 (xmbmon205.tar.gz) = 5097801803ac13082c59fa9db9036098de11de82
 Size (xmbmon205.tar.gz) = 142987 bytes
 SHA1 (xmbmon205conf.tar.gz) = ec834490d9171b94092a1e0373f8eb36030c5d8e
+RMD160 (xmbmon205conf.tar.gz) = c0ef3b5622a97cec2b6d86916a95902ed11c620a
 Size (xmbmon205conf.tar.gz) = 32462 bytes
 SHA1 (patch-aa) = 911efa33ae462e32963936249df1d0ab5036f006
 SHA1 (patch-ab) = 9b578976808160e960a77079f86621de0b6ccdf3

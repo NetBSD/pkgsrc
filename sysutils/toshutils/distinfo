@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2002/03/21 05:13:41 fredb Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 13:40:58 agc Exp $
 
 SHA1 (toshutils-991217.tar.gz) = b4eaf35fed37890c08f60999a2143f023cf632c1
+RMD160 (toshutils-991217.tar.gz) = ea81ea88f53a4c0ed960868fc0604f9f82aeb836
 Size (toshutils-991217.tar.gz) = 138892 bytes
 SHA1 (patch-aa) = 1e984f192a9d4b66b0e66acea8ce892e362ba072
 SHA1 (patch-ab) = a654bc20cbd3c559038589dbb78c9a1f70552835

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.26 2004/12/22 14:50:30 abs Exp $
+$NetBSD: distinfo,v 1.27 2005/02/24 13:40:56 agc Exp $
 
 SHA1 (rconfig-0.42.tbz) = 4141af02b5f7b4dc7f4557f82cb84f154cfb8955
+RMD160 (rconfig-0.42.tbz) = f1d4dff544a15afb733bc0c2ca88625899c12e1e
 Size (rconfig-0.42.tbz) = 12473 bytes

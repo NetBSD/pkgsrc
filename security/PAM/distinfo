@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2004/11/19 14:54:55 jlam Exp $
+$NetBSD: distinfo,v 1.12 2005/02/24 13:10:04 agc Exp $
 
 SHA1 (Linux-PAM-0.77.tar.gz) = 58dff29aec3c0b6a9e9b53af6fb643056ce0f304
+RMD160 (Linux-PAM-0.77.tar.gz) = 15391ed7bed7b506bb391608b735332d0391580c
 Size (Linux-PAM-0.77.tar.gz) = 442569 bytes
 SHA1 (patch-aa) = 99f4889c24ff71a9e40e0e913d6071b78a326877
 SHA1 (patch-ab) = 02fbb08bc8f74860eada3bdb23333ec5c191f124

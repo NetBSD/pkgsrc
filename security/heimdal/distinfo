@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/12/14 19:24:29 jlam Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 13:10:06 agc Exp $
 
 SHA1 (heimdal-0.6.3.tar.gz) = 91863a1bd9f8a55063a09c28a5f41985b7a31145
+RMD160 (heimdal-0.6.3.tar.gz) = 5b1b8fa5bfd722350eeef80d1ac5b8579387e40b
 Size (heimdal-0.6.3.tar.gz) = 3333604 bytes
 SHA1 (patch-ab) = 400a9ac3a76ac7e8b4dcc230e0bdf7fc5222fbb7
 SHA1 (patch-ac) = 121961811f559822c6a4f3d7f7e4646b16908942

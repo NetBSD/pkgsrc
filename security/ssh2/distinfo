@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/07/25 12:29:19 grant Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 13:10:13 agc Exp $
 
 SHA1 (ssh-3.2.9.1.tar.gz) = 22e4589c889aef18e53a8942716084f0d8ede7db
+RMD160 (ssh-3.2.9.1.tar.gz) = 21bfe97fae477dea1109c6e6eb44a448b6b2f250
 Size (ssh-3.2.9.1.tar.gz) = 2269281 bytes
 SHA1 (patch-aa) = 34353e23d81916202216dc401e99f17b08f3d6fb
 SHA1 (patch-ab) = 314e2e4165fb1d429297f235c9712ddc0d924865
