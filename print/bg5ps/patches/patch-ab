@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/06/15 08:22:17 shell Exp $
+
+--- bg5ps.conf.orig	Fri Dec 21 13:39:19 2001
++++ bg5ps.conf
+@@ -4,7 +4,8 @@
+ Encoding="big5"
+ 
+ #chineseFontPath: 指定中文字型的路徑(預設值: 與 bg5ps 同) 
+-chineseFontPath="/usr/share/fonts/ttf/"
++#chineseFontPath="/usr/share/fonts/ttf/"
++chineseFontPath="/usr/X11R6/lib/X11/fonts/TrueType/"
+ 
+ #modify the above line
+ 
