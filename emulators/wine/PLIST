@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/07/19 22:44:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2003/09/15 10:51:36 adam Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -41,8 +41,10 @@ include/wine/msvcrt/eh.h
 include/wine/msvcrt/errno.h
 include/wine/msvcrt/fcntl.h
 include/wine/msvcrt/io.h
+include/wine/msvcrt/limits.h
 include/wine/msvcrt/locale.h
 include/wine/msvcrt/malloc.h
+include/wine/msvcrt/math.h
 include/wine/msvcrt/mbctype.h
 include/wine/msvcrt/mbstring.h
 include/wine/msvcrt/process.h
@@ -63,32 +65,6 @@ include/wine/msvcrt/time.h
 include/wine/msvcrt/unistd.h
 include/wine/msvcrt/wchar.h
 include/wine/msvcrt/wctype.h
-include/wine/obj_cache.h
-include/wine/obj_comcat.h
-include/wine/obj_commdlgbrowser.h
-include/wine/obj_connection.h
-include/wine/obj_contextmenu.h
-include/wine/obj_control.h
-include/wine/obj_dockingwindowframe.h
-include/wine/obj_dragdrop.h
-include/wine/obj_dragdrophelper.h
-include/wine/obj_enumguid.h
-include/wine/obj_enumidlist.h
-include/wine/obj_extracticon.h
-include/wine/obj_inplace.h
-include/wine/obj_olefont.h
-include/wine/obj_oleobj.h
-include/wine/obj_oleundo.h
-include/wine/obj_oleview.h
-include/wine/obj_picture.h
-include/wine/obj_property.h
-include/wine/obj_serviceprovider.h
-include/wine/obj_shellbrowser.h
-include/wine/obj_shellextinit.h
-include/wine/obj_shellfolder.h
-include/wine/obj_shelllink.h
-include/wine/obj_shellview.h
-include/wine/obj_webbrowser.h
 include/wine/unicode.h
 include/wine/windows/accctrl.h
 include/wine/windows/audevcod.h
@@ -98,6 +74,7 @@ include/wine/windows/basetsd.h
 include/wine/windows/cderr.h
 include/wine/windows/cguid.h
 include/wine/windows/comcat.h
+include/wine/windows/comcat.idl
 include/wine/windows/commctrl.h
 include/wine/windows/commdlg.h
 include/wine/windows/compobj.h
@@ -139,6 +116,7 @@ include/wine/windows/dmusicf.h
 include/wine/windows/dmusici.h
 include/wine/windows/dmusics.h
 include/wine/windows/docobj.h
+include/wine/windows/docobj.idl
 include/wine/windows/dpaddr.h
 include/wine/windows/dplay.h
 include/wine/windows/dplay8.h
@@ -149,6 +127,8 @@ include/wine/windows/dshow.h
 include/wine/windows/dsound.h
 include/wine/windows/dyngraph.idl
 include/wine/windows/excpt.h
+include/wine/windows/exdisp.h
+include/wine/windows/exdisp.idl
 include/wine/windows/fci.h
 include/wine/windows/fdi.h
 include/wine/windows/guiddef.h
@@ -164,6 +144,7 @@ include/wine/windows/lmapibuf.h
 include/wine/windows/lmbrowsr.h
 include/wine/windows/lmcons.h
 include/wine/windows/lmerr.h
+include/wine/windows/lmstats.h
 include/wine/windows/lmwksta.h
 include/wine/windows/iphlpapi.h
 include/wine/windows/ipifcons.h
@@ -183,6 +164,8 @@ include/wine/windows/mmreg.h
 include/wine/windows/mmsystem.h
 include/wine/windows/msacm.h
 include/wine/windows/msacmdlg.h
+include/wine/windows/msi.h
+include/wine/windows/msiquery.h
 include/wine/windows/mssip.h
 include/wine/windows/mswsock.h
 include/wine/windows/nb30.h
@@ -199,12 +182,14 @@ include/wine/windows/objbase.h
 include/wine/windows/objidl.h
 include/wine/windows/objidl.idl
 include/wine/windows/ocidl.h
+include/wine/windows/ocidl.idl
 include/wine/windows/ole2.h
 include/wine/windows/ole2ver.h
 include/wine/windows/oleauto.h
 include/wine/windows/olectl.h
 include/wine/windows/oledlg.h
 include/wine/windows/oleidl.h
+include/wine/windows/oleidl.idl
 include/wine/windows/pktdef.h
 include/wine/windows/poppack.h
 include/wine/windows/prsht.h
@@ -224,11 +209,16 @@ include/wine/windows/rpcndr.h
 include/wine/windows/rpcnterr.h
 include/wine/windows/rpcproxy.h
 include/wine/windows/servprov.h
+include/wine/windows/servprov.idl
 include/wine/windows/setupapi.h
 include/wine/windows/shellapi.h
 include/wine/windows/shlguid.h
 include/wine/windows/shlobj.h
 include/wine/windows/shlwapi.h
+include/wine/windows/shobjidl.h
+include/wine/windows/shobjidl.idl
+include/wine/windows/shtypes.h
+include/wine/windows/shtypes.idl
 include/wine/windows/sipbase.h
 include/wine/windows/sql.h
 include/wine/windows/sqlext.h
@@ -242,6 +232,7 @@ include/wine/windows/tlhelp32.h
 include/wine/windows/unknwn.h
 include/wine/windows/unknwn.idl
 include/wine/windows/urlmon.h
+include/wine/windows/urlmon.idl
 include/wine/windows/uuids.h
 include/wine/windows/ver.h
 include/wine/windows/vfw.h
@@ -390,6 +381,8 @@ lib/wine/libmapi32.def
 lib/wine/libmpr.def
 lib/wine/libmsacm32.def
 lib/wine/libmsdmo.def
+lib/wine/libmshtml.def
+lib/wine/libmsi.def
 lib/wine/libmsimg32.def
 lib/wine/libmsnet32.def
 lib/wine/libmsrle32.def
@@ -397,6 +390,7 @@ lib/wine/libmsvcrt.def
 lib/wine/libmsvcrt20.def
 lib/wine/libmsvcrtd.def
 lib/wine/libmsvfw32.def
+lib/wine/libmswsock.def
 lib/wine/libnetapi32.def
 lib/wine/libntdll.def
 lib/wine/libodbc32.def
@@ -461,6 +455,8 @@ lib/wine/msacm32.dll.so
 lib/wine/msadp32.acm.so
 lib/wine/msdmo.dll.so
 lib/wine/msg711.acm.so
+lib/wine/mshtml.dll.so
+lib/wine/msi.dll.so
 lib/wine/msimg32.dll.so
 lib/wine/msisys.ocx.so
 lib/wine/msnet32.dll.so
@@ -470,6 +466,7 @@ lib/wine/msvcrt20.dll.so
 lib/wine/msvcrtd.dll.so
 lib/wine/msvfw32.dll.so
 lib/wine/msvideo.dll.so
+lib/wine/mswsock.dll.so
 lib/wine/netapi32.dll.so
 lib/wine/notepad.exe.so
 lib/wine/ntdll.dll.so
@@ -516,7 +513,7 @@ lib/wine/start.exe.so
 lib/wine/sti.dll.so
 lib/wine/storage.dll.so
 lib/wine/stress.dll.so
-lib/wine/system.dll.so
+lib/wine/system.drv.so
 lib/wine/tapi32.dll.so
 lib/wine/toolhelp.dll.so
 lib/wine/ttydrv.dll.so

@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.4 2003/06/23 09:03:07 adam Exp $
+$NetBSD: patch-ad,v 1.5 2003/09/15 10:51:39 adam Exp $
 
---- dlls/iphlpapi/ifenum.c.orig	2003-06-19 12:04:06.000000000 +0200
-+++ dlls/iphlpapi/ifenum.c	2003-06-19 12:07:17.000000000 +0200
-@@ -69,6 +69,7 @@
+--- dlls/iphlpapi/ifenum.c.orig	2003-09-06 01:08:37.000000000 +0200
++++ dlls/iphlpapi/ifenum.c
+@@ -70,6 +70,7 @@
  #endif
  
  #include <sys/types.h>
 +#include <sys/param.h>
  
- #if HAVE_SYS_SOCKET_H
+ #ifdef HAVE_SYS_SOCKET_H
  #include <sys/socket.h>
