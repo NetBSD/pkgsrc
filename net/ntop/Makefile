@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/05/24 20:39:47 tv Exp $
+# $NetBSD: Makefile,v 1.9 1999/05/26 22:37:58 tron Exp $
 
 DISTNAME=		ntop-1.0
 CATEGORIES=		net
@@ -12,7 +12,7 @@ DEPENDS=		ncurses-1.9.9g:../../devel/ncurses
 
 HOMEPAGE=		http://www-serra.unipi.it/~ntop/
 
-NOT_FOR_PLATFORM=	*-*-{alpha,mips}	# elf problems WRT libcurses
+NOT_FOR_PLATFORM=	*-*-alpha *-*-mips	# elf problems WRT libcurses
 
 HAS_CONFIGURE=		yes
 GNU_CONFIGURE=		yes
