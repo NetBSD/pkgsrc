@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/20 12:58:56 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/19 13:40:54 drochner Exp $
 
 DISTNAME=		yplot-1.1.0
 CATEGORIES=		graphics math
@@ -11,7 +11,6 @@ COMMENT=		Yorick interface to PLplot
 DEPENDS+=		yorick-1.4*:../../math/yorick
 DEPENDS+=		plplot>=5.0.3:../../graphics/plplot
 BUILD_DEPENDS+=		teTeX>=1.0:../../print/teTeX
-BUILD_DEPENDS+=		python>=1.5:../../lang/python
 
 EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
 CONFIGURE_ENV+=		PLPLOT_PREFIX=${PLPLOT_PREFIX}
@@ -21,4 +20,8 @@ CONFIGURE_ENV+=		YORICK_CONTRIB_PREFIX=${YORICK_PREFIX}/lib/yorick/1.4
 GNU_CONFIGURE=		yes
 MAKEFILE=		Makefile.build
 
+PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_PATCH_SCRIPTS=	parse_documentation.py
+
+.include "../../lang/python/application.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
