@@ -1,23 +1,18 @@
-# $NetBSD: Makefile,v 1.29 2001/11/29 01:12:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 2002/03/02 00:08:15 kei Exp $
 #
 
-DISTNAME=	w3m-0.2.1
-PKGNAME=	w3m-0.2.1.0.19
-PKGREVISION=	2
+DISTNAME=	w3m-0.2.5-m17n-20020216
+PKGNAME=	w3m-0.2.5
 CATEGORIES=	www
-MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/
-
-PATCH_SITES=	http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/
-PATCHFILES=	w3m-0.2.1-m17n-0.19.patch.gz
-PATCH_DIST_STRIP= -p1
+MASTER_SITES=	http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/
 
 MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://www2u.biglobe.ne.jp/~hsaka/w3m/
 COMMENT=	multilingualized version of a pager/text-based browser w3m
 
-DEPENDS=	boehm-gc>=5.3:../../devel/boehm-gc
-
 CONFLICTS+=	w3m-m17n-[0-9]*
+
+USE_BUILDLINK_ONLY=	yes
 
 HELPDIR=        share/doc/w3m
 HELPERDIR=      lib/w3m
@@ -57,10 +52,10 @@ CONFIGURE_ENV+=	use_unicode=n
 .endif
 CONFIGURE_ENV+=	charset=ISO-2022-JP-2
 .if ${W3M_USE_JAPANESE_MESSAGES} == YES
-CONFIGURE_ENV+=	lang=ja
+CONFIGURE_ARGS+=	--lang=ja
 HELP_LANG=			_ja
 .else
-CONFIGURE_ENV+=	lang=en
+CONFIGURE_ARGS+=	--lang=en
 HELP_LANG=			_en
 .endif
 .if ${W3M_USE_COLOR} == YES
@@ -81,6 +76,9 @@ CONFIGURE_ENV+=	use_cookie=n
 .if ${W3M_USE_SSL} == YES
 USE_SSL=			YES
 CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=n
+CONFIGURE_ARGS+=	--ssl-includedir=${BUILDLINK_DIR}/include/openssl
+CONFIGURE_ARGS+=	--ssl-libdir=${BUILDLINK_DIR}/lib
+.include "../../security/openssl/buildlink.mk"
 .else
 CONFIGURE_ENV+=	use_ssl=n use_ssl_verify=n
 .endif
@@ -91,16 +89,20 @@ HELP_W3M=			-lynx
 CONFIGURE_ENV+=	lynx_key=n
 HELP_W3M=			-w3m
 .endif
-CONFIGURE_ENV+= def_bindir=${LOCALBASE}/bin
-CONFIGURE_ENV+= def_libdir=${LOCALBASE}/${HELPERDIR}
-CONFIGURE_ENV+= def_helpdir=${LOCALBASE}/${HELPDIR}
 CONFIGURE_ENV+= use_menu=y use_matrix=n ansi_color=y
 CONFIGURE_ENV+= ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+= dcc="${CC}" dtermlib="-ltermcap"
 CONFIGURE_ENV+= dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
 CONFIGURE_ENV+= dmodel=6
 CONFIGURE_ENV+= LOCALBASE="${LOCALBASE}"
-CONFIGURE_ARGS+= -suffix=
+CONFIGURE_ARGS+= --yes
+CONFIGURE_ARGS+= --suffix=
+CONFIGURE_ARGS+= --prefix=${PREFIX}
+CONFIGURE_ARGS+= --bindir=${PREFIX}/bin
+CONFIGURE_ARGS+= --libdir=${PREFIX}/${HELPERDIR}
+CONFIGURE_ARGS+= --helpdir=${PREFIX}/${HELPDIR}
+CONFIGURE_ARGS+= --gc-includedir=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+= --gc-libdir=${BUILDLINK_DIR}/lib
 
 post-extract:
 	@(cd ${WRKSRC}/doc; ${RM} -fr CVS)
@@ -111,7 +113,7 @@ post-patch:
 
 # do not look at previous configuration
 do-configure:
-	@yes '' | (cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" \
+	@(cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" \
 	    INSTALL="${INSTALL_SCRIPT}"                             \
 	    CFLAGS="${CFLAGS}" INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
@@ -144,4 +146,5 @@ post-install:
 	    ${RM} -f w3mhelp.html; \
 	    ${LN} -s w3mhelp${HELP_W3M}${HELP_LANG}.html w3mhelp.html)
 
+.include "../../devel/boehm-gc/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

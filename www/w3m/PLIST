@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:19:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/02 00:08:15 kei Exp $
 bin/w3m
 man/man1/w3m.1
 man/ja_JP.EUC/man1/w3m.1
@@ -15,9 +15,9 @@ share/doc/w3m/doc/README
 share/doc/w3m/doc/README.cygwin
 share/doc/w3m/doc/README.dict
 share/doc/w3m/doc/README.func
+share/doc/w3m/doc/README.img
 share/doc/w3m/doc/README.m17n
 share/doc/w3m/doc/STORY.html
-share/doc/w3m/doc/history
 share/doc/w3m/doc/keymap.default
 share/doc/w3m/doc/keymap.lynx
 share/doc/w3m/doc/menu.default
@@ -26,7 +26,6 @@ share/doc/w3m/doc/w3m.1
 @comment share/doc/w3m/doc-jp
 share/doc/w3m/doc-jp/FAQ.html
 share/doc/w3m/doc-jp/HISTORY
-share/doc/w3m/doc-jp/HISTORY.kokb
 share/doc/w3m/doc-jp/MANUAL.html
 share/doc/w3m/doc-jp/README
 share/doc/w3m/doc-jp/README.SSL
@@ -34,14 +33,12 @@ share/doc/w3m/doc-jp/README.cookie
 share/doc/w3m/doc-jp/README.cygwin
 share/doc/w3m/doc-jp/README.dict
 share/doc/w3m/doc-jp/README.func
-share/doc/w3m/doc-jp/README.hp
+share/doc/w3m/doc-jp/README.img
 share/doc/w3m/doc-jp/README.keymap
-share/doc/w3m/doc-jp/README.kokb
 share/doc/w3m/doc-jp/README.m17n
 share/doc/w3m/doc-jp/README.mailcap
 share/doc/w3m/doc-jp/README.menu
 share/doc/w3m/doc-jp/STORY.html
-share/doc/w3m/doc-jp/TODO.m17n
 share/doc/w3m/doc-jp/keymap.default
 share/doc/w3m/doc-jp/keymap.lynx
 share/doc/w3m/doc-jp/menu.default
