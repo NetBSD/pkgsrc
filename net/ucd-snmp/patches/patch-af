@@ -1,17 +1,16 @@
-$NetBSD: patch-af,v 1.1 1999/08/15 11:07:14 tron Exp $
-
---- agent/mibgroup/mibII/interfaces.c.orig	Tue Mar 16 00:46:12 1999
-+++ agent/mibgroup/mibII/interfaces.c	Thu Jun 17 10:21:06 1999
-@@ -114,7 +114,7 @@
- 
- #if HAVE_SYS_SYSCTL_H
- #include <sys/sysctl.h>
+$NetBSD: patch-af,v 1.2 2000/01/23 10:41:10 itojun Exp $
+--- agent/mibgroup/mibII/interfaces.c.orig	Fri Jan 21 05:33:12 2000
++++ agent/mibgroup/mibII/interfaces.c	Fri Jan 21 05:46:58 2000
+@@ -121,7 +121,7 @@
+ #if defined(freebsd3)
+ #    define USE_SYSCTL_IFLIST
+ #else
 -# if defined(CTL_NET) && !defined(freebsd2)
 +# if defined(CTL_NET) && !defined(freebsd2) && !defined(netbsd1)
  #  ifdef PF_ROUTE
  #   ifdef NET_RT_IFLIST
  #    define USE_SYSCTL_IFLIST
-@@ -1462,16 +1462,31 @@
+@@ -1549,16 +1549,31 @@
  	    cp = strchr(saveName, '\0');
  	    string_append_int (cp, ifnet.if_unit);
  #endif
