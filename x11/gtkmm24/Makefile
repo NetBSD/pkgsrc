@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:33 tv Exp $
-#
+# $NetBSD: Makefile,v 1.3 2004/11/04 13:59:56 adam Exp $
 
-DISTNAME=	gtkmm-2.4.4
-PKGNAME=	gtkmm24-2.4.4
-PKGREVISION=	1
+DISTNAME=	gtkmm-2.4.7
+PKGNAME=	gtkmm24-2.4.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.4/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
@@ -24,9 +23,9 @@ PKGCONFIG_OVERRIDE+=	gdk/gdkmm-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	pango/pangomm-1.4.pc.in
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libsigc++2/buildlink3.mk"
 .include "../../devel/glibmm24/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
