@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 1999/05/28 21:58:25 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/06/03 16:42:35 tron Exp $
 
-DISTNAME=	squid-2.2.STABLE2-src
-PKGNAME=	squid-2.2s2
+DISTNAME=	squid-2.2.STABLE3-src
+PKGNAME=	squid-2.2s3
 CATEGORIES=	www
 MASTER_SITES=  \
 	ftp://squid.nlanr.net/pub/squid-2/STABLE/ \
@@ -33,7 +33,7 @@ CONFIGURE_ENV+=		CPPFLAGS=${CPPFLAGS} \
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.share
-WRKSRC=		${WRKDIR}/squid-2.2.STABLE2
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
