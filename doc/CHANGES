@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4834 2004/02/15 03:00:09 minskim Exp $
+$NetBSD: CHANGES,v 1.4835 2004/02/15 03:43:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added socat-1.3.2.2 [minskim 2004-02-14]
 	Added py-ogg-1.3 [minskim 2004-02-14]
 	Updated xemacs-nox11 to 21.4.15 [minskim 2004-02-15]
+	Updated xemacs-packages to 1.14 [minskim 2004-02-15]
