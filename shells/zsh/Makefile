@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/09/24 09:51:34 tron Exp $
+# $NetBSD: Makefile,v 1.29 2001/10/05 16:36:00 tron Exp $
 
 DISTNAME=       zsh-4.0.2
 CATEGORIES=	shells
@@ -28,6 +28,8 @@ PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 PLIST_SRC=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .endif
 .endif
+
+.undef MANZ
 
 post-install:
 	@cd ${WRKSRC}/Doc; ${MAKE} install.info
