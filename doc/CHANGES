@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7654 2004/11/02 16:37:02 minskim Exp $
+$NetBSD: CHANGES,v 1.7655 2004/11/02 17:18:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4516,7 +4516,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added metacam-1.2 [simonb 2004-10-02]
 	Added gsmc-1.1 [dmcmahill 2004-10-02]
 	Updated oraedit to 0.1.4 [jdolecek 2004-10-02]
-	Added php4-shmop-4.3.9 [jdolecek 2004-10-02]
+	Added php-shmop-4.3.9 [jdolecek 2004-10-02]
 	Updated intltool to 0.31.3 [jmmv 2004-10-02]
 	Updated freeradius to 1.0.1nb1 [adrianp 2004-10-02]
 	Added mail-notification-0.6.2 [jmmv 2004-10-02]
