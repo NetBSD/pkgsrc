@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.8 2004/08/27 03:45:08 jlam Exp $
+dnl $Id: configure.ac,v 1.9 2004/09/12 16:50:50 jschauma Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([sed],[20040821],[agc@NetBSD.org])
@@ -29,12 +29,9 @@ AC_CHECK_HEADERS([stddef.h stdio.h stdlib.h string.h termios.h unistd.h])
 AC_CHECK_HEADERS([sys/cdefs.h sys/ioctl.h sys/stat.h sys/types.h sys/uio.h])
 
 dnl Check for functions
-AC_CHECK_FUNCS(fgetln)
 AC_CHECK_FUNCS(regcomp)
 AC_CHECK_FUNCS(regexec)
 AC_CHECK_FUNCS(memcpy)
-AC_CHECK_FUNCS(getprogname)
-AC_CHECK_FUNCS(setprogname)
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
