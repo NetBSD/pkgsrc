@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1107 2002/12/16 23:07:32 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1108 2002/12/18 14:19:13 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -772,7 +772,6 @@ MASTER_SITE_XCONTRIB+=	\
 	ftp://sunsite.cnlab-switch.ch/mirror/X11/contrib/ \
 	ftp://ftp.cica.es/pub/X/contrib/ \
 	ftp://ftp.unicamp.br/pub/X11/contrib/ \
-	ftp://ftp.uni-paderborn.de/pub/X11/contrib/ \
 	ftp://ftp.x.org/contrib/
 
 MASTER_SITE_GNU+=	\
