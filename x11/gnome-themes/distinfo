@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/15 00:33:33 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/04/01 19:03:00 jmmv Exp $
 
-SHA1 (gnome-themes-2.4.1.tar.bz2) = 574921560678ac48539a37e17e724ccc9fb16be3
-Size (gnome-themes-2.4.1.tar.bz2) = 2485378 bytes
+SHA1 (gnome-themes-2.6.0.tar.bz2) = d6a571b429c07c135f2e24aa741fdec83bb5b8a7
+Size (gnome-themes-2.6.0.tar.bz2) = 2597765 bytes
