@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/04/24 14:45:15 danw Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/12/04 20:31:29 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OCAML_BUILDLINK3_MK:=	${OCAML_BUILDLINK3_MK}+
@@ -19,6 +19,9 @@ BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 . if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=		yes
 . endif
+
+PRINT_PLIST_AWK+=	/^@dirrm lib\/ocaml$$/ \
+				{ print "@comment in ocaml: " $$0; next }
 
 .endif	# OCAML_BUILDLINK3_MK
 
