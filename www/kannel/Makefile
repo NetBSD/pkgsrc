@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/07/21 14:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/08/31 07:22:31 skrll Exp $
 #
 
 DISTNAME=	gateway-${KANNEL_VER}
@@ -17,9 +17,6 @@ USE_PERL5=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-docs
-
-CFLAGS+=	-I${BUILDLINK_DIR}/include/libxml2 \
-		-I${BUILDLINK_DIR}/include/libxml2/libxml
 
 .include "../../textproc/libxml2/buildlink.mk"
 .include "../../devel/pth/buildlink.mk"
