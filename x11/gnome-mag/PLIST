@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/12/28 21:54:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/02/26 17:26:20 jmmv Exp $
 bin/magnifier
 include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
 lib/bonobo/servers/GNOME_Magnifier.server
@@ -65,6 +65,7 @@ ${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-mag.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-mag.mo
