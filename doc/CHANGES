@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9684 2005/03/30 00:36:41 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9685 2005/03/30 06:43:37 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1821,3 +1821,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cygwin_lib to 1.5.13.1 [tv 2005-03-29]
         Added gxemul-20050329 [xtraeme 2005-03-30]
         Removed mips64emul [xtraeme 2005-03-30]
+	Updated libkver to 0.6 [seb 2005-03-30]
