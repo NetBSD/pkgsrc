@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6529 2004/07/11 13:40:51 wiz Exp $
+$NetBSD: CHANGES,v 1.6530 2004/07/11 17:58:50 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkasp2php to 0.76.17 [salo 2004-07-11]
 	Moved xfce to xfce3 [martti 2004-07-11]
 	Updated groff to 1.19.1 [wiz 2004-07-11]
+	Updated xemacs-packages to 1.14nb1 [cube 2004-07-11]
