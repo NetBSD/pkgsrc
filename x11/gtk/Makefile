@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 1998/12/28 20:49:55 tron Exp $
+# $NetBSD: Makefile,v 1.25 1999/01/16 01:43:29 tron Exp $
 
-DISTNAME=	gtk+-1.1.9
+DISTNAME=	gtk+-1.1.12
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.1/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.1/ \
@@ -11,7 +11,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gtk.org/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	glib-1.1.9:../../devel/glib
+DEPENDS+=	glib-1.1.12:../../devel/glib
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 CONFLICTS=	gtk+-*

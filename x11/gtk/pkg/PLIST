@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 1998/12/18 23:53:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 1999/01/16 01:43:30 tron Exp $
 bin/gtk-config
 include/gdk/gdk.h
 include/gdk/gdkrgb.h
@@ -121,9 +121,9 @@ include/gtk/gtkplug.h
 include/gtk/gtksocket.h
 include/gtk/gtkthemes.h
 include/gtk/gtkintl.h
-lib/libgdk.so.9.0
+lib/libgdk.so.11.1
 lib/libgdk.a
-lib/libgtk.so.9.0
+lib/libgtk.so.11.1
 lib/libgtk.a
 man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
@@ -138,11 +138,39 @@ info/gtk.info-3
 info/gtk.info-4
 info/gtk.info-5
 info/gtk.info-6
+lib/locale/ko/LC_MESSAGES/gtk+.mo
+lib/locale/fr/LC_MESSAGES/gtk+.mo
+lib/locale/de/LC_MESSAGES/gtk+.mo
+lib/locale/no/LC_MESSAGES/gtk+.mo
+lib/locale/sv/LC_MESSAGES/gtk+.mo
+lib/locale/pt/LC_MESSAGES/gtk+.mo
+lib/locale/ja/LC_MESSAGES/gtk+.mo
+lib/locale/pl/LC_MESSAGES/gtk+.mo
+lib/locale/nl/LC_MESSAGES/gtk+.mo
 share/aclocal/gtk.m4
 share/themes/Default/gtk/gtkrc
 @unexec rmdir %D/share/aclocal 2>/dev/null || true
 @dirrm include/gtk
 @dirrm include/gdk
+@dirrm lib/locale/de/LC_MESSAGES
+@dirrm lib/locale/de
+@dirrm lib/locale/fr/LC_MESSAGES
+@dirrm lib/locale/fr
+@dirrm lib/locale/nl/LC_MESSAGES
+@dirrm lib/locale/nl
+@dirrm lib/locale/pt/LC_MESSAGES
+@dirrm lib/locale/pt
+@dirrm lib/locale/ja/LC_MESSAGES
+@dirrm lib/locale/ja
+@dirrm lib/locale/sv/LC_MESSAGES
+@dirrm lib/locale/sv
+@dirrm lib/locale/pl/LC_MESSAGES
+@dirrm lib/locale/pl
+@dirrm lib/locale/no/LC_MESSAGES
+@dirrm lib/locale/no
+@dirrm lib/locale/ko/LC_MESSAGES
+@dirrm lib/locale/ko
+@dirrm lib/locale
 @dirrm share/themes/Default/gtk
 @dirrm share/themes/Default
 @dirrm share/themes
