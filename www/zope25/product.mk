@@ -1,7 +1,8 @@
-# $NetBSD: product.mk,v 1.3 2003/04/18 10:22:13 drochner Exp $
+# $NetBSD: product.mk,v 1.4 2003/04/23 14:33:18 drochner Exp $
 
 DIST_SUBDIR=	zope
-DEPENDS+=	zope-2.*:../../www/zope25
+BUILDLINK_DEPENDS.zope?=	zope-2.*
+DEPENDS+=	${BUILDLINK_DEPENDS.zope}:../../www/zope25
 EVAL_PREFIX+=	BUILDLINK_PREFIX.zope=zope25
 BUILDLINK_PREFIX.zope_DEFAULT=	${LOCALBASE}
 WRKSRC?=	${WRKDIR}
