@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/12/31 14:25:30 frueauf Exp $
+
+--- make-mkhdrs.pl-orig	Sat Aug  9 23:45:34 1997
++++ make-mkhdrs.pl	Thu Dec 31 14:17:58 1998
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ #
+ # make-mkhdrs - Creates a batch file from the Makefile.in files which
+ # sets up the header file directories for Windows 95.

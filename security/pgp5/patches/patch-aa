@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/31 14:25:30 frueauf Exp $
+
+--- config.h.in.orig	Sat Feb  7 20:54:56 1998
++++ config.h.in	Thu Dec 31 14:28:22 1998
+@@ -79,6 +79,10 @@
+ #define PGP_FREEWARE 1
+ #endif
+ 
++#if defined(__NetBSD__)
++#define unix 1
++#endif
++
+ /* Define "UNIX" if we are on UNIX and "UNIX" is not already defined */
+ #if defined(unix) || defined(__unix) || defined (__unix__)
+ #ifndef UNIX
