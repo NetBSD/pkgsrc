@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/10/04 12:32:19 hira Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/10/20 14:33:30 reed Exp $
 ${X11ROOT_PREFIX}/bin/Xmark
 ${X11ROOT_PREFIX}/bin/appres
 ${X11ROOT_PREFIX}/bin/atobm
@@ -7,6 +7,7 @@ ${X11ROOT_PREFIX}/bin/bdftruncate
 ${X11ROOT_PREFIX}/bin/beforelight
 ${X11ROOT_PREFIX}/bin/bitmap
 ${X11ROOT_PREFIX}/bin/bmtoa
+${X11ROOT_PREFIX}/bin/chooser
 ${X11ROOT_PREFIX}/bin/cxpm
 ${X11ROOT_PREFIX}/bin/dga
 ${X11ROOT_PREFIX}/bin/dpsexec
@@ -135,6 +136,8 @@ ${X11ROOT_PREFIX}/include/X11/bitmaps/black6
 ${X11ROOT_PREFIX}/include/X11/bitmaps/box6
 ${X11ROOT_PREFIX}/include/X11/bitmaps/ldblarrow
 ${X11ROOT_PREFIX}/include/X11/bitmaps/rdblarrow
+${X11ROOT_PREFIX}/include/X11/pixmaps/xorg-bw.xpm
+${X11ROOT_PREFIX}/include/X11/pixmaps/xorg.xpm
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Beforelight
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Bitmap
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Bitmap-color
@@ -363,18 +366,6 @@ ${X11ROOT_PREFIX}/lib/X11/twm/system.twmrc
 ${X11ROOT_PREFIX}/lib/X11/x11perfcomp/fillblnk
 ${X11ROOT_PREFIX}/lib/X11/x11perfcomp/perfboth
 ${X11ROOT_PREFIX}/lib/X11/x11perfcomp/perfratio
-${X11ROOT_PREFIX}/lib/X11/xdm/GiveConsole
-${X11ROOT_PREFIX}/lib/X11/xdm/TakeConsole
-${X11ROOT_PREFIX}/lib/X11/xdm/Xaccess
-${X11ROOT_PREFIX}/lib/X11/xdm/Xresources
-${X11ROOT_PREFIX}/lib/X11/xdm/Xservers
-${X11ROOT_PREFIX}/lib/X11/xdm/Xsession
-${X11ROOT_PREFIX}/lib/X11/xdm/Xsetup_0
-${X11ROOT_PREFIX}/lib/X11/xdm/Xwilling
-${X11ROOT_PREFIX}/lib/X11/xdm/chooser
-${X11ROOT_PREFIX}/lib/X11/xdm/pixmaps/xorg-bw.xpm
-${X11ROOT_PREFIX}/lib/X11/xdm/pixmaps/xorg.xpm
-${X11ROOT_PREFIX}/lib/X11/xdm/xdm-config
 ${X11ROOT_PREFIX}/lib/X11/xedit/lisp/indent.lsp
 ${X11ROOT_PREFIX}/lib/X11/xedit/lisp/lisp.lsp
 ${X11ROOT_PREFIX}/lib/X11/xedit/lisp/progmodes/c.lsp
@@ -863,6 +854,17 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xplsprinters.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xprehashprinterlist.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xpsimplehelloworld.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xpxthelloworld.${MAN_SUFFIX}
+share/examples/xorg/xdm/GiveConsole
+share/examples/xorg/xdm/TakeConsole
+share/examples/xorg/xdm/Xaccess
+share/examples/xorg/xdm/Xresources
+share/examples/xorg/xdm/Xservers
+share/examples/xorg/xdm/Xsession
+share/examples/xorg/xdm/Xsetup_0
+share/examples/xorg/xdm/Xwilling
+share/examples/xorg/xdm/xdm-config
+@dirrm share/examples/xorg/xdm
+@dirrm share/examples/xorg
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xsm
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/types
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/xfree68
@@ -896,8 +898,6 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xpxthelloworld.${MAN_SUFFIX}
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xedit/lisp/progmodes
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xedit/lisp
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xedit
-@dirrm ${X11ROOT_PREFIX}/lib/X11/xdm/pixmaps
-@dirrm ${X11ROOT_PREFIX}/lib/X11/xdm
 @dirrm ${X11ROOT_PREFIX}/lib/X11/x11perfcomp
 @dirrm ${X11ROOT_PREFIX}/lib/X11/twm
 @dirrm ${X11ROOT_PREFIX}/lib/X11/rstart/contexts
@@ -916,3 +916,4 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xpxthelloworld.${MAN_SUFFIX}
 @dirrm ${X11ROOT_PREFIX}/lib/X11/icons
 @dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/util
 @dirrm ${X11ROOT_PREFIX}/include/X11/PM
+@unexec ${RMDIR} %D/${X11ROOT_PREFIX}/include/X11/pixmaps 2>/dev/null || ${TRUE}
