@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: icecast.sh,v 1.3 2004/01/08 20:49:39 xtraeme Exp $
+# $NetBSD: icecast.sh,v 1.4 2004/01/12 05:56:04 xtraeme Exp $
 #
 
 # PROVIDE: icecast
@@ -11,7 +11,7 @@
 name="icecast"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
-command_args="-b -c @PKG_SYSCONFDIR@/$name.xml 1>2& >/dev/null"
+command_args="-b -c @PKG_SYSCONFDIR@/$name.xml >/dev/null 2>&1"
 required_files="@PKG_SYSCONFDIR@/$name.xml"
 
 load_rc_config $name
