@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- contrib/Makefile.in.orig	Sat Feb 21 22:02:32 1998
++++ contrib/Makefile.in	Fri Aug 21 14:53:04 1998
+@@ -37,7 +37,7 @@
+ # Use cp if you don't have install.
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_PROGRAM = ${BSD_INSTALL_SCRIPT}
+ 
+ DISTFILES = \
+ 	ChangeLog README .cvsignore intro.doc \
+@@ -81,10 +81,10 @@
+ 
+ install: all installdirs
+ 	for f in $(CONTRIB_FILES) ; do\
+-		$(INSTALL_DATA) $(srcdir)/$$f $(libdir)/cvs/contrib/$$f; \
++		$(INSTALL_DATA) $(srcdir)/$$f $(prefix)/share/cvs/contrib/$$f; \
+ 	done
+ 	for f in $(CONTRIB_PROGS) ; do\
+-		$(INSTALL_PROGRAM) $$f $(libdir)/cvs/contrib/$$f; \
++		$(INSTALL_PROGRAM) $$f $(prefix)/share/cvs/contrib/$$f; \
+ 	done
+ 	for f in $(PROGS) ; do\
+ 		$(INSTALL_PROGRAM) $$f $(bindir)/$$f; \
+@@ -92,7 +92,7 @@
+ .PHONY: install
+ 
+ installdirs:
+-	$(top_srcdir)/mkinstalldirs $(libdir)/cvs/contrib
++	$(top_srcdir)/mkinstalldirs $(prefix)/share/cvs/contrib
+ .PHONY: installdirs
+ 
+ tags:
