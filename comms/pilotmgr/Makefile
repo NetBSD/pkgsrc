@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2001/11/28 05:20:42 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/03/23 15:28:58 magick Exp $
 
 DISTNAME=	pilotmgr-1.107p2
+PKGNAME=	pilotmgr-1.107.2
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2

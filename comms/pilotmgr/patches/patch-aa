@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2000/01/18 20:41:13 tron Exp $
+$NetBSD: patch-aa,v 1.4 2002/03/23 15:29:00 magick Exp $
 
 --- PilotMgr.pm.orig	Wed Mar 24 23:59:59 1999
-+++ PilotMgr.pm	Tue Jan 18 21:30:53 2000
++++ PilotMgr.pm
 @@ -604,14 +604,18 @@
      my ($image);
  
@@ -47,3 +47,28 @@ $NetBSD: patch-aa,v 1.3 2000/01/18 20:41:13 tron Exp $
  }
  
  sub loadDBList
+@@ -2656,14 +2660,17 @@
+ 	$count_max = 0;
+     }
+ 
+-    do
+-    {
+-	status("Refreshing Database List", int(100 * $count++ / $count_max))
+-	    if ($count_max);
+-	push(@$result, $dlp->getDBInfo($i,1,0));
+-	$i = $result->[-1]->{"index"}+1;
++    my $rec;
++    eval { do
++     {
++      status("Refreshing Database List", int(100 * $count++ / $count_max))
++	if ($count_max);
++      $rec = $dlp->getDBInfo($i,1,0);
++      push(@$result, $rec) if (exists $rec->{"name"} and $rec->{"name"});
++      $i = $rec->{"index"}+1;
+     }
+-    while ($result->[-1]->{"more"});
++    while ($rec->{"more"}); };
++
+ 
+     fullStatus("Pilot Manager", "Refreshing Database List", 100);
+ 
