@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2003/12/14 19:47:26 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2003/12/28 23:35:46 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gnome-vfs2.
 #
@@ -9,7 +9,7 @@
 GNOME_VFS2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-vfs2
-BUILDLINK_DEPENDS.gnome-vfs2?=		gnome-vfs2>=2.4.1
+BUILDLINK_DEPENDS.gnome-vfs2?=		gnome-vfs2>=2.4.1nb1
 BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.gnome-vfs2=gnome-vfs2
@@ -30,7 +30,6 @@ BUILDLINK_FILES.gnome-vfs2+=	lib/libgnomevfs-2.*
 .include "../../net/ORBit2/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../sysutils/fam/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gnome-vfs2-buildlink
 
