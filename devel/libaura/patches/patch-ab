@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2005/02/20 00:23:03 xtraeme Exp $
+
+--- Makefile.orig	2005-02-20 01:20:44.000000000 +0100
++++ Makefile	2005-02-20 01:21:38.000000000 +0100
+@@ -16,10 +16,10 @@
+ .endif
+ 
+ .if ${OSTYPE} == "NetBSD"
+-NOGCCERROR=D
+ CPPFLAGS=${CFLAGS}
+ SHLIBDIR=/usr/local/lib
+ USE_SHLIBDIR=yes
++NOLINT=yes
+ .else
+ INSTALL_FILE?=install -C
+ .endif
