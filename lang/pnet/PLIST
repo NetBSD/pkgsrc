@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/12 17:13:32 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/14 08:03:54 xtraeme Exp $
 bin/al
 bin/cli-unknown-ar
+bin/cli-unknown-cpp
 bin/cli-unknown-gcc
 bin/cli-unknown-ranlib
 bin/cli-unknown-size
@@ -8,6 +9,7 @@ bin/cli-unknown-strip
 bin/clrwrap
 bin/csant
 bin/cscc
+bin/cscc-cpp
 bin/csdoc
 bin/csdoc2hier
 bin/csdoc2html
@@ -78,8 +80,10 @@ lib/libILEngine.a
 lib/libILImage.a
 lib/libILLink.a
 lib/libILSupport.a
+lib/pnet/libffi-2.00-beta.so
 lib/pnet/libffi.a
 lib/pnet/libffi.la
+lib/pnet/libffi.so
 lib/pnet/libgc.a
 lib/pnet/libgc.la
 lib/pnet/libgc.so
@@ -87,6 +91,7 @@ lib/pnet/libgc.so.1
 lib/pnet/libgc.so.1.2
 man/man1/clrwrap.1
 man/man1/csant.1
+man/man1/cscc-cpp.1
 man/man1/cscc.1
 man/man1/csdoc.1
 man/man1/csdoc2hier.1
@@ -109,4 +114,5 @@ man/man1/ilverify.1
 man/man1/resgen.1
 @dirrm lib/pnet
 @dirrm lib/cscc/plugins
+@dirrm lib/cscc
 @dirrm include/pnet
