@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/11/26 06:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/26 06:09:18 jlam Exp $
 
 DISTNAME=		ImageMagick-5.3.9
 PKGNAME=		p5-PerlMagick-5.3.9
@@ -20,10 +20,6 @@ MAGICKDIR=		${PKGSRCDIR}/${MAGICK}
 DISTINFO_FILE=		${MAGICKDIR}/distinfo
 FILESDIR=		${MAGICKDIR}/files
 PATCHDIR=		${MAGICKDIR}/patches
-
-#.if !(make(do-configure) || make(do-patch))
-#WRKSRC=			${WRKDIR}/${DISTNAME}/PerlMagick
-#.endif
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
