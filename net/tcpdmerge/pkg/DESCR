@@ -1,0 +1,7 @@
+Readme for tcpdmerge
+
+tcpdmerge: Merging two dumpfiles 
+
+"tcpdmerge" tool merges two dumpfiles based on the packet arrival
+times. The technique is very simple. It just sorts the timestamp
+part of two dumpfiles.
