@@ -1,0 +1,15 @@
+$NetBSD: patch-lib-Xm-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+--- lib/Xm/Imakefile.orig	Sun Oct 29 14:19:45 2000
++++ lib/Xm/Imakefile	Sun Oct 29 14:20:15 2000
+@@ -41,8 +41,10 @@
+ 
+ #define DoNormalLib	NormalLibXm
+ #define DoSharedLib	SharedLibXm
++#if 0
+ #define DoDebugLib	DebugLibXm
+ #define DoProfileLib	ProfileLibXm
++#endif
+ #define LibName		Xm
+ #define SoRev		SOXMREV
+ #define HasSharedData	YES
