@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8974 2005/01/29 21:55:45 kristerw Exp $
+$NetBSD: CHANGES,v 1.8975 2005/01/30 04:42:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -657,3 +657,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_chk to 1.53 [abs 2005-01-29]
 	Updated xmame to 0.90 [kristerw 2005-01-29]
 	Updated xmess to 0.90 [kristerw 2005-01-29]
+	Updated qpopper to 4.0.5nb7 [xtraeme 2005-01-30]
