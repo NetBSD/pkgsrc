@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/12/14 20:38:47 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/02/24 17:26:03 adrianp Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -170,6 +170,12 @@ share/phpmyadmin/libraries/export/sql.php
 share/phpmyadmin/libraries/export/xls.php
 share/phpmyadmin/libraries/export/xml.php
 share/phpmyadmin/libraries/fpdf/README
+share/phpmyadmin/libraries/fpdf/font/FreeSans.ctg.z
+share/phpmyadmin/libraries/fpdf/font/FreeSans.php
+share/phpmyadmin/libraries/fpdf/font/FreeSans.z
+share/phpmyadmin/libraries/fpdf/font/FreeSansBold.ctg.z
+share/phpmyadmin/libraries/fpdf/font/FreeSansBold.php
+share/phpmyadmin/libraries/fpdf/font/FreeSansBold.z
 share/phpmyadmin/libraries/fpdf/font/courier.php
 share/phpmyadmin/libraries/fpdf/font/helvetica.php
 share/phpmyadmin/libraries/fpdf/font/helveticab.php
@@ -184,6 +190,7 @@ share/phpmyadmin/libraries/fpdf/font/timesbi.php
 share/phpmyadmin/libraries/fpdf/font/timesi.php
 share/phpmyadmin/libraries/fpdf/font/zapfdingbats.php
 share/phpmyadmin/libraries/fpdf/fpdf.php
+share/phpmyadmin/libraries/fpdf/ufpdf.php
 share/phpmyadmin/libraries/functions.js
 share/phpmyadmin/libraries/get_foreign.lib.php
 share/phpmyadmin/libraries/grab_globals.lib.php
@@ -192,6 +199,7 @@ share/phpmyadmin/libraries/header_meta_style.inc.php
 share/phpmyadmin/libraries/indexes.js
 share/phpmyadmin/libraries/ip_allow_deny.lib.php
 share/phpmyadmin/libraries/kanji-encoding.lib.php
+share/phpmyadmin/libraries/keyhandler.js
 share/phpmyadmin/libraries/left.js
 share/phpmyadmin/libraries/mcrypt.lib.php
 share/phpmyadmin/libraries/mysql_charsets.lib.php
