@@ -1,7 +1,7 @@
-$NetBSD: patch-bf,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-bf,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- gc/mach_dep.c.orig	Thu Oct 21 22:06:14 1999
-+++ gc/mach_dep.c	Thu Dec 30 22:17:41 1999
+--- mzscheme/gc/mach_dep.c.orig	Thu Oct 21 22:06:14 1999
++++ mzscheme/gc/mach_dep.c	Thu Dec 30 22:17:41 1999
 @@ -197,6 +197,8 @@
  	&& !defined(SCO) && !defined(SCO_ELF) \
   	&& !(defined(LINUX)       && defined(__ELF__)) \
