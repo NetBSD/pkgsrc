@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2002/12/24 06:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2003/01/10 07:58:27 cjep Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.gnome-pixmaps=gnome{,2}-pixmaps>=1.4.2
 .endif
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES

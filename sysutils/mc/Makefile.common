@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2002/10/23 10:38:37 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.18 2003/01/10 07:52:18 cjep Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -15,6 +15,7 @@ DISTINFO_FILE=		${.CURDIR}/../../sysutils/mc/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches
 
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		# defined

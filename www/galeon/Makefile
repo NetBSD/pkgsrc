@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/12/24 06:10:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2003/01/10 07:56:35 cjep Exp $
 
 DISTNAME=	galeon-1.2.7
 PKGREVISION=	1
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
 
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GMAKE=		yes
