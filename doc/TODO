@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2970 2005/01/27 17:48:02 wiz Exp $
+$NetBSD: TODO,v 1.2971 2005/01/28 13:36:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,7 @@ Suggested package updates
 	o cint-5.15
 	o cjk-lyx-1.3.3
 	o cksfv-1.3.1
-	o clamav-0.81
+	o clamav-0.81 [pkg/29139]
 	o clanlib-0.7.8
 	o classpath-0.13
 	o classpath-gui-0.13
@@ -448,6 +448,7 @@ Suggested package updates
 	o etach-1.4.0
 	o ettercap-0.7.2 [wip/ettercap-NG|adrianp]
 	o exmh-2.7.0
+	o f2c-20031025
 	o fakeroot-1.2.2
 	o fd-2.06b
 	o fdgw-20040609
@@ -514,7 +515,7 @@ Suggested package updates
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
 	o gnucash-docs-1.8.5
-	o gnutls-1.0.24
+	o gnutls-1.2.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
@@ -528,7 +529,7 @@ Suggested package updates
 	o grepmail-5.3030
 	o gri-2.12.8
 	o gsasl-0.2.4
-	o gsed-4.1.2
+	o gsed-4.1.4
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
@@ -576,6 +577,7 @@ Suggested package updates
 	o ispman-1.1.1
 	o isync-1.0.0
 	o ivan-0.50
+	o ivtools-1.2.2
 	o ja-ptex-bin-3.1.8
 	o ja-ptex-share-2.2
 	o ja-vflib-lib-2.25.6
@@ -606,10 +608,11 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.10.8
 	o leafpad-0.7.9
+	o libao-0.8.6
 	o libcdio-0.71
 	o libcomprex-0.3.3
 	o libetpan-0.34b
-	o libextractor-0.4.0
+	o libextractor-0.4.1
 	o libfwbuilder-2.0.4
 	o libgda-1.2.0
 	o libggi-2.1
@@ -658,7 +661,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.23
-	o mathomatic-11.6e
+	o mathomatic-11.7
 	o memtest86-3.2
 	o mergeant-0.52
 	o mgetty+sendfax-1.1.31
@@ -712,6 +715,7 @@ Suggested package updates
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a3
+	o nut-10.15
 	o nxtvepg-2.7.4
 	o obexftp-0.10.6
 	o ocaml-3.08
@@ -988,6 +992,7 @@ Suggested package updates
 	o rpm-4.1
 	o rrdtool-1.0.49 [pkg/26353]
 	o rtcw-1.41.3
+	o ruby-fox-1.2.3
 	o rudiments-0.27
 	o sablecc-2.18.2
 	o sablevm-1.1.7
@@ -1064,6 +1069,7 @@ Suggested package updates
 	o tdir-1.67
 	o tds-1.6.2
 	o teapop-0.3.8
+	o ted-2.17
 	o tela-2.01
 	o tex-musixtex-112
 	o texi2html-1.70
@@ -1122,7 +1128,9 @@ Suggested package updates
 	o w32api-3.1
 	o wap-utils-1.4.1
 	o wdm-1.27
+	o webmin-1.180
 	o weechat-0.0.8
+	o wesnoth-0.8.9
 	o windowlab-1.25
 	o wl-2.12.0 [pkg/29043]
 	o wmbiff-0.4.26
