@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/11/29 01:12:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/13 19:04:47 drochner Exp $
 
-DISTNAME=	dvdview1.1.0
-PKGNAME=	dvdview-1.1.0
-PKGREVISION=	1
+DISTNAME=	dvdview-1.2.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/arch/
+MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/data/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/
@@ -13,40 +11,20 @@ COMMENT=	Software only MPEG-1/2 video decoder
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_X11=	YES
+USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(WRKSRC)
-do-configure:
-	@${SETENV} WRKSRC=${WRKDIR}/ulib ${MAKE} ${.TARGET}
-	@${SETENV} WRKSRC=${WRKDIR}/dvdview ${MAKE} ${.TARGET}
-
-do-build:
-	@${SETENV} WRKSRC=${WRKDIR}/ulib ${MAKE} ${.TARGET}
-	@${SETENV} WRKSRC=${WRKDIR}/dvdview/src ${MAKE} ${.TARGET}
-.endif
-
-ALL_TARGET=	# empty
-WRKSRC?=	${WRKDIR}/dvdview
 .if (${OPSYS} == SunOS)
 MAKE_ENV+=	RTLIB=-lrt
 .else
 MAKE_ENV+=	RTLIB=
 .endif
 
-.if (${OPSYS} != "Linux") && (${MACHINE_ARCH} == i386)
-post-configure:
-	cd ${WRKSRC} && \
-	for FILE in ../ulib/config.h src/config.h; do \
-	  ${CP} $$FILE $${FILE}.old; \
-	  ${SED} -e 's/#define ENABLE_MMX 1/#undef ENABLE_MMX/' \
-	    $${FILE}.old >$${FILE}; \
-	done
-.endif
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/dvdview ${PREFIX}/bin
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dvdview
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dvdview
 
+.include "../../graphics/libvideogfx/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
