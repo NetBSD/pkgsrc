@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2001/04/09 12:25:53 lukem Exp $
+# $NetBSD: Makefile,v 1.212 2001/04/17 11:57:42 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -149,7 +149,6 @@ SUBDIR+=	tkined
 SUBDIR+=	tn5250
 SUBDIR+=	totd
 SUBDIR+=	trafshow
-SUBDIR+=	ttcp
 SUBDIR+=	ttt
 SUBDIR+=	ucd-snmp
 SUBDIR+=	ucd-snmp-current
