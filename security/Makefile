@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2004/07/26 15:20:25 minskim Exp $
+# $NetBSD: Makefile,v 1.190 2004/08/04 20:47:37 jlam Exp $
 #
 
 COMMENT=	Security tools
@@ -24,6 +24,7 @@ SUBDIR+=	crypto++
 SUBDIR+=	cy-login
 SUBDIR+=	cy2-login
 SUBDIR+=	cy2-ntlm
+SUBDIR+=	cy2-sql
 SUBDIR+=	cyrus-sasl
 SUBDIR+=	cyrus-sasl2
 SUBDIR+=	cyrus-saslauthd
