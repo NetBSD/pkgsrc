@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.15 2003/07/18 10:50:07 adam Exp $
+$NetBSD: patch-an,v 1.16 2003/12/12 10:11:39 adam Exp $
 
---- doc/lessdox/clients/Makefile.in.orig	2003-07-18 01:04:24.000000000 +0200
-+++ doc/lessdox/clients/Makefile.in	2003-07-18 12:16:54.000000000 +0200
-@@ -160,7 +160,7 @@
+--- doc/lessdox/clients/Makefile.in.orig	2003-11-27 19:29:48.000000000 +0000
++++ doc/lessdox/clients/Makefile.in
+@@ -233,7 +233,7 @@ manone_DATA = mwm.1 xmbind.1 lesstif.1 u
  manthree_DATA = 
  manfive_DATA = mwmrc.5 VirtualBindings.5
  

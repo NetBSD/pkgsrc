@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.21 2003/07/18 10:50:07 adam Exp $
+$NetBSD: patch-aa,v 1.22 2003/12/12 10:11:39 adam Exp $
 
---- Makefile.in.orig	2003-07-18 01:04:22.000000000 +0200
-+++ Makefile.in	2003-07-18 12:06:25.000000000 +0200
-@@ -164,12 +164,12 @@
+--- Makefile.in.orig	2003-11-27 19:29:46.000000000 +0000
++++ Makefile.in
+@@ -237,12 +237,12 @@ DIST_SUBDIRS = scripts include lib clien
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
