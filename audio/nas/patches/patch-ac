@@ -1,27 +1,29 @@
-$NetBSD: patch-ac,v 1.5 2002/10/18 14:02:13 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2002/11/28 11:40:46 markd Exp $
 
---- server/nasd.conf.eg.orig	Sat Jan  1 22:03:50 2000
-+++ server/nasd.conf.eg	Thu Aug  3 21:11:29 2000
-@@ -29,7 +29,7 @@
+--- server/nasd.conf.eg.orig	Tue Oct  8 16:08:02 2002
++++ server/nasd.conf.eg
+@@ -29,8 +29,8 @@
  
  inputsection
  
--	device		"/dev/dsp1"		# the SB emulation on my PAS16
-+	device		"@DEVOSSAUDIO@"
- 	maxrate		11025
+-	device		"/dev/dsp1"		# The input device, usually
+-	mixer		"/dev/mixer1"		# mixer device
++	device		"@DEVOSSAUDIO@"		# The input device, usually
++	mixer		"/dev/mixer"		# mixer device
+         gain            50                      # default input gain (0-100)
+ 	maxrate		44100
  	minrate		4000			# Kind of redundant
- 	maxfrags	3			# We want really low latency
-@@ -41,7 +41,7 @@
+@@ -47,7 +47,7 @@
  
  # These are used by voxware only for now.
  outputsection
--	device		"/dev/dsp"		# the full 16 bit interface!
-+	device		"@DEVOSSAUDIO@"
- 	maxrate		33000			# is flakey on my OPTi mb at 44
- 	minrate		5000			# Redundant again
- 	maxfrags	3			# Low latency (for doom!)
-@@ -57,7 +57,7 @@
- #	was an 8 bit SB and the PC speaker with the voxware server.
+-	device		"/dev/dsp"		# The output device, usually
++	device		"@DEVOSSAUDIO@"		# The output device, usually
+ 	mixer		"/dev/mixer"		# mixer device
+         gain            50                      # default output gain (0-100)
+ 	maxrate		44100			# CD quality.
+@@ -73,7 +73,7 @@
+ #
  #
  #outputsection
 -#	device	"/dev/pcaudio"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.clients,v 1.1 2001/11/01 00:20:13 zuntum Exp $
+@comment $NetBSD: PLIST.clients,v 1.2 2002/11/28 11:40:45 markd Exp $
 bin/auconvert
 bin/auctl
 bin/audemo
@@ -32,6 +32,7 @@ include/audio/audio.h
 include/audio/audiolib.h
 include/audio/audioutil.h
 include/audio/fileutil.h
+include/audio/mutex.h
 include/audio/snd.h
 include/audio/sound.h
 include/audio/soundlib.h
@@ -41,7 +42,7 @@ lib/X11/AuErrorDB
 lib/libaudio.a
 lib/libaudio.so
 lib/libaudio.so.2
-lib/libaudio.so.2.1
+lib/libaudio.so.2.3
 man/cat1/auconvert.0
 man/cat1/auctl.0
 man/cat1/audemo.0
