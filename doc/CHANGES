@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1855 2003/04/06 13:47:09 hubertf Exp $
+$NetBSD: CHANGES,v 1.1856 2003/04/06 14:41:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1475,3 +1475,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bidwatcher to 1.3.7nb2 [tron 2003-04-06]
 	Added whisker-2.1 [hubertf 2003-04-06]
 	Added dbh-1.0.14 [hubertf 2003-04-06]
+	Added chktex-1.6.1 [wiz 2003-04-06]
