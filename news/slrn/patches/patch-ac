@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/10/31 21:09:13 hwr Exp $
+--- src/slrnfeat.h.orig	Tue Sep  8 14:59:21 1998
++++ src/slrnfeat.h	Sat Oct 31 17:39:02 1998
+@@ -7,10 +7,10 @@
+  * NOTE: if you intend to use slrnpull, make sure you enable SPOOL_SUPPORT
+  *       in addition to PULL_SUPPORT.
+  */
+-#define SLRN_HAS_PULL_SUPPORT	1
++#define SLRN_HAS_PULL_SUPPORT	0
+ #define SLRN_HAS_NNTP_SUPPORT	1
+-#define SLRN_HAS_SPOOL_SUPPORT	1
+-#define SLRN_HAS_INEWS_SUPPORT	1
++#define SLRN_HAS_SPOOL_SUPPORT	0
++#define SLRN_HAS_INEWS_SUPPORT	0
+ /* Set this to 1 to force the user to use INEWS for posting.  This also means
+  * that slrn will use the hardcoded inews program pathname.
+  */
+@@ -48,7 +48,7 @@
+ #define SLRN_HAS_SLANG		1
+ 
+ /* Set this to 0 if you do not want slrn to generate message-id header. */
+-#define SLRN_HAS_GEN_MSGID	1
++#define SLRN_HAS_GEN_MSGID	0
+ 
+ /* If you want mapping ISO Latin <--> native character set, set this to 1.
+  * Supported character sets: isolatin, ibm850, and next

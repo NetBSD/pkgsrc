@@ -1,0 +1,4 @@
+Slrn is a terminal based newsreader by John E. Davis <davis@space.mit.edu>.
+It supports threads and is highly customizable through S-Lang functions.
+
+In this package, there is only support for NNTP, not for local spool.
