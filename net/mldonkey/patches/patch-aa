@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2004/12/25 19:19:21 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2004/12/25 19:22:57 wiz Exp $
 
---- config/configure.orig	2004-07-29 12:32:40.000000000 +0200
+--- config/configure.orig	Fri Apr 16 19:17:11 2004
 +++ config/configure
-@@ -4286,7 +4286,7 @@ s%@CAMLP4@%$CAMLP4%g
- s%@PERL@%$PERL%g
- s%@GTK_CONFIG@%$GTK_CONFIG%g
- s%@PTHREAD_CC@%$PTHREAD_CC%g
--s%@PTHREAD_LIBS@%$PTHREAD_LIBS%g
-+s%@PTHREAD_LIBS@%-Wl,-R\${BUILDLINK_PREFIX.pthread}/lib -L\${BUILDLINK_PREFIX.pthread}/lib $PTHREAD_LIBS%g
- s%@PTHREAD_CFLAGS@%$PTHREAD_CFLAGS%g
- s%@COMPRESS@%$COMPRESS%g
- s%@EXTRA_DIRS@%$EXTRA_DIRS%g
+@@ -10609,7 +10609,7 @@ s,@PERL@,$PERL,;t t
+ s,@EGREP@,$EGREP,;t t
+ s,@GTK_CONFIG@,$GTK_CONFIG,;t t
+ s,@PTHREAD_CC@,$PTHREAD_CC,;t t
+-s,@PTHREAD_LIBS@,$PTHREAD_LIBS,;t t
++s,@PTHREAD_LIBS@,-Wl,-R\${BUILDLINK_PREFIX.pthread}/lib -L\${BUILDLINK_PREFIX.pthread}/lib $PTHREAD_LIBS,;t t
+ s,@PTHREAD_CFLAGS@,$PTHREAD_CFLAGS,;t t
+ s,@COMPRESS@,$COMPRESS,;t t
+ s,@EXTRA_DIRS@,$EXTRA_DIRS,;t t
