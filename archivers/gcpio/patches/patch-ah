@@ -1,0 +1,20 @@
+$NetBSD: patch-ah,v 1.1 2005/03/20 19:53:09 salo Exp $
+
+--- main.c.orig	2001-12-06 05:54:06.000000000 +0100
++++ main.c	2005-03-20 20:34:33.000000000 +0100
+@@ -512,7 +512,6 @@
+      char *argv[];
+ {
+   program_name = argv[0];
+-  umask (0);
+ 
+ #ifdef __TURBOC__
+   _fmode = O_BINARY;		/* Put stdin and stdout in binary mode.  */
+@@ -523,6 +522,7 @@
+ #endif
+ 
+   process_args (argc, argv);
++  umask (0);
+ 
+   initialize_buffers ();
+ 
