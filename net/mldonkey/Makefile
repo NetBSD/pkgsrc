@@ -1,19 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2004/02/07 20:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/10 15:49:56 wiz Exp $
 #
 
-DISTNAME=	mldonkey-source-${VER}
-VER=		2-5-8
-PKGNAME=	mldonkey-${VER:S/-/./g}
+DISTNAME=	mldonkey-2.5.10
 CATEGORIES=	net
-MASTER_SITES=	http://www.giga.or.at/pub/mldonkey/
-# not yet completely up again:
-# http://savannah.nongnu.org/download/mldonkey/release-${VER}/official/
+MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/mldonkey/
 COMMENT=	Free peer-to-peer client with eDonkey support and more
 
-WRKSRC=			${WRKDIR}/mldonkey
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GNU_TOOLS+=		make

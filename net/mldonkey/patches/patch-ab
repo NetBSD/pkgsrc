@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/02/10 15:49:56 wiz Exp $
+
+--- src/utils/lib/sha1_c.c.orig	Tue Feb 10 00:06:54 2004
++++ src/utils/lib/sha1_c.c
+@@ -78,7 +78,7 @@ extern "C"
+ #define BRG_BIG_ENDIAN      4321 /* byte 0 is most significant (mc68k) */
+ 
+ #if defined(__GNUC__) || defined(__GNU_LIBRARY__)
+-#  if defined(__FreeBSD__) || defined(__OpenBSD__)
++#  if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #    include <sys/endian.h>
+ #  elif defined( BSD ) && ( BSD >= 199103 )
+ #      include <machine/endian.h>
