@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/31 23:53:05 lukem Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/05/01 14:07:57 jmmv Exp $
 bin/mailq
 bin/newaliases
-etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
 libexec/postfix/error
@@ -76,9 +75,6 @@ sbin/postqueue
 sbin/postsuper
 sbin/sendmail
 share/doc/postfix/ADDRESS_CLASS_README
-share/doc/postfix/LOCAL_RECIPIENT_README
-share/doc/postfix/MAILDROP_README
-share/doc/postfix/RELEASE_NOTES
 share/doc/postfix/DB_README
 share/doc/postfix/DEBUG_README
 share/doc/postfix/ETRN_README
@@ -87,57 +83,54 @@ share/doc/postfix/INSTALL
 share/doc/postfix/LDAP_README
 share/doc/postfix/LINUX_README
 share/doc/postfix/LMTP_README
+share/doc/postfix/LOCAL_RECIPIENT_README
 share/doc/postfix/MACOSX_README
+share/doc/postfix/MAILDROP_README
 share/doc/postfix/MYSQL_README
 share/doc/postfix/NFS_README
 share/doc/postfix/PACKAGE_README
 share/doc/postfix/PCRE_README
 share/doc/postfix/QMQP_README
+share/doc/postfix/RELEASE_NOTES
 share/doc/postfix/RESTRICTION_CLASS_README
 share/doc/postfix/SASL_README
 share/doc/postfix/ULTRIX_README
 share/doc/postfix/UUCP_README
 share/doc/postfix/VERP_README
 share/doc/postfix/VIRTUAL_README
-share/postfix/main.cf
-share/postfix/master.cf
-share/postfix/post-install
-share/postfix/postfix-files
-share/postfix/postfix-script
-share/postfix/sample-aliases.cf
-share/postfix/sample-auth.cf
-share/postfix/sample-canonical.cf
-share/postfix/sample-compatibility.cf
-share/postfix/sample-debug.cf
-share/postfix/sample-filter.cf
-share/postfix/sample-flush.cf
-share/postfix/sample-ldap.cf
-share/postfix/sample-lmtp.cf
-share/postfix/sample-local.cf
-share/postfix/sample-mime.cf
-share/postfix/sample-misc.cf
-share/postfix/sample-pcre-access.cf
-share/postfix/sample-pcre-body.cf
-share/postfix/sample-pcre-header.cf
-share/postfix/sample-qmqpd.cf
-share/postfix/sample-rate.cf
-share/postfix/sample-regexp-access.cf
-share/postfix/sample-regexp-body.cf
-share/postfix/sample-regexp-header.cf
-share/postfix/sample-relocated.cf
-share/postfix/sample-resource.cf
-share/postfix/sample-rewrite.cf
-share/postfix/sample-smtp.cf
-share/postfix/sample-smtpd.cf
-share/postfix/sample-transport.cf
-share/postfix/sample-virtual.cf
-@exec if [ ! -d ${POSTFIX_SPOOL} ]; then ${MKDIR} ${POSTFIX_SPOOL}; ${CHMOD} 755 ${POSTFIX_SPOOL} ; fi
-@exec ${LN} -sf %D/share/postfix/post-install ${PKG_SYSCONFDIR}
-@unexec ${RM} -f ${PKG_SYSCONFDIR}/post-install
-@exec ${LN} -sf %D/share/postfix/postfix-files ${PKG_SYSCONFDIR}
-@unexec ${RM} -f ${PKG_SYSCONFDIR}/postfix-files
-@exec ${LN} -sf %D/share/postfix/postfix-script ${PKG_SYSCONFDIR}
-@unexec ${RM} -f ${PKG_SYSCONFDIR}/postfix-script
-@dirrm libexec/postfix
+share/examples/postfix/mailer.conf
+share/examples/postfix/main.cf
+share/examples/postfix/master.cf
+share/examples/postfix/post-install
+share/examples/postfix/postfix-files
+share/examples/postfix/postfix-script
+share/examples/postfix/sample-aliases.cf
+share/examples/postfix/sample-auth.cf
+share/examples/postfix/sample-canonical.cf
+share/examples/postfix/sample-compatibility.cf
+share/examples/postfix/sample-debug.cf
+share/examples/postfix/sample-filter.cf
+share/examples/postfix/sample-flush.cf
+share/examples/postfix/sample-ldap.cf
+share/examples/postfix/sample-lmtp.cf
+share/examples/postfix/sample-local.cf
+share/examples/postfix/sample-mime.cf
+share/examples/postfix/sample-misc.cf
+share/examples/postfix/sample-pcre-access.cf
+share/examples/postfix/sample-pcre-body.cf
+share/examples/postfix/sample-pcre-header.cf
+share/examples/postfix/sample-qmqpd.cf
+share/examples/postfix/sample-rate.cf
+share/examples/postfix/sample-regexp-access.cf
+share/examples/postfix/sample-regexp-body.cf
+share/examples/postfix/sample-regexp-header.cf
+share/examples/postfix/sample-relocated.cf
+share/examples/postfix/sample-resource.cf
+share/examples/postfix/sample-rewrite.cf
+share/examples/postfix/sample-smtp.cf
+share/examples/postfix/sample-smtpd.cf
+share/examples/postfix/sample-transport.cf
+share/examples/postfix/sample-virtual.cf
+@dirrm share/examples/postfix
 @dirrm share/doc/postfix
-@dirrm share/postfix
+@dirrm libexec/postfix
