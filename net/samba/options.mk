@@ -1,22 +1,6 @@
-# $NetBSD: options.mk,v 1.4 2004/11/06 11:07:17 jmmv Exp $
+# $NetBSD: options.mk,v 1.5 2004/11/17 19:56:49 xtraeme Exp $
 
 # Global and legacy options
-.if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	cups
-.endif
-.if defined(USE_PAM)
-PKG_DEFAULT_OPTIONS+=	PAM
-.endif
-.if defined(SAMBA_WITH_ADS) && !empty(SAMBA_WITH_ADS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	ads
-.endif
-.if defined(SAMBA_USE_LDAP)
-PKG_DEFAULT_OPTIONS+=	ldap
-.endif
-.if defined(SAMBA_USE_LDAP_COMPAT) && \
-    !empty(SAMBA_USE_LDAP_COMPAT:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	ldap-compat
-.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba
 PKG_SUPPORTED_OPTIONS=	PAM ads cups ldap ldap-compat

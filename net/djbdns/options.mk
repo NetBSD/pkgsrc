@@ -1,3 +1,5 @@
+# $NetBSD: options.mk,v 1.2 2004/11/17 19:56:49 xtraeme Exp $
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS=	inet6 ignoreip2
 .include "../../mk/bsd.options.mk"

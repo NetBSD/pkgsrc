@@ -1,14 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/08/22 19:32:51 jlam Exp $
-
-.if defined(KERBEROS)
-PKG_DEFAULT_OPTIONS+=	kerberos4
-.endif
-.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	inet6
-.endif
-.if defined(FETCHMAIL_USE_SSL) && !empty(FETCHMAIL_USE_SSL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
+# $NetBSD: options.mk,v 1.4 2004/11/17 19:56:49 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 ssl

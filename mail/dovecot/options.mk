@@ -1,17 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2004/08/22 19:32:51 jlam Exp $
-
-.if defined(DOVECOT_USE_GNUTLS) && !empty(DOVECOT_USE_GNUTLS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	gnutls
-.endif
-.if defined(DOVECOT_USE_MYSQL) && !empty(DOVECOT_USE_MYSQL:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	mysql
-.endif
-.if defined(DOVECOT_USE_PGSQL) && !empty(DOVECOT_USE_PGSQL:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	pgsql
-.endif
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	inet6
-.endif
+# $NetBSD: options.mk,v 1.5 2004/11/17 19:56:49 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl
