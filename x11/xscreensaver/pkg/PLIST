@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1999/04/12 19:41:15 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.13 1999/05/02 10:26:16 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -62,10 +62,12 @@ libexec/xscreensaver/morph3d
 libexec/xscreensaver/mountain
 libexec/xscreensaver/munch
 libexec/xscreensaver/noseguy
-libexec/xscreensaver/pipes
 libexec/xscreensaver/pedal
 libexec/xscreensaver/penetrate
 libexec/xscreensaver/penrose
+libexec/xscreensaver/phosphor
+libexec/xscreensaver/pipes
+libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
 libexec/xscreensaver/qix
 libexec/xscreensaver/rd-bomb
@@ -96,6 +98,7 @@ libexec/xscreensaver/worm
 libexec/xscreensaver/xflame
 libexec/xscreensaver/xjack
 libexec/xscreensaver/xlyap
+libexec/xscreensaver/xmatrix
 libexec/xscreensaver/xroger
 lib/X11/app-defaults/XScreenSaver
 man/man1/attraction.1
