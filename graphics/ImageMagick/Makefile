@@ -3,7 +3,7 @@
 # Date created:         11th December 1997
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.7 1998/01/30 13:57:13 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/02/01 01:52:42 hubertf Exp $
 #
 
 DISTNAME=	ImageMagick-4.0
@@ -20,8 +20,7 @@ LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
 		tiff.3.4:${PORTSDIR}/graphics/tiff
 
 USE_IMAKE=	yes
-USE_X11=	yes
-XMKMF=		$(MAKE_ENV) xmkmf -a
+XMKMF=		${MAKE_ENV} xmkmf -a
 MAKE_ENV=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
 
 NO_CHECKSUM=	yes
