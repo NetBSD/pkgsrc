@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2000/02/29 01:28:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/31 11:15:23 hubertf Exp $
 #
 
-DISTNAME=	bind-9.0.0b1
+DISTNAME=	bind-9.0.0b2
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/9.0.0b1/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/9.0.0b2/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
@@ -14,11 +14,12 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
 
 # No need to set USE_INET6, will auto-detect.
-DIST_SUBDIR=	bind/9.0.0b1
+DIST_SUBDIR=	bind/9.0.0b2
 GNU_CONFIGURE=	yes
-PLIST_SRC=	${WRKDIR}/newPLIST
 CONFIGURE_ARGS+=--with-mit-pthreads \
-		--with-libtool=yes
+		--with-libtool=yes \
+		--sysconfdir=/etc \
+		--localstatedir=/var
 CONFIGURE_ENV+=	CC=${LOCALBASE}/pthreads/bin/pgcc \
 		CXX=${LOCALBASE}/pthreads/bin/pg++
 
@@ -35,12 +36,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${PREFIX}/share/doc/bind9/rfc
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/rndc/rndc ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/lwresd/lwresd ${PREFIX}/sbin
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	(cd ${PREFIX}; \
-	 ${FIND} share/doc/bind9 \( -type f -or -type l \) | \
-	   sort >> ${PLIST_SRC}; \
-	 for DIR in `${FIND} share/doc/bind9 -type d | sort -r`; do \
-	   ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
-	 done)
 
 .include "../../mk/bsd.pkg.mk"
