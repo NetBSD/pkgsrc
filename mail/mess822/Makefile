@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/07 09:53:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/13 03:25:44 schmonz Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -36,8 +36,8 @@ INSTALLATION_DIRS=	bin include lib man man/cat1 man/cat3 man/cat5 man/cat8
 INSTALLATION_DIRS+=	man/man1 man/man3 man/man5 man/man8 share/examples/mess822
 
 do-configure:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 

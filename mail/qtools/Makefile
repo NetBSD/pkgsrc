@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/13 03:25:44 schmonz Exp $
 #
 
 DISTNAME=	qtools-0.56
@@ -18,8 +18,8 @@ BUILD_TARGET=	it
 INSTALL_TARGET=	setup check
 
 do-configure:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-ezmlm
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
