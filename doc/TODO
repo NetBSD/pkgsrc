@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2547 2004/11/28 14:36:32 wiz Exp $
+$NetBSD: TODO,v 1.2548 2004/11/28 14:49:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -591,7 +591,6 @@ Suggested package updates
 	o hdf5-1.6.3
 	o hercules-3.01
 	o hevea-1.07
-	o hicolor-icon-theme-0.5
 	o hitchhiker-0.7
 	o hmmer-2.3.2
 	o hnb-1.9.17
