@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/01/22 22:43:40 rh Exp $
+# $NetBSD: Makefile,v 1.33 2003/01/22 22:46:34 rh Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -48,7 +48,8 @@ USE_X11=		# defined
 USE_GMAKE=		# defined
 PKG_JVMS_ACCEPTED=	sun-jdk13
 
-CONFLICTS=		staroffice-[0-9]* openoffice-linux-[0-9]*
+CONFLICTS+=		staroffice-[0-9]*
+CONFLICTS+=		openoffice-linux-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5.3*-i386 NetBSD-1.5Z?-i386 \
 			NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
