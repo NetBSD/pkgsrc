@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/10 04:30:48 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/10 18:13:57 jtb Exp $
 
 DISTNAME=	tochnog-20010210
 CATEGORIES=	math
@@ -20,8 +20,10 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tochnog ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tochnog
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/tnu.ps.gz ${PREFIX}/share/doc/tochnog
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/tnp.ps.gz ${PREFIX}/share/doc/tochnog
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/tnu.ps.gz \
+	${PREFIX}/share/doc/tochnog
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/tnp.ps.gz \
+	${PREFIX}/share/doc/tochnog
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tochnog/test
 	@for f in ${WRKDIR}/tochnog/test/*; do			\
 	i="${INSTALL_DATA} $$f ${PREFIX}/share/tochnog/test/";	\

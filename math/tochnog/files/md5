@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.1.1.1 2001/02/10 04:30:48 jtb Exp $
+$NetBSD: md5,v 1.2 2001/02/10 18:13:58 jtb Exp $
 
-MD5 (tochnog-20010207/tn.tar.gz) = 381abc76445a76b55001e45810843fbc
-MD5 (tochnog-20010207/tnu.ps.gz) = 673b13ca6f8a54b70852664b4ba293e0
-MD5 (tochnog-20010207/tnp.ps.gz) = b57e9aba63b8fe16a6cbb1436a34b9c1
+MD5 (tochnog-20010210/tn.tar.gz) = 381abc76445a76b55001e45810843fbc
+MD5 (tochnog-20010210/tnu.ps.gz) = 673b13ca6f8a54b70852664b4ba293e0
+MD5 (tochnog-20010210/tnp.ps.gz) = b57e9aba63b8fe16a6cbb1436a34b9c1
