@@ -3,7 +3,7 @@
 # Date created:		17 March 1997
 # Whom:			cjs@netbsd.org
 #
-# $NetBSD: Makefile,v 1.3 1998/03/18 18:46:40 cjs Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/25 18:32:00 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -14,14 +14,20 @@ MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 MAINTAINER=	cjs@netbsd.org
 
 LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm
+RUN_DEPENDS=	xpmroot:${PORTSDIR}/x11/xpmroot
 
 USE_IMAKE=	yes
 XMKMF=		xmkmf && make Makefiles	# drop -a because we have no `depends' target
 
-CAT1= 		FvwmAudio.0 FvwmAuto.0 FvwmBacker.0 FvwmBanner.0 \
-		FvwmIconBox.0 FvwmIdent.0 FvwmPager.0 \
-		FvwmSave.0 FvwmSaveDesk.0 FvwmScroll.0 \
-		FvwmWinList.0 fvwm.0 xpmroot.0
+CAT1=		GoodStuff.0 fvwm.0
+
+post-extract:
+	cd ${WRKSRC}/modules; \
+	for FILE in Fvwm*/Imakefile; do \
+	    ${MV} $${FILE} $${FILE}.orig; \
+	    ${SED} s/ComplexProgramTarget/ComplexProgramTargetNoMan/ \
+		<$${FILE}.orig >$${FILE}; \
+	done
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/X11/fvwm/pixmaps
