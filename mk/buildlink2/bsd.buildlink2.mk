@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.72 2003/01/08 08:33:54 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.73 2003/01/10 08:44:21 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -518,8 +518,9 @@ _BLNK_WRAPPEES+=	FC
 .endif
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=		${BUILDLINK_LIBTOOL}
+PKGSHLIBTOOL=		${BUILDLINK_SHLIBTOOL}
 .endif
-_BLNK_WRAPPEES+=	LIBTOOL
+_BLNK_WRAPPEES+=	LIBTOOL SHLIBTOOL
 .if defined(USE_X11)
 IMAKE?=			${X11BASE}/bin/imake
 _BLNK_WRAPPEES+=	IMAKE
@@ -606,13 +607,18 @@ _BLNK_WRAP_SETENV.CPP=		# empty
 #
 _BLNK_WRAP_SETENV.FC+=		F77="${BUILDLINK_FC:T}"
 
-# Don't override the default LIBTOOL setting in the environment, as
-# it already correctly points to ${PKGLIBTOOL}, and don't sanitize the PATH
-# because we want libtool to invoke the wrapper scripts, too.
+# Don't override the default LIBTOOL and SHLIBTOOL settings in the
+# environment, as they already correctly point to the correct values, and
+# don't sanitize the PATH because we want libtool to invoke the wrapper
+# scripts, too.
 #
 _BLNK_WRAP_SETENV.LIBTOOL=	# empty
 _BLNK_WRAPPER_SH.LIBTOOL=	${.CURDIR}/../../mk/buildlink2/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
+#
+_BLNK_WRAP_SETENV.SHLIBTOOL=	# empty
+_BLNK_WRAPPER_SH.SHLIBTOOL=	${.CURDIR}/../../mk/buildlink2/libtool.sh
+_BLNK_WRAP_SANITIZE_PATH.SHLIBTOOL=	# empty
 
 # We need to "unbuildlinkify" any libtool archives.
 _BLNK_WRAP_LT_UNTRANSFORM_SED=		${_REPLACE_BUILDLINK_SED}
@@ -628,6 +634,13 @@ _BLNK_WRAP_PRIVATE_CACHE_ADD.LIBTOOL=	${BUILDLINK_DIR}/bin/.libtool-cache-add
 _BLNK_WRAP_PRIVATE_CACHE.LIBTOOL=	${BUILDLINK_DIR}/bin/.libtool-cache
 _BLNK_WRAP_PRIVATE_POST_CACHE.LIBTOOL=	${BUILDLINK_DIR}/bin/.libtool-post-cache
 _BLNK_WRAP_POST_LOGIC.LIBTOOL=		${BUILDLINK_DIR}/bin/.libtool-logic
+
+# shlibtool shares cache information with libtool.
+_BLNK_WRAP_PRIVATE_PRE_CACHE.SHLIBTOOL=	${_BLNK_WRAP_PRIVATE_PRE_CACHE.LIBTOOL}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.SHLIBTOOL=	${_BLNK_WRAP_PRIVATE_CACHE_ADD.LIBTOOL}
+_BLNK_WRAP_PRIVATE_CACHE.SHLIBTOOL=	${_BLNK_WRAP_PRIVATE_CACHE.LIBTOOL}
+_BLNK_WRAP_PRIVATE_POST_CACHE.SHLIBTOOL= ${_BLNK_WRAP_PRIVATE_POST_CACHE.LIBTOOL}
+_BLNK_WRAP_POST_LOGIC.SHLIBTOOL=	${_BLNK_WRAP_POST_LOGIC.LIBTOOL}
 
 # Allow BUILDLINK_SETENV.<wrappee> to override _BLNK_WRAP_SETENV.<wrappee>.
 .for _wrappee_ in ${_BLNK_WRAPPEES}
