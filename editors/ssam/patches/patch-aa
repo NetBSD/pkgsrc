@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 1998/09/16 09:05:27 agc Exp $
+
+Use LDFLAGS when linking, just in case we're ELF.
+
+--- Makefile.in	1998/09/16 08:48:04	1.1
++++ Makefile.in	1998/09/16 08:48:10
+@@ -22,7 +22,7 @@
+ RANLIB= @RANLIB@
+ 
+ $(EXE) : $(OBJS)
+-	$(CC) $(OBJS) $(LIBS) -o $(EXE)
++	$(CC) ${LDFLAGS} $(OBJS) $(LIBS) -o $(EXE)
+ 
+ tst: $(EXE)
+ 	test -d tests || ln -s $(srcdir)/tests .
