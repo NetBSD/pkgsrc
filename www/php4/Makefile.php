@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.12 2004/04/24 23:03:25 xtraeme Exp $
+# $NetBSD: Makefile.php,v 1.13 2004/04/26 08:35:22 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -41,6 +41,6 @@ CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
 BUILD_DEFS+=		USE_SSL
 .if defined(USE_SSL) && !empty(USE_SSL:M[Yy][Ee][Ss])
-PHP5_CONFIGURE_ARGS+=	--with-openssl
+PHP4_CONFIGURE_ARGS+=	--with-openssl
 .include "../../security/openssl/buildlink3.mk"
 .endif
