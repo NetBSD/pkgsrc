@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 1998/04/24 16:12:13 agc Exp $
+bin/rdist6
+bin/rdistd
+man/man1/rdist6.1.gz
+man/man8/rdistd.8.gz
