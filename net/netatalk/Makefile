@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2003/02/23 19:18:51 fredb Exp $
+# $NetBSD: Makefile,v 1.23 2003/04/28 04:07:45 fredb Exp $
 
-DISTNAME=	netatalk-1.6.1
+DISTNAME=	netatalk-1.6.2
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
 		http://me.in-berlin.de/~jroger/netatalk/
@@ -34,6 +34,11 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 
 #CONFIGURE_ARGS+=	--with-flock-locks	# broken
 #CONFIGURE_ARGS+=	--with-bdb=${PREFIX}	# still some known issues
+
+post-patch:
+	mv ${WRKSRC}/etc/psf/etc2ps.sh ${WRKSRC}/etc/psf/etc2ps.sh.tmp
+	${SED} -e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3," \
+		< ${WRKSRC}/etc/psf/etc2ps.sh.tmp > ${WRKSRC}/etc/psf/etc2ps.sh
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
