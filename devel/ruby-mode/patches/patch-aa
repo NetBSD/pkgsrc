@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2001/12/23 15:58:52 taca Exp $
+
+--- ruby-mode.el.orig	Wed Mar 21 17:04:12 2001
++++ ruby-mode.el
+@@ -522,7 +522,14 @@
+ 	       (re-search-backward "#" (save-excursion
+ 					 (beginning-of-line)
+ 					 (point)) t)
++	       (save-excursion
++		 (forward-char -1)
++		 (not (looking-at "\\?")))
+ 	       (skip-chars-backward " \t")
++	       (if (save-excursion
++		     (forward-char -1)
++		     (looking-at "\\?"))
++		   (skip-chars-forward " \t"))
+ 	       (setq state (ruby-parse-region parse-start (point)))
+ 	       (nth 0 state)
+ 	       (goto-char pos)))
