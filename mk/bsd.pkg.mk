@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.670 2001/02/21 16:45:04 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.671 2001/02/26 17:23:37 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3318,15 +3318,15 @@ MANCOMPRESSED=	yes
 IMAKE_MAN_CMD=
 .ifdef MANZ
 MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
-		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|'
+		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*0$$\)|\1.gz|'
 .else
 MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
-		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|'
+		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*0\)\.gz$$|\1|'
 .endif # MANZ
 MANZ_NAWK_CMD=
 .elif ${OPSYS} == "SunOS"
 .ifdef USE_IMAKE
-IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln](\.gz)?$$/ { \
+IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
 	sect = $$0; n = match(sect, "/cat[1-9ln]");			\
 	sect = sprintf(".%sx", substr(sect, n + 4, 1));			\
 	s = $$0; sub("/cat", "/man", s); sub("\.0(\.gz)?$$", sect, s);	\
@@ -3340,7 +3340,7 @@ IMAKE_MAN_CMD=
 MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
 		$$0 = sprintf("%s.gz", $$0);				\
 	}								\
-	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ {	\
+	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
 		$$0 = sprintf("%s.gz", $$0);				\
 	}								\
 	{ print $$0; }' |
@@ -3348,7 +3348,7 @@ MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/
 MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
 		$$0 = substr($$0, 1, length($$0) - 3);			\
 	}								\
-	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ {	\
+	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
 		$$0 = substr($$0, 1, length($$0) - 3);			\
 	}								\
 	{ print $$0; }' |
