@@ -1,29 +1,23 @@
-@comment $NetBSD: PLIST,v 1.5 1999/03/28 21:22:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/05/21 13:27:25 rh Exp $
 bin/geda
 bin/gschem
 bin/gpcb
 bin/gnetlist
 bin/gsymcheck
 bin/gschcheck
-bin/mk_sym
+bin/gmk_sym
 bin/smash_megafile
 bin/convert_sym
-lib/libgeda.so.2.2
 lib/libgeda.a
-share/gEDA/scheme/gschem.scm
-share/gEDA/scheme/gnetlist.scm
-share/gEDA/scheme/gpcb.scm
-share/gEDA/scheme/gsymcheck.scm
-share/gEDA/scheme/gschcheck.scm
-share/gEDA/sym/local/555-1.sym
-share/gEDA/sym/local/BNC-1.sym
-share/gEDA/sym/local/DB25-1.sym
-share/gEDA/sym/local/DB9-1.sym
+lib/libgeda.so.2.2
+man/man1/gschem.1
+man/man1/gnetlist.1
+share/gEDA/sym/local/4N29-1.sym
 share/gEDA/sym/local/bridge-1.sym
+share/gEDA/sym/local/dac08sm-1.sym
+share/gEDA/sym/local/hcpl-2630-1.sym
 share/gEDA/sym/local/icl7660-1.sym
-share/gEDA/sym/local/lm-135-1.sym
-share/gEDA/sym/local/lm-75-1.sym
-share/gEDA/sym/local/mains-plug-1.sym
+share/gEDA/sym/local/mt8870-1.sym
 share/gEDA/sym/local/osc-1.sym
 share/gEDA/sym/local/pwrxfmr-1.sym
 share/gEDA/sym/local/test.sym
@@ -84,7 +78,9 @@ share/gEDA/sym/74/7486-1.sym
 share/gEDA/sym/misc/decon-1.sym
 share/gEDA/sym/misc/gnd-1.sym
 share/gEDA/sym/misc/in-1.sym
+share/gEDA/sym/misc/input-1.sym
 share/gEDA/sym/misc/out-1.sym
+share/gEDA/sym/misc/output-1.sym
 share/gEDA/sym/misc/title-A.sym
 share/gEDA/sym/misc/title-A0.sym
 share/gEDA/sym/misc/title-A1.sym
@@ -96,6 +92,8 @@ share/gEDA/sym/misc/title-C.sym
 share/gEDA/sym/misc/title-D.sym
 share/gEDA/sym/misc/title-E.sym
 share/gEDA/sym/misc/vdd-1.sym
+share/gEDA/sym/misc/vdd-2.sym
+share/gEDA/sym/misc/vss-1.sym
 share/gEDA/sym/font/0.sym
 share/gEDA/sym/font/1.sym
 share/gEDA/sym/font/2.sym
@@ -211,6 +209,8 @@ share/gEDA/sym/analog/coil-2.sym
 share/gEDA/sym/analog/crystal-1.sym
 share/gEDA/sym/analog/current-1.sym
 share/gEDA/sym/analog/diode-1.sym
+share/gEDA/sym/analog/fuse-1.sym
+share/gEDA/sym/analog/inamp-1.sym
 share/gEDA/sym/analog/inductor-1.sym
 share/gEDA/sym/analog/led-1.sym
 share/gEDA/sym/analog/nmos-1.sym
@@ -225,7 +225,10 @@ share/gEDA/sym/analog/pnp-1.sym
 share/gEDA/sym/analog/pnp-2.sym
 share/gEDA/sym/analog/pnp-3.sym
 share/gEDA/sym/analog/resistor-1.sym
+share/gEDA/sym/analog/resistor-2.sym
 share/gEDA/sym/analog/resistor-variable-1.sym
+share/gEDA/sym/analog/resistorpack10-1.sym
+share/gEDA/sym/analog/resistorpack6-1.sym
 share/gEDA/sym/analog/speaker-1.sym
 share/gEDA/sym/analog/speaker-2.sym
 share/gEDA/sym/analog/voltage-1.sym
@@ -244,6 +247,7 @@ share/gEDA/sym/micro/8259A-1.sym
 share/gEDA/sym/micro/DS80C310.sym
 share/gEDA/sym/micro/DS80C320.sym
 share/gEDA/sym/micro/pic16C74A-1.sym
+share/gEDA/sym/micro/pic16c505-1.sym
 share/gEDA/sym/IEC417/ac-ac.sym
 share/gEDA/sym/IEC417/ac-dc.sym
 share/gEDA/sym/IEC417/adc.sym
@@ -370,6 +374,49 @@ share/gEDA/sym/foot/dip300_18.foot
 share/gEDA/sym/foot/led.foot
 share/gEDA/sym/foot/led_7seg.foot
 share/gEDA/sym/foot/resistor.foot
+share/gEDA/sym/connector/BNC-1.sym
+share/gEDA/sym/connector/DB25-1.sym
+share/gEDA/sym/connector/DB9-1.sym
+share/gEDA/sym/connector/connector10-1.sym
+share/gEDA/sym/connector/connector16-1.sym
+share/gEDA/sym/connector/connector26-1.sym
+share/gEDA/sym/connector/connector3-1.sym
+share/gEDA/sym/connector/connector6-1.sym
+share/gEDA/sym/connector/header10-1.sym
+share/gEDA/sym/connector/mains-plug-1.sym
+share/gEDA/sym/switch/ssrelay-spdt-lcc110-1.sym
+share/gEDA/sym/switch/ssrelay-spst-lcb110-1.sym
+share/gEDA/sym/switch/switch-dip4-1.sym
+share/gEDA/sym/switch/switch-dip8-1.sym
+share/gEDA/sym/switch/switch-pushbutton-nc-1.sym
+share/gEDA/sym/switch/switch-pushbutton-spdt-1.sym
+share/gEDA/sym/linear/lm135-1.sym
+share/gEDA/sym/linear/lm311-1.sym
+share/gEDA/sym/linear/lm324-1.sym
+share/gEDA/sym/linear/lm339-1.sym
+share/gEDA/sym/linear/lm393-1.sym
+share/gEDA/sym/linear/lm555-1.sym
+share/gEDA/sym/linear/lm75-1.sym
+share/gEDA/sym/altera/10K10LC84-1.sym
+share/gEDA/sym/altera/EPC1LC20-1.sym
+share/gEDA/sym/altera/EPF10K-1.sym
+share/gEDA/sym/verilog/block-1.sym
+share/gEDA/sym/verilog/iopad-1.sym
+share/gEDA/sym/verilog/ipad-1.sym
+share/gEDA/sym/verilog/opad-1.sym
+share/gEDA/sym/verilog/test_verilog.sym
+share/gEDA/sym/maxim/adc0820-1.sym
+share/gEDA/sym/maxim/max038-1.sym
+share/gEDA/sym/maxim/max100-1.sym
+share/gEDA/sym/maxim/max1005-1.sym
+share/gEDA/sym/maxim/max1011-1.sym
+share/gEDA/sym/maxim/max1055-1.sym
+share/gEDA/sym/maxim/max1114-1.sym
+share/gEDA/sym/maxim/max135-1.sym
+share/gEDA/sym/maxim/max1588-1.sym
+share/gEDA/sym/maxim/max1620-1.sym
+share/gEDA/sym/maxim/max1637-1.sym
+share/gEDA/sym/maxim/max186-1.sym
 share/gEDA/source/7400-1_1.sch
 share/gEDA/source/7400-1_2.sch
 share/gEDA/source/7408-1_1.sch
@@ -383,20 +430,32 @@ share/gEDA/system-gsymcheckrc
 share/gEDA/system-gedarc
 share/gEDA/system-gschcheckrc
 share/gEDA/system-gpcbrc
+share/gEDA/system-commonrc
+share/gEDA/scheme/gnetlist.scm
+share/gEDA/scheme/gpcb.scm
+share/gEDA/scheme/gschcheck.scm
+share/gEDA/scheme/gschem.scm
+share/gEDA/scheme/gsymcheck.scm
+@dirrm share/gEDA/scheme
+@dirrm share/gEDA/source
 @dirrm share/gEDA/sym/4000
 @dirrm share/gEDA/sym/74
 @dirrm share/gEDA/sym/IEC417
+@dirrm share/gEDA/sym/altera
 @dirrm share/gEDA/sym/analog
+@dirrm share/gEDA/sym/connector
 @dirrm share/gEDA/sym/font
 @dirrm share/gEDA/sym/foot
 @dirrm share/gEDA/sym/idt
+@dirrm share/gEDA/sym/linear
 @dirrm share/gEDA/sym/local
+@dirrm share/gEDA/sym/maxim
 @dirrm share/gEDA/sym/memory
 @dirrm share/gEDA/sym/micro
 @dirrm share/gEDA/sym/misc
 @dirrm share/gEDA/sym/radio
+@dirrm share/gEDA/sym/switch
 @dirrm share/gEDA/sym/tube
+@dirrm share/gEDA/sym/verilog
 @dirrm share/gEDA/sym
-@dirrm share/gEDA/scheme
-@dirrm share/gEDA/source
 @dirrm share/gEDA
