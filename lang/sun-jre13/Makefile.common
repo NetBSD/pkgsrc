@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/09/19 08:28:17 wennmach Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/09/30 23:43:46 jlam Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang
@@ -48,6 +48,7 @@ NO_MTREE=	yes
 ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-*
 LDD=		${TRUE}
 NO_BUILD=	# defined
+USE_BUILDLINK2=	# defined
 
 post-fetch:
 .	if ${OPSYS} != "Darwin"
