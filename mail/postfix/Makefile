@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2004/08/05 03:04:33 jlam Exp $
+# $NetBSD: Makefile,v 1.148 2004/08/07 07:58:32 jlam Exp $
 
 DISTNAME=	postfix-2.1.4
 CATEGORIES=	mail
@@ -33,13 +33,34 @@ CCARGS=		# empty
 AUXLIBS=	# empty
 FIX_RPATH+=	AUXLIBS
 
-CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
+# Set some default paths to override ${WRKSRC}/src/global/mail_params.h.
 CCARGS+=	-DDEF_QUEUE_DIR=\"${POSTFIX_QUEUE_DIR}\"
-CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
 CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
+CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
+CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
 CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
 CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
 CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
+CCARGS+=	-DDEF_MANPAGE_DIR=\"${PREFIX}/man\"
+CCARGS+=	-DDEF_SAMPLE_DIR=\"${EXAMPLEDIR}\"
+CCARGS+=	-DDEF_README_DIR=\"${DOCDIR}\"
+
+# Override those same default paths in the installed example main.cf.
+SUBST_CLASSES+=		postfix
+SUBST_STAGE.postfix=	post-configure
+SUBST_FILES.postfix=	conf/main.cf src/global/mail_params.h
+SUBST_SED.postfix=	\
+	-e "s|^\(queue_directory\) =.*|\1 = ${POSTFIX_QUEUE_DIR}|"	\
+	-e "s|^\(command_directory\) =.*|\1 = ${PREFIX}/sbin|"		\
+	-e "s|^\(daemon_directory\) =.*|\1 = ${LIBEXECDIR}|"		\
+	-e "s|^\(sendmail_path\) =.*|\1 = ${PREFIX}/sbin/sendmail|"	\
+	-e "s|^\(newaliases_path\) =.*|\1 = ${PREFIX}/bin/newaliases|"	\
+	-e "s|^\(mailq_path\) =.*|\1 = ${PREFIX}/bin/mailq|"		\
+	-e "s|^\(setgid_group\) =.*|\1 = maildrop|"			\
+	-e "s|^\(manpage_directory\) =.*|\1 = ${PREFIX}/man|"		\
+	-e "s|^\(sample_directory\) =.*|\1 = ${EXAMPLEDIR}|"		\
+	-e "s|^\(readme_directory\) =.*|\1 = ${DOCDIR}|"		\
+	-e "/^\#define DEF_SGID_GROUP[ 	]/s,postdrop,maildrop,g"
 
 # options.mk appends to CCARGS and AUXLIBS the options needed to build
 # Postfix with support for various add-on modules.
@@ -87,16 +108,6 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
 MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
-
-POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h		\
-			src/global/mail_params.h postfix-install
-
-pre-configure:
-	@for i in ${POSTFIX_CONF_FILES}; do				\
-		${CP} ${WRKSRC}/$${i} ${WRKSRC}/$${i}.dist;		\
-		${SED} ${FILES_SUBST_SED} ${WRKSRC}/$${i}.dist		\
-			> ${WRKSRC}/$${i};				\
-	done
 
 do-configure:
 	cd ${WRKSRC} &&							\
