@@ -1,5 +1,4 @@
-Firefox must be run by a user with access to the installed location
-first, so that all initial startup files are generated. There may be
-issues still where if a restricted-access user is the first to run the
-app, these files may not be generated properly and Firefox may enter
-an infinite restart loop. This will be fixed in a future release.
+If you have ever run another version of firefox or firefox-gtk2, you
+must remove compreg.dat under your firefox profile before you run firefox.
+
+     e.g. rm ~/.mozilla/firefox/*/compreg.dat
