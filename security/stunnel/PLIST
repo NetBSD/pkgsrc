@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/18 08:33:42 martti Exp $
-etc/stunnel/stunnel.conf-sample
+@comment $NetBSD: PLIST,v 1.3 2003/07/29 11:18:39 jmmv Exp $
 lib/libstunnel.la
 lib/libstunnel.so
 man/man8/stunnel.8
@@ -25,6 +24,7 @@ share/doc/stunnel/examples/stunnel.init
 share/doc/stunnel/examples/stunnel.spec
 share/doc/stunnel/stunnel.html
 share/doc/stunnel/stunnel.pl.html
+share/examples/stunnel/stunnel.conf-sample
+@dirrm share/examples/stunnel
 @dirrm share/doc/stunnel/examples
 @dirrm share/doc/stunnel
-@dirrm etc/stunnel

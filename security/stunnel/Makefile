@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2003/07/17 22:53:18 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/07/29 11:18:38 jmmv Exp $
 
 DISTNAME=		stunnel-4.04
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.fu-berlin.de/pub/unix/security/stunnel/ \
 			ftp://stunnel.mirt.net/stunnel/ \
@@ -11,11 +12,15 @@ HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 
 USE_BUILDLINK2=		# defined
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--with-cert-dir="${SSLCERTS}" \
 			--with-pem-dir="${SSLCERTS}" \
-			--with-tcp-wrappers
+			--with-tcp-wrappers \
+			--sysconfdir="${PKG_SYSCONFDIR}"
+
+PKG_SYSCONFSUBDIR=	stunnel
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
