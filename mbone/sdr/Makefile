@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.30 2000/12/16 05:44:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.31 2000/12/17 09:39:53 hubertf Exp $
 #
 
-DISTNAME=	sdr-2.7
-PKGNAME=	sdr-2.7nb1
+DISTNAME=	sdr-3.0
 CATEGORIES=	mbone tk
-MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/2.7/
+MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/3.0/
 
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	common-mml>=1.2.0:../common-mml
 
 CRYPTO=		yes
 USE_GMAKE=	yes
@@ -24,23 +24,20 @@ MAKE_FLAGS+=	EXTRA_FLAGS="${EXTRA_FLAGS}"
 .if ${OPSYS} == "SunOS"
 SYSDIR= solaris
 .else
-SYSDIR= netbsd
+SYSDIR= freebsd
 .endif
+
+WRKSRC=		${WRKDIR}/sdr/${SYSDIR}
+USE_GMAKE=	yes
 
 do-configure:
-	cd ${WRKSRC}/common	; ${SH} ./configure
+	cd ${WRKSRC} ; ${SH} ./configure
 .if ${OPSYS} == "SunOS"
+	# Untested for sdr 3.0 !!!
 	${CAT} ${WRKSRC}/sdr/solaris/Makefile.solaris ${WRKSRC}/sdr/src/Makefile.template > ${WRKSRC}/sdr/solaris/Makefile
-.else
-	${MKDIR} ${WRKSRC}/sdr/netbsd
-	${CAT} ${FILESDIR}/Makefile.netbsd ${WRKSRC}/sdr/src/Makefile.template > ${WRKSRC}/sdr/netbsd/Makefile
 .endif
 
-do-build:
-	cd ${WRKSRC}/common	; ${GMAKE}
-	cd ${WRKSRC}/sdr/${SYSDIR}	; ${GMAKE}
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sdr/${SYSDIR}/sdr ${PREFIX}/bin/sdr
+	${INSTALL_PROGRAM} ${WRKSRC}/sdr ${PREFIX}/bin/sdr
 
 .include "../../mk/bsd.pkg.mk"

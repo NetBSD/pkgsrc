@@ -1,166 +1,30 @@
-$NetBSD: patch-ad,v 1.9 2000/12/16 05:44:09 hubertf Exp $
+$NetBSD: patch-ad,v 1.10 2000/12/17 09:39:53 hubertf Exp $
 
---- sdr/src/sd_listen.c.orig	Fri Jul 16 15:07:27 1999
-+++ sdr/src/sd_listen.c	Wed Dec 13 01:45:34 2000
-@@ -55,6 +55,9 @@
- #include <unistd.h>
- #include <fcntl.h>
- #endif
-+#ifdef HAVE_SYS_INTTYPES_H
-+#include <inttypes.h>
-+#endif
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <setjmp.h>
-@@ -369,7 +372,7 @@
- /* Note "symm" is asymmetrically and "crypt" is symmetrically encrypted ! */
+--- ../src/sdr.tcl.orig	Mon Sep  4 18:30:39 2000
++++ ../src/sdr.tcl
+@@ -4457,7 +4457,7 @@
  
-     if (strcmp(argv[2], "symm")==0) {
--      Tcl_Eval(interp, "pgpstate");
-+      sdr_Tcl_Eval(interp, "pgpstate");
-       if (strcmp(interp->result,"1") != 0) {
-         writelog(printf("PGPSTATE != 1: Not loading %s\n",argv[1]);)
-         retval = 0;
-@@ -515,10 +518,18 @@
- /* set p to point to line following "n=....\nk=...\n" */
- 
-       if (strncmp(k1, "k=", 2)==0) {
-+#ifdef HAVE_SYS_INTTYPES_H
-+	if ((uintptr_t)k2>=(uintptr_t)k1+2) {
-+	  memcpy(key, k1+2, (uintptr_t)k2-((uintptr_t)k1+1));
-+	  key[(uintptr_t)k2-((uintptr_t)k1+1)]='\0';
-+	}
-+#else
- 	if ((u_int)k2>=(u_int)k1+2) {
- 	  memcpy(key, k1+2, (u_int)k2-((u_int)k1+1));
- 	  key[(u_int)k2-((u_int)k1+1)]='\0';
--	} else {
-+	}
-+#endif
-+	else {
-           key[0]='\0';
-         }
- 	p=strchr(k1, '\n')+1;
-@@ -698,7 +709,7 @@
- 
- /* this is X.509 code and hasn't been checked or tested yet */
- 
--	      Tcl_Eval(interp, "x509state");
-+	      sdr_Tcl_Eval(interp, "x509state");
- 	      if (strcmp(interp->result,"1") == 0) {
-                 irand = (lbl_random()&0xffff);
- 		authstatus= check_x509_authentication(auth_hdr,
-@@ -917,7 +928,7 @@
- 
- /* this is for the X.509 encryption and hasn't been checked */
- 
--	      Tcl_Eval(interp, "x509state");
-+	      sdr_Tcl_Eval(interp, "x509state");
-               if (strcmp(interp->result,"1") == 0) {
- 	        irand = (lbl_random()&0xffff);
- 		encstatus_p = \
-@@ -1014,7 +1025,7 @@
- 
- /* check whether the x509state variable is on - if not then ignore the auth */
- 
--                  Tcl_Eval(interp, "x509state");
-+                  sdr_Tcl_Eval(interp, "x509state");
- 
-                   if (strcmp(interp->result,"1") == 0) {
- 
-@@ -1110,6 +1121,17 @@
-       return TCL_OK;
+ # find where we are installed
+ set app_name $argv0
+-while {[file type $app_name] == "link"} {
++while {([file isfile $app_name]) && ([file type $app_name] == "link")} {
+     # don't worry about recursion since we know app must exist.
+     set app_name [file readlink $app_name]
  }
+@@ -4470,6 +4470,7 @@
+ 	$app_home/sdr/plugins \
+ 	$app_home/plugins \
+ 	$app_home/../plugins \
++	/usr/pkg/etc/sdr/plugins \
+ 	/usr/local/etc/sdr/plugins \
+ 	[resource sdrHome]/plugins \
+ ]
+@@ -4538,7 +4539,7 @@
  
-+int
-+sdr_Tcl_Eval (Tcl_Interp *interp, char *script)
-+{
-+    char *copy = strdup (script);
-+    int ret;
-+    if (copy == NULL) abort();
-+    ret = Tcl_Eval (interp, copy);
-+    free (copy);
-+    return ret;
-+}
-+
- 
- /* ---------------------------------------------------------------------- */
- /* main                                                                   */
-@@ -1362,7 +1384,7 @@
- /* load the cached sessions */
- 
-     Tcl_CreateCommand(interp, "load_cache_entry", load_cache_entry, 0, 0);
--    Tcl_Eval(interp, "load_from_cache");
-+    sdr_Tcl_Eval(interp, "load_from_cache");
- 
-     /*register our location with a SIP server (if desired)*/
-     sip_register();
-@@ -1383,7 +1405,11 @@
-     if (cli) {
-       init_cli();
-       inChannel = fileno(stdin);
-+#ifdef HAVE_SYS_INTTYPES_H
-+      Tcl_CreateFileHandler(inChannel, TCL_READABLE, (Tcl_FileProc*)do_cli, (ClientData)(intptr_t) inChannel);
-+#else
-       Tcl_CreateFileHandler(inChannel, TCL_READABLE, (Tcl_FileProc*)do_cli, (ClientData) inChannel);
-+#endif
-     }
- #endif
- 
-@@ -1403,7 +1429,7 @@
- 	    ui_visible=FALSE;
- 	  }
-       }
--    Tcl_Eval(interp, "write_cache");
-+    sdr_Tcl_Eval(interp, "write_cache");
-     clean_up_and_die();
-     return(0);
+ # find where we are installed
+ set app_name $argv0
+-while {[file type $app_name] == "link"} {
++while {([file isfile $app_name]) && ([file type $app_name] == "link")} {
+     # don't worry about recursion since we know app must exist.
+     set app_name [file readlink $app_name]
  }
-@@ -1426,7 +1452,7 @@
- void remove_interface()
- {
-   ui_visible=FALSE;
--/*  Tcl_Eval(interp, "write_cache");*/
-+/*  sdr_Tcl_Eval(interp, "write_cache");*/
- /*  signal(SIGPIPE, remove_interface);*/
- }
- void rebuild_interface()
-@@ -1507,7 +1533,11 @@
-     unsigned long src, hfrom;
-     unsigned long endtime;
- 
-+#ifdef HAVE_SYS_INTTYPES_H
-+    intptr_t ix = rfd2sock[PTOI(fd)];
-+#else
-     int ix = rfd2sock[PTOI(fd)];
-+#endif
- 
-     writelog(printf("entered recv_packets\n");)
- 
-@@ -1633,7 +1663,7 @@
- 
- /* don't try to decrypt it if PGPSTATE isn't set */
- 
--          Tcl_Eval(interp, "pgpstate");
-+          sdr_Tcl_Eval(interp, "pgpstate");
-           if (strcmp(interp->result,"1") == 0) {
-             if (check_encryption(enc_p,data,length,enc_asym_keyid,encmessage,ENCMESSAGELEN,addata, enctype) != 0) {
-               strcpy(encstatus_p,"failed");
-@@ -1656,7 +1686,7 @@
- 
-           memcpy(enctype,"x509",4);
-           strcpy(recvkey,"");
--          Tcl_Eval(interp, "x509state");
-+          sdr_Tcl_Eval(interp, "x509state");
-           irand = (lbl_random()&0xffff);
-           if (strcmp(interp->result,"1") == 0) {
-             encstatus_p=check_x509_encryption(enc_p,
-@@ -1806,7 +1836,7 @@
- 
- /* PKCS7 authentication used - this hasn't been checked */
- 
--        Tcl_Eval(interp, "x509state");
-+        sdr_Tcl_Eval(interp, "x509state");
- 
-         if (strcmp(interp->result,"1") == 0) {
-           irand = (lbl_random()&0xffff);

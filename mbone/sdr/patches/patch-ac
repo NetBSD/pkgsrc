@@ -1,26 +1,27 @@
-$NetBSD: patch-ac,v 1.7 1999/10/04 20:57:01 is Exp $
+$NetBSD: patch-ac,v 1.8 2000/12/17 09:39:53 hubertf Exp $
 
---- sdr/src/iohandler.c.orig	Sun Sep  6 11:41:03 1998
-+++ sdr/src/iohandler.c	Wed Nov  4 23:42:24 1998
-@@ -43,6 +43,9 @@
- #include <time.h>
- #include <winsock.h>
+--- ../src/tkUnixInit.c.orig	Mon Sep  4 18:30:41 2000
++++ ../src/tkUnixInit.c
+@@ -11,3 +11,22 @@
  #endif
-+#ifdef HAVE_SYS_INTTYPES_H
-+#include <inttypes.h>
-+#endif
- #include <tk.h>
- #ifdef WIN32
- #define WM_WSOCK_READY 	WM_USER+123
-@@ -136,7 +139,11 @@
-         }
- 	sockproc[fd] = callback;
- #else
-+#ifdef HAVE_SYS_INTTYPES_H
-+        Tcl_CreateFileHandler(fd, mask, callback, (ClientData)(intptr_t)fd);
-+#else
-         Tcl_CreateFileHandler(fd, mask, callback, (ClientData)fd);
-+#endif
- #endif
+         return (TCL_OK);
  }
- 
++
++#ifdef __NetBSD__
++int
++sdr_Tcl_Eval (Tcl_Interp *interp, char *script)
++{        
++    char *copy = strdup (script);
++    int ret; 
++#ifdef __NetBSD__
++#ifdef Tcl_Eval
++#undef Tcl_Eval
++    int Tcl_Eval (Tcl_Interp *interp, char *script);
++#endif
++#endif
++    if (copy == NULL) abort();
++    ret = Tcl_Eval (interp, copy);
++    free (copy);
++    return ret;
++}       
++#endif /* __NetBSD__ */
