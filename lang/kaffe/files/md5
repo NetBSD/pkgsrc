@@ -1,3 +1,2 @@
-$NetBSD: md5,v 1.6 1999/08/07 10:23:53 drochner Exp $
-
-MD5 (kaffe-1.0.b4.tar.gz) = 86f917a3e592a80fff9affa2f92712a7
+$NetBSD: md5,v 1.7 1999/11/10 18:03:26 drochner Exp $
+MD5 (kaffe-1.0.5.tar.gz) = f75b697759d355b4e5ce5598e62de515
