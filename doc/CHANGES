@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3858 2003/11/26 11:20:05 abs Exp $
+$NetBSD: CHANGES,v 1.3859 2003/11/26 16:01:57 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4643,4 +4643,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmodplay to 0.08nb3 [ben 2003-11-25]
 	Updated cxunzip to 0.98 [abs 2003-11-25]
 	Updated p5-Image-Size to 2.992 [abs 2003-11-25]
-
+	Updated ap-aolserver to 1.1nb3 [jlam 2003-11-26]
