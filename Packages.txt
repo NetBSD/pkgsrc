@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.250 2002/06/18 16:14:54 agc Exp $
+# $NetBSD: Packages.txt,v 1.251 2002/06/20 20:15:46 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -2223,7 +2223,9 @@ By default, a new user will have home directory /nonexistent, and login shell
 The package Makefile must also include "../../mk/bsd.pkg.install.mk" prior to
 the inclusion of bsd.pkg.mk.  This will cause the users and groups to be
 created at pre-install time, and the admin will be prompted to remove them at
-post-deinstall time.
+post-deinstall time.  Automatic creation of the users and groups can be
+toggled on and off by setting the environment variable PKG_CREATE_USERGROUP
+prior to package installation.
 
 
  10.23 How to handle compiler bugs
@@ -2363,8 +2365,12 @@ them into PKG_SYSCONFDIR. The contents of this variable is formed by pairs
 of filenames; the first element of the pair specifies the file inside the
 examples directory (registered by PLIST) and the second element specifies
 the target file. This is done this way to allow binary packages to place
-files in the right directory (using INSTALL/DEINSTALL scripts which are
-created automatically).
+files in the right directory using INSTALL/DEINSTALL scripts which are
+created automatically.  The package Makefile must also include
+"../../mk/bsd.pkg.install.mk" prior to the inclusion of bsd.pkg.mk to use
+these automatically generated scripts.  The automatic copying of config
+files can be toggled by setting the environment variable PKG_CONFIG prior
+to package installation.
 
 Here is an example, taken from mail/mutt/Makefile:
 
