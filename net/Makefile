@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/03/05 09:11:23 mellon Exp $
+# $NetBSD: Makefile,v 1.17 1998/03/19 12:54:23 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -59,6 +59,7 @@
 #    SUBDIR += rwhois
     SUBDIR += samba
     SUBDIR += scotty
+    SUBDIR += sirc
 #    SUBDIR += slirp
     SUBDIR += socks5
 #    SUBDIR += strobe
@@ -71,7 +72,6 @@
 #    SUBDIR += traceroute
 #    SUBDIR += trafshow
     SUBDIR+= ttcp
-    SUBDIR += sirc
 #    SUBDIR += ucd-snmp
 #    SUBDIR += wais
 #    SUBDIR += wide-dhcp
