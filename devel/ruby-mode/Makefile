@@ -1,27 +1,22 @@
-# $NetBSD: Makefile,v 1.8 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/27 14:55:25 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}mode-${RUBY_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-mode-${RUBY_VERSION}
 CATEGORIES=	devel ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
+HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby editing mode for Emacs
 
-DIST_SUBDIR=	ruby
-WRKSRC=		${RUBY_WRKSRC}/misc
-
-.include "../../mk/bsd.prefs.mk"
-RUBY_VER=	1.6		# always use 1.6 base
-
-EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/misc
-NO_CONFIGURE=	# defined
-
-SRCS=	${RUBY_WRKSRC}/misc/ruby-mode.el \
-	${RUBY_WRKSRC}/misc/rubydb3x.el \
-	${RUBY_WRKSRC}/misc/inf-ruby.el
+DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
+WRKSRC=			${RUBY_WRKSRC}/misc
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/misc
+RUBY_VERSION=		${RUBY18_VERSION}
+RUBY_NOVERSION=		yes
+NO_CONFIGURE=		yes
+SRCS=			ruby-mode.el rubydb3x.el inf-ruby.el
 
 PLIST_SUBST+=	SITE_LISP=${SITE_LISP}
 
@@ -34,8 +29,11 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/ruby-mode
-	${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${EMACS_LISPPREFIX}/ruby-mode
+	cd ${WRKSRC}; \
+		${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} \
+			${EMACS_LISPPREFIX}/ruby-mode
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
