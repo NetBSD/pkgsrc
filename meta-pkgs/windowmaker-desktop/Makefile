@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:58:19 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/18 09:53:12 wiz Exp $
 #
 
 DISTNAME=	windowmaker-desktop-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11 windowmaker
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,7 +21,7 @@ DEPENDS+=	wmcpuload-[0-9]*:../../sysutils/wmcpuload
 DEPENDS+=	wmmemmon-[0-9]*:../../sysutils/wmmemmon
 DEPENDS+=	wmmail-[0-9]*:../../mail/wmmail
 DEPENDS+=	wmnet-[0-9]*:../../net/wmnet
-DEPENDS+=	wmWeather-[0-9]*:../../x11/wmweather
+DEPENDS+=	wmweather-[0-9]*:../../x11/wmweather
 DEPENDS+=	wmMoonClock-[0-9]*:../../time/wmmoonclock
 DEPENDS+=	wmmixer-[0-9]*:../../audio/wmmixer
 
