@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1554 2004/03/31 04:39:17 xtraeme Exp $
+$NetBSD: TODO,v 1.1555 2004/03/31 04:47:55 snj Exp $
 
 Suggested new packages
 ======================
@@ -349,7 +349,6 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.1
 	o vfu-4.03
-	o vim-kde-6.2.14 [pkg/23681|24592]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o w3m-0.4.2
