@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.79 2003/08/28 14:44:56 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.80 2003/09/06 08:52:59 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -105,7 +105,7 @@ if ($opt{D} && @ARGV)
 	{
 	if ($opt{V})
 	    {
-	    my($vuln) = "$pkgdistdir/vulnerabilities";
+	    my($vuln) = "$pkgdistdir/pkg-vulnerabilities";
 	    if (! open(VULN, $vuln))
 		{ fail("Unable to open '$vuln': $!"); }
 	    while (<VULN>)
@@ -1222,7 +1222,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
     verbose(" ($numpkg packages)\n");
 
     # Do not mark the vulnerabilities file as unknown
-    $distfiles{vulnerabilities} = { path => 'vulnerabilities',
+    $distfiles{vulnerabilities} = { path => 'pkg-vulnerabilities',
 				      sum => 'IGNORE'};
 
     foreach my $file (listdir("$pkgdistdir"))
