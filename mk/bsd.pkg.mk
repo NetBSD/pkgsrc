@@ -1,9 +1,9 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.62 1998/04/09 12:47:02 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.63 1998/04/15 10:45:05 agc Exp $
 #
-#	bsd.port.mk - 940820 Jordan K. Hubbard.
+#	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
 #
 # FreeBSD Id: bsd.port.mk,v 1.264 1996/12/25 02:27:44 imp Exp
@@ -12,7 +12,7 @@
 # Please view me with 4 column tabs!
 
 # There are two different types of "maintainers" in the whole ports
-# framework concept.  Maintainers of the bsd.port*.mk files
+# framework concept.  Maintainers of the bsd.port*.mk and bsd.pkg*.mk files
 # are listed below in the ${OSNAME}_MAINTAINER entries (this file
 # is used by multiple *BSD flavors).  You should consult them directly
 # if you have any questions/suggestions regarding this file since only
@@ -121,7 +121,7 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 # PKG_DBDIR		- Where package installation is recorded (default: /var/db/pkg)
 # FORCE_PKG_REGISTER - If set, it will overwrite any existing package
 #				  registration information in ${PKG_DBDIR}/${PKGNAME}.
-# NO_MTREE		- If set, will not invoke mtree from bsd.port.mk from
+# NO_MTREE		- If set, will not invoke mtree from bsd.pkg.mk from
 #				  the "install" target.
 # MTREE_FILE	- The name of the mtree file (default: /etc/mtree/BSD.x11.dist
 #				  if USE_IMAKE or USE_X11 is set, /etc/mtree/BSD.local.dist
@@ -159,7 +159,7 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 # CONFIGURE_ENV - Pass these env (shell-like) to configure if
 #				  ${HAS_CONFIGURE} is set.
 # SCRIPTS_ENV	- Additional environment vars passed to scripts in
-#                 ${SCRIPTDIR} executed by bsd.port.mk.
+#                 ${SCRIPTDIR} executed by bsd.pkg.mk.
 # MAKE_ENV		- Additional environment vars passed to sub-make in build
 #				  stage.
 # IS_INTERACTIVE - Set this if your port needs to interact with the user
@@ -1522,7 +1522,7 @@ distclean: pre-distclean clean
 
 # Prints out a list of files to fetch (useful to do a batch fetch)
 
-# are we called from bsd.port.subdir.mk (i.e. do we scan all dirs anyways)? XXX
+# are we called from bsd.pkg.subdir.mk (i.e. do we scan all dirs anyways)? XXX
 .ifdef(DIRPRFX)
 RECURSIVE_FETCH_LIST?=	NO
 .else
