@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2004/06/04 05:21:14 reed Exp $
+# $NetBSD: builtin.mk,v 1.6 2004/08/28 06:05:31 jlam Exp $
 
 .if !defined(_LIBICONV_FOUND)
 _LIBICONV_FOUND!=							\
@@ -130,7 +130,7 @@ _LIBICONV=		-liconv
 _LIBICONV=		-liconv
 .  else
 _LIBICONV=		# empty
-BUILDLINK_TRANSFORM+=	l:iconv:
+BUILDLINK_TRANSFORM+=	rm:-liconv
 .  endif
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2004/05/09 20:31:07 danw Exp $
+# $NetBSD: builtin.mk,v 1.8 2004/08/28 06:05:31 jlam Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -135,7 +135,7 @@ _BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 _BLNK_LIBINTL=		-lintl
 .  else
 _BLNK_LIBINTL=		# empty
-BUILDLINK_TRANSFORM+=	l:intl:
+BUILDLINK_TRANSFORM+=	rm:-lintl
 .  endif
 .endif
 

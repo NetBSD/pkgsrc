@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2004/05/06 10:03:54 recht Exp $
+# $NetBSD: Makefile,v 1.63 2004/08/28 06:05:32 jlam Exp $
 
 DISTNAME=		evolution-1.4.6
 CATEGORIES=		mail time gnome
@@ -69,8 +69,8 @@ GCONF2_SCHEMAS+=	apps_evolution_calendar.schemas
 GCONF2_SCHEMAS+=	apps_evolution_summary.schemas
 GCONF2_SCHEMAS+=	evolution-mail.schemas
 
-BUILDLINK_TRANSFORM+=	S:-DG_DISABLE_DEPRECATED:
-BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
+BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .if !exists(/usr/include/semaphore.h)
 LDFLAGS+=	-lsemaphore
