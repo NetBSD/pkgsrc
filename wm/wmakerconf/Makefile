@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2004/11/08 10:14:33 adam Exp $
+# $NetBSD: Makefile,v 1.23 2004/11/09 10:30:31 wiz Exp $
 
 DISTNAME=	wmakerconf-2.9.2
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://starplot.org/wmakerconf/
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://starplot.org/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 
