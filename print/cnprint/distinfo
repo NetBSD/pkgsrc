@@ -1,0 +1,33 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/02 00:24:35 hubertf Exp $
+
+SHA1 (cnprint-3.30b/cnprint330b.c) = a496e1b042c9e02540de517915950b29c1fe332d
+Size (cnprint-3.30b/cnprint330b.c) = 176774 bytes
+SHA1 (cnprint-3.30b/cnprint330b.readme) = c52839ad23057b5a3d7b0875d23376f1e262bdf8
+Size (cnprint-3.30b/cnprint330b.readme) = 2468 bytes
+SHA1 (cnprint-3.30b/ttfb330b.c) = d8b3f27592a319491d792555f8cc20a90bae848a
+Size (cnprint-3.30b/ttfb330b.c) = 21477 bytes
+SHA1 (cnprint-3.30b/cnprint330b.hlp) = bf03047fed6de6e4252233ae4296fa5da033af7d
+Size (cnprint-3.30b/cnprint330b.hlp) = 71980 bytes
+SHA1 (cnprint-3.30b/cnprint33.cmd) = 8f61713ed134ba0a1f23cfb31a1155674d3ab16b
+Size (cnprint-3.30b/cnprint33.cmd) = 13012 bytes
+SHA1 (cnprint-3.30b/helvet.dat) = 4df5e57c38f86a2185e2a3366be9f7612d0fc0ba
+Size (cnprint-3.30b/helvet.dat) = 898 bytes
+SHA1 (cnprint-3.30b/mssong.ttf.gz) = 4f861e4a12b054e1c18a4fbdf72c144ef3cfcec2
+Size (cnprint-3.30b/mssong.ttf.gz) = 1456613 bytes
+SHA1 (cnprint-3.30b/mssong.htf) = d9fcf01a3e463e6a9c1a520aa5f6059e7e8b4f24
+Size (cnprint-3.30b/mssong.htf) = 64 bytes
+SHA1 (cnprint-3.30b/mshei.ttf.gz) = cb217fa17a54a2a267ffc24952a06c3d3fca602b
+Size (cnprint-3.30b/mshei.ttf.gz) = 1060525 bytes
+SHA1 (cnprint-3.30b/mshei.htf) = e4e05af2515e606c2da6e87a8947a74b8899ae49
+Size (cnprint-3.30b/mshei.htf) = 63 bytes
+SHA1 (cnprint-3.30b/cc48s.hbf) = 8fc215699e337b59b9ab1ec175bc7d36da56bf45
+Size (cnprint-3.30b/cc48s.hbf) = 1921 bytes
+SHA1 (cnprint-3.30b/cc48.sym.gz) = 815219cbe4799091f433389b81ab122727507722
+Size (cnprint-3.30b/cc48.sym.gz) = 66018 bytes
+SHA1 (cnprint-3.30b/cc48s.1.gz) = aa979e6b516bdf3e0d5409c4e6b7dc4cfdae3fa6
+Size (cnprint-3.30b/cc48s.1.gz) = 461404 bytes
+SHA1 (cnprint-3.30b/cc48s.2.gz) = c0755c8440177a44d1de48e0fcfd1770853f8935
+Size (cnprint-3.30b/cc48s.2.gz) = 391896 bytes
+SHA1 (cnprint-3.30b/hbf.tar.gz) = 0ff6238f90f3c390047cde7a694b0a6c948fa75a
+Size (cnprint-3.30b/hbf.tar.gz) = 3512320 bytes
+SHA1 (patch-aa) = b9ab727c530a197bd7a8de75d57f8f163e886dc1
