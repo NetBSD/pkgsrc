@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/27 10:18:55 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/12 11:22:12 seb Exp $
 bin/nghelp
 bin/ngmakeidx
 bin/ngmultidec
@@ -6,15 +6,6 @@ bin/ngspice
 bin/ngnutmeg
 bin/ngproc2mod
 bin/ngsconvert
-info/ngspice.info
-info/ngspice.info-1
-info/ngspice.info-2
-info/ngspice.info-3
-info/ngspice.info-4
-info/ngspice.info-5
-info/ngspice.info-6
-info/ngspice.info-7
-info/ngspice.info-8
 lib/libdev.a
 lib/ng-spice-rework/libasrc.a
 lib/ng-spice-rework/libasrc.la
