@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/08/16 06:55:55 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/12 10:51:51 simonb Exp $
 
-DISTNAME=       dictd-1.4.9
-PKGNAME=        dict-client-1.4.9
+DISTNAME=       dictd-1.5.5
+PKGNAME=        dict-client-1.5.5
 CATEGORIES=	textproc
-MASTER_SITES=   ftp://ftp.cs.unc.edu/pub/users/faith/dict/ \
-		ftp://ftp.dict.org/pub/dict/
+MASTER_SITES=   ftp://ftp.dict.org/pub/dict/
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.dict.org/
