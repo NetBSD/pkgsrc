@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
+$NetBSD: patch-aa,v 1.29 2005/01/18 14:16:20 adam Exp $
 
---- Makefile.config.in.orig	Tue Jan 13 18:12:28 2004
+--- Makefile.config.in.orig	2004-10-16 19:53:17.000000000 +0000
 +++ Makefile.config.in
 @@ -33,7 +33,7 @@ BUILD_FIASCO = Y
  #CC = gcc
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  
  # The linker.
  LD = $(CC)
-@@ -70,7 +70,7 @@ LD_FOR_BUILD = $(LD)
+@@ -86,7 +86,7 @@ LD_FOR_BUILD = $(LD)
  
  # MAKE is set automatically by Make to what was used to invoke Make.
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  #Solaris:
  #INSTALL = /usr/ucb/install
  #Tru64:
-@@ -82,7 +82,7 @@ INSTALL = $(SRCDIR)/buildtools/install.s
+@@ -98,7 +98,7 @@ INSTALL = $(SRCDIR)/buildtools/install.s
  
  # STRIPFLAG is the option you pass to the above install program to make it
  # strip unnecessary information out of binaries.
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  # If you don't want to strip the binaries, just leave it null:
  #STRIPFLAG = 
  
-@@ -101,8 +101,10 @@ MANPAGE_FORMAT = nroff
+@@ -117,8 +117,10 @@ MANPAGE_FORMAT = nroff
  AR = ar
  RANLIB = ranlib
  # IRIX, SCO don't have Ranlib:
@@ -42,16 +42,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  # Solaris:
  # LEX = flex -e
  # Or just skip parts that need Lex:
-@@ -151,7 +153,7 @@ EXE =
-   
- # linker options.  
- 
--LDFLAGS =
-+#LDFLAGS =
- # Eunice users may want to use -noshare so that the executables can
- # run standalone:
- #LDFLAGS = -noshare
-@@ -174,7 +176,7 @@ LDFLAGS =
+@@ -204,7 +206,7 @@ EXE =
  
  # Here, $(SONAME) resolves to the soname for the shared library being created.
  # The following are gcc options.  This works on GNU libc systems.
@@ -60,8 +51,8 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  # You need -nostart instead of -shared on BeOS.  Though the BeOS compiler is
  # ostensibly gcc, it has the -nostart option, which is not mentioned in gcc
  # documentation and doesn't exist in at least one non-BeOS installation.
-@@ -203,6 +205,18 @@ LDRELOC = NONE
- #LDRELOC = ld --relocateable
+@@ -237,6 +239,18 @@ LDRELOC = NONE
+ #LDRELOC = ld --reloc
  #LDRELOC = ld -r
  
 +ifeq ($(OPSYS),SunOS)
@@ -79,7 +70,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  
  # On older systems, you have to make shared libraries out of position
  # independent code, so you need -fpic or fPIC here.  (The rule is: if
-@@ -221,11 +235,23 @@ LDRELOC = NONE
+@@ -255,11 +269,23 @@ LDRELOC = NONE
  CFLAGS_SHLIB = 
  # Solaris or SunOS with gcc, and NetBSD:
  #CFLAGS_SHLIB = -fpic
@@ -104,7 +95,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  # SHLIB_CLIB is the link option to include the C library in a shared library,
  # normally "-lc".  On typical systems, this serves no purpose.  On some,
  # though, it causes information about which C library to use to be recorded
-@@ -294,8 +320,8 @@ TIFFHDR_DIR =
+@@ -328,8 +354,8 @@ TIFFHDR_DIR =
  #TIFFLIB = libtiff.so
  #TIFFHDR_DIR = /usr/include/libtiff
  #NetBSD:
@@ -115,7 +106,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  # OSF, Tru64:
  #TIFFLIB = /usr/local1/DEC/lib/libtiff.so
  #TIFFHDR_DIR = /usr/local1/DEC/include
-@@ -323,8 +349,8 @@ JPEGHDR_DIR =
+@@ -357,8 +383,8 @@ JPEGHDR_DIR =
  #JPEGLIB = libjpeg.so
  #JPEGHDR_DIR = /usr/include/jpeg
  # Netbsd:
@@ -126,7 +117,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  # OSF, Tru64:
  #JPEGLIB = /usr/local1/DEC/libjpeg.so
  #JPEGHDR_DIR = /usr/local1/DEC/include
-@@ -348,8 +374,8 @@ PNGVER = 
+@@ -382,8 +408,8 @@ PNGVER = 
  #PNGLIB = libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/include/libpng$(PNGVER)
  # NetBSD:
@@ -137,7 +128,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  # OSF/Tru64:
  #PNGLIB = /usr/local1/DEC/lib/libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/local1/DEC/include
-@@ -359,8 +385,8 @@ PNGVER = 
+@@ -393,8 +419,8 @@ PNGVER = 
  # NONE for the PNG library, it doesn't matter what you specify here --
  # it won't get used.
  
@@ -148,7 +139,7 @@ $NetBSD: patch-aa,v 1.28 2004/10/21 20:45:52 tv Exp $
  #ZLIB = libz.so
  
  # The JBIG lossless image compression library (aka JBIG-KIT):
-@@ -401,7 +427,7 @@ OMIT_NETWORK =
+@@ -435,7 +461,7 @@ OMIT_NETWORK =
  # built into the standard C library, so this can be null.  This is irrelevant
  # if OMIT_NETWORK is "y".
  
