@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2004/02/09 07:16:13 minskim Exp $
 
 DISTNAME=	xemacs-21.5.16
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=	*BETA* XEmacs text editor version 21.5.16
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 
+BUILD_DEFS+=	XEMACS_WIDGETS XEMACS_ESD USE_LDAP USE_XFACE XEMACS_USE_CANNA
 PLIST_SUBST+=	EMACSVER=xemacs-21.5-b16
 MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b16
 
@@ -55,7 +56,7 @@ WITH_XFACE=	--with-xface
 WITH_XFACE=	--without-xface
 .endif
 
-.if defined(EMACS_CANNA) && (${EMACS_CANNA} == "YES")
+.if defined(XEMACS_USE_CANNA) && (${XEMACS_USE_CANNA} == "YES")
 .  include "../../inputmethod/canna-lib/buildlink2.mk"
 WITH_CANNA=	--with-canna
 .else
