@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/09/24 10:58:18 rh Exp $
+# $NetBSD: Makefile,v 1.22 2004/10/29 07:19:16 rh Exp $
 #
 
-DISTNAME=	cgoban-unix-2.6.5
+DISTNAME=	cgoban-unix-2.6.6
 PKGNAME=	${DISTNAME:S/unix/java/}
 CATEGORIES=	games java
 MASTER_SITES=	http://kgs.kiseido.com/
