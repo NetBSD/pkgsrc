@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8694 2005/01/11 11:10:47 adam Exp $
+$NetBSD: CHANGES,v 1.8695 2005/01/11 11:22:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -233,3 +233,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated tuxpaint to 0.9.14nb3 [wiz 2005-01-11]
 	Updated abiword to 2.2.2 [adam 2005-01-11]
 	Updated abiword-plugins to 2.2.2 [adam 2005-01-11]
+	Updated gentoo to 0.11.54 [adam 2005-01-11]
