@@ -1,6 +1,10 @@
-$NetBSD: README.MacOSX,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+$NetBSD: README.MacOSX,v 1.2 2004/04/24 19:22:41 danw Exp $
 
-Please read "README.Darwin" first, as it applies to Mac OS X.
+Please read "README.Darwin" as well, as everything there also applies
+to Mac OS X.
+
+
+Creating a case-sensitive pkgsrc partition:
 
 Since most Macintoshes come with only 1 disk installed, and you
 want to have your pkgsrc UFS partition on that disk, there's a
@@ -28,3 +32,19 @@ mount point to you (/Volumes/whatever).
 
 This note is as of 10.2 (Jaguar) and applies to earlier versions.
 [Hopefully Apple will fix Disk Utility in 10.3 (Panther)].
+
+
+Developer tools:
+
+If you haven't already, you will need to install the Mac OS X Developer
+Tools package. Depending on the version of OS X you are running, you
+may have this on CD. If not, you can download it from Apple's
+Developer Connection. (You will need to register for a free ADC
+account.) See http://developer.apple.com/macosx/ for details.
+
+If you plan to build packages that use the X11 Window System, you will
+also need to make sure you have X11 installed. OS X 10.3 (Panther)
+includes X11 and X11 SDK packages on CD. If you are using an older
+version of OS X, you can install the XFree86 packages instead, from
+www.xfree86.org.
+
