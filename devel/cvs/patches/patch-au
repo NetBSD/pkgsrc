@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.1 1999/05/25 17:52:25 mycroft Exp $
+$NetBSD: patch-au,v 1.2 2000/02/23 06:48:56 mycroft Exp $
 
---- src/commit.c.orig	Thu Aug  6 20:04:11 1998
-+++ src/commit.c	Tue May 25 10:25:05 1999
+--- src/commit.c.orig	Thu Aug  6 23:04:11 1998
++++ src/commit.c	Wed Feb 23 01:24:54 2000
 @@ -984,7 +984,9 @@
  		  xmalloc (sizeof (struct logfile_info)));
  	    li->type = status;
@@ -13,3 +13,13 @@ $NetBSD: patch-au,v 1.1 1999/05/25 17:52:25 mycroft Exp $
  	    li->rev_new = NULL;
  	    p->data = (char *) li;
  	    (void) addnode (ulist, p);
+@@ -1476,7 +1478,8 @@
+ 		cvs_output (": Executing '", 0);
+ 		run_print (stdout);
+ 		cvs_output ("'\n", 0);
+-		(void) run_exec (RUN_TTY, RUN_TTY, RUN_TTY, RUN_NORMAL);
++		(void) run_exec (RUN_TTY, RUN_TTY, RUN_TTY,
++				 RUN_NORMAL | RUN_UNSETXID);
+ 		free (repos);
+ 	    }
+ 	    else
