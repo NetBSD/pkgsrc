@@ -1,0 +1,34 @@
+$NetBSD: acroread.diff,v 1.1.1.1 2000/01/14 15:19:28 dmcmahill Exp $ 
+
+--- acroread.orig	Tue Jan 11 13:05:56 2000
++++ acroread	Tue Jan 11 13:12:42 2000
+@@ -210,4 +210,22 @@
+     export ACRO_CONFIG
+     ;;
++  NetBSD)
++    machine_type=`uname -p`
++    case "$machine_type" in
++      alpha)
++        ACRO_CONFIG=alphaosf
++        export ACRO_CONFIG
++        ;;
++      i386)
++        ACRO_CONFIG=intellinux
++        export ACRO_CONFIG
++        ;;
++      sparc)
++        ACRO_CONFIG=sparcsun
++        export ACRO_CONFIG
++        ;;
++    esac
++    ;;
++
+ esac
+ 
+@@ -310,4 +328,6 @@
+     LD_LIBRARY_PATH="`prepend "$ACRO_INSTALL_DIR/$ACRO_CONFIG/lib:$ACRO_INSTALL_DIR/$ACRO_CONFIG/lib" "$LD_LIBRARY_PATH"`"
+     export LD_LIBRARY_PATH
++    LC_CTYPE="C"
++    export LC_CTYPE
+     ;;
+   intelbsdi)

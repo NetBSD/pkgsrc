@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.netbsd-alpha,v 1.1.1.1 2000/01/14 15:19:28 dmcmahill Exp $
+Acrobat3/Reader/${PLATFORM}/lib/libagm.so.2.0
+Acrobat3/Reader/${PLATFORM}/lib/libagm.so
+Acrobat3/Reader/${PLATFORM}/lib/libpfs.so.2.5
+Acrobat3/Reader/${PLATFORM}/lib/libpfs.so
+Acrobat3/Reader/${PLATFORM}/lib/libreadcore.so.3.0
+Acrobat3/Reader/${PLATFORM}/lib/libreadcore.so

@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST.netbsd-sparc,v 1.1.1.1 2000/01/14 15:19:28 dmcmahill Exp $
+Acrobat3/Reader/desktop/olwm/acroread.cetable
+Acrobat3/Reader/desktop/olwm/acroread.deskinstall
+Acrobat3/Reader/desktop/olwm/acroread.prog.icon
+Acrobat3/Reader/desktop/olwm/pdf.icon
+Acrobat3/Reader/${PLATFORM}/lib/libX11.so.4.10
+Acrobat3/Reader/${PLATFORM}/lib/libXext.so.4.10
+Acrobat3/Reader/${PLATFORM}/lib/libXt.sa.4.10
+Acrobat3/Reader/${PLATFORM}/lib/libXt.so.4.10
+Acrobat3/Reader/${PLATFORM}/lib/libagm.so.2.0
+Acrobat3/Reader/${PLATFORM}/lib/libpfs.so.2.5
+Acrobat3/Reader/${PLATFORM}/lib/libreadcore.so.3.0
+Acrobat3/Reader/${PLATFORM}/lib/nls/local_im_tbl/lt_LN.bit8
+Acrobat3/Reader/${PLATFORM}/lib/nls/lt_LN.bit8
+Acrobat3/Reader/${PLATFORM}/lib/nls/nls.alias
+Acrobat3/Reader/${PLATFORM}/lib/nls/nls.dir
+@dirrm Acrobat3/Reader/desktop/olwm
+@dirrm Acrobat3/Reader/desktop
+@dirrm Acrobat3/Reader/${PLATFORM}/lib/nls/local_im_tbl
+@dirrm Acrobat3/Reader/${PLATFORM}/lib/nls

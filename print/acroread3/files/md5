@@ -1,0 +1,6 @@
+$NetBSD: md5,v 1.1.1.1 2000/01/14 15:19:28 dmcmahill Exp $
+
+MD5 (acroread_linux_301.tar.gz) = 3c168eab471aef91f1436c57ba7963b2
+MD5 (acroread_osf_301.tar.gz) = 19ffa95382dcb04ef3efc686e3ba1a6c
+MD5 (acroread_solaris_301.tar.gz) = f09b76b76638d028f029636eab819699
+MD5 (acroread_sunos_301.tar.gz) = 68dfc97aadbedc77d956db29e5766f94
