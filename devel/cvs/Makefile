@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/11/29 01:12:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.46 2001/12/09 20:10:16 jlam Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-post-patch:
+pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
 .endif
 
