@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/28 02:17:02 jtb Exp $
+lib/libfftpack.a
+lib/libfftpack.la
+lib/libfftpack.so.0.0
+share/doc/fftpack/doc
+@dirrm share/doc/fftpack
