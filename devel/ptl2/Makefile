@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/06/07 04:28:20 msaitoh Exp $
+# $NetBSD: Makefile,v 1.21 2000/06/21 08:57:04 tron Exp $
 
 DISTNAME=		PTL-2.1.3
 PKGNAME=		ptl-2.1.3
@@ -25,7 +25,11 @@ post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@cd ${PREFIX}; \
 	${FIND} PTL -type f >>${PLIST_SRC}; \
-	${FIND} PTL -type l >>${PLIST_SRC}; \
+	for LINK in `${FIND} PTL -type l`; do \
+	  set - X `${FILE} $$LINK`; \
+	  echo "@exec ln -s $$6 %D/$$LINK" >>${PLIST_SRC}; \
+	  echo "@unexec rm -f %D/$$LINK" >>${PLIST_SRC}; \
+	done; \
 	for DIR in `${FIND} PTL -type d | sort -r`; do \
 	  if [ -z "`ls $$DIR`" ]; then \
 	    ${ECHO} "@exec ${MKDIR} %D/$$DIR" >>${PLIST_SRC}; \
