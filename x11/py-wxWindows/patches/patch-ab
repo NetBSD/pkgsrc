@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/30 00:19:55 tsarna Exp $
+
+--- src/build.cfg.orig	Sat Jul 29 19:55:41 2000
++++ src/build.cfg	Sat Jul 29 19:58:05 2000
+@@ -43,13 +43,13 @@
+ 
+     OTHERCFLAGS = '`gtk-config --cflags`'
+     OTHERRULES = """
+-HELPERLIBNAME = lib$(HELPERLIB).$(MAJVER)$(SO).$(BLDVER).0.0
++HELPERLIBNAME = lib$(HELPERLIB)$(SO).$(BLDVER).0.0
+ helperlib: $(HELPERLIBNAME)
+ 
+ $(HELPERLIBNAME) : helpers.o libpy.o
+ 	$(LDSHARED) helpers.o libpy.o $(LFLAGS) -o $@
+-	ln -s $(HELPERLIBNAME) lib$(HELPERLIB).$(MAJVER)$(SO).$(BLDVER)
+-	ln -s $(HELPERLIBNAME) lib$(HELPERLIB).$(MAJVER)$(SO)
++	ln -s $(HELPERLIBNAME) lib$(HELPERLIB)$(SO).$(BLDVER).0
++	ln -s $(HELPERLIBNAME) lib$(HELPERLIB)$(SO).$(BLDVER)
+ 	ln -s $(HELPERLIBNAME) lib$(HELPERLIB)$(SO)
+ 
+ 
