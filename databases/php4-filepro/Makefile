@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/16 06:46:55 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/16 06:58:30 jlam Exp $
 
-.include "../php4/Makefile.module"
+.include "../../www/php4/Makefile.module"
 
 MODNAME=		filepro
 CATEGORIES+=		databases
