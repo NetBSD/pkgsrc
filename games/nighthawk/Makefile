@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/07 02:06:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/02/10 15:09:56 frueauf Exp $
 #
 
-DISTNAME=	nighthawk-2.1
-PATCHFILES=	nighthawk-2.1a.patch
-EXTRACT_SUFX=	.tgz
-CATEGORIES=	x11 games
-MASTER_SITES=	http://www.downunder.net.au/~jsno/rel/unix_projects/
-PATCH_SITES=	${MASTER_SITES}
-
-MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.downunder.net.au/~jsno/
-
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-WRKSRC=		${WRKDIR}/nighthawk
+DISTNAME=		nighthawk-2.1
+WRKSRC=			${WRKDIR}/nighthawk
+CATEGORIES=		x11 games
+MASTER_SITES=		http://www.downunder.net.au/~jsno/rel/unix_projects/
+EXTRACT_SUFX=		.tgz
+PATCH_SITES=		${MASTER_SITES}
+PATCHFILES=		nighthawk-2.1a.patch
 PATCH_DIST_STRIP=	-p1
-USE_GMAKE=	YES
-USE_X11=	YES
+
+MAINTAINER=		hubertf@netbsd.org
+HOMEPAGE=		http://www.downunder.net.au/~jsno/
+
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
+
+USE_GMAKE=		YES
+USE_X11=		YES
 
 post-build:
 	cd ${WRKSRC}/src_sound ; \
@@ -25,7 +25,7 @@ post-build:
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk/data
-	( cd ${WRKSRC}/data ; tar plcf - . ) | ( cd ${PREFIX}/share/nighthawk/data ; tar plvxf - ) 
+	( cd ${WRKSRC}/data ; tar plcf - . ) | ( cd ${PREFIX}/share/nighthawk/data ; tar plvxf - )
 	${CHOWN} -R ${SHAREOWN}.${SHAREGRP} ${PREFIX}/share/nighthawk
 	find ${PREFIX}/share/nighthawk -type f -print | xargs ${CHMOD} 444
 	find ${PREFIX}/share/nighthawk -type d -print | xargs ${CHMOD} 555
