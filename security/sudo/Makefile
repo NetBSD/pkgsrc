@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/01/28 17:01:46 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2000/02/28 01:55:26 thorpej Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -32,11 +32,14 @@ CONFIGURE_ARGS+=--with-kerb4
 CONFIGURE_ARGS+=--without-kerb4
 .endif
 
+# XXX Currently uses API features present only in Heimdal.
+.if defined(USE_HEIMDAL)
 .if defined(KERBEROS) && ${KERBEROS} == 5
 USE_KERBEROS=	yes
 CONFIGURE_ARGS+=--with-kerb5
 .else
 CONFIGURE_ARGS+=--without-kerb5
+.endif
 .endif
 
 CONFIGURE_ARGS+=--with-nbsdops --disable-path-info
