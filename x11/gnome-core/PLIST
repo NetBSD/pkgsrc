@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/08/25 19:23:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/09/14 02:46:56 rh Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -71,14 +71,19 @@ man/man1/gnome-edit.1
 man/man1/gnome-hint-properties-capplet.1
 man/man1/gnome-hint.1
 man/man1/gnome-info2html.1
+man/man1/gnome-libice-check.1
+man/man1/gnome-login-check.1
 man/man1/gnome-man2html.1
 man/man1/gnome-panel-add-launcher.1
 man/man1/gnome-panel-properties-capplet.1
 man/man1/gnome-session.1
+man/man1/gnome-smproxy.1
 man/man1/gnome-terminal.1
 man/man1/gnome-wm.1
 man/man1/panel.1
 man/man1/save-session.1
+man/man1/session-properties-capplet.1
+man/man1/session-properties.1
 man/man1/tasklist_applet.1
 man/man5/default.session.5
 share/applets/Amusements/.directory
@@ -115,7 +120,7 @@ share/gnome/apps/Graphics/GIMP.desktop
 share/gnome/apps/Graphics/xbmbrowser.desktop
 share/gnome/apps/Graphics/xv.desktop
 share/gnome/apps/Internet/.directory
-share/gnome/apps/Internet/Netscape.desktop
+share/gnome/apps/Internet/Browser.desktop
 share/gnome/apps/Internet/TkSETI.desktop
 share/gnome/apps/Internet/Tkrat.desktop
 share/gnome/apps/Internet/lynx.desktop
@@ -155,6 +160,13 @@ share/gnome/help/clock_applet/da/figures/clock_settings.png
 share/gnome/help/clock_applet/da/index.html
 share/gnome/help/clock_applet/da/ln10.html
 share/gnome/help/clock_applet/da/topic.dat
+share/gnome/help/clock_applet/eu/LEGALNOTICE.html
+share/gnome/help/clock_applet/eu/clock.sgml
+share/gnome/help/clock_applet/eu/clock_applet.sgml
+share/gnome/help/clock_applet/eu/figures/clock_applet.png
+share/gnome/help/clock_applet/eu/figures/clock_settings.png
+share/gnome/help/clock_applet/eu/index.html
+share/gnome/help/clock_applet/eu/topic.dat
 share/gnome/help/clock_applet/it/clock.sgml
 share/gnome/help/clock_applet/it/clock_applet.sgml
 share/gnome/help/clock_applet/it/figures/clock_applet.png
@@ -205,6 +217,17 @@ share/gnome/help/desk-guide_applet/es/licencia-es.sgml
 share/gnome/help/desk-guide_applet/es/licencia-nota-es.sgml
 share/gnome/help/desk-guide_applet/es/license.sgml
 share/gnome/help/desk-guide_applet/es/ln11.html
+share/gnome/help/desk-guide_applet/eu/LEGALNOTICE.html
+share/gnome/help/desk-guide_applet/eu/desk-guide.sgml
+share/gnome/help/desk-guide_applet/eu/desk-guide_applet.sgml
+share/gnome/help/desk-guide_applet/eu/figures/deskguide-fig.png
+share/gnome/help/desk-guide_applet/eu/figures/deskguide-properties-advanced-fig.png
+share/gnome/help/desk-guide_applet/eu/figures/deskguide-properties-geometry-fig.png
+share/gnome/help/desk-guide_applet/eu/figures/deskguide-properties-tasks-fig.png
+share/gnome/help/desk-guide_applet/eu/figures/deskguide-properties.png
+share/gnome/help/desk-guide_applet/eu/figures/deskguide-tasklist-fig.png
+share/gnome/help/desk-guide_applet/eu/index.html
+share/gnome/help/desk-guide_applet/eu/topic.dat
 share/gnome/help/desk-guide_applet/it/desk-guide.sgml
 share/gnome/help/desk-guide_applet/it/desk-guide_applet.sgml
 share/gnome/help/desk-guide_applet/it/figures/deskguide-fig.png
@@ -244,6 +267,13 @@ share/gnome/help/fish_applet/da/fish_applet.sgml
 share/gnome/help/fish_applet/da/index.html
 share/gnome/help/fish_applet/da/ln10.html
 share/gnome/help/fish_applet/da/topic.dat
+share/gnome/help/fish_applet/eu/LEGALNOTICE.html
+share/gnome/help/fish_applet/eu/figures/fish_applet.png
+share/gnome/help/fish_applet/eu/figures/fish_settings.png
+share/gnome/help/fish_applet/eu/fish.sgml
+share/gnome/help/fish_applet/eu/fish_applet.sgml
+share/gnome/help/fish_applet/eu/index.html
+share/gnome/help/fish_applet/eu/topic.dat
 share/gnome/help/fish_applet/it/figures/fish_applet.png
 share/gnome/help/fish_applet/it/figures/fish_settings.png
 share/gnome/help/fish_applet/it/fish.sgml
@@ -322,6 +352,19 @@ share/gnome/help/gnome-terminal/es/options.html
 share/gnome/help/gnome-terminal/es/pointerusage.html
 share/gnome/help/gnome-terminal/es/topic.dat
 share/gnome/help/gnome-terminal/es/usage.html
+share/gnome/help/gnome-terminal/eu/LEGALNOTICE.html
+share/gnome/help/gnome-terminal/eu/authors.html
+share/gnome/help/gnome-terminal/eu/classes.html
+share/gnome/help/gnome-terminal/eu/config.html
+share/gnome/help/gnome-terminal/eu/environment.html
+share/gnome/help/gnome-terminal/eu/gnome-terminal.sgml
+share/gnome/help/gnome-terminal/eu/index.html
+share/gnome/help/gnome-terminal/eu/license.html
+share/gnome/help/gnome-terminal/eu/menus.html
+share/gnome/help/gnome-terminal/eu/options.html
+share/gnome/help/gnome-terminal/eu/pointerusage.html
+share/gnome/help/gnome-terminal/eu/topic.dat
+share/gnome/help/gnome-terminal/eu/usage.html
 share/gnome/help/gnome-terminal/it/authors.html
 share/gnome/help/gnome-terminal/it/classes.html
 share/gnome/help/gnome-terminal/it/config.html
@@ -362,8 +405,15 @@ share/gnome/help/help-browser/da/help-browser.html
 share/gnome/help/help-browser/da/index.html
 share/gnome/help/help-browser/da/topic.dat
 share/gnome/help/help-browser/el/default-page.html
+share/gnome/help/help-browser/es/default-page.html
+share/gnome/help/help-browser/es/help-browser.html
+share/gnome/help/help-browser/es/index.html
+share/gnome/help/help-browser/es/topic.dat
 share/gnome/help/help-browser/et/default-page.html
 share/gnome/help/help-browser/eu/default-page.html
+share/gnome/help/help-browser/eu/help-browser.html
+share/gnome/help/help-browser/eu/index.html
+share/gnome/help/help-browser/eu/topic.dat
 share/gnome/help/help-browser/fr/default-page.html
 share/gnome/help/help-browser/fr/help-browser.html
 share/gnome/help/help-browser/fr/index.html
@@ -408,7 +458,9 @@ share/gnome/help/lgpl/C/GPL-LEGALNOTICE.html
 share/gnome/help/lgpl/C/lgpl.html
 share/gnome/help/lgpl/C/lgpl.sgml
 share/gnome/help/lgpl/C/ln7.html
+share/gnome/help/lgpl/C/t1.html
 share/gnome/help/lgpl/C/terms.html
+share/gnome/help/lgpl/C/x35.html
 share/gnome/help/mailcheck_applet/C/figures/mailcheck-applet.png
 share/gnome/help/mailcheck_applet/C/figures/mailcheck-properties-mailbox.png
 share/gnome/help/mailcheck_applet/C/figures/mailcheck-properties-mailcheck.png
@@ -438,6 +490,14 @@ share/gnome/help/mailcheck_applet/es/mailcheck.sgml
 share/gnome/help/mailcheck_applet/es/mailcheck_applet.sgml
 share/gnome/help/mailcheck_applet/es/topic.dat
 share/gnome/help/mailcheck_applet/es/x127.html
+share/gnome/help/mailcheck_applet/eu/LEGALNOTICE.html
+share/gnome/help/mailcheck_applet/eu/figures/mailcheck-applet.png
+share/gnome/help/mailcheck_applet/eu/figures/mailcheck-properties-mailbox.png
+share/gnome/help/mailcheck_applet/eu/figures/mailcheck-properties-mailcheck.png
+share/gnome/help/mailcheck_applet/eu/index.html
+share/gnome/help/mailcheck_applet/eu/mailcheck.sgml
+share/gnome/help/mailcheck_applet/eu/mailcheck_applet.sgml
+share/gnome/help/mailcheck_applet/eu/topic.dat
 share/gnome/help/mailcheck_applet/it/figures/mailcheck-applet.png
 share/gnome/help/mailcheck_applet/it/figures/mailcheck-properties-mailbox.png
 share/gnome/help/mailcheck_applet/it/figures/mailcheck-properties-mailcheck.png
@@ -569,6 +629,43 @@ share/gnome/help/panel/es/panelproperties.html
 share/gnome/help/panel/es/specialobjects.html
 share/gnome/help/panel/es/topic.dat
 share/gnome/help/panel/es/x1234.html
+share/gnome/help/panel/eu/LEGALNOTICE.html
+share/gnome/help/panel/eu/appletadd.html
+share/gnome/help/panel/eu/applets.html
+share/gnome/help/panel/eu/authors.html
+share/gnome/help/panel/eu/drawers.html
+share/gnome/help/panel/eu/figures/create_launcher.png
+share/gnome/help/panel/eu/figures/drawer_open.png
+share/gnome/help/panel/eu/figures/drawer_properties.png
+share/gnome/help/panel/eu/figures/example_menu.png
+share/gnome/help/panel/eu/figures/example_panel.png
+share/gnome/help/panel/eu/figures/glob_pref_anim.png
+share/gnome/help/panel/eu/figures/hide-button.png
+share/gnome/help/panel/eu/figures/launcher_advprops.png
+share/gnome/help/panel/eu/figures/launcher_props.png
+share/gnome/help/panel/eu/figures/logout-screen.png
+share/gnome/help/panel/eu/figures/menu_properties.png
+share/gnome/help/panel/eu/figures/mm-button.png
+share/gnome/help/panel/eu/figures/panel_applets.png
+share/gnome/help/panel/eu/figures/panel_lockbut.png
+share/gnome/help/panel/eu/figures/panel_logoutbut.png
+share/gnome/help/panel/eu/figures/panel_props_back.png
+share/gnome/help/panel/eu/figures/panel_props_edge.png
+share/gnome/help/panel/eu/figures/panel_swallow.png
+share/gnome/help/panel/eu/figures/status_dock.png
+share/gnome/help/panel/eu/globalpanelprefs.html
+share/gnome/help/panel/eu/index.html
+share/gnome/help/panel/eu/launchers.html
+share/gnome/help/panel/eu/license.html
+share/gnome/help/panel/eu/mainmenu.html
+share/gnome/help/panel/eu/menus.html
+share/gnome/help/panel/eu/panel.sgml
+share/gnome/help/panel/eu/panelbasics.html
+share/gnome/help/panel/eu/panelbugs.html
+share/gnome/help/panel/eu/panelmove.html
+share/gnome/help/panel/eu/panelproperties.html
+share/gnome/help/panel/eu/specialobjects.html
+share/gnome/help/panel/eu/topic.dat
 share/gnome/help/panel/it/figures/create_launcher.png
 share/gnome/help/panel/it/figures/drawer_open.png
 share/gnome/help/panel/it/figures/drawer_properties.png
@@ -695,6 +792,13 @@ share/gnome/help/printer_applet/es/ln10.html
 share/gnome/help/printer_applet/es/printer.sgml
 share/gnome/help/printer_applet/es/printer_applet.sgml
 share/gnome/help/printer_applet/es/topic.dat
+share/gnome/help/printer_applet/eu/LEGALNOTICE.html
+share/gnome/help/printer_applet/eu/figures/printer-fig.png
+share/gnome/help/printer_applet/eu/figures/printer-properties.png
+share/gnome/help/printer_applet/eu/index.html
+share/gnome/help/printer_applet/eu/printer.sgml
+share/gnome/help/printer_applet/eu/printer_applet.sgml
+share/gnome/help/printer_applet/eu/topic.dat
 share/gnome/help/printer_applet/it/figures/printer-fig.png
 share/gnome/help/printer_applet/it/figures/printer-properties.png
 share/gnome/help/printer_applet/it/index.html
@@ -757,6 +861,15 @@ share/gnome/help/tasklist_applet/es/tasklist.sgml
 share/gnome/help/tasklist_applet/es/tasklist_applet.sgml
 share/gnome/help/tasklist_applet/es/topic.dat
 share/gnome/help/tasklist_applet/es/x210.html
+share/gnome/help/tasklist_applet/eu/LEGALNOTICE.html
+share/gnome/help/tasklist_applet/eu/figures/tasklist-fig.png
+share/gnome/help/tasklist_applet/eu/figures/tasklist-properties-size.png
+share/gnome/help/tasklist_applet/eu/figures/tasklist-properties.png
+share/gnome/help/tasklist_applet/eu/figures/tasklist-rightclick-fig.png
+share/gnome/help/tasklist_applet/eu/index.html
+share/gnome/help/tasklist_applet/eu/tasklist.sgml
+share/gnome/help/tasklist_applet/eu/tasklist_applet.sgml
+share/gnome/help/tasklist_applet/eu/topic.dat
 share/gnome/hints/panel.hints
 share/gnome/html/panel-decl.txt
 share/gnome/html/panel-sections.txt
@@ -827,9 +940,11 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-core.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-core.mo
+share/mc/templates/Browser.desktop
 share/mc/templates/Emacs.desktop
 share/mc/templates/Eterm.desktop
 share/mc/templates/FileRunner.desktop
@@ -838,7 +953,6 @@ share/mc/templates/GXanim.desktop
 share/mc/templates/Gmc.desktop
 share/mc/templates/Imlib_config.desktop
 share/mc/templates/Kterm.desktop
-share/mc/templates/Netscape.desktop
 share/mc/templates/TkSETI.desktop
 share/mc/templates/Tkrat.desktop
 share/mc/templates/UNIX-regular.desktop
@@ -858,15 +972,18 @@ share/mc/templates/xmix.desktop
 share/mc/templates/xv.desktop
 share/omf/gnome-core/clock_applet-C.omf
 share/omf/gnome-core/clock_applet-da.omf
+share/omf/gnome-core/clock_applet-eu.omf
 share/omf/gnome-core/clock_applet-it.omf
 share/omf/gnome-core/clock_applet-no.omf
 share/omf/gnome-core/desk-guide_applet-C.omf
 share/omf/gnome-core/desk-guide_applet-de.omf
 share/omf/gnome-core/desk-guide_applet-es.omf
+share/omf/gnome-core/desk-guide_applet-eu.omf
 share/omf/gnome-core/desk-guide_applet-it.omf
 share/omf/gnome-core/fdl-C.omf
 share/omf/gnome-core/fish_applet-C.omf
 share/omf/gnome-core/fish_applet-da.omf
+share/omf/gnome-core/fish_applet-eu.omf
 share/omf/gnome-core/fish_applet-it.omf
 share/omf/gnome-core/fish_applet-no.omf
 share/omf/gnome-core/gen_util_applet-de.omf
@@ -875,178 +992,51 @@ share/omf/gnome-core/gnome-feedback-no.omf
 share/omf/gnome-core/gnome-terminal-C.omf
 share/omf/gnome-core/gnome-terminal-de.omf
 share/omf/gnome-core/gnome-terminal-es.omf
+share/omf/gnome-core/gnome-terminal-eu.omf
 share/omf/gnome-core/gnome-terminal-no.omf
 share/omf/gnome-core/gpl-C.omf
 share/omf/gnome-core/lgpl-C.omf
 share/omf/gnome-core/mailcheck_applet-C.omf
 share/omf/gnome-core/mailcheck_applet-da.omf
 share/omf/gnome-core/mailcheck_applet-es.omf
+share/omf/gnome-core/mailcheck_applet-eu.omf
 share/omf/gnome-core/mailcheck_applet-it.omf
 share/omf/gnome-core/mailcheck_applet-no.omf
 share/omf/gnome-core/panel-C.omf
 share/omf/gnome-core/panel-de.omf
 share/omf/gnome-core/panel-es.omf
+share/omf/gnome-core/panel-eu.omf
 share/omf/gnome-core/panel-it.omf
 share/omf/gnome-core/panel-ja.omf
 share/omf/gnome-core/panel-no.omf
 share/omf/gnome-core/printer_applet-C.omf
 share/omf/gnome-core/printer_applet-da.omf
 share/omf/gnome-core/printer_applet-es.omf
+share/omf/gnome-core/printer_applet-eu.omf
 share/omf/gnome-core/printer_applet-it.omf
 share/omf/gnome-core/printer_applet-no.omf
 share/omf/gnome-core/session-C.omf
 share/omf/gnome-core/session-ja.omf
 share/omf/gnome-core/tasklist_applet-C.omf
 share/omf/gnome-core/tasklist_applet-es.omf
-share/pixmaps/apple-green.png
-share/pixmaps/apple-red.png
+share/omf/gnome-core/tasklist_applet-eu.omf
 share/pixmaps/fish/fishanim.png
 share/pixmaps/fish/footguy.png
 share/pixmaps/fish/monkey.png
 share/pixmaps/fish/oldwanda.png
-share/pixmaps/gnome-amusements.png
-share/pixmaps/gnome-aorta.png
-share/pixmaps/gnome-applets.png
-share/pixmaps/gnome-applications.png
-share/pixmaps/gnome-audio2.png
-share/pixmaps/gnome-background.png
-share/pixmaps/gnome-calc2.png
-share/pixmaps/gnome-calendar.png
-share/pixmaps/gnome-cardgame.png
-share/pixmaps/gnome-ccbackground.png
-share/pixmaps/gnome-ccdesktop.png
-share/pixmaps/gnome-ccdialog.png
-share/pixmaps/gnome-cckeyboard-bell.png
-share/pixmaps/gnome-cckeyboard.png
-share/pixmaps/gnome-ccmime.png
-share/pixmaps/gnome-ccperiph.png
-share/pixmaps/gnome-ccscreensaver.png
-share/pixmaps/gnome-ccthemes.png
-share/pixmaps/gnome-ccwindowmanager.png
-share/pixmaps/gnome-clock.png
-share/pixmaps/gnome-color-browser.png
-share/pixmaps/gnome-color-xterm.png
-share/pixmaps/gnome-computer.png
-share/pixmaps/gnome-cromagnon.png
-share/pixmaps/gnome-debian.png
 share/pixmaps/gnome-deskguide-splash.png
 share/pixmaps/gnome-deskguide.png
-share/pixmaps/gnome-devel.png
-share/pixmaps/gnome-die1.png
-share/pixmaps/gnome-die2.png
-share/pixmaps/gnome-die3.png
-share/pixmaps/gnome-die4.png
-share/pixmaps/gnome-die5.png
-share/pixmaps/gnome-die6.png
-share/pixmaps/gnome-diskfree.png
-share/pixmaps/gnome-emacs.png
-share/pixmaps/gnome-eterm.png
-share/pixmaps/gnome-favorites.png
-share/pixmaps/gnome-file-c.png
-share/pixmaps/gnome-file-h.png
 share/pixmaps/gnome-fish.png
-share/pixmaps/gnome-folder.png
-share/pixmaps/gnome-gegl.png
-share/pixmaps/gnome-gegl2-2.png
-share/pixmaps/gnome-gegl2.png
-share/pixmaps/gnome-gemvt.png
-share/pixmaps/gnome-gimp.png
-share/pixmaps/gnome-globe.png
-share/pixmaps/gnome-gmenu.png
-share/pixmaps/gnome-gmush.png
-share/pixmaps/gnome-gnomine.png
-share/pixmaps/gnome-gnomoku.png
-share/pixmaps/gnome-graphics.png
-share/pixmaps/gnome-gsame.png
-share/pixmaps/gnome-help.png
 share/pixmaps/gnome-hint.png
-share/pixmaps/gnome-html.png
-share/pixmaps/gnome-image-gif.png
-share/pixmaps/gnome-image-jpeg.png
-share/pixmaps/gnome-irc.png
-share/pixmaps/gnome-joystick.png
-share/pixmaps/gnome-laptop.png
-share/pixmaps/gnome-lockscreen.png
-share/pixmaps/gnome-log.png
-share/pixmaps/gnome-logo-icon-transparent.png
-share/pixmaps/gnome-logo-icon.png
-share/pixmaps/gnome-logo-large.png
-share/pixmaps/gnome-mailcheck.png
-share/pixmaps/gnome-mdi.png
-share/pixmaps/gnome-mnemonic.png
-share/pixmaps/gnome-modem.png
-share/pixmaps/gnome-money.png
-share/pixmaps/gnome-monitor.png
-share/pixmaps/gnome-mouse.png
-share/pixmaps/gnome-multimedia.png
-share/pixmaps/gnome-networktool.png
-share/pixmaps/gnome-news.png
-share/pixmaps/gnome-note.png
-share/pixmaps/gnome-panel.png
-share/pixmaps/gnome-qeye.png
-share/pixmaps/gnome-run.png
-share/pixmaps/gnome-session.png
-share/pixmaps/gnome-settings.png
-share/pixmaps/gnome-spider.png
-share/pixmaps/gnome-squeak.png
-share/pixmaps/gnome-suse.png
-share/pixmaps/gnome-talk.png
 share/pixmaps/gnome-tasklist.png
-share/pixmaps/gnome-term-linux.png
-share/pixmaps/gnome-term-linux2.png
-share/pixmaps/gnome-term-night.png
-share/pixmaps/gnome-term-tiger.png
-share/pixmaps/gnome-term.png
-share/pixmaps/gnome-terminal.png
-share/pixmaps/gnome-tigert.png
-share/pixmaps/gnome-touristinfo.png
-share/pixmaps/gnome-unknown.png
-share/pixmaps/gnome-user-interface.png
-share/pixmaps/gnome-util.png
-share/pixmaps/gnome-word.png
-share/pixmaps/gnome-xterm.png
-share/pixmaps/gtkvim.png
-share/pixmaps/kterm.xpm
-share/pixmaps/launcher-program.png
 share/pixmaps/mailcheck/eclouds.png
 share/pixmaps/mailcheck/email-e.png
 share/pixmaps/mailcheck/email-eclouds.png
 share/pixmaps/mailcheck/email-tiny.png
 share/pixmaps/mailcheck/email.png
 share/pixmaps/mailcheck/tux-anim.png
-share/pixmaps/monitor.png
-share/pixmaps/panel-arrow-down.png
-share/pixmaps/panel-arrow-left.png
-share/pixmaps/panel-arrow-right.png
-share/pixmaps/panel-arrow-up.png
-share/pixmaps/panel-drawer.png
-share/pixmaps/panel-folder.png
-share/pixmaps/panel-knob.png
-share/pixmaps/panel-menu-main.png
 share/pixmaps/splash/gnome-splash-1.4.0.png
 share/pixmaps/splash/gnome-splash.png
-share/pixmaps/tiles/tile-blue-down.png
-share/pixmaps/tiles/tile-blue-up.png
-share/pixmaps/tiles/tile-coral-down.png
-share/pixmaps/tiles/tile-coral-up.png
-share/pixmaps/tiles/tile-drc-1-down.png
-share/pixmaps/tiles/tile-drc-1-up.png
-share/pixmaps/tiles/tile-drc-2-down.png
-share/pixmaps/tiles/tile-drc-2-up.png
-share/pixmaps/tiles/tile-drc-4-down.png
-share/pixmaps/tiles/tile-drc-4-up.png
-share/pixmaps/tiles/tile-green-down.png
-share/pixmaps/tiles/tile-green-up.png
-share/pixmaps/tiles/tile-moon-down.png
-share/pixmaps/tiles/tile-moon-up.png
-share/pixmaps/tiles/tile-normal-down.png
-share/pixmaps/tiles/tile-normal-up.png
-share/pixmaps/tiles/tile-purple-down.png
-share/pixmaps/tiles/tile-purple-up.png
-share/pixmaps/tiles/tile-sand-down.png
-share/pixmaps/tiles/tile-sand-up.png
-share/pixmaps/vnterm.xpm
-@dirrm share/pixmaps/tiles
 @dirrm share/pixmaps/splash
 @dirrm share/pixmaps/mailcheck
 @dirrm share/pixmaps/fish
@@ -1056,6 +1046,10 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/panel
 @dirrm share/gnome/html/panel
 @dirrm share/gnome/hints
+@exec ${MKDIR} %D/share/gnome/help/tasklist_applet/eu/stylesheet-images
+@dirrm share/gnome/help/tasklist_applet/eu/stylesheet-images
+@dirrm share/gnome/help/tasklist_applet/eu/figures
+@dirrm share/gnome/help/tasklist_applet/eu
 @exec ${MKDIR} %D/share/gnome/help/tasklist_applet/es/stylesheet-images
 @dirrm share/gnome/help/tasklist_applet/es/stylesheet-images
 @dirrm share/gnome/help/tasklist_applet/es/figures
@@ -1082,6 +1076,10 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/printer_applet/it/stylesheet-images
 @dirrm share/gnome/help/printer_applet/it/figures
 @dirrm share/gnome/help/printer_applet/it
+@exec ${MKDIR} %D/share/gnome/help/printer_applet/eu/stylesheet-images
+@dirrm share/gnome/help/printer_applet/eu/stylesheet-images
+@dirrm share/gnome/help/printer_applet/eu/figures
+@dirrm share/gnome/help/printer_applet/eu
 @exec ${MKDIR} %D/share/gnome/help/printer_applet/es/stylesheet-images
 @dirrm share/gnome/help/printer_applet/es/stylesheet-images
 @dirrm share/gnome/help/printer_applet/es/figures
@@ -1107,6 +1105,10 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/panel/it/stylesheet-images
 @dirrm share/gnome/help/panel/it/figures
 @dirrm share/gnome/help/panel/it
+@exec ${MKDIR} %D/share/gnome/help/panel/eu/stylesheet-images
+@dirrm share/gnome/help/panel/eu/stylesheet-images
+@dirrm share/gnome/help/panel/eu/figures
+@dirrm share/gnome/help/panel/eu
 @exec ${MKDIR} %D/share/gnome/help/panel/es/stylesheet-images
 @dirrm share/gnome/help/panel/es/stylesheet-images
 @dirrm share/gnome/help/panel/es/figures
@@ -1128,6 +1130,10 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/mailcheck_applet/it/stylesheet-images
 @dirrm share/gnome/help/mailcheck_applet/it/figures
 @dirrm share/gnome/help/mailcheck_applet/it
+@exec ${MKDIR} %D/share/gnome/help/mailcheck_applet/eu/stylesheet-images
+@dirrm share/gnome/help/mailcheck_applet/eu/stylesheet-images
+@dirrm share/gnome/help/mailcheck_applet/eu/figures
+@dirrm share/gnome/help/mailcheck_applet/eu
 @exec ${MKDIR} %D/share/gnome/help/mailcheck_applet/es/stylesheet-images
 @dirrm share/gnome/help/mailcheck_applet/es/stylesheet-images
 @dirrm share/gnome/help/mailcheck_applet/es/figures
@@ -1157,6 +1163,7 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/help-browser/fr
 @dirrm share/gnome/help/help-browser/eu
 @dirrm share/gnome/help/help-browser/et
+@dirrm share/gnome/help/help-browser/es
 @dirrm share/gnome/help/help-browser/el
 @dirrm share/gnome/help/help-browser/da
 @dirrm share/gnome/help/help-browser/ca
@@ -1172,6 +1179,11 @@ share/pixmaps/vnterm.xpm
 @exec ${MKDIR} %D/share/gnome/help/gnome-terminal/it/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/it/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/it
+@exec ${MKDIR} %D/share/gnome/help/gnome-terminal/eu/stylesheet-images
+@dirrm share/gnome/help/gnome-terminal/eu/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/gnome-terminal/eu/figures
+@dirrm share/gnome/help/gnome-terminal/eu/figures
+@dirrm share/gnome/help/gnome-terminal/eu
 @exec ${MKDIR} %D/share/gnome/help/gnome-terminal/es/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/es/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/es
@@ -1206,6 +1218,10 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/fish_applet/it/stylesheet-images
 @dirrm share/gnome/help/fish_applet/it/figures
 @dirrm share/gnome/help/fish_applet/it
+@exec ${MKDIR} %D/share/gnome/help/fish_applet/eu/stylesheet-images
+@dirrm share/gnome/help/fish_applet/eu/stylesheet-images
+@dirrm share/gnome/help/fish_applet/eu/figures
+@dirrm share/gnome/help/fish_applet/eu
 @exec ${MKDIR} %D/share/gnome/help/fish_applet/da/stylesheet-images
 @dirrm share/gnome/help/fish_applet/da/stylesheet-images
 @dirrm share/gnome/help/fish_applet/da/figures
@@ -1223,6 +1239,10 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/desk-guide_applet/it/stylesheet-images
 @dirrm share/gnome/help/desk-guide_applet/it/figures
 @dirrm share/gnome/help/desk-guide_applet/it
+@exec ${MKDIR} %D/share/gnome/help/desk-guide_applet/eu/stylesheet-images
+@dirrm share/gnome/help/desk-guide_applet/eu/stylesheet-images
+@dirrm share/gnome/help/desk-guide_applet/eu/figures
+@dirrm share/gnome/help/desk-guide_applet/eu
 @exec ${MKDIR} %D/share/gnome/help/desk-guide_applet/es/stylesheet-images
 @dirrm share/gnome/help/desk-guide_applet/es/stylesheet-images
 @dirrm share/gnome/help/desk-guide_applet/es/figures
@@ -1244,6 +1264,10 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/clock_applet/it/stylesheet-images
 @dirrm share/gnome/help/clock_applet/it/figures
 @dirrm share/gnome/help/clock_applet/it
+@exec ${MKDIR} %D/share/gnome/help/clock_applet/eu/stylesheet-images
+@dirrm share/gnome/help/clock_applet/eu/stylesheet-images
+@dirrm share/gnome/help/clock_applet/eu/figures
+@dirrm share/gnome/help/clock_applet/eu
 @exec ${MKDIR} %D/share/gnome/help/clock_applet/da/stylesheet-images
 @dirrm share/gnome/help/clock_applet/da/stylesheet-images
 @dirrm share/gnome/help/clock_applet/da/figures
@@ -1265,16 +1289,16 @@ share/pixmaps/vnterm.xpm
 @unexec ${RMDIR} %D/share/gnome/apps/Development 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
-@dirrm share/gnome-terminal/glade
-@dirrm share/gnome-terminal
-@dirrm share/gnome-about
-@dirrm share/applets/Utility
-@dirrm share/applets/Network
-@dirrm share/applets/Multimedia
-@dirrm share/applets/Monitors
-@dirrm share/applets/Clocks
-@dirrm share/applets/Amusements
-@dirrm share/applets
+@unexec ${RMDIR} %D/share/gnome-terminal/glade 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome-terminal 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome-about 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applets/Utility 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applets/Network 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applets/Multimedia 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applets/Monitors 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applets/Clocks 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applets/Amusements 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applets 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/etc/gnome/panel-config/panel.d/default
 @unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d/default 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d 2>/dev/null || ${TRUE}
