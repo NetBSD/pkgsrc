@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/10/11 17:08:41 abs Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/10/11 21:52:12 reed Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -27,7 +27,6 @@ EXAMPLESDIR=		${PREFIX}/share/examples/exim
 CONF_FILES=		${EXAMPLESDIR}/aliases ${PKG_SYSCONFDIR}/aliases
 CONF_FILES+=		${EXAMPLESDIR}/configure ${PKG_SYSCONFDIR}/configure
 MESSAGE_SUBST+=		EXAMPLESDIR="${EXAMPLESDIR}"
-MESSAGE_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR="${LOCALBASE}/${RCD_SCRIPTS_EXAMPLEDIR}"
 PLIST_SUBST+=		DISTNAME="${DISTNAME}"
 
 RCD_SCRIPTS=		exim
