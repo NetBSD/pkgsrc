@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:17:53 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/20 23:32:50 adrianp Exp $
 #
 
-DISTNAME=	isic-0.05
-PKGREVISION=	1
+DISTNAME=	isic-0.06
 CATEGORIES=	net
 MASTER_SITES=	http://www.packetfactory.net/Projects/ISIC/
 EXTRACT_SUFX=	.tgz
@@ -18,7 +17,7 @@ DIST_SUBDIR=	isic
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/isic.README
 
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../devel/libnet11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # XXX On NetBSD, the egcs and gcc-2.95.3 for:
