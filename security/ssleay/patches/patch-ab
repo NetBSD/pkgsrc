@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/09/05 09:05:22 explorer Exp $
+
 --- Makefile.ssl.orig	Fri Jun 26 10:25:25 1998
 +++ Makefile.ssl	Sat Aug 22 13:14:34 1998
 @@ -175,7 +175,7 @@

@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/09/05 09:05:22 explorer Exp $
 bin/ssleay
 @exec ln -sf %D/%F %B/asn1parse
 @exec ln -sf %D/%F %B/base64
@@ -247,4 +248,4 @@ share/doc/SSLeay/threads.doc
 share/doc/SSLeay/txt_db.doc
 share/doc/SSLeay/verify
 share/doc/SSLeay/why.doc
-@unexec rm -rf share/doc/SSLeay
+@dirrm share/doc/SSLeay

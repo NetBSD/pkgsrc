@@ -1,6 +1,5 @@
-# Eric Young's SSL/Crypto Library
+# $NetBSD: Makefile,v 1.3 1998/09/05 09:05:21 explorer Exp $
 # FreeBSD: Makefile,v 1.20 1998/08/27 16:38:02 markm Exp
-# $NetBSD: Makefile,v 1.2 1998/09/05 00:00:06 explorer Exp $
 #
 
 DISTNAME=		SSLeay-0.9.0b
