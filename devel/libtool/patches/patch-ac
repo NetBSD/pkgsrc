@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.10 2004/02/07 09:25:39 seb Exp $
+$NetBSD: patch-ac,v 1.11 2004/02/18 07:55:51 skrll Exp $
 
---- ltmain.sh.orig	2004-01-25 12:40:26.000000000 +0000
+--- ltmain.sh.orig	Wed Feb 18 07:53:05 2004
 +++ ltmain.sh
 @@ -318,7 +318,7 @@ if test -z "$show_help"; then
      $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
@@ -129,3 +129,17 @@ $NetBSD: patch-ac,v 1.10 2004/02/07 09:25:39 seb Exp $
  
      # Check to see that the destination is a directory.
      test -d "$dest" && isdir=yes
+@@ -5673,8 +5716,12 @@ relink_command=\"$relink_command\""
+ 	      tmpdir="/tmp"
+ 	      test -n "$TMPDIR" && tmpdir="$TMPDIR"
+ 	      tmpdir="$tmpdir/libtool-$$"
+-	      if $mkdir "$tmpdir" && chmod 700 "$tmpdir"; then :
++	      save_umask=`umask`
++	      umask 0077
++	      if $mkdir "$tmpdir"; then
++	      	umask $save_umask
+ 	      else
++	      	umask $save_umask
+ 		$echo "$modename: error: cannot create temporary directory \`$tmpdir'" 1>&2
+ 		continue
+ 	      fi
