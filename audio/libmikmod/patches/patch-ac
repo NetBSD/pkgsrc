@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2000/06/09 07:53:03 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2001/06/19 16:00:06 jlam Exp $
 
 --- configure.orig	Mon Feb 14 15:20:17 2000
-+++ configure	Fri Jun  9 03:41:08 2000
++++ configure
 @@ -1862,6 +1862,7 @@
  fi
  
@@ -10,11 +10,20 @@ $NetBSD: patch-ac,v 1.3 2000/06/09 07:53:03 jlam Exp $
  # Check if makeinfo support html output. If it doesn't, pretend it's missing
  # rather than failing rebuilding the documentation.
  echo $ac_n "checking if makeinfo supports html output""... $ac_c" 1>&6
-@@ -1881,6 +1882,7 @@
- if test $libmikmod_cv_makeinfo_html = no
+@@ -1882,6 +1883,7 @@
  then
  	MAKEINFO="$missing_dir/missing makeinfo"
-+fi
  fi
++fi
  
  # ====================
+ # Check for libraries.
+@@ -2447,7 +2449,7 @@
+ if eval "test \"`echo '$''{'libmikmod_cv_esd_needs_alsa'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+-  if (esd-config --libs 2>&1 |grep asound >/dev/null) 2>/dev/null
++  if ($ESD_CONFIG --libs 2>&1 |grep asound >/dev/null) 2>/dev/null
+ 		then
+ 			libmikmod_cv_esd_needs_alsa=yes
+ 		else
