@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/08/16 02:24:09 hubertf Exp $
+
+SHA1 (dscope-1.2.tar.gz) = 5a4750c0a8170c1e2d263df1212262b3adad1210
+Size (dscope-1.2.tar.gz) = 34353 bytes
+SHA1 (patch-aa) = 5d58167310bc6b609388518d7026952a2d6ac9bc
