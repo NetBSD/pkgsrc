@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.13 2001/05/03 21:46:32 dmcmahill Exp $
+# $NetBSD: post-build,v 1.14 2001/10/15 23:00:10 hubertf Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -239,7 +239,7 @@ close(HTML);
 	system("find /usr/X11R6 -newer ${USR_PKGSRC}/.start.${arch} -type f >>leftovers-${arch}.txt");
 
 	# Strip perl-files:
-	system("pkg_info -qL perl-base > .p.${arch}");
+	system("pkg_info -qL perl > .p.${arch}");
 	system("fgrep -v -x -f .p.${arch} leftovers-${arch}.txt >leftovers-${arch}.txt.new");
 	rename("leftovers-${arch}.txt.new", "leftovers-${arch}.txt");
 	unlink(".p.${arch}");
