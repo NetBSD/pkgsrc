@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.12 2004/04/01 11:23:32 wiz Exp $
+$NetBSD: distinfo,v 1.13 2005/02/23 20:39:50 agc Exp $
 
 SHA1 (oss398e-netbsd-v1.6.2.tar.gz) = 2ae2ab4f1c585adc1ea45a76c09ea5da125db643
+RMD160 (oss398e-netbsd-v1.6.2.tar.gz) = aeb1d972a338a60d8b2925bfc3ebb9a66b716a6c
 Size (oss398e-netbsd-v1.6.2.tar.gz) = 1117138 bytes

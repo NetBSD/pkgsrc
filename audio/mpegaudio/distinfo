@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/12 00:54:03 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 20:39:49 agc Exp $
 
 SHA1 (mpegaudio.tar.Z) = 75a801c4aff290b4e0c7cdb2b07991c630955fbf
+RMD160 (mpegaudio.tar.Z) = 3e40fa6629e0bb88046ac882bbfcc263925f7006
 Size (mpegaudio.tar.Z) = 144707 bytes
 SHA1 (patch-aa) = 7b61fd9effe57086d2d2f669fd5b5235a8854e03
 SHA1 (patch-ab) = 67758b144d384aea66509e508e79112a052b8369

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/11/04 11:46:58 abs Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 20:39:47 agc Exp $
 
 SHA1 (id3v2-0.1.11.tar.gz) = ca825d851ca0c6a5783af107dc6baa7aa93f0bad
+RMD160 (id3v2-0.1.11.tar.gz) = 433900ec5ccc072e5daeaf3fc25902d87bc95a01
 Size (id3v2-0.1.11.tar.gz) = 52427 bytes

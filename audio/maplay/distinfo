@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/01/18 13:59:25 mrauch Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 20:39:48 agc Exp $
 
 SHA1 (maplay1_2.tar) = faeac51cfbf011956a17721e2077d0ed11f8d8dd
+RMD160 (maplay1_2.tar) = bc016d4cc8f356d9c2c0a90d4afde5e67c45ba14
 Size (maplay1_2.tar) = 286720 bytes
 SHA1 (patch-aa) = 12dfda39d9c451b4ba197aab637f234cbd255649
 SHA1 (patch-ab) = 92582f6a9b87ca4c61aaf42a1d03349b455997dc

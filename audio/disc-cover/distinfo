@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2003/12/05 15:16:34 drochner Exp $
+$NetBSD: distinfo,v 1.11 2005/02/23 20:39:44 agc Exp $
 
 SHA1 (disc-cover-1.5.4.tar.gz) = 38969baaa474fcfbebda3fe340f4e13cce83193a
+RMD160 (disc-cover-1.5.4.tar.gz) = c2457f5078b01333da6ec2e45f3c2b160ad079cd
 Size (disc-cover-1.5.4.tar.gz) = 45630 bytes
 SHA1 (patch-aa) = 8dcbf92c90782cd9625ce45048a018f9fcd41ad7

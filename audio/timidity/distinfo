@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/10/13 15:23:40 adam Exp $
+$NetBSD: distinfo,v 1.10 2005/02/23 20:39:52 agc Exp $
 
 SHA1 (TiMidity++-2.13.2.tar.bz2) = 8e603146e1164335303a5ac5dff291f369241b4e
+RMD160 (TiMidity++-2.13.2.tar.bz2) = 0156221846a88abef9312700a050972d85084fd8
 Size (TiMidity++-2.13.2.tar.bz2) = 1581230 bytes
 SHA1 (patch-aa) = 3e006fe39bcc2644b7cea30ffce318091e1b8915
 SHA1 (patch-ae) = 3f55ea58e91bd97ff42fbe67e8c89514c29aa2e9

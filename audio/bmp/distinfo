@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/12/25 15:22:36 jmmv Exp $
+$NetBSD: distinfo,v 1.10 2005/02/23 20:39:43 agc Exp $
 
 SHA1 (bmp-0.9.7.tar.gz) = a60ac337efb00f6a50ce019e8a07370a4df040c2
+RMD160 (bmp-0.9.7.tar.gz) = afaae64a0ec55857849108f1d06dadd2adc3a1de
 Size (bmp-0.9.7.tar.gz) = 1974397 bytes
 SHA1 (patch-an) = da55750c5ee50acfd25e695813bfc025c4fc7b5f
 SHA1 (patch-ao) = c24712090587ff622d7b9df68757c984a057c6c2

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/10/05 04:06:30 ben Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 20:39:50 agc Exp $
 
 SHA1 (portaudio_v18_1.zip) = a460ac5484137d77df17a95ce844ff7f178305b1
+RMD160 (portaudio_v18_1.zip) = 3352d70225a81aae80eefabc3701658da0c750c2
 Size (portaudio_v18_1.zip) = 550130 bytes
 SHA1 (patch-aa) = e522bfbf7f69d6f15fd0a32e01a480db922acc56
 SHA1 (patch-ac) = bc8133f418cc062bae1513d5aeea7107c4bb1843
