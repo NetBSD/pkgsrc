@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/23 10:42:14 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/15 12:56:36 drochner Exp $
 bin/dmalloc
 include/dmalloc.h
 info/dmalloc.info
 lib/libdmalloc.a
 lib/libdmalloc.so
-lib/libdmalloclp.a
+lib/libdmallocth.a
+lib/libdmallocth.so
+lib/libdmallocthcxx.a
+lib/libdmallocthcxx.so
 lib/libdmallocxx.a
 lib/libdmallocxx.so
