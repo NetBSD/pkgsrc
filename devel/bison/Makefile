@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 1999/04/14 21:39:02 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/08/24 12:51:24 agc Exp $
 
-DISTNAME=	bison-1.27
+DISTNAME=	bison-1.28
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=bison/}
 
