@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2003/07/13 13:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/30 14:30:15 markd Exp $
 
-DISTNAME=	kdegraphics-3.1.2
-PKGREVISION=	1
+DISTNAME=	kdegraphics-3.1.3
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
-.include "../../x11/kde3/Makefile.kde3"
+.include "../../meta-pkgs/kde3/Makefile.kde3"
 
 #DEPENDS+=	gPhoto2
 #DEPENDS+=	gpio
@@ -22,13 +21,13 @@ FOO_MAIN_FILES= \
 	kview/kview_main.cpp \
 	kuickshow/src/kuickshow_main.cpp
 
-.include "../../x11/kde3/Makefile.foo_main"
+.include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../graphics/sane-backends/buildlink2.mk"
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
