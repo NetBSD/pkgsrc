@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/05/24 03:17:18 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/05/26 16:32:37 jlam Exp $
 
 DISTNAME=		cups-${VERS}-source
 PKGNAME=		cups-${VERS}
@@ -19,10 +19,6 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		tiff-*:../../graphics/tiff
-
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
@@ -34,17 +30,14 @@ CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
 USE_SSL=		# defined
 CONFIGURE_ARGS+=	--enable-ssl
 
-CFLAGS+=		-I${LOCALBASE}/include
-CXXFLAGS+=		-I${LOCALBASE}/include
-
 .include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "SunOS")
-DEPENDS+=		zlib>=1.1.3:../../devel/zlib
-.endif
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
 
 .if defined(USE_PAM)
-DEPENDS+=		PAM-*:../../security/PAM
+.include "../../security/PAM/buildlink.mk"
 CONFIGURE_ARGS+=	--enable-pam
 PLIST_SRC=		${PKGDIR}/PLIST.pam
 PLIST_SRC+=		${PKGDIR}/PLIST
@@ -52,6 +45,10 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 CONFIGURE_ARGS+=	--disable-pam
 PLIST_SRC=		${PKGDIR}/PLIST
 .endif
+
+CFLAGS+=		-I${BUILDLINK_INCDIR}
+CXXFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 # CUPS_USER	username of the CUPS administrator
 # CUPS_GROUP	group of the CUPS administrator
@@ -83,6 +80,8 @@ EGDIR=			${PREFIX}/share/examples/cups
 
 post-extract:
 	cd ${WRKSRC}/conf; ${MV} -f cupsd.conf cupsd.conf.in
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 post-build:
 	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\
