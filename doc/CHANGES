@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4650 2004/01/31 14:51:01 toshii Exp $
+$NetBSD: CHANGES,v 1.4651 2004/01/31 21:36:56 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -535,3 +535,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vice to 1.14 [kristerw 2004-01-31]
 	Updated sylpheed to 0.9.9 [chris 2004-01-31]
 	Updated p5-Mail-IMAPClient to 2.2.9 [toshii 2004-01-31]
+	Updated ccache to 2.3 [jlam 2004-01-31]

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/07/05 22:06:37 chris Exp $
+$NetBSD: distinfo,v 1.5 2004/01/31 21:36:54 jlam Exp $
 
-SHA1 (ccache-2.2.tar.gz) = 0b232e1629ced7814193a0969d7fc54802dc2f78
-Size (ccache-2.2.tar.gz) = 81666 bytes
+SHA1 (ccache-2.3.tar.gz) = eb8ece3cd1b57752b5503b1e65d9bbe302533407
+Size (ccache-2.3.tar.gz) = 84386 bytes
