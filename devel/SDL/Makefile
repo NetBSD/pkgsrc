@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/12/11 16:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2002/01/03 01:31:46 hubertf Exp $
 #
 
 DISTNAME=	SDL-1.2.2
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--disable-nas
 
 CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-pthread-sem
+CONFIGURE_ARGS+=	--enable-video-aalib
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 
@@ -59,6 +60,7 @@ post-configure:
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/pth/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
+.include "../../graphics/aalib/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
