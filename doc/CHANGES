@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1904 2003/04/11 15:44:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.1905 2003/04/11 16:04:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1552,3 +1552,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated teTeX-bin to 1.0.7nb3 [jschauma 2003-04-11]
 	Added gaim-gtk1-0.59.8nb2 [jmmv 2003-04-11]
 	Updated gaim to 0.61 [jmmv 2003-04-11]
+	Added ircservices-5.0.16 [jmmv 2003-04-11]
