@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6437 2004/07/04 10:26:52 mrg Exp $
+$NetBSD: CHANGES,v 1.6438 2004/07/04 14:07:02 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3232,3 +3232,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mono to 1.0 [recht 2004-07-03]
 	Updated libgdiplus to 1.0 [recht 2004-07-03]
 	Updated swfdef to 0.2.2 [mrg 2004-07-04]
+	Updated gcc3 to 3.3.4 [drochner 2004-07-04]
+	Added libsigc++2-2.0.3 [drochner 2004-07-04]
+	Added gtkmm24-2.4.4 [drochner 2004-07-04]
