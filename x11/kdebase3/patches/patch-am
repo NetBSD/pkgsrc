@@ -1,0 +1,36 @@
+$NetBSD: patch-am,v 1.10 2004/12/14 11:05:27 markd Exp $
+
+--- konqueror/konq_mainwindow.cc.orig	2004-11-29 06:27:03.000000000 +1300
++++ konqueror/konq_mainwindow.cc
+@@ -2252,6 +2252,17 @@ KonqView * KonqMainWindow::childView( KP
+     QString viewName = view->viewName();
+     kdDebug() << "       - viewName=" << viewName << "   "
+               << "frame names:" << view->frameNames().join( "," ) << endl;
++
++    // First look for a hostextension containing this frame name
++    KParts::BrowserHostExtension *ext = KParts::BrowserHostExtension::childObject( view->part() );
++    if ( ext )
++    {
++      ext = ext->findFrameParent(callingPart, name);
++      kdDebug() << "BrowserHostExtension found part " << ext << endl;
++      if (!ext)
++         continue; // Don't use this window
++    }
++
+     if ( !viewName.isEmpty() && viewName == name )
+     {
+       kdDebug() << "found existing view by name: " << view << endl;
+@@ -2262,13 +2273,6 @@ KonqView * KonqMainWindow::childView( KP
+       return view;
+     }
+ 
+-    // First look for a hostextension containing this frame name
+-    KParts::BrowserHostExtension *ext = KParts::BrowserHostExtension::childObject( view->part() );
+-    if ( ext )
+-    {
+-      ext = ext->findFrameParent(callingPart, name);
+-    }
+-
+ //    KParts::BrowserHostExtension* ext = KonqView::hostExtension( view->part(), name );
+ 
+     if ( ext )
