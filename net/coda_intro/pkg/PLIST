@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/10/09 21:21:33 rvb Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/10/27 14:36:05 agc Exp $
 share/doc/coda-intro/00README
 share/doc/coda-intro/Announcement
 share/doc/coda-intro/BUILD.NetBSD
@@ -8,3 +8,4 @@ share/doc/coda-intro/README
 share/doc/coda-intro/RUN
 share/doc/coda-intro/WARNING
 share/doc/coda-intro/WARNING.NetBSD
+@dirrm share/doc/coda-intro

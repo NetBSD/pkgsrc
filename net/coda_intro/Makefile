@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/10/09 21:21:33 rvb Exp $
+# $NetBSD: Makefile,v 1.4 1998/10/27 14:36:05 agc Exp $
 #
 
 DISTNAME=	coda-intro-4.6.6
@@ -10,14 +10,10 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rvb@cs.cmu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 
-#NO_DEPENDS=
-#NO_CONFIGURE=
-
 do-build:
-	@${ECHO} "These are simple text files.
+	@${TRUE}
 
 do-install:
-	@${ECHO} "We will copy the files to ${PREFIX}/share/doc/coda-intro"
-	cd ${WRKSRC}; tar cf - doc | (cd ${PREFIX}/share; tar xvf -)
+	cd ${WRKSRC}; pax -r -w -s '|.*CVS||' -s '|.*\.FreeBSD||' doc ${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"
