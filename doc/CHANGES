@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5097 2004/03/05 13:06:04 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.5098 2004/03/05 13:59:34 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1174,3 +1174,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gschem to 20040111 [dmcmahill 2004-03-05]
 	Updated gsymcheck to 20040111 [dmcmahill 2004-03-05]
 	Updated libgeda to 20040111 [dmcmahill 2004-03-05]
+	Updated postfix to 2.0.18nb1 [grant 2004-03-05]
