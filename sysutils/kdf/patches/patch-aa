@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/03 23:27:47 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/25 19:13:50 jlam Exp $
 
---- configure.orig	Sun Jul  4 00:48:03 1999
-+++ configure	Sun Jul  4 00:49:09 1999
+--- configure.orig	Sun Apr 18 06:19:40 1999
++++ configure	Sun Oct 24 15:12:08 1999
 @@ -505,9 +505,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -70,3 +70,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/03 23:27:47 hubertf Exp $
    kde_bindir="\$(exec_prefix)/bin"
    kde_partsdir="\$(exec_prefix)/parts"
    echo "$ac_t""defaults" 1>&6	
+@@ -4447,7 +4447,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="$all_libraries -lgif -lX11 $LIBSOCKET"
++LIBS="$all_libraries -lungif -lX11 $LIBSOCKET"
+ cat > conftest.$ac_ext <<EOF
+ #line 4453 "configure"
+ #include "confdefs.h"
