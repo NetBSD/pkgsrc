@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/04/25 09:14:00 snj Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/27 20:31:08 reed Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		1
@@ -96,7 +96,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/apcupsd.slave.conf \
 		${PREFIX}/share/examples/apcupsd
 	${INSTALL_SCRIPT} ${WRKSRC}/distributions/netbsd/apcupsd \
-		${PREFIX}/etc/rc.d
+		${RCD_SCRIPTS_EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/apcupsd
 .for file in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/apcupsd
