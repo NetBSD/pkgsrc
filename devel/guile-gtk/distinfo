@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:22 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/12/13 15:17:44 jschauma Exp $
 
 SHA1 (guile-gtk-0.19.tar.gz) = 22e445fb0574cee76c0d18dbdc28090b63b88302
 Size (guile-gtk-0.19.tar.gz) = 278896 bytes
+SHA1 (patch-aa) = 5d1af25c0be572fb958e963828242e547d816e65
