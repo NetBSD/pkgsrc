@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.5 2004/05/09 17:56:17 abs Exp $
+# $Id: pkg_chk.sh,v 1.6 2004/06/30 09:53:42 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -53,11 +53,11 @@ check_packages_installed()
 		    echo "$PKGNAME: build version information mismatch"
 		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
 		    # should we mark this pkg to be updated if -u is given ??
-		elif [ -n "$opt_v" ];then
-		    echo "$PKGNAME: OK"
+		else
+		    verbose "$PKGNAME: OK"
 		fi
-	    elif [ -n "$opt_v" ];then
-		echo "$PKGNAME: OK"
+	    else
+		verbose "$PKGNAME: OK"
 	    fi
 	fi
     done
@@ -85,9 +85,7 @@ list_packages()
 	    fi
 	    continue
 	fi
-	if [ -n "$opt_v" ];then
-	    echo "$PKGNAME.tgz: found"
-	fi
+	verbose "$PKGNAME.tgz: found"
 	CHECKLIST="$CHECKLIST$PKGNAME ";
     done
     while [ "$CHECKLIST" != ' ' ]; do
@@ -104,14 +102,12 @@ list_packages()
 	    for dep in $(pkg_info -N $PACKAGES/All/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
 		case "$PKGLIST$NEXTCHECK" in
 		    *\ $dep\ *)
-			if [ -n "$opt_v" ];then
-			    echo "Duplicate depend $dep"
-			fi;;
+			verbose "$pkg: Duplicate depend $dep"
+			;;
 		    *)
 			NEXTCHECK="$NEXTCHECK$dep "
-			if [ -n "$opt_v" ];then
-			    echo "Add depend $dep"
-			fi;;
+			verbose "$pkg: Add depend $dep"
+			;;
 		esac
 	    done
 	done
@@ -304,6 +300,13 @@ run_cmd()
     fi
     }
 
+verbose()
+    {
+    if [ -n "$opt_v" ];then
+	echo $*
+    fi
+    }
+
 args=$(getopt BC:D:L:U:abcfghiklnrsuv $*)
 if [ $? != 0 ]; then
     opt_h=1
@@ -452,10 +455,8 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
     if [ -n "$opt_D" ];then
 	TAGS="$TAGS,$opt_D"
     fi
-    if [ -n "$opt_v" ];then
-	echo "set   TAGS=$TAGS"
-	echo "unset TAGS=$opt_U"
-    fi
+    verbose "set   TAGS=$TAGS"
+    verbose "unset TAGS=$opt_U"
 
     # Extract list of valid pkgdirs (skip any 'alreadyset' in $PKGDIRLIST)
     #
