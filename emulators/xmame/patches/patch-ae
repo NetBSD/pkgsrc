@@ -1,17 +1,13 @@
-$NetBSD: patch-ae,v 1.3 1998/08/07 10:40:37 agc Exp $
+$NetBSD: patch-ae,v 1.4 1998/09/05 12:27:40 mycroft Exp $
 
---- doc/xmamerc.dist.orig	Sun Jun  7 07:50:24 1998
-+++ doc/xmamerc.dist	Sat Jul  4 07:17:18 1998
-@@ -23,10 +23,10 @@
+--- doc/xmamerc.dist.orig	Thu Sep  3 10:54:29 1998
++++ doc/xmamerc.dist	Sat Sep  5 08:16:16 1998
+@@ -23,7 +23,7 @@
  
  # Where does your Mame rom files reside? 
  # This option can be overriden by MAMEDIR environment variable
--mamedir		/usr/games/lib/mame
-+mamedir		@MAMEDIR@
+-rompath		/usr/games/lib/mame
++rompath		@MAMEDIR@
  
  # Also Mame needs a public-writable directory to store high scores
--spooldir        /var/games/mame
-+spooldir        @MAMEDIR@
- 
- # What is your loved game? ( remember that mame defaults to "pacman" )
- defaultgame	galturbo
+ spooldir        /var/games/mame
