@@ -10950,6 +10950,13 @@ Registering depends:.
             </li>
 
             <li>
+              <p>Run <span><b class="command">make
+              do-lint</b></span> in <tt class=
+              "filename">pkgsrc/doc/guide</tt> to check the XML
+              syntax, and fix it if needed</p>
+            </li>
+
+            <li>
               <p>Run <span><b class="command">make</b></span> in
               <tt class="filename">pkgsrc/doc/guide</tt> to build
               the HTML and ASCII version</p>
@@ -10959,15 +10966,13 @@ Registering depends:.
               <p>Run <span><b class="command">make
               OUTPUT=pdf</b></span> in <tt class=
               "filename">pkgsrc/doc/guide</tt> to build the PDF
-              version. Dont' omit this, as this does a very strict
-              SGML test, and doing this properly is important for
-              getting proper documentation on the web server!</p>
+              version.</p>
             </li>
 
             <li>
               <p>If all is well, run <span><b class="command">make
               install-doc</b></span> to put the generated files
-              into <tt class="filename">pkgserc/doc</tt>.</p>
+              into <tt class="filename">pkgsrc/doc</tt>.</p>
             </li>
 
             <li>
@@ -10978,6 +10983,20 @@ Registering depends:.
             <li>
               <p><span><b class="command">cvs commit
               pkgsrc/doc/pkgsrc.{html,txt}</b></span></p>
+            </li>
+
+            <li>
+              <p>Until the webserver on www.NetBSD.org is really
+              updated automatically to pick up changes to the
+              pkgsrc guide automatically, also run <span><b class=
+              "command">make install-htdoc
+              HTDOCSDIR=../../../htdocs</b></span> (or similar,
+              adjust <tt class="varname">HTDOCSDIR</tt>!)</p>
+            </li>
+
+            <li>
+              <p><span><b class="command">cvs commit
+              htdocs/Documentation/pkgsrc</b></span></p>
             </li>
           </ul>
         </div>
