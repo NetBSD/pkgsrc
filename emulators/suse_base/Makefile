@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/03/26 04:05:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.39 2003/04/23 02:22:25 jmc Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		3
@@ -12,7 +12,10 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 linuxppc_lib-[0-9]*
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386 NetBSD-1.6[L-Z]-powerpc NetBSD-1.6Z[A-Z]-powerpc NetBSD-1.[7-9]-powerpc
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386 
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.6[L-Z]-powerpc NetBSD-1.6Z[A-Z]-powerpc 
+ONLY_FOR_PLATFORM+=	NetBSD-1.[7-9]*-powerpc NetBSD-[2-9]*-powerpc
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
