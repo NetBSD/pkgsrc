@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8837 2005/01/20 18:10:05 adrianp Exp $
+$NetBSD: CHANGES,v 1.8838 2005/01/20 18:51:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -446,3 +446,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added cawf-4.10 [tv 2005-01-20]
 	Added netbsd-tap-20050120 [cube 2004-01-20]
 	Added libnet-1.1.2.1 [adrianp 2005-01-20]
+	Updated dia to 0.94nb1 [jmmv 2005-01-20]
+	Added dia-python-0.94 [jmmv 2005-01-20]
