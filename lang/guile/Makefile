@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2002/08/25 19:23:03 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/08/25 20:58:21 mjl Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
-DISTNAME=		guile-1.4
+DISTNAME=		guile-1.4.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
