@@ -1,3 +1,5 @@
+$NetBSD: patch-ar,v 1.2 1999/10/01 07:49:21 simonb Exp $
+
 diff -ur ../faces-DIST/scripts/facesall ./scripts/facesall
 --- ../faces-DIST/scripts/facesall	Mon Nov 25 11:30:24 1991
 +++ ./scripts/facesall	Fri Oct  1 14:32:12 1999

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.5 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/compface/Makefile ./compface/Makefile
 --- ../faces-DIST/compface/Makefile	Thu Oct 24 12:28:06 1991
 +++ ./compface/Makefile	Fri Oct  1 14:32:06 1999
