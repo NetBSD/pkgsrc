@@ -1,0 +1,29 @@
+$NetBSD: patch-av,v 1.1 2004/10/12 00:11:10 heinz Exp $
+
+--- t/spf.t.orig	Thu Sep  9 20:29:21 2004
++++ t/spf.t
+@@ -6,14 +6,22 @@ use Test;
+ 
+ use constant TEST_ENABLED => (-e 't/do_net');
+ use constant HAS_SPFQUERY => eval { require Mail::SPF::Query; };
++# Do not run this test on non-Linux unices as root, due to a bug
++# in Sys::Hostname::Long (which Mail::Query::SPF uses.)
++use constant IS_LINUX   => $^O eq 'linux';
++use constant AM_ROOT    => $< == 0;
++
++use constant DO_RUN     => TEST_ENABLED && HAS_SPFQUERY &&
++					!(AM_ROOT && !IS_LINUX);
++
+ 
+ BEGIN {
+   
+-  plan tests => ((TEST_ENABLED && HAS_SPFQUERY) ? 2 : 0);
++  plan tests => (DO_RUN ? 2 : 0);
+ 
+ };
+ 
+-exit unless (TEST_ENABLED && HAS_SPFQUERY);
++exit unless (DO_RUN);
+ 
+ # ---------------------------------------------------------------------------
+ 
