@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/21 00:49:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/01 10:37:33 grant Exp $
 
 DISTNAME=		firefox-bin-java-1.1
 PKGREVISION=		1
@@ -12,7 +12,7 @@ COMMENT=		Java Run Time Environment (JRE) 1.3 plugin for firefox-bin
 DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
 DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
 
-ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		YES
