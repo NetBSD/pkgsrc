@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2003/06/10 06:29:07 wiz Exp $
+$NetBSD: patch-ad,v 1.6 2003/06/19 22:42:31 seb Exp $
 
 --- cddb-tool.orig      2003-05-25 12:32:29.000000000 +0200
 +++ cddb-tool   2003-05-25 12:34:12.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.5 2003/06/10 06:29:07 wiz Exp $
  	echo '# Track frame offsets:'
  	NUMTRACKS=$2
 -	for x in $(f_seq 3 $(expr $NUMTRACKS + 2))
-+	for x in $(jot $NUMTRACKS 3))
++	for x in $(jot $NUMTRACKS 3)
  	do
  		printf "#\t$(echo "$DISCID" | cut -f$x -d' ')\n"
  	done
