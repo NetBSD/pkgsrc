@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1 1998/09/05 20:19:16 frueauf Exp $
+
+--- installer/unix.tcl-orig	Wed Mar 25 11:36:03 1998
++++ installer/unix.tcl	Sat Sep  5 20:42:47 1998
+@@ -19,7 +19,7 @@
+     global Type types Lib Bin CC LD Version Patchlevel Wish types cflags\
+       libs share SCflag GCC SLDflag CFlags TIDir v7 SED go NoGUI Xtn
+ #
+-    set types {AIX Alpha BSDI FreeBSD HP-UX IRIX Linux OSF1 {SunOS 4} {SunOS 5} UNIX_SV}
++    set types {AIX Alpha BSDI FreeBSD NetBSD HP-UX IRIX Linux OSF1 {SunOS 4} {SunOS 5} UNIX_SV}
+ #
+     array set cflags {
+ 	HP-UX		{+O3 -Aa -D_HPUX_SOURCE}
+@@ -30,6 +30,7 @@
+ 	HP-UX		{+z}
+ 	IRIX		{-KPIC}
+ 	FreeBSD		{-fpic}
++	NetBSD		{-fPIC}
+ 	SCO		{-Kpic -belf}
+ 	{SunOS 4}	{-PIC}
+ 	{SunOS 5}	{-KPIC}
+@@ -53,6 +54,7 @@
+ 	IRIX		{-shared -rdata_shared}
+ 	AIX		{-bhalt:4 -bM:SRE -bE:lib.exp -H512 -T512}
+ 	FreeBSD		{-Bshareable -x}
++	NetBSD		{-sharead -x}
+ 	SCO		{-G}
+ 	OSF1		{-shared -expect_unresolved}
+ 	Linux		{-shared}
+@@ -149,7 +151,7 @@
+ #
+ proc getLib {} {
+     global Lib
+-    switch {} $Lib {set Lib /usr/local/lib/zircon}
++    switch {} $Lib {set Lib @@@PREFIX@@@/share/zircon}
+ }
+ #
+ proc getWish {} {
+@@ -175,7 +177,7 @@
+ 	    return
+ 	}
+     }
+-    set Bin /usr/local/bin
++    set Bin @@@PREFIX@@@/bin
+ }
+ #
+ proc getCC {} {
