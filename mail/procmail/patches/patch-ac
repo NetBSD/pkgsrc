@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:51 agc Exp $
+$NetBSD: patch-ac,v 1.3 1999/04/06 11:48:07 cjs Exp $
 
-*** initmake.bak	Thu Apr  3 05:58:37 1997
---- initmake	Wed May 14 18:27:56 1997
+*** initmake~	Tue Feb 16 16:13:32 1999
+--- initmake	Mon Apr  5 23:10:00 1999
 ***************
-*** 380,387 ****
+*** 382,389 ****
   test -z "$MAKE" && echo "MAKE	= make"			>>_Makefile
   test a"$cc" != a"$CC" && echo "CC	= $cc"		>>_Makefile
   
@@ -12,12 +12,12 @@ $NetBSD: patch-ac,v 1.2 1998/08/07 11:09:51 agc Exp $
   echo							>>_Makefile
   
   MANSS=""
---- 380,387 ----
+--- 382,389 ----
   test -z "$MAKE" && echo "MAKE	= make"			>>_Makefile
   test a"$cc" != a"$CC" && echo "CC	= $cc"		>>_Makefile
   
-! echo "CFLAGS    += \$(CFLAGS1)$CFLAGS"                   >>_Makefile
-! echo "LDFLAGS   += \$(LDFLAGS1)$LDFLAGS"                 >>_Makefile
+! echo "CFLAGS	+= \$(CFLAGS1)$CFLAGS"			>>_Makefile
+! echo "LDFLAGS	+= \$(LDFLAGS1)$LDFLAGS"		>>_Makefile
   echo							>>_Makefile
   
   MANSS=""
