@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.7 2004/05/12 18:45:26 bouyer Exp $
+$NetBSD: patch-ad,v 1.8 2004/11/12 12:13:45 mjl Exp $
 
---- docs/Makefile.in.orig	2004-01-08 10:23:48.000000000 -0800
-+++ docs/Makefile.in	2004-02-23 07:56:48.000000000 -0800
-@@ -33,7 +33,7 @@
- mandir = @mandir@
- includedir = @includedir@
- oldincludedir = /usr/include
+--- docs/Makefile.in.orig	2004-10-22 15:12:40.000000000 +0200
++++ docs/Makefile.in	2004-11-08 00:57:02.000000000 +0100
+@@ -17,7 +17,7 @@
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
+ VPATH = @srcdir@
 -pkgdatadir = $(datadir)/@PACKAGE@
 +pkgdatadir = $(datadir)/doc/@PACKAGE@
  pkglibdir = $(libdir)/@PACKAGE@

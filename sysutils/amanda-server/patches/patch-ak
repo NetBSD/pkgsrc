@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.2 2004/05/12 18:45:26 bouyer Exp $
+$NetBSD: patch-ak,v 1.3 2004/11/12 12:13:45 mjl Exp $
 
---- man/Makefile.in.orig	2004-01-08 10:23:42.000000000 -0800
-+++ man/Makefile.in	2004-02-23 15:57:35.000000000 -0800
-@@ -189,7 +189,6 @@
+--- man/Makefile.in.orig	2004-10-22 15:12:40.000000000 +0200
++++ man/Makefile.in	2004-11-08 01:17:10.000000000 +0100
+@@ -281,7 +281,6 @@
+ # not autoconf-generated:
  EXTRA_DIST = amplot.8 amrestore.8 amtape.8 amdd.8 ammt.8
- 
  man_MANS = $(AMPLOT_MAN_PAGES) \
 -	   $(COMMON_MAN_PAGES) \
  	   $(SERVER_MAN_PAGES) \

@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.6 2004/05/15 12:15:22 bouyer Exp $
+$NetBSD: patch-ab,v 1.7 2004/11/12 12:13:45 mjl Exp $
 
---- Makefile.in.orig	2004-01-08 19:21:29.000000000 +0100
-+++ Makefile.in	2004-05-15 14:05:39.000000000 +0200
-@@ -168,20 +168,14 @@
+--- Makefile.in.orig	2004-10-22 15:12:38.000000000 +0200
++++ Makefile.in	2004-11-08 01:36:50.000000000 +0100
+@@ -62,8 +62,7 @@
+ DATA = $(pkgdata_DATA)
+ ETAGS = etags
+ CTAGS = ctags
+-DIST_SUBDIRS = config common-src client-src tape-src server-src \
+-	changer-src restore-src recover-src amplot man docs example
++DIST_SUBDIRS = config amplot man
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ distdir = $(PACKAGE)-$(VERSION)
+ top_distdir = $(distdir)
+@@ -277,19 +276,13 @@
  # order is significant, don't change it arbitrarily
  SUBDIRS = \
  	config \
@@ -16,26 +26,15 @@ $NetBSD: patch-ab,v 1.6 2004/05/15 12:15:22 bouyer Exp $
 -	man docs example
 +	man
  
- 
 -pkgdata_DATA = \
 -	COPYRIGHT			\
 -	COPYRIGHT-APACHE		\
 -	COPYRIGHT-REGEX
 +pkgdata_DATA =
  
- 
  EXTRA_DIST = $(SNAPSHOT_STAMP) \
-@@ -243,8 +237,7 @@
- 	uninstall-recursive check-recursive installcheck-recursive
- DIST_COMMON = README AUTHORS ChangeLog INSTALL Makefile.am Makefile.in \
- 	NEWS acinclude.m4 aclocal.m4 configure configure.in
--DIST_SUBDIRS = config common-src client-src tape-src server-src \
--	changer-src restore-src recover-src amplot man docs example
-+DIST_SUBDIRS = config amplot man
- all: all-recursive
- 
- .SUFFIXES:
-@@ -506,7 +499,7 @@
+ 	$(pkgdata_DATA)			\
+@@ -676,7 +669,7 @@
  uninstall: uninstall-recursive
  
  install-am: all-am
