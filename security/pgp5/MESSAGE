@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:17:29 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2002/03/26 18:14:11 wennmach Exp $
 
 There are a number of large changes from the 2.6.2 distribution.  Most
 notable is that the command line has changed substantially.  See
-the pgp(1) man page for a discussion of how to use the new command
+the pgp5(1) man page for a discussion of how to use the new command
 line.
 
 Also, to allow easy interoperation with older versions on the same
