@@ -38,8 +38,13 @@
 #include <sys/param.h>
 #include <sys/stat.h>
 
-#include <ctype.h>
+#ifdef NEED_LIBNBCOMPAT
+#include <nbcompat.h>
+#else
 #include <err.h>
+#endif
+
+#include <ctype.h>
 #include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -63,7 +68,7 @@ static void		usage(void);
 
 static int		(*search)(const char *, const char *);
 
-static int		Cflag, cflag, qflag, xflag;
+static int		Cflag, cflag, qflag;
 
 int
 main(int argc, char *argv[])
@@ -71,10 +76,12 @@ main(int argc, char *argv[])
 	const char *path;
 	int ch;
 
+	setprogname("pkgfind");
+
 	/* default searches have partial matches */
 	search = partialmatch;
 
-	Cflag = cflag = qflag = xflag = 0;
+	Cflag = cflag = qflag = 0;
 
 	while ((ch = getopt(argc, argv, "Ccqx")) != -1) {
 		switch (ch) {
@@ -165,18 +172,20 @@ static void
 showpkg(const char *path, const char *cat, const char *pkg)
 {
 	char *mk, *comment = NULL;
+	size_t len;
+
+	len = strlen(path) + strlen(cat) + strlen(pkg) + strlen("Makefile") + 3 + 1;
 
 	if (!qflag) {
-		(void)asprintf(&mk, "%s/%s/%s/Makefile", path, cat, pkg);
-		if (mk == NULL)
-			err(EXIT_FAILURE, "asprintf");
+		if ((mk = malloc(len)) == NULL)
+			err(EXIT_FAILURE, "malloc");
+		(void)snprintf(mk, len, "%s/%s/%s/Makefile", path, cat, pkg);
 
 		if (getcomment(mk, &comment) == 0) {
-			free(mk);
-			(void)asprintf(&mk, "%s/%s/%s/Makefile.common",
+			if ((mk = realloc(mk, len + 7)) == NULL)
+				err(EXIT_FAILURE, "malloc");
+			(void)snprintf(mk, len+7, "%s/%s/%s/Makefile.common",
 			    path, cat, pkg);
-			if (mk == NULL)
-				err(EXIT_FAILURE, "asprintf");
 			(void)getcomment(mk, &comment);
 		}
 		free(mk);
@@ -259,8 +268,6 @@ exactmatch(const char *s, const char *find)
 static void
 usage(void)
 {
-	extern char *__progname;
-
-	(void)fprintf(stderr, "Usage: %s [-Ccqx] keyword [...]\n", __progname);
+	(void)fprintf(stderr, "Usage: %s [-Ccqx] keyword [...]\n", getprogname());
 	exit(EXIT_FAILURE);
 }
