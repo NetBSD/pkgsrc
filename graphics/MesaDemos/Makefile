@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/11 02:03:41 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/11 02:05:14 jlam Exp $
 #
 
 PKGNAME=	MesaDemos-${MESA_VERSION}
@@ -10,7 +10,7 @@ DISTINFO_FILE=		${.CURDIR}/distinfo
 .include "../Mesa/Makefile.common"
 
 USE_BUILDLINK3=		yes
-
+USE_LANGUAGES=		c c++
 MAKE_FLAGS+=		LIB_DEP=""
 
 pre-build:
