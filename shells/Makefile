@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/18 20:35:14 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/05 04:11:36 jtb Exp $
 #
 
 COMMENT=	Shells
@@ -10,6 +10,6 @@ SUBDIR+=	rc
 SUBDIR+=	scsh
 SUBDIR+=	tcsh
 SUBDIR+=	zsh
-SUBDIR+=	zsh-current
+SUBDIR+=	zsh4
 
 .include "../mk/bsd.pkg.subdir.mk"
