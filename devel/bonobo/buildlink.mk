@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2002/05/14 12:37:25 mjl Exp $
+# $NetBSD: buildlink.mk,v 1.8 2002/07/14 00:58:27 rh Exp $
 #
 # This Makefile fragment is included by packages that use bonobo.
 #
@@ -36,6 +36,8 @@ CPPFLAGS+=			-I${BUILDLINK_DIR}/include/gnome-1.0
 
 BUILDLINK_CONFIG_WRAPPER_SED+=	\
 	-e "s|-I${BUILDLINK_PREFIX.bonobo}/\(include/gnome-1.0\)|-I${BUILDLINK_DIR}/\1|g"
+BUILDLINK_CONFIG_WRAPPER_SED+=	\
+	-e "s|-I${BUILDLINK_PREFIX.bonobo}/\(share/idl\)|-I${BUILDLINK_DIR}/\1|g"
 
 .include "../../graphics/freetype2/buildlink.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
