@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.24 2001/03/10 10:53:15 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.25 2001/03/13 09:41:36 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -163,12 +163,10 @@ DIGEST:=		${LOCALBASE}/bin/digest
 MAKEFLAGS+=		DIGEST=${DIGEST}
 .endif
 
-.if !defined(DIGEST_VERSION)
-.if exists(${DIGEST})
-DIGEST_VERSION!= 	${DIGEST} -V
-.else
-DIGEST_VERSION=		${DIGEST_REQD}
-.endif
+.if !exists(${DIGEST})
+DIGEST_VERSION=		20010301
+.elif !defined(DIGEST_VERSION)
+DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .endif
 
