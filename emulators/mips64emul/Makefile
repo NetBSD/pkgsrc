@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/23 18:30:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/28 04:01:11 xtraeme Exp $
 #
 
 DISTNAME=	mips64emul-${DIST_VER}
@@ -14,15 +14,19 @@ USE_X11=	yes
 HAS_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/mips64emul-${DIST_VER}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
-DIST_VER=	20040623
+DIST_VER=	20040627
 
 GLOBAL_LDFLAGS=	-L${X11BASE}/lib \
 		${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mips64emul ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/mips64emul.1 ${PREFIX}/man/man1
+.for f in README HISTORY BUGS TODO RELEASE LICENSE 
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
+.endfor
 
 SUBST_CLASSES=		x11
 SUBST_STAGE.x11=	post-patch
