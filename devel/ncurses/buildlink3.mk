@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/02/10 20:45:01 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
 
 .if !empty(NCURSES_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		ncurses
-BUILDLINK_DEPENDS.ncurses+=	ncurses>=5.0
+BUILDLINK_DEPENDS.ncurses+=	ncurses>=5.3nb1
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 .endif	# NCURSES_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/10 02:37:09 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/02/10 20:45:02 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gtk2+.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	gtk2
 
 .if !empty(GTK2+_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			gtk2
-BUILDLINK_DEPENDS.gtk2+=		gtk2+>=2.2.4nb3
+BUILDLINK_DEPENDS.gtk2+=		gtk2+>=2.2.4nb2
 BUILDLINK_PKGSRCDIR.gtk2?=		../../x11/gtk2
 
 .include "../../devel/atk/buildlink3.mk"
