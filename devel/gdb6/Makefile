@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:27 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/04 22:35:17 shannonjr Exp $
 #
 
-DISTNAME=		gdb-6.1.1
+DISTNAME=		gdb-6.2.1
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
@@ -19,6 +19,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+AUTOCONF_REQD=		2.13
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
 
@@ -32,6 +33,11 @@ INFO_FILES+=		stabs.info standards.info
 pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
 
+pre-configure:
+	cd ${WRKSRC}/gdb;                                           \
+	${AUTOHEADER};                                          \
+	${AUTOCONF}
+
 do-test:
 	if `${PKG_INFO} -qe dejagnu` ;then		\
 		(cd ${WRKSRC} && ${GMAKE} check);	\
@@ -40,4 +46,5 @@ do-test:
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
