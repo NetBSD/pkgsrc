@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:27 zuntum Exp $
-etc/pam/ldap.conf
-lib/security/pam_ldap.so
+@comment $NetBSD: PLIST,v 1.2 2004/11/19 19:08:43 jlam Exp $
+lib/security/pam_ldap.la
 share/doc/pam-ldap/COPYING
 share/doc/pam-ldap/COPYING.LIB
-share/doc/pam-ldap/ChangeLog
-share/doc/pam-ldap/INSTALL
+share/examples/pam-ldap/ldap.conf
+share/examples/pam-ldap/ldapns.schema
+share/examples/pam-ldap/ns-pwd-policy.schema
+@dirrm share/examples/pam-ldap
 @dirrm share/doc/pam-ldap
