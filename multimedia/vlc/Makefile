@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/21 21:04:06 veego Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/05 14:22:22 grant Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -24,11 +24,11 @@ VLC_VER=		0.7.2
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=        --disable-vcd
-CONFIGURE_ARGS+=	--disable-skins2
 .endif
 BUILDLINK_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 BUILDLINK_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix
 
+CONFIGURE_ARGS+=	--disable-skins2
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
 
 CONFIGURE_ARGS+=	--enable-dvb
