@@ -1,0 +1,50 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/07 15:23:39 wiz Exp $
+
+--- Makefile.orig	2004-09-11 11:59:03.000000000 +0200
++++ Makefile
+@@ -14,7 +14,7 @@
+ 
+ # Where to install things:
+ 
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ 
+ 
+ # Program:
+@@ -30,7 +30,7 @@ DATA_PREFIX=$(PREFIX)/share/tuxpaint-con
+ # Docs and man page:
+ 
+ DOC_PREFIX=$(PREFIX)/share/doc/tuxpaint-config/
+-MAN_PREFIX=$(PREFIX)/share/man/
++MAN_PREFIX=$(PREFIX)/man/
+ 
+ 
+ # Tux Paint's 'System-wide' Config file:
+@@ -69,7 +69,7 @@ FLTK_LIBS=`fltk-config --ldstaticflags`
+ 
+ # The entire set of CFLAGS:
+ 
+-CFLAGS=-O2 -Wall $(FLTK_CFLAGS) -DDATA_PREFIX=\"$(DATA_PREFIX)\" \
++CFLAGS+=-Wall $(FLTK_CFLAGS) -DDATA_PREFIX=\"$(DATA_PREFIX)\" \
+ 	-D$(NOSOUNDFLAG) -DDOC_PREFIX=\"$(DOC_PREFIX)\" \
+ 	-DLOCALEDIR=\"$(LOCALE_PREFIX)\" -DCONFDIR=\"$(CONFDIR)\"
+ 
+@@ -90,8 +90,7 @@ all:	tuxpaint-config translations
+ # to do this as superuser ("root"))
+ 
+ install:	install-bin install-data install-man install-doc \
+-		install-gnome install-kde install-kde-icons \
+-		install-icon install-gettext
++		install-gettext
+ 	@echo
+ 	@echo "All done! Now (preferably NOT as 'root' superuser),"
+ 	@echo "you can type the command 'tuxpaint-config' to run the"
+@@ -245,7 +244,7 @@ install-man:
+ tuxpaint-config:	obj/tuxpaint-config.o obj/tuxpaint-config2.o	\
+ 			obj/defaults.o
+ 	$(CXX) $(CFLAGS) -o tuxpaint-config obj/tuxpaint-config.o 	\
+-			obj/tuxpaint-config2.o obj/defaults.o $(FLTK_LIBS)
++			obj/tuxpaint-config2.o obj/defaults.o $(FLTK_LIBS) -lintl
+ 
+ 
+ # Build the object for the program!
