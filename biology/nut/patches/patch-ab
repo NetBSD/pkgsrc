@@ -1,24 +1,27 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/01/11 02:56:33 garbled Exp $
---- db.c.orig	Mon Jan 10 15:24:03 2000
-+++ db.c	Mon Jan 10 15:42:12 2000
-@@ -32,6 +32,11 @@
+$NetBSD: patch-ab,v 1.2 2003/07/12 12:23:13 wiz Exp $
+
+--- db.c.orig	Sun Jun  1 01:59:22 2003
++++ db.c
+@@ -23,6 +23,7 @@
+ #include "meal.h"
+ #include "options.h"
+ #include "util.h"
++#include <errno.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -729,7 +730,13 @@ void make_filenames(void)
+  sprintf(optionsfile,"%s/%s","NUTDB",optionsfile1);
  #else
- char nutdir1[]=NUTDIR ;
- #endif
-+#ifndef DBDIR
-+char nutdir2[]=".nutdb";
-+#else
-+char nutdir2[]=DBDIR ;
-+#endif
- 
- char rawfoodfile1[] = "abbrev.txt";
- char rawnutfoodfile1[] = "nutfood.txt";
-@@ -454,7 +459,7 @@
- 
- void make_filenames(void)
- {
--sprintf(rawfoodfile,"%s/%s/%s",getenv("HOME"),nutdir1,rawfoodfile1);
-+sprintf(rawfoodfile,"%s/%s",nutdir2,rawfoodfile1);
- sprintf(rawnutfoodfile,"%s/%s/%s",getenv("HOME"),nutdir1,rawnutfoodfile1);
- sprintf(foodfile,"%s/%s/%s",getenv("HOME"),nutdir1,foodfile1);
- sprintf(mealfile,"%s/%s/%s",getenv("HOME"),nutdir1,mealfile1);
+ sprintf(nutdir,"%s/%s",getenv("HOME"),nutdir1);
+-mkdir (nutdir, 0700 );
++if (mkdir(nutdir, S_IRWXU|S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH) != 0) {
++     if (errno != EEXIST) {
++             printf("Cannot create %s/%s: %s\n", getenv("HOME"), nutdir1,
++                     strerror(errno));
++             exit(1);
++     }
++}
+ sprintf(USDAjoined,"%s/%s",FOODDIR,USDAjoined1);
+ sprintf(globalFOOD,"%s/%s",FOODDIR,globalFOOD1);
+ sprintf(globalNUT,"%s/%s",FOODDIR,globalNUT1);
