@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/03/07 12:09:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/08 19:40:40 jmmv Exp $
 #
 
 DISTNAME=		gnome-utils-2.4.1
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of useful GNOME2 utilities and applications
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_PERL5=		build
 USE_GNU_TOOLS+=		make

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/25 07:32:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/08 19:40:38 jmmv Exp $
 bin/gnocatan
 bin/gnocatan-meta-server
 bin/gnocatan-server-console
@@ -132,7 +132,6 @@ share/pixmaps/gnome-gnocatan.png
 @dirrm share/gnome/help/gnocatan/C
 @dirrm share/gnome/help/gnocatan
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@unexec ${RMDIR} %D/share/gnome/apps/Games 2> /dev/null || ${TRUE}
 @dirrm share/games/gnocatan/themes/Tiny
 @dirrm share/games/gnocatan/themes/Iceland
 @dirrm share/games/gnocatan/themes/FreeCIV-like

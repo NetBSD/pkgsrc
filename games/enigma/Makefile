@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/01 22:46:22 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/08 19:40:38 jmmv Exp $
 #
 
 DISTNAME=		enigma-0.81
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GNU:=enigma/} \
 			http://www.rzuser.uni-heidelberg.de/~dheck/
@@ -11,6 +12,8 @@ HOMEPAGE=		http://www.nongnu.org/enigma/
 COMMENT=		Puzzle game similar to Oxyd/Rock'n'Roll/Marble Madness
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GCC_REQD+=		2.95
 GNU_CONFIGURE=		yes
