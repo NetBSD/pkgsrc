@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/10/03 00:17:54 tv Exp $
+# $NetBSD: Makefile,v 1.30 2004/11/06 16:43:44 sketch Exp $
 #
 
 DISTNAME=		libIDL-0.8.4
@@ -20,6 +20,13 @@ CONFIGURE_ENV+=		HAVE_YACC=yes
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libIDL-2.0.pc.in
 INFO_FILES=		libIDL2.info
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+OPSYSVARS+=		CONFIGURE_ENV
+CONFIGURE_ENV.SunOS+=	CPP=/usr/lib/cpp
+.endif
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
