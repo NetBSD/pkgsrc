@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/12/13 00:29:20 frueauf Exp $
+
+--- Makefile.options.orig	Tue Oct 20 22:19:08 1998
++++ Makefile.options	Sat Dec 12 23:56:44 1998
+@@ -12,7 +12,7 @@
+ CPP=g++ -E
+ 
+ # Grammar generator - e.g. bison,yacc
+-YACC = bison
++YACC = yacc
+ 
+ # Lexical scanner - e.g. flex,lex
+ LEX = flex
+@@ -29,4 +29,4 @@
+ IFLAGS = -I$(IDIR)
+ 
+ # Add extra directories where you want the abacus to search for libraries here
+-LFLAGS = -L/usr/local/lib -L/usr/X11R6/lib -L$(LIBDIR) -L.
++LFLAGS = -L${LOCALBASE}/lib -L${X11BASE}/lib -L$(LIBDIR) -L.

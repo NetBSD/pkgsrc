@@ -1,0 +1,10 @@
+Define the following environment variables:
+
+	ABACUS_HOME - directory where you installed the Abacus share tcl files.
+	ABACUS_EDITOR - external editor to use when editing macros.
+	ABACUS_BROWSER - web browser to view WWW pages and info.
+
+e.g.:
+	setenv ABACUS_HOME /usr/X11R6/share/abacus
+	setenv ABACUS_EDITOR emacs
+	setenv ABACUS_BROWSER netscape
