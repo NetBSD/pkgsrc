@@ -1,4 +1,4 @@
-#	$NetBSD: FreeBSD.pkg.dist,v 1.38 2004/03/08 19:43:14 jmmv Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.39 2004/03/09 22:19:37 jmmv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -700,6 +700,10 @@
                 ..
             ..
             nso
+                LC_MESSAGES
+                ..
+            ..
+            pa
                 LC_MESSAGES
                 ..
             ..
