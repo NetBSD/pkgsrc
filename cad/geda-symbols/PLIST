@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/03/09 06:18:24 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/07/15 09:23:33 dmcmahill Exp $
 bin/gesym-config
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
@@ -301,6 +301,7 @@ share/gEDA/sym/74/7430-1.sym
 share/gEDA/sym/74/7430-2.sym
 share/gEDA/sym/74/7431-1.sym
 share/gEDA/sym/74/7432-1.sym
+share/gEDA/sym/74/7432-2.sym
 share/gEDA/sym/74/74367-1.sym
 share/gEDA/sym/74/74373-1.sym
 share/gEDA/sym/74/74374-1.sym
@@ -471,6 +472,7 @@ share/gEDA/sym/analog/battery-2.sym
 share/gEDA/sym/analog/battery-3.sym
 share/gEDA/sym/analog/beeper-1.sym
 share/gEDA/sym/analog/bridge-1.sym
+share/gEDA/sym/analog/bridge-2.sym
 share/gEDA/sym/analog/capacitor-1.sym
 share/gEDA/sym/analog/capacitor-2.sym
 share/gEDA/sym/analog/capacitor-3.sym
@@ -482,6 +484,7 @@ share/gEDA/sym/analog/crystal-1.sym
 share/gEDA/sym/analog/current-1.sym
 share/gEDA/sym/analog/dual-opamp-1.sym
 share/gEDA/sym/analog/fuse-1.sym
+share/gEDA/sym/analog/fuse-2.sym
 share/gEDA/sym/analog/glow-lamp-1.sym
 share/gEDA/sym/analog/inamp-1.sym
 share/gEDA/sym/analog/inductor-1.sym
@@ -496,6 +499,8 @@ share/gEDA/sym/analog/nmos-3.sym
 share/gEDA/sym/analog/npn-1.sym
 share/gEDA/sym/analog/npn-2.sym
 share/gEDA/sym/analog/npn-3.sym
+share/gEDA/sym/analog/npn-IGBT-1.sym
+share/gEDA/sym/analog/ntc-1.sym
 share/gEDA/sym/analog/opamp-1.sym
 share/gEDA/sym/analog/opamp-2.sym
 share/gEDA/sym/analog/photo-resistor-1.sym
@@ -528,6 +533,10 @@ share/gEDA/sym/analog/rpack-1.sym
 share/gEDA/sym/analog/speaker-1.sym
 share/gEDA/sym/analog/speaker-2.sym
 share/gEDA/sym/analog/transformer-1.sym
+share/gEDA/sym/analog/transformer-2.sym
+share/gEDA/sym/analog/transformer-3.sym
+share/gEDA/sym/analog/transformer-4.sym
+share/gEDA/sym/analog/triac-1.sym
 share/gEDA/sym/analog/txo-1.sym
 share/gEDA/sym/analog/voltage-1.sym
 share/gEDA/sym/analog/voltage-2.sym
@@ -592,6 +601,7 @@ share/gEDA/sym/connector/mains-plug-1.sym
 share/gEDA/sym/connector/mains-plug-2.sym
 share/gEDA/sym/connector/pwrjack-1.sym
 share/gEDA/sym/connector/rs232-idc10.sym
+share/gEDA/sym/connector/smart-media-1.sym
 share/gEDA/sym/dec/DC003C-1.sym
 share/gEDA/sym/dec/DC004C-1.sym
 share/gEDA/sym/dec/DC310ES-1.sym
@@ -608,6 +618,8 @@ share/gEDA/sym/diode/diode-bridge-1.sym
 share/gEDA/sym/diode/led-2.sym
 share/gEDA/sym/diode/led-3.sym
 share/gEDA/sym/diode/mbr1545ct-1.sym
+share/gEDA/sym/diode/sa52-11-1.sym
+share/gEDA/sym/diode/sc52-11-1.sym
 share/gEDA/sym/diode/smda05-1.sym
 share/gEDA/sym/diode/zener-1.sym
 share/gEDA/sym/diode/zener-2.sym
@@ -748,6 +760,7 @@ share/gEDA/sym/linear/TDA2822M-1.sym
 share/gEDA/sym/linear/ad633JN-1.sym
 share/gEDA/sym/linear/ad633JN-2.sym
 share/gEDA/sym/linear/ad633JR-1.sym
+share/gEDA/sym/linear/l200-1.sym
 share/gEDA/sym/linear/lm135-1.sym
 share/gEDA/sym/linear/lm1877-1.sym
 share/gEDA/sym/linear/lm2822-1.sym
@@ -774,6 +787,7 @@ share/gEDA/sym/linear/lm7815-1.sym
 share/gEDA/sym/linear/lm7818-1.sym
 share/gEDA/sym/linear/lm7824-1.sym
 share/gEDA/sym/linear/lm7885-1.sym
+share/gEDA/sym/linear/lm7912-1.sym
 share/gEDA/sym/linear/lt1108-1.sym
 share/gEDA/sym/linear/lt1160-1.sym
 share/gEDA/sym/linear/lt1162-1.sym
@@ -788,14 +802,18 @@ share/gEDA/sym/linear/ltc2400-1.sym
 share/gEDA/sym/linear/volt_reg_adj-1.sym
 share/gEDA/sym/maxim/adc0820-1.sym
 share/gEDA/sym/maxim/max038-1.sym
+share/gEDA/sym/maxim/max038-2.sym
 share/gEDA/sym/maxim/max100-1.sym
 share/gEDA/sym/maxim/max1005-1.sym
+share/gEDA/sym/maxim/max1005-2.sym
 share/gEDA/sym/maxim/max1011-1.sym
+share/gEDA/sym/maxim/max1011-2.sym
 share/gEDA/sym/maxim/max101A-1.sym
 share/gEDA/sym/maxim/max1055-1.sym
 share/gEDA/sym/maxim/max1080-1.sym
 share/gEDA/sym/maxim/max1081-1.sym
 share/gEDA/sym/maxim/max1114-1.sym
+share/gEDA/sym/maxim/max1114-2.sym
 share/gEDA/sym/maxim/max135-1.sym
 share/gEDA/sym/maxim/max1407-1.sym
 share/gEDA/sym/maxim/max147-1.sym
@@ -844,6 +862,8 @@ share/gEDA/sym/maxim/max6018-1.sym
 share/gEDA/sym/maxim/max6314-1.sym
 share/gEDA/sym/maxim/max663-1.sym
 share/gEDA/sym/maxim/max664-1.sym
+share/gEDA/sym/maxim/max713-1.sym
+share/gEDA/sym/maxim/max7652-1.sym
 share/gEDA/sym/maxim/max807-1.sym
 share/gEDA/sym/maxim/max865EUA-1.sym
 share/gEDA/sym/maxim/max872-1.sym
@@ -874,6 +894,7 @@ share/gEDA/sym/micro/8255A-1.sym
 share/gEDA/sym/micro/8259A-1.sym
 share/gEDA/sym/micro/ACE1202-1.sym
 share/gEDA/sym/micro/AT43USB320A.sym
+share/gEDA/sym/micro/AT89C2051-1.sym
 share/gEDA/sym/micro/AT89C51_DIP.sym
 share/gEDA/sym/micro/AT89C51_PLCC.sym
 share/gEDA/sym/micro/AT89C51_TQFP.sym
@@ -903,12 +924,14 @@ share/gEDA/sym/micro/ATtiny11.sym
 share/gEDA/sym/micro/ATtiny12.sym
 share/gEDA/sym/micro/ATtiny28_DIP.sym
 share/gEDA/sym/micro/ATtiny28_TQFP.sym
+share/gEDA/sym/micro/DS1602-1.sym
 share/gEDA/sym/micro/DS2450-1.sym
 share/gEDA/sym/micro/DS2480B-1.sym
 share/gEDA/sym/micro/DS80C310-1.sym
 share/gEDA/sym/micro/DS80C310.sym
 share/gEDA/sym/micro/DS80C320-1.sym
 share/gEDA/sym/micro/DS80C320.sym
+share/gEDA/sym/micro/M41T00-SO8-1.sym
 share/gEDA/sym/micro/MSP430x11x1.sym
 share/gEDA/sym/micro/MSP430x11x2.sym
 share/gEDA/sym/micro/MSP430x12x.sym
@@ -921,6 +944,7 @@ share/gEDA/sym/micro/MSP430x44x.sym
 share/gEDA/sym/micro/TINIm390-RevD.sym
 share/gEDA/sym/micro/basicstamp-1.sym
 share/gEDA/sym/micro/mc68hc05j1a-1.sym
+share/gEDA/sym/micro/mc68hc705kj1-1.sym
 share/gEDA/sym/micro/mc68hc811e2fn-1.sym
 share/gEDA/sym/micro/mc68hc812a4-1.sym
 share/gEDA/sym/micro/mc68hc908gp32cp-1.sym
@@ -999,6 +1023,7 @@ share/gEDA/sym/opto/hcpl-2631-1.sym
 share/gEDA/sym/opto/hcpl-4534-1.sym
 share/gEDA/sym/opto/mct9001-1.sym
 share/gEDA/sym/opto/ps2501-1.sym
+share/gEDA/sym/opto/tfds4500-1.sym
 share/gEDA/sym/philips/PCA82C250-1.sym
 share/gEDA/sym/pla/22V10-DIP-1.sym
 share/gEDA/sym/pla/22V10-PLCC.sym
@@ -1059,7 +1084,14 @@ share/gEDA/sym/rf/xinger-splitter-1.sym
 share/gEDA/sym/spice/aop-spice-1.sym
 share/gEDA/sym/spice/cccs-1.sym
 share/gEDA/sym/spice/ccvs-1.sym
+share/gEDA/sym/spice/idc-1.sym
 share/gEDA/sym/spice/nullor-1.sym
+share/gEDA/sym/spice/spice-directive-1.sym
+share/gEDA/sym/spice/spice-include-1.sym
+share/gEDA/sym/spice/spice-model-1.sym
+share/gEDA/sym/spice/spice-options-1.sym
+share/gEDA/sym/spice/spice-subcircuit-IO-1.sym
+share/gEDA/sym/spice/spice-subcircuit-LL-1.sym
 share/gEDA/sym/spice/tline.sym
 share/gEDA/sym/spice/vac-1.sym
 share/gEDA/sym/spice/vccs-1.sym
@@ -1071,6 +1103,17 @@ share/gEDA/sym/spice/vpwl-1.sym
 share/gEDA/sym/spice/vsin-1.sym
 share/gEDA/sym/spice/wline-1x.sym
 share/gEDA/sym/supervisor/adm707.sym
+share/gEDA/sym/switcap/switcap-analysis-1.sym
+share/gEDA/sym/switcap/switcap-capacitor-1.sym
+share/gEDA/sym/switcap/switcap-clock-1.sym
+share/gEDA/sym/switcap/switcap-options-1.sym
+share/gEDA/sym/switcap/switcap-switch-1.sym
+share/gEDA/sym/switcap/switcap-timing-1.sym
+share/gEDA/sym/switcap/switcap-title-1.sym
+share/gEDA/sym/switcap/switcap-vcvs-1.sym
+share/gEDA/sym/switcap/switcap-vcvs-2.sym
+share/gEDA/sym/switcap/switcap-vcvs-3.sym
+share/gEDA/sym/switcap/switcap-vsrc-1.sym
 share/gEDA/sym/switch/relay-1.sym
 share/gEDA/sym/switch/ssrelay-spdt-lcc110-1.sym
 share/gEDA/sym/switch/ssrelay-spst-lcb110-1.sym
@@ -1301,6 +1344,7 @@ share/gEDA/system-commonrc
 @dirrm share/gEDA/sym/transistor
 @dirrm share/gEDA/sym/titleblock
 @dirrm share/gEDA/sym/switch
+@dirrm share/gEDA/sym/switcap
 @dirrm share/gEDA/sym/supervisor
 @dirrm share/gEDA/sym/spice
 @dirrm share/gEDA/sym/rf
