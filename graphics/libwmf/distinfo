@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2004/03/02 09:03:10 adam Exp $
+$NetBSD: distinfo,v 1.11 2004/06/05 22:53:54 reed Exp $
 
-SHA1 (libwmf-0.2.8.2.tar.gz) = ba8f3af71a40976a1870dcb0b4d43b189f5480e3
-Size (libwmf-0.2.8.2.tar.gz) = 1642727 bytes
+SHA1 (libwmf-0.2.8.3.tar.gz) = 7408b83ba9f8aebada94b7ffdb0a8baab3b19c96
+Size (libwmf-0.2.8.3.tar.gz) = 1750358 bytes
 SHA1 (patch-ad) = fb3308e3ab12272af841f6b4a564894248085d9b
