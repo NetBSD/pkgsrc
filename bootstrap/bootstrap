@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.16 2004/04/24 19:17:09 danw Exp $
+# $NetBSD: bootstrap,v 1.17 2004/05/05 14:39:45 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -293,7 +293,7 @@ AIX)
 	;;
 Interix)
 	is_root () {
-		if id -Gn | grep -q +Administrators; then
+		if id -G | grep -q 131616; then
 			return 1
 		fi
 		return 0
@@ -302,8 +302,8 @@ Interix)
 		mkdir -p "$@" # allows umask to take effect
 	}
 	default_install_mode=0775
-	root_user=`id -un`
-	root_group=+Administrators
+	root_user=`id -u`
+	root_group=131616
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
@@ -313,6 +313,8 @@ Interix)
 	groupsprog="id -gn"
 	# for bootstrap only; pkgsrc uses CPPFLAGS
 	CC="gcc -D_ALL_SOURCE"; export CC
+	ac_cv_header_poll_h=no; export ac_cv_header_poll_h
+	ac_cv_func_poll=no; export ac_cv_func_poll
 	;;
 UnixWare)
 	root_group=sys
