@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2003/12/01 15:07:03 cube Exp $
+$NetBSD: distinfo,v 1.5 2004/01/11 14:21:27 cube Exp $
 
 SHA1 (ppp-2.3.9.tar.gz) = ef5ef4686f6738193ec88972902f9a5a6fb8f5dd
 Size (ppp-2.3.9.tar.gz) = 768540 bytes
 SHA1 (patch-aa) = 847bd9cc39f47a7c76e5b6d28ecf1b9a08a7032d
-SHA1 (patch-ab) = 8f9008515d5facc61d1b3137e260163b813b5158
+SHA1 (patch-ab) = 6c89f17cbd775df3f4c3627fa6ab989939f82726
 SHA1 (patch-ac) = 22c4393a8c9b72ca5d34f209feb3f8c291246024
 SHA1 (patch-ad) = 438d301ab43d547ad197316062166a25d8ba51e7
 SHA1 (patch-ae) = 368a272502faf166b533bc6476bacf172b7065b3
@@ -38,7 +38,7 @@ SHA1 (patch-bl) = f1d1b9802e81bfcd541c245fee3fdf1be61b75a4
 SHA1 (patch-bm) = a0369319b33ee30a4256059d2e46a420cf6977e1
 SHA1 (patch-bn) = 3d4d4efc069cd804af85ca81e626981121ec4d3e
 SHA1 (patch-bo) = 9c1da2b0ef646195525dc105496259ad1d280910
-SHA1 (patch-bp) = c606c83604b588e1574cdb96f035768df50aca53
+SHA1 (patch-bp) = b809b0f4a50c1eddfe01a733eeaa8d708ce5184c
 SHA1 (patch-bq) = 2e0ea29dcba6571a764f8c1d9019d5e9fa9ff8e0
 SHA1 (patch-br) = 3db283aba2c4f41db05cc5b327383cb5f381a7b7
 SHA1 (patch-bs) = 41cfdbf71044e7f1988f26b56ee35f9501ff054f
