@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.57 1999/07/09 15:29:43 agc Exp $
+# $NetBSD: Packages.txt,v 1.58 1999/08/16 14:12:40 bad Exp $
 ###########################################################################
 
 			==========================
@@ -898,7 +898,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    PATCHFILES (as defined in the package's Makefile) are present on the
    local system in /usr/pkgsrc/distfiles. If they are not present, they
    will be fetched using ftp(1) from the site(s) given in the variable
-   MASTER_SITES. The location(s) in MASTER_SITES are in the form of URLs
+   PATCH_SITES. The location(s) in PATCH_SITES are in the form of URLs
    and can be ftp://- and http://-URLs, as ftp(1) understands both of
    them.
 
