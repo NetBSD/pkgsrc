@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9291 2005/02/24 15:52:17 tron Exp $
+$NetBSD: CHANGES,v 1.9292 2005/02/24 16:00:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1067,4 +1067,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ap-bandwidth to 2.0.6 [wiz 2005-02-24]
 	Renamed openoffice-linux to openoffice-bin [mrauch 2005-02-24]
 	Updated p5-DBI to 1.47 [wiz 2005-02-24]
+	Updated p5-DBD-SQLite to 1.07 [wiz 2005-02-24]
 	Updated oidentd to 2.0.7nb3 [tron 2005-02-24]
