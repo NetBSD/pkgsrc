@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2000/10/08 15:06:09 hubertf Exp $
+
+--- tcpip.c.orig	Sun Apr 30 02:12:24 2000
++++ tcpip.c
+@@ -995,6 +995,12 @@
+ #ifdef DLT_PPP_BSDOS
+  case DLT_PPP_BSDOS:
+ #endif
++#ifdef DLT_PPP_SERIAL
++ case DLT_PPP_SERIAL:
++#endif
++#ifdef DLT_PPP_ETHER
++ case DLT_PPP_ETHER:
++#endif
+ #if (FREEBSD || OPENBSD || NETBSD || BSDI)
+    offset = 4;
+ #else
