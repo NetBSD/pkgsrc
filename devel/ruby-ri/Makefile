@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/28 07:54:50 taca Exp $
 #
 
 DISTNAME=	ri-0.8a
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.pragmaticprogrammer.com/ruby/downloads/files/
 EXTRACT_SUFX=	.tgz
@@ -20,5 +20,5 @@ NO_BUILD=	# empty
 do-install:
 	cd ${WRKSRC}; ${RUBY} install.rb
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
