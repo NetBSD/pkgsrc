@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/09 11:38:33 dmcmahill Exp $
 #
 
-DISTNAME=	dinotrace-9.0l
+DISTNAME=	dinotrace-9.1b
 CATEGORIES=	cad
-MASTER_SITES=	http://www.ultranet.com/~wsnyder/veripool/ftp/
+MASTER_SITES=	http://www.veripool.com/ftp/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE= 	http://www.veripool.com/dinotrace/
