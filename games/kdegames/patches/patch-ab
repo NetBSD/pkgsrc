@@ -1,14 +1,13 @@
-$NetBSD: patch-ab,v 1.9 1998/09/28 23:44:36 tron Exp $
+$NetBSD: patch-ab,v 1.10 1999/02/20 00:05:48 tron Exp $
 
---- ksnake/Makefile.in.orig	Fri Jul 10 20:36:15 1998
-+++ ksnake/Makefile.in	Tue Sep 29 01:15:34 1998
-@@ -534,7 +534,8 @@
- 	$(MOC) -o $@ $<
+--- ktetris/net.h.orig	Tue Mar 10 23:52:55 1998
++++ ktetris/net.h	Fri Feb 19 21:46:13 1999
+@@ -7,6 +7,8 @@
  
- mscore.cpp: score.h
--	$(MOC) -o $@ $<
-+	$(MOC) $< | \
-+	sed 's/typedef void(Score::\*m1_t1)(int);/typedef void(Score::\*m1_t1)(int,int);/' >$@
+ #include <sys/types.h>
  
- mbox.cpp: box.h
- 	$(MOC) -o $@ $<
++typedef unsigned int ksize_t;
++
+ #ifdef HAVE_SYS_SELECT_H
+ #include <sys/select.h>
+ #endif

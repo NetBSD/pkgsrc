@@ -1,26 +1,23 @@
-# $NetBSD: Makefile,v 1.25 1999/02/15 21:41:32 tron Exp $
+# $NetBSD: Makefile,v 1.26 1999/02/20 00:05:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
-DISTNAME=	kdegames-1.0
+DISTNAME=	kdegames-1.1
 CATEGORIES=	games kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-DEPENDS+=	kdebase-1.0:../../x11/kdebase
-DEPENDS+=	kdesupport-1.0:../../converters/kdesupport
-
-CONFLICTS=	kdegames-2.1b kdegames-3.1b kdegames-4.1b
-
-IGNORE=		"needs to be updated"
+DEPENDS+=	kdebase-1.1:../../x11/kdebase
+DEPENDS+=	kdesupport-1.1:../../converters/kdesupport
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
+CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
 		"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
