@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/11/10 23:17:20 cjep Exp $
+# $NetBSD: Makefile,v 1.31 2002/12/22 16:37:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -25,6 +25,10 @@ MAKE_FLAGS=	LOCAL_ZIP="${CFLAGS}" LFLAGS1="${_STRIPFLAG_CC}"
 ALL_TARGET=	generic_gcc
 .else
 ALL_TARGET=	generic
+.endif
+
+.if ${OPSYS} == "Linux"
+CFLAGS+=	-DHAVE_DIRENT_H
 .endif
 
 USE_BUILDLINK2=	# defined
