@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:20 zuntum Exp $
-bin/jmicq
-share/doc/ja-micq/README
-@dirrm share/doc/ja-micq

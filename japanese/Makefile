@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/01/10 13:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2002/02/02 03:52:19 wiz Exp $
 #
 
 COMMENT=	Packages with japanese language support
@@ -23,7 +23,6 @@ SUBDIR+=	kinput2
 SUBDIR+=	less
 SUBDIR+=	man
 SUBDIR+=	mh
-SUBDIR+=	micq
 SUBDIR+=	mknmz-wwwoffle
 SUBDIR+=	namazu1
 SUBDIR+=	namazu2
