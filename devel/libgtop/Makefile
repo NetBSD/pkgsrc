@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 1999/03/07 19:50:55 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/03/14 23:48:08 tron Exp $
 #
 
 DISTNAME=	libgtop-1.0.1
-CATEGORIES=	devel
+CATEGORIES=	devel gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
 		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
