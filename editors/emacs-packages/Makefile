@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/03/28 21:14:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/05 11:59:37 markd Exp $
 
-DISTNAME=	emacs-packages-0.2
+DISTNAME=	emacs-packages-0.3
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -26,6 +26,7 @@ DEPENDS+=	elib-[0-9]*:../../devel/elib
 DEPENDS+=	emacs-dict-client-[0-9]*:../../textproc/emacs-dict-client
 DEPENDS+=	emacs-ilisp-[0-9]*:../../devel/emacs-ilisp
 DEPENDS+=	emacs-w3m-[0-9]*:../../www/emacs-w3m
+DEPENDS+=	ess-[0-9]*:../../math/ess
 DEPENDS+=	etach-[0-9]*:../../mail/etach
 DEPENDS+=	flim-[0-9]*:../../devel/flim
 DEPENDS+=	flyspell-[0-9]*:../../textproc/flyspell
