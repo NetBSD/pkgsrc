@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/23 02:13:17 itojun Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/21 07:20:14 grant Exp $
 #
 
 DISTNAME=       cucipop-1.31
@@ -21,6 +21,10 @@ BUILD_DEFS+=	USE_INET6
 # to be friendly with pre-1.5 systems
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 MAKE_ENV+=	CFLAGS_INET6=-DINET6
+.endif
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=	-lnsl -lsocket
 .endif
 
 post-patch:
