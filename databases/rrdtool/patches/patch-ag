@@ -1,16 +1,14 @@
-$NetBSD: patch-ag,v 1.4 2001/09/24 13:10:48 wulf Exp $
+$NetBSD: patch-ag,v 1.5 2003/02/16 23:08:58 seb Exp $
 
---- doc/Makefile.in.orig	Thu Feb 22 12:07:35 2001
-+++ doc/Makefile.in
-@@ -108,9 +108,9 @@
- EXTRA_DIST = $(POD) $(HTML) $(TXT)
- 
- # some install rules
--idocdir = $(prefix)/doc
-+idocdir = $(prefix)/share/doc/rrdtool
- idoc_DATA = $(POD) $(TXT)
--ihtmldir = $(prefix)/html
-+ihtmldir = $(prefix)/share/doc/rrdtool
- ihtml_DATA = $(HTML)
- imandir = $(prefix)/man/man1
- iman_DATA = $(MAN)
+--- contrib/trytime/Makefile.am.orig	Thu Mar 21 21:51:29 2002
++++ contrib/trytime/Makefile.am
+@@ -1,7 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+-INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir)/gd1.3
++INCLUDES = -I$(top_srcdir)/src
+ EXTRA_DIST = trytime.c
+-contribdir = $(prefix)/contrib/trytime
++contribdir = $(prefix)/share/rrdtool/contrib/trytime
+ contrib_DATA = README trytime.c
+ bin_PROGRAMS    = trytime
+ trytime_SOURCES  = trytime.c
