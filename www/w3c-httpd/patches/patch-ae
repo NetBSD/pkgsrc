@@ -1,4 +1,4 @@
-$NetBSD: patch-CacheCheckSize,v 1.2 1999/05/09 21:12:32 tron Exp $
+$NetBSD: patch-ae,v 1.1 2001/04/05 14:24:40 wiz Exp $
 
 *** /dev/null	Tue Feb  6 11:05:04 1996
 --- README-CACHE_CHECK_SIZE	Tue Feb  6 13:27:32 1996
