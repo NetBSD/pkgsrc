@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2002/07/17 08:36:12 agc Exp $
+$NetBSD: patch-ab,v 1.2 2002/07/18 00:54:36 dmcmahill Exp $
 
---- support/Makefile.in	2002/07/17 08:20:43	1.1
-+++ support/Makefile.in	2002/07/17 08:21:04
-@@ -83,7 +83,7 @@
- CILK_PAGESIZE = @CILK_PAGESIZE@
- PTHREAD_LIBS = @PTHREAD_LIBS@ @HOARD_LIBS@
- GNU_LD = "@HAVE_GNU_LD@"
--CPP_FOR_CILK = @CPP_FOR_CILK@
-+CPP_FOR_CILK = cpp0
+--- configure.orig	Wed Jul 17 19:18:48 2002
++++ configure
+@@ -2074,10 +2074,7 @@
+    { echo "configure: error: "gcc does not accept the --specs option.  Please upgrade gcc to v2.95 or newer."" 1>&2; exit 1; }
+ fi
  
- CC = ./cilk-local
- 
+-if test "$HAVE_GCC_2_96" = "yes"; then
+-   echo "WARNING: I found gcc-2.96.  This version of gcc is untested with Cilk."
+-   echo "Please report any problem to cilk-support@lists.sourceforge.net"
+-
++if test -f /usr/libexec/cpp0; then
+       CPP_FOR_CILK=cpp0
+ else
+    CPP_FOR_CILK=cpp
