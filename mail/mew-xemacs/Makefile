@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/09 11:08:54 seb Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/13 16:49:54 uebayasi Exp $
 
 DISTNAME=	mew-2.2
 PKGNAME=	mew-xemacs-2.2
@@ -14,6 +14,8 @@ CONFLICTS+=	mew-2.*
 DEPENDS+=	xemacs-packages-*:../../editors/xemacs-packages
 
 INFO_FILES=		mew.info
+
+USE_BUILDLINK3=	yes
 
 MEW_CONTRIB_DIR=	${PREFIX}/lib/xemacs/site-packages/lisp/mew/contrib
 MEW_CONTRIB=	00readme 00readme-namazu.jis \
@@ -34,4 +36,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/$f ${MEW_CONTRIB_DIR}
 .endfor
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
