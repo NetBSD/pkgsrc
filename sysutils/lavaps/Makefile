@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/30 20:07:46 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/06 16:09:50 jlam Exp $
 #
 
 DISTNAME=	lavaps-1.10
@@ -12,7 +12,8 @@ DEPENDS+=	tk-8.3.2:../../x11/tk
 
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-additional-includes='-I${LOCALBASE}/include -I${LOCALBASE}/include' \
-		--with-additional-libs='-L${LOCALBASE}/lib' --with-tcl-vers=8.3.2 --with-tk-vers=8.3.2
+CONFIGURE_ARGS=	--with-additional-includes='-I${LOCALBASE}/include' \
+		--with-additional-libs='-L${LOCALBASE}/lib' \
+		--with-tcl-ver=8.3.2 --with-tk-ver=8.3.2
 
 .include "../../mk/bsd.pkg.mk"
