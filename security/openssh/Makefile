@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.118 2003/10/12 08:25:17 grant Exp $
+# $NetBSD: Makefile,v 1.119 2003/10/12 10:13:53 grant Exp $
 
 DISTNAME=		openssh-3.7.1p2
 PKGNAME=		openssh-3.7.1.2
+PKGREVISION=		1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -68,18 +69,19 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 #.endif
 
-.if ${OPSYS} == "SunOS"
-LIBS+=			-lc
-.else
-LD=${CC}
-.endif
+# the openssh configure script finds and uses ${LD} if defined and
+# defaults to ${CC} if not. we override LD here, since running the
+# linker directly results in undefined symbols for obvious reasons.
+#
+LD=			${CC}
 
-
+# s/key support, enabled on Darwin and Solaris. NetBSD s/key has 4 args
+# (4: sslen) to skeychallenge instead of 3, so disable s/key support.
+#
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 .  include "../../security/skey/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 .elif ${OPSYS} == "NetBSD"
-# XXX: NetBSD has 4 args (4: sslen) to skeychallenge instead of 3
 #CONFIGURE_ARGS+=	--with-skey=/usr
 CONFIGURE_ARGS+=	--without-skey
 .else
@@ -87,7 +89,7 @@ CONFIGURE_ARGS+=	--without-skey
 .endif
 
 .if defined(KERBEROS)
-PKG_USE_KERBEROS=		yes
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-kerberos4=/usr
 CONFIGURE_ARGS+=	--with-kerberos5=/usr
 CPPFLAGS+=		-I/usr/include/krb5
