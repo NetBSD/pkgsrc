@@ -1,0 +1,178 @@
+$NetBSD: patch-af,v 1.1 2004/06/09 21:00:05 kivinen Exp $
+
+--- apm_read.c.orig	2001-11-23 23:07:19.000000000 +0200
++++ apm_read.c
+@@ -31,6 +31,7 @@
+ 
+ /* file -> APM device */
+ extern char apm_device_file[];
++extern char sysmon_device_file[];
+ 
+ #include "state.h"
+ extern struct apm_state state;
+@@ -136,18 +137,163 @@ void ReadAPMDevice( )		/* FreeBSD versio
+ 	state.time_left = info.ai_batt_time / 60;
+ }
+ #elif defined(__NetBSD__)||defined(__OpenBSD__)
++
++#include <sys/envsys.h>
++
++int match_end(const char *str, const char *end_part)
++{
++	int len1, len2;
++	len1 = strlen(str);
++	len2 = strlen(end_part);
++	if (len1 < len2)
++		return 0;
++	return strcmp(str + len1 - len2, end_part) == 0;
++}
++
++void TrySysmonDevice( )
++{
++	int fd;
++	int count = 0;
++        envsys_basic_info_t ebis;
++	envsys_tre_data_t etds;
++	int32_t design, charge, warn_cap, low_cap, rate;
++	int connected, percent, time_units, battery_status;
++
++	if ((fd = open(sysmon_device_file, O_RDONLY)) == -1) {
++		error_handle(1, "");
++		return;
++	}
++
++	design = 0;
++	charge = 0;
++	warn_cap = 0;
++	low_cap = 0;
++	rate = 0;
++	connected = 0;
++	percent = 0;
++	time_units = 0;
++
++	for(etds.sensor = 0; ; etds.sensor++) {
++		if (ioctl(fd, ENVSYS_GTREDATA, &etds) == -1) {
++			error_handle(4, "");
++			close(fd);
++			return;
++		}
++		if (!(etds.validflags & ENVSYS_FVALID))
++			break;
++
++		ebis.sensor = etds.sensor;
++		if (ioctl(fd, ENVSYS_GTREINFO, &ebis) == -1) {
++			error_handle(4, "");
++			close(fd);
++			return;
++		}
++
++		if (etds.units != ebis.units) {
++			error_handle(6, "units does not match");
++		}
++		  
++		if (!(etds.validflags & ENVSYS_FCURVALID))
++			continue;
++
++		if (etds.units == ENVSYS_SWATTHOUR) {
++			/* Watt hours, this must be battery capacity info. */
++			if (match_end(ebis.desc, "design cap")) {
++				design += etds.cur.data_s;
++			} else if (match_end(ebis.desc, "charge")) {
++				charge += etds.cur.data_s;
++			} else if (match_end(ebis.desc, "warn cap")) {
++				warn_cap += etds.cur.data_s;
++			} else if (match_end(ebis.desc, "low cap")) {
++				low_cap += etds.cur.data_s;
++			}
++		} else if (etds.units == ENVSYS_INDICATOR) {
++			/* Indicator of something, check for connected. */
++			if (match_end(ebis.desc, " connected")) {
++				connected = etds.cur.data_us;
++			}
++		} else if (etds.units == ENVSYS_SWATTS) {
++			/* Watts, this must discharge rate. */
++			if (match_end(ebis.desc, "discharge rate")) {
++				rate += etds.cur.data_s;
++			}
++		}
++	}
++
++	if (state.ac_line_status != connected) {
++		state.ac_line_status = connected ? AC_BATTERY : AC_ONLINE;
++		++state.update;
++		if ( state.ac_line_status == AC_ONLINE ) 
++			state.flags |= CHANGE_AC_ON;
++		else
++			state.flags |= CHANGE_AC_OFF;
++	}
++	if (connected) {
++		if (charge > design) {
++			battery_status = BATTERY_HIGH;
++		} else {
++			battery_status = BATTERY_CHARGING;
++		}
++	} else {
++		if (charge > warn_cap) {
++			battery_status = BATTERY_HIGH;
++		} else if (charge > low_cap) {
++			battery_status = BATTERY_LOW;
++		} else {
++			battery_status = BATTERY_CRITICAL;
++		}
++	}
++
++	if (state.battery_status != battery_status) {
++		state.battery_status = battery_status;
++		++state.update;
++	}
++
++	if (design != 0) {
++		percent = charge / (design / 100);
++		if (percent > 100) {
++			percent = 100;
++		}
++		else if (percent < 0) {
++			percent = 0;
++		}
++	}
++	if (state.percent != percent) {
++		if ( state.percent < percent )
++			state.flags |= CHANGE_POWER_UP;
++		else
++			state.flags |= CHANGE_POWER_DOWN;
++		state.percent = percent;
++		++state.update;
++	}
++
++	if (rate != 0) {
++		time_units = charge / (rate / 60);
++	}
++
++	/* we can display maximum 99:59 */
++	if ( time_units > 5999 )
++		time_units = 5999;
++	if (state.time_left != time_units) {
++		state.time_left = time_units;
++		++state.update;
++	}
++	close(fd);
++	return;
++}
++
+ void ReadAPMDevice( )		/* NetBSD version */
+ {
+ 	int fd;
+ 	struct apm_power_info info;
+ 	memset(&info, 0, sizeof(info));
+ 	if ((fd = open(apm_device_file, O_RDONLY)) == -1) {
+-		error_handle(1, "");
++		TrySysmonDevice();
+ 		return;
+ 	}
+ 	if (ioctl(fd, APM_IOC_GETPOWER, &info) == -1) {
+-		error_handle(4, "");
+ 		close(fd);
++		TrySysmonDevice();
+ 		return;
+ 	}
+ 	close(fd);
