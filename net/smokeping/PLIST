@@ -1,0 +1,58 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/24 15:24:39 bouyer Exp $
+etc/rc.d/smokeping
+bin/smokeping
+libexec/cgi-bin/smokeping.cgi
+lib/smokeping/BER.pm
+lib/smokeping/SNMP_Session.pm
+lib/smokeping/SNMP_util.pm
+lib/smokeping/Smokeping.pm
+lib/smokeping/ISG/ParseConfig.pm
+lib/smokeping/probes/DNS.pm
+lib/smokeping/probes/EchoPing.pm
+lib/smokeping/probes/EchoPingChargen.pm
+lib/smokeping/probes/EchoPingDiscard.pm
+lib/smokeping/probes/EchoPingHttp.pm
+lib/smokeping/probes/EchoPingHttps.pm
+lib/smokeping/probes/EchoPingIcp.pm
+lib/smokeping/probes/EchoPingSmtp.pm
+lib/smokeping/probes/FPing.pm
+lib/smokeping/probes/FPing6.pm
+lib/smokeping/probes/IOSPing.pm
+lib/smokeping/probes/base.pm
+lib/smokeping/probes/basefork.pm
+lib/smokeping/probes/basevars.pm
+share/doc/smokeping/CHANGES
+share/doc/smokeping/CONTRIBUTORS
+share/doc/smokeping/COPYING
+share/doc/smokeping/COPYRIGHT
+share/doc/smokeping/README
+share/doc/smokeping/TODO
+share/doc/smokeping/DNS.pm.txt
+share/doc/smokeping/EchoPing.pm.txt
+share/doc/smokeping/EchoPingChargen.pm.txt
+share/doc/smokeping/EchoPingDiscard.pm.txt
+share/doc/smokeping/EchoPingHttp.pm.txt
+share/doc/smokeping/EchoPingHttps.pm.txt
+share/doc/smokeping/EchoPingIcp.pm.txt
+share/doc/smokeping/EchoPingSmtp.pm.txt
+share/doc/smokeping/FPing.pm.txt
+share/doc/smokeping/FPing6.pm.txt
+share/doc/smokeping/IOSPing.pm.txt
+share/doc/smokeping/ParseConfig.pm.txt
+share/doc/smokeping/Smokeping.pm.txt
+share/doc/smokeping/base.pm.txt
+share/doc/smokeping/basefork.pm.txt
+share/doc/smokeping/basevars.pm.txt
+share/doc/smokeping/smokeping.cgi.txt
+share/doc/smokeping/smokeping.txt
+share/doc/smokeping/smokeping_config.txt
+share/doc/smokeping/smokeping_install.txt
+share/examples/smokeping/basepage.html.dist
+share/examples/smokeping/config-echoping.dist
+share/examples/smokeping/config.dist
+share/examples/smokeping/smokemail.dist
+@dirrm share/doc/smokeping
+@dirrm share/examples/smokeping
+@dirrm lib/smokeping/ISG
+@dirrm lib/smokeping/probes
+@dirrm lib/smokeping

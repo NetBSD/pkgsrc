@@ -1,0 +1,5 @@
+SmokePing can measure latency, latency distribution and packet loss
+in your network. SmokePing uses RRDtool to maintain a longterm datastore
+and to draw pretty graphs, giving up to the minute information
+on the state of each network connection. SmokePing can also raise
+alarms based on latency and loss patterns.

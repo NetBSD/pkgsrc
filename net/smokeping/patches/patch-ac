@@ -1,0 +1,53 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/24 15:24:39 bouyer Exp $
+
+--- etc/config.dist.orig	Wed Mar 19 22:52:32 2003
++++ etc/config.dist	Wed Mar 19 22:58:47 2003
+@@ -4,16 +4,16 @@
+ 
+ *** General ***
+ 
+-owner    = Joe Random
+-contact  = joe@some.place.xyz
+-mailhost = smtp.mailhost.abc
+-sendmail = /usr/lib/sendmail
+-imgcache = /home/oetiker/public_html/.simg
++owner    = Charlie root
++contact  = root@localhost
++mailhost = smtp.mynet
++sendmail = /usr/sbin/sendmail
++imgcache = @PREFIX@/share/httpd/htdocs/.simg
+ imgurl   = ../.simg
+-datadir  = /home/oetiker/data/projects/AADJ-smokeping/dist/var
+-piddir  = /home/oetiker/data/projects/AADJ-smokeping/dist/var
+-cgiurl   = http://people.ee.ethz.ch/~oetiker/smokeping/smokeping.cgi
+-smokemail = /home/oetiker/data/projects/AADJ-smokeping/dist/etc/smokemail
++datadir  = /var/db/smokeping
++piddir  = /var/run
++cgiurl   = http://localhost/cgi-bin/smokeping.cgi
++smokemail = @PREFIX@/etc/smokeping/smokemail
+ # specify this to get syslog logging
+ # syslogfacility = local0
+ 
+@@ -35,7 +35,7 @@
+ 
+ *** Presentation ***
+ 
+-template = /home/oetiker/data/projects/AADJ-smokeping/dist/etc/basepage.html
++template = @PREFIX@/etc/smokeping/basepage.html
+ 
+ + overview 
+ 
+@@ -58,7 +58,7 @@
+ 
+ + FPing
+ 
+-binary = /usr/sepp/bin/fping
++binary = @PREFIX@/sbin/fping
+ 
+ *** Targets ***
+ 
+@@ -142,4 +142,3 @@
+ menu = Sun Microsystems
+ title = Sun Microsystems Webserver
+ host = www.sun-web.com
+-
