@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2004/03/16 00:46:39 dmcmahill Exp $
+$NetBSD: distinfo,v 1.19 2004/05/16 17:52:11 danw Exp $
 
 SHA1 (guile-1.6.4.tar.gz) = fe5a759ed233e8633e9e59d0eb0a8035756e2e4e
 Size (guile-1.6.4.tar.gz) = 2778075 bytes
@@ -7,3 +7,4 @@ SHA1 (patch-ae) = 4dd28ab34928608e00fc474bdebfd3a178f8f152
 SHA1 (patch-af) = e30137918a83a735bcc9b1c4458df4905fe46087
 SHA1 (patch-ag) = 06f0edd45fae828e41252e9b6964a2e0fab6f1af
 SHA1 (patch-ah) = e66596a5ecc5c2d4fd09833507499b4d02c7af8a
+SHA1 (patch-ai) = 095f7d1e5a3df3cceb05f1b5daccae78691a796a
