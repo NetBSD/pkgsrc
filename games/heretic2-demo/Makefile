@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/16 12:24:58 abs Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/21 22:38:58 wiz Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -7,6 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/heretic2/ \
 		ftp://download.linuxlords.com/pub/demos/heretic2/ \
 		ftp://ftp.linux.tucows.com/pub/Loki/demos/heretic2/
+EXTRACT_SUFX=	.run
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.lokigames.com/products/heretic2/demo.php3
@@ -15,7 +16,6 @@ MIRROR_DISTFILE=no
 
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
-EXTRACT_SUFX=	.run
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
 
