@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2605 2003/06/27 18:12:35 jmmv Exp $
+$NetBSD: CHANGES,v 1.2606 2003/06/27 22:34:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2592,3 +2592,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added py-checker-0.8.12	[drochner 2003-06-27]
 	Updated sirius to 0.7.0 [jmmv 2003-06-27]
 	Updated gtk2 to 2.2.2nb1 [jmmv 2003-06-27]
+	Added libgsf-1.8.0 [jmmv 2003-06-27]
