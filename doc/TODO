@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2092 2004/08/31 11:27:56 wiz Exp $
+$NetBSD: TODO,v 1.2093 2004/08/31 15:31:10 reed Exp $
 
 Suggested new packages
 ======================
@@ -165,6 +165,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
+	o ImageMagick-6.0.6-2
 	o ImageViewer-0.6.3
 	o SDL_gfx-1.2.2
 	o TeXmacs-1.0.4.2
