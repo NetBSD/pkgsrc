@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/11/08 10:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/25 14:07:00 salo Exp $
 #
 
-DISTNAME=	xpdf-latin2-2002-oct-22
-PKGNAME=	xpdf-latin2-20021022
+DISTNAME=	xpdf-latin2
+PKGNAME=	${DISTNAME}-20021022
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -10,22 +11,24 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	xpdf support files for Latin-2
 
-DEPENDS+=	xpdf>=1.00:../../print/xpdf
+DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
-USE_X11BASE=	yes
+USE_X11=	yes
+USE_PKGINSTALL=	yes
 
-WRKSRC=		${WRKDIR}/xpdf-latin2
+DIST_SUBDIR=	${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
-	${SED} -e 's:/usr/local:'${X11PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
+	${SED} -e 's:/usr/local:'${PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
 
 do-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/xpdf/latin2
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/latin2
 	${INSTALL_DATA} ${WRKSRC}/Latin2.unicodeMap \
-		${X11PREFIX}/share/xpdf/latin2
+		${PREFIX}/share/xpdf/latin2
 
 post-install:
 	${CAT} ${WRKSRC}/add-to-xpdfrc >> ${PKG_SYSCONFDIR}/xpdfrc

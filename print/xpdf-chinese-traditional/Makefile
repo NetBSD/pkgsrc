@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/19 19:21:39 kei Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/25 14:06:50 salo Exp $
 #
 
 DISTNAME=	xpdf-chinese-traditional
-PKGNAME=	${DISTNAME}-20020521
+PKGNAME=	${DISTNAME}-20020414
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -10,27 +10,28 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	xpdf support files for Chinese (Traditional)
 
-DEPENDS+=	xpdf>=1.00:../../print/xpdf
+DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
-USE_X11BASE=	yes
+USE_X11=	yes
+USE_PKGINSTALL=	yes
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
-	${SED} -e 's:/usr/local:'${X11PREFIX}':g' -e 's/Arhpic/Arphic/g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
+	${SED} -e 's:/usr/local:'${PREFIX}':g' -e 's/Arhpic/Arphic/g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
 
 do-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/xpdf/chinese-traditional
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/chinese-traditional
 	${INSTALL_DATA} ${WRKSRC}/Adobe-CNS1.cidToUnicode \
-		${X11PREFIX}/share/xpdf/chinese-traditional
+		${PREFIX}/share/xpdf/chinese-traditional
 	${INSTALL_DATA} ${WRKSRC}/Big5.unicodeMap \
-		${X11PREFIX}/share/xpdf/chinese-traditional
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/xpdf/chinese-traditional/CMap
-	${INSTALL_DATA} ${WRKSRC}/CMap/* ${X11PREFIX}/share/xpdf/chinese-traditional/CMap
+		${PREFIX}/share/xpdf/chinese-traditional
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/chinese-traditional/CMap
+	${INSTALL_DATA} ${WRKSRC}/CMap/* ${PREFIX}/share/xpdf/chinese-traditional/CMap
 
 post-install:
 	${CAT} ${WRKSRC}/add-to-xpdfrc >> ${PKG_SYSCONFDIR}/xpdfrc

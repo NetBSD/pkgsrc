@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/11/08 10:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/25 14:06:48 salo Exp $
 #
 
-DISTNAME=	xpdf-chinese-simplified-2002-jun-17
-PKGNAME=	xpdf-chinese-simplified-20020617
+DISTNAME=	xpdf-chinese-simplified
+PKGNAME=	${DISTNAME}-20020617
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -10,30 +11,32 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	xpdf support files for Chinese (Simplified)
 
-DEPENDS+=	xpdf>=1.00:../../print/xpdf
+DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
-USE_X11BASE=	yes
+USE_X11=	yes
+USE_PKGINSTALL=	yes
 
-WRKSRC=		${WRKDIR}/xpdf-chinese-simplified
+DIST_SUBDIR=	${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
-	${SED} -e 's:/usr/local:'${X11PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
+	${SED} -e 's:/usr/local:'${PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
 
 do-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/xpdf/chinese-simplified
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/chinese-simplified
 	${INSTALL_DATA} ${WRKSRC}/Adobe-GB1.cidToUnicode \
-		${X11PREFIX}/share/xpdf/chinese-simplified
+		${PREFIX}/share/xpdf/chinese-simplified
 	${INSTALL_DATA} ${WRKSRC}/EUC-CN.unicodeMap \
-		${X11PREFIX}/share/xpdf/chinese-simplified
+		${PREFIX}/share/xpdf/chinese-simplified
 	${INSTALL_DATA} ${WRKSRC}/GBK.unicodeMap \
-		${X11PREFIX}/share/xpdf/chinese-simplified
+		${PREFIX}/share/xpdf/chinese-simplified
 	${INSTALL_DATA} ${WRKSRC}/ISO-2022-CN.unicodeMap \
-		${X11PREFIX}/share/xpdf/chinese-simplified
-	${INSTALL_DATA_DIR} ${X11PREFIX}/share/xpdf/chinese-simplified/CMap
-	${INSTALL_DATA} ${WRKSRC}/CMap/* ${X11PREFIX}/share/xpdf/chinese-simplified/CMap
+		${PREFIX}/share/xpdf/chinese-simplified
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/chinese-simplified/CMap
+	${INSTALL_DATA} ${WRKSRC}/CMap/* ${PREFIX}/share/xpdf/chinese-simplified/CMap
 
 post-install:
 	${CAT} ${WRKSRC}/add-to-xpdfrc >> ${PKG_SYSCONFDIR}/xpdfrc
