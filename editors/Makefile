@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/03/23 22:09:54 tron Exp $
+# $NetBSD: Makefile,v 1.31 2000/04/01 00:23:22 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
@@ -12,6 +12,7 @@
     SUBDIR += joe
     SUBDIR += jove
     SUBDIR += leim
+    SUBDIR += mg2a
     SUBDIR += ne
     SUBDIR += nedit
     SUBDIR += nvi-m17n
