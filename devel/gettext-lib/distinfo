@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2002/12/23 14:54:22 jlam Exp $
+$NetBSD: distinfo,v 1.7 2004/04/20 19:50:35 tv Exp $
 
 SHA1 (gettext-0.11.5.tar.gz) = 4d17534afac106bc0f2310a9fd77a291d433234b
 Size (gettext-0.11.5.tar.gz) = 3724099 bytes
 SHA1 (patch-aa) = f246e85f695e5999aac270e7e5f2cceb31e7b7ed
-SHA1 (patch-ab) = 5c21a9708b2ae6b16563838bff8f352dbe7a26ea
+SHA1 (patch-ab) = 421d2de8f375bc28fca1b6ed4672e89317f44935
