@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2001/01/11 01:53:28 wiz Exp $
+
+--- Makefile.unix.orig	Tue Mar 11 23:52:59 1997
++++ Makefile.unix
+@@ -39,7 +39,7 @@
+ MANDIR = /usr/local/share/man/man$(MANEXT)
+ 
+ CC = gcc
+-CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX -O -Wall
++CFLAGS += -DPAPER=\"$(PAPER)\" -DUNIX -Wall
+ 
+ BIN = psbook psselect pstops epsffit psnup \
+ 	psresize
