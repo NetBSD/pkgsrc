@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/05/12 15:01:59 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2002/05/14 14:38:56 schmonz Exp $
 
-SHA1 (tmda-0.54.tgz) = 7bdcb7045cdbd46d2e0050136da06b1abeff2589
-Size (tmda-0.54.tgz) = 126428 bytes
+SHA1 (tmda-0.55.tgz) = 993ea1fc1034051b864e407f130da652c5b98c93
+Size (tmda-0.55.tgz) = 127568 bytes
