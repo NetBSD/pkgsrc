@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/09/12 20:07:26 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/09/17 19:40:59 grant Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.05
@@ -51,6 +51,10 @@ PLIST_SRC=		${.CURDIR}/../ghostscript-esp/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+GCC_REQD=	3.0
+.endif
+
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 CFLAGS+=		-DA4
 .endif
@@ -91,7 +95,3 @@ post-install:
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=	# defined
-.endif

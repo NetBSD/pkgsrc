@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:29 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/17 19:41:31 grant Exp $
 
 DISTNAME=	hpijs-1.3
 CATEGORIES=	print
@@ -17,7 +17,7 @@ CPPFLAGS+=		-DAPDK_BUFFER_SEND
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-.  include "../../mk/gcc.buildlink2.mk"
+USE_PKGSRC_GCC=		# defined
 .endif
 
 .include "../../mk/bsd.pkg.mk"
