@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 1998/09/04 18:33:47 christos Exp $
+
+*** old/malloc.c	Fri Sep  4 11:22:08 1998
+--- malloc.c	Fri Sep  4 11:21:28 1998
+***************
+*** 436,442 ****
+  {
+      extern char end[];
+  
+!     if (cp && cp >= end && cp < stackbottom && cp < (char *) &cp && debug < 5)
+  	free(cp);
+  }
+  
+--- 436,442 ----
+  {
+      extern char end[];
+  
+!     if (cp && cp >= (void *) end && cp < (void *) stackbottom && cp < (void *) &cp && debug < 5)
+  	free(cp);
+  }
+  

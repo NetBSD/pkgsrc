@@ -1,0 +1,943 @@
+$NetBSD: patch-af,v 1.1 1998/09/04 18:33:47 christos Exp $
+
+*** old/commands.c	Fri Sep  4 11:22:06 1998
+--- commands.c	Fri Sep  4 11:21:28 1998
+***************
+*** 493,499 ****
+--- 493,503 ----
+  char **argv, *list;
+  {
+      register char *cmd = *argv;
++ #ifndef MSGS_DYNAMIC
+      char list1[MAXMSGS_BITS];
++ #else
++     char *list1 = (char *) alloca(MSGS_BITS(msg_cnt));
++ #endif
+      int cur_msg = current_msg, save_cnt = msg_cnt;
+  
+      if (*++argv && !strcmp(*argv, "-?"))
+***************
+*** 502,508 ****
+  	return -1;
+  
+      /* make into our own list so ~: commands don't overwrite this list */
+!     bitput(list, list1, MAXMSGS, =);
+  
+      /* back up one arg to replace "cmd" in the new argv[0] */
+      argv += (n-1);
+--- 506,512 ----
+  	return -1;
+  
+      /* make into our own list so ~: commands don't overwrite this list */
+!     bitput(list, list1, msg_cnt, =);
+  
+      /* back up one arg to replace "cmd" in the new argv[0] */
+      argv += (n-1);
+***************
+*** 533,539 ****
+      if (istool)
+  	(void) do_hdrs(0, DUBL_NULL, NULL);
+      /* copy the specified list back into msg_list */
+!     bitput(list1, list, MAXMSGS, =);
+      return 0;
+  }
+  
+--- 537,543 ----
+      if (istool)
+  	(void) do_hdrs(0, DUBL_NULL, NULL);
+      /* copy the specified list back into msg_list */
+!     bitput(list1, list, msg_cnt, =);
+      return 0;
+  }
+  
+*** old/doproc.c	Fri Sep  4 11:22:05 1998
+--- doproc.c	Fri Sep  4 11:21:28 1998
+***************
+*** 859,865 ****
+  int value;
+  Event *event;
+  {
+!     char *argv[3], list[MAXMSGS_BITS];
+      char *p = (char *)panel_get_value(msg_num_item);
+      int n = 0;
+  
+--- 859,869 ----
+  int value;
+  Event *event;
+  {
+! #ifndef MSGS_DYNAMIC
+!     char list[MAXMSGS_BITS];
+! #else
+!     char *list = (char *) alloca(MSGS_BITS(msg_cnt));
+! #endif
+      char *p = (char *)panel_get_value(msg_num_item);
+      int n = 0;
+  
+*** old/expr.c	Thu May  3 15:40:10 1990
+--- expr.c	Fri Sep  4 11:21:28 1998
+***************
+*** 17,23 ****
+--- 17,27 ----
+  {
+      register int num1 = -1, num2 = -1, except = 0;
+      register char *p2;
++ #ifndef MSGS_DYNAMIC
+      char list2[MAXMSGS_BITS];
++ #else
++     char *list2 = (char *) alloca(MSGS_BITS(msg_cnt));
++ #endif
+  
+      if (!p)
+  	return "";
+*** old/folders.c	Fri Sep  4 11:22:09 1998
+--- folders.c	Fri Sep  4 11:21:28 1998
+***************
+*** 138,145 ****
+--- 138,153 ----
+  	xfree(msg[msg_cnt].m_subject);
+  	xfree(msg[msg_cnt].m_to);
+  	xfree(msg[msg_cnt].m_from);
++ 	xfree(msg[msg_cnt].m_name);
++ 	xfree(msg[msg_cnt].m_addr);
+  	msg[msg_cnt].m_subject = NULL;
+  	msg[msg_cnt].m_to = msg[msg_cnt].m_from = NULL;
++ 	msg[msg_cnt].m_name = msg[msg_cnt].m_addr = NULL;
++ 	msg[msg_cnt].m_author = 0;
++ 	msg[msg_cnt].m_flags = 0;
++ 	msg[msg_cnt].m_size = 0;
++ 	msg[msg_cnt].m_offset = 0;
++ 	msg[msg_cnt].m_lines = 0;
+      }
+      msg_cnt = 0, msg[0].m_offset = 0L;
+      turnoff(glob_flags, CONT_PRNT);
+***************
+*** 268,274 ****
+  register char **argv;
+  {
+      register char *p;
+!     char buf[128], unused[MAXMSGS_BITS];
+  
+      if (argv && argv[1] && !strcmp(argv[1], "-?"))
+  	return help(0, "folders", cmd_help);
+--- 276,287 ----
+  register char **argv;
+  {
+      register char *p;
+!     char buf[128];
+! #ifndef MSGS_DYNAMIC
+!     char *unused[MAXMSGS_BITS];
+! #else
+!     char *unused = (char *) alloca(MSGS_BITS(msg_cnt));
+! #endif
+  
+      if (argv && argv[1] && !strcmp(argv[1], "-?"))
+  	return help(0, "folders", cmd_help);
+***************
+*** 418,424 ****
+  char *argv[], list[];
+  {
+      int r, articles = 0, merge = 0, appending = 0;
+!     char buf[MAXPATHLEN], cmdbuf[MAXPATHLEN], newlist[MAXMSGS_BITS], *dir;
+      char *art_sep = ARTICLE_SEP;
+      FILE *fp;
+  
+--- 431,442 ----
+  char *argv[], list[];
+  {
+      int r, articles = 0, merge = 0, appending = 0;
+!     char buf[MAXPATHLEN], cmdbuf[MAXPATHLEN], *dir;
+! #ifndef MSGS_DYNAMIC
+!     char newlist[MAXMSGS_BITS];
+! #else
+!     char *newlist = (char *) alloca(MSGS_BITS(msg_cnt));
+! #endif
+      char *art_sep = ARTICLE_SEP;
+      FILE *fp;
+  
+*** old/loop.c	Fri Sep  4 11:22:07 1998
+--- loop.c	Fri Sep  4 11:21:28 1998
+***************
+*** 251,257 ****
+--- 251,261 ----
+  
+  /* Return values from commands, see check_internal() */
+  static int last_status;			/* Changes after every command */
++ #ifndef MSGS_DYNAMIC
+  static char last_output[MAXMSGS];	/* Changes after SUCCESSFUL command */
++ #else
++ char* last_output;		/* Changes after SUCCESSFUL command */
++ #endif
+  
+  /*
+   * do the command specified by the argument vector, argv.
+***************
+*** 1196,1203 ****
+--- 1200,1211 ----
+      struct history *hist;
+  #ifndef REGCMP
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++     regex_t rex;
++ #  else
+      char *rex = NULL;
+      extern char	  *regcomp();
++ #  endif
+  # else
+      extern char   *re_comp();
+  # endif
+***************
+*** 1222,1228 ****
+--- 1230,1240 ----
+      if (*str) {
+  #ifndef REGCMP
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++ 	if (regcomp(&rex, str, REG_EXTENDED) != 0)	/* Assign and test */
++ #  else
+  	if (!(rex = regcomp(str)))	/* Assign and test */
++ #  endif
+  # else
+  	if (re_comp(str))
+  # endif
+***************
+*** 1256,1262 ****
+--- 1268,1278 ----
+  	    found =
+  #ifndef REGCMP
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++ 		regexec(&rex, buf, 0, NULL, 0) == 0
++ #  else
+  		!!regexec(rex, buf)
++ #  endif
+  # else
+  		re_exec(buf)
+  # endif
+***************
+*** 1273,1279 ****
+--- 1289,1299 ----
+  	    free(rex);
+  #else
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++ 	    regfree(&rex);
++ #  else
+  	    free(rex);
++ #  endif
+  # endif
+  #endif
+  	    return (*p == '?' ? p + 1 : p);
+***************
+*** 1286,1292 ****
+--- 1306,1316 ----
+  #else
+  # ifdef REGCOMP
+      /* XXX: regfree */
++ #  ifdef REG_EXTENDED
++     regfree(&rex);
++ #  else
+      free(rex);
++ #  endif
+  # endif
+  #endif
+      return NULL;
+*** old/mail.c	Fri Sep  4 11:22:09 1998
+--- mail.c	Fri Sep  4 11:21:28 1998
+***************
+*** 34,40 ****
+      char firstchar = (argv)? **argv: 'm';
+      char *to = NULL, *cc = NULL, *addcc = NULL, *bcc = NULL, *subj = NULL;
+      char *route = NULL;
+!     char inc_list[MAXMSGS_BITS], buf[HDRSIZ];
+      u_long flgs = 0;
+  
+      if (ison(glob_flags, IS_GETTING)) {
+--- 34,45 ----
+      char firstchar = (argv)? **argv: 'm';
+      char *to = NULL, *cc = NULL, *addcc = NULL, *bcc = NULL, *subj = NULL;
+      char *route = NULL;
+!     char buf[HDRSIZ];
+! #ifndef MSGS_DYNAMIC
+!     char inc_list[MAXMSGS_BITS];
+! #else
+!     char *inc_list = (char *) alloca(MSGS_BITS(msg_cnt));
+! #endif
+      u_long flgs = 0;
+  
+      if (ison(glob_flags, IS_GETTING)) {
+***************
+*** 350,356 ****
+--- 355,365 ----
+  
+      /* If forwarding w/o editing, start a new file for each. */
+      if (ison(flags, FORWARD) && ison(flags, SEND_NOW)) {
++ #ifndef MSGS_DYNAMIC
+  	char fwd[MAXMSGS_BITS];
++ #else
++ 	char *fwd = (char *) alloca(MSGS_BITS(msg_cnt));
++ #endif
+  	register int i;
+  	clear_msg_list(fwd);
+  	for (i = 0; i < msg_cnt; i++)
+***************
+*** 694,700 ****
+--- 703,713 ----
+  		putstring(p2, ed_fp);
+  	}
+  	when ':': {
++ #ifndef MSGS_DYNAMIC
+  	    char new[MAXMSGS_BITS];
++ #else
++ 	    char *new = (char *) alloca(MSGS_BITS(msg_cnt));
++ #endif
+  	    u_long save_flags = glob_flags;
+  
+  	    turnon(glob_flags, IGN_SIGS);
+***************
+*** 706,712 ****
+--- 719,729 ----
+  	when 'i': case 'f': case 'I': case 'm': {
+  	    int  n;
+  	    u_long copy_flgs = 0;
++ #ifndef MSGS_DYNAMIC
+  	    char list[MAXMSGS_BITS];
++ #else
++ 	    char *list = (char *) alloca(MSGS_BITS(msg_cnt));
++ #endif
+  
+  	    if (!msg_cnt) {
+  		wprint("No messages.\n");
+***************
+*** 962,967 ****
+--- 979,985 ----
+      register char *p;
+      int c;
+      char buf[MAXPATHLEN];
++     static char gpat[] = "{,{,*[ \\,]}mail{,[ \\,]*}}";
+  
+      /* forwarded mail has no additional personalized text */
+      if (ison(flags, FORWARD)) {
+***************
+*** 985,992 ****
+  	p = NULL;
+  	if (!strncmp(Cc, "~v", 2) ||
+  		/* Flashy test for $verify either empty or set to "mail" */
+! 		glob(p = do_set(set_options, "verify"),
+! 					    "{,{,*[ \\,]}mail{,[ \\,]*}}")) {
+  	    if (!p) /* so we don't Cc to ~v! */
+  		*Cc = 0;
+  	    for (;;) {
+--- 1003,1009 ----
+  	p = NULL;
+  	if (!strncmp(Cc, "~v", 2) ||
+  		/* Flashy test for $verify either empty or set to "mail" */
+! 		glob(p = do_set(set_options, "verify"), gpat)) {
+  	    if (!p) /* so we don't Cc to ~v! */
+  		*Cc = 0;
+  	    for (;;) {
+*** old/main.c	Fri Sep  4 11:22:09 1998
+--- main.c	Fri Sep  4 11:21:28 1998
+***************
+*** 30,36 ****
+      char 	      buf[MAXPATHLEN];
+      register char    *p;
+      struct mush_flags Flags;
+! 
+  #ifndef INTERNAL_MALLOC
+      extern char *stackbottom;	/* used by xfree() */
+  
+--- 30,36 ----
+      char 	      buf[MAXPATHLEN];
+      register char    *p;
+      struct mush_flags Flags;
+!     static char gpat[] = "{,{,*[ \\,]}startup{,[ \\,]*}}";
+  #ifndef INTERNAL_MALLOC
+      extern char *stackbottom;	/* used by xfree() */
+  
+***************
+*** 59,64 ****
+--- 59,80 ----
+  	malloc_debug(0);
+  #endif /* sun && debug */
+  
++ #ifdef MSGS_DYNAMIC
++     {
++ 	extern char *last_output;
++ 	msg_max = MSGS_INCR;
++ 	msg = (struct msg *) malloc(sizeof(struct msg) * msg_max);
++ 	bzero(msg, sizeof(struct msg) * msg_max);
++ 	msg_list = (char *) malloc(MSGS_BITS(msg_max));
++ 	last_output = (char *) malloc(sizeof(char) * msg_max);
++ 	if (msg == (struct msg *) 0 || msg_list == NULL ||
++ 	    last_output == NULL) {
++ 	    (void) fprintf(stderr, "%s: Out of memory.\n", prog_name);
++ 	    exit(1);
++ 	}
++     }
++ #endif
++ 
+      if (!isatty(0))
+  	turnon(glob_flags, REDIRECT);
+      else
+***************
+*** 255,261 ****
+      (void) signal(SIGHUP,  catch);
+  
+      if (!hdrs_only && !istool && (!Flags.src_file || !Flags.src_n_exit) &&
+! 	!glob(do_set(set_options, "quiet"), "{,{,*[ \\,]}startup{,[ \\,]*}}"))
+  	(void) printf("%s: Type '?' for help.\n", check_internal("version"));
+  
+      (void) sprintf(buf, "folder %s %s", Flags.f_flags, mailfile);
+--- 271,277 ----
+      (void) signal(SIGHUP,  catch);
+  
+      if (!hdrs_only && !istool && (!Flags.src_file || !Flags.src_n_exit) &&
+! 	!glob(do_set(set_options, "quiet"), gpat))
+  	(void) printf("%s: Type '?' for help.\n", check_internal("version"));
+  
+      (void) sprintf(buf, "folder %s %s", Flags.f_flags, mailfile);
+*** old/misc.c	Fri Sep  4 11:22:08 1998
+--- misc.c	Fri Sep  4 11:21:28 1998
+***************
+*** 201,207 ****
+--- 201,211 ----
+      int argc, ret_val = -1;
+      u_long save_do_pipe = ison(glob_flags, DO_PIPE);
+      u_long save_is_pipe = ison(glob_flags, IS_PIPE);
++ #ifndef MSGS_DYNAMIC
+      char dummy_list[MAXMSGS_BITS];
++ #else
++     char *dummy_list = (char *) alloca(MSGS_BITS(msg_cnt));
++ #endif
+  
+      turnoff(glob_flags, DO_PIPE);
+      turnoff(glob_flags, IS_PIPE);
+*** old/msgs.c	Fri Sep  4 11:22:08 1998
+--- msgs.c	Fri Sep  4 11:21:28 1998
+***************
+*** 843,848 ****
+--- 843,849 ----
+      }
+  #endif /* MMDF */
+      buf[0] = 0;
++     date[0] = 0;
+      while (fgets(buf, sizeof (buf), fp)) {
+  #ifndef MSG_SEPARATOR
+  	turnoff(glob_flags, WARNING);
+***************
+*** 875,880 ****
+--- 876,882 ----
+  	    {
+  		msg_found++;
+  		had_error = 0;
++ #ifndef MSGS_DYNAMIC
+  		if (append && cnt == MAXMSGS-append) {
+  		    wprint("WARNING: exceeded %d messages.\n", MAXMSGS-append);
+  		    wprint("Not all messages have been loaded.\n");
+***************
+*** 882,887 ****
+--- 884,931 ----
+  		    had_error++;
+  		    break;
+  		}
++ #else
++ 		if (append && cnt == msg_max-append) {
++ 		    /* 
++ 		     * XXX: should really ignore signals here but instead
++ 		     * are careful with the order we do things
++ 		     * so if we get interrupted, we only lose memory
++ 		     */
++ 		    int nmsg_max = msg_max + MSGS_INCR;
++ 		    struct msg* m;
++ 		    char* b, *l;
++ 		    extern char* last_output;
++ 
++ 		    m = (struct msg *) realloc(msg, sizeof(struct msg) * 
++ 					       nmsg_max);
++ 		    if (m == (struct msg *) 0) {
++ bad:
++ 			wprint("Out of memory for %d messages.\n", nmsg_max);
++ 			wprint("Not all messages have been loaded.\n");
++ 			msg_cnt--;
++ 			had_error++;
++ 			break;
++ 		    }
++ 
++ 		    b = (char *) realloc(msg_list, MSGS_BITS(nmsg_max));
++ 		    if (b == NULL)
++ 			goto bad;
++ 
++ 		    l = (char *) realloc(last_output, sizeof(char) * nmsg_max);
++ 		    if (l == NULL)
++ 			goto bad;
++ 
++ 
++ 		    msg = m;
++ 		    msg_list = b;
++ 		    last_output = l;
++ 
++ 		    bzero(&msg[msg_max], sizeof(struct msg) * MSGS_INCR);
++ 
++ 		    msg_max = nmsg_max;
++ 
++ 		}
++ #endif /* MSGS_DYNAMIC */
+  		if (ison(glob_flags, READ_ONLY))
+  		    bytes = ftell(fp) - strlen(buf);
+  		else {
+***************
+*** 1058,1064 ****
+      }
+      close_lock(file, fp);
+      if (isoff(glob_flags, READ_ONLY)) {
+! 	if (had_error && msg_found && append == 1 && cnt == MAXMSGS-append) {
+  	    wprint("Using read-only mode.\n");
+  	    turnon(glob_flags, READ_ONLY);
+  	    had_error = 0;	/* return successfully anyway */
+--- 1102,1113 ----
+      }
+      close_lock(file, fp);
+      if (isoff(glob_flags, READ_ONLY)) {
+! #ifndef MSGS_DYNAMIC
+! 	if (had_error && msg_found && append == 1 && cnt == MAXMSGS-append)
+! #else
+! 	if (had_error && msg_found && append == 1 && cnt == msg_max-append)
+! #endif
+! 	{
+  	    wprint("Using read-only mode.\n");
+  	    turnon(glob_flags, READ_ONLY);
+  	    had_error = 0;	/* return successfully anyway */
+  
+*** old/version.h	Fri Sep  4 11:22:09 1998
+--- version.h	Fri Sep  4 11:21:28 1998
+***************
+*** 1,7 ****
+  /* @(#)version.h	(c) Copyright 1989, 1990, 1991 (Dan Heller) */
+  
+  #define MUSHNAME	"Mail User's Shell"
+! #define RELEASE_DATE	"beta(4) 03/19/98"
+  #define RELEASE		7
+  #define REVISION	"2"
+  #define PATCHLEVEL	6
+--- 1,7 ----
+  /* @(#)version.h	(c) Copyright 1989, 1990, 1991 (Dan Heller) */
+  
+  #define MUSHNAME	"Mail User's Shell"
+! #define RELEASE_DATE	"beta(4)+dynamic 03/19/98"
+  #define RELEASE		7
+  #define REVISION	"2"
+  #define PATCHLEVEL	6
+
+*** pick.c.orig	Fri Sep  4 12:07:59 1998
+--- pick.c	Fri Sep  4 13:12:17 1998
+***************
+*** 11,19 ****
+  static int pick();
+  static void month_day_year();
+  
+! #ifdef REGCOMP
+  regerror(msg)
+! char *msg;
+  {
+      printf("regcomp error: %s\n", msg);
+  }
+--- 11,20 ----
+  static int pick();
+  static void month_day_year();
+  
+! #if defined(REGCOMP) && !defined(REG_EXTENDED)
+! void
+  regerror(msg)
+! const char *msg;
+  {
+      printf("regcomp error: %s\n", msg);
+  }
+***************
+*** 23,29 ****
+--- 24,34 ----
+  register int n;
+  register char **argv, list[];
+  {
++ #ifndef MSGS_DYNAMIC
+      char ret_list[MAXMSGS_BITS];
++ #else
++     char *ret_list = (char *) alloca(MSGS_BITS(msg_cnt));
++ #endif
+  
+      if (n > 1 && !strcmp(argv[1], "-?"))
+  	return help(0, "pick", cmd_help);
+***************
+*** 72,78 ****
+      register char c;
+      int matches = 0;
+      char pattern[256];
+!     short head_first, head_cnt, tail_cnt, search = TRUE;
+      int n;
+  
+      if (!msg_cnt) {
+--- 77,83 ----
+      register char c;
+      int matches = 0;
+      char pattern[256];
+!     short head_first, head_cnt, tail_cnt, search = TRUE, dups = FALSE;
+      int n;
+  
+      if (!msg_cnt) {
+***************
+*** 166,171 ****
+--- 171,177 ----
+  		turnon(match_priority, M_PRIORITY(c - 'A' + 1));
+  	    when 'x' : xflg = 1;
+  	    when 'i' : icase = 1;
++ 	    when 'D' : dups = FALSE;
+  	    otherwise:
+  		print("pick: unknown flag: %c\n", argv[0][1]);
+  		clear_msg_list(ret_list);
+***************
+*** 175,181 ****
+  	print("Can't specify -x and head/tail options together.\n");
+  	return -1;
+      }
+!     if (!mdy[1]) {
+  	(void) argv_to_string(pattern, argv);
+  	if (pattern[0] == '\0' && match_priority == 0 &&
+  		head_cnt + tail_cnt < 0) {
+--- 181,187 ----
+  	print("Can't specify -x and head/tail options together.\n");
+  	return -1;
+      }
+!     if (!mdy[1] && !dups) {
+  	(void) argv_to_string(pattern, argv);
+  	if (pattern[0] == '\0' && match_priority == 0 &&
+  		head_cnt + tail_cnt < 0) {
+***************
+*** 184,190 ****
+  	    return -1;
+  	}
+      }
+!     search = (pattern[0] || mdy[1] || (match_priority != 0));
+      if (verbose) {
+  	if (head_cnt + tail_cnt >= 0) {
+  	    print("Finding the ");
+--- 190,196 ----
+  	    return -1;
+  	}
+      }
+!     search = (pattern[0] || mdy[1] || (match_priority > 0));
+      if (verbose) {
+  	if (head_cnt + tail_cnt >= 0) {
+  	    print("Finding the ");
+***************
+*** 209,216 ****
+  		    print_more(" of the last %d", tail_cnt);
+  	} else
+  	    print_more("Searching for %smessages",
+! 		match_priority != 0 ? "priority " : "");
+! 	if (!search) {
+  	    if (tail_cnt > 0 && head_cnt > 0)
+  		print_more(" messages");
+  	    if (ison(glob_flags, IS_PIPE))
+--- 215,224 ----
+  		    print_more(" of the last %d", tail_cnt);
+  	} else
+  	    print_more("Searching for %smessages",
+! 		match_priority > 0 ? "priority " : "");
+! 	if (dups) {
+! 	    print_more(" that are duplicates");
+! 	} else if (!search) {
+  	    if (tail_cnt > 0 && head_cnt > 0)
+  		print_more(" messages");
+  	    if (ison(glob_flags, IS_PIPE))
+***************
+*** 241,247 ****
+      }
+      if (mdy[1] > 0 && icase)
+  	print("using date: -i flag ignored.\n");
+!     if (!search) {
+  	for (n = 0; n < msg_cnt && (!head_first || matches < head_cnt); n++)
+  	    if (msg_bit(list, n))
+  		++matches, set_msg_bit(ret_list, n);
+--- 249,258 ----
+      }
+      if (mdy[1] > 0 && icase)
+  	print("using date: -i flag ignored.\n");
+!     if (dups)
+! 	matches = find_dups(head_first? head_cnt : msg_cnt,
+! 			   list, ret_list);
+!     else if (!search) {
+  	for (n = 0; n < msg_cnt && (!head_first || matches < head_cnt); n++)
+  	    if (msg_bit(list, n))
+  		++matches, set_msg_bit(ret_list, n);
+***************
+*** 284,289 ****
+--- 295,424 ----
+      return matches;
+  }
+  
++ 
++ static int
++ cmplines(m1, m2)
++     struct msg **m1;
++     struct msg **m2;
++ {
++     int z =  (int) (*m2)->m_lines - (int) (*m1)->m_lines;
++     if (z > 0)
++ 	return 1;
++     else if (z < 0)
++ 	return -1;
++     else
++ 	return 0;
++ }
++ 
++ 
++ /*
++  * find_dups searches for messages with the same body as others
++  */
++ find_dups(cnt, check_list, ret_list)
++ int cnt;
++ char check_list[], ret_list[];
++ {
++     int i, j, n, lcur, mcur;
++     int matches = 0;
++ #ifndef MSGS_DYNAMIC
++     struct msg *mlist[MAXMSGS];
++ #else
++     struct msg **mlist = (struct msg **) alloca(msg_cnt *
++ 						sizeof(struct msg *));
++ #endif
++     char *omsg = NULL, *nmsg = NULL, *otext, *ntext;
++     size_t otsize = 0, ntsize = 0, omsize = 0, nmsize = 0, mid;
++ 
++     if (cnt == -1)
++ 	cnt = msg_cnt;
++ 
++     for (i = 0, n = 0; i < cnt && n < msg_cnt; n++)
++ 	if (msg_bit(check_list, n)) {
++ 	    mlist[i] = &msg[n];
++ 	    mlist[i]->m_spare = n;
++ 	    i++;
++ 	}
++ 
++     cnt = i;
++     qsort((char *) mlist, cnt, sizeof(struct msg *), cmplines);
++ 
++     clear_msg_list(ret_list);
++ 
++     lcur = -1;
++ 
++     for (i = 0; i < cnt - 1; i++) {
++ 	lcur = mlist[i]->m_lines;
++ 	mcur = mlist[i]->m_spare;
++ 
++ 	if (mlist[i + 1]->m_lines != lcur)
++ 	    /* Next message has not the same number of lines, skip */
++ 	    continue;
++ 
++ 	(void) msg_get(mcur, NULL, 0);
++ 	if (otsize < mlist[i]->m_size) {
++ 	    otsize = mlist[i]->m_size;
++ 	    otext = otext ? (char *) malloc(otsize) :
++ 			    (char *) realloc(otext, otsize);
++ 	    if (otext == NULL) {
++ 		print("Out of memory in find_dups\n");
++ 		goto bad;
++ 	    }
++ 	}
++ 	if (fread(otext, 1, mlist[i]->m_size, tmpf) != mlist[i]->m_size) {
++ 	    print("fread old for %d failed %d\n", mcur, sys_errlist[errno]);
++ 	    goto bad;
++ 	}
++ 	if ((omsg = (char *) strstr(otext, "\n\n")) == NULL) {
++ 	    printf("could not find start of message %d\n", mcur);
++ 	    continue;
++ 	}
++ 	omsize = mlist[i]->m_size - (omsg - otext);
++ 	for (j = i + 1; j < cnt; j++) {
++ 	    if (mlist[j]->m_lines != lcur)
++ 		/* Next message has not the same number of lines, skip */
++ 		break;
++ 	    mid = mlist[j]->m_spare;
++ 	    (void) msg_get(mid, NULL, 0);
++ 	    if (ntsize < mlist[j]->m_size) {
++ 		ntsize = mlist[j]->m_size;
++ 		ntext = ntext ? (char *) malloc(ntsize) :
++ 				(char *) realloc(ntext, ntsize);
++ 		if (ntext == NULL) {
++ 		    print("Out of memory in find_dups\n");
++ 		    goto bad;
++ 		}
++ 	    }
++ 	    if (fread(ntext, 1, mlist[j]->m_size, tmpf) != mlist[j]->m_size) {
++ 		print("fread new for %d failed %d\n", mid, sys_errlist[errno]);
++ 		goto bad;
++ 	    }
++ 	    if ((nmsg = (char *) strstr(ntext, "\n\n")) == NULL) {
++ 		printf("could not find start of message %d\n", mid);
++ 		continue;
++ 	    }
++ 	    nmsize = mlist[j]->m_size - (nmsg - ntext);
++ 	    if (nmsize != omsize)
++ 		continue;
++ 	    if (memcmp(nmsg, omsg, nmsize) == 0) {
++ 		++matches;
++ 		set_msg_bit(ret_list, mid);
++ 	    }
++ 	}
++     }
++     if (otext)
++ 	free(otext);
++     if (ntext)
++ 	free(ntext);
++     return matches;
++ bad:
++     clear_msg_list(ret_list);
++     if (otext)
++ 	free(otext);
++     if (ntext)
++ 	free(ntext);
++     return 0;
++ }
++ 	
+  /*
+   * find_pattern will search thru all the messages set in the check_list
+   * until the list runs out or "cnt" has been exhasted.  ret_list contains
+***************
+*** 307,313 ****
+--- 442,452 ----
+  #endif
+  #else /* REGCMP */
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++     regex_t rex;
++ #  else
+      char *regcomp(), *regexec();
++ #  endif
+  # else
+      char *re_comp();
+  # endif
+***************
+*** 328,334 ****
+--- 467,478 ----
+  	}
+  #else /* REGCMP */
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++ 	if (regcomp(&rex, p, REG_EXTENDED) != 0)
++ #  else
+  	if ((err = regcomp(p)) == NULL) {
++ #  endif
++ 	{
+  	    clear_msg_list(ret_list);
+  	    return -1;
+  	}
+***************
+*** 348,354 ****
+      /* start searching: set bytes, and message number: n */
+      for (n = 0; cnt && n < msg_cnt; n++)
+  	if (msg_bit(check_list, n)) {
+! 	    if (match_priority != 0) {
+  		if (msg[n].m_flags & match_priority)
+  		    ++matches, set_msg_bit(ret_list, n);
+  		continue;
+--- 492,498 ----
+      /* start searching: set bytes, and message number: n */
+      for (n = 0; cnt && n < msg_cnt; n++)
+  	if (msg_bit(check_list, n)) {
+! 	    if (match_priority > 0) {
+  		if (msg[n].m_flags & match_priority)
+  		    ++matches, set_msg_bit(ret_list, n);
+  		continue;
+***************
+*** 421,427 ****
+--- 565,575 ----
+  		val = !!regex(err, p, NULL); /* convert value to a boolean */
+  #else /* REGCMP */
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++ 		val = regexec(&rex, p, 0, NULL, 0) == 0;
++ #  else
+  		val = !!regexec(err, p);
++ #  endif
+  # else
+  		val = re_exec(p);
+  # endif
+***************
+*** 448,455 ****
+--- 596,607 ----
+  #else
+  # ifdef REGCOMP
+      if (err)
++ #  ifdef REG_EXTENDED
++ 	regfree(&rex);
++ #  else
+  	/* XXX: regfree soon */
+      	free(err);
++ #  endif
+  # endif
+  #endif /* REGCMP */
+      return matches;
+***************
+*** 476,482 ****
+--- 628,638 ----
+  #endif
+  #else /* REGCMP */
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++     regex_t rex;
++ #  else
+      char *regcomp(), *regexec();
++ #  endif
+  # else
+      char *re_comp();
+  # endif
+***************
+*** 509,515 ****
+      }
+  #else /* REGCMP */
+  # ifdef REGCOMP
+!     if (*pattern && !(err = regcomp(pattern, NULL))) {
+  	print("Error in regcomp in %s", pattern);
+  	return 0;
+      }
+--- 665,676 ----
+      }
+  #else /* REGCMP */
+  # ifdef REGCOMP
+! #  ifdef REG_EXTENDED
+!     if (*pattern && regcomp(&rex, pattern, REG_EXTENDED))
+! #  else
+!     if (*pattern && !(err = regcomp(pattern, NULL)))
+! #  endif
+!     {
+  	print("Error in regcomp in %s", pattern);
+  	return 0;
+      }
+***************
+*** 534,540 ****
+--- 695,705 ----
+  	val = !!regex(err, p, NULL); /* convert value to a boolean */
+  #else /* REGCMP */
+  # ifdef REGCOMP
++ #  ifdef REG_EXTENDED
++ 	val = regexec(&rex, p, 0, NULL, 0) == 0;
++ #  else
+  	val = !!regexec(err, p);
++ #  endif
+  # else
+  	val = re_exec(p);
+  # endif
+***************
+*** 549,556 ****
+--- 714,725 ----
+  #else
+  # ifdef REGCOMP
+      if (err)
++ #  ifdef REG_EXTENDED
++ 	regfree(&rex);
++ #  else
+  	/* XXX: regfree soon */
+      	free(err);
++ #  endif
+  # endif
+  #endif /* REGCMP */
+  
