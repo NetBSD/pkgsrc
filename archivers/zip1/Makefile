@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2004/07/28 02:47:35 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2004/11/22 19:36:10 wiz Exp $
 #
 
 DISTNAME=	zip1-1.1
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.cdrom.com/pub/infozip/src/ \
-		ftp://ftp.icce.rug.nl/infozip/src/
+MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 DISTFILES=	zip11.zip
 
 MAINTAINER=	tech-pkg@NetBSD.org
