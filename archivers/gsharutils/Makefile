@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/11/30 11:16:17 salo Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/22 01:42:16 wiz Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -15,12 +15,19 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--program-prefix=g
-CONFIGURE_ARGS+=	--disable-uucode
-
 INSTALL_TARGET=		install install-man
 INFO_FILES=		remsync.info sharutils.info
 TEXINFO_OVERRIDE=	YES
+
+CONFIGURE_ARGS+=	--disable-uucode
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(GNU_PROGRAM_PREFIX)
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.endif
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 post-patch:
 	@${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/po/sharutils.pot
