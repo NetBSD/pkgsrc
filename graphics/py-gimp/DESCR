@@ -1,0 +1,3 @@
+libgimp allowing the writing of plug-ins for Gimp.  In this way, Gimp-Python is
+similar to Script-Fu, except that you can use the full set of Python extension
+modules from the plug-in.
