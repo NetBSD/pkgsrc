@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2003/12/08 09:17:36 adam Exp $
+
+--- Tools/Makefile.postamble.orig	2003-11-05 14:17:19.000000000 +0100
++++ Tools/Makefile.postamble
+@@ -41,8 +41,6 @@ after-install::
+ 	for file in $(MAN1_PAGES) __done; do \
+ 	  if [ $$file != __done ]; then \
+ 	    $(INSTALL_DATA) $$file $(GNUSTEP_DOCUMENTATION_MAN)/man1/$$file; \
+-	    which gzip && rm -f $(GNUSTEP_DOCUMENTATION_MAN)/man1/$$file.gz \
+-		&& gzip -9 $(GNUSTEP_DOCUMENTATION_MAN)/man1/$$file; \
+ 	  fi; \
+ 	done; \
+ 	if [ ! -f $(GNUSTEP_DOCUMENTATION_MAN)/man8 ]; then \
+@@ -50,8 +48,6 @@ after-install::
+ 	fi; \
+ 	for file in $(MAN8_PAGES); do \
+ 	  $(INSTALL_DATA) $$file $(GNUSTEP_DOCUMENTATION_MAN)/man8/$$file; \
+-	    which gzip && rm -f $(GNUSTEP_DOCUMENTATION_MAN)/man8/$$file.gz \
+-		&& gzip -9 $(GNUSTEP_DOCUMENTATION_MAN)/man8/$$file; \
+ 	done; \
+ 	if [ "`$(WHOAMI)`" != "root" ]; then \
+ 	  echo ""; \
