@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1814 2004/06/05 23:10:20 recht Exp $
+$NetBSD: TODO,v 1.1815 2004/06/06 05:09:57 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ Suggested package updates
 	o thy-0.9.0 [pkg/25318]
 	o tkdesk-2.0
 	o tkman-2.2
-	o tmda-1.0.3 [schmonz]
 	o top-3.5b12.10
 	o tripwire-2.3.1 [see also pkg/22362]
 	o txt2html-2.24 [wennmach]
