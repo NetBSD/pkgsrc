@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2001/12/08 18:46:26 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.24 2001/12/08 21:15:47 kristerw Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -98,11 +98,6 @@ ALL_TARGET=		std
 .include "../../mk/bsd.prefs.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../japanese/vflib-lib/buildlink.mk"
-
-# arm32 compiler has an optimizer problem
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS+=		-O0
-.endif
 
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 CFLAGS+=		-DA4
@@ -214,3 +209,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/MJ700V2C.FAQ ${DOC_DIR}/${MJC_DRV}
 
 .include "../../mk/bsd.pkg.mk"
+
+# arm32 compiler has an optimizer problem
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
+CFLAGS+=		-O0
+.endif
