@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2814 2005/01/02 17:48:19 wiz Exp $
+$NetBSD: TODO,v 1.2815 2005/01/03 00:49:48 minskim Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,7 @@ Suggested package updates
 	o balsa-1.4.4
 	o bbsload-0.2.8
 	o bchunk-1.2.0
-	o bdb-xml-2.0.9
+	o bdb-xml-2.0.9 [requires db4>=4.3.25 and xerces-c>=2.6.0]
 	o benchfft-3.1
 	o bibtex2html-1.74 [requires ocaml>=3.07]
 	o bins-1.1.27
@@ -1231,7 +1231,7 @@ Suggested package updates
 	o x2vnc-1.6.1
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xalan-c-1.8.0
-	o xalanc-1.9.0
+	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xanalyser-1.24
 	o xanim-2.92.0 [pkg/19934]
 	o xbeeb-0.4.1
