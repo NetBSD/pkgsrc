@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/01/29 12:37:17 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2002/02/11 00:26:04 wiz Exp $
 
---- src/types.c.orig	Tue Aug 28 18:36:47 2001
+--- src/types.c.orig	Wed Jan 30 22:24:40 2002
 +++ src/types.c
-@@ -359,7 +359,7 @@
+@@ -354,7 +354,7 @@
  
  	if(file_list == NULL)
  		return;
