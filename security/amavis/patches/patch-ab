@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2001/10/22 06:41:30 martti Exp $
+$NetBSD: patch-ab,v 1.6 2003/04/11 22:06:24 cjep Exp $
 
---- src/scanmails/scanmails.in.orig	Tue Oct 31 17:47:28 2000
+--- src/scanmails/scanmails.in.orig	2000-10-31 16:47:28.000000000 +0000
 +++ src/scanmails/scanmails.in
-@@ -360,7 +360,7 @@
+@@ -360,7 +360,7 @@ else
  	sendmail_flags="${sendmail_flags} -C${origconf}"
     else
  	SENDER="$2"
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.5 2001/10/22 06:41:30 martti Exp $
     fi
  fi
  
-@@ -455,6 +455,8 @@
+@@ -455,6 +455,8 @@ if [ "x$x_header" = "xyes" ] && [ "x${fo
      cat | ${formail} -f -A "${X_Header_String}" >${tmpdir}/receivedmail
  else
      cat >${tmpdir}/receivedmail
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.5 2001/10/22 06:41:30 martti Exp $
  fi
  
  mkdir ${tmpdir}/unpacked
-@@ -1287,7 +1289,7 @@
+@@ -1287,7 +1289,7 @@ Subject: VIRUS IN YOUR MAIL TO ${receive
  
                     V I R U S  A L E R T
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.5 2001/10/22 06:41:30 martti Exp $
             We stopped delivery of this email!
  
      Now it is on you to check your system for viruses           
-@@ -1313,7 +1315,7 @@
+@@ -1313,7 +1315,7 @@ if [ "x${notifyreceiver}" = "xyes" ] ; t
  
  ############### send a mail to the addressee ########################
  
@@ -38,12 +38,12 @@ $NetBSD: patch-ab,v 1.5 2001/10/22 06:41:30 martti Exp $
  From: ${mailfrom}
  To: ${receiver}
  Subject: VIRUS IN A MAIL FOR YOU FROM ${sender}
-@@ -1327,6 +1329,8 @@
-   Delivery of the email was stopped!
+@@ -1328,6 +1330,8 @@ Subject: VIRUS IN A MAIL FOR YOU FROM ${
    
    Please contact your system administrator for details
-+
-+  The header of the stopped message was:
  
++  The header of the stopped message was:
++
  EOF
  fi
+ 
