@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/24 09:20:35 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/03 13:10:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -12,6 +12,9 @@ PATCHFILES=	utils.patch folderNew.patch extrasInit.patch exec.patch \
 		app-defaults.patch pgpMisc.patch seditMime.patch mime.patch \
 		bindings.patch html_bindings.patch find.patch mh.patch \
 		pgp.patch
+
+.include "../../mk/bsd.prefs.mk"
+
 # User contributed and "new features".  Some not useable as-is.
 PATCHFILES+=	seditpost.patch inc.patch next.patch
 # XXX pgpExec.patch has got confused paths	(supplied as patch-as)
