@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/13 11:49:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/01/14 12:52:53 tron Exp $
 bin/gftp
 bin/gftp-gtk
 bin/gftp-text
@@ -70,5 +70,4 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gftp.mo
 share/pixmaps/gftp.png
-@dirrm share/gnome/apps/Internet
 @dirrm share/gftp
