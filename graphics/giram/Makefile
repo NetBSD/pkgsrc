@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/05/09 00:45:45 snj Exp $
+# $NetBSD: Makefile,v 1.37 2004/05/16 00:57:24 kristerw Exp $
 #
 
 DISTNAME=	giram-0.3.5
@@ -26,6 +26,8 @@ PKG_SYSCONFSUBDIR=	giram
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/0.3
 
 SHLIBTOOL_OVERRIDE=	libtool
+
+BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/0.3
 CONF_FILES+=	${PREFIX}/share/examples/giram/giramrc		\
