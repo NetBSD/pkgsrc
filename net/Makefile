@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2001/10/16 07:09:16 jlam Exp $
+# $NetBSD: Makefile,v 1.256 2001/10/16 15:15:49 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -87,6 +87,7 @@ SUBDIR+=	mouse-pppoe
 SUBDIR+=	mrt
 SUBDIR+=	mrtg
 SUBDIR+=	mtr
+SUBDIR+=	mtr-gtk
 SUBDIR+=	nap
 SUBDIR+=	napshare
 SUBDIR+=	ncftp2
