@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.33 2004/06/06 01:33:17 grant Exp $
+# $NetBSD: mksandbox,v 1.34 2004/07/01 13:18:20 grant Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -220,7 +220,15 @@ case "$paxprog" in
 *)	(cd /etc; $paxprog -rwpe . $sandbox/etc) ;;
 esac
 rm -f $sandbox/etc/localtime
-$cpprog /usr/share/zoneinfo/GMT $sandbox/etc/localtime
+
+case "$opsys" in
+SunOS)
+	$cpprog /etc/TIMEZONE $sandbox/etc/TIMEZONE
+	;;
+*)
+	$cpprog /usr/share/zoneinfo/GMT $sandbox/etc/localtime
+	;;
+esac
 
 echo "Make empty dirs upon which to mount the null mounts"
 for d in $sandboxMountDirs; do	
