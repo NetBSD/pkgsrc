@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.23 2003/05/27 21:57:25 jlam Exp $
-
 --- Configure.orig	Sun Mar 18 22:03:33 2001
-+++ Configure	Tue May 27 15:23:10 2003
++++ Configure	Fri Oct  3 20:55:27 2003
 @@ -891,6 +891,8 @@
  sitelib=''
  sitelib_stem=''
@@ -20,7 +18,7 @@ $NetBSD: patch-aa,v 1.23 2003/05/27 21:57:25 jlam Exp $
  			case " $dflt " in
  			*" $thisflag "*) ;;
  			*) dflt="$dflt $thisflag" ;;
-@@ -6807,9 +6809,12 @@
+@@ -6807,12 +6809,18 @@
  	aix)
  		# We'll set it in Makefile.SH...
  		;;
@@ -34,7 +32,13 @@ $NetBSD: patch-aa,v 1.23 2003/05/27 21:57:25 jlam Exp $
  	freebsd)
  		xxx="-Wl,-R$shrpdir"
  		;;
-@@ -6966,6 +6971,17 @@
++	bsdos)
++		xxx="-Wl,-R$shrpdir"
++		;;
+ 	linux|irix*|dec_osf)
+ 		xxx="-Wl,-rpath,$shrpdir"
+ 		;;
+@@ -6966,6 +6974,17 @@
  	;;
  esac
  
@@ -52,7 +56,7 @@ $NetBSD: patch-aa,v 1.23 2003/05/27 21:57:25 jlam Exp $
  : see if we can have long filenames
  echo " "
  first=123456789abcdef
-@@ -7090,6 +7106,17 @@
+@@ -7090,6 +7109,17 @@
  	;;
  esac
  
@@ -70,7 +74,7 @@ $NetBSD: patch-aa,v 1.23 2003/05/27 21:57:25 jlam Exp $
  : see if we have to deal with yellow pages, now NIS.
  if $test -d /usr/etc/yp || $test -d /etc/yp; then
  	if $test -f /usr/etc/nibindd; then
-@@ -14719,7 +14746,7 @@
+@@ -14719,7 +14749,7 @@
  eval $inhdr
  
  : see if this is a ieeefp.h system
@@ -79,7 +83,7 @@ $NetBSD: patch-aa,v 1.23 2003/05/27 21:57:25 jlam Exp $
  eval $inhdr
  
  : see if this is a libutil.h system
-@@ -16145,6 +16172,8 @@
+@@ -16145,6 +16175,8 @@
  installsitearch='$installsitearch'
  installsitebin='$installsitebin'
  installsitelib='$installsitelib'
