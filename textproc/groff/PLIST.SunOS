@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.3 2003/07/31 22:02:07 seb Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.4 2004/03/10 01:54:13 seb Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn2graph
@@ -29,18 +29,6 @@ bin/pic2graph
 bin/post-grohtml
 bin/pre-grohtml
 bin/tfmtodit
-info/groff
-info/groff-1
-info/groff-10
-info/groff-11
-info/groff-2
-info/groff-3
-info/groff-4
-info/groff-5
-info/groff-6
-info/groff-7
-info/groff-8
-info/groff-9
 lib/groff/site-tmac/an.tmac
 lib/groff/site-tmac/ansun.tmac
 lib/groff/site-tmac/bib.tmac
