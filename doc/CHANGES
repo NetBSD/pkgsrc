@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6596 2004/07/19 10:12:51 recht Exp $
+$NetBSD: CHANGES,v 1.6597 2004/07/19 11:05:31 bad Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3441,3 +3441,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gimp to 2.0.3 [adam 2004-07-19]
 	Updated mbmon to 204 [recht 2004-07-19]
 	Updated xmbmon to 204 [recht 2004-07-19]
+	Updated p5-XML-Simple to 2.12 [bad 2004-07-19]
+	Updated p5-Net to 1.19 [bad 2004-07-19]
