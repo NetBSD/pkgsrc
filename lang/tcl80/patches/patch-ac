@@ -1,0 +1,47 @@
+$NetBSD: patch-ac,v 1.6 2000/07/10 16:55:03 dmcmahill Exp $
+
+use MACHINE_ARCH not MACHINE for the"machine" variable.
+
+--- tclUnixInit.c.orig	Mon Sep 14 14:40:17 1998
++++ tclUnixInit.c	Mon Jul 10 12:38:25 2000
+@@ -24,4 +24,12 @@
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <err.h>
++#include <stdlib.h>
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <sys/utsname.h>
++#endif
++
+ /*
+  * Default directory in which to look for Tcl library scripts.  The
+@@ -109,4 +117,9 @@
+ #endif
+     int unameOK;
++#if defined(__NetBSD__)
++    char machine_arch[SYS_NMLN];
++    int mib[2] = { CTL_HW, HW_MACHINE_ARCH };
++    size_t len = sizeof (machine_arch);
++#endif
+ 
+     tclPlatform = TCL_PLATFORM_UNIX;
+@@ -141,6 +154,17 @@
+ 		    TCL_GLOBAL_ONLY|TCL_APPEND_VALUE);
+ 	}
++#if defined(__NetBSD__)
++
++        if (sysctl(mib, sizeof (mib) / sizeof (mib[0]), machine_arch, &len, NULL, 0) < 0)
++        {
++                err(EXIT_FAILURE, "sysctl");
++        }
++	Tcl_SetVar2(interp, "tcl_platform", "machine", machine_arch,
++		TCL_GLOBAL_ONLY);
++#else
+ 	Tcl_SetVar2(interp, "tcl_platform", "machine", name.machine,
+ 		TCL_GLOBAL_ONLY);
++#endif
++
+     }
+ #endif
