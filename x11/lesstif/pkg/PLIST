@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1998/03/23 12:35:55 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.9 1998/05/23 13:29:37 tron Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -157,9 +157,6 @@ share/lesstif/doc/core.html
 share/lesstif/doc/current.html
 share/lesstif/doc/download.html
 share/lesstif/doc/get.html
-share/lesstif/doc/clients/mwm.html
-share/lesstif/doc/clients/mwmrc.html
-share/lesstif/doc/clients/xmbind.html
 share/lesstif/doc/images/hungry.gif
 share/lesstif/doc/images/lesstif-realsmall.gif
 share/lesstif/doc/images/lesstif-small.gif
@@ -172,7 +169,71 @@ share/lesstif/doc/platforms.html
 share/lesstif/doc/release-policy.html
 share/lesstif/doc/versions.html
 share/lesstif/doc/working.html
+man/man1/lesstif.1
 man/man1/mwm.1
+man/man1/xmbind.1
+man/man3/XmClipboard.3
+man/man3/LessTifInternals.3
+man/man3/XmArrowButton.3
+man/man3/XmArrowButtonGadget.3
+man/man3/XmBulletinBoard.3
+man/man3/XmCascadeButton.3
+man/man3/XmCascadeButtonGCacheObj.3
+man/man3/XmCascadeButtonGadget.3
+man/man3/XmComboBox.3
+man/man3/XmCommand.3
+man/man3/XmDesktop.3
+man/man3/XmDialogShell.3
+man/man3/XmDialogShellExt.3
+man/man3/XmDisplay.3
+man/man3/XmDragContext.3
+man/man3/XmDragIcon.3
+man/man3/XmDragOverShell.3
+man/man3/XmDrawingArea.3
+man/man3/XmForm.3
+man/man3/XmDrawnButton.3
+man/man3/XmDropSiteManager.3
+man/man3/XmDropTransfer.3
+man/man3/XmFileSelectionBox.3
+man/man3/XmFrame.3
+man/man3/XmGadget.3
+man/man3/XmGrabShell.3
+man/man3/XmIconGCacheObj.3
+man/man3/XmIconGadget.3
+man/man3/XmLabel.3
+man/man3/XmLabelGCacheObj.3
+man/man3/XmLabelGadget.3
+man/man3/XmList.3
+man/man3/XmMainWindow.3
+man/man3/XmManager.3
+man/man3/XmMenuShell.3
+man/man3/XmMessageBox.3
+man/man3/XmNotebook.3
+man/man3/XmPanedWindow.3
+man/man3/XmPrimitive.3
+man/man3/XmProtocol.3
+man/man3/XmPushButton.3
+man/man3/XmPushButtonGCacheObj.3
+man/man3/XmPushButtonGadget.3
+man/man3/XmRowColumn.3
+man/man3/XmSash.3
+man/man3/XmScale.3
+man/man3/XmScreen.3
+man/man3/XmScrollBar.3
+man/man3/XmScrolledWindow.3
+man/man3/XmSelectionBox.3
+man/man3/XmSeparator.3
+man/man3/XmSeparatorGCacheObj.3
+man/man3/XmSeparatorGadget.3
+man/man3/XmSpinBox.3
+man/man3/XmTearOffButton.3
+man/man3/XmText.3
+man/man3/XmTextField.3
+man/man3/XmToggleButton.3
+man/man3/XmToggleButtonGCacheObj.3
+man/man3/XmWorld.3
+man/man3/XmToggleButtonGadget.3
+man/man3/XmVendorShellExt.3
 man/man5/mwmrc.5
 @exec ldconfig || /usr/bin/true
 @unexec ldconfig || /usr/bin/true
@@ -181,6 +242,5 @@ man/man5/mwmrc.5
 @dirrm include/Xm
 @dirrm include/Mrm
 @dirrm share/lesstif/doc/images
-@dirrm share/lesstif/doc/clients
 @dirrm share/lesstif/doc
 @dirrm share/lesstif
