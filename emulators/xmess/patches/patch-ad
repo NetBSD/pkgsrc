@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2002/12/07 21:00:09 kristerw Exp $
+$NetBSD: patch-ad,v 1.2 2002/12/14 15:14:27 kristerw Exp $
 --- src/unix/video-drivers/blit.h.orig	Sat Dec  7 03:00:00 2002
 +++ src/unix/video-drivers/blit.h	Sat Dec  7 03:02:49 2002
 @@ -156,6 +156,7 @@

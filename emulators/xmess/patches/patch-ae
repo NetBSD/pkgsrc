@@ -1,30 +1,28 @@
-$NetBSD: patch-ae,v 1.4 2001/09/02 23:04:24 kristerw Exp $
---- doc/xmamerc.dist.orig	Mon Jul  2 02:03:49 2001
-+++ doc/xmamerc.dist	Mon Sep  3 00:34:24 2001
-@@ -70,20 +70,18 @@
+$NetBSD: patch-ae,v 1.5 2002/12/14 15:14:27 kristerw Exp $
+--- doc/xmessrc.dist.orig	Tue Dec 10 05:58:31 2002
++++ doc/xmessrc.dist	Sat Dec 14 15:46:29 2002
+@@ -69,16 +69,16 @@
  mouse                   1
  
  ### Fileio Related ###
--rompath                 /usr/games/lib/xmame
--spooldir                /usr/games/lib/xmame
-+rompath                 @ROMPATH@
-+spooldir                @SPOOLDIR@
- screenshotdir           .
--cheatfile               /usr/games/lib/xmame/cheat.dat
--hiscorefile             /usr/games/lib/xmame/hiscore.dat
--historyfile             /usr/games/lib/xmame/history.dat
--mameinfofile            /usr/games/lib/xmame/mameinfo.dat
-+cheatfile               @SPOOLDIR@/cheat.dat
-+hiscorefile             @SPOOLDIR@/hiscore.dat
-+historyfile             @SPOOLDIR@/history.dat
-+mameinfofile            @SPOOLDIR@/mameinfo.dat
+-biospath                /usr/games/lib/xmess/bios
+-softwarepath            /usr/games/lib/xmess/software
+-CRC_directory           /usr/games/lib/xmess/crc
+-hiscore_directory       /usr/games/lib/xmess/hiscore
++biospath                @ROMPATH@/bios
++softwarepath            @ROMPATH@/software
++CRC_directory           @ROMPATH@/crc
++hiscore_directory       @SPOOLDIR@/hiscore
+ snapshot_directory      .
+-cheat_directory         /usr/games/lib/xmess/cheat
++cheat_directory         @SPOOLDIR@/cheat
+ cheatfile               cheat.cdb
+-hiscore_file            /usr/games/lib/xmess/hiscore.dat
+-history_file            /usr/games/lib/xmess/history.dat
+-mameinfo_file           /usr/games/lib/xmess/mameinfo.dat
++hiscore_file            @SPOOLDIR@/hiscore.dat
++history_file            @SPOOLDIR@/history.dat
++mameinfo_file           @SPOOLDIR@/mameinfo.dat
  
- ### Mame Related ###
--defaultgame             pacman
+ ### Mess Related ###
  language                english
- fuzzycmp                1
- cheat                   0
--debug                   0
- 
- ### Frontend Related ###
- clones                  1
