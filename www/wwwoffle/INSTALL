@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2002/09/05 15:34:19 fredb Exp $
+# $NetBSD: INSTALL,v 1.4 2002/11/08 15:34:21 fredb Exp $
 
 if [ X"${2}" != XPOST-INSTALL ]
 then
@@ -28,13 +28,13 @@ fi
 # fresh one.
 if [ ! -e "${CONFDIR}/wwwoffle.conf" ]
 then
-	if [ -e /etc/wwwoffle.conf ]
-	then
-		conf_candidates=/etc/wwwoffle.conf 
-	fi
 	if [ -e "${PKG_PREFIX}/etc/wwwoffle.conf" ]
 	then
 		conf_candidates="${PKG_PREFIX}/etc/wwwoffle.conf"
+	fi
+	if [ -e /etc/wwwoffle.conf ]
+	then
+		conf_candidates="$conf_candidates /etc/wwwoffle.conf"
 	fi
 	OLD_CONF="$(ls -rt $conf_candidates | tail -1)"
 	if [ -n "$OLD_CONF" ]
@@ -51,7 +51,7 @@ then
 	cp "${NEW_CONF_EXAMPLE}" "${CONFDIR}/wwwoffle.conf.install"
 fi
 
-# Put the real hostname in the "wwwoffle.pac" file.
+# Put the real hostname in the "wwwoffle.pac" files.
 for p in `find /var/wwwoffle/html -name wwwoffle.pac`
 do
 	cd `dirname ${p}`
