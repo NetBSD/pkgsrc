@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/03 17:30:56 yamt Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.19991117
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	ftp://sleepy.vwh.net/pub/ \
 		ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
