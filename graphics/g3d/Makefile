@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/14 16:15:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/14 19:30:22 jmmv Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 COMMENT=	3D modeller with a view of 3D modelling
 
 WRKSRC=		${WRKDIR}/g3d
-USE_DIRS+=	xdg-x11-1.1
+USE_DIRS+=	xdg-1.1
 USE_LIBTOOL=	YES
 USE_GNU_TOOLS+=	make
 USE_X11BASE=	YES
