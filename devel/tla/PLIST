@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/02 23:22:51 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/28 11:22:24 recht Exp $
 bin/tla
+share/doc/html/arch/advanced-revision-libraries.html
 share/doc/html/arch/arch.html
 share/doc/html/arch/archive-caching.html
 share/doc/html/arch/changeset-format.html
@@ -17,7 +18,7 @@ share/doc/html/arch/introducing-replay.html
 share/doc/html/arch/introducing-yourself.html
 share/doc/html/arch/introduction.html
 share/doc/html/arch/inventories.html
-share/doc/html/arch/inventory-tags.html
+share/doc/html/arch/inventory-ids.html
 share/doc/html/arch/little-help.html
 share/doc/html/arch/multi-tree-projects.html
 share/doc/html/arch/naming-conventions.html
