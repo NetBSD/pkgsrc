@@ -1,4 +1,4 @@
-/*	$NetBSD: pkgdb.c,v 1.17 2003/09/08 05:32:56 jlam Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.18 2003/09/08 05:58:10 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.17 2003/09/08 05:32:56 jlam Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.18 2003/09/08 05:58:10 jlam Exp $");
 #endif
 
 /*
@@ -263,7 +263,7 @@ int	pkgdb_store(const char *key, const char *val) { return 0; }
 char   *pkgdb_retrieve(const char *key) { return NULL; }
 void	pkgdb_dump(void) {}
 int	pkgdb_remove(const char *key) { return 0; }
-int	pkgdb_remove_pkg(const char *pkg) { return 0; }
+int	pkgdb_remove_pkg(const char *pkg) { return 1; }
 
 #endif /* HAVE_DBOPEN */
 
