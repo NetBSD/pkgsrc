@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.4 2000/04/09 08:10:20 simonb Exp $
+$NetBSD: patch-ai,v 1.5 2000/04/10 00:19:17 bad Exp $
 
 --- global/Makefile.orig	Sun May 30 18:49:13 1999
 +++ global/Makefile	Sun May 30 18:49:13 1999
-@@ -0,0 +1,32 @@
-+#	$NetBSD: patch-ai,v 1.4 2000/04/09 08:10:20 simonb Exp $
+@@ -0,0 +1,35 @@
++#	$NetBSD: patch-ai,v 1.5 2000/04/10 00:19:17 bad Exp $
 +
 +LIB	= global
 +
@@ -30,6 +30,9 @@ $NetBSD: patch-ai,v 1.4 2000/04/09 08:10:20 simonb Exp $
 +MKLINT=		no
 +MKPIC=		no
 +MKPROFILE=	no
++NOLINT=		yes
++NOPIC=		yes
++NOPROFILE=	yes
 +
 +# only needed during build
 +libinstall::
