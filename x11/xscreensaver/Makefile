@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/06/02 20:12:11 fredb Exp $
+# $NetBSD: Makefile,v 1.44 2000/06/02 20:21:18 fredb Exp $
 #
 
 DISTNAME=	xscreensaver-3.24
@@ -14,6 +14,7 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--without-shadow
+CONFIGURE_ARGS+=--without-motif
 CONFIGURE_ARGS+=--enable-subdir=${PREFIX}/libexec/xscreensaver
 CONFIGURE_ARGS+=--with-zippy=/usr/games/fortune
 CONFIGURE_ENV+=	INSTALL=/usr/bin/install
