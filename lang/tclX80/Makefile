@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/06/01 11:23:34 rh Exp $
+# $NetBSD: Makefile,v 1.13 2000/08/14 22:25:46 wiz Exp $
 #
 
 DISTNAME=	tclX8.0.4
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.neosoft.com/TclX/
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 USE_X11=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tk
 CONFIGURE_ENV+=		TCL_SHLIB_LD_LIBS=-L${PREFIX}/lib
