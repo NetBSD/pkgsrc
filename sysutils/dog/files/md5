@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2001/01/19 01:35:05 hubertf Exp $
+$NetBSD: md5,v 1.2 2001/02/26 22:56:47 hubertf Exp $
 
-MD5 (dog-1.5.tar.gz) = b10290506457aafcb82593d92a02c4ec
+MD5 (dog-1.7.tar.gz) = 9dd1e04efb7f8535a632bac2eef60a10
