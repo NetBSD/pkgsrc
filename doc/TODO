@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2352 2004/11/10 14:51:51 adam Exp $
+$NetBSD: TODO,v 1.2353 2004/11/10 15:17:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,6 @@ Suggested package updates
 	o leafnode-1.10.6
 	o libao{,-arts,-esound}-0.8.5
 	o libcdaudio-0.99.12
-	o libcddb-0.9.6
 	o libcomprex-0.3.3
 	o libhydrogen-0.9.0
 	o libidn-0.5.10

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7807 2004/11/10 14:51:51 adam Exp $
+$NetBSD: CHANGES,v 1.7808 2004/11/10 15:17:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5209,3 +5209,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gd to 2.0.33 [adam 2004-11-10]
 	Updated iozone to 3.226 [adam 2004-11-10]
 	Updated gtkglext to 1.0.6 [adam 2004-11-10]
+	Updated libcddb to 0.9.6 [adam 2004-11-10]
