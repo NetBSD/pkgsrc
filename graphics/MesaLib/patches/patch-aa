@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 11:41:17 rh Exp $
+
+--- src/X86/assyntax.h.orig	Thu Apr  6 23:59:24 2000
++++ src/X86/assyntax.h
+@@ -948,7 +948,8 @@
+ 
+ #if defined(Lynx) || (defined(SYSV) || defined(SVR4)) \
+  || (defined(linux) || defined(__OS2ELF__)) && defined(__ELF__) \
+- || defined(__FreeBSD__) && __FreeBSD__ >= 3
++ || defined(__FreeBSD__) && __FreeBSD__ >= 3 \
++ || defined(__NetBSD__) && defined(__ELF__)
+ #define GLNAME(a) a
+ #else
+ #define GLNAME(a) _ ## a
