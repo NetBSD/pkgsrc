@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/10 01:43:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/10 02:01:41 salo Exp $
 #
 
 DISTNAME=	Gauche-0.6.3
@@ -28,7 +28,7 @@ BROKEN=Test required on NetBSD/i386 a.out
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
-CONFIGURE_ARGS+=	--with-slib=${LOCALBASE}/share/slib
+CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv} --with-iconv-lib=iconv
 CONFIGURE_ENV+=		AS="${CC} -x assembler-with-cpp -c"
 
