@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/08 20:02:01 drochner Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/09 16:32:36 tron Exp $
 
 DISTNAME=	catclock
 PKGNAME=	catclock-0.0
-WRKSRC=		${WRKDIR}/catclock
 CATEGORIES=	x11
 MASTER_SITES=	http://www2.cenaath.cena.dgac.fr/ftp/decwindows/ \
 	ftp://ftp2.cnam.fr/decwindows/ \
