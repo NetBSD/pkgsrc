@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2001/07/14 06:35:12 jlam Exp $
+$NetBSD: patch-ac,v 1.9 2004/02/09 11:56:32 grant Exp $
 
---- configure.orig	Mon Sep 28 16:50:23 1998
-+++ configure	Sat Jul 14 02:12:00 2001
-@@ -1565,7 +1565,6 @@
+--- configure.orig	1998-09-29 06:50:23.000000000 +1000
++++ configure
+@@ -1565,7 +1565,6 @@ do
  	echo $ac_n "checking for $dir/lib in LIBS""... $ac_c" 1>&6
  echo "configure:1567: checking for $dir/lib in LIBS" >&5
  	if test -d $dir/lib ; then
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.8 2001/07/14 06:35:12 jlam Exp $
  		echo "$ac_t""yes" 1>&6
  	else
  		echo "$ac_t""no" 1>&6
-@@ -1574,7 +1573,6 @@
+@@ -1574,7 +1573,6 @@ echo "configure:1567: checking for $dir/
  	echo $ac_n "checking for $dir/include in INCPATH""... $ac_c" 1>&6
  echo "configure:1576: checking for $dir/include in INCPATH" >&5
  	if test -d $dir/include ; then
@@ -18,14 +18,21 @@ $NetBSD: patch-ac,v 1.8 2001/07/14 06:35:12 jlam Exp $
  		echo "$ac_t""yes" 1>&6
  	else
  		echo "$ac_t""no" 1>&6
-@@ -1585,10 +1583,8 @@
+@@ -1584,12 +1582,11 @@ done
+ echo $ac_n "checking for /usr/ucblib in LIBS""... $ac_c" 1>&6
  echo "configure:1586: checking for /usr/ucblib in LIBS" >&5
  if test -d /usr/ucblib ; then
- 	if test "$build" = "mips-sni-sysv4" ; then
+-	if test "$build" = "mips-sni-sysv4" ; then
 -		addlib /usr/ccs/lib -lc
- 	fi
- 
+-	fi
+-
 -	addlib /usr/ucblib
- 	
+-	
++#	if test "$build" = "mips-sni-sysv4" ; then
++#		addlib /usr/ccs/lib -lc
++#	fi
++#
++#	addlib /usr/ucblib
  	echo "$ac_t""yes" 1>&6
  else
+ 	echo "$ac_t""no" 1>&6
