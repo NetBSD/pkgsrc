@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8926 2005/01/25 20:09:14 bouyer Exp $
+$NetBSD: CHANGES,v 1.8927 2005/01/25 22:44:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -603,3 +603,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Spoon to 0.21 [abs 2005-01-25]
 	Updated p5-Spiffy to 0.22 [abs 2005-01-25]
 	Updated wget to 1.9.1nb4 [bouyer 2005-01-25]
+	Updated libglade2 to 2.4.1nb1 [jmmv 2005-01-25]
