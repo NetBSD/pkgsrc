@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4613 2004/01/27 01:28:36 recht Exp $
+$NetBSD: CHANGES,v 1.4614 2004/01/27 08:12:12 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -498,3 +498,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xfce4-menueditor-1.0rc3 [martti 2004-01-26]
 	Updated subversion to 0.37.0 [epg 2004-01-26]
 	Updated gaim to 0.75nb1 [recht 2004-01-27]
+	Updated apache2 to 2.0.48nb3 [grant 2004-01-27]
