@@ -1,10 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2001/10/16 15:08:56 agc Exp $
+$NetBSD: patch-ae,v 1.2 2002/03/13 02:16:12 wiz Exp $
 
-Remove the instruction on how to get to the gtk interface since
-we don't have one.
-
---- mtr.8	2001/10/16 11:24:00	1.1
-+++ mtr.8	2001/10/16 11:24:58
+--- mtr.8.orig	Wed Mar  6 12:27:37 2002
++++ mtr.8
 @@ -8,7 +8,7 @@
  .SH SYNOPSIS
  .B mtr 
@@ -21,10 +18,10 @@ we don't have one.
 -.B \-\-gtk\c
 -]
 -[\c
- .B \-\-interval\ SECONDS\c
+ .B \-\-address\ IP.ADD.RE.SS\c
  ]
  [\c
-@@ -147,20 +144,6 @@
+@@ -150,20 +147,6 @@
  .B mtr 
  to display numeric IP numbers and not try to resolve the
  host names. 
