@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/03/06 21:24:43 kim Exp $
+# $NetBSD: Makefile,v 1.13 1999/03/06 22:27:38 agc Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -29,8 +29,8 @@ post-install:
 	@${CP} /dev/null ${WRKDIR}/PLIST.man
 	@for i in ${MANINSTALL} x; do \
 	    case $$i in \
-	    catinstall) echo man/cat1/kermit.0 >> ${WRKDIR}/PLIST.man;; \
-	    maninstall) echo man/man1/kermit.1 >> ${WRKDIR}/PLIST.man;; \
+	    catinstall) ${ECHO} man/cat1/kermit.0 >> ${WRKDIR}/PLIST.man;; \
+	    maninstall) ${ECHO} man/man1/kermit.1 >> ${WRKDIR}/PLIST.man;; \
 	    esac; \
 	done
 
