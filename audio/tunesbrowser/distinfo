@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/20 20:41:22 agc Exp $
+
+SHA1 (tunesbrowser-0.1.5.tar.bz2) = 31feff440625d2dad664b7e9fb8ec4055aa151ef
+Size (tunesbrowser-0.1.5.tar.bz2) = 190729 bytes
+SHA1 (patch-aa) = 39d837625a837d4c927bd220d3f3e030b4b122bd
+SHA1 (patch-ab) = 31e9a1e1b3aabce5c8ad559b5146fe46574b835b
