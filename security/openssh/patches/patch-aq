@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.3 2004/08/04 06:43:53 minskim Exp $
+
+--- packet.c.orig	Fri Nov 21 22:02:42 2003
++++ packet.c
+@@ -1406,7 +1406,7 @@ packet_not_very_much_data_to_write(void)
+ static void
+ packet_set_tos(int interactive)
+ {
+-#if defined(IP_TOS) && !defined(IP_TOS_IS_BROKEN)
++#if defined(IP_TOS) && !defined(IP_TOS_IS_BROKEN) && !defined(__INTERIX)
+ 	int tos = interactive ? IPTOS_LOWDELAY : IPTOS_THROUGHPUT;
+ 
+ 	if (!packet_connection_is_on_socket() ||
