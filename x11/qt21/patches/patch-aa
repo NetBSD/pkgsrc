@@ -1,0 +1,79 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/28 17:18:22 drochner Exp $
+
+--- configs/netbsd-g++-static.orig	Tue Jul 20 04:45:11 1999
++++ configs/netbsd-g++-static	Thu Oct 21 14:15:45 1999
+@@ -1,6 +1,7 @@
+ # Compiling
+ SYSCONF_CXX		= g++
+ SYSCONF_CC		= gcc
++SYSCONF_CXX_LIB		= $(LIBTOOL) --cplusplus --mode=compile g++
+ 
+ # Compiling with support libraries
+ SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
+@@ -12,11 +13,11 @@
+ 
+ # Linking with support libraries
+ # X11
+-SYSCONF_LFLAGS_X11	= -L/usr/X11R6/lib
++SYSCONF_LFLAGS_X11	= -L/usr/X11R6/lib -Wl,-R/usr/X11R6/lib
+ SYSCONF_LIBS_X11	= -lXext -lX11 -lm
+ # Qt, Qt+OpenGL
+-SYSCONF_LFLAGS_QT	= -L$(QTDIR)/lib
+-SYSCONF_LIBS_QT		= -lqt
++SYSCONF_LFLAGS_QT	= 
++SYSCONF_LIBS_QT		= $(QTDIR)/src/libqt.la
+ SYSCONF_LIBS_QT_OPENGL	= -lqgl
+ # OpenGL
+ SYSCONF_LFLAGS_OPENGL	= -L/usr/X11R6/lib
+@@ -25,41 +26,27 @@
+ SYSCONF_LIBS_YACC	= 
+ 
+ # Linking applications
+-SYSCONF_LINK		= g++
++SYSCONF_LINK		= $(LIBTOOL) --cplusplus --mode=link g++
+ SYSCONF_LFLAGS		= 
+ SYSCONF_LIBS		= 
+ 
+-# Link flags shared objects
+-SYSCONF_LFLAGS_SHOBJ	= -Bshareable
+-
+ # Meta-object compiler
+ SYSCONF_MOC		= $(QTDIR)/bin/moc
+ 
+-# Linking shared libraries
+-#   - Build the $(TARGET) library, eg. lib$(TARGET).so.2.0.1
+-#   - Place target in $(DESTDIR) - which has a trailing /
+-#   - Usually needs to incorporate $(VER_MAJ), $(VER_MIN) and $(VER_PATCH)
+-#
+-SYSCONF_LINK_SHLIB	= ld
+-SYSCONF_LINK_TARGET_SHARED	= lib$(TARGET).so.$(VER_MAJ).$(VER_MIN).$(VER_PATCH)
+-SYSCONF_LINK_LIB_SHARED	= $(SYSCONF_LINK_SHLIB) -Bshareable $(LFLAGS) -o $(DESTDIR)$(SYSCONF_LINK_TARGET_SHARED) `lorder /usr/lib/c++rt0.o $(OBJECTS) $(OBJMOC) | tsort` $(LIBS)
+-
+-# Linking static libraries
++# Linking libtool libraries
+ #   - Build the $(TARGET) library, eg. lib$(TARGET).a
+ #   - Place target in $(DESTDIR) - which has a trailing /
+ #
+-SYSCONF_AR		= ar cqs
+-SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).a
+-SYSCONF_LINK_LIB_STATIC	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) ; \
+-				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS) $(OBJMOC) 
++SYSCONF_LINK_TARGET	= lib$(TARGET).la
++SYSCONF_LINK_LIB	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET) ; \
++	$(SYSCONF_LINK) -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
++	-o $(SYSCONF_LINK_TARGET) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo)
+ # Compiling application source
+ SYSCONF_CXXFLAGS	= -O2
+ SYSCONF_CFLAGS		= -O2
+ # Compiling library source
+-SYSCONF_CXXFLAGS_LIB	= -fPIC
+-SYSCONF_CFLAGS_LIB	= -fPIC
++SYSCONF_CXXFLAGS_LIB	= 
++SYSCONF_CFLAGS_LIB	= 
+ # Compiling shared-object source
+-SYSCONF_CXXFLAGS_SHOBJ	= -fPIC
+-SYSCONF_CFLAGS_SHOBJ	= -fPIC
+-SYSCONF_LINK_LIB	= $(SYSCONF_LINK_LIB_STATIC)
+-SYSCONF_LINK_TARGET	= $(SYSCONF_LINK_TARGET_STATIC)
++SYSCONF_CXXFLAGS_SHOBJ	= 
++SYSCONF_CFLAGS_SHOBJ	= 
