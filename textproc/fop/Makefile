@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/21 17:27:31 martti Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/06 16:45:06 wiz Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -26,8 +26,15 @@ USE_BUILDLINK2=
 NO_CONFIGURE=
 NO_BUILD=
 
+.include "../../mk/bsd.prefs.mk"
+
 post-extract:
+.if ${OPSYS:M*BSD}
 	${FIND} -d ${WRKSRC}/docs -name cvs -exec ${RM} -r '{}' \;
+.else
+	${FIND} ${WRKSRC}/docs -depth -name cvs -exec ${RM} -r '{}' \;
+.endif
+
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
