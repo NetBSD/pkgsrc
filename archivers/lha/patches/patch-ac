@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 1998/12/01 04:19:00 tv Exp $
+
+--- src/lha.h.orig	Mon Nov 30 23:13:56 1998
++++ src/lha.h	Mon Nov 30 23:14:25 1998
+@@ -10,6 +10,7 @@
+ 		lharc.h		interface.h		slidehuf.h
+ */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <errno.h>
+ #include <ctype.h>
+ #include <sys/types.h>
