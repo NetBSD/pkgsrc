@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/05/15 15:02:57 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/21 15:22:19 tv Exp $
 #
 
 DISTNAME=		texi2html
@@ -17,8 +17,6 @@ EXTRACT_AFTER_ARGS=	|sh
 
 NO_WRKSUBDIR=		yes
 NO_CONFIGURE=		yes
-
-MAN1=			texi2html.1
 
 do-build:
 	cd ${WRKSRC}; \
