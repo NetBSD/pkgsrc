@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2003/11/11 13:39:09 fvdl Exp $
+$NetBSD: patch-ac,v 1.8 2004/04/01 18:13:31 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=107626
 
 --- gmodule/gmodule-dyld.c.orig	2002-03-02 21:30:33.000000000 +0100
 +++ gmodule/gmodule-dyld.c

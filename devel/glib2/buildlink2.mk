@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.13 2004/02/19 17:54:05 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.14 2004/04/01 18:13:31 jmmv Exp $
 
 .if !defined(GLIB2_BUILDLINK2_MK)
 GLIB2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		glib2
-BUILDLINK_DEPENDS.glib2?=	glib2>=2.2.2nb1
+BUILDLINK_DEPENDS.glib2?=	glib2>=2.4.0
 BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.glib2=glib2
