@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/11 06:04:27 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/30 08:16:51 rh Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -36,7 +36,7 @@ man/cat5/cid.0.gz
 man/cat5/config.0.gz
 man/cat5/destctrls.0.gz
 man/cat5/dialrules.0.gz
-man/cat5/hosts.0.gz
+man/cat5/hosts.hfaxd.0.gz
 man/cat5/hylafax.0.gz
 man/cat5/info.0.gz
 man/cat5/log.0.gz
@@ -52,9 +52,11 @@ man/cat8/cqtest.0.gz
 man/cat8/dialtest.0.gz
 man/cat8/faxabort.0.gz
 man/cat8/faxaddmodem.0.gz
+man/cat8/faxadduser.0.gz
 man/cat8/faxanswer.0.gz
 man/cat8/faxconfig.0.gz
 man/cat8/faxcron.0.gz
+man/cat8/faxdeluser.0.gz
 man/cat8/faxgetty.0.gz
 man/cat8/faxinfo.0.gz
 man/cat8/faxmodem.0.gz
@@ -90,6 +92,8 @@ man/cat1/sendpage.0.gz
 man/cat1/sgi2fax.0.gz
 man/cat1/textfmt.0.gz
 sbin/faxaddmodem
+sbin/faxadduser
+sbin/faxdeluser
 sbin/faxsetup
 sbin/faxsetup.bsdi
 sbin/faxsetup.irix
@@ -158,7 +162,7 @@ etc/hylafax/modem/zyxel-1496e-2.0
 etc/hylafax/modem/zyxel-2864
 etc/hylafax/modem/sierra
 etc/hylafax/xferfaxlog
-etc/hylafax/hosts
+etc/hylafax/hosts.hfaxd
 etc/hylafax/dialrules
 etc/hylafax/dialrules.sf-ba
 etc/hylafax/dialrules.europe

@@ -1,16 +1,16 @@
-$NetBSD: patch-ap,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+$NetBSD: patch-ap,v 1.2 1999/08/30 08:16:51 rh Exp $
 
---- etc/Makefile.in.orig	Fri Jan 22 08:02:49 1999
-+++ etc/Makefile.in	Mon Aug  9 23:11:44 1999
+--- etc/Makefile.in.orig	Thu Aug  5 13:11:42 1999
++++ etc/Makefile.in	Mon Aug 30 08:53:10 1999
 @@ -78,14 +78,15 @@
  		-src ${SRCDIR}/faxsetup.$$i -O faxsetup.$$i; \
  	done
  	${PUTSERVER} -F ${SBIN} -m 755 -src probemodem.sh -O probemodem
 -	${PUTSAMPLE} -F ${SPOOL}/etc -m 644 -o xferfaxlog
--	${PUTSAMPLE} -F ${SPOOL}/etc -m 600 -o hosts
+-	${PUTSAMPLE} -F ${SPOOL}/etc -m 600 -o hosts.hfaxd
 +	-${MKDIR} -m 755 ${PREFIX}/etc/hylafax
 +	${PUTSAMPLE} -F ${PREFIX}/etc/hylafax -m 644 -o xferfaxlog
-+	${PUTSAMPLE} -F ${PREFIX}/etc/hylafax -m 600 -o hosts
++	${PUTSAMPLE} -F ${PREFIX}/etc/hylafax -m 600 -o hosts.hfaxd
  	for i in ${DIALRULES}; do \
 -	    ${PUTSERVER} -F ${SPOOL}/etc -m 444 -src ${SRCDIR}/$$i \
 +	    ${PUTSERVER} -F ${PREFIX}/etc/hylafax -m 444 -src ${SRCDIR}/$$i \
