@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:19 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/22 12:27:07 wiz Exp $
 #
 
-DISTNAME=	biew-520
-PKGNAME=	biew-5.2.0
+DISTNAME=	biew-550
+PKGNAME=	biew-5.5.0
 CATEGORIES=	editors
-MASTER_SITES=	ftp://biew.sourceforge.net/pub/biew/5.x/src/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=biew/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://biew.sourceforge.net/en/biew.html
 COMMENT=	Binary viewer/editor
 
-DEPENDS+=	libslang-[0-9]*:../../devel/libslang
-
 ONLY_FOR_PLATFORM=	*-*-i386
+
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 MAKEFILE=	makefile
 
@@ -22,8 +22,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/biew
 	${INSTALL_PROGRAM} ${WRKSRC}/biew ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/bin_rc/biew.hlp ${PREFIX}/share/biew
-	${INSTALL_DATA} ${WRKSRC}/bin_rc/standard.skn ${PREFIX}/share/biew
-	${INSTALL_DATA} ${WRKSRC}/bin_rc/assembly.skn ${PREFIX}/share/biew
+	${INSTALL_DATA} ${WRKSRC}/bin_rc/skn/assembly.skn ${PREFIX}/share/biew
+	${INSTALL_DATA} ${WRKSRC}/bin_rc/skn/golded.skn ${PREFIX}/share/biew
+	${INSTALL_DATA} ${WRKSRC}/bin_rc/skn/insight.skn ${PREFIX}/share/biew
+	${INSTALL_DATA} ${WRKSRC}/bin_rc/skn/standard.skn ${PREFIX}/share/biew
 	${INSTALL_DATA} ${WRKSRC}/doc/biew_en.txt ${PREFIX}/share/doc/biew
 
+.include "../../devel/libslang/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
