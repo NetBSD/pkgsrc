@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1050 2003/11/19 12:50:36 adam Exp $
+$NetBSD: TODO,v 1.1051 2003/11/19 14:02:30 recht Exp $
 
 Suggested new packages
 ======================
@@ -337,6 +337,7 @@ Suggested package updates
 	o postgresql-7.4
 	o proftpd-1.2.9
 	o pureftpd-1.0.16c
+	o py-checker-0.8.13 [recht]
 	o py-curl-7.10.8
 	o py-dns-1.2.0
 	o py-psycopg-1.1.10
@@ -371,7 +372,7 @@ Suggested package updates
 	o stella-1.3
 	o streamtuner-live365-0.3.2 [xtraeme]
 	o subversion-0.32.1 [epg]
-	o subversion-0.33
+	o subversion-0.33.1
 	o swig-1.3.17 [epg]
 	o sylpheed-claws-0.9.6
 	o t1lib-5.0.0
