@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/12/08 09:43:06 wiz Exp $
+# $NetBSD: INSTALL,v 1.2 2001/03/01 19:07:52 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -9,7 +9,6 @@ JB_USER=@JB_USER@
 JB_USERID=@JB_USERID@
 JB_GROUP=@JB_GROUP@
 JB_GROUPID=@JB_GROUPID@
-PREFIX=@PREFIX@
 ADDUSER=@ADDUSER@
 ADDGROUP=@ADDGROUP@
 CHGRP=@CHGRP@
@@ -47,7 +46,7 @@ if [ $? -eq 0 ]; then
 else
 	echo "Creating '${JB_USER}' user..."
 	${ADDUSER} -c "Jitterbug Administrator" -g ${JB_GROUP}          \
-		   -b ${PREFIX} -u ${JB_USERID} ${JB_USER}
+		   -b ${PKG_PREFIX} -u ${JB_USERID} ${JB_USER}
 	echo "Done."
 fi
 
