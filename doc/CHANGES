@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5537 2004/04/11 16:53:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5538 2004/04/11 16:55:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1909,3 +1909,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dap to 2.1.2nb4 [xtraeme 2004-04-11]
 	Updated p5-DBIx-SearchBuilder to 0.99 [recht 2004-04-11]
 	Updated gdcd to 0.2.1nb7 [xtraeme 2004-04-11]
+	Updated tcl-gdbm to 0.10 [minskim 2004-04-11]
