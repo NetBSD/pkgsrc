@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1176 2003/04/30 03:05:06 atatat Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1177 2003/04/30 04:05:48 atatat Exp $
 #
 # This file is in the public domain.
 #
@@ -122,9 +122,6 @@ CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
 RESTRICTED?=		uses Kerberos encryption code
 BUILD_DEFS+=		KERBEROS
 .endif
-
-# Used by packages depending on an OpenGL implementation
-MESA_REQD?=		5.0
 
 PERL5_REQD?=		5.0
 PERL5_PKGSRCDIR?=	../../lang/perl5

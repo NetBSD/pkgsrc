@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2003/03/28 09:42:32 jmc Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/04/30 04:05:49 atatat Exp $
 
 # Latest is:		5.0
 # Default is:		5.0
+MESA_REQD?=		5.0
 
 MESA_VERSION=		${MESA_REQD}
 DISTNAME?=		MesaLib-${MESA_VERSION}
