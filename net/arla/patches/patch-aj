@@ -1,10 +1,27 @@
-$NetBSD: patch-aj,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-aj,v 1.4 2005/03/25 17:40:25 wennmach Exp $
 
 test_rx_clock needs -llwp.
 
+Add target for rxdebug in order to compile non-C99 comformant code with
+option "-fno-strict-aliasing" as a workaround.
+
 --- rx/Makefile.in.orig	2005-03-09 16:44:39.000000000 +0100
 +++ rx/Makefile.in	2005-03-09 16:46:18.000000000 +0100
-492c492
-< test_rx_clock_LDADD = librx.la $(LIBS)
----
-> test_rx_clock_LDADD = librx.la -L../lwp -llwp $(LIBS)
+@@ -489,7 +489,7 @@
+ librx_la_CPPFLAGS = $(DEFS) -DRXDEBUG -DSOFT_ACK
+ man_MANS = rxdebug.1
+ test_rx_clock_SOURCES = test_rx_clock.c
+-test_rx_clock_LDADD = librx.la $(LIBS)
++test_rx_clock_LDADD = librx.la -L../lwp -llwp $(LIBS)
+ rxdebug_SOURCES = rxdebug.c
+ rxdebug_LDADD = librx.la -L../lwp -llwp $(PLWP_LIB_FLAGS) \
+ 	../lib/ko/libko.la $(LIB_roken) $(LIBS)
+@@ -602,6 +602,8 @@
+ rx_trace$(EXEEXT): $(rx_trace_OBJECTS) $(rx_trace_DEPENDENCIES) 
+ 	@rm -f rx_trace$(EXEEXT)
+ 	$(LINK) $(rx_trace_LDFLAGS) $(rx_trace_OBJECTS) $(rx_trace_LDADD) $(LIBS)
++$(rxdebug_OBJECTS): $(rxdebug_SOURCES)
++	$(COMPILE) -fno-strict-aliasing -c $<
+ rxdebug$(EXEEXT): $(rxdebug_OBJECTS) $(rxdebug_DEPENDENCIES) 
+ 	@rm -f rxdebug$(EXEEXT)
+ 	$(LINK) $(rxdebug_LDFLAGS) $(rxdebug_OBJECTS) $(rxdebug_LDADD) $(LIBS)

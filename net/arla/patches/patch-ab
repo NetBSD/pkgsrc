@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-ab,v 1.6 2005/03/25 17:40:25 wennmach Exp $
 
-reorder libs.
+Reorder libs.
 
 --- lib/ko/Makefile.in.orig	Mon Mar 14 11:06:15 2005
 +++ lib/ko/Makefile.in	Mon Mar 14 11:07:19 2005

@@ -1,0 +1,25 @@
+$NetBSD: patch-bj,v 1.4 2005/03/25 17:40:25 wennmach Exp $
+
+Fix gcc warnings on NetBSD-2.0/amd64.
+NB: it seems 'size' is used inconsistently.
+
+--- tools/release-tools/tar-rootify.c.orig	2005-03-23 11:07:28.000000000 +0100
++++ tools/release-tools/tar-rootify.c	2005-03-23 11:23:11.000000000 +0100
+@@ -79,7 +79,7 @@
+     int bufsz = 512;
+     int i, skip = 0, rec = 0;
+     struct posix_header *p;
+-    uint64_t size;
++    uint64_t size = 0;
+     unsigned long cksum, hcksum;
+     int verbose = 0;
+ 
+@@ -118,7 +118,7 @@
+ 	    fprintf(stderr, "type =     %c\n", p->typeflag);
+ 	    fprintf(stderr, "size = %.*s\n", (int)sizeof(p->size), p->size);
+ 	    size = estrntoll(p->size, 12, 8);
+-	    fprintf(stderr, "size = %llo\n", size);
++	    fprintf(stderr, "size = %llo\n", (unsigned long long)size);
+ 	}
+ 
+ 	hcksum = estrntoll(p->chksum, 8, 8);

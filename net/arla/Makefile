@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2005/03/15 15:58:52 wennmach Exp $
+# $NetBSD: Makefile,v 1.42 2005/03/25 17:40:25 wennmach Exp $
 
 DISTNAME=		arla-0.38
-#PKGREVISION=
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
@@ -37,6 +37,11 @@ PKG_FAIL_REASON= "${PKGNAME} requires kernel sources available under \$$BSDSRCDI
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE}
 CONFIGURE_ARGS+=	--enable-shared=no
+
+# Enable one or more of the following kernel compile options as required:
+# (these options must match the compile options of the kernel)
+#CONFIGURE_ENV+=	KERNEL_CPPFLAGS="-DMULTIPROCESSOR -DDEBUG -DDIAGNOSTIC"
+
 MESSAGE_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
 PLIST_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
 FILES_SUBST+=		ARLA_CACHE=${ARLA_CACHE}

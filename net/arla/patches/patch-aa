@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-aa,v 1.6 2005/03/25 17:40:25 wennmach Exp $
 
-from christos
+From christos.
 
 --- nnpfs/bsd/nnpfs_vfsops-common.c.orig	2004-07-22 10:02:16.000000000 -0400
 +++ nnpfs/bsd/nnpfs_vfsops-common.c	2004-12-22 21:28:22.000000000 -0500
