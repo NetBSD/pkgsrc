@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.88 2000/06/02 01:52:10 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.89 2000/06/02 06:08:41 rh Exp $
 ###########################################################################
 
 			==========================
@@ -736,7 +736,7 @@ here, as it just "knows" how to build both static and dynamic
 libraries from a set our source files, thus being platform
 independent. 
 
-Here's how to use libtool in a pkg in seven simple steps:
+Here's how to use libtool in a pkg in six simple steps:
 
 1. Add USE_LIBTOOL= yes to the package Makefile.
 
