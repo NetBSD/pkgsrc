@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/24 22:45:15 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/08/13 09:00:57 recht Exp $
 #
 
 DISTNAME=	guile-pg-0.07
@@ -17,6 +17,8 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-libpq-includes=${PGSQL_PREFIX}/include/postgresql
 
 INFO_FILES=	guile-pg.info
+
+PGSQL_VERSION_REQD=	73
 
 .include "../../lang/guile14/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
