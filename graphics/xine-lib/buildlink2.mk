@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/01/24 00:13:50 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/01/24 09:11:54 tron Exp $
 #
 # This Makefile fragment is included by packages that use xine-lib.
 #
@@ -99,7 +99,6 @@ BUILDLINK_FILES.xine-lib+=	lib/xine/plugins/1.0.0/xineplug_vo_out_syncfb.*
 BUILDLINK_FILES.xine-lib+=	lib/xine/plugins/1.0.0/xineplug_vo_out_xshm.*
 BUILDLINK_FILES.xine-lib+=	lib/xine/plugins/1.0.0/xineplug_vo_out_xv.*
 
-.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
