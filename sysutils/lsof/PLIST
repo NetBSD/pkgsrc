@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/13 13:24:15 atatat Exp $
 sbin/lsof
-man/man1/lsof.1.gz
+man/man8/lsof.8.gz
 share/lsof/00MANIFEST
 share/lsof/00README
 share/lsof/big_brother.perl5
