@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:02 tsarna Exp $
+# $NetBSD: Makefile,v 1.15 1998/09/13 19:35:06 garbled Exp $
 #
 
 DISTNAME=		xfig.3.2.2
@@ -8,7 +8,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	applications/drawing_tools/xfig
 
-MAINTAINER=		root@garbled.futureone.com
+MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://epb1.lbl.gov/BVSmith/xfig/
 
 DEPENDS+=		transfig-3.2.1:../../print/transfig

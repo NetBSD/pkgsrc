@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/08/20 15:17:32 tsarna Exp $
+# $NetBSD: Makefile,v 1.7 1998/09/13 19:35:05 garbled Exp $
 #
 
 DISTNAME=			Xaw-Xpm-1.1
@@ -7,7 +7,7 @@ CATEGORIES=			x11
 MASTER_SITES=			${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=		libs/X
 
-MAINTAINER=			root@garbled.futureone.com
+MAINTAINER=			root@garbled.net
 HOMEPAGE=			http://www.zip.com.au/~bb/XawXpm/
 
 DEPENDS+=			xpm-3.4k:../../graphics/xpm
