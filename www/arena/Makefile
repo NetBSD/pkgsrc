@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2001/08/27 14:35:15 tron Exp $
+# $NetBSD: Makefile,v 1.38 2001/09/20 04:56:21 fredb Exp $
 
 DISTNAME=		arena-0.3.62
+PKGNAME=		arena-0.3.62nb1
 WRKSRC=			${WRKDIR}/Arena-0.3.62
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/
@@ -12,7 +13,7 @@ COMMENT=		Experimental HTML 3 browser, supports math and style sheets
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	YES
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		libwww>=5.2.8:../../www/libwww
+DEPENDS+=		libwww>=5.3.2nb1:../../www/libwww
 DEPENDS+=		png>=1.0.11:../../graphics/png
 
 GNU_CONFIGURE=		YES
@@ -42,7 +43,7 @@ pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Arena/netbsd/arena ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/Arena/${LOWER_OPSYS}/arena ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/Arena/Source/arenarc ${PREFIX}/share/examples/
 	if [ ! -f ${LOCALBASE}/etc/arenarc ]; then \
 	  ${CP} ${PREFIX}/share/examples/arenarc ${LOCALBASE}/etc/; fi
