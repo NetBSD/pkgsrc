@@ -1,4 +1,5 @@
-$NetBSD: patch-aa,v 1.17 2000/04/03 11:01:58 drochner Exp $
+$NetBSD: patch-aa,v 1.18 2001/03/20 00:20:41 fredb Exp $
+
 --- configure.orig	Tue Sep  7 17:21:06 1999
 +++ configure	Sun Apr  2 23:16:38 2000
 @@ -517,9 +517,10 @@
@@ -157,3 +158,11 @@ $NetBSD: patch-aa,v 1.17 2000/04/03 11:01:58 drochner Exp $
  s%@LIBVOLMGT@%$LIBVOLMGT%g
  s%@topdir@%$topdir%g
  s%@RUN_KAPPFINDER@%$RUN_KAPPFINDER%g
+@@ -7567,7 +7608,6 @@
+ 	kdehelp/Makefile \
+ 	kdehelp/index/Makefile \
+ 	kdehelp/search/Makefile \
+-	kdehelp/rman/Makefile \
+ 	kdm/Makefile \
+ 	kdm/config/Makefile \
+ 	kdm/config/kdmrc \
