@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/10/24 22:10:49 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/01/28 14:23:39 wiz Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -33,10 +33,15 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
+	${SED} "s|@PREFIX@|${PREFIX}|g" ${WRKSRC}/docs/jpilot.1 \
+			> ${WRKSRC}/docs/jpilot.1.patched && \
+		${MV} ${WRKSRC}/docs/jpilot.1.patched ${WRKSRC}/docs/jpilot.1
 
 post-install:
-	${INSTALL_DATA_DIR} ${INCDIR} ${HTMLDIR} ${PLUGINSDIR}
+	${INSTALL_DATA_DIR} ${INCDIR} ${HTMLDIR} ${PLUGINSDIR} \
+		${PREFIX}/share/doc/jpilot
 	cd ${WRKSRC}; ${INSTALL_DATA} libplugin.h prefs.h ${INCDIR}
+	${INSTALL_DATA} ${WRKSRC}/BUGS ${PREFIX}/share/doc/jpilot
 	cd ${WRKSRC}/docs; ${INSTALL_DATA} *.html ${HTMLDIR}
 	cd ${WRKSRC}/docs; ${INSTALL_MAN} *.1 ${MAN1DIR}
 	${TOUCH} ${PLUGINSDIR}/.directory
