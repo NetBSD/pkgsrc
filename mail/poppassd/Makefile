@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/05/02 16:16:55 martti Exp $
+# $NetBSD: Makefile,v 1.5 2002/05/03 15:11:06 taca Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -14,7 +14,6 @@ MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		http://www.eudora.com/qpopper/
 COMMENT=		Qualcomm's password change server mainly for Eudora
 
-VERSION=		4.0.4
 USE_BUILDLINK_ONLY=	# defined
 CONFIGURE_ARGS+=	--enable-poppassd
 CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
@@ -31,6 +30,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${LOCALBASE}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/License.txt \
 		${LOCALBASE}/share/doc/poppassd.License;
-	PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
