@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2004/05/15 17:25:42 minskim Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/09/21 16:51:01 jmmv Exp $
 #
 
-DISTNAME=	librsvg-2.6.5
+DISTNAME=	librsvg-2.8.1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
