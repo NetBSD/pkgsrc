@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2276 2003/05/22 07:36:26 wiz Exp $
+$NetBSD: CHANGES,v 1.2277 2003/05/22 09:38:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2071,3 +2071,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kde3-i18n-zu to 3.1.2 [markd 2003-05-22]
 	Updated conserver to 7.2.7 [wiz 2003-05-22]
 	Updated p5-Time-HiRes to 1.47 [wiz 2003-05-22]
+	Updated gcc to 3.2.2nb2 [wiz 2003-05-22]
