@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 1999/12/15 19:33:04 fredb Exp $
+# $NetBSD: Makefile,v 1.16 1999/12/18 02:14:39 wrstuden Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
 # gets built at cross-pkg build time (it's target specific).
 
 DISTNAME=		binutils-2.9.1
-PKGNAME=		cross-binutils-2.9.1.0
+PKGNAME=		cross-binutils-2.9.1.1
 CATEGORIES=		cross lang
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 
@@ -39,7 +39,7 @@ ENABLE_TARGETS+=	alpha-netbsd arm-netbsd \
 
 # we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
 do-install:
-	${MKDIR} ${BINDIR} ${PREFIX}/lib/ldscripts
+	${MKDIR} ${BINDIR} ${PREFIX}/lib/ldscripts ${PREFIX}/include
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${BINDIR}
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${BINDIR}
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/dlltool ${BINDIR}
@@ -55,6 +55,9 @@ do-install:
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/windres ${BINDIR}
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${PREFIX}/lib
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${PREFIX}/lib
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/ld/ldscripts/* ${PREFIX}/lib/ldscripts
 
 .include "../../mk/bsd.pkg.mk"
