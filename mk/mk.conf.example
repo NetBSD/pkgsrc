@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.19 1998/07/13 13:08:06 mycroft Exp $
+# $NetBSD: mk.conf.example,v 1.20 1998/07/31 14:56:46 tv Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -17,9 +17,16 @@ MANZ=		1		# gzip manual pages at installation time
                                 # Possible: any path
                                 # Default: /usr/pkg
 
-#X11BASE=	/usr/X11R6	# Where X-based packages will be installed
+#X11BASE=	/usr/X11R6	# Where X11 is installed on the system
+                                # (and the default install path of X11 pkgs)
                                 # Possible: any path
                                 # Default: /usr/X11R6
+
+#USE_LOCALBASE_FOR_X11=		# Use the value of LOCALBASE, not X11BASE,
+                                # for installing X11-dependent pkgs
+                                # (requires X11R6.1, or NetBSD's X sets)
+                                # Possible: defined, not defined
+                                # Default: not defined
 
 #PACKAGES=       ${PKGSRCDIR}/packages/${MACHINE_ARCH}
                                 # Store generated packages on a per-
