@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2619 2004/12/01 16:44:02 wiz Exp $
+$NetBSD: TODO,v 1.2620 2004/12/01 20:15:42 darcy Exp $
 
 Suggested new packages
 ======================
@@ -1187,6 +1187,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wdm-1.27
 	o webmin-1.170
+	o webware-0.8.1 [http://www.webwareforpython.org/]
 	o weechat-0.0.8
 	o wesnoth-0.8.7
 	o windowlab-1.24
