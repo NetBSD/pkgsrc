@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:17:49 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/19 16:39:42 wiz Exp $
 #
 
-PKGNAME=		arping-1.08
-PKGREVISION=	1
 DISTNAME=		arping-2.01
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.habets.pp.se/pub/synscan/
 
