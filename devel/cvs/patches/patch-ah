@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 1999/03/11 09:48:43 tron Exp $
+
+--- src/lock.c.orig	Wed Mar  4 06:41:50 1998
++++ src/lock.c	Thu Mar 11 10:40:35 1999
+@@ -243,7 +243,7 @@
+     FILE *fp;
+     char *tmp;
+ 
+-    if (noexec)
++    if (noexec|| readonlyfs)
+ 	return (0);
+ 
+     /* we only do one directory at a time for read locks! */
