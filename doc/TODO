@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.78 2002/12/17 19:41:18 wiz Exp $
+$NetBSD: TODO,v 1.79 2002/12/18 04:01:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -218,7 +218,7 @@ Suggested package updates
 	o scmxx-0.6.3.3
 	o scribus-0.8
 	o scrollkeeper-0.3.11
-	o sed-4.0.4
+	o sed-4.0.5
 	o sendfile-20010424
 	o shorten-3.5.0
 	o siag-office-3.5.3
