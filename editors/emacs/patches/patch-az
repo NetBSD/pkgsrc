@@ -1,7 +1,7 @@
-$NetBSD: patch-az,v 1.1 1999/02/04 14:54:25 frueauf Exp $
+$NetBSD: patch-az,v 1.2 1999/06/04 03:42:35 mycroft Exp $
 
---- src/unexelf.c.orig	Mon Aug 10 04:33:12 1998
-+++ src/unexelf.c	Thu Feb  4 12:46:44 1999
+--- unexelf.c.orig	Sun Aug  9 22:33:12 1998
++++ unexelf.c	Thu Jun  3 23:31:50 1999
 @@ -501,9 +501,16 @@
  #  include <sys/exec_ecoff.h>
  #  define HDRR		struct ecoff_symhdr
@@ -28,7 +28,7 @@ $NetBSD: patch-az,v 1.1 1999/02/04 14:54:25 frueauf Exp $
 +# define HAVE_MIPS_SBSS
 +#endif
 +
-+#if defined (__mips__) && (defined(__NetBSD__) || defined(__OpenBSD__))
++#if (defined (__mips__) || defined (__powerpc__)) && (defined(__NetBSD__) || defined(__OpenBSD__))
 +# define HAVE_MIPS_SBSS
 +#endif
 +
@@ -244,7 +244,7 @@ $NetBSD: patch-az,v 1.1 1999/02/04 14:54:25 frueauf Exp $
  	  || !strcmp ((old_section_names + NEW_SECTION_H (n).sh_name),
  		      ".data1"))
  	src = (caddr_t) OLD_SECTION_H (n).sh_addr;
-@@ -993,22 +1077,11 @@
+@@ -993,18 +1077,7 @@
  	  == 0)
  	{
  	  pHDRR symhdr = (pHDRR) (NEW_SECTION_H (nn).sh_offset + new_base);
@@ -264,12 +264,7 @@ $NetBSD: patch-az,v 1.1 1999/02/04 14:54:25 frueauf Exp $
  	}
  #endif /* __alpha__ */
  
--#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
-+#ifdef HAVE_MIPS_SBSS
-       if (NEW_SECTION_H (nn).sh_type == SHT_MIPS_DEBUG && old_mdebug_index) 
-         {
- 	  int diff = NEW_SECTION_H(nn).sh_offset 
-@@ -1017,20 +1090,17 @@
+@@ -1017,20 +1090,11 @@
  
  	  if (diff)
  	    {
@@ -284,18 +279,12 @@ $NetBSD: patch-az,v 1.1 1999/02/04 14:54:25 frueauf Exp $
 -	      phdr->cbFdOffset   += diff;
 -	      phdr->cbRfdOffset  += diff;
 -	      phdr->cbExtOffset  += diff;
-+#if defined ( __sony_news) && defined (_SYSTYPE_SYSV)
 +	      relocate_ecoff_symhdr(phdr, diff);
-+#else
-+	      /* xxxBSD with  GNU binutils has .mdebug, but not ecoff(???)  */
-+#ifdef DEBUG
-+	      printf("Dont know how to relocate mdebug syms by %0x\n", diff);
-+#endif
-+#endif
  	    }
  	}
 -#endif /* __sony_news && _SYSTYPE_SYSV */
-+#endif /* HAVE_MIPS_SBSS */
++#endif /* __sony_news and systype_sysv */
++
        /* If it is the symbol table, its st_shndx field needs to be patched.  */
        if (NEW_SECTION_H (nn).sh_type == SHT_SYMTAB
  	  || NEW_SECTION_H (nn).sh_type == SHT_DYNSYM)
