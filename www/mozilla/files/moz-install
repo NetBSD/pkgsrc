@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.7 2003/05/13 10:23:19 markd Exp $
+# $NetBSD: moz-install,v 1.8 2004/01/17 00:04:49 taya Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -36,6 +36,12 @@ done
 for i in `${SED} -n -e '/^@comment begin DSO$/,/^@comment end DSO$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${src} ${PREFIX}/$i
+done
+
+# install PKGCONFIG
+for i in `${SED} -n -e '/^@comment begin PKGCONFIG$/,/^@comment end PKGCONFIG$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | ${SED} -e "s@lib/pkgconfig@build/unix@"`;
+	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
 # install DATA

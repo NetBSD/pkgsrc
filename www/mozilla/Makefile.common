@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2004/01/12 11:44:47 grant Exp $
+# $NetBSD: Makefile.common,v 1.26 2004/01/17 00:04:49 taya Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -20,12 +20,17 @@ USE_PERL5=	build
 USE_GMAKE=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/build/unix/mozilla-gtkmozembed.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/build/unix/mozilla-js.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/build/unix/mozilla-nspr.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/build/unix/mozilla-nss.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/build/unix/mozilla-plugin.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/build/unix/mozilla-xpcom.pc.in
 CONFIGURE_ARGS+= --disable-tests \
 		--disable-debug \
 		--disable-pedantic \
 		--with-system-jpeg=${BUILDLINK_PREFIX.jpeg} \
 		--with-system-png=${BUILDLINK_PREFIX.png} \
-		--enable-mathml \
 		--enable-crypto
 
 SHAREMODE?=	644
@@ -36,11 +41,18 @@ AUTOCONF_REQD= 2.13
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
 .include	"../../graphics/freetype2/buildlink2.mk"
-.include	"../../graphics/gdk-pixbuf/buildlink2.mk"
 .include	"../../graphics/jpeg/buildlink2.mk"
 .include	"../../graphics/png/buildlink2.mk"
+.ifdef MOZILLA_USE_GTK2
+.include	"../../net/libIDL/buildlink2.mk"
+.include	"../../x11/gtk2/buildlink2.mk"
+CONFIGURE_ARGS+= --enable-default-toolkit=gtk2
+.else
+.include	"../../graphics/gdk-pixbuf/buildlink2.mk"
 .include	"../../net/ORBit/buildlink2.mk"
 .include	"../../x11/gtk/buildlink2.mk"
+CONFIGURE_ARGS+= --enable-default-toolkit=gtk
+.endif
 
 # NetBSD-*-m68k builds, but "regchrome" dumps core.
 NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
@@ -58,6 +70,10 @@ CONFIGURE_ARGS+=	--enable-svg
 
 .ifdef BUILD_CALENDAR
 CONFIGURE_ARGS+=	--enable-calendar
+.endif
+
+.ifdef BUILD_MATHML
+CONFIGURE_ARGS+=	--enable-mathml
 .endif
 
 .if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
