@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/07/15 12:27:36 kleink Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/02 10:57:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.0
@@ -13,6 +13,9 @@ RESTRICTED=	"Original installer required to redistribute."
 
 NO_BUILD=	YES
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
 .if !exists(/emul/linux/lib/ld-linux.so.1)
 IGNORE=	requires Linux glibc2 libraries - see compat_linux(8)
@@ -31,11 +34,22 @@ DISTNAME=	linux-ar-40
 .else
 DISTNAME=	${PKGNAME}
 .endif
-
 ONLY_FOR_PLATFORM=	*-*-i386
+PLATFORM=	intellinux
 # *-*-alpha *-*-sparc
-
 WRKSRC=		${WRKDIR}/ILINXR.install
+.elif ${OPSYS} == "SunOS"
+DISTNAME=	sunsparc-arws-40
+WRKSRC=		${WRKDIR}/SSOLRS.install
+PLATFORM=	sparcsolaris
+post-patch:
+	${CHMOD} -R o+rwx ${WRKSRC}
+.endif
+
+PLIST_SRC=	${WRKDIR}/PLIST-src
+
+pre-install:
+	${SED} -e 's|@PLATFORM@|${PLATFORM}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 do-install:
 	@${MKDIR} ${PREFIX}/Acrobat4
