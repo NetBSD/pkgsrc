@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/01 19:02:17 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/02 20:35:09 tron Exp $
 #
 # Optionally define:
 #
@@ -29,7 +29,7 @@ _INCOMPAT_CURSES+=      NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
 # the safe side.  We can narrow down the match when we have better
 # information.
 #
-_INCOMPAT_CURSES+=	SunOS-5.[0-8]-*
+_INCOMPAT_CURSES+=	SunOS-*-*
 INCOMPAT_CURSES?=	# empty
 .  for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
