@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/01/05 23:34:03 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2004/01/06 19:12:33 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -36,7 +36,7 @@ post-install:
 
 # Debian doesn't have -ltermcap, use -lncurses instead
 .if ${OPSYS} == "Linux" && ${LOWER_VENDOR} == "debian"
-BUILDLINK_TRANSFORM+=	S:-liconv:
+BUILDLINK_TRANSFORM+=	l:termcap:
 .  include "../../devel/ncurses/buildlink3.mk"
 .endif
 
