@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/22 08:30:30 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/11 12:20:03 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -49,7 +49,7 @@ MAKE_FLAGS+=	UNIX_CAN_BUILD_STATIC=0
 
 .include "../../converters/libiconv/buildlink2.mk"
 
-.if defined(ICONV_IS_GNU)
+.if defined(ICONV_TYPE) && (${ICONV_TYPE} == "gnu")
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 .endif
 

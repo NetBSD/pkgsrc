@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.37 2004/02/11 12:20:03 jlam Exp $
 
 DISTNAME=		gnome-vfs-1.0.5
 PKGREVISION=		5
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 .include "../../converters/libiconv/buildlink2.mk"
 
-.if defined(ICONV_IS_GNU)
+.if defined(ICONV_TYPE) && (${ICONV_TYPE} == "gnu")
 CONFIGURE_ARGS+=	--with-libiconv=yes
 .endif
 
