@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/05/31 21:38:51 kristerw Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/11 06:34:32 jlam Exp $
 
 DISTNAME=	uae-0.8.16
 PKGNAME=	${DISTNAME}nb1
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 # we use a brute force method to avoid detection of gtk+.
 CONFIGURE_ARGS+=	--enable-dga --enable-vidmode \
 			--with-gtk-prefix=${WRKDIR}
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} readdisk uae ${PREFIX}/bin

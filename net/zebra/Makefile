@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/06/11 02:05:14 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2001/06/11 06:34:47 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -44,7 +44,6 @@ CONFIGURE_ARGS+=	--disable-ripngd
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LDFLAGS} ${LIBS}"
 
 pre-configure:

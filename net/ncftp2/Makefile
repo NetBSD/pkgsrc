@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/06/11 02:05:13 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2001/06/11 06:34:46 jlam Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -13,7 +13,6 @@ COMMENT=		FTP replacement with advanced user interface
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-extra-dirs
 CONFIGURE_ARGS+=	--disable-ncurses
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		ac_cv_lib_intl_strftime=no
 
 .include "../../mk/bsd.prefs.mk"

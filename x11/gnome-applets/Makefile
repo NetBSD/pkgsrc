@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/04/07 10:58:33 rh Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/11 06:34:57 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.1
@@ -19,7 +19,6 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 
 AUTOGEN_ENV=		NOCONFIGURE=1

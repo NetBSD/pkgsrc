@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/06/11 02:05:13 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2001/06/11 06:34:47 jlam Exp $
 
 DISTNAME=		samba-2.2.0
 PKGNAME=		${DISTNAME}nb1
@@ -61,8 +61,6 @@ CONFIGURE_ARGS+=	--with-pam
 # The following are Linux-only options.
 CONFIGURE_ARGS+=	--without-smbwrapper
 CONFIGURE_ARGS+=	--without-smbmount
-
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 INSTALL_FILE=		${WRKDIR}/INSTALL
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL

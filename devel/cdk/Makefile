@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/05/17 08:38:42 abs Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/11 06:34:26 jlam Exp $
 #
 
 DISTNAME=		latestCDK
@@ -17,7 +17,6 @@ BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses.h
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 ALL_TARGET=		default
 

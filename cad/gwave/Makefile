@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 13:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:19 jlam Exp $
 #
 
 DISTNAME=	gwave-20001123
@@ -16,7 +16,6 @@ GNU_CONFIGURE=	YES
 # LDFLAGS to get -lreadline
 # CPPFLAGS to get -I${LOCALBASE}/include for readline/readline.h
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV+=	LDFLAGS+="${LDFLAGS}" CPPFLAGS="${CPPFLAGS}"
 
 post-extract:
 	${CP} ${FILESDIR}/sp2sp.1 ${WRKSRC}/doc/sp2sp.1

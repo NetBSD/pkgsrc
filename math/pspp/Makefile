@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/03/27 03:20:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/06/11 06:34:43 jlam Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -23,7 +23,6 @@ GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 USE_LIBINTL=	yes
 CPPFLAGS+=	-Dunix=1
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
 
 pre-configure:
