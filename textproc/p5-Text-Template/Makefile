@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:43 veego Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/22 09:45:21 martti Exp $
 #
 
-DISTNAME=       Text-Template-1.31
+DISTNAME=       Text-Template-1.42
 PKGNAME=        p5-${DISTNAME}
 SVR4_PKGNAME=	p5tte
 CATEGORIES=	textproc perl5
@@ -15,7 +15,6 @@ USE_PERL5=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Text/Template/.packlist
 
 do-configure:
-	@cd ${WRKSRC} && ${ECHO} >.test && \
-		${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
