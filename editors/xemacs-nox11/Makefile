@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/09 07:16:13 minskim Exp $
 
 DISTNAME=	xemacs-21.4.12
 PKGNAME=	xemacs-nox11-21.4.12
@@ -23,7 +23,7 @@ PATCHDIR=	${.CURDIR}/../xemacs/patches
 USE_BUILDLINK2=	YES
 #USE_X11=	YES
 
-BUILD_DEFS+=	USE_LDAP USE_XFACE
+BUILD_DEFS+=	USE_LDAP USE_XFACE XEMACS_USE_CANNA
 DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -61,7 +61,7 @@ WITH_XFACE=	--with-xface
 WITH_XFACE=	--without-xface
 .endif
 
-.if defined(EMACS_CANNA) && (${EMACS_CANNA} == "YES")
+.if defined(XEMACS_USE_CANNA) && (${XEMACS_USE_CANNA} == "YES")
 .  include "../../inputmethod/canna-lib/buildlink2.mk"
 WITH_CANNA=	--with-canna
 .else
