@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/23 00:32:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/13 03:15:49 minskim Exp $
 lib/X11/fonts/TTF/Eunjin.ttf
 lib/X11/fonts/TTF/Hmfs.ttf
 lib/X11/fonts/TTF/Ongdalsam.ttf
-share/doc/alee-ttf/Copyright
+share/doc/alee-ttf/COPYING
 @dirrm share/doc/alee-ttf
