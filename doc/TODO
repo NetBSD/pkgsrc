@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.517 2003/05/05 16:52:02 salo Exp $
+$NetBSD: TODO,v 1.518 2003/05/05 20:27:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -168,7 +168,6 @@ Suggested package updates
 	o libxml-2.5.7
 	o lilypond-1.6.8
 	o lmbench-2.0.4
-	o lmule-1.2.0 [pkg/21273]
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
 	o lyx-1.3.1 [pkg/20805]
