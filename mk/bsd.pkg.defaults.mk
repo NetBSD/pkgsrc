@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.39 2002/03/03 23:29:48 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.40 2002/03/05 12:57:38 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -144,9 +144,18 @@ PATCH_FUZZ_FACTOR?= -F0
 #
 # Default: none
 
+#ACCEPTABLE_LICENSES+=	IDEA-licence
+# Enable it if you accept the license terms for libidea
+# and would like to build libidea.  see pkgsrc/security/libidea.
 #ACCEPTABLE_LICENSES+=	adobe-acrobat-license
 # Enable it if you accept the usage policy for Adobe Acrobat
 # and would like to build it.  see pkgsrc/print/acroread.
+#ACCEPTABLE_LICENSES+=	amiwm-license
+# Enable it if you accept the license terms for amiwm
+# and would like to build amiwm.  see pkgsrc/wm/amiwm.
+#ACCEPTABLE_LICENSES+=	astrolog-license
+# Enable it if you accept the license terms for astrolog
+# and would like to build astrolog.  see pkgsrc/misc/astrolog.
 #ACCEPTABLE_LICENSES+=	citrix_ica-license
 # Enable it if you accept the license proposed at
 # http://www.citrix.com/download/unix-downloads.htm
@@ -155,10 +164,22 @@ PATCH_FUZZ_FACTOR?= -F0
 #ACCEPTABLE_LICENSES+=	csound-license
 # Enable it if you accept the redistribution/use license for csound and would
 # like to build csound.  see pkgsrc/licenses/csound-license
+#ACCEPTABLE_LICENSES+=	cyrus-imapd-license
+# Enable it if you accept the license terms for cyrus-imapd
+# and would like to build cyrus-imapd.  see pkgsrc/mail/cyrus-imapd.
+#ACCEPTABLE_LICENSES+=	emiclock-license
+# Enable it if you accept the license terms for emiclock
+# and would like to build it.  see pkgsrc/time/emiclock.
 #ACCEPTABLE_LICENSES+=	fee-based-commercial-use
 # Enable it if you are okay to build/use third-party software, which require
 # fees for commercial use (i.e. you are willing to pay, or you are
 # non-commercial).
+#ACCEPTABLE_LICENSES+=	jdk-license
+# Enable it if you accept the license terms for jdk
+# and would like to build jdk.  see pkgsrc/lang/jdk.
+#ACCEPTABLE_LICENSES+= jdk13-license
+# Enable it if you accept the download license for Sun JDK1.3 and would
+# like to build Sun JDK13.  see pkgsrc/langun-jre13.
 #ACCEPTABLE_LICENSES+=	kermit-license
 # Enable it if you accept the redistribution license for ckermit and would
 # like to build ckermit.  see pkgsrc/licenses/kermit-license
@@ -166,10 +187,22 @@ PATCH_FUZZ_FACTOR?= -F0
 # Enable it if you are okay to build/use third-party software, which has
 # restriction on redistribution (i.e. you will obey the restriction on
 # redistribution it imposes).
+#ACCEPTABLE_LICENSES+=	majordomo-license
+# Enable it if you accept the license terms for majordomo
+# and would like to build majordomo.  see pkgsrc/mail/majordomo.
 #ACCEPTABLE_LICENSES+=	maude-license
 # Enable it if you filled out and returned the license found at
 # http://maude.csl.sri.com/license/license.html
 # and want to build maude.
+#ACCEPTABLE_LICENSES+=	mosaic-license
+# Enable it if you accept the license terms for mosaic
+# and would like to build mosaic.  see pkgsrc/www/Mosaic.
+#ACCEPTABLE_LICENSES+=	mush-license
+# Enable it if you accept the license terms for mush
+# and would like to build mush.  see pkgsrc/mail/mush.
+#ACCEPTABLE_LICENSES+=	nntpclnt-license
+# Enable it if you accept the license terms for nntpclnt
+# and would like to build nntpclnt.  see pkgsrc/news/nntpclnt.
 #ACCEPTABLE_LICENSES+=	no-commercial-use
 # Enable it if you are okay to build/use third-party software, which is not
 # for commercial use (i.e. you are non-commerical)
@@ -183,17 +216,26 @@ PATCH_FUZZ_FACTOR?= -F0
 # Enable if you agree with the license for using the PalmOS SDK.
 # Used by pkgsrc/devel/palmos-includes. For the license, see
 # pkgsrc/licenses/palmos-sdk-license.
+#ACCEPTABLE_LICENSES+=	pine-license
+# Enable it if you accept the license terms for pine
+# and would like to build pine.  see pkgsrc/mail/pine.
+#ACCEPTABLE_LICENSES+=	portsentry-license
+# Enable it if you accept the license terms for portsentry
+# and would like to build portsentry.  see pkgsrc/security/portsentry.
 #ACCEPTABLE_LICENSES+=	shareware
 # Enable it if you are okay to build/use shareware.
+#ACCEPTABLE_LICENSES+=	srp_client-license
+# Enable it if you accept the license terms for srp_client
+# and would like to build srp_client.  see pkgsrc/security/srp_client.
 #ACCEPTABLE_LICENSES+=	sun-jsdk20-license
 # Enable it if you accept the download license for Sun JSDK and would
 # like to build Sun JSDK.  see pkgsrc/lang/jdk.
-#ACCEPTABLE_LICENSES+= jdk13-license
-# Enable it if you accept the download license for Sun JDK1.3 and would
-# like to build Sun JDK13.  see pkgsrc/langun-jre13.
 #ACCEPTABLE_LICENSES+=	sun-swing-license
 # Enable it if you accept the download license for Sun's Swing (JFC) toolkit
 # and would like to build JFC.  see pkgsrc/x11/swing.
+#ACCEPTABLE_LICENSES+=	trn-license
+# Enable it if you accept the license terms for trn
+# and would like to build trn.  see pkgsrc/news/trn.
 #ACCEPTABLE_LICENSES+=	unarj-license
 # Enable it if you accept the license terms for the unarj archiver
 # and would like to build unarj.  see pkgsrc/archivers/unarj.
@@ -203,48 +245,6 @@ PATCH_FUZZ_FACTOR?= -F0
 #ACCEPTABLE_LICENSES+=	zoo-license
 # Enable it if you accept the license terms for the zoo archiver
 # and would like to build zoo.  see pkgsrc/archivers/zoo.
-#ACCEPTABLE_LICENSES+=	emiclock-license
-# Enable it if you accept the license terms for emiclock
-# and would like to build it.  see pkgsrc/time/emiclock.
-#ACCEPTABLE_LICENSES+=	nntpclnt-license
-# Enable it if you accept the license terms for nntpclnt
-# and would like to build nntpclnt.  see pkgsrc/news/nntpclnt.
-#ACCEPTABLE_LICENSES+=	trn-license
-# Enable it if you accept the license terms for trn
-# and would like to build trn.  see pkgsrc/news/trn.
-#ACCEPTABLE_LICENSES+=	cyrus-imapd-license
-# Enable it if you accept the license terms for cyrus-imapd
-# and would like to build cyrus-imapd.  see pkgsrc/mail/cyrus-imapd.
-#ACCEPTABLE_LICENSES+=	majordomo-license
-# Enable it if you accept the license terms for majordomo
-# and would like to build majordomo.  see pkgsrc/mail/majordomo.
-#ACCEPTABLE_LICENSES+=	mush-license
-# Enable it if you accept the license terms for mush
-# and would like to build mush.  see pkgsrc/mail/mush.
-#ACCEPTABLE_LICENSES+=	pine-license
-# Enable it if you accept the license terms for pine
-# and would like to build pine.  see pkgsrc/mail/pine.
-#ACCEPTABLE_LICENSES+=	mosaic-license
-# Enable it if you accept the license terms for mosaic
-# and would like to build mosaic.  see pkgsrc/www/Mosaic.
-#ACCEPTABLE_LICENSES+=	portsentry-license
-# Enable it if you accept the license terms for portsentry
-# and would like to build portsentry.  see pkgsrc/security/portsentry.
-#ACCEPTABLE_LICENSES+=	srp_client-license
-# Enable it if you accept the license terms for srp_client
-# and would like to build srp_client.  see pkgsrc/security/srp_client.
-#ACCEPTABLE_LICENSES+=	jdk-license
-# Enable it if you accept the license terms for jdk
-# and would like to build jdk.  see pkgsrc/lang/jdk.
-#ACCEPTABLE_LICENSES+=	IDEA-licence
-# Enable it if you accept the license terms for libidea
-# and would like to build libidea.  see pkgsrc/security/libidea.
-#ACCEPTABLE_LICENSES+=	amiwm-license
-# Enable it if you accept the license terms for amiwm
-# and would like to build amiwm.  see pkgsrc/wm/amiwm.
-#ACCEPTABLE_LICENSES+=	astrolog-license
-# Enable it if you accept the license terms for astrolog
-# and would like to build astrolog.  see pkgsrc/misc/astrolog.
 
 #SPECIFIC_PKGS=
 # Don't use the default of all packages (from the top-level of the
