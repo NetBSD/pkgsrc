@@ -1,20 +1,26 @@
-$NetBSD: distinfo,v 1.4 2002/04/28 14:44:13 tron Exp $
+$NetBSD: distinfo,v 1.5 2003/01/19 21:31:09 hubertf Exp $
 
-SHA1 (csound/Csound4.18.tar.gz) = 79c0f9c6bc47efe38290b6bf5f5b39f09b4c3db7
-Size (csound/Csound4.18.tar.gz) = 1024507 bytes
-SHA1 (patch-aa) = e6d0bc9090c3683a01b793cd31893bf69eb971c6
+SHA1 (csound/Csound4.23.tar.gz) = 15b18ee60b4690aa48593dc3b5d44a9473d0cb16
+Size (csound/Csound4.23.tar.gz) = 1172388 bytes
+SHA1 (patch-aa) = de2db03ecabf8d392eafaeb022d1122af264f23d
 SHA1 (patch-ab) = 3301b22ea79b0b87a4323835050f88eb3975c40e
-SHA1 (patch-ac) = 183386b90a0aabb3d8f4d6c80b430e4db565c396
-SHA1 (patch-ad) = a09ad93b20b367d74e441736dfe267a9f4e30df5
-SHA1 (patch-ae) = c9806815a5a1599d9d0f173138a59d68c31d7a54
-SHA1 (patch-af) = fa3bb19ec3b47bbf8797323f89e593b2bdab0821
-SHA1 (patch-ag) = 08d3ab428b82927095de3611800724bd5f5c9649
-SHA1 (patch-ai) = 7766101a8943fd66bf5b50c2aebefc741feb0c45
-SHA1 (patch-ak) = fe5588a4157d6900f102678043df4bac7beab663
+SHA1 (patch-ac) = 7b4838120b3337277732075fa4253090c6a892a4
+SHA1 (patch-ad) = 8b3bbddf40a59ff2ee5165eb03cc13e8b8b7d71d
+SHA1 (patch-ae) = 7a0840abf9bd6630205934fab8dd4a7b42d04e1a
+SHA1 (patch-af) = 59c0726958844315255f360f3ab6dfe2ed538d3d
+SHA1 (patch-ag) = 613350099e4890efa79de07c820325423fa8e13b
+SHA1 (patch-ai) = a66207be90ff96c975d906aa716b9ced63d021f2
 SHA1 (patch-al) = b4e8ec2ba935e205bd28aa7ffdfe4d0def7dc4dc
 SHA1 (patch-am) = f925c70452402bf90f63b953fa1b6ef02480d912
-SHA1 (patch-ap) = 1d7bcb4313f6b89e69ff8f87df31ce4f35dbb5f1
+SHA1 (patch-ap) = da2f992df5be8a9eaf888aee70ba84bd82252965
 SHA1 (patch-aq) = ba44c4a8fb1ccb3bde72d1a28a7943b08e418bc2
-SHA1 (patch-ar) = f57ecfcd3481c22f949c749e4f4b20f05b2f9c9b
+SHA1 (patch-ar) = 3219f640f11654b1502a4a9aebfadd4661efbcac
 SHA1 (patch-as) = a3c0097b29188c82432a07de9e5ef8ca7492feaf
-SHA1 (patch-at) = 18dfab013d17e29583bdf74c59383a56d67a1e86
+SHA1 (patch-at) = 1841be062be33ea5f1cdad561bb106e28d69ffab
+SHA1 (patch-au) = 8779283f3c375ee036af442dc28168f69e71e86e
+SHA1 (patch-av) = 8ab462bcd3ad550013d3b6e939f8fbe960b65b5c
+SHA1 (patch-aw) = a23249d81ebea09fa2bead35f39041e0e643d9a7
+SHA1 (patch-ax) = 84479915449e6dfddcd0c31f38418238bacbd013
+SHA1 (patch-ay) = 510334f831598ea5d423f798faeb6b991cb4c880
+SHA1 (patch-az) = a7a90801511f5142e797537cf9d62ff4f322e273
+SHA1 (patch-ba) = 5fba504106a30258308ef01b6900854251087e4b

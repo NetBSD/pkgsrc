@@ -17,15 +17,11 @@
 #include "soundio.h"
 #include "rtNetBSD.h"
 
-static int dspfd;
+static int dspfd_in = -1, dspfd_out = -1;
 
 static  int     ishift = 0, oshift = 0, oMaxLag;
-extern  long    nrecs;
-        long    inrecs;
 extern  OPARMS  O;
-extern int Linefd;
 #ifdef PIPES
-extern FILE* Linepipe;
 #  define _pclose pclose
 #endif
 
@@ -43,7 +39,7 @@ static int getshift(int dsize)  /* turn sample- or frame-size into shiftsize */
   
 
 void display_audio_info(
-	int fd,
+	int dspfd,
 	const char *message,
 	audio_info_t *info)
 {
@@ -51,7 +47,7 @@ void display_audio_info(
 	char *encoding_name;
 
 	encoding.index = info->play.encoding;
-	if (ioctl(fd, AUDIO_GETENC, &encoding) == -1) {
+	if (ioctl(dspfd, AUDIO_GETENC, &encoding) == -1) {
 		asprintf(&encoding_name, "%d", info->play.encoding);
 	} else {
 		encoding_name = strdup(encoding.name);
@@ -66,10 +62,10 @@ void display_audio_info(
 }
 
 void setsndparms(
-	int fd,
+	int dspfd,
 	int format,
-	int nchnls,
-	MYFLT esr, 
+	int nchanls,
+	float sr, 
 	unsigned bufsiz)
 {
 	audio_info_t info;
@@ -113,8 +109,8 @@ void setsndparms(
 		die("unknown sample format");
 	}
 
-	info.play.channels = nchnls;
-	info.play.sample_rate = (unsigned int) esr;
+	info.play.channels = nchanls;
+	info.play.sample_rate = (unsigned int) sr;
 
 	/* set DMA buffer fragment size to Csound's output buffer size */
 	/*
@@ -137,15 +133,15 @@ void setsndparms(
 	if (info.hiwat == 0)
 		info.hiwat = 65536;
 
-	if (ioctl(fd, AUDIO_SETINFO, &info) == -1) {
-		display_audio_info(fd, "requested", &info);
-		if (ioctl(fd, AUDIO_GETINFO, &info) != -1)
-			display_audio_info(fd, "got", &info);
+	if (ioctl(dspfd, AUDIO_SETINFO, &info) == -1) {
+		display_audio_info(dspfd, "requested", &info);
+		if (ioctl(dspfd, AUDIO_GETINFO, &info) != -1)
+			display_audio_info(dspfd, "got", &info);
 		die("unable to configure soundcard");
 	}
 }
 
-int find_mixer_label(int fd, int class, const char *name)
+int find_mixer_label(int dspfd, int class, const char *name)
 {
 	int i;
 	int mclass;
@@ -154,7 +150,7 @@ int find_mixer_label(int fd, int class, const char *name)
 
         for (i = 0; ; i++) {
                 info.index = i;
-                if (ioctl(fd, AUDIO_MIXER_DEVINFO, &info) < 0)
+                if (ioctl(dspfd, AUDIO_MIXER_DEVINFO, &info) < 0)
                         break;
 		mclass = info.mixer_class;
 		if ((info.index == mclass || class == mclass) &&
@@ -168,8 +164,7 @@ int find_mixer_label(int fd, int class, const char *name)
 
 void setvolume(unsigned volume)
 {
-	int fd;
-	int i;
+	int mixfd;
 	int output_class;
 	int vol_output;
 	mixer_devinfo_t info;
@@ -177,39 +172,38 @@ void setvolume(unsigned volume)
 
 	/* volume must be between 0 and 255 */
 
-	if ((fd = open(NETBSD_MIXER, O_WRONLY)) == -1)
+	if ((mixfd = open(NETBSD_MIXER, O_WRONLY)) == -1)
 		die("unable to open soundcard mixer for setting volume");
 
-	output_class = find_mixer_label(fd, 0, "outputs");
-	vol_output = find_mixer_label(fd, output_class, "master");
+	output_class = find_mixer_label(mixfd, 0, "outputs");
+	vol_output = find_mixer_label(mixfd, output_class, "master");
 
 	if (vol_output == -1)
 		die("Could not find mixer control for audio output.");
 
 
 	info.index = vol_output;
-	ioctl(fd, AUDIO_MIXER_DEVINFO, &info);
+	ioctl(mixfd, AUDIO_MIXER_DEVINFO, &info);
 
 	value.dev = vol_output;
 	value.type = info.type;
 	value.un.value.num_channels = 2;
-	if (ioctl(fd, AUDIO_MIXER_READ, &value) < 0) {
+	if (ioctl(mixfd, AUDIO_MIXER_READ, &value) < 0) {
 		value.un.value.num_channels = 1;
-		if (ioctl(fd, AUDIO_MIXER_READ, &value) < 0)
+		if (ioctl(mixfd, AUDIO_MIXER_READ, &value) < 0)
 			die("unable to read mixer on soundcard"); 
 	}
 
 	value.un.value.level[0] = 192;
 	value.un.value.level[1] = 192;
-	if (ioctl(fd, AUDIO_MIXER_WRITE, &value) < 0) {
+	if (ioctl(mixfd, AUDIO_MIXER_WRITE, &value) < 0) {
 		die("unable to set output volume on soundcard"); 
 	}
 }
 
 
-void NetBSD_open(int nchnls, int dsize, MYFLT esr, int scale, int audio_mode)
+void NetBSD_open(int nchanls, int dsize, float sr, int scale, int audio_mode)
 {
-	int dup;
 	int wbufsiz;
 	int audio_props;
 	audio_device_t device_info;
@@ -223,31 +217,31 @@ void NetBSD_open(int nchnls, int dsize, MYFLT esr, int scale, int audio_mode)
 	wbufsiz = oMaxLag * O.insampsiz;
 	switch (audio_mode) {
 	case NETBSD_RECORD:
-		if ((dspfd = open(NETBSD_SAMPLER, O_RDONLY)) == -1)
+		if ((dspfd_in = open(NETBSD_SAMPLER, O_RDONLY)) == -1)
 			die("error while opening soundcard for audio input");
-		setsndparms(dspfd, O.informat, nchnls, esr, wbufsiz);
+		setsndparms(dspfd_in, O.informat, nchanls, sr, wbufsiz);
 		ishift = getshift(dsize);  
 		break;
 	case NETBSD_PLAY:
-		if ((dspfd = open(NETBSD_SAMPLER, O_WRONLY)) == -1) {
+		if ((dspfd_out = open(NETBSD_SAMPLER, O_WRONLY)) == -1) {
 			perror("foo");
 			die("error while opening soundcard for audio output");
 		}
-		setsndparms(dspfd, O.outformat, nchnls, esr, wbufsiz);
+		setsndparms(dspfd_out, O.outformat, nchanls, sr, wbufsiz);
 		/* 'oshift' is not currently used by the Linux driver, but... */
-		oshift = getshift(nchnls * dsize);
+		oshift = getshift(nchanls * dsize);
 		break;
 	case NETBSD_DUPLEX:
-		if ((dspfd = open(NETBSD_SAMPLER, O_RDWR)) == -1) 
+		if ((dspfd_out = dspfd_in = open(NETBSD_SAMPLER, O_RDWR)) == -1)
 			die("error during soundcard duplex mode query:");
-		ioctl(dspfd, AUDIO_GETPROPS, &audio_props);
+		ioctl(dspfd_in, AUDIO_GETPROPS, &audio_props);
 		if (!(audio_props | AUDIO_PROP_FULLDUPLEX))
 			die("hardware does not support full duplex mode");
-		setsndparms(dspfd, O.outformat, nchnls, esr, wbufsiz);
-		if (ioctl(dspfd, AUDIO_SETFD, audio_props) == -1)
+		setsndparms(dspfd_in, O.outformat, nchanls, sr, wbufsiz);
+		if (ioctl(dspfd_in, AUDIO_SETFD, audio_props) == -1)
 			die("error setting hardware to full duplex mode");
 		/* are these functions both required? */
-		oshift = getshift(nchnls * dsize);
+		oshift = getshift(nchanls * dsize);
 		ishift = getshift(dsize);
 		break;
 	default:
@@ -256,25 +250,36 @@ void NetBSD_open(int nchnls, int dsize, MYFLT esr, int scale, int audio_mode)
 		exit(1);
 	}
 
-	ioctl(dspfd, AUDIO_GETDEV, &device_info);
-	fprintf(stderr, "NetBSD audio info: %s, %s, %s\n",
-		device_info.name,
-		device_info.version,
-		device_info.config);
+	if (dspfd_in >= 0) {
+		ioctl(dspfd_in, AUDIO_GETDEV, &device_info);
+		fprintf(stderr, "NetBSD input audio info: %s, %s, %s\n",
+			device_info.name,
+			device_info.version,
+			device_info.config);
+	}
+
+	if (dspfd_out >= 0) {
+		ioctl(dspfd_out, AUDIO_GETDEV, &device_info);
+		fprintf(stderr, "NetBSD output audio info: %s, %s, %s\n",
+			device_info.name,
+			device_info.version,
+			device_info.config);
+	}
+
 #ifdef USE_SETSCHEDULER
 	setscheduler();
 #endif
 }
 
-int rtrecord(char *inbuf, int nbytes) /* get samples from ADC */
+int rtrecord_(char *inbuf, int nbytes) /* get samples from ADC */
 {
     /*  J. Mohr  1995 Oct 17 */
-    if ( (nbytes = read(dspfd, inbuf, nbytes)) == -1 )
+    if ( (nbytes = read(dspfd_in, inbuf, nbytes)) == -1 )
       die("error while reading DSP device for audio input");
     return(nbytes);
 }
 
-void rtplay(char *outbuf, int nbytes) /* put samples to DAC  */
+void rtplay_(char *outbuf, int nbytes) /* put samples to DAC  */
     /* N.B. This routine serves as a THROTTLE in Csound Realtime Performance, */
     /* delaying the actual writes and return until the hardware output buffer */
     /* passes a sample-specific THRESHOLD.  If the I/O BLOCKING functionality */
@@ -287,18 +292,22 @@ void rtplay(char *outbuf, int nbytes) /* put samples to DAC  */
     /* eliminate MIDI jitter by requesting that both be made synchronous with */
     /* the above audio I/O blocks, i.e. by setting -b to some 1 or 2 K-prds.  */
 {
-        long sampframes = nbytes >> oshift;
+        /* long sampframes = nbytes >> oshift; */
         /*  J. Mohr  1995 Oct 17 */
-        if (write(dspfd, outbuf, nbytes) < nbytes)
+        if (write(dspfd_out, outbuf, nbytes) < nbytes)
             printf("/dev/audio: couldn't write all bytes requested\n");
         nrecs++;
 }
 
-void rtclose(void)              /* close the I/O device entirely  */
+void rtclose_(void)              /* close the I/O device entirely  */
 {                               /* called only when both complete */
     /*  J. Mohr  1995 Oct 17 */
-    if (close(dspfd) == -1)
-      die("unable to close DSP device");
+    if (dspfd_in >= 0 && close(dspfd_in) == -1)
+      die("unable to close DSP input device");
+
+    if (dspfd_out >= 0 && close(dspfd_out) == -1)
+      die("unable to close DSP output device");
+
     if (O.Linein) {
 #ifdef PIPES
       if (O.Linename[0]=='|') _pclose(Linepipe);
@@ -306,4 +315,14 @@ void rtclose(void)              /* close the I/O device entirely  */
 #endif
         if (strcmp(O.Linename, "stdin")!=0) close(Linefd);
     }
+}
+
+void recopen_(int nchanls, int dsize, float sr, int scale)
+{
+	NetBSD_open(nchanls, dsize, sr, scale, NETBSD_DUPLEX);
+}
+
+void playopen_(int nchanls, int dsize, float sr, int scale)
+{
+	NetBSD_open(nchanls, dsize, sr, scale, NETBSD_PLAY);
 }
