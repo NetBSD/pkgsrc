@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2004/04/14 16:15:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/20 15:48:11 jmmv Exp $
 
-DISTNAME=		gnome-games-2.6.0
-PKGREVISION=		1
+DISTNAME=		gnome-games-2.6.1
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -68,6 +67,7 @@ GCONF2_SCHEMAS+=	same-gnome.schemas
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
