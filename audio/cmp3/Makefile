@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:13:05 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/27 17:23:45 wiz Exp $
 #
 
 DISTNAME=	cmp3-2.0pre5
 PKGNAME=	cmp3-2.0.p5
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	http://www.personal.psu.edu/users/n/k/nkk104/cmp3/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmp3/}
 
 MAINTAINER=	rxg@ms25.url.com.tw
-HOMEPAGE=	http://www.personal.psu.edu/nkk104/cmp3/
+HOMEPAGE=	http://cmp3.sourceforge.net/
 COMMENT=	Curses based frontend to mpg123
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
