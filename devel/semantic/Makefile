@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/06/09 15:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/10 21:54:39 cjones Exp $
 #
 
-DISTNAME=	semantic-1.3.3
+DISTNAME=	semantic-1.4beta5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
@@ -30,25 +30,22 @@ PLIST_SUBST+=	LISPDIR=${LISPDIR}
 NO_CONFIGURE=	# set
 USE_GMAKE=	# set
 
-# XXX The author claims that the info file is broken for current
-# makeinfo. Should work with either newer makeinfo or newer semantic.
-#INFO_FILES=	semantic.info
+INFO_FILES=	semantic.info
+OTHER_INFO=	semantic.info-1 semantic.info-2
 
-SRCS=	semantic-bnf.el semantic.el semantic-util.el document.el	\
-	document-vars.el sformat.el semantic-make.el semantic-c.el	\
-	semantic-imenu.el semantic-el.el semantic-sb.el working.el	\
-	semantic-mode.el
-BNFFILES=	c.bnf make.bnf
-
-# XXX broken info
-post-extract:
-	cd ${WRKSRC} && ${TOUCH} semantic.info
+SRCS=	semantic.el semantic-util.el semantic-bnf.el semantic-ctxt.el \
+	semantic-c.el semantic-el.el semantic-java.el semantic-make.el \
+	semantic-scm.el semantic-texi.el semantic-imenu.el \
+	semantic-sb.el working.el semanticdb.el document.el \
+	document-vars.el sformat.el senator.el
+AUXFILES=	c.bnf make.bnf java.bnf scheme.bnf semantic-load.el
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 			${PREFIX}/${LISPDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${BNFFILES} ${PREFIX}/${LISPDIR}
-# XXX	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
+	cd ${WRKSRC} && ${INSTALL_DATA} ${AUXFILES} ${PREFIX}/${LISPDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${OTHER_INFO}	\
+			${PREFIX}/info
 
 .include "../../mk/bsd.pkg.mk"
