@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/03/27 16:04:13 itojun Exp $
+--- apps/certpatch/Makefile-	Tue Mar 28 00:33:02 2000
++++ apps/certpatch/Makefile	Tue Mar 28 00:32:28 2000
+@@ -37,7 +37,8 @@
+ 
+ PROG=		certpatch
+ SRCS=		certpatch.c
+-BINDIR=		/usr/sbin
++BINDIR=		${PREFIX}/sbin
++MANDIR=		${PREFIX}/man
+ TOPSRC=		${.CURDIR}/../..
+ TOPOBJ!=	cd ${TOPSRC}; printf "all:\n\t@pwd\n" |${MAKE} -f-
+ OS!=		awk '/^OS=/ { print $$2 }' ${.CURDIR}/../../Makefile
