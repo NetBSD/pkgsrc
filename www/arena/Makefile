@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/07/31 04:14:10 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2000/08/06 01:19:21 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -13,12 +13,9 @@ HOMEPAGE=		http://www.yggdrasil.com/Products/Arena/
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		libwww-5.2.8:../../www/libwww
+DEPENDS+=		libwww>=5.2.8:../../www/libwww
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-#XXX "black screen" fixed for 16-bit displays on mac68k, not verified on alpha.
-#NOT_FOR_PLATFORM=	*-*-alpha	#Runs, displays black screen
 
 GNU_CONFIGURE=		yes
 MAKEFILE=		makefile
@@ -37,7 +34,11 @@ CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -I${WRKDI
 # Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
 # so make a symlink in ${WRKDIR} and add it to the -I list.
 pre-configure:
-	${LN} -sf ${LOCALBASE}/include/w3c-libwww/wwwconf.h ${WRKDIR}/config.h
+	for c in ${LOCALBASE}/include/w3c-libwww/wwwconf.h ${LOCALBASE}/include/wwwconf.h; do \
+	  if [ -f $$c ]; then \
+	    ${LN} -sf $$c ${WRKDIR}/config.h; \
+ 	  fi; \
+	done
 	cd ${WRKSRC} && autoconf
 
 do-install:
