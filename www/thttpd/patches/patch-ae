@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2000/04/07 10:11:55 itojun Exp $
+--- configure.in	Mon Feb  7 10:31:16 2000
++++ configure.in	Fri Apr  7 18:52:19 2000
+@@ -64,7 +64,7 @@
+ 	AC_MSG_RESULT(no)   
+ fi
+ 
+-AC_CHECK_HEADERS(fcntl.h grp.h memory.h paths.h poll.h sys/poll.h netinet6/in6.h)
++AC_CHECK_HEADERS(fcntl.h grp.h memory.h paths.h poll.h sys/poll.h)
+ AC_HEADER_TIME
+ AC_HEADER_DIRENT
+ 

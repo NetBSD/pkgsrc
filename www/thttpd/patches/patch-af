@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2000/04/07 10:11:55 itojun Exp $
+--- aclocal.m4	Sat Jan 15 01:49:01 2000
++++ aclocal.m4	Fri Apr  7 18:52:41 2000
+@@ -180,9 +180,7 @@
+ 	AC_TRY_COMPILE([
+ #	include <sys/types.h>
+ #	include <sys/socket.h>
+-#	ifdef HAVE_NETINET6_IN6_H
+-#	include <netinet6/in6.h>
+-#	endif],
++#	include <netinet/in.h>],
+ 	[struct sockaddr_in6 sa6],
+ 	ac_cv_acme_sockaddr_in6=yes,
+ 	ac_cv_acme_sockaddr_in6=no))
