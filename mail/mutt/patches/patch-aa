@@ -1,13 +1,40 @@
-$NetBSD: patch-aa,v 1.3 2000/05/20 01:08:32 kim Exp $
+$NetBSD: patch-aa,v 1.4 2000/05/20 18:41:38 kim Exp $
 
---- alias.c.orig	Sat Mar  4 03:40:52 2000
-+++ alias.c	Fri May 19 20:52:33 2000
-@@ -100,6 +100,8 @@
- 	    
- 	    strfcpy (a->personal, pw->pw_gecos + pat_match[0].rm_so, 
- 		     pat_match[0].rm_eo - pat_match[0].rm_so + 1);
-+	    if (strchr (a->personal, '&'))
-+	      a->personal = mutt_expand_realname (a->personal, pw->pw_name);
- 	  }
+--- alias.c	2000/03/04 08:40:52	2.11
++++ alias.c	2000/05/20 07:30:10
+@@ -20,7 +20,6 @@
+ #include "mutt_regex.h"
+ #include "mutt_curses.h"
  
+-#include <pwd.h>
+ #include <string.h>
+ 
+ ADDRESS *mutt_lookup_alias (const char *s)
+@@ -86,22 +85,11 @@
+ 
+ 	if (pw)
+ 	{
+-           regmatch_t pat_match[1];
+-
+-           /* Use regular expression to parse Gecos field.  This result of the
+-            * parsing will be used as the personal ID string when the alias is
+-            * expanded.
+-            */
+-	  if (regexec (GecosMask.rx, pw->pw_gecos, 1, pat_match, 0) == 0)
+-	  {
+-	    /* Malloc enough for the matching pattern + terminating NULL */
+-	    a->personal = safe_malloc ((pat_match[0].rm_eo - 
+-					pat_match[0].rm_so) + 1);
+-	    
+-	    strfcpy (a->personal, pw->pw_gecos + pat_match[0].rm_so, 
+-		     pat_match[0].rm_eo - pat_match[0].rm_so + 1);
+-	  }
+-
++	  char namebuf[STRING];
++	  
++	  mutt_gecos_name (namebuf, sizeof (namebuf), pw);
++	  mutt_str_replace (&a->personal, namebuf);
++	  
  #ifdef EXACT_ADDRESS
+ 	  FREE (&a->val);
+ #endif
