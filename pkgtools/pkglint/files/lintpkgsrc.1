@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.18 2001/07/02 15:37:05 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.19 2001/07/07 18:21:29 dmcmahill Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,7 +10,7 @@
 .Nd a verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl BDLRSVdhilmopru
+.Op Fl BDLORSVdhilmopru
 .Op Fl K Ar PACKAGES
 .Op Fl M Ar DISTDIR
 .Op Fl P Ar PKGSRCDIR
@@ -55,6 +55,12 @@ Which would be an alternative to -K.
 List the filenames of Makefiles as they are parsed (for debugging).
 .It Fl M Ar DISTDIR
 Set directory for distfiles, defaults to PKGSRCDIR/distfiles.
+.It Fl O
+Report any binary packages in any subdirs of
+.Em PACKAGES ,
+for whom the source Makefile lists
+.Em OSVERSION_SPECIFIC .
+This is intended to help those making binary packages available for ftp.
 .It Fl P Ar PKGSRCDIR
 Set base of pkgsrc tree, normally set from
 .Pa /etc/mk.conf
