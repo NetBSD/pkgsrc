@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/08/25 15:26:32 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2000/10/16 09:12:12 rh Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
@@ -26,6 +26,7 @@
     SUBDIR += mutt
 #    SUBDIR += mutt-current	# mutt is newer
     SUBDIR += nmh
+    SUBDIR += p5-IMAP-Admin
     SUBDIR += p5-MIME-tools
     SUBDIR += p5-Mail-IMAPClient
     SUBDIR += p5-MailTools
