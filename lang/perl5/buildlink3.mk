@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/01/19 13:01:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/01/19 23:50:20 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -10,7 +10,7 @@ USE_PERL5?=	run
 PERL5_REQD?=	5.0
 
 BUILDLINK_DEPENDS.perl?=	perl>=${PERL5_REQD}
-BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
+BUILDLINK_PKGSRCDIR.perl?=	${PERL5_PKGSRCDIR}
 
 .  if !empty(USE_PERL5:M[bB][uU][iI][lL][dD])
 BUILDLINK_DEPMETHOD.perl?=	build
