@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2004/02/21 06:42:37 xtraeme Exp $
+
+--- libnautilus-private/nautilus-emblem-utils.c.orig   Sun Feb  1 13:22:13 2004
++++ libnautilus-private/nautilus-emblem-utils.c        Sun Feb  1 13:22:46 2004
+@@ -23,7 +23,9 @@
+ */
+ 
+ #include <config.h>
+-
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#endif
+ #include <utime.h>
+ #include <stdio.h>
+ #include <time.h>
