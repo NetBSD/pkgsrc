@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+
+--- Configure.orig	Fri Mar 12 15:31:13 1999
++++ Configure	Tue Apr 27 13:35:42 1999
+@@ -153,9 +153,6 @@
+ "linux-aout",	"gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
+ "linux-mips",    "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall
+ -Wuninitialized:::BN_LLONG:",
+-"NetBSD-sparc",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
+-"NetBSD-m68",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
+-"NetBSD-x86",	"gcc:-DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
+ #"FreeBSD",   "gcc:-DTERMIOS -DL_ENDIAN -D_ANSI_SOURCE -fomit-frame-pointer -O3 -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
+ "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
+ "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm",
+@@ -172,6 +169,20 @@
+ "aix-cc",   "cc:-O -DAIX -DB_ENDIAN::BN_LLONG RC4_CHAR:::",
+ "aix-gcc",  "gcc:-O2 -DAIX -DB_ENDIAN::BN_LLONG RC4_CHAR:::",
+ 
++# NetBSD
++"NetBSD-alpha", "gcc:-DTERMIOS -O3 -Wall::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC2:::",
++"NetBSD-arm32", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-i386", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall -DL_ENDIAN -DBN_ASM::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
++"NetBSD-i386elf", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall -DL_ENDIAN -DBN_ASM::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm",
++"NetBSD-m68k", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-mipseb", "gcc:-DTERMIOS -O3 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-mipsel", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-ns32k", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-powerpc", "gcc:-DTERMIOS -O3 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-sparc", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-sparc64", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC1:::",
++"NetBSD-vax", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++
+ #
+ # Cray T90 (SDSC)
+ # It's Big-endian, but the algorithms work properly when B_ENDIAN is NOT
+@@ -288,7 +299,7 @@
+ 		{ $no_asm=1; }
+ 	elsif ($_ =~ /^-/)
+ 		{
+-		if ($_ =~ /^-[lL](.*)$/)
++		if ($_ =~ /^-([lLR]|Wl,)(.*)$/)
+ 			{
+ 			$libs.=$_." ";
+ 			}

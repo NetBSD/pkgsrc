@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+
+--- ssl/Makefile.ssl.orig	Tue Apr 27 14:38:06 1999
++++ ssl/Makefile.ssl	Tue Apr 27 14:38:21 1999
+@@ -52,6 +52,7 @@
+ 	(cd ..; $(MAKE) DIRS=$(DIR) all)
+ 
+ all:	lib
++	cd .. && csh ${MAKELIB} libssl.so.1.0 libssl.a
+ 
+ lib:	$(LIBOBJ)
+ 	$(AR) $(LIB) $(LIBOBJ)
