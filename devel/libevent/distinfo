@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/02/28 12:44:14 wiz Exp $
+$NetBSD: distinfo,v 1.8 2005/04/04 11:23:03 wiz Exp $
 
-SHA1 (libevent-1.0b.tar.gz) = f1de2303d9b4233cba05213962f9d935be4d38b8
-RMD160 (libevent-1.0b.tar.gz) = 108bf2a8b13f3eee065c7ae80f2c4031bcb2f613
-Size (libevent-1.0b.tar.gz) = 101206 bytes
+SHA1 (libevent-1.0c.tar.gz) = cd49eb98de5c2b7cc418d6b92e1b3b2a6a8855fa
+RMD160 (libevent-1.0c.tar.gz) = deba56061651f008c0d34bdcae41f1cd9af30c76
+Size (libevent-1.0c.tar.gz) = 122897 bytes

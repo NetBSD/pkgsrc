@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/02/28 12:44:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/04/04 11:23:03 wiz Exp $
 #
 
-DISTNAME=	libevent-1.0b
+DISTNAME=	libevent-1.0c
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://monkey.org/~provos/libevent/
 COMMENT=	Asynchronous event notification library
 
 USE_BUILDLINK3=	yes
-GNU_CONFIGURE=	# defined
+GNU_CONFIGURE=	yes
 TEST_TARGET=	verify
 
 .include "../../mk/bsd.pkg.mk"
