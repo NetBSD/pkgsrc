@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2001/06/29 17:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/06/30 09:33:20 wiz Exp $
 #
 
-DISTNAME=	procmail-3.20
+DISTNAME=	procmail-3.21
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
 
@@ -11,6 +11,7 @@ COMMENT=	Local mail delivery agent
 
 INSTALL_TARGET=	install-suid install.man
 MAKE_ENV=	SHELL=/bin/sh
+USE_BUILDLINK_ONLY=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
