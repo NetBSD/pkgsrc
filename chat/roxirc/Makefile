@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/08 20:27:13 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/12 05:46:21 minskim Exp $
 #
 
 DISTNAME=	roxirc-1.8
@@ -9,11 +9,23 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://roxirc.lighter.net/
 COMMENT=	Graphical IRC client written in tcl/tk
 
-USE_BUILDLINK2=	YES
+DEPENDS+=	tk-[0-9]*:../../x11/tk
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+NO_BUILDLINK=	YES
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
 EXAMPLESDIR=	${PREFIX}/share/examples/roxirc
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded command names."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	roxirc
+SUBST_SED.paths=	-e 's,wish8.3,wish,g'
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/roxirc ${PREFIX}/bin
@@ -26,5 +38,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/startup ${EXAMPLESDIR}/startup
 	${INSTALL_DATA} ${WRKSRC}/help ${PREFIX}/share/doc/roxirc/help
 
-.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
