@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/28 10:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/04 09:06:10 tron Exp $
 #
 
 DISTNAME=	crossfire-client-0.95.8
@@ -11,7 +11,7 @@ HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	Client for X11 game similar to gauntlet and nethack
 
 DEPENDS+=	gtk+>=1.2.4:../../x11/gtk
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 EXTRACT_ONLY=	${CF_SRC}
 
