@@ -1,0 +1,29 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/08/29 10:09:46 jdc Exp $
+
+--- /dev/null	Thu Feb 10 12:33:49 2000
++++ follower.man	Wed Feb  9 16:36:54 2000
+@@ -0,0 +1,24 @@
++.TH FOLLOWER 6 "08 January 2000" "X Version 11"
++.SH NAME
++
++follower \- robot client for X windows multiplayer combat game
++
++.SH SYNOPSIS
++
++.B follower
++[ servername ]
++
++.SH DESCRIPTION
++
++.I follower
++is a robot client for the multiplayer combat game.
++This Smiley will follow any other Smiley that it notices and
++shoot at it.
++
++.SH SEE ALSO
++
++betterbot (6), dummy (6), netmaze (6), netserv (6)
++
++.SH AUTHOR
++
++Mike Roderick

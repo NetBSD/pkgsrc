@@ -1,0 +1,92 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/08/29 10:09:46 jdc Exp $
+
+--- /dev/null	Fri Mar  3 10:11:40 2000
++++ netmaze.man	Fri Mar  3 14:45:39 2000
+@@ -0,0 +1,87 @@
++.TH NETMAZE 6 "08 January 2000" "X Version 11"
++.SH NAME
++
++netmaze \- client for X windows multiplayer combat game
++
++.SH SYNOPSIS
++
++.B netmaze
++[ -s|-server servername ]
++[ -h!-help ]
++[ -name combatname ]
++[ -tiny|-small|-huge|-big ]
++[ -mono|-gray|-dither ]
++[ -map ]
++[ -camera ]
++[ -comment comment ]
++[ -nowait ]
++[ -sound ]
++[ -texture ]
++
++.SH DESCRIPTION
++.I netmaze
++is the client for the multiplayer combat game.
++.PP
++The program options are:
++.DT
++.Ta \w'-tiny|-small|-huge|-big\ \ \ 'u
++.br
++-s|-server			Select the server host name
++.br
++-h!-help				Display the help message
++.br
++-name				Set the combat name
++.br
++-tiny|-small|-big|-huge	Select a different screensize
++.br
++-mono|-gray|-dither		Select mono, greyscale or dither mode for the Smiley
++.br
++-map					Enables the rotatemap
++.br
++-camera				Connect to server in camera mode
++.br
++-comment				Sets the comment when you kill someone
++.br
++-nowait				Disable the select-timeout (test)
++.br
++-sound				Enable sound (if compiled with USE_SOUND)
++.br
++-texture				Enable texture mode (needs at least 8bit colour)
++.PP
++The keys to control the Smiley are:
++.DT
++.Ta \w'cursor right\ \ \ 'u
++.br
++cursor-up		Move Smiley forward
++.br
++cursor-down	Move Smiley backward
++.br
++cursor-left	Rotate Smiley left
++.br
++cursor-right	Rotate Smiley right
++.br
++shift+left	Slow rotate left
++.br
++shift+right	Slow rotate right
++.br
++l			Enable/disable locator
++.br
++c			Make Smiley invisible (if allowed by server)
++.br
++m			Enable/Disable newstyle map (with radar)
++.br
++return		Enable/Disable radar for newstylemap (if allowed by server)
++.br
++p			Switch view
++.br
++j			Switch joystick (only solomode)
++.br
++Q			Quit game
++
++.SH SEE ALSO
++
++betterbot (6), dummy (6), follower (6), netserv (6)
++
++.SH AUTHOR
++
++M.Hipp
