@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2003/11/05 12:47:01 agc Exp $
+$NetBSD: patch-aa,v 1.6 2003/11/05 13:38:27 agc Exp $
 
 --- makefile.orig	1998-06-19 04:28:34.000000000 +0100
 +++ makefile	2003-11-05 12:36:20.000000000 +0000
@@ -33,17 +33,17 @@ $NetBSD: patch-aa,v 1.5 2003/11/05 12:47:01 agc Exp $
  		sounds/numbers/*.au levels/*.dat
  
 +install: xbomber
-+	install -s -c -o bin -g bin xbomber $(INSTALLBIN)/xbomber
-+	mkdir -p $(LEVELS)
-+	mkdir -p $(SOUNDS)/numbers
-+	mkdir -p $(PIXMAPS)/jungle
-+	mkdir -p $(BITMAPS)
-+	install -c -o bin -g bin -m 0644 pixmaps/* $(PIXMAPS)
-+	install -c -o bin -g bin -m 0644 bitmaps/* $(BITMAPS)
-+	install -c -o bin -g bin -m 0644 jungle/* $(PIXMAPS)/jungle
-+	install -c -o bin -g bin -m 0644 sounds/numbers/* $(SOUNDS)/numbers
-+	install -c -o bin -g bin -m 0644 sounds/*.au $(SOUNDS)
-+	install -c -o bin -g bin -m 0644 levels/* $(LEVELS)
++	${BSD_INSTALL_PROGRAM} xbomber $(INSTALLBIN)/xbomber
++	${BSD_INSTALL_DATA_DIR} $(LEVELS)
++	${BSD_INSTALL_DATA_DIR} $(SOUNDS)/numbers
++	${BSD_INSTALL_DATA_DIR} $(PIXMAPS)/jungle
++	${BSD_INSTALL_DATA_DIR} $(BITMAPS)
++	${BSD_INSTALL_DATA} pixmaps/* $(PIXMAPS)
++	${BSD_INSTALL_DATA} bitmaps/* $(BITMAPS)
++	${BSD_INSTALL_DATA} jungle/* $(PIXMAPS)/jungle
++	${BSD_INSTALL_DATA} sounds/numbers/* $(SOUNDS)/numbers
++	${BSD_INSTALL_DATA} sounds/*.au $(SOUNDS)
++	${BSD_INSTALL_DATA} levels/* $(LEVELS)
 +
  clean:
  	rm *.o
