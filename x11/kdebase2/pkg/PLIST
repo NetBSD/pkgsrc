@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 16:04:46 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/16 17:24:19 tron Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -2908,7 +2908,6 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/applnk
 @comment kdelibs:dirrm share/kde
 @dirrm share/fonts/override
-@dirrm share/fonts
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/en/ksysguard
 @dirrm share/doc/kde/HTML/en/kpager
