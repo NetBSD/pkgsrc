@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/06/05 15:04:44 lukem Exp $
+# $NetBSD: Makefile,v 1.9 2002/06/08 06:42:05 yyamano Exp $
 #
 
 PKGNAME=		lukemftp-1.6beta1
@@ -25,10 +25,14 @@ CONFIGURE_ARGS+=	--with-socks5
 .endif
 .endif
 
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=""
-.elif ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .include "../../mk/bsd.pkg.mk"
