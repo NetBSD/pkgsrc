@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.63 2002/08/05 08:09:01 lukem Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.64 2002/12/02 17:07:27 jschauma Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -342,8 +342,13 @@ _REPLACE_RPATH_PATTERNS_FIND=	\
 REPLACE_RPATH+=	\
 	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_RPATH_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
 
+.if ${OPSYS} == "IRIX"
+REPLACE_RPATH_SED+=	\
+	-e "s|-R[ 	]*${BUILDLINK_DIR}/|-rpath -Wl,${LOCALBASE}/|g"
+.else
 REPLACE_RPATH_SED+=	\
 	-e "s|-R[ 	]*${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
+.endif
 
 .if defined(_USE_RPATH) && (${_USE_RPATH} == "yes")
 _CONFIGURE_POSTREQ+=	rpath-buildlink-subst
