@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/05 15:20:22 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/29 21:30:28 jschauma Exp $
 share/examples/${PKGNAME}/book/README
 share/examples/${PKGNAME}/book/aaindex
 share/examples/${PKGNAME}/book/aaindex.c
@@ -165,6 +165,7 @@ share/examples/${PKGNAME}/demos/multiarb
 share/examples/${PKGNAME}/demos/multiarb.c
 share/examples/${PKGNAME}/demos/occlude
 share/examples/${PKGNAME}/demos/occlude.c
+share/examples/${PKGNAME}/demos/osdemo
 share/examples/${PKGNAME}/demos/osdemo.c
 share/examples/${PKGNAME}/demos/paltex
 share/examples/${PKGNAME}/demos/paltex.c
@@ -185,6 +186,7 @@ share/examples/${PKGNAME}/demos/reflect
 share/examples/${PKGNAME}/demos/reflect.c
 share/examples/${PKGNAME}/demos/renormal
 share/examples/${PKGNAME}/demos/renormal.c
+share/examples/${PKGNAME}/demos/shadowtex
 share/examples/${PKGNAME}/demos/shadowtex.c
 share/examples/${PKGNAME}/demos/spectex
 share/examples/${PKGNAME}/demos/spectex.c
@@ -252,6 +254,7 @@ share/examples/${PKGNAME}/samples/logo
 share/examples/${PKGNAME}/samples/logo.c
 share/examples/${PKGNAME}/samples/nurb
 share/examples/${PKGNAME}/samples/nurb.c
+share/examples/${PKGNAME}/samples/oglinfo
 share/examples/${PKGNAME}/samples/oglinfo.c
 share/examples/${PKGNAME}/samples/olympic
 share/examples/${PKGNAME}/samples/olympic.c
