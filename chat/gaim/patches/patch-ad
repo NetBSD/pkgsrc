@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2004/11/16 19:49:42 ben Exp $
+$NetBSD: patch-ad,v 1.6 2004/12/03 12:43:24 adam Exp $
 
---- configure.orig	Thu Nov 11 20:54:53 2004
+--- configure.orig	2004-12-03 04:24:48.000000000 +0000
 +++ configure
-@@ -27815,7 +27815,7 @@ fi
+@@ -27839,7 +27839,7 @@ fi
  	if test "$ac_silc_libs" != "no"; then
  		SILC_LIBS="-L$ac_silc_libs"
  	fi

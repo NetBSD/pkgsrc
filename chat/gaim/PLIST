@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2004/11/13 08:05:53 grant Exp $
+@comment $NetBSD: PLIST,v 1.36 2004/12/03 12:43:24 adam Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim/account.h
@@ -50,6 +50,7 @@ include/gaim/notify.h
 include/gaim/plugin.h
 include/gaim/pluginpref.h
 include/gaim/pounce.h
+include/gaim/prefix.h
 include/gaim/prefs.h
 include/gaim/privacy.h
 include/gaim/proxy.h
@@ -134,6 +135,7 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gaim.mo
@@ -356,6 +358,7 @@ share/pixmaps/gaim/status/default/admin.png
 share/pixmaps/gaim/status/default/aim.png
 share/pixmaps/gaim/status/default/aol.png
 share/pixmaps/gaim/status/default/away.png
+share/pixmaps/gaim/status/default/blocked.png
 share/pixmaps/gaim/status/default/dnd.png
 share/pixmaps/gaim/status/default/extendedaway.png
 share/pixmaps/gaim/status/default/female.png
@@ -378,6 +381,7 @@ share/pixmaps/gaim/status/default/na.png
 share/pixmaps/gaim/status/default/napster.png
 share/pixmaps/gaim/status/default/notauthorized.png
 share/pixmaps/gaim/status/default/novell.png
+share/pixmaps/gaim/status/default/nr.png
 share/pixmaps/gaim/status/default/occupied.png
 share/pixmaps/gaim/status/default/offline.png
 share/pixmaps/gaim/status/default/op.png
