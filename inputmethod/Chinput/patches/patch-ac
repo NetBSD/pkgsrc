@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/06/15 09:31:39 shell Exp $
+
+--- src/chinput.c.orig	Mon Jun 10 21:16:56 2002
++++ src/chinput.c
+@@ -75,7 +75,7 @@
+ 	HZloadRCFile();				//resource file
+ 	HZloadRCIME();				//IME lists from Chinput.ad
+ 	HZparseParameters(argc, argv);		//parse parameters
+-	setlocale(LC_ALL, deflocale);		//locale set
++	setlocale(LC_CTYPE, deflocale);		//locale set
+ 	HZinitDisplay();			//display init
+ 	HZinitServerFont();			//font init
+ 	HZinitWindows();			//windows geometry init
