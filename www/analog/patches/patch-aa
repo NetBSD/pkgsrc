@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.23 2002/12/02 12:08:43 tron Exp $
+$NetBSD: patch-aa,v 1.24 2004/12/19 22:00:10 tron Exp $
 
---- Makefile.orig	Sat Nov 30 16:36:10 2002
-+++ Makefile	Mon Dec  2 12:43:07 2002
-@@ -2,15 +2,20 @@
+--- Makefile.orig	2004-12-19 13:51:30.000000000 +0000
++++ Makefile	2004-12-19 21:45:24.000000000 +0000
+@@ -2,16 +2,20 @@
  # Please read docs/Readme.html, or http://www.analog.cx/
  # This is a general Unix-like Makefile: Makefiles for other OS's can be found
  #   in the "build" directory.
@@ -13,6 +13,7 @@ $NetBSD: patch-aa,v 1.23 2002/12/02 12:08:43 tron Exp $
 -CFLAGS = -O2    # options, e.g. for optimisation or ANSI compilation.
 +#MAKE = make        # which "make" to use
 +#CFLAGS = -O2    # options, e.g. for optimisation or ANSI compilation.
+ #                 Some OS's need -D_FILE_OFFSET_BITS=64 to support files > 2MB.
  #                 HP/UX cc needs CFLAGS = -Aa (HP/UX 9) or -Ae (HP/UX 10)
  #                 BeOS needs CFLAGS = -O2 -Wl,-L/boot/home/config/lib
  #                 BS2000/OSD needs CFLAGS = -XLLML -XLLMK
@@ -23,7 +24,6 @@ $NetBSD: patch-aa,v 1.23 2002/12/02 12:08:43 tron Exp $
 +	-DIMAGEDIR=\"/images/\" \
 +	-DLANGDIR=\"${PREFIX}/lib/analog/lang/\" \
 +	-DLOGFILE=\"/var/log/httpd-access.log\"
-+#		any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...
  #                 ... -DNOOPEN -DNOFOLLOW -DNOALARM -DNOGRAPHICS -DNOGMTIME ...
  #                 ... -DEBCDIC -DUSE_PLAIN_SETJMP ...
- #                 ... -DHAVE_GD -DHAVE_ZLIB -DHAVE_PCRE ...
+ #                 ... -DHAVE_GD -DHAVE_ZLIB -DHAVE_BZLIB -DHAVE_PCRE ...

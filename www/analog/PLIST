@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/12/02 12:08:43 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/12/19 22:00:10 tron Exp $
 bin/analog
 share/examples/analog.cfg
 @exec test -f %D/etc/analog.cfg || cp -p %D/%F %D/etc/analog.cfg
@@ -141,6 +141,7 @@ lib/analog/lang/README.txt
 lib/analog/lang/am.lng
 lib/analog/lang/amdom.tab
 lib/analog/lang/ba.lng
+lib/analog/lang/baq.lng
 lib/analog/lang/bg.lng
 lib/analog/lang/bgdesc.txt
 lib/analog/lang/bgdom.tab
@@ -158,6 +159,8 @@ lib/analog/lang/cata.lng
 lib/analog/lang/catadom.tab
 lib/analog/lang/catdom.tab
 lib/analog/lang/cn.lng
+lib/analog/lang/cndesc.txt
+lib/analog/lang/cndom.tab
 lib/analog/lang/cz.lng
 lib/analog/lang/cz1.lng
 lib/analog/lang/cz1a.lng
@@ -302,11 +305,12 @@ lib/analog/lang/yua.lng
 lib/analog/lang/yudom.tab
 man/man1/analog.1
 share/doc/analog/LicBSD.txt
-share/doc/analog/Licapach.txt
+share/doc/analog/Licbzip2.txt
 share/doc/analog/Licence.txt
 share/doc/analog/Licgd.txt
 share/doc/analog/Licpcre.txt
 share/doc/analog/Licpng.txt
+share/doc/analog/Licunzip.txt
 share/doc/analog/Liczlib.txt
 share/doc/analog/Readme.html
 share/doc/analog/acknow.html
@@ -363,6 +367,7 @@ share/doc/analog/wasnew1.html
 share/doc/analog/wasnew2.html
 share/doc/analog/wasnew3.html
 share/doc/analog/wasnew4.html
+share/doc/analog/wasnew5.html
 share/doc/analog/webworks.html
 share/doc/analog/whatsnew.html
 @dirrm share/doc/analog
