@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:54:40 zuntum Exp $
+bin/betterbot
+bin/dummy
+bin/follower
+bin/netmaze
+bin/netserv
+man/cat6/betterbot.0
+man/cat6/dummy.0
+man/cat6/follower.0
+man/cat6/netmaze.0
+man/cat6/netserv.0

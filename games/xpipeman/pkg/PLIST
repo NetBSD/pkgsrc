@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/09/14 23:52:17 garbled Exp $
-bin/xpipeman
-man/man6/xpipeman.6
-@dirrm share/xpipeman

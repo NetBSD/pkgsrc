@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/06 01:43:54 hubertf Exp $
-bin/koth
-bin/koths
-bin/kmoron-ai
-bin/kclever-ai

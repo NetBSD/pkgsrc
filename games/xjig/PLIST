@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:59 zuntum Exp $
+bin/xjig
+man/cat1/xjig.0
+lib/xjig/tina.gif

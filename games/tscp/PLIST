@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:52 zuntum Exp $
+bin/tscp
+share/doc/tscp.txt
