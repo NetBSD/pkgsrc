@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:18:36 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/03/22 16:05:13 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXKLAVIER_BUILDLINK3_MK:=	${LIBXKLAVIER_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibxklavier}
 BUILDLINK_PACKAGES+=	libxklavier
 
 .if !empty(LIBXKLAVIER_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libxklavier+=		libxklavier>=1.00
-BUILDLINK_RECOMMENDED.libxklavier+=	libxklavier>=1.04nb1
+BUILDLINK_DEPENDS.libxklavier+=		libxklavier>=2.0
 BUILDLINK_PKGSRCDIR.libxklavier?=	../../x11/libxklavier
 .endif	# LIBXKLAVIER_BUILDLINK3_MK
 
