@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1371 2003/02/15 05:58:25 salo Exp $
+$NetBSD: CHANGES,v 1.1372 2003/02/15 06:17:33 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -667,3 +667,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated micq to 0.4.10.1 [salo 2003-02-15]
 	Updated jwhois to 3.2.1 [salo 2003-02-15]
 	Updated centericq to 4.9.2 [salo 2003-02-15]
+	Updated atk to 1.2.2 [salo 2003-02-15]
