@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.225 1999/03/10 18:31:02 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.226 1999/03/12 10:19:14 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2213,73 +2213,65 @@ tags:
 #   pages in PLIST even when they install manpages without compressing them)
 # - substituting ${OPSYS}, ${MACHINE_ARCH} and ${MACHINE_GNU_ARCH}
 
+.if ${OPSYS} == "NetBSD"
+IMAKE_MAN_CMD=	${CAT}
+.ifdef MANZ
+MANZ_EXPRESSION= -e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
+		-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|'
+.else
+MANZ_EXPRESSION= -e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
+		-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|'
+.endif # MANZ
+MANZ_NAWK_CMD=	${CAT}
+.elif ${OPSYS} == "SunOS"
+.ifdef USE_IMAKE
+IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln](\.gz)?$$/ { \
+	sect = $$0; n = match(sect, "/cat[1-9ln]");			\
+	sect = sprintf(".%sx", substr(sect, n + 4, 1));			\
+	s = $$0; sub("/cat", "/man", s); sub("\.0(\.gz)?$$", sect, s);	\
+	if (match($$0, "\.gz$$") > 0) { ext = ".gz";} else { ext = "";} \
+	$$0 = sprintf("%s%s", s, ext);					\
+	} { print $$0; }'
+.else
+IMAKE_MAN_CMD=	${CAT}
+.endif # USE_IMAKE
+.ifdef MANZ
+MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
+		$$0 = sprintf("%s.gz", $$0);				\
+	}								\
+	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ {	\
+		$$0 = sprintf("%s.gz", $$0);				\
+	}								\
+	{ print $$0; }'
+.else
+MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
+		$$0 = substr($$0, 1, length($$0) - 3);			\
+	}								\
+	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ {	\
+		$$0 = substr($$0, 1, length($$0) - 3);			\
+	}								\
+	{ print $$0; }'
+.endif # MANZ
+MANZ_EXPRESSION= 
+.endif # SunOS
+
 ${PLIST}: ${PLIST_SRC}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -z "${PLIST_SRC}" ] ; then				\
-		${ECHO} "No ${PKGDIR}/PLIST, and no ${PKGDIR}/PLIST-{mi,md.shared,md.static}" ; \
-		${ECHO} "The package Makefile must make ${PLIST} by setting PLIST_SRC!" ; \
-	fi
-.if (${OPSYS} == "NetBSD")
-.if defined(MANZ)
-	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -z "${PLIST_SRC}" ] ; then				\
-		${CAT} ${PLIST_SRC} | ${SED}				\
-			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
-			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|' \
-			-e 's|\$${OPSYS}|${OPSYS}|g'			\
-			-e 's|\$${OS_VERSION}|${OS_VERSION}|g'		\
-			-e 's/\$${MACHINE_ARCH}/${MACHINE_ARCH}/g'	\
-			-e 's/\$${MACHINE_GNU_ARCH}/${MACHINE_GNU_ARCH}/g' \
-			-e 's/\$${LOWER_OPSYS}/${LOWER_OPSYS}/g'	\
-			>${PLIST} ;					\
-	fi
-.else   # !MANZ
-	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -z "${PLIST_SRC}" ] ; then				\
-		${CAT} ${PLIST_SRC} | ${SED}				\
-			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
-			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|' \
-			-e 's|\$${OPSYS}|${OPSYS}|g'			\
-			-e 's|\$${OS_VERSION}|${OS_VERSION}|g'		\
-			-e 's/\$${MACHINE_ARCH}/${MACHINE_ARCH}/g'	\
-			-e 's/\$${MACHINE_GNU_ARCH}/${MACHINE_GNU_ARCH}/g' \
-			-e 's/\$${LOWER_OPSYS}/${LOWER_OPSYS}/g'	\
-			>${PLIST} ;					\
-	fi
-.endif  # MANZ
-.elif (${OPSYS} == "SunOS")
-.if defined(MANZ)
-	${_PKG_SILENT}${_PKG_DEBUG}if ${TEST} ! -z "${PLIST_SRC}"; then				\
-		${CAT} ${PLIST_SRC} | ${AWK}				\
-			'/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
-				$$0 = sprintf("%s.gz", $$0);					
-			}									
-			/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ { \
-				$$0 = sprintf("%s.gz", $$0);		\
-			}						\
-			} { print $$0; }' | ${SED} 			\
-			-e 's|\$${OPSYS}|${OPSYS}|g'			\
-			-e 's|\$${OS_VERSION}|${OS_VERSION}|g'		\
-			-e 's|\$${MACHINE_ARCH}|${MACHINE_ARCH}|g'	\
-			-e 's|\$${MACHINE_GNU_ARCH}|${MACHINE_GNU_ARCH}|g' \
-			-e 's|\$${LOWER_OPSYS}|${LOWER_OPSYS}|g'	\
-			>${PLIST}; 					\
-	fi
-.else   # !MANZ
-	${_PKG_SILENT}${_PKG_DEBUG}if ${TEST} ! -z "${PLIST_SRC}"; then				\
-		${CAT} ${PLIST_SRC} | ${AWK}				\
-			'/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
-				$$0 = substr($$0, 1, length($$0) - 3);	\
-			}						\
-			/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ { \
-				$$0 = substr($$0, 1, length($$0) - 3);	\
-			} { print $$0; }' | ${SED} 			\
-			-e 's|\$${OPSYS}|${OPSYS}|g'			\
-			-e 's|\$${OS_VERSION}|${OS_VERSION}|g'		\
-			-e 's|\$${MACHINE_ARCH}|${MACHINE_ARCH}|g'	\
-			-e 's|\$${MACHINE_GNU_ARCH}|${MACHINE_GNU_ARCH}|g' \
-			-e 's|\$${LOWER_OPSYS}|${LOWER_OPSYS}|g'	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -z "${PLIST_SRC}" ]; then					\
+		${ECHO} "No ${PKGDIR}/PLIST or ${PKGDIR}/PLIST-{mi,md.shared,md.static}" ; \
+		${ECHO} "Please set PLIST_SRC in the package Makefile.";\
+	else								\
+		${CAT} ${PLIST_SRC} |					\
+			${MANZ_NAWK_CMD} |				\
+			${IMAKE_MAN_CMD} |				\
+			${SED} 	${MANZ_EXPRESSION}			\
+				-e 's|\$${OPSYS}|${OPSYS}|g'		\
+				-e 's|\$${OS_VERSION}|${OS_VERSION}|g'	\
+				-e 's|\$${MACHINE_ARCH}|${MACHINE_ARCH}|g' \
+				-e 's|\$${MACHINE_GNU_ARCH}|${MACHINE_GNU_ARCH}|g' \
+				-e 's|\$${LOWER_OPSYS}|${LOWER_OPSYS}|g'\
 			> ${PLIST}; 					\
 	fi
-.endif  # MANZ
-.endif	# OPSYS == SunOS
 
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any
