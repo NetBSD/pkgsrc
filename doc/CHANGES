@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6934 2004/08/17 19:36:01 jschauma Exp $
+$NetBSD: CHANGES,v 1.6935 2004/08/17 19:45:28 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated demime to 1.1d [tv 2004-08-17]
 	Updated win32-codecs to 040809.1 [recht 2004-08-17]
 	Updated drscheme to 207 [jschauma 2004-08-17]
+	Updated scanssh to 2.0 [adrianp 2004-08-17]
