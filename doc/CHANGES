@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6804 2004/08/05 22:31:54 recht Exp $
+$NetBSD: CHANGES,v 1.6805 2004/08/05 22:56:21 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3740,3 +3740,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fixesext to 2.0.1 [recht 2004-08-05]
 	Updated Xrender to 0.8.4 [recht 2004-08-05]
 	Updated py-PgSQL to 2.4nb2 [recht 2004-08-05]
+	Updated cgoban-java to 2.6.4 [rh 2004-08-05]
