@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/01 15:30:11 kim Exp $
+man/man8/irrd.8
 sbin/irr_check
 sbin/irr_notify
 sbin/irr_rpsl_submit
