@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/04 19:41:07 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/13 07:11:57 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-login/}
 COMMENT=	Cyrus SASL LOGIN authentication plugin
@@ -9,16 +9,15 @@ SASL_PLUGIN=	yes
 # We need to configure the PLAIN plugin as well since some of the important
 # build variables for the LOGIN plugin are only set if PLAIN is configured.
 #
-CONFIGURE_ARGS+=	--enable-login		# LOGIN
-CONFIGURE_ARGS+=	--enable-plain		# PLAIN
+CONFIGURE_ARGS+=	--enable-login
+CONFIGURE_ARGS+=	--enable-plain
 
 BUILD_DIRS=	${WRKSRC}/plugins
 ALL_TARGET=	liblogin.la
 
 do-install:
 	${INSTALL_DATA_DIR} ${PLUGINDIR}
-	cd ${WRKSRC}/plugins && \
-	${SHLIBTOOL} --mode=install \
+	cd ${WRKSRC}/plugins && ${SHLIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} liblogin.la ${PLUGINDIR}
 
 .include "../../mk/bsd.pkg.mk"
