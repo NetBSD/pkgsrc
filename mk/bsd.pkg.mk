@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.193 1998/11/09 15:45:11 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.194 1998/11/16 11:25:08 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2035,6 +2035,7 @@ ${PLIST}: ${PLIST_SRC}
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|' \
 			-e 's|\$${OPSYS}|${OPSYS}|g' \
+			-e 's|\$${OS_VERSION}|${OS_VERSION}|g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
 			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
 			>${PLIST} ; \
@@ -2045,6 +2046,7 @@ ${PLIST}: ${PLIST_SRC}
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|' \
 			-e 's|\$${OPSYS}|${OPSYS}|g' \
+			-e 's|\$${OS_VERSION}|${OS_VERSION}|g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
 			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
 			>${PLIST} ; \
