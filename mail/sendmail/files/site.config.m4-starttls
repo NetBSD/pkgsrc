@@ -1,5 +1,3 @@
 # enable STARTTLS
-APPENDDEF(`confENVDEF', `-I${BUILDLINK_DIR}/include')
-APPENDDEF(`confLIBS', `-L${BUILDLINK_DIR}/lib')
 APPENDDEF(`conf_sendmail_ENVDEF', `-DSTARTTLS -D_FFR_TLS_TOREK')
 APPENDDEF(`conf_sendmail_LIBS', `-lssl -lcrypto')
