@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/06 12:55:42 itojun Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/17 17:21:54 wiz Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -26,6 +26,7 @@ PATCHFILES=		apache_1.3.17-fix.diff
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
+COMMENT=		HTTP (Web) server, with IPv6 support
 
 CONFLICTS=		apache-*modssl-* apache6-*
 CONFLICTS=		apache-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/23 21:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:49 wiz Exp $
 #
 
 DISTNAME=	Confera-1.2.0-nonbin
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
+COMMENT=	Confera: Threaded discussion groups for Zope
 
 DEPENDS+=	zope>=2.1.4:../../www/zope
 

@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/02 18:24:13 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:33 wiz Exp $
 
 .include "../../www/php4/Makefile.module"
 
 MODNAME=		ldap
 CATEGORIES+=		databases
+
+COMMENT=		PHP4 extension for LDAP databases
 
 DEPENDS+=		openldap-1.2.*:../../databases/openldap
 
