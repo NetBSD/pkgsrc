@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.955 2002/12/31 13:23:04 dsainty Exp $
+$NetBSD: CHANGES,v 1.956 2002/12/31 14:19:40 shell Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4326,3 +4326,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added palmosemulator-3.5 [dsainty 2002-12-31]
 	Updated lyx to 1.2.2 [martti 2002-12-31]
 	Updated proftpd to 1.2.7 [martti 2002-12-31]
+	Updated p5-Image-Info to 1.12 [shell 2002-12-31]
+	Updated p5-Net-SSLeay to 1.21 [shell 2002-12-31]
