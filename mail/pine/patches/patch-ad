@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.10 2004/01/20 10:16:38 hubertf Exp $
+$NetBSD: patch-ad,v 1.11 2005/01/25 10:08:59 adam Exp $
 
---- pine/signals.c.orig	Thu Nov 28 00:22:12 2002
+--- pine/signals.c.orig	2004-11-04 22:33:05.000000000 +0000
 +++ pine/signals.c
 @@ -53,6 +53,7 @@ static char rcsid[] = "$Id: signals.c,v 
   ====*/
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.10 2004/01/20 10:16:38 hubertf Exp $
  
  /* nto defines SA_RESTART but doesn't support it yet (00/12/29 - hubert) */
  #if defined(NTO)
-@@ -108,7 +109,9 @@ init_signals()
+@@ -109,7 +110,9 @@ init_signals()
      if(CUSHION_SIG){
  	signal(SIGILL,  auger_in_signal); 
  	signal(SIGTRAP, auger_in_signal);
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.10 2004/01/20 10:16:38 hubertf Exp $
  	signal(SIGBUS,  auger_in_signal);
  	signal(SIGSEGV, auger_in_signal);
  	signal(SIGSYS,  auger_in_signal);
-@@ -196,7 +199,9 @@ end_signals(blockem)
+@@ -197,7 +200,9 @@ end_signals(blockem)
      }
  
      signal(SIGTRAP, blockem ? SIG_IGN : SIG_DFL);
