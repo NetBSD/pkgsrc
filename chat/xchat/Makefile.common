@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2002/11/29 17:17:48 drochner Exp $
+# $NetBSD: Makefile.common,v 1.10 2002/11/30 12:41:07 salo Exp $
 
 DISTNAME=	xchat-1.8.10
 PKGREVISION=	2
@@ -14,6 +14,8 @@ PATCH_SITES=		${HOMEPAGE}files/source/1.8/patches/
 PATCHFILES=		xc1810fixme3.diff
 PATCH_DIST_STRIP=	-p1
 
+BUILD_USES_MSGFMT=	YES
+
 DISTINFO_FILE=	${.CURDIR}/../xchat/distinfo
 FILESDIR=	${.CURDIR}/../xchat/files
 PATCHDIR=	${.CURDIR}/../xchat/patches
@@ -21,15 +23,14 @@ PKGDIR=		${.CURDIR}/../xchat
 PLIST_SRC=	${.CURDIR}/../xchat/PLIST
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
-BUILD_USES_MSGFMT=	YES
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=	--enable-python
 
 BUILD_DEFS+=		USE_INET6 USE_SOCKS
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		pythonpath=${PYTHONBIN}
