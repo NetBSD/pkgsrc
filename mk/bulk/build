@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.14 2001/10/15 17:19:23 hubertf Exp $
+# $NetBSD: build,v 1.15 2001/10/20 00:30:22 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -75,19 +75,51 @@ else
 	sh mk/bulk/pre-build	# make veryveryclean :)
 fi
 
+fail=no
 if [ -d pkgtools/pkglint ]; then
 	cd pkgtools/pkglint
-	DEPENDSTREEFILE=`make show-var VARNAME=DEPENDSTREEFILE`
-	DEPENDSFILE=`make show-var VARNAME=DEPENDSFILE`
-	SUPPORTSFILE=`make show-var VARNAME=SUPPORTSFILE`
-	INDEXFILE=`make show-var VARNAME=INDEXFILE`
-	ORDERFILE=`make show-var VARNAME=ORDERFILE`
-	BROKENFILE=`make show-var VARNAME=BROKENFILE`
+	DEPENDSTREEFILE=`make show-var VARNAME=DEPENDSTREEFILE` || fail=yes
+	DEPENDSFILE=`make show-var VARNAME=DEPENDSFILE` || fail=yes
+	SUPPORTSFILE=`make show-var VARNAME=SUPPORTSFILE` || fail=yes
+	INDEXFILE=`make show-var VARNAME=INDEXFILE` || fail=yes
+	ORDERFILE=`make show-var VARNAME=ORDERFILE` || fail=yes
+	BROKENFILE=`make show-var VARNAME=BROKENFILE` || fail=yes
+	BUILDLOG=`make show-var VARNAME=BUILDLOG` || fail=yes
 else
 	echo "The pkgtools/pkglint directory does not exist.  Please update"
 	echo "your pkgsrc tree in ${USR_PKGSRC}"
 	exit 1
 fi
+
+echo "----------------------------------"
+echo "| Build Temporary Files:         |"
+echo "----------------------------------"
+echo "DEPENDSTREEFILE = $DEPENDSTREEFILE"
+echo "DEPENDSFILE     = $DEPENDSFILE"
+echo "SUPPORTSFILE    = $SUPPORTSFILE"
+echo "INDEXFILE       = $INDEXFILE"
+echo "ORDERFILE       = $ORDERFILE"
+echo "BROKENFILE      = $BROKENFILE"
+echo "BUILDLOG        = $BUILDLOG"
+echo "----------------------------------"
+
+# make sure we have values for these very important
+# variables
+if [ $fail = "yes" -o \
+	-z "$DEPENDSTREEFILE" -o \
+	-z "$DEPENDSFILE" -o \
+	-z "$SUPPORTSFILE" -o \
+	-z "$INDEXFILE" -o \
+	-z "$ORDERFILE" -o \
+	-z "$BROKENFILE" -o \
+	-z "$BUILDLOG" \
+	]; then
+	echo "ERROR:  build failed to extract certain key variables."
+	echo "        please examine the above list and correct the"
+	echo "        problem."
+	exit 1
+fi
+
 cd ${USR_PKGSRC}	
 
 # get the list of packages which should always be installed during the build
@@ -125,11 +157,30 @@ fi
 
 echo "Starting actual build using the order specified in $ORDERFILE..."
 cd ${USR_PKGSRC}
-nice -n 20 make \
-		USE_BULK_CACHE=yes \
-		SPECIFIC_PKGS=1 \
-		GROUP_SPECIFIC_PKGS="`cat $ORDERFILE | tr '\012' ' '`" \
-		bulk-package | sed 's/^/'`uname -p`'> /g'
+
+# make sure we have something to grep in in the build loop
+touch $BUILDLOG
+
+# Loop over every package in the correct order.  Before building
+# each one, check to see if we've already processed this package
+# before.  This could happen if the build got interrupted and we
+# started it again with the 'restart' option.  This prevents us
+# from having to do a potentially very large number of make's to
+# get back to where we let off.  After we build each package, add
+# it to the top level buildlog
+# (usually '.make' or '.make.${MACHINE}').  As a side benefit, this
+# can make a progress-meter very simple to add!
+
+tot=`wc -l $ORDERFILE | awk '{print $1}'`
+for pkgdir in `cat $ORDERFILE`
+do
+        if ! grep -q "^${pkgdir}\$" $BUILDLOG ; then
+		built=`wc -l $BUILDLOG | awk '{print $1}'`
+		percent=`echo $built $tot | awk '{printf("%4.1f%%",$1*100/$2);}'`
+		(cd $pkgdir && nice -n 20 make USE_BULK_CACHE=yes bulk-package | sed "s;^;$built/$tot = $percent @ `uname -p`> ;g")              
+		echo "$pkgdir" >> $BUILDLOG
+	fi
+done
 
 echo "Build finished.  Removing all installed packages left over from build..."
 
