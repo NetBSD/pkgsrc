@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1017 2003/11/11 15:38:19 wiz Exp $
+$NetBSD: TODO,v 1.1018 2003/11/11 16:46:36 wennmach Exp $
 
 Suggested new packages
 ======================
@@ -366,6 +366,7 @@ Suggested package updates
 	o top-3.5b12.8
 	o transcode-0.6.11
 	o ttf2pt1-3.4.3
+	o txt2html-2.04 [wennmach]
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
