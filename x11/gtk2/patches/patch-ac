@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2002/10/08 00:02:18 jlam Exp $
+$NetBSD: patch-ac,v 1.8 2002/12/24 04:07:34 wiz Exp $
 
---- demos/Makefile.in.orig	Wed Jul 31 15:10:15 2002
+--- demos/Makefile.in.orig	Sat Dec 21 02:35:04 2002
 +++ demos/Makefile.in
-@@ -195,6 +195,7 @@ DEPS = \
+@@ -188,6 +188,7 @@ DEPS = \
  
  
  LDADDS = @STRIP_BEGIN@ 							\
@@ -10,12 +10,3 @@ $NetBSD: patch-ac,v 1.7 2002/10/08 00:02:18 jlam Exp $
  	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GTK_API_VERSION).la	\
  	$(top_builddir)/gdk/@gdktargetlib@        			\
  	$(top_builddir)/gtk/@gtktargetlib@ 				\
-@@ -210,7 +211,7 @@ noinst_PROGRAMS = \
- 	pixbuf-demo
- 
- @CROSS_COMPILING_TRUE@pixbuf_csource = @CROSS_COMPILING_TRUE@$(GDK_PIXBUF_CSOURCE)
--@CROSS_COMPILING_FALSE@pixbuf_csource = @CROSS_COMPILING_FALSE@GDK_PIXBUF_MODULEDIR=$$topdir/gdk-pixbuf/.libs $$topdir/gdk-pixbuf/gdk-pixbuf-csource
-+@CROSS_COMPILING_FALSE@pixbuf_csource = @CROSS_COMPILING_FALSE@GDK_PIXBUF_MODULEDIR=$$topdir/gdk-pixbuf $$topdir/gdk-pixbuf/gdk-pixbuf-csource
- 
- testpixbuf_DEPENDENCIES = $(DEPS)
- testpixbuf_drawable_DEPENDENCIES = $(DEPS)

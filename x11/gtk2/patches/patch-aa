@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2002/10/08 00:02:18 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2002/12/24 04:07:33 wiz Exp $
 
---- configure.orig	Wed Jul 31 14:12:14 2002
+--- configure.orig	Fri Dec 20 21:55:05 2002
 +++ configure
-@@ -10391,7 +10391,7 @@ LIBS="$LIBS $INTLLIBS"
- 
- # AM_GLIB_GNU_GETTEXT above substs $DATADIRNAME
- # this is the directory where the *.{mo,gmo} files are installed
--gtklocaledir='${prefix}/${DATADIRNAME}/locale'
-+gtklocaledir='${prefix}/${PKGLOCALEDIR}/locale'
- 
- 
- echo "$as_me:$LINENO: checking for extra flags to get ANSI library prototypes" >&5
-@@ -14347,11 +14347,11 @@ echo "$as_me: error: Could not find a gd
+@@ -12939,11 +12939,11 @@ echo "$as_me: error: Could not find a gd
    fi
  fi
  
@@ -25,7 +16,7 @@ $NetBSD: patch-aa,v 1.6 2002/10/08 00:02:18 jlam Exp $
  
  
  
-@@ -16861,7 +16861,7 @@ fi
+@@ -15635,7 +15635,7 @@ fi
  
  GDK_PIXBUF_XLIB_PACKAGES=
  GDK_PIXBUF_XLIB_DEP_LIBS="`$PKG_CONFIG --libs $GDK_PIXBUF_PACKAGES $GDK_PIXBUF_XLIB_PACKAGES` $GDK_PIXBUF_XLIB_EXTRA_LIBS $GDK_PIXBUF_EXTRA_LIBS"
@@ -34,7 +25,7 @@ $NetBSD: patch-aa,v 1.6 2002/10/08 00:02:18 jlam Exp $
  
  
  
-@@ -17077,7 +17077,7 @@ LDFLAGS="$saved_ldflags"
+@@ -15831,7 +15831,7 @@ LDFLAGS="$saved_ldflags"
  
  GDK_PACKAGES=$PANGO_PACKAGES
  GDK_DEP_LIBS="$GDK_EXTRA_LIBS `$PKG_CONFIG --libs $GDK_PIXBUF_PACKAGES $GDK_PACKAGES` $GDK_PIXBUF_EXTRA_LIBS"
@@ -43,7 +34,7 @@ $NetBSD: patch-aa,v 1.6 2002/10/08 00:02:18 jlam Exp $
  
  #
  # If we aren't writing explicit dependencies, then don't put the extra libraries we need
-@@ -17195,7 +17195,7 @@ GTK_PACKAGES=atk
+@@ -15929,7 +15929,7 @@ GTK_PACKAGES=atk
  GTK_EXTRA_LIBS=
  GTK_EXTRA_CFLAGS=
  GTK_DEP_LIBS="$GDK_EXTRA_LIBS `$PKG_CONFIG --libs $GDK_PIXBUF_PACKAGES $GDK_PACKAGES $GTK_PACKAGES` $GTK_EXTRA_LIBS $GDK_PIXBUF_EXTRA_LIBS"
