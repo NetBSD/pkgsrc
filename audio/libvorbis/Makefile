@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/05 13:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/11 09:00:45 tron Exp $
 
 DISTNAME=	libvorbis-1.0beta4
 PKGNAME=	libvorbis-1.0.0.4
@@ -17,5 +17,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS=		--with-ogg-prefix=${PREFIX}
+
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 .include "../../mk/bsd.pkg.mk"
