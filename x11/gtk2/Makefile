@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/08/31 11:53:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.60 2004/09/07 01:23:10 jschauma Exp $
 #
 
 DISTNAME=		gtk+-2.4.9
@@ -57,6 +57,8 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/themes\/Default$$/ \
 # which uses ## instead and does what it should.
 .if !empty(CC_VERSION:MSun)
 CPPFLAGS+=		-Xc
+.elif ${OPSYS} == "IRIX" && !empty(CC_VERSION:Mgcc*)
+USE_GNU_TOOLS+=		awk
 .endif
 
 post-install:
