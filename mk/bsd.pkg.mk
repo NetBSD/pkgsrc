@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1577 2005/01/27 18:32:20 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1578 2005/01/28 21:05:59 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4529,10 +4529,7 @@ print-pkg-size-this:
 	| ${SORT} -u							\
 	| ${SED} -e "s/'/'\\\\''/g" -e "s/.*/'&'/"			\
 	| ${XARGS} -n 256 ${LS} -ld					\
-	| ${AWK} 'BEGIN { print("0 "); }				\
-		  { print($$5, " + "); }				\
-		  END { print("p"); }'					\
-	| ${DC}
+	| ${AWK} '{ s += $$5; } END { print s; }'			\
 
 # Sizes of required pkgs (only)
 #
@@ -4546,10 +4543,7 @@ print-pkg-size-depends:
 		| ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS}		\
 		| ${SORT} -u						\
 		| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs		\
-		| ${AWK} -- 'BEGIN { print("0 "); }			\
-			/^[0-9]+$$/ { print($$1, " + "); }		\
-			END { print("p"); }'				\
-		| ${DC};						\
+		| ${AWK} '/^[0-9]+$$/ { s += $$1; } END { print s; }';	\
 	else								\
 		${ECHO} "0";						\
 	fi
@@ -4890,7 +4884,8 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
-	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
+	${ECHO} $$size_this $$size_depends				\
+		| ${AWK} '{ print $$1 + $$2; }' >${SIZE_ALL_FILE}
 .endif
 
 # Fake installation of package so that user can pkg_delete it later.
