@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/11/27 14:03:28 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/11/27 14:15:59 tron Exp $
 
 DISTNAME=		gnome-games-1.2.0
 CATEGORIES=		games gnome
@@ -14,6 +14,8 @@ DEPENDS+=		gnome-core-*:../../x11/gnome-core
 # Required for ports which don't build "libgtop".
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 DEPENDS+=		xbill-*:../../games/xbill
+
+CONFLICTS=		xbill-*
 
 USE_GMAKE=		YES
 USE_X11BASE=		YES
