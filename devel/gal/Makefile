@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/11/25 14:11:11 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/17 08:54:00 rh Exp $
 #
 
 DISTNAME=	gal-0.2.2
@@ -12,6 +12,7 @@ DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	gnome-print>=0.25:../../print/gnome-print
 DEPENDS+=	gnome-vfs-*:../../sysutils/gnome-vfs
 DEPENDS+=	libglade>=0.14:../../devel/libglade
+DEPENDS+=	libunicode>=0.4:../../textproc/libunicode
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
