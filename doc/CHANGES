@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1838 2003/04/03 18:11:59 toshii Exp $
+$NetBSD: CHANGES,v 1.1839 2003/04/03 18:55:03 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sudo to 1.6.7.2 [wiz 2003-04-03]
 	Updated realplayer-codecs to 8nb1 [salo 2003-04-03]
 	Updated py-postgresql to 3.3nb2 [toshii 2003-04-03]
+	Updated py-Numeric to 23.0 [drochner 2003-04-03]
