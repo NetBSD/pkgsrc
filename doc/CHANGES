@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3870 2003/11/27 16:40:02 grant Exp $
+$NetBSD: CHANGES,v 1.3871 2003/11/27 17:28:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4661,3 +4661,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-HTML-Parser to 3.34 [grant 2003-11-27]
 	Updated p5-MIME-Base64 to 2.21 [grant 2003-11-27]
 	Updated p5-URI to 1.27 [grant 2003-11-27]
+	Updated tightvnc to 1.2.9 [abs 2003-11-27]
+
