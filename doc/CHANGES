@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8807 2005/01/18 17:40:25 peter Exp $
+$NetBSD: CHANGES,v 1.8808 2005/01/18 17:57:30 peter Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -407,3 +407,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated netpbm to 10.26.1 [adam 2005-01-18]
 	Updated amaya to 9.0 [adam 2005-01-18]
 	Updated pflkm to 2005018 [peter 2005-01-18]
+	Added amsn-0.94 [peter 2005-01-18]
+	Added crawl-0.4 [peter 2005-01-18]
+	Added cube-20040522 [peter 2005-01-18]
+	Added qstat-2.6 [peter 2005-01-18]
+	Added tcllib-1.7 [peter 2005-01-18]
