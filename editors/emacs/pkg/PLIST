@@ -1,3 +1,5 @@
+bin/emacs
+bin/emacs-20.3
 @unexec %D/bin/install-info --delete %D/info/widget %D/info/dir
 info/widget
 @exec   %D/bin/install-info          %D/info/widget %D/info/dir
