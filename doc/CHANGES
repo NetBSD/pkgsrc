@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2456 2003/06/08 10:36:49 abs Exp $
+$NetBSD: CHANGES,v 1.2457 2003/06/08 12:44:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2380,3 +2380,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnuserv-3.12.6 [epg 2003-06-08]
 	Updated figlet to 2.2.1nb1 [abs 2003-06-08]
 	Updated userppp to 001107nb1 [abs 2003-06-08]
+	Updated cpuflags to 0.47 [abs 2003-06-08]
