@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/06 17:32:11 xtraeme Exp $
 #
 
-DISTNAME=	openmortal-0.4
+DISTNAME=	openmortal-0.6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openmortal/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,16 +11,17 @@ HOMEPAGE=	http://apocalypse.rulez.org/~upi/Mortal/
 COMMENT=	Parody of Mortal Kombat with real characters
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_X11=		yes
 
 REPLACE_PERL=		data/script/*.pl
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/SDL_image/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../net/SDL_net/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
