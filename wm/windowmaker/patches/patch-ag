@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.3 2004/11/12 21:17:55 kristerw Exp $
+
+--- src/wmspec.c.orig	Fri Nov 12 22:06:05 2004
++++ src/wmspec.c	Fri Nov 12 22:08:17 2004
+@@ -392,8 +392,9 @@
+         RImage *new_rimage;
+ 
+         do {
++            unsigned int tmp;
+             len = data[pos+0]*data[pos+1];
+-            unsigned int tmp = pref_sq-len;
++            tmp = pref_sq-len;
+             if (tmp < best_tmp && tmp > 0) {
+                 best_tmp = tmp;
+                 best_pos = pos;
