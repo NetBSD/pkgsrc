@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.40 2001/11/11 20:11:31 damon Exp $
+# $NetBSD: Makefile,v 1.41 2002/01/17 11:57:44 martti Exp $
 #
 
-DISTNAME=		gnumeric-0.75
+DISTNAME=		gnumeric-1.0.2
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
+
+# wctype.h is found on NetBSD 1.5R and later
+ONLY_FOR_PLATFORM=	NetBSD-1.5[R-Z]-* NetBSD-1.5Z[A-Z]-*
 
 BUILD_DEPENDS+=		python>=2.0:../../lang/python
 

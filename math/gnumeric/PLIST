@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/01/10 21:12:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/01/17 11:57:44 martti Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -55,29 +55,328 @@ lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax/xml_sax.la
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax/xml_sax.so
 lib/gnumericConf.sh
 share/gnome/apps/Applications/gnumeric.desktop
+share/gnome/help/gnumeric/C/LEGALNOTICE.html
+share/gnome/help/gnumeric/C/alignmentandothertabs.html
 share/gnome/help/gnumeric/C/analysis-tools.html
+share/gnome/help/gnumeric/C/analysis-tools.sgml
 share/gnome/help/gnumeric/C/anova.html
 share/gnome/help/gnumeric/C/authors.html
-share/gnome/help/gnumeric/C/autocorrect.html
+share/gnome/help/gnumeric/C/authors.sgml
+share/gnome/help/gnumeric/C/autocorrect-tool.html
+share/gnome/help/gnumeric/C/autocorrect.sgml
 share/gnome/help/gnumeric/C/autofill.html
+share/gnome/help/gnumeric/C/autofill.sgml
 share/gnome/help/gnumeric/C/autosave.html
+share/gnome/help/gnumeric/C/autosave.sgml
 share/gnome/help/gnumeric/C/cell-elements.html
+share/gnome/help/gnumeric/C/cell-grid.html
 share/gnome/help/gnumeric/C/cell-referencing.html
+share/gnome/help/gnumeric/C/cell_refer.sgml
+share/gnome/help/gnumeric/C/context-menu.html
 share/gnome/help/gnumeric/C/copying-moving.html
+share/gnome/help/gnumeric/C/copying-moving.sgml
 share/gnome/help/gnumeric/C/correlation-tool.html
 share/gnome/help/gnumeric/C/covariance-tool.html
-share/gnome/help/gnumeric/C/data-and-time-formatting.html
+share/gnome/help/gnumeric/C/cutandpaste.html
+share/gnome/help/gnumeric/C/data-entry.html
+share/gnome/help/gnumeric/C/data-menu.html
 share/gnome/help/gnumeric/C/descriptive-statistics-tool.html
+share/gnome/help/gnumeric/C/edit-menu.html
 share/gnome/help/gnumeric/C/editing-selections.html
 share/gnome/help/gnumeric/C/editing.html
+share/gnome/help/gnumeric/C/editing.sgml
+share/gnome/help/gnumeric/C/exp-smoothing-tool.html
+share/gnome/help/gnumeric/C/fdl-section1.html
+share/gnome/help/gnumeric/C/fdl-section10.html
+share/gnome/help/gnumeric/C/fdl-section2.html
+share/gnome/help/gnumeric/C/fdl-section3.html
+share/gnome/help/gnumeric/C/fdl-section4.html
+share/gnome/help/gnumeric/C/fdl-section5.html
+share/gnome/help/gnumeric/C/fdl-section6.html
+share/gnome/help/gnumeric/C/fdl-section7.html
+share/gnome/help/gnumeric/C/fdl-section8.html
+share/gnome/help/gnumeric/C/fdl-section9.html
+share/gnome/help/gnumeric/C/fdl-using.html
+share/gnome/help/gnumeric/C/fdl.html
+share/gnome/help/gnumeric/C/figures/add-decimals.png
+share/gnome/help/gnumeric/C/figures/advanced-filter-1.png
+share/gnome/help/gnumeric/C/figures/advanced-filter-2.png
+share/gnome/help/gnumeric/C/figures/align-center.png
+share/gnome/help/gnumeric/C/figures/align-left.png
+share/gnome/help/gnumeric/C/figures/align-right.png
+share/gnome/help/gnumeric/C/figures/analysis-tools.png
+share/gnome/help/gnumeric/C/figures/analysistools-ANOVA1-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ANOVA1-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-ANOVA2w-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ANOVA2w-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-ANOVA2wo-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ANOVA2wo-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-correlation-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-correlation-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-correlation-ex3.png
+share/gnome/help/gnumeric/C/figures/analysistools-correlation.png
+share/gnome/help/gnumeric/C/figures/analysistools-covariance-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-covariance-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-covariance.png
+share/gnome/help/gnumeric/C/figures/analysistools-descstats-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-descstats-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-descstats.png
+share/gnome/help/gnumeric/C/figures/analysistools-ftest-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ftest-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-ftest.png
+share/gnome/help/gnumeric/C/figures/analysistools-histogram-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-histogram-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-histogram.png
+share/gnome/help/gnumeric/C/figures/analysistools-moving-average-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-moving-average-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-moving-average.png
+share/gnome/help/gnumeric/C/figures/analysistools-outputoptions.png
+share/gnome/help/gnumeric/C/figures/analysistools-random-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-random-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-random.png
+share/gnome/help/gnumeric/C/figures/analysistools-ranges.png
+share/gnome/help/gnumeric/C/figures/analysistools-rank-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-rank-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-rank.png
+share/gnome/help/gnumeric/C/figures/analysistools-regression-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-regression-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-regression-ex3.png
+share/gnome/help/gnumeric/C/figures/analysistools-regression.png
+share/gnome/help/gnumeric/C/figures/analysistools-sampling-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-sampling-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-sampling.png
+share/gnome/help/gnumeric/C/figures/analysistools-smoothing-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-smoothing-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-smoothing.png
+share/gnome/help/gnumeric/C/figures/analysistools-tools.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-equal-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-equal-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-equal.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-paired-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-paired-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-paired.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-unequal-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-unequal-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest-unequal.png
+share/gnome/help/gnumeric/C/figures/analysistools-ttest.png
+share/gnome/help/gnumeric/C/figures/analysistools-ztest-ex1.png
+share/gnome/help/gnumeric/C/figures/analysistools-ztest-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-ztest.png
+share/gnome/help/gnumeric/C/figures/arrow.png
+share/gnome/help/gnumeric/C/figures/auto-correct.png
+share/gnome/help/gnumeric/C/figures/auto-save.png
+share/gnome/help/gnumeric/C/figures/auto-sum.png
+share/gnome/help/gnumeric/C/figures/autocorrect.png
+share/gnome/help/gnumeric/C/figures/autofill-1.png
+share/gnome/help/gnumeric/C/figures/autofill-10.png
+share/gnome/help/gnumeric/C/figures/autofill-2.png
+share/gnome/help/gnumeric/C/figures/autofill-3.png
+share/gnome/help/gnumeric/C/figures/autofill-4.png
+share/gnome/help/gnumeric/C/figures/autofill-5.png
+share/gnome/help/gnumeric/C/figures/autofill-6.png
+share/gnome/help/gnumeric/C/figures/autofill-7.png
+share/gnome/help/gnumeric/C/figures/autofill-8.png
+share/gnome/help/gnumeric/C/figures/autofill-9.png
+share/gnome/help/gnumeric/C/figures/autosave.png
+share/gnome/help/gnumeric/C/figures/bold.png
+share/gnome/help/gnumeric/C/figures/border.png
+share/gnome/help/gnumeric/C/figures/button-align-center.png
+share/gnome/help/gnumeric/C/figures/button-align-left.png
+share/gnome/help/gnumeric/C/figures/button-align-right.png
+share/gnome/help/gnumeric/C/figures/button-arrow.png
+share/gnome/help/gnumeric/C/figures/button-bold.png
+share/gnome/help/gnumeric/C/figures/button-borders.png
+share/gnome/help/gnumeric/C/figures/button-center-across-selection.png
+share/gnome/help/gnumeric/C/figures/button-checkbox.png
+share/gnome/help/gnumeric/C/figures/button-combo.png
+share/gnome/help/gnumeric/C/figures/button-copy.png
+share/gnome/help/gnumeric/C/figures/button-cut.png
+share/gnome/help/gnumeric/C/figures/button-decrease-indent.png
+share/gnome/help/gnumeric/C/figures/button-decrease-precision.png
+share/gnome/help/gnumeric/C/figures/button-equals.png
+share/gnome/help/gnumeric/C/figures/button-fill.png
+share/gnome/help/gnumeric/C/figures/button-font-size.png
+share/gnome/help/gnumeric/C/figures/button-font-type.png
+share/gnome/help/gnumeric/C/figures/button-frame.png
+share/gnome/help/gnumeric/C/figures/button-function.png
+share/gnome/help/gnumeric/C/figures/button-fx.png
+share/gnome/help/gnumeric/C/figures/button-graph.png
+share/gnome/help/gnumeric/C/figures/button-increase-indent.png
+share/gnome/help/gnumeric/C/figures/button-increase-precision.png
+share/gnome/help/gnumeric/C/figures/button-insert-component.png
+share/gnome/help/gnumeric/C/figures/button-insert-object.png
+share/gnome/help/gnumeric/C/figures/button-italic.png
+share/gnome/help/gnumeric/C/figures/button-label.png
+share/gnome/help/gnumeric/C/figures/button-line.png
+share/gnome/help/gnumeric/C/figures/button-list.png
+share/gnome/help/gnumeric/C/figures/button-merge.png
+share/gnome/help/gnumeric/C/figures/button-money.png
+share/gnome/help/gnumeric/C/figures/button-new.png
+share/gnome/help/gnumeric/C/figures/button-open.png
+share/gnome/help/gnumeric/C/figures/button-oval.png
+share/gnome/help/gnumeric/C/figures/button-paste.png
+share/gnome/help/gnumeric/C/figures/button-percent.png
+share/gnome/help/gnumeric/C/figures/button-preview.png
+share/gnome/help/gnumeric/C/figures/button-print.png
+share/gnome/help/gnumeric/C/figures/button-rectangle.png
+share/gnome/help/gnumeric/C/figures/button-redo-and-history.png
+share/gnome/help/gnumeric/C/figures/button-save.png
+share/gnome/help/gnumeric/C/figures/button-sort-az.png
+share/gnome/help/gnumeric/C/figures/button-sort-za.png
+share/gnome/help/gnumeric/C/figures/button-split.png
+share/gnome/help/gnumeric/C/figures/button-sum.png
+share/gnome/help/gnumeric/C/figures/button-text-colour.png
+share/gnome/help/gnumeric/C/figures/button-thousands.png
+share/gnome/help/gnumeric/C/figures/button-underline.png
+share/gnome/help/gnumeric/C/figures/button-undo-and-history.png
+share/gnome/help/gnumeric/C/figures/button-zoom.png
+share/gnome/help/gnumeric/C/figures/buttonGroup-bonobo.png
+share/gnome/help/gnumeric/C/figures/buttonGroup-filesystem.png
+share/gnome/help/gnumeric/C/figures/buttonGroup-printing.png
+share/gnome/help/gnumeric/C/figures/cell-grid.png
+share/gnome/help/gnumeric/C/figures/cells-1.png
+share/gnome/help/gnumeric/C/figures/cells-2.png
+share/gnome/help/gnumeric/C/figures/define-name.png
+share/gnome/help/gnumeric/C/figures/dnd-selection-1.png
+share/gnome/help/gnumeric/C/figures/dndselection-1.png
+share/gnome/help/gnumeric/C/figures/drawing-toolbar.png
+share/gnome/help/gnumeric/C/figures/editing-1.png
+share/gnome/help/gnumeric/C/figures/editing-cell-selection-1.png
+share/gnome/help/gnumeric/C/figures/file-dialog.png
+share/gnome/help/gnumeric/C/figures/files-formats-list.png
+share/gnome/help/gnumeric/C/figures/filter.png
+share/gnome/help/gnumeric/C/figures/function-wizard.png
+share/gnome/help/gnumeric/C/figures/function.png
+share/gnome/help/gnumeric/C/figures/gnumeric-labelled.png
+share/gnome/help/gnumeric/C/figures/gnumeric-rearranged.png
+share/gnome/help/gnumeric/C/figures/goal-seek.png
+share/gnome/help/gnumeric/C/figures/graphing.png
+share/gnome/help/gnumeric/C/figures/info-area.png
+share/gnome/help/gnumeric/C/figures/insert-object.png
+share/gnome/help/gnumeric/C/figures/italic.png
+share/gnome/help/gnumeric/C/figures/label-five.png
+share/gnome/help/gnumeric/C/figures/label-four.png
+share/gnome/help/gnumeric/C/figures/label-one.png
+share/gnome/help/gnumeric/C/figures/label-seven.png
+share/gnome/help/gnumeric/C/figures/label-six.png
+share/gnome/help/gnumeric/C/figures/label-three.png
+share/gnome/help/gnumeric/C/figures/label-transparent.png
+share/gnome/help/gnumeric/C/figures/label-two.png
+share/gnome/help/gnumeric/C/figures/line.png
+share/gnome/help/gnumeric/C/figures/menu-context-col-row-header.png
+share/gnome/help/gnumeric/C/figures/menu-context-grid.png
+share/gnome/help/gnumeric/C/figures/menu-context-object.png
+share/gnome/help/gnumeric/C/figures/menu-context-tabs.png
+share/gnome/help/gnumeric/C/figures/menu-context-toolbars.png
+share/gnome/help/gnumeric/C/figures/menu-data-labelled.png
+share/gnome/help/gnumeric/C/figures/menu-edit-labelled.png
+share/gnome/help/gnumeric/C/figures/menu-file-labelled.png
+share/gnome/help/gnumeric/C/figures/menu-format-torn-off.png
+share/gnome/help/gnumeric/C/figures/menu-help-torn-off.png
+share/gnome/help/gnumeric/C/figures/menu-insert-labelled.png
+share/gnome/help/gnumeric/C/figures/menu-tools-labelled.png
+share/gnome/help/gnumeric/C/figures/menu-view-labelled.png
+share/gnome/help/gnumeric/C/figures/menubar.png
+share/gnome/help/gnumeric/C/figures/modify-comment.png
+share/gnome/help/gnumeric/C/figures/money.png
+share/gnome/help/gnumeric/C/figures/number-format-buttonbar.png
+share/gnome/help/gnumeric/C/figures/number-format-color-dialog.png
+share/gnome/help/gnumeric/C/figures/number-format-dialog.png
+share/gnome/help/gnumeric/C/figures/number-format-font-dialog.png
+share/gnome/help/gnumeric/C/figures/number-format-justification-dialog-2.png
+share/gnome/help/gnumeric/C/figures/number-format-justification.png
+share/gnome/help/gnumeric/C/figures/oval.png
+share/gnome/help/gnumeric/C/figures/percentage.png
+share/gnome/help/gnumeric/C/figures/plug-ins.png
+share/gnome/help/gnumeric/C/figures/plugins.png
+share/gnome/help/gnumeric/C/figures/preface-screenshot.png
+share/gnome/help/gnumeric/C/figures/print-large.png
+share/gnome/help/gnumeric/C/figures/print-preview-back.png
+share/gnome/help/gnumeric/C/figures/print-preview-first.png
+share/gnome/help/gnumeric/C/figures/print-preview-fit.png
+share/gnome/help/gnumeric/C/figures/print-preview-fittall.png
+share/gnome/help/gnumeric/C/figures/print-preview-fitwide.png
+share/gnome/help/gnumeric/C/figures/print-preview-last.png
+share/gnome/help/gnumeric/C/figures/print-preview-next.png
+share/gnome/help/gnumeric/C/figures/print-preview-toolbar.png
+share/gnome/help/gnumeric/C/figures/print-preview-zoomin.png
+share/gnome/help/gnumeric/C/figures/print-preview-zoomout.png
+share/gnome/help/gnumeric/C/figures/print-preview.png
+share/gnome/help/gnumeric/C/figures/print-worksheet.png
+share/gnome/help/gnumeric/C/figures/print.png
+share/gnome/help/gnumeric/C/figures/printing-preview.png
+share/gnome/help/gnumeric/C/figures/printing-setup-header-config.png
+share/gnome/help/gnumeric/C/figures/printing-setup-header.png
+share/gnome/help/gnumeric/C/figures/printing-setup-margins.png
+share/gnome/help/gnumeric/C/figures/printing-setup-page-1.png
+share/gnome/help/gnumeric/C/figures/printing-setup-page.png
+share/gnome/help/gnumeric/C/figures/printing-setup-sheet.png
+share/gnome/help/gnumeric/C/figures/rect.png
+share/gnome/help/gnumeric/C/figures/redo.png
+share/gnome/help/gnumeric/C/figures/remove-decimals.png
+share/gnome/help/gnumeric/C/figures/sample_gnumeric.png
+share/gnome/help/gnumeric/C/figures/selection-1.png
+share/gnome/help/gnumeric/C/figures/selection-10.png
+share/gnome/help/gnumeric/C/figures/selection-2.png
+share/gnome/help/gnumeric/C/figures/selection-3.png
+share/gnome/help/gnumeric/C/figures/selection-4.png
+share/gnome/help/gnumeric/C/figures/selection-5.png
+share/gnome/help/gnumeric/C/figures/selection-6.png
+share/gnome/help/gnumeric/C/figures/selection-7.png
+share/gnome/help/gnumeric/C/figures/selection-8.png
+share/gnome/help/gnumeric/C/figures/selection-9.png
+share/gnome/help/gnumeric/C/figures/sheet-indicator.png
+share/gnome/help/gnumeric/C/figures/solver-01.png
+share/gnome/help/gnumeric/C/figures/solver-02.png
+share/gnome/help/gnumeric/C/figures/solver-03.png
+share/gnome/help/gnumeric/C/figures/solver-04.png
+share/gnome/help/gnumeric/C/figures/solver-05.png
+share/gnome/help/gnumeric/C/figures/sort-ascending.png
+share/gnome/help/gnumeric/C/figures/sort-descending.png
+share/gnome/help/gnumeric/C/figures/sort.png
+share/gnome/help/gnumeric/C/figures/stock-copy.png
+share/gnome/help/gnumeric/C/figures/stock-cut.png
+share/gnome/help/gnumeric/C/figures/stock-new.png
+share/gnome/help/gnumeric/C/figures/stock-open.png
+share/gnome/help/gnumeric/C/figures/stock-paste.png
+share/gnome/help/gnumeric/C/figures/stock-save.png
+share/gnome/help/gnumeric/C/figures/summary.png
+share/gnome/help/gnumeric/C/figures/tear-off-menu.png
+share/gnome/help/gnumeric/C/figures/thousands.png
+share/gnome/help/gnumeric/C/figures/toolbar-format.png
+share/gnome/help/gnumeric/C/figures/toolbar-object.png
+share/gnome/help/gnumeric/C/figures/toolbar-standard.png
+share/gnome/help/gnumeric/C/figures/toolbar.png
+share/gnome/help/gnumeric/C/figures/toolbars.png
+share/gnome/help/gnumeric/C/figures/underline.png
+share/gnome/help/gnumeric/C/figures/undo.png
+share/gnome/help/gnumeric/C/figures/worksheet-all-1.png
+share/gnome/help/gnumeric/C/figures/worksheet-cols-1.png
+share/gnome/help/gnumeric/C/figures/worksheet-data-1.png
+share/gnome/help/gnumeric/C/figures/worksheet-data-2.png
+share/gnome/help/gnumeric/C/figures/worksheet-data-3.png
+share/gnome/help/gnumeric/C/figures/worksheet-data-4.png
+share/gnome/help/gnumeric/C/figures/worksheet-info-1.png
+share/gnome/help/gnumeric/C/figures/worksheet-rows-1.png
+share/gnome/help/gnumeric/C/figures/worksheet-running-calc-1.png
+share/gnome/help/gnumeric/C/figures/zoom-dialog.png
+share/gnome/help/gnumeric/C/figures/zoom-toolbar.png
+share/gnome/help/gnumeric/C/figures/zoom.png
 share/gnome/help/gnumeric/C/file-format.html
+share/gnome/help/gnumeric/C/file-menu.html
 share/gnome/help/gnumeric/C/files.html
-share/gnome/help/gnumeric/C/filter.html
+share/gnome/help/gnumeric/C/files.sgml
+share/gnome/help/gnumeric/C/filter.sgml
+share/gnome/help/gnumeric/C/filters.html
+share/gnome/help/gnumeric/C/fmt-toolbar.html
+share/gnome/help/gnumeric/C/format-menu.html
 share/gnome/help/gnumeric/C/formatting.html
 share/gnome/help/gnumeric/C/formulas.html
+share/gnome/help/gnumeric/C/formulas.sgml
 share/gnome/help/gnumeric/C/fourier-analysis-tool.html
 share/gnome/help/gnumeric/C/ftest-two-sample-for-variances-tool.html
 share/gnome/help/gnumeric/C/function-reference.html
+share/gnome/help/gnumeric/C/functions.sgml
 share/gnome/help/gnumeric/C/gnumeric-abs.html
 share/gnome/help/gnumeric/C/gnumeric-accrint.html
 share/gnome/help/gnumeric/C/gnumeric-accrintm.html
@@ -140,6 +439,7 @@ share/gnome/help/gnumeric/C/gnumeric-critbinom.html
 share/gnome/help/gnumeric/C/gnumeric-cumipmt.html
 share/gnome/help/gnumeric/C/gnumeric-cumprinc.html
 share/gnome/help/gnumeric/C/gnumeric-date.html
+share/gnome/help/gnumeric/C/gnumeric-date2unix.html
 share/gnome/help/gnumeric/C/gnumeric-datedif.html
 share/gnome/help/gnumeric/C/gnumeric-datevalue.html
 share/gnome/help/gnumeric/C/gnumeric-daverage.html
@@ -203,6 +503,7 @@ share/gnome/help/gnumeric/C/gnumeric-gammaln.html
 share/gnome/help/gnumeric/C/gnumeric-gcd.html
 share/gnome/help/gnumeric/C/gnumeric-geomean.html
 share/gnome/help/gnumeric/C/gnumeric-gestep.html
+share/gnome/help/gnumeric/C/gnumeric-getenv.html
 share/gnome/help/gnumeric/C/gnumeric-getpivotdata.html
 share/gnome/help/gnumeric/C/gnumeric-gnumericxversion.html
 share/gnome/help/gnumeric/C/gnumeric-growth.html
@@ -401,6 +702,7 @@ share/gnome/help/gnumeric/C/gnumeric-true.html
 share/gnome/help/gnumeric/C/gnumeric-trunc.html
 share/gnome/help/gnumeric/C/gnumeric-ttest.html
 share/gnome/help/gnumeric/C/gnumeric-type.html
+share/gnome/help/gnumeric/C/gnumeric-unix2date.html
 share/gnome/help/gnumeric/C/gnumeric-upper.html
 share/gnome/help/gnumeric/C/gnumeric-value.html
 share/gnome/help/gnumeric/C/gnumeric-var.html
@@ -419,158 +721,46 @@ share/gnome/help/gnumeric/C/gnumeric-yield.html
 share/gnome/help/gnumeric/C/gnumeric-yielddisc.html
 share/gnome/help/gnumeric/C/gnumeric-yieldmat.html
 share/gnome/help/gnumeric/C/gnumeric-ztest.html
+share/gnome/help/gnumeric/C/gnumeric.sgml
 share/gnome/help/gnumeric/C/goal-seek.html
+share/gnome/help/gnumeric/C/graphs.html
+share/gnome/help/gnumeric/C/gui-elements.html
+share/gnome/help/gnumeric/C/help-menu.html
 share/gnome/help/gnumeric/C/histogram-tool.html
-share/gnome/help/gnumeric/C/images/add-decimals.png
-share/gnome/help/gnumeric/C/images/advanced-filter-1.png
-share/gnome/help/gnumeric/C/images/advanced-filter-2.png
-share/gnome/help/gnumeric/C/images/align-center.png
-share/gnome/help/gnumeric/C/images/align-left.png
-share/gnome/help/gnumeric/C/images/align-right.png
-share/gnome/help/gnumeric/C/images/analysis-tools.png
-share/gnome/help/gnumeric/C/images/analysistools-correlation-ex1.png
-share/gnome/help/gnumeric/C/images/analysistools-correlation-ex2.png
-share/gnome/help/gnumeric/C/images/analysistools-correlation-ex3.png
-share/gnome/help/gnumeric/C/images/analysistools-correlation.png
-share/gnome/help/gnumeric/C/images/analysistools-covariance.png
-share/gnome/help/gnumeric/C/images/analysistools-descstats.png
-share/gnome/help/gnumeric/C/images/analysistools-outputoptions.png
-share/gnome/help/gnumeric/C/images/analysistools-ranges.png
-share/gnome/help/gnumeric/C/images/analysistools-rank.png
-share/gnome/help/gnumeric/C/images/analysistools-tools.png
-share/gnome/help/gnumeric/C/images/arrow.png
-share/gnome/help/gnumeric/C/images/auto-correct.png
-share/gnome/help/gnumeric/C/images/auto-save.png
-share/gnome/help/gnumeric/C/images/auto-sum.png
-share/gnome/help/gnumeric/C/images/autocorrect.png
-share/gnome/help/gnumeric/C/images/autofill-1.png
-share/gnome/help/gnumeric/C/images/autofill-10.png
-share/gnome/help/gnumeric/C/images/autofill-2.png
-share/gnome/help/gnumeric/C/images/autofill-3.png
-share/gnome/help/gnumeric/C/images/autofill-4.png
-share/gnome/help/gnumeric/C/images/autofill-5.png
-share/gnome/help/gnumeric/C/images/autofill-6.png
-share/gnome/help/gnumeric/C/images/autofill-7.png
-share/gnome/help/gnumeric/C/images/autofill-8.png
-share/gnome/help/gnumeric/C/images/autofill-9.png
-share/gnome/help/gnumeric/C/images/autosave.png
-share/gnome/help/gnumeric/C/images/bold.png
-share/gnome/help/gnumeric/C/images/border.png
-share/gnome/help/gnumeric/C/images/cells-1.png
-share/gnome/help/gnumeric/C/images/cells-2.png
-share/gnome/help/gnumeric/C/images/define-name.png
-share/gnome/help/gnumeric/C/images/dnd-selection-1.png
-share/gnome/help/gnumeric/C/images/dndselection-1.png
-share/gnome/help/gnumeric/C/images/drawing-toolbar.png
-share/gnome/help/gnumeric/C/images/editing-1.png
-share/gnome/help/gnumeric/C/images/editing-cell-selection-1.png
-share/gnome/help/gnumeric/C/images/file-dialog.png
-share/gnome/help/gnumeric/C/images/filter.png
-share/gnome/help/gnumeric/C/images/function-wizard.png
-share/gnome/help/gnumeric/C/images/function.png
-share/gnome/help/gnumeric/C/images/goal-seek.png
-share/gnome/help/gnumeric/C/images/graphing.png
-share/gnome/help/gnumeric/C/images/insert-object.png
-share/gnome/help/gnumeric/C/images/italic.png
-share/gnome/help/gnumeric/C/images/line.png
-share/gnome/help/gnumeric/C/images/modify-comment.png
-share/gnome/help/gnumeric/C/images/money.png
-share/gnome/help/gnumeric/C/images/number-format-buttonbar.png
-share/gnome/help/gnumeric/C/images/number-format-color-dialog.png
-share/gnome/help/gnumeric/C/images/number-format-dialog.png
-share/gnome/help/gnumeric/C/images/number-format-font-dialog.png
-share/gnome/help/gnumeric/C/images/number-format-justification-dialog-2.png
-share/gnome/help/gnumeric/C/images/number-format-justification.png
-share/gnome/help/gnumeric/C/images/oval.png
-share/gnome/help/gnumeric/C/images/percentage.png
-share/gnome/help/gnumeric/C/images/plug-ins.png
-share/gnome/help/gnumeric/C/images/plugins.png
-share/gnome/help/gnumeric/C/images/print-large.png
-share/gnome/help/gnumeric/C/images/print-preview-back.png
-share/gnome/help/gnumeric/C/images/print-preview-first.png
-share/gnome/help/gnumeric/C/images/print-preview-fit.png
-share/gnome/help/gnumeric/C/images/print-preview-fittall.png
-share/gnome/help/gnumeric/C/images/print-preview-fitwide.png
-share/gnome/help/gnumeric/C/images/print-preview-last.png
-share/gnome/help/gnumeric/C/images/print-preview-next.png
-share/gnome/help/gnumeric/C/images/print-preview-toolbar.png
-share/gnome/help/gnumeric/C/images/print-preview-zoomin.png
-share/gnome/help/gnumeric/C/images/print-preview-zoomout.png
-share/gnome/help/gnumeric/C/images/print-preview.png
-share/gnome/help/gnumeric/C/images/print-worksheet.png
-share/gnome/help/gnumeric/C/images/print.png
-share/gnome/help/gnumeric/C/images/printing-preview.png
-share/gnome/help/gnumeric/C/images/printing-setup-header.png
-share/gnome/help/gnumeric/C/images/printing-setup-margins.png
-share/gnome/help/gnumeric/C/images/printing-setup-page-1.png
-share/gnome/help/gnumeric/C/images/printing-setup-page.png
-share/gnome/help/gnumeric/C/images/rect.png
-share/gnome/help/gnumeric/C/images/redo.png
-share/gnome/help/gnumeric/C/images/remove-decimals.png
-share/gnome/help/gnumeric/C/images/selection-1.png
-share/gnome/help/gnumeric/C/images/selection-10.png
-share/gnome/help/gnumeric/C/images/selection-2.png
-share/gnome/help/gnumeric/C/images/selection-3.png
-share/gnome/help/gnumeric/C/images/selection-4.png
-share/gnome/help/gnumeric/C/images/selection-5.png
-share/gnome/help/gnumeric/C/images/selection-6.png
-share/gnome/help/gnumeric/C/images/selection-7.png
-share/gnome/help/gnumeric/C/images/selection-8.png
-share/gnome/help/gnumeric/C/images/selection-9.png
-share/gnome/help/gnumeric/C/images/sheet-indicator.png
-share/gnome/help/gnumeric/C/images/solver-01.png
-share/gnome/help/gnumeric/C/images/solver-02.png
-share/gnome/help/gnumeric/C/images/solver-03.png
-share/gnome/help/gnumeric/C/images/solver-04.png
-share/gnome/help/gnumeric/C/images/solver-05.png
-share/gnome/help/gnumeric/C/images/sort-ascending.png
-share/gnome/help/gnumeric/C/images/sort-descending.png
-share/gnome/help/gnumeric/C/images/sort.png
-share/gnome/help/gnumeric/C/images/stock-copy.png
-share/gnome/help/gnumeric/C/images/stock-cut.png
-share/gnome/help/gnumeric/C/images/stock-new.png
-share/gnome/help/gnumeric/C/images/stock-open.png
-share/gnome/help/gnumeric/C/images/stock-paste.png
-share/gnome/help/gnumeric/C/images/stock-save.png
-share/gnome/help/gnumeric/C/images/summary.png
-share/gnome/help/gnumeric/C/images/thousands.png
-share/gnome/help/gnumeric/C/images/toolbar.png
-share/gnome/help/gnumeric/C/images/underline.png
-share/gnome/help/gnumeric/C/images/undo.png
-share/gnome/help/gnumeric/C/images/worksheet-all-1.png
-share/gnome/help/gnumeric/C/images/worksheet-cols-1.png
-share/gnome/help/gnumeric/C/images/worksheet-data-1.png
-share/gnome/help/gnumeric/C/images/worksheet-data-2.png
-share/gnome/help/gnumeric/C/images/worksheet-data-3.png
-share/gnome/help/gnumeric/C/images/worksheet-data-4.png
-share/gnome/help/gnumeric/C/images/worksheet-info-1.png
-share/gnome/help/gnumeric/C/images/worksheet-rows-1.png
-share/gnome/help/gnumeric/C/images/worksheet-running-calc-1.png
-share/gnome/help/gnumeric/C/images/worksheet-zoomin-1.jpg
-share/gnome/help/gnumeric/C/images/worksheet-zoomout-1.jpg
-share/gnome/help/gnumeric/C/images/zoom-dialog.png
-share/gnome/help/gnumeric/C/images/zoom-toolbar.png
-share/gnome/help/gnumeric/C/images/zoom.png
 share/gnome/help/gnumeric/C/index.html
-share/gnome/help/gnumeric/C/introduction.html
+share/gnome/help/gnumeric/C/info-area.html
+share/gnome/help/gnumeric/C/insert-menu.html
+share/gnome/help/gnumeric/C/introduction.sgml
 share/gnome/help/gnumeric/C/license.html
-share/gnome/help/gnumeric/C/menu-bar.html
+share/gnome/help/gnumeric/C/license.sgml
+share/gnome/help/gnumeric/C/menus.html
 share/gnome/help/gnumeric/C/moving-average-tool.html
+share/gnome/help/gnumeric/C/number-format.sgml
 share/gnome/help/gnumeric/C/number-formatting-overview.html
+share/gnome/help/gnumeric/C/obj-toolbar.html
+share/gnome/help/gnumeric/C/opening-importing.html
+share/gnome/help/gnumeric/C/other-elements.html
+share/gnome/help/gnumeric/C/preface.html
 share/gnome/help/gnumeric/C/print-preview.html
 share/gnome/help/gnumeric/C/print-setup.html
 share/gnome/help/gnumeric/C/printing.html
+share/gnome/help/gnumeric/C/printing.sgml
+share/gnome/help/gnumeric/C/protectionandvalidation.html
 share/gnome/help/gnumeric/C/random-number-generation-tool.html
 share/gnome/help/gnumeric/C/rank-and-percentile-tool.html
 share/gnome/help/gnumeric/C/regression-tool.html
-share/gnome/help/gnumeric/C/rest.html
 share/gnome/help/gnumeric/C/sampling-tool.html
 share/gnome/help/gnumeric/C/selecting-cells-entering-formulas.html
+share/gnome/help/gnumeric/C/selections.sgml
 share/gnome/help/gnumeric/C/solver.html
+share/gnome/help/gnumeric/C/solver.sgml
+share/gnome/help/gnumeric/C/std-toolbar.html
 share/gnome/help/gnumeric/C/t-test.html
-share/gnome/help/gnumeric/C/toolbar-buttons.html
+share/gnome/help/gnumeric/C/toolbars.html
+share/gnome/help/gnumeric/C/tools-menu.html
 share/gnome/help/gnumeric/C/topic.dat
-share/gnome/help/gnumeric/C/tutorials.html
+share/gnome/help/gnumeric/C/view-menu.html
+share/gnome/help/gnumeric/C/worksheet.sgml
 share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/3D/.category
 share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/3D/autoformat.3D.button.xml
 share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/3D/autoformat.3D.list.xml
@@ -620,6 +810,7 @@ share/gnumeric/${PKGVERSION}-bonobo/glade/descriptive-stats.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/dialog-stf-export.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/dialog-stf.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/dialog-zoom.glade
+share/gnumeric/${PKGVERSION}-bonobo/glade/exp-smoothing.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/font-sel.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/formula-guru.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/fourier-analysis.glade
@@ -663,13 +854,6 @@ share/locale/en_AU/LC_MESSAGES/gnumeric.mo
 share/locale/en_CA/LC_MESSAGES/gnumeric.mo
 share/locale/en_GB/LC_MESSAGES/gnumeric.mo
 share/locale/es/LC_MESSAGES/gnumeric.mo
-share/locale/es_DO/LC_MESSAGES/gnumeric.mo
-share/locale/es_GT/LC_MESSAGES/gnumeric.mo
-share/locale/es_HN/LC_MESSAGES/gnumeric.mo
-share/locale/es_MX/LC_MESSAGES/gnumeric.mo
-share/locale/es_PA/LC_MESSAGES/gnumeric.mo
-share/locale/es_PE/LC_MESSAGES/gnumeric.mo
-share/locale/es_SV/LC_MESSAGES/gnumeric.mo
 share/locale/et/LC_MESSAGES/gnumeric.mo
 share/locale/fi/LC_MESSAGES/gnumeric.mo
 share/locale/fr/LC_MESSAGES/gnumeric.mo
@@ -679,18 +863,20 @@ share/locale/hr/LC_MESSAGES/gnumeric.mo
 share/locale/hu/LC_MESSAGES/gnumeric.mo
 share/locale/it/LC_MESSAGES/gnumeric.mo
 share/locale/ja/LC_MESSAGES/gnumeric.mo
+share/locale/ko/LC_MESSAGES/gnumeric.mo
 share/locale/nl/LC_MESSAGES/gnumeric.mo
 share/locale/nn/LC_MESSAGES/gnumeric.mo
 share/locale/no/LC_MESSAGES/gnumeric.mo
 share/locale/pl/LC_MESSAGES/gnumeric.mo
 share/locale/pt/LC_MESSAGES/gnumeric.mo
 share/locale/pt_BR/LC_MESSAGES/gnumeric.mo
+share/locale/ro/LC_MESSAGES/gnumeric.mo
 share/locale/ru/LC_MESSAGES/gnumeric.mo
 share/locale/sk/LC_MESSAGES/gnumeric.mo
 share/locale/sv/LC_MESSAGES/gnumeric.mo
 share/locale/tr/LC_MESSAGES/gnumeric.mo
 share/locale/uk/LC_MESSAGES/gnumeric.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/gnumeric.mo
+share/locale/zh_CN/LC_MESSAGES/gnumeric.mo
 share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 share/mc/templates/gnumeric.desktop
 share/mime-info/gnumeric.keys
@@ -752,35 +938,42 @@ share/pixmaps/gnumeric/right-down.png
 share/pixmaps/gnumeric/right_border
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/top_border
-@dirrm share/pixmaps/gnumeric
-@dirrm share/oaf
-@dirrm share/mime-info
-@dirrm share/mc/templates
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/idl
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome/ui
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/glade
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/General
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Financial
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Colourful
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Classical
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/3D
-@dirrm share/gnome/help/gnumeric/C/images
-@dirrm share/gnome/help/gnumeric/C
-@dirrm share/gnome/apps/Applications
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xbase
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sylk
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sc
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/plan_perfect
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/oleo
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/numtheory
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/mps
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/lotus
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/html
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/excel
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/dif
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/derivatives
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix
-@unexec rmdir %D/share/mc/templates >/dev/null 2>&1 || true
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/derivatives
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/dif
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/excel
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/html
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/lotus
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/mps
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/numtheory
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/oleo
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/plan_perfect
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sc
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sylk
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xbase
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo
+@dirrm lib/gnumeric
+@dirrm share/gnome/apps/Applications
+@dirrm share/gnome/help/gnumeric/C/figures
+@dirrm share/gnome/help/gnumeric/C/stylesheet-images
+@dirrm share/gnome/help/gnumeric/C
+@dirrm share/gnome/help/gnumeric
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/3D
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Classical
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Colourful
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Financial
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/General
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/glade
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome/ui
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/idl
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
+@dirrm share/gnumeric/${PKGVERSION}-bonobo
+@dirrm share/gnumeric
+@dirrm share/mc/templates
+@dirrm share/mc
+@dirrm share/pixmaps/gnumeric
