@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/01/04 21:47:16 tron Exp $
+# $NetBSD: Makefile,v 1.11 1999/01/06 00:43:23 tron Exp $
 #
 
 DISTNAME=	imlib-1.8.2
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.labs.redhat.com/imlib/
 DEPENDS+=	gtk+-1.1.9:../../x11/gtk
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 
 CONFLICTS=	imlib-*
