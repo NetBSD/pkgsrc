@@ -1,5 +1,7 @@
 #!/bin/sh
-
+#
+# $NetBSD: named.sh,v 1.4 2002/09/23 14:41:08 grant Exp $
+#
 # PROVIDE: named
 # REQUIRE: SERVERS
 
