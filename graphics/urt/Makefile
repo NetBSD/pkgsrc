@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/09/09 20:36:30 agc Exp $
+# $NetBSD: Makefile,v 1.21 2001/09/27 23:18:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
@@ -14,7 +14,7 @@ PATCH_DIST_STRIP=-p1
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Utah raster toolkit - a toolkit and library for raster image processing
 
-#DEPENDS+=	tiff-*:../tiff	# netpbm will pull in tiff.
+#DEPENDS+=	tiff-[0-9]*:../tiff	# netpbm will pull in tiff.
 DEPENDS+=	netpbm-9.*:../netpbm
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z

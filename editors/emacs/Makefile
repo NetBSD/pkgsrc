@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/05/19 03:56:34 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2001/09/27 23:17:59 jlam Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-20.7
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
-CONFLICTS=	mule-*
+CONFLICTS=	mule-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:24 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:04 jlam Exp $
 
 DISTNAME=		book_large
 PKGNAME=		${CHESS_ENGINE}-book-large-20000512
@@ -11,7 +11,7 @@ COMMENT=		chess opening book for ColChess (large)
 
 DEPENDS+=		colchess>=7.0:../../games/colchess
 
-CONFLICTS=		${CHESS_ENGINE}-book-*
+CONFLICTS=		${CHESS_ENGINE}-book-[0-9]*
 
 CHESS_ENGINE=		colchess
 DIST_SUBDIR=		chessbooks

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/02/26 20:19:45 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/09/27 23:18:10 jlam Exp $
 
 DISTNAME=		ee-0.3.12
 CATEGORIES=		x11 gnome
@@ -8,7 +8,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Image viewer based on imlib by the Rasterman.  Gtk clone of xv
 
-DEPENDS+=		gnome-core-*:../../x11/gnome-core
+DEPENDS+=		gnome-core-[0-9]*:../../x11/gnome-core
 
 GNU_CONFIGURE=		# defined
 USE_X11BASE=		# defined

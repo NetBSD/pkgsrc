@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/05 21:30:36 groo Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:16 jlam Exp $
 #
 
 DISTNAME=		plt.src.x
@@ -10,7 +10,7 @@ MAINTAINER=		groo@netbsd.org
 HOMEPAGE=		http://www.cs.rice.edu/CS/PLT/packages/drscheme/
 COMMENT=		R4RS-compilant and nearly R5RS-compliant scheme tailored for teaching
 
-CONFLICTS+=		mzscheme-*:../mzscheme
+CONFLICTS+=		mzscheme-[0-9]*:../mzscheme
 
 USE_GMAKE=		yes
 USE_PERL5=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/20 12:46:50 rh Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:26 jlam Exp $
 #
 
 DISTNAME=		dante-1.1.9
@@ -9,7 +9,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.inet.no/dante/
 COMMENT=		BSD-licensed socks 4/5 proxy suite
 
-CONFLICTS=		socks4-*
+CONFLICTS=		socks4-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

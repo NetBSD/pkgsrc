@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:56 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:58 jlam Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -9,12 +9,12 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.engelschall.com/sw/wml/
 COMMENT=	Web Meta Language
 
-DEPENDS+=	ncurses-*:../../devel/ncurses
+DEPENDS+=	ncurses-[0-9]*:../../devel/ncurses
 DEPENDS+=	p5-Bit-Vector>=5.2:../../devel/p5-Bit-Vector
-DEPENDS+=	p5-File-PathConvert-*:../../devel/p5-File-PathConvert
+DEPENDS+=	p5-File-PathConvert-[0-9]*:../../devel/p5-File-PathConvert
 DEPENDS+=	p5-Image-Size>=2.6:../../graphics/p5-Image-Size
 DEPENDS+=	p5-Term-ReadKey>=2.11:../../devel/p5-Term-ReadKey
-#DEPENDS+=	tidy-*:../../www/tidy
+#DEPENDS+=	tidy-[0-9]*:../../www/tidy
 
 USE_PERL5=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2001/06/13 06:20:28 explorer Exp $
+# $NetBSD: Makefile.common,v 1.16 2001/09/27 23:18:57 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 PHP_DIST_VERS=		4.0.5
@@ -34,7 +34,7 @@ PHP_CONFDIR?=		${LOCALBASE}/etc
 MESSAGE_SUBST+=		PHP_CONFDIR=${PHP_CONFDIR}
 
 .if ${OPSYS} == "SunOS"
-DEPENDS+=		zlib-*:../../devel/zlib
+DEPENDS+=		zlib-[0-9]*:../../devel/zlib
 .endif
 
 # Here we configure only for what NetBSD ships.  We add the rest via modules.

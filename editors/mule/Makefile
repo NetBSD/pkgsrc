@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/23 23:25:05 kei Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:00 jlam Exp $
 
 DISTNAME=	mule-2.3
 CATEGORIES=	editors
@@ -8,7 +8,7 @@ MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://www.m17n.org/mule/MulePage.en.html
 COMMENT=	Multilingual GNU editing macros (editor)
 
-CONFLICTS=	emacs-*
+CONFLICTS=	emacs-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 

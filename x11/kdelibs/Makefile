@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2001/05/22 09:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2001/09/27 23:19:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.11:../../graphics/png
 DEPENDS+=	qt1-1.44:../../x11/qt1
-DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes

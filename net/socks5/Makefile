@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/06/28 20:28:56 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/09/27 23:18:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -14,7 +14,7 @@ MAINTAINER=	ambrisko@ambrisko.roble.com
 HOMEPAGE=	http://www.socks.nec.com/
 COMMENT=	SOCKS v5 application layer gateway and clients
 
-CONFLICTS=	socks4-*
+CONFLICTS=	socks4-[0-9]*
 
 RESTRICTED=		"no commercial use"
 NO_SRC_ON_CDROM=	${RESTRICTED}

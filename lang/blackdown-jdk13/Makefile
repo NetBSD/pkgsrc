@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/23 16:57:47 manu Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:16 jlam Exp $
 #
 
 DISTNAME=       blackdown-jdk-1.3.0.nb3
@@ -13,7 +13,7 @@ COMMENT=        Blackdown's Java(tm) Development Kit 1.3.0
 
 DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 
-CONFLICTS=      jdk-* blackdown-j*
+CONFLICTS=      jdk-[0-9]* blackdown-j*
 
 WRKSRC=		${WRKDIR}/j2sdk1.3
 

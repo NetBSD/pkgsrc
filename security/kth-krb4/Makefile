@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/08/02 12:46:48 wennmach Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/27 23:18:38 jlam Exp $
 #
 
 DISTNAME=		krb4-1.0.9
@@ -10,10 +10,10 @@ MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
 COMMENT=		Kerberos IV distribution from KTH
 
-CONFLICTS+=		wu-ftpd-*
-CONFLICTS+=		lukemftp-*
-CONFLICTS+=		zephyr-*
-CONFLICTS+=		libdes-*
+CONFLICTS+=		wu-ftpd-[0-9]*
+CONFLICTS+=		lukemftp-[0-9]*
+CONFLICTS+=		zephyr-[0-9]*
+CONFLICTS+=		libdes-[0-9]*
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/05/22 09:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/09/27 23:18:37 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -12,14 +12,14 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - executables
 
-BUILD_DEPENDS+=	bison-*:../../devel/bison
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	libwww>=5.2.8:../../www/libwww
 DEPENDS+=	png>=1.0.11:../../graphics/png
 DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
-CONFLICTS+=	omega-*
+CONFLICTS+=	omega-[0-9]*
 
 ALL_TARGET=	all
 INSTALL_TARGET=	install strip

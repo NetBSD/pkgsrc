@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/09/27 12:55:40 lukem Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/27 23:18:42 jlam Exp $
 
 DISTNAME=		apcupsd-3.6.2
 CATEGORIES=		sysutils
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		# defined
 # which has a curses interface
 #
 #CONFIGURE_ARGS+=	--enable-http		# include http support
-#DEPENDS+=		ncurses-*:../../devel/ncurses
+#DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
 #CONFIGURE_ARGS+=	--enable-threads	# compile threading code
 #CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
 

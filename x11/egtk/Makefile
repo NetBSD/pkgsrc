@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/07/14 12:37:55 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:59 jlam Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.netlabs.net/hp/richieb/gtk_eiffel.html
 COMMENT=	Eiffel/GTK+ interface for SmallEiffel
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	smalleiffel-*:../../lang/smalleiffel
+DEPENDS+=	smalleiffel-[0-9]*:../../lang/smalleiffel
 
 USE_X11=	yes
 

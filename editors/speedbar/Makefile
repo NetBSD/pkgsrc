@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/09 15:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:01 jlam Exp $
 #
 
 DISTNAME=	speedbar-0.13a
@@ -12,11 +12,11 @@ COMMENT=	Directory and code browser for emacs
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_XEMACS)
-DEPENDS+=	 	xemacs-*:../../editors/xemacs
+DEPENDS+=	 	xemacs-[0-9]*:../../editors/xemacs
 EMACS=			xemacs
 LISPDIR=		lib/xemacs/xemacs-packages/lisp/speedbar
 .else
-DEPENDS+=	 	emacs-*:../../editors/emacs
+DEPENDS+=	 	emacs-[0-9]*:../../editors/emacs
 EMACS=			emacs
 LISPDIR=		share/emacs/site-lisp/speedbar
 .endif

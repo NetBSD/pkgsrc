@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:28 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:08 jlam Exp $
 #
 
 DISTNAME=	linuxq3apoint-1.17.x86
@@ -15,7 +15,7 @@ DEPENDS+=	suse_base>=6.3:../../emulators/suse_base
 DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
 DEPENDS+=	suse_glx-6.4:../../emulators/suse_glx
 
-CONFLICTS=	quake3arena-demo-*
+CONFLICTS=	quake3arena-demo-[0-9]*
 
 NO_SRC_ON_FTP=	no
 NO_BIN_ON_FTP=	no

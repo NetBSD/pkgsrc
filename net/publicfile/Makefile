@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/16 22:50:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:30 jlam Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -9,7 +9,7 @@ MAINTAINER=		zuntum@netbsd.org
 HOMEPAGE=		http://cr.yp.to/publicfile.html
 COMMENT=		secure read-only HTTP and FTP servers
 
-DEPENDS+=		daemontools-*:../../sysutils/daemontools
+DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
 ALL_TARGET=		it
 INSTALL_TARGET=		setup check

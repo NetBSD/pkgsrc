@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/09/14 22:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/09/27 23:18:35 jlam Exp $
 #
 
 DISTNAME=		pkgdiff-0.101
@@ -24,7 +24,7 @@ MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=	groff-*:../../textproc/groff
+BUILD_DEPENDS+=	groff-[0-9]*:../../textproc/groff
 NROFF=		gnroff
 .else
 NROFF=		nroff

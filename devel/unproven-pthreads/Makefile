@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/05/19 03:56:34 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/09/27 23:17:58 jlam Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -11,7 +11,7 @@ COMMENT=		(MIT) POSIX threads library, hacked by Michael Graff
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-powerpc NetBSD-*-sparc
-CONFLICTS+=		mit-pthreads-*
+CONFLICTS+=		mit-pthreads-[0-9]*
 
 HAS_CONFIGURE=		yes
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/08/12 20:32:01 rh Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/27 23:18:59 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.3
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Applets for GNOME
 
-BUILD_DEPENDS+=		xml-i18n-tools-*:../../textproc/xml-i18n-tools
+BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
 DEPENDS+=		gnome-core>=1.4.0.4:../../x11/gnome-core
 DEPENDS+=		libgtop>=1.0.12:../../devel/libgtop
 

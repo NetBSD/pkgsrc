@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/09/23 00:55:15 mycroft Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:33 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www.tightvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 
-CONFLICTS=		vncviewer-*
+CONFLICTS=		vncviewer-[0-9]*
 
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
