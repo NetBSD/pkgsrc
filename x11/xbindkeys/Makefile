@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/10/13 11:39:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/03 12:52:59 jmmv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+CONFIGURE_ARGS+=	--disable-tk
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
