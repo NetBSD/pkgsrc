@@ -1,0 +1,47 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/01/04 02:05:33 jmcneill Exp $
+
+--- src/fluxbox.hh.orig	Thu Dec 27 04:19:09 2001
++++ src/fluxbox.hh	Thu Dec 27 04:21:26 2001
+@@ -87,6 +87,20 @@
+ #include <string>
+ #include <vector>
+ 
++template <class Z>
++class DataSearch {
++	private:
++		Window window;
++		Z *data;
++
++
++	public:
++		DataSearch(Window w, Z *d) { window = w; data = d; }
++
++		inline const Window &getWindow(void) const { return window; }
++		inline Z *getData(void) { return data; }
++};
++
+ class Fluxbox : public BaseDisplay, public TimeoutHandler {	
+ public:
+ 	
+@@ -191,21 +205,6 @@
+ 	enum { B_AmericanDate = 1, B_EuropeanDate };
+ #endif // HAVE_STRFTIME
+ 	
+-	template <class Z>
+-	class DataSearch {
+-	private:
+-		Window window;
+-		Z *data;
+-
+-
+-	public:
+-		DataSearch(Window w, Z *d) { window = w; data = d; }
+-
+-		inline const Window &getWindow(void) const { return window; }
+-		inline Z *getData(void) { return data; }
+-	};
+-	
+-		
+ private:
+ 	typedef struct MenuTimestamp {
+ 		char *filename;

@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/04 02:05:33 jmcneill Exp $
+
+--- src/i18n.hh.orig	Sat Dec 29 01:30:44 2001
++++ src/i18n.hh	Sat Dec 29 01:31:16 2001
+@@ -58,7 +58,12 @@
+   
+   inline const int &multibyte(void) const { return mb; }
+ 
++#ifndef __NetBSD__
++  /*
++   * Compilation dies here on NetBSD -- luckily, nothing uses this function
++   */
+   inline const nl_catd &getCatalogFd(void) const { return catalog_fd; }
++#endif // __NetBSD__
+ 
+   const char *getMessage(int, int, const char * = 0);
+   void openCatalog(const char *);

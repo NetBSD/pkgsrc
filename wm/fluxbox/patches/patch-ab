@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/01/04 02:05:33 jmcneill Exp $
+
+--- src/misc.cc.orig	Thu Dec 27 04:05:34 2001
++++ src/misc.cc	Thu Dec 27 04:02:59 2001
+@@ -390,8 +390,10 @@
+ void DrawString(Display *display, Window w, GC gc, FFont *font, 
+ 					unsigned int text_w, unsigned int size_w, 
+ 					unsigned int bevel_w, char *text) {
+-//Draw title string	
+ 
++	if (!text || text_w<1 || size_w < 1 || !font || !display)
++		return;
++		
+ 	unsigned int l = text_w;
+ 	int dlen=strlen(text);
+ 	int dx=bevel_w*2;
+@@ -446,7 +448,9 @@
+ 					unsigned int align, unsigned int text_w, 
+ 					unsigned int size_w, unsigned int size_h,
+ 					unsigned int bevel_w, char *text) {
+-
++	if (!text || text_w<1 || size_w < 1 || !font || !display)
++		return;
++		
+ 	unsigned int l = text_w;
+ 	int dlen = strlen(text);
+ 	int dx = bevel_w * 2;
