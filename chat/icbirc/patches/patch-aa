@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/18 14:21:18 tron Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/01 16:00:42 tv Exp $
 
---- icbirc.c.orig	2003-08-20 23:55:59.000000000 +0200
-+++ icbirc.c	2004-01-18 15:12:29.000000000 +0100
-@@ -318,8 +318,8 @@
+--- icbirc.c.orig	Wed Aug 20 17:55:59 2003
++++ icbirc.c
+@@ -294,7 +294,7 @@ handle_client(int client_fd)
+ 					    "Connection closed by server");
+ 					break;
+ 				}
+-				icb_recv(buf, len, client_fd);
++				icb_recv(buf, len, client_fd, server_fd);
+ 				bytes_in += len;
+ 			}
+ 			if (FD_ISSET(client_fd, &readfds)) {
+@@ -318,8 +318,8 @@ handle_client(int client_fd)
  done:
  	if (server_fd >= 0)
  		close(server_fd);
