@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/14 16:36:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/05 14:08:30 wiz Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=       swish-efiles.1.3.2
@@ -13,11 +13,11 @@ WRKSRC=		${WRKDIR}/src
 USE_GMAKE=	yes
 
 do-install:
-	$(INSTALL_PROGRAM) ${WRKSRC}/swish-e ${PREFIX}/bin
-	$(MKDIR) -p $(PREFIX)/share/examples/swish-e
-	$(INSTALL_DATA) ${WRKSRC}/user.config ${PREFIX}/share/examples/swish-e
-	$(INSTALL_DATA) ${WRKSRC}/test.html ${PREFIX}/share/examples/swish-e
-	$(INSTALL_DATA) ${WRKSRC}/swishspider ${PREFIX}/share/examples/swish-e
-	$(INSTALL_DATA) ${WRKSRC}/README-SWISH-E ${PREFIX}/share/examples/swish-e
+	${INSTALL_PROGRAM} ${WRKSRC}/swish-e ${PREFIX}/bin
+	${MKDIR} ${PREFIX}/share/examples/swish-e
+	${INSTALL_DATA} ${WRKSRC}/user.config ${PREFIX}/share/examples/swish-e
+	${INSTALL_DATA} ${WRKSRC}/test.html ${PREFIX}/share/examples/swish-e
+	${INSTALL_DATA} ${WRKSRC}/swishspider ${PREFIX}/share/examples/swish-e
+	${INSTALL_DATA} ${WRKSRC}/README-SWISH-E ${PREFIX}/share/examples/swish-e
 
 .include "../../mk/bsd.pkg.mk"
