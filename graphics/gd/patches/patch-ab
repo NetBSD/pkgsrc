@@ -1,0 +1,13 @@
+*** gd.c.dist	Tue Jan 28 14:39:24 1997
+--- gd.c	Tue Jan 28 14:39:42 1997
+***************
+*** 1,4 ****
+! #include <malloc.h>
+  #include <stdio.h>
+  #include <math.h>
+  #include <string.h>
+--- 1,4 ----
+! #include <stdlib.h>
+  #include <stdio.h>
+  #include <math.h>
+  #include <string.h>
