@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 05:11:17 jun Exp $
+bin/ssl.telnet
+bin/ssl.telnetd
+bin/ssl.telnetd.sh
+certs/telnetd.p12
+certs/verify.idx
+share/doc/AiSSLtelnet/COPYRIGHT
+share/doc/AiSSLtelnet/README
+share/doc/AiSSLtelnet/README-j
+@dirrm share/doc/AiSSLtelnet
+@dirrm certs
