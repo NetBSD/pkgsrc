@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/01/22 08:36:04 grant Exp $
+# $NetBSD: Makefile,v 1.40 2004/01/30 16:49:08 wiz Exp $
 #
 
 DISTNAME=		vice-1.13
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.nic.funet.fi/pub/cbm/crossplatform/emulators/VICE/
 
 MAINTAINER=		kristerw@NetBSD.org
-HOMEPAGE=		http://viceteam.bei.t-online.de/
+HOMEPAGE=		http://www.viceteam.org/
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
 
 BUILD_USES_MSGFMT=	YES
