@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 1998/08/09 21:23:29 kim Exp $
+@comment $NetBSD: PLIST,v 1.10 1998/08/09 21:42:01 kim Exp $
 bin/irc
 bin/irc-4.4
 bin/ircbug
 bin/ircio
 bin/ircflush
 bin/wserv
+man/man1/irc.1
+man/man1/ircII.1
+man/man1/ircbug.1
 share/irc/translation/ASCII
 share/irc/translation/CP437
 share/irc/translation/CP850
@@ -573,8 +576,6 @@ share/irc/help/timer@.GZ@
 share/irc/help/.date@.GZ@
 share/irc/help/menus@.GZ@
 share/irc/help/abort@.GZ@
-man/man1/ircII.1
-man/man1/ircbug.1
 @unexec rm -f %D/share/irc/ircII.servers %D/share/irc/ircII.motd
 @dirrm share/irc/help/alias
 @dirrm share/irc/help/bind
