@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/30 13:39:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/01/15 09:57:13 markd Exp $
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPArg.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPClient.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPConnection.html
@@ -14,7 +14,6 @@ share/doc/kde/HTML/en/kdelibs/dcop/DCOPSignals.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPStub.html
 share/doc/kde/HTML/en/kdelibs/dcop/MyDCOPObject.html
 share/doc/kde/HTML/en/kdelibs/dcop/all-globals.html
-share/doc/kde/HTML/en/kdelibs/dcop/dcop-doc_h.html
 share/doc/kde/HTML/en/kdelibs/dcop/dcopc_h.html
 share/doc/kde/HTML/en/kdelibs/dcop/dcopclient_h.html
 share/doc/kde/HTML/en/kdelibs/dcop/dcopglobal_h.html
@@ -726,7 +725,6 @@ share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletViewerFactory.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletViewerWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaDownloader.html
-share/doc/kde/HTML/en/kdelibs/kdejava/KJavaEmbed.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaLiveConnect.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaProcess.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KQEventUtil.html
@@ -742,7 +740,6 @@ share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletViewerFactory.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletViewerWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaDownloader.html
-share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaEmbed.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaLiveConnect.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaProcess.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KQEventUtil.html
@@ -751,7 +748,6 @@ share/doc/kde/HTML/en/kdelibs/kdejava/header-list.html
 share/doc/kde/HTML/en/kdelibs/kdejava/hier.html
 share/doc/kde/HTML/en/kdelibs/kdejava/index-long.html
 share/doc/kde/HTML/en/kdelibs/kdejava/index.html
-share/doc/kde/HTML/en/kdelibs/kdejava/javaembed_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaapplet_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaappletcontext_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaappletserver_h.html
