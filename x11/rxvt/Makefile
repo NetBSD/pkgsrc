@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/12/15 14:55:21 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/01/14 09:08:02 grant Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--enable-utmp \
 # Note: greek support could not be enabled, as the resource file handling
 # to disable it at runtime is documented but not implemented in the current
 # version. See files/Rxvt and check if it works for newer versions. When
-# enabling it, please fix pkg/MESSAGE as well.
+# enabling it, please fix MESSAGE as well.
 #			--enable-greek
 
 CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.xpm}/include/X11
