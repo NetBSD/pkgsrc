@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/03/11 19:59:56 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/01 05:52:08 wiz Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -23,9 +23,9 @@ do-configure:
 	(cd ${WRKDIR}/${DAPATH}; ${RM} -rf Makefile* *.pyc *.orig src Setup)
 
 do-build:
-	${PREFIX}/bin/python ${PREFIX}/lib/python1.5/compileall.py \
+	${PREFIX}/bin/python ${PREFIX}/lib/python2.0/compileall.py \
 		${WRKDIR}/${DAPATH}
-	${PREFIX}/bin/python -O ${PREFIX}/lib/python1.5/compileall.py \
+	${PREFIX}/bin/python -O ${PREFIX}/lib/python2.0/compileall.py \
 		${WRKDIR}/${DAPATH}
 
 do-install:
