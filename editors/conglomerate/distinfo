@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/03/09 22:05:08 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2005/02/14 21:32:10 jmmv Exp $
 
-SHA1 (conglomerate-0.7.12.tar.gz) = 878c53f8eb837a1548f5cd3ec4cc41980b9d3e58
-Size (conglomerate-0.7.12.tar.gz) = 1996197 bytes
-SHA1 (patch-aa) = 6bcfa30f58bd6a1e82ba7faa897face18fb01839
+SHA1 (conglomerate-0.9.0.tar.gz) = eb19cf6cf0823920f746abc1deae582b4eeeaa88
+Size (conglomerate-0.9.0.tar.gz) = 2750760 bytes
+SHA1 (patch-aa) = 49275d1a9f81638e8eb945ff7c9732fc01bf0a08

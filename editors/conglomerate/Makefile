@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/01/01 03:44:51 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2005/02/14 21:32:10 jmmv Exp $
 #
 
-DISTNAME=	conglomerate-0.7.12
-PKGREVISION=	6
+DISTNAME=	conglomerate-0.9.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=conglomerate/}
 
@@ -24,7 +23,7 @@ USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--enable-printing
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 GCONF2_SCHEMAS=		conglomerate.schemas
 
@@ -37,10 +36,12 @@ GCONF2_SCHEMAS=		conglomerate.schemas
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
