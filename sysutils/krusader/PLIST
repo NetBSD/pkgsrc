@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/10 06:40:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/09 11:52:03 markd Exp $
 bin/krusader
 lib/kde3/kio_iso.la
 lib/kde3/kio_krarc.la
@@ -15,10 +15,6 @@ share/doc/kde/HTML/en/krusader/index.cache.bz2
 share/doc/kde/HTML/en/krusader/index.docbook
 share/doc/kde/HTML/en/krusader/installation.docbook
 share/doc/kde/HTML/en/krusader/introduction.docbook
-share/doc/kde/HTML/en/krusader/kgadvanced.png
-share/doc/kde/HTML/en/krusader/kgarchives.png
-share/doc/kde/HTML/en/krusader/kggeneral.png
-share/doc/kde/HTML/en/krusader/kglookfeel.png
 share/doc/kde/HTML/en/krusader/kgstartup.png
 share/doc/kde/HTML/en/krusader/konfigurator.docbook
 share/doc/kde/HTML/en/krusader/krusader-tools.docbook
@@ -30,6 +26,7 @@ share/doc/kde/HTML/en/krusader/mountman.png
 share/doc/kde/HTML/en/krusader/remoteman.png
 share/doc/kde/HTML/en/krusader/search_advanced.png
 share/doc/kde/HTML/en/krusader/search_general.png
+share/doc/kde/HTML/en/krusader/syncdir.png
 share/doc/kde/HTML/en/krusader/tabbed_browsing.png
 share/doc/kde/HTML/en/krusader/terminalEmu.png
 share/doc/kde/HTML/en/krusader/toolbar.png
@@ -149,10 +146,19 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/krusader.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/krusader.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krusader.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/krusader.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/krusader.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/krusader.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/krusader.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/krusader.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/krusader.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/krusader.mo
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/krusader/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/krusader/icons/hicolor/32x32
 @dirrm share/kde/apps/krusader/icons/hicolor/22x22/actions
@@ -162,4 +168,9 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/krusader.mo
 @dirrm share/kde/apps/krusader/icons/hicolor
 @dirrm share/kde/apps/krusader/icons
 @dirrm share/kde/apps/krusader
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Applications
 @dirrm share/doc/kde/HTML/en/krusader
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm lib/kde3
