@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2005/01/16 16:57:12 tv Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 14:45:22 agc Exp $
 
 SHA1 (arj-3.10.21.tar.gz) = 3599001a762655688dcd1663e100f2d6ebec8227
+RMD160 (arj-3.10.21.tar.gz) = e126821cf15abba91bbeeeb771ffd279ffc7d114
 Size (arj-3.10.21.tar.gz) = 430807 bytes
 SHA1 (patch-aa) = d9d1d7970a00286451a8fcf56e27cd86182e8a99
 SHA1 (patch-ab) = a704418a3c1fe22e4d8c2f72a52483c68b114da6

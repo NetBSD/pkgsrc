@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2004/11/23 02:42:10 tv Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 14:45:28 agc Exp $
 
 SHA1 (zip11.zip) = 71c84e82593d8ee3dd9189bf712524ceb93cc1bb
+RMD160 (zip11.zip) = 964753913220106757fcbb2d449efb4463a3275d
 Size (zip11.zip) = 158736 bytes
 SHA1 (zcrypt10.zip) = e1638d3c5af1081789948518177c173df9f6e50f
+RMD160 (zcrypt10.zip) = 40b6910a7831cb5c8bb069deef8bd11b0fdf603e
 Size (zcrypt10.zip) = 14674 bytes
 SHA1 (patch-aa) = 6ea300fb79167d3d1f32cde9407ff967aac35894
 SHA1 (patch-ab) = d81a0b000e96bd0c09b7817e7572390aa173ef2c
