@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/07 02:11:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/10 15:39:06 jlam Exp $
 #
 
 DISTNAME=	hylafax-4.1beta2
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.hylafax.org/
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	mawk>=1.2.2:../../lang/mawk
-DEPENDS+=	ghostscript{,-nox11,-x11}-[0-9]*:../../print/ghostscript-x11
+DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
 CONFLICTS=	mgetty-*
 
