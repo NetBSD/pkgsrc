@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 14:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/23 14:11:23 tron Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -19,8 +19,3 @@ IGNORE=		"${PKGNAME} is part of your NetBSD distribution"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
-# Needed for bootstrapping pkgsrc!
-.if !exists(${GTAR})
-GTAR=		/usr/bin/tar		# Solaris
-.endif
