@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/07 01:23:28 heinz Exp $
+
+SHA1 (Sys-Hostname-Long-1.0.tar.gz) = 8e55d84e84dbc9a75bf90b17f968394f58177368
+Size (Sys-Hostname-Long-1.0.tar.gz) = 2286 bytes
+SHA1 (patch-aa) = 8ca0721838baac7b15dd2eaf4b49d106f06c041f
