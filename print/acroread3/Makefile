@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/27 10:29:05 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/16 13:55:34 wiz Exp $
 
 PKGNAME=	acroread-3.01
 CATEGORIES=	print
@@ -63,7 +63,7 @@ post-install:
 	  ${PATCH} --quiet < ${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat3/bin/acroread \
 	     ${PREFIX}/bin/acroread3 && ${RM} acroread.orig
-	@chmod +x ${PREFIX}/bin/acroread3
+	@${CHMOD} +x ${PREFIX}/bin/acroread3
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat3/Reader/License.pdf"
 
