@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/10/23 17:07:13 drochner Exp $
+$NetBSD: distinfo,v 1.3 2002/12/07 18:04:12 drochner Exp $
 
-SHA1 (zope/ZWiki-0.11.0.tgz) = 264fa8420b57e2ae4231409ff0e2272ca595108f
-Size (zope/ZWiki-0.11.0.tgz) = 189135 bytes
+SHA1 (zope/ZWiki-0.13.0.tgz) = f6f119c121873a499008db8e28260905b6286d7e
+Size (zope/ZWiki-0.13.0.tgz) = 176139 bytes
