@@ -1,0 +1,95 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/22 03:15:09 kim Exp $
+
+--- Makefile.orig	Sun Mar 21 19:50:53 1999
++++ Makefile	Sun Mar 21 19:51:44 1999
+@@ -51,11 +51,11 @@
+ # Where the configuration files live.
+ RADDB		= ./raddb
+ # Some installation stuff.
+-DAEMON_INSDIR	= /usr/private/etc
+-BIN_INSDIR	= /usr/private/etc
+-MAN_INSDIR	= /usr/local/man
+-RADDB_INSDIR	= /usr/private/etc/raddb.new
+-RADACCT_INSDIR	= /usr/private/etc/radacct
++DAEMON_INSDIR	= ${PREFIX}/sbin
++BIN_INSDIR	= ${PREFIX}/sbin
++MAN_INSDIR	= ${PREFIX}/man
++RADDB_INSDIR	= /etc/raddb
++RADACCT_INSDIR	= /var/log
+ # The server does not need to be owned by root, unless some shadow password
+ # scheme needs it.  You might create a user id "radius" for just this purpose.
+ # The O G and M macros are for AIX, OSF/1 and HP-UX, see below.
+@@ -63,12 +63,12 @@
+ G		= -g
+ M		= -m
+ RADOWN		= root
+-RADGRP		= bin
++RADGRP		= wheel
+ 
+ # Define COMPRESS to hold the pathname of your favourite compress program if
+ # you need to override the default value of /usr/ucb/compress:
+-#COMPRESS	= -DRAD_COMPRESS=\"/usr/local/bin/gzip\"
+-#COMPRESS_ARGS	= -DCOMPRESS_ARGS=\"-9\"
++COMPRESS	= -DRAD_COMPRESS=\"${GNUZIP}\"
++COMPRESS_ARGS	= -DCOMPRESS_ARGS=\"-nf9\"
+ 
+ # Define SRV to hold any combination of server names you'd like to override:
+ #SRV3	  = -DDEFAULT_TACACS_SERVER=\"vms.dns.name\"
+@@ -90,13 +90,13 @@
+ # -DBINARY_FILTERS - support for Ascend binary filters
+ # -DIP_ADDR_POOL - support for Ascend IP address pools
+ #
+-ASCEND	  = -DASCEND -DBINARY_FILTERS
++ASCEND	  = -DASCEND -DBINARY_FILTERS -DIP_ADDR_POOL
+ 
+ # Define USR_CCA to enable USR support:
+ #USR	  = -DUSR_CCA
+ 
+ # Define RAD_LOG_FMT to change how the logfile name changes:
+-RAD_LOG_FMT	= -DRADIUS_LOG_FMT=\"logfile.%y%m%d\"
++RAD_LOG_FMT	= -DRADIUS_LOG_FMT=\"radius\"
+ 
+ STUFF	  = $(DIRS) $(SRV) $(COMPRESS) $(COMPRESS_ARGS) $(CHK_SHELLS) \
+ 	$(ASCEND) $(USR)
+@@ -122,10 +122,10 @@
+ # radiusd -- the default
+ #
+ #--------------------------------------------------------------------------
+-DEFS	  = -DHAVE_SETVBUF -DNOSHADOW $(MERIT) $(STUFF) \
++#DEFS	  = -DHAVE_SETVBUF -DNOSHADOW $(MERIT) $(STUFF) \
+ # end local defs additions
+-RADLIBS	  = ./logdaemon-5.6/skey/libskey.a
+-INCS	  = -I./logdaemon-5.6/skey
++#RADLIBS	  = ./logdaemon-5.6/skey/libskey.a
++#INCS	  = -I./logdaemon-5.6/skey
+ 
+ #
+ # mkerb
+@@ -237,12 +237,12 @@
+ #
+ #--------------------------------------------------------------------------
+ 
+-CC	  = cc
+-CFLAGS	  = -g $(DEFS) $(INCS)
+-LDFLAGS	  =
+-LIBS	  =
+-RANLIB	  = ranlib
+-INSTALL	  = /bin/install
++#CC	  = cc
++#CFLAGS	  = -g $(DEFS) $(INCS)
++#LDFLAGS	  =
++#LIBS	  =
++#RANLIB	  = ranlib
++#INSTALL	  = /bin/install
+ 
+ #
+ # Solaris 2.x [[NB: if BIND/named not SMCC, try CFLAGS = ... -DBSD=1 ...]]
+@@ -438,6 +438,8 @@
+ #INSTALL	  = /bin/install
+ 
+ # You must un-comment one, and only one, of the above sections!
++
++CFLAGS+= ${MERIT} ${STUFF}
+ 
+ # No modifications are necessary below this line except possibly near line 500.
+ 
