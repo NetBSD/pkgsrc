@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 1998/12/29 06:09:26 garbled Exp $
+--- QwSpriteField/Makefile.in.orig	Mon Dec 28 22:58:46 1998
++++ QwSpriteField/Makefile.in	Mon Dec 28 22:59:06 1998
+@@ -139,7 +139,7 @@
+ # the difference between the first and the last, is the major number
+ # the last is the minor number
+ # the number in the middle is the minor-minor number
+-libQwSpriteField_la_LDFLAGS = -version-info 5:2:4 -lqt -lX11 $(LIBSOCKET)
++libQwSpriteField_la_LDFLAGS = -version-info 5:2:4 -lqt -lX11 -lXext $(LIBSOCKET)
+ 
+ INCLUDES = $(QT_INCLUDES)
+ lib_LTLIBRARIES = libQwSpriteField.la
+@@ -157,7 +157,7 @@
+ 
+ noinst_PROGRAMS = example
+ example_SOURCES = example.cpp
+-example_LDADD = libQwSpriteField.la -lqt -lX11 $(LIBSOCKET) 
++example_LDADD = libQwSpriteField.la -lqt -lX11 -lXext $(LIBSOCKET) 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
