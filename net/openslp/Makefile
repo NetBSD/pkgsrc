@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:17:57 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/11/27 04:41:12 jlam Exp $
 
-DISTNAME=	openslp-1.0.11
-PKGREVISION=	1
+DISTNAME=	openslp-1.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openslp/}
 
@@ -11,16 +10,17 @@ COMMENT=	Open-source implementation of the Service Location Protocol
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
-USE_PKGINSTALL=		YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--enable-slpv2-security
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR} DOC_DIR=${DOCDIR}
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 
 CONFS=			slp.conf slp.reg slp.spi
 CONF_FILES=		# empty
@@ -29,21 +29,15 @@ CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 RCD_SCRIPTS=		slpd
 
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/automake.mk"
+
 post-extract:
 	${FIND} ${WRKSRC} -name "CVS" -print | ${XARGS} ${RM} -rf
+	${RM} -fr ${WRKSRC}/doc/html/UsersGuide/.xvpics
 
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/etc; for file in ${CONFS}; do			\
-		${INSTALL_DATA} $${file} ${EGDIR}/$${file};		\
-	done
-	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html ${HTMLDIR}
-	for d in IntroductionToSLP ProgrammersGuide UsersGuide; do	\
-		${INSTALL_DATA_DIR} ${HTMLDIR}/$${d};			\
-		${INSTALL_DATA} ${WRKSRC}/doc/html/$${d}/* ${HTMLDIR}/$${d}; \
-	done
+pre-configure:
+	cd ${WRKSRC} && ${ACLOCAL} && ${AUTOHEADER} && ${AUTOCONF} &&	\
+		${LOCALBASE}/bin/libtoolize && ${AUTOMAKE} --add-missing
 
 .include "../../mk/bsd.pkg.mk"
