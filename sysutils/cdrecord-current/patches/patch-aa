@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2000/05/23 17:33:18 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 2000/06/15 12:06:23 hubertf Exp $
 
 --- TARGETS/Targetdirs.orig	Sun Apr 30 01:14:51 2000
 +++ TARGETS/Targetdirs	Mon May 22 04:14:51 2000
@@ -7,5 +7,5 @@ $NetBSD: patch-aa,v 1.5 2000/05/23 17:33:18 hubertf Exp $
  ###########################################################################
  DIRS=		patches conf inc lib libdeflt libscg libhfs_iso libfile libunls \
 -		cdrecord mkisofs mkisofs/diag cdda2wav misc man
-+		cdrecord cdda2wav misc
++		cdrecord mkisofs mkisofs/diag cdda2wav misc
  ###########################################################################

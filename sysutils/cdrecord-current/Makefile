@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/05/23 17:33:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/06/15 12:06:21 hubertf Exp $
 
 DISTNAME=	cdrecord-1.9a01
 CATEGORIES=	sysutils
@@ -24,11 +24,14 @@ do-configure:
 
 do-install:
 	cd ${WRKSRC}/cdda2wav; \
-	${INSTALL_PROGRAM} ${TARGET_DIR}/cdda2wav ${PREFIX}/bin; \
-	${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
+	    ${INSTALL_PROGRAM} ${TARGET_DIR}/cdda2wav ${PREFIX}/bin; \
+	    ${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
 	cd ${WRKSRC}/cdrecord; \
-	${INSTALL_PROGRAM} ${TARGET_DIR}/cdrecord ${PREFIX}/bin; \
-	${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
+	    ${INSTALL_PROGRAM} ${TARGET_DIR}/cdrecord ${PREFIX}/bin; \
+	    ${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
+	cd ${WRKSRC}/mkisofs; \
+	    ${INSTALL_PROGRAM} ${TARGET_DIR}/mkisofs ${PREFIX}/bin; \
+	    ${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
 	${INSTALL_PROGRAM} ${WRKSRC}/misc/${TARGET_DIR}/readcd ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
