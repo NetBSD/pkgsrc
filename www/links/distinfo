@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2003/02/25 11:20:41 wiz Exp $
+$NetBSD: distinfo,v 1.20 2003/02/27 21:42:34 is Exp $
 
 SHA1 (links-2.1pre8.tar.bz2) = e22f29bccafa374b4922d5f0d9f413515e3deb51
 Size (links-2.1pre8.tar.bz2) = 3550824 bytes
 SHA1 (patch-aa) = 47fab20748fc660517ebc2d2ef8a6b9c7c0dd1e4
 SHA1 (patch-ab) = 159c06569c42ea2d3eb4ec1a25a958621f11f793
 SHA1 (patch-ac) = 0d0bb5000ef8511aa6783cfb97ea03c2b2b32803
+SHA1 (patch-af) = 7715d770dfbb248487b5f31384f104079d961715

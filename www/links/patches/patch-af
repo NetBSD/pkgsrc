@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2003/02/27 21:42:34 is Exp $
+
+--- html_gr.c_	Thu Feb 27 18:24:52 2003
++++ html_gr.c	Thu Feb 27 18:24:55 2003
+@@ -532,6 +532,10 @@
+ 					while (*p && (*p < '0' || *p > '9')) p++;
+ 					if (!*p) goto noc;
+ 					while (*p >= '0' && *p <= '9' && num < 10000000) num = num * 10 + *p - '0', p++;
++					if (*p == '.') {
++						p++;
++						while (*p >= '0' && *p <= '9') p++;
++					}
+ 					if (*p == '%' && num < 1000) {
+ 						int m = io->xw < io->yw ? io->xw : io->yw;
+ 						num = num * m / 100;
