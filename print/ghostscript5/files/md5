@@ -1,8 +1,8 @@
-$NetBSD: md5,v 1.8 1998/08/07 13:27:35 agc Exp $
+$NetBSD: md5,v 1.9 1998/11/04 21:42:12 mycroft Exp $
 
-MD5 (ghostscript-5.10.tar.gz) = 47fbc4f6402c98374c61bf3e64e59e9a
-MD5 (ghostscript-5.10gnu.tar.gz) = 6706117129a5f63dff3a5a2bf4258630
-MD5 (ghostscript-fonts-std-4.0.tar.gz) = 1e0fe2149affd80deaaae144227049b9
-MD5 (ghostscript-fonts-other-4.40.tar.gz) = 703bcc5592f4b4644cda454bcc45c7d6
+MD5 (ghostscript-5.50.tar.gz) = f51e92976c4cda9a05de5388fdbbbbbd
+MD5 (ghostscript-5.50gnu.tar.gz) = 4930c9d2feea3294904fc683bf8b8beb
+MD5 (ghostscript-fonts-other-5.10.tar.gz) = fcf3abf81a1b46da9a92942d288020f9
+MD5 (ghostscript-fonts-std-5.10a.tar.gz) = 8462a429e2672d332a510da076dca6d2
 MD5 (hp850.zip) = e37477210305e027c45f82d04d1613d1
 MD5 (pdf_sec.ps) = 92cd6af5b4d7219e91e61b8351f0f7c4
