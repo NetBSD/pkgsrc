@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/24 21:16:02 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2004/09/25 06:43:03 dmcmahill Exp $
 
 SHA1 (tcl-itcl-20040920.tar.gz) = 469d8df8d7b506e7d175eb5a15fe68b5a60e95c6
 Size (tcl-itcl-20040920.tar.gz) = 1133945 bytes
-SHA1 (patch-aa) = 181176465cd8891710dcd029c09fd0350e8dc47c
-SHA1 (patch-ab) = f6c9ef0d8a63d46459106438f6841d715a0cd209
-SHA1 (patch-ac) = 436198562c52f6b6b8e84ba812ba4ce7e8e93eb5
-SHA1 (patch-ad) = 0b30aabd3afc00020bfd0779997672e3cca929c6
+SHA1 (patch-aa) = 0bd0534d1d8bb4578334f43d9e72712673ba7a27
+SHA1 (patch-ab) = 05a86eb12eb9bf5b1d2b5cc0349fb919263dedcb
+SHA1 (patch-ac) = 3c66d00e9d794f23491616bb2fec105c318561ee
+SHA1 (patch-ad) = 8eb6769fb919ba51ee72664818c5e31e45e518d9
 SHA1 (patch-ae) = 595d5fa2c322a6726af21f87cb5a74feadb9d515
 SHA1 (patch-ag) = 5b21951b82de53875efd5289dd87abae8bb11073
 SHA1 (patch-ah) = 58985a1b21625fc00dbbfe4e793dcbb2f7ef2929
