@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:14 agc Exp $
+
+MD5 (hugs98-Feb2000.tar.gz) = 2d2281cc9d6f002526402636c685e11d
+SHA1 (patch-aa) = da4f36ffb0885f257cf886a52ae73b6d00ff37c2
+SHA1 (patch-ab) = 7f228962d144f9d19e2dc4be1c759ff10bbab751

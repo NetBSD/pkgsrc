@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:30:51 agc Exp $
+
+SHA1 (clisp-2000-03-06.tar.bz2) = b7158545055995c712d3db231a315e8f76868a5c
+SHA1 (clisp-2000-03-06-bugfix1.diff) = 61ed18b5218435b35c05208234b9b48abfdd59bd
+SHA1 (patch-aa) = d05cf6107faf97104478a9019853bb13ed8a7cbf
+SHA1 (patch-ae) = 4aaa91a1342db0b104178e85b8dd145e9bc7281e
+SHA1 (patch-af) = df36dc61ba61e4b69278d516cb3586d96836e77c

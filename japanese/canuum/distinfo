@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:51 agc Exp $
+MD5 (Uum4.109.tar.gz) = f7b322ad8d3a98fc22f598c129ab42bb
+MD5 (Canna35b2.tar.gz) = 09ae4dd3a5d33168ba17470ad9242cf3
+SHA1 (patch-aa) = 84e341fabc592fc5579d0c8b258b6e13809e8473
+SHA1 (patch-ac) = 8bcd6abc9d36305c86cf4f5993c4895a1e7c86e1
+SHA1 (patch-ae) = 1ef38a6651f2f619c15d68032787be694a2fa970
+SHA1 (patch-af) = 5860402e3dc72e0d6ddaffc6cf33c017c7e19a34

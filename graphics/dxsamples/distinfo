@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:22:58 agc Exp $
+
+MD5 (dxsamples-4.0.8.tar.gz) = 5c8701e695988951f7ad02e912d935b8
+SHA1 (patch-ab) = 044d21bf8780efb74d83910d77f3f0a1907edf14

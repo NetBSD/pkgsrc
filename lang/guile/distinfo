@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:12 agc Exp $
+
+MD5 (guile-1.4.tar.gz) = 60430592385b96319ea3eb4cba88062c
+SHA1 (patch-ad) = 6cd829a21ff8d8d269fd005ce6e49e936cad7887

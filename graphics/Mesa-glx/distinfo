@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:22:39 agc Exp $
+
+MD5 (glx-20000813.tar.bz2) = eed031eabbf3c9c1cd7fe56a440360d9
+MD5 (MesaLib-3.1.tar.bz2) = 58292669606fd6b06ee109b790c14c1c
+MD5 (MesaDemos-3.1.tar.bz2) = bf16132074cbd0b9f6ce211437966b51
+SHA1 (patch-aa) = 2a12d022f7bcf5c1ef66f8a52ba292490ff71912
+SHA1 (patch-ab) = fea041643709d61ce0f81d440d7304e8b23436fe
+SHA1 (patch-ac) = 088c9193246fe63bb7faa407f8262e04ddf3a0c1

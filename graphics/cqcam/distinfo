@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:22:53 agc Exp $
+
+MD5 (cqcam-0.45a.tgz) = ae0d0d7bdb68a13344089b466d8fd30a
+SHA1 (patch-aa) = f1dadcf9ab08a4bcb7a3ae3fcda40f9f3c4748e0
+SHA1 (patch-ab) = 69138220e26174d66e10310d247f9611b3e13471
+SHA1 (patch-ac) = 868cedbdb0e866013079408d2260eb5084121da7

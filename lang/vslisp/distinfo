@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:32:30 agc Exp $
+
+MD5 (vslisp-4.0-1.tar.gz) = 3df4884bf783aa5a12309f0401aa88ba
+SHA1 (patch-aa) = 5a397669bed7663ccdbd86d57e7669a70d16b5e1
+SHA1 (patch-ab) = 645d4a4ffd6949b9406083744b71676220bf19be

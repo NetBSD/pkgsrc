@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:30:53 agc Exp $
+
+MD5 (cu-prolog-3.94/cupsrc.tar.gz) = 62b23ee48045d09579ab42ef62876d58
+MD5 (cu-prolog-3.94/cupdoc.tar.gz) = 954f59489bb70bda5140118f1c5425d5
+SHA1 (patch-aa) = 5a62457aa989665b52f8413ae649b4b2eb4a7e0e
+SHA1 (patch-ab) = 62fc69c780a9b3986c0beba95b67298ce135f938
+SHA1 (patch-ac) = e30a669d5f455ad1063a3e53244c429d5b981625
+SHA1 (patch-ad) = 3099002c96faf988499f5f7cde79dd8416aa360d
+SHA1 (patch-ae) = 57d44282f75ab97ee5d75f3bfc30c332e17e9367

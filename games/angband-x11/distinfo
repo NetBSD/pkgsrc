@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:15 agc Exp $
+
+MD5 (angband-283.tar.gz) = 33c56940cf2f9c7aa265204159ab1cf8
+MD5 (angband-spoilers.tar.gz) = 935d585cdd322acf1403338ffef853f9
+SHA1 (patch-aa) = 069d80b8d749f0b102f27598bfac4a128f76770d

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:32:04 agc Exp $
+
+MD5 (smalltalk-1.8.5.tar.gz) = dc37de41b971af7ee210dd2371224633
+SHA1 (patch-aa) = ce8810a6689458d6c13cb7bde309dfa91bdb0d08

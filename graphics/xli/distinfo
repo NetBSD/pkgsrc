@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:33 agc Exp $
+
+MD5 (xli.1.16.tar.gz) = 96af602a442e7fe670aea38c02a42670
+MD5 (xli-png.tar.gz) = f4e21186dac6510f60bab4e68169bd9b
+SHA1 (patch-aa) = 395f2fa31ab4bcb95f84d469cb899a111d1815b5

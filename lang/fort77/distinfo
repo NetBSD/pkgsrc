@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:00 agc Exp $
+
+MD5 (fort77-1.14a.tar.gz) = 387e4a201f8b063d1af7c2d1788af4d5
+SHA1 (patch-aa) = 6ba6f313cb553eb2160ae3d198fd05b67e52ff9a
+SHA1 (patch-ab) = 8e0a9ce6b1fd31f4fd6400eb955281b4aed60294

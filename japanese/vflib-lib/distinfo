@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:32 agc Exp $
+
+MD5 (VFlib2-2.24.2.tar.gz) = bf76c1dbea1210fad8005f6e5910b842
+SHA1 (patch-aa) = c78284c8126b8a2f1ccf43360b9f2e0f0468c2e1
+SHA1 (patch-ab) = 2f7162f02ab1825a143f4fd63410aa24c61cf8c7
+SHA1 (patch-ac) = 72d5c5b58d48afe2a22e4e96c898fb992707a7a2
+SHA1 (patch-ad) = c2b73135f82f5bedba419b82627060145aa6268e

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:32:02 agc Exp $
+
+MD5 (se-0.77.tgz) = 7ab24f8025ca50b4723ef8300cef9a86
+SHA1 (patch-aa) = 132753a8e2ea2413a8d1269e22f1da9b4580629e
+SHA1 (patch-ab) = 44f91d54fe00bcb2366adeb94d45649f4eec3f52
+SHA1 (patch-ac) = 1ef94f18d00cdc0a231ba4ec574182c371e7fc57
+SHA1 (patch-ad) = e15074dfa9c4a659c8957a2bf6e2b86a8c726901
