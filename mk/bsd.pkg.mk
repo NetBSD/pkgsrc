@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1485 2004/08/04 23:22:38 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1486 2004/08/04 23:29:50 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -38,7 +38,7 @@ MAKE_ENV+=	USETOOLS="${USETOOLS}"
 # Makefile, which are usually not customizable.
 .PHONY: pre-install-depends build-defs-message
 pre-install-depends: build-defs-message
-.if !empty(PKGSRC_SHOW_BUILD_DEFS:M[yY][eE][sS])
+.if empty(PKGSRC_SHOW_BUILD_DEFS:M[yY][eE][sS])
 build-defs-message:
 .elif !target(build-defs-message)
 build-defs-message: ${WRKDIR}
