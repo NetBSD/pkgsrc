@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/05 16:14:53 tv Exp $
+bin/eperl
+lib/perl5/man/man3/Parse::ePerl.3
+lib/perl5/site_perl/Parse/ePerl.pm
+lib/perl5/site_perl/auto/Parse/ePerl/autosplit.ix
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Parse/ePerl/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Parse/ePerl/ePerl.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Parse/ePerl/ePerl.so
+man/man1/eperl.1
+share/eperl/00README
+share/eperl/demo.cgipm.iphtml
+share/eperl/demo.cgipm.phtml
+share/eperl/demo.env.iphtml
+share/eperl/demo.env.phtml
+share/eperl/demo.errout.iphtml
+share/eperl/demo.errout.phtml
+share/eperl/demo.errsyn.iphtml
+share/eperl/demo.errsyn.phtml
+share/eperl/demo.func.iphtml
+share/eperl/demo.func.phtml
+share/eperl/demo.html.iphtml
+share/eperl/demo.html.phtml
+share/eperl/demo.image.iphtml
+share/eperl/demo.image.phtml
+share/eperl/demo.lwp.iphtml
+share/eperl/demo.lwp.phtml
+share/eperl/demo.net.iphtml
+share/eperl/demo.net.phtml
+share/eperl/demo.pp.iphtml
+share/eperl/demo.pp.phtml
+share/eperl/demo.table.iphtml
+share/eperl/demo.table.phtml
+share/eperl/demo.text.iphtml
+share/eperl/demo.text.phtml
+@dirrm lib/perl5/site_perl/auto/Parse/ePerl
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Parse/ePerl
+@dirrm share/eperl

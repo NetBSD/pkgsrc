@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/05 16:14:53 tv Exp $
+
+--- Makefile.in.orig	Sat Dec  5 11:06:44 1998
++++ Makefile.in	Sat Dec  5 11:07:23 1998
+@@ -44,7 +44,7 @@
+ exec_prefix     = $(prefix)
+ bindir          = $(prefix)/bin
+ libsubdir       = @libsubdir@
+-libdir          = $(prefix)/lib$(libsubdir)
++libdir          = $(prefix)/share$(libsubdir)
+ mandir          = $(prefix)/man/man1
+ 
+ 
+@@ -342,7 +342,7 @@
+ 	$(INSTALL_PROGRAM) eperl $(bindir)/eperl
+ 	$(INSTALL_DATA) eperl.1 $(mandir)/eperl.1
+ 	$(MKDIR) $(libdir)
+-	$(CP) -r eg/* $(libdir)/
++	$(INSTALL_DATA) eg/* $(libdir)/
+ 
+ 
+ # ------------------------------------------------
