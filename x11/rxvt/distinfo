@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/09/30 21:20:06 martin Exp $
+$NetBSD: distinfo,v 1.7 2002/10/26 18:02:16 bouyer Exp $
 
 SHA1 (rxvt-2.7.3.tar.bz2) = 1f5380ba70d1b795e6532a79b1e2d7371505b504
 Size (rxvt-2.7.3.tar.bz2) = 266784 bytes
@@ -7,4 +7,5 @@ SHA1 (patch-ab) = 72d2fac47a414e1d64aedc4ad20670736e24b0fa
 SHA1 (patch-ac) = fda884add4b43b606cb348e47b48eb6ffeafffec
 SHA1 (patch-ad) = 86047c69fa397d71f3e71ae476bd7addd153729f
 SHA1 (patch-ae) = ce0bd392cde7c436834f68391e0d38b53f1755cc
-SHA1 (patch-af) = 26712a68e41d8fc71a56d90f364793c367494d2a
+SHA1 (patch-af) = 4974d45d51e1d8a5b5ee86e690c8dd0ca1c8ed35
+SHA1 (patch-ag) = 132922885b899dff22a964b1bb491ac25b6e17b8
