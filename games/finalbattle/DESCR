@@ -7,7 +7,7 @@ selection window, a ship's-computer and player-to-player communications
 window, and a ship upgrade status window.
 
 The game uses the X network protocol to display graphics and receive
-player input from mulitple servers.  Only one client is running and is in
+player input from multiple servers.  Only one client is running and is in
 control of the entire game.  Temporary clients can also be ran which
 simply send a message to the main client telling it to add a server to the
 game.  If there is space in the game, and the main client can access your
