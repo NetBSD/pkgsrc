@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/22 13:22:04 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/09 12:45:57 markd Exp $
 
-DISTNAME=	ivtools-1.0.3
+DISTNAME=	ivtools-1.0.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ivtools/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	markd@netbsd.org
 HOMEPAGE=	http://www.vectaport.com/ivtools/
 COMMENT=	Drawing editors for PostScript, TeX, and web graphics
 
