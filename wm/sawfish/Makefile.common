@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.20 2004/04/14 16:15:28 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.21 2004/04/24 22:46:12 jlam Exp $
 
 DISTNAME=		sawfish-${SF_VERS}-gtk1
 SF_VERS=		1.2
 CATEGORIES=		x11 gnome wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sawmill.sourceforge.net/
 
 DEPENDS+=		rep-gtk>=0.15nb2:../../x11/rep-gtk

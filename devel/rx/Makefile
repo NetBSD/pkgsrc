@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/24 22:46:09 jlam Exp $
 
 DISTNAME=	rx-1.5
 CATEGORIES=	devel
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/rx/rx.html
 COMMENT=	Fast replacement for the GNU regex library
 

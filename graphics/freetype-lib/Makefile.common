@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2004/04/19 23:08:55 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.27 2004/04/24 22:46:10 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://download.sourceforge.net/freetype/ \
 			ftp://freetype.sourceforge.net/pub/freetype/freetype1/ \
 			ftp://ftp.freetype.org/pub/freetype/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.freetype.org/
 
 CONFLICTS=		freetype-1.[12]*
