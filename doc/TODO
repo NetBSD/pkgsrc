@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1533 2004/03/28 13:44:35 wiz Exp $
+$NetBSD: TODO,v 1.1534 2004/03/28 13:58:49 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -251,7 +251,7 @@ Suggested package updates
 	o libnet-1.1.1
 	o libole2-2.2.8
 	o libsndfile-1.0.8
-	o libxml2-2.6.8
+	o libxml2-2.6.8 [jmmv]
 	o libxslt-1.1.5
 	o licq-1.2.7
 	o lilypond-2.0.3
@@ -380,7 +380,7 @@ Suggested package updates
 	o xmcd-3.2.1
 	o xmame-0.80.1
 	o xmess-0.80.1
-	o xmlcat-2.0
+	o xmlcatmgr-2.0 [jmmv]
 	o xmms-1.2.10
 	o xmms-alarm-0.3.4
 	o xmms-crossfade-0.3.4
