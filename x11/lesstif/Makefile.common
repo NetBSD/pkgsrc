@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.common,v 1.1 2000/07/25 14:42:00 jlam Exp $
+
+DISTNAME=		lesstif-${LESSTIF_VERSION}
+LESSTIF_VERSION=	0.91.4
+CATEGORIES=		x11
+MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
+			ftp://ftp.unicamp.br/pub/X11/lesstif/srcdist/ \
+			ftp://ftp.kddlabs.co.jp/X11/lesstif/srcdist/ \
+			ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/lesstif/srcdist/ \
+			http://gd.tuwien.ac.at/hci/lesstif/srcdist/ \
+			http://www.damtp.cam.ac.uk/mirror/ftp.hungry.com/pub/hungry/lesstif/srcdist/
+
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.lesstif.org/
+
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		automake:../../devel/automake
+
+USE_X11BASE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
+LTCONFIG_OVERRIDE+=	${WRKSRC}/Xlt/ltconfig
+LTCONFIG_OVERRIDE+=	${WRKSRC}/Xbae/ltconfig
+
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--enable-production --disable-debug
+
+FILESDIR=		${.CURDIR}/../../x11/lesstif/files
+PATCHDIR=		${.CURDIR}/../../x11/lesstif/patches
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf && automake
+
+.include "../../mk/bsd.pkg.mk"
