@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2574 2003/06/24 06:02:26 wiz Exp $
+$NetBSD: CHANGES,v 1.2575 2003/06/24 06:47:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2555,4 +2555,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated unison to 2.9.1nb1 [jtb 2003-06-23]
 	Updated hevea to 1.05nb1 [jtb 2003-06-23]
 	Added shmux-0.10a [hubertf 2003-06-24]
-	Added code2html-0.9.1 [jschauma 2003-06-23]
+	Added code2html-0.9.1 [jschauma 2003-06-24]
+	Updated libdvdcss to 1.2.7 [wiz 2003-06-24]
