@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.23 2004/02/14 01:03:54 snj Exp $
+# $NetBSD: buildlink2.mk,v 1.24 2004/02/15 05:57:16 kristerw Exp $
 #
 # Optionally define:
 #
@@ -118,7 +118,7 @@ BUILDLINK_FILES.ncurses+=	lib/libncurses.*
 BUILDLINK_FILES.ncurses+=	lib/libpanel.*
 
 .if ${_NEED_NCURSES} == "NO"
-.  if !empty(_BLNK_LIBNCURSES_FOUND:M[yY][eE][sS])
+.  if empty(_BLNK_LIBNCURSES_FOUND:M[yY][eE][sS])
 BUILDLINK_FILES.ncurses+=	lib/libcurses.*
 BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses
