@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/13 20:36:21 bad Exp $
+# $NetBSD: Makefile,v 1.9 1999/12/13 23:57:22 bad Exp $
 #
 
 DISTNAME=		mysql-3.22.27
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.mysql.com/pub/mysql/Downloads/MySQL-3.22/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
 
-DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client-current
+DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
 
 NO_CDROM=		"Restrictive license."
 
