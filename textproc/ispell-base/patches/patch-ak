@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2001/03/16 11:05:46 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2004/03/19 06:20:21 uebayasi Exp $
 
 --- term.c.orig	Wed Nov  2 19:44:28 1994
 +++ term.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ak,v 1.1 2001/03/16 11:05:46 wiz Exp $
  #include "proto.h"
  #include "msgs.h"
 -#ifdef USG
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(linux)
 +#define USE_TERMIOS
 +#include <termios.h>
 +#elif defined(USG)
