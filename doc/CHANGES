@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7752 2004/11/07 15:11:30 minskim Exp $
+$NetBSD: CHANGES,v 1.7753 2004/11/07 16:14:32 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5147,3 +5147,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gpgme to 1.0.1nb2 [jmmv 2004-11-07]
 	Updated seahorse to 0.7.5 [jmmv 2004-11-07]
 	Added gimp-warp-sharp-1.4 [minskim 2004-11-07]
+	Updated xmess to 0.87 [kristerw 2004-11-07]
