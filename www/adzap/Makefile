@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2001/04/25 22:28:52 simonb Exp $
+# $NetBSD: Makefile,v 1.14 2001/07/07 07:48:15 simonb Exp $
 #
 
-DISTNAME=	adzap-20010420
+DISTNAME=	adzap-20010704
 CATEGORIES=	www perl5
 MASTER_SITES=	http://www.zip.com.au/~cs/adzap/
 
@@ -26,9 +26,11 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/squid_redirect ${PREFIX}/libexec
 	${INSTALL_SCRIPT} ${WRKSRC}/wrapzap ${PREFIX}/libexec/adzap
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/adzap
-.for FILE in adzap.conf proxy-cisra.pac proxy-home.pac proxy-zip.pac \
-	closepopup-clear.html no-op-clear.html closepopup.html no-op.html \
-	no-op-clear.js no-op.js ad-clear.gif ad.gif
+.for FILE in ad-clear.gif ad-clear.mp3 ad-clear.swf ad.gif ad.mp3 ad.swf \
+    adzap.conf closepopup-clear.html closepopup.html counter-clear.gif \
+    counter.gif no-op-clear.html no-op-clear.js no-op.html no-op.js \
+    proxy-cisra.pac proxy-home.pac proxy-zip.pac webbug-clear.gif \
+    webbug-clear.js webbug.gif webbug.js
 	${INSTALL_DATA} ${WRKSRC}/${FILE} ${PREFIX}/share/examples/adzap
 .endfor
 
