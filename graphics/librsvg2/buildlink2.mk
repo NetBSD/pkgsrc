@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:52:11 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/11/12 01:31:49 salo Exp $
 #
 # This Makefile fragment is included by packages that use librsvg2.
 #
@@ -9,7 +9,7 @@
 LIBRSVG2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			librsvg2
-BUILDLINK_DEPENDS.librsvg2?=		librsvg2>=2.2.5nb1
+BUILDLINK_DEPENDS.librsvg2?=		librsvg2>=2.2.5nb2
 BUILDLINK_PKGSRCDIR.librsvg2?=		../../graphics/librsvg2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.librsvg2=librsvg2

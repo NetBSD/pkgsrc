@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/13 13:51:06 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/11/12 01:31:48 salo Exp $
 #
 # This Makefile fragment is included by packages that use eel2.
 #
@@ -9,7 +9,7 @@
 EEL2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			eel2
-BUILDLINK_DEPENDS.eel2?=		eel2>=2.2.3.1nb2
+BUILDLINK_DEPENDS.eel2?=		eel2>=2.2.3.1nb3
 BUILDLINK_PKGSRCDIR.eel2?=		../../devel/eel2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.eel2=eel2
