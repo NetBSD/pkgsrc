@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/09/21 13:10:18 cube Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/13 23:03:52 xtraeme Exp $
 
 DISTNAME=	proftpd-1.2.10
 CATEGORIES=	net
@@ -18,9 +18,10 @@ GNU_CONFIGURE=	# defined
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=--localstatedir=/var/run
-CONFIGURE_ARGS+=--disable-sendfile
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
+CONFIGURE_ARGS+=	--disable-sendfile
+CONFIGURE_ARGS+=	--enable-ctrls
 
 RCD_SCRIPTS=	proftpd
 
@@ -37,7 +38,7 @@ PKG_OPTIONS_VAR       = PROFTPD_OPTIONS
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpam)
-CONFIGURE_ARGS+=--enable-auth-pam
+CONFIGURE_ARGS+=	--enable-auth-pam
 .include "../../security/PAM/buildlink3.mk"
 .endif
 
@@ -70,7 +71,7 @@ MODULES:=${MODULES}mod_quota
 ## .endif
 
 .if !empty(MODULES)
-CONFIGURE_ARGS+=--with-modules=${MODULES}
+CONFIGURE_ARGS+=	--with-modules=${MODULES}
 .endif
 
 post-install:
