@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/12/27 21:50:56 agc Exp $
+# $NetBSD: Makefile,v 1.19 2002/01/27 18:32:32 jlam Exp $
 #
 
 DISTNAME=       tar-1.12
@@ -18,7 +18,6 @@ CONFIGURE_ARGS= --program-prefix=g --with-catgets
 
 .if ${OPSYS} != "Darwin"
 EXTRACT_SUFX=	.shar.gz
-EXTRACT_CMD=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${SH}
 .endif
 
 .if (${OPSYS} != "NetBSD")
