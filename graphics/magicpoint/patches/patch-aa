@@ -1,17 +1,15 @@
-$NetBSD: patch-aa,v 1.4 1999/10/28 04:14:03 jlam Exp $
-
---- configure.orig	Tue Jun  8 16:00:39 1999
-+++ configure	Wed Oct 27 23:11:00 1999
-@@ -1060,7 +1060,7 @@
+--- configure.orig	Tue Mar  7 07:59:51 2000
++++ configure	Sun May 28 14:40:57 2000
+@@ -1144,7 +1144,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lttf  $LIBS"
 +LIBS="-lttf -lintl $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 1066 "configure"
+ #line 1150 "configure"
  #include "confdefs.h"
-@@ -1094,7 +1094,7 @@
+@@ -1178,7 +1178,7 @@
  #define $ac_tr_lib 1
  EOF
  
