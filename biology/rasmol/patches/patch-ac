@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/03/13 04:42:00 wiz Exp $
+
+--- rasmol.h.orig	Tue Jul  6 01:56:01 1999
++++ rasmol.h	Mon Mar 13 05:00:32 2000
+@@ -103,7 +103,7 @@
+ #endif
+ 
+ #if !defined(IBMPC) && !defined(APPLEMAC) && !defined(VMS)
+-#define RASMOLDIR "/usr/local/lib/rasmol/"
++#define RASMOLDIR "@@PREFIX@@/share/doc/rasmol/"
+ #endif
+ #endif
+ 
