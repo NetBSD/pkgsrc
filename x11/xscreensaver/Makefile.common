@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2001/03/30 20:31:57 fredb Exp $
+# $NetBSD: Makefile.common,v 1.14 2001/04/09 12:01:26 wiz Exp $
 #
 
 DISTNAME=		xscreensaver-3.28
@@ -46,7 +46,7 @@ post-patch:
 
 PERL?=			${LOCALBASE}/bin/perl
 .ifndef (PERL_VERSION)
-PERL_VERSION!=		if [ -x ${PERL} ]; then ${PERL} -e 'print $$]'; else echo "5.006"; fi
+PERL_VERSION!=		if [ -x ${PERL} ]; then ${PERL} -e 'print $$]'; else ${ECHO} "5.006"; fi
 MAKEFLAGS+=		PERL_VERSION="${PERL_VERSION}"
 .endif
 
