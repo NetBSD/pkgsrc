@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2004/01/26 13:11:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.205 2004/01/26 13:21:55 jmmv Exp $
 #
 
 COMMENT=	Audio tools
@@ -170,7 +170,6 @@ SUBDIR+=	tosha
 SUBDIR+=	tracker
 SUBDIR+=	tremor
 SUBDIR+=	tremor-tools
-SUBDIR+=	trplayer
 SUBDIR+=	vorbis-tools
 SUBDIR+=	wavesurfer
 SUBDIR+=	wmmixer
