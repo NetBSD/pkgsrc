@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2004/02/10 12:51:51 grant Exp $
+$NetBSD: distinfo,v 1.2 2004/12/20 22:44:31 xtraeme Exp $
 
-SHA1 (flash/6.0r79/install_flash_player_6_linux.tar.gz) = 2088edbae9816b04cf13ad6b82b0847e917ba234
-Size (flash/6.0r79/install_flash_player_6_linux.tar.gz) = 707027 bytes
+SHA1 (flash/7.0r25/install_flash_player_7_linux.tar.gz) = ae252d5b7b421d2f617f5b9ebb7acea210ecc37c
+Size (flash/7.0r25/install_flash_player_7_linux.tar.gz) = 987452 bytes
