@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/12 03:32:34 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/13 15:07:59 jlam Exp $
 
 DISTNAME=	imap-utils
 PKGNAME=	imap-uw-utils-20001220
@@ -19,7 +19,7 @@ SRCDIRS=	chkmail dmail icat ifrom imapcopy imapxfer \
 		mbxcopy mbxcreat mbxcvt tmail
 
 CFLAGS+=	-I${LOCALBASE}/include/c-client
-LIBS+=		-limapuw -lssl -lcrypto
+LIBS+=		-lc-client -lssl -lcrypto
 
 do-build:
 	@for prog in ${SRCDIRS}; do					\
