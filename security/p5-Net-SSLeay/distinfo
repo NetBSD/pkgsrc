@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.6 2001/12/19 06:45:50 martti Exp $
+$NetBSD: distinfo,v 1.7 2002/01/10 14:19:43 wiz Exp $
 
 SHA1 (Net_SSLeay.pm-1.12.tar.gz) = 70f113d972542a70e9b1fb92b87d02781bf918bc
 Size (Net_SSLeay.pm-1.12.tar.gz) = 58150 bytes
-SHA1 (patch-aa) = 83f1af57f2792b38de827738b8bb1bf20fbc51fa
