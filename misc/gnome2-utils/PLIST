@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/17 00:21:01 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/22 15:49:50 jmmv Exp $
 bin/gnome-dictionary
 bin/gnome-search-tool
 bin/gnome-system-log
@@ -163,6 +163,7 @@ share/pixmaps/gnome-search-tool/gnome-search-tool-animation.png
 share/pixmaps/gnome-searchtool.png
 @dirrm share/pixmaps/gnome-search-tool
 @dirrm share/omf/gnome-utils
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gnome-system-log/zh_TW/figures
 @dirrm share/gnome/help/gnome-system-log/zh_TW
 @dirrm share/gnome/help/gnome-system-log/zh_CN/figures
@@ -208,4 +209,9 @@ share/pixmaps/gnome-searchtool.png
 @dirrm share/gnome/help/gnome-dictionary/C/figures
 @dirrm share/gnome/help/gnome-dictionary/C
 @dirrm share/gnome/help/gnome-dictionary
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-system-log
+@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in gnome2-dirs: @dirrm share/applications
+@comment in libbonobo: @dirrm lib/bonobo/servers
