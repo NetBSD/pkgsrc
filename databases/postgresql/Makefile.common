@@ -1,7 +1,13 @@
-# $NetBSD: Makefile.common,v 1.12 2001/05/14 14:52:36 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2001/05/14 15:45:08 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
+#
+# The PostgreSQL package naming scheme, aside from the obvious piecewise
+# packages, is as follows:
+#
+#	<lang>-postgresql	client-side interface to PostgreSQL
+#	postgresql-<lang>	server-side module for PostgreSQL backend
 
 DISTNAME=		postgresql-${PG_DIST_VERS}
 CATEGORIES+=		databases
