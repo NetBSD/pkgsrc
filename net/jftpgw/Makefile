@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/09/18 12:47:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/03 13:55:48 wiz Exp $
 
 DISTNAME=	    jftpgw-0.13.4
 CATEGORIES=	    net
 MASTER_SITES=	    http://www.mcknight.de/jftpgw/
 
-MAINTAINER=	    david@netbsd-fr.org
+MAINTAINER=	    tech-pkg@NetBSD.org
 HOMEPAGE=	    http://www.mcknight.de/jftpgw/
 COMMENT=	    FTP gateway/proxy
 
