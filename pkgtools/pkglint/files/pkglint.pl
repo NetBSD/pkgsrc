@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.110 2004/06/30 18:49:37 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.111 2004/07/06 23:07:35 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -65,7 +65,7 @@ my $seen_PLIST_SRC = 0;
 my $seen_NO_PKG_REGISTER = 0;
 my $seen_NO_CHECKSUM = 0;
 my $seen_USE_PKGLOCALEDIR = 0;
-my $seen_USE_BUILDLINK2 = 0;
+my $seen_USE_BUILDLINK3 = 0;
 my %predefined;
 my $pkgname		= "(none)";
 
@@ -551,7 +551,7 @@ sub checkfile_PLIST($) {
 				"deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
-		if ($line->[2] =~ /\${PKGLOCALEDIR}/ && $seen_USE_BUILDLINK2 && !$seen_USE_PKGLOCALEDIR) {
+		if ($line->[2] =~ /\${PKGLOCALEDIR}/ && $seen_USE_BUILDLINK3 && !$seen_USE_PKGLOCALEDIR) {
 			log_warning($line->[0], $line->[1], "PLIST contains \${PKGLOCALEDIR}, ".
 				"but USE_PKGLOCALEDIR was not found.");
 		}
@@ -882,7 +882,11 @@ sub checkfile_Makefile($) {
 				"FOR_CDROM.");
 		}
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking IS_INTERACTIVE.");
+	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_BUILDLINK2.");
+	if ($whole =~ /\nUSE_BUILDLINK2/) {
+		log_error(NO_FILE, NO_LINE_NUMBER, "USE_BUILDLINK2 is deprecated, ".
+			"use USE_BUILDLINK3 instead.");
+	}
 	if ($whole =~ /\nIS_INTERACTIVE/) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "IS_INTERACTIVE is deprecated, ".
 			"use INTERACTIVE_STAGE instead.");
@@ -908,9 +912,9 @@ sub checkfile_Makefile($) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "USE_PKGLIBTOOL is deprecated, ".
 			"use USE_LIBTOOL instead.");
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking for USE_BUILDLINK2.");
-	if ($whole =~ /\nUSE_BUILDLINK2/) {
-		$seen_USE_BUILDLINK2=1;
+	log_info(NO_FILE, NO_LINE_NUMBER, "checking for USE_BUILDLINK3.");
+	if ($whole =~ /\nUSE_BUILDLINK3/) {
+		$seen_USE_BUILDLINK3=1;
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking for USE_PKGLOCALEDIR.");
 	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
@@ -919,7 +923,7 @@ sub checkfile_Makefile($) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking USE_SSL.");
 	if ($whole =~ /\nUSE_SSL/) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "USE_SSL is deprecated, ".
-			"use the openssl buildlink2.mk instead.");
+			"use the openssl buildlink3.mk instead.");
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking NO_WRKSUBDIR.");
 	if ($whole =~ /\nNO_WRKSUBDIR/) {
