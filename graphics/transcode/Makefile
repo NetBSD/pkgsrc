@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/17 16:40:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/22 10:45:20 seb Exp $
 
 DISTNAME=	transcode-0.6.9
 PKGREVISION=	1
@@ -17,10 +17,18 @@ USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-qt
 # when libmpeg3 is a shlib.
 CONFIGURE_ARGS+=	--without-libmpeg3
+
+.if exists(${X11BASE}/lib/libXv.so)
+PLIST_SUBST+=		FILTERPV=filter_pv.so
+.else
+PLIST_SUBST+=		FILTERPV=filter_pv.a
+.endif
 
 # this used to operate on acinclude.m4 and run aclocal, but running
 # aclocal here breaks due to missing DLFCN checking

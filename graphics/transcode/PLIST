@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/09/19 12:27:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/09/22 10:45:20 seb Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -142,7 +142,7 @@ lib/transcode/filter_normalize.la
 lib/transcode/filter_normalize.so
 lib/transcode/filter_null.la
 lib/transcode/filter_null.so
-lib/transcode/filter_pv.a
+lib/transcode/${FILTERPV}
 lib/transcode/filter_pv.la
 lib/transcode/filter_resample.la
 lib/transcode/filter_resample.so
