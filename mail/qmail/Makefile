@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/28 20:39:35 zuntum Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/05 15:22:31 yyamano Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -45,6 +45,7 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 pre-build:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 post-install:
