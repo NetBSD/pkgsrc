@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
+$NetBSD: patch-ab,v 1.17 2004/10/01 13:35:53 adam Exp $
 
---- configure.orig	Mon Mar  1 19:04:48 2004
+--- configure.orig	2004-07-29 21:57:48.000000000 +0000
 +++ configure
-@@ -2071,12 +2071,13 @@ fi
+@@ -1788,12 +1788,13 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
 +    RPATH_FLAG=""
-     EXTRA_CFLAGS=""
+     LDFLAGS_ORIG="$LDFLAGS"
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
      TCL_TRIM_DOTS='`echo ${VERSION} | tr -d .`'
@@ -17,209 +17,7 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2140,7 +2141,7 @@ fi
- 	    SHLIB_SUFFIX=".so"
- 
- 	    DL_OBJS="tclLoadDl.o"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 
- 	    LD_LIBRARY_PATH_VAR="LIBPATH"
- 
-@@ -2151,7 +2152,7 @@ fi
- 		else 
- 		    do64bit_ok=yes
- 		    EXTRA_CFLAGS="-q64"
--		    LDFLAGS="-q64"
-+		    LD_FLAGS="-q64"
- 		    RANLIB="${RANLIB} -X64"
- 		    AR="${AR} -X64"
- 		    SHLIB_LD_FLAGS="-b64"
-@@ -2192,7 +2193,7 @@ fi
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS='-L${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 	    LD_LIBRARY_PATH_VAR="LIBPATH"
-@@ -2212,7 +2213,7 @@ fi
- 		else 
- 		    do64bit_ok=yes
- 		    EXTRA_CFLAGS="-q64"
--		    LDFLAGS="-q64"
-+		    LD_FLAGS="-q64"
- 		    RANLIB="${RANLIB} -X64"
- 		    AR="${AR} -X64"
- 		    SHLIB_LD_FLAGS="-b64"
-@@ -2288,7 +2289,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2299,7 +2300,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS="-export-dynamic"
-+	    LD_FLAGS="-export-dynamic"
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2310,7 +2311,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2374,7 +2375,7 @@ fi
- 		SHLIB_LD_LIBS='${LIBS}'
- 		DL_OBJS="tclLoadShl.o"
- 		DL_LIBS="-ldld"
--		LDFLAGS="-Wl,-E"
-+		LD_FLAGS="-Wl,-E"
- 		CC_SEARCH_FLAGS='-Wl,+s,+b,${LIB_RUNTIME_DIR}:.'
- 		LD_SEARCH_FLAGS='+s +b ${LIB_RUNTIME_DIR}:.'
- 		LD_LIBRARY_PATH_VAR="SHLIB_PATH"
-@@ -2410,10 +2411,10 @@ fi
- 		    do64bit_ok=yes
- 		    if test "`uname -m`" = "ia64" ; then
- 			EXTRA_CFLAGS="+DD64"
--			LDFLAGS="+DD64 $LDFLAGS"
-+			LD_FLAGS="+DD64 $LD_FLAGS"
- 		    else
- 			EXTRA_CFLAGS="+DA2.0W"
--			LDFLAGS="+DA2.0W $LDFLAGS"
-+			LD_FLAGS="+DA2.0W $LD_FLAGS"
- 		    fi
- 		fi
- 	    fi
-@@ -2467,7 +2468,7 @@ fi
- 		SHLIB_LD_LIBS=""
- 		DL_OBJS="tclLoadShl.o"
- 		DL_LIBS="-ldld"
--		LDFLAGS="-Wl,-E"
-+		LD_FLAGS="-Wl,-E"
- 		CC_SEARCH_FLAGS='-Wl,+s,+b,${LIB_RUNTIME_DIR}:.'
- 		LD_SEARCH_FLAGS='+s +b ${LIB_RUNTIME_DIR}:.'
- 		LD_LIBRARY_PATH_VAR="SHLIB_PATH"
-@@ -2480,7 +2481,7 @@ fi
- 	    SHLIB_LD_LIBS='${LIBS}'
- 	    DL_OBJS="tclLoadAout.o"
- 	    DL_LIBS=""
--	    LDFLAGS="-Wl,-D,08000000"
-+	    LD_FLAGS="-Wl,-D,08000000"
- 	    CC_SEARCH_FLAGS='-L${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 	    SHARED_LIB_SUFFIX='${VERSION}\$\{DBGX\}.a'
-@@ -2495,7 +2496,7 @@ fi
- 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
- 	    EXTRA_CFLAGS=""
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    ;;
- 	IRIX-6.*)
- 	    SHLIB_CFLAGS=""
-@@ -2508,7 +2509,7 @@ fi
- 	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
- 	    if test "$GCC" = "yes" ; then
- 		EXTRA_CFLAGS="-mabi=n32"
--		LDFLAGS="-mabi=n32"
-+		LD_FLAGS="-mabi=n32"
- 	    else
- 		case $system in
- 		    IRIX-6.3)
-@@ -2519,7 +2520,7 @@ fi
- 			EXTRA_CFLAGS="-n32"
- 			;;
- 		esac
--		LDFLAGS="-n32"
-+		LD_FLAGS="-n32"
- 	    fi
- 	    ;;
- 	IRIX64-6.*)
-@@ -2529,7 +2530,7 @@ fi
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS=""
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
- 
-@@ -2542,7 +2543,7 @@ fi
- 	            do64bit_ok=yes
- 	            SHLIB_LD="ld -64 -shared -rdata_shared"
- 	            EXTRA_CFLAGS="-64"
--	            LDFLAGS="-64"
-+	            LD_FLAGS="-64"
- 	        fi
- 	    fi
- 	    ;;
-@@ -2561,7 +2562,7 @@ fi
- 		SHLIB_LD="${CC} -shared"
- 		DL_OBJS="tclLoadDl.o"
- 		DL_LIBS="-ldl"
--		LDFLAGS="-rdynamic"
-+		LD_FLAGS="-rdynamic"
- 		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
- 		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 	    else
-@@ -2597,7 +2598,7 @@ if eval "test \"`echo '$ac_cv_header_'$a
- 		    SHLIB_LD="ld -shared"
- 		    DL_OBJS="tclLoadDld.o"
- 		    DL_LIBS="-ldld"
--		    LDFLAGS=""
-+		    LD_FLAGS=""
- 		    CC_SEARCH_FLAGS=""
- 		    LD_SEARCH_FLAGS=""
- else
-@@ -2636,7 +2637,7 @@ EOF
- 		SHLIB_LD="${CC} -shared"
- 		DL_OBJS=""
- 		DL_LIBS="-ldl"
--		LDFLAGS="-rdynamic"
-+		LD_FLAGS="-rdynamic"
- 		CC_SEARCH_FLAGS=""
- 		LD_SEARCH_FLAGS=""
- 	    else
-@@ -2672,7 +2673,7 @@ if eval "test \"`echo '$ac_cv_header_'$a
- 		    SHLIB_LD="ld -shared"
- 		    DL_OBJS=""
- 		    DL_LIBS="-ldld"
--		    LDFLAGS=""
-+		    LD_FLAGS=""
- 		    CC_SEARCH_FLAGS=""
- 		    LD_SEARCH_FLAGS=""
- else
-@@ -2691,7 +2692,7 @@ fi
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2702,7 +2703,7 @@ fi
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS="-Wl,-Bexport"
-+	    LD_FLAGS="-Wl,-Bexport"
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2739,12 +2740,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -2495,7 +2496,6 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -227,13 +25,7 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
  		SHLIB_LD_LIBS=""
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
- 		DL_LIBS=""
--		LDFLAGS=""
-+		LD_FLAGS=""
- 		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
- 		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
- 		echo $ac_n "checking for ELF""... $ac_c" 1>&6
-@@ -2761,13 +2761,23 @@ EOF
+@@ -2516,13 +2516,23 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -259,197 +51,7 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
  fi
  rm -f conftest*
  
-@@ -2781,7 +2791,7 @@ else
- 		SHLIB_SUFFIX=".a"
- 		DL_OBJS="tclLoadAout.o"
- 		DL_LIBS=""
--		LDFLAGS=""
-+		LD_FLAGS=""
- 		CC_SEARCH_FLAGS='-L${LIB_RUNTIME_DIR}'
- 		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
-@@ -2802,14 +2812,14 @@ fi
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS=""
--	    LDFLAGS="-export-dynamic"
-+	    LD_FLAGS="-export-dynamic"
- 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
- 	    if test "${TCL_THREADS}" = "1" ; then
- 		# The -pthread needs to go in the CFLAGS, not LIBS
- 		LIBS=`echo $LIBS | sed s/-pthread//`
- 		EXTRA_CFLAGS="-pthread"
--	    	LDFLAGS="$LDFLAGS -pthread"
-+	    	LD_FLAGS="$LD_FLAGS -pthread"
- 	    fi
- 	    case $system in
- 	    FreeBSD-3.*)
-@@ -2830,7 +2840,7 @@ fi
- 	    DL_OBJS="tclLoadDyld.o"
- 	    PLAT_OBJS="tclMacOSXBundle.o"
- 	    DL_LIBS=""
--	    LDFLAGS="-prebind"
-+	    LD_FLAGS="-prebind"
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    CFLAGS_OPTIMIZE="-Os"
-@@ -2847,7 +2857,7 @@ fi
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadNext.o"
- 	    DL_LIBS=""
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2867,7 +2877,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadOSF.o"
- 	    DL_LIBS=""
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2883,7 +2893,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS=""
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2899,7 +2909,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS=""
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
- 	    if test "$GCC" = "yes" ; then
-@@ -2916,7 +2926,7 @@ EOF
- 		    LIBS="$LIBS -lpthread -lmach -lexc"
- 		else
- 		    EXTRA_CFLAGS="${EXTRA_CFLAGS} -pthread"
--		    LDFLAGS="-pthread"
-+		    LD_FLAGS="-pthread"
- 		fi
- 	    fi
- 
-@@ -2931,7 +2941,7 @@ EOF
- 	    DL_OBJS="tclLoadDl.o"
- 	    # dlopen is in -lc on QNX
- 	    DL_LIBS=""
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2942,7 +2952,7 @@ EOF
- 	    SHLIB_SUFFIX=".a"
- 	    DL_OBJS="tclLoadAout.o"
- 	    DL_LIBS=""
--	    LDFLAGS="-Wl,-D,08000000"
-+	    LD_FLAGS="-Wl,-D,08000000"
- 	    CC_SEARCH_FLAGS='-L${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 	    ;;
-@@ -2952,10 +2962,10 @@ EOF
- 	    # below.
- 	    if test "$GCC" = "yes" ; then
- 	    	SHLIB_CFLAGS="-fPIC -melf"
--	    	LDFLAGS="-melf -Wl,-Bexport"
-+	    	LD_FLAGS="-melf -Wl,-Bexport"
- 	    else
- 	    	SHLIB_CFLAGS="-Kpic -belf"
--	    	LDFLAGS="-belf -Wl,-Bexport"
-+	    	LD_FLAGS="-belf -Wl,-Bexport"
- 	    fi
- 	    SHLIB_LD="ld -G"
- 	    SHLIB_LD_LIBS=""
-@@ -2972,7 +2982,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-@@ -2983,7 +2993,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    CC_SEARCH_FLAGS='-L${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 
-@@ -3019,7 +3029,7 @@ EOF
- 	    SHLIB_SUFFIX=".so"
- 	    DL_OBJS="tclLoadDl.o"
- 	    DL_LIBS="-ldl"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    if test "$GCC" = "yes" ; then
- 		SHLIB_LD="$CC -shared"
- 		CC_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
-@@ -3045,7 +3055,7 @@ EOF
- 
- 
- 	    SHLIB_CFLAGS="-KPIC"
--	    LDFLAGS=""
-+	    LD_FLAGS=""
-     
- 	    # Check to enable 64-bit flags for compiler/linker
- 	    if test "$do64bit" = "yes" ; then
-@@ -3057,10 +3067,10 @@ EOF
- 			    do64bit_ok=yes
- 			    if test "$do64bitVIS" = "yes" ; then
- 				EXTRA_CFLAGS="-xarch=v9a"
--			    	LDFLAGS="-xarch=v9a"
-+			    	LD_FLAGS="-xarch=v9a"
- 			    else
- 				EXTRA_CFLAGS="-xarch=v9"
--			    	LDFLAGS="-xarch=v9"
-+			    	LD_FLAGS="-xarch=v9"
- 			    fi
- 			fi
- 		else
-@@ -3092,7 +3102,7 @@ EOF
- 	    SHLIB_LD_LIBS='${LIBS}'
- 	    DL_OBJS="tclLoadAout.o"
- 	    DL_LIBS=""
--	    LDFLAGS="-Wl,-D,08000000"
-+	    LD_FLAGS="-Wl,-D,08000000"
- 	    CC_SEARCH_FLAGS='-L${LIB_RUNTIME_DIR}'
- 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 	    if test "$GCC" != "yes" ; then
-@@ -3133,9 +3143,9 @@ rm -f conftest*
- 	    LDFLAGS=$hold_ldflags
- 	    echo "$ac_t""$found" 1>&6
- 	    if test $found = yes; then
--	    LDFLAGS="-Wl,-Bexport"
-+	    LD_FLAGS="-Wl,-Bexport"
- 	    else
--	    LDFLAGS=""
-+	    LD_FLAGS=""
- 	    fi
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
-@@ -3310,7 +3320,7 @@ fi
- 	SHLIB_SUFFIX=""
- 	DL_OBJS="tclLoadNone.o"
- 	DL_LIBS=""
--	LDFLAGS=""
-+	LD_FLAGS=""
- 	CC_SEARCH_FLAGS=""
- 	LD_SEARCH_FLAGS=""
- 	BUILD_DLTEST=""
-@@ -3347,16 +3357,16 @@ fi
+@@ -3136,16 +3146,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -470,7 +72,7 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -4428,7 +4438,11 @@ echo "configure:4426: checking for X11 l
+@@ -4499,7 +4509,11 @@ echo "configure:4497: checking for X11 l
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
@@ -483,7 +85,7 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -4437,7 +4451,11 @@ echo "configure:4426: checking for X11 l
+@@ -4508,7 +4522,11 @@ echo "configure:4497: checking for X11 l
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -496,7 +98,7 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -4507,6 +4525,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -4578,6 +4596,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -507,7 +109,7 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -5156,11 +5178,18 @@ eval "TK_LIB_FILE=${TK_LIB_FILE}"
+@@ -5129,11 +5151,18 @@ eval "TK_LIB_FILE=${TK_LIB_FILE}"
  if test "$SHARED_BUILD" = 0 -o $TCL_NEEDS_EXP_FILE = 0; then
      if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
  	eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
@@ -527,11 +129,3 @@ $NetBSD: patch-ab,v 1.16 2004/04/09 23:39:00 danw Exp $
      TK_BUILD_EXP_FILE=""
      TK_EXP_FILE=""
  else
-@@ -5405,6 +5434,7 @@ s%@LDFLAGS_DEBUG@%$LDFLAGS_DEBUG%g
- s%@LDFLAGS_OPTIMIZE@%$LDFLAGS_OPTIMIZE%g
- s%@CC_SEARCH_FLAGS@%$CC_SEARCH_FLAGS%g
- s%@LD_SEARCH_FLAGS@%$LD_SEARCH_FLAGS%g
-+s%@LD_FLAGS@%$LD_FLAGS%g
- s%@STLIB_LD@%$STLIB_LD%g
- s%@SHLIB_LD@%$SHLIB_LD%g
- s%@TCL_SHLIB_LD_EXTRAS@%$TCL_SHLIB_LD_EXTRAS%g

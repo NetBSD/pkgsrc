@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2004/04/09 23:37:28 danw Exp $
+$NetBSD: patch-aa,v 1.12 2004/10/01 13:35:37 adam Exp $
 
---- Makefile.in.orig	Mon Mar  1 18:58:59 2004
+--- Makefile.in.orig	2004-07-26 21:40:46.000000000 +0000
 +++ Makefile.in
-@@ -95,7 +95,7 @@ CFLAGS			= @CFLAGS@ @CFLAGS_DEFAULT@ -DT
- # Flags to pass to the linker
- LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
- LDFLAGS_OPTIMIZE	= @LDFLAGS_OPTIMIZE@
--LDFLAGS			= @LDFLAGS@ @LDFLAGS_DEFAULT@
-+LDFLAGS			= @LD_FLAGS@ @LDFLAGS@ @LDFLAGS_DEFAULT@
- 
- # To disable ANSI-C procedure prototypes reverse the comment characters
- # on the following lines:
 @@ -172,8 +172,8 @@ SHELL			= /bin/sh
  INSTALL_STRIP_PROGRAM   = -s
  INSTALL_STRIP_LIBRARY  = -S -S
