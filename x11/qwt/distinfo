@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:43 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/04/30 11:03:30 skrll Exp $
 
-SHA1 (qwtlib-0.2.tgz) = 29aa2873c25c0c714d87fa798c0c44b65af842eb
-Size (qwtlib-0.2.tgz) = 485222 bytes
+SHA1 (qwt-0.3.0.tar.gz) = 504940fbf25b058d258bba3589a22752a624847b
+Size (qwt-0.3.0.tar.gz) = 484675 bytes
+SHA1 (patch-aa) = 5c55cc77207e6fba850c8534cae4db2384c31bbb
