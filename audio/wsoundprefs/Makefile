@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2001/03/12 10:51:47 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/12 21:19:09 wiz Exp $
 
-DISTNAME=	WSoundPrefs-0.9.3
-PKGNAME=	wsoundprefs-0.9.3
-CATEGORIES=	audio x11
+DISTNAME=	WSoundPrefs-1.1.1
+PKGNAME=	wsoundprefs-1.1.1
+CATEGORIES=	audio wm
 MASTER_SITES=	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 
 MAINTAINER=	lamj@stat.cmu.edu
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
-COMMENT=	WMSound configuration utility
+COMMENT=	WSoundServer configuration utility
 
-DEPENDS+=	wmsound-0.9.4:../../audio/wmsound
+DEPENDS+=	wsoundserver-0.4.0:../../audio/wsoundserver
 
 USE_X11BASE=	YES
 USE_IMAKE=	YES
