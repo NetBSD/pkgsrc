@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/23 21:58:56 snj Exp $
+# $NetBSD: Makefile,v 1.22 2004/07/24 19:05:37 salo Exp $
 #
 
 DISTNAME=		aspell-0.50.5
@@ -22,6 +22,13 @@ CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/aspell
 CONFIGURE_ARGS+=	--enable-curses=ncurses
 
 REPLACE_PERL=		scripts/aspell-import
+
+.include "../../mk/compiler.mk"
+
+pre-patch:
+.if !empty(PKGSRC_COMPILER:Msunpro)
+	@cd ${WRKSRC} && ${PATCH} -p1 -s < suncc/aspell-0.50.4.1-suncc.diff
+.endif
 
 # Create directory for dictionaries.
 #
