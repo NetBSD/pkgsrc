@@ -1,4 +1,4 @@
-#     $NetBSD: SunOS.x11.dist,v 1.1 1999/03/08 17:26:54 agc Exp $
+#     $NetBSD: SunOS.x11.dist,v 1.2 2000/12/18 02:32:12 kei Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -66,6 +66,8 @@
                 Type1
                 ..
                 cyrillic
+                ..
+                local
                 ..
                 misc
                 ..
