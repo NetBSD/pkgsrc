@@ -1,0 +1,3 @@
+gnome-dirs installs a set of shared directories used by many GTK/GNOME
+applications.  Do not directly depend on this package.  Please use
+gnome1-dirs and gnome2-dirs instead.
