@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
+
+--- Makefile.orig	Fri Feb 26 12:02:39 1999
++++ Makefile	Wed Mar 22 13:57:18 2000
+@@ -5,5 +5,5 @@
+ 
+ 
+-all: moc src tutorial examples
++all: moc1 src tutorial examples
+ 	@echo
+ 	@echo "The Qt library is now built in ./lib"
+@@ -14,9 +14,9 @@
+ 	@echo
+ 
+-moc: variables FORCE
++moc1: variables FORCE
+ 	cd src/moc; $(MAKE)
+-	cp src/moc/moc bin/moc
++	cp src/moc/moc bin/moc1
+ 
+-src: moc variables FORCE
++src: moc1 variables FORCE
+ 	cd $@; $(MAKE)
+ 

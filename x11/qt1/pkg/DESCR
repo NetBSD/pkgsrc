@@ -1,0 +1,12 @@
+Qt is a toolkit for building a GUI for X in C++. The main documentation
+is in ${PREFIX}/share/doc/qt1 and is also available on the web. This
+directory also contains a tutorial, and example programs (aclock, biff,
+connect, cursor, dclock, desktop, drawdemo, forever, hello, life, menu,
+makepic/ showpic, qmag, showimg, tetris, tictac, timestmp, widgets,
+xform, xshape) have also been installed.
+
+This version of the pkg is intended to provide support for those pkgs
+which will not work with more recent versions of Qt.
+
+Michael Searle
+searle@longacre.demon.co.uk
