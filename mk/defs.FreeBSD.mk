@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.1 2002/11/17 15:11:40 grant Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.2 2002/11/17 15:14:18 grant Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -103,28 +103,6 @@ _STRIPFLAG_CC?=		-s	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
-.if (${MACHINE_ARCH} == alpha)
-DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
-SERIAL_DEVICES?=	/dev/ttyC0 \
-			/dev/ttyC1
-.elif (${MACHINE_ARCH} == "i386")
-DEFAULT_SERIAL_DEVICE?=	/dev/tty00
-SERIAL_DEVICES?=	/dev/tty00 \
-			/dev/tty01
-.elif (${MACHINE_ARCH} == m68k)
-DEFAULT_SERIAL_DEVICE?=	/dev/tty00
-SERIAL_DEVICES?=	/dev/tty00 \
-			/dev/tty01
-.elif (${MACHINE_ARCH} == mipsel)
-DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
-SERIAL_DEVICES?=	/dev/ttyC0 \
-			/dev/ttyC1
-.elif (${MACHINE_ARCH} == "sparc")
-DEFAULT_SERIAL_DEVICE?=	/dev/ttya
-SERIAL_DEVICES?=	/dev/ttya \
-			/dev/ttyb
-.else
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
-.endif
 
