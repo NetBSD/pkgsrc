@@ -1,4 +1,4 @@
-#	$NetBSD: FreeBSD.pkg.dist,v 1.2 2002/11/29 17:22:01 wiz Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.3 2002/12/09 15:52:09 tron Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -478,6 +478,8 @@
 	    uk_UA.ISO_8859-1
 	    ..
         ..
+	pixmaps
+	..
         skel
         ..
     ..
