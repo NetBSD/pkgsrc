@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/12/02 12:04:18 kleink Exp $
+# $NetBSD: Makefile,v 1.23 2000/07/11 09:31:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-extras
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
-CONFIGURE_ARGS+=	--with-xpm-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-xpm-includes=`${PKG_INFO} -qp xpm | ${AWK} '{print $$2}'`/include
 CONFIGURE_ARGS+=	--with-readline-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-rplay-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11ROOT}/include/bitmaps:${X11ROOT}/include/pixmaps
