@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.140 2003/01/04 19:51:56 jlam Exp $
+$NetBSD: TODO,v 1.141 2003/01/05 11:36:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -130,7 +130,7 @@ Suggested package updates
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
-	o gnumeric-1.0.11
+	o gnumeric-1.0.12
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.0
 	o gpgme-0.4.0
@@ -142,7 +142,7 @@ Suggested package updates
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
 	o hpijs-1.3 [pkg/19213]
-	o icewm-1.2.2
+	o icewm-1.2.4
 	o icu-2.2 [heinz]
 	o imlib2-1.0.6 [pkg/19144]
 	o imp-3.1 [pkg/19497]
@@ -161,8 +161,9 @@ Suggested package updates
 	o lbreakout2-2.4
 	o lcms-1.0.9
 	o lftp-2.6.3 [pkg/19419]
+	o lftp-2.6.4
 	o libole2-2.2.8
-	o libmcrypt-2.5.4
+	o libmcrypt-2.5.5
 	o librep-0.16.1
 	o libslang-1.4.7
 	o libxml-2.4.30 [problems with kde2(?)]
@@ -183,6 +184,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.1 [pkg/19665]
 	o mysql-3.23.54
 	o naim-0.11.5
+	o napshare-1.2
 	o nasm-0.98.35
 	o ncurses-5.3
 	o netpbm-10.8
