@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.netbsd,v 1.1.1.1 2001/04/15 01:20:01 itojun Exp $
+@comment $NetBSD: PLIST.netbsd,v 1.2 2001/05/10 10:42:44 agc Exp $
 man/cat1/mailq.0
 man/cat1/newaliases.0
 man/cat1/vacation.0
 man/cat5/aliases.0
+man/cat8/editmap.0
 man/cat8/makemap.0
 man/cat8/smrsh.0
 man/cat8/mailstats.0
