@@ -1,5 +1,5 @@
 This package supplies the user files necessary for full compatibility with
-dynamically linked executables compiled under NetBSD 1.2 (and 1.2.1) and
-earlier releases.  You still need the option COMPAT_12 in your kernel
-configuration (and probably others; see options(4) for more information) 
-to make use of NetBSD 1.2 binaries. 
+dynamically linked executables compiled under NetBSD 1.1 through 1.2.1. 
+You still need the option COMPAT_12 in your kernel configuration (and
+probably others; see options(4) for more information) to make use of
+NetBSD 1.2 binaries. 
