@@ -1,4 +1,4 @@
-/*	$NetBSD: ar_subs.c,v 1.2 2003/06/23 13:45:07 grant Exp $	*/
+/*	$NetBSD: ar_subs.c,v 1.3 2003/07/08 18:40:29 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -47,7 +47,7 @@
 #if 0
 static char sccsid[] = "@(#)ar_subs.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ar_subs.c,v 1.2 2003/06/23 13:45:07 grant Exp $");
+__RCSID("$NetBSD: ar_subs.c,v 1.3 2003/07/08 18:40:29 jschauma Exp $");
 #endif
 #endif /* not lint */
 
@@ -313,7 +313,8 @@ extract(void)
 		/*
 		 * if required, chdir around.
 		 */
-		if ((arcn->pat != NULL) && (arcn->pat->chdname != NULL))
+		if ((arcn->pat != NULL) && (arcn->pat->chdname != NULL) &&
+				!to_stdout)
 			if (chdir(arcn->pat->chdname) != 0)
 				syswarn(1, errno, "Cannot chdir to %s",
 				    arcn->pat->chdname);
@@ -341,22 +342,28 @@ extract(void)
 			}
 			continue;
 		}
-		/*
-		 * we have a file with data here. If we cannot create it, skip
-		 * over the data and purge the name from hard link table
-		 */
-		if ((fd = file_creat(arcn)) < 0) {
-			(void)fflush(listf);
-			(void)rd_skip(arcn->skip + arcn->pad);
-			purg_lnk(arcn);
-			continue;
+		if (to_stdout)
+			fd = STDOUT_FILENO;
+		else {
+			/*
+			 * we have a file with data here. If we cannot create,
+			 * it, skip over the data and purge the name from hard
+			 * link table.
+			 */
+			if ((fd = file_creat(arcn)) < 0) {
+				(void)fflush(listf);
+				(void)rd_skip(arcn->skip + arcn->pad);
+				purg_lnk(arcn);
+				continue;
+			}
 		}
 		/*
 		 * extract the file from the archive and skip over padding and
 		 * any unprocessed data
 		 */
 		res = (*frmt->rd_data)(arcn, fd, &cnt);
-		file_close(arcn, fd);
+		if (!to_stdout)
+			file_close(arcn, fd);
 		if (vflag && vfpart) {
 			(void)putc('\n', listf);
 			vfpart = 0;
