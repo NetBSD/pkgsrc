@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/01 07:33:43 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/13 21:12:44 jlam Exp $
 
---- configure.orig	Thu Jul  5 10:12:12 2001
-+++ configure	Thu Jul  5 10:12:59 2001
-@@ -4558,7 +4558,7 @@
+--- configure.orig	Sun Apr  8 22:51:03 2001
++++ configure
+@@ -3520,6 +3520,11 @@
+   kde_x_includes=$ac_x_includes
+ fi
+ 
++# for --x-libraries too
++if test "${x_libraries+set}" = "set"; then
++  ac_x_libraries=$x_libraries
++fi
++
+ if test "$kde_x_includes" = NO; then
+   { echo "configure: error: Can't find X includes. Please check your installation and add the correct paths!" 1>&2; exit 1; }
+ fi
+@@ -4558,7 +4563,7 @@
  if test $kde_qtver = 2; then
  
    
