@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/12 01:36:56 seb Exp $
 
 DISTNAME=	libapreq2-2.02_02-dev
 PKGNAME=	p5-libapreq2-2.2.2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://httpd.apache.org/apreq/
 COMMENT=	Lots of Apache specific httpd handling modules
 
 DEPENDS+=	ap2-perl-[0-9]*:../../www/ap2-perl
-DEPENDS+=	p5-ExtUtils-XSBuilder-[0-9]*:../../www/p5-ExtUtils-XSBuilder
+DEPENDS+=	p5-ExtUtils-XSBuilder-[0-9]*:../../devel/p5-ExtUtils-XSBuilder
 
 WRKSRC=		${WRKDIR}/libapreq2-2.02-dev
 USE_BUILDLINK3=	YES
