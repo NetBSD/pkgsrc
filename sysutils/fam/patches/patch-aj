@@ -1,0 +1,66 @@
+$NetBSD: patch-aj,v 1.1.1.1 2002/05/12 10:25:48 rh Exp $
+
+--- fam/Listener.c++.orig	Tue Dec 18 11:03:37 2001
++++ fam/Listener.c++
+@@ -22,6 +22,8 @@
+ 
+ #include "Listener.h"
+ 
++#include <stdio.h>
++#include <stdlib.h>
+ #include <assert.h>
+ #include <fcntl.h>
+ #include <sys/types.h>
+@@ -32,6 +34,7 @@
+ #include <rpc/clnt.h>
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
++#include <sys/param.h>
+ #include <sys/stat.h>
+ #include <sys/un.h>
+ #include <unistd.h>
+@@ -205,7 +208,11 @@
+     unsetenv("TMPDIR");
+ 
+     char *tmpfile = tempnam("/tmp", ".fam");
++#if (defined(BSD) && BSD >= 199306)
++    sockaddr_un sun = { sizeof(sockaddr_un), AF_UNIX, "" };
++#else
+     sockaddr_un sun = { AF_UNIX, "" };
++#endif
+     if(strlen(tmpfile) >= (sizeof(sun.sun_path) - 1))
+     {
+         Log::error("tmpnam() too long for sun_path (%d >= %d)!",
+@@ -239,7 +246,7 @@
+         return;
+     }
+ 
+-    if (chown(sun.sun_path, uid, -1) != 0)
++    if (chown(sun.sun_path, uid, (gid_t)-1) != 0)
+     {   Log::perror("localclient chown");
+ 	close(client_sock);
+         return;
+@@ -275,7 +282,11 @@
+ 
+     // Get the new socket.
+ 
++#if (defined(BSD) && BSD >= 199306)
++    struct sockaddr_un sun = { sizeof(sockaddr_un), AF_UNIX, "" };
++#else
+     struct sockaddr_un sun = { AF_UNIX, "" };
++#endif
+     CONFIG_SOCKLEN_T sunlen = sizeof(sun);
+     int client_fd = accept(ofd, (struct sockaddr *) &sun, &sunlen);
+     if (client_fd < 0)
+@@ -337,7 +348,11 @@
+ void
+ Listener::dirty_ugly_hack()
+ {
++#if (defined(BSD) && BSD >= 199306)
++    static sockaddr_un sun = { sizeof (sockaddr_un), AF_UNIX, "/tmp/.fam_socket" };
++#else
+     static sockaddr_un sun = { AF_UNIX, "/tmp/.fam_socket" };
++#endif
+ 
+     int sock = socket(PF_UNIX, SOCK_STREAM, 0);
+     if (sock < 0)

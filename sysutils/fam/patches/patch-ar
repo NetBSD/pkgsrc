@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.1.1.1 2002/05/12 10:25:48 rh Exp $
+
+--- libfam/fam.c++.orig	Tue Dec 18 11:03:38 2001
++++ libfam/fam.c++
+@@ -21,6 +21,7 @@
+ //  Temple Place - Suite 330, Boston MA 02111-1307, USA.
+ 
+ #include <sys/types.h>
++#include <rpc/rpc.h>
+ #include <sys/time.h>
+ #include <unistd.h>
+ #include <stdlib.h>
