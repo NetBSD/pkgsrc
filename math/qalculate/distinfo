@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/11/25 10:03:30 adam Exp $
+$NetBSD: distinfo,v 1.3 2005/02/01 16:16:16 adam Exp $
 
-SHA1 (qalculate-0.7.1.tar.gz) = e6be1f890e0ca53029604ac2bd156ed6293d0267
-Size (qalculate-0.7.1.tar.gz) = 1504204 bytes
+SHA1 (qalculate-0.7.2.tar.gz) = b0a915ad1de2c7c848f5872c793d5909f71b45f2
+Size (qalculate-0.7.2.tar.gz) = 1504796 bytes
 SHA1 (patch-aa) = 138badf3dbb1d011720f980b8cf653e662c5e073
 SHA1 (patch-ab) = 05f21b9ff3a4fc567fd38befd4eb43b47cd347a0
