@@ -1,4 +1,4 @@
-# $nETbsd: Makefile.common,v 1.75 2004/05/15 13:13:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.78 2005/03/21 12:33:26 wiz Exp $
 #
 
 DISTNAME=		xscreensaver-4.18
