@@ -1,0 +1,26 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/12/22 13:04:38 seb Exp $
+
+--- src/cfenvd.c.orig	Fri Aug  2 04:57:44 2002
++++ src/cfenvd.c	Thu Dec 19 17:16:13 2002
+@@ -512,11 +512,21 @@
+ if (!NO_FORK)
+    {
++   int fd;
+ #ifdef HAVE_SETSID
+    setsid();
+ #endif 
++   fd = open("/dev/null", O_RDWR, 0);
+    fclose (stdin);
+    fclose (stdout);
+    fclose (stderr);
+    closelog();
++
++   if (fd != -1)
++      {
++      dup2(fd,STDIN_FILENO);
++      dup2(fd,STDOUT_FILENO);
++      dup2(fd,STDERR_FILENO);
++      close(fd);
++      }
+    }
+ 

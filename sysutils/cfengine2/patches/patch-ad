@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/12/22 13:04:38 seb Exp $
+
+--- contrib/vicf.in.orig	Thu May  4 19:42:31 2000
++++ contrib/vicf.in	Wed Dec 18 09:09:35 2002
+@@ -4,4 +4,5 @@
+ exec_prefix=@exec_prefix@
+ sbindir=@sbindir@
++ECHO=@ECHO@
+ EDITOR="${EDITOR-vi}"
+ CFINPUTS="${CFINPUTS-"@pkgdata@"}
+@@ -21,5 +22,5 @@
+ 	echo "Only these files are eligible for editing:"
+ 	\ls $CFINPUTS
+-	/usr/ucb/echo -n "Create new file? (Y/n) "
++	${ECHO} -n "Create new file? (Y/n) "
+ 	read answer
+ 	if [ "$answer" = "n" ]
+@@ -33,8 +34,8 @@
+     then
+ 	i=30
+-	/usr/ucb/echo -n "File ${file} is busy -- waiting up to $i seconds..."
++	${ECHO} -n "File ${file} is busy -- waiting up to $i seconds..."
+ 	while [ -f ${CFINPUTS}/.${file}.lock ]
+ 	do
+-		/usr/ucb/echo -n .
++		${ECHO} -n .
+ 		i=`expr $i - 1`
+ 		if [ $i = 0 ]
+@@ -63,5 +64,5 @@
+ 		echo PARSE ERROR IN NEW INPUT-FILE:
+ 		cat /tmp/cfparse.$$
+-		/usr/ucb/echo -n "Re-edit file? (Y/n) "
++		${ECHO} -n "Re-edit file? (Y/n) "
+ 		read answer
+ 		if [ "$answer" = "n" ]

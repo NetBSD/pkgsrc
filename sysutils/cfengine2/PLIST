@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/22 13:04:38 seb Exp $
+sbin/cfagent
+sbin/cfdoc
+sbin/cfenvd
+sbin/cfenvgraph
+sbin/cfexecd
+sbin/cfkey
+sbin/cfrun
+sbin/cfservd
+sbin/vicf
+share/cfengine/cf.chflags.example
+share/cfengine/cf.freebsd.example
+share/cfengine/cf.ftp.example
+share/cfengine/cf.groups.example
+share/cfengine/cf.linux.example
+share/cfengine/cf.main.example
+share/cfengine/cf.motd.example
+share/cfengine/cf.preconf.example
+share/cfengine/cf.services.example
+share/cfengine/cf.site.example
+share/cfengine/cf.solaris.example
+share/cfengine/cf.sun4.example
+share/cfengine/cf.users.example
+share/cfengine/cfagent.conf-advanced.example
+share/cfengine/cfagent.conf.example
+share/cfengine/cfengine.el
+share/cfengine/cfrc.example
+share/cfengine/cfrun.hosts.example
+share/cfengine/cfservd.conf.example
+share/cfengine/update.conf.example
+@dirrm share/cfengine
