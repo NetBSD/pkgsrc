@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/05 08:10:40 proff Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/05 08:22:37 proff Exp $
 bin/altavista
 bin/appwatch
 bin/ask
@@ -25,3 +25,5 @@ bin/xxx
 bin/yahoo
 etc/surfraw_elvi.list
 etc/surfraw.conf
+share/doc/surfraw/README
+@dirrm share/doc/surfraw
