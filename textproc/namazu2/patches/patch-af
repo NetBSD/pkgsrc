@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/05/31 13:01:41 seb Exp $
+$NetBSD: patch-af,v 1.1.1.1.4.1 2002/09/05 09:56:13 agc Exp $
 
 --- lib/getopt.c.orig	Mon Oct 11 13:25:11 1999
 +++ lib/getopt.c
