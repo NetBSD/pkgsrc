@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2004/03/26 02:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2004/04/21 21:09:31 cube Exp $
 
 DISTNAME=       pine4.58
 PKGNAME=        pine-4.58
@@ -14,7 +14,7 @@ COMMENT=	Program for Internet News and E-mail
 
 LICENSE=	pine-license
 
-BUILD_DEFS+=	PINE_USE_LDAP
+BUILD_DEFS+=	USE_OPENLDAP
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 
@@ -36,7 +36,7 @@ BUILDNAME= neb
 BUILDFILE= neb
 .endif
 
-.if defined(PINE_USE_LDAP) && (${PINE_USE_LDAP} == "YES")
+.if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
 .  include "../../databases/openldap/buildlink2.mk"
 LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP"
 LDAPLIBS=      LDAPLIBS="-lldap -llber"

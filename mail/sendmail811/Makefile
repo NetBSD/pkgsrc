@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/18 05:10:15 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/21 21:09:31 cube Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -38,7 +38,7 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BUILDLINK_DIR="${BUILDLINK_DIR}"
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
-BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
+BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_OPENLDAP USE_DB2 \
 		USE_SASL USE_STARTTLS
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
@@ -55,7 +55,7 @@ USE_DB2?=	NO
 .  include "../../databases/db/buildlink3.mk"
 .endif
 
-.if defined(USE_LDAP) && (${USE_LDAP} == "YES")
+.if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
 .  include "../../databases/openldap/buildlink3.mk"
 .endif
 
@@ -92,7 +92,7 @@ post-patch:
 .if ${OPSYS} == "SunOS"
 	${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
 .endif
-.if defined(USE_LDAP) && ${USE_LDAP} == YES
+.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
 	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 	${ECHO} -n ' LDAP' >>${DESCR_SRC}
 .endif
