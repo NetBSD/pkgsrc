@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/07 02:50:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/03 12:36:55 wiz Exp $
 #
 
 DISTNAME=	ddclient-2.3.1
@@ -9,6 +9,11 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://burry.net/ddclient
 
 NO_BUILD=	yes
+
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+
+pre-install:
+	${SED} -e "s,@PREFIX@,${PREFIX},g" ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	${SED} \
