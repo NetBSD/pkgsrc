@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/11 06:45:55 jlam Exp $
 #
 
 DISTNAME=	zziplib-0.10.82
@@ -10,10 +10,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://zziplib.sourceforge.net/
 COMMENT=	Library for ZIP archive handling
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--with-zlib=${BUILDLINK_DIR}
+CONFIGURE_ARGS=		--with-zlib=${BUILDLINK_PREFIX.zlib}
 
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
