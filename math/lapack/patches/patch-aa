@@ -1,45 +1,47 @@
-$NetBSD: patch-aa,v 1.2 2003/12/04 10:32:30 adam Exp $
+$NetBSD: patch-aa,v 1.3 2004/12/22 10:17:28 wennmach Exp $
 
---- SRC/Makefile.orig	1999-11-04 20:26:09.000000000 +0100
-+++ SRC/Makefile
-@@ -280,24 +280,24 @@ ZLASRC = \
- all: single complex double complex16
+--- SRC/Makefile.orig	Thu Nov  4 20:26:09 1999
++++ SRC/Makefile	Wed Dec 22 10:52:43 2004
+@@ -1,4 +1,4 @@
+-include ../make.inc
++#include ../make.inc
  
- single: $(SLASRC) $(ALLAUX) $(SCLAUX) 
+ #######################################################################
+ #  This is the makefile to create a library for LAPACK.
+@@ -277,27 +277,11 @@
+    zunmtr.o zupgtr.o \
+    zupmtr.o izmax1.o dzsum1.o
+ 
+-all: single complex double complex16
+-
+-single: $(SLASRC) $(ALLAUX) $(SCLAUX) 
 -	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(SLASRC) $(ALLAUX) \
 -	$(SCLAUX)
 -	$(RANLIB) ../$(LAPACKLIB)
-+	${LIBTOOL} --mode=link --tag=CC ${FC} -o ../liblapack.la	\
-+		$(SLASRC:.o=.lo) $(ALLAUX:.o=.lo) $(SCLAUX:.o=.lo)	\
-+		-rpath ${PREFIX}/lib -version-info 3:0
- 
- complex: $(CLASRC) $(ALLAUX) $(SCLAUX)
+-
+-complex: $(CLASRC) $(ALLAUX) $(SCLAUX)
 -	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(CLASRC) $(ALLAUX) \
 -	$(SCLAUX)
 -	$(RANLIB) ../$(LAPACKLIB)
-+	${LIBTOOL} --mode=link --tag=CC ${FC} -o ../liblapack.la	\
-+		$(CLASRC:.o=.lo) $(ALLAUX:.o=.lo) $(SCLAUX:.o=.lo)	\
-+		-rpath ${PREFIX}/lib -version-info 3:0
- 
- double: $(DLASRC) $(ALLAUX) $(DZLAUX)
+-
+-double: $(DLASRC) $(ALLAUX) $(DZLAUX)
 -	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(DLASRC) $(ALLAUX) \
 -	$(DZLAUX)
 -	$(RANLIB) ../$(LAPACKLIB)
-+	${LIBTOOL} --mode=link --tag=CC ${FC} -o ../liblapack.la	\
-+		$(DLASRC:.o=.lo) $(ALLAUX:.o=.lo) $(DZLAUX:.o=.lo)	\
-+		-rpath ${PREFIX}/lib -version-info 3:0
- 
- complex16: $(ZLASRC) $(ALLAUX) $(DZLAUX)
+-
+-complex16: $(ZLASRC) $(ALLAUX) $(DZLAUX)
 -	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(ZLASRC) $(ALLAUX) \
 -	$(DZLAUX)
 -	$(RANLIB) ../$(LAPACKLIB)
-+	${LIBTOOL} --mode=link --tag=CC ${FC} -o ../liblapack.la	\
-+		$(ZLASRC:.o=.lo) $(ALLAUX:.o=.lo) $(DZLAUX:.o=.lo)	\
-+		-rpath ${PREFIX}/lib -version-info 3:0
++all: $(ALLAUX) $(SCLAUX) $(SLASRC) $(CLASRC) $(DLASRC) $(ZLASRC)
++	${LIBTOOL} --mode=link --tag=CC ${FC} -o ../liblapack.la \
++	$(ALLAUX:.o=.lo) $(SCLAUX:.o=.lo) $(SLASRC:.o=.lo)       \
++	$(DLASRC:.o=.lo) $(CLASRC:.o=.lo) $(ZLASRC:.o=.lo)       \
++	-rpath ${PREFIX}/lib -version-info 3:0
  
  $(ALLAUX): $(FRC)
  $(SCLAUX): $(FRC)
-@@ -313,10 +313,6 @@ FRC:
+@@ -313,10 +297,6 @@
  clean:
  	rm -f *.o
  
