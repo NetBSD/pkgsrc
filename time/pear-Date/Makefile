@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/11/27 10:02:52 jdolecek Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/27 13:31:10 jdolecek Exp $
 
-DISTNAME=	Date-1.3
+DISTNAME=	Date-1.4.3
 CATEGORIES=	time
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	PHP Date and Time Zone Classes
 
 .include "../../lang/php/pear.mk"
