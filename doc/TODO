@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3007 2005/02/08 09:41:51 adam Exp $
+$NetBSD: TODO,v 1.3008 2005/02/09 11:54:33 markd Exp $
 
 Suggested new packages
 ======================
@@ -596,7 +596,6 @@ Suggested package updates
 	o kmymoney2-0.6.4
 	o kodos-2.4.5
 	o kphone-4.1.0
-	o krusader-1.51
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
 	o latd-1.21
