@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/03/25 02:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/28 23:55:42 wiz Exp $
 
 DISTNAME=	libgii-0.9.0.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.ggi-project.org/pub/packages/ggi/ggi/v2.1/ \
 		http://www.ggi-project.org/ftp/ggi/v2.1/ \
@@ -17,9 +18,9 @@ USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
+TEST_TARGET=		check
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-mutexes=int
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
 
@@ -29,5 +30,13 @@ CONF_FILES=		${EGDIR}/libgii.conf ${PKG_SYSCONFDIR}/libgii.conf
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/filter
 CONF_FILES+=		${EGDIR}/filter/keytrans ${PKG_SYSCONFDIR}/filter/keytrans
 CONF_FILES+=		${EGDIR}/filter/mouse ${PKG_SYSCONFDIR}/filter/mouse
+
+.include "../../mk/pthread.buildlink3.mk"
+
+.if empty(PTHREAD_TYPE:Mnative)
+PLIST_SUBST+=		GGTICK=""
+.else
+PLIST_SUBST+=		GGTICK="@comment "
+.endif
 
 .include "../../mk/bsd.pkg.mk"
