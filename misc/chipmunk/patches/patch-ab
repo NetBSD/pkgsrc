@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/06/23 18:18:55 drochner Exp $
+
+--- config.h.orig	Wed Jun 23 16:52:58 1999
++++ config.h	Wed Jun 23 18:09:29 1999
+@@ -108,6 +108,25 @@
+ #   define USE_TESTS
+ #endif
+ 
++#ifdef __NetBSD__
++#   define OPSYS "NetBSD"
++#   define USE_UNISTD
++#   define USE_CBREAK
++#   define USE_MMAP
++#   define USE_SIGNALS
++#   define USE_WAIT
++#   define UNIX
++#   define USE_ALLOCA
++#   define USE_READLINE
++#   define USE_MEMTEST
++#   define USE_TESTS
++#   define USE_SIGNAL_H
++#   define IN_OUT_INSTRUCTIONS
++#   define my_ioperm(x,y,z) i386_iopl(1)
++
++#define SIGNAL_FUNCTION_CAST (void (*)())
++#endif
++
+ /*
+  * Here starts the section that provides defaults for most systems, that
+  * can be overridden for a specific OS/compiler.

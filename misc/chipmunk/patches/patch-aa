@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/23 18:18:55 drochner Exp $
+
+--- Makefile.orig	Wed Jun 23 16:49:36 1999
++++ Makefile	Wed Jun 23 16:50:15 1999
+@@ -30,7 +30,7 @@
+ # on succesful compilations.
+ 
+ chipmunk: $(OBJS) version
+-	$(CC) $(CFLAGS) $(OBJS) $(LIBS) $(EXTRA_LIBS) -o $@
++	$(CC) $(LDFLAGS) $(OBJS) $(LIBS) $(EXTRA_LIBS) -o $@
+ 	
+ chipmunk.hp: $(OBJS) version
+ 	$(CC) $(CFLAGS) $(OBJS) $(LIBS) $(EXTRA_LIBS) -o $@
