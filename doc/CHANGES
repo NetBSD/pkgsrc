@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2195 2003/05/09 08:30:39 wiz Exp $
+$NetBSD: CHANGES,v 1.2196 2003/05/09 08:43:22 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1911,3 +1911,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated etcupdate to 20030509 [martti 2003-05-09]
 	Updated distcc to 2.0.1 [martti 2003-05-09]
 	Updated sudo to 1.6.7.5 [wiz 2003-05-09]
+	Updated distcc to 2.2 [martti 2003-05-09]
