@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:19 agc Exp $
+$NetBSD: patch-ab,v 1.3 1999/01/06 16:30:46 frueauf Exp $
 
---- autoconf.texi.orig	Wed Nov 27 03:09:46 1996
-+++ autoconf.texi	Fri Jun 13 16:29:42 1997
+--- autoconf.texi-orig	Tue Jan  5 14:28:37 1999
++++ autoconf.texi	Wed Jan  6 16:36:16 1999
 @@ -4,6 +4,7 @@
  @settitle Autoconf
  @c For double-sided printing, uncomment:
@@ -9,4 +9,4 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 10:40:19 agc Exp $
 +@dircategory Programming & development tools
  @c %**end of header
  
- @set EDITION 2.12
+ @set EDITION 2.13
