@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 14:37:25 agc Exp $
 # New ports collection makefile for:	noweb
 # Version required:	noweb-2.8a
 # Date created:		29 July 1995
