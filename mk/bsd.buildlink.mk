@@ -1,15 +1,15 @@
-# $NetBSD: bsd.buildlink.mk,v 1.41 2001/10/09 13:54:10 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.42 2001/10/09 14:07:41 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
 #
 # (1) Defines a macro target, _BUILDLINK_USE, that symlinks package files
 #     into a new hierarchy under ${BUILDLINK_DIR};
-# (2) Defines BUILDLINK_CPPFLAGS and BUILDLINK_LDFLAGS to be the flags
-#     needed to find the buildlink include files and buildlink libraries,
-#     respectively.
-# (3) Prepends ${BUILDLINK_CPPFLAGS} to CPPFLAGS, CFLAGS, and CXXFLAGS;
-# (4) Prepends ${BUILDLINK_LDFLAGS} to LDFLAGS.
+# (2) Defines private variables _BUILDLINK_CPPFLAGS and _BUILDLINK_LDFLAGS
+#     containing the magic flags needed to find the buildlink'ed headers
+#     files and the buildlink'ed libraries, respectively.
+# (3) Prepends ${_BUILDLINK_CPPFLAGS} to CPPFLAGS, CFLAGS, and CXXFLAGS;
+# (4) Prepends ${_BUILDLINK_LDFLAGS} to LDFLAGS.
 # (5) Defines a macro target, _BUILDLINK_CONFIG_WRAPPER_USE, that generates
 #     a wrapper script around GTK+-style config scripts that replaces
 #     -I${LOCALBASE}/... and -L${LOCALBASE}/... with references into
@@ -118,22 +118,22 @@ _BSD_BUILDLINK_MK=	# defined
 
 BUILDLINK_DIR?=		${WRKDIR}/.buildlink
 
-.if !defined(BUILDLINK_CPPFLAGS) || !defined(BUILDLINK_LDFLAGS)
-BUILDLINK_CPPFLAGS=	-I${BUILDLINK_DIR}/include
-BUILDLINK_LDFLAGS=	-L${BUILDLINK_DIR}/lib
+.if !defined(_BUILDLINK_CPPFLAGS) || !defined(_BUILDLINK_LDFLAGS)
+_BUILDLINK_CPPFLAGS=	-I${BUILDLINK_DIR}/include
+_BUILDLINK_LDFLAGS=	-L${BUILDLINK_DIR}/lib
 
-CFLAGS:=		${BUILDLINK_CPPFLAGS} ${CFLAGS}
-CXXFLAGS:=		${BUILDLINK_CPPFLAGS} ${CXXFLAGS}
-CPPFLAGS:=		${BUILDLINK_CPPFLAGS} ${CPPFLAGS}
-LDFLAGS:=		${BUILDLINK_LDFLAGS} ${LDFLAGS}
+CFLAGS:=		${_BUILDLINK_CPPFLAGS} ${CFLAGS}
+CXXFLAGS:=		${_BUILDLINK_CPPFLAGS} ${CXXFLAGS}
+CPPFLAGS:=		${_BUILDLINK_CPPFLAGS} ${CPPFLAGS}
+LDFLAGS:=		${_BUILDLINK_LDFLAGS} ${LDFLAGS}
 
 CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
-CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
-CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${BUILDLINK_LDFLAGS}"
+CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${_BUILDLINK_CPPFLAGS}"
+CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${_BUILDLINK_LDFLAGS}"
 
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
-MAKE_ENV+=		BUILDLINK_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
-MAKE_ENV+=		BUILDLINK_LDFLAGS="${BUILDLINK_LDFLAGS}"
+MAKE_ENV+=		BUILDLINK_CPPFLAGS="${_BUILDLINK_CPPFLAGS}"
+MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BUILDLINK_LDFLAGS}"
 .endif
 
 # Filter out libtool archives from the list of file to link into
