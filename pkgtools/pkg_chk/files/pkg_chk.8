@@ -1,9 +1,9 @@
-.\"	$NetBSD: pkg_chk.8,v 1.2 2004/03/27 07:54:57 grant Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.3 2004/11/17 16:27:20 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd March 27, 2004
+.Dd November 17, 2004
 .Dt PKG_CHK 1
 .Sh NAME
 .Nm pkg_chk
@@ -300,3 +300,15 @@ and
 in two separate passes, resulting in unnecessary rebuilding of
 .Em a
 (and potentially other packages).
+.Pp
+There exists a workaround, if you have a complete
+.Pa pkgchk.conf :
+.Bd -literal
+# pkg_chk -r
+# pkg_chk -a
+.Ed
+will remove all outdated packages and then install all
+files that are in your
+.Pa pkgchk.conf
+file, but not currently installed, i.e. hopefully all
+that you just deleted, if the file was complete.
