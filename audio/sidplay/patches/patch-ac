@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.6 2001/12/25 00:09:59 mycroft Exp $
+
+--- audio/oss/audiodrv.cpp.orig	Tue Dec 25 00:04:41 2001
++++ audio/oss/audiodrv.cpp	Tue Dec 25 00:06:01 2001
+@@ -5,7 +5,7 @@
+ #include "audiodrv.h"
+ 
+ #if defined(HAVE_NETBSD)
+-const char audioDriver::AUDIODEVICE[] = "/dev/audio";
++const char audioDriver::AUDIODEVICE[] = "/dev/sound";
+ #else
+ const char audioDriver::AUDIODEVICE[] = "/dev/dsp";
+ #endif
