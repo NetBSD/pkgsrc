@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2004/04/20 15:54:02 recht Exp $
+
+--- lib/auth_krb5.c.orig	2004-04-20 17:50:47.000000000 +0200
++++ lib/auth_krb5.c	2004-04-20 17:51:13.000000000 +0200
+@@ -74,6 +74,7 @@
+ 
+     if (strcmp(identifier,"anyone") == 0) return 1;
+     if (!auth_state && !strcmp(identifier, "anonymous")) return 3;
++    else if(!auth_state) return 0;
+     if (strcmp(identifier,auth_state->userid) == 0) return 3;
+     if (strcmp(auth_state->userid,"anonymous") == 0) return 0;
+ 
