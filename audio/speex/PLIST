@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/05 13:18:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/10/05 10:36:50 wiz Exp $
 bin/speexdec
 bin/speexenc
 include/speex.h
@@ -10,7 +10,7 @@ lib/libspeex.a
 lib/libspeex.la
 lib/libspeex.so
 lib/libspeex.so.2
-lib/libspeex.so.2.0
+lib/libspeex.so.2.1
 man/man1/speexdec.1
 man/man1/speexenc.1
 share/doc/speex-${PKGVERSION}/manual.pdf
