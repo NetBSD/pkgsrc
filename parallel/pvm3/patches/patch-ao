@@ -1,0 +1,33 @@
+$NetBSD: patch-ao,v 1.1 1998/10/29 05:15:10 garbled Exp $
+--- src/pmsg.c.orig	Tue Mar 10 12:32:31 1998
++++ src/pmsg.c	Wed Oct 28 11:23:53 1998
+@@ -252,13 +252,28 @@
+ 				return ((3 << 4) | i) << o;
+ 
+ 			for (j = 0; j < n; j++)
++				if (j < n/2) {
++					if (p[n/2 - 1 - j ]
++					    != thesigs[i].bytes[j])
++						break;
++				} else {
++					if (p[n + n/2 - 1 - j ]
++					    != thesigs[i].bytes[j])
++						break;
++				}
++
++			if (j == n)
++				return ((1 << 4) | i) << o;
++
++			for (j = 0; j < n; j++)
+ 				if (p[n - 1 - j] != thesigs[i].bytes[j])
+ 					break;
+ 			if (j == n)
+ 				return i << o;
+ 		}
+ 	}
+-	fprintf(stderr, "can't generate signature for my integer byte order\n");
++	fprintf(stderr,
++		"can't generate signature for my floating point byte order\n");
+ 	abort();
+ 	return 0;
+ }
