@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.169 2004/10/06 20:51:47 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.170 2004/10/06 20:59:40 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -213,12 +213,12 @@ OBJECT_FMT?=	a.out
 .endif
 
 # Calculate depth
-.if exists(${.CURDIR}/../../mk/bsd.pkg.mk)
-PKGSRC_TOPDIR=	${.CURDIR}/../..
+.if exists(${.CURDIR}/mk/bsd.pkg.mk)
+PKGSRC_TOPDIR=	${.CURDIR}
 .elif exists(${.CURDIR}/../mk/bsd.pkg.mk)
 PKGSRC_TOPDIR=	${.CURDIR}/..
-.elif exists(${.CURDIR}/mk/bsd.pkg.mk)
-PKGSRC_TOPDIR=	${.CURDIR}
+.elif exists(${.CURDIR}/../../mk/bsd.pkg.mk)
+PKGSRC_TOPDIR=	${.CURDIR}/../..
 .endif
 
 # include the defaults file
