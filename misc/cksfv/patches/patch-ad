@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/08/13 22:03:07 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2000/09/09 02:53:10 wiz Exp $
 
---- src/readsfv.c.orig	Thu Aug 10 22:50:02 2000
-+++ src/readsfv.c	Thu Aug 10 23:01:30 2000
+--- src/readsfv.c.orig	Mon May 22 23:57:05 2000
++++ src/readsfv.c	Sat Sep  9 04:43:44 2000
 @@ -33,12 +33,13 @@
  
  extern int  verbose;
@@ -17,13 +17,31 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/08/13 22:03:07 wiz Exp $
    unsigned long len, val, sfvcrc;
    struct dirent *dirinfo;
    
-@@ -79,6 +80,19 @@
+@@ -67,17 +68,35 @@
+   }
+   
+   while(fgets(buf, 512, fd)) {
+-    if (buf[0] != ';') {                /* comment in the sfv file ignore */
++    if (buf[0] != ';' && buf[0] != '\n') { /* comment or empty line, ignore */
+       /* build filename and crc from the sfv file */
+       end = strrchr(buf, ' ');
+-      if (end == NULL) {
++      if (end == NULL || end-buf > 512-10) {
+         fprintf(stderr, "cksfv: %s: incorrect sfv file format\n", fn);
++	continue;
+       }
+       *end = '\0';
+       *(end+9) = '\0';
+       strncpy(crc, ++end, 9);
        strncpy(filename, buf, 512);
-       sfvcrc = strtoul(crc, '\0', 16);
- 
+-      sfvcrc = strtoul(crc, '\0', 16);
++      sfvcrc = strtoul(crc, NULL, 16);
++
 +      if (argc) {
 +	check = 0;
 +        for (i=0; i<argc; i++) {
++	  if (argv[i] == NULL)
++	    continue;
 +	  if ((nocase == 1 && strcasecmp(argv[i], filename) == 0)
 +	      || (nocase == 0 && strcmp(argv[i], filename) == 0)) {
 +	    check = 1;
@@ -32,17 +50,30 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/08/13 22:03:07 wiz Exp $
 +	}
 +	if (check == 0)
 +	  continue;
++	else
++	  argv[i] = NULL;
 +      }
-+
+ 
        if (nocase == 1) {
          len = strlen(filename);
-         while ((dirinfo = readdir(dirp)) != NULL) {
-@@ -126,6 +140,8 @@
+@@ -126,6 +145,20 @@
      }
    }
    fclose(fd);
 +  if (nocase == 1)
 +    closedir(dirp);
++
++  if (argc) {
++    for (i=0; i<argc; i++) {
++      if (argv[i]) {
++        if (verbose == 1)
++          fprintf(stderr, "%-49s not found in sfv\n", argv[i]);
++	else
++	  fprintf(stderr, "cksfv: %s: not found in sfv\n", argv[i]);
++	rval = 1;
++      }
++    }
++  }
  
    if (verbose == 1) {
      if (rval == 0) {
