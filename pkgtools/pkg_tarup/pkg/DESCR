@@ -1,4 +1,4 @@
-Script to tar up an already instaled package.
+Script to tar up an already installed package.
 
 Now my question is, how can we include this? I'd prefer to have it
 available from pkg_admin, but that is C, and the other is a script -
