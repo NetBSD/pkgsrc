@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:58 reed Exp $
 bin/pgpsplit
 bin/pks-mail.sh
 bin/pks-queue-run.sh
 bin/pksclient
 bin/pksd
 bin/pksdctl
-etc/rc.d/pksd
 man/man5/pksd.conf.5
 man/man8/pks-intro.8
 man/man8/pksclient.8

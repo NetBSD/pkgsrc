@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/16 19:19:41 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/23 22:07:57 reed Exp $
 bin/radclient
 bin/radlast
 bin/radtest
 bin/radwho
 bin/radzap
-etc/rc.d/radiusd
 man/man1/radclient.1
 man/man1/radlast.1
 man/man1/radtest.1

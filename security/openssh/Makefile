@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2004/03/26 02:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2004/04/23 22:07:58 reed Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
@@ -43,10 +43,8 @@ SSH_PID_DIR=		/var/run	# default directory for PID files
 
 PKG_SYSCONFSUBDIR=	ssh
 MANDIR=			man
-RCD_SCRIPTS_EGDIR=	etc/rc.d
 
 PLIST_SUBST+=		MANDIR=${MANDIR}
-PLIST_SUBST+=		RCD_SCRIPTS_EGDIR=${RCD_SCRIPTS_EGDIR}
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes

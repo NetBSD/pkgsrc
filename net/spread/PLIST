@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/16 11:47:13 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/23 22:07:57 reed Exp $
 bin/spflooder
 bin/spmonitor
 bin/sptuser
 bin/spuser
-etc/rc.d/spread
 include/spread/sp.h
 include/spread/sp_events.h
 include/spread/sp_func.h
