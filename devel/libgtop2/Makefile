@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/06 21:40:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/10 02:08:09 xtraeme Exp $
 
 DISTNAME=		libgtop-2.0.8
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -31,7 +31,7 @@ PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
 .endif
 
 USE_PERL5=		build
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -57,7 +57,7 @@ CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 post-install:
 	@${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
 
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
