@@ -1,18 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/05 15:48:51 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/07 14:53:56 jlam Exp $
 
---- Makefile.orig	Sun Nov 24 05:41:26 1996
-+++ Makefile	Sun Nov 29 15:31:31 1998
-@@ -2,5 +2,5 @@
+--- Makefile.orig	Sun Nov 24 06:41:26 1996
++++ Makefile	Tue Sep  7 08:55:46 1999
+@@ -1,19 +1,19 @@
+ # $Id: patch-aa,v 1.2 1999/09/07 14:53:56 jlam Exp $
  
  #CFLAGS	=	-g -Wall -Wno-unused
 -CFLAGS	=	-O6 -Wall -Wno-unused
 +CFLAGS	+=	-O6 -Wall -Wno-unused
  SRCS	=	main.c vt.c grf.c blit.c event.c kbd.c mouse.c mux.c func.c utmp.c bell.c vers.c
  LIBS	=
-@@ -8,5 +8,5 @@
+ OBJS	=	main.o vt.o grf.o blit.o event.o kbd.o mouse.o mux.o func.o utmp.o bell.o vers.o
  DT	=	dt
  # where to install the executable
 -BINDIR	=	/usr/local/bin
 +BINDIR	=	${PREFIX}/bin
  
  all:		$(DT)
+ 
+ $(DT):		vers.h $(OBJS)
+ 		@./groksevid
+-		$(CC) $(CFLAGS) $(OBJS) -o $@ $(LIBS)
++		$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $@ $(LIBS)
+ 
+ vers.h:		$(SRCS)
+ 		rm -f vers.h vers.o
