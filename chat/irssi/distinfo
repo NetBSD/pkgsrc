@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.14 2003/07/05 14:25:51 wiz Exp $
+$NetBSD: distinfo,v 1.14.2.1 2003/12/12 11:53:48 agc Exp $
 
-SHA1 (irssi-0.8.6.tar.bz2) = 1f7a5b409f71d7b99a30f980d2e7eaa7373a406c
-Size (irssi-0.8.6.tar.bz2) = 746551 bytes
+SHA1 (irssi-0.8.8.tar.bz2) = f799ae9d09d592725c31e06c14ac7a67ac90dae6
+Size (irssi-0.8.8.tar.bz2) = 758641 bytes
 SHA1 (patch-aa) = 45d8161733f58ab3733022c823933bb1cc93a8e2
 SHA1 (patch-ab) = c395fbeeb2dd15490f04f2cb2c94daf6c5955e85
-SHA1 (patch-ac) = 78134bb8e17b397e9de7e5ba3d7fbda76de16506
-SHA1 (patch-ad) = 11180ed5f1ebea2f1aa806a001db4c9365f68194
-SHA1 (patch-ae) = 43555cce2ed035d824310ce04706ce95b7838205
