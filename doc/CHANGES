@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8440 2004/12/25 19:34:34 wiz Exp $
+$NetBSD: CHANGES,v 1.8441 2004/12/25 20:06:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6542,3 +6542,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mldonkey to 2.5.21nb3 [jmmv 2004-12-25]
 	Added mldonkey-gui-2.5.21 [jmmv 2004-12-25]
 	Added figlet-fonts-20021023 [wiz 2004-12-25]
+	Updated ExmanIDE to 0.9.4nb1 [wiz 2004-12-25]
+	Updated boaconstructor to 0.2.3nb2 [wiz 2004-12-25]
+	Updated BitTornado-gui to 0.3.8nb1 [wiz 2004-12-25]
+	Updated bittorrent-gui to 3.4.2nb2 [wiz 2004-12-25]
+	Rename py-wxWindows to py-wxWidgets [wiz 2004-12-25]
