@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/03 00:12:30 seb Exp $
+# $NetBSD: Makefile,v 1.23 2003/08/09 11:14:05 seb Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:54:39 asami Exp
 #
 
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.cs.unh.edu/~tudor/git/
 COMMENT=	GNU Interactive Tools - a file system browser for UNIX systems
 
 GNU_CONFIGURE=	YES
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	git.info
 
 ALL_TARGET=	all info

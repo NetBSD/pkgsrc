@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/07 10:19:39 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/09 11:32:30 seb Exp $
 
 DISTNAME=	cgicc-3.1.5
 CATEGORIES=	www
@@ -12,7 +12,6 @@ USE_GMAKE=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	cgicc.info
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/support/ltconfig ${WRKSRC}/example/ltconfig

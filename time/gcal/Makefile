@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/05 11:22:14 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/09 11:29:16 seb Exp $
 #
 
 DISTNAME=		gcal-3.01
@@ -13,7 +13,6 @@ COMMENT=		Gnu version of the standard calendar utility
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		gcal.info
 GNU_CONFIGURE=		yes
 

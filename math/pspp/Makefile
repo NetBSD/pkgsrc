@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/02 21:38:11 seb Exp $
+# $NetBSD: Makefile,v 1.28 2003/08/09 11:11:37 seb Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -25,7 +25,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-Dunix=1
 CONFIGURE_ARGS=	--sysconfdir="${PKG_SYSCONFDIR}"
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	pspp.info
 
 PKG_SYSCONFSUBDIR=	pspp

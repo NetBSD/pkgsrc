@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/07/21 23:57:13 seb Exp $
+# $NetBSD: Makefile,v 1.53 2003/08/09 11:08:54 seb Exp $
 
 DISTNAME=	mew-2.3
 CATEGORIES=	mail
@@ -10,7 +10,6 @@ COMMENT=	Messaging in the Emacs World
 
 CONFLICTS=+	mew-xemacs-*
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	mew.info
 
 EMACS_VERSION_ACCEPTED=	emacs21 emacs20

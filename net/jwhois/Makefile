@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/04 12:15:19 seb Exp $
+# $NetBSD: Makefile,v 1.28 2003/08/09 11:16:19 seb Exp $
 #
 
 DISTNAME=		jwhois-3.2.1
@@ -18,7 +18,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var/db
 CONFIGURE_ARGS+=	--with-cache
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		jwhois.info
 
 EGDIR=			${PREFIX}/share/examples/jwhois

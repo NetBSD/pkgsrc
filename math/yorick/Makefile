@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/02 22:09:36 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/09 11:11:38 seb Exp $
 
 DISTNAME=	yorick-1.5.12
 WRKSRC=		${WRKDIR}/yorick-1.5
@@ -15,7 +15,6 @@ USE_X11=        yes
 BUILD_DIRS=	${WRKSRC} ${WRKSRC}/doc
 INSTALL_DIRS=	${WRKSRC}
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	yorick.info
 

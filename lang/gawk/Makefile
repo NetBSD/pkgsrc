@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:44:21 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/08/09 10:59:08 seb Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
 DISTNAME=	gawk-3.1.1
@@ -24,7 +24,6 @@ EVAL_PREFIX+=		GETTEXT_PREFIX=gettext
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	gawk.info gawkinet.info
 
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"

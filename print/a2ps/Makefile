@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2003/08/04 21:02:16 seb Exp $
+# $NetBSD: Makefile,v 1.45 2003/08/09 11:20:35 seb Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -34,7 +34,6 @@ EGDIR=			${PREFIX}/share/examples/a2ps
 CONF_FILES=		${EGDIR}/a2ps-site.cfg ${PKG_SYSCONFDIR}/a2ps-site.cfg
 CONF_FILES+=		${EGDIR}/a2ps.cfg ${PKG_SYSCONFDIR}/a2ps.cfg
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		a2ps.info ogonkify.info regex.info
 
 pre-build:

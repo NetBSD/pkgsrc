@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/04 15:32:30 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/09 11:17:56 seb Exp $
 #
 
 DISTNAME=	NewsCache-0.99.17
@@ -13,7 +13,6 @@ COMMENT=	Free cache server for USENET News
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	NewsCache.info
 
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"

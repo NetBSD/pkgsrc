@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/08/03 00:30:43 seb Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/09 11:27:45 seb Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 #
 
@@ -60,7 +60,6 @@ GNU_CONFIGURE=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	eb-ja.info ebfont-ja.info ebfont.info ebinfo-ja.info
 INFO_FILES+=	ebinfo.info ebrefile-ja.info ebrefile.info ebzip-ja.info

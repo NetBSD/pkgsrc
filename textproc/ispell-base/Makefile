@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/05 21:46:07 seb Exp $
+# $NetBSD: Makefile,v 1.17 2003/08/09 11:27:49 seb Exp $
 #
 
 DISTNAME=	ispell-3.1.20
@@ -19,7 +19,6 @@ CONFLICTS+=	ispell-[0-9]*
 
 MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	ispell.info
 
