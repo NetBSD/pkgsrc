@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/05/18 13:06:41 cjep Exp $
+# $NetBSD: Makefile,v 1.52 2003/07/26 18:25:06 salo Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.mhost.com/pub/nmh/ \
 			ftp://ftp.gw.com/pub/unix/mail/mh/nmh/
 
 MAINTAINER=		kim@tac.nyc.ny.us
-HOMEPAGE=		http://www.mhost.com/nmh/
+HOMEPAGE=		http://www.nongnu.org/nmh/
 COMMENT=		Cleaned up MH mailer suite
 
 CONFLICTS=		ja-mh-[0-9]*
