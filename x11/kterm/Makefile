@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/07/13 05:47:26 enami Exp $
+# $NetBSD: Makefile,v 1.15 2001/08/23 04:26:55 jlam Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -13,30 +13,30 @@ MAINTAINER=	sakamoto@netbsd.org
 COMMENT=	Multi-lingual terminal emulator for X
 
 USE_IMAKE=	YES
-USE_XAW=	YES
 
 BUILD_DEFS+=	KTERM_USE_WALLPAPER
 
 .include "../../mk/bsd.prefs.mk"
 
-XAW_TYPE?=	standard
-
-.if defined(KTERM_USE_WALLPAPER) && ${KTERM_USE_WALLPAPER} == imlib
+.if defined(KTERM_USE_WALLPAPER)
+.if ${KTERM_USE_WALLPAPER} == "imlib"
 PATCH_SITES+=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-Imlib-1.0.patch.gz
 BUILDLINK_DEPENDS.imlib?=	imlib>=1.9.4
-USE_BUILDLINK_ONLY=		YES
+USE_CONFIG_WRAPPER=		YES
 .include "../../graphics/imlib/buildlink.mk"
-.elif defined(KTERM_USE_WALLPAPER) && ${KTERM_USE_WALLPAPER} == YES
-USE_XPM=	YES
+.elif ${KTERM_USE_WALLPAPER} == "YES"
 PATCH_SITES+=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-1.0.patch.gz
+.include "../../graphics/xpm/buildlink.mk"
+.endif
 .endif
 
+.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
 post-patch:
-.if ${XAW_TYPE} != "standard"
 	@${ECHO_MSG}  "===>  Applying Xaw scrollbar patch"
 	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-xaw3d
 .endif
 
+.include "../../mk/xaw.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
