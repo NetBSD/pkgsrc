@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/12/29 17:53:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/01/16 03:26:12 tron Exp $
 bin/convertrgb
 bin/dns-helper
 bin/gconfigger
@@ -11,6 +11,7 @@ bin/gnome-moz-remote
 bin/gnome-name-service
 bin/gnome_segv
 bin/goad-browser
+bin/new-object
 etc/mime-magic
 etc/mime-magic.dat
 etc/paper.config
@@ -45,6 +46,10 @@ include/libart_lgpl/art_uta_svp.h
 include/libart_lgpl/art_vpath.h
 include/libart_lgpl/art_vpath_bpath.h
 include/libart_lgpl/art_vpath_svp.h
+include/libart_lgpl/art_alphagamma.h
+include/libart_lgpl/art_pixbuf.h
+include/libart_lgpl/art_rect_svp.h
+include/libart_lgpl/art_rgb_pixbuf_affine.h
 include/libgnome/gnome-config.h
 include/libgnome/gnome-defs.h
 include/libgnome/gnome-fileconvert.h
@@ -63,10 +68,12 @@ include/libgnome/gnome-triggers.h
 include/libgnome/gnome-url.h
 include/libgnome/gnome-util.h
 include/libgnome/libgnome.h
+include/libgnome/gnome-magic.h
 include/libgnome/gnome-metadata.h
 include/libgnome/gnome-regex.h
 include/libgnome/gnome-remote.h
 include/libgnomeui/gnome-animator.h
+include/libgnomeui/gnome-canvas-load.h
 include/libgnomeui/gnome-canvas-polygon.h
 include/libgnomeui/gnome-dock.h
 include/libgnomeui/gnome-dock-band.h
@@ -155,20 +162,40 @@ lib/gnome-libs/include/gnomesupport.h
 lib/gnome-libs/include/popt-gnome.h
 lib/gnomeConf.sh
 lib/libart_lgpl.a
-lib/libart_lgpl.so.0.0
+lib/libart_lgpl.so.2.0
 lib/libartConf.sh
-lib/libgnome.so.30.0
+lib/libgnome.so.32.0
 lib/libgnome.a
 lib/libgnomesupport.so.0.0
 lib/libgnomesupport.a
-lib/libgnomeui.so.30.0
+lib/libgnomeui.so.34.0
 lib/libgnomeui.a
-lib/libgnorba.so.26.0
+lib/libgnorba.so.28.0
 lib/libgnorba.a
-lib/libgtkxmhtml.so.0.0
+lib/libgnorbagtk.so.0.0
+lib/libgnorbagtk.a
+lib/libgtkxmhtml.so.1.0
 lib/libgtkxmhtml.a
 lib/libzvt.a
-lib/libzvt.so.0.0
+lib/libzvt.so.2.0
+lib/locale/de/LC_MESSAGES/gnome-libs.mo
+lib/locale/fr/LC_MESSAGES/gnome-libs.mo
+lib/locale/nl/LC_MESSAGES/gnome-libs.mo
+lib/locale/pt/LC_MESSAGES/gnome-libs.mo
+lib/locale/ja/LC_MESSAGES/gnome-libs.mo
+lib/locale/sv/LC_MESSAGES/gnome-libs.mo
+lib/locale/pl/LC_MESSAGES/gnome-libs.mo
+lib/locale/no/LC_MESSAGES/gnome-libs.mo
+lib/locale/ko/LC_MESSAGES/gnome-libs.mo
+lib/locale/ca/LC_MESSAGES/gnome-libs.mo
+lib/locale/cs/LC_MESSAGES/gnome-libs.mo
+lib/locale/da/LC_MESSAGES/gnome-libs.mo
+lib/locale/es/LC_MESSAGES/gnome-libs.mo
+lib/locale/fi/LC_MESSAGES/gnome-libs.mo
+lib/locale/ga/LC_MESSAGES/gnome-libs.mo
+lib/locale/it/LC_MESSAGES/gnome-libs.mo
+lib/locale/ru/LC_MESSAGES/gnome-libs.mo
+lib/locale/hu/LC_MESSAGES/gnome-libs.mo
 sbin/gnome-pty-helper
 share/aclocal/libart.m4
 share/doc/gnome-libs/README.gtkcauldron
@@ -190,6 +217,8 @@ share/pixmaps/calculator-font.png
 share/pixmaps/yes.xpm
 share/pixmaps/no.xpm
 share/gtkrc
+share/gtkrc.ja
+share/gtkrc.ko
 @dirrm etc/sound/events
 @dirrm etc/sound
 @dirrm include/libgnorba
@@ -207,3 +236,21 @@ share/gtkrc
 @dirrm share/pixmaps
 @exec mkdir -p @@LOCALSTATEDIR@@
 @unexec rm -rf @@LOCALSTATEDIR@@
+@dirrm lib/locale/ca/LC_MESSAGES
+@dirrm lib/locale/ca
+@dirrm lib/locale/cs/LC_MESSAGES
+@dirrm lib/locale/cs
+@dirrm lib/locale/da/LC_MESSAGES
+@dirrm lib/locale/da
+@dirrm lib/locale/es/LC_MESSAGES
+@dirrm lib/locale/es
+@dirrm lib/locale/fi/LC_MESSAGES
+@dirrm lib/locale/fi
+@dirrm lib/locale/ga/LC_MESSAGES
+@dirrm lib/locale/ga
+@dirrm lib/locale/it/LC_MESSAGES
+@dirrm lib/locale/it
+@dirrm lib/locale/ru/LC_MESSAGES
+@dirrm lib/locale/ru
+@dirrm lib/locale/hu/LC_MESSAGES
+@dirrm lib/locale/hu
