@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6793 2004/08/04 17:40:21 tv Exp $
+$NetBSD: CHANGES,v 1.6794 2004/08/04 19:41:15 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3723,3 +3723,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated http_load to 20020104nb3 [cube 2004-08-04]
 	Updated postgresql74-client to 7.4.3nb1 [recht 2004-08-04]
 	Updated p5-Sendmail-PMilter to 0.94 [tv 2004-08-04]
+	Updated cyrus-sasl2 to 2.1.19 [jlam 2004-08-04]

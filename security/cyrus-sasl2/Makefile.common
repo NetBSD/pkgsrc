@@ -1,15 +1,16 @@
-# $NetBSD: Makefile.common,v 1.22 2004/08/03 23:40:23 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/08/04 19:41:07 jlam Exp $
 #
 # This file is currently included by:
 #
 #	security/cyrus-sasl2/Makefile
 #	security/cy2-login/Makefile
 #	security/cy2-ntlm/Makefile
+#	security/cy2-sql/Makefile
 #
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.18
+DISTNAME=	cyrus-sasl-2.1.19
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
