@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/25 13:27:32 jmmv Exp $
+
+SHA1 (prosper-1.00.4.tar.gz) = 42ffa133b036d9fc022f6db8642be0f2e5c6459c
+Size (prosper-1.00.4.tar.gz) = 768604 bytes
+SHA1 (PPRblends.sty.gz) = 61e7b8dac7aeba41eaae458011ce584508ab270a
+Size (PPRblends.sty.gz) = 1530 bytes
