@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2000/02/19 00:53:40 tsutsui Exp $
+$NetBSD: patch-ah,v 1.2 2000/02/19 09:46:14 tsutsui Exp $
 
 --- config.sub.orig	Sat Apr  4 01:21:57 1998
 +++ config.sub	Thu Feb 17 01:16:53 2000
@@ -46,7 +46,7 @@ $NetBSD: patch-ah,v 1.1 2000/02/19 00:53:40 tsutsui Exp $
  
  /* Define default target values. */
  
-+#ifndef TARGET_BIG_ENDIAN_DEFAULT
++#ifdef TARGET_BIG_ENDIAN_DEFAULT
 +#define TARGET_ENDIAN_DEFAULT MASK_BIG_ENDIAN
 +#else
  #define TARGET_ENDIAN_DEFAULT 0
