@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.374 1999/11/30 04:17:58 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.375 1999/12/07 08:55:58 sakamoto Exp $
 #
 # This file is in the public domain.
 #
@@ -1155,6 +1155,14 @@ do-patch:
 
 .if !target(do-configure)
 do-configure:
+.if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE) && !defined(LIBTOOL_OVERRIDE)
+.for ltconfig in ${LTCONFIG_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${ltconfig} ]; then \
+		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool" \
+			> ${ltconfig}; \
+	fi
+.endfor
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/configure ]; then \
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} \
 		  ${SCRIPTDIR}/configure; \
@@ -1170,6 +1178,14 @@ do-configure:
 .endif
 .if defined(USE_IMAKE)
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF})
+.endif
+.if defined(USE_LIBTOOL) && defined(LIBTOOL_OVERRIDE) && !defined(LTCONFIG_OVERRIDE)
+.for libtool in ${LIBTOOL_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${libtool} ]; then \
+		${RM} -f ${libtool}; \
+		${LN} -s ${LIBTOOL} ${libtool}; \
+	fi
+.endfor
 .endif
 .endif
 
