@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.16 2004/10/06 15:27:28 erh Exp $
+# $Id: pkg_tarup,v 1.17 2004/10/13 23:18:35 xtraeme Exp $
 #
 # Tar up installed package
 #
@@ -11,7 +11,7 @@
 
 PREFIX=${PREFIX:-@PREFIX@}
 
-PATH=/sbin:/usr/sbin:/bin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin:@PKG_TOOLS_BIN@
+PATH=${PREFIX}/sbin:${PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:@PKG_TOOLS_BIN@
 export PATH
 
 OS=`uname -s`
