@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1497 2004/09/11 07:26:03 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1498 2004/09/15 15:26:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -109,6 +109,19 @@ NOCLEAN?=		NO	# don't clean up after update
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
+.if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
+.  if defined(PKGNAME)
+PKGNAME_NOREV:=		${PKGNAME}
+PKGNAME:=		${PKGNAME}nb${PKGREVISION}
+.  else
+PKGNAME?=		${DISTNAME}nb${PKGREVISION}
+PKGNAME_NOREV=		${DISTNAME}
+.  endif
+.else
+PKGNAME?=		${DISTNAME}
+PKGNAME_NOREV=		${PKGNAME}
+.endif
+SVR4_PKGNAME?=		${PKGNAME}
 
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 
@@ -1023,19 +1036,6 @@ MASTER_SITE_LOCAL?= \
 
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
-.if defined(PKGREVISION) && ${PKGREVISION} != "" && ${PKGREVISION} != "0"
-.  if defined(PKGNAME)
-PKGNAME_NOREV:=		${PKGNAME}
-PKGNAME:=		${PKGNAME}nb${PKGREVISION}
-.  else
-PKGNAME?=		${DISTNAME}nb${PKGREVISION}
-PKGNAME_NOREV=		${DISTNAME}
-.  endif
-.else
-PKGNAME?=		${DISTNAME}
-PKGNAME_NOREV=		${PKGNAME}
-.endif
-SVR4_PKGNAME?=		${PKGNAME}
 
 MAINTAINER?=		tech-pkg@NetBSD.org
 
