@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.5 2004/11/08 22:26:31 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.6 2004/11/08 22:29:19 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -59,7 +59,6 @@ rpath_options="-Wl,--rpath, -Wl,-rpath-link, -Wl,-rpath, -Wl,-R -R"
 gen()
 {
 	_sep=" 	\`\"':;,"
-	_ws_sep=" 	"
 
 	_action=$1; shift
 	save_IFS="${IFS}"; IFS=":"
