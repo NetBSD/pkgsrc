@@ -1,0 +1,18 @@
+--- configure.orig	Sun Dec  1 03:08:35 1996
++++ configure	Sun Feb  1 18:10:55 1998
+@@ -605,14 +605,7 @@
+ echo $ac_n "checking for default include-directory""... $ac_c" 1>&6
+ echo "configure:607: checking for default include-directory" >&5
+ for nc_symbol in \
+-	$includedir \
+-	$includedir/ncurses \
+-	$prefix/include \
+-	$prefix/include/ncurses \
+-	/usr/include \
+-	/usr/include/ncurses \
+-	/usr/local/include \
+-	/usr/local/include/ncurses
++	$includedir
+ do
+ 	nc_dir=`eval echo $nc_symbol`
+ 	if test -f $nc_dir/curses.h ; then
