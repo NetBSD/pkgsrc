@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/09 13:06:53 markd Exp $
+
+--- src/misc/desencryptor.h.orig	2004-11-09 13:27:08.000000000 +1300
++++ src/misc/desencryptor.h
+@@ -40,6 +40,7 @@
+ #include <openssl/des.h>
+ 
+ #include <qstring.h>
++#include <stdlib.h>
+ 
+ namespace KFTPGrabberBase {
+ 
