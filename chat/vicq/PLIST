@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/30 11:37:47 zuntum Exp $
+bin/vicq
+share/examples/vicq/vicqrc.example
+@dirrm share/examples/vicq
