@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/29 17:26:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/29 20:21:38 seb Exp $
 #
 
 DISTNAME=	ircd-hybrid-6.2
@@ -15,6 +15,9 @@ GNU_CONFIGURE=	YES
 
 USE_BUILDLINK2=		# defined
 USE_PKGINSTALL=		YES
+
+PKG_SYSCONFSUBDIR=	ircd-hybrid
+IRCD_HYBRID_DPATH=	${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -78,7 +81,7 @@ MAKE_FLAGS+=	PREFIX=${PREFIX} DESTDIR=${DESTDIR}
 	IRCD_HYBRID_USERS_PREALLOCATE IRCD_HYBRID_NICKNAMEHISTORYLENGTH \
 	IRCD_HYBRID_MAXSENDQLENGTH IRCD_HYBRID_INITIAL_DBUFS \
 	IRCD_HYBRID_HARD_FDLIMIT_ IRCD_HYBRID_INIT_MAXCLIENTS \
-	IRCD_HYBRID_NETWORK_NAME IRCD_HYBRID_NETWORK_DESC IRCD_HYBRID_DPATH \
+	IRCD_HYBRID_NETWORK_NAME IRCD_HYBRID_NETWORK_DESC \
 	IRCD_HYBRID_FNAME_OPERLOG IRCD_HYBRID_PPATH \
 	IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
 . ifdef ${def}
@@ -96,27 +99,20 @@ BUILD_DEFS+=	IRCD_HYBRID_USE_LOGFILE
 BUILD_DEFS+=	IRCD_HYBRID_LPATH
 .endif
 
-# tuning of "etc script"
 FILES_SUBST+=		PPATH=${IRCD_HYBRID_PPATH:Q}
 FILES_SUBST+=		SPATH=${IRCD_HYBRID_SPATH:Q}
 FILES_SUBST+=		USER=${IRCD_HYBRID_IRC_USER:Q}
 FILES_SUBST+=		DPATH=${IRCD_HYBRID_DPATH:Q}
-
-# tuning of document file
-DOC_SUBST=		PREFIX=${PREFIX}
-DOC_SUBST+=		USER=${IRCD_HYBRID_IRC_USER}
-DOC_SUBST+=		GROUP=${IRCD_HYBRID_IRC_GROUP}
-DOC_SUBST+=		DPATH=${IRCD_HYBRID_DPATH}
-DOC_SUBST+=		LPATH=${IRCD_HYBRID_LPATH}
-DOC_SUBST+=		OPERLOG=${IRCD_HYBRID_FNAME_OPERLOG}
-DOC_SUBST+=		USERLOG=${IRCD_HYBRID_FNAME_USERLOG}
-DOC_SUBST+=		SYSLOG_FACILITY=${IRCD_HYBRID_SYSLOG_FACILITY}
+FILES_SUBST+=		GROUP=${IRCD_HYBRID_IRC_GROUP}
+FILES_SUBST+=		SYSLOG_FACILITY=${IRCD_HYBRID_SYSLOG_FACILITY}
 
 RCD_SCRIPTS=		ircd-hybrid
 
 PKG_USERS=		${IRCD_HYBRID_IRC_USER}:${IRCD_HYBRID_IRC_GROUP}::IRC\\ User::/sbin/nologin
 PKG_GROUPS=		${IRCD_HYBRID_IRC_GROUP}
 
+SUPPORT_FILES=		${PREFIX}/share/examples/ircd-hybrid/opers.txt \
+			${IRCD_HYBRID_DPATH}/opers.txt	
 SUPPORT_FILES_PERMS=	/dev/null ${IRCD_HYBRID_FNAME_OPERLOG} \
 			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 600
 SUPPORT_FILES_PERMS+=	/dev/null ${IRCD_HYBRID_FNAME_USERLOG} \
@@ -127,20 +123,20 @@ SUPPORT_FILES_PERMS+=	/dev/null ${IRCD_HYBRID_LPATH} \
 .endif
 
 post-build:
-	${CP} ${FILESDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt
-.if ${IRCD_HYBRID_USE_LOGFILE} != "YES"
-	${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
-	${SED} -e '/LPATH/d' -e '/USERLOG/d' ${WRKDIR}/.pkg-setup.txt > ${WRKDIR}/pkg-setup.txt
-	cp ${WRKDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt.1
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${CP} ${FILESDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt
 .if ${IRCD_HYBRID_USE_SYSLOG} != "YES"
-	${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
-	${SED} -e '/SYSLOG_FACILITY/d' ${WRKDIR}/.pkg-setup.txt > ${WRKDIR}/pkg-setup.txt
-	cp ${WRKDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt.2
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${SED} -e '/SYSLOG_FACILITY/d' ${WRKDIR}/.pkg-setup.txt	\
+		> ${WRKDIR}/pkg-setup.txt
 .endif
-	${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
-	${SED} ${DOC_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
-		${WRKDIR}/.pkg-setup.txt > ${WRKDIR}/pkg-setup.txt
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${SED} ${FILES_SUBST_SED} ${WRKDIR}/.pkg-setup.txt	\
+		> ${WRKDIR}/pkg-setup.txt
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/ircd-hybrid ${PREFIX}/etc/rc.d/ircd-hybrid
