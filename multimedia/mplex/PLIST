@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:52:07 jmmv Exp $
+bin/mplex
+share/doc/mplex/COPYING
+share/doc/mplex/INSTRUCT
+share/doc/mplex/README
+@dirrm share/doc/mplex
