@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5923 2004/05/13 10:46:48 salo Exp $
+$NetBSD: CHANGES,v 1.5924 2004/05/13 11:40:13 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2507,3 +2507,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated global to 4.7 [cjs 2004-05-13]
 	Added p5-CGI-Kwiki-0.18 [mjl 2004-05-13]
 	Updated pkglint to 3.76 [salo 2004-05-13]
+	Removed opera [tron 2004-05-13]
+	Removed opera6 [tron 2004-05-13]
