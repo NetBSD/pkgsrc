@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.770 2001/06/27 11:40:25 zuntum Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.771 2001/06/28 16:54:07 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -766,7 +766,17 @@ RMAN?=			${X11BASE}/bin/rman
 
 # Popular master sites
 MASTER_SITE_XCONTRIB+=	\
-	ftp://crl.dec.com/pub/X11/contrib/ \
+	ftp://uiarchive.uiuc.edu/pub/ftp/ftp.x.org/contrib/ \
+	ftp://sunsite.doc.ic.ac.uk/packages/X11/contrib/ \
+	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
+	ftp://ftp.sunet.se/pub/X11/contrib/ \
+	ftp://sunsite.sut.ac.jp/pub/archives/X11/contrib/ \
+	ftp://sunsite.icm.edu.pl/pub/X11/contrib/ \
+	ftp://ftp.task.gda.pl/mirror/ftp.x.org/contrib/ \
+	ftp://ftp.ntua.gr/pub/X11/contrib/ \
+	ftp://sunsite.cnlab-switch.ch/mirror/X11/contrib/ \
+	ftp://ftp.cica.es/pub/X/contrib/ \
+	ftp://ftp.unicamp.br/pub/X11/contrib/ \
 	ftp://ftp.uni-paderborn.de/pub/X11/contrib/ \
 	ftp://ftp.x.org/contrib/
 
