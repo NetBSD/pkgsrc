@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1459 2004/05/12 13:23:08 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1460 2004/05/17 04:44:44 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -179,7 +179,9 @@ USE_X11?=		implied
 
 # Set the PREFIX appropriately.
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  if defined(USE_X11BASE)
+.  if defined(INSTALLATION_PREFIX)
+PREFIX=			${INSTALLATION_PREFIX}
+.  elif defined(USE_X11BASE)
 PREFIX=			${X11PREFIX}
 .  elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
@@ -190,6 +192,10 @@ PREFIX=			${LOCALBASE}
 .elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PREFIX=			${DEPOTBASE}/${PKGNAME}
 NO_MTREE=		yes
+.endif
+
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(INSTALLATION_PREFIX)
+PKG_SKIP_REASON=	"INSTALLATION_PREFIX can't be used in a pkgviews package"
 .endif
 
 # If USE_XPKGWEDGE is set, then add a build dependency on xpkgwedge for
