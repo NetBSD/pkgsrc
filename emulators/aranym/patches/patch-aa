@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/06 07:28:38 xtraeme Exp $
+
+--- ../gui-sdl/dlgAlert.cpp.orig	2004-07-06 09:17:50.000000000 +0200
++++ ../gui-sdl/dlgAlert.cpp	2004-07-06 09:18:37.000000000 +0200
+@@ -91,7 +91,7 @@
+ */
+ int Dialog_AlertDlg(const char *text)
+ {
+-  char *t = strdupa(text);
++  char *t = strdup(text);
+   static int maxlen = sizeof(dlglines[0])-1;
+   int lines = FormatTextToBox(t, maxlen);
+   for(int i=0; i<MAX_LINES; i++) {
