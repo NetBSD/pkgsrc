@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8173 2004/11/30 11:32:59 wiz Exp $
+$NetBSD: CHANGES,v 1.8174 2004/11/30 12:09:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5666,3 +5666,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated navi2ch to 1.4.5 [uebayasi 2004-11-30]
 	Updated jwhois to 3.2.2nb9 [kleink 2004-11-30]
 	Added p5-Class-Inner-0.1 [wiz 2004-11-30]
+	Updated p5-Test-Unit to 0.24 [wiz 2004-11-30]
