@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 12:14:18 wiz Exp $
+
+--- src/Makefile.in.orig	Sat Nov 25 16:59:13 2000
++++ src/Makefile.in	Sat Nov 25 17:01:59 2000
+@@ -57,7 +57,7 @@
+ all: crxvt
+ 
+ crxvt: $(OBJS)
+-	$(CC) -o $@ $(OBJS) -lX11 -L$(XLIB)
++	$(CC) -o $@ $(OBJS) -lX11 -L$(XLIB) -Wl,-R${X11BASE}/lib -lXext
+ 
+ .c.o:
+ 	$(CC) -c -o $*.o $(CFLAGS) -I$(XINC) $(DEFS) $(EXTRA_DEFINES) $<
