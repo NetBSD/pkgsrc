@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2002/07/18 18:01:56 mycroft Exp $
+
+--- configure.orig	Thu Jul 18 17:50:10 2002
++++ configure	Thu Jul 18 17:59:13 2002
+@@ -5050,7 +5050,7 @@
+ 	       select poll \
+ 	       readlink lstat lchown faccessx fchdir ftruncate \
+ 	       fseeko ftello \
+-	       mkfifo _mktemp \
++	       mkfifo \
+ 	       waitpid wait3 \
+ 	       sigaction sigblock sighold sigrelse sigsetmask sigprocmask \
+ 	       killpg setpgid setpgrp tcsetpgrp tcgetattr nice \
