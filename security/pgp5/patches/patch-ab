@@ -1,30 +1,40 @@
-$NetBSD: patch-ab,v 1.3 1998/12/31 15:02:51 frueauf Exp $
+$NetBSD: patch-ab,v 1.4 1998/12/31 15:14:11 frueauf Exp $
 
---- apps/pgp/Makefile.in.orig	Sat Feb  7 20:54:56 1998
-+++ apps/pgp/Makefile.in	Tue Dec 29 23:55:51 1998
-@@ -6,7 +6,7 @@
- # $Id: patch-ab,v 1.3 1998/12/31 15:02:51 frueauf Exp $
- #
- 
--PROG = pgp
-+PROG = pgp5
- INSTALLPROGS = $(PROG)
- 
- COMMON=../common
-@@ -21,11 +21,11 @@
- 
- install:: $(PROG)
- 	(						\
--	    $(INSTALL) -m 755 pgp $(DESTDIR)$(bindir);	\
-+	    $(INSTALL) -m 755 pgp5 $(DESTDIR)$(bindir);	\
- 	    cd $(DESTDIR)$(bindir);			\
- 	    $(RM) pgpe pgps pgpv pgp_old;		\
--	    $(LN_S) pgp pgpe;				\
--	    $(LN_S) pgp pgps;				\
--	    $(LN_S) pgp pgpv;				\
--	    $(LN_S) pgp pgp_old				\
-+	    $(LN_S) pgp5 pgpe;				\
-+	    $(LN_S) pgp5 pgps;				\
-+	    $(LN_S) pgp5 pgpv;				\
-+	    $(LN_S) pgp5 pgp_old			\
- 	)
+*** apps/pgp/Makefile.in.orig	Sat Feb  7 20:54:56 1998
+--- apps/pgp/Makefile.in	Thu Dec 31 16:03:23 1998
+***************
+*** 7,11 ****
+  #
+  
+! PROG = pgp
+  INSTALLPROGS = $(PROG)
+  
+--- 7,11 ----
+  #
+  
+! PROG = pgp5
+  INSTALLPROGS = $(PROG)
+  
+***************
+*** 22,31 ****
+  install:: $(PROG)
+  	(						\
+! 	    $(INSTALL) -m 755 pgp $(DESTDIR)$(bindir);	\
+  	    cd $(DESTDIR)$(bindir);			\
+  	    $(RM) pgpe pgps pgpv pgp_old;		\
+! 	    $(LN_S) pgp pgpe;				\
+! 	    $(LN_S) pgp pgps;				\
+! 	    $(LN_S) pgp pgpv;				\
+! 	    $(LN_S) pgp pgp_old				\
+  	)
+--- 22,31 ----
+  install:: $(PROG)
+  	(						\
+! 	    $(INSTALL) -m 755 pgp5 $(DESTDIR)$(bindir);	\
+  	    cd $(DESTDIR)$(bindir);			\
+  	    $(RM) pgpe pgps pgpv pgp_old;		\
+! 	    $(LN_S) pgp5 pgpe;				\
+! 	    $(LN_S) pgp5 pgps;				\
+! 	    $(LN_S) pgp5 pgpv;				\
+! 	    $(LN_S) pgp5 pgp_old			\
+  	)
