@@ -1,0 +1,49 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 23:32:29 taca Exp $
+#
+
+DISTNAME=	${RUBY_DISTNAME}
+PKGNAME=	${RUBY_PKGNAMEPREFIX}mode-${RUBY_VERSION}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_RUBY}
+
+MAINTAINER=	taca@netbsd.org
+HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
+COMMENT=	Ruby editing mode for Emacs
+
+DIST_SUBDIR=	ruby
+DISTINFO_FILE=	${RUBY_DISTINFO}
+WRKSRC=		${RUBY_WRKSRC}/misc
+
+.if defined(USE_XEMACS)
+DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
+EMACS=		xemacs
+SITE_LISP=	lib/xemacs/xemacs-packages/lisp/prog-modes
+.else
+DEPENDS+=	emacs-[0-9]*:../../editors/emacs
+EMACS=		emacs
+SITE_LISP=	share/emacs/site-lisp
+.endif
+
+EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/misc
+NO_PATCH=	# defined
+NO_CONFIGURE=	# defined
+
+SRCS=		ruby-mode.el rubydb3x.el inf-ruby.el
+
+PLIST_SUBST+=	SITE_LISP=${SITE_LISP}
+
+do-build:
+.for f in ${SRCS}
+	cd ${WRKSRC}; ${EMACS} --no-init-file --no-site-file -batch \
+		-l ruby-mode.el -f batch-byte-compile ${f}
+.endfor
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/${SITE_LISP}
+.for f in ${SRCS}
+	${INSTALL_DATA} ${RUBY_WRKSRC}/misc/${f} ${PREFIX}/${SITE_LISP}
+	${INSTALL_DATA} ${RUBY_WRKSRC}/misc/${f}c ${PREFIX}/${SITE_LISP}
+.endfor
+
+.include "../../lang/ruby-base/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
