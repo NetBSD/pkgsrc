@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6402 2004/06/30 09:54:16 abs Exp $
+$NetBSD: CHANGES,v 1.6403 2004/06/30 11:29:13 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3186,4 +3186,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated easytag to 0.31 [wiz 2004-06-30]
 	Added p5-Log-Dispatch-DBI-0.02 [grant 2004-06-30]
 	Updated pkg_chk to 1.49 [abs 2004-06-30]
-
+	Added florist-3.15p [shannonjr 2004-06-30]
