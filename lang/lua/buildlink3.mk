@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:36 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/04/05 15:19:49 xtraeme Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LUA_BUILDLINK3_MK:=	${LUA_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlua}
 BUILDLINK_PACKAGES+=	lua
 
 .if !empty(LUA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.lua+=		lua>=5.0
+BUILDLINK_DEPENDS.lua+=		lua>=5.0.2
 BUILDLINK_PKGSRCDIR.lua?=	../../lang/lua
 .endif	# LUA_BUILDLINK3_MK
 
