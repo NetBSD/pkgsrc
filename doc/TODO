@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.872 2003/09/16 21:54:04 wiz Exp $
+$NetBSD: TODO,v 1.873 2003/09/16 22:25:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -141,7 +141,6 @@ Suggested package updates
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
 	o gtksee-0.5.3
-	o gtm-4.1.12
 	o guile-1.6.4
 	o hatari-0.40
 	o host-20030604
