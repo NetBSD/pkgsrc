@@ -1,13 +1,13 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.2 1998/08/07 11:13:51 agc Exp $
+$NetBSD: MESSAGE,v 1.3 1998/08/24 22:52:35 hubertf Exp $
 
 If "starter" configuration files were installed (in @SSH_CONF_DIR@)
 when the package was installed, be sure to examine them (and the man pages
 for ssh and sshd) to determine whether you want to make any changes.
 
 Copies of the example configuration files are installed in
-@PREFIX@/examples/ssh, so those can still be used for reference after
-you have made changes to those installed in @SSH_CONF_DIR@, or if
+@PREFIX@/share/examples/ssh, so those can still be used for reference
+after you have made changes to those installed in @SSH_CONF_DIR@, or if
 you had existing configuration files, which would not be overwritten in
 the installation process.
 
