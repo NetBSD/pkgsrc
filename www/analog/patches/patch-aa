@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.8 2000/03/21 18:37:53 tron Exp $
+$NetBSD: patch-aa,v 1.9 2000/04/01 10:50:35 tron Exp $
 
---- Makefile.orig	Tue Mar 21 10:58:01 2000
-+++ Makefile	Tue Mar 21 19:31:39 2000
-@@ -1,13 +1,13 @@
- # Makefile for analog 4.04
+--- Makefile.old	Thu Mar 30 15:59:16 2000
++++ Makefile	Sat Apr  1 12:42:47 2000
+@@ -1,8 +1,8 @@
+ # Makefile for analog 4.1
  # Please read docs/Readme.html, or http://www.analog.cx/
 -CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
 +#CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
@@ -13,12 +13,6 @@ $NetBSD: patch-aa,v 1.8 2000/03/21 18:37:53 tron Exp $
  #                    HP/UX cc requires CEXTRAFLAGS = -Aa (HP/UX 9) or ...
  #                    -Ae (HP/UX 10);       BS2000/OSD requires -XLLML -XLLMK;
  #                    NeXTSTEP apparently needs...
- #                    CEXTRAFLAGS = -O2 -pipe -no-precomp 
--DEFS =             # any of -DNOPIPES -DNODNS -DNODIRENT -DNOOPEN -DNOREGEX ...
-+#DEFS =             # any of -DNOPIPES -DNODNS -DNODIRENT -DNOOPEN -DNOREGEX ...
- #                    ... -DEBCDIC -DNOGMTIME -DNEED_STRCMP -DNEED_MEMMOVE ...
- #                    ... -DNEED_STRTOUL -DNEED_DIFFTIME -DNEED_FLOATINGPOINT_H
- #                    Solaris 2 (SunOS 5) might need DEFS = -DNEED_STRCMP
 @@ -24,15 +24,26 @@
  #              SVR4 requires LIBS = -lsocket -lnsl
  #              DYNIX/ptx requires LIBS = -L/usr/lib/bsd-socket -lsocket -lnsl
@@ -36,9 +30,9 @@ $NetBSD: patch-aa,v 1.8 2000/03/21 18:37:53 tron Exp $
 +
  PROGRAM = analog
  OBJS = alias.o analog.o cache.o dates.o globals.o hash.o init.o init2.o \
- 	input.o macinput.o macstuff.o output.o output2.o process.o settings.o \
- 	sort.o tree.o utils.o win32.o
- HEADERS = anlghead.h anlghea2.h anlghea3.h anlghea4.h macdir.h
+ 	input.o macinput.o macstuff.o output.o output2.o pcre.o process.o \
+ 	settings.o sort.o tree.o utils.o win32.o
+ HEADERS = anlghead.h anlghea2.h anlghea3.h anlghea4.h macdir.h pcre.h
 -CFLAGS = $(CEXTRAFLAGS) $(DEFS) -D$(OS)
 +CFLAGS += $(DEFS) -D$(OS)
  
