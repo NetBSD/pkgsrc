@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:17:49 tv Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/25 20:03:53 wiz Exp $
 #
 
 .include "../../net/bittorrent/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/BitTorrent/bittorrent-gui/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT+=	(wxGTK GUI)
 
@@ -19,5 +19,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/btdownloadgui.py ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-wxWindows/buildlink3.mk"
+.include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

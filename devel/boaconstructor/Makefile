@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:25 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/25 20:03:52 wiz Exp $
 #
 
 DISTNAME=		boa-constructor-0.2.3.src
 PKGNAME=		boaconstructor-0.2.3
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boa-constructor/}
 EXTRACT_SUFX=		.zip
@@ -31,5 +31,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/Boa ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-wxWindows/buildlink3.mk"
+.include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
