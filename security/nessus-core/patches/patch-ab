@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1 2001/01/28 18:52:33 frueauf Exp $
+
+Taken from nessus-core-patch.txt (MD5:ab07e0d01113661f4980b7e48c18072b)
+published for nessus-core 1.0.7 on the main nessus ftp site.
+
+Can be obsolteted for other releases.
+
+--- nessusd/nasl_plugins.c-orig	Sun Jan  7 01:50:37 2001
++++ nessusd/nasl_plugins.c	Sun Jan 28 14:40:32 2001
+@@ -165,8 +165,8 @@
+  /*
+   * If the plugin is a scanner : no timeout
+   */ 
+- if(category == ACT_SCANNER)timeout = -1;
+- else timeout = (int)arg_get_value(args, "TIMEOUT");
++  if(category == ACT_SCANNER)timeout = -1;
++  else timeout = preferences_plugins_timeout(preferences);
+  }
+ 
+  current_nasl_plugin = module = create_thread((void*)nasl_thread, d, (struct arglist*)-1); 
+--- nessusd/nes_plugins.c-orig	Sun Jan  7 01:50:36 2001
++++ nessusd/nes_plugins.c	Sun Jan 28 14:45:46 2001
+@@ -190,10 +190,11 @@
+  category = (int)arg_get_value(args, "CATEGORY");
+  if(!timeout)
+  {
+- if(category == ACT_SCANNER)timeout = -1;
+- else timeout = (int)arg_get_value(args, "TIMEOUT");
++  if(category == ACT_SCANNER)timeout = -1;
++  else timeout = preferences_plugins_timeout(preferences);
+  }
+- 
++ log_write("TIMEOUT : %d\n", timeout);
++
+  
+  current_nes_plugin = module = create_thread((void*)func, args, (struct arglist*)-1);
+  signal(SIGTERM, nes_plugin_sigterm);
+--- nessusd/preferences.c-orig	Sun Jan 21 15:24:49 2001
++++ nessusd/preferences.c	Sun Jan 28 14:47:13 2001
+@@ -334,7 +334,7 @@
+  struct arglist * preferences;
+  int id;
+ {
+- int ret = preferences_plugins_timeout(preferences); 
++ int ret = 0;
+  char * pref_name = emalloc(strlen("timeout.") + 40);
+  
+  sprintf(pref_name, "timeout.%d", id);

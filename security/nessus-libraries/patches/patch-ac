@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/07/30 11:14:32 frueauf Exp $
+$NetBSD: patch-ac,v 1.2 2001/01/28 18:52:34 frueauf Exp $
 
---- Makefile-orig	Thu Mar 23 20:59:20 2000
-+++ Makefile	Sat Jul 29 17:49:26 2000
-@@ -48,7 +48,8 @@
- ###	soft migration to no public includes.h file -- jordan
- #	rm -f ${includedir}/nessus/includes.h
- #       not soft enough :-( -- jochen
+--- Makefile.orig	Tue Dec 26 17:20:05 2000
++++ Makefile	Sun Jan 28 13:53:27 2001
+@@ -46,7 +46,8 @@
+ 	cd libhosts_gatherer && ${MAKE} install
+ 	cd libpcap-nessus && ${MAKE} install 
+ 
 -	$(INSTALL) -m 0444 include/includes.h ${includedir}/nessus
 +# Use the includes.h from nessus-core:
 +#	$(INSTALL) -m 0444 include/includes.h ${includedir}/nessus
