@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2000/06/21 00:46:09 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2000/07/22 08:12:40 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
-FT_VERS=		1.2
+FT_VERS=		1.3.1
 CATEGORIES=		graphics textproc
-MASTER_SITES=		ftp://ftp.freetype.org/pub/freetype/
+MASTER_SITES=		http://download.sourceforge.net/freetype/ \
+			ftp://freetype.sourceforge.net/pub/freetype/freetype1/ \
+			ftp://ftp.freetype.org/pub/freetype/
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.freetype.org/
