@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.641 2002/11/29 17:30:00 kim Exp $
+$NetBSD: CHANGES,v 1.642 2002/11/29 17:55:48 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3767,3 +3767,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xchat-gnome to 1.8.10nb2 [tron 2002-11-29]
 	Updated gtk2 to 2.0.9 [wiz 2002-11-29]
 	Updated normalize to 0.7.6 [kim 2002-11-29]
+	Added zope25-FileSystemSite-1.1 [drochner 2002-11-29]
+	Added zope25-colorz-1.0b2 [drochner 2002-11-29]
+	Updated zope25-Silva to 0.8.6.1 [drochner 2002-11-29]
