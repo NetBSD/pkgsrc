@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.17 2002/01/19 21:29:41 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.18 2002/02/27 04:41:22 yyamano Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -76,3 +76,8 @@ _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _PATCH_BACKUP_ARG=	-b -z	# switch to patch(1) for backup file
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_RPATH=		no	# don't add rpath to LDFLAGS
+
+.if !defined(DEBUG_FLAGS)
+_STRIPFLAG_CC?=		-Wl,-x	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
+.endif
