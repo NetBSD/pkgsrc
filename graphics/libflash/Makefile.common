@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+#
+
+DISTNAME=	flash-0.4.10
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.swift-tools.com/Flash/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	hubertf@netbsd.org
+HOMEPAGE=	http://www.swift-tools.com/Flash/
+
+USE_X11=	yes
+
+.include "../../mk/bsd.pkg.mk"
