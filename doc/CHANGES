@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6414 2004/07/01 16:36:17 seb Exp $
+$NetBSD: CHANGES,v 1.6415 2004/07/01 17:06:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3202,3 +3202,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.7 [recht 2004-07-01]
 	Updated db4 to 4.2.52nb4 [recht 2004-07-01]
 	Updated wmi to 8nb1 [seb 2004-07-01]
+	Updated liferea to 0.5.1 [minskim 2004-07-01]
