@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 1999/10/26 16:45:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 1999/11/01 04:05:44 hubertf Exp $
 #
 
 DISTNAME=		speak_freely-7.1
@@ -36,6 +36,7 @@ SOUNDDIR=		${PREFIX}/share/speakfreely
 MAKE_ENV+=		PERL="${PERL_PATH}" CCFLAGS="${CCFLAGS}" \
 			SOUNDDIR="${SOUNDDIR}" HAVE_GSM=yes
 MAKE_ENV+=		HAVE_MD5=yes
+MAKE_ENV+=		DOMAIN=
 
 post-extract:
 	${MV} ${WRKSRC}/sfspeaker.1 ${WRKSRC}/sfspeaker.1.in
