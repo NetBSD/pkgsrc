@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4463 2004/01/14 17:10:33 salo Exp $
+$NetBSD: CHANGES,v 1.4464 2004/01/14 21:43:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -224,3 +224,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed kmap [wiz 2004-01-14]
 	Removed kapm [wiz 2004-01-14]
 	Updated silc-client to 1.0.1 [salo 2004-01-14]
+	Updated amule to 1.2.4 [jmmv 2004-01-14]
