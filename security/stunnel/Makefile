@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/01/22 13:30:36 martin Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/22 16:31:49 tron Exp $
 #
 
 DISTNAME=		stunnel-3.11
@@ -13,8 +13,9 @@ DEPENDS+=		pth>=1.3.5:../../devel/pth
 
 USE_SSL=		# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
-CONFIGURE_ARGS+=	--with-cert-dir="${SSLCERTS}"
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
+			--with-cert-dir="${SSLCERTS}" \
+			--with-pem-dir="${SSLCERTS}"
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
