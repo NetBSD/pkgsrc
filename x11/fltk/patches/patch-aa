@@ -1,39 +1,26 @@
-$NetBSD: patch-aa,v 1.2 1999/10/31 03:00:36 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2000/08/04 03:38:15 jlam Exp $
 
---- fluid/Makefile.orig	Wed Aug 25 01:37:38 1999
-+++ fluid/Makefile	Sat Oct 30 00:59:51 1999
-@@ -49,17 +49,17 @@
+--- fluid/Makefile.orig	Mon Jun  5 17:20:41 2000
++++ fluid/Makefile	Thu Aug  3 23:13:08 2000
+@@ -51,7 +51,7 @@
  
- include ../makeinclude
- 
-+LIB_TO_LINK = ../src/$(LIBNAME)
-+
- .SUFFIXES : .cxx .c .o
- 
- .cxx.o :
- 	$(CXX) -I.. $(CXXFLAGS) -c $<
- .c.o :
- 	$(CC) -I.. $(CFLAGS) -c $<
--.cxx :
--	$(CXX) -I.. $(CXXFLAGS) -o $@ $< -L../lib -lfltk $(LDLIBS)
- 
--$(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
--	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) -L../lib -lfltk $(LDLIBS)
-+$(PROGRAM) : $(OBJECTS) $(LIB_TO_LINK)
-+	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS)
+ $(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
+ 	echo Linking $@...
+-	$(CXX) -L../lib $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) -lfltk $(LDLIBS)
++	$(CXX) -L../lib $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) $(FLTKLIB) $(LDLIBS)
  
  clean :
  	-@ rm -f *.o $(PROGRAM) $(CLEAN) core *~ makedepend
-@@ -71,10 +71,8 @@
+@@ -63,10 +63,8 @@
  
  install: $(PROGRAM)
- 	@echo "Installing FLUID..."
--	@strip $(PROGRAM)
--	@-mkdir -p $(bindir)
--	@cp $(PROGRAM) $(bindir)/$(PROGRAM)
--	@chmod 755 $(bindir)/$(PROGRAM)
+ 	echo "Installing FLUID..."
+-	strip $(PROGRAM)
+-	-mkdir -p $(bindir)
+-	cp $(PROGRAM) $(bindir)/$(PROGRAM)
+-	chmod 755 $(bindir)/$(PROGRAM)
 +	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROGRAM) $(bindir)
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $(PROGRAM) $(bindir)
  
  uninstall:
- 	-@ rm -f $(bindir)/$(PROGRAM)
+ 	-rm -f $(bindir)/$(PROGRAM)

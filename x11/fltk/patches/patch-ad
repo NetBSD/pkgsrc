@@ -1,76 +1,68 @@
-$NetBSD: patch-ad,v 1.2 1999/10/31 03:00:37 jlam Exp $
+$NetBSD: patch-ad,v 1.3 2000/08/04 03:38:15 jlam Exp $
 
---- test/Makefile.orig	Thu Mar 25 10:26:43 1999
-+++ test/Makefile	Sat Oct 30 00:58:02 1999
-@@ -48,12 +48,14 @@
- 
- include ../makeinclude
- 
--$(ALL):  ../lib/$(LIBNAME)
-+LIB_TO_LINK = ../src/$(LIBNAME)
-+
-+$(ALL):  $(LIB_TO_LINK)
- 
- .SUFFIXES: .cxx .c .o .fl .h
- 
- .cxx:
--	$(CXX) -I.. $(CXXFLAGS) $< -L../lib -lfltk $(LDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) $< $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
- 
- .cxx.o:
- 	$(CXX) -I.. $(CXXFLAGS) $< -c
-@@ -63,41 +65,40 @@
- 
+--- test/Makefile.orig	Mon Jun  5 17:21:15 2000
++++ test/Makefile	Thu Aug  3 23:13:08 2000
+@@ -56,7 +56,7 @@
  .fl:
+ 	echo Generating, compiling, and linking $@...
  	../fluid/fluid -c $<
--	$(CXX) -I.. $(CXXFLAGS) $@.cxx -L../lib -lfltk $(LDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) $@.cxx $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) $@.cxx -lfltk $(LDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) $@.cxx $(FLTKLIB) $(LDLIBS) -o $@
  
- # Other programs needing special "help"...
+ 
+ $(ALL):  ../lib/$(LIBNAME)
+@@ -65,43 +65,43 @@
  CubeView: CubeMain.o CubeView.o CubeViewUI.o
--	$(CXX) -I.. $(CXXFLAGS) CubeMain.o CubeView.o CubeViewUI.o \
--		-L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) CubeMain.o CubeView.o CubeViewUI.o $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+ 	$(CXX) -I.. -L../lib $(CXXFLAGS) CubeMain.o CubeView.o CubeViewUI.o \
+-		-lfltk $(GLDLIBS) -o $@
++		$(FLTKLIB) $(GLDLIBS) -o $@
  CubeMain.o: CubeViewUI.h CubeView.h
  CubeView.o: CubeView.h
  
  cube: cube.cxx
--	$(CXX) -I.. $(CXXFLAGS) cube.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) cube.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) cube.cxx -lfltk $(GLDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) cube.cxx $(FLTKLIB) $(GLDLIBS) -o $@
  fractals: fractals.cxx
--	$(CXX) -I.. $(CXXFLAGS) fractals.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) fractals.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) fractals.cxx -lfltk $(GLDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) fractals.cxx $(FLTKLIB) $(GLDLIBS) -o $@
  fullscreen: fullscreen.cxx
--	$(CXX) -I.. $(CXXFLAGS) fullscreen.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) fullscreen.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) fullscreen.cxx -lfltk $(GLDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) fullscreen.cxx $(FLTKLIB) $(GLDLIBS) -o $@
  glpuzzle: glpuzzle.cxx
--	$(CXX) -I.. $(CXXFLAGS) glpuzzle.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) glpuzzle.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) glpuzzle.cxx -lfltk $(GLDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) glpuzzle.cxx $(FLTKLIB) $(GLDLIBS) -o $@
  gl_overlay: gl_overlay.cxx
--	$(CXX) -I.. $(CXXFLAGS) gl_overlay.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) gl_overlay.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) gl_overlay.cxx -lfltk $(GLDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) gl_overlay.cxx $(FLTKLIB) $(GLDLIBS) -o $@
  shiny: shiny.cxx shiny_panel.cxx
--	$(CXX) -I.. $(CXXFLAGS) shiny.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) shiny.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) shiny.cxx -lfltk $(GLDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) shiny.cxx $(FLTKLIB) $(GLDLIBS) -o $@
  keyboard: keyboard.cxx keyboard_ui.cxx
--	$(CXX) -I.. $(CXXFLAGS) keyboard.cxx -L../lib -lfltk $(LDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) keyboard.cxx $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) keyboard.cxx -lfltk $(LDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) keyboard.cxx $(FLTKLIB) $(LDLIBS) -o $@
  mandelbrot: mandelbrot.cxx mandelbrot_ui.cxx
--	$(CXX) -I.. $(CXXFLAGS) mandelbrot.cxx -L../lib -lfltk $(LDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) mandelbrot.cxx $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) mandelbrot.cxx -lfltk $(LDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) mandelbrot.cxx $(FLTKLIB) $(LDLIBS) -o $@
  shape: shape.cxx
--	$(CXX) -I.. $(CXXFLAGS) shape.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) shape.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) shape.cxx -lfltk $(GLDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) shape.cxx $(FLTKLIB) $(GLDLIBS) -o $@
  
  # If you have libjpeg installed, you might want to try this test program:
  
  jpeg_image: jpeg_image.cxx
--	$(CXX) -I.. $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx -L../lib -lfltk $(LDLIBS) -ljpeg -lXext -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx $(LIB_TO_LINK) $(LDLIBS) -ljpeg -lXext -o $@
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx -lfltk $(LDLIBS) -ljpeg -lXext -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx $(FLTKLIB) $(LDLIBS) -ljpeg -lXext -o $@
  
  depend:
--	$(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
-+	$(LIBTOOL) --mode=link $(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
- 
- clean:
- 	-@ rm -f $(ALL) jpeg_image *.o core *~
+ 	$(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
