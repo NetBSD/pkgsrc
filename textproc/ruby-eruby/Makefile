@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:49 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/11 15:17:52 taca Exp $
 # FreeBSD: ports/textproc/eruby/Makefile,v 1.9 2000/12/12 14:04:26 knu Exp
 
-DISTNAME=	eruby-0.9.7
+DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.modruby.net/archive/
@@ -13,13 +13,20 @@ COMMENT=	Interprets Ruby code embedded in a text file
 DIST_SUBDIR=	ruby
 USE_RUBY_RD=	yes
 RUBY_REQD=	1.6
+ERUBY_MAJOR=	1
+ERUBY_MINOR=	0
+ERUBY_TEENY=	5
+ERUBY_VERSION=	${ERUBY_MAJOR}.${ERUBY_MINOR}.${ERUBY_TEENY}
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ./configure.rb
-CONFIGURE_ARGS=	--enable-shared --with-charset="${DEFAULT_CHARSET}"
+CONFIGURE_ARGS=	--enable-shared --with-charset="${ERUBY_DEFAULT_CHARSET}"
 INSTALL_TARGET=	site-install
+PLIST_SUBST+=	ERUBY_MAJOR=${ERUBY_MAJOR} ERUBY_MINOR=${ERUBY_MINOR}
 
-DEFAULT_CHARSET?= ISO-8859-1
+.include "../../mk/bsd.prefs.mk"
+
+ERUBY_DEFAULT_CHARSET?= ISO-8859-1
 
 MAN1=		eruby.1
 
