@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8706 2005/01/11 18:11:46 skrll Exp $
+$NetBSD: CHANGES,v 1.8707 2005/01/11 21:02:45 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ap-auth-radius-1.5.7 [manu 2005-01-11]
 	Added p5-Digest-CRC-0.09 [tv 2005-01-11]
 	Added iwi-firmware-2.2 [skrll 2005-01-11]
+	Updated tor to 0.0.9.2 [tv 2005-01-11]
