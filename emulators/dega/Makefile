@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 08:36:03 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/12 02:03:56 snj Exp $
 #
 
 DISTNAME=	dega-1.07
@@ -11,7 +11,7 @@ COMMENT=	Sega Game Gear, Sega Mark III and Sega Master System emulator
 
 BUILD_DEPENDS=	nasm>=0.98:../../devel/nasm
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 
@@ -21,5 +21,5 @@ ONLY_FOR_PLATFORM=	*-*-i386
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dega ${PREFIX}/bin
 
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
