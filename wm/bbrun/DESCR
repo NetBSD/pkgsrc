@@ -1,0 +1,3 @@
+BBrun is a run utility for BlackBox which can be run in the slit
+or in withdrawn mode so that it can be bound to a keystroke from bbkeys.
+It also features a history list of the most recent commands.
