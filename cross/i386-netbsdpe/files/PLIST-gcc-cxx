@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST-gcc-cxx,v 1.1 2001/01/30 03:08:57 minoura Exp $
+${TARGET_ARCH}/bin/c++
+${TARGET_ARCH}/bin/c++filt
+${TARGET_ARCH}/bin/g++
+bin/${TARGET_ARCH}-c++
+bin/${TARGET_ARCH}-c++filt
+bin/${TARGET_ARCH}-g++
+lib/gcc-lib/${TARGET_ARCH}/${GCC_INTVERSION}/cc1plus

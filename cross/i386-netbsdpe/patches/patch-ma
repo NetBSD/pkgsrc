@@ -1,0 +1,14 @@
+$NetBSD: patch-ma,v 1.1 2001/01/30 03:09:01 minoura Exp $
+
+--- gcc/Makefile.in.pre-patch	Tue Jan 16 21:47:24 2001
++++ gcc/Makefile.in
+@@ -276,7 +276,8 @@
+ # Directory in which to find other cross-compilation tools and headers.
+ dollar = @dollar@
+ # Used in install-cross.
+-gcc_tooldir = @gcc_tooldir@
++#gcc_tooldir = @gcc_tooldir@
++gcc_tooldir = $(prefix)/$(target_alias)
+ # Since tooldir does not exist at build-time, use -B$(build_tooldir)/bin/
+ build_tooldir = $(exec_prefix)/$(target_alias)
+ # Directory in which the compiler finds g++ includes.
