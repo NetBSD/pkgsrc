@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/04/29 18:59:25 minskim Exp $
+$NetBSD: distinfo,v 1.3.6.1 2005/01/17 20:39:18 snj Exp $
 
 SHA1 (nbitools-R6.3.tar.gz) = 0f6751417d7ef412be04611fbe4f56386a04322a
 Size (nbitools-R6.3.tar.gz) = 435764 bytes
@@ -8,5 +8,5 @@ SHA1 (patch-ac) = 4cb8804bae2d7e815b36640c55789b5ed7b7fb75
 SHA1 (patch-ad) = b0c18505891834182c57819489b7d9890802d550
 SHA1 (patch-ae) = 0a0acf8798055a7b1b292e8d2edf998857641550
 SHA1 (patch-af) = 9a7e4bd19863d086a1e57f1cd9484b05189cbda6
-SHA1 (patch-ag) = a7b49c572db220802bb084e586bc6fe0cae87982
+SHA1 (patch-ag) = cd7da1a5c47fc37ee8ade78903cc9195219a4c66
 SHA1 (patch-ah) = ba2e9d00279d44635b2043b642a0407b84329643
