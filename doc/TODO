@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2985 2005/02/02 17:20:26 wiz Exp $
+$NetBSD: TODO,v 1.2986 2005/02/03 14:55:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1197,7 +1197,7 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zircon-1.18.256
 	o zopeedit-0.8
-	o zsh-4.2.3
+	o zsh-4.2.4
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
