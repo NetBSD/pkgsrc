@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2800 2004/12/29 13:19:06 adrianp Exp $
+$NetBSD: TODO,v 1.2801 2004/12/29 13:22:53 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ Suggested package updates
 	o p5-Log-Dispatch-2.10
 	o p5-Log-Dispatch-Config-1.01
 	o p5-MARC-1.38
-	o p5-MIME-Types-1.13
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.02
 	o p5-Mac-Macbinary-0.06
