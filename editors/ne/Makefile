@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/11/12 16:26:32 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/22 13:34:51 agc Exp $
 
 DISTNAME=	ne
 PKGNAME=	ne-1.26
@@ -9,7 +9,7 @@ DISTFILES=	ne.tar.gz ne.manpage.1 NE.spec.ascii NE.changes.spec
 
 MAINTAINER=	bjh@mail.dotcom.fr
 
-DIST_SUBDIR=	ne
+DIST_SUBDIR=	${PKGNAME}
 
 EXTRACT_ONLY=	ne.tar.gz
 
