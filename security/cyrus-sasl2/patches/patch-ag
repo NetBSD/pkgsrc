@@ -1,16 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+$NetBSD: patch-ag,v 1.2 2002/11/13 10:39:13 chris Exp $
 
---- plugins/gssapi.c.orig	Sun Oct 27 14:18:03 2002
-+++ plugins/gssapi.c	Sun Oct 27 14:18:25 2002
-@@ -51,6 +51,11 @@
- #include <gssapi/gssapi.h>
- #endif
+--- saslauthd/Makefile.am.orig	Tue Sep 10 15:08:59 2002
++++ saslauthd/Makefile.am	Wed Nov 13 10:08:59 2002
+@@ -22,7 +22,7 @@
+ EXTRA_DIST	= saslauthd.8 saslauthd.mdoc config include \
+ 		  getnameinfo.c getaddrinfo.c saslauthd-unix.c \
+ 		  saslauthd-doors.c LDAP_SASLAUTHD
+-INCLUDES	= -I$(top_srcdir)/include
++INCLUDES	= -I$(top_srcdir)/include -I/usr/include/krb5
+ DEFS            = @DEFS@ -DSASLAUTHD_CONF_FILE_DEFAULT=\"@sysconfdir@/saslauthd.conf\" -I. -I$(srcdir) -I..
  
-+/* Heimdal has this, but MIT Kerberos doesn't */
-+#ifndef GSS_C_NO_NAME
-+#define GSS_C_NO_NAME  ((gss_name_t) 0)
-+#endif
-+
- #ifdef WIN32
- #  include <winsock.h>
  
