@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/06/02 01:20:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.47 2003/06/23 10:58:26 seb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -24,8 +24,8 @@ CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_GNU_GETTEXT=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		gettext.info
-TEXINFO_OVERRIDE=	YES
 
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
@@ -36,5 +36,4 @@ post-install:
 	cd ${WRKSRC}/intl; ${MAKE_PROGRAM} install-data
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
