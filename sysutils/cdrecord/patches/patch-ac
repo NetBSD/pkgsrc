@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.10 2000/03/15 00:09:07 hubertf Exp $
+
+--- include/btorder.h.orig	Wed Mar 15 00:22:54 2000
++++ include/btorder.h	Wed Mar 15 00:23:14 2000
+@@ -25,7 +25,7 @@
+ #define	_BTORDER_H
+ 
+ #include <sys/types.h>			/* try to load isa_defs.h on Solaris */
+-#include <sys/endian.h>
++#include <machine/endian.h>
+ 
+ #ifndef _MCONFIG_H
+ #include <mconfig.h>
