@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.12 2001/08/23 11:55:17 abs Exp $
+# $Id: pkgchk.sh,v 1.13 2001/09/13 17:44:27 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -219,7 +219,7 @@ if [ -n "$opt_c" ];then
     # Determine list of tags
     #
     TAGS="`hostname | sed -e 's,\..*,,'`,`uname -srm | ${AWK} '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}'`"
-    if [ -f /usr/X11R6/lib/libX11.so -o /usr/X11R6/lib/libX11.a ];then
+    if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
     if [ -n "$opt_D" ];then
