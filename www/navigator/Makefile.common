@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2001/07/23 18:56:07 tron Exp $
+# $NetBSD: Makefile.common,v 1.41 2001/07/23 19:01:49 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -24,10 +24,18 @@ MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${SUB}/ \
 #
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
 PLIST_ARCH=	solaris-sparc
+.if (${OS_VERSION} == 5.5.1) || (${OS_VERSION} == 5.6) || \
+    (${OS_VERSION} == 5.7)
 DISTUNAME=	sparc-sun-solaris2.5.1
 DIST_DIR_NAME=	unsupported/sunos551
 WRKNAME=	sparc-sun-solaris2.5.1
 VENDOR_NAME=	Solaris 2.5.1
+.else
+DISTUNAME=	sparc-sun-solaris2.8
+DIST_DIR_NAME=	supported/sunos58
+WRKNAME=	sparc-sun-solaris2.8
+VENDOR_NAME=	Solaris 2.8
+.endif
 .if !defined(NS_NO_FLASH)
 DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
 .endif
