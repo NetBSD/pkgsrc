@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/11/25 07:55:45 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/11/25 11:00:11 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -31,14 +31,32 @@ EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(MANZ)
+PLIST_SUBST+=	ELSUFX=.gz
+.else
+PLIST_SUBST+=	ELSUFX=
+.endif
+
 do-install:
 	@${MKDIR} ${PREFIX}/lib/xemacs/xemacs-packages
 .for DISTFILE in ${DISTFILES}
-	@${ECHO} -n "Extracting ${DISTFILE} ... "
+	@${ECHO_MSG} -n "Extracting ${DISTFILE} ... "
 	@${GTAR} xCzf ${PREFIX}/lib/xemacs/xemacs-packages \
 	  ${DISTDIR}/${DIST_SUBDIR}/${DISTFILE}
-	@${ECHO} "done"
+	@${ECHO_MSG} "done"
 .endfor
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/xemacs/xemacs-packages
+	@${ECHO_MSG} -n "Fixing file ownerships ... "
+	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/xemacs/xemacs-packages
+	@${ECHO_MSG} "done"
+.if defined(MANZ)
+	@${ECHO_MSG} -n "Compressing \".el\" files ... "
+	@cd ${PREFIX} && \
+	${GREP} '\$${ELSUFX}$$' ${PLIST_SRC} | \
+	${SED} -e 's#\$${ELSUFX}$$##' | \
+	xargs ${GZIP_CMD}
+	@${ECHO_MSG} "done"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
