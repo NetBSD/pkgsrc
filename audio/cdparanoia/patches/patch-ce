@@ -1,8 +1,12 @@
-$NetBSD: patch-ce,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+$NetBSD: patch-ce,v 1.2 2003/10/20 12:07:23 grant Exp $
 
---- interface/cooked_interface.c.orig	Wed Aug 18 15:54:32 1999
-+++ interface/cooked_interface.c	Mon Jan 17 23:43:14 2000
-@@ -13,6 +13,7 @@
+--- interface/cooked_interface.c.orig	2000-04-20 08:41:04.000000000 +1000
++++ interface/cooked_interface.c
+@@ -10,9 +10,11 @@
+ #include "common_interface.h"
+ #include "utils.h"
+ 
++#ifndef __FreeBSD__
  static int cooked_readtoc (cdrom_drive *d){
    int i;
    int tracks;
@@ -10,7 +14,7 @@ $NetBSD: patch-ce,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
    struct cdrom_tochdr hdr;
    struct cdrom_tocentry entry;
  
-@@ -52,6 +53,45 @@
+@@ -52,6 +54,45 @@ static int cooked_readtoc (cdrom_drive *
    d->disc_toc[i].dwStartSector = entry.cdte_addr.lba;
  
    tracks=hdr.cdth_trk1+1;
@@ -56,7 +60,7 @@ $NetBSD: patch-ce,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
    d->cd_extra=FixupTOC(d,tracks);
    return(--tracks);  /* without lead-out */
  }
-@@ -60,10 +100,15 @@
+@@ -60,10 +101,15 @@ static int cooked_readtoc (cdrom_drive *
  /* Set operating speed */
  static int cooked_setspeed(cdrom_drive *d, int speed)
  {
@@ -72,7 +76,7 @@ $NetBSD: patch-ce,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  }
  
  
-@@ -72,6 +117,7 @@
+@@ -72,6 +118,7 @@ static int cooked_setspeed(cdrom_drive *
   */
  
  static long cooked_read (cdrom_drive *d, void *p, long begin, long sectors){
@@ -80,7 +84,7 @@ $NetBSD: patch-ce,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
    int retry_count,err;
    struct cdrom_read_audio arg;
    char *buffer=(char *)p;
-@@ -127,6 +173,10 @@
+@@ -127,7 +174,133 @@ static long cooked_read (cdrom_drive *d,
    } while (err);
    
    return(sectors);
@@ -88,24 +92,159 @@ $NetBSD: patch-ce,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
 +#ifdef __NetBSD__
 +  errx(1, "cooked_read: not implemented");
 +#endif
++}
++#elif defined(__FreeBSD__)
++static int
++cooked_readtoc(cdrom_drive *d)
++{
++	int i;
++	struct ioc_toc_header hdr;
++	struct ioc_read_toc_single_entry entry;
++
++	if (ioctl(d->ioctl_fd, CDIOREADTOCHEADER, &hdr) == -1) {
++		int ret;
++
++		if (errno == EPERM) {
++			ret = -102;
++			cderror(d, "102: ");
++		} else {
++			ret = -4;
++			cderror(d, "004: Unable to read table of contents header: ");
++		}
++		cderror(d, strerror(errno));
++		cderror(d, "\n");
++		return ret;
++	}
++
++	entry.address_format = CD_LBA_FORMAT;
++	for (i = hdr.starting_track; i <= hdr.ending_track; ++i) {
++		entry.track = i;
++		
++		if (ioctl(d->ioctl_fd, CDIOREADTOCENTRY, &entry) == -1) {
++			cderror(d, "005: Unable to read table of contents entry\n");
++			return -5;
++		}
++
++		d->disc_toc[i - hdr.starting_track].bFlags = entry.entry.control;
++		d->disc_toc[i - hdr.starting_track].bTrack = entry.entry.track;
++		d->disc_toc[i - hdr.starting_track].dwStartSector = be32_to_cpu(entry.entry.addr.lba);
++	}
++	
++	entry.track = 0xaa;	/* leadout */
++
++	if (ioctl(d->ioctl_fd, CDIOREADTOCENTRY, &entry) == -1) {
++		cderror(d, "005: Unable to read table of contents entry\n");
++		return -5;
++	}
++
++	d->disc_toc[i - hdr.starting_track].bFlags = entry.entry.control;
++	d->disc_toc[i - hdr.starting_track].bTrack = entry.entry.track;
++	d->disc_toc[i - hdr.starting_track].dwStartSector = be32_to_cpu(entry.entry.addr.lba);
++	
++	d->cd_extra = FixupTOC(d, hdr.ending_track - hdr.starting_track + 2);	/* with TOC */
++
++	return hdr.ending_track - hdr.starting_track + 1;
++}
++
++static int
++cooked_setspeed(cdrom_drive *d, int speed)
++{
++#ifdef CDRIOCREADSPEED
++	speed *= 177;
++	return ioctl(d->ioctl_fd, CDRIOCREADSPEED, &speed);
++#else
++	return -1;
++#endif
++}
++
++
++static long
++cooked_read(cdrom_drive *d, void *p, long begin, long sectors)
++{
++	int retry_count = 0;
++	struct ioc_read_audio arg;
++
++	if (sectors > d->nsectors)
++		sectors = d->nsectors;
++
++	arg.address_format = CD_LBA_FORMAT;
++	arg.address.lba = begin;
++	arg.buffer = p;
++
++	for (;;) {
++		arg.nframes = sectors;
++		if (ioctl(d->ioctl_fd, CDIOCREADAUDIO, &arg) == -1) {
++			if (!d->error_retry)
++				return -7;
++
++			switch (errno) {
++			case ENOMEM:
++				if (sectors == 1) {
++					cderror(d, "300: Kernel memory error\n");
++					return -300;
++				}
++				/* FALLTHROUGH */
++			default:
++				if (sectors == 1) {
++					if (retry_count > MAX_RETRIES - 1) {
++						char b[256];
++						snprintf(b, sizeof(b),
++						    "010: Unable to access sector %ld; "
++						    "skipping...\n", begin);
++						cderror(d, b);
++						return -10;
++					}
++					break;
++				}
++			}
++
++			if (retry_count > 4 && sectors > 1)
++				sectors = sectors * 3 / 4;
++
++			++retry_count;
++
++			if (retry_count > MAX_RETRIES) {
++				cderror(d, "007: Unknown, unrecoverable error reading data\n");
++				return -7;
++			}
++		} else
++			break;
++	}
++
++	return sectors;
  }
++#endif
++
  
  /* hook */
-@@ -191,6 +241,7 @@
+ static int Dummy (cdrom_drive *d,int Switch){
+@@ -191,8 +364,11 @@ static void check_exceptions(cdrom_drive
  
  /* set function pointers to use the ioctl routines */
  int cooked_init_drive (cdrom_drive *d){
-+#ifdef __linux__
++#ifdef __NetBSD__
++  errx(1, "cooked_init_drive: not implemented");
++#else
    int ret;
- 
+-
++#ifdef __linux__
    switch(d->drive_type){
-@@ -255,5 +306,9 @@
+   case MATSUSHITA_CDROM_MAJOR:	/* sbpcd 1 */
+   case MATSUSHITA_CDROM2_MAJOR:	/* sbpcd 2 */
+@@ -243,6 +419,9 @@ int cooked_init_drive (cdrom_drive *d){
+   default:
+     d->nsectors=40; 
+   }
++#elif defined(__FreeBSD__)
++  d->nsectors = 26;	/* FreeBSD only supports 64K I/O transfer size */
++#endif
+   d->enable_cdda = Dummy;
+   d->read_audio = cooked_read;
+   d->set_speed = cooked_setspeed;
+@@ -255,5 +434,6 @@ int cooked_init_drive (cdrom_drive *d){
    if((ret=verify_read_command(d)))return(ret);
    d->error_retry=1;
    return(0);
-+#endif
-+#ifdef __NetBSD__
-+  errx(1, "cooked_init_drive: not implemented");
 +#endif
  }
  
