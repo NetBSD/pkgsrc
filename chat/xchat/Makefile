@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/25 18:32:14 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/05 15:30:22 dmcmahill Exp $
 
 DISTNAME=	xchat-1.6.2
 CATEGORIES=	chat x11 gnome
@@ -16,11 +16,6 @@ USE_PERL5=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include
-
-.include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} == NetBSD)
-CONFIGURE_ENV+=	LIBS=-lutil
-.endif
 
 pre-configure:
 	@${TOUCH} ${WRKSRC}/stamp-h.in
