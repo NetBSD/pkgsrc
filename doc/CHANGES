@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3200 2003/09/02 09:32:55 frueauf Exp $
+$NetBSD: CHANGES,v 1.3201 2003/09/02 09:43:07 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3470,3 +3470,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nessus-libraries to 2.0.7 [frueauf 2003-09-02]
 	Updated nessus-plugins to 2.0.7 [frueauf 2003-09-02]
 	Updated nessus to 2.0.7 [frueauf 2003-09-02]
+	Updated rcs to 5.7nb2 [martti 2003-09-02]
