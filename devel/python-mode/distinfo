@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/10/25 20:02:39 cjep Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 05:55:51 ben Exp $
 
-SHA1 (python-mode.el) = 28162888271fed42f89586c63d95f9d755a9249c
-Size (python-mode.el) = 123488 bytes
+SHA1 (python-mode-20041204/python-mode.el) = 4de9980a1486e12d2532e92b1d289547f85c8c1e
+Size (python-mode-20041204/python-mode.el) = 143778 bytes
