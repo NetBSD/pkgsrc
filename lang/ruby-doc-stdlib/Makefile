@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/23 15:43:43 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/29 13:31:40 minskim Exp $
 
 DISTNAME=	ruby-doc-stdlib-0.9.13
-CATEGORIES=	lang
+CATEGORIES=	lang ruby
 MASTER_SITES=	http://www.ruby-doc.org/downloads/stdlib/
 EXTRACT_SUFX=	.tgz
 
