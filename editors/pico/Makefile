@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2005/01/18 03:15:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.59 2005/01/25 10:07:56 adam Exp $
 
-DISTNAME=	pine4.61
-PKGNAME=	pico-4.8
-PKGREVISION=	1
+DISTNAME=	pine4.62
+PKGNAME=	pico-4.9
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -14,8 +13,8 @@ COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
 
 LICENSE=	pine-license
 
-USE_BUILDLINK3=	YES
-USE_LIBTOOL=	YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,7 +44,7 @@ do-build:
 		EXTRALDFLAGS="${LIBS}"
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} \
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/pico/libpico.la ${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/pico/pico ${WRKSRC}/pico/pilot ${PREFIX}/bin

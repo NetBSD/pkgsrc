@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.14 2004/05/13 18:29:54 adam Exp $
+$NetBSD: patch-al,v 1.15 2005/01/25 10:08:59 adam Exp $
 
---- build.orig	2004-05-07 19:32:32.000000000 +0000
+--- build.orig	2004-12-27 17:36:53.000000000 +0000
 +++ build
-@@ -380,71 +380,6 @@ case $maketarg in
+@@ -393,71 +393,6 @@ case $maketarg in
  	  echo "Including SSL functionality"
  	fi
  
@@ -74,7 +74,7 @@ $NetBSD: patch-al,v 1.14 2004/05/13 18:29:54 adam Exp $
          echo "Making Pine and rpload/rpdump".
  	if [ "$ALTDOCPATHS" = "1" ]
  	then
-@@ -487,8 +422,6 @@ case $maketarg in
+@@ -500,8 +435,6 @@ case $maketarg in
  	fi
          cd "$PHOME"
          echo ''
@@ -83,7 +83,7 @@ $NetBSD: patch-al,v 1.14 2004/05/13 18:29:54 adam Exp $
  	case $maketarg in
  	    mnt)    echo "Fixing stacksizes ..."
  		    fixstk 64K bin/pine bin/pico bin/imapd bin/mtest bin/pilot
-@@ -514,18 +447,11 @@ case $maketarg in
+@@ -527,18 +460,11 @@ case $maketarg in
  
  
      clean) # This only sort of works 
