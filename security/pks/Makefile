@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/28 02:47:49 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/29 15:31:24 minskim Exp $
 
 DISTNAME=		pks-0.9.4
 PKGREVISION=	2
@@ -20,7 +20,7 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/pks
-CONFIGURE_ARGS+=	--localstatedir=/var/pks
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/pks
 #
 # pksd doesn't actually look for its config file anywhere; it must be
 # specified directly on the command-line.  Setting sysconfdir here just

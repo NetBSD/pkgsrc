@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/12/04 22:40:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2004/12/29 15:31:24 minskim Exp $
 
 DISTNAME=		gnome-games-2.8.2
 CATEGORIES=		games gnome
@@ -27,7 +27,7 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # This package installs files in sysconfdir but does not read them directly,
 # so the following configuration argument is safe.
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
