@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/11/23 06:42:22 tv Exp $
+
+--- Makefile.in.orig	Tue Nov 23 01:39:56 2004
++++ Makefile.in
+@@ -9,6 +9,7 @@ INSTALL_MAN=$(prefix)/man
+ LIBS=@LIBS@
+ CC=@CC@
+ CFLAGS=@CFLAGS@
++LDFLAGS=@LDFLAGS@
+ 
+ INSTALLCMD=@INSTALL@
+ 
