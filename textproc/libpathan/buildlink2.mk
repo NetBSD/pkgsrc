@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/02/12 02:41:18 minskim Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/13 06:58:31 minskim Exp $
 #
 # This Makefile fragment is included by packages that use libpathan.
 #
@@ -8,7 +8,7 @@ LIBPATHAN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libpathan
 BUILDLINK_DEPENDS.libpathan?=		libpathan>=1.2.2
-BUILDLINK_PKGSRCDIR.libpathan?=		../../wip/libpathan
+BUILDLINK_PKGSRCDIR.libpathan?=		../../textproc/libpathan
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libpathan=libpathan
 BUILDLINK_PREFIX.libpathan_DEFAULT=	${LOCALBASE}
