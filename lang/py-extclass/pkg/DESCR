@@ -1,0 +1,17 @@
+ExtensionClasses is a lightweight mechanism has been developed for
+making Python extension types more class-like.  Classes can be developed
+in an extension language, such as C or C++, and these classes can be
+treated like other python classes.  They can be sub-classed in python,
+they provide access to method documentation strings, and they can be
+used to directly create new instances.
+
+Extension classes provide additional extensions to class and instance
+semantics, including A protocol for accessing subobjects "in the context
+of" their containers. This is used to implement custom method types and
+environmental acquisition*. A protocol for overriding method call
+semantics. This is used to implement "synchonized" classes and could be
+used to implement argument type checking. A protocol for class
+initialization that supports execution of a special __class_init__
+method after a class has been initialized.
+
+(* see http://www.digicool.com/releases/ExtensionClass/Acquisition.html)
