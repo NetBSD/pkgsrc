@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/12 04:19:51 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/22 09:52:36 jlam Exp $
 
 .if !defined(LIBGNOMEPRINT_BUILDLINK2_MK)
 LIBGNOMEPRINT_BUILDLINK2_MK=	# defined
@@ -9,13 +9,11 @@ BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libgnomeprint=libgnomeprint
 BUILDLINK_PREFIX.libgnomeprint_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.libgnomeprint=	bin/libgnomeprint-2.0-font-install
 BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.0/libgnomeprint/*
 BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.0/libgnomeprint/private/*
 BUILDLINK_FILES.libgnomeprint+=	lib/gnome-print-2.0/drivers/*
 BUILDLINK_FILES.libgnomeprint+=	lib/gnome-print-2.0/transports/*
 BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint-2.*
-BUILDLINK_FILES.libgnomeprint+=	lib/pkgconfig/libgnomeprint-2.0.pc
 
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"

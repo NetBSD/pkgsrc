@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/05 16:05:33 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/22 09:52:33 jlam Exp $
 
 .if !defined(GNOME_MIME_DATA_BUILDLINK2_MK)
 GNOME_MIME_DATA_BUILDLINK2_MK=	# defined
@@ -10,7 +10,6 @@ BUILDLINK_PKGSRCDIR.gnome-mime-data?=	../../databases/gnome-mime-data
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-mime-data=gnome-mime-data
 BUILDLINK_PREFIX.gnome-mime-data_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gnome-mime-data+=	lib/pkgconfig/gnome-mime-data-2.0.pc
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"

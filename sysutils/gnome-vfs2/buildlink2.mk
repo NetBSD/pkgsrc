@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/11 23:07:50 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 09:52:37 jlam Exp $
 
 .if !defined(GNOME_VFS2_BUILDLINK2_MK)
 GNOME_VFS2_BUILDLINK2_MK=	# defined
@@ -14,8 +14,6 @@ BUILDLINK_FILES.gnome-vfs2+=	include/gnome-vfs-module-2.0/libgnomevfs/*
 BUILDLINK_FILES.gnome-vfs2+=	lib/gnome-vfs-2.0/include/gnome-vfs-file-size.h
 BUILDLINK_FILES.gnome-vfs2+=	lib/gnome-vfs-2.0/modules/*
 BUILDLINK_FILES.gnome-vfs2+=	lib/libgnomevfs-2.*
-BUILDLINK_FILES.gnome-vfs2+=	lib/pkgconfig/gnome-vfs-2.0.pc
-BUILDLINK_FILES.gnome-vfs2+=	lib/pkgconfig/gnome-vfs-module-2.0.pc
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../audio/cdparanoia/buildlink2.mk"
