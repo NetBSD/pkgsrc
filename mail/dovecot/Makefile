@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2004/05/29 15:42:51 cube Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/21 08:30:24 xtraeme Exp $
 
-DISTNAME=		dovecot-0.99.10.5
-PKGREVISION=		1
+DISTNAME=		dovecot-0.99.10.6
 CATEGORIES=		mail
 MASTER_SITES=		http://dovecot.fi/
 
 PATCH_SITES=		http://www.roughtrade.net/dovecot/
-PATCHFILES=		dovecot-crammd5-0.99.10.5.diff
+PATCHFILES=		dovecot-crammd5-0.99.10.6.diff
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		tom@replic8.net
