@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: extract_instructions,v 1.2 2002/09/29 22:58:47 jschauma Exp $
+$NetBSD: extract_instructions,v 1.3 2002/09/29 23:17:17 grant Exp $
 
     Now running the Netscape 7 installation program.  Note that the
     installation requires the DISPLAY environment variable to be set.
@@ -15,14 +15,11 @@ $NetBSD: extract_instructions,v 1.2 2002/09/29 22:58:47 jschauma Exp $
 
        Then press 'Next'.
 
-    4) Set the proxy settings as appropriate for you and click 'Install'
+    4) Lean back and wait while the installer installs the necessary files. 
 
-    5) Lean back and wait while the installer downloads the necessary files. 
-       Depending on the speed of your connection, this may take a while.
+    5) Click 'Ok' on "Installation has completed."
 
-    6) Click 'Ok' on "Installation has completed."
-
-    7) Netscape7 will now start and try to convince you to register with
+    6) Netscape7 will now start and try to convince you to register with
        Netscape.  It's up to you to do so, but it's not required.  Exit
        Netscape to continue the package installation.
 
