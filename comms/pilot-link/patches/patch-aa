@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2002/10/27 17:56:24 bouyer Exp $
+
+--- configure.orig	Sun Oct 20 15:25:57 2002
++++ configure	Sun Oct 20 15:26:38 2002
+@@ -950,7 +950,7 @@
+ if eval "test \"`echo '$''{'ac_cv_path_LD'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+-  LD=${LD-$ac_prog}
++  LD=${ac_prog}
+ case "$LD" in
+   /*)
+   ac_cv_path_LD="$LD" # Let the user override the test with a path.
