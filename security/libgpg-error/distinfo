@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/05 23:24:31 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/12/14 14:57:40 wiz Exp $
 
 SHA1 (libgpg-error-0.6.tar.gz) = ad15b47b15621a1954d82fb90e427febee2d0d04
 Size (libgpg-error-0.6.tar.gz) = 294648 bytes
+SHA1 (patch-aa) = c4d49983c0fe9ba58571ff9d3d192e6aa1ea0305
