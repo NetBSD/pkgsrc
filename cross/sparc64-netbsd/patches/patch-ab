@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 1999/02/04 05:23:16 mrg Exp $
+
+--- ./gas/configure.in.orig	Fri May  1 11:45:07 1998
++++ ./gas/configure.in	Mon Dec 28 17:43:29 1998
+@@ -1610,7 +1613,15 @@
+       sparc-fujitsu-none)   fmt=aout ;;
+       sparc-*-elf | sparc-*-sysv4* | sparc-*-solaris*)
+ 			    fmt=elf ;;
+-      sparc-*-netbsd*)      fmt=aout em=nbsd bfd_gas=yes ;;
++      sparc-*-netbsd*)      em=nbsd bfd_gas=yes
++			    case ${cpu} in
++				sparc) case ${os} in
++				           *elf*) fmt=elf ;;
++				           *)     fmt=aout ;;
++				       esac ;;
++				sparc64) fmt=elf ;;
++			    esac
++			    ;;
+       sparc-*-openbsd*)     fmt=aout em=nbsd bfd_gas=yes ;;
+ 
+       tic30-*-*aout*)	    fmt=aout bfd_gas=yes ;;
