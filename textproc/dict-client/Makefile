@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2005/02/22 16:09:54 adam Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/18 22:10:11 jwise Exp $
 
 DISTNAME=       dictd-1.9.15
 PKGNAME=        dict-client-1.9.15
 CATEGORIES=	textproc
 MASTER_SITES=   ftp://ftp.dict.org/pub/dict/
 
-MAINTAINER=	mike@ethmoid.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol client
 
@@ -14,6 +14,7 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cflags="${CFLAGS}"
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-dictorg
 
 BUILD_TARGET=	dict
 INSTALL_TARGET=	install.dict
