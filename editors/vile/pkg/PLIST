@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/06/26 23:04:52 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/10/22 13:37:49 agc Exp $
 bin/vile
 man/man1/vile.1.gz
 libexec/vile-c-filt
@@ -40,5 +40,12 @@ share/vile/perl/shell.pl
 share/vile/perl/syntax.pl
 share/vile/perl/tailf.pl
 share/vile/perl/visit.pl
+share/examples/vile/spell.rc
+share/examples/vile/filters.rc
+share/examples/vile/digraphs.rc
+share/examples/vile/pictmode.rc
+share/examples/vile/manpage.rc
+share/examples/vile/visvile.rc
+@dirrm share/examples/vile
 @dirrm share/vile/perl
 @dirrm share/vile
