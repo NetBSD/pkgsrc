@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/24 18:25:40 jlam Exp $
-bin/gsx11
-man/man1/gsx11.1
+@comment $NetBSD: PLIST,v 1.2 2000/04/09 23:49:11 jlam Exp $
+bin/gs

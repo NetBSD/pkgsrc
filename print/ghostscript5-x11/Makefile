@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/24 18:43:44 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/09 23:49:11 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-x11-/}
 CATEGORIES+=	x11
@@ -13,7 +13,6 @@ SCRIPTS_ENV+=	USE_X11=yes
 post-extract:	common-post-extract
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/gs ${PREFIX}/bin/gsx11
-	${LN} -s gs.1 ${PREFIX}/man/man1/gsx11.1
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/gs ${PREFIX}/bin/gs
 
 .include "../../print/ghostscript5/Makefile.common"
