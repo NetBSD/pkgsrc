@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/06/01 11:23:46 rh Exp $
+# $NetBSD: Makefile,v 1.50 2000/06/21 05:31:43 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -16,10 +16,13 @@ HOMEPAGE=		http://www.lesstif.org/
 
 BUILD_DEPENDS+=		lynx:../../www/lynx
 
-USE_PKGLIBTOOL=		yes
-USE_X11BASE=		yes
+USE_X11BASE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig \
+			${WRKSRC}/Xlt/ltconfig \
+			${WRKSRC}/Xbae/ltconfig
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-build-12	# needed for www/Mosaic
 CONFIGURE_ARGS+=	--enable-build-20 --enable-default-20 \
 			--enable-production --disable-debug
