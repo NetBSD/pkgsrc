@@ -1,0 +1,11 @@
+--- Make-config.BAK	Sun Nov  2 04:30:16 1997
++++ Make-config	Sun Nov  2 04:30:34 1997
+@@ -590,7 +590,7 @@
+ 	"TK_LIB = libMesatk.so.$(VERSION)" \
+ 	"AUX_LIB = libMesaaux.so.$(VERSION)" \
+ 	"CC = gcc" \
+-	"CFLAGS = -O2 -m486 -fPIC -I/usr/X11R6/include -DHZ=100"  \
++	"CFLAGS = -O2 -fPIC -I/usr/X11R6/include -DHZ=100"  \
+ 	"MAKELIB = ../mklib.netbsd" \
+ 	"RANLIB = true" \
+ 	"XLIBS = -L/usr/X11R6/lib -lX11"
