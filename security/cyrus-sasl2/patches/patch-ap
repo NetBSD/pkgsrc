@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2004/07/05 16:49:18 recht Exp $
+
+--- plugins/gssapi.c.orig	2004-02-06 18:23:51.000000000 +0100
++++ plugins/gssapi.c	2004-07-05 18:41:39.000000000 +0200
+@@ -1419,7 +1419,7 @@
+ 
+ 	if(oparams->mech_ssf) {
+ 	    /* xxx probably too large */
+-	    oparams->maxoutbuf -= 50;
++	    oparams->maxoutbuf -= 256;
+ 	}
+ 	
+ 	gss_release_buffer(&min_stat, output_token);
