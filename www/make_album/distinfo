@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/26 08:01:12 lukem Exp $
+
+SHA1 (make_album_1_6.tar.gz) = 90eae5af7ee5fd3a5e2172e03e131893bb67256d
+Size (make_album_1_6.tar.gz) = 25983 bytes
+SHA1 (patch-aa) = 59e3f3b84be0715ae0250f60615db63686ebf675
