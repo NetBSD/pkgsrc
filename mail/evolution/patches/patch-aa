@@ -1,32 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2002/07/12 23:39:50 mycroft Exp $
+$NetBSD: patch-aa,v 1.12 2002/12/01 15:37:59 salo Exp $
 
 --- configure.orig	Thu Jun 20 19:55:20 2002
 +++ configure	Wed Jul 10 22:44:39 2002
-@@ -8406,13 +8406,13 @@
- if { (eval echo configure:8407: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-   rm -rf conftest*
-   CATOBJEXT=.gmo
--		   DATADIRNAME=share
-+		   DATADIRNAME=${LOCALEDIR}
- else
-   echo "configure: failed program was:" >&5
-   cat conftest.$ac_ext >&5
-   rm -rf conftest*
-   CATOBJEXT=.mo
--		   DATADIRNAME=lib
-+		   DATADIRNAME=${LOCALEDIR}
- fi
- rm -f conftest*
- 		INSTOBJEXT=.mo
-@@ -8641,7 +8641,7 @@
-       # We need to process the po/ directory.
-       POSUB=po
-     else
--      DATADIRNAME=share
-+      DATADIRNAME=${LOCALEDIR}
-       nls_cv_header_intl=intl/libintl.h
-       nls_cv_header_libgt=intl/libgettext.h
-     fi
 @@ -9237,8 +9237,8 @@
  # This can only change between Evolution versions (and then can only
  # go up.)

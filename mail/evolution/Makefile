@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/10/19 10:54:54 rh Exp $
+# $NetBSD: Makefile,v 1.28 2002/12/01 15:37:58 salo Exp $
 
 DISTNAME=		evolution-1.0.8
 PKGREVISION=		4
@@ -24,6 +24,7 @@ USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/libical/libtool
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 YACC=			${PREFIX}/bin/bison -y
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -56,7 +57,7 @@ pre-configure:
 
 DISPLAY?=	# empty if unset
 checkforx:
-.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO!} == "NO"
+.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO{ NO!} == "NO"
 .if exists(${X11BASE}/bin/Xvfb)
 	-${SETENV} XAUTHORITY= ${X11BASE}/bin/Xvfb :2 &
 DISPLAY=	':2'

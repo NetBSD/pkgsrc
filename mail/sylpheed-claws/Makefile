@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/27 10:29:43 grant Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/01 15:38:01 salo Exp $
 
 DISTNAME=	sylpheed-0.8.5claws
 PKGNAME=	sylpheed-claws-0.8.5
@@ -10,11 +10,12 @@ MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://sylpheed-claws.sourceforge.net/
 COMMENT=	X based e-mail and netnews client
 
-CONFLICTS=	sylpheed-[0-9]*
-
 BUILD_USES_MSGFMT=	yes
 
+CONFLICTS=	sylpheed-[0-9]*
+
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
 
