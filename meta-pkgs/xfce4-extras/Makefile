@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/23 21:50:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/26 16:34:24 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -24,6 +24,7 @@ do-install:	# empty
 .include "../../sysutils/xfce4-showdesktop-plugin/buildlink2.mk"
 .include "../../sysutils/xfce4-systemload-plugin/buildlink2.mk"
 .include "../../x11/xfce4-clipman-plugin/buildlink2.mk"
+.include "../../x11/xfce4-menueditor/buildlink2.mk"
 .include "../../x11/xfce4-notes-plugin/buildlink2.mk"
 
 .include "../../meta-pkgs/xfce4/buildlink2.mk"
