@@ -1,8 +1,7 @@
-# $NetBSD: xfree.buildlink2.mk,v 1.3 2002/08/26 06:28:21 jlam Exp $
+# $NetBSD: xfree.buildlink2.mk,v 1.4 2002/09/27 09:23:00 jlam Exp $
 
-.if defined(_FOR_X11_LINKS_ONLY)
-.if !defined(X11_LINKS_BUILDLINK_MK)
-X11_LINKS_BUILDLINK_MK=	# defined
+.if !defined(XFREE_BUILDLINK2_MK)
+XFREE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=	XFree
 BUILDLINK_PREFIX.XFree=	${X11BASE}
@@ -545,5 +544,4 @@ _REQUIRE_BUILTIN_XPM=		YES
 
 XFree-buildlink: _BUILDLINK_USE
 
-.endif	# X11_LINKS_BUILDLINK_MK
-.endif	# _FOR_X11_LINKS_ONLY
+.endif	# XFREE_BUILDLINK2_MK

@@ -1,8 +1,7 @@
-# $NetBSD: openwin.buildlink2.mk,v 1.3 2002/08/26 06:28:21 jlam Exp $
+# $NetBSD: openwin.buildlink2.mk,v 1.4 2002/09/27 09:23:00 jlam Exp $
 
-.if defined(_FOR_X11_LINKS_ONLY)
-.if !defined(X11_LINKS_BUILDLINK_MK)
-X11_LINKS_BUILDLINK_MK=	# defined
+.if !defined(OPENWIN_BUILDLINK2_MK)
+OPENWIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		openwin
 BUILDLINK_PREFIX.openwin=	${X11BASE}
@@ -1011,5 +1010,4 @@ BUILDLINK_TARGETS+=		openwin-buildlink
 
 openwin-buildlink: _BUILDLINK_USE
 
-.endif	# X11_LINKS_BUILDLINK_MK
-.endif	# _FOR_X11_LINKS_ONLY
+.endif	# OPENWIN_BUILDLINK2_MK
