@@ -1,0 +1,308 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:42:33 skrll Exp $
+bin/ark
+bin/efax
+bin/efix
+bin/fax
+bin/kcalc
+bin/kcharselect
+bin/kdepasswd
+bin/kdessh
+bin/kdf
+bin/kedit
+bin/kfloppy
+bin/khexedit
+bin/kjots
+bin/klaptopdaemon
+bin/kljettool
+bin/klpq
+bin/klprfax
+bin/klprfax_filter
+bin/klprfax_lpd
+bin/ktimer
+bin/kwikdisk
+include/kmultiformlistbox.h
+include/kmultiformlistboxentry.h
+include/kmultiformlistboxfactory.h
+include/kwidgetstreamer.h
+lib/kcalc.a
+lib/kcalc.la
+lib/kcalc.so
+lib/kde3/kcharselectapplet.a
+lib/kde3/kcharselectapplet.la
+lib/kde3/kcharselectapplet.so
+lib/kde3/kcharselectapplet.so.1
+lib/kde3/kcharselectapplet.so.1.0
+lib/kde3/kcm_kdf.a
+lib/kde3/kcm_kdf.la
+lib/kde3/kcm_kdf.so
+lib/kde3/kcm_laptop.a
+lib/kde3/kcm_laptop.la
+lib/kde3/kcm_laptop.so
+lib/kde3/libkregexpeditorgui.a
+lib/kde3/libkregexpeditorgui.la
+lib/kde3/libkregexpeditorgui.so
+lib/kedit.a
+lib/kedit.la
+lib/kedit.so
+lib/klaptopdaemon.a
+lib/klaptopdaemon.la
+lib/klaptopdaemon.so
+lib/libark.a
+lib/libark.la
+lib/libark.so
+lib/libark.so.1
+lib/libark.so.1.0
+lib/libkcalc_main.a
+lib/libkcalc_main.la
+lib/libkcalc_main.so
+lib/libkcalc_main.so.0
+lib/libkcalc_main.so.0.0
+lib/libkedit_main.a
+lib/libkedit_main.la
+lib/libkedit_main.so
+lib/libklaptopdaemon_main.a
+lib/libklaptopdaemon_main.la
+lib/libklaptopdaemon_main.so
+lib/libklaptopdaemon_main.so.0
+lib/libklaptopdaemon_main.so.0.0
+man/man1/efax.1
+man/man1/efix.1
+man/man1/fax.1
+share/doc/kde/HTML/en/KRegExpEditor/altn.png
+share/doc/kde/HTML/en/KRegExpEditor/altntool.png
+share/doc/kde/HTML/en/KRegExpEditor/anychar.png
+share/doc/kde/HTML/en/KRegExpEditor/anychartool.png
+share/doc/kde/HTML/en/KRegExpEditor/begline.png
+share/doc/kde/HTML/en/KRegExpEditor/boundarytools.png
+share/doc/kde/HTML/en/KRegExpEditor/characters.png
+share/doc/kde/HTML/en/KRegExpEditor/charactertool.png
+share/doc/kde/HTML/en/KRegExpEditor/common
+share/doc/kde/HTML/en/KRegExpEditor/compound.png
+share/doc/kde/HTML/en/KRegExpEditor/compoundtool.png
+share/doc/kde/HTML/en/KRegExpEditor/endline.png
+share/doc/kde/HTML/en/KRegExpEditor/index.cache.bz2
+share/doc/kde/HTML/en/KRegExpEditor/index.docbook
+share/doc/kde/HTML/en/KRegExpEditor/linestartendtool.png
+share/doc/kde/HTML/en/KRegExpEditor/lookaheadtools.png
+share/doc/kde/HTML/en/KRegExpEditor/neglookahead.png
+share/doc/kde/HTML/en/KRegExpEditor/nonwordboundary.png
+share/doc/kde/HTML/en/KRegExpEditor/poslookahead.png
+share/doc/kde/HTML/en/KRegExpEditor/repeat.png
+share/doc/kde/HTML/en/KRegExpEditor/repeattool.png
+share/doc/kde/HTML/en/KRegExpEditor/select.png
+share/doc/kde/HTML/en/KRegExpEditor/text.png
+share/doc/kde/HTML/en/KRegExpEditor/texttool.png
+share/doc/kde/HTML/en/KRegExpEditor/theEditor.png
+share/doc/kde/HTML/en/KRegExpEditor/wordboundary.png
+share/doc/kde/HTML/en/ark/common
+share/doc/kde/HTML/en/ark/index.cache.bz2
+share/doc/kde/HTML/en/ark/index.docbook
+share/doc/kde/HTML/en/kab/common
+share/doc/kde/HTML/en/kab/index.cache.bz2
+share/doc/kde/HTML/en/kab/index.docbook
+share/doc/kde/HTML/en/kab/kab-edit.png
+share/doc/kde/HTML/en/kab/kab-using.png
+share/doc/kde/HTML/en/kcalc/common
+share/doc/kde/HTML/en/kcalc/index.cache.bz2
+share/doc/kde/HTML/en/kcalc/index.docbook
+share/doc/kde/HTML/en/kcalc/kcalc_on_Aix.txt
+share/doc/kde/HTML/en/kcalc/kcalc_on_OSF.txt
+share/doc/kde/HTML/en/kdf/common
+share/doc/kde/HTML/en/kdf/index.cache.bz2
+share/doc/kde/HTML/en/kdf/index.docbook
+share/doc/kde/HTML/en/kdf/kdf.png
+share/doc/kde/HTML/en/kdf/kdf_config.png
+share/doc/kde/HTML/en/kedit/common
+share/doc/kde/HTML/en/kedit/index.cache.bz2
+share/doc/kde/HTML/en/kedit/index.docbook
+share/doc/kde/HTML/en/kfloppy/common
+share/doc/kde/HTML/en/kfloppy/index.cache.bz2
+share/doc/kde/HTML/en/kfloppy/index.docbook
+share/doc/kde/HTML/en/khexedit/common
+share/doc/kde/HTML/en/khexedit/index.cache.bz2
+share/doc/kde/HTML/en/khexedit/index.docbook
+share/doc/kde/HTML/en/khexedit/khexedit1.png
+share/doc/kde/HTML/en/kjots/common
+share/doc/kde/HTML/en/kjots/index.cache.bz2
+share/doc/kde/HTML/en/kjots/index.docbook
+share/doc/kde/HTML/en/kljettool/README
+share/doc/kde/HTML/en/kljettool/common
+share/doc/kde/HTML/en/kljettool/djcdoscommands.txt
+share/doc/kde/HTML/en/kljettool/filter
+share/doc/kde/HTML/en/kljettool/hp690c.zip
+share/doc/kde/HTML/en/kljettool/index.cache.bz2
+share/doc/kde/HTML/en/kljettool/index.docbook
+share/doc/kde/HTML/en/kljettool/magic
+share/doc/kde/HTML/en/kljettool/screenshot.png
+share/doc/kde/HTML/en/klpq/common
+share/doc/kde/HTML/en/klpq/index.cache.bz2
+share/doc/kde/HTML/en/klpq/index.docbook
+share/doc/kde/HTML/en/klprfax/common
+share/doc/kde/HTML/en/klprfax/index.cache.bz2
+share/doc/kde/HTML/en/klprfax/index.docbook
+share/kde/applnk/Editors/KEdit.desktop
+share/kde/applnk/Settings/Information/kcmdf.desktop
+share/kde/applnk/Settings/Information/pcmcia.desktop
+share/kde/applnk/Settings/PowerControl/battery.desktop
+share/kde/applnk/Settings/PowerControl/bwarning.desktop
+share/kde/applnk/Settings/PowerControl/cwarning.desktop
+share/kde/applnk/Settings/PowerControl/power.desktop
+share/kde/applnk/System/kdf.desktop
+share/kde/applnk/System/kwikdisk.desktop
+share/kde/applnk/Utilities/KCharSelect.desktop
+share/kde/applnk/Utilities/KFloppy.desktop
+share/kde/applnk/Utilities/KLJetTool.desktop
+share/kde/applnk/Utilities/KLpq.desktop
+share/kde/applnk/Utilities/Kjots.desktop
+share/kde/applnk/Utilities/ark.desktop
+share/kde/applnk/Utilities/kcalc.desktop
+share/kde/applnk/Utilities/kdepasswd.desktop
+share/kde/applnk/Utilities/khexedit.desktop
+share/kde/applnk/Utilities/klprfax.desktop
+share/kde/applnk/Utilities/ktimer.desktop
+share/kde/apps/ark/ark_part.rc
+share/kde/apps/ark/arkui.rc
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_adddir.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_addfile.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_delete.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_extract.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_help.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_new.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_open.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_options.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_selectall.png
+share/kde/apps/ark/icons/hicolor/22x22/actions/ark_view.png
+share/kde/apps/kdf/pics/delete.png
+share/kde/apps/kdf/pics/tick.png
+share/kde/apps/kedit/keditui.rc
+share/kde/apps/khexedit/toolbar/hexdrag.png
+share/kde/apps/khexedit/toolbar/hexmask.png
+share/kde/apps/khexedit/toolbar/hexwrite.png
+share/kde/apps/kicker/applets/kcharselectapplet.desktop
+share/kde/apps/kjots/pics/filedel.png
+share/kde/apps/klaptopdaemon/icons/hicolor/16x16/actions/laptop_charge.png
+share/kde/apps/klaptopdaemon/icons/hicolor/16x16/actions/laptop_nobattery.png
+share/kde/apps/klaptopdaemon/icons/hicolor/16x16/actions/laptop_nocharge.png
+share/kde/apps/klaptopdaemon/icons/hicolor/16x16/actions/power.png
+share/kde/apps/klaptopdaemon/icons/hicolor/32x32/actions/power.png
+share/kde/apps/kljettool/pics/kljetlogo.png
+share/kde/apps/konqueror/servicemenus/arkservicemenu.desktop
+share/kde/apps/kregexpeditor/pics/altn.png
+share/kde/apps/kregexpeditor/pics/anychar.png
+share/kde/apps/kregexpeditor/pics/begline.png
+share/kde/apps/kregexpeditor/pics/characters.png
+share/kde/apps/kregexpeditor/pics/compound.png
+share/kde/apps/kregexpeditor/pics/endline.png
+share/kde/apps/kregexpeditor/pics/error.png
+share/kde/apps/kregexpeditor/pics/neglookahead.png
+share/kde/apps/kregexpeditor/pics/nonwordboundary.png
+share/kde/apps/kregexpeditor/pics/poslookahead.png
+share/kde/apps/kregexpeditor/pics/repeat.png
+share/kde/apps/kregexpeditor/pics/select.png
+share/kde/apps/kregexpeditor/pics/text.png
+share/kde/apps/kregexpeditor/pics/wordboundary.png
+share/kde/apps/kregexpeditor/predefined/general/anything.regexp
+share/kde/apps/kregexpeditor/predefined/general/spaces.regexp
+share/kde/icons/hicolor/16x16/apps/ark.png
+share/kde/icons/hicolor/16x16/apps/kcalc.png
+share/kde/icons/hicolor/16x16/apps/kcharselect.png
+share/kde/icons/hicolor/16x16/apps/kcmdf.png
+share/kde/icons/hicolor/16x16/apps/kdf.png
+share/kde/icons/hicolor/16x16/apps/kedit.png
+share/kde/icons/hicolor/16x16/apps/kfloppy.png
+share/kde/icons/hicolor/16x16/apps/khexedit.png
+share/kde/icons/hicolor/16x16/apps/kjots.png
+share/kde/icons/hicolor/16x16/apps/klaptopdaemon.png
+share/kde/icons/hicolor/16x16/apps/kljettool.png
+share/kde/icons/hicolor/16x16/apps/klpq.png
+share/kde/icons/hicolor/16x16/apps/klprfax.png
+share/kde/icons/hicolor/16x16/apps/kwikdisk.png
+share/kde/icons/hicolor/16x16/apps/laptop_battery.png
+share/kde/icons/hicolor/16x16/apps/laptop_pcmcia.png
+share/kde/icons/hicolor/32x32/apps/ark.png
+share/kde/icons/hicolor/32x32/apps/kcalc.png
+share/kde/icons/hicolor/32x32/apps/kcmdf.png
+share/kde/icons/hicolor/32x32/apps/kdf.png
+share/kde/icons/hicolor/32x32/apps/kedit.png
+share/kde/icons/hicolor/32x32/apps/kfloppy.png
+share/kde/icons/hicolor/32x32/apps/khexedit.png
+share/kde/icons/hicolor/32x32/apps/kjots.png
+share/kde/icons/hicolor/32x32/apps/kljettool.png
+share/kde/icons/hicolor/32x32/apps/klpq.png
+share/kde/icons/hicolor/32x32/apps/klprfax.png
+share/kde/icons/hicolor/32x32/apps/kwikdisk.png
+share/kde/icons/hicolor/32x32/apps/laptop_battery.png
+share/kde/icons/hicolor/32x32/apps/laptop_pcmcia.png
+share/kde/icons/hicolor/48x48/apps/ark.png
+share/kde/icons/hicolor/48x48/apps/kcalc.png
+share/kde/icons/hicolor/48x48/apps/kcharselect.png
+share/kde/icons/hicolor/48x48/apps/kedit.png
+share/kde/icons/hicolor/48x48/apps/kfloppy.png
+share/kde/icons/hicolor/48x48/apps/khexedit.png
+share/kde/icons/hicolor/48x48/apps/kjots.png
+share/kde/icons/hicolor/48x48/apps/kljettool.png
+share/kde/icons/hicolor/48x48/apps/klpq.png
+share/kde/icons/hicolor/48x48/apps/laptop_battery.png
+share/kde/icons/hicolor/48x48/apps/laptop_pcmcia.png
+share/kde/icons/locolor/16x16/apps/klprfax.png
+share/kde/icons/locolor/32x32/apps/klprfax.png
+share/kde/services/arkpart.desktop
+share/kde/services/klaptopdaemon.desktop
+share/kde/services/kregexpeditorgui.desktop
+@comment dirrm share/kde/services
+@comment dirrm share/kde/icons/locolor/32x32/apps
+@comment dirrm share/kde/icons/locolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/kregexpeditor/predefined/general
+@dirrm share/kde/apps/kregexpeditor/predefined
+@dirrm share/kde/apps/kregexpeditor/pics
+@dirrm share/kde/apps/kregexpeditor
+@dirrm share/kde/apps/konqueror/servicemenus
+@comment dirrm share/kde/apps/konqueror
+@dirrm share/kde/apps/kljettool/pics
+@dirrm share/kde/apps/kljettool
+@dirrm share/kde/apps/klaptopdaemon/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/klaptopdaemon/icons/hicolor/32x32
+@dirrm share/kde/apps/klaptopdaemon/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/klaptopdaemon/icons/hicolor/16x16
+@dirrm share/kde/apps/klaptopdaemon/icons/hicolor
+@dirrm share/kde/apps/klaptopdaemon/icons
+@dirrm share/kde/apps/klaptopdaemon
+@dirrm share/kde/apps/kjots/pics
+@dirrm share/kde/apps/kjots
+@comment dirrm share/kde/apps/kicker/applets
+@dirrm share/kde/apps/khexedit/toolbar
+@dirrm share/kde/apps/khexedit
+@dirrm share/kde/apps/kedit
+@dirrm share/kde/apps/kdf/pics
+@dirrm share/kde/apps/kdf
+@exec ${MKDIR} %D/share/kde/apps/kcalc/pics
+@dirrm share/kde/apps/kcalc/pics
+@dirrm share/kde/apps/kcalc
+@dirrm share/kde/apps/ark/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/ark/icons/hicolor/22x22
+@dirrm share/kde/apps/ark/icons/hicolor
+@dirrm share/kde/apps/ark/icons
+@dirrm share/kde/apps/ark
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Utilities
+@comment dirrm share/kde/applnk/System
+@comment dirrm share/kde/applnk/Settings/PowerControl
+@comment dirrm share/kde/applnk/Settings/Information
+@comment dirrm share/kde/applnk/Editors
+@dirrm share/doc/kde/HTML/en/klprfax
+@dirrm share/doc/kde/HTML/en/klpq
+@dirrm share/doc/kde/HTML/en/kljettool
+@dirrm share/doc/kde/HTML/en/kjots
+@dirrm share/doc/kde/HTML/en/khexedit
+@dirrm share/doc/kde/HTML/en/kfloppy
+@dirrm share/doc/kde/HTML/en/kedit
+@dirrm share/doc/kde/HTML/en/kdf
+@dirrm share/doc/kde/HTML/en/kcalc
+@dirrm share/doc/kde/HTML/en/kab
+@dirrm share/doc/kde/HTML/en/ark
+@dirrm share/doc/kde/HTML/en/KRegExpEditor
+@comment dirrm share/doc/kde/HTML/en
+@comment dirrm lib/kde3

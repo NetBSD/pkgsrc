@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:42:33 skrll Exp $
+
+--- kcalc/Makefile.am.orig	Wed May  8 19:31:32 2002
++++ kcalc/Makefile.am
+@@ -1,20 +1,22 @@
+ 
+ bin_PROGRAMS = kcalc
+-lib_LTLIBRARIES = kcalc.la
++lib_LTLIBRARIES = libkcalc_main.la kcalc.la
+ 
+-kcalc_la_SOURCES = kcalc.cpp kcalc_core.cpp dlabel.cpp stats.cpp \
++libkcalc_main_la_SOURCES = kcalc.cpp kcalc_core.cpp dlabel.cpp stats.cpp \
+ 	           optiondialog.cpp
++libkcalc_main_la_LIBADD = $(LIB_KDEUI) -lm
++
++kcalc_la_SOURCES = kcalc_main.cpp
++kcalc_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+ METASOURCES = AUTO
+ 
+ noinst_HEADERS  = kcalc.h dlabel.h stats.h kcalctype.h
+ 
+ INCLUDES= $(all_includes)
+-kcalc_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-kcalc_la_LIBADD = $(LIB_KDEUI) -lm
+ 
+-kcalc_SOURCES = dummy.cpp
+-kcalc_LDADD = kcalc.la
++kcalc_SOURCES = kcalc_main.cpp
++kcalc_LDADD = libkcalc_main.la
+ kcalc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ pics_DATA = 
+@@ -29,6 +31,3 @@
+ 
+ messages:
+ 	$(XGETTEXT) *.cpp -o $(podir)/kcalc.pot
+-
+-dummy.cpp:
+-	echo > dummy.cpp
