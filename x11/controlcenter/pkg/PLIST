@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/20 12:10:24 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/11/08 21:50:40 tron Exp $
 bin/gnomecc
 bin/mouse-properties-capplet
 bin/screensaver-properties-capplet
@@ -184,6 +184,7 @@ share/control-center/.data/pedal.png
 share/control-center/.data/Pipes.desktop
 share/control-center/.data/Rubik.desktop
 share/control-center/.data/sierpinski.png
+share/control-center/.data/spiral.png
 share/control-center/.data/Sproingies.desktop
 share/control-center/.data/Stairs.desktop
 share/control-center/.data/Superquadrics.desktop
@@ -205,6 +206,3 @@ share/control-center/mime-type.desktop
 @dirrm share/control-center/Peripherals
 @dirrm share/control-center/.data
 @dirrm share/control-center
-@unexec rmdir %D/share/gnome/apps/Settings 2>/dev/null || true
-@unexec rmdir %D/etc/CORBA/servers 2>/dev/null || true
-@unexec rmdir %D/etc/CORBA 2>/dev/null || true
