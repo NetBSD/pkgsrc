@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/10/30 20:32:04 martin Exp $
+# $NetBSD: Makefile,v 1.48 2000/10/31 09:59:21 jlam Exp $
 
 DISTNAME=	mozilla-source-M18
 PKGNAME=	mozilla-0.m18nb1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	zip:../../archivers/zip
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
