@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2002/11/08 10:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2003/01/23 18:21:06 fredb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -14,6 +14,7 @@ SUBDIR+=	apsfilter
 SUBDIR+=	auctex
 SUBDIR+=	bg5pdf
 SUBDIR+=	bg5ps
+SUBDIR+=	bww2tex
 SUBDIR+=	cjk-lyx
 SUBDIR+=	cnprint
 SUBDIR+=	cups
@@ -79,9 +80,11 @@ SUBDIR+=	teTeX
 SUBDIR+=	teTeX-bin
 SUBDIR+=	teTeX-share
 SUBDIR+=	teTeX-sharesrc
+SUBDIR+=	tex-bagpipewriter
 SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-jadetex
+SUBDIR+=	tex-musixtex
 SUBDIR+=	texfamily
 SUBDIR+=	texfamily-share
 SUBDIR+=	transfig
