@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/02 09:03:57 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/02 09:04:54 tron Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -23,7 +23,7 @@ SUB=		english/unix/unsupported/${UNAME_SHORT}/complete_install
 MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/4.5/${SUB}/ \
 		ftp://sunsite.utk.edu/pub/netscape/communicator/4.5/${SUB}/ \
 		ftp://ftp-uk.netscape.com/pub/communicator/4.5/${SUB}/ \
-		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/4.5/
+		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/4.5/${SUB}/
 ONLY_FOR_ARCHS=	i386 sparc
 
 MAINTAINER=	abs@netbsd.org
