@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 21:53:53 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/27 23:45:48 jmmv Exp $
 bin/xpuyopuyo
 man/man6/xpuyopuyo.6
 share/gnome/apps/Games/xpuyopuyo.desktop
@@ -124,4 +124,5 @@ share/xpuyopuyo/xpuyopuyo.txt
 @dirrm share/xpuyopuyo/themes
 @dirrm share/xpuyopuyo/sounds
 @dirrm share/xpuyopuyo
-@unexec ${RMDIR} -p %D/share/gnome/apps/Games 2>/dev/null || ${TRUE}
+@comment in gnome-dirs: @dirrm share/gnome/apps/Games
+@comment in gnome-dirs: @dirrm share/gnome/apps
