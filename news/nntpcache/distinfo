@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:19:55 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/03/07 12:04:41 tv Exp $
 
 SHA1 (nntpcache-3.0.1.tar.gz) = 68ced9471a1e2a2dd7d1bf37477690a5b80bcf7d
 RMD160 (nntpcache-3.0.1.tar.gz) = 3ca0fc079532bae0eb4c6f903286d604e266a985
 Size (nntpcache-3.0.1.tar.gz) = 1085258 bytes
+SHA1 (patch-aa) = f397f4fe5ec2b1eec62981fba9b9a9922b14ef76
+SHA1 (patch-ab) = 4789544bba3f246713b1f8f74c0450811516edf9
+SHA1 (patch-ac) = aab64da73cce565642aeb4eb3024e57f388c5a19
+SHA1 (patch-ad) = 060112715712bcdbcd052cd9d7557a558518c305
