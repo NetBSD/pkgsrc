@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.25 2004/05/30 00:14:43 recht Exp $
+# $NetBSD: HACKS,v 1.26 2004/07/10 13:23:55 grant Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -422,4 +422,14 @@ pr	25742
 descr
 	The default compiler flags on the alpha port "-O2 -mieee"
 	cause the c++ compiler to generate buggy code.
+kcah
+
+hack	sparc64 gcc 3.3.x -O2 bug
+cdate	29 Apr 2004
+who	adam
+port	sparc64
+file	graphics/netpbm/patches/patch-ab
+descr
+	sparc64 gcc 3.3.x toolchain bug means we must compile exif.o
+	without optimisation
 kcah
