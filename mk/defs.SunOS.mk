@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.55 2003/02/27 08:15:53 tron Exp $
+# $NetBSD: defs.SunOS.mk,v 1.56 2003/02/28 03:41:39 jschauma Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -40,6 +40,7 @@ GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 .endif
 HEAD?=		/usr/bin/head
+HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/xpg4/bin/id
 IMAKE?=		${X11BASE}/bin/imake -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 LDCONFIG?=	/usr/bin/true

@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.14 2003/02/24 19:49:47 jschauma Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.15 2003/02/28 03:41:39 jschauma Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -33,6 +33,7 @@ GZCAT?=		/usr/bin/gzcat
 GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
+HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
