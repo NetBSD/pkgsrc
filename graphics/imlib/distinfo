@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2001/08/13 11:14:30 rh Exp $
+$NetBSD: distinfo,v 1.5 2001/08/23 04:47:54 jlam Exp $
 
 SHA1 (imlib-1.9.11.tar.gz) = 30b48d9f3745547d2186750ecbd3a391d3f805ed
 Size (imlib-1.9.11.tar.gz) = 758757 bytes
 SHA1 (patch-aa) = 3b0d14a026bb1d63ef83e2bca9ee674c2645c8bf
 SHA1 (patch-ab) = 9af11e0041b07670a3bab37cd4234e4e00bc7d78
 SHA1 (patch-ac) = d92c08ede60358d192c32d08482b536ff13a7fb8
-SHA1 (patch-ad) = 0f9aacc69e072338f02bb0307699df068d42089a
+SHA1 (patch-ad) = 6c673375d669b7e3e57b558c4f7fbd320162eaf4
 SHA1 (patch-ae) = 9701e0251592ae8df33b455457b6470f9833bbd7
