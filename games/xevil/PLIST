@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
 bin/xevil
-man/man6/xevil.6
+share/doc/xevil/UNIXSetControls.gif
+share/doc/xevil/UNIXShowControls.gif
+share/doc/xevil/UNIXmenu.gif
+share/doc/xevil/instructions.html
+share/doc/xevil/keysdlg.gif
+share/doc/xevil/optionsdlg.gif
+@dirrm share/doc/xevil
