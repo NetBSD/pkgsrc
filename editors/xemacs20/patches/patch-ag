@@ -1,4 +1,5 @@
-$NetBSD: patch-ag,v 1.1 1998/08/29 12:31:43 garbled Exp $
+$NetBSD: patch-ag,v 1.2 1999/03/10 08:34:08 tron Exp $
+
 --- /dev/null	Fri Jul 24 04:57:05 1998
 +++ src/netbsd.elf.h	Fri Jul 24 05:41:01 1998
 @@ -0,0 +1,322 @@
