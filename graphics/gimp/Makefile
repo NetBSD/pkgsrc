@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.68 2001/06/11 06:34:36 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2001/07/29 01:27:01 hubertf Exp $
 
-DISTNAME=		gimp-1.2.1
+DISTNAME=		gimp-1.2.2
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.1/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.1/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.1/
+MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.2/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.2/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.2/
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${GIMP_DATA}${EXTRACT_SUFX}
@@ -36,10 +36,10 @@ CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
 			--disable-perl \
 			--disable-python
 CONFIGURE_ENV=		GNOME_CONFIG=no \
-			INTLDEPS="-I${LOCALBASE}/include"
+			INTLDEPS="-I${BUILDLINK_DIR}/include"
 
-CPPFLAGS=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib
+CPPFLAGS=		-I${BUILDLINK_DIR}/include
+LDFLAGS+=		-L${BUILDLINK_DIR}/lib
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 .include "../../mk/bsd.prefs.mk"
@@ -60,5 +60,7 @@ post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gimp.m4 \
 	  ${LOCALBASE}/share/aclocal/gimp.m4
+
+.include "../../devel/gettext-lib/buildlink.mk"
 
 .include "../../mk/bsd.pkg.mk"
