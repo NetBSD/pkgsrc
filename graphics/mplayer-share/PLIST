@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/02/18 11:16:33 mrg Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/04/09 14:57:32 drochner Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/Chinese/bugreports.html
 share/mplayer/DOCS/Chinese/cd-dvd.html
@@ -8,6 +8,7 @@ share/mplayer/DOCS/Chinese/documentation.html
 share/mplayer/DOCS/Chinese/encoding.html
 share/mplayer/DOCS/Chinese/faq.html
 share/mplayer/DOCS/Chinese/formats.html
+share/mplayer/DOCS/Chinese/mplayer.1
 share/mplayer/DOCS/Chinese/skin.html
 share/mplayer/DOCS/Chinese/sound.html
 share/mplayer/DOCS/Chinese/users_against_developers.html
@@ -62,17 +63,13 @@ share/mplayer/DOCS/Italian/skin.html
 share/mplayer/DOCS/Italian/sound.html
 share/mplayer/DOCS/Italian/users_against_developers.html
 share/mplayer/DOCS/Italian/video.html
-share/mplayer/DOCS/Polish/DVB
-share/mplayer/DOCS/Polish/DXR3
 share/mplayer/DOCS/Polish/bugreports.html
 share/mplayer/DOCS/Polish/cd-dvd.html
-share/mplayer/DOCS/Polish/codecs-in.html
 share/mplayer/DOCS/Polish/codecs.html
 share/mplayer/DOCS/Polish/documentation.html
 share/mplayer/DOCS/Polish/encoding.html
 share/mplayer/DOCS/Polish/faq.html
 share/mplayer/DOCS/Polish/formats.html
-share/mplayer/DOCS/Polish/gcc-2.96-3.0.html
 share/mplayer/DOCS/Polish/mplayer.1
 share/mplayer/DOCS/Polish/skin.html
 share/mplayer/DOCS/Polish/sound.html
@@ -103,7 +100,6 @@ share/mplayer/DOCS/tech/formats.txt
 share/mplayer/DOCS/tech/general.txt
 share/mplayer/DOCS/tech/hwac3.txt
 share/mplayer/DOCS/tech/libao2.txt
-share/mplayer/DOCS/tech/libavc-options.txt
 share/mplayer/DOCS/tech/libmpcodecs.txt
 share/mplayer/DOCS/tech/libvo.txt
 share/mplayer/DOCS/tech/libvo2.txt
@@ -114,7 +110,6 @@ share/mplayer/DOCS/tech/patches.txt
 share/mplayer/DOCS/tech/playtree
 share/mplayer/DOCS/tech/playtree-hun
 share/mplayer/DOCS/tech/porting-status.txt
-share/mplayer/DOCS/tech/qt-libwine-howto.txt
 share/mplayer/DOCS/tech/realcodecs/TODO
 share/mplayer/DOCS/tech/realcodecs/audio-codecs.txt
 share/mplayer/DOCS/tech/realcodecs/streaming.txt
@@ -123,7 +118,6 @@ share/mplayer/DOCS/tech/subcp.txt
 share/mplayer/DOCS/tech/swscaler_filters.txt
 share/mplayer/DOCS/tech/swscaler_methods.txt
 share/mplayer/DOCS/tech/vidix.txt
-share/mplayer/DOCS/tech/vop.txt
 share/mplayer/DOCS/tech/wishlist
 share/mplayer/DOCS/users_against_developers.html
 share/mplayer/DOCS/video.html
