@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/03/13 17:37:08 fredb Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/08 11:59:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/19 17:38:24 cpiazza Exp $
 
 DISTNAME=	Giram-0.1.2
@@ -11,7 +11,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.minet.net/giram/
 COMMENT=	Giram is Really A Modeller
 
-DEPENDS+=	esound-[0-9]*:../../audio/esound
 DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
 DEPENDS+=	povray-[0-9]*:../../graphics/povray
 
