@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6894 2004/08/15 21:43:36 wiz Exp $
+$NetBSD: CHANGES,v 1.6895 2004/08/15 22:11:03 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3850,3 +3850,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tla to 1.2.1 [recht 2004-08-15]
 	Updated fceu to 0.98.11 [wiz 2004-08-15]
 	Updated grhino to 0.12.0 [wiz 2004-08-15]
+	Updated balsa2 to 2.2.2 [recht 2004-08-15]
