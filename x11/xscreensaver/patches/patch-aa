@@ -1,5 +1,18 @@
---- driver/Makefile.in.orig	Mon Jul 10 21:39:55 2000
-+++ driver/Makefile.in	Mon Jul 10 21:39:57 2000
+$NetBSD: patch-aa,v 1.6 2000/07/10 19:57:10 tron Exp $
+
+--- driver/Makefile.in.orig	Mon Jul 10 21:54:54 2000
++++ driver/Makefile.in	Mon Jul 10 21:55:02 2000
+@@ -140,8 +140,8 @@
+ DEMO_SRCS	= prefs.c remote.c $(DEMO_UTIL_SRCS)
+ DEMO_OBJS	= prefs.o remote.o $(DEMO_UTIL_OBJS)
+ 
+-SAVER_LIBS	= $(LIBS) $(X_LIBS) @SAVER_LIBS@ $(GL_LIBS) \
+-		  $(X_PRE_LIBS) -lXt -lX11 -lXext $(X_EXTRA_LIBS) \
++SAVER_LIBS	= $(LIBS) $(X_LIBS) @SAVER_LIBS@ $(GL_LIBS) -lXt \
++		  $(X_PRE_LIBS) -lX11 -lXext $(X_EXTRA_LIBS) \
+ 		  $(PASSWD_LIBS)
+ 
+ CMD_LIBS	= $(LIBS) $(X_LIBS) \
 @@ -344,11 +344,11 @@
  
  install-kde:
