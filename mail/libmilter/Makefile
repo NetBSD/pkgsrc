@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/09/15 12:22:31 markd Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/18 10:39:12 markd Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
 PKGNAME=	libmilter-${DIST_VERS}
-PKGREVISION=	1
 COMMENT=	Mail filter support library for sendmail
 
 post-patch: make-sendmail-siteconfig
