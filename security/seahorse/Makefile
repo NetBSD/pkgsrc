@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/01/24 15:00:22 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/09 18:47:38 jmmv Exp $
 
 DISTNAME=	seahorse-0.7.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=seahorse/}
 
