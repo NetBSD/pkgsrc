@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/04 23:03:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/11/08 14:35:34 adam Exp $
 bin/gtkballs
 man/man6/gtkballs.6
 share/gtkballs/COPYING
@@ -417,3 +417,4 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtkballs.mo
 @dirrm share/gtkballs/themes/Default
 @dirrm share/gtkballs/themes
 @dirrm share/gtkballs
+@unexec echo Delete ${VARBASE}/games/gtkballs-scores if you do not need your hi-scores any more.
