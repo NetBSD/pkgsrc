@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.24 2004/02/19 18:39:27 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.25 2004/03/12 15:45:43 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -19,6 +19,7 @@ reorderlibs="@_BLNK_REORDERLIBS@"
 #					relative paths
 #	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
 #	reorder:l:foo:bar	reorders libs to ensure that "-lfoo"
+#				occurs before "-lbar"
 #	depot:src:dst		translates "src/<dir>/" into "dst/"
 #	I:src:dst		translates "-Isrc" into "-Idst"
 #	L:src:dst		translates "-Lsrc" into "-Ldst"
@@ -30,7 +31,6 @@ reorderlibs="@_BLNK_REORDERLIBS@"
 #	r:dir			removes "dir" and "dir/*"
 #	S:foo:bar		translates word "foo" into "bar"
 #	s:foo:bar		translates "foo" into "bar"
-#				occurs before "-lbar"
 #
 # Some transformations only make sense in one direction, so if a command
 # is prefixed with either "transform:" or "untransform:", then the
