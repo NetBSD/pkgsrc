@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.23 2003/08/18 19:19:33 cjep Exp $
+# $NetBSD: post-build,v 1.24 2003/08/19 09:35:26 gavan Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -137,15 +137,25 @@ while (<BF>) {
 	$nunpackaged++;
     }
 
-    # The idea of this is stolen from bsd.pkg.mk's
-    # show-pkgtools-version target - thanks Al! :-)
-    $whofile = `find ${USR_PKGSRC}/${pkg} -type f -print  | xargs ident 2>/dev/null | awk '\$1 ~ /\\\$NetBSD/ { gsub("/", "", \$4); print \$4 " " \$6 " " \$2 }' | sort -n | tail -n 1 | awk '{ print \$2 " " \$3 }' `;
-    $whofile=~s/,v$//;
-    chomp($whofile);
-    ($who,$file) = split(/\s+/, $whofile);
+    @idents = `find ${USR_PKGSRC}/${pkg} -type f -print | xargs grep \\\$NetBSD`;
+    $datetime = "";
+    $who = "nobody";
+    $file = "";
+    $ver = "";
+    foreach $ident (@idents) {
+	$ident =~ /\$NetBSD: post-build,v 1.24 2003/08/19 09:35:26 gavan Exp $/;
+	if ("$3 $4" gt $datetime) {
+	    $datetime = "$3 $4";
+	    $who = $5;
+	    $file = $1;
+	    $ver = $1;
+	}
+    }
 
-    # $maintainer=`( cd $USR_PKGSRC/$pkg ; ( echo '.include "Makefile"' ; echo 'bla: ; \@echo ${MAINTAINER}' ) | $ENV{"BMAKE"} -f - bla )`;
-    $maintainer=`grep ^MAINTAINER $USR_PKGSRC/$pkg/Makefile | awk '{ print \$2\$3\$4\$5\$6}' | sed -e 's/\</&lt;/g' -e 's/\>/&gt;/g'`;
+    $maintainer=`grep ^MAINTAINER $USR_PKGSRC/$pkg/Makefile`;
+    $maintainer =~ s/MAINTAINER=[ \t]*//;
+    $maintainer =~ s/</&lt;/g;
+    $maintainer =~ s/>/&gt;/g;
     chomp($maintainer);
    
     print HTML "<TR><TD><A HREF=\"$bf\">$pkg</A>";
