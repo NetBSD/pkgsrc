@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.751 2002/12/11 19:05:11 cjep Exp $
+$NetBSD: CHANGES,v 1.752 2002/12/11 20:15:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3909,3 +3909,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added hptools-3.0.8 [cjep 2002-12-11]
 	Updated imap-uw to 2002.1rc1 [tron 2002-12-11]
 	Added openc++-2.5.12 [cjep 2002-12-11]
+	Added fontconfig-2.1 [jmmv 2002-12-11]
