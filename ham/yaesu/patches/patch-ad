@@ -1,0 +1,42 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
+
+--- main.c.orig	Sat Apr 13 21:07:41 2002
++++ main.c
+@@ -100,29 +100,29 @@
+     if (argc == 2) {
+        switch(argv[1][0]) {
+              case '0':
+-             if ((fdSer = open("/dev/ttyS0", O_RDWR )) < 0) {
+-                perror("open of /dev/ttyS0 failed!!!\n");
++             if ((fdSer = open("/dev/ttyE0", O_RDWR )) < 0) {
++                perror("open of /dev/ttyE0 failed!!!\n");
+                 exit(3);
+              }
+              break;
+ 
+              case '1':
+-             if ((fdSer = open("/dev/ttyS1", O_RDWR )) < 0) {
+-                perror("open of /dev/ttyS1 failed!!!\n");
++             if ((fdSer = open("/dev/ttyE1", O_RDWR )) < 0) {
++                perror("open of /dev/ttyE1 failed!!!\n");
+                 exit(3);
+              }
+              break;
+ 
+              case '2':
+-             if ((fdSer = open("/dev/ttyS2", O_RDWR )) < 0) {
+-                perror("open of /dev/ttyS2 failed");
++             if ((fdSer = open("/dev/ttyE2", O_RDWR )) < 0) {
++                perror("open of /dev/ttyE2 failed");
+                 exit(3);
+              }
+              break;
+ 
+              case '3':
+-             if ((fdSer = open("/dev/ttyS3", O_RDWR )) < 0) {
+-                perror("open of /dev/ttyS3 failed");
++             if ((fdSer = open("/dev/ttyE3", O_RDWR )) < 0) {
++                perror("open of /dev/ttyE3 failed");
+                 exit(3);
+              }
+              break;
