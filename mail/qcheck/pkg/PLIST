@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/12 09:05:45 zuntum Exp $
+bin/qcheck
