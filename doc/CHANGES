@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5224 2004/03/12 01:17:15 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.5225 2004/03/12 01:46:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1428,3 +1428,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xjump-2.7.5 [snj 2004-03-11]
 	Updated xmms-jakdaw to to 0.0.4nb3 [snj 2004-03-12]
 	Updated yacas to 1.0.56 [dmcmahill 2004-03-11]
+	Updated tkirc2 to 2.46nb1 [minskim 2004-03-12]
