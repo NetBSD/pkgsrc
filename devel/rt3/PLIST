@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/03 15:33:49 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/02 17:20:36 cube Exp $
 bin/mason_handler.fcgi
 bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -20,6 +20,8 @@ lib/rt3/RT/Action/EscalatePriority.pm
 lib/rt3/RT/Action/Generic.pm
 lib/rt3/RT/Action/Notify.pm
 lib/rt3/RT/Action/NotifyAsComment.pm
+lib/rt3/RT/Action/RecordComment.pm
+lib/rt3/RT/Action/RecordCorrespondence.pm
 lib/rt3/RT/Action/ResolveMembers.pm
 lib/rt3/RT/Action/SendEmail.pm
 lib/rt3/RT/Action/SetPriority.pm
@@ -121,6 +123,7 @@ lib/rt3/RT/Scrip_Overlay.pm
 lib/rt3/RT/Scrips.pm
 lib/rt3/RT/Scrips_Overlay.pm
 lib/rt3/RT/Search/ActiveTicketsInQueue.pm
+lib/rt3/RT/Search/FromSQL.pm
 lib/rt3/RT/Search/Generic.pm
 lib/rt3/RT/SearchBuilder.pm
 lib/rt3/RT/StyleGuide.pod
@@ -159,6 +162,8 @@ lib/rt3/t/03web.pl
 lib/rt3/t/03web.pl.in
 lib/rt3/t/04_send_email.pl
 lib/rt3/t/04_send_email.pl.in
+lib/rt3/t/05cronsupport.pl
+lib/rt3/t/05cronsupport.pl.in
 lib/rt3/t/data/8859-15-message-series/dir
 lib/rt3/t/data/8859-15-message-series/msg1
 lib/rt3/t/data/8859-15-message-series/msg2
@@ -272,6 +277,9 @@ share/rt3/html/Elements/BevelBoxRaisedEnd
 share/rt3/html/Elements/BevelBoxRaisedStart
 share/rt3/html/Elements/Callback
 share/rt3/html/Elements/Checkbox
+share/rt3/html/Elements/CollectionAsTable/ParseFormat
+share/rt3/html/Elements/CollectionAsTable/Row
+share/rt3/html/Elements/CollectionAsTable/Header
 share/rt3/html/Elements/CreateTicket
 share/rt3/html/Elements/EditLinks
 share/rt3/html/Elements/Error
@@ -289,6 +297,7 @@ share/rt3/html/Elements/QueryString
 share/rt3/html/Elements/QuickCreate
 share/rt3/html/Elements/Quicksearch
 share/rt3/html/Elements/Refresh
+share/rt3/html/Elements/RT__Ticket/ColumnMap
 share/rt3/html/Elements/ScrubHTML
 share/rt3/html/Elements/Section
 share/rt3/html/Elements/SelectAttachmentField
@@ -325,6 +334,7 @@ share/rt3/html/Elements/TitleBoxEnd
 share/rt3/html/Elements/TitleBoxStart
 share/rt3/html/NoAuth/Logout.html
 share/rt3/html/NoAuth/Reminder.html
+share/rt3/html/NoAuth/images/autohandler
 share/rt3/html/NoAuth/images/back_home.gif
 share/rt3/html/NoAuth/images/bplogo.gif
 share/rt3/html/NoAuth/images/favicon.png
@@ -485,6 +495,8 @@ share/rt3/html/l
 @dirrm share/rt3/html/REST
 @dirrm share/rt3/html/NoAuth/images
 @dirrm share/rt3/html/NoAuth
+@dirrm share/rt3/html/Elements/CollectionAsTable
+@dirrm share/rt3/html/Elements/RT__Ticket
 @dirrm share/rt3/html/Elements
 @dirrm share/rt3/html/Approvals/Elements
 @dirrm share/rt3/html/Approvals
