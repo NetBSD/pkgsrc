@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/09 19:44:11 jlam Exp $
+
+--- Makefile.in.orig	Mon Dec  1 11:35:12 2003
++++ Makefile.in
+@@ -602,14 +602,11 @@ uninstall-am: uninstall-info-am uninstal
+ 	uninstall-sbinPROGRAMS
+ 
+ 
+-dist-hook: saslauthd.8
++dist-hook: saslauthd.mdoc
+ 
+-saslauthd.8: saslauthd.mdoc
+-	nroff -mdoc $(srcdir)/saslauthd.mdoc > $(srcdir)/saslauthd.8
+-
+-install-data-local: saslauthd.8
+-	$(mkinstalldirs) $(DESTDIR)$(mandir)/cat8
+-	$(INSTALL_DATA) $(srcdir)/saslauthd.8 $(DESTDIR)$(mandir)/cat8/saslauthd.8
++install-data-local: saslauthd.mdoc
++	$(mkinstalldirs) $(DESTDIR)$(mandir)/man8
++	$(INSTALL_DATA) $(srcdir)/saslauthd.mdoc $(DESTDIR)$(mandir)/man8/saslauthd.8
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
