@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/05/29 01:02:27 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/30 06:51:29 epg Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 CATEGORIES=	devel
@@ -6,7 +6,9 @@ CATEGORIES=	devel
 HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Apache Portable Runtime
 
-CONFLICTS=		apache2<2.0.46
+# Don't bump this when apache upgrades; it is only apache2-2.0.45 and
+# under that includes its own apr.  apr was split out in 2.0.45nb1.
+CONFLICTS=		apache2<=2.0.45
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
