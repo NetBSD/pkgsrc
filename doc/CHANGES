@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1951 2003/04/16 14:56:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.1952 2003/04/16 15:52:44 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1622,3 +1622,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated freetype2 to 2.1.4 [wiz 2003-04-16]
 	Removed skipstone [wiz 2003-04-16]
 	Updated lmule to 1.1.13nb1 [jmmv 2003-04-16]
+	Updated snort to 2.0.0nb1 [salo 2003-04-16]
+	Updated snort-mysql to 2.0.0nb1 [salo 2003-04-16]
+	Updated snort-pgsql to 2.0.0nb1 [salo 2003-04-16]
