@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/20 11:30:58 grant Exp $
+# $NetBSD: Makefile,v 1.13 2005/02/11 18:07:50 tv Exp $
 
 DISTNAME=	BSD-Resource-1.24
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/BSD/Resource/.packlist
+
+post-extract:
+	${RM} -f ${WRKSRC}/t/[gs]etpriority.t
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
