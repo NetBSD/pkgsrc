@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.251 1999/04/09 02:06:53 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.252 1999/04/13 14:18:11 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -314,13 +314,13 @@ MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
 .if (${OPSYS} == "NetBSD")
 NEED_OWN_INSTALL_TARGET=	no
-.include "../../mk/bsd.own.mk"
+.include <bsd.own.mk>
 SHAREOWN = ${DOCOWN}
 SHAREGRP = ${DOCGRP}
 SHAREMODE = ${DOCMODE}
 .elif (${OPSYS} == "SunOS")
 NEED_OWN_INSTALL_TARGET=	no
-.include "../../mk/bsd.own.mk"
+.include <bsd.own.mk>
 SHAREOWN = ${DOCOWN}
 SHAREGRP = ${DOCGRP}
 SHAREMODE = ${DOCMODE}
@@ -1337,9 +1337,10 @@ root-install:
 		'.*/lib[^/]+\.so\.[0-9]+\.[0-9]+$$'			\
 		${PLIST} || ${TRUE}`;					\
 	if [ X"$$sos" != X"" ]; then					\
-		case "${SHLIB_TYPE}" in					\
+		shlib_type=`${MAKE} ${.MAKEFLAGS} show-shlib-type`;	\
+		case "$$shlib_type" in					\
 		"ELF")							\
-			${ECHO_MSG} "===>   [Automatic ${SHLIB_TYPE} shared object handling]";\
+			${ECHO_MSG} "===>   [Automatic $$shlib_type shared object handling]";\
 			for so2 in $$sos; do				\
 				so1=`${ECHO} $$so2 | ${SED} -e 's|\.[0-9]*$$||'`; \
 				so0=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
@@ -1363,8 +1364,9 @@ root-install:
 			done;						\
 			;;						\
 		"a.out")						\
-			${ECHO_MSG} "===>   [Automatic ${SHLIB_TYPE} shared object handling]";\
-			if ${GREP} -q '^@exec ${LDCONFIG}$$' ${PLIST}; then \
+			${ECHO_MSG} "===>   [Automatic $$shlib_type shared object handling]";\
+			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST}`; \
+			if [ $$cnt -eq 0 ]; then			\
 				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
 				${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST}; \
 			fi;						\
@@ -1372,7 +1374,7 @@ root-install:
 				${ECHO_MSG} "$$sos";			\
 				${ECHO_MSG} "Running ${LDCONFIG}";	\
 			fi;						\
-			${LDCONFIG};					\
+			${LDCONFIG} || ${TRUE};				\
 			;;						\
 		"*")							\
 			${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
@@ -1397,6 +1399,26 @@ root-install:
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.install_done
 
+
+# Show the shared lib type being built: one of ELF, a.out or none
+show-shlib-type:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${WRKDIR} &&							\
+	sotype=none;							\
+	if [ "X${MKPIC}" != "Xno" -a "X${MKPICINSTALL}" != "Xno" -a	\
+	     "X${NOPIC}" = "X" -a "X${NOPICINSTALL}" = "X" ]; then	\
+		${ECHO} "int main() { exit(0); }" > a.$$$$.c;		\
+		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
+		case `${FILE} a.$$$$.out` in				\
+		*ELF*dynamically*)					\
+			sotype=ELF ;;					\
+		*dynamically*)						\
+			sotype="a.out" ;;				\
+		esac;							\
+	fi;								\
+	${ECHO} "$$sotype";						\
+	${RM} -f a.$$$$.c a.$$$$.out
+ 
 
 ################################################################
 # Skeleton targets start here
