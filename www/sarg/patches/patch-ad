@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+
+--- sarg.1.orig	2003-04-25 20:20:55.000000000 +0300
++++ sarg.1
+@@ -124,7 +124,7 @@ Convert the logfile's date/time field to
+ .B \-split
+ Split the log file by date in \fB-d\fP parameter.
+ .SH FILES
+-.BR /etc/squid/sarg.conf
++.BR @PKG_SYSCONFDIR@/sarg.conf
+ .br
+ .SH AUTHOR
+ This manual page was written by Luigi Gangitano <gangitano@lugroma3.org>,
