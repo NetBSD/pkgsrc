@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2002/09/02 11:43:38 abs Exp $
+$NetBSD: patch-ab,v 1.5 2002/09/30 09:25:23 abs Exp $
 
---- distrib/initscripts/Makefile.in.orig	Wed Mar 27 22:20:46 2002
+--- distrib/initscripts/Makefile.in.orig	Sun Sep  1 17:57:04 2002
 +++ distrib/initscripts/Makefile.in
-@@ -149,12 +149,12 @@ EXTRA_DIST = $(TEMPLATES) rc.atalk.cobal
+@@ -155,12 +155,12 @@ EXTRA_DIST = $(TEMPLATES) rc.atalk.cobal
  # checking for NetBSD init scripts
  #
  @USE_COBALT_TRUE@sysvdir = /etc/rc.d/init.d
