@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/26 21:41:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/12 02:08:40 snj Exp $
 #
 
 DISTNAME=	generator-0.34
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sqish.net/generator/
 COMMENT=	Sega Mega drive genesis emulator
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 GNU_CONFIGURE=		# defined
 
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-gtk --with-cmz80
 CFLAGS+=	-DBYTES_HIGHFIRST
 .endif
 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
