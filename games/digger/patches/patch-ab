@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/26 06:06:34 wiz Exp $
+
+--- alpha.c.orig	2000-04-03 22:42:48.000000000 +0200
++++ alpha.c
+@@ -1,7 +1,7 @@
+ #include "def.h"
+ 
+-char copyright[]="Portions Copyright(c) 1983 Windmill Software
+-Inc.";
++char copyright[]="Portions Copyright(c) 1983 Windmill Software\n"
++"Inc.";
+ 
+ Sint textoffdat[16]={
+    72,   0, -72,-72,
