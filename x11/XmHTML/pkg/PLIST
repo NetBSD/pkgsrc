@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/11/13 07:31:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/06/21 06:25:38 jlam Exp $
 include/XmHTML/Balloon.h
 include/XmHTML/BalloonP.h
 include/XmHTML/HTML.h
@@ -13,5 +13,6 @@ include/XmHTML/resources.h
 include/XmHTML/tka.h
 include/XmHTML/toolkit.h
 lib/libXmHTML.a
+lib/libXmHTML.la
 lib/libXmHTML.so.1.2
 @dirrm include/XmHTML
