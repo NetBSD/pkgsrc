@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2003/04/10 13:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2003/04/13 10:25:10 cjep Exp $
 
 COMMENT=	System utilities
 
@@ -45,6 +45,7 @@ SUBDIR+=	extipl
 SUBDIR+=	fakeroot
 SUBDIR+=	fam
 SUBDIR+=	fdgw
+SUBDIR+=	file
 SUBDIR+=	findutils
 SUBDIR+=	fix4SA110rev2
 SUBDIR+=	fsviewer
