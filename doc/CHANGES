@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3358 2003/09/13 12:16:57 jlam Exp $
+$NetBSD: CHANGES,v 1.3359 2003/09/13 12:24:08 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3674,3 +3674,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vmware-module3 to 3.2.1.5 [jdolecek 2003-09-13]
 	Updated p5-Net-DNS to 0.40 [jlam 2003-09-13]
 	Updated p5-Net-SSLeay to 1.25 [jlam 2003-09-13]
+	Updated p5-IO-Socket-SSL to 0.95 [jlam 2003-09-13]
