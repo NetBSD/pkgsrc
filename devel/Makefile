@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2003/03/04 16:27:58 seb Exp $
+# $NetBSD: Makefile,v 1.383 2003/03/04 17:04:12 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -269,6 +269,7 @@ SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
+SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-SortVersions
