@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2000/01/10 18:19:09 abs Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/12 16:39:33 abs Exp $
 #
 
 BASE_OS		= ${OS_VERSION:S/.//:C/\..*//}
 PKGVERSION	= 1.2
 .include "../../mk/bsd.prefs.mk"
 #
-# .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
-.if ${OPSYS} == ${OPSYS}
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
 PKGVERSION=	1.3
 DISTNAME=	${PKGNAME}.sparc-sun-solaris2.6
 #
