@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/12/04 17:25:13 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/04/08 18:51:59 agc Exp $
 etc/httpd/httpd.conf.modperl
 lib/httpd/mod_perl.so
 lib/perl5/man/man3/Apache.3
@@ -68,27 +68,27 @@ lib/perl5/site_perl/Apache/httpd_conf.pm
 lib/perl5/site_perl/Apache/src.pm
 lib/perl5/site_perl/Apache/test.pm
 lib/perl5/site_perl/Bundle/Apache.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Connection/Connection.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Connection/Connection.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/File/File.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/File/File.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Log/Log.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Log/Log.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/ModuleConfig/ModuleConfig.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/ModuleConfig/ModuleConfig.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/PerlRunXS/PerlRunXS.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/PerlRunXS/PerlRunXS.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Server/Server.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Server/Server.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Symbol/Symbol.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Symbol/Symbol.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Tie/Tie.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Tie/Tie.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/URI/URI.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/URI/URI.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Util/Util.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Util/Util.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/mod_perl/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Connection/Connection.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Connection/Connection.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/File/File.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/File/File.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Log/Log.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Log/Log.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/ModuleConfig/ModuleConfig.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/ModuleConfig/ModuleConfig.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/PerlRunXS/PerlRunXS.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/PerlRunXS/PerlRunXS.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Server/Server.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Server/Server.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Symbol/Symbol.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Symbol/Symbol.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Tie/Tie.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Tie/Tie.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/URI/URI.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/URI/URI.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Util/Util.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Util/Util.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/mod_perl/.packlist
 lib/perl5/site_perl/cgi_to_mod_perl.pod
 lib/perl5/site_perl/mod_perl.pm
 lib/perl5/site_perl/mod_perl.pod
@@ -102,16 +102,16 @@ share/httpd/htdocs/manual/mod/mod_perl.html
 @dirrm lib/perl5/site_perl/Apache/Constants
 @dirrm lib/perl5/site_perl/Apache
 @dirrm lib/perl5/site_perl/Bundle
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Connection
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/File
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Log
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/ModuleConfig
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/PerlRunXS
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Server
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Symbol
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Tie
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/URI
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache/Util
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Apache
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/mod_perl
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Connection
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/File
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Log
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/ModuleConfig
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/PerlRunXS
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Server
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Symbol
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Tie
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/URI
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Util
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/mod_perl
 @dirrm share/doc/mod_perl

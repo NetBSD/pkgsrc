@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/28 15:33:58 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/04/08 18:51:56 agc Exp $
 lib/perl5/man/man3/Locale::Country.3.gz
 lib/perl5/man/man3/Locale::Language.3.gz
 lib/perl5/site_perl/Locale/Country.pm
 lib/perl5/site_perl/Locale/Language.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Locale/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Locale
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Locale/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Locale
 @dirrm lib/perl5/site_perl/Locale

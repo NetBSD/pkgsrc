@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/26 17:57:03 bad Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/04/08 18:51:59 agc Exp $
 lib/perl5/man/man3/CGI_Lite.3
 lib/perl5/site_perl/CGI_Lite.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/CGI_Lite/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/CGI_Lite
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/CGI_Lite/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/CGI_Lite
