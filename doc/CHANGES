@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1178 2003/01/21 10:13:12 tron Exp $
+$NetBSD: CHANGES,v 1.1179 2003/01/21 11:12:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -349,3 +349,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mysql-server to 3.23.49nb3 [lukem 2003-01-21]
 	Updated cvs to 1.11.5 [wiz 2003-01-21]
 	Updated libgtop to 1.0.13nb1 [tron 2003-01-21]
+	Updated ncurses to 5.3 [wiz 2003-01-21]
