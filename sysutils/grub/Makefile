@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/03/10 01:25:23 seb Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/26 15:42:44 xtraeme Exp $
 #
 
 DISTNAME=	grub-0.94
@@ -24,6 +24,7 @@ BUILDLINK_TRANSFORM+=	S:-fno-builtin:-ffreestanding:
 BUILD_DEFS+=		GRUB_NETWORK_CARDS
 BUILD_DEFS+=		GRUB_PRESET_COMMAND
 BUILD_DEFS+=		GRUB_SCAN_ARGS
+BUILD_DEFS+=		GRUB_ISO9660
 
 .if defined(GRUB_NETWORK_CARDS)
 CONFIGURE_ARGS+=	--enable-diskless
@@ -50,6 +51,25 @@ post-extract:
 
 .if defined(GRUB_SCAN_ARGS)
 CONFIGURE_ARGS+=	${GRUB_SCAN_ARGS}
+.endif
+
+# eltorito support for GRUB
+.if defined(GRUB_ISO9660)
+CONFIGURE_ARGS+=	--enable-iso9660
+PATCHFILES+=		grub-0.94-iso9660.diff
+PATCH_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/xtraeme/	
+
+PLIST_SUBST+=		ISO9660=
+
+pre-configure:
+	cd ${WRKSRC};                                           \
+	${ACLOCAL};                                             \
+	${AUTOHEADER};                                          \
+	${AUTOMAKE} -a --foreign -i;                            \
+	${AUTOCONF}
+.include "../../mk/automake.mk"
+.else
+PLIST_SUBST+=		ISO9660="@comment "
 .endif
 
 .include "../../devel/binutils/buildlink3.mk"
