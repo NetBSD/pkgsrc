@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.9 2002/11/25 05:39:34 schmonz Exp $
+
+--- config-bot.h.orig	Tue Apr 16 17:01:03 2002
++++ config-bot.h
+@@ -104,11 +104,16 @@
+ /* For platforms which support the ISO C amendement 1 functionality we
+    support user defined character classes.  */
+ /* Solaris 2.5 has a bug: <wchar.h> must be included before <wctype.h>.  */
++#if defined (__NetBSD__)
++#  define HANDLE_MULTIBYTE        0
++#endif
+ #if defined (HAVE_WCTYPE_H) && defined (HAVE_WCHAR_H)
+ #  include <wchar.h>
+ #  include <wctype.h>
+ #  if defined (HAVE_MBSRTOWCS) /* system is supposed to support XPG5 */
++#   if !defined (HANDLE_MULTIBYTE)
+ #    define HANDLE_MULTIBYTE      1
++#   endif
+ #  endif
+ #endif
+ 

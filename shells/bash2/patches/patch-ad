@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.3 2002/11/25 05:39:36 schmonz Exp $
+
+--- lib/readline/rlmbutil.h.orig	Thu Dec 20 09:54:38 2001
++++ lib/readline/rlmbutil.h
+@@ -32,11 +32,16 @@
+ /* For platforms which support the ISO C amendement 1 functionality we
+    support user defined character classes.  */
+    /* Solaris 2.5 has a bug: <wchar.h> must be included before <wctype.h>.  */
++#if defined (__NetBSD__)
++#  define HANDLE_MULTIBYTE        0
++#endif
+ #if defined (HAVE_WCTYPE_H) && defined (HAVE_WCHAR_H)
+ #  include <wchar.h>
+ #  include <wctype.h>
+ #  if defined (HAVE_MBSRTOWCS) /* system is supposed to support XPG5 */
++#   if !defined(HANDLE_MULTIBYTE)
+ #    define HANDLE_MULTIBYTE      1
++#   endif
+ #  endif
+ #endif
+ 
