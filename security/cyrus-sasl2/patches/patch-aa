@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2004/03/29 05:47:31 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2004/08/04 19:41:07 jlam Exp $
 
---- configure.in.orig	Tue Mar  9 11:54:13 2004
+--- configure.in.orig	Fri Jul  2 15:39:34 2004
 +++ configure.in
-@@ -483,10 +483,6 @@ SASL_KERBEROS_V4_CHK
+@@ -485,10 +485,6 @@ SASL_KERBEROS_V4_CHK
  SASL_GSSAPI_CHK
  SASL_PLAIN_CHK
  
