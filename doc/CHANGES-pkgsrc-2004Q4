@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.27 2005/01/08 16:24:16 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.28 2005/01/11 00:06:09 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -61,3 +61,7 @@ Pullip ticket 212 - requested by Adrian Portelli
 security fix for vim
 Pullup ticket 213 - requested by Adrian Portelli
 security fix for tnftp
+Pullup ticket 219 - requested by Manuel Bouyer
+build fix for p5-DBD-mysql
+Pullup ticket 220 - requested by Manuel Bouyer
+runtime fix for horde
