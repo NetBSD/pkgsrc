@@ -1,6 +1,5 @@
-
 vile is a text editor which is extremely compatible with vi in terms of
-"finger feel".  in addition, it has extended capabilities in many areas,
+"finger feel". In addition, it has extended capabilities in many areas,
 notably: 
 	multi-file editing and viewing
 	key rebinding (in addition to :map, :map!, and :abbr)
@@ -15,4 +14,3 @@ notably:
 	auxiliary utilities for man page and C program syntax highlighting
 	built-in macro language
 	portability to all UNIX platforms, VMS, DOS, Win32, OS/2
-
