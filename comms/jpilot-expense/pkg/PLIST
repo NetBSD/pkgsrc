@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/01 20:39:31 jlam Exp $
+${PLUGINSDIR}/libexpense.a
+${PLUGINSDIR}/libexpense.la
+${PLUGINSDIR}/libexpense.so
+${PLUGINSDIR}/libexpense.so.1
+${PLUGINSDIR}/libexpense.so.1.1
