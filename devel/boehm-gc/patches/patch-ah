@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.2 1999/12/28 04:57:50 wiz Exp $
 --- /dev/null	Tue Oct 26 10:29:31 1999
 +++ sparc_netbsd_mach_dep.s	Tue Oct 26 10:52:55 1999
 @@ -0,0 +1,34 @@
