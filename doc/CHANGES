@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5753 2004/04/27 12:50:25 adam Exp $
+$NetBSD: CHANGES,v 1.5754 2004/04/27 13:09:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated TeXmacs to 1.0.3.7 [adam 2004-04-27]
 	Updated openssh to 3.8.1nb2 [markd 2004-04-27]
 	Updated cairo 0.1.22 [adam 2004-04-27]
+	Updated foobillard to 3.0a [adam 2004-04-27]
