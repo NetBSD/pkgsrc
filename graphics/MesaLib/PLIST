@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/11/18 16:10:55 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/01/20 02:48:33 jschauma Exp $
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glext.h
@@ -9,14 +9,16 @@ include/GL/osmesa.h
 include/GL/xmesa.h
 include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
-lib/libGL.a
-lib/libGL.la
+lib/libGL_pic.a
 lib/libGL.so
-lib/libGL.so.5
-lib/libGL.so.5.502
-lib/libOSMesa.a
-lib/libOSMesa.la
+lib/libGL.so.1
+lib/libGL.so.1.5
+lib/libGLw_pic.a
+lib/libGLw.so
+lib/libGLw.so.1
+lib/libGLw.so.1.0
+lib/libOSMesa_pic.a
 lib/libOSMesa.so
-lib/libOSMesa.so.4
-lib/libOSMesa.so.4.502
+lib/libOSMesa.so.6
+lib/libOSMesa.so.6.0
 @unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}

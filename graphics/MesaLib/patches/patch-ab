@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.9 2004/01/20 02:48:33 jschauma Exp $
+
+--- Make-config.orig	2004-01-15 09:23:54.000000000 -0500
++++ Make-config	2004-01-19 18:29:14.000000000 -0500
+@@ -778,19 +778,14 @@
+ 	"GLUT_CFLAGS = -fexceptions" \
+ 	"APP_LIB_DEPS = -lmoto -L/usr/X11/lib -lXmu -lX11 -lm"
+ 
+-netbsd:
++pkgsrc:
+ 	$(MAKE) $(MFLAGS) -f Makefile.X11 targets \
+ 	"GL_LIB = libGL.so" \
+ 	"GLU_LIB = libGLU.so" \
+ 	"GLUT_LIB = libglut.so" \
+ 	"GLW_LIB = libGLw.so" \
+ 	"OSMESA_LIB = libOSMesa.so" \
+-	"CC = gcc" \
+-	"CXX = g++" \
+-	"CFLAGS = -O2 -fPIC -DUSE_XSHM -I/usr/X11R6/include -DHZ=100"  \
+-	"CXXFLAGS = -O2 -fPIC"  \
+-	"GLUT_CFLAGS = -fexceptions" \
+-	"APP_LIB_DEPS = -L/usr/X11R6/lib -lXext -lXmu -lXi -lX11 -lm"
++	"APP_LIB_DEPS = -L${PREFIX}/lib -L${X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm"
+ 
+ openbsd:
+ 	$(MAKE) $(MFLAGS) -f Makefile.X11 targets \

@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.10 2003/11/28 18:41:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 02:48:33 jschauma Exp $
 
 PKGNAME=		MesaDemos-${MESA_VERSION}
-PKGREVISION=		2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 MAINTAINER=		jschauma@NetBSD.org
 COMMENT=		OpenGL examples and Demos
 
+PATCHDIR=		${.CURDIR}/patches
+DISTINFO_FILE=		${.CURDIR}/distinfo
+
 .include "../Mesa/Makefile.common"
 
 USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
+USE_X11=		yes
 
-BUILD_DIRS=		${WRKSRC}/book ${WRKSRC}/demos ${WRKSRC}/samples
-ALL_TARGET=		check
-CONFIGURE_ARGS+=	--with-glut=${X11PREFIX}
-CONFIGURE_ENV+=		ac_cv_lib_glut_main=yes
-MAKE_ENV+=		X11PREFIX=${X11PREFIX}
+MAKE_FLAGS+=		LIB_DEP=""
+
+pre-build:
+	${RM} -fr ${WRKSRC}/src
 
 do-install:
-.for dir in book demos images samples
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
-	cd ${WRKSRC}/${dir} && ${PAX} -s ,^./.*Makefile.*,, -s ,^./CVS.*,, \
+	cd ${WRKSRC}/progs && ${PAX} -s ,^./.*Makefile.*,, -s ,^./CVS.*,, \
 		-s ,^./.*\\.o$$,, -s ,^./\\.libs.*,, -s ,^./\\.deps.*,,	   \
+		-s ,^./.*\\.orig$$,,					\
 		-rw . ${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
-.endfor
 	${CHMOD} -R a+rX ${PREFIX}/share/examples/${PKGNAME_NOREV}
 
 .include "../../graphics/Mesa/buildlink2.mk"

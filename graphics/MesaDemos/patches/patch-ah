@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2004/01/20 02:48:33 jschauma Exp $
+
+--- progs/redbook/Makefile.X11.orig	2003-10-03 10:03:15.000000000 -0400
++++ progs/redbook/Makefile.X11	2004-01-19 20:47:35.000000000 -0500
+@@ -7,7 +7,7 @@
+ INCDIR = $(TOP)/include
+ LIBDIR = $(TOP)/lib
+ 
+-LIBS = -L$(LIBDIR) $(APP_LIB_DEPS)
++LIBS+= -L$(LIBDIR) $(APP_LIB_DEPS) -lGL -lGLU -lglut
+ 
+ LIB_DEP = $(LIBDIR)/$(GL_LIB) $(LIBDIR)/$(GLU_LIB) $(LIBDIR)/$(GLUT_LIB)
+ 
+@@ -28,7 +28,7 @@
+ .SUFFIXES: .c
+ 
+ .c: $(LIB_DEP)
+-	$(CC) -I$(INCDIR) $(CFLAGS) $< $(LIBS) -o $@
++	$(CXX) -I$(INCDIR) $(CFLAGS) $< $(LIBS) -o $@
+ 
+ 
+ 

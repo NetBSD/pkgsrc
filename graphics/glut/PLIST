@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2003/08/26 01:43:50 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/01/20 02:48:33 jschauma Exp $
 include/GL/glut.h
 include/GL/glutf90.h
 lib/libglut.so
-lib/libglut.so.10
-lib/libglut.so.10.1
-lib/libglut.a
-lib/libglut.la
+lib/libglut.so.3
+lib/libglut.so.3.7
+lib/libglut_pic.a
 @unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}
