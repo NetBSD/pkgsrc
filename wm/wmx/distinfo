@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/07/27 20:40:00 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/10/07 15:03:32 fredb Exp $
 
 SHA1 (wmx-6.tar.gz) = 89563c8c2af1d3ffbee06197928123fd03ae9c54
 Size (wmx-6.tar.gz) = 86515 bytes
 SHA1 (patch-aa) = 6314e4d3b9b92c169d16b1db339782f8f773995c
 SHA1 (patch-ab) = 2f210b6965248be688a640472fb018d62e5197d0
+SHA1 (patch-ac) = 5921c882abd6769b2adf4fe26bb965982c9a5356
