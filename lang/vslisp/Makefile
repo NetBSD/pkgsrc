@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:45:38 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/12 10:02:39 cjep Exp $
 
 DISTNAME=		vslisp-4.0-1
 PKGNAME=		vslisp-4.0.1
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/vslisp-4.0
 CATEGORIES=		lang
 MASTER_SITES=		ftp://vslisp.sourceforge.net/pub/vslisp/
-PKGREVISION=		1
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://vslisp.sourceforge.net/
