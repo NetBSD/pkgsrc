@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/12/21 02:58:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2005/02/21 21:24:06 veego Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.10
@@ -58,12 +58,6 @@ PLATFORM=	sparcsolaris
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
-
-PLIST_SRC=	${PKGDIR}/PLIST.pre
-.if ${MACHINE_ARCH} == "sparc"
-PLIST_SRC+=	${PKGDIR}/PLIST.${MACHINE_ARCH}
-.endif
-PLIST_SRC+=	${PKGDIR}/PLIST.post
 
 BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 
