@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.317 2002/10/20 11:56:09 wiz Exp $
+$NetBSD: CHANGES,v 1.318 2002/10/20 14:38:13 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3339,3 +3339,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated micq to 0.4.9.4 [shell 2002-10-20]
 	Updated p5-Test-Harness to 2.26 [shell 2002-10-20]
 	Updated p5-Test-Simple to 0.47 [shell 2002-10-20]
+	Updated tightvnc to 1.2.6 [lukem 2002-10-21]
