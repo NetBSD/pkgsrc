@@ -1,0 +1,36 @@
+# $NetBSD: Makefile.common,v 1.1 2002/06/20 19:13:50 jschauma Exp $
+
+CATEGORIES=	misc kde
+VERSION=	1.1.1
+HOMEPAGE=	http://www.koffice.org/
+COMMENT=	KDE Office Suite with text processor, spreadsheet, etc.
+
+USE_BUILDLINK_ONLY=	YES
+
+.include "../../mk/bsd.prefs.mk"
+
+REPLACE_PERL=		kpresenter/kprconverter.pl
+
+.if ${OPSYS} == "NetBSD"
+LIBS+=			-Wl,--export-dynamic
+
+# On egcs-1.1.2, the C++ compiler system isn't quite ISO-compliant.  It lacks
+# a std::auto_ptr implementation in <memory>, doesn't handle static inline
+# functions in headers properly (although that concept, in itself, is quite
+# flawed), and just plain has bugs when compiling large functions with
+# optimization.  For certains parts of KOffice, we pass in
+# ${OPTIMIZATION_BUG_CXXFLAGS}, which is meant to be appended to
+# ${KDE_CXXFLAGS} so that it can turn off all code optimization by the
+# compiler.
+#
+MAKE_ENV+=		OPTIMIZATION_BUG_CXXFLAGS="-O0"
+.endif
+
+post-install:
+	@# The global desktop template files need to be user-writeable, or
+	@# else users won't be able to alter them after copying them to
+	@# their local directories.
+	${CHMOD} u+w ${PREFIX}/share/kde/templates/.source/*
+
+.include "../../mk/x11.buildlink.mk"
+.include "../../mk/bsd.pkg.mk"
