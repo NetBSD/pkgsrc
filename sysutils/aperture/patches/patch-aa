@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/01/05 18:02:20 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/17 23:57:53 jlam Exp $
 
---- Makefile.inc.orig	Wed Jan  5 02:34:12 2000
-+++ Makefile.inc	Wed Jan  5 02:34:14 2000
-@@ -3,7 +3,7 @@
+--- Makefile.inc.orig	Fri Jan 12 14:09:51 2001
++++ Makefile.inc
+@@ -3,8 +3,9 @@
  # NetBSDApertureDir variable in xc/config/cf/host.def before rebuilding 
  # the X server
  
 -APDIR=		/usr/local/aperture
 +APDIR=		${PREFIX}
  
++S=		${BSDSRCDIR}/sys
  KMODDIR=	${APDIR}/lkm
  BINDIR=		${APDIR}/bin
+ MANDIR= 	${APDIR}/man
