@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2005/01/18 00:08:17 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/11 00:19:23 hubertf Exp $
 bin/musixflx
 bin/musixtex
 man/man1/musixflx.1
-share/texmf/doc/musixtex/musixflx.1
 share/texmf/doc/musixtex/glossary.eps
 share/texmf/doc/musixtex/musixdoc.aux
 share/texmf/doc/musixtex/musixdoc.bat
@@ -17,6 +16,7 @@ share/texmf/doc/musixtex/musixdoc.mx1
 share/texmf/doc/musixtex/musixdoc.mx2
 share/texmf/doc/musixtex/musixdoc.ps
 share/texmf/doc/musixtex/musixdoc.toc
+share/texmf/doc/musixtex/musixflx.1
 share/texmf/fonts/source/musixtex/musexgen.mf
 share/texmf/fonts/source/musixtex/musix11.mf
 share/texmf/fonts/source/musixtex/musix13.mf
@@ -178,8 +178,6 @@ share/texmf/fonts/tfm/musixtex/xslz20d.tfm
 share/texmf/fonts/tfm/musixtex/xtie20.tfm
 share/texmf/tex/latex/musixtex/backgrnd.sty
 share/texmf/tex/latex/musixtex/multicol.sty
-share/texmf/tex/latex/musixtex/musixdoc.sty
-share/texmf/tex/latex/musixtex/musixdoc.tex
 share/texmf/tex/latex/musixtex/musixadd.tex
 share/texmf/tex/latex/musixtex/musixbar.tex
 share/texmf/tex/latex/musixtex/musixbbm.tex
@@ -190,6 +188,8 @@ share/texmf/tex/latex/musixtex/musixcpt.sty
 share/texmf/tex/latex/musixtex/musixcpt.tex
 share/texmf/tex/latex/musixtex/musixdat.tex
 share/texmf/tex/latex/musixtex/musixdia.tex
+share/texmf/tex/latex/musixtex/musixdoc.sty
+share/texmf/tex/latex/musixtex/musixdoc.tex
 share/texmf/tex/latex/musixtex/musixeng.tex
 share/texmf/tex/latex/musixtex/musixevo.tex
 share/texmf/tex/latex/musixtex/musixext.tex
@@ -213,15 +213,16 @@ share/texmf/tex/latex/musixtex/musixste.tex
 share/texmf/tex/latex/musixtex/musixstf.tex
 share/texmf/tex/latex/musixtex/musixstr.tex
 share/texmf/tex/latex/musixtex/musixsty.tex
-share/texmf/tex/latex/musixtex/musixtex.sty
-share/texmf/tex/latex/musixtex/musixtex.tex
 share/texmf/tex/latex/musixtex/musixtex.fmt
 share/texmf/tex/latex/musixtex/musixtex.ins
 share/texmf/tex/latex/musixtex/musixtex.log
+share/texmf/tex/latex/musixtex/musixtex.sty
+share/texmf/tex/latex/musixtex/musixtex.tex
 share/texmf/tex/latex/musixtex/musixtri.tex
 share/texmf/web2c/musixtex.fmt
 @exec %D/bin/texconfig rehash
 @unexec %D/bin/texconfig rehash
+@exec %D/bin/mktexlsr
 @unexec %D/bin/mktexlsr
 @dirrm share/texmf/tex/latex/musixtex
 @dirrm share/texmf/fonts/tfm/musixtex
