@@ -1,33 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2004/01/07 02:21:16 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/22 12:43:10 jmmv Exp $
 #
 
-DISTNAME=	librsvg-2.5.0
-PKGNAME=	${DISTNAME:S/-/2-/}
-PKGREVISION=	3
-CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.5/}
-EXTRACT_SUFX=	.tar.bz2
+.include "Makefile.common"
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://librsvg.sourceforge.net/
-COMMENT=	SVG library for GNOME2
+PKGNAME=		${DISTNAME:S/-/2-/}
+PKGREVISION=		4
 
-USE_BUILDLINK2=		YES
-USE_X11=		YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-PKGCONFIG_OVERRIDE=	${WRKSRC}/librsvg-2.0.pc.in
-
-CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--with-gimp=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/librsvg2
-
-.if !defined(PKG_SYSCONFDIR.gtk2) || empty(PKG_SYSCONFDIR.gtk2)
-MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFBASEDIR}/gtk-2.0"
-.else
-MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFDIR.gtk2}"
-.endif
+CONFIGURE_ARGS+=	--disable-pixbuf-loader
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
@@ -38,5 +17,4 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFDIR.gtk2}"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../textproc/libcroco/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
