@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/03/13 17:36:43 fredb Exp $
+# $NetBSD: Makefile,v 1.23 2002/03/15 00:33:52 fredb Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=	Handle external logins, send and receive faxes
 
 CONFLICTS=	hylafax-[0-9]*
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]//}
 INFO_FILES=	mgetty.info
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
