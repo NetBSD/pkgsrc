@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 12:22:20 wiz Exp $
+include/X11/extensions/composite.h
+include/X11/extensions/compositeproto.h
+lib/pkgconfig/compositeext.pc
+share/doc/compositeext/protocol
+@dirrm share/doc/compositeext
