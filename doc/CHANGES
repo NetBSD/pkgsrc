@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1769 2003/03/25 16:50:23 gehenna Exp $
+$NetBSD: CHANGES,v 1.1770 2003/03/25 17:45:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1311,3 +1311,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xpdf-thai to 20020116 [salo 2003-03-25]
 	Updated xpdf-turkish to 20020410 [salo 2003-03-25]
 	Updated cvsync to 0.15.2 [gehenna 2003-03-25]
+	Updated squid to 2.5.2 [taca 2003-03-25]
