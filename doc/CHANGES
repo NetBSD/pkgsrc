@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1509 2003/03/01 06:24:43 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1510 2003/03/01 09:24:56 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -866,3 +866,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated auctex to 11.13nb1 [uebayasi 2003-03-01]
 	Updated ircu to 2.10.11.04 [grant 2003-03-01]
 	Updated emacs to 20.7nb2 [grant 2003-03-01]
+	Added emacs-packages-0.0 [uebayasi 2003-03-01]
