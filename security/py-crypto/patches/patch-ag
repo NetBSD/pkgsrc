@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 1998/08/11 07:59:11 agc Exp $
+
+Avoid conflicts with NetBSD ENDIAN macros
+
+--- framewks/block.in	1998/08/11 07:33:22	1.1
++++ framewks/block.in	1998/08/11 07:34:06
+@@ -40,11 +40,11 @@
+ #define MODE_PGP 4
+ 
+        /* Endianness testing and definitions */
+-#define TestEndianness(variable) {int i=1; variable=BIG_ENDIAN;\
+-                                  if (*((char*)&i)==1) variable=LITTLE_ENDIAN;}
++#define TestEndianness(variable) {int i=1; variable=Py_BIG_ENDIAN;\
++                                  if (*((char*)&i)==1) variable=Py_LITTLE_ENDIAN;}
+ 
+-#define LITTLE_ENDIAN 1
+-#define BIG_ENDIAN 0
++#define Py_LITTLE_ENDIAN 1
++#define Py_BIG_ENDIAN 0
+ 
+ 
+         /*

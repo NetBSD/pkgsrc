@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 1998/08/11 07:59:10 agc Exp $
+
+Avoid conflicts with NetBSD ENDIAN macros
+
+--- hash/sha.c	1998/08/11 07:25:42	1.1
++++ hash/sha.c	1998/08/11 07:27:10
+@@ -280,7 +280,7 @@
+     {
+     LONG value;
+ 
+-    if (Endianness==BIG_ENDIAN) return;
++    if (Endianness==Py_BIG_ENDIAN) return;
+     byteCount /= sizeof( LONG );
+     while( byteCount-- )
+         {

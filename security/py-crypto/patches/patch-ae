@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1998/08/11 07:59:10 agc Exp $
+
+Avoid conflicts with NetBSD ENDIAN macros
+
+--- hash/md5.c	1998/08/11 07:25:42	1.1
++++ hash/md5.c	1998/08/11 07:26:20
+@@ -49,7 +49,7 @@
+  */
+ #include <string.h>		/* for memcpy() */
+ 
+-#define byteReverse(ptr, field, num)  if (ptr->Endianness==BIG_ENDIAN)\
++#define byteReverse(ptr, field, num)  if (ptr->Endianness==Py_BIG_ENDIAN)\
+ {uint32 t, longs=num; unsigned char *buf=(unsigned char*)&(ptr->field);\
+     do {\
+ 	t = (uint32) ((unsigned) buf[3] << 8 | buf[2]) << 16 |\

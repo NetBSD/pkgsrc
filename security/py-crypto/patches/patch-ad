@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 1998/08/11 07:59:10 agc Exp $
+
+Avoid conflicts with NetBSD ENDIAN macros
+
+--- block/idea.c	1998/08/11 07:24:06	1.1
++++ block/idea.c	1998/08/11 07:24:54
+@@ -142,7 +142,7 @@
+     x2 = *in++;
+     x3 = *in++;
+     x4 = *in;
+-    if (self->Endianness==LITTLE_ENDIAN) 
++    if (self->Endianness==Py_LITTLE_ENDIAN) 
+       {
+ 	x1 = (x1 >> 8) | (x1 << 8);
+ 	x2 = (x2 >> 8) | (x2 << 8);
+@@ -177,7 +177,7 @@
+ 
+     out = (word16 *) block;
+    
+-    if (self->Endianness==BIG_ENDIAN) 
++    if (self->Endianness==Py_BIG_ENDIAN) 
+       {
+ 	*out++ = x1;
+ 	*out++ = x3;
