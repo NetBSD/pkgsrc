@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.441 2002/11/02 04:11:31 rh Exp $
+$NetBSD: CHANGES,v 1.442 2002/11/02 05:47:15 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3506,3 +3506,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gbib-0.1.1b [rh 2002-11-02]
 	Added bug-buddy-2.2.0 [rh 2002-11-02]
 	Added eog-1.0.3 as eog2 [rh 2002-11-02]
+	Added gal2-0.0.7 [rh 2002-11-02]
