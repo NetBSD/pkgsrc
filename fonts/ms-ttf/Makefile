@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2002/03/09 20:19:21 rh Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/11 10:09:30 uebayasi Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.microsoft.com/typography/downloads/ \
-		http://www.asia.microsoft.com/typography/downloads/ \
-		http://www.eu.microsoft.com/typography/downloads/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=corefonts/}
 DISTFILES=	andale32.exe webdin32.exe trebuc32.exe georgi32.exe \
 		verdan32.exe comic32.exe arialb32.exe impact32.exe \
 		arial32.exe times32.exe courie32.exe
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.microsoft.com/typography/fontpack/
+HOMEPAGE=	http://corefonts.sourceforge.net/
 COMMENT=	TrueType fonts from Microsoft
 
 BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
