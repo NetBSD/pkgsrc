@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.111 2000/09/08 12:55:12 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.112 2000/09/15 22:05:46 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -298,8 +298,11 @@ more information. If you use a remote NFS server's storage, be sure to not
 actually compile on NFS storage, as this slows things down a lot.
 
 
- 3.2.1 /etc/mk.conf and other configuration
- ==========================================
+ 3.2.1 Configuration
+ ===================
+
+ 3.2.1.1 /etc/mk.conf
+ ====================
 
 You may want to set things in /etc/mk.conf:
 
@@ -315,9 +318,20 @@ You may want to set things in /etc/mk.conf:
                             no-profit \
                             no-commercial-use \
                             non-commercial-use \
-                            limited-redistribution
+                            limited-redistribution \
+			    kermit-license \
+			    sun-swing-license \
+			    sun-jsdk20-license
 
 
+ 3.2.1.2 build.conf
+ ==================
+
+In pkgsrc/mk/bulk, copy ``build.conf-example'' to ``build.conf'' and
+edit it, following the comments in that file. This is the config
+file that determines where logfiles are generated after the build,
+where to mail the build report, where your pkgsrc is located and
+which user to su(8) to to do a 'cvs update'.
 
     
  3.2.2 Other environmental considerations
@@ -339,39 +353,64 @@ after the bulk build is finished. You have been warned! :)
  3.2.3 Operation
  ===============
 
-Update your pkgsrc, make sure you don't need any of the packages still
-installed. Be sure to remove all other things (from /usr/local, ...).
-Become root and type:
+Make sure you don't need any of the packages still installed.
+BEWARE: During the bulk build, ALL packages will be removed!!!
+Be sure to remove all other things (from /usr/local, ...).  Become
+root and type:
 
-	$ su
         # cd /usr/pkgsrc
-	# pkg_delete -rR \*
-	# rm */*/.broken*
-        # make bulk-package
+        # sh mk/bulk/build
+
+If for some reason your last build didn't complete (power failure,
+system panic, ...), you can continue it by running:
+
+	# sh mk/bulk/build restart
+
+At the end of the bulk run, you will get a summary via mail, and find
+build logs in the directory specified by "FTP" in the "build.conf"
+file.
+
+
+ 3.2.4 What it does
+ ==================
+
+The bulk builds consist of three steps:
+
+1. pre-build: The script updates your pkgsrc via (anon)cvs, then cleans
+	out any broken distfiles, and removes all packages installed.
+
+2. the bulk build: This is basically 'make bulk-package' with an optimized
+	order in which packages will be built. Packages that don't require
+	other packages will be built first, and packages with many depends
+	will be built later.
+
+3. post-build: Generates a report that's placed in the directory specified
+	in the build.conf file named ``broken.html'', a short version of
+	that report will also be mailed to the build's admin.
 
 During the build, a list of broken packages will be compiled in
 .usr/pkgsrc/.broken  (or .../.broken.${MACHINE} if OBJMACHINE is set),
 individual build logs of broken builds can be found in the package's
 directory. These files are used by the bulk-targets to mark broken builds
 to not waste time trying to rebuild them, and they can be used to debug
-these borken package builds later. 
+these broken package builds later. 
 
 	
- 3.2.4 Disk space requirements
+ 3.2.5 Disk space requirements
  =============================
 
 Currently, roughly the following requirements are valid for
-1.4.2/i386:
+1.5/i386:
 
  * Distfiles:                         1500MB (NFS ok)
- * Full set of all binaries:           800MB (NFS ok)
+ * Full set of all binaries:          1000MB (NFS ok)
  * Temp space for compiling:          1500MB (local disk recommended)
 
 Note that all pkgs will be deinstalled as soon as they are turned into a
 binary package, and that work-sources are removed, so there is no huge
 demand to disk space. Afterwards, if the package is needed again, it will
 be installed via pkg_add instead of building again, so there are no cycles
-wasted. 
+wasted by recompiling. 
 
 
 ====================================
