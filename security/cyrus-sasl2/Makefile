@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/11/15 21:58:16 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/02/26 08:14:11 jlam Exp $
 
 .include "Makefile.common"
 
@@ -28,8 +28,8 @@ SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
 CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
 BUILD_DEFS+=		SASLSOCKETDIR
 
-# Support using the Courier authdaemon (mail/courier-auth*) for plaintext
-# password authentication.
+# Support using the Courier authdaemond (security/courier-authlib) for
+# plaintext password authentication.
 #
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}
