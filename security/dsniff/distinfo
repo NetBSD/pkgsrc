@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:30 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/10/29 18:10:10 cube Exp $
 
 SHA1 (dsniff-2.3.tar.gz) = 671a1df823ab0657fc95e79112924a57281e9c3b
 Size (dsniff-2.3.tar.gz) = 126797 bytes
 SHA1 (patch-aa) = b50347c772c13abd6b62a80315c7bfecc139ba60
+SHA1 (patch-ab) = 88c8e182a95b03120446f1453806e5354c074b83
