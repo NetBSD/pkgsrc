@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/06/01 11:23:25 rh Exp $
+# $NetBSD: Makefile,v 1.20 2000/06/21 03:53:35 jlam Exp $
 #
 
 DISTNAME=	pine4.21
@@ -9,7 +9,15 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.washington.edu/pine/
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	# defined
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+BUILDNAME= so5
+.else
+BUILDNAME= neb
+.endif
 
 do-build:
 	cd ${WRKSRC} && ./build ${BUILDNAME} CC="${LIBTOOL} ${CC}" \
@@ -29,8 +37,3 @@ do-install:
 			${PREFIX}/include/pico/
 
 .include "../../mk/bsd.pkg.mk"
-.if ${OPSYS} == "SunOS"
-BUILDNAME= so5
-.else
-BUILDNAME= neb
-.endif

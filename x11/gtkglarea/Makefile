@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.13 2000/06/01 11:23:46 rh Exp $
+# $NetBSD: Makefile,v 1.14 2000/06/21 03:20:33 jlam Exp $
 
-DISTNAME=	gtkglarea-1.2.1
-CATEGORIES=	x11 graphics
-MASTER_SITES=	http://www.student.oulu.fi/~jlof/gtkglarea/download/
+DISTNAME=		gtkglarea-1.2.1
+CATEGORIES=		x11 graphics
+MASTER_SITES=		http://www.student.oulu.fi/~jlof/gtkglarea/download/
 
-MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.student.oulu.fi/~jlof/gtkglarea/
+MAINTAINER=		hubertf@netbsd.org
+HOMEPAGE=		http://www.student.oulu.fi/~jlof/gtkglarea/
 
-DEPENDS+=       Mesa-*:../../graphics/Mesa
-DEPENDS+=       gtk+-1.2.*:../../x11/gtk
+DEPENDS+=		Mesa-*:../../graphics/Mesa
+DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
-GNU_CONFIGURE=	yes
-USE_PKGLIBTOOL=	yes
-USE_X11BASE=	yes
-CONFIGURE_ARGS+= --with-gtk-prefix=${X11BASE}
-CONFIGURE_ARGS+= --with-GL-prefix=${X11BASE}
-CONFIGURE_ARGS+= --with-lib-MesaGL
+USE_X11BASE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE}
+CONFIGURE_ARGS+=	--with-GL-prefix=${X11BASE}
+CONFIGURE_ARGS+=	--with-lib-MesaGL
+
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 post-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/gtkglarea
@@ -27,6 +29,6 @@ post-install:
 	${INSTALL_MAN} gtkglarea.txt ${PREFIX}/share/doc/gtkglarea
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gtkgl.m4 \
-	  ${LOCALBASE}/share/aclocal/gtkgl.m4
+		${LOCALBASE}/share/aclocal/gtkgl.m4
 
 .include "../../mk/bsd.pkg.mk"
