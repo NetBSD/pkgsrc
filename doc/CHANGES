@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6148 2004/06/05 19:06:16 nathanw Exp $
+$NetBSD: CHANGES,v 1.6149 2004/06/05 19:09:11 nathanw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2804,3 +2804,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gkrellm-server to 2.2.1 [cube 2004-06-05]
 	Updated gkrellm-share to 2.2.1 [cube 2004-06-05]
 	Added howl-0.9.5 [nathanw 2004-06-05]
+	Added daapd-0.2.2b [nathanw 2004-06-05]
