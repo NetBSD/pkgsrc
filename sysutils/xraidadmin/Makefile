@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/30 17:30:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/30 17:40:04 jschauma Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3archive
@@ -32,8 +32,8 @@ do-configure:
 		${WRKSRC}/xraidadmin
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xraidadmin
-	${INSTALL_DATA} ${WRKSRC}/RAID_Admin.jar ${PREFIX}/share/xraidadmin/RAID_Admin.jar
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/xraidadmin
+	${INSTALL_DATA} ${WRKSRC}/RAID_Admin.jar ${PREFIX}/libexec/xraidadmin/RAID_Admin.jar
 	${INSTALL_SCRIPT} ${WRKSRC}/xraidadmin ${PREFIX}/bin/xraidadmin
 
 .include "../../mk/java-vm.mk"
