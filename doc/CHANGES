@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1053 2003/01/09 00:01:03 salo Exp $
+$NetBSD: CHANGES,v 1.1054 2003/01/09 02:23:58 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -151,3 +151,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added screentest-1.0 [jmmv 2003-01-08]
 	Updated silc-client to 0.9.11 [salo 2003-01-09]
 	Updated silc-server to 0.9.11 [salo 2003-01-09]
+	Updated createbuildlink to 2.4 [uebayasi 2003-01-09]
