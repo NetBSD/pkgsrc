@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/29 18:43:47 tv Exp $
+bin/fcpchk
+bin/fcpget
+bin/fcpgetsite
+bin/fcphello
+bin/fcpinv
+bin/fcpkey
+bin/fcpput
+bin/fcpputsite
+bin/ft
