@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/03 21:06:13 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/20 15:47:01 cjep Exp $
 
 DISTNAME=		ncview-1.92c
 CATEGORIES=		graphics
@@ -24,5 +24,9 @@ CONFIGURE_ARGS+=	--with-netcdf_incdir=${NETCDF}/include
 CONFIGURE_ARGS+=	--with-netcdf_libdir=${NETCDF}/lib
 CONFIGURE_ARGS+=	--with-udunits_incdir=${UDUNITS}/include
 CONFIGURE_ARGS+=	--with-udunits_libdir=${UDUNITS}/lib
+
+.if (${MACHINE_ARCH} == "arm32")
+. include "../../lang/gcc/Makefile.gcc"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
