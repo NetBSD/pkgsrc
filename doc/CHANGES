@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9279 2005/02/23 16:59:25 wiz Exp $
+$NetBSD: CHANGES,v 1.9280 2005/02/23 17:14:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1053,3 +1053,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated loudmouth to 0.17.2 [wiz 2005-02-23]
 	Updated p5-Exception-Class to 1.20 [wiz 2005-02-23]
 	Updated p5-Class-Container to 0.12 [wiz 2005-02-23]
+	Updated mgetty+sendfax to 1.1.31 [jwise 2005-02-23]
+	Updated p5-Apache-Session-Wrapper to 0.17nb2 [wiz 2005-02-23]
