@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1043 2003/11/18 13:46:22 xtraeme Exp $
+$NetBSD: TODO,v 1.1044 2003/11/18 13:53:35 cjep Exp $
 
 Suggested new packages
 ======================
@@ -301,6 +301,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-2.9.3
 	o nabi-0.10.0 [pkg/23448]
+	o nail-10.6 [cjep]
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
