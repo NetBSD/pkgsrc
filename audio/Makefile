@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2001/07/23 18:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2001/07/31 14:30:02 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -64,6 +64,7 @@ SUBDIR+=	gsm
 SUBDIR+=	guspatches
 SUBDIR+=	icecast
 SUBDIR+=	id3ed
+SUBDIR+=	id3lib
 SUBDIR+=	kdemultimedia
 SUBDIR+=	kdemultimedia2
 SUBDIR+=	krio
