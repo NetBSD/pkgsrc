@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/08 17:27:08 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/05/09 09:29:32 jmmv Exp $
 bin/bidwatcher
 man/man1/bidwatcher.1
 share/doc/bidwatcher/AUTHORS
@@ -6,6 +6,5 @@ share/doc/bidwatcher/COPYING
 share/doc/bidwatcher/INSTALL
 share/doc/bidwatcher/NEWS
 share/doc/bidwatcher/README
-share/doc/html/bidwatcher/quick_start.html
-@dirrm share/doc/html/bidwatcher
+share/doc/bidwatcher/quick_start.html
 @dirrm share/doc/bidwatcher
