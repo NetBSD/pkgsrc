@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1200 2003/01/22 22:49:31 kristerw Exp $
+$NetBSD: CHANGES,v 1.1201 2003/01/23 07:37:32 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -375,3 +375,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pv to 0.4.5 [kristerw 2003-01-22]
 	Added twelf-1.4 [kristerw 2003-01-22]
 	Updated docbook-xsl to 1.59.2 [jmmv 2003-01-22]
+	Updated imap-uw to 2002.2 [martti 2003-01-23]
+	Updated pine to 4.53 [martti 2003-01-23]
