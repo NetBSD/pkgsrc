@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/20 11:56:18 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/18 16:06:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -17,7 +17,6 @@ NO_PACKAGE=     Only unmodified original package can be distributed
 NO_WRKSUBDIR=   yes
 EXTRACT_CMD=
 EXTRACT_BEFORE_ARGS=
-CAT1=		rar.1
 
 pre-extract:
 	chmod a+x ${DISTDIR}/${DISTFILES}

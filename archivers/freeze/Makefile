@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:07 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/18 16:06:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/18 11:20:59 asami Exp 
 #
 
@@ -10,6 +10,5 @@ MAINTAINER=     lukin@okbmei.msk.su
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	prog
-MAN1=		freeze.1 melt.1 unfreeze.1 fcat.1 statist.1
 
 .include "../../mk/bsd.pkg.mk"
