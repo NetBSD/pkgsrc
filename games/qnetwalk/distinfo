@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/07 11:14:10 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:12:01 agc Exp $
 
 SHA1 (qnetwalk-1.1.tar.gz) = 7a245fa4243de7425c47d32f7c9a9a8603aabb59
+RMD160 (qnetwalk-1.1.tar.gz) = 49dfed6e96e0c779131c43e4e5203279b1ab2ab6
 Size (qnetwalk-1.1.tar.gz) = 129450 bytes
 SHA1 (patch-aa) = 7b2a3c5c1806405956454769f4beed26f25f2318
 SHA1 (patch-ab) = 4421ffa6d763ca1b26da671524445318de8ea6cd

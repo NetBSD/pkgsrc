@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 18:47:27 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:11:55 agc Exp $
 
 SHA1 (boson-all-0.8.tar.bz2) = 8af09f0632e0483e8d0ebd279ea302bbaa3518a7
+RMD160 (boson-all-0.8.tar.bz2) = eb894699fefa422ca05fde5e1a3b2cd864d4ecbb
 Size (boson-all-0.8.tar.bz2) = 32271883 bytes
 SHA1 (patch-aa) = a95b4abb4d13fce5731192b9f99a8e6baf69af69

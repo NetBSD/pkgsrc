@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/04/23 20:36:52 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 23:12:01 agc Exp $
 
 SHA1 (neverball-1.2.2.tar.gz) = 462a01446083aa12993cef8b0cc8d64bdf1d026d
+RMD160 (neverball-1.2.2.tar.gz) = 83f5276f00ba77067a8f68773479172e7c6cca21
 Size (neverball-1.2.2.tar.gz) = 7624876 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/02/14 04:31:56 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 23:11:56 agc Exp $
 
 SHA1 (EXCH314S.zip) = 7d8ffbd94dc86a97512826e611048a691c8c646d
+RMD160 (EXCH314S.zip) = 0503200c210aaf7ddc69e1372392e8ea690505ea
 Size (EXCH314S.zip) = 110676 bytes
 SHA1 (patch-aa) = 40e90ccef0f2f1cd56ab8545ab73f93ccdb04017
 SHA1 (patch-ab) = a9385051ed9d482e02bbeff40b5d9552ebc56c9f

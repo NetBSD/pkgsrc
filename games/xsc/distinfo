@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/03 14:27:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:12:05 agc Exp $
 
 SHA1 (xsc-1.5.tar.gz) = 3b6b71c2e9d132c56e276896f4869dc08a0e43a3
+RMD160 (xsc-1.5.tar.gz) = d2519f75ad3089215b4c89ee765d1585de37db33
 Size (xsc-1.5.tar.gz) = 86015 bytes

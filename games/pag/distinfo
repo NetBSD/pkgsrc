@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/11 22:53:24 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:12:01 agc Exp $
 
 SHA1 (pag-0.91.tar.gz) = 41bacc434a13c224b80221f825ffbc9858536db0
+RMD160 (pag-0.91.tar.gz) = c80bc0ac4ab91944049704627f2cab0406208cee
 Size (pag-0.91.tar.gz) = 41811 bytes

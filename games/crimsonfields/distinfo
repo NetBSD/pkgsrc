@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.10 2004/11/26 21:14:41 wiz Exp $
+$NetBSD: distinfo,v 1.11 2005/02/23 23:11:56 agc Exp $
 
 SHA1 (crimson-0.4.5.tar.bz2) = 631a1ffef756b32b3ff09bb6560bddde9163d645
+RMD160 (crimson-0.4.5.tar.bz2) = f58a0672e5e21e85b085d65000693584d5d70288
 Size (crimson-0.4.5.tar.bz2) = 635418 bytes

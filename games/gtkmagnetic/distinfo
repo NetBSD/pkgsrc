@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/04 16:25:15 dillo Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:11:59 agc Exp $
 
 SHA1 (Magnetic22Src.zip) = 12ff26818415ba0435924c8098472e18b0a5328b
+RMD160 (Magnetic22Src.zip) = 41278a01c168c5febc6714d6cc83910ffd79ad96
 Size (Magnetic22Src.zip) = 388772 bytes

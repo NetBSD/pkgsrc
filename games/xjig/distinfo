@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/05/23 23:50:05 kristerw Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 23:12:04 agc Exp $
 
 SHA1 (xjig-2.4.tgz) = 539ee5974d7228e69bb84de1424064f84cac7577
+RMD160 (xjig-2.4.tgz) = 8abe64ebd9045eb4c39db9cec7f2907212c26b1c
 Size (xjig-2.4.tgz) = 124272 bytes
 SHA1 (patch-aa) = d2999a3388c91c8d90cca3b62ae007d8202cb8ac

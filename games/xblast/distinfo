@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 23:12:03 agc Exp $
 
 SHA1 (xblast-2.6.beta-sound.tar.gz) = 3700f50d54e1c5fa4bbf97da964cf8cae5261292
+RMD160 (xblast-2.6.beta-sound.tar.gz) = bf9be037b7e3ff426a861d40c266ddd160a4b159
 Size (xblast-2.6.beta-sound.tar.gz) = 2471921 bytes
 SHA1 (patch-aa) = cc76f6814b2f37ad221ade5a7261fbdfb4aa0429
 SHA1 (patch-ab) = 964b7139513baef671280e1ced905095fe83cfb6

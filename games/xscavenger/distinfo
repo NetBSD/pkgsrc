@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/04/09 00:10:25 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 23:12:05 agc Exp $
 
 SHA1 (xscavenger-1.4.4.tgz) = d9ef34d2ec1a9dfeca398004725cae4878bf9f2e
+RMD160 (xscavenger-1.4.4.tgz) = e410c86dbf406243cfac3d0f81ea83e79cdeab32
 Size (xscavenger-1.4.4.tgz) = 193346 bytes
 SHA1 (patch-aa) = 41145bdd7b44a53b0fea555e232915dc4a64f646
 SHA1 (patch-ab) = 64b844663ac8167f98751650b29b6faf1c126c53
