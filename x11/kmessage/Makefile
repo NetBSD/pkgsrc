@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/12/08 14:41:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/24 09:53:50 jmmv Exp $
 
 DISTNAME=	kmessage-0.1
 PKGREVISION=	1
 CATEGORIES=	x11 kde
 MASTER_SITES=	http://soliton.wins.uva.nl/~wijnhout/kmessage/
 
-MAINTAINER=	markd@netbsd.org
+MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://soliton.wins.uva.nl/~wijnhout/kmessage/
 COMMENT= 	KMessage is an xmessage clone for KDE
 

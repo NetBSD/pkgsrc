@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/28 15:15:13 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:50 jmmv Exp $
 #
 
 DISTNAME=	RenderableCharts-0.6
@@ -6,7 +6,7 @@ PKGNAME=	zope25-RenderableCharts-0.6
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/Dirk.Datzert/RenderableCharts/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/Dirk.Datzert/RenderableCharts/
 COMMENT=	Drawings with reportlab's graphics toolkit
 
