@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.18 2004/02/03 21:30:26 jlam Exp $
+# $NetBSD: gcc.mk,v 1.19 2004/02/03 21:48:14 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -17,34 +17,6 @@ _GCC2_PATTERNS=	2.8 2.8.* 2.9 2.9.* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 # _GCC3_PATTERNS matches N s.t. 2.95.3 < N.
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 		2.[1-9][0-9][0-9]* 3.* [4-9]*
-
-_CC=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.for _dir_ in ${PATH:C/\:/ /g}
-.  if empty(_CC:M/*)
-.    if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
-_CC=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.    endif
-.  endif
-.endfor
-
-.if !empty(_CC:M${LOCALBASE}/*)
-_IS_BUILTIN_GCC=	NO
-.else
-.  if !empty(_CC:M/*)
-#
-# GCC in older versions of Darwin report "Apple Computer ... based on gcc
-# version ...", so we can't just grep for "^gcc".
-#
-_IS_BUILTIN_GCC!=	\
-	if ${_CC} -v 2>&1 | ${GREP} -q "gcc version"; then	\
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-.  else
-_IS_BUILTIN_GCC=	NO
-.  endif
-.endif
 
 # Distill the GCC_REQD list into a single _GCC_REQD value that is the
 # highest version of GCC required.
@@ -153,6 +125,34 @@ USE_GCC_SHLIB?=		yes
 _USE_PKGSRC_GCC=	NO
 .endif
 
+_CC=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.for _dir_ in ${PATH:C/\:/ /g}
+.  if empty(_CC:M/*)
+.    if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
+_CC=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.    endif
+.  endif
+.endfor
+
+.if !empty(_CC:M${LOCALBASE}/*)
+_IS_BUILTIN_GCC=	NO
+.else
+.  if !empty(_CC:M/*)
+#
+# GCC in older versions of Darwin report "Apple Computer ... based on gcc
+# version ...", so we can't just grep for "^gcc".
+#
+_IS_BUILTIN_GCC!=	\
+	if ${_CC} -v 2>&1 | ${GREP} -q "gcc version"; then	\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.  else
+_IS_BUILTIN_GCC=	NO
+.  endif
+.endif
+
 .if !defined(_USE_PKGSRC_GCC)
 .  if !empty(_IS_BUILTIN_GCC:M[nN][oO])
 _USE_PKGSRC_GCC=	YES
@@ -174,6 +174,24 @@ _USE_PKGSRC_GCC!=	\
 		${ECHO} "YES";						\
 	fi
 .  endif
+.endif
+
+# Check if any of the versions of GCC in pkgsrc can satisfy the _GCC_REQD
+# requirement.
+#
+.if !defined(_NEED_NEWER_GCC)
+_PKGSRC_GCC_VERSION=	${_GCC_PKGBASE}-${_GCC_DIST_VERSION}
+_NEED_NEWER_GCC!=	\
+	if ${PKG_ADMIN} pmatch '${_GCC_DEPENDS}' ${_PKGSRC_GCC_VERSION}; then \
+		${ECHO} "NO";						\
+	else								\
+		${ECHO} "YES";						\
+	fi
+MAKEFLAGS+=	_NEED_NEWER_GCC="${_NEED_NEWER_GCC}"
+.endif
+.if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && \
+    !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
+PKG_SKIP_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 .endif
 
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
@@ -205,28 +223,8 @@ _GCC_LDFLAGS=	# empty
 _GCC_LDFLAGS+=	-L${_dir_} ${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .  endfor
 LDFLAGS+=	${_GCC_LDFLAGS}
-.endif
-
-# Check if any of the versions of GCC in pkgsrc can satisfy the _GCC_REQD
-# requirement.
-#
-.if !defined(_NEED_NEWER_GCC)
-_PKGSRC_GCC_VERSION=	${_GCC_PKGBASE}-${_GCC_DIST_VERSION}
-_NEED_NEWER_GCC!=	\
-	if ${PKG_ADMIN} pmatch '${_GCC_DEPENDS}' ${_PKGSRC_GCC_VERSION}; then \
-		${ECHO} "NO";						\
-	else								\
-		${ECHO} "YES";						\
-	fi
-MAKEFLAGS+=	_NEED_NEWER_GCC="${_NEED_NEWER_GCC}"
-.endif
-.if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && \
-    !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
-PKG_SKIP_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
-.endif
 
 # Add the dependency on GCC.
-.if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 .  if empty(USE_BUILDLINK2:M[nN][oO])
 .    for _dir_ in ${_GCC_PKGSRCDIR}
 .      include "${_dir_}/buildlink2.mk"
