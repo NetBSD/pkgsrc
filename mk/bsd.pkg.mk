@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.541 2000/08/16 21:00:59 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.542 2000/08/16 23:15:15 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -307,15 +307,11 @@ PATCH_ARGS+=		-C
 PATCH_DIST_ARGS+=	-C
 .endif
 
-# New decompress and extract definitions
-
-# If the archive has a .bz2 suffix, use bzip2 to extract information
-# If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
-# and append 2 tar blocks of zero bytes on the end, in case the archive
-# was written with a buggy version of GNU tar.
-
+# If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
+# pulling in the "bzip2" package if necessary. [Note: this is only for
+# the benefit of pre 1.5 NetBSD systems. "gzcat" on newer systems happily
+# decodes bzip2.] Do likewise for ".zip" and ".lha" distfiles.
 EXTRACT_SUFX?=		.tar.gz
-
 .if ${EXTRACT_SUFX} == ".tar.bz2"
 .if exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat
@@ -329,12 +325,14 @@ DECOMPRESS_CMD?=	${CAT}
 .elif ${EXTRACT_SUFX} == ".zip"
 BUILD_DEPENDS+=		unzip:../../archivers/unzip
 EXTRACT_CMD?=		unzip -Laq ${DOWNLOADED_DISTFILE}
+.elif ${EXTRACT_SUFX} == ".lzh"
+BUILD_DEPENDS+=		lha:../../archivers/lha
+EXTRACT_CMD?=		lha xq ${DOWNLOADED_DISTFILE}
 .else
 DECOMPRESS_CMD?=	${GZCAT}
 .endif
 
 # Also need bzip2 for PATCHFILES with .bz2 suffix.
-
 .if defined(PATCHFILES)
 .if ${PATCHFILES:E} == "bz2" && ${EXTRACT_SUFX} != ".tar.bz2"
 .if exists(/usr/bin/bzcat)
@@ -349,6 +347,9 @@ BUILD_DEPENDS+=		${BZCAT}:../../archivers/bzip2
 # If this is empty, then everything gets extracted.
 EXTRACT_ELEMENTS?=	
 
+# If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
+# and append 2 tar blocks of zero bytes on the end, in case the archive
+# was written with a buggy version of GNU tar.
 .if defined(EXTRACT_USING_PAX)
 EXTRACT_CMD?=		(${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2) | ${PAX} -r ${EXTRACT_ELEMENTS}
 .else
