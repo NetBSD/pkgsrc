@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/19 09:25:25 agc Exp $
+
+--- Makefile.orig	Sat Apr 28 09:45:46 2001
++++ Makefile
+@@ -1,22 +1,20 @@
+ 
+-CC=gcc
+-CFLAG=-O2 -g -Wall -Iinclude
+-LIBS= -Llib -lhz
++CFLAG+=-Wall -Iinclude
+ 
+ .PHONY: all hzlib clean install-home install
+ 
+-all: autob5 autogb hzlib  xchat-plugins
++all: autob5 autogb hzlib
+ 
+ autob5: autogb
+ 	rm -f autob5;ln -s autogb autob5
+ autogb:autogb.c  hzlib
+-	$(CC) $(CFLAG) $(LIBS) autogb.c -lhz -o autogb
++	$(LIBTOOL) --mode=link $(CC) $(CFLAG) autogb.c -o autogb hzconvert/libhz.la $(LIBGETOPT)
+ autogb-static:autogb.c  hzlib
+ 	$(CC) $(CFLAG) autogb.c lib/libhz.a -o autogb
+ hzlib:
+-	cd hzconvert;make
++	cd hzconvert;$(MAKE)
+ xchat-plugins: 
+-	cd contrib/xchat-plugins;make
++	cd contrib/xchat-plugins;$(MAKE)
+ clean:
+ 	rm -f autob5 autogb *.o *~
+ 	rm -f include/*~
+@@ -30,12 +28,7 @@
+ 	ln -s $(HOME)/bin/autogb $(HOME)/bin/autob5
+ 	chmod 755 $(HOME)/bin/autogb 
+ install:
+-	install -m 755 autogb $(DESTDIR)/usr/bin
+-	install -m 755 lib/libhz.so.0.0 $(DESTDIR)/usr/lib
+-	cd $(DESTDIR)/usr/lib;ln -s  libhz.so.0.0 libhz.so.0
+-	cd $(DESTDIR)/usr/lib;ln -s  libhz.so.0 libhz.so
+-	install -m 755 lib/libhz.a $(DESTDIR)/usr/lib
+-	install -m 755 contrib/xchat-plugins/xchat-autogb.so $(DESTDIR)/usr/share/zh-autoconvert
+-	install -m 755 contrib/xchat-plugins/xchat-autob5.so $(DESTDIR)/usr/share/zh-autoconvert
+-	install -m 644 include/*.h  $(DESTDIR)/usr/include
+-	ln -s autogb $(DESTDIR)/usr/bin/autob5
++	cd hzconvert;$(MAKE) install
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) autogb $(PREFIX)/bin
++	$(BSD_INSTALL_DATA) include/*.h $(PREFIX)/include
++	ln -fs $(PREFIX)/bin/autogb $(PREFIX)/bin/autob5
