@@ -1,9 +1,9 @@
-$NetBSD: md5,v 1.3 1999/08/23 09:23:04 tron Exp $
+$NetBSD: md5,v 1.4 1999/08/27 20:34:58 jlam Exp $
 
-MD5 (xemacs/xemacs-base-1.30-pkg.tar.gz) = d9e95850fe8e13a04166d59d62fb38ab
-MD5 (xemacs/xemacs-devel-1.21-pkg.tar.gz) = aa472f2d412382c2fdd3150105ca7d1c
-MD5 (xemacs/c-support-1.12-pkg.tar.gz) = a793cd83bb595d34771332a46d2abfd4
-MD5 (xemacs/cc-mode-1.15-pkg.tar.gz) = ca73b190e79f96ab928eecd12af94222
+MD5 (xemacs/xemacs-base-1.32-pkg.tar.gz) = ae699a67f9922ad330fc1e5d45d3ff87
+MD5 (xemacs/xemacs-devel-1.23-pkg.tar.gz) = f0f629aed67569b793347ca9713fc836
+MD5 (xemacs/c-support-1.13-pkg.tar.gz) = d4568a0fd8c0ea31917ad37e190e443b
+MD5 (xemacs/cc-mode-1.16-pkg.tar.gz) = 9f8c53d9abca09982e739344c733c7c3
 MD5 (xemacs/debug-1.10-pkg.tar.gz) = 81fab3bf4b08036d122f1e6abb7ffc74
 MD5 (xemacs/dired-1.06-pkg.tar.gz) = 9c857aa147bf53d972ad6ac30ce34bd4
 MD5 (xemacs/edit-utils-1.41-pkg.tar.gz) = a3d5116811348bde6d56976ce94a991a
@@ -13,7 +13,7 @@ MD5 (xemacs/mail-lib-1.24-pkg.tar.gz) = 9428816ccc49d99be80dcbfc34d7917f
 MD5 (xemacs/mailcrypt-2.02-pkg.tar.gz) = 60c6d77df389b97c960d1447eebb5b96
 MD5 (xemacs/mule-base-1.32-pkg.tar.gz) = 40950af24540e6cfc6875a9ddc7bab5d
 MD5 (xemacs/net-utils-1.12-pkg.tar.gz) = 49b7e1d0f2f97519eca07d3562f6a00d
-MD5 (xemacs/os-utils-1.15-pkg.tar.gz) = 92a3d72b0df1fb79fef2aee88a4d4f50
+MD5 (xemacs/os-utils-1.18-pkg.tar.gz) = ef023e084cbc5633ddc9dbafbdbabff1
 MD5 (xemacs/prog-modes-1.21-pkg.tar.gz) = e83aff3ead4ab018d07b9b22e9ba301d
 MD5 (xemacs/psgml-1.14-pkg.tar.gz) = 44102484c3e5588bab21005cec1a46e1
 MD5 (xemacs/sgml-1.05-pkg.tar.gz) = ead5d1671dfebf394be76166c786b0c2
