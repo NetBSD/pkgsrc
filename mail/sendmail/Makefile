@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/06/14 07:30:23 kleink Exp $
+# $NetBSD: Makefile,v 1.14 2000/06/14 13:02:16 veego Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -34,14 +34,18 @@ BUILD_DEFS+=    USE_INET6
 MAKE_ENV+=	CONFIG="-f ${WRKSRC}/site.config-v6"
 .endif
 
+.if ${OPSYS} == "SunOS"
+USE_DB2?=	YES
+.else
 USE_DB2?=	NO
+.endif
 
 .if ${USE_DB2} == YES
 DEPENDS+=	db-2.7.7:../../databases/db
 
 MAKE_ENV+=	DB_ENVDEF="-I${LOCALBASE}/include/db2" \
 		DB_LIBS="-L${LOCALBASE}/lib -ldb2"
-PLIST_SRC=	${WRKDIR}/PLIST
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 .else
 MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
 .endif
@@ -71,7 +75,7 @@ post-build:
 	${ECHO} >>${MESSAGE_FILE} ""
 	${ECHO} >>${MESSAGE_FILE} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all"
 	${ECHO} >>${MESSAGE_FILE} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"."
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
 	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
 	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
 .endif
