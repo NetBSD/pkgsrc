@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2004/08/12 12:13:54 adam Exp $
+# $NetBSD: Makefile,v 1.79 2004/09/06 19:55:07 tron Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -102,13 +102,13 @@ post-extract:
 	#
 	# Correct hardcoded paths in man pages.
 	#
-	cd ${WRKSRC}; for file in ${MANFILES}; do			\
-		f=`${ECHO} $${file} | ${SED} "s|\(.*\)\.\([0-9]\).*|\1.\2|"`; \
+	cd ${WRKSRC}; for FILE in ${MANFILES}; do			\
+		${CP} $${FILE} $${FILE}.broken;				\
 		${SED}	-e "s|/usr/etc/imapd|${PREFIX}/libexec/imapd|g"	\
 			-e "s|/etc/rimapd|${PREFIX}/sbin/rimapd|g"	\
 			-e "s|/usr/etc/ipop2d|${PREFIX}/libexec/ipop2d|g" \
 			-e "s|/usr/etc/ipop3d|${PREFIX}/libexec/ipop3d|g" \
-			$${file} > $${f};				\
+			$${FILE}.broken > $${FILE};			\
 	done
 
 BUILD_DEFS+=	IMAP_UW_MAILSPOOLHOME
