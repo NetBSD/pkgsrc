@@ -1,10 +1,10 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:28:00 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/12/30 13:46:03 wiz Exp $
 
 This package is distributed under the following conditions:
 
 1. Source code distribution is fully free.
-2. Binary distribution is only permitted under licence from
+2. Binary distribution is only permitted under license from
 the package maintainer, Nobuhiro Yasutomi (nobu@psrc.isac.co.jp).
 
 This is described in the README file in Japanese.
