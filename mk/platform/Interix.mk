@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.26 2005/03/19 03:32:36 tv Exp $
+# $NetBSD: Interix.mk,v 1.27 2005/03/21 14:49:25 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -33,18 +33,24 @@
 #   (main lib)	0x48000000
 # zsh		*
 
-BULK_PREREQ+=	lang/gawk
+BULK_PREREQ+=	lang/gawk sysutils/coreutils
 
 # "catinstall" not yet supported as there's no shipped [gn]roff
 MANINSTALL=	maninstall
 MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
 
-# Allow for pkgsrc gawk as a newer and less buggy drop-in replacement.
-.if exists(${LOCALBASE}/bin/gawk)
-AWK?=		${LOCALBASE}/bin/gawk
-.else
-AWK?=		/usr/contrib/bin/gawk
+# Use some pkgsrc versions as "better" replacements, if installed
+.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk)
+AWK?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 .endif
+.if exists(${LOCALBASE}/bin/gtar)
+GTAR?=		${LOCALBASE}/bin/gtar
+.endif
+.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort)
+SORT?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
+.endif
+
+AWK?=		/usr/contrib/bin/gawk
 BASENAME?=	/bin/basename
 CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
@@ -65,11 +71,7 @@ FILE_CMD?=	/bin/file
 FIND?=		/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
 GREP?=		/bin/grep
-.if exists(${LOCALBASE}/bin/gtar)
-GTAR?=		${LOCALBASE}/bin/gtar
-.else
 GTAR?=		${LOCALBASE}/bin/tar
-.endif
 GUNZIP_CMD?=	/usr/contrib/bin/gunzip -f
 GZCAT?=		/usr/contrib/bin/gunzip -c
 GZIP?=		-9
@@ -89,11 +91,7 @@ MTREE?=		${LOCALBASE}/sbin/mtree
 MV?=		/bin/mv
 NICE?=		/bin/nice
 PATCH?=		${LOCALBASE}/bin/gpatch
-.if exists(${LOCALBASE}/bin/pax)
 PAX?=		${LOCALBASE}/bin/pax
-.else
-PAX?=		/bin/pax
-.endif
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
