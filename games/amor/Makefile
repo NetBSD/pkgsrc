@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/05 02:29:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/05 02:36:58 hubertf Exp $
 #
 
 DISTNAME=	amor-0.6
@@ -10,7 +10,6 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.powerup.com.au/~mjones/amor/index.html
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
-DEPENDS+=	nmap-2.12:../../net/nmap
 
 USE_X11BASE=		yes	# To get this near KDE
 GNU_CONFIGURE=		yes
