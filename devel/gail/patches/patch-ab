@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/09/21 01:04:24 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/01/05 18:12:20 jmmv Exp $
 
---- Makefile.in.orig	Sat Sep  7 14:19:08 2002
-+++ Makefile.in	Sat Sep  7 14:19:16 2002
-@@ -91,7 +91,7 @@
+--- Makefile.in.orig	Fri Jan  3 17:05:03 2003
++++ Makefile.in
+@@ -86,7 +86,7 @@ STRIP = @STRIP@
  VERSION = @VERSION@
  ms_librarian = @ms_librarian@
  
 -SUBDIRS = libgail-util gail tests docs
-+SUBDIRS = libgail-util gail docs
++SUBDIRS = libgail-util gail
  
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = gail.pc
