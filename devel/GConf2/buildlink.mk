@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/05/22 16:24:59 agc Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/05/22 16:36:12 agc Exp $
 #
 # This Makefile fragment is included by packages that use gconf2.
 #
@@ -27,15 +27,12 @@ BUILDLINK_FILES.gconf2+=		lib/libgconf-2*
 
 REPLACE_BUILDLINK_SED+=	\
 	-e "s|-I${BUILDLINK_DIR}/\(include/gconf/\)|-I${BUILDLINK_PREFIX.gconf2}/\1|g"
-BUILDLINK_CONFIG_WRAPPER_SED+=	\
-	-e "s|-I${BUILDLINK_PREFIX.gconf2}/\(include/gconf/\)|-I${BUILDLINK_DIR}/\1|g"
 
 .include "../../databases/db3/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 
 BUILDLINK_TARGETS.gconf2=	gconf2-buildlink
-BUILDLINK_TARGETS.gconf2+=	gconf2-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gconf2}
 
 pre-configure: ${BUILDLINK_TARGETS.gconf2}
