@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:07:06 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/08 04:03:15 jlam Exp $
 
 DISTNAME=	ppsmall-1.0
 PKGNAME=	ppunpack-1.0
@@ -13,7 +13,7 @@ COMMENT=	Decompresses Amiga PowerPacker files
 WRKSRC=		${WRKDIR}/PPUnpack
 USE_BUILDLINK2=	# defined
 
-MAKE_FLAGS=	CC="${BUILDLINK_CC}" COPTS="${CFLAGS}"
+MAKE_FLAGS=	CC="${CC}" COPTS="${CFLAGS}"
 ALL_TARGET=	ppunpack
 LICENSE=	no-commercial-use
 
