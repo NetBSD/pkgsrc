@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:13:24 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/29 11:51:00 minskim Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -60,7 +60,7 @@ post-install:
 	${RM} ${PREFIX}/libexec/apr/libtool
 	${INSTALL_SCRIPT} ${PKG_LIBTOOL} ${PREFIX}/libexec/apr/libtool
 	@${CHMOD} ${SHAREMODE} ${PREFIX}/include/apr-0/*.h
-	@${CHMOD} ${BINMODE} ${PREFIX}/include/apr-0
+	@${CHMOD} ${PKGDIRMODE} ${PREFIX}/include/apr-0
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/include/apr-0/
 
 .include "../../www/apache2/Makefile.common"
