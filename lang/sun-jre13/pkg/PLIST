@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/18 00:36:55 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/17 16:25:47 tron Exp $
 jre/ControlPanel.html
 jre/Welcome.html
 jre/bin/.java_wrapper
@@ -131,6 +131,8 @@ jre/man/man1/rmid.1
 jre/man/man1/rmiregistry.1
 jre/man/man1/tnameserv.1
 jre/plugin/i386/javaplugin.so
+@exec mkdir -p %D/jre/lib/applet
+@exec mkdir -p %D/jre/lib/ext
 @dirrm jre/bin/i386/green_threads
 @dirrm jre/bin/i386/native_threads
 @dirrm jre/bin/i386
