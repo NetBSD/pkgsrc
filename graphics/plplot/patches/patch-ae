@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.4 2001/01/29 01:15:35 jtb Exp $
+$NetBSD: patch-ae,v 1.5 2003/07/10 08:55:05 jtb Exp $
 
---- cf/sysconf.in.orig	Sun Jan 28 21:59:55 2001
-+++ cf/sysconf.in
-@@ -78,7 +78,7 @@
- 
- # Defaults
- 
--M4=m4
-+M4=gm4
- 
- # Double precision
- # Note that because there is no standard way to invoke double
+--- bindings/tk/Makefile.in.orig
++++ bindings/tk/Makefile.in
+@@ -144,7 +144,7 @@
+ LIBLTDL = @LIBLTDL@
+ LIBOBJS = @LIBOBJS@
+ LIBRARY_VERSION = @LIBRARY_VERSION@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lX11
+ LIBTOOL = @LIBTOOL@
+ LIB_DIR = @LIB_DIR@
+ LIB_TAG = @LIB_TAG@
