@@ -1,10 +1,10 @@
-# $NetBSD: kpathsea.buildlink2.mk,v 1.1 2002/09/21 01:50:37 jlam Exp $
+# $NetBSD: kpathsea.buildlink2.mk,v 1.2 2003/12/24 12:51:31 jmmv Exp $
 
 .if !defined(KPATHSEA_BUILDLINK2_MK)
 KPATHSEA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		kpathsea
-BUILDLINK_DEPENDS.kpathsea?=	teTeX-bin>=1.0.7nb2
+BUILDLINK_DEPENDS.kpathsea?=	teTeX-bin>=2.0.2
 BUILDLINK_PKGSRCDIR.kpathsea?=	../../print/teTeX-bin
 BUILDLINK_DEPMETHOD.kpathsea?=	build
 

@@ -1,46 +1,48 @@
-$NetBSD: patch-ap,v 1.4 2000/04/15 22:10:06 mycroft Exp $
+$NetBSD: patch-ap,v 1.5 2003/12/24 12:51:31 jmmv Exp $
 
---- texk/tetex/texconfig.orig	Fri Jun 25 15:59:21 1999
-+++ texk/tetex/texconfig	Sat Apr 15 11:49:13 2000
-@@ -31,8 +31,6 @@
- # Thomas Esser, te@informatik.uni-hannover.de
- # Copyright: Thomas Esser, 1994, 1995, 1996, 1997, 1999. Public domain.
+--- texk/tetex/texconfig.orig	2003-03-01 10:13:18.000000000 +0100
++++ texk/tetex/texconfig
+@@ -7,8 +7,6 @@
+ # Thomas Esser, te@dbs.uni-hannover.de
+ # Copyright: Thomas Esser, 1994, 1995, 1996, 1997, 1999, 2002. Public domain.
  
 -# You may override DIALOG_TERMINFO and DIALOG_TERM in your environment.
 -
- progname=`basename $0`
- tmpdir=${TMP-/tmp}/texconf$$
- tmpmenu=$tmpdir/menu.out
-@@ -122,27 +120,10 @@
+ version=teTeX
+ #version='TeX Live'
  
- cls() { test -z "$NO_CLEAR" && clear; }
- 
+@@ -192,29 +190,11 @@ abort()
+   cleanup
+   exit 1
+ }
+-
 -# Some systems have their own dialog. Use it then and do not use
 -# faked TERM and TERMINFO variables when calling that dialog.
 -find_dialogtype()
 -{
--  own_dialog=false
 -  { u=`uname -s`; } 2>/dev/null
 -  case "$u" in
 -    FreeBSD|Linux)
--      DIALOG_PROG=/usr/bin/dialog
--      test -x "$DIALOG_PROG" && own_dialog=true;;
+-      test -f /usr/bin/whiptail && DIALOG_PROG=/usr/bin/whiptail
+-      test -f /usr/bin/dialog && DIALOG_PROG=/usr/bin/dialog
+-      test -f /bin/dialog && DIALOG_PROG=/bin/dialog
+-      ;;
 -  esac
 -}
-- 
+  
  run_dialog()
  {
-   test -z "$NO_CLEAR" && clear
--  if $own_dialog; then
--    $DIALOG_PROG --title "$version setup utility" "$@"
+   test -z "$NO_CLEAR" && tty >/dev/null 2>&1 && clear;
+-  if test -n "$DIALOG_PROG"; then
+-    $DIALOG_PROG --title "$version setup utility" ${1+"$@"}
 -  else
--    TERM=$DIALOG_TERM TERMINFO=$DIALOG_TERMINFO dialog --title "$version setup utility" "$@"
+-    TERM=$DIALOG_TERM TERMINFO=$DIALOG_TERMINFO tcdialog --title "$version setup utility" ${1+"$@"}
 -  fi
 +  dialog --title "$version setup utility" "$@"
  }
  
  check_environ()
-@@ -219,22 +200,6 @@
+@@ -293,22 +273,6 @@ fonts_rw()
    echo "Done." >&2
  }
  
@@ -57,21 +59,30 @@ $NetBSD: patch-ap,v 1.4 2000/04/15 22:10:06 mycroft Exp $
 -
 -$progname failed. Program aborted.
 -eof
--  exit 1
+-  exit_return 1
 -}
 -
  fix_pager_more()
  {
    case "$PAGER" in
-@@ -1507,7 +1472,6 @@
- #------------------ begin: initialisation -----------------------------------
+@@ -1454,7 +1418,7 @@ echo_file_location()
+ do_print_setup()
+ {
+   echo '==================== binaries found by searching $PATH ==================='
+-  echo_locate_binary tex etex dvipdfm pdftex omega mf mpost tcdialog dvips xdvi kpsewhich mktexpk mktextfm
++  echo_locate_binary tex etex dvipdfm pdftex omega mf mpost dialog dvips xdvi kpsewhich mktexpk mktextfm
+   echo
+   echo '=========================== Kpathsea variables ==========================='
+   echo_show_variable TEXMF TEXMFMAIN VARTEXMF
+@@ -1737,7 +1701,6 @@ esac
+ needsCleanup=false
  find_echo
  find_fmt
 -find_dialogtype
  check_environ
  require_binary kpsewhich pwd
  
-@@ -1574,8 +1538,6 @@
+@@ -1813,8 +1776,6 @@ test -z "$TC_DFT_UPDMAP_CFG" && TC_DFT_U
  
  # The fallback directory for private scripts and config files.
  : ${TEXMF=`kpsewhich -expand-var '$TEXMF'`}
@@ -79,10 +90,19 @@ $NetBSD: patch-ap,v 1.4 2000/04/15 22:10:06 mycroft Exp $
 -: ${DIALOG_TERM=generic}
  
  formats=$TC_VARTEXMF/web2c
- bases=$TC_VARTEXMF/web2c
-@@ -1712,7 +1674,6 @@
- fmtutil --missing
- texlinks ${SILENT_TEXLINKS+-s}
+ xdvi_app_dir=$TC_VARTEXMF/xdvi
+@@ -1955,7 +1916,7 @@ cd "$tmpdir" || exit_return 1
+ EDIT=${VISUAL-${EDITOR-$std_editor}}
+ PAGER=${PAGER-$std_pager}
+ 
+-check_for_binary tcdialog >/dev/null || test -n "$DIALOG_PROG"
++check_for_binary dialog >/dev/null || test -n "$DIALOG_PROG"
+ dialogok=$?
+ 
+ # we have called some shellfunctions, so for HP-UX's shell, we need
+@@ -1975,7 +1936,6 @@ fi
+ # fmtutil --missing
+ # texlinks --multiplatform
  
 -check_terminal
  cat <<eof

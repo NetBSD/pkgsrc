@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.32 2003/07/17 22:52:39 grant Exp $
+# $NetBSD: Makefile,v 1.33 2003/12/24 12:51:31 jmmv Exp $
 #
 
-DISTNAME=	teTeX-1.0.7
-PKGREVISION=	2
+DISTNAME=	teTeX-2.0.2
 CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
-COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems
+COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems, version 2
 
-DEPENDS+=	teTeX-bin>=1.0.7nb2:../teTeX-bin
-DEPENDS+=	teTeX-sharesrc>=1.0.1nb1:../teTeX-sharesrc
+CONFLICTS+=	teTeX2-[0-9]*
+
+DEPENDS+=	teTeX-bin>=2.0.2:../teTeX-bin
+DEPENDS+=	teTeX-sharesrc>=2.0.2:../teTeX-sharesrc
 DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
 USE_BUILDLINK2=	yes
