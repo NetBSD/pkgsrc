@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5715 2004/04/22 15:36:31 seb Exp $
+$NetBSD: CHANGES,v 1.5716 2004/04/22 20:18:05 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cpuflags to 0.67 [abs 2004-04-22]
 	Updated libtool to 1.5.6 [tv 2004-04-22]
 	Updated flow-tools to 0.67 [seb 2004-04-22]
+	Updated arj to 3.10.20 [dillo 2004-04-22]
