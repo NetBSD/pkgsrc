@@ -12,6 +12,12 @@ capability for these operating systems to behave much like a LAN
 Server or Windows NT Server machine, only with added functionality and
 flexibility designed to make life easier for administrators.
 
+This version of samba handles Japanese.  Take a look at Samba Users
+Group Japan's WWW page for this feature:
+
+http://www.samba.gr.jp/
+
+
                     *===* Security Notes *===*
 
 The users' encrypted passwords stored in ${ETCDIR}/private/smbpasswd 
