@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/28 23:17:04 jdolecek Exp $
+$NetBSD: distinfo,v 1.2 2003/05/30 15:40:47 taca Exp $
 
-SHA1 (suse73/i386/freetype2.rpm) = 0bb5f61a5e8cb1b70ff4c1c69261894d9bd0282a
-Size (suse73/i386/freetype2.rpm) = 115122 bytes
+SHA1 (suse73/i386/freetype2-2.0.4-52.i386.rpm) = 161328508dd395ec17b535757f3b7e4c1a6979f4
+Size (suse73/i386/freetype2-2.0.4-52.i386.rpm) = 128287 bytes
