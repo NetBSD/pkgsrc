@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/27 00:05:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2004/11/09 12:37:36 wiz Exp $
 
 SHA1 (madman-0.93.tar.gz) = 61eac807b280d301c2bce574cd6c0781611530cd
 Size (madman-0.93.tar.gz) = 548497 bytes
 SHA1 (patch-aa) = 0c10ac7f0fa21cb2b1bd458b46278acda17cf031
+SHA1 (patch-ab) = 056252fba05db0f75891181e6093dd3ab6bd5e16
+SHA1 (patch-ac) = 860d323c498b7d01fdf12fc766a50fbc0ceead4e
+SHA1 (patch-ad) = 6c80415f847b5990343aed0f3b24b284059fd576
