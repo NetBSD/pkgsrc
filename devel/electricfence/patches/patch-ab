@@ -1,12 +1,21 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/10/27 04:04:11 garbled Exp $
---- page.c.orig	Mon Oct 26 00:21:10 1998
-+++ page.c	Mon Oct 26 00:21:34 1998
-@@ -29,7 +29,7 @@
+$NetBSD: patch-ab,v 1.2 1998/10/27 11:03:09 agc Exp $
+
+--- page.c.orig	Fri Jan 20 05:01:06 1995
++++ page.c	Tue Oct 27 10:47:30 1998
+@@ -3,6 +3,7 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/mman.h>
++#include <sys/param.h>
+ #include <stdio.h>
+ #include <errno.h>
+ #include <string.h>
+@@ -29,7 +30,7 @@
  
  static caddr_t	startAddr = (caddr_t) 0;
  
 -#if ( !defined(sgi) && !defined(_AIX) )
-+#if ( !defined(sgi) && !defined(_AIX) && !defined(__NetBSD__))
++#if ( !defined(sgi) && !defined(_AIX) && !(defined(BSD) && BSD >= 199306))
  extern int	sys_nerr;
  extern char *	sys_errlist[];
  #endif
