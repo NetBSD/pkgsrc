@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2004/11/09 09:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.46 2005/01/03 11:00:51 wiz Exp $
 
-DISTNAME=	curl-7.12.2
+DISTNAME=	curl-7.12.3
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
@@ -21,6 +21,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
+TEST_TARGET=		check
 
 # Work around an ICE on sparc64 with gcc2
 CONFIGURE_ENV+=		F77=${FALSE}
@@ -44,6 +46,7 @@ post-install:
 		${INSTALL_DATA} $${_f} ${PREFIX}/share/examples/curl;	\
 	done
 
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
