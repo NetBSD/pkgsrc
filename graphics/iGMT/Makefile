@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/07 12:00:58 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/07 18:12:12 jtb Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -22,9 +22,6 @@ NO_BUILD=		YES
 GMT_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		GMT_PREFIX=GMT
 EVAL_PREFIX+=		TK_PREFIX=tk
-
-post-patch:
-#	${RM} ${WRKSRC}/*.orig ${WRKSRC}/configure_script
 
 do-configure:
 	for i in ${WRKSRC}/igmt ${WRKSRC}/igmt_configure.tcl; do	\
