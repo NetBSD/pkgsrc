@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/05/03 14:14:24 taca Exp $
+$NetBSD: distinfo,v 1.5 2002/09/30 13:52:56 taca Exp $
 
-SHA1 (rats-1.4.tar.gz) = d3360eb9e2d79bc3dd86f088e845bc86fd885295
-Size (rats-1.4.tar.gz) = 298022 bytes
+SHA1 (rats-2.1.tar.gz) = b837b1765caa8ed36b70e6c88446c4d415554500
+Size (rats-2.1.tar.gz) = 326930 bytes
