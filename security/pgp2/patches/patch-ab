@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/02/05 04:35:51 wiz Exp $
 --- sparc.S.orig	Sun Jun 20 21:52:19 1999
 +++ sparc.S	Sun Jun 20 21:53:04 1999
 @@ -7,7 +7,7 @@
