@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2005/01/04 09:50:15 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2005/01/04 23:38:31 minskim Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	-Duseshrplib
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
-MAKE_ENV+=		LANG=""
+MAKE_ENV+=		LC_ALL="C"
 
 TEST_TARGET=		test
 
