@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2004/08/27 06:29:10 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2005/04/04 08:56:18 adam Exp $
 
---- configure.orig	2003-02-16 11:06:45.000000000 +0000
+--- configure.orig	2005-02-28 22:10:33.000000000 +0000
 +++ configure
-@@ -5202,7 +5202,7 @@ if [ $host_os3 = hpux ] ; then
+@@ -5938,7 +5938,7 @@ if [ $host_os3 = hpux ] ; then
  fi
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.7 2004/08/27 06:29:10 jlam Exp $
      LDFLAGS="$LDFLAGS -z"
  fi
  
-@@ -5471,7 +5471,7 @@ else
+@@ -6221,7 +6221,7 @@ else
  
    # It would also be nice to do this for all -L options, not just this one.
    if test -n "$x_libraries"; then
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.7 2004/08/27 06:29:10 jlam Exp $
      # For Solaris; some versions of Sun CC require a space after -R and
      # others require no space.  Words are not sufficient . . . .
      case `(uname -sr) 2>/dev/null` in
-@@ -6337,7 +6337,7 @@ fi
+@@ -7281,7 +7281,7 @@ fi
  
    # Check for libraries that X11R6 Xt/Xaw programs need.
    ac_save_LDFLAGS=$LDFLAGS
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.7 2004/08/27 06:29:10 jlam Exp $
    # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
    # check for ICE first), but we must link in the order -lSM -lICE or
    # we get undefined symbols.  So assume we have SM if we have ICE.
-@@ -6722,6 +6722,8 @@ if test X$use_floppyd = Xyes; then
+@@ -7738,6 +7738,8 @@ if test X$use_floppyd = Xyes; then
      fi
      FLOPPYD="floppyd floppyd_installtest"
      BINFLOPPYD="\$(bindir)/floppyd \$(bindir)/floppyd_installtest"
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.7 2004/08/27 06:29:10 jlam Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define USE_FLOPPYD 1
-@@ -6730,6 +6732,8 @@ _ACEOF
+@@ -7746,6 +7748,8 @@ _ACEOF
  else
      FLOPPYD=
      BINFLOPPYD=
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.7 2004/08/27 06:29:10 jlam Exp $
  fi
  
  
-@@ -7327,6 +7331,8 @@ s,@X_LIBS@,$X_LIBS,;t t
+@@ -8401,6 +8405,8 @@ s,@X_LIBS@,$X_LIBS,;t t
  s,@X_EXTRA_LIBS@,$X_EXTRA_LIBS,;t t
  s,@FLOPPYD@,$FLOPPYD,;t t
  s,@BINFLOPPYD@,$BINFLOPPYD,;t t
