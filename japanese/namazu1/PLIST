@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:03 skrll Exp $
 bin/bnamazu
 bin/clnmz
 bin/gcnmz
@@ -9,10 +9,10 @@ bin/namazu
 bin/rvnmz
 bin/vfnmz
 bin/wdnmz
-@exec /bin/mkdir %D/etc/namazu 2>/dev/null || /usr/bin/true
+@exec ${MKDIR} %D/etc/namazu 2>/dev/null || /usr/bin/true
 @dirrm etc/namazu
-@exec /bin/mkdir %D/libdata/namazu 2>/dev/null || /usr/bin/true
-@exec /bin/mkdir %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
+@exec ${MKDIR} %D/libdata/namazu 2>/dev/null || /usr/bin/true
+@exec ${MKDIR} %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
 @dirrm libdata/namazu/index
 @dirrm libdata/namazu
 libexec/cgi-bin/namazu.cgi

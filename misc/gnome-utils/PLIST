@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:05 skrll Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -800,7 +800,7 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/meat-grinder/C/figures
 @dirrm share/gnome/help/meat-grinder/C
 @dirrm share/gnome/help/meat-grinder
-@exec /bin/mkdir -p %D/share/gnome/help/logview/C/stylesheet-images
+@exec ${MKDIR} -p %D/share/gnome/help/logview/C/stylesheet-images
 @dirrm share/gnome/help/logview/C/stylesheet-images
 @dirrm share/gnome/help/logview/C/figures
 @dirrm share/gnome/help/logview/C
@@ -821,7 +821,7 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gtt/C/figures
 @dirrm share/gnome/help/gtt/C
 @dirrm share/gnome/help/gtt
-@exec /bin/mkdir -p %D/share/gnome/help/gshutdown_util/es/stylesheet-images
+@exec ${MKDIR} -p %D/share/gnome/help/gshutdown_util/es/stylesheet-images
 @dirrm share/gnome/help/gshutdown_util/es/stylesheet-images
 @dirrm share/gnome/help/gshutdown_util/es/figures
 @dirrm share/gnome/help/gshutdown_util/es
@@ -856,7 +856,7 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gfontsel/C/figures
 @dirrm share/gnome/help/gfontsel/C
 @dirrm share/gnome/help/gfontsel
-@exec /bin/mkdir -p %D/share/gnome/help/gdiskfree_util/es/stylesheet-images
+@exec ${MKDIR} -p %D/share/gnome/help/gdiskfree_util/es/stylesheet-images
 @dirrm share/gnome/help/gdiskfree_util/es/stylesheet-images
 @dirrm share/gnome/help/gdiskfree_util/es/figures
 @dirrm share/gnome/help/gdiskfree_util/es
@@ -868,7 +868,7 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gdiskfree/C/figures
 @dirrm share/gnome/help/gdiskfree/C
 @dirrm share/gnome/help/gdiskfree
-@exec /bin/mkdir -p %D/share/gnome/help/gdict_util/es/stylesheet-images
+@exec ${MKDIR} -p %D/share/gnome/help/gdict_util/es/stylesheet-images
 @dirrm share/gnome/help/gdict_util/es/stylesheet-images
 @dirrm share/gnome/help/gdict_util/es/figures
 @dirrm share/gnome/help/gdict_util/es
@@ -877,7 +877,7 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gdict/C/figures
 @dirrm share/gnome/help/gdict/C
 @dirrm share/gnome/help/gdict
-@exec /bin/mkdir -p %D/share/gnome/help/gdialog/C/stylesheet-images
+@exec ${MKDIR} -p %D/share/gnome/help/gdialog/C/stylesheet-images
 @dirrm share/gnome/help/gdialog/C/stylesheet-images
 @dirrm share/gnome/help/gdialog/C/figures
 @dirrm share/gnome/help/gdialog/C
