@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2002/09/14 02:46:56 rh Exp $
+# $NetBSD: Makefile,v 1.78 2002/09/15 05:39:11 rh Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -13,6 +13,11 @@ COMMENT=		Base component of GNU Network Object Management Environment
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
 BUILD_DEPENDS+=		gtk-doc>=0.9:../../textproc/gtk-doc
 BUILD_USES_MSGFMT=	YES
+
+.include "../../mk/bsd.prefs.mk"
+.if (${LOCALBASE} == ${X11BASE})
+BUILDLINK_DEPENDS.gnome-pixmaps=gnome{,2}-pixmaps>=1.4.2
+.endif
 
 USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
