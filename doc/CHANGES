@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5200 2004/03/11 04:23:34 snj Exp $
+$NetBSD: CHANGES,v 1.5201 2004/03/11 08:20:20 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1402,3 +1402,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bidwatcher to 1.3.13 [tron 2004-03-10]
 	Updated cabextract to 1.0 [ben 2004-03-10]
 	Updated firefox-gtk2 to 0.8nb2 [snj 2004-03-03-11]
+	Updated xmms-infinity to 0.2nb4 [grant 2004-03-03-11]
