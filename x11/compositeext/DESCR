@@ -1,0 +1,5 @@
+This package contains header files and documentation for the X composite
+extension.  Library and server implementations are separate.
+
+This is part of the freedesktop.org X Libraries and Protocol Headers
+Project.
