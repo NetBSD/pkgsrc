@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/03/26 20:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/30 14:55:27 jmmv Exp $
 
 DISTNAME=		dopewars-1.5.9
 PKGREVISION=		3
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--localstatedir=/var/games
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
