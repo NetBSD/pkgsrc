@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/04 16:09:13 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/04 16:11:29 tron Exp $
 
 DISTNAME=	kdevelop-1.3
 PKGNAME=	${DISTNAME:S/-/-base-/}
@@ -20,7 +20,7 @@ DEPENDS+=       htdig>=3.1.5:../../www/htdig
 DEPENDS+=       a2ps>=4.12:../../print/a2ps
 DEPENDS+=	kdelibdocs-1*:../../x11/kdelibdocs
 
-CONFLICTS+=	kdevelop<1.3nb1
+CONFLICTS+=	kdevelop<=1.3
 
 USE_PERL5=	yes
 USE_X11BASE=	yes
