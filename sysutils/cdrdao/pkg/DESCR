@@ -1,0 +1,15 @@
+Disk at Once CD recording, featuring:
+
+Full control over length and contents of pre-gaps (pause areas between tracks).
+	Pre-gaps may be completely omitted,
+		e.g. for dividing live recordings into tracks. 
+	Control over sub-channel data like: 
+		catalog number 
+		copy, pre-emphasis, 2-/4-channel flags 
+		ISRC code 
+		index marks 
+	Support for exact audio or data CD copying. 
+	Tracks may be composed of different audio files supporting
+		non destructive cut. 
+	Accepts WAVE and raw audio files. 
+	CD-TEXT reading and writing with drives that support it. 

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/18 15:13:50 wiz Exp $
+
+--- scsilib/include/mconfig.h.orig	Tue Jan 18 19:43:58 2000
++++ scsilib/include/mconfig.h	Tue Jan 18 19:44:15 2000
+@@ -45,7 +45,7 @@
+ extern "C" {
+ #endif
+ 
+-#if defined(unix) || defined(__unix) || defined(__unix__)
++#if defined (__NetBSD__)
+ #	define	IS_UNIX
+ #endif
+ 

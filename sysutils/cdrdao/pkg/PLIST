@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/18 15:13:50 wiz Exp $
+bin/cdrdao
+man/man1/cdrdao.1
+share/doc/cdrdao/COPYING
+share/doc/cdrdao/CREDITS
+share/doc/cdrdao/INSTALL
+share/doc/cdrdao/README
+share/doc/cdrdao/README.edc_ecc
+share/doc/cdrdao/README.FreeBSD
+share/doc/cdrdao/README.PlexDAE
+share/doc/cdrdao/Release-1.1.2
+share/doc/cdrdao/Release-1.1.3
+share/doc/cdrdao/crc.txt
+share/doc/cdrdao/testtocs/cdtext.toc
+share/doc/cdrdao/testtocs/data1.toc
+share/doc/cdrdao/testtocs/data2.toc
+share/doc/cdrdao/testtocs/data3.toc
+share/doc/cdrdao/testtocs/data4.toc
+share/doc/cdrdao/testtocs/data5.toc
+share/doc/cdrdao/testtocs/data6.toc
+share/doc/cdrdao/testtocs/data7.toc
+share/doc/cdrdao/testtocs/t1.toc
+share/doc/cdrdao/testtocs/t2.toc
+share/doc/cdrdao/testtocs/t3.toc
+share/doc/cdrdao/testtocs/t4.toc
+share/doc/cdrdao/testtocs/t5.toc
+share/doc/cdrdao/testtocs/t6.toc
+share/doc/cdrdao/testtocs/t7.toc
+share/doc/cdrdao/testtocs/t8.toc
+share/doc/cdrdao/testtocs/t9.toc
+share/examples/cdrdao/mp32dao.pl
+share/examples/cdrdao/README.mp32dao
+share/examples/cdrdao/psxcopy/Makefile
+share/examples/cdrdao/psxcopy/README
+share/examples/cdrdao/psxcopy/cdjob.c
+share/examples/cdrdao/psxcopy/psxdump.c
+share/examples/cdrdao/psxcopy/read-psx
+share/examples/cdrdao/psxcopy/write-psx
+share/examples/cdrdao/wav2dao.pl
+@dirrm share/examples/cdrdao/psxcopy
+@dirrm share/examples/cdrdao
+@dirrm share/doc/cdrdao/testtocs
+@dirrm share/doc/cdrdao
