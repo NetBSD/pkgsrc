@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 1999/10/22 23:34:22 tron Exp $
+# $NetBSD: Makefile,v 1.21 2000/03/12 22:24:05 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
-DISTNAME=	glib-1.2.6
+DISTNAME=	glib-1.2.7
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
@@ -14,16 +14,20 @@ HOMEPAGE=	http://www.gtk.org/docs/glib_toc.html
 
 CONFLICTS=	gtk+-1.0.*
 
+DEPENDS+=	pth>=1.3.2:../pth
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+CONFIGURE_ARGS+=--includedir=${PREFIX}/include/glib
+LIBTOOL_FLAGS=	 --install-la
+CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include"
 
 INFO_FILES=	glib.info
 
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-LIBTOOL_FLAGS=	 --install-la
 # XXX egcs is still broken on arm32.
 .if (${MACHINE_ARCH} == arm32)
 CFLAGS=		-O0
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+
