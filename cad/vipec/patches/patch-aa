@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2003/02/06 00:41:13 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.11 2003/02/06 00:50:55 dmcmahill Exp $
 
---- work.bondage/ViPEC-3.1.3/Makefile.orig	Sat Oct 12 19:12:19 2002
-+++ work.bondage/ViPEC-3.1.3/Makefile
+--- Makefile.orig	Sat Oct 12 19:12:19 2002
++++ Makefile
 @@ -10,7 +10,7 @@
  SUBDIRS = src
  SOURCEPATH = `pwd`
