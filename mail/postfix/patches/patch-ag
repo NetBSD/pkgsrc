@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2003/03/20 22:23:22 christos Exp $
+$NetBSD: patch-ag,v 1.8 2003/04/17 06:22:19 martti Exp $
 
---- src/cleanup/cleanup.c	Mon Nov  5 11:25:58 2001
-+++ src/cleanup/cleanup.c	Thu Jan 17 21:50:18 2002
-@@ -281,6 +281,7 @@
+--- src/cleanup/cleanup.c.orig	2002-12-20 03:33:40.000000000 +0200
++++ src/cleanup/cleanup.c	2003-04-17 08:54:39.000000000 +0300
+@@ -333,6 +333,7 @@
       * Pass control to the single-threaded service skeleton.
       */
      single_server_main(argc, argv, cleanup_service,
@@ -10,9 +10,9 @@ $NetBSD: patch-ag,v 1.7 2003/03/20 22:23:22 christos Exp $
  		       MAIL_SERVER_INT_TABLE, cleanup_int_table,
  		       MAIL_SERVER_STR_TABLE, cleanup_str_table,
  		       MAIL_SERVER_TIME_TABLE, cleanup_time_table,
---- src/cleanup/cleanup.h	Tue Oct 30 19:39:06 2001
-+++ src/cleanup/cleanup.h	Thu Jan 17 21:50:18 2002
-@@ -109,6 +109,7 @@
+--- src/cleanup/cleanup.h.orig	2002-12-03 16:58:11.000000000 +0200
++++ src/cleanup/cleanup.h	2003-04-17 08:54:39.000000000 +0300
+@@ -118,6 +118,7 @@
  extern void cleanup_all(void);
  extern void cleanup_pre_jail(char *, char **);
  extern void cleanup_post_jail(char *, char **);
@@ -20,8 +20,8 @@ $NetBSD: patch-ag,v 1.7 2003/03/20 22:23:22 christos Exp $
  extern CONFIG_INT_TABLE cleanup_int_table[];
  extern CONFIG_STR_TABLE cleanup_str_table[];
  extern CONFIG_TIME_TABLE cleanup_time_table[];
---- src/cleanup/cleanup_envelope.c.orig	2002-11-01 08:34:02.000000000 -0500
-+++ src/cleanup/cleanup_envelope.c	2003-03-20 17:09:12.000000000 -0500
+--- src/cleanup/cleanup_envelope.c.orig	2002-11-01 15:34:02.000000000 +0200
++++ src/cleanup/cleanup_envelope.c	2003-04-17 08:54:39.000000000 +0300
 @@ -192,15 +192,19 @@
  	if (state->orig_rcpt == 0)
  	    state->orig_rcpt = mystrdup(buf);
@@ -51,8 +51,8 @@ $NetBSD: patch-ag,v 1.7 2003/03/20 22:23:22 christos Exp $
  	cleanup_out_recipient(state, state->orig_rcpt, STR(clean_addr));
  	if (state->recip == 0)
  	    state->recip = mystrdup(STR(clean_addr));
---- src/cleanup/cleanup_init.c.orig	2002-12-03 09:56:56.000000000 -0500
-+++ src/cleanup/cleanup_init.c	2003-03-20 17:10:34.000000000 -0500
+--- src/cleanup/cleanup_init.c.orig	2002-12-03 16:56:56.000000000 +0200
++++ src/cleanup/cleanup_init.c	2003-04-17 08:54:39.000000000 +0300
 @@ -6,6 +6,8 @@
  /* SYNOPSIS
  /*	#include "cleanup.h"
@@ -91,9 +91,9 @@ $NetBSD: patch-ag,v 1.7 2003/03/20 22:23:22 christos Exp $
   /*
    * Mappings.
    */
---- src/global/mail_params.h	Tue Jan 15 10:24:34 2002
-+++ src/global/mail_params.h	Thu Jan 17 21:50:19 2002
-@@ -295,6 +295,10 @@
+--- src/global/mail_params.h.orig	2003-04-17 08:54:22.000000000 +0300
++++ src/global/mail_params.h	2003-04-17 08:54:39.000000000 +0300
+@@ -324,6 +324,10 @@
  #define DEF_RCPT_CANON_MAPS	""
  extern char *var_rcpt_canon_maps;
  
