@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/03/12 22:24:05 tron Exp $
+# $NetBSD: Makefile,v 1.22 2000/03/16 12:17:21 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -12,9 +12,9 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gtk.org/docs/glib_toc.html
 
-CONFLICTS=	gtk+-1.0.*
-
 DEPENDS+=	pth>=1.3.2:../pth
+
+CONFLICTS=	gtk+-1.0.*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -30,4 +30,3 @@ CFLAGS=		-O0
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
