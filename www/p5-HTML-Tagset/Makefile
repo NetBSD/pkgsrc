@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/21 07:46:42 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/07 21:14:16 seb Exp $
 #
 
 DISTNAME=		HTML-Tagset-3.03
@@ -13,8 +13,5 @@ COMMENT=		perl5 module of data tables useful in parsing HTML
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/Tagset/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
