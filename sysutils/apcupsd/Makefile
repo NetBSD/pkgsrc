@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2000/08/05 07:31:15 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/04 17:42:04 wiz Exp $
 #
 
 DISTNAME=		apcupsd-3.6.2
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.brisse.dk/dlarea/
+MASTER_SITES=		ftp://ftp.oasi.gpa.it/pub/apcupsd/stable/tar/
 
 MAINTAINER=		bouyer@netbsd.org
-HOMEPAGE=		http://www.brisse.dk/site/apcupsd/
+HOMEPAGE=		http://www.sibbald.com/apcupsd/
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 USE_GMAKE=		# defined
+USE_LIBINTL=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-http		# include http support
@@ -24,9 +25,6 @@ CONFIGURE_ARGS+=	--enable-http		# include http support
 
 CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
-CFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --force
