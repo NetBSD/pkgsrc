@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/02/25 05:11:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/09/06 14:31:39 jlam Exp $
 bin/smalleiffel
 libexec/smalleiffel/clean
 libexec/smalleiffel/compile
@@ -8,30 +8,30 @@ libexec/smalleiffel/finder
 libexec/smalleiffel/pretty
 libexec/smalleiffel/print_jvm_class
 libexec/smalleiffel/short
-share/doc/smalleiffel/COPYING
-share/doc/smalleiffel/Eiffel.FAQ
-share/doc/smalleiffel/HISTORY.html
-share/doc/smalleiffel/NOT_YET_IMPLEMENTED.html
-share/doc/smalleiffel/SmallEiffelFAQ.html
-share/doc/smalleiffel/THANKS.html
-share/doc/smalleiffel/WeNeedFeedBack.txt
-share/doc/smalleiffel/c_code.html
-share/doc/smalleiffel/cecil.html
-share/doc/smalleiffel/clean.html
-share/doc/smalleiffel/compile.html
-share/doc/smalleiffel/compile_to_c.html
-share/doc/smalleiffel/compile_to_jvm.html
-share/doc/smalleiffel/external.html
-share/doc/smalleiffel/finder.html
-share/doc/smalleiffel/index.html
-share/doc/smalleiffel/install.html
-share/doc/smalleiffel/people.html
-share/doc/smalleiffel/pretty.html
-share/doc/smalleiffel/print_jvm_class.html
-share/doc/smalleiffel/se-line.gif
-share/doc/smalleiffel/short.html
-share/doc/smalleiffel/support.html
-share/doc/smalleiffel/system.html
+share/doc/html/smalleiffel/COPYING
+share/doc/html/smalleiffel/Eiffel.FAQ
+share/doc/html/smalleiffel/HISTORY.html
+share/doc/html/smalleiffel/NOT_YET_IMPLEMENTED.html
+share/doc/html/smalleiffel/SmallEiffelFAQ.html
+share/doc/html/smalleiffel/THANKS.html
+share/doc/html/smalleiffel/WeNeedFeedBack.txt
+share/doc/html/smalleiffel/c_code.html
+share/doc/html/smalleiffel/cecil.html
+share/doc/html/smalleiffel/clean.html
+share/doc/html/smalleiffel/compile.html
+share/doc/html/smalleiffel/compile_to_c.html
+share/doc/html/smalleiffel/compile_to_jvm.html
+share/doc/html/smalleiffel/external.html
+share/doc/html/smalleiffel/finder.html
+share/doc/html/smalleiffel/index.html
+share/doc/html/smalleiffel/install.html
+share/doc/html/smalleiffel/people.html
+share/doc/html/smalleiffel/pretty.html
+share/doc/html/smalleiffel/print_jvm_class.html
+share/doc/html/smalleiffel/se-line.gif
+share/doc/html/smalleiffel/short.html
+share/doc/html/smalleiffel/support.html
+share/doc/html/smalleiffel/system.html
 share/examples/smalleiffel/contrib/READ_ME
 share/examples/smalleiffel/contrib/edb/READ_ME
 share/examples/smalleiffel/contrib/edb/add-line-directive
@@ -773,5 +773,5 @@ share/smalleiffel/sys/system.se
 @dirrm share/examples/smalleiffel/contrib/edb
 @dirrm share/examples/smalleiffel/contrib
 @dirrm share/examples/smalleiffel
-@dirrm share/doc/smalleiffel
+@dirrm share/doc/html/smalleiffel
 @dirrm libexec/smalleiffel
