@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 1998/10/27 07:21:19 garbled Exp $
+--- buildhash.c.orig	Mon Jan 23 11:28:24 1995
++++ buildhash.c	Mon Oct 26 23:20:42 1998
+@@ -211,7 +211,7 @@
+     {
+     register FILE *		houtfile;
+     register struct dent *	dp;
+-    int				strptr;
++    PTRSIZE				strptr;
+     int				n;
+     int				i;
+     int				maxplen;
+@@ -336,7 +336,7 @@
+ 	{
+ 	if (dp->next != 0)
+ 	    {
+-	    int		x;
++	    PTRSIZE		x;
+ 	    x = dp->next - hashtbl;
+ 	    dp->next = (struct dent *)x;
+ 	    }

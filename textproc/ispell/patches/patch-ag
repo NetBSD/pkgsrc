@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1 1998/10/27 07:21:19 garbled Exp $
+--- sq.c.orig	Mon Oct 26 23:28:32 1998
++++ sq.c	Mon Oct 26 23:28:58 1998
+@@ -49,6 +49,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ 
+ #ifdef __STDC__
+ #define P(x)	x

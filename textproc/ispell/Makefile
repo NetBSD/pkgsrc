@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/08/20 15:17:28 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 1998/10/27 07:21:19 garbled Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -14,6 +14,12 @@ MAKE_FLAGS=	TMPDIR=${.CURDIR}
 SCRIPTS_ENV=	"LANG=${LANG}"
 
 .include "../../mk/bsd.prefs.mk"
+
+_INTTYPES!=	if [ -e /usr/include/inttypes.h ]; then echo "Exists"; else echo "No go"; fi
+
+.if (${_INTTYPES} == "Exists")
+CFLAGS+= -DHAVE_INTTYPES_H
+.endif
 
 pre-extract pre-build pre-install:
 .if !defined(ISPELL_FR)

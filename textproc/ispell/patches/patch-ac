@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1 1998/10/27 07:21:19 garbled Exp $
+--- ispell.h.orig	Mon Oct 26 23:13:30 1998
++++ ispell.h	Mon Oct 26 23:16:48 1998
+@@ -90,6 +90,16 @@
+ 
+ #include <stdio.h>
+ 
++#ifdef HAVE_INTTYPES_H
++#include <inttypes.h>
++#define PTRSIZE intptr_t
++#else
++#define PTRSIZE int
++#endif
++#if !defined(HAVE_INTTYPES_H) && defined(__alpha) && defined(__NetBSD__)
++#define PTRSIZE long
++#endif /* hack for 1.3 */
++
+ #ifdef __STDC__
+ #define P(x)	x
+ #define VOID	void
+@@ -336,8 +346,8 @@
+     short maxstringcharlen;			/* Max strchr len supported */
+     short compoundmin;				/* Min lth of compound parts */
+     short compoundbit;				/* Flag 4 compounding roots */
+-    int stringsize;				/* Size of string table */
+-    int lstringsize;				/* Size of lang. str tbl */
++    PTRSIZE stringsize;				/* Size of string table */
++    PTRSIZE lstringsize;			/* Size of lang. str tbl */
+     int tblsize;				/* No. entries in hash tbl */
+     int stblsize;				/* No. entries in sfx tbl */
+     int ptblsize;				/* No. entries in pfx tbl */
