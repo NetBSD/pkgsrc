@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/05 05:01:56 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/23 11:12:16 seb Exp $
 
 DISTNAME=	guile-www-1.0.1
 PKGREVISION=	1
@@ -11,7 +11,8 @@ COMMENT=	Guile WWW module
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	guile-www.info
 
 .include "../../lang/guile14/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
