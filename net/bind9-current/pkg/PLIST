@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/03 17:15:51 itojun Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/01/04 15:10:51 agc Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -168,15 +168,23 @@ include/omapi/result.h
 include/omapi/types.h
 lib/libdns.a
 lib/libdns.la
+lib/libdns.so
+lib/libdns.so.3
 lib/libdns.so.3.0
 lib/libisc.a
 lib/libisc.la
+lib/libisc.so
+lib/libisc.so.3
 lib/libisc.so.3.0
 lib/liblwres.a
 lib/liblwres.la
+lib/liblwres.so
+lib/liblwres.so.2
 lib/liblwres.so.2.0
 lib/libomapi.a
 lib/libomapi.la
+lib/libomapi.so
+lib/libomapi.so.3
 lib/libomapi.so.3.0
 sbin/dnssec-keygen
 sbin/dnssec-makekeyset

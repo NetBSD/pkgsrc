@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/05 00:06:46 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:49 agc Exp $
 include/meschach/err.h
 include/meschach/iter.h
 include/meschach/machine.h
@@ -13,6 +13,8 @@ include/meschach/zmatrix.h
 include/meschach/zmatrix2.h
 lib/libmeschach.a
 lib/libmeschach.la
+lib/libmeschach.so
+lib/libmeschach.so.0
 lib/libmeschach.so.0.0
 share/meschach/README
 share/meschach/copyright

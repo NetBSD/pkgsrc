@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/11/09 03:35:34 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/01/04 15:10:48 agc Exp $
 include/c-client/env.h
 include/c-client/env_unix.h
 include/c-client/fs.h
@@ -16,6 +16,8 @@ include/c-client/smtp.h
 include/c-client/tcp.h
 lib/libimapuw.a
 lib/libimapuw.la
+lib/libimapuw.so
+lib/libimapuw.so.4
 lib/libimapuw.so.4.1
 libexec/imapd
 libexec/ipop2d

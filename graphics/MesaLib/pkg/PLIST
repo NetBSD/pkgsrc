@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/12/12 19:16:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:36 agc Exp $
 etc/mesa.conf
 include/GL/gl.h
 include/GL/gl_mangle.h
@@ -9,6 +9,8 @@ include/GL/osmesa.h
 include/GL/xmesa.h
 include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
+lib/libGL.so
+lib/libGL.so.3
 lib/libGL.so.3.4
 lib/libGL.a
 lib/libGL.la

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/07/15 02:31:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/01/04 15:10:46 agc Exp $
 bin/guile
 bin/guile-config
 bin/guile-doc-snarf
@@ -97,9 +97,13 @@ info/data-rep.info
 @exec install-info %D/info/data-rep.info %D/info/dir
 lib/libguile.a
 lib/libguile.la
+lib/libguile.so
+lib/libguile.so.9
 lib/libguile.so.9.0
 lib/libguilereadline.a
 lib/libguilereadline.la
+lib/libguilereadline.so
+lib/libguilereadline.so.0
 lib/libguilereadline.so.0.0
 share/aclocal/guile.m4
 share/guile/1.4/ice-9/and-let*.scm

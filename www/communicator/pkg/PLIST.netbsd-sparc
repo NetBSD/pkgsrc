@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST.netbsd-sparc,v 1.1 1999/08/13 21:24:13 abs Exp $
+@comment $NetBSD: PLIST.netbsd-sparc,v 1.2 2001/01/04 15:10:57 agc Exp $
 bin/communicator-${NS_VERS}_nis
 bin/netscape_nis
 lib/netscape/communicator-${NS_VERS}/netscape_nis
+lib/netscape/communicator-${NS_VERS}/libjsd.so
+lib/netscape/communicator-${NS_VERS}/libjsd.so.1
 lib/netscape/communicator-${NS_VERS}/libjsd.so.1.0
 lib/netscape/communicator-${NS_VERS}/dynfonts/libTrueDoc.so
 lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so

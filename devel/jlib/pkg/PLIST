@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 17:16:05 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:29 agc Exp $
 bin/jlib-config
 include/jlib.h
 include/jlib/AudioFile.h
@@ -30,6 +30,8 @@ include/jlib/TmpFile.h
 include/jlib/WavFile.h
 include/jlib/scp.h
 include/jlib/socketstream.hh
+lib/libj.so
+lib/libj.so.1
 lib/libj.so.1.6
 lib/libj.a
 lib/libj.la

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2000/11/25 18:08:46 rh Exp $
+@comment $NetBSD: PLIST,v 1.22 2001/01/04 15:11:00 agc Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -38,15 +38,23 @@ lib/appletsConf.sh
 lib/dockletsConf.sh
 lib/libfish_applet.a
 lib/libfish_applet.la
+lib/libfish_applet.so
+lib/libfish_applet.so.0
 lib/libfish_applet.so.0.0
 lib/libgen_util_applet.a
 lib/libgen_util_applet.la
+lib/libgen_util_applet.so
+lib/libgen_util_applet.so.0
 lib/libgen_util_applet.so.0.0
 lib/libpanel_applet.a
 lib/libpanel_applet.la
+lib/libpanel_applet.so
+lib/libpanel_applet.so.0
 lib/libpanel_applet.so.0.1
 lib/libpanel_status.a
 lib/libpanel_status.la
+lib/libpanel_status.so
+lib/libpanel_status.so.0
 lib/libpanel_status.so.0.0
 man/man1/gnome-session.1
 man/man1/gnome-wm.1

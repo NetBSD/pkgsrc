@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/21 17:22:40 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:11:04 agc Exp $
 include/XMC/xmc.h
 include/XMC/xmcp.h
+lib/libXmc.so
+lib/libXmc.so.2
 lib/libXmc.so.2.0
 lib/libXmc_d.a
 bin/xmx

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2000/08/10 10:44:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/01/04 15:10:43 agc Exp $
 bin/anytopnm
 bin/asciitopgm
 bin/atktopbm
@@ -223,16 +223,24 @@ include/ppmcmap.h
 include/shhopt.h
 lib/libpbm.a
 lib/libpbm.la
+lib/libpbm.so
+lib/libpbm.so.9
 lib/libpbm.so.9.5
 lib/libpgm.a
 lib/libpgm.la
-lib/libpgm.so.${VERS}
+lib/libpgm.so
+lib/libpgm.so.9
+lib/libpgm.so.9.7
 lib/libpnm.a
 lib/libpnm.la
+lib/libpnm.so
+lib/libpnm.so.9
 lib/libpnm.so.9.5
 lib/libppm.a
 lib/libppm.la
-lib/libppm.so.${VERS}
+lib/libppm.so
+lib/libppm.so.9
+lib/libppm.so.9.7
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
 man/man1/atktopbm.1

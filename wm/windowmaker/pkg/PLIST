@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:57 agc Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -98,6 +98,8 @@ lib/libWMaker.a
 lib/libWUtil.a
 lib/libwraster.a
 lib/libwraster.la
+lib/libwraster.so
+lib/libwraster.so.2
 lib/libwraster.so.2.0
 man/man1/geticonset.1
 man/man1/getstyle.1
