@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/11/05 09:44:33 adam Exp $
+# $NetBSD: Makefile,v 1.32 2004/12/29 15:31:24 minskim Exp $
 
 DISTNAME=	dopewars-1.5.10
 CATEGORIES=	games
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-gui-client
 CONFIGURE_ARGS+=	--disable-glib2
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--without-sdl
-CONFIGURE_ARGS+=	--localstatedir=/var/games
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
