@@ -1,4 +1,4 @@
-# $NetBSD: bsd.post-buildlink2.mk,v 1.1.2.2 2002/05/08 16:09:48 jlam Exp $
+# $NetBSD: bsd.post-buildlink2.mk,v 1.1.2.3 2002/05/08 21:19:09 jlam Exp $
 
 ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
 
@@ -19,7 +19,9 @@ _BUILDLINK_CPPFLAGS=	-I${LOCALBASE}/include
 _BUILDLINK_LDFLAGS=	-L${LOCALBASE}/lib
 
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
+.  if !defined(_FOR_X11_LINKS_ONLY)
 BUILD_DEPENDS+=		x11-links>=0.6:../../pkgtools/x11-links
+.  endif
 BUILDLINK_X11_DIR=	${LOCALBASE}/share/x11-links
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
