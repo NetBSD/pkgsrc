@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2000/05/01 06:05:29 jlam Exp $
+# $NetBSD: Makefile,v 1.80 2000/05/07 20:38:44 tron Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -20,6 +20,7 @@
     SUBDIR += freetype-lib
     SUBDIR += freetype-utils
     SUBDIR += fujiplay
+    SUBDIR += fxtv
     SUBDIR += g3d
     SUBDIR += gd
     SUBDIR += gdk-pixbuf
