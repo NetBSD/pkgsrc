@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/03/22 08:45:56 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2004/07/30 21:05:42 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.7p5
@@ -32,9 +32,20 @@ CONFIGURE_ARGS+=	--with-skey
 CONFIGURE_ARGS+=	--without-skey
 .endif
 
+# Global and legacy options
 .if defined(KERBEROS)
-CONFIGURE_ARGS+=	--without-kerb4
+.  if !defined(PKG_OPTIONS.sudo)
+PKG_OPTIONS.sudo+=	kerberos
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
+PKG_SUPPORTED_OPTIONS=	kerberos
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--without-kerb4
 CONFIGURE_ARGS+=	--with-kerb5
 .else
 CONFIGURE_ARGS+=	--without-kerb5

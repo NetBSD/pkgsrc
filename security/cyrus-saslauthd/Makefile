@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/25 04:35:14 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/30 21:05:42 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.18
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -23,41 +23,15 @@ COMMENT=		Cyrus SASL plaintext authentication daemon
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-PLIST_SRC=		${PKGDIR}/PLIST
 
 ALL_TARGET=		all saslcache testsaslauthd
-
-BUILD_DEFS+=		USE_PAM USE_OPENLDAP SASL_USE_GSSAPI
 
 SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
 BUILD_DEFS+=		SASLSOCKETDIR
 FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-saslauthd="${SASLSOCKETDIR}"
 
-.if defined(USE_PAM)
-.  include "../../security/PAM/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
-.endif
-
-.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
-.  include "../../databases/openldap/buildlink3.mk"
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
-BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
-CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-PLIST_SRC+=		${PKGDIR}/PLIST.ldap
-.endif
-
-.if defined(KERBEROS)
-SASL_USE_GSSAPI=	yes
-.endif
-.if (defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS]))
-.  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
-CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
-GSSIMPL.heimdal=	heimdal
-GSSIMPL.mit-krb5=	mit
-.endif
+.include "Makefile.options"
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
@@ -80,11 +54,10 @@ post-install:
 	for f in saslcache testsaslauthd; do				\
 		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${PREFIX}/bin/$$f;	\
 	done
-.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Mldap)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cyrus-saslauthd
-	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD \
+	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD			\
 		${PREFIX}/share/doc/cyrus-saslauthd
 .endif
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/07/30 21:05:41 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CYRUS_SASL_BUILDLINK3_MK:=	${CYRUS_SASL_BUILDLINK3_MK}+
@@ -18,7 +18,9 @@ BUILDLINK_RECOMMENDED.cyrus-sasl?=	cyrus-sasl>=1.5.27nb6
 BUILDLINK_PKGSRCDIR.cyrus-sasl?=	../../security/cyrus-sasl
 .endif	# CYRUS_SASL_BUILDLINK3_MK
 
-.if defined(USE_PAM)
+PKG_OPTIONS.cyrus-sasl?=	${PKG_DEFAULT_OPTIONS}
+
+.if !empty(PKG_OPTIONS.cyrus-sasl:MPAM)
 .  include "../../security/PAM/buildlink3.mk"
 .endif
 
