@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/10/07 17:41:48 tron Exp $
+# $NetBSD: Makefile,v 1.27 2000/03/28 00:12:30 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -18,6 +18,7 @@ CONFIGURE_ARGS=	"--without-gnu-ld" \
 		"--without-libgif" \
 		"--without-libgdbm" \
 		"--without-libuulib" \
-		"--without-sprite-field"
+		"--without-sprite-field" \
+		"--with-qt-dir=${X11BASE}/qt1" 
 
 .include "../../mk/bsd.pkg.mk"
