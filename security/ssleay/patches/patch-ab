@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.6 1998/10/02 03:22:57 cjs Exp $
---- Makefile.ssl.orig	Fri Jun 26 01:25:25 1998
-+++ Makefile.ssl	Wed Sep 16 14:33:49 1998
+$NetBSD: patch-ab,v 1.7 1998/10/02 22:02:26 tv Exp $
+
+--- Makefile.ssl.orig	Fri Jun 26 04:25:25 1998
++++ Makefile.ssl	Fri Oct  2 16:00:53 1998
 @@ -62,7 +62,7 @@
  CC= cc
  #CFLAG= -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall -Wuninitialized -DMD5_ASM -DSHA1_ASM -DRMD160_ASM
@@ -10,7 +11,18 @@ $NetBSD: patch-ab,v 1.6 1998/10/02 03:22:57 cjs Exp $
  EX_LIBS= 
  AR=ar r
  
-@@ -327,5 +327,6 @@
+@@ -176,6 +176,10 @@
+ 	MICROSOFT makevms.com config PATENTS
+ WDIRS=  windows
+ LIBS=   libcrypto.a libssl.a 
++.if defined(USE_RSAREF)
++LIBS+=	libRSAglue.a
++EX_LIBS+=-lRSAglue -lrsaref
++.endif
+ 
+ GENERAL=        Makefile
+ BASENAME=       SSLeay
+@@ -327,5 +331,6 @@
  		sh util/ranlib.sh $(INSTALLTOP)/lib/$$i; \
  		chmod 644 $(INSTALLTOP)/lib/$$i ); \
  	done
