@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.329 2004/02/16 18:11:59 jmmv Exp $
+# $NetBSD: Packages.txt,v 1.330 2004/02/16 18:44:32 snj Exp $
 ###########################################################################
 
 			==========================
@@ -2681,7 +2681,7 @@ for more details.
  ===========================================
 
 If a package installs .schemas or .entries files, used by GConf2, you need
-to do some extra steps to make sure they get registered in the database:
+to take some extra steps to make sure they get registered in the database:
 
  1) Include "../../devel/GConf2/schemas.mk" instead of its buildlink[23].mk
     file.  This takes care of rebuilding the GConf2 database at installation
@@ -2700,17 +2700,17 @@ to do some extra steps to make sure they get registered in the database:
 
  4) Define the GCONF2_SCHEMAS variable in your Makefile with a list of all
     .schemas files installed by the package, if any.  Names must not contain
-    any directory in them.
+    any directories in them.
 
  5) Define the GCONF2_ENTRIES variable in your Makefile with a list of all
     .entries files installed by the package, if any.  Names must not contain
-    any directory in them.
+    any directories in them.
 
 
  10.38 Packages installing scrollkeeper data files
  =================================================
 
-If a package installs .omf files, used by scrollkeeper, you need to do some
+If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
 
  1) Include "../../textproc/scrollkeeper/omf.mk" instead of its
@@ -2721,8 +2721,8 @@ extra steps to make sure they get registered in the database:
  2) Check the PLIST and remove any entries under the libdata/scrollkeeper
     directory, as they will be handled automatically.
 
- 3) Do not remove the share/omf directory from the PLIST.  This will be
-    handled by scrollkeeper.
+ 3) Remove the share/omf directory from the PLIST.  It will be handled by
+    scrollkeeper.
 
 
  10.39 Packages installing X11 fonts
@@ -2781,17 +2781,17 @@ extra steps:
  2) Set SGML_CATALOGS to the full path of any SGML catalogs installed by
     the package.
 
- 3) Set XML_CATALOGS to the full path of any SGML catalogs installed by
+ 3) Set XML_CATALOGS to the full path of any XML catalogs installed by
     the package.
 
  4) Set SGML_ENTRIES to individual entries to be added to the SGML catalog.
     These come in groups of three strings; see xmlcatmgr(1) for more
-    information (concretely, arguments recognized by the 'add' action).
+    information (specifically, arguments recognized by the 'add' action).
     Note that you will normally not use this variable.
 
  5) Set XML_ENTRIES to individual entries to be added to the XML catalog.
     These come in groups of three strings; see xmlcatmgr(1) for more
-    information (concretely, arguments recognized by the 'add' action).
+    information (specifically, arguments recognized by the 'add' action).
     Note that you will normally not use this variable.
 
 
