@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: configure,v 1.3 1998/08/07 11:14:15 agc Exp $
+# $NetBSD: configure,v 1.4 1999/01/09 20:49:27 kleink Exp $
 #
 
 # write a small makefile to ${WRKSRC}
@@ -22,7 +22,7 @@ install:
 	cp doc/manual.ms \${LIBDIR}/doc
 	@mkdir -p \${LIBDIR}/misc
 	cp doc/tmac.hyper misc/sample.unroff \${LIBDIR}/misc
-	@chown -R bin.bin \${LIBDIR}
+	@chown -R bin:bin \${LIBDIR}
 	install -c -m 644 -o bin -g bin doc/*.1 \${MANDIR}
 
 EOF

@@ -1,6 +1,6 @@
 #!/usr/pkg/bin/python
 #
-#	$NetBSD: zope-install.py,v 1.1.1.1 1998/12/12 17:28:23 tsarna Exp $
+#	$NetBSD: zope-install.py,v 1.2 1999/01/09 20:49:27 kleink Exp $
 #	$Endicor$
 #
 # Copyright (c) 1998 Endicor Technologies, Inc.
@@ -147,7 +147,7 @@ if __name__ == "__main__":
     if not exists(instvar + "/Data.bbb"):
         runsys(pretend, "cp %(zopevar)s/Data.bbb.in %(instvar)s" % vars())
 
-    runsys(pretend, "chown -R %(user)s.%(group)s %(dirname)s" % vars())
+    runsys(pretend, "chown -R %(user)s:%(group)s %(dirname)s" % vars())
     runsys(pretend, "chmod -R u+rwX,g+rX,g-w,o-rwx %(dirname)s" % vars())
 
     fname = dirname + "/access"
@@ -159,12 +159,12 @@ if __name__ == "__main__":
         createfile(pretend, fname, perms + '\n')
 
     runsys(pretend, 
-        "chmod 600 %(fname)s; chown %(user)s.%(group)s %(fname)s" % vars())
+        "chmod 600 %(fname)s; chown %(user)s:%(group)s %(fname)s" % vars())
 
     fname = cgidir + '/' + instance + ".cgi"
     createfile(pretend, fname, resourcefile(vars()))
     runsys(pretend, 
-        "chmod 755 %(fname)s; chown %(user)s.%(group)s %(fname)s" % vars())
+        "chmod 755 %(fname)s; chown %(user)s:%(group)s %(fname)s" % vars())
 
     sys.stderr.write("""
 now you will need to add lines similar to these to your
