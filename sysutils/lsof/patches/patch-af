@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2003/09/26 03:13:04 atatat Exp $
+
+--- dialects/n+obsd/dlsof.h.orig	2003-06-11 07:44:54.000000000 -0400
++++ dialects/n+obsd/dlsof.h
+@@ -62,6 +62,7 @@
+ #define	_KERNEL
+ #  if	defined(NETBSDV)
+ struct buf;	/* dummy for function prototype in <sys/buf.h> */
++struct uio;	/* dummy for function prototype in <sys/buf.h> */
+ #  endif	/* defined(NETBSDV) */
+ #include <sys/ucred.h>
+ # endif	/* (defined(OPENBSDV) && OPENBSDV>=3030)
