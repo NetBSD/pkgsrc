@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.294 2002/10/17 19:18:41 wiz Exp $
+$NetBSD: CHANGES,v 1.295 2002/10/18 09:24:34 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3306,3 +3306,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tightvncviewer to 1.2.6 [lukem 2002-10-17]
 	Updated unrar to 3.1.0 [wiz 2002-10-17]
 	Updated sendfile to 2.1.0.2 [wiz 2002-10-17]
+	Updated gnustep-gui to 0.8.2 [rh 2002-10-18]
