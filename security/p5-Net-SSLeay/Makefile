@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/31 14:15:17 shell Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/05 11:42:53 seb Exp $
 
 DISTNAME=	Net_SSLeay.pm-1.21
 PKGNAME=	p5-${DISTNAME:S/Net_/Net-/:S/.pm//}
@@ -14,6 +14,7 @@ USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SSLeay/.packlist
 
 USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096G}
+MAKE_PARAMS+=		${BUILDLINK_PREFIX.openssl}
 
 .include "../../lang/perl5/module.mk"
 .include "../../security/openssl/buildlink2.mk"
