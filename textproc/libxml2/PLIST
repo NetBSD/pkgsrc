@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/05/17 13:02:29 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/07/12 15:45:02 wiz Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -42,7 +42,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.6
-lib/libxml2.so.6.21
+lib/libxml2.so.6.23
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -62,6 +62,7 @@ share/doc/libxml2-python-${LIBXML_VERSION}/examples/error.py
 share/doc/libxml2-python-${LIBXML_VERSION}/examples/invalid.xml
 share/doc/libxml2-python-${LIBXML_VERSION}/examples/push.py
 share/doc/libxml2-python-${LIBXML_VERSION}/examples/pushSAX.py
+share/doc/libxml2-python-${LIBXML_VERSION}/examples/pushSAXhtml.py
 share/doc/libxml2-python-${LIBXML_VERSION}/examples/serialize.py
 share/doc/libxml2-python-${LIBXML_VERSION}/examples/tst.py
 share/doc/libxml2-python-${LIBXML_VERSION}/examples/tst.xml
