@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/16 20:28:40 jlam Exp $
 #
 
 DISTNAME=	calc-2.11.4t2
@@ -13,12 +13,12 @@ COMMENT=	C arbitrary precision calculator
 
 NO_CONFIGURE=	# defined
 
-.if exists(/usr/include/readline.h) && !exists(/usr/include/readline/readline.h)
-post-patch:
-	${SED} -e "s|readline/readline.h|readline.h|" \
-	       -e "s|readline/history.h|history.h|" ${WRKSRC}/hist.c > \
-			${WRKSRC}/hist.c.new && \
-	${MV} -f ${WRKSRC}/hist.c.new ${WRKSRC}/hist.c
-.endif
+.include "../../devel/readline/Makefile.readline"
+
+MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=	-I${WRKINCDIR}
+LDFLAGS+=	-L${WRKLIBDIR}
+
+pre-build: link-readline-headers link-readline-libs
 
 .include "../../mk/bsd.pkg.mk"
