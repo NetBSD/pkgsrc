@@ -1,0 +1,12 @@
+$NetBSD: md5,v 1.1.1.1 1999/12/23 01:27:35 abs Exp $
+
+MD5 (setiathome-1.2.alpha-dec-osf3.2.tar) = 4c11bf24fc716e8130450b6ecfd4d649
+MD5 (setiathome-1.2.alpha-dec-osf4.0b.tar) = e2871e874cd45b55a6d3fc5c2284a3e5
+MD5 (setiathome-1.2.alpha-unknown-netbsd1.3.3.tar) = 7bf14041f0a9f680bd2a4e3865550de6
+MD5 (setiathome-1.2.alpha-unknown-netbsd1.4.tar) = 3dddde4f76f9b60fa6ca429a0d6c5dcb
+MD5 (setiathome-1.2.arm-unknown-netbsd1.3I.tar) = 7ebd29d265e269e10ce272e22f3d789d
+MD5 (setiathome-1.2.i386-unknown-netbsd1.3.2.tar) = 7c9745b1f8e8151657c86596e8139fe3
+MD5 (setiathome-1.2.i386-unknown-netbsd1.4.tar) = ab7fde28097e93b1036026af23afa118
+MD5 (setiathome-1.2.m68k-hp-netbsd1.3.3.tar) = 3f0ff8053307664cd7dd5fb0ed2e277a
+MD5 (setiathome-1.2.sparc-sun-netbsd1.3.3.tar) = 809cd2176a8a538a505e5d3bd2dff105
+MD5 (setiathome-1.2.sparc-sun-sunos4.1.4.tar) = ef2e103c19bdb6ba3ab5d94bd0438b2b
