@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:13 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/16 02:01:11 taca Exp $
 # FreeBSD: ports/security/ruby-acl/Makefile,v 1.4 2000/12/26 04:13:28 knu Exp
 
 DISTNAME=	acl-1.0.1
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-CATEGORIES=	security
+CATEGORIES=	security ruby
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
 MAINTAINER=	taca@NetBSD.org
