@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/28 16:52:20 wiz Exp $
 bin/BEpsf
 bin/Blatdoc
 bin/Blatdocs
@@ -23,8 +23,6 @@ bin/scilink
 bin/wgscilab.mnu
 bin/wscilab.mnu
 bin/xmetanet
-lib/X11/app-defaults/Metanet-color
-lib/X11/app-defaults/Xscilab
 ${SCIBASE}/.binary
 ${SCIBASE}/.pvmd.conf
 ${SCIBASE}/ACKNOWLEDGEMENTS
