@@ -1,32 +1,63 @@
-$NetBSD: patch-al,v 1.3 1999/02/13 09:05:02 rh Exp $
+$NetBSD: patch-al,v 1.4 1999/02/14 15:27:50 rh Exp $
 
 --- src/realpath.c.orig	Mon Jul  6 11:14:39 1998
-+++ src/realpath.c	Sat Feb 13 07:47:55 1999
-@@ -143,7 +143,13 @@
++++ src/realpath.c	Sun Feb 14 14:42:03 1999
+@@ -70,7 +70,8 @@
+     if (result == NULL) /* result must not be null! */
+       return(NULL);
+ 
+-    if(pathname == NULL){ /* if pathname is null, there is nothing to do */
++    if(pathname == NULL || /* if pathname is null, there is nothing to do */
++       strlen (pathname) >= sizeof curpath) { /* pathname too long: bail out */
+       *result = '\0'; 
+       return(NULL);
+     }
+@@ -141,9 +142,22 @@
+         strcpy(namebuf, workpath);
+         for (last = namebuf; *last; last++)
              continue;
-         if ((last == namebuf) || (*--last != '/'))
-             strcat(namebuf, "/");
-+	if (strlen(namebuf)+strlen(where) < sizeof(namebuf)) {
-         strcat(namebuf, where);
-+	} else {
-+	    /* path too long: bail out */
-+	    strcpy(result, "\0");
-+	    return (NULL);
-+	}
+-        if ((last == namebuf) || (*--last != '/'))
+-            strcat(namebuf, "/");
+-        strcat(namebuf, where);
++        if ((last == namebuf) || (*--last != '/')) {
++            if (strlen (namebuf) + 1 < sizeof (namebuf)) {
++                strcat(namebuf, "/");
++            } else {
++                /* path too long: bail out */
++                *result = '\0'; 
++                return (NULL);
++            }
++        }
++        if (strlen(namebuf)+strlen(where) < sizeof(namebuf)) {
++            strcat(namebuf, where);
++        } else {
++            /* path too long: bail out */
++            *result = '\0'; 
++            return (NULL);
++        }
  
          where = ++ptr;
          if (lstat(namebuf, &sbuf) == -1) {
-@@ -164,7 +170,13 @@
+@@ -153,7 +167,7 @@
+ 		/* was IFLNK */
+ #ifdef HAVE_SYMLINK
+         if ((sbuf.st_mode & S_IFMT) == S_IFLNK) {
+-            len = readlink(namebuf, linkpath, MAXPATHLEN);
++            len = readlink(namebuf, linkpath, sizeof(linkpath) - 1);
+             if (len == 0) {
+                 strcpy(result, namebuf);
+                 return (NULL);
+@@ -164,7 +178,13 @@
                  *workpath = '\0';
              if (*where) {
                  strcat(linkpath, "/");
-+		if (strlen(linkpath) + strlen(where) < sizeof(linkpath)) {
++                if (strlen(linkpath) + strlen(where) < sizeof(linkpath)) {
                  strcat(linkpath, where);
-+		} else {
-+		    /* path too long: bail out */
-+		    strcpy(result, "\0");
-+		    return (NULL);
-+		}
++                } else {
++                    /* path too long: bail out */
++                    *result = '\0'; 
++                    return (NULL);
++                }
              }
              strcpy(curpath, linkpath);
              goto loop;
