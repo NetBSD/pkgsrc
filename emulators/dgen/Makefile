@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/22 08:36:04 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/11 17:14:26 snj Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -16,9 +16,9 @@ DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 USE_X11=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 CONFIGURE_ARGS+=	--with-extra-opt
 
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
