@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/02/28 14:56:54 taca Exp $
+
+--- chasenrc.in.orig	Sun Dec 10 02:01:46 2000
++++ chasenrc.in
+@@ -2,7 +2,7 @@
+ ;;  chasenrc for @PACKAGE@-@VERSION@
+ ;;
+ 
+-;(文法ファイル  @CHASEN_DIC_DIR@/@PACKAGE@)
++(文法ファイル  @CHASEN_DIC_DIR@/@PACKAGE@)
+ (PATDIC        chadic)
+ ;(SUFDIC        chadic)
+ 
