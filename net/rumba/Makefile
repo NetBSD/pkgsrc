@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/10/07 17:41:57 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/25 21:00:38 tron Exp $
 # $FreeBSD Id: Makefile,v 1.2 1997/07/21 19:28:46 max Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://hal.kph.tuwien.ac.at/pub/NeXT/tools/rumba/ \
 		ftp://next-ftp.peak.org/pub/next/apps/utils/networks/
 EXTRACT_SUFX=	.gnutar.gz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 
 MAKE_ENV=	PWD=${WRKSRC}
 
