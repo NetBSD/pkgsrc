@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/28 21:48:41 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/01 05:40:52 dmcmahill Exp $
 #
 
 DISTNAME=	vipec-2.0.1
@@ -14,7 +14,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 
-CONFIGURE_ENV+=	"QTDIR=${X11BASE}/qt2"
+CONFIGURE_ENV+=		"QTDIR=${X11BASE}/qt2"
+CONFIGURE_ARGS+=	"--with-qt-dir=${X11BASE}/qt2"
 
 post-extract:
 	${MV} -f ${WRKSRC}/bin/start_vipec_help ${WRKSRC}/bin/start_vipec_help.in
