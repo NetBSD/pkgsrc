@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/14 16:03:20 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:03 agc Exp $
 #
 
 DISTNAME=		plt.src.x
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.cs.rice.edu/CS/PLT/packages/download/101/plt/
 
 MAINTAINER=		groo@netbsd.org
 HOMEPAGE=		http://www.cs.rice.edu/CS/PLT/packages/drscheme/
+COMMENT=		R4RS-compilant and nearly R5RS-compliant scheme tailored for teaching
 
 DEPENDS+=               mzscheme-101:../mzscheme
 
