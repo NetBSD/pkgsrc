@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/25 04:39:55 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/24 16:34:19 jmmv Exp $
 bin/gst-complete
 bin/gst-compprep
 bin/gst-feedback
@@ -6,6 +6,7 @@ bin/gst-inspect
 bin/gst-launch
 bin/gst-md5sum
 bin/gst-register
+bin/gst-typefind
 bin/gst-xmllaunch
 include/gstreamer-0.6/gst/bytestream/bytestream.h
 include/gstreamer-0.6/gst/control/control.h
@@ -120,13 +121,13 @@ lib/gstreamer-0.6/libgsttypes.so
 lib/libgstcontrol-0.6.a
 lib/libgstcontrol-0.6.la
 lib/libgstcontrol-0.6.so
-lib/libgstcontrol-0.6.so.0
-lib/libgstcontrol-0.6.so.0.1
+lib/libgstcontrol-0.6.so.1
+lib/libgstcontrol-0.6.so.1.0
 lib/libgstreamer-0.6.a
 lib/libgstreamer-0.6.la
 lib/libgstreamer-0.6.so
-lib/libgstreamer-0.6.so.0
-lib/libgstreamer-0.6.so.0.1
+lib/libgstreamer-0.6.so.1
+lib/libgstreamer-0.6.so.1.0
 lib/pkgconfig/gstreamer-0.6.pc
 lib/pkgconfig/gstreamer-control-0.6.pc
 man/man1/gst-complete.1
@@ -136,6 +137,7 @@ man/man1/gst-inspect.1
 man/man1/gst-launch.1
 man/man1/gst-md5sum.1
 man/man1/gst-register.1
+man/man1/gst-typefind.1
 man/man1/gst-xmllaunch.1
 share/aclocal/gst-element-check-0.6.m4
 @dirrm lib/gstreamer-0.6
