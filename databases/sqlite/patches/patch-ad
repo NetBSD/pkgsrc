@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2003/12/29 20:03:31 cjep Exp $
+$NetBSD: patch-ad,v 1.4 2003/12/30 14:41:09 cjep Exp $
 
 --- ../sqlite/src/btree_rb.c.orig	2003-06-29 19:29:48.000000000 +0100
 +++ ../sqlite/src/btree_rb.c
