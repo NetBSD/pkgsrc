@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/12/30 17:39:26 sommerfeld Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/30 17:50:08 sommerfeld Exp $
 
 .if !defined(ZEPHYR_BUILDLINK2_MK)
 ZEPHYR_BUILDLINK2_MK=	# defined
 
 BUILDLINK_DEPENDS.zephyr?=	zephyr>=20010518
-BUILDLINK_PKGSRCDIR.zephyr?=	../../net/zephyr-current
+BUILDLINK_PKGSRCDIR.zephyr?=	../../chat/zephyr-current
 
 BUILDLINK_PACKAGES+=	zephyr
 EVAL_PREFIX+=		BUILDLINK_PREFIX.zephyr=zephyr
