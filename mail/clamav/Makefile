@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/09/20 01:27:17 chris Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/28 23:39:24 chris Exp $
 
 DISTNAME=	clamav-0.60
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -20,13 +21,23 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-uid=${CLAMAV_USER}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
 
-BUILD_DEFS+=	CLAMAV_USER CLAMAV_GROUP
+BUILD_DEFS+=	CLAMAV_USER CLAMAV_GROUP USE_MILTER
 
 PKG_GROUPS+=    ${CLAMAV_GROUP}
 PKG_USERS+=     ${CLAMAV_USER}:${CLAMAV_GROUP}::Clamav\\ User
 
 EGDIR=		${PREFIX}/share/examples/clamav
 CONF_FILES=	${EGDIR}/clamav.conf ${PKG_SYSCONFDIR}/clamav.conf
+PLIST_SRC=	${PKGDIR}/PLIST
+
+.include "../../mk/bsd.prefs.mk"
+.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+#.include "../../mail/libmilter/buildlink2.mk"
+#CONFIGURE_ARGS+=	--enable-milter
+#PLIST_SRC+=		${PKGDIR}/PLIST.milter
+.else
+CONFIGURE_ARGS+=	--disable-milter
+.endif
 
 pre-configure:
 	cd ${WRKSRC};						\
@@ -36,10 +47,9 @@ pre-configure:
 
 # for freshclam to work it must own the share/clamav dir
 post-install:
-	${CHOWN} -R ${CLAMAV_USER}:${CLAMAV_GROUP} ${PREFIX}/share/examples/clamav
+	${CHOWN} -R ${CLAMAV_USER}:${CLAMAV_GROUP} ${PREFIX}/share/clamav
 
 .include "../../devel/zlib/buildlink2.mk"
-.include "../../mail/libmilter/buildlink2.mk"
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/autoconf.mk"
