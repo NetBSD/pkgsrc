@@ -1,8 +1,15 @@
-$NetBSD: patch-aj,v 1.1 1998/10/28 18:18:08 bad Exp $
-
---- mit-pthreads/pthreads/fd.c.orig	Tue Jan 13 14:28:04 1998
-+++ mit-pthreads/pthreads/fd.c	Sat Oct 24 22:24:28 1998
-@@ -702,7 +702,7 @@
+$NetBSD: patch-aj,v 1.2 1998/12/29 08:12:04 garbled Exp $
+--- mit-pthreads/pthreads/fd.c.orig	Tue Jan 13 06:28:04 1998
++++ mit-pthreads/pthreads/fd.c	Mon Dec 28 23:50:16 1998
+@@ -44,6 +44,7 @@
+ 
+ #include <pthread.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -702,7 +703,7 @@
   */
  off_t lseek(int fd, off_t offset, int whence)
  {

@@ -1,0 +1,12 @@
+$NetBSD: patch-bb,v 1.1 1998/12/29 08:12:04 garbled Exp $
+--- sql/Makefile.in.orig	Tue Dec 29 00:18:10 1998
++++ sql/Makefile.in	Tue Dec 29 00:19:42 1998
+@@ -945,7 +945,7 @@
+ 
+ 
+ sql_yacc.o:	sql_yacc.cc sql_yacc.h
+-	$(CXXCOMPILE) $(LM_CFLAGS) -c $<
++	$(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) -DDBUG_OFF $(LM_CFLAGS) -c $<
+ 
+ .cc.so:
+ 	$(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS) -fPIC -share -o $@ $<
