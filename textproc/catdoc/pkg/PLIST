@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/19 23:38:18 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/10/21 16:54:01 agc Exp $
 bin/catdoc
 bin/wordview
 man/man1/catdoc.1
-man/cat1/catdoc.0
