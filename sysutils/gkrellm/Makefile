@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/13 17:53:29 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/22 14:33:19 wiz Exp $
 #
 
-DISTNAME=	gkrellm-1.0.6
+DISTNAME=	gkrellm-1.0.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://newweb.wt.net/~billw/
 
@@ -23,6 +23,7 @@ ALL_TARGET=	netbsd
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/gkrellm ${PREFIX}/bin/gkrellm
+	${INSTALL_MAN} ${WRKSRC}/gkrellm.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gkrellm
 	cd ${WRKSRC} && ${INSTALL_DATA} COPYRIGHT README Themes.html	\
 		${PREFIX}/share/doc/gkrellm
