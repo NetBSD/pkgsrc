@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 14:16:57 wiz Exp $
+bin/jpeghotp
+bin/jpegpixi
+man/de/man1/jpeghotp.1
+man/de/man1/jpegpixi.1
+man/fi/man1/jpeghotp.1
+man/fi/man1/jpegpixi.1
+man/fr/man1/jpeghotp.1
+man/fr/man1/jpegpixi.1
+man/man1/jpeghotp.1
+man/man1/jpegpixi.1
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/jpegpixi.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/jpegpixi.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/jpegpixi.mo
