@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/12/22 07:27:07 martti Exp $
+# $NetBSD: Makefile,v 1.48 2004/12/22 08:08:08 martti Exp $
 
 DISTNAME=	squirrelmail-1.4.3a
 PKGREVISION=	1
@@ -66,9 +66,10 @@ do-install:
 		${EGDIR}/squirrelmail.conf
 	${CP} -R ${WRKSRC}/* ${SMDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
+	${FIND} ${SMDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${SMDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE} 
-	${CP} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
-	${CP} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
+	${INSTALL_DATA} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
+	${INSTALL_DATA} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
