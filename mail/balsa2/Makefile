@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2004/03/07 11:15:45 recht Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/08 19:40:40 jmmv Exp $
 #
 
 DISTNAME=		balsa-2.0.16
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://balsa.gnome.org/				\
 			ftp://ftp.newton.cx/pub/balsa/
@@ -13,6 +13,7 @@ HOMEPAGE=		http://balsa.gnome.org/
 COMMENT=		GNOME2 EMail client
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_PERL5=		build
 USE_PKGINSTALL=		yes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/02/14 17:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/08 19:40:41 jmmv Exp $
 
 DISTNAME=	gnapster-1.5.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnapster/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=	http://sourceforge.net/projects/gnapster/
 COMMENT=	Simple client for the online mp3 community
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES

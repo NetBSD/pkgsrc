@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2004/02/20 16:05:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/08 19:40:41 jmmv Exp $
 #
 
 DISTNAME=	etherape-0.9.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
 MAINTAINER=	damon@NetBSD.org
 HOMEPAGE=	http://etherape.sourceforge.net/
 COMMENT=	Graphical network monitor
+
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_GNU_TOOLS+=		make
 USE_X11=		YES

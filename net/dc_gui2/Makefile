@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/02/20 16:23:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/08 19:40:41 jmmv Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	http://www.ac2i.tzo.com/dctc/ \
 		http://brainz.servebeer.com/dctc/
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	Graphical user interface for DCTC
 
 DEPENDS+=	dctc>=0.85.4:../../net/dctc
+DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES

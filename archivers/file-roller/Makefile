@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/03/07 12:09:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/08 19:40:36 jmmv Exp $
 #
 
 DISTNAME=	file-roller-2.4.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.4/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://fileroller.sourceforge.net/
 COMMENT=	Front-end to archiving programs like tar and zip
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
 DEPENDS+=		unzip>=5.50nb2:../../archivers/unzip
 DEPENDS+=		zip>=2.3nb2:../../archivers/zip

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2004/03/07 10:44:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.73 2004/03/08 19:40:37 jmmv Exp $
 #
 
 DISTNAME=		abiword-2.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.abisource.com/
 COMMENT=		Open Source cross-platform word processor
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 # GTK1 version and previous name of the GTK2 version
 CONFLICTS=		abiword-personal-[0-9]* abiword2-[0-9]*
