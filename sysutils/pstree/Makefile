@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:42:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/20 19:36:30 jlam Exp $
 #
 
 DISTNAME=	pstree-2.16
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Display processes in a tree
 
-CONFLICTS+=	psmisc-*
+CONFLICTS+=	psmisc-[0-9]*
 
 WRKSRC=		${WRKDIR}
 

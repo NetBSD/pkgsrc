@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:42:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/20 19:36:30 jlam Exp $
 #
 
 DISTNAME=		psmisc-19
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://lrcftp.epfl.ch/pub/linux/local/psmisc/ \
 
 MAINTAINER=		packages@netbsd.org
 COMMENT=		miscellaneous proc FS tools: killall, pidof, and pstree
+
+CONFLICTS+=		pstree-[0-9]*
 
 WRKSRC=			${WRKDIR}/psmisc
 
