@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/21 20:46:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/09 15:50:25 recht Exp $
+${PYINC}/numarray/arraybase.h
 ${PYINC}/numarray/arrayobject.h
 ${PYINC}/numarray/cfunc.h
 ${PYINC}/numarray/ieeespecial.h
 ${PYINC}/numarray/libnumarray.h
+${PYINC}/numarray/libnumeric.h
 ${PYINC}/numarray/libteacup.h
 ${PYINC}/numarray/numarray.h
 ${PYINC}/numarray/numcomplex.h
@@ -127,6 +129,7 @@ ${PYSITELIB}/numarray/image/combine.py
 ${PYSITELIB}/numarray/image/combine.pyc
 ${PYSITELIB}/numarray/image/combine.pyo
 ${PYSITELIB}/numarray/libnumarray.so
+${PYSITELIB}/numarray/libnumeric.so
 ${PYSITELIB}/numarray/linear_algebra/LinearAlgebra2.py
 ${PYSITELIB}/numarray/linear_algebra/LinearAlgebra2.pyc
 ${PYSITELIB}/numarray/linear_algebra/LinearAlgebra2.pyo
@@ -222,6 +225,9 @@ ${PYSITELIB}/numarray/random_array/dtest.py
 ${PYSITELIB}/numarray/random_array/dtest.pyc
 ${PYSITELIB}/numarray/random_array/dtest.pyo
 ${PYSITELIB}/numarray/random_array/ranlib2.so
+${PYSITELIB}/numarray/readonly.py
+${PYSITELIB}/numarray/readonly.pyc
+${PYSITELIB}/numarray/readonly.pyo
 ${PYSITELIB}/numarray/records.py
 ${PYSITELIB}/numarray/records.pyc
 ${PYSITELIB}/numarray/records.pyo
