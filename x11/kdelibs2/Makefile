@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/12/05 15:28:29 tron Exp $
+# $NetBSD: Makefile,v 1.47 2002/12/14 03:43:20 schmonz Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	4
@@ -32,8 +32,8 @@ LIBS+=			`gcc -print-libgcc-file-name`
 .endif
 
 REPLACE_PERL= \
-	${WRKSRC}/kio/proxytype.pl \
-	${WRKSRC}/kio/useragent.pl
+	kio/proxytype.pl \
+	kio/useragent.pl
 
 PLIST_SRC=		${WRKDIR}/PLIST
 UNLIMIT_RESOURCES=	datasize
