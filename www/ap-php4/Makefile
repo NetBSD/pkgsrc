@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/10/16 04:54:23 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/10/19 09:55:31 veego Exp $
 
 .include "../php4/Makefile.php"
 
@@ -16,7 +16,9 @@ USE_BUILDLINK_ONLY=	YES
 CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
 
 # Ensure we export symbols in the linked shared object.
+.if ${OPSYS} != "SunOS"
 LDFLAGS+=		-Wl,--export-dynamic
+.endif
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/.libs/libphp4.so	\
