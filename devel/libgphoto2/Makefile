@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/24 16:18:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/25 19:38:15 wiz Exp $
 #
 
 DISTNAME=	libgphoto2-2.1.1
@@ -15,6 +15,7 @@ CONFLICTS+=	gphoto<2.1.1
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libgphoto2_port/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgphoto2/libgphoto2.pc.in
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

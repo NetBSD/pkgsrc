@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/24 16:18:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/25 19:38:15 wiz Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -133,6 +133,12 @@ lib/gphoto2/${PKGVERSION}/libgphoto2_stv0680.so
 lib/gphoto2/${PKGVERSION}/libgphoto2_sx330z.a
 lib/gphoto2/${PKGVERSION}/libgphoto2_sx330z.la
 lib/gphoto2/${PKGVERSION}/libgphoto2_sx330z.so
+lib/gphoto2_port/0.5.1/libgphoto2_port_serial.a
+lib/gphoto2_port/0.5.1/libgphoto2_port_serial.la
+lib/gphoto2_port/0.5.1/libgphoto2_port_serial.so
+lib/gphoto2_port/0.5.1/libgphoto2_port_usb.a
+lib/gphoto2_port/0.5.1/libgphoto2_port_usb.la
+lib/gphoto2_port/0.5.1/libgphoto2_port_usb.so
 lib/libgphoto2.a
 lib/libgphoto2.la
 lib/libgphoto2.so
@@ -190,7 +196,6 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgphoto2_port-0.mo
 @dirrm share/doc/libgphoto2/linux-hotplug
 @dirrm share/doc/libgphoto2
 @unexec ${RMDIR} %D/lib/pkgconfig 2> /dev/null || ${TRUE}
-@exec ${MKDIR} %D/lib/gphoto2_port/0.5.1
 @dirrm lib/gphoto2_port/0.5.1
 @dirrm lib/gphoto2_port
 @dirrm lib/gphoto2/${PKGVERSION}
