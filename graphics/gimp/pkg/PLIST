@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2000/12/26 18:25:33 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.17 2000/12/27 16:20:19 hubertf Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -1417,14 +1417,18 @@ share/locale/uk/LC_MESSAGES/gimp.mo
 @dirrm share/gimp/1.2/help/C/dialogs
 @dirrm share/gimp/1.2/help/C/channels
 @dirrm share/gimp/1.2/help/C
+@dirrm share/gimp/1.2/help
 @dirrm share/gimp/1.2/gradients
 @dirrm share/gimp/1.2/gimpressionist/Presets
 @dirrm share/gimp/1.2/gimpressionist/Paper
 @dirrm share/gimp/1.2/gimpressionist/Brushes
+@dirrm share/gimp/1.2/gimpressionist
 @dirrm share/gimp/1.2/gflare
 @dirrm share/gimp/1.2/gfig
 @dirrm share/gimp/1.2/fractalexplorer
 @dirrm share/gimp/1.2/devel-docs/html/libgimp
+@dirrm share/gimp/1.2/devel-docs/html
+@dirrm share/gimp/1.2/devel-docs
 @dirrm share/gimp/1.2/brushes
 @dirrm share/gimp/1.2
 @dirrm share/aclocal
