@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/03/14 19:37:43 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/01/29 10:33:51 grant Exp $
 
 .if !defined(PYTHON15_BUILDLINK2_MK)
 PYTHON15_BUILDLINK2_MK=	# defined
@@ -18,7 +18,7 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.python15=python15
 BUILDLINK_PREFIX.python15_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES_CMD.python15= \
 	${BUILDLINK_PLIST_CMD.python15} |				\
-		${GREP} '^\(include\|lib.*/lib[^/]*$$\)'
+		${EGREP} '^(include|lib.*/lib[^/]*$$)'
 BUILDLINK_TRANSFORM+=		l:python:python1.5
 
 BUILDLINK_CPPFLAGS.python15+= \
