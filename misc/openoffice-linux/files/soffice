@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-#	$NetBSD: soffice,v 1.7 2004/06/27 16:07:36 mrauch Exp $
+#	$NetBSD: soffice,v 1.8 2005/01/03 10:51:14 martti Exp $
 #
-SOINST=@@PREFIX@@/OpenOffice.org1.1.2
-[ "$SOFFICE" = "" ] && SOFFICE=$HOME/OpenOffice.org1.1.2
+SOINST=@@PREFIX@@/OpenOffice.org@@OO_VER@@
+[ "$SOFFICE" = "" ] && SOFFICE=$HOME/OpenOffice.org@@OO_VER@@
 
 if [ ! -d "$SOFFICE" ]; then
 	echo ""
