@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/11/02 02:57:28 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/01/27 22:36:07 jlam Exp $
 #
 # This Makefile fragment is included by packages that use mysql-client.
 #
@@ -30,6 +30,11 @@ BUILDLINK_FILES.mysql-client+=		lib/mysql/libmysqlclient.*
 BUILDLINK_TARGETS.mysql-client=		mysql-client-buildlink
 BUILDLINK_TARGETS.mysql-client+=	mysql-client-buildlink-config-wrapper
 BUILDLINK_TARGETS+=			${BUILDLINK_TARGETS.mysql-client}
+
+BUILDLINK_CONFIG_WRAPPER_SED+=	\
+	-e "s|-I\(.\)${BUILDLINK_PREFIX.mysql-client}\(/include/mysql\)\(.\)|-I${BUILDLINK_DIR}\2|g"
+BUILDLINK_CONFIG_WRAPPER_SED+=	\
+	-e "s|-L\(.\)${BUILDLINK_PREFIX.mysql-client}\(/lib/mysql\)\(.\)|-L${BUILDLINK_DIR}\2|g"
 
 BUILDLINK_CONFIG.mysql-client=	\
 	${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config
