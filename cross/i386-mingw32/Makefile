@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/24 04:56:30 kent Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/24 11:36:10 kent Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		2
@@ -62,16 +62,16 @@ DISTFILES+=	${CROSS_DISTFILES}
 do-configure: bu-configure gcc-configure
 bu-configure:
 	cd ${BINUTILS_WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure \
-		--prefix=${PREFIX} --target=${TARGET_ARCH}
+		--prefix=${PREFIX} --target=${TARGET_ARCH} --disable-nls
 gcc-configure:
 	-${MKDIR} ${GCC_WRKSRC}/${TARGET_ARCH}
 	cd ${GCC_WRKSRC}/${TARGET_ARCH} && ${SETENV} ${CONFIUGRE_ENV} ../configure \
 		--prefix=${PREFIX} --target=${TARGET_ARCH} \
-		--with-gnu-as --with-gnu-ld --disable-multilib
+		--with-gnu-as --with-gnu-ld --disable-multilib --disable-nls
 	-${MKDIR} ${GCC_WRKSRC}/${TARGET_ARCH}/${TARGET_ARCH}/libiberty
 	cd ${GCC_WRKSRC}/${TARGET_ARCH}/${TARGET_ARCH}/libiberty && ${SETENV} \
 		${CONFIGURE_ENV} ../../../libiberty/configure \
-		--prefix=${PREFIX} --target=${TARGET_ARCH}
+		--prefix=${PREFIX} --target=${TARGET_ARCH} --disable-nls
 	${CP} ${FILESDIR}/config.h ${GCC_WRKSRC}/${TARGET_ARCH}/${TARGET_ARCH}/libiberty
 
 
