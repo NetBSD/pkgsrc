@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.27 2004/03/31 09:38:36 sketch Exp $
+# $NetBSD: compiler.mk,v 1.28 2004/05/08 06:03:26 grant Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -101,10 +101,44 @@ PKGSRC_COMPILER?=	mipspro
 PKGSRC_COMPILER?=	gcc
 .endif
 
-_PKGSRC_COMPILER=	# empty
-.for _compiler_ in ${PKGSRC_COMPILER}
-.  if empty(_PKGSRC_COMPILER:M${_compiler_})
-_PKGSRC_COMPILER:=	${_compiler_} ${_PKGSRC_COMPILER}
+_COMPILERS=		gcc mipspro sunpro
+_PSEUDO_COMPILERS=	ccache distcc
+
+.if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
+.  for _compiler_ in ${_COMPILERS}
+.    if ${NOT_FOR_COMPILER:M${_compiler_}} == ""
+_ACCEPTABLE_COMPILERS+=	${_compiler_}
+.    endif
+.  endfor
+.elif defined(ONLY_FOR_COMPILER) && !empty(ONLY_FOR_COMPILER)
+.  for _compiler_ in ${_COMPILERS}
+.    if ${ONLY_FOR_COMPILER:M${_compiler_}} != ""
+_ACCEPTABLE_COMPILERS+=	${_compiler_}
+.    endif
+.  endfor
+.else
+_ACCEPTABLE_COMPILERS+=	${_COMPILERS}
+.endif
+
+.if defined(_ACCEPTABLE_COMPILERS)
+.  for _acceptable_ in ${_ACCEPTABLE_COMPILERS}
+.    for _compiler_ in ${PKGSRC_COMPILER}
+.      if !empty(_ACCEPTABLE_COMPILERS:M${_compiler_}) && !defined(_COMPILER)
+_COMPILER=	${_compiler_}
+.      endif
+.    endfor
+.  endfor
+.endif
+
+.if !defined(_COMPILER)
+PKG_FAIL_REASON+=	"No acceptable compiler found for ${PKGNAME}."
+.else
+_PKGSRC_COMPILER:=	${_COMPILER}
+.endif
+
+.for _compiler_ in ${_PSEUDO_COMPILERS}
+.  if !empty(PKGSRC_COMPILER:M${_compiler_})
+_PKGSRC_COMPILER:=     ${_compiler_} ${_PKGSRC_COMPILER}
 .  endif
 .endfor
 
