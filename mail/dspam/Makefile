@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/08/06 21:24:13 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/06 21:27:52 jlam Exp $
 
 DISTNAME=	dspam-3.0.0
 PKGREVISION=	2
@@ -21,7 +21,7 @@ REPLACE_PERL=		tools/dspam_genaliases.in			\
 
 PKGCONFIG_OVERRIDE+=	dspam.pc.in
 
-SUBST_CLASSES=		cgi large
+SUBST_CLASSES=		cgi
 SUBST_STAGE.cgi=	post-patch
 SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi 
 SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|g" \
