@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 1999/04/07 23:01:28 mellon Exp $
+bin/gpg
+bin/gpgm
+lib/gnupg/rndlinux
+lib/gnupg/rndegd
+lib/gnupg/tiger
+lib/gnupg/twofish
+man/man1/gpg.1
+man/man1/gpgm.1
+share/gnupg/options.skel
+share/locale/de/LC_MESSAGES/gnupg.mo
+share/locale/es_ES/LC_MESSAGES/gnupg.mo
+share/locale/fr/LC_MESSAGES/gnupg.mo
+share/locale/it/LC_MESSAGES/gnupg.mo
+share/locale/pl/LC_MESSAGES/gnupg.mo
+share/locale/pt_BR/LC_MESSAGES/gnupg.mo
+share/locale/ru/LC_MESSAGES/gnupg.mo
+@dirrm share/gnupg
+@dirrm lib/gnupg
