@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.440 2003/12/09 04:54:44 grant Exp $
+# $NetBSD: Makefile,v 1.441 2003/12/12 19:05:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -32,6 +32,7 @@ SUBDIR+=	autoconf213
 SUBDIR+=	autogen
 SUBDIR+=	automake
 SUBDIR+=	automake14
+SUBDIR+=	automake17
 SUBDIR+=	avltree
 SUBDIR+=	bcc
 SUBDIR+=	binutils
