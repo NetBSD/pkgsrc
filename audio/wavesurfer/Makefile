@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/03/08 20:27:13 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/09 18:04:06 minskim Exp $
 
 DISTNAME=	wavesurfer-1.4.6
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.speech.kth.se/wavesurfer/
 
@@ -8,13 +9,24 @@ MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://www.speech.kth.se/wavesurfer/
 COMMENT=	Tool for sound visualization and manipulation
 
-USE_BUILDLINK2=		YES
-NO_BUILD=		YES
+DEPENDS+=	tcl-snack-[0-9]*:../../audio/tcl-snack
+DEPENDS+=	tk-[0-9]*:../../x11/tk
+
+NO_BUILDLINK=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+USE_LANGUAGES=	# empty
+
+SUBST_CLASSES+=		wish
+SUBST_MESSAGE.wish=	"Fixing hardcoded command names."
+SUBST_STAGE.wish=	post-patch
+SUBST_FILES.wish=	wavesurfer.tcl
+SUBST_SED.wish=		-e 's,wish8.3,wish,g' \
+
+INSTALLATION_DIRS=	bin lib
 
 do-install:
 	${CP} ${WRKSRC}/wavesurfer.tcl ${PREFIX}/bin/wavesurfer
 	${CP} -R ${WRKSRC}/wsurf1.4 ${PREFIX}/lib/
 
-.include "../../audio/tcl-snack/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
