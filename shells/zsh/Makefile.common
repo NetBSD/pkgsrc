@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/04/18 04:41:12 snj Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/05/06 22:29:36 cube Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 PKGREVISION=	1
@@ -21,6 +21,8 @@ GNU_CONFIGURE=		YES
 
 USE_MAKEINFO=		YES
 INFO_FILES=		zsh.info
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
