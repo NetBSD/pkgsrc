@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/20 23:26:06 tv Exp $
+# $NetBSD: Makefile,v 1.11 1998/08/02 02:08:51 tv Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -25,9 +25,11 @@ MIRROR_DISTFILE=no
 # This bootstrap is ugly, but zcrypt is only shipped as a zipfile.
 pre-build:
 	@cd ${WRKSRC}; test -f README.CR || ( \
+		echo '*** Building stage 1 of 2--unzip without encryption.' && \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} unzip && \
 		./unzip -qo ${DISTDIR}/zcrypt27.zip && \
 		${RM} -f *.o unzip )
+	@echo '*** Building stage 2 of 2--unzip with encryption.'
 .endif
 
 do-install:
