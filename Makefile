@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 1998/02/27 09:43:11 mellon Exp $
+# $NetBSD: Makefile,v 1.7 1998/03/05 09:09:55 mellon Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
 SUBDIR += archivers
 #SUBDIR += astro
-SUBDIR += athena
 SUBDIR += audio
 SUBDIR += benchmarks
 #SUBDIR += cad
