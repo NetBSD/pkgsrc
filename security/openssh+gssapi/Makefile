@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/17 14:27:03 jwise Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/07 23:58:49 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -99,7 +99,7 @@ CONFIGURE_ARGS+=	--with-kerberos4=/usr
 LDFLAGS+=		-lkrb -lcom_err -lroken -ldes -lcrypto
 .endif
 
-LD=	${CC}
+CONFIGURE_ENV+=		LD=${CC:Q}
 
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
