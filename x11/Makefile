@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2003/06/30 07:32:21 jlam Exp $
+# $NetBSD: Makefile,v 1.295 2003/07/02 13:29:05 jmmv Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -130,6 +130,7 @@ SUBDIR+=	libzvt
 SUBDIR+=	mlterm
 SUBDIR+=	modeline
 SUBDIR+=	mowitz
+SUBDIR+=	multi-aterm
 SUBDIR+=	multi-gnome-terminal
 SUBDIR+=	neXtaw
 SUBDIR+=	oneko
