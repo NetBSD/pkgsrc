@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/28 02:36:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/07 21:02:18 jmc Exp $
 #
 
 DISTNAME=	simian_12_98
@@ -10,6 +10,7 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://weewave.mer.utexas.edu/MED_files/MED_research/Intrcncts/SIMIAN_stuff/simian_links.html
 COMMENT=	2-dimensional interconnect and transmission line simulator
 
+LICENSE=		no-redistribution
 RESTRICTED=		"Personal use only"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
