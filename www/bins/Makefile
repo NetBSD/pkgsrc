@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/12/24 02:05:50 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/25 18:02:14 cjep Exp $
 #
 
 DISTNAME=	bins-1.1.20
@@ -25,7 +25,8 @@ DEPENDS+=	p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Template>=2.5:../../www/p5-HTML-Template
 DEPENDS+=	p5-URI>=1.19:../../www/p5-URI
 
-USE_PERL5=	YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 # bins-edit-gui not installed because many needed packages are missing
 # bins_txt2xml not installed because it's an upgrade tool, and we didn't
 # have previous versions in pkgsrc.
@@ -63,4 +64,5 @@ do-install:
 		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES/bins.mo; \
 	done
 
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
