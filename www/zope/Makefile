@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 22:56:08 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/28 23:50:00 heinz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -38,7 +38,7 @@ do-install:
 		${PREFIX}/lib/python2.0/compileall.py ${ZOPEDIR}
 	${CHMOD} -R a+rX ${ZOPEDIR}
 	cd ${PREFIX} && ${FIND} lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d lib/zope -type d -print | \
+	cd ${PREFIX} && ${FIND} lib/zope -type d -print | ${SORT} -r | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 	${SED} -e "s,/usr/pkg,${PREFIX}," \
 		<${FILESDIR}/zope-install.py >${PREFIX}/sbin/zope-install
