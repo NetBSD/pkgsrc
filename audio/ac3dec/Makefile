@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/01/07 04:20:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/06 15:42:41 wiz Exp $
 #
 
-DISTNAME=	ac3dec-0.5.6
+DISTNAME=	ac3dec-0.6.1
 CATEGORIES=	audio
 MASTER_SITES=	http://ess.engr.uvic.ca/~aholtzma/ac3/
 
