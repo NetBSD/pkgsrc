@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2004/06/07 00:16:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2004/07/18 10:49:49 recht Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.4.0
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 
