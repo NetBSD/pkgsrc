@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/22 07:15:01 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/11 12:18:37 wiz Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -14,20 +14,19 @@ MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://andrej.co.ru/~andrej/programs/xamp/
 COMMENT=	Version of amp (stands for `Audio Mpeg Player') plus a Qt GUI
 
-DEPENDS+=	qt1-1.44:../../x11/qt1
-
 WRKSRC=		${WRKDIR}/xamp-0.8/xamp-0.8g
 DIST_SUBDIR=	xamp
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
-USE_X11BASE=	yes
+USE_LANGUAGES=	c c++
+USE_X11=	yes
 
-EVAL_PREFIX+=	QT1DIR=qt1
-CONFIGURE_ARGS+=	"--with-qt-dir=${QT1DIR}/qt1"
+CONFIGURE_ARGS+=	--with-qt-dir=${BUILDLINK_PREFIX.qt1:Q}/qt1
 
-CONFIGURE_ENV+=	"QTDIR=${QT1DIR}/qt1"
-CONFIGURE_ENV+=	"MOC=${QT1DIR}/qt1/bin/moc"
+CONFIGURE_ENV+=	QTDIR=${QT1DIR:Q}
+MAKE_ENV+=	QT1DIR=${QT1DIR:Q}
 
 SKIN_DATA=	bfamp.tar.gz chrome.tar.gz mmxamp.tar.gz
 SKIN_DIR=	${PREFIX}/lib/X11/xamp
@@ -49,4 +48,5 @@ do-install:
 	@${INSTALL_DATA_DIR} ${SKIN_DIR}/mmxxamp-xamp
 	${INSTALL_DATA} ${WRKDIR}/mmxxamp-xamp/*.bmp ${SKIN_DIR}/mmxxamp-xamp
 
+.include "../../x11/qt1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
