@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/12/01 16:00:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/16 13:16:15 rillig Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQLCC/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQLCC/  \
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	\
 CONFIGURE_ARGS+=	\
 	--with-mysql-include=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 CONFIGURE_ARGS+=	--with-openssl-includes=${SSLBASE}/include
-CONFIGURE_ARGS+=	--with-openssl-libs=${SSLBASE}/lib
+CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 CONFIGURE_ENV+=		QMAKESPEC="${QTDIR}/mkspecs/netbsd-g++"
 
 MYSQL_VERSIONS_ACCEPTED=	40 41
