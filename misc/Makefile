@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2001/01/04 18:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2001/01/18 01:16:14 hubertf Exp $
 #
 
     SUBDIR += 9menu
@@ -57,6 +57,7 @@
     SUBDIR += splitvt
     SUBDIR += staroffice
     SUBDIR += team
+    SUBDIR += vera
     SUBDIR += vfu
     SUBDIR += vttest
     SUBDIR += watch
