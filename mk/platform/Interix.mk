@@ -1,11 +1,11 @@
-# $NetBSD: Interix.mk,v 1.9 2004/10/29 15:15:10 tv Exp $
+# $NetBSD: Interix.mk,v 1.10 2004/10/29 15:15:50 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
 # SHLIB BASE ADDRESSES:
 #
 # [tv] For reference, here's a list of shared library base address ranges used
-# throughout pkgsrc to cope with the fact that Interix has no proper 
+# throughout pkgsrc to cope with the fact that Interix has no proper PIC
 # support in the compiler.  This list will be kept updated for any new packages
 # also needing special handling.
 #
@@ -15,7 +15,7 @@
 #
 # * = currently uses fixed default of 0x10000000 and needs something better
 #     (this base address restricts how far sbrk() can go in memory, and of
-#     course, collides with everything else, requiring runtime RSS relocs)
+#     course, collides with everything else, requiring runtime text relocs)
 #
 # pkg		start		end		slotsize	#slots
 #
