@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/23 17:56:44 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/17 13:32:47 fredb Exp $
 #
 
-DISTNAME=		lynx2.8.3dev.22
-PKGNAME=		lynx-2.8.3dev.22
+DISTNAME=		lynx2.8.3pre.6
+PKGNAME=		lynx-2.8.3pre.6
 CATEGORIES=		www
 MASTER_SITES=		http://lynx.isc.org/current/
 EXTRACT_SUFX=		.tar.bz2
