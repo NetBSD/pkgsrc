@@ -5,6 +5,6 @@ A Moondog Software Production
  
 The CD Database Server (cddbd) is a program designed to allow remote
 access of xmcd-style Compact Disc database entries via the Internet.
-Many CD players (such as xmcd--another FreeBSD port, and DiscPlay
-for Windows) can connect to this server through the Internet and
-download CD data from the server machine's CDDB.
+Many CD players (such as xmcd, and DiscPlay for Windows) can connect
+to this server through the Internet and download CD data from the
+server machine's CDDB.
