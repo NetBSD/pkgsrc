@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4298 2003/12/31 02:33:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4299 2003/12/31 03:06:37 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5491,3 +5491,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libtecla-1.5.0 [kristerw 2003-12-31]
 	Updated maude to 2.0.1 [kristerw 2003-12-31]
 	Updated gnome2-media to 2.4.1.1 [xtraeme 2003-12-31]
+	Updated xlockmore to 5.11 [hubertf 2003-12-31]
