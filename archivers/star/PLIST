@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/26 13:37:01 uebayasi Exp $
+bin/mt
+bin/smt
+bin/star
+bin/ustar
+include/align.h
+include/avoffset.h
+lib/libdeflt.a
+lib/libschily.a
+man/man1/rmt.1
+man/man1/star.1
+man/man5/makefiles.5
+man/man5/makerules.5
+sbin/rmt
