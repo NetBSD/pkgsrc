@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/19 04:48:35 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/14 23:51:54 jlam Exp $
 
 DISTNAME=	efax-0.9
 CATEGORIES=	comms
@@ -8,9 +8,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cce.com/efax/
 COMMENT=	collection of small programs for sending and receiving faxes
 
-USE_BUILDLINK_ONLY=	# defined
-
-.include "../../mk/bsd.prefs.mk"
+USE_BUILDLINK2=	# defined
 
 post-patch:
 	${SED} -e 's:@PREFIX@:${PREFIX}:g;				\
