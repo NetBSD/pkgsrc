@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1036 2002/08/27 06:06:38 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1037 2002/08/27 17:35:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -294,7 +294,9 @@ PKG_FC?=	f2c-f77
 .  if  (${PKG_FC} == "f2c-f77")
 # this is a DEPENDS not BUILD_DEPENDS because of the
 # shared Fortran libs
-.    if defined(USE_BUILDLINK_ONLY)
+.    if defined(USE_BUILDLINK2)
+.      include "../../lang/f2c/buildlink2.mk"
+.    elif defined(USE_BUILDLINK_ONLY)
 .      include "../../lang/f2c/buildlink.mk"
 .    else
 DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
