@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/08 19:39:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/08 19:58:34 jmmv Exp $
 #
 
 DISTNAME=		icecast-2.0.0
-PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		audio
 MASTER_SITES=		http://www.icecast.org/files/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.icecast.org/
 COMMENT=		Live streaming audio server
-
-CONFLICTS+=		icecast-[0-9]*:../../audio/icecast
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes

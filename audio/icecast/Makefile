@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/08 19:42:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/08 19:58:34 jmmv Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -13,8 +13,6 @@ COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGINSTALL=		yes
-
-CONFLICTS+=		icecast2-[0-9]*
 
 RCD_SCRIPTS=		icecast
 PKG_SYSCONFSUBDIR=	icecast
