@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5898 2004/05/10 16:47:15 minskim Exp $
+$NetBSD: CHANGES,v 1.5899 2004/05/10 17:40:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2452,3 +2452,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated crimsonfields to 0.4.2 [wiz 2004-05-10]
 	Updated gpass to 0.4.2 [jmmv 2004-05-10]
 	Updated mathomatic to 11.1 [minskim 2004-05-10]
+	Updated cpuflags to 0.68 [abs 2004-05-10]
+
