@@ -1,74 +1,60 @@
-$NetBSD: patch-ac,v 1.10 2000/09/06 12:44:38 tron Exp $
+$NetBSD: patch-ac,v 1.11 2001/11/30 16:29:28 jlam Exp $
 
---- compface/Makefile.orig	Thu Oct 24 03:28:06 1991
-+++ compface/Makefile	Wed Sep  6 14:39:35 2000
-@@ -19,62 +19,67 @@
- #
- #SYSV           = -DSYSV32
- #--------------------------------------------------------------------------
--# BINDIR, LIBDIR, and MANDIR are expected to be overridden by the
-+# BINDIR, LIBDIR, INCDIR and MANDIR are expected to be overridden by the
+--- compface/Makefile.orig	Wed Oct 23 22:28:06 1991
++++ compface/Makefile
+@@ -22,20 +22,22 @@
+ # BINDIR, LIBDIR, and MANDIR are expected to be overridden by the
  # calling Makefile
  
 -BINDIR		= /usr/local/bin
 -LIBDIR		= /usr/local/lib
 -MANDIR		= /usr/manl
++PREFIX		?=/usr/local
 +BINDIR		= $(PREFIX)/bin
-+LIBDIR		= $(PREFIX)/lib
 +INCDIR		= $(PREFIX)/include
++LIBDIR		= $(PREFIX)/lib
 +MANDIR		= $(PREFIX)/man
  
  NAME		= compface
  UNNAME		= uncompface
  EXECUTABLE	= $(BINDIR)/$(NAME)
  UNEXECUTABLE	= $(BINDIR)/$(UNNAME)
- LIBNAME		= lib$(NAME).a
--LIBRARY		= $(LIBDIR)/$(LIBNAME)
-+SHLIB_MAJOR	= 1
-+SHLIB_MINOR	= 0
-+SHLIB_FULLVERSION=$(SHLIB_MAJOR).$(SHLIB_MINOR)
-+LIB		= $(NAME)
-+NOPROFILE	= ''
-+LIBRARY		= $(LIBDIR)
+-LIBNAME		= lib$(NAME).a
++LIBNAME		= lib$(NAME).la
+ LIBRARY		= $(LIBDIR)/$(LIBNAME)
  MAN1DIR		= $(MANDIR)/man1
  MAN3DIR		= $(MANDIR)/man3
  OBJECTS		= arith.o file.o compress.o gen.o uncompface.o
- SOURCES		= compface.c uncompface.o arith.c file.c compress.c gen.c \
+-SOURCES		= compface.c uncompface.o arith.c file.c compress.c gen.c \
++SOURCES		= compface.c uncompface.c arith.c file.c compress.c gen.c \
  		  cmain.c uncmain.c
-+SRCS		= arith.c file.c compress.c gen.c uncompface.c
  HDRS		= compface.h data.h
  OTHERS		= README $(NAME).1 $(NAME).3 Makefile
- 
- CC		= cc
- CDEFS		= $(SYSV)
--CCOMP		= -g
-+CCOMP		= -pipe -O2
+@@ -45,17 +47,16 @@
+ CCOMP		= -g
  CFLAGS		= $(CDEFS) $(CCOMP)
  
 -all:		$(NAME) $(UNNAME)
-+all:		lib$(NAME).a lib$(NAME).so.$(SHLIB_MAJOR).$(SHLIB_MINOR) $(NAME) $(UNNAME) 
++all:		$(LIBNAME) $(NAME) $(UNNAME)
  
--$(NAME) :	cmain.o compface.o $(LIBNAME)
+ $(NAME) :	cmain.o compface.o $(LIBNAME)
 -		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o $(LIBNAME)
-+$(NAME) :	cmain.o compface.o
-+		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o -L. \
-+			-L@localbase@/lib -Wl,-R@localbase@/lib -lcompface
++		$(LIBTOOL) $(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o $(LIBNAME)
  
  $(UNNAME) :	uncmain.o $(LIBNAME)
 -		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o $(LIBNAME)
--
++		$(LIBTOOL) $(CC) $(CFLAGS) -o $(UNNAME) uncmain.o $(LIBNAME)
+ 
 -$(LIBNAME) :	$(OBJECTS)
 -		ar rc $(LIBNAME) $(OBJECTS)
 -		-ranlib $(LIBNAME)
-+		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o -L. \
-+			-L@localbase@/lib -Wl,-R@localbase@/lib -lcompface
++$(LIBNAME) :	$(OBJECTS:.o=.lo)
++		$(LIBTOOL) $(CC) -o $(LIBNAME) $(OBJECTS:.o=.lo) -rpath $(LIBDIR) -version-info 1:0
  
  lint :
  		lint -abchx $(SOURCES)
- 
- clean :
--		rm -f *.o *.a *.sh core a.out $(NAME) $(UNNAME)
-+		rm -f *.o *po *so *.a *.so.* *.sh core a.out $(NAME) $(UNNAME)
+@@ -64,21 +65,25 @@
+ 		rm -f *.o *.a *.sh core a.out $(NAME) $(UNNAME)
  
  install :	$(NAME) $(UNNAME) $(LIBNAME)
 -		-cp $(NAME) $(EXECUTABLE)
@@ -82,23 +68,25 @@ $NetBSD: patch-ac,v 1.10 2000/09/06 12:44:38 tron Exp $
 -		-cp $(NAME).3 $(MAN3DIR)
 -		rm -f $(MAN3DIR)/$(UNNAME).3
 -		-ln $(MAN3DIR)/$(NAME).3 $(MAN3DIR)/$(UNNAME).3
-+		install -c -s -o bin -m 755 $(NAME) $(EXECUTABLE)
-+		install -c -s -o bin -m 755 $(UNNAME) $(UNEXECUTABLE)
-+		install -c -g bin -o bin -m 444 $(NAME).1 $(MAN1DIR)
-+		-rm -f $(MAN1DIR)/$(UNNAME).1*
-+		ln -f -s $(MAN1DIR)/$(NAME).1 $(MAN1DIR)/$(UNNAME).1
-+		install -c -o bin -m 444 $(LIBNAME) $(LIBRARY)
-+		install -c -o bin -m 444 lib$(NAME).so.$(SHLIB_MAJOR).$(SHLIB_MINOR) $(LIBRARY)
-+		install -c -g bin -o bin -m 444 $(NAME).3 $(MAN3DIR)
++		$(LIBTOOL) ${BSD_INSTALL_DATA} $(LIBNAME) $(LIBDIR)
++		$(LIBTOOL) ${BSD_INSTALL_PROGRAM} $(NAME) $(EXECUTABLE)
++		$(LIBTOOL) ${BSD_INSTALL_PROGRAM} $(UNNAME) $(UNEXECUTABLE)
++		${BSD_INSTALL_MAN} $(NAME).1 $(MAN1DIR)
++		rm -f $(MAN1DIR)/$(UNNAME).1*
++		-ln -fs $(MAN1DIR)/$(NAME).1 $(MAN1DIR)/$(UNNAME).1
++		${BSD_INSTALL_MAN} $(NAME).3 $(MAN3DIR)
 +		rm -f $(MAN3DIR)/$(UNNAME).3*
-+		ln -f -s $(MAN3DIR)/$(NAME).3 $(MAN3DIR)/$(UNNAME).3
-+		install -m 444 -o bin -g bin -c compface.h $(INCDIR)
++		-ln -fs $(MAN3DIR)/$(NAME).3 $(MAN3DIR)/$(UNNAME).3
++		${BSD_INSTALL_DATA} compface.h $(INCDIR)
  
  shar :
  		shar.script $(OTHERS) $(HDRS) $(SOURCES) > $(NAME).sh
-@@ -88,3 +93,5 @@
- gen.o:		gen.c compface.h data.h
- uncmain.o:	uncmain.c compface.h data.h
- uncompface.o:	uncompface.c compface.h data.h
+ 		compress $(NAME).sh
 +
-+.include <bsd.lib.mk>
++.SUFFIXES:	.lo
++
++.c.lo:
++		$(LIBTOOL) $(CC) $(CFLAGS) -c $<
+ 
+ arith.o:	arith.c compface.h data.h
+ cmain.o:	cmain.c compface.h data.h

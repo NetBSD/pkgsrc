@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/09/14 02:17:57 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/11/30 16:29:28 jlam Exp $
 #
 # This Makefile fragment is included by packages that use faces.
 #
@@ -17,11 +17,11 @@ FACES_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.faces?=	faces>=1.6.1
+BUILDLINK_DEPENDS.faces?=	faces>=1.6.1nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.faces}:../../mail/faces
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.faces=faces
-BUILDLINK_PREFIX.faces_DEFAULT=	${LOCALBASE}
+BUILDLINK_PREFIX.faces_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.faces=		include/compface.h
 BUILDLINK_FILES.faces+=		lib/libcompface.*
 

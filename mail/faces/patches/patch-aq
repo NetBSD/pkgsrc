@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.3 2000/07/08 12:47:08 tron Exp $
+$NetBSD: patch-aq,v 1.4 2001/11/30 16:29:29 jlam Exp $
 
 --- scripts/addxface.orig	Tue Nov 19 05:05:58 1991
 +++ scripts/addxface	Sat Jul  8 14:31:35 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-aq,v 1.3 2000/07/08 12:47:08 tron Exp $
  #$olddb = 1;
  
 -$faces = '/usr/local/faces';
-+$faces = '@localbase@/share/faces';
++$faces = '@PREFIX@/share/faces';
  $umask = 000;
  
  # addxface - install any X-Face: in the header of the given mail message
