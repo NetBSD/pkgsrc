@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5880 2004/05/09 17:27:30 recht Exp $
+$NetBSD: CHANGES,v 1.5881 2004/05/09 17:28:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2433,3 +2433,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-qt3-qscintilla to 3.11 [recht 2004-05-09]
 	Updated eric3 to 3.4.2 [recht 2004-05-09]
 	Updated kodos to 2.4.2 [recht 2004-05-09]
+	Updated muse to 0.9nb1 [minskim 2004-05-09]
