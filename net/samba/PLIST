@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2004/11/06 11:07:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.26 2004/11/09 08:21:26 grant Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -20,6 +20,7 @@ bin/smbtree
 ${SMBMOUNT}bin/smbumount
 bin/tdbbackup
 bin/tdbdump
+bin/tdbtool
 bin/testparm
 bin/testprns
 bin/wbinfo
@@ -371,10 +372,6 @@ share/samba/swat/images/wizard.gif
 share/samba/swat/include/footer.html
 share/samba/swat/include/header.html
 share/samba/swat/lang/ja/help/welcome.html
-share/samba/swat/lang/ja/include/footer.html
-share/samba/swat/lang/ja/include/header.html
-share/samba/swat/lang/ja/include/header.nocss.html
-share/samba/swat/lang/ja/include/header_css.html
 share/samba/swat/lang/tr/help/welcome.html
 share/samba/swat/lang/tr/images/globals.gif
 share/samba/swat/lang/tr/images/home.gif
@@ -384,7 +381,6 @@ share/samba/swat/lang/tr/images/samba.gif
 share/samba/swat/lang/tr/images/shares.gif
 share/samba/swat/lang/tr/images/status.gif
 share/samba/swat/lang/tr/images/viewconfig.gif
-share/samba/swat/lang/tr/include/header.html
 share/samba/swat/using_samba/appa.html
 share/samba/swat/using_samba/appb.html
 share/samba/swat/using_samba/appc.html
