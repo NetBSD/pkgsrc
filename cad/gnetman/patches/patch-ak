@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+$NetBSD: patch-ak,v 1.2 2004/07/18 02:46:42 dmcmahill Exp $
 
 --- src/tcl/Makefile.am.orig	Wed Jan 21 15:34:14 2004
 +++ src/tcl/Makefile.am
@@ -9,3 +9,9 @@ $NetBSD: patch-ak,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
 +AM_CFLAGS= -DDDR_DEBUG
  
  noinst_LIBRARIES=libtcl.a
+@@ -12,4 +12,4 @@ tclwrap.c \
+ tc.h
+ 
+-INCLUDES=-I$(srcdir)/../include
++INCLUDES=@TCL_CFLAGS@ -I$(srcdir)/../include
+ 
