@@ -3,7 +3,7 @@
 # Date created:         24 Jan 1995
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/09 00:34:17 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/08/10 22:31:19 fenner Exp 
 #
 
@@ -22,6 +22,6 @@ ALL_TARGET=     ha
 USE_GMAKE=      yes
 
 do-install:
-	cd ${WRKSRC}; ${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ha ${PREFIX}/bin
+	cd ${WRKSRC}; ${INSTALL_PROGRAM} ha ${PREFIX}/bin
 
 .include <bsd.port.mk>
