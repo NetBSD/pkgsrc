@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/01 03:38:33 salo Exp $
-#
+# $NetBSD: Makefile,v 1.13 2004/02/10 00:32:35 jlam Exp $
 
 DISTNAME=		dovecot-0.99.10.4
 CATEGORIES=		mail
@@ -13,7 +12,7 @@ MAINTAINER=		tom@replic8.net
 HOMEPAGE=		http://dovecot.fi/
 COMMENT=		Secure IMAP and POP3 server
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGINSTALL= 	YES
 GNU_CONFIGURE=		YES
@@ -31,16 +30,16 @@ BUILD_DEFS+=		DOVECOT_USE_GNUTLS DOVECOT_USE_PGSQL	\
 
 .if !empty(DOVECOT_USE_GNUTLS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ssl=gnutls
-.include "../../security/gnutls/buildlink2.mk"
+.  include "../../security/gnutls/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=        --enable-ssl=openssl
-.include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 .endif
 
 .if !empty(DOVECOT_USE_PGSQL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-pgsql
 CPPFLAGS=		-I${BUILDLINK_DIR}/include/pgsql
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.  include "../../databases/postgresql-lib/buildlink3.mk"
 .endif
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
@@ -49,12 +48,12 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 .if !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-ldap
-.include "../../databases/openldap/buildlink2.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 .endif
 
 .if defined(USE_SASL2) && !empty(USE_SASL2:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-cyrus-sasl2
-.include "../../security/cyrus-sasl2/buildlink2.mk"
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 
 RCD_SCRIPTS=	dovecot
@@ -68,12 +67,11 @@ EGDIR=		${PREFIX}/share/examples/dovecot
 CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
 post-configure:
-	@cd ${WRKSRC} &&						\
-	(								\
-		${MV} dovecot-example.conf dovecot-example.conf.orig;	\
-		${SED} ${FILES_SUBST_SED} dovecot-example.conf.orig >	\
-			dovecot-example.conf;				\
-	)
+	@cd ${WRKSRC};							\
+	for file in dovecot-example.conf; do				\
+		${SED} ${FILES_SUBST_SED} $$file > $$file.new;		\
+		${MV} -f $$file.new $$file;				\
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
