@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7548 2004/10/25 02:00:28 rumble Exp $
+$NetBSD: CHANGES,v 1.7549 2004/10/25 07:09:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4844,3 +4844,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dcraw to 1.212 [wiz 2004-10-24]
 	Updated drivel to 1.2.2 [jmmv 2004-10-24]
 	Added uisp-20040311 [rumble 2004-10-25]
+	Updated libungif to 4.1.3nb2 [tron 2004-10-25]
