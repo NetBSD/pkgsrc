@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2431 2003/06/05 08:23:45 wiz Exp $
+$NetBSD: CHANGES,v 1.2432 2003/06/05 10:16:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2334,3 +2334,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated easytag to 0.28 [wiz 2003-06-05]
 	Updated giblib to 1.2.3 [wiz 2003-06-05]
 	Updated feh to 1.2.6 [wiz 2003-06-05]
+	Added adocman-0.10 [jmmv 2003-06-05]
