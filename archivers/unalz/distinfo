@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 14:45:27 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/03/02 16:18:47 minskim Exp $
 
-SHA1 (unalz.tgz) = 91b2c0a15b91058b54e10b66195e1e389a9ec621
-RMD160 (unalz.tgz) = 317d1ea4bff1d15d601cf4a91ab80ba7bd986a23
-Size (unalz.tgz) = 96986 bytes
-SHA1 (patch-aa) = 075f38458c59b1d3735f21fcc4724c3cc84cbdee
+SHA1 (unalz-0.31.tgz) = 0d6f21b1fc9b00c5ca763b4e402c792ebe045fc9
+RMD160 (unalz-0.31.tgz) = 23ccefe2b29b8127c15ebf4f93e313316ad34510
+Size (unalz-0.31.tgz) = 129623 bytes
+SHA1 (patch-aa) = 35072979d009ff4a0d110e64aeac99e2f7a584cc
+SHA1 (patch-ab) = c54333e760b012b14af906ea9e9e442e0cf12ee2
