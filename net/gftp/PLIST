@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/27 14:57:58 cjep Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/30 16:27:56 wiz Exp $
 bin/gftp
 bin/gftp-gtk
 bin/gftp-text
@@ -9,6 +9,7 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gftp.mo
@@ -16,6 +17,8 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/zh_CN.gb2312/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/gftp.mo
 man/man1/gftp.1
 share/gftp/COPYING
