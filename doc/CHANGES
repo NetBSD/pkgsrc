@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5275 2004/03/17 22:02:53 jschauma Exp $
+$NetBSD: CHANGES,v 1.5276 2004/03/18 10:47:47 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1487,3 +1487,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bittorrent-gui to 3.4.1nb1 [jmmv 2004-03-17]
 	Updated sun-jre14 to 2.4 [jschauma 2004-03-17]
 	Updated sun-jdk14 to 2.4 [jschauma 2004-03-17]
+	Updated createbuildlink to 3.4 [jlam 2004-03-18]
