@@ -1,23 +1,13 @@
-$NetBSD: patch-ab,v 1.1 1999/04/06 14:41:22 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/10/28 00:31:59 jlam Exp $
 
-Use NetBSD's own pkglibtool
-
---- configure	1999/04/06 14:17:16	1.1
-+++ configure	1999/04/06 14:17:39
-@@ -1518,6 +1518,7 @@
- fi
+--- doc/Makefile.in.orig	Mon Apr 26 10:54:04 1999
++++ doc/Makefile.in	Mon Oct 25 16:29:33 1999
+@@ -253,7 +253,7 @@
+ 	$(SED) -e 's%@''VERSION''@%$(VERSION)%g' -e 's%@''DATE''@%$(DATE)%g' -e 's%@THEMEDIR@%$(pkgdatadir)/themes%g' $@.in > $@
  
- # Always use our own libtool.
-+if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ Eterm.1.html: Eterm.1
+-	-nroff -man $< | man2html > $@
++	-nroff -man Eterm.1 | man2html > $@
  
- # Check for any special flags to pass to ltconfig.
-@@ -1562,6 +1563,8 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+
-+fi
- 
- 
- echo $ac_n "checking for distribution root""... $ac_c" 1>&6
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
