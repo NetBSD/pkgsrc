@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/06/26 20:19:42 recht Exp $
+$NetBSD: distinfo,v 1.6 2004/07/03 23:03:22 recht Exp $
 
-SHA1 (libgdiplus-0.10.tar.gz) = 5fa20d0e60c3f7607be6af3084c2b0a5583c7743
-Size (libgdiplus-0.10.tar.gz) = 327050 bytes
-SHA1 (patch-ac) = d223c7eba94470d6441d9fd19e9d5436027e3c59
+SHA1 (libgdiplus-1.0.tar.gz) = 18e65a4d8aec195b78aa9f509f82ad8e8b09faba
+Size (libgdiplus-1.0.tar.gz) = 327197 bytes
+SHA1 (patch-ac) = 189a32aa425926c04982ac2f8375ab8fd541b713
