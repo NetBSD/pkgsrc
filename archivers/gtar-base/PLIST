@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/20 23:23:57 jschauma Exp $
-bin/${GNU_PROGRAM_PREFIX}tar
+@comment $NetBSD: PLIST,v 1.6 2004/04/05 18:38:43 reed Exp $
+bin/${GTAR_PROGRAM_PREFIX}tar
 ${GTAR_LINK}bin/gtar
-man/man1/${GNU_PROGRAM_PREFIX}tar.1
+man/man1/${GTAR_PROGRAM_PREFIX}tar.1
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tar.mo
