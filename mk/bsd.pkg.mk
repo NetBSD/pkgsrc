@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.116 1998/07/14 10:56:15 frueauf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.117 1998/07/14 11:36:11 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -534,6 +534,15 @@ SCRIPTS_ENV+=	BATCH=yes
 
 .MAIN: all
 
+# Use aliases, so that all versions of English are acceptable
+.if defined(LICENCE) && !defined(LICENSE)
+LICENSE=	${LICENCE}
+.endif
+
+.if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
+ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
+.endif
+
 ################################################################
 # Many ways to disable a port.
 #
@@ -1058,6 +1067,47 @@ _PORT_USE: .USE
 				${ECHO_MSG} "$$manpage";		\
 			fi;						\
 		done;							\
+	fi)
+	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} ${PLIST}
+	@(sos=`/usr/bin/egrep -h 					\
+		'^([^/]*/)*lib/lib[^.]+\.so\.[0-9]+\.[0-9]+$$'		\
+		${PLIST} || /usr/bin/true`;				\
+	if [ X"$$sos" != X"" ]; then					\
+		${ECHO_MSG} "===>   [Automatic shared object handling]";\
+		if [ ${OBJECT_FMT} = "ELF" ]; then			\
+			for so in $$sos; do				\
+				so1=`${ECHO} $$so | ${SED} -e 's|\.[0-9]*$$||'`;	\
+				so2=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`;	\
+				case `${GREP} -c "^$$so2$$" ${PLIST}` in	\
+				0)					\
+					${SED} -e "s|^$$so$$|&!$$so2|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${ECHO_MSG} "${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so2"; \
+					${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so2; \
+					;;				\
+				esac;					\
+				case `${GREP} -c "^$$so1$$" ${PLIST}` in	\
+				0)					\
+					${SED} -e "s|^$$so$$|&!$$so1|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${ECHO_MSG} "${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so1";	\
+					${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so1;	\
+					;;				\
+				esac;					\
+				if [ X"${PKG_VERBOSE}" != X"" ]; then	\
+					${ECHO_MSG} "$$so";		\
+				fi;					\
+			done						\
+		else							\
+			case `${GREP} -c '^@exec ${LDCONFIG}$$' ${PLIST}` in	\
+			0)						\
+				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST};	\
+				${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST};	\
+				;;					\
+			esac;						\
+			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
+				${ECHO_MSG} "${LDCONFIG}";		\
+			fi;						\
+			${LDCONFIG};					\
+		fi;							\
 	fi)
 .if exists(${PKGDIR}/MESSAGE)
 	@${ECHO_MSG} "===>   Please note the following:"
