@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/16 07:57:24 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/16 08:08:41 jlam Exp $
 
 DISTNAME=	squirrelspell.0.3.5-1.0.6
 PKGNAME=	sq-squirrelspell-0.3.5
@@ -15,6 +15,7 @@ DEPENDS+=	php-mcrypt>=4.0.4.1:../../www/php4-mcrypt
 DEPENDS+=	squirrelmail>=1.0.6:../../mail/squirrelmail
 
 SMDIR=		${PREFIX}/share/squirrelmail
+MESSAGE_SUBST+=	SMDIR=${SMDIR}
 
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined

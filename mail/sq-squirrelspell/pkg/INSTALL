@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2001/05/16 07:57:24 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2001/05/16 08:08:42 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -32,14 +32,9 @@ POST-INSTALL)
 	${CAT} << EOF
 
 ===========================================================================
-To enable the ${PKGNAME} plugin, please run the SquirrelMail
-configuration script:
+You may wish to customize:
 
-	cd ${SMDIR}/config && ./conf.pl
-
-You may also wish to customize:
-
-	${CONFDIR}/sqspell_config.php
+    ${CONFDIR}/sqspell_config.php
 ===========================================================================
 EOF
 	;;
