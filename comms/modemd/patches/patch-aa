@@ -1,0 +1,15 @@
+--- common/Makefile.orig	Tue Sep 10 02:11:06 1996
++++ common/Makefile	Tue Mar  3 17:41:28 1998
+@@ -3,8 +3,11 @@
+ LIB=modemd
+ # Don't need a profiled library...
+ NOPROFILE=
++NOPIC=
+ 
+-CFLAGS += -I${.CURDIR}/.. -I${.CURDIR}/../include
++CPPFLAGS += -I${.CURDIR}/.. -I${.CURDIR}/../include
++
++install:
+ 
+ .include "../Makefile.inc"
+ .include <bsd.lib.mk>

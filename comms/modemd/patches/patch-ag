@@ -1,0 +1,11 @@
+--- outgoing/Makefile.orig	Tue Sep 10 03:08:00 1996
++++ outgoing/Makefile	Tue Mar  3 17:19:07 1998
+@@ -8,7 +8,7 @@
+ CFLAGS += -I${.CURDIR}/.. -I${.CURDIR}/../include
+ 
+ DPADD = ${LIBDIR}/libmodemd.a
+-LDADD = ${DPADD}
++LDADD = ${DPADD} -lutil
+ 
+ .include "../Makefile.inc"
+ .include <bsd.prog.mk>
