@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/07/02 12:47:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/08/20 05:01:59 rh Exp $
 
 DISTNAME=		flash_${DISTUNAME}
 CATEGORIES=		graphics www
@@ -17,7 +17,7 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
 .if (${MACHINE_ARCH} == "i386")
-FLASH_VERS=		5.0r47
+FLASH_VERS=		5.0r50
 DEPENDS+=		suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTUNAME=		linux
