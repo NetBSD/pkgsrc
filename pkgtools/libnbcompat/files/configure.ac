@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.33 2003/12/10 07:21:20 grant Exp $
+dnl $NetBSD: configure.ac,v 1.34 2003/12/19 22:45:14 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -261,8 +261,8 @@ dnl		support because we don't know how to display it.
 	fi
 
 	if test $can_printf_longlong = yes; then
-		AC_DEFINE(HAVE_QUAD_SUPPORT, 1)
-		AH_TEMPLATE([HAVE_QUAD_SUPPORT], [
+		AC_DEFINE(HAVE_WORKING_LONG_LONG, 1)
+		AH_TEMPLATE([HAVE_WORKING_LONG_LONG], [
 			Define to 1 if `long long' is supported and
 			sizeof(off_t) >= 8.
 		])
