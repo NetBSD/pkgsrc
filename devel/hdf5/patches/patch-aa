@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2001/01/19 20:46:50 jtb Exp $
+
+--- tools/h5debug.c.orig	Thu Jan 11 23:18:07 2001
++++ tools/h5debug.c
+@@ -56,6 +56,11 @@
+     herr_t      status = SUCCEED;
+     haddr_t     extra;
+ 
++    if (argc < 2) {
++      fprintf(stderr, "Usage: %s FILENAME [OFFSET]\n", argv[0]);
++      exit (1);
++    }
++
+     /*
+      * Open the file and get the file descriptor.
+      */
