@@ -1,4 +1,4 @@
-$NetBSD: patch-common_h,v 1.1.1.1 2000/07/14 10:37:18 rh Exp $
+$NetBSD: patch-src_common_h,v 1.1 2000/08/03 18:45:13 rh Exp $
 
 --- src/common.h.orig	Mon Jun 26 22:51:42 2000
 +++ src/common.h	Wed Jul 12 06:22:32 2000
