@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/01/29 11:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/13 12:49:07 is Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.epm.ornl.gov/pvm/pvm_home.html
 .if exists(/usr/bin/ssh)
 SSH=		/usr/bin/ssh
 .else
-DEPENDS+=		{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
+DEPENDS+=		{openssh-*,ssh{,6}-1.2.27*}:../../security/ssh
 SSH=		${LOCALBASE}/bin/ssh
 .endif
 
