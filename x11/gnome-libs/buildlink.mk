@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.14 2002/03/13 17:37:56 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.15 2002/03/24 19:53:41 rh Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
@@ -17,19 +17,19 @@ GNOME_LIBS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gnome-libs?=	gnome-libs>=1.4.1.2nb1
+BUILDLINK_DEPENDS.gnome-libs?=	gnome-libs>=1.4.1.4
 DEPENDS+=	${BUILDLINK_DEPENDS.gnome-libs}:../../x11/gnome-libs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-libs=gnome-libs
 BUILDLINK_PREFIX.gnome-libs_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.gnome-libs=	include/gnome.h
-BUILDLINK_FILES.gnome-libs+=	include/gtk-xmhtml/*
-BUILDLINK_FILES.gnome-libs+=	include/libart_lgpl/*
-BUILDLINK_FILES.gnome-libs+=	include/libgnome/*
-BUILDLINK_FILES.gnome-libs+=	include/libgnomeui/*
-BUILDLINK_FILES.gnome-libs+=	include/libgnorba/*
-BUILDLINK_FILES.gnome-libs+=	include/popt-gnome.h
-BUILDLINK_FILES.gnome-libs+=	include/zvt/*
+BUILDLINK_FILES.gnome-libs=	include/gnome-1.0/gnome.h
+BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/gtk-xmhtml/*
+BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/libart_lgpl/*
+BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/libgnome/*
+BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/libgnomeui/*
+BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/libgnorba/*
+BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/popt-gnome.h
+BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/zvt/*
 BUILDLINK_FILES.gnome-libs+=	lib/gnome-libs/*/*
 BUILDLINK_FILES.gnome-libs+=	lib/libart_lgpl.*
 BUILDLINK_FILES.gnome-libs+=	lib/libgnome.*

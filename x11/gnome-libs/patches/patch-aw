@@ -1,13 +1,13 @@
-$NetBSD: patch-aw,v 1.1 2001/06/16 20:04:52 jlam Exp $
+$NetBSD: patch-aw,v 1.2 2002/03/24 19:53:48 rh Exp $
 
---- tools/convertrgb/Makefile.in.orig	Fri Mar 16 14:47:25 2001
-+++ tools/convertrgb/Makefile.in	Sat Jun 16 08:55:45 2001
-@@ -144,7 +144,7 @@
- l = @l@
+--- tools/convertrgb/Makefile.in.orig	Fri Jan 25 09:58:03 2002
++++ tools/convertrgb/Makefile.in
+@@ -145,7 +145,7 @@
  need_gnome_support = @need_gnome_support@
  
--INCLUDES =          -I$(includedir) @GLIB_CFLAGS@
-+INCLUDES =          @GLIB_CFLAGS@
+ INCLUDES = \
+-        -I$(includedir) @GLIB_CFLAGS@
++        @GLIB_CFLAGS@
  
  
  noinst_PROGRAMS = convertrgb
