@@ -1,24 +1,25 @@
-$NetBSD: patch-aa,v 1.7 1999/10/09 20:12:10 jlam Exp $
+$NetBSD: patch-aa,v 1.8 1999/10/24 16:49:33 tron Exp $
 
---- configure.orig	Wed Feb 24 18:44:38 1999
-+++ configure	Fri Oct  8 14:46:40 1999
-@@ -1533,6 +1533,7 @@
+--- configure.orig	Tue Sep  7 01:53:10 1999
++++ configure	Fri Oct 22 21:38:23 1999
+@@ -1530,7 +1530,7 @@
+   ac_tool_prefix=
  fi
  
- # Always use our own libtool.
+-
 +if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
  # Check for any special flags to pass to ltconfig.
-@@ -1764,6 +1765,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1827,6 +1827,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -5325,10 +5327,12 @@
+@@ -5378,10 +5379,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
