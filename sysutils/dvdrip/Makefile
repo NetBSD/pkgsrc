@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:39:44 mrg Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/29 13:47:32 wulf Exp $
 #
 
 VERS=		0.50.13
@@ -28,6 +28,8 @@ BUILDLINK_DEPENDS.perl= perl>=5.6.0
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
+
+PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Video/DVDRip/.packlist
 
 # XXX xine support
 # XXX fping support
