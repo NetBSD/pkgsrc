@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2001/09/27 23:17:54 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/10/04 19:14:58 rh Exp $
 #
 
-DISTNAME=		bonobo-1.0.7
+DISTNAME=		bonobo-1.0.9
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/bonobo/}
 
@@ -10,12 +10,10 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Architecture for creating reusable software components
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-DEPENDS+=		ORBit>=0.5.8:../../net/ORBit
-DEPENDS+=		gdk-pixbuf-gnome>=0.10.0:../../graphics/gdk-pixbuf-gnome
-DEPENDS+=		oaf>=0.6.5:../../devel/oaf
-DEPENDS+=		gnome-libs>=1.2.13:../../x11/gnome-libs
-DEPENDS+=		gnome-print>=0.28:../../print/gnome-print
 
+BUILDLINK_DEPENDS.ORBit=ORBit>0.5.8
+
+USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
@@ -23,9 +21,13 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		X11BASE="${X11BASE}"
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
+.include "../../print/gnome-print/buildlink.mk"
+.include "../../devel/popt/buildlink.mk"
+.include "../../devel/oaf/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
