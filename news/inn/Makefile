@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/04/20 18:18:50 cjep Exp $
+# $NetBSD: Makefile,v 1.33 2002/06/23 04:00:50 jlam Exp $
 
 DISTNAME=		inn-2.3.2
 CATEGORIES=		news
@@ -19,9 +19,9 @@ PATCH_DIST_STRIP=	-p1
 INN_DATA_DIR?=		/var/news
 
 USE_PERL5=		YES
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
-			--enable-setgid-inews \
+GNU_CONFIGURE=		YES
+GNU_CONFIGURE_PREFIX=	${PREFIX}/inn
+CONFIGURE_ARGS+=	--enable-setgid-inews \
 			--enable-uucp-rnews \
 			--mandir=${PREFIX}/man \
 			--with-perl --with-tmp-path=${INN_DATA_DIR}/tmp \
