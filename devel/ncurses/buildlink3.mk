@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 09:34:23 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -16,11 +16,11 @@ BUILDLINK_CHECK_BUILTIN.ncurses?=	NO
 .if !defined(_BLNK_LIBNCURSES_FOUND)
 _BLNK_LIBNCURSES_FOUND!=	\
 	if [ "`${ECHO} /usr/lib/libncurses.*`" = "/usr/lib/libncurses.*" ]; then \
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	else								\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND=${_BLNK_LIBNCURSES_FOUND}
+MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND="${_BLNK_LIBNCURSES_FOUND}"
 .endif
 
 .if !defined(BUILDLINK_IS_BUILTIN.ncurses)
