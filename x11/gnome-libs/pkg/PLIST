@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2000/07/25 05:14:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.29 2000/07/25 05:16:42 jlam Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -12,6 +12,7 @@ bin/goad-browser
 bin/libart-config
 bin/loadshlib
 bin/new-object
+etc/CORBA/servers/.directory
 etc/mime-magic
 etc/mime-magic.dat
 etc/paper.config
