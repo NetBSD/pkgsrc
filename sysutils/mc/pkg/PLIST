@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 1999/04/16 22:36:27 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 1999/07/15 12:23:57 tron Exp $
 bin/mc
-bin/mcmfmt
 bin/mcedit
+bin/mcmfmt
 bin/mcserv
 etc/mc.global
 lib/mc/FAQ
 lib/mc/bin/mcfn_install
+lib/mc/desktop-scripts/README.desktop
+lib/mc/desktop-scripts/startup.links
 lib/mc/extfs/README
 lib/mc/extfs/a
 lib/mc/extfs/deb
@@ -13,26 +15,27 @@ lib/mc/extfs/extfs.ini
 lib/mc/extfs/ftplist
 lib/mc/extfs/hp48
 lib/mc/extfs/lslR
-lib/mc/extfs/rpm
 lib/mc/extfs/mailfs
 lib/mc/extfs/patchfs
+lib/mc/extfs/rpm
+lib/mc/extfs/rpms
 lib/mc/extfs/sfs.ini
 lib/mc/extfs/trpm
-lib/mc/extfs/rpms
-lib/mc/extfs/ucpio
-lib/mc/extfs/urar
-lib/mc/extfs/uzoo
 lib/mc/extfs/uar
-lib/mc/extfs/ulha
-lib/mc/extfs/uzip
+lib/mc/extfs/uarj
+lib/mc/extfs/ucpio
 lib/mc/extfs/uha
-lib/mc/term/README.xterm
-lib/mc/term/ansi.ti
-lib/mc/term/linux.ti
-lib/mc/term/vt100.ti
-lib/mc/term/xterm.ad
-lib/mc/term/xterm.tcap
-lib/mc/term/xterm.ti
+lib/mc/extfs/ulha
+lib/mc/extfs/unarj.diff
+lib/mc/extfs/urar
+lib/mc/extfs/uzip
+lib/mc/extfs/uzoo
+lib/mc/mc-gnome.ext
+lib/mc/mc.ext
+lib/mc/mc.hint
+lib/mc/mc.hlp
+lib/mc/mc.lib
+lib/mc/mc.menu
 lib/mc/syntax/c.syntax
 lib/mc/syntax/changelog.syntax
 lib/mc/syntax/diff.syntax
@@ -49,32 +52,32 @@ lib/mc/syntax/perl.syntax
 lib/mc/syntax/python.syntax
 lib/mc/syntax/sh.syntax
 lib/mc/syntax/smalltalk.syntax
-lib/mc/desktop-scripts/startup.links
-lib/mc/desktop-scripts/README.desktop
-lib/mc/mc-gnome.ext
-lib/mc/mc.ext
-lib/mc/mc.hint
-lib/mc/mc.hlp
-lib/mc/mc.lib
-lib/mc/mc.menu
+lib/mc/term/README.xterm
+lib/mc/term/ansi.ti
+lib/mc/term/linux.ti
+lib/mc/term/vt100.ti
+lib/mc/term/xterm.ad
+lib/mc/term/xterm.tcap
+lib/mc/term/xterm.ti
 man/man1/mc.1
 man/man1/mcedit.1
 man/man8/mcserv.8
+share/locale/cs/LC_MESSAGES/mc.mo
+share/locale/da/LC_MESSAGES/mc.mo
+share/locale/de/LC_MESSAGES/mc.mo
 share/locale/es/LC_MESSAGES/mc.mo
 share/locale/es_ES/LC_MESSAGES/mc.mo
 share/locale/fr/LC_MESSAGES/mc.mo
-share/locale/ru/LC_MESSAGES/mc.mo
-share/locale/de/LC_MESSAGES/mc.mo
-share/locale/da/LC_MESSAGES/mc.mo
-share/locale/cs/LC_MESSAGES/mc.mo
 share/locale/it/LC_MESSAGES/mc.mo
-share/locale/pl/LC_MESSAGES/mc.mo
+share/locale/ja/LC_MESSAGES/mc.mo
 share/locale/ko/LC_MESSAGES/mc.mo
 share/locale/no/LC_MESSAGES/mc.mo
+share/locale/pl/LC_MESSAGES/mc.mo
 share/locale/ro/LC_MESSAGES/mc.mo
-@dirrm lib/mc/bin
-@dirrm lib/mc/desktop-scripts
-@dirrm lib/mc/extfs
-@dirrm lib/mc/syntax
+share/locale/ru/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
+@dirrm lib/mc/syntax
+@dirrm lib/mc/extfs
+@dirrm lib/mc/desktop-scripts
+@dirrm lib/mc/bin
 @dirrm lib/mc
