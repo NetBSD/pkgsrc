@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/04/18 10:46:17 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/07/03 07:31:37 sakamoto Exp $
 bin/ruby
 lib/libruby.so.${RUBY_VERSION}
 lib/ruby/${RUBY_VERSION}/English.rb
@@ -22,33 +22,33 @@ lib/ruby/${RUBY_VERSION}/ftools.rb
 lib/ruby/${RUBY_VERSION}/ftplib.rb
 lib/ruby/${RUBY_VERSION}/getoptlong.rb
 lib/ruby/${RUBY_VERSION}/getopts.rb
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/config.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/curses.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/dbm.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/defines.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/dln.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/env.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/etc.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/fcntl.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/gdbm.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/intern.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/libruby.a
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/md5.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/nkf.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/node.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/pty.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/rbconfig.rb
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/re.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/readline.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/regex.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/ruby.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/rubyio.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/rubysig.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/sdbm.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/socket.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/st.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/util.h
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/version.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/config.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/curses.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/dbm.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/defines.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/dln.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/env.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/etc.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/fcntl.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/gdbm.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/intern.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/libruby.a
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/md5.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/nkf.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/node.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/pty.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/rbconfig.rb
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/re.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/readline.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/regex.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/ruby.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/rubyio.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/rubysig.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/sdbm.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/socket.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/st.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/util.h
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/version.h
 lib/ruby/${RUBY_VERSION}/importenv.rb
 lib/ruby/${RUBY_VERSION}/irb/completion.rb
 lib/ruby/${RUBY_VERSION}/irb/frame.rb
@@ -153,15 +153,15 @@ share/examples/ruby/time.rb
 share/examples/ruby/trojan.rb
 share/examples/ruby/tsvr.rb
 share/examples/ruby/uumerge.rb
-@exec mkdir -p %D/lib/ruby/site_ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
+@exec mkdir -p %D/lib/ruby/site_ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}
 @dirrm share/examples/ruby/misc
 @dirrm share/examples/ruby
-@dirrm lib/ruby/site_ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/site_ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}
 @dirrm lib/ruby/site_ruby/${RUBY_VERSION}
 @dirrm lib/ruby/site_ruby
 @dirrm lib/ruby/${RUBY_VERSION}/net
 @dirrm lib/ruby/${RUBY_VERSION}/irb
-@dirrm lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}
 @dirrm lib/ruby/${RUBY_VERSION}/cgi
 @dirrm lib/ruby/${RUBY_VERSION}
 @dirrm lib/ruby

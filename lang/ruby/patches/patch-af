@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2000/04/11 07:35:16 sakamoto Exp $
+$NetBSD: patch-af,v 1.2 2000/07/03 07:31:36 sakamoto Exp $
 
 --- ext/curses/extconf.rb.orig	Tue Oct 12 18:11:25 1999
-+++ ext/curses/extconf.rb	Tue Apr 11 14:53:51 2000
++++ ext/curses/extconf.rb	Mon Jul  3 12:48:17 2000
 @@ -3,15 +3,7 @@
  make=false
  have_library("mytinfo", "tgetent") if /bow/ =~ PLATFORM
