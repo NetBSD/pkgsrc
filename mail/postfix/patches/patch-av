@@ -1,20 +1,25 @@
-$NetBSD: patch-av,v 1.1 1999/05/30 18:18:32 tron Exp $
+$NetBSD: patch-av,v 1.2 1999/08/26 13:05:08 mrg Exp $
 
 --- postdrop/Makefile.orig	Sun May 30 18:49:13 1999
 +++ postdrop/Makefile	Sun May 30 18:49:13 1999
-@@ -0,0 +1,15 @@
-+#	$NetBSD: patch-av,v 1.1 1999/05/30 18:18:32 tron Exp $
+@@ -0,0 +1,20 @@
++#	$NetBSD: patch-av,v 1.2 1999/08/26 13:05:08 mrg Exp $
 +.include "../conf/main.cf"
 +
 +PROG=	postdrop
 +BINDIR=	${command_directory}
-+BINGRP=	maildrop
-+BINMODE=2755
 +
 +DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
 +LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
 +
 +# XXX
 +NOMAN=1
++
++.include "bsd.own.mk"
++
++.if !POSTFIX_NOSETGID
++BINGRP=	maildrop
++BINMODE=2755
++.endif
 +
 +.include <bsd.prog.mk>
