@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2003/03/31 17:44:22 jmmv Exp $
+$NetBSD: patch-ab,v 1.9 2003/09/04 13:07:01 adam Exp $
 
 --- Makefile.in.orig	2003-01-05 12:54:59.000000000 +0100
 +++ Makefile.in
@@ -7,15 +7,15 @@ $NetBSD: patch-ab,v 1.8 2003/03/31 17:44:22 jmmv Exp $
  
  .c.o:
 -	$(CC) -c $(CFLAGS) $(PICFLAGS) -o $@ $<
-+	${LIBTOOL} --mode=compile $(CC)  -c $(CFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CFLAGS) -o $@ $<
  
  .cpp.o:
 -	$(CXX) -c $(CXXFLAGS) $(PICFLAGS) -o $@ $<
-+	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CXXFLAGS) $(CPPFLAGS) -o $@ $<
  
  .cxx.o:
 -	$(CXX) -c $(CXXFLAGS) $(PICFLAGS) -o $@ $<
-+	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CXXFLAGS) $(CPPFLAGS) -o $@ $<
  
  .rsrc.r:
  	$(DEREZ) $^ Carbon.r -useDF > $@
