@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/02/25 01:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2000/03/11 06:02:45 wiz Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -40,6 +40,7 @@
     SUBDIR += siod
     SUBDIR += smalleiffel
     SUBDIR += sml-nj
+    SUBDIR += snobol
     SUBDIR += squeak
     SUBDIR += tcl80
     SUBDIR += tclX80
