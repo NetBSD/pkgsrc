@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3795 2003/11/08 07:51:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3796 2003/11/08 08:31:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4322,3 +4322,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nessus-libraries to 2.0.9 [xtraeme 2003-11-08]
 	Updated nessus-plugins to 2.0.9 [xtraeme 2003-11-08]
 	Updated nessus to 2.0.9 [xtraeme 2003-11-08]
+	Updated icbm3d to 0.4 [xtraeme 2003-11-08]
