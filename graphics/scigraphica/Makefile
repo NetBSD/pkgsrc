@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/03/10 12:41:46 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/28 14:34:12 drochner Exp $
 #
 
-DISTNAME=	sg-0.6.2
-PKGNAME=	scigraphica-0.6.2
+DISTNAME=	sg-0.6.3
+PKGNAME=	scigraphica-0.6.3
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://scigraphica.sourceforge.net/
 COMMENT=	data analysis and technical graphics
 
 DEPENDS+=	gtk+-*:../../x11/gtk
-DEPENDS+=	gtk+extra>=0.99.12:../../x11/gtk+extra
+DEPENDS+=	gtk+extra>=0.99.14:../../x11/gtk+extra
 DEPENDS+=	imlib-*:../../graphics/imlib
 DEPENDS+=	libxml-*:../../textproc/libxml
 DEPENDS+=	python-*:../../lang/python
