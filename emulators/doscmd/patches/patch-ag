@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1 1998/11/29 23:39:30 sommerfe Exp $
+
+--- AsyncIO.c	Thu May  2 02:51:00 1996
++++ /tmp/AsyncIO.c	Sun Nov 29 18:28:44 1998
+@@ -320,6 +320,7 @@
+ 		abort();
+ 	}
+ 	if (stackp++ == 0) {
++		sigemptyset(&set);
+ 		sigaddset(&set, SIGIO);
+ 		sigprocmask(SIG_BLOCK, &set, 0);
+ 	}
+@@ -335,6 +336,7 @@
+ 		abort();
+ 	}
+ 	if (--stackp == 0) {
++		sigemptyset(&set);
+ 		sigaddset(&set, SIGIO);
+ 		sigprocmask(SIG_UNBLOCK, &set, 0);
+ 	}
