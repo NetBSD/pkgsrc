@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/06 23:46:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/03/16 18:23:27 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_MXDATETIME_BUILDLINK3_MK:=	${PY_MXDATETIME_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-mxDateTime}
 BUILDLINK_PACKAGES+=	py-mxDateTime
 
 .if !empty(PY_MXDATETIME_BUILDLINK3_MK:M+)
+BUILDLINK_PKGBASE.py-mxDateTime?=	${PYPKGPREFIX}-mxDateTime
 BUILDLINK_DEPENDS.py-mxDateTime+=	${PYPKGPREFIX}-mxDateTime>=2.0.5
 BUILDLINK_PKGSRCDIR.py-mxDateTime?=	../../time/py-mxDateTime
 

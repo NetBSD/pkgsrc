@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2004/03/16 18:23:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -11,6 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngettext}
 BUILDLINK_PACKAGES+=	gettext
 
 .if !empty(GETTEXT_BUILDLINK3_MK:M+)
+BUILDLINK_PKGBASE.gettext?=	gettext-lib
 BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.10.35nb1
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 
