@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:53 agc Exp $
 
-MD5 (compat14-sparc.tar.gz) = ff6617bbff745e81be92080244141960
-MD5 (compat14-i386.tar.gz) = 40fd9b6328922d2a6800537c05d3538b
+SHA1 (compat14-i386.tar.gz) = afe977755bad9aa03b0d96c9d9dcba6c7bdcf046
+Size (compat14-i386.tar.gz) = 1641377 bytes
+SHA1 (compat14-sparc.tar.gz) = b7a0513e170ecc8e0e12c3a18ac534e8ac7f8233
+Size (compat14-sparc.tar.gz) = 1820181 bytes
