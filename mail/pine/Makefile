@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/07/28 05:49:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.63 2002/10/08 23:34:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -16,14 +16,12 @@ LICENSE=	pine-license
 
 BUILD_DEFS+=	PINE_USE_LDAP
 
-# This pkg doesn't build pico or libpico; the pico pkg does that part.
-DEPENDS+=	pico>=4.2:../../editors/pico
-DEPENDS+=	imap-uw>=2001.1:../../mail/imap-uw
-
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(PINE_USE_LDAP) && ${PINE_USE_LDAP} == YES
-.include "../../databases/openldap/buildlink.mk"
+USE_BUILDLINK2=	# defined
+
+.if defined(PINE_USE_LDAP) && (${PINE_USE_LDAP} == "YES")
+.  include "../../databases/openldap/buildlink2.mk"
 LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP"
 LDAPLIBS=      LDAPLIBS="-lldap -llber"
 .endif
@@ -40,11 +38,12 @@ do-configure:
 		-e 's@DEFAULT_DEBUG.*2@DEFAULT_DEBUG 0@' \
 		<${WRKSRC}/pine/osdep/os-${BUILDFILE}.h.orig >${WRKSRC}/pine/osdep/os-${BUILDFILE}.h
 	@${RM} -rf ${WRKSRC}/pico
-	@${LN} -sf ${LOCALBASE}/include/pico ${WRKSRC}/pico
+	@${LN} -sf ${BUILDLINK_DIR}/include/pico ${WRKSRC}/pico
 
 do-build:
-	cd ${WRKSRC} && ./build ${BUILDNAME} ${LDAPCFLAGS} ${LDAPLIBS} PREFIX=${PREFIX} \
-		CC="${CC} ${CFLAGS} ${LDFLAGS}"
+	cd ${WRKSRC} && ./build ${BUILDNAME} ${LDAPCFLAGS} ${LDAPLIBS}	\
+		PREFIX=${PREFIX}					\
+		CC="${BUILDLINK_CC} ${CFLAGS} ${LDFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
@@ -73,8 +72,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
 	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../editors/pico/buildlink2.mk"
+.include "../../mail/imap-uw/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
+
 .if ${OPSYS} == "SunOS"
 BUILDNAME= gs5
 BUILDFILE= gs5

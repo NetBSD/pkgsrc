@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/07/28 05:39:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2002/10/08 23:31:01 jlam Exp $
 #
 
 DISTNAME=	pine4.44
@@ -13,6 +13,7 @@ COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
 
 LICENSE=	pine-license
 
+USE_BUILDLINK2=	# defined
 USE_LIBTOOL=	# defined
 
 .include "../../mk/bsd.prefs.mk"
@@ -28,13 +29,14 @@ BUILDNAME= neb
 MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...
 
 do-build:
-	cd ${WRKSRC} && ./build ${BUILDNAME} CC="${LIBTOOL} ${CC}" \
-	    PREFIX=${PREFIX}
+	cd ${WRKSRC} && ./build ${BUILDNAME}				\
+		CC="${PKGLIBTOOL} ${BUILDLINK_CC}"			\
+		PREFIX=${PREFIX}
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} \
+	${PKGLIBTOOL} --mode=install ${INSTALL_DATA} \
 		${WRKSRC}/pico/libpico.la ${PREFIX}/lib/
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+	${PKGLIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/pico/pico ${WRKSRC}/pico/pilot ${PREFIX}/bin/
 	${INSTALL_MAN}     ${WRKSRC}/doc/pico.1 ${PREFIX}/man/man1/
 	${INSTALL_MAN}     ${WRKSRC}/doc/pilot.1 ${PREFIX}/man/man1/
