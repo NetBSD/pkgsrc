@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 1999/12/02 14:31:00 rh Exp $
+lib/perl5/site_perl/Digest/MD5.pm
+lib/perl5/site_perl/Digest/HMAC.pm
+lib/perl5/site_perl/Digest/HMAC_SHA1.pm
+lib/perl5/site_perl/Digest/HMAC_MD5.pm
+lib/perl5/site_perl/Digest/MD2.pm
+lib/perl5/site_perl/Digest/SHA1.pm
+lib/perl5/site_perl/Digest.pm
+lib/perl5/site_perl/MD5.pm
+lib/perl5/site_perl/SHA.pm
+lib/perl5/man/man3/Digest::MD2.3
+lib/perl5/man/man3/Digest::SHA1.3
+lib/perl5/man/man3/SHA.3
+lib/perl5/man/man3/Digest::HMAC.3
+lib/perl5/man/man3/Digest.3
+lib/perl5/man/man3/Digest::MD5.3
+lib/perl5/man/man3/Digest::HMAC_SHA1.3
+lib/perl5/man/man3/Digest::HMAC_MD5.3
+lib/perl5/man/man3/MD5.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/MD5/.packlist
+@dirrm lib/perl5/site_perl/Digest
