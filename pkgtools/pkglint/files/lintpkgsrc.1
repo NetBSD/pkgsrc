@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.8 2000/01/14 01:02:01 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.9 2000/01/19 13:59:22 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -32,10 +32,16 @@ Set basedir for binary packages, otherwise PKGSRCDIR/packages is used.
 List the filenames of Makefiles as they are parsed (for debugging).
 .It Fl P Ar pkgsrcdir
 Set pkgsrcdir - otherwise
-.Pa /etc/mk.conf is parsed for
+.Pa /etc/mk.conf
+is parsed for
 .Em PKGSRCDIR .
 .It Fl R
-Report any RESTRICTED binary packages (in any subdirs of PKGSRCDIR/packages).
+Report any binary packages in any subdirs of PKGSRCDIR/packages,
+for whom the source Makefile lists
+.Em RESTRICTED
+or
+.Em LICENCE .
+This is intended to help those making binary packages available for ftp.
 .It Fl d
 Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
 verify the version specified in each DEPEND correctly matches a current

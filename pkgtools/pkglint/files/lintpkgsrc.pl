@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.18 2000/01/14 01:02:01 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.19 2000/01/19 13:59:22 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -20,12 +20,12 @@ use File::Find;
 my(	$pkgsrcdir,		# Base of pkgsrc tree
 	%pkgver2dir,		# Map package-version to category/pkgname
 	%pkg2ver,		# Map pkgname to version
-	%pkgrestricted,		# RESTRICTED packages, by pkgname
+	%pkgrestricted,		# RESTRICTED/LICENCE packages, by pkgname
 	%default_makefile_vars,	# Default vars set for Makefiles
 	%opt,			# Command line options
 	@old_prebuiltpackages,	# List of obsolete prebuilt package paths
 	@prebuilt_pkgdirs,	# Use to follow symlinks in prebuilt pkgdirs
-	@restricted_prebuiltpackages);	# Ditto, but for RESTRICTED packages
+	@restricted_prebuiltpackages);	# " but for RESTRICTED/LICENCE packages
 
 $ENV{PATH} .= ':/usr/sbin';
 
@@ -80,7 +80,7 @@ if ($opt{'D'})
 	    }
 	}
 
-    # List obsolete or RESTRICTED prebuilt packages
+    # List obsolete or RESTRICTED/LICENCE prebuilt packages
     #
     if ($opt{'p'} || $opt{'R'})
 	{
@@ -524,7 +524,7 @@ sub parse_makefile
 	{
 	if ( $pkgname =~ /\$/ )
 	    { print "\rBogus: $pkgname (from $file)\n"; }
-	if (defined($vars{'RESTRICTED'}))
+	if (defined($vars{'RESTRICTED'}) || defined($vars{'LICENSE'}))
 	    { $pkgrestricted{$pkgname} = 1; }
 	return($pkgname, %vars);
 	}
@@ -800,7 +800,7 @@ opts:
   -d	     : Check 'DEPENDS' are up to date.
   -i	     : Check installed package versions against pkgsrc.
   -l	     : Pkglint every package in pkgsrc.
-  -R	     : List any RESTRICTED prebuilt packages.
+  -R	     : List any RESTRICTED/LICENCE prebuilt packages.
   -m	     : List md5 mismatches for files in distfiles/.
   -o	     : List old/obsolete distfiles (not referenced by any md5).
   -p	     : List old/obsolete prebuilt packages.
