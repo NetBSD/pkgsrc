@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5778 2004/04/30 03:24:54 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5779 2004/04/30 10:50:44 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2297,3 +2297,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-GDGraph3d to 0.56 [abs 2004-04-29]
 	Updated imhangul to 0.9.9nb1 [minskim 2004-04-29]
 	Added p5-Text-Quoted-1.5 [minskim 2004-04-30]
+	Added musicpd-0.10.3 [grant 2004-04-30]
+	Added mpc-0.10.3 [grant 2004-04-30]
