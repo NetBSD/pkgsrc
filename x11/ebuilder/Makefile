@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/08/25 21:52:34 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:56:23 grant Exp $
 #
 
 DISTNAME=	ebuilder-0.56d
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	x11 devel
 MASTER_SITES=	http://web.inter.nl.net/users/eavdmeer/src/
 
-MAINTAINER=	drochner@netbsd.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://web.inter.nl.net/users/eavdmeer/index.html
 COMMENT=	GUI builder for the Qt library
 

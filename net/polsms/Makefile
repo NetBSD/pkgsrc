@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/12 00:32:19 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:51:38 grant Exp $
 #
 
 DISTNAME=	sms-1.9.2d
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/sms
 CATEGORIES=	net
 MASTER_SITES=	http://www.ceti.pl/~miki/komputery/download/sms/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.ceti.pl/~miki/komputery/sms.html
 COMMENT=	send SMS to cellular phones in Poland (Plus, Idea, Era)
 

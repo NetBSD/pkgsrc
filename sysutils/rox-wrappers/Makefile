@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:49 grant Exp $
 #
 
 DISTNAME=	Wrappers-1.0.2
@@ -9,7 +9,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	rxg@netbsd.org
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	some example Wrapper applications
 

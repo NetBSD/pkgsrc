@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/29 01:12:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:55 grant Exp $
 #
 
 DISTNAME=	procps-2.0.6
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://people.redhat.com/johnsonm/procps/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Terminal version of xload
 
 do-build:

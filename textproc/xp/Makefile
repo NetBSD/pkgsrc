@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/04/10 01:28:27 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:54:56 grant Exp $
 #
 
 DISTNAME=	xp
@@ -7,7 +7,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	ftp://ftp.jclark.com/pub/xml/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.jclark.com/xml/
 COMMENT=	James Clark's non-validating XML Parser for Java
 

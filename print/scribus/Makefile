@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 01:17:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:38 grant Exp $
 
 DISTNAME=	scribus-0.7.5
 PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://web2.altmuehlnet.de/fschmid/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://web2.altmuehlnet.de/fschmid/
 COMMENT=	Publishing layout with graphical interface
 

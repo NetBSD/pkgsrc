@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:16:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:54:53 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/27 00:11:48 asami Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		${UNROFF_SITE}/dist/ \
 			${UNROFF_SITE}/contrib/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${PATCH1} ${PATCH2}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/unroff/
 COMMENT=		Programmable troff translator with backend for HTML
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/01/28 22:04:18 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:53:40 grant Exp $
 #
 
 DISTNAME=	libirman-0.4.1b
@@ -7,7 +7,7 @@ PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.evation.com/libirman/
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.evation.com/libirman/libirman.html
 COMMENT=	Programming library for Irman - infrared control
 

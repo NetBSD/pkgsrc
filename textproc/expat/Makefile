@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/02/05 03:57:13 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:54:14 grant Exp $
 #
 
 DISTNAME=	expat-1.95.6
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 
-MAINTAINER=	drochner@netbsd.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://expat.sourceforge.net/
 COMMENT=	XML parser library written in C
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/02 01:17:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 22:51:47 grant Exp $
 
 DISTNAME=	rp-pppoe-3.5
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE} \
 		http://roaringpenguin.luky.org/pppoe/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.roaringpenguin.com/pppoe/
 COMMENT=	Roaring Penguin's PPP over Ethernet client
 

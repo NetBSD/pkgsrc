@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2003/07/06 14:08:43 taca Exp $
+# $NetBSD: Makefile,v 1.87 2003/07/17 22:56:03 grant Exp $
 
 DISTNAME=	squid-2.5.STABLE3
 PKGNAME=	squid-2.5.3
@@ -19,7 +19,7 @@ PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch \
 		squid-2.5.STABLE3-gcc-3_3.patch
 PATCH_DIST_STRIP=       -p1
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 

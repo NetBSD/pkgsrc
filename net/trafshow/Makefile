@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:17:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:51:57 grant Exp $
 
 DISTNAME=	trafshow-3.1
 PKGREVISION=	1
@@ -10,7 +10,7 @@ PATCHFILES=	trafshow-31-v6-20010322a.diff.gz
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 PATCH_DIST_STRIP+=	-p1
 
-MAINTAINER=     tech-pkg@netbsd.org
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://soft.risp.ru/trafshow/index.shtml
 COMMENT=	Full screen visualization of the network traffic
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/30 16:52:41 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:53:50 grant Exp $
 #
 
 DISTNAME=	ruby-quota-0.5.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://kt-www.jaist.ac.jp/~ttate/ftp/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://kt-www.jaist.ac.jp/~ttate/ruby/ruby-ext.html
 COMMENT=	quota interface for Ruby
 

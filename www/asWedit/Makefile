@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/18 09:22:27 agc Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:55:29 grant Exp $
 
 DISTNAME=		${PKGNAME}-i386.linux
 PKGNAME=		asWedit-4.0.1
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.advasoft.com/asWedit/ \
 			ftp://sunsite.icm.edu.pl/pub/www/asWedit/ \
 			ftp://sunsite.auc.dk/pub/infosystems/www/asWedit/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.advasoft.com/asWedit.html
 COMMENT=		Motif HTML and text editor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/06/19 07:33:13 tron Exp $
+# $NetBSD: Makefile,v 1.48 2003/07/17 22:51:48 grant Exp $
 
 DISTNAME=	rsync-2.5.6
 PKGREVISION=	1
@@ -11,7 +11,7 @@ MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		ftp://ftp.sunet.se/pub/unix/admin/rsync/  \
 		ftp://ftp.fu-berlin.de/unix/network/rsync/
 
-MAINTAINER=     tron@netbsd.org
+MAINTAINER=     tron@NetBSD.org
 HOMEPAGE=	http://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
 

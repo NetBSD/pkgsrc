@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:16:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:03 grant Exp $
 #
 
 DISTNAME=      	TimeDate-1.14
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5tid
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	perl5 TimeDate distribution
 
 USE_BUILDLINK2=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/06/18 09:22:27 agc Exp $
+# $NetBSD: Makefile,v 1.34 2003/07/17 22:56:47 grant Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=		x11
 MASTER_SITES=		ftp://tkman.sourceforge.net/pub/tkman/ \
 			http://tkman.sourceforge.net/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://tkman.sourceforge.net/
 COMMENT=		Tcl/Tk based manual browser
 

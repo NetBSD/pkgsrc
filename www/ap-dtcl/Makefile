@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/04/19 18:32:37 jwise Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:55:24 grant Exp $
 
 DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap-dtcl-0.11.2
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/mod_dtcl
 CATEGORIES=	www
 MASTER_SITES=	http://tcl.apache.org/mod_dtcl/download/
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://tcl.apache.org/
 COMMENT=	Simple, fast Tcl server side scripting for apache
 

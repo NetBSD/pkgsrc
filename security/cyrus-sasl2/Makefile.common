@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/05/26 06:53:07 martti Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/07/17 22:52:53 grant Exp $
 #
 # This Makefile fragment should be included _below_ and SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
 
-MAINTAINER=	chris@netbsd.org
+MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://asg.web.cmu.edu/sasl/
 
 DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl2/distinfo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:51:19 grant Exp $
 #
 
 DISTNAME=		libIDL-0.8.0
@@ -7,7 +7,7 @@ CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libIDL/0.8/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		CORBA Interface Definition Language parser
 

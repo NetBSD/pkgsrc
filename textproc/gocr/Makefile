@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 07:19:38 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:16 grant Exp $
 
 DISTNAME=	gocr-0.37
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jocr/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/jocr
 COMMENT=	GOCR is s set set of OCR tools
 

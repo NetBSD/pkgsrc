@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/02 08:46:25 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:26 grant Exp $
 #
 
 DISTNAME=	ispell-sk-0.2.0
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-sk//}
 CATEGORIES=	textproc
 MASTER_SITES=	http://ispell.hq.sk/
 
-MAINTAINER=	salo@netbsd.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://ispell.hq.sk/homepage/
 COMMENT=	Slovak dictionary for ispell
 

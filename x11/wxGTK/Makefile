@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/13 13:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 22:56:50 grant Exp $
 #
 
 DISTNAME=		wxGTK-2.4.0
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://biolpc22.york.ac.uk/pub/2.4.0/
 
-MAINTAINER=		tsarna@netbsd.org
+MAINTAINER=		tsarna@NetBSD.org
 HOMEPAGE=		http://www.wxwindows.org
 COMMENT=		GTK-based implementation of the wxWindows GUI library
 

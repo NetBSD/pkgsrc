@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/07/13 13:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2003/07/17 22:55:18 grant Exp $
 
 DISTNAME=		WindowMaker-0.80.2
 PKGNAME=		windowmaker-0.80.2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.windowmaker.org/
 COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
 
