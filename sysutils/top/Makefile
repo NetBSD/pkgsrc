@@ -1,13 +1,13 @@
 # New ports collection makefile for:    top
-# Version required:     3.5beta6
+# Version required:     3.5beta7
 # Date created:         25 Sep 1994
 # Whom:                 swallace
 #
-# $NetBSD: Makefile,v 1.5 1998/01/24 23:34:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/16 12:17:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
-DISTNAME=       top-3.5beta6
+DISTNAME=       top-3.5beta7
 CATEGORIES=	sysutils
 MASTER_SITES=   ftp://ftp.groupsys.com/pub/top/
 
