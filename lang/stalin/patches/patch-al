@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1.1.1 2000/12/10 11:07:35 jtb Exp $
+$NetBSD: patch-al,v 1.2 2000/12/10 12:20:48 jtb Exp $
 
 --- benchmarks/make-xhello.orig	Sun Dec 10 10:21:10 2000
 +++ benchmarks/make-xhello
@@ -7,7 +7,7 @@ $NetBSD: patch-al,v 1.1.1.1 2000/12/10 11:07:35 jtb Exp $
  ulimit -s unlimited
  ulimit -c 0
 -../stalin -d0 -d1 -d5 -d6 -On -du -dI\
-+%%PREFIX%%/bin/stalin -d0 -d1 -d5 -d6 -On -du -dI\
++%%STALIN%% -d0 -d1 -d5 -d6 -On -du -dI\
   -copt -O2 -copt -fomit-frame-pointer -copt -Wall -copt -freg-struct-return\
 - -copt -L/usr/X11/lib -copt -lX11\
 + -copt -L%%X11BASE%%/lib -copt -lX11\
