@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2457 2003/06/08 12:44:37 abs Exp $
+$NetBSD: CHANGES,v 1.2458 2003/06/08 15:21:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated figlet to 2.2.1nb1 [abs 2003-06-08]
 	Updated userppp to 001107nb1 [abs 2003-06-08]
 	Updated cpuflags to 0.47 [abs 2003-06-08]
+	Updated joe to 2.8nb2 [abs 2003-06-08]
