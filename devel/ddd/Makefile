@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/21 13:36:02 tron Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/22 11:27:48 agc Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -17,13 +17,12 @@ DEPENDS+=	xpm-3.4j:../../graphics/xpm
 USE_MOTIF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAN1=		ddd.1
 
 .include "../../mk/bsd.prefs.mk"
 
 post-patch:
 	@case ${PAPERSIZE} in					\
-	A4)	${ECHO} "Using A4 paper size" ;;			\
+	A4)	${ECHO} "Using A4 paper size" ;;		\
 	Letter*)	${ECHO} "Using US Letter paper size";	\
 		${MV} ${WRKSRC}/ddd/Ddd.in ${WRKSRC}/ddd/Ddd.in.orig; \
 		${SED} -e 's|@Ddd@\*paperSize: 210mm x 297mm|@Ddd@*paperSize: 8.5" x 11"|' \

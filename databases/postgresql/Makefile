@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/06/10 13:55:34 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/06/22 11:19:41 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.3.2
@@ -27,28 +27,6 @@ CONFIGURE_ARGS= --prefix=${PREFIX}/pgsql \
 		--with-includes=${PREFIX}/include \
 		--with-libs=${PREFIX}/lib \
 		--with-template=`uname -s | ${TR} '[A-Z]' '[a-z]'`
-
-MAN1=		cleardbdir.1 createdb.1 createuser.1 destroydb.1 \
-		destroyuser.1 initdb.1 ipcclean.1 pg_dump.1 \
-		pg_dumpall.1 pg_passwd.1 pgintro.1 postgres.1 \
-		postmaster.1 psql.1 initlocation.1 ecpg.1
-MAN3=		catalogs.3 large_objects.3 libpq.3 oracle_compat.3 pgbuiltin.3
-MAN5=		bki.5 page.5 pg_hba.conf.5
-MANL=		abort.l alter_table.l begin.l close.l cluster.l \
-		commit.l copy.l create_aggregate.l create_database.l \
-		create_function.l create_index.l create_operator.l \
-		create_rule.l create_sequence.l create_table.l \
-		create_trigger.l create_type.l create_version.l \
-		create_view.l declare.l delete.l drop.l drop_aggregate.l \
-		drop_database.l drop_function.l drop_index.l drop_operator.l \
-		drop_rule.l drop_sequence.l drop_table.l drop_trigger.l \
-		drop_type.l drop_view.l end.l explain.l fetch.l grant.l \
-		insert.l listen.l load.l move.l notify.l \
-		reset.l revoke.l rollback.l select.l set.l show.l sql.l \
-		update.l vacuum.l lock.l drop_user.l drop_language.l \
-		create_user.l create_language.l alter_user.l
-
-MANPREFIX=	${PREFIX}/pgsql
 
 .include "../../mk/bsd.prefs.mk"
 

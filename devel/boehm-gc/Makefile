@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:19 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 11:27:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.1 1996/11/16 01:51:25 jdp Exp
 #
 
@@ -10,7 +10,6 @@ MASTER_SITES=	http://reality.sgi.com/employees/boehm_mti/gc_source/
 MAINTAINER=	mmcg@cs.monash.edu.au
 
 WRKSRC=		${WRKDIR}/gc
-MAN3=		gc.3
 ALL_TARGET=	BSD-pkg-all
 INSTALL_TARGET=	BSD-pkg-install
 MAKE_ENV+=	CP="${CP}"
