@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/05/22 10:45:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/08/28 16:46:44 kim Exp $
 bin/mrtg
 bin/mrtgcfgmaker
 bin/mrtgcfgmaker_ip
@@ -8,8 +8,13 @@ lib/perl5/site_perl/BER.pm
 lib/perl5/site_perl/SNMP_Session.pm
 lib/perl5/site_perl/SNMP_util.pm
 libexec/netstat2mrtg
-libexec/sys2mrtg
 libexec/rateup
+libexec/sys2mrtg
+share/doc/mrtg/ANNOUNCE
+share/doc/mrtg/CHANGES
+share/doc/mrtg/COPYING
+share/doc/mrtg/COPYRIGHT
+share/doc/mrtg/README
 share/doc/mrtg/config.html
 share/doc/mrtg/config.pod
 share/doc/mrtg/config.txt
@@ -22,13 +27,9 @@ share/doc/mrtg/mrtg-l.gif
 share/doc/mrtg/mrtg-m.gif
 share/doc/mrtg/mrtg-r.gif
 share/doc/mrtg/mrtg-ti.gif
+share/doc/mrtg/nt-guide.html
 share/doc/mrtg/sample-mrtg.cfg
 share/doc/mrtg/squid.txt
-share/doc/mrtg/ANNOUNCE
-share/doc/mrtg/CHANGES
-share/doc/mrtg/COPYING
-share/doc/mrtg/COPYRIGHT
-share/doc/mrtg/README
 share/mrtg/mrtg-l.gif
 share/mrtg/mrtg-m.gif
 share/mrtg/mrtg-r.gif
