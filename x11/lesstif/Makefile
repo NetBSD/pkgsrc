@@ -3,14 +3,14 @@
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.10 1998/03/23 12:35:51 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/03/23 14:12:39 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
 DISTNAME=	lesstif-0.83
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.lesstif.org/pub/hungry/lesstif/  \
-		ftp://ftp.hungry.com/pub/hungry/lesstif/
+MASTER_SITES=	ftp://ftp.lesstif.org/pub/hungry/lesstif/srcdist \
+		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist
 
 MAINTAINER=	packages@netbsd.org
 
