@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3721 2003/10/21 23:37:42 seb Exp $
+$NetBSD: CHANGES,v 1.3722 2003/10/22 16:52:24 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4235,3 +4235,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pim6dd to 20031021a [itojun 2003-10-21]
 	Updated latd to 1.18 [xtraeme 2003-10-21]
 	Updated cyrus-imapd21 to 2.1.15nb1 [seb 2003-10-21]
+	Updated sylpheed-claws to 0.9.4nb2 [cube 2003-10-22]
