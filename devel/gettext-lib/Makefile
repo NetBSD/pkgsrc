@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.2.2 2002/06/21 23:05:05 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.3 2002/06/30 07:19:24 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -14,8 +14,13 @@ HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
 COMMENT=		tools for providing messages in different languages, libintl only
 
 CONFLICTS=		gettext<=0.10.35
+
+# gettext-lib is needed to bootstrap shell/bash2, which is needed to
+# bootstrap buildlink2.
+#
+USE_BUILDLINK2=		no
+
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-included-gettext
