@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2000/12/07 20:33:06 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/12/14 17:04:45 jlam Exp $
 
 --- Makedefs.in.orig	Thu Sep 14 11:36:24 2000
 +++ Makedefs.in
-@@ -49,12 +49,13 @@
+@@ -46,14 +46,21 @@
+ SHELL	=	/bin/sh
+ 
+ #
++# CUPS administrator user and group...
++#
++
++CUPS_USER	=	@CUPS_USER@
++CUPS_GROUP	=	@CUPS_GROUP@
++
++#
  # Installation programs...
  #
  
@@ -17,7 +27,5 @@ $NetBSD: patch-aa,v 1.3 2000/12/07 20:33:06 jlam Exp $
 +INSTALL_MAN	=	$(BSD_INSTALL_MAN)
 +INSTALL_SCRIPT	=	$(BSD_INSTALL_SCRIPT)
  INSTALL_SYSV	=	@INSTALL_SYSV@
-+INSTALL_INIT	=	@INSTALL_INIT@
  
  #
- # Libraries...
