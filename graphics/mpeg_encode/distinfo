@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/14 23:06:03 hubertf Exp $
+
+SHA1 (mpeg_encode-1.5b-src.tar.gz) = 853cd175f73b8064ce28deb256e4b81159a684ed
+Size (mpeg_encode-1.5b-src.tar.gz) = 2028724 bytes
+SHA1 (patch-aa) = 1d233d6c578217d05f31f8a0264f9101b307f5ae
+SHA1 (patch-ab) = f2cdf02d49b726b4fb7fb210074e7ba53b9b380b
+SHA1 (patch-ac) = 8f89257bd93584cd028b659bb8c3379d713339da
