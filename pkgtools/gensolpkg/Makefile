@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/11/23 20:55:21 cjep Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/31 12:18:31 abs Exp $
 #
 
 DISTNAME=	gensolpkg-1.10
@@ -11,7 +11,7 @@ COMMENT=	Utility to generate a Solaris package
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# uses Solaris pkgmk(1)
 
-MAKE_ENV+=	CPPFLAGS="" CC="${CC}"
+MAKE_ENV+=	CPPFLAGS="" CC=${CC:Q}
 MAKEFLAGS+=	PREFIX=${PREFIX} ZOULARISBASE=${ZOULARISBASE}
 
 do-install:
