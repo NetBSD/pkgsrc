@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.246 2002/05/22 23:30:21 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.247 2002/05/30 22:55:21 schmonz Exp $
 ###########################################################################
 
 			==========================
@@ -2412,6 +2412,10 @@ Please note all package updates/additions in doc/pkg-CHANGES! It's very
 important to keep this file up to date and conforming to the existing
 format, because it will be used by scripts to automatically update pages on
 www.netbsd.org and other sites.
+
+For new packages, "cvs import" is preferred to "cvs add" because
+the former gets everything with a single command, and provides a
+consistent tag.
 
 
  11.3 Updating a Package to a Newer Version
