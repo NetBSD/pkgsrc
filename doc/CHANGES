@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5962 2004/05/15 17:07:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.5963 2004/05/15 18:54:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2561,3 +2561,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nautilus-cd-burner to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome2-utils to 2.6.1 [jmmv 2004-05-15]
 	Updated gucharmap to 1.4.1 [jmmv 2004-05-15]
+	Updated gnome-base to 2.6.1 [jmmv 2004-05-15]
+	Updated gnome-accessibility to 2.6.1 [jmmv 2004-05-15]
+	Updated gnome to 2.6.1 [jmmv 2004-05-15]
+	Updated gnome-extras to 2.6.1 [jmmv 2004-05-15]
