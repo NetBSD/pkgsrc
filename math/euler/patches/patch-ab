@@ -1,0 +1,201 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/05/04 01:49:13 jtb Exp $
+
+--- makefile.orig	Wed Feb 20 09:41:30 2002
++++ makefile	Thu Apr 25 10:48:52 2002
+@@ -6,7 +6,7 @@
+ # view docs/index.html with any Web browser.
+ 
+ 
+-INSTALL_DIR = /usr/local
++INSTALL_DIR = ${PREFIX}
+ 
+ 
+ # Changes for other systems:
+@@ -28,7 +28,8 @@
+ # If you do not have M_PI or PI and need pi with more than 16 digits
+ # define it -DPI=3.1415... (not necessary for 8 byte doubles)
+ 
+-CC=gcc -Wall -O2 -DINSTALL_DIR=\"$(INSTALL_DIR)\"
++CFLAGS+= -Wall
++CPPFLAGS+= -Dunix -DINSTALL_DIR=\"$(INSTALL_DIR)\"
+ 
+ 
+ # This is for printing the DOC on your local printer
+@@ -46,7 +47,7 @@
+ 
+ euler: $(OBJS) main.o rc.o earray.o term.o metagtk.o colbut.o
+ 	$(CC) -o euler main.o rc.o earray.o term.o metagtk.o colbut.o $(OBJS) -lm `gtk-config --libs`
+-	
++
+ imported: import.cpp
+ 	g++ -o import import.cpp
+ 	./import *.cpp *.h help.txt euler.cfg
+@@ -59,120 +60,127 @@
+ #	object file dependances
+ #
+ assign.o : header.h stack.h extend.h interval.h assign.c
+-	$(CC) -c  assign.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  assign.c
+ 
+ binary.o :	header.h stack.h binary.c
+-	$(CC) -c  binary.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  binary.c
+ 
+ builtin.o :	header.h builtin.h builtin.c
+-	$(CC) -c  builtin.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  builtin.c
+ 
+ edit.o :	header.h sysdep.h graphics.h edit.c
+-	$(CC) -c  edit.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  edit.c
+ 
+ express.o :	header.h sysdep.h funcs.h interval.h builtin.h express.h stack.h express.c
+-	$(CC) -c  express.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  express.c
+ 
+ extend.o :	header.h extend.h extend.c
+-	$(CC) -c  extend.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  extend.c
+ 
+ feval.o :	header.h stack.h builtin.h sysdep.h feval.c
+-	$(CC) -c  feval.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  feval.c
+ 
+ fft.o : header.h matheh.h sysdep.h fft.c
+-	$(CC) -c  fft.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  fft.c
+ 
+ frames.o :	header.h sysdep.h stack.h frames.c
+-	$(CC) -c  frames.c
+-	
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  frames.c
++
+ funcs.o :	header.h sysdep.h funcs.h matheh.h polynom.h helpf.h\
+ 	interval.h spread.h express.h stack.h funcs.c
+-	$(CC) -c  funcs.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  funcs.c
+ 
+ graphics.o : header.h sysdep.h funcs.h graphics.h stack.h meta.h graphics.c
+-	$(CC) -c  graphics.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  graphics.c
+ 
+ help.o :	header.h help.h help.c
+-	$(CC) -c  help.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  help.c
+ 
+ helpf.o :	header.h funcs.h helpf.h matheh.h interval.h stack.h helpf.c
+-	$(CC) -c  helpf.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  helpf.c
+ 
+ input.o :	header.h sysdep.h input.c
+-	$(CC) -c  input.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  input.c
+ 
+ interval.o : header.h interval.h spread.h stack.h interval.c
+-	$(CC) -c  interval.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  interval.c
+ 
+ mainloop.o : header.h sysdep.h funcs.h graphics.h version.h\
+ 	interval.h builtin.h stack.h meta.h mainloop.c
+-	$(CC) `glib-config --cflags` -c  mainloop.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) `glib-config --cflags` -c  mainloop.c
+ 
+ matheh.o :	header.h sysdep.h matheh.h stack.h matheh.c
+-	$(CC) -c  matheh.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  matheh.c
+ 
+ meta.o:		sysdep.h meta.h meta.c
+-	$(CC) -c meta.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c meta.c
+ 
+ metaps.o:	sysdep.h meta.h metaps.h metaps.c
+-	$(CC) -c metaps.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c metaps.c
+ 
+ output.o :	header.h sysdep.h output.c
+-	$(CC) -c  output.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  output.c
+ 
+ polynom.o : header.h polynom.h funcs.h matheh.h interval.h\
+ 	express.h stack.h polynom.c
+-	$(CC) -c  polynom.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  polynom.c
+ 
+ psgraph.o : psgraph.h psgraph.c
+-	$(CC) -c psgraph.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c psgraph.c
+ 
+ scalp.o :	header.h interval.h express.h stack.h scalp.c
+-	$(CC) -c  scalp.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  scalp.c
+ 
+ special.o : header.h stack.h spread.h special.c
+-	$(CC) -c  special.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  special.c
+ 
+ spread.o : header.h sysdep.h funcs.h interval.h spread.h stack.h spread.c
+-	$(CC) -c  spread.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  spread.c
+ 
+ stack.o : header.h stack.h stack.c
+-	$(CC) -c  stack.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  stack.c
+ 
+ store.o : header.h store.h store.c
+-	$(CC) -c  store.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  store.c
+ 
+ udf.o : header.h sysdep.h stack.h udf.c help.h
+-	$(CC) -c  udf.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c  udf.c
+ 
+ main.o : main.c rc.h earray.h term.h metagtk.h metaps.h
+-	$(CC) `gtk-config --cflags` -c  main.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) `gtk-config --cflags` -c  main.c
+ 
+ rc.o :		rc.c rc.h
+-	$(CC) `gtk-config --cflags` -c  rc.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) `gtk-config --cflags` -c  rc.c
+ 
+ earray.o : earray.c earray.h
+-	$(CC) `gtk-config --cflags` -c  earray.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) `gtk-config --cflags` -c  earray.c
+ 
+ term.o : term.c term.h earray.h
+-	$(CC) `gtk-config --cflags` -c term.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) `gtk-config --cflags` -c term.c
+ 
+ metagtk.o : metagtk.c metagtk.h meta.h
+-	$(CC) `gtk-config --cflags` -c metagtk.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) `gtk-config --cflags` -c metagtk.c
+ 
+ colbut.o : colbut.c colbut.h
+-	$(CC) `gtk-config --cflags` -c colbut.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) `gtk-config --cflags` -c colbut.c
+ 
+ #
+ #	install
+ #
+ install:
+-	if [ ! -d "$(INSTALL_DIR)/share/euler" ]; then mkdir $(INSTALL_DIR)/share/euler ; fi
+-	if [ ! -d "$(INSTALL_DIR)/doc/euler" ]; then mkdir $(INSTALL_DIR)/doc/euler ; fi
+-	cp -f euler $(INSTALL_DIR)/bin
+-	cp -fr ../progs $(INSTALL_DIR)/share/euler
+-	cp -fr ../docs/* $(INSTALL_DIR)/doc/euler/
+-	cp -f help.txt $(INSTALL_DIR)/share/euler
++	$(BSD_INSTALL_PROGRAM) euler $(INSTALL_DIR)/bin
++	$(BSD_INSTALL_DATA_DIR) $(INSTALL_DIR)/share/euler
++	$(BSD_INSTALL_DATA_DIR) $(INSTALL_DIR)/share/euler/user
++	$(BSD_INSTALL_DATA) ../progs/*.* $(INSTALL_DIR)/share/euler
++	$(BSD_INSTALL_DATA) ../progs/user/*.* $(INSTALL_DIR)/share/euler/user
++	$(BSD_INSTALL_DATA) help.txt $(INSTALL_DIR)/share/euler
++	$(BSD_INSTALL_DATA_DIR) $(INSTALL_DIR)/share/doc/euler
++	$(BSD_INSTALL_DATA_DIR) $(INSTALL_DIR)/share/doc/euler/images
++	$(BSD_INSTALL_DATA_DIR) $(INSTALL_DIR)/share/doc/euler/reference
++	$(BSD_INSTALL_DATA) ../docs/*.* $(INSTALL_DIR)/share/doc/euler/
++	$(BSD_INSTALL_DATA) ../docs/images/* $(INSTALL_DIR)/share/doc/euler/images
++	$(BSD_INSTALL_DATA) ../docs/reference/*.* $(INSTALL_DIR)/share/doc/euler/reference
++
+ 
+ #
+ #	uninstall

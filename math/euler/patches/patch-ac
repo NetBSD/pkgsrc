@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/05/04 01:49:13 jtb Exp $
+
+--- mainloop.c.orig	Thu Apr 25 10:55:54 2002
++++ mainloop.c	Thu Apr 25 11:09:45 2002
+@@ -1770,8 +1770,8 @@
+ 	g_free(filename);
+ 
+ 	if (file) {
+-//		fprintf(file,"path(\".;%s/share/euler/progs\");\n",INSTALL_DIR);
+-//		fprintf(file,"cd(\"%s/share/euler/progs\");\n",INSTALL_DIR);
++		fprintf(file,"path(\".;%s/share/euler\");\n",INSTALL_DIR);
++		fprintf(file,"cd(\"%s/share/euler\");\n",INSTALL_DIR);
+ 		fprintf(file,"load \"util.e\";\n");
+ 		fprintf(file,"load \"framed.e\";\n");
+ 		fprintf(file,"load \"x.e\";\n");
