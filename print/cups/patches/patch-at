@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.5 2005/01/06 07:26:39 jlam Exp $
+$NetBSD: patch-at,v 1.6 2005/01/06 18:22:29 jlam Exp $
 
 --- scheduler/Makefile.orig	2005-01-03 14:29:59.000000000 -0500
 +++ scheduler/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-at,v 1.5 2005/01/06 07:26:39 jlam Exp $
  #
  
 -install:	all
-+install:	installbin installdir
++install:	installbin
 +
 +installbin:	all
  	$(INSTALL_DIR) $(SBINDIR)
