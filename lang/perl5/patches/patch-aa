@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
+$NetBSD: patch-aa,v 1.8 1998/09/07 22:40:28 agc Exp $
 
 --- Configure.orig	Fri Oct  3 18:57:39 1997
 +++ Configure	Fri Aug  7 12:31:44 1998
@@ -52,7 +52,17 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  
  : Private path used by Configure to find libraries.  Its value
  : is prepended to libpth. This variable takes care of special
-@@ -2365,7 +2365,7 @@
+@@ -753,7 +753,8 @@
+ defvoidused=15
+ 
+ : List of libraries we want.
+-libswanted='sfio net socket inet nsl nm ndbm gdbm dbm db malloc dl'
++# libswanted='sfio net socket inet nsl nm ndbm gdbm dbm db malloc dl'
++libswanted='sfio socket inet nsl nm ndbm gdbm dbm db malloc dl'
+ libswanted="$libswanted dld ld sun m c cposix posix ndir dir crypt"
+ libswanted="$libswanted ucb bsd BSD PW x"
+ : We probably want to search /usr/shlib before most other libraries.
+@@ -2365,7 +2366,7 @@
  : determine root of directory hierarchy where package will be installed.
  case "$prefix" in
  '')
@@ -61,7 +71,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  	;;
  *)
  	dflt="$prefix"
-@@ -2375,10 +2375,10 @@
+@@ -2375,10 +2376,10 @@
  
  By default, $package will be installed in $dflt/bin, manual
  pages under $dflt/man, etc..., i.e. with $dflt as prefix for
@@ -74,7 +84,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  for each of the installation directories, the prefix being only used
  to set the defaults.
  
-@@ -2426,7 +2426,7 @@
+@@ -2426,7 +2427,7 @@
  esac'
  
  : determine where private library files go
@@ -83,7 +93,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  : /opt/perl/lib, since /opt/perl/lib/perl5 would be redundant.
  case "$prefix" in
  *perl*) set dflt privlib lib ;;
-@@ -2501,7 +2501,7 @@
+@@ -2501,7 +2502,7 @@
  case "$archlib" in
  '')
      case "$privlib" in
@@ -92,7 +102,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  	set dflt
  	eval $prefixup
  	;;
-@@ -2986,8 +2986,8 @@
+@@ -2986,8 +2987,8 @@
  	syspath='/usr/man/man1 /usr/man/mann /usr/man/manl /usr/man/local/man1'
  	syspath="$syspath /usr/man/u_man/man1 /usr/share/man/man1"
  	syspath="$syspath /usr/catman/u_man/man1 /usr/man/l_man/man1"
@@ -103,7 +113,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  	sysman=`./loc . /usr/man/man1 $syspath`
  	;;
  esac
-@@ -3268,7 +3268,7 @@
+@@ -3268,7 +3269,7 @@
  : Set private lib path
  case "$plibpth" in
  '') if ./mips; then
@@ -112,7 +122,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  	fi;;
  esac
  case "$libpth" in
-@@ -4965,8 +4965,8 @@
+@@ -4965,8 +4966,8 @@
  esac
  
  echo "If you don't want the manual sources installed, answer 'none'."
@@ -123,7 +133,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  : thus man less will show the perl module less.pm, but not the system
  : less command.  We might also conflict with TCL man pages.
  : However, something like /opt/perl/man/man3 is fine.
-@@ -5413,7 +5413,7 @@
+@@ -5413,7 +5414,7 @@
  	: guess some guesses
  	$test -d /usr/share/scripts && dflt=/usr/share/scripts
  	$test -d /usr/share/bin && dflt=/usr/share/bin
@@ -132,7 +142,7 @@ $NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
  	$test -d $prefixexp/script && dflt=$prefixexp/script
  	set dflt
  	eval $prefixup
-@@ -8726,7 +8726,7 @@
+@@ -8726,7 +8727,7 @@
  	case "$ranlib" in
  	:) ranlib='';;
  	'')
