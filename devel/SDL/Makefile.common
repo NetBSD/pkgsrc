@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/02/11 01:46:30 abs Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/02/13 17:15:02 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.6
@@ -51,8 +51,7 @@ AM_CFLAGS=		-D_PATH_DEV_DSP=\\\"${DEVOSSAUDIO}\\\"
 MAKE_ENV+=		AM_CFLAGS="${AM_CFLAGS}"
 .endif
 
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/aalib-x11/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
