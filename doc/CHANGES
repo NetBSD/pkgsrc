@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5973 2004/05/16 02:21:20 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5974 2004/05/16 11:52:50 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2543,9 +2543,11 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xscreensaver to 4.16 [wiz 2004-05-15]
 	Updated xscreensaver-demo to 4.16 [wiz 2004-05-15]
 	Updated xscreensaver-gnome to 4.16 [wiz 2004-05-15]
+	Updated p5-CGI to 3.05 [heinz 2004-05-15]
 	Updated gnome2-pixmaps to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome-desktop to 2.6.1 [jmmv 2004-05-15]
 	Updated eog2 to 2.6.1 [jmmv 2004-05-15]
+	Updated libcddb to 0.9.4nb2 [heinz 2004-05-15]
 	Updated file-roller to 2.6.1 [jmmv 2004-05-15]
 	Updated zenity to 2.6.2 [jmmv 2004-05-15]
 	Updated gedit to 2.6.1 [jmmv 2004-05-15]
@@ -2553,6 +2555,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-mag to 0.10.11 [jmmv 2004-05-15]
 	Updated source-highlight to 1.9 [seb 2004-05-15]
 	Updated gnome2-control-center to 2.6.1 [jmmv 2004-05-15]
+	Updated tnef to 1.2.3.1 [heinz 2004-05-15]
 	Updated gnome-themes to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome-panel to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome2-applets to 2.6.1 [jmmv 2004-05-15]
