@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2000/07/13 11:09:18 abs Exp $
+
+--- Makefile.head.orig	Wed Jan 19 04:08:32 2000
++++ Makefile.head	Thu Jul 13 11:07:09 2000
+@@ -45,7 +45,7 @@
+ DATADIR=	$(ROOTDIR)/data
+ MSGSDIR=	$(ROOTDIR)/msgs
+ HELPDIR=	$(ROOTDIR)/help
+-EXAMPLESDIR=	$(ETCDIR)/samples
++EXAMPLESDIR=	${ROOTDIR}/share/examples/nocol
+ 
+ ##
+ # NOCOL specific definitions:
