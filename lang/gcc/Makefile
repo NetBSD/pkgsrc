@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2002/01/03 20:40:39 tron Exp $
+# $NetBSD: Makefile,v 1.32 2002/01/03 21:39:54 tron Exp $
 
+# Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
