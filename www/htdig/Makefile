@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/05/26 20:40:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/15 17:54:50 jlam Exp $
 
 DISTNAME=	htdig-3.1.6
 CATEGORIES=	www databases
@@ -18,6 +18,7 @@ COMMENT=	WWW indexing and searching system
 USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	YES
+USE_DB185=	yes
 BDB_ACCEPTED=	db2
 
 GNU_CONFIGURE=	yes
@@ -28,8 +29,7 @@ CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-image-dir=${PREFIX}/share/examples/htdig \
 		--with-search-dir=${PREFIX}/share/examples/htdig
 CXXFLAGS+=	-Wno-deprecated
-CPPFLAGS+=	${BUILDLINK_CPPFLAGS.db} ${CXXFLAGS}
-LDFLAGS+=	${BUILDLINK_LDFLAGS.db}
+CPPFLAGS+=	${CXXFLAGS}
 
 INSTALL_EXTRA_TMPL=     ${PKGDIR}/INSTALL
 PKG_SYSCONFSUBDIR=	htdig

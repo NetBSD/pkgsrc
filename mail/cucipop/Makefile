@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/15 15:34:16 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/15 17:54:49 jlam Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -35,7 +35,7 @@ PKG_SUPPORTED_OPTIONS=	db
 .if !empty(PKG_OPTIONS:Mdb)
 BDB_ACCEPTED=	db2
 CFLAGS+=	-DUSE_DB
-MAKE_ENV+=	LIBS=${BUILDLINK_LIBS.${BDB_TYPE}}
+MAKE_ENV+=	LIBS=${BDB_LIBS}
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
 

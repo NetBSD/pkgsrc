@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/10/03 00:13:00 tv Exp $
+# $NetBSD: Makefile,v 1.50 2004/11/15 17:54:49 jlam Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	3
@@ -14,7 +14,6 @@ BUILD_USES_MSGFMT=	yes
 CONFLICTS+=		rpm2cpio<1.0nb1
 
 USE_BUILDLINK3=		yes
-USE_DB185=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
@@ -27,8 +26,6 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
 
 # The rpm databases are kept under ${RPM_DB_PREFIX}/lib/rpm.
 CONFIGURE_ENV+=		varprefix="${RPM_DB_PREFIX}"
-
-CFLAGS+=		${BUILDLINK_CPPFLAGS.db}
 
 RPMDIR=			${RPM_DB_PREFIX}/lib/rpm
 FILES_SUBST+=		RPMDIR=${RPMDIR}

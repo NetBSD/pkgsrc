@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2004/11/15 15:07:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2004/11/15 17:54:49 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB4_BUILDLINK3_MK:=	${DB4_BUILDLINK3_MK}+
@@ -17,19 +17,17 @@ BUILDLINK_DEPENDS.db4+=		db4>=4.2.52
 BUILDLINK_RECOMMENDED.db4+=	db4>=4.2.52nb6
 BUILDLINK_PKGSRCDIR.db4?=	../../databases/db4
 BUILDLINK_INCDIRS.db4?=		include/db4
-BUILDLINK_LIBDIRS.db4?=		lib
+BUILDLINK_LDADD.db4=		-ldb4
 BUILDLINK_TRANSFORM+=		l:db-4:db4
-USE_DB185?=			yes
-.  if !empty(USE_DB185:M[yY][eE][sS])
+
+.  if defined(USE_DB185) && !empty(USE_DB185:M[yY][eE][sS])
 #
 # Older db4 packages didn't enable the db-1.85 compatibility API.
 #
 BUILDLINK_DEPENDS.db4+=		db4>=4.2.52nb1
+BUILDLINK_LIBS.db4=		${BUILDLINK_LDADD.db4}
 BUILDLINK_TRANSFORM+=		l:db:db4
-BUILDLINK_CPPFLAGS.db4=		-I${BUILDLINK_PREFIX.db4}/${BUILDLINK_INCDIRS.db4}
 .  endif
-BUILDLINK_LDFLAGS.db4=		-L${BUILDLINK_PREFIX.db4}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib
-BUILDLINK_LIBS.db4=		-ldb4
 .endif	# DB4_BUILDLINK3_MK
 
 .include "../../mk/pthread.buildlink3.mk"

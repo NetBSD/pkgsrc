@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:12:53 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/11/15 17:54:49 jlam Exp $
 
 DISTNAME=	maildrop-1.3.9
 PKGREVISION=	2
@@ -12,6 +12,7 @@ DEPENDS+=	courier-maildir>=0.45.6:../../mail/courier-maildir
 
 USE_BUILDLINK3=	yes
 USE_DB185=	yes
+BDB_ACCEPTED=	db2
 USE_LANGUAGES=	c c++
 
 .include "../../mail/courier-auth/Makefile.common"
@@ -29,6 +30,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/maildroptips.txt ${DOCDIR}
 
-.include "../../databases/db/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

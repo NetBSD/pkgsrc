@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/09/05 10:22:12 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/15 17:54:50 jlam Exp $
 #
 
 DISTNAME=		pam_dbm-0.2
@@ -13,10 +13,7 @@ COMMENT=		PAM module for DBM authentication
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-BDB_ACCEPTED=		native
-
-LIBS+=			${BUILDLINK_LIBS.bdb}
+BDB_ACCEPTED=		db1
 
 .include "../../security/PAM/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
