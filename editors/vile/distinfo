@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/11/27 15:04:04 agc Exp $
+$NetBSD: distinfo,v 1.5 2003/08/08 13:31:06 agc Exp $
 
-SHA1 (vile-9.3.tgz) = 581efa183badd5c0abe68e118953229e2bb8403c
-Size (vile-9.3.tgz) = 1474140 bytes
-SHA1 (patch-aa) = a43641ec017b96c6d5999c5ad768e08f622b77e1
+SHA1 (vile-9.4.tgz) = 5b7f58a16799e8e021ffddb4e8e237023fab696b
+Size (vile-9.4.tgz) = 1549606 bytes
+SHA1 (patch-aa) = 4b008d7420626a30c743839a750338dd688f7208
 SHA1 (patch-ab) = 6ec9232a2b42e95f5a2b5c724deb3323d0a63cf3
-SHA1 (patch-ac) = f067b4dcfa24104218e21e65a1055a0d7207a7cc
