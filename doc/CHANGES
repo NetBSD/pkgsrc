@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4366 2004/01/06 00:16:38 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4367 2004/01/06 00:32:13 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ezm3-1.1 [xtraeme 2003-01-06]
 	Moved cvsup-16.1h to cvsup-bin-16.1h [xtraeme 2003-01-06]
 	Moved cvsup-gui-16.1h to cvsup-gui-bin-16.1h [xtraeme 2003-01-06]
+	Added p5-SOAP-Lite-0.55 [grant 2004-01-06]
