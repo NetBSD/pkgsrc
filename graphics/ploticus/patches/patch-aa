@@ -1,57 +1,81 @@
-$NetBSD: patch-aa,v 1.3 2000/10/08 18:27:10 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 2002/09/20 11:41:16 rh Exp $
 
---- Makefile.orig	Thu Sep 28 16:46:34 2000
+--- Makefile.orig	Fri Jun 14 23:58:53 2002
 +++ Makefile
-@@ -24,7 +24,7 @@
- ## and porting.
+@@ -10,7 +10,7 @@
+ ######## Covered by GPL; see the file ./Copyright for details. 
  
- 
+ # defaults..
 -CC = gcc
 +#CC = gcc
- ADDLIBS =
- SLEEPLIB =
+ PLATFORM = UNIX
+ RMCOM = rm -f
+ XOBJ = x11.o sleep.o interact.o
+@@ -23,15 +23,16 @@ PLPNG = plpng 
+ ######## Choose one of the following.   All others should be commented out.
  
-@@ -32,15 +32,15 @@
- ######## and comment out the others:
+ #### For Solaris 2.x uncomment the following..
+-XLIBS = -L/usr/openwin/lib -lX11
+-XINCLUDEDIR = -I/usr/openwin/include
++#XLIBS = -L/usr/openwin/lib -lX11
++#XINCLUDEDIR = -I/usr/openwin/include
  
- ## For Solaris 2.x
--PLATFORM = SOLARIS2			
--XLIBDIR = /usr/openwin/lib
--XINCLUDEDIR = /usr/openwin/include
--SLEEPLIB = -lposix4   # for nanosleep() only 
-+#PLATFORM = SOLARIS2			
-+#XLIBDIR = /usr/openwin/lib
-+#XINCLUDEDIR = /usr/openwin/include
-+#SLEEPLIB = -lposix4   # for nanosleep() only 
+ #### For Linux and FreeBSD uncomment the following..
+-# XLIBS = -L/usr/X11R6/lib -lX11
+-# XINCLUDEDIR = -I/usr/X11R6/include
++XLIBS = -L${X11BASE} -lX11
++XINCLUDEDIR = -I${X11BASE}/include
+ #### For FreeBSD uncomment the following and find GD16H or GD18H below and set to -I/usr/local/include
+ # ADDLIBS = -L/usr/local/lib
  
- ## For Linux, FreeBSD
--# PLATFORM = BSD
--# XLIBDIR = /usr/X11R6/lib
--# XINCLUDEDIR = /usr/X11R6/include
-+PLATFORM = BSD
-+XLIBDIR = ${X11BASE}/lib
-+XINCLUDEDIR = ${X11BASE}/include
++
+ #### For Cygwin uncomment the following..
+ # PLATFORM = WIN32
+ # XLIBS = -L/usr/X11R6/lib -lX11
+@@ -78,7 +79,7 @@ XINCLUDEDIR = -I/usr/openwin/include
+ ######## Choose ONE of the following.  All others should be commented out.
  
- ## For AIX 3.2.5, HP-UX 10.20
- # (note for HP-UX it was necessary to do: ln gd_io.h gd16
-@@ -126,9 +126,9 @@
+ #### For pseudo-GIF uncomment the following..  (no libs required)
+-ploticus: pl 
++# ploticus: pl 
+ 
+ #### For PNG uncomment the following.. (you must have libpng and zlib)
+ # ploticus: plpng 
+@@ -103,11 +104,11 @@ ploticus: pl 
+ #### For JPEG, WBMP, and PNG & FreeType2 using your copy of GD 1.84+ uncomment the following..
+ #### (you must have gd 1.84+, libpng, zlib, libjpeg, libfreetype)
+ #### Before using set environment var GDFONTPATH to directory containing .ttf files
+-# ploticus: plgd18 
+-# GD18LIBS = -lgd -lpng -lz -ljpeg -lfreetype
+-# GD18H = 
+-# GDFREETYPE = -DGDFREETYPE
+-# ZFLAG = -DWZ
++ploticus: plgd18 
++GD18LIBS = -lgd -lpng -lz -ljpeg -lfreetype
++GD18H = 
++GDFREETYPE = -DGDFREETYPE
++ZFLAG = -DWZ
+ 
+ #### To disable GD image support (no GIF, PNG, JPEG, etc) uncomment the following..
+ # ploticus: plnogd 
+@@ -125,7 +126,7 @@ ploticus: pl 
+ #### To set a hard-coded directory for prefabs files, uncomment & edit the following.. 
+ #### If done, users won't be required to have PLOTICUS_PREFABS environment variable defined.
+ #### This option not available for win32
+-# PREFABS_DIR = "/usr/lib/ploticus"
++PREFABS_DIR = "${PREFIX}/share/ploticus"
+ 
+ #### For LOCALE support (non-roman alphabets & collation), uncomment the following..
+ # LOCALEOBJ = localef.o
+@@ -156,9 +157,9 @@ GD16 = grgd16.o devstuff16.o gd16.o gd_i
+ GD = gdfontg.o gdfontl.o gdfontmb.o gdfonts.o gdfontt.o
  
  
+-LIBS = $(XLIBS) -lm $(ADDLIBS) 
++LIBS = ${LDFLAGS} $(XLIBS) -lm $(ADDLIBS) 
  
--LIBS = $(XLIBS) -lm $(ADDLIBS)
-+LIBS = ${LDFLAGS} ${XLIBS} -lm $(ADDLIBS)
+-CFLAGS = -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(FLAGS) $(LOCALE_FLAG) \
++CFLAGS+= -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(FLAGS) $(LOCALE_FLAG) \
+   $(NOGDFLAG) $(NOXFLAG) $(XINCLUDEDIR) $(NORLIMFLAG) -DPREFABS_DIR=\"$(PREFABS_DIR)\"
  
--CFLAGS = -D$(PLATFORM) -DPLOTICUS -DDIST $(XCFLAGS) $(FLAGS) $(LOCALE_FLAG)
-+CFLAGS+= -D${PLATFORM} -DPLOTICUS -DDIST ${XCFLAGS} ${FLAGS} ${LOCALE_FLAG}
- 
- OBJ = 	custom.o execplfile.o lib.o areadef.o page.o axis.o getdata.o parsedata.o \
- 	drawcommands.o annotate.o tabulate.o lineplot.o bars.o bevelrect.o units.o line.o \
-@@ -168,7 +168,7 @@
- gd16files: 
- 	$(CC) -c grgd.c -DGDPNG -I./ -I./gd16 -o grgd16.o
- 	$(CC) -c devstuff.c -DGDPNG -o devstuff16.o
--	$(CC) -c -I./gd16 -I./ $(GD16H) gd16.c gd_io.c gd_io_dp.c gd_io_file.c gd_png.c
-+	$(CC) -c -I./gd16 -I./ -I${PREFIX}/include $(GD16H) gd16.c gd_io.c gd_io_dp.c gd_io_file.c gd_png.c
- 
- install:
- 	mv pl pltab plpng pltabpng ../bin
+ OBJ = 	proc_annotate.o proc_areadef.o proc_axis.o proc_bars.o proc_rect.o proc_breakaxis.o \
