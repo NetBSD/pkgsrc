@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:27 tsarna Exp $
+# $NetBSD: Makefile,v 1.15 1998/10/04 02:35:38 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -12,27 +12,16 @@ HOMEPAGE=	http://www.groupsys.com/topinfo/
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
+CONFIGURE_ARGS+=	netbsd13
+
+# UVM definition will be pulled in from pkgsrc's mk/bsd.own.mk for now
 
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" \
 		COPY="${COPY}" STRIPFLAG="${STRIPFLAG}" \
 		UVM=${UVM}
 
-OPSYS!= uname -s
-.if (${OPSYS} == "FreeBSD")
-OSVERSION!=	sysctl -n kern.osreldate
-.if ${OSVERSION} >= 221002
-BROKEN=		"top is included in FreeBSD version 221002 or later"
-.endif
-CONFIGURE_ARGS+=		freebsd2
-.elif (${OPSYS} == "NetBSD")
-CONFIGURE_ARGS+=		netbsd13
-.endif
-
 pre-configure:
 	${CP} ${FILESDIR}/defaults ${WRKSRC}/.defaults
-.if (${OPSYS} == "FreeBSD")
-	${CP} ${FILESDIR}/m_freebsd2.* ${WRKSRC}/machine
-.endif
 	chmod a-x ${WRKSRC}/install
 
 .include "../../mk/bsd.pkg.mk"
