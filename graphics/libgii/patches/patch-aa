@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2000/06/27 01:55:16 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2002/11/25 20:16:27 jlam Exp $
 
---- configure.BAK	Tue Jun 27 03:49:28 2000
-+++ configure	Tue Jun 27 03:50:08 2000
-@@ -3392,7 +3392,7 @@
- 
-   # It would also be nice to do this for all -L options, not just this one.
-   if test -n "$x_libraries"; then
--    X_LIBS="$X_LIBS -L$x_libraries"
-+    X_LIBS="$X_LIBS -Wl,-R$x_libraries -L$x_libraries"
-     # For Solaris; some versions of Sun CC require a space after -R and
-     # others require no space.  Words are not sufficient . . . .
-     case "`(uname -sr) 2>/dev/null`" in
+--- doc/man/Makefile.in.orig	Sun May 16 13:51:42 1999
++++ doc/man/Makefile.in
+@@ -129,7 +129,7 @@ install-man3:
+ 	for i in $$list; do \
+ 	  if test -f $(srcdir)/$$i; then file=$(srcdir)/$$i; \
+ 	  else file=$$i; fi; \
+-	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//;s/gii$$//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man3dir)/$$inst"; \
+@@ -144,7 +144,7 @@ uninstall-man3:
+ 	  esac; \
+ 	done; \
+ 	for i in $$list; do \
+-	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//;s/gii$$//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " rm -f $(DESTDIR)$(man3dir)/$$inst"; \
