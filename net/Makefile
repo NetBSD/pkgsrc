@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.30 1998/06/09 16:42:45 agc Exp $
+# $NetBSD: Makefile,v 1.31 1998/06/11 16:08:59 agc Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
+
+.include "../mk/bsd.prefs.mk"
 
     SUBDIR += archie
     SUBDIR += arpwatch
@@ -63,7 +65,11 @@
     SUBDIR += sirc
     SUBDIR += sniffit
 #    SUBDIR += slirp
+.ifdef USE_SOCKS
+    SUBDIR += socks${USE_SOCKS}
+.else
     SUBDIR += socks5
+.endif
 #    SUBDIR += strobe
 #    SUBDIR += sup
 #    SUBDIR += tac_plus
