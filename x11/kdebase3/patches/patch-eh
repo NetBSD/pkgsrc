@@ -1,0 +1,22 @@
+$NetBSD: patch-eh,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
+
+--- kwin/clients/web/Makefile.in.orig	Mon May 13 23:57:57 2002
++++ kwin/clients/web/Makefile.in
+@@ -312,7 +312,7 @@
+ 	WebButtonSticky.h
+ 
+ 
+-kwin_web_la_LIBADD = ../../kwin.la
++kwin_web_la_LIBADD = ../../libkwin.la
+ kwin_web_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
+ #>- METASOURCES = AUTO
+ 
+@@ -325,7 +325,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+-kwin_web_la_DEPENDENCIES = ../../kwin.la
++kwin_web_la_DEPENDENCIES = ../../libkwin.la
+ am_kwin_web_la_OBJECTS = Web.lo WebButton.lo WebButtonClose.lo \
+ 	WebButtonHelp.lo WebButtonIconify.lo WebButtonLower.lo \
+ 	WebButtonMaximize.lo WebButtonSticky.lo

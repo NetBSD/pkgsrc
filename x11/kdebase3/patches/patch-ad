@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/05/31 13:18:40 skrll Exp $
+
+--- kate/app/dummy_main.cpp.orig	Thu May 30 09:59:32 2002
++++ kate/app/dummy_main.cpp
+@@ -0,0 +1,6 @@
++extern "C" { int kdemain(int, char *[]); }
++
++int main(int c, char *v[])
++{
++  return kdemain(c,v);
++}

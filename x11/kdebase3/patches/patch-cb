@@ -1,0 +1,15 @@
+$NetBSD: patch-cb,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
+
+--- klipper/main.cpp.orig	Wed Feb 20 21:50:04 2002
++++ klipper/main.cpp
+@@ -23,7 +23,9 @@
+ static const char *description =
+ 	I18N_NOOP("KDE Cut & Paste history utility");
+ 
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int argc, char *argv[]);
++
++int kdemain(int argc, char *argv[])
+ {
+   KAboutData aboutData("klipper", I18N_NOOP("Klipper"),
+     klipper_version, description, KAboutData::License_Artistic,

@@ -1,0 +1,22 @@
+$NetBSD: patch-ef,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
+
+--- kwin/clients/system/Makefile.in.orig	Mon May 13 23:57:57 2002
++++ kwin/clients/system/Makefile.in
+@@ -292,7 +292,7 @@
+ kde_module_LTLIBRARIES = kwin_system.la
+ 
+ kwin_system_la_SOURCES = systemclient.cpp
+-kwin_system_la_LIBADD = ../../kwin.la
++kwin_system_la_LIBADD = ../../libkwin.la
+ kwin_system_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
+ 
+ #>- METASOURCES = AUTO
+@@ -308,7 +308,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+-kwin_system_la_DEPENDENCIES = ../../kwin.la
++kwin_system_la_DEPENDENCIES = ../../libkwin.la
+ am_kwin_system_la_OBJECTS = systemclient.lo
+ #>- kwin_system_la_OBJECTS = $(am_kwin_system_la_OBJECTS)
+ #>+ 5
