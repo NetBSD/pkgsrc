@@ -1,6 +1,6 @@
-#!@PREFIX@/bin/perl
+#!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.8 2002/11/04 23:07:37 wiz Exp $
+# $NetBSD: mkpatches.pl,v 1.9 2004/01/10 05:40:40 jlam Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
