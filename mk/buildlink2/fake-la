@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.12 2004/07/03 22:00:03 grant Exp $
+# $NetBSD: fake-la,v 1.13 2004/07/06 20:47:15 heinz Exp $
 
 AR="@AR@"
 AWK="@AWK@"
@@ -100,7 +100,7 @@ old_library=`${SED} -n -e"/^old_library='/{ s/^old_library='//; s/'$//; p; };" "
 
 for file in $dlname $library_names $old_library
 do
-	if ! [ -e $realdir/$file ]
+	if ${TEST} ! -r $realdir/$file
 	then
 		removal_pattern="$removal_pattern -e s,$file\([^.0-9]\),\1,g"
 	fi
