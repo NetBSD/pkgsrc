@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2001/06/15 16:53:27 drochner Exp $
+
+--- src/common/unzip.h.orig	Thu Jun 14 23:50:13 2001
++++ src/common/unzip.h	Fri Jun 15 00:07:59 2001
+@@ -56,6 +56,11 @@
+ #include "zlib.h"
+ #endif
+ 
++#ifndef OF
++#include <ctype.h>
++#define OF(x) __P(x)
++#endif
++
+ #if defined(STRICTUNZIP) || defined(STRICTZIPUNZIP)
+ /* like the STRICT of WIN32, we define a pointer that cannot be converted
+     from (void*) without cast */

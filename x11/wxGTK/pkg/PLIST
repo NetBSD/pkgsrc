@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:11:04 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/06/15 16:53:27 drochner Exp $
 bin/wxgtk-config
 bin/wx-config
 lib/libwx_gtk.a
@@ -332,12 +332,14 @@ share/doc/wx/gtk/SYMBOLS
 share/locale/cs/LC_MESSAGES/wxstd.mo
 share/locale/da/LC_MESSAGES/wxstd.mo
 share/locale/de/LC_MESSAGES/wxstd.mo
+share/locale/es/LC_MESSAGES/wxstd.mo
 share/locale/fi/LC_MESSAGES/wxstd.mo
 share/locale/fr/LC_MESSAGES/wxstd.mo
 share/locale/it/LC_MESSAGES/wxstd.mo
 share/locale/nl/LC_MESSAGES/wxstd.mo
 share/locale/ru/LC_MESSAGES/wxstd.mo
 share/locale/sv/LC_MESSAGES/wxstd.mo
+share/locale/zh/LC_MESSAGES/wxstd.mo
 share/wx/afm/Cour.afm
 share/wx/afm/CourBo.afm
 share/wx/afm/CourBoO.afm
