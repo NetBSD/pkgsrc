@@ -11,4 +11,4 @@ The differences of this version compared to the original one are:
 - Speaker beeps like windows-stumbler. (ear-wardriving)
 - FreeBSD port finished.
 
-This package is built with console support only.
+This package is built with GTK2 and console support only.
