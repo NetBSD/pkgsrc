@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.587 2003/05/25 10:36:41 epg Exp $
+$NetBSD: TODO,v 1.588 2003/05/25 16:46:03 grant Exp $
 
 Suggested new packages
 ======================
@@ -124,8 +124,6 @@ Suggested package updates
 	o gabber-0.8.8
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
-	o gcc-3.2.3 [pkg/21316]
-	o gcc-3.3
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gd-2.0.12
