@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/02/12 13:49:15 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/02/19 16:52:05 jmmv Exp $
 #
 
 .if !defined(GTK_DOC_BUILDLINK2_MK)
 GTK_DOC_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gtk-doc
-BUILDLINK_DEPENDS.gtk-doc?=	gtk-doc>=1.1
+BUILDLINK_DEPENDS.gtk-doc?=	gtk-doc>=1.2
 BUILDLINK_PKGSRCDIR.gtk-doc?=	../../textproc/gtk-doc
 BUILDLINK_DEPMETHOD.gtk-doc?=	build
 
