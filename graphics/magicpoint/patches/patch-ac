@@ -1,10 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2001/09/14 05:41:06 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2003/09/11 16:09:41 jmmv Exp $
 
---- Imakefile.in.orig	Sat Feb  3 13:46:49 2001
-+++ Imakefile.in	Fri Sep 14 01:35:12 2001
-@@ -23,7 +23,7 @@
+--- Imakefile.in.orig	2001-02-03 19:46:49.000000000 +0100
++++ Imakefile.in
+@@ -22,8 +22,9 @@ LEX=	@LEX@
+ OPTFLAGS=	@OPTFLAGS@
  DEFS=	@DEFS@ -DMGPLIBDIR=\"$(LIBDIR)/mgp\"
  #DEFS+=	-DGLYPHEDGE
++DEPENDFLAGS=	$(DEFS) $(OPTFLAGS)
  
 -SYS_LIBRARIES=	-L$(srcdir)/image -lmgpimage @LIBS@
 +SYS_LIBRARIES=	-L$(srcdir)/image -lmgpimage @LDFLAGS@ @LIBS@
