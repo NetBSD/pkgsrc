@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.65 2002/12/15 19:41:25 cjep Exp $
+$NetBSD: TODO,v 1.66 2002/12/15 22:07:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -90,7 +90,6 @@ Suggested package updates
 	o crossfire-1.4.0
 	o ctwm-3.6
 	o cups-1.1.17
-	o cyrus-sasl-2.1.10 [pkg/19335]
 	o dante-1.1.13
 	o db4-4.1.24
 	o dctc-0.83.9
@@ -150,6 +149,7 @@ Suggested package updates
 	o jpilot-0.99.2 [dillo]
 	o kde-3.0.5 [skrll]
 	o kdevelop-2.1.4 [3.0alpha1]
+	o lame-3.93.1 [pkg/19388]
 	o lbreakout2-2.3.5
 	o lcms-1.0.9
 	o lftp-2.6.2
@@ -170,6 +170,7 @@ Suggested package updates
 	o mcrypt-2.6.3
 	o memtest86-3.0
 	o mgp-1.09a
+	o mhonarc-2.5.13 [pkg/19366]
 	o mixer.app-1.8.0
 	o mkfontscale-20020618 (needs freetype-2.1.1)
 	o mplayer-0.90rc1
@@ -181,7 +182,6 @@ Suggested package updates
 	o ncurses-5.3
 	o netpbm-10.8
 	o netscape-7.01
-	o nxtvepg-2.4.1
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
@@ -230,7 +230,6 @@ Suggested package updates
 	o ttf2pt1-3.4.3
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
-	o w3m-0.3.2.2
 	o wwwoffle-2.7g
 	o xalan-c-1.4
 	o xbae-4.50.0
