@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.192 2003/01/16 15:30:39 wiz Exp $
+$NetBSD: TODO,v 1.193 2003/01/17 02:18:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -225,7 +225,6 @@ Suggested package updates
 	o scrollkeeper-0.3.11
 	o sendfile-20010424
 	o sendmail-8.12.7
-	o siag-3.5.3
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
