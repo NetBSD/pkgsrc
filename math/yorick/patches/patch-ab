@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/10/02 10:58:52 jlam Exp $
+
+--- Yorick/sysdep.c.orig	Wed Dec 18 12:28:30 1996
++++ Yorick/sysdep.c
+@@ -127,7 +127,7 @@
+   fp_trap(FP_TRAP_FASTMODE);
+   fp_enable(TRP_INVALID | TRP_DIV_BY_ZERO | TRP_OVERFLOW);
+ #endif
+-#ifdef __alpha
++#if defined(__alpha) && !defined(__NetBSD__)
+   /* References:   exception_intro, ieee man pages */
+ #include <machine/fpu.h>
+   ieee_set_fp_control(IEEE_TRAP_ENABLE_INV | IEEE_TRAP_ENABLE_DZE |
