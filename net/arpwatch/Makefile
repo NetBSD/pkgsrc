@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/08/05 17:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/10 13:13:05 wiz Exp $
 #
 
 DISTNAME=	arpwatch-2.1a11
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 MAINTAINER=	bouyer@netbsd.org
 COMMENT=	monitor ARP activity on a network, maintaining a database
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 
 pre-patch:
@@ -23,5 +24,5 @@ post-install:
 	${TOUCH} /var/db/arpwatch/arp.dat
 	${INSTALL_DATA} ${WRKSRC}/ethercodes.dat ${PREFIX}/etc
 
-.include "../../net/libpcap/buildlink.mk"
+.include "../../net/libpcap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
