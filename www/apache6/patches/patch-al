@@ -1,9 +1,9 @@
-$NetBSD: patch-al,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+$NetBSD: patch-al,v 1.2 2000/04/26 03:30:28 hubertf Exp $
 
---- src/os/unix/os.c.orig	Fri Dec  4 18:53:48 1998
-+++ src/os/unix/os.c	Fri Dec  4 18:54:00 1998
-@@ -119,7 +119,7 @@
- #elif defined(RHAPSODY)
+--- src/os/unix/os.c.orig	Sat Jan 15 08:01:09 2000
++++ src/os/unix/os.c	Tue Apr 25 21:24:31 2000
+@@ -129,7 +129,7 @@
+ #elif defined(HAVE_DYLD)
      NSUnLinkModule(handle,FALSE);
  
 -#else
