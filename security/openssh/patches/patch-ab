@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.10 2002/05/19 07:43:25 itojun Exp $
+$NetBSD: patch-ab,v 1.11 2002/06/25 02:13:13 itojun Exp $
 
---- configure.ac.orig	Mon May 13 14:14:08 2002
-+++ configure.ac	Sun May 19 16:35:27 2002
-@@ -182,8 +182,6 @@
+use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
+
+--- configure.ac.orig	Fri Jun 21 09:01:19 2002
++++ configure.ac	Tue Jun 25 10:54:10 2002
+@@ -183,8 +183,6 @@
  	CFLAGS="$CFLAGS"
  	;;
  *-*-solaris*)
@@ -11,7 +13,7 @@ $NetBSD: patch-ab,v 1.10 2002/05/19 07:43:25 itojun Exp $
  	need_dash_r=1
  	AC_DEFINE(PAM_SUN_CODEBASE)
  	AC_DEFINE(LOGIN_NEEDS_UTMPX)
-@@ -311,6 +309,9 @@
+@@ -310,6 +308,9 @@
  	;;
  esac
  
@@ -21,7 +23,7 @@ $NetBSD: patch-ab,v 1.10 2002/05/19 07:43:25 itojun Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -544,6 +545,10 @@
+@@ -543,6 +544,10 @@
  			AC_MSG_CHECKING(for libwrap)
  			AC_TRY_LINK(
  				[
@@ -32,7 +34,16 @@ $NetBSD: patch-ab,v 1.10 2002/05/19 07:43:25 itojun Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				],
-@@ -2383,7 +2388,7 @@
+@@ -725,7 +730,7 @@
+ 		fi
+ 	]
+ )
+-LIBS="$LIBS -lcrypto"
++LIBS="$LIBS -lcrypt -lcrypto"
+ AC_TRY_LINK_FUNC(RAND_add, AC_DEFINE(HAVE_OPENSSL),
+ 	[
+ 		dnl Check default openssl install dir
+@@ -2372,7 +2377,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
