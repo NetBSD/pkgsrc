@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: REQ,v 1.1 2000/01/27 17:13:02 hubertf Exp $
+# $NetBSD: REQ,v 1.2 2000/07/25 07:29:44 jlam Exp $
 #
 
 PKG=$1
@@ -11,11 +11,18 @@ then
         exit 0
 fi
 
-if ! dd if=/dev/urandom of=/dev/null bs=1 count=1 2>/dev/null >/dev/null ; 
+if ! dd if=/dev/urandom of=/dev/null bs=1 count=1 2>/dev/null >/dev/null
 then
-	echo ""
-	echo "Need working /dev/urandom for this package to work!"
-	echo ""
+	cat << EOF
+===========================================================================
+You need a working /dev/urandom for ${PKG} to work.
+
+Please make sure you have a kernel compiled from a config file
+containing the line:
+
+	pseudo-device	rnd
+===========================================================================
+EOF
 	exit 1
 fi
 
