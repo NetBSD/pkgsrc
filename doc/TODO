@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1694 2004/05/02 19:55:30 xtraeme Exp $
+$NetBSD: TODO,v 1.1695 2004/05/02 20:09:31 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -204,7 +204,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
-	o glib2-2.4.1
 	o global-4.6
 	o glpk-4.3
 	o gnomeicu-0.99.5
@@ -218,7 +217,6 @@ Suggested package updates
 	o grepmail-5.23
 	o gsasl-0.1.0
 	o gtetrinet-0.7.4
-	o gtk2-2.4.1
 	o gtkglext-1.0.6
 	o gtksee-0.5.5.1
 	o gtranslator-1.0.1
