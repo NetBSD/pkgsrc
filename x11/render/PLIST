@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/19 16:33:57 wiz Exp $
+include/X11/extensions/render.h
+include/X11/extensions/renderproto.h
+lib/pkgconfig/render.pc
+share/doc/render/library
+share/doc/render/protocol
+@dirrm share/doc/render
+@dirrm include/X11/extensions
