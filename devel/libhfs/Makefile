@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/06/01 11:23:22 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/14 17:38:56 wiz Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS=-I./
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 
 ALL_TARGET=	all_lib
 
