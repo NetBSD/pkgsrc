@@ -1,12 +1,12 @@
-$NetBSD: patch-aj,v 1.1.1.1 2002/03/24 20:34:37 dmcmahill Exp $
+$NetBSD: patch-aj,v 1.2 2002/03/30 20:01:39 dmcmahill Exp $
 
---- demos/gtk-demo/Makefile.am.orig	Tue Mar  5 16:03:51 2002
-+++ demos/gtk-demo/Makefile.am
-@@ -44,6 +44,7 @@
- 	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GTK_API_VERSION).la	\
- 	$(top_builddir)/gdk/@gdktargetlib@        			\
- 	$(top_builddir)/gtk/@gtktargetlib@ 				\
+--- gdk/Makefile.in.orig	Fri Mar 29 18:51:15 2002
++++ gdk/Makefile.in
+@@ -212,6 +212,7 @@
+ # since automake doesn't support conditionalized libsomething_la_LDFLAGS
+ # we use the general approach here
+ LDFLAGS = @STRIP_BEGIN@ 						\
 +	@LDFLAGS@							\
- @STRIP_END@
- 
- bin_PROGRAMS = gtk-demo
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 		\
+ 	-export-dynamic 						\
+ 	-rpath $(libdir) 						\
