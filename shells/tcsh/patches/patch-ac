@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.5 2001/06/07 13:28:05 wiz Exp $
+
+--- config.sub.orig	Sun Nov 12 00:03:33 2000
++++ config.sub
+@@ -156,8 +156,8 @@
+ 		| alpha | alphaev5 | alphaev56 | alphaev6 \
+ 		| we32k | ns16k | clipper \
+ 		| i370 | sh | powerpc | powerpcle | 1750a | dsp16xx | pdp11 \
+-		| mips64 | mipsel | mips64el | mips64orion | mips64orionel \
+-		| mipstx39 | mipstx39el \
++		| mips64 | mipseb | mipsel | mips64el | mips64orion \
++		| mips64orionel | mipstx39 | mipstx39el \
+ 		| sparc | sparclet | sparclite | sparc64 | v850)
+ 		basic_machine=$basic_machine-unknown
+ 		;;
+@@ -183,7 +183,7 @@
+ 	      | we32k-* | cydra-* \
+ 	      | ns16k-* | pn-* | np1-* | xps100-* | clipper-* | orion-* \
+ 	      | sparclite-* | pdp11-* | sh-* | powerpc-* | powerpcle-* \
+-	      | sparc64-* | mips64-* | mipsel-* \
++	      | sparc64-* | mips64-* | mipseb-* | mipsel-* \
+ 	      | mips64el-* | mips64orion-* | mips64orionel-*  \
+ 	      | mipstx39-* | mipstx39el-* \
+ 	      | f301-*)
