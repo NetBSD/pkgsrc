@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/10/25 14:14:24 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/03/29 05:05:46 jlam Exp $
 
 .if !defined(PY_MXDATETIME_BUILDLINK2_MK)
 PY_MXDATETIME_BUILDLINK2_MK=	# defined
@@ -6,6 +6,7 @@ PY_MXDATETIME_BUILDLINK2_MK=	# defined
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=			pymxdatetime
+BUILDLINK_PKGBASE.pymxdatetime?=	${PYPKGPREFIX}-mxDateTime
 BUILDLINK_DEPENDS.pymxdatetime?=	${PYPKGPREFIX}-mxDateTime-[0-9]*
 BUILDLINK_PKGSRCDIR.pymxdatetime?=	../../time/py-mxDateTime
 

@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:12 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/29 05:05:32 jlam Exp $
 
 .if !defined(AUDIOFILE_BUILDLINK2_MK)
 AUDIOFILE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		audiofile
+BUILDLINK_PKGBASE.audiofile?=	libaudiofile
 BUILDLINK_DEPENDS.audiofile?=	libaudiofile>=0.2.1
 BUILDLINK_PKGSRCDIR.audiofile?=	../../audio/libaudiofile
 

@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/02/12 02:35:07 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/03/29 05:05:45 jlam Exp $
 
 .if !defined(PAM_BUILDLINK2_MK)
 PAM_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILDLINK_PKGBASE.pam?=		PAM
 BUILDLINK_DEPENDS.pam?=		PAM>=0.75
 BUILDLINK_PKGSRCDIR.pam?=	../../security/PAM
 
