@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2004/07/28 10:44:56 recht Exp $
+# $NetBSD: Makefile,v 1.34 2004/08/17 11:18:57 recht Exp $
 
-DISTNAME=	TeXmacs-1.0.4-src
-PKGNAME=	${DISTNAME:S/-src//}
+DISTNAME=	TeXmacs-1.0.4-R2-src
+PKGNAME=	${DISTNAME:S/-R2-src/.0.2/}
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 
@@ -18,8 +18,6 @@ USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PKG_CXXFLAGS=${CXXFLAGS:Q}
-CONFIGURE_ENV+=		PKG_LDFLAGS=${LDFLAGS:Q}
 
 PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
 
