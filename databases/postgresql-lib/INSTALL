@@ -1,14 +1,14 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2004/01/21 08:14:29 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2004/01/21 08:59:32 jlam Exp $
 
 case ${STAGE} in
-POST-INSTALL)
+VIEW-INSTALL)
 	${RM} -f ${PKG_PREFIX}/include/pgsql
 	${LN} -fs postgresql ${PKG_PREFIX}/include/pgsql
 	;;
 
-DEINSTALL)
+VIEW-DEINSTALL)
 	${RM} -f ${PKG_PREFIX}/include/pgsql
 	;;
 esac
