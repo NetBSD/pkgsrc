@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/08/27 02:46:08 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2000/08/30 21:44:27 tron Exp $
 
 DISTNAME=		gnome-core-1.2.1
 CATEGORIES=		x11 gnome
@@ -12,10 +12,11 @@ DEPENDS+=		gdk-pixbuf>=0.7.0:../../graphics/gdk-pixbuf
 DEPENDS+=		libghttp>=1.0.4:../../www/libghttp
 DEPENDS+=		libxml-*:../../textproc/libxml
 
-GNU_CONFIGURE=		# defined
-USE_X11BASE=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_X11BASE=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+USE_PERL5=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LOCALSTATEDIR=		/var/gnome
