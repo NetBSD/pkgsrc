@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/08 17:36:10 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/22 15:52:10 taca Exp $
 
 DISTNAME=	ruby-postgres-0.6.4
 PKGNAME=	${RUBY_PKGNAMEPREFIX}postgresql-0.6.4
@@ -14,9 +14,29 @@ DEPENDS+=	postgresql-lib>=7.1:../../databases/postgresql-lib
 USE_RUBY_EXTCONF= yes
 CONFIGURE_ARGS+=--with-pgsql-include-dir=${PREFIX}/include/pgsql \
 		--with-pgsql-lib-dir=${PREFIX}/lib
+INSTALL_TARGET=	site-install
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/postgres.so ${RUBY_SITEARCHLIBDIR}/postgres.so
+DOC=		README doc/postgres.html
+DOC_JA=		README.jp doc/postgres.jp.html
+EXAMPLE_LIBS=	losample.rb psqlHelp.rb
+EXAMPLE_SCRIPTS=psql.rb test1.rb test2.rb test4.rb
+REPLACE_RUBY=	sample/psql.rb sample/test1.rb sample/test2.rb sample/test4.rb
+
+post-install:
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/postgresql/ja
+.for f in ${DOC}
+	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/postgresql
+.endfor
+.for f in ${DOC_JA}
+	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/postgresql/ja
+.endfor
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/postgresql
+.for f in ${EXAMPLE_LIBS}
+	${INSTALL_DATA} ${WRKSRC}/sample/$f ${RUBY_EXAMPLESDIR}/postgresql
+.endfor
+.for f in ${EXAMPLE_SCRIPTS}
+	${INSTALL_SCRIPT} ${WRKSRC}/sample/$f ${RUBY_EXAMPLESDIR}/postgresql
+.endfor
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
