@@ -1,15 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/02/26 11:27:19 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/02/26 11:36:35 frueauf Exp $
 
---- jftp.c-orig	Sun Feb  7 11:46:11 1999
-+++ jftp.c	Fri Feb 26 12:07:15 1999
-@@ -28,9 +28,9 @@
- /*$Id: patch-aa,v 1.1.1.1 1999/02/26 11:27:19 frueauf Exp $*/
- #include <sys/types.h>
+--- jftp.c.orig	Sun Feb  7 11:46:11 1999
++++ jftp.c	Fri Feb 26 12:29:28 1999
+@@ -30,5 +30,5 @@
  #include <sys/socket.h>
 -#include <sys/errno.h>
  #include <netinet/in.h>
  #include <arpa/inet.h>
 +#include <errno.h>
  #include <setjmp.h>
- #include <signal.h>
- #include <stdio.h>
