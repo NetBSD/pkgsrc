@@ -3,7 +3,7 @@
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.6 1998/03/21 01:55:11 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/11 23:11:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -40,7 +40,8 @@ CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}
 		"--with-qt-includes=${PREFIX}/include/qt"
 CONFIGURE_ENV=	INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+		INSTALL="/usr/bin/install"
 
 WRKSRC=		${WRKDIR}/kdegames
 
