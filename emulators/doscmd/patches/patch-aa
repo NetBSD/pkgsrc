@@ -1,0 +1,11 @@
+--- signal.c.orig	Fri Jul 17 23:00:17 1998
++++ signal.c	Fri Jul 17 23:00:34 1998
+@@ -98,7 +98,7 @@
+ 	if (s >= 0 && s < NSIG) {
+ 		handler[s] = h;
+ 
+-		sa.sa_handler = generichandler;
++		sa.sa_handler = (void (*)())generichandler;
+ 		sa.sa_mask = sigmask(SIGIO) | sigmask(SIGALRM);
+ 		sa.sa_flags = SA_ONSTACK;
+ 		sigaction(s, &sa, NULL);
