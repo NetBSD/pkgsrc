@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.28 2002/08/25 18:38:35 jlam Exp $
+$NetBSD: patch-aa,v 1.29 2002/11/17 11:55:01 grant Exp $
 
---- ltconfig.in.orig	Mon May 21 05:05:06 2001
-+++ ltconfig.in
+--- ltconfig.in.orig	Mon May 21 04:05:06 2001
++++ ltconfig.in	Thu Nov 14 06:37:11 2002
 @@ -1104,7 +1104,7 @@
    version_type=darwin
    need_lib_prefix=no
@@ -11,7 +11,31 @@ $NetBSD: patch-aa,v 1.28 2002/08/25 18:38:35 jlam Exp $
    soname_spec='${libname}${release}${major}.`test .$module = .yes && echo so || echo dylib`'
    shlibpath_overrides_runpath=yes
    shlibpath_var=DYLD_LIBRARY_PATH
-@@ -1198,7 +1198,7 @@
+@@ -1116,16 +1116,17 @@
+ 
+ freebsd*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+-  version_type=freebsd-$objformat
+-  case $version_type in
+-    freebsd-elf*)
+-      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so $libname.so'
++  version_type=sunos
++  case $objformat in
++    elf*)
++      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
++      soname_spec='${libname}${release}.so$major'
+       need_version=no
+       need_lc=no
+       need_lib_prefix=no
+       ;;
+-    freebsd-*)
+-      library_names_spec='${libname}${release}.so$versuffix $libname.so$versuffix'
++    *)
++      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
+       need_version=yes
+       ;;
+   esac
+@@ -1198,7 +1199,7 @@
  
  # This must be Linux ELF.
  linux-gnu*)
@@ -20,7 +44,7 @@ $NetBSD: patch-aa,v 1.28 2002/08/25 18:38:35 jlam Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-@@ -1236,6 +1236,8 @@
+@@ -1236,6 +1237,8 @@
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
@@ -29,7 +53,7 @@ $NetBSD: patch-aa,v 1.28 2002/08/25 18:38:35 jlam Exp $
    ;;
  
  newsos6)
-@@ -1282,7 +1284,7 @@
+@@ -1282,7 +1285,7 @@
    ;;
  
  solaris*)
