@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/07/15 20:39:16 agc Exp $
+# $NetBSD: Makefile,v 1.33 2000/08/16 00:38:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 EVAL_PREFIX+=	QT1DIR=qt1
