@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.5 2000/08/01 21:19:21 dmcmahill Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.6 2000/08/04 03:24:33 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -165,6 +165,8 @@ bulk-package:
 		if [ "${KEEP}" = "no" ]; then \
 			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
+			${ECHO_MSG} ${PKG_DELETE} -rR \* ; \
+			${DO}       ${PKG_DELETE} -rR \*  >/dev/null 2>&1 || ${TRUE} ; \
 		fi ; \
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
