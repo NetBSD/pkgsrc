@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/09/08 19:55:40 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/01/08 10:01:33 tron Exp $
 #
 
 DISTNAME=	xmcd-3.0.1
@@ -15,7 +15,7 @@ USE_IMAKE=	yes
 IS_INTERACTIVE=	yes	# asks a lot of questions
 MAKE_ENV+=	SHELL=${SH}
 
-pre-install:
+post-patch:
 	cd ${WRKSRC} && \
 	for f in libdi_d/config.sh misc_d/start.sh install.sh; do \
 		${SED} -e "s/@MACHINE_ARCH@/${MACHINE_ARCH}/" $$f > $$f.new; \
