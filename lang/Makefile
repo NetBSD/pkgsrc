@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/09/23 08:55:23 wennmach Exp $
+# $NetBSD: Makefile,v 1.32 1999/10/19 09:53:15 agc Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -30,6 +30,7 @@
 #    SUBDIR += itcl
 #    SUBDIR += javac_netscape
     SUBDIR += jdk
+    SUBDIR += jikes
     SUBDIR += kaffe
 #    SUBDIR += lcc
     SUBDIR += libperl
