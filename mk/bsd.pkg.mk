@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.888 2002/01/04 12:25:43 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.889 2002/01/04 15:20:25 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -263,7 +263,7 @@ LIBS+=		-L${LOCALBASE}/lib -lintl
 CONFIGURE_ENV+=	LIBS="${LIBS}"
 .endif
 
-LIBTOOL_REQD=		1.4.20010614nb4
+LIBTOOL_REQD=		1.4.20010614nb5
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
 .  if defined(USE_LTDL)
