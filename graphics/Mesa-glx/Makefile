@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/29 22:44:16 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/01 18:43:18 tron Exp $
 
 DISTNAME=	glx-19990804
 PKGNAME=	Mesa-${DISTNAME:S/-/-${GLX_CHIPSET}-/}
@@ -9,11 +9,15 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://glx.on.openprojects.net/
 
-BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl80 \
+BUILD_DEPENDS+=	${PERL}:../../lang/perl5 \
+		${TCLSH}:../../lang/tcl80 \
 		${MESA_WRKSRC}/lib/libMesaGL.a:${MESA_PKGDIR}:build
 
 CONFLICTS+=		Mesa-*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+# Either "mga" (Matrox MGA 200 and 400) or "tnt" (Riva TNT and TNT 2)
+GLX_CHIPSET?=	mga
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
@@ -24,13 +28,12 @@ CONFIGURE_ARGS+=	--with-mmx-asm=no --with-3dnow-asm=no \
 			--with-mesa=${MESA_WRKSRC}
 CONFIGURE_ENV+=		TCLSH=${TCLSH}
 
-# Either "mga" (Matrox MGA 200 and 400) or "tnt" (Riva TNT and TNT 2)
-GLX_CHIPSET?=	mga
-
 BUILD_DEFS+=	GLX_CHIPSET
+MAKE_ENV+=		PERL=${PERL}
 MESA_PKGDIR=	../Mesa
 MESA_VERSION=	3.0
 MESA_WRKSRC=	${BUILD_ROOT}/graphics/Mesa/${WRKDIR:T}/Mesa-${MESA_VERSION}
+PERL=		${LOCALBASE}/bin/perl
 PLIST_SRC=	${WRKDIR}/PLIST
 TCLSH=		${LOCALBASE}/bin/tclsh8.0
 
