@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/05 22:48:15 wiz Exp $
-
-SHA1 (libvisual-nebulus-0.1.4.tar.gz) = 01bf022b7d57e6b8785862019392ec7cf0977b16
-Size (libvisual-nebulus-0.1.4.tar.gz) = 548918 bytes
-SHA1 (patch-aa) = d4f64d5d23c65c8147b2259f590c4ac9d2cd8794
