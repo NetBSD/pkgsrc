@@ -1,22 +1,29 @@
-$NetBSD: patch-ab,v 1.2 2001/01/28 04:27:43 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2003/06/29 22:31:05 jtb Exp $
 
---- cweb.1.orig	Mon Oct 23 11:05:57 2000
+--- cweb.1.orig
 +++ cweb.1
-@@ -77,13 +77,13 @@
- means omit the index and table of contents.
- .PP
+@@ -100,19 +100,19 @@
+ .
  .SH FILES
--/usr/local/lib/tex/inputs/cwebmac.tex   TeX macros used by cweave output.
-+@PREFIX@/share/texmf/tex/plain/base/cwebmac.tex   TeX macros used by cweave output.
- .br
--/usr/local/src/cweb/cwebman.tex      The user manual.
-+@PREFIX@/share/doc/cweb/cwebman.tex      The user manual.
- .br
--/usr/local/src/cweb/examples/wc.w   An introductory example.
-+@PREFIX@/share/examples/cweb/wc.w   An introductory example.
- .br
--/usr/local/lib/cweb    Directory for cweb "include" files.
-+@PREFIX@/share/cweb    Directory for cweb "include" files.
+ .TP
+-/usr/local/lib/tex/inputs/cwebmac.tex
++@PREFIX@/share/texmf/tex/plain/base/cwebmac.tex
+ TeX macros used by cweave output.
+ .TP
+-/usr/local/src/cweb/cwebman.tex
++@PREFIX@/share/doc/cweb/cwebman.dvi
+ The user manual.
+ .TP
+-/usr/local/src/cweb/examples/wc.w
++@PREFIX@/share/examples/cweb/wc.w
+ An introductory example.
+ .TP
+-/usr/local/src/cweb/examples/wmerge.w
++@PREFIX@/share/examples/cweb/wmerge.w
+ Patch program based on CWEB-style change files.
+ .TP
+-/usr/local/lib/cweb
++@PREFIX@/share/cweb
+ Directory for cweb "include" files.
+ .
  .SH "SEE ALSO"
- .I Literate Programming
- by D.E. Knuth.
