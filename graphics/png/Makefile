@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.24 2001/01/13 01:33:20 tron Exp $
+# $NetBSD: Makefile,v 1.25 2001/01/13 03:20:54 jlam Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
 
 DISTNAME=       libpng-1.0.8
 PKGNAME=        ${DISTNAME:S/lib//}
 CATEGORIES=     graphics
-MASTER_SITES=   ftp://ftp.cdrom.com/pub/png/src/ \
+MASTER_SITES=   ftp://ftp.libpng.org/pub/png/src/ \
+		ftp://ftp.cdrom.com/pub/png/src/ \
 		ftp://swrinde.nde.swri.edu/pub/png/src/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
 
 MAINTAINER=     packages@netbsd.org
-HOMEPAGE=	http://www.cdrom.com/pub/png/
+HOMEPAGE=	http://www.libpng.org/pub/png/
 
 USE_LIBTOOL=	yes
 
