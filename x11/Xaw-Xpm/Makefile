@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/08 19:40:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/11 16:19:03 xtraeme Exp $
 #
 
 DISTNAME=		Xaw-XPM-1.1
@@ -16,7 +16,7 @@ CONFLICTS=		Xaw3d-[0-9]*
 DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 WRKSRC=			${WRKDIR}/XawXpm
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_IMAKE=		YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
@@ -29,5 +29,5 @@ post-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	cd ${PREFIX} && ${LS} lib/libXaw3d* >> ${PLIST_SRC}
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
