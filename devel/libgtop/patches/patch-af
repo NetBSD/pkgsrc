@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.6 2001/11/27 21:03:08 tron Exp $
+
+--- src/daemon/gnuserv.c.orig	Sun Nov 28 17:43:00 1999
++++ src/daemon/gnuserv.c	Tue Nov 27 21:58:17 2001
+@@ -93,7 +93,7 @@
+     vsnprintf (buffer, BUFSIZ-1, format, ap);
+     va_end (ap);
+ 
+-    syslog (priority, buffer);
++    syslog (priority, "%s", buffer);
+ }
+ 
+ void
+@@ -108,7 +108,7 @@
+     va_end (ap);
+ 
+     snprintf (buffer2, BUFSIZ-1, "%s: %s", buffer, strerror (errno));
+-    syslog (priority, buffer2);
++    syslog (priority, "%s", buffer2);
+ }
+ 
+ /*
