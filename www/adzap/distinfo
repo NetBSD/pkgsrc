@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2002/07/09 23:29:19 simonb Exp $
+$NetBSD: distinfo,v 1.17 2002/07/17 09:49:14 martti Exp $
 
-SHA1 (adzap-20020709.tar.gz) = 5142c6b98e5beb1479d968eeab06973e33fdd8fc
-Size (adzap-20020709.tar.gz) = 51570 bytes
+SHA1 (adzap-20020717.tar.gz) = a69070acec4bbec2efc5019f1dd84202395d3c34
+Size (adzap-20020717.tar.gz) = 51588 bytes
 SHA1 (patch-aa) = 9b72f0c35753ee3259e37b534aadddac630dd629
 SHA1 (patch-ab) = 8fd469872a1c894f50879150b3dd5df708f440bc
