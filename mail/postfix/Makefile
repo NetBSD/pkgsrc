@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2001/05/15 01:33:35 itojun Exp $
+# $NetBSD: Makefile,v 1.41 2001/06/07 09:23:20 itojun Exp $
 
-DISTNAME=	postfix-20010228-pl02
-PKGNAME=	postfix-20010228pl2
+DISTNAME=	postfix-20010228-pl03
+PKGNAME=	postfix-20010228pl3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
-PATCHFILES=	postfix-20010228pl02-v6-20010515a.diff.gz \
+PATCHFILES=	postfix-20010228pl02-v6-20010607a.diff.gz \
 		postfix-20010228release-ercpt.diff
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
 		ftp://ftp.gw.com/pub/people/kim/patches/
