@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.35 2002/01/12 02:25:59 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.36 2002/01/20 03:07:05 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -71,7 +71,7 @@ BULK_ID?=
 .endif
 
 # This file exists to mark a package as broken
-BROKENFILE?=	.broken${BULK_ID}
+BROKENFILE?=	.broken${BULK_ID}.html
 
 # This file is where the log of the build goes
 BUILDLOG?=	.make${BULK_ID}
@@ -194,7 +194,7 @@ bulk-package:
 		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} ^d | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
 	fi \
-	) 2>&1 | tee -a ${BUILDLOG}
+	) 2>&1 | tee -a ${BUILDLOG} 
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if ${PKG_INFO} -qe "${PKGNAME:C/-[^-]*$/-[0-9]*/}" ; then \
 		installed=1; \
@@ -301,7 +301,7 @@ bulk-package:
 		if [ -f ${PKGFILE} ]; then \
 			${RM} ${BUILDLOG} ; \
 		else \
-			${MV} ${BUILDLOG} ${BROKENFILE} ; \
+			${SED} 's;$$;<br>;g' ${BUILDLOG} > ${BROKENFILE} ; ${RM} ${BUILDLOG} ;\
 			( \
 			${ECHO_MSG} "BULK> ${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${BROKENFILE} ; \
@@ -317,15 +317,17 @@ bulk-package:
 					pkgerr="-1"; \
 					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=IGNORE)`; \
 					if [ ! -z "$$pkgignore" -a ! -f ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
-						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						 ${ECHO_MSG} "BULK> $$pkgignore" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:<br>" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						 ${ECHO_MSG} "BULK> $$pkgignore<br>" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 						if [ -z "`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
 							pkgerr="0"; \
 						else \
 							pkgerr="1"; \
 						fi; \
 					fi; \
-					${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken." \
+					${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken.<br>" \
+						>> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+					${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a><br>" \
 						>> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 					nbrokenby=`expr $$nbrokenby + 1`;\
 					if ! ${GREP} -q " $$pkgdir/${BROKENFILE}" ${_PKGSRCDIR}/${BROKENFILE} ; then \
@@ -334,8 +336,8 @@ bulk-package:
 				done ;\
 			fi ;\
 			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
-			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${_PKGSRCDIR}/${BROKENFILE} \
-			) 2>&1 | tee -a ${BROKENFILE}; \
+			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby <br>" >> ${_PKGSRCDIR}/${BROKENFILE} \
+			) 2>&1 | ${SED} 's;$$;<br>;g' | tee -a ${BROKENFILE}; \
 		fi ; \
 		${ECHO_MSG} "BULK> Cleaning packages and its depends" ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
@@ -348,7 +350,7 @@ bulk-package:
 		fi ;\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
-		${ECHO_MSG} "BULK>" Build for ${PKGNAME} was not successful, aborting. | tee -a ${BROKENFILE} ; \
+		${ECHO_MSG} "BULK> Build for ${PKGNAME} was not successful, aborting.<br>" | tee -a ${BROKENFILE} ; \
 		false; \
 	else \
 		${RM} -f ${BUILDLOG} ;\
