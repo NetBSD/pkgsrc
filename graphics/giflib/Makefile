@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/03 12:59:39 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/04 16:13:39 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/09/24 06:55:01 tg Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.ccil.org/~esr/giflib/
 
 MAINTAINER=	packages@netbsd.org
 
-.include "../../bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 post-install:
 .if !defined(NOPORTDOCS)
