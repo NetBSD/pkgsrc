@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:30:10 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/10 03:15:28 grant Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.f
 PKGNAME=	${DISTNAME:C/-static//}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://people.freebsd.org/~jdp/
-COMMENT=	cvsup gui client
+COMMENT=	cvsup GUI client
 
 DEPENDS+=	cvsup-[0-9]*:../../devel/cvsup
 
