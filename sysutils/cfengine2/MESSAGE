@@ -1,8 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/08/18 23:03:44 ben Exp $
+$NetBSD: MESSAGE,v 1.2 2004/09/23 23:16:33 ben Exp $
 
 To set up cfengine, install sysutils/cfengine2-doc and see:
-
 ${PREFIX}/share/doc/html/cfengine/cfengine-Tutorial.html
 
 At a minimum, you will need:
@@ -20,5 +19,8 @@ editfiles:
    AppendIfNoSuchLine "cfengine 5308/tcp # CFengine"
  }
 
-
+3. Once you are happy using cfengine, you will want it to
+   run least once per hour.  This is easily achieved by
+   adding the following line to the root crontab:
+     7,37 * * * * ${PREFIX}/sbin/cfexecd -F
 ===========================================================================
