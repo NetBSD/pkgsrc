@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/11/23 16:26:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/22 05:09:20 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.0
@@ -18,9 +18,7 @@ NO_BUILD=	YES
 
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
-.if !exists(/emul/linux/lib/ld-linux.so.1)
-IGNORE=	requires Linux glibc2 libraries - see compat_linux(8)
-.endif
+DEPENDS=	suse_linux-6.1p1:../../emulators/suse_linux
 DISTNAME=	linux-ar-40
 #.elif (${MACHINE_ARCH} == "alpha")
 #.if !exists(/emul/osf1/sbin/loader)
