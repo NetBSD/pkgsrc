@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/04/26 04:46:00 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/12/19 00:01:43 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -35,6 +35,12 @@ _PERL5_SITEVAR.INSTALLSITEMAN1DIR=	installsiteman1dir
 _PERL5_SITEVAR.INSTALLSITEMAN3DIR=	installsiteman3dir
 _PERL5_SITEVAR.SITELIBEXP=		sitelibexp
 _PERL5_SITEVAR.SITEARCHEXP=		sitearchexp
+
+PERL5_OPTIONS?=	# empty
+.if !empty(PERL5_OPTIONS:Mthreads)
+USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/install.tmpl
+.endif
 
 .if exists(${PERL5})
 .  if !defined(_PERL5_SITEPREFIX)
