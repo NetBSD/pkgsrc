@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/10 11:54:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/05/13 18:14:34 adam Exp $
 include/c-client/c-client.h
 include/c-client/env.h
 include/c-client/env_unix.h
@@ -16,7 +16,6 @@ include/c-client/newsrc.h
 include/c-client/nl.h
 include/c-client/nntp.h
 include/c-client/osdep.h
-include/c-client/pop3.h
 include/c-client/rfc822.h
 include/c-client/smtp.h
 include/c-client/tcp.h
@@ -45,6 +44,7 @@ share/doc/imap-uw/BUILD
 share/doc/imap-uw/CONFIG
 share/doc/imap-uw/FAQ.txt
 share/doc/imap-uw/FAQ.html
+share/doc/imap-uw/IPv6.txt
 share/doc/imap-uw/RELNOTES
 share/doc/imap-uw/SSLBUILD
 share/doc/imap-uw/Y2K
@@ -55,7 +55,6 @@ share/doc/imap-uw/draft/README
 share/doc/imap-uw/draft/compare.txt
 share/doc/imap-uw/draft/i18n.txt
 share/doc/imap-uw/draft/sort.txt
-share/doc/imap-uw/draft/unselect.txt
 share/doc/imap-uw/drivers.txt
 share/doc/imap-uw/formats.txt
 share/doc/imap-uw/imaprc.txt
@@ -90,6 +89,8 @@ share/doc/imap-uw/rfc/rfc3501.txt
 share/doc/imap-uw/rfc/rfc3502.txt
 share/doc/imap-uw/rfc/rfc3503.txt
 share/doc/imap-uw/rfc/rfc3516.txt
+share/doc/imap-uw/rfc/rfc3656.txt
+share/doc/imap-uw/rfc/rfc3691.txt
 @dirrm share/doc/imap-uw/rfc
 @dirrm share/doc/imap-uw/draft
 @dirrm share/doc/imap-uw

@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.15 2003/09/13 18:31:33 kim Exp $
+$NetBSD: distinfo,v 1.16 2004/05/13 18:14:34 adam Exp $
 
-SHA1 (imap-2002e.tar.Z) = d52749df111c31094a3a5003bb93752ea8fbeea0
-Size (imap-2002e.tar.Z) = 2157511 bytes
-SHA1 (patch-aa) = 84239c107b531b69e0f88eddfc7b58416d89c9c7
-SHA1 (patch-ab) = a18844f58641d9eee0f30c9333377cbe31adaea9
+SHA1 (imap-2004.tar.Z) = f8bacc27f784b4b84b3742056b8917394f156ffa
+Size (imap-2004.tar.Z) = 2220333 bytes
+SHA1 (patch-aa) = 2109d076b1f50ca461b2b2a00ee927207a64f766
+SHA1 (patch-ab) = 0dcd00a94a05bbf6730c3ea8be4200a6ad5b617f
 SHA1 (patch-ac) = 8b4ea8c15929c65eda1b3444c68fdbf70fa68b6a
 SHA1 (patch-ad) = 3404de4e4acb456e3c7b34ca80b31b80b465b3e1
 SHA1 (patch-ae) = 702473377ca66266bdb6d5d13045d279a38ea7de
 SHA1 (patch-af) = 07e6b95a8aea0ea0ee6ccc20c1906ddf16ef6d61
-SHA1 (patch-ai) = aaa778f60684c797cc53a109b8430fa05ec7f424
+SHA1 (patch-ai) = c495ed39fbc01e1d8b05f6acd3d11394978f9b43
 SHA1 (patch-aj) = 0a728d3b5271c048275a4d41002877e86ac275b2
 SHA1 (patch-ak) = a0a1a21ec22a92d086e665b263b51532207d0e3c
-SHA1 (patch-al) = c8593cfbb5822efa05fb1343bbf1e8bb4d7c035f
-SHA1 (patch-am) = 4537d1971ec4675889da9ef6d8c37af14ae7da75
+SHA1 (patch-al) = b746d36cb324114468d07d1aba7d22c5bd5b23b2
+SHA1 (patch-am) = e236acda47dc6ae0066a6bc2319b6c0f5804eb76
