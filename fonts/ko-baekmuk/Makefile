@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/07/20 16:53:41 junyoung Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/20 17:04:29 junyoung Exp $
 #
 
 DISTNAME=	baekmuk-2.0
+PKGREVISION=	1
 PKGNAME=	ko-baekmuk-20010718
 CATEGORIES=	fonts x11 korean
 MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/ \
