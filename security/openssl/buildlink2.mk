@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/11/12 07:55:02 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/11/17 15:25:57 wiz Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -31,14 +31,6 @@ _NEED_OPENSSL=	NO
 .  if !empty(BUILDLINK_IS_BUILTIN.openssl:M[nN][oO])
 _NEED_OPENSSL=	YES
 .  elif !defined(_NEED_OPENSSL)
-_OPENSSL_HAS_FIX=	NO
-.    if exists(${_OPENSSL_SSL_H})
-_OPENSSL_HAS_20020730_FIX!=						\
-	${AWK} 'BEGIN { ans = "NO" }					\
-		/SSL_R_SSL2_CONNECTION_ID_TOO_LONG/ { ans = "YES" }	\
-		END { print ans; exit 0 }				\
-	' ${_OPENSSL_SSL_H}
-.    endif
 #
 # Create an appropriate name for the built-in package distributed
 # with the system.  This package name can be used to check against
