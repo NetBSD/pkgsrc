@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4945 2004/02/22 01:13:01 minskim Exp $
+$NetBSD: CHANGES,v 1.4946 2004/02/22 01:19:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -963,3 +963,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ircII to 20040216nb1 [snj 2004-02-21]
 	Added autoswc-1.0 [jmmv 2004-02-21]
 	Added p5-IO-Tee-0.64 [minskim 2004-02-22]
+	Added p5-Text-Reform-1.11 [minskim 2004-02-22]
