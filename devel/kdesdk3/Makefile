@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/22 03:03:37 markd Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/13 11:07:51 wulf Exp $
 
 DISTNAME=	kdesdk-3.1.2
 CATEGORIES=	devel
@@ -12,6 +12,17 @@ USE_BUILDLINK2=		YES
 LTCONFIG_OVERRIDE+=	${WRKSRC}/kapptemplate/admin/ltconfig
 
 BUILD_DEPENDS+= qt3-tools>=3.1.1:../../x11/qt3-tools
+
+REPLACE_PERL=	scripts/cvs2pack \
+		scripts/cvsblame \
+		scripts/cvscheck \
+		scripts/cvslastchange \
+		scripts/cxxmetric \
+		scripts/extend_dmalloc \
+		scripts/extractrc \
+		scripts/fixincludes \
+		scripts/includemocs \
+		scripts/noncvslist
 
 .include "../../mk/bsd.prefs.mk"
 
