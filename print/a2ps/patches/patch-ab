@@ -1,14 +1,14 @@
---- ogonkify/doc/ogonkify.texi.orig	Sat May  9 03:23:39 1998
-+++ ogonkify/doc/ogonkify.texi	Sat May  9 03:24:47 1998
-@@ -16,6 +16,11 @@
- @author Juliusz Chroboczek
- @end titlepage
+--- ogonkify/doc/ogonkify.info-orig	Wed Jul  1 22:43:04 1998
++++ ogonkify/doc/ogonkify.info	Wed Jul  1 22:44:02 1998
+@@ -1,6 +1,11 @@
+ Ceci est le fichier Info ogonkify.info, produit par Makeinfo version
+ 1.68à partir du fichier d'entrée «ogonkify.texi».
  
-+@dircategory Internet support
-+@direntry
++INFO-DIR-SECTION Printing Tools
++START-INFO-DIR-ENTRY
 +* Ogonkify: (ogonkify).              Font creation and PostScript output.
-+@end direntry
++END-INFO-DIR-ENTRY
 +
+    This is the Ogonkify manual, by Juliusz Chroboczek
  
- @node Top, License, (dir), (dir)
- 
+ 
