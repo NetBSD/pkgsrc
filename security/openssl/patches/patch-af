@@ -1,10 +1,13 @@
-$NetBSD: patch-af,v 1.6 2002/08/25 19:23:19 jlam Exp $
+$NetBSD: patch-af,v 1.7 2003/08/25 16:34:02 jschauma Exp $
 
---- Makefile.org.orig	Fri Aug  9 06:43:56 2002
-+++ Makefile.org
-@@ -169,7 +169,7 @@
+--- Makefile.org.orig	Fri Aug  9 04:43:56 2002
++++ Makefile.org	Sun Aug 24 14:54:26 2003
+@@ -167,9 +167,9 @@
+ 	evp asn1 pem x509 x509v3 conf txt_db pkcs7 pkcs12 comp
+ 
  MAKEFILE= Makefile.ssl
- MAKE=     make -f Makefile.ssl
+-MAKE=     make -f Makefile.ssl
++MAKE=     @MAKE@ -f Makefile.ssl
  
 -MANDIR=$(OPENSSLDIR)/man
 +MANDIR=$(INSTALLTOP)/man
