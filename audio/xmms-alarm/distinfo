@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/12 07:10:07 wiz Exp $
+
+SHA1 (xmms-alarm-0.3.3.tar.gz) = 3cacf04c4cb3073a6ab5ce102edc366c90d28311
+Size (xmms-alarm-0.3.3.tar.gz) = 243708 bytes
+SHA1 (patch-aa) = 3449a689d560dc57be821d56bd75614100cb1584
