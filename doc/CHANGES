@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7175 2004/09/20 15:50:21 erh Exp $
+$NetBSD: CHANGES,v 1.7176 2004/09/20 21:18:32 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4277,3 +4277,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thunderbird to 0.8 [taya 2004-09-20]
 	Updated thunderbird-gtk2 to 0.8 [taya 2004-09-20]
 	Updated firefox-gtk2-bin to 0.10 [erh 2004-09-20]
+	Added news-0.1 [jschauma 2004-09-20]
