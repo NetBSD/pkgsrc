@@ -1,14 +1,44 @@
-$NetBSD: patch-ab,v 1.5 1999/02/18 23:09:46 frueauf Exp $
+$NetBSD: patch-ab,v 1.6 1999/03/28 17:29:53 christos Exp $
 
---- dialects/n+obsd/dlsof.h-orig	Fri May 22 14:18:33 1998
-+++ dialects/n+obsd/dlsof.h	Thu Feb 18 23:59:27 1999
-@@ -52,7 +52,9 @@
- #include <sys/mount.h>
- #include <rpc/types.h>
- #include <sys/protosw.h>
-+#define _KERNEL
- #include <sys/socket.h>
-+#undef _KERNEL
- #include <sys/socketvar.h>
- #include <sys/un.h>
- #include <sys/unpcb.h>
+--- dialects/n+obsd/dlsof.h.orig	Sat Feb 27 15:10:54 1999
++++ dialects/n+obsd/dlsof.h	Sun Mar 28 12:17:22 1999
+@@ -141,9 +141,6 @@
+ #include <nfs/nfsnode.h>
+ #include <sys/proc.h>
+ #include <kvm.h>
+-#undef	TRUE
+-#undef	FALSE
+-#include <sys/sysctl.h>
+ #define	P_ADDR		kp_eproc.e_paddr
+ #define	P_COMM		kp_proc.p_comm
+ #define	P_FD		kp_proc.p_fd
+@@ -178,16 +175,28 @@
+ #undef	KERNEL
+ #undef	_KERNEL
+ 
++#include <vm/vm.h>
++
+ # if	defined(UVM)
++#  
++# ifndef FALSE
+ #define	FALSE	0
+ #define	TRUE	1
++# endif
+ #include <uvm/uvm.h>
+ # endif	/* defined(UVM) */
+ 
+-#include <vm/vm.h>
++# ifndef FALSE
++#define	FALSE	0
++#define TRUE	1
++# endif
+ #include <vm/vm_map.h>
+ #include <vm/vm_object.h>
+ #include <vm/vm_pager.h>
++
++#undef	TRUE
++#undef	FALSE
++#include <sys/sysctl.h>
+ 
+ # if	defined(OPENBSDV)
+ #include <sys/pipe.h>
