@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/21 08:16:06 agc Exp $
+bin/buildtool
+bin/buildtool-0
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/buildtool.info
+info/buildtool.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/buildtool.info
+libexec/buildtool-0/bt_config
+libexec/buildtool-0/bt_dist
+libexec/buildtool-0/bt_doc
+libexec/buildtool-0/bt_lint
+libexec/buildtool-0/bt_make
+libexec/buildtool-0/bt_mkdep
+man/man1/buildtool.1
+share/buildtool-0/bt_config/base.subr
+share/buildtool-0/licenses/apache
+share/buildtool-0/licenses/artistic
+share/buildtool-0/licenses/bsd
+share/buildtool-0/licenses/gplv2
+share/buildtool-0/mk/bt.clean.mk
+share/buildtool-0/mk/bt.dep.mk
+share/buildtool-0/mk/bt.inc.mk
+share/buildtool-0/mk/bt.info.mk
+share/buildtool-0/mk/bt.init.mk
+share/buildtool-0/mk/bt.lib.mk
+share/buildtool-0/mk/bt.man.mk
+share/buildtool-0/mk/bt.prog.mk
+share/buildtool-0/mk/bt.subdir.mk
+share/buildtool-0/mk/qt.moc.mk
+share/buildtool-0/mk/sys.mk
+share/buildtool-0/templates/sa.README.bt
+share/buildtool-0/templates/sa.config
+share/buildtool-0/templates/sa.config_init
+share/buildtool-0/templates/sa.defs
+share/buildtool-0/templates/sa.docs
+share/buildtool-0/templates/sa.mk_src
+share/buildtool-0/templates/sa.mk_top
+@dirrm share/buildtool-0/templates
+@dirrm share/buildtool-0/mk
+@dirrm share/buildtool-0/licenses
+@dirrm share/buildtool-0/bt_config
+@dirrm share/buildtool-0
+@dirrm libexec/buildtool-0
