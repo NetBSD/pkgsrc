@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2001/02/10 22:37:47 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2001/03/27 03:19:49 hubertf Exp $
 #
 # This file is included by the following packages:
 #
@@ -21,7 +21,7 @@ MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/v${PG_VERS}/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.PostgreSQL.ORG/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined

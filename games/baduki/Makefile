@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/16 15:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/03/27 03:19:57 hubertf Exp $
 
 DISTNAME=	baduki-0.2.9
 CATEGORIES=	games
@@ -8,7 +8,8 @@ MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://soback.kornet21.net/~artist/baduk/baduki.html
 COMMENT=	Go playing program based on xamigo
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
+
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 USE_X11=	yes

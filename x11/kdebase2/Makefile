@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/26 02:38:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/27 03:20:27 hubertf Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -7,8 +7,8 @@ COMMENT=	Base modules for the KDE 2 integrated X11 desktop
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=	${QT2DIR}/qt2/bin/uic:../../x11/qt2-designer
+BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_DEPENDS+=	qt2-designer-2.2.4:../../x11/qt2-designer
 DEPENDS+=	kdelibs-2.1:../../x11/kdelibs2
 
 USE_XPM=	yes

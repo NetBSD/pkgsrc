@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2001/03/24 21:14:40 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.8 2001/03/27 03:20:28 hubertf Exp $
 #
 
 DISTNAME=		qt-x11-${QTVERSION}
@@ -33,7 +33,7 @@ PATCHDIR=		${PKGSRCDIR}/x11/qt2-libs/patches
 
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=	${LOCALBASE}/egcs/bin/g++:../../lang/egcs
+BUILD_DEPENDS+=	egcs-1.1.2:../../lang/egcs
 CONFIGURE_ENV+=	CXX=${LOCALBASE}/egcs/bin/g++
 CONFIGURE_ARGS+=-platform solaris-g++
 .endif

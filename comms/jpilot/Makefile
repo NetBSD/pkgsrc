@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/03/01 21:40:20 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/03/27 03:19:48 hubertf Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -9,8 +9,9 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://jpilot.org/
 COMMENT=		desktop organizer application for the palm pilot
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
-BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
+
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 DEPENDS+=		gtk+>=1.2.0:../../x11/gtk
 DEPENDS+=		pilot-link>=0.9.3:../../comms/pilot-link
 

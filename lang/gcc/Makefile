@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/03/01 02:10:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2001/03/27 03:20:03 hubertf Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -8,7 +8,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
+BUILD_DEPENDS+=		bison-*:../../devel/bison
 
 # The platforms listed below are the only tested platforms so far.
 # If you get gcc working on other platforms, then please add them.
