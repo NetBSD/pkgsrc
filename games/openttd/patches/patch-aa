@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/30 15:12:48 wiz Exp $
+
+--- makefiledir/Makefile.libdetection.orig	2004-12-07 23:58:06.000000000 +0600
++++ makefiledir/Makefile.libdetection
+@@ -18,6 +18,11 @@ ifeq ($(shell uname),FreeBSD)
+ FREEBSD:=1
+ endif
+ 
++# Automatically recognize if building on NetBSD
++ifeq ($(shell uname),NetBSD)
++NETBSD:=1
++endif
++
+ # Automatically recognize if building on MacOSX
+ ifeq ($(VENDOR), apple)
+ OSX:=1
+@@ -75,8 +80,13 @@ ifdef WITH_PNG
+ WITH_PNG:=1
+ endif
+ else
++ifdef NETBSD
++# NetBSD uses generic pkg-config instead of libpng-config
++WITH_PNG:=$(shell pkg-config --version libpng12 2>/dev/null)
++else
+ WITH_PNG:=$(shell libpng-config --version 2>/dev/null)
+ endif
++endif
+ 
+ ifdef WITH_PNG
+ # LibPNG depends on Zlib
