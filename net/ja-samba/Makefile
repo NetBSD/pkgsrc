@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/05/28 08:59:47 taca Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/04 16:25:33 taca Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ja-samba-${SAMBA_BASE_VERS:S/a/.1/}.${SAMBA_JA_VERS}
+PKGREVISION=		1
 CATEGORIES=		net
 
 MAINTAINER=		tech-pkg-ja@jp.netbsd.org
@@ -60,7 +61,6 @@ MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
 
 DOCDIR=			${PREFIX}/share/doc/samba
-HTMLDIR=		${PREFIX}/share/doc/html/samba
 EXAMPLESDIR=		${PREFIX}/share/examples/samba
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
@@ -69,7 +69,7 @@ RCD_SCRIPTS=		samba nmbd smbd
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
 
-REPLACE_PERL=		${WRKSRC}/script/findsmb.in
+REPLACE_PERL=		script/findsmb.in
 
 # Remove irrelevant files for this package.
 post-extract:
@@ -86,11 +86,11 @@ post-extract:
 
 post-install:
 	# Install Samba documentation.
-	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKDIR}/${DISTNAME}/docs;					\
-		${INSTALL_DATA} announce textdocs/* ${DOCDIR};		\
-		${INSTALL_DATA} Registry/*.reg ${DOCDIR};		\
-		${INSTALL_DATA} faq/*.html ${HTMLDIR}
+	for file in announce textdocs/* Registry/*.reg; do		\
+		${INSTALL_DATA} $$file ${DOCDIR};			\
+	done
 
 	# Install Samba examples.
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
