@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/07 21:46:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/07 23:07:27 jmmv Exp $
 #
 
 DISTNAME=		aMule-1.2.3
@@ -14,6 +14,8 @@ COMMENT=		Another Emule P2P client
 
 DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
+
+CONFLICTS=		xmule-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
