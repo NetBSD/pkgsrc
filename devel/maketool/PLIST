@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/10 21:12:07 tron Exp $
-bin/extract_targets
-bin/make_makefile
+@comment $NetBSD: PLIST,v 1.3 2002/03/10 01:16:29 fredb Exp $
 bin/maketool
-share/locale/la/LC_MESSAGES/maketool.mo
+libexec/maketool/extract_targets
+libexec/maketool/maketool_client
+share/locale/cs/LC_MESSAGES/maketool.mo
+share/locale/ja/LC_MESSAGES/maketool.mo
+share/maketool/autoconf-dist.mk
+share/maketool/autoconf-maint.mk
+share/maketool/automake.mk
+share/maketool/imake.mk
+@dirrm libexec/maketool
+@dirrm share/maketool/help
+@dirrm share/maketool
