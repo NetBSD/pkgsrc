@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2001/07/16 15:39:20 wiz Exp $
+# $NetBSD: Makefile,v 1.225 2001/07/18 14:33:24 nra Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -128,6 +128,7 @@ SUBDIR+=	xneko
 SUBDIR+=	xp
 SUBDIR+=	xpaste
 SUBDIR+=	xpenguins
+SUBDIR+=	xphoon
 SUBDIR+=	xpmicons
 SUBDIR+=	xpmroot
 SUBDIR+=	xpns
