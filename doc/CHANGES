@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5697 2004/04/20 22:40:24 recht Exp $
+$NetBSD: CHANGES,v 1.5698 2004/04/20 23:00:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2199,3 +2199,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-XML-XPath to 1.13 [minskim 2004-04-20]
 	Updated openbox to 3.2 [snj 2004-04-20]
 	Updated postgresql74-lib to 7.4.2nb1 [recht 2004-04-20]
+	Added acidrip-0.12 [xtraeme 2004-04-20]
