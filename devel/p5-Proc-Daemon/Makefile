@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/25 03:27:08 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/29 14:18:58 sketch Exp $
 #
 
 DISTNAME=	Proc-Daemon-0.02
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5prd
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Proc/}
 
-MAINTAINER=	sketch@rd.bbc.co.uk
+MAINTAINER=	sketch@NetBSD.org
 HOMEPAGE=	http://www.nacs.uci.edu/indiv/ehood/earlsperls.html
 COMMENT=	Provide capability for a Perl program to run as a daemon
 
