@@ -1,21 +1,10 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 10:40:37 agc Exp $
-
---- src/unix/Makefile.orig	Fri Jun  5 07:32:04 1998
-+++ src/unix/Makefile	Sat Jul  4 07:37:41 1998
-@@ -25,6 +25,7 @@
+--- src/unix/Makefile.orig	Sun Aug 23 17:31:13 1998
++++ src/unix/Makefile	Fri Aug 28 23:37:29 1998
+@@ -16,6 +16,7 @@
  
- $(TRG): $(ALLOBJS)
- 	ar -rcv $@ $(UOBJS)
+ $(TARGET): $(OBJS)
+ 	ar -rcv $@ $(OBJS)
 +	ranlib $@
  
- $(OBJDIR)/%.o: %.c xmame.h
- 	$(CC) $(DEFS) -I../../src/ $(MS) $(JS) $(CFLAGS) -o $@ -c $<
-@@ -42,7 +43,7 @@
- $(OBJDIR)/irix.o: irix.c xmame.h sound.h
- $(OBJDIR)/hpux.o: hpux.c xmame.h sound.h
- $(OBJDIR)/aix.o: aix.c xmame.h sound.h
--$(OBJDIR)/netbsd_i386.o: netbsd_i386.c xmame.h sound.h
-+$(OBJDIR)/netbsd.o: netbsd.c xmame.h sound.h
- $(OBJDIR)/sndserver.o: sndserver.c xmame.h
- $(OBJDIR)/svgalib.o: svgalib.c linux.c xmame.h sound.h
- $(OBJDIR)/ultrix.c: ultrix.c xmame.h sound.h
+ $(OBJDIR)/%.o: %.c xmame.h sound.h
+ 	$(CC) -I../../src/ $(CFLAGS) -o $@ -c $<
