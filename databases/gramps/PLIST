@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/06 10:25:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/02 14:23:19 drochner Exp $
 bin/gramps
 lib/gramps/grampslib.so
 man/man1/gramps.1
@@ -614,6 +614,8 @@ share/gramps/plugins/patchnames.glade
 share/gramps/plugins/pkgexport.glade
 share/gramps/plugins/rel_de.py
 share/gramps/plugins/rel_de.pyo
+share/gramps/plugins/rel_fi.py
+share/gramps/plugins/rel_fi.pyo
 share/gramps/plugins/rel_hu.py
 share/gramps/plugins/rel_hu.pyo
 share/gramps/plugins/rel_it.py
@@ -644,6 +646,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gramps.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gramps.mo
