@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/26 23:44:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/04 09:19:04 mycroft Exp $
 #
 
 DISTNAME=       xfmail-1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://burka.netvision.net.il/pub/xfmail/
 MAINTAINER=	root@garbled.net
 
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
-DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=       xforms-0.88:../../x11/xforms
 
 ONLY_FOR_ARCHS=	arm32 i386 m68k sparc pc532

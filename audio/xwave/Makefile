@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/05/09 20:38:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/04 09:18:55 mycroft Exp $
 #
 
 DISTNAME=		xwave-0.6
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	apps/sound/editors
 
 MAINTAINER=		hubertf@netbsd.org
 
-DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 USE_IMAKE=		yes
 

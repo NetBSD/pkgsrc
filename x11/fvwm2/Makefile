@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/22 13:20:58 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/04 09:19:08 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -13,7 +13,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fvwm-users-jp-kits.97Oct04.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 RUN_DEPENDS=	xpmroot:../../x11/xpmroot
 
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/07/04 05:11:15 mycroft Exp $
+# $NetBSD: Makefile,v 1.11 1998/07/04 09:19:09 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		http://isolation.ml.org/oxygen/wm/bin/ \
 
 MAINTAINER=		packages@netbsd.org
 
-DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-0.96:../../graphics/png
 
