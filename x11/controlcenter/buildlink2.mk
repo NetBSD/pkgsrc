@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:27 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/11 12:16:23 wiz Exp $
 
 .if !defined(CONTROLCENTER_BUILDLINK2_MK)
 CONTROLCENTER_BUILDLINK2_MK=	# defined
@@ -14,7 +14,7 @@ BUILDLINK_FILES.controlcenter=	include/libcapplet1/*
 BUILDLINK_FILES.controlcenter+=	lib/libcapplet.*
 
 BUILDLINK_TRANSFORM.controlcenter= \
-	-e "s|/include/libcapplet1/|/include/|g
+	-e "s|/include/libcapplet1/|/include/|g"
 
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
