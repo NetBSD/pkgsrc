@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2004/09/25 00:40:54 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2004/10/14 13:43:26 minskim Exp $
 
---- makefile.orig	2004-08-02 20:07:42.000000000 -0500
+--- makefile.orig	Mon Oct  4 20:55:33 2004
 +++ makefile
 @@ -1,14 +1,14 @@
  # Makefile for compiling Mathomatic for UNIX or Linux or Mac OS X.
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.8 2004/09/25 00:40:54 minskim Exp $
  LIBS		= -lm
  
 -CFLAGS		+= $(READLINE:1=-DREADLINE)
--LIBS		+= $(READLINE:1=-lreadline -lcurses)
+-LIBS		+= $(READLINE:1=-lreadline -lncurses)
 +CFLAGS		+= -DREADLINE
 +LIBS		+= -lreadline -ltermcap
  
