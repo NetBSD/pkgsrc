@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23.2.2 2002/06/21 23:05:26 jlam Exp $
+# $NetBSD: Makefile,v 1.23.2.3 2002/08/25 17:56:34 jlam Exp $
 
 DISTNAME=       xpm-3.4k
 CATEGORIES=	graphics x11
@@ -11,12 +11,19 @@ COMMENT=	The X Pixmap library
 
 USE_BUILDLINK2=	# defined
 USE_IMAKE=	# defined
-CHECK_XPM=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${HAVE_BUILTIN_XPM} != "NO"
-#IGNORE=		"The Xpm library is included in your X11 distribution."
+# Check if we got Xpm distributed with XFree86 4.x.
+.if exists(${X11BASE}/include/X11/xpm.h) && \
+    exists(${X11BASE}/lib/X11/config/X11.tmpl)
+_IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+.else
+_IS_BUILTIN_XPM=	0
+.endif
+
+.if ${_IS_BUILTIN_XPM} != "0"
+IGNORE=		"The Xpm library is included in your X11 distribution."
 .endif
 
 .if (${OPSYS} == SunOS)
