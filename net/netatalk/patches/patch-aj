@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.4 2004/11/07 12:21:27 markd Exp $
+
+--- etc/uams/uams_gss.c.orig	Mon Nov  8 12:22:44 2004
++++ etc/uams/uams_gss.c
+@@ -135,6 +135,7 @@ static int do_gss_auth( char *service, c
+      * we should be able to detect it.
+      */
+     gss_buffer_desc s_princ_buffer;
++    u_int16_t auth_len;
+ 
+     s_princ_buffer.value = service;
+     s_princ_buffer.length = strlen( service ) + 1;
+@@ -209,7 +210,7 @@ static int do_gss_auth( char *service, c
+ 	    if (wrap_buff.value)
+ 	        gss_release_buffer( &minor_status, &wrap_buff );
+ 
+-	    u_int16_t auth_len = htons( authenticator_buff.length );
++	    auth_len = htons( authenticator_buff.length );
+ 	    /* save the username... note that doing it this way is
+ 	     * not the best idea: if a principal is truncated, a user could be
+ 	     * impersonated
