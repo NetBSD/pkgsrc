@@ -1,13 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.6 2003/09/28 12:54:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2003/09/30 00:42:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 
-.include "../../mk/bsd.prefs.mk"
+.if !defined(MESALIB_BUILDLINK3_MK)
+MESALIB_BUILDLINK3_MK=	YES
+
+.  include "../../mk/bsd.prefs.mk"
 
 MESA_REQD?=		3.4.2
 
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
+.endif	# MESALIB_BUILDLINK3_MK
 
 BUILDLINK_CHECK_BUILTIN.MesaLib?=	NO
 
@@ -27,6 +31,10 @@ BUILDLINK_IS_BUILTIN.MesaLib!=						\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.MesaLib=${BUILDLINK_IS_BUILTIN.MesaLib}
 .endif
 
+.if !empty(BUILDLINK_CHECK_BUILTIN.MesaLib:M[yY][eE][sS])
+_NEED_MESALIB=	NO
+.endif
+
 .if !defined(_NEED_MESALIB)
 .  if !empty(BUILDLINK_IS_BUILTIN.MesaLib:M[nN][oO])
 _NEED_MESALIB=	YES
@@ -37,7 +45,7 @@ _NEED_MESALIB=	YES
 # BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
 # or if the built-in one is sufficient.
 #
-.      include "../../graphics/Mesa/version.mk"
+.    include "../../graphics/Mesa/version.mk"
 _MESALIB_PKG=		MesaLib-${_MESA_VERSION}
 _MESALIB_DEPENDS=	${BUILDLINK_DEPENDS.MesaLib}
 _NEED_MESALIB!=	\
@@ -47,11 +55,8 @@ _NEED_MESALIB!=	\
 		${ECHO} "YES";						\
 	fi
 .  endif
+MAKEFLAGS+=	_NEED_MESALIB="${_NEED_MESALIB}"
 .endif	# _NEED_MESALIB
-
-.if !empty(BUILDLINK_CHECK_BUILTIN.MesaLib:M[yY][eE][sS])
-_NEED_MESALIB=	NO
-.endif
 
 .if ${_NEED_MESALIB} == "YES"
 #
@@ -62,12 +67,15 @@ BUILDLINK_DEPENDS.MesaLib=	MesaLib>=5.0
 .  if !empty(BUILDLINK_DEPTH:M\+)
 BUILDLINK_DEPENDS+=		MesaLib
 .  endif
-.  if !defined(BUILDLINK_PACKAGES) || empty(BUILDLINK_PACKAGES:MMesaLib)
+.endif
+
+.if !defined(MESALIB_BUILDLINK3_MK)
+.  if ${_NEED_MESALIB} == "YES"
 BUILDLINK_PACKAGES+=		MesaLib
 BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
-.  endif
-.else
+.  else
 BUILDLINK_PREFIX.MesaLib=	${X11BASE}
-.endif
+.  endif
+.endif	# MESALIB_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
