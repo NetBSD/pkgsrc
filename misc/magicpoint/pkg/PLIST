@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/06/15 04:33:12 itojun Exp $
 bin/mgp
 bin/mgp2ps
 bin/mgpembed
@@ -50,3 +51,9 @@ share/doc/mgp/sample/v6header.gif
 @dirrm lib/X11/mgp
 @dirrm share/doc/mgp/sample
 @dirrm share/doc/mgp
+man/cat1/mgp.0
+man/cat1/mgp2ps.0
+man/cat1/mgpembed.0
+man/cat1/mgpnet.0
+man/cat1/xwintoppm.0
+man/man1/xmindpath.1
