@@ -1,25 +1,18 @@
-$NetBSD: patch-ab,v 1.2 1999/11/13 10:02:38 rh Exp $
+$NetBSD: patch-ab,v 1.3 2001/01/27 07:33:22 itojun Exp $
 
---- ../doc/man/Makefile.orig	Sat Sep 18 08:23:44 1999
-+++ ../doc/man/Makefile	Sat Nov 13 09:45:50 1999
-@@ -52,12 +52,12 @@
- # Target directory for the manual directory tree. Eg., may be used to 
- # specify the path of an NFS-mounted directory for common files.
+--- ../doc/man/Makefile.orig	Tue Nov 30 04:22:07 1999
++++ ../doc/man/Makefile	Sat Jan 27 15:51:16 2001
+@@ -54,3 +54,3 @@
  #
 -DESTDIR=
 +DESTDIR= ${PREFIX}
  
- #
- # Default location for manual section directories.
+@@ -59,3 +59,3 @@
  #
 -DESTMAN= /usr/share/man
 +DESTMAN= /man
  
- #
- # Install manuals in ${MANDIR}N. For systems that generate catable manual 
-@@ -228,14 +228,12 @@
- #
- # User command manual entries
+@@ -230,6 +230,5 @@
  #
 -CMD_BASE = 	dig host dnsquery dnskeygen
 +CMD_BASE = 	dig dnsquery dnskeygen
@@ -27,48 +20,25 @@ $NetBSD: patch-ab,v 1.2 1999/11/13 10:02:38 rh Exp $
  CMD_SRC = 	dig.${CMD_SRC_EXT} \
 -		host.${CMD_SRC_EXT} \
  		dnsquery.${CMD_SRC_EXT} \
- 		dnskeygen.${CMD_SRC_EXT}
+@@ -237,3 +236,2 @@
  CMD_OUT =	dig.${CMD_OUT_EXT} \
 -		host.${CMD_OUT_EXT} \
  		dnsquery.${CMD_OUT_EXT} \
- 		dnskeygen.${CMD_OUT_EXT}
- 
-@@ -279,7 +277,7 @@
- # Network library routines manual entries
- #
- LIB_NETWORK_BASE =	gethostbyname inet_cidr resolver hesiod getnetent \
--			tsig getaddrinfo inet_cidr getipnodebyname
-+			tsig getaddrinfo getipnodebyname
- LIB_NETWORK_SRC_EXT =	3
- LIB_NETWORK_SRC = 	gethostbyname.${LIB_NETWORK_SRC_EXT} \
- 			inet_cidr.${LIB_NETWORK_SRC_EXT} \
-@@ -303,7 +301,8 @@
- #
- # File format manual entries
+@@ -305,3 +303,4 @@
  #
 -FORMAT_BASE =	resolver irs.conf named.conf
 +FORMAT_MAIN_BASE =	named.conf
 +FORMAT_BASE =	resolver irs.conf
  FORMAT_SRC_EXT = 5
- FORMAT_SRC = 	resolver.${FORMAT_SRC_EXT} \
- 		irs.conf.${FORMAT_SRC_EXT} \
-@@ -393,6 +392,10 @@
- 		$${f}.${LIB_NETWORK_OUT_EXT} \
- 		${DESTDIR}${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR}/$${f}.${CATEXT}; \
+@@ -395,2 +394,6 @@
  	done
 +	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_MAIN_BASE}; do \
 +		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} $${f}.${FORMAT_OUT_EXT} \
 +			${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR}/$${f}.${CATEXT}; \
 +	done
  	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_BASE}; do \
- 		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
- 		$${f}.${FORMAT_OUT_EXT} \
-@@ -409,7 +412,7 @@
- ${DESTDIR}${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR} \
- ${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+@@ -411,3 +414,3 @@
  ${DESTDIR}${DESTMAN}/${MANDIR}${DESC_EXT_DIR}:
 -	mkdir $@
 +	mkdir -p $@
  
- links: FRC
- 	@set -ex; ln -s SRC/*.[0-9] .
