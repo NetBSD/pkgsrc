@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/10/03 15:31:33 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/11/25 04:19:56 schmonz Exp $
 
-SHA1 (bash-doc-2.05.tar.gz) = c07174e6f59730a925634a173541b4dbfcd5fdc1
-Size (bash-doc-2.05.tar.gz) = 880715 bytes
+SHA1 (bash-doc-2.05b.tar.gz) = 8ebe8c9a77c2a1e43b414919e03e517c29b462bb
+Size (bash-doc-2.05b.tar.gz) = 1733577 bytes
