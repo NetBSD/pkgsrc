@@ -1,11 +1,11 @@
-#!/usr/pkg/bin/perl
+#!@LOCALBASE@/bin/perl
 #
 #  Setup 6to4 IPv6, for NetBSD (and maybe others)
 #
 # (c) Copyright 2000-2002 Hubert Feyrer <hubert@feyrer.de>
 #
 
-$etcdir="/usr/pkg/etc";
+$etcdir="@PREFIX@/etc";
 #$etcdir="/usr/pkg/etc";		# debug
 
 require "$etcdir/6to4.conf";
