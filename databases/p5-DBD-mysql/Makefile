@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/10 18:32:36 bad Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/13 20:38:26 bad Exp $
 #
 
 DISTNAME=	Msql-Mysql-modules-1.2017
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://www.mysql.com.org/
 
-DEPENDS+=	mysql-client-3.22.22:../../databases/mysql-client
+DEPENDS+=	mysql-client-3.22.27:../../databases/mysql-client
 DEPENDS+=	p5-DBI-1.08:../../databases/p5-DBI
 DEPENDS+=	p5-Data-Dumper-2.10:../../devel/p5-Data-Dumper
 DEPENDS+=	p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable

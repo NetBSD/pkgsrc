@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1999/09/01 17:09:56 bad Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/13 20:38:28 bad Exp $
 #
 
 PKGNAME=	php-mysql-${PHP_VERSION}
 
-DEPENDS+=	mysql-client-3.22.22:../../databases/mysql-client
+DEPENDS+=	mysql-client-3.22.27:../../databases/mysql-client
 
 CONFIGURE_ARGS+=--with-mysql=${LOCALBASE}
 
