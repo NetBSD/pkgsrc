@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/10/28 08:46:44 skrll Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/02/04 18:09:16 skrll Exp $
 qt3/bin/moc
 qt3/include/jri.h
 qt3/include/jri_md.h
@@ -312,7 +312,6 @@ qt3/include/qstyle.h
 qt3/include/qstylefactory.h
 qt3/include/qstyleplugin.h
 qt3/include/qstylesheet.h
-qt3/include/qt.h
 qt3/include/qt_x11.h
 qt3/include/qtabbar.h
 qt3/include/qtabdialog.h

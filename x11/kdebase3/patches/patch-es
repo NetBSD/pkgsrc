@@ -1,0 +1,22 @@
+$NetBSD: patch-es,v 1.4 2003/02/04 18:06:50 skrll Exp $
+
+--- kwin/client.cpp.orig	Mon Jun 24 12:57:29 2002
++++ kwin/client.cpp
+@@ -104,7 +104,7 @@ public:
+ 
+ extern Atom qt_wm_state;
+ extern Time qt_x_time;
+-extern Atom qt_window_role;
++extern Atom qt_wm_window_role;
+ extern Atom qt_sm_client_id;
+ 
+ static int nullErrorHandler(Display *, XErrorEvent *)
+@@ -2775,7 +2775,7 @@ static QCString getStringProperty(WId w,
+  */
+ QCString Client::staticWindowRole(WId w)
+ {
+-    return getStringProperty(w, qt_window_role);
++    return getStringProperty(w, qt_wm_window_role);
+ }
+ 
+ /*!
