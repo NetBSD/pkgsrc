@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.1 1999/05/04 00:08:43 tv Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/10 10:41:41 hwr Exp $
 
---- configure.orig	Mon May  3 18:51:06 1999
-+++ configure	Mon May  3 18:51:24 1999
-@@ -2067,6 +2067,7 @@
-   echo "$ac_t""no" 1>&6
- fi
+--- configure.orig	Wed Aug 25 20:39:37 1999
++++ configure	Fri Sep 10 12:11:36 1999
+@@ -2318,6 +2318,7 @@
+ # Save cache, so that ltconfig can load it
+ 
  
 +if false; then
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+@@ -2335,6 +2336,8 @@
+ 
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -2112,7 +2113,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
--
++
 +fi
  
- # Extract the first word of "sendmail", so it can be a program name with args.
- set dummy sendmail; ac_word=$2
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
