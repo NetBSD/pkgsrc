@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2004/12/24 16:53:52 manu Exp $
+# $NetBSD: Makefile,v 1.17 2005/02/03 15:09:44 cube Exp $
 #
 
 COMMENT=	Multi-cast backBone applications
 
+SUBDIR+=	beacon
 SUBDIR+=	common-mml
 SUBDIR+=	imm
 SUBDIR+=	mdd
