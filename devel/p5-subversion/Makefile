@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/21 10:09:09 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/10 02:22:50 jlam Exp $
 
 PKGNAME=	p5-subversion-${SVNVER}
 COMMENT=	Perl bindings for Subversion
@@ -7,7 +7,7 @@ COMMENT=	Perl bindings for Subversion
 
 CONFIGURE_ENV+=		PERL=${PERL5}
 
-PERL5_REQD=		5.8
+PERL5_REQD+=		5.8
 PERL_DIR=		${WRKSRC}/subversion/bindings/swig/perl
 ALL_TARGET=		swig-pl-lib
 INSTALL_TARGET=		install-swig-pl-lib

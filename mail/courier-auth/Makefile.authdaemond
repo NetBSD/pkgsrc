@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.authdaemond,v 1.5 2004/01/11 19:41:39 cjep Exp $
+# $NetBSD: Makefile.authdaemond,v 1.6 2004/02/10 02:22:50 jlam Exp $
 
 .include "../../mail/courier-auth/Makefile.common"
 
-PERL5_REQD=		5.6.0
+PERL5_REQD+=		5.6.0
 USE_PERL5?=		build
 
 WRKSRC_FILES=		config.guess config.sub configure		\

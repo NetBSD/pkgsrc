@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/25 16:56:27 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/10 02:22:50 jlam Exp $
 #
 
 DISTNAME=		Net-DNS-0.45
@@ -20,7 +20,7 @@ DEPENDS+=		p5-Digest-MD5>=2.12:../../security/p5-Digest-MD5
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
-PERL5_REQD=		5.6.0
+PERL5_REQD+=		5.6.0
 MAKE_PARAMS=		--online-tests
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/DNS/.packlist
