@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2002/10/02 21:21:47 wiz Exp $
+
 --- aclocal.m4.orig	Tue May 14 18:26:28 2002
 +++ aclocal.m4	Tue May 14 18:27:19 2002
 @@ -4944,3 +4944,170 @@
