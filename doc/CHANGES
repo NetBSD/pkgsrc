@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1443 2003/02/20 23:20:26 salo Exp $
+$NetBSD: CHANGES,v 1.1444 2003/02/21 05:40:32 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated blackbox to 0.65.0nb2 [jschauma 2003-02-20]
 	Updated bluefish to 0.9 [salo 2003-02-20]
 	Updated glade to 0.6.4 [salo 2003-02-20]
+	Updated php4 to 4.2.3nb2 [lukem 2003-02-21]
