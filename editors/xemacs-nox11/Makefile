@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/01/19 06:52:56 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/30 08:51:52 jmc Exp $
 
-DISTNAME=	xemacs-21.1.14
-PKGNAME=	xemacs-nox11-21.1.14
+DISTNAME=	xemacs-21.4.12
+PKGNAME=	xemacs-nox11-21.4.12
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
-		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/xemacs-21.1/ \
-		ftp://ftp.usyd.edu.au/pub/Xemacs/xemacs-21.1/ \
-		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-21.1/ \
-		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/xemacs-21.1/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.4/}
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
 MAINTAINER=	magick@netbsd.org
@@ -19,6 +14,7 @@ NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
 CONFLICTS=	xemacs-[0-9]*
 
+DIST_SUBDIR=    xemacs
 PLIST_SRC=	${.CURDIR}/../xemacs/PLIST
 DISTINFO_FILE=	${.CURDIR}/../xemacs/distinfo
 PATCHDIR=	${.CURDIR}/../xemacs/patches
@@ -88,12 +84,12 @@ CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
-CONFIGURE_ARGS+=	--without-ncurses
-CONFIGURE_ARGS+=	--without-msw
-CONFIGURE_ARGS+=	--with-session=yes
+.if ${OPSYS} != "Linux"
+CONFIGURE_ARGS+=        --with-ncurses=no
+.endif
+CONFIGURE_ARGS+=	--with-msw=no
 CONFIGURE_ARGS+=	${WITH_DIALOGS} ${WITH_LDAP} ${WITH_XFACE} ${WITH_CANNA}
 CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
-CONFIGURE_ARGS+=	--lockdir=/var/tmp/xemacs.lock
 CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
 CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
 CONFIGURE_ARGS+=	--without-x11	# XXX -nox
