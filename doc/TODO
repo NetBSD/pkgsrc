@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1703 2004/05/04 02:46:21 taca Exp $
+$NetBSD: TODO,v 1.1704 2004/05/04 09:26:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -152,6 +152,7 @@ Suggested package updates
 	o balsa-1.4.4
 	o bidwatcher-1.3.15
 	o bind-9.3
+	o blender-2.33
 	o boehm-gc-6.3alpha2
 	o bogofilter-0.17.5
 	o boost-1.31.0
@@ -159,6 +160,7 @@ Suggested package updates
 	o centericq-4.9.12
 	o cervisia-2.1.2
 	o checkbot-1.74
+	o classpath-0.09
 	o cocoon-2.1.4
 	o conserver-8.1.4
 	o courier-imap-3.0.0
@@ -174,11 +176,13 @@ Suggested package updates
 	o dar-2.1.2
 	o dctc-0.85.9
 	o ddd-3.3.8
-	o delegate-8.9.1
+	o delegate-8.9.2
 	o dict-client-1.9.11
 	o dict-server-1.9.11
+	o distcc-2.14
 	o dmalloc-5.3.0
 	o dnetc-2.9004-482 [pkg/22390]
+	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
 	o dvdrip-0.50.18
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
@@ -204,23 +208,25 @@ Suggested package updates
 	o gcvs-1.0-1
 	o gdb-6.1
 	o generator-0.35
-	o gentoo-0.11.48
+	o gentoo-0.11.49
 	o getmail-3.2.3
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
+	o gkrellm2-2.1.28
 	o global-4.6
 	o glpk-4.3
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
 	o gnumeric-1.2.8
-	o gnunet-0.6.1d
-	o gnuplot-4.0.0
+	o gnunet-0.6.2
+	o gnuplot-4.0.0 [pkg/25450]
 	o gnutls-1.0.10
 	o gogo-3.11p1
 	o gqmpeg-0.91.1
 	o grepmail-5.23
+	o grhino-0.12.0
 	o gsasl-0.1.0
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.6
@@ -242,7 +248,7 @@ Suggested package updates
 	o joe-3.0
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
-	o larswm-7.3.2
+	o larswm-7.3.3
 	o latex2rtf-1.9.15
 	o lavaps-2.4
 	o leafnode-1.9.52
@@ -265,11 +271,13 @@ Suggested package updates
 	o maradns-1.0.21
 	o marbles-1.0.6
 	o matchbox-0.8
+	o mathomatic-11.0f
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.42
 	o minicom-2.1
 	o mkvtoolnix-0.8.8
+	o mldonkey-2.5.19
 	o mono-0.31
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.5.1
@@ -327,10 +335,11 @@ Suggested package updates
 	o scmxx-0.7.0
 	o scribus-1.1.6
 	o sendfile-20010424
-	o shorten-3.5.2
+	o shorten-3.6.0
 	o siag-3.6.0
 	o skill-4.1.1
 	o skkinput-2.06.4
+	o slib-3a1
 	o smarteiffel-1.1 [replacing smalleiffel]
 	o snd-7.4
 	o snes9x-1.42
@@ -342,12 +351,13 @@ Suggested package updates
 	o sweep-0.8.3
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
-	o tcpreplay-2.1.0
+	o tcpreplay-2.1.1
 	o tct-1.14
 	o teapop-0.3.8
 	o ted-2.15 [do not update per tech-pkg mail from Jonathan on 20040404]
 	o texi2html-1.70
 	o texinfo-4.7
+	o thunderbird-0.6
 	o thy-0.9.0 [pkg/25318]
 	o tkdesk-2.0
 	o tkman-2.2
@@ -391,7 +401,7 @@ Suggested package updates
 	o xzgv-0.8
 	o yacas-1.0.55
 	o yaz-2.0.12
-	o ysm-2.9.4
+	o ysm-2.9.5
 	o zenicb 1.31 (needs merge with lots of local changes)
 
 Infrastructure problems which need addressing
