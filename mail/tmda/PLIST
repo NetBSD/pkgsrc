@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/01/28 00:12:53 kim Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/06/06 05:08:34 schmonz Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -84,7 +84,6 @@ ${PYSITELIB}/TMDA/pythonlib/email/base64MIME.py
 ${PYSITELIB}/TMDA/pythonlib/email/base64MIME.pyc
 ${PYSITELIB}/TMDA/pythonlib/email/quopriMIME.py
 ${PYSITELIB}/TMDA/pythonlib/email/quopriMIME.pyc
-${HTMLDIR}/bugs.html
 ${HTMLDIR}/challengeresponse.html
 ${HTMLDIR}/config-client.html
 ${HTMLDIR}/config-filter.html
@@ -98,7 +97,6 @@ ${HTMLDIR}/features.html
 ${HTMLDIR}/filter-sources.html
 ${HTMLDIR}/history.html
 ${HTMLDIR}/howto-template.html
-${HTMLDIR}/howtos.html
 ${HTMLDIR}/img/tmda-186x253.png
 ${HTMLDIR}/img/tmda-47x64.png
 ${HTMLDIR}/img/tmda-562x765.png
@@ -107,14 +105,8 @@ ${HTMLDIR}/img/tmda-93x127.png
 ${HTMLDIR}/img/tmda-nt-616x616.png
 ${HTMLDIR}/index.html
 ${HTMLDIR}/install.html
-${HTMLDIR}/inuse.html
 ${HTMLDIR}/logos.html
-${HTMLDIR}/mirrors.html
-${HTMLDIR}/press.html
 ${HTMLDIR}/requirements.html
-${HTMLDIR}/resources.html
-${HTMLDIR}/results.html
-${HTMLDIR}/support-commercial.html
 ${HTMLDIR}/tmda-ofmipd.html
 ${HTMLDIR}/tmda-vdomains.html
 ${HTMLDIR}/trouble.html
