@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/16 07:31:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/24 20:04:32 rh Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -1247,7 +1247,12 @@ share/pixmaps/evolution.png
 @dirrm share/images/evolution/conduits
 @dirrm share/images/evolution/buttons
 @dirrm share/images/evolution
+@dirrm share/images
 @dirrm share/gnome/html/evolution-devel-guide
+@exec ${MKDIR} %D/share/gnome/html/evolution-cal-util
+@dirrm share/gnome/html/evolution-cal-util
+@exec ${MKDIR} %D/share/gnome/html/evolution-cal-client
+@dirrm share/gnome/html/evolution-cal-client
 @dirrm share/gnome/help/evolution/no/stylesheet-images
 @dirrm share/gnome/help/evolution/no/sgml
 @dirrm share/gnome/help/evolution/no/figures
@@ -1257,6 +1262,8 @@ share/pixmaps/evolution.png
 @dirrm share/gnome/help/evolution/C/figures
 @dirrm share/gnome/help/evolution/C
 @dirrm share/gnome/help/evolution
+@dirrm share/gnome/help/cal/C
+@dirrm share/gnome/help/cal
 @dirrm share/evolution/views/tasks
 @dirrm share/evolution/views/mail
 @dirrm share/evolution/views/calendar
