@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/03/29 01:52:11 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/29 02:44:30 grant Exp $
 
 DISTNAME=	sqsh-1.7-src
 PKGNAME=	sqsh-1.7
@@ -44,6 +44,12 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/sqsh.1 ${PREFIX}/man/man1/sqsh.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sqsh
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.sqshrc ${PREFIX}/share/examples/sqsh
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+.  include "../../devel/dlcompat/buildlink2.mk"
+.endif
 
 .if !defined(USE_SYBASE_OPENCLIENT)
 .  include "../../databases/freetds/buildlink2.mk"
