@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.15 2000/09/15 21:47:03 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.16 2001/01/28 21:20:48 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -65,16 +65,16 @@ bulk-check-uptodate:
 	@uptodate=1 ; \
 	if [ -f "${REF}" ]; then \
 		${SHCOMMENT} "Check files of this package" ; \
-		newfiles="`find . -type f -newer "${REF}" -print  | egrep -v -e ./work -e pkg/COMMENT -e pkg/DESCR -e README.html -e CVS -e '^\./\.' || true`" ; \
-		nnewfiles="`find . -type f -newer "${REF}" -print  | egrep -v -e ./work -e pkg/COMMENT -e pkg/DESCR -e README.html -e CVS -e '^\./\.' | wc -l`" ; \
+		newfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e pkg/COMMENT -e pkg/DESCR -e README.html -e CVS -e '^\./\.' || true`" ; \
+		nnewfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e pkg/COMMENT -e pkg/DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
 		if [ "$$nnewfiles" -gt 0 ]; then \
-			${ECHO_MSG} >&2 ">> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..." ; \
+			${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..." ; \
 			uptodate=0 ; \
 		else \
-			${ECHO_MSG} >&2 ">> ${REF} is up to date." ; \
+			${ECHO_MSG} >&2 "BULK> ${REF} is up to date." ; \
 		fi ; \
 	else \
-		${ECHO_MSG} >&2 ">> Package ${PKGNAME} not built yet, packaging..." ; \
+		${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} not built yet, packaging..." ; \
 		uptodate=0 ; \
 	fi ; \
 	if [ "$$uptodate" = "1" ]; then \
@@ -87,13 +87,13 @@ bulk-check-uptodate:
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
 			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ;  \
 			if [ -z $$pkg ]; then \
-				${ECHO_MSG} >&2 ">> Required binary package $$dep does not exist, rebuilding... " ; \
+				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
 				uptodate=0 ; \
 			elif [ "$$pkg" -nt "${REF}" ]; then \
-				${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
+				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
 				uptodate=0 ; \
 			else \
-				${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is usable. " ; \
+				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is usable. " ; \
 			fi ; \
 		done ; \
 	fi ; \
@@ -113,7 +113,7 @@ bulk-package:
 		${ECHO_MSG} '' ; \
 		${ECHO_MSG} '###' ; \
 		${ECHO_MSG} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
-		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} ^d | wc -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
+		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} ^d | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
 	fi \
 	) 2>&1 | tee -a ${BUILDLOG}
@@ -125,17 +125,17 @@ bulk-package:
 	fi ; \
 	if [ $$uptodate = 1 ]; then \
 		( if [ $$installed = 1 ]; then \
-			echo "BULK> Package ${PKGNAME} is upto-date, and still installed" ; \
-			echo "      removing installed package." ; \
+			${ECHO_MSG} "BULK> Package ${PKGNAME} is upto-date, and still installed" ; \
+			${ECHO_MSG} "      removing installed package." ; \
 			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 		else \
-			echo "BULK> Nothing to be done." ; \
+			${ECHO_MSG} "BULK> Nothing to be done." ; \
 		fi \
 		) 2>&1 | tee -a ${BUILDLOG}; \
 	else \
 		( if [ $$installed = 1 ]; then \
-			echo "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
+			${ECHO_MSG} "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
 			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 		fi ; \
@@ -187,7 +187,7 @@ bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ! ${PKG_INFO} -e ${PKGNAME} ; then \
 			${DO} ${MAKE} install-depends ; \
-			${ECHO_MSG} ">> " ${PKG_ADD} ${PKGFILE} ; \
+			${ECHO_MSG} "BULK> " ${PKG_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
