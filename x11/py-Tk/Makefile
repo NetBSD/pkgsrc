@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.9 1999/04/01 13:36:57 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/14 06:15:57 tsarna Exp $
 #
 
-DISTNAME=	pyth151
-PKGNAME=	py-Tk-1.5.1
+DISTNAME=	py152
+PKGNAME=	py-Tk-1.5.2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	dolecek@ics.muni.cz
+MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/topics/tkinter/
 
-DEPENDS+=	python-1.5.1:../../lang/python
+DEPENDS+=	python-1.5.2:../../lang/python
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 DEPENDS+=	tcl-8.0.5:../../lang/tcl80
 
 DIST_SUBDIR=	python
 
-WRKSRC=		${WRKDIR}/Python-1.5.1/Modules
+WRKSRC=		${WRKDIR}/Python-1.5.2/Modules
 ALL_TARGET=	default
-EXTRACT_ELEMENTS=	Python-1.5.1/Modules/_tkinter.c \
-			Python-1.5.1/Modules/tkappinit.c
+EXTRACT_ELEMENTS=	Python-1.5.2/Modules/_tkinter.c \
+			Python-1.5.2/Modules/tkappinit.c
 
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config/
 
-.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
+.if ${MACHINE_ARCH} == "sparc64"
 IGNORE="Needs dynamic loading"
 .endif
 
