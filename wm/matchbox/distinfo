@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/08/01 15:53:46 wiz Exp $
+
+SHA1 (matchbox-0.3.2.tar.gz) = 48916f7be3274cfd4b8c746c488cc928031edb0c
+Size (matchbox-0.3.2.tar.gz) = 195045 bytes
+SHA1 (patch-aa) = 4c2f1a91014f16b8c20b923ad3f7dab2339aaebd
+SHA1 (patch-ab) = 92a0fd3cb70f01ebfb72477a4652e6d2d61a1d71

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/08/01 15:53:46 wiz Exp $
+
+--- util/Makefile.in.orig	Thu Aug  1 16:22:33 2002
++++ util/Makefile.in
+@@ -133,7 +133,7 @@ minitime_DEPENDENCIES =
+ minitime_LDFLAGS =
+ am_minivol_OBJECTS = minivol.$(OBJEXT) tray.$(OBJEXT)
+ minivol_OBJECTS = $(am_minivol_OBJECTS)
+-minivol_LDADD = $(LDADD)
++minivol_LDADD = $(LDADD) -lossaudio
+ minivol_DEPENDENCIES =
+ minivol_LDFLAGS =
+ am_miniwave_OBJECTS = miniwave.$(OBJEXT) tray.$(OBJEXT)
