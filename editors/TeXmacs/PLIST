@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/07/28 09:31:17 recht Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/07/28 10:44:56 recht Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -229,6 +229,8 @@ share/TeXmacs/doc/devel/format/environment/env-par.en.tm
 share/TeXmacs/doc/devel/format/environment/env-src.en.tm
 share/TeXmacs/doc/devel/format/environment/env-table.en.tm
 share/TeXmacs/doc/devel/format/environment/environment.en.tm
+share/TeXmacs/doc/devel/format/environment/tm-page.fig
+share/TeXmacs/doc/devel/format/environment/tm-page.ps
 share/TeXmacs/doc/devel/format/format.de.tm
 share/TeXmacs/doc/devel/format/format.fr.tm
 share/TeXmacs/doc/devel/format/leaves.fr.tm
@@ -1188,6 +1190,7 @@ share/TeXmacs/misc/mime/texmacs.desktop
 share/TeXmacs/misc/mime/texmacs.keys
 share/TeXmacs/misc/mime/texmacs.mime
 share/TeXmacs/misc/pixmaps/LICENSE
+share/TeXmacs/misc/pixmaps/TeXmacs-einstein.xpm
 share/TeXmacs/misc/pixmaps/TeXmacs-gnu.xpm
 share/TeXmacs/misc/pixmaps/TeXmacs-old.xpm
 share/TeXmacs/misc/pixmaps/TeXmacs-solid.xpm
@@ -1609,6 +1612,7 @@ share/TeXmacs/progs/kernel/boot/abbrevs.scm
 share/TeXmacs/progs/kernel/boot/ahash-table.scm
 share/TeXmacs/progs/kernel/boot/boot.scm
 share/TeXmacs/progs/kernel/boot/compat.scm
+share/TeXmacs/progs/kernel/boot/content.scm
 share/TeXmacs/progs/kernel/boot/debug.scm
 share/TeXmacs/progs/kernel/boot/prologue.scm
 share/TeXmacs/progs/kernel/boot/srfi.scm
@@ -1626,6 +1630,7 @@ share/TeXmacs/progs/kernel/library/list.scm
 share/TeXmacs/progs/kernel/library/tmobj.scm
 share/TeXmacs/progs/kernel/library/tree.scm
 share/TeXmacs/progs/kernel/regexp/regexp-match.scm
+share/TeXmacs/progs/kernel/regexp/regexp-select.scm
 share/TeXmacs/progs/kernel/regexp/regexp-test.scm
 share/TeXmacs/progs/kernel/texmacs/tm-define.scm
 share/TeXmacs/progs/kernel/texmacs/tm-modes.scm
@@ -1843,8 +1848,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/packages/section/mathematics
 @dirrm share/TeXmacs/packages/section
 @dirrm share/TeXmacs/packages/program
-@exec ${MKDIR} %D/share/TeXmacs/packages/number
-@dirrm share/TeXmacs/packages/number
 @dirrm share/TeXmacs/packages/header/mathematics
 @dirrm share/TeXmacs/packages/header
 @dirrm share/TeXmacs/packages/example
@@ -1986,10 +1989,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/interface
 @dirrm share/TeXmacs/doc/devel/format/stylesheet
 @dirrm share/TeXmacs/doc/devel/format/regular
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/primitives
-@dirrm share/TeXmacs/doc/devel/format/primitives
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/language
-@dirrm share/TeXmacs/doc/devel/format/language
 @dirrm share/TeXmacs/doc/devel/format/environment
 @dirrm share/TeXmacs/doc/devel/format/basics
 @dirrm share/TeXmacs/doc/devel/format
