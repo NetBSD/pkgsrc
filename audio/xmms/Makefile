@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/10/25 08:59:04 skrll Exp $
+# $NetBSD: Makefile,v 1.38 2002/11/03 23:05:26 wiz Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -14,6 +14,7 @@ COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
 USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes
+USE_X11=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--without-gnome
