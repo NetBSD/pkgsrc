@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 04:59:58 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/31 18:11:25 zuntum Exp $
 
-DISTNAME=	sarah-0.4b
+DISTNAME=	sarah-0.7b
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.conundrum.com/pub/sarah/
 
@@ -15,11 +15,11 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 USE_PERL5=	YES
+REPLACE_PERL=	sarah
 NO_BUILD=	YES
 
-do-configure:
+post-patch:
 	${SED}	-e "s,/usr/local,${PREFIX},g"				\
-		-e "s,/usr/bin/perl,${LOCALBASE}/bin/perl,g"		\
 		-e "s,syslog.pid,syslogd.pid,g"				\
 		${WRKSRC}/sarah > ${WRKSRC}/sarah.done
 	${MV} ${WRKSRC}/sarah.done ${WRKSRC}/sarah
@@ -29,12 +29,11 @@ do-configure:
 	${MV} ${WRKSRC}/sarah.1.done ${WRKSRC}/sarah.1
 
 do-install:
-	cd ${WRKSRC} &&							\
-		${INSTALL_SCRIPT} sarah ${PREFIX}/bin &&		\
-		${INSTALL_DATA} sarah.conf.sample ${PREFIX}/etc &&	\
-		${INSTALL_MAN} sarah.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/sarah ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sarah
+	${INSTALL_DATA} ${WRKSRC}/sarah.conf.sample ${PREFIX}/share/examples/sarah
+	${INSTALL_MAN} ${WRKSRC}/sarah.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sarah
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/CHANGES		\
-		${PREFIX}/share/doc/sarah
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/sarah
 
 .include "../../mk/bsd.pkg.mk"
