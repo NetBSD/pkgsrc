@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/08/21 21:01:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/03 05:13:10 hubertf Exp $
 #
 
 DISTNAME=		texinfo-3.12
@@ -8,6 +8,10 @@ MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=		zlib-1.*:../zlib
+.endif
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-catgets
