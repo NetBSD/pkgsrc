@@ -1,32 +1,46 @@
-# $NetBSD: Makefile,v 1.25 2004/10/15 14:50:07 tv Exp $
+# $NetBSD: Makefile,v 1.26 2004/12/30 05:11:57 dmcmahill Exp $
 #
 
-DISTNAME=	lilypond-1.4.13
-PKGREVISION=	6
+DISTNAME=	lilypond-2.4.3
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.cs.uu.nl/pub/GNU/LilyPond/stable/
+MASTER_SITES=	http://lilypond.org/download/v2.4/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://lilypond.org/web/
 COMMENT=	GNU Music Typesetter
 
+DEPENDS+=	ec-fonts-mftraced-*:../../fonts/ec-fonts-mftraced
 BUILD_DEPENDS+=	bison>=1.875nb1:../../devel/bison
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
+USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		make
 MAKEFILE=		GNUmakefile
 
 USE_MAKEINFO=	YES
-TEXINFO_REQD=	4.0
-INFO_FILES=	lilypond.info lilypond-internals.info
+TEXINFO_REQD=	4.7
+INFO_FILES=	lilypond.info lilypond-internals.info music-glossary.info
 
 CONFIGURE_ARGS+=--disable-optimising
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
-PYTHON_VERSIONS_ACCEPTED= 20 21 # 22 has some regular expression problem
+PYTHON_VERSIONS_ACCEPTED= 21 23
+# 22 has some regular expression problem
 
-.include "../../lang/guile14/buildlink3.mk"
+SCRIPTS_DIR=	share/lilypond/${PKGVERSION}/scripts
+PLIST_SUBST+=	SCRIPTS_DIR=${SCRIPTS_DIR}
+MESSAGE_SUBST+=	SCRIPTS_DIR=${SCRIPTS_DIR}
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/${SCRIPTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/buildscripts/out/lilypond-login ${PREFIX}/${SCRIPTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/buildscripts/out/lilypond-profile ${PREFIX}/${SCRIPTS_DIR}
+
+.include "../../fonts/mftrace/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../mk/emacs.mk"
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
