@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 19:47:49 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 19:51:39 jlam Exp $
 #
 
 DISTNAME=	openvpn-2.0_beta15
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 PKG_SYSCONFSUBDIR=	openvpn
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--enable-lzo
@@ -30,15 +31,18 @@ LIBS+=		-ldes
 .include "../../mk/pthread.buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/config
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/scripts
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/keys
-	${INSTALL_DATA} ${WRKSRC}/sample-config-files/* \
-		${PREFIX}/share/examples/openvpn/config
-	${INSTALL_DATA} ${WRKSRC}/sample-scripts/* \
-		${PREFIX}/share/examples/openvpn/scripts
-	${INSTALL_DATA} ${WRKSRC}/sample-keys/* \
-		${PREFIX}/share/examples/openvpn/keys
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR/config
+	cd ${WRKSRC}/sample-config-files; for file in *; do		\
+		${INSTALL_DATA} $$file ${EGDIR}/config;			\
+	done
+	${INSTALL_DATA_DIR} ${EGDIR/scripts
+	cd ${WRKSRC}/sample-scripts; for file in *; do			\
+		${INSTALL_DATA} $$file ${EGDIR}/scripts;		\
+	done
+	${INSTALL_DATA_DIR} ${EGDIR/keys
+	cd ${WRKSRC}/sample-keys; for file in *; do			\
+		${INSTALL_DATA} $$file ${EGDIR}/keys;			\
+	done
 
 .include "../../mk/bsd.pkg.mk"
