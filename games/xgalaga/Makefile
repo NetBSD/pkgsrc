@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/11/29 01:12:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2002/06/23 03:54:30 jlam Exp $
 #
 
 DISTNAME=		xgalaga-2.0.34
@@ -12,10 +12,10 @@ COMMENT=		Very fast true-to-the-original port of galaga for X11
 
 USE_X11BASE=		YES
 USE_XPM=		YES
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--prefix=${X11PREFIX}/share/xgalaga
-CONFIGURE_ARGS+=	--exec-prefix=${X11PREFIX}/bin
-CFLAGS+=		-I${X11PREFIX}/include
+GNU_CONFIGURE=		YES
+GNU_CONFIGURE_PREFIX=	${PREFIX}/share/xgalaga
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
+CFLAGS+=		-I${LOCALBASE}/include -I${X11BASE}/include
 CPPFLAGS+=		${CFLAGS}
 
 post-install:
