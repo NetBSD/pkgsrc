@@ -1,13 +1,19 @@
-$NetBSD: patch-ab,v 1.5 2001/06/04 16:18:21 abs Exp $
+$NetBSD: patch-ab,v 1.6 2003/06/19 11:45:02 seb Exp $
 
---- Makefile.in.orig	Wed Feb 21 12:17:36 2001
-+++ Makefile.in
-@@ -77,7 +77,7 @@
- VERSION = @VERSION@
- YACC = @YACC@
+--- contrib/Makefile.am.orig	2002-06-20 13:38:34.000000000 +0000
++++ contrib/Makefile.am
+@@ -1,10 +1,12 @@
+ s1 = cfdoc
+ s2 = cfengine.el
  
--SUBDIRS = pub src bin contrib inputs doc
-+SUBDIRS = pub src bin contrib inputs
+-sbin_SCRIPTS = cfcron
+-bin_SCRIPTS = cfdoc vicf
++sbin_SCRIPTS = cfcron cfdoc
+ pkgdata_SCRIPTS = $(s2)
  
- EXTRA_DIST = SURVEY acconfig.h
++exampledir = $(prefix)/share/examples/cfengine
++example_SCRIPTS = vicf
++
+ EXTRA_DIST = README README.cfcron README.vicf $(s1) $(s2)
  
+ #
