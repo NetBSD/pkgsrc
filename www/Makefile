@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.331 2004/07/16 11:31:42 jdolecek Exp $
+# $NetBSD: Makefile,v 1.332 2004/07/17 01:15:44 darcy Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -37,6 +37,7 @@ SUBDIR+=	ap-xslt
 SUBDIR+=	ap2-auth-mysql
 SUBDIR+=	ap2-auth-pgsql
 SUBDIR+=	ap2-perl
+SUBDIR+=	ap2-python
 SUBDIR+=	ap2-ruby
 SUBDIR+=	ap2-subversion
 SUBDIR+=	ap2-transform
