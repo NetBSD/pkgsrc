@@ -1,25 +1,24 @@
-# $NetBSD: Makefile,v 1.47 2004/11/20 22:10:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.48 2005/01/20 11:48:17 adam Exp $
 
-DISTNAME=		bonobo-1.0.18
-PKGREVISION=		9
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bonobo/1.0/}
+DISTNAME=	bonobo-1.0.22
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/bonobo/1.0/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Architecture for creating reusable software components
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Architecture for creating reusable software components
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 BUILDLINK_DEPENDS.libxml=	libxml>1.8.15
 
-USE_BUILDLINK3=		YES
-USE_PKGLOCALEDIR=	YES
-USE_X11BASE=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11BASE=		yes
 USE_GNU_TOOLS+=		make
-
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		X11BASE="${X11BASE}"
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
