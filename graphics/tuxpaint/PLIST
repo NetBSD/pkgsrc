@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/29 20:58:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/22 12:40:38 wiz Exp $
 bin/tuxpaint
 bin/tuxpaint-import
 etc/tuxpaint/tuxpaint.conf
+man/man1/tuxpaint-import.1
+man/man1/tuxpaint.1
 share/doc/tuxpaint/AUTHORS.txt
 share/doc/tuxpaint/CHANGES.txt
 share/doc/tuxpaint/COPYING.txt
@@ -51,6 +53,12 @@ share/doc/tuxpaint/nn/FAQ.txt
 share/doc/tuxpaint/nn/INSTALLERING.txt
 share/doc/tuxpaint/nn/PNG.txt
 share/doc/tuxpaint/nn/README.txt
+share/doc/tuxpaint/pt_br/AUTORES.txt
+share/doc/tuxpaint/pt_br/COPYING_pt_BR.txt
+share/doc/tuxpaint/pt_br/FAQ.txt
+share/doc/tuxpaint/pt_br/INSTALL.txt
+share/doc/tuxpaint/pt_br/PNG.txt
+share/doc/tuxpaint/pt_br/README.txt
 share/doc/tuxpaint/tr/AUTHORS.txt
 share/doc/tuxpaint/tr/COPYING_tr.txt
 share/doc/tuxpaint/tr/FAQ.txt
@@ -59,6 +67,7 @@ share/doc/tuxpaint/tr/PNG.txt
 share/doc/tuxpaint/tr/README.txt
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tuxpaint.mo
@@ -123,15 +132,6 @@ share/tuxpaint/images/shapes/square_f.png
 share/tuxpaint/images/shapes/triangle.png
 share/tuxpaint/images/shapes/triangle_f.png
 share/tuxpaint/images/title.jpg
-share/tuxpaint/images/titles/brushes.png
-share/tuxpaint/images/titles/colors.png
-share/tuxpaint/images/titles/letters.png
-share/tuxpaint/images/titles/magic.png
-share/tuxpaint/images/titles/nocolors.png
-share/tuxpaint/images/titles/none.png
-share/tuxpaint/images/titles/shapes.png
-share/tuxpaint/images/titles/stamps.png
-share/tuxpaint/images/titles/tools.png
 share/tuxpaint/images/tools/brush.png
 share/tuxpaint/images/tools/eraser.png
 share/tuxpaint/images/tools/lines.png
@@ -162,6 +162,8 @@ share/tuxpaint/images/ui/cursor_down.png
 share/tuxpaint/images/ui/cursor_up.png
 share/tuxpaint/images/ui/erase.png
 share/tuxpaint/images/ui/no.png
+share/tuxpaint/images/ui/no_title.png
+share/tuxpaint/images/ui/no_title_large.png
 share/tuxpaint/images/ui/open.png
 share/tuxpaint/images/ui/paintcan.png
 share/tuxpaint/images/ui/progress.png
@@ -170,6 +172,8 @@ share/tuxpaint/images/ui/scroll_down_off.png
 share/tuxpaint/images/ui/scroll_up.png
 share/tuxpaint/images/ui/scroll_up_off.png
 share/tuxpaint/images/ui/sparkles.png
+share/tuxpaint/images/ui/title.png
+share/tuxpaint/images/ui/title_large.png
 share/tuxpaint/images/ui/yes.png
 share/tuxpaint/sounds/bleep.wav
 share/tuxpaint/sounds/blocks.wav
@@ -207,7 +211,6 @@ share/tuxpaint/sounds/thin.wav
 @dirrm share/tuxpaint/images/ui
 @dirrm share/tuxpaint/images/tux
 @dirrm share/tuxpaint/images/tools
-@dirrm share/tuxpaint/images/titles
 @dirrm share/tuxpaint/images/shapes
 @dirrm share/tuxpaint/images/magic
 @dirrm share/tuxpaint/images
@@ -215,6 +218,7 @@ share/tuxpaint/sounds/thin.wav
 @dirrm share/tuxpaint/brushes
 @dirrm share/tuxpaint
 @dirrm share/doc/tuxpaint/tr
+@dirrm share/doc/tuxpaint/pt_br
 @dirrm share/doc/tuxpaint/nn
 @dirrm share/doc/tuxpaint/nl
 @dirrm share/doc/tuxpaint/it
