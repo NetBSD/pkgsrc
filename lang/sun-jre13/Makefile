@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/08/14 17:23:47 abs Exp $
+# $NetBSD: Makefile,v 1.15 2001/09/14 10:19:11 abs Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -37,7 +37,6 @@ DEPENDS+=	suse_x11-*:../../emulators/suse_x11
 JDK_HOME:=	${LOCALBASE}/java
 .endif
 
-NO_BUILD=	yes
 # since we change PREFIX:
 NO_MTREE=	yes
 
@@ -50,10 +49,15 @@ post-fetch:
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
+do-build:
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/wrap.sh >${WRKDIR}/java
+
 # This is ugly.  The chown should happen after copying, or tar should have
 # a way to override permissions.
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX} ${PREFIX}/jre
+	${INSTALL_PROGRAM_DIR} ${PREFIX} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/java ${PREFIX}/bin/java
 	${CHOWN} -hR ${BINOWN}:${BINGRP} ${WRKSRC}
 	${GTAR} -C ${WRKSRC} -cf- . | ${GTAR} -C ${PREFIX}/jre -xpf-
 
