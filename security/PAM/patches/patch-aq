@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+$NetBSD: patch-aq,v 1.2 2001/06/19 09:20:11 jlam Exp $
 
 --- modules/pam_unix/Makefile.orig	Sat Oct 21 14:28:23 2000
 +++ modules/pam_unix/Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aq,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  
  ifdef USE_CRACKLIB
 -CRACKLIB = -lcrack
-+CRACKLIB = -R${PREFIX}/lib -L${PREFIX}/lib -lcrack
++CRACKLIB = -R${PREFIX}/lib -L${BUILDLINK_DIR}/lib -lcrack
  endif
  
  
