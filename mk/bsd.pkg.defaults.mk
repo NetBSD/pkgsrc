@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.163 2003/07/27 19:59:40 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.164 2003/07/29 17:24:49 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -903,7 +903,7 @@ IRCD_HYBRID_USE_SYSLOG?=        NO
 # Possible: YES, NO
 # Default: NO
 
-IRCD_HYBRID_DPATH?=	/etc/ircd-hybrid/
+IRCD_HYBRID_DPATH?=	${PKG_SYSCONFDIR}/ircd-hybrid/
 # Used by ircd-hybrid. Specify the directory pathname where the daemon expects
 # various configuration files.
 # Possible: any path, with a trailing `/'
