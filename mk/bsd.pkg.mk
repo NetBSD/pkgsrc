@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1225 2003/07/28 20:01:54 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1226 2003/07/30 15:04:21 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -34,8 +34,10 @@ MAKE_ENV+=	USETOOLS="${USETOOLS}"
 # Makefile, which are usually not customizable.
 .PHONY: pre-fetch build-defs-message
 pre-fetch: build-defs-message
-build-defs-message:
+.if !target(build-defs-message)
+build-defs-message: ${WRKDIR}
 .if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
+.if !exists(${WRKDIR}/.bdm_done)
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The following variables will affect the build process of this package,"
 	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
@@ -53,6 +55,9 @@ build-defs-message:
 	@${ECHO} "You may want to abort the process now with CTRL+C and change their value"
 	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after the changes."
 	@${ECHO} "=========================================================================="
+	@${TOUCH} ${WRKDIR}/.bdm_done
+.endif
+.endif
 .endif
 
 ##### Some NetBSD platforms permitted the user to set the binary format while
