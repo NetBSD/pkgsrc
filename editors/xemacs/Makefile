@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/03/15 01:58:35 fredb Exp $
+# $NetBSD: Makefile,v 1.41 2002/03/18 21:17:37 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.14
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	magick@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	XEmacs text editor version 21
 
