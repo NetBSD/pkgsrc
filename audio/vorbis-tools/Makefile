@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/02 12:45:42 lukem Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/03 01:37:19 wiz Exp $
 
 DISTNAME=	vorbis-tools-1.0rc3
 PKGNAME=	vorbis-tools-1.0.0.7
@@ -21,10 +21,9 @@ CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}		\
 			--with-vorbis-prefix=${BUILDLINK_DIR}		\
 			--with-ao-prefix=${BUILDLINK_DIR}
 
-# GLib needs a working pthreads implementation, and pth is proven to work.
+# vorbis-tools needs a working pthreads implementation, and pth is proven
+# to work.
 USE_PTHREAD=	native pth
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../audio/libao/buildlink.mk"
 .include "../../audio/libogg/buildlink.mk"
