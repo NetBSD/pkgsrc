@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9763 2005/04/05 09:27:50 wiz Exp $
+$NetBSD: CHANGES,v 1.9764 2005/04/05 09:52:32 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1912,3 +1912,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-MIME-Types to 1.15 [wiz 2005-04-05]
 	Updated m4 to 1.4.3 [wiz 2005-04-05]
 	Updated cvsweb to 3.0.5 [wiz 2005-04-05]
+	Updated gaim to 1.2.1 [salo 2005-04-05]
