@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:20 zuntum Exp $
+bin/dircproxy
+bin/dircproxy-crypt
+man/man1/dircproxy.1
+man/man1/dircproxy-crypt.1
+share/dircproxy/dircproxyrc
+share/dircproxy/log.pl
+@dirrm share/dircproxy
