@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1143 2003/12/07 19:18:51 wiz Exp $
+$NetBSD: TODO,v 1.1144 2003/12/08 14:55:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -226,14 +226,11 @@ Suggested package updates
 	o lcms-1.0.9
 	o leafnode-1.9.46
 	o lesstif-0.93.94
-	o libao-0.8.4
 	o libgtop-2.0.6
 	o libmpeg3-1.5.3
-	o libogg-1.1
 	o libole2-2.2.8
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
-	o libvorbis-1.0.1
 	o licq-1.2.7
 	o lilypond-2.0.0
 	o linc-1.0.3 [pkg/23673]
@@ -263,7 +260,6 @@ Suggested package updates
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
-	o nasm-0.98.38
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
@@ -345,7 +341,6 @@ Suggested package updates
 	o vfu-4.03
 	o vim-kde-6.2.14 [pkg/23681]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
-	o vorbis-tools-1.0.1
 	o vttest-20030301
 	o w3m-0.4.2
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
