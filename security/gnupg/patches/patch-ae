@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2003/08/25 21:25:26 itojun Exp $
+$NetBSD: patch-ae,v 1.6 2003/12/25 14:05:02 wiz Exp $
 
---- configure.ac.orig	2003-08-22 04:45:43.000000000 +0900
-+++ configure.ac	2003-08-26 06:21:17.000000000 +0900
-@@ -602,7 +602,7 @@
+--- configure.ac.orig	Tue Dec 23 20:20:58 2003
++++ configure.ac
+@@ -609,7 +609,7 @@ AC_CHECK_FUNCS(strerror stpcpy strsep st
  AC_CHECK_FUNCS(strcasecmp strncasecmp ctermid times)
  AC_CHECK_FUNCS(memmove gettimeofday getrusage setrlimit clock_gettime)
  AC_CHECK_FUNCS(atexit raise getpagesize strftime nl_langinfo setlocale)
