@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8625 2005/01/06 00:10:09 abs Exp $
+$NetBSD: CHANGES,v 1.8626 2005/01/06 07:26:40 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -118,4 +118,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cooledit to 3.17.14 [adam 2005-01-05]
 	Updated pkgconflict to 0.4 [tv 2005-01-05]
 	Updated cpuflags to 0.80 [abs 2005-01-05]
-
+	Updated cups to 1.1.23 [jlam 2005-01-06]
