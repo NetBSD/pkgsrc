@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9576 2005/03/23 13:25:16 schmonz Exp $
+$NetBSD: CHANGES,v 1.9577 2005/03/23 14:33:32 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1588,3 +1588,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libopendaap to 0.3.0nb1 [jmmv 2005-03-23]
 	Updated ns-remote to 1.10 [abs 2005-03-23]
 	Updated joe to 3.2 [adam 2005-03-23]
+	Updated digest to 20050323 [agc 2005-03-23]
