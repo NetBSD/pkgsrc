@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.5 2001/12/12 18:25:40 wiz Exp $
+
+--- src/utils.c.orig	Mon Jun  4 11:06:17 2001
++++ src/utils.c
+@@ -901,8 +901,10 @@
+    
+    if (file)
+      d_msprintf(&path, "%s/.gnapster/%s/%s", getenv("HOME"), subdir, file);
+-   else
++   else if (subdir)
+      d_msprintf(&path, "%s/.gnapster/%s", getenv("HOME"), subdir);
++   else
++     d_msprintf(&path, "%s/.gnapster", getenv("HOME"));
+    
+    return path;
+ }
+@@ -1498,7 +1500,7 @@
+    
+    relocate_config(home);
+    
+-   path = local_path("", NULL);
++   path = local_path(NULL, NULL);
+    if (stat(path, &st) < 0)
+      if (mkdir(path, 0755) < 0)
+        fprintf(stderr, "Could not create ~/.gnapster directory...functionality may be limited\n");
