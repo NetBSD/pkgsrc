@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/26 12:54:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/22 20:48:15 jmmv Exp $
 #
 
 DISTNAME=	fxtv-capture-1.0
@@ -19,6 +19,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 do-install:	# empty
 
