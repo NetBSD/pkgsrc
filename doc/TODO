@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1162 2003/12/12 11:58:05 adam Exp $
+$NetBSD: TODO,v 1.1163 2003/12/12 21:41:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -106,14 +106,17 @@ Suggested new packages
 Suggested package updates
 =========================
 
+	o GConf2-2.4.0.1 [pkg/23697]
+	o GConf2-ui-2.4.0.1 [pkg/23698]
 	o ImageViewer-0.6.3
-	o SDL_gfx-2.0.9
-	o TeXmacs-1.0.2.9
+	o SDL_gfx-2.0.10
+	o TeXmacs-1.0.2.10
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.1 [pkgsrc-wip]
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
+	o antiword-0.35
 	o atari800-1.3.1
 	o atk-1.4.1 [pkg/23684]
 	o autogen-5.5.6
@@ -122,12 +125,13 @@ Suggested package updates
 	o awstats-5.9
 	o balsa-1.4.4
 	o blender-2.31a
-	o bzflag-1.7g2
+	o boehm-gc-6.3alpha2
+	o bzflag-1.10.0
 	o centericq-4.9.9
 	o cervisia-2.0
 	o clisp-2.31
 	o clusterit-2.2
-	o conserver-8.0.8
+	o conserver-8.0.9
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.44.2
 	o courier-auth-0.42.2 [pkg/22371]
@@ -138,6 +142,7 @@ Suggested package updates
 	o crossfire-1.5.0
 	o csound-4.24.1
 	o cssc-0.16alpha.pl0
+	o cvs-1.11.10
 	o cvs-1.12.3
 	o cvsup-16.1.h [pkg/22870]
 	o cxref-1.5e
@@ -151,7 +156,7 @@ Suggested package updates
 	o distcc-2.11.2
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
-	o dvipng-0.7
+	o dvipng-0.8
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o echoping-5.0.1
@@ -161,7 +166,7 @@ Suggested package updates
 	o elm-me-2.4pl109a
 	o enlightenment-0.16.6
 	o ettercap-0.6.b
-	o evolution-1.4.4
+	o evolution-1.5
 	o exim-4.24
 	o festival-1.4.3
 	o findutils-4.1.20
@@ -171,6 +176,7 @@ Suggested package updates
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
 	o gauche-0.7 [kei]
+	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdb-6.0
@@ -188,6 +194,7 @@ Suggested package updates
 	o gnats-4.0 [pkgsrc-wip]
 	o gnocatan-0.8.0
 	o gnome-core-2.4
+	o gnome-mime-data-2.4.0 [pkg/23714]
 	o gnome-utils-2.4.1
 	o gnomeicu-0.99
 	o gnuchess-5.06
@@ -213,12 +220,12 @@ Suggested package updates
 	o inn-2.4.0
 	o iozone-3.207
 	o isync-0.9.1 [pkg/22189]
-	o ivtools-1.1.1
+	o ivtools-1.1.2
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
 	o jwhois-3.2.2 [pkg/22741]
-	o kaffe-1.1.2
+	o kaffe-1.1.3
 	o kbiff-3.7
 	o kile-1.6 [markd]
 	o koffice-1.2.94 [pkg/23412|kleink]
@@ -234,7 +241,7 @@ Suggested package updates
 	o lilypond-2.0.0
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
-	o lwm-1.01
+	o lwm-1.2.0
 	o lynx-current-2.8.5dev9
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
@@ -251,13 +258,15 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-mplayer-1.0
 	o moz-bin-plugger-1.4.0
+	o mplayer-1.0pre3
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-2.9.3
+	o multitail-3.0.2
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
 	o netatalk-1.6.3 [pkg/21930]
+	o nethack-3.4.3
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
@@ -272,6 +281,7 @@ Suggested package updates
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
+	o pcre-4.5
 	o pdmenu-1.2.81
 	o php-4.3.4
 	o plib-1.7.0
@@ -281,12 +291,13 @@ Suggested package updates
 	o pureftpd-1.0.17
 	o py-curl-7.10.8
 	o py-dns-1.2.0
+	o py-jpCodecs-1.4.10 [pkg/23715]
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
 	o qt-3.2.2 [recht]
 	o qt-3.2.3
-	o rdiff-backup-0.12.6
+	o rdiff-backup-0.12.6 [pkg/23730]
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.20
@@ -312,9 +323,10 @@ Suggested package updates
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
-	o staroffice-7
+	o staroffice-7p1
 	o stella-1.3
 	o streamtuner-0.10.2
+	o sylpheed-0.9.8
 	o t1lib-5.0.0
 	o tcl/tk-8.4.5
 	o tcl-expect-5.39.0
@@ -335,6 +347,7 @@ Suggested package updates
 	o w3m-0.4.2
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
+	o wistumbler2-2.00pre4
 	o wmbiff-0.4.17
 	o wv2-0.2
 	o wwwoffle-2.8a
