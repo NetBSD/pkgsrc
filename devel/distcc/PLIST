@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/11 06:45:52 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/10/05 12:03:12 martti Exp $
 bin/distcc
 bin/distccd
 bin/distccmon-text
 man/man1/distcc.1
 man/man1/distccd.1
+share/distccmon-gnome-icon.png
+share/distccmon-gnome.desktop
+share/distccmon-gnome.glade
+share/distccmon-gnome.gladep
 share/doc/distcc/AUTHORS
 share/doc/distcc/COPYING
-share/doc/distcc/COPYING.FDL
 share/doc/distcc/INSTALL
 share/doc/distcc/NEWS
 share/doc/distcc/README
