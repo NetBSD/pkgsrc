@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2000/01/21 13:01:57 itojun Exp $
+
 --- makefile.orig	Thu Apr 10 03:02:19 1997
 +++ makefile	Fri Jan 21 21:31:07 2000
 @@ -15,8 +15,8 @@
