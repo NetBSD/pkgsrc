@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8963 2005/01/28 15:08:14 taca Exp $
+$NetBSD: CHANGES,v 1.8964 2005/01/28 16:20:26 veego Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -644,3 +644,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated librsvg to 1.0.3 [adam 2005-01-28]
 	Updated eel to 1.0.2 [adam 2005-01-28]
 	Updated ruby-webrick to 1.3.1nb1 [taca 2005-01-28]
+        Updated bittornado to 0.3.10 [veego 2005-01-28]
+        Updated bittornado-gui to 0.3.10 [veego 2005-01-28]
