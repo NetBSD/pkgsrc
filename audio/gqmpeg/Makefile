@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2001/03/01 21:05:45 tron Exp $
+# $NetBSD: Makefile,v 1.32 2001/03/25 16:21:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
 DISTNAME=		gqmpeg-0.8.3
+PKGNAME=		${DISTNAME}nb1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg/}
 
