@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/05 22:54:03 hubertf Exp $
+
+--- xtoys	Mon Aug  2 01:11:02 1999
++++ xtoys	Wed Sep 22 12:55:58 1999
+@@ -1,5 +1,5 @@
+-#!/bin/bash
+-ximg="`ls /usr/share/xteddy` `ls /usr/local/share/xteddy`"
++#!/bin/ksh
++ximg="`ls @PREFIX@/share/xteddy`"
+ NUM=0
+ for i in $ximg ; do
+   NUM=`expr $NUM + 1`
