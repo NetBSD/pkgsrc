@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2004/02/27 18:28:05 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/07/04 10:25:42 mrg Exp $
 #
 
-DISTNAME=		swfdec-0.2.1
+DISTNAME=		swfdec-0.2.2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swfdec/}
 
