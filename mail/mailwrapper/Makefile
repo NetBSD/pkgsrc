@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:41:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/05/01 12:10:11 jmmv Exp $
 
 DISTNAME=	mailwrapper-19990412
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/mailwrapper
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_LOCAL}
@@ -10,6 +11,7 @@ COMMENT=	NetBSD 1.4's wrapper to support arbitrary Mail Transport Agents
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
+USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 MANCOMPRESSED_IF_MANZ=	yes
 
@@ -17,14 +19,23 @@ MANCOMPRESSED_IF_MANZ=	yes
 PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
-MAILER_CONF=	/etc/mailer.conf
+EGDIR=		${PREFIX}/share/examples/mailwrapper
+CONF_FILES=	${EGDIR}/mailer.conf ${PKG_SYSCONFDIR}/mailer.conf
+
 LIBEXECDIR=	/usr/libexec/sendmail
 SENDMAIL=	/usr/sbin/sendmail
 
+post-patch:
+.for f in mailer.conf.5 mailwrapper.8 mailwrapper.c
+	${SED} -e 's|/etc/mailer.conf|${PKG_SYSCONFDIR}/mailer.conf|g' \
+		< ${WRKSRC}/$f > ${WRKSRC}/$f.new
+	${MV} ${WRKSRC}/$f.new ${WRKSRC}/$f
+.endfor
+.undef f
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/mailer.conf ${PREFIX}/etc/mailer.conf.default
-	${TEST} -e ${MAILER_CONF} || \
-	${LN} -s ${PREFIX}/etc/mailer.conf.default /etc/mailer.conf
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/mailer.conf ${EGDIR}/mailer.conf
 	${INSTALL_DATA_DIR} ${LIBEXECDIR}
 	${MV} -i ${SENDMAIL} ${LIBEXECDIR} </dev/null 2>/dev/null || ${TRUE}
 	${LN} -fs ${PREFIX}/sbin/mailwrapper /usr/bin/mailq
