@@ -1,0 +1,3 @@
+SqWebMail is a web CGI client for sending and receiving E-mail using
+Maildir mailboxes.  It is very lightweight -- it reads mail directly
+from Maildirs.
