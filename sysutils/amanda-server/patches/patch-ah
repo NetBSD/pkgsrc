@@ -1,0 +1,28 @@
+--- example/amanda.conf.in.old	Thu Feb 25 15:56:29 1999
++++ example/amanda.conf.in	Tue Nov 17 20:17:36 1998
+@@ -59,8 +59,8 @@
+ tpchanger "chg-manual"	# the tape-changer glue script
+ tapedev "@DEFAULT_TAPE_DEVICE@"	# the no-rewind tape device to be used
+ rawtapedev "@DEFAULT_RAW_TAPE_DEVICE@"	# the raw device to be used (ftape only)
+-changerfile "/usr/adm/amanda/@DEFAULT_CONFIG@/changer"
+-changerfile "/usr/adm/amanda/@DEFAULT_CONFIG@/changer-status"
++changerfile "@CONFIG_DIR@/@DEFAULT_CONFIG@/changer"
++changerfile "@CONFIG_DIR@/@DEFAULT_CONFIG@/changer-status"
+ changerfile "@CONFIG_DIR@/@DEFAULT_CONFIG@/changer.conf"
+ changerdev "@DEFAULT_CHANGER_DEVICE@"
+ 
+@@ -130,10 +130,10 @@
+ # Note that, although the keyword below is infofile, it is only so for
+ # historic reasons, since now it is supposed to be a directory (unless
+ # you have selected some database format other than the `text' default)
+-infofile "/usr/adm/amanda/@DEFAULT_CONFIG@/curinfo"	# database DIRECTORY
+-logdir   "/usr/adm/amanda/@DEFAULT_CONFIG@"		# log directory
+-indexdir "/usr/adm/amanda/@DEFAULT_CONFIG@/index"	# index directory
+-#tapelist "/usr/adm/amanda/@DEFAULT_CONFIG@/tapelist"	# list of used tapes
++infofile "@localstatedir@/@DEFAULT_CONFIG@/curinfo"	# database DIRECTORY
++logdir   "@localstatedir@/@DEFAULT_CONFIG@"		# log directory
++indexdir "@localstatedir@/@DEFAULT_CONFIG@/index"	# index directory
++#tapelist "@localstatedir@/@DEFAULT_CONFIG@/tapelist"	# list of used tapes
+ # tapelist is stored, by default, in the directory that contains amanda.conf
+ 
+ 
