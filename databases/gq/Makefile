@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:24 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:17:25 wiz Exp $
 #
 
 DISTNAME=	gq-0.3.0
@@ -8,6 +8,7 @@ MASTER_SITES=	http://biot.com/gq/download/ \
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://biot.com/gq/
+COMMENT=	GTK-based LDAP client
 
 DEPENDS+=	openldap>=1.2.11:../../databases/openldap
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk

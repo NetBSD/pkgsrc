@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/10 23:13:45 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 14:17:36 wiz Exp $
 #
 
 DISTNAME=	pgaccess-0.98.6
@@ -11,6 +11,7 @@ MASTER_SITES=	ftp://speedy.flex.ro/pub/pgaccess/ \
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.flex.ro/pgaccess/
+COMMENT=	Free graphical database management tool for PostgreSQL
 
 DEPENDS+=	tk-postgresql>=6.5.3:../../databases/tk-postgresql
 

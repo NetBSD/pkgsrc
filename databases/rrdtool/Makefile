@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/05 12:29:10 wulf Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 14:17:40 wiz Exp $
 #
 
 DISTNAME=	rrdtool-1.0.28
@@ -7,6 +7,7 @@ MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
 MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool
+COMMENT=	Data analysis tool generating graphical representations
 
 DEPENDS+=	cgilib-0.5:../../www/cgilib
 DEPENDS+=	gd>=1.7.3:../../graphics/gd

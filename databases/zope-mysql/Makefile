@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/01 05:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 14:17:45 wiz Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -8,6 +8,7 @@ MASTER_SITES=   http://www.zope.org/Members/MikeP/ZMySQLDA/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/Members/MikeP/ZMySQLDA
+COMMENT=	Zope Database Adaptor for MySQL
 
 DEPENDS+=	zope-2.*:../../www/zope
 DEPENDS+=	py-mysqldb-0.1.3:../../databases/py-mysqldb

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/07 08:10:40 mjl Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 14:17:33 wiz Exp $
 #
 
 DISTNAME=	DBI-1.14
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://www.symbolstone.org/technology/perl/DBI/index.html
+COMMENT=	the database-independent Perl database access API
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBI/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/12/22 18:42:54 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/16 14:17:39 wiz Exp $
 
 DISTNAME=	PyGreSQL-3.1
 PKGNAME=	py-postgresql-3.1
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.druid.net/pygresql/
+COMMENT=	PostgreSQL interface for Python
 
 DEPENDS+=	python-2.*:../../lang/python
 DEPENDS+=	postgresql-7.*:../../databases/postgresql
