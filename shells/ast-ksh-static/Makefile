@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/01/10 07:04:02 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/10 07:09:26 grant Exp $
 #
 .include "../../shells/ast-ksh/Makefile.common"
 
@@ -10,7 +10,7 @@ PATCHDIR=	${.CURDIR}/../../shells/ast-ksh/patches
 PKGDIR=		${.CURDIR}/../../shells/ast-ksh
 
 PKGVERSION:=	${PKGNAME:C|^.*-||}
-PKGNAME:=	ast-ksh-static-${PKGVERSION}
+PKGNAME:=	${PKGBASE}-static-${PKGVERSION}
 COMMENT:=	Statically-linked version of the ${COMMENT}
 
 KSH93_MAKEFLAGS=LDFLAGS=-static
