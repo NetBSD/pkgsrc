@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1231 2003/12/21 09:51:24 jmmv Exp $
+$NetBSD: TODO,v 1.1232 2003/12/21 10:06:07 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -145,7 +145,6 @@ Suggested package updates
 	o ddd-3.3.8
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
-	o docbook-xsl-1.64.1
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
