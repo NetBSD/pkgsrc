@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.81 2003/04/15 01:33:58 grant Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.82 2003/04/15 01:35:59 grant Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -775,7 +775,7 @@ MAKE_ENV+=	${BUILDLINK_ENV}
 
 # OS-specific overrides for buildlink2 wrappers
 #
-.if ${CC:M*gcc*} != ""
+.if ${CC:M*gcc*} == ""
 _BLNK_WRAPPEES.SunOS?=	CC CXX
 SUNWSPROBASE?=		/opt/SUNWspro
 CC.SunOS?=		${SUNWSPROBASE}/bin/cc
