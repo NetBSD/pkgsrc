@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3270 2003/09/07 21:53:34 jlam Exp $
+$NetBSD: CHANGES,v 1.3271 2003/09/07 22:34:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3564,3 +3564,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lq-sp to 1.3.4.9 [wiz 2003-09-07]
 	Updated esound to 0.2.32 [wiz 2003-09-07]
 	Updated x11-links to 0.14 [jlam 2003-09-07]
+	Updated pkg_comp to 1.10 [jmmv 2003-09-07]
