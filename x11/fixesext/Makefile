@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/05/09 13:24:03 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/05 22:18:57 recht Exp $
 #
 
-DISTNAME=		fixesext-2.0
+DISTNAME=		fixesext-2.0.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/release/
 EXTRACT_SUFX=		.tar.bz2
