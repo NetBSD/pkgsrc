@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 16:44:33 martti Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/02 14:22:15 minoura Exp $
 
-DISTNAME=	emacs-packages-0.3
+DISTNAME=	emacs-packages-0.4
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,7 +20,6 @@ DEPENDS+=	auctex-[0-9]*:../../print/auctex
 .if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "20"
 DEPENDS+=	calc-[0-9]*:../../math/calc
 .endif
-DEPENDS+=	ddskk-[0-9]*:../../inputmethod/ddskk
 DEPENDS+=	eieio-[0-9]*:../../lang/eieio
 DEPENDS+=	elib-[0-9]*:../../devel/elib
 DEPENDS+=	emacs-dict-client-[0-9]*:../../textproc/emacs-dict-client
@@ -55,6 +54,7 @@ DEPENDS+=	ruby-mode-[0-9]*:../../devel/ruby-mode
 DEPENDS+=	ruby-rd-mode-[0-9]*:../../devel/ruby-rd-mode
 DEPENDS+=	semantic-[0-9]*:../../devel/semantic
 DEPENDS+=	semi-[0-9]*:../../devel/semi
+DEPENDS+=	skk-[0-9]*:../../inputmethod/skk
 DEPENDS+=	sml-mode-[0-9]*:../../devel/sml-mode
 DEPENDS+=	speedbar-[0-9]*:../../editors/speedbar
 DEPENDS+=	tamago-[0-9]*:../../editors/tamago
