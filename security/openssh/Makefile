@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.143 2004/10/03 00:18:11 tv Exp $
+# $NetBSD: Makefile,v 1.144 2004/10/24 02:52:15 grant Exp $
 
 DISTNAME=		openssh-3.9p1
 PKGNAME=		openssh-3.9.1
-PKGREVISION=	1
+PKGREVISION=		2
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -113,6 +113,13 @@ ASKPASS_PROGRAM=	${X11PREFIX}/bin/ssh-askpass
 .endif
 CONFIGURE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
 MAKE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
+
+# do the same for xauth
+.if exists(${X11BASE}/bin/xauth)
+CONFIGURE_ARGS+=	--with-xauth=${X11BASE}/bin/xauth
+.else
+CONFIGURE_ARGS+=	--with-xauth=${X11PREFIX}/bin/xauth
+.endif
 
 CONFS=			ssh_config sshd_config
 SUPPS=			moduli
