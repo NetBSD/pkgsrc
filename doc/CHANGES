@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4902 2004/02/18 13:43:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.4903 2004/02/18 13:46:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -915,3 +915,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-libs to 1.4.2nb2 [jmmv 2004-02-18]
 	Updated bozohttpd to 20040218 [mrg 2004-02-18]
 	Updated libxslt to 1.1.3nb1 [jmmv 2004-02-18]
+	Added xhtml-1.0 [jmmv 2004-02-18]
