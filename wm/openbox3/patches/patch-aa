@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/13 19:08:13 xtraeme Exp $
+
+--- Makefile.in.orig	2003-10-27 12:47:51.000000000 -0800
++++ Makefile.in	2003-11-11 14:29:45.000000000 -0800
+@@ -2725,12 +2725,12 @@
+ nodist_rcDATA_INSTALL = $(INSTALL_DATA)
+ install-nodist_rcDATA: $(nodist_rc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(rcdir)
++	$(mkinstalldirs) $(datadir)/examples/openbox
+ 	@list='$(nodist_rc_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(nodist_rcDATA_INSTALL) $$d$$p $(DESTDIR)$(rcdir)/$$f"; \
+-	  $(nodist_rcDATA_INSTALL) $$d$$p $(DESTDIR)$(rcdir)/$$f; \
++	  echo " $(nodist_rcDATA_INSTALL) $$d$$p $(datadir)/examples/openbox/$$f"; \
++	  $(nodist_rcDATA_INSTALL) $$d$$p $(datadir)/examples/openbox/$$f; \
+ 	done
+ 
+ uninstall-nodist_rcDATA:
