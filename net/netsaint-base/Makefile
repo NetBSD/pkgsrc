@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:31 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/14 00:43:09 wiz Exp $
 #
 
 DISTNAME=	netsaint-0.0.6
@@ -11,7 +11,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.netsaint.org/
 COMMENT=	network monitor
 
-DEPENDS+=	gd>1.8.4nb1:../../graphics/gd
+DEPENDS+=	gd>=1.8.4nb1:../../graphics/gd
 
 USE_PERL5=	YES
 
