@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 1998/11/13 16:32:38 tv Exp $
+$NetBSD: patch-ac,v 1.8 2000/09/19 13:27:01 hubertf Exp $
 
---- pine/makefile.neb.orig	Thu Aug 27 12:50:02 1998
-+++ pine/makefile.neb	Sun Sep 27 16:45:10 1998
-@@ -45,9 +45,12 @@
+--- pine/makefile.neb.orig	Thu Aug 27 18:50:02 1998
++++ pine/makefile.neb
+@@ -45,11 +45,16 @@
  RM=          rm -f
  LN=          ln -s
  MAKE=        make
@@ -15,33 +15,62 @@ $NetBSD: patch-ac,v 1.7 1998/11/13 16:32:38 tv Exp $
 -DEBUG=       -g -DDEBUG
 +DEBUG=       # -g -DDEBUG
  
- CCLIENTDIR=  ../c-client
+-CCLIENTDIR=  ../c-client
++CCLIENTDIR=  ${LOCALBASE}
++CCLIENTINC=  ${CCLIENTDIR}/include/c-client
++CCLIENTLIB=  ${CCLIENTDIR}/lib
  PICODIR=     ../pico
-@@ -61,8 +64,8 @@
+ 
+ # Only need to uncomment next two lines if you run make from this directory
+@@ -60,14 +65,13 @@
+ LDAPOFILES=   addrbook.o adrbkcmd.o args.o bldaddr.o init.o \
  	      other.o pine.o takeaddr.o
  
- STDLIBS=     -ltermlib
+-STDLIBS=     -ltermlib
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
 -LIBS=        $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
-+LOCLIBS=     -lpico $(CCLIENTDIR)/c-client.a
-+LIBS=        -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib/ $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
-              `cat $(CCLIENTDIR)/LDFLAGS`
+-             `cat $(CCLIENTDIR)/LDFLAGS`
++STDLIBS=     -ltermlib -lcrypt
++LOCLIBS=     -lpico $(CCLIENTLIB)/libimapuw.la
++LIBS=        -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib/ $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS)
  
  STDCFLAGS=   -DNETBSD -DSYSTYPE=\"NEB\" -DMOUSE
-@@ -82,13 +85,15 @@
- 	$(CCLIENTDIR)/mail.h $(CCLIENTDIR)/osdep.h \
- 	$(CCLIENTDIR)/rfc822.h $(CCLIENTDIR)/misc.h
+ CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(LDAPCFLAGS) \
+-	     $(STDCFLAGS)
++	     $(STDCFLAGS)  -I${CCLIENTINC}
  
-+all: pine abookcpy
+ OFILES=	addrbook.o adrbkcmd.o adrbklib.o args.o bldaddr.o context.o filter.o \
+ 	folder.o help.o helptext.o imap.o init.o mailcap.o mailcmd.o \
+@@ -79,8 +83,10 @@
+ 	$(PICODIR)/headers.h $(PICODIR)/estruct.h \
+ 	$(PICODIR)/edef.h $(PICODIR)/efunc.h \
+ 	$(PICODIR)/pico.h $(PICODIR)/os.h \
+-	$(CCLIENTDIR)/mail.h $(CCLIENTDIR)/osdep.h \
+-	$(CCLIENTDIR)/rfc822.h $(CCLIENTDIR)/misc.h
++	$(CCLIENTINC)/mail.h $(CCLIENTINC)/osdep.h \
++	$(CCLIENTINC)/rfc822.h $(CCLIENTINC)/misc.h
 +
++all: pine abookcpy
+ 
  pine:  $(OFILES) $(LOCLIBS)
  	echo "char datestamp[]="\"`date`\"";" > date.c
- 	echo "char hoststamp[]="\"`hostname`\"";" >> date.c
+@@ -88,7 +94,7 @@
  	$(CC) $(LDFLAGS) $(CFLAGS) -o pine $(OFILES) date.c $(LIBS)
  
  abookcpy:	abookcpy.o $(LOCLIBES)
 -	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(LIBS)
-+	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(CCLIENTDIR)/c-client.a -lcrypt
++	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(CCLIENTLIB)/libimapuw.la -lcrypt
  
  pine-use:	pine-use.c
  	$(CC) -o pine-use pine-use.c
+@@ -107,8 +113,8 @@
+ 
+ $(OFILES):						$(HFILES)
+ addrbook.o adrbkcmd.o adrbklib.o bldaddr.o takeaddr.o:	adrbklib.h
+-context.o:						$(CCLIENTDIR)/misc.h
+-send.o:							$(CCLIENTDIR)/smtp.h
++context.o:						$(CCLIENTINC)/misc.h
++send.o:							$(CCLIENTINC)/smtp.h
+ $(LDAPOFILES):						$(LDAPLIBS)
+ 
+ helptext.c:	pine.hlp
