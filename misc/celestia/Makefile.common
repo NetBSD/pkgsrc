@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/11/10 16:38:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/11/12 15:12:00 jlam Exp $
 
 DISTNAME=	celestia-${CELESTIA_VERS}
 CATEGORIES=	misc x11
@@ -38,5 +38,3 @@ CONFIGURE_ARGS+=	--disable-threading
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-
-.include "../../mk/bsd.pkg.mk"
