@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/17 20:41:56 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/24 04:13:36 snj Exp $
 #
 
 DISTNAME=	pfaedit_full-${VERSION}
@@ -15,15 +15,15 @@ VERSION=	040102
 
 CONFIGURE_ARGS+=--with-freetype-src=no
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 USE_X11=	YES
 WRKSRC=		${WRKDIR}/pfaedit-${VERSION}
 
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
