@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2606 2003/06/27 22:34:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.2607 2003/06/27 23:04:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2593,3 +2593,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sirius to 0.7.0 [jmmv 2003-06-27]
 	Updated gtk2 to 2.2.2nb1 [jmmv 2003-06-27]
 	Added libgsf-1.8.0 [jmmv 2003-06-27]
+	Updated librsvg2 to 2.2.5 [jmmv 2003-06-27]
+	Updated eog2 to 2.2.0nb3 [jmmv 2003-06-27]
+	Updated nautilus to 2.2.3.1nb4 [jmmv 2003-06-27]
