@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/08/11 04:52:03 fredb Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/10/15 03:04:54 jlam Exp $
 bin/esd
 bin/esd-config
 bin/esdcat
@@ -13,5 +13,5 @@ etc/esd.conf
 include/esd.h
 lib/libesd.a
 lib/libesd.la
-lib/libesd.so.2.19
+lib/libesd.so.2.20
 share/aclocal/esd.m4
