@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/28 22:15:14 hubertf Exp $
+$NetBSD: distinfo,v 1.1.1.2 2002/06/19 08:58:13 agc Exp $
 
-SHA1 (xnap-2.0.tar.gz) = e4b5a8eeb28d0f777029c57de4f9372601d734f6
-Size (xnap-2.0.tar.gz) = 773640 bytes
-SHA1 (patch-aa) = 8b9edd3868ea5c1a888726b65c44af0bcf3f42c9
+SHA1 (xnap-2.0-pre3.tgz) = 3c955b45b4ec0a54e09a2e56985f69ae1daf1d8c
+Size (xnap-2.0-pre3.tgz) = 1008737 bytes
