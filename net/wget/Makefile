@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/08/25 21:50:19 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2002/09/01 13:52:45 tron Exp $
 
 DISTNAME=	wget-1.7
 CATEGORIES=	net
@@ -29,7 +29,7 @@ BUILD_DEFS+=    USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
 # IPv6 support
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if (${OPSYS} != SunOS) && defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=        --enable-ipv6
 .else
 CONFIGURE_ARGS+=        --disable-ipv6
