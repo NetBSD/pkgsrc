@@ -1,4 +1,4 @@
-# $NetBSD: ghostscript.mk,v 1.1 2002/09/13 06:37:11 jlam Exp $
+# $NetBSD: ghostscript.mk,v 1.2 2002/09/13 06:40:08 jlam Exp $
 #
 # This Makefile fragment is included by packages that require a run-time
 # dependency on a ghostscript Postscript interpreter.
@@ -24,28 +24,28 @@ _GS_PKGSRCDIR?=	../../print/ghostscript-gnu
 
 _VALID_GS=	# empty
 
-# ghostscript-gnu{,-nox11} satisfies ${GS_REQD}<=7.05
+# ghostscript-gnu{,-nox11} satisfies ${GHOSTSCRIPT_REQD}<=7.05
 #
 .for _gs_pattern_ in [0-6].* 7.0 7.0nb* 7.0[0-5]
-.  if !empty(GS_REQD:M${_gs_pattern_})
+.  if !empty(GHOSTSCRIPT_REQD:M${_gs_pattern_})
 .    if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
-_VALID_GS+=	ghostscript-gnu>=${GS_REQD}
+_VALID_GS+=	ghostscript-gnu>=${GHOSTSCRIPT_REQD}
 .    else
-_VALID_GS+=	ghostscript-gnu>=${GS_REQD}
-_VALID_GS+=	ghostscript-gnu-no11>=${GS_REQD}
+_VALID_GS+=	ghostscript-gnu>=${GHOSTSCRIPT_REQD}
+_VALID_GS+=	ghostscript-gnu-no11>=${GHOSTSCRIPT_REQD}
 .    endif
 .  endif
 .endfor
 
-# ghostscript{,-nox11} satisfies ${GS_REQD}<=6.01nb4.
+# ghostscript{,-nox11} satisfies ${GHOSTSCRIPT_REQD}<=6.01nb4.
 #
 .for _gs_pattern_ in [0-5].* 6.0 6.0nb* 6.01 6.01nb[1-4]
-.  if !empty(GS_REQD:M${_gs_pattern_})
+.  if !empty(GHOSTSCRIPT_REQD:M${_gs_pattern_})
 .    if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
-_VALID_GS+=	ghostscript>=${GS_REQD}
+_VALID_GS+=	ghostscript>=${GHOSTSCRIPT_REQD}
 .    else
-_VALID_GS+=	ghostscript>=${GS_REQD}
-_VALID_GS+=	ghostscript-no11>=${GS_REQD}
+_VALID_GS+=	ghostscript>=${GHOSTSCRIPT_REQD}
+_VALID_GS+=	ghostscript-no11>=${GHOSTSCRIPT_REQD}
 .    endif
 .  endif
 .endfor
