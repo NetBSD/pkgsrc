@@ -11,7 +11,3 @@ input from and under control by its users.
 
 In other words, IBM releases Postfix only once. I will be around
 to guide its development for a limited time.
-
-
-The pkgsrc contains brings in experimental IPv6 patch into the build.
-Please report any breakage to snap-users@kame.net.
