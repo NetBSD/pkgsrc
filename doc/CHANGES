@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3813 2003/11/11 10:49:48 wiz Exp $
+$NetBSD: CHANGES,v 1.3814 2003/11/11 12:00:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4341,3 +4341,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated x10_heyu to 1.35 [wiz 2003-11-11]
 	Updated links to 2.1.0.14 [wiz 2003-11-11]
 	Updated links-gui to 2.1.0.14 [wiz 2003-11-11]
+	Updated superlu to 3.0 [wiz 2003-11-11]
