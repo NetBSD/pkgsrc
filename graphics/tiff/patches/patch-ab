@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 10:40:54 agc Exp $
+$NetBSD: patch-ab,v 1.5 1998/10/02 14:57:52 tv Exp $
 
 --- libtiff/Makefile.in.orig	Mon Jul 20 11:13:09 1998
 +++ libtiff/Makefile.in	Mon Jul 20 11:40:13 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 1998/08/07 10:40:54 agc Exp $
  SHELL	= @SCRIPT_SH@
  NULL	=
 -CC	= @CCOMPILER@
-+CC	= ${PREFIX}/bin/libtool @CCOMPILER@
++CC	= ${LIBTOOL} @CCOMPILER@
  AR	= @AR@
  AROPTS	= @AROPTS@
  RANLIB	= @RANLIB@
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.4 1998/08/07 10:40:54 agc Exp $
  install: all installHdrs
  	${INSTALL} -idb tiff.sw.dev -m 755 -dir @DIR_LIB@
 -	${INSTALL} -idb tiff.sw.dev -m 444 -F @DIR_LIB@ -O libtiff.a
-+	${PREFIX}/bin/libtool --mode=install ${BSD_INSTALL_DATA} libtiff.la @DIR_LIB@
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libtiff.la @DIR_LIB@
  	if [ @DSO@dso != nodso ]; then					\
  	    ${MAKE} installDSO;						\
  	else								\
