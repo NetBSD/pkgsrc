@@ -1,28 +1,20 @@
-$NetBSD: patch-ab,v 1.3 1999/11/21 13:14:21 tron Exp $
+$NetBSD: patch-ab,v 1.4 1999/11/21 16:49:12 frueauf Exp $
 
---- hacks/Makefile.in.orig	Fri Nov 12 11:46:28 1999
-+++ hacks/Makefile.in	Sun Nov 21 12:47:32 1999
-@@ -42,7 +42,7 @@
- # Note: see comment in ../driver/Makefile.in for explanation of X_LIBS, etc.
- #
- HACK_PRE	= $(LIBS) $(X_LIBS)
--HACK_POST	= $(X_PRE_LIBS) -lXt -lX11 -lXext $(X_EXTRA_LIBS) -lm
-+HACK_POST	= -lXt $(X_PRE_LIBS) -lXext -lX11 $(X_EXTRA_LIBS) -lm
- HACK_LIBS	= $(HACK_PRE)            @HACK_LIBS@ $(HACK_POST)
- XPM_LIBS	= $(HACK_PRE) @XPM_LIBS@ @HACK_LIBS@ $(HACK_POST)
- XLOCK_LIBS	= $(HACK_LIBS)
-@@ -185,8 +185,8 @@
+--- hacks/Makefile.in.orig	Fri Nov 19 03:49:27 1999
++++ hacks/Makefile.in	Sun Nov 21 17:44:36 1999
+@@ -189,9 +189,9 @@
  	  else								\
  	    p=$(srcdir)/$$program ;					\
  	  fi ;								\
--	  echo $(INSTALL_PROGRAM) $$p $(HACKDIR)/$$program ;		\
--	  $(INSTALL_PROGRAM) $$p $(HACKDIR)/$$program ;			\
-+	  echo $(INSTALL) -c -o root -g wheel -m 555 $$p $(HACKDIR)/$$program ;		\
-+	  $(INSTALL) -c -o root -g wheel -m 555 $$p $(HACKDIR)/$$program ;			\
+-	  echo $(INSTALL_PROGRAM) $$p					\
++	  echo $(INSTALL) -c -o root -g wheel -m 555 $$p		\
+ 	    $(install_prefix)$(HACKDIR)/$$program ;			\
+-	  $(INSTALL_PROGRAM) $$p					\
++	  $(INSTALL) -c -o root -g wheel -m 555 $$p			\
+ 	    $(install_prefix)$(HACKDIR)/$$program ;			\
  	done
  
- munge-scripts: $(SCRIPTS)
-@@ -489,6 +489,11 @@
+@@ -499,6 +499,11 @@
  
  bsod:	 	bsod.o		$(HACK_OBJS) $(COL)
  	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(COL) $(HACK_LIBS) $(XPM_LIBS)
