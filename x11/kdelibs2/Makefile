@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/09/11 15:13:02 tron Exp $
+# $NetBSD: Makefile,v 1.42 2002/09/29 01:22:33 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	3
@@ -11,6 +11,7 @@ BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.1nb2
 
 USE_BUILDLINK2=		YES
+USE_CXX=		YES
 USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
@@ -24,11 +25,6 @@ BROKEN=		Compilation causes arm32 machines to hang
 
 .if ${OPSYS} == "NetBSD"
 LIBS+=			-Wl,--export-dynamic
-.endif
-
-GCC_VERSION!=		gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == alpha)
-.  include "../../lang/gcc/Makefile.gcc"
 .endif
 
 REPLACE_PERL= \
@@ -92,6 +88,11 @@ post-install:
 	  ${ECHO} "@dirrm share/kde/icons";				\
 	  ${ECHO} "@dirrm share/kde";					\
 	) > ${PLIST_SRC}
+
+# XXX See below for NetBSD/alpha issues.
+.if (${MACHINE_ARCH} == "alpha")
+.  include "../../lang/gcc/buildlink2.mk"
+.endif
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../audio/libaudiofile/buildlink2.mk"
