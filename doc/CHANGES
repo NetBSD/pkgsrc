@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8438 2004/12/25 16:48:39 wiz Exp $
+$NetBSD: CHANGES,v 1.8439 2004/12/25 19:17:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6539,3 +6539,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-gtk2 to 1.7.5 [taya 2004-12-25]
 	Updated mozilla-stable to 1.7.5 [taya 2004-12-25]
 	Updated doclifter to 2.0 [wiz 2004-12-25]
+	Updated mldonkey to 2.5.21nb3 [jmmv 2004-12-25]
+	Added mldonkey-gui-2.5.21 [jmmv 2004-12-25]
