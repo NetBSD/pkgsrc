@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/06 19:26:18 tron Exp $
 
 DISTNAME=	wmthemes-0.62nb1
 CATEGORIES=	x11 wm
@@ -43,8 +43,8 @@ do-install:
 .endfor
 	@cd ${WRKSRC}; \
 	for DIR in *.themed; do \
-	  if [ -d "$$DIR" ] && [ -n "`ls "$$DIR"`" ]; then \
-	    ${ECHO} "Installing \"$${DIR%.*}\" theme."; \
+	  if [ -d "$$DIR" ] && [ -n "`${LS} "$$DIR"`" ]; then \
+	    ${ECHO} "Installing \"`${BASENAME} "$$DIR" .themed`\" theme."; \
 	    ${INSTALL_DATA_DIR} "${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
 	    cd "${WRKSRC}/$$DIR"; \
 	    for FILE in *; do \
