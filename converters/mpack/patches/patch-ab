@@ -1,19 +1,25 @@
-*** unixos.c.bak	Fri Feb 17 00:39:50 1995
---- unixos.c	Mon Nov 11 10:19:28 1996
-***************
-*** 89,95 ****
---- 89,99 ----
-  	strcpy(buf, getenv("TMPDIR"));
-      }
-      else {
-+ #ifdef __FreeBSD__
-+ 	strcpy(buf, "/var/tmp");
-+ #else
-  	strcpy(buf, "/usr/tmp");
-+ #endif
-      }
-      strcat(buf, "/m-prts-");
-      p = getenv("USER");
+--- unixos.c.orig	Thu Feb 16 22:39:50 1995
++++ unixos.c	Thu Feb 26 00:59:01 1998
+@@ -29,6 +29,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <netdb.h>
++#include <paths.h>
+ #include "xmalloc.h"
+ #include "common.h"
+ 
+@@ -89,7 +90,11 @@
+ 	strcpy(buf, getenv("TMPDIR"));
+     }
+     else {
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++	strcpy(buf, _PATH_VARTMP);
++#else
+ 	strcpy(buf, "/usr/tmp");
++#endif
+     }
+     strcat(buf, "/m-prts-");
+     p = getenv("USER");
 *** unixpk.man.bak	Fri Feb 17 00:39:50 1995
 --- unixpk.man	Mon Nov 11 10:19:46 1996
 ***************
