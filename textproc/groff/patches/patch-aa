@@ -1,24 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 14:08:09 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/04 11:20:14 wiz Exp $
 
---- src/include/Makefile.sub.orig	Sun Jun 18 12:13:58 2000
-+++ src/include/Makefile.sub
-@@ -30,12 +30,12 @@
- 	@$(SHELL) $(top_srcdir)/gendef.sh defs.h \
- 	"PROG_PREFIX=\"$(g)\"" \
- 	"DEVICE=\"$(DEVICE)\"" \
--	"FONTPATH=\"$(fontpath)\"" \
--	"MACROPATH=\"$(tmacpath)\"" \
--	"INDEX_SUFFIX=\"$(indexext)\"" \
--	"COMMON_WORDS_FILE=\"$(common_words_file)\"" \
--	"DEFAULT_INDEX_DIR=\"$(indexdir)\"" \
--	"DEFAULT_INDEX_NAME=\"$(indexname)\"" \
--	"DEFAULT_INDEX=\"$(indexdir)/$(indexname)\""
-+	"FONTPATH=\"$(PREFIX)/share/groff/font:/usr/share/groff_font\"" \
-+	"MACROPATH=\"$(PREFIX)/share/groff/tmac:/usr/share/tmac\"" \
-+	"INDEX_SUFFIX=\".i\"" \
-+	"COMMON_WORDS_FILE=\"/usr/share/dict/eign\"" \
-+	"DEFAULT_INDEX_DIR=\"/usr/share/dict/papers\"" \
-+	"DEFAULT_INDEX_NAME=\"Ind\"" \
-+	"DEFAULT_INDEX=\"/usr/share/dict/papers/Ind\""
+--- Makefile.in.orig	Mon Sep 16 18:51:00 2002
++++ Makefile.in
+@@ -169,7 +169,7 @@ tmac_an_prefix=\
+ indexext=.i
  
- FORCE:
+ # Directory containing the default index for refer.
+-indexdir=/usr/dict/papers
++indexdir=/usr/share/dict/papers
+ 
+ # The filename (without suffix) of the default index for refer.
+ indexname=Ind
