@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.13 2002/10/13 11:31:43 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.14 2002/11/01 06:09:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pth.
 #
@@ -17,7 +17,7 @@ PTH_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.pth?=	pth>=1.4.0
+BUILDLINK_DEPENDS.pth?=	pth>=1.4.1nb5
 DEPENDS+=		${BUILDLINK_DEPENDS.pth}:../../devel/pth
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.pth=pth
