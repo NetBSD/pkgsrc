@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/17 17:40:21 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/07/27 19:43:41 agc Exp $
 #
 
 DISTNAME=	tcsh-6.10
@@ -57,6 +57,7 @@ post-install:
 	    o=;							\
 	    while [ $$# -gt 0 ]; do				\
 		d=${NLSDIR}/$${c}_$$1.$${s};			\
+		${INSTALL_DATA_DIR} ${PREFIX}/$$d;		\
 		if [ -z "$$o" ]; then				\
 		    o="$$d";					\
 		    ${INSTALL_DATA} ${WRKSRC}/tcsh.$${l}.cat	\
