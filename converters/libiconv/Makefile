@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/04/24 02:56:15 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2002/05/10 12:16:41 wiz Exp $
 #
 
 DISTNAME=		libiconv-1.7
+PKGREVISION=		1
 CATEGORIES=		converters
 MASTER_SITES=		ftp://ftp.ilog.fr/pub/Users/haible/gnu/
 
@@ -21,6 +22,13 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/libcharset/libtool
 .if (${OPSYS} == SunOS)
 PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
 .endif
+
+# remove any existing charset.alias; if it already exists, libiconv does
+# not overwrite it, and older versions of libiconv wrote incorrect
+# charset.alias files, which were not removed during deinstall since
+# other packages touched them.
+pre-install:
+	${RM} -f ${PREFIX}/lib/charset.alias
 
 test: build
 	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check |& tee ${WRKDIR}/check.log
