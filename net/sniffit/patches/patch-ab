@@ -1,0 +1,17 @@
+--- configure.BAK	Mon Mar 30 09:33:48 1998
++++ configure	Mon Mar 30 09:33:55 1998
+@@ -1304,6 +1304,14 @@
+ 	OS_OPT=
+ 	
+         ;;
++netbsd*)
++	cat >> confdefs.h <<\EOF
++#define NETBSD 1
++EOF
++
++	OS_OPT=
++	
++        ;;
+ *)
+ 	echo "NOT A SUPPORTED SYSTEM / OR SYSTEM NOT RECOGNISED"
+ 	echo "Contact <Coder@reptile.rug.ac.be> if you feel it might be a bug."
