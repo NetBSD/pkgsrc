@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/02/21 13:31:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.38 2001/02/25 03:42:16 hubertf Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -28,13 +28,14 @@ MANCOMPRESSED_IF_MANZ=	yes
 .include "../../mk/bsd.prefs.mk"
 
 LOCALBASE=		/usr
+PKG_DBDIR?=		/var/db/pkg
 
 post-install:
-	if [ ! -f $${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ]; then \
-		if [ ! -d $${PKG_DBDIR:-/var/db/pkg} ]; then \
-			${MKDIR} $${PKG_DBDIR:-/var/db/pkg}; \
+	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then \
+		if [ ! -d ${PKG_DBDIR} ]; then \
+			${INSTALL_DATA_DIR} ${PKG_DBDIR}; \
 		fi; \
-		pkg_admin rebuild ; \
+		${PKG_ADMIN} rebuild ; \
 	fi
 
 .include "../../mk/bsd.pkg.mk"
