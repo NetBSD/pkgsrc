@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/10/24 08:58:01 shannonjr Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/05 17:19:54 jmmv Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 
@@ -9,33 +10,36 @@ MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 COMMENT=		Applications for entering PINs or Passphrases
 
-USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+USE_BUILDLINK3=		yes
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.pinentry
-PKG_SUPPORTED_OPTIONS=  qt gtk
+INFO_FILES=		pinentry.info
+
+# XXX This usage of bsd.options.mk is wrong and has to be fixed.  The
+# package has to be splitted into different packages, such as pinentry-gtk
+# and pinentry-qt, so that the frontends can be built on their own and
+# can be distributed in different binary packages.
+PKG_OPTIONS_VAR=	PKG_OPTIONS.pinentry
+PKG_SUPPORTED_OPTIONS=	gtk qt
 .include "../../mk/bsd.options.mk"
 
-post-install:
-	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-.if !empty(PKG_OPTIONS:Mqt)
-	${ECHO} "bin/pinentry-qt" >>${PLIST_SRC}
-.endif
 .if !empty(PKG_OPTIONS:Mgtk)
-	${ECHO} "bin/pinentry-gtk" >>${PLIST_SRC}
+PLIST_SUBST+=		USE_GTK=
+.  include "../../x11/gtk/buildlink3.mk"
+.else
+PLIST_SUBST+=		USE_GTK='@comment '
+.endif
+
+.if !empty(PKG_OPTIONS:Mqt)
+PLIST_SUBST+=		USE_QT=
+.  include "../../x11/qt3-libs/buildlink3.mk"
+.else
+PLIST_SUBST+=		USE_QT='@comment '
 .endif
 
 BUILDLINK_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
+
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mqt)
-.include "../../x11/qt3-libs/buildlink3.mk"
-.endif
-.if !empty(PKG_OPTIONS:Mgtk)
-.include "../../x11/gtk/buildlink3.mk"
-.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
