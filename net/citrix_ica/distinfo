@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.8 2003/03/14 10:15:55 wiz Exp $
+$NetBSD: distinfo,v 1.9 2003/08/11 10:39:38 markd Exp $
 
-SHA1 (citrix_ica-6.30.1052/linuxx86.tar.gz) = bd932ad50726d5908dcf99c662a2ed08e146768b
-Size (citrix_ica-6.30.1052/linuxx86.tar.gz) = 1485835 bytes
-SHA1 (citrix_ica-6.30.1061/solaris.tar.Z) = a22f80b314b34cb857b946d78bc62aef826744ca
-Size (citrix_ica-6.30.1061/solaris.tar.Z) = 1666651 bytes
-SHA1 (patch-i386-aa) = cef16a252b1154399803c9dab6b01eb795efa701
-SHA1 (patch-i386-ab) = 8b363730b2010767d2584cbd28a5b0c0030a60dd
-SHA1 (patch-sparc-aa) = fa3be28a83125c3d9aa632f779ac4428c2b22e12
-SHA1 (patch-sparc-ab) = 0ab192cb660260f950ad9ab4df5d278c54459f7f
+SHA1 (citrix_ica-7.00.77757/linuxx86.tar.gz) = 98fc24375bbbf45dad33480b159f71d60af0e69d
+Size (citrix_ica-7.00.77757/linuxx86.tar.gz) = 1916967 bytes
+SHA1 (citrix_ica-7.02.78662/solaris.tar.Z) = d072fef54e2a632cc5818ed9a158c9b396ae94ee
+Size (citrix_ica-7.02.78662/solaris.tar.Z) = 3406401 bytes
+SHA1 (patch-i386-aa) = f2e91e04845e67bf8e380f81245fd43074e38514
+SHA1 (patch-sparc-aa) = 6673f02b8b89ce2bbb1f73f4179d14b1fea505a3
+SHA1 (patch-sparc-ab) = 7a203edc890e80dd26ea94d9882d81ab6d816bbe
