@@ -1,14 +1,21 @@
-$NetBSD: patch-aj,v 1.1 2004/10/27 19:33:37 drochner Exp $
+$NetBSD: patch-aj,v 1.2 2004/11/03 12:40:53 jmmv Exp $
 
---- components/image_properties/nautilus-image-properties-view.c.orig	2004-10-11 20:22:21.000000000 +0200
+--- components/image_properties/nautilus-image-properties-view.c.orig	2004-03-09 12:23:37.000000000 +0100
 +++ components/image_properties/nautilus-image-properties-view.c
-@@ -130,7 +130,8 @@ exif_content_callback (ExifContent *cont
+@@ -123,6 +123,7 @@ exif_string_to_utf8 (const char *exif_st
+ static void
+ exif_content_callback (ExifContent *content, gpointer data)
+ {
++	char value[1024];
+ 	struct ExifAttribute *attribute;
+ 
+ 	attribute = (struct ExifAttribute *)data;
+@@ -130,7 +131,7 @@ exif_content_callback (ExifContent *cont
  		return;
  	}
  
 -        attribute->value = g_strdup (exif_content_get_value (content, attribute->tag));
-+	char value[1024];
-+        attribute->value = g_strdup (exif_content_get_value (content, attribute->tag, value, sizeof(value)));
++	attribute->value = g_strdup (exif_content_get_value (content, attribute->tag, value, sizeof(value)));
  	if (attribute->value != NULL) {
  		attribute->found = TRUE;
  	}
