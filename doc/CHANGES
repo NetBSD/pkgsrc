@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8685 2005/01/10 18:48:58 adrianp Exp $
+$NetBSD: CHANGES,v 1.8686 2005/01/10 21:00:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -213,3 +213,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-GnuPG-Interface-0.34nb1 [tv 2005-01-10]
 	Added pgpenvelope-2.10.2nb1 [tv 2005-01-10]
 	Removed sendmail811 [adrianp 2005-01-10]
+	Updated getmail to 4.3.0 [schmonz 2005-01-10]
