@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3669 2003/10/09 00:13:55 fredb Exp $
+$NetBSD: CHANGES,v 1.3670 2003/10/09 06:23:27 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4131,3 +4131,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fetchmail to 6.2.4nb2 [itojun 2003-10-08]
 	Updated fetchmailconf to 6.2.4nb2 [itojun 2003-10-08]
 	Updated unrar to 3.2.3 [fredb 2003-10-09]
+	Added p5-File-Spec-0.86 [thorpej 2003-10-09]
