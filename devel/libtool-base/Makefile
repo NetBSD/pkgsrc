@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/02/19 17:20:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/27 08:20:26 skrll Exp $
 #
 
 .include "../libtool/Makefile.common"
 
-PKGNAME=        ${DISTNAME:C/-/-base-/}${PKGREV}
+PKGNAME=        ${PKGPFX:C/-/-base-/}${PKGREV}
 
 COMMENT=	Generic shared library support script (the script itself)
 
@@ -28,3 +28,5 @@ CONFIGURE_ARGS=	--enable-ltdl-install
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+
+LDFLAGS=	# Blank

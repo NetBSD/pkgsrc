@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/02/19 17:20:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/27 08:20:26 skrll Exp $
 #
 
 .include "../libtool/Makefile.common"
 
-PKGNAME=	${DISTNAME:C/-/-info-/}${PKGREV}
+PKGNAME=	${PKGPFX:C/-/-info-/}${PKGREV}
 
 COMMENT=	Generic shared library support script - info pages
 
@@ -17,6 +17,7 @@ USE_GTEXINFO=	yes
 # error. Simply making sure the info-files get re-done works here.
 post-extract:
 	${RM} -f ${WRKSRC}/doc/libtool.info*
+	${CP} ${FILESDIR}/fdl.texi ${WRKSRC}/doc
 
 do-build:
 	cd ${WRKSRC}/doc ; ${MAKE_PROGRAM}
