@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2002/12/23 22:27:50 seb Exp $
+
+--- tests/Makefile.am.orig	Wed Oct 30 18:26:23 2002
++++ tests/Makefile.am
+@@ -181,7 +181,7 @@ check_flex: test.l.html
+ 	@echo expect no output from diff
+ 	diff $(srcdir)/test.l.html test.l.out.html
+ 
+-source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
++source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
+ test.py.html
+ 
+ CLEANFILES = *.out.html
