@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2002/05/23 09:35:10 itojun Exp $
+# $NetBSD: Makefile,v 1.71 2002/05/24 04:11:47 itojun Exp $
 
-DISTNAME=		openssh-3.2.2p1
-PKGNAME=		openssh-3.2.2.1
+DISTNAME=		openssh-3.2.3p1
+PKGNAME=		openssh-3.2.3.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
