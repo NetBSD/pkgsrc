@@ -1,18 +1,29 @@
-$NetBSD: patch-af,v 1.1 2003/03/30 02:24:43 itohy Exp $
+$NetBSD: patch-af,v 1.2 2003/04/26 05:18:00 simonb Exp $
 
 Fix LP64 problem.
 
---- src/execl.c.orig	Thu Jul 29 06:46:58 1999
-+++ src/execl.c	Sun Mar 30 00:35:24 2003
-@@ -47,6 +47,7 @@
+--- src/execl.c.orig	1999-07-29 07:46:58.000000000 +1000
++++ src/execl.c	2003-04-26 15:10:39.000000000 +1000
+@@ -22,6 +22,7 @@
+  */
+ char SCCSid[] = "@(#) @(#)execl.c:3.3 -- 5/15/91 19:30:19";
+ 
++#include <limits.h>
+ #include <stdio.h>
+ #include <sys/types.h>
+ 
+@@ -45,8 +46,9 @@
+ 	char *ptr; 
+ 	char *fullpath;
  	int 	duration;
- 	char	count_str[6], start_str[12], path_str[81], *dur_str;
+-	char	count_str[6], start_str[12], path_str[81], *dur_str;
++	char	count_str[6], start_str[12], path_str[PATH_MAX], *dur_str;
  	time_t	start_time, this_time;
 +	unsigned long ul_time;
  
  #ifdef DEBUG
  	int count;
-@@ -77,12 +78,13 @@
+@@ -77,12 +79,13 @@
  		duration = atoi(argv[2]);
  		dur_str = argv[2];
  		iter = (unsigned long)atoi(argv[3]); /* where are we now ? */
