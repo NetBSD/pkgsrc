@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2005/01/23 17:33:19 taca Exp $
+
+--- lib/net/imap.rb.orig	2004-10-03 21:21:35.000000000 +0900
++++ lib/net/imap.rb
+@@ -1266,7 +1266,7 @@ module Net
+           buf.concat(c)
+           i += 1
+         elsif (c & 0xe0) == 0xc0 &&
+-            inlen >= 2 &&
++            len >= 2 &&
+             (s[i + 1] & 0xc0) == 0x80
+           if c == 0xc0 || c == 0xc1
+             raise DataFormatError, format("non-shortest UTF-8 sequence (%02x)", c)

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/01/21 12:49:37 tv Exp $
+$NetBSD: patch-ab,v 1.5 2005/01/23 17:33:19 taca Exp $
 
---- configure.orig	2003-12-24 14:21:24.000000000 -0500
+--- configure.orig	2004-12-25 19:58:38.000000000 +0900
 +++ configure
-@@ -8602,6 +8602,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
+@@ -8993,6 +8993,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
  		ac_cv_func_getpgrp_void=yes
  		ac_cv_func_setitimer=no
  		;;
@@ -12,34 +12,17 @@ $NetBSD: patch-ab,v 1.4 2005/01/21 12:49:37 tv Exp $
  freebsd*)	LIBS="-lm $LIBS"
  		echo "$as_me:$LINENO: checking whether -lxpg4 has to be linked" >&5
  echo $ECHO_N "checking whether -lxpg4 has to be linked... $ECHO_C" >&6
-@@ -13689,6 +13692,7 @@ echo $ECHO_N "checking whether OS depend
-     mingw*)	;;
-     aix*)	;;
-     netbsd*) CCDLFLAGS="$CCDLFLAGS -fPIC";;
-+    interix3*)	;;
+@@ -13953,7 +13956,7 @@ echo $ECHO_N "checking whether OS depend
+     openstep*)	CCDLFLAGS="$CCDLFLAGS -fno-common";;
+     rhapsody*)	CCDLFLAGS="$CCDLFLAGS -fno-common";;
+     darwin*)	CCDLFLAGS="$CCDLFLAGS -fno-common";;
+-    human*|bsdi*|beos*|cygwin*|mingw*|aix*|interix*) ;;
++    human*|interix3*|bsdi*|beos*|cygwin*|mingw*|aix*|interix*) ;;
      *) CCDLFLAGS="$CCDLFLAGS -fPIC";;
      esac
    else
-@@ -13729,6 +13733,12 @@ echo $ECHO_N "checking whether OS depend
- 	osf*) 		: ${LDSHARED="ld -shared -expect_unresolved \"*\""}
- 			rb_cv_dlopen=yes ;;
- 	linux*) 	: ${LDSHARED="$CC -shared"}
-+			if test "$rb_cv_binary_elf" = yes; then
-+			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
-+			    DLDFLAGS="$DLDFLAGS "'-Wl,-soname,$(.TARGET)'
-+			    LIBPATHFLAG=' -L%1$-s'
-+			    RPATHFLAG=' -Wl,-R%1$-s'
-+			fi
- 			rb_cv_dlopen=yes ;;
- 	gnu*)   	: ${LDSHARED="$CC -shared"}
- 			rb_cv_dlopen=yes
-@@ -13744,10 +13754,18 @@ echo $ECHO_N "checking whether OS depend
- 	netbsd*)	: ${LDSHARED='${CC} -shared'}
- 			if test "$rb_cv_binary_elf" = yes; then
- 			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
-+			    DLDFLAGS="$DLDFLAGS "'-Wl,-soname,$(.TARGET)'
- 			    LIBPATHFLAG=' -L%1$-s'
- 			    RPATHFLAG=' -Wl,-R%1$-s'
+@@ -14015,6 +14018,13 @@ echo $ECHO_N "checking whether OS depend
+ 			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
  			fi
  			rb_cv_dlopen=yes ;;
 +	interix3*)	: ${LDSHARED='${CC} -shared'}
@@ -52,15 +35,7 @@ $NetBSD: patch-ab,v 1.4 2005/01/21 12:49:37 tv Exp $
  	openbsd*) 	: ${LDSHARED="\$(CC) -shared ${CCDLFLAGS}"}
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-E"
-@@ -14438,6 +14456,7 @@ if test "$enable_shared" = 'yes'; then
- 	;;
-     linux*)
- 	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR)'
-+	LIBRUBYARG_SHARED='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
- 	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
- 	;;
-     gnu*)
-@@ -14463,11 +14482,26 @@ if test "$enable_shared" = 'yes'; then
+@@ -14732,6 +14742,14 @@ if test "$enable_shared" = 'yes'; then
  	   LIBRUBY_ALIASES=""
  	fi
   	;;
@@ -75,15 +50,3 @@ $NetBSD: patch-ab,v 1.4 2005/01/21 12:49:37 tv Exp $
      openbsd*)
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
- 	;;
-     solaris*)
-+	SOLIBS='$(LIBS)'
-+	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)'
-+	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR).$(TEENY) lib$(RUBY_SO_NAME).so'
-+	if test "$GCC" = yes; then
-+	    LIBRUBY_DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET)'
-+	    LIBRUBYARG_SHARED='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
-+	fi
- 	XLDFLAGS="$XLDFLAGS "'-R${libdir}'
-  	;;
-     hpux*)

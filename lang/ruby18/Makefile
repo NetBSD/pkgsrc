@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/12/05 17:25:53 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/23 17:33:19 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -19,6 +18,8 @@ GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ENV+=		PREFIX="${PREFIX}"
+INSTALL_TARGET=		install install-doc
+WRKSRC=			${RUBY_WRKSRC}
 
 # Ruby build process depends on config.status's content
 CONFIG_STATUS_OVERRIDE=	# empty
@@ -85,20 +86,20 @@ REPLACE_RUBY=	bin/erb bin/irb bin/rdoc bin/ri bin/testrb \
 		sample/uumerge.rb
 
 pre-configure:
-	${RM} -f ${WRKSRC}/ext/curses/MANIFEST
-	${RM} -f ${WRKSRC}/ext/dbm/MANIFEST
-	${RM} -f ${WRKSRC}/ext/gdbm/MANIFEST
-	${RM} -f ${WRKSRC}/ext/digest/MANIFEST
-	${RM} -f ${WRKSRC}/ext/digest/md5/MANIFEST
-	${RM} -f ${WRKSRC}/ext/digest/rmd160/MANIFEST
-	${RM} -f ${WRKSRC}/ext/digest/sha1/MANIFEST
-	${RM} -f ${WRKSRC}/ext/digest/sha2/MANIFEST
-	${RM} -f ${WRKSRC}/ext/iconv/MANIFEST
-	${RM} -f ${WRKSRC}/ext/openssl/MANIFEST
-	${RM} -f ${WRKSRC}/ext/readline/MANIFEST
-	${RM} -f ${WRKSRC}/ext/tcltklib/MANIFEST
-	${RM} -f ${WRKSRC}/ext/tk/MANIFEST
-	${RM} -f ${WRKSRC}/ext/zlib/MANIFEST
+	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
+	${RM} -f ${WRKSRC}/ext/dbm/extconf.rb
+	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
+	${RM} -f ${WRKSRC}/ext/digest/extconf.rb
+	${RM} -f ${WRKSRC}/ext/digest/md5/extconf.rb
+	${RM} -f ${WRKSRC}/ext/digest/rmd160/extconf.rb
+	${RM} -f ${WRKSRC}/ext/digest/sha1/extconf.rb
+	${RM} -f ${WRKSRC}/ext/digest/sha2/extconf.rb
+	${RM} -f ${WRKSRC}/ext/iconv/extconf.rb
+	${RM} -f ${WRKSRC}/ext/openssl/extconf.rb
+	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
+	${RM} -f ${WRKSRC}/ext/tcltklib/extconf.rb
+	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
+	${RM} -f ${WRKSRC}/ext/zlib/extconf.rb
 	${RM} -f ${WRKSRC}/sample/dbmtest.rb
 	${RM} -rf ${WRKSRC}/sample/openssl
 

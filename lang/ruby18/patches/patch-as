@@ -1,0 +1,24 @@
+$NetBSD: patch-as,v 1.1 2005/01/23 17:33:19 taca Exp $
+
+--- lib/webrick/httpproxy.rb.orig	2004-08-22 01:16:18.000000000 +0900
++++ lib/webrick/httpproxy.rb
+@@ -110,7 +110,8 @@ module WEBrick
+         proxy_host = proxy.host
+         proxy_port = proxy.port
+         if proxy.userinfo
+-          credentials = "Basic " + encode64(proxy.userinfo)
++          credentials = "Basic " + [proxy.userinfo].pack("m*")
++          credentials.chomp!
+           header['proxy-authorization'] = credentials
+         end
+       end
+@@ -170,7 +171,8 @@ module WEBrick
+       if proxy = proxy_uri(req, res)
+         proxy_request_line = "CONNECT #{host}:#{port} HTTP/1.0"
+         if proxy.userinfo
+-          credentials = "Basic " + encode64(proxy.userinfo)
++          credentials = "Basic " + [proxy.userinfo].pack("m*")
++          credentials.chomp!
+         end
+         host, port = proxy.host, proxy.port
+       end

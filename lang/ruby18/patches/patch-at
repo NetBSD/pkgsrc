@@ -1,0 +1,12 @@
+$NetBSD: patch-at,v 1.1 2005/01/23 17:33:19 taca Exp $
+
+--- variable.c.orig	2004-10-02 12:50:48.000000000 +0900
++++ variable.c
+@@ -1290,6 +1290,7 @@ rb_autoload(mod, id, file)
+     }
+     else {
+ 	av = Data_Wrap_Struct(rb_cData, rb_mark_tbl, st_free_table, 0);
++	RBASIC(av)->klass = 0;
+ 	st_add_direct(tbl, autoload, av);
+ 	DATA_PTR(av) = tbl = st_init_numtable();
+     }
