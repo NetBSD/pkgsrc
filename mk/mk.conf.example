@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.96 1999/11/12 10:34:47 agc Exp $
+# $NetBSD: mk.conf.example,v 1.97 1999/11/12 12:05:02 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -99,9 +99,11 @@
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#PATCH_FUZZ_FACTOR=		# Fuzz factor to use when applying patches
-                                # Will only be applied when using a patch
-                                # that understands -F
+#PATCH_FUZZ_FACTOR?=		# Fuzz factor to use when applying patches.
+                                # Will only be applied when using a patch(1)
+                                # that understands -F. This should be a "?="
+                                # setting, since package Makefiles may set
+                                # this value, before /etc/mk.conf is read.
                                 # Possible: "-Fn" where n is a number, none
                                 # Default: none
 
