@@ -1,23 +1,41 @@
-$NetBSD: patch-bf,v 1.1.1.1 2002/05/02 13:28:16 bouyer Exp $
+$NetBSD: patch-bf,v 1.2 2002/05/06 13:16:58 bouyer Exp $
 
---- changer-src/scsi-changer-driver.c.orig	Sun Feb 10 13:49:51 2002
-+++ changer-src/scsi-changer-driver.c	Tue Apr 30 20:02:06 2002
-@@ -331,6 +331,18 @@
-    GenericBarCode,
-    GenericSearch,
-    GenericSenseHandler},
-+  {"LXB",
-+   "Overland LXB",
-+   GenericMove,
-+   GenericElementStatus,
-+   GenericResetStatus,
-+   GenericFree,
-+   GenericEject,
-+   GenericClean,
-+   GenericRewind,
-+   GenericBarCode,
-+   GenericSearch,
-+   GenericSenseHandler},
-   /* 
-    * And now the tape devices
+--- changer-src/chg-scsi.c.orig	24 Mar 2002 19:04:12 -0000
++++ changer-src/chg-scsi.c	3 May 2002 16:15:24 -0000
+@@ -1037,6 +1037,7 @@
+   char *clean_file=NULL;
+   char *time_file=NULL;
+ 
++  char *ptr;         /* a public pointer .... */
+   /*
+    * For the emubarcode stuff
     */
+@@ -1065,6 +1066,7 @@
+   chg.device = NULL;
+   chg.labelfile = NULL;
+   chg.conf = NULL;
++  chg.debuglevel = NULL;
+ #ifdef CHG_SCSI_STANDALONE
+   printf("Ups standalone\n");
+ #else
+@@ -1085,6 +1087,11 @@
+   memset(pDev, 0, sizeof(OpenFiles_T) * CHG_MAXDEV );
+ 
+ 
++  if ((ptr=getenv("CHG_DEBUG")) != NULL)
++    {
++      chg.debuglevel = strdup(ptr);
++    }
++
+   switch(com.command_code) 
+     {
+     case COM_SCAN:
+@@ -1588,7 +1595,7 @@
+       
+     printf("%d %d 1", loaded, use_slots);
+ 
+-    if (BarCode(fd) == 1 || emubarcode == 1)
++    if (BarCode(fd) == 1 || emubarcode == 1 || chg.havebarcode == 1)
+       {
+         printf(" 1\n");
+       } else {
