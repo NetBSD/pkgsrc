@@ -1,29 +1,30 @@
-# $NetBSD: Makefile,v 1.8 2001/10/01 15:52:05 abs Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/09 15:52:29 jmmv Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
 #
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
-DISTNAME=	${PKGNAME}.sparc-sun-solaris2.6
+DISTNAME=	${PKGNAME_NOREV}.sparc-sun-solaris2.6
 #
 .elif (${MACHINE_ARCH} == "alpha")
-DISTNAME=	${PKGNAME}.alpha-unknown-netbsd1.4
+DISTNAME=	${PKGNAME_NOREV}.alpha-unknown-netbsd1.4
 #
 .elif (${MACHINE_ARCH} == "i386")
-DISTNAME=	${PKGNAME}.i386-unknown-netbsd1.3
+DISTNAME=	${PKGNAME_NOREV}.i386-unknown-netbsd1.3
 #
 .elif (${MACHINE_ARCH} == "powerpc")
-DISTNAME=	${PKGNAME}.powerpc-unknown-netbsd1.4
+DISTNAME=	${PKGNAME_NOREV}.powerpc-unknown-netbsd1.4
 #
 # XXX Not yet on ftp site
 .elif (${MACHINE_ARCH} == "sparc")
-DISTNAME=	${PKGNAME}.sparc-unknown-netbsd1.4
+DISTNAME=	${PKGNAME_NOREV}.sparc-unknown-netbsd1.4
 #
 .else
-DISTNAME=	${PKGNAME}
+DISTNAME=	${PKGNAME_NOREV}
 .endif
 #
 PKGNAME=	setiathome-3.03
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/setiathome/ \
 		ftp://alien.ssl.berkeley.edu/pub/ \
@@ -39,6 +40,9 @@ ONLY_FOR_PLATFORM= NetBSD-*-alpha NetBSD-*-i386 NetBSD-*-powerpc SunOS-*-sparc
 DIST_SUBDIR=    setiathome
 DECOMPRESS_CMD=	${CAT}
 NO_BUILD=	yes
+USE_PKGINSTALL=	yes
+
+RCD_SCRIPTS=	setiathome
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/setiathome ${PREFIX}/bin
