@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/04 20:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/10 00:35:56 jlam Exp $
 #
 
 DISTNAME=	gdbm-prim-1.15
@@ -12,8 +12,8 @@ HOMEPAGE=	http://homepage.mac.com/leffert/FileSharing.html
 COMMENT=	Shell primitives for working with GDBMs
 
 EXTRACT_CMD=		${_DFLT_EXTRACT_CMD}
-USE_BUILDLINK_ONLY=	YES
 WRKSRC=			${WRKDIR}/${PKGNAME}
+USE_BUILDLINK2=		YES
 
-.include "../../databases/gdbm/buildlink.mk"
+.include "../../databases/gdbm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
