@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1564 2003/03/05 13:15:58 wiz Exp $
+$NetBSD: CHANGES,v 1.1565 2003/03/05 13:19:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -959,3 +959,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zlib to 1.1.4nb1 [salo 2003-03-05]
 	Updated arla to 0.35.12 [wennmach 2003-03-05]
 	Updated mowitz to 0.2.2 [wiz 2003-03-05]
+	Updated shorten to 3.5.1 [wiz 2003-03-05]
