@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/14 18:02:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/29 05:58:50 uebayasi Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -6,10 +6,9 @@ bin/faxrm
 bin/faxstat
 bin/sendfax
 bin/sendpage
-etc/rc.d/hylafax
-libdata/hylafax/hfaxd.conf
 libdata/hylafax/faxcover.ps
 libdata/hylafax/faxmail.ps
+libdata/hylafax/hfaxd.conf
 libdata/hylafax/pagesizes
 libdata/hylafax/typerules
 libexec/faxgetty
@@ -20,8 +19,8 @@ libexec/hylafax/mkcover
 libexec/hylafax/notify
 libexec/hylafax/notify.awk
 libexec/hylafax/pcl2fax
-libexec/hylafax/pollrcvd
 libexec/hylafax/pdf2fax.gs
+libexec/hylafax/pollrcvd
 libexec/hylafax/ps2fax.dps
 libexec/hylafax/ps2fax.gs
 libexec/hylafax/ps2fax.imp
@@ -31,30 +30,30 @@ libexec/lockname
 libexec/ondelay
 libexec/pagesend
 libexec/textfmt
-man/cat1/faxalter.0
-man/cat1/faxcover.0
-man/cat1/faxmail.0
-man/cat1/faxrm.0
-man/cat1/faxstat.0
+man/cat1/faxalter.0.gz
+man/cat1/faxcover.0.gz
+man/cat1/faxmail.0.gz
+man/cat1/faxrm.0.gz
+man/cat1/faxstat.0.gz
 man/cat1/hylafax-client.0.gz
 man/cat1/sendfax.0.gz
 man/cat1/sendpage.0.gz
 man/cat1/sgi2fax.0.gz
 man/cat1/textfmt.0.gz
 man/cat5/cid.0.gz
-man/cat5/hylafax-config.0.gz
 man/cat5/destctrls.0.gz
 man/cat5/dialrules.0.gz
 man/cat5/doneq.0.gz
 man/cat5/hosts.hfaxd.0.gz
-man/cat5/hylafax-server.0.gz
+man/cat5/hylafax-config.0.gz
 man/cat5/hylafax-info.0.gz
 man/cat5/hylafax-log.0.gz
+man/cat5/hylafax-server.0.gz
+man/cat5/hylafax-shutdown.0.gz
 man/cat5/pagermap.0.gz
 man/cat5/pagesizes.0.gz
 man/cat5/recvq.0.gz
 man/cat5/sendq.0.gz
-man/cat5/hylafax-shutdown.0.gz
 man/cat5/status.0.gz
 man/cat5/tsi.0.gz
 man/cat5/typerules.0.gz
@@ -84,8 +83,8 @@ man/cat8/hfaxd.0.gz
 man/cat8/mkcover.0.gz
 man/cat8/notify.0.gz
 man/cat8/pagesend.0.gz
-man/cat8/pollrcvd.0.gz
 man/cat8/pdf2fax.0.gz
+man/cat8/pollrcvd.0.gz
 man/cat8/ps2fax.0.gz
 man/cat8/recvstats.0.gz
 man/cat8/tagtest.0.gz
@@ -116,7 +115,6 @@ sbin/faxsetup.irix
 sbin/faxsetup.linux
 sbin/faxstate
 sbin/faxwatch
-sbin/hylafax
 sbin/probemodem
 sbin/recvstats
 sbin/tagtest
@@ -163,8 +161,8 @@ share/hylafax/config_template/telebit-t3000
 share/hylafax/config_template/telebit-wb
 share/hylafax/config_template/tricom2842
 share/hylafax/config_template/uds-fastalk
-share/hylafax/config_template/umc9624
 share/hylafax/config_template/umc92144
+share/hylafax/config_template/umc9624
 share/hylafax/config_template/usr-2.0
 share/hylafax/config_template/usr-rts
 share/hylafax/config_template/usr-xon
@@ -180,9 +178,9 @@ share/hylafax/etc_template/dpsprinter.ps
 share/hylafax/etc_template/hosts.hfaxd
 share/hylafax/etc_template/lutRS18.pcf
 share/hylafax/etc_template/xferfaxlog
-@dirrm share/hylafax/config_template
 @dirrm share/hylafax/etc_template
+@dirrm share/hylafax/config_template
 @dirrm share/hylafax
+@dirrm share/doc/hylafax
 @dirrm libexec/hylafax
 @dirrm libdata/hylafax
-@dirrm share/doc/hylafax
