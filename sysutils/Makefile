@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2003/08/30 16:11:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.202 2003/09/08 14:28:11 jmmv Exp $
 
 COMMENT=	System utilities
 
@@ -71,6 +71,7 @@ SUBDIR+=	gtop
 SUBDIR+=	gworkspace
 SUBDIR+=	hfsutils
 SUBDIR+=	i2ocfg
+SUBDIR+=	idesk
 SUBDIR+=	isapnptools
 SUBDIR+=	kapm
 SUBDIR+=	kdf
