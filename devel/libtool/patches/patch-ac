@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.16 2005/01/18 18:51:15 tv Exp $
+$NetBSD: patch-ac,v 1.17 2005/03/22 15:12:08 tv Exp $
 
---- ltmain.sh.orig	2004-09-19 08:34:44.000000000 -0400
+--- ltmain.sh.orig	2005-02-12 07:30:57.000000000 -0500
 +++ ltmain.sh
-@@ -184,6 +184,31 @@ func_win32_libid () {
- # command doesn't match the default compiler.
+@@ -187,6 +187,31 @@ func_win32_libid ()
  # arg is usually of the form 'gcc ...'
- func_infer_tag () {
+ func_infer_tag ()
+ {
 +    # Set the commonly-used compilers for some tags.
 +    tag_compilers_CC="*cc *xlc"
 +    tag_compilers_CXX="*++ *CC"
@@ -15,26 +15,26 @@ $NetBSD: patch-ac,v 1.16 2005/01/18 18:51:15 tv Exp $
 +    # "CC" tag applies by matching up the base compile command to some
 +    # compilers commonly used for the "CC" tag.
 +    if test -z "$tagname"; then
-+      z=CC
-+      eval "tag_compilers=\$tag_compilers_${z}"
-+      if test -n "$tag_compilers"; then
-+	for zp in $tag_compilers; do
-+	  case $base_compiler in 
-+	    $zp)
-+	    # The compiler in the base compile command matches
-+	    # one of the common compilers for the current tag.
-+	    # Assume this is the tagged configuration we want.
-+	    tagname=$z
-+	    break
-+	    ;;
-+	  esac
-+	done
-+      fi
++        z=CC
++        eval "tag_compilers=\$tag_compilers_${z}"
++        if test -n "$tag_compilers"; then
++        for zp in $tag_compilers; do
++          case $base_compiler in
++            $zp)
++            # The compiler in the base compile command matches
++            # one of the common compilers for the current tag.
++            # Assume this is the tagged configuration we want.
++            tagname=$z
++            break
++            ;;
++          esac
++        done
++        fi
 +    fi
      if test -n "$available_tags" && test -z "$tagname"; then
        CC_quoted=
        for arg in $CC; do
-@@ -224,6 +249,27 @@ func_infer_tag () {
+@@ -227,6 +252,27 @@ func_infer_tag ()
  	      break
  	      ;;
  	    esac
@@ -62,16 +62,16 @@ $NetBSD: patch-ac,v 1.16 2005/01/18 18:51:15 tv Exp $
  	  fi
  	done
  	# If $tagname still isn't set, then no tagged configuration
-@@ -522,7 +568,7 @@ if test -z "$show_help"; then
+@@ -534,7 +580,7 @@ if test -z "$show_help"; then
      $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
-     $echo "*** Future versions of Libtool will require -mode=MODE be specified." 1>&2
+     $echo "*** Future versions of Libtool will require --mode=MODE be specified." 1>&2
      case $nonopt in
 -    *cc | cc* | *++ | gcc* | *-gcc* | g++* | xlc*)
 +    *cc | cc* | *++ | gcc* | *-gcc* | g++* | xlc* | *CC)
        mode=link
        for arg
        do
-@@ -1306,6 +1352,13 @@ EOF
+@@ -1321,6 +1367,13 @@ EOF
  	    exit $EXIT_FAILURE
  	    ;;
  	  esac
@@ -85,25 +85,7 @@ $NetBSD: patch-ac,v 1.16 2005/01/18 18:51:15 tv Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -1466,7 +1519,7 @@ EOF
- 	    # These systems don't actually have a C library (as such)
- 	    test "X$arg" = "X-lc" && continue
- 	    ;;
--	  *-*-openbsd* | *-*-freebsd*)
-+	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
- 	    # Do not include libc due to us having libc/libc_r.
- 	    test "X$arg" = "X-lc" && continue
- 	    ;;
-@@ -1477,7 +1530,7 @@ EOF
- 	  esac
- 	elif test "X$arg" = "X-lc_r"; then
- 	 case $host in
--	 *-*-openbsd* | *-*-freebsd*)
-+	 *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
- 	   # Do not include libc_r directly, use -pthread flag.
- 	   continue
- 	   ;;
-@@ -3168,6 +3221,7 @@ EOF
+@@ -3206,6 +3259,7 @@ EOF
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -111,16 +93,7 @@ $NetBSD: patch-ac,v 1.16 2005/01/18 18:51:15 tv Exp $
  	  ;;
  
  	osf)
-@@ -3336,7 +3390,7 @@ EOF
- 	  *-*-netbsd*)
- 	    # Don't link with libc until the a.out ld.so is fixed.
- 	    ;;
--	  *-*-openbsd* | *-*-freebsd*)
-+	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
- 	    # Do not include libc due to us having libc/libc_r.
- 	    test "X$arg" = "X-lc" && continue
- 	    ;;
-@@ -5364,8 +5418,16 @@ relink_command=\"$relink_command\""
+@@ -5422,8 +5476,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  

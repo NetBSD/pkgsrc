@@ -1,8 +1,8 @@
-$NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.13 2005/03/22 15:12:08 tv Exp $
 
---- libtool.m4.orig	2004-09-19 08:15:08.000000000 -0400
+--- libtool.m4.orig	2005-02-12 07:18:34.000000000 -0500
 +++ libtool.m4
-@@ -361,11 +361,11 @@ else
+@@ -346,11 +346,11 @@ else
  
    if test "X$echo" = Xecho; then
      # We didn't find a better echo, so look for alternatives.
@@ -16,16 +16,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
      elif (test -f /bin/ksh || test -f /bin/ksh$ac_exeext) &&
  	 test "X$CONFIG_SHELL" != X/bin/ksh; then
        # If we have ksh, try running configure again with it.
-@@ -678,7 +678,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
-     lt_cv_sys_max_cmd_len=8192;
-     ;;
- 
--  netbsd* | freebsd* | openbsd* | darwin* )
-+  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
-     # This has been around since 386BSD, at least.  Likely further.
-     if test -x /sbin/sysctl; then
-       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -1201,6 +1201,7 @@ beos*)
+@@ -1198,6 +1198,7 @@ beos*)
  bsdi[[45]]*)
    version_type=linux
    need_version=no
@@ -33,16 +24,15 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -1315,16 +1316,17 @@ kfreebsd*-gnu)
-   ;;
- 
- freebsd*)
-+  version_type=linux
+@@ -1315,15 +1316,16 @@ freebsd* | dragonfly*)
+   # DragonFly does not have aout.  When/if they implement a new
+   # versioning mechanism, adjust this.
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
++  version_type=linux
 +  case $objformat in
 +    elf*)
 +      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
@@ -52,29 +42,12 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
        ;;
 -    freebsd-*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
-+    *)
++    *)  
 +      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
        need_version=yes
        ;;
    esac
-@@ -1344,6 +1346,16 @@ freebsd*)
-   esac
-   ;;
- 
-+dragonfly*)
-+  version_type=freebsd-elf # XXX tv this should be =linux; current selection has problems
-+  need_version=no
-+  need_lib_prefix=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=no
-+  hardcode_into_libs=yes
-+  ;;
-+
- gnu*)
-   version_type=linux
-   need_lib_prefix=no
-@@ -1400,15 +1412,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -1399,15 +1401,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -103,7 +76,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -1485,11 +1504,11 @@ knetbsd*-gnu)
+@@ -1484,11 +1493,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -117,7 +90,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -1520,10 +1539,10 @@ nto-qnx*)
+@@ -1519,10 +1528,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -130,34 +103,18 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -1688,9 +1707,7 @@ if test -f "$ltmain" && test -n "$tagnam
+@@ -1687,9 +1696,7 @@ if test -f "$ltmain" && test -n "$tagnam
  
        case $tagname in
        CXX)
 -	if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
--	    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) || 
+-	    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
 -	    (test "X$CXX" != "Xg++"))) ; then
-+	if test -n "$CXX" && test "X$CXX" != "Xno"; then
++        if test -n "$CXX" && test "X$CXX" != "Xno"; then
  	  AC_LIBTOOL_LANG_CXX_CONFIG
  	else
  	  tagname=""
-@@ -2160,13 +2177,13 @@ darwin* | rhapsody*)
-   lt_cv_deplibs_check_method=pass_all
-   ;;
- 
--freebsd* | kfreebsd*-gnu)
-+freebsd* | kfreebsd*-gnu | dragonfly*)
-   if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
-     case $host_cpu in
-     i*86 )
-       # Not sure whether the presence of OpenBSD here was a mistake.
-       # Let's accept both of them until this is cleared up.
--      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD)/i[[3-9]]86 (compact )?demand paged shared library'
-+      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD|DragonFly)/i[[3-9]]86 (compact )?demand paged shared library'
-       lt_cv_file_magic_cmd=/usr/bin/file
-       lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
-       ;;
-@@ -2198,6 +2215,10 @@ hpux10.20* | hpux11*)
+@@ -2197,6 +2204,10 @@ hpux10.20* | hpux11*)
    esac
    ;;
  
@@ -168,7 +125,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
  irix5* | irix6* | nonstopux*)
    case $LD in
    *-32|*"-32 ") libmagic=32-bit;;
-@@ -2425,21 +2446,10 @@ AC_DEFUN([AC_LIBTOOL_CXX],
+@@ -2424,22 +2435,10 @@ AC_DEFUN([AC_LIBTOOL_CXX],
  # ---------------
  AC_DEFUN([_LT_AC_LANG_CXX],
  [AC_REQUIRE([AC_PROG_CXX])
@@ -183,15 +140,16 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
 -[
 -AC_REQUIRE([AC_PROG_CXX])
 -if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
--    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) || 
+-    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
 -    (test "X$CXX" != "Xg++"))) ; then
 -  AC_PROG_CXXCPP
 -fi
 -])# _LT_AC_PROG_CXXCPP
- 
+-
  # AC_LIBTOOL_F77
  # --------------
-@@ -2604,7 +2614,7 @@ AC_DEFUN([AC_LIBTOOL_LANG_CXX_CONFIG], [
+ # enable support for Fortran 77 libraries
+@@ -2603,7 +2602,7 @@ AC_DEFUN([AC_LIBTOOL_LANG_CXX_CONFIG], [
  AC_DEFUN([_LT_AC_LANG_CXX_CONFIG],
  [AC_LANG_PUSH(C++)
  AC_REQUIRE([AC_PROG_CXX])
@@ -200,7 +158,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
  
  _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
  _LT_AC_TAGVAR(allow_undefined_flag, $1)=
-@@ -2933,7 +2943,7 @@ case $host_os in
+@@ -2935,7 +2934,7 @@ case $host_os in
            _LT_AC_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
            _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -209,16 +167,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -2967,7 +2977,7 @@ case $host_os in
-   freebsd-elf*)
-     _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
-     ;;
--  freebsd* | kfreebsd*-gnu)
-+  freebsd* | kfreebsd*-gnu | dragonfly*)
-     # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
-     # conventions
-     _LT_AC_TAGVAR(ld_shlibs, $1)=yes
-@@ -3091,6 +3101,16 @@ case $host_os in
+@@ -3093,6 +3092,16 @@ case $host_os in
  	;;
      esac
      ;;
@@ -235,7 +184,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -3208,14 +3228,29 @@ case $host_os in
+@@ -3222,14 +3231,29 @@ case $host_os in
      ;;
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
@@ -267,7 +216,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
      ;;
    openbsd2*)
      # C++ shared libraries are fairly broken
-@@ -3651,6 +3686,21 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -3665,6 +3689,21 @@ if AC_TRY_EVAL(ac_compile); then
      esac
    done
  
@@ -289,7 +238,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -4591,9 +4641,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4611,9 +4650,11 @@ AC_MSG_CHECKING([for $compiler option to
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -302,7 +251,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4615,6 +4667,10 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4635,6 +4676,10 @@ AC_MSG_CHECKING([for $compiler option to
  	;;
        esac
        ;;
@@ -313,16 +262,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -4661,7 +4717,7 @@ AC_MSG_CHECKING([for $compiler option to
- 	    ;;
- 	esac
- 	;;
--      freebsd* | kfreebsd*-gnu)
-+      freebsd* | kfreebsd*-gnu | dragonfly*)
- 	# FreeBSD uses GNU C++
- 	;;
-       hpux9* | hpux10* | hpux11*)
-@@ -4689,6 +4745,8 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4709,6 +4754,8 @@ AC_MSG_CHECKING([for $compiler option to
  	    ;;
  	esac
  	;;
@@ -331,7 +271,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -4854,9 +4912,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4880,9 +4927,11 @@ AC_MSG_CHECKING([for $compiler option to
        ;;
  
      darwin* | rhapsody*)
@@ -344,7 +284,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -4885,6 +4945,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4911,6 +4960,11 @@ AC_MSG_CHECKING([for $compiler option to
        esac
        ;;
  
@@ -356,7 +296,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5187,6 +5252,17 @@ EOF
+@@ -5225,6 +5279,17 @@ EOF
        fi
        ;;
  
@@ -374,7 +314,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5477,7 +5553,7 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5528,7 +5593,7 @@ $echo "local: *; };" >> $output_objdir/$
           _LT_AC_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -383,16 +323,7 @@ $NetBSD: manual-libtool.m4,v 1.12 2005/01/18 18:51:15 tv Exp $
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -5517,7 +5593,7 @@ $echo "local: *; };" >> $output_objdir/$
-       ;;
- 
-     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
--    freebsd* | kfreebsd*-gnu)
-+    freebsd* | kfreebsd*-gnu | dragonfly*)
-       _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
-       _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
-       _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-@@ -5592,6 +5668,21 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5643,6 +5708,21 @@ $echo "local: *; };" >> $output_objdir/$
        fi
        ;;
  
