@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/07/17 22:55:26 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/10 02:22:50 jlam Exp $
 #
 # NOTE:	Versions 1.27 and 1.28 cause apache to dump core,
 #	so this packages has been left at version 1.25
@@ -23,7 +23,7 @@ DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
 USE_BUILDLINK2=		YES
 APACHE_MODULE=		YES
-LIBPERL5_REQD=		${PERL5_REQD}
+LIBPERL5_REQD=		${_PERL5_REQD}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
 
 MAKE_PARAMS+=		USE_APXS=1
