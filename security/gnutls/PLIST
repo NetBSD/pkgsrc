@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/21 10:17:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/22 23:08:04 jmmv Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -18,17 +18,17 @@ lib/libgnutls-extra.a
 lib/libgnutls-extra.la
 lib/libgnutls-extra.so
 lib/libgnutls-extra.so.11
-lib/libgnutls-extra.so.11.2
+lib/libgnutls-extra.so.11.3
 lib/libgnutls-openssl.a
 lib/libgnutls-openssl.la
 lib/libgnutls-openssl.so
 lib/libgnutls-openssl.so.11
-lib/libgnutls-openssl.so.11.2
+lib/libgnutls-openssl.so.11.3
 lib/libgnutls.a
 lib/libgnutls.la
 lib/libgnutls.so
 lib/libgnutls.so.11
-lib/libgnutls.so.11.2
+lib/libgnutls.so.11.3
 man/man1/certtool.1
 man/man1/gnutls-cli-debug.1
 man/man1/gnutls-cli.1
