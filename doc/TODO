@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.844 2003/09/09 19:17:42 xtraeme Exp $
+$NetBSD: TODO,v 1.845 2003/09/10 12:43:03 markd Exp $
 
 Suggested new packages
 ======================
@@ -162,7 +162,6 @@ Suggested package updates
 	o jpilot-0.99.6
 	o jwhois-3.2.2
 	o kaffe-1.1.0 [pkg/22155]
-	o kdbg-1.2.9
 	o lavaps-2.3
 	o lcms-1.0.9
 	o libgcrypt-1.1.42
