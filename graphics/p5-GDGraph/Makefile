@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/29 17:45:45 abs Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/09 00:45:45 snj Exp $
 #
 
 DISTNAME=	GDGraph-1.43
@@ -13,7 +13,7 @@ COMMENT=	GDGraph is a package to generate charts, using Lincoln Stein's GD.pm
 
 DEPENDS+=       p5-GDTextUtil>=0.75:../../graphics/p5-GDTextUtil
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GD/Graph/.packlist
 
 .include "../../lang/perl5/module.mk"
