@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.2 2002/10/14 11:49:56 skrll Exp $
+$NetBSD: patch-ad,v 1.3 2003/02/04 17:31:17 drochner Exp $
 
---- pth_syscall.c.orig	Sun Jan 27 11:03:41 2002
-+++ pth_syscall.c
-@@ -63,6 +63,24 @@ pid_t fork(void)
+--- pth_syscall.c.orig	Sun Jan 27 12:03:41 2002
++++ pth_syscall.c	Thu Sep 12 09:28:44 2002
+@@ -50,7 +50,7 @@
+ /* Pth hard wrapper for syscall fork(2) */
+ #if cpp
+ #if defined(SYS_fork)
+-#define PTH_SC_fork() ((pid_t)syscall(SYS_fork))
++#define PTH_SC_fork() ((pid_t)_fork())
+ #else
+ #define PTH_SC_fork fork
+ #endif
+@@ -63,6 +63,24 @@
  }
  #endif
  
@@ -27,7 +36,7 @@ $NetBSD: patch-ad,v 1.2 2002/10/14 11:49:56 skrll Exp $
  /* Pth hard wrapper for sleep(3) [internally fully emulated] */
  #if PTH_SYSCALL_HARD
  unsigned int sleep(unsigned int sec)
-@@ -85,11 +103,13 @@ int system(const char *cmd)
+@@ -85,11 +103,13 @@
  #if cpp
  #if defined(SYS_sigprocmask)
  #define PTH_SC_sigprocmask(a1,a2,a3) ((int)syscall(SYS_sigprocmask,(a1),(a2),(a3)))
@@ -42,7 +51,7 @@ $NetBSD: patch-ad,v 1.2 2002/10/14 11:49:56 skrll Exp $
  int sigprocmask(int how, const sigset_t *set, sigset_t *oset)
  {
      pth_implicit_init();
-@@ -119,6 +139,22 @@ pid_t waitpid(pid_t wpid, int *status, i
+@@ -119,6 +139,22 @@
  {
      pth_implicit_init();
      return pth_waitpid(wpid, status, options);
