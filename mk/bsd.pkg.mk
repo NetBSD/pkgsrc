@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.213 1999/02/11 17:56:08 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.214 1999/02/13 11:06:47 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -124,7 +124,7 @@ PKGDIR?=		${.CURDIR}/pkg
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if defined(USE_LOCALBASE_FOR_X11)
 PREFIX=			${LOCALBASE}
-BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:../../pkgtools/xpkgwedge
+BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
 .else
 PREFIX=			${X11BASE}
 .endif
@@ -152,15 +152,15 @@ DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
 .endif
 .if defined(USE_MOTIF)
 .if exists(${X11BASE}/include/Xm/Xm.h)
-RUN_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:../../x11/lesstif
+RUN_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
 .else
-RUN_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:../../x11/lesstif
-BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:../../x11/lesstif
+RUN_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
+BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
 .endif
 .endif
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/pkglibtool
-BUILD_DEPENDS+=		${LIBTOOL}:../../pkgtools/pkglibtool
+BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
@@ -242,6 +242,18 @@ PATCH_DIST_ARGS+=	-C
 # archive.  tar ignores this, pax thinks it's valid, and asks for the
 # second volume of the archive.
 
+EXTRACT_SUFX?=		.tar.gz
+.if (${EXTRACT_SUFX} == ".tar.bz2")
+.if exists(/usr/bin/bzcat)
+BZCAT=			/usr/bin/bzcat
+.else
+BZCAT=			${LOCALBASE}/bin/bzcat
+BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
+.endif
+EXTRACT_CMD?=		${BZCAT}
+EXTRACT_BEFORE_ARGS?=	<
+EXTRACT_AFTER_ARGS?=	| /bin/pax -r
+.else
 .if exists(/bin/pax) && (${OPSYS} != "NetBSD")
 EXTRACT_CMD?=		/bin/pax
 EXTRACT_BEFORE_ARGS?=	-zrf
@@ -258,7 +270,7 @@ EXTRACT_BEFORE_ARGS?=   ${EXTRACT_ARGS}
 EXTRACT_BEFORE_ARGS?=   -xzf
 .endif
 .endif
-EXTRACT_SUFX?=		.tar.gz
+.endif
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
