@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.236 2001/07/30 19:51:10 nra Exp $
+# $NetBSD: Makefile,v 1.237 2001/08/03 13:25:10 jlam Exp $
 #
 
 COMMENT=	Networking tools
@@ -141,6 +141,7 @@ SUBDIR+=	rsync
 SUBDIR+=	ruby-drb
 SUBDIR+=	ruby-icmp
 SUBDIR+=	samba
+SUBDIR+=	samba20
 SUBDIR+=	sdist
 SUBDIR+=	sendfile
 SUBDIR+=	sftp
