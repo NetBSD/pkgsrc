@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:45 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/04/16 13:55:30 wiz Exp $
 
 SHA1 (rx-1.5.tar.gz) = 1f29112cea41bb547b551361162be306f8c3995a
 Size (rx-1.5.tar.gz) = 637996 bytes
 SHA1 (patch-aa) = 6dd85891f4593c98b34835b56b0c32e89c7175a7
-SHA1 (patch-ab) = ff234edd168aa34124b5ebbadef3466650b59c63
+SHA1 (patch-ab) = 69abb3d80cdc84d9e59e1abf6c4084292b49e330
