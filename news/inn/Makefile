@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/01/24 20:41:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.53 2004/02/01 01:43:30 jlam Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -85,7 +85,7 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 .endif
 
 post-patch:
