@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.25 2002/10/03 19:12:47 wiz Exp $
+#	$NetBSD: cross.mk,v 1.26 2003/09/30 22:46:42 kristerw Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -37,7 +37,7 @@ CXXFLAGS=		# empty
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-.if defined(USE_BUILDLINK2)
+.if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .  include "../../cross/binutils/buildlink2.mk"
 .else
 DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
