@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1180 2003/12/13 16:50:03 wiz Exp $
+$NetBSD: TODO,v 1.1181 2003/12/13 19:11:57 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nsd-1.2.3
 	o nxtvepg-2.6.0
-	o openbox-3.0 [pkgsrc-wip]
 	o openh323-1.11.2
 	o openldap-2.1.23
 	o openoffice-1.1 [skrll]
