@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/14 20:28:53 frueauf Exp $
+bin/ncdump
+bin/ncgen
+include/netcdf.h
+include/netcdf.inc
+include/netcdf.hh
+include/ncvalues.hh
+lib/libnetcdf.a
+lib/libnetcdf.so.3.4
+lib/libnetcdf_c++.a
+lib/libnetcdf_c++.so.3.4
+man/man1/ncdump.1
+man/man1/ncgen.1
+man/man3/netcdf.3
+man/man3/netcdf.3f

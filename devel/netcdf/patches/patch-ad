@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+
+--- Makefile.orig	Sun Sep 27 19:49:58 1998
++++ Makefile	Sun Sep 27 19:50:16 1998
+@@ -25,8 +25,8 @@
+ 		rules.make
+ 
+ 
+-all:		libsrc/all	\
+-		fortran/all	\
++all:		fortran/all	\
++		libsrc/all	\
+ 		ncdump/all	\
+ 		ncgen/all	\
+ 		cxx/all

@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+
+--- cxx/Makefile.orig	Sun Sep 27 20:12:34 1998
++++ cxx/Makefile	Sun Sep 27 20:17:51 1998
+@@ -11,9 +11,9 @@
+ 		  nctst.cc ncvalues.cc ncvalues.hh netcdf.cc netcdf.hh \
+ 		  expected cxxdoc.tex cxxdoc.ps texinfo.tex
+ 
+-LIBRARY		= libnetcdf_c++.a
+-lib_netcdf	= ../libsrc/libnetcdf.a
+-ld_netcdf	= -L../libsrc -lnetcdf
++LIBRARY		= libnetcdf_c++.la
++lib_netcdf	= ../libsrc/libnetcdf.la
++ld_netcdf	= ${lib_netcdf}
+ 
+ HEADER1		= netcdf.hh
+ HEADER2		= ncvalues.hh
+@@ -42,7 +42,7 @@
+ install:	$(LIBDIR)/$(LIBRARY) $(INCDIR)/$(HEADER1) $(INCDIR)/$(HEADER2)
+ 
+ $(prog) : $(prog_objs) $(LIBRARY) $(lib_netcdf)
+-	$(CXX) -o $@ $(CXXCPPFLAGS) $(CXXFLAGS) $(LDFLAGS) $(prog_objs) $(libs)
++	$(LINK.cxx) -o $@ $(CXXCPPFLAGS) $(CXXFLAGS) $(LDFLAGS) $(prog_objs) $(libs)
+ 
+ nctst_src: nctst.cc netcdf.cc ncvalues.cc
+ 	#load -I../libsrc $(nctst_src)

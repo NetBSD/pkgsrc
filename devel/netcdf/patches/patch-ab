@@ -1,0 +1,45 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+
+--- macros.make.in.orig	Thu Sep 18 22:56:04 1997
++++ macros.make.in	Sun Sep 27 19:11:17 1998
+@@ -28,9 +28,9 @@
+ 
+ 
+ # Compilation:
+-CC		= @CC@
+-CXX		= @CXX@
+-FC		= @FC@
++CC		= ${LIBTOOL} --mode=compile @CC@
++CXX		= ${LIBTOOL} --mode=compile @CXX@
++FC		= ${LIBTOOL} --mode=compile @FC@
+ CFLAGS		= @CFLAGS@
+ CXXFLAGS	= $(CFLAGS) @CXXFLAGS@
+ FFLAGS		= @FFLAGS@
+@@ -47,10 +47,10 @@
+ MATHLIB		= @MATHLIB@
+ FLIBS		= @FLIBS@
+ LIBS		= @LIBS@
+-LINK.c		= $(CC) -o $@ $(CFLAGS) $(LDFLAGS)
+-LINK.cxx	= $(CXX) -o $@ $(CXXFLAGS) $(LDFLAGS)
+-LINK.F		= $(FC) -o $@ $(FFLAGS) $(FLDFLAGS)
+-LINK.f		= $(FC) -o $@ $(FFLAGS) $(FLDFLAGS)
++LINK.c		= ${LIBTOOL} --mode=link @CC@ -o $@ $(CFLAGS) $(LDFLAGS)
++LINK.cxx	= ${LIBTOOL} --mode=link @CXX@ -o $@ $(CXXFLAGS) $(LDFLAGS)
++LINK.F		= ${LIBTOOL} --mode=link @FC@ -o $@ $(FFLAGS) $(FLDFLAGS)
++LINK.f		= ${LIBTOOL} --mode=link @FC@ -o $@ $(FFLAGS) $(FLDFLAGS)
+ 
+ 
+ # NetCDF files:
+@@ -66,9 +66,9 @@
+ 
+ 
+ # Misc. Utilities:
+-AR		= @AR@
+-ARFLAGS		= cru	# NB: SunOS 4 doesn't like `-' option prefix
+-RANLIB		= @RANLIB@
++AR		= ${LIBTOOL} --mode=link @CC@
++ARFLAGS		= -rpath $(LIBDIR) -version-info 3:4
++RANLIB		= echo
+ TARFLAGS	= -chf
+ 
+ 
