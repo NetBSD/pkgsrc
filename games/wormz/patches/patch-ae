@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.2 2003/10/23 23:01:33 kristerw Exp $
+$NetBSD: patch-ae,v 1.3 2004/02/18 23:09:03 kristerw Exp $
 
 --- Network/UDPConnection.cc.orig	Tue Jul  7 23:02:47 1998
-+++ Network/UDPConnection.cc	Fri Oct 24 00:06:52 2003
++++ Network/UDPConnection.cc	Wed Feb 18 23:05:15 2004
 @@ -66,7 +66,7 @@
    }
     
@@ -20,6 +20,15 @@ $NetBSD: patch-ae,v 1.2 2003/10/23 23:01:33 kristerw Exp $
    if (getsockname (socket_fd, (sockaddr *) &addr, &addr_len)) {
      close(socket_fd);
      StdError("can't get sockname");
+@@ -148,7 +148,7 @@
+   return TRUE;
+ }
+ 
+-int UDPConnection::Receive(char * buffer, int maxsize, bool Wait=TRUE)
++int UDPConnection::Receive(char * buffer, int maxsize, bool Wait)
+ {
+   fd_set set;
+   timeval timeout;
 @@ -166,9 +166,9 @@
      return 0;
  
