@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/13 10:31:14 tron Exp $
+
+SHA1 (suse91/i586/aaa_base-9.1-0.i586.rpm) = c15fcdc81a93c7d3056292d56b1376a0fdf20554
+Size (suse91/i586/aaa_base-9.1-0.i586.rpm) = 289379 bytes
+SHA1 (suse91/i586/bash-2.05b-305.i586.rpm) = 51c41a86a19628af1e43c4b65ece8aa159bc9da7
+Size (suse91/i586/bash-2.05b-305.i586.rpm) = 636675 bytes
+SHA1 (suse91/i586/coreutils-5.2.1-23.i586.rpm) = 801f63e5e347b19323d01e6a4460aaea60ddc14f
+Size (suse91/i586/coreutils-5.2.1-23.i586.rpm) = 1982252 bytes
+SHA1 (suse91/i586/glibc-2.3.3-98.i586.rpm) = bd12daad569a071dd8989d92b5e278aa168b0ab3
+Size (suse91/i586/glibc-2.3.3-98.i586.rpm) = 1455673 bytes
+SHA1 (suse91/i586/libstdc++-3.3.3-41.i586.rpm) = 77341589e297e66fc793961d96a7b24df5893101
+Size (suse91/i586/libstdc++-3.3.3-41.i586.rpm) = 301785 bytes
+SHA1 (suse91/i586/ncurses-5.4-59.i586.rpm) = 83fc26e2c55e75f347530ad19b01d23883a60738
+Size (suse91/i586/ncurses-5.4-59.i586.rpm) = 790419 bytes
+SHA1 (suse91/i586/readline-4.3-306.i586.rpm) = 500c6665e66d0052a5d922d7db3f88f029c91853
+Size (suse91/i586/readline-4.3-306.i586.rpm) = 151357 bytes
+SHA1 (suse91/i586/zlib-1.2.1-70.i586.rpm) = 7592cc5629f8c3c480bb943089c0e09481ac3f46
+Size (suse91/i586/zlib-1.2.1-70.i586.rpm) = 63453 bytes
