@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/11 20:17:36 bad Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/11/10 21:06:04 hwr Exp $
 bin/gnugo
+man/man6/gnugo.6
