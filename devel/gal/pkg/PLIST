@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/11/25 14:11:11 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/12/31 09:35:25 rh Exp $
 include/gal/e-paned/e-hpaned.h
 include/gal/e-paned/e-paned.h
 include/gal/e-paned/e-vpaned.h
@@ -25,6 +25,7 @@ include/gal/e-table/e-table-group-leaf.h
 include/gal/e-table/e-table-group.h
 include/gal/e-table/e-table-header-item.h
 include/gal/e-table/e-table-header.h
+include/gal/e-table/e-table-header-utils.h
 include/gal/e-table/e-table-item.h
 include/gal/e-table/e-table-model.h
 include/gal/e-table/e-table-one.h
@@ -48,6 +49,15 @@ include/gal/e-text/e-text-event-processor-types.h
 include/gal/e-text/e-text-event-processor.h
 include/gal/e-text/e-text-model.h
 include/gal/e-text/e-text.h
+include/gal/menus/gal-define-views-dialog.h
+include/gal/menus/gal-define-views-model.h
+include/gal/menus/gal-view-collection.h
+include/gal/menus/gal-view-etable.h
+include/gal/menus/gal-view-factory-etable.h
+include/gal/menus/gal-view-factory.h
+include/gal/menus/gal-view-new-dialog.h
+include/gal/menus/gal-view.h
+include/gal/util/e-cache.h
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/widgets/color-group.h
@@ -75,15 +85,29 @@ include/gal/widgets/widget-pixmap-combo.h
 lib/galConf.sh
 lib/libgal.a
 lib/libgal.la
-lib/libgal.so.1.2
-share/etable/0.2.2/glade/e-table-config.glade
-share/etable/0.2.2/glade/e-table-group.glade
-share/etable/0.2.2/glade/e-table-field-chooser.glade
-@dirrm share/etable/0.2.2/glade
-@dirrm share/etable/0.2.2
+lib/libgal.so.3.1
+@exec mkdir -m 0755 -p %D/share/bonobo/html/gal
+share/bonobo/html/gal-api.sgml
+share/bonobo/html/gal.hierarchy
+share/bonobo/html/gal.signals
+share/bonobo/html/gal.types
+share/bonobo/html/gal-decl.txt
+share/bonobo/html/gal-sections.txt
+share/etable/0.4.1/glade/e-table-config.glade
+share/etable/0.4.1/glade/e-table-group.glade
+share/etable/0.4.1/glade/e-table-field-chooser.glade
+share/gal/0.4.1/glade/gal-define-views.glade
+share/gal/0.4.1/glade/gal-view-new-dialog.glade
+@dirrm share/bonobo/html/gal
+@dirrm share/etable/0.4.1/glade
+@dirrm share/etable/0.4.1
 @dirrm share/etable
+@dirrm share/gal/0.4.1/glade
+@dirrm share/gal/0.4.1
+@dirrm share/gal
 @dirrm include/gal/widgets
 @dirrm include/gal/util
+@dirrm include/gal/menus
 @dirrm include/gal/e-text
 @dirrm include/gal/e-table
 @dirrm include/gal/e-paned
