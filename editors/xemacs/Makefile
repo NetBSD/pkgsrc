@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/12/01 16:51:16 magick Exp $
+# $NetBSD: Makefile,v 1.55 2003/01/19 06:52:54 salo Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	4
@@ -92,8 +92,6 @@ CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
 CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
-MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}"
-MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 post-extract:
 	for FILE in ${EXTRA_FILES}; do					\

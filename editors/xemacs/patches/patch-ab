@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1999/12/08 08:18:25 rh Exp $
+$NetBSD: patch-ab,v 1.3 2003/01/19 06:52:55 salo Exp $
 
 --- lib-src/Makefile.in.in.orig	Mon Jun 14 08:32:00 1999
 +++ lib-src/Makefile.in.in	Wed Dec  8 09:14:11 1999
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/08 08:18:25 rh Exp $
  	     != "`(cd ${srcdir}     && $(pwd))`"; then \
  	  for f in ${SCRIPTS}; do \
 -	    (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$$f ${archlibdir}/$$f); \
-+	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$$f ${archlibdir}/$$f); \
++	    (cd .. && $(BSD_INSTALL_SCRIPT) ${srcdir}/$$f ${archlibdir}/$$f); \
  	  done ; \
  	fi
  
@@ -37,9 +37,9 @@ $NetBSD: patch-ab,v 1.2 1999/12/08 08:18:25 rh Exp $
 -	  (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/$${file}) ; \
 +	  if [ $${file} = rcs-checkin ] || [ $${file} = send-pr ] ; \
 +	  then \
-+	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/xemacs-$${file}) ; \
++	    (cd .. && $(BSD_INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/xemacs-$${file}) ; \
 +	  else \
-+	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/$${file}) ; \
++	    (cd .. && $(BSD_INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/$${file}) ; \
 +	  fi \
  	done
  
