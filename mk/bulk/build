@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.20 2001/12/17 02:32:23 dmcmahill Exp $
+# $NetBSD: build,v 1.21 2002/06/29 03:33:34 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -85,6 +85,7 @@ if [ -d pkgtools/pkglint ]; then
 	ORDERFILE=`make show-var VARNAME=ORDERFILE` || fail=yes
 	BROKENFILE=`make show-var VARNAME=BROKENFILE` || fail=yes
 	BUILDLOG=`make show-var VARNAME=BUILDLOG` || fail=yes
+	STARTFILE=`make show-var VARNAME=STARTFILE` || fail=yes
 else
 	echo "The pkgtools/pkglint directory does not exist.  Please update"
 	echo "your pkgsrc tree in ${USR_PKGSRC}"
@@ -101,6 +102,7 @@ echo "INDEXFILE       = $INDEXFILE"
 echo "ORDERFILE       = $ORDERFILE"
 echo "BROKENFILE      = $BROKENFILE"
 echo "BUILDLOG        = $BUILDLOG"
+echo "STARTFILE       = $STARTFILE"
 echo "----------------------------------"
 
 # make sure we have values for these very important
@@ -113,6 +115,7 @@ if [ $fail = "yes" -o \
 	-z "$ORDERFILE" -o \
 	-z "$BROKENFILE" -o \
 	-z "$BUILDLOG" \
+	-z "$STARTFILE" \
 	]; then
 	echo "ERROR:  build failed to extract certain key variables."
 	echo "        please examine the above list and correct the"
