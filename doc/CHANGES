@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2219 2003/05/12 11:06:39 abs Exp $
+$NetBSD: CHANGES,v 1.2220 2003/05/12 12:05:13 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1941,3 +1941,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated unrar to 3.2.1nb1 [salo 2003-05-11]
 	Updated multitail to 2.4 [jmc 2003-05-12]
 	Updated cpuflags to 0.41 [abs 2003-05-12]
+	Updated centericq to 4.9.2nb3 [uebayasi 2003-05-12]
