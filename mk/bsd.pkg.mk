@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.415 2000/03/10 16:07:37 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.416 2000/03/13 14:19:15 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -622,6 +622,12 @@ PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 # shared/dynamic motif libs
 MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
 
+.ifdef SMART_MESSAGES
+_PKGSRC_IN?=		===> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===
+.else
+_PKGSRC_IN?=		===
+.endif
+
 # Used to print all the '===>' style prompts - override this to turn them off.
 ECHO_MSG?=		${ECHO}
 
@@ -896,7 +902,7 @@ IGNORE=	"Unacceptable license: ${LICENSE}." \
 .if defined(IGNORE_SILENT)
 IGNORECMD?=	${DO_NADA}
 .endif
-IGNORECMD?=	${ECHO} -n "===>  ${PKGNAME} " ; \
+IGNORECMD?=	${ECHO} -n "${_PKGSRC_IN}> ${PKGNAME} " ; \
 		for str in ${IGNORE} ; \
 		do \
 			${ECHO} "$$str" ; \
@@ -983,7 +989,7 @@ package:
 .if defined(IGNORE_SILENT)
 	@${DO_NADA}
 .else
-	@${ECHO_MSG} "===>  ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
+	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
 .endif
 .endif
 
@@ -1138,11 +1144,11 @@ do-extract:
 .if !target(do-patch)
 do-patch:
 .if defined(PATCHFILES)
-	@${ECHO_MSG} "===>  Applying distribution patches for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${_DISTDIR}; \
 	  for i in ${PATCHFILES}; do \
 		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-			${ECHO_MSG} "===>   Applying distribution patch $$i" ; \
+			${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patch $$i" ; \
 		fi; \
 		case $$i in \
 			*.Z|*.gz) \
@@ -1158,17 +1164,17 @@ do-patch:
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${PATCHDIR} ]; then		\
 		if [ "`${ECHO} ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
-			${ECHO_MSG} "===>   Ignoring empty patch directory"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> Ignoring empty patch directory"; \
 			if [ -d ${PATCHDIR}/CVS ]; then			\
-				${ECHO_MSG} "===>   Perhaps you forgot the -P flag to cvs co or update?"; \
+				${ECHO_MSG} "${_PKGSRC_IN}> Perhaps you forgot the -P flag to cvs co or update?"; \
 			fi;						\
 		else							\
-			${ECHO_MSG} "===>  Applying ${OPSYS} patches for ${PKGNAME}" ; \
+			${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patches for ${PKGNAME}" ; \
 			fail="";					\
 			for i in ${PATCHDIR}/patch-*; do		\
 				case $$i in				\
 				*.orig|*.rej|*~)			\
-					${ECHO_MSG} "===>   Ignoring patchfile $$i" ; \
+					${ECHO_MSG} "${_PKGSRC_IN}> Ignoring patchfile $$i" ; \
 					continue;			\
 					;;				\
 				${PATCHDIR}/patch-local-*) 		\
@@ -1195,7 +1201,7 @@ do-patch:
 					;;				\
 				esac;					\
 				if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
-					${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
+					${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patch $$i" ; \
 				fi;					\
 				fuzz="";				\
 				${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
@@ -1267,7 +1273,7 @@ do-install:
 .if !target(do-package)
 do-package: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}if ${TEST} -e ${PLIST}; then		\
-		${ECHO_MSG} "===>  Building binary package for ${PKGNAME}"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Building binary package for ${PKGNAME}"; \
 		if [ ! -d ${PKGREPOSITORY} ]; then			\
 			${MKDIR} ${PKGREPOSITORY};			\
 			if [ $$? -ne 0 ]; then				\
@@ -1368,29 +1374,29 @@ root-install:
 .endfor
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -s ${WRKDIR}/.CONFLICTS ]; then \
 		found=`cat ${WRKDIR}/.CONFLICTS | ${SED} -e s'|${PKG_DBDIR}/||g' | tr '\012' ' '`; \
-		${ECHO_MSG} "===>  ${PKGNAME} conflicts with installed package(s): $$found found."; \
-		${ECHO_MSG} "      They install the same files into the same place."; \
-		${ECHO_MSG} "      Please remove $$found first with pkg_delete(1)."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
+		${ECHO_MSG} "*** They install the same files into the same place."; \
+		${ECHO_MSG} "*** Please remove $$found first with pkg_delete(1)."; \
 		${RM} -f ${WRKDIR}/.CONFLICTS;				\
 		exit 1;							\
 	fi
 .endif	# CONFLICTS
 	${_PKG_SILENT}${_PKG_DEBUG}found="`${PKG_INFO} -e \"${PKGNAME:C/-[^-]*$/-[0-9]*/}\" || ${TRUE}`"; \
 	if [ "$$found" != "" ]; then					\
-		${ECHO_MSG} "===>  $$found is already installed - perhaps an older version?"; \
-		${ECHO_MSG} "      If so, you may wish to \`\`pkg_delete $$found'' and install"; \
-		${ECHO_MSG} "      this package again by \`\`${MAKE} reinstall'' to upgrade it properly,"; \
-		${ECHO_MSG} "      or use \`\`${MAKE} update'' to upgrade it and all of its dependencies."; \
-		${ECHO_MSG} "      If you really wish to overwrite the old package of $$found"; \
-		${ECHO_MSG} "      without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
-		${ECHO_MSG} "      in your environment or the \"${MAKE} install\" command line."; \
+		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
+		${ECHO_MSG} "*** If so, you may wish to \`\`pkg_delete $$found'' and install"; \
+		${ECHO_MSG} "*** this package again by \`\`${MAKE} reinstall'' to upgrade it properly,"; \
+		${ECHO_MSG} "*** or use \`\`${MAKE} update'' to upgrade it and all of its dependencies."; \
+		${ECHO_MSG} "*** If you really wish to overwrite the old package of $$found"; \
+		${ECHO_MSG} "*** without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
+		${ECHO_MSG} "*** in your environment or the \"${MAKE} install\" command line."; \
 		exit 1;							\
 	fi
 .endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` != ${DEF_UMASK} ]; then \
-		${ECHO_MSG} "===>  Warning: your umask is \"`${SH} -c umask`"\".; \
-		${ECHO_MSG} "      If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
-		${ECHO_MSG} "      and install this package again by \`\`${MAKE} deinstall reinstall''."; \
+		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
+		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
+		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
 .if !defined(NO_MTREE)
@@ -1430,8 +1436,8 @@ root-install:
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
 	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
-		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
-		${ECHO_MSG} "===>   Decompressing manual pages for ${PKGNAME}";	\
+		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
+		${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
@@ -1449,8 +1455,8 @@ root-install:
 		done;							\
 	fi;								\
 	if [ X"${MANCOMPRESSED}" = X"" -a X"${MANZ}" != X"" ]; then	\
-		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
-		${ECHO_MSG} "===>   Compressing manual pages for ${PKGNAME}"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
+		${ECHO_MSG} "${_PKGSRC_IN}> Compressing manual pages for ${PKGNAME}"; \
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage ]; then		\
@@ -1474,7 +1480,7 @@ root-install:
 		shlib_type=`${MAKE} ${.MAKEFLAGS} show-shlib-type`;	\
 		case "$$shlib_type" in					\
 		"ELF")							\
-			${ECHO_MSG} "===>   [Automatic ELF shared object handling]";\
+			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic ELF shared object handling]";\
 			${AWK} 'function makelinks(target, lib, v1, v2, v3) { \
 					print target;			\
 					slashc = split(target, slashes, "/"); \
@@ -1508,7 +1514,7 @@ root-install:
 				{ print; }' < ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 			;;						\
 		"a.out")						\
-			${ECHO_MSG} "===>   [Automatic a.out shared object handling]";\
+			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic a.out shared object handling]";\
 			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST} || ${TRUE}`; \
 			if [ $$cnt -eq 0 ]; then			\
 				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
@@ -1534,7 +1540,7 @@ root-install:
 	fi)
 .endif
 .ifdef MESSAGE_FILE
-	@${ECHO_MSG} "===>   Please note the following:"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
 	@${ECHO_MSG} ""
 	@${CAT} ${MESSAGE_FILE}
 	@${ECHO_MSG} ""
@@ -1620,13 +1626,13 @@ ${PACKAGE_COOKIE}:
 
 real-fetch: _PORT_USE
 real-extract: _PORT_USE
-	@${ECHO_MSG} "===>  Extracting for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
 real-patch: _PORT_USE
-	@${ECHO_MSG} "===>  Patching for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
 real-configure: _PORT_USE
-	@${ECHO_MSG} "===>  Configuring for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
 real-build: _PORT_USE
-	@${ECHO_MSG} "===>  Building for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Building for ${PKGNAME}"
 real-install: pkg-su-install
 real-package: _PORT_USE
 
@@ -1635,7 +1641,7 @@ SU_CMD?=	${SU} - root -c
 PRE_ROOT_CMD?=	${TRUE}
 
 pkg-su-install:
-	@${ECHO_MSG} "===>  Installing for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
 		${MAKE} ${.MAKEFLAGS} root-install;			\
@@ -1655,7 +1661,7 @@ pkg-su-install:
 			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
-		${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
 		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${.MAKEFLAGS} root-install"; \
 	fi
@@ -1704,13 +1710,13 @@ reinstall:
 deinstall: pkg-su-deinstall
 
 pkg-su-deinstall: uptodate-pkgtools
-	@${ECHO_MSG} "===> Deinstalling for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
 		${MAKE} ${.MAKEFLAGS} root-deinstall;			\
 	else								\
 		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
-		${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to deinstall ${PKGNAME}."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to deinstall ${PKGNAME}."; \
 		${SU_CMD} "cd ${.CURDIR}; $$make ${.MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} root-deinstall DEINSTALLDEPENDS=${DEINSTALLDEPENDS}"; \
 	fi
 
@@ -1762,7 +1768,7 @@ RESUMEUPDATE?=	YES
 
 update:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
-		"===> Resuming update for ${PKGNAME}"
+		"${_PKGSRC_IN}> Resuming update for ${PKGNAME}"
 .else
 RESUMEUPDATE?=	NO
 
@@ -1780,7 +1786,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ -s ${DDIR} ] && for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd "../../$${dep}" ; then				\
-			${ECHO_MSG} "===>  Installing in $${dep}" &&	\
+			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
 			if [ "${RESUMEUPDATE}" = "NO" ] ; then		\
 				${MAKE} ${.MAKEFLAGS} deinstall;	\
 			fi &&						\
@@ -1790,7 +1796,7 @@ update:
 				${MAKE} ${.MAKEFLAGS} reinstall;	\
 			fi ;						\
 		else							\
-			${ECHO_MSG} "===>  Skipping removed directory $${dep}";\
+			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
 		fi) ;							\
 	done
 .if ${NOCLEAN} == "NO"
@@ -1807,7 +1813,7 @@ clean-update:
 			(if cd "../../$${dep}" ; then			\
 				${MAKE} ${.MAKEFLAGS} clean ;		\
 			else						\
-				${ECHO_MSG} "===>  Skipping removed directory $${dep}";\
+				${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
 			fi) ;						\
 		done ;							\
 	fi
@@ -1872,7 +1878,7 @@ clean: pre-clean
 .if (${CLEANDEPENDS} != "NO")
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean-depends
 .endif
-	@${ECHO_MSG} "===>  Cleaning for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
 .if !defined(NO_WRKDIR)
 .ifdef WRKOBJDIR
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKOBJDIR}/${PKGSRC_SUBDIR}
@@ -1882,7 +1888,7 @@ clean: pre-clean
 		if [ -w ${WRKDIR} ]; then				\
 			${RM} -rf ${WRKDIR};				\
 		else							\
-			${ECHO_MSG} "===>   ${WRKDIR} not writable, skipping"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> ${WRKDIR} not writable, skipping"; \
 		fi;							\
 	fi
 .endif
@@ -1903,7 +1909,7 @@ cleandir: clean
 
 .if !target(distclean)
 distclean: pre-distclean clean
-	${_PKG_SILENT}${ECHO_MSG} "===>  Dist cleaning for ${PKGNAME}"
+	${_PKG_SILENT}${ECHO_MSG} "${_PKGSRC_IN}> Dist cleaning for ${PKGNAME}"
 	${_PKG_SILENT}(${_PKG_DEBUG}if [ -d ${_DISTDIR} ]; then		\
 		cd ${_DISTDIR} &&					\
 		${TEST} -z "${DISTFILES}" || ${RM} -f ${DISTFILES};	\
@@ -1998,7 +2004,7 @@ makesum: fetch
 makepatchsum:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${MKDIR} ${FILESDIR};						\
-	${ECHO_MSG} "===> Making patch checksums";			\
+	${ECHO_MSG} "${_PKGSRC_IN}> Making patch checksums";			\
 	if [ -f "${PATCH_SUM_FILE}" ]; then				\
 		${AWK} -- '{print ; exit}' < ${PATCH_SUM_FILE} > ${PATCH_SUM_FILE}.new; \
 	else								\
@@ -2135,7 +2141,7 @@ package-depends:
 			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
 		if ${PACKAGE_DEPENDS_QUICK} ; then \
-			${PKG_INFO} -qf "$$pkg" | grep ^@pkgdep | awk '{print $$2}' ; \
+			${PKG_INFO} -qf "$$pkg" | ${GREP} '^@pkgdep' | ${AWK} '{print $$2}' ; \
 		else \
 		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi ; \
@@ -2214,10 +2220,10 @@ _DEPENDS_USE:
 	found=not;							\
 	if expr "$$prog" : '.*/' >/dev/null; then			\
 		if ${TEST} -e "$$prog" ; then				\
-			${ECHO_MSG} "===>  ${PKGNAME} depends on file: $$prog - found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on file: $$prog - found"; \
 			found="";					\
 		else							\
-			${ECHO_MSG} "===>  ${PKGNAME} depends on file: $$prog - not found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on file: $$prog - not found"; \
 		fi;							\
 	else								\
 		for d in `${ECHO} $$PATH | tr ':' ' '`; do		\
@@ -2226,15 +2232,15 @@ _DEPENDS_USE:
 				break;					\
 			fi						\
 		done;							\
-		${ECHO_MSG} "===>  ${PKGNAME} depends on executable: $$prog - $$found found"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on executable: $$prog - $$found found"; \
 	fi;								\
 	if [ X"$$found" = Xnot ]; then					\
-		${ECHO_MSG} "===>  Verifying $$target for $$prog in $$dir"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$prog in $$dir"; \
 		if [ ! -d "$$dir" ]; then				\
 			${ECHO_MSG} "=> No directory for $$prog.  Skipping.."; \
 		else							\
 			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) &&	\
-			${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
 .endfor
@@ -2276,17 +2282,17 @@ misc-depends: uptodate-pkgtools
 			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
 			${ECHO} "    Please check if this is really intended!" ; \
 		else 							\
-			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'`found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'`found"; \
 		fi ; 							\
 	else								\
-		${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on package: $$package"; \
 		target=${DEPENDS_TARGET};				\
-		${ECHO_MSG} "===>  Verifying $$target for $$dir"; 	\
+		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$dir"; 	\
 		if [ ! -d $$dir ]; then					\
 			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
 		else							\
-			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) &&	\
-			${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
+			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}") && \
+			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
 .endfor
@@ -2302,9 +2308,9 @@ real-fetch: check-depends
 check-depends:
 .if (defined(DEPENDS) || defined(BUILD_DEPENDS) || defined(RUN_DEPENDS)) && \
     !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS) && !exists(${EXTRACT_COOKIE})
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "===>  Validating dependencies for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 depends || \
-		(${ECHO_MSG} "===>  ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
+		(${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
 .endif
 .endif
 
@@ -2504,7 +2510,7 @@ README.html: .PRECIOUS
 		-e '/%%BIN_PKGS%%/d'					\
 		${README_NAME} >> $@.tmp
 	@cmp -s $@.tmp $@ || 						\
-		(${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}"; \
+		(${ECHO_MSG} "${_PKGSRC_IN}> Creating README.html for ${_THISDIR_}${PKGNAME}"; \
 		${MV} -f $@.tmp $@)
 	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
 
@@ -2635,7 +2641,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size                       >${SIZE_PKG_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
-		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CREATE} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
 		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
