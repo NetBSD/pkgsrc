@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/21 16:43:44 martti Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/27 20:45:22 heinz Exp $
 #
 
 DISTNAME=	pkgconfig-0.15.0
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/glib-1.2.8/libtool
 CONFIGURE_ARGS+=	--disable-threads
+
+TEST_TARGET=		check
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
