@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1128 2003/01/10 19:17:52 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1129 2003/01/15 20:55:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1310,12 +1310,12 @@ do-fetch:
 show-depends-dirs:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	dlist="";							\
-	thisdir=`pwd`;							\
+	thisdir=`${PWD_CMD}`;						\
 	for reldir in "" ${DEPENDS:C/^[^:]*://:C/:.*$//} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*$//} ;\
 	do								\
 		if [ "X$$reldir" = "X" ]; then continue; fi;		\
 		cd $$thisdir/$$reldir;					\
-		WD=`pwd`;						\
+		WD=`${PWD_CMD}`;					\
 		d=`dirname $$WD`;					\
 		absdir=`basename $$d`/`basename $$WD`;			\
 		dlist="$$dlist $$absdir";				\
@@ -1350,7 +1350,7 @@ _RECURSE_DEPENDS_DIRS=							\
 			}						\
 	}								\
 	BEGIN {								\
-		command = "pwd";					\
+		command = "${PWD_CMD}";					\
 		command | getline start_dir;				\
 		close(command);						\
 		i = split(start_dir, tmp_r, /\//);			\
@@ -3040,7 +3040,7 @@ fetch-list:
 	@${ECHO} '#!/bin/sh'
 	@${ECHO} '#'
 	@${ECHO} '# This is an auto-generated script, the result of running'
-	@${ECHO} '# `${MAKE} fetch-list'"'"' in directory "'"`pwd`"'"'
+	@${ECHO} '# `${MAKE} fetch-list'"'"' in directory "'"`${PWD_CMD}`"'"'
 	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
 	@${ECHO} '#'
 	@${MAKE} ${MAKEFLAGS} fetch-list-recursive
@@ -3073,7 +3073,7 @@ fetch-list-one-pkg:
 .  if !empty(_ALLFILES)
 	@${ECHO}
 	@${ECHO} '#'
-	@location=`pwd | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
+	@location=`${PWD_CMD} | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
 		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
 	@${ECHO} '#'
 	@${MKDIR} ${_DISTDIR}
@@ -3632,7 +3632,7 @@ README.html: .PRECIOUS
 	@${ENV} AWK=${AWK} BMAKE=${MAKE} ../../mk/scripts/mkdatabase -f $@.tmp1
 	@if [ -e ${PACKAGES} ]; then					\
 		cd ${PACKAGES};						\
-		case `pwd` in						\
+		case `${PWD_CMD}` in					\
 			${_PKGSRCDIR}/packages)				\
 				MULTIARCH=no;				\
 				;;					\
