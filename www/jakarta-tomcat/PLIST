@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:03 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/09 18:24:51 jwise Exp $
 etc/rc.d/tomcat
 tomcat/KEYS
 tomcat/LICENSE
@@ -361,7 +361,8 @@ tomcat/src/org/apache/tomcat/util/xml/XmlMapper.java
 tomcat/src/org/apache/tomcat/util/xml/XmlMatch.java
 tomcat/webapps/ROOT.war
 tomcat/webapps/admin.war
-tomcat/webapps/examples.war
+@comment currently has a cross-site-scripting vulnerability
+@comment tomcat/webapps/examples.war
 tomcat/webapps/test.war
 @comment must explicitly remove webapp working files, but not any user files in webapps
 @unexec ${RM} -rf tomcat/webapps/ROOT
