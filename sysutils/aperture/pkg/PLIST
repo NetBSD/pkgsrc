@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/05 18:02:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/17 23:57:53 jlam Exp $
 bin/memconfig
 bin/xf86test
 include/memrange.h
