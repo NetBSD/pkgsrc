@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.4 2000/04/25 09:59:51 mjl Exp $
+
+--- src/newgroups.c.orig	Fri Mar  3 20:15:48 2000
++++ src/newgroups.c	Fri Mar  3 20:36:25 2000
+@@ -25,7 +25,7 @@
+ 	char gmt[4]="";
+ 	char dist[128]="";
+ 	int i;
+-	int t[4];
++	int t[5];
+ 	char arg1[9];
+ 	int len;
+ 	int yr;
+@@ -39,15 +39,15 @@
+ 	len = strlen(arg1);
+ 	if (len < 6 || atoi(arg1) == 0)
+ 		goto bad;
+-	strncpy(arg1+len-4, d, 4);
+-	for (i=0; i<4; i++)
++	strncpy(d, arg1+len-4, 4);
++	for (i=0; i<5; i++)
+ 		if ((t[i]=c2i(d+2*i))==-1)
+ 			goto bad;
+ 	/* deal with y2k bugged readers */
+-	arg1[len-4] = '0';
++	arg1[len-4] = '\0';
+ 	yr = atoi(arg1);
+ 	if (yr>19100)
+-	    yr-=1900;
++	    yr-=19000;
+ 	if (yr>1900)
+ 		yr-=1900;
+ 	if (yr <70)
