@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:30 zuntum Exp $
-lib/libgetopt.a
-lib/libgetopt_pic.a
-lib/libgetopt.so
-lib/libgetopt.so.1
-lib/libgetopt.so.1.1
-${MAN_INCLUDED}man/man3/getopt_long.3
-${MAN_INCLUDED}man/cat3/getopt_long.0
+@comment $NetBSD: PLIST,v 1.2 2005/03/10 19:19:46 tv Exp $
+lib/libgetopt.la
+man/man3/getopt_long.3
 include/getopt.h
