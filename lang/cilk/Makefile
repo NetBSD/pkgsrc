@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/15 20:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/17 08:36:10 agc Exp $
 
 DISTNAME=		cilk-5.3.1
 CATEGORIES=		lang parallel
@@ -12,8 +12,11 @@ COMMENT=		multithreaded parallel programming language based on ANSI C
 GNU_CONFIGURE=		# defined
 USE_BUILDLINK_ONLY= 	# defined
 USE_GMAKE=		# defined
+USE_PERL5=		yes
 USE_PTHREAD=		native pth
+USE_LIBTOOL=		yes
 
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LTCONFIG_OVERRIDE= 	${WRKSRC}/ltconfig
 
 INFO_FILES=		cilk-faq.info
