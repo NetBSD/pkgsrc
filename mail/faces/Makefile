@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/09/04 11:29:35 tron Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/03 01:52:19 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -26,6 +26,9 @@ post-configure:
 			-e 's|@x11base@|'${X11BASE}'|g' < $$f.in > $$f;	\
 	done
 
+# for OBJECT_FMT and OPSYS
+.include "../../mk/bsd.prefs.mk"
+
 PLIST_SRC=	${WRKDIR}/.PLIST-src
 
 post-install:
@@ -33,8 +36,10 @@ post-install:
 	${LN} -f ${PREFIX}/man/man3/compface.3 ${PREFIX}/man/man3/uncompface.3
 	@${SED} -e 's|@localbase@|'${LOCALBASE}'|g' \
 		-e 's|@x11prefix@|'${X11PREFIX}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
-
-.include "../../mk/bsd.prefs.mk"
+.if (${OBJECT_FMT} == "ELF")
+	${LN} -fs ${LOCALBASE}/lib/libcompface.so.1.0 ${LOCALBASE}/lib/libcompface.so.1
+	${LN} -fs ${LOCALBASE}/lib/libcompface.so.1.0 ${LOCALBASE}/lib/libcompface.so
+.endif
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	SVR4LIBS="-lnsl -lsocket -lgen" SYSV=-DSYSV32 CC=gcc CPPFLAGS=
