@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.306 2003/08/11 14:17:11 wiz Exp $
+# $NetBSD: Packages.txt,v 1.307 2003/08/30 22:01:36 seb Exp $
 ###########################################################################
 
 			==========================
@@ -2321,18 +2321,18 @@ If the system does not provide a makeinfo command or if it does not match
 the required minimum a build dependency on the devel/gtexinfo package is
 added.
 
-The installation process of the software provided by the package should not
-use the install-info as the registration of info files
-is the task of the package INSTALL SCRIPT, and it must use
-the right makeinfo command.
+The build and installation process of the software provided by the package
+should not use the install-info as the registration of info files
+is the task of the package INSTALL script, and it must use the appropriate
+makeinfo command.
 
-If the package use buildlink2 framework no special action should be needed
-to achieve this goal.
+To achieve this goal the pkgsrc infrastructure creates overriding scripts
+for the install-info and makeinfo command in a directory listed early in PATH.
 
-If the package does not use the buildlink2 framework patch files are likely
-to be needed so the build and installation process of the software
-picks up the -possibly dummys- values of INSTALL_INFO and MAKEINFO in the
-environment.
+The script overriding install-info as no effect expect the logging of a
+message. The script overriding makeinfo logs a message and according to the
+value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
+command or exit on error.
 
  10.25 Packages whose distfiles aren't available for plain downloading
  =====================================================================
