@@ -1,12 +1,19 @@
-# $NetBSD: Makefile,v 1.50 2003/01/12 11:33:19 tron Exp $
+# $NetBSD: Makefile,v 1.51 2003/03/01 06:18:21 uebayasi Exp $
 
 DISTNAME=	emacs-20.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
+MASTER_SITES=	${MASTER_SITE_GNU:=emacs/} \
+		${MASTER_SITE_LOCAL}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		${DISTNAME}-mule-4.1b-elc${EXTRACT_SUFX}
 
+# Mule enhancement (back port) patch by Satoshi Yatagawa
 PATCH_SITES=		http://www.teu.ac.jp/nsit/~yatagawa/comp/emacs/
-PATCHFILES=		emacs-20.7-mule-4.1.patch
+PATCHFILES=		emacs-20.7-mule-4.1b.patch
+# XIM fix patch by Seiichiro Inoue
+PATCH_SITES+=		http://home.catv.ne.jp/pp/ginoue/software/emacs-xim/
+PATCHFILES+=		emacs20-xim-20000713.diff
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
@@ -15,6 +22,7 @@ COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
@@ -29,9 +37,8 @@ EMACS_USE_POP?=	yes
     (${EMACS_USE_POP} == yes || ${EMACS_USE_POP} == YES))
 CONFIGURE_ARGS+=--with-pop
 .endif
-.if defined(EMACS_USE_X)
-CONFIGURE_ARGS+=--with-x=${EMACS_USE_X}
-.endif
+USE_X11=	yes
+CONFIGURE_ARGS+=--with-x=yes
 .if defined(EMACS_USE_X_TOOLKIT)
 CONFIGURE_ARGS+=--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
 .endif
@@ -51,6 +58,13 @@ pre-install:
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
+
+.if defined(EMACS_USE_X_TOOLKIT) && ${EMACS_USE_X_TOOLKIT} == "athena"
+.include "../../mk/xaw.buildlink2.mk"
+.endif
+.if defined(EMACS_USE_X_TOOLKIT) && ${EMACS_USE_X_TOOLKIT} == "motif"
+.include "../../mk/motif.buildlink2.mk"
+.endif
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
