@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.257 2002/07/02 15:25:49 wiz Exp $
+# $NetBSD: Packages.txt,v 1.258 2002/07/04 13:42:11 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -395,7 +395,7 @@ policy:
     BATCH=                  yes               # required for bulk builds 
     FAILOVER_FETCH=         yes               # insist on the correct checksum
     PKG_DEVELOPER?=         yes
-    _ACCEPTABLE_LICENSES=   yes               # XXX
+    _ACCEPTABLE=            yes               # XXX
 
 If you wish to use xpkgwedge for the entire build, then add:
 
