@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/09 20:36:47 agc Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/25 04:47:22 jlam Exp $
 #
 
 DISTNAME=       	crashme-2.4
@@ -11,7 +11,7 @@ HOMEPAGE=		http://people.delphi.com/gjc/crashme.html
 COMMENT=		Try to crash machine with random arguments to random system calls
 
 WRKSRC=			${WRKDIR}
-EXTRACT_CMD=		${SH} ${DOWNLOADED_DISTFILE}
+EXTRACT_CMD=		${EXTRACT_CMD.shar}
 MAKEFILE=		makefile
 
 .include "../../mk/bsd.pkg.mk"
