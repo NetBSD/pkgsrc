@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.41 1999/02/15 19:23:38 tron Exp $
+# $NetBSD: mk.conf.example,v 1.42 1999/02/21 21:25:03 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -15,6 +15,30 @@
 #MANZ=		1		# gzip manual pages at installation time
                                 # Possible: defined, not defined
                                 # Default: not defined
+
+#OBJMACHINE=	1		# use machine-specific object directories,
+                                # e.g. work.i386, work.sparc
+                                # Possible: defined, not defined
+                                # Default: not defined
+
+#WRKOBJDIR=	/usr/tmp	# build here instead of in pkgsrc
+                                # Possible: defined, not defined
+                                # Default: not defined
+
+#UVM=		1		# Use the new UVM virtual memory subsystem
+                                # Possible: defined, not defined
+                                # Default: not defined
+
+#USETBL= yes			# Run raw manual pages through tbl(1) before
+                                # piping through troff(1) when formatting
+                                # manual pages.
+                                # Possible: set, not set
+                                # Default: not set
+
+
+#
+# The following values are used to manage the packages collection as a whole.
+#
 
 #LOCALBASE=	/usr/local	# Where non-X-based packages will be installed
                                 # Possible: any path
@@ -41,23 +65,6 @@
                                 # Possible: any path you like
                                 # Default: /usr/pkgsrc/packages
 
-#OBJMACHINE=	1		# use machine-specific object directories,
-                                # e.g. work.i386, work.sparc
-                                # Possible: defined, not defined
-                                # Default: not defined
-
-#WRKOBJDIR=	/usr/tmp	# build here instead of in pkgsrc
-                                # Possible: defined, not defined
-                                # Default: not defined
-
-#UVM=		1		# Use the new UVM virtual memory subsystem
-                                # Possible: defined, not defined
-                                # Default: not defined
-
-#MASTER_SITE_OVERRIDE=	URL	# Search for distfiles at the location
-                                # specified by the URL first.
-                                # Default: not defined
-
 #PASSIVE_FETCH=	1		# Use ftp(1) in passive mode, for use behind
                                 # filtering firewalls.
                                 # (Set by default in ftp(1) in NetBSD-current)
@@ -73,6 +80,36 @@
                                 # 	fee-based-commercial-use 
                                 # Default: none
 
+#SPECIFIC_PKGS= yes		# Don't use the default of all packages (from the
+                                # top-level of the pkgsrc tree), and use the
+                                # values of the definitions SITE_SPECIFIC_PKGS,
+                                # HOST_SPECIFIC_PKGS, GROUP_SPECIFIC_PKGS, and
+                                # USER_SPECIFIC_PKGS.
+
+#SITE_SPECIFIC_PKGS=		# List of packages that are wanted for each
+                                # host on the site. Each package in the list
+                                # is of the form <category>/<package>.
+                                # Possible: any combination of packages
+                                # Default: not set
+
+#HOST_SPECIFIC_PKGS=		# List of packages that are wanted for this
+                                # particular host/machine. Each package in the
+                                # list is of the form <category>/<package>.
+                                # Possible: any combination of packages
+                                # Default: not set
+
+#GROUP_SPECIFIC_PKGS=		# List of packages that are wanted for this
+                                # group of users. Each package in the list
+                                # is of the form <category>/<package>.
+                                # Possible: any combination of packages
+                                # Default: not set
+
+#USER_SPECIFIC_PKGS=		# List of packages that are wanted for this
+                                # particular user. Each package in the list
+                                # is of the form <category>/<package>.
+                                # Possible: any combination of packages
+                                # Default: not set
+
 #FAILOVER_FETCH= yes            # Perform a checksum at "make fetch" time.
                                 # If the checksum doesn't match the stored
                                 # value, try to retrieve the file from the
@@ -80,11 +117,6 @@
                                 # Possible: set, not set
                                 # Default: not set
 
-#USETBL= yes			# Run raw manual pages through tbl(1) before
-                                # piping through troff(1) when formatting
-                                # manual pages.
-                                # Possible: set, not set
-                                # Default: not set
 
 
 
@@ -127,10 +159,9 @@
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#LANG=				# Used by ispell to specify national dictionary
+#ISPELL_LANG=			# Used by ispell to specify national dictionary
                                 # Possible: not defined, british
                                 # Default: not defined
-                                # [agc - this must conflict with the locale?]
 
 #LIBWRAP_FWD=			# Make libwrap also compare against forwards
                                 # Possible: not defined, YES
