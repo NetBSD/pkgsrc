@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.148 2003/05/15 11:31:49 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.149 2003/05/22 14:36:31 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1623,6 +1623,11 @@ USE_IDEA?=	NO
 # package to provide "inews" binary.
 # Possible: not defined, YES
 # Default: not defined
+
+USE_LIBCRACK?= YES
+# Used in PAM and shadow (for Linux) to enable libcrack support.
+# Possible: YES, NO
+# Default: YES
 
 USE_MMX?=	NO
 # Used in eterm, imlib2, libast, and snes9x to specify if the i386 MMX
