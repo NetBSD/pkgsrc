@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 06:05:41 taca Exp $
 
 DISTNAME=	testunit-${VERSION}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://testunit.talbott.ws/packages/
 
@@ -10,10 +10,10 @@ HOMEPAGE=	http://testunit.talbott.ws/packages/
 COMMENT=	Unit testing framework for Ruby
 
 VERSION=	0.1.8
-DIST_SUBDIR=	ruby
+RUBY_VERSION=	${RUBY16_VERSION}
 USE_RUBY_SETUP=	yes
 
-DEPENDS+=	ruby-unit>=0.5.4:../../devel/ruby-unit
+DEPENDS+=	${RUBY_PKGPREFIX}-unit>=0.5.4:../../devel/ruby-unit
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -type f -exec ${CHMOD} -x {} \;
@@ -22,5 +22,5 @@ post-install:
 	cd ${WRKSRC}; ${CP} -r doc ${RUBY_DOCDIR}/testunit
 	cd ${WRKSRC}; ${CP} -r examples ${RUBY_EXAMPLESDIR}/testunit
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
