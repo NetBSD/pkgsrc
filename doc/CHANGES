@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6358 2004/06/27 23:13:30 schmonz Exp $
+$NetBSD: CHANGES,v 1.6359 2004/06/28 04:01:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3119,3 +3119,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-soappy to 0.11.4 [recht 2004-06-27]
 	Updated py-fpconst to 0.7.0 [recht 2004-06-27]
 	Added rss2email-2.32 [schmonz 2004-06-27]
+	Updated mips64emul to 20040627 [xtraeme 2004-06-28]
