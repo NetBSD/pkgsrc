@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.33 2001/05/14 12:58:59 zuntum Exp $
+$NetBSD: TODO,v 1.34 2001/05/14 13:00:00 zuntum Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -69,7 +69,6 @@ package update TODO (Suggested package updates)
 	o update sysutils/lsof to 4.56 [atatat has new version ready]
 	o update time/devtodo to 0.1.6
 	o update wm/windowmaker to 0.65.0
-	o update www/analog to 5.0
 	o update www/ap-ssl to 2.8.3 (fix NULL pointer deference)
 		(jlam has a new package ready, will update after freeze)
 	o update www/php4 and assorted php4 module packages to 4.0.5
