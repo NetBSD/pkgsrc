@@ -1,45 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/05 20:29:41 wiz Exp $
 bin/jed
+bin/jed-script
 bin/rgrep
 man/man1/jed.1
 man/man1/rgrep.1
+share/examples/jed/jed.conf
 share/jed/doc/README
-share/jed/doc/manual/jed.1
 share/jed/doc/manual/jed.tex
-share/jed/doc/manual/rgrep.1
-share/jed/doc/tm/Makefile
-share/jed/doc/tm/README
-share/jed/doc/tm/jedfuns.tm
-share/jed/doc/tm/quickref.tm
-share/jed/doc/tm/rtl/abbrev.tm
-share/jed/doc/tm/rtl/blocal.tm
-share/jed/doc/tm/rtl/buffer.tm
-share/jed/doc/tm/rtl/color.tm
-share/jed/doc/tm/rtl/eval.tm
-share/jed/doc/tm/rtl/file.tm
-share/jed/doc/tm/rtl/hidden.tm
-share/jed/doc/tm/rtl/hooks.tm
-share/jed/doc/tm/rtl/info.tm
-share/jed/doc/tm/rtl/insdel.tm
-share/jed/doc/tm/rtl/keys.tm
-share/jed/doc/tm/rtl/mark.tm
-share/jed/doc/tm/rtl/menu.tm
-share/jed/doc/tm/rtl/message.tm
-share/jed/doc/tm/rtl/mini.tm
-share/jed/doc/tm/rtl/misc.tm
-share/jed/doc/tm/rtl/mouse.tm
-share/jed/doc/tm/rtl/move.tm
-share/jed/doc/tm/rtl/process.tm
-share/jed/doc/tm/rtl/rect.tm
-share/jed/doc/tm/rtl/region.tm
-share/jed/doc/tm/rtl/search.tm
-share/jed/doc/tm/rtl/syntax.tm
-share/jed/doc/tm/rtl/terminal.tm
-share/jed/doc/tm/rtl/tm-sort.sl
-share/jed/doc/tm/rtl/userinfo.tm
-share/jed/doc/tm/rtl/whatelse.sl
-share/jed/doc/tm/rtl/window.tm
-share/jed/doc/tm/rtl/xjed.tm
 share/jed/doc/txt/abbrev.txt
 share/jed/doc/txt/color.txt
 share/jed/doc/txt/compile.txt
@@ -66,6 +33,7 @@ share/jed/doc/txt/undo.txt
 share/jed/doc/txt/wjed.txt
 share/jed/doc/txt/wordstar.txt
 share/jed/doc/txt/xjed.txt
+share/jed/doc/txt/xrenderfont.txt
 share/jed/doc/txt/yankpop.txt
 share/jed/info/dir.info
 share/jed/info/info.info
@@ -73,7 +41,6 @@ share/jed/info/jed.1in
 share/jed/info/jed.2in
 share/jed/info/jed.3in
 share/jed/info/jed.info
-share/jed/lib/README
 share/jed/lib/abbrev.sl
 share/jed/lib/abbrmisc.sl
 share/jed/lib/aboutjed.hlp
@@ -145,7 +112,6 @@ share/jed/lib/iso-latin.sl
 share/jed/lib/iso2xxx.sl
 share/jed/lib/ispell.sl
 share/jed/lib/javamode.sl
-share/jed/lib/jed.conf
 share/jed/lib/jed.hlp
 share/jed/lib/jed.rc
 share/jed/lib/jed.sl
@@ -172,8 +138,6 @@ share/jed/lib/mime.sl
 share/jed/lib/mini.sl
 share/jed/lib/minued.sl
 share/jed/lib/misc.sl
-share/jed/lib/mkdoc.sl
-share/jed/lib/mktex.sl
 share/jed/lib/modehook.sl
 share/jed/lib/modeinfo.sl
 share/jed/lib/most.sl
@@ -199,6 +163,8 @@ share/jed/lib/register.sl
 share/jed/lib/replace.sl
 share/jed/lib/rmail.sl
 share/jed/lib/rot13.sl
+share/jed/lib/runpgm.sl
+share/jed/lib/sccs.sl
 share/jed/lib/search.sl
 share/jed/lib/seldisp.sl
 share/jed/lib/sendmail.sl
@@ -216,18 +182,15 @@ share/jed/lib/tabs.sl
 share/jed/lib/tclmode.sl
 share/jed/lib/tex.sl
 share/jed/lib/texcom.sl
-share/jed/lib/textmac.sl
 share/jed/lib/textmode.sl
 share/jed/lib/tiasm.sl
-share/jed/lib/tm/linuxdoc.tm
-share/jed/lib/tm2sgml.sl
 share/jed/lib/tmisc.sl
+share/jed/lib/tmmode.sl
 share/jed/lib/tpascal.sl
 share/jed/lib/untab.sl
 share/jed/lib/util.sl
 share/jed/lib/verilog.sl
 share/jed/lib/vhdlmode.sl
-share/jed/lib/vms_shell.com
 share/jed/lib/vmshelp.sl
 share/jed/lib/win1250.sl
 share/jed/lib/wmark.sl
@@ -235,14 +198,12 @@ share/jed/lib/wmenu.sl
 share/jed/lib/wordstar.hlp
 share/jed/lib/wordstar.sl
 share/jed/lib/yankpop.sl
-@dirrm share/jed/lib/tm
 @dirrm share/jed/lib/colors/Xjed
-@dirrm share/jed/lib/colors/
+@dirrm share/jed/lib/colors
 @dirrm share/jed/lib
 @dirrm share/jed/doc/txt
-@dirrm share/jed/doc/tm/rtl
-@dirrm share/jed/doc/tm
 @dirrm share/jed/doc/manual
 @dirrm share/jed/doc
 @dirrm share/jed/info
 @dirrm share/jed
+@dirrm share/examples/jed
