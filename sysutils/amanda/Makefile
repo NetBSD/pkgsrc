@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/02/24 10:44:51 bouyer Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
+# $NetBSD: Makefile,v 1.23 1999/02/25 15:47:25 bouyer Exp $
 #
 
 DISTNAME=	amanda-2.4.1p1
