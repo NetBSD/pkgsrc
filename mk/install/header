@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.14 2002/09/19 10:20:51 jlam Exp $
+# $NetBSD: header,v 1.15 2002/10/04 23:35:51 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -18,6 +18,7 @@ CP="@CP@"
 DIRNAME="@DIRNAME@"
 ECHO="@ECHO@"
 EGREP="@EGREP@"
+EXPR="@EXPR@"
 FALSE="@FALSE@"
 GREP="@GREP@"
 GROUPADD="@GROUPADD@"
@@ -43,6 +44,8 @@ PKGBASE="@PKGBASE@"
 
 PKG_USERS="@PKG_USERS@"
 PKG_GROUPS="@PKG_GROUPS@"
+
+SPECIAL_PERMS="@SPECIAL_PERMS@"
 
 CONF_FILES="@CONF_FILES@"
 CONF_FILES_PERMS="@CONF_FILES_PERMS@"
@@ -92,5 +95,41 @@ case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
 	_PKG_RCD_SCRIPTS=NO
 	;;
 esac
+
+msginit()
+{
+	_msgn=0
+	_msgempty=1
+
+}
+
+msgempty()
+{
+	if [ $_msgempty -gt 0 ]; then
+		${TRUE}
+	else
+		${FALSE}
+	fi
+}
+
+msgadd()
+{
+        eval _msg$_msgn=\"$1\"
+        _msgn=`${EXPR} $_msgn + 1`
+	_msgempty=0
+}
+
+msgprint()
+{
+	i=0
+	while [ $i -lt $_msgn ]; do
+		eval _msg=_msg$i
+		eval ${ECHO} "\$$_msg" | ${SED} \
+			-e "s,^###,			," \
+			-e "s,^##,		," \
+			-e "s,^#,	,"
+                i=`${EXPR} $i + 1`
+        done
+}
 
 # end of header

@@ -1,13 +1,13 @@
 # start of install
 #
-# $NetBSD: install,v 1.13 2002/09/19 10:20:51 jlam Exp $
+# $NetBSD: install,v 1.14 2002/10/04 23:35:51 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
+	msginit
 	_pkg_exit=0
-	_print_line=1
-	_print_group=1
 	if [ -n "${PKG_GROUPS}" ]; then
+		_print_group_header=1
 		eval set -- ${PKG_GROUPS}
 		for groupset; do
 			save_IFS="${IFS}"; IFS=":"
@@ -23,25 +23,18 @@ PRE-INSTALL)
 		  	if ${CHGRP} ${group} /tmp/grouptest.$$ >/dev/null 2>&1; then
 				${ECHO} "Group '${group}' already exists."
 			elif [ "${_PKG_CREATE_USERGROUP}" = "NO" ]; then
-				if [ ${_print_line} -gt 0 ]; then
-					_print_line=0
-					${CAT} << EOF
-===========================================================================
-EOF
-					if [ ${_print_group} -gt 0 ]; then
-						_print_group=0
-						${CAT} << EOF
-The following groups need to be created for ${PKGNAME}:
-
-EOF
-					fi
+				if [ ${_print_group_header} -gt 0 ]; then
+					_print_group_header=0
+					msgadd ""
+					msgadd "The following groups need to be created for ${PKGNAME}:"
+					msgadd ""
 				fi
 				if [ -z "${groupid}" ]; then
 					groupid_str=
 				else
 					groupid_str=" (${groupid})"
 				fi
-				${ECHO} "	${group}${groupid_str}"
+				msgadd "#${group}${groupid_str}"
 				_pkg_exit=1
 			else
 				groupid_option=
@@ -54,8 +47,8 @@ EOF
 			${RM} -f /tmp/grouptest.$$
 		done
 	fi
-	_print_user=1
 	if [ -n "${PKG_USERS}" ]; then
+		_print_user_header=1
 		eval set -- ${PKG_USERS}
 		for userset; do
 			save_IFS="${IFS}"; IFS=":"
@@ -70,28 +63,18 @@ EOF
 			if ${ID} "${user}" >/dev/null 2>&1; then
 				${ECHO} "User '${user}' already exists."
 			elif [ "${_PKG_CREATE_USERGROUP}" = "NO" ]; then
-				if [ ${_print_line} -gt 0 ]; then
-					_print_line=0
-					${CAT} << EOF
-===========================================================================
-EOF
-				elif [ ${_print_group} -eq 0 ]; then
-					_print_group=1
-					${ECHO} "";
-				fi
-				if [ ${_print_user} -gt 0 ]; then
-					_print_user=0
-					${CAT} << EOF
-The following users need to be created for ${PKGNAME}:
-
-EOF
+				if [ ${_print_user_header} -gt 0 ]; then
+					_print_user_header=0
+					msgadd ""
+					msgadd "The following users need to be created for ${PKGNAME}:"
+					msgadd ""
 				fi
 				if [ -z "${userid}" ]; then
 					userid_str=
 				else
 					userid_str=" (${userid})"
 				fi
-				${ECHO} "	${user}${userid_str}: ${group}, ${home}, ${shell}"
+				msgadd "#${user}${userid_str}: ${group}, ${home}, ${shell}"
 				_pkg_exit=1
 			else
 				userid_option=
@@ -108,10 +91,11 @@ EOF
 			fi
 		done
 	fi
-	if [ ${_print_line} -eq 0 ]; then
-		${CAT} << EOF
-===========================================================================
-EOF
+	if ! msgempty; then
+		${ECHO} "==========================================================================="
+		msgprint
+		${ECHO} ""
+		${ECHO} "==========================================================================="
 	fi
 	if [ ${_pkg_exit} -gt 0 ]; then
 		exit ${_pkg_exit}
@@ -119,31 +103,26 @@ EOF
         ;;
 
 POST-INSTALL)
+	msginit
+	#
 	# Create package directories.
-	_print_line=1
-	_print_dirs=1
+	#
 	if [ -n "${MAKE_DIRS}" -o -n "${OWN_DIRS}" -o			\
 	     -n "${MAKE_DIRS_PERMS}" -o -n "${OWN_DIRS_PERMS}" ]; then
+		_print_dir_header=1
 		eval set -- ${MAKE_DIRS} ${OWN_DIRS}
 		for dir; do
 			if [ -d "${dir}" ]; then
 				continue
 			fi
 			if [ "${_PKG_CONFIG}" = "NO" ]; then
-				if [ ${_print_line} -gt 0 ]; then
-					_print_line=0
-					${CAT} << EOF
-===========================================================================
-EOF
-					if [ ${_print_dirs} -gt 0 ]; then
-						_print_dirs=0
-						${CAT} << EOF
-The following directories should be created for ${PKGNAME}:
-
-EOF
-					fi
+				if [ ${_print_dir_header} -gt 0 ]; then
+					_print_dir_header=0
+					msgadd ""
+					msgadd "The following directories should be created for ${PKGNAME}:"
+					msgadd ""
 				fi
-				${ECHO} "	${dir}"
+				msgadd "#${dir}"
 			else
 				${MKDIR} "${dir}"
 			fi
@@ -153,20 +132,13 @@ EOF
 			dir="$1"; owner="$2"; group="$3"; mode="$4"
 			shift; shift; shift; shift
 			if [ "${_PKG_CONFIG}" = "NO" ]; then
-				if [ ${_print_line} -gt 0 ]; then
-					_print_line=0
-					${CAT} << EOF
-===========================================================================
-EOF
-					if [ ${_print_dirs} -gt 0 ]; then
-						_print_dirs=0
-						${CAT} << EOF
-The following directories should be created for ${PKGNAME}:
-
-EOF
-					fi
+				if [ ${_print_dir_header} -gt 0 ]; then
+					_print_dir_header=0
+					msgadd ""
+					msgadd "The following directories should be created for ${PKGNAME}:"
+					msgadd ""
 				fi
-				${ECHO} "	${dir} (o=${owner}, g=${group}, m=${mode})"
+				msgadd "#${dir} (o=${owner}, g=${group}, m=${mode})"
 			else
 				${MKDIR} "${dir}"
 				${CHOWN} "${owner}" "${dir}"
@@ -176,7 +148,6 @@ EOF
 		done
 	fi
 
-	_print_files=1
 	if [ "${_PKG_CONFIG}" = "YES" ]; then
 		if [ -n "${CONF_FILES}" -o				\
 		     -n "${CONF_FILES_PERMS}" -o			\
@@ -190,29 +161,20 @@ Installing configuration files for ${PKGNAME}:
 EOF
 		fi
 	fi
+	_print_file_header=1
 	eval set -- ${CONF_FILES}
 	while [ $# -gt 0 ]; do
 		samplefile="$1"; file="$2"
 		shift; shift
 
 		if [ "${_PKG_CONFIG}" = "NO" ]; then
-			if [ ${_print_line} -gt 0 ]; then
-				_print_line=0
-				${CAT} << EOF
-===========================================================================
-EOF
-			elif [ ${_print_dirs} -eq 0 ]; then
-				_print_dirs=1
-				${ECHO} "";
+			if [ ${_print_file_header} -gt 0 ]; then
+				_print_file_header=0
+				msgadd ""
+				msgadd "The following files should be created for ${PKGNAME}:"
+				msgadd ""
 			fi
-			if [ ${_print_files} -gt 0 ]; then
-				_print_files=0
-				${CAT} << EOF
-The following files should be created for ${PKGNAME}:
-
-EOF
-			fi
-			${ECHO} "	${file} (m=@CONF_FILES_MODE@)"
+			msgadd "#${file} (m=@CONF_FILES_MODE@)"
 		elif [ -e "${file}" ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
@@ -230,23 +192,13 @@ EOF
 		shift; shift
 
 		if [ "${_PKG_CONFIG}" = "NO" ]; then
-			if [ ${_print_line} -gt 0 ]; then
-				_print_line=0
-				${CAT} << EOF
-===========================================================================
-EOF
-			elif [ ${_print_dirs} -eq 0 ]; then
-				_print_dirs=1
-				${ECHO} "";
+			if [ ${_print_file_header} -gt 0 ]; then
+				_print_file_header=0
+				msgadd ""
+				msgadd "The following files should be created for ${PKGNAME}:"
+				msgadd ""
 			fi
-			if [ ${_print_files} -gt 0 ]; then
-				_print_files=0
-				${CAT} << EOF
-The following files should be created for ${PKGNAME}:
-
-EOF
-			fi
-			${ECHO} "	${file} (m=@SUPPORT_FILES_MODE@)"
+			msgadd "#${file} (m=@SUPPORT_FILES_MODE@)"
 		elif [ -e "${file}" ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
@@ -265,23 +217,13 @@ EOF
 		shift; shift; shift; shift; shift
 
 		if [ "${_PKG_CONFIG}" = "NO" ]; then
-			if [ ${_print_line} -gt 0 ]; then
-				_print_line=0
-				${CAT} << EOF
-===========================================================================
-EOF
-			elif [ ${_print_dirs} -eq 0 ]; then
-				_print_dirs=1
-				${ECHO} "";
+			if [ ${_print_file_header} -gt 0 ]; then
+				_print_file_header=0
+				msgadd ""
+				msgadd "The following files should be created for ${PKGNAME}:"
+				msgadd ""
 			fi
-			if [ ${_print_files} -gt 0 ]; then
-				_print_files=0
-				${CAT} << EOF
-The following files should be created for ${PKGNAME}:
-
-EOF
-			fi
-			${ECHO} "	${file} (o=${owner}, g=${group}, m=${mode})"
+			msgadd "#${file} (o=${owner}, g=${group}, m=${mode})"
 		elif [ -e ${file} ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
@@ -302,23 +244,13 @@ EOF
 
 		if [ "${_PKG_CONFIG}" = "NO" -o				\
 		     "${_PKG_RCD_SCRIPTS}" = "NO" ]; then
-			if [ ${_print_line} -gt 0 ]; then
-				_print_line=0
-				${CAT} << EOF
-===========================================================================
-EOF
-			elif [ ${_print_dirs} -eq 0 ]; then
-				_print_dirs=1
-				${ECHO} "";
+			if [ ${_print_file_header} -gt 0 ]; then
+				_print_file_header=0
+				msgadd ""
+				msgadd "The following files should be created for ${PKGNAME}:"
+				msgadd ""
 			fi
-			if [ ${_print_files} -gt 0 ]; then
-				_print_files=0
-				${CAT} << EOF
-The following files should be created for ${PKGNAME}:
-
-EOF
-			fi
-			${ECHO} "	${file} (m=@RCD_SCRIPTS_MODE@)"
+			msgadd "#${file} (m=@RCD_SCRIPTS_MODE@)"
 		elif [ -e "${file}" ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
@@ -330,10 +262,11 @@ EOF
 			fi
 		fi
 	done
-	if [ ${_print_line} -eq 0 ]; then
-		${CAT} << EOF
-===========================================================================
-EOF
+	if ! msgempty; then
+		${ECHO} "==========================================================================="
+		msgprint
+		${ECHO} ""
+		${ECHO} "==========================================================================="
 	fi
 	if [ "${_PKG_CONFIG}" = "YES" ]; then
 		if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" ]; then
