@@ -1,0 +1,11 @@
+--- Library/src/HTStyle.c.orig	Tue Apr 30 16:31:55 1996
++++ Library/src/HTStyle.c	Wed Jun 18 18:34:01 1997
+@@ -19,6 +19,8 @@
+ #include "HTString.h"
+ #include "HTStyle.h"
+ 
++PUBLIC HTStyleSheet * styleSheet;	/* application-wide style sheet */
++
+ 
+ /*	Local definition of style
+ **	-------------------------
