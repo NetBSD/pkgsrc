@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973 2002/05/07 17:50:38 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.1 2002/05/08 08:39:22 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -117,17 +117,19 @@ X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
 
-# Set the default BUILDLINK_DIR and BUILDLINK_X11_DIR so that if no
-# buildlink.mk files are included, then they still points to a where headers
-# and libraries for installed packages and X11R6 may be found, respectively.
+# Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
+# that if no buildlink.mk files are included, then they still point to
+# where headers and libraries for installed packages and X11R6 may be found.
 #
 BUILDLINK_DIR?=		${LOCALBASE}
+BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
 
 .if defined(USE_IMAKE) || defined(USE_X11BASE)
 .  if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
       exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
+BUILDLINK_X11PKG_DIR=	${LOCALBASE}
 .  endif
 PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
@@ -253,13 +255,14 @@ CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 LIBTOOL_REQD=		1.4.20010614nb8
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
+PKGLIBTOOL=		${LIBTOOL}
 .  if defined(USE_LTDL)
 DEPENDS+=		libtool>=${LIBTOOL_REQD}:../../devel/libtool
 .  else
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 .  endif
-CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
+CONFIGURE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
+MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
 
 .if defined(USE_SSL)
@@ -1792,7 +1795,7 @@ do-ltconfig-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${ltconfig} ]; then					\
 		${RM} -f ${ltconfig};					\
-		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool"	\
+		${ECHO} "${RM} -f libtool; ${LN} -s ${PKGLIBTOOL} libtool" \
 			> ${ltconfig};					\
 		${CHMOD} +x ${ltconfig};				\
 	fi
@@ -1891,7 +1894,7 @@ do-libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${libtool} ]; then					\
 		${RM} -f ${libtool};					\
-		${LN} -sf ${LIBTOOL} ${libtool};			\
+		${LN} -sf ${PKGLIBTOOL} ${libtool};		\
 	fi
 .  endfor
 .else
@@ -3977,3 +3980,5 @@ ${DESCR}: ${DESCR_SRC}
 .if defined(BATCH)
 .  include "../../mk/bulk/bsd.bulk-pkg.mk"
 .endif
+
+.include "../../mk/bsd.post-buildlink2.mk"
