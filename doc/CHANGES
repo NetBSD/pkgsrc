@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7693 2004/11/04 12:37:54 wiz Exp $
+$NetBSD: CHANGES,v 1.7694 2004/11/04 14:01:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5068,3 +5068,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vms-empire to 1.7 [wiz 2004-11-04]
 	Updated mips64emul to 0.2.2 [xtraeme 2004-11-04]
 	Updated pkglint to 3.95 [wiz 2004-11-04]
+	Updated gtkmm24 to 2.4.7 [adam 2004-11-04]
