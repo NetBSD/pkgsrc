@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.35 1998/12/12 17:45:36 tron Exp $
+# $NetBSD: mk.conf.example,v 1.36 1998/12/24 11:10:32 frueauf Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -12,7 +12,7 @@
 #	Firstly, definitions for NetBSD and package collection
 #
 
-MANZ=		1		# gzip manual pages at installation time
+#MANZ=		1		# gzip manual pages at installation time
                                 # Possible: defined, not defined
                                 # Default: not defined
 
