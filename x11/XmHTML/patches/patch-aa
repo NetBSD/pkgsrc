@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/03/05 13:52:42 skrll Exp $
+$NetBSD: patch-aa,v 1.5 2001/09/12 04:05:04 jlam Exp $
 
 --- Makefile.orig	Thu Feb  4 00:43:27 1999
 +++ Makefile
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.4 2001/03/05 13:52:42 skrll Exp $
 -ZLIBINC       =
 -IMAGEINCLUDES = $(ZLIBINC)
 +ZLIBINC       = 
-+IMAGEINCLUDES = -I${LOCALBASE}/include $(ZLIBINC)
++IMAGEINCLUDES = -I${BUILDLINK_DIR}/include $(ZLIBINC)
  
  # Image libraries
  # No need to add -lXpm if you need to include it with LIBS below
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.4 2001/03/05 13:52:42 skrll Exp $
  # Platform specific includes
  ifeq ($(PLATFORM),Motif)
 -PLATFORMINC=-I../../include/XmHTML -I/usr/X11R6/include
-+PLATFORMINC=-I../../include/XmHTML -I${X11BASE}/include
++PLATFORMINC=-I../../include/XmHTML -I${BUILDLINK_X11_DIR}/include
  else
  ifeq ($(PLATFORM),gtk)
  PLATFORMINC=-I../../include/gtk-xmhtml -I/usr/local/include
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.4 2001/03/05 13:52:42 skrll Exp $
  ifeq ($(PLATFORM),Motif)
  
 -LIBDIR = -L/usr/X11R6/lib
-+LIBDIR = -L${X11BASE}/lib
++LIBDIR = -L${BUILDLINK_X11_DIR}/lib
  # This is what is required under Linux (Motif 2.0.1).
  # Your mileage may vary.
 -LIBS   = -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.4 2001/03/05 13:52:42 skrll Exp $
  ifeq($(PLATFORM),gtk)
  
 -LIBDIR = -L/usr/local/lib
-+LIBDIR = -L${X11BASE}/lib
++LIBDIR = -L${BUILDLINK_X11_DIR}/lib
  LIBS   = -lgdk -lgtk -lX11
  
  # endif gtk
