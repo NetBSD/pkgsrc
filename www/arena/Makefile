@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/09/20 04:56:21 fredb Exp $
+# $NetBSD: Makefile,v 1.39 2001/09/20 20:46:24 fredb Exp $
 
 DISTNAME=		arena-0.3.62
 PKGNAME=		arena-0.3.62nb1
@@ -43,7 +43,7 @@ pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Arena/${LOWER_OPSYS}/arena ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/Arena/${MACHINE_GNU_PLATFORM:C/.*-.*-//}/arena ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/Arena/Source/arenarc ${PREFIX}/share/examples/
 	if [ ! -f ${LOCALBASE}/etc/arenarc ]; then \
 	  ${CP} ${PREFIX}/share/examples/arenarc ${LOCALBASE}/etc/; fi
