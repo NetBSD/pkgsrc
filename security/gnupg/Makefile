@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/08/04 23:12:17 seb Exp $
+# $NetBSD: Makefile,v 1.49 2003/08/08 18:57:04 wiz Exp $
 
 DISTNAME=	gnupg-1.2.2
 PKGREVISION=	1
@@ -45,7 +45,8 @@ MACHINE_GNU_ARCH=	i586
 # use of IDEA as crypto function
 LICENCE=	fee-based-commercial-use
 DISTFILES+=	idea.c.gz
-SITES_idea.c.gz=ftp://ftp.gnupg.dk/pub/contrib-dk/
+SITES_idea.c.gz=ftp://ftp.gnupg.dk/pub/contrib-dk/ \
+		http://www.gnupg.dk/contrib-dk/
 
 pre-configure:
 	${GZCAT} ${DISTDIR}/idea.c.gz > ${WRKSRC}/cipher/idea.c
