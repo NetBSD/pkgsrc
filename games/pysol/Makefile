@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/09 10:54:21 sakamoto Exp $
 # FreeBSD Id: ports/games/pysol/Makefile,v 1.20 1999/12/08 11:01:01 tg Exp
 
-DISTNAME=       pysol-4.10
+DISTNAME=       pysol-4.72
 CATEGORIES=	games
 MASTER_SITES=	http://wildsau.idv.uni-linz.ac.at/mfx/download/pysol/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://wildsau.idv.uni-linz.ac.at/mfx/pysol.html
@@ -15,7 +16,7 @@ DEPENDS+=	py-Tk-*:../../x11/py-Tk
 NO_BUILD=	yes
 PLIST_SRC=	${WRKDIR}/PLIST.src
 
-CARDSETS=	pysol-cardsets-3.40
+CARDSETS=	pysol-cardsets-4.40
 
 do-install:
 	${SED} -e "s|@pkgdatadir@|${PREFIX}/share/pysol|" < ${WRKSRC}/pysol > ${PREFIX}/bin/pysol
