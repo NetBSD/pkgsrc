@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 18:19:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/29 23:49:12 wiz Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -12,10 +12,8 @@ COMMENT=		Packet sniffer program
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
 
-USE_CURSES=		yes
-REPLACE_NCURSES=	${WRKSRC}/configure
-
 HAS_CONFIGURE=		YES
+USE_BUILDLINK_ONLY=	YES
 ALL_TARGET=
 
 do-install:
@@ -23,12 +21,5 @@ do-install:
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.5 ${PREFIX}/man/man5
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.8 ${PREFIX}/man/man8
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${NEED_NCURSES} == "YES"
-CONFIGURE_ENV+=		NCURSES_LOCATION=${LOCALBASE}/include/ncurses.h
-.else
-CONFIGURE_ENV+=		NCURSES_LOCATION=no
-.endif
-
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
