@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2002/03/14 07:44:23 jmc Exp $
+$NetBSD: patch-ae,v 1.5 2003/07/13 14:34:49 dillo Exp $
 
---- ../ffcall/callback/trampoline_r/Makefile.in.orig	Tue Mar  5 09:57:45 2002
-+++ ../ffcall/callback/trampoline_r/Makefile.in	Tue Mar  5 09:57:54 2002
-@@ -90,7 +90,7 @@
+--- .././ffcall/callback/trampoline_r/Makefile.in.orig	Sun Mar 24 19:51:37 2002
++++ .././ffcall/callback/trampoline_r/Makefile.in
+@@ -93,7 +93,7 @@ cache-hppa.lo : $(srcdir)/cache-hppa.s
  	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/cache-hppa.s
  
  cache-rs6000.lo : $(srcdir)/cache-rs6000-sysv4.s
