@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 1999/11/09 17:22:16 abs Exp $
+$NetBSD: patch-ad,v 1.3 1999/11/09 19:29:57 abs Exp $
 --- src/misc.c.orig	Tue Sep 14 09:46:53 1999
 +++ src/misc.c	Tue Nov  9 16:27:25 1999
 @@ -652,3 +652,41 @@
@@ -28,8 +28,8 @@ $NetBSD: patch-ad,v 1.2 1999/11/09 17:22:16 abs Exp $
 +     */
 +
 +    /* This is also a convenient method to ensure valid dotted quad */
-+if ( (nm.s_addr = inet_addr(netmask)) != INADDR_NONE &&
-+	    (ip.s_addr = inet_addr(VIPADDRESS)) != INADDR_NONE )
++if ( (nm.s_addr = inet_addr(netmask)) != -1 &&
++	    (ip.s_addr = inet_addr(VIPADDRESS)) != -1 )
 +    {
 +    ip.s_addr &= nm.s_addr;	/* Will not work with IPv6 */
 +    strcpy(ipbuf,inet_ntoa(ip));
