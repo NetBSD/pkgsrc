@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7019 2004/08/27 21:52:46 schmonz Exp $
+$NetBSD: CHANGES,v 1.7020 2004/08/27 22:08:55 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4079,3 +4079,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added boaconstructor-0.2.3 [drochner 2004-08-27]
 	Updated mstream to 1.0 [kim 2004-08-27]
 	Updated getmail to 4.1.1 [schmonz 2004-08-27]
+	Updated mono to 1.0.1 [recht 2004-08-27]
+	Updated libgdiplus to 1.0.1 [recht 2004-08-27]
