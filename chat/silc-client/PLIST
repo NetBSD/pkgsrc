@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2003/10/27 13:23:31 salo Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/11/01 16:45:13 salo Exp $
 bin/silc
 lib/silc/libsilc-1.0.so
 lib/silc/libsilc-1.0.so.2
@@ -21,7 +21,6 @@ lib/silc/modules/rsa.sim.so
 lib/silc/modules/sha1.sim.so
 lib/silc/modules/twofish.sim.so
 man/man1/silc.1
-share/examples/silc/silc.conf.default
 share/doc/silc/CHANGES
 share/doc/silc/COPYING
 share/doc/silc/CREDITS
@@ -35,6 +34,7 @@ share/doc/silc/manual.txt
 share/doc/silc/signals.txt
 share/doc/silc/special_vars.txt
 share/doc/silc/startup-HOWTO.html
+share/examples/silc/silc.conf.default
 share/silc/config.h
 share/silc/help/action
 share/silc/help/admin
@@ -82,6 +82,7 @@ share/silc/help/list
 share/silc/help/load
 share/silc/help/log
 share/silc/help/me
+share/silc/help/mmsg
 share/silc/help/motd
 share/silc/help/msg
 share/silc/help/names
