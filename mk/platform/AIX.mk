@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.4.2.4 2005/02/25 14:46:51 tv Exp $
+# $NetBSD: AIX.mk,v 1.4.2.5 2005/03/21 15:43:00 tv Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -16,31 +16,35 @@ DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
 ECHO_N?=	${ECHO} -n
-.if exists(${LOCALBASE}/bin/egrep)
-EGREP?=		${LOCALBASE}/bin/egrep
+.if exists(${LOCALBASE}/bin/gegrep)
+EGREP?=		${LOCALBASE}/bin/gegrep
 .else
 EGREP?=		/usr/bin/grep -E
 .endif
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
 FETCH_CMD?= ${LOCALBASE}/bin/ftp
-.if exists(${LOCALBASE}/bin/fgrep)
-FGREP?=		${LOCALBASE}/bin/fgrep
+.if exists(${LOCALBASE}/bin/gfgrep)
+FGREP?=		${LOCALBASE}/bin/gfgrep
 .else
 FGREP?=		/usr/bin/grep -F
 .endif
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
-.if exists(${LOCALBASE}/bin/grep)
-GREP?=		${LOCALBASE}/bin/grep
+.if exists(${LOCALBASE}/bin/ggrep)
+GREP?=		${LOCALBASE}/bin/ggrep
 .else
 GREP?=		/usr/bin/grep
 .endif
 .if exists(/bin/tar)
 GTAR?=		/bin/tar
 .else
+.if exists(${LOCALBASE}/bin/tar)
+GTAR?=		${LOCALBASE}/bin/tar
+.else
 GTAR?=		/usr/bin/tar
+.endif
 .endif
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
@@ -67,7 +71,11 @@ PAX?=		${LOCALBASE}/bin/pax
 .else
 PAX?=		/bin/pax
 .endif
+.if exists(${LOCALBASE}/bin/perl)
 PERL5?=		${LOCALBASE}/bin/perl
+.else
+PERL5?=		/usr/bin/perl
+.endif
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
@@ -161,10 +169,8 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 LINK_ALL_LIBGCC_HACK=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 .endif
 
-.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=		-s	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
-.endif
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty0
 SERIAL_DEVICES?=	/dev/tty0 \

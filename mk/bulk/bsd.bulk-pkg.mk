@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.65.2.4 2005/02/11 15:27:57 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.65.2.5 2005/03/21 15:43:00 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -142,6 +142,12 @@ BULK_PREREQ+=		pkgtools/digest
 
 # by default, clean up any broken packages
 _PRESERVE_WRKDIR?=	no
+
+# create an escaped version of PKGPATH.  We do this because
+# in several places we want to be able to use something like
+# foo/bar.baz++ in a regular expression but have it be interpreted
+# literally.  So, turn it into foo\/bar\.baz\+\+
+_ESCPKGPATH=	${PKGPATH:C@\/@\\/@g:C@\+@\\+@g:C@\.@\\.@g:Q}
 
 # build the cache files used as part of a full bulk build
 # Note:  we have to install the BULK_PREREQ packages _before_
@@ -297,7 +303,7 @@ bulk-package:
 		${ECHO_MSG} "BULK> Full rebuild in progress..." ; \
 		${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-			for pkgdir in ${PKGPATH} `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+			for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
 				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
 			done ;\
 		else \
@@ -315,7 +321,9 @@ bulk-package:
 					fi; \
 					if ${PKG_INFO} -qe $$pkgname ; then \
 						${SHCOMMENT} "Remove only unneeded pkgs" ; \
-						if ${EGREP} "^${PKGPATH} .* $$pkgdir( |$$)" ${DEPENDSFILE} >/dev/null 2>&1; then \
+						pkgdir2=`${ECHO} "$$pkgdir" | ${AWK} '{gsub(/\//,"\\\\/"); gsub(/\+/,"\\\\+"); gsub(/ /,"\\\\ "); gsub(/\./,"\\\\."); print}'` ; \
+						tmp=`${SED} -n -e "/^${_ESCPKGPATH} .* $$pkgdir2 / s;.*;yes;p" ${DEPENDSFILE}` ; \
+						if test "X$$tmp" = "Xyes" ; then \
 							${ECHO_MSG} "BULK> ${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
 						else \
 							case "${BULK_PREREQ}" in \
@@ -345,7 +353,7 @@ bulk-package:
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			${SHCOMMENT} "Install required depends via binarypkgs XXX" ; \
 			${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
-			for pkgdir in `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'` ${BULK_PREREQ} ; do \
+			for pkgdir in `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}` ${BULK_PREREQ} ; do \
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
 				if [ -z "$$pkgname" ]; then continue ; fi ;\
 				pkgfile=${PACKAGES}/All/$${pkgname}${PKG_SUFX} ;\
@@ -396,32 +404,35 @@ bulk-package:
 			nbrokenby=0;\
 			if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 				${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
-				for pkgdir in `${GREP} "^${PKGPATH} " ${SUPPORTSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-					pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
-					if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
-					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
-					pkgerr="-1"; \
-					pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
-					pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
-					if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
-						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						 ${ECHO_MSG} "BULK> $$pkgskip" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						if [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
-							pkgerr="0"; \
-						else \
-							pkgerr="1"; \
+				tmp=`${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:[ ]*;;p" ${SUPPORTSFILE}` ; \
+				if test -n "$$tmp" ; then \
+					for pkgdir in $$tmp ; do \
+						pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
+						if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
+						${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
+						pkgerr="-1"; \
+						pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
+						pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
+						if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
+							 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+							 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+							 ${ECHO_MSG} "BULK> $$pkgskip" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+							if [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
+								pkgerr="0"; \
+							else \
+								pkgerr="1"; \
+							fi; \
 						fi; \
-					fi; \
-					${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken." \
-						>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-					${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>.<br />" \
-						>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-					nbrokenby=`expr $$nbrokenby + 1`;\
-					if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} ; then :; else \
-						${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
-					fi ;\
-				done ;\
+						${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken." \
+							>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>.<br />" \
+							>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						nbrokenby=`expr $$nbrokenby + 1`;\
+						if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} ; then :; else \
+							${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
+						fi ;\
+					done ;\
+				fi ;\
 			fi ;\
 			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
 			if [ -f ${INTERACTIVE_COOKIE} ]; then \
@@ -434,7 +445,7 @@ bulk-package:
 		yes|YES)	;;					\
 		*)	${ECHO_MSG} "BULK> Cleaning packages and its depends"; \
 		 	if [ "${USE_BULK_CACHE}" = "yes" ]; then	\
-				for pkgdir in ${PKGPATH} `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+				for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
 					${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
 				done;					\
 			else						\
