@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.4.2.2 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: Darwin.mk,v 1.4.2.3 2005/03/21 15:43:00 tv Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -143,10 +143,8 @@ _USE_RPATH=		no	# don't add rpath to LDFLAGS
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
-.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=		-Wl,-x	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
-.endif
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-Wl,-x} # cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
 
