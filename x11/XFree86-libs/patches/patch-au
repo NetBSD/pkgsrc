@@ -1,0 +1,53 @@
+$NetBSD: patch-au,v 1.1.1.1 2004/01/24 08:47:32 xtraeme Exp $
+
+--- config/cf/FreeBSD.cf.in.orig	Tue Jul 22 05:38:50 2003
++++ config/cf/FreeBSD.cf.in	Tue Jul 22 05:42:22 2003
+@@ -162,14 +162,14 @@
+  *    ld: warning: libXThrStub.so.6, needed by libX11.so, not found
+  */
+ #if BuildThreadStubLibrary && (!defined(UseInstalledX11) || !UseInstalledX11)
+-# define CcCmd			$(CLIENTENVSETUP) cc
+-# define CplusplusCmd		$(CLIENTENVSETUP) c++
++# define CcCmd			$(CLIENTENVSETUP) @@PKGSRC_CC@@
++# define CplusplusCmd		$(CLIENTENVSETUP) @@PKGSRC_CXX@@
+ #else
+-# define CcCmd			cc
+-# define CplusplusCmd		c++
++# define CcCmd			@@PKGSRC_CC@@
++# define CplusplusCmd		@@PKGSRC_CXX@@
+ #endif
+ 
+-#define CppCmd			/usr/bin/cpp
++#define CppCmd			@@PKGSRC_CPP@@
+ #define PreProcessCmd		CppCmd
+ #define StandardCppOptions	-traditional
+ #define StandardCppDefines	/**/
+@@ -177,7 +177,7 @@
+ #if defined(UseInstalled)
+ #define DefaultCCOptions	/**/
+ #else
+-#define DefaultCCOptions	-ansi -pedantic -Dasm=__asm GccWarningOptions
++#define DefaultCCOptions	-ansi @@PKGSRC_CFLAGS@@ -Dasm=__asm
+ #endif
+ #endif
+ #ifndef ExtraLibraries
+@@ -482,17 +482,12 @@
+ #define XawI18nDefines		-DUSE_XWCHAR_STRING -DUSE_XMBTOWC
+ #endif
+ 
+-/* The GCC strength-reduce bug is fixed for FreeBSD 2.1.5 and later */
+-#ifndef DefaultGcc2i386Opt
+-#if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion > 1) || (OSMajorVersion == 2 && OSMinorVersion == 1 && OSTeenyVersion >= 5)
+-#define DefaultGcc2i386Opt -O2
+-#endif
+-#endif
++#define DefaultGcc2i386Opt
+ 
+ #ifdef i386Architecture
+ # define OptimizedCDebugFlags DefaultGcc2i386Opt
+ #else
+-# define OptimizedCDebugFlags -O
++# define OptimizedCDebugFlags @@PKGSRC_CFLAGS@@
+ #endif
+ 
+ #ifndef PreIncDir
