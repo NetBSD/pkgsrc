@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/07/29 06:36:34 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/07/29 08:59:15 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -106,7 +106,7 @@ NO_MTREE=		# defined
 X11ROOT_PREFIX?=	xorg
 WRKSRC?=		${WRKDIR}/xc
 X11ROOT?=		${PREFIX}/${X11ROOT_PREFIX}
-PREPEND_PATH=		${X11ROOT}/bin # Make sure we have this in PATH :)
+PREPEND_PATH+=		${X11ROOT}/bin # Make sure we have this in PATH :)
 
 PLIST_SUBST+=		X11ROOT_PREFIX=${X11ROOT_PREFIX}
 MESSAGE_SUBST+=		X11ROOT=${X11ROOT}
@@ -231,8 +231,6 @@ do-install:
 	done
 .  endif
 
-.endif # NO_XORG_TARGETS
-
+.endif # !defined(XORG_TARGETS)
 .endif # !defined(XORG_ONLY_DIRS) || empty(XORG_ONLY_DIRS:M[Yy][Ee][Ss])
-
 .endif # !defined(XORG_MAKEFILE_COMMON)
