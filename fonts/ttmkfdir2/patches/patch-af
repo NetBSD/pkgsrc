@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2004/04/28 00:10:04 recht Exp $
+
+--- encoding.cpp.orig	2002-11-07 06:28:44.000000000 +0100
++++ encoding.cpp	2004-04-28 02:04:02.000000000 +0200
+@@ -2,7 +2,7 @@
+ #include <cstdio>
+ #include <cstdlib>
+ #include <cstring>
+-#include "freetype/freetype.h"
++#include <ft2build.h>
+ 
+ #include "ttmkfdir.h"
+ #include "encoding.h"

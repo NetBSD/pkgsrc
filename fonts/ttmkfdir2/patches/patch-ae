@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2004/04/28 00:10:04 recht Exp $
+
+--- encoding.h.orig	2002-11-07 06:28:44.000000000 +0100
++++ encoding.h	2004-04-28 02:04:06.000000000 +0200
+@@ -6,7 +6,8 @@
+ #include <map>
+ #include <string>
+ 
+-#include "freetype/freetype.h"
++#include <ft2build.h>
++#include FT_FREETYPE_H
+ 
+ #include "util.h"
+ 
