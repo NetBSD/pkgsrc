@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/28 07:50:34 skrll Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/11 09:16:28 wiz Exp $
 #
 
 DISTNAME=		kdebindings-2.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel kde
 COMMENT=		Additional language bindings for KDE integrated X11 desktop
 
 DEPENDS+=		kdebase-2.1:../../x11/kdebase2
-DEPENDS+=		gtk+-1.2.9:../../x11/gtk
+DEPENDS+=		gtk+>=1.2.9:../../x11/gtk
 DEPENDS+=		python-2.0:../../lang/python
 
 .include "../../x11/kde2/Makefile.part2"
