@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/14 22:17:29 wiz Exp $
+
+--- Makefile.orig	2005-01-07 13:02:55.000000000 +0100
++++ Makefile
+@@ -19,7 +19,7 @@
+ 
+ ## DEBIAN RELEASE
+ ifeq ($(sys), DEBIAN)
+-	MEDIA=-D MEDIA_PATH=\"/usr/share/games/kajaanikombat/\"
++	MEDIA=-D MEDIA_PATH=\"/usr/share/games/kajaani-kombat/\"
+ 	DEBUG= -O $(MEDIA)
+ endif
+ ## WIN RELEASE
+@@ -29,12 +29,12 @@ ifeq ($(sys), WIN)
+ endif
+ ## UNIX RELEASE
+ ifeq ($(sys), UNIX)
+-	MEDIA=-D MEDIA_PATH=\"./\"
++	MEDIA=-D MEDIA_PATH=\"${PREFIX}/share/kajaani-kombat/\"
+ 	DEBUG= -O $(MEDIA)
+ endif
+ ## UNIX DEBUG
+ ifeq ($(sys),)
+-	MEDIA=-D MEDIA_PATH=\"./\"
++	MEDIA=-D MEDIA_PATH=\"${PREFIX}/share/kajaani-kombat/\"
+ 	DEBUG= -g -DDEBUG $(MEDIA)
+ endif
+ 
