@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/18 13:19:37 minoura Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/08 13:35:20 uebayasi Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 CATEGORIES=	www
@@ -12,7 +12,7 @@ EMACS_DEPENDS+=	{w3m,w3m-img}>=0.3.1:../../www/w3m
 BUILD_DEPENDS+=	${PKGNAME_PREFIX}semi-*:../../devel/semi
 
 # Not tested with xemacs...
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs214 xemacs215
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 
 .include "../../mk/emacs.mk"
 
