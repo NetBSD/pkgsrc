@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5 2002/11/26 12:05:59 wiz Exp $
+$NetBSD: TODO,v 1.6 2002/11/26 12:15:08 skrll Exp $
 
 Suggested new packages
 ======================
@@ -229,9 +229,6 @@ Suggested package updates
 
 Suggested pkgsrc enhancements
 =============================
-
-	o Add a default test target to mk/*.mk and override it in any pkgs
-	  that have testsuites. Use it in bulk builds/test.
 
 	o Add a sort check to pkglint for PLISTs.
 
