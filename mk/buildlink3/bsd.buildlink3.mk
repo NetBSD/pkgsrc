@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.126 2004/03/19 20:27:44 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.127 2004/03/21 00:03:32 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -79,45 +79,9 @@ PKG_FAIL_REASON+=	\
 .endif
 
 # For each package we use, check whether we are using the built-in
-# version of the package or if we are using the pkgsrc version.  The
-# necessary logic is encapsulated in a package's builtin.mk file, which
-# is required to define USE_BUILTIN.<pkg> to be either "yes" or "no".
+# version of the package or if we are using the pkgsrc version.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-PREFER.${_pkg_}?=	pkgsrc
-.  if !empty(PREFER_NATIVE:M[yY][eE][sS])
-PREFER.${_pkg_}=	native
-.  endif
-.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-PREFER.${_pkg_}=	pkgsrc
-.  endif
-.  if !empty(PREFER_NATIVE:M${_pkg_})
-PREFER.${_pkg_}=	native
-.  endif
-.  if !empty(PREFER_PKGSRC:M${_pkg_})
-PREFER.${_pkg_}=	pkgsrc
-.  endif
-.endfor
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if ${PREFER.${_pkg_}} == "pkgsrc"
-USE_BUILTIN.${_pkg_}?=	no
-.  endif
-#
-# builtin.mk files default to using the built-in software if it's
-# available (${PREFER.<pkg>} == "native") unless USE_BUILTIN.<pkg> has
-# been previously set.
-#
-.  if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.    if exists(${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk)
-.       include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
-.    endif
-.  endif
-.endfor
-
-# Default fall-through for packages that don't provide a builtin.mk.
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-USE_BUILTIN.${_pkg_}?=	no
-.endfor
+.include "../../mk/buildlink3/bsd.builtin.mk"
 
 # Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.
 # We can then check for this value to avoid build loops.
