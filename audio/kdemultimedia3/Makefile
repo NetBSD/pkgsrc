@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/13 13:50:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/14 08:22:09 wiz Exp $
 
 DISTNAME=	kdemultimedia-3.1.2
 PKGREVISION=	2
@@ -11,7 +11,7 @@ DEPENDS+=	xanim>=2.80.0:../../graphics/xanim
 
 USE_BUILDLINK2=		YES
 
-REPLACE_PERL=		kscd/workman2cddb.pl`
+REPLACE_PERL=		kscd/workman2cddb.pl
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_OSS)
