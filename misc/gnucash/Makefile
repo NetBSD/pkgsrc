@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/02/13 01:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/02/28 01:25:13 dmcmahill Exp $
 #
 
 DISTNAME=       gnucash-1.1.25
@@ -20,7 +20,7 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 USE_X11=	yes
 USE_MOTIF=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-guile=${PREFIX} --with-perl-includes=${PREFIX}/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE
+CONFIGURE_ARGS+= --with-guile=${LOCALBASE} --with-perl-includes=${LOCALBASE}/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE
 USE_GMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
