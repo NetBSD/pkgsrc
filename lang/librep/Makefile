@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/06/11 06:34:39 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/21 03:03:20 jlam Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -13,6 +13,7 @@ COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 GDBM_REQD=		1.8.0
 USE_GNU_READLINE=	# uses rl_basic_quote_characters
 
+USE_BUILDLINK_ONLY=	# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
