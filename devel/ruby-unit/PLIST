@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/04 00:36:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/28 06:06:11 taca Exp $
 bin/c2t
-bin/c2t.rb
 bin/runtest
-bin/runtest.rb
 ${RUBY_SITELIBDIR}/rubyunit.rb
 ${RUBY_SITELIBDIR}/runit/assert.rb
 ${RUBY_SITELIBDIR}/runit/cui/testrunner.rb
