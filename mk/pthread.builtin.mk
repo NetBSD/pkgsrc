@@ -1,14 +1,14 @@
-# $NetBSD: pthread.builtin.mk,v 1.4 2004/11/26 08:18:30 jlam Exp $
+# $NetBSD: pthread.builtin.mk,v 1.5 2004/11/28 05:44:34 jlam Exp $
 
 .for _lib_ in pthread c_r rt
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
 _BLNK_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" = "/usr/lib/lib${_lib_}.*"; then \
-		${ECHO} "no";						\
-	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" = "/lib/lib${_lib_}.*"; then \
-		${ECHO} "no";						\
-	else								\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
 		${ECHO} "yes";						\
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
 	fi
 BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
 .  endif
