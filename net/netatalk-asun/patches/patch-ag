@@ -1,31 +1,14 @@
-$NetBSD: patch-ag,v 1.2 2000/07/31 18:33:49 abs Exp $
+$NetBSD: patch-ag,v 1.3 2000/08/15 14:48:23 abs Exp $
 
---- etc/atalkd/nbp.c.orig	Sun Dec 13 05:22:42 1998
-+++ etc/atalkd/nbp.c	Mon Jul 31 18:52:23 2000
-@@ -110,7 +110,7 @@
-     nn.nn_sat.sat_port = nt.nt_port;
+--- etc/afpd/status.c.orig	Wed Dec 16 18:38:38 1998
++++ etc/afpd/status.c
+@@ -52,7 +52,8 @@
+ static int status_server(char *data, const char *server)
+ {
+     struct afp_status	*status;
+-    char                *Obj, *Type, *Zone;
++    const char          *Obj;
++    char                *Type, *Zone;
+     int			len;
  
-     /* object */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return 1;
-     }
-@@ -119,7 +119,7 @@
-     data += nn.nn_objlen;
- 
-     /* type */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return 1;
-     }
-@@ -128,7 +128,7 @@
-     data += nn.nn_typelen;
- 
-     /* zone */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return 1;
-     }
+     status = (struct afp_status *) data;
