@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- Make.Targets.orig	Wed Oct 11 16:33:34 2000
++++ Make.Targets
+@@ -67,7 +67,7 @@
+ 
+ install-progs:	$(PROGS)
+ 		if [ ! -d $(DEST) ]; then $(INSTALL) -d -m 755 $(DEST); fi
+-		$(INSTALL) -s -o root -g root -m $(INSTALL_MODE)\
++		$(INSTALL) -s -o root -g wheel -m $(INSTALL_MODE)\
+ 			$(CSOUND_PROG) $(DEST)
+ 		if [ -n "$(OTHER_PROGS)" ]; \
+ 		then \
+@@ -84,8 +84,8 @@
+ install-$(CSADYNSO):	$(CSADYNSO)
+ 		if [ ! -d $(LIB) ]; then $(INSTALL) -d -m 755 $(LIB); fi
+ 		$(INSTALL) -m 755 $(CSADYNSO) $(LIB)/$(CSADYNSO)
++		ln -sf $(CSADYNSO) $(LIB)/$(CSADYN).4
+ 		ln -sf $(CSADYNSO) $(LIB)/$(CSADYN)
+-		/sbin/ldconfig -N $(LIB)
+ 
+ install-$(CSASTAT):	$(CSASTAT)
+ 		if [ ! -d $(LIB) ]; then $(INSTALL) -d -m 755 $(LIB); fi

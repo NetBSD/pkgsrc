@@ -1,0 +1,31 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- new-src/OSSrtaudio.c.orig	Thu Sep 21 21:56:00 2000
++++ new-src/OSSrtaudio.c
+@@ -16,14 +16,14 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+-#include <sys/soundcard.h>
++#include <soundcard.h>
+ 
+ #include "cs.h"
+ #include "soundio.h"
+ #include "OSSrtaudio.h"
+ 
+-char *oss_in  = "/dev/dsp";
+-char *oss_out = "/dev/dsp";
++char *oss_in  = "/dev/audio";
++char *oss_out = "/dev/audio";
+ 
+ static int dspfd;
+ void setsndparms(int, int, int, MYFLT, unsigned);
+@@ -130,7 +130,7 @@
+         long sampframes = nbytes >> oshift;
+         /*  J. Mohr  1995 Oct 17 */
+         if (write(dspfd, outbuf, nbytes) < nbytes)
+-            printf("/dev/dsp: couldn't write all bytes requested\n");
++            printf("/dev/audio: couldn't write all bytes requested\n");
+         nrecs++;
+ }
+ 
