@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# $NetBSD: pgsql.sh.tmpl,v 1.4 1999/09/19 04:24:54 jlam Exp $
+# $NetBSD: pgsql.sh.tmpl,v 1.5 2000/03/18 17:43:16 jlam Exp $
 # FreeBSD Id: pgsql.sh.tmpl,v 1.3 1997/10/05 21:00:49 andreas Exp
 
 # pgsql.sh - postgresql startup file for NetBSD
 
-if [ -x @PGPREFIX@/bin/postmaster ]; then
+if [ -x @PREFIX@/bin/postmaster ]; then
 	echo -n ' pgsql' 
-	su -l @PGUSER@ -c 'exec @PGPREFIX@/bin/postmaster \
-		-S -o -F > @PGPREFIX@/errlog'
+	su -l @PGUSER@ -c 'exec @PREFIX@/bin/postmaster \
+		-S -o -F > @PGHOME@/errlog'
 fi

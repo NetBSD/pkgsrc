@@ -1,13 +1,24 @@
-$NetBSD: patch-ak,v 1.1 1999/09/19 04:24:55 jlam Exp $
+$NetBSD: patch-ak,v 1.2 2000/03/18 17:43:17 jlam Exp $
 
---- ./interfaces/libpgtcl/Makefile.in.orig	Wed Jun 30 19:57:24 1999
-+++ ./interfaces/libpgtcl/Makefile.in	Sat Sep 18 03:05:39 1999
-@@ -27,7 +27,7 @@
+--- include/port/bsd.h.orig	Tue May 25 12:14:29 1999
++++ include/port/bsd.h	Thu Mar 16 17:49:44 2000
+@@ -1,16 +1,16 @@
+ #define USE_POSIX_TIME
  
- OBJS= pgtcl.o pgtclCmds.o pgtclId.o
+-#if defined(i386)
++#if defined(__i386__)
+ #define NEED_I386_TAS_ASM
+ #define HAS_TEST_AND_SET
+ #endif
  
--SHLIB_LINK+= -L../libpq -lpq
-+SHLIB_LINK+= $(LIBPQ)
+-#if defined(sparc)
++#if defined(__sparc__)
+ #define NEED_SPARC_TAS_ASM
+ #define HAS_TEST_AND_SET
+ #endif
  
- # If crypt is a separate library, rather than part of libc, it may need
- # to be referenced separately to keep (broken) linkers happy.  (This is
+-#if defined(vax)
++#if defined(__vax__)
+ #define NEED_VAX_TAS_ASM
+ #define HAS_TEST_AND_SET
+ #endif

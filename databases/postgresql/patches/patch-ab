@@ -1,106 +1,29 @@
-$NetBSD: patch-ab,v 1.7 1999/09/20 23:38:48 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2000/03/18 17:43:17 jlam Exp $
 
---- ./Makefile.shlib.orig	Fri Jul 30 00:13:44 1999
-+++ ./Makefile.shlib	Mon Sep 20 11:00:59 1999
-@@ -50,6 +50,7 @@
- # on a platform where we don't know how to build a shared library.
- shlib := 
- install-shlib-dep :=
-+lib_to_install :=	lib$(NAME).a
- 
- # For each platform we support shlibs on, set shlib and install-shlib-dep,
- # and update flags as needed to build a shared lib.  Note we depend on
-@@ -65,20 +66,26 @@
+--- Makefile.shlib.orig	Fri Jul 30 00:13:44 1999
++++ Makefile.shlib	Thu Mar 16 17:49:44 2000
+@@ -109,6 +109,24 @@
+   endif
  endif
  
- ifeq ($(PORTNAME), bsd)
--  ifdef BSD_SHLIB
-+  ifneq ($(BSD_SHLIB),)
-+  ifeq ($(LIBTOOL),)
-     install-shlib-dep	:= install-shlib
-     shlib		:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
--    ifdef ELF_SYSTEM
-+    ifeq ($(ELF_SYSTEM), true)
-       LDFLAGS_SL	:= -x -Bshareable -soname $(shlib)
-     else
-       LDFLAGS_SL	:= -x -Bshareable -Bforcearchive
-     endif
-     CFLAGS		+= $(CFLAGS_SL)
--  endif
-+  else
-+    lalib		:= lib$(NAME).la
-+    lib_to_install	:= $(lalib)
-+    LIBTOOL_FLAGS	+= -rpath $(LIBDIR) -version-info $(SO_MAJOR_VERSION):$(SO_MINOR_VERSION)
-+  endif # !LIBTOOL
-+  endif # BSD_SHLIB
- endif
- 
- ifeq ($(PORTNAME), bsdi)
--  ifdef BSD_SHLIB
-+  ifneq ($(BSD_SHLIB),)
-     ifeq ($(DLSUFFIX), .so)
-       install-shlib-dep := install-shlib
-       shlib			:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
-@@ -96,9 +103,9 @@
- endif
- 
- ifeq ($(PORTNAME), freebsd)
--  ifdef BSD_SHLIB
-+  ifneq $(BSD_SHLIB),)
-     install-shlib-dep	:= install-shlib
--    ifdef ELF_SYSTEM
-+    ifeq ($(ELF_SYSTEM), true)
-       shlib		:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
-       LDFLAGS_SL	:= -x -shared -soname $(shlib)
-     else
-@@ -191,7 +198,7 @@
- 
- # Default target definition.  Note shlib is empty if not building a shlib.
- 
--all: lib$(NAME).a $(shlib)
-+all: $(lib_to_install) $(shlib)
- 
- # Rules to build regular and shared libraries
- 
-@@ -207,6 +214,21 @@
- 
- endif
- 
-+ifneq ($(LIBTOOL),)
-+ifneq ($(PORTNAME), win)
-+
-+ifeq ($(CXXLIB), true)
-+LINKER=	CXX
-+else
-+LINKER=	CC
++ifeq ($(PORTNAME), netbsd)
++  ifdef BSD_SHLIB
++    install-shlib-dep  := install-shlib
++    soname             := lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
++    shlib              := lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
++    ifdef ELF_SYSTEM
++      LD               := $(CC)
++      LDFLAGS_SL       := -shared -Wl,-soname -Wl,$(soname)
++      ifneq ($(SHLIB_LINK),)
++        LDFLAGS_SL     += -Wl,-R$(LIBDIR)
++      endif
++    else
++      LDFLAGS_SL       := -x -Bshareable -Bforcearchive
++    endif
++    CFLAGS             += $(CFLAGS_SL)
++  endif
 +endif
 +
-+$(lalib): $(OBJS)
-+	$($(LINKER)) $(CPPFLAGS) $($(LINKER)FLAGS) -o $@ $(OBJS:.o=.lo) $(LIBTOOL_FLAGS)
-+
-+endif
-+endif
-+
- ifneq ($(shlib),)
- ifneq ($(PORTNAME), win)
- ifneq ($(PORTNAME), aix)
-@@ -250,8 +272,8 @@
- 
- .PHONY: all install-lib install-shlib
- 
--install-lib: lib$(NAME).a
--	$(INSTALL) $(INSTL_LIB_OPTS) lib$(NAME).a $(LIBDIR)/lib$(NAME).a
-+install-lib: $(lib_to_install)
-+	$(INSTALL) $(INSTL_LIB_OPTS) $(lib_to_install) $(LIBDIR)
- 
- install-shlib: $(shlib)
- 	$(INSTALL) $(INSTL_SHLIB_OPTS) $(shlib) $(LIBDIR)/$(shlib)
-@@ -273,4 +295,8 @@
- .PHONY: clean-shlib
- 
- clean-shlib:
-+ifneq ($(LIBTOOL),)
-+	$(LIBTOOL) rm -rf $(lalib)
-+else
- 	rm -f $(shlib) lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION) lib$(NAME)$(DLSUFFIX)
-+endif
+ ifeq ($(PORTNAME), hpux)
+   install-shlib-dep	:= install-shlib
+ # HPUX doesn't believe in version numbers for shlibs

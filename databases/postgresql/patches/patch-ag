@@ -1,25 +1,21 @@
-$NetBSD: patch-ag,v 1.4 1999/09/19 04:24:54 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2000/03/18 17:43:17 jlam Exp $
 
---- ./bin/psql/Makefile.in.orig	Sun Jan 17 01:19:19 1999
-+++ ./bin/psql/Makefile.in	Sat Sep 18 03:18:28 1999
-@@ -30,17 +30,13 @@
+--- bin/pgtclsh/Makefile.orig	Tue Oct 27 16:51:54 1998
++++ bin/pgtclsh/Makefile	Thu Mar 16 17:49:44 2000
+@@ -22,15 +22,12 @@
+ include Makefile.tkdefs
+ endif
  
- OBJS= psql.o stringutils.o @STRDUP@ @STRERROR2@
+-CFLAGS+= $(X_CFLAGS) -I$(SRCDIR)/interfaces/libpgtcl 
++CFLAGS+= $(X_CFLAGS) -I$(LIBPGTCLDIR)
  
--all: submake psql
-+all: psql
- 
--psql: $(OBJS) $(LIBPQDIR)/libpq.a
--	$(CC) -o psql -L$(LIBPQDIR) $(OBJS) -lpq $(LDFLAGS)
-+psql: $(OBJS)
-+	$(CC) -o psql $(OBJS) $(LIBPQ) $(LDFLAGS)
- 
- ../../utils/strdup.o:
- 	$(MAKE) -C ../../utils strdup.o
+ ifdef KRBVERS
+ LDFLAGS+= $(KRBLIBS)
+ CFLAGS+= $(KRBFLAGS)
+ endif
 -
--.PHONY: submake
--submake:
--	$(MAKE) -C $(LIBPQDIR) libpq.a
+-LIBPGTCL= -L$(SRCDIR)/interfaces/libpgtcl -lpgtcl
+-LIBPQ= -L$(LIBPQDIR) -lpq
  
- install: psql
- 	$(INSTALL) $(INSTL_EXE_OPTS) psql$(X) $(BINDIR)/psql$(X)
+ # If we are here then TCL is available
+ PGMS = pgtclsh

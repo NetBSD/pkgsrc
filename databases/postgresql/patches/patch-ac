@@ -1,25 +1,58 @@
-$NetBSD: patch-ac,v 1.4 1999/09/19 04:24:54 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2000/03/18 17:43:17 jlam Exp $
 
---- ./bin/pg_dump/Makefile.in.orig	Sun Jan 17 01:19:05 1999
-+++ ./bin/pg_dump/Makefile.in	Sat Sep 18 03:16:08 1999
-@@ -26,17 +26,13 @@
- CFLAGS+= $(KRBFLAGS)
+--- backend/Makefile.orig	Sun Mar  7 18:05:56 1999
++++ backend/Makefile	Thu Mar 16 17:56:36 2000
+@@ -156,10 +156,11 @@
+ # and (2) the parameters of a database system should be set at initdb time,
+ # not at postgres build time.
+ 
+-.PHONY: install install-bin install-lib install-headers
++.PHONY: install install-bin install-templates install-headers
+ 
+-install: $(LIBDIR) $(BINDIR) $(HEADERDIR) postgres $(POSTGRES_IMP) \
+-         install-bin install-lib install-headers
++install: $(LIBDIR) $(BINDIR) $(HEADERDIR) $(TEMPLATEDIR) \
++         postgres $(POSTGRES_IMP) \
++         install-bin install-templates install-headers
+ 
+ install-bin: $(BINDIR) postgres$(X) $(POSTGRES_IMP)
+ 	$(INSTALL) $(INSTL_EXE_OPTS) postgres$(X) $(BINDIR)/postgres$(X)
+@@ -175,22 +176,22 @@
+ endif
  endif
  
--all: submake pg_dump
-+all: pg_dump
+-install-lib: $(LIBDIR) \
++install-templates: $(TEMPLATEDIR) \
+          global1.bki.source local1_template1.bki.source \
+          global1.description local1_template1.description \
+          libpq/pg_hba.conf.sample optimizer/geqo/pg_geqo.sample
+ 	$(INSTALL) $(INSTLOPTS) global1.bki.source \
+-	  $(LIBDIR)/global1.bki.source
++	  $(TEMPLATEDIR)/global1.bki.source
+ 	$(INSTALL) $(INSTLOPTS) global1.description \
+-	  $(LIBDIR)/global1.description
++	  $(TEMPLATEDIR)/global1.description
+ 	$(INSTALL) $(INSTLOPTS) local1_template1.bki.source \
+-	  $(LIBDIR)/local1_template1.bki.source
++	  $(TEMPLATEDIR)/local1_template1.bki.source
+ 	$(INSTALL) $(INSTLOPTS) local1_template1.description \
+-	  $(LIBDIR)/local1_template1.description
++	  $(TEMPLATEDIR)/local1_template1.description
+ 	$(INSTALL) $(INSTLOPTS) libpq/pg_hba.conf.sample \
+-	  $(LIBDIR)/pg_hba.conf.sample
++	  $(TEMPLATEDIR)/pg_hba.conf.sample
+ 	$(INSTALL) $(INSTLOPTS) optimizer/geqo/pg_geqo.sample \
+-	  $(LIBDIR)/pg_geqo.sample
++	  $(TEMPLATEDIR)/pg_geqo.sample
  
--pg_dump: $(OBJS) $(LIBPQDIR)/libpq.a
--	$(CC) -o pg_dump -L$(LIBPQDIR) $(OBJS) -lpq $(LDFLAGS)
-+pg_dump: $(OBJS)
-+	$(CC) -o pg_dump $(OBJS) $(LIBPQ) $(LDFLAGS)
+ install-headers: fmgr.h $(SRCDIR)/include/config.h
+ 	@if [ ! -d $(HEADERDIR) ]; then mkdir $(HEADERDIR); fi
+@@ -253,6 +254,8 @@
+ $(LIBDIR):
+ 	mkdir $@
+ $(HEADERDIR):
++	mkdir $@
++$(TEMPLATEDIR):
+ 	mkdir $@
  
- ../../utils/strdup.o:
- 	$(MAKE) -C ../../utils strdup.o
--
--.PHONY: submake
--submake:
--	$(MAKE) -C $(LIBPQDIR) libpq.a
- 
- install: pg_dump
- 	$(INSTALL) $(INSTL_EXE_OPTS) pg_dump$(X) $(BINDIR)/pg_dump$(X)
+ #############################################################################
