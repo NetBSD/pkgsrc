@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.29 2004/01/12 15:50:22 jlam Exp $
+# $NetBSD: module.mk,v 1.30 2004/01/13 00:59:14 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -80,10 +80,22 @@ do-configure: perl5-configure
 # Repoint all of the site-specific variables to be under the perl5
 # module's ${PREFIX}.
 #
-.for _var_ in ${_PERL5_SITEVARS} INSTALLARCHLIB INSTALLSCRIPT
+.for _var_ in ${_PERL5_SITEVARS} INSTALLSCRIPT
 PERL5_${_var_}=	${PREFIX}/${PERL5_SUB_${_var_}}
 MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
 .endfor
+#
+# The build and install stages require slightly different values for
+# INSTALLARCHLIB.  During the build, INSTALLARCHLIB refers to the
+# directory where libperl.so may be found, which should point into the
+# default view.  During the install, INSTALLARCHLIB refers to the
+# directory where the perllocal.pod file should be installed, which
+# should point into the package prefix.
+#
+BUILD_MAKE_FLAGS=	${MAKE_FLAGS}
+BUILD_MAKE_FLAGS+=	INSTALLARCHLIB="${VIEWBASE}/${PERL5_SUB_INSTALLARCHLIB}"
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}
+INSTALL_MAKE_FLAGS+=	INSTALLARCHLIB="${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}"
 #
 # The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
 # so override its value to the module's ${PREFIX}.
