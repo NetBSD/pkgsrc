@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/01 11:10:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/10/26 16:42:33 tron Exp $
 bin/kmedia
 bin/kmidi
 bin/kmix
@@ -277,4 +277,3 @@ share/kde/applnk/Multimedia/kscd.kdelnk
 @dirrm share/kde/apps/kscd/cddb
 @dirrm share/kde/apps/kscd/pics
 @dirrm share/kde/apps/kscd
-@dirrm share/kde/applnk/Multimedia
