@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2002/04/19 15:54:21 jwise Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/26 22:42:31 jlam Exp $
 
-DISTNAME=	jakarta-servletapi-3.2.4-src
-PKGNAME=	jakarta-servletapi-3.2.4
+DISTNAME=	jakarta-servletapi-${TOMCAT_VERSION}-src
+PKGNAME=	${DISTNAME:S/-src$//}
+TOMCAT_VERSION=	3.2.4
 CATEGORIES=	www
-MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-tomcat/release/v3.2.4/src/
+MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-tomcat/release/v${TOMCAT_VERSION}/src/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
@@ -11,27 +12,33 @@ COMMENT=	the Apache project's implementation of the JSP and Java Servlet APIs
 
 BUILD_DEPENDS+=	jakarta-ant>=1.4.1:../../devel/jakarta-ant
 
-USE_JAVA=	yes
-
-MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
+USE_BUILDLINK2=	# defined
 MAKEFILE=	build.xml
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.javadoc
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
+DOCDIR=		share/doc/java/jakarta-servletapi
 
 post-build:
-	rm -f ${WRKDIR}/PLIST.javadoc
-	cd ${WRKDIR}/dist/servletapi/docs ; ${FIND} * -type f -print | sort | ${SED} 's:^:share/doc/java/jakarta-servletapi/:' > ${WRKDIR}/PLIST.javadoc
-	cd ${WRKDIR}/dist/servletapi/docs ; ${FIND} * -type d -print | sort -r | ${SED} 's:^:@dirrm share/doc/java/jakarta-servletapi/:' >> ${WRKDIR}/PLIST.javadoc
-	echo '@dirrm share/doc/java/jakarta-servletapi' >> ${WRKDIR}/PLIST.javadoc
+	${RM} -f ${WRKDIR}/PLIST.javadoc
+	( cd ${WRKDIR}/dist/servletapi/docs;				\
+	  ${FIND} * -type f -print | ${SORT}				\
+		| ${SED} 's:^:${DOCDIR}/:';				\
+	  ${FIND} * -type d -print | ${SORT} -r				\
+		| ${SED} 's:^:@dirrm ${DOCDIR}/:';			\
+	  ${ECHO} '@dirrm ${DOCDIR}'					\
+	) > ${WRKDIR}/PLIST.javadoc
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/dist/servletapi/lib/servlet.jar ${PREFIX}/lib/java
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jakarta-servletapi
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/jakarta-servletapi
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/java/jakarta-servletapi
-	cd ${WRKDIR}/dist/servletapi/docs && ${PAX} -rwpp . ${PREFIX}/share/doc/java/jakarta-servletapi
+	${INSTALL_DATA} ${WRKDIR}/dist/servletapi/lib/servlet.jar	\
+		${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/${DOCDIR}
+	cd ${WRKDIR}/dist/servletapi/docs && ${PAX} -rwpp . ${PREFIX}/${DOCDIR}
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
+
 MAKE_PROGRAM=	${LOCALBASE}/bin/ant
 MAKE_FLAGS=
