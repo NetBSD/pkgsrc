@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/05 22:45:38 rh Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/12 16:08:46 adam Exp $
 
---- src/Makefile.am.orig	Sat Jan 12 13:04:07 2002
+--- src/Makefile.am.orig	2002-07-25 09:02:19.000000000 +0000
 +++ src/Makefile.am
-@@ -18,7 +18,7 @@
+@@ -20,7 +20,7 @@ install-data-local:
  	$(INSTALL_DATA) figures $(DESTDIR)$(inst_dir)/figures
  	$(mkinstalldirs) $(DESTDIR)$(hi_dir)
  	if ! test -f $(DESTDIR)$(hi_dir)/ltris.hscr; then \
