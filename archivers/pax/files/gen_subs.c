@@ -1,4 +1,4 @@
-/*	$NetBSD: gen_subs.c,v 1.3 2003/06/24 14:09:21 jschauma Exp $	*/
+/*	$NetBSD: gen_subs.c,v 1.4 2003/09/05 05:48:56 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)gen_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: gen_subs.c,v 1.3 2003/06/24 14:09:21 jschauma Exp $");
+__RCSID("$NetBSD: gen_subs.c,v 1.4 2003/09/05 05:48:56 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -60,7 +60,6 @@ __RCSID("$NetBSD: gen_subs.c,v 1.3 2003/06/24 14:09:21 jschauma Exp $");
 #include <ctype.h>
 #include <grp.h>
 #include <pwd.h>
-#include <vis.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
