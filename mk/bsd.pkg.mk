@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.754 2001/06/09 12:56:21 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.755 2001/06/11 06:30:59 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -233,7 +233,6 @@ CONFIGURE_ENV+=	LIBS="${LIBS} -lintl"
 DEPENDS+=	gettext-lib>=0.10.35nb1:../../devel/gettext-lib
 .if defined(GNU_CONFIGURE)
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=	LIBS="${LIBS} -L${LOCALBASE}/lib -lintl"
 .endif
 .endif
@@ -310,7 +309,7 @@ CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
-MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
+MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
 
 .if defined(USE_MOTIF)
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
@@ -1593,7 +1592,7 @@ do-configure:
 	fi
 .if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} \
-	    CC="${CC}" CFLAGS="${CFLAGS}" \
+	    CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
