@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/06/19 06:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2001/06/19 06:04:41 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -35,7 +35,7 @@ CFLAGS=		-O0
 .include "../../devel/pth/buildlink.mk"
 .endif
 
-GLIB_VERSION=		${PKGNAME:S/glib-//}
+GLIB_VERSION=		${DISTNAME:S/glib-//}
 
 # We patch the version info in the configure scripts for reasons related to
 # shared library numbering, but we don't want it to leak into the various
