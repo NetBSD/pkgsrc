@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/06/23 15:43:42 snj Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 09:59:22 agc Exp $
 
 SHA1 (grepmail-5.30.tar.gz) = e06f9ca52d15dbb7cbb162ccc3a7c54764db0769
+RMD160 (grepmail-5.30.tar.gz) = 3d92b4a98324de819be555bea4c42e11585ace71
 Size (grepmail-5.30.tar.gz) = 496037 bytes
