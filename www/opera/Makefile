@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/03/22 23:47:57 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/03/23 08:38:06 tron Exp $
 
 DISTNAME=	opera-5.0b7
 CATEGORIES=	www
@@ -27,7 +27,7 @@ EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=	opera-static-5.0b7-20010320.018.1.i386.rpm
+RPMFILES=	opera-static-5.0b7-20010320.018.1.${MACHINE_ARCH}.rpm
 
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/bin/opera ${PREFIX}/bin
