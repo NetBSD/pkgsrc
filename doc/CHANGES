@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5261 2004/03/16 08:39:55 tron Exp $
+$NetBSD: CHANGES,v 1.5262 2004/03/16 08:51:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1473,3 +1473,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated MesaDemos to 6.0nb1 [jlam 2004-03-15]
 	Updated nsd to 2.0.1 [itojun 2004-03-16]
 	Updated gnome-print to 0.36nb5 [tron 2004-03-16]
+	Updated gnome-vfs to 1.0.5nb6 [tron 2004-03-16]
