@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2003/03/11 13:54:05 markd Exp $
+# $NetBSD: Makefile,v 1.242 2003/03/26 12:55:41 grant Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -149,6 +149,7 @@ SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libwww
 SUBDIR+=	phoenix
 SUBDIR+=	phoenix-linux
+SUBDIR+=	phoenix-linux-nightly
 SUBDIR+=	php-FastTemplate
 SUBDIR+=	php3
 SUBDIR+=	php4
