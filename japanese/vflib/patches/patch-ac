@@ -1,0 +1,45 @@
+# just copied from ${PORTSDIR}/print/freetype/patches/patch-ac, thanks!
+--- ltmain.sh.orig	Sat Sep 19 11:12:26 1998
++++ ltmain.sh	Sat Sep 19 11:19:06 1998
+@@ -967,6 +967,16 @@
+         versuffix="$current.$revision"
+         ;;
+ 
++      freebsd)
++	version_vars="$version_vars major versuffix"
++	major="$current"
++	if [ $PORTOBJFORMAT = elf ]; then
++	versuffix="$current"
++	else
++	versuffix="$current.$revision"
++	fi
++	;;
++
+       *)
+         $echo "$modename: unknown library version type \`$version_type'" 1>&2
+         echo "Fatal configuration error.  See the $PACKAGE docs for more information." 1>&2
+--- ltconfig.orig	Sat Sep 19 11:12:21 1998
++++ ltconfig	Sat Sep 19 11:15:42 1998
+@@ -784,7 +784,7 @@
+     ;;
+ 
+   # FreeBSD 3, at last, uses gcc -shared to do shared libraries.
+-  freebsd3*)
++  freebsd*)
+     archive_cmds='$CC -shared -o $lib$libobjs'
+     hardcode_libdir_flag_spec='-R$libdir'
+     hardcode_direct=yes
+@@ -1130,10 +1130,10 @@
+   finish_eval='for lib in `ls $libdir/*.ixlibrary 2>/dev/null`; do libname=`$echo "X$lib" | $Xsed -e '\''s%^.*/\([^/]*\)\.ixlibrary$%\1%'\''`; test $rm /sys/libs/${libname}_ixlibrary.a; $show "(cd /sys/libs && $LN_S $lib ${libname}_ixlibrary.a)"; (cd /sys/libs && $LN_S $lib ${libname}_ixlibrary.a) || exit 1; done'
+   ;;
+ 
+-freebsd2* | freebsd3*)
+-  version_type=sunos
++freebsd*)
++  version_type=freebsd
+   library_names_spec='${libname}${release}.so.$versuffix $libname.so'
+-  finish_cmds='PATH="$PATH:/sbin" ldconfig -m $libdir'
++  finish_cmds='PATH="\$PATH:/sbin" OBJFORMAT="'"$PORTOBJFORMAT"'" ldconfig -m $libdir'
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
