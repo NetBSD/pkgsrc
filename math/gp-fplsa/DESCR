@@ -1,0 +1,13 @@
+This package is a GAP interface to a C program called fplsa for 
+dealing with finitely presented Lie super-algebras.
+
+When K is a finitely-presented Lie algebra, the GAP Operation
+`IsomorphismSCTableAlgebra' can be used to make the structure of K
+explicit, in the form of an isomorphic algebra given by structure
+constants, which is much more amenable to further computations.
+
+This GAP package installs an alternative method for this Operation,
+which calls fplsa to do the hard part of the computation. This speeds 
+up the calculation and permits larger problems to be attempted. The 
+external program has much additional functionality which is not used 
+by the present version of the package.
