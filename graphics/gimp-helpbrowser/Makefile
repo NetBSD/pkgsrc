@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/07/05 03:40:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/10 10:40:40 agc Exp $
 
 DISTNAME=		gimp-1.1.24
 PKGNAME=		${DISTNAME:S/-/-helpbrowser-/}
@@ -18,7 +18,7 @@ USE_X11BASE=		yes
 USE_GMAKE=		yes
 USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gtk-prefix=${X11PREFIX} \
+CONFIGURE_ARGS+=	--with-gtk-prefix="`${PKG_INFO} -qp gtk+ | ${AWK} '{print $$2}'`" \
 			--disable-perl \
 			--disable-python
 CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}" INTLLIBS="-lintl" \
