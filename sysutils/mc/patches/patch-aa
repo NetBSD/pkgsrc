@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 1998/10/04 18:22:31 tv Exp $
+$NetBSD: patch-aa,v 1.7 1999/03/14 20:59:42 tron Exp $
 
 --- configure.orig	Mon May 25 06:16:04 1998
 +++ configure	Sun Oct  4 13:10:51 1998
