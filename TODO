@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18 2001/05/08 05:01:26 zuntum Exp $
+$NetBSD: TODO,v 1.19 2001/05/09 04:05:49 jlam Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -60,6 +60,8 @@ package update TODO (Suggested package updates)
 		(zuntum will do that)
 	o update sysutils/lsof to 4.56 [atatat has new version ready]
 	o update time/devtodo to 0.1.6
+	o update www/ap-ssl to 2.8.3 (fix NULL pointer deference)
+		(jlam has a new package ready, will update after freeze)
 	o update www/php4 and assorted php4 module packages to 4.0.5
 		(jlam has a new package ready, will update after freeze)
 	o update x11/xfce to 3.8.3
