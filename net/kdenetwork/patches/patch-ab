@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.8 1999/07/07 23:33:52 tron Exp $
+
+--- ksirc/Makefile.in.orig	Wed Apr 28 17:25:58 1999
++++ ksirc/Makefile.in	Thu Jul  8 01:11:44 1999
+@@ -184,7 +184,7 @@
+ ksircstatic_SOURCES = $(ksirc_SOURCES)
+ 
+ # the library search path
+-ksirc_LDFLAGS = -export-dynamic $(all_libraries) $(KDE_RPATH)
++ksirc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ ksircstatic_LDFLAGS = --nostdlib -static -all-static $(ksirc_LDFLAGS)
+ 
+ all_ksirc_libraries = ./kplunger/libkplunger.a 	./KSProgress/libksprogress.a 	./KSTicker/libksticker.a 	./KSCutDialog/libkscutdialog.a 	./KSPrefs/libksprefs.a 	./KSColourPicker/libkscolourpicker.a 	./KSOpenkSirc/libksopenksirc.a 	./pws-0.5/pws/libpws.a 	puke/libpuke.la $(LIB_KFILE) $(LIBDL) 
