@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/08/10 09:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/10 11:02:18 adam Exp $
 
 DISTNAME=	scummvm-0.5.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +20,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scummvm ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/scummvm.6 ${PREFIX}/man/man6
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/scummvm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/scummvm.xpm ${PREFIX}/share/pixmaps
 
-.include "../../devel/SDL/buildlink2.mk"
 .include "../../audio/libmad/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
