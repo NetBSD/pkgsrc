@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3438 2003/09/18 09:05:51 grant Exp $
+$NetBSD: CHANGES,v 1.3439 2003/09/18 11:24:02 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3823,3 +3823,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated openldap to 2.1.22 [markd 2003-09-18]
 	Added p5-XML-Stream-1.15 [xtraeme 2003-09-18]
 	Updated sendmail to 8.12.10 [grant 2003-09-18]
+	Added kde-i18n-hr-3.1.4 [markd 2003-09-18]
+	Added kde-i18n-is-3.1.4 [markd 2003-09-18]
+	Added kde-i18n-mk-3.1.4 [markd 2003-09-18]
+	Added kde-i18n-se-3.1.4 [markd 2003-09-18]
+	Added kde-i18n-ss-3.1.4 [markd 2003-09-18]
