@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.602 2000/11/11 19:13:41 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.603 2000/11/12 02:46:53 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -2946,18 +2946,13 @@ print-pkg-size-this:
 # XXX This is intended to be run before pkg_create is called, so the
 # dependencies are all installed
 print-pkg-size-depends:
-	@${MAKE} ${MAKEFLAGS} print-pkg-size-depends-help 		\
+	@${MAKE} ${MAKEFLAGS} PACKAGE_DEPENDS_WITH_PATTERNS=false run-depends-list \
+	| sort -u							\
+	| xargs ${PKG_INFO} -qs						\
+	| ${AWK} -- 'BEGIN { print("0 "); }				\
+		/^[0-9]+$$/ { print($$1, " + "); }			\
+		END { print("p"); }'					\
 	| ${DC}
-# need this in a make look to prevent the shell clobbering the depends
-# also includes size of depends of depends (XXX)
-print-pkg-size-depends-help:
-	@${ECHO} "0"
-.for dep in ${DEPENDS}
-	@pkg="${dep:C/:.*//}";						\
-	size=`${PKG_INFO} -qS "$$pkg"`;					\
-	${TEST} -z "$$size" || ${ECHO} "$$size +"
-.endfor
-	@${ECHO} "p"
 
 
 ###
