@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/23 11:24:13 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/16 11:26:34 seb Exp $
 bin/libgtop-config
 bin/libgtop_daemon
 bin/libgtop_server
@@ -46,7 +46,6 @@ include/libgtop-1.0/glibtop/xmalloc.h
 include/libgtop-1.0/glibtop_machine.h
 include/libgtop-1.0/glibtop_server.h
 include/libgtop-1.0/glibtop_suid.h
-info/libgtop.info
 lib/libgtop-features.def
 lib/libgtop.a
 lib/libgtop.la
