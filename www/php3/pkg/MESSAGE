@@ -1,6 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 1999/05/03 19:45:45 tv Exp $
+$NetBSD: MESSAGE,v 1.4 1999/05/03 21:32:46 tv Exp $
 
-Commands for global initialization of PHP3 may be placed in the file
-PREFIX/etc/php3.ini (where php3 is installed in PREFIX/bin/php).
+The documentation is not instaled with this package.  For the PHP3 Manual,
+see the URL:
+
+    http://www.php.net/manual/
 ===========================================================================
