@@ -1,0 +1,19 @@
+This is a simple (well, not so simple anymore *grin*) irc client,
+written in perl and C.
+
+It's divided in two parts, a dumb-mode (meaning, no full screen
+interface) client, dsirc, that can be used stand-alone, programmed in
+perl, and a separate split-screen front end in C, called ssfe.
+
+The main point of running this client is that you can get a reasonable
+ircII-like interface on an account with a properly installed perl
+interpreter, with the perl client taking about 55k (and it's usable on
+its own if you don't have access to a C compiler) and with the
+interface, once compiled, taking just another 30 or 40k. The two
+together, while lacking the huge complexity of ircII, make a very usable
+client. And if you know perl, you'll find you can do quite complicated
+and interesting things with sirc too :)
+
+See /usr/pkg/lib/sirc/README for more usage instructions, and see
+/usr/pkg/lib/sirc/PROGRAMMING for information on how to extend sirc.
+Some example scripts can be found in /usr/pkg/lib/sirc/scripts.

@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/15 00:36:28 wiz Exp $
+bin/au2h
+bin/gaim
+lib/gaim/autorecon.so
+lib/gaim/iconaway.so
+lib/gaim/notify.so
+lib/gaim/spellchk.so
+lib/locale/de/LC_MESSAGES/gaim.mo
+man/man1/gaim.1
+share/pixmaps/gaim.xpm
+share/gnome/apps/Internet/gaim.desktop
+@unexec rmdir %D/share/gnome/apps/Internet 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps 2>/dev/null || true
+@unexec rmdir %D/share/gnome 2>/dev/null || true
+@unexec rmdir %D/share/pixmaps 2>/dev/null || true
+@dirrm lib/gaim

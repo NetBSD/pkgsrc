@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 00:36:32 wiz Exp $
+
+--- include/irc.h.orig	Tue Jul 18 19:12:16 2000
++++ include/irc.h	Mon Sep 18 00:12:27 2000
+@@ -334,6 +334,7 @@
+ extern	int	current_numeric;
+ extern	int	qflag;
+ extern	int	bflag;
++extern	int	tflag;
+ extern	struct	in_addr	local_ip_address;
+ extern	int	client_default_icb;
+ 

@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/12/15 00:36:38 wiz Exp $
+
+diff -x *.orig -urN ./icb/strings.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/strings.c
+--- ./icb/strings.c	Fri Feb 24 22:20:30 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/strings.c	Fri Nov 26 22:56:28 1999
+@@ -333,6 +333,7 @@
+ /* cat multiple strings into one */
+ /* call with strscat(dest, src, src, ...) */
+ 
++#if 0
+ char *
+ strscat(va_alist)
+ va_dcl
+@@ -357,6 +358,7 @@
+ 	*dest = '\0';
+ 	return(dest);
+ }
++#endif
+ 
+ char *basename(path)
+ char *path;

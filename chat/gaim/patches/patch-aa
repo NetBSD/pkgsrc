@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 00:36:28 wiz Exp $
+*** src/prefs.c.orig	Sun Jun 18 18:00:02 2000
+--- src/prefs.c	Sun Jun 18 18:00:13 2000
+***************
+*** 770,776 ****
+  	gaim_button("Transparent text window (experimental)", &transparent, appbox );
+  #endif
+  	gaim_button(_("Show logon/logoffs in conversation windows"), &display_options, OPT_DISP_SHOW_LOGON, appbox );
+! 	gaim_button(_("Use devil icons"), &display_options, OPT_DISP_DEVIL_PIXMAPS, appbox );
+  	gaim_button(_("Show graphical smileys (experimental)"), &display_options, OPT_DISP_SHOW_SMILEY, appbox );
+  	
+  	
+--- 770,776 ----
+  	gaim_button("Transparent text window (experimental)", &transparent, appbox );
+  #endif
+  	gaim_button(_("Show logon/logoffs in conversation windows"), &display_options, OPT_DISP_SHOW_LOGON, appbox );
+! 	gaim_button(_("Use daemon icons"), &display_options, OPT_DISP_DEVIL_PIXMAPS, appbox );
+  	gaim_button(_("Show graphical smileys (experimental)"), &display_options, OPT_DISP_SHOW_SMILEY, appbox );
+  	
+  	

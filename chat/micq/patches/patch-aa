@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 00:36:29 wiz Exp $
+
+--- Makefile.orig	Sat Jun 10 00:18:38 2000
++++ Makefile	Fri Jun 16 13:56:56 2000
+@@ -5,8 +5,8 @@
+ # Most options that were here and soem that weren't have been moved to config.h
+ # edit that file to set up options.
+ #
+-CC = gcc
+-CFLAGS = -O4 -Wall -DUNIX 
++#CC = gcc
++CFLAGS += -Wall -DUNIX 
+ CFLAGS += -DENGLISH_LANG
+ #CFLAGS += -DBULGARIAN_LANG
+ #CFLAGS += -DPOLISH_LANG
