@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/03/14 01:26:40 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/14 01:32:28 uebayasi Exp $
 
 DISTNAME=	Mule-UCS-0.84
 PKGREVISION=	2
@@ -9,8 +9,9 @@ MAINTAINER=	uebayasi@netbsd.org
 #HOMEPAGE=	
 COMMENT=	another encoding conversion mechanism for Emacs
 
-# XXX Emacs 20.7 needs a patch to use Mule UCS.
-EMACS_VERSIONS_ACCEPTED=	emacs21
+# Mule 4.1 feature required by Mule-UCS was added to 20.7nb1.
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
+BUILDLINK_DEPENDS.emacs20=	emacs>=20.7nb1
 
 do-build:
 	@cd ${WRKSRC}; \
