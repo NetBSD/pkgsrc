@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/07/02 11:42:39 agc Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/01 09:40:37 wiz Exp $
 #
 
 DISTNAME=		openacs-3.2.5
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.openacs.org/
 COMMENT=		TCL-based web programming environment
 
 # Would also work with AOLServer, but there's no package for that.
-DEPENDS+=		ap-aolserver-1.1:../../www/ap-aolserver
+DEPENDS+=		ap-aolserver>=1.1:../../www/ap-aolserver
 DEPENDS+=		postgresql-lib>=7.0:../../databases/postgresql-lib
 DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
