@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8003 2004/11/25 20:16:51 minskim Exp $
+$NetBSD: CHANGES,v 1.8004 2004/11/25 20:23:40 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ed2k-gtk-gui to 0.6.3 [minskim 2004-11-25]
 	Updated ipgrab to 0.9.9 [minskim 2004-11-25]
 	Updated p5-Geo-IP to 1.23 [minskim 2004-11-25]
+	Updated php-pdflib to 2.0.3 [jdolecek 2004-11-25]
