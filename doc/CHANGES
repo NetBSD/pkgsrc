@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3128 2003/08/29 02:03:38 epg Exp $
+$NetBSD: CHANGES,v 1.3129 2003/08/29 09:27:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3367,3 +3367,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added bitstir-0.2 [dan 2003-08-29]
 	Updated libmcrypt to 2.5.7 [dan 2003-08-29]
 	Updated subversion to 0.28.1 [epg 2003-08-29]
+	Updated wwwoffle to 2.7fnb1 [jmmv 2003-08-29]
