@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/04 13:08:47 frueauf Exp $
+bin/gtksql
