@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/05 09:08:07 explorer Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/17 12:21:56 frueauf Exp $
 # FreeBSD: Makefile,v 1.2 1998/08/29 21:24:13 rse Exp
 
 DISTNAME=	apache_1.3.1
@@ -13,10 +13,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} mod_ssl-2.0.6-1.3.1${EXTRACT_SUFX}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.apache.org/
 
-BUILD_DEPENDS=	ssleay:../../security/ssleay \
-		${PREFIX}/lib/libssl.a:../../security/ssleay \
-		${PREFIX}/lib/libcrypto.a:../../security/ssleay
-RUN_DEPENDS=	ssleay:../../security/ssleay
+DEPENDS+=	SSLeay-0.9.0b:../../security/ssleay
+
 CONFLICTS=	apache-1.3.1
 
 RESTRICTED=	"Contains cryptography"
@@ -54,9 +52,6 @@ CONFIGURE_ENV=	OPTIM='${OPTIM}' SSL_BASE=${PREFIX} \
 
 INSTALL_TARGET=	install-quiet
 
-MAN1=	ab.1 apachectl.1 dbmmanage.1 htdigest.1 htpasswd.1
-MAN8=	apxs.8 httpd.8 logresolve.8 rotatelogs.8
-
 pre-patch:
 	@cd ${WRKDIR}/mod_ssl-2.0.6-1.3.1 \
 	&& ${ECHO_MSG} "===>  Applying mod_ssl-2.0.6 extension" \
@@ -70,7 +65,9 @@ certificate:
 post-install:
 	@if [ ! -f ${PREFIX}/etc/rc.d/apache.sh ]; then \
 		${ECHO} Installing ${PREFIX}/etc/rc.d/apache.sh ; \
-		${CP} ${FILESDIR}/apache.sh ${PREFIX}/etc/rc.d/apache.sh ; \
+		${SED} -e 's|@@@PREFIX@@@|${PREFIX}|g' \
+			< ${FILESDIR}/apache.sh \
+			> ${PREFIX}/etc/rc.d/apache.sh ; \
 	fi
 
 .include "../../mk/bsd.pkg.mk"
