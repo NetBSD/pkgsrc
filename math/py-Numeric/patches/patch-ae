@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2001/03/07 14:33:41 drochner Exp $
+
+--- setup.py.orig	Fri Jan 19 16:53:08 2001
++++ setup.py
+@@ -12,7 +12,7 @@
+ except:
+     raise SystemExit, "Distutils problem, see Numeric README."
+ 
+-headers = glob (os.path.join ("Include","*.h"))
++headers = glob (os.path.join ("Include","Numeric","*.h"))
+ 
+ # The version is set in Lib/numeric_version.py
+ execfile(os.path.join('Lib','numeric_version.py'))
+@@ -27,7 +27,7 @@
+        packages = [''],
+        package_dir = {'': 'Lib'},
+        extra_path = 'Numeric',
+-       include_dirs = ['Include'],
++       include_dirs = ['Include/Numeric'],
+        headers = headers,
+        ext_modules = [Extension('_numpy',
+                                 ['Src/_numpymodule.c',

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2001/02/17 18:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/03/07 14:33:40 drochner Exp $
 
-DISTNAME=	Numeric-17.2.0
-PKGNAME=	py-Numeric-17.2.0
+DISTNAME=	Numeric-17.3.0
+PKGNAME=	py-Numeric-17.3.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -17,6 +17,12 @@ IGNORE="${PKGNAME} needs dynamic loading"
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 EVAL_PREFIX+=	PYPREFIX=python
+
+#Together with patch/*, this works around build glitches which are
+# already fixed in the numpy CVS. So all this can go on the next update.
+post-extract:
+	${MKDIR} ${WRKSRC}/Include/Numeric
+	${MV} ${WRKSRC}/Include/*.h ${WRKSRC}/Include/Numeric
 
 do-build:
 	(cd ${WRKSRC} && ${PYPREFIX}/bin/python setup_all.py build)

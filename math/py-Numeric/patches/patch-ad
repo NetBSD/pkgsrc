@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2001/03/07 14:33:41 drochner Exp $
+
+--- Packages/RNG/setup.py.orig	Fri Sep 29 17:03:05 2000
++++ Packages/RNG/setup.py
+@@ -24,7 +24,7 @@
+ 
+        packages = ['RNG'],
+        package_dir = {'RNG': 'Lib'},
+-       include_dirs=['Include'],
++       include_dirs=['Include','../../Include'],
+        ext_modules=[Extension('RNG.RNG',
+                        ['Src/RNGmodule.c',
+                         'Src/ranf.c',
