@@ -3,7 +3,7 @@
 # Date created:				07 December 1997
 # Whom:					tron@lyssa.owl.de
 #
-# $NetBSD: Makefile,v 1.4 1998/02/02 08:10:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/02 08:59:19 hubertf Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -24,6 +24,6 @@ post-configure:
 
 post-install:
 	(cd ${WRKSRC};make PREFIX=${PREFIX} includes)
-	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
+	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/24 05:21:01 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/02/02 08:59:58 hubertf Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
@@ -33,8 +33,8 @@ include/giflib/gif_hash.h
 include/giflib/gif_lib.h
 lib/libgif.a
 lib/libgif.so.3.0
-@exec /sbin/ldconfig -m %B || /usr/bin/true
-@unexec /sbin/ldconfig -m %B || /usr/bin/true
+@exec /sbin/ldconfig || /usr/bin/true
+@unexec /sbin/ldconfig || /usr/bin/true
 share/doc/giflib/gif2bgi.html
 share/doc/giflib/gif2epsn.html
 share/doc/giflib/gif2herc.html
