@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/05/13 00:01:58 hubertf Exp $
+
+--- mixer.c.orig	Thu May  6 20:04:04 1999
++++ mixer.c	Thu May  6 20:10:47 1999
+@@ -32,6 +32,11 @@
+ #include <machine/soundcard.h>
+ #endif
+ 
++#ifdef netbsd
++#include <soundcard.h>
++#undef _POSIX_SOURCE
++#endif
++
+ #define LEFT  1
+ #define RIGHT 256
+ #define LEFT_MASK 0x00ff
+@@ -55,7 +60,7 @@
+ static GList *device_list = NULL;
+ static DeviceData *current_device = NULL;
+ 
+-#if defined (linux) || defined (__FreeBSD__)
++#if defined (linux) || defined (__FreeBSD__) || defined (netbsd)
+ void mixer_init(gint init_device_id)
+ {
+ 	char *device_names[] = SOUND_DEVICE_NAMES;
