@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:09 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/21 03:40:05 fredb Exp $
 
 DISTNAME=	gtkam-0.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 
@@ -21,5 +21,6 @@ BUILDLINK_DEPENDS.gdk-pixbuf=   gdk-pixbuf>=0.11.0nb1
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
 .include "../../graphics/gphoto2/buildlink.mk"
+.include "../../graphics/libexif/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
