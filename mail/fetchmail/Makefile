@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.11 1998/07/04 09:37:29 mycroft Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/18 21:19:44 frueauf Exp $
 #
 
-DISTNAME=       fetchmail-4.5.1
+DISTNAME=       fetchmail-4.5.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/
 
 MAINTAINER=	mycroft@netbsd.org
+
+CONFLICTS=	fetchmail-4.3.6 fetchmail-4.3.9 fetchmail-4.5.1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
