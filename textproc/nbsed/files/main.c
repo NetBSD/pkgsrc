@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.3 2004/06/13 13:04:02 grant Exp $	*/
+/*	$NetBSD: main.c,v 1.4 2004/07/25 05:40:39 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -82,7 +82,7 @@ __COPYRIGHT("@(#) Copyright (c) 1992, 1993\n\
 #if 0
 static char sccsid[] = "@(#)main.c	8.2 (Berkeley) 1/3/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.3 2004/06/13 13:04:02 grant Exp $");
+__RCSID("$NetBSD: main.c,v 1.4 2004/07/25 05:40:39 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -190,7 +190,7 @@ main(int argc, char *argv[])
 		default:
 		case '?':
 			(void)fprintf(stderr,
-"usage:\t%s script [-anE] [file ...]\n\t%s [-an] [-e script] ... [-f script_file] ... [file ...]\n",
+"usage:\t%s [-aEn] script [file ...]\n\t%s [-aEn] [-e script] ... [-f script_file] ... [file ...]\n",
 			    getprogname(), getprogname());
 			exit(1);
 		}
