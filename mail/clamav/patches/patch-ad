@@ -1,13 +1,9 @@
-$NetBSD: patch-ad,v 1.7 2004/10/30 09:50:33 xtraeme Exp $
+$NetBSD: patch-ad,v 1.7.2.1 2005/02/13 15:34:23 salo Exp $
 
---- docs/Makefile.in.orig	2004-10-18 02:37:41.000000000 +1000
-+++ docs/Makefile.in	2004-10-19 09:34:06.000000000 +1000
-@@ -176,9 +176,11 @@
- target_os = @target_os@
- target_vendor = @target_vendor@
- EXTRA_DIST = clamdoc.pdf html man clamav-mirror-howto.pdf signatures.pdf MacOSX
--man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5
-+man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/freshclam.conf.5
+--- docs/Makefile.in.orig	2005-02-07 08:28:08.000000000 +1100
++++ docs/Makefile.in
+@@ -179,6 +179,8 @@ EXTRA_DIST = clamdoc.pdf man clamav-mirr
+ man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5
  all: all-am
  
 +@BUILD_CLAMD_TRUE@@HAVE_MILTER_TRUE@MILTER_MANS = man/clamav-milter.8

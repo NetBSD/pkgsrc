@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/10/30 12:09:12 recht Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2005/02/13 15:34:23 salo Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
-PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -12,7 +11,7 @@ COMMENT=	Anti-virus toolkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CLAMAV_VERSION=		0.80
+CLAMAV_VERSION=		0.82
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
@@ -84,6 +83,10 @@ BUILDLINK_DEPENDS.curl+=curl>=7.10.0
 .else
 CONFIGURE_ARGS+=	--without-libcurl
 .endif
+
+# pkgsrc enforces a "secure" version of zlib, so don't let this check
+# bomb the build.
+CONFIGURE_ARGS+=	--disable-zlib-vcheck
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
