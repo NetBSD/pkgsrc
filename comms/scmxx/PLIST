@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/13 20:17:33 kleink Exp $
+bin/scmxx
+man/man1/scmxx.1
+share/doc/scmxx/README
+share/doc/scmxx/gsmcharset.txt
+share/examples/scmxx/bitmaps/d1.bmp
+share/examples/scmxx/bitmaps/d2.bmp
+share/examples/scmxx/bitmaps/eplus.bmp
+share/examples/scmxx/bitmaps/viag.bmp
+share/examples/scmxx/midi
+share/examples/scmxx/phonebook
+share/examples/scmxx/sms
+share/examples/scmxx/vCalendar
+@dirrm share/doc/scmxx
+@dirrm share/examples/scmxx/bitmaps
+@dirrm share/examples/scmxx
