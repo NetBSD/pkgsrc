@@ -1,16 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2002/05/14 22:13:34 veego Exp $
+# $NetBSD: Makefile,v 1.7 2002/05/25 07:56:01 veego Exp $
 
-.include "../../graphics/mplayer/Makefile.common"
+.include "../../graphics/mplayer-share/Makefile.common"
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-MASTER_SITES+=	http://www.mplayerhq.hu/MPlayer/Skin/		\
-		http://www2.mplayerhq.hu/MPlayer/releases/	\
+SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		http://www2.mplayerhq.hu/MPlayer/Skin/		\
-		ftp://ftp.mplayerhq.hu/MPlayer/releases/	\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
-		ftp://ftp2.mplayerhq.hu/MPlayer/releases/	\
 		ftp://ftp2.mplayerhq.hu/MPlayer/Skin/
-DIST_SUBDIR=	gmplayer
 
 COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 
@@ -35,27 +31,31 @@ SKINS +=	default${EXTRACT_SUFX}				\
 		CornerMP-aqua${EXTRACT_SUFX}			\
 		hwswskin${EXTRACT_SUFX}
 
+.if !defined(SITES_default.tar.bz2)
+.for skin in ${SKINS}
+SITES_${skin}= ${SKIN_SITES}
+.endfor
+.endif
+
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 
+DEPENDS+=	mplayer-share>=0.90rc4nb1:../../graphics/mplayer-share
+
 CONFIGURE_ARGS+=	--enable-gui
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/gmplayer
+CONFIGURE_ARGS+=	--disable-mencoder
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin/gmplayer
-	${INSTALL_MAN} ${WRKSRC}/DOCS/mplayer.1 ${PREFIX}/man/man1/gmplayer.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/gmplayer
-	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/gmplayer
-	${CP} -R ${WRKSRC}/DOCS ${PREFIX}/share/gmplayer
-	${INSTALL_DATA_DIR} ${PREFIX}/share/gmplayer/Skin
+	${LN} -s ${PREFIX}/man/man1/mplayer.1   ${PREFIX}/man/man1/gmplayer.1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/Skin
 .for SKIN in ${SKINS}
 	@${ECHO_MSG} "Installing skin ${SKIN}..."
-	@${GTAR} xCzf ${PREFIX}/share/gmplayer/Skin/ ${DISTDIR}/${DIST_SUBDIR}/${SKIN}
+	@${GTAR} xCzf ${PREFIX}/share/mplayer/Skin/ ${DISTDIR}/${DIST_SUBDIR}/${SKIN}
 .endfor
-	@${CHMOD} -R a+r ${PREFIX}/share/gmplayer/Skin
-	@${CHMOD} a+rx ${PREFIX}/share/gmplayer/Skin/*
+	@${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
+	@${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
 
-.include "../../audio/lame/buildlink.mk"
 .include "../../devel/SDL/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
