@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/02/06 16:58:15 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/09 13:29:48 agc Exp $
 #
 
 DISTNAME=	openh323_1.1beta3
@@ -27,12 +27,10 @@ MAKE_ENV+=	PWLIBDIR=${PREFIX} OPENH323DIR=${WRKSRC}
 
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
+ALL_TARGET=	opt
 
 pre-build:
 		-${MKDIR} ${WRKSRC}/lib; cd ${WRKSRC}/lib; ${LN} -s ${PREFIX}/lib/libpt.la
-
-do-build:
-		cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} opt
 
 post-install:
 		cd ${WRKSRC}/include; for f in \*.h ; \
