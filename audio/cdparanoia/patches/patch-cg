@@ -1,7 +1,5 @@
-$NetBSD: patch-cg,v 1.2 2000/03/13 05:23:29 itohy Exp $
-
---- interface/scsi_interface.c.orig	Tue Dec 14 13:28:03 1999
-+++ interface/scsi_interface.c	Sat Mar 11 23:11:34 2000
+--- interface/scsi_interface.c.orig	Tue Dec 14 05:28:03 1999
++++ interface/scsi_interface.c	Thu Jun 22 03:06:09 2000
 @@ -32,6 +32,7 @@
  #endif
  
@@ -86,13 +84,13 @@ $NetBSD: patch-cg,v 1.2 2000/03/13 05:23:29 itohy Exp $
 +  }
 +  sreq->senselen = SENSEBUFLEN;
 +  sreq->timeout = 10000;	/* 10s */
- 
--  if(sg_hd->sense_buffer[0]){
++
 +  status = ioctl(d->cdda_fd, SCIOCCOMMAND, (void *) sreq);
 +  if (status < 0)
 +    return(TR_ILLEGAL);
 +#endif
-+
+ 
+-  if(sg_hd->sense_buffer[0]){
 +#ifdef __linux__
 +  if(sg_hd->sense_buffer[0])
 +#endif
@@ -185,3 +183,15 @@ $NetBSD: patch-cg,v 1.2 2000/03/13 05:23:29 itohy Exp $
  	fprintf(stderr,"                 Transport error: %s\n",strerror_tr[err]);
  	fprintf(stderr,"                 System error: %s\n",strerror(errno));
        }
+@@ -1376,6 +1463,11 @@
+     /* Mt Fuji */
+     if(reportp)
+       cdmessage(d,"\tDrive appears to be Mt. Fuji ATAPI C/DVD\n");
++    return(1);
++  case 0x32:
++    /* Toshiba DVD */
++    if(reportp)
++      cdmessage(d,"\tDrive appears to be Toshiba ATAPI C/DVD\n");
+     return(1);
+   default:
+     if(reportp)
