@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.7 1998/09/13 00:02:26 garbled Exp $
+$NetBSD: patch-ab,v 1.8 1999/04/01 10:48:03 agc Exp $
+
+Adjust for libtool operation.
+
 --- Makefile.in.orig	Tue Nov 25 09:41:56 1997
 +++ Makefile.in	Sat Sep 12 14:07:20 1998
 @@ -56,7 +56,9 @@
@@ -89,7 +92,7 @@ $NetBSD: patch-ab,v 1.7 1998/09/13 00:02:26 garbled Exp $
  		$(SCRIPT_INSTALL_DIR) $(SCRIPT_INSTALL_DIR)/images; \
  	    do \
  	    if [ ! -d $$i ] ; then \
-@@ -370,8 +372,18 @@
+@@ -370,8 +372,19 @@
  		else true; \
  		fi; \
  	    done;
@@ -106,11 +109,12 @@ $NetBSD: patch-ab,v 1.7 1998/09/13 00:02:26 garbled Exp $
 +	    echo "Installing $$i"; \
 +	    $(INSTALL_DATA) $$i $(UNIX_INCLUDE_INSTALL_DIR); \
 +	    done;
-+	@ln -sf $(GENERIC_INCLUDE_INSTALL_DIR)/tk.h $(INCLUDE_INSTALL_DIR)/tk.h
++	@rm -f $(INCLUDE_INSTALL_DIR)/tk.h
++	@ln -s $(GENERIC_INCLUDE_INSTALL_DIR)/tk.h $(INCLUDE_INSTALL_DIR)/tk.h
  	for i in $(SRC_DIR)/library/*.tcl $(SRC_DIR)/library/tclIndex $(SRC_DIR)/library/prolog.ps $(UNIX_DIR)/tkAppInit.c; \
  	    do \
  	    echo "Installing $$i"; \
-@@ -430,7 +442,7 @@
+@@ -430,7 +443,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.1; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -119,7 +123,7 @@ $NetBSD: patch-ab,v 1.7 1998/09/13 00:02:26 garbled Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN1_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN1_INSTALL_DIR)/$$i; \
-@@ -439,7 +451,7 @@
+@@ -439,7 +452,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.3; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -128,7 +132,7 @@ $NetBSD: patch-ab,v 1.7 1998/09/13 00:02:26 garbled Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN3_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN3_INSTALL_DIR)/$$i; \
-@@ -448,7 +460,7 @@
+@@ -448,7 +461,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.n; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -137,7 +141,7 @@ $NetBSD: patch-ab,v 1.7 1998/09/13 00:02:26 garbled Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MANN_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
-@@ -474,275 +486,267 @@
+@@ -474,275 +487,267 @@
  # because this doesn't work on some strange compilers (e.g. UnixWare).
  
  tkTestInit.o: $(UNIX_DIR)/tkAppInit.c
