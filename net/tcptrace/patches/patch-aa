@@ -1,0 +1,30 @@
+--- Makefile.orig	Wed Jul 16 14:55:15 1997
++++ Makefile	Wed Jul 16 14:58:25 1997
+@@ -38,8 +38,9 @@
+ #
+ #CFLAGS	= -g -O3 -fno-builtin -Wall ${INCS} ${DEFINES}
+ #
+-CFLAGS	= -g -O3 -fno-builtin -Wall ${INCS} ${DEFINES}
++#CFLAGS	= -g -O3 -fno-builtin -Wall ${INCS} ${DEFINES}
+ 
++CFLAGS += -fno-builtin ${INCS} ${DEFINES}
+ 
+ # for profiling (under Solaris 5.2)
+ #CFLAGS	+= -pg
+@@ -68,7 +69,7 @@
+ # for general Unix boxes (I hope)
+ # LDLIBS = -lpcap -lm
+ #
+-LDLIBS = -lnsl -lsocket -lm -lpcap
++LDLIBS = -lpcap -lm
+ 
+ 
+ 
+@@ -86,6 +87,7 @@
+ tcptrace: ${OFILES}
+ 	${CC} ${LDFLAGS} ${CFLAGS} ${OFILES} -o tcptrace ${LDLIBS}
+ 
++install:	tcptrace
+ 
+ #
+ # obvious dependencies
