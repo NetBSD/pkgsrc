@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/12/15 16:36:43 jdolecek Exp $
+# $NetBSD: Makefile,v 1.24 2004/12/16 19:50:48 jdolecek Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -10,7 +10,10 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.phpmyadmin.net/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 
-DEPENDS+=	php-mysql>=4.3.3:../../databases/php-mysql
+DEPENDS+=	php-mysql{,i}>=4.3.3:../../databases/php-mysql
+
+# mcrypt speeds up auth_type = 'cookie'
+RECOMMENDED+=	php-mcrypt>=4.3.3:../../security/php-mcrypt
 
 PLIST_SUBST+=	CP="${CP}" DIST_VERSION=${DIST_VERSION} \
 		PMCONFFILE=${PMCONFFILE} TEST="${TEST}"
