@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.5 2001/12/24 13:25:47 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.6 2002/01/03 11:54:47 abs Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -19,7 +19,8 @@ The makefile fragment
 .Pa /usr/pkg/share/mk/cpuflags.mk
 will set the following
 .Xr make 1
-variables. The first two are explicitly added to MAKE_ENV.
+variables. The first two are explicitly added to MAKE_ENV, while MAKE_FLAGS
+will have CCOPTIONS=${CPU_FLAGS}
 .Bl -tag -width CPU_FLAGS -compact
 .It
 .It CPU_FLAGS
@@ -49,8 +50,7 @@ kernel or userland by adding the following to /etc/mk.conf.
 .Ed
 .Sh BUGS
 .Nm
-does not know about many cpu types yet - updates welcomed to <abs@netbsd.org>,
-and does not affect packages using imake.
+does not know about many cpu types yet - updates welcomed to <abs@netbsd.org>.
 .Pp
 Currently
 .Nm
