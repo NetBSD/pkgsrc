@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3585 2003/09/30 07:14:52 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3586 2003/09/30 08:29:09 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4019,3 +4019,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added glimmer-2.1 [jschauma 2003-09-29]
 	Updated balsa2 to 2.0.15 [xtraeme 2003-09-30]
 	Updated bogofilter to 0.14.5.4 [xtraeme 2003-09-30]
+	Updated xfrisk to 1.2nb1 [xtraeme 2003-09-30]
