@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.110 2002/12/25 01:15:38 uebayasi Exp $
+$NetBSD: TODO,v 1.111 2002/12/25 03:48:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -180,7 +180,6 @@ Suggested package updates
 	o mixer.app-1.8.0
 	o mkfontscale-20020618 (needs freetype-2.1.1)
 	o mlterm-2.6.2 [pkg/19457]
-	o mplayer-0.90rc2
 	o mrproject-0.7
 	o multi-gnome-terminal-1.6.1
 	o mysql-3.23.54 [security fix]
