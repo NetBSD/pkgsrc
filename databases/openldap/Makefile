@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2004/12/28 02:47:43 reed Exp $
+# $NetBSD: Makefile,v 1.94 2004/12/28 10:12:27 minskim Exp $
 
 DISTNAME=	openldap-2.2.19
 SVR4_PKGNAME=	oldap
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		test
 
+MAKE_ENV+=		LIBMODE=${LIBMODE}
 OPENLDAP_ETCDIR=	${PKG_SYSCONFDIR}/openldap
 OPENLDAP_MODULEDIR=	${PREFIX}/lib/openldap
 OPENLDAP_VARDIR=	${VARBASE}/openldap
