@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/19 19:09:40 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/26 10:32:19 skrll Exp $
 #
 
 DISTNAME=		xlHtml-0.2.8
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.xlHtml.org/
 COMMENT=		Microsoft xls/ppt to HTML converter
 
 BUILD_DEPENDS+=		autoconf-*:../../devel/autoconf
-BUILD_DEPENDS+=		automake-*:../../devel/automake
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES

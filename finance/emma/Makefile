@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/07/02 14:29:45 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2001/08/26 10:32:20 skrll Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -11,7 +11,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://rainbow.mimuw.edu.pl/~la181249/
 COMMENT=	Money management program
 
-BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=	python>=2.0:../../lang/python
 DEPENDS+=	py-mxDateTime-*:../../time/py-mxDateTime

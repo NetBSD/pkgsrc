@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.64 2001/08/16 19:54:11 zuntum Exp $
+$NetBSD: TODO,v 1.65 2001/08/26 10:32:18 skrll Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -61,7 +61,7 @@ package update TODO (Suggested package updates)
 		(skrll has a new package)
 	o update print/ghostscript to 6.51 (jlam)
 	o update autoconf to 2.52 (or newer)
-	o update automake to 1.4-p5 (or newer)
+	o update automake to 1.5
 
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
