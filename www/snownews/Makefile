@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/09 00:04:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/04 04:26:44 snj Exp $
 
 DISTNAME=	snownews-1.5.1
 CATEGORIES=	www
@@ -10,7 +10,7 @@ COMMENT=	Small, curses based RSS feed reader
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2= 	YES
+USE_BUILDLINK3= 	YES
 USE_GNU_TOOLS+=		make
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
@@ -19,8 +19,8 @@ MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}" MAKE="${GMAKE}"
 MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}" LOCALBASE="${LOCALBASE}"
 
 # XXX -lintl hack suggested by Jeremy C. Reed: blocking on PR #23369
-.include "../../devel/gettext-lib/buildlink2.mk"
-MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${_BLNK_INTL_LDFLAGS}"
+.include "../../devel/gettext-lib/buildlink3.mk"
+MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${BUILDLINK_LDADD.gettext}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snownews ${LOCALBASE}/bin
@@ -36,7 +36,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/po/${L}.mo ${LOCALBASE}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES/snownews.mo
 .endfor
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
