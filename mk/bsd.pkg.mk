@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.613 2000/11/20 09:33:39 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.614 2000/11/21 00:16:43 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -50,7 +50,7 @@ PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
-PKGWILDCARD=		${PKGBASE}-[0-9]*
+PKGWILDCARD?=		${PKGBASE}-[0-9]*
 
 DISTDIR?=		${PKGSRCDIR}/distfiles
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
@@ -192,8 +192,7 @@ MAKE_ENV+=	FC="${FC}"
 USE_GTEXINFO=		yes
 .endif
 
-.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES" && \
-	${PKGBASE} != "ncurses"
+.if ((defined(NEED_NCURSES)) && (${NEED_NCURSES} == YES))
 DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 .endif
 
