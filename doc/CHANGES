@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4079 2003/12/13 20:26:03 ben Exp $
+$NetBSD: CHANGES,v 1.4080 2003/12/13 20:29:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3379,3 +3379,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-session to 1.4.2nb4 [jmmv 2003-12-13]
 	Removed csound [ben 2003-12-13]
 	Added csound-dev-4.24.1 [ben 2003-12-13]
+	Updated libgtop2 to 2.0.7 [xtraeme 2003-12-13]
