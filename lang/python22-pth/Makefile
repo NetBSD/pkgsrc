@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:18:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/06 17:31:19 drochner Exp $
 #
 
-DISTNAME=	Python-2.2.2
-PKGNAME=	python22-pth-2.2.2
-PKGREVISION=	2
+DISTNAME=	Python-2.2.3
+PKGNAME=	python22-pth-2.2.3
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.2/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.3/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@netbsd.org
@@ -24,6 +23,7 @@ PTHREAD_OPTS=	require
 .if ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-pth
 .endif
+MAKE_ENV+=	LINK_ALL_LIBGCC_HACK=${LINK_ALL_LIBGCC_HACK:Q}
 
 INSTALL_TARGET=	altinstall
 
