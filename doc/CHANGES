@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9188 2005/02/18 17:05:27 adrianp Exp $
+$NetBSD: CHANGES,v 1.9189 2005/02/18 17:21:35 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -930,3 +930,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated docbook to 4.4 [wiz 2005-02-18]
 	Updated dsssl-docbook-modular to 1.79 [wiz 2005-02-18]
 	Updated freeradius to 1.0.2 [adrianp 2005-02-18]
+	Updated cpuflags to 0.82 [abs 2005-02-18]
+
