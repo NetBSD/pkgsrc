@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/18 01:32:31 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/18 01:32:59 jlam Exp $
 
 PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
@@ -65,7 +65,7 @@ post-extract:
 	${CHMOD} +x ${WRKSRC}/install.sh
 
 do-build:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/soundconf.sh		\
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/soundconf.sh		\
 		> ${WRKDIR}/soundconf.sh
 
 chroot:
