@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/31 10:57:52 simonb Exp $
+@comment bin/spamassassin
+@comment bin/spamc
+@comment bin/spamd
+@comment bin/spamproxyd
+share/spamassassin/user_prefs.template
+share/spamassassin/10_misc.cf
+share/spamassassin/20_body_tests.cf
+share/spamassassin/20_head_tests.cf
+share/spamassassin/30_text_es.cf
+share/spamassassin/40_spam_phrases.cf
+share/spamassassin/50_scores.cf
+share/spamassassin/60_whitelist.cf
+share/doc/spamassassin/README
+share/doc/spamassassin/procmailrc.example
+share/doc/spamassassin/sample-nonspam.txt
+share/doc/spamassassin/sample-spam.txt
+share/doc/spamassassin/sql/README
+share/doc/spamassassin/sql/spamassassin.sql
+share/doc/spamassassin/spamd/README
+@dirrm share/doc/spamassassin/spamd
+@dirrm share/doc/spamassassin/sql
+@dirrm share/spamassassin
+@dirrm share/doc/spamassassin
