@@ -1,13 +1,20 @@
-$NetBSD: patch-aa,v 1.1 2003/11/14 09:34:42 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/14 21:19:03 cube Exp $
 
---- server/Makefile.orig	Tue Aug 27 05:11:46 2002
+--- server/Makefile.orig	2002-08-27 05:11:46.000000000 +0200
 +++ server/Makefile
 @@ -15,7 +15,7 @@ EXECS=maradns
  #FLAGS = -g $(DEBUG) -DNOTHREAD -DDEBUG
  #FLAGS = -g -DDEBUG_MEMORY $(DEBUG) 
  #FLAGS = -g $(DEBUG) 
 -FLAGS = -O2 -Wall $(DEBUG)
-+FLAGS = -O2 -Wall $(DEBUG) ${CFLAGS} ${LDFLAGS}
++FLAGS = -O2 -Wall $(DEBUG) ${CFLAGS}
  
  all: $(EXECS)
+ 
+@@ -35,5 +35,5 @@ timestamp.o: timestamp.c MaraDNS_locale.
+ 	$(CC) -c $(FLAGS) -o timestamp.o timestamp.c
+ 
+ maradns: MaraDNS.c $(OBJECTS) MaraDNS_locale.h
+-	$(CC) $(FLAGS) -DVERSION=\"$(VERSION)\" -DCOMPILED=\"$(COMPILED)\" -o maradns MaraDNS.c $(OBJECTS) -lpthread
++	$(CC) $(FLAGS) -DVERSION=\"$(VERSION)\" -DCOMPILED=\"$(COMPILED)\" -o maradns MaraDNS.c $(OBJECTS) ${LDFLAGS}
  
