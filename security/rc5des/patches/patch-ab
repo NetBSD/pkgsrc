@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/24 16:52:18 agc Exp $
+
+--- rc5.sh	1998/11/16 17:05:43	1.1
++++ rc5.sh	1998/11/16 17:06:07
+@@ -15,7 +15,7 @@
+ fi
+ 
+ ARGS="-ini master.ini \
+-    -e explorer-rc5@flame.org \
++    -e rc5-team@netbsd.org \
+     -l log/${HOSTNAME}-${NOW}.log \
+     -b 40 \
+     -nice 0 \
