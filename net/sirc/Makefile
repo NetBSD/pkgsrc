@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/09/23 16:28:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/10 01:39:04 wiz Exp $
 
 DISTNAME=	sirc-2.211
 CATEGORIES=	net
@@ -6,13 +6,13 @@ MASTER_SITES=	http://www.eleves.ens.fr:8080/home/espel/sirc/ \
 		http://www.eleves.ens.fr:8080/home/espel/sirc/scripts/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
 		${SIRC_SCRIPTS}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.eleves.ens.fr:8080/home/espel/sirc/
 
 USE_PERL5=	YES
 
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 SIRC_SCRIPTS= \
 		adcc.pl				\
 		akickban.pl			\
@@ -28,12 +28,11 @@ SIRC_SCRIPTS= \
 		prefix.pl			\
 		quit.pl				\
 		ssfe.diff			\
-		www.pl 				
+		www.pl
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 DIST_SUBDIR=	sirc
-
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(DEFAULT_IRC_SERVER)
@@ -63,7 +62,7 @@ do-install:
 	) | ./install
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/sirc/scripts
 	@for i in ${SIRC_SCRIPTS} ; do \
-		echo installing $$i ; \
+		${ECHO} installing $$i ; \
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${PREFIX}/lib/sirc/scripts/$$i ; done
 
 .include "../../mk/bsd.pkg.mk"
