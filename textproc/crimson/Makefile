@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/18 20:58:31 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/23 16:33:03 cjep Exp $
 #
 # We use the binary distribution of crimson because otherwise we
 # have a bootstrap-loop between jakarta-ant and crimson, each of which
@@ -15,7 +15,7 @@ COMMENT=	Apache.org implementation of JAXP, SAX, and DOM
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_JAVA=	run
-USE_BUILDLINK2=	
+USE_BUILDLINK2=
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
