@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2000/10/12 14:56:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2000/10/12 17:04:20 jlam Exp $
 bin/captoinfo
 bin/infocmp
 bin/infotocap
 bin/tack
 bin/tic
 bin/toe
-include/curses.h
 include/cursesapp.h
 include/cursesf.h
 include/cursesm.h
