@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1 1998/12/28 18:52:05 tron Exp $
+
+--- lib/libxview/notify/ntfy.h~	Sun Dec  6 18:45:02 1998
++++ lib/libxview/notify/ntfy.h	Sat Dec 19 13:49:24 1998
+@@ -188,9 +188,12 @@
+ extern	sigset_t ntfy_sigs_delayed;/* Bit mask of signals received while in
+ 				      critical section */
+ 
+-#ifdef SVR4
++#if defined(SVR4)
+ #define sigisempty(s)   (!(((s)->__sigbits[0]) | ((s)->__sigbits[1])   \
+                         | ((s)->__sigbits[2]) | ((s)->__sigbits[3])))
++#elif defined(__NetBSD__) && (__NetBSD_Version__ > 103080000)
++#define sigisempty(s)   (!(((s)->__bits[0]) | ((s)->__bits[1])   \
++                        | ((s)->__bits[2]) | ((s)->__bits[3])))
+ #else
+ #define sigisempty(s)   (!(*(s)))
+ #endif
