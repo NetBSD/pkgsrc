@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/14 17:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=	fontconfig-2.2.1
@@ -22,7 +22,7 @@ USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/fontconfig.pc.in
+PKGCONFIG_OVERRIDE=	fontconfig.pc.in
 
 PKG_SYSCONFSUBDIR=	fontconfig
 

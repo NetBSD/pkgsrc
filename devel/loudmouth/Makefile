@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=	loudmouth-0.15.1
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/loudmouth-1.0.pc.in
+PKGCONFIG_OVERRIDE+=    loudmouth-1.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-debug
 

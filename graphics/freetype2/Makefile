@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/14 17:21:41 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=	freetype-2.1.5
@@ -26,7 +26,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/builds/unix/freetype2.in
+PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 18:26:29 jmmv Exp $
 #
 
 DISTNAME=		gnopernicus-0.7.1
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/gnopernicus-1.0.pc.in
+PKGCONFIG_OVERRIDE+=    gnopernicus-1.0.pc.in
 
 GCONF2_SCHEMAS+=	brlmonitor.schemas
 GCONF2_SCHEMAS+=	gnopernicus.schemas

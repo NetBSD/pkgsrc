@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 18:26:29 jmmv Exp $
 #
 
 DISTNAME=		gnome-mag-0.10.4
@@ -20,7 +20,7 @@ USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/gnome-mag-1.0.pc.in
+PKGCONFIG_OVERRIDE+=    gnome-mag-1.0.pc.in
 
 .include "../../devel/at-spi/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"

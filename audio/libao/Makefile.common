@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/02/14 18:26:27 jmmv Exp $
 
 DISTNAME=	libao-0.8.4
 CATEGORIES=	audio devel
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/ao.pc.in
+PKGCONFIG_OVERRIDE+=	ao.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 

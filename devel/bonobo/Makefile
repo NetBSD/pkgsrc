@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -25,7 +25,7 @@ CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		X11BASE="${X11BASE}"
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libefs/libefs.pc.in
+PKGCONFIG_OVERRIDE=	libefs/libefs.pc.in
 
 post-install:
 	-@${RMDIR} ${PREFIX}/share/libefs/html/libefs

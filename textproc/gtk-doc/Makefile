@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/12 13:49:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/14 18:26:29 jmmv Exp $
 #
 
 DISTNAME=	gtk-doc-1.1
@@ -15,7 +15,7 @@ DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gtk-doc.pc.in
+PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
 CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG}
 
 .include "../../lang/perl5/buildlink2.mk"

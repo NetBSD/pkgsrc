@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 18:26:29 jmmv Exp $
 #
 
 DISTNAME=	gtkglarea-1.99.0
@@ -15,7 +15,7 @@ COMMENT=	OpenGL widget for the GTK+2 GUI toolkit
 WRKSRC=		${WRKDIR}/gtkglarea-1.99.0
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gtkgl-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gtkgl-2.0.pc.in
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-lib-GL

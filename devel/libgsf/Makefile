@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=	libgsf-1.8.2
@@ -15,8 +15,8 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libgsf-1.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgsf-gnome-1.pc.in
+PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
+PKGCONFIG_OVERRIDE+=	libgsf-gnome-1.pc.in
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/libgsf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2004/02/14 18:26:26 jmmv Exp $
 
 DISTNAME=		esound-0.2.32
 CATEGORIES=		audio
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE=	${WRKSRC}/esound.pc.in
+PKGCONFIG_OVERRIDE=	esound.pc.in
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.4.0
@@ -20,7 +20,7 @@ USE_GNU_TOOLS+=		make
 USE_X11=		yes
 USE_LIBTOOL=		yes
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomecanvas/libgnomecanvas-2.0.pc.in
+PKGCONFIG_OVERRIDE=	libgnomecanvas/libgnomecanvas-2.0.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html

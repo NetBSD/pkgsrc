@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=		imlib2-1.1.0
@@ -15,7 +15,7 @@ USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK3=		YES
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/imlib2.pc.in
+PKGCONFIG_OVERRIDE=	imlib2.pc.in
 
 LIBS.SunOS=		-lm
 
