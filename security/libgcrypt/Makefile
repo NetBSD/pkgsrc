@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2004/10/23 08:57:33 shannonjr Exp $
+# $NetBSD: Makefile,v 1.25 2005/01/14 11:26:34 adam Exp $
 
-DISTNAME=	libgcrypt-1.2.0
-PKGREVISION=	3
+DISTNAME=	libgcrypt-1.2.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
@@ -12,11 +11,11 @@ COMMENT=	GNU cryptographic library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
-TEST_TARGET=	check
+TEST_TARGET=		check
 
 TEXINFO_REQD=		4.0
 INFO_FILES=		gcrypt.info
