@@ -1,0 +1,11 @@
+--- murgil/getrname.c.orig	Tue Jun  1 10:28:17 1999
++++ murgil/getrname.c	Tue Jun  1 10:34:27 1999
+@@ -14,7 +14,7 @@ int s;			/* connected socket fd */
+ {
+ 	static char rname[24];
+ 	struct hostent *host;
+-#if defined(linux)
++#if defined(linux) || defined(__NetBSD__)
+ #define PEER_CAST (struct sockaddr *)
+ #define HOST_CAST (char *)
+ #else
