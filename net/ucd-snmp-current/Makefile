@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/02/12 12:16:54 skrll Exp $
+# $NetBSD: Makefile,v 1.19 2002/02/12 12:24:57 skrll Exp $
 
 DISTNAME=	ucd-snmp-4.2.3
 CATEGORIES=	net
@@ -18,6 +18,12 @@ BUILD_DEFS+=	USE_INET6
 USE_BUILDLINK_ONLY=	
 
 .include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == NetBSD && \
+	${LOWER_ARCH} == i386 && \
+	${OS_VERSION:M1.5.[12]*} != "")
+BROKEN=		Please update your sys/disklabel.h from the netbsd-1-5 branch
+.endif
 
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
