@@ -1,6 +1,6 @@
-# $NetBSD: INSTALL,v 1.4 2002/06/27 02:30:18 itojun Exp $
+# $NetBSD: INSTALL,v 1.5 2002/06/27 08:32:57 itojun Exp $
 
-DIRS="/etc /etc/ssh /usr/pkg/etc /usr/pkg/etc/ssh"
+DIRS="/etc /etc/ssh @PREFIX@/etc @PREFIX@/etc/ssh"
 FILES="sshd.conf sshd_config"
 
 if [ "${STAGE}" != "POST-INSTALL" ]; then
@@ -12,7 +12,7 @@ for dir in $DIRS; do
 		for file in $FILES; do
 			path=$dir/$file
 			if [ -f $path ]; then
-				cat <<EOF
+				@CAT@ <<EOF
 ===========================================================================
 
                            *===* NOTICE *===*
