@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/09 16:23:43 jdolecek Exp $
-share/doc/phpgadmin/CREDITS
-share/doc/phpgadmin/DEVELOPERS
-share/doc/phpgadmin/FAQ
-share/doc/phpgadmin/HISTORY
-share/doc/phpgadmin/INSTALL
-share/doc/phpgadmin/LICENSE
-share/doc/phpgadmin/TODO
-share/doc/phpgadmin/TRANSLATORS
+@comment $NetBSD: PLIST,v 1.3 2004/10/09 16:26:26 jdolecek Exp $
+share/doc/phppgadmin/CREDITS
+share/doc/phppgadmin/DEVELOPERS
+share/doc/phppgadmin/FAQ
+share/doc/phppgadmin/HISTORY
+share/doc/phppgadmin/INSTALL
+share/doc/phppgadmin/LICENSE
+share/doc/phppgadmin/TODO
+share/doc/phppgadmin/TRANSLATORS
 share/examples/phppgadmin/config.inc.php-dist
 share/examples/phppgadmin/apache.conf
 share/phppgadmin/aggregates.php
