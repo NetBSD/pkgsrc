@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2005/03/06 17:03:06 thorpej Exp $
+# $NetBSD: Makefile,v 1.92 2005/03/11 17:25:05 tv Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system with Kerberos libraries
@@ -19,7 +19,7 @@ USE_BUILDLINK3=	yes
 USE_LIBTOOL=	# defined
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
-INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
+INST_LIB=	${LIBTOOL} ${INSTALL_LIB}
 INC_DIR=	${PREFIX}/include/c-client
 LIB_DIR=	${PREFIX}/lib
 DOC_DIR=	${PREFIX}/share/doc/imap-uw
@@ -157,7 +157,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${INC_DIR}
 	cd ${WRKSRC}/c-client; ${INSTALL_DATA} ${CCLIENT_INCS} ${INC_DIR}
 	${INST_LIB} ${WRKSRC}/c-client/${CCLIENT_LIB} ${LIB_DIR}
-	${INSTALL_DATA} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
+	${INSTALL_LIB} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
 	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	cd ${LIB_DIR}; for file in libc-client.*; do			\
 		case $$file in						\
