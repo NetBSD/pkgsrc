@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 1998/11/16 02:36:22 tron Exp $
+
+--- utmp.c.orig	Wed May 28 01:44:00 1997
++++ utmp.c	Mon Nov 16 03:08:49 1998
+@@ -58,7 +58,7 @@
+      * [NB: If we wanted to set UT_INIT, it would have to be an entry with
+      * empty ut_name and ut_host]
+      */
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+     struct utmp utmp;
+     extern void login _PROTO(( struct utmp * utmp ));
+ 
