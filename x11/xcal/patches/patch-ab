@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/27 06:46:47 kim Exp $
+
+--- pscal/Imakefile.orig	Thu Apr 27 02:24:25 2000
++++ pscal/Imakefile	Thu Apr 27 02:26:31 2000
+@@ -1,4 +1,4 @@
+-BINDIR=/usr/local/bin
++#BINDIR=/usr/local/bin
+ AllTarget(pscal.script)
+ InstallScript(pscal,$(BINDIR))
+ InstallManPage(pscal,$(MANDIR))
