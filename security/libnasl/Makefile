@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/19 16:23:34 adam Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/22 15:00:20 adam Exp $
 
 DISTNAME=	libnasl-${VERS}
 .include	"../nessus/Makefile.common"
@@ -9,5 +9,5 @@ WRKSRC=		${WRKDIR}/libnasl
 GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
 
-.include "../nessus-libraries/buildlink3.mk"
+.include "../../security/nessus-libraries/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
