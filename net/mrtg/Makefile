@@ -1,16 +1,27 @@
-# $NetBSD: Makefile,v 1.40 2003/06/23 11:12:33 adam Exp $
+# $NetBSD: Makefile,v 1.41 2003/06/23 12:19:52 wiz Exp $
 
 DISTNAME=	mrtg-2.9.29
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
-		http://gd.tuwien.ac.at/infosys/network/tools/mrtg/pub/ \
-		ftp://mrtg.hdl.com/ \
 		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
-		ftp://ftp.ou.edu/mirrors/mrtg/ \
-		ftp://eesa.webstar.co.uk/pub/mrtg/ \
 		ftp://ftp.chg.ru/pub/networking/management/mrtg/ \
-		ftp://ftp.onet.pl/pub/unix/network/mrtg/pub/
+		ftp://ftp.mirrors.wiretapped.net/pub/mrtg/ \
+		ftp://ftp.planetmirror.com/pub/oetiker/webtools/mrtg/ \
+		ftp://mrtg.pop-mg.com.br/pub/mrtg/pub/ \
+		ftp://ftp.130th.net/pub/mirror/mrtg/ \
+		ftp://ftp.exobit.org/pub/monitoring/mrtg/ \
+		ftp://ftp.ou.edu/mirrors/mrtg/ \
+		ftp://ftp.azc.uam.mx/mirrors/mrtg/ \
+		ftp://ftp2.cscnet.cz/pub/mirror/mrtg/ \
+		ftp://ftp.unipi.it/pub/mirror/mrtg/ \
+		ftp://venom.ath.cx/mirror/mrtg/ \
+		ftp://ftp.heanet.ie/pub/oetiker/mrtg/ \
+		ftp://ftp.nctu.edu.tw/network/mrtg/ \
+		ftp://ftp.ayamura.org/pub/mrtg/ \
+		ftp://mirror.nucba.ac.jp/mirror/mrtg/ \
+		ftp://sunsite.icm.edu.pl/pub/unix/net/mrtg/ \
+		ftp://net2b.co.pt/pub/mrtg/
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
