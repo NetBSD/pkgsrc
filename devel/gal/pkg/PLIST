@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/17 17:12:24 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/21 21:32:45 rh Exp $
 include/gal/e-paned/e-hpaned.h
 include/gal/e-paned/e-paned.h
 include/gal/e-paned/e-vpaned.h
@@ -10,6 +10,11 @@ include/gal/e-table/e-cell.h
 include/gal/e-table/e-table-click-to-add.h
 include/gal/e-table/e-table-col-dnd.h
 include/gal/e-table/e-table-col.h
+include/gal/e-table/e-table-column-specification.h
+include/gal/e-table/e-table-config-field.h
+include/gal/e-table/e-table-extras.h
+include/gal/e-table/e-table-specification.h
+include/gal/e-table/e-table-state.h
 include/gal/e-table/e-table-config.h
 include/gal/e-table/e-table-defines.h
 include/gal/e-table/e-table-field-chooser-dialog.h
@@ -54,6 +59,8 @@ include/gal/widgets/e-colors.h
 include/gal/widgets/e-cursors.h
 include/gal/widgets/e-font.h
 include/gal/widgets/e-gui-utils.h
+include/gal/widgets/e-hscrollbar.h
+include/gal/widgets/e-vscrollbar.h
 include/gal/widgets/e-popup-menu.h
 include/gal/widgets/e-printable.h
 include/gal/widgets/e-reflow-sorted.h
@@ -68,11 +75,12 @@ include/gal/widgets/widget-pixmap-combo.h
 lib/galConf.sh
 lib/libgal.a
 lib/libgal.la
-lib/libgal.so.0.0
-share/etable/glade/e-table-config.glade
-share/etable/glade/e-table-field-chooser.glade
-share/etable/glade/e-table-group.glade
-@dirrm share/etable/glade
+lib/libgal.so.1.0
+share/etable/0.2/glade/e-table-config.glade
+share/etable/0.2/glade/e-table-group.glade
+share/etable/0.2/glade/e-table-field-chooser.glade
+@dirrm share/etable/0.2/glade
+@dirrm share/etable/0.2
 @dirrm share/etable
 @dirrm include/gal/widgets
 @dirrm include/gal/util
