@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2002/12/07 02:39:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.65 2002/12/19 14:20:09 grant Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -8,7 +8,7 @@
 
 DISTNAME=		apache_${APACHE_VERSION}
 PKGNAME=		apache6-${APACHE_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 APACHE_VERSION=		1.3.27
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--without-confadjust
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
+CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_PREFIX.libmm}"
 
 BUILD_DEFS+=		USE_INET6
 
@@ -111,12 +112,14 @@ LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
-.if (${OPSYS} == "SunOS")
-LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
-CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db}/include/db2"
-CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
-BUILDLINK_DEPENDS.db=	db>=2.7.7
 .include "../../databases/db/buildlink2.mk"
+BUILDLINK_DEPENDS.db=	db>=2.7.7
+CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db}/include/db2"
+CONFIGURE_ENV+=		LIBS="-ldb2"
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
+CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
 .endif
 
 BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
@@ -169,6 +172,7 @@ post-install:
 	${CHMOD} ${NONBINMODE} ${PREFIX}/libexec/cgi-bin/printenv \
 	  ${PREFIX}/libexec/cgi-bin/test-cgi
 
+.include "../../devel/libmm/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
