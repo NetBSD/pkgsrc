@@ -1,0 +1,57 @@
+$NetBSD: patch-ac,v 1.1 2004/03/09 10:33:22 recht Exp $
+
+--- BitTorrent/RawServer.py.orig	2004-02-07 14:35:06.000000000 +0100
++++ BitTorrent/RawServer.py	2004-03-09 11:11:09.000000000 +0100
+@@ -75,8 +75,12 @@
+         else:
+             self.raw_server.poll.register(self.socket, all)
+ 
++def default_error_handler(x):
++    print x
++
+ class RawServer:
+-    def __init__(self, doneflag, timeout_check_interval, timeout, noisy = True, errorfunc = None, maxconnects = 55):
++    def __init__(self, doneflag, timeout_check_interval, timeout, noisy = True,
++            errorfunc = default_error_handler, maxconnects = 55):
+         self.timeout_check_interval = timeout_check_interval
+         self.timeout = timeout
+         self.poll = poll()
+@@ -114,6 +118,10 @@
+         if reuse:
+             server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+         server.setblocking(0)
++        try:
++            server.setsockopt(socket.IPPROTO_IP, socket.IP_TOS, 32)
++        except:
++            pass
+         server.bind((bind, port))
+         server.listen(5)
+         self.poll.register(server, POLLIN)
+@@ -147,7 +155,6 @@
+                     try:
+                         newsock, addr = self.server.accept()
+                         newsock.setblocking(0)
+-                        newsock.setsockopt(socket.IPPROTO_IP, socket.IP_TOS, 32)
+                         if len(self.single_sockets) >= self.maxconnects:
+                             newsock.close()
+                             continue
+@@ -224,16 +231,16 @@
+                     if self.doneflag.isSet():
+                         return
+                     self._close_dead()
+-                except error:
++                except error, e:
+                     if self.doneflag.isSet():
+                         return
+                     # I can't find a coherent explanation for what the behavior should be here,
+                     # and people report conflicting behavior, so I'll just try all the possibilities
+                     try:
+-                        code, msg, desc = error
++                        code, msg, desc = e
+                     except:
+                         try:
+-                            code, msg = error
++                            code, msg = e
+                         except:
+                             code = ENOBUFS
+                     if code == ENOBUFS:
