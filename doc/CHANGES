@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3031 2003/08/12 20:42:02 seb Exp $
+$NetBSD: CHANGES,v 1.3032 2003/08/12 23:33:24 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3254,3 +3254,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ssh2 to 3.2.5 [seb 2003-08-12]
 	Updated ssh2-nox11 to 3.2.5 [seb 2003-08-12]
 	Updated grace to 5.1.12 [seb 2003-08-12]
+	Updated ast-ksh to 20030724 [kristerw 2003-08-12]
+	Updated static-ast-ksh to 20030724 [kristerw 2003-08-12]
