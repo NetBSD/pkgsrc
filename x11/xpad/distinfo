@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/06/14 15:22:41 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2004/06/14 20:23:30 kristerw Exp $
 
 SHA1 (xpad-1.12.tar.bz2) = 39785fb183d61039383204352ba03c4ca4cb392d
 Size (xpad-1.12.tar.bz2) = 238411 bytes
-SHA1 (patch-aa) = fc1afe577f64fbfeedb501f4dd87e59228473aff
