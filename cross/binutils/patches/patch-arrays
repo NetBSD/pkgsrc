@@ -1,0 +1,81 @@
+--- ./bfd/libbfd-in.h.orig	Fri May  1 11:48:12 1998
++++ ./bfd/libbfd-in.h	Mon Dec 28 17:43:21 1998
+@@ -496,7 +498,7 @@
+ 
+ /* List of supported target vectors, and the default vector (if
+    bfd_default_vector[0] is NULL, there is no default).  */
+-extern const bfd_target * const bfd_target_vector[];
++extern const bfd_target * const *bfd_target_vector;
+ extern const bfd_target *bfd_default_vector[];
+ 
+ /* Functions shared by the ECOFF and MIPS ELF backends, which have no
+--- ./bfd/libbfd.h.orig	Fri May  1 11:48:12 1998
++++ ./bfd/libbfd.h	Mon Dec 28 17:43:21 1998
+@@ -496,7 +498,7 @@
+ 
+ /* List of supported target vectors, and the default vector (if
+    bfd_default_vector[0] is NULL, there is no default).  */
+-extern const bfd_target * const bfd_target_vector[];
++extern const bfd_target * const *bfd_target_vector;
+ extern const bfd_target *bfd_default_vector[];
+ 
+ /* Functions shared by the ECOFF and MIPS ELF backends, which have no
+--- ./bfd/targets.c.orig	Fri May  1 11:48:16 1998
++++ ./bfd/targets.c	Mon Dec 28 17:43:23 1998
+@@ -611,7 +612,7 @@
+ extern const bfd_target trad_core_vec;
+ extern const bfd_target ptrace_core_vec;
+ 
+-const bfd_target * const bfd_target_vector[] = {
++static const bfd_target * const _bfd_target_vector[] = {
+ 
+ #ifdef SELECT_VECS
+ 
+@@ -841,6 +846,7 @@
+ 
+ 	NULL /* end of list marker */
+ };
++const bfd_target * const *bfd_target_vector = _bfd_target_vector;
+ 
+ /* bfd_default_vector[0] contains either the address of the default vector,
+    if there is one, or zero if there isn't.  */
+--- ./binutils/bucomm.c.orig	Fri May  1 11:49:31 1998
++++ ./binutils/bucomm.c	Tue Dec 21 07:30:13 1999
+@@ -137,7 +137,7 @@
+      const char *name;
+      FILE *f;
+ {
+-  extern bfd_target *bfd_target_vector[];
++  extern bfd_target **bfd_target_vector;
+   int t;
+ 
+   if (name == NULL)
+--- ./binutils/objdump.c.orig	Fri May  1 11:49:34 1998
++++ ./binutils/objdump.c	Tue Dec 21 07:30:13 1999
+@@ -2466,7 +2466,7 @@
+ static void
+ display_target_list ()
+ {
+-  extern bfd_target *bfd_target_vector[];
++  extern bfd_target **bfd_target_vector;
+   char *dummy_name;
+   int t;
+ 
+@@ -2512,7 +2512,7 @@
+      int first;
+      int last;
+ {
+-  extern bfd_target *bfd_target_vector[];
++  extern bfd_target **bfd_target_vector;
+   int t, a;
+   char *dummy_name;
+ 
+@@ -2579,7 +2579,7 @@
+ display_target_tables ()
+ {
+   int t, columns;
+-  extern bfd_target *bfd_target_vector[];
++  extern bfd_target **bfd_target_vector;
+   char *colum;
+ 
+   columns = 0;

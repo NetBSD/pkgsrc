@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 1999/01/04 22:37:32 tv Exp $
+
+--- opcodes/configure.orig	Thu Dec 31 14:13:46 1998
++++ opcodes/configure	Thu Dec 31 14:14:00 1998
+@@ -1380,6 +1380,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1425,7 +1426,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
++fi
+ 
+ # Check whether --enable-targets or --disable-targets was given.
+ if test "${enable_targets+set}" = set; then

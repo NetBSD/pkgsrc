@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST-egcs-ss,v 1.1 1998/08/12 02:42:28 tv Exp $
+@comment $NetBSD: PLIST-egcs,v 1.1 1999/01/04 22:37:30 tv Exp $
 ${TARGET_ARCH}/bin/c++
 ${TARGET_ARCH}/bin/c++filt
 ${TARGET_ARCH}/bin/cc
 ${TARGET_ARCH}/bin/f77
+${TARGET_ARCH}/bin/fort77
 ${TARGET_ARCH}/bin/g++
 ${TARGET_ARCH}/bin/g77
 ${TARGET_ARCH}/bin/gcc
@@ -11,6 +12,7 @@ bin/${TARGET_ARCH}-c++
 bin/${TARGET_ARCH}-c++filt
 bin/${TARGET_ARCH}-cc
 bin/${TARGET_ARCH}-f77
+bin/${TARGET_ARCH}-fort77
 bin/${TARGET_ARCH}-g++
 bin/${TARGET_ARCH}-g77
 bin/${TARGET_ARCH}-gcc
@@ -179,9 +181,9 @@ lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/varargs.h
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/libg2c.a
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/libgcc.a
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/specs
-@dirrm lib/gcc-lib/i386-linuxglibc1/egcs-2.91.53/include/objc
-@dirrm lib/gcc-lib/i386-linuxglibc1/egcs-2.91.53/include/g++/std
-@dirrm lib/gcc-lib/i386-linuxglibc1/egcs-2.91.53/include/g++
-@dirrm lib/gcc-lib/i386-linuxglibc1/egcs-2.91.53/include
-@dirrm lib/gcc-lib/i386-linuxglibc1/egcs-2.91.53
-@dirrm lib/gcc-lib/i386-linuxglibc1
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/objc
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/g++/std
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/g++
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}
+@dirrm lib/gcc-lib/${TARGET_ARCH}

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 1999/01/04 22:37:32 tv Exp $
+
+--- ld/Makefile.in.orig	Thu Dec 31 15:03:33 1998
++++ ld/Makefile.in	Thu Dec 31 15:03:43 1998
+@@ -87,7 +87,7 @@
+ # We put the scripts in the directory $(scriptdir)/ldscripts.
+ # We can't put the scripts in $(datadir) because the SEARCH_DIR
+ # directives need to be different for native and cross linkers.
+-scriptdir = $(tooldir)/lib
++scriptdir = $(prefix)/lib
+ 
+ EMUL = @EMUL@
+ EMULATION_OFILES = @EMULATION_OFILES@
