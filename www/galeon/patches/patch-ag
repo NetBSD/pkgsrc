@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2004/11/12 02:24:55 kristerw Exp $
+
+--- src/popup-commands.c.orig	Fri Nov 12 03:16:45 2004
++++ src/popup-commands.c	Fri Nov 12 03:17:08 2004
+@@ -333,11 +333,11 @@
+ 			GaleonPopup *popup)
+ {
+ 	GaleonEmbed *embed;
++	char *location;
+ 
+ 	embed = galeon_popup_get_embed (popup);
+ 	g_return_if_fail (GALEON_IS_EMBED (embed));
+ 		
+-	char *location;
+ 	galeon_embed_get_location (embed, FALSE, FALSE, &location);
+ 	popup_copy_to_clipboard (popup, location);
+ 	g_free (location);
