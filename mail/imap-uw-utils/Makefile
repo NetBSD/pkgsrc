@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/22 03:52:25 jlam Exp $
 
 DISTNAME=	imap-utils
 PKGNAME=	imap-uw-utils-20001220
@@ -10,16 +10,14 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	UW IMAP mailbox utilities
 
-DEPENDS+=	imap-uw>=2000:../../mail/imap-uw
-
-DIST_SUBDIR=	${PKGNAME}
-NO_WRKSUBDIR=	# defined
-NO_CONFIGURE=	# defined
+DIST_SUBDIR=		${PKGNAME}
+NO_WRKSUBDIR=		# defined
+USE_BUILDLINK_ONLY=	# defined
 
 SRCDIRS=	chkmail dmail icat ifrom imapcopy imapxfer \
 		mbxcopy mbxcreat mbxcvt tmail
 
-CFLAGS+=	-I${LOCALBASE}/include/c-client
+CFLAGS+=	-I${BUILDLINK_DIR}/include/c-client
 LIBS+=		-lc-client -lssl -lcrypto
 
 do-build:
@@ -39,4 +37,5 @@ do-install:
 	${LN} -sf imapcopy ${PREFIX}/bin/imapmove
 	${LN} -sf mbxcopy ${PREFIX}/bin/mbxmove
 
+.include "../../mail/imap-uw/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
