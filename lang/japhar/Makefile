@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/14 22:16:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/14 22:17:51 wiz Exp $
 #
 
 DISTNAME=		japhar-0.08
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.japhar.org/pub/hungry/japhar/source/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.japhar.org/
 
-#ONLY_FOR_PLATFORM=	SunOS-*-*       # untested on NetBSD
+ONLY_FOR_PLATFORM=	SunOS-*-*       # untested on NetBSD
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
