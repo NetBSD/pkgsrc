@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/10/13 07:16:53 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/10/26 13:09:07 bouyer Exp $
 
 .if !defined(KDEBASE2_BUILDLINK2_MK)
 KDEBASE2_BUILDLINK2_MK=	# defined
@@ -12,8 +12,13 @@ BUILDLINK_PKGSRCDIR.kdebase2?=	../../x11/kdebase2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdebase2=kdebase
 BUILDLINK_PREFIX.kdebase2_DEFAULT=	${X11PREFIX}
+.if ${OPSYS} == "SunOS"
+BUILDLINK_FILES_CMD.kdebase2= \
+	${BUILDLINK_PLIST_CMD.kdebase2} | ${EGREP} '^(include|lib)'
+.else
 BUILDLINK_FILES_CMD.kdebase2= \
 	${BUILDLINK_PLIST_CMD.kdebase2} | ${GREP} '^\(include\|lib\)'
+.endif
 
 .include "../../x11/kdelibs2/buildlink2.mk"
 
