@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST-md.shared,v 1.2 1998/07/21 21:34:09 cjs Exp $
-lib/apache/mod_include.so
-@dirrm lib/apache

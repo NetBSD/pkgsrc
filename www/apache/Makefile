@@ -1,36 +1,53 @@
-# $NetBSD: Makefile,v 1.20 1998/10/02 14:40:13 tv Exp $
+# $NetBSD: Makefile,v 1.21 1998/10/03 21:01:14 tv Exp $
+#
+# The apache-modssl pkg .include's us, so that pkg tuning rules work for
+# both without a major duplication of Makefiles.  So we use ?= and += in
+# many of the constructs up here at top.
 #
 
-DISTNAME=       apache_1.3.1
-PKGNAME=        apache-1.3.1
-CATEGORIES=	www
-MASTER_SITES=   http://www.apache.org/dist/ \
+DISTNAME=	apache_1.3.1
+PKGNAME?=	apache-1.3.1
+CATEGORIES?=	www
+MASTER_SITES+=	http://www.apache.org/dist/ \
 		http://www.netbsd.org/images/logos/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} \
 		sitedrivenby.gif
 
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.apache.org/
 
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-CONFLICTS=	apache-modssl-1.3.1
+EXTRACT_ONLY+=	${DISTNAME}${EXTRACT_SUFX}
+CONFLICTS?=	apache-modssl-1.3.1
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 		--mandir=${PREFIX}/man --libexecdir=${PREFIX}/lib/apache \
 		--sbindir=${PREFIX}/sbin --runtimedir=/var/run \
 		--enable-module=most --enable-module=auth_db \
 		--disable-module=auth_dbm --with-perl=${PREFIX}/bin/perl
+CONFIGURE_ENV+=	OPTIM='${OPTIM}'
+OPTIM=		-DDEFAULT_PATH=\\"/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin\\"
+
+.if defined(APACHE_SUEXEC)
+CONFIGURE_ARGS+=--enable-suexec --suexec-caller=www \
+		--suexec-userdir=WWW \
+		--suexec-safepath='${PREFIX}/bin:/usr/local/bin:/usr/bin:/bin'
+.endif
+
+.if defined(APACHE_PERF_TUNING) && ${APACHE_PERF_TUNING} == YES
+CONFIGURE_ARGS+=--disable-rule=STATUS
+OPTIM+=		-DBUFFERED_LOGS
+CFLAGS+=	-O6 -fomit-frame-pointer -fexpensive-optimizations
+.endif
 
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
 # using the "apxs" program.  See apxs(8).
 
-# Create dummy files because there's no way (that I can see --cjs)
-# to make an empty directory with pkg_add.
+post-patch:
+	@find ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM}
+
 post-install:
-	touch ${PREFIX}/http/logs/.keep_me
-	touch ${PREFIX}/http/proxy/.keep_me
-	${CP} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/http/htdocs
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/http/htdocs
 
 .include "../../mk/bsd.pkg.mk"
 
