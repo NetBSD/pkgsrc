@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2004/01/24 08:43:27 xtraeme Exp $
+man/man1/ccmakedep.1.gz
+man/man1/cleanlinks.1.gz
+man/man1/gccmakedep.1.gz
+man/man1/imake.1.gz
+man/man1/lndir.1.gz
+man/man1/makedepend.1.gz
+man/man1/makeg.1.gz
+man/man1/makestrs.1.gz
+man/man1/mergelib.1.gz
+man/man1/mkdirhier.1.gz
+man/man1/mkhtmlindex.1.gz
+man/man1/pswrap.1.gz
+man/man1/revpath.1.gz
+man/man1/rman.1.gz
+man/man1/xmkmf.1.gz

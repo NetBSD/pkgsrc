@@ -1,0 +1,53 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/01/24 08:43:27 xtraeme Exp $
+
+--- config/cf/FreeBSD.cf.in.orig	2003-07-21 09:25:49.000000000 +0000
++++ config/cf/FreeBSD.cf.in	2003-07-21 09:28:10.000000000 +0000
+@@ -161,15 +161,10 @@
+  *
+  *    ld: warning: libXThrStub.so.6, needed by libX11.so, not found
+  */
+-#if BuildThreadStubLibrary && (!defined(UseInstalledX11) || !UseInstalledX11)
+-# define CcCmd			$(CLIENTENVSETUP) cc
+-# define CplusplusCmd		$(CLIENTENVSETUP) c++
+-#else
+-# define CcCmd			cc
+-# define CplusplusCmd		c++
+-#endif
++# define CcCmd			@@PKGSRC_CC@@
++# define CplusplusCmd		@@PKGSRC_CXX@@
+ 
+-#define CppCmd			/usr/bin/cpp
++#define CppCmd			@@PKGSRC_CPP@@
+ #define PreProcessCmd		CppCmd
+ #define StandardCppOptions	-traditional
+ #define StandardCppDefines	/**/
+@@ -177,7 +172,7 @@
+ #if defined(UseInstalled)
+ #define DefaultCCOptions	/**/
+ #else
+-#define DefaultCCOptions	-ansi -pedantic -Dasm=__asm GccWarningOptions
++#define DefaultCCOptions	-ansi -Dasm=__asm GccWarningOptions
+ #endif
+ #endif
+ #ifndef ExtraLibraries
+@@ -482,18 +477,9 @@
+ #define XawI18nDefines		-DUSE_XWCHAR_STRING -DUSE_XMBTOWC
+ #endif
+ 
+-/* The GCC strength-reduce bug is fixed for FreeBSD 2.1.5 and later */
+-#ifndef DefaultGcc2i386Opt
+-#if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion > 1) || (OSMajorVersion == 2 && OSMinorVersion == 1 && OSTeenyVersion >= 5)
+-#define DefaultGcc2i386Opt -O2
+-#endif
+-#endif
+ 
+-#ifdef i386Architecture
+-# define OptimizedCDebugFlags DefaultGcc2i386Opt
+-#else
+-# define OptimizedCDebugFlags -O
+-#endif
++#define DefaultGcc2i386Opt
++#define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
+ 
+ #ifndef PreIncDir
+ # define PreIncDir	/usr/include
