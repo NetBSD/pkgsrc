@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 10:01:42 agc Exp $
 
-MD5 (prcs-1.2.9.tar.gz) = eef0c4dd162dde67a2d0e250d8a8684b
+SHA1 (prcs-1.2.9.tar.gz) = df6f5d9fc6b431c301dfda711eba183ecf9f3e83
+Size (prcs-1.2.9.tar.gz) = 602380 bytes
 SHA1 (patch-aa) = 02f44b0e00cd9d13960e70392bf7c487ec627975
 SHA1 (patch-ab) = 88bcda21ac9a79ddb4c8896ea30d766139ed8aa3

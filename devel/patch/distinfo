@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 10:01:43 agc Exp $
 
-MD5 (patch-2.5.4.tar.gz) = ee5ae84d115f051d87fcaaef3b4ae782
+SHA1 (patch-2.5.4.tar.gz) = a12d520eba0dc35d1c4d50ec75b7684451a40de9
+Size (patch-2.5.4.tar.gz) = 186879 bytes

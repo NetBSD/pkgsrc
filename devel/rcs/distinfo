@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 10:01:42 agc Exp $
 
-MD5 (rcs-5.7.tar.gz) = 4c8e896f2d2446fa593c6f1601a4fb75
+SHA1 (rcs-5.7.tar.gz) = a5c7982cf538d5e006b5db40f0aefaea5eb2cbba
+Size (rcs-5.7.tar.gz) = 282413 bytes

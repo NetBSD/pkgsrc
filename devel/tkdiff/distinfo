@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 10:01:41 agc Exp $
 
-MD5 (tkdiff-3.05.tcl.txt) = db1837cb09a3857e9ae4e6b3beb065a6
+SHA1 (tkdiff-3.05.tcl.txt) = e13fa966b6a10154973e56d5c402444ed2558d57
+Size (tkdiff-3.05.tcl.txt) = 249773 bytes
