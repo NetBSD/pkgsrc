@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6205 2004/06/13 09:03:08 taca Exp $
+$NetBSD: CHANGES,v 1.6206 2004/06/13 13:14:44 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2937,3 +2937,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nbsed to 20040612 [minskim 2004-06-12]
 	Updated jwhois to 3.2.2nb6 [kleink 2004-06-12]
 	Updated mew to 2.3nb2 [taca 2004-06-13]
+	Updated nbsed to 20040613 [grant 2004-06-13]
