@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/11/06 20:44:56 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/06 21:16:15 jdolecek Exp $
 #
 
-DISTNAME=	WebSVN_140
-PKGNAME=	websvn-1.40
-PKGREVISION=	1
+DISTNAME=	WebSVN_161
+PKGNAME=	websvn-1.61
+PKGREVISION=	# empty
 CATEGORIES=	www
-MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/10659/
+MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/14334/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://websvn.tigris.org/
