@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1120 2002/12/31 15:46:42 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1121 2003/01/04 15:52:13 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -414,7 +414,7 @@ DESCR_SRC?=		${PKGDIR}/DESCR
 .endif
 PLIST=			${WRKDIR}/.PLIST
 
-# Automatic platform dependant PLIST handling
+# Automatic platform dependent PLIST handling
 .if !defined(PLIST_SRC)
 .  if exists(${PKGDIR}/PLIST.common)
 PLIST_SRC=		${PKGDIR}/PLIST.common
