@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:24:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/28 11:46:18 martti Exp $
 bin/mytool
 bin/uniconv
 bin/uniprint
@@ -7,6 +7,7 @@ man/man1/mytool.1
 man/man1/uniconv.1
 man/man1/uniprint.1
 share/yudit/config/yudit.properties
+share/yudit/data/ASCII-IPA.my
 share/yudit/data/Arabic.my
 share/yudit/data/ArmenianEast.my
 share/yudit/data/ArmenianWest.my
@@ -14,7 +15,9 @@ share/yudit/data/Azeri.my
 share/yudit/data/Belarusian.my
 share/yudit/data/Ben-Inscript.my
 share/yudit/data/Bulgarian.my
+share/yudit/data/CS-dead.my
 share/yudit/data/Chinese-CJ.my
+share/yudit/data/Croatian.my
 share/yudit/data/Cyrillic.my
 share/yudit/data/Czech.my
 share/yudit/data/DE-RU.my
@@ -38,6 +41,7 @@ share/yudit/data/Hangul2.my
 share/yudit/data/Hangul3.my
 share/yudit/data/Hebrew.my
 share/yudit/data/HebrewIsraeli.my
+share/yudit/data/Hungarian-prefix.my
 share/yudit/data/Hungarian.my
 share/yudit/data/KOI8_R_KEY.my
 share/yudit/data/Kan-Inscript.my
@@ -48,9 +52,17 @@ share/yudit/data/Mal-Inscript.my
 share/yudit/data/Mnemonic.my
 share/yudit/data/Ori-Inscript.my
 share/yudit/data/Polish.my
+share/yudit/data/RU-javerty.my
+share/yudit/data/RU-translit.my
+share/yudit/data/Russian-ISO-Translit.my
 share/yudit/data/Russian.my
 share/yudit/data/SGML.my
+share/yudit/data/SK.my
+share/yudit/data/SR-Cyrillic.my
+share/yudit/data/Slovenian.my
 share/yudit/data/Spanish.my
+share/yudit/data/TCVNcombine.my
+share/yudit/data/TCVNkey.my
 share/yudit/data/TIS_620.my
 share/yudit/data/Tam-Inscript.my
 share/yudit/data/TeX.my
@@ -70,6 +82,8 @@ share/yudit/data/example.my
 share/yudit/data/gb-2312-l.my
 share/yudit/data/gb-2312-r.my
 share/yudit/data/gnome-yudit.png
+share/yudit/data/hanzi.hwd
+share/yudit/data/hiragana.hwd
 share/yudit/data/iso-646.my
 share/yudit/data/iso-8859-1.my
 share/yudit/data/iso-8859-2.my
@@ -84,11 +98,14 @@ share/yudit/data/iso-8859e.my
 share/yudit/data/jis-0201.my
 share/yudit/data/jis-0208.my
 share/yudit/data/jis-0212.my
+share/yudit/data/kanji.hwd
+share/yudit/data/katakana.hwd
 share/yudit/data/koi8-r.my
 share/yudit/data/ksc-5601-l.my
 share/yudit/data/ksc-5601-old.my
 share/yudit/data/ksc-5601-r.my
 share/yudit/data/precompose.my
+share/yudit/data/smeTeX.my
 share/yudit/data/tcvn.my
 share/yudit/data/viscii.my
 share/yudit/data/windows-1255.my
@@ -98,28 +115,34 @@ share/yudit/doc/HOWTO-configure.txt
 share/yudit/doc/HOWTO-devanagari.txt
 share/yudit/doc/HOWTO-japanese.txt
 share/yudit/doc/HOWTO-keymap.txt
+share/yudit/doc/README-FREEHAND.TXT
 share/yudit/doc/README.TXT
 share/yudit/doc/TestPage.txt
 share/yudit/doc/UTF-8-demo.txt
 share/yudit/doc/UTF-8-test.txt
 share/yudit/doc/Yudit.bidi.txt
+share/yudit/doc/cz/FAQ.TXT
 share/yudit/doc/de/FAQ.TXT
 share/yudit/doc/es/FAQ.TXT
+share/yudit/doc/fi/FAQ.TXT
 share/yudit/doc/hu/FAQ.TXT
 share/yudit/doc/ja/FAQ.TXT
 share/yudit/doc/my-format.txt
 share/yudit/doc/yi/FAQ.TXT
 share/yudit/locale/az/LC_MESSAGES/messages.mo
 share/yudit/locale/bg/LC_MESSAGES/messages.mo
+share/yudit/locale/cz/LC_MESSAGES/messages.mo
 share/yudit/locale/de/LC_MESSAGES/messages.mo
 share/yudit/locale/en/LC_MESSAGES/messages.po
 share/yudit/locale/es/LC_MESSAGES/messages.mo
+share/yudit/locale/fi/LC_MESSAGES/messages.mo
 share/yudit/locale/fr/LC_MESSAGES/messages.mo
 share/yudit/locale/hu/LC_MESSAGES/messages.mo
 share/yudit/locale/ja/LC_MESSAGES/messages.mo
 share/yudit/locale/sl/LC_MESSAGES/messages.mo
 share/yudit/locale/sr/LC_MESSAGES/messages.mo
 share/yudit/locale/yi/LC_MESSAGES/messages.mo
+share/yudit/src/ASCII-IPA.kmap
 share/yudit/src/Arabic.kmap
 share/yudit/src/ArmenianEast.kmap
 share/yudit/src/ArmenianWest.kmap
@@ -127,7 +150,9 @@ share/yudit/src/Azeri.kmap
 share/yudit/src/Belarusian.kmap
 share/yudit/src/Ben-Inscript.kmap
 share/yudit/src/Bulgarian.kmap
+share/yudit/src/CS-dead.kmap
 share/yudit/src/Chinese-CJ.kmap
+share/yudit/src/Croatian.kmap
 share/yudit/src/Cyrillic.kmap
 share/yudit/src/Czech.kmap
 share/yudit/src/DE-RU.kmap
@@ -149,6 +174,7 @@ share/yudit/src/Gur-Inscirpt.kmap
 share/yudit/src/Hangul2.kmap
 share/yudit/src/Hangul3.kmap
 share/yudit/src/Hebrew.kmap
+share/yudit/src/Hungarian-prefix.kmap
 share/yudit/src/HebrewIsraeli.kmap
 share/yudit/src/Hungarian.kmap
 share/yudit/src/KOI8_R_KEY.kmap
@@ -160,9 +186,17 @@ share/yudit/src/Mal-Inscript.kmap
 share/yudit/src/Mnemonic.kmap
 share/yudit/src/Ori-Inscript.kmap
 share/yudit/src/Polish.kmap
+share/yudit/src/RU-javerty.kmap
+share/yudit/src/RU-translit.kmap
+share/yudit/src/Russian-ISO-Translit.kmap
 share/yudit/src/Russian.kmap
 share/yudit/src/SGML.kmap
+share/yudit/src/SK.kmap
+share/yudit/src/SR-Cyrillic.kmap
+share/yudit/src/Slovenian.kmap
 share/yudit/src/Spanish.kmap
+share/yudit/src/TCVNcombine.kmap
+share/yudit/src/TCVNkey.kmap
 share/yudit/src/Tam-Inscript.kmap
 share/yudit/src/TeX.kmap
 share/yudit/src/Tel-Inscript.kmap
@@ -174,6 +208,7 @@ share/yudit/src/Vietnamese.kmap
 share/yudit/src/VietnameseTelex.kmap
 share/yudit/src/Welsh.kmap
 share/yudit/src/Yiddish.kmap
+share/yudit/src/smeTeX.kmap
 @dirrm share/yudit/src
 @dirrm share/yudit/locale/yi/LC_MESSAGES
 @dirrm share/yudit/locale/yi
@@ -187,12 +222,16 @@ share/yudit/src/Yiddish.kmap
 @dirrm share/yudit/locale/hu
 @dirrm share/yudit/locale/fr/LC_MESSAGES
 @dirrm share/yudit/locale/fr
+@dirrm share/yudit/locale/fi/LC_MESSAGES
+@dirrm share/yudit/locale/fi
 @dirrm share/yudit/locale/es/LC_MESSAGES
 @dirrm share/yudit/locale/es
 @dirrm share/yudit/locale/en/LC_MESSAGES
 @dirrm share/yudit/locale/en
 @dirrm share/yudit/locale/de/LC_MESSAGES
 @dirrm share/yudit/locale/de
+@dirrm share/yudit/locale/cz/LC_MESSAGES
+@dirrm share/yudit/locale/cz
 @dirrm share/yudit/locale/bg/LC_MESSAGES
 @dirrm share/yudit/locale/bg
 @dirrm share/yudit/locale/az/LC_MESSAGES
@@ -202,8 +241,10 @@ share/yudit/src/Yiddish.kmap
 @dirrm share/yudit/doc/yi
 @dirrm share/yudit/doc/ja
 @dirrm share/yudit/doc/hu
+@dirrm share/yudit/doc/fi
 @dirrm share/yudit/doc/es
 @dirrm share/yudit/doc/de
+@dirrm share/yudit/doc/cz
 @dirrm share/yudit/doc
 @dirrm share/yudit/data
 @dirrm share/yudit/config
