@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/05/22 16:48:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/20 10:55:24 jmmv Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
 PKGNAME=	${OPENCM_VERSION:C/alpha/rc/}
-PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opencm.org/releases/
@@ -19,10 +18,14 @@ USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
-OPENCM_VERSION=	opencm-0.1.2alpha4
+OPENCM_VERSION=	opencm-0.1.2alpha6
 
-CONF_FILES=	${PREFIX}/share/examples/opencm/opencm.conf ${PKG_SYSCONFDIR}/opencm.conf
-INFO_FILES=	opencm.info
+CONF_FILES=	${PREFIX}/share/examples/opencm/opencm.conf \
+		${PKG_SYSCONFDIR}/opencm.conf
+
+USE_MAKEINFO=		yes
+USE_NEW_TEXINFO=	yes
+INFO_FILES=		opencm.info
 
 CPPFLAGS+=	-D__unix__
 MAKE_ENV+=	GZIP_CMD=${GZIP_CMD:Q}
@@ -33,5 +36,4 @@ MAKE_ENV+=	GZIP_CMD=${GZIP_CMD:Q}
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
