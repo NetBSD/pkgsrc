@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.26 1998/09/01 13:56:42 agc Exp $
+# $NetBSD: mk.conf.example,v 1.27 1998/10/01 05:40:16 kim Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -236,7 +236,21 @@ PAPERSIZE=	A4		# Default paper size for packages.
 #MASTER_SITE_SUNSITE=	ftp://mirror.aarnet.edu.au/sunsite.unc.edu/%SUBDIR%/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
-#	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
+#	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 #MASTER_SITE_LOCAL=	\
 #	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
 #	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+
+# Finland
+#
+#MASTER_SITE_XCONTRIB=	ftp://ftp.funet.fi/pub/X11/contrib/%SUBDIR%/
+#MASTER_SITE_GNU= 	ftp://ftp.funet.fi/pub/gnu/gnu/%SUBDIR%/
+#MASTER_SITE_PERL_CPAN=	\
+#	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/%SUBDIR%/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.funet.fi/pub/TeX/CTAN/%SUBDIR%/
+#MASTER_SITE_SUNSITE=	\
+#	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/%SUBDIR%/
+#MASTER_SITE_BACKUP=	\
+#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
+#MASTER_SITE_LOCAL=	\
+#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
