@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2003/09/10 01:57:06 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2003/09/10 16:05:09 jlam Exp $
 
 DISTNAME=		openssl-0.9.6g
 PKGREVISION=		2
@@ -68,7 +68,7 @@ LD_PATH_VARNAME=	LD_LIBRARY_PATH
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == "YES"
 .  include "../../security/rsaref/buildlink2.mk"
-CONFIGURE_ARGS+=	rsaref -L${BUILDLINK_PREFIX.rsaref}/lib
+CONFIGURE_ARGS+=	rsaref
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 .endif
 
@@ -86,5 +86,7 @@ CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	irix64-mips4-cc
 .  endif
 .endif
+
+CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 
 .include  "../../mk/bsd.pkg.mk"
