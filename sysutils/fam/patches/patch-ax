@@ -1,24 +1,24 @@
-$NetBSD: patch-ax,v 1.1 2002/10/02 22:31:00 dillo Exp $
+$NetBSD: patch-ax,v 1.2 2002/12/17 19:43:43 jmmv Exp $
 
---- configure.orig	Thu Oct  3 00:27:08 2002
+--- configure.orig	Tue Dec 17 00:22:04 2002
 +++ configure
-@@ -1881,6 +1881,43 @@ fi
+@@ -5561,6 +5510,43 @@ fi
  
  
  
 +ac_safe=`echo "mntent.h" | sed 'y%./+-%__p_%'`
 +echo $ac_n "checking for mntent.h""... $ac_c" 1>&6
-+echo "configure:1887: checking for mntent.h" >&5
++echo "configure:5516: checking for mntent.h" >&5
 +if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
 +  echo $ac_n "(cached) $ac_c" 1>&6
 +else
 +  cat > conftest.$ac_ext <<EOF
-+#line 1892 "configure"
++#line 5521 "configure"
 +#include "confdefs.h"
 +#include <mntent.h>
 +EOF
 +ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
-+{ (eval echo configure:1897: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++{ (eval echo configure:5526: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
 +ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
 +if test -z "$ac_err"; then
 +  rm -rf conftest*
@@ -46,21 +46,21 @@ $NetBSD: patch-ax,v 1.1 2002/10/02 22:31:00 dillo Exp $
  if test `uname` = 'IRIX' || test `uname` = 'IRIX64'; then
      have_imon=yes
      cat >> confdefs.h <<\EOF
-@@ -2382,129 +2419,8 @@ fi
+@@ -6117,129 +6106,8 @@ fi
  
  
  
 -    echo $ac_n "checking mntent.h for MNTTYPE_NFS""... $ac_c" 1>&6
--echo "configure:2387: checking mntent.h for MNTTYPE_NFS" >&5
+-echo "configure:6122: checking mntent.h for MNTTYPE_NFS" >&5
 -    cat > conftest.$ac_ext <<EOF
--#line 2389 "configure"
+-#line 6124 "configure"
 -#include "confdefs.h"
 -#include <mntent.h>
 -int main() {
 -const char *foo = MNTTYPE_NFS;
 -; return 0; }
 -EOF
--if { (eval echo configure:2396: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+-if { (eval echo configure:6131: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
 -  rm -rf conftest*
 -  fam_have_decl_in_mntent=yes
 -else
@@ -79,16 +79,16 @@ $NetBSD: patch-ax,v 1.1 2002/10/02 22:31:00 dillo Exp $
 -
 -
 -    echo $ac_n "checking mntent.h for MNTTYPE_NFS2""... $ac_c" 1>&6
--echo "configure:2415: checking mntent.h for MNTTYPE_NFS2" >&5
+-echo "configure:6150: checking mntent.h for MNTTYPE_NFS2" >&5
 -    cat > conftest.$ac_ext <<EOF
--#line 2417 "configure"
+-#line 6152 "configure"
 -#include "confdefs.h"
 -#include <mntent.h>
 -int main() {
 -const char *foo = MNTTYPE_NFS2;
 -; return 0; }
 -EOF
--if { (eval echo configure:2424: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+-if { (eval echo configure:6159: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
 -  rm -rf conftest*
 -  fam_have_decl_in_mntent=yes
 -else
@@ -110,16 +110,16 @@ $NetBSD: patch-ax,v 1.1 2002/10/02 22:31:00 dillo Exp $
 -
 -
 -    echo $ac_n "checking mntent.h for MNTTYPE_NFS3""... $ac_c" 1>&6
--echo "configure:2446: checking mntent.h for MNTTYPE_NFS3" >&5
+-echo "configure:6181: checking mntent.h for MNTTYPE_NFS3" >&5
 -    cat > conftest.$ac_ext <<EOF
--#line 2448 "configure"
+-#line 6183 "configure"
 -#include "confdefs.h"
 -#include <mntent.h>
 -int main() {
 -const char *foo = MNTTYPE_NFS3;
 -; return 0; }
 -EOF
--if { (eval echo configure:2455: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+-if { (eval echo configure:6190: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
 -  rm -rf conftest*
 -  fam_have_decl_in_mntent=yes
 -else
@@ -141,16 +141,16 @@ $NetBSD: patch-ax,v 1.1 2002/10/02 22:31:00 dillo Exp $
 -
 -
 -    echo $ac_n "checking mntent.h for MNTTYPE_CACHEFS""... $ac_c" 1>&6
--echo "configure:2477: checking mntent.h for MNTTYPE_CACHEFS" >&5
+-echo "configure:6212: checking mntent.h for MNTTYPE_CACHEFS" >&5
 -    cat > conftest.$ac_ext <<EOF
--#line 2479 "configure"
+-#line 6214 "configure"
 -#include "confdefs.h"
 -#include <mntent.h>
 -int main() {
 -const char *foo = MNTTYPE_CACHEFS;
 -; return 0; }
 -EOF
--if { (eval echo configure:2486: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+-if { (eval echo configure:6221: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
 -  rm -rf conftest*
 -  fam_have_decl_in_mntent=yes
 -else
@@ -172,8 +172,8 @@ $NetBSD: patch-ax,v 1.1 2002/10/02 22:31:00 dillo Exp $
 -
 -
  echo $ac_n "checking netinet/in.h for bindresvport()""... $ac_c" 1>&6
--echo "configure:2508: checking netinet/in.h for bindresvport()" >&5
-+echo "configure:2424: checking netinet/in.h for bindresvport()" >&5
+-echo "configure:6243: checking netinet/in.h for bindresvport()" >&5
++echo "configure:6111: checking netinet/in.h for bindresvport()" >&5
  if eval "test \"`echo '$''{'fam_cv_bindresvport_in_in_h'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
