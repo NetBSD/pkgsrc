@@ -237,9 +237,6 @@
 /* Define to 1 if you have the <sha1.h> header file. */
 #undef HAVE_SHA1_H
 
-/* Define to 1 if you have the <sha2.h> header file. */
-#undef HAVE_SHA2_H
-
 /* Define to 1 if you have the `snprintf' function. */
 #undef HAVE_SNPRINTF
 
