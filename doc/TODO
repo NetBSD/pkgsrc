@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2571 2004/11/29 04:53:04 tv Exp $
+$NetBSD: TODO,v 1.2572 2004/11/29 05:24:07 taca Exp $
 
 Suggested new packages
 ======================
@@ -615,7 +615,6 @@ Suggested package updates
 	o ispell-gaeilge-3.5
 	o ispman-1.1.1
 	o isync-1.0.0
-	o ja-mh-3.05
 	o ja-ptex-bin-3.1.4
 	o ja-ptex-share-2.2
 	o ja-shinonome-0.9.11
