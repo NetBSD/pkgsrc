@@ -1,14 +1,21 @@
-$NetBSD: patch-ab,v 1.19 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-ab,v 1.20 2005/03/07 23:29:49 tv Exp $
 
---- configure.ac.orig	2004-08-16 15:12:06.000000000 +0200
+--- configure.ac.orig	2004-08-16 09:12:06.000000000 -0400
 +++ configure.ac
-@@ -469,8 +469,15 @@ mips-sony-bsd|mips-sony-newsos4)
+@@ -469,8 +469,22 @@ mips-sony-bsd|mips-sony-newsos4)
  	AC_DEFINE(MISSING_HOWMANY)
  	AC_DEFINE(MISSING_FD_MASK)
  	;;
 +
-+*-*-interix3)
++*-*-interix3*)
++	AC_DEFINE(HAVE_INTERIX)
++	AC_DEFINE(DISABLE_FD_PASSING)
++	AC_DEFINE(DISABLE_SHADOW)
++	AC_DEFINE(IP_TOS_IS_BROKEN)
 +	AC_DEFINE(MISSING_HOWMANY)
++	AC_DEFINE(NO_IPPORT_RESERVED_CONCEPT)
++	AC_DEFINE(SETGROUPS_NOOP)
++	AC_DEFINE(USE_PIPES)
 +	;;
  esac
  
@@ -18,7 +25,7 @@ $NetBSD: patch-ab,v 1.19 2004/08/31 11:27:12 wiz Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -2885,9 +2892,17 @@ AC_TRY_COMPILE([
+@@ -2885,9 +2899,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -38,7 +45,7 @@ $NetBSD: patch-ab,v 1.19 2004/08/31 11:27:12 wiz Exp $
  	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location")
  fi	
  
-@@ -2910,9 +2925,17 @@ AC_TRY_COMPILE([
+@@ -2910,9 +2932,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -58,7 +65,7 @@ $NetBSD: patch-ab,v 1.19 2004/08/31 11:27:12 wiz Exp $
  	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location")
  fi	
  
-@@ -2953,7 +2976,7 @@ echo "OpenSSH has been configured with t
+@@ -2953,7 +2983,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
