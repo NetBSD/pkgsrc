@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3941 2003/12/03 21:07:59 jschauma Exp $
+$NetBSD: CHANGES,v 1.3942 2003/12/03 21:23:32 reed Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4803,3 +4803,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gss-0.0.6 [xtraeme 2003-12-03]
 	Added p5-Digest-BubbleBabble-0.01 [heinz 2003-12-03]
 	Updated mpi-ch to 1.2.5.2 [jschauma 2003-12-03]
+	Updated libtool to 1.4.20010614nb17 [reed 2003-12-03]
+	Updated libtool-base to 1.4.20010614nb17 [reed 2003-12-03]
+	Updated libtool-info to 1.4.20010614nb17 [reed 2003-12-03]
