@@ -3,4 +3,3 @@
        able  optimization.  This implementation is ``new curses''
        (ncurses) and is the approved replacement for 4.4BSD clas-
        sic curses, which is being discontinued.
-
