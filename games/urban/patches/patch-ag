@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/04/16 18:18:29 xtraeme Exp $
+$NetBSD: patch-ag,v 1.2 2005/03/25 02:56:42 wiz Exp $
 
---- src/engine/game.cc.orig	Mon Jun  7 17:20:59 1999
-+++ src/engine/game.cc	Sun Jan 25 23:33:14 2004
-@@ -93,10 +93,10 @@
+--- src/engine/game.cc.orig	1999-06-07 17:20:59.000000000 +0200
++++ src/engine/game.cc
+@@ -93,10 +93,10 @@ int MaxLevelNum	= 1;
  char *demo_filename;
  
  struct PlayerData DefaultPData = {
@@ -13,3 +13,5 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/04/16 18:18:29 xtraeme Exp $
 -        {300}, {0}
 +        300, 0
  };
+ 
+ 
