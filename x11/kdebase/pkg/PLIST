@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/07/13 22:01:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 1998/07/14 20:28:23 tron Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kcmkpanel
@@ -923,6 +923,7 @@ cgi-bin/helpindex
 @dirrm share/wallpapers
 @dirrm share/doc/HTML/en/kwm
 @dirrm share/doc/HTML/en/kvt
+@dirrm share/doc/HTML/en/kpanel
 @dirrm share/doc/HTML/en/kmenuedit
 @dirrm share/doc/HTML/en/kmedia
 @dirrm share/doc/HTML/en/kfontmanager
@@ -949,8 +950,10 @@ cgi-bin/helpindex
 @dirrm share/doc/HTML/de
 @dirrm share/doc/HTML/no/kcontrol/kcmsyssound
 @dirrm share/doc/HTML/no/kcontrol
+@dirrm share/doc/HTML/no
 @dirrm share/apps/kwm/pics
 @dirrm share/apps/kwm
+@dirrm share/apps/kscreensaver
 @dirrm share/apps/kpanel/pics/mini
 @dirrm share/apps/kpanel/pics
 @dirrm share/apps/kpanel
