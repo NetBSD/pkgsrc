@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5730 2004/04/24 18:11:18 kim Exp $
+$NetBSD: CHANGES,v 1.5731 2004/04/25 00:35:06 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2234,3 +2234,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Xrandr to 1.0.2 [minskim 2004-04-24]
 	Updated bbweather to 0.6.2 [jschauma 2004-04-24]
 	Added ices-mp3-0.3 [kim 2004-04-24]
+	Added mstream-0.2 [kim 2004-04-24]
