@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/21 10:42:00 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/02 23:46:08 wiz Exp $
 
 DISTNAME=		bonobo-conf-0.14
 PKGREVISION=		2
@@ -9,7 +9,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Bonobo configuration system
 
-BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
@@ -19,9 +18,6 @@ GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bonobo-conf
