@@ -1,37 +1,234 @@
-$NetBSD: patch-ah,v 1.2 1998/08/07 11:10:04 agc Exp $
+$NetBSD$
 
---- configure.in.original	Thu Dec 11 18:14:48 1997
-+++ configure.in	Thu Dec 11 18:14:58 1997
-@@ -166,6 +166,7 @@
- *-*-netbsd*)
- 	V_TARCMD="tar -h -c -f"
--	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib"
-+	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lossaudio"
-+	V_OBJ_AUDIO="audio-voxware.o"
- 	;;
- *-*-hpux*)
- 	V_DEFINE="$V_DEFINE"
---- configure.original	Thu Dec 11 18:21:14 1997
-+++ configure	Thu Dec 11 18:22:08 1997
-@@ -2179,6 +2179,7 @@
- *-*-netbsd*)
- 	V_TARCMD="tar -h -c -f"
--	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib"
-+	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lossaudio"
-+	V_OBJ_AUDIO="audio-voxware.o"
- 	;;
- *-*-hpux*)
- 	V_DEFINE="$V_DEFINE"
---- audio-voxware.cc.original	Thu Nov 20 14:44:07 1997
-+++ audio-voxware.cc	Thu Dec 11 17:47:55 1997
-@@ -44,8 +44,10 @@
- #include <sys/uio.h>
- #include <unistd.h>
- #include <machine/soundcard.h>
-+#elif defined(__NetBSD__)
-+#include <soundcard.h>
- #else
- #include <sys/soundcard.h>
- #endif
- #include "audio.h"
- #include "Tcl.h"
+--- configure.in.tk.orig	Wed Dec  8 11:19:14 1999
++++ configure.in.tk	Wed Dec  8 11:18:55 1999
+@@ -2,18 +2,19 @@
+ dnl $Header: configure.in.tk,v 1.2 96/05/16 01:03:40 van Exp $ (LBL)
+ 
+ AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
++tclposs="tcl8.0 tcl80 tcl"
+ if test "$d" != "" ; then 
+ 	if test ! -d $d ; then 
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TCL=-I$d/include
+-	if test ! -r $d/include/tcl.h ; then
+-		echo "can't find tcl.h in $d/include"
++	V_INCLUDE_TCL=-I$d
++	if test ! -r $d/tcl.h ; then
++		echo "can't find tcl.h in $d"
+ 		exit 1
+ 	fi
+-	places="$d/lib/libtcl7.5.so \
+-		$d/lib/libtcl7.5.a \
++	places="$d/lib/libtcl8.0.so \
++		$d/lib/libtcl8.0.a \
+ 		$d/lib/libtcl.so \
+ 		$d/lib/libtcl.a"
+ 	V_LIB_TCL=FAIL
+@@ -27,7 +28,7 @@
+ 		echo "can't find libtcl.a in $d/lib"
+ 		exit 1
+ 	fi
+-	places="$d/lib/tcl7.5 \
++	places="$d/lib/tcl8.0 \
+ 		$d/lib/tcl"
+ 	V_LIBRARY_TCL=FAIL
+ 	for dir in $places; do
+@@ -44,13 +45,16 @@
+ 	AC_TEST_CPP([#include <tcl.h>], V_INCLUDE_TCL="", V_INCLUDE_TCL=FAIL)
+ 	if test "$V_INCLUDE_TCL" = FAIL; then
+ 		echo "checking for tcl.h"
+-		places="$PWD/../tcl7.5 \
+-			/usr/src/local/tcl7.5 \
+-			/import/tcl/include/tcl7.5 \
++		places="$PWD/../tcl8.0 \
++			/usr/src/local/tcl8.0 \
++			/import/tcl/include/tcl8.0 \
+ 			$prefix/include \
+ 			$x_includes/tk \
+ 			$x_includes \
++			/usr/pkg/include \
++			/usr/pkg/include/tcl8.0 \
+ 			/usr/local/include \
++			/usr/local/include/tcl8.0 \
+ 			/usr/contrib/include \
+ 			/usr/include"
+ 		for dir in $places; do
+@@ -64,26 +68,27 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	AC_CHECK_LIB(tcl7.5, main, V_LIB_TCL="-ltcl7.5", V_LIB_TCL="FAIL")
++	AC_CHECK_LIB(tcl80, main, V_LIB_TCL="-ltcl80", V_LIB_TCL="FAIL")
+ 	if test "$V_LIB_TCL" = FAIL; then
+ 		echo "checking for libtcl.a"
+ 		places="\
+ 			$prefix/lib \
+ 			$x_libraries \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/local/lib \
+ 			/usr/lib \
+-			$PWD/../tcl7.5 \
+-			/usr/src/local/tcl7.5 \
+-			/import/tcl/lib/tcl7.5 \
++			$PWD/../tcl8.0 \
++			/usr/src/local/tcl8.0 \
++			/import/tcl/lib/tcl8.0 \
+ 			"
+ 		for dir in $places; do
+-			if test -r $dir/libtcl7.5.so -o -r $dir/libtcl7.5.a; then
+-				V_LIB_TCL="-L$dir -ltcl7.5"
++			if test -r $dir/libtcl80.so -o -r $dir/libtcl80.a; then
++				V_LIB_TCL="-Wl,-R$dir -L$dir -ltcl80"
+ 				break
+ 			fi
+ 			if test -r $dir/libtcl.so -o -r $dir/libtcl.a; then
+-				V_LIB_TCL="-L$dir -ltcl"
++				V_LIB_TCL="-Wl,-R$dir -L$dir -ltcl"
+ 				break
+ 			fi
+ 		done
+@@ -98,13 +103,14 @@
+ 	fi
+ 	echo "checking for tcl/init.tcl"
+ 	V_LIBRARY_TCL=FAIL
+-	places="/usr/local/lib/tcl7.5 \
+-		/usr/contrib/lib/tcl7.5 \
+-		/usr/lib/tcl7.5 \
+-		/usr/lib/tk/tcl7.5 \
+-		/import/tcl/lib/tcl7.5 \
+-		$prefix/lib/tcl7.5 \
+-		$x_libraries/tcl7.5 \
++	places="/usr/local/lib/tcl8.0 \
++		/usr/pkg/lib/tcl8.0 \
++		/usr/contrib/lib/tcl8.0 \
++		/usr/lib/tcl8.0 \
++		/usr/lib/tk/tcl8.0 \
++		/import/tcl/lib/tcl8.0 \
++		$prefix/lib/tcl8.0 \
++		$x_libraries/tcl8.0 \
+ 		/usr/local/lib/tcl \
+ 		/usr/lib/tcl \
+ 		/usr/lib/tk/tcl \
+@@ -128,18 +134,19 @@
+ AC_SUBST(V_LIBRARY_TCL)
+ 
+ AC_ARG_WITH(tk,	--with-tk=path	specify a pathname for tk, d=$withval, d="")
++tkposs="tk8.0 tk80 tk"
+ if test "$d" != "" ; then 
+ 	if test ! -d $d ; then 
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TK=-I$d/include
+-	if test ! -r $d/include/tk.h ; then
+-		echo "can't find tk.h in $d/include"
++	V_INCLUDE_TK=-I$d
++	if test ! -r $d/tk.h ; then
++		echo "can't find tk.h in $d"
+ 		exit 1
+ 	fi
+-	places="$d/lib/libtk4.1.so \
+-		$d/lib/libtk4.1.a \
++	places="$d/lib/libtk8.0.so \
++		$d/lib/libtk8.0.a \
+ 		$d/lib/libtk.so \
+ 		$d/lib/libtk.a"
+ 	V_LIB_TK=FAIL
+@@ -153,7 +160,7 @@
+ 		echo "can't find libtk.a in $d/lib"
+ 		exit 1
+ 	fi
+-	places="$d/lib/tk4.1 \
++	places="$d/lib/tk8.0 \
+ 		$d/lib/tk"
+ 	V_LIBRARY_TK=FAIL
+ 	for dir in $places; do
+@@ -170,18 +177,21 @@
+ 	AC_TEST_CPP([#include <tk.h>], V_INCLUDE_TK="", V_INCLUDE_TK=FAIL)
+ 	if test "$V_INCLUDE_TK" = FAIL; then
+ 		echo "checking for tk.h"
+-		V_INCLUDE_TK=""
++		V_INCLUDE_TK="FAIL"
+ 		places="\
+ 			$prefix/include \
++			/usr/pkg/include \
++			/usr/pkg/include/tk8.0 \
+ 			/usr/local/include \
++			/usr/local/include/tk8.0 \
+ 			/usr/contrib/include \
+ 			/usr/include/tcl \
+ 			/usr/include\
+ 			$x_includes/tk \
+ 			$x_includes \
+-			$PWD/../tk4.1 \
+-			/usr/src/local/tk4.1 \
+-			/import/tcl/include/tk4.1 \
++			$PWD/../tk8.0 \
++			/usr/src/local/tk8.0 \
++			/import/tcl/include/tk8.0 \
+ 			"
+ 		for dir in $places; do
+ 			if test -r $dir/tk.h ; then
+@@ -194,25 +204,26 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	AC_CHECK_LIB(tk4.1, main, V_LIB_TK="-ltk4.1", V_LIB_TK="FAIL")
++	AC_CHECK_LIB(tk80, main, V_LIB_TK="-ltk80", V_LIB_TK="FAIL")
+ 	if test "$V_LIB_TK" = FAIL; then
+ 		echo "checking for libtk.a"
+ 		places="/usr/local/lib \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/lib \
+ 			/usr/lib/tk \
+ 			/import/tcl/lib \
+-			$PWD/../tk4.1 \
+-			/usr/src/local/tk4.1 \
++			$PWD/../tk8.0 \
++			/usr/src/local/tk8.0 \
+ 			$prefix/lib \
+ 			$x_libraries"
+ 		for dir in $places; do
+-			if test -r $dir/libtk4.1.so -o -r $dir/libtk4.1.a; then
+-				V_LIB_TK="-L$dir -ltk4.1"
++			if test -r $dir/libtk80.so -o -r $dir/libtk80.a; then
++				V_LIB_TK="-Wl,-R$dir -L$dir -ltk80"
+ 				break
+ 			fi
+ 			if test -r $dir/libtk.so -o -r $dir/libtk.a; then
+-				V_LIB_TK="-L$dir -ltk"
++				V_LIB_TK="-Wl,-R$dir -L$dir -ltk"
+ 				break
+ 			fi
+ 		done
+@@ -227,15 +238,16 @@
+ 	fi
+ 	echo "checking for tk/tk.tcl"
+ 	V_LIBRARY_TK=FAIL
+-	places="/usr/local/lib/tk4.1 \
+-		/usr/contrib/lib/tk4.1 \
+-		/usr/lib/tk4.1 \
+-		/usr/lib/tk/tk4.1 \
+-		/import/tcl/lib/tk4.1 \
+-		$prefix/lib/tk4.1 \
+-		$x_libraries/tk4.1 \
+-		$PWD/../tk4.1/library \
+-		/usr/src/local/tk4.1/library \
++	places="/usr/local/lib/tk8.0 \
++		/usr/pkg/lib/tk8.0 \
++		/usr/contrib/lib/tk8.0 \
++		/usr/lib/tk8.0 \
++		/usr/lib/tk/tk8.0 \
++		/import/tcl/lib/tk8.0 \
++		$prefix/lib/tk8.0 \
++		$x_libraries/tk8.0 \
++		$PWD/../tk8.0/library \
++		/usr/src/local/tk8.0/library \
+ 		/usr/local/lib/tk \
+ 		/usr/lib/tk \
+ 		/usr/lib/tk/tk \
