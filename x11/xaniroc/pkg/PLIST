@@ -1,1 +1,3 @@
+@comment $NetBSD: PLIST,v 1.2 1999/09/28 00:55:54 simonb Exp $
 bin/xaniroc
+man/cat1/xaniroc.0
