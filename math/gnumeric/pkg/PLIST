@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2000/11/25 14:21:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.15 2000/11/26 13:29:02 mycroft Exp $
 bin/gnumeric
 etc/CORBA/servers/gnumeric.gnorba
 lib/gnumeric/0.59/plugins/gnum_applix.la
@@ -13,27 +13,27 @@ lib/gnumeric/0.59/plugins/gnum_sylk.la
 lib/gnumeric/0.59/plugins/gnum_xbase.la
 lib/gnumeric/0.59/plugins/gnum_xml2.la
 lib/gnumeric/0.59/plugins/libgnum_applix.a
-lib/gnumeric/0.59/plugins/libgnum_applix.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_applix.so
 lib/gnumeric/0.59/plugins/libgnum_dif.a
-lib/gnumeric/0.59/plugins/libgnum_dif.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_dif.so
 lib/gnumeric/0.59/plugins/libgnum_gb.a
-lib/gnumeric/0.59/plugins/libgnum_gb.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_gb.so
 lib/gnumeric/0.59/plugins/libgnum_html.a
-lib/gnumeric/0.59/plugins/libgnum_html.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_html.so
 lib/gnumeric/0.59/plugins/libgnum_lotus.a
-lib/gnumeric/0.59/plugins/libgnum_lotus.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_lotus.so
 lib/gnumeric/0.59/plugins/libgnum_numtheory.a
-lib/gnumeric/0.59/plugins/libgnum_numtheory.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_numtheory.so
 lib/gnumeric/0.59/plugins/libgnum_oleo.a
-lib/gnumeric/0.59/plugins/libgnum_oleo.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_oleo.so
 lib/gnumeric/0.59/plugins/libgnum_sc.a
-lib/gnumeric/0.59/plugins/libgnum_sc.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_sc.so
 lib/gnumeric/0.59/plugins/libgnum_sylk.a
-lib/gnumeric/0.59/plugins/libgnum_sylk.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_sylk.so
 lib/gnumeric/0.59/plugins/libgnum_xbase.a
-lib/gnumeric/0.59/plugins/libgnum_xbase.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_xbase.so
 lib/gnumeric/0.59/plugins/libgnum_xml2.a
-lib/gnumeric/0.59/plugins/libgnum_xml2.so.0.0
+lib/gnumeric/0.59/plugins/libgnum_xml2.so
 lib/gnumericConf.sh
 share/gnome/apps/Applications/gnumeric.desktop
 share/gnome/help/gnumeric/C/analysis-tools.html
