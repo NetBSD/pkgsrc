@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/14 01:23:13 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/15 23:48:03 wiz Exp $
+bin/charmap
+bin/gnome-character-map
 bin/gucharmap
 include/gucharmap/gucharmap-charmap.h
 include/gucharmap/gucharmap-mini-fontsel.h
@@ -64,4 +66,6 @@ share/omf/gucharmap/gucharmap-C.omf
 share/pixmaps/gucharmap.png
 @dirrm share/omf/gucharmap
 @dirrm share/gnome/help/gucharmap/C/figures
+@dirrm share/gnome/help/gucharmap/C
+@dirrm share/gnome/help/gucharmap
 @dirrm include/gucharmap
