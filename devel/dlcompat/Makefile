@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/12/22 19:04:07 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/08 23:00:26 schmonz Exp $
 #
 
-DISTNAME=	dlcompat-20021117
+DISTNAME=	dlcompat-20030522
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fink/}
 
