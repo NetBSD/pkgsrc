@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/10/09 07:14:24 grant Exp $
+# $NetBSD: Makefile,v 1.15 2002/11/25 11:01:14 schmonz Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -15,13 +15,22 @@ COMMENT=		Linux compatibility package - development tools
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		bin86.rpm binutils.rpm cpp.rpm g77.rpm gcc.rpm \
-			glibc-devel-2.2.4-77.i386.rpm gpp.rpm make.rpm
+RPMFILES=		binutils.rpm cpp.rpm g77.rpm gcc.rpm gpp.rpm make.rpm
+
+.include "../suse_linux/arch.mk"
+
+.if ${SUSE_ARCH} == "i386"
+RPMFILES+=      glibc-devel-2.2.4-77.${SUSE_ARCH}.rpm bin86.rpm
+.elif ${SUSE_ARCH} == "ppc"
+RPMFILES+=      glibc-devel-2.2.4-66.${SUSE_ARCH}.rpm
+.else
+RPMFILES+=      glibc.rpm
+.endif
 
 .include "../suse_linux/Makefile.common"

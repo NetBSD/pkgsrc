@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/31 19:57:32 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/25 11:01:17 schmonz Exp $
 
 DISTNAME=		slang
 PKGNAME=		suse_slang-${SUSE_VERSION}
@@ -12,7 +12,7 @@ COMMENT=		Linux compatibility package for slang library
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
