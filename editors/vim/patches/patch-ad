@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1999/02/12 21:09:28 tron Exp $
+
+--- feature.h.orig	Sun Aug 23 17:38:30 1998
++++ feature.h	Fri Feb 12 19:28:51 1999
+@@ -292,7 +292,7 @@
+  *			(used only with NO_BUILTIN_TCAPS not defined).
+  */
+ #ifdef HAVE_TGETENT
+-/* #define NO_BUILTIN_TCAPS */
++# define NO_BUILTIN_TCAPS
+ #endif
+ 
+ #ifndef NO_BUILTIN_TCAPS
