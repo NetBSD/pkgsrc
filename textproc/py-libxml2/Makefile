@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/08/24 11:43:32 drochner Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2004/11/30 00:04:43 salo Exp $
 
-DISTNAME=	libxml2-2.6.12
+DISTNAME=	libxml2-2.6.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}

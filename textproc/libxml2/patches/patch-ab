@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2004/08/04 11:20:00 wiz Exp $
+$NetBSD: patch-ab,v 1.9.2.1 2004/11/30 00:04:43 salo Exp $
 
---- configure.orig	2004-07-05 19:35:47.000000000 +0200
+--- configure.orig	Wed Nov 10 15:33:00 2004
 +++ configure
-@@ -26250,7 +26250,7 @@ fi
+@@ -26449,7 +26449,7 @@ fi
  fi
  
  
