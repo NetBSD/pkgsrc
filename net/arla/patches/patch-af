@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+$NetBSD: patch-af,v 1.2 2000/08/15 16:08:25 wennmach Exp $
 
 Do not attempt to install CellServDB, ThisCell, arla.conf. Only install
 the default files and tell the user to customize them. This avoids PLIST
@@ -6,7 +6,7 @@ magic and assures that no customized files will be removed on pkg_delete.
 
 --- conf/Makefile.in.orig	Tue May 30 22:42:05 2000
 +++ conf/Makefile.in		Tue May 30 22:45:45 2000
-@@ -26,24 +26,13 @@
+@@ -26,19 +26,13 @@
  		for x in $$CONF_FILES; do \
  		  echo $(INSTALL_DATA) $(srcdir)/$$x $(DESTDIR)$(sysconfdir)/$$x.default; \
  		  $(INSTALL_DATA) $(srcdir)/$$x $(DESTDIR)$(sysconfdir)/$$x.default; \
@@ -17,12 +17,7 @@ magic and assures that no customized files will be removed on pkg_delete.
 -		    $(INSTALL_DATA) $(srcdir)/$$x $(DESTDIR)$(sysconfdir)/$$x; \
 -		  fi; \
  		done
--		if test -f $(DESTDIR)$(sysconfdir)/SuidCells; then \
--		  echo "$@ will not overwrite $(DESTDIR)$(sysconfdir)/SuidCells"; \
--	        else \
--		  > $(DESTDIR)$(sysconfdir)/SuidCells; \
--		fi
-+		> $(DESTDIR)$(sysconfdir)/SuidCells.default; \
++		> $(DESTDIR)$(sysconfdir)/SuidCells.default
  
  uninstall:
  		CONF_FILES='$(CONF_FILES)'; \
