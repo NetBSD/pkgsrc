@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1 1999/01/04 22:37:31 tv Exp $
+
+--- ./ld/configure.host.orig	Fri May  1 11:48:48 1998
++++ ./ld/configure.host	Wed Dec 22 09:52:16 1999
+@@ -16,12 +16,7 @@
+ 
+ case "${host}" in
+ 
+-alpha*-*-linux-gnu*)
+-  HOSTING_CRT0='-dynamic-linker `egrep "ld[^ ]*\.so" \`gcc --print-file-name=specs\` | sed -e "s,.*-dynamic-linker[ 	][ 	]*\(.*/ld[^ ]*.so..\).*,\1,"` `gcc --print-file-name=crt1.o` `gcc --print-file-name=crti.o` `if [ -f ../gcc/crtbegin.o ]; then echo ../gcc/crtbegin.o; else gcc --print-file-name=crtbegin.o; fi`'
+-  HOSTING_LIBS='`if [ -f ../gcc/libgcc.a ] ; then echo ../gcc/libgcc.a ; else gcc -print-libgcc-file-name; fi` -L`dirname \`gcc --print-file-name=libc.so\`` -lc `if [ -f ../gcc/libgcc.a ] ; then echo ../gcc/libgcc.a ; else gcc -print-libgcc-file-name; fi` `if [ -f ../gcc/crtend.o ]; then echo ../gcc/crtend.o; else gcc --print-file-name=crtend.o; fi` `gcc --print-file-name=crtn.o`'
+-  ;;
+-
+-alpha*-*-netbsd*)
++*-*-netbsd*)
+   # The new BSD `make' has a bug: it doesn't pass empty arguments in
+   # shell commands.  So we need to make this value non-empty in order
+   # for the genscripts.sh call to work.  There's nothing magic about
+@@ -30,12 +25,17 @@
+   HOSTING_CRT0=/usr/lib/crt0.o
+   ;;
+ 
++alpha*-*-linux-gnu*)
++  HOSTING_CRT0='-dynamic-linker `egrep "ld[^ ]*\.so" \`gcc --print-file-name=specs\` | sed -e "s,.*-dynamic-linker[ 	][ 	]*\(.*/ld[^ ]*.so..\).*,\1,"` `gcc --print-file-name=crt1.o` `gcc --print-file-name=crti.o` `if [ -f ../gcc/crtbegin.o ]; then echo ../gcc/crtbegin.o; else gcc --print-file-name=crtbegin.o; fi`'
++  HOSTING_LIBS='`if [ -f ../gcc/libgcc.a ] ; then echo ../gcc/libgcc.a ; else gcc -print-libgcc-file-name; fi` -L`dirname \`gcc --print-file-name=libc.so\`` -lc `if [ -f ../gcc/libgcc.a ] ; then echo ../gcc/libgcc.a ; else gcc -print-libgcc-file-name; fi` `if [ -f ../gcc/crtend.o ]; then echo ../gcc/crtend.o; else gcc --print-file-name=crtend.o; fi` `gcc --print-file-name=crtn.o`'
++  ;;
++
+ alpha*-*-*)
+   HOSTING_CRT0=/usr/ccs/lib/crt0.o
+   NATIVE_LIB_DIRS=/usr/ccs/lib
+   ;;
+ 
+-i[3456]86-*-bsd* | i[3456]86-*-freebsd* | i[3456]86-*-netbsd*)
++i[3456]86-*-bsd* | i[3456]86-*-freebsd*)
+   # The new BSD `make' has a bug: it doesn't pass empty arguments in
+   # shell commands.  So we need to make this value non-empty in order
+   # for the genscripts.sh call to work.  There's nothing magic about

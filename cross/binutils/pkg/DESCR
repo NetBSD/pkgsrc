@@ -1,0 +1,3 @@
+The cross-binutils pkg is used only by the other `cross' pkgs.  The
+binutils provides various binary manipulation utilities as well as the GNU
+linker.  (The assembler is bundled with each individual cross pkg.)

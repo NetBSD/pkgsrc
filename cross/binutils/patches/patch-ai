@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 1998/08/12 12:30:59 tv Exp $
+$NetBSD: patch-ai,v 1.1 1999/01/04 22:37:32 tv Exp $
+
+XXX - this isn't quite right, but is necessary for now to make DJGPP work.
 
 --- ld/scripttempl/i386go32.sc.orig	Sun Aug  2 15:02:47 1998
 +++ ld/scripttempl/i386go32.sc	Sun Aug  2 15:02:59 1998

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/12 12:31:00 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/04 22:37:34 tv Exp $
 ${TARGET_ARCH}/bin/stubedit
 ${TARGET_ARCH}/bin/stubify
 ${TARGET_ARCH}/include/_ansi
@@ -28,11 +28,12 @@ ${TARGET_ARCH}/include/flexlexe.h
 ${TARGET_ARCH}/include/float.h
 ${TARGET_ARCH}/include/fnmatch.h
 ${TARGET_ARCH}/include/ftw.h
-${TARGET_ARCH}/include/getpages.h
+${TARGET_ARCH}/include/getpagesize.h
 ${TARGET_ARCH}/include/glob.h
 ${TARGET_ARCH}/include/go32.h
 ${TARGET_ARCH}/include/gppconio.h
 ${TARGET_ARCH}/include/grp.h
+${TARGET_ARCH}/include/ieeefp.h
 ${TARGET_ARCH}/include/inlines/_inline
 ${TARGET_ARCH}/include/inlines/ctype.ha
 ${TARGET_ARCH}/include/inlines/ctype.hd
@@ -107,12 +108,14 @@ ${TARGET_ARCH}/include/sys/param.h
 ${TARGET_ARCH}/include/sys/resource.h
 ${TARGET_ARCH}/include/sys/segments.h
 ${TARGET_ARCH}/include/sys/stat.h
+${TARGET_ARCH}/include/sys/sysmacros.h
 ${TARGET_ARCH}/include/sys/system.h
 ${TARGET_ARCH}/include/sys/time.h
 ${TARGET_ARCH}/include/sys/timeb.h
 ${TARGET_ARCH}/include/sys/times.h
 ${TARGET_ARCH}/include/sys/types.h
 ${TARGET_ARCH}/include/sys/utsname.h
+${TARGET_ARCH}/include/sys/version.h
 ${TARGET_ARCH}/include/sys/vfs.h
 ${TARGET_ARCH}/include/sys/wait.h
 ${TARGET_ARCH}/include/termios.h
@@ -122,6 +125,8 @@ ${TARGET_ARCH}/include/unistd.h
 ${TARGET_ARCH}/include/utime.h
 ${TARGET_ARCH}/include/values.h
 ${TARGET_ARCH}/include/varargs.h
+${TARGET_ARCH}/include/wchar.h
+${TARGET_ARCH}/include/wctype.h
 ${TARGET_ARCH}/lib/crt0.o
 ${TARGET_ARCH}/lib/dxe.ld
 ${TARGET_ARCH}/lib/gcrt0.o
@@ -129,7 +134,6 @@ ${TARGET_ARCH}/lib/libc.a
 ${TARGET_ARCH}/lib/libdbg.a
 ${TARGET_ARCH}/lib/libemu.a
 ${TARGET_ARCH}/lib/libg.a
-${TARGET_ARCH}/lib/libgcc.a
 ${TARGET_ARCH}/lib/libm.a
 ${TARGET_ARCH}/lib/libpc.a
 ${TARGET_ARCH}/lib/libwmemu.a

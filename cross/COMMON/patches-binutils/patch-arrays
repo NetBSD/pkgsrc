@@ -1,0 +1,22 @@
+--- ./bfd/libbfd-in.h.orig	Fri May  1 11:48:12 1998
++++ ./bfd/libbfd-in.h	Mon Dec 28 17:43:21 1998
+@@ -496,7 +498,7 @@
+ 
+ /* List of supported target vectors, and the default vector (if
+    bfd_default_vector[0] is NULL, there is no default).  */
+-extern const bfd_target * const bfd_target_vector[];
++extern const bfd_target * const *bfd_target_vector;
+ extern const bfd_target *bfd_default_vector[];
+ 
+ /* Functions shared by the ECOFF and MIPS ELF backends, which have no
+--- ./bfd/libbfd.h.orig	Fri May  1 11:48:12 1998
++++ ./bfd/libbfd.h	Mon Dec 28 17:43:21 1998
+@@ -496,7 +498,7 @@
+ 
+ /* List of supported target vectors, and the default vector (if
+    bfd_default_vector[0] is NULL, there is no default).  */
+-extern const bfd_target * const bfd_target_vector[];
++extern const bfd_target * const *bfd_target_vector;
+ extern const bfd_target *bfd_default_vector[];
+ 
+ /* Functions shared by the ECOFF and MIPS ELF backends, which have no
