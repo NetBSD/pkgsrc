@@ -1,41 +1,46 @@
-$NetBSD: patch-aa,v 1.7 2002/01/23 02:22:21 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2004/02/22 03:13:07 jlam Exp $
 
---- Makefile.in.orig	Fri Jan 18 22:19:33 2002
+--- Makefile.in.orig	Thu Nov 27 15:51:57 2003
 +++ Makefile.in
-@@ -30,3 +30,3 @@
- datadir = @datadir@
--sysconfdir = @sysconfdir@
-+sysconfdir = ${prefix}/share/examples/courier
- sharedstatedir = @sharedstatedir@
-@@ -93,7 +93,7 @@
+@@ -137,9 +137,9 @@ SUBDIRS = numlib @DBSUBDIR@ soxwrap unic
+ CLEANFILES = $(databin_SCRIPTS) $(man_MANS) $(sysconf_DATA)
  databindir = $(datadir)
 -databin_SCRIPTS = mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb
 +databin_SCRIPTS = mkimapdcert mkpop3dcert
  
--bin_PROGRAMS = imapd pop3d maildirmake
--sbin_PROGRAMS = imaplogin pop3login userdbpw
--man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 deliverquota.8 maildirmake.1 imapd.8 mkimapdcert.8 mkpop3dcert.8
-+bin_PROGRAMS = imapd pop3d
-+sbin_PROGRAMS = imaplogin pop3login
+-binPROGRAMS = imapd pop3d maildirmake deliverquota maildirkw
+-sbinPROGRAMS = imaplogin pop3login userdbpw
+-libexecPROGRAMS = makedatprog couriertcpd courierlogger
++binPROGRAMS = imapd pop3d
++sbinPROGRAMS = imaplogin pop3login
++libexecPROGRAMS = couriertcpd courierlogger
+ 
+ bin_PROGRAMS = @binPROGRAMS_exec@
+@@ -149,5 +149,5 @@ libexec_PROGRAMS = @libexecPROGRAMS_exec
+ EXTRA_PROGRAMS = 
+ 
+-man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 deliverquota.8 maildirmake.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
 +man_MANS = couriertcpd.1 courier-imapd.8 mkimapdcert.8 mkpop3dcert.8
  
-@@ -109,6 +109,6 @@
+ 
+@@ -161,5 +161,5 @@ EXTRA_DIST = 00README.NOW.OR.SUFFER READ
+ 
  sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
 -	imapd.cnf pop3d.cnf quotawarnmsg.example
 +	imapd.cnf pop3d.cnf
  
  libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
--libexec_PROGRAMS = makedatprog couriertcpd deliverquota logger
-+libexec_PROGRAMS = couriertcpd logger
- 
-@@ -791,4 +791,4 @@
+@@ -927,6 +927,6 @@ maildirkw.1: maildir/maildirkw.1
+ 	cp $(srcdir)/maildir/maildirkw.1 .
  
 -imapd.8: imap/imapd.8
 -	cp imap/imapd.8 .
 +courier-imapd.8: imap/imapd.8
-+	cp imap/imapd.8 $@
++	cp imap/imapd.8 ./$@
  
-@@ -818,13 +818,2 @@
+ mkimapdcert: imap/mkimapdcert
+@@ -954,20 +954,9 @@ quotawarnmsg.example: maildir/quotawarnm
+ 
  install-exec-local:
 -	$(mkinstalldirs) $(DESTDIR)$(libexecdir)/authlib
 -	for f in `cat authlib/installlist` dummy ; do \
@@ -46,19 +51,23 @@ $NetBSD: patch-aa,v 1.7 2002/01/23 02:22:21 jlam Exp $
 -		test "$$f" = "dummy" && continue ; \
 -		$(INSTALL_SCRIPT) authlib/$$f \
 -			$(DESTDIR)$(libexecdir)/authlib/$$f ; done
--	$(mkinstalldirs) $(DESTDIR)$(datadir)
--	$(INSTALL_SCRIPT) userdb/userdb.pl $(DESTDIR)$(datadir)/userdb
+-	$(mkinstalldirs) $(DESTDIR)$(databindir)
+-	$(INSTALL_SCRIPT) userdb/userdb.pl $(DESTDIR)$(databindir)/userdb
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
  	test ! -x tcpd/couriertls || $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) \
-@@ -832,3 +821,3 @@
+ 		tcpd/couriertls $(DESTDIR)$(bindir)/couriertls
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
 -	for f in mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb userdb ; \
 +	for f in mkimapdcert mkpop3dcert ; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
-@@ -837,3 +826,2 @@
+ 		$(LN_S) $(databindir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
+@@ -975,28 +964,8 @@ install-exec-local:
+ 
  install-exec-hook:
 -	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
  
-@@ -842,30 +830,6 @@
+ # If authlib built authpam, install the PAM configuration file
+ 
  install-data-local: install-man
 -	for f in `cat authlib/modulelist ; . authlib/authdaemonrc ; echo $$authmodulelist ` ; do \
 -		test "$$f" = "authpam" || continue ; \
@@ -81,12 +90,3 @@ $NetBSD: patch-aa,v 1.7 2002/01/23 02:22:21 jlam Exp $
 -	@echo "Do not forget to run make install-configure"
  
  uninstall-local:
--	rm -f $(DESTDIR)$(man8dir)/pw2userdb.8
--	rm -f $(DESTDIR)$(man8dir)/vchkpw2userdb.8
--	rm -f $(DESTDIR)$(datadir)/userdb
--	for f in userdb mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb ; \
-+	for f in mkimapdcert mkpop3dcert ; \
- 		do rm -f $(DESTDIR)$(sbindir)/$$f ; done
--	for f in `cat authlib/installlist authlib/installlist.sh` ; do \
--			rm -f $(DESTDIR)$(libexecdir)/authlib/$$f ; done
- 	rm -f $(DESTDIR)$(bindir)/couriertls

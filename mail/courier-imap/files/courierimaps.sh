@@ -1,14 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierimaps.sh,v 1.6 2002/09/20 02:01:56 grant Exp $
+# $NetBSD: courierimaps.sh,v 1.7 2004/02/22 03:13:07 jlam Exp $
 #
 # Courier IMAP/SSL services daemon
 #
 # PROVIDE: courierimaps
 # REQUIRE: authdaemond
 
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
@@ -27,18 +26,17 @@ courier_doit()
 {
 	action=$1
 	case ${action} in
-	start)	echo "Starting ${name}." ;;
-	stop)	echo "Stopping ${name}." ;;
+	start)	@ECHO@ "Starting ${name}." ;;
+	stop)	@ECHO@ "Stopping ${name}." ;;
 	esac
 
 	${ctl_command} ${action}
 }
 
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	echo -n " ${name}"
+	@ECHO@ -n " ${name}"
 	${start_cmd}
 fi

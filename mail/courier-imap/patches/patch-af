@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2002/06/22 15:55:24 grant Exp $
+$NetBSD: patch-af,v 1.4 2004/02/22 03:13:07 jlam Exp $
 
---- imapd.rc.in.orig	Mon Jul 30 02:02:32 2001
-+++ imapd.rc.in	Sat Jun 22 16:58:20 2002
-@@ -21,13 +21,8 @@
+--- imapd.rc.in.orig	Thu Nov 27 13:07:34 2003
++++ imapd.rc.in
+@@ -34,18 +34,13 @@ start)
  		LIBAUTHMODULES="$LIBAUTHMODULES @libexecdir@/authlib/$f"
  	done
  
@@ -11,13 +11,18 @@ $NetBSD: patch-af,v 1.3 2002/06/22 15:55:24 grant Exp $
 -		@SETENV@ - ${libexecdir}/authlib/authdaemond start
 -	fi
 -
- 	ulimit -d $IMAP_ULIMITD
--	@SETENV@ - @SHELL@ -c " . @sysconfdir@/imapd ; \
-+	@SETENV@ -i @SHELL@ -c " . @sysconfdir@/imapd ; \
- 				. @sysconfdir@/imapd-ssl ; \
- 		IMAP_STARTTLS=$IMAPDSTARTTLS ; export IMAP_STARTTLS ; \
- 		TLS_PROTOCOL=$TLS_STARTTLS_PROTOCOL ; \
-@@ -45,10 +40,6 @@
+ 	if test "$TLS_CACHEFILE" != ""
+ 	then
+ 		rm -f $TLS_CACHEFILE
+ 	fi
+ 
+ 	@ULIMIT@ $IMAP_ULIMITD
+-	@SETENV@ - @SHELL@ -c " set -a ;
++	@SETENV@ -i @SHELL@ -c " set -a ;
+ 			prefix=@prefix@ ;
+ 			exec_prefix=@exec_prefix@ ;
+ 			bindir=@bindir@ ;
+@@ -64,10 +59,6 @@ start)
  	;;
  stop)
  	@libexecdir@/couriertcpd -pid=$PIDFILE -stop
