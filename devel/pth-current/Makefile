@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2000/01/06 04:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/21 01:30:55 wiz Exp $
 #
 
-DISTNAME=	pth-1.3a2
+DISTNAME=	pth-1.3a4
 PKGNAME=	${DISTNAME:S/-/-current-/}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/pth/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pth/pth.html
 
 CONFLICTS=	pth-*
