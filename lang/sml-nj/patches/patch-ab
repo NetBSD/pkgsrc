@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/12/08 15:52:59 proff Exp $
+
 --- config/install.sh.orig	Wed Aug  5 13:43:43 1998
 +++ config/install.sh	Tue Feb  2 12:57:13 1999
 @@ -181,6 +181,12 @@
