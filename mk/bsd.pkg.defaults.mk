@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.198 2004/01/06 23:00:51 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.199 2004/01/07 19:09:41 ben Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -264,9 +264,9 @@ PATCH_FUZZ_FACTOR?= -F0
 # Enable it if you are okay to build/use third-party software, which require
 # fees for commercial use (i.e. you are willing to pay, or you are
 # non-commercial).
-#ACCEPTABLE_LICENSES+=	fp-netbsd-ws-license
-# Enable it if you accept the license for fp-netbsd-ws and would like to
-# build the package.  see pkgsrc/licenses/fp-netbsd-ws-license
+#ACCEPTABLE_LICENSES+=	fprot-workstation-license
+# Enable it if you accept the license for fprot-workstation-bin and would
+# like to build the package.  see pkgsrc/licenses/fprot-workstation-license
 #ACCEPTABLE_LICENSES+=	graphviz-license
 # Enable it if you accept the license terms for graphviz
 # and would like to build it. see pkgsrc/graphics/graphviz.
