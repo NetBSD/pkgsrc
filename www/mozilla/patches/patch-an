@@ -1,8 +1,9 @@
-$NetBSD: patch-an,v 1.3 2000/11/25 22:43:29 mycroft Exp $
+$NetBSD: patch-an,v 1.4 2001/02/17 11:03:28 taya Exp $
 
---- htmlparser/tests/outsinks/Convert.cpp.orig	Thu Aug 31 22:08:07 2000
-+++ htmlparser/tests/outsinks/Convert.cpp	Sat Nov 25 22:39:07 2000
-@@ -66,12 +66,12 @@
+diff -ru ../Orig/mozilla/htmlparser/tests/outsinks/Convert.cpp ./htmlparser/tests/outsinks/Convert.cpp
+--- ../Orig/mozilla/htmlparser/tests/outsinks/Convert.cpp	Fri Jan 26 04:37:23 2001
++++ ./htmlparser/tests/outsinks/Convert.cpp	Sat Feb 17 02:09:57 2001
+@@ -62,12 +62,12 @@
  
    // Inefficiently read from the file:
    nsString inString;
@@ -17,7 +18,7 @@ $NetBSD: patch-an,v 1.3 2000/11/25 22:43:29 mycroft Exp $
      // CVS isn't doing newline comparisons on these files for some reason.
      // So compensate for possible newline problems in the CVS file:
      if (c == '\n' && str[index] == '\r')
-@@ -277,9 +277,9 @@
+@@ -302,9 +302,9 @@
  
    // Read in the string: very inefficient, but who cares?
    nsString inString;

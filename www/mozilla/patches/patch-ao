@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.1 2001/01/16 16:01:23 taya Exp $
+$NetBSD: patch-ao,v 1.2 2001/02/17 11:03:28 taya Exp $
 
 diff -ru ../Orig/mozilla/security/psm/server/Makefile ./security/psm/server/Makefile
---- ../Orig/mozilla/security/psm/server/Makefile	Wed Dec 20 10:24:58 2000
-+++ ./security/psm/server/Makefile	Mon Jan 15 15:37:55 2001
-@@ -42,9 +42,13 @@
+--- ../Orig/mozilla/security/psm/server/Makefile	Thu Feb  8 06:05:21 2001
++++ ./security/psm/server/Makefile	Sat Feb 17 02:11:30 2001
+@@ -44,9 +44,13 @@
  CPLUSPLUSRUNTIME = -L /usr/lib -lstdc++ -lm
  else
  # libC, presumably, is what we must link with elsewhere
@@ -17,7 +17,7 @@ diff -ru ../Orig/mozilla/security/psm/server/Makefile ./security/psm/server/Make
  
  INCLUDES += -I$(CORE_DEPTH)/../dist/public/nlslayer -I$(CORE_DEPTH)/../dist/include
  
-@@ -157,9 +161,14 @@
+@@ -152,9 +156,14 @@
  NSPR_LINK_LIBS = -L$(DIST)/lib -Bdynamic -lnspr4 -lplc4 -lplds4
  XPCOM_LINK_LIBS = -lxpcom
  XPCOM_LIBS += $(DIST)/lib/libz.$(DLL_SUFFIX)
