@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2004/11/27 21:58:18 jdolecek Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/05 12:50:19 jdolecek Exp $
 
 PSI_VERSION=	0.9.2
 DISTNAME=	psi-${PSI_VERSION}
 PKGREVISION=	# empty
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}	\
-		http://psi.affinix.com/?version=${PSI_VERSION}&file=
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
 
 DIST_SUBDIR=	${DISTNAME}
@@ -32,6 +31,10 @@ CONFIGURE_ARGS= --prefix="${PREFIX}" --qtdir="${QTDIR}"
 LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_fi.qm	\
 		psi_de.qm psi_sw.qm psi_pl.qm psi_mk.qm psi_el.qm	\
 		psi_es.qm psi_ru.qm
+
+.for l in ${LANG_FILES}
+SITES_${l}=	http://psi.affinix.com/?version=${PSI_VERSION}&file=
+.endfor
 
 # XXX the psiwidgets.so symlink is somewhat ugly, but without that
 # uic doesn't find the built plug-in and generates sources without
