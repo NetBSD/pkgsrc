@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/06/20 09:20:39 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/12/28 02:48:38 tv Exp $
 #
 
 DISTNAME=	libscsi-1.6
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.emsi.priv.at/pub/netbsd/contrib/
 
 MAINTAINER=	packages@netbsd.org
 
-MAKE_ENV=	LIBDIR=${PREFIX}/lib MANDIR=${PREFIX}/man
+MAKE_ENV=	LIBDIR=${PREFIX}/lib MANDIR=${PREFIX}/man NOPIC=1 NOPROFILE=1
 
 .include "../../mk/bsd.prefs.mk"
 
