@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.509 2000/07/18 08:33:49 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.510 2000/07/19 00:08:32 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -475,6 +475,7 @@ GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
 GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
+HEAD?=		/usr/bin/head
 ID?=		/usr/xpg4/bin/id
 IDENT?=		${LOCALBASE}/bin/ident
 LDCONFIG?=	/usr/bin/true
@@ -517,6 +518,7 @@ GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/bin/zcat
 GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
+HEAD?=		/usr/bin/head
 ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
@@ -559,6 +561,7 @@ GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
 GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
+HEAD?=		/usr/bin/head
 ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
@@ -1985,9 +1988,9 @@ ${DDIR}: ${DLIST}
 	${ECHO} >${DDIR};						\
 	for pkg in $${ddir} ; do					\
 		if ${PKG_INFO} -b $${pkg} >/dev/null 2>&1 ; then	\
-			${PKG_INFO} -b $${pkg} |			\
-			    ${SED} -ne "s,\([^/]*/$${pkg}\)/Makefile:.*,\1,p"	\
-			    >>${DDIR};					\
+			${PKG_INFO} -b $${pkg} | ${SED}	-ne		\
+			    's,\([^/]*/[^/]*\)/Makefile:.*,\1,p' | 	\
+			    ${HEAD} -1 >>${DDIR};			\
 		fi ;							\
 	done
 
