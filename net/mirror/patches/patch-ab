@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 1998/08/29 18:05:56 kim Exp $
+$NetBSD: patch-ab,v 1.5 1998/08/29 18:28:06 kim Exp $
 
 --- mirror.defaults.orig	Fri Jul 28 16:00:31 1995
-+++ mirror.defaults	Sat Aug 29 11:50:20 1998
-@@ -11,20 +11,20 @@
++++ mirror.defaults	Sat Aug 29 14:17:57 1998
+@@ -11,27 +11,27 @@
  	# The LOCAL hostname - if not the same as `hostname`
  	# (I advertise the name sunsite.doc.ic.ac.uk but the machine is
  	#  really phoenix.doc.ic.ac.uk.)
@@ -30,6 +30,14 @@ $NetBSD: patch-ab,v 1.4 1998/08/29 18:05:56 kim Exp $
  	# Don't overwrite my mirror log with the remote one.
  	# Don't pull back any of their mirror temporary files.
  	# nor any FSP or gopher files...
+ 	exclude_patt=(^|/)(\.mirror$|core$|\.cap|\.in\..*\.$|MIRROR\.LOG|#.*#|\.FSP|\.cache|\.zipped|\.notar|\.message|lost\+found/|Network Trash Folder)
+ 	# Try to compress everything
+ 	compress_patt=.
+-	compress_prog=compress
++	compress_prog=gzip
+ 	# Don't compress information files, files that don't benifit from
+ 	# being compressed, files that tell ftpd, gopher, wais... to do things,
+ 	# the sources for compression programs...
 @@ -44,9 +44,9 @@
  	# shk is multimedia? used on apple2s.
  	compress_excl+|-z(\d+)?$|\.tgz|_tgz|\.tar\.Z|\.tar\.gz|\.taz$|\.arc$|\.zip$|\.lzh$|\.zoo$|\.exe$|\.lha$|\.zom$|\.gif$|\.jpeg$|\.jpg$|\.mpeg$|\.au$|\.shk$|read.*me|index|info|faq|gzip|compress|(^|/)\.\.?$
