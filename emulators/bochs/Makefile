@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/06/06 08:09:08 grant Exp $
+# $NetBSD: Makefile,v 1.21 2002/06/06 23:19:45 grant Exp $
 
 DISTNAME=		bochs-1.4
 PKGREVISION=		1
@@ -18,8 +18,7 @@ USE_GMAKE=		yes
 CONFIGURE_ARGS+=	--enable-cdrom
 CONFIGURE_ARGS+=	--enable-ne2000
 CONFIGURE_ARGS+=	--enable-sb16=dummy
-CONFIGURE_ENV+=		CXXFLAGS=-I${X11BASE}/include
-CONFIGURE_ENV+=		CXXFLAGS=-O2
+CONFIGURE_ENV+=		CXXFLAGS="-I${X11BASE}/include ${CXXFLAGS}"
 USE_X11=		yes
 
 BOCHS_MAINDIR=		${PREFIX}/share/bochs
