@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/09/10 16:06:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/09 17:22:22 wiz Exp $
 
 DISTNAME=		fileutils-4.1.8
 PKGREVISION=		1
@@ -11,11 +11,12 @@ HOMEPAGE=		http://www.gnu.org/software/fileutils/fileutils.html
 COMMENT=		GNU file management utilities
 
 GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
 CONFIGURE_ARGS+=	--program-prefix=g \
 			--with-libiconv-prefix=${BUILDLINK_DIR}
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
-.include "../../converters/libiconv/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
