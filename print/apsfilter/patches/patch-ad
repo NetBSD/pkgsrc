@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2002/11/26 11:26:35 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2003/04/15 09:25:05 martti Exp $
 
---- SETUP.in.orig	Sun Feb 24 21:47:45 2002
-+++ SETUP.in
-@@ -1816,7 +1816,7 @@ fail()
+--- SETUP.in.orig	2002-11-22 20:32:54.000000000 +0200
++++ SETUP.in	2003-04-15 08:57:18.000000000 +0300
+@@ -1832,7 +1832,7 @@
  
  export APS_BASEDIR="@datadir@/apsfilter"
  cd "$APS_BASEDIR"
