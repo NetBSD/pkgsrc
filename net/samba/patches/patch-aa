@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.23 2002/12/13 08:37:10 martti Exp $
+$NetBSD: patch-aa,v 1.23.2.1 2003/03/23 01:23:42 jmc Exp $
 
---- configure.in.orig	Tue Dec 10 02:01:00 2002
-+++ configure.in	Fri Dec 13 08:33:10 2002
-@@ -2007,6 +2007,10 @@
+--- configure.in.orig	Fri Feb 28 15:56:18 2003
++++ configure.in	Sun Mar 16 09:01:24 2003
+@@ -2033,6 +2033,10 @@
  # we can't build a pam module if we don't have pam.
  AC_CHECK_LIB(pam, pam_get_data, [AC_DEFINE(HAVE_LIBPAM)])
  
