@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/12/28 02:47:50 reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/22 14:57:12 cube Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
 PKGREVISION=		# empty1
 
 GKRELLM_PKGBASE=	gkrellm-server
-PKGREVISION=		1
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../sysutils/gkrellm-share
 
@@ -24,8 +23,11 @@ NOT_FOR_PLATFORM=	IRIX-*
 
 MAKE_ENV+=		MODULES=server
 
-# Define this to use glib-1.2 instead of glib-2
-BUILD_DEFS+=		GKRELLMSERVER_USE_GLIB12
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gkrellm-server
+PKG_SUPPORTED_OPTIONS=	glib1
+PKG_DEFAULTS_OPTIONS?=	# empty
+
+.include "../../mk/bsd.options.mk"
 
 SUBST_STAGE.gkprefix=	post-patch
 SUBST_FILES.gkprefix=	${WRKSRC}/server/gkrellmd.h
@@ -36,7 +38,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gkrellm-server
 	${INSTALL_DATA} ${WRKSRC}/server/gkrellmd.conf ${PREFIX}/share/examples/gkrellm-server
 
-.if defined(GKRELLMSERVER_USE_GLIB12)
+.if !empty(PKG_OPTIONS:Mglib1)
 MAKE_ENV+=		USE_GLIB12=yes
 .include "../../devel/glib/buildlink3.mk"
 .else

@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2005/03/22 14:57:12 cube Exp $
+
+--- server/sysdeps-unix.c.orig	2005-03-19 17:00:16.000000000 +0100
++++ server/sysdeps-unix.c
+@@ -24,8 +24,10 @@
+ 
+ #include "../src/gkrellm-sysdeps.h"
+ 
++#if 0
+ static gboolean (*mbmon_check_func)();
+ static gint gkrellm_connect_to(gchar *, gint);
++#endif
+ 
+ #if defined(__linux__)
+ #include "../src/sysdeps/linux.c"
