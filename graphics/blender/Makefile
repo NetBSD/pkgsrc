@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2002/07/14 22:50:33 rh Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/03 14:02:00 dmcmahill Exp $
 
 PKGNAME=	blender-2.11
 PKGREVISION=	5
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://www.blender.nl/pub/
+MASTER_SITES=	ftp://www.blender.nl/pub/ \
+		ftp://ftp.cs.umn.edu/pub/blender/pub/versions/2.11
 
 MAINTAINER=	manu@netbsd.org
 HOMEPAGE=	http://www.blender.nl
@@ -17,7 +18,7 @@ NO_BUILD=	yes
 CHECK_SHLIBS=	NO
 
 # To be updated as other platforms PLIST will be built
-ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc
+ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc *-*-sparc
 
 .if (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/linux/lib/ld.so.1)
@@ -31,8 +32,8 @@ DISTNAME=	blender2.11-linux-glibc2.1.2-i386-static
 PLIST_ARCH=	linux-i386
 #
 .elif (${MACHINE_ARCH} == "sparc")
-.if !exists(/emul/sunos/usr/lib/ld.so)
-IGNORE=		"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
+.if !exists(/emul/svr4/usr/lib/ld.so)
+IGNORE=		"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .endif
 DISTNAME=	blender2.11-solaris-2.6-sparc
 EXTRACT_SUFX=	.tar.Z
