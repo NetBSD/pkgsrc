@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/14 18:42:09 tron Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 @option preserve
@@ -101,11 +101,9 @@ include/kpathsea/absolute.h
 @comment also in teTeX-share; touched but unmodified: share/texmf/dvips/gsftopk/render.ps
 share/texmf/web2c/plain.mem
 share/texmf/web2c/mpost.mem
-share/texmf/web2c/mpost.log
 share/texmf/web2c/mfw.base
 share/texmf/web2c/plain.base
 share/texmf/web2c/mf.base
-share/texmf/web2c/mf.log
 share/texmf/web2c/tex.fmt
 share/texmf/web2c/pdflatex.fmt
 share/texmf/web2c/pdftex.fmt
@@ -117,16 +115,6 @@ share/texmf/web2c/latex.fmt
 share/texmf/web2c/lambda.fmt
 share/texmf/web2c/etex.efmt
 share/texmf/web2c/elatex.efmt
-share/texmf/web2c/tex.log
-share/texmf/web2c/pdftex.log
-share/texmf/web2c/pdflatex.log
-share/texmf/web2c/pdfetex.log
-share/texmf/web2c/pdfelatex.log
-share/texmf/web2c/omega.log
-share/texmf/web2c/latex.log
-share/texmf/web2c/lambda.log
-share/texmf/web2c/etex.log
-share/texmf/web2c/elatex.log
 @comment also in teTeX-share; touched but unmodified: share/texmf/web2c/cp8bit.tcx
 @comment also in teTeX-share; touched but unmodified: share/texmf/web2c/kam-t1.tcx
 @comment also in teTeX-share; touched but unmodified: share/texmf/web2c/kam-cs.tcx
