@@ -1,0 +1,15 @@
+  The goal of the library is to provide a generic interface to Spell checker
+libraries installed on the system.
+
+  The Pspell library contains two main classes and several helper classes.
+The two main classes are PspellConfig and PspellMaster.  The PspellConfig
+class is used to set initial defaults and to change spell checker-specific
+options.  The PspellManager class does most of the real work.  It is
+responsible for managing the dictionaries, checking if a word is in the
+dictionary, and coming up with suggestions among other things.  There are many
+helper classes the important ones are PspellWordList, PspellMutableWordList,
+Pspell*Emulation.  The PspellWordList classes is used for accessing the
+suggestion list, as well as the personal and suggestion word list currently in
+use.  The PspellMutableWordList is used to manage the personal, and perhaps
+other, word lists.  The Pspell*Emulation classes are used for iterating
+through a list.
