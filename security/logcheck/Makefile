@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/01 20:43:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/03 12:00:10 cjep Exp $
 
 DISTNAME=	logcheck-1.1.1
 PKGREVISION=	1
@@ -15,7 +15,7 @@ USE_PKGINSTALL=	YES
 OWN_DIRS=	/var/adm/tmp /var/adm
 
 PKG_SYSCONFSUBDIR=	logcheck
-EGDIR=		${PREFIX}/share/examples/logcheck	
+EGDIR=		${PREFIX}/share/examples/logcheck
 CONF_FILES=
 .for f in hacking ignore violations violations.ignore
 CONF_FILES+=	${EGDIR}/logcheck.$f ${PKG_SYSCONFDIR}/logcheck.$f
