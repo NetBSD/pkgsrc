@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8356 2004/12/17 22:34:28 tron Exp $
+$NetBSD: CHANGES,v 1.8357 2004/12/17 22:41:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5940,3 +5940,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mplayer to 1.0rc5pl2 [tron 2004-12-17]
 	Updated gmplayer to 1.0rc5pl2 [tron 2004-12-17]
 	Updated mencoder to 1.0rc5pl2 [tron 2004-12-17]
+	Updated zip to 2.3nb3 [wiz 2004-12-17]
