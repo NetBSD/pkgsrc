@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/04/03 12:55:21 grant Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/24 14:16:07 agc Exp $
 #
 
 DISTNAME=		mtree-20030331
@@ -8,7 +8,7 @@ DISTFILES=		# empty
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
-COMMENT=		mtree - a utility for mapping directory hierarchies
+COMMENT=		a utility for mapping directory hierarchies
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
