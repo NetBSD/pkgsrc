@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/02/05 22:06:45 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/02/05 22:16:10 jmmv Exp $
 #
 
 DISTNAME=		GConf-1.2.1
@@ -15,8 +15,6 @@ BUILD_USES_MSGFMT=	yes
 DISTINFO_FILE=		${.CURDIR}/../GConf2/distinfo
 FILESDIR=		${.CURDIR}/../GConf2/files
 PATCHDIR=		${.CURDIR}/../GConf2/patches
-PKGDIR=			${.CURDIR}/../GConf2
-PLIST_SRC=		${.CURDIR}/PLIST
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
