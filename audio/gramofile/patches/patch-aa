@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/04 22:35:40 agc Exp $
+
+--- Makefile	2004/07/02 20:20:40	1.1
++++ Makefile	2004/07/02 20:24:26
+@@ -18,23 +18,29 @@
+ 
+ ########## CHOOSE YOUR ARCHITECTURE:    (NOTE: also see bplaysrc/Makefile!)
+ 
++OS= $(shell uname -s)
++
++ifeq ($(OS), "Linux")
+ # For Linux (and maybe others), use these:
+ CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER
+ DEPS = $(OBJS) makebplay
+ LIBS = -lncurses -lm
+ COPY_A = -a
+-
++else
++ifeq ($(OS), "NetBSD")
+ # For FreeBSD (and maybe others), use these:
+-#CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER
+-#DEPS = $(OBJS) makebplay
+-#LIBS = -lncurses -lm
+-#COPY_A = -p
+-
++CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER
++DEPS = $(OBJS) makebplay
++LIBS = -lncurses -lm
++COPY_A = -p
++else
+ # For IRIX (and maybe others), use these:
+-#CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER -DSWAP_ENDIAN -DOLD_CURSES
+-#DEPS = $(OBJS)
+-#LIBS = -lcurses -lm
+-#COPY_A = -a
++CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER -DSWAP_ENDIAN -DOLD_CURSES
++DEPS = $(OBJS)
++LIBS = -lcurses -lm
++COPY_A = -a
++endif
++endif
+ 
+ ##########
+ 
