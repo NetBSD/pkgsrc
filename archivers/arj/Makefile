@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/27 17:16:28 tv Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2004/07/13 14:12:03 agc Exp $
 # FreeBSD Id: ports/archivers/arj/Makefile,v 1.2 2002/09/17 05:17:29 ijliao Exp
 
 DISTNAME=	arj-3.10.20
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/gnu/configure
 MAKEFILE=		makefile.gnu
 MAKE_FLAGS+=		INSTALL_DIR=${INSTALL_PROGRAM_DIR:Q}
+CONFIGURE_ENV+=		LD=${LD:Q}
 
 INSTALL_UNSTRIPPED=	yes # $LOCALBASE/bin/arj must have symbol table
 ARJ_DOCSDIR=		${PREFIX}/share/doc/arj
