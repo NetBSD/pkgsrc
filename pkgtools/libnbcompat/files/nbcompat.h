@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.18 2003/09/06 12:45:48 jlam Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.19 2003/09/11 10:57:20 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -546,8 +546,12 @@ int gid_from_group(const char *, gid_t *);
 # define S_ISLNK(m)	((m & S_IFMT) == S_IFLNK)
 #endif
 
+#if !defined(S_ISTXT)
+# define S_ISTXT S_ISVTX
+#endif
+
 #if !defined(ALLPERMS)
-# define ALLPERMS (S_ISUID|S_ISGID|S_ISVTX|S_IRWXU|S_IRWXG|S_IRWXO)
+# define ALLPERMS (S_ISUID|S_ISGID|S_ISTXT|S_IRWXU|S_IRWXG|S_IRWXO)
 #endif
 
 #endif /* _NBCOMPAT_H */
