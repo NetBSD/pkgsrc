@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/29 11:30:55 rh Exp $
+bin/idea_spd
+bin/ideatest
+include/idea.h
+lib/libidea.a
