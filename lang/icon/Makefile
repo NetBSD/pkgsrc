@@ -3,7 +3,7 @@
 # Date created:         05 April 1995
 # Whom:                 thomas@ghpc8.ihf.rwth-aachen.de
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 20:18:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/01 10:26:26 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/02/12 08:39:15 tg Exp
 #
 
@@ -11,6 +11,7 @@ DISTNAME=       unix
 PKGNAME=	icon-9.3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.arizona.edu/icon/packages/unix/
+ONLY_FOR_ARCHS=	i386
 
 MAINTAINER=	ports@freebsd.org
 
