@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/02/11 19:17:30 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/02/18 12:58:45 frueauf Exp $
 @unexec install-info --delete --info-dir=%D/info %D/info/info-stnd.info
 @unexec install-info --delete --info-dir=%D/info %D/info/info.info
 @unexec install-info --delete --info-dir=%D/info %D/info/texinfo
@@ -7,7 +7,6 @@ bin/texi2dvi
 bin/texindex
 bin/install-info
 bin/info
-info/dir
 info/info-stnd.info
 info/info.info
 info/texinfo
