@@ -1,0 +1,39 @@
+--- src/flac/Makefile.in.orig	2003-01-26 05:42:28.000000000 +1100
++++ src/flac/Makefile.in	2003-10-31 14:37:03.000000000 +1100
+@@ -158,10 +158,10 @@
+ 
+ flac_LDADD = \
+ 	$(NEED_OGGFLAC_LIB) \
+-	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ 	$(top_builddir)/src/share/getopt/libgetopt.a \
+-	$(top_builddir)/src/share/utf8/libutf8.a \
++	$(top_builddir)/src/share/utf8/libutf8.la \
+ 	$(top_builddir)/src/libFLAC/libFLAC.la \
+ 	@OGG_LIBS@ \
+ 	@LIBICONV@ \
+@@ -179,16 +179,16 @@
+ flac_OBJECTS = $(am_flac_OBJECTS)
+ @FLaC__HAS_OGG_TRUE@flac_DEPENDENCIES = \
+ @FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/libOggFLAC/libOggFLAC.la \
+-@FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-@FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++@FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++@FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ @FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/share/getopt/libgetopt.a \
+-@FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/share/utf8/libutf8.a \
++@FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/share/utf8/libutf8.la \
+ @FLaC__HAS_OGG_TRUE@	$(top_builddir)/src/libFLAC/libFLAC.la
+ @FLaC__HAS_OGG_FALSE@flac_DEPENDENCIES = \
+-@FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-@FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++@FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++@FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ @FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/share/getopt/libgetopt.a \
+-@FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/share/utf8/libutf8.a \
++@FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/share/utf8/libutf8.la \
+ @FLaC__HAS_OGG_FALSE@	$(top_builddir)/src/libFLAC/libFLAC.la
+ flac_LDFLAGS =
+ 
