@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/05/12 01:16:49 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/07/12 15:59:45 wiz Exp $
 #
 # This Makefile fragment is included by packages that use bonobo-activation.
 #
@@ -19,7 +19,7 @@ BONOBO_ACTIVATION_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.bonobo-activation?=		bonobo-activation>=0.9.8
+BUILDLINK_DEPENDS.bonobo-activation?=		bonobo-activation>=1.0.2
 DEPENDS+=	${BUILDLINK_DEPENDS.bonobo-activation}:../../devel/bonobo-activation
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.bonobo-activation=bonobo-activation
