@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 1998/09/24 16:53:19 garbled Exp $
+# $NetBSD: Makefile,v 1.6 1998/11/12 23:34:31 frueauf Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
+WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/source/
 MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/doom/
@@ -10,11 +11,10 @@ DISTFILES=	doomsrc.zip doom-1.8.wad.gz
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
 
-LICENSE=	shareware
-
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
-WRKSRC=		${WRKDIR}
+LICENSE=	shareware
+
 EXTRACT_CMD=	unzip
 EXTRACT_BEFORE_ARGS=	-qo
 EXTRACT_ONLY=	doomsrc.zip
