@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5196 2004/03/10 18:51:58 wiz Exp $
+$NetBSD: CHANGES,v 1.5197 2004/03/10 19:24:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1397,3 +1397,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nut to 9.11 [wiz 2004-03-10]
 	Updated mutt to 1.4.2.1 [wiz 2004-03-10]
 	Updated newscache to 0.99.22.0.1 [wiz 2004-03-10]
+	Added gtodo-0.14 [jmmv 2004-03-10]
+	Added gtodo-applet-0.1 [jmmv 2004-03-10]
