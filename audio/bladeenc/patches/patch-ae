@@ -1,8 +1,16 @@
-$NetBSD: patch-ae,v 1.1 1999/09/13 03:33:35 simonb Exp $
+$NetBSD: patch-ae,v 1.2 1999/09/20 09:30:19 agc Exp $
 
---- common.h.orig	Sat Jul 24 07:50:33 1999
-+++ common.h	Mon Sep 13 12:54:56 1999
-@@ -175,9 +175,9 @@
+--- common.h.orig	Fri Jul 23 22:50:33 1999
++++ common.h	Mon Sep 20 10:16:42 1999
+@@ -172,12 +172,17 @@
+ extern enum byte_order NativeByteOrder;
+ 
+ /* "bit_stream.h" Type Definitions */
++
++#if defined(__sun__) && defined(__svr4__)
++typedef unsigned char	u_int8_t;
++#endif
++
  
  typedef struct  bit_stream_struc {
      FILE        *pt;            /* pointer to bit stream device */
@@ -14,7 +22,7 @@ $NetBSD: patch-ae,v 1.1 1999/09/13 03:33:35 simonb Exp $
  
      int         buf_byte_idx;   /* pointer to top byte in buffer */
      int         buf_bit_idx;    /* pointer to top bit of top byte in buffer */
-@@ -212,7 +212,7 @@
+@@ -212,7 +217,7 @@
  /* The following functions are in the file "common.c" */
  
  extern void 					hdr_to_frps(frame_params *fr_ps); /* interpret data in hdr str to fields in fr_ps */
