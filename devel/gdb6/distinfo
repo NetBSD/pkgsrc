@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: distinfo,v 1.2 2004/06/03 22:07:50 shannonjr Exp $
 
 SHA1 (gdb-6.1.tar.bz2) = 588c967d164f226ed33eb966e765c046bac066a5
 Size (gdb-6.1.tar.bz2) = 12571495 bytes
-SHA1 (patch-Makefile_in) = 208bf8aa72b1b307323a2992ef1f5de45af5c54f
 SHA1 (patch-Makefile_tpl) = b5c98fc990606e2f5c566864d02565d8fc9adeb4
 SHA1 (patch-ax_gdb_c) = bc9a4e5d77d571a6f06b88984fb2030beec37654
 SHA1 (patch-cli_cli_decode_c) = 19dbdb326643bf32a3d0c26cfea056cca19deb13
@@ -11,7 +10,6 @@ SHA1 (patch-cli_cli_script_c) = c53cc22ac5a2c5d5b2c1a7b0825558d8787b2bed
 SHA1 (patch-cli_cli_setshow_c) = 048c03512a18f3234422a3afc00d6c45f2dea58d
 SHA1 (patch-cli_cmds_c) = 66e40920b5de734cbcf66c0b357e82a74f3c48c0
 SHA1 (patch-config_xm_nbsd_h) = a54471bf7cdd42def5e78137df3674988ae3c04b
-SHA1 (patch-configure) = ee3c8d6ace35837870cd1df517ab18122af1257c
 SHA1 (patch-corelow_c) = 6ae7afb646fe7464b8a3667913ac6681b1df34e6
 SHA1 (patch-gdb_configure_in) = 5721068e232c1418bec9a3e7b2dd0d911f841f27
 SHA1 (patch-i386_nbsdelf_mh) = 45b48c56f8d3e6ad61644ee02fd04d21c79fba20
