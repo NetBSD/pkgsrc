@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2001/01/03 00:04:56 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/23 17:21:54 wiz Exp $
 
---- account.h.orig	Fri Feb  4 23:59:06 2000
-+++ account.h
-@@ -24,4 +24,6 @@
- */
+--- Imakefile.orig	2004-05-01 20:57:42.000000000 +0200
++++ Imakefile
+@@ -29,5 +29,5 @@ OBJS =	account.o askuser.o calendar.o co
+ 	status.o tooltips.o trans.o util.o xinvest.o xutil.o
  
-+#include <stdio.h>
-+
- int activeAccount();              /* Return index number of current account */
- int numAccounts();                 /* Return number of open accounts */
+ 
+-ComplexProgramTarget(Xinvest)
++ComplexProgramTargetNoMan(Xinvest)
+ InstallAppDefaults(Xinvest)
