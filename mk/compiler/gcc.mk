@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.71 2004/09/23 13:49:21 jlam Exp $
+# $NetBSD: gcc.mk,v 1.72 2004/09/23 15:25:54 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -12,15 +12,18 @@ GCC_REQD+=	2.8.0
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
 #
-_GCC_DIST_VERSION=	3.3.4
+_GCC_DIST_VERSION=	3.4.2
 
 # _GCC2_PATTERNS matches N s.t. N <= 2.95.3.
 _GCC2_PATTERNS=	[0-1].* 2.[0-9] 2.[0-9].* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 		2.9[0-4] 2.9[0-4].* 2.95 2.95.[0-3]
 
-# _GCC3_PATTERNS matches N s.t. 2.95.3 < N.
+# _GCC3_PATTERNS matches N s.t. 2.95.3 < N < 3.4.
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
-		2.[1-9][0-9][0-9]* 3.* [4-9]*
+		2.[1-9][0-9][0-9]* 3.[0-3] 3.[0-3].*
+
+# _GCC34_PATTERNS matches N s.t. 3.4 <= N.
+_GCC34_PATTERNS= 3.[4-9] 3.[4-9].* 3.[1-9][0-9]* [4-9]*
 
 # _CC is the full path to the compiler named by ${CC} if it can be found.
 .if !defined(_CC)
@@ -106,7 +109,14 @@ _NEED_GCC3?=	no
 _NEED_GCC3=	yes
 .  endif
 .endfor
-.if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO])
+_NEED_GCC34?=	no
+.for _pattern_ in ${_GCC34_PATTERNS}
+.  if !empty(_GCC_REQD:M${_pattern_})
+_NEED_GCC34=	yes
+.  endif
+.endfor
+.if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
+    !empty(_NEED_GCC34:M[nN][oO])
 _NEED_GCC3=	yes
 .endif
 
@@ -116,6 +126,8 @@ LANGUAGES.gcc?=	c
 LANGUAGES.gcc=	c c++ fortran objc
 .elif !empty(_NEED_GCC3:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran java objc
+.elif !empty(_NEED_GCC34:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran objc
 .endif
 _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
@@ -162,6 +174,24 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc:Mc)
 _GCC_PKGSRCDIR=		../../lang/gcc3-c
 _GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
+.  endif
+.elif !empty(_NEED_GCC34:M[yY][eE][sS])
+#
+# We require gcc-3.4.x in the lang/gcc34 directory.
+#
+_GCC_PKGBASE=		gcc34
+.  if !empty(PKGPATH:Mlang/gcc34)
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc34
+_GCC_DEPENDENCY=	gcc34>=${_GCC_REQD}:../../lang/gcc34
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mobjc)
+USE_GCC_SHLIB?=		yes
+.    endif
 .  endif
 .endif
 _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
