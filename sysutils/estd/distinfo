@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/24 10:50:53 agc Exp $
+
+SHA1 (estd-netbsd-r3.tar.gz) = f46b7d0f7f3a4ab898139b515ee92433dd39fbaf
+Size (estd-netbsd-r3.tar.gz) = 5675 bytes
+SHA1 (patch-aa) = 974aa3749c4ab2fa969f14f241285b2326f4fb35

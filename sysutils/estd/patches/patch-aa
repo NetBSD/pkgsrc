@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/24 10:50:53 agc Exp $
+
+--- Makefile	2005/01/24 10:40:24	1.1
++++ Makefile	2005/01/24 10:40:56
+@@ -11,9 +11,9 @@
+ all: estd
+ 
+ install: all
+-	install -d -o root -g wheel -m 0755 /usr/local/sbin
+-	install -s -o root -g wheel -m 0755 estd /usr/local/sbin/estd
+-	install -d -o root -g wheel -m 0755 /usr/local/man/man1
+-	install -o root -g wheel -m 0644 estd.1 /usr/local/man/man1/estd.1
++	install -d -o root -g wheel -m 0755 ${PREFIX}/sbin
++	install -s -o root -g wheel -m 0755 estd ${PREFIX}/sbin/estd
++	install -d -o root -g wheel -m 0755 ${PREFIX}/man/man1
++	install -o root -g wheel -m 0644 estd.1 ${PREFIX}/man/man1/estd.1
+ 
+ 	

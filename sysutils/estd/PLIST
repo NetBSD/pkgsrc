@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/24 10:50:53 agc Exp $
+sbin/estd
+man/man1/estd.1
