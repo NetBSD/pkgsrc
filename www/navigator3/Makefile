@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/21 23:09:01 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/05 01:02:52 hubertf Exp $
 
 DISTNAME=		netscape-v304-export.x86-unknown-bsd
 PKGNAME=		navigator3-3.04
@@ -22,9 +22,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${X11BASE}/share/netscape/nls
 	${INSTALL_DATA_DIR} ${X11BASE}/share/netscape/java
 	${INSTALL_SCRIPT} ${WRKSRC}/netscape ${X11BASE}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/netscape.bin ${X11BASE}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/netscape.bin ${X11BASE}/bin # XXX
 	${INSTALL_SCRIPT} ${WRKSRC}/movemail ${X11BASE}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/movemail.bin ${X11BASE}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/movemail.bin ${X11BASE}/bin # XXX
 	${INSTALL_DATA} ${WRKSRC}/nls/C ${X11BASE}/share/netscape/nls
 	${INSTALL_DATA} ${WRKSRC}/nls/nls.dir ${X11BASE}/share/netscape/nls
 	${INSTALL_DATA} ${WRKSRC}/java_301 ${X11BASE}/share/netscape/java
