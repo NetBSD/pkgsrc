@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/05 09:58:43 grant Exp $
+lib/security/pam_dbm.so.1
+man/man5/pam_dbm.5
+man/man8/mkpwdbm.8
+sbin/authtest
+sbin/mkpwdbm
