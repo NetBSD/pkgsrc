@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/08/22 22:02:32 tron Exp $
+# $NetBSD: Makefile,v 1.23 1999/08/28 09:41:07 rh Exp $
 #
 
 DISTNAME=	ORBit-0.4.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0/sources/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	glib-1.2.2:../../devel/glib
+DEPENDS+=	glib-1.2.4:../../devel/glib
 DEPENDS+=	gindent-2.2.0:../../devel/gindent
 
 GNU_CONFIGURE=	yes

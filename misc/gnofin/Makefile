@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/07/23 14:19:09 mellon Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/28 09:41:08 rh Exp $
 #
 
 DISTNAME=       gnofin-0.6.0
@@ -8,8 +8,8 @@ MASTER_SITES=   ftp://jagger.berkeley.edu/pub/darin/gnofin/source/
 MAINTAINER=	mellon@isc.org
 HOMEPAGE=	http://jagger.me.berkeley.edu/~dfisher/gnofin/
 
-DEPENDS+=	glib-1.2.2:../../devel/glib
-DEPENDS+=	gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	glib-1.2.4:../../devel/glib
+DEPENDS+=	gtk+-1.2.4:../../x11/gtk
 DEPENDS+=	gnome-libs-1.0.10:../../x11/gnome-libs
 
 USE_X11=	yes
