@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/07/04 20:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/29 15:03:19 wiz Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${SML_VERSION}
 		ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/
 DISTFILES=	MLRISC.tgz			\
 		boot.${BOX}-unix.tgz		\
+		ckit.tgz			\
 		cm.tgz				\
 		cml.tgz				\
 		compiler.tgz			\
@@ -15,6 +16,8 @@ DISTFILES=	MLRISC.tgz			\
 		eXene.tgz			\
 		ml-burg.tgz			\
 		ml-lex.tgz			\
+		ml-nlffi-lib.tgz		\
+		ml-nlffigen.tgz			\
 		ml-yacc.tgz			\
 		runtime.tgz			\
 		smlnj-lib.tgz			\
@@ -24,7 +27,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cm.bell-labs.com/cm/cs/what/smlnj/index.html
 COMMENT=	Popular functional language from Bell Labs
 
-SML_VERSION=	110.38
+SML_VERSION=	110.41
 
 # sml-nj also supports hppa, sparc, ppc, mlrisc & alpha
 # pkg support for those platforms, and say, solaris-x86
@@ -38,7 +41,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc NetBSD-*-sparc
 
 DIST_SUBDIR=	sml-nj-${SML_VERSION}
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	config.tgz
 USE_GMAKE=	yes
 
 SML_BASE=	${PREFIX}/lib/sml-nj
@@ -59,6 +61,19 @@ OS=		bsd
 .endif
 
 PLIST_SUBST+=	BOX=${BOX} OS=${OS}
+
+# create parent directory for the runtime system
+pre-extract:
+	${MKDIR} ${WRKDIR}/src || ${TRUE}
+
+# make it easier to patch the runtime system
+do-extract:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	extract_file="${_DISTDIR}/config.tgz"; export extract_file;	\
+		cd ${WRKDIR}; ${EXTRACT_CMD}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	extract_file="${_DISTDIR}/runtime.tgz"; export extract_file;	\
+		cd ${WRKDIR}/src; ${EXTRACT_CMD}
 
 # make symlinks to the dist files
 post-extract:
