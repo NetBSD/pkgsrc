@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2004/02/13 11:18:29 jmmv Exp $
+
+--- src/OScopeCtrl.cpp.orig	2004-02-10 02:36:27.000000000 +0100
++++ src/OScopeCtrl.cpp
+@@ -17,6 +17,8 @@
+ // Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ //
+ 
++#include <config.h>
++
+ #include "sys.h"
+ #include <cmath>
+ #include <algorithm>		// Needed for std::max
+@@ -265,11 +267,10 @@ void COScopeCtrl::RecreateGrid()
+ 	dcGrid->DrawText(strTemp,rectPlot.left-4-sizX, rectPlot.bottom);
+ 
+ 	// x units
+-#if defined(__GNUC__) && __GNUC__ >= 3
+-	strTemp = CastSecondsToHM((nPlotWidth/nShiftPixels) * (int)round(sLastPeriod));
+-#endif
+-#if !defined(__GNUC__) || __GNUC__ < 3
++#if defined(HAVE_FLOOR)
+ 	strTemp = CastSecondsToHM((nPlotWidth/nShiftPixels) * (int)floor(sLastPeriod));
++#else
++	strTemp = CastSecondsToHM((nPlotWidth/nShiftPixels) * (int)round(sLastPeriod));
+ #endif			
+ 	strXUnits.Format((bStopped ? "Disabled [%s]" : "%s"), strTemp.GetBuffer());
+ 	
