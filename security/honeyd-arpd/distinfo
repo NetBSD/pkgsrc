@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/20 09:15:52 xtraeme Exp $
+
+SHA1 (arpd-0.2.tar.gz) = e827ada394aff91f9c539cee35e946e81152426c
+Size (arpd-0.2.tar.gz) = 49437 bytes
+SHA1 (patch-aa) = 5f89c08d7d93a6f47cde95b6a139695c6ad1e694
+SHA1 (patch-ab) = 28347af42b90d4f422c1c7be407d2579ae2e33ef
