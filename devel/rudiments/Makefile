@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/15 10:41:02 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/13 18:00:51 kristerw Exp $
 #
 
 DISTNAME=		rudiments-0.25.1
@@ -14,5 +14,7 @@ USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
