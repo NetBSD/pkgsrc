@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2002/10/01 18:11:56 drochner Exp $
+# $NetBSD: Makefile,v 1.216 2002/10/04 23:15:55 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -88,6 +88,7 @@ SUBDIR+=	mMosaic
 SUBDIR+=	make_album
 SUBDIR+=	mknmz-wwwoffle
 SUBDIR+=	mozilla
+SUBDIR+=	mozilla-stable
 SUBDIR+=	navigator
 SUBDIR+=	navigator3
 SUBDIR+=	neon
