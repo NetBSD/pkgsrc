@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2004/03/28 20:14:22 mycroft Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/04/16 14:44:32 mycroft Exp $
 #
 
-DISTNAME=		xine-lib-1-rc3b
-PKGNAME=		xine-lib-1rc3b
+DISTNAME=		xine-lib-1-rc3c
+PKGNAME=		xine-lib-1rc3c
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
