@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 21:23:43 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/12 21:50:07 kristerw Exp $
 bin/ksi
 bin/ksi-compile
 bin/ksi-config
-include/ksi/gc.h
-include/ksi/gc_cpp.h
-include/ksi/gc_typed.h
 include/ksi/ksi.h
 include/ksi/ksi_conf.h
 include/ksi/ksi_ext.h
@@ -16,24 +13,6 @@ include/ksi/ksi_type.h
 include/ksi/ksi_ver.h
 include/ksi/ksi_vtab.h
 include/ksi/ksi_z.h
-info/ksi-lang.info
-info/ksi-lang.info-1
-info/ksi-lang.info-2
-info/ksi-lang.info-3
-info/ksi-lang.info-4
-info/ksi-lang.info-5
-info/ksi-lang.info-6
-info/ksi-lang.info-7
-info/ksi-lib.info
-info/ksi-lib.info-1
-info/ksi-lib.info-2
-info/ksi-lib.info-3
-info/ksi.info
-lib/ksi/libgc.a
-lib/ksi/libgc.la
-lib/ksi/libgc.so
-lib/ksi/libgc.so.1
-lib/ksi/libgc.so.1.1
 lib/ksi/libksi.a
 lib/ksi/libksi.la
 lib/ksi/libksi.so

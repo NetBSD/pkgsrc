@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/12/09 12:17:35 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/12 21:50:07 kristerw Exp $
 
 DISTNAME=		ksi-3.4.1
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ksi/}
 
@@ -19,8 +20,7 @@ USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
 INFO_FILES=		ksi-lang.info ksi-lib.info ksi.info
 
-BROKEN=			throws SIGSEGV when invoking ksi interpreter during build
-
+.include "../../devel/boehm-gc/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
