@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2000/01/02 18:02:40 tron Exp $
+# $NetBSD: Makefile,v 1.29 2000/05/12 09:22:46 agc Exp $
 #
 
 DISTNAME=	ORBit-0.5.0
-CATEGORIES=	corba
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/releases/gnome-1.0.53/}
 
 MAINTAINER=	tron@netbsd.org
