@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/01/06 22:42:15 windsor Exp $
+$NetBSD: md5,v 1.4 2001/04/16 22:39:19 zuntum Exp $
 
-MD5 (zsh-3.0.7.tar.gz) = da3d2f21522c4d51c97f3686d4becd5a
+SHA1 (zsh-3.0.8.tar.gz) = d5d07abdd9c0f063c79d19de9482f7517016b54d
