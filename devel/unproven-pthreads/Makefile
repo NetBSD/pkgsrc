@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/02/14 15:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2004/04/25 06:02:54 snj Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32 \
 			NetBSD-*-sparc
 CONFLICTS+=		mit-pthreads-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/pthreads
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT} USETOOLS=no
