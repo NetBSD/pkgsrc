@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/03 19:41:04 drochner Exp $
+include/Xbae/Matrix.h
+include/Xbae/Input.h
+include/Xbae/Caption.h
+include/Xbae/patchlevel.h
+include/Xbae/MatrixP.h
+include/Xbae/Clip.h
+include/Xbae/ClipP.h
+include/Xbae/CaptionP.h
+include/Xbae/InputP.h
+lib/libXbae.a
+lib/libXbae.so.4.7
+man/man3/XbaeCaption.3
+man/man3/XbaeInput.3
+man/man3/XbaeMatrix.3
+share/aclocal/ac_find_xbae.m4
+@dirrm include/Xbae
