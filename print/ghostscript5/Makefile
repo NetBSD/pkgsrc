@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 1999/12/02 13:30:28 tron Exp $
+# $NetBSD: Makefile,v 1.42 1999/12/02 13:46:50 tron Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -23,20 +23,24 @@ BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jp
 		unzip:../../archivers/unzip
 DEPENDS=	png-1.0.3:../../graphics/png
 
+USE_X11=	yes
+
 .include "../../mk/bsd.prefs.mk"
 
-USE_X11=	yes
 DIST_SUBDIR=	${DISTNAME:C/-.*$//}
 EXTRACT_ONLY=	${GS_SOURCES} ${HPDJ_DRV}
-WRKSRC=		${WRKDIR}/gs5.50
-MAKEFILE=	unix-gcc.mak
 ALL_TARGET=	std
+MAKEFILE=	unix-gcc.mak
 MAKE_ENV+=	MAKEOBJDIR=. prefix=${PREFIX}
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/bsd/lib -L${LOCALBASE}/bsd/lib"
 .else
 MAKE_ENV+=	XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib"
 .endif
+.if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
+MAKE_FLAGS+=	-DA4
+.endif
+WRKSRC=		${WRKDIR}/gs5.50
 
 GS_SOURCES=	ghostscript-5.50.tar.gz
 GS_SOURCES+=	ghostscript-5.50gnu.tar.gz
@@ -58,10 +62,6 @@ HPDJ_DRV=	hpdj-${HPDJ_VER}.tar.gz
 
 # PostScript source to decode encrypted PDF files
 PDF_SEC=	pdf_sec.ps
-
-.if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
-PAPERSIZE_DEF=	-DA4
-.endif
 
 SCRIPT_SUFFIX=	.batch
 
@@ -86,10 +86,6 @@ post-patch:
 do-configure:
 	@${SETENV} WRKSRC=${WRKSRC} PREFIX=${PREFIX} \
 		${SH} ${SCRIPTDIR}/configure${SCRIPT_SUFFIX}
-
-do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${PAPERSIZE_DEF} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
 pre-install:
 	@${MKDIR} ${PREFIX}/share/ghostscript ${PREFIX}/bin ${PREFIX}/man/man1
