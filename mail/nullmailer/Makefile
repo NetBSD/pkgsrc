@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/02/17 01:45:31 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/17 02:12:44 jtb Exp $
 
 DISTNAME=		nullmailer-1.00RC7
 CATEGORIES=		mail
@@ -35,11 +35,16 @@ pre-configure:
 		$$f > $$f.tmp && ${MV} -f $$f.tmp $$f;			\
 	done
 
+post-configure:
+	${SED} -e 's:@PREFIX@:${PREFIX}:g'			\
+		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:g'	\
+		${FILESDIR}/nullmailer > ${WRKDIR}/nullmailer
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nullmailer
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS COPYING ChangeLog	\
 		HOWTO NEWS README TODO ${PREFIX}/share/doc/nullmailer
-	${INSTALL_DATA} ${FILESDIR}/nullmailer ${PKG_SYSCONFDIR}/rc.d
+	${INSTALL_SCRIPT} ${WRKDIR}/nullmailer ${PKG_SYSCONFDIR}/rc.d
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
