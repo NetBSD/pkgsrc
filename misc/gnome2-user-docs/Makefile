@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/05/07 01:14:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/03 12:48:41 jmmv Exp $
 #
 
-DISTNAME=	gnome2-user-docs-2.6.0
+DISTNAME=	gnome2-user-docs-2.6.0.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome2-user-docs/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,5 +19,4 @@ USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
