@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.539 2002/11/17 16:08:45 itojun Exp $
+$NetBSD: CHANGES,v 1.540 2002/11/18 06:26:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3645,3 +3645,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libtool to 1.4.20010614nb10 [grant 2002-11-17]
 	Updated bind4 to 4.9.11 [itojun 2002-11-17]
 	Updated bind8 to 8.3.4 [itojun 2002-11-17]
+	Updated libusb to 0.1.7 [schmonz 2002-11-18]
