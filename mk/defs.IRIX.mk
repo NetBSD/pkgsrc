@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.36 2003/10/13 00:23:49 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.37 2003/10/19 07:38:31 grant Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -126,14 +126,14 @@ _OPSYS_HAS_INET6=	no		# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no		# Java is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
-_OPSYS_LIBTOOL_REQD=    1.4.20010614nb14 # base version of libtool required
+_OPSYS_LIBTOOL_REQD=	1.4.20010614nb14 # base version of libtool required
 _OPSYS_NEEDS_XPKGWEDGE=	yes		# xpkgwedge is required for X11
 _OPSYS_PERL_REQD=			# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-rpath,		# name of symbol in rpath directive to linker 
 .if defined(_OPSYS_GPATCH_REQD) && ${_OPSYS_GPATCH_REQD} == "YES"
-_PATCH_CAN_BACKUP=      yes		# patch(1) can make backups
-_PATCH_BACKUP_ARG=      -b -V simple -z # switch to patch(1) for backup suffix
+_PATCH_CAN_BACKUP=	yes		# patch(1) can make backups
+_PATCH_BACKUP_ARG=	-b -V simple -z # switch to patch(1) for backup suffix
 .else
 _PATCH_CAN_BACKUP=	no		# native patch(1) can make backups
 .endif
@@ -151,14 +151,14 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-notall
 
 # IRIX has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
-_INCOMPAT_ICONV=       IRIX-*-*
+_INCOMPAT_ICONV=	IRIX-*-*
 
 .if !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
-LOCALBASE?=             ${DESTDIR}/usr/pkg
+LOCALBASE?=		${DESTDIR}/usr/pkg
 .if exists(${LOCALBASE}/sbin/pkg_info)
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.71 2003/10/11 05:09:39 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.72 2003/10/19 07:38:31 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -142,7 +142,7 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-z defaultextract
 
 # Solaris has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
-_INCOMPAT_ICONV=       SunOS-*-*
+_INCOMPAT_ICONV=	SunOS-*-*
 
 .if !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
@@ -161,7 +161,7 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 	@false
 .endif
 
-LOCALBASE?=             ${DESTDIR}/usr/pkg
+LOCALBASE?=		${DESTDIR}/usr/pkg
 .if !defined(ZOULARISBASE)
 .  if exists(${LOCALBASE}/bsd)
 ZOULARISBASE:=		${LOCALBASE}/bsd
