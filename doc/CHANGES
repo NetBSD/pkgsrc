@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7716 2004/11/05 17:20:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.7717 2004/11/05 17:39:22 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5095,3 +5095,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gensolpkg to 1.10nb2 [agc 2004-11-05]
 	Updated libassuan to 0.6.7nb1 [jmmv 2004-11-05]
 	Updated pinentry to 0.7.1nb1 [jmmv 2004-11-05]
+	Updated url2pkg to 1.26 [tv 2004-11-05]
