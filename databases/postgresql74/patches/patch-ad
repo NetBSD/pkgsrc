@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/10/10 12:33:35 jdolecek Exp $
+
+--- src/Makefile.global.in.orig	2004-10-10 11:49:29.000000000 +0200
++++ src/Makefile.global.in	2004-10-10 11:50:05.000000000 +0200
+@@ -133,7 +133,7 @@
+ enable_thread_safety	= @enable_thread_safety@
+ 
+ python_includespec	= @python_includespec@
+-python_libspec		= @python_libspec@
++python_libspec		= -Wl,-R${PREFIX}/lib -L${PREFIX} @python_libspec@
+ python_configdir	= @python_configdir@
+ 
+ krb_srvtab = @krb_srvtab@
