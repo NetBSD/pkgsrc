@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.245 2004/05/28 22:20:42 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.246 2004/05/30 08:10:05 mrauch Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2242,6 +2242,9 @@ XEN12_USE_COM2?=	NO
 #MASTER_SITE_GNU=	http://public.planetmirror.com.au/pub/gnu/
 #MASTER_SITE_MOZILLA=	http://public.planetmirror.com.au/pub/mozilla/releases/
 #MASTER_SITE_PERL_CPAN=	ftp://mirror.aarnet.edu.au/pub/cpan/modules/by-module/
+#MASTER_SITE_OPENOFFICE=http://openoffice.mirrors.ilisys.com.au/ \
+#			http://mirror.pacific.net.au/openoffice/ \
+#			http://planetmirror.com/pub/openoffice/ 
 #MASTER_SITE_SUNSITE=	http://public.planetmirror.com.au/pub/sunsite/
 #MASTER_SITE_SUSE=	http://public.planetmirror.com.au/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
 #MASTER_SITE_TEX_CTAN=	http://public.planetmirror.com.au/pub/tex-archive/
@@ -2260,6 +2263,7 @@ XEN12_USE_COM2?=	NO
 #MASTER_SITE_XCONTRIB=	ftp://ftp.at.NetBSD.org/hci/X11/x.org/contrib/
 #MASTER_SITE_GNU=	ftp://ftp.at.NetBSD.org/gnu/gnusrc/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.at.NetBSD.org/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_OPENOFFICE=http://gd.tuwien.ac.at/office/openoffice/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.at.NetBSD.org/publishing/tex/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://ftp.univie.ac.at/systems/linux/sunsite/
 #MASTER_SITE_XEMACS=	ftp://ftp.at.xemacs.org/editors/xemacs/
@@ -2269,6 +2273,7 @@ XEN12_USE_COM2?=	NO
 #
 #MASTER_SITE_GNU=	ftp://ftp.sunsite.auc.dk/pub/gnu/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.sunsite.auc.dk/pub/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_OPENOFFICE=http://mirrors.sunsite.dk/openoffice/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.sunsite.auc.dk/pub/tex/ctan/
 #MASTER_SITE_SUNSITE=	ftp://ftp.suaunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_XEMACS=	ftp://ftp.dk.xemacs.org/pub/emacs/xemacs/
@@ -2280,6 +2285,7 @@ XEN12_USE_COM2?=	NO
 #MASTER_SITE_GNU= 	ftp://ftp.funet.fi/pub/gnu/gnu/
 #MASTER_SITE_PERL_CPAN=	\
 #	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_OPENOFFICE=ftp://ftp.funet.fi/pub/mirrors/openoffice.org/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.funet.fi/pub/TeX/CTAN/
 #MASTER_SITE_SUNSITE=	\
 #	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
@@ -2289,12 +2295,16 @@ XEN12_USE_COM2?=	NO
 
 # France
 #
+#MASTER_SITE_OPENOFFICE=ftp://openoffice.cict.fr/openoffice/ \
+#			http://ftp.club-internet.fr/pub/OpenOffice/
 #MASTER_SITE_SUSE=	\
 #	ftp://fr.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 #	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/
 
 # Greece
 #
+#MASTER_SITE_OPENOFFICE=http://www.ellak.gr/pub/openoffice/ \
+#			http://ftp.ntua.gr/pub/OpenOffice/
 #MASTER_SITE_SUSE=	\
 #	ftp://ftp.duth.gr/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
@@ -2305,6 +2315,8 @@ XEN12_USE_COM2?=	NO
 #MASTER_SITE_GNU=	ftp://ftp.ring.gr.jp/pub/GNU/
 #MASTER_SITE_MOZILLA=	ftp://ftp.ring.gr.jp/pub/net/www/mozilla/mozilla/releases/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/
+#MASTER_SITE_OPENOFFICE=ftp://ftp.kddlabs.co.jp/office/openoffice/ \
+#			ftp://ftp.ring.gr.jp/pub/misc/openoffice/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/
 #MASTER_SITE_SUSE=	\
 #	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
@@ -2316,6 +2328,7 @@ XEN12_USE_COM2?=	NO
 
 # Switzerland
 #
+#MASTER_SITE_OPENOFFICE=ftp://mirror.switch.ch/mirror/OpenOffice/
 #MASTER_SITE_SUSE=	\
 #	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
@@ -2324,6 +2337,7 @@ XEN12_USE_COM2?=	NO
 #MASTER_SITE_XCONTRIB=	ftp://sunsite.org.uk/Mirrors/ftp.x.org/contrib/
 #MASTER_SITE_GNU=	ftp://sunsite.org.uk/packages/gnu/
 #MASTER_SITE_PERL_CPAN=	ftp://sunsite.org.uk/packages/perl/CPAN/modules/by-module/
+#MASTER_SITE_OPENOFFICE=ftp://ftp.mirror.ac.uk/sites/ny1.mirror.openoffice.org/
 #MASTER_SITE_TEX_CTAN=	ftp://sunsite.org.uk/packages/tex/uk-tex/
 #MASTER_SITE_SUSE=	\
 #	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
@@ -2335,6 +2349,12 @@ XEN12_USE_COM2?=	NO
 
 # USA
 #
+#MASTER_SITE_OPENOFFICE=http://openoffice.behrsolutions.com/ \
+#			http://www.ibiblio.org/pub/mirrors/openoffice/ \
+#			ftp://ftp.ussg.iu.edu/pub/openoffice/ \
+#			http://mirrors.isc.org/pub/openoffice/ \
+#			ftp://mirror.telentente.com/pub/OpenOffice/ \
+#			http://openoffice.mirrors.pair.com/
 #MASTER_SITE_SUSE=	\
 #	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 

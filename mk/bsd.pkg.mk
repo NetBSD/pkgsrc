@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1464 2004/05/29 21:41:30 kristerw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1465 2004/05/30 08:10:06 mrauch Exp $
 #
 # This file is in the public domain.
 #
@@ -1190,6 +1190,58 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.sk.debian.org/debian/ \
 	http://ftp.tr.debian.org/debian/ \
 	http://ftp.us.debian.org/debian/
+
+MASTER_SITE_OPENOFFICE+= \
+	http://mirrors.isc.org/pub/openoffice/ \
+	http://ftp.stardiv.de/pub/OpenOffice.org/ \
+	http://openoffice.mirrors.ilisys.com.au/ \
+	http://linorg.usp.br/OpenOffice.org/ \
+	http://oobr.querencialivre.rs.gov.br/openoffice/ \
+	ftp://ftp.pucpr.br/openoffice/ \
+	http://openoffice.behrsolutions.com/ \
+	http://www.ibiblio.org/pub/mirrors/openoffice/ \
+	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
+	ftp://mirror.telentente.com/pub/OpenOffice/ \
+	http://openoffice.mirrors.pair.com/ \
+	http://gd.tuwien.ac.at/office/openoffice/ \
+	http://ftp.belnet.be/pub/mirror/ftp.openoffice.org/ \
+	ftp://ftp.kulnet.kuleuven.ac.be/pub/mirror/openoffice.org/ \
+	http://ftp.sh.cvut.cz/MIRRORS/OpenOffice/ \
+	http://mirrors.sunsite.dk/openoffice/ \
+	ftp://ftp.funet.fi/pub/mirrors/openoffice.org/ \
+	ftp://openoffice.cict.fr/openoffice/ \
+	http://ftp.club-internet.fr/pub/OpenOffice/ \
+	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/OpenOffice/ \
+	ftp://ftp.tu-chemnitz.de/pub/openoffice/ \
+	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.openoffice.org/ \
+	ftp://ftp.join.uni-muenster.de/pub/software/OpenOffice/ \
+	http://ftp.leo.org/download/pub/comp/general/office/openoffice/ \
+	ftp://openoffice.tu-bs.de/OpenOffice.org/ \
+	http://www.ellak.gr/pub/openoffice/ \
+	http://ftp.ntua.gr/pub/OpenOffice/ \
+	http://ftp.fsf.hu/OpenOffice.org/ \
+	http://ftp.rhnet.is/pub/OpenOffice/ \
+	http://na.mirror.garr.it/mirrors/openoffice/ \
+	http://vlaai.snt.utwente.nl/pub/software/openoffice/ \
+	http://niihau.student.utwente.nl/openoffice/ \
+	http://borft.student.utwente.nl/openoffice/ \
+	http://ftp.iasi.roedu.net/mirrors/openoffice.org/ \
+	ftp://ftp.arnes.si/packages/OpenOffice.org/ \
+	ftp://ftp.saix.net/pub/OpenOffice.org/ \
+	ftp://ftp.cyberfenix.net/pub/openoffice/ \
+	http://ftp.rediris.es/ftp/mirror/openoffice.org/ \
+	http://ftp.sunet.se/pub/Office/OpenOffice.org/ \
+	ftp://mirror.switch.ch/mirror/OpenOffice/ \
+	ftp://ftp.ksu.edu.tr/pub/OpenOffice/ \
+	ftp://ftp.mirror.ac.uk/sites/ny1.mirror.openoffice.org/ \
+	http://mirror.pacific.net.au/openoffice/ \
+	http://planetmirror.com/pub/openoffice/ \
+	http://komo.vlsm.org/openoffice/ \
+	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
+	ftp://ftp.ring.gr.jp/pub/misc/openoffice/ \
+	http://mymirror.asiaosc.org/openoffice/ \
+	ftp://ftp.kr.freebsd.org/pub/openoffice/ \
+	http://www.fs.tum.de/~mrauch/OpenOffice/download/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
