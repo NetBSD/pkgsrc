@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1 2001/10/17 08:52:04 lukem Exp $
+
+--- Docs/antiword.1.orig	Fri Oct  5 05:05:18 2001
++++ Docs/antiword.1	Wed Oct 17 18:45:31 2001
+@@ -75,11 +75,11 @@
+ .RE
+ .SH FILES
+ .TP
+-$/opt/antiword/share/8859-1.txt, $HOME/.antiword/8859-1.txt and friends:
++@@PREFIX@@/share/antiword/8859-1.txt, $HOME/.antiword/8859-1.txt and friends:
+ .br
+ Global and local mapping files (see -m option)
+ .TP
+-/opt/antiword/share/fontnames, $HOME/.antiword/fontnames:
++@@PREFIX@@/share/antiword/fontnames, $HOME/.antiword/fontnames:
+ .br
+ Global and local versions of the fontnames file.
+ This file contains the translation table from font names as used by MS Word to
