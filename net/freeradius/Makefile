@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:56:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/30 12:08:47 jmmv Exp $
 
 DISTNAME=	freeradius-0.7
 CATEGORIES=	net
@@ -13,10 +13,15 @@ COMMENT=	Free RADIUS server implementation
 CONFLICTS+=	radiusd-cistron*
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--quiet --with-logdir=/var/log --disable-ltdl-install --with-ltdl-lib=${PREFIX}/lib --with-ltdl-include=${PREFIX}/include
 USE_BUILDLINK2= YES
-USE_LIBTOOL= YES
+USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+CONFIGURE_ARGS=		--quiet
+CONFIGURE_ARGS+=	--with-logdir=/var/log
+CONFIGURE_ARGS+=	--disable-ltdl-install
+CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
 
 .include "../../mk/bsd.prefs.mk"
 
