@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.22 2004/11/29 02:00:30 tv Exp $
+# $NetBSD: bsd.sites.mk,v 1.23 2004/12/02 21:56:06 dillo Exp $
 #
 # Default MASTER_SITES
 
@@ -298,6 +298,12 @@ MASTER_SITE_CYGWIN+= \
 	http://mirrors.xmission.com/cygwin/ \
 	ftp://ftp.ring.gr.jp/archives/pc/gnu-win32/ \
 	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
+
+MASTER_SITE_IFARCHIVE+= \
+	http://ifarchive.jmac.org/if-archive/ \
+	http://ifarchive.flavorplex.com/if-archive/ \
+	http://ifarchive.heanet.ie/if-archive/ \
+	http://ifarchive.giga.or.at/if-archive/
  
 # The primary backup site. 
 MASTER_SITE_BACKUP?=	\
