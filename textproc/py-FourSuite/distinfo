@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/22 09:21:32 drochner Exp $
+$NetBSD: distinfo,v 1.2 2002/11/27 17:25:25 drochner Exp $
 
-SHA1 (4Suite-0.12.0a2.tar.gz) = d8dab1eaf7fbf92c9c755f34ba35b536d8c9abd4
-Size (4Suite-0.12.0a2.tar.gz) = 1731977 bytes
-SHA1 (patch-aa) = ec918d61e7f3e2ba151f245bdc5dd7431cbb2083
-SHA1 (patch-ab) = c3d5de93fdfc4affdfbd821fd8ac892a8129ce3b
+SHA1 (4Suite-0.12.0a3.tar.gz) = 55dacc82fe80157d1c1e6b2b1472f8c10c6dde80
+Size (4Suite-0.12.0a3.tar.gz) = 2306831 bytes
+SHA1 (patch-ab) = 4883418558edb2be1086a20fa74355d509d6375e
+SHA1 (patch-ac) = 9eff8edfd82a028b84faf2ec91065557b7e3a0ea
