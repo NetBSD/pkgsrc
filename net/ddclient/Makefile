@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/12/09 19:55:35 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/03/25 01:18:50 hubertf Exp $
 
-DISTNAME=	ddclient-3.6
+DISTNAME=	ddclient-3.6.2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
