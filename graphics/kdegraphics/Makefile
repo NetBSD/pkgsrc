@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/05/01 20:19:58 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/05/04 00:20:02 tron Exp $
 #
 
 DISTNAME=	kdegraphics-beta4-1
@@ -28,11 +28,11 @@ USE_GMAKE=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
-		"--prefix=${PREFIX}" \
 		"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
-CONFIGURE_ENV=	INSTALL_DATA="${INSTALL_DATA}" \
+CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL="/usr/bin/install"
