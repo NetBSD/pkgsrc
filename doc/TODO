@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2431 2004/11/23 17:22:30 wiz Exp $
+$NetBSD: TODO,v 1.2432 2004/11/23 18:21:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -275,7 +275,6 @@ Suggested package updates
 	o amavisd-new-2.1.2 [pkg/26843]
 	o amavisd-new-2.2.0
 	o anomy-sanitizer-1.69
-	o antiword-0.36
 	o ap-auth-mysql-4.3.8
 	o ap-auth-pam-1.1.1
 	o ap-auth-script-1.6
