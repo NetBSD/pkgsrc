@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1999/05/30 02:44:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1999/08/02 02:54:24 hubertf Exp $
 #
 
-DISTNAME=	xhippo-0.85
+DISTNAME=	xhippo-1.1
 CATEGORIES=	audio x11
 MASTER_SITES=	http://zenchaos.netpedia.net/software/
 
@@ -19,8 +19,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/xhippo.gtkrc ${PREFIX}/share/doc/xhippo/xhippo.gtkrc
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${PREFIX}/share/doc/xhippo
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/xhippo
-	${INSTALL_DATA} ${WRKSRC}/LIESMICH ${PREFIX}/share/doc/xhippo
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xhippo
 	${INSTALL_DATA} ${WRKSRC}/README.fvwm2 ${PREFIX}/share/doc/xhippo
+	${INSTALL_DATA} ${WRKSRC}/doc/xhippo.ps.gz ${PREFIX}/share/doc/xhippo
+	${INSTALL_DATA} ${WRKSRC}/doc/xhippo.txt.gz ${PREFIX}/share/doc/xhippo
+	${INSTALL_DATA} ${WRKSRC}/doc/xhippo.sgml ${PREFIX}/share/doc/xhippo
 
 .include "../../mk/bsd.pkg.mk"
