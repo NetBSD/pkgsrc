@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/31 08:13:06 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/26 00:45:06 wiz Exp $
 bin/gtkdoc-fixxref
 bin/gtkdoc-mkdb
 bin/gtkdoc-mkhtml
@@ -10,4 +10,4 @@ bin/gtkdoc-scanobj
 share/gtk-doc/gtk-doc.dcl
 share/gtk-doc/gtk-doc.dsl
 share/gtk-doc/gtkdoc-common.pl
-@dirrm share/gtk-doc
+@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
