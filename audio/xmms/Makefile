@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/03/21 18:52:30 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2002/06/25 08:17:33 abs Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.7
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
-CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 CONFIGURE_ARGS+=	--without-gnome
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -45,3 +44,7 @@ post-patch:
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if (${PTHREAD_TYPE} == pth)	# XXX Remove after pth-syscall becomes pth
+CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
+.endif
