@@ -3,7 +3,8 @@
 # Date created:         27 Dec 1994
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $Id: Makefile,v 1.4 1998/01/22 10:26:40 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/24 23:44:25 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.17 1997/12/08 15:45:27 tg Exp
 #
 
 DISTNAME=       rman-3.0.4
