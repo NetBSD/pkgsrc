@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 1999/06/30 10:02:59 tron Exp $
+$NetBSD: patch-aa,v 1.7 1999/12/01 21:15:22 tron Exp $
 
 --- BuildTools/OS/NetBSD.orig	Tue Dec 29 18:39:50 1998
 +++ BuildTools/OS/NetBSD	Sat Apr 10 19:13:10 1999
@@ -6,9 +6,9 @@ $NetBSD: patch-aa,v 1.6 1999/06/30 10:02:59 tron Exp $
  #	@(#)NetBSD	8.6	(Berkeley)	3/12/1998
  define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
 -define(`confENVDEF', ` -DNETISO')
-+define(`confENVDEF', ` -DNETISO -I${PREFIX}/include/db2')
++define(`confENVDEF', ` -DNETISO ${DB_ENVDEF}')
  define(`confDEPEND_TYPE', `CC-M')
-+define(`confLIBS', `-L${PREFIX}/lib -ldb2 ${LDFLAGS}')
++define(`confLIBS', `${DB_LIBS} ${LDFLAGS}')
 +define(`confEBINDIR', `${PREFIX}/libexec/sendmail')
 +define(`confMBINDIR', `${PREFIX}/libexec/sendmail')
 +define(`confSBINDIR', `${PREFIX}/sbin')
