@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.979 2003/10/30 15:27:27 jmmv Exp $
+$NetBSD: TODO,v 1.980 2003/10/30 23:02:53 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -297,7 +297,6 @@ Suggested package updates
 	o prboom-2.3.0
 	o proftpd-1.2.9rc3
 	o pureftpd-1.0.16c
-	o pyca-20030710 [pkg/23072]
 	o pygtk-0.6.11
 	o pysol-4.82
 	o python-2.3.1
