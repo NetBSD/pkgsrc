@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 1998/07/21 16:40:47 agc Exp $
+bin/f2c
+bin/f77
+include/f2c.h
+lib/libf2c.a
+lib/libF77.a
+lib/libI77.a
+man/man1/f2c.1
+man/cat1/f2c.0
+share/doc/f2c/f2c.ps
+share/doc/f2c/changes
+@dirrm share/doc/f2c
