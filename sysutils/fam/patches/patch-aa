@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2004/03/28 22:01:54 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/29 15:39:11 minskim Exp $
 
 --- configure.ac.orig	2003-11-26 13:47:59.000000000 -0600
 +++ configure.ac
@@ -11,13 +11,14 @@ $NetBSD: patch-aa,v 1.4 2004/03/28 22:01:54 minskim Exp $
  
  if test "$have_sys_imon_h"; then
  	MONITOR_FUNCS=IMonIRIX
-@@ -51,7 +51,8 @@ AC_C_INLINE
+@@ -51,7 +51,9 @@ AC_C_INLINE
  AC_TYPE_PID_T
  AC_TYPE_SIZE_T
  AC_HEADER_TIME
 -AC_CHECK_MEMBERS(struct sockaddr.sa_len, struct sockaddr_un.sun_len)
 +AC_CHECK_MEMBERS(struct sockaddr.sa_len,,,[#include <sys/socket.h>])
-+AC_CHECK_MEMBERS(struct sockaddr_un.sun_len,,,[#include <sys/un.h>])
++AC_CHECK_MEMBERS(struct sockaddr_un.sun_len,,,[#include <sys/types.h>
++#include <sys/un.h>])
  
  # Checks for library functions.
  AC_FUNC_ERROR_AT_LINE
