@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/10/13 16:04:48 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2003/01/03 18:54:45 wiz Exp $
 
---- src/Makefile.in.orig	Fri Oct 11 05:59:10 2002
+--- src/Makefile.in.orig	Fri Dec 20 20:54:14 2002
 +++ src/Makefile.in
+@@ -92,7 +92,7 @@ src = @src@
+ 
+ INCLUDES = -I$(top_srcdir)/libspeex
+ 
+-mandir = $(prefix)/share/man
++mandir = $(prefix)/man
+ man_MANS = speexenc.1 speexdec.1
+ 
+ EXTRA_DIST = $(man_MANS) getopt_win.h getopt.c getopt1.c wave_out.c wave_out.h
 @@ -103,10 +103,10 @@ noinst_HEADERS = wav_io.h
  bin_PROGRAMS = speexenc speexdec
  
