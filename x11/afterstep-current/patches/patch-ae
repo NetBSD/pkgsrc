@@ -1,0 +1,47 @@
+$NetBSD: patch-ae,v 1.1 1999/08/24 10:16:40 fredb Exp $
+
+--- autoconf/configure.in.orig
++++ autoconf/configure.in
+@@ -84,6 +84,7 @@
+ AC_PATH_PROG(MV, mv, mv)
+ AC_PATH_PROG(CP, cp, cp)
+ AC_PATH_PROG(MKDIR, mkdir, mkdir)
++AC_PATH_PROG(LIBTOOL, libtool, libtool)
+ 
+ dnl# let's check for endiannes of our box
+ AC_C_BIGENDIAN
+@@ -223,19 +224,16 @@
+ dnl# AFTERSTEP_LIB="-lafterstep" 
+ dnl# ASIMAGE_LIB="-lasimage"
+ dnl# WIDGETS_LIB="-lWidgets"
++AFTERSTEP_LIB="../../lib/libafterstep.la" 
++ASIMAGE_LIB="../../asimagelib/libasimage.la"
++WIDGETS_LIB="../Script/Widgets/libWidgets.la"
++CONFIG_LIB="../Config/libasConfig.la"
++LIBPROG='$(PROG)'
+ if test "x$enable_staticlibs" = "xyes"; then
+-   AFTERSTEP_LIB="../../lib/libafterstep.a" 
+-   ASIMAGE_LIB="../../asimagelib/libasimage.a"
+-   WIDGETS_LIB="../Script/Widgets/libWidgets.a"
+-   CONFIG_LIB="../Config/libasConfig.a"
+-   LIBPROG='$(PROG)'
++   LDSTATIC="-static"
+    LIBINSTALL=""
+ else
+-   AFTERSTEP_LIB="../../lib/libafterstep.so" 
+-   ASIMAGE_LIB="../../asimagelib/libasimage.so"
+-   WIDGETS_LIB="../Script/Widgets/libWidgets.so"
+-   CONFIG_LIB="../Config/libasConfig.so"
+-   LIBPROG='$(DYNPROG)'
++   LDSTATIC=""
+    LIBINSTALL="install.dyn"
+ fi
+ 
+@@ -320,6 +318,7 @@
+ AC_SUBST(enable_fixeditems)
+ AC_SUBST(enable_audit)
+ AC_SUBST(SCRIPT_DIR)
++AC_SUBST(LDSTATIC)
+ 
+ dnl# Write results
+ 

@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 1999/08/24 10:16:40 fredb Exp $
+
+--- autoconf/Makefile.defines.in.orig	Thu Mar 25 20:07:08 1999
++++ autoconf/Makefile.defines.in	Sat Aug 21 11:25:30 1999
+@@ -7,6 +7,9 @@
+ # -march=pentiumpro -mcpu=pentiumpro
+ EXTRA_DEFINES	= @DEFINE_XLOCALE@
+ 
++LIBTOOL		= @LIBTOOL@
++LDSTATIC	= @LDSTATIC@
++
+ RANLIB		= @RANLIB@
+ AR		= ar clq
+ CP		= @CP@

@@ -1,0 +1,68 @@
+$NetBSD: patch-ah,v 1.1 1999/08/24 10:16:40 fredb Exp $
+
+--- autoconf/Makefile.common.lib.in.orig
++++ autoconf/Makefile.common.lib.in
+@@ -4,7 +4,7 @@
+ 
+ @MAKEFILEDEFINES@
+ 
+-all:            @LIBPROG@ $(INSTALLONBUILD)
++all:            @LIBPROG@
+ 
+ install.bin:
+ 
+@@ -15,24 +15,7 @@
+ install.script:
+ 
+ install.dyn:
+-		$(INSTALL_LIB) $(DYNPROG).$(LIBVER) $(LIBDIR)
+-		-@/bin/rm -f $(LIBDIR)/$(DYNPROG).$(LIBVERMAJOR) $(LIBDIR)/$(DYNPROG)
+-		ln -sf $(DYNPROG).$(LIBVER) $(LIBDIR)/$(DYNPROG).$(LIBVERMAJOR)
+-		ln -sf $(DYNPROG).$(LIBVERMAJOR) $(LIBDIR)/$(DYNPROG)
+-		@( \
+-		 if test `uname` = "Linux"; then \
+-		   if test $(LIBDIR) = "/lib" || test $(LIBDIR) = "/usr/lib"; then \
+-		     echo "" > /dev/null; \
+-		   elif grep -q $(LIBDIR) /etc/ld.so.conf > /dev/null 2>&1; then \
+-		     echo "" > /dev/null; \
+-		   else \
+-		     echo "Unable to find $(LIBDIR) in ld.so.conf. In order to use "; \
+-		     echo "$(DYNPROG), you may need to add it or set LD_LIBRARY_PATH."; \
+-		   fi; \
+-		   echo "ldconfig"; \
+-		   ldconfig; \
+-		 fi \
+-		)
++		$(LIBTOOL) --mode=install $(INSTALL_LIB) $(PROG) $(LIBDIR)/$(PROG:.la=.so).$(LIBVERMAJOR).$(LIBVERMINOR)
+ 
+ uninstall.bin:
+ 
+@@ -69,12 +52,10 @@
+ 		done
+ 
+ $(PROG):	$(OBJS)
+-		$(RMF) $(PROG)
+-		$(AR) $(PROG) $(OBJS)
+-		$(RANLIB) $(PROG)
++		$(LIBTOOL) --mode=link $(CC) $(LDSTATIC) $(OBJS:.o=.lo) -rpath $(LIBDIR) -version-info $(LIBVERMAJOR):$(LIBVERMINOR) -o $(@)
+ 
+ .c.o:
+-		$(CC) $(CCFLAGS) $(EXTRA_DEFINES) $(INCLUDES) $(EXTRA_INCLUDES) -c $*.c
++		$(LIBTOOL) --mode=compile $(CC) $(CCFLAGS) $(EXTRA_DEFINES) $(INCLUDES) $(EXTRA_INCLUDES) -c $*.c
+ 
+ #
+ # include dependency files if they exist
+@@ -82,13 +63,3 @@
+ ifneq ($(wildcard .depend),)
+ include .depend
+ endif
+-
+-$(DYNPROG): $(DYNPROG).$(LIBVERMAJOR)
+-	ln -sf $(DYNPROG).$(LIBVERMAJOR) $(DYNPROG)
+-
+-$(DYNPROG).$(LIBVERMAJOR): $(DYNPROG).$(LIBVER)
+-	ln -sf $(DYNPROG).$(LIBVER) $(DYNPROG).$(LIBVERMAJOR)
+-
+-$(DYNPROG).$(LIBVER): $(OBJSDLL)
+-	$(CC) -shared -Wl,-soname,$(DYNPROG).$(LIBVERMAJOR) -o $(DYNPROG).$(LIBVER) \
+-	 $(OBJSDLL)
