@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.690 2001/03/19 17:05:02 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.691 2001/03/20 00:04:15 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -832,6 +832,16 @@ DEPENDS+=		Mesa>=3.2.1:../../graphics/Mesa
 .endif
 .undef __BUILTIN_MESA
 .endif	# USE_MESA
+
+# Check if we got "rman" with XFree86, for packages that need "rman". 
+.if defined(USE_RMAN)
+.if !exists(${X11BASE}/bin/rman)
+DEPENDS+=		rman-3.0.9:../../textproc/rman
+RMAN?=			${LOCALBASE}/bin/rman
+.else
+RMAN?=			${X11BASE}/bin/rman
+.endif
+.endif
 
 # Popular master sites
 MASTER_SITE_XCONTRIB+=	\
