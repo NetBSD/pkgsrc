@@ -1,4 +1,16 @@
-@comment $NetBSD: PLIST,v 1.6 1999/12/02 15:57:30 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/07/03 11:30:22 mjl Exp $
+lib/perl5/man/man3/Net::Cmd.3
+lib/perl5/man/man3/Net::Domain.3
+lib/perl5/man/man3/Net::DummyInetd.3
+lib/perl5/man/man3/Net::FTP.3
+lib/perl5/man/man3/Net::NNTP.3
+lib/perl5/man/man3/Net::Netrc.3
+lib/perl5/man/man3/Net::PH.3
+lib/perl5/man/man3/Net::POP3.3
+lib/perl5/man/man3/Net::SMTP.3
+lib/perl5/man/man3/Net::SNPP.3
+lib/perl5/man/man3/Net::Time.3
+lib/perl5/man/man3/Net::libnetFAQ.3
 lib/perl5/site_perl/Net/Cmd.pm
 lib/perl5/site_perl/Net/Config.pm
 lib/perl5/site_perl/Net/Domain.pm
@@ -17,17 +29,7 @@ lib/perl5/site_perl/Net/SMTP.pm
 lib/perl5/site_perl/Net/SNPP.pm
 lib/perl5/site_perl/Net/Time.pm
 lib/perl5/site_perl/Net/libnet.cfg
-lib/perl5/man/man3/Net::Time.3
-lib/perl5/man/man3/Net::DummyInetd.3
-lib/perl5/man/man3/Net::NNTP.3
-lib/perl5/man/man3/Net::SNPP.3
-lib/perl5/man/man3/Net::POP3.3
-lib/perl5/man/man3/Net::SMTP.3
-lib/perl5/man/man3/Net::Domain.3
-lib/perl5/man/man3/Net::FTP.3
-lib/perl5/man/man3/Net::Netrc.3
-lib/perl5/man/man3/Net::Cmd.3
-lib/perl5/man/man3/Net::PH.3
+lib/perl5/site_perl/Net/libnetFAQ.pod
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net/.packlist
 @dirrm lib/perl5/site_perl/Net/FTP
 @dirrm lib/perl5/site_perl/Net
