@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2002/12/06 19:52:37 salo Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/08 23:56:44 salo Exp $
 
-DISTNAME=		silc-server-0.9.10
+DISTNAME=		silc-server-0.9.11
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
 			http://www.fi.silcnet.org/download/server/sources/ \
 			ftp://ftp.au.silcnet.org/pub/silcnet/server/sources/ \
-			http://www.us.silcnet.org/download/server/sources/ \
-			ftp://ftp.no.silcnet.org/pub/silc/server/sources/ \
 			http://www.at.silcnet.org/download/server/sources/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -15,10 +13,10 @@ MAINTAINER=		salo@netbsd.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Server for the Secure Internet Live Conferencing (SILC) protocol
 
-GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
-USE_BUILDLINK2=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
 
 .include "../../mk/bsd.prefs.mk"
@@ -59,6 +57,7 @@ CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silcd/modules
 CONFIGURE_ARGS+=	--with-logsdir=/var/log/silcd
 CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/run/silcd.pid
 CONFIGURE_ARGS+=	--without-iconv
+CONFIGURE_ARGS+=	--without-libtoolfix
 
 # List it into IPv6-ready packages.
 BUILD_DEFS+=		USE_INET6
