@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2004/02/12 01:59:38 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2004/02/12 02:35:07 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -62,8 +62,18 @@ BUILDLINK_USE_BUILTIN.Xrender=	YES
 BUILDLINK_USE_BUILTIN.Xrender=	NO
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:MXrender)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xrender=	YES
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xrender=	NO
+.endif
+.if !empty(PREFER_NATIVE:MXrender) && \
+    !empty(BUILDLINK_IS_BUILTIN.Xrender:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xrender=	YES
+.endif
+.if !empty(PREFER_PKGSRC:MXrender)
 BUILDLINK_USE_BUILTIN.Xrender=	NO
 .endif
 
