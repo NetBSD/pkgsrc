@@ -1,16 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/15 11:38:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/06 12:34:35 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
 share/doc/kde/HTML/ru/aktion/common
 share/doc/kde/HTML/ru/aktion/index.cache.bz2
 share/doc/kde/HTML/ru/aktion/index.docbook
-share/doc/kde/HTML/ru/ark/common
-share/doc/kde/HTML/ru/ark/index.cache.bz2
-share/doc/kde/HTML/ru/ark/index.docbook
+share/doc/kde/HTML/ru/amor/common
+share/doc/kde/HTML/ru/amor/index.cache.bz2
+share/doc/kde/HTML/ru/amor/index.docbook
 share/doc/kde/HTML/ru/artsbuilder/apis.docbook
 share/doc/kde/HTML/ru/artsbuilder/artsbuilder.docbook
-share/doc/kde/HTML/ru/artsbuilder/common
 share/doc/kde/HTML/ru/artsbuilder/detail.docbook
 share/doc/kde/HTML/ru/artsbuilder/digitalaudio.docbook
 share/doc/kde/HTML/ru/artsbuilder/faq.docbook
@@ -18,8 +17,6 @@ share/doc/kde/HTML/ru/artsbuilder/future.docbook
 share/doc/kde/HTML/ru/artsbuilder/glossary.docbook
 share/doc/kde/HTML/ru/artsbuilder/gui.docbook
 share/doc/kde/HTML/ru/artsbuilder/helping.docbook
-share/doc/kde/HTML/ru/artsbuilder/index.cache.bz2
-share/doc/kde/HTML/ru/artsbuilder/index.docbook
 share/doc/kde/HTML/ru/artsbuilder/mcop.docbook
 share/doc/kde/HTML/ru/artsbuilder/midi.docbook
 share/doc/kde/HTML/ru/artsbuilder/midiintro.docbook
@@ -40,6 +37,7 @@ share/doc/kde/HTML/ru/common/6.png
 share/doc/kde/HTML/ru/common/7.png
 share/doc/kde/HTML/ru/common/8.png
 share/doc/kde/HTML/ru/common/9.png
+share/doc/kde/HTML/ru/common/appheader.html
 share/doc/kde/HTML/ru/common/artistic-license.html
 share/doc/kde/HTML/ru/common/bottom1.png
 share/doc/kde/HTML/ru/common/bottom2.png
@@ -65,6 +63,8 @@ share/doc/kde/HTML/ru/common/kde-default.css
 share/doc/kde/HTML/ru/common/kde-localised.css
 share/doc/kde/HTML/ru/common/kde-localised.css.template
 share/doc/kde/HTML/ru/common/kde-web.css
+share/doc/kde/HTML/ru/common/kde_logo.png
+share/doc/kde/HTML/ru/common/kde_logo_bg.png
 share/doc/kde/HTML/ru/common/kmenu.png
 share/doc/kde/HTML/ru/common/lgpl-license
 share/doc/kde/HTML/ru/common/lgpl-license.html
@@ -77,20 +77,39 @@ share/doc/kde/HTML/ru/common/web-docbottom.png
 share/doc/kde/HTML/ru/common/web-doctop.png
 share/doc/kde/HTML/ru/common/x11-license.html
 share/doc/kde/HTML/ru/common/xml.dcl
+share/doc/kde/HTML/ru/juk/common
+share/doc/kde/HTML/ru/juk/index.cache.bz2
+share/doc/kde/HTML/ru/juk/index.docbook
+share/doc/kde/HTML/ru/kalzium/common
+share/doc/kde/HTML/ru/kalzium/index.cache.bz2
+share/doc/kde/HTML/ru/kalzium/index.docbook
 share/doc/kde/HTML/ru/kandy/common
 share/doc/kde/HTML/ru/kandy/index.cache.bz2
 share/doc/kde/HTML/ru/kandy/index.docbook
+share/doc/kde/HTML/ru/karm/common
+share/doc/kde/HTML/ru/karm/index.cache.bz2
+share/doc/kde/HTML/ru/karm/index.docbook
 share/doc/kde/HTML/ru/kate-plugins/common
 share/doc/kde/HTML/ru/kate-plugins/htmltools.docbook
 share/doc/kde/HTML/ru/kate-plugins/index.cache.bz2
 share/doc/kde/HTML/ru/kate-plugins/index.docbook
 share/doc/kde/HTML/ru/kate-plugins/insertcommand.docbook
 share/doc/kde/HTML/ru/kate-plugins/openheader.docbook
-share/doc/kde/HTML/ru/kate-plugins/projectmanager.docbook
 share/doc/kde/HTML/ru/kate-plugins/textfilter.docbook
 share/doc/kde/HTML/ru/kate-plugins/xmlcheck.docbook
 share/doc/kde/HTML/ru/kate-plugins/xmltools.docbook
+share/doc/kde/HTML/ru/kate/advanced.docbook
+share/doc/kde/HTML/ru/kate/common
+share/doc/kde/HTML/ru/kate/configuring.docbook
 share/doc/kde/HTML/ru/kate/fundamentals.docbook
+share/doc/kde/HTML/ru/kate/highlighting.docbook
+share/doc/kde/HTML/ru/kate/index.cache.bz2
+share/doc/kde/HTML/ru/kate/index.docbook
+share/doc/kde/HTML/ru/kate/mdi.docbook
+share/doc/kde/HTML/ru/kate/menus.docbook
+share/doc/kde/HTML/ru/kate/part.docbook
+share/doc/kde/HTML/ru/kate/plugins.docbook
+share/doc/kde/HTML/ru/kate/regular-expressions.docbook
 share/doc/kde/HTML/ru/kbabel/catman.docbook
 share/doc/kde/HTML/ru/kbabel/common
 share/doc/kde/HTML/ru/kbabel/dictionaries.docbook
@@ -105,19 +124,40 @@ share/doc/kde/HTML/ru/kbabel/using.docbook
 share/doc/kde/HTML/ru/kbattleship/common
 share/doc/kde/HTML/ru/kbattleship/index.cache.bz2
 share/doc/kde/HTML/ru/kbattleship/index.docbook
+share/doc/kde/HTML/ru/kcachegrind/common
+share/doc/kde/HTML/ru/kcachegrind/index.cache.bz2
+share/doc/kde/HTML/ru/kcachegrind/index.docbook
+share/doc/kde/HTML/ru/kcalc/common
+share/doc/kde/HTML/ru/kcalc/index.cache.bz2
+share/doc/kde/HTML/ru/kcalc/index.docbook
 share/doc/kde/HTML/ru/kcontrol/arts/common
 share/doc/kde/HTML/ru/kcontrol/arts/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/arts/index.docbook
 share/doc/kde/HTML/ru/kcontrol/arts/midi.docbook
+share/doc/kde/HTML/ru/kcontrol/background/common
+share/doc/kde/HTML/ru/kcontrol/background/index.cache.bz2
+share/doc/kde/HTML/ru/kcontrol/background/index.docbook
+share/doc/kde/HTML/ru/kcontrol/bell/common
+share/doc/kde/HTML/ru/kcontrol/bell/index.cache.bz2
+share/doc/kde/HTML/ru/kcontrol/bell/index.docbook
+share/doc/kde/HTML/ru/kcontrol/cache/common
+share/doc/kde/HTML/ru/kcontrol/cache/index.cache.bz2
+share/doc/kde/HTML/ru/kcontrol/cache/index.docbook
 share/doc/kde/HTML/ru/kcontrol/clock/common
 share/doc/kde/HTML/ru/kcontrol/clock/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/clock/index.docbook
 share/doc/kde/HTML/ru/kcontrol/common
+share/doc/kde/HTML/ru/kcontrol/crypto/common
+share/doc/kde/HTML/ru/kcontrol/crypto/index.cache.bz2
+share/doc/kde/HTML/ru/kcontrol/crypto/index.docbook
 share/doc/kde/HTML/ru/kcontrol/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/index.docbook
 share/doc/kde/HTML/ru/kcontrol/kcmlaunch/common
 share/doc/kde/HTML/ru/kcontrol/kcmlaunch/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/kcmlaunch/index.docbook
+share/doc/kde/HTML/ru/kcontrol/kdm/common
+share/doc/kde/HTML/ru/kcontrol/kdm/index.cache.bz2
+share/doc/kde/HTML/ru/kcontrol/kdm/index.docbook
 share/doc/kde/HTML/ru/kcontrol/keyboard/common
 share/doc/kde/HTML/ru/kcontrol/keyboard/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/keyboard/index.docbook
@@ -130,16 +170,57 @@ share/doc/kde/HTML/ru/kcontrol/mouse/index.docbook
 share/doc/kde/HTML/ru/kcontrol/useragent/common
 share/doc/kde/HTML/ru/kcontrol/useragent/index.cache.bz2
 share/doc/kde/HTML/ru/kcontrol/useragent/index.docbook
+share/doc/kde/HTML/ru/kcontrol/windowmanagement/common
+share/doc/kde/HTML/ru/kcontrol/windowmanagement/index.cache.bz2
+share/doc/kde/HTML/ru/kcontrol/windowmanagement/index.docbook
+share/doc/kde/HTML/ru/kcron/common
+share/doc/kde/HTML/ru/kcron/index.cache.bz2
+share/doc/kde/HTML/ru/kcron/index.docbook
 share/doc/kde/HTML/ru/kdebugdialog/common
 share/doc/kde/HTML/ru/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/ru/kdebugdialog/index.docbook
+share/doc/kde/HTML/ru/kdeprint/add-printer-wiz.docbook
+share/doc/kde/HTML/ru/kdeprint/common
+share/doc/kde/HTML/ru/kdeprint/cups-config.docbook
 share/doc/kde/HTML/ru/kdeprint/cupsoptions.docbook
+share/doc/kde/HTML/ru/kdeprint/extensions.docbook
+share/doc/kde/HTML/ru/kdeprint/external-command.docbook
+share/doc/kde/HTML/ru/kdeprint/final-word.docbook
+share/doc/kde/HTML/ru/kdeprint/getting-started.docbook
+share/doc/kde/HTML/ru/kdeprint/highlights.docbook
+share/doc/kde/HTML/ru/kdeprint/index.cache.bz2
+share/doc/kde/HTML/ru/kdeprint/index.docbook
+share/doc/kde/HTML/ru/kdeprint/lpd.docbook
+share/doc/kde/HTML/ru/kdeprint/lpr-bsd.docbook
+share/doc/kde/HTML/ru/kdeprint/lprng.docbook
+share/doc/kde/HTML/ru/kdeprint/rlpr.docbook
+share/doc/kde/HTML/ru/kdeprint/tech-overview.docbook
+share/doc/kde/HTML/ru/kdeprint/theory.docbook
+share/doc/kde/HTML/ru/kdict/common
+share/doc/kde/HTML/ru/kdict/index.cache.bz2
+share/doc/kde/HTML/ru/kdict/index.docbook
+share/doc/kde/HTML/ru/kdm/common
+share/doc/kde/HTML/ru/kdm/index.cache.bz2
+share/doc/kde/HTML/ru/kdm/index.docbook
+share/doc/kde/HTML/ru/kdm/kdmrc-ref.docbook
+share/doc/kde/HTML/ru/kdvi/common
+share/doc/kde/HTML/ru/kdvi/index.cache.bz2
+share/doc/kde/HTML/ru/kdvi/index.docbook
 share/doc/kde/HTML/ru/kenolaba/common
 share/doc/kde/HTML/ru/kenolaba/index.cache.bz2
 share/doc/kde/HTML/ru/kenolaba/index.docbook
 share/doc/kde/HTML/ru/kfloppy/common
 share/doc/kde/HTML/ru/kfloppy/index.cache.bz2
 share/doc/kde/HTML/ru/kfloppy/index.docbook
+share/doc/kde/HTML/ru/kgamma/common
+share/doc/kde/HTML/ru/kgamma/index.cache.bz2
+share/doc/kde/HTML/ru/kgamma/index.docbook
+share/doc/kde/HTML/ru/kghostview/common
+share/doc/kde/HTML/ru/kghostview/index.cache.bz2
+share/doc/kde/HTML/ru/kghostview/index.docbook
+share/doc/kde/HTML/ru/kgpg/common
+share/doc/kde/HTML/ru/kgpg/index.cache.bz2
+share/doc/kde/HTML/ru/kgpg/index.docbook
 share/doc/kde/HTML/ru/kgpgcertmanager/common
 share/doc/kde/HTML/ru/kgpgcertmanager/index.cache.bz2
 share/doc/kde/HTML/ru/kgpgcertmanager/index.docbook
@@ -206,6 +287,7 @@ share/doc/kde/HTML/ru/khelpcenter/userguide/kdetoys-apps.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/kdeutils-apps.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/koffice-apps.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/more-help.docbook
+share/doc/kde/HTML/ru/khelpcenter/userguide/notices-trademarks.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/shortcuts.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/staff.docbook
 share/doc/kde/HTML/ru/khelpcenter/userguide/ug-faq.docbook
@@ -222,6 +304,30 @@ share/doc/kde/HTML/ru/kicker-applets/ktimemon.docbook
 share/doc/kde/HTML/ru/kicker/common
 share/doc/kde/HTML/ru/kicker/index.cache.bz2
 share/doc/kde/HTML/ru/kicker/index.docbook
+share/doc/kde/HTML/ru/kig/common
+share/doc/kde/HTML/ru/kig/index.cache.bz2
+share/doc/kde/HTML/ru/kig/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/common
+share/doc/kde/HTML/ru/kinfocenter/devices/common
+share/doc/kde/HTML/ru/kinfocenter/devices/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/devices/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/dma/common
+share/doc/kde/HTML/ru/kinfocenter/dma/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/dma/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/interrupts/common
+share/doc/kde/HTML/ru/kinfocenter/interrupts/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/interrupts/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/ioports/common
+share/doc/kde/HTML/ru/kinfocenter/ioports/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/ioports/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/memory/common
+share/doc/kde/HTML/ru/kinfocenter/memory/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/memory/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/nics/common
+share/doc/kde/HTML/ru/kinfocenter/nics/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/nics/index.docbook
 share/doc/kde/HTML/ru/kinfocenter/partitions/common
 share/doc/kde/HTML/ru/kinfocenter/partitions/index.cache.bz2
 share/doc/kde/HTML/ru/kinfocenter/partitions/index.docbook
@@ -234,33 +340,77 @@ share/doc/kde/HTML/ru/kinfocenter/pcmcia/index.docbook
 share/doc/kde/HTML/ru/kinfocenter/processor/common
 share/doc/kde/HTML/ru/kinfocenter/processor/index.cache.bz2
 share/doc/kde/HTML/ru/kinfocenter/processor/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/protocols/common
+share/doc/kde/HTML/ru/kinfocenter/protocols/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/protocols/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/samba/common
+share/doc/kde/HTML/ru/kinfocenter/samba/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/samba/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/scsi/common
+share/doc/kde/HTML/ru/kinfocenter/scsi/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/scsi/index.docbook
 share/doc/kde/HTML/ru/kinfocenter/sound/common
 share/doc/kde/HTML/ru/kinfocenter/sound/index.cache.bz2
 share/doc/kde/HTML/ru/kinfocenter/sound/index.docbook
+share/doc/kde/HTML/ru/kinfocenter/usb/common
+share/doc/kde/HTML/ru/kinfocenter/usb/index.cache.bz2
+share/doc/kde/HTML/ru/kinfocenter/usb/index.docbook
 share/doc/kde/HTML/ru/kinfocenter/xserver/common
 share/doc/kde/HTML/ru/kinfocenter/xserver/index.cache.bz2
 share/doc/kde/HTML/ru/kinfocenter/xserver/index.docbook
+share/doc/kde/HTML/ru/kjots/common
+share/doc/kde/HTML/ru/kjots/index.cache.bz2
+share/doc/kde/HTML/ru/kjots/index.docbook
 share/doc/kde/HTML/ru/klines/common
 share/doc/kde/HTML/ru/klines/index.cache.bz2
 share/doc/kde/HTML/ru/klines/index.docbook
+share/doc/kde/HTML/ru/kmag/common
+share/doc/kde/HTML/ru/kmag/index.cache.bz2
+share/doc/kde/HTML/ru/kmag/index.docbook
+share/doc/kde/HTML/ru/kmail/common
+share/doc/kde/HTML/ru/kmail/configure.docbook
+share/doc/kde/HTML/ru/kmail/credits-and-licenses.docbook
+share/doc/kde/HTML/ru/kmail/faq.docbook
+share/doc/kde/HTML/ru/kmail/getting-started.docbook
+share/doc/kde/HTML/ru/kmail/importing.docbook
+share/doc/kde/HTML/ru/kmail/index.cache.bz2
+share/doc/kde/HTML/ru/kmail/index.docbook
+share/doc/kde/HTML/ru/kmail/intro.docbook
+share/doc/kde/HTML/ru/kmail/menus.docbook
+share/doc/kde/HTML/ru/kmail/using-kmail.docbook
+share/doc/kde/HTML/ru/kmid/common
+share/doc/kde/HTML/ru/kmid/index.cache.bz2
+share/doc/kde/HTML/ru/kmid/index.docbook
 share/doc/kde/HTML/ru/kmines/common
 share/doc/kde/HTML/ru/kmines/index.cache.bz2
 share/doc/kde/HTML/ru/kmines/index.docbook
 share/doc/kde/HTML/ru/kmix/common
 share/doc/kde/HTML/ru/kmix/index.cache.bz2
 share/doc/kde/HTML/ru/kmix/index.docbook
+share/doc/kde/HTML/ru/kmousetool/common
+share/doc/kde/HTML/ru/kmousetool/index.cache.bz2
+share/doc/kde/HTML/ru/kmousetool/index.docbook
+share/doc/kde/HTML/ru/kmouth/common
+share/doc/kde/HTML/ru/kmouth/index.cache.bz2
+share/doc/kde/HTML/ru/kmouth/index.docbook
+share/doc/kde/HTML/ru/kmplot/commands.docbook
+share/doc/kde/HTML/ru/kmplot/common
+share/doc/kde/HTML/ru/kmplot/configuration.docbook
+share/doc/kde/HTML/ru/kmplot/credits.docbook
+share/doc/kde/HTML/ru/kmplot/developer.docbook
+share/doc/kde/HTML/ru/kmplot/index.cache.bz2
+share/doc/kde/HTML/ru/kmplot/index.docbook
+share/doc/kde/HTML/ru/kmplot/install.docbook
+share/doc/kde/HTML/ru/kmplot/introduction.docbook
+share/doc/kde/HTML/ru/kmplot/menu.docbook
+share/doc/kde/HTML/ru/kmplot/reference.docbook
+share/doc/kde/HTML/ru/kmplot/using.docbook
 share/doc/kde/HTML/ru/kodo/common
 share/doc/kde/HTML/ru/kodo/index.cache.bz2
 share/doc/kde/HTML/ru/kodo/index.docbook
 share/doc/kde/HTML/ru/kolf/common
 share/doc/kde/HTML/ru/kolf/index.cache.bz2
 share/doc/kde/HTML/ru/kolf/index.docbook
-share/doc/kde/HTML/ru/konq-plugins/babel/common
-share/doc/kde/HTML/ru/konq-plugins/babel/index.cache.bz2
-share/doc/kde/HTML/ru/konq-plugins/babel/index.docbook
-share/doc/kde/HTML/ru/konq-plugins/crashes/common
-share/doc/kde/HTML/ru/konq-plugins/crashes/index.cache.bz2
-share/doc/kde/HTML/ru/konq-plugins/crashes/index.docbook
 share/doc/kde/HTML/ru/konqueror/basics.docbook
 share/doc/kde/HTML/ru/konqueror/bookmarks.docbook
 share/doc/kde/HTML/ru/konqueror/browser.docbook
@@ -269,11 +419,26 @@ share/doc/kde/HTML/ru/konqueror/common
 share/doc/kde/HTML/ru/konqueror/config.docbook
 share/doc/kde/HTML/ru/konqueror/credits.docbook
 share/doc/kde/HTML/ru/konqueror/faq.docbook
+share/doc/kde/HTML/ru/konqueror/filemanager.docbook
 share/doc/kde/HTML/ru/konqueror/index.cache.bz2
 share/doc/kde/HTML/ru/konqueror/index.docbook
 share/doc/kde/HTML/ru/konqueror/introduction.docbook
 share/doc/kde/HTML/ru/konqueror/path-complete.docbook
+share/doc/kde/HTML/ru/konqueror/plugins.docbook
 share/doc/kde/HTML/ru/konqueror/save-settings.docbook
+share/doc/kde/HTML/ru/konqueror/sidebar.docbook
+share/doc/kde/HTML/ru/konsole/common
+share/doc/kde/HTML/ru/konsole/index.cache.bz2
+share/doc/kde/HTML/ru/konsole/index.docbook
+share/doc/kde/HTML/ru/konsolekalendar/common
+share/doc/kde/HTML/ru/konsolekalendar/index.cache.bz2
+share/doc/kde/HTML/ru/konsolekalendar/index.docbook
+share/doc/kde/HTML/ru/kooka/common
+share/doc/kde/HTML/ru/kooka/index.cache.bz2
+share/doc/kde/HTML/ru/kooka/index.docbook
+share/doc/kde/HTML/ru/kopete/common
+share/doc/kde/HTML/ru/kopete/index.cache.bz2
+share/doc/kde/HTML/ru/kopete/index.docbook
 share/doc/kde/HTML/ru/kpager/common
 share/doc/kde/HTML/ru/kpager/index.cache.bz2
 share/doc/kde/HTML/ru/kpager/index.docbook
@@ -309,6 +474,9 @@ share/doc/kde/HTML/ru/ksnapshot/index.docbook
 share/doc/kde/HTML/ru/kspaceduel/common
 share/doc/kde/HTML/ru/kspaceduel/index.cache.bz2
 share/doc/kde/HTML/ru/kspaceduel/index.docbook
+share/doc/kde/HTML/ru/ksplashml/common
+share/doc/kde/HTML/ru/ksplashml/index.cache.bz2
+share/doc/kde/HTML/ru/ksplashml/index.docbook
 share/doc/kde/HTML/ru/kstars/ai-contents.docbook
 share/doc/kde/HTML/ru/kstars/astroinfo.docbook
 share/doc/kde/HTML/ru/kstars/blackbody.docbook
@@ -348,22 +516,31 @@ share/doc/kde/HTML/ru/kstars/zenith.docbook
 share/doc/kde/HTML/ru/ktalkd/common
 share/doc/kde/HTML/ru/ktalkd/index.cache.bz2
 share/doc/kde/HTML/ru/ktalkd/index.docbook
+share/doc/kde/HTML/ru/ktouch/common
+share/doc/kde/HTML/ru/ktouch/index.cache.bz2
+share/doc/kde/HTML/ru/ktouch/index.docbook
 share/doc/kde/HTML/ru/ktuberling/common
 share/doc/kde/HTML/ru/ktuberling/index.cache.bz2
 share/doc/kde/HTML/ru/ktuberling/index.docbook
 share/doc/kde/HTML/ru/ktuberling/technical-reference.docbook
+share/doc/kde/HTML/ru/kuser/common
+share/doc/kde/HTML/ru/kuser/index.cache.bz2
+share/doc/kde/HTML/ru/kuser/index.docbook
 share/doc/kde/HTML/ru/kwin4/common
 share/doc/kde/HTML/ru/kwin4/index.cache.bz2
 share/doc/kde/HTML/ru/kwin4/index.docbook
 share/doc/kde/HTML/ru/kworldclock/common
 share/doc/kde/HTML/ru/kworldclock/index.cache.bz2
 share/doc/kde/HTML/ru/kworldclock/index.docbook
-share/doc/kde/HTML/ru/kwuftpd/common
-share/doc/kde/HTML/ru/kwuftpd/index.cache.bz2
-share/doc/kde/HTML/ru/kwuftpd/index.docbook
-share/doc/kde/HTML/ru/kxconfig/common
-share/doc/kde/HTML/ru/kxconfig/index.cache.bz2
-share/doc/kde/HTML/ru/kxconfig/index.docbook
+share/doc/kde/HTML/ru/kxsldbg/common
+share/doc/kde/HTML/ru/kxsldbg/credits.docbook
+share/doc/kde/HTML/ru/kxsldbg/glossary.docbook
+share/doc/kde/HTML/ru/kxsldbg/index.cache.bz2
+share/doc/kde/HTML/ru/kxsldbg/index.docbook
+share/doc/kde/HTML/ru/kxsldbg/kxsldbg_configure.docbook
+share/doc/kde/HTML/ru/kxsldbg/kxsldbg_inspector.docbook
+share/doc/kde/HTML/ru/kxsldbg/kxsldbg_mainwindow.docbook
+share/doc/kde/HTML/ru/kxsldbg/kxsldbg_tools.docbook
 share/doc/kde/HTML/ru/lskat/common
 share/doc/kde/HTML/ru/lskat/index.cache.bz2
 share/doc/kde/HTML/ru/lskat/index.docbook
@@ -373,7 +550,32 @@ share/doc/kde/HTML/ru/megami/index.docbook
 share/doc/kde/HTML/ru/noatun/common
 share/doc/kde/HTML/ru/noatun/index.cache.bz2
 share/doc/kde/HTML/ru/noatun/index.docbook
-share/kde/locale/ru/LC_MESSAGES/aktion.mo
+share/doc/kde/HTML/ru/quanta/adv-quanta.docbook
+share/doc/kde/HTML/ru/quanta/common
+share/doc/kde/HTML/ru/quanta/config-quanta.docbook
+share/doc/kde/HTML/ru/quanta/credits-license.docbook
+share/doc/kde/HTML/ru/quanta/debugging-quanta.docbook
+share/doc/kde/HTML/ru/quanta/extending-quanta.docbook
+share/doc/kde/HTML/ru/quanta/fundamentals.docbook
+share/doc/kde/HTML/ru/quanta/glossary.docbook
+share/doc/kde/HTML/ru/quanta/index.cache.bz2
+share/doc/kde/HTML/ru/quanta/index.docbook
+share/doc/kde/HTML/ru/quanta/installation.docbook
+share/doc/kde/HTML/ru/quanta/introduction.docbook
+share/doc/kde/HTML/ru/quanta/q-and-a.docbook
+share/doc/kde/HTML/ru/quanta/quanta-menus.docbook
+share/doc/kde/HTML/ru/quanta/quanta-projects.docbook
+share/doc/kde/HTML/ru/quanta/working-with-quanta.docbook
+share/doc/kde/HTML/ru/umbrello/authors.docbook
+share/doc/kde/HTML/ru/umbrello/code_import_and_generation.docbook
+share/doc/kde/HTML/ru/umbrello/common
+share/doc/kde/HTML/ru/umbrello/credits.docbook
+share/doc/kde/HTML/ru/umbrello/index.cache.bz2
+share/doc/kde/HTML/ru/umbrello/index.docbook
+share/doc/kde/HTML/ru/umbrello/introduction.docbook
+share/doc/kde/HTML/ru/umbrello/other_features.docbook
+share/doc/kde/HTML/ru/umbrello/uml_basics.docbook
+share/doc/kde/HTML/ru/umbrello/working_with_umbrello.docbook
 share/kde/locale/ru/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/ru/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/ru/LC_MESSAGES/amor.mo
@@ -384,13 +586,18 @@ share/kde/locale/ru/LC_MESSAGES/artscontrol.mo
 share/kde/locale/ru/LC_MESSAGES/artsmodules.mo
 share/kde/locale/ru/LC_MESSAGES/atlantik.mo
 share/kde/locale/ru/LC_MESSAGES/atlantikdesigner.mo
+share/kde/locale/ru/LC_MESSAGES/audiorename_plugin.mo
+share/kde/locale/ru/LC_MESSAGES/autorefresh.mo
 share/kde/locale/ru/LC_MESSAGES/babelfish.mo
+share/kde/locale/ru/LC_MESSAGES/cervisia.mo
 share/kde/locale/ru/LC_MESSAGES/charlatanui.mo
 share/kde/locale/ru/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/ru/LC_MESSAGES/clockapplet.mo
 share/kde/locale/ru/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/ru/LC_MESSAGES/cupsdconf.mo
+share/kde/locale/ru/LC_MESSAGES/cvsservice.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_kde-i18n.mo
+share/kde/locale/ru/LC_MESSAGES/desktop_kdeaccessibility.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_kdeaddons.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_kdeadmin.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_kdeartwork.mo
@@ -405,20 +612,29 @@ share/kde/locale/ru/LC_MESSAGES/desktop_kdepim.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_kdeutils.mo
+share/kde/locale/ru/LC_MESSAGES/desktop_kdevelop.mo
+share/kde/locale/ru/LC_MESSAGES/desktop_quanta.mo
+share/kde/locale/ru/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/ru/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/ru/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/ru/LC_MESSAGES/drkonqi.mo
 share/kde/locale/ru/LC_MESSAGES/dub.mo
 share/kde/locale/ru/LC_MESSAGES/extensionproxy.mo
 share/kde/locale/ru/LC_MESSAGES/filetypes.mo
+share/kde/locale/ru/LC_MESSAGES/flashkard.mo
 share/kde/locale/ru/LC_MESSAGES/fontinst.mo
+share/kde/locale/ru/LC_MESSAGES/fsview.mo
 share/kde/locale/ru/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/ru/LC_MESSAGES/imagerename_plugin.mo
 share/kde/locale/ru/LC_MESSAGES/imgalleryplugin.mo
+share/kde/locale/ru/LC_MESSAGES/irkick.mo
 share/kde/locale/ru/LC_MESSAGES/jefferson.mo
+share/kde/locale/ru/LC_MESSAGES/juk.mo
 share/kde/locale/ru/LC_MESSAGES/kabc2mutt.mo
 share/kde/locale/ru/LC_MESSAGES/kabc_dir.mo
+share/kde/locale/ru/LC_MESSAGES/kabc_file.mo
 share/kde/locale/ru/LC_MESSAGES/kabc_ldap.mo
+share/kde/locale/ru/LC_MESSAGES/kabc_ldapkio.mo
 share/kde/locale/ru/LC_MESSAGES/kabc_net.mo
 share/kde/locale/ru/LC_MESSAGES/kabc_sql.mo
 share/kde/locale/ru/LC_MESSAGES/kabcformat_binary.mo
@@ -429,17 +645,19 @@ share/kde/locale/ru/LC_MESSAGES/kalarm.mo
 share/kde/locale/ru/LC_MESSAGES/kalarmdgui.mo
 share/kde/locale/ru/LC_MESSAGES/kalzium.mo
 share/kde/locale/ru/LC_MESSAGES/kandy.mo
-share/kde/locale/ru/LC_MESSAGES/kaphorism.mo
 share/kde/locale/ru/LC_MESSAGES/kappfinder.mo
 share/kde/locale/ru/LC_MESSAGES/karm.mo
 share/kde/locale/ru/LC_MESSAGES/kasbarextension.mo
 share/kde/locale/ru/LC_MESSAGES/kasteroids.mo
 share/kde/locale/ru/LC_MESSAGES/kate.mo
+share/kde/locale/ru/LC_MESSAGES/katecppsymbolviewer.mo
+share/kde/locale/ru/LC_MESSAGES/katedefaultproject.mo
 share/kde/locale/ru/LC_MESSAGES/katefll_initplugin.mo
 share/kde/locale/ru/LC_MESSAGES/katefll_plugin.mo
 share/kde/locale/ru/LC_MESSAGES/katehelloworld.mo
 share/kde/locale/ru/LC_MESSAGES/katehtmltools.mo
 share/kde/locale/ru/LC_MESSAGES/kateinsertcommand.mo
+share/kde/locale/ru/LC_MESSAGES/katemake.mo
 share/kde/locale/ru/LC_MESSAGES/katemodeline.mo
 share/kde/locale/ru/LC_MESSAGES/kateopenheader.mo
 share/kde/locale/ru/LC_MESSAGES/katepart.mo
@@ -456,16 +674,19 @@ share/kde/locale/ru/LC_MESSAGES/kbackgammon.mo
 share/kde/locale/ru/LC_MESSAGES/kbattleship.mo
 share/kde/locale/ru/LC_MESSAGES/kblackbox.mo
 share/kde/locale/ru/LC_MESSAGES/kbounce.mo
+share/kde/locale/ru/LC_MESSAGES/kbruch.mo
+share/kde/locale/ru/LC_MESSAGES/kbugbuster.mo
 share/kde/locale/ru/LC_MESSAGES/kcalc.mo
 share/kde/locale/ru/LC_MESSAGES/kcardchooser.mo
 share/kde/locale/ru/LC_MESSAGES/kcharselect.mo
 share/kde/locale/ru/LC_MESSAGES/kcharselectapplet.mo
-share/kde/locale/ru/LC_MESSAGES/kcm_krfb.mo
 share/kde/locale/ru/LC_MESSAGES/kcmaccess.mo
+share/kde/locale/ru/LC_MESSAGES/kcmaccessibility.mo
 share/kde/locale/ru/LC_MESSAGES/kcmarts.mo
 share/kde/locale/ru/LC_MESSAGES/kcmaudiocd.mo
 share/kde/locale/ru/LC_MESSAGES/kcmbackground.mo
 share/kde/locale/ru/LC_MESSAGES/kcmbell.mo
+share/kde/locale/ru/LC_MESSAGES/kcmcddb.mo
 share/kde/locale/ru/LC_MESSAGES/kcmcgi.mo
 share/kde/locale/ru/LC_MESSAGES/kcmcolors.mo
 share/kde/locale/ru/LC_MESSAGES/kcmcomponentchooser.mo
@@ -493,6 +714,8 @@ share/kde/locale/ru/LC_MESSAGES/kcmkonsole.mo
 share/kde/locale/ru/LC_MESSAGES/kcmktalkd.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkuick.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkurifilt.mo
+share/kde/locale/ru/LC_MESSAGES/kcmkvaio.mo
+share/kde/locale/ru/LC_MESSAGES/kcmkwallet.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkwindecoration.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkwintheme.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkwm.mo
@@ -503,11 +726,12 @@ share/kde/locale/ru/LC_MESSAGES/kcmlaunch.mo
 share/kde/locale/ru/LC_MESSAGES/kcmlayout.mo
 share/kde/locale/ru/LC_MESSAGES/kcmlilo.mo
 share/kde/locale/ru/LC_MESSAGES/kcmlinuz.mo
+share/kde/locale/ru/LC_MESSAGES/kcmlirc.mo
 share/kde/locale/ru/LC_MESSAGES/kcmlocale.mo
 share/kde/locale/ru/LC_MESSAGES/kcmmidi.mo
-share/kde/locale/ru/LC_MESSAGES/kcmnewsticker.mo
 share/kde/locale/ru/LC_MESSAGES/kcmnic.mo
 share/kde/locale/ru/LC_MESSAGES/kcmnotify.mo
+share/kde/locale/ru/LC_MESSAGES/kcmperformance.mo
 share/kde/locale/ru/LC_MESSAGES/kcmprintmgr.mo
 share/kde/locale/ru/LC_MESSAGES/kcmsamba.mo
 share/kde/locale/ru/LC_MESSAGES/kcmscreensaver.mo
@@ -519,6 +743,8 @@ share/kde/locale/ru/LC_MESSAGES/kcmstyle.mo
 share/kde/locale/ru/LC_MESSAGES/kcmtaskbar.mo
 share/kde/locale/ru/LC_MESSAGES/kcmthemes.mo
 share/kde/locale/ru/LC_MESSAGES/kcmusb.mo
+share/kde/locale/ru/LC_MESSAGES/kcmview1394.mo
+share/kde/locale/ru/LC_MESSAGES/kcmxinerama.mo
 share/kde/locale/ru/LC_MESSAGES/kcoloredit.mo
 share/kde/locale/ru/LC_MESSAGES/kcontrol.mo
 share/kde/locale/ru/LC_MESSAGES/kcron.mo
@@ -526,14 +752,19 @@ share/kde/locale/ru/LC_MESSAGES/kdat.mo
 share/kde/locale/ru/LC_MESSAGES/kdcop.mo
 share/kde/locale/ru/LC_MESSAGES/kdebugdialog.mo
 share/kde/locale/ru/LC_MESSAGES/kdelibs.mo
+share/kde/locale/ru/LC_MESSAGES/kdelibs_colors.mo
+share/kde/locale/ru/LC_MESSAGES/kdelirc.mo
 share/kde/locale/ru/LC_MESSAGES/kdepasswd.mo
+share/kde/locale/ru/LC_MESSAGES/kdeprint.mo
 share/kde/locale/ru/LC_MESSAGES/kdeprint_part.mo
 share/kde/locale/ru/LC_MESSAGES/kdeprintfax.mo
 share/kde/locale/ru/LC_MESSAGES/kdesktop.mo
 share/kde/locale/ru/LC_MESSAGES/kdessh.mo
 share/kde/locale/ru/LC_MESSAGES/kdesu.mo
 share/kde/locale/ru/LC_MESSAGES/kdesud.mo
+share/kde/locale/ru/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/ru/LC_MESSAGES/kdf.mo
+share/kde/locale/ru/LC_MESSAGES/kdialog.mo
 share/kde/locale/ru/LC_MESSAGES/kdict.mo
 share/kde/locale/ru/LC_MESSAGES/kdictapplet.mo
 share/kde/locale/ru/LC_MESSAGES/kdmchooser.mo
@@ -548,8 +779,11 @@ share/kde/locale/ru/LC_MESSAGES/kfifteenapplet.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_au.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_avi.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_bmp.mo
+share/kde/locale/ru/LC_MESSAGES/kfile_cpp.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_deb.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_desktop.mo
+share/kde/locale/ru/LC_MESSAGES/kfile_dvi.mo
+share/kde/locale/ru/LC_MESSAGES/kfile_flac.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_folder.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_font.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_gif.mo
@@ -559,26 +793,33 @@ share/kde/locale/ru/LC_MESSAGES/kfile_jpeg.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_m3u.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_mp3.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_ogg.mo
+share/kde/locale/ru/LC_MESSAGES/kfile_pcx.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_pdf.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_png.mo
+share/kde/locale/ru/LC_MESSAGES/kfile_po.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_ps.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_rfc822.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_rpm.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_tga.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_tiff.mo
+share/kde/locale/ru/LC_MESSAGES/kfile_ts.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_txt.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_vcf.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_wav.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_xbm.mo
+share/kde/locale/ru/LC_MESSAGES/kfileaudiopreview.mo
+share/kde/locale/ru/LC_MESSAGES/kfilereplace.mo
 share/kde/locale/ru/LC_MESSAGES/kfindpart.mo
 share/kde/locale/ru/LC_MESSAGES/kfloppy.mo
 share/kde/locale/ru/LC_MESSAGES/kfmclient.mo
+share/kde/locale/ru/LC_MESSAGES/kfontinst.mo
 share/kde/locale/ru/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/ru/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/ru/LC_MESSAGES/kgantt.mo
-share/kde/locale/ru/LC_MESSAGES/kgeo.mo
 share/kde/locale/ru/LC_MESSAGES/kget.mo
 share/kde/locale/ru/LC_MESSAGES/kghostview.mo
+share/kde/locale/ru/LC_MESSAGES/kgoldrunner.mo
+share/kde/locale/ru/LC_MESSAGES/kgpg.mo
 share/kde/locale/ru/LC_MESSAGES/kgpgcertmanager.mo
 share/kde/locale/ru/LC_MESSAGES/khangman.mo
 share/kde/locale/ru/LC_MESSAGES/khelpcenter.mo
@@ -587,14 +828,19 @@ share/kde/locale/ru/LC_MESSAGES/khotkeys.mo
 share/kde/locale/ru/LC_MESSAGES/khtmlsettingsplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kicker.mo
 share/kde/locale/ru/LC_MESSAGES/kiconedit.mo
+share/kde/locale/ru/LC_MESSAGES/kig.mo
 share/kde/locale/ru/LC_MESSAGES/kinetd.mo
+share/kde/locale/ru/LC_MESSAGES/kio.mo
 share/kde/locale/ru/LC_MESSAGES/kio_audiocd.mo
+share/kde/locale/ru/LC_MESSAGES/kio_devices.mo
 share/kde/locale/ru/LC_MESSAGES/kio_finger.mo
 share/kde/locale/ru/LC_MESSAGES/kio_floppy.mo
+share/kde/locale/ru/LC_MESSAGES/kio_help.mo
 share/kde/locale/ru/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/ru/LC_MESSAGES/kio_lan.mo
 share/kde/locale/ru/LC_MESSAGES/kio_mac.mo
 share/kde/locale/ru/LC_MESSAGES/kio_man.mo
+share/kde/locale/ru/LC_MESSAGES/kio_mobile.mo
 share/kde/locale/ru/LC_MESSAGES/kio_nfs.mo
 share/kde/locale/ru/LC_MESSAGES/kio_nntp.mo
 share/kde/locale/ru/LC_MESSAGES/kio_pop3.mo
@@ -615,9 +861,11 @@ share/kde/locale/ru/LC_MESSAGES/klickety.mo
 share/kde/locale/ru/LC_MESSAGES/klines.mo
 share/kde/locale/ru/LC_MESSAGES/klipper.mo
 share/kde/locale/ru/LC_MESSAGES/klock.mo
+share/kde/locale/ru/LC_MESSAGES/kmag.mo
 share/kde/locale/ru/LC_MESSAGES/kmahjongg.mo
 share/kde/locale/ru/LC_MESSAGES/kmail.mo
 share/kde/locale/ru/LC_MESSAGES/kmailcvt.mo
+share/kde/locale/ru/LC_MESSAGES/kmathtool.mo
 share/kde/locale/ru/LC_MESSAGES/kmcop.mo
 share/kde/locale/ru/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/ru/LC_MESSAGES/kmessedwords.mo
@@ -626,7 +874,11 @@ share/kde/locale/ru/LC_MESSAGES/kmidi.mo
 share/kde/locale/ru/LC_MESSAGES/kmines.mo
 share/kde/locale/ru/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/ru/LC_MESSAGES/kmix.mo
+share/kde/locale/ru/LC_MESSAGES/kmobile.mo
 share/kde/locale/ru/LC_MESSAGES/kmoon.mo
+share/kde/locale/ru/LC_MESSAGES/kmousetool.mo
+share/kde/locale/ru/LC_MESSAGES/kmouth.mo
+share/kde/locale/ru/LC_MESSAGES/kmplot.mo
 share/kde/locale/ru/LC_MESSAGES/kmrml.mo
 share/kde/locale/ru/LC_MESSAGES/knewsticker.mo
 share/kde/locale/ru/LC_MESSAGES/knode.mo
@@ -641,7 +893,9 @@ share/kde/locale/ru/LC_MESSAGES/konqueror.mo
 share/kde/locale/ru/LC_MESSAGES/konquest.mo
 share/kde/locale/ru/LC_MESSAGES/konsole.mo
 share/kde/locale/ru/LC_MESSAGES/konsolekalendar.mo
+share/kde/locale/ru/LC_MESSAGES/kontact.mo
 share/kde/locale/ru/LC_MESSAGES/kooka.mo
+share/kde/locale/ru/LC_MESSAGES/kopete.mo
 share/kde/locale/ru/LC_MESSAGES/korganizer.mo
 share/kde/locale/ru/LC_MESSAGES/korn.mo
 share/kde/locale/ru/LC_MESSAGES/kpackage.mo
@@ -650,6 +904,7 @@ share/kde/locale/ru/LC_MESSAGES/kpaint.mo
 share/kde/locale/ru/LC_MESSAGES/kpartapp.mo
 share/kde/locale/ru/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/ru/LC_MESSAGES/kpat.mo
+share/kde/locale/ru/LC_MESSAGES/kpdf.mo
 share/kde/locale/ru/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/ru/LC_MESSAGES/kpf.mo
 share/kde/locale/ru/LC_MESSAGES/kpilot.mo
@@ -658,6 +913,7 @@ share/kde/locale/ru/LC_MESSAGES/kpovmodeler.mo
 share/kde/locale/ru/LC_MESSAGES/kppp.mo
 share/kde/locale/ru/LC_MESSAGES/kppplogview.mo
 share/kde/locale/ru/LC_MESSAGES/kprinter.mo
+share/kde/locale/ru/LC_MESSAGES/krandr.mo
 share/kde/locale/ru/LC_MESSAGES/krdb.mo
 share/kde/locale/ru/LC_MESSAGES/krdc.mo
 share/kde/locale/ru/LC_MESSAGES/kreadconfig.mo
@@ -669,9 +925,9 @@ share/kde/locale/ru/LC_MESSAGES/kruler.mo
 share/kde/locale/ru/LC_MESSAGES/krunapplet.mo
 share/kde/locale/ru/LC_MESSAGES/ksame.mo
 share/kde/locale/ru/LC_MESSAGES/kscd.mo
-share/kde/locale/ru/LC_MESSAGES/kscoreapplet.mo
 share/kde/locale/ru/LC_MESSAGES/kscreensaver.mo
 share/kde/locale/ru/LC_MESSAGES/kshisen.mo
+share/kde/locale/ru/LC_MESSAGES/ksig.mo
 share/kde/locale/ru/LC_MESSAGES/ksim.mo
 share/kde/locale/ru/LC_MESSAGES/ksirc.mo
 share/kde/locale/ru/LC_MESSAGES/ksirtet.mo
@@ -682,6 +938,7 @@ share/kde/locale/ru/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/ru/LC_MESSAGES/ksokoban.mo
 share/kde/locale/ru/LC_MESSAGES/kspaceduel.mo
 share/kde/locale/ru/LC_MESSAGES/ksplash.mo
+share/kde/locale/ru/LC_MESSAGES/ksplashthemes.mo
 share/kde/locale/ru/LC_MESSAGES/kstars.mo
 share/kde/locale/ru/LC_MESSAGES/kstart.mo
 share/kde/locale/ru/LC_MESSAGES/kstartperf.mo
@@ -699,12 +956,14 @@ share/kde/locale/ru/LC_MESSAGES/ktexteditor_kdatatool.mo
 share/kde/locale/ru/LC_MESSAGES/ktimemon.mo
 share/kde/locale/ru/LC_MESSAGES/ktimer.mo
 share/kde/locale/ru/LC_MESSAGES/ktip.mo
+share/kde/locale/ru/LC_MESSAGES/ktnef.mo
 share/kde/locale/ru/LC_MESSAGES/ktouch.mo
 share/kde/locale/ru/LC_MESSAGES/ktron.mo
 share/kde/locale/ru/LC_MESSAGES/ktuberling.mo
 share/kde/locale/ru/LC_MESSAGES/ktux.mo
 share/kde/locale/ru/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/ru/LC_MESSAGES/kuickshow.mo
+share/kde/locale/ru/LC_MESSAGES/kuiviewer.mo
 share/kde/locale/ru/LC_MESSAGES/kuser.mo
 share/kde/locale/ru/LC_MESSAGES/kview.mo
 share/kde/locale/ru/LC_MESSAGES/kview_scale.mo
@@ -713,25 +972,29 @@ share/kde/locale/ru/LC_MESSAGES/kviewpresenterplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kviewshell.mo
 share/kde/locale/ru/LC_MESSAGES/kviewtemplateplugin.mo
+share/kde/locale/ru/LC_MESSAGES/kwalletmanager.mo
 share/kde/locale/ru/LC_MESSAGES/kweather.mo
+share/kde/locale/ru/LC_MESSAGES/kwifimanager.mo
 share/kde/locale/ru/LC_MESSAGES/kwin.mo
 share/kde/locale/ru/LC_MESSAGES/kwin4.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_b2_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_cde_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_default_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_glow_config.mo
-share/kde/locale/ru/LC_MESSAGES/kwin_icewm_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_keramik_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_modernsys_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_quartz_config.mo
+share/kde/locale/ru/LC_MESSAGES/kwireless.mo
 share/kde/locale/ru/LC_MESSAGES/kworldclock.mo
-share/kde/locale/ru/LC_MESSAGES/kwuftpd.mo
-share/kde/locale/ru/LC_MESSAGES/kxconfig.mo
 share/kde/locale/ru/LC_MESSAGES/kxkb.mo
 share/kde/locale/ru/LC_MESSAGES/kxmlrpcd.mo
 share/kde/locale/ru/LC_MESSAGES/kxsconfig.mo
+share/kde/locale/ru/LC_MESSAGES/kxsldbg.mo
+share/kde/locale/ru/LC_MESSAGES/libcalendarresources.mo
+share/kde/locale/ru/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/kde/locale/ru/LC_MESSAGES/libkcal.mo
 share/kde/locale/ru/LC_MESSAGES/libkcalsystem.mo
+share/kde/locale/ru/LC_MESSAGES/libkcddb.mo
 share/kde/locale/ru/LC_MESSAGES/libkdegames.mo
 share/kde/locale/ru/LC_MESSAGES/libkdehighscores.mo
 share/kde/locale/ru/LC_MESSAGES/libkdenetwork.mo
@@ -751,13 +1014,17 @@ share/kde/locale/ru/LC_MESSAGES/libtaskbar.mo
 share/kde/locale/ru/LC_MESSAGES/libtaskmanager.mo
 share/kde/locale/ru/LC_MESSAGES/lockout.mo
 share/kde/locale/ru/LC_MESSAGES/lskat.mo
+share/kde/locale/ru/LC_MESSAGES/lyrics.mo
 share/kde/locale/ru/LC_MESSAGES/megami.mo
+share/kde/locale/ru/LC_MESSAGES/minitoolsplugin.mo
 share/kde/locale/ru/LC_MESSAGES/naughtyapplet.mo
 share/kde/locale/ru/LC_MESSAGES/noatun.mo
 share/kde/locale/ru/LC_MESSAGES/nsplugin.mo
 share/kde/locale/ru/LC_MESSAGES/passwords.mo
 share/kde/locale/ru/LC_MESSAGES/pitchablespeed.mo
 share/kde/locale/ru/LC_MESSAGES/ppdtranslations.mo
+share/kde/locale/ru/LC_MESSAGES/privacy.mo
+share/kde/locale/ru/LC_MESSAGES/qeditor.mo
 share/kde/locale/ru/LC_MESSAGES/quanta.mo
 share/kde/locale/ru/LC_MESSAGES/quicklauncher.mo
 share/kde/locale/ru/LC_MESSAGES/secpolicy.mo
@@ -768,6 +1035,8 @@ share/kde/locale/ru/LC_MESSAGES/timezones.mo
 share/kde/locale/ru/LC_MESSAGES/tippecanoe.mo
 share/kde/locale/ru/LC_MESSAGES/tyler.mo
 share/kde/locale/ru/LC_MESSAGES/uachangerplugin.mo
+share/kde/locale/ru/LC_MESSAGES/umbrello.mo
+share/kde/locale/ru/LC_MESSAGES/userinfo.mo
 share/kde/locale/ru/LC_MESSAGES/validatorsplugin.mo
 share/kde/locale/ru/LC_MESSAGES/wakeup.mo
 share/kde/locale/ru/LC_MESSAGES/wavecapture.mo
@@ -777,16 +1046,20 @@ share/kde/locale/ru/entry.desktop
 share/kde/locale/ru/flag.png
 @comment dirrm share/kde/locale/ru/LC_MESSAGES
 @comment dirrm share/kde/locale/ru
+@dirrm share/doc/kde/HTML/ru/umbrello
+@dirrm share/doc/kde/HTML/ru/quanta
 @dirrm share/doc/kde/HTML/ru/noatun
 @dirrm share/doc/kde/HTML/ru/megami
 @dirrm share/doc/kde/HTML/ru/lskat
-@dirrm share/doc/kde/HTML/ru/kxconfig
-@dirrm share/doc/kde/HTML/ru/kwuftpd
+@dirrm share/doc/kde/HTML/ru/kxsldbg
 @dirrm share/doc/kde/HTML/ru/kworldclock
 @dirrm share/doc/kde/HTML/ru/kwin4
+@dirrm share/doc/kde/HTML/ru/kuser
 @dirrm share/doc/kde/HTML/ru/ktuberling
+@dirrm share/doc/kde/HTML/ru/ktouch
 @dirrm share/doc/kde/HTML/ru/ktalkd
 @dirrm share/doc/kde/HTML/ru/kstars
+@dirrm share/doc/kde/HTML/ru/ksplashml
 @dirrm share/doc/kde/HTML/ru/kspaceduel
 @dirrm share/doc/kde/HTML/ru/ksnapshot
 @dirrm share/doc/kde/HTML/ru/ksirtet
@@ -795,22 +1068,41 @@ share/kde/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kppp
 @dirrm share/doc/kde/HTML/ru/kpovmodeler
 @dirrm share/doc/kde/HTML/ru/kpager
+@dirrm share/doc/kde/HTML/ru/kopete
+@dirrm share/doc/kde/HTML/ru/kooka
+@dirrm share/doc/kde/HTML/ru/konsolekalendar
+@dirrm share/doc/kde/HTML/ru/konsole
 @dirrm share/doc/kde/HTML/ru/konqueror
-@dirrm share/doc/kde/HTML/ru/konq-plugins/crashes
-@dirrm share/doc/kde/HTML/ru/konq-plugins/babel
-@dirrm share/doc/kde/HTML/ru/konq-plugins
 @dirrm share/doc/kde/HTML/ru/kolf
 @dirrm share/doc/kde/HTML/ru/kodo
+@dirrm share/doc/kde/HTML/ru/kmplot
+@dirrm share/doc/kde/HTML/ru/kmouth
+@dirrm share/doc/kde/HTML/ru/kmousetool
 @dirrm share/doc/kde/HTML/ru/kmix
 @dirrm share/doc/kde/HTML/ru/kmines
+@dirrm share/doc/kde/HTML/ru/kmid
+@dirrm share/doc/kde/HTML/ru/kmail
+@dirrm share/doc/kde/HTML/ru/kmag
 @dirrm share/doc/kde/HTML/ru/klines
+@dirrm share/doc/kde/HTML/ru/kjots
 @dirrm share/doc/kde/HTML/ru/kinfocenter/xserver
+@dirrm share/doc/kde/HTML/ru/kinfocenter/usb
 @dirrm share/doc/kde/HTML/ru/kinfocenter/sound
+@dirrm share/doc/kde/HTML/ru/kinfocenter/scsi
+@dirrm share/doc/kde/HTML/ru/kinfocenter/samba
+@dirrm share/doc/kde/HTML/ru/kinfocenter/protocols
 @dirrm share/doc/kde/HTML/ru/kinfocenter/processor
 @dirrm share/doc/kde/HTML/ru/kinfocenter/pcmcia
 @dirrm share/doc/kde/HTML/ru/kinfocenter/pci
 @dirrm share/doc/kde/HTML/ru/kinfocenter/partitions
+@dirrm share/doc/kde/HTML/ru/kinfocenter/nics
+@dirrm share/doc/kde/HTML/ru/kinfocenter/memory
+@dirrm share/doc/kde/HTML/ru/kinfocenter/ioports
+@dirrm share/doc/kde/HTML/ru/kinfocenter/interrupts
+@dirrm share/doc/kde/HTML/ru/kinfocenter/dma
+@dirrm share/doc/kde/HTML/ru/kinfocenter/devices
 @dirrm share/doc/kde/HTML/ru/kinfocenter
+@dirrm share/doc/kde/HTML/ru/kig
 @dirrm share/doc/kde/HTML/ru/kicker-applets
 @dirrm share/doc/kde/HTML/ru/kicker
 @dirrm share/doc/kde/HTML/ru/khelpcenter/visualdict
@@ -820,27 +1112,45 @@ share/kde/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/khelpcenter/faq
 @dirrm share/doc/kde/HTML/ru/khelpcenter
 @dirrm share/doc/kde/HTML/ru/kgpgcertmanager
+@dirrm share/doc/kde/HTML/ru/kgpg
+@dirrm share/doc/kde/HTML/ru/kghostview
+@dirrm share/doc/kde/HTML/ru/kgamma
 @dirrm share/doc/kde/HTML/ru/kfloppy
 @dirrm share/doc/kde/HTML/ru/kenolaba
+@dirrm share/doc/kde/HTML/ru/kdvi
+@dirrm share/doc/kde/HTML/ru/kdm
+@dirrm share/doc/kde/HTML/ru/kdict
 @dirrm share/doc/kde/HTML/ru/kdeprint
 @dirrm share/doc/kde/HTML/ru/kdebugdialog
+@dirrm share/doc/kde/HTML/ru/kcron
+@dirrm share/doc/kde/HTML/ru/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/ru/kcontrol/useragent
 @dirrm share/doc/kde/HTML/ru/kcontrol/mouse
 @dirrm share/doc/kde/HTML/ru/kcontrol/kmixcfg
 @dirrm share/doc/kde/HTML/ru/kcontrol/keyboard
+@dirrm share/doc/kde/HTML/ru/kcontrol/kdm
 @dirrm share/doc/kde/HTML/ru/kcontrol/kcmlaunch
+@dirrm share/doc/kde/HTML/ru/kcontrol/crypto
 @dirrm share/doc/kde/HTML/ru/kcontrol/clock
+@dirrm share/doc/kde/HTML/ru/kcontrol/cache
+@dirrm share/doc/kde/HTML/ru/kcontrol/bell
+@dirrm share/doc/kde/HTML/ru/kcontrol/background
 @dirrm share/doc/kde/HTML/ru/kcontrol/arts
 @dirrm share/doc/kde/HTML/ru/kcontrol
+@dirrm share/doc/kde/HTML/ru/kcalc
+@dirrm share/doc/kde/HTML/ru/kcachegrind
 @dirrm share/doc/kde/HTML/ru/kbattleship
 @dirrm share/doc/kde/HTML/ru/kbabel
 @dirrm share/doc/kde/HTML/ru/kate-plugins
 @dirrm share/doc/kde/HTML/ru/kate
+@dirrm share/doc/kde/HTML/ru/karm
 @dirrm share/doc/kde/HTML/ru/kandy
+@dirrm share/doc/kde/HTML/ru/kalzium
+@dirrm share/doc/kde/HTML/ru/juk
 @comment dirrm share/doc/kde/HTML/ru/common
 @dirrm share/doc/kde/HTML/ru/atlantik
 @dirrm share/doc/kde/HTML/ru/artsbuilder
-@dirrm share/doc/kde/HTML/ru/ark
+@dirrm share/doc/kde/HTML/ru/amor
 @dirrm share/doc/kde/HTML/ru/aktion
 @dirrm share/doc/kde/HTML/ru/KRegExpEditor
 @comment dirrm share/doc/kde/HTML/ru
