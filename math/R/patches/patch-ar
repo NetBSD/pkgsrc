@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.4 2003/12/03 12:05:19 markd Exp $
+$NetBSD: patch-ar,v 1.1 2003/12/03 12:05:19 markd Exp $
 
---- src/library/lqs/Makefile.in.orig	2003-09-21 20:13:05.000000000 +1200
-+++ src/library/lqs/Makefile.in
+--- src/library/grid/Makefile.in.orig	2003-09-21 20:13:09.000000000 +1200
++++ src/library/grid/Makefile.in
 @@ -29,14 +29,14 @@ all: Makefile DESCRIPTION
  	  fi; \
  	done
