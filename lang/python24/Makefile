@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/01/23 20:41:47 recht Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/30 12:44:40 jmmv Exp $
 #
 
 DISTNAME=	Python-2.4
 PKGNAME=	python24-2.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
+
+CONFLICTS+=	python-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_BUILDLINK3=		yes
