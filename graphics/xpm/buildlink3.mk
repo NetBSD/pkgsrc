@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/01/05 11:05:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/01/21 11:24:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XPM_BUILDLINK3_MK:=	${XPM_BUILDLINK3_MK}+
@@ -26,6 +26,8 @@ BUILDLINK_IS_BUILTIN.xpm!=						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.    elif ${OPSYS} == "IRIX"
+BUILDLINK_IS_BUILTIN.xpm=	YES
 .    elif exists(${_X11_TMPL})
 BUILDLINK_IS_BUILTIN.xpm!=						\
 	if ${GREP} -q NormalLibXpm ${_X11_TMPL}; then			\
