@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2001/09/27 04:28:31 jlam Exp $
+# $NetBSD: Makefile,v 1.243 2001/09/27 04:39:57 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -172,6 +172,7 @@ SUBDIR+=	p5-Storable
 SUBDIR+=	p5-Term-ReadKey
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Harness
+SUBDIR+=	p5-Test-Simple
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Time-HiRes
 SUBDIR+=	p5-TimeDate
