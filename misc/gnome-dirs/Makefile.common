@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/01/27 09:35:25 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/01/27 13:00:33 jmmv Exp $
 #
 
 # This Makefile contains all the logic needed to automatically generate
@@ -16,6 +16,7 @@ GNOME_DIRS_COMMON+=	share/gnome/apps/Internet
 GNOME_DIRS_COMMON+=	share/gnome/apps/Multimedia
 GNOME_DIRS_COMMON+=	share/gnome/apps/Settings
 GNOME_DIRS_COMMON+=	share/gnome/apps/Settings/Desktop
+GNOME_DIRS_COMMON+=	share/gnome/apps/Settings/Peripherals
 GNOME_DIRS_COMMON+=	share/gnome/apps/Settings/Session
 GNOME_DIRS_COMMON+=	share/gnome/apps/System
 GNOME_DIRS_COMMON+=	share/gnome/apps/Utilities
