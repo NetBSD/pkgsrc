@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/05/10 06:27:22 kei Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/25 21:52:24 jlam Exp $
 bin/w3m
 man/man1/w3m.1
 man/ja_JP.EUC/man1/w3m.1

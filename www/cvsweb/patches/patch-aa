@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2002/07/24 11:38:47 martti Exp $
+$NetBSD: patch-aa,v 1.6 2002/08/25 21:52:07 jlam Exp $
 
 --- cvsweb.cgi.orig	Tue Jul 23 15:58:32 2002
 +++ cvsweb.cgi	Wed Jul 24 11:01:53 2002

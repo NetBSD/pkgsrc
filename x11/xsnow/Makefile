@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/12/19 07:02:31 martti Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/25 21:52:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp 
 #
 
@@ -10,7 +10,8 @@ MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www.euronet.nl/~rja/Xsnow/
 COMMENT=	Create a snowy and Santa-y desktop
 
+USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
-USE_XPM=	yes
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

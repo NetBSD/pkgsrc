@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2002/06/01 22:02:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.33 2002/08/25 21:52:54 jlam Exp $
 #
 
 DISTNAME=		xscreensaver-4.02
@@ -15,10 +15,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
 CONFIGURE_ARGS+=	--with-gl
 CONFIGURE_ARGS+=	--with-gle
-CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-gdk-pixbuf=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_PREFIX.gtk}
+CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
+CONFIGURE_ARGS+=	--with-gdk-pixbuf=${BUILDLINK_PREFIX.gdk-pixbuf}
+CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml}
 CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 
 CONFIGURE_ARGS+=	--without-motif
@@ -59,7 +59,7 @@ post-patch:
 	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
 
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../graphics/gle/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../graphics/gle/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"

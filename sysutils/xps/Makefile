@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/07/24 19:45:28 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/08/25 21:51:11 jlam Exp $
 
 DISTNAME=	xps-3.14
 CATEGORIES=	sysutils
@@ -12,10 +12,8 @@ USE_PERL5=	build
 USE_GMAKE=	# defined
 USE_X11BASE=	# defined
 
-USE_BUILDLINK_ONLY=	# defined
-GNU_CONFIGURE=		# defined
-CONFIGURE_ENV+=		XINCLUDES="-I${BUILDLINK_X11_DIR}/include"
+USE_BUILDLINK2=	# defined
+GNU_CONFIGURE=	# defined
 
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

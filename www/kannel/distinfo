@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/08/22 11:31:34 martti Exp $
+$NetBSD: distinfo,v 1.5 2002/08/25 21:52:11 jlam Exp $
 
 SHA1 (gateway-1.2.0.tar.gz) = f81fdfca26be69de8505550a076fb3628f477af2
 Size (gateway-1.2.0.tar.gz) = 2094749 bytes

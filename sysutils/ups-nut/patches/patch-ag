@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2002/05/13 14:40:51 lukem Exp $
+$NetBSD: patch-ag,v 1.5 2002/08/25 21:51:06 jlam Exp $
 
 --- models/Makefile.in.orig	Tue Mar 26 10:30:31 2002
 +++ models/Makefile.in
