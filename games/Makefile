@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2003/04/21 02:29:47 rh Exp $
+# $NetBSD: Makefile,v 1.168 2003/05/07 14:23:15 jmmv Exp $
 #
 
 COMMENT=	Games
@@ -137,6 +137,7 @@ SUBDIR+=	rocksndiamonds-levels
 SUBDIR+=	rollemup
 SUBDIR+=	sarien
 SUBDIR+=	scummvm
+SUBDIR+=	sirius
 SUBDIR+=	sjeng
 SUBDIR+=	sl
 SUBDIR+=	spellcast
