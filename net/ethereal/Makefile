@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.95 2004/07/08 06:18:37 martti Exp $
-#
+# $NetBSD: Makefile,v 1.96 2004/08/13 11:31:28 adam Exp $
 
-DISTNAME=		ethereal-0.10.5
-PKGREVISION=		# defined
-CATEGORIES=		net
-MASTER_SITES=		http://www.ethereal.com/distribution/ \
-			http://ethereal.planetmirror.com/distribution/ \
-			http://www.mirrors.wiretapped.net/security/packet-capture/ethereal/ \
-			http://netmirror.org/mirror/ftp.ethereal.com/ \
-			http://ethereal.secuwiz.com/distribution/ \
-			http://ethereal.0ni0n.org/distribution/ \
-			ftp://ftp.ethereal.com/pub/ethereal/ \
-			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
-			ftp://ftp.planetmirror.com/pub/ethereal/ \
-			ftp://gd.tuwien.ac.at/infosys/security/ethereal/ \
-			http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
-			http://ethereal.netarc.jp/distribution/ \
-			ftp://ftp.ethereal.com/pub/ethereal/old-versions/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	ethereal-0.10.6
+PKGREVISION=	# defined
+CATEGORIES=	net
+MASTER_SITES=	http://www.ethereal.com/distribution/ \
+		http://ethereal.planetmirror.com/distribution/ \
+		http://www.mirrors.wiretapped.net/security/packet-capture/ethereal/ \
+		http://netmirror.org/mirror/ftp.ethereal.com/ \
+		http://ethereal.secuwiz.com/distribution/ \
+		http://ethereal.0ni0n.org/distribution/ \
+		ftp://ftp.ethereal.com/pub/ethereal/ \
+		ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
+		ftp://ftp.planetmirror.com/pub/ethereal/ \
+		ftp://gd.tuwien.ac.at/infosys/security/ethereal/ \
+		http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
+		http://ethereal.netarc.jp/distribution/ \
+		ftp://ftp.ethereal.com/pub/ethereal/old-versions/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		frueauf@NetBSD.org
-HOMEPAGE=		http://www.ethereal.com/
-COMMENT=		Network protocol analyzer
+MAINTAINER=	frueauf@NetBSD.org
+HOMEPAGE=	http://www.ethereal.com/
+COMMENT=	Network protocol analyzer
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES
