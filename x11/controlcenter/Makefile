@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/05 17:16:13 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/12 19:46:49 hubertf Exp $
 #
 
 DISTNAME=	control-center-1.0.4
@@ -12,7 +12,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gnome-core-1.0.4:../../x11/gnome-core
-DEPENDS+=	xscreensaver-3.08:../../x11/xscreensaver
+DEPENDS+=	xscreensaver-3.09:../../x11/xscreensaver
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
