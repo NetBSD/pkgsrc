@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.7 2002/06/29 01:48:52 kristerw Exp $
+$NetBSD: distinfo,v 1.8 2002/10/29 17:09:05 dillo Exp $
 
-SHA1 (frotz-2.42.tar.gz) = c447456d46a1dff833b32db0489aa753fdd4c5f2
-Size (frotz-2.42.tar.gz) = 135337 bytes
-SHA1 (patch-aa) = bf5e5237b87ff1932cf2bd4d42ccc5b160d09939
-SHA1 (patch-ab) = 4d619656c71758661f93acbaf5b04add8779d6c6
-SHA1 (patch-ac) = e0ff2a4e9fe2b3db04d395ef6e565bfc1c1cd46d
-SHA1 (patch-ad) = 0fe19e34ecb7f850098f00ed81118a1604ff4173
+SHA1 (frotz-2.43.tar.gz) = 2b2684ec670b471489c15be732c7dd1c59821b00
+Size (frotz-2.43.tar.gz) = 160771 bytes
+SHA1 (patch-aa) = a938f7889bca24f182a440c18f468eabe6ce40a5
