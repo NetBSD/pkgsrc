@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/04/05 00:40:12 fredb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/07/19 14:18:48 mycroft Exp $
 bin/scrollkeeper-config
 bin/scrollkeeper-get-cl
 bin/scrollkeeper-get-content-list
@@ -136,6 +136,7 @@ share/scrollkeeper/doc/scrollkeeper_manual/C/contents-tree.html
 share/scrollkeeper/doc/scrollkeeper_manual/C/docbook.css
 share/scrollkeeper/doc/scrollkeeper_manual/C/exampleomffiles.html
 share/scrollkeeper/doc/scrollkeeper_manual/C/fdl.html
+@exec ${MKDIR} %D/share/scrollkeeper/doc/scrollkeeper_manual/C/figures
 share/scrollkeeper/doc/scrollkeeper_manual/C/glossary.html
 share/scrollkeeper/doc/scrollkeeper_manual/C/index.html
 share/scrollkeeper/doc/scrollkeeper_manual/C/indexapi.html
@@ -239,7 +240,7 @@ share/scrollkeeper/doc/scrollkeeper_manual/C/writingomffiles.html
 @dirrm share/scrollkeeper/Templates/C
 @dirrm share/scrollkeeper/Templates
 @dirrm share/scrollkeeper/doc/scrollkeeper_manual/C/stylesheet-images
-@unexec rmdir %D/share/scrollkeeper/doc/scrollkeeper_manual/C/figures 2>/dev/null || true
+@dirrm share/scrollkeeper/doc/scrollkeeper_manual/C/figures
 @dirrm share/scrollkeeper/doc/scrollkeeper_manual/C
 @dirrm share/scrollkeeper/doc/scrollkeeper_manual
 @dirrm share/scrollkeeper/doc
