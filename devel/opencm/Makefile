@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/28 15:50:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/28 16:49:41 agc Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 .include "../../devel/boehm-gc/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/texinfo.mk"
