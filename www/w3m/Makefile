@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2002/03/14 23:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2002/04/21 23:34:32 kei Exp $
 #
 
-DISTNAME=	w3m-0.2.5-m17n-20020216
-PKGNAME=	w3m-0.2.5
-PKGREVISION=	1
+DISTNAME=	w3m-${W3M_VERS}
+PKGNAME=	w3m-${W3M_BASE_VERS}
+PKGREVISION=	# null
 CATEGORIES=	www
 MASTER_SITES=	http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/
 
@@ -14,6 +14,23 @@ COMMENT=	multilingualized version of a pager/text-based browser w3m
 CONFLICTS+=	w3m-m17n-[0-9]*
 
 USE_BUILDLINK_ONLY=	yes
+
+W3M_VERS=	${W3M_BASE_VERS}-m17n-${W3M_M17N_VERS}
+W3M_BASE_VERS=	0.3
+W3M_M17N_VERS=	20020316
+
+# w3m source with m17n patch applied.
+W3M_SRC=	${DISTNAME}${EXTRACT_SUFX}
+WRKSRC=		${WRKDIR}/w3m-${W3M_VERS}
+DISTFILES+=	${W3M_SRC}
+EXTRACT_ONLY=	${W3M_SRC}
+
+# multibyte/wide character support was split into libwc in latest version of
+# w3m-m17n.
+#LIBWC_SRC=	libwc-latest.tar.gz
+#LIBWC_WRKSRC=	${WRKDIR}/w3m-${W3M_VERS}
+#DISTFILES+=	${LIBWC_SRC}
+#EXTRACT_ONLY+=	${LIBWC_SRC}
 
 HELPDIR=        share/doc/w3m
 HELPERDIR=      lib/w3m
@@ -90,7 +107,8 @@ HELP_W3M=			-lynx
 CONFIGURE_ENV+=	lynx_key=n
 HELP_W3M=			-w3m
 .endif
-CONFIGURE_ENV+= use_menu=y use_matrix=n ansi_color=y use_help_cgi=n
+CONFIGURE_ENV+= use_menu=y use_matrix=n use_image=y use_ansi_color=y
+CONFIGURE_ENV+= use_help_cgi=n use_migemo=n
 CONFIGURE_ENV+= ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+= dcc="${CC}" dtermlib="-ltermcap"
 CONFIGURE_ENV+= dldflags="-Wl,-rpath,${LOCALBASE}/lib"
@@ -108,6 +126,7 @@ CONFIGURE_ARGS+= --gc-libdir=${BUILDLINK_DIR}/lib
 post-extract:
 	@(cd ${WRKSRC}/doc; ${RM} -fr CVS)
 	@(cd ${WRKSRC}/doc-jp; ${RM} -fr CVS)
+#	@${LN} ${LIBWC_WRKSRC} ${WRKSRC}/libwc
 
 post-patch:
 	${FIND} ${WRKSRC} -type f -name '*.orig' | ${XARGS} ${RM}
@@ -139,13 +158,17 @@ do-install:
 	(cd ${WRKSRC}; ${PAX} -w doc doc-jp) | \
 	    (cd ${LOCALBASE}/${HELPDIR}; ${PAX} -r)
 	${INSTALL_DATA_DIR} ${LOCALBASE}/${HELPERDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/inflate ${LOCALBASE}/${HELPERDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/w3mbookmark ${LOCALBASE}/${HELPERDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/w3mhelperpanel ${LOCALBASE}/${HELPERDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/w3mimgdisplay ${LOCALBASE}/${HELPERDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/w3mimgsize ${LOCALBASE}/${HELPERDIR}
 
 post-install:
 	(cd ${LOCALBASE}/${HELPDIR}; \
 	    ${RM} -f w3mhelp.html; \
 	    ${LN} -s w3mhelp${HELP_W3M}${HELP_LANG}.html w3mhelp.html)
 
+.include "../../graphics/imlib/buildlink.mk"
 .include "../../devel/boehm-gc/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
