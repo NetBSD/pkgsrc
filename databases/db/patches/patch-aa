@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1999/04/19 22:11:34 tron Exp $
+$NetBSD: patch-aa,v 1.4 2000/07/27 14:18:02 jlam Exp $
 
 --- ../dist/Makefile.in.orig	Mon Dec  7 14:05:59 1998
 +++ ../dist/Makefile.in	Mon Apr 19 16:30:04 1999
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.3 1999/04/19 22:11:34 tron Exp $
 +datadir=$(prefix)/share/db
 +includedir=$(prefix)/include/db2
 +libdir=	$(prefix)/lib
-+mandir=	$(prefix)/share/doc/db
++mandir=	$(prefix)/share/doc/html/db
  
  dmode=	755
  emode=	555
