@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1999/12/24 22:30:03 pooka Exp $
+$NetBSD: patch-ac,v 1.2 2000/03/29 00:29:53 dmcmahill Exp $
 
 --- sys/unix/Makefile.src.orig	Sat Dec 11 07:21:05 1999
 +++ sys/unix/Makefile.src	Wed Dec 22 22:29:15 1999
@@ -9,7 +9,7 @@ $NetBSD: patch-ac,v 1.1 1999/12/24 22:30:03 pooka Exp $
 -CFLAGS = -O -I../include
 -LFLAGS = 
 +CFLAGS = -O -I../include -I${X11BASE}/include
-+LFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}
++LFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
  
  # Only used for Qt interface (other interfaces are standard C)
  CXXFLAGS = -g $(CFLAGS) -I. -I$(QTDIR)/include
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.1 1999/12/24 22:30:03 pooka Exp $
  #
  # libraries for Qt
 -WINQTLIB = -L$(QTDIR)/lib -lqt
-+WINQTLIB = -L$(QTDIR)/lib -lqt -lXpm
++WINQTLIB = -Wl,-R$(QTDIR)/lib -L$(QTDIR)/lib -lqt -lXpm -lX11
  #
  # libraries for KDE (with Qt)
  WINKDELIB = -lkdecore -lkdeui -lXext
