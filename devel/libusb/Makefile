@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2005/02/14 09:50:18 adam Exp $
+# $NetBSD: Makefile,v 1.21 2005/02/24 18:46:49 drochner Exp $
 
-DISTNAME=	libusb-0.1.10
+DISTNAME=	libusb-0.1.10a
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 
@@ -10,6 +10,7 @@ COMMENT=	USB access library
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
+GCC_REQD=		3.3
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-build-docs
