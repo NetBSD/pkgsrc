@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/08/23 21:32:32 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/10/03 20:56:47 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ImageMagick.
 #
@@ -42,10 +42,15 @@ BUILDLINK_CONFIG.magick=	\
 	${BUILDLINK_PREFIX.ImageMagick}/bin/Magick-config
 BUILDLINK_CONFIG_WRAPPER.magick=	\
 	${BUILDLINK_DIR}/bin/Magick-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.magick}|${BUILDLINK_CONFIG.magick}|g"
+
 BUILDLINK_CONFIG.magickpp=	\
 	${BUILDLINK_PREFIX.ImageMagick}/bin/Magick++-config
 BUILDLINK_CONFIG_WRAPPER.magickpp=	\
 	${BUILDLINK_DIR}/bin/Magick++-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.magickpp}|${BUILDLINK_CONFIG.magickpp}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 MAGICK_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.magick}
