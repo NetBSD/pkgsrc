@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1489 2004/08/16 01:56:03 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1490 2004/08/16 03:12:02 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -407,6 +407,11 @@ BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
+.if defined(LIBTOOL_LA_FILES)
+GENERATE_PLIST+=	${SH} ../../mk/scripts/transform-la ${PREFIX} ${LIBTOOL_LA_FILES};
+_FILTER_LIBTOOL_LA_FILES= | ${GREP} -vxF \
+	`${SH} ../../mk/scripts/transform-la ${PREFIX} ${LIBTOOL_LA_FILES} | ${SED} -e 's,^,-e ,'`
+.endif
 .endif
 
 .if defined(BUILD_USES_MSGFMT) && \
@@ -4495,6 +4500,7 @@ print-PLIST:
 	*)		genlinks=0 ;;					\
 	esac;								\
 	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d -print\
+	 ${_FILTER_LIBTOOL_LA_FILES}					\
 	 | ${SORT}							\
 	 | ${AWK} '							\
 		{ sub("${PREFIX}/\\./", ""); }				\
