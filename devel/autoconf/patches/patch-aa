@@ -1,13 +1,25 @@
-$NetBSD: patch-aa,v 1.4 2001/08/26 20:44:24 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2001/08/28 14:58:16 skrll Exp $
 
---- doc/make-stds.texi.orig	Tue Jul 17 18:34:55 2001
-+++ doc/make-stds.texi
-@@ -811,7 +811,7 @@
- @end smallexample
+--- Makefile.in-orig	Tue Jan  5 14:27:16 1999
++++ Makefile.in	Wed Jan  6 17:10:56 1999
+@@ -141,7 +141,7 @@
  
- @noindent
--or, if you wish to support @env{DESTDIR},
-+or, if you wish to support DESTDIR,
- 
- @smallexample
- # Make sure all installation directories (e.g. $(bindir))
+ install: all $(M4FILES) acconfig.h installdirs install-info
+ 	for p in $(ASCRIPTS); do \
+-	  $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
++	  $(INSTALL) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
+ 	done
+ 	for i in $(M4FROZEN); do \
+ 	  $(INSTALL_DATA) $$i $(acdatadir)/$$i; \
+@@ -150,9 +150,9 @@
+ 	  $(INSTALL_DATA) $(srcdir)/$$i $(acdatadir)/$$i; \
+ 	done
+ 	-if test -f autoscan; then \
+-	$(INSTALL_PROGRAM) autoscan $(bindir)/`echo autoscan|sed '$(transform)'`; \
++	$(INSTALL) autoscan $(bindir)/`echo autoscan|sed '$(transform)'`; \
+ 	for i in acfunctions acheaders acidentifiers acprograms \
+-	  acmakevars; do \
++	  acmakevars config.guess config.sub; do \
+ 	$(INSTALL_DATA) $(srcdir)/$$i $(acdatadir)/$$i; \
+ 	done; \
+ 	else :; fi

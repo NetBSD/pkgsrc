@@ -1,41 +1,29 @@
-@comment $NetBSD: PLIST,v 1.8 2001/08/26 20:44:24 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/08/28 14:58:16 skrll Exp $
 bin/autoconf
 bin/autoheader
 bin/autoreconf
 bin/autoscan
 bin/autoupdate
 bin/ifnames
-@unexec install-info --delete --info-dir=%D/info %D/info/autoconf.info
+@unexec install-info --delete %D/info/autoconf.info %D/info/dir
+@unexec install-info --delete %D/info/standards.info %D/info/dir
 info/autoconf.info
-@exec install-info --info-dir=%D/info %D/info/autoconf.info
-@unexec install-info --delete --info-dir=%D/info %D/info/standards.info
 info/standards.info
-@exec install-info --info-dir=%D/info %D/info/standards.info
-man/man1/autoconf.1
-man/man1/autoheader.1
-man/man1/autoreconf.1
-man/man1/autoscan.1
-man/man1/autoupdate.1
-man/man1/config.guess.1
-man/man1/config.sub.1
-man/man1/ifnames.1
-share/autoconf/INSTALL
+@exec install-info %D/info/autoconf.info %D/info/dir
+@exec install-info %D/info/standards.info %D/info/dir
+share/autoconf/acconfig.h
 share/autoconf/acfunctions
-share/autoconf/acfunctions.m4
 share/autoconf/acgeneral.m4
 share/autoconf/acheaders
-share/autoconf/acheaders.m4
 share/autoconf/acidentifiers
-share/autoconf/aclang.m4
-share/autoconf/aclibraries
 share/autoconf/acmakevars
 share/autoconf/acoldnames.m4
 share/autoconf/acprograms
 share/autoconf/acspecific.m4
-share/autoconf/actypes.m4
-share/autoconf/acversion.m4
 share/autoconf/autoconf.m4
 share/autoconf/autoconf.m4f
-share/autoconf/m4sh.m4
-share/autoconf/m4sugar.m4
+share/autoconf/autoheader.m4
+share/autoconf/autoheader.m4f
+share/autoconf/config.guess
+share/autoconf/config.sub
 @dirrm share/autoconf
