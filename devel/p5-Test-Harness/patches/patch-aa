@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/09/27 04:26:49 jlam Exp $
+
+--- Makefile.PL.orig	Wed May 23 14:25:38 2001
++++ Makefile.PL
+@@ -35,7 +35,6 @@
+     NAME            => $PACKAGE,
+     VERSION_FROM    => "lib/$PACKAGE_FILE.pm", # finds $VERSION
+     PREREQ_PM       => { },
+-    INSTALLDIRS     => 'perl',
+     'dist'          => { COMPRESS   => 'gzip -9',
+                          SUFFIX     => '.gz',
+                          DIST_DEFAULT   => 'all tardist',

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/09/27 04:26:49 jlam Exp $
+
+SHA1 (Test-Harness-1.23.tar.gz) = ab852ad9684be2a5f1d0e8876b1b91b457649aea
+Size (Test-Harness-1.23.tar.gz) = 15793 bytes
+SHA1 (patch-aa) = 5891277e2e348fa7a433e26856ec38c1cfa965d3
