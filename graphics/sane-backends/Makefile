@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/24 19:08:37 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/28 11:25:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -6,8 +6,8 @@ DISTNAME=       sane-backends-1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/ \
 		ftp://gd.tuwien.ac.at/hci/sane/ \
-		ftp://metalab.unc.edu/pub/Linux/apps/graphics/capture/ \
-		ftp://metalab.unc.edu/pub/Linux/Incoming/ \
+		${MASTER_SITE_SUNSITE:=apps/graphics/capture/} \
+		${MASTER_SITE_SUNSITE:=Incoming/} \
 		ftp://ftp.u-aizu.ac.jp/pub/misc/device/scsi/scanner/sane/ \
 		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/
 
