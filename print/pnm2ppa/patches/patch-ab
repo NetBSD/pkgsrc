@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2003/09/17 18:40:49 jmmv Exp $
+
+--- pnm2ppa.h.orig	Sat Jun 22 22:17:57 2002
++++ pnm2ppa.h	Sun May 11 09:39:33 2003
+@@ -20,8 +20,8 @@
+ 
+ #ifdef __PNM2PPA_C__
+ 
+-static char *defaultcfgfile = "/etc/pnm2ppa.conf";
+-static char *defaultgammafile = "/etc/pnm2ppa.gamma";
++static char *defaultcfgfile = PKG_SYSCONFDIR"/pnm2ppa.conf";
++static char *defaultgammafile = PKG_SYSCONFDIR"/pnm2ppa.gamma";
+ 
+ static ppaPrinter_t printer;
+ 
