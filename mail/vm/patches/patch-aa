@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/01 04:18:22 jtb Exp $
+
+--- Makefile.orig	Fri Dec  1 03:55:08 2000
++++ Makefile
+@@ -5,18 +5,18 @@
+ EMACS = emacs
+ 
+ # where the Info file should go
+-INFODIR = /usr/local/lib/emacs/info
++INFODIR = ${PREFIX}/info
+ 
+ # where the vm.elc, tapestry.elc, etc. files should go
+-LISPDIR = /usr/local/lib/emacs/site-lisp
++LISPDIR = ${PREFIX}/share/emacs/site-lisp/vm
+ 
+ # where the toolbar pixmaps should go.
+ # vm-toolbar-pixmap-directory must point to the same place.
+ # vm-image-directory must point to the same place.
+-PIXMAPDIR = /usr/local/lib/emacs/etc/vm
++PIXMAPDIR = ${LISPDIR}/pixmaps
+ 
+ # where the binaries should be go.
+-BINDIR = /usr/local/bin
++BINDIR = ${PREFIX}/bin
+ 
+ ############## no user servicable parts beyond this point ###################
+ 
