@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/01 13:11:47 jmmv Exp $
+
+--- configure.orig	2003-02-26 17:46:28.000000000 +0100
++++ configure	2003-02-26 17:51:54.000000000 +0100
+@@ -1884,7 +1884,19 @@
+ 		CPPFLAGS="$CPPFLAGS -DGC_WIN32_THREADS -DWIN32_THREADS"
+ 		libdl=
+ 		;;
+-	*-*-*bsd*)
++	*-*-*netbsd*)
++		platform_win32=no
++		CPPFLAGS="$CPPFLAGS -D_REENTRANT"
++		libmono_cflags="-D_REENTRANT"
++		LDFLAGS="$LDFLAGS -pthread"
++		libmono_ldflags="-pthread"
++		cat >>confdefs.h <<\_ACEOF
++#define NEED_LINK_UNLINK 1
++_ACEOF
++
++		libdl=
++		;;
++        *-*-freebsd*|*-*-openbsd*)
+ 		platform_win32=no
+ 		CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
+ 		libmono_cflags="-D_THREAD_SAFE"
