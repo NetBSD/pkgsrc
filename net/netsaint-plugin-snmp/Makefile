@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/01 17:06:02 skrll Exp $
 #
 
 DISTNAME=	netsaint-plugins-1.2.8-4
@@ -15,7 +15,7 @@ DEPENDS+=	ucd-snmp-[0-9]*:../../net/ucd-snmp
 
 .include "../../net/netsaint-base/Makefile.common"
 
-ALL_TARGET=	check_snmp
+ALL_TARGET=	check_snmp check_hpjd
 
 do-build:
 	cd ${WRKSRC}/plugins &&						\
@@ -23,7 +23,9 @@ do-build:
 	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/plugins/${ALL_TARGET}		\
-	    ${PREFIX}/libexec/netsaint
+	for PROG in ${ALL_TARGET}; do	\
+		${INSTALL_PROGRAM} ${WRKSRC}/plugins/$${PROG}	\
+	   	 ${PREFIX}/libexec/netsaint; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
