@@ -1,8 +1,12 @@
-# $NetBSD: Makefile.common,v 1.3 2002/08/19 08:44:24 agc Exp $
+# $NetBSD: Makefile.common,v 1.4 2002/09/01 16:17:06 jschauma Exp $
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://ftp-au.netscape.com/pub/communicator/extras/fonts/windows/
+MASTER_SITES=	ftp://ftp.mirror.ac.uk/sites/ftp.netscape.com/pub/communicator/extras/fonts/windows/ \
+		ftp://ftp.riken.go.jp/pub/net/netscape/communicator/extras/fonts/windows/ \
+		ftp://ftp.man.poznan.pl/mirrors/mirrorsite.netscape.com/netscape/communicator/extras/fonts/windows/ \
+		ftp://ftp.uni-hamburg.de//pub/soft/infosystems/www/clients/netscape/communicator/extras/fonts/windows/ \
+		ftp://ftp-au.netscape.com/pub/communicator/extras/fonts/windows/
 DISTFILES=	${FONT_FILE} ${DOC_FILES}
 
 MAINTAINER=	packages@netbsd.org
@@ -17,7 +21,7 @@ NO_SRC_ON_FTP=  ${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=  ${RESTRICTED}
 
-BROKEN=		MASTER_SITES is unstable, and we can't mirror DISTFILES.
+#BROKEN=		MASTER_SITES is unstable, and we can't mirror DISTFILES.
 
 DOC_FILES=	License.wri Orders.wri ReadMe.htm Readme.wri
 
