@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/28 16:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/30 13:57:45 wiz Exp $
 #
 
 DISTNAME=	pwlib_min_1.1pl17
@@ -20,10 +20,6 @@ HOMEPAGE=	http://www.openh323.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
-
-# Sync these with devel/unproven-pthreads
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
-			NetBSD-*-m68k
 
 WRKSRC=		${WRKDIR}/pwlib
 
