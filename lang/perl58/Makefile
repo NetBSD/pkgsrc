@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/04/25 22:42:51 tv Exp $
+# $NetBSD: Makefile,v 1.44 2004/04/26 04:42:12 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -8,26 +8,28 @@ PERL5_RC_VERS=	# empty
 
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
-PKGREVISION=	1
+PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}
+PKGREVISION=	# empty
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
 DISTNAME=	perl@${PERL5_SNAPSHOT}
-PKGNAME=	perl-${PERL5_VERS}beta${PERL5_SNAPSHOT}
+PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}beta${PERL5_SNAPSHOT}
 SNAPSHOT_SITES=	http://www.iki.fi/jhi/
 EXTRACT_SUFX=	.tbz
 WRKSRC=		${WRKDIR}/perl
 .  else # !empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}-RC${PERL5_RC_VERS}
-PKGNAME=	perl-${PERL5_VERS}rc${PERL5_RC_VERS}
+PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}rc${PERL5_RC_VERS}
 SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
 .  endif
 .endif
 
-PERL5_VERS=	5.8.3
+PERL5_VERS=	5.8.4
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${SNAPSHOT_SITES} \
 		${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.perl.com/
@@ -79,6 +81,21 @@ CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
 CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 
 .include "../../mk/bsd.prefs.mk"
+
+# If perl58 is built with threads support, then name the package
+# "perl-thread", otherwise it's just "perl" as usual.
+#
+PERL5_USE_THREADS?=	no
+.if !empty(PERL5_USE_THREADS:M[nN][oO])
+PERL5_PKGSUFFIX=	# empty
+CONFLICTS+=		perl-thread-[0-9]*
+CONFIGURE_ARGS+=	-Uuseithreads
+.else
+PERL5_PKGSUFFIX=	-thread
+CONFLICTS+=		perl-[0-9]*
+CONFIGURE_ARGS+=	-Duseithreads
+.  include "../../mk/pthread.buildlink3.mk"
+.endif
 
 MKPIC?=		yes
 
@@ -217,12 +234,12 @@ MESSAGE_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB}
 # what pkgsrc said instead.
 post-patch:
 .if ${PKGDIRMODE} != "755"
-.for f in installhtml installman installperl lib/ExtUtils/Install.pm
+.  for f in installhtml installman installperl lib/ExtUtils/Install.pm
 	cd ${WRKSRC} && \
 		${MV} -f $f $f.dirmode && \
 		${SED} -e 's/755/${PKGDIRMODE}/g;/umask(/d' \
 		$f.dirmode >$f
-.endfor
+.  endfor
 .endif
 
 # It's tough to guess which hints file will be used, so add our modifications
