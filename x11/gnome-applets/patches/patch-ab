@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2000/06/25 17:25:05 rh Exp $
+$NetBSD: patch-ab,v 1.2 2000/07/30 08:08:13 jlam Exp $
 
---- configure.orig	Wed May 31 06:02:43 2000
-+++ configure	Sun Jun 25 18:52:51 2000
-@@ -5688,7 +5688,7 @@
-   cat conftest.$ac_ext >&5
-   rm -rf conftest*
-   CATOBJEXT=.mo
--		   DATADIRNAME=lib
-+		   DATADIRNAME=share
- fi
- rm -f conftest*
- 		INSTOBJEXT=.mo
+--- battery/read-battery.h.orig	Fri Feb 11 11:27:56 2000
++++ battery/read-battery.h	Sun Jul 30 02:24:50 2000
+@@ -18,6 +18,11 @@
+ #include <fcntl.h>
+ #include <machine/apm_bios.h>
+ #define APMDEV "/dev/apm"
++#elif __NetBSD__ && defined(NETBSD_APM)
++#include <fcntl.h>
++#include <sys/ioctl.h>
++#include <machine/apmvar.h>
++#define APMDEV "/dev/apm"
+ #endif
+ 
+ /* Prototypes */ 

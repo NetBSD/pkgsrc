@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2000/07/30 08:08:14 jlam Exp $
+
+--- mixer/Makefile.am.orig	Mon Apr  3 19:18:08 2000
++++ mixer/Makefile.am	Sun Jul 30 02:33:42 2000
+@@ -17,6 +17,7 @@
+ 	lamp-small-red.xpm 
+ 
+ mixer_applet_LDADD = \
++		     $(MIXER_LIBS) \
+ 		     $(GNOME_LIBDIR) \
+ 		     $(GNOME_APPLETS_LIBS) $(INTLLIBS) 
+ 
