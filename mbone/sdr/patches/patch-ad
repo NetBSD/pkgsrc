@@ -1,35 +1,36 @@
-$NetBSD
---- src/sd_listen.c.orig	Thu Jan  8 20:39:21 1998
-+++ src/sd_listen.c	Fri Oct  2 08:30:50 1998
-@@ -316,11 +316,19 @@
+$NetBSD: patch-ad,v 1.5 1998/11/05 05:32:19 mycroft Exp $
+
+--- src/sd_listen.c.orig	Wed Oct  7 07:18:56 1998
++++ src/sd_listen.c	Wed Nov  4 23:52:04 1998
+@@ -484,10 +484,18 @@
+       }
  
- 	if (strncmp(k1, "k=", 2)==0)
- 	  {
+       if (strncmp(k1, "k=", 2)==0) {
 +#ifdef HAVE_SYS_INTTYPES_H
-+	    if ((uintptr_t)k2>=(uintptr_t)k1+2)
-+	      {
-+		memcpy(key, k1+2, (uintptr_t)k2-((uintptr_t)k1+1));
-+		key[(uintptr_t)k2-((uintptr_t)k1+1)]='\0';
-+	      }
++	if ((uintptr_t)k2>=(uintptr_t)k1+2) {
++	  memcpy(key, k1+2, (uintptr_t)k2-((uintptr_t)k1+1));
++	  key[(uintptr_t)k2-((uintptr_t)k1+1)]='\0';
++	}
 +#else
- 	    if ((u_int)k2>=(u_int)k1+2)
- 	      {
- 		memcpy(key, k1+2, (u_int)k2-((u_int)k1+1));
- 		key[(u_int)k2-((u_int)k1+1)]='\0';
- 	      }
+ 	if ((u_int)k2>=(u_int)k1+2) {
+ 	  memcpy(key, k1+2, (u_int)k2-((u_int)k1+1));
+ 	  key[(u_int)k2-((u_int)k1+1)]='\0';
+-	} else {
++	}
 +#endif
- 	    else
- 	      {
- 		key[0]='\0';
-@@ -648,7 +656,11 @@
-     struct timeval tv;
-     unsigned long src, hfrom;
-     char *data;
++	else {
+           key[0]='\0';
+         }
+ 	p=strchr(k1, '\n')+1;
+@@ -1509,7 +1517,11 @@
+     char buf[MAXADSIZE];
+     char debugbuf[MAXADSIZE];
+ 
 +#ifdef HAVE_SYS_INTTYPES_H
 +    intptr_t ix = rfd2sock[PTOI(fd)];
 +#else
      int ix = rfd2sock[PTOI(fd)];
 +#endif
  
-     fromlen=sizeof(struct sockaddr);
-     
+     memset(new_data,       0, MAXADSIZE);
+     memset(aid,            0, AIDLEN);

@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.5 1998/10/02 09:49:59 kleink Exp $
---- src/iohandler.c.orig	Thu Jan  8 20:40:17 1998
-+++ src/iohandler.c	Fri Oct  2 08:26:48 1998
+$NetBSD: patch-ac,v 1.6 1998/11/05 05:32:19 mycroft Exp $
+
+--- src/iohandler.c.orig	Sun Sep  6 11:41:03 1998
++++ src/iohandler.c	Wed Nov  4 23:42:24 1998
 @@ -43,6 +43,9 @@
  #include <time.h>
  #include <winsock.h>
@@ -11,16 +12,14 @@ $NetBSD: patch-ac,v 1.5 1998/10/02 09:49:59 kleink Exp $
  #include <tk.h>
  #ifdef WIN32
  #define WM_WSOCK_READY 	WM_USER+123
-@@ -134,8 +137,13 @@
+@@ -136,7 +139,11 @@
          }
  	sockproc[fd] = callback;
  #else
 +#ifdef HAVE_SYS_INTTYPES_H
-+	Tcl_CreateFileHandler(fd,
-+			      mask, callback, (ClientData)(intptr_t)fd);
++        Tcl_CreateFileHandler(fd, mask, callback, (ClientData)(intptr_t)fd);
 +#else
- 	Tcl_CreateFileHandler(fd,
- 			      mask, callback, (ClientData)fd);
+         Tcl_CreateFileHandler(fd, mask, callback, (ClientData)fd);
 +#endif
  #endif
  }
