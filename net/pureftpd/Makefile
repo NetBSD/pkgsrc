@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/01/28 22:03:55 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/07 18:21:48 salo Exp $
 #
 
-DISTNAME=	pure-ftpd-1.0.12
+DISTNAME=	pure-ftpd-1.0.14
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pureftpd/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.pureftpd.org/
@@ -14,7 +13,14 @@ USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-sysquotas	\
-			--with-ftpwho
+			--with-ftpwho		\
+			--with-virtualvhosts	\
+			--with-virtualchroot	\
+			--with-diraliases	\
+			--with-ratios		\
+			--with-throttling	\
+			--with-altlog		\
+			--with-puredb
 
 .if defined(PURE_FTPD_USE_MYSQL) && ${PURE_FTPD_USE_MYSQL} == "YES"
 DEPENDS+=	mysql-client>=3.23:../../databases/mysql-client
