@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 05:14:20 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/15 05:01:38 minskim Exp $
 lib/xfce4/panel-plugins/libdatetime.a
 lib/xfce4/panel-plugins/libdatetime.la
 lib/xfce4/panel-plugins/libdatetime.so
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce4-datetime.mo
+@comment in xfce4-panel: @dirrm lib/xfce4/panel-plugins

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5938 2004/05/14 21:03:47 jdolecek Exp $
+$NetBSD: CHANGES,v 1.5939 2004/05/15 05:01:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2531,3 +2531,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added raw-0.1.0 [dillo 2004-05-14]
 	Removed ap-csacek [jdolecek 2004-05-14]
 	Updated opera7 to 7.50 [jdolecek 2004-05-14]
+	Updated xfce4-datetime-plugin to 0.3.0 [minskim 2004-05-14]
