@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8914 2005/01/25 14:36:38 cube Exp $
+$NetBSD: CHANGES,v 1.8915 2005/01/25 14:52:03 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vim-xaw to 6.3.045nb1 [jmmv 2005-01-25]
 	Added p5-Set-Crontab-1.00 [cube 2005-01-25]
 	Added p5-Set-Infinite-0.61 [cube 2005-01-25]
+	Updated nspr to 4.4.1 [jschauma 2005-01-25]
