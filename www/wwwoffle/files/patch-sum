@@ -1,11 +1,3 @@
-$NetBSD: patch-sum,v 1.10 2000/06/06 13:22:29 itojun Exp $
+$NetBSD: patch-sum,v 1.11 2000/11/20 05:12:38 itojun Exp $
 
-MD5 (patch-aa) = 368edeacd11a25735194b25b6b1a00bc
-MD5 (patch-ba) = 697b7cad9f1cd82c4b74da1317f4f987
-MD5 (patch-bb) = 06fd1d3b05e51f2594d97c4213b897ae
-MD5 (patch-bc) = 6bb173924ac901827f282fcdef72b71a
-MD5 (patch-bd) = 526ecc28c80aaaf26fd5fc34893a97fa
-MD5 (patch-be) = 0a1d40853dc4b1efaff7d96981efad2d
-MD5 (patch-bf) = 757112e555a41d0365eaaf85d177dadd
-MD5 (patch-bg) = 041ca5bbe12ab11e3fecce0d239c4528
-MD5 (patch-bh) = 1241dca0eb0e06a56ad2bee04c4b0591
+MD5 (patch-aa) = e3f0fba77d933f06ed9b8abc753d2f11
