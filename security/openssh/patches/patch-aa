@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.10 2000/08/11 05:37:10 jlam Exp $
+
+--- configure.in.orig	Sat Jul 15 00:59:14 2000
++++ configure.in	Fri Aug 11 00:38:43 2000
+@@ -319,6 +319,7 @@
+ saved_LIBS="$LIBS"
+ saved_LDFLAGS="$LDFLAGS"
+ saved_CFLAGS="$CFLAGS"
++crypto_LIBS=""
+ if test "x$prefix" != "xNONE" ; then
+ 	tryssldir="$tryssldir $prefix"
+ fi
+@@ -335,12 +336,25 @@
+ 			LDFLAGS="$saved_LDFLAGS"
+ 		fi
+ 
+-		LIBS="$saved_LIBS -lcrypto"
+-
+-		# Basic test to check for compatible version and correct linking
+-		# *does not* test for RSA - that comes later.
+-		AC_TRY_RUN(
+-			[
++		# Some ELF systems can't resolve all the symbols in libcrypto
++		# if libcrypto was linked against RSAREF, and fail to link the
++		# test program correctly, even though a correct installation
++		# of OpenSSL exists.  So we test the linking three times in
++		# case the RSAREF libraries are needed right away.  We'll test
++		# for them explicitly later on.
++		#
++		for libcrypto in \
++			"-lcrypto" \
++			"-lcrypto -lrsaref" \
++			"-lcrypto -lRSAglue -lrsaref"
++		do
++			LIBS="$saved_LIBS $libcrypto"
++
++			# Basic test to check for compatible version and
++			# correct linking *does not* test for RSA - that comes
++			# later.
++			AC_TRY_RUN(
++				[
+ #include <string.h>
+ #include <openssl/rand.h>
+ int main(void) 
+@@ -350,12 +364,14 @@
+ 	RAND_add(a, sizeof(a), sizeof(a));
+ 	return(RAND_status() <= 0);
+ }
+-			],
+-			[
+-				found_crypto=1
+-				break;
+-			], []
+-		)
++				],
++				[
++					found_crypto=1
++					crypto_LIBS=$libcrypto
++					break;
++				], []
++			)
++		done
+ 
+ 		if test ! -z "$found_crypto" ; then
+ 			break;
+@@ -385,7 +401,7 @@
+ 		blibpath="$blibpath:$ssldir:$ssldir/lib"
+ 	fi
+ fi
+-LIBS="$saved_LIBS -lcrypto"
++LIBS="$saved_LIBS $crypto_LIBS"
+ 
+ # Now test RSA support
+ saved_LIBS="$LIBS"
