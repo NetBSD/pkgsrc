@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2001/02/16 13:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/04/06 22:41:37 rh Exp $
 
-DISTNAME=		esound-0.2.20
+DISTNAME=		esound-0.2.22
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/esound/}
 
@@ -10,8 +10,8 @@ COMMENT=		the Enlightened sound daemon
 
 DEPENDS+=		libaudiofile-*:../../audio/libaudiofile
 
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
