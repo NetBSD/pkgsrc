@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.75 1998/04/23 07:13:17 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.76 1998/04/24 09:15:57 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -42,10 +42,14 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 #				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
 # PORTSDIR		- The root of the ports tree.  Defaults:
 #					FreeBSD/OpenBSD: /usr/ports
+#			  In NetBSD, this definition is unnecessary. However, for
+#			  completeness, the default is
 #					NetBSD:          /usr/pkgsrc
 # DISTDIR 		- Where to get gzip'd, tarballed copies of original sources
 #				  (default: ${PORTSDIR}/distfiles).
-# PREFIX		- Where to install things in general (default: /usr/pkg).
+# PREFIX		- Where to install things in general Defaults:
+#					FreeBSD/OpenBSD: /usr/local
+#					NetBSD:		 /usr/pkg
 # MASTER_SITES	- Primary location(s) for distribution files if not found
 #				  locally.
 # MASTER_SITE_SUBDIR - Directory that "%SUBDIR%" in MASTER_SITES is
@@ -70,7 +74,7 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 # XMKMF			- Set to path of `xmkmf' if not in $PATH (default: xmkmf -a ).
 # MAINTAINER	- The e-mail address of the contact person for this port
 #				  Defaults: ports@FreeBSD.ORG      (FreeBSD)
-#                           packages@NetBSD.ORG    (NetBSD)
+#                           		    packages@NetBSD.ORG    (NetBSD)
 # CATEGORIES	- A list of descriptive categories into which this port falls.
 # WRKOBJDIR		- A top level directory where, if defined, the separate working
 #				  directories will get created, and symbolically linked to from
@@ -197,7 +201,7 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 #				  expression metacharacters in NetBSD, and the old backslash
 #				  escapes are recognised for backwards compatibility.
 # DEPENDS - A list of prerequisite packages. The format of this
-#				  entry is "pkgname:dir". If the package is not
+#				  entry is "pkgname:dir". If the "pkgname" package is not
 #				  installed, then it will be built and installed from the
 #				  source package in "dir".
 # EXTRACT_CMD	- Command for extracting archive (default: tar).
@@ -360,21 +364,19 @@ DEF_UMASK?=		0022
 .include "${.CURDIR}/Makefile.${ARCH}"
 .endif
 
-# These need to be absolute since we don't know how deep in the ports
-# tree we are and thus can't go relative.  They can, of course, be overridden
-# by individual Makefiles or local system make configuration.
+# NetBSD uses relative paths within the pkgsrc tree,
+# so there is no need for a PORTSDIR definition.
 .if (${OPSYS} == "NetBSD")
-PORTSDIR?=		/usr/pkgsrc
 LOCALBASE?=		${DESTDIR}/usr/pkg
 .else
 PORTSDIR?=		/usr/ports
 LOCALBASE?=		${DESTDIR}/usr/local
 .endif
 X11BASE?=		${DESTDIR}/usr/X11R6
-DISTDIR?=		${PORTSDIR}/distfiles
+DISTDIR?=		../../distfiles
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
-PACKAGES?=		${PORTSDIR}/packages
-TEMPLATES?=		${PORTSDIR}/templates
+PACKAGES?=		../../packages
+TEMPLATES?=		../../templates
 
 .if exists(${.CURDIR}/patches.${ARCH}-${OPSYS})
 PATCHDIR?=		${.CURDIR}/patches.${ARCH}-${OPSYS}
@@ -427,26 +429,26 @@ BUILD_DEPENDS+=	${EXEC_DEPENDS}
 RUN_DEPENDS+=	${EXEC_DEPENDS}
 .endif
 .if defined(USE_GMAKE)
-BUILD_DEPENDS+=		${GMAKE}:${PORTSDIR}/devel/gmake
+BUILD_DEPENDS+=		${GMAKE}:../../devel/gmake
 MAKE_PROGRAM=		${GMAKE}
 .else
 MAKE_PROGRAM=		${MAKE}
 .endif
 .if defined(USE_PERL5)
-BUILD_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
-RUN_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
+BUILD_DEPENDS+=		perl5.00404:../../lang/perl5
+RUN_DEPENDS+=		perl5.00404:../../lang/perl5
 .endif
 .if defined(INFO_FILES)
 USE_GTEXINFO=		yes
 .endif
 .if defined(USE_GTEXINFO)
-BUILD_DEPENDS+=		${LOCALBASE}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS+=		${LOCALBASE}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+BUILD_DEPENDS+=		${LOCALBASE}/bin/install-info:../../devel/gtexinfo
+RUN_DEPENDS+=		${LOCALBASE}/bin/install-info:../../devel/gtexinfo
 .endif
 
 
-.if exists(${PORTSDIR}/../Makefile.inc)
-.include "${PORTSDIR}/../Makefile.inc"
+.if exists(../../../Makefile.inc)
+.include "../../../Makefile.inc"
 .endif
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
@@ -576,7 +578,7 @@ WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 .if defined(WRKOBJDIR)
 # XXX Is pwd -P available in FreeBSD's /bin/sh?
-__canonical_PORTSDIR!=	cd ${PORTSDIR}; pwd -P
+__canonical_PORTSDIR!=	cd ../..; pwd -P
 __canonical_CURDIR!=	cd ${.CURDIR}; pwd -P
 PORTSUBDIR=		${__canonical_CURDIR:S,${__canonical_PORTSDIR}/,,}
 .endif
@@ -834,7 +836,7 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
           PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
 		  WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
 		  SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
-		  PORTSDIR=${PORTSDIR} DEPENDS="${DEPENDS}" \
+		  PORTSDIR=${.CURDIR}/../.. DEPENDS="${DEPENDS}" \
 		  PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 .if defined(BATCH)
@@ -968,7 +970,7 @@ all:
 	@cd ${.CURDIR} && ${SETENV} CURDIR=${.CURDIR} DISTNAME=${DISTNAME} \
 	  DISTDIR=${DISTDIR} WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} \
 	  PATCHDIR=${PATCHDIR} SCRIPTDIR=${SCRIPTDIR} \
-	  FILESDIR=${FILESDIR} PORTSDIR=${PORTSDIR} PREFIX=${PREFIX} \
+	  FILESDIR=${FILESDIR} PORTSDIR=${.CURDIR}/../.. PREFIX=${PREFIX} \
 	  DEPENDS="${DEPENDS}" BUILD_DEPENDS="${BUILD_DEPENDS}" \
 	  RUN_DEPENDS="${RUN_DEPENDS}" X11BASE=${X11BASE} \
 	${ALL_HOOK}
@@ -1673,7 +1675,7 @@ package-name:
 
 .if !target(package-path)
 package-path:
-	@pwd | sed s@`cd ${PORTSDIR} ; pwd`/@@g
+	@pwd | sed s@`cd ${.CURDIR}/../.. ; pwd`/@@g
 .endif
 
 # Show (recursively) all the packages this package depends on.
@@ -1741,7 +1743,7 @@ _DEPENDS_USE:	.USE
 			target=${DEPENDS_TARGET}; \
 		fi; \
 		found=not; \
-		if expr "$$prog" : \\/ >/dev/null; then \
+		if expr "$$prog" : '.*/' >/dev/null; then \
 			if [ -e "$$prog" ]; then \
 				${ECHO_MSG} "===>  ${PKGNAME} depends on file: $$prog - found"; \
 				found=""; \
