@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:48:16 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/30 17:27:31 cjep Exp $
 
 DISTNAME=	tochnog-20010429
 WRKSRC=		${WRKDIR}/tochnog/src
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://tochnog.sourceforge.net/pub/tochnog/
 DISTFILES=	tn.tar.gz tnu.ps.gz tnp.ps.gz
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://tochnog.sourceforge.net
+HOMEPAGE=	http://tochnog.sourceforge.net/
 COMMENT=	Finite Element Analysis Program
 
 DIST_SUBDIR=	${DISTNAME}
