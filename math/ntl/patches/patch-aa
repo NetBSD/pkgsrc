@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2001/01/28 01:51:40 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2001/04/13 00:45:05 jtb Exp $
 
 --- makefile.orig	Sun Nov 19 14:11:21 2000
 +++ makefile
@@ -137,22 +137,22 @@ $NetBSD: patch-aa,v 1.2 2001/01/28 01:51:40 jtb Exp $
 -	mkdir $(DOCDIR)/NTL
 -	cp ../doc/*.txt $(DOCDIR)/NTL
 -	cp ../doc/*.html $(DOCDIR)/NTL
-+	$(INSTALL_DATA_DIR) $(LIBDIR)
-+	$(INSTALL_DATA) libntl.a $(LIBDIR)
-+	$(INSTALL_DATA_DIR) $(INCLUDEDIR)
-+	$(INSTALL_DATA_DIR) $(INCLUDEDIR)/NTL
++	$(BSD_INSTALL_DATA_DIR) $(LIBDIR)
++	$(BSD_INSTALL_DATA) libntl.a $(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)
++	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/NTL
 +	@for d in ../include/NTL/*.h; do \
-+		c="$(INSTALL_DATA) $$d $(INCLUDEDIR)/NTL/"; \
++		c="$(BSD_INSTALL_DATA) $$d $(INCLUDEDIR)/NTL/"; \
 +		echo $$c; $$c; \
 +	done
-+	$(INSTALL_DATA_DIR) $(DOCDIR)
-+	$(INSTALL_DATA_DIR) $(DOCDIR)/NTL
++	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)/NTL
 +	@for d in ../doc/*.txt; do \
-+		c="$(INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
++		c="$(BSD_INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
 +		echo $$c; $$c; \
 +	done
 +	@for d in ../doc/*.html; do \
-+		c="$(INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
++		c="$(BSD_INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
 +		echo $$c; $$c; \
 +	done
  
