@@ -1,34 +1,47 @@
-# $NetBSD: Makefile,v 1.3 2004/04/21 04:56:25 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/21 22:53:36 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-1.5
+PKGREVISION=		1
 CATEGORIES=		mail
-MASTER_SITES=		http://untroubled.org/qmail-qfilter/
+MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=		zuntum@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/qmail-qfilter/
 COMMENT=		qmail-queue multi-filter front end
 
+DEPENDS+=		netqmail>=1.05:../../mail/netqmail
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+PKG_SYSCONFSUBDIR=	qmail-qfilters
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
 
 REPLACE_PERL=		samples/block-long-dates			\
 			samples/deny-filetypes				\
 			samples/rename-filetypes
 
-post-patch:
+INSTALLATION_DIRS=	bin man man/man1 share/examples/qmail-qfilter
+
+do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
+	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
+
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-qfilter-queue.sh	\
+		> ${WRKDIR}/qmail-qfilter-queue
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qmail-qfilter ${PREFIX}/bin
-
+	cd ${WRKSRC} && ./installer && ./instcheck
+	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/qmail-qfilter
-
-	${INSTALL_SCRIPT} ${WRKSRC}/samples/block-long-dates		\
-		${PREFIX}/share/examples/qmail-qfilter
-	${INSTALL_SCRIPT} ${WRKSRC}/samples/deny-filetypes		\
-		${PREFIX}/share/examples/qmail-qfilter
-	${INSTALL_SCRIPT} ${WRKSRC}/samples/rename-filetypes		\
-		${PREFIX}/share/examples/qmail-qfilter
+	for i in ${REPLACE_PERL}; do					\
+		${INSTALL_SCRIPT} ${WRKSRC}/$${i}			\
+			${PREFIX}/share/examples/qmail-qfilter;		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
