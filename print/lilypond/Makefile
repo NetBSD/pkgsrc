@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2005/02/02 14:38:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2005/02/10 12:06:47 jmmv Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://lilypond.org/download/v2.4/
 
@@ -26,6 +26,8 @@ USE_MAKEINFO=	YES
 TEXINFO_REQD=	4.7
 INFO_DIR=	info/lilypond
 INFO_FILES=	lilypond.info lilypond-internals.info music-glossary.info
+CONFIGURE_HAS_INFODIR=	NO
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
 CONFIGURE_ARGS+=--disable-optimising
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
