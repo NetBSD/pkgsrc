@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.866 2001/11/29 01:17:25 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.867 2001/11/29 20:06:03 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -2116,7 +2116,6 @@ do-su-package:
 	realtarget="real-su-package";					\
 	action="package";						\
 	${_SU_TARGET} 
-	
 
 # Empty pre-* and post-* targets
 
