@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2000/07/08 13:31:31 bjh21 Exp $
+# $NetBSD: Makefile,v 1.123 2000/07/15 08:03:02 jlam Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -52,6 +52,7 @@
     SUBDIR += kdbg
     SUBDIR += kdevelop
     SUBDIR += ldapsdk
+    SUBDIR += libsigc++
     SUBDIR += libg++
     SUBDIR += libgetopt
     SUBDIR += libglade
