@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2001/03/30 18:13:26 mjl Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/05/06 09:39:08 wiz Exp $
 bin/slrn
+bin/slrnpull
 man/man1/slrn.1
 share/doc/slrn/help.txt
 share/doc/slrn/INSTALL
