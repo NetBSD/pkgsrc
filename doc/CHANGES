@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9133 2005/02/14 08:20:59 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9134 2005/02/14 08:58:04 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -868,3 +868,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gedit to 2.8.3 [jmmv 2005-02-13]
 	Updated tcl-tclcl to 1.16 [minskim 2005-02-14]
 	Updated libarchive to 1.02.006 [xtraeme 2005-02-14]
+	Updated dovecot to 0.99.14 [xtraeme 2005-02-14]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3019 2005/02/12 21:34:47 rillig Exp $
+$NetBSD: TODO,v 1.3020 2005/02/14 08:58:04 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,6 @@ Suggested package updates
 	o docbook-website-2.5.0
 	o doclifter-2.1
 	o docsis-0.9.1
-	o dovecot-0.99.14
 	o dpkg-1.10.25
 	o dsssl-docbook-modular-1.79
 	o dvdrip-0.52.1
