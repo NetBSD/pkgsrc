@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4424 2004/01/11 02:26:33 jlam Exp $
+$NetBSD: CHANGES,v 1.4425 2004/01/11 16:47:00 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -176,3 +176,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed khostchooser [wiz 2004-01-10]
 	Added samba-2.2.8anb6 as net/samba2 [jlam 2004-01-10]
 	Updated samba to 3.0.1 [jlam 2004-01-11]
+	Updated leafnode to 1.9.49 [cjep 2004-01-11]
