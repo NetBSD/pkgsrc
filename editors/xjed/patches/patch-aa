@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/23 14:26:54 agc Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/21 12:02:50 jlam Exp $
 
 --- configure.orig	Tue Oct  9 10:15:13 2001
 +++ configure	Tue Oct  9 10:16:30 2001
@@ -11,11 +11,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/23 14:26:54 agc Exp $
  
  echo $ac_n "checking for Terminfo""... $ac_c" 1>&6
  echo "configure:2583: checking for Terminfo" >&5
-@@ -2623,6 +2623,7 @@
- test "x$exec" = "xNONE" && exec="$ac_default_prefix"
- test "x$exec_prefix" = "xNONE" && exec_prefix="$prefix"
- JD_Search_Dirs="$JD_Search_Dirs \
-+		/usr/pkg/include,/usr/pkg/lib
-                 $includedir,$libdir \
-                 /usr/local/include,/usr/local/lib \
- 		/usr/include,/usr/lib \
