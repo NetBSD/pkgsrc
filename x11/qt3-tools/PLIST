@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/09/22 08:10:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2004/10/13 03:11:50 tv Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -50,6 +50,8 @@ qt3/mkspecs/hpuxi-acc-64/qmake.conf
 qt3/mkspecs/hpuxi-acc-64/qplatformdefs.h
 qt3/mkspecs/hurd-g++/qmake.conf
 qt3/mkspecs/hurd-g++/qplatformdefs.h
+qt3/mkspecs/interix-g++/qmake.conf
+qt3/mkspecs/interix-g++/qplatformdefs.h
 qt3/mkspecs/irix-cc-64/qmake.conf
 qt3/mkspecs/irix-cc-64/qplatformdefs.h
 qt3/mkspecs/irix-cc-o32/qmake.conf
