@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/22 14:33:05 minskim Exp $
+bin/gtmess
+bin/gtmess-gw
+bin/gtmess-notify
+bin/gtmess_w
+man/man1/gtmess-gw.1
+man/man1/gtmess.1
+share/gtmess/root.pem
+share/pixmaps/gtmess_icon-48.png
+share/pixmaps/gtmess_icon.png
+share/pixmaps/gtmess_icon2-48.png
+share/pixmaps/gtmess_icon2-64.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/gtmess
