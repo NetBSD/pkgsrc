@@ -1,7 +1,7 @@
-$NetBSD: patch-sum,v 1.3 1999/08/28 22:51:31 rh Exp $
+$NetBSD: patch-sum,v 1.4 1999/10/22 23:34:23 tron Exp $
 
 MD5 (patch-aa) = f0f79c4b4966ceb121bd12f240e5aef6
-MD5 (patch-ab) = e26aa155f4ac1fc9c8f78de44e1dc7f1
-MD5 (patch-ac) = c072894b86c50791eefeef2f8920d497
-MD5 (patch-ad) = f7a6c4464f212e90ed71bb3bea32fe23
-MD5 (patch-ae) = c48c7445b6ad23423b7afcf4831414ec
+MD5 (patch-ab) = 9037429c991ff06f71a81e91c1e963f7
+MD5 (patch-ac) = cd3b59c2ee386ad8bd293b09adca1ba6
+MD5 (patch-ad) = 9aa610413ef097543e5e19ec626efe0e
+MD5 (patch-ae) = f4182beff6eedc691d74330a54dbb63b
