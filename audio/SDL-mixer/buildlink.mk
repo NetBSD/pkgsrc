@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:40 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/03/09 08:25:52 rh Exp $
 #
 # This Makefile fragment is included by packages that use SDL_mixer.
 #
@@ -18,7 +18,7 @@ SDL_MIXER_BUILDLINK_MK=	# defined
 .include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.SDL_mixer?=	SDL-mixer>=1.2.0
-DEPENDS+=	${BUILDLINK_DEPENDS.SDL_mixer}:../../devel/SDL-mixer
+DEPENDS+=	${BUILDLINK_DEPENDS.SDL_mixer}:../../audio/SDL-mixer
 
 BUILDLINK_PREFIX.SDL_mixer=		${LOCALBASE}
 BUILDLINK_FILES.SDL_mixer=		include/SDL_mixer/*
