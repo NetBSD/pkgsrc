@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/20 16:34:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/20 17:14:40 xtraeme Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -24,13 +24,17 @@ CONFIGURE_ARGS+=	--with-extra-opt
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	configure
-SUBST_SED.config=	-e "s|\-malign-loops|\-falign-loops|g" \
-			-e "s|\-malign-jumps|\-falign-jumps|g" \
-			-e "s|\-malign-functions|\-falign-functions|g" \
-			-e "s|\-mpentium||g" \
-			-e "s|\-march=pentium||g" \
+SUBST_SED.config=	-e "s|\-mpentium||g"	    \
+			-e "s|\-march=pentium||g"   \
 			-e "s|\-fno-rtti||g"
 SUBST_MESSAGE.config=	"Removing outdated compilation flags."
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-3*)
+SUBST_SED.config+=	-e "s|\-malign-loops|\-falign-loops|g"
+SUBST_SED.config+=	-e "s|\-malign-jumps|\-falign-jumps|g"
+SUBST_SED.config+=	-e "s|\-malign-functions|\-falign-functions|g"
+.endif
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
