@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.common,v 1.1 2001/11/01 01:23:01 zuntum Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/08/23 21:15:17 xtraeme Exp $
 bin/sudo
 sbin/visudo
+share/doc/sudo/README
+share/doc/sudo/README.LDAP
 share/doc/sudo/UPGRADE
 share/examples/sudo/sudoers
-share/examples/sudo/sudoers.sample
 @dirrm share/examples/sudo
 @dirrm share/doc/sudo
