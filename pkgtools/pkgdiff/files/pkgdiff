@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkgdiff,v 1.2 2000/07/01 02:38:56 wiz Exp $
+# $NetBSD: pkgdiff,v 1.3 2000/08/15 14:35:23 abs Exp $
 #
 # Id: pkgdiff,v 1.4 2000/05/14 01:04:54 feyrer Exp feyrer 
 #
@@ -33,5 +33,7 @@ if ! diff -qu -$lines "$@" > /dev/null
 then
     echo '$'NetBSD'$'
     echo ''
-    diff -u -$lines "$@"
+    # Strip out the date on the +++ line to reduce needless
+    # differences in regenerated patches
+    diff -u -$lines "$@" | sed -e 's:^\(+++ [^	]*\)	.*:\1:'
 fi
