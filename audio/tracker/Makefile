@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2002/07/22 17:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2002/12/22 12:22:05 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
 DISTNAME=		tracker-5.3
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.tgz
@@ -20,7 +21,11 @@ WRKSRC=			${WRKDIR}/tracker
 MAKE_FLAGS=		MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \
 		INST_BIN_OPT="-c -s -m ${BINMODE} -o ${BINOWN} -g ${BINGRP}" \
 		INST_MAN_OPT="-c -m 644 -o ${BINOWN} -g ${BINGRP}" \
-		COMPRESSION_FILE=${PREFIX}/etc/compression_methods
+		COMPRESSION_FILE=${PKG_SYSCONFDIR}/compression_methods \
+		COMPRESSION_FILE_EG=${EGDIR}/compression_methods
+
+EGDIR=		${PREFIX}/share/examples/tracker
+CONF_FILES=	${EGDIR}/compression_methods ${PKG_SYSCONFDIR}/compression_methods
 
 INFO_FILES=		tracker.info
 
@@ -29,10 +34,12 @@ pre-install:
 	${MAKEINFO} --no-split tracker.texinfo -o tracker.info && \
 	${CP} tracker.info ${PREFIX}/info && \
 	${RM} -f tracker.info *.orig
+	${INSTALL_DATA_DIR} ${EGDIR}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tracker
 	${CP} -R ${WRKSRC}/Docs/* ${PREFIX}/share/doc/tracker
 
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
