@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/10 23:13:07 abs Exp $
---- configure.orig	Tue Sep 14 09:55:35 1999
-+++ configure	Sun Oct 10 23:55:51 1999
-@@ -1071,6 +1071,8 @@
+$NetBSD: patch-ab,v 1.2 1999/11/05 14:17:15 abs Exp $
+--- configure.orig	Mon Oct 25 09:25:53 1999
++++ configure	Fri Nov  5 11:14:27 1999
+@@ -1073,6 +1073,8 @@
  # It thinks the first close brace ends the variable substitution.
  test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/10 23:13:07 abs Exp $
  test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
  
  
-@@ -4586,6 +4588,7 @@
+@@ -5011,6 +5013,7 @@
  s%@YACC@%$YACC%g
  s%@RANLIB@%$RANLIB%g
  s%@INSTALL_PROGRAM@%$INSTALL_PROGRAM%g
