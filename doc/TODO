@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.81 2002/12/18 16:12:36 wiz Exp $
+$NetBSD: TODO,v 1.82 2002/12/18 19:29:50 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -95,9 +95,7 @@ Suggested package updates
 	o db4-4.1.24
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o eel2-2.0.8 [pkg/19410]
 	o eggdrop-1.6.13
-	o eog2-1.0.4 [pkg/19412]
 	o elinks-0.3.2 (0.4pre18)
 	o elm-me-2.4pl100
 	o eterm-0.9.2 [pkg/19393]
@@ -116,7 +114,6 @@ Suggested package updates
 	o gcvs-1.0b4
 	o gd-2.0.4
 	o gdb-5.3
-	o gedit-2.0.6 [pkg/19413]
 	o gftp-2.0.14
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.3
