@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.21 2000/01/02 03:40:21 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.22 2000/01/05 12:54:32 abs Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -269,13 +269,23 @@ sub checkdescr {
 		print "OK: $file has $linecnt lines.\n" if ($verbose);
 	}
 	if ($longlines > 0) {
-		&perror("WARN: $i includes lines that exceed $maxchars{$file} ".
-			"characters.");
+		&perror("WARN: $file includes lines that exceed ".
+			"$maxchars{$file} characters.");
 	}
 	if ($tmp =~ /[\033\200-\377]/) {
-		&perror("WARN: pkg/DESCR includes iso-8859-1, or ".
+		&perror("WARN: $file includes iso-8859-1, or ".
 			"other local characters.  $file should be ".
 			"plain ascii file.");
+	}
+	if ($file eq 'pkg/COMMENT' && $tmp =~ /\.$/i) {
+		&perror("WARN: $file should not end with a '.' (period).");
+	}
+	if ($file eq 'pkg/COMMENT' && $tmp =~ /^(a|an) /i) {
+		&perror("WARN: $file should not begin with '$1 '.");
+	}
+	if ($file eq 'pkg/COMMENT' && ($tmp =~ /^\s/ || $tmp =~ /\s\n$/)) {
+		&perror("WARN: $file should not not have any leading or ".
+			"trailing whitespace.");
 	}
 	close(IN);
 }
