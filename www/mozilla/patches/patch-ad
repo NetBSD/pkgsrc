@@ -1,8 +1,25 @@
-$NetBSD: patch-ad,v 1.16 2000/10/31 16:11:42 mycroft Exp $
+$NetBSD: patch-ad,v 1.17 2000/12/25 02:16:07 martin Exp $
 
---- nsprpub/pr/include/md/_netbsd.h.orig	Thu Jul  6 20:46:02 2000
-+++ nsprpub/pr/include/md/_netbsd.h	Thu Oct 26 07:32:35 2000
-@@ -70,39 +70,88 @@
+--- nsprpub/pr/include/md/_netbsd.h.orig	Thu Jul  6 22:46:02 2000
++++ nsprpub/pr/include/md/_netbsd.h	Sat Dec 23 23:17:43 2000
+@@ -59,52 +59,107 @@
+ #define _PR_POLL_AVAILABLE
+ #define _PR_USE_POLL
+ #define _PR_HAVE_SYSV_SEMAPHORES
+ #define PR_HAVE_SYSV_NAMED_SHARED_MEMORY
+ 
++#if __NetBSD_Version__ >= 105000000
++#define _PR_INET6
++#define _PR_HAVE_GETHOSTBYNAME2
++#define _PR_INET6_PROBE
++#endif
++
+ #define USE_SETJMP
+ 
+ #ifndef _PR_PTHREADS
+ #include <setjmp.h>
+ 
+ #define PR_CONTEXT_TYPE	sigjmp_buf
  
  #define CONTEXT(_th) ((_th)->md.context)
  
@@ -62,7 +79,9 @@ $NetBSD: patch-ad,v 1.16 2000/10/31 16:11:42 mycroft Exp $
 +    *status = PR_TRUE;							\
 +}
 +#define	_MD_GET_SP(_thread)	CONTEXT(_thread)[2]
-+#endif
+ #endif
+-#else
+-#error "Need to define SP index in jmp_buf here"
 +#ifdef __mips__
 +#define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
 +{									\
@@ -95,9 +114,7 @@ $NetBSD: patch-ad,v 1.16 2000/10/31 16:11:42 mycroft Exp $
 +    *status = PR_TRUE;							\
 +}
 +#define	_MD_GET_SP(_thread)	CONTEXT(_thread)[34]
- #endif
--#else
--#error "Need to define SP index in jmp_buf here"
++#endif
 +#ifndef _MD_INIT_CONTEXT
 +#error "Need to define _MD_INIT_CONTEXT for this platform"
  #endif
@@ -119,3 +136,5 @@ $NetBSD: patch-ad,v 1.16 2000/10/31 16:11:42 mycroft Exp $
  
  #define _MD_SWITCH_CONTEXT(_thread)  \
      if (!sigsetjmp(CONTEXT(_thread), 1)) {  \
+         (_thread)->md.errcode = errno;  \
+         _PR_Schedule();  \
