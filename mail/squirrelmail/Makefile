@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/11/16 14:18:01 martti Exp $
+# $NetBSD: Makefile,v 1.44 2004/12/19 11:31:29 jdolecek Exp $
 
 DISTNAME=	squirrelmail-1.4.3a
 PKGREVISION=	1
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.org/
-COMMENT=	PHP4 webmail package
+COMMENT=	PHP webmail package
 
 CONFLICTS=	sq-attachment-handlers-[0-9]*
 CONFLICTS+=	sq-squirrelspell-[0-9]*
