@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.85 2004/02/15 14:50:11 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.86 2004/02/16 03:08:52 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -196,19 +196,19 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .for _pkg_ in ${_BLNK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
 BUILDLINK_IS_BUILTIN.${_pkg_}?=		no
 #
+# If we prefer the pkgsrc version, then don't use the built-in package.
+#
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(PREFER_PKGSRC:M${_pkg_})
+BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
+.  endif
+#
 # If the "built-in" package (the software supplied by the base operating
 # system) is available, then use it by default.
 #
 .  if !empty(BUILDLINK_IS_BUILTIN.${_pkg_}:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.${_pkg_}?=	yes
 .  else
-BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
-.  endif
-#
-# If we prefer the pkgsrc version, then don't user the built-in package.
-#
-.  if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:M${_pkg_})
 BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
 .  endif
 #
