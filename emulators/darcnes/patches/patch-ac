@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/02/13 23:28:07 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2000/02/14 02:44:35 wiz Exp $
 
 --- ./snd_unix.c.orig	Wed Jan 26 21:22:18 2000
-+++ ./snd_unix.c	Sun Feb 13 22:27:06 2000
++++ ./snd_unix.c	Mon Feb 14 00:38:09 2000
 @@ -8,13 +8,21 @@
  
  /* #define SOUND_LINUX */	/* use linux sound header */
