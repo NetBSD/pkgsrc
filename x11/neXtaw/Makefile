@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/02/06 23:20:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/05 13:04:55 wiz Exp $
 
-DISTNAME=	neXtaw-0.12
+DISTNAME=	neXtaw-0.14.0
 CATEGORIES=	x11
 MASTER_SITES=	http://siag.nu/pub/neXtaw/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://siag.nu/neXtaw/
 COMMENT=	NeXTstep-like widgets based on the Athena Widget set
 
 USE_BUILDLINK2=		# defined
