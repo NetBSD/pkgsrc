@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1535 2004/11/12 05:20:01 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1536 2004/11/12 20:25:41 sketch Exp $
 #
 # This file is in the public domain.
 #
@@ -433,9 +433,11 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 DISTINFO_FILE?=		${.CURDIR}/distinfo
 
+LIBABISUFFIX?=
+
 .if defined(USE_X11)
-X11_LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib${ABI}
-X11_LDFLAGS+=		-L${X11BASE}/lib${ABI}
+X11_LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
+X11_LDFLAGS+=		-L${X11BASE}/lib${LIBABISUFFIX}
 .endif
 .if !empty(USE_BUILDLINK3:M[nN][oO])
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
@@ -1106,7 +1108,7 @@ CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
 HAS_CONFIGURE=		yes
 .  if defined(USE_X11)
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
-CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib${ABI}
+CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib${LIBABISUFFIX}
 .  endif
 CONFIGURE_HAS_INFODIR?=	yes
 .  if !empty(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
