@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/02/23 13:15:44 itojun Exp $
+# $NetBSD: Makefile,v 1.12 2000/03/16 13:53:26 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
@@ -24,7 +24,7 @@ DEPENDS+=	readline-4.0:../../devel/readline
 DELEGATE_MANAGER?=	root@localhost
 
 pre-build:
-	@echo "MANAGER=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
+	@${ECHO} "MANAGER=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/delegated ${PREFIX}/sbin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/26 18:56:15 garbled Exp $
+# $NetBSD: Makefile,v 1.9 2000/03/16 13:52:20 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -22,8 +22,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${PREFIX}/bin/zorro
 	${MKDIR} ${PREFIX}/share/zorro
 	${INSTALL_DATA} ${WRKSRC}/DOTzorrorc ${PREFIX}/share/zorro
-	@echo ""
-	@echo "Take a look at ${PREFIX}/share/zorro/DOTzorrorc"
-	@echo ""
+	@${ECHO} ""
+	@${ECHO} "Take a look at ${PREFIX}/share/zorro/DOTzorrorc"
+	@${ECHO} ""
 
 .include "../../mk/bsd.pkg.mk"
