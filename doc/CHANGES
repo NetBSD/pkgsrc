@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6460 2004/07/06 09:06:37 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6461 2004/07/06 09:46:37 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3267,3 +3267,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added aranym-0.8.8beta [xtraeme 2004-07-06]
 	Added hlfl-0.60.1 [xtraeme 2004-07-06]
 	Added xwpe-1.5.29a [xtraeme 2004-07-06]
+	Updated libkver to 0.5 [cube 2004-07-06]
