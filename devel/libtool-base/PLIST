@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/10 08:44:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/25 15:53:38 agc Exp $
 bin/libtool
 bin/libtoolize
 ${SHLIBTOOL}bin/shlibtool
@@ -32,4 +32,3 @@ share/libtool/ltconfig
 share/libtool/ltmain.sh
 @dirrm share/libtool/libltdl
 @dirrm share/libtool
-@unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
