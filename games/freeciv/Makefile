@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 1999/07/22 23:52:02 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/07/22 23:56:04 tron Exp $
 #
 
 DISTNAME=	freeciv-1.8.1
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.freeciv.org/freeciv/stable_version/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.freeciv.org/
