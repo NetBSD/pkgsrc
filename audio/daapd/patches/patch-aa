@@ -1,22 +1,29 @@
 --- makefile.orig	2004-09-08 03:17:58.000000000 +0200
 +++ makefile	2005-01-08 06:12:42.000000000 +0100
-@@ -4,3 +4,3 @@
+--- makefile.orig	2004-09-07 21:17:58.000000000 -0400
++++ makefile
+@@ -2,7 +2,7 @@
+ 
+ HOWL_ENABLE = 1
  ZLIB_ENABLE = 1
 -MPEG4_ENABLE = 1
 +MPEG4_ENABLE = 0
  
-@@ -16,6 +16,6 @@
+ 
+ # no need to touch anything below this line
+@@ -14,16 +14,16 @@ TARGET = daapd
+ DEPS = daaplib_ libhttpd_
+ OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o
  LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz -lpthread 
 -LIBPATH = -L. -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
--INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
++LIBPATH = -L. ${LDFLAGS} -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
+ INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
 -DEPLOY = /usr/local
 -CFLAGS = -Wall -Wno-multichar
-+LIBPATH = -L. ${LDFLAGS} -L./daaplib/src -L./libhttpd/src
-+INCPATH = -I. -I./daaplib/include -I./libhttpd/src
 +DEPLOY = ${PREFIX}
 +CFLAGS += -Wall -Wno-multichar
  
-@@ -23,5 +23,5 @@
+ # HOWL
  ifeq ($(HOWL_ENABLE),1)
 -	HOWLDIRS := $(sort $(wildcard /usr/local/include/howl*) )
 + 	HOWLDIRS := $(sort $(wildcard ${PREFIX}/include/howl*) )
@@ -24,8 +31,14 @@
 -$(error howl not found in /usr/local/include. Install howl or disable it in the makefile)
 +$(error howl not found in ${PREFIX}/include. Install howl or disable it in the makefile)
  endif
-@@ -76,4 +76,2 @@
+ 	HOWLRECENT := $(word $(words $(HOWLDIRS)),$(HOWLDIRS) )
+ 	INCPATH := $(INCPATH) -I$(HOWLRECENT)
+@@ -74,8 +74,6 @@ clean:
+ 	rm $(OBJS) $(TARGET)
+ 
  install: $(DEPS) $(TARGET)
 -	cd libhttpd && $(MAKE) install
 -	cd daaplib/src && $(MAKE) install
  	cp $(TARGET) $(DEPLOY)/bin
+ 	chmod a+rx $(DEPLOY)/bin/$(TARGET)
+ 	cp $(TARGET).8 $(DEPLOY)/man/man8
