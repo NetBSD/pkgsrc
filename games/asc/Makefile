@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/13 22:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/13 22:31:03 wiz Exp $
 #
 
 DISTNAME=		asc-source-1.13.7
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asc-hq/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${AUDIO_FILES}
 
 MAINTAINER=		wiz@netbsd.org
-HOMEPAGE=		http://asc-hq.sourceforge.net/
+HOMEPAGE=		http://www.asc-hq.org/
 COMMENT=		turn based strategy game
 
 AUDIO_FILES=		frontiers.mp3 machine_wars.mp3 time_to_strike.mp3
