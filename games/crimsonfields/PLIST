@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/26 21:14:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/03/07 14:27:54 wiz Exp $
 bin/bi2cf
+bin/cf2bmp
 bin/cfed
 bin/comet
 bin/crimson
@@ -23,12 +24,16 @@ share/crimson/levels/LankhValley.lev
 share/crimson/levels/LostFactories.lev
 share/crimson/levels/MountainDefense.lev
 share/crimson/levels/OmyarGorge.lev
+share/crimson/levels/Plowshares.lev
+share/crimson/levels/RadioSilence.lev
 share/crimson/levels/Revelation.lev
+share/crimson/levels/Tutorial1.lev
 share/crimson/levels/Uprising.lev
 share/crimson/locale/de.dat
 share/crimson/locale/en.dat
 share/crimson/locale/fr.dat
 share/crimson/locale/pl.dat
+share/crimson/locale/sk.dat
 share/crimson/music/default.mid
 share/crimson/sound/ask.wav
 share/crimson/sound/clicked.wav
