@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2004/11/08 16:30:59 adam Exp $
+# $NetBSD: Makefile,v 1.82 2004/11/30 17:41:52 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -110,6 +110,14 @@ OWN_DIRS_PERMS=		${CUPS_CONFDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
 OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${CUPS_USER} ${CUPS_GROUP} 0710
 OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../net/openslp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/autoconf.mk"
+
 pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
 
@@ -135,12 +143,4 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../net/openslp/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
