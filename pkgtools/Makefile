@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/09/30 08:37:52 martti Exp $
+# $NetBSD: Makefile,v 1.44 2002/11/07 23:18:37 atatat Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -16,6 +16,7 @@ SUBDIR+=	pkg_tarup
 SUBDIR+=	pkgchk
 SUBDIR+=	pkgconflict
 SUBDIR+=	pkgdep
+SUBDIR+=	pkgdepgraph
 SUBDIR+=	pkgdiff
 SUBDIR+=	pkglint
 SUBDIR+=	pkgmanpages
