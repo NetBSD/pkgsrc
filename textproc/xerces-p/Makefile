@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/26 13:57:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/27 11:23:20 wiz Exp $
 #
 
 DISTNAME=	XML-Xerces-1.3.5
@@ -9,7 +9,7 @@ MAINTAINER=	manu@netbsd.org
 HOMEPAGE=	http://xml.apache.org/xerces-p/
 COMMENT=	Validating XML parser API for Perl
 
-DEPENDS+=	swig>=1.1p5:../../devel/swig
+DEPENDS+=	swig-1.1p5:../../devel/swig
 DEPENDS+=	xerces-c-1.3.*:../../textproc/xerces-c
 DEPENDS+=	icu>=1.7:../../textproc/icu
 
