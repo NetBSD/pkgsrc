@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8158 2004/11/29 20:33:25 wiz Exp $
+$NetBSD: CHANGES,v 1.8159 2004/11/29 20:46:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5647,3 +5647,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jabberd2 to 2.0s4nb1 [abs 2004-11-29]
 	Updated rconfig to 0.41 [abs 2004-11-29]
 	Updated Ngraph to 6.3.30 [wiz 2004-11-29]
+	Updated gmpc to 0.11.2 [wiz 2004-11-29]
