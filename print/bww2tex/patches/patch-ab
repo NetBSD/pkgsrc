@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/01/23 18:16:41 fredb Exp $
+
+--- makefile.orig	Sun Jan 19 16:02:51 2003
++++ makefile	Sun Jan 19 16:04:19 2003
+@@ -1,19 +1,58 @@
++CC = cc
++#CC = gcc
++
++LEX = flex
++YACC = bison
++
++BINNAME = bww2tex
++VERSION = 2.00
++
++DISTNAME = $(BINNAME)-$(VERSION)
++distdir = $(DISTNAME)
++
+ #
+ #
+ all: bww2tex
+ #
+ bww2tex: y.tab.o  lex.yy.o
+-	cc -g -o bww2tex y.tab.o lex.yy.o
++	$(CC) -g -o bww2tex y.tab.o lex.yy.o
+ #
+ lex.yy.o: lex.yy.c  y.tab.h
+-	cc -c lex.yy.c
++	$(CC) -c lex.yy.c
+ #
+ lex.yy.c: expressions.l tokensDat.h tokens.h
+-	flex expressions.l
++	$(LEX) expressions.l
+ #
+ y.tab.o: y.tab.h y.tab.c tokensDat.h tokens.h
+-	cc -c -g y.tab.c
++	$(CC) -c -g y.tab.c
+ #
+ y.tab.h  y.tab.c:  grammar.y
+-	bison  -t -v -b y -d  grammar.y
++	$(YACC)  -t -v -b y -d  grammar.y
+ #
++
++clean:
++	rm -f  y.*
++	-rm -rf $(distdir)
++	-rm -f $(distdir).tar $(distdir).tar.gz
++
++distclean: clean
++	rm -f $(BINNAME) *core *.o
++	chmod 644 *.tex *.bww *.y *.h *.l *.c makefile README
++	
++
++distro: dist
++dist: distclean
++	mkdir $(distdir)
++	@for file in `ls`; do \
++		if test $$file != $(distdir); then \
++			cp -Rp $$file $(distdir)/$$file; \
++		fi; \
++	done
++	find $(distdir) -type l -exec rm -f {} \;
++	tar chof $(distdir).tar $(distdir)
++	gzip -f --best $(distdir).tar
++	rm -rf $(distdir)
++	@echo
++	@echo "$(distdir).tar.gz created"
++	@echo
++
