@@ -1,13 +1,29 @@
-$NetBSD: patch-ad,v 1.1 2001/08/17 05:48:09 lukem Exp $
+$NetBSD: patch-ad,v 1.2 2001/10/03 21:58:28 abs Exp $
 
---- abcde.conf.orig	Thu Aug 16 08:32:10 2001
-+++ abcde.conf	Fri Aug 17 15:29:59 2001
-@@ -93,7 +93,7 @@
- #NOCDDBQUERY=n
- 
- # CD device you want to read from
--#CDROM=/dev/cdrom
-+#CDROM=/dev/rcd0d
- 
- # If you'd like to make a default location that overrides the current
- # directory for putting mp3's, uncomment this.
+--- cddb-tool.orig	Wed Aug 15 22:48:11 2001
++++ cddb-tool
+@@ -121,7 +121,7 @@
+ 	echo '#'
+ 	echo '# Track frame offsets:'
+ 	NUMTRACKS=$2
+-	for x in $(seq 3 $(expr $NUMTRACKS + 2))
++	for x in $(jot $NUMTRACKS 3)
+ 	do
+ 		echo -e "#\t$(echo "$DISCID" | cut -f$x -d' ')"
+ 	done
+@@ -137,13 +137,13 @@
+ 	echo DISCID="$DISCNUM"
+ 	echo "DTITLE=Unknown Artist / Unknown Album"
+ 	# TTITLE0 -- TTITLEn
+-	for x in $(seq 1 $NUMTRACKS)
++	for x in $(jot $NUMTRACKS)
+ 	do
+ 		echo "TTITLE$(expr $x - 1)=Track $x"
+ 	done
+ 	echo "EXTD="
+ 	# EXTT0 -- EXTTn
+-	for x in $(seq 1 $NUMTRACKS)
++	for x in $(jot $NUMTRACKS)
+ 	do
+ 		echo "EXTT$(expr $x - 1)="
+ 	done
