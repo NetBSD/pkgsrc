@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.7 2002/12/01 20:25:39 salo Exp $
+$NetBSD: distinfo,v 1.8 2003/08/30 21:10:11 jtb Exp $
 
-SHA1 (chemtool-1.4.1.tar.gz) = 03560d5bbc90e12032e80e5313fc257f3f0955d1
-Size (chemtool-1.4.1.tar.gz) = 150140 bytes
-SHA1 (patch-aa) = ff4fbfa2bd611ad4e91c598334436a9d982fef74
-SHA1 (patch-ab) = 258a7940f5a2135891f61c30f02c7c57b67aeaa2
-SHA1 (patch-ac) = 05d31454c8e1609ce406be54d8390defbbe35c1f
-SHA1 (patch-ad) = 26f3e4dc18c355185937c34cd7ec789d358d3a02
+SHA1 (chemtool-1.6.tar.gz) = 0560600bdc4a66b1fb9d5df68584a4a33c56b584
+Size (chemtool-1.6.tar.gz) = 358695 bytes
+SHA1 (patch-aa) = f1ee3192b7b162bbbe1c35728f8c5f440423219f
