@@ -1,68 +1,94 @@
-# $NetBSD: Makefile,v 1.51 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2005/04/01 10:15:46 adam Exp $
 
-DISTNAME=	octave-2.0.17
-PKGREVISION=	3
+DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
-		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/ \
 		ftp://ftp.task.gda.pl/pub/software/octave/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
-COMMENT=	High-level language, primarily intended for numerical computations
+COMMENT=	High-level language, intended for numerical computations
 
-BUILD_DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
-DEPENDS+=	gnuplot{,-nox11}>=3.7:../../graphics/gnuplot
+BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
+BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
+DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-CONFLICTS+=	octave-2.1.*
+OCTAVE_VER=	2.1.69
+CONFLICTS+=	octave-current-*
+
+.if (${MACHINE_ARCH} == "arm32")
+BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
+.endif
 
 USE_BUILDLINK3=		yes
-USE_X11=		yes
-GNU_CONFIGURE=		yes
-USE_LANGUAGES=		fortran
-USE_LIBTOOL=		yes
+USE_GNU_READLINE=	yes
 USE_GNU_TOOLS+=		make
-CONFIGURE_ENV+=		FFLAGS="${CFLAGS}" OBJECT_FMT="${OBJECT_FMT}"
-CPPFLAGS+=		-I${WRKDIR}/include
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
+USE_LIBTOOL=		yes
+USE_MAKEINFO=		yes
+USE_PERL5=		build
+GNU_CONFIGURE=		yes
 
-USE_MAKEINFO=	YES
-INFO_FILES=	liboctave.info octave.info
-LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 liboctave.info-2 liboctave.info-3
+GCC_REQD=		3.0
+USE_LANGUAGES=		c c++ fortran
+
+# needed for loading of shared objects such as those in the
+# octave-forge package or user written ones compiled with
+# mkoctfile
+CONFIGURE_ARGS+=	--enable-dl
+
+.include "options.mk"
+
+INFO_FILES=	octave.info liboctave.info
+LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \
+		liboctave.info-2 liboctave.info-3
+OCTAVE_DOC=	faq/Octave-FAQ.ps interpreter/octave.ps \
+		liboctave/liboctave.ps refcard/refcard-a4.ps \
+		refcard/refcard-legal.ps  refcard/refcard-letter.ps
+OCTAVE_HTML=	faq/Octave-FAQ_*.html interpreter/octave_*.html \
+		liboctave/liboctave_*.html
+
+UNWRAP_FILES+=	mkoctfile octave-bug src/oct-conf.h
 
 post-extract:
-	${FIND} ${WRKSRC}/doc -type f -name \*.info\* -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -exec ${RM} -f {} \;
+	${MKDIR} ${WRKSRC}/src/pic
+
+# substitute in the real path to various bits of the toolchain because
+# mkoctfile will be used potentially by users and it needs to point
+# at the same compilers as were used in building octave.  We also
+# fix up the path to sed otherwise we end up with the buildlink directory
+# in mkoctfile
+post-build:
+	${MV} ${WRKSRC}/mkoctfile ${WRKSRC}/mkoctfile.bak
+	${SED} \
+		-e 's;"${CC}";"${CCPATH}";g' \
+		-e 's;"${CXX}";"${CXXPATH}";g' \
+		-e 's;"${FC}";"${FCPATH}";g' \
+		-e 's@^:[ \t]*\$${SED=.*@: \$$\{SED="${SED}"\}@g' \
+		${WRKSRC}/mkoctfile.bak > ${WRKSRC}/mkoctfile
+	${CHMOD} a+x ${WRKSRC}/mkoctfile
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/2.0.17/doc
-.for file in ${LIBOCTAVE_INFO}
-	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${file} ${PREFIX}/info
+.for f in ${LIBOCTAVE_INFO}
+	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${f} ${PREFIX}/info
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/interpreter/octave.ps ${PREFIX}/share/octave/2.0.17/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/liboctave.ps ${PREFIX}/share/octave/2.0.17/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-letter.ps ${PREFIX}/share/octave/2.0.17/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-legal.ps ${PREFIX}/share/octave/2.0.17/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-a4.ps ${PREFIX}/share/octave/2.0.17/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.17/doc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
+.for f in ${OCTAVE_DOC}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
+.endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/octave
+.for f in ${OCTAVE_HTML}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/doc/html/octave
+.endfor
 
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-3*)
-PKG_FAIL_REASON=	"Octave does not build with ${CC_VERSION} - please use octave-current."
-.endif
-
-.if !empty(CC_VERSION:Mgcc-2.8.1)
-post-patch:
-	@EGCS_VERSION=`${CC} -v 2>&1 | ${AWK} '{print $$4}'`;		\
-	if [ $$EGCS_VERSION -lt 19981201 ]; then			\
-		cd ${WRKSRC};						\
-		for FILE in ${PATCHDIR}/egcs-patch-*; do		\
-			${PATCH} ${PATCH_ARGS} < $$FILE;		\
-		done;							\
-	fi
-.endif
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
+.include "../../math/lapack/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

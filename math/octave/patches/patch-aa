@@ -1,59 +1,47 @@
-$NetBSD: patch-aa,v 1.8 2003/07/02 20:58:34 jtb Exp $
+$NetBSD: patch-aa,v 1.9 2005/04/01 10:15:47 adam Exp $
 
---- configure.orig
+--- configure.orig	2005-02-18 04:55:38.000000000 +0000
 +++ configure
-@@ -798,7 +798,7 @@
+@@ -8824,7 +8824,7 @@ if $have_fortran_compiler; then
+ %.c : %.f
  
+ %.o : %.f
+-	$(FC) -c $(ALL_FFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile --tag=CC $(FC) -c $(ALL_FFLAGS) $<
  
- 
--LIBKPATHSEA='$(TOPDIR)/kpathsea/libkpathsea.$(LIBEXT)'
-+LIBKPATHSEA='$(TOPDIR)/kpathsea/STATIC/libkpathsea.$(LIBEXT)'
- 
- 
- ### Make it possible to have Octave's array and matrix classes do bounds
-@@ -2561,7 +2561,7 @@
- }
- #if defined (sun)
- int MAIN_ () { return 0; }
--#elif defined (linux) && defined (__ELF__)
-+#elif (defined (linux) && defined (__ELF__)) || defined(__NetBSD__)
- int MAIN__ () { return 0; }
- #endif
- EOF
-@@ -2833,7 +2833,7 @@
- 
- FORTRAN_MAIN_FLAG=
+ pic/%.o : %.f
+ 	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
+@@ -11034,7 +11034,7 @@ TEMPLATE_AR='$(AR)'
+ TEMPLATE_ARFLAGS="$ARFLAGS"
+ library_path_var=LD_LIBRARY_PATH
  case "$canonical_host_type" in
--  *-linux-*)
-+  *-linux-*|*-netbsd*)
-     FORTRAN_MAIN_FLAG="-u MAIN__"
+-  *-*-386bsd* | *-*-openbsd* | *-*-netbsd*)
++  *-*-386bsd* | *-*-openbsd* )
+     SH_LD=ld
+     SH_LDFLAGS=-Bshareable
    ;;
- esac
-@@ -5312,7 +5312,7 @@
+@@ -21138,19 +21138,19 @@ case "$canonical_host_type" in
+     cat << \EOF > $bsd_gcc_kluge_targets_frag
  
+ lex.o: lex.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
  
- TERMLIBS=""
--for termlib in ncurses curses termcap terminfo termlib; do
-+for termlib in termcap terminfo termlib; do
-   echo $ac_n "checking for tputs in -l${termlib}""... $ac_c" 1>&6
- echo "configure:5318: checking for tputs in -l${termlib}" >&5
- ac_lib_var=`echo ${termlib}'_'tputs | sed 'y%./+-%__p_%'`
-@@ -5364,12 +5364,10 @@
+ pt-plot.o: pt-plot.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
  
- if test "$ac_cv_lib_termcap_tputs" = yes \
-   || test "$ac_cv_lib_terminfo_tputs" = yes \
--  || test "$ac_cv_lib_ncurses_tputs" = yes \
--  || test "$ac_cv_lib_curses_tputs" = yes \
-   || test "$ac_cv_lib_termlib_tputs" = yes; then
-   true
- else
--  warn_termlibs="I couldn't find -ltermcap, -lterminfo, -lncurses, -lcurses, or -ltermlib!"
-+  warn_termlibs="I couldn't find -ltermcap, -lterminfo, or -ltermlib!"
-   echo "configure: warning: $warn_termlibs" 1>&2
- fi
+ symtab.o: symtab.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
  
-@@ -7502,4 +7500,3 @@
+ toplev.o: toplev.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
  
- ### End of configure.
- chmod +x install-octave
--
+ unwind-prot.o: unwind-prot.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ EOF
+   ;;

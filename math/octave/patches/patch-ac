@@ -1,12 +1,35 @@
-$NetBSD: patch-ac,v 1.3 2000/04/28 08:59:37 wennmach Exp $
---- Makeconf.in.orig	Sun Oct 18 16:04:22 1998
-+++ Makeconf.in	Sun Oct 18 16:07:37 1998
-@@ -63,7 +63,7 @@
- # cc and associated flags.
+$NetBSD: patch-ac,v 1.4 2005/04/01 10:15:47 adam Exp $
+
+--- Makeconf.in.orig	2005-02-24 04:56:07.000000000 +0000
++++ Makeconf.in
+@@ -73,7 +73,7 @@ SHLBIN = @SHLBIN@
+ SHLBIN_VER = @SHLBIN_VER@
+ SHLLINKEXT=
  
- DLFCN_INCFLAGS = @DLFCN_INCFLAGS@
--GLOB_INCFLAGS = @GLOB_INCFLAGS@
-+GLOB_INCFLAGS = @GLOB_INCFLAGS@ -I ${PREFIX}/include
+-LIBEXT = a
++LIBEXT = la
  
- # Clean up INCFLAGS a bit if we are not compiling in a separate
- # directory.
+ # Fortran to C translator and associated flags.
+ 
+@@ -158,7 +158,7 @@ BUILD_LDFLAGS = @BUILD_LDFLAGS@
+ SH_LD = @SH_LD@
+ SH_LDFLAGS = @SH_LDFLAGS@
+ 
+-DL_LD = @DL_LD@
++DL_LD = ${LIBTOOL} --mode=link @DL_LD@
+ DL_LDFLAGS = @DL_LDFLAGS@
+ 
+ SONAME_FLAGS = @SONAME_FLAGS@
+@@ -337,10 +337,10 @@ NO_OCT_FILE_STRIP = @NO_OCT_FILE_STRIP@
+ # How to make .o files:
+ 
+ %.o : %.c
+-	$(CC) -c $(CPPFLAGS) $(ALL_CFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS) $(ALL_CFLAGS) $< -o $@
+ 
+ %.o : %.cc
+-	$(CXX) -c $(CPPFLAGS) $(ALL_CXXFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(ALL_CXXFLAGS) $< -o $@
+ 
+ pic/%.o : %.c
+ 	$(CC) -c $(CPPFLAGS) $(CPICFLAG) $(ALL_CFLAGS) $< -o $@
