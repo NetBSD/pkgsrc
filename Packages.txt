@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.23 1998/03/18 07:10:30 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.24 1998/03/25 14:19:59 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -934,6 +934,12 @@ We've agreed on using tech-userlevel@netbsd.org for discussing
 package related issues. To subscribe do:
 
     echo subscribe tech-userlevel | mail majordomo@netbsd.org
+
+
+ 9.11 How do i tell "make fetch" to do passive FTP?
+ ==================================================
+
+Add the following to your /etc/mk.conf: FETCH_BEFORE_ARGS= -p
 
 
  10 Submitting
