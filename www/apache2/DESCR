@@ -1,6 +1,5 @@
-The Apache HTTP Server Project is a collaborative software development
-effort aimed at creating a robust, commercial-grade, featureful, and
-freely-available source code implementation of an HTTP (Web) server.
-
-*NOTE:	This package installs a beta release of Apache 2.0.  For a stable
-	release, please install Apache1.3.x (www/apache).
+The Apache HTTP Server Project is an effort to develop and maintain an
+open-source HTTP server for various modern desktop and server operating
+systems, such as UNIX and Windows NT.  The goal of this project is to
+provide a secure, efficient and extensible server which provides HTTP
+services in sync with the current HTTP standards.

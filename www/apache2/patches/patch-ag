@@ -1,51 +1,15 @@
-$NetBSD: patch-ag,v 1.3 2002/03/06 00:55:34 jlam Exp $
+$NetBSD: patch-ag,v 1.4 2002/04/13 21:35:53 jlam Exp $
 
---- support/Makefile.in.orig	Sat Jan 19 00:44:04 2002
+--- support/Makefile.in.orig	Mon Mar 25 04:50:41 2002
 +++ support/Makefile.in
-@@ -2,7 +2,8 @@
- 	logresolve.pl phf_abuse_log.cgi split-logfile
- 
- PROGRAMS = htpasswd htdigest rotatelogs logresolve ab checkgid htdbm
--TARGETS  = $(PROGRAMS)
-+SCRIPTS  = apxs apachectl dbmmanage
-+TARGETS  = $(PROGRAMS) $(SCRIPTS)
- 
- PROGRAM_LDADD        = $(EXTRA_LDFLAGS) $(UTIL_LDFLAGS) $(PROGRAM_DEPENDENCIES) $(EXTRA_LIBS)
- PROGRAM_DEPENDENCIES = \
-@@ -15,18 +16,30 @@
- 	@test -d $(bindir) || $(MKINSTALLDIRS) $(bindir)
- 	@test -d $(libexecdir) || $(MKINSTALLDIRS) $(libexecdir)
- 	@cp -p $(top_builddir)/server/httpd.exp $(libexecdir)
--	@for i in apxs apachectl dbmmanage; do \
--	    if test -f "$(builddir)/$$i"; then \
--	        cp -p $$i $(sbindir); \
--	        chmod 755 $(sbindir)/$$i; \
--	    fi ; \
--	done
+@@ -24,8 +24,10 @@
+ 	done
  	@if test -f "$(builddir)/envvars-std"; then \
  	    cp -p envvars-std $(sbindir); \
 +	    if false; then \
  	    if test ! -f $(sbindir)/envvars; then \
  	        cp -p envvars-std $(sbindir)/envvars ; \
- 	    fi ; \
 +	    fi ; \
+ 	    fi ; \
  	fi
-+
-+apxs: apxs.pl
-+	sed -e "s#%prefix%#$(prefix)#g" \
-+		-e "s#%installbuilddir%#$(installbuilddir)#g" \
-+		< apxs.pl > $@
-+	chmod +x $@
-+
-+apachectl: apachectl.sh
-+	sed -e "s#%runtimedir%#$(runtimedir)#g" \
-+		-e "s#%sbindir%#$(sbindir)#g" \
-+		< apachectl.sh > $@
-+	chmod +x $@
-+
-+dbmmanage: dbmmanage.pl
-+	cp dbmmanage.pl $@
-+	chmod +x $@
  
- htpasswd_OBJECTS = htpasswd.lo
- htpasswd: $(htpasswd_OBJECTS)
