@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2004/03/06 06:52:43 grant Exp $
+# $NetBSD: Makefile,v 1.121 2004/03/07 10:13:46 grant Exp $
 
 DISTNAME=	postfix-2.0.18
 PKGREVISION=	1
@@ -29,6 +29,12 @@ CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
 CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 
 .include "../../mk/bsd.prefs.mk"
+
+# NetBSD 1.5 and above has /etc/rc.d/postfix already which is
+# suitable.
+.if empty(MACHINE_PLATFORM:MNetBSD-1.[5-9]*-*)
+RCD_SCRIPTS=	postfix
+.endif
 
 FIX_RPATH+=	AUXLIBS
 
