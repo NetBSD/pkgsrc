@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:13:25 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2004/10/06 10:17:06 grant Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBCFG_BUILDLINK3_MK:=	${LIBCFG_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES+=	libcfg
 .if !empty(LIBCFG_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libcfg+=	libcfg+>=0.6.2nb1
 BUILDLINK_RECOMMENDED.libcfg++=	libcfg+>=0.6.2nb2
-BUILDLINK_PKGSRCDIR.libcfg?=	../../devel/cfg+
+BUILDLINK_PKGSRCDIR.libcfg?=	../../devel/libcfg+
 .endif	# LIBCFG_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
