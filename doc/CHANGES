@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3758 2003/10/29 21:58:55 reed Exp $
+$NetBSD: CHANGES,v 1.3759 2003/10/29 22:21:11 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4276,3 +4276,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnet to 1.0.1bnb3 [cube 2003-10-29]
 	Updated scribus to 1.1.1 [reed 2003-10-29]
 	Added scribus-doc-1.0 [reed 2003-10-29]
+	Updated sun-jre14 to 2.2 [jschauma 2003-10-29]
+	Updated sun-jdk14 to 2.2 [jschauma 2003-10-29]
