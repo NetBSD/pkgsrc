@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.208 2001/10/31 04:24:16 jlam Exp $
+# $NetBSD: Packages.txt,v 1.209 2001/11/03 20:43:53 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -775,31 +775,7 @@ witticisms.
    in pkg/MESSAGE with "somevalue" before displaying the message.
 
 
- 4.5 scripts/*
- =============
-
-This directory contains any files that are necessary for configuration of
-your software, etc. If a script with any of the following names is present,
-it will be executed at the appropriate time during the build process:
-
-  pre-fetch          post-fetch
-  pre-extract        post-extract
-  pre-patch          post-patch
-  pre-configure      post-configure     configure
-  pre-build          post-build
-  pre-install        post-install
-  pre-package        post-package
-
-Note that you should NOT define a pre-* or post-* target in the Makefile
-which executes the matching scripts/[pre|post]-* script. bsd.pkg.mk runs
-any existing Makefile target first, then searches for scripts/* and runs
-it using sh(1). Running the script from the Makefile would cause it to
-be run twice.
-
-See section 7 for a description of the build process.
-
-
- 4.6 work/*
+ 4.5 work/*
  ==========
 
 When you type "make" the distribution files are unpacked into this
@@ -1215,10 +1191,6 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    automated.  In most cases, a script is supplied with the source,
    and its invocation results in generation of header files,
    Makefiles, etc.
-
-   If the program doesn't come with its own configure script, one can be
-   placed in the package's scripts directory, called "configure". If so, it
-   is executed using sh(1).
 
    If the program's distfile contains its own configure script, this can
    be invoked by setting HAS_CONFIGURE. If the configure script is a GNU
