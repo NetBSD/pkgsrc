@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/09/29 22:43:57 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 1999/09/30 07:50:01 tron Exp $
 
---- dvi.h.orig  Thu Sep 30 00:11:49 1999
-+++ dvi.h       Thu Sep 30 00:13:01 1999
+--- kdvi/dvi.h.orig  Thu Sep 30 00:11:49 1999
++++ kdvi/dvi.h       Thu Sep 30 00:13:01 1999
 @@ -60,3 +60,7 @@
  #define        EREFL           251
  
