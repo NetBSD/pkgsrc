@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2002/05/12 21:39:20 rh Exp $
+# $NetBSD: Makefile.common,v 1.23.2.1 2002/07/22 18:09:51 agc Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.17.0
@@ -27,7 +27,7 @@ PATCHDIR=		${.CURDIR}/../gdk-pixbuf/patches
 
 pre-configure:
 	cd ${WRKSRC};							\
-	${LOCALBASE}/bin/aclocal;					\
+	${LOCALBASE}/bin/aclocal --acdir=${LOCALBASE}/share/aclocal;	\
 	${LOCALBASE}/bin/autoheader;					\
 	${LOCALBASE}/bin/automake -a --foreign -i;			\
 	${LOCALBASE}/bin/autoconf

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2000/01/19 16:32:13 agc Exp $
+$NetBSD: patch-aa,v 1.2.4.1 2002/07/22 18:06:18 agc Exp $
 
 --- Makefile.orig	Tue Mar 19 04:44:33 1996
 +++ Makefile	Wed Jan 19 16:25:36 2000
@@ -11,8 +11,8 @@ $NetBSD: patch-aa,v 1.2 2000/01/19 16:32:13 agc Exp $
 +TMPDIR = /var/tmp
 +RECDIR = /var/preserve
  
-+.if defined(LOCALBASE)
-+JOVEHOME = $(LOCALBASE)
++.if defined(PREFIX)
++JOVEHOME = $(PREFIX)
 +.else
  JOVEHOME = /usr/local
 -SHAREDIR = $(JOVEHOME)/lib/jove

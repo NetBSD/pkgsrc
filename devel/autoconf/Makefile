@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/02/18 15:14:07 seb Exp $
+# $NetBSD: Makefile,v 1.32.4.1 2002/07/22 18:03:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -18,7 +18,7 @@ USE_BUILDLINK_ONLY=	YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		AWK="${AWK}"
-M4=			${PREFIX}/bin/gm4
+M4=			${LOCALBASE}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
 TEXINFO_OVERRIDE=	YES
