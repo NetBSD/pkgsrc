@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/03/05 12:06:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/04/22 03:54:17 snj Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
 FC_VERS=	1.14.1
@@ -14,11 +14,11 @@ HOMEPAGE=	http://www.freeciv.org/
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
