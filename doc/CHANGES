@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4899 2004/02/18 06:11:08 wulf Exp $
+$NetBSD: CHANGES,v 1.4900 2004/02/18 12:03:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -912,3 +912,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated hamlib to 1.2.0 [wulf 2004-02-18]
 	Updated fltk to 1.1.4 [ben 2004-02-18]
 	Updated xlog to 0.9.1 [wulf 2004-02-18]
+	Updated gnome-libs to 1.4.2nb2 [jmmv 2004-02-18]
