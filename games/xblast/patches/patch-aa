@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
+--- Imakefile.orig	Thu Oct 16 02:54:01 1997
++++ Imakefile	Tue Nov 10 00:41:26 1998
+@@ -12,9 +12,9 @@
+  */
+ 
+ #define IHaveSubdirs
+-SUBDIRS=bitmap image sounds
++SUBDIRS=bitmap image sounds tkXBlast
+ 
+-XBLASTDIR=$(LIBDIR)/xblast
++XBLASTDIR=$(PREFIX)/share/xblast
+ /*
+  * If you want to have sound, comment the following line
+  * Set SOUND_DIR to the directory, where the sounds can be found
+@@ -65,7 +65,7 @@
+ SRCS2  = xbsndsrv.c
+ OBJS2  = xbsndsrv.o
+ 
+-ComplexProgramTarget_2(xbsndsrv,NullParameter,NullParameter)
++ComplexProgramTarget_2(xbsndsrv,-lossaudio,NullParameter)
+ 
+ /*
+  * Part 3: install Application Defaults

@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
+--- tkXBlast/Imakefile.orig	Tue Nov 10 00:37:31 1998
++++ tkXBlast/Imakefile	Tue Nov 10 00:37:59 1998
+@@ -11,7 +11,7 @@
+ /*
+  * XBlast directories
+  */
+-XBLASTDIR=$(LIBDIR)/xblast
++XBLASTDIR=$(PREFIX)/share/xblast
+ TKXBLASTDIR=$(XBLASTDIR)/tkXBlast
+ TKXBLAST=tkXBlast
+ 
