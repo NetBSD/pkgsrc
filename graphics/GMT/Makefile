@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/27 08:24:42 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/27 09:01:01 jtb Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -26,7 +26,7 @@ USE_XAW=	YES
 DIST_SUBDIR=	GMT
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-EVAL_PREFIX+=	NETCDF=netcdf BASH_PREFIX=bash
+EVAL_PREFIX+=	NETCDF=netcdf
 
 CONFIGURE_ARGS+="--includedir=${PREFIX}/include/gmt"
 CONFIGURE_ARGS+="--datadir=${PREFIX}/share/gmt"
@@ -48,20 +48,14 @@ pre-configure:
 	${SED} -e 's:ghostview:gv:g' < $$h > $$h.tmp &&	\
 	${MV} -f $$h.tmp $$h;				\
 	done
-.if exists(${BASH_PREFIX}/bin/bash)
-.for b in ${WKRSRC}/examples/*.bash ${WKRSRC}/examples/*/*.bash
-${SED} -e 's:\/bin:'${BASH_PREFIX}':g' < $$b > $$b.tmp && ${MV} -f $$b.tmp $$b
-.endfor
-.endif
-
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmt
 	for f in GMT_Docs.ps GMT_Tutorial.ps ; do			\
 	${INSTALL_DATA} ${WRKSRC}/ps/$$f ${PREFIX}/share/doc/gmt;	\
 	done
-	(cd ${PREFIX}/share/doc/html/gmt/gmt/doc && ${LN} -sf		\
-	../../../../gmt ps)
+	(cd ${PREFIX}/share/doc/html/gmt/doc && ${LN} -sf		\
+	../../../gmt ps)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt/tutorial
 	for f in bermuda.grd quakes.cpt ship.xyz us.grd data quakes.ngdc \
 	topo.cpt ; do							  \
