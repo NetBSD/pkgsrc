@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4432 2004/01/12 04:19:37 kim Exp $
+$NetBSD: CHANGES,v 1.4433 2004/01/12 04:31:39 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -187,3 +187,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba to 3.0.1nb1 [jlam 2004-01-12]
 	Added libshout-2.0 [kim 2004-01-12]
 	Added mserv-devel-0.39 [kim 2004-01-12]
+	Updated PAM to 0.77nb1 [jlam 2004-01-12]
