@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2001/12/03 10:08:26 tron Exp $
+$NetBSD: patch-aj,v 1.5 2002/03/26 20:50:13 rh Exp $
 
---- addressbook/backend/pas/pas-backend-file.c.orig	Tue Jul 10 06:49:49 2001
-+++ addressbook/backend/pas/pas-backend-file.c
-@@ -18,9 +18,9 @@
+--- addressbook/backend/pas/pas-backend-file.c.orig	Mon Mar 18 21:58:17 2002
++++ addressbook/backend/pas/pas-backend-file.c	Tue Mar 26 15:02:22 2002
+@@ -21,9 +21,9 @@
  #include <e-util/e-db3-utils.h>
  
  #if DB_VERSION_MAJOR != 3 || \

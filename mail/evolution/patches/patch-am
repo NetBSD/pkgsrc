@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.2 2001/10/06 14:44:02 rh Exp $
+$NetBSD: patch-am,v 1.3 2002/03/26 20:50:13 rh Exp $
 
---- libibex/Makefile.in.orig	Wed Oct  3 00:14:00 2001
-+++ libibex/Makefile.in
-@@ -189,7 +189,7 @@
+--- libibex/Makefile.in.orig	Sat Mar 23 20:04:00 2002
++++ libibex/Makefile.in	Tue Mar 26 15:03:06 2002
+@@ -198,7 +198,7 @@
  libibex_la_SOURCES =  	wordindexmem.c 	block.c ibex.h 	hash.c 	disktail.c 	ibex_block.c
  
  

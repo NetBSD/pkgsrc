@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2001/05/25 06:16:18 rh Exp $
+$NetBSD: patch-ak,v 1.2 2002/03/26 20:50:13 rh Exp $
 
---- composer/e-msg-composer.c.orig	Wed May 23 18:05:52 2001
-+++ composer/e-msg-composer.c
-@@ -73,6 +73,10 @@
+--- composer/e-msg-composer.c.orig	Mon Mar 18 22:01:42 2002
++++ composer/e-msg-composer.c	Tue Mar 26 15:02:46 2002
+@@ -93,6 +93,10 @@
  
  #define GNOME_GTKHTML_EDITOR_CONTROL_ID "OAFIID:GNOME_GtkHTML_Editor"
  
