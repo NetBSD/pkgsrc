@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/11/12 21:24:09 explorer Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/24 09:47:08 explorer Exp $
 #
 
-DISTNAME=		unproven-pthreads-0.6
+DISTNAME=		unproven-pthreads-0.7
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.flame.org/pub/netbsd/
 
@@ -14,12 +14,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-arm32
 HAS_CONFIGURE=		yes
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}/pthreads
-
-post-configure:
-	@echo "#define HAVE_SYSCALL_SIGACTION 1" >> ${WRKSRC}/config.h
-	@echo "#define HAVE_SYSCALL_SIGPAUSE 1" >> ${WRKSRC}/config.h
-	@echo "#define HAVE_SYSCALL_SIGPROCMASK 1" >> ${WRKSRC}/config.h
-	@echo "#define HAVE_SYSCALL_SIGSUSPEND 1" >> ${WRKSRC}/config.h
 
 pre-install:
 	${MKDIR} ${PREFIX}/pthreads
