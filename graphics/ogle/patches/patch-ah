@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2002/06/16 18:12:59 wiz Exp $
+
+--- ogle/msgevents.c.orig	Sun Nov 25 19:04:04 2001
++++ ogle/msgevents.c	Thu Jun 13 13:58:17 2002
+@@ -25,7 +25,7 @@
+ #include <errno.h>
+ #include <ogle/msgevents.h>
+ 
+-#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#if (defined(__unix__) || defined(unix) || defined(__NetBSD__)) && !defined(USG)
+ #include <sys/param.h>
+ #endif
+ 

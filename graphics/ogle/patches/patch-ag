@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2002/06/16 18:12:59 wiz Exp $
+
+--- ogle/dvdcontrol.h.orig	Tue Apr  2 21:06:05 2002
++++ ogle/dvdcontrol.h	Thu Jun 13 13:57:32 2002
+@@ -22,7 +22,7 @@
+ #include <ogle/dvd.h>
+ #include <ogle/msgevents.h> // Only for the hack with DVDNextEvent !!
+ 
+-#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#if (defined(__unix__) || defined(unix) || defined(__NetBSD__)) && !defined(USG)
+ #include <sys/param.h>
+ #endif
+ 
