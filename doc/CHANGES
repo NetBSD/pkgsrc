@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3479 2003/09/22 12:30:15 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3480 2003/09/22 13:23:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3876,3 +3876,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated totd to 1.4 [wiz 2003-09-22]
 	Updated cia to 20030922 [tron 2003-09-22]
 	Updated plib to 1.6.0 [xtraeme 2003-09-22]
+	Updated bind9 to 9.2.2p3 [taca 2003-09-22]
