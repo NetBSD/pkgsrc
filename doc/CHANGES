@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7984 2004/11/25 15:10:44 wiz Exp $
+$NetBSD: CHANGES,v 1.7985 2004/11/25 15:13:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5420,3 +5420,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated librsync to 0.9.7 [adam 2004-11-25]
 	Updated libdv to 0.103 [adam 2004-11-25]
 	Removed pgcc [wiz 2004-11-25]
+	Updated ne to 1.31 [adam 2004-11-25]

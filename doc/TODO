@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2447 2004/11/25 15:07:32 wiz Exp $
+$NetBSD: TODO,v 1.2448 2004/11/25 15:13:55 adam Exp $
 
 Suggested new packages
 ======================
@@ -792,7 +792,6 @@ Suggested package updates
 	o nautilus-cd-burner-2.8.5
 	o navi2ch-1.7.5
 	o ncmpc-0.11.0 [pkg/26237]
-	o ne-1.31
 	o netatalk1-1.6.4
 	o netcdf-3.5.1
 	o netio-123
