@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2412 2004/11/22 14:13:17 adam Exp $
+$NetBSD: TODO,v 1.2413 2004/11/22 14:31:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -537,10 +537,8 @@ Suggested package updates
 	o gsed-4.1.2
 	o gtk-send-pr-0.4
 	o gtk-systrace-2003-06-23
-	o gtkglext-1.0.6
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkspell-2.0.8
-	o gtkterm2-0.2.3
 	o gtkyahoo-0.18.3
 	o gtranslator-1.0.1
 	o guile-gtk-0.40.90 [in wip]
@@ -630,7 +628,6 @@ Suggested package updates
 	o lcab-1.011
 	o lcc-4.2
 	o leafnode-1.10.7
-	o lesstif-0.93.97
 	o libast-0.6
 	o libcdaudio-0.99.12
 	o libcomprex-0.3.3
