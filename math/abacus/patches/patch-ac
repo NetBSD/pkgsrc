@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/12/13 00:29:20 frueauf Exp $
+
+--- calc/Makefile.orig	Sat Dec 12 23:35:13 1998
++++ calc/Makefile	Sat Dec 12 23:40:16 1998
+@@ -36,10 +36,10 @@
+ 	$(LEX) -oscan.c -i scan.l 
+ 
+ gram.o: gram.cc
+-	$(CCC) $(IFLAGS) -g gram.cc -o gram.o -c
++	${CCC} ${CCFLAGS} ${IFLAGS} -g gram.cc -o gram.o -c
+ 
+ gram.cc: gram.y scan.c
+-	$(YACC) -d gram.y 
++	$(YACC) -b gram -d gram.y 
+ 	mv gram.tab.c gram.cc
+ 	mv gram.tab.h gram.h
+ 
