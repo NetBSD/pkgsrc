@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2535 2004/11/27 18:01:27 jschauma Exp $
+$NetBSD: TODO,v 1.2536 2004/11/27 20:15:42 recht Exp $
 
 Suggested new packages
 ======================
@@ -274,7 +274,6 @@ Suggested package updates
 	o 0verkill-0.16
 	o 3ddesktop-0.2.7
 	o AiCA-0.81
-	o ArX-2.1.1
 	o BasiliskII-1.0.20041109
 	o BitTornado-0.3.8
 	o Chinput-3.0.1
@@ -287,7 +286,7 @@ Suggested package updates
 	o Ngraph-6.3.30
 	o ORBit-0.5.17
 	o PAM-0.78
-	o TeXmacs-1.0.4.4
+	o TeXmacs-1.0.4-R3
 	o Xaw3d-1.5E
 	o YoSucker-63
 	o aap-0.144
