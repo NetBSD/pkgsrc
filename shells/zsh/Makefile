@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/06/05 16:28:07 jtb Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/05 21:55:37 jtb Exp $
 
 DISTNAME=       zsh-4.0.1
 CATEGORIES=	shells
@@ -29,6 +29,9 @@ PLIST_SRC+=	${PKGDIR}/PLIST.dynamic
 
 post-install:
 	@cd ${WRKSRC}/Doc; ${MAKE} install.info
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh
+	@cd ${WRKSRC}/Etc; ${INSTALL_DATA} BUGS FAQ FEATURES NEWS	\
+		${PREFIX}/share/doc/zsh
 	${CP} /etc/shells /etc/shells.bak
 	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
 	${RM} /etc/shells.bak
