@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1207 2003/12/15 10:34:40 martti Exp $
+$NetBSD: TODO,v 1.1208 2003/12/15 22:43:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -119,6 +119,7 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o awstats-5.9
 	o balsa-1.4.4
+	o bidwatcher-1.3.11
 	o blender-2.31a
 	o boehm-gc-6.3alpha2
 	o cervisia-2.0
@@ -156,7 +157,6 @@ Suggested package updates
 	o exim-4.24
 	o festival-1.4.3
 	o findutils-4.1.20
-	o fix-mime-charset-0.5.1
 	o fltk-1.1.3
 	o foobillard-2.9
 	o foomatic-2.9.1 [jlam]
@@ -179,8 +179,9 @@ Suggested package updates
 	o gnome-core-2.4
 	o gnomeicu-0.99
 	o gnuchess-5.06
-	o gnumeric-1.2.0
-	o gossip-0.6
+	o gnumeric-1.2.2
+	o gnutls-1.0.1 [pkg/23754]
+	o gossip-0.6 [pkg/23768]
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
 	o grepmail-5.21
@@ -213,6 +214,7 @@ Suggested package updates
 	o licq-1.2.7
 	o lilypond-2.0.0
 	o lmbench-2.0.4
+	o loudmouth-0.14.1 [pkg/23767]
 	o lout-3.26 [pkg/18687]
 	o lwm-1.2.0
 	o lynx-current-2.8.5dev9
@@ -251,6 +253,7 @@ Suggested package updates
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
+	o p5-Socket6 [pkg/23764]
 	o pdmenu-1.2.81
 	o plib-1.7.0
 	o ploticus-2.20
@@ -292,6 +295,7 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o stella-1.3
+	o sylpheed-0.9.8a
 	o t1lib-5.0.0
 	o tcl/tk-8.4.5
 	o tcl-expect-5.39.0
@@ -311,6 +315,7 @@ Suggested package updates
 	o w3m-0.4.2
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
+	o wine-20031212
 	o wistumbler2-2.00pre4 [xtraeme]
 	o wmbiff-0.4.17
 	o wv2-0.2
