@@ -1,11 +1,11 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.6 2000/01/05 15:43:36 abs Exp $
+$NetBSD: MESSAGE,v 1.7 2000/04/30 17:58:20 wiz Exp $
 
 alpha:	The Digital UNIX version of Netscape requires COMPAT_OSF1 in your
 	kernel, plus /emul/osf1 libraries.
 
 i386:	The Linux version of Netscape requires COMPAT_LINUX and EXEC_ELF32 in
-	your kernel, plus /emul/linux libraries (pksrc/emulators/suse_linux).
+	your kernel, plus /emul/linux libraries (pkgsrc/emulators/suse_linux).
 
 sparc:	The SunOS version of Netscape requires COMPAT_SUNOS in your kernel,
 	plus /emul/sunos libraries. The default version is DNS, the NIS
