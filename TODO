@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.65 2001/08/26 10:32:18 skrll Exp $
+$NetBSD: TODO,v 1.66 2001/09/12 19:36:59 jlam Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -59,7 +59,7 @@ package update TODO (Suggested package updates)
 		database upgrade)
 	o update/add openldap 2.0.8
 		(skrll has a new package)
-	o update print/ghostscript to 6.51 (jlam)
+	o update print/ghostscript to 6.51/7.00
 	o update autoconf to 2.52 (or newer)
 	o update automake to 1.5
 
