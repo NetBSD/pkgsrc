@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1999/05/17 00:36:44 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/17 00:52:31 thorpej Exp $
 
 DISTNAME=	suse_libc5-6.1
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.suse.com/pub/suse/i386/6.1/suse/x1/
+MASTER_SITES=	ftp://ftp.suse.com/pub/suse/i386/6.1/suse/a1/
 DISTFILES=	shlibs5.rpm
 ONLY_FOR_ARCHS=	i386
 
