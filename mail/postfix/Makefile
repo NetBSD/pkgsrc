@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2002/03/16 18:06:39 martti Exp $
+# $NetBSD: Makefile,v 1.57 2002/03/22 09:01:10 martti Exp $
 
 DISTNAME=	postfix-1.1.5
 PKGREVISION=	1
@@ -24,7 +24,8 @@ POSTFIX_SPOOL=	/var/spool/postfix
 # .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES" \
-	|| defined(USE_SASL) && ${USE_SASL} == "YES"
+	|| defined(USE_SASL) && ${USE_SASL} == "YES" \
+	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
 CCARGS=		-I${LOCALBASE}/include
 AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
@@ -35,6 +36,14 @@ DEPENDS+=	pcre>=2.08:../../devel/pcre
 CCARGS+=	-DHAS_PCRE
 AUXLIBS+=	-lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
+.endif
+
+.if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
+DEPENDS+=	mysql-client>=3.23:../../databases/mysql-client
+CCARGS+=	-DHAS_MYSQL -I${LOCALBASE}/include/mysql
+AUXLIBS+=	-L${LOCALBASE}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
+AUXLIBS+=	-lmysqlclient -lz -lm
+BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
 
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
