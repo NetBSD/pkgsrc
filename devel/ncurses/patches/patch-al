@@ -1,0 +1,71 @@
+$NetBSD: patch-al,v 1.1 1999/09/24 00:39:13 jlam Exp $
+
+--- c++/Makefile.in.orig	Mon Mar  2 07:00:25 1998
++++ c++/Makefile.in	Thu Sep 23 18:25:59 1999
+@@ -73,10 +73,9 @@
+ LINK		= $(CXX)
+ 
+ LIBROOT	= ncurses++
+-LIBNAME	= ../lib/lib$(LIBROOT).a
++LIBNAME	= lib$(LIBROOT).la
+ 
+-LDFLAGS		= @EXTRA_LDFLAGS@ -L../lib -L$(libdir) \
+-	-l$(LIBROOT) \
++LDFLAGS		= @EXTRA_LDFLAGS@ ../lib/$(LIBNAME) \
+ 	@TEST_ARGS@ @LDFLAGS@ \
+ 	@LD_MODEL@ @LIBS@ @EXTRA_LIBS@ @LOCAL_LDFLAGS@ $(CXXLIBS)
+ 
+@@ -90,7 +89,7 @@
+ AUTO_SRC	= \
+ 		etip.h
+ 
+-all:		$(AUTO_SRC) $(LIBNAME) demo
++all:		$(AUTO_SRC) ../lib/$(LIBNAME) demo
+ 
+ sources :	$(AUTO_SRC)
+ 
+@@ -106,9 +105,8 @@
+ 	$(MODEL)/cursesapp.o \
+ 	$(MODEL)/cursesmain.o
+ 
+-$(LIBNAME) : $(LIB_OBJS)
+-	$(AR) $(AR_OPTS) $@ $?
+-	$(RANLIB) $@
++../lib/$(LIBNAME) : $(LIB_OBJS)
++	cd ../lib && $(LIBTOOL) --cplusplus --mode=link $(LINK) -o $(LIBNAME) $(LIB_OBJS:.o=.lo) -rpath $(INSTALL_PREFIX)$(libdir) -version-info $(NCURSES_MAJOR):$(NCURSES_MINOR)
+ 
+ OBJS_DEMO = $(MODEL)/demo.o
+ 
+@@ -116,9 +114,9 @@
+ 	$(cursesf_h) $(cursesm_h) $(cursesapp_h)
+ 
+ demo:	$(OBJS_DEMO) \
+-	$(LIBNAME)  \
++	../lib/$(LIBNAME)  \
+ 	@TEST_DEPS@
+-	@ECHO_LINK@ $(LINK) -o $@ $(OBJS_DEMO) $(LDFLAGS_DEFAULT)
++	@ECHO_LINK@ $(LIBTOOL) --cplusplus --mode=link $(LINK) -o $@ $(OBJS_DEMO) $(LDFLAGS_DEFAULT)
+ 
+ etip.h:	$(srcdir)/etip.h.in $(srcdir)/edit_cfg.sh
+ 	cp $(srcdir)/etip.h.in $@
+@@ -128,8 +126,9 @@
+ 	$(srcdir)/../mkinstalldirs $@
+ 
+ install \
+-install.libs:: $(LIBNAME) $(INSTALL_PREFIX)$(libdir)
+-	$(INSTALL) $(LIBNAME) $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
++install.libs:: ../lib/$(LIBNAME) $(INSTALL_PREFIX)$(libdir)
++	cd ../lib && $(LIBTOOL) --cplusplus --mode=install $(INSTALL_DATA) $(LIBNAME) $(INSTALL_PREFIX)$(libdir)
++
+ 
+ uninstall \
+ uninstall.libs::
+@@ -139,7 +138,7 @@
+ 	-rm -f core tags TAGS *~ *.ln *.atac trace
+ 
+ clean :: mostlyclean
+-	-rm -f demo $(AUTO_SRC) $(LIBNAME) $(LIB_OBJS) $(OBJS_DEMO)
++	-rm -f demo $(AUTO_SRC) ../lib/$(LIBNAME) $(LIB_OBJS) $(OBJS_DEMO)
+ 
+ distclean :: clean
+ 	-rm -f Makefile
