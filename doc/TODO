@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.670 2003/07/01 06:44:09 grant Exp $
+$NetBSD: TODO,v 1.671 2003/07/01 09:46:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -65,7 +65,7 @@ Suggested package updates
 
 	o ImageViewer-0.6.2
 	o R-1.7.1
-	o TeXmacs-1.0.1.15
+	o TeXmacs-1.0.1.16
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o adom-1.1.1 [pkg/21847]
@@ -90,6 +90,7 @@ Suggested package updates
 	o crossfire-1.5.0
 	o csound-4.24.0
 	o cvs-1.11.6
+	o cyrus-sasl2-2.1.14
 	o ddd-3.3.5
 	o disc-cover-1.5.2
 	o dmalloc-5.2.0 [pkg/21951]
@@ -156,7 +157,7 @@ Suggested package updates
 	o kdbg-1.2.8
 	o lcms-1.0.9
 	o leafnode-1.9.42
-	o lesstif-0.93.41
+	o lesstif-0.93.44
 	o libiconv-1.9.1
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
@@ -194,12 +195,14 @@ Suggested package updates
 	o netatalk-1.6.3 [pkg/21930]
 	o netscape7-7.1
 	o newscache-0.99.22p1
+	o nmap-3.30
 	o ns-flash-6.0.79
 	o nut-8.9
 	o openh323-1.11.2
 	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
+	o oss-3.9.7k
 	o p0f-1.8.3
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o pcre-4.3
@@ -210,6 +213,7 @@ Suggested package updates
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12 [pkg/21667]
 	o polsms-1.9.2
+	o postfix-2.0.13
 	o povray-3.5
 	o proftpd-1.2.9rc1
 	o pureftpd-1.0.15 [pkg/21941]
