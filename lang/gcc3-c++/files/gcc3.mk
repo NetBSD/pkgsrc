@@ -1,8 +1,8 @@
-# $NetBSD: gcc3.mk,v 1.3 2003/07/17 09:07:57 abs Exp $
+# $NetBSD: gcc3.mk,v 1.4 2003/07/29 09:02:50 martin Exp $
 #
 # make configuration file for @PKGNAME@
 
 USE_GCC3=	# defined
 CC=		@GCC_PREFIX@/bin/cc
-CPP=		@GCC_PREFIX@/bin/cpp -gcc
+CPP=		@GCC_PREFIX@/bin/cpp
 CXX=		@GCC_PREFIX@/bin/c++
