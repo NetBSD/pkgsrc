@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9105 2005/02/10 13:25:56 adam Exp $
+$NetBSD: CHANGES,v 1.9106 2005/02/10 15:52:19 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -840,3 +840,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated qt3-mysql to 3.3.4 [adam 2005-02-10]
 	Updated qt3-psql to 3.3.4 [adam 2005-02-10]
 	Updated qt3 to 3.3.4 [adam 2005-02-10]
+	Updated upx to 1.25 [ben 2005-02-10]
