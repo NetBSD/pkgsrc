@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2005/03/02 14:11:28 wiz Exp $
+
+--- src/texi2html-wrapper.in.orig	2002-06-25 16:25:17.000000000 +0200
++++ src/texi2html-wrapper.in
+@@ -39,11 +39,12 @@ fi
+ 
+ for TEXI in $* ; do
+ 	$COMMAND $TEXI ;
+-	for HTML in *.html ; do
++	for HTML in papaya/*.html ; do
++		OUT=`echo $HTML | sed "s,papaya/,,"`;
+ 		# sed -e $html_sed $HTML > ./html/$HTML ;
+ 		sed -e 's!<BODY>!<BODY BGCOLOR=white TEXT=black LINK=blue VLINK=green>!' \
+ 		    -e 's!<body>!<body BGCOLOR=white TEXT=black LINK=blue VLINK=green>!' \
+-		    $html_sed $HTML > ./html/$HTML ;
++		    $html_sed $HTML > ./html/$OUT ;
+ 	done
+ 	rm -f *.html ;
+ done
