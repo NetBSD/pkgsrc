@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/11/30 13:24:46 rh Exp $
+$NetBSD: md5,v 1.3 2000/12/15 03:13:05 garbled Exp $
 
-MD5 (ClanLib-0.2.2.tar.gz) = 5d8006eb64e82e1dd482376ee8212ad8
+MD5 (ClanLib-0.4.4.tar.gz) = 13d52e35b0fa17c658a5980bbf576a1b

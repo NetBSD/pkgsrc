@@ -1,11 +1,22 @@
-$NetBSD: patch-ai,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
---- Utils/Makefile.orig	Thu Jul  8 12:30:26 1999
-+++ Utils/Makefile	Thu Jul  8 12:30:31 1999
-@@ -1,6 +1,6 @@
+$NetBSD: patch-ai,v 1.2 2000/12/15 03:13:06 garbled Exp $
+--- configure.orig	Tue May  9 14:46:48 2000
++++ configure	Thu Dec 14 19:07:25 2000
+@@ -2199,7 +2199,7 @@
  
- all:
--	cd DatafileCompiler;make
-+	cd DatafileCompiler;gmake
  
- cvsstrip:
- 	g++ cvsstrip.cpp -o cvsstrip
+ 
+-libs="-ldl -lz -lHermes -lpthread"
++libs="-lz -lHermes -lpthread"
+ 
+ objf_nondyn=""
+ flag_tty=""
+@@ -2328,6 +2328,9 @@
+ fi
+ if test -x /usr/bin/perl; then
+ 	perl_exec="/usr/bin/perl"
++fi
++if test -x /usr/pkg/bin/perl; then
++	perl_exec="/usr/pkg/bin/perl"
+ fi
+ if test -x /usr/local/bin/perl; then
+ 	perl_exec="/usr/local/bin/perl"
