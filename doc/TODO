@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2896 2005/01/14 09:52:12 adam Exp $
+$NetBSD: TODO,v 1.2897 2005/01/14 10:14:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,6 @@ Suggested package updates
 	o fluxbox-0.9.11 [pkg/28736]
 	o fmsx-28
 	o fondu-040927
-	o fontforge-20041231
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.19
