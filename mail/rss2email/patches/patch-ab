@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/06/27 23:00:35 schmonz Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/30 20:19:35 schmonz Exp $
 
---- r2e.1.orig	2004-06-27 17:48:05.000000000 -0400
+--- r2e.1.orig	2004-06-30 15:33:08.000000000 -0400
 +++ r2e.1
-@@ -0,0 +1,95 @@
+@@ -0,0 +1,94 @@
 +.TH R2E 1a
 +.SH NAME
 +r2e \- receive RSS feeds by email
@@ -70,6 +70,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/06/27 23:00:35 schmonz Exp $
 +If set, the DEFAULT_FROM address will always be used, otherwise use 
 +the email address specified by the feed, when possible.
 +.TP
++.B HTML_MAIL
++If set, HTML mail will be sent as such. Otherwise, entries will be
++converted to plain text before sending.
++.TP
 +.B TRUST_GUID
 +If set, receive one email per post. Otherwise, a new email will be sent
 +each time a post changes.
@@ -77,11 +81,6 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/06/27 23:00:35 schmonz Exp $
 +.B DATE_HEADER
 +If set, the mail's date will be set to the date the item was posted, if
 +possible. Otherwise, the date will be based on the time the email is sent.
-+.TP
-+.B TREAT_DESCRIPTION_AS_HTML
-+Controls whether to treat the contents of a post as html. If set, the
-+contents are assumed to be html, and will be converted to plain text. If
-+not set, the contents will be assumed to be text, and left alone.
 +.TP
 +.B QP_REQUIRED
 +If set, do a quoted printible conversion; otherwise send message in 8 bits.
