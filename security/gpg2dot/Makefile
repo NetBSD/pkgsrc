@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/03 22:43:49 agc Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/14 20:23:50 tv Exp $
 #
 
 DISTNAME=	gpg2dot-1.4
@@ -20,16 +20,6 @@ NO_CONFIGURE=	yes
 DISTVER=	${DISTNAME:S/gpg2dot-//}
 WRKSRC=		${WRKDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-# This doesn't create readable manual pages. "mandoc" should be added
-# to zoularis.
-NROFF=		nroff -man
-.else
-NROFF=		nroff -mandoc
-.endif
-
 do-extract:
 	${CP} ${FILESDIR}/gpg2dot.pl ${WRKSRC}/gpg2dot.pl
 #	${CP} ${FILESDIR}/gpg2dot.1 ${WRKSRC}/gpg2dot.1.in
@@ -45,12 +35,10 @@ do-build:
 #	${SED} -e ''					\
 #		< ${WRKSRC}/${FILE}.1.in		\
 #		> ${WRKSRC}/${FILE}.1
-#	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
 #.endfor
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gpg2dot ${PREFIX}/bin/gpg2dot
-#	${INSTALL_MAN} ${WRKSRC}/gpg2dot.0 ${PREFIX}/man/cat1
 #	${INSTALL_MAN} ${WRKSRC}/gpg2dot.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
