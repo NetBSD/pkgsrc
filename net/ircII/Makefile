@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/08/23 12:27:11 mrg Exp $
+# $NetBSD: Makefile,v 1.22 1999/09/23 16:28:19 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -10,15 +10,15 @@ MASTER_SITES=		ftp://ircftp.au.eterna.com.au/pub/ircII/
 
 MAINTAINER=		packages@netbsd.org
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
-CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
+.if defined(DEFAULT_IRC_SERVER)
+CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
+.endif
 
 PLIST_SRC=		${WRKDIR}/PLIST.tmp
-
 BUILD_DEFS+=		USE_SOCKS
-
-.include "../../mk/bsd.prefs.mk"
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)

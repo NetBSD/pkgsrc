@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.77 1999/09/20 03:56:26 jlam Exp $
+# $NetBSD: mk.conf.example,v 1.78 1999/09/23 16:28:19 hubertf Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -206,6 +206,12 @@
 #BOOTSTRAP_EGCS=		# Used in egcs-current package to set
                                 # bootstrap compile (two-stage) mode.
                                 # Possible: defined, not defined
+                                # Default: not defined
+
+#DEFAULT_IRC_SERVER=		# Used in ircII to set the default irc
+                                # server. 
+                                # Possible: see the list at
+				# http://www.irchelp.org/irchelp/networks/servers/efnet.html
                                 # Default: not defined
 
 #DOMAIN_NAME=			# Used in the knews package to set the domain
