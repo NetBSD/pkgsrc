@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2001/06/13 07:55:08 jlam Exp $
+
+--- src/Makefile.am.orig	Mon Jun 14 18:17:01 1999
++++ src/Makefile.am	Wed Jun 13 03:40:28 2001
+@@ -10,7 +10,7 @@
+ EXTRA_bison_SOURCES = vmsgetargs.c
+ 
+ bison_LDADD = @INTLLIBS@ @ALLOCA@
+-INCLUDES = -I../intl -I$(top_srcdir)/intl
++INCLUDES = # -I../intl -I$(top_srcdir)/intl
+ 
+ noinst_HEADERS = alloc.h files.h gram.h lex.h machine.h state.h	\
+  symtab.h system.h types.h getopt.h
