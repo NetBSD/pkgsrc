@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/01/15 18:46:24 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2000/02/20 00:11:19 jwise Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -45,37 +45,48 @@ HAS_CONFIGURE=		YES
 # Default to building with Tcl/Tk interface.
 #
 PGSQL_USE_TCL?=		YES
+PGSQL_USE_TK?=		YES
 
 .if (${PGSQL_USE_TCL} == "YES")
 DEPENDS+=		tcl-8.0.5:../../lang/tcl80
-DEPENDS+=		tk-8.0.5:../../x11/tk80
 
 TCLSH=			${LOCALBASE}/bin/tclsh8.0
 TCL_INCDIR=		${LOCALBASE}/include/tcl8.0
 TCL_CONFIGDIR=		${LOCALBASE}/lib/tcl8.0
+
+CONFIGURE_ENV+=		TCLSH="${TCLSH}"
+
+.if (${PGSQL_USE_TK} == "YES")
+DEPENDS+=		tk-8.0.5:../../x11/tk80
+
 TK_INCDIR=		${LOCALBASE}/include/tk8.0
 TK_CONFIGDIR=		${LOCALBASE}/lib/tk8.0
 
 USE_X11=		YES
-CONFIGURE_ENV+=		TCLSH="${TCLSH}"
+
+TK_CONFIG=		--with-tkconfig="${TK_CONFIGDIR}"
+.endif
 CONFIGURE_ARGS+=	--with-tcl \
 			--with-tclconfig="${TCL_CONFIGDIR}" \
-			--with-tkconfig="${TK_CONFIGDIR}" \
 			--with-includes="${TCL_INCDIR} ${TK_INCDIR}" \
-			--with-libraries="${LOCALBASE}/lib"
+			--with-libraries="${LOCALBASE}/lib" \
+			${TK_CONFIG}
 .endif
 
 PGUSER?=		pgsql
 PGGROUP?=		ingres
 PGPREFIX=		${PREFIX}/${PGUSER}
 
-BUILD_DEFS=		PGUSER PGROUP PGSQL_USE_TCL
+BUILD_DEFS=		PGUSER PGROUP PGSQL_USE_TCL PGSQL_USE_TK
 MESSAGE_FILE=		${FILESDIR}/post-install-notes
 REQ_FILE=		${WRKDIR}/REQ
 
 PLIST_SRC=		${PKGDIR}/PLIST.notcl
 .if (${PGSQL_USE_TCL} == "YES")
 PLIST_SRC+=		${PKGDIR}/PLIST.tcl
+.if (${PGSQL_USE_TK} == "YES")
+PLIST_SRC+=		${PKGDIR}/PLIST.tk
+.endif
 .endif
 PLIST_SRC+=		${PKGDIR}/PLIST.doc ${PKGDIR}/PLIST.dirrm
 PLIST_SUBST=		PGUSER=${PGUSER}
