@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/03/14 11:40:55 wiz Exp $
+$NetBSD: distinfo,v 1.5 2003/03/21 23:25:01 wiz Exp $
 
 SHA1 (libdvdcss-1.2.6.tar.bz2) = 82f50b22b544bdbb41bd5365087b91f9a612b3fe
 Size (libdvdcss-1.2.6.tar.bz2) = 209352 bytes
+SHA1 (patch-aa) = 4d50a8cd7b0aeb61b2da7944657f05cebb5dccfc
