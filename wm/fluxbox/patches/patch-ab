@@ -1,100 +1,40 @@
-$NetBSD: patch-ab,v 1.8 2004/01/29 16:58:03 jmmv Exp $
+$NetBSD: patch-ab,v 1.9 2004/05/13 04:29:13 xtraeme Exp $
 
---- util/Makefile.in.orig	2004-01-15 13:22:41.000000000 +0100
-+++ util/Makefile.in
-@@ -95,10 +95,10 @@ regex_cmd = @regex_cmd@
+--- util/Makefile.in.orig	2004-05-13 06:01:43.000000000 +0200
++++ util/Makefile.in	2004-05-13 06:02:50.000000000 +0200
+@@ -94,7 +94,7 @@
  SUBDIRS = fbrun
- INCLUDES = -I../src/FbTk/
+ INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir)/src/FbTk
  bin_SCRIPTS = fbsetbg fluxbox-generate_menu startfluxbox
 -bin_PROGRAMS = bsetroot
--bsetroot_SOURCES = bsetroot.cc bsetroot.hh
--bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o \
--			../src/FbAtoms.o ../src/FbTk/libFbTk.a
-+#HF#bin_PROGRAMS = bsetroot
-+#HF#bsetroot_SOURCES = bsetroot.cc bsetroot.hh
-+#HF#bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o \
-+#HF#			../src/FbAtoms.o ../src/FbTk/libFbTk.a
- 
- 
- MAINTAINERCLEANFILES = Makefile.in
-@@ -109,14 +109,14 @@ subdir = util
++bin_PROGRAMS =
+ bsetroot_SOURCES = bsetroot.cc bsetroot.hh
+ bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o \
+ 			../src/FbAtoms.o ../src/FbTk/libFbTk.a
+@@ -108,7 +108,7 @@
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
 -bin_PROGRAMS = bsetroot$(EXEEXT)
-+#HF#bin_PROGRAMS = bsetroot$(EXEEXT)
++bin_PROGRAMS =
  PROGRAMS = $(bin_PROGRAMS)
  
--am_bsetroot_OBJECTS = bsetroot.$(OBJEXT)
--bsetroot_OBJECTS = $(am_bsetroot_OBJECTS)
--bsetroot_DEPENDENCIES = ../src/FbRootWindow.o ../src/I18n.o \
--	../src/FbAtoms.o ../src/FbTk/libFbTk.a
--bsetroot_LDFLAGS =
-+#HF#am_bsetroot_OBJECTS = bsetroot.$(OBJEXT)
-+#HF#bsetroot_OBJECTS = $(am_bsetroot_OBJECTS)
-+#HF#bsetroot_DEPENDENCIES = ../src/FbRootWindow.o ../src/I18n.o \
-+#HF#	../src/FbAtoms.o ../src/FbTk/libFbTk.a
-+#HF#bsetroot_LDFLAGS =
- SCRIPTS = $(bin_SCRIPTS)
- 
- 
-@@ -126,7 +126,7 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
- depcomp = $(SHELL) $(top_srcdir)/depcomp
--@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/bsetroot.Po
-+#HF#@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/bsetroot.Po
- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
- LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
-@@ -144,7 +144,7 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
+ am_bsetroot_OBJECTS = bsetroot.$(OBJEXT)
+@@ -143,7 +143,7 @@
  CCLD = $(CC)
  LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
 -DIST_SOURCES = $(bsetroot_SOURCES)
-+#HF#DIST_SOURCES = $(bsetroot_SOURCES)
++DIST_SOURCES =
  
  RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
  	uninstall-info-recursive all-recursive install-data-recursive \
-@@ -152,7 +152,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -151,7 +151,7 @@
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(bsetroot_SOURCES)
-+#HF#SOURCES = $(bsetroot_SOURCES)
++SOURCES =
  
  all: all-recursive
  
-@@ -198,9 +198,9 @@ uninstall-binPROGRAMS:
- 
- clean-binPROGRAMS:
- 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
--bsetroot$(EXEEXT): $(bsetroot_OBJECTS) $(bsetroot_DEPENDENCIES) 
--	@rm -f bsetroot$(EXEEXT)
--	$(CXXLINK) $(bsetroot_LDFLAGS) $(bsetroot_OBJECTS) $(bsetroot_LDADD) $(LIBS)
-+#HF#bsetroot$(EXEEXT): $(bsetroot_OBJECTS) $(bsetroot_DEPENDENCIES) 
-+#HF#	@rm -f bsetroot$(EXEEXT)
-+#HF#	$(CXXLINK) $(bsetroot_LDFLAGS) $(bsetroot_OBJECTS) $(bsetroot_LDADD) $(LIBS)
- install-binSCRIPTS: $(bin_SCRIPTS)
- 	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -229,7 +229,7 @@ mostlyclean-compile:
- distclean-compile:
- 	-rm -f *.tab.c
- 
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/bsetroot.Po@am__quote@
-+#HF#@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/bsetroot.Po@am__quote@
- 
- distclean-depend:
- 	-rm -rf $(DEPDIR)
-@@ -477,8 +477,8 @@ all-local:	startfluxbox
- clean-local:
- 		rm -f startfluxbox fluxbox-generate_menu
- 
--bsetroot.o: 	bsetroot.cc ../config.h bsetroot.hh \
--			../src/FbRootWindow.hh ../src/FbAtoms.hh
-+#HF#bsetroot.o: 	bsetroot.cc ../config.h bsetroot.hh \
-+#HF#			../src/FbRootWindow.hh ../src/FbAtoms.hh
- 
- startfluxbox: 	startfluxbox.in
- 		@regex_cmd@ -e "s,@pkgdatadir@,$(pkgdatadir),g" \
