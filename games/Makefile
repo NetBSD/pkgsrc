@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2000/10/22 16:59:04 rh Exp $
+# $NetBSD: Makefile,v 1.99 2000/10/24 20:14:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -12,6 +12,9 @@
     SUBDIR += cbzone
     SUBDIR += cgoban
     SUBDIR += civctp-demo
+    SUBDIR += colchess
+    SUBDIR += colchess-book-colchess
+    SUBDIR += colchess-book-large
     SUBDIR += corewars
     SUBDIR += craft
     SUBDIR += crafty
