@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.747 2002/12/10 16:08:34 taya Exp $
+$NetBSD: CHANGES,v 1.748 2002/12/10 20:40:53 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated scummvm to 0.3.0 [wiz 2002-12-10]
 	Updated pkglint to 3.39 [schmonz 2002-12-10]
 	Updated phoenix to 0.5 [taya 2002-12-10]
+	Updated fluxbox to 0.1.14 [jschauma 2002-12-10]
