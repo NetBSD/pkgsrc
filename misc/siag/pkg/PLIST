@@ -1,24 +1,30 @@
-@comment $NetBSD: PLIST,v 1.4 1999/04/10 02:25:09 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/07/13 17:52:41 mjl Exp $
+bin/pw
+bin/gvu
 bin/siag
 bin/tsiag
-bin/pw
 bin/egon
 bin/xedplus
+bin/xfiler
+bin/runcmd
 libexec/siag/plugins/dummy
 libexec/siag/plugins/image
 libexec/siag/plugins/hello
 libexec/siag/plugins/plot
 libexec/siag/plugins/text
 libexec/siag/plugins/form
-libexec/siag/converters/xls2csv
+libexec/siag/plugins/clipart
 man/man1/siod.1
 man/man1/siag.1
 man/man1/pw.1
 man/man1/egon.1
 man/man1/dummy_plugin.1
 man/man1/xedplus.1
+man/man1/gvu.1
+man/man1/xfiler.1
 share/doc/siag/siod/siod.html
 share/doc/siag/common/siaghelp
+share/doc/siag/common/COPYING
 share/doc/siag/common/COPYING.LIB
 share/doc/siag/common/Copyright
 share/doc/siag/common/credits.html
@@ -72,7 +78,6 @@ share/doc/siag/siag/concepts.html
 share/doc/siag/siag/fileformats.html
 share/doc/siag/siag/form.html
 share/doc/siag/siag/gnuplot.html
-share/doc/siag/siag/howto.html
 share/doc/siag/siag/intro.html
 share/doc/siag/siag/invocation.html
 share/doc/siag/siag/keys.html
@@ -178,10 +183,24 @@ share/doc/siag/egon/examples/bounce.egon
 share/doc/siag/egon/examples/ms.egon
 share/doc/siag/egon/examples/propeller.egon
 share/doc/siag/egon/examples/rondo.egon
+share/doc/siag/plugins/README
+share/doc/siag/plugins/CHANGES
 share/doc/siag/xedplus/xedplus.html
 share/doc/siag/xedplus/CHANGES
 share/doc/siag/xedplus/README
 share/doc/siag/xedplus/TODO
+share/doc/siag/xfiler/xfiler.html
+share/doc/siag/xfiler/README
+share/doc/siag/xfiler/CHANGES
+share/doc/siag/xfiler/TODO
+share/doc/siag/gvu/README
+share/doc/siag/gvu/COPYING
+share/doc/siag/gvu/CHANGES
+share/doc/siag/gvu/TODO
+share/doc/siag/gvu/gs.interface
+share/doc/siag/gvu/comments.doc
+share/doc/siag/gvu/gvu.html
+share/doc/siag/gvu/copyright.html
 share/siag/siod/siod.scm
 share/siag/common/bitmaps/blank.xpm
 share/siag/common/bitmaps/bold.xpm
@@ -191,6 +210,9 @@ share/siag/common/bitmaps/copyright.xpm
 share/siag/common/bitmaps/cut.xpm
 share/siag/common/bitmaps/egon_fg.xpm
 share/siag/common/bitmaps/fld_open.xpm
+share/siag/common/bitmaps/fld_closed.xpm
+share/siag/common/bitmaps/fld_up.xpm
+share/siag/common/bitmaps/fld_new.xpm
 share/siag/common/bitmaps/floppy3.xpm
 share/siag/common/bitmaps/grid.xpm
 share/siag/common/bitmaps/hcenter.xpm
@@ -226,8 +248,28 @@ share/siag/common/bitmaps/home.xpm
 share/siag/common/bitmaps/quit.xpm
 share/siag/common/bitmaps/reload.xpm
 share/siag/common/bitmaps/search.xpm
+share/siag/common/bitmaps/xterm16.xpm
+share/siag/common/bitmaps/viewmode.xpm
+share/siag/common/bitmaps/sortmode.xpm
 share/siag/common/bitmaps/ksiag.xpm
 share/siag/common/bitmaps/xedplus.xpm
+share/siag/common/bitmaps/netscape.xpm
+share/siag/common/bitmaps/image.xpm
+share/siag/common/bitmaps/ghost.xpm
+share/siag/common/bitmaps/compress.xpm
+share/siag/common/bitmaps/fonts.xpm
+share/siag/common/bitmaps/data.xpm
+share/siag/common/bitmaps/unknown.xpm
+share/siag/common/bitmaps/center.xpm
+share/siag/common/bitmaps/larger.xpm
+share/siag/common/bitmaps/smaller.xpm
+share/siag/common/bitmaps/portrait.xpm
+share/siag/common/bitmaps/landscape.xpm
+share/siag/common/bitmaps/editor.xpm
+share/siag/common/bitmaps/SO3.xpm
+share/siag/common/bitmaps/book-closed.xpm
+share/siag/common/bitmaps/book-open.xpm
+share/siag/common/bitmaps/handlebg.xpm
 share/siag/common/any2xpm
 share/siag/common/readpfa
 share/siag/common/colors.scm
@@ -245,6 +287,8 @@ share/siag/common/dictionary.de
 share/siag/common/dictionary.fr
 share/siag/common/dictionary.no
 share/siag/common/dictionary.hr
+share/siag/common/dictionary.da
+share/siag/common/dictionary.pl
 share/siag/xcommon/StringDefs.scm
 share/siag/xcommon/form.scm
 share/siag/siag/123.scm
@@ -277,6 +321,8 @@ share/siag/egon/external.load
 share/siag/egon/external.save
 share/siag/plugins/dummy.scm
 share/siag/plugins/plugin.scm
+share/siag/xfiler/FilesMagic
+share/siag/xfiler/Filesrc
 @dirrm share/siag/xcommon
 @dirrm share/siag/siod
 @dirrm share/siag/siag
@@ -285,6 +331,7 @@ share/siag/plugins/plugin.scm
 @dirrm share/siag/egon
 @dirrm share/siag/common/bitmaps
 @dirrm share/siag/common
+@dirrm share/siag/xfiler
 @dirrm share/siag
 @dirrm share/doc/siag/xedplus
 @dirrm share/doc/siag/xcommon
@@ -297,7 +344,9 @@ share/siag/plugins/plugin.scm
 @dirrm share/doc/siag/egon
 @dirrm share/doc/siag/common/bitmaps
 @dirrm share/doc/siag/common
+@dirrm share/doc/siag/gvu
+@dirrm share/doc/siag/xfiler
+@dirrm share/doc/siag/plugins
 @dirrm share/doc/siag
 @dirrm libexec/siag/plugins
-@dirrm libexec/siag/converters
 @dirrm libexec/siag
