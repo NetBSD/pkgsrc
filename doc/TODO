@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2625 2004/12/02 06:46:06 snj Exp $
+$NetBSD: TODO,v 1.2626 2004/12/02 09:26:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -713,7 +713,7 @@ Suggested package updates
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.2
-	o mummer-3.15
+	o mummer-3.15 [pkg/28503]
 	o namazu2-2.0.13
 	o nano-1.3.5
 	o nap-1.5.3
@@ -1020,7 +1020,6 @@ Suggested package updates
 	o qt2-libs-2.3.2
 	o quagga-0.97.0
 	o quake2forge-0.3
-	o quakedata-108
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
