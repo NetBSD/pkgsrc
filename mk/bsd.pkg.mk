@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1394 2004/02/12 23:12:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1395 2004/02/13 12:03:06 sketch Exp $
 #
 # This file is in the public domain.
 #
@@ -2287,9 +2287,9 @@ _PKGLOCALEDIR=			${PREFIX}/${PKGLOCALEDIR}/locale
 REPLACE_LOCALEDIR_PATTERNS?=	# empty
 _REPLACE_LOCALEDIR_PATTERNS=	${REPLACE_LOCALEDIR_PATTERNS}
 .  if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
-_REPLACE_LOCALEDIR_PATTERNS+=	Makefile.in*
+_REPLACE_LOCALEDIR_PATTERNS+=	[Mm]akefile.in*
 .  else
-_REPLACE_LOCALEDIR_PATTERNS+=	Makefile*
+_REPLACE_LOCALEDIR_PATTERNS+=	[Mm]akefile*
 .  endif
 _REPLACE_LOCALEDIR_PATTERNS_FIND= \
 	\( ${_REPLACE_LOCALEDIR_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
