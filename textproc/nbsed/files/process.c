@@ -1,4 +1,4 @@
-/*	$NetBSD: process.c,v 1.7 2004/08/21 08:39:54 jlam Exp $	*/
+/*	$NetBSD: process.c,v 1.8 2004/08/22 05:51:55 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993, 1994
@@ -78,7 +78,7 @@
 #if 0
 static char sccsid[] = "@(#)process.c	8.6 (Berkeley) 4/20/94";
 #else
-__RCSID("$NetBSD: process.c,v 1.7 2004/08/21 08:39:54 jlam Exp $");
+__RCSID("$NetBSD: process.c,v 1.8 2004/08/22 05:51:55 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -118,6 +118,9 @@ __RCSID("$NetBSD: process.c,v 1.7 2004/08/21 08:39:54 jlam Exp $");
 #endif
 #if HAVE_STRING_H
 #include <string.h>
+#endif
+#if HAVE_TERMIOS_H
+#include <termios.h>
 #endif
 #if HAVE_UNISTD_H
 #include <unistd.h>

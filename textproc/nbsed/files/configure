@@ -2998,7 +2998,8 @@ done
 
 
 
-for ac_header in ctype.h err.h errno.h fcntl.h limits.h regex.h
+
+for ac_header in ctype.h err.h errno.h fcntl.h limits.h regex.h stdarg.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 if eval "test \"\${$as_ac_Header+set}\" = set"; then
@@ -3153,7 +3154,7 @@ done
 
 
 
-for ac_header in stdarg.h stddef.h stdio.h stdlib.h string.h unistd.h
+for ac_header in stddef.h stdio.h stdlib.h string.h termios.h unistd.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 if eval "test \"\${$as_ac_Header+set}\" = set"; then
