@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.18 2004/02/12 11:50:46 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.19 2004/02/12 21:37:08 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	one
@@ -21,9 +21,7 @@ _MIPSPRO_LINKS=		# empty
 _MIPSPRO_CC=		${_MIPSPRO_DIR}/bin/cc
 _MIPSPRO_LINKS+=	_MIPSPRO_CC
 PKG_CC=			${_MIPSPRO_CC}
-PKG_CPP=		${_MIPSPRO_CC} -E
 CC=			${PKG_CC:T}
-CPP=			${PKG_CPP:T}
 .  endif
 .  if !empty(_LANGUAGES.mipspro:Mc++)
 _MIPSPRO_CXX=		${_MIPSPRO_DIR}/bin/CC
