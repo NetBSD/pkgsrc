@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/30 20:22:04 dmcmahill Exp $
 #
 
 DISTNAME=		compat14-${MACHINE_ARCH}
@@ -31,6 +31,11 @@ COMPAT_XLIBDIR=		${EMULSUBDIR}/usr/X11R6/lib
 LOCALBASE=		/usr
 COMPAT_LIBDIR=		lib
 COMPAT_XLIBDIR=		X11R6/lib
+.endif
+
+PLIST_SRC+=             ${PKGDIR}/PLIST
+.if exists(${PKGDIR}/PLIST.${MACHINE_ARCH})
+PLIST_SRC+=             ${PKGDIR}/PLIST.${MACHINE_ARCH}
 .endif
 
 PLIST_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR} COMPAT_XLIBDIR=${COMPAT_XLIBDIR}
