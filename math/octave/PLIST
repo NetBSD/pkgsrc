@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:33 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/03/18 07:58:46 fredb Exp $
 bin/octave
 bin/octave-bug
 bin/mkoctfile
@@ -235,11 +235,11 @@ lib/${PKGNAME}/liboctave.a
 lib/${PKGNAME}/liboctinterp.a
 @exec ln -s ${PKGNAME} %D/lib/octave
 @unexec ${RM} -f %D/lib/octave
-libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-info
-libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-octave-help
-@exec ${MKDIR} -p %D/libexec/octave/2.0.16/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@exec ${MKDIR} -p %D/libexec/octave/site/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@exec ${MKDIR} -p %D/libexec/octave/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+libexec/octave/2.0.16/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
+libexec/octave/2.0.16/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
+@exec ${MKDIR} -p %D/libexec/octave/2.0.16/oct/${MACHINE_GNU_PLATFORM}
+@exec ${MKDIR} -p %D/libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@exec ${MKDIR} -p %D/libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 libexec/octave/ls-R
 man/man1/octave.1
 share/octave/2.0.16/doc/Octave-FAQ.ps
@@ -654,14 +654,14 @@ share/octave/site/m/startup/octaverc
 share/octave/ls-R
 @dirrm include/${PKGNAME}
 @dirrm lib/${PKGNAME}
-@dirrm libexec/octave/site/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/site/exec
-@dirrm libexec/octave/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site
-@dirrm libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/octave/2.0.16/exec/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/2.0.16/exec
-@dirrm libexec/octave/2.0.16/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/octave/2.0.16/oct/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/2.0.16/oct
 @dirrm libexec/octave/2.0.16
 @dirrm libexec/octave
