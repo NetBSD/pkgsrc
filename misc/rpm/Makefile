@@ -1,12 +1,13 @@
+# $NetBSD: Makefile,v 1.2 1997/10/13 14:56:02 agc Exp $
 # New ports collection makefile for:	rpm
-# Version required:	2.4.3
+# Version required:	2.4.8
 # Date created:		23 January 1997
 # Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:51 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.9 1997/09/23 07:07:32 tg Exp
 #
 
-DISTNAME=	rpm-2.4.3
+DISTNAME=	rpm-2.4.8
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.redhat.com/pub/redhat/code/rpm/ \
 		ftp://ftp.gwdg.de/pub/linux/redhat/code/rpm/
