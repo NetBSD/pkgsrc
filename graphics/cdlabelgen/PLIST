@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/23 02:02:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/11/01 13:18:44 cube Exp $
 bin/cdlabelgen
 man/cat1/cdlabelgen.0
 share/cdlabelgen/cd.eps
 share/cdlabelgen/cdda.eps
 share/cdlabelgen/debian-color.eps
+share/cdlabelgen/divx.eps
 share/cdlabelgen/mp3.eps
 share/cdlabelgen/music1.eps
 share/cdlabelgen/music2.eps
+share/cdlabelgen/ogg.eps
 share/cdlabelgen/penguin.eps
 share/cdlabelgen/recycle.eps
 share/cdlabelgen/template.ps
+share/cdlabelgen/winamp.eps
 @dirrm share/cdlabelgen
