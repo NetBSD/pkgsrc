@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2001/12/25 15:10:50 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2004/11/05 11:51:35 adam Exp $
 
---- wrlib/Makefile.in.orig	Tue Dec 18 06:44:16 2001
+--- wrlib/Makefile.in.orig	2004-10-26 04:10:46.000000000 +0000
 +++ wrlib/Makefile.in
-@@ -99,7 +99,7 @@
+@@ -115,7 +115,7 @@ AUTOMAKE_OPTIONS = no-dependencies
  
  lib_LTLIBRARIES = libwraster.la
  
--libwraster_la_LDFLAGS = -version-info 4:0:2
-+libwraster_la_LDFLAGS = @LIBRARY_SEARCH_PATH@ @GFXLIBS@ @XLIBS@ -lm -version-info 4:0:2
+-libwraster_la_LDFLAGS = -version-info 4:0:1
++libwraster_la_LDFLAGS =  @LIBRARY_SEARCH_PATH@ @GFXLIBS@ @XLIBS@ -lm -version-info 4:0:1
  
  bin_SCRIPTS = get-wraster-flags
  
