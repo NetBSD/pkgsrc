@@ -1,0 +1,11 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2004/03/06 15:04:12 grant Exp $
+#
+
+SHAREDIR=@SHAREDIR@
+
+case $STAGE in
+POST-INSTALL)
+	echo "===> Running postfix's post-install script"
+	@SHAREDIR@/post-install command_directory="@PREFIX@/sbin" first-install
+	;;
+esac

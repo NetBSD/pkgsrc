@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/06 15:04:12 grant Exp $
+
+SHA1 (postfix/postfix-2.0.18-20040209.tar.gz) = 053f88ca3ce04c1439523c478e907f79095b1169
+Size (postfix/postfix-2.0.18-20040209.tar.gz) = 1534600 bytes
+SHA1 (postfix/tls+ipv6-1.21-pf-2.0.18.patch.gz) = e2c29b3e6a00eb53120661d7e411d8e786a0bae6
+Size (postfix/tls+ipv6-1.21-pf-2.0.18.patch.gz) = 254862 bytes
+SHA1 (postfix/postfix-pg.postfix-2.0.0.2.patch) = 51498e624f9fc68f33384c2355803f0b181ca64a
+Size (postfix/postfix-pg.postfix-2.0.0.2.patch) = 27419 bytes
+SHA1 (patch-aa) = 39a89a28cec3fd264dbda97633e34695eaad01e9
+SHA1 (patch-ab) = ac4c75fb7a36491edf03b54915c7a47461748b4d
+SHA1 (patch-ac) = b0d26742fe8496b2fd4729a41fecadc275e71cf2
+SHA1 (patch-ad) = 60d98330d4b20508c03bb0bccebbe564ffea621f
+SHA1 (patch-ae) = 9ea314db37541a1a9c7765e000687c0fdef90d8e
+SHA1 (patch-af) = 9b0521751704fd1377d8215dc16a873c1d5ca032
+SHA1 (patch-ah) = 6beedd15ee3a7cfd46cf3ed0b9ee579b9906300b
+SHA1 (patch-ai) = 25af047b95fcdd9bf71ac853a291b2499230ad42
+SHA1 (patch-bd) = 652b96357164208e39d322e84ee9a2ad2bd4ccc4
+SHA1 (patch-be) = dd00235af79a8d5e46a7d393e18840241bb685a8
