@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+
+--- plugins/Makefile.am.orig	Sun Oct 27 14:07:27 2002
++++ plugins/Makefile.am	Sun Oct 27 14:09:58 2002
+@@ -79,6 +79,10 @@
+ 	libgssapiv2.la libdigestmd5.la liblogin.la libsrp.la libotp.la \
+ 	libntlm.la libsasldb.la libmysql.la
+ 
++bin_SCRIPTS = sasl-config
++sasl_config_CFLAGS = $(CPPFLAGS)
++sasl_config_LIBS = $(libplain_la_LIBADD) $(libkerberos4_la_LIBADD) $(libgssapiv2_la_LIBADD) $(libdigestmd5_la_LIBADD) $(liblogin_la_LIBADD) $(libsrp_la_LIBADD) $(libopt_la_LIBADD) $(libsasldb_la_LIBADD) $(libmysql_ls_LIBADD)
++
+ libplain_la_SOURCES = plain.c plain_init.c $(common_sources)
+ libplain_la_LDFLAGS = -version-info $(plain_version)
+ libplain_la_DEPENDENCIES = $(COMPAT_OBJS)
+@@ -133,7 +137,7 @@
+ libsasldb_la_SOURCES = sasldb.c sasldb_init.c $(common_sources)
+ libsasldb_la_LDFLAGS = -version-info $(sasldb_version)
+ libsasldb_la_DEPENDENCIES = $(COMPAT_OBJS)
+-libsasldb_la_LIBADD = ../sasldb/libsasldb.la $(SASL_DB_LIB) $(COMPAT_OBJS)
++libsasldb_la_LIBADD = $(SASL_DB_LIB) $(COMPAT_OBJS)
+ 
+ # Auxprop Plugins
+ libmysql_la_SOURCES = mysql.c mysql_init.c $(common_sources)
+@@ -160,4 +164,9 @@
+ 	cd ../lib; $(MAKE) $(COMPAT_OBJS)
+ 	for file in $(COMPAT_OBJS); do ln -s ../lib/$$file .; done
+ 
+-
++sasl-config: sasl-config.in
++	$(SED)  -e "s,%%sasl_config_LIBS%%,$(sasl_config_LIBS),g" \
++		-e "s,%%sasl_config_CFLAGS%%,$(sasl_config_CFLAGS),g" \
++		-e "s,%%prefix%%,$(prefix),g" \
++		-e "s,%%VERSION%%,$(VERSION),g" \
++		< sasl-config.in > sasl-config

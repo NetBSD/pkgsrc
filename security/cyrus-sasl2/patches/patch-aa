@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+
+--- configure.in.orig	Fri Oct 11 21:56:29 2002
++++ configure.in	Sun Oct 27 14:06:01 2002
+@@ -86,13 +86,13 @@
+   dnl xxx we should add -W at some point (but that might scare people)
+   CFLAGS="-Wall ${CFLAGS}"
+   GCC_VERSION=`gcc -v 2>&1 | sed -n -e '/version/s/.*version \([[0-9]]\)\..*/\1/p'`
+-  if test "$GCC_VERSION" != "3"; then
+-    CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
+-  fi
+-else
+-  CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
+ fi 
+-CMU_ADD_LIBPATH("/usr/local/lib")
++
++AC_PATH_PROG(SED, sed, no)
++if test "$SED" = "no"; then
++  AC_ERROR([sed is required to build sasl-config])
++fi
++AC_SUBST(SED)
+ 
+ AM_DISABLE_STATIC
+ 
+@@ -832,6 +832,9 @@
+ LTLIBOBJS=`echo "$LIBOBJS" | sed 's/\.o/.lo/g'`
+ AC_SUBST(LIBOBJS)
+ AC_SUBST(LTLIBOBJS)
++
++dnl Check for /dev/urandom
++AC_CHECK_FILE(/dev/urandom, AC_DEFINE_UNQUOTED(SASL_DEV_RANDOM, "/dev/urandom"))
+ 
+ AC_C_CONST
+ AC_C_INLINE
