@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8345 2004/12/16 12:25:21 kleink Exp $
+$NetBSD: CHANGES,v 1.8346 2004/12/16 13:23:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5927,3 +5927,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated flyspell to 1.7fnb1 [minskim 2004-12-16]
 	Updated tin to 1.6.2nb1 [dillo 2004-12-16]
 	Updated jwhois to 3.2.2nb10 [kleink 2004-12-16]
+	Updated ruby-eruby to 1.0.5nb1 [taca 2004-12-16]
