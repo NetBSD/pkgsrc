@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2000/07/26 09:43:51 itojun Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/21 06:02:27 itojun Exp $
 # Based on FreeBSD Id: Makefile,v 1.27 1999/04/03 08:25:18 itojun Exp
 #
 
-DISTNAME=	smtpfeed-1.07.1
+DISTNAME=	smtpfeed-1.08
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/ \
@@ -24,7 +24,8 @@ CONFIGURE_ARGS=	--libexecdir=${PREFIX}/libexec
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 DOCS=	COPYRIGHT FEATURES FEATURES.j FYI FYI.j INSTALL INSTALL.j \
-	OPTIONS OPTIONS.j README README.j RELEASE.NOTE SIGNAL SIGNAL.j TODO
+	ML-ADMIN ML-ADMIN.j OPTIONS OPTIONS.j README README.j \
+	RELEASE.NOTE SIGNAL SIGNAL.j TODO
 DOCDIR=	${PREFIX}/share/doc/smtpfeed
 
 BUILD_DEFS+=    USE_INET6
