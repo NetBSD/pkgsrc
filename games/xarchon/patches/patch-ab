@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/14 23:32:17 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 1999/10/27 23:56:42 hubertf Exp $
 
 --- src/Makefile.in.orig	Wed Oct 13 05:28:34 1999
 +++ src/Makefile.in	Wed Oct 13 05:35:10 1999
@@ -9,8 +9,8 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/14 23:32:17 hubertf Exp $
 -CC = @CC@
 -CXX = @CXX@
 +# This mess should be done differently - HF
-+CC = cc -I${X11BASE}/include -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -I. -I..  -I${LOCALBASE}/include -I${LOCALBASE}/include/glib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
-+CXX = c++ -I${X11BASE}/include -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -I. -I..  -I${LOCALBASE}/include -I${LOCALBASE}/include/glib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
++CC = cc -I${X11BASE}/include -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -I. -I..  -I${LOCALBASE}/include `glib-config --cflags --prefix=${LOCALBASE}` `glib-config --libs --prefix=${LOCALBASE}`
++CXX = c++ -I${X11BASE}/include -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -I. -I..  -I${LOCALBASE}/include `glib-config --cflags --prefix=${LOCALBASE}` `glib-config --libs --prefix=${LOCALBASE}`
  ESD_CFLAGS = @ESD_CFLAGS@
  ESD_CONFIG = @ESD_CONFIG@
  ESD_LIBS = @ESD_LIBS@
