@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.3 2000/09/05 15:01:29 jwise Exp $
+--- configure.orig	Tue Sep  5 10:18:57 2000
++++ configure	Tue Sep  5 10:19:11 2000
+@@ -1750,20 +1750,6 @@
+ 
+ 
+ 
+-if test -f $TCLSH_EXEC_PREFIX/lib/tkConfig.sh; then
+-    echo "$ac_t""using $TCLSH_EXEC_PREFIX/lib/tkConfig.sh" 1>&6
+-else
+-    { echo "configure: error: Unable find tkConfig.sh." 1>&2; exit 1; }
+-fi
+-
+-# Check whether --with-extraincludedir or --without-extraincludedir was given.
+-if test "${with_extraincludedir+set}" = set; then
+-  withval="$with_extraincludedir"
+-  INCLUDES="-I$withval $INCLUDES"
+-fi
+-
+-
+-
+ # Check whether --with-extralibdir or --without-extralibdir was given.
+ if test "${with_extralibdir+set}" = set; then
+   withval="$with_extralibdir"
