@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2002/01/05 18:05:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.18 2002/01/12 22:53:16 kristerw Exp $
 #
 
 DISTNAME=		xmame-0.56.2
 PKGNAME=		xmess-0.56.2
 CATEGORIES=		emulators games x11
-MASTER_SITES=		http://roms.mame.dk/emu/ \
-			http://x.mame.net/download/
+MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		kristerw@netbsd.org
@@ -98,7 +97,7 @@ MAKE_FLAGS+=		X11_DGA=1
 MAKE_FLAGS+=		JOY_I386=1
 .endif
 .if ${OPSYS} == "NetBSD"
-.  if exists(/usr/lib/libusb.a)
+.  if exists(/usr/lib/libusb.a) || exists(/usr/lib/libusbhid.a)
 MAKE_FLAGS+=		JOY_USB=1
 .  endif
 .endif
