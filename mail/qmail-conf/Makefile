@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/01/21 18:51:51 zuntum Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/28 17:36:53 zuntum Exp $
 #
 
 DISTNAME=	qmail-conf-0.60
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.din.or.jp/~ushijima/qmail-conf/		\
 		http://cr.yp.to/djbdns/					\
@@ -27,7 +27,9 @@ LOCALBASE=	/
 post-patch:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
-	${ECHO} ${LOCALBASE} > ${WRKSRC}/conf-ucspi-tcp
+	# derive LOCALBASE from ${DIGEST}, because we have deliberately altered LOCALBASE
+	# and there's no easy way to guess what the real LOCALBASE is
+	${ECHO} ${DIGEST} | sed 's,/bin/digest,,' > ${WRKSRC}/conf-ucspi-tcp
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 pre-build:
