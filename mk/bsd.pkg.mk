@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1366 2004/01/31 07:07:33 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1367 2004/01/31 16:52:16 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -159,10 +159,14 @@ USE_X11BASE?=		implied
 PLIST_SUBST+=          IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}  \
                        IMAKE_MAN_DIR=${IMAKE_MAN_DIR}                  \
                        IMAKE_LIBMAN_DIR=${IMAKE_LIBMAN_DIR}            \
+		       IMAKE_KERNMAN_DIR=${IMAKE_KERNMAN_DIR}	       \
                        IMAKE_FILEMAN_DIR=${IMAKE_FILEMAN_DIR}          \
+		       IMAKE_MISCMAN_DIR=${IMAKE_MISCMAN_DIR}	       \
                        IMAKE_MAN_SUFFIX=${IMAKE_MAN_SUFFIX}            \
                        IMAKE_LIBMAN_SUFFIX=${IMAKE_LIBMAN_SUFFIX}      \
+		       IMAKE_KERNMAN_SUFFIX=${IMAKE_KERNMAN_SUFFIX}    \
                        IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}    \
+		       IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}    \
                        IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
 .endif
 .if defined(USE_X11BASE)
