@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/08/27 21:47:02 jlam Exp $
-
+# $NetBSD: Makefile,v 1.5 2004/08/28 02:35:41 jlam Exp $
+#
+# Run many buildlink transform tests in a single regression test to avoid
+# having to keep creating the wrapper scripts over and over again.
+#
 DISTNAME=	regress-buildlink-transform-0.0
 CATEGORIES=	regress
 MASTER_SITES=	# empty
@@ -11,6 +14,7 @@ COMMENT=	test buildlink wrapper transformation
 .include "../../mk/bsd.prefs.mk"
 
 USE_BUILDLINK3=	yes
+EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_INSTALL=	yes
@@ -19,6 +23,9 @@ NO_PACKAGE=	yes
 REGRESS_ENV=		PATH=${PATH}
 #REGRESS_ENV+=		WRAPPER_DEBUG=yes
 
+# Create a "regress" script in the wrapper directory that just echoes its
+# arguments.
+#
 REGRESS=		${ECHO}
 _BLNK_WRAPPEES+=	REGRESS
 _ALIASES.REGRESS=	regress
