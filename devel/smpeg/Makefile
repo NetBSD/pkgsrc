@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/17 12:33:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/26 10:18:56 zuntum Exp $
 #
 
 DISTNAME=	smpeg-0.4.3
@@ -10,11 +10,12 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.lokigames.com/development/smpeg.php3
 COMMENT=	SDL MPEG Player Library
 
-DEPENDS+=	SDL>=1.1.5nb1:../../devel/SDL
-DEPENDS+=	gtk+-1.*:../../x11/gtk
+USE_BUILDLINK_ONLY=	YES
+USE_CONFIG_WRAPPER=	YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
-
+.include "../../devel/SDL/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
