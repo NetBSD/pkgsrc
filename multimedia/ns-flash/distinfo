@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/26 14:50:30 jmmv Exp $
+
+SHA1 (flash/5.0r51/flash_linux.tar.gz) = 757b616634b3d9398d76437c5c41927fb91f0b9d
+Size (flash/5.0r51/flash_linux.tar.gz) = 568380 bytes
+SHA1 (flash/5.0r52/flash_solaris.tar.gz) = c6e71f85ad9dfb00814f3aa574c88d73ac987586
+Size (flash/5.0r52/flash_solaris.tar.gz) = 627444 bytes
