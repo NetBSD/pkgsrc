@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/08 15:54:48 agc Exp $
 
 DISTNAME=	cupsomatic
 PKGNAME=	cupsomatic-1.3
 CATEGORIES=	print
-MASTER_SITES=	http://www.linuxprinting.org/
+MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	jlam@netbsd.org
