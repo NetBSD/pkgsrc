@@ -1,0 +1,13 @@
+# $NetBSD: patch-aa,v 1.1.1.1 2000/07/30 00:19:55 tsarna Exp $
+
+--- distrib/build.py.orig	Sat Jul 29 19:17:22 2000
++++ distrib/build.py	Sat Jul 29 19:17:29 2000
+@@ -277,7 +277,7 @@
+ 
+ 
+         else:
+-            self.MAKE      = 'make'
++            self.MAKE      = 'gmake'
+             self.PYLIB     = '$(EXECPREFIX)/lib/python$(PYVERSION)'
+             self.LIBPL     = '$(PYLIB)/config'
+             self.PYTHONLIB = '$(LIBPL)/libpython$(PYVERSION).a'
