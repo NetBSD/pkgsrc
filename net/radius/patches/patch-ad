@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/03/22 03:15:09 kim Exp $
+
+--- src/rad.skey.c.orig	Sat Oct 10 16:18:08 1998
++++ src/rad.skey.c	Sun Mar 21 21:26:32 1999
+@@ -75,11 +75,15 @@
+ 		*ptr = NULL;
+ 	}
+ 
++#ifndef __NetBSD__
+ 	/* Check if this user has valid SKEY information and get the challenge. */
+ 	if (skeyinfo(&skey, username, challenge) == 0)
+ 	{
+ 		/* position the pointer in the key for verification */
+ 		if (skeylookup (&skey, username) != 0) 
++#else
++		if (skeychallenge (&skey, username, challenge, sizeof(challenge)) != 0) 
++#endif
+ 		{
+ 			dprintf(2, (LOG_DAEMON, LOG_DEBUG, "%s: skeylookup failed.", func));
+ 			return EV_NAK;
+@@ -92,7 +96,9 @@
+ 		}
+ 		reply_sprintf (0, authreq, "%s", challenge);
+ 		return EV_NAK;
++#ifndef __NetBSD__
+ 	}
+ 	/* The user has no SKEY information.  Just NAK */
+ 	return EV_NAK;
++#endif
+ }
