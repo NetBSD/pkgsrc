@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8182 2004/11/30 15:45:04 taca Exp $
+$NetBSD: CHANGES,v 1.8183 2004/11/30 15:59:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5677,3 +5677,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cinepaint-0.18.3 [adam 2004-11-30]
 	Updated emacs-packages to 0.6 [wiz 2004-11-30]
 	Updated py-jpCodecs to 1.4.11 [taca 2004-11-30]
+	Updated glpk to 4.7 [adam 2004-11-30]
