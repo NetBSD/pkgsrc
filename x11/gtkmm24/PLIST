@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/04 13:59:56 adam Exp $
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
 include/atkmm-1.6/atkmm/component.h
@@ -1288,6 +1288,10 @@ share/doc/gtkmm-2.4/docs/reference/html/gdk_2gdkmm_2window_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/general_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/globals.html
 share/doc/gtkmm-2.4/docs/reference/html/globals_defs.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_enum.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_eval.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_func.html
+share/doc/gtkmm-2.4/docs/reference/html/globals_vars.html
 share/doc/gtkmm-2.4/docs/reference/html/globals_type.html
 share/doc/gtkmm-2.4/docs/reference/html/glyph_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/glyphstring_8h.html
@@ -1677,7 +1681,7 @@ share/doc/gtkmm-2.4/docs/tutorial/figures/clipboard_simple.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/combo.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/devcpp_project_options.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/dialogs_colorselectiondialog.png
-share/doc/gtkmm-2.4/docs/tutorial/figures/dialogs_fileselection.png
+share/doc/gtkmm-2.4/docs/tutorial/figures/dialogs_filechooser.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/dialogs_fontselectiondialog.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/dialogs_messagedialog.png
 share/doc/gtkmm-2.4/docs/tutorial/figures/dialogs_simple.png
@@ -1805,6 +1809,8 @@ share/doc/gtkmm-2.4/docs/tutorial/html/ch20s04.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch21.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch21s02.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch22.html
+share/doc/gtkmm-2.4/docs/tutorial/html/ch22s02.html
+share/doc/gtkmm-2.4/docs/tutorial/html/ch23.html
 share/doc/gtkmm-2.4/docs/tutorial/html/index.html
 share/doc/gtkmm-2.4/examples/arrow/arrow.cc
 share/doc/gtkmm-2.4/examples/arrow/direction.cc
@@ -1848,6 +1854,16 @@ share/doc/gtkmm-2.4/examples/book/combobox/complex/main.cc
 share/doc/gtkmm-2.4/examples/book/combobox/text/examplewindow.cc
 share/doc/gtkmm-2.4/examples/book/combobox/text/examplewindow.h
 share/doc/gtkmm-2.4/examples/book/combobox/text/main.cc
+share/doc/gtkmm-2.4/examples/book/custom/custom_container/examplewindow.cc
+share/doc/gtkmm-2.4/examples/book/custom/custom_container/examplewindow.h
+share/doc/gtkmm-2.4/examples/book/custom/custom_container/main.cc
+share/doc/gtkmm-2.4/examples/book/custom/custom_container/mycontainer.cc
+share/doc/gtkmm-2.4/examples/book/custom/custom_container/mycontainer.h
+share/doc/gtkmm-2.4/examples/book/custom/custom_widget/examplewindow.cc
+share/doc/gtkmm-2.4/examples/book/custom/custom_widget/examplewindow.h
+share/doc/gtkmm-2.4/examples/book/custom/custom_widget/main.cc
+share/doc/gtkmm-2.4/examples/book/custom/custom_widget/mywidget.cc
+share/doc/gtkmm-2.4/examples/book/custom/custom_widget/mywidget.h
 share/doc/gtkmm-2.4/examples/book/dialogs/colorselectiondialog/examplewindow.cc
 share/doc/gtkmm-2.4/examples/book/dialogs/colorselectiondialog/examplewindow.h
 share/doc/gtkmm-2.4/examples/book/dialogs/colorselectiondialog/main.cc
@@ -1957,9 +1973,20 @@ share/doc/gtkmm-2.4/examples/book/treeview/drag_and_drop/treemodel_dnd.h
 share/doc/gtkmm-2.4/examples/book/treeview/editable_cells/examplewindow.cc
 share/doc/gtkmm-2.4/examples/book/treeview/editable_cells/examplewindow.h
 share/doc/gtkmm-2.4/examples/book/treeview/editable_cells/main.cc
+share/doc/gtkmm-2.4/examples/book/treeview/filter/examplewindow.cc
+share/doc/gtkmm-2.4/examples/book/treeview/filter/examplewindow.h
+share/doc/gtkmm-2.4/examples/book/treeview/filter/main.cc
+share/doc/gtkmm-2.4/examples/book/treeview/filter_modify/examplewindow.cc
+share/doc/gtkmm-2.4/examples/book/treeview/filter_modify/examplewindow.h
+share/doc/gtkmm-2.4/examples/book/treeview/filter_modify/main.cc
 share/doc/gtkmm-2.4/examples/book/treeview/list/examplewindow.cc
 share/doc/gtkmm-2.4/examples/book/treeview/list/examplewindow.h
 share/doc/gtkmm-2.4/examples/book/treeview/list/main.cc
+share/doc/gtkmm-2.4/examples/book/treeview/popup/examplewindow.cc
+share/doc/gtkmm-2.4/examples/book/treeview/popup/examplewindow.h
+share/doc/gtkmm-2.4/examples/book/treeview/popup/main.cc
+share/doc/gtkmm-2.4/examples/book/treeview/popup/treeview_withpopup.cc
+share/doc/gtkmm-2.4/examples/book/treeview/popup/treeview_withpopup.h
 share/doc/gtkmm-2.4/examples/book/treeview/tree/examplewindow.cc
 share/doc/gtkmm-2.4/examples/book/treeview/tree/examplewindow.h
 share/doc/gtkmm-2.4/examples/book/treeview/tree/main.cc
@@ -2009,7 +2036,10 @@ share/doc/gtkmm-2.4/tests/child_widget_managed/main.cc
 @dirrm share/doc/gtkmm-2.4/examples/cellrenderercustom
 @dirrm share/doc/gtkmm-2.4/examples/calendar
 @dirrm share/doc/gtkmm-2.4/examples/book/treeview/tree
+@dirrm share/doc/gtkmm-2.4/examples/book/treeview/popup
 @dirrm share/doc/gtkmm-2.4/examples/book/treeview/list
+@dirrm share/doc/gtkmm-2.4/examples/book/treeview/filter_modify
+@dirrm share/doc/gtkmm-2.4/examples/book/treeview/filter
 @dirrm share/doc/gtkmm-2.4/examples/book/treeview/editable_cells
 @dirrm share/doc/gtkmm-2.4/examples/book/treeview/drag_and_drop
 @dirrm share/doc/gtkmm-2.4/examples/book/treeview
@@ -2048,6 +2078,9 @@ share/doc/gtkmm-2.4/tests/child_widget_managed/main.cc
 @dirrm share/doc/gtkmm-2.4/examples/book/dialogs/filechooserdialog
 @dirrm share/doc/gtkmm-2.4/examples/book/dialogs/colorselectiondialog
 @dirrm share/doc/gtkmm-2.4/examples/book/dialogs
+@dirrm share/doc/gtkmm-2.4/examples/book/custom/custom_widget
+@dirrm share/doc/gtkmm-2.4/examples/book/custom/custom_container
+@dirrm share/doc/gtkmm-2.4/examples/book/custom
 @dirrm share/doc/gtkmm-2.4/examples/book/combobox/text
 @dirrm share/doc/gtkmm-2.4/examples/book/combobox/complex
 @dirrm share/doc/gtkmm-2.4/examples/book/combobox
