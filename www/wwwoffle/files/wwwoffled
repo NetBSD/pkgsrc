@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: wwwoffled,v 1.3 2002/08/07 09:15:44 jlam Exp $
+# $NetBSD: wwwoffled,v 1.4 2002/08/10 17:03:27 fredb Exp $
 #
 # PROVIDE: wwwoffled
 # REQUIRE: DAEMON network
@@ -12,8 +12,8 @@ fi
 name="wwwoffled"
 command="@PREFIX@/sbin/${name}"
 control_prog="@PREFIX@/bin/wwwoffle"
-command_args="-c @PREFIX@/etc/wwwoffle/wwwoffle.conf"
-required_files="@PREFIX@/etc/wwwoffle/wwwoffle.conf"
+command_args="-c @PKG_SYSCONFDIR@/wwwoffle.conf"
+required_files="@PKG_SYSCONFDIR@/wwwoffle.conf"
 start_cmd=wwwoffled_start
 stop_cmd="${control_prog} ${command_args} -kill"
 autodial_cmd="${control_prog} -autodial ${command_args}"
