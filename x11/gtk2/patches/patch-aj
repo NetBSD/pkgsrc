@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1 2002/03/24 20:34:37 dmcmahill Exp $
+
+--- demos/gtk-demo/Makefile.am.orig	Tue Mar  5 16:03:51 2002
++++ demos/gtk-demo/Makefile.am
+@@ -44,6 +44,7 @@
+ 	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GTK_API_VERSION).la	\
+ 	$(top_builddir)/gdk/@gdktargetlib@        			\
+ 	$(top_builddir)/gtk/@gtktargetlib@ 				\
++	@LDFLAGS@							\
+ @STRIP_END@
+ 
+ bin_PROGRAMS = gtk-demo
