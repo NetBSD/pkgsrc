@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/06 19:09:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/02/07 00:07:00 minskim Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-info
@@ -161,6 +161,7 @@ share/doc/html/gnome-vfs-2.0/mime-registry.html
 share/doc/html/gnome-vfs-2.0/modules.html
 share/examples/gnome-vfs-2.0/modules/cdda-module.conf
 share/examples/gnome-vfs-2.0/modules/default-modules.conf
+share/examples/gnome-vfs-2.0/modules/ssl-modules.conf
 share/examples/gnome-vfs-2.0/vfolders/applications-all-users.vfolder-info
 share/examples/gnome-vfs-2.0/vfolders/favorites.vfolder-info
 share/examples/gnome-vfs-2.0/vfolders/network.vfolder-info
