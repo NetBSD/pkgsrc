@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/18 22:15:51 tron Exp $
+
+--- perl.h.orig	Sun Mar 28 02:57:16 1999
++++ perl.h	Sun Jan 16 21:27:21 2000
+@@ -367,6 +367,15 @@
+ #   include <sys/param.h>
+ #endif
+ 
++/* needed for IAMSUID case for 4.4BSD systems
++ * XXX there should probably be a Configure variable
++ */
++
++#ifdef I_SYS_PARAM
++#if (defined (BSD) && (BSD >= 199306))
++#   include <sys/mount.h>
++#endif /* !BSD */
++#endif /* !I_SYS_PARAM */
+ 
+ /* Use all the "standard" definitions? */
+ #if defined(STANDARD_C) && defined(I_STDLIB)
