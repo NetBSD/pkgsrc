@@ -1,4 +1,4 @@
-# $NetBSD: patch-an,v 1.1 2005/03/03 08:53:06 garbled Exp $
+$NetBSD: patch-an,v 1.2 2005/03/03 11:54:31 garbled Exp $
 --- ./src/timing.c      Fri Jun 27 04:52:29 1997
 +++ work/hbench-OS/src/timing.c       Wed Aug 14 14:11:22 2002
 @@ -201,19 +201,24 @@
