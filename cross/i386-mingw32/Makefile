@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2004/01/22 07:54:07 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/11 18:07:09 kent Exp $
 
-DISTNAME=		cross-${TARGET_ARCH}-1.2
-PKGREVISION=		3
+DISTNAME=		cross-${TARGET_ARCH}-3.2
 CROSS_DISTFILES=
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mingw.org/
@@ -13,17 +12,20 @@ TARGET_ARCH=		i386-mingw32
 TARGET_DIR=		${PREFIX}/${TARGET_ARCH}
 
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw/}
-CROSS_DISTFILES+=	binutils-2.11.92-20011113-src.tar.gz
-BINUTILS_WRKSRC=	${WRKDIR}/binutils-2.11.92-20011113
+CROSS_DISTFILES+=	binutils-2.15.90-20040222-1-src.tar.gz
+BINUTILS_WRKSRC=	${WRKDIR}/binutils-2.15.90-20040222-1
 BINUTILS_EXTRAS=	dlltool dllwrap windres
-CROSS_DISTFILES+=	gcc-2.95.3-20011106-src.tar.gz
-GCC_WRKSRC=		${WRKDIR}/gcc-2.95.3-20011106
-GCC_VERSION=		2.95.3-7
+GCC_VERSION=		3.3.3
+CROSS_DISTFILES+=	gcc-${GCC_VERSION}.tar.gz gcc-3.3.3-20040217-1-src.diff.gz \
+			gcc-g++-3.3.3-20040217-1.tar.gz
+MASTER_SITES+=		${MASTER_SITE_GNU:=gcc/releases/gcc-3.3.3/}
+GCC_WIN32_PATCH=	${WRKDIR}/gcc-3.3.3-20040217-1-src.diff
+GCC_WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION}
-CROSS_DISTFILES+=	mingw-runtime-1.2-src.tar.gz
-MINGW_WRKSRC=		${WRKDIR}/mingw-runtime-1.2
-CROSS_DISTFILES+=	w32api-1.2-src.tar.gz
-W32_WRKSRC=		${WRKDIR}/w32api-1.2
+CROSS_DISTFILES+=	mingw-runtime-3.2.tar.gz
+MINGW_WRKSRC=		${WRKDIR}/mingw-runtime-3.2
+CROSS_DISTFILES+=	w32api-2.5.tar.gz
+W32_WRKSRC=		${WRKDIR}/w32api-2.5
 USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
@@ -35,7 +37,7 @@ RANLIB_FOR_TARGET=	${BINUTILS_WRKSRC}/binutils/ranlib
 LD_FOR_TARGET=		${BINUTILS_WRKSRC}/ld/ld-new
 CC_FOR_TARGET=		${GCC_WRKSRC}/${TARGET_ARCH}/gcc/xgcc \
 		-B${GCC_WRKSRC}/${TARGET_ARCH}/gcc/ ${CFLAGS_FOR_TARGET} \
-		-I${MINGW_WRKSRC}/include -I${W32_WRKSRC}/include -L${W32_WRKSRC}/lib
+		-I${WRKSRC}/include -L${WRKSRC}/lib
 CXX_FOR_TARGET=		${CC_FOR_TARGET}
 GCC_MAKE_FLAGS=		\
 			CC_FOR_TARGET="${CC_FOR_TARGET}" \
@@ -59,6 +61,9 @@ TARGET_CONFIGURE_ENV=	CC="${CC_FOR_TARGET}" \
 
 DISTFILES+=	${CROSS_DISTFILES}
 
+post-extract:
+	-${PATCH} -d ${GCC_WRKSRC} -p1 --forward --quiet -E < ${GCC_WIN32_PATCH}
+
 do-configure: bu-configure gcc-configure
 bu-configure:
 	cd ${BINUTILS_WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure \
@@ -67,32 +72,18 @@ gcc-configure:
 	-${MKDIR} ${GCC_WRKSRC}/${TARGET_ARCH}
 	cd ${GCC_WRKSRC}/${TARGET_ARCH} && ${SETENV} ${CONFIGURE_ENV} ../configure \
 		--prefix=${PREFIX} --target=${TARGET_ARCH} \
-		--with-gnu-as --with-gnu-ld --disable-multilib --disable-nls
-	-${MKDIR} ${GCC_WRKSRC}/${TARGET_ARCH}/${TARGET_ARCH}/libiberty
-	cd ${GCC_WRKSRC}/${TARGET_ARCH}/${TARGET_ARCH}/libiberty && ${SETENV} \
-		${CONFIGURE_ENV} ../../../libiberty/configure \
-		--prefix=${PREFIX} --target=${TARGET_ARCH} --disable-nls
-	${CP} ${FILESDIR}/config.h ${GCC_WRKSRC}/${TARGET_ARCH}/${TARGET_ARCH}/libiberty
+		--with-gnu-as --with-gnu-ld --disable-multilib --disable-nls \
+		--enable-sjlj-exceptions \
+		--with-gxx-include-dir=${TARGET_DIR}/include/c++/${GCC_VERSION}
 
-do-build: bu-build gcc-build w32-build mingw-build
-bu-build:
+do-build:
 	cd ${BINUTILS_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
-gcc-build:
 	@${LN} -sf ${AS_FOR_TARGET} ${GCC_WRKSRC}/${TARGET_ARCH}/gcc/as
 	@${LN} -sf ${LD_FOR_TARGET} ${GCC_WRKSRC}/${TARGET_ARCH}/gcc/ld
 	cd ${GCC_WRKSRC}/${TARGET_ARCH} && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${GCC_MAKE_FLAGS}
-w32-build:
-	cd ${W32_WRKSRC} && ${SETENV} ${TARGET_CONFIGURE_ENV} ${CONFIGURE_ENV} \
-		./configure --target=${TARGET_ARCH}
-	cd ${W32_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
-mingw-build:
-	cd ${MINGW_WRKSRC} && ${SETENV} ${TARGET_CONFIGURE_ENV} ${CONFIGURE_ENV} \
-		./configure --target=${TARGET_ARCH}
-	cd ${MINGW_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${GCC_MAKE_FLAGS} all-gcc
 
-
-do-install: bu-install gcc-install w32-install mingw-install
+do-install: bu-install gcc-install mingw-install
 bu-install:
 	${INSTALL_PROGRAM_DIR} ${TARGET_DIR}/bin
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
@@ -111,34 +102,20 @@ gcc-install:
 	@cd ${GCC_WRKSRC}/${TARGET_ARCH}/gcc && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${GCC_MAKE_FLAGS} \
 		install-common install-headers install-libgcc install-driver
-	@${MKDIR} ${TARGET_DIR}/include/g++-3
-	@${MKDIR} ${TARGET_DIR}/include/g++-3/std
-	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
-	@cd ${GCC_WRKSRC}/${TARGET_ARCH} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
-		${MAKE_FLAGS} ${GCC_MAKE_FLAGS} prefix="${TARGET_DIR}" \
-		tooldir="${TARGET_DIR}" \
-		libsubdir="${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}" \
-		install-target-libstdc++
-	for file in c++ c++filt g++; do \
+	for file in c++ g++; do \
 		${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-$$file ${TARGET_DIR}/bin/$$file; \
 	done
-w32-install:
-	${INSTALL_DATA_DIR} ${TARGET_DIR}/include
-	${INSTALL_DATA} ${W32_WRKSRC}/include/*.h ${TARGET_DIR}/include
-	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
-	${INSTALL_DATA} ${W32_WRKSRC}/lib/lib*.a ${TARGET_DIR}/lib
+	${RM} ${PREFIX}/bin/${TARGET_ARCH}-gcj
 mingw-install:
-	${INSTALL_DATA_DIR} ${TARGET_DIR}/include/sys
-	${INSTALL_DATA} ${MINGW_WRKSRC}/include/*.h ${TARGET_DIR}/include
-	${INSTALL_DATA} ${MINGW_WRKSRC}/include/sys/*.h ${TARGET_DIR}/include/sys
-	for file in libcrtdll libmsvcrt libmsvcrt20 libmsvcrt40 libmingw32 \
-	libcoldname libmoldname libm libmingwthrd profile/libgmon ; do \
-		${INSTALL_DATA} ${MINGW_WRKSRC}/$$file.a ${TARGET_DIR}/lib; \
-	done
-	${INSTALL_DATA} ${MINGW_WRKSRC}/mingwm10.dll ${TARGET_DIR}/lib
-	for file in crt1 dllcrt1 crt2 dllcrt2  CRT_noglob crtmt crtst \
-	profile/gcrt1 profile/gcrt2; do \
-		${INSTALL_DATA} ${MINGW_WRKSRC}/$$file.o ${TARGET_DIR}/lib; \
-	done
+	${INSTALL_DATA_DIR} ${TARGET_DIR}/include
+	cd ${WRKSRC}/include && ${TAR} cf - * | ${TAR} xf - -C ${TARGET_DIR}/include
+	${MV} ${TARGET_DIR}/include/c++/${GCC_VERSION}/mingw32 \
+		${TARGET_DIR}/include/c++/${GCC_VERSION}/i386-mingw32
+	${CHMOD} a-wx `${FIND} ${TARGET_DIR}/include -type f`
+	${CHMOD} a-w `${FIND} ${TARGET_DIR}/include -type d`
+	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
+	-rm -r ${WRKSRC}/lib/gcc-lib
+	${INSTALL_DATA} ${WRKSRC}/lib/* ${TARGET_DIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/bin/mingwm10.dll ${TARGET_DIR}/lib
 
 .include "../../mk/bsd.pkg.mk"
