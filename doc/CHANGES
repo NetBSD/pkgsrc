@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9691 2005/03/30 14:28:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9692 2005/03/30 15:14:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1828,3 +1828,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net-snmp to 5.2.1 [adam 2005-03-30]
 	Updated efax-gtk to 2.2.15 [adam 2005-03-30]
         Updated mklivecd to 0.11 [xtraeme 2005-03-30]
+	Added openttd-0.3.6 [wiz 2005-03-30]
