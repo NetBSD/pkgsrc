@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/08 19:55:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/09 23:37:28 danw Exp $
 bin/tclsh
 bin/tclsh8.4
 include/tcl.h
@@ -17,8 +17,8 @@ include/tcl/generic/tclRegexp.h
 include/tcl/unix/tclUnixPort.h
 include/tclDecls.h
 include/tclPlatDecls.h
-${SHLIB_CMT}lib/libtcl84.a
-lib/libtcl84.${SHLIB_SUFX}
+lib/libtcl84.a
+lib/libtcl84.la
 lib/libtcl84.so
 lib/libtcl84.so.1
 lib/libtcl84.so.1.0

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/03/25 22:49:14 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/09 23:37:28 danw Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
 PKGNAME=		tcl-8.4.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -25,8 +25,6 @@ USE_LIBTOOL=		yes
 
 INSTALL_TARGET=		install
 
-PLIST_SUBST+=		SHLIB_SUFX="${SHLIB_SUFX}"
-
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
 #
@@ -37,14 +35,6 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-PLIST_SUBST+=		SHLIB_CMT="@comment "
-SHLIB_SUFX=		dylib
-.else
-PLIST_SUBST+=		SHLIB_CMT=""
-SHLIB_SUFX=		la
-.endif
 
 # NetBSD-1.5.x-m68k platforms apparently have a compiler optimization bug
 # tickled by the Tcl code that manifests in code generation problems.
@@ -70,13 +60,6 @@ post-patch:
 		>> mkLinks;						\
 	${RM} -f mkLinks.tmp;						\
 	${CHMOD} +x mkLinks;
-
-pre-install:
-	cd ${WRKSRC}; for file in					\
-		tclUnixInit.o libtcl84.so tclsh;			\
-	do								\
-		${TOUCH} $${file};					\
-	done
 
 post-install:
 	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
