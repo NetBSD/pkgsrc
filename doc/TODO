@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1021 2003/11/13 06:28:55 martti Exp $
+$NetBSD: TODO,v 1.1022 2003/11/13 10:18:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -130,6 +130,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abiword-2.0.1
 	o abcde-2.1.9
+	o aegis-4.12 [pkg/23414]
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
 	o arch-1.1pre5 [pkg/23022]
@@ -137,6 +138,7 @@ Suggested package updates
 	o aspell-0.50.4.1 [recht]
 	o atari800-1.3.1
 	o autoconf-2.58 [wiz]
+	o automake-1.7.9 [wiz]
 	o autogen-5.5.6
 	o avidemux-2.0.18
 	o avifile-devel-0.7.34-20030319
@@ -304,7 +306,7 @@ Suggested package updates
 	o openldap-2.1.23
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
-	o opera-7.21 [heinz, for Solaris/sparc]
+	o opera-7.22 [heinz, for Solaris/sparc]
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
