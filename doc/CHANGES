@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8703 2005/01/11 14:44:02 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8704 2005/01/11 15:48:12 manu Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -248,3 +248,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libast to 0.6.1 [adam 2005-01-11]
 	Updated eterm to 0.9.3 [adam 2005-01-11]
 	Updated pkg_notify to 0.4.1 [xtraeme 2005-01-11]
+	Added ap-auth-radius-1.5.7 [manu 2005-01-11]
