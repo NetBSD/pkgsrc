@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6165 2004/06/06 15:21:21 mjl Exp $
+$NetBSD: CHANGES,v 1.6166 2004/06/06 16:01:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2822,3 +2822,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ja-squirrelmail-1.4.3a [taca 2004-06-06]
 	Added p5-BerkeleyDB-0.25 [mjl 2004-06-06]
 	Updated anomy-sanitizer to 1.68 [mjl 2004-06-06]
+	Updated squid to 2.5.5nb4 [taca 2004-06-06]
