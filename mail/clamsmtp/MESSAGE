@@ -1,0 +1,31 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/07/21 03:54:25 xtraeme Exp $
+
+In order to use ${PKGBASE} with postfix, a possible configuration would
+be:
+
+[main.cf]
+
+content_filter = scan:127.0.0.1:10025
+receive_override_options = no_address_mappings
+
+[master.cf]
+
+# AV scan filter (used by content_filter)
+scan      unix  -       -       n       -       16      smtp
+	-o smtp_send_xforward_command=yes
+# For injecting mail back into postfix from the filter
+127.0.0.1:10026 inet  n -       n       -       16      smtpd
+	-o content_filter=
+	-o receive_override_options=no_unknown_recipient_checks
+	-o smtpd_helo_restrictions=
+	-o smtpd_client_restrictions=
+	-o smtpd_sender_restrictions=
+	-o smtpd_recipient_restrictions=permit_mynetworks,reject
+	-o mynetworks_style=host
+	-o smtpd_authorized_xforward_hosts=127.0.0.0/8
+
+That's all! please visit ${HOMEPAGE} 
+if you need more information.
+
+===========================================================================
