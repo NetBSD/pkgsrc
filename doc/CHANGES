@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3535 2003/09/26 06:18:18 wiz Exp $
+$NetBSD: CHANGES,v 1.3536 2003/09/26 08:17:04 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3944,3 +3944,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gp-0.26 [jschauma 2003-09-25]
 	Added hmmer-2.3.1 [jschauma 2003-09-25]
 	Added digger-20020314 [wiz 2003-09-25]
+	Updated tits to 1.1.1 [agc 2003-09-26]
