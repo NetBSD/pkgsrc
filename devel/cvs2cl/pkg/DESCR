@@ -1,0 +1,7 @@
+cvs2cl.pl: CVS-log-message-to-ChangeLog conversion script
+
+It produces a GNU-style ChangeLog for CVS-controlled sources,
+by running "cvs log" and parsing the output. Duplicate log
+messages get unified in the Right Way.
+
+More information:	cvs2cl --help
