@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/09 16:43:42 wiz Exp $
+bin/snes9x
+bin/s9xserver
+bin/offsets
+share/doc/snes9x/CHANGES.TXT
+share/doc/snes9x/COPYRIGHT.TXT
+share/doc/snes9x/HARDWARE.TXT
+share/doc/snes9x/HOW2PORT.TXT
+share/doc/snes9x/PROBLEMS.TXT
+share/doc/snes9x/README.TXT
+share/doc/snes9x/TODO.TXT
+@dirrm share/doc/snes9x
