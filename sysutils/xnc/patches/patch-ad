@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+
+--- xsetup/makefile.in.orig	Thu Aug 30 15:39:30 2001
++++ xsetup/makefile.in
+@@ -25,7 +25,7 @@
+ 	   ../commonfuncs.o ../image/imload.o ../xdndclass.o ../xncdebug.o
+            CXXINCLUDES=$(XINC) -I../xbitmaps
+            CXXOPT=$(DEFS) $(DEB) $(CFLAGS)
+-           LOCAL_LIBRARIES=$(IMAGEOBJS) $(JLIB) $(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS)
++           LOCAL_LIBRARIES=$(IMAGEOBJS) $(JLIB) $(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS) $(LDFLAGS)
+ 
+  PROGRAM =xncsetup
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+
+--- xjroot/makefile.in.orig	Thu Aug 30 15:43:09 2001
++++ xjroot/makefile.in
+@@ -20,7 +20,7 @@
+            IOBJS =xjpegroot.o
+            CXXINCLUDES=$(XINC) $(JINC)
+            CXXOPT=$(DEFS) $(CFLAGS)
+-           LOCAL_LIBRARIES=../image/libie.a $(JLIB) $(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS)
++           LOCAL_LIBRARIES=../image/libie.a $(JLIB) $(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS) $(LDFLAGS)
+ 
+  PROGRAM =xjpegroot $(IMAGENGINE)
+ 

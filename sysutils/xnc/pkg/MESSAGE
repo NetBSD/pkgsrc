@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+
+ Each user who wants to use xnc should first execute xncsetup
+ from X11 to configure his/her own profile.
+
+======================================================================
