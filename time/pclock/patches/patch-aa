@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/04 16:10:17 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/01 16:22:22 salo Exp $
 
 --- src/Makefile.orig	Thu Nov 25 21:57:58 1999
 +++ src/Makefile	Tue Aug 20 02:36:32 2002
 @@ -1,4 +1,4 @@
 -BINDIR = /usr/X11R6/bin
-+BINDIR = ${X11PREFIX}/bin
++BINDIR = ${PREFIX}/bin
  
  PROG = pclock
  OBJS = Main.o Graphics.o getopt.o getopt1.o
