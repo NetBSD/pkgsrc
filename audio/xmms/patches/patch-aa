@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.6 2002/03/21 18:52:31 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2004/04/23 15:28:13 xtraeme Exp $
 
---- Input/cdaudio/cdaudio.c.orig	Tue Feb  5 15:39:11 2002
-+++ Input/cdaudio/cdaudio.c	Thu Mar 21 19:08:26 2002
-@@ -398,7 +398,7 @@
+--- Input/cdaudio/cdaudio.c.orig	2004-04-23 17:20:46.000000000 +0200
++++ Input/cdaudio/cdaudio.c	2004-04-23 17:23:52.000000000 +0200
+@@ -214,7 +214,11 @@
+  	FILE *mounts;
+  	struct mntent *mnt;
+ #elif defined(HAVE_GETMNTINFO)
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++	struct statvfs *fsp;
++#else
+  	struct statfs *fsp;
++#endif
+  	int entries;
+ #endif
+ 
+@@ -398,7 +402,7 @@
  	if (cdda_fd < 0)
  		return;
  
@@ -11,7 +23,7 @@ $NetBSD: patch-aa,v 1.6 2002/03/21 18:52:31 drochner Exp $
  	close(cdda_fd);
  	cdda_fd = -1;
  	stop_timeout_id = gtk_timeout_add(STOP_DELAY * 100, stop_timeout, NULL);
-@@ -409,11 +409,11 @@
+@@ -409,11 +413,11 @@
  	if (p)
  	{
  		pause_time = get_time();
@@ -25,7 +37,7 @@ $NetBSD: patch-aa,v 1.6 2002/03/21 18:52:31 drochner Exp $
  		pause_time = -1;
  	}
  	is_paused = p;
-@@ -554,9 +554,11 @@
+@@ -554,9 +558,11 @@
  	struct cd_sub_channel_info subinfo;
  	subchnl.address_format = CD_MSF_FORMAT;
  	subchnl.data_format = CD_CURRENT_POSITION;
@@ -38,7 +50,7 @@ $NetBSD: patch-aa,v 1.6 2002/03/21 18:52:31 drochner Exp $
  
  	return(LBA(subchnl.data->what.position.absaddr.msf));
  }
-@@ -591,6 +593,7 @@
+@@ -591,6 +597,7 @@
  {
  	struct ioc_toc_header tochdr;
  	struct ioc_read_toc_entry tocentry;
@@ -46,7 +58,7 @@ $NetBSD: patch-aa,v 1.6 2002/03/21 18:52:31 drochner Exp $
  	int i;
  
  	if (ioctl(fd, CDIOREADTOCHEADER, &tochdr))
-@@ -601,6 +604,8 @@
+@@ -601,6 +608,8 @@
  		tocentry.address_format = CD_MSF_FORMAT;
  
  		tocentry.starting_track = i;
@@ -55,7 +67,7 @@ $NetBSD: patch-aa,v 1.6 2002/03/21 18:52:31 drochner Exp $
  		if (ioctl(fd, CDIOREADTOCENTRYS, &tocentry))
  			return FALSE;
  		info->track[i].minute =
-@@ -617,6 +622,8 @@
+@@ -617,6 +626,8 @@
  	tocentry.address_format = CD_MSF_FORMAT;
  
  	tocentry.starting_track = 0xAA;
