@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/03/03 13:56:48 agc Exp $
+# $NetBSD: Makefile,v 1.14 2000/03/05 07:35:17 kim Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -51,7 +51,7 @@ do-install:
 	for file in ANNOUNCE CHANGES COPYING COPYRIGHT README; do \
 		${INSTALL_DATA} ${WRKSRC}/$$file ${PREFIX}/share/doc/mrtg/; \
 	done
-	for file in ${WRKSRC}/images/*.gif; do \
+	for file in ${WRKSRC}/images/*.png; do \
 		${INSTALL_DATA} $$file ${PREFIX}/share/mrtg/; \
 	done
 	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${PREFIX}/etc/mrtg
