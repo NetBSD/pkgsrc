@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/07/21 22:29:36 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/07/26 20:56:23 tron Exp $
 
 DISTNAME=		inn-2.2
 CATEGORIES=		news
@@ -41,7 +41,7 @@ post-build:
 .endfor
 
 pre-install:
-	${MKDIR} ${INN_DATA_DIR}
+	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp
 
 post-install:
 	${MKDIR} ${PREFIX}/share/examples/inn
