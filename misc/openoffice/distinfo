@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/02/14 22:51:41 mrauch Exp $
+$NetBSD: distinfo,v 1.4 2002/02/15 21:28:15 mrauch Exp $
 
 SHA1 (oo_641_src.tar.bz2) = ad4c7000cf317d7e9d694a6d519336bfaf1f8edd
 Size (oo_641_src.tar.bz2) = 109167758 bytes
@@ -92,3 +92,4 @@ SHA1 (patch-de) = 6d3f2dc02daa3db1304759d1cda917adda52d943
 SHA1 (patch-df) = 8da1d41c6049f3229e3fadf5724ca2c009ea447a
 SHA1 (patch-dg) = 2b7a85ddcdcffc21df6254476d6e1331f04017c8
 SHA1 (patch-dh) = 0ac90ec074019827630011b0b2da1ad4cd0f1b0d
+SHA1 (patch-di) = 7e4733e0652936ee00868f241e747b51765bc2bd
