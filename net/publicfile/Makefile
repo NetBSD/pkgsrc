@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/13 03:25:44 schmonz Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -19,9 +19,9 @@ RESTRICTED=		"unsure of djb's license"
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-pre-build:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+do-configure:
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX}/publicfile > ${WRKSRC}/conf-home
 
 .include "../../mk/bsd.pkg.mk"
