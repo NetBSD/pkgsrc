@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8264 2004/12/05 08:14:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.8265 2004/12/05 08:29:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5769,3 +5769,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated opencm to 0.1.2rc8 [jmmv 2004-12-04]
 	Updated python-mode to 4.6.54 [ben 2004-12-04]
 	Updated gice to 0.6.2 [jmmv 2004-12-04]
+	Updated hnb to 1.9.17 [jmmv 2004-12-04]
