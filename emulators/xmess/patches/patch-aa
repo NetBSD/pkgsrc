@@ -1,20 +1,11 @@
-$NetBSD: patch-aa,v 1.15 2002/12/14 15:14:26 kristerw Exp $
---- makefile.unix.orig	Wed Jan  2 01:32:01 2002
-+++ makefile.unix	Wed Jan  2 18:44:08 2002
-@@ -32,7 +32,6 @@
+$NetBSD: patch-aa,v 1.16 2003/02/14 21:58:36 kristerw Exp $
+--- makefile.unix.orig	Fri Feb 14 22:29:58 2003
++++ makefile.unix	Fri Feb 14 22:30:10 2003
+@@ -33,7 +33,6 @@
+ ###########################################################################
  
- #set TARGET to "mame" (without the ") to compile xmame and to "mess" to
- #compile xmess.
+ # Uncomment one of these.
 -TARGET = mame
- 
- 
- ##############################################################################
-@@ -211,7 +210,7 @@
- # *** xmameroot, this is the default rompath, place where the highscores are
- # stored, global rc location etc. Since most of these are configurable through
- # the rc-file anyway, there are no longer seperate defines for each.
--XMAMEROOT = $(PREFIX)/lib/x$(TARGET)
-+XMAMEROOT = $(PREFIX)/share/x$(TARGET)
- 
- 
- ##############################################################################
+ # TARGET = mess
+ # TARGET = neomame
+ # TARGET = cpmame

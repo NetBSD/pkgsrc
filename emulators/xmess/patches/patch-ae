@@ -1,23 +1,23 @@
-$NetBSD: patch-ae,v 1.6 2003/01/13 19:35:44 kristerw Exp $
---- doc/xmessrc.dist.orig	Tue Dec 10 05:58:31 2002
-+++ doc/xmessrc.dist	Sat Dec 14 15:46:29 2002
+$NetBSD: patch-ae,v 1.7 2003/02/14 21:58:36 kristerw Exp $
+--- doc/xmessrc.dist.orig	Fri Feb 14 22:32:17 2003
++++ doc/xmessrc.dist	Fri Feb 14 22:34:15 2003
 @@ -69,15 +69,15 @@
  mouse                   1
  
  ### Fileio Related ###
--biospath                /usr/games/lib/xmess/bios
--softwarepath            /usr/games/lib/xmess/software
--CRC_directory           /usr/games/lib/xmess/crc
+-biospath                /usr/local/share/xmess/bios
+-softwarepath            /usr/local/share/xmess/software
+-CRC_directory           /usr/local/share/xmess/crc
 +biospath                @ROMPATH@/bios
 +softwarepath            @ROMPATH@/software
 +CRC_directory           @ROMPATH@/crc
  snapshot_directory      .
--cheat_directory         /usr/games/lib/xmess/cheat
+-cheat_directory         /usr/local/share/xmess/cheat
 +cheat_directory         @SPOOLDIR@/cheat
  cheatfile               cheat.cdb
--hiscore_file            /usr/games/lib/xmess/hiscore.dat
--history_file            /usr/games/lib/xmess/history.dat
--mameinfo_file           /usr/games/lib/xmess/mameinfo.dat
+-hiscore_file            /usr/local/share/xmess/hiscore.dat
+-history_file            /usr/local/share/xmess/history.dat
+-mameinfo_file           /usr/local/share/xmess/mameinfo.dat
 +hiscore_file            @SPOOLDIR@/hiscore.dat
 +history_file            @SPOOLDIR@/history.dat
 +mameinfo_file           @SPOOLDIR@/mameinfo.dat
