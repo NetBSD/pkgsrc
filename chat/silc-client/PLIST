@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/29 11:29:22 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/05/03 21:51:56 hubertf Exp $
 bin/silc
 etc/silc/silc.conf
 share/doc/silc/CHANGES
@@ -62,7 +62,6 @@ share/silc/help/motd
 share/silc/help/msg
 share/silc/help/names
 share/silc/help/nick
-share/silc/help/note
 share/silc/help/notice
 share/silc/help/oper
 share/silc/help/part
@@ -110,3 +109,5 @@ share/silc/themes/default.theme
 @dirrm share/silc
 @dirrm share/doc/silc
 @dirrm etc/silc
+@dirrm lib/silc/modules
+@dirrm lib/silc
