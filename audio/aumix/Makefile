@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/08/03 18:45:11 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:22 tron Exp $
 
 DISTNAME=	aumix-2.7
 CATEGORIES=	audio
-MASTER_SITES=	http://download.sourceforge.net/aumix/ \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/} \
 		http://jpj.net/~trevor/aumix/ \
 		${MASTER_SITE_SUNSITE:=apps/sound/mixers/} \
 		ftp://aumix.sourceforge.net/pub/aumix/stable/ \

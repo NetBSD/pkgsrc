@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 11:48:44 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:26 tron Exp $
 #
 
 DISTNAME=		Mesa-3.2.1
 PKGNAME=		${DISTNAME:S/Mesa/glut/}
 CATEGORIES=		graphics
 MASTER_SITES= 		ftp://ftp.mesa3d.org/mesa/ \
-			http://download.sourceforge.net/mesa3d/
+			${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES+=		${DISTNAME:S/Mesa/MesaLib/}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/Mesa/MesaDemos/}${EXTRACT_SUFX}

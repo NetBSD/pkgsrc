@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2000/10/26 16:44:58 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 2000/11/11 17:49:29 tron Exp $
 #
 
 DISTNAME=	wxPython-2.2.1
 PKGNAME=	py-wxWindows-2.2.1
 CATEGORIES=	x11
-MASTER_SITES=	http://download.sourceforge.net/wxpython/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://wxpython.org/
