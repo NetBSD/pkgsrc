@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/09/16 17:45:43 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/09/16 17:47:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/20 08:18:40 tg Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.muraroa.demon.co.uk/
 
 .if exists(/usr/bin/bzip2)
-IGNORE=		"is part of your NetBSD distribution."
+IGNORE=		"is part of your NetBSD distribution"
 .endif
 
 do-install:
