@@ -1,9 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:00 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/12/27 06:29:20 uebayasi Exp $
 
 .if !defined(SJ3_BUILDLINK2_MK)
 SJ3_BUILDLINK2_MK=	# defined
 
-BUILDLINK_PACKAGES+=		sj3-lib
+BUILDLINK_PACKAGES+=		sj3
 BUILDLINK_DEPENDS.sj3?=		sj3-lib>=2.0.1.20nb1
 BUILDLINK_PKGSRCDIR.sj3?=	../../inputmethod/sj3-lib
 
