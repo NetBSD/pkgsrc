@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/08/18 08:56:12 agc Exp $
+# $NetBSD: Makefile,v 1.20 1999/08/19 15:49:03 agc Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -86,9 +86,9 @@ do-install:
     ldap30.jar resource.jar scd10.jar
 	${INSTALL_DATA} ${WRKSRC}/${file} ${MOZILLA_HOME}/java/classes
 .endfor
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/spellchk-v${NS_VERS_SHORT}.nif
+	cd ${MOZILLA_HOME} ; ${GTAR} xpzf ${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif
+	cd ${MOZILLA_HOME} ; ${GTAR} xpzf ${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif
+	cd ${MOZILLA_HOME} ; ${GTAR} xpzf ${WRKSRC}/spellchk-v${NS_VERS_SHORT}.nif
 
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
