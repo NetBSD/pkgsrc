@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3025 2003/08/11 15:59:09 seb Exp $
+$NetBSD: CHANGES,v 1.3026 2003/08/11 18:26:23 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3236,3 +3236,13 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xuvmstat to 20030810 [martin 2003-08-11]
 	Updated citrix_ica to 7.00.77757 [markd 2003-08-11]
 	Updated mailcrypt to 3.5.8 [seb 2003-08-11]
+	Updated gcc3 to 3.3.1 [drochner 2003-08-11]
+	Added py-mimelib-2.5 [drochner 2003-08-11]
+	Updated dillo to 0.7.3 [drochner 2003-08-11]
+	Added zope25-Epoz-0.5.1 [drochner 2003-08-11]
+	Added zope25-BTreeFolder2-0.5.0 [drochner 2003-08-11]
+	Added zope25-CookieCrumbler-1.1 [drochner 2003-08-11]
+	Added zope25-StripoGram-1.4 [drochner 2003-08-11]
+	Added zope25-MailManager-0.94 [drochner 2003-08-11]
+	Added zope25-BackTalk-0.3 [drochner 2003-08-11]
+	Added lrmi-0.8 [drochner 2003-08-11]
