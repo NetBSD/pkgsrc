@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/07 02:01:00 snj Exp $
 #
 
-DISTNAME=	tuxpaint-0.9.12
-PKGREVISION=	2
+DISTNAME=	tuxpaint-0.9.13
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 
@@ -10,25 +9,26 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxpaint/
 COMMENT=	Drawing program for small children
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GNU_TOOLS+=		make
 MANCOMPRESSED=		YES
 
-LDFLAGS+=		${_BLNK_ICONV_LDFLAGS}
-MAKE_ENV+=		CONFDIR="${PKG_SYSCONFDIR}"
+CONFLICTS+=		tuxpaint-stamps<2003.12.23
+
+MAKE_ENV+=		CONFDIR="${PKG_SYSCONFDIR}" CP="${CP}" CHMOD="${CHMOD}"
 EGDIR=			${PREFIX}/share/examples/tuxpaint
 CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
 
 post-install:
-	-find ${PREFIX}/share/doc/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
-	-find ${PREFIX}/share/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
+	-${FIND} ${PREFIX}/share/doc/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
+	-${FIND} ${PREFIX}/share/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../devel/SDL_ttf/buildlink2.mk"
-.include "../../graphics/SDL_image/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
