@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/22 03:31:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/07 16:42:24 reed Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
@@ -40,7 +40,7 @@ do-install:
 		${LOCALBASE}/sbin/rpm2pkg -d ${PREFIX} -f ${PLIST_SRC}	\
 		-p emul/linux ${DISTDIR}/${DISTFILES}
 	${INSTALL_DATA} ${EMULDIR}/usr/info/trplayer.info		\
-		${PREFIX}/info/trplayer.info
+		${PREFIX}/${INFO_DIR}/trplayer.info
 
 post-install:
 	${SED} -e 's,@@EMULDIR@@,${EMULDIR},'				\
