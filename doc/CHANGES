@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2911 2003/07/28 15:08:47 tron Exp $
+$NetBSD: CHANGES,v 1.2912 2003/07/28 15:56:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3040,3 +3040,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-GraphViz to 1.8 [seb 2003-07-28]
 	Added gtksee-0.5.2 [hubertf 2003-07-28]
 	Updated intlfonts to 1.2.1nb2 [tron 2003-07-28]
+	Updated imap-uw to 2002.4 [adam 2003-07-28]
+	Updated imap-uw-utils to 20020102nb1 [adam 2003-07-28]
+	Updated pico to 4.6 [adam 2003-07-28]
+	Updated pine to 4.56 [adam 2003-07-28]
+	Updated php4-imap to 4.2.3nb2 [adam 2003-07-28]
+	Updated prayer to 1.0.8 [adam 2003-07-28]
