@@ -1,0 +1,11 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Utils/Makefile.orig	Thu Jul  8 12:30:26 1999
++++ Utils/Makefile	Thu Jul  8 12:30:31 1999
+@@ -1,6 +1,6 @@
+ 
+ all:
+-	cd DatafileCompiler;make
++	cd DatafileCompiler;gmake
+ 
+ cvsstrip:
+ 	g++ cvsstrip.cpp -o cvsstrip

@@ -1,0 +1,57 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Layer1/System/Unix/appconf.cpp.orig	Thu Jul  8 11:48:23 1999
++++ Layer1/System/Unix/appconf.cpp	Thu Jul  8 12:01:20 1999
+@@ -56,12 +56,14 @@
+ #	include  <windows.h>
+ #endif    // WIN32
+ 
+-#ifdef	  __unix__
++#if defined(__unix__) || defined(__NetBSD__)
+ #	include <sys/param.h>
+ #	include	<sys/stat.h>
+ #	include <unistd.h>
++#ifndef __NetBSD__
+ #	define MAX_PATH	MAXPATHLEN
+ #endif
++#endif
+ 
+ #include  <fcntl.h>
+ #include  <sys/types.h>
+@@ -161,7 +163,7 @@
+ #if APPCONF_CASE_SENSITIVE
+ # define StrCmp(s1,s2)  strcmp((s1),(s2))
+ #else
+-# ifdef   __unix__
++# if defined(__unix__) || defined(__NetBSD__)
+     extern "C" int strcasecmp(const char *s1, const char *s2); // it's not ansi
+ #   define  StrCmp(s1,s2)  strcasecmp((s1),(s2))
+ # else
+@@ -1306,6 +1308,10 @@
+ // ----------------------------------------------------------------------------
+ // config files standard locations
+ // ----------------------------------------------------------------------------
++#ifdef __NetBSD__
++#include <sys/syslimits.h>
++#define MAX_PATH PATH_MAX
++#endif
+ 
+ // ### buffer overflows in sight...
+ const char *FileConfig::GlobalConfigFile() const
+@@ -1315,7 +1321,7 @@
+   // check if file has extension
+   Bool bNoExt = strchr(m_szFileName, '.') == NULL;
+ 
+-#ifdef  __unix__
++#if defined(__unix__) || defined(__NetBSD__)
+     strcpy(s_szBuf, "/etc/");
+     strcat(s_szBuf, m_szFileName);
+     if ( bNoExt )
+@@ -1338,7 +1344,7 @@
+ {
+   static char s_szBuf[MAX_PATH];
+ 
+-#ifdef  __unix__
++#if defined(__unix__) || defined(__NetBSD__)
+     const char *szHome = getenv("HOME");
+     if ( szHome == NULL ) {
+       // we're homeless...

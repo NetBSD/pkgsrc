@@ -1,0 +1,23 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Layer1/System/Unix/init_linux.cpp.orig	Thu Jun  3
+19:58:39 1999
++++ Layer1/System/Unix/init_linux.cpp	Tue Jul 20 08:34:23 1999
+@@ -193,7 +193,7 @@
+ 
+ 	if (dynload_add_network == NULL)
+ 	{
+-		cout << "Unable to load any sound implementation. Sorry." << endl;
++		cout << "Unable to load any network implementation. Sorry." << endl;
+ 		exit(1);
+ 	}
+ 	
+@@ -275,7 +275,9 @@
+ 	// init signal handling
+ 	act.sa_handler  = signal_handler;
+ 	act.sa_flags    = 0;
++#ifndef __NetBSD__
+ 	act.sa_restorer = NULL;
++#endif
+ 	sigemptyset(&act.sa_mask);
+ 	sigaction(SIGTERM,&act,&old); // terminated, by kill
+ 	sigaction(SIGINT,&act,&old); // interrupt, ctrl-c

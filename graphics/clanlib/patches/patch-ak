@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Layer1/Sound/ClanSound/ClanSound/Makefile.options.orig	Thu Jul  8 19:24:02 1999
++++ Layer1/Sound/ClanSound/ClanSound/Makefile.options	Thu Jul  8 19:24:16 1999
+@@ -5,7 +5,7 @@
+ #
+ #
+ 
+-COMP_OPTIONS = -Wall -O2 -pedantic
++COMP_OPTIONS = -Wall -O2 -pedantic -fPIC
+ LINK_OPTIONS = 
+ 
+ %.o : %.cpp

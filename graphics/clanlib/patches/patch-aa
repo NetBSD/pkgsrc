@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- configure.orig	Wed Jun  9 15:47:21 1999
++++ configure	Fri Jul  9 09:01:33 1999
+@@ -1981,8 +1981,11 @@
+ 
+ 
+ 
+-
+-libs1="-lz -lHermes"
++if test -f "libz.a"; then
++	libs1="libz.a -lHermes"
++else
++	libs1="-lz -lHermes"
++fi
+ libs2=""
+ 
+ if test "$USE_LIBPNG" = "enabled"; then
+@@ -2004,27 +2007,27 @@
+ display_targets=""
+ 
+ if test "$USE_X11" = "enabled"; then
+-  display_targets="$display_targets libclan-display-x11.so"
++  display_targets="$display_targets libclan-display-x11.so.0.0"
+ fi
+ 
+ if test "$USE_MESA" = "enabled"; then
+-  display_targets="$display_targets libclan-display-mesa.so"
++  display_targets="$display_targets libclan-display-mesa.so.0.0"
+ fi
+ 
+ if test "$USE_PTC" = "enabled"; then
+-  display_targets="$display_targets libclan-display-ptc.so"
++  display_targets="$display_targets libclan-display-ptc.so.0.0"
+ fi
+ 
+ if test "$USE_GGI" = "enabled"; then
+-  display_targets="$display_targets libclan-display-ggi.so"
++  display_targets="$display_targets libclan-display-ggi.so.0.0"
+ fi
+ 
+ if test "$USE_SVGALIB" = "enabled"; then
+-  display_targets="$display_targets libclan-display-svgalib.so"
++  display_targets="$display_targets libclan-display-svgalib.so.0.0"
+ fi
+ 
+ if test "$USE_FBDEV" = "enabled"; then
+-  display_targets="$display_targets libclan-display-fbdev.so"
++  display_targets="$display_targets libclan-display-fbdev.so.0.0"
+ fi
+ 
+ 
+@@ -2040,6 +2043,9 @@
+ fi
+ if test -x /usr/local/bin/perl; then
+ 	perl_exec="/usr/local/bin/perl"
++fi
++if test -x $LOCALBASE/bin/perl; then
++	perl_exec="$LOCALBASE/bin/perl"
+ fi
+ if test "$perl_exec" = ""; then
+ 	perl_exec="/usr/bin/perl"

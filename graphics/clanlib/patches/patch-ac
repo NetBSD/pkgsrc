@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Layer1/Sound/ClanSound/ClanSound/oss.cpp.orig	Mon Dec 21 16:24:50 1998
++++ Layer1/Sound/ClanSound/ClanSound/oss.cpp	Sat Jul 17 08:41:13 1999
+@@ -8,7 +8,11 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <sys/soundcard.h>
++#endif
+ #include <iostream.h>
+ 
+ #include "oss.h"
+@@ -24,7 +28,11 @@
+ int cs_oss_init()
+ //: Initialize sound playback.
+ {
++#ifndef __NetBSD__
+ 	dev_dsp_fd = open("/dev/dsp", O_WRONLY);
++#else
++	dev_dsp_fd = open("/dev/sound", O_WRONLY);
++#endif
+ 	if (dev_dsp_fd == -1)
+ 	{
+ 		cout << "ClanSound: Could not open /dev/dsp. No sound will be available." << endl;
