@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:27:56 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/04 21:07:49 jmc Exp $
 #
 
 WRKSRC=			${WRKDIR}/djgpp
@@ -18,6 +18,10 @@ USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	coff-go32
 BINUTILS_LDEMULATION=	i386go32
 USE_CROSS_EGCS=		yes
+
+# Scripts in the build need to have a $CPP defined that works with the built
+# compiler
+NO_EXPORT_CPP=		yes
 
 DJGPP_FILES=		djcrx202.zip wmemu2b.zip
 
