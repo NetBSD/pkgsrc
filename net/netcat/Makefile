@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/09/29 23:11:12 kim Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/07 00:34:36 kim Exp $
 
 PKGNAME=	netcat-1.10
 CATEGORIES=	net
-DISTNAME!=	echo ${PKGNAME} | sed -e 's/netcat-/nc/' -e 's/\.//'
+DISTNAME!=	${ECHO} ${PKGNAME} | ${SED} -e 's/netcat-/nc/' -e 's/\.//'
 DISTFILES=	${DISTNAME}.tgz
 MASTER_SITES=	ftp://zippy.telcom.arizona.edu/pub/mirrors/avian.org/hacks/ \
 		ftp://ftp.sterling.com/mirrors/avian.org/src/hacks/ \
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${EXAMPLE_DIR}
 	@(							\
 	cd ${WRKSRC}/data;					\
-	rm -f PLIST.data;					\
+	${RM} -f PLIST.data;					\
 	for i in README Makefile *.c *.d;			\
 	do							\
 	    ${INSTALL_DATA} $$i ${PREFIX}/${EXAMPLE_DIR};	\
