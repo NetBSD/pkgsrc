@@ -1,0 +1,25 @@
+#!/bin/sh
+
+case "${MACHINE_ARCH}" in
+sparc)	NSBINARY=netscape_dns ;;
+i386)	NSBINARY=netscape ;;
+*)	NSBINARY=foobar ;;
+esac
+
+if [ ! -f ${WRKSRC}/netscape.bin ] ; then
+    mv ${WRKSRC}/${NSBINARY} ${WRKSRC}/netscape.bin
+fi
+if [ ! -f ${WRKSRC}/movemail.bin ] ; then
+    mv ${WRKSRC}/movemail ${WRKSRC}/movemail.bin
+fi
+
+sed -e "s;@X11BASE@;${X11BASE};g" -e "s;@LIBDIR@;${LIBDIR};g" \
+    -e "s;@EXECDIR@;${X11BASE}/bin;g" \
+	${FILESDIR}/netscape.sh >${WRKSRC}/netscape
+chmod +x ${WRKSRC}/netscape
+sed -e "s;@X11BASE@;${X11BASE};g" -e "s;@LIBDIR@;${LIBDIR};g" \
+    -e "s;@EXECDIR@;${X11BASE}/bin;g" \
+	${FILESDIR}/movemail.sh >${WRKSRC}/movemail
+chmod +x ${WRKSRC}/movemail
+
+cp ${FILESDIR}/mailcap ${WRKSRC}
