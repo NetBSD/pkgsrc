@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7306 2004/10/01 09:16:14 martti Exp $
+$NetBSD: CHANGES,v 1.7307 2004/10/01 12:46:55 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4505,3 +4505,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libntlm to 0.3.6 [wiz 2004-10-01]
 	Updated xpmroot to 2.4.19 [martti 2004-10-01]
 	Updated fvwm2 to 2.4.19 [martti 2004-10-01]
+	Added gal20-1.99.11 [rh 2004-10-01]
