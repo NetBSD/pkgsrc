@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2002/10/08 00:49:19 heinz Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/10/08 16:41:32 heinz Exp $
 @comment bin/spamassassin
 @comment bin/spamc
 @comment bin/spamd
 etc/rc.d/spamd
 @comment etc/spamassassin/local.cf
-etc/spamassassin/netbsd_lists.cf
+@comment etc/spamassassin/netbsd_lists.cf
 @comment etc/spamassassin/user_prefs.template
 share/doc/spamassassin/INSTALL
 share/doc/spamassassin/License
@@ -41,6 +41,7 @@ share/doc/spamassassin/tools/check_whitelist
 share/doc/spamassassin/tools/speedtest
 share/doc/spamassassin/tools/translation_prep.pl
 share/examples/spamassassin/local.cf
+share/examples/spamassassin/netbsd_lists.cf
 share/examples/spamassassin/procmailrc.example
 share/spamassassin/10_misc.cf
 share/spamassassin/20_anti_ratware.cf
@@ -74,4 +75,4 @@ share/spamassassin/user_prefs.template
 @dirrm share/doc/spamassassin/masses
 @dirrm share/doc/spamassassin/html
 @dirrm share/doc/spamassassin
-@dirrm etc/spamassassin
+@comment @dirrm etc/spamassassin
