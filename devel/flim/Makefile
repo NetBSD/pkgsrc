@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/09 10:44:40 seb Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/18 13:14:32 minoura Exp $
 
 DISTNAME=	flim-1.14.5
 PKGREVISION=	2
@@ -9,10 +9,11 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.m17n.org/FLIM/
 COMMENT=	Emacs lisp library for message representation/encoding
 
-DEPENDS+=	apel>=9.22:../../devel/apel
-BUILD_DEPENDS+=	qkc-*:../../converters/qkc
-
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 .include "../../mk/emacs.mk"
+
+DEPENDS+=	${PKGNAME_PREFIX}apel>=9.22:../../devel/apel
+BUILD_DEPENDS+=	qkc-*:../../converters/qkc
 
 .if ${EMACS_FLAVOR} == "emacs"
 ALL_TARGET=     elc
