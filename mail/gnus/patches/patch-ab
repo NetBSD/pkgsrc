@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/31 13:56:41 uebayasi Exp $
+
+--- texi/ognus.texi.old	2003-05-21 12:40:48.000000000 +0200
++++ texi/ognus.texi	2003-05-21 12:43:57.000000000 +0200
+@@ -7,7 +7,7 @@
+ @syncodeindex pg cp
+ @dircategory Emacs
+ @direntry
+-* Gnus: (gnus).         The newsreader Gnus.
++* Gnus: (ognus).         The newsreader Gnus.
+ @end direntry
+ @iftex
+ @finalout
