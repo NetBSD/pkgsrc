@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.24 2002/06/02 00:40:18 schmonz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.25 2002/06/02 19:44:32 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -18,7 +18,7 @@ EGREP?=		/usr/bin/egrep
 FALSE?=		false				# Shell builtin
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
-GMAKE?=		/usr/bin/make
+GMAKE?=		/usr/bin/gnumake
 GREP?=		/usr/bin/grep
 GTAR?=		/usr/bin/gnutar	
 GUNZIP_CMD?=	/usr/bin/gunzip -f
