@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/06/06 21:29:33 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2004/06/06 21:35:09 minskim Exp $
 #
 
 DISTNAME=       cpio-2.5
@@ -9,6 +9,8 @@ MASTER_SITES=   ${MASTER_SITE_GNU:=cpio/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/cpio/cpio.html
 COMMENT=	GNU copy-in/out (cpio) with remote magnetic tape (rmt) support
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
@@ -27,5 +29,7 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+
+INSTALLATION_DIRS=	bin man/man1
 
 .include "../../mk/bsd.pkg.mk"
