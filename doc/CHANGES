@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7511 2004/10/21 08:31:18 adam Exp $
+$NetBSD: CHANGES,v 1.7512 2004/10/21 11:13:23 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4802,3 +4802,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated abiword to 2.0.11 [xtraeme 2004-10-21]
 	Added abiword-plugins-2.0.11 [xtraeme 2004-10-21]
 	Updated fltk to 1.1.5 [adam 2004-10-21]
+	Updated lftp to 3.0.10 [salo 2004-10-21]
