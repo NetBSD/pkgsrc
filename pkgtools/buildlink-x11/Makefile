@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:41 agc Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2002/07/22 17:19:35 agc Exp $
 
 DISTNAME=	buildlink-x11-0.8
 CATEGORIES=	pkgtools devel x11
@@ -44,6 +44,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
 	${INSTALL_DATA} ${FILESDIR}/buildlinkX11.def ${PREFIX}/lib/X11/config
 	${INSTALL_DATA} ${FILESDIR}/buildlinkX11.rules ${PREFIX}/lib/X11/config
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/buildlink-xmkmf			\
 		${PREFIX}/bin/buildlink-xmkmf
 

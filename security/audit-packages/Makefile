@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/07/04 23:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2002/07/22 17:14:56 agc Exp $
 
 DISTNAME=	audit-packages-1.14
 CATEGORIES=	security pkgtools
@@ -27,6 +27,7 @@ do-configure:
 	done
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
 	@for f in audit-packages download-vulnerability-list; do	\
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/sbin;	\
 	done

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/07/03 22:53:17 abs Exp $
+# $NetBSD: Makefile,v 1.50.2.1 2002/07/22 17:17:07 agc Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -61,6 +61,9 @@ MAKE_ENV+=		BINGRP=${BINGRP} BINOWN=${BINOWN}
 MAKE_ENV+=		BINDIR=${PKG_TOOLS_BIN}
 MAKE_ENV+=		MANDIR=${PKG_TOOLS_BIN}/../man
 .endif
+
+pre-install:
+	${INSTALL_PROGRAM_DIR} ${PKG_TOOLS_BIN}
 
 post-install:
 	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then \

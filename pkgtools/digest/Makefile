@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/06/21 15:26:07 abs Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2002/07/22 17:18:31 agc Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -20,8 +20,10 @@ NO_CHECKSUM=    # defined
 MANCOMPRESSED_IF_MANZ=	YES
 BUILD_DEFS+=	MANINSTALL
 
-MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
+MAKE_ENV+=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/man
 MAKE_ENV+=	VERSION="${VERSION}"
+
+PKGVIEWS+=	pkgtools
 
 .include "../../mk/bsd.prefs.mk"
 
