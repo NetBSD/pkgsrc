@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.20 2004/11/17 17:14:43 tv Exp $
+# $NetBSD: distcc.mk,v 1.21 2004/11/17 17:18:33 tv Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -34,6 +34,7 @@ _USE_DISTCC=	YES
 .if !empty(_USE_DISTCC:M[yY][eE][sS])
 EVAL_PREFIX+=		_DISTCCBASE=distcc
 _DISTCCBASE_DEFAULT=	${LOCALBASE}
+_DISTCCBASE?=		${LOCALBASE}
 
 _DISTCC_DIR=	${WRKDIR}/.distcc
 _DISTCC_LINKS=	# empty
