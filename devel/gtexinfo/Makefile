@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/12/25 14:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2002/01/05 18:42:55 tron Exp $
 #
 
 DISTNAME=		texinfo-4.0
@@ -14,6 +14,7 @@ USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-catgets
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../devel/zlib/buildlink.mk"
 
