@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/11/28 02:17:03 jtb Exp $
+
+--- ezfft1.f.orig	Fri Nov 17 16:48:23 2000
++++ ezfft1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE EZFFT1 (N,WA,IFAC)
+-      DIMENSION       WA(1)      ,IFAC(1)    ,NTRYH(4)
++      DIMENSION       WA(1)      ,IFAC(*)    ,NTRYH(4)
+       DATA NTRYH(1),NTRYH(2),NTRYH(3),NTRYH(4)/4,2,3,5/
+      1    ,TPI/6.28318530717959/
+       NL = N

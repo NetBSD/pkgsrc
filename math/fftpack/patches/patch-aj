@@ -1,0 +1,11 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/11/28 02:17:02 jtb Exp $
+
+--- rfftb1.f.orig	Fri Nov 17 16:48:24 2000
++++ rfftb1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE RFFTB1 (N,C,CH,WA,IFAC)
+-      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(1)
++      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(*)
+       NF = IFAC(2)
+       NA = 0
+       L1 = 1

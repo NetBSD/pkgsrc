@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/11/28 02:17:03 jtb Exp $
+
+--- cosqf.f.orig	Fri Nov 17 16:48:23 2000
++++ cosqf.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE COSQF (N,X,WSAVE)
+-      DIMENSION       X(1)       ,WSAVE(1)
++      DIMENSION       X(*)       ,WSAVE(1)
+       DATA SQRT2 /1.4142135623731/
+       IF (N-2) 102,101,103
+   101 TSQX = SQRT2*X(2)
