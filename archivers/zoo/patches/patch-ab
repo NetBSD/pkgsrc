@@ -1,43 +1,48 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 10:35:53 agc Exp $
+$NetBSD: patch-ab,v 1.4 1999/11/12 05:17:20 hubertf Exp $
 
---- makefile.orig	Tue Jul 16 17:52:08 1991
-+++ makefile	Sat Feb  7 18:20:15 1998
-@@ -18,13 +18,13 @@
+--- ./bsd.c	Sat May  1 06:21:53 1993
++++ /usr/pkgsrc/archivers/zoo/work.i386.unpatched/bsd.c	Fri Nov 12 06:19:38 1999
+@@ -69,8 +69,12 @@
+ }
  
- MAKE = make	      # needed for some systems e.g. older BSD
+ /* Function gettz() returns the offset from GMT in seconds */
+-long gettz()
++long gettz(t)
++long t;
+ {
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++   return -localtime(&t)->tm_gmtoff;
++#else
+ #define SEC_IN_DAY	(24L * 60L * 60L)
+ #define INV_VALUE		(SEC_IN_DAY + 1L)
+ 	static long retval = INV_VALUE;	     /* cache, init to impossible value */
+@@ -95,6 +99,7 @@
+ 	retval = -tm->tm_gmtoff;
+ #endif
+ 	return retval;
++#endif
+ }
  
--CC = cc
--CFLAGS =
-+#CC = cc
-+#CFLAGS =
- MODEL =
- EXTRA = -DBIG_MEM -DNDEBUG
- LINTFLAGS = -DLINT
--OPTIM = -O
--DESTDIR = /usr/local/bin
-+OPTIM = $(CFLAGS)
-+DESTDIR = $(PREFIX)/bin
+ /* Standard UNIX-compatible time routines */
+@@ -103,15 +108,19 @@
+ /* Standard UNIX-specific file attribute routines */
+ #include "nixmode.i"
  
- #List of all object files created for Zoo
- ZOOOBJS = addbfcrc.o addfname.o basename.o comment.o crcdefs.o \
-@@ -67,7 +67,7 @@
- 	@echo "lint_turboc:  Run lint under **IX for checking Turbo C/MSDOS code"
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#include <unistd.h>
++#else
+ #ifndef SEEK_CUR
+ # define  SEEK_CUR    1
+ #endif
++#endif
  
- # install alpha zoo as "tzoo"
--install:
-+inst_test:
- 	mv zoo $(DESTDIR)/tzoo
- 
- # install beta zoo as "bzoo"
-@@ -75,8 +75,9 @@
- 	mv zoo $(DESTDIR)/bzoo
- 
- # install production zoo as "zoo"
--inst_prod:
--	mv zoo $(DESTDIR)/zoo
-+install:
-+	$(INSTALL_PROGRAM) $(TARGETS) $(DESTDIR)
-+	$(INSTALL_DATA) zoo.1 fiz.1 $(PREFIX)/man/man1
- 
- # executable targets
- TARGETS = zoo fiz
+ /* Truncate a file. */
+ int zootrunc(f) FILE *f;
+ {
+-	extern long lseek();
+-	long seekpos;
++	extern off_t lseek();
++	off_t seekpos;
+ 	int fd = fileno(f);
+ 	seekpos = lseek(fd, 0L, SEEK_CUR);
+ 	if (seekpos >= 0)
