@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/06 23:16:01 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/11 22:11:50 jmmv Exp $
 share/sgml/docbook/2.4.1/241chg.txt
 share/sgml/docbook/2.4.1/announce.txt
 share/sgml/docbook/2.4.1/calstbl.mod
@@ -78,6 +78,18 @@ share/sgml/docbook/4.2/docbook.dcl
 share/sgml/docbook/4.2/docbook.dtd
 share/sgml/docbook/4.2/docbookx.dtd
 share/sgml/docbook/4.2/soextblx.dtd
+@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/docbook/2.4.1/catalog
+@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/docbook/3.0/catalog
+@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/docbook/3.1/catalog
+@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/docbook/4.0/catalog
+@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/docbook/4.1/catalog
+@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/docbook/4.2/catalog
+@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/docbook/4.2/catalog
+@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/docbook/4.1/catalog
+@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/docbook/4.0/catalog
+@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/docbook/3.1/catalog
+@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/docbook/3.0/catalog
+@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/docbook/2.4.1/catalog
 @dirrm share/sgml/docbook/4.2
 @dirrm share/sgml/docbook/4.1
 @dirrm share/sgml/docbook/4.0
@@ -85,4 +97,4 @@ share/sgml/docbook/4.2/soextblx.dtd
 @dirrm share/sgml/docbook/3.0
 @dirrm share/sgml/docbook/2.4.1
 @dirrm share/sgml/docbook
-@unexec ${RMDIR} %D/share/sgml 2>/dev/null || ${TRUE}
+@comment in xmlcatmgr: @dirrm share/sgml
