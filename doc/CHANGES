@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6739 2004/07/30 22:15:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.6740 2004/07/31 01:42:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3658,3 +3658,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vice to 1.14nb3 [kristerw 2004-07-30]
 	Updated dvdrip to 0.50.18 [recht 2004-07-30]
 	Updated glib2 to 2.4.5 [jmmv 2004-07-30]
+	Updated xpkgwedge to 1.12 [xtraeme 2004-07-31]
