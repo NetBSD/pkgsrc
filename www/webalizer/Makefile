@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.10 2000/04/26 03:21:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/10/18 16:41:23 mjl Exp $
 #
 
-DISTNAME=	webalizer-1.30-04-src
-PKGNAME=	webalizer-1.30.04
+DISTNAME=	webalizer-2.01-06-src
+PKGNAME=	webalizer-2.01.06
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/webalizer/ \
 		ftp://webalizer.dexa.org/pub/webalizer/ \
 		http://gd.tuwien.ac.at/infosys/logeval/webalizer/
-EXTRACT_SUFX=	.tgz
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	mjl@emsi.priv.at
+MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=	http://www.mrunix.net/webalizer/
 
 DEPENDS+=	gd-1.*:../../graphics/gd
 
-WRKSRC=		${WRKDIR}/webalizer-1.30-04
+WRKSRC=		${WRKDIR}/webalizer-2.01-06
 
 USE_X11=	yes
 GNU_CONFIGURE=  yes
