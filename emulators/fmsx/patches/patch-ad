@@ -1,0 +1,105 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/07/28 15:54:29 martin Exp $
+
+--- MSX.c.orig	Tue Sep  7 01:18:17 1999
++++ MSX.c	Fri Jul 28 17:30:49 2000
+@@ -85,7 +85,7 @@
+ int  Drives[2]   = { -1,-1 };      /* Disk image files       */
+ 
+ /** Fixed font used by fMSX **********************************/
+-char *FontName   = "DEFAULT.FNT";  /* Font file for text     */
++char *FontName   = FontDir "DEFAULT.FNT";  /* Font file for text     */
+ byte *FontBuf;                     /* Font for text modes    */
+ byte UseFont     = 0;              /* Use ext. font when 1   */
+ 
+@@ -339,7 +339,7 @@
+   {
+     case 0:
+       if(Verbose) printf("  Opening MSX.ROM...");
+-      P=LoadROM("MSX.ROM",0x8000,0);
++      P=LoadROM(RomDir "MSX.ROM",0x8000,0);
+       PRINTRESULT(P);
+       if(!P) return(0);
+       MemMap[0][0][0]=P;
+@@ -350,7 +350,7 @@
+ 
+     case 1:
+       if(Verbose) printf("  Opening MSX2.ROM...");
+-      P=LoadROM("MSX2.ROM",0x8000,0);
++      P=LoadROM(RomDir "MSX2.ROM",0x8000,0);
+       PRINTRESULT(P);
+       if(!P) return(0);
+       MemMap[0][0][0]=P;
+@@ -358,7 +358,7 @@
+       MemMap[0][0][2]=P+0x4000;
+       MemMap[0][0][3]=P+0x6000;
+       if(Verbose) printf("  Opening MSX2EXT.ROM...");
+-      P=LoadROM("MSX2EXT.ROM",0x4000,0);
++      P=LoadROM(RomDir "MSX2EXT.ROM",0x4000,0);
+       PRINTRESULT(P);
+       if(!P) return(0);
+       MemMap[3][1][0]=P;
+@@ -367,7 +367,7 @@
+ 
+     case 2:
+       if(Verbose) printf("  Opening MSX2P.ROM...");
+-      P=LoadROM("MSX2P.ROM",0x8000,0);
++      P=LoadROM(RomDir "MSX2P.ROM",0x8000,0);
+       PRINTRESULT(P);
+       if(!P) return(0);
+       MemMap[0][0][0]=P;
+@@ -375,7 +375,7 @@
+       MemMap[0][0][2]=P+0x4000;
+       MemMap[0][0][3]=P+0x6000;
+       if(Verbose) printf("  Opening MSX2PEXT.ROM...");
+-      P=LoadROM("MSX2PEXT.ROM",0x4000,0);
++      P=LoadROM(RomDir "MSX2PEXT.ROM",0x4000,0);
+       PRINTRESULT(P);
+       if(!P) return(0);
+       MemMap[3][1][0]=P;
+@@ -384,7 +384,7 @@
+   }
+ 
+   /* Try loading DiskROM */
+-  if(P=LoadROM("DISK.ROM",0x4000,0))
++  if(P=LoadROM(RomDir "DISK.ROM",0x4000,0))
+   {
+     if(Verbose) puts("  Opening DISK.ROM...OK");
+     MemMap[3][1][2]=P;
+@@ -434,16 +434,16 @@
+   if(Verbose) printf("Loading other ROMs:\n ");
+ 
+   /* Try loading CMOS memory contents */
+-  if(LoadROM("CMOS.ROM",sizeof(RTC),(byte *)RTC))
++  if(LoadROM(RomDir "CMOS.ROM",sizeof(RTC),(byte *)RTC))
+   { if(Verbose) printf(" CMOS.ROM"); }
+   else memcpy(RTC,RTCInit,sizeof(RTC));
+ 
+   /* Try loading Kanji alphabet ROM */
+-  if(Kanji=LoadROM("KANJI.ROM",0x20000,0))
++  if(Kanji=LoadROM(RomDir "KANJI.ROM",0x20000,0))
+   { if(Verbose) printf(" KANJI.ROM"); }
+ 
+   /* Try loading RS232 support ROM */
+-  if(P=LoadROM("RS232.ROM",0x4000,0))
++  if(P=LoadROM(RomDir "RS232.ROM",0x4000,0))
+   {
+     if(Verbose) printf(" RS232.ROM");
+     MemMap[3][0][2]=P;
+@@ -451,7 +451,7 @@
+   }
+ 
+   /* Try loading FM-PAC support ROM */
+-  if(P=LoadROM("FMPAC.ROM",0x4000,0))
++  if(P=LoadROM(RomDir "FMPAC.ROM",0x4000,0))
+   {
+     if(Verbose) printf(" FMPAC.ROM");
+     MemMap[3][3][2]=P;
+@@ -467,7 +467,7 @@
+          else J=0;
+ 
+     /* Try loading PAINTER ROM if slot found */
+-    if(J&&(P=LoadROM("PAINTER.ROM",0x10000,0)))
++    if(J&&(P=LoadROM(RomDir "PAINTER.ROM",0x10000,0)))
+     {
+       if(Verbose) printf(" PAINTER.ROM");
+       for(I=0;I<8;I++) MemMap[J][0][I]=P+I*0x2000;

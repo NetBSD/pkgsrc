@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/28 15:54:29 martin Exp $
+
+--- Z80.h.orig	Sat Jun  3 01:23:31 2000
++++ Z80.h	Sat Jun  3 01:29:01 2000
+@@ -40,6 +40,15 @@
+ typedef unsigned short word;
+ typedef signed char offset;
+ 
++#include <sys/endian.h>
++#if (_BYTE_ORDER == _LITTLE_ENDIAN)
++#define LSB_FIRST
++#elif (_BYTE_ORDER == _BIG_ENDIAN)
++#define MSB_FIRST
++#else
++#warn Check if your machine is big endian or not and define as appropriate one.
++#endif
++
+ /** Structured Datatypes *************************************/
+ /** NOTICE: #define LSB_FIRST for machines where least      **/
+ /**         signifcant byte goes first.                     **/
