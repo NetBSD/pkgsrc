@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6666 2004/07/24 08:48:57 recht Exp $
+$NetBSD: CHANGES,v 1.6667 2004/07/24 10:33:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3537,3 +3537,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rpm to 2.5.4nb2 [grant 2004-07-24]
 	Updated gss to 0.0.11 [wiz 2004-07-24]
 	Added patchutils-0.2.30 [recht 2004-07-24]
+	Updated chicken to 1.51nb1 [wiz 2004-07-24]
