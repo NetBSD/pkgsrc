@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2000/07/31 01:56:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.91 2000/08/23 05:34:49 veego Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -23,6 +23,7 @@
     SUBDIR += frotz
     SUBDIR += galaxa
     SUBDIR += gemdropx
+    SUBDIR += gnocatan
     SUBDIR += gnome-breakout
     SUBDIR += gnome-chess
     SUBDIR += gnome-games
