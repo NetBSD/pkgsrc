@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2004/06/10 15:31:47 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2004/06/17 20:56:56 minskim Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
