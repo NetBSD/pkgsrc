@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.15 2003/09/19 07:53:45 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.16 2003/09/22 19:49:10 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -400,10 +400,11 @@ ${_BLNK_COOKIE.${_pkg_}}:
 				${ECHO} "$$src: not found" >> ${.TARGET}; \
 				continue;				\
 			fi;						\
-			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}}" ]; then \
+			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}:Q}" ]; then \
 				dest="$$buildlink_dir/$$file";		\
 				msg="$$src";				\
 			else						\
+				dest="$$buildlink_dir/$$file";		\
 				dest=`${ECHO} $$dest | ${SED} ${BUILDLINK_TRANSFORM.${_pkg_}}`; \
 				msg="$$src -> $$dest";			\
 			fi;						\
