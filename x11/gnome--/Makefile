@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:59 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/14 13:50:44 drochner Exp $
 #
 
 DISTNAME=	gnomemm-1.1.19
@@ -13,10 +13,10 @@ COMMENT=	C++ binding for the GNOME libraries
 DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
 DEPENDS+=	libsigc++>=1.0.1:../../devel/libsigc++
 DEPENDS+=	gtk-->=1.2.5:../../x11/gtk--
+BUILD_DEPENDS+=	perl-*:../../lang/perl5
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	yes
-USE_PERL5=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig/scripts
 USE_X11BASE=	yes
