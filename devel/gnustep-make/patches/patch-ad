@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/12/17 14:55:58 sketch Exp $
+
+--- configure.orig	2003-12-16 17:46:09.407424981 +0000
++++ configure	2003-12-16 17:47:23.653519718 +0000
+@@ -4472,7 +4472,7 @@
+ 
+ # What we want to do: set AUTO_DEPENDENCIES to yes if gcc => 3.x
+ 
+-if test ! ${GCC} = "yes" ; then
++if test "X${GCC}" != "Xyes" ; then
+   AUTO_DEPENDENCIES=""
+   echo "$as_me:$LINENO: result: no: it's not gcc" >&5
+ echo "${ECHO_T}no: it's not gcc" >&6
