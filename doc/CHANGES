@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4104 2003/12/14 19:59:15 jmmv Exp $
+$NetBSD: CHANGES,v 1.4105 2003/12/14 20:00:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5152,3 +5152,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libwnck to 2.4.0.1 [jmmv 2003-12-14]
 	Updated libgsf to 1.8.2nb3 [jmmv 2003-12-14]
 	Updated libgnomedb to 1.0.0nb3 [jmmv 2003-12-14]
+	Updated linc to 1.1.1 [jmmv 2003-12-14]
