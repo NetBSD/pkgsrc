@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:29 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/29 04:47:40 jlam Exp $
 #
 
 DISTNAME=	netcdf-3.4
@@ -12,9 +12,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.unidata.ucar.edu/packages/netcdf/index.html
 COMMENT=	Library for array-oriented data access
 
-USE_FORTRAN=	# defined
-USE_LIBTOOL=	# defined
-GNU_CONFIGURE=	# defined
-CPPFLAGS+=	-Df2cFortran -Dunix
+USE_BUILDLINK_ONLY=	# defined
+USE_FORTRAN=		# defined
+USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		# defined
+CPPFLAGS+=		-Df2cFortran -Dunix
 
 .include "../../mk/bsd.pkg.mk"
