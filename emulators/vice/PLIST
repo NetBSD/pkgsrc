@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/01/31 00:51:39 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/07/16 22:59:11 kristerw Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -223,7 +223,6 @@ share/vice/VIC20/win_pos.vkm
 share/vice/VIC20/win_sym.vkm
 share/vice/VIC20/x11_pos.vkm
 share/vice/VIC20/x11_sym.vkm
-share/vice/fonts/cbm-directory-charset.fon
 share/vice/fonts/fonts.dir
 share/vice/fonts/vice-cbm.pcf
 @dirrm share/vice/fonts
