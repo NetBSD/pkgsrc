@@ -4,7 +4,7 @@
 # Date created:         17 Feb 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1.1.1 1998/03/18 00:49:33 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/18 13:54:23 agc Exp $
 #
 
 PKGNAME=        rsaref-2.0
@@ -22,20 +22,17 @@ MIRROR_DISTFILE=no
 IS_INTERACTIVE=	yes
 
 do-fetch:
-.if !defined(USA_RESIDENT) || ${USA_RESIDENT} != YES
-	@${ECHO}
-	@${ECHO} This package is legal for use only within the United States.
-	@${ECHO} You must set the variable USA_RESIDENT to YES to enable
-	@${ECHO} use of the rsaref package.
-	@${ECHO}
-	@${FALSE}
-.else
+	@(if [ "X${USA_RESIDENT}" != XYES ]; then	\
+		${ECHO} "This package is legal for use only within the United States."; \
+		${ECHO} "You must set the variable USA_RESIDENT to YES to enable"; \
+		${ECHO} "use of the rsaref package.";	\
+		${FALSE};				\
+	fi)
 	@${MKDIR} ${WRKDIR} || ${TRUE}
 	@if [ ! -f ${DISTDIR}/${DISTFILES} ]; then \
 		cd ${WRKDIR} && ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${RSA_SITE}README ${FETCH_AFTER_ARGS}; \
 		cd ${_DISTDIR} && ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${RSA_SITE}`egrep '^dist/U\.S\.-only-' ${WRKDIR}/README`/${DISTNAME}${EXTRACT_SUFX} ${FETCH_AFTER_ARGS}; \
 	fi
-.endif
 
 pre-configure:
 	@${RM} -f ${WRKSRC}/md5.h
