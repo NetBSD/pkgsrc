@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:50:20 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/12/08 14:41:38 wiz Exp $
 #
 
 .if !defined(SDL_MIXER_BUILDLINK2_MK)
 SDL_MIXER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		SDL_mixer
-BUILDLINK_DEPENDS.SDL_mixer?=	SDL_mixer>=1.2.5nb1
+BUILDLINK_DEPENDS.SDL_mixer?=	SDL_mixer>=1.2.5nb2
 BUILDLINK_PKGSRCDIR.SDL_mixer?=	../../audio/SDL_mixer
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.SDL_mixer=SDL_mixer

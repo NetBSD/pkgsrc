@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/08/05 13:38:26 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/08 14:41:40 wiz Exp $
 
 DISTNAME=	kbiff-3.6.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://devel-home.kde.org/~granroth/kbiff/
 EXTRACT_SUFX=	.tar.bz2
