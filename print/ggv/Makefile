@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/22 20:27:24 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/22 22:02:33 tron Exp $
 #
 
 DISTNAME=	ggv-0.50
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/ggv/ \
-		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/sources/ggv/ \
-		http://gd.tuwien.ac.at/hci/gnome.org/GNOME/sources/ggv/ \
-		ftp://ftp.circ.us.eu.org/mirrors/ftp.gnome.org/sources/ggv/  \
-		ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ggv/ \
-		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/sources/ggv/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ggv/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
