@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.558 2000/08/31 04:29:53 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.559 2000/08/31 14:29:00 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -627,25 +627,17 @@ TRUE?=		true				# Shell builtin
 TYPE?=		type				# Shell builtin
 .endif # !SunOS
 
-.if (defined(DESTDIR) && defined(PKGTOOLS_VERSION))
 PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
 PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
 PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
-.else
-PKG_ADD?=	${PKG_TOOLS_BIN}/pkg_add
-PKG_ADMIN?=	${PKG_TOOLS_BIN}/pkg_admin
-PKG_CREATE?=	${PKG_TOOLS_BIN}/pkg_create
-PKG_DELETE?=	${PKG_TOOLS_BIN}/pkg_delete
-PKG_INFO?=	${PKG_TOOLS_BIN}/pkg_info
-.endif
 
 .if !defined(PKGTOOLS_VERSION)
 .if !exists(${IDENT})
 PKGTOOLS_VERSION=${PKGTOOLS_REQD}
 .else
-PKGTOOLS_VERSION!=${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} 'BEGIN {n = 0;}; $$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ {gsub("/", "", $$4); if ($$4 > n) {n = $$4;}}; END {print n;}'
+PKGTOOLS_VERSION!=${IDENT} ${PKG_TOOLS_BIN}/pkg_add ${PKG_TOOLS_BIN}/pkg_admin ${PKG_TOOLS_BIN}/pkg_create ${PKG_TOOLS_BIN}/pkg_delete ${PKG_TOOLS_BIN}/pkg_info | ${AWK} 'BEGIN {n = 0;}; $$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ {gsub("/", "", $$4); if ($$4 > n) {n = $$4;}}; END {print n;}'
 .endif
 .endif
 MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
