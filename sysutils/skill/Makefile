@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/07/04 22:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/10 17:00:54 tv Exp $
 #
 
 DISTNAME=	skill-4.1.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.cs.utah.edu/~forys/software.html
 COMMENT=	Signal processes given user names, ttys, commands, or pids
+
+NOT_FOR_PLATFORM+= Interix-*-* # currently no machdep support
 
 .include "../../mk/bsd.prefs.mk"
 
