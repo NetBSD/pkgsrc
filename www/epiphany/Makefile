@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/07 16:41:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/08 21:00:04 jmmv Exp $
 #
 
 DISTNAME=	epiphany-1.0.7
@@ -31,6 +31,7 @@ GCONF2_SCHEMAS=		epiphany.schemas
 .include "../../net/ORBit2/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../sysutils/nautilus/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/mozilla-gtk2/buildlink2.mk"
