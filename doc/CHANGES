@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3240 2003/09/04 13:07:56 abs Exp $
+$NetBSD: CHANGES,v 1.3241 2003/09/04 13:10:58 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3529,3 +3529,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gaim to 0.68 [jmmv 2003-09-04]
 	Updated gq to 0.6.0 [xtraeme 2003-09-04]
 	Updated exim-exiscan to 4.22-12 [abs 2003-09-04]
+	Updated ethemes to 0.1nb2 [salo 2003-09-04]
