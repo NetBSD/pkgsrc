@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2004/12/18 16:21:28 grant Exp $
+# $NetBSD: Makefile,v 1.99 2005/01/18 04:00:18 jschauma Exp $
 
 DISTNAME=       pine4.61
 PKGNAME=        pine-4.61
@@ -36,7 +36,6 @@ LIBS+=		-lcurses
 BUILDNAME=	sg6
 .  else
 BUILDNAME=	sgi
-CFLAGS+=	-Dvfork=fork
 .  endif
 BUILDFILE=	sgi
 .else
