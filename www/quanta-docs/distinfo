@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/11/13 21:35:26 jlam Exp $
+
+SHA1 (quanta-docs/css.tar.bz2) = 29cf1b9f7decb2bc4ffec4bd80df37863e1cfb43
+Size (quanta-docs/css.tar.bz2) = 121295 bytes
+SHA1 (quanta-docs/html.tar.bz2) = 02dc5d2b0ea2037a1767b4e6964d4d283ad8ec36
+Size (quanta-docs/html.tar.bz2) = 93345 bytes
+SHA1 (quanta-docs/javascript.tar.bz2) = 738ea3383127ec9a0cec7ab92c7e0c2b8533da80
+Size (quanta-docs/javascript.tar.bz2) = 336563 bytes
+SHA1 (quanta-docs/php.tar.bz2) = 1cf76001f636d4ef048147fbac73f51cc5592112
+Size (quanta-docs/php.tar.bz2) = 378461 bytes
