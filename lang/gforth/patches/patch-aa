@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/10 13:56:57 simonb Exp $
+
+--- Makefile.in.orig	Sun Dec 27 02:21:00 1998
++++ Makefile.in	Sat Apr 10 22:28:41 1999
+@@ -422,9 +422,9 @@
+ install:	gforth$(EXE) $(FORTH_SRC) $(kernel_fi) gforth.fi gforthmi doc/gforth.1 prim install.TAGS installdirs
+ 		touch $(siteforthdir)/siteinit.fs
+ 		-$(RM) $(bindir)/gforth$(EXE) $(bindir)/gforth-$(VERSION)$(EXE) $(bindir)/gforthmi
+-		$(INSTALL_PROGRAM) -s gforth$(EXE) $(bindir)/gforth-$(VERSION)$(EXE)
++		$(INSTALL_PROGRAM) gforth$(EXE) $(bindir)/gforth-$(VERSION)$(EXE)
+ 		$(LN_S) $(bindir)/gforth-$(VERSION)$(EXE) $(bindir)/gforth$(EXE)
+-		$(INSTALL_PROGRAM) gforthmi $(bindir)/gforthmi-$(VERSION)
++		$(BSD_INSTALL_SCRIPT) gforthmi $(bindir)/gforthmi-$(VERSION)
+ 		$(LN_S) $(bindir)/gforthmi-$(VERSION) $(bindir)/gforthmi
+ 		-$(INSTALL_DATA) $(srcdir)/doc/gforth.1 $(man1dir)
+ 		-for i in $(srcdir)/doc/gforth.info*; do $(INSTALL_DATA) $$i $(infodir); done
