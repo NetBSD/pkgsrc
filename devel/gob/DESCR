@@ -1,0 +1,5 @@
+  GObject Builder is a simple preprocessor for easily creating GObject
+objects.  It does not parse any C code and ignores any C errors.  It is in
+spirit similar to things like lex or yacc.  In some ways it also resembles
+java.  But it is really just a simple preprocessor for creating GObjects
+for use in C or C++ and it is not a programming language. 
