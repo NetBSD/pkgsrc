@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/27 04:12:22 tron Exp $
+bin/opera
+share/doc/opera/LICENSE
+share/doc/opera/README
+share/opera/opera.adr
+share/opera/styles/opf.css
+share/opera/styles/wml.css
+@dirrm share/opera/styles
+@dirrm share/opera
+@dirrm share/doc/opera
