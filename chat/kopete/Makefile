@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/19 18:50:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/30 16:00:58 markd Exp $
 #
 
 DISTNAME=	kopete-0.6.2
@@ -25,9 +25,9 @@ CONFIGURE_ENV+=		ac_cv_have_libpsi="no"
 .include "../../audio/arts/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
-.include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
