@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2001/01/18 18:25:39 explorer Exp $
+# $NetBSD: Makefile,v 1.59 2001/01/19 21:19:40 tron Exp $
 #
 
     SUBDIR += PAM
@@ -59,6 +59,7 @@
     SUBDIR += sslwrap
     SUBDIR += stunnel
     SUBDIR += sudo
+    SUBDIR += tcp_wrappers
     SUBDIR += tripwire
     SUBDIR += uvscan
     SUBDIR += uvscan-dat
