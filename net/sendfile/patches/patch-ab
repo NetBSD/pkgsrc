@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 1999/06/12 21:33:19 tron Exp $
+$NetBSD: patch-ab,v 1.3 2000/09/09 19:51:38 wiz Exp $
 
---- src/sendfiled.c	Sun Jun  6 18:31:25 1999
-+++ src/sendfiled.c.orig	Thu Oct 29 17:48:08 1998
+--- src/sendfiled.c.orig	Thu Oct 29 17:48:08 1998
++++ src/sendfiled.c
 @@ -2945,7 +2945,7 @@
        exit(1);
      }
