@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2001/11/14 23:03:38 enami Exp $
+# $NetBSD: Makefile,v 1.77 2001/11/22 16:25:36 taya Exp $
 
-MOZ_VER=	0.9.5
-NB_VER=		nb1
+MOZ_VER=	0.9.6
+NB_VER=
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}${NB_VER}
 WRKSRC=		${WRKDIR}/mozilla
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla${MOZ_VER}/src/ 
 		ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/mozilla${MOZ_VER}/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	taya@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/
 COMMENT=	The open-source version of the Netscape browser
 
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--disable-tests \
 		--enable-mathml \
 		--enable-svg \
 		--enable-crypto
+SHAREMODE?=	644
 
 .include	"../../x11/gtk/buildlink.mk"
 .include	"../../graphics/gdk-pixbuf/buildlink.mk"
@@ -56,7 +57,6 @@ SCRIPTS_ENV+=	BINOWN=${BINOWN}
 SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SCRIPTS_ENV+=	SETENV=${SETENV}
-SHAREMODE?=	644
 
 .include "../../mk/bsd.prefs.mk"
 

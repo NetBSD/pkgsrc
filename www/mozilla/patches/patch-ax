@@ -1,9 +1,9 @@
-$NetBSD: patch-ax,v 1.4 2001/10/16 15:52:09 taya Exp $
+$NetBSD: patch-ax,v 1.5 2001/11/22 16:25:37 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/src/nsSocketTransport.cpp
---- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Sat Sep 29 17:27:36 2001
-+++ ./netwerk/base/src/nsSocketTransport.cpp	Sat Oct 13 19:56:58 2001
-@@ -187,8 +187,7 @@
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Tue Oct  9 07:17:25 2001
++++ ./netwerk/base/src/nsSocketTransport.cpp	Thu Nov 22 12:30:55 2001
+@@ -188,8 +188,7 @@
      //
      // Set up Internet defaults...
      //
@@ -13,7 +13,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      
      //
      // Initialize the global connect timeout value if necessary...
-@@ -237,6 +236,13 @@
+@@ -238,6 +237,13 @@
          nsAutoMonitor::DestroyMonitor(mMonitor);
          mMonitor = nsnull;
      }
@@ -27,7 +27,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
  }
  
  
-@@ -641,15 +647,7 @@
+@@ -642,15 +648,7 @@
      //
      // The hostname has not been resolved yet...
      //
@@ -44,7 +44,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
          nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
          if (NS_FAILED(rv)) return rv;
  
-@@ -672,7 +670,7 @@
+@@ -673,7 +671,7 @@
              //
              // The DNS lookup has finished...  It has either failed or succeeded.
              //
@@ -53,7 +53,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
                  mDNSRequest = 0;
                  rv = mStatus;
              } 
-@@ -832,7 +830,8 @@
+@@ -833,7 +831,8 @@
          //    This is only done the first time doConnection(...) is called.
          //
          if (NS_SUCCEEDED(rv)) {
@@ -63,7 +63,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
              if (PR_SUCCESS != status) {
                  PRErrorCode code = PR_GetError();
                  //
-@@ -857,6 +856,12 @@
+@@ -858,6 +857,12 @@
                  //
                  else {
                      // Connection refused...
@@ -76,7 +76,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
                      LOG(("nsSocketTransport: Connection Refused [%s:%d %x].  PRErrorCode = %x\n",
                          mHostName, mPort, this, code));
                      rv = NS_ERROR_CONNECTION_REFUSED;
-@@ -870,11 +875,23 @@
+@@ -871,11 +876,23 @@
      //
      else if (aSelectFlags) {
          if (PR_POLL_EXCEPT & aSelectFlags) {
@@ -100,7 +100,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
              LOG(("nsSocketTransport: Connection Refused via PR_POLL_HUP. [%s:%d %x].\n", 
                  mHostName, mPort, this));
              rv = NS_ERROR_CONNECTION_REFUSED;
-@@ -917,7 +934,7 @@
+@@ -918,7 +935,7 @@
      //
      // The hostname has not been resolved yet...
      //
@@ -109,7 +109,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
          nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
          if (NS_FAILED(rv)) return rv;
  
-@@ -936,16 +953,18 @@
+@@ -937,16 +954,18 @@
              return NS_ERROR_FAILURE;
          }
  
@@ -132,7 +132,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      }
  
      //
-@@ -1410,21 +1429,27 @@
+@@ -1411,21 +1430,27 @@
      // Enter the socket transport lock...
      nsAutoMonitor mon(mMonitor);
      nsresult rv = NS_OK;
@@ -171,7 +171,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      } else {
          // XXX: What should happen here?  The GetHostByName(...) succeeded but 
          //      there are *no* A records...
-@@ -1457,7 +1482,7 @@
+@@ -1458,7 +1483,7 @@
      // If the lookup failed, set the status...
      if (NS_FAILED(aStatus))
          mStatus = aStatus;
@@ -180,7 +180,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
          mStatus = NS_ERROR_ABORT;
  
      // Start processing the transport again - if necessary...
-@@ -1778,7 +1803,7 @@
+@@ -1779,7 +1804,7 @@
      *_retval = (char*)nsMemory::Alloc(aLen);
      if (!*_retval) return NS_ERROR_FAILURE;
  

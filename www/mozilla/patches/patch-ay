@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.4 2001/10/16 15:52:09 taya Exp $
+$NetBSD: patch-ay,v 1.5 2001/11/22 16:25:37 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h ./netwerk/base/src/nsSocketTransport.h
---- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h	Sat Sep 29 05:09:03 2001
-+++ ./netwerk/base/src/nsSocketTransport.h	Sat Oct 13 19:56:59 2001
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h	Tue Oct  9 07:17:25 2001
++++ ./netwerk/base/src/nsSocketTransport.h	Thu Nov 22 12:30:57 2001
 @@ -123,6 +123,11 @@
    eSocketDNS_Wait             = 0x2020
  };
