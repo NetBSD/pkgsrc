@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/01 18:29:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/09 20:11:45 minskim Exp $
 #
 
 DISTNAME=		gnome-icon-theme-1.2.0
@@ -25,4 +25,5 @@ PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
