@@ -1,35 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2001/11/19 04:40:00 lukem Exp $
-bin/aeg
-bin/apcsmart
-bin/belkin
-bin/bestfort
-bin/bestuferrups
-bin/bestups
-bin/engetron
-bin/everups
-bin/fentonups
-bin/genericups
-bin/ipt-anzen
-bin/masterguard
-bin/mge-ellipse
-bin/mgeups
-bin/multilink
-bin/mustekups
-bin/newapc
-bin/optiups
-bin/powercom
-bin/sec
-bin/sms
-bin/toshiba1500
-bin/ups-trust425+625
+@comment $NetBSD: PLIST,v 1.5 2001/11/21 03:22:05 simonb Exp $
 bin/upsc
 bin/upscmd
 bin/upsct
 bin/upsct2
-bin/upsdrvctl
-bin/upseyeux
 bin/upslog
-bin/victronups
 etc/nut/hosts.conf.sample
 etc/nut/multimon.conf.sample
 etc/nut/ups.conf.sample
@@ -55,7 +29,33 @@ man/man8/upsd.8
 man/man8/upslog.8
 man/man8/upsmon.8
 man/man8/upssched.8
+sbin/ups-drivers/aeg
+sbin/ups-drivers/apcsmart
+sbin/ups-drivers/belkin
+sbin/ups-drivers/bestfort
+sbin/ups-drivers/bestuferrups
+sbin/ups-drivers/bestups
+sbin/ups-drivers/engetron
+sbin/ups-drivers/everups
+sbin/ups-drivers/fentonups
+sbin/ups-drivers/genericups
+sbin/ups-drivers/ipt-anzen
+sbin/ups-drivers/masterguard
+sbin/ups-drivers/mge-ellipse
+sbin/ups-drivers/mgeups
+sbin/ups-drivers/multilink
+sbin/ups-drivers/mustekups
+sbin/ups-drivers/newapc
+sbin/ups-drivers/optiups
+sbin/ups-drivers/powercom
+sbin/ups-drivers/sec
+sbin/ups-drivers/sms
+sbin/ups-drivers/toshiba1500
+sbin/ups-drivers/ups-trust425+625
+sbin/ups-drivers/upseyeux
+sbin/ups-drivers/victronups
 sbin/upsd
+sbin/upsdrvctl
 sbin/upsmon
 sbin/upssched
 share/doc/nut/Changes.trust
@@ -90,5 +90,6 @@ share/doc/nut/tips.txt
 share/doc/nut/todo.txt
 share/doc/nut/ups-trust425+625.txt
 share/doc/nut/upssched.txt
+@dirrm sbin/ups-drivers
 @dirrm share/doc/nut/cables
 @dirrm share/doc/nut
