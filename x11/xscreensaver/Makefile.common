@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.72 2004/02/26 17:31:40 jmmv Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -70,12 +70,6 @@ CFLAGS+=		-fno-strict-aliasing
 GCC_REQD+=		2.95.3
 .endif
 
-.if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-.  include "../../devel/gettext-lib/buildlink3.mk"
-.  include "../../graphics/gle/buildlink3.mk"
-.  include "../../graphics/jpeg/buildlink3.mk"
-.elif empty(USE_BUILDLINK2:M[nN][oO])
-.  include "../../devel/gettext-lib/buildlink2.mk"
-.  include "../../graphics/gle/buildlink2.mk"
-.  include "../../graphics/jpeg/buildlink2.mk"
-.endif
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/gle/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
