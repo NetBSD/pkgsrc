@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2001/03/07 08:36:49 skrll Exp $
+# $NetBSD: Makefile,v 1.125 2001/03/14 16:41:26 skrll Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -57,6 +57,7 @@ SUBDIR+=	imlib
 SUBDIR+=	iGMT
 SUBDIR+=	jpeg
 SUBDIR+=	kdegraphics
+SUBDIR+=	kdegraphics2
 SUBDIR+=	lcms
 SUBDIR+=	libflash
 SUBDIR+=	libgdgeda
