@@ -1,18 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2002/02/27 03:47:56 mycroft Exp $
+$NetBSD: patch-aa,v 1.8 2002/03/12 16:02:57 tron Exp $
 
---- match.c.orig	Fri Jan 25 23:07:34 2002
-+++ match.c	Wed Feb 27 03:38:46 2002
-@@ -246,8 +246,11 @@
- 		   match. The 3 reads are caused by the
+--- match.c.orig	Sun Feb  3 02:38:39 2002
++++ match.c	Tue Mar 12 16:55:19 2002
+@@ -247,7 +247,7 @@
  		   running match, the checksum update and the
  		   literal send. */
--		if (offset-last_match >= CHUNK_SIZE+s->n && 
--		    (end-offset > CHUNK_SIZE)) {
-+		/* NOTE: If we just matched a block, then offset<last_match
-+		   (by 1).  The arithmetic here must be ordered so that type
-+		   promotions (s->n is unsigned) do not cause a false match. */
-+		if (offset >= last_match+CHUNK_SIZE+s->n && 
-+		    end > offset+CHUNK_SIZE) {
+ 		if (offset > last_match &&
+-		    offset-last_match >= CHUNK_SIZE+s->n && 
++		    offset >= last_match+CHUNK_SIZE+s->n && 
+ 		    (end-offset > CHUNK_SIZE)) {
  			matched(f,s,buf,offset - s->n, -2);
  		}
- 	} while (++offset < end);
