@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/26 05:02:15 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/08/26 05:15:03 sakamoto Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -14,6 +14,8 @@ MAINTAINER=	sakamoto@netbsd.org
 
 USE_IMAKE=	yes
 USE_XAW=	yes
+
+BUILD_DEFS+=	USE_WALLPAPER
 
 .include "../../mk/bsd.prefs.mk"
 
