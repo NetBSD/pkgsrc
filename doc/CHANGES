@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7517 2004/10/22 01:10:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7518 2004/10/22 05:43:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4809,3 +4809,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sylpheed-gtk2 to 0.9.12.20040918 [xtraeme 2004-10-21]
 	Updated mysql4-client to 4.0.21 [xtraeme 2004-10-22]
 	Updated mysql4-server to 4.0.21 [xtraeme 2004-10-22]
+	Updated dspam to 3.2.0 [xtraeme 2004-10-22]
