@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/25 08:40:00 jlam Exp $
+
+--- chess.h.orig	Sat Feb 19 11:28:46 2000
++++ chess.h
+@@ -86,7 +86,7 @@
+ // Structure for position in the opening book
+ 
+ struct book_rec {
+- unsigned __int64 pos_code;    // position hash code
++ u_int64_t pos_code;           // position hash code
+  int score;                    // score for position
+  int gambit;                   // flag for gambit play
+ };
