@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/05/03 12:43:04 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2002/05/03 13:44:40 wiz Exp $
 #
 
 DISTNAME=	gimp-print-4.2.1
 CATEGORIES=	print
-MASTER_SITES=	http://prdownloads.sourceforge.net/gimp-print/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
