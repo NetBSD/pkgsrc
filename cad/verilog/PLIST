@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:49:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/08 01:48:32 dmcmahill Exp $
 bin/iverilog
 bin/vvp
 include/ivl_target.h
@@ -14,6 +14,7 @@ include/vvm_thread.h
 lib/libvpi.a
 lib/libvpip.a
 lib/libvvm.a
+lib/ivl/fpga.tgt
 lib/ivl/ivl
 lib/ivl/iverilog.conf
 lib/ivl/ivlpp
