@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2001/04/30 05:03:26 jlam Exp $
-share/examples/squirrelmail/squirrelmail.conf.dist
+@comment $NetBSD: PLIST,v 1.8 2001/04/30 05:35:45 jlam Exp $
+share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
 share/squirrelmail/ChangeLog
