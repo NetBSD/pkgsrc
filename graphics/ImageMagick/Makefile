@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2002/11/13 19:17:18 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2003/01/03 23:04:35 wiz Exp $
 
-DISTNAME=		ImageMagick-5.5.1-6
-PKGNAME=		${DISTNAME:S/-6/.6/}
-PKGREVISION=		1
+DISTNAME=		ImageMagick-${IM_MAJOR_VER}-${IM_MINOR_VER}
+PKGNAME=		ImageMagick-${IM_MAJOR_VER}.${IM_MINOR_VER}
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
 			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
@@ -14,9 +13,12 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Package for display and interactive manipulation of images
 
+DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
+
 CONFLICTS=		geomview-[0-9]*    # both have a program named 'animate'
 
-DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
+IM_MAJOR_VER=		5.5.3
+IM_MINOR_VER=		2
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
@@ -24,7 +26,9 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-6//}
+WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
+
+PLIST_SUBST+=		IM_MAJOR_VER=${IM_MAJOR_VER}
 
 # c++ broken as of 'gcc version 2.95.3 20010315 (release) (NetBSD nb1)'
 NOT_FOR_PLATFORM=	NetBSD-*-sparc64
