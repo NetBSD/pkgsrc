@@ -1,9 +1,8 @@
-$NetBSD: patch-ae,v 1.2 1999/11/15 17:59:48 rh Exp $
-
---- misc.c.orig	Mon Nov 15 18:56:45 1999
-+++ misc.c	Mon Nov 15 18:56:45 1999
-@@ -436,6 +436,9 @@
- #   if defined(LINUX) && (defined(POWERPC) || defined(ALPHA) || defined(SPARC))
+$NetBSD: patch-ae,v 1.3 2000/06/30 19:36:06 itojun Exp $
+--- misc.c.orig	Wed Apr  5 09:37:29 2000
++++ misc.c	Sat Jul  1 04:30:58 2000
+@@ -453,6 +453,9 @@
+ 	/* This doesn't really work if the collector is in a shared library. */
  	GC_init_linux_data_start();
  #   endif
 +#   if defined(NETBSD) && defined(__ELF__)
