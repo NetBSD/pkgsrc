@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/28 20:09:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/29 07:24:49 xtraeme Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${IRSSI_DISTNAME}/${DISTNAME}
 
 DEPENDS+=	irssi>=${IRSSI_VERSION}:../../chat/irssi
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
 USE_LIBTOOL=	yes
@@ -33,5 +33,5 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/irssi/README.icb
 
-.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
