@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/26 12:33:59 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/25 20:02:55 snj Exp $
 
---- configure.orig	Mon Jun 18 00:14:24 2001
-+++ configure
-@@ -922,9 +922,9 @@
+--- configure.orig	2004-09-22 04:14:32.000000000 -0700
++++ configure	2004-09-25 12:37:19.000000000 -0700
+@@ -1859,9 +1859,9 @@ INSTALL_STRIP_PROGRAM="\${SHELL} \$(inst
  
  
  if test "x$prefix" != xNONE; then
@@ -12,5 +12,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/26 12:33:59 zuntum Exp $
 -  DOOMWADDIR="$ac_default_prefix/share/games/doom"
 +  DOOMWADDIR="$ac_default_prefix/share/doom"
  fi
- cat >> confdefs.h <<EOF
+ cat >>confdefs.h <<_ACEOF
  #define DOOMWADDIR "$DOOMWADDIR"
