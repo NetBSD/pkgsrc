@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/10/23 11:08:56 tron Exp $
+# $NetBSD: Makefile,v 1.12 1999/10/27 17:14:09 agc Exp $
 #
 
 DISTNAME=	gnumeric-0.38
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/gnumeric/
+
+BROKEN=		Problems with libglade
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/python:../../lang/python
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
