@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2003/04/15 15:08:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/04/17 15:07:56 salo Exp $
+#
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
-WRKSRC=		${WRKDIR}
 MASTER_SITES=	ftp://ftp.mirror.ac.uk/sites/ftp.netscape.com/pub/communicator/extras/fonts/windows/ \
 		ftp://ftp.riken.go.jp/pub/net/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp.man.poznan.pl/mirrors/mirrorsite.netscape.com/netscape/communicator/extras/fonts/windows/ \
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.mirror.ac.uk/sites/ftp.netscape.com/pub/communicator/ext
 DISTFILES=	${FONT_FILE} ${DOC_FILES}
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.bitstream.com
+HOMEPAGE=	http://www.bitstream.com/
 
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
@@ -30,18 +30,20 @@ DIST_SUBDIR=	cyberbit-ttf
 
 EXTRACT_CMD=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
 EXTRACT_ONLY=	${FONT_FILE}
-NO_PATCH=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
 
-USE_X11BASE=	yes
-FONTDIR=	${PREFIX}/lib/X11/fonts/TrueType
+USE_X11BASE=	YES
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
+
+FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TrueType
 DOCDIR=		${PREFIX}/share/doc/cyberbit-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTDIR}
+	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
+	${INSTALL_DATA} ${WRKDIR}/*.ttf ${FONTS_TTF_DIRS}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for f in ${DOC_FILES}; do \
 		${INSTALL_DATA} ${_DISTDIR}/$$f ${DOCDIR}; \
 	done
+
+.include "../../mk/fonts.mk"
