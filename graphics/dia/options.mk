@@ -1,26 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2004/11/17 21:42:11 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2005/01/20 18:49:33 jmmv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dia
-#PKG_SUPPORTED_OPTIONS=	python gnome cairo
-PKG_SUPPORTED_OPTIONS=	python gnome
-PKG_DEFAULT_OPTIONS=	python gnome 
+#PKG_SUPPORTED_OPTIONS=	gnome cairo
+PKG_SUPPORTED_OPTIONS=	gnome
+PKG_DEFAULT_OPTIONS=	gnome 
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
-CONFIGURE_ARGS+=	--with-python
-
-PYTHON_PATCH_SCRIPTS=	po-checktrans.py
-PYTHON_PATCH_SCRIPTS+=	plug-ins/python/gtkcons.py
-PYTHON_PATCH_SCRIPTS+=	sheets/checktrans.py
-.  include "../../lang/python/application.mk"
-.  include "../../x11/py-gtk2/buildlink3.mk"
-PLIST_SUBST+=		PYTHON_OPTION=
-.else
-CONFIGURE_ARGS+=	--without-python
-PLIST_SUBST+=		PYTHON_OPTION='@comment '
-.endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
 USE_DIRS+=		gnome2-1.5
