@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2004/04/22 09:18:42 tron Exp $
+
+--- otherlibs/labltk/jpf/Makefile.orig	Fri Apr 26 14:16:11 2002
++++ otherlibs/labltk/jpf/Makefile	Thu Apr 22 10:34:37 2004
+@@ -21,7 +21,7 @@
+ 	$(CAMLOPTLIBR) -o jpflib.cmxa $(OBJSX)
+ 
+ install: jpflib.cma
+-	cp $(OBJS:.cmo=.cmi) $(OBJS:.cmo=.mli) jpflib.cma $(INSTALLDIR)
++	${BSD_INSTALL_DATA} $(OBJS:.cmo=.cmi) $(OBJS:.cmo=.mli) jpflib.cma $(INSTALLDIR)
+ 
+ installopt: jpflib.cmxa
+ 	cp jpflib.cmxa jpflib.a $(OBJS:.cmo=.cmx) $(INSTALLDIR)

@@ -1,0 +1,16 @@
+$NetBSD: patch-ar,v 1.1 2004/04/22 09:18:38 tron Exp $
+
+--- camlp4/top/Makefile.orig	Fri Jul 19 16:53:56 2002
++++ camlp4/top/Makefile	Thu Apr 22 10:34:37 2004
+@@ -42,7 +42,9 @@
+ get_promote:
+ 
+ install:
+-	-$(MKDIR) $(LIBDIR)/camlp4
+-	cp $(TARGET) $(LIBDIR)/camlp4/.
++	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
++	for i in $(TARGET); do	\
++		${BSD_INSTALL_DATA} $$i $(LIBDIR)/camlp4/ ; \
++	done
+ 
+ include .depend

@@ -1,17 +1,20 @@
-$NetBSD: patch-ao,v 1.1 2004/03/04 06:27:45 minskim Exp $
+$NetBSD: patch-ao,v 1.2 2004/04/22 09:18:38 tron Exp $
 
---- otherlibs/labltk/tkanim/tkAnimGIF.c.orig	2002-07-23 09:12:00.000000000 -0500
-+++ otherlibs/labltk/tkanim/tkAnimGIF.c
-@@ -336,7 +336,11 @@ FileReadGIF(interp, f, fileName, formatS
-             }
-         }
-         Tk_PhotoPutBlock(photoHandle, &block, 0, 0, 
--                         imageWidth, imageHeight);
-+                         imageWidth, imageHeight
-+#if (TK_MAJOR_VERSION == 8 && TK_MINOR_VERSION >= 4 || TK_MAJOR_VERSION > 8)
-+                   , TK_PHOTO_COMPOSITE_SET
-+#endif
-+          );
- #ifdef TKANIM_DEBUG
-     fprintf(stderr, " Retrieving result\n");
- #endif
+--- camlp4/meta/Makefile.orig	Fri Jul 19 16:53:49 2002
++++ camlp4/meta/Makefile	Thu Apr 22 10:34:37 2004
+@@ -42,10 +42,11 @@
+ 	done
+ 
+ install:
+-	-$(MKDIR) $(LIBDIR)/camlp4 $(BINDIR)
+-	cp $(OBJS) $(LIBDIR)/camlp4/.
+-	cp pa_ifdef.cmi pa_extend.cmi $(LIBDIR)/camlp4/.
+-	cp camlp4r$(EXE) $(BINDIR)/.
++	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
++	-${BSD_INSTALL_PROGRAM_DIR}  $(BINDIR)
++	${BSD_INSTALL_DATA} $(OBJS) $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_DATA} pa_ifdef.cmi pa_extend.cmi $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_SCRIPT} camlp4r$(EXE) $(BINDIR)/.
+ 	if test -f $(COPT); then cp $(COPT) $(BINDIR)/.; fi
+ 
+ include .depend

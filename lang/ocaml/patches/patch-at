@@ -1,0 +1,28 @@
+$NetBSD: patch-at,v 1.1 2004/04/22 09:18:39 tron Exp $
+
+--- configure.orig	Wed Aug  7 14:45:00 2002
++++ configure	Thu Apr 22 10:34:37 2004
+@@ -528,6 +528,7 @@
+   rs6000-*-aix*)                arch=power; model=rs6000; system=aix;;
+   powerpc-*-aix*)               arch=power; model=ppc; system=aix;;
+   powerpc-*-linux*)             arch=power; model=ppc; system=elf;;
++  powerpc-*-netbsd*)            arch=power; model=ppc; system=bsd;;
+   powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
+   powerpc-*-darwin*)            arch=power; model=ppc; system=rhapsody;;
+   arm*-*-linux*)                arch=arm; system=linux;;
+@@ -591,6 +592,7 @@
+   power,rs6000,aix) asflags='-u -m pwr -w'; asppflags="$asflags";;
+   power,ppc,aix)    asflags='-u -m ppc -w'; asppflags="$asflags";;
+   power,*,elf)      aspp='gcc'; asppflags='-c';;
++  power,*,bsd)      aspp='gcc'; asppflags='-c -DSYS_$(SYSTEM)';;
+   power,*,rhapsody) ;;
+   arm,*,linux)      aspp='gcc'; asppflags='-c -DSYS_$(SYSTEM)';;
+   ia64,*,linux)     asflags=-xexplicit
+@@ -601,6 +603,7 @@
+   alpha,*,digital) profiling='prof';;
+   i386,*,linux_elf) profiling='prof';;
+   i386,*,bsd_elf) profiling='prof';;
++  power,*,bsd) profiling='prof';;
+   *) profiling='noprof';;
+ esac
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-br,v 1.1 2004/04/22 09:18:46 tron Exp $
+
+--- stdlib/Makefile.orig	Wed Jun  5 14:08:38 2002
++++ stdlib/Makefile	Thu Apr 22 10:34:37 2004
+@@ -47,7 +47,7 @@
+ allopt-prof: stdlib.p.cmxa std_exit.p.cmx
+ 
+ install:
+-	cp stdlib.cma std_exit.cmo *.cmi *.mli *.ml camlheader camlheader_ur \
++	${BSD_INSTALL_DATA} stdlib.cma std_exit.cmo *.cmi *.mli *.ml camlheader camlheader_ur \
+            $(LIBDIR)
+ 
+ installopt: installopt-default installopt-$(PROFILING)

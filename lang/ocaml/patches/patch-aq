@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1 2004/04/22 09:18:38 tron Exp $
+
+--- camlp4/odyl/Makefile.orig	Fri Jul 19 16:53:56 2002
++++ camlp4/odyl/Makefile	Thu Apr 22 10:34:37 2004
+@@ -51,7 +51,8 @@
+ compare:
+ 
+ install:
+-	-$(MKDIR) $(LIBDIR)/camlp4 $(BINDIR)
+-	cp odyl.cmo odyl.cma $(LIBDIR)/camlp4/.
++	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
++	-${BSD_INSTALL_DATA_DIR}  $(BINDIR)
++	${BSD_INSTALL_DATA} odyl.cmo odyl.cma $(LIBDIR)/camlp4/.
+ 
+ include .depend

@@ -1,17 +1,30 @@
-$NetBSD: patch-al,v 1.2 2003/07/10 12:28:55 jtb Exp $
+$NetBSD: patch-al,v 1.3 2004/04/22 09:18:37 tron Exp $
 
---- asmrun/i386.S.orig
-+++ asmrun/i386.S
-@@ -53,10 +53,10 @@
- #elif defined(SYS_bsd_elf)
- #define PROFILE_CAML \
-         pushl %ebp; movl %esp, %ebp; pushl %eax; pushl %ecx; pushl %edx; \
--        call .mcount; \
-+        call __mcount; \
-         popl %edx; popl %ecx; popl %eax; popl %ebp
- #define PROFILE_C \
--        pushl %ebp; movl %esp, %ebp; call .mcount; popl %ebp
-+        pushl %ebp; movl %esp, %ebp; call __mcount; popl %ebp
- #endif
- #else
- #define PROFILE_CAML
+--- camlp4/camlp4/Makefile.orig	Mon Aug  5 15:50:25 2002
++++ camlp4/camlp4/Makefile	Thu Apr 22 10:34:37 2004
+@@ -62,11 +62,19 @@
+ 	done
+ 
+ install:
+-	-$(MKDIR) $(BINDIR)
+-	-$(MKDIR) $(LIBDIR)/camlp4
+-	cp $(CAMLP4) $(BINDIR)/.
+-	cp mLast.mli quotation.mli ast2pt.mli pcaml.mli spretty.mli $(LIBDIR)/camlp4/.
+-	cp mLast.cmi quotation.cmi ast2pt.cmi pcaml.cmi spretty.cmi $(LIBDIR)/camlp4/.
+-	cp camlp4.cma $(LIBDIR)/camlp4/.
++	-${BSD_INSTALL_PROGRAM_DIR} $(BINDIR)
++	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
++	${BSD_INSTALL_SCRIPT} $(CAMLP4) $(BINDIR)/.
++	${BSD_INSTALL_DATA} mLast.mli $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} quotation.mli $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} ast2pt.mli $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} pcaml.mli $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} spretty.mli $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} mLast.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} quotation.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} ast2pt.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} pcaml.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} spretty.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} camlp4.cma $(LIBDIR)/camlp4/
+ 
+ include .depend

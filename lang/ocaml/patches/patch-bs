@@ -1,0 +1,13 @@
+$NetBSD: patch-bs,v 1.1 2004/04/22 09:18:47 tron Exp $
+
+--- tools/Makefile.orig	Mon Apr 22 12:06:59 2002
++++ tools/Makefile	Thu Apr 22 10:34:37 2004
+@@ -44,7 +44,7 @@
+ 	rm -f ocamldep
+ 
+ install::
+-	cp ocamldep $(BINDIR)/ocamldep$(EXE)
++	${BSD_INSTALL_SCRIPT} ocamldep $(BINDIR)/ocamldep$(EXE)
+ 
+ # The profiler
+ 
