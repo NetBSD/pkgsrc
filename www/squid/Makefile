@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2002/11/12 16:07:17 taca Exp $
+# $NetBSD: Makefile,v 1.71 2002/11/24 11:01:17 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -9,12 +10,29 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=     squid-2.5.STABLE1-disable-ident-lookups.patch \
+PATCHFILES=	squid-2.5.STABLE1-disable-ident-lookups.patch \
 		squid-2.5.STABLE1-disable-http-violations.patch \
 		squid-2.5.STABLE1-proxy_auth.patch \
 		squid-2.5.STABLE1-max_user_ip.patch \
 		squid-2.5.STABLE1-cache_dir_docs.patch \
-		squid-2.5.STABLE1-load_icons.patch
+		squid-2.5.STABLE1-load_icons.patch \
+		squid-2.5.STABLE1-referer_log.patch \
+		squid-2.5.STABLE1-ldap_auth.patch \
+		squid-2.5.STABLE1-addlang.patch \
+		squid-2.5.STABLE1-pthreads.patch \
+		squid-2.5.STABLE1-strwordtok.patch \
+		squid-2.5.STABLE1-wccp.patch \
+		squid-2.5.STABLE1-memstat.patch \
+		squid-2.5.STABLE1-aufs.patch \
+		squid-2.5.STABLE1-acl_leak.patch \
+		squid-2.5.STABLE1-ext_acl_comma.patch \
+		squid-2.5.STABLE1-request_entity.patch \
+		squid-2.5.STABLE1-ext_acl_exit.patch \
+		squid-2.5.STABLE1-uninstall.patch \
+		squid-2.5.STABLE1-cachemgr.patch \
+		squid-2.5.STABLE1-auth-proxy.patch \
+		squid-2.5.STABLE1-dnsserver.patch
+#		squid-2.5.STABLE1-spaces.patch		# seems to broken?
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	tron@netbsd.org

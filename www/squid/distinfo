@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2002/10/25 02:13:37 taca Exp $
+$NetBSD: distinfo,v 1.19 2002/11/24 11:01:17 taca Exp $
 
 SHA1 (squid-2.5.STABLE1.tar.bz2) = 6705006527f5fa0753e7c9f14347f36b1b787e62
 Size (squid-2.5.STABLE1.tar.bz2) = 1006600 bytes
@@ -14,6 +14,38 @@ SHA1 (squid-2.5.STABLE1-cache_dir_docs.patch) = 3795590991c447b1f4b3bc78db78722f
 Size (squid-2.5.STABLE1-cache_dir_docs.patch) = 960 bytes
 SHA1 (squid-2.5.STABLE1-load_icons.patch) = 960858c6d8ada1d70c20d740148de42ddb3c93a0
 Size (squid-2.5.STABLE1-load_icons.patch) = 1254 bytes
+SHA1 (squid-2.5.STABLE1-referer_log.patch) = f5fceab5c485068d023b6093490f26f42278096e
+Size (squid-2.5.STABLE1-referer_log.patch) = 1347 bytes
+SHA1 (squid-2.5.STABLE1-ldap_auth.patch) = 0fe9f652d5cb72821b70151a819454ddb5f553ec
+Size (squid-2.5.STABLE1-ldap_auth.patch) = 1203 bytes
+SHA1 (squid-2.5.STABLE1-addlang.patch) = aafb5c5535a2e48a83831cd42265c6a5354942cc
+Size (squid-2.5.STABLE1-addlang.patch) = 1483 bytes
+SHA1 (squid-2.5.STABLE1-pthreads.patch) = ba0839b2595e005ffa5fe2d7f8de685097703adf
+Size (squid-2.5.STABLE1-pthreads.patch) = 4047 bytes
+SHA1 (squid-2.5.STABLE1-strwordtok.patch) = 916e63f5db23971466e1d15038f09d47112f0f81
+Size (squid-2.5.STABLE1-strwordtok.patch) = 2005 bytes
+SHA1 (squid-2.5.STABLE1-wccp.patch) = 38ccbbab09a03228f3617f16db1a916e23439eeb
+Size (squid-2.5.STABLE1-wccp.patch) = 2143 bytes
+SHA1 (squid-2.5.STABLE1-memstat.patch) = 4c67ece7a7cc1e6ab46b2a6e586287adc3a5d426
+Size (squid-2.5.STABLE1-memstat.patch) = 571 bytes
+SHA1 (squid-2.5.STABLE1-aufs.patch) = 82e216a036ae3660cf0085c20b15feab881e13cf
+Size (squid-2.5.STABLE1-aufs.patch) = 17855 bytes
+SHA1 (squid-2.5.STABLE1-acl_leak.patch) = a217d6a2c00637165a4b61f8ebc411bd69ea8539
+Size (squid-2.5.STABLE1-acl_leak.patch) = 1722 bytes
+SHA1 (squid-2.5.STABLE1-ext_acl_comma.patch) = 3a6a739f52a67e4256df20756ce123108fcb1ca0
+Size (squid-2.5.STABLE1-ext_acl_comma.patch) = 600 bytes
+SHA1 (squid-2.5.STABLE1-request_entity.patch) = 68f756428f8477b5779c424965d6bd66c154577a
+Size (squid-2.5.STABLE1-request_entity.patch) = 1999 bytes
+SHA1 (squid-2.5.STABLE1-ext_acl_exit.patch) = 3de37ee805f22d47e1296edb64a4c8c50d58fda4
+Size (squid-2.5.STABLE1-ext_acl_exit.patch) = 1858 bytes
+SHA1 (squid-2.5.STABLE1-uninstall.patch) = b103cc343e77e3029c7a995a4fe8077efbd0f66f
+Size (squid-2.5.STABLE1-uninstall.patch) = 2395 bytes
+SHA1 (squid-2.5.STABLE1-cachemgr.patch) = 364542493e269db5c9101557d4e095caa3ca25aa
+Size (squid-2.5.STABLE1-cachemgr.patch) = 1182 bytes
+SHA1 (squid-2.5.STABLE1-auth-proxy.patch) = cbb1d1300027ccaef73356a3ee7d849b1e386d27
+Size (squid-2.5.STABLE1-auth-proxy.patch) = 1225 bytes
+SHA1 (squid-2.5.STABLE1-dnsserver.patch) = 3f58bac1233b90e7504e65e1cb3e55fa8aba5273
+Size (squid-2.5.STABLE1-dnsserver.patch) = 795 bytes
 SHA1 (patch-aa) = e29686a5c75635129b7e2eaf451140f10f29e081
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = b962e05bcaccd0d9a0969b2f1419fd73456440cd
