@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/05/30 17:52:12 seb Exp $
+# $NetBSD: Makefile,v 1.12 2003/06/07 16:03:05 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
 DISTNAME=	gawk-3.1.1
@@ -20,6 +20,8 @@ TEXINFO_OVERRIDE=	# defined
 EVAL_PREFIX+=		GETTEXT_PREFIX=gettext
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
+
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../mk/bsd.prefs.mk"
 
