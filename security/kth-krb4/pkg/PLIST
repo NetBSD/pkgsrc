@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/25 17:57:29 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/11 16:28:54 wennmach Exp $
 share/examples/kth-krb4/inetd.conf.changes
 share/examples/kth-krb4/krb.conf
 share/examples/kth-krb4/krb.realms
@@ -38,7 +38,6 @@ lib/libss.a
 lib/libotp.a
 lib/libroken.a
 bin/compile_et
-bin/des
 bin/mk_cmds
 bin/kinit
 bin/kdestroy
