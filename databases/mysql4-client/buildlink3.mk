@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/28 01:12:44 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/11/16 14:10:55 ben Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MYSQL_CLIENT_BUILDLINK3_MK:=	${MYSQL_CLIENT_BUILDLINK3_MK}+
@@ -16,6 +16,7 @@ BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mysql4-client
 BUILDLINK_LIBDIRS.mysql-client?=	lib/mysql
 .endif	# MYSQL_CLIENT_BUILDLINK3_MK
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
