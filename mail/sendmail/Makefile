@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/12/01 21:32:08 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/12/01 21:55:12 tron Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -34,12 +34,15 @@ MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
 .endif
 
 post-build:
+	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
+	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
 	${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' \
 	  -e 's#@@PREFIX@@#${PREFIX}#g' \
 	  <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
-	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
-	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
 .if ${USE_DB2} == YES
+	${ECHO} >>${MESSAGE_FILE} ""
+	${ECHO} >>${MESSAGE_FILE} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all"
+	${ECHO} >>${MESSAGE_FILE} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"."
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
 	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
