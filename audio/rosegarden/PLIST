@@ -1,15 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/19 12:21:06 wiz Exp $
 bin/rosegarden
-lib/rosegarden/bin/sequencer
-lib/rosegarden/bin/editor
-lib/rosegarden/example/glazunov.rose
-lib/rosegarden/synth-patches/std.sb
-lib/rosegarden/synth-patches/drums.sb
-lib/rosegarden/help/rosehelp.info
-lib/rosegarden/help/rosehelp.hnx
 lib/X11/app-defaults/Rosegarden
-@dirrm lib/rosegarden/bin
-@dirrm lib/rosegarden/example
+lib/rosegarden/bin/editor
+lib/rosegarden/bin/sequencer
+lib/rosegarden/example/glazunov.rose
+lib/rosegarden/help/rosehelp.hnx
+lib/rosegarden/help/rosehelp.info
+lib/rosegarden/petal/Petal.tcl
+lib/rosegarden/petal/PetalEditor.tcl
+lib/rosegarden/petal/PetalMidi.tcl
+lib/rosegarden/petal/pkgIndex.tcl
+lib/rosegarden/rosepetal-filters/harmonizer.tcl
+lib/rosegarden/rosepetal-filters/pattern.tcl
+lib/rosegarden/synth-patches/drums.sb
+lib/rosegarden/synth-patches/std.sb
 @dirrm lib/rosegarden/synth-patches
+@dirrm lib/rosegarden/rosepetal-filters
+@dirrm lib/rosegarden/petal
 @dirrm lib/rosegarden/help
+@dirrm lib/rosegarden/example
+@dirrm lib/rosegarden/bin
 @dirrm lib/rosegarden
+
