@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2001/06/11 06:34:58 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2001/06/16 20:05:10 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.13
 CATEGORIES=		x11 gnome
@@ -8,15 +8,9 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Libaries for the GNU Network Object Model Environment
 
-DEPENDS+=		ORBit-*:../../net/ORBit
-DEPENDS+=		esound>=0.2.18:../../audio/esound
-DEPENDS+=		gtk+>=1.2.7:../gtk
-DEPENDS+=		imlib-*:../../graphics/imlib
 BUILD_USES_MSGFMT=	yes
 
-USE_LIBINTL=		YES
 USE_X11BASE=		YES
-USE_XPM=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -26,10 +20,17 @@ CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE} \
 			--with-kde-datadir=${X11PREFIX}/share/kde
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
-			X11BASE=${X11BASE}
+			X11BASE=${X11BASE} \
+			PKGLOCALEDIR=${PKGLOCALEDIR}
 
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=       	-L${LOCALBASE}/lib
+USE_CONFIG_WRAPPER=	YES
+
+.include "../../audio/esound/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/imlib/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../net/ORBit/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 
 LOCALSTATEDIR=		/var/gnome
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
@@ -59,6 +60,18 @@ post-patch:
 pre-build:
 	cd ${WRKSRC}/support && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} gnomesupport.h
+
+# Fix gnomeConf.sh, gnome-config by removing buildlink directory references.
+post-build:
+	@cd ${WRKSRC};							\
+	for file in gnomeConf.sh gnome-config; do			\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
+			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
+			$${file}.fixme > $${file};			\
+		${RM} -f $${file}.fixme;				\
+		${CHMOD} +x $${file};					\
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/CORBA/servers
