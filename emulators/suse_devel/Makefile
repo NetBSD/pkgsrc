@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1999/09/19 23:58:41 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/27 20:18:34 tron Exp $
 
 DISTNAME=		suse_devel-6.1p1
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=x1/}
+MASTER_SITES=		${MASTER_SITE_SUSE:=d1/}
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		tron@netbsd.org
