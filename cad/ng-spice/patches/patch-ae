@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.4 2004/12/02 00:06:40 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.5 2004/12/02 13:33:32 dmcmahill Exp $
 
---- configure.orig	Wed Jan 28 00:25:53 2004
+--- configure.orig	Mon Sep  6 09:49:40 2004
 +++ configure
-@@ -2986,7 +2986,7 @@ fi
+@@ -3295,7 +3295,7 @@ fi
  if test "$enable_debug" = "no"; then
  	{ echo "$as_me:$LINENO: WARNING: Removing debugging option!" >&5
  echo "$as_me: WARNING: Removing debugging option!" >&2;}
 -	CFLAGS=" "
-+	CFLAGS="`echo $CFLAGS | sed 's;-g;;g'`"
++	CFLAGS="`echo $CFLAGS | sed 's;-g;;g'` "
  fi
  
  
