@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/01 22:32:26 he Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/20 00:03:40 wiz Exp $
 share/doc/html/postgresql/admin-preface.html
 share/doc/html/postgresql/admin.html
 share/doc/html/postgresql/app-clusterdb.html
@@ -191,11 +191,11 @@ share/doc/html/postgresql/libpq-notify.html
 share/doc/html/postgresql/libpq-threading.html
 share/doc/html/postgresql/libpq-trace.html
 share/doc/html/postgresql/libpq.html
-share/doc/html/postgresql/ln17989.html
-share/doc/html/postgresql/ln24945.html
+share/doc/html/postgresql/ln17992.html
 share/doc/html/postgresql/ln25.html
-share/doc/html/postgresql/ln37389.html
-share/doc/html/postgresql/ln52105.html
+share/doc/html/postgresql/ln26479.html
+share/doc/html/postgresql/ln38923.html
+share/doc/html/postgresql/ln53639.html
 share/doc/html/postgresql/ln659.html
 share/doc/html/postgresql/lo-funcs.html
 share/doc/html/postgresql/lo-implementation.html
@@ -387,6 +387,7 @@ share/doc/html/postgresql/release-7-2-3.html
 share/doc/html/postgresql/release-7-2-4.html
 share/doc/html/postgresql/release-7-2-5.html
 share/doc/html/postgresql/release-7-2-6.html
+share/doc/html/postgresql/release-7-2-7.html
 share/doc/html/postgresql/release-7-2.html
 share/doc/html/postgresql/release-7-3-1.html
 share/doc/html/postgresql/release-7-3-2.html
@@ -395,6 +396,7 @@ share/doc/html/postgresql/release-7-3-4.html
 share/doc/html/postgresql/release-7-3-5.html
 share/doc/html/postgresql/release-7-3-6.html
 share/doc/html/postgresql/release-7-3-7.html
+share/doc/html/postgresql/release-7-3-8.html
 share/doc/html/postgresql/release-7-3.html
 share/doc/html/postgresql/release.html
 share/doc/html/postgresql/resources.html
@@ -579,8 +581,8 @@ share/doc/html/postgresql/user.html
 share/doc/html/postgresql/wal-configuration.html
 share/doc/html/postgresql/wal-implementation.html
 share/doc/html/postgresql/wal.html
-share/doc/html/postgresql/x1779.html
-share/doc/html/postgresql/x11962.html
+share/doc/html/postgresql/x11965.html
+share/doc/html/postgresql/x1782.html
 share/doc/html/postgresql/xaggr.html
 share/doc/html/postgresql/xfunc-c.html
 share/doc/html/postgresql/xfunc-internal.html
