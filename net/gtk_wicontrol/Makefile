@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2003/03/01 00:34:43 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/04 15:00:26 wiz Exp $
 
-DISTNAME=	gtk_wicontrol-0.16
+DISTNAME=	gtk_wicontrol-0.17
 CATEGORIES=	net
 MASTER_SITES=	http://www.izawa.org/software/gtk_wicontrol/
 
