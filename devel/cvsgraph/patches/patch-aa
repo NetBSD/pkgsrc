@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/12/09 14:25:00 mjl Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/10 15:10:50 adrianp Exp $
 
---- Makefile.in.orig	Tue Nov 20 10:25:41 2001
-+++ Makefile.in
+--- Makefile.in.orig	Fri Aug  6 18:30:24 2004
++++ Makefile.in	Fri Aug  6 18:31:18 2004
 @@ -10,6 +10,7 @@
  
  LIBS	= @LIBS@
- CFLAGS	= @CFLAGS@ -DETCDIR=\"$(ETCDIR)\"
+ CFLAGS	= @CFLAGS@ -DETCDIR=\"$(ETCDIR)\" -DINTTYPE="@INTTYPE@"
 +LDFLAGS	= @LDFLAGS@
  YACCFLAGS= -t
  LEXFLAGS= @LEXFLAGS@ -d #-b
  
-@@ -33,7 +34,7 @@
- 	$(CC) $(CFLAGS) -c -o $*.o $<
+@@ -34,7 +35,7 @@
+ all: $(TARGET)
  
  $(TARGET): $(COBJS) $(GENOBJS)
 -	$(CC) $(CFLAGS) -o $(TARGET) $(COBJS) $(GENOBJS) $(LIBS)
