@@ -1,0 +1,5 @@
+This is GNU Libtool, a generic library support script.  Libtool hides
+the complexity of using shared libraries behind a consistent, portable
+interface.
+
+This edition of libtool has been customized for the NetBSD pkg system.

@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1 1998/10/02 14:46:09 tv Exp $
+
+--- ltmain.sh.orig	Tue Jul 21 16:59:33 1998
++++ ltmain.sh	Tue Jul 21 17:02:42 1998
+@@ -144,6 +144,8 @@
+     prev=execute_dlfiles
+     ;;
+ 
++  --install-la) install_la="yes" ;;
++
+   -*)
+     $echo "$modename: unrecognized option \`$arg'" 1>&2
+     $echo "$help" 1>&2
+@@ -1841,10 +1843,12 @@
+           IFS="$save_ifs"
+         fi
+ 
++if test -n "$install_la"; then
+         # Install the pseudo-library for information purposes.
+         name=`$echo "X$file" | $Xsed -e 's%^.*/%%'`
+         $show "$install_prog $file $destdir/$name"
+         $run eval "$install_prog $file $destdir/$name" || exit $?
++fi
+ 
+         # Maybe install the static library, too.
+         test -n "$old_library" && staticlibs="$staticlibs $dir/$old_library"
+@@ -1912,6 +1916,7 @@
+             exit 1
+           fi
+ 
++if test -n "$install_la"; then
+           finalize=yes
+           for lib in $link_against_libtool_libs; do
+             # Check to see that each library is installed.
+@@ -1932,6 +1937,7 @@
+               finalize=no
+             fi
+           done
++fi
+ 
+           if test "$hardcode_action" = relink; then
+             if test "$finalize" = yes; then
