@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/04/27 21:26:09 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/22 09:16:03 recht Exp $
 #
 
 DISTNAME=	rpy-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
+CATEGORIES=	math python
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=rpy/}
 
 MAINTAINER=	tech-pkg@NetBSD.org

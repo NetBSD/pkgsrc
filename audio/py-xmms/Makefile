@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/17 19:54:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/22 09:16:00 recht Exp $
 
 DISTNAME=	pyxmms-2.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=	audio
+CATEGORIES=	audio python
 MASTER_SITES=	http://people.via.ecp.fr/~flo/2002/PyXMMS/dist/
 
 MAINTAINER=	minskim@NetBSD.org

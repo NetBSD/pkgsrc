@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/04/24 21:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/22 09:16:03 recht Exp $
 
 DISTNAME=	ScientificPython-2.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
-CATEGORIES=	math
+CATEGORIES=	math python
 MASTER_SITES=	http://starship.python.net/crew/hinsen/ScientificPython/ \
 		http://dirac.cnrs-orleans.fr/programs/ScientificPython/
 
