@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 1999/12/27 12:50:59 rh Exp $
+# $NetBSD: Makefile,v 1.101 1999/12/27 12:52:45 rh Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -9,7 +9,7 @@
 #    SUBDIR += ascend-radius
     SUBDIR += batchftp
 #    SUBDIR += bb
-    SUBDIR += beroftpd
+#    SUBDIR += beroftpd
     SUBDIR += bind4
     SUBDIR += bind8
     SUBDIR += bing
