@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink.mk,v 1.3 2001/10/01 17:14:40 jlam Exp $
+# $NetBSD: x11.buildlink.mk,v 1.4 2001/10/04 08:00:13 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -26,6 +26,7 @@ BUILDLINK_X11_DIR?=	${LOCALBASE}/share/x11-links
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 
+.if !defined(BUILDLINK_X11_CPPFLAGS) || !defined(BUILDLINK_X11_LDFLAGS)
 BUILDLINK_X11_CPPFLAGS=	-I${BUILDLINK_X11_DIR}/include
 BUILDLINK_X11_LDFLAGS=	-L${BUILDLINK_X11_DIR}/lib -Wl,-R${X11BASE}/lib
 
@@ -37,6 +38,7 @@ CFLAGS+=		${BUILDLINK_X11_CPPFLAGS}
 CXXFLAGS+=		${BUILDLINK_X11_CPPFLAGS}
 CPPFLAGS+=		${BUILDLINK_X11_CPPFLAGS}
 LDFLAGS+=		${BUILDLINK_X11_LDFLAGS}
+.endif
 
 # Tell packages that use GNU configure where to find the X11R6 headers and
 # libraries.
