@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/07 13:01:45 manu Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/04/07 16:18:23 manu Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -336,3 +336,7 @@ include/bind/sys/bitypes.h
 @dirrm include/bind/sys
 @dirrm include/bind
 lib/libbind.a
+lib/libbind.la
+lib/libbind.so
+lib/libbind.so.2
+lib/libbind.so.2.0
