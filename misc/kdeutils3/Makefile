@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/05/22 02:57:13 markd Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/16 13:31:44 markd Exp $
 
 DISTNAME=	kdeutils-3.1.2
 COMMENT=	Utilities for the KDE integrated X11 desktop
-
-CONFLICTS=	efax-[0-9]*
 
 .include "../../x11/kde3/Makefile.kde3"
 
@@ -16,9 +14,6 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 
 .include "../../mk/bsd.prefs.mk"
-
-_KDE_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4755
-SPECIAL_PERMS+=	${PREFIX}/bin/efax ${_KDE_SETUID_ROOT}
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h)
 CPPFLAGS+=             -D__NetBSD_APM__
