@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/21 19:12:52 jlam Exp $
+
+--- ./main.tcl.orig	Mon Sep  6 09:29:18 1999
++++ ./main.tcl	Tue Sep 21 15:00:02 1999
+@@ -166,7 +166,6 @@
+ 
+ proc {main} {argc argv} {
+ global PgAcVar CurrentDB tcl_platform
+-	load libpgtcl[info sharedlibextension]
+ 	catch {Mainlib::draw_tabs}
+ 	set PgAcVar(opendb,username) {}
+ 	set PgAcVar(opendb,password) {}
