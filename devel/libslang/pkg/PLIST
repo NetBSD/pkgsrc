@@ -1,7 +1,9 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/18 00:44:48 hubertf Exp $
 lib/libslang.a
 @exec ranlib %D/%F
 lib/libslang.so.0.9938
 @exec rm -f %D/libslang.so.99.3[348]
 @exec /sbin/ldconfig -m %B
+@unexec /sbin/ldconfig -m %B
 include/slcurses.h
 include/slang.h
