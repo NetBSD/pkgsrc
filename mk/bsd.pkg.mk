@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.886 2001/12/23 19:32:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.887 2002/01/04 12:00:56 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -229,6 +229,14 @@ DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 
 .if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
 DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
+.endif
+
+# Automatically increase process limit where necessary for building.
+_ULIMIT_CMD=
+.if defined(UNLIMIT_RESOURCES)
+.for _LIMIT in $(UNLIMIT_RESOURCES)
+_ULIMIT_CMD+=	ulimit -${_LIMIT} `ulimit -H -${_LIMIT}`;
+.endfor
 .endif
 
 # -lintl in CONFIGURE_ENV is to workaround broken gettext.m4
@@ -1709,7 +1717,7 @@ post-configure: ${_CONFIGURE_POSTREQ}
 
 .if !target(do-build)
 do-build:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 .endif
 
 # Install
