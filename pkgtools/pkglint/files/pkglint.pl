@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.92 2003/08/02 19:51:45 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.93 2003/12/24 09:54:39 jmmv Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1227,7 +1227,9 @@ EOF
 
 	&checkearlier($tmp, @varnames);
 	$tmp = "\n" . $tmp;
-	if ($tmp =~ /\nMAINTAINER=[^\n]+/) {
+	if ($tmp =~ /\nMAINTAINER=[^@]+\@netbsd.org/) {
+		&perror("WARN: \@netbsd.org should be \@NetBSD.org in MAINTAINER.");
+	} elsif ($tmp =~ /\nMAINTAINER=[^\n]+/) {
 		$tmp =~ s/\nMAINTAINER=[^\n]+//;
 	} else {
 		&perror("FATAL: no MAINTAINER listed in $file.");
