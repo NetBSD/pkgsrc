@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.8 2000/10/17 23:57:45 jlam Exp $
+$NetBSD: patch-ad,v 1.9 2001/06/16 20:04:51 jlam Exp $
 
---- libgnome/Makefile.in.orig	Thu Oct 12 23:03:30 2000
-+++ libgnome/Makefile.in
+--- libgnome/Makefile.in.orig	Fri Mar 16 14:47:28 2001
++++ libgnome/Makefile.in	Sat Jun 16 08:58:22 2001
+@@ -154,7 +154,7 @@
+ 
+ libgnomeincludedir = $(includedir)/libgnome
+ 
+-INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	-I$(includedir) $(GLIB_CFLAGS) $(GDK_IMLIB_CFLAGS)  	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) 	-DGNOMELIBDIR=\""$(libdir)"\" 	-DGNOMEDATADIR=\""$(datadir)"\" 	-DGNOMEBINDIR=\""$(bindir)"\" 	-DGNOMELOCALSTATEDIR=\""$(localstatedir)"\" 	-DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DGNOMESYSCONFDIR=\""$(sysconfdir)"\" 	-DVERSION=\""$(VERSION)"\" 	-DG_LOG_DOMAIN=\"Gnome\"
++INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	$(GLIB_CFLAGS) $(GDK_IMLIB_CFLAGS)  	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) 	-DGNOMELIBDIR=\""$(libdir)"\" 	-DGNOMEDATADIR=\""$(datadir)"\" 	-DGNOMEBINDIR=\""$(bindir)"\" 	-DGNOMELOCALSTATEDIR=\""$(localstatedir)"\" 	-DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DGNOMESYSCONFDIR=\""$(sysconfdir)"\" 	-DVERSION=\""$(VERSION)"\" 	-DG_LOG_DOMAIN=\"Gnome\"
+ 
+ 
+ libgnome_la_SOURCES =  	gnome-config.c			gnome-dentry.c          	gnome-exec.c			gnome-fileconvert.c		gnome-help.c			gnome-history.c			gnome-i18n.c			gnome-magic.c			gnome-metadata.c		gnome-mime.c			gnome-mime-info.c		gnome-popt.c			gnome-regex.c			gnome-remote.c			gnome-score.c			gnome-sound.c			gnome-triggers.c		gnome-url.c			gnome-util.c			gnome-paper.c			gnomelib-init.c
 @@ -233,7 +233,7 @@
  gnome_gen_mimedb_LDFLAGS = 
  CFLAGS = @CFLAGS@
