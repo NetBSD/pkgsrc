@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.mi,v 1.1 2000/06/20 01:40:21 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/11/26 11:34:56 mycroft Exp $
 bin/imlib_config
 bin/imlib-config
 etc/imrc
@@ -17,6 +17,30 @@ lib/libImlib.so.10.8
 lib/libgdk_imlib.a
 lib/libgdk_imlib.la
 lib/libgdk_imlib.so.10.8
+lib/libimlib-bmp.a
+lib/libimlib-bmp.la
+lib/libimlib-bmp.so
+lib/libimlib-gif.a
+lib/libimlib-gif.la
+lib/libimlib-gif.so
+lib/libimlib-jpeg.a
+lib/libimlib-jpeg.la
+lib/libimlib-jpeg.so
+lib/libimlib-png.a
+lib/libimlib-png.la
+lib/libimlib-png.so
+lib/libimlib-ppm.a
+lib/libimlib-ppm.la
+lib/libimlib-ppm.so
+lib/libimlib-ps.a
+lib/libimlib-ps.la
+lib/libimlib-ps.so
+lib/libimlib-tiff.a
+lib/libimlib-tiff.la
+lib/libimlib-tiff.so
+lib/libimlib-xpm.a
+lib/libimlib-xpm.la
+lib/libimlib-xpm.so
 share/aclocal/imlib.m4
 share/doc/imlib/bg.gif
 share/doc/imlib/border_diag.gif
