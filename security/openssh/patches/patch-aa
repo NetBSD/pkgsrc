@@ -1,8 +1,58 @@
-$NetBSD: patch-aa,v 1.25 2002/08/28 04:55:18 jlam Exp $
+$NetBSD: patch-aa,v 1.26 2002/09/09 20:16:25 jlam Exp $
 
 --- configure.orig	Wed Jun 26 07:08:18 2002
 +++ configure
-@@ -3920,6 +3920,7 @@ _ACEOF
+@@ -3683,10 +3683,49 @@ _ACEOF
+ 
+ 	;;
+ *-*-darwin*)
++	echo "$as_me:$LINENO: checking if we have working getaddrinfo" >&5
++echo $ECHO_N "checking if we have working getaddrinfo... $ECHO_C" >&6
++	if test "$cross_compiling" = yes; then
++  echo "$as_me:$LINENO: result: assume it is working" >&5
++echo "${ECHO_T}assume it is working" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++#include "confdefs.h"
++#include <mach-o/dyld.h>
++main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
++		exit(0);
++	else
++		exit(1);
++}
++_ACEOF
++rm -f conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && { ac_try='./conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  echo "$as_me:$LINENO: result: working" >&5
++echo "${ECHO_T}working" >&6
++else
++  echo "$as_me: program exited with status $ac_status" >&5
++echo "$as_me: failed program was:" >&5
++cat conftest.$ac_ext >&5
++( exit $ac_status )
++echo "$as_me:$LINENO: result: buggy" >&5
++echo "${ECHO_T}buggy" >&6
+ 	cat >>confdefs.h <<\_ACEOF
+ #define BROKEN_GETADDRINFO 1
+ _ACEOF
+ 
++fi
++rm -f core core.* *.core conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
++fi
+ 	;;
+ *-*-hpux10.26)
+ 	if test -z "$GCC"; then
+@@ -3920,6 +3959,7 @@ _ACEOF
  	SONY=1
  	;;
  *-*-netbsd*)
@@ -10,7 +60,7 @@ $NetBSD: patch-aa,v 1.25 2002/08/28 04:55:18 jlam Exp $
  	need_dash_r=1
  	;;
  *-*-freebsd*)
-@@ -3950,8 +3951,6 @@ _ACEOF
+@@ -3950,8 +3990,6 @@ _ACEOF
  	CFLAGS="$CFLAGS"
  	;;
  *-*-solaris*)
@@ -19,7 +69,7 @@ $NetBSD: patch-aa,v 1.25 2002/08/28 04:55:18 jlam Exp $
  	need_dash_r=1
  	cat >>confdefs.h <<\_ACEOF
  #define PAM_SUN_CODEBASE 1
-@@ -4406,6 +4405,9 @@ _ACEOF
+@@ -4406,6 +4444,9 @@ _ACEOF
  	;;
  esac
  
@@ -29,7 +79,7 @@ $NetBSD: patch-aa,v 1.25 2002/08/28 04:55:18 jlam Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -6319,6 +6321,10 @@ echo $ECHO_N "checking for libwrap... $E
+@@ -6319,6 +6360,10 @@ echo $ECHO_N "checking for libwrap... $E
  #line $LINENO "configure"
  #include "confdefs.h"
  
@@ -40,7 +90,7 @@ $NetBSD: patch-aa,v 1.25 2002/08/28 04:55:18 jlam Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  
-@@ -8090,6 +8096,76 @@ fi
+@@ -8090,6 +8135,76 @@ fi
  rm -f conftest.$ac_objext conftest.$ac_ext
  fi
  
@@ -117,7 +167,7 @@ $NetBSD: patch-aa,v 1.25 2002/08/28 04:55:18 jlam Exp $
  # Search for OpenSSL
  saved_CPPFLAGS="$CPPFLAGS"
  saved_LDFLAGS="$LDFLAGS"
-@@ -17497,7 +17573,7 @@ echo "OpenSSH has been configured with t
+@@ -17497,7 +17612,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
