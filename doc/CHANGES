@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2355 2003/05/29 14:33:14 itohy Exp $
+$NetBSD: CHANGES,v 1.2356 2003/05/29 20:09:58 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2196,3 +2196,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated apache2 to 2.0.46 [itojun 2003-05-29]
 	Updated cpuflags to 0.42 [abs 2003-05-29]
 	Added ja-dvi2tty-5.0 [itohy 2003-05-29]
+	Updated vsftpd to 1.2.0 [salo 2003-05-29]
