@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/10 16:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/11 11:31:40 jlam Exp $
 #
 
 DISTNAME=		glib-2.0.6
@@ -15,12 +15,14 @@ HOMEPAGE=		http://www.gtk.org/docs/glib_toc.html
 COMMENT=		Some useful routines for C programming
 
 BUILD_USES_MSGFMT=	yes
-GNU_CONFIGURE=		yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
+USE_PERL5=		yes
+
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_PERL5=		yes
+
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
@@ -28,17 +30,17 @@ MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 PTHREAD_OPTS+=		native
 
 test: build
-	cd ${WRKSRC} &&  ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
+	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
 		tee ${WRKDIR}/check.log
 
-.include "../../converters/libiconv/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/pkgconfig/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CPPFLAGS+=		-I${BUILDLINK_DIR}/PTL/include
-.  include "../../devel/ptl2/buildlink.mk"
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.ptl2}/PTL/include
+.  include "../../devel/ptl2/buildlink2.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
