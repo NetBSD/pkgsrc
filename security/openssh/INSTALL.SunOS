@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL.SunOS,v 1.4 2001/10/19 09:42:30 veego Exp $
+# $NetBSD: INSTALL.SunOS,v 1.1 2001/11/01 14:24:19 seb Exp $
 
 PKGNAME=$1
 STAGE=$2
