@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/06/05 01:15:56 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2000/06/24 01:48:08 dmcmahill Exp $
 
 DISTNAME=	netpbm-9.3
 CATEGORIES=	graphics
@@ -22,6 +22,10 @@ MAKEFILE=	GNUmakefile
 .if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == arm32
 CFLAGS=
 .endif
+
+post-patch:
+	${MV} -f ${WRKSRC}/pbmplus.h ${WRKSRC}/pbmplus.h.in
+	${SED} -e "s;@X11BASE@;${X11BASE};g" ${WRKSRC}/pbmplus.h.in > ${WRKSRC}/pbmplus.h
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shhopt/shhopt.h ${PREFIX}/include
