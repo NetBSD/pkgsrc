@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.22 2003/01/02 22:58:41 schmonz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.23 2003/01/24 15:00:41 atatat Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -11,6 +11,8 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl BDLORSVdhilmopru
+.Op Fl E Ar file
+.Op Fl I Ar file
 .Op Fl K Ar PACKAGES
 .Op Fl M Ar DISTDIR
 .Op Fl P Ar PKGSRCDIR
@@ -29,6 +31,33 @@ Note that it does NOT implement complete Makefile parser.
 List packages marked as BROKEN.
 .It Fl D Ar paths
 Parse Makefiles and output contents (useful for debugging).
+.It Fl E Ar file
+Exports the internal database generated from the pkgsrc Makefiles to a
+file for faster loading at a later time.
+Note that some of the stored data is, in all likelihood, dependent on
+the architecture and operating system of the machine where it is
+generated.
+However, the database does make the task of, eg, checking for out of
+date packages on a set of similarly configured machines (in the
+absence of extra copies of the pkgsrc tree) both quick and possible.
+.It Fl I Ar file
+Imports the data to construct the internal database for checking the
+installed versions of packages, among other things, against the
+current version found in pkgsrc.
+This database provides most or all of the data required for running
+.Nm
+with any combination of
+.Fl B ,
+.Fl O ,
+.Fl R ,
+.Fl S ,
+.Fl V ,
+.Fl d ,
+.Fl g ,
+.Fl i ,
+.Fl p ,
+or
+.Fl u .
 .It Fl K Ar PACKAGES
 Override binary packages base directory, normally set from
 .Pa /etc/mk.conf
