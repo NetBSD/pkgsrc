@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/14 20:33:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/08 19:40:43 jmmv Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -176,7 +176,6 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrm share/themes/Atlanta
 @dirrm share/themes/AgingGorilla/metacity-1
 @dirrm share/themes/AgingGorilla
-@unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm share/metacity/icons
 @dirrm share/metacity/glade
 @dirrm share/metacity

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/02/20 12:13:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/08 19:40:42 jmmv Exp $
 #
 
 DISTNAME=		tsclient-0.132
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net
 MASTER_SITES=		http://www.gnomepro.com/tsclient/
 
@@ -12,7 +12,7 @@ COMMENT=		GNOME2 Frontend for rdesktop
 
 DEPENDS+=       	rdesktop-[0-9]*:../../net/rdesktop
 DEPENDS+=       	vncviewer-[0-9]*:../../net/vncviewer
-DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/02/13 11:18:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 19:40:41 jmmv Exp $
 #
 
 DISTNAME=		aMule-1.2.5
 PKGNAME=		${DISTNAME:S/aMule/amule/}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amule/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +12,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://amule.sourceforge.net/
 COMMENT=		Another Emule P2P client
 
-DEPENDS=		xdg-dirs>=1.0:../../misc/xdg-dirs
+DEPENDS=		xdg-dirs>=1.1:../../misc/xdg-dirs
 BUILD_USES_MSGFMT=	yes
 
 CONFLICTS=		xmule-[0-9]*

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/20 13:33:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/08 19:40:43 jmmv Exp $
 
 DISTNAME=	gdm-2.2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.2/} \
 		${MASTER_SITE_LOCAL}
@@ -10,6 +10,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
+
+DEPENDS+=	xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

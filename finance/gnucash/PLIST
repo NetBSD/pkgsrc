@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/02/17 16:03:15 seb Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/03/08 19:40:38 jmmv Exp $
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
@@ -825,8 +825,6 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/accounts
 @dirrm share/gnucash
 @dirrm share/doc/html/gnucash
-@unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
 @dirrm share/examples/gnucash
 @dirrm libexec/gnucash/overrides
 @dirrm libexec/gnucash

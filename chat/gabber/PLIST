@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/10 19:50:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/08 19:40:36 jmmv Exp $
 bin/gabber
 etc/sound/events/gabber.soundlist
 man/man1/gabber.1
@@ -157,7 +157,6 @@ share/sounds/gabber/gabber_ooochat_recv.wav
 share/sounds/gabber/gabber_startup.wav
 share/sounds/gabber/gabber_subrequest.wav
 @dirrm share/sounds/gabber
-@unexec ${RMDIR} %D/share/sounds 2> /dev/null || ${TRUE}
 @dirrm share/pixmaps/gabber
 @dirrm share/omf/gabber
 @comment in scrollkeeper: @dirrm share/omf

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2004/01/24 14:11:10 grant Exp $
+# $NetBSD: Makefile,v 1.45 2004/03/08 19:40:40 jmmv Exp $
 
 DISTNAME=		gnome-pim-1.4.6
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pim/1.4/}
 
@@ -9,7 +9,7 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Personal Information Manager for GNOME
 
-DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
+DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 USE_BUILDLINK2=		YES

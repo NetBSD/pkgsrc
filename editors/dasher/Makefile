@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/03/07 12:09:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/08 19:40:37 jmmv Exp $
 #
 
 DISTNAME=	dasher-3.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/3.2/}
 
@@ -10,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.inference.phy.cam.ac.uk/dasher/
 COMMENT=	Easy typing without using keyboard
 
-DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
