@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1291 2004/01/08 23:36:43 xtraeme Exp $
+$NetBSD: TODO,v 1.1292 2004/01/10 20:18:08 heas Exp $
 
 Suggested new packages
 ======================
@@ -348,7 +348,6 @@ Suggested package updates
 	o xzgv-0.8
 	o yacas-1.0.55
 	o ysm-2.9.0
-	o zebra-0.94
 	o zenicb 1.31 (needs merge with lots of local changes)
 	o zlib-1.2.1
 	o zsh-4.0.9

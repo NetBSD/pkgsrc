@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2003,v 1.1 2004/01/01 03:22:26 cjep Exp $
+$NetBSD: CHANGES-2003,v 1.2 2004/01/10 20:18:08 heas Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5478,6 +5478,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Log-Dispatch-FileRotate-1.11 [grant 2003-12-29]
 	Added apotheke-0.2 [xtraeme 2003-12-29]
 	Added at-spi-1.3.8 [xtraeme 2003-12-29]
+	Updated zebra to 0.94nb1 [heas 2003-12-29]
 	Added gok-0.8.4 [xtraeme 2003-12-29]
 	Added p5-Net-Bind-0.05 [grant 2003-12-30]
 	Added p5-Devel-Profile-1.03 [grant 2003-12-30]
