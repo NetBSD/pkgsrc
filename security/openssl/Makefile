@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/05/22 09:46:17 abs Exp $
+# $NetBSD: Makefile,v 1.42 2001/07/10 15:08:32 tron Exp $
 
 DISTNAME=		openssl-0.9.6
 CATEGORIES=		security
@@ -25,6 +25,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-sparc NetBSD-*-vax \
 			SunOS-* Linux-*-*
 
+CONFIGURE_SCRIPT=	config
 CONFIGURE_ARGS=		-fPIC -DPIC --openssldir=${PREFIX} --prefix=${PREFIX} \
 			${LDFLAGS}
 CONFIGURE_ENV=		CC="${CC}"
@@ -50,11 +51,16 @@ CONFIGURE_ARGS+=	rsaref
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 .endif
 
+.if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
+CONFIGURE_SCRIPT=	Configure
+CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-${CC}
+.endif
+
 # The Perl stuff doesn't work yet (nor did it work properly in SSLeay...)
 do-configure:
 	@cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${LOCALBASE}/bin
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./config ${CONFIGURE_ARGS}
-#	@cd ${WRKSRC}/perl && ${SETENV} ${CONFIGURE_ENV} ${PERL5} Makefile.PL
+	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} \
+	  ${CONFIGURE_ARGS}
 
 #post-build:
 #	@cd ${WRKSRC}/perl && ${MAKE}
