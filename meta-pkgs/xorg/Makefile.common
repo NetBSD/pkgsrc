@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/03/01 19:00:11 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/03/19 20:11:14 hira Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -166,7 +166,8 @@ SYSTEMS=	FreeBSD NetBSD OpenBSD linux DragonFly
 
 .if !defined(NO_XORG_TARGETS)
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-2.[0-9]*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
 .  if exists(/usr/include/threadlib.h)
 SUBST_CLASSES+=		thr
 SUBST_STAGE.thr=        post-patch
