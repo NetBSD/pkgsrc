@@ -1,0 +1,12 @@
+DevHelp is an application to view books created in a conjunction with XML and
+HTML. This application is commonly used for viewing books about reference
+libraries, articles or tutorials.
+
+It provides the following features:
+
+	- Full indexing of books in XML
+	- HTML viewer (GtkHTML2)
+	- Search by function, struct, macro or whatever
+	- Auto completion
+	- Commandline search
+	- Emacs and Vim integration

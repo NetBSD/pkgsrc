@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 16:04:07 xtraeme Exp $
+bin/devhelp
+lib/devhelp/libdevhelp.a
+lib/devhelp/libdevhelp.la
+lib/devhelp/libdevhelp.so
+share/applications/devhelp.desktop
+share/devhelp/dtd/devhelp-1.dtd
+share/devhelp/images/book_closed.png
+share/devhelp/images/book_open.png
+share/devhelp/images/helpdoc.png
+share/devhelp/ui/window.ui
+share/doc/devhelp/AUTHORS
+share/doc/devhelp/COPYING
+share/doc/devhelp/ChangeLog
+share/doc/devhelp/README
+share/doc/devhelp/TODO
+share/examples/devhelp/devhelp.el
+share/examples/devhelp/devhelp.vim
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/devhelp.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/devhelp.mo
+share/mime-info/devhelp.keys
+share/mime-info/devhelp.mime
+share/pixmaps/devhelp.png
+@dirrm share/examples/devhelp
+@dirrm share/doc/devhelp
+@dirrm share/devhelp/ui
+@dirrm share/devhelp/images
+@dirrm share/devhelp/dtd
+@dirrm share/devhelp
+@dirrm lib/devhelp

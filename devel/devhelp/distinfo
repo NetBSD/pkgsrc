@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/25 16:04:06 xtraeme Exp $
+
+SHA1 (devhelp-0.7.tar.bz2) = a5f89a6fc2a255b62b8277af3df491129d1c028e
+Size (devhelp-0.7.tar.bz2) = 371493 bytes
+SHA1 (patch-aa) = 84acab25f3263613a7de6a317b8bcbbe55f0f083
