@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/09/19 13:41:29 skrll Exp $
+# $NetBSD: Makefile,v 1.25 2001/10/25 20:58:50 agc Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}nb3
 CATEGORIES=		emulators
@@ -23,7 +23,7 @@ RPMIGNOREPATH=		tmp usr/tmp var
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
 
 do-build:
-	@for FILE in ${PKGDIR}/PLIST ${SCRIPTDIR}/*.sh; do \
+	@for FILE in ${PKGDIR}/PLIST ${FILESDIR}/*.sh; do \
 	  ${SED} -e 's#@@EMULDIR@@#${EMULDIR}#g' \
 	         -e 's#@@EMULSUBDIR@@#${EMULSUBDIR}#g' \
 	    <$$FILE >${WRKDIR}/`basename $$FILE`; \
