@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.13 2001/11/21 13:09:09 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.14 2001/11/21 13:17:14 agc Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -69,6 +69,7 @@ ROOT_USER?=	root
 ROOT_GROUP?=	wheel
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
+_DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=	${MAKE}		# program which gets invoked by imake
 _PATCH_BACKUP_ARG= -b		# switch to patch(1) to provide a backup file
 _USE_RPATH=	yes		# add rpath to LDFLAGS

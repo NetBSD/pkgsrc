@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.856 2001/11/21 13:09:08 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.857 2001/11/21 13:17:14 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1770,10 +1770,10 @@ real-su-install: ${MESSAGE}
 			fi;						\
 		done;							\
 	fi
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.if ${_DO_SHLIB_CHECKS} == "yes"
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
-.endif # OPSYS == "NetBSD" || OPSYS == "SunOS"
+.endif
 .ifdef MESSAGE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
 	@${ECHO_MSG} ""
