@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/20 16:46:27 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/30 22:13:14 tron Exp $
 
 DISTNAME=	dvdview1.1.0
 PKGNAME=	dvdview-1.1.0
@@ -27,6 +27,11 @@ do-build:
 
 ALL_TARGET=	# empty
 WRKSRC?=	${WRKDIR}/dvdview
+.if (${OPSYS} == SunOS)
+MAKE_ENV+=	RTLIB=-lrt
+.else
+MAKE_ENV+	RTLIB=
+.endif
 
 .if (${OPSYS} != "Linux") && (${MACHINE_ARCH} == i386)
 post-configure:
