@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.1 2003/12/19 16:37:54 ben Exp $
+$NetBSD: patch-ao,v 1.2 2004/02/15 05:13:53 ben Exp $
 
 --- GUI/Widgets/Fl_LED_Button.cxx.orig	2001-04-19 13:48:11.000000000 -0700
 +++ GUI/Widgets/Fl_LED_Button.cxx
@@ -11,3 +11,21 @@ $NetBSD: patch-ao,v 1.1 2003/12/19 16:37:54 ben Exp $
    box(FL_NO_BOX);
  	down_box(FL_ROUND_DOWN_BOX);
  	selection_color(FL_RED);
+@@ -15,7 +15,7 @@ Fl_LED_Button::~Fl_LED_Button() {
+ void Fl_LED_Button::draw() {
+   uchar r,g,b;
+ 
+-	if (box()) draw_box(this==Fl::pushed() ? down(box()) : box(), color());
++	if (box()) draw_box(this==Fl::pushed() ? fl_down(box()) : box(), color());
+ 	Fl_Color col = value() ? selection_color() : color();
+ 	Fl::get_color((Fl_Color)selection_color(),r,g,b);
+ 	int d = h()/6;
+@@ -25,7 +25,7 @@ void Fl_LED_Button::draw() {
+ 	int y1 = y()+d+3;
+ 	int ww = W-2*d-6;
+ 	int hh = W-2*d-6;
+-	Fl::get_color(parent()->color(),r,g,b);
++	Fl::get_color(color(),r,g,b);
+ 	modulate(-90,r,g,b);
+ 	fl_pie(x1-1,y1-1,ww+2,hh+2,0,360);
+ 	Fl::get_color((Fl_Color)selection_color(),r,g,b);
