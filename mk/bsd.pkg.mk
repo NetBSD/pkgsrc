@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.482 2000/06/23 23:41:43 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.483 2000/06/25 03:58:17 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2635,15 +2635,11 @@ print-package-depends:
 .endif
 
 
-# Stat all the files of a pkg and sum the sizes up. If SIZEDEPENDS is
-# set, also sum up all depending packages, giving a rough overview of
-# what this package really needs to run. (When installed alone - 
-# intersection of dependencies with other pkgs may result in less
-# diskspace usage)
+# Stat all the files of one pkg and sum the sizes up. 
 # 
 # XXX This is intended to be run before pkg_create is called, so the
 # existance of ${PLIST} can be assumed as granted.
-print-pkg-size:
+print-pkg-size-this:
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
 	${SHCOMMENT} "This pkg's files" ;				\
 	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
@@ -2651,10 +2647,6 @@ print-pkg-size:
 		/^@ignore/ { next }					\
 		NF == 1 { print base $$1 }'				\
 		<${PLIST} ;						\
-	${SHCOMMENT} "Any depending pkgs' files" ;			\
-	if [ "${SIZEDEPENDS}" != "" ]; then 				\
-		${MAKE} ${MAKEFLAGS} print-pkg-depend-sizes ;			\
-	fi ;								\
 	)								\
 	| sort -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
@@ -2663,18 +2655,23 @@ print-pkg-size:
 		  { sum+=$$5; }						\
 		  END { print sum; }'
 
-# Find sizes of required pkgs
-print-pkg-depend-sizes:
+# Sizes of required pkgs (only)
+# 
+# XXX This is intended to be run before pkg_create is called, so the
+# dependencies are all installed
+print-pkg-size-depends:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MAKE} ${.MAKEFLAGS} print-pkg-size-depends-help 		\
+	| ${AWK} 'BEGIN { sum=0; }					\
+		  { sum+=$$1; }						\
+		  END { print sum; }'
+# need this in a make look to prevent the shell clobbering the depends
+# also includes size of depends of depends (XXX)
+print-pkg-size-depends-help:
 .for dep in ${DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
-	${SHCOMMENT} direct depends ;					\
-	${PKG_INFO} -qL "$$pkg" ;					\
-	${SHCOMMENT} "depends of depends (XXX complete!)"; 		\
-	dps="`${PKG_INFO} -qf \"$$pkg\" | ${AWK} '/^@pkgdep/ {print $$2}'`";\
-	for dp in $$dps ; do						\
-		${PKG_INFO} -qL "$$dp" ;				\
-	done
+	${PKG_INFO} -qS "$$pkg"
 .endfor
 
 
@@ -2727,7 +2724,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.482 2000/06/23 23:41:43 hubertf Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.483 2000/06/25 03:58:17 hubertf Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
@@ -2808,8 +2805,11 @@ fake-pkg: ${PLIST} ${DESCR}
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
 	@${ECHO} "_PKGTOOLS_VER= ${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} print-pkg-size                       >${SIZE_PKG_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
+	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
+	${ECHO} $$size_this	>${SIZE_PKG_FILE};			\
+	expr $$size_this + $$size_depends >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
