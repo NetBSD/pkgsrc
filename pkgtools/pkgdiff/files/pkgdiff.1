@@ -1,0 +1,31 @@
+.\"	$NetBSD: pkgdiff.1,v 1.1.1.1 2000/06/28 01:42:42 wiz Exp $
+.\"
+.\" Copyright (c) 2000 by Hubert Feyrer <hubertf@netbsd.org>
+.\" All Rights Reserved.  Absolutely no warranty.
+.\"
+.Dd May 14, 2000
+.Dt pkgdiff
+.Os
+.Sh NAME
+.Nm pkgdiff
+.Nd diff files in a way appropriate for pkgsrc
+.Sh SYNOPSIS
+.Nm
+.Op Ar diff(1) options
+.Ar oldfile
+.Ar newfile
+.Sh DESCRIPTION
+The 
+.Nm
+utility runs 
+.Xr diff 1
+on the named files, and generates output on stdout that is appropriate
+to be put as patch file into pkgsrc. An empty NetBSD RCS ID is output
+first, and some effort is made to ensure that the generated patch does
+not include any RCS IDs.
+.Pp
+.Sh SEE ALSO
+.Xr cvs 1 ,
+.Xr diff 1 ,
+.Xr mkpatches 1 ,
+.Xr patch 1
