@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.29 2002/10/04 23:32:17 jlam Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.30 2002/10/16 23:42:00 itojun Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -21,7 +21,11 @@ FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
 GREP?=		/usr/bin/grep
+.if exists(/bin/tar)
+GTAR?=		/bin/tar
+.else
 GTAR?=		/usr/bin/tar
+.endif
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
 GZIP?=		-9
