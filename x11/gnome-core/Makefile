@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2003/02/05 05:06:37 jlam Exp $
+# $NetBSD: Makefile,v 1.86 2003/02/07 15:33:39 jmmv Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
 REPLACE_PERL=		help-browser/gnome-convert help-browser/gnome-download
 
 post-install:
-.for prg in gnome-feedback gnome-terminal gpl lgpl fdl
+.for prg in gnome-feedback gnome-terminal # Handled in gnome-dirs: gpl lgpl fdl
 .  for lng in C da de es it no
 	[ ! -d ${PREFIX}/share/gnome/help/${prg}/${lng}/figures ] || \
 	${RMDIR} ${PREFIX}/share/gnome/help/${prg}/${lng}/figures
