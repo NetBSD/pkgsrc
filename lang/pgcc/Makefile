@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/21 13:42:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/26 16:33:07 wiz Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -24,7 +24,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 
 PATCHDIR=		${.CURDIR}/../../lang/gcc/patches
 PKGDIR=			${.CURDIR}/../../lang/gcc/pkg
-DISTINFO_FILE=		${.CURDIR}/../../lang/gcc/distinfo
 
 DESCR_SRC=		${.CURDIR}/pkg/DESCR
 
