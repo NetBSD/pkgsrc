@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/09 10:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/11/10 23:01:12 wiz Exp $
 #
 
 COMMENT=	clocks, calendars, daily planners and other time related applications
@@ -19,6 +19,7 @@ SUBDIR+=	korganizer
 SUBDIR+=	kworldwatch
 SUBDIR+=	logtime
 SUBDIR+=	pcal
+SUBDIR+=	phoon
 SUBDIR+=	plan
 SUBDIR+=	polclock
 SUBDIR+=	py-mxDateTime
