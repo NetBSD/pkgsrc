@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/21 09:26:21 rh Exp $
+
+--- Makefile.orig	Wed Dec 31 11:33:53 1997
++++ Makefile
+@@ -9,12 +9,12 @@
+ ###
+ # set this to the absolute path (less extn) of compressed dict.
+ 
+-DICTPATH="/usr/local/lib/pw_dict"
++DICTPATH="${PREFIX}/libdata/pw_dict"
+ 
+ ###
+ # Set this to the path of one or more files continaing wordlists.
+ 
+-SRCDICTS=/usr/dict/words
++SRCDICTS=/usr/share/dict/words
+ 
+ ###
+ # If you have installed the cracklib-dicts directory, use this
