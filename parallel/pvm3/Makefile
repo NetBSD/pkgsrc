@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2002/09/30 22:18:55 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/11/09 15:24:25 is Exp $
 
-DISTNAME=		pvm3.4.3
-PKGNAME=		pvm-3.4.3
+DISTNAME=		pvm3.4.4
+PKGNAME=		pvm-3.4.4
 CATEGORIES=		parallel
 MASTER_SITES=		http://www.netlib.org/pvm3/
 EXTRACT_SUFX=		.tgz
@@ -36,6 +36,7 @@ PVM_DIR=		${PREFIX}/pvm3
 # avoid installing this file
 post-patch:
 	${RM} -f ${WRKSRC}/lib/pvmgetarch.orig
+	${RM} -f ${WRKSRC}/man/man1/pvm_intro.1.orig
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/bin/${PVM_ARCH}
