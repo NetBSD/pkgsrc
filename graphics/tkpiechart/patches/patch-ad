@@ -1,10 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2000/08/30 21:32:16 tron Exp $
+$NetBSD: patch-ad,v 1.3 2004/03/30 01:51:18 minskim Exp $
 
---- demo.tcl.orig	Wed Aug 30 16:47:32 2000
-+++ demo.tcl	Wed Aug 30 16:50:00 2000
-@@ -619,4 +619,4 @@
+--- demo.tcl.orig	2000-03-26 04:21:55.000000000 -0600
++++ demo.tcl	2004-03-29 19:40:26.000000000 -0600
+@@ -619,7 +619,7 @@
  }
  }
  namespace import stooop::*
 -if {[catch {package require switched 1.4}]} {
 +if {[catch {package require switched}]} {
+ set rcsId {$Id: patch-ad,v 1.3 2004/03/30 01:51:18 minskim Exp $}
+ 
+ package provide switched [lindex {$Revision: 1.3 $} 1]
