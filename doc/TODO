@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.445 2003/04/06 14:31:25 wiz Exp $
+$NetBSD: TODO,v 1.446 2003/04/06 14:52:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -67,6 +67,9 @@ Suggested new packages
 			hasn't got anything to test against.]
 	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 
+	xmltv
+	TV viewing manager
+	http://xmltv.sourceforge.net/
 
 Suggested package updates
 =========================
