@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2000/04/24 14:57:49 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 2000/07/26 18:15:04 frueauf Exp $
 
---- driver/xscreensaver.kss.orig	Mon Apr 24 08:10:02 2000
-+++ driver/xscreensaver.kss	Mon Apr 24 08:10:41 2000
+--- driver/xscreensaver.kss.orig	Mon Jul 17 08:24:09 2000
++++ driver/xscreensaver.kss	Tue Jul 25 23:27:47 2000
 @@ -1,4 +1,4 @@
 -#!/bin/bash -
 +#!/bin/sh -
@@ -38,12 +38,12 @@ $NetBSD: patch-ae,v 1.1 2000/04/24 14:57:49 hubertf Exp $
        while true; do
          ExitNow=$(grep -E -c unblanking\|already $TEMP_FILE)
          if [ $ExitNow != 0 ]; then
-@@ -108,12 +108,12 @@
-   PID_FILE=$HOME/.kss-install.pid.`hostname`
-   kill `cat $PID_FILE`                                  # Kill old screensaver 
+@@ -109,12 +109,12 @@
+     kill `cat $PID_FILE`                                # Kill old screensaver 
+   fi
    echo "$$" > $PID_FILE                                 # Write PID of this script
 -  /usr/X11R6/bin/xscreensaver -no-splash $timeout $lockmode $Nice &    # Start XScreenSaver daemon
-+  @PREFIX@/bin/xscreensaver -no-splash $timeout $lockmode $Nice &    # Start XScreenSaver daemon
++  @PREFIX@/xscreensaver -no-splash $timeout $lockmode $Nice &    # Start XScreenSaver daemon
    trap "kill $!" SIGTERM                                # Set these to kill the daemon
    trap "kill $!" SIGKILL
  
