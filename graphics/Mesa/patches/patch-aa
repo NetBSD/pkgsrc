@@ -1,11 +1,57 @@
---- Make-config.BAK	Sun Nov  2 04:30:16 1997
-+++ Make-config	Sun Nov  2 04:30:34 1997
-@@ -590,7 +590,7 @@
- 	"TK_LIB = libMesatk.so.$(VERSION)" \
- 	"AUX_LIB = libMesaaux.so.$(VERSION)" \
- 	"CC = gcc" \
--	"CFLAGS = -O2 -m486 -fPIC -I/usr/X11R6/include -DHZ=100"  \
-+	"CFLAGS = -O2 -fPIC -I/usr/X11R6/include -DHZ=100"  \
- 	"MAKELIB = ../mklib.netbsd" \
- 	"RANLIB = true" \
- 	"XLIBS = -L/usr/X11R6/lib -lX11"
+*** Make-config~	Sat Feb  7 09:17:53 1998
+--- Make-config	Thu Mar  5 15:27:14 1998
+***************
+*** 688,696 ****
+  netbsd:
+  	$(MAKE) $(MFLAGS) targets \
+! 	"GL_LIB = libMesaGL.so" \
+! 	"GLU_LIB = libMesaGLU.so" \
+! 	"GLUT_LIB = libglut.so" \
+! 	"TK_LIB = libMesatk.so" \
+! 	"AUX_LIB = libMesaaux.so" \
+  	"CC = gcc" \
+  	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
+--- 688,696 ----
+  netbsd:
+  	$(MAKE) $(MFLAGS) targets \
+! 	"GL_LIB = libMesaGL.a" \
+! 	"GLU_LIB = libMesaGLU.a" \
+! 	"GLUT_LIB = libglut.a" \
+! 	"TK_LIB = libMesatk.a" \
+! 	"AUX_LIB = libMesaaux.a" \
+  	"CC = gcc" \
+  	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
+*** mklib.netbsd~	Mon Nov  3 21:55:42 1997
+--- mklib.netbsd	Thu Mar  5 15:29:05 1998
+***************
+*** 41,54 ****
+  set -x
+  
+! LIBRARY=`basename ${LIBRARY} .so`
+  
+! VERSION="${MAJOR}.${MINOR}"
+  
+! echo "Building PIC library $LIBRARY"
+! rm -f ${LIBRARY}_pic.a ${LIBRARY}.so.${VERSION}
+! ar cq ${LIBRARY}_pic.a ${OBJECTS}
+! ranlib ${LIBRARY}_pic.a
+  
+! ld -x -Bshareable -Bforcearchive -o ${LIBRARY}.so.${VERSION} ${LIBRARY}_pic.a
+  
+! cp ${LIBRARY}_pic.a ${LIBRARY}.so.${VERSION} ../lib
+--- 41,55 ----
+  set -x
+  
+! VERSION=$MAJOR.$MINOR
+  
+! BASENAME=`echo ${LIBRARY} | sed "s/\.a//g"`
+! SHLIB=${BASENAME}.so.${VERSION}
+! STLIB=${BASENAME}.a
+  
+! rm -f ${SHLIB} ${STLIB}
+  
+! ar cq ${STLIB} ${OBJECTS}
+! ranlib ${STLIB}
+! ld -Bshareable -o ${SHLIB} ${OBJECTS}
+  
+! mv ${SHLIB} ../lib
