@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2001/12/31 11:46:33 abs Exp $
+# $NetBSD: Makefile,v 1.120 2002/01/29 12:39:19 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -34,6 +34,7 @@ SUBDIR+=	fsviewer
 SUBDIR+=	gcdmaster
 SUBDIR+=	gcombust
 SUBDIR+=	genpasswd
+SUBDIR+=	gentoo
 SUBDIR+=	gkrellm
 SUBDIR+=	gmc
 SUBDIR+=	gnome-vfs
