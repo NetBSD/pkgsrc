@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/11/12 05:29:38 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 1999/11/22 20:31:31 jdolecek Exp $
+
+The libtool staff pulled to KDE in rev. 331 of
+	kde-common/admin/acinclude.m4.in (jdolecek)
 
 --- ./configure	Tue Sep  7 17:24:53 1999
 +++ /usr/pkgsrc/converters/kdesupport/work.i386.unpatched/kdesupport-1.1.2/configure	Fri Nov 12 06:31:53 1999
