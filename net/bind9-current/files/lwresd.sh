@@ -1,5 +1,7 @@
 #!/bin/sh
-
+#
+# $NetBSD: lwresd.sh,v 1.4 2002/09/23 14:41:08 grant Exp $
+#
 # PROVIDE: lwresd
 # REQUIRE: SERVERS
 
