@@ -1,0 +1,195 @@
+$NetBSD: patch-ac,v 1.7 2005/01/25 20:07:25 bouyer Exp $
+
+--- src/host.c.orig	Sun Oct 26 02:38:25 2003
++++ src/host.c	Sun Jan 23 21:23:28 2005
+@@ -189,13 +189,15 @@
+     if (ai->ai_family == AF_INET6) 
+       {
+ 	struct sockaddr_in6 *sin6 = (struct sockaddr_in6 *)ai->ai_addr;
+-	memcpy (al->addresses + i, &sin6->sin6_addr, 16);
++	memcpy (al->addresses[i].bytes, &sin6->sin6_addr, 16);
++	al->addresses[i].family = AF_INET6;
+ 	++i;
+       } 
+     else if (ai->ai_family == AF_INET)
+       {
+ 	struct sockaddr_in *sin = (struct sockaddr_in *)ai->ai_addr;
+-        map_ipv4_to_ip ((ip4_address *)&sin->sin_addr, al->addresses + i);
++	memcpy (al->addresses[i].bytes, &sin->sin_addr, 4);
++	al->addresses[i].family = AF_INET;
+ 	++i;
+       }
+   assert (i == cnt);
+@@ -219,8 +221,11 @@
+   al->addresses = xmalloc (count * sizeof (ip_address));
+   al->refcount  = 1;
+ 
+-  for (i = 0; i < count; i++)
+-    map_ipv4_to_ip ((ip4_address *)h_addr_list[i], al->addresses + i);
++  for (i = 0; i < count; i++) {
++    memcpy (al->addresses[i].bytes, h_addr_list[i], 4);
++    al->addresses[i].family = AF_INET;
++  }
++
+ 
+   return al;
+ }
+@@ -279,33 +284,29 @@
+   */
+ void
+ wget_sockaddr_set_address (wget_sockaddr *sa, 
+-			   int ip_family, unsigned short port, ip_address *addr)
++			   unsigned short port, ip_address *addr, int family)
+ {
+-  if (ip_family == AF_INET) 
++  if (family == AF_INET)
+     {
+-      sa->sin.sin_family = ip_family;
++      sa->sin.sin_family = AF_INET;
+       sa->sin.sin_port = htons (port);
+       if (addr == NULL) 
+ 	memset (&sa->sin.sin_addr, 0,      sizeof(ip4_address));
+       else
+ 	{
+-	  ip4_address addr4;
+-	  if (!map_ip_to_ipv4 (addr, &addr4))
+-	    /* should the callers have prevented this? */
+-	    abort ();
+-	  memcpy (&sa->sin.sin_addr, &addr4, sizeof(ip4_address));
++	  memcpy (&sa->sin.sin_addr, addr->bytes, sizeof(ip4_address));
+ 	}
+       return;
+     }
+ #ifdef ENABLE_IPV6
+-  if (ip_family == AF_INET6) 
++  if (family == AF_INET6)
+     {
+-      sa->sin6.sin6_family = ip_family;
++      sa->sin6.sin6_family = AF_INET6;
+       sa->sin6.sin6_port = htons (port);
+       if (addr == NULL) 
+ 	memset (&sa->sin6.sin6_addr, 0   , 16);
+       else	     
+-	memcpy (&sa->sin6.sin6_addr, addr, 16);
++	memcpy (&sa->sin6.sin6_addr, addr->bytes, 16);
+       return;
+     }
+ #endif  
+@@ -422,12 +423,12 @@
+   * socklen_t	structure length for socket options
+   */
+ socklen_t
+-sockaddr_len () 
++sockaddr_len (int family) 
+ {
+-  if (ip_default_family == AF_INET) 
++  if (family == AF_INET) 
+     return sizeof (struct sockaddr_in);
+ #ifdef ENABLE_IPV6
+-  if (ip_default_family == AF_INET6) 
++  if (family == AF_INET6) 
+     return sizeof (struct sockaddr_in6);
+ #endif
+   abort();
+@@ -435,42 +436,6 @@
+   return 0;
+ }
+ 
+-/**
+-  * Map an IPv4 adress to the internal adress format.
+-  */
+-void 
+-map_ipv4_to_ip (ip4_address *ipv4, ip_address *ip) 
+-{
+-#ifdef ENABLE_IPV6
+-  static unsigned char ipv64[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0xff, 0xff};
+-  memcpy ((char *)ip + 12, ipv4 , 4);
+-  memcpy ((char *)ip + 0, ipv64, 12);
+-#else
+-  if ((char *)ip != (char *)ipv4)
+-    memcpy (ip, ipv4, 4);
+-#endif
+-}
+-
+-/* Detect whether an IP adress represents an IPv4 address and, if so,
+-   copy it to IPV4.  0 is returned on failure.
+-   This operation always succeeds when Wget is compiled without IPv6.
+-   If IPV4 is NULL, don't copy, just detect.  */
+-
+-int 
+-map_ip_to_ipv4 (ip_address *ip, ip4_address *ipv4) 
+-{
+-#ifdef ENABLE_IPV6
+-  static unsigned char ipv64[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0xff, 0xff};
+-  if (0 != memcmp (ip, ipv64, 12))
+-    return 0;
+-  if (ipv4)
+-    memcpy (ipv4, (char *)ip + 12, 4);
+-#else
+-  if (ipv4)
+-    memcpy (ipv4, (char *)ip, 4);
+-#endif
+-  return 1;
+-}
+ 
+ /* Versions of gethostbyname and getaddrinfo that support timeout. */
+ 
+@@ -559,17 +524,16 @@
+ pretty_print_address (ip_address *addr)
+ {
+ #ifdef ENABLE_IPV6
+-  ip4_address addr4;
+   static char buf[128];
+ 
+-  if (map_ip_to_ipv4 (addr, &addr4))
+-    return inet_ntoa (*(struct in_addr *)&addr4);
+-
+-  if (!inet_ntop (AF_INET6, addr, buf, sizeof (buf)))
+-    return "<unknown>";
+-  return buf;
++  if (addr->family == AF_INET6)
++    {
++      if (!inet_ntop (AF_INET6, addr->bytes, buf, sizeof (buf)))
++        return "<unknown>";
++      return buf;
++    }
+ #endif
+-  return inet_ntoa (*(struct in_addr *)addr);
++  return inet_ntoa (*(struct in_addr *)addr->bytes);
+ }
+ 
+ /* Add host name HOST with the address ADDR_TEXT to the cache.
+@@ -601,23 +565,27 @@
+ lookup_host (const char *host, int silent)
+ {
+   struct address_list *al = NULL;
+-  uint32_t addr_ipv4;
+   ip_address addr;
++  u_int32_t addr4;
+ 
+   /* First, try to check whether the address is already a numeric
+      address.  */
+ 
+ #ifdef ENABLE_IPV6
+-  if (inet_pton (AF_INET6, host, &addr) > 0)
+-    return address_list_from_single (&addr);
++  if (inet_pton (AF_INET6, host, addr.bytes) > 0)
++    {
++      addr.family = AF_INET6;
++      return address_list_from_single (&addr);
++    }
+ #endif
+ 
+-  addr_ipv4 = (uint32_t)inet_addr (host);
+-  if (addr_ipv4 != (uint32_t)-1)
++  addr4 = (uint32_t)inet_addr (host);
++  memcpy(addr.bytes, &addr4, 4);
++  addr.family = AF_INET;
++  if (addr4 != (uint32_t)-1)
+     {
+       /* ADDR is defined to be in network byte order, which is what
+ 	 this returns, so we can just copy it to STORE_IP.  */
+-      map_ipv4_to_ip ((ip4_address *)&addr_ipv4, &addr);
+       return address_list_from_single (&addr);
+     }
+ 
