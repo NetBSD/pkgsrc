@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2001/12/11 15:37:05 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2004/04/24 01:15:12 wiz Exp $
 
 --- Local.config.orig	Wed Apr  1 02:58:05 1998
 +++ Local.config
@@ -8,8 +8,8 @@ $NetBSD: patch-ac,v 1.4 2001/12/11 15:37:05 jlam Exp $
  #ifdef HaveTIFF
 -TIFF_LIB     = -L/usr/local/lib -ltiff
 -TIFF_INCLUDE = -I/usr/local/include/tiff
-+TIFF_LIB     = -Wl,-R${LOCALBASE}/lib -L${BUILDLINK_DIR}/lib -ltiff
-+TIFF_INCLUDE = -I${BUILDLINK_DIR}/include
++TIFF_LIB     = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -ltiff
++TIFF_INCLUDE = -I${LOCALBASE}/include
  #endif
  
  XCOMM  If you have the JPEG library, make HaveJPEG defined
@@ -19,8 +19,8 @@ $NetBSD: patch-ac,v 1.4 2001/12/11 15:37:05 jlam Exp $
  #ifdef HaveJPEG
 -JPEG_LIB     = -L/usr/local/lib -ljpeg
 -JPEG_INCLUDE = -I/usr/local/include/jpeg
-+JPEG_LIB     = -Wl,-R${LOCALBASE}/lib -L${BUILDLINK_DIR}/lib -ljpeg
-+JPEG_INCLUDE = -I${BUILDLINK_DIR}/include
++JPEG_LIB     = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -ljpeg
++JPEG_INCLUDE = -I${LOCALBASE}/include
  #endif
  
  XCOMM  If you have the PNG library, make HavePNG defined
@@ -30,8 +30,8 @@ $NetBSD: patch-ac,v 1.4 2001/12/11 15:37:05 jlam Exp $
  #ifdef HavePNG
 -PNG_LIB     = -L/usr/local/lib -lpng -lz
 -PNG_INCLUDE = -I/usr/local/include/png
-+PNG_LIB     = -Wl,-R${LOCALBASE}/lib -L${BUILDLINK_DIR}/lib -lpng -lz
-+PNG_INCLUDE = -I${BUILDLINK_DIR}/include
++PNG_LIB     = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng -lz
++PNG_INCLUDE = -I${LOCALBASE}/include
  #endif
  
  XCOMM  If you are running SunOS and get an error with the following undefined
@@ -40,12 +40,12 @@ $NetBSD: patch-ac,v 1.4 2001/12/11 15:37:05 jlam Exp $
  XCOMM  Make sure the path name to the library is correct.
  
 -XPM_LIB     = -L/usr/X11R6/lib -lXpm
-+XPM_LIB     = -Wl,-R${X11BASE}/lib -L${BUILDLINK_DIR}/lib -lXpm
++XPM_LIB     = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXpm
  
  XCOMM  Make sure this points to the location of the 'xpm.h' file.
  
 -XPM_INCLUDE = -I/usr/X11R6/include/X11
-+XPM_INCLUDE = -I${BUILDLINK_DIR}/include/X11
++XPM_INCLUDE = -I${X11BASE}/include/X11
  
  
  DEPENDFLAGS = -I./bitmaps
@@ -73,9 +73,9 @@ $NetBSD: patch-ac,v 1.4 2001/12/11 15:37:05 jlam Exp $
 -JPEG_INCLUDE = -I/usr/local/include
 -JPEG_LIB     = -L/usr/local/lib -ljpeg
 -XPM_INCLUDE = -I/usr/X11R6/include/X11
-+TIFF_INCLUDE = -I${BUILDLINK_DIR}/include
-+TIFF_LIB     = -Wl,-R${LOCALBASE} -L${BUILDLINK_DIR}/lib -ltiff
-+JPEG_INCLUDE = -I${BUILDLINK_DIR}/include
-+JPEG_LIB     = -Wl,-R${LOCALBASE} -L${BUILDLINK_DIR}/lib -ljpeg
-+XPM_INCLUDE = -I${BUILDLINK_DIR}/include/X11
++TIFF_INCLUDE = -I${LOCALBASE}/include
++TIFF_LIB     = -Wl,-R${LOCALBASE} -L${LOCALBASE}/lib -ltiff
++JPEG_INCLUDE = -I${LOCALBASE}/include
++JPEG_LIB     = -Wl,-R${LOCALBASE} -L${LOCALBASE}/lib -ljpeg
++XPM_INCLUDE = -I${X11BASE}/include/X11
  #endif
