@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.326 2003/03/01 19:35:19 mjl Exp $
+$NetBSD: TODO,v 1.327 2003/03/02 22:29:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -76,7 +76,7 @@ Suggested package updates
 =========================
 
 	o Xbae-4.50.0
-	o amaya-7.2
+	o amaya-7.2 [pkg/20539]
 	o angband-3.0.3
 	o apcupsd-3.8.6
 	o asp2php-0.76.15 [pkg/20506]
@@ -136,10 +136,11 @@ Suggested package updates
 	o grace-5.1.12
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
-	o gtk---2.2.0
+	o gtk_wicontrol-0.17
 	o gtk2-pan-0.13.3.93
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
+	o htmllint-20030225 [pkg/20538]
 	o icepref-2.2
 	o icewm-1.2.5
 	o icu-2.4 [heinz]
@@ -150,7 +151,6 @@ Suggested package updates
 	o inn 2.3.4 [waiting for IPv6 patch]
 	o iozone-3.157
 	o ipa-1.3.1 [pkg/20486]
-	o ircu-2.10.11.04
 	o iozone-3.147
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-tomcat-3.3.1a
@@ -173,7 +173,6 @@ Suggested package updates
 	o libmcrypt-2.5.5
 	o librsvg-2.2.2.1
 	o libslang-1.4.8
-	o libsndfile-1.0.4
 	o libxml-2.5.4 [devel?]
 	o libxslt-1.0.27
 	o lilypond-1.6.6
@@ -255,8 +254,8 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
 	o subversion-0.18
-	o sun-jdk14-1.4.1_01 [pkg/19853]
-	o sun-jre14-1.4.1_01 [pkg/19853]
+	o sun-jdk14-1.4.1_02 [pkg/20535]
+	o sun-jre14-1.4.1_02 [pkg/20535]
 	o sweep-0.8.1
 	o swig-1.3.17
 	o sylpheed-claws-0.8.9
