@@ -1,5 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
-/* $Id: config.h.in,v 1.3 2003/05/22 18:10:43 jschauma Exp $ */
+/* $Id: config.h.in,v 1.4 2003/06/09 17:19:49 grant Exp $ */
 
 /* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
 #undef HAVE_PRINTF_QD
@@ -98,6 +98,9 @@
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the `isblank' function. */
+#undef HAVE_ISBLANK
 
 /* Define to 1 if you have the `lchflags' function. */
 #undef HAVE_LCHFLAGS
@@ -246,6 +249,9 @@
 
 /* Define to 1 if you have the `strlcpy' function. */
 #undef HAVE_STRLCPY
+
+/* Define to 1 if you have the `strmode' function. */
+#undef HAVE_STRMODE
 
 /* Define to 1 if you have the `strptime' function. */
 #undef HAVE_STRPTIME
