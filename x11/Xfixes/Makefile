@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/09 13:24:02 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/09 13:24:59 grant Exp $
 #
 
 DISTNAME=		libXfixes-2.0.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://freedesktop.org/
-COMMENT=		Xfixes extension of X RandR
+COMMENT=		X Fixes extension of X RandR
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
