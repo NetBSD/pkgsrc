@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/05/09 19:13:29 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/12 14:56:20 jmc Exp $
 
 .if !defined(PYGTK2_BUILDLINK2_MK)
 PYGTK2_BUILDLINK2_MK=	# defined
@@ -8,7 +8,7 @@ PYTHON_VERSION_REQD=	22pth
 
 BUILDLINK_PACKAGES+=			pygtk2
 BUILDLINK_DEPENDS.pygtk2?=		${PYPKGPREFIX}-gtk2>=1.99.16
-BUILDLINK_PKGSRCDIR.pygtk2?=		../../wip/py-gtk2
+BUILDLINK_PKGSRCDIR.pygtk2?=		../../x11/py-gtk2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.pygtk2=${PYPKGPREFIX}-gtk2
 BUILDLINK_PREFIX.pygtk2_DEFAULT=	${LOCALBASE}
