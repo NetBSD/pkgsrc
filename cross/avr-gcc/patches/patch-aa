@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/16 20:14:21 wennmach Exp $
+
+--- libiberty/Makefile.in.org	2003-07-14 15:07:57.000000000 +0200
++++ libiberty/Makefile.in	2003-07-14 15:09:30.000000000 +0200
+@@ -258,11 +258,12 @@
+ @MAINT@stamp-functions : $(CFILES) $(TEXIFILES) $(srcdir)/gather-docs Makefile
+ @MAINT@@HAVE_PERL@	$(PERL) $(srcdir)/gather-docs $(srcdir) $(srcdir)/functions.texi $(CFILES) $(TEXIFILES)
+ @MAINT@	echo stamp > stamp-functions
+ 
+ INSTALL_DEST = @INSTALL_DEST@
+-install: install_to_$(INSTALL_DEST) install-subdir
++#install: install_to_$(INSTALL_DEST) install-subdir
++install:
+ 
+ install_to_libdir: all
+ 	${mkinstalldirs} $(DESTDIR)$(libdir)$(MULTISUBDIR)
+ 	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)$(MULTISUBDIR)/$(TARGETLIB)n
+ 	( cd $(DESTDIR)$(libdir)$(MULTISUBDIR) ; $(RANLIB) $(TARGETLIB)n )

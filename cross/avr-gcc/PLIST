@@ -1,0 +1,71 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/16 20:14:20 wennmach Exp $
+avr/bin/c++
+avr/bin/g++
+avr/bin/gcc
+bin/avr-c++
+bin/avr-cpp
+bin/avr-g++
+bin/avr-gcc
+bin/avr-gcc-3.3
+bin/avr-gccbug
+lib/gcc-lib/avr/3.3/avr3/libgcc.a
+lib/gcc-lib/avr/3.3/avr4/libgcc.a
+lib/gcc-lib/avr/3.3/avr5/libgcc.a
+lib/gcc-lib/avr/3.3/cc1
+lib/gcc-lib/avr/3.3/cc1plus
+lib/gcc-lib/avr/3.3/collect2
+lib/gcc-lib/avr/3.3/include/README
+lib/gcc-lib/avr/3.3/include/fixed
+lib/gcc-lib/avr/3.3/include/float.h
+lib/gcc-lib/avr/3.3/include/iso646.h
+lib/gcc-lib/avr/3.3/include/limits.h
+lib/gcc-lib/avr/3.3/include/stdarg.h
+lib/gcc-lib/avr/3.3/include/stdbool.h
+lib/gcc-lib/avr/3.3/include/stddef.h
+lib/gcc-lib/avr/3.3/include/syslimits.h
+lib/gcc-lib/avr/3.3/include/unwind.h
+lib/gcc-lib/avr/3.3/include/varargs.h
+lib/gcc-lib/avr/3.3/install-tools/fix-header
+lib/gcc-lib/avr/3.3/install-tools/fixinc.sh
+lib/gcc-lib/avr/3.3/install-tools/fixincl
+lib/gcc-lib/avr/3.3/install-tools/fixproto
+lib/gcc-lib/avr/3.3/install-tools/gsyslimits.h
+lib/gcc-lib/avr/3.3/install-tools/include/README
+lib/gcc-lib/avr/3.3/install-tools/include/float.h
+lib/gcc-lib/avr/3.3/install-tools/include/iso646.h
+lib/gcc-lib/avr/3.3/install-tools/include/limits.h
+lib/gcc-lib/avr/3.3/install-tools/include/stdarg.h
+lib/gcc-lib/avr/3.3/install-tools/include/stdbool.h
+lib/gcc-lib/avr/3.3/install-tools/include/stddef.h
+lib/gcc-lib/avr/3.3/install-tools/include/unwind.h
+lib/gcc-lib/avr/3.3/install-tools/include/varargs.h
+lib/gcc-lib/avr/3.3/install-tools/mkheaders
+lib/gcc-lib/avr/3.3/install-tools/mkheaders.conf
+lib/gcc-lib/avr/3.3/install-tools/mkinstalldirs
+lib/gcc-lib/avr/3.3/libgcc.a
+lib/gcc-lib/avr/3.3/specs
+man/man1/avr-g++.1
+man/man1/avr-gcc.1
+man/man1/cpp.1
+man/man1/gcov.1
+man/man7/fsf-funding.7
+man/man7/gfdl.7
+man/man7/gpl.7
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcc.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcc.mo
+@dirrm lib/gcc-lib/avr/3.3/avr3
+@dirrm lib/gcc-lib/avr/3.3/avr4
+@dirrm lib/gcc-lib/avr/3.3/avr5
+@dirrm lib/gcc-lib/avr/3.3/include
+@dirrm lib/gcc-lib/avr/3.3/install-tools/include
+@dirrm lib/gcc-lib/avr/3.3/install-tools
+@dirrm lib/gcc-lib/avr/3.3
+@dirrm lib/gcc-lib/avr
