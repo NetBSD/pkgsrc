@@ -1,9 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2004/06/24 23:09:55 taya Exp $
+$NetBSD: patch-ab,v 1.4 2004/12/04 02:16:03 taya Exp $
 
-diff -ru ../Orig/mozilla/configure.in ./configure.in
---- ../Orig/mozilla/configure.in	2004-05-14 06:57:46.000000000 +0900
-+++ ./configure.in	2004-06-15 23:55:39.000000000 +0900
-@@ -1017,6 +1017,9 @@
+--- configure.in.orig	Thu May 13 17:57:46 2004
++++ configure.in
+@@ -996,7 +996,6 @@ case "$target" in
+     powerpc*)
+         _PLATFORM_DEFAULT_TOOLKIT='mac'
+         DSO_LDOPTS="$DSO_LDOPTS -arch ppc"
+-        MOZ_ENABLE_POSTSCRIPT=
+         # set MACOSX to generate lib/mac/MoreFiles/Makefile
+         MACOSX=1
+         ;;
+@@ -1017,6 +1016,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -13,7 +20,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;; 
  
  *-hpux*)
-@@ -1308,6 +1311,13 @@
+@@ -1308,6 +1310,13 @@ case "$target" in
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -27,7 +34,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;;
  
  *-nto*) 
-@@ -1531,7 +1541,7 @@
+@@ -1531,7 +1540,7 @@ dnl the qsort routine under solaris is f
         MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
