@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2591 2003/06/26 07:01:46 tron Exp $
+$NetBSD: CHANGES,v 1.2592 2003/06/26 12:44:22 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2573,3 +2573,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added py-sqlite-0.4.3 [tsarna 2003-06-25]
 	Updated cvsync to 0.23.4 [gehenna 2003-06-26]
 	vmware3: Downgraded to 3.2.0 [tron 2003-06-26]
+	Updated festival-doc to 1.4.0.1nb1 [seb 2003-06-26]
