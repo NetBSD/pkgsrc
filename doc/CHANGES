@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1548 2003/03/05 03:45:57 grant Exp $
+$NetBSD: CHANGES,v 1.1549 2003/03/05 05:40:43 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -936,3 +936,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated graphviz to 1.9nb1 [salo 2003-03-04]
 	Updated xemacs-packages to 1.11 [tron 2003-03-04]
 	Added jumpgate-0.7 [grant 2003-03-05]
+	Updated bind9 to 9.2.2 [hubertf 2003-03-05]
