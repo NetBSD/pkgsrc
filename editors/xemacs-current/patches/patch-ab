@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
+$NetBSD: patch-ab,v 1.2 2002/10/06 11:40:07 magick Exp $
 
---- configure.orig	Tue Mar  5 15:23:13 2002
+--- configure.orig	Fri Aug 16 06:11:45 2002
 +++ configure
-@@ -1127,6 +1127,7 @@
+@@ -1157,6 +1157,7 @@
  machine='' opsys=''
  
  case "$canonical" in
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
    sparc-*-*        ) machine=sparc ;;
    alpha*-*-*       ) machine=alpha ;;
    vax-*-*          ) machine=vax ;;
-@@ -1199,9 +1200,10 @@
+@@ -1229,9 +1230,10 @@
      case "$canonical" in
        i[3-9]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
      esac
    ;;
  
-@@ -3093,7 +3095,7 @@
+@@ -3145,7 +3147,7 @@
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -31,50 +31,51 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          
  if test "$GCC" = "yes"; then
-@@ -13957,6 +13959,42 @@
-     eval "with_${feature}=no"
-   done
- fi 
+@@ -13283,6 +13285,43 @@
+   fi
+ fi
+ 
++ echo $ac_n "checking for main in -lossaudio""... $ac_c" 1>&6
++ echo "configure:10915: checking for main in -lossaudio" >&5
++ ac_lib_var=`echo ossaudio'_'main | sed 'y%./+-%__p_%'`
++ 
++ xe_check_libs=" -lossaudio "
++ cat > conftest.$ac_ext <<EOF
++ #line 10920 "configure"
++ #include "confdefs.h"
++ /* Override any gcc2 internal prototype to avoid an error.  */
++ /* We use char because int might match the return type of a gcc2
++     builtin and then its argument prototype would still apply.  */
++ 
++ int main() {
++ main()
++ ; return 0; }
++ EOF
++ if { (eval echo configure:10931: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++   rm -rf conftest*
++   eval "ac_cv_lib_$ac_lib_var=yes"
++ else
++   echo "configure: failed program was:" >&5
++   cat conftest.$ac_ext >&5
++   rm -rf conftest*
++   eval "ac_cv_lib_$ac_lib_var=no"
++ fi
++ rm -f conftest*
++ xe_check_libs=""
++ 
++ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes" ; then
++   echo "$ac_t""yes" 1>&6
++   LIBOSSAUDIO=-lossaudio
++ else
++   echo "$ac_t""no" 1>&6
++ fi
++ 
 +
-+echo $ac_n "checking for main in -lossaudio""... $ac_c" 1>&6
-+echo "configure:10915: checking for main in -lossaudio" >&5
-+ac_lib_var=`echo ossaudio'_'main | sed 'y%./+-%__p_%'`
-+
-+xe_check_libs=" -lossaudio "
-+cat > conftest.$ac_ext <<EOF
-+#line 10920 "configure"
-+#include "confdefs.h"
-+/* Override any gcc2 internal prototype to avoid an error.  */
-+/* We use char because int might match the return type of a gcc2
-+    builtin and then its argument prototype would still apply.  */
-+
-+int main() {
-+main()
-+; return 0; }
 +EOF
-+if { (eval echo configure:10931: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-+  rm -rf conftest*
-+  eval "ac_cv_lib_$ac_lib_var=yes"
-+else
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+  rm -rf conftest*
-+  eval "ac_cv_lib_$ac_lib_var=no"
-+fi
-+rm -f conftest*
-+xe_check_libs=""
-+
-+if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes" ; then
-+  echo "$ac_t""yes" 1>&6
-+  LIBOSSAUDIO=-lossaudio
-+else
-+  echo "$ac_t""no" 1>&6
-+fi
-+
- test "$with_x11" = "yes" -o "$with_tty" = "yes" -o "$need_event_unixoid" = "yes" && extra_objs="$extra_objs event-unixoid.o" &&  if test "$extra_verbose" = "yes"; then
-    echo "    xemacs will be linked with \"event-unixoid.o\""
+ test "$need_miscplay" = "yes" && extra_objs="$extra_objs miscplay.o" &&  if test "$extra_verbose" = "yes"; then
+    echo "    xemacs will be linked with \"miscplay.o\""
   fi
-@@ -16204,6 +16242,7 @@
+@@ -15926,6 +15965,7 @@
  s%@dnd_objs@%$dnd_objs%g
  s%@lwlib_objs@%$lwlib_objs%g
  s%@ALLOCA@%$ALLOCA%g
