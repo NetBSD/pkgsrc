@@ -1,8 +1,26 @@
-$NetBSD: patch-af,v 1.4 2004/10/28 01:12:44 xtraeme Exp $
+$NetBSD: patch-af,v 1.5 2004/10/31 08:55:21 grant Exp $
 
---- configure.orig	2004-10-27 23:22:36.000000000 +0200
-+++ configure	2004-10-27 23:23:13.000000000 +0200
-@@ -34120,30 +34120,10 @@
+--- configure.orig	2004-10-23 17:29:20.000000000 +1000
++++ configure
+@@ -23040,7 +23040,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
+-int link_test() { return compress(0, (unsigned long*) 0, "", 0); }
++return compress(0, (unsigned long*) 0, "", 0);
+   ;
+   return 0;
+ }
+@@ -23109,7 +23109,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
+-int link_test() { return compress(0, (unsigned long*) 0, "", 0); }
++return compress(0, (unsigned long*) 0, "", 0);
+   ;
+   return 0;
+ }
+@@ -34120,30 +34120,10 @@ else
  fi;
  
  
@@ -33,3 +51,12 @@ $NetBSD: patch-af,v 1.4 2004/10/28 01:12:44 xtraeme Exp $
  
  
  
+@@ -34422,7 +34402,7 @@ then
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
++#bench_dirs="$bench_dirs mysql-test"
+ 
+ 
+ # Don't build readline, i have it already
