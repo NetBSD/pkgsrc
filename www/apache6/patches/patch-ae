@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+
+--- src/support/apachectl.orig	Thu Dec  3 08:23:16 1998
++++ src/support/apachectl	Thu Dec  3 08:23:49 1998
+@@ -27,6 +27,9 @@
+ # the path to your httpd binary, including options if necessary
+ HTTPD='/usr/local/apache/src/httpd'
+ #
++# shared object search path
++LD_LIBRARY_PATH=
++export LD_LIBRARY_PATH
+ # a command that outputs a formatted text version of the HTML at the
+ # url given on the command line.  Designed for lynx, however other
+ # programs may work.  

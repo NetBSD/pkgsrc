@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+
+--- htdocs/index.html.orig	Wed May 20 10:59:42 1998
++++ htdocs/index.html	Thu Dec  3 09:48:59 1998
+@@ -38,14 +38,26 @@
+   <A
+    HREF="manual/index.html"
+   >documentation</A>
+-  has been included with this distribution.
++  has been included with this distribution.<BR>
++  If the <STRONG>mod_ssl</STRONG> SSL extension has been installed, read the
++  <A
++   HREF="manual/mod/mod_ssl/index.html"
++  >SSL documentation</A>
++  carefully.
+   </P>
+   <P>
+-  The Webmaster of this site is free to use the image below on
+-  an Apache-powered Web server.  Thanks for using Apache!
++  Information on the NetBSD multiplatform operating system can be found
++  at <A HREF="http://www.netbsd.org/">NetBSD's homepage</A> on the net.
++  </P>
++  <P>
++  The Webmaster of this site is free to use the images below on
++  an Apache/NetBSD-powered Web server.  Thanks for using <A HREF="http://www.apache.org/">Apache</A> on <A HREF="http://www.netbsd.org/">NetBSD</A>!
+   </P>
+   <DIV ALIGN="CENTER">
+    <IMG SRC="apache_pb.gif" ALT="">
++   <A HREF="http://www.netbsd.org/">
++        <IMG SRC="sitedrivenby.gif" border=0
++             ALT="Site driven by NetBSD - NetBSD rocks!"></A>
+   </DIV>
+  </BODY>
+ </HTML>
