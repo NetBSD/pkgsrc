@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/12 17:09:18 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/27 20:29:18 cjep Exp $
 #
 
-DISTNAME=	CriticalMass-0.97	
+DISTNAME=	CriticalMass-0.97
 PKGNAME=	criticalmass-0.97
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=criticalmass/}
