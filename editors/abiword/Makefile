@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2003/10/11 13:40:19 grant Exp $
+# $NetBSD: Makefile,v 1.59 2003/11/04 23:00:00 reed Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -28,7 +28,6 @@ USE_GNU_ICONV=	# defined
 GNU_CONFIGURE=	# defined
 MAKEFILE=	GNUmakefile
 
-CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-psiconv=${BUILDLINK_PREFIX.psiconv}
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--without-libwmf
@@ -47,6 +46,11 @@ MAKE_FLAGS+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
 MAKE_FLAGS+=	UNIX_CAN_BUILD_STATIC=0
 
 .include "../../converters/libiconv/buildlink2.mk"
+
+.if defined(ICONV_IS_GNU)
+CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+.endif
+
 .include "../../converters/psiconv/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
