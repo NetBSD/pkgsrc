@@ -1,18 +1,15 @@
-$NetBSD: patch-al,v 1.8 2000/06/24 16:41:01 danw Exp $
+$NetBSD: patch-al,v 1.9 2000/06/26 18:05:46 dmcmahill Exp $
 
---- sysdeps/freebsd/prockernel.c.orig	Fri Jan 21 17:20:51 2000
-+++ sysdeps/freebsd/prockernel.c	Mon May  1 18:56:00 2000
-@@ -34,7 +34,7 @@
- #if (!defined __OpenBSD__) && (!defined __bsdi__)
+--- sysdeps/freebsd/prockernel.c.orig	Sat Oct 16 14:31:43 1999
++++ sysdeps/freebsd/prockernel.c	Mon Jun 26 08:42:11 2000
+@@ -35,5 +35,5 @@
  #include <sys/user.h>
  #endif
 -#if !defined(__bsdi__) && !(defined(__FreeBSD__) && defined(__alpha__))
 +#if !defined(__bsdi__) && !(defined(__FreeBSD__) && defined(__alpha__)) && !defined(__NetBSD__)
  #include <machine/pcb.h>
  #endif
- #if defined(__FreeBSD__) && !defined(__alpha__)
-@@ -48,6 +48,11 @@
- #include <osreldate.h>
+@@ -49,4 +49,9 @@
  #endif
  
 +#if defined(__NetBSD__) && defined(__arm32__)
@@ -22,9 +19,7 @@ $NetBSD: patch-al,v 1.8 2000/06/24 16:41:01 danw Exp $
 +
  static const unsigned long _glibtop_sysdeps_proc_kernel_pstats =
  (1L << GLIBTOP_PROC_KERNEL_MIN_FLT) +
- (1L << GLIBTOP_PROC_KERNEL_MAJ_FLT) +
-@@ -129,8 +134,15 @@
- 
+@@ -130,6 +135,13 @@
  	glibtop_suid_enter (server);
  
 +#ifdef __NetBSD__
@@ -38,9 +33,7 @@ $NetBSD: patch-al,v 1.8 2000/06/24 16:41:01 danw Exp $
 +#endif
  		       (unsigned long) &u_addr->u_stats,
  		       (char *) &pstats, sizeof (pstats)) == sizeof (pstats))
- 		{
-@@ -149,8 +161,12 @@
- 			buf->flags |= _glibtop_sysdeps_proc_kernel_pstats;
+@@ -150,6 +162,10 @@
  		}
  
 +#ifdef __NetBSD__
@@ -51,37 +44,37 @@ $NetBSD: patch-al,v 1.8 2000/06/24 16:41:01 danw Exp $
 +#endif
  		       (unsigned long) &u_addr->u_pcb,
  		       (char *) &pcb, sizeof (pcb)) == sizeof (pcb))
- 		{
-@@ -167,14 +183,32 @@
- 			/*xxx FreeBSD/Alpha? */
+@@ -168,4 +184,5 @@
  #endif
  #else
 +#ifdef __i386__
  			buf->kstk_esp = (u_int64_t) pcb.pcb_tss.tss_esp0;
  #ifdef __bsdi__
- 			buf->kstk_eip = (u_int64_t) pcb.pcb_tss.tss_eip;
- #else
+@@ -174,6 +191,27 @@
  			buf->kstk_eip = (u_int64_t) pcb.pcb_tss.__tss_eip;
  #endif
 +#else
-+#if defined(__NetBSD__) && defined(__m68k__)
++#if defined(__NetBSD__)
++#if defined(__m68k__)
 +			buf->kstk_esp = (u_int64_t) pcb.pcb_usp;
 +			buf->kstk_eip = (u_int64_t) 0;
-+#else
-+#if defined(__NetBSD__) && (defined(__arm32__) || defined(__powerpc__))
++#elif (defined(__arm32__) || defined(__powerpc__))
 +			buf->kstk_esp = (u_int64_t) pcb.pcb_sp;
 +			buf->kstk_eip = (u_int64_t) 0;
++#elif defined(__mipsel__)
++			buf->kstk_esp = (u_int64_t) pcb.pcb_context[8];
++			buf->kstk_eip = (u_int64_t) 0;
++#elif defined(__sparc__)
++			buf->kstk_esp = (u_int64_t) pcb.pcb_sp;
++			buf->kstk_eip = (u_int64_t) pcb.pcb_pc;
 +#else
-+#ifdef __NetBSD__
 +			/* provide some defaults for other platforms */
 +			buf->kstk_esp = (u_int64_t) 0;
 +			buf->kstk_eip = (u_int64_t) 0;
-+#endif
-+#endif
-+#endif
++#endif /* ${MACHINE_ARCH} */
++#endif /* __NetBSD__ */
  
  			buf->flags |= _glibtop_sysdeps_proc_kernel_pcb;
 +#endif
  #endif
  		}
- 
