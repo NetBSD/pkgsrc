@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2001/06/21 01:48:43 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2001/06/21 01:59:07 jlam Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -38,18 +38,6 @@ CFLAGS=			-O
 CONFIGURE_ARGS+=	--without-perl --without-dps --without-fpx \
 			--without-hdf --without-jbig --without-threads \
 			--without-ttf --without-wmf --without-xml
-
-# Fix references to libbz2 functions on NetBSD.
-.if (${OPSYS} == "NetBSD")
-post-extract:
-	@cd ${WRKSRC};							\
-	for file in ${CONFIGURE_SCRIPT} coders/miff.c; do		\
-		${MV} -f $${file} $${file}.presubst;			\
-		${SED} -e "s|BZ2_||g" $${file}.presubst > $${file};	\
-		${RM} -f $${file}.presubst;				\
-	done;								\
-	${CHMOD} +x ${CONFIGURE_SCRIPT}
-.endif
 
 # Fix config scripts by removing buildlink directory references.
 post-build:
