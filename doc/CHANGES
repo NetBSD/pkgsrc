@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2926 2003/07/29 21:36:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.2927 2003/07/29 22:09:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3060,3 +3060,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated canna-server-bin to 3.6pl3nb1 [jmmv 2003-07-29]
 	Updated ja-freewnn-server-bin to 1.10nb2 [jmmv 2003-07-29]
 	Updated sj3-server-bin to 2.0.1.20nb2 [jmmv 2003-07-29]
+	Updated skkserv to 3.9.4nb2 [jmmv 2003-07-29]
