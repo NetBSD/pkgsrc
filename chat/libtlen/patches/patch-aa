@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/02/28 14:26:08 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/10 13:25:07 tv Exp $
 
 --- lib/Makefile.in.orig	2003-01-16 04:33:32.000000000 -0600
 +++ lib/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/28 14:26:08 minskim Exp $
  
  CC = @CC@
 -CFLAGS = @CFLAGS_LIBTLEN@ -I.. -fPIC -Wall -ggdb
-+CFLAGS = @CFLAGS_LIBTLEN@ -I.. -fPIC
++CFLAGS = @CFLAGS_LIBTLEN@ -I..
  LIBS= @LIBS_LIBTLEN@
  
  MAKE = @MAKE@
