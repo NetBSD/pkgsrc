@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/04/28 22:54:36 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/04/30 17:37:58 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -18,6 +18,7 @@ DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=	jpeg-6a:../../graphics/jpeg
 DEPENDS+=	qt-1.33:../../x11/qt
 DEPENDS+=	kdelibs-4.1b:../../x11/kdelibs
+DEPENDS+=	kdesupport-4.1b:../../converters/kdesupport
 DEPENDS+=	kdebase-4.1b:../../x11/kdebase
 
 EXTRACT_CMD=		bzip2
