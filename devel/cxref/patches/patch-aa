@@ -1,0 +1,12 @@
+# $NetBSD: patch-aa,v 1.1.1.1 1999/08/24 13:21:34 hwr Exp $
+--- doc/Makefile.in.orig	Tue Aug 24 15:05:55 1999
++++ doc/Makefile.in	Tue Aug 24 15:06:10 1999
+@@ -53,7 +53,7 @@
+ ########
+ 
+ all : sources docs
+-	@
++
+ 
+ ########
+ 
