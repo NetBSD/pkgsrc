@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/26 13:56:09 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -65,7 +65,7 @@ lib/${MOZILLA}/components/libucvmath.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwallet.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwalletviewers.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwebbrwsr.${SO_SUFFIX}
-lib/${MOZILLA}/components/libwidget_gtk2.${SO_SUFFIX}
+lib/${MOZILLA}/components/libwidget_gtk.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxmlextras.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpconnect.${SO_SUFFIX}
@@ -76,6 +76,7 @@ lib/${MOZILLA}/ipc/modules/liblockmodule.${SO_SUFFIX}
 lib/${MOZILLA}/ipc/modules/libtransmgr.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
+lib/${MOZILLA}/libgtksuperwin.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkxtbin.${SO_SUFFIX}
 lib/${MOZILLA}/libjsj.${SO_SUFFIX}
 lib/${MOZILLA}/libldap50.${SO_SUFFIX}
@@ -106,12 +107,10 @@ lib/${MOZILLA}/chrome/en-US.jar
 lib/${MOZILLA}/chrome/en-mac.jar
 lib/${MOZILLA}/chrome/en-unix.jar
 lib/${MOZILLA}/chrome/en-win.jar
-lib/${MOZILLA}/chrome/icons/default.xpm
 lib/${MOZILLA}/chrome/icons/default/abcardWindow.xpm
 lib/${MOZILLA}/chrome/icons/default/abcardWindow16.xpm
 lib/${MOZILLA}/chrome/icons/default/addressbookWindow.xpm
 lib/${MOZILLA}/chrome/icons/default/addressbookWindow16.xpm
-lib/${MOZILLA}/chrome/icons/default/default.xpm
 lib/${MOZILLA}/chrome/icons/default/messengerWindow.xpm
 lib/${MOZILLA}/chrome/icons/default/messengerWindow16.xpm
 lib/${MOZILLA}/chrome/icons/default/msgcomposeWindow.xpm
@@ -121,7 +120,6 @@ lib/${MOZILLA}/chrome/messenger.jar
 lib/${MOZILLA}/chrome/pipnss.jar
 lib/${MOZILLA}/chrome/pippki.jar
 lib/${MOZILLA}/chrome/toolkit.jar
-lib/${MOZILLA}/components/accessibility-atk.xpt
 lib/${MOZILLA}/components/accessibility.xpt
 lib/${MOZILLA}/components/addrbook.xpt
 lib/${MOZILLA}/components/appshell.xpt
@@ -318,7 +316,6 @@ lib/${MOZILLA}/res/entityTables/html40Symbols.properties
 lib/${MOZILLA}/res/entityTables/htmlEntityVersions.properties
 lib/${MOZILLA}/res/entityTables/mathml20.properties
 lib/${MOZILLA}/res/entityTables/transliterate.properties
-lib/${MOZILLA}/res/fonts/fontEncoding.properties
 lib/${MOZILLA}/res/fonts/mathfont.properties
 lib/${MOZILLA}/res/fonts/mathfontCMEX10.properties
 lib/${MOZILLA}/res/fonts/mathfontCMSY10.properties
@@ -479,25 +476,17 @@ lib/${MOZILLA}/res/viewsource.css
 include/${MOZILLA}/accessibility/nsAccessNode.h
 include/${MOZILLA}/accessibility/nsAccessNodeWrap.h
 include/${MOZILLA}/accessibility/nsAccessibleEventData.h
-include/${MOZILLA}/accessibility/nsAccessibleText.h
 include/${MOZILLA}/accessibility/nsAccessibleWrap.h
 include/${MOZILLA}/accessibility/nsDocAccessibleWrap.h
 include/${MOZILLA}/accessibility/nsIAccessNode.h
 include/${MOZILLA}/accessibility/nsIAccessibilityService.h
 include/${MOZILLA}/accessibility/nsIAccessible.h
-include/${MOZILLA}/accessibility/nsIAccessibleAction.h
 include/${MOZILLA}/accessibility/nsIAccessibleCaret.h
 include/${MOZILLA}/accessibility/nsIAccessibleDocument.h
-include/${MOZILLA}/accessibility/nsIAccessibleEditableText.h
 include/${MOZILLA}/accessibility/nsIAccessibleEvent.h
-include/${MOZILLA}/accessibility/nsIAccessibleHyperLink.h
-include/${MOZILLA}/accessibility/nsIAccessibleHyperText.h
 include/${MOZILLA}/accessibility/nsIAccessibleProvider.h
 include/${MOZILLA}/accessibility/nsIAccessibleRetrieval.h
 include/${MOZILLA}/accessibility/nsIAccessibleSelectable.h
-include/${MOZILLA}/accessibility/nsIAccessibleTable.h
-include/${MOZILLA}/accessibility/nsIAccessibleText.h
-include/${MOZILLA}/accessibility/nsIAccessibleValue.h
 include/${MOZILLA}/accessibility/nsPIAccessNode.h
 include/${MOZILLA}/accessibility/nsPIAccessible.h
 include/${MOZILLA}/accessibility/nsPIAccessibleDocument.h
@@ -2252,8 +2241,9 @@ include/${MOZILLA}/webshell/nsILinkHandler.h
 include/${MOZILLA}/webshell/nsIRefreshURI.h
 include/${MOZILLA}/webshell/nsIWebShell.h
 include/${MOZILLA}/webshell/nsIWebShellServices.h
-include/${MOZILLA}/widget/mozcontainer.h
-include/${MOZILLA}/widget/mozdrawingarea.h
+include/${MOZILLA}/widget/gdksuperwin.h
+include/${MOZILLA}/widget/gtkmozarea.h
+include/${MOZILLA}/widget/gtkmozbox.h
 include/${MOZILLA}/widget/nsEvent.h
 include/${MOZILLA}/widget/nsGUIEvent.h
 include/${MOZILLA}/widget/nsIAppShell.h
