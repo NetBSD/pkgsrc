@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/10/29 05:43:47 jmc Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/29 17:18:52 wiz Exp $
 
 DISTNAME=	horde-1.2.6
 CATEGORIES=	www
@@ -39,7 +39,7 @@ FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}  
+FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-extract:
