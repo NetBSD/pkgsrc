@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.8 2000/06/26 07:54:42 simonb Exp $
+$NetBSD: patch-aa,v 1.9 2001/04/16 18:54:37 zuntum Exp $
 
---- ./Makefile.orig	Tue Feb  8 04:21:15 2000
-+++ ./Makefile	Sun Feb 20 02:55:27 2000
-@@ -54,22 +54,22 @@
+--- Makefile.orig	Tue May 30 04:03:08 2000
++++ Makefile
+@@ -54,16 +54,16 @@
  SHELL=	/bin/sh
  
  # CONFIGURE: Set location of executable, it's group and mode.
 -BINDIR=	/usr/local/bin
 -BINGRP=	kmem
+-BINMOD=	2755
 +BINDIR=	${PREFIX}/bin
 +#BINGRP=	kmem
--BINMOD=	2755
 +#BINMOD=	${BINMODE}
  
  # CONFIGURE: Set location of man directory and man page suffix.
@@ -25,12 +25,15 @@ $NetBSD: patch-aa,v 1.8 2000/06/26 07:54:42 simonb Exp $
  
  # CONFIGURE(Config): Add any OS-specific options here.
  COPTS=	
- 
- # CONFIGURE(Config): Add any special libraries your system needs.
- LIBS=	
- 
- SRCS=	main.c argparse.c getproc.c
+@@ -75,7 +75,7 @@
  OBJS=	main.o argparse.o getproc.o
+ HDRS=	conf.h
+ 
+-CFLAGS=	-O ${COPTS}
++CFLAGS+=${COPTS}
+ 
+ all:	skill
+ 
 @@ -90,20 +90,20 @@
  
  install: skill
