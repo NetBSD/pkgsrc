@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.13 2004/05/13 18:14:34 adam Exp $
+$NetBSD: patch-ab,v 1.14 2004/08/12 12:13:54 adam Exp $
 
---- src/osdep/unix/Makefile.orig	2004-05-13 14:54:30.000000000 +0000
+--- src/osdep/unix/Makefile.orig	2004-08-12 13:26:38.000000000 +0000
 +++ src/osdep/unix/Makefile
 @@ -29,8 +29,6 @@ IP=4
  
@@ -61,7 +61,7 @@ $NetBSD: patch-ab,v 1.13 2004/05/13 18:14:34 adam Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -908,7 +906,7 @@ onceenv:
+@@ -911,7 +909,7 @@ onceenv:
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
