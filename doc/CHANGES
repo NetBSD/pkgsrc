@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7367 2004/10/06 15:28:55 erh Exp $
+$NetBSD: CHANGES,v 1.7368 2004/10/07 13:38:29 hira Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4567,3 +4567,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gal2 to 2.2.2 [jmmv 2004-10-06]
 	Updated moss to 0.1.9 [minskim 2004-10-06]
 	Updated pkg_tarup to 1.6.3 [erh 2004-10-06]
+	Updated rhythmbox to 0.8.7 [hira 2004-10-06]
