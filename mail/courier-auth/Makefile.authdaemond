@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.authdaemond,v 1.1 2002/01/27 21:33:35 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.2 2002/01/27 23:47:08 jlam Exp $
 
 .include "../../mail/courier-auth/Makefile.common"
 
 PERL5_REQD=		5.6.0
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
-DEPENDS+=		courier-auth>=${BASE_VERS}:../../mail/courier-auth
 
 WRKSRC_FILES=		config.guess config.sub configure		\
 			install-sh mkinstalldirs
