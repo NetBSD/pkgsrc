@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2003/01/19 21:31:10 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/11 21:49:10 ben Exp $
 
---- Makefile.orig	Mon Dec 16 00:32:21 2002
+--- Makefile.orig	2002-12-16 00:32:21.000000000 -0800
 +++ Makefile
 @@ -1,10 +1,10 @@
  #								Csound Makefile
@@ -17,16 +17,16 @@ $NetBSD: patch-aa,v 1.3 2003/01/19 21:31:10 hubertf Exp $
  MAN1	= $(MAN)/man1
  CAT1	= $(MAN)/cat1
  # these directories must exist for stages beyond 'make csound'
-@@ -23,7 +23,7 @@
+@@ -23,7 +23,7 @@ CC = cc
  #	.c.o:
  #		$(CC) $(CFLAGS) -c $*.c -o $@
  
 -DEFINES = -DWINDOWS -DRTAUDIO -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DTCLTK -DIV_SCHED -DHAVE_FLTK
-+DEFINES = -DNETBSDRTAUDIO -DRTAUDIO -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DPREFIX=\"$(PREFIX)\"
++DEFINES = -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DPREFIX=\"$(PREFIX)\"
  # choose any of -
  #	-DSYS5	    invoke System 5 headers (e.g. 'string.h' for 'strings.h')
  #	-DWINDOWS   include window system calls (X11, SGI, or FG graphics)
-@@ -50,7 +50,7 @@
+@@ -50,7 +50,7 @@ DEFINES = -DWINDOWS -DRTAUDIO -DSFIRCAM 
  # (e.g., Linux on SPARC [not tested]), you should also define -
  #       -DLINUX_BE      Linux audio device handler for big-endian samples
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.3 2003/01/19 21:31:10 hubertf Exp $
  #	-O		Simple optimisation
  #	-O2		to be more specific about the optimization level
  #	-f		compile single-precision floats (4.3,VAX,DEC-RISC)
-@@ -90,12 +90,12 @@
+@@ -90,12 +90,12 @@ CFLAGS = -Wall -O2 -malign-loops=4 -mali
  #
  CXX = g++
  CXXFLAGS = -fno-exceptions -fno-rtti
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.3 2003/01/19 21:31:10 hubertf Exp $
  # libraries required by widgets.cpp
  #	-lfltk -lpthread -lg++			use dynamic libraries
  #
-@@ -105,7 +105,7 @@
+@@ -105,7 +105,7 @@ FLTKLIB = /usr/local/lib/libfltk.a /usr/
  #						directiories and version
  #						numbers are system-dependent)
  
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.3 2003/01/19 21:31:10 hubertf Exp $
  #	-lefence
  #	-lm		    		required
  #	-lX11				for X window calls
-@@ -124,8 +124,8 @@
+@@ -124,8 +124,8 @@ LIBS =	$(FLTKLIB) -L /usr/X11R6/lib -lX1
  # note: SuSE 7.3 users should use -ltcl8.3 -ltk8.3, but another
  # (probably better) solution is to create symbolic links
  
@@ -72,16 +72,18 @@ $NetBSD: patch-aa,v 1.3 2003/01/19 21:31:10 hubertf Exp $
  # ;if WINDOWS enabled in DEFINES, choose one of -
  #	winX11.o	for X11 window graphics
  #	winSGI.o	for SGI window graphics
-@@ -135,8 +135,10 @@
+@@ -133,10 +133,12 @@ WINOBJ = winFLTK.o FL_graph.o
+ #	winFLTK.o and FL_graph.o for `improved' X graphics
+ #	and many others....winbor, wincwin 
  
++AUDSRC =
++AUDOBJ =
  #AUDSRC = rtlinux.c LINUXaudio.c
  #AUDOBJ = rtlinux.o LINUXaudio.o
 -AUDSRC = rtalsa.c
 -AUDOBJ = rtalsa.c
 +#AUDSRC = rtalsa.c
 +#AUDOBJ = rtalsa.c
-+AUDSRC = rtNetBSD.c
-+AUDOBJ = rtNetBSD.o
  # ;if RTAUDIO enabled in DEFINES, include one of
  #	rtaudio.o		general interface to audio handlers & libraries
  #	rtDEC.c		rtSGI.c		rtHP.c		rtSUN.c
