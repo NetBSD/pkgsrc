@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2620 2003/06/29 22:21:48 jtb Exp $
+$NetBSD: CHANGES,v 1.2621 2003/06/29 22:26:26 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2611,3 +2611,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vmware-module3 to 3.2.1.1 [jdolecek 2003-06-29]
 	Updated vmware3 to 3.2.1 [jdolecek 2003-06-29]
 	Updated zile to 1.6.2 [jtb 2003-06-29]
+	Updated ftnchek to 3.2.2 [jtb 2003-06-29]
