@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 1999/08/04 11:30:52 fredb Exp $
+# $NetBSD: Makefile,v 1.102 1999/08/04 17:44:10 fredb Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -10,7 +10,6 @@
     SUBDIR += Xaw3d
     SUBDIR += XmHTML
     SUBDIR += afterstep
-    SUBDIR += afterstep-current
     SUBDIR += amiwm
     SUBDIR += asclock
     SUBDIR += ascp
