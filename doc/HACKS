@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.17 2003/08/02 17:52:14 kristerw Exp $
+# $NetBSD: HACKS,v 1.18 2003/09/26 10:59:16 gavan Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -377,4 +377,15 @@ who	kristerw
 port	arm
 file	devel/ftnchek/Makefile : 1.13
 descr	Internal compiler error for fortran.c when -O2. Use -O1 instead.
+kcah
+
+hack	net/ORBit Solaris linking bug
+cdate	26 Sep 2003
+who	gavan
+port	Solaris
+file	net/ORBit/Makefile : 1.94
+descr
+	libtool tries to link against libpthread.a, which doesn't exist
+	on Solaris. Removing the reference to libpthread.a from libpthread.la
+	after buildlinking allows ORBit to build on Solaris.
 kcah
