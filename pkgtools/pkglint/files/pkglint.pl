@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.19 1999/12/28 03:29:57 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.20 1999/12/29 01:51:17 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -1185,12 +1185,13 @@ EOF
 		}
 	}
 
+	# next check commented out since NetBSD doesn't have pkgsrc/LEGAL
 	# check RESTRICTED/NO_CDROM/NO_PACKAGE
-	print "OK: checking RESTRICTED/NO_CDROM/NO_PACKAGE.\n" if ($verbose);
-	if ($committer && $tmp =~ /\n(RESTRICTED|NO_CDROM|NO_PACKAGE)[+?]?=/) {
-		&perror("WARN: \"$1\" found. do not forget to update ".
-			"ports/LEGAL.");
-	}
+	# print "OK: checking RESTRICTED/NO_CDROM/NO_PACKAGE.\n" if ($verbose);
+	# if ($committer && $tmp =~ /\n(RESTRICTED|NO_CDROM|NO_PACKAGE)[+?]?=/) {
+	#	&perror("WARN: \"$1\" found. do not forget to update ".
+	#		"ports/LEGAL.");
+	# }
 
 	# check MAN[1-9LN]
 	if ($extrafile && $osname ne "NetBSD") {
