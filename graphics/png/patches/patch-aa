@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2000/06/03 19:46:44 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2000/10/06 01:38:51 jlam Exp $
 
---- scripts/makefile.std.orig	Fri Jul 31 17:15:22 1998
-+++ scripts/makefile.std	Thu Mar  4 14:15:31 1999
+--- scripts/makefile.std.orig	Wed Dec  8 18:44:40 1999
++++ scripts/makefile.std
 @@ -3,7 +3,7 @@
  # For conditions of distribution and use, see copyright notice in png.h
  
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.10 2000/06/03 19:46:44 wiz Exp $
 -CFLAGS=-I$(ZLIBINC) -O # -g -DPNG_DEBUG=5
 -LDFLAGS=-L. -L$(ZLIBLIB) -lpng -lz -lm
 +CC=${LIBTOOL} --mode=compile cc
-+CFLAGS=-O # -g -DPNG_DEBUG=5
++CFLAGS+=-O # -g -DPNG_DEBUG=5
 +LDFLAGS=libpng.la -lz -lm
  
  #RANLIB=echo
