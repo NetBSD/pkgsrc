@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/04 22:46:58 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/22 11:22:04 martti Exp $
 #
 
-DISTNAME=	docbkx412
-PKGNAME=	docbook-xml-4.1.2
+DISTNAME=	docbook-xml-4.2
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.oasis-open.org/docbook/xml/4.1.2/
+MASTER_SITES=	http://www.oasis-open.org/docbook/xml/4.2/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	seb@netbsd.org
@@ -18,7 +17,7 @@ DTDDIR=		${INSTDIR}/docbook
 ENTDIR=		${INSTDIR}/docbook/ent
 DTDFILES=	calstblx.dtd dbcentx.mod dbgenent.mod dbhierx.mod \
 		dbnotnx.mod dbpoolx.mod docbookx.dtd soextblx.dtd
-MISCFILES=	40chg.txt 41chg.txt readme.txt
+MISCFILES=	README
 
 do-build:
 	${ECHO} 'CATALOG "${PREFIX}/share/xml/docbook/catalog"' \
