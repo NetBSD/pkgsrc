@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1999/02/10 15:10:47 frueauf Exp $
+
 --- tools/into.c~	Wed Nov 25 23:51:32 1998
 +++ tools/into.c	Wed Nov 25 23:58:09 1998
 @@ -75,7 +75,7 @@

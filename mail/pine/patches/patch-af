@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.5 1999/02/10 15:13:38 frueauf Exp $
+
 --- imap/src/mtest/mtest.c.orig	Fri Nov 13 10:59:21 1998
 +++ imap/src/mtest/mtest.c	Fri Nov 13 10:59:43 1998
 @@ -52,6 +52,9 @@
