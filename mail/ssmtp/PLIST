@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/19 20:39:10 jlam Exp $
+man/man8/ssmtp.8
+sbin/ssmtp
+share/examples/ssmtp/revaliases
+share/examples/ssmtp/ssmtp.conf
+@dirrm share/examples/ssmtp
