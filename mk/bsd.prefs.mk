@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.27 2001/03/19 14:46:04 dmcmahill Exp $
+# $NetBSD: bsd.prefs.mk,v 1.28 2001/03/23 15:47:21 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -215,6 +215,15 @@ MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .ifndef PKGTOOLS_VERSION
 PKGTOOLS_VERSION!=${PKG_TOOLS_BIN}/pkg_info -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
+.endif
+
+.ifndef ZOULARIS_VERSION
+.if !exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
+ZOULARIS_VERSION=	20000522
+.else
+.include "${LOCALBASE}/bsd/share/mk/zoularis.mk"
+.endif
+MAKEFLAGS+=		ZOULARIS_VERSION="${ZOULARIS_VERSION}"
 .endif
 
 .endif	# BSD_PKG_MK
