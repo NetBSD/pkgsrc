@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
+
+--- src/FSFileView.c.orig	Sat Oct  9 20:45:21 1999
++++ src/FSFileView.c
+@@ -397,10 +397,10 @@
+     if ((fView->primary))
+     {
+ 	memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-	attributes.window_style = (NSTitledWindowMask |
+-				   NSMiniaturizableWindowMask | 
+-				   NSResizableWindowMask);
+-	attributes.window_level = NSNormalWindowLevel;
++	attributes.window_style = (WMTitledWindowMask |
++				   WMMiniaturizableWindowMask | 
++				   WMResizableWindowMask);
++	attributes.window_level = WMNormalWindowLevel;
+ 	attributes.extra_flags = GSFullKeyboardEventsFlag;
+ 	attributes.flags = (GSWindowStyleAttr | GSWindowLevelAttr |
+ 			    GSExtraFlagsAttr);
