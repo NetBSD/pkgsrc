@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/15 21:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/01/26 22:54:00 veego Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.16
@@ -40,16 +40,18 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.16/doc
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.pkg.mk"
 
 GCC_VERSION!=   ${CC} --version
-EGCS_VERSION!=	${CC} -v 2>&1 | ${AWK} '{print $$4}'
 
 post-patch:
 .if ${GCC_VERSION:C/-.*$$//} == egcs
-	${TEST} ${EGCS_VERSION} -lt 19981201 && \
-	@cd ${WRKSRC};
-	for FILE in ${PATCHDIR}/egcs-patch-*; do \
-	  ${PATCH} ${PATCH_ARGS} <$$FILE; \
-	done
+	@EGCS_VERSION=`${CC} -v 2>&1 | ${AWK} '{print $$4}'`; \
+	if [ $$EGCS_VERSION -lt 19981201 ]; then \
+		cd ${WRKSRC}; \
+		for FILE in ${PATCHDIR}/egcs-patch-*; do \
+		  ${PATCH} ${PATCH_ARGS} <$$FILE; \
+		done; \
+	fi
 .endif
+
+.include "../../mk/bsd.pkg.mk"
