@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/10/08 21:12:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 1999/12/06 14:24:01 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.6
@@ -45,7 +45,7 @@ DEPENDS+=	faces-1.6.1:../../mail/faces
 WITH_XFACE=	--with-xface=no
 .endif
 
-CONFIGURE_ARGS+=	${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
+CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM} --prefix=${PREFIX} \
 			--with-clash-detection --with-mule=yes \
 			--with-ncurses=no --with-session=yes \
 			${WITH_DIALOGS} ${WITH_XFACE} \
