@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/29 01:12:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/18 05:25:54 grant Exp $
 #
 
 DISTNAME=		xfstt-1.1
@@ -14,7 +14,7 @@ USE_X11BASE=		YES
 post-patch:
 	@( \
 	cd ${WRKSRC} ; \
-	for i in INSTALL perftest.cpp xfstt.cpp ; \
+	for i in INSTALL perftest.cpp xfstt.cpp xfstt.1x; \
 	do \
 	    ${MV} $$i $$i.bak ; \
 	    ${SED} -e 's;@X11BASE@;${X11BASE};' < $$i.bak > $$i ; \
