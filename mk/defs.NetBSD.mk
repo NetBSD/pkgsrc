@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.9 2001/11/21 12:42:24 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.10 2001/11/21 12:53:05 agc Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -67,3 +67,5 @@ NOLOGIN?=	/sbin/nologin
 
 ROOT_USER?=	root
 ROOT_GROUP?=	wheel
+
+_IMAKE_MAKE=	${MAKE}		# program which gets invoked by imake
