@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/12/24 05:29:52 itohy Exp $
+# $NetBSD: Makefile,v 1.22 1999/12/26 23:16:26 itohy Exp $
 #
 
     SUBDIR += a2ps
@@ -24,12 +24,12 @@
     SUBDIR += nkf
     SUBDIR += p5-jcode
     SUBDIR += p5-nkf
-    SUBDIR += skkfep
-    SUBDIR += skkinput
-    SUBDIR += skkserv
     SUBDIR += sed
     SUBDIR += sj3-lib
     SUBDIR += sj3-server
+    SUBDIR += skkfep
+    SUBDIR += skkinput
+    SUBDIR += skkserv
     SUBDIR += vfghostscript5
     SUBDIR += vflib
     SUBDIR += xjman
