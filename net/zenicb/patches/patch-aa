@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/08/08 18:50:31 sommerfeld Exp $
+
+--- src/zenicb.el-	Sun Jul 19 18:37:51 1998
++++ src/zenicb.el	Sun Aug  8 14:40:39 1999
+@@ -211,6 +211,8 @@
+ 	      (if (not zenicb-process)
+ 		  ()
+ 		(set-marker (process-mark zenicb-process) (point-max))
++		(set-buffer-multibyte nil)
++		(set-process-coding-system zenicb-process nil nil)
+ 		(set-process-buffer zenicb-process zenicb-buffer)
+ 		(set-process-filter zenicb-process 'zenicb-filter)
+ 		(set-process-sentinel zenicb-process 'zenicb-sentinel)
