@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.661 2001/02/13 11:47:04 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.662 2001/02/15 13:49:04 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1092,7 +1092,7 @@ _ACCEPTABLE=	yes
 .    endfor	# _lic
 .  endif	# ACCEPTABLE_LICENSES
 .  ifndef _ACCEPTABLE
-IGNORE+= "${PKGNAME} has unacceptable license: ${LICENSE}." \
+IGNORE+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
 	 "    To build this package, add this line to your /etc/mk.conf:" \
 	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
 .  endif	# _ACCEPTABLE
@@ -3173,7 +3173,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	done;								\
 	if [ -f ${PATCH_SUM_FILE} ]; then				\
 		for f in `${AWK} '$$1 == "MD5" { gsub("[()]", "", $$2); print $$2 }' < ${PATCH_SUM_FILE}`; do \
-			if [ -f $$f ]; then				\
+			if [ -f ${PATCHDIR}/$$f ]; then			\
 				files="$$files ${PATCHDIR}/$$f";	\
 			fi;						\
 		done;							\
