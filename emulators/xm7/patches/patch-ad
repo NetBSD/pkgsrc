@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/13 17:12:19 kei Exp $
+
+--- xw_snd.cpp.orig	Sat Aug 12 12:33:21 2000
++++ xw_snd.cpp	Sat Aug 12 12:36:19 2000
+@@ -24,6 +24,8 @@
+ #include <sys/time.h>
+ #ifdef __FreeBSD__
+ #include <machine/soundcard.h>
++#elif defined(__NetBSD__)
++#include <soundcard.h>
+ #else
+ #include <linux/soundcard.h>
+ #endif

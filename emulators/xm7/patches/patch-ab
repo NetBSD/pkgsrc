@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/13 17:12:19 kei Exp $
+
+--- convert.sh.orig	Sat Aug 12 12:17:15 2000
++++ convert.sh	Sat Aug 12 12:18:36 2000
+@@ -7,3 +7,7 @@
+ rm t t.lzh
+ done
+ 
++for X in *.cpp;do
++nkf -e < $X > t
++mv t $X
++done
