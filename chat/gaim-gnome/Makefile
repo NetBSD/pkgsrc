@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/10 16:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/05 17:11:45 wiz Exp $
 
 .include "../gaim/Makefile.common"
 
@@ -13,9 +13,11 @@ MESSAGE_SRC=	${.CURDIR}/../gaim-gnome/MESSAGE
 CONFIGURE_ARGS+= --enable-gnome
 CONFIGURE_ARGS+= --enable-panel
 
-.include "../../x11/gnome-core/buildlink.mk"
-.include "../../audio/esound/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+USE_BUILDLINK2=	YES
+
+.include "../../audio/esound/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
