@@ -7,5 +7,3 @@ This package contains three little utilities that use the proc FS:
 The Linux version includes "fuser" for listing processes' open files,
 but NetBSD's procfs doesn't have the facilities for this (use the lsof
 package instead).
-
-Author: Werner Almesberger <werner.almesberger@lrc.di.epfl.ch>

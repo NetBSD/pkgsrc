@@ -1,34 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2000/10/06 00:04:57 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2001/04/24 16:59:35 jlam Exp $
 
---- Makefile.orig	Mon Oct 25 14:01:33 1999
-+++ Makefile
-@@ -1,11 +1,11 @@
- CC=cc
--CFLAGS=-O -DPSMISC_VERSION=\"`cat VERSION`\" \
-+CFLAGS+=-O -DPSMISC_VERSION=\"`cat VERSION`\" \
-   -D_GNU_SOURCE \
-   -Wall -Wno-parentheses -Wwrite-strings -Wpointer-arith \
-   # -Wcast-align -Wconversion -g
- LDFLAGS=#-s -N #-Xlinker -qmagic
- REAL_CPP=cc -E
--PROGS=killall pstree fuser
-+PROGS=killall pstree # fuser
- EBINDIR=/bin		# essential binaries
- BINDIR=/usr/bin		# not so essential ones
- MANDIR=/usr/man/man1	# all man pages
-@@ -22,13 +22,14 @@
- 		grep '^{ 1,"HUP" },$$' signames.h >/dev/null || \
- 		  { rm -f signames.h; exit 1; }
+--- doc/Makefile.in.orig	Sat Mar 31 05:40:07 2001
++++ doc/Makefile.in
+@@ -64,7 +64,7 @@
+ TERMCAP_LIB = @TERMCAP_LIB@
+ VERSION = @VERSION@
  
--signals.o:	signals.h signals.c signames.h Makefile
-+signals.o:	signals.h signals.c Makefile
+-man_MANS = fuser.1 killall.1 pidof.1 pstree.1
++man_MANS = killall.1 pidof.1 pstree.1
  
- fuser.o:	fuser.c comm.h signals.h Makefile VERSION
- killall.o:	killall.c comm.h signals.h Makefile VERSION
- 
- fuser:		fuser.o signals.o
- killall:	killall.o signals.o
-+		$(CC) $(CFLAGS) $(LDFLAGS) -o killall killall.o signals.o
- 
- pstree:		pstree.c comm.h Makefile VERSION
- 		$(CC) $(CFLAGS) $(LDFLAGS) -o pstree pstree.c -ltermcap
+ EXTRA_DIST = $(man_MANS)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
