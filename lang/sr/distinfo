@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2005/03/02 21:07:06 is Exp $
+$NetBSD: distinfo,v 1.14 2005/03/08 13:49:49 is Exp $
 
 SHA1 (sr233.tar.Z) = 0354987527ed1e84c32d3b1fc6bacb65d647f337
 Size (sr233.tar.Z) = 1424566 bytes
-SHA1 (patch-aa) = eef6cfc94c6aa73b52d152112e9cee007fb90906
+SHA1 (patch-aa) = 8df83950498d807024f00ba806613aff99a318e9
 SHA1 (patch-ab) = 2a086280fefb4acddd19cb3cbafd58f8de5b309e
 SHA1 (patch-ad) = 7fc00d7f52a16dc7b814c94c795bb5d7af02e58b
 SHA1 (patch-ar) = 9a331cdb90959d0cc7475d2fc203d2c302d4bf5c
