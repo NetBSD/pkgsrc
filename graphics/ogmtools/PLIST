@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 07:26:44 salo Exp $
-bin/ogmmerge
+@comment $NetBSD: PLIST,v 1.2 2003/12/02 23:25:25 cube Exp $
+bin/dvdxchap
+bin/ogmcat
 bin/ogmdemux
 bin/ogminfo
+bin/ogmmerge
 bin/ogmsplit
-bin/ogmcat
-bin/dvdxchap
-man/man1/ogmsplit.1
+man/man1/dvdxchap.1
+man/man1/ogmcat.1
+man/man1/ogmdemux.1
 man/man1/ogminfo.1
 man/man1/ogmmerge.1
-man/man1/ogmdemux.1
-man/man1/ogmcat.1
-man/man1/dvdxchap.1
+man/man1/ogmsplit.1
