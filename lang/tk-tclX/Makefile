@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:34 grant Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/tclX8.2.0/unix
 CATEGORIES=	lang tcl tk
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.neosoft.com/TclX/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 

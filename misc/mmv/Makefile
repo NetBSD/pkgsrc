@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/05 17:20:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:49:30 grant Exp $
 #
 
 DISTNAME=       mmv_1.01b.orig
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/mmv-1.01b.orig
 CATEGORIES=     misc
 MASTER_SITES=   ${MASTER_SITE_DEBIAN:=dists/potato/main/source/utils/}
 
-MAINTAINER=     tech-pkg@netbsd.org
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=       # none
 COMMENT=	mmv is a program to move multiple files using wildcard patterns
 

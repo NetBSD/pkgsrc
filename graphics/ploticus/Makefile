@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/23 10:48:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:42:13 grant Exp $
 #
 
 DISTNAME=	plsrc210
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	graphics
 MASTER_SITES=	http://ploticus.sourceforge.net/download/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://ploticus.sourceforge.net/doc/Welcome.html
 COMMENT=	Versatile data visualization engine
 

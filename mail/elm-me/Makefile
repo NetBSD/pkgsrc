@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/13 13:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:55 grant Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.ozone.fmi.fi/KEH/ \
 			ftp://ftp.funet.fi/pub/unix/mail/elm/elm-2.4ME+/ \
 			ftp://ftp.ibp.fr/pub/unix/mail/elm-me/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.instinct.org/elm/
 COMMENT=		ELM Mail User Agent with ME extensions
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:41:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:49:50 grant Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
-MAINTAINER=		drochner@netbsd.org
+MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://root.cern.ch/
 COMMENT=		OO framework for data analysis and visualisation
 

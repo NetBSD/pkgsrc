@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/16 08:34:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:49:45 grant Exp $
 #
 
 DISTNAME=	pdmenu_1.2.65
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/pdmenu
 CATEGORIES=	misc
 MASTER_SITES=	http://www.kitenet.net/programs/pdmenu/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.kitenet.net/programs/pdmenu/
 COMMENT=	Simple console menu program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/06/30 10:15:25 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 21:45:06 grant Exp $
 
 PERL5_SNAPSHOT=	# empty
 PERL5_VERS=	5.8.0
@@ -18,7 +18,7 @@ MASTER_SITES=	${SNAPSHOT_SITES} \
 		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/ \
 		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.perl.com/
 COMMENT=	Practical Extraction and Report Language
 

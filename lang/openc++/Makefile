@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:18:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:45:03 grant Exp $
 #
 
 DISTNAME=	opencxx2512
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/openc++2.5.12/src/Unix
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencxx/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.csg.is.titech.ac.jp/~chiba/openc++.html
 COMMENT=	OpenC++ is a version of C++ with a Metaobject Protocol
 

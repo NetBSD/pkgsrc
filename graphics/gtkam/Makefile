@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:41:12 grant Exp $
 #
 
 DISTNAME=	gtkam-0.1.10
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphoto2/
 COMMENT=	digital camera access graphical client (GTK2)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/28 22:03:38 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:46:54 grant Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -11,7 +11,7 @@ MASTER_SITES=	http://cr.yp.to/software/			\
 		ftp://ftp.net.ohio-state.edu/pub/networking/mail/qmail/ \
 		ftp://ftp.id.wustl.edu/pub/qmail/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.qmail.org/
 COMMENT=	SECURE, reliable, efficient, simple, and FAST MTA for UNIX systems
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2003/06/02 01:19:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 21:41:57 grant Exp $
 
 DISTNAME=		flash_${DISTUNAME}
 WRKSRC=			${WRKDIR}/${WRKNAME}
 CATEGORIES=		graphics www
 MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.flash.com/
 COMMENT=		MacroMedia Flash Player Netscape plugin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:30 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:47:46 grant Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}
 CATEGORIES=		math
 MASTER_SITES=		http://www.math.uiowa.edu/~dstewart/meschach/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.math.uiowa.edu/~dstewart/meschach/
 COMMENT=		Library of C Routines for Matrix Computations
 

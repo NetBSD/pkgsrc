@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/06/23 16:12:48 jmc Exp $
+# $NetBSD: Makefile,v 1.36 2003/07/17 21:45:58 grant Exp $
 
 DISTNAME=	exim-4.10
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.esat.net/pub/networking/mail/mta/exim/exim4/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ad@netbsd.org
+MAINTAINER=	ad@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
