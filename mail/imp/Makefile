@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/03/26 02:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/12 03:35:38 salo Exp $
 
 DISTNAME=	imp-3.2.2
 PKGREVISION=	1
@@ -58,7 +58,9 @@ pre-install:
 		${FILESDIR}/imp.conf.dist > ${WRKDIR}/imp.conf.dist
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${IMPDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${IMPDIR}
 	cd ${WRKDIR}; ${INSTALL_DATA} imp.conf.dist ${EGDIR}/imp.conf
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING README docs/* ${DOCDIR}
 	cd ${WRKSRC}; ${CP} -R graphics lib locale po scripts templates ${IMPDIR}
