@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/06 17:09:53 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/06 20:17:24 seb Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -22,7 +22,6 @@ RESTRICTED=	No redistribution in altered form
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 NO_PATCH=       yes
 NO_CONFIGURE=   yes
