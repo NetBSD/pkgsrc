@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/31 14:44:42 tv Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/06 22:10:21 jlam Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -13,9 +13,6 @@ USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
 
 ALL_TARGET=	clean unace
-
-post-build:
-	false
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unace ${PREFIX}/bin
