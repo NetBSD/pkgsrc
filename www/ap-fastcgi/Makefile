@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/17 22:55:24 grant Exp $
+# $NetBSD: Makefile,v 1.26 2004/05/08 15:19:18 grant Exp $
 #
 
 DISTNAME=	mod_fastcgi_2.2.10
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.fastcgi.com/
 COMMENT=	New, improved CGI-like interface module for Apache
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	yes
 
 APACHE_MODULE_NAME=	mod_fastcgi.so
 
