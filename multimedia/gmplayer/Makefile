@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/02 17:08:23 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/03 11:00:00 wiz Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,7 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
@@ -24,8 +24,8 @@ COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 SKINS +=	default-1.8${EXTRACT_SUFX}			\
 		AlienMind-1.2${EXTRACT_SUFX}			\
 		BlueHeart-1.5${EXTRACT_SUFX}			\
-		CornerMP-1.1${EXTRACT_SUFX}			\
-		CornerMP-aqua-1.3${EXTRACT_SUFX}		\
+		CornerMP-1.2${EXTRACT_SUFX}			\
+		CornerMP-aqua-1.4${EXTRACT_SUFX}		\
 		Cyrus-1.2${EXTRACT_SUFX}			\
 		MidnightLove-1.6${EXTRACT_SUFX}			\
 		WindowsMediaPlayer6-2.0${EXTRACT_SUFX}		\
