@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.15 2001/06/28 23:12:16 jlam Exp $
+$NetBSD: patch-aa,v 1.16 2001/08/17 19:49:09 kim Exp $
 
---- configure.orig	Sun Jun 17 00:09:50 2001
-+++ configure
+--- configure.orig	Sun Jun 17 07:09:50 2001
++++ configure	Fri Aug 17 22:06:47 2001
 @@ -1796,7 +1796,7 @@
  
  	;;
@@ -20,3 +20,44 @@ $NetBSD: patch-aa,v 1.15 2001/06/28 23:12:16 jlam Exp $
  	cat >> confdefs.h <<\EOF
  #define PAM_SUN_CODEBASE 1
  EOF
+@@ -3160,6 +3160,7 @@
+ 
+ # Check whether user wants TCP wrappers support
+ TCPW_MSG="no" 
++TCPW_LIB=""
+ # Check whether --with-tcp-wrappers or --without-tcp-wrappers was given.
+ if test "${with_tcp_wrappers+set}" = set; then
+   withval="$with_tcp_wrappers"
+@@ -3173,6 +3174,8 @@
+ #line 3174 "configure"
+ #include "confdefs.h"
+ 
++#include <sys/cdefs.h>
++#include <stdio.h>
+ #include <tcpd.h>
+ 					int deny_severity = 0, allow_severity = 0;
+ 				
+@@ -3189,6 +3192,7 @@
+ EOF
+ 
+ 					TCPW_MSG="yes" 
++					TCPW_LIB="-lwrap" 
+ 				
+ else
+   echo "configure: failed program was:" >&5
+@@ -3200,6 +3204,7 @@
+ 			
+ fi
+ rm -f conftest*
++			LIBS="$saved_LIBS"
+ 		fi
+ 	
+ 
+@@ -8881,6 +8886,7 @@
+ s%@TEST_MINUS_S_SH@%$TEST_MINUS_S_SH%g
+ s%@LOGIN_PROGRAM_FALLBACK@%$LOGIN_PROGRAM_FALLBACK%g
+ s%@LD@%$LD%g
++s%@TCPW_LIB@%$TCPW_LIB%g
+ s%@NO_SFTP@%$NO_SFTP%g
+ s%@rsh_path@%$rsh_path%g
+ s%@xauth_path@%$xauth_path%g

@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.12 2001/06/28 23:12:16 jlam Exp $
+$NetBSD: patch-ah,v 1.13 2001/08/17 19:49:10 kim Exp $
 
---- Makefile.in.orig	Fri Apr 27 09:31:08 2001
-+++ Makefile.in	Tue May 15 01:25:53 2001
+--- Makefile.in.orig	Fri Apr 27 03:31:08 2001
++++ Makefile.in	Fri Aug 17 21:43:33 2001
 @@ -8,6 +8,7 @@
  mandir=@mandir@
  mansubdir=@mansubdir@
@@ -19,7 +19,24 @@ $NetBSD: patch-ah,v 1.12 2001/06/28 23:12:16 jlam Exp $
  SFTP_SERVER=$(libexecdir)/sftp-server
  
  PATHS= -DETCDIR=\"$(sysconfdir)\" \
-@@ -164,7 +165,7 @@
+@@ -29,6 +30,7 @@
+ CFLAGS=@CFLAGS@
+ CPPFLAGS=-I. -I$(srcdir) @CPPFLAGS@ $(PATHS) @DEFS@
+ LIBS=@LIBS@
++WRAP=@TCPW_LIB@
+ AR=@AR@
+ RANLIB=@RANLIB@
+ INSTALL=@INSTALL@
+@@ -96,7 +98,7 @@
+ 	$(LD) -o $@ $(SSHOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
+ 
+ sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
+-	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
++	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(WRAP) $(LIBS)
+ 
+ scp$(EXEEXT): $(LIBCOMPAT) libssh.a scp.o scp-common.o
+ 	$(LD) -o $@ scp.o scp-common.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
+@@ -164,7 +166,7 @@
  distprep: catman-do
  	autoreconf
  
@@ -28,7 +45,7 @@ $NetBSD: patch-ah,v 1.12 2001/06/28 23:12:16 jlam Exp $
  
  install-files:
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
-@@ -173,6 +174,7 @@
+@@ -173,6 +175,7 @@
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)1
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)8
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(libexecdir)
@@ -36,7 +53,7 @@ $NetBSD: patch-ah,v 1.12 2001/06/28 23:12:16 jlam Exp $
  	$(INSTALL) -m $(SSH_MODE) -s ssh $(DESTDIR)$(bindir)/ssh
  	$(INSTALL) -m 0755 -s scp $(DESTDIR)$(bindir)/scp
  	$(INSTALL) -m 0755 -s ssh-add $(DESTDIR)$(bindir)/ssh-add
-@@ -199,23 +201,11 @@
+@@ -199,23 +202,11 @@
  	if [ ! -d $(DESTDIR)$(sysconfdir) ]; then \
  		$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir); \
  	fi
@@ -63,7 +80,7 @@ $NetBSD: patch-ah,v 1.12 2001/06/28 23:12:16 jlam Exp $
  	fi
  	if [ ! -f $(DESTDIR)$(sysconfdir)/primes ]; then \
  		$(INSTALL) -m 644 primes.out $(DESTDIR)$(sysconfdir)/primes; \
-@@ -248,10 +238,10 @@
+@@ -248,10 +239,10 @@
  	./ssh-keygen -t rsa -f $(DESTDIR)$(sysconfdir)/ssh_host_rsa_key -N ""
  
  uninstallall:	uninstall
