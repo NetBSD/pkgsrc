@@ -6,7 +6,7 @@
  #	if your compiler supports posix-compatible compilation
 -OS=-DSOLARIS
 +OS=-DSUNOS -O2
-+SAMDIR=../../../sam/${WRKDIR:T}
++SAMDIR=${PKGSRCDIR}/plan9/sam/${WRKDIR:T}
  
  #	add -Iincludedir for any include directories that need to be searched
  #	for posix header files
