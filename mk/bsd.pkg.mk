@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.664 2001/02/17 15:55:47 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.665 2001/02/17 19:36:27 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -2967,7 +2967,7 @@ show-pkgtools-version:
 # convenience target, to display make variables from command line
 # i.e. "make show-var VARNAME=var", will print var's value
 show-var:
-	@${ECHO} "${${VARNAME}}"
+	@${ECHO} "${${VARNAME}:S/"/\"/g:S/`/\`/g}"
 
 .if !target(print-build-depends-list)
 print-build-depends-list:
