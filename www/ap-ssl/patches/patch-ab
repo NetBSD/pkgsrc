@@ -1,8 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2002/12/03 14:31:33 grant Exp $
 
---- pkg.sslsup/mkcert.sh.in.orig	Sun Apr 16 05:21:24 2000
+--- pkg.sslsup/mkcert.sh.in.orig	Sun Apr 16 19:21:24 2000
 +++ pkg.sslsup/mkcert.sh.in
-@@ -5,35 +5,53 @@
+@@ -1,39 +1,57 @@
+-#!/bin/sh
++#!@SH@
+ ##
+ ##  mkcert.sh -- SSL Certificate Generation Utility
+ ##  Copyright (c) 1998-2000 Ralf S. Engelschall, All Rights Reserved. 
  ##
  
  #   parameters
@@ -82,7 +87,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
  
  #   some optional terminal sequences
  case $TERM in
-@@ -93,11 +111,11 @@
+@@ -93,11 +111,11 @@ if [ ".$view" != . ]; then
  fi
  
  #   find some random files
@@ -98,7 +103,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
              /etc/hosts /etc/group /etc/resolv.conf /bin/ls; do
      if [ -r $file ]; then
          if [ ".$randfiles" = . ]; then
-@@ -112,7 +130,7 @@
+@@ -112,7 +130,7 @@ done
  if [ -f $HOME/.rnd ]; then
      RANDFILE="$HOME/.rnd"
  else
@@ -107,7 +112,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
      (ps; date) >$RANDFILE
  fi
  export RANDFILE
-@@ -156,12 +174,12 @@
+@@ -156,12 +174,12 @@ case $type in
          fi
          echo "${T_MD}RESULT: Server Certification Files${T_ME}"
          echo ""
@@ -122,7 +127,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          echo "   The PEM-encoded X.509 certificate file which you configure"
          echo "   with the 'SSLCertificateFile' directive (automatically done"
          echo "   when you install via APACI)."
-@@ -211,6 +229,7 @@
+@@ -211,6 +229,7 @@ case $type in
          echo "______________________________________________________________________"
          echo ""
          echo "${T_MD}STEP 1: Generating $algo private key (1024 bit) [server.key]${T_ME}"
@@ -130,7 +135,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          if [ ".$algo" = .RSA ]; then
              if [ ".$randfiles" != . ]; then
                  $openssl genrsa -rand $randfiles -out $sslkeydir/server.key 1024
-@@ -238,10 +257,11 @@
+@@ -238,10 +257,11 @@ case $type in
                  exit 1
              fi
          fi
@@ -143,7 +148,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
  [ req ]
  default_bits                    = 1024
  distinguished_name              = req_DN
-@@ -265,7 +285,7 @@
+@@ -265,7 +285,7 @@ emailAddress                    = "7. Em
  emailAddress_max                = 40
  emailAddress_default            = www@snakeoil.dom
  EOT
@@ -152,7 +157,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
                       -new \
                       -key $sslkeydir/server.key \
                       -out $sslcsrdir/server.csr
-@@ -273,7 +293,7 @@
+@@ -273,7 +293,7 @@ EOT
              echo "mkcert.sh:Error: Failed to generate certificate signing request" 1>&2
              exit 1
          fi
@@ -161,7 +166,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          prompt="8. Certificate Validity     (days)          [365]:"
          echo dummy | awk '{ printf("%s", prompt); }' "prompt=$prompt"
          read days
-@@ -287,8 +307,8 @@
+@@ -287,8 +307,8 @@ EOT
          read certversion
          extfile=""
          if [ ".$certversion" = .3 -o ".$certversion" = . ]; then
@@ -172,7 +177,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
  extensions = x509v3
  [ x509v3 ]
  subjectAltName   = email:copy
-@@ -296,13 +316,13 @@
+@@ -296,13 +316,13 @@ nsComment        = "mod_ssl generated te
  nsCertType       = server
  EOT
          fi
@@ -189,7 +194,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
                            -CA $sslcrtdir/snakeoil-ca-rsa.crt \
                            -CAkey $sslkeydir/snakeoil-ca-rsa.key \
                            -in $sslcsrdir/server.csr -req \
-@@ -310,7 +330,7 @@
+@@ -310,7 +330,7 @@ EOT
          else
              $openssl x509 $extfile \
                            -days $days \
@@ -198,7 +203,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
                            -CA $sslcrtdir/snakeoil-ca-dsa.crt \
                            -CAkey $sslkeydir/snakeoil-ca-dsa.key \
                            -in $sslcsrdir/server.csr -req \
-@@ -320,7 +340,7 @@
+@@ -320,7 +340,7 @@ EOT
              echo "mkcert.sh:Error: Failed to generate X.509 certificate" 1>&2
              exit 1
          fi
@@ -207,7 +212,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          echo "Verify: matching certificate & key modulus"
          modcrt=`$openssl x509 -noout -modulus -in $sslcrtdir/server.crt | sed -e 's;.*Modulus=;;'`
          if [ ".$algo" = .RSA ]; then
-@@ -387,22 +407,22 @@
+@@ -387,22 +407,22 @@ EOT
          echo ""
          echo "${T_MD}RESULT: Server Certification Files${T_ME}"
          echo ""
@@ -234,7 +239,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          echo ""
          echo "WARNING: Do not use this for real-life/production systems"
          echo ""
-@@ -448,6 +468,7 @@
+@@ -448,6 +468,7 @@ EOT
          echo "______________________________________________________________________"
          echo ""
          echo "${T_MD}STEP 1: Generating $algo private key for CA (1024 bit) [ca.key]${T_ME}"
@@ -242,7 +247,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          if [ ".$algo" = .RSA ]; then
              if [ ".$randfiles" != . ]; then
                  $openssl genrsa -rand $randfiles -out $sslkeydir/ca.key 1024
-@@ -475,10 +496,11 @@
+@@ -475,10 +496,11 @@ EOT
                  exit 1
              fi
          fi
@@ -255,7 +260,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
  [ req ]
  default_bits                    = 1024
  distinguished_name              = req_DN
-@@ -502,7 +524,7 @@
+@@ -502,7 +524,7 @@ emailAddress                    = "7. Em
  emailAddress_max                = 40
  emailAddress_default            = ca@snakeoil.dom
  EOT
@@ -264,7 +269,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
                       -new \
                       -key $sslkeydir/ca.key \
                       -out $sslcsrdir/ca.csr
-@@ -510,7 +532,7 @@
+@@ -510,7 +532,7 @@ EOT
              echo "mkcert.sh:Error: Failed to generate certificate signing request" 1>&2
              exit 1
          fi
@@ -273,7 +278,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          prompt="8. Certificate Validity     (days)          [365]:"
          echo dummy | awk '{ printf("%s", prompt); }' "prompt=$prompt"
          read days
-@@ -524,8 +546,8 @@
+@@ -524,8 +546,8 @@ EOT
          read certversion
          extfile=""
          if [ ".$certversion" = .3 -o ".$certversion" = . ]; then
@@ -284,7 +289,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
  extensions = x509v3
  [ x509v3 ]
  subjectAltName   = email:copy
-@@ -543,7 +565,7 @@
+@@ -543,7 +565,7 @@ EOT
              echo "mkcert.sh:Error: Failed to generate self-signed CA certificate" 1>&2
              exit 1
          fi
@@ -293,7 +298,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          echo "Verify: matching certificate & key modulus"
          modcrt=`$openssl x509 -noout -modulus -in $sslcrtdir/ca.crt | sed -e 's;.*Modulus=;;'`
          if [ ".$algo" = .RSA ]; then
-@@ -564,6 +586,7 @@
+@@ -564,6 +586,7 @@ EOT
          echo "______________________________________________________________________"
          echo ""
          echo "${T_MD}STEP 4: Generating $algo private key for SERVER (1024 bit) [server.key]${T_ME}"
@@ -301,7 +306,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          if [ ".$algo" = .RSA ]; then
              if [ ".$randfiles" != . ]; then
                  $openssl genrsa -rand $randfiles -out $sslkeydir/server.key 1024
-@@ -588,10 +611,11 @@
+@@ -588,10 +611,11 @@ EOT
                  exit 1
              fi
          fi
@@ -314,7 +319,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
  [ req ]
  default_bits                    = 1024
  distinguished_name              = req_DN
-@@ -615,7 +639,7 @@
+@@ -615,7 +639,7 @@ emailAddress                    = "7. Em
  emailAddress_max                = 40
  emailAddress_default            = www@snakeoil.dom
  EOT
@@ -323,7 +328,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
                       -new \
                       -key $sslkeydir/server.key \
                       -out $sslcsrdir/server.csr
-@@ -623,7 +647,7 @@
+@@ -623,7 +647,7 @@ EOT
              echo "mkcert.sh:Error: Failed to generate certificate signing request" 1>&2
              exit 1
          fi
@@ -332,7 +337,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          prompt="8. Certificate Validity     (days)          [365]:"
          echo dummy | awk '{ printf("%s", prompt); }' "prompt=$prompt"
          read days
-@@ -637,8 +661,8 @@
+@@ -637,8 +661,8 @@ EOT
          read certversion
          extfile=""
          if [ ".$certversion" = .3 -o ".$certversion" = . ]; then
@@ -343,7 +348,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
  extensions = x509v3
  [ x509v3 ]
  subjectAltName   = email:copy
-@@ -646,12 +670,12 @@
+@@ -646,12 +670,12 @@ nsComment        = "mod_ssl generated cu
  nsCertType       = server
  EOT
          fi
@@ -359,7 +364,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
                        -CA    $sslcrtdir/ca.crt \
                        -CAkey $sslkeydir/ca.key \
                        -in    $sslcsrdir/server.csr -req \
-@@ -660,7 +684,7 @@
+@@ -660,7 +684,7 @@ EOT
              echo "mkcert.sh:Error: Failed to generate X.509 certificate" 1>&2
              exit 1
          fi
@@ -368,7 +373,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          echo "Verify: matching certificate & key modulus"
          modcrt=`$openssl x509 -noout -modulus -in $sslcrtdir/server.crt | sed -e 's;.*Modulus=;;'`
          if [ ".$algo" = .RSA ]; then
-@@ -764,31 +788,31 @@
+@@ -764,31 +788,31 @@ EOT
          echo ""
          echo "${T_MD}RESULT: CA and Server Certification Files${T_ME}"
          echo ""
@@ -406,7 +411,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
          echo "   file."
          echo ""
          echo "Congratulations that you establish your server with real certificates."
-@@ -808,14 +832,26 @@
+@@ -808,14 +832,26 @@ EOT
              echo "mkcert.sh: Cannot find certificate file: $crt" 1>&2
              exit 1
          fi
@@ -433,7 +438,7 @@ $NetBSD: patch-ab,v 1.3 2001/11/26 07:34:06 jlam Exp $
              key=$crt
              umask 077
              touch $sslkeydir/server.key
-@@ -836,12 +872,12 @@
+@@ -836,12 +872,12 @@ EOT
          fi
          echo "${T_MD}RESULT: Server Certification Files${T_ME}"
          echo ""
