@@ -1,0 +1,19 @@
+--- Configure.ORIG	Tue May 13 19:20:34 1997
++++ Configure	Fri May 23 11:33:40 1997
+@@ -91,11 +91,11 @@
+ *)	CDPATH='' ;;
+ esac
+ 
+-: Sanity checks
+-if test ! -t 0; then
+-	echo "Say 'sh $me', not 'sh <$me'"
+-	exit 1
+-fi
++: Sanity checks Disabled for FreeBSD port building - MarkM - May 1997
++: if test ! -t 0; : then
++:	echo "Say 'sh $me', not 'sh <$me'"
++:	exit 1
++: fi
+ 
+ : Test and see if we are running under ksh, either blatantly or in disguise.
+ if (PATH=.; alias -x) >/dev/null 2>&1; then
