@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/11/17 06:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/11/17 18:29:20 jlam Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		databases
 MASTER_SITES=		http://www.sleepycat.com/update/snapshot/
 
@@ -45,6 +45,11 @@ OPSYSVARS+=		LIBSO_LIBS
 LIBSO_LIBS.SunOS+=	-lnsl
 CONFIGURE_ENV+=		LIBSO_LIBS="${LIBSO_LIBS}"
 
+# DB4 only want pthreads because it's really after POSIX 1003.1
+# inter-process mutexes.  In this case, we only care to use the native
+# threads.
+#
+PTHREAD_OPTS+=		native
 .include "../../mk/pthread.buildlink3.mk"
 
 post-install:
