@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2002/11/27 17:41:07 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2002/12/02 22:06:55 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -84,11 +84,11 @@ _BLNK_LIBINTL+=		-lintl
 .if defined(GNU_CONFIGURE)
 LIBS+=			${_BLNK_LIBINTL}
 CONFIGURE_ENV+=		INTLLIBS="${_BLNK_LIBINTL}"
+CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 .  if ${_NEED_GNU_GETTEXT} == "NO"
-#CONFIGURE_ENV+=	INCINTL="${_BLNK_INCINTL}"
-#CONFIGURE_ENV+=	LIBINTL="${_BLNK_LIBINTL}"
-#CONFIGURE_ENV+=	gt_cv_func_gnugettext_libintl="yes"
+.    if ${_BLNK_LIBINTL_FOUND} == "YES"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
+.    endif
 .  endif
 .endif
 
