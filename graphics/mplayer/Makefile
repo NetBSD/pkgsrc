@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/12/22 00:07:06 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/22 00:30:44 zuntum Exp $
 #
 
 DISTNAME=	MPlayer-0.18pre
@@ -29,6 +29,13 @@ CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
 #CONFIGURE_ARGS+=	--disable-gcc-checking
 CONFIGURE_ARGS+=	--disable-css
 CONFIGURE_ARGS+=	--disable-streaming 
+
+post-patch:
+	cd ${WRKSRC} && for i in TOOLS/audio-block.c TOOLS/audio-block2.c TOOLS/audio-select.c	\
+		libao2/ao_oss.c mp3lib/test2.c libac3/test2.c; do				\
+		${SED} "s,\/dev\/dsp,\/dev\/audio,g" $${i} >> $${i}.done;			\
+		${MV} -f $${i}.done $${i};							\
+	done;
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
