@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 04:35:21 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/15 21:39:14 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use scrollkeeper.
 #
@@ -22,10 +22,10 @@ BUILDLINK_PKGSRCDIR.scrollkeeper?=	../../textproc/scrollkeeper
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
 
-BUILDLINK_TARGETS+=                     scrollkeeper-buildlink-fake
+BUILDLINK_TARGETS+=	scrollkeeper-buildlink-fake
 
-_SK_FAKE_UPDATE=        ${BUILDLINK_DIR}/bin/scrollkeeper-update
-_SK_FAKE_REBUILDDB=     ${BUILDLINK_DIR}/bin/scrollkeeper-rebuilddb
+_SK_FAKE_UPDATE=	${BUILDLINK_DIR}/bin/scrollkeeper-update
+_SK_FAKE_REBUILDDB=	${BUILDLINK_DIR}/bin/scrollkeeper-rebuilddb
 
 scrollkeeper-buildlink-fake:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
