@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.2.2 2003/12/12 11:57:22 agc Exp $
+
+--- src/fe-common/Makefile.in.orig	2002-11-24 14:18:08.000000000 +0100
++++ src/fe-common/Makefile.in	2003-11-27 11:59:57.000000000 +0100
+@@ -103,7 +103,8 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-libfe_icb_la_LIBADD = 
++libfe_icb_la_LIBADD = $(top_srcdir)/src/core/libicb_core.la
++libfe_icb_la_DEPENDENCIES = $(top_srcdir)/src/core/libicb_core.la
+ libfe_icb_la_OBJECTS =  fe-icb.lo module-formats.lo
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
