@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/02/16 14:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2001/03/04 01:08:01 assar Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -21,21 +21,10 @@ DEPENDS+=	zlib-*:../../devel/zlib
 CFLAGS+=	-I${PREFIX}/include		# zlib.h
 .endif
 
-.if defined(KERBEROS) && ${KERBEROS} == 4
-USE_KERBEROS=	yes
+.if defined(KERBEROS)
 CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
-.else
-CONFIGURE_ARGS+=	--with-krb4=no
+CONFIGURE_ARGS+=	--with-gssapi=/usr
 .endif
-
-# XXX KERBEROS 5 SUPPORT BROKEN WITH HEIMDAL
-#.if defined(KERBEROS) && ${KERBEROS} == 5
-#USE_KERBEROS=	yes
-#CONFIGURE_ARGS+=	--with-gssapi
-#CFLAGS+=		-I/usr/include/krb5		# krb5.h
-#.else
-#CONFIGURE_ARGS+=	--with-gssapi=no
-#.endif
 
 .if defined(RCS_LOCALID)
 pre-fetch:
