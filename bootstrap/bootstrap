@@ -1,0 +1,543 @@
+#! /bin/sh
+
+# $NetBSD: bootstrap,v 1.1.1.1 2004/03/11 13:03:58 grant Exp $
+#
+#
+# Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#	This product includes software developed by Alistair G. Crooks
+#	for the NetBSD project.
+# 4. The name of the author may not be used to endorse or promote
+#    products derived from this software without specific prior written
+#    permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+# OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+# DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#set -x
+
+BOOTSTRAP_VERSION=20040214
+
+# set defaults for system locations
+prefix=/usr/pkg
+pkgdbdir=/var/db/pkg
+pkgsrcdir=/usr/pkgsrc
+
+ignorecasecheck=no
+ignoreusercheck=no
+
+usage="Usage: $0 "'
+    [ --prefix=<prefix> ]
+    [ --pkgdbdir=<pkgdbdir> ]
+    [ --pkgsrcdir=<pkgsrcdir> ]
+    [ --ignore-case-check ]
+    [ --ignore-user-check ]
+    [ --help ]'
+
+# this replicates some of the logic in bsd.prefs.mk. until
+# bootstrap-pkgsrc is merged into pkgsrc, we need to determine the
+# right value for OPSYS and MACHINE_ARCH.
+
+# strip / for BSD/OS
+opsys=`uname -s | tr -d /`
+
+die()
+{
+	echo >&2 "$@"
+	exit 1
+}
+
+echo_msg()
+{
+	echo "===> $@"
+}
+
+get_abi()
+{
+	abi_opsys=$@
+	case "$abi_opsys" in
+	IRIX)
+		abi=`sed -e 's/.*\(abi=\)\([on]*[36][24]\).*/\2/' /etc/compiler.defaults`
+		isa=`sed -e 's/.*\(isa=mips\)\([1234]\).*/\2/' /etc/compiler.defaults`
+		case "$abi" in
+		o32)
+			imakeopts="-DBuildO32 -DSgiISAo32=$isa"
+			abi=""
+			;;
+		n32)	imakeopts="-DBuildN32 -DSgiISA32=$isa"
+			abi="32"
+			;;
+		64 | n64)
+			imakeopts="-DBuild64bit -DSgiISA64=$isa"
+			abi="64"
+			;;
+		esac
+
+
+		;;
+	esac
+}
+
+check_prog()
+{
+	_var="$1"; _name="$2"
+
+	eval _tmp=\"\$$_var\"
+	if [ "x$_tmp" != "x" ]; then
+		# Variable is already set (by the user, for example)
+		return 0
+	fi
+
+	for _d in `echo $PATH | tr ':' ' '`; do
+		if [ -x "$_d/$_name" ]; then
+			# Program found
+			eval $_var=\""$_d/$_name"\"
+			return 1
+		fi
+	done
+
+	die "$_name not found in path."
+}
+
+opsys_finish()
+{
+	case "$opsys" in
+	IRIX)
+		# setting X11BASE to /usr breaks buildlink
+		if [ ! -e /usr/X11R6 ]; then
+			ln -sf /usr /usr/X11R6
+		fi
+		if [ ! -z $imakeopts ]; then
+			echo "IMAKEOPTS+=$imakeopts" >> mk.conf.example
+		fi
+		patch -d / --forward --quiet -E -p0 \
+			< files/irix.patch 2>/dev/null || true
+		;;
+	esac
+}
+
+is_root()
+{
+	if [ `$idprog -u` != 0 ]; then
+		return 0
+	fi
+	return 1
+}
+
+# run a command, abort if it fails
+run_cmd()
+{
+	echo_msg "running: $@"
+	eval "$@"
+	ret=$?
+        if [ $ret -ne 0 ]; then
+		echo_msg "exited with status $ret"
+		die "aborted."
+	fi
+}
+
+build_start=`date`
+echo_msg "bootstrap command: $0 $@"
+echo_msg "bootstrap started: $build_start"
+
+overpath=""
+case "$opsys" in
+Darwin)
+	root_group=wheel
+	need_pax=yes
+	need_mtree=no
+	need_bsd_install=no
+	need_sed=no
+	set_opsys=no
+	check_prog mtreeprog mtree
+	machine_arch=`uname -p`
+	;;
+FreeBSD)
+	root_group=wheel
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=no
+	need_sed=no
+	set_opsys=no
+	machine_arch=`uname -p`
+	;;
+HP-UX)
+	root_group=root
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=yes
+	need_sed=yes
+	set_opsys=no
+	;;
+IRIX*)
+	if [ -d "/usr/freeware/bin" ]; then
+		overpath="/usr/freeware/bin:$overpath"
+	fi
+	if [ -d "/usr/bsd/bin" ]; then
+		overpath="/usr/bsd/bin:$overpath"
+	fi
+	root_group=sys
+	need_mtree=yes
+	need_bsd_install=yes
+	need_pax=yes
+	configargs="--with-machine_arch=mipseb"
+	get_abi "IRIX"
+	opsys=IRIX
+	need_sed=yes
+	set_opsys=yes
+	;;
+Linux)
+	if [ -f /etc/debian_version ]; then
+		DEBIAN=yes
+	fi
+	root_group=root
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=no
+	need_sed=no
+	set_opsys=no
+	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
+	;;
+NetBSD)
+	root_group=wheel
+	need_pax=no
+	need_mtree=no
+	need_bsd_install=no
+	need_sed=no
+	set_opsys=no
+	check_prog paxprog pax
+	check_prog tarprog tar
+	check_prog mtreeprog mtree
+	machine_arch=`uname -p`
+	;;
+OpenBSD)
+	root_group=wheel
+	need_pax=yes
+	need_mtree=no
+	need_bsd_install=no
+	need_sed=no
+	set_opsys=no
+	check_prog mtreeprog mtree
+	machine_arch=`uname -p`
+	;;
+SunOS)
+	if [ -d "/usr/xpg4/bin" ]; then
+		overpath="/usr/xpg4/bin:$overpath"
+	fi
+	root_group=root
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=no
+	need_sed=yes
+	set_opsys=no
+	whoamiprog=/usr/ucb/whoami
+	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
+	;;
+AIX)
+	root_group=system
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=yes
+	need_sed=yes
+	need_fixed_strip=yes
+	set_opsys=no
+	;;
+Interix)
+	ignoreusercheck=yes
+	root_group=+Administrators
+	need_pax=no
+	need_mtree=yes
+	need_bsd_install=yes
+	need_sed=yes
+	set_opsys=no
+	groupsprog="id -Gn"
+	CC="gcc -D_ALL_SOURCE"; export CC
+	;;
+*)
+	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
+	root_group=wheel
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=yes
+	need_sed=yes
+	set_opsys=no
+	;;
+esac
+
+# export OPSYS and MACHINE_ARCH for pkg_install. we only set
+# MACHINE_ARCH on platforms where we override bmake's value.
+OPSYS=${opsys}
+export OPSYS
+if [ "${machine_arch}" != "" ]; then
+	MACHINE_ARCH=${machine_arch}
+	export MACHINE_ARCH
+fi
+
+if [ "x${PRESERVE_PATH}" != "xyes" ]; then
+	PATH="$overpath:$PATH"
+fi
+
+check_prog awkprog awk
+check_prog cpprog cp
+check_prog idprog id
+check_prog groupsprog groups
+check_prog lsprog ls
+check_prog mkdirprog mkdir
+check_prog rmdirprog rmdir
+check_prog sedprog sed
+check_prog shprog sh
+check_prog whoamiprog whoami
+
+while [ $# -gt 0 ]; do
+	case $1 in
+	--prefix=*)	prefix=`echo $1 | $sedprog -e 's|--prefix=||'` ;;
+	--pkgdbdir=*)	pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
+	--pkgsrcdir=*)	pkgsrcdir=`echo $1 | $sedprog -e 's|--pkgsrcdir=||'` ;;
+	--ignore-case-check) ignorecasecheck=yes ;;
+	--ignore-user-check) ignoreusercheck=yes ;;
+	--help)		echo "$usage"; exit ;;
+	-h)		echo "$usage"; exit ;;
+	--*)		echo "$usage"; exit 1 ;;
+	esac
+	shift
+done
+
+is_root
+if [ $? = 1 ]; then
+	user=root
+	group=$root_group
+else
+	if [ $ignoreusercheck = "no" ]; then
+		die "You must be root to install bootstrap-pkgsrc."
+	fi
+
+	user=`$whoamiprog`
+	group=`$groupsprog | $awkprog '{print $1}'`
+	echo_msg "building as unprivileged user $user/$group"
+
+	# force bmake install target to use $user and $group
+	echo "BINOWN=$user
+BINGRP=$group
+LIBOWN=$user
+LIBGRP=$group
+MANOWN=$user
+MANGRP=$group" > Makefile.inc
+fi
+
+# make sure we're using a case-sensitive file system on Darwin
+if [ $ignorecasecheck = "no" ]; then
+case "$opsys" in
+Darwin)
+	echo_msg "Testing file system case sensitivity"
+	for fs in "$prefix" "$pkgsrcdir"; do
+		testdir="pkgsrc-REQUIRES-case-SENSITIVE-filesystem"
+		testdir_mangled="PKGSRC-requires-CASE-sensitive-FILESYSTEM"
+		$mkdirprog -p "$fs/$testdir" || die "can't verify filesystem ($fs) case-sensitivity"
+		if [ -d "$fs/$testdir_mangled" ]; then
+			$rmdirprog "$fs/$testdir"
+			die "\"$fs\" needs to be on a case-sensitive filesystem (see README.Darwin)"
+		fi
+		$rmdirprog "$fs/$testdir"
+	done
+	;;
+esac
+fi
+
+# export the proper environment
+PATH=$prefix/bin:$prefix/sbin:${PATH}; export PATH
+if [ -d /usr/ccs/bin -a -x /usr/ccs/bin/make ]; then
+	PATH=/usr/ccs/bin:$PATH; export PATH
+fi
+PKG_DBDIR=$pkgdbdir; export PKG_DBDIR
+LOCALBASE=$prefix; export LOCALBASE
+
+# set up an example mk.conf file
+echo_msg "Creating sample mk.conf"
+echo "# Example /etc/mk.conf file produced by bootstrap-pkgsrc" > mk.conf.example
+echo "# `date`" >> mk.conf.example
+echo "" >> mk.conf.example
+echo ".ifdef BSD_PKG_MK	# begin pkgsrc settings" >> mk.conf.example
+echo "" >> mk.conf.example
+
+# IRIX64 needs to be set to IRIX, for example
+if [ "$set_opsys" = "yes" ]; then
+	echo "OPSYS=$opsys" >> mk.conf.example
+fi
+
+if [ ! -z "$abi" ]; then
+	echo "ABI=$abi" >> mk.conf.example
+fi
+
+# save environment in example mk.conf
+echo "PKG_DBDIR=$pkgdbdir" >> mk.conf.example
+echo "LOCALBASE=$prefix" >> mk.conf.example
+
+# create directories
+run_cmd "$mkdirprog -p $prefix $pkgdbdir $prefix/sbin"
+run_cmd "$mkdirprog -p $prefix/man/man1 $prefix/man/cat1"
+run_cmd "$mkdirprog -p $prefix/man/man8 $prefix/man/cat8"
+
+# bootstrap make and *.mk files
+run_cmd "$mkdirprog -p $prefix/share/mk $prefix/lib"
+(cd bmake/mk;
+	if [ -f ../../mods/mk/$opsys.sys.mk ]; then
+		run_cmd "$cpprog ../../mods/mk/$opsys.sys.mk $prefix/share/mk/sys.mk"
+	else
+		run_cmd "$cpprog ../../mods/mk/generic.sys.mk $prefix/share/mk/sys.mk"
+	fi
+	run_cmd "$cpprog bsd.*.mk $prefix/share/mk")
+
+if [ -f mods/mk/$opsys.bsd.lib.mk ] ;  then
+	run_cmd "$cpprog bmake/mk/bsd.lib.mk bmake/mk/bsd.lib.mk.orig"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk bmake/mk/bsd.lib.mk"
+fi
+
+run_cmd "$cpprog bmake/mk/bsd.man.mk bmake/mk/bsd.man.mk.orig"
+if [ -f mods/mk/$opsys.bsd.man.mk ] ;  then
+	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk bmake/mk/bsd.man.mk"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk $prefix/share/mk/bsd.man.mk"
+fi
+
+if [ -f mods/mk/$opsys.bsd.prog.mk ] ; then
+	run_cmd "$cpprog mods/mk/$opsys.bsd.own.mk $prefix/share/mk/bsd.own.mk"
+else
+	run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g' mods/mk/bsd.own.mk.in > $prefix/share/mk/bsd.own.mk"
+fi
+
+if [ -f mods/mk/$opsys.bsd.sys.mk ]; then
+	run_cmd "$cpprog mods/mk/$opsys.bsd.sys.mk $prefix/share/mk/bsd.sys.mk"
+fi	
+	
+case "$opsys" in
+NetBSD)	run_cmd "$cpprog mods/bmake/Makefile.in bmake/Makefile.in"
+	;;
+esac
+
+if [ "$need_bsd_install" = "yes" ]; then
+	echo_msg "Installing BSD compatible install script"
+	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 install-sh $prefix/bin/install-sh)"
+	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
+fi
+
+if [ "$need_fixed_strip" = "yes" ] ; then
+	echo_msg "Installing fixed strip script"
+	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 strip-sh $prefix/bin/strip)"
+fi
+
+echo_msg "Installing bmake"
+run_cmd "(cd bmake; $shprog ./configure --prefix=$prefix --with-default-sys-path=$prefix/share/mk $configargs && make -f makefile.boot bootstrap && env BINDIR=$prefix/bin MANDIR=$prefix/man $BSTRAP_ENV ./bmake -f Makefile install)"
+
+# build libnbcompat
+echo_msg "Building libnbcompat"
+run_cmd "(cd libnbcompat; $shprog ./configure -C --prefix=$prefix && $prefix/bin/bmake)"
+
+# bootstrap tnftp
+case "$DEBIAN" in
+yes)
+	LIBS="-lncurses"
+	;;
+esac
+echo_msg "Installing tnftp"
+run_cmd "(cd tnftp; env $BSTRAP_ENV $shprog ./configure --prefix=$prefix && make && (cd src && make install))"
+pkg_install_args="$pkg_install_args --with-ftp=$prefix/bin/ftp"
+
+FETCH_CMD=$prefix/bin/ftp
+export FETCH_CMD
+echo "FETCH_CMD=$prefix/bin/ftp" >> mk.conf.example
+
+# bootstrap digest
+echo_msg "Installing digest"
+run_cmd "(cd digest; env $BSTRAP_ENV $shprog ./configure -C --prefix=$prefix && make && make install)"
+
+# create the digest package's meta files
+digestversion=digest-`$awkprog -F "'" '/^PACKAGE_VERSION=/ {print $2}' digest/configure`
+$lsprog -ld $prefix/bin/digest | $awkprog '{ print $5 }' > digest/.size
+env DIGESTPROG=$prefix/bin/digest PKG_DIGEST=md5 PKG_DBDIR=$pkgdbdir \
+	$shprog ./pkg.sh create -d digest/DESCR -O \
+	-c '-Message digest wrapper utility' -l -p $prefix \
+	-f digest/PLIST -s digest/.size -S digest/.size $digestversion
+
+# we often need NetBSD's pax as well, nowadays, to make binary packages
+case "$need_pax" in
+yes)	echo_msg "Installing pax"
+	run_cmd "(cd pax; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix && $prefix/bin/bmake && $prefix/bin/bmake install)"
+	echo "PAX=$prefix/bin/pax" >> mk.conf.example
+	pkg_install_args="$pkg_install_args --with-pax=$prefix/bin/pax --with-tar=$prefix/bin/tar"
+	;;
+*)
+	pkg_install_args="$pkg_install_args --with-pax=$paxprog --with-tar=$tarprog"
+	;;
+esac
+
+# bootstrap mtree if necessary
+case "$need_mtree" in
+yes)	echo_msg "Installing mtree"
+	run_cmd "(cd mtree; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix && $prefix/bin/bmake && $prefix/bin/bmake install)"
+	pkg_install_args="$pkg_install_args --with-mtree=$prefix/sbin/mtree"
+	;;
+*)	pkg_install_args="$pkg_install_args --with-mtree=$mtreeprog"
+	;;
+esac
+
+# bootstrap sed if necessary
+case "$need_sed" in
+yes)	echo_msg "Installing sed"
+	run_cmd "(cd sed; env $BSTRAP_ENV $shprog ./configure -C --prefix=$prefix && make && make install)"
+	echo "SED=$prefix/bin/nbsed" >> mk.conf.example
+	;;
+esac
+
+# bootstrap pkg_install
+echo_msg "Installing pkgtools"
+pkg_install_mandir="$prefix/man"
+if [ "$prefix" = "/usr" ]; then
+	pkg_install_mandir="$prefix/share/man"
+fi
+run_cmd "(cd pkg_install; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat -I../../libnbcompat' LDFLAGS='-L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --with-pkgdbdir=$pkgdbdir --mandir=$pkg_install_mandir $pkg_install_args && $prefix/bin/bmake && $prefix/bin/bmake install)"
+
+# all's ready, install the man page
+echo_msg "Installing packages(7) man page"
+(cd files; run_cmd "$shprog ./install-sh -c -m 444 packages.cat7 $prefix/man/cat7/packages.0")
+
+# opsys specific fiddling
+opsys_finish
+
+echo "" >> mk.conf.example
+echo ".endif			# end pkgsrc settings" >> mk.conf.example
+
+echo "Please remember to add $prefix/bin to your PATH environment variable."
+echo "If necessary, please remember to add $prefix/man to your MANPATH environment variable."
+echo "Please remember to set FETCH_CMD in /etc/mk.conf to $prefix/bin/ftp"
+echo ""
+echo "An example mk.conf file has been created for you in mk.conf.example"
+echo "with the settings you provided to bootstrap pkgsrc."
+echo ""
+echo "You can find extensive documentation of the NetBSD Packages Collection"
+echo "in $pkgsrcdir/Packages.txt and packages(7)."
+echo ""
+echo "Hopefully everything is now complete."
+echo "Thank you"
+
+echo_msg "bootstrap started: $build_start"
+echo_msg "bootstrap ended:   `date`"
+
+exit 0

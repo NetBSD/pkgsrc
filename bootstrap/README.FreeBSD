@@ -1,0 +1,23 @@
+$NetBSD: README.FreeBSD,v 1.1.1.1 2004/03/11 13:03:58 grant Exp $
+
+Please read the general README file as well.
+
+Care should be taken so that the tools that this kit installs do not conflict
+with the FreeBSD userland tools. There are several steps:
+
+1. FreeBSD stores its ports pkg database in /var/db/pkg. It is therefore
+recommended that you choose a different location (e.g. /usr/pkgdb) by
+using the --pkgdbdir option to the bootstrap script.
+
+2. If you do not intend to use the FreeBSD ports tools, it's probably a
+good idea to move them out of the way to avoid confusion, e.g.:
+	cd /usr/sbin
+	mv pkg_add pkg_add.orig
+	mv pkg_create pkg_create.orig
+	mv pkg_delete pkg_delete.orig
+	mv pkg_info pkg_info.orig
+
+3. An example /etc/mk.conf file will be placed in mk.conf.example file
+when you use the bootstrap script.
+
+bootstrap-pkgsrc has been tested on FreeBSD 4.7 and 5.0 (i386).

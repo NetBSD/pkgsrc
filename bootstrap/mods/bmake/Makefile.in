@@ -1,0 +1,116 @@
+#	$NetBSD: Makefile.in,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+#	@(#)Makefile	5.2 (Berkeley) 12/28/90
+
+#	$Id: Makefile.in,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+
+# you can use this Makefile if you have an earlier version of bmake.
+prefix= @prefix@
+srcdir= @srcdir@
+CC?= @CC@
+BUILD_DATE!= date +%Y%m%d
+MAKE_VERSION:= bmake-3.1.12 ${BUILD_DATE}
+MACHINE=@machine@
+MACHINE_ARCH=@machine_arch@
+
+CFLAGS+= -I. -I${srcdir} @DEFS@ @CPPFLAGS@ ${XDEFS} ${CFLAGS_${.TARGET:T}}
+CFLAGS_main.o= "-DMAKE_VERSION=\"${MAKE_VERSION}\""
+LIBOBJS= @LIBOBJS@
+
+PROG=	bmake
+SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
+	make.c parse.c str.c suff.c targ.c trace.c var.c util.c 
+SRCS+=	lstAppend.c lstAtEnd.c lstAtFront.c lstClose.c lstConcat.c \
+	lstDatum.c lstDeQueue.c lstDestroy.c lstDupl.c lstEnQueue.c \
+	lstFind.c lstFindFrom.c lstFirst.c lstForEach.c lstForEachFrom.c \
+	lstInit.c lstInsert.c lstIsAtEnd.c lstIsEmpty.c lstLast.c \
+	lstMember.c lstNext.c lstOpen.c lstRemove.c lstReplace.c lstSucc.c
+
+.if !empty(LIBOBJS)
+SRCS+= ${LIBOBJS:.o=.c}
+.endif
+
+.PATH:	${srcdir}
+.PATH:	${srcdir}/lst.lib
+
+WFORMAT= 1
+OS!= uname -s
+ARCH!= uname -m
+
+#.if (${OS} == "NetBSD") &&  make(install) && exists(${DESTDIR}/usr/share/doc)
+#SUBDIR=	PSD.doc
+#.endif
+
+.if (${OS} != "NetBSD" && ${OS} != "FreeBSD" && ${OS} != "OpenBSD")
+# XXX not sure if we still want this given that configure
+# lets us force or not the definition of MACHINE.
+CFLAGS_main.o+= "-DFORCE_MACHINE=\"${MACHINE}\""
+NOMAN=no
+SRCS+=  getenv.c
+INSTALL?=${srcdir}/install-sh
+.if (${MACHINE} == "sun386")
+# even I don't have one of these anymore :-)
+CFLAGS+= -DPORTAR
+.elif (${MACHINE} != "sunos")
+SRCS+= sigcompat.c
+CFLAGS+= -DSIGNAL_FLAGS=SA_RESTART
+.endif
+.endif
+
+CFLAGS_main.o+= "-D@force_machine@MACHINE=\"${MACHINE}\"" "-DMACHINE_ARCH=\"${MACHINE_ARCH}\""
+
+EXTRACT_MAN=no
+
+MAN=${PROG}.1
+.if (${PROG} != "make")
+${MAN}:	make.1
+	@echo making ${PROG}.1
+	@sed -e '/^.Nm/s/make/${PROG}/' -e '/^.Sh HISTORY/,$$d' ${srcdir}/make.1 > $@
+	@(echo ".Sh HISTORY"; echo ".Nm"; echo "is derrived from NetBSD's"; echo ".Xr make 1 ."; echo It uses autoconf to facilitate portability to other platforms.) >> $@
+
+.endif
+
+.if exists(${srcdir}/../Makefile.inc)
+.include "${srcdir}/../Makefile.inc"
+.endif
+.-include "prog.mk"
+.ifdef OBJS
+# prog.mk likely found.
+.include "subdir.mk"
+.else
+.include "bsd.prog.mk"
+.include "bsd.subdir.mk"
+.endif
+
+# Force these
+BINDIR= ${prefix}/bin
+MANDIR= ${prefix}/man
+
+.if ${OS} == "FreeBSD"
+# freebsd's bsd.man.mk works differently
+MAN1=${MAN}
+MANDIR= ${prefix}/man/man
+MANDEST= ${MANDIR}1
+.endif
+MANDEST?= ${MANDIR}
+
+arch.o:	config.h
+# make sure that MAKE_VERSION gets updated.
+main.o: ${SRCS} ${MAKEFILE}
+
+MK?=${prefix}/share/mk
+MKSRC?=${srcdir}/mk
+
+beforeinstall:
+	test -d ${DESTDIR}${BINDIR} || ${INSTALL} -m 775 -d ${DESTDIR}${BINDIR}
+	test -d ${DESTDIR}${MANDEST} || ${INSTALL} -m 775 -d ${DESTDIR}${MANDEST}
+
+install-mk:
+.if exists(${MKSRC}/bsd.prog.mk)
+	test -d ${DESTDIR}${MK} || ${INSTALL} -m 775 -d ${DESTDIR}${MK}
+	${INSTALL} -c -m 644 ${MKSRC}/[ac-z]*.mk ${DESTDIR}${MK}
+	test -s ${DESTDIR}${MK}/bsd.own.mk || ${INSTALL} -c -m 644 ${MKSRC}/bsd*.mk ${DESTDIR}${MK}
+	test -s ${DESTDIR}${MK}/sys.mk || ${INSTALL} -c -m 644 mk/sys.mk ${DESTDIR}${MK}
+	test -s ${DESTDIR}${MK}/sys.mk || ${INSTALL} -c -m 644 ${MKSRC}/${MACHINE}.sys.mk ${DESTDIR}${MK}/sys.mk
+.else
+	@echo need to unpack mk.tar.gz under ${srcdir} or set MKSRC; false
+.endif
