@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.4 1999/11/11 17:40:17 tv Exp $
+$NetBSD: patch-ac,v 1.5 2000/11/09 03:34:14 hubertf Exp $
 
---- build.orig	Thu Nov 11 11:04:15 1999
-+++ build	Thu Nov 11 11:13:47 1999
-@@ -276,28 +276,12 @@
- 	  esac
+--- build.orig	Tue Aug  1 00:28:01 2000
++++ build
+@@ -303,17 +303,20 @@
+ 	  echo "Including SSL functionality"
  	fi
  
 -        if [ -s c-client ] ; then rm -f c-client ; fi
@@ -13,14 +13,28 @@ $NetBSD: patch-ac,v 1.4 1999/11/11 17:40:17 tv Exp $
 -        if [ -s imapd    ] ; then rm -f imapd    ; fi
 -        ln -s imap/imapd imapd
 -        echo "Making c-client library, mtest and imapd"
--        eval echo make "$makeargs" "$K1" "$K2" $ccltarg
+-        eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
 -        cd $PHOME/imap
--        eval make "$makeargs" "$K1" "$K2" $ccltarg
+-        eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
 -        echo ''
--
++#
++# Built in mail/imap-uw:
++#
++#       if [ -s c-client ] ; then rm -f c-client ; fi
++#       ln -s imap/c-client c-client
++#       if [ -s mtest    ] ; then rm -f mtest    ; fi
++#       ln -s imap/mtest mtest
++#       if [ -s imapd    ] ; then rm -f imapd    ; fi
++#       ln -s imap/imapd imapd
++#       echo "Making c-client library, mtest and imapd"
++#       eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
++#       cd $PHOME/imap
++#       eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
++#       echo ''
+ 
          echo "Making Pico and Pilot"
          cd $PHOME/pico
-         eval echo make "$makeargs" -f makefile.$picotarg
+@@ -321,10 +324,10 @@
          eval make "$makeargs" -f makefile.$picotarg
          echo ''
  
@@ -28,10 +42,14 @@ $NetBSD: patch-ac,v 1.4 1999/11/11 17:40:17 tv Exp $
 -        cd $PHOME/pine
 -        eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
 -        eval make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
++#       echo "Making Pine".
++#       cd $PHOME/pine
++#       eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
++#       eval make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
          cd $PHOME
          if [ ! -d bin ] ;  then    mkdir bin;        fi
          cd $PHOME/bin
-@@ -309,8 +293,6 @@
+@@ -336,8 +339,6 @@
          if [ -s ../pico/pilot ] ;     then ln ../pico/pilot pilot ; fi
          cd $PHOME
          echo ''
