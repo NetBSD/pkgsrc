@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/12/14 10:26:16 hira Exp $
+# $NetBSD: Makefile,v 1.37 2004/12/16 23:57:40 hira Exp $
 #
 
 DISTNAME=		gnome-applets-2.8.1.1
@@ -57,7 +57,6 @@ GCONF2_SCHEMAS+=	battstat.schemas
 PLIST_SUBST+=		BATTSTAT=
 CONF_FILES+=		${EGDIR}/sound/events/battstat_applet.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/battstat_applet.soundlist
-CONFIGURE_ARGS+=	--enable-battstat
 .else
 PLIST_SUBST+=		BATTSTAT="@comment "
 CONFIGURE_ARGS+=	--disable-battstat
