@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/06/21 12:26:31 lukem Exp $
+# $NetBSD: Makefile,v 1.26 2002/10/13 15:09:18 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.gnu.org/software/idutils/idutils.html
 COMMENT=	Classic Berkeley gid/lid tools for looking up variables in code
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 INFO_FILES=	id-utils.info
 GNU_CONFIGURE=	yes
@@ -49,6 +49,6 @@ MAKE_ENV+=		BSD_SETENV=${SETENV}
 PLIST_SUBST+=		LISPDIR=${LISPDIR}
 PLIST_SUBST+=		CLISPDIR=${CLISPDIR}
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
