@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/05 04:32:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/13 19:24:02 hubertf Exp $
 #
 
-DISTNAME=	cervisia-0.2.1
+DISTNAME=	cervisia-0.3.1
 CATEGORIES=	kde devel
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/unstable/apps/utils/
+MASTER_SITES=	ftp://linde.physik.hu-berlin.de/pub/bernd/cervisia/ \
+		ftp://ftp.kde.org/pub/kde/unstable/apps/utils/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://pauli.uni-muenster.de/~gehrmab/cervisia.html
+HOMEPAGE=	http://pauli.uni-muenster.de/~gehrmab/cervisia/cervisia.html
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 DEPENDS+=	cvs-1.10:../../devel/cvs
