@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/12/29 12:20:48 grant Exp $
+$NetBSD: distinfo,v 1.5 2005/02/21 12:17:08 wiz Exp $
 
-SHA1 (Log-Dispatch-2.08.tar.gz) = 73d54a548b4e04f06dc25e4f891bbf71a60794e4
-Size (Log-Dispatch-2.08.tar.gz) = 26987 bytes
+SHA1 (Log-Dispatch-2.10.tar.gz) = d9283b0c3c33b6826d1d0d8b6d8ab15998ca920f
+Size (Log-Dispatch-2.10.tar.gz) = 28480 bytes
