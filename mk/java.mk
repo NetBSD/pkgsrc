@@ -1,4 +1,4 @@
-# $NetBSD: java.mk,v 1.5 2002/10/14 12:10:54 jlam Exp $
+# $NetBSD: java.mk,v 1.6 2002/11/25 18:16:33 schmonz Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -191,6 +191,11 @@ _JDK_PKGSRCDIR=		../../lang/blackdown-jdk13
 _JRE_PKGSRCDIR=		../../lang/blackdown-jre13
 _JRE_DEPENDENCY=	blackdown-jre13-[0-9]*:${_JRE_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/blackdown-1.3.1
+. if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+MAKE_ENV+=		THREADS_FLAG="green"
+CONFIGURE_ENV+=		THREADS_FLAG="green"
+SCRIPTS_ENV+=		THREADS_FLAG="green"
+. endif
 .elif ${_PKG_JVM} == "kaffe"
 _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		../../lang/kaffe
