@@ -1,0 +1,81 @@
+$NetBSD: patch-af,v 1.1 2002/04/04 16:47:55 atatat Exp $
+
+Add support for $XPLANET/images and $HOME/.xplanet/images images, etc.
+
+--- libannotate/drawMarkers.cc.orig	Tue Jan 22 21:07:42 2002
++++ libannotate/drawMarkers.cc	Tue Apr  2 22:43:04 2002
+@@ -92,6 +92,74 @@
+         return(true);
+     }
+ 
++    char *xplanet = getenv("XPLANET");
++    if (xplanet != NULL)
++    {
++        if (locale)
++        {
++            markerfile = xplanet;
++            markerfile += separator;
++            markerfile += "markers";
++            markerfile += separator;
++            markerfile += locale_string;
++            markerfile += filename;
++    
++            if (fileExists(markerfile))
++            {
++                filename = markerfile;
++                return(true);
++            }
++        }
++
++        markerfile = xplanet;
++        markerfile += separator;
++        markerfile += "markers";
++        markerfile += separator;
++        markerfile += filename;
++
++        if (fileExists(markerfile))
++        {
++            filename = markerfile;
++            return(true);
++        }
++    }
++
++    char *home = getenv("HOME");
++    if (home != NULL)
++    {
++        if (locale)
++        {
++            markerfile = home;
++            markerfile += separator;
++            markerfile += ".xplanet";
++            markerfile += separator;
++            markerfile += "markers";
++            markerfile += separator;
++            markerfile += locale_string;
++            markerfile += filename;
++    
++            if (fileExists(markerfile))
++            {
++                filename = markerfile;
++                return(true);
++            }
++        }
++
++        markerfile = home;
++        markerfile += separator;
++        markerfile += ".xplanet";
++        markerfile += separator;
++        markerfile += "markers";
++        markerfile += separator;
++        markerfile += filename;
++
++        if (fileExists(markerfile))
++        {
++            filename = markerfile;
++            return(true);
++        }
++    }
++
+     // Check for the input filename in $prefix/markers
+     // Check for the input filename in the "markers" subdirectory
+     if (locale)

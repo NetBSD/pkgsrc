@@ -1,0 +1,80 @@
+$NetBSD: patch-ag,v 1.1 2002/04/04 16:47:55 atatat Exp $
+
+Add support for $XPLANET/images and $HOME/.xplanet/images images, etc.
+
+--- libdisplay/DisplayBase.cc.orig	Tue Jan 22 21:07:42 2002
++++ libdisplay/DisplayBase.cc	Tue Apr  2 22:43:04 2002
+@@ -208,6 +208,40 @@
+         return(1);
+     }
+ 
++    char *xplanet = getenv("XPLANET");
++    if (xplanet != NULL)
++    {
++        newfont = xplanet;
++        newfont += separator;
++        newfont += "fonts";
++        newfont += separator;
++        newfont += fontname;
++
++        if (fileExists(newfont))
++        {
++            fontname = newfont;
++            return(true);
++        }
++    }
++
++    char *home = getenv("HOME");
++    if (home != NULL)
++    {
++        newfont = home;
++        newfont += separator;
++        newfont += ".xplanet";
++        newfont += separator;
++        newfont += "fonts";
++        newfont += separator;
++        newfont += fontname;
++
++        if (fileExists(newfont))
++        {
++            fontname = newfont;
++            return(true);
++        }
++    }
++
+     newfont = prefix;
+     newfont += separator;
+     newfont += "fonts";
+@@ -533,6 +567,32 @@
+     string rgbfile = "rgb.txt";
+ 
+     ifstream infile(rgbfile.c_str());
++    if (infile.bad())
++    {
++        char *xplanet = getenv("XPLANET");
++        if (xplanet != NULL)
++        {
++            infile.close();
++            rgbfile = xplanet;
++            rgbfile += separator;
++            rgbfile += "rgb.txt";
++            infile.open(rgbfile.c_str());
++        }
++    }
++    if (infile.bad())
++    {
++        char *home = getenv("HOME");
++        if (home != NULL)
++        {
++            infile.close();
++            rgbfile = home;
++            rgbfile += separator;
++            rgbfile += ".xplanet";
++            rgbfile += separator;
++            rgbfile += "rgb.txt";
++            infile.open(rgbfile.c_str());
++        }
++    }
+     if (infile.bad()) 
+     {
+         infile.close();

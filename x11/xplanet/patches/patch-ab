@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2002/04/04 16:47:55 atatat Exp $
+
+Make freetype2 work with xplanet.
+
+--- configure.orig	Tue Jan 22 21:07:42 2002
++++ configure	Wed Apr  3 00:11:22 2002
+@@ -2725,7 +2725,7 @@
+     echo "configure: warning: *** Xplanet will be built without freetype support ***" 1>&2
+     with_freetype='no'
+   else
+-    FREETYPE_CFLAGS="-I`$FREETYPE_CONFIG --prefix`/include `$FREETYPE_CONFIG --cflags`"
++    FREETYPE_CFLAGS="`$FREETYPE_CONFIG --cflags` -I`$FREETYPE_CONFIG --prefix`/include"
+     FREETYPE_LIBS=`$FREETYPE_CONFIG --libs`
+     
+     

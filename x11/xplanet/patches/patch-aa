@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2002/04/04 16:47:55 atatat Exp $
+
+Make freetype2 work with xplanet.
+
+--- aclocal.m4.orig	Tue Jan 22 21:07:42 2002
++++ aclocal.m4	Wed Apr  3 00:10:53 2002
+@@ -9,7 +9,7 @@
+     AC_MSG_WARN(*** Xplanet will be built without freetype support ***)
+     with_freetype='no'
+   else
+-    FREETYPE_CFLAGS="-I`$FREETYPE_CONFIG --prefix`/include `$FREETYPE_CONFIG --cflags`"
++    FREETYPE_CFLAGS="`$FREETYPE_CONFIG --cflags` -I`$FREETYPE_CONFIG --prefix`/include"
+     FREETYPE_LIBS=`$FREETYPE_CONFIG --libs`
+     AC_SUBST(FREETYPE_CFLAGS)
+     AC_SUBST(FREETYPE_LIBS)

@@ -1,0 +1,57 @@
+$NetBSD: patch-ad,v 1.1 2002/04/04 16:47:55 atatat Exp $
+
+Add support for $XPLANET/images and $HOME/.xplanet/images images, etc.
+
+--- util.cc.orig	Tue Jan 22 21:07:42 2002
++++ util.cc	Tue Apr  2 22:43:04 2002
+@@ -28,6 +28,7 @@
+ using namespace std;
+ 
+ #include <errno.h>
++#include <stdlib.h>
+ #include <sys/time.h>
+ 
+ #include "auxfiles.h"
+@@ -339,7 +340,41 @@
+         filename = newname;
+         return(true);
+     }            
+-    
++
++    char *xplanet = getenv("XPLANET");
++    if (xplanet != NULL)
++    {
++        newname = xplanet;
++        newname += separator;
++        newname += "images";
++        newname += separator;
++        newname += filename;
++
++        if (fileExists(newname))
++        {
++            filename = newname;
++            return(true);
++        }
++    }
++
++    char *home = getenv("HOME");
++    if (home != NULL)
++    {
++        newname = home;
++        newname += separator;
++        newname += ".xplanet";
++        newname += separator;
++        newname += "images";
++        newname += separator;
++        newname += filename;
++
++        if (fileExists(newname))
++        {
++            filename = newname;
++            return(true);
++        }
++    }
++
+     newname = prefix;
+     newname += separator;
+     newname += "images";

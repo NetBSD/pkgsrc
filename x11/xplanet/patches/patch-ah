@@ -1,0 +1,83 @@
+$NetBSD: patch-ah,v 1.1 2002/04/04 16:47:55 atatat Exp $
+
+Add support for $XPLANET/images and $HOME/.xplanet/images images, etc.
+
+--- xplanet.1.orig	Tue Jan 22 21:07:42 2002
++++ xplanet.1	Wed Apr  3 10:05:01 2002
+@@ -621,7 +621,8 @@
+ TrueType fonts: 
+ First look in fontdir (if the -fontdir option is used), then in the
+ current directory, then in a subdirectory "fonts" of the current
+-directory, and finally in $PREFIX/fonts.  The default font is
++directory, in $XPLANET/fonts, in $HOME/.xplanet/fonts, and finally
++in $PREFIX/fonts.  The default font is
+ helr____.ttf.  Note that TrueType fonts are only used if an X11
+ display is not available, a TrueType font is specified with the -font
+ option, or the -truetype option is specified.
+@@ -629,22 +630,25 @@
+ image files:
+ First look in mapdir (if the -mapdir option is used), then in the
+ current directory, then in a subdirectory "images" of the current
+-directory, and finally in $PREFIX/images.  The default name is
++directory, in $XPLANET/images, in $HOME/.xplanet/images, and finally
++in $PREFIX/images.  The default name is
+ body.jpg (e.g. earth.jpg, neptune.jpg).  The extension of the file by
+ default is jpg but this can also be set at compilation time.
+ 
+ marker files:
+ First look in the current directory, then in a subdirectory "markers"
+-of the current directory, and finally in $PREFIX/markers.  The default
++of the current directory, in $XPLANET/markers, in $HOME/.xplanet/markers,
++and finally in $PREFIX/markers.  The default
+ marker file name is body (e.g. earth, neptune).
+ 
+ satellite files:
+ First look in the current directory, then in a subdirectory
+-"satellites" of the current directory, and finally in
++"satellites" of the current directory, in $XPLANET/satellites, in
++$HOME/.xplanet/satellites, and finally in
+ $PREFIX/satellites.
+ 
+ The value of $PREFIX is set at compilation time in auxfiles.h.  On a
+-Unix system it is usually /usr/local/share/xplanet, and on Windows it
++NetBSD system it is usually @PREFIX@/share/xplanet, and on Windows it
+ is usually C:\\WINDOWS\\Desktop.  See the INSTALL file for more details
+ on the configuration options.
+ 
+@@ -704,23 +708,23 @@
+ .SH FILES
+ .nf
+ .sp
+-/usr/local/bin/xplanet
+-/usr/local/bin/xplanetbg
+-/usr/local/bin/tkxplanet
+-/usr/local/bin/tzcoord.pl
+-/usr/local/man/man1/xplanet.1
+-/usr/local/man/man1/xplanetbg.1
+-/usr/local/man/man1/tkxplanet.1
+-/usr/local/man/man1/tzcoord.pl.1
+-/usr/local/share/xplanet/rgb.txt
+-/usr/local/share/xplanet/fonts/helr____.ttf
+-/usr/local/share/xplanet/images/body.jpg
+-/usr/local/share/xplanet/markers/body
++@PREFIX@/bin/xplanet
++@PREFIX@/bin/xplanetbg
++@PREFIX@/bin/tkxplanet
++@PREFIX@/bin/tzcoord.pl
++@PREFIX@/man/man1/xplanet.1
++@PREFIX@/man/man1/xplanetbg.1
++@PREFIX@/man/man1/tkxplanet.1
++@PREFIX@/man/man1/tzcoord.pl.1
++@PREFIX@/share/xplanet/rgb.txt
++@PREFIX@/share/xplanet/fonts/helr____.ttf
++@PREFIX@/share/xplanet/images/body.jpg
++@PREFIX@/share/xplanet/markers/body
+ where body is the name of the appropriate body, specified in the -body
+ option. 
+ .sp
+ .fi
+-The default prefix /usr/local/share/xplanet is set in auxfiles.h and
++The default prefix @PREFIX@/share/xplanet is set in auxfiles.h and
+ may be changed if desired.
+ .SH AUTHOR
+ xplanet was written by

@@ -1,4 +1,12 @@
-$NetBSD: distinfo,v 1.1 2002/03/25 16:08:07 atatat Exp $
+$NetBSD: distinfo,v 1.2 2002/04/04 16:47:54 atatat Exp $
 
 SHA1 (xplanet-0.93.tar.gz) = 5071bcaa203b340ca2f6e5099c7f3891d103258f
 Size (xplanet-0.93.tar.gz) = 1164083 bytes
+SHA1 (patch-aa) = 3081b5a31e998211a87b1f61c28c0600d6285d9e
+SHA1 (patch-ab) = 2d51e109df7cdff79d2cd5ae3fcb3adfddfd02ea
+SHA1 (patch-ac) = a66c8105bf1e31991fadeb3f53774375cc6200cc
+SHA1 (patch-ad) = 95c0ec0f7ee99f4cbf6d5509e7bea25de0653ba6
+SHA1 (patch-ae) = b4a000a9f47b8f735427ff5ae809503d325d43e7
+SHA1 (patch-af) = bcfea356988ba96479f11a456e13e55950431dfa
+SHA1 (patch-ag) = 55720da3e95587fdd22a534e6422f7376724d820
+SHA1 (patch-ah) = 5042d454143b9c92e8555c0f19f24dde4e6ea81c
