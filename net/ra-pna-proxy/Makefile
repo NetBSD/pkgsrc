@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/01 19:44:03 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/01 20:05:19 tron Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
@@ -34,5 +34,7 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/raproxy ${PREFIX}/libexec/${PROGNAME}
 	${INSTALL_MAN} ${WRKSRC}/${PROGNAME}.8 ${PREFIX}/man/man8
+	${MKDIR} ${PREFIX}/share/doc/${PROGNAME}
+	${INSTALL_DATA} ${WRKSRC}/license.txt ${PREFIX}/share/doc/${PROGNAME}
 
 .include "../../mk/bsd.pkg.mk"
