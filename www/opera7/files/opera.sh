@@ -6,7 +6,7 @@ then
  mkdir -p $OPERADIR || exit 1
  for FILE in $OPERADIR/opera6.ini $OPERADIR/opera.ini
  do
-  if [ -e ${FILE} ]
+  if [ -f ${FILE} ]
   then
    if grep -q '^Synchronous DNS Lookup=0$' ${FILE}
    then
