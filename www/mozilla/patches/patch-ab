@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.25 2002/08/29 15:11:14 taya Exp $
+$NetBSD: patch-ab,v 1.26 2002/12/04 15:20:29 taya Exp $
 
-diff -ru ../Orig/mozilla/configure.in ./configure.in
---- ../Orig/mozilla/configure.in	Sat Aug 10 05:05:34 2002
-+++ ./configure.in	Wed Aug 28 11:21:43 2002
-@@ -1024,6 +1024,13 @@
+--- ../Orig/mozilla/configure.in	Sat Nov 30 09:38:24 2002
++++ ./configure.in	Sat Nov 30 09:37:16 2002
+@@ -1068,6 +1068,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -17,7 +16,16 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;;
  
  *-nto*) 
-@@ -1875,9 +1882,6 @@
+@@ -1425,7 +1432,7 @@
+                  [siginfo_t* info;],
+                  [ac_cv_siginfo_t=true],
+                  [ac_cv_siginfo_t=false])])
+-if test "$ac_cv_siginfo_t" = true ; then
++if test "$OS_TARGET" != "NetBSD" -a "$ac_cv_siginfo_t" = true ; then
+   AC_DEFINE(HAVE_SIGINFO_T)
+   AC_MSG_RESULT(yes)
+ else
+@@ -1959,9 +1966,6 @@
  				CXXFLAGS="$CXXFLAGS -mt" 
  			fi
  			;;
