@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/07/25 14:00:21 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/27 05:44:46 minskim Exp $
 #
 
 DISTNAME=		aMule-1.2.8
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amule/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		tripledes@eslack.org
 HOMEPAGE=		http://amule.sourceforge.net/
 COMMENT=		Another Emule P2P client
 
