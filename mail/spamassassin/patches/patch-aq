@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.4 2004/10/12 00:11:10 heinz Exp $
+$NetBSD: patch-aq,v 1.5 2005/01/15 21:44:55 schmonz Exp $
 
---- README.orig	Thu Aug  5 22:04:10 2004
+--- README.orig	2004-10-22 11:21:14.000000000 -0400
 +++ README
 @@ -76,30 +76,30 @@ Mail::SpamAssassin::Conf class (run the 
  the standard defaults that people use.  There is an explanation of all the
