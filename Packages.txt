@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.318 2003/11/12 21:16:39 wiz Exp $
+# $NetBSD: Packages.txt,v 1.319 2003/11/19 22:31:47 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -524,11 +524,14 @@ for anything but pkg compiling), there is the possibility of doing the pkg
 bulk build inside a chroot environment.
 
 The first step to do so is setting up a chroot sandbox, e.g. /usr/sandbox.
-After extracting all the sets from a NetBSD installation or doing a
-"make distribution DESTDIR=/usr/sandbox" in src/etc, make sure the following
-items are present and properly configured:
+Extract all sets from a NetBSD installation or doing a "make distribution
+DESTDIR=/usr/sandbox" in src/etc, also don't forget to install X - if you
+are a developer and want to upload the resulting binary packages to
+ftp.netbsd.org, make sure you are using the default X version for your
+architecture and release (up to 1.6, that is 3.3.6 for all architectures).
+Then, make sure the following items are present and properly configured:
 
- * kernel:
+ * Kernel:
    cp /netbsd /usr/sandbox
  * /dev/*:
    cd /usr/sandbox/dev ; sh MAKEDEV all
@@ -548,22 +551,13 @@ items are present and properly configured:
    mkdir /usr/sandbox/usr/pkg
  * checkout pkgsrc from cvs, into /usr/sandbox/usr/pkgsrc
    cvs -d cvs.netbsd.org:/cvsroot co pkgsrc
+   Do not mount/link this to the copy of your pkgsrc tree you do
+   development in, as this will likely cause problems! 
  * /usr/pkgsrc/packages & .../distfiles (point outside of sandbox)
  * /etc/mk.conf, see 3.2.1.1
  * adjust .../mk/bulk/build.conf
-
-!!! Don't forget to install X !!!
-If you are a developer and want to upload the resulting binary packages
-to ftp.netbsd.org, make sure you are using the default X version for your
-architecture and release (up to 1.6, that is 3.3.6 for all architectures).
-
-Next thing you will want to is make sure /usr/sandbox/usr/pkgsrc contains a
-fresh checkout of pkgsrc (e.g. from anoncvs). Do not mount/link this to the
-copy of your pkgsrc tree you do development in, as this will likely cause
-problems! Adjust .../pkgsrc/packages and .../pkgsrc/distfiles to point to
-some places outside the sandbox if you want to make the files public.
-
-Then, configure .../pkgsrc/mk/bulk/build.conf to fit your needs!
+ * If you have set CVS_USER in build.conf, make sure that account exists
+   and can do a "cvs ${CVS_FLAGS} update" properly!
 
 When the chroot sandbox is setup, you can start the build with the following
 steps:
