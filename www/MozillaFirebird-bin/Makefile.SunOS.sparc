@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.SunOS.sparc,v 1.1 2003/09/27 14:13:08 grant Exp $
+# $NetBSD: Makefile.SunOS.sparc,v 1.2 2003/11/27 16:14:00 grant Exp $
 #
 
-DISTNAME=	MozillaFirebird-0.6.1-sparc-sun-solaris2.7
-MASTER_SITES=	http://ftp.mozilla.org/pub/firebird/releases/0.6.1/contrib/
+PKGVER=		0.6.1
+DISTNAME=	MozillaFirebird-${PKGVER}-sparc-sun-solaris2.7
+MASTER_SITES=	http://ftp.mozilla.org/pub/firebird/releases/${PKGVER}/contrib/
 
 DEPENDS+=	gtk+>=1.2:../../x11/gtk
 

@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.SunOS.i386,v 1.1 2003/11/27 16:14:00 grant Exp $
+#
+
+PKGVER=		0.7
+DISTNAME=	MozillaFirebird-${PKGVER}-i386-pc-solaris2.8
+MASTER_SITES=	http://ftp.mozilla.org/pub/firebird/releases/${PKGVER}/contrib/
+
+DEPENDS+=	gtk+>=1.2:../../x11/gtk
+
+PLATFORM=	${LOWER_OPSYS}
+MOZILLA_LIB=	${PREFIX}/lib/MozillaFirebird-${PLATFORM}
