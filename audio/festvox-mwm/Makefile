@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/25 22:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 1999/12/28 04:20:01 wiz Exp $
 
 DISTNAME=	voice_mwm_di-2.0
 PKGNAME=	festvox-mwm-2.0
@@ -20,8 +20,8 @@ FHOME=		${PREFIX}/share/festival
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}
-	find ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
-	find ${WRKSRC} -type d -name CVS | xargs ${RM} -fr
+	${FIND} ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
+	${FIND} ${WRKSRC} -type d -name CVS | xargs ${RM} -fr
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}

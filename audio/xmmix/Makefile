@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:16:40 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1999/12/28 04:20:03 wiz Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
@@ -15,7 +15,7 @@ USE_MOTIF=	yes
 post-patch:
 	for file in ${WRKSRC}/XMmix.ad ${WRKSRC}/resource.h; do \
 		${CP} $$file $$file.orig; \
-		chmod +w $$file; \
+		${CHMOD} +w $$file; \
 		${SED} "s^/usr/lib/X11/xmmix.hlp^${PREFIX}/lib/X11/xmmix.hlp^" $$file.orig > $$file; \
 	done
 
