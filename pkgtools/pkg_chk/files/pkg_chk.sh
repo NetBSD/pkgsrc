@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.9 2004/11/30 19:32:10 abs Exp $
+# $Id: pkg_chk.sh,v 1.10 2005/01/29 15:36:30 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -14,43 +14,43 @@ check_packages_installed()
 
     for pkgdir in $* ; do
 
-	if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
-	    echo "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
-	    continue
-	fi
-	cd $PKGSRCDIR/$pkgdir
 	if [ -n "$opt_B" ];then
-	    extract_make_vars PKGNAME FILESDIR PKGDIR DISTINFO_FILE PATCHDIR
+	    extract_pkg_vars $pkgdir PKGNAME FILESDIR PKGDIR DISTINFO_FILE PATCHDIR
 	else
-	    extract_make_vars PKGNAME
+	    extract_pkg_vars $pkgdir PKGNAME
 	fi
 	if [ -z "$PKGNAME" ]; then
-	    echo "Unable to extract PKGNAME for $pkgdir"
-	    exit 1
+	    MISS_DONE=$MISS_DONE" "$pkgdir
+	    continue
 	fi
 	if [ ! -d $PKG_DBDIR/$PKGNAME ];then
-	    echo_n "$PKGNAME: "
-	    pkg=$(echo $PKGNAME | sed 's/-[0-9].*//')
+	    msg_n "$PKGNAME: "
+	    pkg=$(echo $PKGNAME | ${SED} 's/-[0-9].*//')
 	    pkginstalled=$(sh -c "${PKG_INFO} -e $pkg" || true)
 	    INSTALL=
 	    if [ -n "$pkginstalled" ];then
-		echo_n "version mismatch - $pkginstalled"
+		msg_n "version mismatch - $pkginstalled"
 		MISMATCH_TODO="$MISMATCH_TODO $pkginstalled"
 		UPDATE_TODO="$UPDATE_TODO $PKGNAME $pkgdir"
 	    else
-		echo_n "missing"
+		msg_n "missing"
 		MISSING_TODO="$MISSING_TODO $PKGNAME $pkgdir"
 	    fi
-	    if [ -f $PACKAGES/All/$PKGNAME.tgz ] ;then
-		echo_n " (binary package available)"
+	    if [ -f $PACKAGES/$PKGNAME.tgz ] ;then
+		msg_n " (binary package available)"
 	    fi
-	    echo
+	    msg
 	else
 	    if [ -n "$opt_B" ];then
 		current_build_ver=$(get_build_ver)
-		installed_build_ver=$(sed "s|^[^:]*/[^:]*:||" $PKG_DBDIR/$PKGNAME/+BUILD_VERSION)
+		installed_build_ver=$(${SED} "s|^[^:]*/[^:]*:||" $PKG_DBDIR/$PKGNAME/+BUILD_VERSION)
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
-		    echo "$PKGNAME: build version information mismatch"
+		    msg "$PKGNAME: build-version mismatch"
+		    verbose "--current--"
+		    verbose "$current_build_ver"
+		    verbose "--installed--"
+		    verbose "$installed_build_ver"
+		    verbose "----"
 		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
 		    # should we mark this pkg to be updated if -u is given ??
 		else
@@ -63,74 +63,17 @@ check_packages_installed()
     done
     }
 
-list_packages()
-    {
-    CHECKLIST=' '
-    for pkgdir in $* ; do
-
-	if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
-	    echo "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
-	    continue
-	fi
-	cd $PKGSRCDIR/$pkgdir
-	extract_make_vars PKGNAME
-	if [ -z "$PKGNAME" ]; then
-	    echo "Unable to extract PKGNAME for $pkgdir"
-	    exit 1
-	fi
-	if [ ! -f $PACKAGES/All/$PKGNAME.tgz ] ;then
-	    echo " ** $PKGNAME - binary package missing"
-	    if [ -z "$opt_k" ];then
-		exit 1
-	    fi
-	    continue
-	fi
-	verbose "$PKGNAME.tgz: found"
-	CHECKLIST="$CHECKLIST$PKGNAME ";
-    done
-    while [ "$CHECKLIST" != ' ' ]; do
-	PKGLIST="$PKGLIST$CHECKLIST"
-	NEXTCHECK=' '
-	for pkg in $CHECKLIST ; do
-	    if [ ! -f $PACKAGES/All/$pkg.tgz ] ; then
-		echo " ** $PKGNAME - binary package (dependency) missing"
-		if [ -z "$opt_k" ];then
-		    exit 1
-		fi
-		continue
-	    fi
-	    for dep in $(pkg_info -N $PACKAGES/All/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
-		case "$PKGLIST$NEXTCHECK" in
-		    *\ $dep\ *)
-			verbose "$pkg: Duplicate depend $dep"
-			;;
-		    *)
-			NEXTCHECK="$NEXTCHECK$dep "
-			verbose "$pkg: Add depend $dep"
-			;;
-		esac
-	    done
-	done
-	CHECKLIST="$NEXTCHECK"
-    done
-    for pkg in $PKGLIST ; do
-	echo $pkg.tgz
-    done
-    }
-
-echo_n()
-    {
-    echo $ac_n "$*"$ac_c
-    }
-
 extract_make_vars()
     {
+    MAKEFILE=$1
+    shift
+    verbose "Extract $@ from $MAKEFILE"
     MAKEDATA=".PHONY: x\nx:\n";
     for var in $* ; do
 	MAKEDATA=$MAKEDATA"\t@echo $var=\${$var}\n"
     done
-    eval $(printf "$MAKEDATA" | ${MAKE} -f - -f Makefile x | \
-					sed -e 's/[^=]*=/&"/' -e 's/$/"/')
+    eval $(printf "$MAKEDATA" | ${MAKE} -f - -f $MAKEFILE x | \
+					${SED} -e 's/[^=]*=/&"/' -e 's/$/"/')
     }
 
 # $1 = name of variable
@@ -143,8 +86,35 @@ extract_mk_dir_var()
 	    eval "$1=$2"
 	fi
 	if [ ! -d `eval echo \\$$1` ];then
-	    echo "Unable to locate $1 `eval echo \\$$1`"
-	    exit 1;
+	    fatal "Unable to locate $1 `eval echo \\$$1`"
+	fi
+    fi
+    }
+
+extract_pkg_vars()
+    {
+    PKGDIR=$1
+    PKGNAME=
+    shift;
+    if [ -n "$opt_b" -a -z "$opt_s" ] ; then
+	for pkg in $PKGDB ; do
+	    case $pkg in
+		"$PKGDIR:"*)
+		    PKGNAME=`echo $pkg| ${SED} 's/[^:]*://'`
+		    return;
+		;;
+	    esac
+	done
+	msg "WARNING: No binary package for $PKGDIR"
+    else
+	if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
+	    msg "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
+	    return
+	fi
+	cd $PKGSRCDIR/$PKGDIR
+	extract_make_vars Makefile "$@"
+	if [ -z "$PKGNAME" ]; then
+	    fatal "Unable to extract PKGNAME for $pkgdir"
 	fi
     fi
     }
@@ -158,12 +128,18 @@ extract_variables()
     # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
     #
 
-    cd $PKGSRCDIR/pkgtools/pkg_chk
-    extract_make_vars AWK GREP SED PACKAGES PKG_INFO PKG_ADD PKG_DELETE \
-		      PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
-
-    if [ -z "$PACKAGES" ];then
-	PACKAGES=$PKGSRCDIR/packages
+    if [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
+	cd $PKGSRCDIR/pkgtools/pkg_chk
+	extract_make_vars Makefile AWK GREP SED PACKAGES PKG_INFO PKG_ADD \
+			PKG_DELETE PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
+	if [ -z "$PACKAGES" ];then
+	    PACKAGES=$PKGSRCDIR/packages
+	fi
+    elif [ $MAKECONF != /dev/null ] ; then
+	extract_make_vars $MAKECONF PACKAGES PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
+	if [ -z "$PACKAGES" ] ; then
+	    PACKAGES=`pwd`
+	fi
     fi
 
     if [ -z "$PKGCHK_CONF" ];then
@@ -171,8 +147,26 @@ extract_variables()
     fi
     }
 
+fatal()
+    {
+    msg "*** $@"
+    exit 1
+    }
+
+fatal_maybe()
+    {
+    msg "$@"
+    if [ -z "$opt_k" ];then
+	exit 1
+    fi
+    }
+
 get_build_ver()
     {
+    if [ -n "$opt_b" -a -z "$opt_s" ] ; then
+	${PKG_INFO} -b $PACKAGES/$PKGNAME.tgz | tail +4 | ${SED} "s|^[^:]*/[^:]*:||" | ${GREP} .
+	return
+    fi
     files=""
     for f in Makefile ${FILESDIR}/* ${PKGDIR}/*; do
 	if [ -f $f ];then
@@ -198,6 +192,66 @@ get_build_ver()
     cat $files | ${GREP} '\$NetBSD'
     }
 
+list_packages()
+    {
+    CHECKLIST=' '
+    for pkgdir in $* ; do
+	extract_pkg_vars $pkgdir PKGNAME
+	if [ -z "$PKGNAME" ]; then
+	    continue
+	fi
+	if [ ! -f $PACKAGES/$PKGNAME.tgz ] ;then
+	    fatal_maybe " ** $PKGNAME - binary package missing"
+	    continue
+	fi
+	verbose "$PKGNAME.tgz: found"
+	CHECKLIST="$CHECKLIST$PKGNAME ";
+    done
+    while [ "$CHECKLIST" != ' ' ]; do
+	PKGLIST="$PKGLIST$CHECKLIST"
+	NEXTCHECK=' '
+	for pkg in $CHECKLIST ; do
+	    if [ ! -f $PACKAGES/$pkg.tgz ] ; then
+		fatal_maybe " ** $PKGNAME - binary package (dependency) missing"
+		continue
+	    fi
+	    for dep in $(pkg_info -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
+		case "$PKGLIST$NEXTCHECK" in
+		    *\ $dep\ *)
+			verbose "$pkg: Duplicate depend $dep"
+			;;
+		    *)
+			NEXTCHECK="$NEXTCHECK$dep "
+			verbose "$pkg: Add depend $dep"
+			;;
+		esac
+	    done
+	done
+	CHECKLIST="$NEXTCHECK"
+    done
+    for pkg in $PKGLIST ; do
+	echo $pkg.tgz
+    done
+    }
+
+msg()
+    {
+    if [ -n "$opt_L" ] ; then
+	echo "$@" >> "$opt_L"
+    fi
+    echo "$@"
+    }
+
+msg_progress()
+    {
+    msg "[ $@ ]"
+    }
+
+msg_n()
+    {
+    msg $ac_n "$*"$ac_c
+    }
+
 pkg_fetch()
     {
     PKGNAME=$1
@@ -218,20 +272,20 @@ pkg_install()
     INSTALL=$3
 
     if [ -d $PKG_DBDIR/$PKGNAME ];then
-	echo "$PKGNAME installed in previous stage"
-    elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
+	msg "$PKGNAME installed in previous stage"
+    elif [ -n "$opt_b" -a -f $PACKAGES/$PKGNAME.tgz ] ; then
 	if [ $INSTALL = Update ];then
-	    PKG=$(echo $PKGNAME | sed 's/-[0-9].*//')
+	    PKG=$(echo $PKGNAME | ${SED} 's/-[0-9].*//')
 	    run_cmd "${PKG_DELETE} $PKG" 1
 	    if [ -n "$FAIL" ]; then
-		echo "Can only update packages with dependencies via -s"
-		exit 1
+		fatal "Can only update packages with dependencies via -s"
 	    fi
 	fi
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    export PKG_PATH=$saved_PKG_PATH
 	fi
-	run_cmd "cd $PACKAGES/All && ${PKG_ADD} $PKGNAME.tgz"
+	cd $PACKAGES
+	run_cmd "${PKG_ADD} $PKGNAME.tgz"
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    unset PKG_PATH
 	fi
@@ -255,7 +309,7 @@ pkg_install()
 pkg_fetchlist()
     {
     PKGLIST=$@
-    echo "[ Fetch...]"
+    msg_progress Fetch
     while [ $# != 0 ]; do 
 	pkg_fetch $1 $2
 	shift ; shift;
@@ -265,7 +319,7 @@ pkg_fetchlist()
 pkg_installlist()
     {
     INSTALL=$1 ; shift
-    echo "[ $INSTALL...]" ;
+    msg_progress $INSTALL
     while [ $# != 0 ]; do
 	pkg_install $1 $2 $INSTALL
 	shift ; shift;
@@ -280,7 +334,7 @@ run_cmd()
     else
 	FAILOK=$opt_k
     fi
-    echo $1
+    msg $1
     if [ -z "$opt_n" ];then
 	if [ -n "$opt_L" ] ; then
 	    sh -c "$1" >> "$opt_L" 2>&1 || FAIL=1
@@ -288,7 +342,7 @@ run_cmd()
 	    sh -c "$1" || FAIL=1
 	fi
 	if [ -n "$FAIL" ] ; then
-            echo "** '$1' failed"
+            msg "** '$1' failed"
 	    if [ -n "$opt_L" ] ; then
 		tail -100 "$opt_L" | egrep -v '^(\*\*\* Error code 1|Stop\.)' |\
 			tail -40
@@ -300,14 +354,52 @@ run_cmd()
     fi
     }
 
+usage()
+    {
+    if [ -n "$1" ] ; then
+	echo "$@"
+	echo
+    fi
+    echo 'Usage: pkg_chk [opts]
+	-B      Check the "Build version" of packages (implies -i)
+	-P dir  Set PACKAGES dir (overrides any other setting)
+	-C conf Use pkgchk.conf file 'conf'
+	-D tags Comma separated list of additional pkgchk.conf tags to set
+	-L file Redirect output from commands run into file (should be fullpath)
+	-U tags Comma separated list of pkgchk.conf tags to unset
+	-a      Add all missing packages (implies -c)
+	-b      Install binary packages
+	-c      Check installed packages against pkgchk.conf
+	-f      Perform a 'make fetch' for all required packages
+	-g      Generate an initial pkgchk.conf file
+	-h      This help
+	-i	Check versions of installed packages (not using pkgchk.conf)
+	-k	Continue with further packages if errors are encountered
+	-l	List binary packages including dependencies (implies -c)
+	-n	Display actions that would be taken, but do not perform them
+	-r	Recursively remove mismatches (use with care) (implies -i)
+	-s      Install packages by building from source
+	-u      Update all mismatched packages (implies -i)
+	-v      Verbose
+
+pkg_chk verifies installed packages against pkgsrc.
+The most common usage is 'pkg_chk -i' to check all installed packages.
+For more advanced usage, including defining a set of desired packages based
+on hostname and type, see pkg_chk(8).
+
+If neither -b nor -s is given, both are assumed with -b preferred.
+'
+    exit 1
+    }
+
 verbose()
     {
-    if [ -n "$opt_v" ];then
-	echo $*
+    if [ -n "$opt_v" ] ; then
+	msg "$@"
     fi
     }
 
-args=$(getopt BC:D:L:U:abcfghiklnrsuv $*)
+args=$(getopt BC:D:L:P:U:abcfghiklnrsuv $*)
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -318,6 +410,7 @@ while [ $# != 0 ]; do
 	-C )	opt_C="$2" ; shift;;
 	-D )	opt_D="$2" ; shift;;
 	-L )	opt_L="$2" ; shift;;
+	-P )	opt_P="$2" ; shift;;
 	-U )	opt_U="$2" ; shift;;
 	-a )	opt_a=1 ; opt_c=1 ;;
 	-b )	opt_b=1 ;;
@@ -342,48 +435,25 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_l" ];then
-    echo "Must specify at least one of -a, -c, -g, -i, -l, or -u";
-    echo
-    opt_h=1;
+if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_l" ];
+then
+    usage "Must specify at least one of -a, -c, -g, -i, -l, or -u";
 fi
 
 if [ -n "$opt_h" -o $# != 0 ];then
-    echo 'Usage: pkg_chk [opts]
-	-B      Check the "Build version" of packages (implies -i)
-	-C conf Use pkgchk.conf file 'conf'
-	-D tags Comma separated list of additional pkgchk.conf tags to set
-	-L file Redirect output from commands run into file (should be fullpath)
-	-U tags Comma separated list of pkgchk.conf tags to unset
-	-a      Add all missing packages (implies -c)
-	-b      Limit installations to binary packages
-	-c      Check installed packages against pkgchk.conf
-	-f      Perform a 'make fetch' for all required packages
-	-g      Generate an initial pkgchk.conf file
-	-h      This help
-	-i	Check versions of installed packages (not using pkgchk.conf)
-	-k	Continue with further packages if errors are encountered
-	-l	List binary packages including dependencies (implies -c)
-	-n	Display actions that would be taken, but do not perform them
-	-r	Recursively remove mismatches (use with care) (implies -i)
-	-s      Limit installations to building from source
-	-u      Update all mismatched packages (implies -i)
-	-v      Verbose
-
-pkg_chk verifies installed packages against pkgsrc.
-The most common usage is 'pkg_chk -i' to check all installed packages.
-For more advanced usage, including defining a set of desired packages based
-on hostname and type, see pkg_chk(8).
-'
-    exit 1
+    usage
 fi
 
 # Hide PKG_PATH to avoid breakage in 'make' calls
 saved_PKG_PATH=$PKG_PATH
 unset PKG_PATH || true
 
+test -n "$AWK" || AWK="@AWK@"
+test -n "$GREP" || GREP="@GREP@"
 test -n "$MAKE" || MAKE="@MAKE@"
 test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
+test -n "$PKG_INFO" || PKG_INFO="@PKG_INFO@"
+test -n "$SED" || SED="@SED@"
 
 if [ ! -f $MAKECONF ] ; then
     if [ -f /etc/mk.conf ] ; then
@@ -396,7 +466,7 @@ fi
 # grabbed from GNU configure
 if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
   # Stardent Vistra SVR4 grep lacks -e, says ghazi@caip.rutgers.edu.
-  if (echo -n testing; echo 1,2,3) | sed s/-n/xn/ | grep xn >/dev/null; then
+  if (echo -n testing; echo 1,2,3) | ${SED} s/-n/xn/ | grep xn >/dev/null; then
     ac_n= ac_c='
 ' ac_t='	'
   else
@@ -412,7 +482,23 @@ fi
 
 extract_variables
 if [ -n "$opt_C" ] ; then
-    PKGCHK_CONF=$opt_C
+    PKGCHK_CONF="$opt_C"
+fi
+if [ -n "$opt_P" ] ; then
+    PACKAGES="$opt_P"
+fi
+if [ -d $PACKAGES/All ] ; then
+    PACKAGES="$PACKAGES/All"
+fi
+
+if [ -n "$opt_b" -a -z "$opt_s" -a -d $PACKAGES ] ; then
+    msg_progress Scan $PACKAGES
+    cd $PACKAGES
+    for f in `ls -t *.tgz` ; do # Sort by time to pick up newest first
+	PKGDIR=`${PKG_INFO} -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
+	PKGNAME=`echo $f | ${SED} 's/\.tgz$//'`
+	PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
+    done
 fi
 
 cd $PKGSRCDIR
@@ -433,14 +519,13 @@ fi
 if [ -n "$opt_c" -o -n "$opt_l" ];then
 
     if [ ! -r $PKGCHK_CONF ];then
-	echo "Unable to read PKGCHK_CONF '$PKGCHK_CONF'"
-	exit 1;
+	fatal "Unable to read PKGCHK_CONF '$PKGCHK_CONF'"
     fi
 
     # Determine list of tags
     #
-    extract_make_vars OPSYS OS_VERSION MACHINE_ARCH
-    TAGS="$(hostname | sed -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
+    extract_make_vars Makefile OPSYS OS_VERSION MACHINE_ARCH
+    TAGS="$(hostname | ${SED} -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
     if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
@@ -520,7 +605,7 @@ fi
 if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
     run_cmd "${PKG_DELETE} -r $MISMATCH_TODO" 1
     if [ -n "$opt_a" ] ; then
-	echo "[ Rechecking packages after deletions ]"
+	msg_progress Rechecking packages after deletions
 	check_packages_installed $PKGDIRLIST # May need to add more packages
     fi
 fi
@@ -531,7 +616,7 @@ if [ -n "$UPDATE_TODO" ];then
     #
     set -- $UPDATE_TODO
     while [ $# != 0 ]; do
-	PKGNAME=$(echo $1 | sed 's/-[0-9].*//')
+	PKGNAME=$(echo $1 | ${SED} 's/-[0-9].*//')
 	if [ -f $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
 	    LIST="$LIST$1|$2|$(cat $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY | xargs echo)\n"
 	else
@@ -577,11 +662,14 @@ if [ -n "$opt_a" ] ; then
 fi
 
 if [ -n "$UPDATE_DONE" ];then
-    echo "Updated:$UPDATE_DONE"
+    msg "Updated:$UPDATE_DONE"
 fi
 if [ -n "$INSTALL_DONE" ];then
-    echo "Installed:$INSTALL_DONE"
+    msg "Installed:$INSTALL_DONE"
 fi
 if [ -n "$FAIL_DONE" ];then
-    echo "Failed:$FAIL_DONE"
+    msg "Failed:$FAIL_DONE"
+fi
+if [ -n "$MISS_DONE" ];then
+    msg "Missing:$MISS_DONE"
 fi
