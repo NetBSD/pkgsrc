@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7740 2004/11/06 18:46:47 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7741 2004/11/06 20:19:54 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5129,3 +5129,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added bacula 1.36.0 [mjl 2004-11-06]
 	Updated evolution to 2.0.2nb4 [jmmv 2004-11-06]
 	Added php-zip 5.0.2.1.0 [jdolecek 2004-11-06]
+	Added p5-Lingua-EN-Inflect 1.88 [he 2004-11-06]
+	Added p5-UNIVERSAL-moniker 0.08 [he 2004-11-06]
+	Added p5-Class-DBI 0.96 [he 2004-11-06]
