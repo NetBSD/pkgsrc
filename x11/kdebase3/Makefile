@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/02/04 14:25:58 markd Exp $
+# $NetBSD: Makefile,v 1.40 2004/02/12 04:57:07 markd Exp $
 
 DISTNAME=	kdebase-3.2.0
 CATEGORIES=	x11
@@ -70,6 +70,27 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SUBST+=		KCMKEYBOARD="kcm_keyboard.a"
 .else
 PLIST_SUBST+=		KCMKEYBOARD="kcm_keyboard.so"
+.endif
+
+.if ${OPSYS} == "NetBSD" && !exists(${X11BASE}/lib/libfontenc.so)
+PLIST_SUBST+=		FONTENC_SUFFIX=".a"
+.else
+PLIST_SUBST+=		FONTENC_SUFFIX=".so"
+.endif
+
+.if exists(${X11BASE}/include/X11/extensions/Xrandr.h)
+HAVE_RANDR!=		${GREP} XRRSetScreenConfigAndRateX  ${X11BASE}/include/X11/extensions/Xrandr.h; ${ECHO}
+.endif
+.if !empty(HAVE_RANDR)
+PLIST_SUBST+=		HAVE_RANDR=""
+.else
+PLIST_SUBST+=		HAVE_RANDR="@comment "
+.endif
+
+.if exists(${X11BASE}/lib/libXcursor.so)
+PLIST_SUBST+=		HAVE_XCURSOR=""
+.else
+PLIST_SUBST+=		HAVE_XCURSOR="@comment "
 .endif
 
 ICONDIR=		share/kde/icons
