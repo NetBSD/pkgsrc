@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/05 07:43:25 hamajima Exp $
-sbin/dtcpauth
-sbin/dtcpc
-sbin/dtcps
+@comment $NetBSD: PLIST,v 1.2 2005/03/06 17:11:58 taca Exp $
 man/cat8/dtcpauth.0
 man/cat8/dtcpc.0
 man/cat8/dtcps.0
 man/man8/dtcpauth.8
 man/man8/dtcpc.8
 man/man8/dtcps.8
+sbin/dtcpauth
+sbin/dtcpc
+sbin/dtcps
