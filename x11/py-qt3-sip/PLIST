@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/15 16:40:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/19 04:35:05 jmc Exp $
 bin/sip${PYVERSSUFFIX}
 ${PYINC}/sip.h
 ${PYINC}/sipQt.h
@@ -7,3 +7,8 @@ ${PYSITELIB}/libsip.la
 ${PYSITELIB}/libsip.so
 ${PYSITELIB}/libsip.so.10
 ${PYSITELIB}/libsip.so.10.1
+${QTLIBDIR}/libsip.a
+${QTLIBDIR}/libsip.la
+${QTLIBDIR}/libsip.so
+${QTLIBDIR}/libsip.so.10
+${QTLIBDIR}/libsip.so.10.1

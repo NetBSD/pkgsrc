@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/22 17:22:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/19 04:35:03 jmc Exp $
 #
 
 DISTNAME=		PyQt-x11-gpl-3.7
 PKGNAME=		${PYPKGPREFIX}-qt3-base-3.7
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.river-bank.demon.co.uk/download/PyQt/
 
@@ -20,7 +21,8 @@ CONFIGURE_ARGS=		-q ${QTDIR} -m ${GMAKE} -p ${SIPBIN} -b ""
 
 PYTHON_VERSIONS_ACCEPTED=	22pth 21pth
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+QTLIBDIR=	${QTDIR:S/${BUILDLINK_PREFIX.qt3-libs}\///}/lib
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX} QTLIBDIR=${QTLIBDIR}
 
 MAKE_ENV+=	QTPREFIX=${QTDIR}
 
@@ -28,10 +30,15 @@ do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} build.py ${CONFIGURE_ARGS})
 
+# XXX - hack. Shouldn't need the symlinks as qmake should let us build
+# proper libraries that install outside of QTDIR more easily.
 do-install:
 	(cd ${WRKSRC}/qt && ${INSTALL_DATA} qt.py ${PREFIX}/${PYSITELIB})
 	(cd ${WRKSRC}/qt && ${LIBTOOL} --mode=install ${INSTALL_DATA} \
 		libqtcmodule.la ${PREFIX}/${PYSITELIB})
+	(cd ${PREFIX}/${PYSITELIB}; for i in libqtcmodule.*; do \
+		${LN} -sf ${PREFIX}/${PYSITELIB}/$$i \
+			${PREFIX}/${QTLIBDIR}/$$i; done)
 	(cd ${WRKSRC}/pylupdate3 && ${INSTALL_PROGRAM} pylupdate \
 		${PREFIX}/bin/pylupdate${PYVERSSUFFIX})
 	(cd ${WRKSRC}/pyuic3 && ${INSTALL_PROGRAM} pyuic \
