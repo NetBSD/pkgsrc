@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:28 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/19 20:05:02 wiz Exp $
 
 DISTNAME=		ularn
 PKGNAME=		ularn-6.12.92
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.win.tue.nl/pub/games/larn/ \
-			http://amaterasu.math.orst.edu:8080/~sharpej/
+MASTER_SITES=		ftp://ftp.win.tue.nl/pub/games/larn/
 
 MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.win.tue.nl/games/roguelike/larn/
