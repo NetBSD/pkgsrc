@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2000/08/25 23:47:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2000/09/03 09:17:00 kei Exp $
 bin/addtosmbpass
 bin/convert_smbpasswd
 bin/make_printerdef
@@ -42,6 +42,28 @@ lib/codepages/unicode_map.ISO8859-2
 lib/codepages/unicode_map.ISO8859-5
 lib/codepages/unicode_map.ISO8859-7
 lib/codepages/unicode_map.KOI8-R
+lib/swat-i18n.txt
+man/ja/man1/make_smbcodepage.1
+man/ja/man1/make_unicodemap.1
+man/ja/man1/nmblookup.1
+man/ja/man1/smbclient.1
+man/ja/man1/smbrun.1
+man/ja/man1/smbsh.1
+man/ja/man1/smbstatus.1
+man/ja/man1/smbtar.1
+man/ja/man1/testparm.1
+man/ja/man1/testprns.1
+man/ja/man5/lmhosts.5
+man/ja/man5/smb.conf.5
+man/ja/man5/smbpasswd.5
+man/ja/man7/samba.7
+man/ja/man8/nmbd.8
+man/ja/man8/smbd.8
+man/ja/man8/smbmnt.8
+man/ja/man8/smbmount.8
+man/ja/man8/smbpasswd.8
+man/ja/man8/smbspool.8
+man/ja/man8/swat.8
 man/man1/make_smbcodepage.1
 man/man1/make_unicodemap.1
 man/man1/nmblookup.1
@@ -141,14 +163,19 @@ share/doc/samba/textdocs/UNIX_SECURITY.txt
 share/doc/samba/textdocs/Win95.txt
 share/doc/samba/textdocs/WinNT.txt
 share/doc/samba/textdocs/cifsntdomain.txt
+share/doc/samba/textdocs/sambafaq.txt
 share/doc/samba/textdocs/security_level.txt
 share/doc/samba/textdocs/smbmount.txt
 share/examples/samba/README
+share/examples/samba/add-delete-user-script/README
+share/examples/samba/add-delete-user-script/smb-useradd
+share/examples/samba/add-delete-user-script/smb-userdel
 share/examples/samba/autofs/README
 share/examples/samba/autofs/auto.a
 share/examples/samba/dce-dfs/README
 share/examples/samba/dce-dfs/smb.conf
 share/examples/samba/misc/extra_smbstatus
+share/examples/samba/misc/hextoeuc
 share/examples/samba/misc/wall.perl
 share/examples/samba/printer-accounting/README
 share/examples/samba/printer-accounting/acct-all
@@ -161,6 +188,7 @@ share/examples/samba/printing/smbprint.sysv
 share/examples/samba/simple/README
 share/examples/samba/simple/smb.conf
 share/examples/samba/smb.conf.default
+share/examples/samba/smb.conf.default.ja
 share/examples/samba/smb.conf.sample
 share/examples/samba/svr4-startup/README
 share/examples/samba/svr4-startup/samba.server
@@ -178,6 +206,9 @@ share/examples/samba/validchars/validchr.c
 share/examples/samba/validchars/validchr.com
 share/examples/samba/wins_hook/README
 share/examples/samba/wins_hook/dns_update
+share/locale/en/LC_MESSAGES/i18n_swat.mo
+share/locale/ja/LC_MESSAGES/i18n_swat.mo
+share/locale/ja_JP.SJIS/LC_MESSAGES/i18n_swat.mo
 share/swat/help/DOMAIN_MEMBER.html
 share/swat/help/NT_Security.html
 share/swat/help/lmhosts.5.html
@@ -213,6 +244,127 @@ share/swat/images/status.gif
 share/swat/images/viewconfig.gif
 share/swat/include/footer.html
 share/swat/include/header.html
+share/swat/include/header_css.html
+share/swat/ja/help/Application_Serving.txt.html
+share/swat/ja/help/BROWSING-Config.txt.html
+share/swat/ja/help/BROWSING.txt.html
+share/swat/ja/help/CRLF-LF-Conversions.txt.html
+share/swat/ja/help/CVS_ACCESS.txt.html
+share/swat/ja/help/DIAGNOSIS.txt.html
+share/swat/ja/help/DOMAIN.txt.html
+share/swat/ja/help/DOMAIN_MEMBER.txt.html
+share/swat/ja/help/ENCRYPTION.txt.html
+share/swat/ja/help/File-Cacheing.txt.html
+share/swat/ja/help/HowToUseSamba/1-18.html
+share/swat/ja/help/HowToUseSamba/1-19.html
+share/swat/ja/help/HowToUseSamba/1-6.html
+share/swat/ja/help/HowToUseSamba/MSNET1.GIF
+share/swat/ja/help/HowToUseSamba/MSNETW2.GIF
+share/swat/ja/help/HowToUseSamba/PRTCL95.GIF
+share/swat/ja/help/HowToUseSamba/SAMBA1.GIF
+share/swat/ja/help/HowToUseSamba/WGRPNT1.GIF
+share/swat/ja/help/HowToUseSamba/globals.gif
+share/swat/ja/help/HowToUseSamba/home.gif
+share/swat/ja/help/HowToUseSamba/index.html
+share/swat/ja/help/HowToUseSamba/passwd.gif
+share/swat/ja/help/HowToUseSamba/printers.gif
+share/swat/ja/help/HowToUseSamba/printtool1.gif
+share/swat/ja/help/HowToUseSamba/printtool2.gif
+share/swat/ja/help/HowToUseSamba/printtool3.gif
+share/swat/ja/help/HowToUseSamba/printtool4.gif
+share/swat/ja/help/HowToUseSamba/printtool5.gif
+share/swat/ja/help/HowToUseSamba/printtool6.gif
+share/swat/ja/help/HowToUseSamba/samba.gif
+share/swat/ja/help/HowToUseSamba/shares.gif
+share/swat/ja/help/HowToUseSamba/status.gif
+share/swat/ja/help/HowToUseSamba/swat1.gif
+share/swat/ja/help/HowToUseSamba/userhome.gif
+share/swat/ja/help/HowToUseSamba/userprofile.gif
+share/swat/ja/help/HowToUseSamba/viewconfig.gif
+share/swat/ja/help/HowToUseSamba/x-1-256.gif
+share/swat/ja/help/HowToUseSamba/x-2-256.gif
+share/swat/ja/help/HowToUseSamba/x-3-256.gif
+share/swat/ja/help/Macintosh_Clients.txt.html
+share/swat/ja/help/NT-Guest-Access.txt.html
+share/swat/ja/help/NTDOMAIN.txt.html
+share/swat/ja/help/NT_Security.html
+share/swat/ja/help/NetBIOS.txt.html
+share/swat/ja/help/PRINTER_DRIVER.txt.html
+share/swat/ja/help/PROFILES.txt.html
+share/swat/ja/help/Passwords.txt.html
+share/swat/ja/help/README.smbmount.txt.html
+share/swat/ja/help/Speed.txt.html
+share/swat/ja/help/Speed2.txt.html
+share/swat/ja/help/UNIX-SMB.txt.html
+share/swat/ja/help/UNIX_INSTALL.txt.html
+share/swat/ja/help/Win95.txt.html
+share/swat/ja/help/WinNT.txt.html
+share/swat/ja/help/encrypt-passwd.html
+share/swat/ja/help/lmhosts.5.html
+share/swat/ja/help/make_smbcodepage.1.html
+share/swat/ja/help/make_unicodemap.1.html
+share/swat/ja/help/nmbd.8.html
+share/swat/ja/help/nmblookup.1.html
+share/swat/ja/help/samba-func.html
+share/swat/ja/help/samba-j.html
+share/swat/ja/help/samba.7.html
+share/swat/ja/help/samba2.html
+share/swat/ja/help/sambafaq-1.html
+share/swat/ja/help/sambafaq-2.html
+share/swat/ja/help/sambafaq-3.html
+share/swat/ja/help/sambafaq-4.html
+share/swat/ja/help/sambafaq-5.html
+share/swat/ja/help/sambafaq.html
+share/swat/ja/help/security_level.txt.html
+share/swat/ja/help/smb.conf.5.html
+share/swat/ja/help/smbclient.1.html
+share/swat/ja/help/smbd.8.html
+share/swat/ja/help/smbmnt.8.html
+share/swat/ja/help/smbmount.8.html
+share/swat/ja/help/smbmount.txt.html
+share/swat/ja/help/smbpasswd.5.html
+share/swat/ja/help/smbpasswd.8.html
+share/swat/ja/help/smbrun.1.html
+share/swat/ja/help/smbsh.1.html
+share/swat/ja/help/smbspool.8.html
+share/swat/ja/help/smbstatus.1.html
+share/swat/ja/help/smbtar.1.html
+share/swat/ja/help/swat.8.html
+share/swat/ja/help/testparm.1.html
+share/swat/ja/help/testprns.1.html
+share/swat/ja/help/tuning.japanese.html
+share/swat/ja/help/welcome.html
+share/swat/ja/help/whatsamba.html
+share/swat/ja/images/globals.gif
+share/swat/ja/images/home.gif
+share/swat/ja/images/passwd.gif
+share/swat/ja/images/printers.gif
+share/swat/ja/images/samba.gif
+share/swat/ja/images/shares.gif
+share/swat/ja/images/status.gif
+share/swat/ja/images/viewconfig.gif
+share/swat/ja/include/footer.html
+share/swat/ja/include/header.JP1.html
+share/swat/ja/include/header.html
+share/swat/ja/include/header.nocss.html
+share/swat/ja/include/header.org.html
+share/swat/ja/include/header.sjis.html
+share/swat/ja/include/header_css.html
+share/swat/ja_JP.SJIS/help/welcome.html
+share/swat/ja_JP.SJIS/images/globals.gif
+share/swat/ja_JP.SJIS/images/home.gif
+share/swat/ja_JP.SJIS/images/passwd.gif
+share/swat/ja_JP.SJIS/images/printers.gif
+share/swat/ja_JP.SJIS/images/samba.gif
+share/swat/ja_JP.SJIS/images/shares.gif
+share/swat/ja_JP.SJIS/images/status.gif
+share/swat/ja_JP.SJIS/images/viewconfig.gif
+share/swat/ja_JP.SJIS/include/footer.html
+share/swat/ja_JP.SJIS/include/header.JP1.html
+share/swat/ja_JP.SJIS/include/header.html
+share/swat/ja_JP.SJIS/include/header.nocss.html
+share/swat/ja_JP.SJIS/include/header.org.html
+share/swat/ja_JP.SJIS/include/header_css.html
 share/swat/using_samba/appa_01.html
 share/swat/using_samba/appa_02.html
 share/swat/using_samba/appa_03.html
@@ -375,6 +527,15 @@ share/swat/using_samba/this_edition.html
 @dirrm share/swat/using_samba/gifs
 @dirrm share/swat/using_samba/figs
 @dirrm share/swat/using_samba
+@dirrm share/swat/ja_JP.SJIS/include
+@dirrm share/swat/ja_JP.SJIS/images
+@dirrm share/swat/ja_JP.SJIS/help
+@dirrm share/swat/ja_JP.SJIS
+@dirrm share/swat/ja/include
+@dirrm share/swat/ja/images
+@dirrm share/swat/ja/help/HowToUseSamba
+@dirrm share/swat/ja/help
+@dirrm share/swat/ja
 @dirrm share/swat/include
 @dirrm share/swat/images
 @dirrm share/swat/help
@@ -390,6 +551,7 @@ share/swat/using_samba/this_edition.html
 @dirrm share/examples/samba/misc
 @dirrm share/examples/samba/dce-dfs
 @dirrm share/examples/samba/autofs
+@dirrm share/examples/samba/add-delete-user-script
 @dirrm share/examples/samba
 @dirrm share/doc/samba/textdocs
 @dirrm share/doc/samba/faq
