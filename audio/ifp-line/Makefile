@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/05/22 09:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/13 11:34:58 sekiya Exp $
 
-DISTNAME=		ifp-line-0.2.4
+DISTNAME=		ifp-line-0.2.4.3
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ifp-driver/}
 
