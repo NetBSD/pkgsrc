@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2003/07/17 22:51:48 grant Exp $
+# $NetBSD: Makefile,v 1.101 2003/08/30 22:51:27 jlam Exp $
 
 .include "Makefile.common"
 PKGREVISION=		2
@@ -9,6 +9,7 @@ COMMENT=		SMB/CIFS protocol server suite for UNIX
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 CONFIGURE_ARGS+=	--with-readline

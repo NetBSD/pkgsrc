@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/07/17 21:45:50 grant Exp $
+# $NetBSD: Makefile,v 1.42 2003/08/30 22:51:20 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.17
 PKGREVISION=		1
@@ -12,10 +12,13 @@ HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 COMMENT=		Cyrus IMAP server
 
 USE_BUILDLINK2=		YES
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 PERL5_CONFIGURE=	NO
 AUTOCONF_REQD=		2.13
+
+USE_PKGINSTALL=		YES
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 

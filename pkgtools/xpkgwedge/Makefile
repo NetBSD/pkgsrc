@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/08/30 11:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2003/08/30 22:51:29 jlam Exp $
 
 DISTNAME=	xpkgwedge-1.7
 WRKSRC=		${WRKDIR}
@@ -17,8 +17,10 @@ NO_CONFIGURE=	# defined
 NO_BUILDLINK=	# defined
 NO_CHECKSUM=	# defined
 
-USE_PKGINSTALL=	YES
-USE_X11=	YES
+USE_X11=		YES
+USE_PKGINSTALL=		YES
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 # FONT_PROGS are symlinked from ${X11BASE}/bin to ${PREFIX}/bin to allow
 # ${PREFIX}/bin/${prog} to always work.
