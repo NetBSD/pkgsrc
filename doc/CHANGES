@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3208 2003/09/02 12:29:42 frueauf Exp $
+$NetBSD: CHANGES,v 1.3209 2003/09/02 13:12:44 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3442,6 +3442,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dvdrip to 0.50.15 [mycroft 2003-08-31]
 	Updated mjpegtools to 1.6.1.90 [mycroft 2003-08-31]
 	Updated quake3arena to 1.32b [xtraeme 2003-08-31]
+	Updated povray to 3.50c [gavan 2003-08-31]
 	Updated dvdrecord to 0.1.5 [mycroft 2003-09-01]
 	Updated postfix to 2.0.14 [martti 2003-09-01]
 	Updated squirrelmail to 1.4.1 [martti 2003-09-01]
