@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5187 2004/03/10 12:01:59 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5188 2004/03/10 12:54:40 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-racc to 1.4.3nb1 [taca 2004-03-10]
 	Updated xfce4 to 4.0.4nb1 [xtraeme 2004-03-10]
 	Updated xfce4-extras to 4.0.4nb2 [xtraeme 2004-03-10]
+	Updated mozilla-stable to 1.4.1nb3 [taya 2004-03-10]
