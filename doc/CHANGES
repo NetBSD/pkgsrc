@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6749 2004/08/01 08:36:34 schmonz Exp $
+$NetBSD: CHANGES,v 1.6750 2004/08/01 10:23:14 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3671,3 +3671,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated clamav to 0.75.1 [jlam 2004-08-01]
 	Updated dovecot to 0.99.10.9 [schmonz 2004-08-01]
 	Updated getmail to 4.0.2 [schmonz 2004-08-01]
+	Updated gcc34-ada to 3.4.1nb4 [shannonjr 2004-08-01]
