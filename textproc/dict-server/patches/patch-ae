@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1 2000/06/26 21:02:05 dmcmahill Exp $
+
+--- decl.h.orig	Thu Jan 15 22:51:55 1998
++++ decl.h	Mon Jun 26 16:20:25 2000
+@@ -29,5 +29,5 @@
+ situations that we know about. */
+ 
+-#if defined(__sparc__)
++#if defined(__sparc__) && !defined(__NetBSD__)
+ 				/* Both SunOS and Solaris */
+ extern int    getrusage( int who, struct rusage * );
