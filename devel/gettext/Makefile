@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/07/19 03:07:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.36 2002/08/19 19:20:30 seb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -19,6 +19,8 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
+CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 INFO_FILES=		gettext.info
 TEXINFO_OVERRIDE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/07/19 03:07:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/19 19:20:34 seb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -21,6 +21,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-included-gettext
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
+CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 PATCHDIR=		${.CURDIR}/../../devel/gettext/patches
 DISTINFO_FILE=		${.CURDIR}/../../devel/gettext/distinfo
