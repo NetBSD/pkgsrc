@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1734 2004/05/11 13:36:25 wiz Exp $
+$NetBSD: TODO,v 1.1735 2004/05/12 15:12:51 minskim Exp $
 
 Suggested new packages
 ======================
@@ -362,7 +362,6 @@ Suggested package updates
 	o thunderbird-0.6
 	o thy-0.9.0 [pkg/25318]
 	o tkdesk-2.0
-	o tkinfo-2.8 [pkg/25528]
 	o tkman-2.2
 	o tmda-1.0.2
 	o top-3.5b12.10
