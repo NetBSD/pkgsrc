@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2002/09/23 01:26:25 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/01 22:02:01 jmmv Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
+PKGREVISION=		1
 CATEGORIES=		graphics devel
 MASTER_SITES=		ftp://ftp.cs.utwente.nl/pub/tcm/
 
@@ -22,6 +23,10 @@ MAKE_ENV+=		MOTIF_HOME=${MOTIFBASE}
 
 TCM_SRC=		${WRKDIR}/tcm-2.01
 MAKE_ENV+=		TCM_HOME=${TCM_SRC}
+
+CPPFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CONF_FILES=		${PREFIX}/share/examples/tcm/tcm.conf \
+			${PKG_SYSCONFDIR}/tcm.conf
 
 ALL_TARGET=		depend all
 
@@ -54,7 +59,8 @@ do-install:
 	${LN} -fs ${PREFIX}/bin/tcmt ${PREFIX}/bin/$$f;			\
 	done
 	${INSTALL_SCRIPT} ${TCM_SRC}/bin/psf ${PREFIX}/bin
-	${INSTALL_DATA} ${TCM_SRC}/lib/tcm.conf ${PREFIX}/etc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tcm
+	${INSTALL_DATA} ${TCM_SRC}/lib/tcm.conf ${PREFIX}/share/examples/tcm
 	${INSTALL_DATA} ${TCM_SRC}/lib/TCM ${PREFIX}/lib/X11/app-defaults/
 	${INSTALL_DATA} ${TCM_SRC}/man/man1/*.1 ${PREFIX}/man/man1/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tcm
@@ -86,6 +92,7 @@ do-install:
 		${PREFIX}/share/doc/html/tcm/wishlist/
 
 .include "../../mk/motif.buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if defined(MOTIF_TYPE) && (${MOTIF_TYPE} == "lesstif")

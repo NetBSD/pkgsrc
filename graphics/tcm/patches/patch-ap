@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+$NetBSD: patch-ap,v 1.2 2003/01/01 22:02:02 jmmv Exp $
 
 --- gl/config.c.orig	Fri Feb 23 18:13:48 2001
 +++ gl/config.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
  #include <string.h>
  
 -const char Config::SYS_CONFIG[] = "lib/tcm.conf";
-+const char Config::SYS_CONFIG[] = "etc/tcm.conf";
++const char Config::SYS_CONFIG[] = PKG_SYSCONFDIR "/tcm.conf";
  const char Config::USER_CONFIG[] = ".tcmrc";
  
  Config::Config(const char *s) { 
