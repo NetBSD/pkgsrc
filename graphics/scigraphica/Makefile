@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/09/22 10:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/28 23:00:55 jmmv Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
@@ -29,6 +29,7 @@ PY_PATCHPLIST=		YES
 .include "../../devel/readline/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../math/py-Numeric/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../x11/gtk+extra/buildlink2.mk"
