@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.871 2001/11/30 05:03:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.872 2001/12/02 03:11:35 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1742,9 +1742,11 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
 .endif # !NO_MTREE
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} pre-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} pre-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} post-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} post-install-script
 .for f in ${INFO_FILES}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
@@ -2124,7 +2126,7 @@ do-su-package:
 
 # Empty pre-* and post-* targets
 
-.for name in fetch extract patch configure build install package
+.for name in fetch extract patch configure build install-script install package
 
 .  if !target(pre-${name})
 pre-${name}:
