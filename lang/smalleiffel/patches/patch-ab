@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/10/12 08:01:34 jlam Exp $
+
+--- lib_se/system_tools.e.orig	Sat Jun  5 14:51:08 1999
++++ lib_se/system_tools.e	Mon Jun 28 04:05:27 1999
+@@ -211,6 +211,8 @@
+          tmp_file_read.disconnect;
+          bin_directory := sys_directory.twin;
+          parent_directory(bin_directory);
++         parent_directory(bin_directory);
++         parent_directory(bin_directory);
+          add_directory(bin_directory,fz_bin);
+       end;
+ 
