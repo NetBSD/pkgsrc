@@ -1,0 +1,29 @@
+$NetBSD: patch-ah,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+
+--- hosts.cfg.in.orig	Tue Jan 16 12:57:49 2001
++++ hosts.cfg.in
+@@ -199,20 +199,20 @@
+ 
+ # Service notification command - send email with problem summary
+ 
+-command[notify-by-email]=/bin/echo -e '***** NetSaint 0.0.6 *****\n\nNotification Type: $NOTIFICATIONTYPE$\n\nService: $SERVICEDESC$\nHost: $HOSTALIAS$\nAddress: $HOSTADDRESS$\nState: $SERVICESTATE$\n\nDate/Time: $DATETIME$\n\nAdditional Info:\n\n$OUTPUT$' | /bin/mail -s '** $NOTIFICATIONTYPE$ alert - $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$ **' $CONTACTEMAIL$
++command[notify-by-email]=/bin/echo -e '***** NetSaint 0.0.6 *****\n\nNotification Type: $NOTIFICATIONTYPE$\n\nService: $SERVICEDESC$\nHost: $HOSTALIAS$\nAddress: $HOSTADDRESS$\nState: $SERVICESTATE$\n\nDate/Time: $DATETIME$\n\nAdditional Info:\n\n$OUTPUT$' | /usr/bin/mail -s '** $NOTIFICATIONTYPE$ alert - $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$ **' $CONTACTEMAIL$
+ 
+ # Service notification command - send email to alphanumeric pager gateway
+ #       The notify-by-epager command assumes that each contact has a pager email gateway, and
+ #       that the address has been entered into the appropriate contact field instead of an
+ #       actual pager number. (i.e. 'pagejoe@nowhere.com' routes mail to Joe's alphanumeric pager)
+ 
+-command[notify-by-epager]=/bin/echo -e "Service: $SERVICEDESC$\nHost: $HOSTNAME$\nAddress: $HOSTADDRESS$\nState: $SERVICESTATE$\nInfo: $OUTPUT$\nDate: $DATETIME$" | /bin/mail -s '$NOTIFICATIONTYPE$: $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$' $CONTACTPAGER$
++command[notify-by-epager]=/bin/echo -e "Service: $SERVICEDESC$\nHost: $HOSTNAME$\nAddress: $HOSTADDRESS$\nState: $SERVICESTATE$\nInfo: $OUTPUT$\nDate: $DATETIME$" | /usr/bin/mail -s '$NOTIFICATIONTYPE$: $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$' $CONTACTPAGER$
+ 
+ # Host notification commands (one for email, one for alphanumeric pager with email gateway)
+ 
+-command[host-notify-by-email]=/bin/echo -e "***** NetSaint 0.0.6 *****\n\nNotification Type: $NOTIFICATIONTYPE$\nHost: $HOSTNAME$\nState: $HOSTSTATE$\nAddress: $HOSTADDRESS$\nInfo: $OUTPUT$\n\nDate/Time: $DATETIME$\n" | /bin/mail -s 'Host $HOSTSTATE$ alert for $HOSTNAME$!' $CONTACTEMAIL$
++command[host-notify-by-email]=/bin/echo -e "***** NetSaint 0.0.6 *****\n\nNotification Type: $NOTIFICATIONTYPE$\nHost: $HOSTNAME$\nState: $HOSTSTATE$\nAddress: $HOSTADDRESS$\nInfo: $OUTPUT$\n\nDate/Time: $DATETIME$\n" | /usr/bin/mail -s 'Host $HOSTSTATE$ alert for $HOSTNAME$!' $CONTACTEMAIL$
+ 
+-command[host-notify-by-epager]=/bin/echo -e "Host '$HOSTALIAS$' is $HOSTSTATE$\nInfo: $OUTPUT$\nTime: $DATETIME$" | /bin/mail -s '$NOTIFICATIONTYPE$ alert - Host $HOSTNAME$ is $HOSTSTATE$' $CONTACTPAGER$
++command[host-notify-by-epager]=/bin/echo -e "Host '$HOSTALIAS$' is $HOSTSTATE$\nInfo: $OUTPUT$\nTime: $DATETIME$" | /usr/bin/mail -s '$NOTIFICATIONTYPE$ alert - Host $HOSTNAME$ is $HOSTSTATE$' $CONTACTPAGER$
+ 
+ 
+ 

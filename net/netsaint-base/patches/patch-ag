@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+
+--- nscgi.cfg.in.orig	Sun Oct 29 23:43:54 2000
++++ nscgi.cfg.in
+@@ -55,7 +55,7 @@
+ # NetSaint.  Run the 'ps' command manually to see what the command
+ # line entry for the NetSaint process looks like.
+ 
+-#netsaint_check_command=@libexecdir@/check_netsaint @localstatedir@/status.log 5 '@bindir@/netsaint'
++#netsaint_check_command=@libexecdir@/check_netsaint @localstatedir@/log/netsaint/status.log 5 'netsaint'
+ 
+ 
+ 

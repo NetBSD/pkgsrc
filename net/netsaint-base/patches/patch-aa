@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+
+--- configure.orig	Thu Dec 28 13:49:35 2000
++++ configure
+@@ -1210,7 +1210,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-	LIBS="-lgd -lz -lm -lpng $LIBS"
++	LIBS="-lgd -lz -lm -lpng -lxpm $LIBS"
+ 	cat > conftest.$ac_ext <<EOF
+ #line 1216 "configure"
+ #include "confdefs.h"
