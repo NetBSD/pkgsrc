@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/25 08:57:08 snj Exp $
 #
 
 DISTNAME=	pyslsk-1.2.4
@@ -13,8 +13,8 @@ COMMENT=	Python based Soulseek client
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED= 23pth 22pth
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-wxWindows/buildlink2.mk"
+.include "../../x11/py-wxWindows/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
