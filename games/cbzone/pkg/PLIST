@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/27 00:11:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/13 20:39:45 garbled Exp $
 lib/X11/app-defaults/Cbzone
 share/cbzone/sounds/enemy_seen.au
 share/cbzone/sounds/game_begin.au
@@ -10,7 +10,6 @@ share/cbzone/sounds/user_died.au
 share/cbzone/sounds/user_shoots.au
 share/cbzone/cbzone.help
 share/cbzone/cbzone.motd
-share/cbzone/cbzone.highscores
 bin/cbzone.exec
 bin/cbzone
 @dirrm share/cbzone/sounds

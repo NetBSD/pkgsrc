@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 1998/09/13 20:39:44 garbled Exp $
+--- c_scores.c.orig	Sun Sep 13 13:18:36 1998
++++ c_scores.c	Sun Sep 13 13:19:04 1998
+@@ -124,7 +124,7 @@
+   y = 100;
+   ydelta = 15;
+ 
+-  sprintf(buf,"%s/%s",TANKDIR,SCOREFILE);
++  sprintf(buf,"/var/games/%s",SCOREFILE);
+   sfile = fopen(buf,"r");	/* just check if it is there */
+ 
+   if (sfile == NULL) {
