@@ -1,4 +1,4 @@
-# $NetBSD: shell-lib,v 1.1 2004/09/06 18:33:23 jlam Exp $
+# $NetBSD: shell-lib,v 1.2 2004/09/21 15:14:08 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -33,6 +33,7 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
+#
 
 ######################################################################
 # msg_log logfile msg
@@ -116,6 +117,61 @@ shquote()
 		shquoted="\"$shquoted\""
 		;;
 	esac
+}
+
+######################################################################
+# lock_file -f path [-n token]
+#	Attempt to create a lockfile at $path.  Any directories in the
+#	path should already exist.  If $token is specified, then assume
+#	that it is unique between machines sharing an NFS mount.
+#
+# (1) Create globally-unique filename in the same filesystem as the
+#     lockfile.
+# (2) Try to create a hard-link from this file to the lockfile, but
+#     ignoring any errors.
+# (3) If the two files are the same file, then the lock was successfully
+#     obtained; otherwise, the lock attempt wasn't successful.
+######################################################################
+lock_file()
+{
+	: ${dirname=dirname}
+	: ${echo=echo}
+	: ${link=link}
+	: ${mkdir=mkdir}
+	: ${mktemp=mktemp}
+	: ${rm=rm}
+	: ${test=test}
+	: ${touch=touch}
+
+	_lf_lockfile=
+	_lf_nfs=
+	while $test $# -gt 0; do
+		case $1 in
+		-f)	_lf_lockfile="$2"; shift ;;
+		-n)	_lf_nfs="$2"; shift ;;
+		esac
+		shift
+	done
+	if $test -z "$_lf_lockfile"; then
+		$echo 1>&2 "$0: no lock file specified."
+		exit
+	fi
+	_lf_pid=$$
+	_lf_lockdir=`$dirname $_lf_lockfile`
+	_lf_uniqfile=`$mktemp "$_lf_lockdir/.lock.$_lf_nfs.$_lf_pid.XXXXXX" 2>/dev/null` || return 1
+	if $test -n "$_lf_nfs"; then
+		{ $echo $_lf_pid; $echo $_lf_nfs; } > $_lf_uniqfile
+	else
+		$echo $_lf_pid > $_lf_uniqfile
+	fi
+	$link $_lf_uniqfile $_lf_lockfile 2>/dev/null
+	if $test $_lf_uniqfile -ef $_lf_lockfile; then
+		_lf_result=0
+	else
+		_lf_result=1
+	fi
+	$rm -f $_lf_uniqfile
+	return $_lf_result
 }
 
 ######################################################################
