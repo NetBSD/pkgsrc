@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.438 2003/12/04 17:01:54 recht Exp $
+# $NetBSD: Makefile,v 1.439 2003/12/07 04:14:45 epg Exp $
 #
 
 COMMENT=	Development utilities
@@ -365,6 +365,7 @@ SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-zconfig
 SUBDIR+=	python-mode
+SUBDIR+=	rapidsvn
 SUBDIR+=	ratfor
 SUBDIR+=	rcs
 SUBDIR+=	rdp
