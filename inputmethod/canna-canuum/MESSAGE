@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2003/09/23 15:06:58 uebayasi Exp $
+
+You at least should set up key functions in "${HOME}/.canna".
+such as:
+(set-key 'alpha-mode "\C-i" 'japanese-mode)
+(set-key 'empty-mode "\C-i" 'alpha-mode)
+===========================================================================
