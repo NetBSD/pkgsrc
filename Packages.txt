@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.6 1997/12/27 04:27:10 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.7 1997/12/29 19:44:32 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -108,7 +108,7 @@ binary package that someone else already prepared for your type of machine.
  1.1 Where to get
  ================
 
-Precompiled packages are stored on ftp.netbsd.org and it's mirrors in the
+Precompiled packages are stored on ftp.netbsd.org and its mirrors in the
 directory /pub/NetBSD/packages for anon FTP access. Please pick the right
 subdirectory there as indicated by "sysctl hw.machine_arch". In that
 directory, there is a subdirectory for each category plus a subdirectory
@@ -367,20 +367,20 @@ witticisms.
 
  * pkg/COMMENT:
    A one-line description of the piece of software. There is no need to
-   mention the package's name - this will automatically be added bythe
+   mention the package's name - this will automatically be added by the
    pkg_* tools when they are invoked.
 
  * pkg/DESCR:
    A multi-line description of the piece of software.  This should include
    any credits where they are due.  Please bear in mind that others do not
-   shareyour sense of humour (or spelling idiosyncracies), and that others
+   share your sense of humour (or spelling idiosyncracies), and that others
    will read everything that you write here.
 
  * pkg/PLIST:
    This file governs the files that are installed on your system: all the
    binaries, manual pages, etc. There are other directives which may be
    entered in this file, to control the creation and deletion of
-   directories,and the location of inserted files.
+   directories, and the location of inserted files.
 
 If you're updating a FreeBSD package to work for NetBSD, please pay special
 attention to the following things in pkg/PLIST:
@@ -388,7 +388,7 @@ attention to the following things in pkg/PLIST:
  - If there's a "@exec ldconfig ...", add an "@unexec ldconfig ...", so the
    hints-file for ld.so doesn't grow without end.
  - For @exec and @unexec rewrite any ldconfig-command as "ldconfig ... ||
-   true", as there's no ldconfig command om some of the platforms NetBSD
+   true", as there's no ldconfig command on some of the platforms NetBSD
    runs on (e.g. alpha).
  - Add any missing @dirrm statements
 
@@ -399,7 +399,7 @@ attention to the following things in pkg/PLIST:
  * pkg/INSTALL:
    Shell script invoked twice during pkg_add. First time after package
    extraction and before files are moved in place, the second time after
-   the files to install are moved in place. This can be used to du any
+   the files to install are moved in place. This can be used to do any
    custom procedures not possible with @exec commands in PLIST. See
    pkg_add(1) and pkg_create(1) for more information.
 
@@ -612,7 +612,7 @@ pre-configure:
 $f.pdone $$f; \
         done
 
-This is taken from the sysutils/rtty packagel; be sure this works for your
+This is taken from the sysutils/rtty package; be sure this works for your
 package - it may actually make sense to look for some things in /usr/local,
 for example. So don't blindly replace all occurences of /usr/local!
 
@@ -750,7 +750,7 @@ target in the order given above.
    For any of the main targets described in the previous section, two
    auxiliary targets exist with "pre-" and "post-" prepended to the main
    target's name. These targets are invoked before and after the main
-   target is called, giving the possibility to do any fix anything the
+   target is called, giving the possibility to fix anything the
    program's configure script or install target left out.  For any of these
    auxiliary targets, equally named scripts can be placed in the package's
    scripts-subdirectory that will be executed at the given time, see
@@ -1093,7 +1093,7 @@ do this now:
 > Registering depends:.
 > Creating gzip'd tar ball in '/u/pkgsrc/lang/bison/bison-1.25.tgz'
 
-Now as you don't need the source and object files any more, clean up:
+Now that you don't need the source and object files any more, clean up:
 
 > root@pumpy:/u/pkgsrc/lang/bison(1787)# make clean
 > ===>  Cleaning for bison-1.25
