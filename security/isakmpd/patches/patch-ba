@@ -1,4 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2001/04/04 03:45:15 itojun Exp $
+$NetBSD: patch-ba,v 1.2 2001/05/12 00:04:44 dmcmahill Exp $
+
+The first change (the free line) had the following patch comment:
 
 Index: x509.c
 ===================================================================
@@ -6,13 +8,22 @@ RCS file: /cvs/src/sbin/isakmpd/x509.c,v
 retrieving revision 1.46
 retrieving revision 1.47
 diff -u -r1.46 -r1.47
---- x509.c	2001/03/27 16:50:35	1.46
-+++ x509.c	2001/04/03 13:59:12	1.47
-@@ -545,7 +545,6 @@
- 	      return 0;
+
+the second (size_t -> u_int32_t) is to make the types match on 
+64-bit machines
+
+--- work.alpha/isakmpd/x509.c.orig	Tue Mar 27 11:50:35 2001
++++ work.alpha/isakmpd/x509.c	Thu May 10 17:02:00 2001
+@@ -546,5 +546,4 @@
  	    }
  
 -	  free (x509_policy_asserts);
  	  x509_policy_asserts = new_asserts;
  	}
+@@ -626,5 +625,5 @@
+   struct x509_hash *cert;
+   u_int8_t **cid;
+-  size_t *clen;
++  u_int32_t *clen;
+   int n, i, id_found;
  
