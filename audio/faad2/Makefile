@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/17 20:21:38 wiz Exp $
 #
 
 DISTNAME=	faad2-1.1
@@ -14,12 +14,13 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/faad2
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GCC_SHLIB=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 
 AUTOMAKE_REQD=		1.4
+AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		YES
 
 pre-configure:
@@ -43,6 +44,6 @@ post-configure:
 	${WRKSRC}/frontend/Makefile.orig > ${WRKSRC}/frontend/Makefile
 .endif
 
-.include "../../audio/libsndfile/buildlink2.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
