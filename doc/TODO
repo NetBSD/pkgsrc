@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.958 2003/10/21 17:29:12 wiz Exp $
+$NetBSD: TODO,v 1.959 2003/10/21 20:58:33 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -211,7 +211,6 @@ Suggested package updates
 	o jwhois-3.2.2 [pkg/22741]
 	o kaffe-1.1.2
 	o kbiff-3.7
-	o latd-1.18 [pkg/22735]
 	o lavaps-2.4
 	o lcms-1.0.9
 	o lftp-2.6.8
