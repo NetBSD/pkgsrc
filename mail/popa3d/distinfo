@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/07/21 17:16:12 wiz Exp $
+$NetBSD: distinfo,v 1.4 2001/09/02 16:48:32 wiz Exp $
 
-SHA1 (popa3d-0.4.9.1.tar.gz) = 304346cfb060986917178a09c6519e6fed7b521b
-Size (popa3d-0.4.9.1.tar.gz) = 24652 bytes
-SHA1 (patch-aa) = 4769189d40bcdea796771fa1486dda82ce6c0981
-SHA1 (patch-ab) = 36950fa4f55b6136ecc17fdf698dd28f383fb71d
-SHA1 (patch-ac) = 49f3bc3dd9a3240907e5fcf1933785b91f5a8a37
+SHA1 (popa3d-0.4.9.2.tar.gz) = d1537d5627b1896081fc214ffd109469f1759558
+Size (popa3d-0.4.9.2.tar.gz) = 25169 bytes
+SHA1 (patch-aa) = 7fa677a0350dddf120925304e18453d4bb3cda63
+SHA1 (patch-ab) = 4cdb1515020d399c3da458b4ceab8dbcf157cfb6
