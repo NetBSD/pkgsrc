@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/03 20:35:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/16 15:40:12 wiz Exp $
 bin/calc
 bin/cscript/4dsphere
 bin/cscript/fproduct
@@ -433,6 +433,7 @@ share/calc/randombitrun.cal
 share/calc/randomrun.cal
 share/calc/randrun.cal
 share/calc/regress.cal
+share/calc/repeat.cal
 share/calc/seedrandom.cal
 share/calc/solve.cal
 share/calc/sumsq.cal
