@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/29 08:36:06 martti Exp $
+--- src/ftplib.h.orig	Mon May 28 21:55:05 2001
++++ src/ftplib.h	Mon May 28 21:58:47 2001
+@@ -24,7 +24,7 @@
+ #if !defined(__FTPLIB_H)
+ #define __FTPLIB_H
+ 
+-#if defined(__unix__) || defined(VMS)
++#if defined(__unix__) || defined(__NetBSD__) || defined(VMS) 
+ #define GLOBALDEF
+ #define GLOBALREF extern
+ #elif defined(_WIN32)
