@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/05/31 07:24:41 uebayasi Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/31 13:04:40 uebayasi Exp $
 
 --- Canna.conf.orig	Sat Jan 25 17:47:47 2003
 +++ Canna.conf
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.1 2003/05/31 07:24:41 uebayasi Exp $
  
 -cannaOwner = bin
 -cannaGroup = bin
-+cannaOwner = ${CANNA_OWNER}
++cannaOwner = ${CANNA_USER}
 +cannaGroup = ${CANNA_GROUP}
  
  #ifdef InstallAsUser
