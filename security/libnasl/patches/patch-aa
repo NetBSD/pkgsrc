@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/12/19 18:30:13 frueauf Exp $
+$NetBSD: patch-aa,v 1.3 2003/06/09 17:01:25 frueauf Exp $
 
---- nasl-config.in.orig	Sat Dec 14 15:13:44 2002
-+++ nasl-config.in	Thu Dec 19 15:31:09 2002
+--- nasl-config.in-orig	Tue Jan 21 15:27:54 2003
++++ nasl-config.in	Sun Jun  8 13:12:43 2003
 @@ -40,7 +40,7 @@
  		exit 0
  		;;
  	--libs)
--		echo $Xn "-L$LIBDIR -lnasl $Xc"
-+		echo $Xn "-Wl,-R$LIBDIR -L$LIBDIR -lnasl $Xc"
+-		echo $Xn "-L$DESTDIR$LIBDIR -lnasl $Xc"
++		echo $Xn "-Wl,-R$DESTDIR$LIBDIR -L$DESTDIR$LIBDIR -lnasl $Xc"
  		;;
  	--cflags)
- 		echo $Xn "-I$INCLUDEDIR/nessus $Xc"
+ 		echo $Xn "-I$DESTDIR$INCLUDEDIR/nessus $Xc"
