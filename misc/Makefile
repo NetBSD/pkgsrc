@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2003/09/23 19:03:56 reinoud Exp $
+# $NetBSD: Makefile,v 1.168 2003/09/25 03:32:25 grant Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -141,8 +141,8 @@ SUBDIR+=	staroffice
 SUBDIR+=	tds
 SUBDIR+=	team
 SUBDIR+=	ttyrec
-SUBDIR+=	utftools
 SUBDIR+=	udfclient
+SUBDIR+=	utftools
 SUBDIR+=	vera
 SUBDIR+=	vfu
 SUBDIR+=	visual-regexp
