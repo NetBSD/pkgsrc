@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/21 23:46:47 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/04 18:16:22 cjep Exp $
 
 DISTNAME=	python-ldap-1.10alpha3-src
 PKGNAME=	${PYPKGPREFIX}-ldap-1.10a3
@@ -9,12 +9,11 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/python-ldap/
 COMMENT=	LDAP client API for Python
 
-DEPENDS+=	openldap>=1.2.11:../../databases/openldap1
-
 WRKSRC=		${WRKDIR}/python-ldap-1.10alpha3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-ldap=${LOCALBASE}
 CONFIGURE_ARGS+=--with-python=${PYTHONBIN}
+USE_BUILDLINK2=	yes
 
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
 
@@ -27,5 +26,6 @@ post-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/python-ldap \
 	 -type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
+.include "../../databases/openldap1/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
