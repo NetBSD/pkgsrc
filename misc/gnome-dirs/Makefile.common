@@ -1,0 +1,58 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/01/27 09:35:25 jmmv Exp $
+#
+
+# This Makefile contains all the logic needed to automatically generate
+# PLIST's for the gnome*-dirs packages.
+# It also installs all GTK/GNOME directories common to v1 and v2.
+
+GNOME_DIRS_VERSION=	1.0
+
+GNOME_DIRS_COMMON=	share/gnome/apps
+GNOME_DIRS_COMMON+=	share/gnome/apps/Applications
+GNOME_DIRS_COMMON+=	share/gnome/apps/Development
+GNOME_DIRS_COMMON+=	share/gnome/apps/Games
+GNOME_DIRS_COMMON+=	share/gnome/apps/Graphics
+GNOME_DIRS_COMMON+=	share/gnome/apps/Internet
+GNOME_DIRS_COMMON+=	share/gnome/apps/Multimedia
+GNOME_DIRS_COMMON+=	share/gnome/apps/Settings
+GNOME_DIRS_COMMON+=	share/gnome/apps/Settings/Desktop
+GNOME_DIRS_COMMON+=	share/gnome/apps/Settings/Session
+GNOME_DIRS_COMMON+=	share/gnome/apps/System
+GNOME_DIRS_COMMON+=	share/gnome/apps/Utilities
+GNOME_DIRS_COMMON+=	share/gnome/help
+GNOME_DIRS_COMMON+=	share/gnome/help/fdl
+GNOME_DIRS_COMMON+=	share/gnome/help/fdl/C
+GNOME_DIRS_COMMON+=	share/gnome/help/fdl/C/figures
+GNOME_DIRS_COMMON+=	share/gnome/help/gpl
+GNOME_DIRS_COMMON+=	share/gnome/help/gpl/C
+GNOME_DIRS_COMMON+=	share/gnome/help/gpl/C/figures
+GNOME_DIRS_COMMON+=	share/gnome/help/lgpl
+GNOME_DIRS_COMMON+=	share/gnome/help/lgpl/C
+GNOME_DIRS_COMMON+=	share/gnome/help/lgpl/C/figures
+
+.include "../../mk/bsd.prefs.mk"
+
+_SORTED!=	${ECHO} ${GNOME_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
+_REVERSE!=	${ECHO} ${GNOME_DIRS} | ${TR} -s ' \t' '\n' | ${SORT} -r
+
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+do-install:
+.for d in ${_SORTED}
+	${INSTALL_DATA_DIR} ${PREFIX}/$d
+.endfor
+.undef d
+
+post-install:
+	@${RM} -f ${PLIST_SRC}
+	@${TOUCH} ${PLIST_SRC}
+.for d in ${_SORTED}
+	@${ECHO} "@exec \$${MKDIR} %D/$d" >> ${PLIST_SRC}
+.endfor
+.for d in ${_REVERSE}
+	@${ECHO} "@unexec \$${RMDIR} %D/$d || \$${TRUE}" >> ${PLIST_SRC}
+.endfor
+.undef d
+
+.undef _SORTED
+.undef _REVERSE
