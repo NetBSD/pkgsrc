@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.3 2002/07/19 03:22:17 mycroft Exp $
+
+--- pngtest.c.orig	Wed Dec 12 23:37:22 2001
++++ pngtest.c	Fri Jul 19 03:18:50 2002
+@@ -543,7 +543,7 @@
+          }
+          if (pinfo->next == NULL)
+          {
+-            fprintf(STDERR, "Pointer %x not found\n", (unsigned int)ptr);
++            fprintf(STDERR, "Pointer %p not found\n", ptr);
+             break;
+          }
+          ppinfo = &pinfo->next;
+@@ -1396,8 +1396,8 @@
+                current_allocation);
+             while (pinfo != NULL)
+             {
+-               fprintf(STDERR, " %lu bytes at %x\n", pinfo->size, 
+-                 (unsigned int) pinfo->pointer);
++               fprintf(STDERR, " %lu bytes at %p\n", pinfo->size, 
++                 pinfo->pointer);
+                pinfo = pinfo->next;
+             }
+          }
+@@ -1471,8 +1471,8 @@
+                 current_allocation);
+              while (pinfo != NULL)
+              {
+-                fprintf(STDERR," %lu bytes at %x\n",
+-                   pinfo->size, (unsigned int)pinfo->pointer);
++                fprintf(STDERR," %lu bytes at %p\n", pinfo->size,
++		  pinfo->pointer);
+                 pinfo = pinfo->next;
+              }
+           }
