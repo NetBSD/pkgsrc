@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/11 13:41:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/12 13:49:15 jmmv Exp $
 bin/gtkdoc-fixxref
 bin/gtkdoc-mkdb
 bin/gtkdoc-mkhtml
@@ -7,15 +7,17 @@ bin/gtkdoc-mktmpl
 bin/gtkdoc-scan
 bin/gtkdoc-scangobj
 bin/gtkdoc-scanobj
+bin/gtkdocize
 lib/pkgconfig/gtk-doc.pc
-share/gtk-doc/devhelp.xsl
-share/gtk-doc/gtk-doc.dcl
-share/gtk-doc/gtk-doc.dsl
-share/gtk-doc/gtk-doc.xsl
-share/gtk-doc/gtkdoc-common.pl
-share/gtk-doc/home.png
-share/gtk-doc/left.png
-share/gtk-doc/right.png
-share/gtk-doc/up.png
-share/gtk-doc/xml.dcl
-@dirrm share/gtk-doc
+share/aclocal/gtk-doc.m4
+share/gtk-doc/data/devhelp.xsl
+share/gtk-doc/data/gtk-doc.dcl
+share/gtk-doc/data/gtk-doc.dsl
+share/gtk-doc/data/gtk-doc.make
+share/gtk-doc/data/gtk-doc.xsl
+share/gtk-doc/data/gtkdoc-common.pl
+share/gtk-doc/data/home.png
+share/gtk-doc/data/left.png
+share/gtk-doc/data/right.png
+share/gtk-doc/data/up.png
+@dirrm share/gtk-doc/data
