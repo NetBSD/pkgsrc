@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/26 18:06:37 hubertf Exp $
+bin/gone
+man/man1/gone.1
