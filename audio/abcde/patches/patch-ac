@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
+$NetBSD: patch-ac,v 1.6 2002/09/20 00:33:13 hubertf Exp $
 
---- abcde.orig	Wed Aug 15 23:39:29 2001
-+++ abcde	Wed Mar  6 10:47:22 2002
-@@ -199,6 +199,11 @@
+--- abcde.orig	Mon Jan 28 06:44:02 2002
++++ abcde
+@@ -206,6 +206,11 @@
  			TRACKARTIST="$(echo $DTITLEARTIST | cut -f1 -d~)"
  			TRACKNAME="$(echo $DTITLEARTIST | cut -f2 -d~)"
  			;;
@@ -14,43 +14,34 @@ $NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
  		esac
  	else
  		TRACKARTIST=$DARTIST
-@@ -268,7 +273,7 @@
- 			mp3enc) run_command encodetrack-$1 nice $ENCNICE $ENCODER -if "$IN" -of "$OUT" $ENCODEROPTS ;;
- 			esac
- 		else
--			run_command encodetrack-$1 $DISTMP3 $DISTMP3OPTS $2 "$IN" "$OUT" >/dev/null 2>&1
-+			run_command encodetrack-$1 $DISTMP3 $DISTMP3OPTS "$2" "$IN" "$OUT" >/dev/null 2>&1
- 		fi
- 		;;
- 	ogg)
-@@ -552,7 +557,7 @@
+@@ -574,7 +579,7 @@
  			fi
  			# List out disc title/author and contents
- 			echo ---- $(cut '-d ' -f4- "$ABCDETEMPDIR/cddbquery") ---- >> "$ABCDETEMPDIR/cddbchoices"
+ 			echo ---- "$(cut '-d ' -f4- "$ABCDETEMPDIR/cddbquery")" ---- >> "$ABCDETEMPDIR/cddbchoices"
 -			for TRACK in $(seq 1 $TRACKS)
 +			for TRACK in $(jot $TRACKS)
  			do
- 				echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
+ 				echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -568,7 +573,7 @@
+@@ -590,7 +595,7 @@
  			$CDDBTOOL template $(cat "$ABCDETEMPDIR/discid") > "$ABCDETEMPDIR/cddbread.1"
  			# List out disc title/author and contents of template
  			echo ---- Unknown Artist / Unknown Album ---- >> "$ABCDETEMPDIR/cddbchoices"
 -			for TRACK in $(seq 1 $TRACKS)
 +			for TRACK in $(jot $TRACKS)
  			do
- 				echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
+ 				echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -598,7 +603,7 @@
+@@ -620,7 +625,7 @@
  				fi
  				# List out disc title/author and contents
  				echo \#$X: ---- "$DISCINFO" ---- >> "$ABCDETEMPDIR/cddbchoices"
 -				for TRACK in $(seq 1 $TRACKS)
 +				for TRACK in $(jot $TRACKS)
  				do
- 					echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= $ABCDETEMPDIR/cddbread.$X | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
+ 					echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.$X" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  				done
-@@ -742,6 +747,9 @@
+@@ -766,6 +771,9 @@
  		elif [ "$(grep -c "^TTITLE.*\-" "$CDDBDATA")" -gt "$(expr $NUMTRACKS / 2 )" ]; then
  			# More than 1/2 contain a "-", so guess forward-dash
  			DEFAULTSTYLE=2
@@ -60,7 +51,7 @@ $NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
  		fi
  
  		echo "1) Artist / Title" >&2
-@@ -749,23 +757,24 @@
+@@ -773,21 +781,22 @@
  		echo "3) Title / Artist" >&2
  		echo "4) Title - Artist" >&2
  		echo "5) Artist: Title" >&2
@@ -84,15 +75,13 @@ $NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
 +		while [ $VARIOUSARTISTSTYLE -lt 0 ] || [ $VARIOUSARTISTSTYLE -gt 7 ]; do
 +			echo "Invalid selection. Please choose a number between 1 and 7."
 +			echo -n "Selection [1-7]: "
- 
- 
  			read VARIOUSARTISTSTYLE
 -			VARIOUSARTISTSTYLE=$(echo $VARIOUSARTISTSTYLE | xargs printf %d)
 +			VARIOUSARTISTSTYLE=$(echo 0$VARIOUSARTISTSTYLE | xargs printf %d)
  		done
  		if [ "$VARIOUSARTISTSTYLE" = "0" ]; then
  			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
-@@ -787,7 +796,10 @@
+@@ -809,7 +818,10 @@
  		5) # Artist: Title
  			VARIOUSARTISTSTYLE=colon
  			;;
@@ -104,7 +93,7 @@ $NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
  			VARIOUSARTISTS=n
  			;;
  		esac
-@@ -856,7 +868,7 @@
+@@ -894,7 +906,7 @@
  PLAYLISTFORMAT='${ARTISTFILE}_-_${ALBUMFILE}.m3u'
  PLAYLISTDATAPREFIX=''
  COMMENT=''
@@ -113,28 +102,37 @@ $NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
  ENCNICE=10
  READNICE=10
  VARIOUSARTISTS=n
-@@ -910,7 +922,7 @@
+@@ -931,7 +943,6 @@
+ OGGENCOPTS=
+ ID3OPTS=
+ ID3V2OPTS=
+-CDPARANOIAOPTS=
+ CDDA2WAVOPTS=
+ WGETOPTS=
+ CDDBTOOLOPTS=
+@@ -948,7 +959,7 @@
  # Custom filename munging:
  mungefilename ()
  {
--	echo "$@" | sed s,:,\ -,g | tr \ / __ | tr -d \'\? | tr -d \[:cntrl:\]
-+	echo "$@" | sed s,:,\ -,g | tr / _ | tr -d \`\'\"\? | tr -d \[:cntrl:\]
+-	echo "$@" | sed s,:,\ -,g | tr \ / __ | tr -d \'\"\?\[:cntrl:\]
++	echo "$@" | sed s,:,\ -,g | tr / _ | tr -d \`\'\"\?\[:cntrl:\]
  }
  
  # If CDDBAVAIL is set to n, no CDDB read is done
-@@ -926,17 +938,12 @@
+@@ -964,17 +975,13 @@
  	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
  
 -# If this is a devfs system, default to /dev/cdroms/cdrom0
 -# instead of /dev/cdrom
--if [ -f /dev/cdroms/cdrom0 ]; then
+-if [ -e /dev/cdroms/cdrom0 ]; then
 -	CDROM=/dev/cdroms/cdrom0
 -else
 -	CDROM=/dev/cdrom
 -fi
 +RAWPART=`sysctl -n kern.rawpartition | awk '{printf "%c",97+$0}'`
 +CDROM=/dev/rcd0$RAWPART
++CDPARANOIAOPTS="-g ${CDROM}"
  
  # Load system defaults
 -if [ -r /etc/abcde.conf ]; then
@@ -144,7 +142,7 @@ $NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -972,7 +979,7 @@
+@@ -1010,7 +1017,7 @@
  	if [ "$RSTART" = "$REND" ]; then 
  		NEWTRACKS="$RSTART"
  	else
@@ -153,12 +151,21 @@ $NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
  	fi
  	TRACKQUEUE=$(echo "$TRACKQUEUE" "$NEWTRACKS")
  
-@@ -1145,7 +1152,7 @@
+@@ -1101,7 +1108,7 @@
+ 
+ # Make sure a buncha things exist
+ for X in $CDROMREADER $CDDISCID ${NEEDTAGGER+$TAGGER} $ENCODER $WGET \
+-	${NEEDDISTMP3+$DISTMP3} ${NEEDCOMMENTER+$VORBISCOMMENT} seq
++	${NEEDDISTMP3+$DISTMP3} ${NEEDCOMMENTER+$VORBISCOMMENT} jot
  do
- 	ENCODELOCATIONS="$ENCODELOCATIONS $REMOTEHOST"
- done
--for NUM in $(seq 1 "$MAXPROCS")
-+for NUM in $(jot "$MAXPROCS")
- do
- 	ENCODELOCATIONS="$ENCODELOCATIONS %local%"
- done
+ 	# Cut off the command-line options we just added in
+ 	X=$(echo $X | cut -d' ' -f2)
+@@ -1191,7 +1198,7 @@
+ # Figure out where each track is going to be encoded
+ ENCODELOCATIONS="$(echo $REMOTEHOSTS | tr , ' ')"
+ if [ "$MAXPROCS" != "0" ]; then
+-	for NUM in $(seq 1 "$MAXPROCS")
++	for NUM in $(jot "$MAXPROCS")
+ 	do
+ 		ENCODELOCATIONS="$ENCODELOCATIONS %local$NUM%"
+ 	done
