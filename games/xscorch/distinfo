@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2003/05/31 20:11:20 salo Exp $
+$NetBSD: distinfo,v 1.5 2004/03/07 23:26:15 snj Exp $
 
-SHA1 (xscorch-0.1.15.tar.gz) = 1c919677bb869f40a1071d7484a1476d2c4c28d0
-Size (xscorch-0.1.15.tar.gz) = 508528 bytes
+SHA1 (xscorch-0.1.16.tar.gz) = e3f712f110e7283ef67890da4ed4cee4e1fbcd7b
+Size (xscorch-0.1.16.tar.gz) = 814613 bytes
 SHA1 (patch-aa) = d30e33fcf5ccf8a8207524251a16b3912f6a0721
 SHA1 (patch-ab) = 912293a5e3370c51f0a2063062659855669759cd
 SHA1 (patch-ac) = 812b75dda107434dd0ea38fd141560b22e8b368e
-SHA1 (patch-ad) = 88c199323ee9f405c8b825d55fec1d656dcb6903
+SHA1 (patch-ad) = 9526c5cf549c431e189ff8e2d6ef275ce3045e65
