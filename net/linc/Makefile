@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=		linc-1.1.1
@@ -16,7 +16,7 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/linc.pc.in
+PKGCONFIG_OVERRIDE=	linc.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=	gconfmm-2.0.1
@@ -15,8 +15,8 @@ USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gconf/gconfmm-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/gconf/gconfmm-2.0-uninstalled.pc.in
+PKGCONFIG_OVERRIDE=	gconf/gconfmm-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gconf/gconfmm-2.0-uninstalled.pc.in
 
 .include "../../devel/GConf2/buildlink2.mk"
 .include "../../devel/libsigc++/buildlink2.mk"
