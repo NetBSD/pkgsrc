@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:55:11 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/15 06:13:51 ben Exp $
 #
 
 DISTNAME=	flwm-1.00
@@ -15,6 +15,8 @@ USE_X11BASE=	# defined
 
 GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	X_LIBS="-lGL"
+MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
+CXXFLAGS+=	-DFLTK_1_0_COMPAT
 
 .include "../../x11/fltk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
