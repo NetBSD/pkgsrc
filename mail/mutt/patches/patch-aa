@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/01/08 00:41:41 tron Exp $
+
+--- doc/Makefile.in.orig	Thu Nov 19 15:10:19 1998
++++ doc/Makefile.in	Fri Jan  8 01:34:01 1999
+@@ -43,7 +43,7 @@
+ DOCFILES = manual.txt
+ 
+ 
+-all: mutt.man dotlock.man try-html try-txt
++all: mutt.man dotlock.man
+ 
+ complete: all html
+ 
