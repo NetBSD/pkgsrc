@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/04 19:34:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/04 19:35:10 jlam Exp $
 
 .if !defined(FLAC_BUILDLINK2_MK)
 FLAC_BUILDLINK2_MK=	# defined
@@ -10,7 +10,9 @@ BUILDLINK_PKGSRCDIR.flac?=	../../audio/flac
 EVAL_PREFIX+=			BUILDLINK_PREFIX.flac=flac
 BUILDLINK_PREFIX.flac_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.flac=		include/FLAC/*
+BUILDLINK_FILES.flac+=		include/FLAC++/*
 BUILDLINK_FILES.flac+=		lib/libFLAC.*
+BUILDLINK_FILES.flac+=		lib/libFLAC++.*
 
 BUILDLINK_TARGETS+=	flac-buildlink
 
