@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/12/30 16:26:28 taca Exp $
+# $NetBSD: Makefile,v 1.23 2002/01/22 17:16:03 taca Exp $
 # FreeBSD: ports/lang/ruby/Makefile,v 1.40 2001/01/18 19:53:38 knu Exp
 
 DISTNAME=	ruby-${RUBY_VERSION}
@@ -16,6 +16,8 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}digest>=${RUBY_VERSION}:../../security/ruby-diges
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}readline>=${RUBY_VERSION}:../../devel/${RUBY_PKGNAMEPREFIX}readline
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}tk>=${RUBY_VERSION}:../../x11/${RUBY_PKGNAMEPREFIX}tk
+
+RUBY_VER=	1.6
 
 NO_CHECKSUM=	# defined
 NO_PATCH=	# defined
