@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.62 2004/07/10 20:54:44 wiz Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.63 2004/10/06 20:51:47 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -105,7 +105,7 @@ FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL}
 FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
 
 # Interix is very Special in that users are groups cannot have the
-# same name.  defs.Interix.mk tries to work around this by overriding
+# same name.  Interix.mk tries to work around this by overriding
 # some specific package defaults.  If we get here and there's still a
 # conflict, add a breakage indicator to make sure the package won't
 # compile without changing something.
