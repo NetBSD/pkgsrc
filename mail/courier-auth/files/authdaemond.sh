@@ -1,14 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: authdaemond.sh,v 1.6 2002/09/20 02:01:56 grant Exp $
+# $NetBSD: authdaemond.sh,v 1.7 2004/02/21 14:43:15 jlam Exp $
 #
 # Courier user authentication daemon
 #
 # PROVIDE: authdaemond
 # REQUIRE: LOGIN
 
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
         . /etc/rc.subr
 fi
 
@@ -27,8 +26,7 @@ stop_cmd="courier_doit stop"
 # We read the config file in a subprocess to protect against shell
 # environment pollution.
 #
-if [ -f @PKG_SYSCONFDIR@/authdaemonrc ]
-then
+if [ -f @PKG_SYSCONFDIR@/authdaemonrc ]; then
 	command=`
 		. @PKG_SYSCONFDIR@/authdaemonrc
 		if [ -n "${version}" ]
@@ -51,11 +49,10 @@ courier_doit()
         @SETENV@ -i ${daemon} ${action}
 }
 
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
         load_rc_config $name
         run_rc_command "$1"
 else
-        echo -n " ${name}"
+        @ECHO@ -n " ${name}"
         ${start_cmd}
 fi
