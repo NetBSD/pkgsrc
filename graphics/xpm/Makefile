@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/05 11:53:39 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/21 11:18:44 jlam Exp $
 
 DISTNAME=       xpm-3.4k
 PKGREVISION=	1
@@ -18,7 +18,7 @@ BUILDLINK_CHECK_BUILTIN.xpm=	YES
 .include "buildlink3.mk"
 
 .if ${BUILDLINK_IS_BUILTIN.xpm} == "YES"
-#PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
+PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 .endif
 
 .if (${OPSYS} == SunOS)
