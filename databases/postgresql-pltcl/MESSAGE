@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 00:12:40 zuntum Exp $
-
-Please see the PL/Tcl section of the PostgreSQL Programmer's Guide
-(databases/postgresql-docs) for information on programming with
-${PKGNAME}.
-===========================================================================
