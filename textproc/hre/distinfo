@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/12 03:38:11 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/08/25 18:51:08 minskim Exp $
 
-SHA1 (hre-0.9.7.tar.gz) = 16d7510bf6a4da57f093c147abd267ed4dd4baae
-Size (hre-0.9.7.tar.gz) = 363141 bytes
+SHA1 (hre-0.9.8.tar.gz) = 99d602cec2aa18e17fce0f1ce261fab6e8d87b3c
+Size (hre-0.9.8.tar.gz) = 369588 bytes
