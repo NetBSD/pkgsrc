@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.180 2003/01/12 21:49:35 tron Exp $
+$NetBSD: TODO,v 1.181 2003/01/13 10:13:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -71,6 +71,7 @@ Suggested package updates
 
 	o Xbae-4.50.0
 	o adobe-cmaps-1.5 [pkg/19646]
+	o aim-1.5.277
 	o amaya-7.0
 	o aspell-0.50.3 [salo]
 	o aumix-2.8
@@ -94,6 +95,7 @@ Suggested package updates
 	o cvs-1.11.4
 	o dante-1.1.13
 	o db4-4.1.25
+	o dctc-0.84.0
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o eggdrop-1.6.13
@@ -151,6 +153,7 @@ Suggested package updates
 	o lbreakout2-2.4
 	o lcms-1.0.9
 	o lftp-2.6.4 [pkg/19419]
+	o libbonobo-2.0.1
 	o libexif-0.5.9
 	o libgii-0.8.2
 	o libggi-2.0.2
@@ -182,6 +185,7 @@ Suggested package updates
 	o netscape-7.01
 	o ns-flash-6.0.69
 	o opencm-0.1.2alpha3
+	o openh323-1.11.2
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
@@ -192,8 +196,10 @@ Suggested package updates
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
 	o plib-1.6.0
+	o postfix-2.0.1
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
+	o py-wxWindows-2.4.0.1
 	o pygtk-0.6.11
 	o qt3-3.1.1
 	o rep-gtk-0.16
@@ -211,7 +217,7 @@ Suggested package updates
 	o sendfile-20010424
 	o sendmail-8.12.7
 	o siag-3.5.3
-	o smalltalk-2.0.10
+	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o sodipodi-0.28
@@ -219,6 +225,7 @@ Suggested package updates
 	o sqlite-2.7.5 [pkg/19719]
 	o srp_client-1.7.5 [jlam]
 	o stunnel-4.03 [pkg/19310]
+	o stunnel-4.04
 	o suck-4.3.1
 	o swig-1.3.17
 	o tcl/tk-8.4.1 [bjoern]
@@ -231,12 +238,14 @@ Suggested package updates
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o wine-20021219 [pkg/19747]
-	o wwwoffle-2.7g
+	o wwwoffle-2.7h
 	o wxGTK-2.4.0
 	o xalan-c-1.4
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
 	o xmcd-3.2.0
+	o xmame-0.62.2
+	o xmess-0.62.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
 	o yudit-2.7.2
