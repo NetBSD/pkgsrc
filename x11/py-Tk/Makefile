@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/01/28 17:34:29 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2002/01/31 15:48:10 drochner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
@@ -8,19 +8,17 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/topics/tkinter/
 COMMENT=	Tkinter -- Python interface to Tcl/Tk
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
-EVAL_PREFIX+=	TCLDIR=tcl
-
-USE_X11=	yes
-
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_tkinter.c \
 			${PYSUBDIR}/Modules/tkappinit.c
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PY_PATCHPLIST=	yes
 
-PY_SETUP_SUBST+= TCLPREFIX=${TCLDIR}
-PY_SETUP_SUBST+= X11PREFIX=${X11BASE}
+PY_SETUP_SUBST+= BLPREFIX=${BUILDLINK_DIR}
+PY_SETUP_SUBST+= TCLRTPREFIX=${BUILDLINK_PREFIX.tcl}
+PY_SETUP_SUBST+= TKRTPREFIX=${BUILDLINK_PREFIX.tk}
+PY_SETUP_SUBST+= X11PREFIX=${BUILDLINK_X11_DIR}
+PY_SETUP_SUBST+= X11RTPREFIX=${X11BASE}
 PLIST_SUBST+= PYLIB=${PYLIB}
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
@@ -38,4 +36,7 @@ post-install:
 
 .include "../../lang/python/extension.buildlink.mk"
 .include "../../lang/python/srcdist.mk"
+.include "../../lang/tcl/buildlink.mk"
+.include "../../x11/tk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
