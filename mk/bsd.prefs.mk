@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.30 2001/03/24 21:05:49 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.31 2001/03/24 21:06:52 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -217,7 +217,7 @@ PKGTOOLS_VERSION!=${PKG_TOOLS_BIN}/pkg_info -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 .endif
 
-.if (${OPSYS} != SunOS) && !defined(ZOULARIS_VERSION)
+.if (${OPSYS} == SunOS) && !defined(ZOULARIS_VERSION)
 .if !exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
 ZOULARIS_VERSION=	20000522
 .else
