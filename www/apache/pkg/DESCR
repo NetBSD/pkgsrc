@@ -1,0 +1,8 @@
+The latest beta version of the most popular web server on the 'net.
+This version is quite stable, and includes proxy server support, as
+well as the ability to add modules that add many other features.
+
+You'll have to edit the configuration files in /usr/pkg/http/conf
+before you start it. The default root directory for documents is
+/usr/pkg/http/htdocs. Start it with `httpd -d /usr/pkg/http' in
+your /etc/rc.local file.
