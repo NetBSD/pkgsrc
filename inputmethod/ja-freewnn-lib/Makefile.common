@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/04/27 20:51:10 reed Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -74,9 +74,6 @@ post-build:
 	@${MV} ${WRKSRC}/Wnn/jd/jserverrc ${WRKSRC}/Wnn/jd/jserverrc.orig
 	@${SED} -e 's|^\(jserver_dir\).*|\1 ${IMDICTDIR}/wnn/${WNN_LANG}|' \
 		${WRKSRC}/Wnn/jd/jserverrc.orig > ${WRKSRC}/Wnn/jd/jserverrc
-
-post-install:
-	@${INSTALL_SCRIPT} ${WRKDIR}/ja_freewnn ${PREFIX}/etc/rc.d/ja_freewnn
 .endif
 
 .if defined(WNN_TARGET) && (${WNN_TARGET} == "DICT")
