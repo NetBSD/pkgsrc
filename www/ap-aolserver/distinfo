@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/08/21 17:26:07 cjones Exp $
+$NetBSD: distinfo,v 1.3 2002/06/19 22:16:44 cjones Exp $
 
 SHA1 (mod_aolserver-1.1.tar.gz) = 4173d5881c3c82cbb567da85107d032e06f17118
 Size (mod_aolserver-1.1.tar.gz) = 193569 bytes
-SHA1 (patch-aa) = 0d702bb2eb0c6c93f98ec11f9886da654cf21b6c
+SHA1 (patch-aa) = b5db9312ad50d0bf4b8705a54d82141ef8ad0183
