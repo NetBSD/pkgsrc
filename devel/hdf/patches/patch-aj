@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.3 2001/03/25 01:09:51 jtb Exp $
+$NetBSD: patch-aj,v 1.4 2001/04/19 00:56:34 jtb Exp $
 
---- /dev/null	Sun Mar 25 00:39:00 2001
+--- /dev/null	Thu Apr 19 00:41:46 2001
 +++ mfhdf/ncgen/Makefile
 @@ -0,0 +1,34 @@
 +PROG= ncgen
@@ -15,7 +15,7 @@ $NetBSD: patch-aj,v 1.3 2001/03/25 01:09:51 jtb Exp $
 +LIBDIR= ${PREFIX}/lib
 +MANDIR= ${PREFIX}/man
 +
-+CPPFLAGS+= -Dunix -DNDEBUG @SWAP@
++CPPFLAGS+= -Dunix -DNDEBUG
 +CPPFLAGS+= -I${.CURDIR}/../libsrc
 +CPPFLAGS+= -I${.CURDIR}/../../hdf/src
 +
@@ -23,7 +23,7 @@ $NetBSD: patch-aj,v 1.3 2001/03/25 01:09:51 jtb Exp $
 +LDFLAGS+= -L${.CURDIR}/../../hdf/src
 +LDFLAGS+= -Wl,-R${JPEGBASE}/lib -L${JPEGBASE}/lib
 +
-+LDADD+= -lmfhdf -ldf -ljpeg -lz -lm
++LDADD+= -lmfhdf -ldf -ljpeg -lz
 +
 +NOGCCERROR= 1
 +

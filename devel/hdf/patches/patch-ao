@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.4 2001/03/25 23:37:06 jtb Exp $
+$NetBSD: patch-ao,v 1.5 2001/04/19 00:56:34 jtb Exp $
 
 --- hdf/src/hdfi.h.orig	Tue Aug 22 20:26:57 2000
 +++ hdf/src/hdfi.h
@@ -29,11 +29,11 @@ $NetBSD: patch-ao,v 1.4 2001/03/25 23:37:06 jtb Exp $
 +#include <sys/file.h>               /* for unbuffered i/o stuff */
 +#include <sys/stat.h>
 +#ifdef __vax__
-+#define DF_MT             DFMT_VAX
-+#elif defined(__m68k__)
-+#define DF_MT             DFMT_MOTOROLA
++#define DF_MT             0x2221
++#elif defined(__m68k__) || defined(__sparc__) || defined(__sparc64__) || defined(__powerpc__)
++#define DF_MT             0x1111
 +#else
-+#define DF_MT             DFMT_ALPHA
++#define DF_MT             0x4441
 +#endif
 +typedef void              VOID;
 +typedef void              *VOIDP;
