@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3323 2005/03/29 14:16:22 wiz Exp $
+$NetBSD: TODO,v 1.3324 2005/03/29 14:29:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -266,8 +266,6 @@ Suggested package updates
 	o XFree86-4.5.0
 	o XaoS-3.1.1
 	o YoSucker-65
-	o aalib-1.4rc5
-	o aalib-x11-1.4rc5
 	o aap-0.144
 	o acpi-iasl-20040715
 	o advancecomp-1.14
