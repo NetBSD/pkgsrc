@@ -1,5 +1,7 @@
+$NetBSD: patch-aa,v 1.4 1999/11/14 22:53:22 frueauf Exp $
+
 --- Makefile.orig	Thu Aug 26 14:08:51 1999
-+++ Makefile	Sun Sep  5 06:08:36 1999
++++ Makefile	Sun Nov 14 23:40:47 1999
 @@ -8,11 +8,11 @@
  #  Compilation/installation vars (global for all following sections) |
  #=====================================================================
@@ -100,3 +102,32 @@
  #
  # FreeBSD vars
  #-------------
+@@ -261,16 +261,16 @@
+ 	gcc $(GCCOPTS) -c network.c
+ 
+ xispdial: xispdial.c common.h version.h
+-	gcc $(GCCOPTS) -o xispdial xispdial.c
++	gcc $(GCCOPTS)  -L$(LINKX11) -o xispdial xispdial.c
+ 
+ xisprccv: xisprccv.o pcode.o
+-	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) -lm
++	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) -L$(LINKX11) -lm
+ 
+ xisprccv.o: xisprccv.c common.h version.h pcode.h logs.h
+ 	gcc $(GCCOPTS) -c xisprccv.c
+ 
+ xispterm: xispterm.h xispterm.c
+-	gcc $(GCCOPTS) -I$(INCX11) -I$(INCFORMS) -o xispterm xispterm.c $(EXTRALIBS) -L$(LIBX11) $(LINKFORMS) -lX11 -lm
++	gcc $(GCCOPTS) $(LINKX11) -I$(INCX11) -I$(INCFORMS) -o xispterm xispterm.c $(EXTRALIBS) -L$(LIBX11) $(LINKFORMS) -lX11 -lm
+ 
+ rcio.o: rcio.h rcio.c common.h version.h
+ 	gcc $(GCCOPTS) -c rcio.c
+@@ -279,7 +279,7 @@
+ 	gcc $(GCCOPTS) -c logs.c
+ 
+ xispid: xispid.c
+-	gcc $(GCCOPTS) -o xispid xispid.c
++	gcc $(GCCOPTS) $(LINKX11) -o xispid xispid.c
+ 
+ install: xisp xispdial xisprccv xispterm xispid
+ 	if [ ! -d $(DESTDIR)$(BINX11) ]; then $(INSTALL) -d $(DESTDIR)$(BINX11); fi
