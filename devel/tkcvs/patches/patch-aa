@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2001/07/03 20:59:40 zuntum Exp $
+$NetBSD: patch-aa,v 1.7 2002/01/28 16:55:55 wiz Exp $
 
---- doinstall.tcl.orig	Sun Dec 31 04:28:19 2000
+--- doinstall.tcl.orig	Wed Jan 23 18:18:03 2002
 +++ doinstall.tcl
 @@ -2,5 +2,5 @@
  #-*-tcl-*-
@@ -9,16 +9,14 @@ $NetBSD: patch-aa,v 1.6 2001/07/03 20:59:40 zuntum Exp $
 +exec tclsh "$0" -- ${1+"$@"}
  
  #
-@@ -20,6 +20,6 @@
+@@ -29,5 +29,5 @@
    } else {
      set BINDIR [file join $INSTALLROOT bin]
 -    set LIBDIR [file join $INSTALLROOT lib]
--    set MANDIR [file join $INSTALLROOT man mann]
 +    set LIBDIR [file join $INSTALLROOT share]
-+    set MANDIR [file join $INSTALLROOT man man1]
+     set MANDIR [file join $INSTALLROOT man man1]
    }
- }
-@@ -31,21 +31,4 @@
+@@ -40,21 +40,4 @@
  
    set_paths $INSTALLROOT
 -
@@ -27,7 +25,7 @@ $NetBSD: patch-aa,v 1.6 2001/07/03 20:59:40 zuntum Exp $
 -  set msg(3) [file join $LIBDIR tkcvs *.tcl]
 -  set msg(4) [file join $LIBDIR tkcvs bitmaps *.gif,xbm]
 -  if {$tcl_platform(platform) == "unix"} {
--     set msg(5) [file join $MANDIR tkcvs.n]
+-     set msg(5) [file join $MANDIR tkcvs.1]
 -  }
 -  foreach m [lsort [array names msg]] {
 -    if {[winfo exists .messages.$m]} {
@@ -40,16 +38,7 @@ $NetBSD: patch-aa,v 1.6 2001/07/03 20:59:40 zuntum Exp $
 -  }
  }
  
-@@ -84,6 +67,6 @@
-     file attributes [file join $BINDIR $TKDIFF] -permissions 0755
-     file mkdir $MANDIR
--    puts "Installing manpage tkcvs.n in $MANDIR"
--    file copy -force [file join tkcvs tkcvs.n] $MANDIR
-+    puts "Installing manpage tkcvs.1 in $MANDIR"
-+    file copy -force [file join tkcvs tkcvs.1] $MANDIR
-   }
- 
-@@ -103,11 +86,4 @@
+@@ -117,11 +100,4 @@
    cd ..
    puts "Finished!"
 -
@@ -61,7 +50,7 @@ $NetBSD: patch-aa,v 1.6 2001/07/03 20:59:40 zuntum Exp $
 -  }
  }
  
-@@ -122,10 +98,5 @@
+@@ -136,10 +112,5 @@
  
  # Check Tcl/TK version
 -if {$tcl_version < 8.1} {
