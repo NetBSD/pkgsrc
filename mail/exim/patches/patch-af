@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.4 2004/09/25 07:45:51 grant Exp $
+
+--- OS/os.h-NetBSD.orig	2004-08-27 00:09:59.000000000 +1000
++++ OS/os.h-NetBSD
+@@ -10,4 +10,10 @@ typedef struct flock flock_t;
+ #define os_strsignal strsignal
+ #define OS_STRSIGNAL
+ 
++#include <sys/param.h>
++
++#if __NetBSD_Version__ >= 200040000
++#define HAVE_SYS_STATVFS_H
++#endif
++
+ /* End */
