@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1852 2004/06/21 16:23:55 martti Exp $
+$NetBSD: TODO,v 1.1853 2004/06/21 20:18:17 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -291,7 +291,6 @@ Suggested package updates
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
 	o mathomatic-11.2
-	o mhonarc-2.6.10
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.43
