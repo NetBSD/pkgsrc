@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/03 21:07:36 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/03 21:57:49 tron Exp $
 
 DISTNAME=	wwwoffle-2.4
 CATEGORIES=	www
@@ -14,6 +14,8 @@ NO_CONFIGURE=	yes
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 PLIST_SRC=	${WRKDIR}/PLIST
+
+BUILD_DEFS+=	USE_INET6
 
 # to get USE_INET6
 .include "../../mk/bsd.prefs.mk"
