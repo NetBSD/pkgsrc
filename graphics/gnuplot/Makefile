@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/07 17:39:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/07/03 14:14:03 seb Exp $
 #
 
 DISTNAME=		gnuplot-3.7.3
@@ -21,6 +21,9 @@ USE_BUILDLINK2=		YES
 USE_GNU_READLINE=	YES
 USE_X11=		YES
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	gnuplot.info
+
 CONFIGURE_ARGS+=	--with-pdf
 CONFIGURE_ARGS+=	--with-plot=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
@@ -29,5 +32,4 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .include "../../graphics/plotutils/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../print/pdflib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
