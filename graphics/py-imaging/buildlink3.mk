@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/05/17 21:32:34 seb Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_IMAGING_BUILDLINK3_MK:=	${PY_IMAGING_BUILDLINK3_MK}+
@@ -13,7 +13,6 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyimaging}
 BUILDLINK_PACKAGES+=	pyimaging
 
 .if !empty(PY_IMAGING_BUILDLINK3_MK:M+)
-BUILDLINK_PKGBASE.pyimaging?=	${PYPKGPREFIX}-imaging
 BUILDLINK_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.4
 BUILDLINK_PKGSRCDIR.pyimaging?=	../../graphics/py-imaging
 .endif	# PY_IMAGING_BUILDLINK3_MK
