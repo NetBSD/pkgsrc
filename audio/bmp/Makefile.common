@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/12/25 15:22:36 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/03/08 17:05:17 jmmv Exp $
 #
 
 DISTNAME=	bmp-0.9.7
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-vorbis
 PKGCONFIG_OVERRIDE+=	bmp.pc
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bmp
-PKG_SUPPORTED_OPTIONS=	gnome
+PKG_SUPPORTED_OPTIONS=	gnome xmms-eq
 
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -40,6 +40,10 @@ CONFIGURE_ARGS+=	--enable-gconf
 CONFIGURE_ARGS+=	--enable-gnome-vfs
 .  include "../../devel/GConf2/buildlink3.mk"
 .  include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mxmms-eq)
+CONFIGURE_ARGS+=	--with-xmms-eq
 .endif
 
 .if ${OPSYS} == "NetBSD"
