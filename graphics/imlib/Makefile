@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/14 06:37:01 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1998/10/04 19:20:44 tron Exp $
 #
 
 DISTNAME=	imlib-1.7
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.labs.redhat.com/pub/imlib/TAR/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.labs.redhat.com/imlib/
 
-DEPENDS+=	gtk+-1.1.1:../../x11/gtk
+DEPENDS+=	gtk+-1.1.2:../../x11/gtk
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
