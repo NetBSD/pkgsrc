@@ -1,19 +1,19 @@
 LIB	= randlib
 LIBDIR	= ${PREFIX}/lib
 
-OBJ= com.o randlib.o linpack.o
+OBJS = com.o randlib.o linpack.o
 
-all:	lib$(LIB)
+all:	lib$(LIB).la
 
-lib$(LIB): $(OBJ)
-	@$(LIBTOOL) --mode=link $(CC) -O -o lib$(LIB).la $(OBJ:.o=.lo) \
-	-rpath $(LIBDIR) -version-info 0:0
+lib$(LIB).la: $(OBJS)
+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(OBJS:.o=.lo) \
+	-lm -rpath $(LIBDIR) -version-info 0:0
 
 .c.o:
-	@$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $*.c
+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $*.c
 
-install:
-	@$(LIBTOOL) --mode=install install lib$(LIB).la $(LIBDIR)
+install:  lib$(LIB).la
+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean:
-	rm -rf *.o *.lo .libs $(LIB).la
+	rm -rf *.o *.lo .libs lib$(LIB).la
