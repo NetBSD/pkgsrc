@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7477 2004/10/19 20:36:10 jmmv Exp $
+$NetBSD: CHANGES,v 1.7478 2004/10/19 23:13:21 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4768,3 +4768,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated evolution-data-server to 1.0.2nb1 [jmmv 2004-10-19]
 	Added evolution-webcal-2.0.0 [jmmv 2004-10-19]
 	Updated gnome to 2.8.0nb1 [jmmv 2004-10-19]
+	Updated centericq to 4.12.0 [hubertf 2004-10-19]
