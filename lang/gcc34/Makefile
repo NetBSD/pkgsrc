@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/08/06 20:56:15 shannonjr Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/08 11:12:13 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -195,7 +195,7 @@ do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} ${INSTALL} \
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 		(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
@@ -222,7 +222,7 @@ BUILDLINK_DEPMETHOD.gcc34-ada=build
 .include "../../lang/gcc34-ada/buildlink3.mk"
 .  endif
 .endif
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
