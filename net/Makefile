@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.226 2001/06/07 11:54:01 rh Exp $
+# $NetBSD: Makefile,v 1.227 2001/06/09 10:53:07 wiz Exp $
 #
 
 COMMENT=	Networking tools
 
 SUBDIR+=	6to4
 SUBDIR+=	6tunnel
+SUBDIR+=	ORBit
 SUBDIR+=	adns
 SUBDIR+=	airportbasestationconfig
 SUBDIR+=	archie
@@ -100,11 +101,9 @@ SUBDIR+=	nslint
 SUBDIR+=	ntop
 SUBDIR+=	ntp4
 SUBDIR+=	openh323
-SUBDIR+=	ORBit
-SUBDIR+=	p5-ispman
 SUBDIR+=	p5-Net
-SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-DNS
+SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-IRC
 SUBDIR+=	p5-Net-SNMP
 SUBDIR+=	p5-Net-TFTP
@@ -113,6 +112,7 @@ SUBDIR+=	p5-SNMP
 SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Wais
+SUBDIR+=	p5-ispman
 SUBDIR+=	pchar
 SUBDIR+=	pfnet
 SUBDIR+=	pim6dd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2001/06/07 16:29:00 jlam Exp $
+# $NetBSD: Makefile,v 1.142 2001/06/09 10:53:07 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -23,11 +23,11 @@ SUBDIR+=	ap-php3
 SUBDIR+=	ap-php4
 SUBDIR+=	ap-ssl
 SUBDIR+=	apache
-SUBDIR+=	apache6
 SUBDIR+=	apache-current
+SUBDIR+=	apache6
 SUBDIR+=	arena
-SUBDIR+=	asp2php
 SUBDIR+=	asWedit
+SUBDIR+=	asp2php
 SUBDIR+=	bluefish
 SUBDIR+=	bozohttpd
 SUBDIR+=	cadaver
@@ -74,8 +74,8 @@ SUBDIR+=	opera
 SUBDIR+=	p5-Apache-ASP
 SUBDIR+=	p5-Apache-DBILogConfig
 SUBDIR+=	p5-Apache-DBILogger
-SUBDIR+=	p5-Apache-ePerl
 SUBDIR+=	p5-Apache-Session
+SUBDIR+=	p5-Apache-ePerl
 SUBDIR+=	p5-CGI
 SUBDIR+=	p5-CGI-Application
 SUBDIR+=	p5-CGI_Lite
