@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:47 tron Exp $
 #
 
 DISTNAME=		t1lib-0.8-beta
 PKGNAME=		t1lib-0.8
 CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	libs/graphics/
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/graphics/}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib.html

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1999/02/02 23:14:04 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:41 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/26 02:16:00 steve Exp
 #
 
 DISTNAME=		xcoral-3.2
 CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	editors
+MASTER_SITES=		${MASTER_SITE_XCONTRIB:=editors/}
 
 MAINTAINER=	packages@netbsd.org
 

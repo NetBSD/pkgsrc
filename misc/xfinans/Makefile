@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 1999/02/09 16:08:59 bad Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/15 20:39:45 tron Exp $
 #
 
 DISTNAME=		xfinans-5.9
 WRKSRC=			${WRKDIR}/Xfinans/Src
 CATEGORIES=		misc x11
-MASTER_SITES=		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	apps/financial/accounting
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/financial/accounting/}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.cs.auc.dk/~lupus/xfinans.html

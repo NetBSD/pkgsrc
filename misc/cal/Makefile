@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:31 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/15 20:39:44 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
 DISTNAME=		cal-3.5
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	utils/shell
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/shell/}
 
 MAINTAINER=		packages@netbsd.org
 
