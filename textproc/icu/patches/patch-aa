@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2000/12/23 09:39:20 skrll Exp $
+$NetBSD: patch-aa,v 1.4 2003/03/21 23:44:07 salo Exp $
 
---- common/udata.c.orig	Wed Dec  6 03:02:12 2000
-+++ common/udata.c
-@@ -238,7 +238,7 @@
- #   define MAP_IMPLEMENTATION MAP_WIN32
+--- Makefile.in.orig	2002-11-14 19:44:14.000000000 +0100
++++ Makefile.in	2003-03-21 22:58:10.000000000 +0100
+@@ -132,7 +132,7 @@
+ 	$(INSTALL_DATA) @platform_make_fragment@ $(DESTDIR)$(pkgdatadir)/config/@platform_make_fragment_name@
+ 	$(INSTALL_SCRIPT) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(pkgdatadir)/mkinstalldirs
+ 	$(INSTALL_DATA) README $(DESTDIR)$(pkgdatadir)/README
+-	$(INSTALL_PROGRAM) $(top_builddir)/config/icu-config $(DESTDIR)$(bindir)/icu-config
++	$(INSTALL_SCRIPT) $(top_builddir)/config/icu-config $(DESTDIR)$(bindir)/icu-config
  
- /* ### Todo: auto detect mmap(). Until then, just add your platform here. */
--#elif HAVE_MMAP || defined(U_LINUX) || defined(POSIX) || defined(U_SOLARIS) || defined(AIX) || defined(HPUX) || defined(OS390) || defined(PTX)
-+#elif HAVE_MMAP || defined(U_LINUX) || defined(POSIX) || defined(U_SOLARIS) || defined(AIX) || defined(HPUX) || defined(OS390) || defined(PTX) || defined(U_BSD)
-     typedef size_t MemoryMap;
- 
- #   define NO_MAP 0
+ ifeq ($(DOXYGEN),)
+ install-doc:

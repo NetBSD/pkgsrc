@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2003/02/17 15:28:02 dillo Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/21 23:44:05 salo Exp $
 #
 
-DISTNAME=	icu-1.7
+DISTNAME=	icu-2.4
 CATEGORIES=	textproc
-MASTER_SITES=	http://oss.software.ibm.com/icu/download/1.7/
+MASTER_SITES=	http://oss.software.ibm.com/icu/download/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	skrll@netbsd.org
 HOMEPAGE=	http://oss.software.ibm.com/icu
 COMMENT=	Robust and full-featured unicode support
 
-WRKSRC=		${WRKDIR}/icu/source
+WRKSRC=		${WRKDIR}/${PKGBASE}/source
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 TEST_TARGET=	check
 
 .include "../../mk/endian.mk"
@@ -28,9 +29,14 @@ LITTLE_ENDIAN=	'@comment '
 PLIST_SUBST+=	BIG_ENDIAN=${BIG_ENDIAN}
 PLIST_SUBST+=	LITTLE_ENDIAN=${LITTLE_ENDIAN}
 
-CONFIGURE_ARGS+= --disable-threads
+PKG_SYSCONFSUBDIR=	icu
 
-pre-configure:
-	${CHMOD} u+rx ${WRKSRC}/configure
+CONF_FILES+=	${PREFIX}/share/examples/icu/convrtrs.txt \
+		${PKG_SYSCONFDIR}/convrtrs.txt
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--disable-threads
+CONFIGURE_ARGS+=	--enable-layout
+CONFIGURE_ARGS+=	--enable-static
 
 .include "../../mk/bsd.pkg.mk"

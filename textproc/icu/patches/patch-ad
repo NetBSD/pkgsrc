@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.3 2000/12/23 09:39:21 skrll Exp $
+$NetBSD: patch-ad,v 1.4 2003/03/21 23:44:07 salo Exp $
 
---- test/intltest/intltest.cpp.orig	Tue Dec 12 19:40:58 2000
-+++ test/intltest/intltest.cpp
-@@ -411,7 +411,7 @@
-             mainDirBuffer[0]='\0';
-         }
-         mainDir=mainDirBuffer;
--    #elif defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390)
-+    #elif defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390) || defined(U_BSD)
-         char mainDirBuffer[200];
-         strcpy(mainDirBuffer, u_getDataDirectory());
-         strcat(mainDirBuffer, "/../");
+--- tools/gencnval/gencnval.1.in.orig	2002-04-18 05:06:00.000000000 +0200
++++ tools/gencnval/gencnval.1.in	2003-03-22 00:30:15.000000000 +0100
+@@ -71,8 +71,8 @@
+ .B ICU_DATA
+ is set.
+ .SH FILES
+-.TP \w'\fB@thesysconfdir@/@PACKAGE@/convrtrs.txt'u+3n
+-.B @thesysconfdir@/@PACKAGE@/convrtrs.txt
++.TP \w'\fB@thesysconfdir@/convrtrs.txt'u+3n
++.B @thesysconfdir@/convrtrs.txt
+ Description of ICU's converters and their aliases.
+ .SH VERSION
+ @VERSION@
