@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.1.1.1 2003/08/31 01:24:41 jtb Exp $
+@comment $NetBSD: PLIST.opt,v 1.2 2005/02/04 22:07:24 adrianp Exp $
 lib/ocaml/camlimages/ci_core.a
 lib/ocaml/camlimages/ci_core.cmxa
 lib/ocaml/camlimages/ci_ppm.a
@@ -25,4 +25,4 @@ lib/ocaml/camlimages/ci_freetype.a
 lib/ocaml/camlimages/ci_freetype.cmxa
 lib/ocaml/camlimages/ci_lablgtk.a
 lib/ocaml/camlimages/ci_lablgtk.cmxa
-@dirrm lib/ocaml/camlimages
+@unexec ${RMDIR} %D/lib/ocaml/camlimages 2>/dev/null || ${TRUE}
