@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/08 21:21:24 jlam Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/22 00:27:35 tron Exp $
 
 DISTNAME=	gtkstep-1.9
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	http://members.linuxstart.com/~ulli/gtkstep/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	http://members.linuxstart.com/~ulli/gtkstep/
+HOMEPAGE=	http://ulli.linuxbox.com/gtkstep/index.html
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
