@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/01 21:00:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/09/03 13:53:29 tron Exp $
 etc/rc.d/rtspd.sh
 man/man8/rtspd.8
 sbin/rtspd
 share/doc/ra-rtsp-proxy/README
 share/doc/ra-rtsp-proxy/license.txt
-@dirrm share/doc/rtspd
+@dirrm share/doc/ra-rtsp-proxy
