@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2004/11/30 14:41:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.122 2004/12/30 19:50:32 kristerw Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -66,6 +66,7 @@ SUBDIR+=	qemu
 SUBDIR+=	raine
 SUBDIR+=	rewind
 SUBDIR+=	simh
+SUBDIR+=	simulavr
 SUBDIR+=	snes9x
 SUBDIR+=	spim
 SUBDIR+=	stella
