@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2002/03/25 16:19:30 atatat Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/07 12:11:10 seb Exp $
 bin/xaos
-@unexec install-info --delete --info-dir=%D/info %D/info/xaos.info
 info/xaos.info
-@exec install-info --info-dir=%D/info %D/info/xaos.info
 man/man6/xaos.6
 share/XaoS/tutorial/anim.xaf
 share/XaoS/tutorial/anim.xhf
