@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/02 20:59:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/01 17:58:04 jwise Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -6,6 +6,8 @@ DISTNAME=	abacus-0.9.13
 CATEGORIES=	math x11
 MASTER_SITES=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/ \
 		http://tahoe.inesc.pt/~aml/abacus/
+
+BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/abacus.html
