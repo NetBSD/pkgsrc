@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/02/10 19:53:38 minskim Exp $
+$NetBSD: distinfo,v 1.3 2004/11/30 15:42:40 taca Exp $
 
-SHA1 (JapaneseCodecs-1.4.10.tar.gz) = 745f7478643c0b2d45332a0ff09ab54d2498e151
-Size (JapaneseCodecs-1.4.10.tar.gz) = 288668 bytes
+SHA1 (JapaneseCodecs-1.4.11.tar.gz) = d5a93944dd06c21a604309cfd23e1a923576c88e
+Size (JapaneseCodecs-1.4.11.tar.gz) = 288814 bytes
