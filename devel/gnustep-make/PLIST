@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/08 15:31:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/10 23:31:39 rh Exp $
 share/GNUstep/System/Library/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Library/Makefiles/GNUstep.csh
 share/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -89,6 +89,7 @@ share/GNUstep/System/Library/Makefiles/library.make
 share/GNUstep/System/Library/Makefiles/messages.make
 share/GNUstep/System/Library/Makefiles/mkinstalldirs
 share/GNUstep/System/Library/Makefiles/names.make
+share/GNUstep/System/Library/Makefiles/native-library.make
 share/GNUstep/System/Library/Makefiles/objc.make
 share/GNUstep/System/Library/Makefiles/os.sh
 share/GNUstep/System/Library/Makefiles/palette.make
@@ -99,6 +100,7 @@ share/GNUstep/System/Library/Makefiles/service.make
 share/GNUstep/System/Library/Makefiles/spec-debug-alone-rules.template
 share/GNUstep/System/Library/Makefiles/spec-debug-rules.template
 share/GNUstep/System/Library/Makefiles/spec-rules.template
+share/GNUstep/System/Library/Makefiles/strip_makefiles.sh
 share/GNUstep/System/Library/Makefiles/subproject.make
 share/GNUstep/System/Library/Makefiles/target.make
 share/GNUstep/System/Library/Makefiles/test-application.make
@@ -114,77 +116,79 @@ share/GNUstep/System/Tools/debugapp
 share/GNUstep/System/Tools/openapp
 share/GNUstep/System/Tools/opentool
 share/GNUstep/System/share/config.site
-@exec ${MKDIR} %D/share/GNUstep/Local/Applications
-@exec ${MKDIR} %D/share/GNUstep/Local/Library/Bundles
-@exec ${MKDIR} %D/share/GNUstep/Local/Library/Headers
-@exec ${MKDIR} %D/share/GNUstep/Local/Library/Libraries
-@exec ${MKDIR} %D/share/GNUstep/Network
-@exec ${MKDIR} %D/share/GNUstep/System/Applications
-@exec ${MKDIR} %D/share/GNUstep/System/Library/ApplicationSupport
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles
-@exec ${MKDIR} %D/share/GNUstep/System/Library/ColorPickers
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Colors
-@exec ${MKDIR} %D/share/GNUstep/System/Library/DocTemplates
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/Developer
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/User
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/info
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/man
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Fonts
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Frameworks
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Headers
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Images
-@exec ${MKDIR} %D/share/GNUstep/System/Library/KeyBindings
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Libraries/Java
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Libraries/Resources
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/Additional
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/Auxiliary
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/ix86
-@exec ${MKDIR} %D/share/GNUstep/System/Library/PostScript
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Services
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Sounds
-@exec ${MKDIR} %D/share/GNUstep/System/Tools/Java
-@exec ${MKDIR} %D/share/GNUstep/System/Tools/Resources
 @dirrm share/GNUstep/System/share
+@exec ${MKDIR} %D/share/GNUstep/System/Tools/Resources
 @dirrm share/GNUstep/System/Tools/Resources
+@exec ${MKDIR} %D/share/GNUstep/System/Tools/Java
 @dirrm share/GNUstep/System/Tools/Java
 @dirrm share/GNUstep/System/Tools
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Sounds
 @dirrm share/GNUstep/System/Library/Sounds
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Services
 @dirrm share/GNUstep/System/Library/Services
+@exec ${MKDIR} %D/share/GNUstep/System/Library/PostScript
 @dirrm share/GNUstep/System/Library/PostScript
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/ix86
 @dirrm share/GNUstep/System/Library/Makefiles/ix86
 @dirrm share/GNUstep/System/Library/Makefiles/Master
 @dirrm share/GNUstep/System/Library/Makefiles/Instance/Shared
 @dirrm share/GNUstep/System/Library/Makefiles/Instance/Documentation
 @dirrm share/GNUstep/System/Library/Makefiles/Instance
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/Auxiliary
 @dirrm share/GNUstep/System/Library/Makefiles/Auxiliary
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/Additional
 @dirrm share/GNUstep/System/Library/Makefiles/Additional
 @dirrm share/GNUstep/System/Library/Makefiles
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Libraries/Resources
 @dirrm share/GNUstep/System/Library/Libraries/Resources
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Libraries/Java
 @dirrm share/GNUstep/System/Library/Libraries/Java
 @dirrm share/GNUstep/System/Library/Libraries
+@exec ${MKDIR} %D/share/GNUstep/System/Library/KeyBindings
 @dirrm share/GNUstep/System/Library/KeyBindings
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Images
 @dirrm share/GNUstep/System/Library/Images
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Headers
 @dirrm share/GNUstep/System/Library/Headers
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Frameworks
 @dirrm share/GNUstep/System/Library/Frameworks
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Fonts
 @dirrm share/GNUstep/System/Library/Fonts
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/man
 @dirrm share/GNUstep/System/Library/Documentation/man
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/info
 @dirrm share/GNUstep/System/Library/Documentation/info
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/User
 @dirrm share/GNUstep/System/Library/Documentation/User
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/Developer
 @dirrm share/GNUstep/System/Library/Documentation/Developer
 @dirrm share/GNUstep/System/Library/Documentation
+@exec ${MKDIR} %D/share/GNUstep/System/Library/DocTemplates
 @dirrm share/GNUstep/System/Library/DocTemplates
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Colors
 @dirrm share/GNUstep/System/Library/Colors
+@exec ${MKDIR} %D/share/GNUstep/System/Library/ColorPickers
 @dirrm share/GNUstep/System/Library/ColorPickers
+@exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles
 @dirrm share/GNUstep/System/Library/Bundles
+@exec ${MKDIR} %D/share/GNUstep/System/Library/ApplicationSupport
 @dirrm share/GNUstep/System/Library/ApplicationSupport
 @dirrm share/GNUstep/System/Library
+@exec ${MKDIR} %D/share/GNUstep/System/Applications
 @dirrm share/GNUstep/System/Applications
 @dirrm share/GNUstep/System
+@exec ${MKDIR} %D/share/GNUstep/Network
 @dirrm share/GNUstep/Network
+@exec ${MKDIR} %D/share/GNUstep/Local/Library/Libraries
 @dirrm share/GNUstep/Local/Library/Libraries
+@exec ${MKDIR} %D/share/GNUstep/Local/Library/Headers
 @dirrm share/GNUstep/Local/Library/Headers
+@exec ${MKDIR} %D/share/GNUstep/Local/Library/Frameworks
+@dirrm share/GNUstep/Local/Library/Frameworks
+@exec ${MKDIR} %D/share/GNUstep/Local/Library/Bundles
 @dirrm share/GNUstep/Local/Library/Bundles
 @dirrm share/GNUstep/Local/Library
+@exec ${MKDIR} %D/share/GNUstep/Local/Applications
 @dirrm share/GNUstep/Local/Applications
 @dirrm share/GNUstep/Local
 @dirrm share/GNUstep
