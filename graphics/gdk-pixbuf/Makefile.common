@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2001/11/29 19:46:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2002/02/27 06:41:05 jlam Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.11.0
@@ -16,6 +16,7 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
+CONFIGURE_ENV+=		path_rgb_txt="${X11BASE}/lib/X11/rgb.txt"
 
 M4=			${LOCALBASE}/bin/gm4
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
@@ -24,9 +25,9 @@ DISTINFO_FILE=		${.CURDIR}/../gdk-pixbuf/distinfo
 PATCHDIR=		${.CURDIR}/../gdk-pixbuf/patches
 
 pre-configure:
-	cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} ${LOCALBASE}/bin/autoconf && \
-	${SETENV} ${CONFIGURE_ENV} ${LOCALBASE}/bin/automake
+	cd ${WRKSRC};							\
+	${LOCALBASE}/bin/automake;					\
+	${LOCALBASE}/bin/autoconf
 
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
