@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/12/19 13:07:42 grant Exp $
+# $NetBSD: Makefile,v 1.53 2003/03/04 19:23:17 nathanw Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -23,6 +23,10 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/glib.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gmodule.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread.pc.in
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
+
+# Force the result of this configure test, bescause the testing technique
+# breaks with NetBSD's native libpthread.so.
+CONFIGURE_ENV+=		glib_cv_rtldglobal_broken=no
 
 INFO_FILES=		glib.info
 TEXINFO_OVERRIDE=	YES
