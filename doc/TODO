@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1511 2004/03/13 18:54:37 snj Exp $
+$NetBSD: TODO,v 1.1512 2004/03/14 16:32:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -142,6 +142,7 @@ Suggested package updates
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
+	o bittorrent-3.4.1a
 	o blib-1.1.6
 	o blinkensim-2.7
 	o blinkentools-2.7
@@ -152,7 +153,7 @@ Suggested package updates
 	o checkbot-1.74
 	o clisp-2.32
 	o cocoon-2.1.4
-	o conserver-8.1.1
+	o conserver-8.1.2
 	o courier-imap-3.0.0
 	o courier-0.45
 	o crafty-19.5
@@ -234,6 +235,7 @@ Suggested package updates
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
+	o libsndfile-1.0.8
 	o licq-1.2.7
 	o lilypond-2.0.3
 	o lmbench-2.0.4
@@ -260,6 +262,7 @@ Suggested package updates
 	o napshare-1.2
 	o netatalk-1.6.3 [pkg/21930]
 	o ns-flash-6.0.79
+	o nut-9.12
 	o ocaml-3.07pl2
 	o onyx-5.1.0
 	o openal-20040215
@@ -277,6 +280,7 @@ Suggested package updates
 	o physfs-1.0.0
 	o plib-1.7.0
 	o ploticus-2.20
+	o postfix-2.0.19
 	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
 	o py-psycopg-1.1.10
@@ -348,6 +352,8 @@ Suggested package updates
 	o xine-ui-0.9.23
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
+	o xmame-0.80.1
+	o xmess-0.80.1
 	o xmms-1.2.10
 	o xmms-alarm-0.3.4
 	o xmms-crossfade-0.3.4
