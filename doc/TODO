@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3187 2005/03/03 13:51:07 adam Exp $
+$NetBSD: TODO,v 1.3188 2005/03/03 15:18:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -272,7 +272,7 @@ Suggested package updates
 	o advancecomp-1.14
 	o adzap-20041124
 	o aewm++-1.0.27
-	o afterstep-2.00.02
+	o afterstep-2.00.03
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
@@ -432,8 +432,7 @@ Suggested package updates
 	o elf-0.5.4
 	o elinks-0.10.3
 	o elk-3.99.6
-	o elm-2.5.7
-	o elm-me-2.5plalpha4
+	o elm-me-2.4pl121e
 	o emacs-w3m-1.4.3
 	o emech-2.8.5.1
 	o enscript-1.6.4
@@ -623,6 +622,7 @@ Suggested package updates
 	o libperl-5.6.2
 	o libpqxx-2.4.3
 	o libsmi-0.4.3
+	o libstatgrab-0.11.1
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.14
 	o libtool-base-1.5.14
@@ -1119,6 +1119,7 @@ Suggested package updates
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-0.5.14
 	o vsftpd-2.01 [pkg/26811]
+	o vsftpd-2.0.2
 	o vttest-20050107
 	o w32api-3.2
 	o wap-utils-1.4.1
@@ -1129,7 +1130,7 @@ Suggested package updates
 	o winbind-3.0.11
 	o windowlab-1.26
 	o wl-2.12.2 [pkg/29043]
-	o wmakerconf-2.10
+	o wmakerconf-2.11
 	o wmbiff-0.4.26
 	o wmctrl-1.07
 	o wmweather-2.4.3
