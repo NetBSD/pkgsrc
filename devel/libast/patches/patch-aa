@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/26 04:52:19 wiz Exp $
+--- include/libast.h.orig	Sat Dec 14 19:46:35 2002
++++ include/libast.h	Sat Dec 14 19:51:09 2002
+@@ -35,9 +35,6 @@
+ # ifndef _BSD_SOURCE
+ #  define _BSD_SOURCE
+ # endif
+-# ifndef _XOPEN_SOURCE
+-#  define _XOPEN_SOURCE
+-# endif
+ #endif
+ 
+ #include <stdio.h>
