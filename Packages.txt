@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.135 2001/01/26 09:17:55 skrll Exp $
+# $NetBSD: Packages.txt,v 1.136 2001/01/28 03:17:41 itojun Exp $
 ###########################################################################
 
 			==========================
@@ -313,7 +313,9 @@ actually compile on NFS storage, as this slows things down a lot.
  3.2.1.1 /etc/mk.conf
  ====================
 
-You may want to set things in /etc/mk.conf:
+You may want to set things in /etc/mk.conf.  Look at pkgsrc/mk/mk.conf.example
+for details.  You will want to make sure that ACCEPTABLE_LICENSES meet your
+local policy:
 
     BATCH=                  yes          # required for bulk builds 
     DEPENDS_TARGET?=        bulk-install
@@ -461,6 +463,8 @@ The MASTER_SITES may be set to one of the predefined sites:
 	${MASTER_SITE_PERL_CPAN}
 	${MASTER_SITE_TEX_CTAN}
 	${MASTER_SITE_SUNSITE}
+	${MASTER_SITE_GNOME}
+	${MASTER_SITE_SOURCEFORGE}
 
 If one of these predefined sites is chosen, you may require the ability to
 specify a subdirectory of that site.  Since these macros may expand to
