@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/21 11:18:24 skrll Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/23 01:50:30 jschauma Exp $
 #
 
 DISTNAME=	jikes-1.18
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www10.software.ibm.com/developerworks/opensource/jikes/
 COMMENT=	Java source to byte-code compiler
 
-ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* Linux-*-*
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
