@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/02/27 20:36:28 darcy Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/01 18:05:26 jmmv Exp $
 
 DISTNAME=	radiusd-cistron-1.6.6
 CATEGORIES=	net
@@ -9,15 +9,15 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.radius.cistron.nl/
 COMMENT=	RADIUS-compliant remote authentication and accouting server
 
+CONFLICTS+=	freeradius*
+
+USE_BUILDLINK2=	YES
+
 MAKEFILE=	Makefile.BSD
+BUILD_DIRS=	${WRKSRC}/src
+INSTALL_DIRS=	${WRKSRC}/src
 
-CONFLICTS+= freeradius*
-
-do-build:
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} -f ${MAKEFILE}
-
-do-install:
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} -f ${MAKEFILE} install
+post-install:
 	@${MKDIR} -m 700 /var/log/radacct
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/radiusd-cistron
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/radiusd-cistron
@@ -43,8 +43,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/radiusd.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/radrelay.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/radwatch.8 ${PREFIX}/man/man8
-
-post-install:
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" ${FILESDIR}/radiusd.sh.tmpl \
 		> ${PREFIX}/etc/rc.d/radiusd
 	@${CHMOD} 555 ${PREFIX}/etc/rc.d/radiusd
