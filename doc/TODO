@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2017 2004/08/09 20:40:56 schmonz Exp $
+$NetBSD: TODO,v 1.2018 2004/08/10 14:09:20 taya Exp $
 
 Suggested new packages
 ======================
@@ -218,7 +218,6 @@ Suggested package updates
 	o exim-4.34
 	o festival-1.4.3
 	o findutils-4.1.20
-	o firefox-0.9.3 [pkg/26570]
 	o firefox-bin-0.9.3 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
@@ -308,7 +307,6 @@ Suggested package updates
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
 	o moz-mplayer-2.65
-	o mozilla-1.7.2 [pkg/26594]
 	o mozilla-bin-1.7.2
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
