@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/12 01:32:33 enami Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/26 18:22:33 wiz Exp $
 
 DISTNAME=	ogle-0.8.2
 CATEGORIES=	graphics
@@ -14,6 +14,8 @@ DEPENDS+=	libdvdread>=0.9.2:../../misc/libdvdread
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 
 BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.5
+
+ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386 NetBSD-1.[6-9]*-i386
 
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
