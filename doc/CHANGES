@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9249 2005/02/21 16:52:17 hira Exp $
+$NetBSD: CHANGES,v 1.9250 2005/02/21 17:31:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1002,7 +1002,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ruby16 to 1.6.8nb2 [taca 2005-02-21]
 	Updated ruby18 to 1.8.2nb1 [taca 2005-02-21]
 	Updated dtcp to 20040611nb4 [taca 2005-02-21]
-	Updated instikito 0.9.2nb2 [taca 2005-02-21]
+	Updated instiki to 0.9.2nb2 [taca 2005-02-21]
 	Removed ruby-dbm [taca 2005-02-21]
 	Removed ruby-zlib [taca 2005-02-21]
 	Removed ruby-digest [taca 2005-02-21]
