@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.231 2002/02/13 23:29:37 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.232 2002/02/15 09:33:43 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -925,7 +925,7 @@ features of NetBSD that are not present in other 4.4-lite derived BSDs.
  6.2 Shared libraries - libtool
  ==============================
 
-NetBSD supports many different machines, with different object formats
+Pkgsrc supports many different machines, with different object formats
 like a.out and ELF, and varying abilities to do shared library and
 dynamic loading at all. To accompany this, varying commands and options
 have to be passed to the compiler, linker etc. to get the Right Thing,
