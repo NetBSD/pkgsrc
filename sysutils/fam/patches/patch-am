@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2004/12/09 18:45:32 minskim Exp $
+$NetBSD: patch-am,v 1.6 2005/03/01 23:06:55 dmcmahill Exp $
 
 --- lib/fam.c++.orig	2003-01-18 08:18:12.000000000 -0600
 +++ lib/fam.c++
@@ -9,7 +9,7 @@ $NetBSD: patch-am,v 1.5 2004/12/09 18:45:32 minskim Exp $
 +#include "config.h"
  #include <sys/types.h>
  #include <rpc/rpc.h>
-+#ifdef HAVE_RPC_RCPENT_H
++#ifdef HAVE_RPC_RPCENT_H
 +#include <rpc/rpcent.h>
 +#endif
  #include <sys/time.h>
