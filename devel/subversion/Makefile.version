@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.version,v 1.6 2003/09/02 17:57:21 epg Exp $
+# $NetBSD: Makefile.version,v 1.7 2003/09/08 04:47:51 epg Exp $
 
 .if !defined(SVNVER)
-SVNVER=		0.28.2
+SVNVER=		0.29.0
 # This macro is in this file because the URL changes with every release.
-MASTER_SITES=	http://subversion.tigris.org/files/documents/15/5940/
+MASTER_SITES=	http://subversion.tigris.org/files/documents/15/5977/
 .endif
