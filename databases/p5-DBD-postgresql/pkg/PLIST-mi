@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 2000/02/19 23:43:24 jwise Exp $
+lib/perl5/site_perl/./DBD/Pg.pm
+lib/perl5/site_perl/./DBD/dbd-pg.pod
+lib/perl5/man/man3/./DBD::Pg.3
+lib/perl5/man/man3/./DBD::dbd-pg.3
