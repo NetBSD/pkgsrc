@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:56:37 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/11/05 12:52:39 rtr Exp $
 
 DISTNAME=	multi-gnome-terminal-1.6.1
 PKGREVISION=	3
@@ -20,6 +20,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ENV+=		ac_cv_prog_JADE=no
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
