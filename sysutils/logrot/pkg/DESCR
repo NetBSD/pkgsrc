@@ -1,0 +1,6 @@
+logrot rotates log files in a safe (almost atomic) manner.
+The name of the rotated file and its destination directory
+are configurable. Signals may be sent to processes determined
+from a pid file, or arbitrary commands may be executed upon
+rotation. Optional pre-processing, compression, and post-
+processing is supported.
