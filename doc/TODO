@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2574 2004/11/29 09:28:40 markd Exp $
+$NetBSD: TODO,v 1.2575 2004/11/29 10:12:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -12,10 +12,6 @@ Suggested new packages
 	figfonts
 	More fonts for figlet.
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
-
-	pfaedit -> fontforge rename
-	http://pfaedit.sourceforge.net/
-	Update any pfaedit packages and dependencies to fontforge.
 
 	jgloss
 	application for adding reading and translation annotations to Japanese
