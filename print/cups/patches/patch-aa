@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2001/01/11 19:00:43 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2001/01/28 02:05:37 jlam Exp $
 
---- Makedefs.in.orig	Wed Jan  3 12:44:39 2001
+--- Makedefs.in.orig	Mon Jan 22 10:03:15 2001
 +++ Makedefs.in
 @@ -48,11 +48,11 @@
  # Installation programs...
@@ -19,3 +19,15 @@ $NetBSD: patch-aa,v 1.6 2001/01/11 19:00:43 jlam Exp $
  INSTALL_SYSV	=	@INSTALL_SYSV@
  
  #
+@@ -137,6 +137,11 @@
+ CAT1EXT		=	@CAT1EXT@
+ CAT5EXT		=	@CAT5EXT@
+ CAT8EXT		=	@CAT8EXT@
++
++#
++# Init script installation script
++#
++INITSCRIPT	=	@INITSCRIPT@
+ 
+ #
+ # Rules...
