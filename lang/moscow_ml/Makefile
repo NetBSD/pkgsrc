@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/02/20 22:48:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/14 18:00:47 bad Exp $
 #
 
 DISTNAME=       mos14src
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.dina.kvl.dk/pub/mosml/ \
 MAINTAINER=	lamj@stat.cmu.edu
 HOMEPAGE=	http://www.dina.kvl.dk/~sestoft/mosml.html
 
-BUILD_DEPENDS+=	perl:../../lang/perl5
+BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 ALL_TARGET=	clean world
 
