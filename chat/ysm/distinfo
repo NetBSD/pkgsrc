@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/03/31 14:25:51 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3 2002/06/13 08:34:01 martti Exp $
 
-SHA1 (ysmv7_2_4_2.tgz) = ffe57566e001ed669ffb00d495b30851d459b774
-Size (ysmv7_2_4_2.tgz) = 46793 bytes
-SHA1 (patch-aa) = a8a392fd8096d3ce3c1710e5b5d2c2ea50ee69f9
+SHA1 (ysmv7_2_7_1.tgz) = 7e06aceed66ce0432fab277e61bf02d55197780d
+Size (ysmv7_2_7_1.tgz) = 85896 bytes
