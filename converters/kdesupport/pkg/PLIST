@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 1998/02/02 08:59:46 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/03/21 01:53:17 tron Exp $
 lib/libmimelib.so.1.0
 lib/libmimelib.la
-lib/libuulib.so.0.0
-lib/libuulib.la
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true
 include/mimelib/address.h
@@ -39,8 +37,4 @@ include/mimelib/token.h
 include/mimelib/utility.h
 include/mimelib/uuencode.h
 include/mimelib/binhex.h
-include/fptools.h
-include/uudeview.h
-include/uuint.h
-include/uustring.h
 @dirrm include/mimelib

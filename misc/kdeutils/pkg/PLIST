@@ -1,11 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 1997/12/29 03:31:48 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/03/21 01:54:30 tron Exp $
 bin/kcalc
 bin/kedit
 bin/khexdit
 bin/karm
 bin/kjots
+bin/kljettool
 bin/knotes
 bin/kzip
+share/doc/HTML/en/kljettool/kljettool-1.html
+share/doc/HTML/en/kljettool/kljettool-2.html
+share/doc/HTML/en/kljettool/kljettool-3.html
+share/doc/HTML/en/kljettool/kljettool-4.html
+share/doc/HTML/en/kljettool/kljettool-5.html
+share/doc/HTML/en/kljettool/kljettool-6.html
+share/doc/HTML/en/kljettool/kljettool.html
+share/doc/HTML/en/kljettool/kljettool.nif
+share/doc/HTML/en/kljettool/kljettool.sgml
+share/doc/HTML/en/kljettool/logotp3.gif
+share/doc/HTML/en/kljettool/magic
+share/doc/HTML/en/kljettool/filter
+share/doc/HTML/en/kljettool/README
 share/doc/HTML/de/kcalc/index-1.html
 share/doc/HTML/de/kcalc/index-2.html
 share/doc/HTML/de/kcalc/index-3.html
@@ -14,6 +28,8 @@ share/doc/HTML/de/kcalc/index-5.html
 share/doc/HTML/de/kcalc/index-6.html
 share/doc/HTML/de/kcalc/index-7.html
 share/doc/HTML/de/kcalc/index-8.html
+share/doc/HTML/de/kcalc/index-9.html
+share/doc/HTML/de/kcalc/logotp3.gif
 share/doc/HTML/de/kcalc/index.html
 share/doc/HTML/en/kcalc/index-1.html
 share/doc/HTML/en/kcalc/index-2.html
@@ -23,7 +39,9 @@ share/doc/HTML/en/kcalc/index-5.html
 share/doc/HTML/en/kcalc/index-6.html
 share/doc/HTML/en/kcalc/index-7.html
 share/doc/HTML/en/kcalc/index-8.html
+share/doc/HTML/en/kcalc/index-9.html
 share/doc/HTML/en/kcalc/index.html
+share/doc/HTML/en/kcalc/logotp3.gif
 share/doc/HTML/en/kcalc/kcalc_on_Aix.txt
 share/doc/HTML/en/kcalc/kcalc_on_OSF.txt
 share/doc/HTML/en/kedit/index.html
@@ -32,15 +50,17 @@ share/doc/HTML/en/kedit/index-2.html
 share/doc/HTML/en/kedit/index-3.html
 share/doc/HTML/en/kedit/index-4.html
 share/doc/HTML/en/kedit/index-5.html
+share/doc/HTML/en/kedit/logotp3.gif 
 share/doc/HTML/en/khexdit/index.html
 share/doc/HTML/en/karm/index-1.html
 share/doc/HTML/en/karm/index-2.html
 share/doc/HTML/en/karm/index-3.html
 share/doc/HTML/en/karm/index-4.html
-share/doc/HTML/en/karm/karm.gif
 share/doc/HTML/en/karm/index.html
-share/doc/HTML/en/karm/scrn.html
 share/doc/HTML/en/karm/index.sgml
+share/doc/HTML/en/karm/karm.gif
+share/doc/HTML/en/karm/logotp3.gif
+share/doc/HTML/en/karm/scrn.html
 share/doc/HTML/en/kjots/index.html
 share/doc/HTML/en/knotes/index.html
 share/doc/HTML/en/knotes/index-1.html
@@ -53,7 +73,9 @@ share/doc/HTML/en/kzip/index-1.html
 share/doc/HTML/en/kzip/index-2.html
 share/doc/HTML/en/kzip/index-3.html
 share/doc/HTML/en/kzip/index-4.html
+share/doc/HTML/en/kzip/logotp3.gif
 share/doc/HTML/it/khexdit/index.html
+share/apps/kljettool/pics/kljetlogo.xpm
 share/apps/kcalc/pics/kcalclogo.xpm
 share/apps/kedit/toolbar/filenew2.xpm
 share/apps/kedit/toolbar/send.xpm
@@ -72,6 +94,7 @@ share/icons/khexdit.xpm
 share/icons/kjots.xpm
 share/icons/knotes.xpm
 share/icons/kzip.xpm
+share/applnk/Utilities/KLJetTool.kdelnk
 share/applnk/Utilities/kcalc.kdelnk
 share/applnk/Utilities/khexdit.kdelnk
 share/applnk/Utilities/KArm.kdelnk
@@ -79,9 +102,29 @@ share/applnk/Utilities/Kjots.kdelnk
 share/applnk/Utilities/knotes.kdelnk
 share/applnk/Utilities/kzip.kdelnk
 share/applnk/Applications/kedit.kdelnk
-share/mimelnk/application/x-zip.kdelnk
-share/mimelnk/application/x-lha.kdelnk
-share/mimelnk/application/x-ar.kdelnk
+share/locale/de/LC_MESSAGES/knotes.mo
+share/locale/de/LC_MESSAGES/kzip.mo
+share/locale/de/LC_MESSAGES/karm.mo
+share/locale/cs/LC_MESSAGES/knotes.mo
+share/locale/cs/LC_MESSAGES/kzip.mo
+share/locale/es/LC_MESSAGES/kzip.mo
+share/locale/es/LC_MESSAGES/knotes.mo
+share/locale/hu/LC_MESSAGES/kzip.mo
+share/locale/hu/LC_MESSAGES/knotes.mo
+share/locale/it/LC_MESSAGES/knotes.mo
+share/locale/it/LC_MESSAGES/kzip.mo
+share/locale/pt/LC_MESSAGES/knotes.mo
+share/locale/pt/LC_MESSAGES/karm.mo
+share/locale/pl/LC_MESSAGES/knotes.mo
+share/locale/pl/LC_MESSAGES/kzip.mo
+share/locale/el/LC_MESSAGES/khexdit.mo
+share/locale/fi/LC_MESSAGES/knotes.mo
+share/locale/fi/LC_MESSAGES/kzip.mo
+share/locale/hr/LC_MESSAGES/kedit.mo
+share/locale/hr/LC_MESSAGES/khexdit.mo
+share/locale/hr/LC_MESSAGES/kzip.mo
+share/locale/hr/LC_MESSAGES/knotes.mo
+share/locale/ro/LC_MESSAGES/khexdit.mo
 share/locale/de/LC_MESSAGES/kedit.mo
 share/locale/de/LC_MESSAGES/khexdit.mo
 share/locale/fr/LC_MESSAGES/khexdit.mo
@@ -109,12 +152,9 @@ share/locale/pt/LC_MESSAGES/khexdit.mo
 share/locale/pt/LC_MESSAGES/kzip.mo
 share/locale/fi/LC_MESSAGES/khexdit.mo
 share/locale/fi/LC_MESSAGES/kedit.mo
-@dirrm share/mimelnk/application
-@dirrm share/mimelnk
-@dirrm share/icons/mini
-@dirrm share/icons
 @dirrm share/doc/HTML/it/khexdit
 @dirrm share/doc/HTML/it
+@dirrm share/doc/HTML/en/kljettool
 @dirrm share/doc/HTML/en/kzip
 @dirrm share/doc/HTML/en/knotes
 @dirrm share/doc/HTML/en/kjots
@@ -122,10 +162,10 @@ share/locale/fi/LC_MESSAGES/kedit.mo
 @dirrm share/doc/HTML/en/kedit
 @dirrm share/doc/HTML/en/kcalc
 @dirrm share/doc/HTML/en/karm
-@dirrm share/doc/HTML/en
 @dirrm share/doc/HTML/de/kcalc
 @dirrm share/doc/HTML/de
-@dirrm share/doc/HTML
+@dirrm share/apps/kljettool/pics
+@dirrm share/apps/kljettool
 @dirrm share/apps/knotes/pics
 @dirrm share/apps/knotes
 @dirrm share/apps/kjots/toolbar
@@ -135,7 +175,3 @@ share/locale/fi/LC_MESSAGES/kedit.mo
 @dirrm share/apps/kedit
 @dirrm share/apps/kcalc/pics
 @dirrm share/apps/kcalc
-@dirrm share/apps
-@dirrm share/applnk/Utilities
-@dirrm share/applnk/Applications
-@dirrm share/applnk

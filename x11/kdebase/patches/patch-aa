@@ -1,15 +1,10 @@
-*** configure.orig	Sun Oct 26 01:02:37 1997
---- configure	Fri Oct 31 22:49:27 1997
-***************
-*** 925,929 ****
-  
-  
-! test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
-  
-  
---- 925,929 ----
-  
-  
-! test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL} -m 555'
-  
-  
+--- kscreensaver/main.cpp.orig	Sat Jan 10 01:13:31 1998
++++ kscreensaver/main.cpp	Wed Mar 18 22:19:20 1998
+@@ -288,6 +288,7 @@
+ 	}
+ 
+ 	initPasswd();
++	setuid (getuid ());
+ 
+ 	if ( mode == MODE_INSTALL )
+ 	{
