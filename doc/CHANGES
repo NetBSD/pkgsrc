@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3111 2003/08/27 08:55:40 itojun Exp $
+$NetBSD: CHANGES,v 1.3112 2003/08/27 09:03:27 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3349,3 +3349,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jdk14 to 2.1 [jschauma 2003-08-26]
 	Added lft-2.2 [grant 2003-08-26]
 	Updated chicken to 1.12 [itojun 2003-08-27]
+	Updated criticalmass to 0.98 [recht 2003-08-27]
