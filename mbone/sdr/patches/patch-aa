@@ -1,0 +1,12 @@
+*** src/sdr.h.orig	Thu Sep  5 14:28:29 1996
+--- src/sdr.h	Thu Sep  5 14:28:35 1996
+***************
+*** 21,27 ****
+  #endif
+  #include <tcl.h>
+  #include <tk.h>
+- #include <malloc.h>
+  #include <string.h>
+  #include <fcntl.h>
+  #include <errno.h>
+--- 21,26 ----
