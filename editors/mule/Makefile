@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:00 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/08 09:36:51 agc Exp $
 
 DISTNAME=	mule-2.3
 CATEGORIES=	editors
@@ -28,12 +28,6 @@ CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-x --with-x-toolkit=lucid
 CONFIGURE_ARGS+=	--terminal-face --mcpath
 .if ${MACHINE_ARCH} != "alpha" && ${MACHINE_ARCH} != "sparc64"
 CONFIGURE_ARGS+=	--valbits=26
-.endif
-
-# Find X11 libraries with xpkgwedge
-.if defined(USE_LOCALBASE_FOR_X11)
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/inc
-lude
 .endif
 
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
