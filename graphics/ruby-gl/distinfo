@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:26 wiz Exp $
-
-SHA1 (rbogl.tgz) = 1a4aaf4f22a11740f47f946af22918f3f37b573a
-Size (rbogl.tgz) = 69755 bytes
-SHA1 (patch-aa) = 7981d3de5947efe62d9696c1abe2e764a411025b
-SHA1 (patch-ab) = d31e9a5094053c40ac8fab1f6c529a30cb05de58
