@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/27 20:43:24 hubertf Exp $
+
+--- Makefile.orig	Sun May 24 16:14:13 1998
++++ Makefile
+@@ -2,7 +2,7 @@
+ PROG= arpd
+ SRCS= arpd.c error.c wraplib.c util.c readconfig.c
+ 
+-CFLAGS+= -g -Wall
++CFLAGS+= -O2 -Wall -DPREFIX=\"${PREFIX}\"
+ 
+ LDADD+= -lcompat
+ 

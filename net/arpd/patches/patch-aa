@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/27 20:43:24 hubertf Exp $
+
+--- arpd.c.orig	Sun May 24 16:14:13 1998
++++ arpd.c
+@@ -49,6 +49,7 @@
+ #include <syslog.h>
+ #include <varargs.h>
+ #include <pcap.h>
++#include <errno.h>
+ #include "error.h"
+ #include "arpd.h"
+ #include "wraplib.h"
+@@ -205,12 +206,15 @@
+ 	struct if_elm *pIf_elm;
+ 
+ 	progname = "arpd"; /* for err_xxx */
+-	if (argc > 1)
++	if (argc > 1) {
+ 		pF = fopen(argv[1], "r");
+-	else
+-		pF = fopen("/usr/local/etc/arpd.conf", "r");
+-	if (pF == NULL)
+-		err_sys("fopen");
++		if (pF == NULL)
++			err_sys("fopen %s", argv[1]);
++	} else {
++		pF = fopen(PREFIX "/etc/arpd.conf", "r");
++		if (pF == NULL)
++			err_sys("fopen " PREFIX "/etc/arpd.conf");
++	}
+ 
+ 	Read_conf(pF);
+ 	fclose(pF);
