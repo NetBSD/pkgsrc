@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/19 09:04:16 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/09 00:00:21 jlam Exp $
 
 DISTNAME=		samba-${SAMBA_BASE_VERSION}-ja-${SAMBA_JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_BASE_VERSION}.${SAMBA_JA_VERSION}
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
 .include "../../mk/bsd.prefs.mk"
@@ -48,8 +48,8 @@ CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_DATADIR}/samba/swat
 
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_DIR}
-CFLAGS+=		-I${BUILDLINK_DIR}/include/openssl	# ssl.h, err.h
+CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
+CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 
 CONFIGURE_ARGS+=	--with-i18n-swat
 
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--with-included-gettext
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink.mk"
+.  include "../../print/cups/buildlink2.mk"
 BUILD_DEFS+=		USE_CUPS
 CONFIGURE_ARGS+=	--enable-cups
 .else
@@ -69,13 +69,13 @@ CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink.mk"
+.  include "../../security/PAM/buildlink2.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
 .if defined(SAMBA_USE_LDAP) && ${SAMBA_USE_LDAP} == "YES"
-.include "../../databases/openldap/buildlink.mk"
+.  include "../../databases/openldap/buildlink2.mk"
 BUILD_DEFS+=		SAMBA_USE_LDAP
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
@@ -143,8 +143,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
-.include "../../devel/readline/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
