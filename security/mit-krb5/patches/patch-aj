@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2004/03/30 19:10:08 jlam Exp $
+
+--- krb5-config.in.orig	Thu Apr  3 14:29:09 2003
++++ krb5-config.in
+@@ -173,6 +173,7 @@ if test -n "$do_libs"; then
+     # Ugly gross hack for our build tree
+     lib_flags=`echo $CC_LINK | sed -e 's/\$(CC)//' \
+ 	    -e 's/\$(PURE)//' \
++	    -e 's/\$(LIBTOOL) --mode=link//' \
+ 	    -e 's#\$(PROG_RPATH)#'$libdir'#' \
+ 	    -e 's#\$(PROG_LIBPATH)#-L'$libdir'#' \
+ 	    -e 's#\$(RPATH_FLAG)#'"$RPATH_FLAG"'#' \
