@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2000/10/28 23:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2000/10/30 14:27:56 wiz Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -32,6 +32,7 @@
     SUBDIR += finalbattle
     SUBDIR += freeciv-client
     SUBDIR += freeciv-client-gtk
+    SUBDIR += freeciv-manual
     SUBDIR += freeciv-server
     SUBDIR += freeciv-share
     SUBDIR += frotz
