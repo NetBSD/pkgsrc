@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/10/13 12:05:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/12/10 06:07:49 markd Exp $
 bin/kimagemapeditor
 bin/klinkstatus
 bin/kmdr-editor
@@ -1490,20 +1490,22 @@ share/kde/services/kxsldbg_part.desktop
 share/kde/services/quanta_preview_config.desktop
 share/kde/services/quantadebuggergubed.desktop
 share/kde/servicetypes/quantadebugger.desktop
-@comment dirrm share/kde/servicetypes
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/48x48/apps
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/22x22/apps
-@comment dirrm share/kde/icons/hicolor/22x22/actions
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/16x16/actions
-@comment dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/templates/text/scripts
+@dirrm share/kde/apps/templates/text
+@dirrm share/kde/apps/templates
 @dirrm share/kde/apps/quanta/toolbars/xml
 @dirrm share/kde/apps/quanta/toolbars/wml-1-2
 @dirrm share/kde/apps/quanta/toolbars/tagxml
@@ -1579,14 +1581,14 @@ share/kde/servicetypes/quantadebugger.desktop
 @dirrm share/kde/apps/kfilereplacepart
 @dirrm share/kde/apps/kafkapart/pics
 @dirrm share/kde/apps/kafkapart
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Utilities
-@comment dirrm share/kde/applnk/Editors
-@comment dirrm share/kde/applnk/Development
-@comment dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Utilities
+@comment in kde: @dirrm share/kde/applnk/Editors
+@comment in kde: @dirrm share/kde/applnk/Development
+@comment in kde: @dirrm share/kde/applnk/.hidden
 @dirrm share/doc/kde/HTML/en/quanta
 @dirrm share/doc/kde/HTML/en/kxsldbg
 @dirrm share/doc/kde/HTML/en/kommander
 @dirrm share/doc/kde/HTML/en/klinkstatus
-@comment dirrm share/doc/kde/HTML/en
-@comment dirrm lib/kde3
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm lib/kde3
