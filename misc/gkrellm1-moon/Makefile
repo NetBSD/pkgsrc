@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/24 23:09:51 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/24 23:24:06 cube Exp $
 
 DISTNAME=	gkrellmoon-0.3
 PKGNAME=	gkrellm-moon-0.3
@@ -15,5 +15,5 @@ USE_BUILDLINK2=	YES
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm1/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
