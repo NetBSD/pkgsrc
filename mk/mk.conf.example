@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.97 1999/11/12 12:05:02 agc Exp $
+# $NetBSD: mk.conf.example,v 1.98 1999/11/12 16:34:30 abs Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -428,6 +428,10 @@ PAPERSIZE=	A4		# Default paper size for packages.
 #SSH_DONT_USE_IDEA=		# Used in ssh package to stop IDEA encryption
                                 # Possible: defined, not defined
                                 # Default: not defined
+
+#SSH_RSHPATH=			# Used in ssh to specify standard rsh path
+                                # Possible: path to rsh binary
+                                # Default: /usr/bin/rsh
 
 #SSH_SUID=			# Used in ssh to enable setuid installation
                                 # of "ssh" binary.
