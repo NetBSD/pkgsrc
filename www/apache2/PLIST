@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2004/11/24 07:39:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.26.2.1 2005/02/10 15:22:24 salo Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -374,17 +374,21 @@ share/httpd/icons/README
 share/httpd/manual/LICENSE
 share/httpd/manual/bind.html
 share/httpd/manual/bind.html.en
+share/httpd/manual/bind.html.es
 share/httpd/manual/bind.html.ja.euc-jp
 share/httpd/manual/bind.html.ko.euc-kr
 share/httpd/manual/bind.xml
+share/httpd/manual/bind.xml.es
 share/httpd/manual/bind.xml.ja
 share/httpd/manual/bind.xml.ko
 share/httpd/manual/bind.xml.meta
 share/httpd/manual/configuring.html
+share/httpd/manual/configuring.html.de
 share/httpd/manual/configuring.html.en
 share/httpd/manual/configuring.html.ja.euc-jp
 share/httpd/manual/configuring.html.ko.euc-kr
 share/httpd/manual/configuring.xml
+share/httpd/manual/configuring.xml.de
 share/httpd/manual/configuring.xml.ja
 share/httpd/manual/configuring.xml.ko
 share/httpd/manual/configuring.xml.meta
@@ -398,9 +402,11 @@ share/httpd/manual/content-negotiation.xml.ko
 share/httpd/manual/content-negotiation.xml.meta
 share/httpd/manual/custom-error.html
 share/httpd/manual/custom-error.html.en
+share/httpd/manual/custom-error.html.es
 share/httpd/manual/custom-error.html.ja.euc-jp
 share/httpd/manual/custom-error.html.ko.euc-kr
 share/httpd/manual/custom-error.xml
+share/httpd/manual/custom-error.xml.es
 share/httpd/manual/custom-error.xml.ja
 share/httpd/manual/custom-error.xml.ko
 share/httpd/manual/custom-error.xml.meta
@@ -505,10 +511,12 @@ share/httpd/manual/filter.xml.ko
 share/httpd/manual/filter.xml.meta
 share/httpd/manual/filter.xml.ru
 share/httpd/manual/glossary.html
+share/httpd/manual/glossary.html.de
 share/httpd/manual/glossary.html.en
 share/httpd/manual/glossary.html.es
 share/httpd/manual/glossary.html.ko.euc-kr
 share/httpd/manual/glossary.xml
+share/httpd/manual/glossary.xml.de
 share/httpd/manual/glossary.xml.es
 share/httpd/manual/glossary.xml.ko
 share/httpd/manual/glossary.xml.meta
@@ -588,6 +596,12 @@ share/httpd/manual/images/mod_rewrite_fig2.gif
 share/httpd/manual/images/mod_rewrite_fig2.png
 share/httpd/manual/images/pixel.gif
 share/httpd/manual/images/right.gif
+share/httpd/manual/images/ssl_intro_fig1.gif
+share/httpd/manual/images/ssl_intro_fig1.png
+share/httpd/manual/images/ssl_intro_fig2.gif
+share/httpd/manual/images/ssl_intro_fig2.png
+share/httpd/manual/images/ssl_intro_fig3.gif
+share/httpd/manual/images/ssl_intro_fig3.png
 share/httpd/manual/images/sub.gif
 share/httpd/manual/images/up.gif
 share/httpd/manual/index.html
@@ -638,9 +652,11 @@ share/httpd/manual/license.xml
 share/httpd/manual/license.xml.meta
 share/httpd/manual/logs.html
 share/httpd/manual/logs.html.en
+share/httpd/manual/logs.html.es
 share/httpd/manual/logs.html.ja.euc-jp
 share/httpd/manual/logs.html.ko.euc-kr
 share/httpd/manual/logs.xml
+share/httpd/manual/logs.xml.es
 share/httpd/manual/logs.xml.ja
 share/httpd/manual/logs.xml.ko
 share/httpd/manual/logs.xml.meta
@@ -896,6 +912,10 @@ share/httpd/manual/mod/mod_disk_cache.html.ko.euc-kr
 share/httpd/manual/mod/mod_disk_cache.xml
 share/httpd/manual/mod/mod_disk_cache.xml.ko
 share/httpd/manual/mod/mod_disk_cache.xml.meta
+share/httpd/manual/mod/mod_dumpio.html
+share/httpd/manual/mod/mod_dumpio.html.en
+share/httpd/manual/mod/mod_dumpio.xml
+share/httpd/manual/mod/mod_dumpio.xml.meta
 share/httpd/manual/mod/mod_echo.html
 share/httpd/manual/mod/mod_echo.html.en
 share/httpd/manual/mod/mod_echo.html.ja.euc-jp
@@ -940,7 +960,9 @@ share/httpd/manual/mod/mod_file_cache.xml.ko
 share/httpd/manual/mod/mod_file_cache.xml.meta
 share/httpd/manual/mod/mod_headers.html
 share/httpd/manual/mod/mod_headers.html.en
+share/httpd/manual/mod/mod_headers.html.ko.euc-kr
 share/httpd/manual/mod/mod_headers.xml
+share/httpd/manual/mod/mod_headers.xml.ko
 share/httpd/manual/mod/mod_headers.xml.meta
 share/httpd/manual/mod/mod_imap.html
 share/httpd/manual/mod/mod_imap.html.en
@@ -957,8 +979,10 @@ share/httpd/manual/mod/mod_include.xml.meta
 share/httpd/manual/mod/mod_info.html
 share/httpd/manual/mod/mod_info.html.en
 share/httpd/manual/mod/mod_info.html.ja.euc-jp
+share/httpd/manual/mod/mod_info.html.ko.euc-kr
 share/httpd/manual/mod/mod_info.xml
 share/httpd/manual/mod/mod_info.xml.ja
+share/httpd/manual/mod/mod_info.xml.ko
 share/httpd/manual/mod/mod_info.xml.meta
 share/httpd/manual/mod/mod_isapi.html
 share/httpd/manual/mod/mod_isapi.html.en
@@ -1115,9 +1139,11 @@ share/httpd/manual/mod/module-dict.xml.meta
 share/httpd/manual/mod/mpm_common.html
 share/httpd/manual/mod/mpm_common.html.de
 share/httpd/manual/mod/mpm_common.html.en
+share/httpd/manual/mod/mpm_common.html.es
 share/httpd/manual/mod/mpm_common.html.ja.euc-jp
 share/httpd/manual/mod/mpm_common.xml
 share/httpd/manual/mod/mpm_common.xml.de
+share/httpd/manual/mod/mpm_common.xml.es
 share/httpd/manual/mod/mpm_common.xml.ja
 share/httpd/manual/mod/mpm_common.xml.meta
 share/httpd/manual/mod/mpm_netware.html
@@ -1325,6 +1351,26 @@ share/httpd/manual/programs/suexec.html.ko.euc-kr
 share/httpd/manual/programs/suexec.xml
 share/httpd/manual/programs/suexec.xml.ko
 share/httpd/manual/programs/suexec.xml.meta
+share/httpd/manual/rewrite/index.html
+share/httpd/manual/rewrite/index.html.en
+share/httpd/manual/rewrite/index.xml
+share/httpd/manual/rewrite/index.xml.meta
+share/httpd/manual/rewrite/rewrite_guide.html
+share/httpd/manual/rewrite/rewrite_guide.html.en
+share/httpd/manual/rewrite/rewrite_guide.xml
+share/httpd/manual/rewrite/rewrite_guide.xml.meta
+share/httpd/manual/rewrite/rewrite_guide_advanced.html
+share/httpd/manual/rewrite/rewrite_guide_advanced.html.en
+share/httpd/manual/rewrite/rewrite_guide_advanced.xml
+share/httpd/manual/rewrite/rewrite_guide_advanced.xml.meta
+share/httpd/manual/rewrite/rewrite_intro.html
+share/httpd/manual/rewrite/rewrite_intro.html.en
+share/httpd/manual/rewrite/rewrite_intro.xml
+share/httpd/manual/rewrite/rewrite_intro.xml.meta
+share/httpd/manual/rewrite/rewrite_tech.html
+share/httpd/manual/rewrite/rewrite_tech.html.en
+share/httpd/manual/rewrite/rewrite_tech.xml
+share/httpd/manual/rewrite/rewrite_tech.xml.meta
 share/httpd/manual/sections.html
 share/httpd/manual/sections.html.en
 share/httpd/manual/sections.html.ja.euc-jp
@@ -1335,9 +1381,11 @@ share/httpd/manual/sections.xml.ko
 share/httpd/manual/sections.xml.meta
 share/httpd/manual/server-wide.html
 share/httpd/manual/server-wide.html.en
+share/httpd/manual/server-wide.html.es
 share/httpd/manual/server-wide.html.ja.euc-jp
 share/httpd/manual/server-wide.html.ko.euc-kr
 share/httpd/manual/server-wide.xml
+share/httpd/manual/server-wide.xml.es
 share/httpd/manual/server-wide.xml.ja
 share/httpd/manual/server-wide.xml.ko
 share/httpd/manual/server-wide.xml.meta
@@ -1377,12 +1425,6 @@ share/httpd/manual/ssl/ssl_intro.html.ja.euc-jp
 share/httpd/manual/ssl/ssl_intro.xml
 share/httpd/manual/ssl/ssl_intro.xml.ja
 share/httpd/manual/ssl/ssl_intro.xml.meta
-share/httpd/manual/ssl/ssl_intro_fig1.gif
-share/httpd/manual/ssl/ssl_intro_fig1.png
-share/httpd/manual/ssl/ssl_intro_fig2.gif
-share/httpd/manual/ssl/ssl_intro_fig2.png
-share/httpd/manual/ssl/ssl_intro_fig3.gif
-share/httpd/manual/ssl/ssl_intro_fig3.png
 share/httpd/manual/stopping.html
 share/httpd/manual/stopping.html.de
 share/httpd/manual/stopping.html.en
@@ -1558,6 +1600,7 @@ share/httpd/manual/vhosts/name-based.xml.meta
 @dirrm share/httpd/manual/misc
 @dirrm share/httpd/manual/platform
 @dirrm share/httpd/manual/programs
+@dirrm share/httpd/manual/rewrite
 @dirrm share/httpd/manual/style/css
 @dirrm share/httpd/manual/style/lang
 @dirrm share/httpd/manual/style/latex
