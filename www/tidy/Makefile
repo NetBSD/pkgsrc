@@ -1,35 +1,37 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:56:05 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/10/28 12:33:48 cube Exp $
 #
 
-DISTNAME=	tidy_src_021108
-PKGNAME=	tidy-20021108
+DISTNAME=	tidy_src_031002
+PKGNAME=	tidy-20031002
 WRKSRC=		${WRKDIR}/tidy
 CATEGORIES=	www
 MASTER_SITES=	http://tidy.sourceforge.net/src/ \
 		http://tidy.sourceforge.net/docs/ \
 		http://tidy.sourceforge.net/src/old/
 EXTRACT_SUFX=	.tgz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} tidy_docs_021021${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} tidy_docs_030610${EXTRACT_SUFX}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tidy.sourceforge.net/
 COMMENT=	Fixes and tidies up HTML files
 
-ALL_TARGET=	tidy
-CFLAGS+=	-DPRESERVE_FILE_TIMES=0
-
-DOCFILES=	htmldoc/Overview.html htmldoc/tidy.gif \
-		htmldoc/release-notes.html htmldoc/grid.gif
-
+USE_BUILDLINK2=	yes
+NO_CONFIGURE=	yes
 USE_GMAKE=	yes
+BUILD_DIRS=	${WRKSRC}/build/gmake
 
-do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/tidy ${PREFIX}/bin/tidy
-	@${INSTALL_MAN}	${WRKSRC}/man_page.txt	${PREFIX}/man/man1/tidy.1
-	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tidy
-.for docfile in ${DOCFILES}
-	@${INSTALL_DATA} ${WRKSRC}/${docfile} ${PREFIX}/share/doc/tidy
-.endfor
+HTML_DOCFILES=	Overview.html doxygen.cfg grid.gif quickref.html tidy.css	\
+		faq.html license.html pending.html release-notes.html tidy.gif
+HTML_DOCDIR=	${PREFIX}/share/doc/html/tidy
+
+post-install:
+	${INSTALL_DATA_DIR} ${HTML_DOCDIR}
+	for doc in ${HTML_DOCFILES}; do						\
+	    ${INSTALL_DATA} ${WRKSRC}/htmldoc/$$doc ${HTML_DOCDIR} ;	\
+	done
+	${INSTALL_DATA_DIR} ${HTML_DOCDIR}/api
+	for apifile in ${WRKSRC}/htmldoc/api/* ; do				\
+	    ${INSTALL_DATA} $$apifile ${HTML_DOCDIR}/api ;			\
+	done
 
 .include "../../mk/bsd.pkg.mk"
