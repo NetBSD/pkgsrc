@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 17:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/26 19:47:43 tron Exp $
 
-DISTNAME=		fileutils-3.16
+DISTNAME=		fileutils-4.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=fileutils/}
 
@@ -12,7 +12,5 @@ USE_GTEXINFO=		yes
 NO_PATCH=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
-
-PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 .include "../../mk/bsd.pkg.mk"
