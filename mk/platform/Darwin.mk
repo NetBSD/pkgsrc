@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.4 2004/11/16 18:04:00 tv Exp $
+# $NetBSD: Darwin.mk,v 1.4.2.1 2004/12/20 20:46:00 tv Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -155,6 +155,15 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 # to avoid a test required by the libtool script that takes forever.
 .if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 _OPSYS_MAX_CMDLEN!=	/usr/sbin/sysctl -n kern.argmax
+.endif
+
+# Darwin 7.7.x has poll() in libc, but no poll.h. Try to help GNU
+# configure packages that break because of this by pretending that
+# there is no poll().
+.if defined(GNU_CONFIGURE)
+.  if !exists(/usr/include/poll.h) && !exists(/usr/include/sys/poll.h)
+CONFIGURE_ENV+=		ac_cv_func_poll=no
+.  endif
 .endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
