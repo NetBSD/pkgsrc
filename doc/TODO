@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.288 2003/02/21 11:22:50 mycroft Exp $
+$NetBSD: TODO,v 1.289 2003/02/21 11:25:55 mycroft Exp $
 
 Suggested new packages
 ======================
@@ -245,7 +245,6 @@ Suggested package updates
 	o scmxx-0.6.3.5 [pkg/20017]
 	o scribus-0.8
 	o scsh-0.6.3
-	o scrollkeeper-0.3.11
 	o sendfile-20010424
 	o sendmail-8.12.7 [pkg/20324]
 	o shorten-3.5.1
