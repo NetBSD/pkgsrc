@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7994 2004/11/25 19:27:26 snj Exp $
+$NetBSD: CHANGES,v 1.7995 2004/11/25 19:40:46 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5430,3 +5430,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated GeoIP to 1.3.8 [snj 2004-11-25]
 	Updated gthumb to 2.6.1 [minskim 2004-11-25]
 	Updated gnetcat to 0.7.1 [snj 2004-11-25]
+	Updated gifsicle to 1.41 [snj 2004-11-25]
