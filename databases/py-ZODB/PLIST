@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/06 19:52:47 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/25 21:24:44 minskim Exp $
 bin/fsdump.py
 bin/fsrefs.py
 bin/fstail.py
@@ -10,6 +10,8 @@ bin/runzeo.py
 bin/mkzeoinst.py
 bin/zdrun.py
 bin/zdctl.py
+${PYINC}/ZODB3/ExtensionClass.h
+${PYINC}/ZODB3/cPersistence.h
 ${PYSITELIB}/Acquisition.so
 ${PYSITELIB}/ComputedAttribute.so
 ${PYSITELIB}/ExtensionClass.so
@@ -495,3 +497,4 @@ ${PYSITELIB}/Persistence/__init__.pyo
 @dirrm ${PYSITELIB}/zLOG
 @dirrm ${PYSITELIB}/zdaemon/tests
 @dirrm ${PYSITELIB}/zdaemon
+@dirrm ${PYINC}/ZODB3
