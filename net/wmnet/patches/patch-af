@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2001/03/27 02:29:18 hubertf Exp $
+$NetBSD: patch-af,v 1.2 2001/06/30 09:55:57 wiz Exp $
 
---- wmnet.h.orig	Sun Mar  4 02:39:16 2001
+--- wmnet.h.orig	Fri May  5 03:02:26 2000
 +++ wmnet.h
-@@ -68,8 +68,9 @@
+@@ -68,12 +68,13 @@
  Pixmap arrow;
  Atom delete_atom;
  int screen, specified_state = -1;
@@ -13,3 +13,8 @@ $NetBSD: patch-af,v 1.1 2001/03/27 02:29:18 hubertf Exp $
  typedef int (*parser_func)(void);
  
  /* I know statically declared buffers are against GNU coding standards, so sue me */
+-char buffer[256], *click_command = NULL, *label = NULL;
++char buffer[2048], *click_command = NULL, *label = NULL;
+ struct timeval timenow, timelast;
+ unsigned long totalbytes_in, totalbytes_out, lastbytes_in, lastbytes_out;
+ unsigned long totalpackets_in, totalpackets_out, lastpackets_in, lastpackets_out;
