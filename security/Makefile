@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2000/08/11 05:23:37 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2000/08/11 08:16:51 itojun Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -6,6 +6,7 @@
     SUBDIR += amavis
     SUBDIR += crack
     SUBDIR += ddos-scan
+    SUBDIR += dsniff
     SUBDIR += fortify
     SUBDIR += fsh
     SUBDIR += gnupg
