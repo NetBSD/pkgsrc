@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/05 11:42:20 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/06 08:17:55 jlam Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
@@ -21,7 +21,7 @@ MAKE_ENV+=		REALCC="${BUILDLINK_CC}"
 BZIP_CFLAGS=           -Wall -Winline -fomit-frame-pointer -fno-strength-reduce
 .endif
 
-MAKE_ENV+=             BZIP_CFLAGS="${BZIP_CFLAGS}"
+MAKE_ENV+=		BZIP_CFLAGS="${BZIP_CFLAGS}"
 INSTALLATION_DIRS=	bin include lib man/man1
 
 do-install:
