@@ -1,13 +1,24 @@
-$NetBSD: patch-aa,v 1.3 2002/01/24 13:49:41 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2002/10/02 08:46:58 jlam Exp $
 
---- interface/Makefile.am.orig	Wed May 30 04:31:51 2001
+--- interface/Makefile.am.orig	Tue May 29 19:31:51 2001
 +++ interface/Makefile.am
-@@ -11,7 +11,7 @@
+@@ -3,17 +3,13 @@ DEFS = @DEFS@ -DDATADIR=\"${pkgdatadir}\
+ 
+ INCLUDES = $(INCLTDL) -I../modules/ -I./
+ 
+-# Note: The the -L.../.libs are there becuase of a bug in Libtool.
+-#       Bug #416981 (Problem building .12.1 on linux)
+-#       http://sourceforge.net/tracker/index.php?func=detail&aid=416981&group_id=2791&atid=102791
+-
+ lib_LTLIBRARIES = libpspell.la libpspell-impl.la
  
  libpspell_la_LDFLAGS      = ${extra_ldflags} -version-info 4:3:0
  
 -libpspell_la_LIBADD = $(LIBLTDL) -L../modules/.libs ../modules/libpspell-modules.la
-+libpspell_la_LIBADD = $(LIBLTDL) -L../modules/.libs ../modules/libpspell-modules.la -lstdc++
++libpspell_la_LIBADD = $(LIBLTDL) ../modules/libpspell-modules.la -lstdc++
  
- libpspell_impl_la_LIBADD  = -L./.libs libpspell.la 
+-libpspell_impl_la_LIBADD  = -L./.libs libpspell.la 
++libpspell_impl_la_LIBADD  = libpspell.la 
+ 
+ libpspell_impl_la_LDFLAGS = ${extra_ldflags} -version-info 6:0:0
  
