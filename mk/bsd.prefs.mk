@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.39 2001/06/12 12:49:55 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.40 2001/06/12 18:58:42 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -117,10 +117,18 @@ USE_INET6?=		NO
 
 # Load the OS-specific definitions for program variables.  Default to loading
 # the NetBSD ones if an OS-specific file doesn't exist.
-.if exists(../../mk/defs.${OPSYS}.mk)
-.include "../../mk/defs.${OPSYS}.mk"
-.else
-.include "../../mk/defs.NetBSD.mk"
+.if exists(${.CURDIR}/../../mk/defs.${OPSYS}.mk)
+.include "${.CURDIR}/../../mk/defs.${OPSYS}.mk"
+.elif exists(${.CURDIR}/../mk/defs.${OPSYS}.mk)
+.include "${.CURDIR}/../mk/defs.${OPSYS}.mk"
+.elif exists(${.CURDIR}/mk/defs.${OPSYS}.mk)
+.include "${.CURDIR}/mk/defs.${OPSYS}.mk"
+.elif exists(${.CURDIR}/../../mk/defs.NetBSD.mk)
+.include "${.CURDIR}/../../mk/defs.NetBSD.mk"
+.elif exists(${.CURDIR}/../mk/defs.NetBSD.mk)
+.include "${.CURDIR}/../mk/defs.NetBSD.mk"
+.else exists(${.CURDIR}/mk/defs.NetBSD.mk)
+.include "${.CURDIR}/mk/defs.NetBSD.mk"
 .endif
 
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
