@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2004/01/24 08:47:24 xtraeme Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2004/01/31 15:06:24 xtraeme Exp $
 include/X11/extensions/xf86rush.h
 include/X11/extensions/xf86rushstr.h
 lib/libI810XvMC.a
@@ -33,6 +33,3 @@ lib/libdps.so.1.0
 lib/libdpstk.so.1.0
 lib/liboldX.so.6.0
 lib/libpsres.so.1.0
-man/man3/Xaw.3x
-man/man3/Xcursor.3x
-man/man3/Xrandr.3x

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2004/01/24 08:47:27 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/01/31 15:06:24 xtraeme Exp $
 bin/xcursor-config
 include/DPS/ColorSB.h
 include/DPS/ColorSBP.h
@@ -617,6 +617,9 @@ lib/libpsres.so.1
 lib/libxf86config.a
 lib/libxkbfile.a
 lib/libxkbui.a
+${IMAKE_LIBMAN_DIR}/Xaw.${IMAKE_LIBMAN_SUFFIX}
+${IMAKE_LIBMAN_DIR}/Xcursor.${IMAKE_LIBMAN_SUFFIX}
+${IMAKE_LIBMAN_DIR}/Xrandr.${IMAKE_LIBMAN_SUFFIX}
 @dirrm include/DPS
 @dirrm include/GL
 @dirrm include/X11/Xcursor
