@@ -1,13 +1,19 @@
-$NetBSD: patch-ab,v 1.1 2003/06/07 17:39:15 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2003/09/20 01:27:19 chris Exp $
 
---- etc/Makefile.in.orig	2002-11-21 01:44:02.000000000 +0100
-+++ etc/Makefile.in
-@@ -118,7 +118,7 @@ am__quote = @am__quote@
- install_sh = @install_sh@
+--- etc/Makefile.am.orig	2000-02-16 20:21:00.000000000 +0000
++++ etc/Makefile.am	2003-09-20 01:30:31.000000000 +0100
+@@ -18,11 +18,11 @@
+ #  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  
  EXTRA_DIST = clamav.conf
 -CFGINST = @CFGDIR@
 +CFGINST = $(datadir)/examples/clamav
- subdir = etc
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_CLEAN_FILES =
+  
+ if INSTALL_CONF
+ 
+ install:
+-	$(mkinstalldirs) $(DESTDIR)$(CFGINST)
+-	@$(INSTALL_DATA) clamav.conf $(DESTDIR)$(CFGINST)
++	$(mkinstalldirs) $(CFGINST)
++	@$(INSTALL_DATA) clamav.conf $(CFGINST)
+ endif
