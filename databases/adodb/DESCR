@@ -1,0 +1,18 @@
+ADOdb stands for Active Data Objects Data Base. It currently supports MySQL,
+PostgreSQL, Interbase, Informix, Oracle, MS SQL 7, Foxpro, Access, ADO, Sybase,
+DB2 and generic ODBC. The Sybase, Informix and PostgreSQL drivers are community
+contributions. We hope more people will contribute drivers to support more
+databases.
+
+Unique Features of ADOdb
+- Easy for Windows programmers to understand. Makes porting ASP code to PHP
+  easy because many of the conventions are similar to Microsoft's ADO.
+- We provide support code to handle inserts and updates which can be adapted
+  to multiple databases quickly. Methods are provided for date handling,
+  string concatenation and string quoting characters for differing databases.
+- A metatype system is built in so that we can figure out that types such as
+  CHAR, TEXT and STRING are equivalent in different databases.
+- Easy to port because all the database dependent code are stored in stub
+  functions. You do not need to port the core logic of the classes.
+- SQL to popup menu (<SELECT>) support included
+- PHP4 Session support.
