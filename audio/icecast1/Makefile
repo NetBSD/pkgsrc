@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/04/11 15:57:40 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/02 10:05:34 kristerw Exp $
 #
 
 DISTNAME=	icecast-1.3.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.icecast.org/releases/
 
@@ -27,7 +27,7 @@ CFLAGS+=		${PTHREAD_CFLAGS}
 LDFLAGS+=		${PTHREAD_LDFLAGS}
 LDFLAGS+=		${BUILDLINK_LDFLAGS.${PYPACKAGE}}
 LIBS+=			-lutil
-PTHREAD_OPTS+=		native
+PTHREAD_OPTS+=		require
 
 EGDIR=			${PREFIX}/share/examples/icecast
 EGFILES=		groups.aut mounts.aut users.aut icecast.conf
@@ -56,9 +56,5 @@ pre-configure:
 .include "../../lang/python/application.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink3.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
