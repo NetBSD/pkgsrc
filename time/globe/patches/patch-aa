@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2001/11/26 20:39:15 is Exp $
+
+--- Makefile.orig	Fri Nov 10 20:11:03 1995
++++ Makefile
+@@ -1,17 +1,15 @@
+ # CONFIGURE: the directory where you want the executables installed.
+-BINDIR =	/usr/local/bin
++BINDIR =	${PREFIX}/bin
+ 
+ # CONFIGURE: the directory tree where you want the man pages installed.
+-MANDIR =	/usr/local/man
++MANDIR =	${PREFIX}/man/man1
+ 
+ # CONFIGURE: your favorite C compiler.
+-CC =		gcc
+ 
+ # CONFIGURE: your favorite C flags.
+-CFLAGS =	-O
++CFLAGS =	-O2
+ 
+ # CONFIGURE: your favorite linker flags.
+-LDFLAGS =	-s
+ 
+ all:		globe
+ 
+@@ -19,10 +17,8 @@
+ 	$(CC) $(CFLAGS) globe.c $(LDFLAGS) -o globe
+ 
+ install:	all
+-	rm -f $(BINDIR)/globe
+-	cp globe $(BINDIR)
+-	rm -f $(MANDIR)/man1/globe.1
+-	cp globe.1 $(MANDIR)/man1
++	${BSD_INSTALL_PROGRAM} globe $(BINDIR)
++	${BSD_INSTALL_MAN} globe.1 $(MANDIR)
+ 
+ clean:
+ 	rm -f globe a.out core
