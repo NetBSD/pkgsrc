@@ -1,22 +1,33 @@
-# $NetBSD: Makefile,v 1.20 2003/09/17 19:40:43 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/10/05 07:07:14 jlam Exp $
 
+# The following two variables should have empty values unless we're
+# building a perl snapshot or release candidate.
+#
 PERL5_SNAPSHOT=	# empty
-PERL5_VERS=	5.8.0
+PERL5_RC_VERS=	# empty
 
-.if empty(PERL5_SNAPSHOT)
+.if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
+PKGREVISION=	# empty
 SNAPSHOT_SITES=	# empty
 .else
+.  if !empty(PERL5_SNAPSHOT)
 DISTNAME=	perl@${PERL5_SNAPSHOT}
-PKGNAME=	perl-${PERL5_VERS}
+PKGNAME=	perl-${PERL5_VERS}beta${PERL5_SNAPSHOT}
 SNAPSHOT_SITES=	http://www.iki.fi/jhi/
+EXTRACT_SUFX=	.tbz
+WRKSRC=		${WRKDIR}/perl
+.  else # !empty(PERL5_RC_VERS)
+DISTNAME=	perl-${PERL5_VERS}-RC${PERL5_RC_VERS}
+PKGNAME=	perl-${PERL5_VERS}rc${PERL5_RC_VERS}
+SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
+.  endif
 .endif
 
-PKGREVISION=	2
+PERL5_VERS=	5.8.1
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${SNAPSHOT_SITES} \
-		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/ \
-		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/
+		${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.perl.com/
@@ -36,7 +47,6 @@ CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
 CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
-CONFIGURE_ARGS+=	-Dcc="${CC:T}"
 CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
@@ -51,11 +61,27 @@ TEST_TARGET=		test
 #
 CONFIGURE_ARGS+=	-Dman3ext="3"
 CONFIGURE_ARGS+=	-Dman3dir="${PERL5_PRIVLIB}/man/man3"
-CONFIGURE_ARGS+=	-Dinstallsiteman3dir="${PERL5_SITEPERL}/man/man3"
+CONFIGURE_ARGS+=	-Dsiteman3dir="${PERL5_SITEPERL}/man/man3"
+
+# The site directories are all relative to the perl view.
+CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
+CONFIGURE_ARGS+=	-Dinstallsiteman1dir="${VIEWBASE}/man/man1"
 
 .include "../../mk/bsd.prefs.mk"
 
 MKPIC?=		yes
+
+.if ${OPSYS} == "IRIX"
+.  if ${ABI} == "32"
+PERL5_CC=		${CC:T} -n32
+.  elif ${ABI} == "64"
+PERL5_CC=		${CC:T} -64
+CONFIGURE_ARGS+=	-Duse64bitint
+.  endif
+.else
+PERL5_CC=		${CC:T}
+.endif
+CONFIGURE_ARGS+=	-Dcc="${PERL5_CC}"
 
 .if ${OPSYS} == "Darwin"
 #
@@ -83,6 +109,7 @@ PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/${LOWER_OPSYS}
 #
 LIBSWANTED.Darwin=	m c
 LIBSWANTED.FreeBSD=	m crypt
+LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 
@@ -141,8 +168,9 @@ CONFIGURE_ARGS+=	-Duseshrplib
 PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
 PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}
 PERL5_ARCHLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
-PERL5_SITEPERL?=	${PREFIX}/lib/perl5/site_perl
-PERL5_SITEARCH?=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_SITEPERL?=	${VIEWBASE}/lib/perl5/site_perl
+PERL5_SITELIB?=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}
+PERL5_SITEARCH?=	${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
 
@@ -187,27 +215,28 @@ STATIC_PERL?=		NO
 .endif
 STATIC_PERL?=		YES
 
+WRKSRC_PERL5=		${WRKSRC}/perl
+
 .if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
 STATIC_WRKDIR=		${WRKDIR}/static
 STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=NO
 STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
 STATIC_MAKEFLAGS+=	ALL_TARGET=perl
+WRKSRC_PERL5=		${STATIC_WRKDIR}/${WRKSRC:T}/perl
 
 post-build:
 	cd ${.CURDIR} && ${MAKE} build ${STATIC_MAKEFLAGS}
 .endif
 
 post-install:
-.if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
-	${RM} -f ${PERL5}
-	${INSTALL_PROGRAM} ${STATIC_WRKDIR}/${WRKSRC:T}/perl ${PERL5}
-.endif
-	${RM} -f ${PREFIX}/bin/perl
-	${LN} -f ${PERL5} ${PREFIX}/bin/perl
-	strip ${PERL5}
+	${RM} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_VERS}
+	${INSTALL_PROGRAM} ${WRKSRC_PERL5} ${PREFIX}/bin/perl${PERL5_VERS}
+	${LN} -f ${PREFIX}/bin/perl${PERL5_VERS} ${PREFIX}/bin/perl
+.if !empty(_STRIPFLAG_INSTALL)
 	if [ -x ${PREFIX}/bin/a2p ]; then				\
 		strip ${PREFIX}/bin/a2p;				\
 	fi
+.endif
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
 	${RM} -f ${WRKDIR}/bsd.perl.mk
 	eval `${PERL5} -V:installsitelib 2>/dev/null` && \
@@ -218,9 +247,5 @@ post-install:
 		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
-
-.if ${MACHINE_ARCH} == "alpha"
-USE_PKGSRC_GCC=		# defined
-.endif
 
 .include "../../mk/bsd.pkg.mk"
