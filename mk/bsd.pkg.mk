@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.6 2004/11/23 20:39:19 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.7 2004/12/03 19:15:00 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -91,9 +91,9 @@ PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 ##### Others
 
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
-ALL_TARGET?=		all
 BUILD_DEFS?=		# empty
 BUILD_DEPENDS?=		# empty
+BUILD_TARGET?=		all
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
 DIGEST_ALGORITHM?=	SHA1
@@ -198,6 +198,10 @@ PKG_FAIL_REASON+=''
 PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
 .  endif
 .endif # NO_PKGTOOLS_REQD_CHECK
+
+.if defined(ALL_TARGET)
+PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
+.endif
 
 .if defined(NO_WRKSUBDIR)
 PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
@@ -2449,7 +2453,7 @@ SUBST_FILES.pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
 SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
 .endif
 
-# By adding this target, it makes sure the the above PREREQ's work.
+# By adding this target, it makes sure the above PREREQ's work.
 .PHONY: pre-configure-override
 pre-configure-override: ${_CONFIGURE_PREREQ}
 
@@ -2539,7 +2543,7 @@ BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
 .if !target(do-build)
 do-build:
 .  for DIR in ${BUILD_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
 .  endfor
 .endif
 
