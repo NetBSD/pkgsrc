@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.801 2002/12/16 12:11:02 jmmv Exp $
+$NetBSD: CHANGES,v 1.802 2002/12/16 12:35:54 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3968,3 +3968,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated wget to 1.8.2 [wiz 2002-12-16]
 	Updated abcde to 2.0.3nb2 [lukem 2002-12-16]
 	Added Xft2-2.1 [jmmv 2002-12-16]
+	Updated polsms to 1.9.0 [cjep 2002-12-16]
