@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.5 1998/08/24 10:12:22 agc Exp $
+$NetBSD: md5,v 1.6 1998/09/01 09:33:42 agc Exp $
 
-MD5 (vim-5.2-src.tar.gz) = 590a295e4fdef20c886a49a787e27686
-MD5 (vim-5.2-rt.tar.gz) = d55a60481a8ba05c8c23ef60853f96fe
+MD5 (vim-5.3-src.tar.gz) = d919bc16480599014adbcdfd19268d35
+MD5 (vim-5.3-rt.tar.gz) = 90c168f16bc87ac9d430d8137c55136f
