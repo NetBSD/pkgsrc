@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2263 2004/10/27 16:21:04 wiz Exp $
+$NetBSD: TODO,v 1.2264 2004/10/27 17:54:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -231,6 +231,11 @@ Suggested new packages
 	http://www.lingoteach.org/
 	Language teaching program with various lessons (with GTK+ interface).
 
+	FreePats
+	http://freepats.opensrc.org/
+	Free and open set of GUS patches (e.g. for timidity)
+
+
 Suggested package updates
 =========================
 
@@ -260,6 +265,7 @@ Suggested package updates
 	o bitchx-1.1
 	o blender-2.34
 	o boson-0.10
+	o cabextract-1.1
 	o capc-calc-2.11.10.1
 	o cdrtools-2.01
 	o cdrtools-ossdvd-2.01a32
@@ -271,11 +277,13 @@ Suggested package updates
 	o clanlib-0.7.8
 	o classpath-0.11
 	o clisp-2.33.2
+	o cmp3-2.0pre6
 	o cocoon-2.1.5
 	o conglomerate-0.7.14
 	o conserver-8.1.8
 	o cooledit-3.17.8
 	o courier-0.47
+	o cpio-2.5.90
 	o crafty-19.5
 	o crimsonfields-0.4.5
 	o crossfire-1.5.0
@@ -285,8 +293,9 @@ Suggested package updates
 	o cvs2cl-2.55
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
+	o daapd-0.2.3
 	o dact-0.8.37
-	o dar-2.1.2
+	o dar-2.1.5
 	o dctc-0.85.9
 	o delegate-8.9.2
 	o dict-client-1.9.11
@@ -313,6 +322,7 @@ Suggested package updates
 	o feh-1.2.7
 	o festival-1.4.3
 	o file-4.10
+	o file-roller-2.8.3
 	o findutils-4.1.20
 	o firefox-bin-0.10.1 [not available yet]
 	o firewalk-5.0
@@ -331,13 +341,17 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.26
+	o gkrellm-volume-2.1.13
+	o gkrellm1-xmms-0.5.8
 	o glpk-4.6
+	o gmpc-0.11.2
 	o gnomeicu-0.99.5
 	o gnunet-0.6.4a
 	o gogo-3.11p1
 	o gossip-0.7.7
 	o gpsdrive-2.09
 	o grace-5.1.17
+	o gst-plugins-0.8.5
 	o gstreamer-0.8.7
 	o gtkballs-3.1.4
 	o gtkglext-1.0.6
@@ -353,8 +367,11 @@ Suggested package updates
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hp2xx-3.4.4
 	o hugu-3.1.01
+	o hydrogen-0.9.0
 	o hylafax-4.2.0
 	o icepref-2.3
+	o ices-2.0.0
+	o id3v2-0.1.11
 	o idesk-0.5.6
 	o imp-3.2.6
 	o inform-6.30 [pkg/24631]
@@ -363,6 +380,7 @@ Suggested package updates
 	o ipcheck-0.218
 	o ispman-1.1.1
 	o jakarta-tomcat-3.3.1a
+	o jamjar-0.7.1
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
 	o koffice-1.3.4
@@ -371,13 +389,19 @@ Suggested package updates
 	o latex2rtf-1.9.15
 	o lavaps-2.5
 	o lbreakout-2.5.1
+	o lcab-1.011
 	o leafnode-1.10.6
+	o libao{,-arts,-esound}-0.8.5
+	o libcdaudio-0.99.12
 	o libcddb-0.9.6
+	o libcomprex-0.3.3
+	o libhydrogen-0.9.0
 	o libidn-0.5.8
 	o libmpeg3-1.5.4
 	o libnet-1.1.2.1 [wip/libnet11|adrianp]
 	o libnids-1.19
 	o libole2-2.2.8
+	o libopendaap-0.2.3
 	o libsigc++-2.0.3
 	o libtiff-3.7.0
 	o libxklavier-1.10 [breaks gnome-2.8]
@@ -389,11 +413,13 @@ Suggested package updates
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
 	o mailman-2.1.5
+	o makeself-2.1.3
 	o maketool-0.8.4
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o micq-0.4.11
 	o midnight-commander-4.6.0 [pkgsrc-wip]
+	o mikmod-3.2.1
 	o mimedefang-2.45
 	o minicom-2.1
 	o mkvtoolnix-0.9.7
@@ -421,7 +447,7 @@ Suggested package updates
 	o nosefart-2.1
 	o ns-flash-6.0.79
 	o nslint-2.1a3
-	o nulib2-2.0.2
+	o nulib2-2.0.3
 	o nut-10.7
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
@@ -430,11 +456,14 @@ Suggested package updates
 	o openoffice-1.1.3
 	o openssl-0.9.7e [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o oss-3.99.1h
+	o p5-Archive-Zip-1.14
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
+	o p5-Compress-Bzip2-1.02
 	o p5-Exception-Class-1.17
 	o p5-gtk2-1.060
 	o p5-libapreq2-2.04.03
+	o p7zip-4.10
 	o pdmenu-1.2.81
 	o perl-5.8.5
 	o pgplot-5.2 [grant]
@@ -454,6 +483,8 @@ Suggested package updates
 	o py-wxWindows-2.5.2.8
 	o pysol-4.82
 	o raine-0.41.1
+	o rar-3.4.0
+	o rar-linux-3.4.0
 	o ratpoison-1.3.0
 	o readline-5.0
 	o realplayer-10.0
@@ -506,7 +537,9 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o txt2html-2.31 [wennmach]
 	o unarj-2.65
+	o unrar-3.4.3
 	o uptimec-0.2p3 [pkg/26082]
+	o upx-1.25
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
@@ -555,6 +588,7 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.6
 	o zenicb 1.31 (needs merge with lots of local changes)
+	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
 =============================================
