@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3471 2003/09/21 17:29:51 kent Exp $
+$NetBSD: CHANGES,v 1.3472 2003/09/21 20:33:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3868,3 +3868,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rdiff-backup to 0.12.4 [lukem 2003-09-21]
 	Updated w32api to 2.4 [kent 2003-09-21]
 	Updated peace to 0.0.20030919 [kent 2003-09-21]
+	Updated pkglint to 3.61 [wiz 2003-09-21]
