@@ -1,9 +1,10 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2003/07/11 14:50:37 seb Exp $
+#	$NetBSD: Makefile,v 1.2 2003/12/13 17:45:59 seb Exp $
 
 NOPROFILE=      # defined
 NOLINT=         # defined
-USE_SHLIBDIR=   yes
+MKPICINSTALL=	no
 LIB=	kver
+MAN=	kver.3
 SRCS=	kver.c
 
 .include <bsd.lib.mk>

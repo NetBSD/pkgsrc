@@ -1,12 +1,10 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2003/07/11 14:50:37 seb Exp $
+#	$NetBSD: Makefile,v 1.2 2003/12/13 17:45:59 seb Exp $
 
 MKMAN=	no
 
 .include <bsd.own.mk>
 
 .PATH: ${BSDSRCDIR}/sbin/sysctl
-
-BINDIR=		/sbin
 
 .include "${BSDSRCDIR}/sbin/sysctl/Makefile"
 
