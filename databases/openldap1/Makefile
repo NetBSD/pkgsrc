@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/25 18:38:12 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/25 18:46:29 kleink Exp $
 #
 
 DISTNAME=	openldap-1.2.13
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	kleink@netbsd.org
 HOMEPAGE=	http://www.OpenLDAP.org/
 COMMENT=	Lightweight directory access protocol server and client package
 
