@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/30 17:39:26 sommerfeld Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/29 18:55:56 jmmv Exp $
 bin/xzwrite
 bin/zaway
 bin/zctl
@@ -10,7 +10,6 @@ bin/zstat
 bin/zwgc
 bin/zwrite
 etc/rc.d/zhm
-etc/zephyr/default.subscriptions
 include/zephyr/mit-copyright.h
 include/zephyr/zephyr.h
 include/zephyr/zephyr_err.h
@@ -39,13 +38,12 @@ share/doc/zephyr/NOTES
 share/doc/zephyr/OPERATING
 share/doc/zephyr/README
 share/doc/zephyr/USING
+share/examples/zephyr/default.subscriptions
 share/zephyr/XZwrite
 share/zephyr/xzwrite.bitmap
 share/zephyr/zwgc.desc
 share/zephyr/zwgc_resources
 @dirrm share/zephyr
+@dirrm share/examples/zephyr
 @dirrm share/doc/zephyr
 @dirrm include/zephyr
-@exec ${MKDIR} %D/etc/zephyr/acl
-@dirrm etc/zephyr/acl
-@dirrm etc/zephyr
