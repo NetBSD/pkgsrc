@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2219 2004/10/14 16:35:06 ben Exp $
+$NetBSD: TODO,v 1.2220 2004/10/14 17:15:38 salo Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,6 @@ Suggested package updates
 	o midnight-commander-4.6.0 [pkgsrc-wip]
 	o mimedefang-2.45
 	o minicom-2.1
-	o mkvtoolnix-0.9.6
 	o mldonkey-2.5.22
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
