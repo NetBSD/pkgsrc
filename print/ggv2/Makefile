@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/14 17:21:50 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 19:40:10 minskim Exp $
 #
 
 DISTNAME=		ggv-2.4.1
@@ -28,5 +28,6 @@ GCONF2_SCHEMAS= 	ggv.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
