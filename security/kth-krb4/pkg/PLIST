@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2001/04/12 14:53:40 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/08/02 12:46:50 wennmach Exp $
 share/examples/kth-krb4/inetd.conf.changes
 share/examples/kth-krb4/krb.conf
 share/examples/kth-krb4/krb.realms
-share/examples/kth-krb4/services.diff
+share/examples/kth-krb4/services-1.4.2.diff
+share/examples/kth-krb4/services-1.5.diff
 @dirrm share/examples/kth-krb4
 include/acl.h
 include/com_err.h
@@ -17,11 +18,15 @@ include/krb-protos.h
 include/krb-archaeology.h
 include/krb_db.h
 include/ktypes.h
+include/md4.h
+include/md5.h
 include/otp.h
 include/prot.h
+include/sha.h
 include/sl.h
 include/krb_err.h
 include/kadm_err.h
+include/rc4.h
 include/roken.h
 include/roken-common.h
 include/ss/ss.h
@@ -67,6 +72,8 @@ bin/kip
 bin/ftp
 bin/telnet
 libexec/kerberos
+libexec/kip-join-network
+libexec/kipd-control
 libexec/kpropd
 libexec/kprop
 libexec/kadmind
