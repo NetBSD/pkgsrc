@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5222 2004/03/12 00:03:21 snj Exp $
+$NetBSD: CHANGES,v 1.5223 2004/03/12 01:12:00 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ocaml to 3.06nb5 [tron 2004-03-11]
 	Added gramps-1.0.1 [reed 2004-03-11]
 	Added xjump-2.7.5 [snj 2004-03-11]
+	Updated xmms-jakdaw to to 0.0.4nb3 [snj 2004-03-12]
