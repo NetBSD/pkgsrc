@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2004/04/20 10:16:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/02 14:58:39 adrianp Exp $
 #
 
 DISTNAME=	acid-0.9.6b23
 CATEGORIES=	databases www
 MASTER_SITES=	http://www.andrew.cmu.edu/~rdanyliw/snort/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE= 	http://www.andrew.cmu.edu/~rdanyliw/snort/snortacid.html
-COMMENT=	Database class library for PHP4
+COMMENT=	Analysis engine to process a database of security events
 
 DEPENDS+=       ap-php>=4.0.4:../../www/ap-php4
 DEPENDS+=	{apache,6,2}-[0-9]*:../../www/apache
