@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/13 11:30:08 tron Exp $
 
 DISTNAME=	configurator
 PKGNAME=	${BINNAME}-1.2.2
@@ -11,25 +11,27 @@ HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Configuration program for Apple's Airport Base Station
 
 # "jdk" and "kaffe" packages don't work.
-DEPENDS+=	sun-jdk>=1.3.0:../../lang/sun-jdk13
+PKG_JVM=	sun-jdk
+USE_JAVA=	YES
+
+DIST_SUBDIR=	${PKGNAME}
+PLIST_SUBST+=	BINNAME=${BINNAME}
+WRKSRC=		${WRKDIR}
 
 BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
-DIST_SUBDIR=	${PKGNAME}
 LIBDIR=		${PREFIX}/lib/${BINNAME}
-PKG_JVM=	jdk
-PLIST_SUBST+=	BINNAME=${BINNAME}
-USE_JAVA=	YES
-WRKSRC=		${WRKDIR}
 
 post-extract:
 	${CHMOD} -R g-w,o-w ${WRKSRC}/*
 
 do-build:
-	cd ${WRKSRC} && \
-	${ECHO} "#!/bin/sh" >${BINNAME} && \
-	${ECHO} "PATH=${JAVA_HOME}/bin:\$${PATH}; export PATH" >>${BINNAME} && \
-	${ECHO} "exec java -jar ${LIBDIR}/${BINNAME}.jar" >>${BINNAME}
+	${ECHO} "#!/bin/sh" >${WRKSRC}/${BINNAME}
+	${ECHO} "PATH=${JAVA_HOME}/bin:\$${PATH}; export PATH" >>${WRKSRC}/${BINNAME}
+.if defined(CLASSPATH)
+	${ECHO} "CLASSPATH=${CLASSPATH}:\$${CLASSPATH}; export CLASSPATH" >>${WRKSRC}/${BINNAME}
+.endif
+	${ECHO} "exec java -jar ${LIBDIR}/${BINNAME}.jar" >>${WRKSRC}/${BINNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
