@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/10/19 10:54:51 rh Exp $
+# $NetBSD: Makefile,v 1.63 2002/10/21 14:59:59 wiz Exp $
 
 DISTNAME=		libgtop-1.0.12
 PKGREVISION=		3
@@ -8,9 +8,9 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/1.0/}
 MAINTAINER=		tron@netbsd.org
 COMMENT=		library to retrieve system information, used in GNOME
 
+USE_BUILDLINK2=		yes
 USE_PERL5=		build
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
 
 NOT_FOR_PLATFORM=	SunOS-*-*
 OSVERSION_SPECIFIC=	yes
@@ -31,10 +31,7 @@ IGNORE+=		"(More information can be found in libgtop.info.)"
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 
 # The following flags are for debugging purposes.  They don't need to
 # be used unless you are actively developing/debugging libgtop.
@@ -43,9 +40,11 @@ CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 #LDFLAGS+=		-g
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
+CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib} \
 			--with-catgets --with-libgtop-guile=no
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
