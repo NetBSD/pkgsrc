@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/01 19:06:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/03 21:19:53 rh Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gstreamer.net/
 COMMENT=		gstreamer plugins
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+BUILDLINK_DEPENDS.png+=png>=1.2.5nb3	# requires libpng12.pc in 1.2.5nb3+
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
