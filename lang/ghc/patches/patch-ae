@@ -1,34 +1,12 @@
-$NetBSD: patch-ae,v 1.2 2000/06/30 16:29:17 danw Exp $
+$NetBSD: patch-ae,v 1.3 2003/04/29 11:27:44 augustss Exp $
 
---- configure.in.orig	Tue Sep 14 19:03:35 1999
-+++ configure.in	Fri Jun 30 08:04:25 2000
-@@ -138,7 +138,16 @@
-         HostPlatform_CPP='i386_unknown_netbsd'
-         HostArch_CPP='i386'
-         HostVendor_CPP='unknown'
--        HostOS_CPP='netbsd'
-+	if test "$HASKELL_OBJ_FMT" = "a.out"; then
-+		HostOS_CPP='netbsd'
-+	else
-+		if test "$HASKELL_OBJ_FMT" = "ELF"; then
-+			HostOS_CPP='netbsd_elf'
-+		else
-+			echo bad \$HASKELL_OBJ_FMT = "$HASKELL_OBJ_FMT"
-+			exit 1
-+		fi
-+	fi
-         ;;
- i[[3456]]86-*-solaris2*)
- 	HostPlatform=i386-unknown-solaris2 # hack again
-@@ -602,9 +611,9 @@
- dnl ** check for specific library functions that we are interested in
- AC_CHECK_FUNCS(access ftime getclock getpagesize getrusage gettimeofday mktime mprotect readlink setitimer stat symlink sysconf timelocal times vadvise vfork)
+--- ./ghc/compiler/Makefile.orig	Fri Jun 14 10:23:57 2002
++++ ./ghc/compiler/Makefile	Fri Mar 28 23:48:01 2003
+@@ -4,6 +4,7 @@
+ TOP = ..
  
--dnl ** check whether this machine has gmp2 installed
-+dnl ** check whether this machine has gmp installed
- AC_CHECK_LIB(gmp,  mpz_fdiv_qr, HaveLibGmp=YES; LibGmp=gmp,
--  AC_CHECK_LIB(gmp2, mpz_fdiv_qr,  HaveLibGmp=YES; LibGmp=gmp2,
-+  AC_CHECK_LIB(gmp, __gmpz_fdiv_qr,  HaveLibGmp=YES; LibGmp=gmp,
-     HaveLibGmp=No; LibGmp=not-installed))
- AC_SUBST(HaveLibGmp)
- AC_SUBST(LibGmp)
+ # Use GHC for compiling C bits (NB. must be before boilerplate include)
++# NB. this requires BootingFromHc to be set on the make command line!
+ #
+ ifneq "$(BootingFromHc)" "YES"
+ UseGhcForCc = YES
