@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.34 2000/09/26 15:57:05 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.35 2000/10/02 14:32:21 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -17,10 +17,9 @@ $^W = 1;
 use strict;
 use Getopt::Std;
 use File::Find;
-my(	$pkgvars,		# ->{'PACKAGES'}, ->{'PKGSRCDIR'}
-	$pkgdistdir,		# Distfiles directory
+my(	$pkgdistdir,		# Distfiles directory
 	%pkg,			# pkgname ->{'restricted'} and ->{'ver'}
-	%default_makefile_vars,	# Default vars set for Makefiles
+	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
 	%opt,			# Command line options
 	@old_prebuiltpackages,	# List of obsolete prebuilt package paths
 	@prebuilt_pkgdirs,	# Use to follow symlinks in prebuilt pkgdirs
@@ -36,7 +35,7 @@ if (! &getopts('DK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
     { &usage_and_exit; }
 $| = 1;
 
-%default_makefile_vars = &get_default_makefile_vars;
+&get_default_makefile_vars; # $default_vars
 
 if ($opt{'D'} && @ARGV)
     {
@@ -60,17 +59,15 @@ if ($opt{'D'} && @ARGV)
 
 # main
     {
-    my($pkglint_flags);
+    my($pkglint_flags, $pkgsrcdir);
 
+    $pkgsrcdir = $default_vars->{'PKGSRCDIR'};
     $pkglint_flags = '-v';
-    $pkgvars = &parse_mk_conf();
-    if ($opt{'P'})
-	{ $pkgvars->{'PKGSRCDIR'} = $opt{'P'}; }
 
     if ($opt{'M'})
 	{ $pkgdistdir = $opt{'M'}; } # override distfile dir
     else
-	{ $pkgdistdir = "$pkgvars->{'PKGSRCDIR'}/distfiles"; } # default
+	{ $pkgdistdir = "$pkgsrcdir/distfiles"; } # default
 
 
     if ($opt{'r'} && !$opt{'o'} && !$opt{'m'} && !$opt{'p'})
@@ -79,7 +76,7 @@ if ($opt{'D'} && @ARGV)
 	{
 	my(@baddist);
 
-	@baddist = &scan_pkgsrc_distfiles_vs_md5($pkgvars->{'PKGSRCDIR'},
+	@baddist = &scan_pkgsrc_distfiles_vs_md5($pkgsrcdir,
 							$opt{'o'}, $opt{'m'});
 	if ($opt{'r'})
 	    {
@@ -95,10 +92,8 @@ if ($opt{'D'} && @ARGV)
     if ($opt{'p'} || $opt{'R'})
 	{
 	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgvars->{'PKGSRCDIR'}); }
-	if ($opt{'K'})
-	    { $pkgvars->{'PACKAGES'} = $opt{'K'}; }
-	@prebuilt_pkgdirs = ($pkgvars->{'PACKAGES'});
+	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	@prebuilt_pkgdirs = ($default_vars->{'PACKAGES'});
 	while (@prebuilt_pkgdirs)
 	    { find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs); }
 	if ($opt{'r'})
@@ -112,7 +107,7 @@ if ($opt{'D'} && @ARGV)
     if ($opt{'d'})
 	{
 	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgvars->{'PKGSRCDIR'}); }
+	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
 	&pkgsrc_check_depends;
 	}
     if ($opt{'i'} || $opt{'u'})
@@ -121,7 +116,7 @@ if ($opt{'D'} && @ARGV)
 
 	@pkgs = &list_installed_packages;
 	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgvars->{'PKGSRCDIR'}); }
+	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
 	foreach $pkg ( @pkgs )
 	    {
 	    if ( $_ = &invalid_version($pkg) )
@@ -141,14 +136,14 @@ if ($opt{'D'} && @ARGV)
 
 		if (!defined($pkgdir))
 		    { &fail("Unable to determine directory for '$pkg'"); }
-		print "$pkgvars->{'PKGSRCDIR'}/$pkgdir\n";
-		safe_chdir("$pkgvars->{'PKGSRCDIR'}/$pkgdir");
+		print "$pkgsrcdir/$pkgdir\n";
+		safe_chdir("$pkgsrcdir/$pkgdir");
 		system('make fetch-list | sh');
 		}
 	    }
 	}
     if ($opt{'l'})
-	{ &pkglint_all_pkgsrc($pkgvars->{'PKGSRCDIR'}, $pkglint_flags); }
+	{ &pkglint_all_pkgsrc($pkgsrcdir, $pkglint_flags); }
     }
 exit;
 
@@ -229,16 +224,32 @@ sub fail
 
 sub get_default_makefile_vars
     {
-    my(%vars);
-
     chomp($_ = `uname -srmp`);
-    ( $vars{'OPSYS'},
-	$vars{'OS_VERSION'},
-	$vars{'MACHINE_ARCH'},
-	$vars{'MACHINE'} ) = (split);
-    $vars{'EXTRACT_SUFX'} = 'tar.gz';
-    $vars{'OBJECT_FMT'} = 'x';
-    %vars;
+    ( $default_vars->{'OPSYS'},
+	$default_vars->{'OS_VERSION'},
+	$default_vars->{'MACHINE_ARCH'},
+	$default_vars->{'MACHINE'} ) = (split);
+    $default_vars->{'EXTRACT_SUFX'} = 'tar.gz';
+    $default_vars->{'OBJECT_FMT'} = 'x';
+    $default_vars->{'LOWER_OPSYS'} = lc($default_vars->{'OPSYS'});
+
+    if ($opt{'P'})
+	{ $default_vars->{'PKGSRCDIR'} = $opt{'P'}; }
+    else
+	{ $default_vars->{'PKGSRCDIR'} = '/usr/pkgsrc'; }
+
+    $default_vars->{'PKGSRCDIR'} = '/usr/pkgsrc';
+
+    my($vars);
+    if (-f '/etc/mk.conf' && ($vars = &parse_makefile_vars('/etc/mk.conf')))
+	{ $default_vars = $vars; }
+
+    if ($opt{'P'})
+	{ $default_vars->{'PKGSRCDIR'} = $opt{'P'}; }
+
+    if ($opt{'K'})
+	{ $default_vars->{'PACKAGES'} = $opt{'K'}; }
+    $default_vars->{'PACKAGES'} ||= $default_vars->{'PKGSRCDIR'}.'/packages';
     }
 
 # Determine if a package version is current. If not, report correct version
@@ -518,7 +529,7 @@ sub parse_makefile_vars
     close(FILE);
 
     # Some Makefiles depend on these being set
-    %vars = %default_makefile_vars;
+    %vars = %{$default_vars};
     if ($file =~ m#(.*)/#)
 	{ $vars{'.CURDIR'} = $1; }
     if ($opt{'L'})
@@ -901,20 +912,6 @@ sub scan_pkgsrc_distfiles_vs_md5
 	close(MD5);
 	}
     @bad_distfiles;
-    }
-
-sub parse_mk_conf # Parse /etc/mk.conf (if present) for PKGSRCDIR and PACKAGES
-    {
-    my($vars);
-
-    if (! -f '/etc/mk.conf' || !($vars = &parse_makefile_vars('/etc/mk.conf')))
-	{
-	my(%emptyvars);
-	$vars = \%emptyvars;
-	}
-    $vars->{'PKGSRCDIR'} ||= '/usr/pkgsrc';
-    $vars->{'PACKAGES'} ||= "$vars->{'PKGSRCDIR'}/packages";
-    $vars;
     }
 
 # Remember to update manual page when modifying option list
