@@ -1,5 +1,11 @@
-# $NetBSD: ld-post-logic,v 1.1.2.1 2003/08/14 13:16:50 jlam Exp $
-
+# $NetBSD: ld-post-logic,v 1.1.2.2 2003/08/16 07:26:51 jlam Exp $
+#
+# Strip the "-Wl," from arguments that start with that prefix and add
+# the result to the "ld" private cache (which is read before the
+# common cache).  This makes "ld" silently accept "-Wl,*" arguments,
+# which are often a part of the LDFLAGS setting in pkgsrc, and allows
+# such LDFLAGS to be shared between the compiler and the linker.
+#
 case $arg in
 -Wl,*)
 	arg=`$echo "X$arg" | $Xsed -e "s|^-Wl,||g" -e "s|,| |g"`
