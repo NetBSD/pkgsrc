@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/08/11 06:04:28 rh Exp $
+
+--- faxd/UUCPLock.c++.orig	Sat Feb 14 11:49:38 1998
++++ faxd/UUCPLock.c++	Mon Apr 12 17:53:07 1999
+@@ -37,6 +37,7 @@
+ }
+ #endif
+ #include <pwd.h>
++#include <grp.h>
+ 
+ /*
+  * UUCP Device Locking Support.
+@@ -146,8 +147,13 @@
+ 	if (!pwd)
+ 	    faxApp::fatal("Can not deduce identity of UUCP");
+ 	UUCPuid = pwd->pw_uid;
+-	UUCPgid = pwd->pw_gid;
+ 	endpwent();			// paranoia
++
++	const group *grp = getgrnam(FAX_GROUP);
++	if (!grp)
++	    faxApp::fatal("Can not deduce group identity of '" FAX_GROUP "'");
++	UUCPgid = grp->gr_gid;
++	endgrent();			// paranoia
+     }
+ }
+ uid_t UUCPLock::getUUCPUid() { setupIDs(); return UUCPuid; }

@@ -1,0 +1,177 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/11 06:04:28 rh Exp $
+
+--- configure.orig	Thu Jul  1 12:30:54 1999
++++ configure	Tue Aug 10 16:53:18 1999
+@@ -37,21 +37,19 @@
+ #
+ # Setup general configuration parameters.
+ #
+-DIR_BIN=/usr/local/bin
+-DIR_SBIN=/usr/local/sbin
+-DIR_LIBDATA=/usr/local/lib/fax
+-DIR_LIBEXEC=$DIR_SBIN
++DIR_BIN=${PREFIX}/bin
++DIR_SBIN=${PREFIX}/sbin
++DIR_LIBDATA=${PREFIX}/libdata/hylafax
++DIR_LIBEXEC=${PREFIX}/libexec
+ DIR_SPOOL=/var/spool/fax
+-DIR_HTML=/var/httpd/htdocs/hylafax
+-DIR_CGI=/var/httpd/cgi-bin
++DIR_HTML=${PREFIX}/http/htdocs/hylafax
++DIR_CGI=${PREFIX}/http/cgi-bin
+ PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
+-PATH_IMPRIP=/usr/lib/print/psrip
++PATH_IMPRIP=${PREFIX}/lib/print/psrip
+ HTMLPATH=/hylafax
+ CGIPATH=/cgi-bin
+ DEFVRES=98
+ PAGESIZE="North American Letter"
+-FAXUID=uucp
+-FAXGID=
+ SYSUID=bin
+ SYSGID=
+ DSO=auto
+@@ -67,18 +65,18 @@
+ GS=no
+ IMP=no
+ UTMP=auto
+-LIBTIFF="-L/usr/local/lib -ltiff"
+-TIFFINC=/usr/local/include
++LIBTIFF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltiff -ljpeg -lz -lm"
++TIFFINC=${PREFIX}/include
+ TIFFBIN=
+-ZLIB=yes
+-LIBZ='-L${DEPTH}/zlib -lz'
+-ZLIBINC='${DEPTH}/${TOPSRCDIR}/zlib'
++ZLIB=no
++LIBZ='-lz'
++ZLIBINC='/usr/include'
+ REGEX=yes
+ LIBREGEX='-L${DEPTH}/regex -lregex'
+ REGEXINC='${DEPTH}/${TOPSRCDIR}/regex'
+ DBLIB=no
+-LIBDB="-L/usr/local/lib -ldb"
+-DBLIBINC=/usr/local/include
++LIBDB="-L${PREFIX}/lib -ldb"
++DBLIBINC=${PREFIX}/include
+ CONFIG_OSFCNH=auto
+ 
+ # SVR4 packaging stuff
+@@ -195,6 +193,7 @@
+ PKG_VENDOR
+ PORT
+ PORTFUNCS
++PREFIX
+ PSPACKAGE	PS
+ REGEX
+ RM		RMCMD
+@@ -247,7 +246,7 @@
+ test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
+ test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
+ test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
+-test -d /usr/local/bin && PATH=/usr/local/bin:$PATH	# for GNU stuff
++test -d ${PREFIX}/bin && PATH=${PREFIX}/bin:$PATH	# for packages stuff
+ PATH=$PATH:$OPATH
+ 
+ POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
+@@ -617,6 +616,7 @@
+ {
+     echo `(for i do
+ 	case "$i" in
++	-Wl*)			echo "$i" ;;
+ 	/*|-l*|-l[$]{DEPTH}/*)	echo "$i" ;;
+ 	-L|-L/*|-L[$]{DEPTH}/*)	echo "$i" ;;
+ 	-I|-I/*|-I[$]{DEPTH}/*)	echo "$i" ;;
+@@ -2809,7 +2809,7 @@
+ # Location of TIFF binaries
+ #
+ if [ -z "$TIFFBIN" ]; then
+-    DIRS="/usr/local/bin /usr/contrib/bin /usr/gnu/bin /usr/bin"
++    DIRS="${PREFIX}/bin /usr/local/bin /usr/gnu/bin /usr/bin"
+     for i in $DIRS; do
+         test -x $i/tiff2ps && { TIFFBIN=$i; break; }
+     done
+@@ -3385,7 +3385,7 @@
+ if [ -z "$PATH_VGETTY" ]; then
+     PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
+     if [ -z "$PATH_VGETTY" ]; then
+-	PATH_VGETTY=/bin/vgetty
++	PATH_VGETTY=${PREFIX}/bin/vgetty
+ 	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
+     else
+ 	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
+@@ -3398,7 +3398,7 @@
+ if [ -z "$PATH_EGETTY" ]; then
+     PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
+     if [ -z "$PATH_EGETTY" ]; then
+-	PATH_EGETTY=/bin/egetty
++	PATH_EGETTY=${PREFIX}/bin/egetty
+ 	Note "WARNING, no egetty program found, using $PATH_EGETTY."
+     else
+ 	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
+@@ -3468,6 +3468,7 @@
+ {
+     if [ -z "$PATH_GSRIP" ]; then
+ 	GSLOCS="
++	    ${PREFIX}/bin/gs
+ 	    /usr/local/bin/gs
+ 	    /usr/contrib/bin/gs
+ 	    /usr/gnu/bin/gs
+@@ -3515,7 +3516,7 @@
+ on building Ghostscript with the necessary TIFF driver.
+ 
+ EOF
+-	PATH_PSRIP=/usr/local/bin/gs
++	PATH_PSRIP=${PREFIX}/bin/gs
+ 	PATH_GSRIP=$PATH_PSRIP
+     fi
+ }
+@@ -3578,9 +3579,9 @@
+     else
+         DIR_AFMS="
+ 	    /usr/lib/afm
+-	    /usr/local/lib/afm
+-	    /usr/local/share/ghostscript/fonts
+-	    /usr/local/lib/ghostscript/fonts
++	    ${PREFIX}/lib/afm
++	    ${PREFIX}/share/ghostscript/fonts
++	    ${PREFIX}/lib/ghostscript/fonts
+ 	    /usr/share/ghostscript/fonts
+ 	    /usr/gnu/lib/ghostscript/fonts
+ 	    /opt/gnu/lib/ghostscript/fonts
+@@ -3600,7 +3601,7 @@
+ fi
+ if [ -z "$PATH_AFM" ]; then
+     # put it where ghostscript normally puts things
+-    PATH_AFM=/usr/local/lib/ghostscript/fonts
++    PATH_AFM=${PREFIX}/share/ghostscript/fonts
+     Note "WARNING, could not locate a directory with font metric information,"
+     Note "guessing that font metric information goes in $PATH_AFM."
+ else
+@@ -3619,6 +3620,7 @@
+ #
+ if [ -z "$DIR_MAN" ]; then
+     MANPATH="
++	${PREFIX}/man
+ 	$MANPATH
+ 	/usr/local/man
+ 	/usr/contrib/man
+@@ -3628,7 +3630,7 @@
+     for i in $MANPATH; do
+ 	test -d $i && { DIR_MAN=$i; break; }
+     done
+-    test -z "$DIR_MAN" && DIR_MAN=/usr/local/man
++    test -z "$DIR_MAN" && DIR_MAN=${PREFIX}/man
+ fi
+ Note "Looks like manual pages go in $DIR_MAN."
+ if [ -z "$MANSCHEME" ]; then
+@@ -4015,7 +4017,8 @@
+ 	printConfig
+ 	checkForExecutable $PATH_SENDMAIL
+ 	checkForExecutable $PATH_GETTY
+-	prompt "Are these ok [yes]?"; read ok
++#	prompt "Are these ok [yes]?"; read ok
++	ok=yes
+ 	test -z "$ok" && ok=yes
+ 	case "$ok" in
+ 	[1-9]|1[0-6])	promptForParameter $ok;;
