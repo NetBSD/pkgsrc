@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/12/30 13:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/01/05 21:15:15 tv Exp $
 #
 
-DISTNAME=	pkgconflict-0.3.1
+DISTNAME=	pkgconflict-0.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,22 +9,29 @@ DISTFILES=	# empty
 MAINTAINER=	wennmach@NetBSD.org
 COMMENT=	Scripts to find conflicting packages in pkgsrc
 
-DEPENDS+=	postgresql73>=7.0:../../databases/postgresql73
-
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+USE_BUILDLINK3=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=	-I${PGSQL_PREFIX}/include/postgresql/server
 
 post-extract:
-	@for FILE in Makefile dewey_cmp.c pkgconflict pkgdbextract            \
-	; do                                                                  \
-		${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/$$FILE          \
-		    >${WRKSRC}/$$FILE;                                        \
+	@for f in dewey_cmp.c pkgconflict pkgdbextract; do \
+		${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/$$f >${WRKSRC}/$$f; \
 	done
 
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/dewey_cmp.so ${PREFIX}/lib
-	${INSTALL_SCRIPT} ${WRKSRC}/pkgconflict ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/pkgdbextract ${PREFIX}/bin
+do-build:
+	cd ${WRKSRC} && ${COMPILE.c} -fPIC dewey_cmp.c
+	cd ${WRKSRC} && ${LINK.c} -shared -o dewey_cmp.so dewey_cmp.o
 
+do-install:
+	${INSTALL_LIB} ${WRKSRC}/dewey_cmp.so ${PREFIX}/lib/postgresql/
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgconflict ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgdbextract ${PREFIX}/bin/
+
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
