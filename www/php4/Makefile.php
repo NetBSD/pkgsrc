@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.php,v 1.14 2004/07/13 12:34:33 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.15 2004/07/14 08:03:16 jdolecek Exp $
 
 .include "../../www/php4/Makefile.common"
 
-# revision of the core PHP interepreter
-PKGREVISION=		1
+# revision of the core PHP interepreter package
+PKGREVISION=		# empty
 
 DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
 PATCHDIR=			${.CURDIR}/../../www/php4/patches
