@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/20 19:28:52 minskim Exp $
 #
 
 DISTNAME=	tclX8.2.0
 PKGNAME=	tcl-tclX-8.2.0
+PKGREVISION=	1
 CATEGORIES=	lang tcl
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://www.neosoft.com/TclX/
+HOMEPAGE=	http://tclx.sourceforge.net/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 
 CONFLICTS+=	tclX-[0-9]*
@@ -16,20 +17,30 @@ WRKSRC=			${WRKDIR}/tclX8.2.0/unix
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib --enable-tk=NO
+CONFIGURE_ARGS+=	--enable-shared \
+			--with-tcl=${BUILDLINK_PREFIX.tcl}/lib \
+			--enable-tk=NO
 TEST_TARGET=		test
 
-CONFIGURE_ENV+=		\
-	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4"
+PKGSRC_TCL_SRC_DIR=	${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.6
+CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR="${PKGSRC_TCL_SRC_DIR}"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
 			SHAREGRP=${SHAREGRP}
 
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing Tcl library names."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	${WRKSRC}/../tcl/unix/Makefile.in
+SUBST_SED.paths=	-e 's,ltcl83,ltcl,g'
+
+.include "../../lang/tcl/buildlink2.mk"
+
 post-extract:
 	@${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
-	@if [ ! -e ${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4 ]; then	\
-		cd ../../lang/tcl83 && ${MAKE} extract;			\
+	@if [ ! -e ${PKGSRC_TCL_SRC_DIR} ]; then	\
+		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
 
 post-build:
@@ -45,7 +56,6 @@ post-install:
 # so...
 
 pre-clean:
-	@cd ../../lang/tcl83 && ${MAKE} clean
+	@cd ../../lang/tcl && ${MAKE} clean
 
-.include "../../lang/tcl83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

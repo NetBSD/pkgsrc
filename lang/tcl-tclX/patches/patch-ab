@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/09/06 16:40:05 jwise Exp $
+$NetBSD: patch-ab,v 1.2 2004/03/20 19:28:52 minskim Exp $
 --- ../tcl/unix/Makefile.in.orig	Sun Feb  6 19:53:59 2000
 +++ ../tcl/unix/Makefile.in	Tue Sep  5 19:23:03 2000
 @@ -142,30 +142,23 @@
@@ -73,7 +73,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/09/06 16:40:05 jwise Exp $
 +	-${BSD_INSTALL_DATA_DIR}  ${INSTALL_ROOT}${TCLX_INST_RUNTIME}
 +	${BSD_INSTALL_DATA} ${TCLX_GENERIC_DIR}/tclExtend.h ${INSTALL_ROOT}${TCLX_INST_INCL}
 +	${BSD_INSTALL_DATA} ${TCLX_UNIX_SRC_DIR}/tclXAppInit.c ${INSTALL_ROOT}${TCLX_INST_RUNTIME}
-+	${BSD_INSTALL_DATA_DIR} ${HELP_DIR} ${INSTALL_ROOT}${TCLX_INST_RUNTIME}/help
++	${BSD_INSTALL_DATA_DIR} ${INSTALL_ROOT}${TCLX_INST_RUNTIME}/help
 +	cd ${HELP_DIR} && ${GTAR} cf - . | (cd ${INSTALL_ROOT}${TCLX_INST_RUNTIME}/help && ${GTAR} xf -)
 +	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTALL_ROOT}${TCLX_INST_RUNTIME}/help
  
