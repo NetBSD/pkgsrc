@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.12 2001/06/06 19:41:05 hubertf Exp $
+$NetBSD: README,v 1.13 2001/12/03 21:33:56 agc Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -46,8 +46,10 @@ but will not affect the retreived source sets in pkgsrc/distfiles.
 
 + You can set variables to customise the behaviour (where packages are
 installed, various options for individual packages etc), by setting
-variables in /etc/mk.conf.  The pkgsrc/mk/mk.conf.example file
-provides some examples for customisation.
+variables in /etc/mk.conf.  The pkgsrc/mk/bsd.pkg.defaults.mk gives
+the defaults which are used in pkgsrc.  This file can be used as a
+guide to set values in /etc/mk.conf - it is only necessary to set
+values where they differ from the defaults.
 
 The best way to find out what packages are in the collection is to
 move to the top-level pkgsrc directory (this will usually be
