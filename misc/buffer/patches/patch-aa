@@ -1,25 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1998/08/07 11:10:09 agc Exp $
+$NetBSD: patch-aa,v 1.6 1999/09/12 16:50:41 kim Exp $
 
---- buffer.c.orig	Wed Jul 14 17:59:17 1993
-+++ buffer.c	Wed Mar  4 16:32:52 1998
-@@ -384,6 +384,7 @@
- }
- 
- /* The interrupt handler */
-+void
- shutdown()
- {
- 	static int shutting;
-@@ -400,6 +401,7 @@
- }
- 
- /* Shutdown because the child has ended */
-+void
- child_shutdown()
- {
- 	/* Find out which child has died.  (They may not be my
---- Makefile.orig	Wed Jul 14 17:59:17 1993
-+++ Makefile	Fri Apr 10 23:31:14 1998
+--- Makefile.orig	Wed Jul 14 11:59:17 1993
++++ Makefile	Sun Sep 12 12:35:57 1999
 @@ -4,13 +4,13 @@
  #   You should also add -DSYS5 for Ultrix, AIX, and Solarix.
  # Add -DDEF_SHMEM=n if you can only have n bytes of shared memory
