@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/12/16 20:56:20 mjl Exp $
+# $NetBSD: Makefile,v 1.5 1999/12/16 22:03:12 mjl Exp $
 #
 
 DISTNAME=	sp-1.3.4
@@ -19,10 +19,11 @@ CONFLICTS+=	jade-*
 MAKE_ENV+=	INSTALL="${INSTALL}"
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/sp ${PREFIX}/share/sp/dtd
+	${MKDIR} ${PREFIX}/share/doc/sp ${PREFIX}/share/sgml/dtd
 	cd ${WRKSRC}/doc; for n in *.htm ; do ${INSTALL_DATA} $$n ${PREFIX}/share/doc/sp/$n ; done
-	cd ${WRKSRC}/pubtext; for n in * ; do ${INSTALL_DATA} $$n ${PREFIX}/share/sp/dtd/$n ; done
-	${ECHO} "CATALOG ${PREFIX}/share/sp/dtd/html.soc" > ${PREFIX}/share/sp/catalog
+	cd ${WRKSRC}/pubtext; for n in * ; do ${INSTALL_DATA} $$n ${PREFIX}/share/sgml/dtd/$n ; done
+	cd ${WRKSRC}/lib; ${INSTALL_DATA} libsp.a ${PREFIX}/lib/libsp.a
+	${ECHO} "CATALOG ${PREFIX}/share/sgml/dtd/html.soc" > ${PREFIX}/share/sgml/catalog
 
 .include "../../mk/bsd.prefs.mk"
 

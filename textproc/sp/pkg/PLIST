@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/13 13:57:40 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/12/16 22:03:14 mjl Exp $
 bin/nsgmls
 bin/sx
 bin/spam
 bin/sgmlnorm
 bin/spent
+lib/libsp.a
 share/doc/sp/archform.htm
 share/doc/sp/build.htm
 share/doc/sp/catalog.htm
@@ -23,27 +24,27 @@ share/doc/sp/sx.htm
 share/doc/sp/sysdecl.htm
 share/doc/sp/sysid.htm
 share/doc/sp/xml.htm
-share/sp/dtd/HTML32.dcl
-share/sp/dtd/HTML32.dtd
-share/sp/dtd/HTML32.soc
-share/sp/dtd/HTML4-f.dtd
-share/sp/dtd/HTML4-s.dtd
-share/sp/dtd/HTML4.dcl
-share/sp/dtd/HTML4.dtd
-share/sp/dtd/HTMLlat1.ent
-share/sp/dtd/HTMLspec.ent
-share/sp/dtd/HTMLsym.ent
-share/sp/dtd/ISOlat1.ent
-share/sp/dtd/ISOlat1.sgm
-share/sp/dtd/html-1.dtd
-share/sp/dtd/html-1s.dtd
-share/sp/dtd/html-s.dtd
-share/sp/dtd/html.dcl
-share/sp/dtd/html.dtd
-share/sp/dtd/html.soc
-share/sp/dtd/xml.dcl
-share/sp/dtd/xml.soc
-share/sp/catalog
-@dirrm share/sp/dtd
+share/sgml/dtd/HTML32.dcl
+share/sgml/dtd/HTML32.dtd
+share/sgml/dtd/HTML32.soc
+share/sgml/dtd/HTML4-f.dtd
+share/sgml/dtd/HTML4-s.dtd
+share/sgml/dtd/HTML4.dcl
+share/sgml/dtd/HTML4.dtd
+share/sgml/dtd/HTMLlat1.ent
+share/sgml/dtd/HTMLspec.ent
+share/sgml/dtd/HTMLsym.ent
+share/sgml/dtd/ISOlat1.ent
+share/sgml/dtd/ISOlat1.sgm
+share/sgml/dtd/html-1.dtd
+share/sgml/dtd/html-1s.dtd
+share/sgml/dtd/html-s.dtd
+share/sgml/dtd/html.dcl
+share/sgml/dtd/html.dtd
+share/sgml/dtd/html.soc
+share/sgml/dtd/xml.dcl
+share/sgml/dtd/xml.soc
+share/sgml/catalog
+@dirrm share/sgml/dtd
+@dirrm share/sgml
 @dirrm share/doc/sp
-@dirrm share/sp
