@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.2 2001/06/13 20:48:02 jlam Exp $
+$NetBSD: patch-af,v 1.3 2001/07/25 19:42:58 jlam Exp $
 
---- tcl.m4.orig	Tue Aug  8 15:17:11 2000
+--- tcl.m4.orig	Tue Aug  8 12:17:11 2000
 +++ tcl.m4
 @@ -595,6 +595,7 @@
  
@@ -10,7 +10,14 @@ $NetBSD: patch-af,v 1.2 2001/06/13 20:48:02 jlam Exp $
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -794,24 +795,29 @@
+@@ -790,28 +791,36 @@
+ 	    LD_SEARCH_FLAGS=""
+ 	    ;;
+ 	NetBSD-*|FreeBSD-[[1-2]].*|OpenBSD-*)
++	    if test "X${COMPILER_OPTIMIZATION_BUG}" = "XYES"; then
++		CFLAGS_OPTIMIZE=-O0
++	    fi
+ 	    # Not available on all versions:  check for include file.
  	    AC_CHECK_HEADER(dlfcn.h, [
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"

@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
+$NetBSD: patch-ab,v 1.11 2001/07/25 19:42:58 jlam Exp $
 
---- configure.orig	Tue Aug  8 15:17:11 2000
-+++ configure	Wed Jun 13 12:03:27 2001
+--- configure.orig	Tue Aug  8 12:17:11 2000
++++ configure
 @@ -4766,6 +4766,7 @@
  
      do64bit_ok=no
@@ -10,7 +10,34 @@ $NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -5065,17 +5066,15 @@
+@@ -5033,20 +5034,23 @@
+ 	    LD_SEARCH_FLAGS=""
+ 	    ;;
+ 	NetBSD-*|FreeBSD-[1-2].*|OpenBSD-*)
++	    if test "X${COMPILER_OPTIMIZATION_BUG}" = "XYES"; then
++		CFLAGS_OPTIMIZE=-O0
++	    fi
+ 	    # Not available on all versions:  check for include file.
+ 	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
+-echo "configure:5040: checking for dlfcn.h" >&5
++echo "configure:5044: checking for dlfcn.h" >&5
+ if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   cat > conftest.$ac_ext <<EOF
+-#line 5045 "configure"
++#line 5049 "configure"
+ #include "confdefs.h"
+ #include <dlfcn.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:5050: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++{ (eval echo configure:5054: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+ if test -z "$ac_err"; then
+   rm -rf conftest*
+@@ -5065,17 +5069,15 @@
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -23,14 +50,14 @@ $NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
 -		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  		echo $ac_n "checking for ELF""... $ac_c" 1>&6
 -echo "configure:5077: checking for ELF" >&5
-+echo "configure:5076: checking for ELF" >&5
++echo "configure:5079: checking for ELF" >&5
  		cat > conftest.$ac_ext <<EOF
 -#line 5079 "configure"
-+#line 5078 "configure"
++#line 5081 "configure"
  #include "confdefs.h"
  
  #ifdef __ELF__
-@@ -5086,11 +5085,20 @@
+@@ -5086,11 +5088,20 @@
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -53,16 +80,7 @@ $NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
  		
  fi
-@@ -5752,7 +5760,7 @@
- 
- 
-     echo $ac_n "checking how to build libraries""... $ac_c" 1>&6
--echo "configure:5756: checking how to build libraries" >&5
-+echo "configure:5764: checking how to build libraries" >&5
-     # Check whether --enable-shared or --disable-shared was given.
- if test "${enable_shared+set}" = set; then
-   enableval="$enable_shared"
-@@ -5789,7 +5797,7 @@
+@@ -5789,7 +5800,7 @@
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
      else
@@ -71,7 +89,7 @@ $NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
  	RANLIB=":"
      fi
  else
-@@ -5829,7 +5837,7 @@
+@@ -5829,7 +5840,7 @@
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -80,7 +98,7 @@ $NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -5859,9 +5867,9 @@
+@@ -5859,9 +5870,9 @@
  #--------------------------------------------------------------------
  
  if test "$prefix" != "$exec_prefix"; then
@@ -92,7 +110,7 @@ $NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
  fi
  
  #--------------------------------------------------------------------
-@@ -5943,6 +5951,8 @@
+@@ -5943,6 +5954,8 @@
  
  
  
@@ -101,7 +119,7 @@ $NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
  trap '' 1 2 15
  cat > confcache <<\EOF
  # This file is a shell script that caches the results of configure
-@@ -6106,6 +6116,8 @@
+@@ -6106,6 +6119,8 @@
  s%@TCL_STUB_LIB_PATH@%$TCL_STUB_LIB_PATH%g
  s%@MAKE_STUB_LIB@%$MAKE_STUB_LIB%g
  s%@BUILD_DLTEST@%$BUILD_DLTEST%g
