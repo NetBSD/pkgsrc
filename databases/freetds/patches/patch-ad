@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2004/05/23 18:23:51 danw Exp $
+
+--- src/replacements/Makefile.in.orig	Sat Aug  2 11:24:35 2003
++++ src/replacements/Makefile.in
+@@ -138,7 +138,7 @@ tds_sysdep_int64_type = @tds_sysdep_int6
+ tds_sysdep_real32_type = @tds_sysdep_real32_type@
+ tds_sysdep_real64_type = @tds_sysdep_real64_type@
+ noinst_LTLIBRARIES = libreplacements.la
+-libreplacements_la_SOURCES = 
++libreplacements_la_SOURCES = dummy.c
+ libreplacements_la_LDFLAGS = 
+ libreplacements_la_LIBADD = @LTLIBOBJS@
+ INCLUDES = -I$(top_srcdir)/include
+@@ -150,7 +150,7 @@ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+ libreplacements_la_DEPENDENCIES = @LTLIBOBJS@
+-am_libreplacements_la_OBJECTS =
++am_libreplacements_la_OBJECTS = dummy.lo
+ libreplacements_la_OBJECTS = $(am_libreplacements_la_OBJECTS)
+ 
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)/include
