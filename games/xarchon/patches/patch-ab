@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2003/12/20 01:51:34 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 2005/02/22 16:35:55 wiz Exp $
 
---- configure.orig	Wed Jan  9 19:34:33 2002
+--- configure.orig	2002-01-09 19:34:33.000000000 +0100
 +++ configure
 @@ -4458,13 +4458,13 @@ QT_INCLUDES="-I $qtdir/include"
  QT_LDFLAGS="-L $qtdir/lib"
@@ -19,7 +19,15 @@ $NetBSD: patch-ab,v 1.6 2003/12/20 01:51:34 hubertf Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line 4469 "configure"
  #include "confdefs.h"
-@@ -4552,7 +4552,7 @@ fi
+@@ -4507,6 +4507,7 @@ LIBS=$ac_check_lib_save_LIBS
+ fi
+ echo "$as_me:4508: result: $ac_cv_lib_qt_qVersion__Fv" >&5
+ echo "${ECHO_T}$ac_cv_lib_qt_qVersion__Fv" >&6
++ac_cv_lib_qt_qVersion__Fv=yes
+ if test $ac_cv_lib_qt_qVersion__Fv = yes; then
+ 
+   # Extract the first word of "moc", so it can be a program name with args.
+@@ -4552,7 +4553,7 @@ fi
  echo "$as_me: WARNING: Moc is missing;  the Qt interface will not be built" >&2;}
  
    else
