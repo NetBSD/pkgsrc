@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.8 2004/04/27 18:33:52 tv Exp $
+# $NetBSD: DEINSTALL,v 1.9 2004/04/30 19:44:21 tv Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -27,9 +27,12 @@ VIEW-DEINSTALL)
 	   ${CMP} -s ${X11_HOSTDEF} ${HOSTDEF}; then
 		${RM} -f ${HOSTDEF}
 	fi
-	case ${X11BASE} in
-	*openwin)
+	case `uname`:${X11BASE} in
+	*:*openwin)
 		${RM} -f ${SITEDEF} ${SV4LIB}
+		;;
+	Interix:/usr/X11R6)
+		${RM} -f ${SITEDEF}
 		;;
 	esac
 	${ECHO} "done."

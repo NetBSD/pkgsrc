@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2004/02/02 10:08:43 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2004/04/30 19:44:21 tv Exp $
 
-DISTNAME=	xpkgwedge-1.9
+DISTNAME=	xpkgwedge-1.10
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
