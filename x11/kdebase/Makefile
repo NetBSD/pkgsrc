@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/22 14:22:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
@@ -13,15 +13,10 @@ EXTRACT_SUFX=	.src.tar.gz
 MAINTAINER=	packages@netbsd.org
 
 BUILD_DEPENDS=	moc:${PORTSDIR}/x11/qt
-LIB_DEPENDS=	qt.1.3[0-9]:${PORTSDIR}/x11/qt \
-		gif.[23].:${PORTSDIR}/graphics/giflib \
-		jpeg.[67].:${PORTSDIR}/graphics/jpeg \
-		kdecore.0.9[0-9]:${PORTSDIR}/x11/kdelibs \
-		kdeui.0.9[0-9]:${PORTSDIR}/x11/kdelibs \
-		jscript.0.9[0-9]:${PORTSDIR}/x11/kdelibs \
-		khtmlw.0.9[0-9]:${PORTSDIR}/x11/kdelibs \
-		kfm.0.9[0-9]:${PORTSDIR}/x11/kdelibs \
-		mediatool.0.9[0-9]:${PORTSDIR}/x11/kdelibs
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	qt-1.33:../../x11/qt
+DEPENDS+=	kdelibs-3.1b:../../x11/kdelibs
+DEPENDS+=	giflib-3.0:../../graphics/giflib
 
 USE_X11=	yes
 HAS_CONFIGURE=	yes

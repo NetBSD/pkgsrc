@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/04/20 11:56:36 frueauf Exp $
+# $NetBSD: Makefile,v 1.14 1998/04/22 14:22:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.sunlabs.com/pub/tcl/
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=	tcl80.1.:${PORTSDIR}/lang/tcl80
+DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 
 WRKSRC=		${WRKDIR}/tk8.0/unix
 GNU_CONFIGURE=	yes

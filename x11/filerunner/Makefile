@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:53 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:48 agc Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	X11/desktop
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=	tk80.1:${PORTSDIR}/x11/tk80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 USE_X11=	yes
 

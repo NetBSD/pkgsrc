@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/17 09:37:24 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/04/22 14:22:41 agc Exp $
 
 DISTNAME=	gimp-0.99.26
 CATEGORIES=	graphics
@@ -11,12 +11,12 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 
-LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg \
-		mpeg.1.2:${PORTSDIR}/graphics/mpeg-lib \
-		png.0.96:${PORTSDIR}/graphics/png \
-		tiff.3.4:${PORTSDIR}/graphics/tiff \
-		gtk.1.0:${PORTSDIR}/x11/gtk \
-		Xpm.4.:${PORTSDIR}/graphics/xpm
+DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	png-0.96:../../graphics/png
+DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
+DEPENDS+=	gtk+-1.0.0:../../x11/gtk
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes

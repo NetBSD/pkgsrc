@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -12,8 +12,8 @@ MAINTAINER=	frueauf@netbsd.org
 BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX
 RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
 		ispell:${PORTSDIR}/textproc/ispell
-LIB_DEPENDS=	xforms.0.:${PORTSDIR}/x11/xforms \
-		Xpm.4.:${PORTSDIR}/graphics/xpm
+DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	xforms-0.88:../../x11/xforms
 
 ONLY_FOR_ARCHS=	arm32 i386 m68k sparc
 

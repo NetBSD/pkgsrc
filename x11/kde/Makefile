@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/22 14:22:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=	kdecore.0.90:${PORTSDIR}/x11/kdelibs
+DEPENDS+=	kdelibs-3.1b:../../x11/kdelibs
 RUN_DEPENDS=	kwm:${PORTSDIR}/x11/kdebase \
 		kcalc:${PORTSDIR}/misc/kdeutils \
 		kmahjongg:${PORTSDIR}/games/kdegames \

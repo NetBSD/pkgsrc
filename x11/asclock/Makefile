@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:52 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:48 agc Exp $
 #
 
 DISTNAME=		asclock
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		hubertf@netbsd.org
 
-LIB_DEPENDS=		Xpm.4:${PORTSDIR}/graphics/xpm
+DEPENDS+=		xpm-3.4j:../../graphics/xpm
 
 # Choose language from:
 # 1) english [DEFAULT]
