@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/01/19 23:50:20 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/06 19:04:25 jlam Exp $
 
 .if !defined(PERL5_BUILDLINK2_MK)
 PERL5_BUILDLINK2_MK=  # defined
@@ -39,26 +39,26 @@ _PERL5_PREFIX!=		\
 	eval `${PERL5} -V:prefix 2>/dev/null`; ${ECHO} $$prefix
 _PERL5_SITEPREFIX!=	\
 	eval `${PERL5} -V:siteprefix 2>/dev/null`; ${ECHO} $$siteprefix
-MAKEFLAGS+=	_PERL5_PREFIX="${_PERL5_PREFIX}"
-MAKEFLAGS+=	_PERL5_SITEPREFIX="${_PERL5_SITEPREFIX}"
+MAKEFLAGS+=	_PERL5_PREFIX=${_PERL5_PREFIX:Q}
+MAKEFLAGS+=	_PERL5_SITEPREFIX=${_PERL5_SITEPREFIX:Q}
 
 .    for _var_ in ${_PERL5_SITEVARS}
 PERL5_SUB_${_var_}!=	\
 	eval `${PERL5} -V:${_PERL5_SITEVAR.${_var_}} 2>/dev/null`;	\
 	${ECHO} $${${_PERL5_SITEVAR.${_var_}}} |			\
 	${SED} -e "s,^${_PERL5_SITEPREFIX}/,,"
-MAKEFLAGS+=	PERL5_SUB_${_var_}="${PERL5_SUB_${_var_}}"
+MAKEFLAGS+=	PERL5_SUB_${_var_}=${PERL5_SUB_${_var_}:Q}
 .    endfor
 PERL5_SUB_INSTALLARCHLIB!=	\
 	eval `${PERL5} -V:installarchlib 2>/dev/null`;			\
 	${ECHO} $$installarchlib |					\
 	${SED} -e "s,^${_PERL5_PREFIX}/,,"
-MAKEFLAGS+=	PERL5_SUB_INSTALLARCHLIB="${PERL5_SUB_INSTALLARCHLIB}"
+MAKEFLAGS+=	PERL5_SUB_INSTALLARCHLIB=${PERL5_SUB_INSTALLARCHLIB:Q}
 PERL5_SUB_INSTALLSCRIPT!=	\
 	eval `${PERL5} -V:installscript 2>/dev/null`;			\
 	${ECHO} $$installscript |					\
 	${SED} -e "s,^${_PERL5_PREFIX}/,,"
-MAKEFLAGS+=	PERL5_SUB_INSTALLSCRIPT="${PERL5_SUB_INSTALLSCRIPT}"
+MAKEFLAGS+=	PERL5_SUB_INSTALLSCRIPT=${PERL5_SUB_INSTALLSCRIPT:Q}
 .  endif
 
 BUILDLINK_FILES.perl=							\

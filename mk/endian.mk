@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.2 2002/08/14 02:38:25 grant Exp $
+# $NetBSD: endian.mk,v 1.3 2004/02/06 19:04:25 jlam Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -47,5 +47,5 @@ MACHINE_ENDIAN!=							\
 	4321)	${ECHO} big ;;						\
 	*)	${ECHO} unknown ;;					\
 	esac
-MAKEFLAGS+=	MACHINE_ENDIAN="${MACHINE_ENDIAN}"
+MAKEFLAGS+=	MACHINE_ENDIAN=${MACHINE_ENDIAN}
 .endif
