@@ -1,0 +1,13 @@
+SpamAssassin is a mail filter which attempts to identify spam using text
+analysis and several internet-based realtime blacklists.
+
+Using its rule base, it uses a wide range of heuristic tests on mail
+headers and body text to identify "spam", also known as unsolicited
+commercial email.
+
+Once identified, the mail can then be optionally tagged as spam for later
+filtering using the user's own mail user-agent application.
+
+In its most recent test, SpamAssassin differentiated between spam and
+non-spam mail correctly in 99.94% of cases.  Since then, it's just been
+getting better and better!
