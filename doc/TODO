@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2148 2004/09/21 00:21:30 wiz Exp $
+$NetBSD: TODO,v 1.2149 2004/09/21 00:32:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -252,7 +252,7 @@ Suggested package updates
 	o fop-0.20.5
 	o fox-1.2.9
 	o freeciv-1.14.2
-	o freeradius-1.0.0
+	o freeradius-1.0.1 [adrianp]
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o gaim-1.0.0
@@ -272,7 +272,6 @@ Suggested package updates
 	o gnucash-1.8.9
 	o gnunet-0.6.3a
 	o gnustep-1.10.0
-	o gnutls-1.0.17
 	o gogo-3.11p1
 	o gossip-0.7.7
 	o gpsdrive-2.09
@@ -287,7 +286,6 @@ Suggested package updates
 	o guile-pg-0.16 [pkg/24039]
 	o guile-gtk-0.40.90 [in wip]
 	o hatari-0.50
-	o heimdal-0.6.2
 	o hmmer-2.3.2
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hp2xx-3.4.4
@@ -380,7 +378,6 @@ Suggested package updates
 	o pgplot-5.2 [grant]
 	o php-5.0.0
 	o phppgadmin-3.4.1 [pkg/26539|recht]
-	o physfs-1.0.0
 	o pilot-link-0.11.8
 	o plib-1.7.0
 	o ploticus-2.30
