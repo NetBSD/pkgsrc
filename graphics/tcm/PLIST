@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/01 22:02:01 jmmv Exp $
 bin/psf
 bin/tatd
 bin/tcm
@@ -25,7 +25,6 @@ bin/tstd
 bin/ttdt
 bin/ttut
 bin/tucd
-etc/tcm.conf
 lib/X11/app-defaults/TCM
 man/man1/psf.1
 man/man1/tatd.1
@@ -806,6 +805,7 @@ share/doc/tcm/README
 share/doc/tcm/developersguide-2.01.ps.gz
 share/doc/tcm/sourcecode-2.01.ps.gz
 share/doc/tcm/usersguide-2.01.ps.gz
+share/examples/tcm/tcm.conf
 share/tcm/banner.ps
 share/tcm/colorrgb.txt
 share/tcm/help/CHANGELOG
@@ -846,6 +846,7 @@ share/tcm/help/Version
 share/tcm/help/Welcome
 @dirrm share/tcm/help
 @dirrm share/tcm
+@dirrm share/examples/tcm
 @dirrm share/doc/tcm
 @dirrm share/doc/html/tcm/wishlist
 @dirrm share/doc/html/tcm/usersguide
