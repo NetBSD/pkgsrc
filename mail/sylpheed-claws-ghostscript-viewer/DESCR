@@ -1,4 +1,2 @@
 The ghostscript-viewer plugin allows Sylpheed-claws to display PostScript and
 PDF attachments in the visualisation panel.
-
-You must manually load the plugin through Configuration/Plugins.
