@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2003/12/26 21:56:15 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2003/12/28 10:34:37 tron Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -56,13 +56,7 @@ share/doc/html/libxslt/APIconstructors.html
 share/doc/html/libxslt/APIfiles.html
 share/doc/html/libxslt/APIfunctions.html
 share/doc/html/libxslt/APIsymbols.html
-share/doc/html/libxslt/EXSLT/bugs.html
-share/doc/html/libxslt/EXSLT/docs.html
-share/doc/html/libxslt/EXSLT/downloads.html
 share/doc/html/libxslt/EXSLT/exslt.html
-share/doc/html/libxslt/EXSLT/help.html
-share/doc/html/libxslt/EXSLT/index.html
-share/doc/html/libxslt/EXSLT/intro.html
 share/doc/html/libxslt/FAQ.html
 share/doc/html/libxslt/Libxslt-Logo-180x168.gif
 share/doc/html/libxslt/Libxslt-Logo-90x34.gif
