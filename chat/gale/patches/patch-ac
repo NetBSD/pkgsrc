@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2001/11/19 21:05:56 jlam Exp $
+
+--- liboop/configure.orig	Sat Mar 11 17:12:04 2000
++++ liboop/configure
+@@ -1991,8 +1991,8 @@
+ fi
+ 
+ if test -n "$PROG_GLIB_CONFIG" ; then
+-  GLIB_INCLUDES="`glib-config --cflags`"
+-  GLIB_LIBS="liboop-glib.la `glib-config --libs`"
++  GLIB_INCLUDES="`${PROG_GLIB_CONFIG} --cflags`"
++  GLIB_LIBS="liboop-glib.la `${PROG_GLIB_CONFIG} --libs`"
+   cat >> confdefs.h <<\EOF
+ #define HAVE_GLIB 1
+ EOF

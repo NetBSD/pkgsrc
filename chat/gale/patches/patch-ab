@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2001/11/19 21:05:56 jlam Exp $
+
+--- configure.orig	Thu Jul 13 20:42:44 2000
++++ configure
+@@ -1835,10 +1835,12 @@
+ PROG_LDCONFIG=:
+ 
+ test yes = "$GCC" && CFLAGS="-Wall $CFLAGS"
++if false; then
+ test NONE != "$exec_prefix" && LDFLAGS="$LDFLAGS -L${exec_prefix}/lib"
+ if test NONE != "$prefix" ; then
+ 	CPPFLAGS="$CPPFLAGS -I${prefix}/include"
+ 	test NONE = "$exec_prefix" && LDFLAGS="$LDFLAGS -L${prefix}/lib"
++fi
+ fi
+ 
+ case "$host" in
