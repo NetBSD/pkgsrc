@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.211 1999/02/11 14:44:00 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.212 1999/02/11 15:40:13 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1147,6 +1147,8 @@ _PORT_USE: .USE
 .if exists(/usr/bin/install-info)
 	@if [ -f ${LOCALBASE}/info/dir ]; then \
 		rm -f ${LOCALBASE}/info/dir; \
+	fi
+	@if [ ! -e ${LOCALBASE}/info/dir ]; then \
 		ln -s /usr/share/info/dir ${LOCALBASE}/info/dir; \
 	fi
 .endif
