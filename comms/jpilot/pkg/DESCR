@@ -1,0 +1,24 @@
+  J-Pilot is a desktop organizer application for the palm pilot that
+runs under Linux and Unix.  It is similar in functionality to the one
+that 3com distributes for a well known rampant legacy operating
+system.  Features include:
+
+  * Supports Datebook, Address, To Do List, and Memo Pad 
+  * Supports some DateBk3 tags 
+  * Postscript printing 
+  * Monthly and Weekly Views of the datebook 
+  * Plugin support - comes with Expense plugin 
+  * Small and fast, designed to take up little screen space 
+  * 2 way Syncing, fast and slow syncs 
+  * Support for multiple backups 
+  * Palm Pilot preferences are used
+  * Does a Full Backup, or just a Sync of supported apps 
+  * Global Search (Find) 
+  * Installation of files to the palm pilot
+  * Support for color scheme files 
+  * Quick find in address application 
+  * Datebook support for repeating events and exceptions to those
+    events
+  * Datebook support for modification of a single occurrence of a
+    reoccurring event 
+  * Datebook support for "By Day" reoccurring events
