@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/13 13:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/12/16 11:30:57 sketch Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	7
@@ -32,7 +32,7 @@ CXXFLAGS+=		${CFLAGS}
 
 post-patch:
 	@${CHMOD} -R +w ${WRKSRC}
-	@${FIND} ${WRKSRC} -name '*.orig' -size 0c -type f | ${XARGS} ${RM}
+	@${FIND} ${WRKSRC} -name '*.orig' -size 0c -type f -exec ${RM} {} \;
 
 post-install:
 	@for prog in jade nsgmls sgmlnorm spam spent sx; do		\
