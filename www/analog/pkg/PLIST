@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2000/10/27 03:22:51 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 2000/11/01 14:23:33 tron Exp $
 bin/analog
 etc/analog.cfg.default
-@exec cp -p %F %D/etc/analog.cfg
-@unexec rm -f %D/etc/analog.cfg
+@exec test -f %D/etc/analog.cfg || cp -p %F %D/etc/analog.cfg
 lib/analog/images/analogo.gif
 lib/analog/images/bara1.gif
 lib/analog/images/bara16.gif
