@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2003/04/13 01:29:15 salo Exp $
+$NetBSD: distinfo,v 1.9 2004/03/19 15:59:16 uebayasi Exp $
 
-SHA1 (eb/eb-3.3.2.tar.gz) = b865897e2e7dff8eb8c0d88f37ac0c5c35528e53
-Size (eb/eb-3.3.2.tar.gz) = 1056979 bytes
+SHA1 (eb/eb-3.3.4.tar.gz) = 8dda7d5e244be71669bb4d336ba108784739ba69
+Size (eb/eb-3.3.4.tar.gz) = 1059932 bytes
 SHA1 (eb/LIST) = 9c059b159f624b8f962daa695d52f60598ba1a3e
 Size (eb/LIST) = 11210 bytes
 SHA1 (eb/LIST-ja) = b9278c27bcf952aa84812c4c9440bb1b2fd2561a
