@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.5 2004/05/22 11:58:42 wiz Exp $
+$NetBSD: patch-as,v 1.6 2005/01/27 16:22:37 adam Exp $
 
---- faxd/Class2Send.c++.orig	2003-04-19 18:23:51.000000000 +0200
+--- faxd/Class2Send.c++.orig	2004-11-23 18:11:02.000000000 +0000
 +++ faxd/Class2Send.c++
-@@ -394,7 +394,7 @@ Class2Modem::sendPageData(TIFF* tif, u_i
+@@ -450,7 +450,7 @@ Class2Modem::sendPageData(TIFF* tif, u_i
  	uint32* stripbytecount;
  	(void) TIFFGetField(tif, TIFFTAG_STRIPBYTECOUNTS, &stripbytecount);
  	tstrip_t strip;

@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.5 2003/09/23 21:39:48 abs Exp $
+$NetBSD: patch-ah,v 1.6 2005/01/27 16:22:37 adam Exp $
 
---- etc/faxaddmodem.sh.in.orig	Fri May 30 00:30:11 2003
+--- etc/faxaddmodem.sh.in.orig	2004-12-22 13:44:05.000000000 +0000
 +++ etc/faxaddmodem.sh.in
 @@ -46,6 +46,7 @@
  SPOOL=@SPOOL@
@@ -10,12 +10,8 @@ $NetBSD: patch-ah,v 1.5 2003/09/23 21:39:48 abs Exp $
  while [ x"$1" != x"" ] ; do
      case $1 in
      -s)	    SPEED=$2; shift;;
-@@ -112,10 +113,10 @@ OUT=$TMPDIR/addmodem$$         # temp fi
- SVR4UULCKN=$LIBEXEC/lockname	# SVR4 UUCP lock name construction program
- ONDELAY=$LIBEXEC/ondelay	# prgm to open devices blocking on carrier
- CAT="$CAT -u"			# something to do unbuffered reads and writes
--FAX=fax				# identity of the fax user
-+FAX=@FAXUID@			# identity of the fax user
+@@ -115,7 +116,7 @@ CAT="$CAT -u"			# something to do unbuff
+ FAX=@FAXUID@			# identity of the fax user
  GROUP=/etc/group		# where to go for group entries
  PROTOGID=@FAXGID@		# group who's gid we use for FAX user
 -defPROTOGID=10			# use this gid if PROTOGID doesn't exist
@@ -32,7 +28,7 @@ $NetBSD: patch-ah,v 1.5 2003/09/23 21:39:48 abs Exp $
      *)	onDev $STTY 0; sleep 1	;;		# reset the modem (hopefully)
      esac
  						# start listening for output
-@@ -1129,7 +1130,7 @@ if [ "$RESULT" = "OK" ]; then
+@@ -1152,7 +1153,7 @@ EOF
      done;
      MODEMCLASSES=`echo $MODEMCLASSES | $SED -e 's/3/2.0/g' -e 's/4/1.0/g' -e 's/5/2.1/g' -e 's/ $//g'`
      SUPPORT=`echo $SUPPORT | $SED -e 's/3/2.0/g' -e 's/4/1.0/g' -e 's/5/2.1/g'`.
@@ -41,12 +37,12 @@ $NetBSD: patch-ah,v 1.5 2003/09/23 21:39:48 abs Exp $
      case "$MODEMCLASSES" in
      "")			giveup;;
      "1")		ModemType=Class1; configureClass1Modem;;
-@@ -1140,7 +1141,7 @@ if [ "$RESULT" = "OK" ]; then
+@@ -1163,7 +1164,7 @@ EOF
      *)
  	DEFAULTCLASS=`echo $MODEMCLASSES | $SED 's/\([^ ]*\).*/\1/g'`
  	x=""
 -	while [ "`echo \" $MODEMCLASSES \" | $GREP \" $x \"`" = "" ]; do
 +	while [ "`echo \ $MODEMCLASSES\  | $GREP \ $x\ `" = "" ]; do
  	    echo $SUPPORT
- 	    prompt "How should it be configured [$DEFAULTCLASS]?"
+ 	    prompt "How should it be configured [$DEFAULTCLASS]?";
  	    read x

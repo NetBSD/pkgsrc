@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.5 2003/09/23 21:39:48 abs Exp $
+$NetBSD: patch-ak,v 1.6 2005/01/27 16:22:37 adam Exp $
 
---- faxd/FaxModem.h.orig	Sat Apr 26 08:11:21 2003
+--- faxd/FaxModem.h.orig	2004-09-20 19:18:07.000000000 +0000
 +++ faxd/FaxModem.h
-@@ -144,7 +144,7 @@ protected:
+@@ -152,7 +152,7 @@ protected:
  /*
-  * Correct if neccessary Phase C (T.4) data (remove extra RTC etc.)
+  * Correct if neccessary Phase C (T.4/T.6) data (remove extra RTC/EOFB etc.)
   */
--    void        correctPhaseCData(u_char* buf, u_long* pBufSize,
-+    void        correctPhaseCData(u_char* buf, uint32* pBufSize,
+-    int		correctPhaseCData(u_char* buf, u_long* pBufSize,
++    int		correctPhaseCData(u_char* buf, uint32* pBufSize,
                                    u_int fillorder, const Class2Params& params);
- public:
-     enum {			// FaxModem::RTNHandling
+ /*
+  * Convert Phase C data...
