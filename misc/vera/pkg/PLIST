@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/18 01:15:53 hubertf Exp $
+@unexec install-info --delete %D/info/vera.info %D/info/dir
+info/vera.info
+info/vera.info-1
+info/vera.info-2
+info/vera.info-3
+info/vera.info-4
+info/vera.info-5
+info/vera.info-6
+info/vera.info-7
+info/vera.info-8
+info/vera.info-9
+info/vera.info-10
+info/vera.info-11
+@exec install-info %D/info/vera.info %D/info/dir
