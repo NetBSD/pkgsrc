@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 14:39:56 recht Exp $
+include/X11/extensions/randr.h
+include/X11/extensions/randrproto.h
+lib/pkgconfig/randr.pc
+share/doc/randr/protocol
+@dirrm share/doc/randr
