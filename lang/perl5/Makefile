@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2004/01/13 01:08:57 jlam Exp $
+# $NetBSD: Makefile,v 1.80 2004/03/02 06:13:28 uebayasi Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -192,7 +192,7 @@ post-install:
 	${RM} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_DIST_VERS}
 	${INSTALL_PROGRAM} ${WRKSRC_PERL5} ${PREFIX}/bin/perl${PERL5_DIST_VERS}
 	${LN} -f ${PREFIX}/bin/perl${PERL5_DIST_VERS} ${PREFIX}/bin/perl
-.if !empty(_STRIPFLAG_INSTALL)
+.if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL)
 	if [ -x ${PREFIX}/bin/a2p ]; then				\
 		strip ${PREFIX}/bin/a2p;				\
 	fi
