@@ -1,8 +1,8 @@
-$NetBSD: patch-bp,v 1.4 2003/03/11 13:10:22 markd Exp $
+$NetBSD: patch-bp,v 1.5 2004/01/15 10:15:14 markd Exp $
 
---- kicker/extensions/childpanel/Makefile.in.orig	Fri Jan 17 09:03:08 2003
+--- kicker/extensions/childpanel/Makefile.in.orig	2003-12-17 14:22:07.000000000 +1300
 +++ kicker/extensions/childpanel/Makefile.in
-@@ -293,7 +293,7 @@ kde_module_LTLIBRARIES = childpanel_pane
+@@ -431,7 +431,7 @@ kde_module_LTLIBRARIES = childpanel_pane
  childpanel_panelextension_la_SOURCES=childpanelextension.cpp  childpanelextension_skel.cpp
  #>- childpanel_panelextension_la_METASOURCES = AUTO
  childpanel_panelextension_la_LDFLAGS = -module $(KDE_PLUGIN) $(all_libraries)
@@ -11,7 +11,7 @@ $NetBSD: patch-bp,v 1.4 2003/03/11 13:10:22 markd Exp $
  
  noinst_HEADERS = childpanelextension.h
  
-@@ -307,7 +307,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -446,7 +446,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,10 +20,12 @@ $NetBSD: patch-bp,v 1.4 2003/03/11 13:10:22 markd Exp $
  am_childpanel_panelextension_la_OBJECTS = childpanelextension.lo
  #>- childpanel_panelextension_la_OBJECTS = \
  #>- 	$(am_childpanel_panelextension_la_OBJECTS)
-@@ -708,5 +708,5 @@ kde-rpo-clean:
- 	-rm -f *.rpo
+@@ -666,7 +666,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=childpanelextension.desktop 
++KDE_DIST=Makefile.in.rej childpanelextension.desktop 
  
- #>+ 3
--childpanelextension.lo: childpanelextension.moc 
- childpanelextension.o: childpanelextension.moc 
-+childpanelextension.lo: childpanelextension.moc 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
