@@ -1,0 +1,97 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CAT="@CAT@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+TRUE="@TRUE@"
+
+DATADIR=/var/spool/squirrelmail
+SMDIR=${PKG_PREFIX}/@SM_SUBDIR@
+CONFDIR=${SMDIR}/config
+CONFFILES="config.php"
+
+case ${STAGE} in
+DEINSTALL)
+	# Remove configuration files if they don't differ from the default
+	# config file.
+	#
+	FILE=${DATADIR}/data/default_pref
+	SAMPLEFILE=${SMDIR}/data/default_pref
+	if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+	then
+		${RM} -f ${FILE}
+	fi
+	;;
+
+POST-DEINSTALL)
+	modified_files=''
+	for FILE in ${CONFDIR}/config.php ${DATADIR}/data/default_pref
+	do
+		if [ -f ${FILE} ]
+		then
+			modified_files="${modified_files} ${FILE}"
+		fi
+	done
+
+	${RMDIR} ${CONFDIR} 2>/dev/null || ${TRUE}
+	${RMDIR} ${SMDIR} 2>/dev/null || ${TRUE}
+	${RMDIR} ${DATADIR}/attachments 2>/dev/null || ${TRUE}
+	${RMDIR} ${DATADIR}/data 2>/dev/null || ${TRUE}
+	${RMDIR} ${DATADIR} 2>/dev/null || ${TRUE}
+
+	existing_dirs=''
+	for dir in ${SMDIR} ${DATADIR}
+	do
+		if [ -d ${dir} ]
+		then
+			existing_dirs="${existing_dirs} ${dir}"
+		fi
+	done
+
+	if [ -n "${modified_files}" -o -n "${existing_dirs}" ]
+	then
+		${CAT} << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove:
+EOF
+		if [ -n "${modified_files}" ]
+		then
+			${CAT} << EOF
+
+  * the following files:
+
+EOF
+			for file in ${modified_files}
+			do
+				echo "	${file}"
+			done
+		fi
+		if [ -n "${existing_dirs}" ]
+		then
+			${CAT} << EOF
+
+  * the following directories:
+
+EOF
+			for dir in ${existing_dirs}
+			do
+				echo "	${dir}"
+			done
+		fi
+		${CAT} << EOF
+===========================================================================
+EOF
+	fi
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
