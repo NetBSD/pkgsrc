@@ -1,13 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2002/01/31 21:20:34 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2002/03/06 15:07:54 martti Exp $
 
-DISTNAME=	postfix-20010228-pl08
-PKGNAME=	postfix-20010228pl8
+DISTNAME=	postfix-1.1.4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
-
-PATCHFILES=	postfix-20010228release-ercpt.diff
-PATCH_SITES=	ftp://ftp.gw.com/pub/people/kim/patches/
-PATCH_DIST_STRIP+=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
@@ -19,11 +14,13 @@ POSTFIX_SPOOL=	/var/spool/postfix
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-PATCHFILES+=	postfix-20010228pl04-v6-20010809a.diff.gz
-PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
-BUILD_DEFS+=	POSTFIX_USE_INET6
-.endif
+# XXX No IPv6 patch available yet!
+#
+# .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
+# PATCHFILES+=	postfix-20010228pl04-v6-20010809a.diff.gz
+# PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
+# BUILD_DEFS+=	POSTFIX_USE_INET6
+# .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES" \
 	|| defined(USE_SASL) && ${USE_SASL} == "YES"
@@ -54,17 +51,17 @@ ALL_TARGET=	#empty
 
 pre-configure:
 	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
-	${CP} ${WRKSRC}/src/util/sys_defs.h ${WRKSRC}/src/util/sys_defs.h.dist
-	${CP} ${WRKSRC}/INSTALL.sh ${WRKSRC}/INSTALL.sh.dist
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
 	    < ${WRKSRC}/conf/main.cf.dist \
 	    > ${WRKSRC}/conf/main.cf
+	${CP} ${WRKSRC}/src/util/sys_defs.h ${WRKSRC}/src/util/sys_defs.h.dist
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
 	    < ${WRKSRC}/src/util/sys_defs.h.dist \
 	    > ${WRKSRC}/src/util/sys_defs.h
+	${CP} ${WRKSRC}/postfix-install ${WRKSRC}/postfix-install.dist
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/INSTALL.sh.dist \
-	    > ${WRKSRC}/INSTALL.sh
+	    < ${WRKSRC}/postfix-install.dist \
+	    > ${WRKSRC}/postfix-install
 
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} makefiles)
@@ -76,7 +73,8 @@ post-build:
 pre-install:
 	${INSTALL_DATA_DIR} /etc/postfix ${PREFIX}/share/postfix \
 	    ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
-	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
+	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/postfix \
+	    ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	-${RM} -f ${WRKSRC}/conf/*.orig
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
@@ -84,9 +82,23 @@ pre-install:
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
 	echo lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
 .endif
+	${TEST} -f /etc/postfix/postfix-files || \
+		${INSTALL_DATA} ${WRKSRC}/conf/postfix-files /etc/postfix
+	${TEST} -f /etc/postfix/postfix-script || \
+		${INSTALL_DATA} ${WRKSRC}/conf/postfix-script /etc/postfix
+
+do-install:
+	(cd ${WRKSRC} && ${SH} postfix-install -non-interactive)
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${PREFIX}/share/postfix
+	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${PREFIX}/share/postfix
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${PREFIX}/share/postfix
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${PREFIX}/share/postfix
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${PREFIX}/share/postfix
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
+	${LN} -sf ${PREFIX}/share/postfix/post-install /etc/postfix
+	${LN} -sf ${PREFIX}/share/postfix/postfix-files /etc/postfix
 	${LN} -sf ${PREFIX}/share/postfix/postfix-script /etc/postfix
 	${INSTALL_DATA_DIR} ${POSTFIX_SPOOL}
 	${CHMOD} 755 ${POSTFIX_SPOOL}
