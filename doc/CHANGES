@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3455 2003/09/19 14:37:21 wiz Exp $
+$NetBSD: CHANGES,v 1.3456 2003/09/19 15:50:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3843,3 +3843,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rconfig to 0.19 [abs 2003-09-19]
 	Updated avr-binutils to 2.13.2.1nb1 [wiz 2003-09-19]
 	Updated mysql-server to 3.23.49nb6 [wiz 2003-09-17]
+	Updated Xft2 to 2.1.2 [markd 2003-09-19]
