@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5151 2004/03/08 15:42:19 wiz Exp $
+$NetBSD: CHANGES,v 1.5152 2004/03/08 15:47:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1243,3 +1243,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed gnuchess-book [minskim 2004-03-08]
 	Updated torrentutils to 0.3.0nb1 [wiz 2004-03-08]
 	Updated mldonkey to 2.5.14 [wiz 2004-03-08]
+	Updated sylpheed-claws to 0.9.10 [adam 2004-03-08]
