@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2002/10/08 14:10:56 martti Exp $
+# $NetBSD: Makefile,v 1.142 2002/12/02 21:21:36 jmmv Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -10,6 +10,7 @@ SUBDIR+=	astrolog
 SUBDIR+=	bbappconf
 SUBDIR+=	bbweather
 SUBDIR+=	bidwatcher
+SUBDIR+=	blackbook
 SUBDIR+=	bottlerocket
 SUBDIR+=	buffer
 SUBDIR+=	chipmunk
