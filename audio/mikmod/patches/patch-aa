@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/10/18 02:32:14 ben Exp $
+$NetBSD: patch-aa,v 1.5 2004/11/22 14:40:49 adam Exp $
 
---- src/mikmod.c.orig	Sun Aug  1 20:59:23 1999
+--- src/mikmod.c.orig	2003-10-08 02:08:56.000000000 +0000
 +++ src/mikmod.c
-@@ -561,7 +561,7 @@ int main(int argc,char *argv[])
+@@ -590,7 +590,7 @@ int main(int argc,char *argv[])
  #if defined(__OS2__)||defined(__EMX__)
  	      >=0
  #else
