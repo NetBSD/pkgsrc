@@ -3,7 +3,7 @@
 # Date created:		20 Jan 1996
 # Whom:			peter
 #
-# $NetBSD: Makefile,v 1.2 1997/11/10 00:54:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/10 01:03:10 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -21,12 +21,11 @@ MAINTAINER=	matusita@jp.freebsd.org
 LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm
 
 USE_IMAKE=	yes
-MAN1= 		FvwmAudio.1 FvwmAuto.1 FvwmBacker.1 FvwmBanner.1 \
+CAT1= 		FvwmAudio.1 FvwmAuto.1 FvwmBacker.1 FvwmBanner.1 \
 		FvwmButtons.1 FvwmCascade.1 FvwmCpp.1 FvwmForm.1 \
 		FvwmIconBox.1 FvwmIconMan.1 FvwmIdent.1 FvwmM4.1 FvwmPager.1 \
 		FvwmSave.1 FvwmSaveDesk.1 FvwmScroll.1 FvwmTalk.1 FvwmTile.1 \
 		FvwmWinList.1 fvwm2.1 xpmroot.1
-MANCOMPRESSED=	yes
 
 # filenames.
 PATCH_FIXIT=	kits/patch/fix-2.0.46
