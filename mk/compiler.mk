@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.43 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: compiler.mk,v 1.44 2005/01/24 18:07:56 tv Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -73,9 +73,6 @@ USE_LANGUAGES?=	c
 .if empty(USE_LANGUAGES:Mc)
 USE_LANGUAGES:=	c ${USE_LANGUAGES}
 .endif
-
-# Default to using gcc.
-PKGSRC_COMPILER?=	gcc
 
 # For environments where there is an external gcc too, but pkgsrc
 # should use the pkgsrc one for consistency.
