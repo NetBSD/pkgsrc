@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2003/01/29 21:43:35 jmmv Exp $
+$NetBSD: patch-aa,v 1.7 2003/02/06 10:36:38 jmmv Exp $
 
 --- Makefile.orig	Sat Oct 10 06:15:02 1998
 +++ Makefile	Thu Dec 16 22:42:56 1999
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2003/01/29 21:43:35 jmmv Exp $
  # Where to install the binaries
  bindir=$(exec_prefix)/bin
 -INSTALL=cp
-+INSTALL=${BSD_INSTALL}
++INSTALL=${BSD_INSTALL} -c
  # You might want to uncomment this on BSD systems
  #INSTALL=install
  
