@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2005/01/11 03:16:24 dmcmahill Exp $
+
+--- src/g_register.c.orig	2004-12-29 04:08:28.000000000 +0000
++++ src/g_register.c
+@@ -156,7 +156,7 @@ void g_register_funcs(void)
+ 
+   /* keymapping callbacks */
+   gh_new_procedure0_0("file-new-window", g_key_file_new_window);
+-  gh_new_procedure0_0("file-new", g_key_file_new);
++  gh_new_procedure0_0("file-new", g_key_gedafile_new);
+   gh_new_procedure0_0("file-open", g_key_file_open);
+   gh_new_procedure0_0("file-script", g_key_file_script);
+   gh_new_procedure0_0("file-save", g_key_file_save);

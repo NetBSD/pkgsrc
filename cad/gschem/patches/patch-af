@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.3 2005/01/11 03:16:24 dmcmahill Exp $
+
+--- src/i_callbacks.c.orig	2004-12-29 04:08:37.000000000 +0000
++++ src/i_callbacks.c
+@@ -168,7 +168,7 @@ initiate_gschemdoc(const char *documenta
+ /* don't use the widget parameter on this function, or do some checking... */
+ /* since there is a call: widget = NULL, data = 0 (will be w_current hack) */
+ /* This should be renamed to page_new perhaps... */
+-DEFINE_I_CALLBACK(file_new)
++DEFINE_I_CALLBACK(gedafile_new)
+ {
+   TOPLEVEL *w_current = (TOPLEVEL *) data;
+   char *temp_filename;
+@@ -231,7 +231,7 @@ void i_callback_toolbar_file_new(GtkWidg
+   if (!w_current->window)
+     return;
+ 
+-  i_callback_file_new((TOPLEVEL *) data, 0, NULL);
++  i_callback_gedafile_new((TOPLEVEL *) data, 0, NULL);
+ }
+ 
+ 
+@@ -264,7 +264,7 @@ DEFINE_I_CALLBACK(file_new_window)
+ 	    w_current->series_name, w_current->num_untitled);
+   } else {
+     /* TODO: shouldn't this part do the same thing as
+-     * what's equivalent in i_callback_file_new()? This is
++     * what's equivalent in i_callback_gedafile_new()? This is
+      * not nice to user. */
+     fprintf(stderr, _("Cannot obtain the current directory!\n"));
+   }
