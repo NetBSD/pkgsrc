@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.3 2003/09/30 21:50:55 seb Exp $
+
+--- dictfmt.c.orig	2002-08-23 17:33:10.000000000 +0000
++++ dictfmt.c
+@@ -369,7 +369,7 @@ static void help( FILE *out_stream )
+            several words to have the same definition\n\
+            Example: autumn%%%fall can be used\n\
+            if '--headword-separator %%%' is supplied",
+-"--without-headword         with this parameter supplied
++"--without-headword         with this parameter supplied\n\
+            head words will not be copied to .dict file",
+       0 };
+    const char        **p = help_msg;
