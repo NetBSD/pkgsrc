@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
+bin/Ularn
+share/Ularn/Uhelp
+share/Ularn/Umaps
+share/Ularn/Ufortune
+@dirrm share/Ularn
