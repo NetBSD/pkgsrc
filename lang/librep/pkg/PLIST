@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/01/04 15:10:46 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/10/21 11:07:12 wiz Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -18,61 +18,49 @@ info/librep.info-5
 info/librep.info-6
 info/librep.info-7
 info/librep.info-8
+info/librep.info-9
 @exec install-info --info-dir=%D/info %D/info/librep.info
-lib/librep.a
 lib/librep.la
 lib/librep.so
 lib/librep.so.10
-lib/librep.so.10.1
+lib/librep.so.10.5
 libexec/rep/${MACHINE_GNU_PLATFORM}/install-aliases
 libexec/rep/${MACHINE_GNU_PLATFORM}/libtool
 libexec/rep/${MACHINE_GNU_PLATFORM}/rep_config.h
 libexec/rep/${MACHINE_GNU_PLATFORM}/rules.mk
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/DOC
+libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/emulate-gnu-tar
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/gdbm.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/gdbm.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/gdbm.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/gettext.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/gettext.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/gettext.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/readline.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/readline.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/readline.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/data/tables.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/data/tables.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/data/tables.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/i18n/gettext.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/i18n/gettext.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/i18n/gettext.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/db/gdbm.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/db/gdbm.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/db/gdbm.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/db/sdbm.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/db/sdbm.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/db/sdbm.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/readline.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/readline.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/readline.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/sockets.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/sockets.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/sockets.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/timers.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/timers.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/timers.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/lang/record-profile.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/lang/record-profile.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/lang/record-profile.so
+libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/util/md5.la
+libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/util/md5.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/vm/safe-interpreter.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/vm/safe-interpreter.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/vm/safe-interpreter.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/sdbm.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/sdbm.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/sdbm.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/tables.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/tables.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/tables.so
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/timers.la
-libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/timers.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/timers.so
 share/aclocal/rep.m4
 share/rep/${REP_VERS}/lisp/cgi-get.jl
@@ -163,6 +151,8 @@ share/rep/${REP_VERS}/lisp/rep/module-system.jl
 share/rep/${REP_VERS}/lisp/rep/module-system.jlc
 share/rep/${REP_VERS}/lisp/rep/net/domain-name.jl
 share/rep/${REP_VERS}/lisp/rep/net/domain-name.jlc
+share/rep/${REP_VERS}/lisp/rep/net/rpc.jl
+share/rep/${REP_VERS}/lisp/rep/net/rpc.jlc
 share/rep/${REP_VERS}/lisp/rep/regexp.jl
 share/rep/${REP_VERS}/lisp/rep/regexp.jlc
 share/rep/${REP_VERS}/lisp/rep/structures.jl
@@ -173,6 +163,13 @@ share/rep/${REP_VERS}/lisp/rep/system/environ.jl
 share/rep/${REP_VERS}/lisp/rep/system/environ.jlc
 share/rep/${REP_VERS}/lisp/rep/system/pwd-prompt.jl
 share/rep/${REP_VERS}/lisp/rep/system/pwd-prompt.jlc
+share/rep/${REP_VERS}/lisp/rep/test/autoload.jl
+share/rep/${REP_VERS}/lisp/rep/test/data.jl
+share/rep/${REP_VERS}/lisp/rep/test/data.jlc
+share/rep/${REP_VERS}/lisp/rep/test/framework.jl
+share/rep/${REP_VERS}/lisp/rep/test/framework.jlc
+share/rep/${REP_VERS}/lisp/rep/threads/condition-variable.jl
+share/rep/${REP_VERS}/lisp/rep/threads/condition-variable.jlc
 share/rep/${REP_VERS}/lisp/rep/threads/mutex.jl
 share/rep/${REP_VERS}/lisp/rep/threads/mutex.jlc
 share/rep/${REP_VERS}/lisp/rep/threads/utils.jl
@@ -268,6 +265,7 @@ share/rep/${REP_VERS}/lisp/unscheme/syntax.jlc
 @dirrm share/rep/${REP_VERS}/lisp/rep/vm
 @dirrm share/rep/${REP_VERS}/lisp/rep/util
 @dirrm share/rep/${REP_VERS}/lisp/rep/threads
+@dirrm share/rep/${REP_VERS}/lisp/rep/test
 @dirrm share/rep/${REP_VERS}/lisp/rep/system
 @dirrm share/rep/${REP_VERS}/lisp/rep/net
 @dirrm share/rep/${REP_VERS}/lisp/rep/mail
@@ -283,6 +281,7 @@ share/rep/${REP_VERS}/lisp/unscheme/syntax.jlc
 @dirrm share/rep
 @dirrm libexec/rep/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/vm
+@dirrm libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/util
 @dirrm libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/lang
 @dirrm libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io/db
 @dirrm libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/rep/io

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2001/06/23 19:26:58 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/21 11:07:11 wiz Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
-REP_VERS=		0.13.2
+REP_VERS=		0.14
 CATEGORIES=		lang devel
 MASTER_SITES=		ftp://librep.sourceforge.net/pub/librep/
 
