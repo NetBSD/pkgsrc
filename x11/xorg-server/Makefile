@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/01/24 10:57:27 hira Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/24 17:24:08 hira Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-server-${XORG_VER}
@@ -49,7 +49,6 @@ SUBST_MESSAGE.stubs=	"Fixing stubs Makefile."
 USE_PERL5=	build # Yeah, we need this :-)
 .endif
 
-BUILDLINK_FILES.xorg-libs+=	${X11ROOT_PREFIX}/lib/X11/config/*
 .include "options.mk"
 
 post-install:
