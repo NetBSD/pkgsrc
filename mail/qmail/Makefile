@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/08/22 12:44:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2004/08/25 04:24:04 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -74,7 +74,7 @@ INSTALLATION_DIRS+=	share/doc/qmail share/examples/qmail share/qmail
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../mail/qmail/options.mk"
+.include "options.mk"
 
 BUILD_DEFS+=		QMAILDIR QMAIL_QUEUE_DIR QMAIL_QUEUE_EXTRA
 
