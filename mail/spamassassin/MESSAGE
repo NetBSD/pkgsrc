@@ -1,20 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.8 2003/12/27 19:16:04 heinz Exp $
+$NetBSD: MESSAGE,v 1.9 2004/10/12 00:11:10 heinz Exp $
 
-SA 2.6x uses a new format for the Bayes database. *Before* deinstalling
-SA 2.5x, make sure you ran 'sa-learn --rebuild' for every Bayes database.
+If you upgrade from an earlier version please take a look at the file
+UPGRADE in
 
-If you're running Razor please use at least p5-razor-agents-2.22nb2
-which contains some fixes from the SpamAssassin team to improve behaviour
-in Perl taint mode.
+        ${PREFIX}/share/doc/spamassassin/
 
-Some configuration options were changed (see Mail::SpamAssassin::Conf).
-Please check that your existing mail configuration still works.
-
-More information can be found in the man pages for 'spamassassin',
-'sa-learn', 'spamc' and 'spamd', with 'perldoc Mail::SpamAssassin::Conf'
-and in
-
-	${PREFIX}/share/doc/spamassassin/
-
+Some configuration options were changed; for more information see
+'perldoc Mail::SpamAssassin::Conf' and the man pages for 'spamassassin',
+'spamd' and 'sa-learn'. Please check that your existing mail configuration
+still works.
 ===========================================================================

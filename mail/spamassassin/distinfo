@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.23 2004/08/10 20:40:01 heinz Exp $
+$NetBSD: distinfo,v 1.24 2004/10/12 00:11:10 heinz Exp $
 
-SHA1 (Mail-SpamAssassin-2.64.tar.gz) = 7d5776a7c462c849bc48f12a48ed82dc929ac06f
-Size (Mail-SpamAssassin-2.64.tar.gz) = 826989 bytes
-SHA1 (patch-ab) = 655f860a71fd6a1b7adb2cb5194fc9563ead9529
-SHA1 (patch-ae) = 681f777fb9967d61b9886e10046258657f4f492a
-SHA1 (patch-ak) = 815602ef71c8e01e4cfc2b51a7ac3f2676bc0ecc
-SHA1 (patch-al) = 75c22289726d3c7e39834cd164ca9f2220969e9e
-SHA1 (patch-aq) = 4ecd178997dc7060099ddde6b606cc9e2c0addeb
+SHA1 (Mail-SpamAssassin-3.0.0.tar.gz) = d52c317483483874f2b7e5dd544094249bedbdad
+Size (Mail-SpamAssassin-3.0.0.tar.gz) = 1072046 bytes
+SHA1 (patch-ab) = 09c57aa31e4f82c90cbbaac637fcbed1c730f0aa
+SHA1 (patch-ae) = 26c0589002413030bbfbb31069c82007b8fd0cf5
+SHA1 (patch-aq) = 04c46e41dc008bc3bde5bebef33174305fcf7b89
+SHA1 (patch-au) = bc3f794596ef9d9608f7bf9646c572ce5a2a4ff8
+SHA1 (patch-av) = 4b19e112ec572543d5ac6ceacdf8c2af0a4f4e44
+SHA1 (patch-aw) = b08f22607ce805e5e04718979f6cf57fce43e70f

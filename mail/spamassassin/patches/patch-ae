@@ -1,40 +1,20 @@
-$NetBSD: patch-ae,v 1.8 2003/12/27 19:16:04 heinz Exp $
+$NetBSD: patch-ae,v 1.9 2004/10/12 00:11:10 heinz Exp $
 
---- spamd/spamd.raw.orig	Sat Nov 15 03:55:31 2003
+--- spamd/spamd.raw.orig	Tue Sep 14 01:34:05 2004
 +++ spamd/spamd.raw
-@@ -208,8 +208,8 @@ if ($opt{'auth-ident'}) {
- }
+@@ -1810,8 +1810,9 @@ sub restart_handler {
  
- # Check for server certs
--$opt{'server-key'}  ||= "$LOCAL_RULES_DIR/certs/server-key.pem";
--$opt{'server-cert'} ||= "$LOCAL_RULES_DIR/certs/server-cert.pem";
-+$opt{'server-key'}  ||= "@SA_SSLCERTS@/server-key.pem";
-+$opt{'server-cert'} ||= "@SA_SSLCERTS@/server-cert.pem";
- if ($opt{'ssl'}) {
-   eval { require IO::Socket::SSL };
-   die "fatal: SSL encryption requested, but IO::Socket::SSL is unavailable\n" if ($@);
-@@ -1240,8 +1240,9 @@ sub restart_handler {
- use POSIX 'setsid';
- sub daemonize
- {
--    # Pretty command line in ps
--    $0 = join(' ', $ORIG_ARG0, @ORIG_ARGV) unless($opt{'debug'});
-+    # no pretty 'ps' command line (easier for NetBSD rc script)
-+    # # Pretty command line in ps
-+    # $0 = join(' ', $ORIG_ARG0, @ORIG_ARGV) unless($opt{'debug'});
+ sub daemonize {
  
-     # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
-     chdir '/' or die "Can't chdir to /: $!\n";
-@@ -1360,7 +1361,7 @@ Options:
-  -a, --auto-whitelist, --whitelist  Use auto-whitelists
-  -c, --create-prefs                 Create user preferences files
-  -C path, --configpath=path         Path for default config files
-- --siteconfigpath=path              Path for site configs (def: /etc/mail/spamassassin)
-+ --siteconfigpath=path              Path for site configs (def: @@LOCAL_RULES_DIR@@)
-  -d, --daemonize                    Daemonize
-  -h, --help                         Print usage message.
-  -i ipaddr, --listen-ip=ipaddr,...  Listen on the IP ipaddr (default: 127.0.0.1)
-@@ -1435,12 +1436,12 @@ Create user preferences files if they do
+-  # Pretty command line in ps
+-  $0 = join ( ' ', $ORIG_ARG0, @ORIG_ARGV ) unless ( $opt{'debug'} );
++  # no pretty 'ps' command line (easier for NetBSD rc script)
++  # # Pretty command line in ps
++  # $0 = join ( ' ', $ORIG_ARG0, @ORIG_ARGV ) unless ( $opt{'debug'} );
+ 
+   # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
+   chdir '/' or die "Can't chdir to /: $!\n";
+@@ -1987,12 +1988,12 @@ Create user preferences files if they do
  =item B<-C> I<path>, B<--configpath>=I<path>
  
  Use the specified path for locating the distributed configuration files.
