@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/11 09:10:15 xtraeme Exp $
 
 DISTNAME=	mpeg2vidcodec_v12
 PKGNAME=	mpeg2codec-1.2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.mpeg.org/MSSG/
 COMMENT=	MPEG Software Simulation Group's MPEG-2 Encoder and Decoder
 
 WRKSRC=		${WRKDIR}/mpeg2
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_X11BASE=		# defined
 
 do-install:

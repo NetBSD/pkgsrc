@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2004/02/11 09:10:15 xtraeme Exp $
 
 .include "Makefile.common"
 
@@ -14,7 +14,7 @@ DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
 
 CONFLICTS=		geomview<1.8.1nb2  # used to have a program named 'animate'
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -41,10 +41,10 @@ CFLAGS=			-O
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--without-perl
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../graphics/jasper/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
