@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.75 2005/02/17 15:38:25 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.76 2005/02/18 17:52:37 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -159,3 +159,5 @@ Pullup ticket 289 - requested by Matthias Drochner
 security fix for python
 Pullup ticket 292 - requested by Takahiro Kambe
 DoS fix for squid
+Pullup ticket 294 - requested by Matthias Scheler
+security fix for bidwatcher
