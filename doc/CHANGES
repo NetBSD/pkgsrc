@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7429 2004/10/14 13:44:56 minskim Exp $
+$NetBSD: CHANGES,v 1.7430 2004/10/14 14:35:24 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4712,3 +4712,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gaim to 1.0.1 [jmmv 2004-10-14]
 	Added xbomb-2.1a [adam 2004-10-14]
 	Updated mathomatic to 11.4b [minskim 2004-10-14]
+	Updated sun-jre14 to 2.6 [jschauma 2004-10-14]
+	Updated sun-jdk14 to 2.6 [jschauma 2004-10-14]
