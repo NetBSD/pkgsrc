@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 1999/10/25 20:57:54 dbj Exp $
+# $NetBSD: Makefile,v 1.89 1999/10/28 09:47:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -57,6 +57,7 @@
 #    SUBDIR += ldap
     SUBDIR += libpcap
 #    SUBDIR += libsocket++
+    SUBDIR += lukemftp
     SUBDIR += mirror
 #    SUBDIR += mpd
     SUBDIR += mrtg
