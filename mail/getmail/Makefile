@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/03/16 20:53:03 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/19 16:31:45 zuntum Exp $
 #
 
-DISTNAME=	getmail-2.0.18
+DISTNAME=	getmail-2.0.19
 CATEGORIES=	mail
 MASTER_SITES=	http://www.qcc.sk.ca/~charlesc/software/getmail-2.0/
 
@@ -15,7 +15,7 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 post-patch:
-	${SED} "s,@PREFIX@,${PREFIX}," ${WRKSRC}/getmail		\
+	${SED} "s,/usr/local,${PREFIX}," ${WRKSRC}/getmail		\
 		> ${WRKSRC}/getmail.done
 	${MV} ${WRKSRC}/getmail.done ${WRKSRC}/getmail
 
@@ -24,6 +24,8 @@ do-install:
 	cd ${WRKSRC} &&							\
 	${INSTALL_DATA} TODO BUGS CHANGELOG getmailrc-example faq.txt	\
 		getmail.txt docs.txt COPYING ${PREFIX}/share/doc/getmail
+	${INSTALL_DATA} ${WRKSRC}/getmailrc-example 			\
+		${PREFIX}/share/examples/getmailrc
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/getmail
 	cd ${WRKSRC} &&							\
 	${INSTALL_SCRIPT} ConfParser.py timeoutsocket.py getmail.py	\
