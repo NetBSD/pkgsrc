@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2004/03/22 03:25:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/07 11:54:35 wiz Exp $
 
 DISTNAME=		i2ocfg-1.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.interlude.eu.org/~ad/software/download/i2ocfg/
 
-MAINTAINER=		ad@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.interlude.eu.org/~ad/software/i2ocfg/
 COMMENT=		I2O configuration dialog gateway
 
