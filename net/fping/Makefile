@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/10/31 17:05:59 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/18 18:40:41 abs Exp $
 # FreeBSD Id: ports/net/fping/Makefile,v 1.10 2000/04/20 20:18:57 mharo Exp
 
 DISTNAME=	part01
 PKGNAME=	fping-1.20
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.uu.net/usenet/comp.sources.unix/volume26/fping/ \
 		ftp://ftp.digital.com/pub/usenet/comp.sources.unix/volume26/fping/ \
