@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2001/07/24 16:00:02 nra Exp $
+$NetBSD: patch-ab,v 1.9 2002/10/08 11:50:04 jlam Exp $
 
 --- cda_d/Imakefile.orig	Mon Jul 16 12:52:16 2001
 +++ cda_d/Imakefile	Mon Jul 23 14:43:24 2001
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.8 2001/07/24 16:00:02 nra Exp $
  #if defined(__bsdi__)
  .if exists(/usr/include/ncurses.h)
 -LOCAL_LIBRARIES=-lncurses
-+LOCAL_LIBRARIES=-I/usr/pkg/include -L/usr/pkg/lib -lncurses
++LOCAL_LIBRARIES=-I${LOCALBASE}/include -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lncurses
  .else
  LOCAL_LIBRARIES=
  .endif
