@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 11:37:30 salo Exp $
+bin/fillets
+man/man6/fillets.6
