@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:13 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/13 03:18:02 jdarrow Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
@@ -21,7 +21,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ( ${OBJECT_FMT} != "a.out" )
-DEPENDS+=		compat14>=1.4.3:../../emulators/compat14
+DEPENDS+=		compat14{,-crypto}>=1.4.3:../../emulators/compat14
 .endif
 
 do-install:
