@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/26 05:36:18 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/01 00:07:56 cjep Exp $
 
 DISTNAME=	macfork-1.0
 WRKSRC=		${WRKDIR}/macfork
@@ -15,7 +15,7 @@ USE_GMAKE=		YES
 DOCDIR=		${PREFIX}/share/doc/macfork
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/macfork ${PREFIX}/bin	
+	${INSTALL_PROGRAM} ${WRKSRC}/macfork ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
