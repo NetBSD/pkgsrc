@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:04:57 agc Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:28:30 agc Exp $
 
 SHA1 (pkgmanpages-19991222.tar.gz) = 03f2e9f066f788430a5019d7d04f6fffa1e5f9ce
+RMD160 (pkgmanpages-19991222.tar.gz) = a7945b952a6d41281b77f961f959331ad6c171bd
 Size (pkgmanpages-19991222.tar.gz) = 6867 bytes
