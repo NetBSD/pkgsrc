@@ -1,8 +1,15 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/01/29 20:21:07 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/07/22 18:25:09 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use xmlcatmgr.
 #
-# This file was created automatically using createbuildlink 2.3.
+# The following variables are automatically defined for free use in packages:
+#    XMLCATMGR            - Path to the xmlcatmgr program.
+#    SGML_DEFAULT_CATALOG - Path to the system-wide (tunable) SGML catalog.
+#    XML_DEFAULT_CATALOG  - Path to the system-wide (tunable) XML catalog.
+#
+# Packages that recognize a system-wide catalog file should be configured
+# to use SGML_DEFAULT_CATALOG or XML_DEFAULT_CATALOG, depending on the
+# type of tool they are.
 #
 
 .if !defined(XMLCATMGR_BUILDLINK2_MK)
@@ -16,6 +23,18 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.xmlcatmgr=xmlcatmgr
 BUILDLINK_PREFIX.xmlcatmgr_DEFAULT=	${LOCALBASE}
 
 BUILDLINK_TARGETS+=	xmlcatmgr-buildlink
+
+# Location of the xmlcatmgr binary program.
+XMLCATMGR=	${BUILDLINK_PREFIX.xmlcatmgr}/bin/xmlcatmgr
+
+# System-wide configurable catalogs.
+.if defined(PKG_SYSCONFDIR.xmlcatmgr) && !empty(PKG_SYSCONFDIR.xmlcatmgr)
+SGML_DEFAULT_CATALOG=	${PKG_SYSCONFDIR.xmlcatmgr}/sgml/catalog
+XML_DEFAULT_CATALOG=	${PKG_SYSCONFDIR.xmlcatmgr}/xml/catalog
+.else
+SGML_DEFAULT_CATALOG=	${PKG_SYSCONFBASE}/sgml/catalog
+XML_DEFAULT_CATALOG=	${PKG_SYSCONFBASE}/xml/catalog
+.endif
 
 xmlcatmgr-buildlink: _BUILDLINK_USE
 
