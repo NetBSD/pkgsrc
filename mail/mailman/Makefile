@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/30 01:01:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/19 21:25:42 wiz Exp $
 
 DISTNAME=	mailman-2.1.4
 PKGREVISION=	1
@@ -97,7 +97,7 @@ post-patch:
 	${RM} -f ${WRKSRC}/[A-Z]*.orig
 
 pre-install:
-	${INSTALL} -d -o ${MAILMAN_USER} -g ${MAILMAN_GROUP} -m775 ${EXECDIR}
+	${INSTALL} -d -o ${MAILMAN_USER} -g ${MAILMAN_GROUP} -m 775 ${EXECDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EXECDIR}/support
 
