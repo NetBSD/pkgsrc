@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/09/21 01:37:52 rh Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/10/07 15:43:53 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -306,8 +306,6 @@ share/gtk-2.0/demo/stock_browser.c
 share/gtk-2.0/demo/textview.c
 share/gtk-2.0/demo/tree_store.c
 share/gtk-doc/html/gdk-pixbuf/a4187.html
-share/gtk-doc/html/gdk-pixbuf/x4206.html
-share/gtk-doc/html/gdk-pixbuf/x4254.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-animation.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-creating.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-file-loading.html
@@ -330,6 +328,8 @@ share/gtk-doc/html/gdk-pixbuf/index.html
 share/gtk-doc/html/gdk-pixbuf/index.sgml
 share/gtk-doc/html/gdk-pixbuf/license.html
 share/gtk-doc/html/gdk-pixbuf/r27.html
+share/gtk-doc/html/gdk-pixbuf/x4206.html
+share/gtk-doc/html/gdk-pixbuf/x4254.html
 share/gtk-doc/html/gdk/X_cursor.png
 share/gtk-doc/html/gdk/arrow.png
 share/gtk-doc/html/gdk/based_arrow_down.png
