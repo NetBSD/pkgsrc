@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/15 20:19:00 wiz Exp $
-#
-# This Makefile fragment is included by packages that use wv.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:09 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WV_BUILDLINK3_MK:=	${WV_BUILDLINK3_MK}+
@@ -12,10 +7,12 @@ WV_BUILDLINK3_MK:=	${WV_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	wv
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nwv}
+BUILDLINK_PACKAGES+=	wv
+
 .if !empty(WV_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			wv
-BUILDLINK_DEPENDS.wv+=			wv>=1.0.0
-BUILDLINK_PKGSRCDIR.wv?=		../../converters/wv
+BUILDLINK_DEPENDS.wv+=		wv>=1.0.0
+BUILDLINK_PKGSRCDIR.wv?=	../../converters/wv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -25,6 +22,6 @@ BUILDLINK_PKGSRCDIR.wv?=		../../converters/wv
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-.endif # WV_BUILDLINK3_MK
+.endif	# WV_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

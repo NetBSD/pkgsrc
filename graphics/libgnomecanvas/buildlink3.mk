@@ -1,19 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 01:25:25 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use libgnomecanvas.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:35 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMECANVAS_BUILDLINK3_MK:=	${LIBGNOMECANVAS_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libgnomecanvas
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnomecanvas}
+BUILDLINK_PACKAGES+=	libgnomecanvas
+
 .if !empty(LIBGNOMECANVAS_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			libgnomecanvas
 BUILDLINK_DEPENDS.libgnomecanvas+=	libgnomecanvas>=2.4.0nb1
 BUILDLINK_PKGSRCDIR.libgnomecanvas?=	../../graphics/libgnomecanvas
 
@@ -22,6 +19,6 @@ BUILDLINK_PKGSRCDIR.libgnomecanvas?=	../../graphics/libgnomecanvas
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-.endif # LIBGNOMECANVAS_BUILDLINK3_MK
+.endif	# LIBGNOMECANVAS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

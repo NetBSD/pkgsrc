@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/09 23:56:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:07 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ID3LIB_BUILDLINK3_MK:=	${ID3LIB_BUILDLINK3_MK}+
@@ -7,13 +7,15 @@ ID3LIB_BUILDLINK3_MK:=	${ID3LIB_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	id3lib
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nid3lib}
+BUILDLINK_PACKAGES+=	id3lib
+
 .if !empty(ID3LIB_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			id3lib
-BUILDLINK_DEPENDS.id3lib+=		id3lib>=3.8.3
-BUILDLINK_PKGSRCDIR.id3lib?=		../../audio/id3lib
+BUILDLINK_DEPENDS.id3lib+=	id3lib>=3.8.3
+BUILDLINK_PKGSRCDIR.id3lib?=	../../audio/id3lib
 
 .include "../../devel/zlib/buildlink3.mk"
 
-.endif # ID3LIB_BUILDLINK3_MK
+.endif	# ID3LIB_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

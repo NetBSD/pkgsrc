@@ -1,22 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 00:48:58 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use intltool.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:40 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 INTLTOOL_BUILDLINK3_MK:=	${INTLTOOL_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	intltool
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nintltool}
+BUILDLINK_PACKAGES+=	intltool
+
 .if !empty(INTLTOOL_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			intltool
-BUILDLINK_DEPENDS.intltool+=		intltool>=0.30
-BUILDLINK_PKGSRCDIR.intltool?=		../../textproc/intltool
-BUILDLINK_DEPMETHOD.intltool?=		build
+BUILDLINK_DEPENDS.intltool+=	intltool>=0.30
+BUILDLINK_PKGSRCDIR.intltool?=	../../textproc/intltool
+BUILDLINK_DEPMETHOD.intltool?=	build
 
 USE_PERL5?=	build
 
@@ -27,11 +24,12 @@ INTLTOOLIZE=		${BUILDLINK_PREFIX.intltool}/bin/intltoolize
 
 _CONFIGURE_PREREQ+=	intltoolize
 
+.PHONY: intltoolize
 intltoolize:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "=> Overriding intltool."
 	@cd ${WRKSRC} && ${INTLTOOLIZE} --force >/dev/null 2>&1
 
-.endif # INTLTOOL_BUILDLINK3_MK
+.endif	# INTLTOOL_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

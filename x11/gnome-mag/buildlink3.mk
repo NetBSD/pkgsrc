@@ -1,26 +1,23 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/02/17 23:50:33 jmmv Exp $
-#
-# This Makefile fragment is included by packages that use gnome-mag.
-#
-# This file was created automatically using createbuildlink-3.0.
-#
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/05 19:25:42 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_MAG_BUILDLINK3_MK:=	${GNOME_MAG_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	gnome-mag
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-mag}
+BUILDLINK_PACKAGES+=	gnome-mag
+
 .if !empty(GNOME_MAG_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			gnome-mag
-BUILDLINK_DEPENDS.gnome-mag+=		gnome-mag>=0.10.4nb1
-BUILDLINK_PKGSRCDIR.gnome-mag?=		../../x11/gnome-mag
+BUILDLINK_DEPENDS.gnome-mag+=	gnome-mag>=0.10.4nb1
+BUILDLINK_PKGSRCDIR.gnome-mag?=	../../x11/gnome-mag
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-.endif # GNOME_MAG_BUILDLINK3_MK
+.endif	# GNOME_MAG_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

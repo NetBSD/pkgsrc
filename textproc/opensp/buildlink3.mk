@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/22 21:59:22 jmmv Exp $
-#
-# This Makefile fragment is included by packages that use opensp.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:40 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSP_BUILDLINK3_MK:=	${OPENSP_BUILDLINK3_MK}+
@@ -12,10 +7,12 @@ OPENSP_BUILDLINK3_MK:=	${OPENSP_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	opensp
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopensp}
+BUILDLINK_PACKAGES+=	opensp
+
 .if !empty(OPENSP_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			opensp
-BUILDLINK_DEPENDS.opensp+=		opensp>=1.5nb1
-BUILDLINK_PKGSRCDIR.opensp?=		../../textproc/opensp
+BUILDLINK_DEPENDS.opensp+=	opensp>=1.5nb1
+BUILDLINK_PKGSRCDIR.opensp?=	../../textproc/opensp
 
 PTHREAD_OPTS+=          native
 
@@ -26,6 +23,6 @@ PTHREAD_OPTS+=          native
 .  include "../../devel/unproven-pthreads/buildlink3.mk"
 .endif
 
-.endif # OPENSP_BUILDLINK3_MK
+.endif	# OPENSP_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

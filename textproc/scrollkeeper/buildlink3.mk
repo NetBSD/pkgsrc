@@ -1,19 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/15 21:39:14 jmmv Exp $
-#
-# This Makefile fragment is included by packages that use scrollkeeper.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:41 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SCROLLKEEPER_BUILDLINK3_MK:=	${SCROLLKEEPER_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	scrollkeeper
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nscrollkeeper}
+BUILDLINK_PACKAGES+=	scrollkeeper
+
 .if !empty(SCROLLKEEPER_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			scrollkeeper
 BUILDLINK_DEPENDS.scrollkeeper+=	scrollkeeper>=0.3.12nb2
 BUILDLINK_PKGSRCDIR.scrollkeeper?=	../../textproc/scrollkeeper
 
@@ -45,6 +42,6 @@ scrollkeeper-buildlink-fake:
 		${CHMOD} +x ${_SK_FAKE_REBUILDDB};			\
 	fi
 
-.endif # SCROLLKEEPER_BUILDLINK3_MK
+.endif	# SCROLLKEEPER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

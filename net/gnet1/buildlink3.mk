@@ -1,7 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/27 03:29:46 minskim Exp $
-#
-# This Makefile fragment is included by packages that use gnet1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNET1_BUILDLINK3_MK:=	${GNET1_BUILDLINK3_MK}+
@@ -10,13 +7,15 @@ GNET1_BUILDLINK3_MK:=	${GNET1_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	gnet1
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnet1}
+BUILDLINK_PACKAGES+=	gnet1
+
 .if !empty(GNET1_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			gnet1
-BUILDLINK_DEPENDS.gnet1+=		gnet1>=1.1.8nb2
-BUILDLINK_PKGSRCDIR.gnet1?=		../../net/gnet1
+BUILDLINK_DEPENDS.gnet1+=	gnet1>=1.1.8nb2
+BUILDLINK_PKGSRCDIR.gnet1?=	../../net/gnet1
 
 .include "../../devel/glib2/buildlink3.mk"
 
-.endif # GNET1_BUILDLINK3_MK
+.endif	# GNET1_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
