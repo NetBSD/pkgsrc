@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $NetBSD: pkg_regress.sh,v 1.1 2004/08/28 00:28:36 gavan Exp $
+# $NetBSD: pkg_regress.sh,v 1.2 2004/10/13 13:42:23 gavan Exp $
 #
 
 if [ -z "$PKGSRCDIR" ]
@@ -8,21 +8,24 @@ then
     PKGSRCDIR=@PKGSRCDIR@
 fi
 
-TEST_EGREP=@EGREP@
-TEST_MAKE=@MAKE@
+TEST_EGREP="@EGREP@"
+TEST_MAKE="@MAKE@"
 
 # hooks overridable by test spec file
 
 do_setup()
 {
+	return
 }
 
 do_cleanup()
 {
+	return
 }
 
 check_result()
 {
+	return
 }
 
 # result checking routines
