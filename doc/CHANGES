@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.821 2002/12/18 11:28:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.822 2002/12/18 12:43:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3991,3 +3991,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added soup-0.7.10 [rh 2002-12-18]
 	Updated ispell-slovak to 0.1.11 [salo 2002-12-18]
 	Updated sysbuild to 1.5 [jmmv 2002-12-18]
+	Updated xsane to 0.89 [tron 2002-12-18]
