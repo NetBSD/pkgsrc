@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.800 2003/08/30 16:00:10 wiz Exp $
+$NetBSD: TODO,v 1.801 2003/08/30 16:05:41 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -293,7 +293,6 @@ Suggested package updates
 	o wxGTK-2.4.1
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xchat-2.0.4
 	o xephem-3.5.2
 	o xerces-c-2.2.0 [heinz]
 	o xerces-j-2.4.0 [pkg/21725]
