@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+bin/bzip.xnc
+bin/es
+bin/groups.xnc
+bin/gzip.xnc
+bin/ives
+bin/rpm.xnc
+bin/users.xnc
+bin/vs
+bin/xjpegroot
+bin/xnc
+bin/xncsetup
+bin/xnlaunch
+bin/zips.xnc
+lib/xnc/libxncaqua.a
+lib/xnc/libxncaqua.la
+lib/xnc/libxncaqua.so
+lib/xnc/libxncfive.a
+lib/xnc/libxncfive.la
+lib/xnc/libxncfive.so
+man/man1/es.1
+man/man1/ives.1
+man/man1/vs.1
+man/man1/xjpegroot.1
+man/man1/xnc.1
+man/man1/xnlaunch.1
+share/doc/xnc/doc1.html
+share/doc/xnc/doc2.html
+share/doc/xnc/doc3.html
+share/doc/xnc/doc4.html
+share/doc/xnc/doc5.html
+share/doc/xnc/doc6.html
+share/doc/xnc/doc7.html
+share/doc/xnc/doc8.html
+share/doc/xnc/index.html
+@dirrm share/doc/xnc
+@dirrm lib/xnc
