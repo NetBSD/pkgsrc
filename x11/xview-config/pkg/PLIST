@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/07/03 20:59:29 tron Exp $
 lib/X11/config/XView.cf
 lib/X11/config/XView.lib
 lib/X11/config/XView.obj
