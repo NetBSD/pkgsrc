@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/06/26 18:05:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.39 2000/07/30 02:52:20 jlam Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -32,13 +32,15 @@ USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-CFLAGS+=		-g
 CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-g -L${LOCALBASE}/lib -lintl
+LDFLAGS+=		-L${LOCALBASE}/lib -lintl
 PERL=			${LOCALBASE}/bin/perl
 
-# The following CPPFLAGS are for debugging purposes.
-CPPFLAGS+=		-DLIBGTOP_ENABLE_DEBUG -DLIBGTOP_FATAL_WARNINGS
+# The following flags are for debugging purposes.  They don't need to
+# be used unless you are actively developing/debugging libgtop.
+#CPPFLAGS+=		-DLIBGTOP_ENABLE_DEBUG -DLIBGTOP_FATAL_WARNINGS
+#CFLAGS+=		-g
+#LDFLAGS+=		-g
 
 CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
 			--with-libgtop-guile --with-catgets
