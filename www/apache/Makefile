@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2000/02/22 17:38:16 veego Exp $
+# $NetBSD: Makefile,v 1.45 2000/04/05 21:05:30 cjs Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -17,7 +17,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${SSL_DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
 
-MAINTAINER=		cjs@netbsd.org
+MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.apache.org/
 
 CONFLICTS=		apache-*modssl-* apache6-*
