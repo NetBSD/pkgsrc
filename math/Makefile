@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2003/09/30 00:02:24 reed Exp $
+# $NetBSD: Makefile,v 1.108 2003/12/24 10:58:47 recht Exp $
 #
 
 COMMENT=	Mathematics
@@ -71,6 +71,7 @@ SUBDIR+=	pspp
 SUBDIR+=	py-Numeric
 SUBDIR+=	py-Scientific
 SUBDIR+=	py-Scientific-doc
+SUBDIR+=	py-fpconst
 SUBDIR+=	py-rpy
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
