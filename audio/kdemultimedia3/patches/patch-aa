@@ -1,0 +1,172 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
+
+--- configure.orig	Tue May 14 01:53:41 2002
++++ configure
+@@ -22016,6 +22016,40 @@
+   echo "$as_me:22016: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+   eval "ac_cv_lib_vm='-lXxf86dga -lXxf86vm'"
++
++	lib=Xxf86dga
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "no" ]; then
++		eval "ac_cv_lib_vm=no"
++	fi
++
++	lib=Xxf86vm
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "no" ]; then
++		eval "ac_cv_lib_vm=no"
++	fi
+ else
+   echo "$as_me: failed program was:" >&5
+ cat conftest.$ac_ext >&5
+@@ -22767,7 +22801,7 @@
+       au_enable_sun=yes
+       ;;
+     *-*-netbsd*)
+-      au_enable_sun=yes
++      au_enable_oss=yes
+       ;;
+     *-*-openbsd*)
+       au_enable_sun=yes
+@@ -22788,7 +22822,7 @@
+ echo "${ECHO_T}yes - <sys/soundcard.h>" >&6
+   else
+     case "$target" in
+-      *linux*|*freebsd*|*bsdi*)
++      *linux*|*freebsd*|*bsdi*|*netbsd*)
+ 		echo "$as_me:22792: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+ 	;;
+@@ -26625,6 +26659,7 @@
+   *-*-*bsdi*) kscd_compile=yes;;
+   *-*-*freebsd*) kscd_compile=yes;;
+   *-*-*openbsd*) kscd_compile=yes;;
++  *-*-*netbsd*) kscd_compile=yes;;
+   *-*-*bsd*) kscd_compile=no;;
+   *) kscd_compile=yes;;
+ esac
+@@ -26688,7 +26723,7 @@
+ fi
+ done
+ 
+-for ac_header in sys/soundcard.h machine/soundcard.h linux/soundcard.h
++for ac_header in soundcard.h sys/soundcard.h machine/soundcard.h linux/soundcard.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ echo "$as_me:26694: checking for $ac_header" >&5
+@@ -27007,7 +27042,22 @@
+   echo "$as_me:27007: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+ 
++       lib=Xxf86dga
++       shared_lib_found=no
++       for i in ${LDFLAGS}; do
++               case "$i" in
++               -L*)
++                       dir=`echo $i | sed "s,^-L,,"`
++                       if [ -e $dir/lib${lib}.so ] ||
++                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++                               shared_lib_found=yes
++                               break;
++                       fi
++               esac
++       done
++       if [ "$shared_lib_found" = "yes" ]; then
+                 x11_dga2=yes
++       fi
+ 
+ else
+   echo "$as_me: failed program was:" >&5
+@@ -27056,7 +27106,22 @@
+   echo "$as_me:27056: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+ 
++       lib=Xv
++       shared_lib_found=no
++       for i in ${LDFLAGS}; do
++               case "$i" in
++               -L*)
++                       dir=`echo $i | sed "s,^-L,,"`
++                       if [ -e $dir/lib${lib}.so ] ||
++                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++                               shared_lib_found=yes
++                               break;
++                       fi
++               esac
++       done
++       if [ "$shared_lib_found" = "yes" ]; then
+                 x11_xv=yes
++       fi
+ 
+ else
+   echo "$as_me: failed program was:" >&5
+@@ -27105,7 +27170,22 @@
+   echo "$as_me:27105: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+ 
++       lib=Xxf86vm
++       shared_lib_found=no
++       for i in ${LDFLAGS}; do
++               case "$i" in
++               -L*)
++                       dir=`echo $i | sed "s,^-L,,"`
++                       if [ -e $dir/lib${lib}.so ] ||
++                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++                               shared_lib_found=yes
++                               break;
++                       fi
++               esac
++       done
++       if [ "$shared_lib_found" = "yes" ]; then
+                 x11_xvidmode=yes
++       fi
+ 
+ else
+   echo "$as_me: failed program was:" >&5
+@@ -27381,6 +27461,9 @@
+ kde_mpeglib_compiles=no
+ 
+ case "$OS_TYPE" in
++  NetBSD)
++    kde_mpeglib_compiles=yes
++    ;;
+   FreeBSD)
+     kde_mpeglib_compiles=yes
+     ;;
+@@ -27647,9 +27730,10 @@
+     ;;
+ 
+   NetBSD)
+-    echo "$as_me:27650: result: NetBSD :Unknown hardware. You will have problems!!" >&5
+-echo "${ECHO_T}NetBSD :Unknown hardware. You will have problems!!" >&6
++    echo "$as_me:27650: result: using -lpthread" >&5
++echo $ECHO_N "using -lpthread... $ECHO_C" >&6
+     OS_TYPE="BSD"
++    LIBPTHREAD="-lpthread"
+ 
+ cat >>confdefs.h <<\EOF
+ #define OS_BSD 1
