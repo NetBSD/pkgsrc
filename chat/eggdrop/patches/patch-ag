@@ -1,4 +1,4 @@
-$NetBSD
+$NetBSD: patch-ag,v 1.2 2002/09/12 17:10:34 wiz Exp $
 
 --- Makefile.in.orig	Tue Feb 27 20:06:27 2001
 +++ Makefile.in	Fri Nov  2 11:40:10 2001
