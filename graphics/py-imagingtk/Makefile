@@ -1,38 +1,37 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:42:34 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/18 10:15:39 drochner Exp $
 #
 
-DISTNAME=	Imaging-1.1.3
-PKGNAME=	py20-imagingtk-1.1.3
+DISTNAME=	Imaging-1.1.4
+PKGNAME=	${PYPKGPREFIX}-imagingtk-1.1.4
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.pythonware.com/downloads/
+MASTER_SITES=	http://effbot.org/downloads/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
 COMMENT=	Tk support for the Python Imaging Library (PIL)
 
-PYTHON_VERSIONS_ACCEPTED= 20 # XXX for now until some things are cleaned up
-BUILDLINK_DEPENDS.python20= python20>=2.0.1nb1
-
 DIST_SUBDIR=    python
-ALL_TARGET=     sharedmods
+PYDISTUTILSPKG=	yes
+BUILDLINK_DEPENDS.python20=	python20>=2.0.1nb4
+GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 USE_X11=	yes
 
-do-configure:
-	(cd ${WRKSRC}/libImaging; CC="cc -fPIC" LIBS="${LDFLAGS}" ./configure)
-	${CHMOD} +w ${WRKSRC}/Setup.in ${WRKSRC}/Makefile.pre.in
-	${SED} -e 's,@PREFIX@,${PREFIX},g' -e 's,@X11BASE@,${X11BASE},g' \
-	        ${FILESDIR}/Setup.in >${WRKSRC}/Setup.in
-	${CP} ${LOCALBASE}/${PYLIB}/config/Makefile.pre.in ${WRKSRC}
-	(cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot)
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/_imagingtk.so \
-		${PREFIX}/lib/python2.0/site-packages/PIL
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/py20-imaging
+do-configure:
+	(cd ${WRKSRC}/libImaging && ${SETENV} ${CONFIGURE_ENV} ./configure \
+	 ${CONFIGURE_ARGS} && ${SETENV} ${MAKE_ENV} ${MAKE})
+	${SED} "s|@JPEGDIR@|${BUILDLINK_PREFIX.jpeg}|g" <${WRKSRC}/setup.py \
+	 >${WRKSRC}/setup.py.tmp && ${MV} -f ${WRKSRC}/setup.py.tmp \
+	 ${WRKSRC}/setup.py
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PYPKGPREFIX}-imaging
 	(cd ${WRKSRC}/Scripts; \
 	${INSTALL_DATA} enhancer.py painter.py player.py \
-	thresholder.py viewer.py ${PREFIX}/share/examples/py20-imaging )
+	thresholder.py viewer.py \
+	${PREFIX}/share/examples/${PYPKGPREFIX}-imaging )
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/py-imaging/buildlink2.mk"
