@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7839 2004/11/12 14:31:55 wiz Exp $
+$NetBSD: CHANGES,v 1.7840 2004/11/12 14:41:32 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5255,7 +5255,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated amanda-server to 2.4.4p4 [mjl 2004-11-12]
 	Updated amanda-client to 2.4.4p4 [mjl 2004-11-12]
 	Updated amanda-plot to 2.4.4p4 [mjl 2004-11-12]
-	Added p5-Class-WhiteHole-0.03 [he 2004-11-12]
 	Added p5-Net-XWhois-0.90 [he 2004-11-12]
 	Added p5-Crypt-RandPasswd-0.02 [he 2004-11-12]
 	Updated suse_libjpeg to 7.3nb1 [wiz 2004-11-12]
