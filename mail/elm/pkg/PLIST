@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/02/25 22:10:05 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/10/25 14:38:39 hubertf Exp $
 bin/elm
 bin/answer
 bin/checkalias
@@ -13,13 +13,14 @@ bin/nfrm
 bin/printmail
 bin/readmsg
 bin/wnewmail
-lib/prlong
-lib/elm.mimetypes
-lib/elmrc-info
 lib/elm-help.0
 lib/elm-help.1
 lib/elm-help.2
 lib/elm-help.3
+lib/elm.mimecharsets
+lib/elm.mimetypes
+lib/elmrc-info
+lib/prlong
 man/cat1/answer.0
 man/cat1/checkalias.0
 man/cat1/elm.0
@@ -46,4 +47,4 @@ man/man1/newmail.1
 man/man1/printmail.1
 man/man1/readmsg.1
 man/man1/wnewmail.1
-share/nls/C/elm2.4.cat
+share/nls/C/elm2.4me+.cat

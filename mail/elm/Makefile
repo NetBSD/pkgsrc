@@ -1,24 +1,26 @@
-# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:09 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1999/10/25 14:38:39 hubertf Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
-DISTNAME=		elm-2.4ME+32
+DISTNAME=		elm-2.4ME+54
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.ozone.fmi.fi/KEH/ \
 			ftp://ftp.funet.fi/pub/unix/mail/elm/elm-2.4ME+/ \
 			ftp://ftp.ibp.fr/pub/unix/mail/elm-me/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.myxa.com/elm/
-
-WRKSRC=			${WRKDIR}/elm2.4.ME+.32
+HOMEPAGE=		http://www.myxa.com/old/elm/
 
 HAS_CONFIGURE=		Yes
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ENV=		PREFIX="${PREFIX}"
 CONFIGURE_ARGS=		-S
 
+WRKSRC=			${WRKDIR}/elm2.4.ME+.54
+
 pre-configure:
+	${CP} ${FILESDIR}/config.sh ${WRKSRC}/
+	${CP} ${FILESDIR}/elm.mimecharsets ${WRKSRC}/bin/
 	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
 	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
