@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7226 2004/09/24 02:00:07 rh Exp $
+$NetBSD: CHANGES,v 1.7227 2004/09/24 06:04:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4404,3 +4404,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ices-mp3 to 0.4 [kim 2004-09-24]
 	Updated gnustep-base to 1.10.0 [rh 2004-09-24]
 	Updated gnustep-ssl to 1.10.0 [rh 2004-09-24]
+	Updated apache to 1.3.31nb5 [tron 2004-09-24]
