@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/21 00:21:56 mjl Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/24 09:48:51 jlam Exp $
 
 DISTNAME=	g-wrap-1.2.1
 CATEGORIES=	devel
@@ -10,11 +10,14 @@ COMMENT=	tool for importing types, functions, and constants into guile
 
 DEPENDS+=	guile-slib>=2.4.2:../../devel/guile-slib
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
-USE_LIBTOOL=	YES
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
 
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		ac_cv_path_RSCHEME="nope"
+
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../lang/guile/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
