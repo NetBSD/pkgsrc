@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2004/01/08 20:49:39 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2005/01/02 17:46:39 wiz Exp $
 
---- Makefile.in.orig	2004-01-08 18:59:21.000000000 +0100
-+++ Makefile.in	2004-01-08 18:59:45.000000000 +0100
-@@ -112,7 +112,7 @@
+--- Makefile.in.orig	2004-12-21 20:31:02.000000000 +0100
++++ Makefile.in
+@@ -124,7 +124,7 @@ install_sh = @install_sh@
  AUTOMAKE_OPTIONS = 1.6 foreign dist-zip
  ACLOCAL_AMFLAGS = -I m4
  
 -SUBDIRS = src conf debian doc web admin win32
 +SUBDIRS = src doc web admin
  
- EXTRA_DIST = HACKING m4/acx_pthread.m4 m4/ogg.m4 m4/vorbis.m4 \
-     m4/xiph_compiler.m4 m4/xiph_curl.m4 m4/xiph_net.m4 \
+ EXTRA_DIST = HACKING m4/acx_pthread.m4 m4/ogg.m4 \
+     m4/theora.m4 m4/vorbis.m4 \
