@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/10/06 15:23:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.19 2000/11/01 21:06:21 veego Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=--enable-japanese --enable-chinese
 CONFIGURE_ARGS+=--with-freetype-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=--with-t1-includes=${X11PREFIX}/include
 CONFIGURE_ENV+=	CXXFLAGS=${CXXFLAGS}
 MAKE_ENV+=	SED=${SED} ECHO=${ECHO}
 
