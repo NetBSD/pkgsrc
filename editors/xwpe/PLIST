@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 07:58:48 xtraeme Exp $
+bin/we
+bin/wpe
+bin/xwe
+bin/xwpe
+lib/xwpe/help.key
+lib/xwpe/help.xwpe
+man/man1/we.1
+man/man1/wpe.1
+man/man1/xwe.1
+man/man1/xwpe.1
+@dirrm lib/xwpe
