@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1294 2003/01/31 11:20:15 shell Exp $
+$NetBSD: CHANGES,v 1.1295 2003/01/31 12:58:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -525,3 +525,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-MailTools to 1.58 [shell 2003-01-31]
 	Updated p5-XML-Simple to 2.03 [shell 2003-01-31]
 	Updated p5-perl-ldap to 0.2701 [shell 2003-01-31]
+	Updated wmbiff to 0.4.13 [tron 2003-01-31]
