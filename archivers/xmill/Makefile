@@ -1,20 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2004/01/22 07:18:44 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/29 05:12:01 ben Exp $
 
-DISTNAME=		xmill-0-7
-PKGNAME=		xmill-0.7
+DISTNAME=		xmill-0.9.1
 CATEGORIES=		archivers
-MASTER_SITES=		# empty
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		http://www.cs.washington.edu/homes/suciu/XMILL/
 
 MAINTAINER=		ben@NetBSD.org
-HOMEPAGE=		http://www.research.att.com/sw/tools/xmill/
+HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Specialized compressor for XML
 
-BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
-
-EXTRACT_CMD=		${LOCALBASE}/bin/unzip -aq ${DOWNLOADED_DISTFILE}
-
-WRKSRC=			${WRKDIR}
 USE_GNU_TOOLS+=		make
 MAKEFILE=		makefile
 
@@ -24,26 +17,20 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-DOWNLOAD=		http://www.research.att.com/sw/tools/xmill/download.html
-#DOWNLOAD=		http://www.research.att.com/~mff/XMILL/xmill-0-7.zip
-
-_FETCH_MESSAGE= \
-	    ${ECHO} "==============================================================="; \
-	    ${ECHO} "  XMILL distribution package must be fetched"; \
-	    ${ECHO} "  into ${DISTDIR} from"; \
-	    ${ECHO} "  ${DOWNLOAD}"; \
-	    ${ECHO} "==============================================================="
-
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmill
-	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT.txt ${PREFIX}/share/doc/xmill
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${PREFIX}/share/doc/xmill
-	${INSTALL_DATA} ${WRKSRC}/MANUAL.txt ${PREFIX}/share/doc/xmill
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/xmill
-	${INSTALL_DATA} ${WRKSRC}/paper/xmill.ps.gz ${PREFIX}/share/doc/xmill
-	${INSTALL_PROGRAM} ${WRKSRC}/unix/xmill ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/unix/xdemill ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/unix/xbmill ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/unix/xbdemill ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/documentation/COPYRIGHT.txt \
+		${WRKSRC}/documentation/LICENSE.txt \
+		${WRKSRC}/documentation/MANUAL.txt \
+		${WRKSRC}/documentation/README.txt \
+		${WRKSRC}/documentation/xmill.ps.gz \
+		${WRKSRC}/documentation/xmill-09-doc.txt \
+		${PREFIX}/share/doc/xmill
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/xmill \
+		${WRKSRC}/unix/xdemill \
+		${WRKSRC}/unix/xmillexample \
+		${WRKSRC}/unix/xmillinspect \
+		${WRKSRC}/unix/xmilltest \
+		${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
