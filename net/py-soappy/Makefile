@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/26 02:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/05 08:11:07 recht Exp $
 #
 
 DISTNAME=	SOAPpy-0.11.3
@@ -13,12 +13,12 @@ COMMENT=	SOAP implementation
 
 DEPENDS=	${PYPKGPREFIX}-fpconst>=0.6.0:../../math/py-fpconst
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
 
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 
 .include "../../lang/python/extension.mk"
-.include "../../textproc/py-xml/buildlink2.mk"
+.include "../../textproc/py-xml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
