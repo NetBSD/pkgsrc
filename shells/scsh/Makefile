@@ -3,7 +3,7 @@
 # Date created:         Jul, 15, 1997
 # Whom:                 cracauer@cons.org "Martin Cracauer"
 #
-# $NetBSD: Makefile,v 1.2 1998/02/09 00:16:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/23 15:52:04 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
@@ -22,7 +22,7 @@ MAKE_ENV+=	INSTALL_PROGRAM='${INSTALL_PROGRAM}' \
 		INSTALL_DATA='${INSTALL_DATA}'
 		
 post-configure:
-	cd ${WRKSRC};sed -e '/LIBGEN/s@^@/*@g' -e '/LIBGEN/s@$$@*/@g' sysdep.h >xx ; mv xx sysdep.h
+	cd ${WRKSRC};sed -e '/LIBGEN/d' sysdep.h >xx ; mv xx sysdep.h
 
 post-install:
 	@strip ${PREFIX}/bin/scsh
