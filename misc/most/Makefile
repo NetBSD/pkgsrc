@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.6 1998/06/22 12:52:33 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/07/15 14:16:21 tv Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/03 21:52:01 asami Exp
 #
 
-DISTNAME=	most4.7
-PKGNAME=	most-4.7
+DISTNAME=	most4.8.1
+PKGNAME=	most-4.8.1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/ \
 		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/most/
 
 MAINTAINER=	rhwang@bigpanda.com
 
-DEPENDS+=	libslang-0.99.38:../../devel/libslang
+DEPENDS+=	libslang-1.2.2:../../devel/libslang
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--without-x
 WRKSRC=		${WRKDIR}/most
 
 .include "../../mk/bsd.pkg.mk"
