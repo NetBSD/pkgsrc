@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/07/04 04:11:34 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 1998/07/15 10:58:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
@@ -15,9 +15,6 @@ WRKSRC=		${WRKDIR}/tk8.0/unix
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ENV+=  PORTSDIR=${.CURDIR}/../../../../..
-
-post-install:
-	${LDCONFIG} || ${TRUE}
 
 test:
 	cd ${WRKSRC}; make test

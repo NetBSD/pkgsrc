@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/06 11:42:39 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/15 11:39:47 agc Exp $
 #
 
 DISTNAME=	mysql-3.21.32a
@@ -29,7 +29,6 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 
 post-install:
-	${LDCONFIG} || ${TRUE}
 	(cd ${WRKSRC}; ./scripts/mysql_install_db)
 
 .include "../../mk/bsd.pkg.mk"

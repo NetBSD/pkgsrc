@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1998/07/04 05:11:13 mycroft Exp $
+# $NetBSD: Makefile,v 1.23 1998/07/15 11:10:42 agc Exp $
 #
 
 DISTNAME=	ImageMagick-4.0.6
@@ -16,8 +16,5 @@ MIRROR_DISTFILE= no
 USE_IMAKE=	yes
 XMKMF=		${MAKE_ENV} xmkmf -a
 MAKE_ENV=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
-
-post-install:
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"

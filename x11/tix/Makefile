@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/22 13:21:02 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/07/15 10:56:58 agc Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -30,7 +30,6 @@ post-install:
 	@${MKDIR} ${PREFIX}/man/man1
 	@${MV} ${PREFIX}/man/mann/tixwish.1 ${PREFIX}/man/man1
 	@${LN} -sf ${PREFIX}/bin/tixwish4.1.8.0 ${PREFIX}/bin/tixwish
-	${LDCONFIG} || ${TRUE}
 .for dir in generic unix
 	@${MKDIR} ${PREFIX}/include/tix/${dir}
 	${INSTALL_DATA} ${WRKSRC}/../../${dir}/*.h ${PREFIX}/include/tix/${dir}
@@ -39,4 +38,4 @@ post-install:
 	@# These two files are the same
 	${LN} -sf ../../tix.h ${PREFIX}/include/tix/generic
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"

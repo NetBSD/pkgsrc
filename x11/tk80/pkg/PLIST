@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/03/01 18:16:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/07/15 10:58:54 agc Exp $
 bin/wish8.0
 include/tk8.0/tk.h
 include/tk8.0/unix/tkUnixDefault.h
@@ -457,8 +457,6 @@ lib/tk8.0/safetk.tcl
 lib/tk8.0/tkConfig.sh
 lib/libtk80.a
 lib/libtk80.so.1.0
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 @dirrm lib/tk8.0/demos/images
 @dirrm lib/tk8.0/demos
 @dirrm lib/tk8.0/images
