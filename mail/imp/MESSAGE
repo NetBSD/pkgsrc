@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2002/09/24 12:30:11 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2003/05/16 00:47:41 mason Exp $
 
 Please refer to the file:
 
 	${PREFIX}/share/doc/imp/INSTALL
 
-on how to setup your IMP installation. You need to at last edit
+on how to setup your IMP installation. You need to at least edit
 
 	${IMPDIR}/config/conf.php
 
