@@ -1,0 +1,30 @@
+$NetBSD: patch-al,v 1.1 2005/01/24 21:43:40 tv Exp $
+
+--- configure.orig	2003-03-29 17:25:14.000000000 -0500
++++ configure
+@@ -3220,7 +3220,8 @@ then
+ 		else
+ 			LDSHARED="ld -Bshareable ${LDFLAGS}"
+ 		fi;;
+-	NetBSD*) LDSHARED="cc -shared ${LDFLAGS}";;
++	NetBSD*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
++	Interix*) LDSHARED='$(CC) -shared ${LDFLAGS}';; # XXX tv needs image-base hack
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes"
+ 		then LDSHARED="$(CC) -shared"
+@@ -3251,6 +3252,7 @@ then
+ 	Linux*) CCSHARED="-fPIC";;
+ 	BSD/OS*/4*) CCSHARED="-fpic";;
+ 	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
++	Interix*) CCSHARED="";;
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes"
+ 		then CCSHARED="-fPIC"
+@@ -3305,6 +3307,7 @@ then
+ 		then
+ 			LINKFORSHARED="-Wl,--export-dynamic"
+ 		fi;;
++	Interix*) LINKFORSHARED="-Wl,-E";;
+ 	SunOS/5*) case $CC in
+ 		  *gcc*)
+ 		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
