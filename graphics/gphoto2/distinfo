@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/08 01:47:40 garbled Exp $
+
+SHA1 (gphoto-2.0beta1.tar.gz) = d217051d373f8b122e133741c0e29fbdc7185963
+Size (gphoto-2.0beta1.tar.gz) = 606938 bytes
+SHA1 (patch-aa) = a1c6ed92407b9fa4809e5340ace8ca7a78a04523
+SHA1 (patch-ab) = 9f72a219e8bbcadc9c178d0686f54ca26ccbcaf1
+SHA1 (patch-ac) = 786f161fd55aa052e9f697886f1756896d2be52a
+SHA1 (patch-ad) = 0cec748d29fb4acf682e715e3cf70b9c97441d2f

@@ -1,0 +1,6 @@
+gPhoto 2.0 is a set of libraries for accessing digital cameras. The only
+interface that it comes with is a command-line interface. You must
+download graphical applications separately from the gPhoto2 software. 
+
+There is a very large list of supported cameras, and many cameras support
+USB.
