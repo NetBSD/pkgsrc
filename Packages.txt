@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.222 2001/12/26 15:06:35 mason Exp $
+# $NetBSD: Packages.txt,v 1.223 2001/12/31 14:09:15 abs Exp $
 ###########################################################################
 
 			==========================
@@ -2142,6 +2142,20 @@ The package Makefile must also include "../../mk/bsd.pkg.install.mk" prior to
 the inclusion of bsd.pkg.mk.  This will cause the users and groups to be
 created at pre-install time, and the admin will be prompted to remove them at
 post-deinstall time.
+
+
+ 10.22 How to handle compiler bugs
+ =================================
+
+Some source files trigger bugs in the compiler, based on combinations
+of compiler version and architecture and almost always relation to
+optimsation being enabled.  Common symptoms are gcc internal errors
+or never finishing compiling a file.
+
+Typically a workaround involves testing the MACHINE_ARCH and compiler
+version, disabling optimisation for that file/MACHINE_ARCH/compiler
+combination, and documenting it in doc/HACKS. See doc/HACKS for
+examples.
 
 
  11 Submitting & Committing
