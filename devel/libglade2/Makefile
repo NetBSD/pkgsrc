@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/12/28 21:41:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2005/01/25 22:42:49 jmmv Exp $
 #
 
 DISTNAME=		libglade-2.4.1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
+PKGREVISION=		1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,7 +21,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libglade-2.0.pc.in
 
-CONFIGURE_ENV+=		jh_cv_path_python="${PYTHONBIN}"
+CONFIGURE_ENV+=		PYTHON=${FALSE}
 CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
 CONFIGURE_ARGS+=	--without-xml-catalog
 
@@ -33,7 +34,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/libglade/2.0
 
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../x11/gtk2/buildlink3.mk"
