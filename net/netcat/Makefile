@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/11/20 04:47:17 christos Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/12 00:44:23 hubertf Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -42,5 +42,6 @@ do-install:
 	done;							\
 	${ECHO} "@dirrm ${EXAMPLE_DIR}" >> PLIST.data;		\
 	)
+	${INSTALL_MAN} ${FILESDIR}/nc.1 ${PREFIX}/man/man1/nc.1
 
 .include "../../mk/bsd.pkg.mk"
