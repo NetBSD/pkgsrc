@@ -1,13 +1,14 @@
-$NetBSD: patch-ad,v 1.4 2001/02/08 16:23:07 tron Exp $
+$NetBSD: patch-ad,v 1.5 2004/06/02 11:43:55 tron Exp $
 
---- scripts/rc.news.in.orig	Thu Jan 11 09:55:23 2001
-+++ scripts/rc.news.in	Mon Feb  5 11:39:49 2001
-@@ -48,6 +48,8 @@
+--- scripts/rc.news.in.orig	2004-01-07 23:47:19.000000000 +0100
++++ scripts/rc.news.in	2004-06-02 11:36:29.000000000 +0200
+@@ -76,6 +76,9 @@
  ;;
  esac
  
 +## Unlimit
 +ulimit -n `ulimit -H -n`
++
+ ##  Pick ${INND} or ${INNDSTART}
+ WHAT=${INNDSTART}
  
- AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ
- az=abcdefghijklmnopqrstuvwxyz
