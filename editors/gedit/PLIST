@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/12 16:41:01 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/30 16:19:56 jmmv Exp $
 bin/gedit
 bin/gnome-text-editor
 lib/bonobo/servers/GNOME_Gedit.server
@@ -128,6 +128,7 @@ share/pixmaps/gedit-logo.png
 share/pixmaps/gedit-plugin-manager.png
 @dirrm share/omf/gedit
 @comment in scrollkeeper: @dirrm share/omf
+@comment in gnome2-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/gedit/ro/figures
 @dirrm share/gnome/help/gedit/ro
 @dirrm share/gnome/help/gedit/C/figures

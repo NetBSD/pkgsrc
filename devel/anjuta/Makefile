@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/05/02 11:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/30 16:19:54 jmmv Exp $
 #
 
 DISTNAME=		anjuta-1.0.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=anjuta/}
 
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.anjuta.org/
 COMMENT=		Gnome based IDE for C and C++
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
