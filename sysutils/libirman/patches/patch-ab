@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2002/06/14 20:38:41 abs Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/26 21:03:00 abs Exp $
 
---- test_func.c.orig	Thu Feb 18 11:15:03 1999
-+++ test_func.c
-@@ -17,6 +17,8 @@
-   unsigned char *code;
-   char *text;
- 
-+  setlinebuf(stdout);
-+
-   if (argc < 2) {
-     fprintf(stderr, "usage: test_func device\n");
-     fprintf(stderr, "       where device is the serial port at which the infra red receiver resides\n");
+--- ircmd.c.orig	Wed Jun 26 21:55:30 2002
++++ ircmd.c
+@@ -140,10 +140,10 @@
+       strcpy(rcname, home);
+       rcname[hl] = '/';
+       strcpy(rcname + hl+1, IR_USER_IRMANRC);
+-      rcname[hl+rl+2] = '\0';
+     
+       rc = fopen(rcname, "r");
+       if (!rc) {			/* system, eg /etc/irmanrc.conf */
++        freefile = 1;
+         rcname = IR_SYSTEM_IRMANRC;
+         rc = fopen(rcname, "r");
+       }
