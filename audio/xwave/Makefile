@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:24:24 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/09 00:57:47 minskim Exp $
 #
 
 DISTNAME=		xwave2
@@ -9,7 +9,7 @@ MASTER_SITES=		# empty
 MAINTAINER=		hubertf@NetBSD.org
 COMMENT=		Audio player/recorder/editor for the X Window System
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_IMAKE=		YES
 
 do-install:
@@ -23,7 +23,7 @@ do-install:
 			${WRKSRC}/INSTALL \
 			${PREFIX}/share/doc/xwave2
 
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
