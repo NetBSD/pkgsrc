@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2105 2003/05/01 12:58:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.2106 2003/05/01 14:09:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1809,3 +1809,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mailwrapper to 19990412nb1 [jmmv 2003-05-01]
 	Updated swfdec to 0.2.1nb1 [jmmv 2003-05-01]
 	Updated enscript to 1.6.1nb2 [jmmv 2003-05-01]
+	Updated postfix to 2.0.9nb1 [jmmv 2003-05-01]
