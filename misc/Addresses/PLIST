@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/02 07:40:57 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/10 23:57:23 rh Exp $
 share/GNUstep/Local/Applications/AddressManager.app/AddressManager
 share/GNUstep/Local/Applications/AddressManager.app/Resources/AddressManager.desktop
 share/GNUstep/Local/Applications/AddressManager.app/Resources/AddressManager.tiff
@@ -82,7 +82,6 @@ share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resource
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/German.lproj/Localizable.strings
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/ISOCodeMapping.dict
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Info.plist
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Labels.dict
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Lock.tiff
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Remove.tiff
@@ -118,7 +117,6 @@ share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/French.lproj/PropertiesAndLabels.strings
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/German.lproj/PropertiesAndLabels.strings
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/Info.plist
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/ScriptingInfo.plist
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/libAddresses.so
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/libAddresses.so.1.0.0
@@ -130,8 +128,6 @@ share/GNUstep/Local/Library/Libraries/libAddressView.so
 share/GNUstep/Local/Library/Libraries/libAddressView.so.1.0.0
 share/GNUstep/Local/Library/Libraries/libAddresses.so
 share/GNUstep/Local/Library/Libraries/libAddresses.so.1.0.0
-@dirrm share/GNUstep/Local/Library/Libraries
-@dirrm share/GNUstep/Local/Library/Headers
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/German.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/French.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/English.lproj
