@@ -1,6 +1,12 @@
---- eltorito.c.orig	Mon May  5 15:46:11 1997
-+++ eltorito.c	Mon May  5 16:11:42 1997
-@@ -33,6 +33,9 @@
+--- eltorito.c.orig	Thu Apr 10 04:41:44 1997
++++ eltorito.c	Wed Oct 29 12:13:33 1997
+@@ -28,11 +28,14 @@
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+-#include <malloc.h>
++#include <stdlib.h>
+ 
  #include "mkisofs.h"
  #include "iso9660.h"
  
