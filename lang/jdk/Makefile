@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2004/07/29 00:50:59 tv Exp $
+# $NetBSD: Makefile,v 1.41 2004/10/11 14:07:37 tv Exp $
 #
 
 VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
 		ftp://ftp.de.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/

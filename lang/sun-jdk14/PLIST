@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/10/05 22:09:23 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/11 14:07:38 tv Exp $
 bin/sun14-appletviewer
 bin/sun14-extcheck
 bin/sun14-idlj
@@ -881,8 +881,7 @@ java/sun-1.4/include/jvmdi.h
 java/sun-1.4/include/jvmpi.h
 java/sun-1.4/include/linux/jawt_md.h
 java/sun-1.4/include/linux/jni_md.h
-@exec	${LN} -sf java/sun-1.4 %D/java/sun-1.4/jre
-@unexec	${RM} -f %D/java/sun-1.4/jre
+java/sun-1.4/jre
 java/sun-1.4/lib/dt.jar
 java/sun-1.4/lib/htmlconverter.jar
 java/sun-1.4/lib/ir.idl

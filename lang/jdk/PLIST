@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/29 00:50:59 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/11 14:07:37 tv Exp $
 bin/jdk11-appletviewer
 bin/jdk11-jar
 bin/jdk11-java
@@ -475,7 +475,6 @@ java/jdk-1.1.8/include/verify.h
 java/jdk-1.1.8/include/wrap.h
 java/jdk-1.1.8/include/zip.h
 java/jdk-1.1.8/index.html
-@exec	${LN} -sf . %D/jre
 java/jdk-1.1.8/jre
 java/jdk-1.1.8/lib/appletviewer.properties.default
 java/jdk-1.1.8/lib/awt.properties.default

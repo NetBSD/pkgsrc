@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/11 13:37:10 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/11 14:07:38 tv Exp $
 bin/win32-appletviewer
 bin/win32-extcheck
 bin/win32-idlj
@@ -44,6 +44,5 @@ java/win32/bin/rmiregistry
 java/win32/bin/serialver
 java/win32/bin/servertool
 java/win32/bin/tnameserv
-@exec   ${LN} -sf . %D/java/win32/jre
-@unexec ${RM} -f %D/java/win32/jre
+java/win32/jre
 @dirrm java/win32/bin
