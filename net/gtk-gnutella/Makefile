@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/05 22:43:40 wiz Exp $
 #
 
-DISTNAME=		gtk-gnutella-0.12
+DISTNAME=		gtk-gnutella-0.16
 CATEGORIES=		net
-MASTER_SITES=		http://gtk-gnutella.sourceforge.net/download/ \
-			ftp://gtk-gnutella.sourceforge.net/pub/gtk-gnutella/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
 COMMENT=		GTk-based gnutella client
 
-DEPENDS=		gtk+-1.2.*:../../x11/gtk
-
 USE_GMAKE=		yes
-USE_X11=		yes
 GNU_CONFIGURE=		yes
+USE_BUILDLINK_ONLY=	yes
 
-EVAL_PREFIX+=		GTKDIR=gtk+
-CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtk-gnutella
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gtk-gnutella
 
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
