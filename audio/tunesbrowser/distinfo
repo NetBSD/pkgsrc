@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:53 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/03/20 11:09:47 jmmv Exp $
 
-SHA1 (tunesbrowser-0.1.5.tar.bz2) = 31feff440625d2dad664b7e9fb8ec4055aa151ef
-RMD160 (tunesbrowser-0.1.5.tar.bz2) = baba93b8c66ddbd39811c2e69b9186fce7f6fdfa
-Size (tunesbrowser-0.1.5.tar.bz2) = 190729 bytes
-SHA1 (patch-aa) = 39d837625a837d4c927bd220d3f3e030b4b122bd
-SHA1 (patch-ab) = d9da00f2daf4cdb33ea69f51ffb294f7130765d7
-SHA1 (patch-ac) = c0bad452914fb27e73713c2026f33aa3a4bb74d5
-SHA1 (patch-ad) = 99d5bcac138e5b7e936c288e7531f2b3c5458c83
+SHA1 (tunesbrowser-0.2.0.tar.bz2) = 79195c25d6f6bfdeebe9b1e8eb34b5ca0e185764
+RMD160 (tunesbrowser-0.2.0.tar.bz2) = 365aee4d25f4a77efb751b268874bcf0ec64db70
+Size (tunesbrowser-0.2.0.tar.bz2) = 208472 bytes
+SHA1 (patch-aa) = f2bea1f2afcd9b04ca20eb8eee6d859da08eeec5
+SHA1 (patch-ad) = 4929d3c46ece66b5546edcfcc119cb0730c25396

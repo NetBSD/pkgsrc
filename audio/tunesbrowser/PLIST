@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/20 20:41:22 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/20 11:09:47 jmmv Exp $
 bin/tunesbrowser
+man/man1/tunesbrowser.1
+share/comp.blue.png
+share/comp.red.png
+share/sound1.png
+share/sound2.png
 share/tunesbrowser.glade
