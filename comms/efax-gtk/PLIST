@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 02:03:26 jtb Exp $
+bin/efax-gtk
+bin/efax-gtk-send
+etc/efax-gtkrc
+man/man1/efax-gtk.1

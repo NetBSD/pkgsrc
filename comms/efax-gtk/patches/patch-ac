@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/05/04 02:03:26 jtb Exp $
+
+--- settings.cpp.orig	Thu Apr 25 16:28:58 2002
++++ settings.cpp	Thu Apr 25 16:32:32 2002
+@@ -1041,12 +1041,12 @@
+     string message;
+     if (search_localfile) {
+       message = "Can't find or open file /etc/" RC_FILE ",\n"
+-	        "/usr/local/etc/" RC_FILE " or ";
++	        "@RCDIR@/" RC_FILE " or ";
+       message += prog_config.homedir + "/." RC_FILE "\n";
+     }
+     else {
+       message = "Can't find or open file /etc/" RC_FILE "\n"
+-	        "or /usr/local/etc/" RC_FILE;
++	        "or @RCDIR@/" RC_FILE;
+       message += prog_config.homedir + "/." RC_FILE "\n";
+     }
+     write_error(message.c_str());
