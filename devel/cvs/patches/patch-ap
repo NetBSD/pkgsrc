@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.3 2000/10/21 19:29:06 wiz Exp $
+$NetBSD: patch-ap,v 1.4 2002/11/24 21:31:24 hubertf Exp $
 
---- src/main.c.orig	Thu Sep  7 01:35:04 2000
+--- src/main.c.orig	Tue Mar 19 20:15:45 2002
 +++ src/main.c
 @@ -41,6 +41,7 @@
  int quiet = 0;
@@ -18,7 +18,7 @@ $NetBSD: patch-ap,v 1.3 2000/10/21 19:29:06 wiz Exp $
  
  char *CurDir;
  
-@@ -239,6 +241,7 @@
+@@ -249,6 +251,7 @@
      "    -w           Make checked-out files read-write (default).\n",
      "    -l           Turn history logging off.\n",
      "    -n           Do not execute anything that will change the disk.\n",
@@ -26,7 +26,7 @@ $NetBSD: patch-ap,v 1.3 2000/10/21 19:29:06 wiz Exp $
      "    -t           Show trace of program execution -- try with -n.\n",
      "    -v           CVS version and copyright.\n",
      "    -T tmpdir    Use 'tmpdir' for temporary files.\n",
-@@ -432,7 +435,7 @@
+@@ -407,7 +410,7 @@
      int help = 0;		/* Has the user asked for help?  This
  				   lets us support the `cvs -H cmd'
  				   convention to give help for cmd. */
@@ -35,7 +35,7 @@ $NetBSD: patch-ap,v 1.3 2000/10/21 19:29:06 wiz Exp $
      static struct option long_options[] =
      {
          {"help", 0, NULL, 'H'},
-@@ -562,6 +565,8 @@
+@@ -537,6 +540,8 @@
  		break;
  	    case 'n':
  		noexec = 1;
@@ -44,12 +44,3 @@ $NetBSD: patch-ap,v 1.3 2000/10/21 19:29:06 wiz Exp $
  	    case 'l':			/* Fall through */
  		logoff = 1;
  		break;
-@@ -936,7 +941,7 @@
- 		/*
- 		 * Check to see if the repository exists.
- 		 */
--		if (!client_active)
-+		if (!client_active && !nolock)
- 		{
- 		    char *path;
- 		    int save_errno;

@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.5 2001/03/04 01:08:02 assar Exp $
+$NetBSD: patch-av,v 1.6 2002/11/24 21:31:25 hubertf Exp $
 
---- configure.in.orig	Sun Mar  4 00:31:29 2001
-+++ configure.in	Sun Mar  4 00:47:31 2001
-@@ -110,16 +110,19 @@
+--- configure.in.orig	Tue Mar 26 17:16:02 2002
++++ configure.in
+@@ -223,16 +223,19 @@
  dnl libkrb in the system libraries, so --with-krb4=value needs to
  dnl override the system -lkrb.
  dnl
@@ -24,7 +24,7 @@ $NetBSD: patch-av,v 1.5 2001/03/04 01:08:02 assar Exp $
  krb_h=
  AC_MSG_CHECKING([for krb.h])
  if test "$cross_compiling" != yes && test -r $KRB4/include/krb.h; then
-@@ -159,7 +162,7 @@
+@@ -272,7 +275,7 @@
             [LDFLAGS=$hold_ldflags
              # Using open here instead of printf so we don't
              # get confused by the cached value for printf from above.
@@ -33,7 +33,7 @@ $NetBSD: patch-av,v 1.5 2001/03/04 01:08:02 assar Exp $
         LDFLAGS=$hold_ldflags
    else
         AC_CHECK_LIB(krb,printf,[krb_lib=yes krb_libdir=])
-@@ -167,7 +170,7 @@
+@@ -280,7 +283,7 @@
    if test -n "$krb_lib"; then
      AC_DEFINE(HAVE_KERBEROS)
      test -n "${krb_libdir}" && LIBS="${LIBS} -L${krb_libdir}"
@@ -42,55 +42,3 @@ $NetBSD: patch-av,v 1.5 2001/03/04 01:08:02 assar Exp $
      # Put -L${krb_libdir} in LDFLAGS temporarily so that it appears before
      # -ldes in the command line.  Don't do it permanently so that we honor
      # the user's setting for LDFLAGS
-@@ -181,22 +184,26 @@
-   fi
- fi
- AC_CHECK_FUNCS(krb_get_err_text)
-+fi	# KRB4 empty
- 
- dnl
- dnl Use --with-gssapi=DIR to enable GSSAPI support.
- dnl
--GSSAPI=/usr/cygnus/kerbnet
-+GSSAPI=
- define(WITH_GSSAPI,[
- AC_ARG_WITH([gssapi],
-   [  --with-gssapi=value     GSSAPI directory],
--  [GSSAPI=$withval],
-+  [if test X"$withval" != X"no"; then GSSAPI=$withval; fi],
- )dnl
-+if test X"$GSSAPI" != X""; then
- echo "default place for GSSAPI is $GSSAPI"
-+fi
- AC_SUBST(GSSAPI)])dnl
- WITH_GSSAPI
- 
-+if test X"$GSSAPI" != X""; then
- hold_cppflags=$CPPFLAGS
--CPPFLAGS="$CPPFLAGS -I$GSSAPI/include "
-+CPPFLAGS="$CPPFLAGS -I$GSSAPI/include -I$GSSAPI/include/krb5 "
- AC_CHECK_HEADERS(krb5.h gssapi.h gssapi/gssapi.h gssapi/gssapi_generic.h)
- CPPFLAGS=$hold_cppflags
- 
-@@ -204,10 +211,10 @@
-    (test "$ac_cv_header_gssapi_h" = "yes" ||
-     test "$ac_cv_header_gssapi_gssapi_h" = "yes"); then
-   AC_DEFINE(HAVE_GSSAPI)
--  includeopt="${includeopt} -I$GSSAPI/include"
-+  includeopt="${includeopt} -I$GSSAPI/include -I$GSSAPI/include/krb5"
-   # FIXME: This is ugly, but these things don't seem to be standardized.
--  if test "$ac_cv_header_gssapi_h" = "yes"; then
--    LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -ldes -lroken"
-+  if test "$ac_cv_header_gssapi_gssapi_generic_h" = "no"; then
-+    LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -lcom_err -ldes -lroken"
-   else
-     LIBS="$LIBS -L$GSSAPI/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err"
-   fi
-@@ -223,6 +230,7 @@
-   # there, an_to_ln.o refers to things defined only in -lgen.
-   AC_CHECK_LIB(gen, compile)
- fi
-+fi	# GSSAPI empty
- 
- dnl
- dnl Use --with-encryption to turn on encryption support
