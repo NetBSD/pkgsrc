@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/01 07:04:03 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/01 07:08:09 rh Exp $
 #
 # This Makefile fragment is included by packages that use gnome-print.
 #
@@ -30,7 +30,6 @@ BUILDLINK_FILES.gnome-print+=	lib/libgnomeprint.*
 
 BUILDLINK_TARGETS.gnome-print=	gnome-print-buildlink
 BUILDLINK_TARGETS.gnome-print+=	gnome-print-buildlink-config-wrapper
-BUILDLINK_TARGETS.gnome-print+=	libart-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gnome-print}
 
 BUILDLINK_CONFIG.gnome-print=		${BUILDLINK_PREFIX.gnome-print}/lib/printConf.sh
