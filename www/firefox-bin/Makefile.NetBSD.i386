@@ -1,14 +1,11 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.2 2004/02/10 01:37:44 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.3 2004/06/29 14:47:10 grant Exp $
 
-MOZ_VER=	0.8
-
-.if defined(MOZILLA_USE_LINUX)
-DISTNAME=	${MOZILLA}-${MOZ_VER}-i686-pc-linux-gnu
-MOZ_PLATFORM=	linux
+# .if defined(MOZILLA_USE_LINUX)
+.include "Makefile.Linux.i386"
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
-.else
-DISTNAME=	${MOZILLA}-${MOZ_VER}-i386-unknown-netbsdelf1.6
-EXTRACT_SUFX=	.tar.bz2
-MOZ_PLATFORM=	netbsd
-ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
-.endif
+# .else
+# DISTNAME=	${MOZILLA}-${MOZ_VER}-i386-unknown-netbsdelf1.6
+# EXTRACT_SUFX=	.tar.bz2
+# MOZ_PLATFORM=	netbsd
+# ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
+# .endif
