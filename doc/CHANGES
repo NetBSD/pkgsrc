@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5358 2004/03/29 15:48:16 manu Exp $
+$NetBSD: CHANGES,v 1.5359 2004/03/29 16:21:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1592,3 +1592,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sqsh-motif-2.1 [grant 2004-03-29]
 	Updated aspell-german to 0.50.2nb2 [recht 2004-03-29]
 	Updated milter-greylist to 1.0.2 [manu 2004-03-29]
+	Updated octave-current to 2.1.57 [adam 2004-03-29]
