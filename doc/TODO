@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2333 2004/11/09 00:19:55 ben Exp $
+$NetBSD: TODO,v 1.2334 2004/11/09 01:15:42 snj Exp $
 
 Suggested new packages
 ======================
@@ -537,7 +537,6 @@ Suggested package updates
 	o snd-7.7
 	o snes9x-1.42
 	o snownews-1.5.5
-	o spamassassin-3.0.1
 	o spiralsynth-2.0.0
 	o sqlite-3.0.7
 	o srp_client-1.7.5 [jlam]
