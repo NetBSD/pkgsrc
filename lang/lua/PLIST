@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/22 00:51:58 jtb Exp $
 bin/lua
 bin/luac
 include/lauxlib.h
@@ -6,7 +6,17 @@ include/lua.h
 include/luadebug.h
 include/lualib.h
 lib/liblua.a
+lib/liblua.so
+lib/liblua.so.0
+lib/liblua.so.0.0
+lib/liblua_p.a
+lib/liblua_pic.a
 lib/liblualib.a
+lib/liblualib.so
+lib/liblualib.so.0
+lib/liblualib.so.0.0
+lib/liblualib_p.a
+lib/liblualib_pic.a
 man/man1/lua.1
 man/man1/luac.1
 share/doc/html/lua/idx.html
@@ -19,6 +29,15 @@ share/doc/html/lua/readme.html
 share/doc/lua/COPYRIGHT
 share/doc/lua/HISTORY
 share/doc/lua/README
+share/examples/lua/etc/README
+share/examples/lua/etc/bin2c.c
+share/examples/lua/etc/def.lua
+share/examples/lua/etc/lua.magic
+share/examples/lua/etc/lua.xpm
+share/examples/lua/etc/min.c
+share/examples/lua/etc/setfallback.lua
+share/examples/lua/etc/stdcall.lua
+share/examples/lua/etc/trace.c
 share/examples/lua/examples/ps/ps.lua
 share/examples/lua/examples/ps/hilbert.lua
 share/examples/lua/examples/www/db.lua
@@ -47,6 +66,7 @@ share/examples/lua/table.lua
 @dirrm share/examples/lua/examples/www
 @dirrm share/examples/lua/examples/ps
 @dirrm share/examples/lua/examples
+@dirrm share/examples/lua/etc
 @dirrm share/examples/lua
 @dirrm share/doc/lua
 @dirrm share/doc/html/lua
