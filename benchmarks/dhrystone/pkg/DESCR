@@ -1,0 +1,7 @@
+Here is Reinhold Weicker's DHRYSTONE 2.1 benchmark, slightly modified
+by me for instrumentation purposes only.  This is an integer CPU
+benchmark.  The differences between 2.0 and 2.1 are minor, and
+I believe that 2.0 and 2.1 results are comparable.
+
+Best results will be achieved by running the benchmark with more than
+1 million iterations.
