@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1584 2005/02/11 16:36:49 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1585 2005/02/11 16:57:45 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -94,6 +94,27 @@ PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
 .endif
 
+##### PLIST
+
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PLIST_TYPE?=		dynamic
+.endif
+PLIST_TYPE?=		static
+
+.if !defined(PLIST_SRC)
+.  if exists(${PKGDIR}/PLIST.common)
+PLIST_SRC+=		${PKGDIR}/PLIST.common
+.  endif
+.  if exists(${PKGDIR}/PLIST.${OPSYS})
+PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
+.  elif exists(${PKGDIR}/PLIST)
+PLIST_SRC+=		${PKGDIR}/PLIST
+.  endif
+.  if exists(${PKGDIR}/PLIST.common_end)
+PLIST_SRC+=		${PKGDIR}/PLIST.common_end
+.  endif
+.endif # !PLIST_SRC
+
 ##### Others
 
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
@@ -153,9 +174,96 @@ PRESERVE_FILE=		${PKG_DB_TMPDIR}/+PRESERVE
 
 .include "../../mk/bsd.pkg.use.mk"
 
+############################################################################
+# Sanity checks
+############################################################################
+
 # Fail-safe in the case of circular dependencies
 .if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
     PKG_FAIL_REASON+="Circular dependency detected"
+.endif
+
+# PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
+# "overwrite".
+.if (${PKG_INSTALLATION_TYPE} != "pkgviews") && \
+    (${PKG_INSTALLATION_TYPE} != "overwrite")
+PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
+.endif
+
+.if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
+PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
+.endif
+
+.if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
+.endif
+
+.if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
+.endif
+
+# Check that we are using up-to-date pkg_* tools with this file.
+.if !defined(NO_PKGTOOLS_REQD_CHECK)
+.  if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
+PKG_FAIL_REASON+='Error: The package tools installed on this system are out of date.'
+PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must update'
+PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
+PKG_FAIL_REASON+=''
+PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
+.  endif
+.endif # !NO_PKGTOOLS_REQD_CHECK
+
+.if defined(ALL_TARGET)
+PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
+.endif
+
+.if defined(NO_WRKSUBDIR)
+PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
+PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
+.endif # NO_WRKSUBDIR
+
+# We need to make sure the buildlink-x11 package is not installed since it
+# breaks builds that use imake.
+.if defined(USE_IMAKE)
+.  if exists(${LOCALBASE}/lib/X11/config/buildlinkX11.def) || \
+      exists(${X11BASE}/lib/X11/config/buildlinkX11.def)
+PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
+	 "    Please deinstall it (pkg_delete buildlink-x11)."
+.  endif
+.endif	# USE_IMAKE
+
+.if !defined(CATEGORIES) || !defined(DISTNAME)
+PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
+.endif
+
+.if defined(LIB_DEPENDS)
+PKG_FAIL_REASON+='LIB_DEPENDS is deprecated and must be replaced with DEPENDS.'
+.endif
+
+.if defined(PKG_PATH)
+PKG_FAIL_REASON+='Please unset PKG_PATH before doing pkgsrc work!'
+.endif
+
+.if defined(MASTER_SITE_SUBDIR)
+PKG_FAIL_REASON+='MASTER_SITE_SUBDIR is deprecated and must be replaced with MASTER_SITES.'
+.endif
+
+.if defined(PATCH_SITE_SUBDIR)
+PKG_FAIL_REASON+='PATCH_SITE_SUBDIR is deprecated and must be replaced with PATCH_SITES.'
+.endif
+
+.if defined(ONLY_FOR_ARCHS) || defined(NOT_FOR_ARCHS) \
+	|| defined(ONLY_FOR_OPSYS) || defined(NOT_FOR_OPSYS)
+PKG_FAIL_REASON+='ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced with ONLY/NOT_FOR_PLATFORM.'
+.endif
+
+.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once")
+. if !defined(OBJHOSTNAME)
+PKG_FAIL_REASON+='PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
+. elif !exists(${SHLOCK})
+PKG_FAIL_REASON+='The ${SHLOCK} utility does not exist, and is necessary for locking.'
+PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
+. endif
 .endif
 
 # Allow variables to be set on a per-OS basis
@@ -229,40 +337,6 @@ CONFIGURE_ENV+=	${ALL_ENV}
 BUILD_DEFS+=            PKG_OPTIONS
 .endif
 
-# PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
-# "overwrite".
-#
-.if (${PKG_INSTALLATION_TYPE} != "pkgviews") && \
-    (${PKG_INSTALLATION_TYPE} != "overwrite")
-PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
-.endif
-
-.if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
-PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
-.endif
-
-# The style of PLISTs that are used by the installed package.
-# Possible: dynamic, static
-#
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PLIST_TYPE?=		dynamic
-.elif ${PKG_INSTALLATION_TYPE} == "overwrite"
-PLIST_TYPE?=		static
-.else
-PLIST_TYPE?=		static
-.endif
-
-# PLIST_TYPE can only be one of two values: "dynamic" or "static".  If we
-# don't explicitly ask for "static", assume "dynamic".
-#
-.if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
-PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
-.endif
-
-.if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
-PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
-.endif
-
 .if empty(DEPOT_SUBDIR)
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
@@ -282,17 +356,6 @@ _PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
 _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 BUILD_DEFS+=		_PLIST_IGNORE_FILES
-
-# We need to make sure the buildlink-x11 package is not installed since it
-# breaks builds that use imake.
-#
-.if defined(USE_IMAKE)
-.  if exists(${LOCALBASE}/lib/X11/config/buildlinkX11.def) || \
-      exists(${X11BASE}/lib/X11/config/buildlinkX11.def)
-PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
-	 "    Please deinstall it (pkg_delete buildlink-x11)."
-.  endif
-.endif	# USE_IMAKE
 
 .if !empty(USE_GNU_TOOLS:Mmake)
 _USE_GMAKE=		yes
@@ -487,11 +550,6 @@ _PKG_DEBUG=		set -x;
 _PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
 
-.if defined(NO_WRKSUBDIR)
-PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
-PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
-.endif # NO_WRKSUBDIR
-
 # A few aliases for *-install targets
 INSTALL_PROGRAM?= 	\
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
@@ -539,29 +597,6 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .if defined(FORCE_PACKAGE)
 .  undef NO_PACKAGE
 .endif
-
-.if ${PLIST_TYPE} == "static"
-# Automatic platform dependent PLIST handling
-.  if !defined(PLIST_SRC)
-.    if exists(${PKGDIR}/PLIST.common)
-PLIST_SRC=		${PKGDIR}/PLIST.common
-.      if exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
-.      endif
-.      if exists(${PKGDIR}/PLIST.common_end)
-PLIST_SRC+=		${PKGDIR}/PLIST.common_end
-.      endif
-.    elif exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
-.    else
-PLIST_SRC=		${PKGDIR}/PLIST
-.    endif
-.  endif
-_PLIST_SRC=		${PLIST_SRC}
-.elif ${PLIST_TYPE} == "dynamic"
-_PLIST_SRC=		# empty, since we're using a dynamic PLIST
-.endif
-
 
 # Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
 PLIST_SUBST+=	OPSYS=${OPSYS}						\
@@ -690,19 +725,6 @@ uptodate-digest:
 	@${DO_NADA}
 .endif
 
-# Check that we are using up-to-date pkg_* tools with this file.
-.PHONY: uptodate-pkgtools
-uptodate-pkgtools:
-.	if !defined(NO_PKGTOOLS_REQD_CHECK)
-.		if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
-PKG_FAIL_REASON+='Error: The package tools installed on this system are out of date.'
-PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must update'
-PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
-PKG_FAIL_REASON+=''
-PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
-.		endif
-.	endif
-
 .ifndef PKG_ARGS_COMMON
 PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
@@ -750,11 +772,6 @@ ECHO_MSG?=		${ECHO}
 # How to do nothing.  Override if you, for some strange reason, would rather
 # do something.
 DO_NADA?=		${TRUE}
-
-# remove after 2005Q1
-.if defined(ALL_TARGET)
-PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
-.endif
 
 # If this host is behind a filtering firewall, use passive ftp(1)
 .if defined(PASSIVE_FETCH)
@@ -811,40 +828,6 @@ _IGNOREFILES?=	${IGNOREFILES}
 _PATCHFILES?=	${PATCHFILES}
 .endif
 _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
-
-.if !defined(CATEGORIES) || !defined(DISTNAME)
-PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
-.endif
-
-.if defined(LIB_DEPENDS)
-PKG_FAIL_REASON+='LIB_DEPENDS is deprecated and must be replaced with DEPENDS.'
-.endif
-
-.if defined(PKG_PATH)
-PKG_FAIL_REASON+='Please unset PKG_PATH before doing pkgsrc work!'
-.endif
-
-.if defined(MASTER_SITE_SUBDIR)
-PKG_FAIL_REASON+='MASTER_SITE_SUBDIR is deprecated and must be replaced with MASTER_SITES.'
-.endif
-
-.if defined(PATCH_SITE_SUBDIR)
-PKG_FAIL_REASON+='PATCH_SITE_SUBDIR is deprecated and must be replaced with PATCH_SITES.'
-.endif
-
-.if defined(ONLY_FOR_ARCHS) || defined(NOT_FOR_ARCHS) \
-	|| defined(ONLY_FOR_OPSYS) || defined(NOT_FOR_OPSYS)
-PKG_FAIL_REASON+='ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced with ONLY/NOT_FOR_PLATFORM.'
-.endif
-
-.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once")
-. if !defined(OBJHOSTNAME)
-PKG_FAIL_REASON+='PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
-. elif !exists(${SHLOCK})
-PKG_FAIL_REASON+='The ${SHLOCK} utility does not exist, and is necessary for locking.'
-PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
-. endif
-.endif
 
 .if defined(GNU_CONFIGURE)
 #
@@ -2975,22 +2958,22 @@ test: build ${TEST_COOKIE}
 
 .PHONY: install
 .if !target(install)
-install: uptodate-pkgtools ${_PKGSRC_BUILD_TARGETS} acquire-install-lock ${INSTALL_COOKIE} release-install-lock
+install: ${_PKGSRC_BUILD_TARGETS} acquire-install-lock ${INSTALL_COOKIE} release-install-lock
 .endif
 
 .PHONY: package
 .if !target(package)
-package: uptodate-pkgtools install acquire-package-lock ${PACKAGE_COOKIE} release-package-lock
+package: install acquire-package-lock ${PACKAGE_COOKIE} release-package-lock
 .endif
 
 .PHONY: replace
 .if !target(replace)
-replace: uptodate-pkgtools ${_PKGSRC_BUILD_TARGETS} real-replace
+replace: ${_PKGSRC_BUILD_TARGETS} real-replace
 .endif
 
 .PHONY: undo-replace
 .if !target(undo-replace)
-undo-replace: uptodate-pkgtools real-undo-replace
+undo-replace: real-undo-replace
 .endif
 
 ${EXTRACT_COOKIE}:
@@ -3236,7 +3219,7 @@ reinstall:
 deinstall: do-su-deinstall
 
 .if !target(do-su-deinstall)
-do-su-deinstall: uptodate-pkgtools
+do-su-deinstall:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGBASE}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-deinstall";					\
@@ -3411,17 +3394,17 @@ ${DLIST}: ${WRKDIR}
 
 # The 'info' target can be used to display information about a package.
 .PHONY: info
-info: uptodate-pkgtools
+info:
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
 
 # The 'check' target can be used to check an installed package.
 .PHONY: check
-check: uptodate-pkgtools
+check:
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
 
 # The 'list' target can be used to list the files installed by a package.
 .PHONY: list
-list: uptodate-pkgtools
+list:
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
 # Run pkglint:
@@ -3957,7 +3940,7 @@ pre-install-depends:
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
-install-depends: uptodate-pkgtools pre-install-depends
+install-depends: pre-install-depends
 .  if !empty(DEPENDS) || !empty(BUILD_DEPENDS)
 .    if defined(NO_DEPENDS)
 	@${DO_NADA}
@@ -4825,7 +4808,7 @@ MANCOMPRESSED=	yes
 MAKE_ENV+=	MANZ="${MANZ}"
 .endif
 
-# generate ${PLIST} from ${_PLIST_SRC} by:
+# generate ${PLIST} from ${PLIST_SRC} by:
 # - substituting for PLIST_SUBST entries
 # - fixing list of man-pages according to MANZ, MANINSTALL.
 # - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
@@ -4953,7 +4936,7 @@ _PLIST_AWK_SCRIPT+=	'
 
 # GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
-#	the contents of ${_PLIST_SRC}.
+#	the contents of ${PLIST_SRC}.
 #
 GENERATE_PLIST?=	${TRUE};
 .if ${PLIST_TYPE} == "dynamic"
@@ -4977,12 +4960,15 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	${CAT} ${_PLIST_SRC}; ${GENERATE_PLIST}
+_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
 .endif
 
 .PHONY: plist
 plist: ${PLIST}
-${PLIST}: ${_PLIST_SRC}
+.if ${PLIST_TYPE} == "static"
+${PLIST}: ${PLIST_SRC}
+.endif
+${PLIST}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${_GENERATE_PLIST} } | ${AWK} ${_PLIST_AWK_SCRIPT}		\
 		> ${PLIST}; 						\
