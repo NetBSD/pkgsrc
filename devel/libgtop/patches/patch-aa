@@ -1,24 +1,26 @@
-$NetBSD: patch-aa,v 1.7 1999/10/22 23:47:58 tron Exp $
+$NetBSD: patch-aa,v 1.8 2000/05/30 19:35:41 drochner Exp $
 
---- configure.orig	Wed Sep 29 02:47:35 1999
-+++ configure	Sat Oct 23 00:27:20 1999
-@@ -2254,6 +2254,7 @@
+--- configure.orig	Thu May 25 16:35:06 2000
++++ configure	Sat May 27 14:47:02 2000
+@@ -2256,6 +2256,8 @@
+ *) lt_target="$target" ;;
+ esac
  
- 
- # Check for any special flags to pass to ltconfig.
 +if false; then
++
+ # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
- test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
-@@ -2406,6 +2407,7 @@
+@@ -2414,7 +2416,7 @@
+ # clobbered by the next message.
+ exec 5>>./config.log
  
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+-
 +fi
  
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
-@@ -5627,6 +5629,7 @@
+   # Check whether --enable-compile-warnings or --disable-compile-warnings was given.
+ if test "${enable_compile_warnings+set}" = set; then
+@@ -5682,6 +5684,7 @@
  rm -f confcache
  
  
@@ -26,7 +28,7 @@ $NetBSD: patch-aa,v 1.7 1999/10/22 23:47:58 tron Exp $
  # Actually configure libtool.  ac_aux_dir is where install-sh is found.
  CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
  LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
-@@ -5651,6 +5654,7 @@
+@@ -5706,6 +5709,7 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
