@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 08:39:18 jlam Exp $
+bin/newbrain
+share/examples/knightcap/brain.dat
+@dirrm share/examples/knightcap
