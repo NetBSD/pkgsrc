@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/06/12 20:52:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/07 03:10:50 wiz Exp $
 #
 
 DISTNAME=	emixer-0.05.5
@@ -10,7 +10,10 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://emixer.linuxbox.com/
 
 DEPENDS+=	mpg123-0.59*:../../audio/mpg123
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
+
+USE_CURSES=	YES
+REPLACE_NCURSES=${WRKSRC}/nctgui.h
+MAKE_ENV+=	NEED_NCURSES="${NEED_NCURSES}"
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
