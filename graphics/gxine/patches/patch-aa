@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:08:15 rh Exp $
+
+--- src/globals.h.orig	Fri Mar  7 02:51:04 2003
++++ src/globals.h
+@@ -28,6 +28,7 @@
+ #include <gtk/gtk.h>
+ #include <gdk/gdk.h>
+ #include <glib.h>
++#include <pthread.h>
+ 
+ #include "infobar.h"
+ 

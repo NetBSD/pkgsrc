@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/04/06 11:08:15 rh Exp $
+
+--- src/http.c.orig	Wed Mar 19 09:22:55 2003
++++ src/http.c
+@@ -29,6 +29,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netdb.h>
++#include <netinet/in.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <string.h>
