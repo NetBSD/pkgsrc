@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1078 2003/11/28 19:28:52 wiz Exp $
+$NetBSD: TODO,v 1.1079 2003/11/29 01:29:02 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -304,6 +304,7 @@ Suggested package updates
 	o minicom-2.1
 	o mowitz-0.3.0
 	o mozilla-bin-1.5.1 [grant]
+	o mp3blaster-3.2.0
 	o mpich-1.2.5.2 [jschauma]
 	o mplayer-1.0pre2
 	o mrproject-0.9.1
