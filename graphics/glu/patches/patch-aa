@@ -1,15 +1,33 @@
-$NetBSD: patch-aa,v 1.3 2001/03/23 12:36:55 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2001/05/30 07:53:04 drochner Exp $
 
---- configure.orig	Thu Feb  8 00:27:38 2001
-+++ configure	Mon Mar 12 16:13:43 2001
+--- configure.orig	Thu May 17 00:28:58 2001
++++ configure	Fri May 18 14:16:44 2001
 @@ -823,8 +823,8 @@
  MESA_MAJOR=3
  MESA_MINOR=4
- MESA_TINY=1
+ MESA_TINY=2
 -LIBGL_VERSION=1:2:0${MESA_MAJOR}0${MESA_MINOR}0${MESA_TINY}
 -LIBGLU_VERSION=1:1:0${MESA_MAJOR}0${MESA_MINOR}0${MESA_TINY}
 +LIBGL_VERSION=${MESA_MAJOR}:${MESA_MINOR}:${MESA_TINY}
 +LIBGLU_VERSION=${MESA_MAJOR}:${MESA_MINOR}:${MESA_TINY}
  LIBGLUT_VERSION=3:7:0
+ 
+ 
+@@ -4635,7 +4635,7 @@
+ if test -d $srcdir/src-glut; then
+   have_glut_source=yes
+ else
+-  { echo "configure: error: GLUT sources missing; that is not supported at this point." 1>&2; exit 1; }
++  { echo "configure: error: GLUT sources missing; that is not supported at this point." 1>&2; }
+ fi
+ echo "$ac_t""$have_glut_source" 1>&6
+ need_glut=no
+@@ -4673,7 +4673,7 @@
+ done
+ echo "$ac_t""$have_demo_source" 1>&6
+ if test "x$have_demo_source" != xyes; then
+-  { echo "configure: error: Demo sources missing; that is not supported at this point." 1>&2; exit 1; }
++  { echo "configure: error: Demo sources missing; that is not supported at this point." 1>&2; }
+ fi
  
  
