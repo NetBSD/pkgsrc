@@ -1,17 +1,11 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:47 agc Exp $
-
---- readline.c.orig	Fri Jan 30 07:58:22 1998
-+++ readline.c	Fri Jan 30 08:08:56 1998
-@@ -119,3 +119,3 @@
- #ifdef SIGTSTP
--#define TERMIOS
-+/*#define TERMIOS*/
- #include <termios.h>
-@@ -126,2 +126,3 @@
- #endif 
-+#endif /* ISC22 */
- #ifndef IUCLC
-@@ -129,3 +130,2 @@
- #endif
--#endif /* ISC22 */
- 
+--- readline.c.orig	Tue Nov  3 13:53:59 1998
++++ readline.c	Mon Feb  1 00:37:36 1999
+@@ -143,7 +144,7 @@
+  */
+ #  if defined(SIGTSTP) || defined(TERMIOS)
+ #   ifndef TERMIOS
+-#    define TERMIOS
++/* #    define TERMIOS */
+ #   endif			/* not TERMIOS */
+ #   include <termios.h>
+ /* Added by Robert Eckardt, RobertE@beta.TP2.Ruhr-Uni-Bochum.de */
