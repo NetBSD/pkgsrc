@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/02 14:56:07 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/11 20:45:16 reed Exp $
 #
 
 DISTNAME=	gimp-print-4.2.6
@@ -10,13 +10,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	Drivers for Canon, Epson, Lexmark, and PCL printers
 
-.if !exists(/usr/bin/flex) && !exists(/usr/bin/lex)
-BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
-LEX=			${LOCALBASE}/bin/flex
-.endif
-
 USE_BUILDLINK2=		yes
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS+=		make lex
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 INFO_FILES=		gimpprint.info
