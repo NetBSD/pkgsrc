@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/10/24 18:57:05 hubertf Exp $
+
+SHA1 (hot-babe-0.1.2.tar.gz) = 53410a9f5590250ba862ee220ac9140014c39114
+Size (hot-babe-0.1.2.tar.gz) = 708450 bytes
+SHA1 (patch-aa) = 8e016eb38b21083b8d24c23ac480ebfd5275feb5
+SHA1 (patch-ab) = ebb9a0fae24c0ad6719fe99b34c77e49f91e02bc
