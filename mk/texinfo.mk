@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.4 2002/03/10 18:35:20 seb Exp $
+# $NetBSD: texinfo.mk,v 1.5 2002/03/14 10:35:23 seb Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -61,7 +61,7 @@ TEXINFO_PATTERNS+=	Makefile.in
 # ${INSTALL_INFO}
 TEXINFO_VAR_SUBST+=	MAKEINFO=${MAKEINFO:Q}
 TEXINFO_VAR_SUBST+=	INSTALL_INFO=${INSTALL_INFO:Q}
-TEXINFO_SUBST_SED=	${TEXINFO_VAR_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+TEXINFO_SUBST_SED+=	${TEXINFO_VAR_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 # replace bare makeinfo and install-info in MAKEINFO and INSTALL_INFO variables
 # assignments
 TEXINFO_SUBST_SED+=	-e 's!^MAKEINFO[ 	]*=[ 	]*makeinfo[ 	]*\(.*\)$$!MAKEINFO = ${MAKEINFO} \1!'
