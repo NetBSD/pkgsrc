@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2001/05/14 16:32:32 itojun Exp $
+# $NetBSD: Makefile,v 1.50 2001/05/22 09:46:16 abs Exp $
 
 DISTNAME=		openssh-2.9p1
 CATEGORIES=		security
@@ -56,7 +56,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
-			NetBSD-*-sparc NetBSD-*-vax SunOS-*-*
+			NetBSD-*-sparc NetBSD-*-vax SunOS-*-* Linux-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
