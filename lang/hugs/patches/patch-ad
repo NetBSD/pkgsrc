@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2003/05/04 20:19:46 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2003/06/23 21:04:37 jtb Exp $
 
 --- ../input.c.orig
 +++ ../input.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1 2003/05/04 20:19:46 jtb Exp $
  #else
  #define LINEBUFFER_SIZE 1000
 -static char lineBuffer[LINEBUFFER_SIZE];
-+static signed char lineBuffer[LINEBUFFER_SIZE];
++static int lineBuffer[LINEBUFFER_SIZE];
  #endif
  static int lineLength = 0;
  static int inCodeBlock = FALSE; /* Inside \begin{code}..\end{code} */
