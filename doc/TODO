@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2595 2004/11/30 02:01:40 seb Exp $
+$NetBSD: TODO,v 1.2596 2004/11/30 03:43:16 minskim Exp $
 
 Suggested new packages
 ======================
@@ -707,7 +707,6 @@ Suggested package updates
 	o mlterm-2.9.0
 	o mlview-0.7.1
 	o mmix-20041014
-	o molden-4.2 [pkg/28457]
 	o most-4.9.5
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
