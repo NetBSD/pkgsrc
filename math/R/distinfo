@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2004/01/05 12:20:57 markd Exp $
+$NetBSD: distinfo,v 1.16 2004/03/30 16:49:32 jwise Exp $
 
 SHA1 (R-1.8.1.tgz) = 397511dcef3a04ebb67ef23988f5c32eee72fe95
 Size (R-1.8.1.tgz) = 9407628 bytes
@@ -21,3 +21,4 @@ SHA1 (patch-ap) = b75680bae0d75f417c74d2137ba4b43ec1428131
 SHA1 (patch-aq) = 512d7613bbba00c0cb3e4543812f734159e12a92
 SHA1 (patch-ar) = 5cc4a77c253a77a564433187babb0135ccb84eaf
 SHA1 (patch-as) = 37db149821a49c86463683f3b82e8a763bbfcd1b
+SHA1 (patch-at) = d972e1072a7f6a30b5fbc2e5fa076bc5bdec5952
