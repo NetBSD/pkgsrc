@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/03/28 21:48:42 dmcmahill Exp $
+$NetBSD: md5,v 1.3 2000/08/28 19:52:34 dmcmahill Exp $
 
-MD5 (vipec-2.0.1.tar.gz) = 40c8f97dc7c4ddb55b13703e1f1f0d4c
+MD5 (vipec-2.0.4.tar.gz) = c9b92e9218193442b3a67c266fd16609
