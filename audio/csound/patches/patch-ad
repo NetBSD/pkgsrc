@@ -1,0 +1,9 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- acconfig.h.orig	Sat Mar 10 01:50:23 2001
++++ acconfig.h
+@@ -0,0 +1,4 @@
++/* these are here to silence autoreconf */
++#undef FORCE_STDOUT_LBUF
++#undef NEEDS_MINSHORT
++#undef NEEDS_SAFE_FCLOSE

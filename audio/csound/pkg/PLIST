@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+bin/csound
+bin/hetro
+bin/lpanal
+bin/pvanal
+bin/cvanal
+bin/scot
+bin/scsort
+bin/extract
+bin/envelope
+bin/pv_export
+bin/het_export
+bin/lpc_export
+bin/het_import
+bin/pv_import
+bin/mixer
+bin/extractor
+bin/scale
+bin/sndinfo
+bin/pvlook
+include/cscore.h
+include/dsputil.h
+include/fft.h
+include/lpc.h
+include/pvoc.h
+include/sfheader.h
+include/sysdep.h
+lib/libcsound.so
+lib/libcsound.so.4
+lib/libcsound.so.4.09.0.0b
+lib/libcscore.so
+lib/libcscore.so.4
+lib/libcscore.so.4.09.0.0b
+share/csound/csound.txt
+@dirrm share/csound

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- LINUXaudio.c.orig	Thu Sep 21 21:55:30 2000
++++ LINUXaudio.c
+@@ -21,7 +21,7 @@
+ 
+ #include <unistd.h>
+ #include <sys/ioctl.h>
+-#include <sys/soundcard.h>
++#include <soundcard.h>
+ #include "cs.h"
+ #include "soundio.h"
+ 

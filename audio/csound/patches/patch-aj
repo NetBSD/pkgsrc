@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- new-src/ipc-sliders.c.orig	Sat Dec 26 22:14:26 1998
++++ new-src/ipc-sliders.c
+@@ -190,7 +190,7 @@
+ 		pid_t father_pid = getpid();
+ 		pid_t child_pid = 0;
+ 
+-		syscall_warning(setpgrp(), "setpgrp() - cannot set csound as process group leader");
++		syscall_warning(setpgid(0,0), "setpgid(0,0) - cannot set csound as process group leader");
+ 		child_pid = syscall_fatal(vfork(), FORK_FAILED, "fork failed");
+ 
+ 		if (!child_pid)				/* this is the child */
