@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+$NetBSD: patch-al,v 1.2 2004/07/18 02:46:42 dmcmahill Exp $
 
 --- src/tcl/Makefile.in.orig	Tue Apr 27 12:46:12 2004
 +++ src/tcl/Makefile.in
@@ -11,3 +11,12 @@ $NetBSD: patch-al,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
  
  noinst_LIBRARIES = libtcl.a
  
+@@ -91,7 +91,7 @@ tclwrap.c \
+ tc.h
+ 
+ 
+-INCLUDES = -I$(srcdir)/../include
++INCLUDES = @TCL_CFLAGS@ -I$(srcdir)/../include
+ subdir = src/tcl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
