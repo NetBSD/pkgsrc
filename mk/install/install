@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.6 2001/12/04 21:05:06 seb Exp $
+# $NetBSD: install,v 1.7 2002/01/23 15:01:08 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -120,7 +120,8 @@ POST-INSTALL)
 
 		if [ -e "${file}" ]
 		then
-			${ECHO} "    ${file} already exists"
+			${ECHO} "    ${file} already exists, example file is"
+			${ECHO} "        ${samplefile}"
 		else
 			if [ -e "${samplefile}" ]
 			then
