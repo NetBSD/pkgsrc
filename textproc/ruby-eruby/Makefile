@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 14:01:56 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/07 03:07:46 taca Exp $
 # FreeBSD: ports/textproc/eruby/Makefile,v 1.9 2000/12/12 14:04:26 knu Exp
 
 DISTNAME=	eruby-0.9.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Interprets Ruby code embedded in a text file
 
 DIST_SUBDIR=	ruby
-USE_RUBY=	yes
+USE_RUBY_RD=	yes
 
 RUBY_REQD=	1.6
 
