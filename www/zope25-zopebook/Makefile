@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/03 19:48:53 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/04 11:54:33 drochner Exp $
 #
 
 DISTNAME=	ZopeBook
-PKGNAME=	zope25-zopebook
+PKGNAME=	zope25-zopebook-0
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Documentation/Books/ZopeBook/current/
 EXTRACT_SUFX=	.tgz
