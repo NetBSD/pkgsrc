@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/10/10 14:13:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/08 13:35:20 uebayasi Exp $
 
 DISTNAME=		zenicb-19981202
 PKGREVISION=		2
@@ -12,7 +12,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 .include "../../mk/emacs.mk"
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs214 xemacs215
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 
 .if defined(USE_XEMACS)
 MAKEFLAGS+=		USE_XEMACS=${USE_XEMACS}
