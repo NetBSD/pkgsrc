@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2003/10/29 20:54:51 reed Exp $
+$NetBSD: patch-ab,v 1.2 2004/08/14 21:36:22 hubertf Exp $
 
---- scribus/mpalette.cpp.orig	Wed Oct 15 19:15:33 2003
-+++ scribus/mpalette.cpp	Wed Oct 15 19:39:06 2003
+--- scribus/mpalette.cpp.orig	2004-06-04 22:00:51.000000000 +0200
++++ scribus/mpalette.cpp
 @@ -4,6 +4,7 @@
  #include <qpoint.h>
  #include <qwmatrix.h>
@@ -9,4 +9,4 @@ $NetBSD: patch-ab,v 1.1 2003/10/29 20:54:51 reed Exp $
 +#include <iostream>
  #include "query.h"
  #include "scribusview.h"
- extern QPixmap loadIcon(QString nam);
+ #include "autoform.h"
