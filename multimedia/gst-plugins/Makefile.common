@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2005/01/13 12:56:31 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/01/26 13:09:19 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.7
@@ -122,6 +122,7 @@ CONFIGURE_ENV+=		have_func=no
 		vorbistest \
 		x \
 		xshm \
+		xvid \
 		xvideo
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
