@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.3 2004/03/18 09:12:13 jlam Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.4 2004/03/26 18:48:52 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  db.buildlink3.mk will:
@@ -52,20 +52,25 @@ MAKEFLAGS+=	_BDB_INSTALLED.${_bdb_}=${_BDB_INSTALLED.${_bdb_}}
 .    endif
 .  endfor
 
+USE_DB185?=		yes
 _BDB_OK.native?=	no
 _BDB_INSTALLED.native?=	no
-.  if defined(USE_DB185)
-.    if exists(/usr/include/db.h)
+.  if exists(/usr/include/db.h)
 _BDB_OK.native=		yes
 _BDB_INSTALLED.native=	yes
 _BDB_INCDIRS=		include
 _BDB_TRANSFORM=		# empty
-.    elif exists(/usr/include/db1/db.h)
+.  elif exists(/usr/include/db1/db.h)
 _BDB_OK.native=		yes
 _BDB_INSTALLED.native=	yes
 _BDB_INCDIRS=		include/db1
 _BDB_TRANSFORM=		l:db:db1
-.    endif
+.  endif
+.  if !empty(USE_DB185:M[nN][oO])
+_BDB_OK.native=		no
+_BDB_INSTALLED.native=	no
+_BDB_INCDIRS=		# empty
+_BDB_TRANSFORM=		# empty
 .  endif
 
 .  if !defined(_BDB_TYPE)
