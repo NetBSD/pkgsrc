@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 18:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/05 13:19:09 wiz Exp $
 #
 
-DISTNAME=	shorten-3.5.0
+DISTNAME=	shorten-3.5.1
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://www.etree.org/shnutils/shorten/source/
 
