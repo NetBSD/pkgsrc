@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2004/06/07 09:23:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.88 2004/07/03 17:12:11 jmmv Exp $
 #
 
-DISTNAME=		gnumeric-1.2.12
-PKGREVISION=		1
+DISTNAME=		gnumeric-1.2.13
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,8 +12,9 @@ COMMENT=		Spreadsheet program from the GNOME project
 
 BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
 USE_LIBTOOL=		YES
