@@ -1,0 +1,4 @@
+This module implements bit vectors of arbitrary size and provides
+efficient methods for handling them.  The module is intended to
+serve as a base class for other applications or application classes,
+such as implementing sets or performing big integer arithmetic. 
