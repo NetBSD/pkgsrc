@@ -1,0 +1,25 @@
+	$NetBSD: patch-ad,v 1.1 2004/06/10 10:20:28 lha Exp $
+
+NetBSD needs SO_REUSEPORT not SO_REUSEADDR, should use "int" not
+"long" otherwise it wont work on big-endian machines.
+
+--- src/lib/howl/socket.c	2004-06-09 20:10:51.000000000 +0200
++++ src/lib/howl/socket.c.new	2004-06-09 20:10:59.000000000 +0200
+@@ -242,7 +242,7 @@
+ sw_multicast_socket_super_init(
+                sw_socket	self)
+ {
+-	sw_ulong	opt = 1;
++	int	opt = 1;
+    
+    SW_TRY(sw_socket_init(self, SW_FALSE, &sw_socket_udp_connect, &sw_socket_udp_send, &sw_socket_udp_sendto, &sw_socket_udp_recv, &sw_socket_udp_recvfrom, &sw_socket_udp_close));
+ 
+@@ -252,7 +252,7 @@
+ 		return SW_E_FAIL;
+    }
+ 
+-#if defined(__APPLE__) || defined(__VXWORKS__)
++#if defined(__APPLE__) || defined(__VXWORKS__) || defined(__NetBSD__)
+    if (setsockopt(self->m_fd, SOL_SOCKET, SO_REUSEPORT, (char*) &opt, sizeof(opt)) == -1)
+ #else
+ 	if (setsockopt(self->m_fd, SOL_SOCKET, SO_REUSEADDR, (char*) &opt, sizeof(opt)) == -1)
