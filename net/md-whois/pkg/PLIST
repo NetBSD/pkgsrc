@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/07 16:55:01 agc Exp $
+bin/md-whois
+man/man1/md-whois.1
