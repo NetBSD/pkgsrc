@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2002/11/03 22:54:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.53 2002/11/25 17:22:05 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -115,7 +115,9 @@ NS_VERS=	4.73
 PKGNAME=	${BINNAME}-${NS_VERS}
 DISTNAME=	netscape-4.7-3.ppc
 WRKSRC=		${WRKDIR}
-MASTER_SITES=	ftp://ftp.linuxppc.org/linuxppc-halloween/software/
+MASTER_SITES=	ftp://ftp.riken.go.jp/pub/Linux/linuxppc/linuxppc-halloween/software/ \
+		ftp://gd.tuwien.ac.at/linux/linuxppc/linuxppc-halloween/software/
+		# was: ftp://ftp.linuxppc.org/linuxppc-halloween/software/ \
 EXTRACT_SUFX=	.rpm
 HOMEPAGE=	http://linuxppc.org/software/index/linuxppc_stable/software/netscape-4.7-3.ppc.html
 BUILD_DEPENDS=	rpm2pkg-1.2:../../pkgtools/rpm2pkg
