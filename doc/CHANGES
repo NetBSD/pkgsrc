@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7213 2004/09/22 22:36:24 wulf Exp $
+$NetBSD: CHANGES,v 1.7214 2004/09/23 06:44:50 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4391,3 +4391,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated privoxy to 3.0.3 [kim 2004-09-22]
 	Updated gaim to 1.0.0 [gavan 2004-09-22]
 	Updated hamlib to 1.2.2 [wulf 2004-09-23]
+	Updated popa3d to 0.6.4.1nb1 [cube 2004-09-23]
