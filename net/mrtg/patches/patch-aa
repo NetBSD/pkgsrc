@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.15 2003/12/07 13:53:32 martti Exp $
+$NetBSD: patch-aa,v 1.16 2004/06/20 21:53:18 xtraeme Exp $
 
 --- configure.orig	Fri Dec  5 00:11:29 2003
 +++ configure	Sun Dec  7 15:36:34 2003
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.15 2003/12/07 13:53:32 martti Exp $
  
  
 -LDFLAGS="${LDFLAGS} ${MATHLIBS}"
-+LDFLAGS="${LDFLAGS} ${MATHLIBS} -lgd -lttf -lintl -lXpm -lX11 -ljpeg"
++LDFLAGS="${LDFLAGS} ${MATHLIBS} -lgd -lttf -lintl -ljpeg"
  
  GDEXTRALIB=""
  echo "$as_me:$LINENO: checking for gdImageGif in -lgd" >&5
