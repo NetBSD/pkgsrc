@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/08/05 13:09:28 agc Exp $
+$NetBSD: patch-aa,v 1.6 2001/06/28 20:20:49 jlam Exp $
 
---- Makefile.orig	Thu Sep  7 03:24:02 1995
-+++ Makefile	Thu Aug  5 13:50:46 1999
+--- Makefile.orig	Wed Sep  6 22:24:02 1995
++++ Makefile
 @@ -3,9 +3,11 @@
  
  SHELL=/bin/sh
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.5 1999/08/05 13:09:28 agc Exp $
  
  #If your system doesn't have waitpid(), uncomment the nextline:
  #NO_WAITPID=-DNO_WAITPID
-@@ -43,16 +45,16 @@
+@@ -43,15 +45,15 @@
  
  # Define RCMD and SUPPORT_RCMD if you want to support Rrcmd, which is required
  # for SOCKSified rlogin, rsh, and rcp.
@@ -39,12 +39,10 @@ $NetBSD: patch-aa,v 1.5 1999/08/05 13:09:28 agc Exp $
  
  # optimization flag for cc
 -OPTIMIZE=-g
--#OPTIMIZE=-O
 +#OPTIMIZE=-g
-+OPTIMIZE=-O
+ #OPTIMIZE=-O
  # Be careful with the OPTIMIZE flag. SunPro's SC2.0.1, for example, is
  # knwon to produce incorrect code when -O is used.
- 
 @@ -73,13 +75,13 @@
  #BIND_RESOLVER=-DBIND_RESOLVER
  
@@ -87,15 +85,14 @@ $NetBSD: patch-aa,v 1.5 1999/08/05 13:09:28 agc Exp $
  #GETPASS=
  
  # SOLARIS should use
--#CC=cc
++.if ${OPSYS} == "SunOS"
+ #CC=cc
 -#RESOLV_LIB=-lresolv -lnsl -lsocket
 -#OTHER_CFLAGS=-DSOLARIS -Dindex=strchr -Drindex=strrchr $(SHORTENED_RBIND) -DUSE_DIRENT $(GETCWD) $(FASCIST) -DCOMPAT $(TRY_PASV)
 -#RANLIB=/bin/true
 -#OS=solaris2.2
 -#INSTALL=install
 -#GETPASS=getpass.o
-+.if ${OPSYS} == "SunOS"
-+#CC=cc
 +RESOLV_LIB=-lresolv -lnsl -lsocket
 +OTHER_CFLAGS=-DSOLARIS -Dindex=strchr -Drindex=strrchr $(SHORTENED_RBIND) -DUSE_DIRENT $(GETCWD) $(FASCIST) -DCOMPAT $(TRY_PASV)
 +RANLIB=/bin/true
