@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/10/05 07:07:14 jlam Exp $
-man/man1/psed.1
-man/man1/pstruct.1
+@comment $NetBSD: PLIST,v 1.8 2004/11/07 16:20:11 wiz Exp $
 share/mk/bsd.perl.mk
 @unexec ${RM} -f %D/${PERL5_SITEARCH}/perllocal.pod
 @unexec ${RMDIR} -p %D/${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
