@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1572 2005/01/24 19:57:42 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1573 2005/01/25 13:13:35 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -748,6 +748,10 @@ USE_MAKEINFO?=	no		# default to not using makeinfo
 .if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
 . include "../../mk/texinfo.mk"
 .endif
+
+# Handle alternatives
+#
+.include "../../mk/alternatives.mk"
 
 # CONF_DEPENDS notes a dependency where the config directory for the
 # package matches the dependency's config directory.  CONF_DEPENDS is
