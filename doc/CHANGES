@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.30 2002/09/23 10:51:34 kleink Exp $
+$NetBSD: CHANGES,v 1.31 2002/09/23 11:10:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2935,3 +2935,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated msudir to 0.11 [abs 2002-09-23]
 	Updated ns-flash to 5.0.51 [wiz 2002-09-23]
 	Updated scmxx to 0.6.1.5nb1 [kleink 2002-09-23]
+	Updated dctc to 0.83.4 [wiz 2002-09-23]
