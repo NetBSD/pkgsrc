@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2004/12/05 23:30:25 recht Exp $
+# $NetBSD: Makefile,v 1.205 2004/12/21 10:43:14 darcy Exp $
 #
 
 COMMENT=	Programming languages
@@ -110,6 +110,7 @@ SUBDIR+=	pnet
 SUBDIR+=	pnetC
 SUBDIR+=	pnetlib
 SUBDIR+=	pnetlib-nox11
+SUBDIR+=	py-basicproperty
 SUBDIR+=	py-extclass
 SUBDIR+=	py-funge
 SUBDIR+=	py-html-docs
