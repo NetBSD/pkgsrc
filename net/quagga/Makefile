@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/10/17 05:32:38 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2003/11/18 16:34:49 wiz Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
 DISTNAME=	quagga-0.96.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.quagga.net/download/
 
