@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1998/09/01 21:44:59 tron Exp $
+
+--- Imakefile.orig	Wed Mar  4 09:36:44 1998
++++ Imakefile	Sat Aug 29 11:08:05 1998
+@@ -55,7 +55,7 @@
+ 
+ SRCS = 	$(OBJS:.o=.c)
+ 
+-          XMLIB = -lXm -lXpm
++          XMLIB = ${MOTIFLIB} -lXpm
+         DEPLIBS = $(DEPXMLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+  EXTRA_INCLUDES = -I../../libastro
+   LOCAL_LDFLAGS = -L../../libastro
