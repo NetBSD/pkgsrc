@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2002/06/27 20:40:12 agc Exp $
+
+--- xscan.C	2002/06/27 20:28:59	1.1
++++ xscan.C	2002/06/27 20:35:04
+@@ -141,8 +141,8 @@
+       perror("shmget failed:");
+       return (NULL);
+     }
+-    sbuf = ximage->data = SHMInfo.shmaddr =
+-      shmat(SHMInfo.shmid, 0, 0);
++    (void *)sbuf = (void *) ximage->data = (void *) SHMInfo.shmaddr =
++      (void *) shmat(SHMInfo.shmid, 0, 0);
+ 
+     XShmAttach(disp, &SHMInfo);
+ 
