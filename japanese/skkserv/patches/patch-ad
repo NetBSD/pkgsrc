@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+--- configure.orig	Fri Feb  7 14:00:43 1997
++++ configure	Tue Dec 21 15:46:55 1999
+@@ -1191,7 +1191,7 @@
+ EOF
+ 
+ 
+-for ac_func in bzero tiocnotty getdtablesize
++for ac_func in bzero setsid getdtablesize
+ do
+ echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
+ echo "configure:1198: checking for $ac_func" >&5
