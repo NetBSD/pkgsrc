@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:02 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/22 12:22:05 jmmv Exp $
 bin/tracker
 bin/randomize
-etc/compression_methods
 @unexec ${INSTALL_INFO} --delete %D/info/tracker.info %D/info/dir
 info/tracker.info
 @exec ${INSTALL_INFO} %D/info/tracker.info %D/info/dir
@@ -89,5 +88,7 @@ share/doc/tracker/splitmod.readme
 share/doc/tracker/readme
 share/doc/tracker/protracker.fmt
 share/doc/tracker/FAQ
+share/examples/tracker/compression_methods
+@dirrm share/examples/tracker
 @dirrm share/doc/tracker/Html
 @dirrm share/doc/tracker
