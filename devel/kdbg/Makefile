@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/11 14:53:39 agc Exp $
+# $NetBSD: Makefile,v 1.13 2000/07/14 16:04:21 agc Exp $
 
 DISTNAME=	kdbg-1.0.1
 CATEGORIES=	devel kde
@@ -18,8 +18,8 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_PKGLIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-qt-dir=`${MAKE} show-qt1-prefix`/qt1 \
-		--with-qt-includes=`${MAKE} show-qt1-prefix`/qt1/include \
+CONFIGURE_ARGS=	--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1 \
+		--with-qt-includes=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1/include \
 		--with-extra-libs=${LOCALBASE}/lib \
 		--with-extra-includes=${LOCALBASE}/include
 
