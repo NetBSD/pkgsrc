@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 01:04:36 snj Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/15 12:40:25 grant Exp $
 #
 
 DISTNAME=	libvideogfx-1.0.3
@@ -12,6 +12,7 @@ HOMEPAGE= \
 COMMENT=	C++ library for low-level video processing
 
 USE_BUILDLINK3=	YES
+USE_LANGUAGES=	c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_X11=	yes
