@@ -1,0 +1,166 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/05 09:29:54 taca Exp $
+${RUBY_SITELIBDIR}/test/unit/ui/console/testrunner.rb
+@dirrm ${RUBY_SITELIBDIR}/test/unit/ui/console
+${RUBY_SITELIBDIR}/test/unit/ui/fox/testrunner.rb
+@dirrm ${RUBY_SITELIBDIR}/test/unit/ui/fox
+${RUBY_SITELIBDIR}/test/unit/ui/gtk/testrunner.rb
+@dirrm ${RUBY_SITELIBDIR}/test/unit/ui/gtk
+${RUBY_SITELIBDIR}/test/unit/util/observable.rb
+${RUBY_SITELIBDIR}/test/unit/util/procwrapper.rb
+@dirrm ${RUBY_SITELIBDIR}/test/unit/util/
+${RUBY_SITELIBDIR}/test/unit/ui/testrunnermediator.rb
+${RUBY_SITELIBDIR}/test/unit/ui/testrunnerutilities.rb
+@dirrm ${RUBY_SITELIBDIR}/test/unit/ui
+${RUBY_SITELIBDIR}/test/unit/assertionfailederror.rb
+${RUBY_SITELIBDIR}/test/unit/assertions.rb
+${RUBY_SITELIBDIR}/test/unit/error.rb
+${RUBY_SITELIBDIR}/test/unit/failure.rb
+${RUBY_SITELIBDIR}/test/unit/testcase.rb
+${RUBY_SITELIBDIR}/test/unit/testresult.rb
+${RUBY_SITELIBDIR}/test/unit/testsuite.rb
+@dirrm ${RUBY_SITELIBDIR}/test/unit
+${RUBY_SITELIBDIR}/test/unit.rb
+@dirrm ${RUBY_SITELIBDIR}/test
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/AssertionFailedError.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000035.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000036.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000037.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000038.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000039.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000040.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000041.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000042.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000043.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000044.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000045.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000046.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000047.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000048.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000049.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000050.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000051.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000052.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000053.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000054.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000055.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src/M000056.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/Assertions.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.src/M000077.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.src/M000078.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.src/M000079.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.src/M000080.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.src/M000081.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.src/M000082.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/Error.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Failure.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Failure.src/M000066.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Failure.src/M000067.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Failure.src/M000068.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Failure.src/M000069.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Failure.src/M000070.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/Failure.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000057.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000058.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000059.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000060.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000061.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000062.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000063.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000064.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src/M000065.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestCase.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000083.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000084.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000085.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000086.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000087.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000088.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000089.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000090.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src/M000091.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestResult.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.src/M000071.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.src/M000072.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.src/M000073.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.src/M000074.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.src/M000075.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.src/M000076.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/TestSuite.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000014.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000015.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000016.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000017.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000018.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000019.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000020.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000021.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000022.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000023.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src/M000024.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console/TestRunner.src
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Console
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000005.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000006.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000007.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000008.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000009.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000010.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000011.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000012.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src/M000013.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox/TestRunner.src
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/Fox
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK/TestRunner.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK/TestRunner.src/M000025.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK/TestRunner.src/M000026.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK/TestRunner.src/M000027.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK/TestRunner.src/M000028.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK/TestRunner.src/M000029.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK/TestRunner.src
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/GTK
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerMediator.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerMediator.src/M000031.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerMediator.src/M000032.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerMediator.src/M000033.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerMediator.src/M000034.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerMediator.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerUtilities.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerUtilities.src/M000030.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI/TestRunnerUtilities.src
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/UI
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/Observable.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/Observable.src/M000001.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/Observable.src/M000002.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/Observable.src/M000003.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/Observable.src
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/ProcWrapper.html
+${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/ProcWrapper.src/M000004.html
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util/ProcWrapper.src
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit/Util
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test/Unit
+@dirrm ${RUBY_DOCDIR}/testunit/classes/Test
+@dirrm ${RUBY_DOCDIR}/testunit/classes
+${RUBY_DOCDIR}/testunit/created.rid
+${RUBY_DOCDIR}/testunit/files/test/unit_rb.html
+@dirrm ${RUBY_DOCDIR}/testunit/files/test
+@dirrm ${RUBY_DOCDIR}/testunit/files
+${RUBY_DOCDIR}/testunit/fr_class_index.html
+${RUBY_DOCDIR}/testunit/fr_file_index.html
+${RUBY_DOCDIR}/testunit/fr_method_index.html
+${RUBY_DOCDIR}/testunit/index.html
+${RUBY_DOCDIR}/testunit/rdoc-style.css
+@dirrm ${RUBY_DOCDIR}/testunit
+${RUBY_EXAMPLESDIR}/testunit/adder.rb
+${RUBY_EXAMPLESDIR}/testunit/index.html
+${RUBY_EXAMPLESDIR}/testunit/subtracter.rb
+${RUBY_EXAMPLESDIR}/testunit/tc_adder.rb
+${RUBY_EXAMPLESDIR}/testunit/tc_subtracter.rb
+${RUBY_EXAMPLESDIR}/testunit/ts_examples.rb
+@dirrm ${RUBY_EXAMPLESDIR}/testunit
