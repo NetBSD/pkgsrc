@@ -1,0 +1,53 @@
+--- wwwoffle.c.orig	Tue Aug 24 19:33:32 1999
++++ wwwoffle.c	Tue Aug 24 19:41:22 1999
+@@ -216,7 +216,7 @@
+ 
+     if(!strcmp(argv[i],"-p"))
+       {
+-       char *colon;
++       char *colon, *escr, *escl;
+ 
+        if(++i>=argc)
+          {fprintf(stderr,"wwwoffle: The '-p' argument requires a hostname and optionally a port number.\n"); exit(1);}
+@@ -224,7 +224,7 @@
+        if(ConfigFile)
+          {fprintf(stderr,"wwwoffle: The '-p' and '-c' options cannot be used together.\n"); exit(1);}
+ 
+-       if((colon=strchr(argv[i],':')))
++       if((colon=strrchr(argv[i],':')))
+          {
+           *colon++=0;
+ 
+@@ -234,7 +234,14 @@
+             {fprintf(stderr,"wwwoffle: The port number %d '%s' is invalid.\n",port,argv[i]); exit(1);}
+          }
+ 
+-       host=argv[i];
++       escl=strchr(argv[i],'[');
++       escr=strrchr(argv[i],']');
++       if (escl && escr) {
++	   host=escl+1;
++	   *escr=0;
++       }
++       else
++	   host=argv[i];
+ 
+        argv[i-1]=NULL;
+        argv[i]=NULL;
+@@ -344,12 +351,12 @@
+        host=(char*)malloc(strlen(env)+1);
+        strcpy(host,env);
+ 
+-       if((colon1=strchr(host,':')))
++       if((colon2=strrchr(host,':')))
+          {
+-          *colon1=0;
+-          if((colon2=strchr(colon1+1,':')))
++          *colon2=0;
++          if((colon1=strchr(host,':')))
+             {
+-             *colon2=0;
++             *colon1=0;
+              if(action==Get || action==Output || action==OutputWithHeader)
+                 port=atoi(colon1+1);
+              else

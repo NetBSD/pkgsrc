@@ -1,18 +1,32 @@
-@comment $NetBSD: PLIST,v 1.3 1999/04/20 20:06:50 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/09/03 21:07:38 tron Exp $
 bin/wwwoffle
-bin/wwwoffle-tools
 bin/wwwoffle-ls
 bin/wwwoffle-mv
+bin/wwwoffle-read
 bin/wwwoffle-rm
+bin/wwwoffle-tools
+bin/wwwoffle-write
 etc/rc.d/wwwoffle.sh
 etc/wwwoffle/wwwoffle.conf.default
-@exec cp -p %F %D/etc/wwwoffle/wwwoffle.conf
-@unexec rm -f %D/etc/wwwoffle/wwwoffle.conf
+@exec if [ ! -f %D/etc/wwwoffle/wwwoffle.conf ]; then cp -p %D/etc/wwwoffle/wwwoffle.conf.default %D/etc/wwwoffle/wwwoffle.conf; fi
 libdata/wwwoffle-spool.tar.gz
 man/man1/wwwoffle.1
 man/man5/wwwoffle.conf.5
 man/man8/wwwoffled.8
 sbin/wwwoffled
-@dirrm etc/wwwoffle
+share/doc/wwwoffle/CHANGES.CONF
+share/doc/wwwoffle/CONVERT
+share/doc/wwwoffle/COPYING
+share/doc/wwwoffle/FAQ
+share/doc/wwwoffle/INSTALL
+share/doc/wwwoffle/NEWS
+share/doc/wwwoffle/README
+share/doc/wwwoffle/README.1st
+share/doc/wwwoffle/README.CONF
+share/doc/wwwoffle/README.PWD
+share/doc/wwwoffle/README.htdig
+share/doc/wwwoffle/README.win32
+share/doc/wwwoffle/UPGRADE
+@dirrm share/doc/wwwoffle
 @exec @GTAR@ xzCf / %D/libdata/wwwoffle-spool.tar.gz
 @unexec rm -rf /var/wwwoffle
