@@ -1,19 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2003/04/06 18:27:42 magick Exp $
+$NetBSD: patch-aa,v 1.12 2003/05/17 10:30:58 magick Exp $
 
 --- Makefile.orig	2003-03-22 17:01:56.000000000 +0100
 +++ Makefile
-@@ -36,9 +36,9 @@ ifeq ($(OS),Windows_NT)
- include Makefile.win32
- else
- OS = $(shell uname)
--ifeq ($(OS), FreeBSD)
-+ifeq ($(OS), NetBSD)
- # for FreeBSD 
--include Makefile.freebsd
-+include Makefile.netbsd
- else
- 
- ROOT    =
 @@ -46,7 +46,7 @@ prefix  = /usr/local
  exec_prefix = ${prefix}
  bindir  = $(ROOT)${exec_prefix}/bin
