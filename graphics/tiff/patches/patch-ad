@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.3 1999/10/08 21:14:35 jlam Exp $
+
+--- ./configure.orig	Wed Sep  8 05:38:56 1999
++++ ./configure	Fri Oct  8 01:37:09 1999
+@@ -1661,6 +1661,7 @@
+ 	    -[LR]/*)	echo "$i" ;;
+ 	    -L*)	echo "$i" | sed 's;^-L;-L../;' ;;
+ 	    -R*)	echo "$i" | sed 's;^-R;-R../;' ;;
++	    -W*)	echo "$i" ;;
+ 	    *)		echo "../$i" ;;
+ 	    esac
+ 	done) | tr '\012' ' '
