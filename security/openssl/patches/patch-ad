@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.13 2004/12/24 22:02:38 jlam Exp $
+$NetBSD: patch-ad,v 1.14 2005/03/23 09:06:38 jlam Exp $
 
---- apps/Makefile.orig	2004-08-10 05:09:07.000000000 -0400
+--- apps/Makefile.orig	2005-03-12 07:15:19.000000000 -0500
 +++ apps/Makefile
 @@ -10,6 +10,7 @@ CFLAG=		-g -static
  INSTALL_PREFIX=
@@ -10,15 +10,6 @@ $NetBSD: patch-ad,v 1.13 2004/12/24 22:02:38 jlam Exp $
  MAKEDEPPROG=	makedepend
  MAKEDEPEND=	$(TOP)/util/domd $(TOP) -MD $(MAKEDEPPROG)
  MAKEFILE=	Makefile
-@@ -36,7 +37,7 @@ LIBSSL=-L.. -lssl
- 
- PROGRAM= openssl
- 
--SCRIPTS=CA.sh CA.pl der_chop
-+SCRIPTS=CA.sh CA.pl
- 
- EXE= $(PROGRAM)$(EXE_EXT)
- 
 @@ -106,13 +107,13 @@ install:
  	@for i in $(SCRIPTS); \
  	do  \

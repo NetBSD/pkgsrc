@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9569 2005/03/23 05:05:02 jlam Exp $
+$NetBSD: CHANGES,v 1.9570 2005/03/23 09:06:40 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1579,3 +1579,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated courier-maildir to 0.49.0 [jlam 2005-03-23]
 	Updated courier-imap to 4.0.2 [jlam 2005-03-23]
 	Updated sqwebmail to 5.0.1 [jlam 2005-03-23]
+	Updated openssl to 0.9.7f [jlam 2005-03-23]

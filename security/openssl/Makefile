@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.101 2005/02/02 23:43:42 jlam Exp $
+# $NetBSD: Makefile,v 1.102 2005/03/23 09:06:38 jlam Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
-OPENSSL_VERS?=		0.9.7e
+OPENSSL_VERS?=		0.9.7f
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
-PKGREVISION=	1
 MASTER_SITES=	http://mirrors.isc.org/pub/openssl/source/ \
 		http://www.mirrors.wiretapped.net/security/cryptography/libraries/tls/openssl/ \
 		http://sunsite.rediris.es/pub/mirror/OpenSSL/ \
@@ -52,9 +51,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	shared
 
-# IDEA, RC5, and MDC2 are disabled due to licensing and/or patent issues.
-CONFIGURE_ARGS+=	no-idea no-rc5 no-mdc2
-
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
 CONFIGURE_SCRIPT=	./Configure
 .  if !empty(CC_VERSION:Mgcc*)
@@ -69,6 +65,8 @@ CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	irix64-mips4-cc
 .  endif
 .endif
+
+.include "../../security/openssl/options.mk"
 
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL="${PERL5}"
