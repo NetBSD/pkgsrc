@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1360 2003/02/14 22:03:36 kristerw Exp $
+$NetBSD: CHANGES,v 1.1361 2003/02/14 22:50:01 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -641,3 +641,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome2-terminal to 2.0.1nb2 [jmmv 2003-02-14]
 	Added autogen-5.4.7 [kristerw 2003-02-14]
 	Updated xmess to 0.65.1 [kristerw 2003-02-14]
+	Updated opencm to 0.1.2alpha4 [hubertf 2003-02-14]
