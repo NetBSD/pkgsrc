@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 14:00:22 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/11 16:37:08 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -13,30 +13,25 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}optparse>=0.7:../../devel/ruby-optparse
 DEPENDS+=	w3m>=0.2.1:../../www/w3m
 
 DIST_SUBDIR=	ruby
-VERSION=	0.1.3
-NO_BUILD=	# yes
+VERSION=	0.1.4
+USE_RUBY_SETUP=	# defined
 
-REPLACE_RUBY=	rt/rt2
-
-RT_COMMANDS=	rt2 rdrt2
-RT_LIB=		rt2html-lib.rb rt2txt-lib.rb rtparser.rb rtvisitor.rb w3m.rb
+REPLACE_RUBY=	bin/rt/rt2 lib/rt/rt2html-lib.rb lib/rt/rt2txt-lib.rb \
+		lib/rt/rtparser-test.rb lib/rt/rtparser.rb \
+		lib/rt/rtvisitor.rb lib/rt/w3m.rb
 
 DOCS_JA=	rt.html rt.rd
 
-do-install:
-.for f in ${RT_COMMANDS}
-	${INSTALL_SCRIPT} ${WRKSRC}/rt/${f} ${LOCALBASE}/bin
-.endfor
-	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/rt
-.for f in ${RT_LIB}
-	${INSTALL_DATA} ${WRKSRC}/rt/${f} ${RUBY_SITELIBDIR}/rt
-.endfor
+pre-configure:
+	${RM} -f ${WRKSRC}/setup/rt.rb
+
+post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rt/ja
 .for f in ${DOCS_JA}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/rt/ja
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/rt
-	${INSTALL_DATA} ${WRKSRC}/rt/dot.rt.rd2rc ${RUBY_EXAMPLESDIR}/rt
+	${INSTALL_DATA} ${WRKSRC}/dot.rt.rd2rc ${RUBY_EXAMPLESDIR}/rt
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
