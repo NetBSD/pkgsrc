@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/09/29 12:34:15 agc Exp $
+# $NetBSD: Makefile,v 1.14 2000/07/20 15:26:18 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
-DEPENDS+=		readline-4.0:../../devel/readline
+DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		amanda-common-2.4.1p1:../../sysutils/amanda-common
 
 USE_X11=		yes
