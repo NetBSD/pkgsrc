@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/08/26 19:38:05 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/31 08:17:43 jlam Exp $
 
 PKGNAME=	aalib-x11-${BASE_VERS}
 CATEGORIES+=	x11
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	ASCII Art library with X11 support
 
@@ -11,6 +11,11 @@ USE_X11=		# defined
 
 ALL_TARGET=		libaa-x11.la
 INSTALL_TARGET=		install-libLTLIBRARIES
+
+# We need to correct the aalib-config script to return "-laa-x11" instead
+# of "-laa".
+#
+BUILDLINK_TRANSFORM+=	l:aa:aa-x11
 
 post-patch:
 	for file in ${WRKSRC}/src/Makefile.in; do			\
