@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/18 14:48:35 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/18 16:31:24 itojun Exp $
 #
 
 DISTNAME=       vorbis_nightly_cvs-20000818
@@ -14,7 +14,8 @@ HOMEPAGE=	http://www.vorbis.com/
 
 WRKSRC=		${WRKDIR}/vorbis
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV=	LIBS="${LDFLAGS} ${LIBS} -lossaudio"
+CFLAGS+=	-I${LOCALBASE}/include
+CONFIGURE_ENV+=	LIBS="${LDFLAGS} ${LIBS} -lossaudio"
 
 post-build:
 	(cd ${WRKSRC}/vorbis-tools; ${MAKE})

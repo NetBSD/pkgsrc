@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2000/08/18 14:48:37 itojun Exp $
---- configure-	Fri Aug 18 23:41:46 2000
-+++ configure	Fri Aug 18 23:42:46 2000
+$NetBSD: patch-af,v 1.2 2000/08/18 16:31:24 itojun Exp $
+--- configure.orig	Sat Jul 22 11:03:45 2000
++++ configure	Sat Aug 19 01:27:56 2000
 @@ -1030,3 +1030,3 @@
  #not everyone uses libm (eg, BeOS)
 -#AC_CHECK_LIB(m, cos, LIBS="-lm"; AC_DEFINE(HAVE_LIBM), LIBS="")
@@ -14,3 +14,8 @@ $NetBSD: patch-af,v 1.1 2000/08/18 14:48:37 itojun Exp $
    echo "$ac_t""no" 1>&6
 -LIBS=""
  fi
+@@ -1286,3 +1285,3 @@
+ 
+-CFLAGS=""
++#CFLAGS=""
+ 
