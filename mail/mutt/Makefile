@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/01/28 10:16:54 agc Exp $
+# $NetBSD: Makefile,v 1.40 2000/01/31 23:51:30 tron Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
 		ftp://ftp.uib.no/pub/mutt/ \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/mail/mutt/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.mutt.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
