@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.421 2003/03/26 14:19:32 wiz Exp $
+$NetBSD: TODO,v 1.422 2003/03/26 14:56:19 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -162,7 +162,6 @@ Suggested package updates
 	o libggi-2.0.3
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
-	o libxml-2.5.5
 	o lilypond-1.6.8
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
