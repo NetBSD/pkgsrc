@@ -1,32 +1,35 @@
-$NetBSD: patch-ab,v 1.6 2002/11/07 03:49:42 dillo Exp $
+$NetBSD: patch-ab,v 1.7 2003/02/20 13:51:23 salo Exp $
 
---- Makefile.orig	Sun Oct 28 02:10:49 2001
-+++ Makefile
-@@ -1,15 +1,15 @@
+--- Makefile.orig	2001-10-28 02:10:49.000000000 +0100
++++ Makefile	2003-02-20 14:27:15.000000000 +0100
+@@ -1,30 +1,32 @@
 -CC = gcc
 -LD = gcc
 -RM = rm -f
 -MKDIR = mkdir -p
 -INSTALL = install
 -CFLAGS = -c -Wall -O2 -fomit-frame-pointer
-+CC ?= gcc
-+LD = ${CC}
-+RM ?= rm -f
-+MKDIR ?= mkdir -p
-+INSTALL ?= install
-+CFLAGS += -c -Wall -fomit-frame-pointer
++#CC = gcc
++LD = $(CC)
++#RM = rm -f
++#MKDIR = mkdir -p
++#INSTALL = install
++CFLAGS += -c -Wall -O2 -fomit-frame-pointer
  # You may use OpenSSL's MD5 routines instead of the ones supplied here
  #CFLAGS += -DHAVE_OPENSSL
 -LDFLAGS = -s
-+LDFLAGS =
++#LDFLAGS = -s
  LIBS =
  # Linux with glibc, FreeBSD, NetBSD
 -#LIBS += -lcrypt
-+LIBS += -lcrypt
++LIBS += -lc -lcrypt
  # HP-UX trusted system
  #LIBS += -lsec
  # Solaris (POP_STANDALONE, POP_VIRTUAL)
-@@ -17,14 +17,14 @@ LIBS =
+-#LIBS += -lsocket -lnsl
++.ifdef ${OPSYS} == "SunOS"
++LIBS += -lsocket -lnsl
++.endif
  # PAM
  #LIBS += -lpam
  # TCP wrappers
