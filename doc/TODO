@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3167 2005/03/01 23:39:30 wiz Exp $
+$NetBSD: TODO,v 1.3168 2005/03/02 00:59:52 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -1125,7 +1125,6 @@ Suggested package updates
 	o vba-1.7.2
 	o vcdimager-0.7.21
 	o vera-1.14
-	o verilog-0.8.1
 	o vfu-4.03
 	o vifm-0.2
 	o vlc-0.8.1
