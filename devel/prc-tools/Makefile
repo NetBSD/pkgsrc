@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/27 05:07:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/05 11:08:49 dillo Exp $
 #
 
 .include "Makefile.common"
@@ -9,7 +9,9 @@ MASTER_SITES=   # empty
 DISTFILES=      # empty
 
 DEPENDS+=	prc-tools-base>=2.0:../../devel/prc-tools-base
+.if (${MACHINE_ARCH} != "alpha")
 DEPENDS+=	prc-tools-gdb>=2.0:../../devel/prc-tools-gdb
+.endif
 DEPENDS+=	pilrc>=2.7:../../devel/pilrc
 
 EXTRACT_ONLY=   # empty
