@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 2004/04/01 00:52:39 minskim Exp $
+
+--- dispatch.C.orig	1994-05-19 22:21:54.000000000 -0500
++++ dispatch.C
+@@ -4,13 +4,13 @@
+ #include "ical.h"
+ 
+ int Dispatch(Dispatch_Entry* table, ClientData c, Tcl_Interp* tcl,
+-	     int argc, char* argv[]) {
++	     int argc, const char* argv[]) {
+ 
+     if (argc < 2) {
+ 	TCL_Error(tcl, "invalid command");
+     }
+ 
+-    char* command = argv[1];
++    const char* command = argv[1];
+     argc -= 2;
+     argv += 2;
+ 
