@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/02/15 18:08:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/08 19:27:53 jmmv Exp $
 #
 
-DISTNAME=	xdg-dirs-1.0
+DISTNAME=	xdg-dirs-${XDG_DIRS_VERSION}
 CATEGORIES=	misc gnome kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,23 +12,7 @@ COMMENT=	Shared XDG directories
 
 CONFLICTS=	gnome2-dirs<=1.2
 
-WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	# empty
-NO_EXTRACT=	# defined
-NO_CHECKSUM=	# defined
-NO_BUILDLINK=	# defined
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+XDG_DIRS_REGISTER=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-XDG_DIRS=	share/applications
-
-_SORTED!=	${ECHO} ${XDG_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
-
-USE_PKGINSTALL=	yes
-MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
-
-do-install:	# nothing
-
+.include "Makefile.common"
 .include "../../mk/bsd.pkg.mk"
