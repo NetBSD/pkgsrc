@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2752 2004/12/25 19:34:51 wiz Exp $
+$NetBSD: TODO,v 1.2753 2004/12/25 19:43:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -37,7 +37,7 @@ Suggested new packages
 	smsclient
 	Send SMS messages to mobile phones and pagers on wide range
 	  of providers. [pkg/16430 is relevant]
-	http://www.styx.demon.co.uk/
+	http://www.smsclient.org/
 
 	SquirrelMail plugins
 	SquirrelMail has a plugin feature and several plugins exist.
