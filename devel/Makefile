@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2000/10/15 12:47:10 rh Exp $
+# $NetBSD: Makefile,v 1.142 2000/10/15 17:12:50 rh Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -41,6 +41,7 @@
     SUBDIR += global
     SUBDIR += gmake
     SUBDIR += gmp
+    SUBDIR += gnome-objc
     SUBDIR += gobo-eiffel
     SUBDIR += gperf
     SUBDIR += gtexinfo
