@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 1999/12/24 00:46:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.53 2000/01/05 18:04:09 jlam Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -10,6 +10,7 @@
     SUBDIR += amanda-server
     SUBDIR += amanda-client
     SUBDIR += amanda-plot
+    SUBDIR += aperture
     SUBDIR += asapm
     SUBDIR += cdrecord
     SUBDIR += cfengine
