@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.34 2003/07/24 12:56:53 tron Exp $
+$NetBSD: distinfo,v 1.35 2003/08/31 00:25:19 xtraeme Exp $
 
-SHA1 (mplayer/MPlayer-0.90.tar.bz2) = 01be27d68a250be814af5f090e8a217c1f4838a8
-Size (mplayer/MPlayer-0.90.tar.bz2) = 3436463 bytes
+SHA1 (mplayer/MPlayer-0.91.tar.bz2) = c468c1c7044283def3064ef94dd691367973ea01
+Size (mplayer/MPlayer-0.91.tar.bz2) = 3467061 bytes
 SHA1 (mplayer/default-1.7.tar.bz2) = 6912c3e58b4c76fad97fdb72945b27815069f7e3
 Size (mplayer/default-1.7.tar.bz2) = 173439 bytes
 SHA1 (mplayer/AlienMind-1.0.tar.bz2) = 7c890bbb2e5b34b800ba2f7273b1f6a4e6c4281c
@@ -44,6 +44,5 @@ SHA1 (mplayer/xine-lcd-1.0.tar.bz2) = 1edbf1703e64f7a7c2aa3837d3383ba60a6d2f2d
 Size (mplayer/xine-lcd-1.0.tar.bz2) = 168441 bytes
 SHA1 (patch-aa) = 6938dbdccb9b760dadad304f3bf61245e8b1baa6
 SHA1 (patch-ab) = f2fd9006914a7d1bac364be74ca5d7cb9aab6806
-SHA1 (patch-ac) = 3539a185ff74922f8ce6da3187ca443334fa2d78
-SHA1 (patch-ad) = ec670b03f010b5f9983e518c1bbd77d5601ef4a1
+SHA1 (patch-ad) = e77e938e7f4b9a2849f816bbc662db277d7898d3
 SHA1 (patch-ae) = 12d16a7dda6be9d950d09d23d41d0de03ca70425
