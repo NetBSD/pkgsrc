@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9096 2005/02/09 21:25:35 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9097 2005/02/10 02:39:23 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -826,3 +826,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated LaBrea to 2.5 [adrianp 2005-02-09]
 	Updated glitz to 0.4.0 [xtraeme 2005-02-09]
 	Updated libpixman to 0.1.3 [xtraeme 2005-02-09]
+	Updated ganglia-monitor-core to 3.0.0 [jschauma 2005-02-09]
+	Updated ganglia-webfrontend to 3.0.0 [jschauma 2005-02-09]
