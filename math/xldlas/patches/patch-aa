@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/10/03 20:37:02 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 2000/05/14 00:57:41 dmcmahill Exp $
 
 *** Makefile.orig	Tue Apr  1 12:13:32 1997
 --- Makefile	Mon Apr 27 01:10:50 1998
@@ -21,8 +21,8 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/10/03 20:37:02 frueauf Exp $
   #
 ! CCFLAG		= ${CFLAGS} -DXFORMS86 -DPREFIX=\"${PREFIX}\" -I${PREFIX}/include -I${PREFIX}/include/X11
 ! #CC		= gcc
-! COMMONLIBS	= -L${PREFIX}/lib/ -lX11 -lm
-! SHAREDLIBS	= -lxforms
+! COMMONLIBS	= -L${X11BASE}/lib/ -Wl,-R${X11BASE}/lib -lX11 -lm
+! SHAREDLIBS	= -lxforms -lXpm
 ! STATICLIBS	= -lXpm ${PREFIX}/lib/libxforms.a
   ECHO		= echo
   RM		= rm
