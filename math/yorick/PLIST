@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/02 22:09:36 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/08 22:12:38 seb Exp $
 bin/gist
 bin/yorick
-info/yorick.info
-info/yorick.info-1
-info/yorick.info-2
-info/yorick.info-3
-info/yorick.info-4
-info/yorick.info-5
 man/man1/gist.1
 man/man1/yorick.1
 lib/yorick/1.5/Make.cfg
