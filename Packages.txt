@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.249 2002/06/17 21:46:04 skrll Exp $
+# $NetBSD: Packages.txt,v 1.250 2002/06/18 16:14:54 agc Exp $
 ###########################################################################
 
 			==========================
@@ -295,6 +295,27 @@ at build time.  Have a look at pkgsrc/mk/bsd.pkg.defaults.mk to
 get an overview of what will be set there by default.  Environment
 variables such as LOCALBASE, and X11BASE can be set in /etc/mk.conf to
 save having to remember to set them each time you want to use pkgsrc.
+
+Occasionally, people want to "look under the covers" to see what is
+going on when a package is building or being installed. This may be
+for debugging purposes, or out of simple curiosity. A number of utility
+values have been added to help with this.
+
+(1) If you invoke the make(1) command with PKG_DEBUG_LEVEL=2, then a
+huge amount of information will be displayed.  As a worked example,
+
+	make patch PKG_DEBUG_LEVEL=2
+
+will show all the commands that are invoked, up to and including the
+"patch stage".
+
+(2) If you want to know the value of a certain make(1) definition, then
+the VARNAME definition should be used, in conjunction with the show-var
+target. e.g.
+
+	make show-var VARNAME=DISTFILES
+
+will show the expansion of the make(1) variable "DISTFILES".
 
 If you want to de-install and re-install a binary package that you've
 created (see next section), that you put into pkgsrc/packages manually or
