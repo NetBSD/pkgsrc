@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5274 2004/03/17 19:29:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.5275 2004/03/17 22:02:53 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1485,3 +1485,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lyx-qt to 1.3.4 [martti 2004-03-17]
 	Updated lyx-xforms to 1.3.4 [martti 2004-03-17]
 	Updated bittorrent-gui to 3.4.1nb1 [jmmv 2004-03-17]
+	Updated sun-jre14 to 2.4 [jschauma 2004-03-17]
+	Updated sun-jdk14 to 2.4 [jschauma 2004-03-17]
