@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/03/28 21:50:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 1999/04/01 13:36:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -13,8 +13,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.PostgreSQL.ORG/
 
 BUILD_DEPENDS+=	bison:../../devel/bison
-DEPENDS+=	tk-8.0p2:../../x11/tk80
-DEPENDS+=	tcl-8.0p2:../../lang/tcl80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tcl-8.0.5:../../lang/tcl80
 DEPENDS+=	addnerd-1.6:../../sysutils/addnerd
 
 # Needs ELF clue, mips has no TAS implementation
