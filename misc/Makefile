@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2004/12/27 09:12:08 wulf Exp $
+# $NetBSD: Makefile,v 1.224 2004/12/31 16:39:49 kristerw Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -44,6 +44,7 @@ SUBDIR+=	dpkg
 SUBDIR+=	dt
 SUBDIR+=	dvorakng
 SUBDIR+=	dync
+SUBDIR+=	easymenu
 SUBDIR+=	edict
 SUBDIR+=	elizatalk
 SUBDIR+=	elscreen
