@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 01:14:11 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/11 01:15:51 uebayasi Exp $
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.el
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/leim/leim-list.el
