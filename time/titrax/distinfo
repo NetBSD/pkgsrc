@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:47:16 agc Exp $
 
-MD5 (titrax-1.98.tar.gz) = 6c6e98ef8b9585f42d70f9838755eaf7
+SHA1 (titrax-1.98.tar.gz) = 2849f8930aac945d435f58ad0a2a98fc19477da0
+Size (titrax-1.98.tar.gz) = 41154 bytes
 SHA1 (patch-aa) = 3e303f061b9f92397f01fe9cb337adfa85194dde
 SHA1 (patch-ab) = 03ea1f434ab68ccd408830c778a462c083729c95

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:47:17 agc Exp $
 
-MD5 (wmMoonClock-1.27.tar.gz) = c85bc974e70c867d556805505d3be48c
+SHA1 (wmMoonClock-1.27.tar.gz) = bbc27a11ff99505fe4b872019f214f305cee6c5b
+Size (wmMoonClock-1.27.tar.gz) = 155197 bytes
 SHA1 (patch-aa) = f0f684a82216a12397c94da55289f77769a4a746
