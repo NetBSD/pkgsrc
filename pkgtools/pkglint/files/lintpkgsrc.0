@@ -4,8 +4,8 @@ NNAAMMEE
      lliinnttppkkggssrrcc - verifier for the pkgsrc tree
 
 SSYYNNOOPPSSIISS
-     lliinnttppkkggssrrcc [--BBDDLLOORRSSVVddhhiillmmoopprruu] [--EE _f_i_l_e] [--II _f_i_l_e] [--KK _P_A_C_K_A_G_E_S]
-                [--MM _D_I_S_T_D_I_R] [--PP _P_K_G_S_R_C_D_I_R] [--gg _p_k_g_s_r_c_m_a_p] [_m_a_k_e_f_i_l_e _._._.]
+     lliinnttppkkggssrrcc [--BBDDLLOORRSSVVddhhiillmmoopprruu] [--EE _f_i_l_e] [--gg _p_k_g_s_r_c_m_a_p] [--II _f_i_l_e]
+                [--KK _P_A_C_K_A_G_E_S] [--MM _D_I_S_T_D_I_R] [--PP _P_K_G_S_R_C_D_I_R] [_m_a_k_e_f_i_l_e _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
      lliinnttppkkggssrrcc tries to verify the entire contents of the pkgsrc tree.
@@ -18,6 +18,10 @@ DDEESSCCRRIIPPTTIIOONN
 
      --DD _p_a_t_h_s      Parse Makefiles and output contents (useful for debugging).
 
+     --dd            Extract the `DEPENDS' listing from each pkgsrc package
+                   Makefile, then verify the version specified in each DEPEND
+                   correctly matches a current pkgsrc package.
+
      --EE _f_i_l_e       Exports the internal database generated from the pkgsrc
                    Makefiles to a file for faster loading at a later time.
                    Note that some of the stored data is, in all likelihood,
@@ -27,12 +31,20 @@ DDEESSCCRRIIPPTTIIOONN
                    a set of similarly configured machines (in the absence of
                    extra copies of the pkgsrc tree) both quick and possible.
 
+     --gg _p_k_g_s_r_c_m_a_p  Generate pkgsrcmap file containing an entry for each pack-
+                   age of `pkgname pkgdir pkgver'.
+
+     --hh            Basic help and usage.
+
      --II _f_i_l_e       Imports the data to construct the internal database for
                    checking the installed versions of packages, among other
                    things, against the current version found in pkgsrc.  This
                    database provides most or all of the data required for run-
                    ning lliinnttppkkggssrrcc with any combination of --BB, --OO, --RR, --SS, --VV,
                    --dd, --gg, --ii, --pp, or --uu.
+
+     --ii            Check the version of each installed package against the
+                   current version in pkgsrc.
 
      --KK _P_A_C_K_A_G_E_S   Override binary packages base directory, normally set from
                    _/_e_t_c_/_m_k_._c_o_n_f or defaulted to _$_{_P_K_G_S_R_C_D_I_R_}_/_p_a_c_k_a_g_e_s.
@@ -54,51 +66,33 @@ DDEESSCCRRIIPPTTIIOONN
      --LL            List the filenames of Makefiles as they are parsed (for
                    debugging).
 
+     --ll            Run pkglint(1) on every package in pkgsrc.
+
      --MM _D_I_S_T_D_I_R    Set directory for distfiles, defaults to
                    _$_{_P_K_G_S_R_C_D_I_R_}_/_d_i_s_t_f_i_l_e_s.
-
-     --OO            Report any binary packages in any subdirs of _P_A_C_K_A_G_E_S, for
-                   whom the source Makefile lists _O_S_V_E_R_S_I_O_N___S_P_E_C_I_F_I_C.  This is
-                   intended to help those making binary packages available for
-                   ftp.
-
-     --PP _P_K_G_S_R_C_D_I_R  Set base of pkgsrc tree, normally set from _/_e_t_c_/_m_k_._c_o_n_f or
-                   defaulted to _/_u_s_r_/_p_k_g_s_r_c.
-
-     --RR            Report any binary packages in any subdirs of _P_A_C_K_A_G_E_S, for
-                   whom the source Makefile lists _N_O___B_I_N___O_N___F_T_P or _R_E_S_T_R_I_C_T_E_D.
-                   This is intended to help those making binary packages
-                   available for ftp.
-
-     --SS            List packages missing from category _S_U_B_D_I_R lists.
-
-     --VV            List any prebuilt packages in any subdirs of _P_A_C_K_A_G_E_S with
-                   known vulnerabilities, based on the data in
-                   _$_{_P_K_G_S_R_C_D_I_R_}_/_d_i_s_t_f_i_l_e_s_/_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s.
-
-     --dd            Extract the `DEPENDS' listing from each pkgsrc package
-                   Makefile, then verify the version specified in each DEPEND
-                   correctly matches a current pkgsrc package.
-
-     --gg _p_k_g_s_r_c_m_a_p  Generate pkgsrcmap file containing an entry for each pack-
-                   age of `pkgname pkgdir pkgver'.
-
-     --hh            Basic help and usage.
-
-     --ii            Check the version of each installed package against the
-                   current version in pkgsrc.
-
-     --ll            Run pkglint(1) on every package in pkgsrc.
 
      --mm            For each current distfile, verify its checksum against the
                    appropriate package's distinfo file. Also report if any
                    package's distinfo file references the same distfile with a
                    different distinfo checksum.
 
+     --OO            Report any binary packages in any subdirs of _P_A_C_K_A_G_E_S, for
+                   whom the source Makefile lists _O_S_V_E_R_S_I_O_N___S_P_E_C_I_F_I_C.  This is
+                   intended to help those making binary packages available for
+                   ftp.
+
      --oo            Report any old distfiles (not referenced by any package's
                    distinfo file).
 
+     --PP _P_K_G_S_R_C_D_I_R  Set base of pkgsrc tree, normally set from _/_e_t_c_/_m_k_._c_o_n_f or
+                   defaulted to _/_u_s_r_/_p_k_g_s_r_c.
+
      --pp            Report any old binary packages in any subdirs of _P_A_C_K_A_G_E_S.
+
+     --RR            Report any binary packages in any subdirs of _P_A_C_K_A_G_E_S, for
+                   whom the source Makefile lists _N_O___B_I_N___O_N___F_T_P or _R_E_S_T_R_I_C_T_E_D.
+                   This is intended to help those making binary packages
+                   available for ftp.
 
      --rr            Remove distfiles which are not referenced from any pack-
                    age's distinfo file, or have an incorrect checksum (usually
@@ -106,12 +100,18 @@ DDEESSCCRRIIPPTTIIOONN
                    ages. To remove any given type, additionally specify the
                    --oo, --mm, or --pp flags respectively.
 
+     --SS            List packages missing from category _S_U_B_D_I_R lists.
+
      --uu            As --ii plus for mismatched packages, display REQUIRED
                    details and run `@MAKE@ fetch-list | sh' to ensure all the
                    distfiles needed for the latest version are present.
 
                    Warning: The behaviour of this command may change in a
                    later version.
+
+     --VV            List any prebuilt packages in any subdirs of _P_A_C_K_A_G_E_S with
+                   known vulnerabilities, based on the data in
+                   _$_{_P_K_G_S_R_C_D_I_R_}_/_d_i_s_t_f_i_l_e_s_/_p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s.
 
 AAUUTTHHOORRSS
      David Brownlee <abs@netbsd.org>
@@ -130,4 +130,4 @@ BBUUGGSS
 
      Potentially others, but non serious to date.
 
-NetBSD 1.6                      April 19, 1999                      NetBSD 1.6
+NetBSD 2.0                      April 19, 1999                      NetBSD 2.0
