@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/05 22:39:08 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/03/24 19:59:37 rh Exp $
 bin/gnome-vfs-config
 etc/gnome-vfs-mime-magic
 etc/vfs/modules/default-modules.conf
@@ -53,8 +53,6 @@ lib/gnome-vfs-1.0/include/gnome-vfs-file-size.h
 lib/libgnomevfs-pthread.a
 lib/libgnomevfs-pthread.la
 lib/libgnomevfs-pthread.so
-lib/libgnomevfs-pthread.so.0
-lib/libgnomevfs-pthread.so.0.0
 lib/libgnomevfs.a
 lib/libgnomevfs.la
 lib/libgnomevfs.so
@@ -80,6 +78,9 @@ lib/vfs/extfs/zoo
 lib/vfs/modules/libbzip2.a
 lib/vfs/modules/libbzip2.la
 lib/vfs/modules/libbzip2.so
+lib/vfs/modules/libdesktop.a
+lib/vfs/modules/libdesktop.la
+lib/vfs/modules/libdesktop.so
 lib/vfs/modules/libextfs.a
 lib/vfs/modules/libextfs.la
 lib/vfs/modules/libextfs.so
@@ -133,6 +134,7 @@ share/locale/nl/LC_MESSAGES/gnome-vfs.mo
 share/locale/nn/LC_MESSAGES/gnome-vfs.mo
 share/locale/no/LC_MESSAGES/gnome-vfs.mo
 share/locale/pl/LC_MESSAGES/gnome-vfs.mo
+share/locale/pt/LC_MESSAGES/gnome-vfs.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-vfs.mo
 share/locale/ro/LC_MESSAGES/gnome-vfs.mo
 share/locale/ru/LC_MESSAGES/gnome-vfs.mo
