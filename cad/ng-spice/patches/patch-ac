@@ -1,46 +1,68 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/11/14 14:28:14 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2002/01/26 02:38:32 dmcmahill Exp $
 
---- src/frontend/parser/complete.c.orig	Wed Oct 25 13:30:06 2000
-+++ src/frontend/parser/complete.c	Sat Nov 11 13:56:56 2000
-@@ -415,4 +415,9 @@
- #    ifdef HAVE_TERMIOS_H
+reflect patch-ab change to src/Makefile.am
+
+--- src/Makefile.in.orig	Thu Jan 24 07:27:13 2002
++++ src/Makefile.in	Thu Jan 24 10:17:16 2002
+@@ -80,5 +80,5 @@
+ SUBDIRS = misc maths frontend spicelib include
  
-+#      ifdef __NetBSD__
-+#        define TCGETS
-+#        define TCSETS
-+#      endif
-+
- #      define TERM_GET TCGETS
- #      define TERM_SET TCSETS
-@@ -423,5 +428,5 @@
- #  endif
+-bin_PROGRAMS = ngspice ngnutmeg nghelp ngsconvert ngproc2mod ngmultidec makeidx
++bin_PROGRAMS = ngspice ngnutmeg nghelp ngsconvert ngproc2mod ngmultidec ngmakeidx
  
--#  ifdef TERM_GET
-+#  if defined(TERM_GET) || defined(__NetBSD__)
-     static bool ison = FALSE;
+ EXTRA_DIST = ngspice.txt ngspice.idx spinit setplot spectrum
+@@ -127,7 +127,7 @@
  
-@@ -431,12 +436,24 @@
  
-     if (ison == TRUE) {
-+#ifdef __NetBSD__
-+	tcgetattr(fileno(cp_in),&OS_Buf);
-+#else
- 	(void) ioctl(fileno(cp_in), TERM_GET, (char *) &OS_Buf);
-+#endif
- 	sbuf = OS_Buf;
- 	sbuf.c_cc[VEOF] = 0;
- 	sbuf.c_cc[VEOL] = ESCAPE;
- 	sbuf.c_cc[VEOL2] = CNTRL_D;
-+#ifdef __NetBSD__
-+	tcsetattr(fileno(cp_in),TCSANOW,&sbuf);
-+#else
- 	(void) ioctl(fileno(cp_in), TERM_SET, (char *) &sbuf);
-+#endif
-     } else {
-+#ifdef __NetBSD__
-+	tcsetattr(fileno(cp_in),TCSANOW,&OS_Buf);
-+#else
- 	(void) ioctl(fileno(cp_in), TERM_SET, (char *) &OS_Buf);
-+#endif
-     }
+-makeidx_SOURCES = makeidx.c
++ngmakeidx_SOURCES = makeidx.c
  
+-makeidx_LDADD =  	misc/libmisc.a 
++ngmakeidx_LDADD =  	misc/libmisc.a 
+ 
+ 
+@@ -142,5 +142,5 @@
+ bin_PROGRAMS =  ngspice$(EXEEXT) ngnutmeg$(EXEEXT) nghelp$(EXEEXT) \
+ ngsconvert$(EXEEXT) ngproc2mod$(EXEEXT) ngmultidec$(EXEEXT) \
+-makeidx$(EXEEXT)
++ngmakeidx$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
+@@ -204,7 +204,7 @@
+ ngmultidec_DEPENDENCIES =  maths/sparse/libsparse.a misc/libmisc.a
+ ngmultidec_LDFLAGS = 
+-makeidx_OBJECTS =  makeidx.$(OBJEXT)
+-makeidx_DEPENDENCIES =  misc/libmisc.a
+-makeidx_LDFLAGS = 
++ngmakeidx_OBJECTS =  makeidx.$(OBJEXT)
++ngmakeidx_DEPENDENCIES =  misc/libmisc.a
++ngmakeidx_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -221,6 +221,6 @@
+ TAR = tar
+ GZIP_ENV = --best
+-SOURCES = $(ngspice_SOURCES) $(ngnutmeg_SOURCES) $(nghelp_SOURCES) $(ngsconvert_SOURCES) $(ngproc2mod_SOURCES) $(ngmultidec_SOURCES) $(makeidx_SOURCES)
+-OBJECTS = $(ngspice_OBJECTS) $(ngnutmeg_OBJECTS) $(nghelp_OBJECTS) $(ngsconvert_OBJECTS) $(ngproc2mod_OBJECTS) $(ngmultidec_OBJECTS) $(makeidx_OBJECTS)
++SOURCES = $(ngspice_SOURCES) $(ngnutmeg_SOURCES) $(nghelp_SOURCES) $(ngsconvert_SOURCES) $(ngproc2mod_SOURCES) $(ngmultidec_SOURCES) $(ngmakeidx_SOURCES)
++OBJECTS = $(ngspice_OBJECTS) $(ngnutmeg_OBJECTS) $(nghelp_OBJECTS) $(ngsconvert_OBJECTS) $(ngproc2mod_OBJECTS) $(ngmultidec_OBJECTS) $(ngmakeidx_OBJECTS)
+ 
+ all: all-redirect
+@@ -328,7 +328,7 @@
+ 	$(LINK) $(ngmultidec_LDFLAGS) $(ngmultidec_OBJECTS) $(ngmultidec_LDADD) $(LIBS)
+ 
+-makeidx$(EXEEXT): $(makeidx_OBJECTS) $(makeidx_DEPENDENCIES)
+-	@rm -f makeidx$(EXEEXT)
+-	$(LINK) $(makeidx_LDFLAGS) $(makeidx_OBJECTS) $(makeidx_LDADD) $(LIBS)
++ngmakeidx$(EXEEXT): $(ngmakeidx_OBJECTS) $(ngmakeidx_DEPENDENCIES)
++	@rm -f ngmakeidx$(EXEEXT)
++	$(LINK) $(ngmakeidx_LDFLAGS) $(ngmakeidx_OBJECTS) $(ngmakeidx_LDADD) $(LIBS)
+ 
+ install-helpdataDATA: $(helpdata_DATA)
+@@ -574,5 +574,5 @@
+ 
+ all:
+-	./makeidx $(srcdir)/ngspice.txt
++	./ngmakeidx $(srcdir)/ngspice.txt
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
