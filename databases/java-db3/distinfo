@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/28 17:49:00 jlam Exp $
+
+SHA1 (db-3.2.9.tar.gz) = 1adcc34b6a56e51e4019e80bc56b509ac28e1035
+Size (db-3.2.9.tar.gz) = 2085238 bytes
+SHA1 (patch-aa) = 32a39969500b837357c2ce59fb2a90ea82181455
+SHA1 (patch-ab) = 7d33cd81c1e23b44d72bb2018624af8dfd08fed4
