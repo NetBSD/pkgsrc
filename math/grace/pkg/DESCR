@@ -1,0 +1,11 @@
+Grace is a tool to make two-dimensional plots of scientific
+data. It runs under various (if not all) flavours of UNIX
+with X11 and Motif. Its capabilities are roughly similar to
+GUI-based programs like Sigmaplot or Microcal Origin plus
+script-based tools like gnuplot or Genplot.  Its strength
+lies in the fact that it combines the convenience of a
+graphical user interface with the power of a scripting
+language which enables it to do sophisticated calculations
+or perform automated tasks.
+Grace is derived from Xmgr (a.k.a. ACE/gr), originally
+written by Paul Turner.
