@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/03/07 11:42:10 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/20 22:04:15 recht Exp $
 
-DISTNAME=	pure-ftpd-1.0.18
+DISTNAME=	pure-ftpd-1.0.19
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/		\
 		ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/ \
