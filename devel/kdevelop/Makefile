@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/23 10:54:52 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/24 09:05:12 tron Exp $
 
 DISTNAME=	kdevelop-1.0beta2
 CATEGORIES=	devel kde
@@ -8,17 +8,16 @@ MAINTAINER=	nick@nthcliff.demon.co.uk
 HOMEPAGE=       http://www.kdevelop.org/
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+DEPENDS+=	a2ps-*:../../print/a2ps
 DEPENDS+=	autoconf-*:../../devel/autoconf
 DEPENDS+=	automake-*:../../devel/automake
 DEPENDS+=	gdbm-1.*:../../databases/gdbm
+DEPENDS+=	gmake-*:../../devel/gmake
+DEPENDS+=	glimpse-*:../../textproc/glimpse
+DEPENDS+=	kpaint-*:../../graphics/kdegraphics
 DEPENDS+=	kdelibs-1.*:../../x11/kdelibs
+DEPENDS+=	kiconedit-*:../../graphics/kdegraphics
 DEPENDS+=	perl-5.*:../../lang/perl5
-DEPENDS+=       qt-1.*:../../x11/qt
-RUN_DEPENDS+=	gmake:../../devel/gmake
-RUN_DEPENDS+=	a2ps:../../print/a2ps
-RUN_DEPENDS+=	glimpse:../../textproc/glimpse
-RUN_DEPENDS+=	kpaint:../../graphics/kdegraphics
-RUN_DEPENDS+=	kiconedit:../../graphics/kdegraphics
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
