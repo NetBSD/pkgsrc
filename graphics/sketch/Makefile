@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2003/07/28 09:18:56 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/12 13:05:53 jmmv Exp $
 #
 
-DISTNAME=	sketch-0.6.15
+DISTNAME=	skencil-0.6.16
 CATEGORIES=	graphics
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=sketch/}
 
@@ -12,7 +12,7 @@ COMMENT=	Interactive drawing program
 USE_X11=	YES
 USE_BUILDLINK2=	yes
 
-PYTHON_PATCH_SCRIPTS= sk2ppm.py sk2ps.py skconvert.py sketch.py skshow.py
+PYTHON_PATCH_SCRIPTS= sk2ppm.py sk2ps.py skconvert.py skencil.py skshow.py
 SK_CONF_ARGS=	--imaging-include=${BUILDLINK_PREFIX.pyimaging}/${PYINC}/PIL
 SK_TKFLAGS=	-L${BUILDLINK_PREFIX.tk}/lib -R${BUILDLINK_PREFIX.tk}/lib -ltk -ltcl
 SK_TKFLAGS+=	-R${X11BASE}/lib
@@ -29,15 +29,15 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py install \
 		--prefix=${PREFIX}
 
-SKETCHDOCDIR=	${PREFIX}/share/doc/sketch
+SKETCHDOCDIR=	${PREFIX}/share/doc/skencil
 SKETCHDOCS=	BUGS Doc NEWS PROJECTS README TODO
-SKETCHEXDIR=	${PREFIX}/share/examples/sketch
+SKETCHEXDIR=	${PREFIX}/share/examples/skencil
 
 post-install:
 	${INSTALL_DATA_DIR} ${SKETCHDOCDIR}
-	cd ${WRKSRC} && ${PAX} -rw -v ${SKETCHDOCS} ${SKETCHDOCDIR}
+	cd ${WRKSRC} && ${PAX} -rwpm -v ${SKETCHDOCS} ${SKETCHDOCDIR}
 	${INSTALL_DATA_DIR} ${SKETCHEXDIR}
-	cd ${WRKSRC}/Examples && ${PAX} -rw -v . ${SKETCHEXDIR}
+	cd ${WRKSRC}/Examples && ${PAX} -rwpm -v . ${SKETCHEXDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink2.mk"
