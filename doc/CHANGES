@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4353 2004/01/05 00:29:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4354 2004/01/05 04:35:04 lha Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -55,3 +55,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added evolution-1.2.4nb6 as evolution12 [rh 2003-01-04]
 	Updated libgii to 0.8.4 [xtraeme 2003-01-05]
 	Updated libggi to 2.0.4 [xtraeme 2003-01-05]
+	Updated gnus to 5.10.6 [lha 2003-01-05]
