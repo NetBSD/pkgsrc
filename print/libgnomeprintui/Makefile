@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2004/12/28 21:42:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2005/02/26 17:23:54 jmmv Exp $
 #
 
-DISTNAME=	libgnomeprintui-2.8.1
+DISTNAME=	libgnomeprintui-2.8.2
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +23,8 @@ PKGCONFIG_OVERRIDE=	libgnomeprintui/libgnomeprintui-2.2.pc.in
 
 CONFIGURE_ARGS=		--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+
+BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
