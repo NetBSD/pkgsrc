@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.887 2003/09/21 16:44:33 lukem Exp $
+$NetBSD: TODO,v 1.888 2003/09/21 22:20:23 kim Exp $
 
 Suggested new packages
 ======================
@@ -208,7 +208,6 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.7l
-	o p5-Apache-Gallery-0.7
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
 	o plib-1.6.0 [pkg/19015,pkg/22612]
