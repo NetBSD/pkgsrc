@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/02/14 00:39:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2002/06/15 21:33:50 wiz Exp $
 #
 
 DISTNAME=	SDL-1.2.3
@@ -11,7 +11,6 @@ COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
-BUILDLINK_DEPENDS.pth=	pth>=1.4.0
 
 USE_BUILDLINK_ONLY=	YES
 
