@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1260 2003/09/05 11:34:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1261 2003/09/05 15:00:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3246,7 +3246,10 @@ real-su-deinstall-flags+=	-v
 .PHONY: real-su-deinstall
 real-su-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
+	found="`${PKG_INFO} -e \"${PKGNAME}\" || ${TRUE}`";		\
+	case "$$found" in						\
+	"") found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`" ;;	\
+	esac;								\
 	if [ "$$found" != "" ]; then					\
 		${ECHO} Running ${PKG_DELETE} ${real-su-deinstall-flags} $$found ; \
 		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
