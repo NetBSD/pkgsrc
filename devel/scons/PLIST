@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/09 19:13:54 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/18 20:27:42 recht Exp $
 bin/scons
 bin/sconsign
 lib/scons/SCons/Action.py
@@ -100,6 +100,9 @@ lib/scons/SCons/Platform/win32.pyo
 lib/scons/SCons/SConf.py
 lib/scons/SCons/SConf.pyc
 lib/scons/SCons/SConf.pyo
+lib/scons/SCons/SConsign.py
+lib/scons/SCons/SConsign.pyc
+lib/scons/SCons/SConsign.pyo
 lib/scons/SCons/Scanner/C.py
 lib/scons/SCons/Scanner/C.pyc
 lib/scons/SCons/Scanner/C.pyo
@@ -193,6 +196,9 @@ lib/scons/SCons/Tool/c++.pyo
 lib/scons/SCons/Tool/cc.py
 lib/scons/SCons/Tool/cc.pyc
 lib/scons/SCons/Tool/cc.pyo
+lib/scons/SCons/Tool/cvf.py
+lib/scons/SCons/Tool/cvf.pyc
+lib/scons/SCons/Tool/cvf.pyo
 lib/scons/SCons/Tool/default.py
 lib/scons/SCons/Tool/default.pyc
 lib/scons/SCons/Tool/default.pyo
@@ -208,6 +214,15 @@ lib/scons/SCons/Tool/dvips.pyo
 lib/scons/SCons/Tool/f77.py
 lib/scons/SCons/Tool/f77.pyc
 lib/scons/SCons/Tool/f77.pyo
+lib/scons/SCons/Tool/f90.py
+lib/scons/SCons/Tool/f90.pyc
+lib/scons/SCons/Tool/f90.pyo
+lib/scons/SCons/Tool/f95.py
+lib/scons/SCons/Tool/f95.pyc
+lib/scons/SCons/Tool/f95.pyo
+lib/scons/SCons/Tool/fortran.py
+lib/scons/SCons/Tool/fortran.pyc
+lib/scons/SCons/Tool/fortran.pyo
 lib/scons/SCons/Tool/g++.py
 lib/scons/SCons/Tool/g++.pyc
 lib/scons/SCons/Tool/g++.pyo
@@ -244,6 +259,9 @@ lib/scons/SCons/Tool/icl.pyo
 lib/scons/SCons/Tool/ifl.py
 lib/scons/SCons/Tool/ifl.pyc
 lib/scons/SCons/Tool/ifl.pyo
+lib/scons/SCons/Tool/ifort.py
+lib/scons/SCons/Tool/ifort.pyc
+lib/scons/SCons/Tool/ifort.pyo
 lib/scons/SCons/Tool/ilink.py
 lib/scons/SCons/Tool/ilink.pyc
 lib/scons/SCons/Tool/ilink.pyo
@@ -361,6 +379,9 @@ lib/scons/SCons/Warnings.pyo
 lib/scons/SCons/__init__.py
 lib/scons/SCons/__init__.pyc
 lib/scons/SCons/__init__.pyo
+lib/scons/SCons/dblite.py
+lib/scons/SCons/dblite.pyc
+lib/scons/SCons/dblite.pyo
 lib/scons/SCons/exitfuncs.py
 lib/scons/SCons/exitfuncs.pyc
 lib/scons/SCons/exitfuncs.pyo
