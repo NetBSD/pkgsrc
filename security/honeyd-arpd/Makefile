@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/20 09:15:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/20 09:25:26 xtraeme Exp $
 #
 
 DISTNAME=	arpd-0.2
@@ -21,10 +21,8 @@ CONFIGURE_ARGS+=    --with-libevent=${BUILDLINK_PREFIX.libevent}
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
 	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
-	${CP} ${WRKSRC}/arpd ${WRKSRC}/honeyd-arpd
-	${CP} ${WRKSRC}/arpd.8 ${WRKSRC}/honeyd-arpd.8
-	${INSTALL_PROGRAM} ${WRKSRC}/honeyd-arpd ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/honeyd-arpd.8 ${PREFIX}/man/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/arpd ${PREFIX}/sbin/honeyd-arpd
+	${INSTALL_MAN} ${WRKSRC}/arpd.8 ${PREFIX}/man/man8/honeyd-arpd.8
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
