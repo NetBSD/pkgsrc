@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/12 08:57:37 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/12 22:33:48 zuntum Exp $
 
 --- Makefile.orig	Thu Feb  8 19:27:43 2001
 +++ Makefile
@@ -8,9 +8,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/12 08:57:37 zuntum Exp $
 -	-I$(QTDIR)/include -L$(QTDIR)/lib\
 -	-lqt -lX11 -lXext 
 -INSTALL = /usr/games/
-+LIBS =	-L@X11BASE@/lib -Wl,-R@X11BASE@/lib -L@X11BASE@/qt2/lib -Wl,-R@X11BASE@/qt2/lib \
-+	-I@X11BASE@/qt2/include -L@LOCALBASE@/lib -Wl,-R@LOCALBASE@/lib -I@LOCALBASE@/include \
-+	-lqt -lX11 -lXext -lpng
++LIBS =	-L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -L$(X11BASE)/qt2/lib -Wl,-R$(X11BASE)/qt2/lib \
++	-I$(X11BASE)/qt2/include -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -I$(LOCALBASE)/include \
++	-lqt -lX11 -lXext
  # obrazki w $(INSTALL)/images
  #
  #GLIBS= -L/mnt/sys2/xlib -lm -lX11 -lXext /usr/X11R6/lib/libqt.a \
@@ -32,8 +32,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/12 08:57:37 zuntum Exp $
  
  %.o: %.cc
 -	g++ $(CFLAGS) $(DEBUG) $(GINCLUDE) -c $<
-+	$(CXX) $(CXXFLAGS) -DINSTALL=\"@PREFIX@/share/kulki\" -L@X11BASE@/lib -L@X11BASE@/qt2/lib -I@X11BASE@/include \
-+		-I@X11BASE@/qt2/include -c $<
++	$(CXX) $(CXXFLAGS) -DINSTALL=\"$(PREFIX)/share/kulki\" -L$(X11BASE)/lib -L$(X11BASE)/qt2/lib -I$(X11BASE)/include \
++		-I$(X11BASE)/qt2/include -c $<
  
  	
  GOB = main.o main_window.o szcanvas.o szsprite.o hscor.o 
