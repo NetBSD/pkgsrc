@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.13 2004/01/17 22:16:12 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.14 2004/01/19 05:11:44 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -30,6 +30,8 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 # is prefixed with either "transform:" or "untransform:", then the
 # resulting sed commands are only appended the the corresponding sedfile.
 
+_sep=" 	\`\"':;,"
+
 gen() {
 	action=$1; shift
 	case "$action" in
@@ -44,7 +46,7 @@ gen() {
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2\([/ 	\`"':;]\)|$3\1|g
+s|$2\([/$_sep]\)|$3\1|g
 s|$2$|$3|g
 EOF
 			;;
@@ -78,8 +80,8 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2/[^/ 	\`"':;]*\(/[^ 	\`"':;]\)|$3\1|g
-s|$2/[^/ 	\`"':;]*$|$3|g
+s|$2/[^/$_sep]*\(/[^$_sep]\)|$3\1|g
+s|$2/[^/$_sep]*$|$3|g
 EOF
 			;;
 		esac
@@ -88,14 +90,14 @@ EOF
 		case "$action" in
 		transform)
 			@CAT@ >> $sedfile << EOF
-s|-$1$2\([ 	\`"':;]\)|-$1$3\1|g
+s|-$1$2\([$_sep]\)|-$1$3\1|g
 s|-$1$2$|-$1$3|g
 s|-$1$2/|-$1$3/|g
 EOF
 			;;
 		untransform)
 			@CAT@ >> $sedfile << EOF
-s|-$1$3\([ 	\`"':;]\)|-$1$2\1|g
+s|-$1$3\([$_sep]\)|-$1$2\1|g
 s|-$1$3$|-$1$2|g
 s|-$1$3/|-$1$2/|g
 EOF
@@ -120,7 +122,7 @@ EOF
 				shift
 			done
 			@CAT@ >> $sedfile << EOF
-s|$fromlib\([ 	"':;]\)|$tolibs\1|g
+s|$fromlib\([$_sep]\)|$tolibs\1|g
 s|$fromlib$|$tolibs|g
 EOF
 			;;
@@ -130,18 +132,18 @@ EOF
 		case "$action" in
 		transform)
 			@CAT@ >> $sedfile << EOF
-s|$2\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.la\)\([ 	\`"':;]\)|$3\1\2|g
-s|$2\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.la\)$|$3\1|g
-s|$2\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.a\)\([ 	\`"':;]\)|$3\1\2|g
-s|$2\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.a\)$|$3\1|g
+s|$2\(/[^$_sep]*/lib[^/$_sep]*\.la\)\([$_sep]\)|$3\1\2|g
+s|$2\(/[^$_sep]*/lib[^/$_sep]*\.la\)$|$3\1|g
+s|$2\(/[^$_sep]*/lib[^/$_sep]*\.a\)\([$_sep]\)|$3\1\2|g
+s|$2\(/[^$_sep]*/lib[^/$_sep]*\.a\)$|$3\1|g
 EOF
 			;;
 		untransform)
 			@CAT@ >> $sedfile << EOF
-s|$3\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.a\)\([ 	\`"':;]\)|$2\1\2|g
-s|$3\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.a\)$|$2\1|g
-s|$3\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.la\)\([ 	\`"':;]\)|$2\1\2|g
-s|$3\(/[^ 	\`"':;]*/lib[^/ 	\`"':;]*\.la\)$|$2\1|g
+s|$3\(/[^$_sep]*/lib[^/$_sep]*\.a\)\([$_sep]\)|$2\1\2|g
+s|$3\(/[^$_sep]*/lib[^/$_sep]*\.a\)$|$2\1|g
+s|$3\(/[^$_sep]*/lib[^/$_sep]*\.la\)\([$_sep]\)|$2\1\2|g
+s|$3\(/[^$_sep]*/lib[^/$_sep]*\.la\)$|$2\1|g
 EOF
 			;;
 		esac
@@ -150,22 +152,22 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.so\.[0-9]*\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.so\.[0-9]*\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.so\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.so\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.so\.[0-9]*|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.so\.[0-9]*|-L\1 -l\2|g
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.so|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.so|-L\1 -l\2|g
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.[0-9]*\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.[0-9]*\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2/[^ 	\`"':;]*\)/lib\([^/ 	\`"':;]*\)\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/ 	\`"':;]*\)\.dylib|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*\.[0-9]*|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*\.[0-9]*|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\.[0-9]*|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.so\.[0-9]*|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.so|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.[0-9]*\.dylib|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.[0-9]*\.dylib|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.dylib|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.dylib|-L\1 -l\2|g
 EOF
 			;;
 		esac
@@ -183,9 +185,9 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2\([ 	\`"':;]\)|\1|g
+s|$2\([$_sep]\)|\1|g
 s|$2$||g
-s|$2/[^ 	\`"':;]*||g
+s|$2/[^$_sep]*||g
 EOF
 			;;
 		esac
@@ -208,7 +210,7 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2\([ 	\`"':;]\)|$3\1|g
+s|$2\([$_sep]\)|$3\1|g
 s|$2$|$3|g
 EOF
 			;;
