@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/10/29 21:28:27 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/11/18 14:11:55 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -90,6 +90,7 @@ man/man1/attraction.1
 man/man1/blitspin.1
 man/man1/bouboule.1
 man/man1/braid.1
+man/man1/bsod.1
 man/man1/bubbles.1
 man/man1/decayscreen.1
 man/man1/deco.1
