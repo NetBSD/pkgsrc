@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.pre,v 1.4 1999/06/04 18:07:41 thorpej Exp $
+@comment $NetBSD: PLIST.pre,v 1.5 1999/06/27 00:34:59 abs Exp $
 bin/communicator-${NS_VERS}
+bin/communicator
 bin/netscape
 lib/netscape/communicator-${NS_VERS}/java/classes/ifc11.jar
 lib/netscape/communicator-${NS_VERS}/java/classes/iiop10.jar
