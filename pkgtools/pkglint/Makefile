@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/11/26 03:31:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 1999/12/06 01:14:34 hubertf Exp $
 #
 
 DISTNAME=		pkglint-1.80
@@ -6,7 +6,7 @@ CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Documentation/netbsd/Packages.txt
 
 USE_PERL5=		YES
