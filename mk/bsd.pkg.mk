@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.182 1998/10/20 17:03:25 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.183 1998/10/20 23:21:18 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1719,9 +1719,9 @@ clean-depends:
 
 .if !target(depends-list)
 depends-list:
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
-		(cd $$dir; ${MAKE} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; ); \
-	done
+.for dir in ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS}
+	@cd ${dir:C/^[^:]*://:C/:.*//} ; ${MAKE} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
+.endfor
 .endif
 
 # If PACKAGES is set to the default (../../pkgsrc/packages), the current
