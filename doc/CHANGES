@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4040 2003/12/10 22:40:30 heinz Exp $
+$NetBSD: CHANGES,v 1.4041 2003/12/11 14:21:32 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5055,3 +5055,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Digest-MD5 to 2.33 [heinz 2003-12-10]
 	Updated p5-Digest-SHA1 to 2.07 [heinz 2003-12-10]
 	Updated p5-Net-DNS to 0.42 [heinz 2003-12-10]
+	Added phpsview-1.0 [hamajima 2003-12-11]
+	Added qcamview-0.2 [hamajima 2003-12-11]
