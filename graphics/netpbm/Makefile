@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2004/02/13 10:53:09 grant Exp $
+# $NetBSD: Makefile,v 1.92 2004/04/29 08:02:39 adam Exp $
 
-DISTNAME=	netpbm-10.11.8
-PKGREVISION=	1
+DISTNAME=	netpbm-10.18.12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -12,9 +11,9 @@ COMMENT=	Toolkit for conversion of images between different formats
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
-USE_GNU_TOOLS+=	lex make
-USE_PERL5=	yes
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		lex make
+USE_PERL5=		yes
 
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
