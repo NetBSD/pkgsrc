@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+
+--- fed/fed.h.orig	Mon Dec  4 13:46:17 2000
++++ fed/fed.h
+@@ -32,7 +32,11 @@
+  * 	fed.h, 3.00, last edit-date: [Sun Jan  2 20:10:31 1994]
+  */
+ 
++#ifdef __NetBSD__
++#include <curses.h>
++#else
+ #include <ncurses.h>
++#endif
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
