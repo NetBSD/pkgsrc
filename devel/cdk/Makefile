@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/26 18:28:20 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/02 18:54:34 dillo Exp $
 #
 
 DISTNAME=		latestCDK
@@ -12,17 +12,16 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.vexus.ca/CDK.html
 COMMENT=		Curses Development Kit
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-
 USE_BUILDLINK2=		yes
 USE_NCURSES=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+AUTOCONF_REQD=		2.13
 
 ALL_TARGET=		default
 
 pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC}; ${AUTOCONF}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cdk
@@ -31,4 +30,5 @@ post-install:
 	done
 
 .include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
