@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/08/03 14:41:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/03 15:49:22 hubertf Exp $
 
 DISTNAME=	apr_20020725223645
-PKGNAME=	apr-devel-0.20020725223645
+PKGNAME=	apr-0.20020725223645
 CATEGORIES=	devel
 MASTER_SITES=	http://www.apache.org/dist/apr/not-released/
 DISTFILES=	apr_20020725223645.tar.gz apr-util_20020725223700.tar.gz
