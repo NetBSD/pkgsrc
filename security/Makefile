@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2002/07/12 16:39:47 agc Exp $
+# $NetBSD: Makefile,v 1.110 2002/07/14 13:04:46 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -18,6 +18,7 @@ SUBDIR+=	cyrus-sasl
 SUBDIR+=	ddos-scan
 SUBDIR+=	dsniff
 SUBDIR+=	egd
+SUBDIR+=	flawfinder
 SUBDIR+=	fortify
 SUBDIR+=	fressh
 SUBDIR+=	fsh
@@ -101,8 +102,8 @@ SUBDIR+=	scanssh
 SUBDIR+=	seahorse
 SUBDIR+=	smimemsg
 SUBDIR+=	smtpd
-SUBDIR+=	snortsnarf
 SUBDIR+=	sniff
+SUBDIR+=	snortsnarf
 SUBDIR+=	srp_client
 SUBDIR+=	ssh
 SUBDIR+=	ssh-askpass
