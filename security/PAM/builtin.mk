@@ -1,29 +1,30 @@
-# $NetBSD: builtin.mk,v 1.10 2005/01/14 00:08:46 jlam Exp $
+# $NetBSD: builtin.mk,v 1.11 2005/01/14 07:54:20 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-_PAM_PAM_APPL_H=	/usr/include/pam/pam_appl.h
-_SECURITY_PAM_APPL_H=	/usr/include/security/pam_appl.h
+_LINUX_PAM_APPL_HEADERS=	/usr/include/pam/pam_appl.h		\
+				/usr/include/security/pam_appl.h
+_LINUX_PAM_IDENT=		The Linux-PAM Framework layer API
 
 .if !defined(IS_BUILTIN.linux-pam)
 IS_BUILTIN.linux-pam=	no
-.  if empty(_SECURITY_PAM_APPL_H:M${LOCALBASE}/*) && \
-      exists(${_SECURITY_PAM_APPL_H})
+.  for _inc_ in ${_LINUX_PAM_APPL_HEADERS}
+.    if !empty(IS_BUILTIN.linux-pam:M[nN][oO]) && exists(${_inc_})
 IS_BUILTIN.linux-pam!=	\
-	if ${GREP} -q "The Linux-PAM Framework layer API" ${_SECURITY_PAM_APPL_H}; then \
-		${ECHO} "yes";						\
-	else								\
+	case ${_inc_} in						\
+	${LOCALBASE}/*)							\
 		${ECHO} "no";						\
-	fi
-.  elif empty(_PAM_PAM_APPL_H:M${LOCALBASE}/*) && exists(${_PAM_PAM_APPL_H})
-#
-# MacOS X installs their PAM headers as /usr/include/pam/*.h, and their
-# PAM implementation is derived from Linux-PAM:
-#
-#	http://developer.apple.com/documentation/Darwin/Reference/ManPages/man8/pam.8.html
-#
-IS_BUILTIN.linux-pam=	yes
-.  endif
+		;;							\
+	*)								\
+		if ${GREP} -q "${_LINUX_PAM_IDENT}" ${_inc_}; then	\
+			${ECHO} "yes";					\
+		else							\
+			${ECHO} "no";					\
+		fi;							\
+		;;							\
+	esac
+.    endif
+.  endfor
 BUILDLINK_VARS+=	IS_BUILTIN.linux-pam
 .endif	# IS_BUILTIN.linux-pam
 
