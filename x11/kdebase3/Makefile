@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/10/13 11:54:11 markd Exp $
+# $NetBSD: Makefile,v 1.60 2004/10/15 13:56:27 seb Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -81,6 +81,8 @@ PLIST_SUBST+=		HAVE_XCURSOR="@comment "
 .include "../../net/samba/buildlink3.mk"
 LIBS+=			-L${BUILDLINK_PREFIX.samba}/lib/samba -Wl,-R${BUILDLINK_PREFIX.samba}/lib/samba
 PLIST_SUBST+=		HAVE_SMB=""
+.else
+PLIST_SUBST+=		HAVE_SMB="@comment "
 .endif
 
 ICONDIR=		share/kde/icons
