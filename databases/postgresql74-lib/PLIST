@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/19 00:02:33 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/27 16:38:32 recht Exp $
 bin/ecpg
 include/ecpg_informix.h
 include/ecpgerrno.h
@@ -360,7 +360,7 @@ lib/libecpg.so.4.1
 lib/libecpg_compat.a
 lib/libecpg_compat.so
 lib/libecpg_compat.so.1
-lib/libecpg_compat.so.1.1
+lib/libecpg_compat.so.1.2
 lib/libpgtypes.a
 lib/libpgtypes.so
 lib/libpgtypes.so.1
