@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:48:25 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/10/11 03:20:30 grant Exp $
 #
 
 DISTNAME=	src-mdp-1.9a5
@@ -17,8 +17,9 @@ ALL_TARGET=	mdp
 
 pre-build:
 		${LN} -sf ${WRKSRC}/Makefile.netbsd ${WRKSRC}/Makefile
-		${LN} -sf ${WRKDIR}/protolib-1.0/ ${WRKSRC}/../protolib
+		${RM} -f ${WRKSRC}/../protolib
+		${LN} -sf ${WRKDIR}/protolib-1.0 ${WRKSRC}/../protolib
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/mdp ${PREFIX}/bin/
+		${INSTALL_PROGRAM} ${WRKSRC}/mdp ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
