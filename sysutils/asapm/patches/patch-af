@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2004/06/09 21:00:05 kivinen Exp $
+$NetBSD: patch-af,v 1.2 2004/06/09 22:15:41 kivinen Exp $
 
 --- apm_read.c.orig	2001-11-23 23:07:19.000000000 +0200
 +++ apm_read.c
@@ -34,7 +34,7 @@ $NetBSD: patch-af,v 1.1 2004/06/09 21:00:05 kivinen Exp $
 +        envsys_basic_info_t ebis;
 +	envsys_tre_data_t etds;
 +	int32_t design, charge, warn_cap, low_cap, rate;
-+	int connected, percent, time_units, battery_status;
++	int connected, charging, percent, time_units, battery_status;
 +
 +	if ((fd = open(sysmon_device_file, O_RDONLY)) == -1) {
 +		error_handle(1, "");
@@ -47,6 +47,7 @@ $NetBSD: patch-af,v 1.1 2004/06/09 21:00:05 kivinen Exp $
 +	low_cap = 0;
 +	rate = 0;
 +	connected = 0;
++	charging = 0;
 +	percent = 0;
 +	time_units = 0;
 +
@@ -75,23 +76,26 @@ $NetBSD: patch-af,v 1.1 2004/06/09 21:00:05 kivinen Exp $
 +
 +		if (etds.units == ENVSYS_SWATTHOUR) {
 +			/* Watt hours, this must be battery capacity info. */
-+			if (match_end(ebis.desc, "design cap")) {
++			if (match_end(ebis.desc, " design cap")) {
 +				design += etds.cur.data_s;
-+			} else if (match_end(ebis.desc, "charge")) {
++			} else if (match_end(ebis.desc, " charge")) {
 +				charge += etds.cur.data_s;
-+			} else if (match_end(ebis.desc, "warn cap")) {
++			} else if (match_end(ebis.desc, " warn cap")) {
 +				warn_cap += etds.cur.data_s;
-+			} else if (match_end(ebis.desc, "low cap")) {
++			} else if (match_end(ebis.desc, " low cap")) {
 +				low_cap += etds.cur.data_s;
 +			}
 +		} else if (etds.units == ENVSYS_INDICATOR) {
 +			/* Indicator of something, check for connected. */
 +			if (match_end(ebis.desc, " connected")) {
 +				connected = etds.cur.data_us;
++			} else if (match_end(ebis.desc, " charging")) {
++				charging = etds.cur.data_us;
 +			}
++
 +		} else if (etds.units == ENVSYS_SWATTS) {
 +			/* Watts, this must discharge rate. */
-+			if (match_end(ebis.desc, "discharge rate")) {
++			if (match_end(ebis.desc, " discharge rate")) {
 +				rate += etds.cur.data_s;
 +			}
 +		}
@@ -105,12 +109,8 @@ $NetBSD: patch-af,v 1.1 2004/06/09 21:00:05 kivinen Exp $
 +		else
 +			state.flags |= CHANGE_AC_OFF;
 +	}
-+	if (connected) {
-+		if (charge > design) {
-+			battery_status = BATTERY_HIGH;
-+		} else {
-+			battery_status = BATTERY_CHARGING;
-+		}
++	if (charging) {
++		battery_status = BATTERY_CHARGING;
 +	} else {
 +		if (charge > warn_cap) {
 +			battery_status = BATTERY_HIGH;
@@ -144,7 +144,7 @@ $NetBSD: patch-af,v 1.1 2004/06/09 21:00:05 kivinen Exp $
 +		++state.update;
 +	}
 +
-+	if (rate != 0) {
++	if (rate > 0) {
 +		time_units = charge / (rate / 60);
 +	}
 +
