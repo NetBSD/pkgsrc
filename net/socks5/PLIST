@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/02 13:27:12 grant Exp $
 bin/socks5
 bin/runsocks
 bin/stopsocks
@@ -9,6 +9,7 @@ bin/rping
 bin/rtelnet
 bin/rtraceroute
 bin/rwhois
+etc/rc.d/socks5
 include/socks.h
 man/man1/socks5.1.gz
 man/man1/runsocks.1.gz
