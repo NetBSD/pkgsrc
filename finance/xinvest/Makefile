@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/02 22:07:04 jlam Exp $
 
 DISTNAME=		xinvest-2.6
 CATEGORIES=		finance x11
@@ -9,13 +9,13 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://sunsite.dk/xinvest/xinvest.html
 COMMENT=		Personal finance tracking and performance tool
 
+USE_BUILDLINK_ONLY=	YES
 USE_IMAKE=		YES
-USE_MOTIF=		YES
-USE_XPM=		YES
-
 NO_INSTALL_MANPAGES=	YES
 
 post-patch:
 	${TOUCH} ${WRKSRC}/Xinvest.man
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
