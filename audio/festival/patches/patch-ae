@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/04/04 19:32:34 proff Exp $
+$NetBSD: patch-ae,v 1.2 1999/10/11 14:13:49 proff Exp $
 
---- festival/config/config-dist	Mon Jan 11 20:59:22 1999
-+++ festival/config/config	Thu Mar 11 02:41:30 1999
-@@ -43,6 +43,7 @@
- # ALSO_INCLUDE += diphone
- # ALSO_INCLUDE += clunits
- # ALSO_INCLUDE += rjc_synthesis
-+ALSO_INCLUDE+=OGIresLPC
- 
- ###########################################################################
- ##
+--- speech_tools/include/EST_unix.h	Sun May 30 20:53:04 1999
++++ speech_tools/include/EST_unix.h	Mon Oct 11 05:40:15 1999
+@@ -53,6 +53,7 @@
+ #   include <sys/wait.h>
+ #   include <sys/resource.h>
+ #   include <dirent.h>
++#   define unix 1
+ #elif defined(SYSTEM_IS_WIN32)
+ #   include <io.h>
+ #   include "win32/EST_unix_win32.h"
