@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1999/06/10 00:16:25 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2000/07/14 05:06:38 minoura Exp $
 
 --- config.h.orig	Sat Jan 11 11:35:43 1997
 +++ config.h	Sun May 23 10:17:24 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 1999/06/10 00:16:25 hubertf Exp $
   */
  
 -#undef	USE_XAW3D			/* Xaw3d を使う？ */
-+#define	USE_XAW3D			/* Xaw3d を使う？ */
++#include "xawconfig.h"
  #undef	USE_XAWI18N			/* X11R5 の Xaw I18N を使う？ */
  
  
