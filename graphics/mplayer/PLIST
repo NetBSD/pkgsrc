@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/26 00:58:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/25 16:16:28 skrll Exp $
 bin/mplayer
 man/man1/mplayer.1
 share/mplayer/DOCS/DVB
@@ -35,61 +35,10 @@ share/mplayer/DOCS/Hungarian/skin-hu.html
 share/mplayer/DOCS/Hungarian/sound.html
 share/mplayer/DOCS/Hungarian/video.html
 share/mplayer/DOCS/Polish/DVB
-share/mplayer/DOCS/Polish/DXR3
 share/mplayer/DOCS/Polish/bugreports.html
-share/mplayer/DOCS/Polish/cd-dvd.html
-share/mplayer/DOCS/Polish/codecs-in.html
 share/mplayer/DOCS/Polish/codecs.html
 share/mplayer/DOCS/Polish/documentation.html
-share/mplayer/DOCS/Polish/encoding.html
-share/mplayer/DOCS/Polish/faq.html
-share/mplayer/DOCS/Polish/formats.html
 share/mplayer/DOCS/Polish/gcc-2.96-3.0.html
-share/mplayer/DOCS/Polish/mencoder.1
-share/mplayer/DOCS/Polish/mplayer.1
-share/mplayer/DOCS/Polish/skin-en.html
-share/mplayer/DOCS/Polish/sound.html
-share/mplayer/DOCS/Polish/users_against_developers.html
-share/mplayer/DOCS/Polish/video.html
-share/mplayer/DOCS/Russian/BUGS
-share/mplayer/DOCS/Russian/CODECS
-share/mplayer/DOCS/Russian/DEBIAN
-share/mplayer/DOCS/Russian/DGA
-share/mplayer/DOCS/Russian/MPlayer-FAQ
-share/mplayer/DOCS/Russian/OpenDivX
-share/mplayer/DOCS/Russian/README
-share/mplayer/DOCS/Russian/SOUNDCARDS
-share/mplayer/DOCS/Russian/TVout-G400
-share/mplayer/DOCS/Russian/VIDEOCARDS
-share/mplayer/DOCS/Russian/cdrom
-share/mplayer/DOCS/Russian/dvd
-share/mplayer/DOCS/Russian/dvd-faq
-share/mplayer/DOCS/Russian/install
-share/mplayer/DOCS/Russian/lirc
-share/mplayer/DOCS/Russian/mtrr
-share/mplayer/DOCS/Russian/sdl
-share/mplayer/DOCS/Spanish/BUGREPORTS
-share/mplayer/DOCS/Spanish/CDROM
-share/mplayer/DOCS/Spanish/DEBIAN
-share/mplayer/DOCS/Spanish/DGA
-share/mplayer/DOCS/Spanish/DVD
-share/mplayer/DOCS/Spanish/DVD-FAQ
-share/mplayer/DOCS/Spanish/FREEBSD
-share/mplayer/DOCS/Spanish/INSTALL
-share/mplayer/DOCS/Spanish/LIRC
-share/mplayer/DOCS/Spanish/MPlayer-FAQ
-share/mplayer/DOCS/Spanish/MTRR
-share/mplayer/DOCS/Spanish/OpenDivX
-share/mplayer/DOCS/Spanish/README
-share/mplayer/DOCS/Spanish/Requirements
-share/mplayer/DOCS/Spanish/SDL
-share/mplayer/DOCS/Spanish/SOLARIS
-share/mplayer/DOCS/Spanish/SOUNDCARDS
-share/mplayer/DOCS/Spanish/SUB+OSD
-share/mplayer/DOCS/Spanish/TVout-G400
-share/mplayer/DOCS/Spanish/Translator
-share/mplayer/DOCS/Spanish/VIDEOCARDS
-share/mplayer/DOCS/Spanish/example.conf
 share/mplayer/DOCS/bugreports.html
 share/mplayer/DOCS/cd-dvd.html
 share/mplayer/DOCS/codecs-in.html
@@ -104,6 +53,8 @@ share/mplayer/DOCS/mplayer.1
 share/mplayer/DOCS/skin-en.html
 share/mplayer/DOCS/sound.html
 share/mplayer/DOCS/tech/TODO
+share/mplayer/DOCS/tech/codec-devel.txt
+share/mplayer/DOCS/tech/codecs.conf.txt
 share/mplayer/DOCS/tech/cvs-howto.txt
 share/mplayer/DOCS/tech/formats-hun.txt
 share/mplayer/DOCS/tech/formats.txt
@@ -116,8 +67,6 @@ share/mplayer/DOCS/users_against_developers.html
 share/mplayer/DOCS/video.html
 share/mplayer/codecs.conf
 @dirrm share/mplayer/DOCS/tech
-@dirrm share/mplayer/DOCS/Spanish
-@dirrm share/mplayer/DOCS/Russian
 @dirrm share/mplayer/DOCS/Polish
 @dirrm share/mplayer/DOCS/Hungarian
 @dirrm share/mplayer/DOCS/German
