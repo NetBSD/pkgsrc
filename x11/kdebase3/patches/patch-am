@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.7.4.1 2004/08/13 13:09:54 agc Exp $
+
+Index: konqueror/konq_mainwindow.h
+===================================================================
+RCS file: /home/kde/kdebase/konqueror/konq_mainwindow.h,v
+retrieving revision 1.423.2.4
+diff -u -p -r1.423.2.4 konq_mainwindow.h
+--- konqueror/konq_mainwindow.h	7 Jun 2004 23:10:56 -0000	1.423.2.4
++++ konqueror/konq_mainwindow.h	3 Aug 2004 14:54:23 -0000
+@@ -145,10 +145,10 @@ public:
+   void insertChildView( KonqView *childView );
+   void removeChildView( KonqView *childView );
+   KonqView *childView( KParts::ReadOnlyPart *view );
+-  KonqView *childView( const QString &name, KParts::BrowserHostExtension **hostExtension, KParts::ReadOnlyPart **part );
++  KonqView *childView( KParts::ReadOnlyPart *callingPart, const QString &name, KParts::BrowserHostExtension **hostExtension, KParts::ReadOnlyPart **part );
+ 
+   // dcop idl bug! it can't handle KonqMainWindow *&mainWindow
+-  static KonqView *findChildView( const QString &name, KonqMainWindow **mainWindow, KParts::BrowserHostExtension **hostExtension, KParts::ReadOnlyPart **part );
++  static KonqView *findChildView( KParts::ReadOnlyPart *callingPart, const QString &name, KonqMainWindow **mainWindow, KParts::BrowserHostExtension **hostExtension, KParts::ReadOnlyPart **part );
+ 
+   // Total number of views
+   int viewCount() const { return m_mapViews.count(); }
