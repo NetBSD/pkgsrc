@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/05 07:38:15 nathanw Exp $
+
+--- Makefile.in.orig	Wed Feb  3 11:22:56 1999
++++ Makefile.in	Wed Feb  3 11:27:24 1999
+@@ -93,7 +93,7 @@
+ xcopilot_DEPENDENCIES =  mc68k/libmc68k.a mx/libmx.a
+ xcopilot_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
++COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(X_CFLAGS) $(CFLAGS)
+ LINK = $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ man1dir = $(mandir)/man1
+ MANS = $(man_MANS)

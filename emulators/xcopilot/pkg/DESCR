@@ -1,0 +1,6 @@
+XCopilot is an emulator for the 3Com/USRobotics
+Pilot/PalmPilot/PalmIII that runs on Unix systems under X11.
+
+XCopilot is a Unix/X11 port of the copilot emulator, which was
+originally written for Windows95. Greg Hewgill wrote copilot. 
+Ivan A. Curtis created XCopilot.
