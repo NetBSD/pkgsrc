@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/09/21 17:11:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/12/28 21:53:42 jmmv Exp $
 bin/ggv
 lib/bonobo/servers/GNOME_GGV.server
 libexec/ggv-postscript-viewer
@@ -84,6 +84,7 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/ggv.mo
