@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.562 2002/11/20 17:00:07 bouyer Exp $
+$NetBSD: CHANGES,v 1.563 2002/11/20 18:24:29 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3670,3 +3670,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added emacs-dict-client-1.8.2 [tron 2002-11-20]
 	Updated sylpheed to 0.8.6 [chris 2002-11-20]
 	Updated gtar, gtar-base and gtar-info to 1.13.25 [bouyer 2002-11-20]
+	Added bsetroot-0.1 [jschauma 2002-11-20]
+	Added openbox-2.2.0 [jschauma 2002-11-20]
