@@ -1,0 +1,15 @@
+*** configure.orig	Sun Oct 26 01:02:37 1997
+--- configure	Fri Oct 31 22:49:27 1997
+***************
+*** 925,929 ****
+  
+  
+! test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
+  
+  
+--- 925,929 ----
+  
+  
+! test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL} -m 555'
+  
+  
