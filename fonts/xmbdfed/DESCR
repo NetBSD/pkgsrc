@@ -1,5 +1,3 @@
-From README:
-
 XmBDFEditor is a Motif-based BDF font editor with the following features:
 
   o  Multiple fonts can be loaded from the command line.
@@ -12,18 +10,13 @@ XmBDFEditor is a Motif-based BDF font editor with the following features:
   o  Generation of XLFD font names for fonts without XLFD names.
   o  Update an XLFD font name from the font properties.
   o  Update the font properties from an XLFD font name.
-  o  Font property editor.
-  o  Font comment editor.
+  o  Font property and comment editors.
   o  Supports unencoded glyphs (ENCODING of -1).
   o  Display of glyph encodings in octal, decimal, or hex.
   o  Builtin on-line help.
-  o  Imports PK/GF fonts.
-  o  Imports HBF (Han Bitmap Font) fonts.
-  o  Imports Linux console fonts (PSF, CP, and FNT).
-  o  Imports Sun console fonts (vfont format).
+  o  Imports PK/GF and HBF (Han Bitmap Font) fonts, Linux console fonts
+     (PSF, CP and FNT), Sun console fonts (vfont format), Windows FON/TNT
+     fonts and TrueType fonts and collections.
   o  Imports fonts from the X server.
-  o  Imports Windows FON/FNT fonts.
-  o  Imports TrueType fonts and collections.
-  o  Exports PSF fonts.
-  o  Exports HEX fonts.
+  o  Exports PSF and HEX fonts.
   o  Edits two and four bits per pixel gray scale fonts.
