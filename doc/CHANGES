@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4962 2004/02/22 23:27:18 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4963 2004/02/23 00:45:57 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -984,3 +984,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Crypt-Primes to 0.50 [heinz 2004-02-22]
 	Updated xnc to 5.0.4 [jschauma 2004-02-22]
 	Updated bitlbee to 0.84 [xtraeme 2004-02-22]
+	Updated udfclient to 0.20 [reinoud 2004-02-23]
+
