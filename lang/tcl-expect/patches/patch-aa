@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
---- Makefile.in.orig	Fri May 12 13:59:44 2000
-+++ Makefile.in	Tue Sep  5 11:46:16 2000
-@@ -57,9 +57,9 @@
+$NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
+
+--- Makefile.in.orig	2002-07-18 17:07:41.000000000 +0100
++++ Makefile.in
+@@ -57,9 +57,9 @@ X11_PROGS_INSTALLED = @X_PROGS@_installe
  # your Expect scripts.
  # Note: On Linux systems which only have dynamic X libraries, the -g prevents
  # the linker from using them.  So do not use -g on such systems.
@@ -13,17 +14,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  
  # Libraries built with optimization switches have this additional extension
  TCL_DBGX =              @TCL_DBGX@
-@@ -79,7 +79,8 @@
+@@ -79,7 +79,8 @@ LDFLAGS = @EXP_LDFLAGS@
  # used when Tcl was compiled.  Changing this definition here can screw up
  # deductions that the configure script made on the assumption that you were
  # using a different compiler. 
 -CC = @CC@
 +CC = ${LIBTOOL} --mode=compile @CC@
-+LD = @${LIBTOOL} --mode=link @CC@
++LD = ${LIBTOOL} --mode=link @CC@
  
  # By default, "make install" will install the appropriate files in
  # /usr/local/bin, /usr/local/lib, /usr/local/man, etc.  By changing this
-@@ -170,10 +171,10 @@
+@@ -171,10 +172,10 @@ STTY = -DDFLT_STTY="\"@DEFAULT_STTY_ARGS
  ######################################################################
  
  bindir            = $(INSTALL_ROOT)@bindir@
@@ -38,7 +39,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  
  mandir 	= $(INSTALL_ROOT)@mandir@
  man1dir = $(mandir)/man1
-@@ -189,9 +190,10 @@
+@@ -190,9 +191,10 @@ EXECSCRIPTDIR	= $(libdir)
  
  SHELL = @EXP_CONFIG_SHELL@
  
@@ -52,7 +53,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  
  AR = ar
  ARFLAGS = cr
-@@ -318,14 +320,14 @@
+@@ -320,14 +322,14 @@ LIB_RUNTIME_DIR = $(tcl_libdir)
  # I don't understand why Tcl splits these up, but it does.  LIB_RUNTIME_DIR
  # can appear as part of the LD_SEARCH_FLAGS inherited by configure.
  
@@ -75,7 +76,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  
  all: binaries libraries doc
  
-@@ -342,7 +344,7 @@
+@@ -344,7 +346,7 @@ dvi:
  # build expect binary that does not depend on Expect's shared libs
  # IFF static Tcl/Tk libraries are available.
  expect:	exp_main_exp.o $(EXP_UNSHARED_LIB_FILE)
@@ -84,7 +85,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  	$(SETUID) expect
  
  # install Expect library
-@@ -357,24 +359,16 @@
+@@ -359,24 +361,16 @@ expect:	exp_main_exp.o $(EXP_UNSHARED_LI
  #   is too long for some filesystems, sigh.
  install_shared_lib: $(EXP_LIB_FILES)
  	${srcdir}/mkinstalldirs $(libdir)
@@ -103,7 +104,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  
  expect_installed:	exp_main_exp.o $(EXP_LIB_FILE) install_shared_lib
 -	$(CC) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expect_installed exp_main_exp.o @EXP_LIB_SPEC@ $(TCLLIB_INSTALLED) $(EXP_AND_TCL_LIBS)
-+	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expect_installed exp_main_exp.o @EXP_LIB_SPEC@ $(TCLLIB_INSTALLED) $(EXP_AND_TCL_LIBS)
++	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expect_installed exp_main_exp.o $(EXP_SHARED_LIB_FILE:C/\.so.*/.la/) $(TCLLIB_INSTALLED) $(EXP_AND_TCL_LIBS)
  	$(SETUID) expect_installed
  
  # Build Expect with TestCenter
@@ -113,7 +114,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  	$(SETUID) expect.tc
  
  # Build an executable with both Expect and Tk
-@@ -385,16 +379,16 @@
+@@ -387,16 +381,16 @@ expect.tc: exp_main_exp.o $(OFILES) 
  # configure) separately for Expectk, but as far as I know, it doesn't hurt
  # anything here, so I'm not worrying about it.
  expectk: exp_main_tk.o $(EXP_UNSHARED_LIB_FILE)
@@ -123,7 +124,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  
  expectk_installed: exp_main_tk.o $(EXP_LIB_FILE)
 -	$(CC) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expectk_installed exp_main_tk.o @EXP_LIB_SPEC@ $(TKLIB_INSTALLED) $(TCLLIB_INSTALLED) $(X11_LD_FLAGS) $(EXP_AND_TK_LIBS) 
-+	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expectk_installed exp_main_tk.o @EXP_LIB_SPEC@ $(TKLIB_INSTALLED) $(TCLLIB_INSTALLED) $(X11_LD_FLAGS) $(EXP_AND_TK_LIBS) 
++	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expectk_installed exp_main_tk.o $(EXP_SHARED_LIB_FILE:C/\.so.*/.la/) $(TKLIB_INSTALLED) $(TCLLIB_INSTALLED) $(X11_LD_FLAGS) $(EXP_AND_TK_LIBS) 
  	$(SETUID) expectk_installed
  
  # Build Expectk with TestCenter
@@ -133,7 +134,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  	$(SETUID) expectk.tc
  
  expect-unshared-lib-file :: $(EXP_UNSHARED_LIB_FILE)
-@@ -410,7 +404,7 @@
+@@ -412,7 +406,7 @@ $(EXP_UNSHARED_LIB_FILE): $(OFILES)
  expect-shared-lib-file :: $(EXP_SHARED_LIB_FILE)
  $(EXP_SHARED_LIB_FILE): $(OFILES)
  	-rm -f $(EXP_SHARED_LIB_FILE)
@@ -142,7 +143,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  
  .PHONY: install-info install info
  install-info:
-@@ -448,7 +442,7 @@
+@@ -450,7 +444,7 @@ install-libraries:
  	${srcdir}/mkinstalldirs $(bindir_arch_indep) $(man1dir) $(SCRIPTDIR) $(EXECSCRIPTDIR)
  	-for i in $(SCRIPT_LIST) ; do \
  	  if [ -f $$i ] ; then \
@@ -151,7 +152,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  	    rm -f $$i ; \
  	  else true; fi ; \
  	done
-@@ -457,7 +451,7 @@
+@@ -459,7 +453,7 @@ install-doc:
  	${srcdir}/mkinstalldirs $(man1dir) $(man3dir)
  # install Expectk man page if present
  	-if [ -s expectk_installed ] ; then \
@@ -160,7 +161,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
  	else true; fi
  # install Expect man page
  	$(INSTALL_DATA) $(srcdir)/expect.man $(man1dir)/expect.1
-@@ -465,7 +459,7 @@
+@@ -467,7 +461,7 @@ install-doc:
  	$(INSTALL_DATA) $(srcdir)/libexpect.man $(man3dir)/libexpect.3
  	-for i in $(SCRIPT_MANPAGE_LIST) ; do \
  	  if [ -f $(srcdir)/example/$$i.man ] ; then \
