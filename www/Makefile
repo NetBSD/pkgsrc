@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.374 2005/01/16 21:16:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.375 2005/01/18 17:47:35 peter Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -69,6 +69,7 @@ SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
 SUBDIR+=	cocoon
 SUBDIR+=	communicator
+SUBDIR+=	crawl
 SUBDIR+=	cronolog
 SUBDIR+=	curl
 SUBDIR+=	cvsweb
