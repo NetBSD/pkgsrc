@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/09/28 18:10:28 tron Exp $
+$NetBSD: patch-aa,v 1.2 1999/07/06 17:59:44 tron Exp $
 
 --- Makefile.orig	Sat Jul 20 01:35:46 1996
-+++ Makefile	Tue Sep 22 22:36:04 1998
++++ Makefile	Tue Jul  6 19:57:12 1999
 @@ -30,23 +30,23 @@
  # uncomment the following two lines if you want to include X11 support
  # (mpeg2decode)
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/09/28 18:10:28 tron Exp $
 -#INCLUDEDIR = -I/usr/openwin/include
 -#LIBRARYDIR = -L/usr/openwin/lib
 +INCLUDEDIR = -I${PREFIX}/include
-+LIBRARYDIR = -L${PREFIX}/lib
++LIBRARYDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
  
  # select one of the following CC CFLAGS settings
  
