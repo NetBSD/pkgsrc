@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/07 04:31:39 jtb Exp $
+bin/udunits
+etc/udunits.dat
+include/udunits.h
+include/udunits.inc
+lib/libudport.a
+lib/libudunits.a
+man/man1/udunits.1
+man/man1/udunitsperl.1
+man/man3/udunits.3
+man/man3f/udunits.3f
