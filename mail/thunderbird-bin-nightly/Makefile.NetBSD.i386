@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.NetBSD.i386,v 1.1 2004/05/25 13:40:54 grant Exp $
+
+DISTNAME=	thunderbird-i386-unknown-netbsdelf2.0
+MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/contrib/latest-trunk/
+EXTRACT_SUFX=	.tar.bz2
+
+MOZ_PLATFORM=	netbsd

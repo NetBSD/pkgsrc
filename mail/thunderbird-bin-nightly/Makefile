@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/04 23:56:31 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/25 13:40:54 grant Exp $
 
 MOZILLA=	thunderbird
 
@@ -8,6 +8,8 @@ COMMENT=	Redesign of the Mozilla mail client (nightly binary pkg)
 MOZ_GTK2=	YES
 MOZ_EXTRA=	# empty
 
-ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86 SunOS-5.[789]*-sparc
+ONLY_FOR_PLATFORM+=	Linux-*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-2.*-i386
+ONLY_FOR_PLATFORM+=	SunOS-5.[789]*-sparc
 
 .include "../../www/mozilla-bin-nightly/Makefile.common"
