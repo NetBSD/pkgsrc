@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/16 10:10:25 agc Exp $
 
 DISTNAME=	mule-2.3
 CATEGORIES=	editors
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-wnn4 --wnn-includes=${LOCALBASE}/include/wnn --wnn-libra
 .endif
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-CONFIGURE_ARGS+=	--with-canna --canna-includes=${LOCALBASE}/include/canna --canna-libraries=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--canna --canna-includes=${LOCALBASE}/include/canna --canna-libraries=${LOCALBASE}/lib
 .endif
 
 INFO_FILES=	antenews-jp canna-jp cl dired-x egg-jp emacs forms gnus mule \
