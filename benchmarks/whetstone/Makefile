@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/03/16 09:02:27 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/01 14:07:53 agc Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -9,9 +9,7 @@ EXTRACT_SUFX=		.c
 MAINTAINER=		root@garbled.net
 
 NO_WRKSUBDIR=		yes
-EXTRACT_CMD=		${CP}
-EXTRACT_BEFORE_ARGS=	#empty
-EXTRACT_AFTER_ARGS=	${WRKSRC}
+EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 
 do-build:
 	(cd ${WRKSRC} ; ${CC} -O2 -o whetstone whetstone.c -lm)

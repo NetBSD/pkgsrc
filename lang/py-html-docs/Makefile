@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:17:08 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/01 14:07:54 agc Exp $
 #
 
 DISTNAME=	html-1.5.1
@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/
 
-EXTRACT_ONLY=
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -20,10 +19,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}/${HTMLDIR}; \
-	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
-		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
-		${EXTRACT_AFTER_ARGS})
+	(cd ${WRKSRC}; pax -r -w -v -p -e . ${PREFIX}/${HTMLDIR})
 	(cd ${PREFIX}; find ${HTMLDIR} -type f -print >>${PLIST_SRC})
 	(cd ${PREFIX}; find -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})

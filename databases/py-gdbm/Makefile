@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/12/18 00:42:39 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/01 14:07:53 agc Exp $
 #
 
 DISTNAME=	pyth151
@@ -18,7 +18,7 @@ DIST_SUBDIR=	python
 
 ALL_TARGET=	default
 
-EXTRACT_AFTER_ARGS=	Python-1.5.1/Modules/gdbmmodule.c
+EXTRACT_ELEMENTS=	Python-1.5.1/Modules/gdbmmodule.c
 
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config/
 
