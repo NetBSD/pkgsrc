@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2003/08/05 10:18:41 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2003/12/12 22:33:36 jmmv Exp $
 
---- Makefile.in.orig	Tue Aug  5 10:56:30 2003
+--- Makefile.in.orig	2003-12-10 17:45:44.000000000 +0100
 +++ Makefile.in
-@@ -80,12 +80,11 @@ LINK_SIZE = @LINK_SIZE@
- MATCH_LIMIT= @MATCH_LIMIT@
+@@ -77,12 +77,11 @@ NO_RECURSE = @NO_RECURSE@
+ EBCDIC = @EBCDIC@
  
  INSTALL = @INSTALL@
 -INSTALL_DATA = @INSTALL_DATA@
@@ -13,6 +13,6 @@ $NetBSD: patch-aa,v 1.4 2003/08/05 10:18:41 wiz Exp $
  # to do one or the other or both by ./configure.
  
 -LIBTOOL = @LIBTOOL@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -I. -I$(top_srcdir) $(NEWLINE) $(LINK_SIZE) $(MATCH_LIMIT)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -I. -I$(top_srcdir) $(NEWLINE) $(LINK_SIZE) $(MATCH_LIMIT) $(NO_RECURSE) $(EBCDIC)
  @ON_WINDOWS@LINK = $(CC) $(CFLAGS) -I. -I$(top_srcdir) -L.libs
  @NOT_ON_WINDOWS@LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) -I. -I$(top_srcdir)
