@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1998/09/22 06:11:36 garbled Exp $
+# $NetBSD: Makefile,v 1.36 1998/11/12 23:03:40 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -14,8 +14,6 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-20.4/ \
 		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.4/
 DISTFILES=	xemacs-20.4.tar.gz xemacs-20.4-info.tar.gz
 
-NOT_FOR_ARCHS=	alpha	#fails purespace dumping
-
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 
@@ -26,6 +24,8 @@ DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 
 CONFLICTS+=	xemacs-20.3
+
+NOT_FOR_ARCHS=	alpha	#fails purespace dumping
 
 HAS_CONFIGURE=	yes
 

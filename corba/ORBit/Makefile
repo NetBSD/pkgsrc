@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/11/12 16:20:33 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/11/12 23:03:39 frueauf Exp $
 #
 
 DISTNAME=	ORBit-0.3.0
@@ -13,6 +13,8 @@ DEPENDS+=	gindent-1.9.1:../../devel/gindent
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
 LIBTOOL_FLAGS=	--install-la
+INFO_FILES=	libIDL.info
 
 .include "../../mk/bsd.pkg.mk"

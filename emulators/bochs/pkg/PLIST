@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/09/06 06:51:05 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/11/12 23:03:40 frueauf Exp $
 bin/bochs
 lib/X11/fonts/misc/fonts.dir
 lib/X11/fonts/misc/hercules.bdf
@@ -37,4 +37,3 @@ share/bochs/bochsrc
 @dirrm share/doc/bochs
 @dirrm share/bochs/bios
 @dirrm share/bochs
-

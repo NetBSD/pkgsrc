@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/10/05 14:02:07 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/11/12 23:03:39 frueauf Exp $
 lib/libIDL.so.5.0
 lib/libIDL.la
 lib/libIDL.a
@@ -64,7 +64,9 @@ include/orb/orbit_object.h
 include/orb/orbit_object_type.h
 include/orb/orbit_poa.h
 include/orb/orbit_poa_type.h
+@unexec %D/bin/install-info --delete %D/info/libIDL.info %D/info/dir
 info/libIDL.info
+@exec %D/bin/install-info %D/info/libIDL.info %D/info/libIDL.info
 @dirrm include/libIDL
 @dirrm include/ORBitutil
 @dirrm include/IIOP
