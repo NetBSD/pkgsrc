@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/04/01 18:50:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/02 03:49:51 snj Exp $
 #
 
 DISTNAME=		gnome-applets-2.6.0
@@ -52,7 +52,7 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" ||
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || \
     ${OPSYS} == "OpenBSD"
 GCONF2_SCHEMAS+=	battstat.schemas
 PLIST_SUBST+=		BATTSTAT=
