@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2632 2003/06/30 06:46:55 tron Exp $
+$NetBSD: CHANGES,v 1.2633 2003/06/30 07:29:12 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2623,3 +2623,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xemacs-packages to 1.12 [uebayasi 2003-06-30]
 	Updated ImageMagick to 5.5.7.9 [tron 2003-06-30]
 	Updated p5-PerlMagick to 5.5.7.9 [tron 2003-06-30]
+	Updated xlockmore to 5.08.1nb1 [jlam 2003-06-30]
