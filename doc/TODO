@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.43 2002/12/07 23:40:22 jmmv Exp $
+$NetBSD: TODO,v 1.44 2002/12/08 11:46:54 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -130,6 +130,7 @@ Suggested package updates
 	o gnustep-1.5.1
 	o gnustep-gui-0.8.3
 	o gphoto-2.1.1
+	o grub-0.93
 	o gtkmm-2.1.0
 	o guile-1.6.0
 	o htmldoc-1.8.23
