@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/24 17:57:25 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2002/12/20 21:37:40 jschauma Exp $
 
---- pvs.orig	Fri Jul 19 05:57:05 2002
-+++ pvs	Tue Sep 24 12:43:19 2002
+--- pvs.orig	Thu Dec 19 22:38:25 2002
++++ pvs	Thu Dec 19 22:42:32 2002
 @@ -46,7 +46,7 @@
  
  # PVSPATH should be set after installation by <PVS>/bin/relocate or by hand
  # to the location of the PVS installation
--PVSPATH=/homes/owre/pvs3.0
-+PVSPATH=@PREFIX@/pvs
+-PVSPATH=/project/pvs/pvs3.0
++PVSPATH=@PREFIX@/pvs/
  
  #-------------------------------------------------
  # Nothing below this line should need modification
@@ -16,27 +16,28 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/09/24 17:57:25 jschauma Exp $
  	 fi
  	 PVSARCH=sun4;;
 +  NetBSD) # pretend to be a redhat linux system
-+  	opsys=redhat
++	opsys=redhat
 +	majvers=5
 +	othervers=4
 +	PVSARCH=ix86;;
    Linux) # If Linux, we need to determine the Redhat version to use.
  	 opsys=redhat
  	 if [ ! $majvers ]; then
-@@ -228,8 +233,14 @@
+@@ -228,8 +233,15 @@
  PVSIMAGE="$PVSLISP"
  
  export ALLEGRO_CL_HOME DISPLAY LD_LIBRARY_PATH
 -export PVSARCH PVSIMAGE PVSPATH PATH PVSLISP PVSVERBOSE PVSTIMEOUT
 -export PVSPATCHLEVEL PVSMINUSQ PVSFORCEDP PVSDEFAULTDP
 +export PVSARCH PVSIMAGE PVSPATH PATH PVSLISP PVSVERBOSE
-+export PVSPATCHLEVEL PVSMINUSQ PVSFORCEDP 
++export PVSPATCHLEVEL PVSMINUSQ PVSFORCEDP
 +if [ "$PVSTIMEOUT" ]; then
 +	export PVSTIMEOUT
 +fi
 +if [ "$PVSDEFAULTDP" ]; then
 +	export PVSDEFAULTDP;
 +fi
++
  
  pvsemacsinit="-load $PVSPATH/emacs/go-pvs.el $loadafter"
  
