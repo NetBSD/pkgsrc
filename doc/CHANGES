@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.270 2002/10/16 01:36:53 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.271 2002/10/16 03:19:04 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3279,3 +3279,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pilrc to 2.9.10 [dillo 2002-10-15]
 	Updated gmake to 3.80 [dmcmahill 2002-10-15]
 	Updated gerbv to 0.0.10 [dmcmahill 2002-10-15]
+	Updated glib2 to 2.0.6nb2 [rh 2002-10-16]
+	Updated bonobo-activation to 1.0.2nb2 [rh 2002-10-16]
+	Updated libbonobo to 2.0.0nb2 [rh 2002-10-16]
+	Updated libgnomeprint to 1.116.0nb1 [rh 2002-10-16]
+	Updated gnome-vfs2 to 2.0.4nb2 [rh 2002-10-16]
