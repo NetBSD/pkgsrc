@@ -1,32 +1,22 @@
 FIRST TIME USERS:
-To use afterstep, put "exec afterstep" at the end of your .xinitrc
-or .xsession file, as applies, commenting out any line(s) for your
-current window manager.
-
+To use afterstep as your window manager, simply invoke "exec afterstep"
+at the end of your .xinitrc (for "startx), or .xsession file (for xdm).
+Don't forget to comment out any line(s) for your current window manager.
 
 UPGRADERS:
-The format of many of the config files may change with the minor
-version number, as from 1.5.x to 1.6.10. Upgraders are advised to
-back up their old custom configs,
-"cp ~/GNUstep/Library/AfterStep ~/GNUstep/Library/AfterStep.old",
-review the defaults in ~/usr/X11R6/share/afterstep for compatibility,
-and edit as required before moving them back.
-
+Afterstep-1.8.x is more configurable than ever, but note: the format of
+many of the configuration files has changed! In particular, it is no
+longer necessary to maintain a complete copy of @PREFIX@/share/afterstep
+in each home directory--your ~/Gnu/Library/Afterstep directory now need
+only contain changes from the defaults in @PREFIX@/share/afterstep.
+Upgraders are advised to back up their old ~/Gnu/Library/Afterstep directory,
+and review the documentation before merging diffs carefully. 
 
 EVERYBODY:
-Try the AfterStep Control Panel (available as a separate package,
-x11/ascp) for configuring AfterStep.
+The AfterStep Control Panel for 1.8.x is still under development.
+See the online docs--Wharf top button, or bottom item of start menu,
+or view @PREFIX@/share/afterstep/doc/afterstep.html with any browser.
+If you are connected to the Internet, a FAQ, mailing lists, and other
+resources may be found on the Afterstep Home Page:
 
-If the "Afterstep Documentation" item in the default start menu
-fails to work, it's probably because you don't have a binary called
-either "netscape" or "lynx" on your system.  With your favorite
-browser, try
-
-	file://usr/X11R6/share/afterstep/doc/afterstep.html
-
-AfterStep has a homepage,
-
-	http://www.afterstep.org/FAQ/
-
-There find the latest version of the FAQ and links to subscribe to
-the mailing list.
+http://www.afterstep.org/

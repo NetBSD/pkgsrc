@@ -1,36 +1,52 @@
-# $NetBSD: Makefile,v 1.16 2000/02/09 20:20:58 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/02/14 12:42:15 fredb Exp $
 
-DISTNAME=	AfterStep-1.6.10
-PKGNAME=	afterstep-1.6.10
+DISTNAME=	AfterStep-1.8.0
+PKGNAME=	afterstep-1.8.0
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.afterstep.org/pub/stable/ \
-		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/AfterStep/pub/stable/
+MASTER_SITES=	ftp://ftp.afterstep.org/stable/ \
+		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/AfterStep/stable/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.afterstep.org/
+MAINTAINER=		fb@enteract.com
+HOMEPAGE=		http://www.afterstep.org/
 
-DEPENDS+=	asclock-1.0:../../x11/asclock
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.3:../../graphics/png
-DEPENDS+=	rplay-3.2.*:../../audio/rplay
-DEPENDS+=	xli-1.16:../../graphics/xli
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+DEPENDS+=		jpeg>=6b:../../graphics/jpeg
+DEPENDS+=		png>=1.0.3:../../graphics/png
+DEPENDS+=		rplay>=3.2.0b6:../../audio/rplay
+DEPENDS+=		xpm>=3.4k:../../graphics/xpm
+DEPENDS+=		asclock-*:../../x11/asclock
+DEPENDS+=		xp-*:../../x11/xp
 
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_PERL=		yes
+USE_X11=		yes
 
-CONFIGURE_ARGS+=	--with-png-includes=${LOCALBASE}/include \
-			--with-png-lib=${LOCALBASE}/lib \
-			--with-jpeg-includes=${LOCALBASE}/include \
-			--with-jpeg-lib=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--disable-staticlibs
+CONFIGURE_ARGS+=	--with-helpcommand="xpman"
+CONFIGURE_ARGS+=	--with-jpeg-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--with-jpeg-lib=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-png-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--with-png-lib=${LOCALBASE}/lib
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 
+MESSAGE_FILE=		${WRKDIR}/MESSAGE
+
 post-patch:
-	for i in ` ${FIND} ${WRKSRC} -name "*.man" -print `; do \
+	for i in `${FIND} ${WRKSRC} -name "*.man" -print` \
+		${WRKSRC}/autoconf/Makefile.common.in; do \
 	  ${MV} $$i $$i.orig ;\
-	  ${SED} -e 's@/usr/local/@${PREFIX}/@g' < $$i.orig > $$i ; \
-	  ${RM} $$i.orig ;\
+	  ${SED} -e 's|/usr/local/|${PREFIX}/|g' -e 's|1x|1|g' < $$i.orig > $$i ; \
 	done
+
+pre-configure:
+	cd ${WRKSRC} && \
+	  autoconf --localdir=autoconf autoconf/configure.in > configure; \
+	  ${CHMOD} 755 configure; \
+	  autoheader --localdir=autoconf autoconf/configure.in > autoconf/config.h.in;
+
+post-build:
+	${SED} 's|@PREFIX@|${PREFIX}|g' < ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"
