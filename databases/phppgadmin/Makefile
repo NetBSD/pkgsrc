@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/09 16:23:43 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/09 16:26:26 jdolecek Exp $
 
 DISTNAME=	phpPgAdmin-3.4.1
 PKGREVISION=	# empty
@@ -27,7 +27,7 @@ PHPPGHIER=	classes/HTML_TreeMenu/images images/themes/default	\
 
 PKG_SYSCONFDIR.phppgadmin=	${PREFIX}/share/phppgadmin/conf
 EGDIR=		${PREFIX}/share/examples/phppgadmin
-DOCDIR=		${PREFIX}/share/doc/phpgadmin
+DOCDIR=		${PREFIX}/share/doc/phppgadmin
 CONF_FILES=	${EGDIR}/config.inc.php-dist ${PKG_SYSCONFDIR}/config.inc.php
 DOC_FILES=	CREDITS DEVELOPERS FAQ HISTORY INSTALL LICENSE TODO \
 		TRANSLATORS
