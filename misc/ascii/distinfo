@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:07 agc Exp $
 
-MD5 (ascii-3.0.tar.gz) = d5d64ac8ab1e8101361f581cc7f82554
+SHA1 (ascii-3.0.tar.gz) = faf4c7d90ab4a55cda42a3a8c6124f4f8f5d7429
+Size (ascii-3.0.tar.gz) = 10804 bytes
