@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/29 06:36:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/30 04:39:08 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-server-${XORG_VER}
@@ -48,7 +48,7 @@ USE_PERL5=	build # Yeah, we need this :-)
 .endif
 
 post-install:
-	${CHMOD} a+r ${X11ROOT}/bin/XFree86
+	${CHMOD} a+r ${X11ROOT}/bin/Xorg
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
