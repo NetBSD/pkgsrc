@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
+
+--- lib/ganglia/gmond_config.h.orig	2005-02-04 17:27:08.000000000 -0500
++++ lib/ganglia/gmond_config.h	2005-02-04 17:27:47.000000000 -0500
+@@ -5,7 +5,7 @@
+ #include <ganglia/llist.h>
+ 
+ /* autoconf me later */
+-#define DEFAULT_GMOND_CONFIG_FILE "/etc/gmond.conf"
++#define DEFAULT_GMOND_CONFIG_FILE "@PKG_SYSCONFDIR@/gmond.conf"
+ 
+ typedef struct
+    {
