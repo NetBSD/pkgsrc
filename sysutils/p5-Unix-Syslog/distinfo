@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/12/15 09:52:33 martti Exp $
+$NetBSD: distinfo,v 1.3 2002/01/26 07:09:52 martti Exp $
 
-SHA1 (Syslog-0.97.tar.gz) = 210818d90caedc21dc94a587aa0145d68e010329
-Size (Syslog-0.97.tar.gz) = 10808 bytes
+SHA1 (Unix-Syslog-0.98.tar.gz) = 9448838142c51a9227487fc643033265a1345ef9
+Size (Unix-Syslog-0.98.tar.gz) = 11363 bytes
