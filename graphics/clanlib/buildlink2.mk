@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:47 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/07 10:44:57 reinoud Exp $
 
 .if !defined(CLANLIB_BUILDLINK2_MK)
 CLANLIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		ClanLib
 BUILDLINK_DEPENDS.ClanLib?=	ClanLib>=0.4.4nb1
-BUILDLINK_PKGSRCDIR.ClanLib?=	../../graphics/ClanLib
+BUILDLINK_PKGSRCDIR.ClanLib?=	../../graphics/clanlib
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.ClanLib=ClanLib
 BUILDLINK_PREFIX.ClanLib_DEFAULT=	${X11PREFIX}
