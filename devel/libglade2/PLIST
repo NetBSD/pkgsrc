@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/05 11:54:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/05 12:17:43 jmmv Exp $
 bin/libglade-convert
 include/libglade-2.0/glade/glade-build.h
 include/libglade-2.0/glade/glade-init.h
@@ -28,5 +28,8 @@ share/xml/libglade/glade-2.0.dtd
 @dirrm share/xml/libglade
 @unexec ${RMDIR} %D/share/xml 2>/dev/null || ${TRUE}
 @dirrm share/doc/html/libglade
+@exec ${MKDIR} %D/lib/libglade/2.0
+@dirrm lib/libglade/2.0
+@dirrm lib/libglade
 @dirrm include/libglade-2.0/glade
 @dirrm include/libglade-2.0
