@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/11 05:24:29 hubertf Exp $
+sbin/6to4
+etc/6to4.conf-example
+share/doc/6to4.html
+man/man8/6to4.8
