@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.18 2003/09/13 15:04:59 jlam Exp $
+# $NetBSD: module.mk,v 1.19 2003/09/13 15:20:53 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -163,7 +163,7 @@ GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 # XXX VIEW-{INSTALL,DEINSTALL} actions from the INSTALL/DEINSTALL
 # XXX scripts.
 #
-INSTALL_TARGET?=	pure_install
+#INSTALL_TARGET?=	pure_install
 
 # Default test target for perl5 modules
 TEST_TARGET?=	test
