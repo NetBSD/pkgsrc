@@ -1,0 +1,11 @@
+$NetBSD: patch-ah,v 1.1 1998/10/27 07:21:19 garbled Exp $
+--- unsq.c.orig	Mon Oct 26 23:28:34 1998
++++ unsq.c	Mon Oct 26 23:29:08 1998
+@@ -49,6 +49,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "msgs.h"
+ 
+ #ifdef __STDC__
