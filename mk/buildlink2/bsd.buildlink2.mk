@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.77 2003/01/13 09:49:22 grant Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.78 2003/01/14 09:32:12 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -91,7 +91,7 @@ USE_X11_LINKS?=		YES
 .  if !empty(USE_X11_LINKS:M[nN][oO])
 .    include "../../mk/x11.buildlink2.mk"
 .  else
-BUILD_DEPENDS+=		x11-links>=0.11:../../pkgtools/x11-links
+BUILD_DEPENDS+=		x11-links>=0.12:../../pkgtools/x11-links
 _BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
 .  endif
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
