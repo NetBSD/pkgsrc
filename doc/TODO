@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2513 2004/11/27 07:44:32 reed Exp $
+$NetBSD: TODO,v 1.2514 2004/11/27 07:46:58 reed Exp $
 
 Suggested new packages
 ======================
@@ -1124,7 +1124,6 @@ Suggested package updates
 	o resize_image-0.7
 	o rio500-0.8.1
 	o rioutil-1.4.6.1
-	o ripmime-1.4.0.1
 	o rman-3.2
 	o robodoc-4.99.6
 	o root-4.01.04
