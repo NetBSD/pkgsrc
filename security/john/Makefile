@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/26 19:07:25 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/26 19:17:33 grant Exp $
 #
 
 DISTNAME=	john-1.6
@@ -11,7 +11,27 @@ HOMEPAGE=	http://www.openwall.com/john/
 COMMENT=	Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
+
+NO_CONFIGURE=	# defined
+
+.include "../../mk/compiler.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
+.  if !empty(CC_VERSION:MSun)
+.    if defined(SPARC_TARGET_ARCH) && ${SPARC_TARGET_ARCH} == "sparcv9"
+ALL_TARGET=	solaris-sparc-v9-cc
+.    else
+ALL_TARGET=	solaris-sparc-v8-cc
+.    endif
+.  else
+ALL_TARGET=	solaris-sparc-gcc
+.  endif
+.elif ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "i386"
+ALL_TARGET=	solaris-x86-any
+.else
 ALL_TARGET=	generic
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/../run/john ${PREFIX}/bin
