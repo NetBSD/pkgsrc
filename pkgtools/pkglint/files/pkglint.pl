@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.27 2000/02/12 17:13:53 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.28 2000/03/16 14:22:03 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -715,7 +715,7 @@ EOF
 	$j = $whole;
 	$j =~ s/([ \t][\@-]?)(echo|\$[\{\(]ECHO[\}\)]|\$[\{\(]ECHO_MSG[\}\)])[ \t]+("(\\'|\\"|[^"])*"|'(\\'|\\"|[^'])*')[ \t]*[;\n]/$1$2;/;
 	foreach $i (keys %cmdnames) {
-		if ($j =~ /[ \t\/]$i[ \t\n;]/) {
+		if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
 			&perror("WARN: possible direct use of command \"$i\" ".
 				"found. use $cmdnames{$i} instead.");
 		}
