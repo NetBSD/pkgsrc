@@ -1,13 +1,13 @@
 #! /bin/sh
 #
-# $NetBSD: authdaemond.sh,v 1.2 2002/01/27 00:04:41 jlam Exp $
+# $NetBSD: authdaemond.sh,v 1.3 2002/02/05 06:04:37 jlam Exp $
 #
 # Courier user authentication daemon
 #
 # PROVIDE: authdaemond
 # REQUIRE: DAEMON
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
         . /etc/rc.subr
 fi
@@ -51,7 +51,7 @@ courier_doit()
         @SETENV@ - ${daemon} ${action}
 }
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
         load_rc_config $name
         run_rc_command "$1"

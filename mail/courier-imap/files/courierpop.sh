@@ -1,13 +1,13 @@
 #! /bin/sh
 #
-# $NetBSD: courierpop.sh,v 1.4 2002/01/22 22:08:53 jlam Exp $
+# $NetBSD: courierpop.sh,v 1.5 2002/02/05 06:04:38 jlam Exp $
 #
 # Courier POP services daemon
 #
 # PROVIDE: courierpop
 # REQUIRE: authdaemond
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -33,7 +33,7 @@ courier_doit()
 	${ctl_command} ${action}
 }
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"

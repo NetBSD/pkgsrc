@@ -1,13 +1,13 @@
 #! /bin/sh
 #
-# $NetBSD: sasl_pwcheck.sh,v 1.6 2002/01/31 21:41:18 jlam Exp $
+# $NetBSD: sasl_pwcheck.sh,v 1.7 2002/02/05 06:04:40 jlam Exp $
 #
 # The pwcheck daemon allows UNIX password authentication with Cyrus SASL.
 #
 # PROVIDE: sasl_pwcheck
 # REQUIRE: DAEMON
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -17,7 +17,7 @@ rcvar="${name}"
 command="@PREFIX@/sbin/pwcheck"
 command_args="& sleep 2"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"
