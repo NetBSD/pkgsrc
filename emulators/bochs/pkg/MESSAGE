@@ -1,8 +1,13 @@
-You need to copy the share/bochs/bochsrc file to your home
-directory and name it .bochsrc.  Then edit it to your 
-tastes defining the hard drives, and floppies as needed.
+You need to copy the @BOCHS_MAINDIR@/bochsrc file to your home
+directory and name it .bochsrc.  Then edit it to your tastes
+defining the hard drives, and floppies as needed.  You also need
+to @BOCHS_FONTDIR@ to your X font path and to enable it
+before running bochs.  e.g.
+
+  $ xset fp+ @BOCHS_FONTDIR@
+  $ xset fp rehash
 
 Documentation is available on the website, and a copy of that
-website is in share/bochs/doc/.  The file install.html will
-assist you in creating a HD "file". (A raw disk partition can
+website is in @BOCHS_DOCDIR@.  The file install.html
+will assist you in creating a HD "file". (A raw disk partition can
 be used as well)
