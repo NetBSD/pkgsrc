@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/04 05:24:42 grant Exp $
+
+SHA1 (thunderbird-0.3-i686-pc-linux-gtk2-gnu.tar.bz2) = d5f8571705f5490038e699ee70f9189aa7ecaec5
+Size (thunderbird-0.3-i686-pc-linux-gtk2-gnu.tar.bz2) = 10164247 bytes
+SHA1 (thunderbird-0.3-i386-pc-solaris2.8.tar.gz) = 2104352719c02cbfbf8852c27e98b33bdd048c6e
+Size (thunderbird-0.3-i386-pc-solaris2.8.tar.gz) = 13264518 bytes

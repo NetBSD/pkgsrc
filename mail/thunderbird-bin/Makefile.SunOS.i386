@@ -1,0 +1,10 @@
+# $NetBSD: Makefile.SunOS.i386,v 1.1.1.1 2003/12/04 05:24:42 grant Exp $
+#
+
+DISTNAME=	thunderbird-0.3-i386-pc-solaris2.8
+MASTER_SITES=	http://ftp.mozilla.org/pub/thunderbird/releases/0.3/contrib/
+
+DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
+
+PLATFORM=	solaris
+MOZILLA_LIB=	${PREFIX}/lib/thunderbird-${PLATFORM}
