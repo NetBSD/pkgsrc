@@ -1,0 +1,21 @@
+#	$NetBSD: patch-af,v 1.1 2002/10/02 08:25:17 minoura Exp $
+--- doc/gauche-ref.texi.orig	Sun Sep 22 09:58:17 2002
++++ doc/gauche-ref.texi	Tue Oct  1 06:03:49 2002
+@@ -3,9 +3,17 @@
+ @c EN
+ @setfilename gauche-refe.info
+ @settitle Gauche Reference Manual
++@dircategory The Algorithmic Language Scheme
++@direntry
++* Gauche Reference: (gauche-refe.info).	An R5RS Scheme implementation.
++@end direntry
+ @c JP
+ @setfilename gauche-refj.info
+ @settitle Gauche リファレンスマニュアル
++@dircategory The Algorithmic Language Scheme
++@direntry
++* Gauche Reference (ja): (gauche-refj.info).	An R5RS Scheme implementation.
++@end direntry
+ @c COMMON
+ @comment %**end of header
+ 
