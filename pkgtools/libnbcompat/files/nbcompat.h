@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.22 2003/09/14 14:10:17 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.23 2003/09/14 14:24:12 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -248,6 +248,14 @@ struct {								\
 #ifndef _PATH_TMP
 #define _PATH_TMP	"/tmp/"
 #endif
+
+#ifndef _PATH_DEFTAPE
+# ifdef DEFTAPE
+#  define _PATH_DEFTAPE DEFTAPE
+# else
+#  define _PATH_DEFTAPE "/dev/tape"
+# endif /* DEFTAPE */
+#endif /* _PATH_DEFTAPE */
 
 typedef struct _stringlist {
 	char	**sl_str;
