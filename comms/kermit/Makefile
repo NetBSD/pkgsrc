@@ -3,7 +3,7 @@
 # Date created:		Oct 27, 1994
 # Whom:			pst
 #
-# $NetBSD: Makefile,v 1.4 1998/03/05 17:11:10 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/10 13:39:53 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -13,7 +13,7 @@ CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/ \
 		ftp://ftp.th-darmstadt.de/pub/networking/kermit/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 RESTRICTED=	"'No redistribution' copyright"
 MIRROR_DISTFILE= no
@@ -25,7 +25,6 @@ post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kermit
 	${INSTALL_DATA} ${FILESDIR}/dot.kermrc ${PREFIX}/share/examples/kermit
 	@${CAT} ${PKGDIR}/DESCR
-	[ "X$$MANZ" = X"" ] && ${SED} -e 's|.gz$$||' < pkg/PLIST > ${PLIST_SRC}
+	[ "X$$MANZ" = X"" ] && ${SED} -e 's|.gz$$||' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 .include <bsd.port.mk>
-
