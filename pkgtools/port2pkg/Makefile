@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2000/12/15 14:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/01/04 20:22:47 sommerfeld Exp $
 #
 
-DISTNAME=	port2pkg-1.6
+DISTNAME=	port2pkg-1.7
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
