@@ -1,12 +1,16 @@
-$NetBSD: patch-ad,v 1.1 1998/08/28 12:53:05 garbled Exp $
---- i_sound.c.orig	Fri Aug 28 04:29:07 1998
-+++ i_sound.c	Fri Aug 28 04:30:33 1998
-@@ -747,7 +747,7 @@
+$NetBSD: patch-ad,v 1.2 1998/09/06 16:37:45 hubertf Exp $
+--- i_sound.c.orig	Sun Sep  6 17:42:40 1998
++++ linuxdoom-1.10/i_sound.c	Sun Sep  6 17:43:59 1998
+@@ -747,7 +747,11 @@
  	    getenv("DOOMWADDIR"),
  	    sndserver_filename);
    else
 -    sprintf(buffer, "%s", sndserver_filename);
 +    sprintf(buffer, "XXXPREFIXXXX/bin/%s", sndserver_filename);
++
++  /* sndserver won't find its wadfile if DOMMWADDIR isn't set - HF */
++  if(!getenv("DOOMWADDIR"))
++    setenv("DOOMWADDIR","XXXPREFIXXXX/share/doom",1);
    
    // start sound process
    if ( !access(buffer, X_OK) )

@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 1998/08/28 12:53:05 garbled Exp $
+$NetBSD: patch-ac,v 1.2 1998/09/06 16:37:44 hubertf Exp $
 --- d_main.c.orig	Fri Aug 28 04:27:47 1998
-+++ d_main.c	Fri Aug 28 04:28:42 1998
++++ linuxdoom-1.10/d_main.c	Fri Aug 28 04:28:42 1998
 @@ -577,7 +577,7 @@
      char *doomwaddir;
      doomwaddir = getenv("DOOMWADDIR");

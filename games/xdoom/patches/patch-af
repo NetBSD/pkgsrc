@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 1998/09/06 16:37:45 hubertf Exp $
+--- sndserv/Makefile.orig	Sun Sep  6 18:03:07 1998
++++ sndserv/Makefile	Sun Sep  6 18:03:10 1998
+@@ -9,7 +9,7 @@
+ CC=gcc
+ CFLAGS=-O -DNORMALUNIX -DLINUX
+ LDFLAGS=
+-LIBS=-lm
++LIBS=-lm -lossaudio
+ 
+ O=linux
+ 
