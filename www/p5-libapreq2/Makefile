@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/12 18:18:29 kim Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/04 23:59:15 snj Exp $
 
 DISTNAME=	libapreq2-2.02_02-dev
 PKGNAME=	p5-libapreq2-2.2.2
@@ -14,7 +14,7 @@ DEPENDS+=	ap2-perl-[0-9]*:../../www/ap2-perl
 DEPENDS+=	p5-ExtUtils-XSBuilder-[0-9]*:../../www/p5-ExtUtils-XSBuilder
 
 WRKSRC=		${WRKDIR}/libapreq2-2.02-dev
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/libapreq2/.packlist
@@ -25,6 +25,6 @@ MAKE_PARAMS+=	--with-apache2-apxs="${APXS}"
 #	cd ${WRKSRC} && ./buildconf
 
 .include "../../lang/perl5/module.mk"
-#.include "../../www/ap2-perl/buildlink2.mk"
-.include "../../www/apache2/buildlink2.mk"
+#.include "../../www/ap2-perl/buildlink3.mk"
+.include "../../www/apache2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
