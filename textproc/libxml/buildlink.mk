@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/19 04:51:25 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:00 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxml.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define LIBXML_REQD to the version of libxml desired.
+# (1) Optionally define BUILDLINK_DEPENDS.libxml to the dependency patthern
+#     for the version of libxml desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(LIBXML_BUILDLINK_MK)
 LIBXML_BUILDLINK_MK=	# defined
 
-LIBXML_REQD?=		1.8.11
-DEPENDS+=		libxml>=${LIBXML_REQD}:../../textproc/libxml
+BUILDLINK_DEPENDS.libxml?=	libxml>=1.8.11
+DEPENDS+=	${BUILDLINK_DEPENDS.libxml}:../../textproc/libxml
 
 BUILDLINK_PREFIX.libxml=	${LOCALBASE}
 BUILDLINK_FILES.libxml=		include/gnome-xml/*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/21 21:40:08 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/23 19:26:51 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -7,10 +7,7 @@ PKGNAME=		postgresql-plperl-${PG_VERS}
 PG_PKG_VERS=		# empty
 COMMENT=		PL/Perl procedural language for the PostgreSQL backend
 
-POSTGRESQL_LIB_REQD=	${PG_BASE_VERS}
-
-.include "../../databases/postgresql-lib/buildlink.mk"
-
+BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
 DEPENDS+=		postgresql-server>=${PG_BASE_VERS}:../../databases/postgresql-server
 DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
 
@@ -40,4 +37,5 @@ do-install:
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 .endfor
 
+.include "../../databases/postgresql-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
