@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/11/21 01:11:18 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2000/11/21 01:31:14 itojun Exp $
 
 DISTNAME=	wwwoffle-2.6
 CATEGORIES=	www
@@ -29,13 +29,6 @@ MAKE_ENV+=	LIBRARY="-lnsl -lsocket"
 .endif
 
 post-build:
-#	cd ${WRKSRC}/html/htdig/scripts; \
-#	for f in wwwoffle-ht*; do \
-#		${MV} $$f $$f.old; \
-#		${SED} -e '/htsearch/s#^#${PREFIX}/libexec/cgi-bin/#' \
-#		  -e 's#/usr/local#${PREFIX}#' <$$f.old >$$f; \
-#		${RM} $$f.old; \
-#	done
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffle.sh \
 	  >${WRKDIR}/wwwoffle.sh
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE \
