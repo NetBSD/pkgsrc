@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2001/10/23 07:26:41 lukem Exp $
+# $NetBSD: Makefile,v 1.9 2001/11/30 11:58:28 martti Exp $
 
-DISTNAME=	db-3.2.9
-PKGNAME=	db3-2.9.2
+DISTNAME=	db-3.3.11
+PKGNAME=	db3-3.11.2
 CATEGORIES=	databases
-MASTER_SITES=	http://www.sleepycat.com/update/3.2.9/
+MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
 
 MAINTAINER=	wrstuden@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 3
 
 PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	patch.3.2.9.1 patch.3.2.9.2
+PATCHFILES=	patch.3.3.11.1 patch.3.3.11.2
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet
 
 USE_BUILDLINK_ONLY=	yes
