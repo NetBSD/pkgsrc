@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/03/10 00:53:37 snj Exp $
+$NetBSD: patch-aa,v 1.3 2004/12/05 20:43:21 wiz Exp $
 
---- Makefile.in.orig	2002-04-25 07:02:56.000000000 -0700
-+++ Makefile.in	2004-03-09 16:45:56.000000000 -0800
-@@ -68,14 +68,14 @@ err.o      : err.c oshw.h err.h
+--- Makefile.in.orig	2004-09-26 10:35:50.000000000 +0200
++++ Makefile.in
+@@ -69,14 +69,14 @@ err.o      : err.c oshw.h err.h
  #
  
  comptime.h:
@@ -19,33 +19,37 @@ $NetBSD: patch-aa,v 1.2 2004/03/10 00:53:37 snj Exp $
  
  #
  # Resources
-@@ -89,17 +89,18 @@ tworldres.o: tworld.ico
+@@ -90,18 +90,21 @@ tworldres.o: tworld.ico
  #
  
  install: tworld
--	cp -i ./tworld $(bindir)/.
+-	mkdir -p $(bindir)
 -	mkdir -p $(sharedir)/sets
 -	mkdir -p $(sharedir)/data
 -	mkdir -p $(sharedir)/res
 -	mkdir -p $(mandir)/man6
+-	cp -i ./tworld $(bindir)/.
 -	cp -i sets/*.dac $(sharedir)/sets/.
 -	cp -i data/*.dat $(sharedir)/data/.
--	cp -i resources/rc $(sharedir)/res/.
--	cp -i resources/*.bmp $(sharedir)/res/.
--	cp -i resources/*.wav $(sharedir)/res/.
+-	cp -i res/rc $(sharedir)/res/.
+-	cp -i res/*.bmp $(sharedir)/res/.
+-	cp -i res/*.wav $(sharedir)/res/.
 -	cp -i docs/tworld.6 $(mandir)/man6/.
-+	${BSD_INSTALL_PROGRAM} tworld $(bindir)/
++	${BSD_INSTALL_DATA_DIR} $(bindir)
 +	${BSD_INSTALL_DATA_DIR} $(sharedir)/sets
 +	${BSD_INSTALL_DATA_DIR} $(sharedir)/data
 +	${BSD_INSTALL_DATA_DIR} $(sharedir)/res
-+	${BSD_INSTALL_DATA} sets/*.dac $(sharedir)/sets/
-+	${BSD_INSTALL_DATA} data/*.dat $(sharedir)/data/
-+	${BSD_INSTALL_DATA} resources/rc resources/*.bmp \
-+			resources/*.wav $(sharedir)/res/
-+	${BSD_INSTALL_MAN} docs/tworld.6 $(mandir)/man6/
++	${BSD_INSTALL_DATA_DIR} $(mandir)/man6
++	${BSD_INSTALL_PROGRAM} ./tworld $(bindir)/.
++	${BSD_INSTALL_DATA} sets/*.dac $(sharedir)/sets/.
++	${BSD_INSTALL_DATA} data/*.dat $(sharedir)/data/.
++	${BSD_INSTALL_DATA} res/rc $(sharedir)/res/.
++	${BSD_INSTALL_DATA} res/*.bmp $(sharedir)/res/.
++	${BSD_INSTALL_DATA} res/*.wav $(sharedir)/res/.
++	${BSD_INSTALL_MAN} docs/tworld.6 $(mandir)/man6/.
 +	${BSD_INSTALL_DATA_DIR} $(prefix)/share/doc/tworld
-+	${BSD_INSTALL_DATA} README $(prefix)/share/doc/tworld/
-+	${BSD_INSTALL_DATA} docs/tworld.html $(prefix)/share/doc/tworld/
++	${BSD_INSTALL_DATA} README $(prefix)/share/doc/tworld
++	${BSD_INSTALL_DATA} docs/tworld.html $(prefix)/share/doc/tworld
  
  clean:
  	rm -f $(OBJS) tworld mklynxcc comptime.h config.*
