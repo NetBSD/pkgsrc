@@ -1,7 +1,25 @@
-$NetBSD: patch-aa,v 1.3 2004/04/22 20:16:58 dillo Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/27 17:16:28 tv Exp $
 
---- environ.c.orig	Sat Apr 17 15:19:40 2004
+--- environ.c.orig	Sat Apr 17 09:19:40 2004
 +++ environ.c
+@@ -61,7 +61,7 @@
+  #elif defined(__FreeBSD__)||defined(__NetBSD__)
+   #include <sys/param.h>
+   #include <sys/mount.h>
+- #elif defined(__QNXNTO__)
++ #elif defined(__QNXNTO__)||defined(__INTERIX)
+   #include <sys/statvfs.h>
+  #else
+   #include <sys/statfs.h>
+@@ -2286,7 +2286,7 @@ unsigned long file_getfree(char *name)
+   else
+    return((LONG_MAX/(spclu*bps)<fclu)?LONG_MAX:spclu*bps*fclu);
+  #elif TARGET==UNIX
+-  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)
++  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)||defined(__INTERIX)
+    struct statvfs vfs;
+ 
+    if(statvfs(name, &vfs)==-1)
 @@ -3005,7 +3005,7 @@ void get_exe_name(char *dest, char *arg)
      they are missing altogether, the corresponding code will gracefully
      terminate. */
@@ -20,3 +38,13 @@ $NetBSD: patch-aa,v 1.3 2004/04/22 20:16:58 dillo Exp $
   #else
    dest[0]='\0';
   #endif
+@@ -3802,7 +3802,9 @@ int reset_drive(char *name)
+  #elif TARGET==WIN32
+   return(0);
+  #elif TARGET==UNIX
++  #ifndef __INTERIX
+   sync();
++  #endif
+   return(0);
+  #endif
+ }
