@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/17 14:14:47 agc Exp $
 
 SHA1 (AfterStep-1.8.8.tar.bz2) = 571025239499cdde57307f3d35018311a3e68e63
+Size (AfterStep-1.8.8.tar.bz2) = 1122482 bytes
 SHA1 (patch-aa) = 79d732f26da21d069a53443e3799730733bc050b
 SHA1 (patch-ab) = 24c9f8569c88ea661cc6eb79390b5ecc825500b4
 SHA1 (patch-ac) = 46a57e819fa2893041e90fa37c5453173df29fa5
