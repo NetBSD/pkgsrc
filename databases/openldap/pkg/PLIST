@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/07 16:49:08 hwr Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/03/29 14:35:53 hubertf Exp $
 bin/ldapsearch
 bin/ldapmodify
 bin/ldapdelete
 bin/ldapmodrdn
 bin/ldapadd
+bin/ldappasswd
 bin/ud
 lib/liblber.la
 lib/liblber.a
@@ -14,6 +15,7 @@ man/man1/ldapmodify.1
 man/man1/ldapadd.1
 man/man1/ldapmodrdn.1
 man/man1/ldapsearch.1
+man/man1/ldappasswd.1
 man/man1/ud.1
 man/man3/ldap.3
 man/man3/cldap.3
