@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/22 20:36:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/13 20:14:26 ben Exp $
 #
 
 DISTNAME=		SpiralLoops-2.0.0
@@ -6,7 +6,7 @@ PKGNAME=		spiralloops-2.0.0
 CATEGORIES=		audio
 MASTER_SITES=		http://www.pawfal.org/SpiralLoops/dload/
 
-MAINTAINER=		collver1@comcast.net
+MAINTAINER=		ben@netbsd.org
 HOMEPAGE=		http://www.pawfal.org/SpiralLoops/
 COMMENT=		Loop based sampler
 

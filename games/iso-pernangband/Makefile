@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/26 21:41:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/13 20:14:26 ben Exp $
 #
 
 DISTNAME=		iso-pern_src-0_2_6
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}/iso-pern_src/src
 CATEGORIES=		games
 MASTER_SITES=		http://www.simugraph.com/simutrans/data/
 
-MAINTAINER=		collver1@comcast.net
+MAINTAINER=		ben@netbsd.org
 HOMEPAGE=		http://www.isoband.cjb.net/
 COMMENT=		Isometric (pseudo 3D) view for Angband
 
