@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2004/07/28 15:17:42 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2004/07/28 15:55:45 schmonz Exp $
 
 DISTNAME=	gnupg-1.2.5
 CATEGORIES=	security
@@ -14,6 +14,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	Privacy Guard, public-Key encryption and digital signatures
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 CRYPTO=			yes
@@ -51,6 +53,8 @@ LICENCE=	fee-based-commercial-use
 DISTFILES+=	idea.c.gz
 SITES_idea.c.gz=ftp://ftp.gnupg.dk/pub/contrib-dk/ \
 		http://www.gnupg.dk/contrib-dk/
+
+INSTALLATION_DIRS=	bin libexec/gnupg man/man1 man/man7 share/gnupg
 
 pre-configure:
 	${GZCAT} ${DISTDIR}/idea.c.gz > ${WRKSRC}/cipher/idea.c
