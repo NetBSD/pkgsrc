@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.117 2000/10/17 15:00:18 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.118 2000/10/17 15:12:00 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -785,9 +785,8 @@ to when dealing with the PLIST file (or files, see below!).
 
  * Semi-automatic PLIST generation:
    You can use the "make print-PLIST" command to output a PLIST that matches
-   any new files since the package was extracted. If the package installs
-   files via tar(1) or other methods that don't update file access times, be
-   sure to add these files manually to your pkg/PLIST!
+   any new files since the package was extracted. See below for more 
+   information on this target.
 
 
  5.2 MD/MI vs. general PLIST
@@ -1344,6 +1343,18 @@ perform the equivalent of:
    After a package is installed, check all it's binaries and (on ELF 
    platforms) shared libraries if they find the shared libs they need.
    Run by default if PKG_DEVELOPER is set in /etc/mk.conf.
+
+ * print-PLIST:
+   After a 'make install' from a new or upgraded pkg, this prints out an
+   attempt to generate a new PLIST from a 'find -newer work/.extract_done'.
+   An attempt is made to care for shared libs etc., but it is STRONGLY 
+   recommended to review the result before putting it into pkg/PLIST. On
+   upgrades, it's useful to diff the output of this command against an already
+   existing pkg/PLIST file.
+
+   If the package installs files via tar(1) or other methods that don't update
+   file access times, be sure to add these files manually to your pkg/PLIST,
+   as 'find -newer' won't catch them!
 
  * bulk-package:
    Used to do bulk builds. If an appropriate binary package already exists,
