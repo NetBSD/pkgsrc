@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/02/25 17:51:45 drochner Exp $
+
+--- libmergeant/mg-query.c.orig	2005-01-18 19:45:33.000000000 +0100
++++ libmergeant/mg-query.c
+@@ -44,7 +44,7 @@
+ #include "mg-server-aggregate.h"
+ #include "mg-data-handler.h"
+ 
+-#include <libgda/sql/sql_parser.h>
++#include <sql/sql_parser.h>
+ #include "mg-qf-func.h"
+ 
+ /* 
