@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/09/22 06:11:36 garbled Exp $
+# $NetBSD: Makefile,v 1.8 1998/11/12 23:03:40 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/17 07:01:28 obrien Exp
 #
 
@@ -8,9 +8,9 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.std.com/src/editors/
 EXTRACT_SUFX=	.tar.Z
 
-NOT_FOR_ARCHS=	alpha	#gcc lossage
-
 MAINTAINER=	explorer@netbsd.org
+
+NOT_FOR_ARCHS=	alpha	#gcc lossage
 
 ALL_TARGET=	joe
 WRKSRC=		${WRKDIR}/joe
