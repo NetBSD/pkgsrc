@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3767 2003/11/01 06:52:25 grant Exp $
+$NetBSD: CHANGES,v 1.3768 2003/11/01 13:19:51 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4286,3 +4286,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dropbear to 0.38 [xtraeme 2003-10-30]
 	Updated pen to 0.12.0 [xtraeme 2003-10-30]
 	Updated xmms-flac to 1.1.0nb3 [grant 2003-11-01]
+	Updated cdlabelgen to 2.7.0 [cube 2003-11-01]
