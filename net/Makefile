@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.401 2003/09/01 21:43:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.402 2003/09/04 08:42:51 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -40,10 +40,8 @@ SUBDIR+=	citrix_ica
 SUBDIR+=	cmu-dhcpd
 SUBDIR+=	coda5_client
 SUBDIR+=	coda5_server
-SUBDIR+=	coda_client
 SUBDIR+=	coda_doc
 SUBDIR+=	coda_intro
-SUBDIR+=	coda_server
 SUBDIR+=	dante
 SUBDIR+=	dc_gui2
 SUBDIR+=	dctc
