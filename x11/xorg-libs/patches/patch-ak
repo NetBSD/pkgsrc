@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.1 2004/09/16 19:36:10 minskim Exp $
+$NetBSD: patch-ak,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
 
---- extras/Xpm/lib/data.c.orig	2004-03-04 11:46:10.000000000 -0600
-+++ extras/Xpm/lib/data.c
-@@ -375,7 +375,7 @@ xpmGetCmt(data, cmt)
- {
-     if (!data->type)
- 	*cmt = NULL;
--    else if (data->CommentLength) {
-+    else if (data->CommentLength != 0 && data->CommentLength < SIZE_MAX - 1) {
- 	*cmt = (char *) XpmMalloc(data->CommentLength + 1);
- 	strncpy(*cmt, data->Comment, data->CommentLength);
- 	(*cmt)[data->CommentLength] = '\0';
+--- programs/Xserver/hw/xfree86/xf86cfg/Imakefile.orig	2004-09-14 10:59:24.000000000 +0200
++++ programs/Xserver/hw/xfree86/xf86cfg/Imakefile	2004-09-14 11:00:01.000000000 +0200
+@@ -128,7 +128,7 @@
+ #endif
+ 
+ LOCAL_LIBRARIES = $(XKBUILIB) $(XKBFILELIB) -lxf86config $(XXF86MISCLIB) \
+-		  $(XXF86VMLIB) $(XAWLIB) $(XMULIB) $(XTOOLLIB) \
++		  $(XXF86VMLIB) -lXaw $(XMULIB) $(XTOOLLIB) \
+ 		  $(XPMLIB) $(EXTRAXAWCLIENTLIBS) $(LOADERLIB) $(DLLIB) \
+ 		  $(XLIB) $(CURSESLIB) RegexLibrary -lm
+ 

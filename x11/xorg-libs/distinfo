@@ -1,25 +1,17 @@
-$NetBSD: distinfo,v 1.2 2004/09/16 19:36:10 minskim Exp $
+$NetBSD: distinfo,v 1.3 2004/09/21 17:38:53 xtraeme Exp $
 
-SHA1 (X11R6.7.0-src1.tar.gz) = 14f282cee9dc1ff6ebc34d834892599b53195f8b
-Size (X11R6.7.0-src1.tar.gz) = 30039655 bytes
-SHA1 (X11R6.7.0-src2.tar.gz) = c043966761e84ce0a63c351f12291228fbf07d03
-Size (X11R6.7.0-src2.tar.gz) = 5739983 bytes
-SHA1 (X11R6.7.0-src3.tar.gz) = 4234d68bd9484baaaf29f5c58f432edb732b6451
-Size (X11R6.7.0-src3.tar.gz) = 10855793 bytes
-SHA1 (patch-aa) = b890d02e360df4ea43df808f4a128d465b4f607c
-SHA1 (patch-ab) = 17ede6e7c6c232f9fe2804d7ab4addd85b5cd25c
+SHA1 (X11R6.8.1-src1.tar.gz) = 78d64a5ea4440699eefb6c7bf76f7b6ce3f2fb15
+Size (X11R6.8.1-src1.tar.gz) = 30573498 bytes
+SHA1 (X11R6.8.1-src2.tar.gz) = 1fb1d8a47f4b0873d358f8dded21a92ec1d91995
+Size (X11R6.8.1-src2.tar.gz) = 5810902 bytes
+SHA1 (X11R6.8.1-src3.tar.gz) = 8efe7a7b731eb5ea8aeaea63c4985d28b3514d16
+Size (X11R6.8.1-src3.tar.gz) = 10019766 bytes
+SHA1 (patch-aa) = 009b7a2679ae98ebd7071e4fa6169c3401273ca1
 SHA1 (patch-ac) = 90584e5732fb882f431afd69f6fd1c26c9d22bee
-SHA1 (patch-ad) = b34f46d715e90159df3897cf20023b58b9deff67
 SHA1 (patch-ae) = a06752ee9f55e64a407fac6fbde3547fd096c71d
-SHA1 (patch-af) = 30618658577dd37b31191197cd2c156ff72e0d90
 SHA1 (patch-ag) = 178d556fa11818420cd685308cf179ee5f6f7dac
 SHA1 (patch-ah) = 4545d9fd50c2a7b6f5a04da330784eaf9a5373ad
 SHA1 (patch-ai) = 841c2e76c3934b9da967aaed1876b78d3fc0465e
-SHA1 (patch-aj) = db9c5c632af1bc1398ba3761ee9ed2a2470a0a76
-SHA1 (patch-ak) = faefb423f2fd8d996a94a4828d9a637d47249d42
-SHA1 (patch-al) = 65a0e16cae97ad0970ef9e4eee2aaade3fea7b98
-SHA1 (patch-am) = b52649d74b8c6f0d946728c1d706c03860bbedf6
-SHA1 (patch-an) = b47bec52f41d846df82c6dfd9d7dadb12e630334
-SHA1 (patch-ao) = 9d6a0406f9a872063bdd2c6960585c61ddd4ee86
-SHA1 (patch-ap) = c5e1789afa5eeda9be795d78eca6a0c1692fff9a
-SHA1 (patch-aq) = 1eb268c329b33ad9822d752638a8bde62dca4d92
+SHA1 (patch-aj) = 78855dfdafe76695290636e170f69b6685ad23e1
+SHA1 (patch-ak) = d600481936a6b141dc1247e1af2270e224b03b22
+SHA1 (patch-al) = cb82cecd7147da8edd19d9f38a0789f07cddea87

@@ -1,31 +1,25 @@
-$NetBSD: patch-al,v 1.1 2004/09/16 19:36:10 minskim Exp $
+$NetBSD: patch-al,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
 
---- extras/Xpm/lib/hashtab.c.orig	2003-11-14 10:48:24.000000000 -0600
-+++ extras/Xpm/lib/hashtab.c
-@@ -135,7 +135,7 @@ HashTableGrows(table)
-     xpmHashTable *table;
- {
-     xpmHashAtom *atomTable = table->atomTable;
--    int size = table->size;
-+    unsigned int size = table->size;
-     xpmHashAtom *t, *p;
-     int i;
-     int oldSize = size;
-@@ -144,6 +144,8 @@ HashTableGrows(table)
-     HASH_TABLE_GROWS
- 	table->size = size;
-     table->limit = size / 3;
-+    if (size >= SIZE_MAX / sizeof(*atomTable)) 
-+	return (XpmNoMemory);
-     atomTable = (xpmHashAtom *) XpmMalloc(size * sizeof(*atomTable));
-     if (!atomTable)
- 	return (XpmNoMemory);
-@@ -204,6 +206,8 @@ xpmHashTableInit(table)
-     table->size = INITIAL_HASH_SIZE;
-     table->limit = table->size / 3;
-     table->used = 0;
-+    if (table->size >= SIZE_MAX / sizeof(*atomTable))
-+	return (XpmNoMemory);
-     atomTable = (xpmHashAtom *) XpmMalloc(table->size * sizeof(*atomTable));
-     if (!atomTable)
- 	return (XpmNoMemory);
+Workaround to make this build on Linux, I think the error is related
+to buildlink.
+
+--- programs/Xserver/hw/dmx/dmxinit.c.orig	2004-09-16 15:20:43.000000000 +0200
++++ programs/Xserver/hw/dmx/dmxinit.c	2004-09-16 15:21:21.000000000 +0200
+@@ -573,7 +573,7 @@
+ #endif
+ 
+     if (dmxGeneration != serverGeneration) {
+-	int vendrel = VENDOR_RELEASE;
++	int vendrel = NULL;
+         int major, minor, year, month, day;
+         
+         dmxGeneration = serverGeneration;
+@@ -595,7 +595,7 @@
+         dmxLog(dmxInfo, "DMX version:        %d.%d.%02d%02d%02d (%s)\n",
+                major, minor, year, month, day, VENDOR_STRING);
+ 
+-        SetVendorRelease(VENDOR_RELEASE);
++        SetVendorRelease(NULL);
+         SetVendorString(VENDOR_STRING);
+ 
+         if (dmxGeneration == 1) {

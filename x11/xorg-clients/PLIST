@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 04:52:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
 ${X11ROOT_PREFIX}/bin/Xmark
 ${X11ROOT_PREFIX}/bin/appres
 ${X11ROOT_PREFIX}/bin/atobm
@@ -56,6 +56,7 @@ ${X11ROOT_PREFIX}/bin/xcutsel
 ${X11ROOT_PREFIX}/bin/xditview
 ${X11ROOT_PREFIX}/bin/xdm
 ${X11ROOT_PREFIX}/bin/xdpyinfo
+${X11ROOT_PREFIX}/bin/xdriinfo
 ${X11ROOT_PREFIX}/bin/xedit
 ${X11ROOT_PREFIX}/bin/xev
 ${X11ROOT_PREFIX}/bin/xeyes
@@ -85,6 +86,7 @@ ${X11ROOT_PREFIX}/bin/xman
 ${X11ROOT_PREFIX}/bin/xmessage
 ${X11ROOT_PREFIX}/bin/xmh
 ${X11ROOT_PREFIX}/bin/xmodmap
+${X11ROOT_PREFIX}/bin/xmore
 ${X11ROOT_PREFIX}/bin/xon
 ${X11ROOT_PREFIX}/bin/xprop
 ${X11ROOT_PREFIX}/bin/xrandr
@@ -109,6 +111,11 @@ ${X11ROOT_PREFIX}/bin/xvinfo
 ${X11ROOT_PREFIX}/bin/xwd
 ${X11ROOT_PREFIX}/bin/xwininfo
 ${X11ROOT_PREFIX}/bin/xwud
+${X11ROOT_PREFIX}/bin/xphelloworld
+${X11ROOT_PREFIX}/bin/xplsprinters
+${X11ROOT_PREFIX}/bin/xprehashprinterlist
+${X11ROOT_PREFIX}/bin/xpsimplehelloworld
+${X11ROOT_PREFIX}/bin/xpxthelloworld
 ${X11ROOT_PREFIX}/include/X11/PM/PM.h
 ${X11ROOT_PREFIX}/include/X11/PM/PMproto.h
 ${X11ROOT_PREFIX}/include/X11/bitmaps/Dashes
@@ -504,6 +511,7 @@ ${X11ROOT_PREFIX}/lib/X11/xkb/rules/sgi.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/sun
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/sun.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86
+${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg-it.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg.lst
@@ -847,6 +855,13 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xvinfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwd.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwininfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwud.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xmore.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xdriinfo.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xphelloworld.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xplsprinters.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xprehashprinterlist.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xpsimplehelloworld.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xpxthelloworld.${MAN_SUFFIX}
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xsm
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/types
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/xfree68
