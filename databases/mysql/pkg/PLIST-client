@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-client,v 1.1 1998/07/20 14:49:51 tv Exp $
+@comment $NetBSD: PLIST-client,v 1.2 1998/08/20 15:04:23 agc Exp $
 bin/add_file_priv
 bin/add_func_table
 bin/add_long_password
@@ -29,7 +29,7 @@ include/mysql/tilde.h
 @unexec %D/bin/install-info --delete %D/info/mysql.info %D/info/dir
 info/mysql.info
 @exec %D/bin/install-info %D/info/mysql.info %D/info/dir
-lib/libmysqlclient.a
-lib/libmysqlclient.so.321.32
+lib/mysql/libmysqlclient.a
+lib/mysql/libmysqlclient.so.321.33
 man/man1/mysql.1
 @dirrm include/mysql
