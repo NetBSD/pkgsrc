@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/28 02:17:18 itojun Exp $
+
+--- Makefile-	Wed Mar 20 08:13:49 2002
++++ Makefile	Wed Mar 20 08:13:58 2002
+@@ -41,15 +41,14 @@
+ # Run-time enviroment settings
+ 
+ # The directory where the nsd nsdc and zonec binaries will be installed
+-PREFIX		= /usr/local
+ NSDBINDIR       = ${PREFIX}/sbin
+ NSDMANDIR	= ${PREFIX}/man/man8
+ 
+ # The directory where the master zone files are located
+-NSDZONESDIR     = ${PREFIX}/etc/nsd
++NSDZONESDIR     = /etc/nsd
+ 
+ # The file containing the list of the zones to be compiled into the NSD database
+-NSDZONES	= ${PREFIX}/etc/nsd/nsd.zones
++NSDZONES	= /etc/nsd/nsd.zones
+ 
+ # The flags to pass to the NSD on startup
+ NSDFLAGS        = 
