@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:03 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/24 09:52:40 jlam Exp $
 
 .if !defined(GUILE_BUILDLINK2_MK)
 GUILE_BUILDLINK2_MK=	# defined
@@ -18,6 +18,7 @@ BUILDLINK_FILES.guile+=	lib/libguilereadline.*
 
 USE_GNU_READLINE=	# defined
 
+.include "../../devel/libtool/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	guile-buildlink
