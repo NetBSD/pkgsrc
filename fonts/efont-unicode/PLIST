@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/05 19:01:33 tron Exp $
+${FONTDIR}/b10.pcf.gz
+${FONTDIR}/b10_b.pcf.gz
+${FONTDIR}/b10_bi.pcf.gz
+${FONTDIR}/b10_i.pcf.gz
+${FONTDIR}/b12.pcf.gz
+${FONTDIR}/b12_b.pcf.gz
+${FONTDIR}/b12_bi.pcf.gz
+${FONTDIR}/b12_i.pcf.gz
+${FONTDIR}/b14.pcf.gz
+${FONTDIR}/b14_b.pcf.gz
+${FONTDIR}/b14_bi.pcf.gz
+${FONTDIR}/b14_i.pcf.gz
+${FONTDIR}/b16.pcf.gz
+${FONTDIR}/b16_b.pcf.gz
+${FONTDIR}/b16_bi.pcf.gz
+${FONTDIR}/b16_i.pcf.gz
+${FONTDIR}/b24.pcf.gz
+${FONTDIR}/b24_b.pcf.gz
+${FONTDIR}/b24_bi.pcf.gz
+${FONTDIR}/b24_i.pcf.gz
+${FONTDIR}/h10.pcf.gz
+${FONTDIR}/h10_b.pcf.gz
+${FONTDIR}/h10_bi.pcf.gz
+${FONTDIR}/h10_i.pcf.gz
+${FONTDIR}/h12.pcf.gz
+${FONTDIR}/h12_b.pcf.gz
+${FONTDIR}/h12_bi.pcf.gz
+${FONTDIR}/h12_i.pcf.gz
+${FONTDIR}/h14.pcf.gz
+${FONTDIR}/h14_b.pcf.gz
+${FONTDIR}/h14_bi.pcf.gz
+${FONTDIR}/h14_i.pcf.gz
+${FONTDIR}/h16.pcf.gz
+${FONTDIR}/h16_b.pcf.gz
+${FONTDIR}/h16_bi.pcf.gz
+${FONTDIR}/h16_i.pcf.gz
+${FONTDIR}/h24.pcf.gz
+${FONTDIR}/h24_b.pcf.gz
+${FONTDIR}/h24_bi.pcf.gz
+${FONTDIR}/h24_i.pcf.gz
+@exec cd %D/${FONTDIR} && ${X11BASE}/bin/mkfontdir
+@unexec rm -f %D/${FONTDIR}/fonts.dir
+@dirrm ${FONTDIR}
