@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/01/26 15:55:41 minskim Exp $
+$NetBSD: distinfo,v 1.8 2005/02/13 15:29:15 minskim Exp $
 
-SHA1 (awstats-6.3nb2/awstats-6.3.tgz) = b7638df56c8ed212a3d0aee08dd176a6d72ef20a
-Size (awstats-6.3nb2/awstats-6.3.tgz) = 936817 bytes
+SHA1 (awstats-6.3nb3/awstats-6.3.tgz) = 3ca8d0b3e008beaa544b4bc344fec7cab2554da4
+Size (awstats-6.3nb3/awstats-6.3.tgz) = 938794 bytes
