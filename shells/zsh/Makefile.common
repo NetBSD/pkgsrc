@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/08/16 16:17:39 recht Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/08/20 10:36:12 tron Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -29,7 +29,10 @@ BUILD_DEFS+=	ZSH_STATIC
 
 .if defined(ZSH_STATIC) && !empty(ZSH_STATIC:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=--disable-dynamic
+
+.  if !(${OPSYS} == "NetBSD" && exists(/libexec/ld.elf_so))
 LDFLAGS+=	-static
+.  endif
 .else
 .  if ${OPSYS} == "SunOS"
 PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
