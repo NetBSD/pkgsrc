@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/13 17:37:11 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/23 15:14:43 wiz Exp $
 #
 
 DISTNAME=		imlib2-1.0.3
@@ -14,6 +14,7 @@ GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_LIBINTL=		YES
 USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
@@ -25,11 +26,11 @@ IMLIB2_USE_MMX?=	NO
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/freetype-lib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/libungif/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../databases/edb/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../databases/edb/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
