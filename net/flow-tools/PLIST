@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/23 07:19:41 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/22 15:33:35 seb Exp $
 bin/flow-capture
 bin/flow-cat
 bin/flow-dscan
@@ -54,6 +54,7 @@ share/examples/flow-tools/cfg/map.cfg
 share/examples/flow-tools/cfg/mask.cfg
 share/examples/flow-tools/cfg/stat.cfg
 share/examples/flow-tools/cfg/tag.cfg
+share/examples/flow-tools/cfg/xlate.cfg
 share/examples/flow-tools/sym/asn.sym
 share/examples/flow-tools/sym/ip-prot.sym
 share/examples/flow-tools/sym/ip-type.sym
