@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/07 09:19:03 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/22 21:34:45 tron Exp $
 
 DISTNAME=		mutt-1.3.23i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -19,14 +19,23 @@ BUILD_USES_MSGFMT=	YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/mutt \
-			--enable-pop --enable-imap \
-			--without-included-gettext
-CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
+			--without-included-gettext \
+			--enable-pop --enable-imap
 
 LDFLAGS+=		${STRIPFLAG}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(MUTT_USE_SLANG) && ${MUTT_USE_SLANG} != NO
+CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_DIR}
+
+.include "../../devel/libslang/buildlink.mk"
+.else
+CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
+
+.include "../../devel/ncurses/buildlink.mk"
+.endif
 
 # There seems to be a problem using NetBSD's /bin/sh, so use /bin/ksh instead.
 .if ${OPSYS} == "NetBSD"
@@ -36,14 +45,13 @@ CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 MUTT_USE_SSL?=		YES
 
 .if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == "YES"
-#USE_SSL=		YES
 .include "../../security/openssl/buildlink.mk"
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif
 
-BUILD_DEFS+=		MUTT_USE_SSL
+BUILD_DEFS+=		MUTT_USE_SLANG MUTT_USE_SSL
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
@@ -66,5 +74,4 @@ post-install:
 
 .include "../../converters/libiconv/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
