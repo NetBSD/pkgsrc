@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/03/05 13:49:36 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2005/03/13 14:10:49 jmmv Exp $
 #
 
 DISTNAME=		pango-1.8.1
@@ -37,7 +37,8 @@ CONFIGURE_ARGS+=	--with-qt=no
 CONFIGURE_ENV+=		F77=${FALSE}
 
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
-BUILDLINK_DEPENDS.glib2+=       glib2>=2.6.0
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
+BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.3.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
