@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.23 2002/02/28 06:14:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24 2002/03/01 22:51:42 jlam Exp $
 
-DISTNAME=		php-${PHP_DIST_VERS}
+DISTNAME?=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
 MASTER_SITES=		http://www.php.net/distributions/ \
 			http://php3.de/distributions/ \
 			ftp://ftp.php.net/pub/distributions/
 
-MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.php.net/
+MAINTAINER?=		jlam@netbsd.org
+HOMEPAGE?=		http://www.php.net/
 
 # Version numbering scheme:
 #
