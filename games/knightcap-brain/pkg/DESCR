@@ -1,0 +1,3 @@
+KnightCap does not have an opening book -- instead it keeps a file
+(brain.dat) of losing moves and inserts them in the hash table at the
+start of each search.
