@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/30 05:06:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/30 05:25:30 xtraeme Exp $
 #
 
 DISTNAME=	swapd-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.rkeene.org/files/oss/swapd/source/
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.rkeene.org/oss/swapd/
-COMMENT=	Watches free memory and manages swap files
+COMMENT=	Swap daemon for POSIX-compliant operating systems
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* Linux-*-*
 
