@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/11/26 10:31:08 adam Exp $
+# $NetBSD: Makefile,v 1.39 2004/11/29 14:56:21 adam Exp $
 
 DISTNAME=	tk8.4.8-src
 PKGNAME=	tk-8.4.8
@@ -28,21 +28,6 @@ TEST_TARGET=		test
 CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 
 .include "../../lang/tcl/buildlink3.mk"
-
-# Modify mkLinks script to remove the short-filename manpage if it was
-# linked to a longer filename.
-post-patch:
-	@cd ${WRKSRC};							\
-	${MV} -f mkLinks mkLinks.tmp;					\
-	${GREP} -v "^exit 0" mkLinks.tmp > mkLinks;			\
-	${CAT} mkLinks.tmp						\
-		| ${AWK} '/^  *ln / { print $$3 }'			\
-		| ${SORT} -u						\
-		| ${GREP} -v ".*\.n"					\
-		| ${SED} -e "s,^,${RM} -f ,"				\
-		>> mkLinks;						\
-	${RM} -f mkLinks.tmp;						\
-	${CHMOD} +x mkLinks;
 
 post-install:
 	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
