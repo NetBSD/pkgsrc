@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:32 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/10/29 18:39:45 cube Exp $
 
 .if !defined(LIBNET_BUILDLINK2_MK)
 LIBNET_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libnet
-BUILDLINK_DEPENDS.libnet?=	libnet-[0-9]*
+BUILDLINK_DEPENDS.libnet?=	libnet>=1.0.1bnb3
 BUILDLINK_PKGSRCDIR.libnet?=	../../devel/libnet
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libnet=libnet
