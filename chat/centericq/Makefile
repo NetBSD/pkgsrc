@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/01/24 13:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/02/15 05:56:58 salo Exp $
 #
 
-DISTNAME=	centericq-4.6.5
+DISTNAME=	centericq-4.9.2
 CATEGORIES=	chat
 MASTER_SITES=	http://konst.org.ua/download/
 
@@ -13,9 +13,11 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		# ESCDELAY
 USE_CXX=		yes
+USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-LIBS=		${LDFLAGS}
+LIBS=			${LDFLAGS}
 
+.include "../../devel/glib/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/libsigc++/buildlink2.mk"
