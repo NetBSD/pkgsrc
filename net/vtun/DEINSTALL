@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:59:45 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/11/25 19:22:18 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -11,7 +11,7 @@ RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
 
-CONFDIR="@VTUN_SYSCONFDIR@"
+CONFDIR="@PKG_SYSCONFDIR@"
 SAMPLECONFDIR=${PKG_PREFIX}/share/examples/vtun
 CONFFILES="vtund.conf"
 LOCKDIR=/var/lock/vtund
