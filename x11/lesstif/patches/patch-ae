@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.16 2001/06/30 19:08:23 jlam Exp $
+$NetBSD: patch-ae,v 1.17 2001/09/19 16:50:40 drochner Exp $
 
---- clients/Motif-1.2/xmbind/Makefile.am.orig	Tue May  1 08:37:20 2001
-+++ clients/Motif-1.2/xmbind/Makefile.am
+--- clients/Motif-1.2/xmbind/Makefile.am.orig	Tue Jul 10 11:16:03 2001
++++ clients/Motif-1.2/xmbind/Makefile.am	Wed Sep 19 17:46:42 2001
 @@ -4,8 +4,8 @@
  
  if Version_1_2
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.16 2001/06/30 19:08:23 jlam Exp $
  MAINTAINERCLEANFILES=Makefile.in
  
 @@ -17,9 +17,3 @@
- 		$(X_LIBS) -lXt $(X_PRE_LIBS) -lX11 $(X_EXTRA_LIBS)
+ 		$(XPLIB) $(X_LIBS) -lXt $(X_PRE_LIBS) -lX11 $(X_EXTRA_LIBS)
  
  xmbind_SOURCES=	xmbind.c
 -
