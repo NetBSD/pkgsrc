@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2003/07/31 07:52:54 lukem Exp $
+$NetBSD: distinfo,v 1.2 2003/08/25 12:24:04 lukem Exp $
 
-SHA1 (tnftp-20030731.tar.gz) = 9fcb1b4be7a4fb020778458705b26f9410562f39
-Size (tnftp-20030731.tar.gz) = 277746 bytes
+SHA1 (tnftp-20030825.tar.gz) = 32bc3ad3126756cac7dc50cf311d824a571e29e0
+Size (tnftp-20030825.tar.gz) = 277885 bytes

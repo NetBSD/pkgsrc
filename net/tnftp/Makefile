@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2003/07/31 07:52:53 lukem Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/25 12:24:04 lukem Exp $
 #
 
-DISTNAME=		tnftp-20030731
-PKGNAME=		tnftp-20030731
+DISTNAME=		tnftp-20030825
+PKGNAME=		tnftp-20030825
 SVR4_PKGNAME=		tnftp
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
