@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2004/05/29 00:21:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.350 2004/06/01 21:54:22 kristerw Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -141,7 +141,6 @@ SUBDIR+=	kmessage
 SUBDIR+=	kterm
 SUBDIR+=	lablgtk
 SUBDIR+=	lesstif
-SUBDIR+=	lesstif12
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
