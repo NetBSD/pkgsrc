@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2001/06/15 16:53:27 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2001/06/18 05:02:09 jlam Exp $
 
 --- Makefile.in.orig	Tue May 22 16:27:56 2001
 +++ Makefile.in	Fri Jun 15 01:07:50 2001
@@ -286,7 +286,7 @@ $NetBSD: patch-ab,v 1.5 2001/06/15 16:53:27 drochner Exp $
 -	$(INSTALL) -d $(datadir)/wx/gs_afm
 +	$(INSTALL_DATA_DIR) $(datadir)/wx
 +	$(INSTALL_DATA_DIR) $(datadir)/wx/afm
-+	$(INSTAL_DATA_DIRL) $(datadir)/wx/gs_afm
++	$(INSTALL_DATA_DIR) $(datadir)/wx/gs_afm
  	$(INSTALL_DATA) $(top_srcdir)/misc/afm/*.afm $(datadir)/wx/afm
  	$(INSTALL_DATA) $(top_srcdir)/misc/gs_afm/*.afm $(datadir)/wx/gs_afm
  
