@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2001/11/06 04:08:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/11/07 06:12:19 jlam Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--with-pth=${BUILDLINK_DIR}
 MAKE_FLAGS+=		LIBLTDL="-lltdl"
 MAKE_FLAGS+=		INCLTDL="-I${BUILDLINK_DIR}/include"
 MAKE_FLAGS+=		LEXLIB=""
+MAKE_ENV+=		AM_MAKEFLAGS="${MAKE_FLAGS}"
 
 UNIXODBC_DRIVERS_DIR=	lib/unixodbc
 
