@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/11/20 10:37:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/22 19:04:07 jlam Exp $
 #
 
 DISTNAME=	dlcompat-20021117
@@ -9,10 +9,9 @@ MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://fink.sourceforge.net/
 COMMENT=	Library for dlopen() emulation on Darwin
 
-# dlcompat is needed to bootstrap buildlink2 on Darwin (via bash).
-USE_BUILDLINK2=		no
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
+USE_BUILDLINK2=	# defined
 GNU_CONFIGURE=	# defined
 
 .include "../../mk/bsd.pkg.mk"
