@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7600 2004/10/29 09:05:18 salo Exp $
+$NetBSD: CHANGES,v 1.7601 2004/10/29 13:04:19 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4964,3 +4964,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gphoto2 to 2.1.4nb2 [tron 2004-10-29]
 	Updated mkvtoolnix to 0.9.7 [salo 2004-10-29]
 	Updated mmg to 0.9.7 [salo 2004-10-29]
+	Updated setiathome to 3.08 [abs 2004-10-29]
+
