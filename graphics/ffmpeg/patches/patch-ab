@@ -1,9 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/03/19 12:39:27 tron Exp $
+$NetBSD: patch-ab,v 1.2 2002/03/22 11:59:19 tron Exp $
 
 --- ffserver.c.orig	Wed Aug 15 00:38:17 2001
-+++ ffserver.c	Tue Mar 19 13:27:31 2002
-@@ -1526,7 +1526,7 @@
-     config_filename = "/etc/ffserver.conf";
++++ ffserver.c	Fri Mar 22 12:39:59 2002
+@@ -1491,7 +1491,7 @@
+            "\n"
+            "-L            : print the LICENCE\n"
+            "-h            : this help\n"
+-           "-f configfile : use configfile instead of /etc/ffserver.conf\n"
++           "-f configfile : use configfile instead of " FFSERVER_CONF "\n"
+            );
+ }
+ 
+@@ -1523,10 +1523,10 @@
+ 
+     register_all();
+ 
+-    config_filename = "/etc/ffserver.conf";
++    config_filename = FFSERVER_CONF;
  
      for(;;) {
 -        c = getopt_long_only(argc, argv, "Lh?f:", NULL, NULL);
