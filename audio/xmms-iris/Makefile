@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/12 00:48:39 snj Exp $
 #
 
 DISTNAME=	iris-0.11
@@ -11,12 +11,16 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://cdelfosse.free.fr/xmms-iris/
 COMMENT=	OpenGL Spectrum Analyzer with theme engine and fullscreen modes
 
-USE_BUILDLINK2=	YES
-USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+USE_BUILDLINK3=	YES
+USE_LIBTOOL=	YES
+
+.include "../../mk/bsd.prefs.mk"
 
 # Needs libXxf86vm.so which isn't provided on NetBSD currently.
-NOT_FOR_PLATFORM=NetBSD-*
+.if !exists(${X11BASE}/lib/libXxf86vm.so)
+PKG_FAIL_REASON=	"${PKGNAME} requires libXxf86vm.so"
+.endif
 
-.include "../../audio/xmms/buildlink2.mk"
+.include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
