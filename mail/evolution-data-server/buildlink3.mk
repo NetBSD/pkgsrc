@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:12:52 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/10/19 20:13:44 jmmv Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 EVOLUTION_DATA_SERVER_BUILDLINK3_MK:=	${EVOLUTION_DATA_SERVER_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	evolution-data-server
 
 .if !empty(EVOLUTION_DATA_SERVER_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.0.0
-BUILDLINK_RECOMMENDED.evolution-data-server+=	evolution-data-server>=1.0.0nb1
+BUILDLINK_RECOMMENDED.evolution-data-server+=	evolution-data-server>=1.0.2nb1
 BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../mail/evolution-data-server
 .endif	# EVOLUTION_DATA_SERVER_BUILDLINK3_MK
 
