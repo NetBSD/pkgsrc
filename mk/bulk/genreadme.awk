@@ -1,5 +1,5 @@
  #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.2 2002/11/13 01:05:03 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.3 2002/11/13 15:08:29 dmcmahill Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -251,6 +251,7 @@ END {
     pkgcnt=0;
     if(do_pkg_readme) {
 	templatefile=PKGSRCDIR "/templates/README.pkg";
+	fatal_check_file(templatefile);
 	for (toppkg in topdepends){
 	    pkgcnt++;
 	    pkgdir=PKGSRCDIR "/" toppkg;
@@ -377,7 +378,7 @@ END {
 	    }
 	    close(readme);
 	    close(templatefile);
-	    cmd="if [ -d " pkgdir " ]; then if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ; else echo "pkgdir" does not exist ; exit 1 ; fi";
+	    cmd="if [ ! -d " pkgdir " ]; then echo "pkgdir" does not exist ; exit 1 ; fi ; if [ ! -f "readmenew" ] || ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi";
 	    if(debug) printf("Execute:  %s\n",cmd);
 	    rc=system(cmd);
 	    if(rc != 0) {
@@ -390,7 +391,7 @@ END {
     printf("\n");
     printf("Generating category readmes\n");
     templatefile=PKGSRCDIR "/templates/README.category";
-    print "" > readme;
+    fatal_check_file(templatefile);
 
 # string with URL's for all categories (used by the top README.html)
     allcat="";
@@ -407,6 +408,7 @@ END {
 	    cat_make=catdir"/Makefile";
 	    pkgs="";
 	    numpkg=0;
+	    print "" > readme;
 	    while((getline < cat_make) > 0){
 		if($0 ~ /^[ \t]*SUBDIR.*=[^\$]*$/) {
 		    pkg=$0;
@@ -437,7 +439,7 @@ END {
 	    }
 	    close(readme);
 	    close(templatefile);
-	    cmd="if [ ! -f "readmenew" ]; then cp "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
+	    cmd="if [ ! -f "readmenew" ]; then mv -f "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
 	    if(debug) printf("Execute:  %s\n",cmd);
 	    rc=system(cmd);
 	    if(rc != 0) {
@@ -455,6 +457,7 @@ END {
 
     printf("Generating toplevel readmes:\n");
     templatefile=PKGSRCDIR "/templates/README.top";
+    fatal_check_file(templatefile);
     readmenew=PKGSRCDIR "/"readme_name;
     printf("\t%s\n",readmenew);
     print "" > readme;
@@ -466,7 +469,7 @@ END {
     }
     close(readme);
     close(templatefile);
-    cmd="if [ ! -f "readmenew" ]; then cp "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
+    cmd="if [ ! -f "readmenew" ]; then mv -f "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
     if(debug) printf("Execute:  %s\n",cmd);
     rc=system(cmd);
     if(rc != 0) {
@@ -475,6 +478,7 @@ END {
     }
 
     templatefile=PKGSRCDIR "/templates/README.all";
+    fatal_check_file(templatefile);
     readmenew=PKGSRCDIR "/README-all.html";
     printf("\t%s\n",readmenew);
 # sort the pkgs
@@ -505,7 +509,7 @@ END {
     }
     close(readme);
     close(templatefile);
-    cmd="if [ ! -f "readmenew" ]; then cp "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
+    cmd="if [ ! -f "readmenew" ]; then mv -f "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
     if(debug) printf("Execute:  %s\n",cmd);
     rc=system(cmd);
     if(rc != 0) {
@@ -615,3 +619,15 @@ function uniq(list,deps,i,ulist){
     }
     return(ulist);
 }
+
+function fatal_check_file(file,cmd){
+	cmd="test -f "file ;
+	if(debug) printf("Execute:  %s\n",cmd);
+	if(system(cmd) != 0) {
+		printf("**** FATAL ****\nRequired file %s does not exist\n",file) > "/dev/stderr";
+		printf("**** ------- ****\n") > "/dev/stderr";
+		close("/dev/stderr");
+		exit(1);
+	    }
+}
+
