@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8528 2004/12/30 11:57:58 rh Exp $
+$NetBSD: CHANGES,v 1.8529 2004/12/30 13:06:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6707,3 +6707,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lilypond to 2.4.3 [dmcmahill 2004-12-30]
 	Updated dvd+rw-tools to 5.21.4.10.8 [jmmv 2004-12-30]
 	Added edcommon-32 [rh 2004-12-30]
+	Added pdbar-0.5.1 [minskim 2004-12-30]
