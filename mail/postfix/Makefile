@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2003/11/26 06:03:41 jlam Exp $
+# $NetBSD: Makefile,v 1.111 2003/12/18 03:37:17 grant Exp $
 
 DISTNAME=	postfix-2.0.16
 CATEGORIES=	mail
@@ -109,7 +109,6 @@ POSTFIX_CONF_FILES+=	conf/sample-misc.cf src/global/mail_params.h
 
 FILES_SUBST+=	SHAREDIR=${SHAREDIR}
 MESSAGE_SUBST+=	SHAREDIR=${SHAREDIR}
-PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 PLIST_SUBST+=	POSTFIX_SPOOL=${POSTFIX_SPOOL}
 
 PKG_GROUPS?=	postfix maildrop
