@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/10/13 09:08:15 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/01/29 11:13:30 jlam Exp $
 
 .if !defined(SUN_JRE14_BUILDLINK2_MK)
 SUN_JRE14_BUILDLINK2_MK=	# defined
@@ -16,7 +16,7 @@ BUILDLINK_FILES_CMD.sun-jre14= \
 
 EVAL_PREFIX+=	BUILDLINK_JAVA_PREFIX.sun-jre14=sun-jre14
 BUILDLINK_JAVA_PREFIX.sun-jre14_DEFAULT= \
-	${BUILDLINK_PREFIX.sun-jre14}/java/sun-1.4.0
+	${BUILDLINK_PREFIX.sun-jre14}/java/sun-1.4.1
 
 UNLIMIT_RESOURCES+=	datasize	# must be at least 131204
 BUILDLINK_TARGETS+=	sun-jre14-buildlink

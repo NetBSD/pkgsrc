@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/13 07:45:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/29 11:13:30 jlam Exp $
+.systemPrefs/.system.lock
+.systemPrefs/.systemRootModFile
 CHANGES
 COPYRIGHT
 ControlPanel.html
@@ -9,13 +11,16 @@ bin/ControlPanel
 bin/java
 bin/java_vm
 bin/keytool
+bin/kinit
+bin/klist
+bin/ktab
 bin/orbd
 bin/policytool
 bin/rmid
 bin/rmiregistry
 bin/servertool
 bin/tnameserv
-javaws-1_0_1_02-linux-int.zip
+javaws-1_2_0_01-linux-i586-i.zip
 lib/audio/soundbank.gm
 lib/charsets.jar
 lib/cmm/CIEXYZ.pf
@@ -23,19 +28,20 @@ lib/cmm/GRAY.pf
 lib/cmm/LINEAR_RGB.pf
 lib/cmm/PYCC.pf
 lib/cmm/sRGB.pf
-lib/content-types.properties
+lib/content-types.properties.default
 lib/ext/dnsns.jar
 lib/ext/ldapsec.jar
 lib/ext/localedata.jar
 lib/ext/sunjce_provider.jar
-lib/flavormap.properties
-lib/font.properties
-lib/font.properties.Redhat6.1
-lib/font.properties.ja
-lib/font.properties.ja.Redhat6.1
-lib/font.properties.ja.Redhat6.2
-lib/font.properties.ja.Turbo
-lib/font.properties.zh.Turbo
+lib/flavormap.properties.default
+lib/font.properties.default
+lib/font.properties.Redhat6.1.default
+lib/font.properties.ja.default
+lib/font.properties.ja.Redhat6.1.default
+lib/font.properties.ja.Redhat6.2.default
+lib/font.properties.ja.Turbo.default
+lib/font.properties.ja.Turbo6.0.default
+lib/font.properties.zh.Turbo.default
 lib/fonts/LucidaBrightDemiBold.ttf
 lib/fonts/LucidaBrightDemiItalic.ttf
 lib/fonts/LucidaBrightItalic.ttf
@@ -53,7 +59,7 @@ lib/i386/awt_robot
 lib/i386/client/Xusage.txt
 lib/i386/client/libjsig.so
 lib/i386/client/libjvm.so
-lib/i386/jvm.cfg
+lib/i386/jvm.cfg.default
 lib/i386/libJdbcOdbc.so
 lib/i386/libawt.so
 lib/i386/libcmm.so
@@ -81,7 +87,8 @@ lib/i386/native_threads/libhpi.so
 lib/i386/server/Xusage.txt
 lib/i386/server/libjsig.so
 lib/i386/server/libjvm.so
-lib/images/cursors/cursors.properties
+lib/im/indicim.jar
+lib/images/cursors/cursors.properties.default
 lib/images/cursors/invalid32x32.gif
 lib/images/cursors/motif_CopyDrop32x32.gif
 lib/images/cursors/motif_CopyNoDrop32x32.gif
@@ -106,14 +113,14 @@ lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
-lib/logging.properties
-lib/psfont.properties.ja
-lib/psfontj2d.properties
+lib/logging.properties.default
+lib/psfont.properties.ja.default
+lib/psfontj2d.properties.default
 lib/rt.jar
 lib/security/US_export_policy.jar
 lib/security/cacerts
 lib/security/java.policy
-lib/security/java.security
+lib/security/java.security.default
 lib/security/local_policy.jar
 lib/sunrsasign.jar
 lib/zi/Africa/Abidjan
@@ -263,7 +270,6 @@ lib/zi/America/Rankin_Inlet
 lib/zi/America/Recife
 lib/zi/America/Regina
 lib/zi/America/Rio_Branco
-lib/zi/America/Rosario
 lib/zi/America/Santiago
 lib/zi/America/Santo_Domingo
 lib/zi/America/Sao_Paulo
@@ -332,17 +338,20 @@ lib/zi/Asia/Krasnoyarsk
 lib/zi/Asia/Kuala_Lumpur
 lib/zi/Asia/Kuching
 lib/zi/Asia/Kuwait
-lib/zi/Asia/Macao
+lib/zi/Asia/Macau
 lib/zi/Asia/Magadan
+lib/zi/Asia/Makassar
 lib/zi/Asia/Manila
 lib/zi/Asia/Muscat
 lib/zi/Asia/Nicosia
 lib/zi/Asia/Novosibirsk
 lib/zi/Asia/Omsk
+lib/zi/Asia/Oral
 lib/zi/Asia/Phnom_Penh
 lib/zi/Asia/Pontianak
 lib/zi/Asia/Pyongyang
 lib/zi/Asia/Qatar
+lib/zi/Asia/Qyzylorda
 lib/zi/Asia/Rangoon
 lib/zi/Asia/Riyadh
 lib/zi/Asia/Riyadh87
@@ -360,7 +369,6 @@ lib/zi/Asia/Tbilisi
 lib/zi/Asia/Tehran
 lib/zi/Asia/Thimphu
 lib/zi/Asia/Tokyo
-lib/zi/Asia/Ujung_Pandang
 lib/zi/Asia/Ulaanbaatar
 lib/zi/Asia/Urumqi
 lib/zi/Asia/Vientiane
@@ -533,9 +541,9 @@ man/man1/rmid.1
 man/man1/rmiregistry.1
 man/man1/servertool.1
 man/man1/tnameserv.1
-plugin/i386/ns4/javaplugin140.so
-plugin/i386/ns600/libjavaplugin_oji140.so
-plugin/i386/ns610/libjavaplugin_oji140.so
+plugin/i386/ns4/javaplugin.so
+plugin/i386/ns600/libjavaplugin_oji.so
+plugin/i386/ns610/libjavaplugin_oji.so
 @dirrm plugin/i386/ns610
 @dirrm plugin/i386/ns600
 @dirrm plugin/i386/ns4
@@ -559,7 +567,6 @@ plugin/i386/ns610/libjavaplugin_oji140.so
 @dirrm lib/zi/America
 @dirrm lib/zi/Africa
 @dirrm lib/zi
-@dirrm lib/security
 @dirrm lib/locale/zh_TW/LC_MESSAGES
 @dirrm lib/locale/zh_TW.BIG5/LC_MESSAGES
 @dirrm lib/locale/zh_TW.BIG5
@@ -585,8 +592,7 @@ plugin/i386/ns610/libjavaplugin_oji140.so
 @dirrm lib/locale/de/LC_MESSAGES
 @dirrm lib/locale/de
 @dirrm lib/locale
-@dirrm lib/images/cursors
-@dirrm lib/images
+@dirrm lib/im
 @dirrm lib/i386/server
 @dirrm lib/i386/native_threads
 @dirrm lib/i386/client
@@ -595,8 +601,5 @@ plugin/i386/ns610/libjavaplugin_oji140.so
 @dirrm lib/ext
 @dirrm lib/cmm
 @dirrm lib/audio
-@exec ${MKDIR} %D/lib/applet
-@unexec ${RMDIR} %D/lib/applet 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib 2>/dev/null || ${TRUE}
 @dirrm bin
-@unexec ${RMDIR} -p %D 2>/dev/null || ${TRUE}
+@dirrm .systemPrefs
