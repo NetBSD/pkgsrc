@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.32 2001/12/15 20:25:38 agc Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.33 2001/12/16 14:27:07 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -250,6 +250,7 @@ bulk-package:
 			${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
 			for pkgdir in `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'` ${BULK_PREREQ} ; do \
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
+				if [ -z "$$pkgname" ]; then continue ; fi ;\
 				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
 				if ! ${PKG_INFO} -qe $$pkgname ; then \
 					if [ -f $$pkgfile ]; then \
@@ -280,6 +281,7 @@ bulk-package:
 				${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
 				for pkgdir in `${GREP} "^${PKGPATH} " ${SUPPORTSFILE} | ${SED} -e 's;^.*:;;g'`; do \
 					pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
+					if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
 					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
 					pkgerr="-1"; \
 					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=IGNORE)`; \
