@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.5 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-ag,v 1.6 2005/03/07 23:29:50 tv Exp $
 
---- readconf.c.orig	2004-07-17 08:12:08.000000000 +0200
-+++ readconf.c
-@@ -187,7 +187,9 @@ static struct {
- #endif
- 	{ "clearallforwardings", oClearAllForwardings },
- 	{ "enablesshkeysign", oEnableSSHKeysign },
-+#ifndef __INTERIX
- 	{ "verifyhostkeydns", oVerifyHostKeyDNS },
-+#endif /* __INTERIX */
- 	{ "nohostauthenticationforlocalhost", oNoHostAuthenticationForLocalhost },
- 	{ "rekeylimit", oRekeyLimit },
- 	{ "connecttimeout", oConnectTimeout },
+--- config.h.in.orig	2004-08-17 08:54:51.000000000 -0400
++++ config.h.in
+@@ -116,6 +116,9 @@
+ /* Define if you are on Cygwin */
+ #undef HAVE_CYGWIN
+ 
++/* Define if you are on Interix */
++#undef HAVE_INTERIX
++
+ /* Define if you have a broken realpath. */
+ #undef BROKEN_REALPATH
+ 
