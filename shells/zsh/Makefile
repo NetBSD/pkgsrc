@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2000/01/06 22:42:14 windsor Exp $
+# $NetBSD: Makefile,v 1.15 2000/01/08 16:33:39 tron Exp $
 #
 
 DISTNAME=       zsh-3.0.7
 CATEGORIES=	shells
-MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/zsh/ \
-		ftp://uiarchive.uiuc.edu/pub/packages/shells/zsh/ \
-		ftp://ftp.rge.com/pub/zsh/ \
+MASTER_SITES=   ftp://uiarchive.uiuc.edu/pub/packages/shells/zsh/ \
+		ftp://ftp.rge.com/pub/shells/zsh/ \
 		ftp://sunsite.auc.dk/pub/unix/shells/zsh/ \
-		ftp://ftp.cenatls.cena.dgac.fr/pub/shells/zsh/ \
-		ftp://ftp.net.lut.ac.uk/zsh/ \
 		ftp://ftp.uit.no/pub/unix/shells/zsh/ \
+		ftp://ftp.cenatls.cena.dgac.fr/shells/zsh/ \
+		ftp://ftp.net.lut.ac.uk/zsh/ \
 		ftp://ftp.zsh.org/zsh/
 
 MAINTAINER=	packages@netbsd.org
