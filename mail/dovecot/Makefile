@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/28 22:20:42 xtraeme Exp $
 
-DISTNAME=		dovecot-0.99.10.4
-PKGREVISION=		2
+DISTNAME=		dovecot-0.99.10.5
 CATEGORIES=		mail
 MASTER_SITES=		http://dovecot.fi/
 
+.if 0
 PATCH_SITES=		http://www.roughtrade.net/dovecot/
 PATCHFILES=		dovecot-crammd5-0.99.10.2.diff
 PATCH_DIST_STRIP=	-p1
+.endif
 
 MAINTAINER=		tom@replic8.net
 HOMEPAGE=		http://dovecot.fi/
@@ -27,8 +28,8 @@ CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		DOVECOT_USE_GNUTLS DOVECOT_USE_PGSQL	\
-			USE_INET6 USE_OPENLDAP USE_SASL2
+BUILD_DEFS+=		DOVECOT_USE_GNUTLS DOVECOT_USE_MYSQL \
+			DOVECOT_USE_PGSQL USE_INET6 USE_OPENLDAP USE_SASL2
 
 .if !empty(DOVECOT_USE_GNUTLS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ssl=gnutls
@@ -36,6 +37,11 @@ CONFIGURE_ARGS+=	--enable-ssl=gnutls
 .else
 CONFIGURE_ARGS+=        --enable-ssl=openssl
 .  include "../../security/openssl/buildlink3.mk"
+.endif
+
+.if !empty(DOVECOT_USE_MYSQL:M[Yy][Ee][SS])
+CONFIGURE_ARGS+=	--with-mysql
+.  include "../../databases/mysql4-client/buildlink3.mk"
 .endif
 
 .if !empty(DOVECOT_USE_PGSQL:M[Yy][Ee][Ss])
