@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2001/02/07 22:22:59 jtb Exp $
+# $NetBSD: Makefile,v 1.114 2001/02/09 03:28:23 jtb Exp $
 #
 
     SUBDIR += CompuPic
@@ -34,6 +34,7 @@
     SUBDIR += gd
     SUBDIR += gdk-pixbuf
     SUBDIR += gdk-pixbuf-gnome
+    SUBDIR += geomview
     SUBDIR += get_ds7
     SUBDIR += gif2png
     SUBDIR += gif320
