@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.78 2002/08/07 12:46:49 veego Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.79 2002/08/12 09:47:34 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -558,6 +558,16 @@ FOX_USE_XUNICODE?=	YES
 # http://www.ab.wakwak.com/~tino/jatk/fox/ (in japanese) for more information.
 # Possible: YES, NO
 # Default: YES
+
+FREEWNN_USER?=	wnn
+# Used in the ja-freewnn-server-bin package to specify the Free wnn user.
+# Possible: any user name
+# Default: wnn
+
+FREEWNN_GROUP?=	jserver
+# Used in the ja-freewnn-server-bin package to specify the Free wnn group.
+# Possible: any group name
+# Default: jserver
 
 GAWK_ENABLE_PORTALS?=	NO
 # Used by gawk package to enable/disable handling file names that start with
