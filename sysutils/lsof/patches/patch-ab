@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.17 2003/02/03 01:03:14 atatat Exp $
+
+kqueue support, part 1 of 4
+
+--- dialects/n+obsd/dlsof.h.orig	2002-10-08 16:21:56.000000000 -0400
++++ dialects/n+obsd/dlsof.h
+@@ -244,6 +244,12 @@ struct vop_advlock_args;
+ #undef	KERNEL
+ #undef	_KERNEL
+ 
++# if	defined(NETBSDV) && \
++	(__NetBSD_Version__ >= 106100000) && \
++	defined(DTYPE_KQUEUE)
++#define	HASKQUEUE
++# endif	/* defined(NETBSDV) && ... */
++
+ # if	defined(UVM)
+ #  if	defined(OPENBSDV)
+ #define	_UVM_UVM_FAULT_I_H_	1		/* avoid OpenBSD's
