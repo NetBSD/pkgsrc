@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2940 2003/07/30 15:42:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.2941 2003/07/30 16:13:01 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3074,3 +3074,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gperiodic to 2.0.5 [wiz 2003-07-30]
 	Updated freeradius to 0.7nb3 [jmmv 2003-07-30]
 	Updated iplog to 2.2.3nb2 [jmmv 2003-07-30]
+	Updated cvsync to 0.24.2 [gehenna 2003-07-30]
