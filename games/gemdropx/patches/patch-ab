@@ -1,78 +1,48 @@
-$NetBSD: patch-ab,v 1.3 1998/08/27 14:06:09 garbled Exp $
+$NetBSD: patch-ab,v 1.4 2004/08/06 16:49:48 drochner Exp $
 
---- makefile.orig	Fri Nov 21 23:56:59 1997
-+++ makefile	Sat Jul 25 06:50:05 1998
-@@ -11,10 +11,11 @@
+--- Makefile.orig	2002-05-18 10:53:29.000000000 +0200
++++ Makefile
+@@ -14,11 +14,11 @@
+ # Added 'install' target (finally!): May 18, 2002
  
--
- CC=gcc
--POSTPROCESS=strip
--
--XLIB=-lX11
--# XLIB=-L/usr/openwin/lib -lX11
--# XLIB=-L/usr/X11/lib -lX11
  
-+INSTALLROOT=$(PREFIX)
-+GFX=$(PREFIX)/share/gemdropx/gfx
-+SOUNDS=$(PREFIX)/share/gemdropx/sounds
-+
-+XLIB= -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11 -lm -lcompat
-+XINC= -I$(X11BASE)/include
-+CFLAGS= $(XINC) -DSOUNDS=\"$(SOUNDS)\" -DGFX=\"$(GFX)\"
+-DATA_PREFIX=/usr/local/share/gemdropx
++DATA_PREFIX=${PREFIX}/share/gemdropx
+ SDL_CFLAGS := $(shell sdl-config --cflags)
+ SDL_LDFLAGS := $(shell sdl-config --libs)
+-CC=gcc
+-CXX=gcc
++#CC=gcc
++#CXX=gcc
  
-@@ -29,11 +30,15 @@
  
-+install: gemdropx
-+	/usr/bin/install -c -s -o bin -g games -m 2755 gemdropx $(INSTALLROOT)/bin
-+	mkdir -p $(GFX)
-+	/usr/bin/install -o bin -g bin -m 0644 gfx/* $(GFX)
-+	mkdir -p $(SOUNDS)
-+	/usr/bin/install -o bin -g bin -m 0644 sounds/* $(SOUNDS)
-+	/usr/bin/install -o bin -g bin -m 0644 README $(INSTALLROOT)/share/gemdropx
+ MIXER=-lSDL_mixer
+@@ -27,7 +27,7 @@ JOYFLAG=$(JOY)JOYSTICK
+ EMBEDDEDFLAG=NOT_EMBEDDED
  
--gemdropx:	gemdropx.o connect.o randnum.o window.o hints.o text.o gc.o \
--		color.o visual.o sleepfor.o
--	$(CC)	gemdropx.o connect.o randnum.o window.o hints.o text.o gc.o \
--		color.o visual.o sleepfor.o \
--		$(XLIB) -lm -o gemdropx
--	$(POSTPROCESS) gemdropx
--	chmod 755 gemdropx
-+OBJS=	gemdropx.o connect.o randnum.o window.o hints.o text.o gc.o \
-+	color.o visual.o sleepfor.o
  
-+gemdropx: $(OBJS)
-+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(XLIB)
+-CFLAGS=-Wall $(SDL_CFLAGS) \
++CFLAGS+= $(SDL_CFLAGS) \
+ 	-DDATA_PREFIX=\"$(DATA_PREFIX)\" -D$(NOSOUNDFLAG) -D$(JOYFLAG) \
+ 	-D$(EMBEDDEDFLAG) $(XTRA_FLAGS)
+ SDL_LIB=$(MIXER) $(SDL_LDFLAGS)
+@@ -39,8 +39,8 @@ GFX_LIB=$(SDL_LIB)
+ all:	gemdropx
  
-@@ -41,30 +46,10 @@
- 		color.h visual.h sleepfor.h
--	$(CC)	gemdropx.c -c
--
--
- connect.o:	connect.c connect.h
--	$(CC)	connect.c -c
--
- randnum.o:	randnum.c randnum.h
--	$(CC)	randnum.c -c
--
- window.o:	window.c window.h
--	$(CC)	window.c -c
--
- hints.o:	hints.c hints.h
--	$(CC)	hints.c -c
--
--text.o:	text.c text.h
--	$(CC)	text.c -c
--
--gc.o:	gc.c gc.h
--	$(CC)	gc.c -c
--
-+text.o:		text.c text.h
-+gc.o:		gc.c gc.h
- color.o:	color.c color.h
--	$(CC)	color.c -c
--
- visual.o:	visual.c visual.h
--	$(CC)	visual.c -c
--
- sleepfor.o:	sleepfor.c sleepfor.h
--	$(CC)	sleepfor.c -c
+ install:
+-	cp gemdropx /usr/local/bin/
+-	chmod 755 /usr/local/bin/gemdropx
++	cp gemdropx ${PREFIX}/bin/
++	chmod 755 ${PREFIX}/bin/gemdropx
+ 	-mkdir -p $(DATA_PREFIX)
+ 	chmod 755 $(DATA_PREFIX)
+ 	cp -R data/* $(DATA_PREFIX)
+@@ -61,7 +61,7 @@ clean:
+ 
+ 
+ gemdropx:	gemdropx.o
+-	$(CXX) $(CFLAGS) -o gemdropx gemdropx.o $(GFX_LIB) -lm
++	$(CC) $(LDFLAGS) -o gemdropx gemdropx.o $(GFX_LIB) -lm
+ 
+ 
+ gemdropx.o:	gemdropx.c
