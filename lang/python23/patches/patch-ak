@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.2 2003/12/08 21:13:56 recht Exp $
+$NetBSD: patch-ak,v 1.1 2003/12/08 21:13:56 recht Exp $
 
 --- Objects/weakrefobject.c.orig	2003-07-14 23:46:23.000000000 +0200
 +++ Objects/weakrefobject.c
