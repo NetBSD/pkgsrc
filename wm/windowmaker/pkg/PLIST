@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/03/12 11:42:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/22 10:42:14 wiz Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -106,8 +106,8 @@ lib/libWUtil.a
 lib/libwraster.a
 lib/libwraster.la
 lib/libwraster.so
-lib/libwraster.so.2
-lib/libwraster.so.2.1
+lib/libwraster.so.4
+lib/libwraster.so.4.0
 man/man1/geticonset.1
 man/man1/getstyle.1
 man/man1/seticons.1
@@ -296,6 +296,7 @@ share/locale/de/LC_MESSAGES/WindowMaker.mo
 share/locale/el/LC_MESSAGES/WindowMaker.mo
 share/locale/es/LC_MESSAGES/WPrefs.mo
 share/locale/es/LC_MESSAGES/WindowMaker.mo
+share/locale/et/LC_MESSAGES/WindowMaker.mo
 share/locale/fi/LC_MESSAGES/WPrefs.mo
 share/locale/fi/LC_MESSAGES/WindowMaker.mo
 share/locale/fr/LC_MESSAGES/WPrefs.mo
