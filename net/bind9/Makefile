@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2001/02/27 02:54:27 itojun Exp $
+# $NetBSD: Makefile,v 1.30 2001/03/07 00:39:17 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
-# trick to avoid version number issue - 9.1.1rc3 is prior to 9.1.1
-PKGNAME=	bind-9.1.0.3
+# trick to avoid version number issue - 9.1.1rc4 is prior to 9.1.1
+PKGNAME=	bind-9.1.0.4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -16,7 +16,7 @@ COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
 BUILD_DEFS+=	USE_INET6
 
 # No need to set USE_INET6, will auto-detect.
-BIND_VERSION=	9.1.1rc3
+BIND_VERSION=	9.1.1rc4
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
