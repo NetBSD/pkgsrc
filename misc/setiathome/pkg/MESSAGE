@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/12/23 01:27:35 abs Exp $
+
+Please note - you should really mkdir and cd into a new directory before
+running setiathome (to avoid cluttering up your homedir).
+
+Also, please consider joining the NetBSD team:
+http://setiathome.ssl.berkeley.edu/cgi-bin/cgi?cmd=team_lookup&name=NetBSD
+
+Good luck!
+===========================================================================
