@@ -1,0 +1,83 @@
+$NetBSD: patch-an,v 1.1 2004/11/15 11:35:30 xtraeme Exp $
+
+--- audio/mixeng_template.h	7 Nov 2004 18:04:02 -0000	1.1
++++ audio/mixeng_template.h	15 Nov 2004 09:09:27 -0000
+@@ -35,7 +35,7 @@
+ #define HALF HALFT
+ #endif
+ 
+-static int64_t inline glue(conv_,IN_T) (IN_T v)
++static int64_t inline CONV_IN_T (IN_T v)
+ {
+ #ifdef SIGNED
+     return (INT_MAX*(int64_t)v)/HALF;
+@@ -44,7 +44,7 @@
+ #endif
+ }
+ 
+-static IN_T inline glue(clip_,IN_T) (int64_t v)
++static IN_T inline CLIP_IN_T (int64_t v)
+ {
+     if (v >= INT_MAX)
+         return IN_MAX;
+@@ -58,50 +58,50 @@
+ #endif
+ }
+ 
+-static void glue(glue(conv_,IN_T),_to_stereo) (void *dst, const void *src,
++static void glue(CONV_IN_T,_to_stereo) (void *dst, const void *src,
+                                                int samples)
+ {
+     st_sample_t *out = (st_sample_t *) dst;
+     IN_T *in = (IN_T *) src;
+     while (samples--) {
+-        out->l = glue(conv_,IN_T) (*in++);
+-        out->r = glue(conv_,IN_T) (*in++);
++        out->l = CONV_IN_T (*in++);
++        out->r = CONV_IN_T (*in++);
+         out += 1;
+     }
+ }
+ 
+-static void glue(glue(conv_,IN_T),_to_mono) (void *dst, const void *src,
++static void glue(CONV_IN_T,_to_mono) (void *dst, const void *src,
+                                              int samples)
+ {
+     st_sample_t *out = (st_sample_t *) dst;
+     IN_T *in = (IN_T *) src;
+     while (samples--) {
+-        out->l = glue(conv_,IN_T) (in[0]);
++        out->l = CONV_IN_T (in[0]);
+         out->r = out->l;
+         out += 1;
+         in += 1;
+     }
+ }
+ 
+-static void glue(glue(clip_,IN_T),_from_stereo) (void *dst, const void *src,
++static void glue(CLIP_IN_T,_from_stereo) (void *dst, const void *src,
+                                                  int samples)
+ {
+     st_sample_t *in = (st_sample_t *) src;
+     IN_T *out = (IN_T *) dst;
+     while (samples--) {
+-        *out++ = glue(clip_,IN_T) (in->l);
+-        *out++ = glue(clip_,IN_T) (in->r);
++        *out++ = CLIP_IN_T (in->l);
++        *out++ = CLIP_IN_T (in->r);
+         in += 1;
+     }
+ }
+ 
+-static void glue(glue(clip_,IN_T),_from_mono) (void *dst, const void *src,
++static void glue(CLIP_IN_T,_from_mono) (void *dst, const void *src,
+                                                int samples)
+ {
+     st_sample_t *in = (st_sample_t *) src;
+     IN_T *out = (IN_T *) dst;
+     while (samples--) {
+-        *out++ = glue(clip_,IN_T) (in->l + in->r);
++        *out++ = CLIP_IN_T (in->l + in->r);
+         in += 1;
+     }
+ }
