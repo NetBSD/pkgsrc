@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/11/15 11:36:10 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/04/09 23:48:51 jlam Exp $
 bin/bdftops
 bin/dvipdf
 bin/font2c
@@ -9,6 +9,7 @@ bin/gsdj500
 bin/gslj
 bin/gslp
 bin/gsnd
+bin/gstty
 bin/pdf2dsc
 bin/pdf2ps
 bin/printafm
