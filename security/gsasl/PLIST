@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/26 22:56:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/02/28 13:29:31 wiz Exp $
 bin/gsasl
 include/gsasl-compat.h
 include/gsasl-mech.h
@@ -107,6 +107,7 @@ man/man3/gsasl_server_step.3
 man/man3/gsasl_server_step_base64.3
 man/man3/gsasl_server_suggest_mechanism.3
 man/man3/gsasl_server_support_p.3
+man/man3/gsasl_simple_getpass.3
 man/man3/gsasl_step.3
 man/man3/gsasl_step64.3
 man/man3/gsasl_strerror.3
@@ -134,4 +135,6 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gsasl.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgsasl.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gsasl.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgsasl.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gsasl.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgsasl.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gsasl.mo
