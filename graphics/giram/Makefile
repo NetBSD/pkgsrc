@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/02/15 03:49:05 salo Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/08 21:38:27 jmc Exp $
 
 DISTNAME=	giram-0.3.4
 CATEGORIES=	graphics
@@ -32,6 +32,7 @@ CONF_FILES+=	${PREFIX}/share/examples/giram/gtkrc_user	\
 CONF_FILES+=	${PREFIX}/share/examples/giram/ps-menurc	\
 		${PKG_SYSCONFDIR}/ps-menurc
 
+.include "../../devel/bison/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
