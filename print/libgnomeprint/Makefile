@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2005/02/26 17:23:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2005/03/22 16:03:04 jmmv Exp $
 #
 
-DISTNAME=	libgnomeprint-2.8.2
+DISTNAME=	libgnomeprint-2.10.0
 CATEGORIES=	print gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -55,7 +55,9 @@ PRINT_PLIST_AWK+=	/cups/ { print "$${USE_CUPS}" $$0; next; }
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
