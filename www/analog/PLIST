@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/08/19 20:13:32 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/07/11 10:23:13 abs Exp $
 bin/analog
 share/examples/analog.cfg
 @exec test -f %D/etc/analog.cfg || cp -p %D/%F %D/etc/analog.cfg
@@ -182,9 +182,7 @@ lib/analog/lang/fiadom.tab
 lib/analog/lang/fidom.tab
 lib/analog/lang/fr.lng
 lib/analog/lang/fra.lng
-lib/analog/lang/fradesc.txt
 lib/analog/lang/fradom.tab
-lib/analog/lang/frdesc.txt
 lib/analog/lang/frdom.tab
 lib/analog/lang/frform.html
 lib/analog/lang/gr.lng
@@ -228,7 +226,6 @@ lib/analog/lang/kr.lng
 lib/analog/lang/lt.lng
 lib/analog/lang/lv.lng
 lib/analog/lang/nl.lng
-lib/analog/lang/nla.lng
 lib/analog/lang/nladesc.txt
 lib/analog/lang/nladom.tab
 lib/analog/lang/nldesc.txt
@@ -279,12 +276,10 @@ lib/analog/lang/ua.lng
 lib/analog/lang/uadesc.txt
 lib/analog/lang/uk.lng
 lib/analog/lang/uk12.lng
-lib/analog/lang/uka.lng
 lib/analog/lang/ukdesc.txt
 lib/analog/lang/ukdom.tab
 lib/analog/lang/us.lng
 lib/analog/lang/us24.lng
-lib/analog/lang/usa.lng
 lib/analog/lang/usdesc.txt
 lib/analog/lang/usdom.tab
 lib/analog/lang/usform.html

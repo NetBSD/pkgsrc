@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2002/08/19 18:39:16 seb Exp $
+# $NetBSD: Makefile,v 1.29 2002/02/18 15:14:11 seb Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
 DISTNAME=       make-3.79.1
 PKGNAME=        gmake-3.79.1
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=make/}
 
@@ -18,14 +17,6 @@ CONFIGURE_ARGS+=	--program-prefix="g"
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEXINFO_OVERRIDE=	YES
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${GMAKE_NSEC_TIMESTAMPS} == "NO")
-CONFIGURE_ARGS+=	--disable-nsec-timestamps
-.endif
-
-BUILD_DEFS+=	GMAKE_NSEC_TIMESTAMPS
 
 post-extract:
 	${MV} ${WRKSRC}/make.texinfo ${WRKSRC}/make.texinfo.orig

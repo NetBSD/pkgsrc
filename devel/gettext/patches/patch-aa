@@ -1,19 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2002/08/19 19:20:32 seb Exp $
+$NetBSD: patch-aa,v 1.7 2000/06/30 17:07:36 danw Exp $
 
-Build shared libintl. And force directory for locale date.
+Build shared libintl
 
---- configure.orig	Fri May  1 07:48:25 1998
-+++ configure
-@@ -3690,7 +3690,7 @@ fi
- 		 USE_INCLUDED_LIBINTL=yes
- 		 CATOBJEXT=.cat
- 		 INSTOBJEXT=.cat
--		 DATADIRNAME=lib
-+		 DATADIRNAME=${PKGLOCALEDIR}
- 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
- 		 INTLLIBS=$INTLDEPS
- 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
-@@ -3958,7 +3958,7 @@ fi
+--- configure.orig	Fri Jun 23 04:15:24 2000
++++ configure	Fri Jun 23 04:15:36 2000
+@@ -3958,7 +3958,7 @@
     fi
     
  
