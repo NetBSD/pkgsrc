@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2004/11/02 11:28:17 markd Exp $
+# $NetBSD: Makefile,v 1.511 2004/11/04 21:45:19 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -249,6 +249,7 @@ SUBDIR+=	p5-NetAddr-IP
 SUBDIR+=	p5-NetPacket
 SUBDIR+=	p5-RADIUS
 SUBDIR+=	p5-SNMP
+SUBDIR+=	p5-SNMP-MIB-Compiler
 SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-SOAP-Lite
 SUBDIR+=	p5-Socket6
