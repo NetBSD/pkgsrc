@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/07/17 22:56:59 grant Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/08/21 00:40:38 hubertf Exp $
 #
 # This Makefile.common is included by:
 #
@@ -74,7 +74,7 @@ post-patch:
 .if defined(XLOCK_DEFAULT_MODE) && !empty(XLOCK_DEFAULT_MODE)
 	cd ${WRKSRC}/xlock;						\
 	${MV} -f XLock.ad XLock.ad.presed;				\
-	${SED} -e "s|^\(Xlock.mode:[ 	]*\).*|\1${XLOCK_DEFAULT_MODE}|" \
+	${SED} -e "s|^\(XLock.mode:[ 	]*\).*|\1${XLOCK_DEFAULT_MODE}|" \
 		XLock.ad.presed > XLock.ad;				\
 	${RM} -f XLock.ad.presed
 .endif
