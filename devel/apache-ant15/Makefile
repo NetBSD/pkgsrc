@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/16 15:42:00 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/28 16:53:55 abs Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -8,8 +8,8 @@
 DISTNAME=	apache-ant-1.5.4
 PKGREVISION=	1
 CATEGORIES=	devel java
-MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://archive.apache.org/dist/ant/binaries/
+EXTRACT_SUFX=	.zip
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	jwise@NetBSD.org
