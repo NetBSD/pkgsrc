@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8476 2004/12/27 22:02:59 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8477 2004/12/27 22:51:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6595,3 +6595,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated knights to 0.6 [markd 2004-12-27]
 	Updated p5-ExtUtils-Depends to 0.204 [xtraeme 2004-12-27]
 	Updated p5-ExtUtils-PkgConfig to 0.106 [xtraeme 2004-12-27]
+	Updated gtksee to 0.5.6 [wiz 2004-12-27]
