@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.20 2004/02/12 02:35:06 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.21 2004/02/12 21:08:19 jlam Exp $
 #
 # Optionally define:
 #
@@ -68,14 +68,14 @@ _NEED_NCURSES=	YES
 .endif
 
 .if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    ${_BUILTIN_NCURSES} == "YES"
+    ${BUILDLINK_IS_BUILTIN.ncurses} == "YES"
 _NEED_NCURSES=	NO
 .endif
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS])
 _NEED_NCURSES=	YES
 .endif
 .if !empty(PREFER_NATIVE:Mncurses) && \
-    ${_BUILTIN_NCURSES} == "YES"
+    ${BUILDLINK_IS_BUILTIN.ncurses} == "YES"
 _NEED_NCURSES=	NO
 .endif
 .if !empty(PREFER_PKGSRC:Mncurses)
