@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4046 2003/12/11 17:35:37 manu Exp $
+$NetBSD: CHANGES,v 1.4047 2003/12/11 20:23:12 veego Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5062,3 +5062,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated automake to 1.8 [wiz 2003-12-11]
 	Updated audit-packages to 1.27 [agc 2003-12-11]
 	Added milter-spamc-0.10 [manu 2003-12-11]
+	Updated irssi to 0.8.9 [veego 2003-12-11]
+	Updated irssi-icb to 0.14nb3 [veego 2003-12-11]
