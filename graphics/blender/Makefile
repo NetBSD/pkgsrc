@@ -1,67 +1,75 @@
-# $NetBSD: Makefile,v 1.17 2003/03/26 04:05:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/05/28 15:51:38 jschauma Exp $
+#
 
-PKGNAME=	blender-2.11
-PKGREVISION=	5
-CATEGORIES=	graphics
-MASTER_SITES=	ftp://www.blender.nl/pub/ \
-		ftp://ftp.cs.umn.edu/pub/blender/pub/versions/2.11/
+DISTNAME=		blender-2.27
+CATEGORIES=		graphics
+MASTER_SITES=		ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
+			http://download.blender.org/source/
+EXTRACT_SUFX=		.tar.bz2
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	manu@netbsd.org
-HOMEPAGE=	http://www.blender.nl
-COMMENT=	GUI based raytracer
+MAINTAINER=		jschauma@netbsd.org
+HOMEPAGE=		http://www.blender.org/
+COMMENT=		fully integrated 3D graphics creation suite
 
-RESTRICTED=	"Only the original, unmodified package may be freely distributed"
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+USE_X11=		YES
+HAS_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_BUILDLINK2=		YES
 
-NO_BUILD=	yes
-CHECK_SHLIBS=	NO
+LDFLAGS+=		-lcrypto
+CFLAGS+=		-DGLX_GLXEXT_LEGACY
 
-# To be updated as other platforms PLIST will be built
-ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc *-*-sparc
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --without-ode
+
+PLIST_SRC=		${PKGDIR}/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "alpha")
-.if !exists(/emul/linux/lib/ld.so.1)
-PKG_FAIL_REASON= "${PKGNAME} requires Linux libraries - see compat_linux(8)"
+.if defined(BLENDER_INSTALL_DOC)
+MASTER_SITES+=		http://download.blender.org/documentation/
+DISTFILES+=		BlenderManual.html.tar.gz
+PLIST_SRC+=		${PKGDIR}/PLIST.doc
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/blender
+	cd ${WRKDIR}/html && ${PAX} -s,.*/CVS.*,, -s,.*/.xvpics.*,, \
+		-rw . ${PREFIX}/share/doc/html/blender
+	cd ${PREFIX}/share/doc/html/blender && ln -s book1.html index.html
 .endif
-DISTNAME=	blender2.11-linux-glibc2.1.3-alpha
-#
-.elif (${MACHINE_ARCH} == "i386")
-DEPENDS+=	suse_linux>=6.4:../../emulators/${SUSE_DIR_PREFIX}_linux
-DISTNAME=	blender2.11-linux-glibc2.1.2-i386-static
-PLIST_ARCH=	linux-i386
-#
-.elif (${MACHINE_ARCH} == "sparc")
-.if ${OPSYS} == "NetBSD"
-.if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
-.endif
-.endif
-DISTNAME=	blender2.11-solaris-2.6-sparc
-PLIST_ARCH=	solaris-sparc
-EXTRACT_SUFX=	.tar.Z
-#
-.elif (${MACHINE_ARCH} == "powerpc")
-.if !exists(/emul/linux/lib/ld.so.1)
-PKG_FAIL_REASON= "${PKGNAME} requires Linux libraries - see compat_linux(8)"
-.endif
-DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
-DISTNAME=	blender2.11-linux-glibc2.1.3-powerpc-static
-PLIST_ARCH=	linux-powerpc
-#
+
+.if defined(BLENDER_USE_OGG)
+CONFIGURE_ARGS+=	--with-ogg=${PREFIX}
+.include "../../audio/libogg/buildlink2.mk"
 .else
-DISTNAME=	# dummy, don't break pkg system
-PKG_FAIL_REASON= "Your platform is not supported and the package is buggy!"
+CONFIGURE_ARGS+=	--without-ogg --disable-oggtest
 .endif
 
-PLIST_SRC=	${PKGDIR}/PLIST.${PLIST_ARCH}
+.if defined(BLENDER_USE_VORBIS)
+CONFIGURE_ARGS+=	--with-vorbis=${PREFIX}
+.include "../../audio/libvorbis/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=	--without-vorbis --disable-vorbistest
+.endif
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/blender
-	${CP} -Rp ${WRKSRC}/* ${PREFIX}/lib/blender/
-	${LN} -sf ../lib/blender/blender ${PREFIX}/bin/blender
+.if defined(BLENDER_USE_OPENAL)
+CONFIGURE_ARGS+=	--enable-openal
+.include "../../audio/openal/buildlink2.mk"
+.endif
 
-.include "../../emulators/suse_linux/Makefile.application"
+.if defined(BLENDER_USE_EXPPYTHON)
+CONFIGURE_ARGS+=	--enable-exppython
+.else
+CONFIGURE_ARGS+=	--disable-exppython
+.endif
+
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+
+.include "../../lang/python/pyversion.mk"
+
 .include "../../mk/bsd.pkg.mk"
