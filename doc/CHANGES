@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7864 2004/11/15 08:54:19 markd Exp $
+$NetBSD: CHANGES,v 1.7865 2004/11/15 10:12:58 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5284,3 +5284,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cairo to 0.2.0 [rh 2004-11-15]
 	Updated devilspie to 0.7 [snj 2004-11-15]
 	Updated kkbswitch to 1.4.2 [markd 2004-11-15]
+	Updated liferea to 0.6.2 [jmmv 2004-11-15]
