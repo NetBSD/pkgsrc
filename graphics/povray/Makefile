@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/08/31 23:04:14 gavan Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/10 22:35:53 jmmv Exp $
 
 DISTNAME=	povuni_s
 PKGNAME=	povray-3.50c
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.povray.org/pub/povray/Official/Unix/\
 	 	ftp://ftp.mirror.ac.uk/sites/ftp.povray.org/pub/povray/Official/Unix/
@@ -18,6 +19,13 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
+
+CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/povray
+CONF_FILES=	${EGDIR}/povray.conf ${PKG_SYSCONFDIR}/povray.conf
+CONF_FILES+=	${EGDIR}/povray.ini ${PKG_SYSCONFDIR}/povray.ini
 
 SUBST_CLASSES+=		povini
 SUBST_MESSAGE.povini=	"Fixing Library_Path in povray.ini."
