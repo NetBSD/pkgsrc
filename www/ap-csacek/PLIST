@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:15:38 zuntum Exp $
-lib/httpd/mod_csacek.so
-share/csacek/whichcode_template.html
-@dirrm share/csacek
