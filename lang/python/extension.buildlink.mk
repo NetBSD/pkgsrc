@@ -1,4 +1,4 @@
-# $NetBSD: extension.buildlink.mk,v 1.10 2002/09/03 18:14:19 drochner Exp $
+# $NetBSD: extension.buildlink.mk,v 1.11 2002/09/04 14:28:37 drochner Exp $
 
 # derive a python version from the package name if possible
 .if defined(PKGNAME_REQD)
@@ -33,10 +33,12 @@ PYSETUPINSTALLARGS?=	#empty
 PY_PATCHPLIST?=		yes
 
 do-build:
-	(cd ${WRKSRC} && ${PYTHONBIN} ${PYSETUP} ${PYSETUPBUILDARGS} build)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
+	 ${PYSETUP} ${PYSETUPBUILDARGS} build)
 
 do-install:
-	(cd ${WRKSRC} && ${PYTHONBIN} ${PYSETUP} ${PYSETUPINSTALLARGS} install)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
+	 ${PYSETUP} ${PYSETUPINSTALLARGS} install)
 .endif
 
 .if defined(PY_PATCHPLIST)
