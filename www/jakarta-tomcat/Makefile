@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/13 20:26:31 jwise Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/13 22:14:53 jwise Exp $
 
 DISTNAME=	jakarta-tomcat.src
 PKGNAME=	jakarta-tomcat-3.0
@@ -43,7 +43,7 @@ do-install:
 .include "../../mk/bsd.pkg.mk"
 
 # This needs to be after bsd.pkg.mk 
-PREFIX:=        ${JAVA_HOME}
+PREFIX:=        ${JAKARTA_HOME}
 
 # work around a bug in kaffe's jar utility
 # pkglint or no, this has to be after bsd.pkg.mk
