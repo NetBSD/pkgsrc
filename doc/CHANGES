@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3457 2003/09/19 17:24:05 wiz Exp $
+$NetBSD: CHANGES,v 1.3458 2003/09/19 17:36:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated Xft2 to 2.1.2 [markd 2003-09-19]
 	Added render-0.8 [wiz 2003-09-19]
 	Updated Xrender to 0.8.3 [wiz 2003-09-19]
+	Updated libwmf to 0.2.8nb3 [adam 2003-09-19]
