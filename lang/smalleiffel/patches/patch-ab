@@ -1,33 +1,13 @@
-$NetBSD: patch-ab,v 1.2 1999/10/13 19:03:39 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2000/02/21 21:23:34 jlam Exp $
 
---- lib_se/system_tools.e.orig	Sat Jun  5 14:51:08 1999
-+++ lib_se/system_tools.e	Wed Oct 13 05:27:52 1999
-@@ -211,6 +211,8 @@
-          tmp_file_read.disconnect;
-          bin_directory := sys_directory.twin;
-          parent_directory(bin_directory);
-+         parent_directory(bin_directory);
-+         parent_directory(bin_directory);
-          add_directory(bin_directory,fz_bin);
-       end;
+--- lib_se/globals.e.orig	Sat Feb 12 04:14:14 2000
++++ lib_se/globals.e	Mon Feb 21 13:52:36 2000
+@@ -376,7 +376,7 @@
+    backup_suffix: STRING is ".bak";
+          -- Backup suffix for command `pretty'.
  
-@@ -359,7 +361,8 @@
-          echo.w_put_string("'.%N");
-          tmp_path.copy(sys_directory);
-          parent_directory(tmp_path);
--         add_directory(tmp_path,"man");
-+         parent_directory(tmp_path);
-+         add_directory(tmp_path,fz_man);
-          tmp_path.append(command_name);
-          tmp_path.append(help_suffix);
-          echo.w_put_string("See documentation in file:%N   ");
-@@ -527,6 +530,9 @@
-             else
-                Result := argi + 1;
-             end;
-+         elseif arg.has_prefix("-Wl,") then
-+            list_add(linker_options,arg);
-+            Result := argi + 1;
-          elseif ("-subsystem").is_equal(arg) then
-             list_add(linker_options,arg);
-             if next_arg /= Void then
+-   help_suffix: STRING is ".txt";
++   help_suffix: STRING is ".html";
+          -- Suffix for SmallEiffel On-line Help Files.
+ 
+    class_suffix: STRING is ".class";
