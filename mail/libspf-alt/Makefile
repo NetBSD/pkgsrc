@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/14 14:44:08 manu Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/14 15:40:14 manu Exp $
 #
 
 DISTNAME=	libspf_alt-0.4.0
@@ -13,6 +13,8 @@ DEPENDS+=	bind>=9.2.3nb3:../../net/bind9
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-bind=${PREFIX} --prefix=${PREFIX}
+
+USE_BUILDLINK2=	YES
 
 .include "../../net/bind9/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
