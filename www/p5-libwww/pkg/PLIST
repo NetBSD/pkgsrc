@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/22 05:14:18 hubertf Exp $
 bin/GET
 bin/HEAD
 bin/POST
@@ -184,7 +185,7 @@ man/man1/lwp-download.1.gz
 man/man1/lwp-mirror.1.gz
 man/man1/lwp-request.1.gz
 man/man1/lwp-rget.1.gz
-lib/perl5/site_perl/i386-freebsd/auto/libwww-perl/.packlist
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/libwww-perl/.packlist
 @dirrm lib/perl5/site_perl/File
 @dirrm lib/perl5/site_perl/Font/Metrics
 @dirrm lib/perl5/site_perl/Font
@@ -196,6 +197,8 @@ lib/perl5/site_perl/i386-freebsd/auto/libwww-perl/.packlist
 @dirrm lib/perl5/site_perl/URI
 @dirrm lib/perl5/site_perl/WWW/RobotRules
 @dirrm lib/perl5/site_perl/WWW
+@dirrm lib/perl5/site_perl/HTML
+@dirrm lib/perl5/site_perl/Bundle
 @dirrm lib/perl5/site_perl/auto/LWP/IO
 @dirrm lib/perl5/site_perl/auto/LWP/UserAgent
 @dirrm lib/perl5/site_perl/auto/LWP
@@ -204,4 +207,4 @@ lib/perl5/site_perl/i386-freebsd/auto/libwww-perl/.packlist
 @dirrm lib/perl5/site_perl/auto/URI/URL/http
 @dirrm lib/perl5/site_perl/auto/URI/URL
 @dirrm lib/perl5/site_perl/auto/URI/
-@dirrm lib/perl5/site_perl/i386-freebsd/auto/libwww-perl
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/libwww-perl
