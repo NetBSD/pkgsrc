@@ -1,13 +1,22 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/15 16:52:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/21 17:15:35 jmmv Exp $
 bin/nautilus-cd-burner
+include/libnautilus-burn/bacon-cd-selection.h
+include/libnautilus-burn/cd-drive.h
+include/libnautilus-burn/cd-recorder.h
 lib/gnome-vfs-2.0/modules/libmapping.a
 lib/gnome-vfs-2.0/modules/libmapping.la
 lib/gnome-vfs-2.0/modules/libmapping.so
-lib/nautilus/extensions-1.0/libnautilus-burn.a
-lib/nautilus/extensions-1.0/libnautilus-burn.la
-lib/nautilus/extensions-1.0/libnautilus-burn.so
-lib/nautilus/extensions-1.0/libnautilus-burn.so.0
-lib/nautilus/extensions-1.0/libnautilus-burn.so.0.0
+lib/libnautilus-burn.a
+lib/libnautilus-burn.la
+lib/libnautilus-burn.so
+lib/libnautilus-burn.so.0
+lib/libnautilus-burn.so.0.0
+lib/nautilus/extensions-1.0/libnautilus-burn-extension.a
+lib/nautilus/extensions-1.0/libnautilus-burn-extension.la
+lib/nautilus/extensions-1.0/libnautilus-burn-extension.so
+lib/nautilus/extensions-1.0/libnautilus-burn-extension.so.0
+lib/nautilus/extensions-1.0/libnautilus-burn-extension.so.0.0
+lib/pkgconfig/libnautilus-burn.pc
 libexec/mapping-daemon
 share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules/mapping-modules.conf
 share/gconf/schemas/ncb.schemas
@@ -17,6 +26,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/nautilus-cd-burner.mo
@@ -38,6 +48,7 @@ ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nautilus-cd-burner.mo
@@ -45,8 +56,10 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/or/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/nautilus-cd-burner.mo
@@ -82,3 +95,4 @@ share/nautilus-cd-burner/cdspin8.png
 @comment in nautilus: @dirrm lib/nautilus/extensions-1.0
 @comment in nautilus: @dirrm lib/nautilus
 @comment in gnome-vfs2: @dirrm lib/gnome-vfs-2.0/modules
+@dirrm include/libnautilus-burn
