@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5349 2004/03/29 09:24:11 recht Exp $
+$NetBSD: CHANGES,v 1.5350 2004/03/29 09:37:00 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1577,3 +1577,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libsndfile to 1.0.8 [adam 2004-03-29]
 	Updated getmail to 3.2.2 [snj 2004-03-29]
 	Updated coreutils to 5.2.1 [recht 2004-03-29]
+	Updated qt3-libs to 3.2.3nb1 [recht 2004-03-29]
