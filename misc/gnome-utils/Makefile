@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/12/24 06:10:13 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2003/01/07 03:56:27 uebayasi Exp $
 
 DISTNAME=		gnome-utils-1.4.1
 PKGREVISION=		4
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../devel/libgtop/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../lang/guile/buildlink2.mk"
+.include "../../lang/guile14/buildlink2.mk"
 .include "../../www/gtkhtml/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
