@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/22 23:35:39 dillo Exp $
+$NetBSD: distinfo,v 1.2 2005/01/10 16:26:34 dillo Exp $
 
-SHA1 (hugo-3.0.07/hugov30_unix_source.tar.gz) = 4b3afc3b4f03ff23643460321d76127980184ec0
-Size (hugo-3.0.07/hugov30_unix_source.tar.gz) = 213002 bytes
-SHA1 (hugo-3.0.07/hugov30_wxwin_source.tar.gz) = a0871b4dd5d9b0d7bc638ea2728cd285d4457304
-Size (hugo-3.0.07/hugov30_wxwin_source.tar.gz) = 69444 bytes
-SHA1 (patch-aa) = 2a7df05b854e82938f9e26fd698eaed4fce91ca4
-SHA1 (patch-ab) = d8eb602e631143595071eb2d449c15a0bb8860e6
+SHA1 (hugo-3.1.01/hugov31_unix_source.tar.gz) = bd14b180e26cd0d39e164839da27313e79939a9b
+Size (hugo-3.1.01/hugov31_unix_source.tar.gz) = 214461 bytes
+SHA1 (hugo-3.1.01/hugov31_wxwin_source.tar.gz) = 9fa7f0894a6283397ade1468e3aae20b21b62bda
+Size (hugo-3.1.01/hugov31_wxwin_source.tar.gz) = 281787 bytes
+SHA1 (patch-aa) = 316fcabf3501b3fbb0cb7ccc6be289c5dbc1b36a
