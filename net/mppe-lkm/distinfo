@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/02 02:52:56 cube Exp $
+$NetBSD: distinfo,v 1.2 2005/01/06 18:22:16 cube Exp $
 
 SHA1 (kernel_ppp_mppe-0.0.4-src.tgz) = 37dc2487c760a78eb02585690bd6a1708d8dbaa2
 Size (kernel_ppp_mppe-0.0.4-src.tgz) = 54194 bytes
-SHA1 (patch-aa) = 56209bf008dbff6983d27c26b011d8a7d839973d
+SHA1 (patch-aa) = e219f76184a5684dd19e8dac828a8bb8c2b51f17
