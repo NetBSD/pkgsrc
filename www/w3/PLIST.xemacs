@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.xemacs,v 1.2 2001/03/01 18:55:53 jtb Exp $
+@comment $NetBSD: PLIST.xemacs,v 1.1 2001/11/01 02:27:01 zuntum Exp $
 lib/xemacs/xemacs-packages/etc/w3/default.css
 lib/xemacs/xemacs-packages/info/w3-faq.info
 lib/xemacs/xemacs-packages/info/w3.info
