@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/19 08:54:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/22 05:14:42 martti Exp $
 
 DISTNAME=		stuffit520.611linux-i386
 PKGNAME=		stuffit-5.2.0.611
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.aladdinsys.com/pub/linux/StuffIt/ \
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://www.aladdinsys.com/expander
+HOMEPAGE=		http://www.aladdinsys.com/expander/
 COMMENT=		Stuffit Archive Creator and Expander
 
 DEPENDS+=		suse_base>=6:../../emulators/${SUSE_DIR_PREFIX}_base
