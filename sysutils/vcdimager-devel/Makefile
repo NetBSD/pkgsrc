@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/11/15 09:01:05 markd Exp $
 #
 
 DISTNAME=	vcdimager-0.7.20
@@ -16,6 +16,12 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
 INFO_FILES=	vcd-info.info vcdimager.info vcdxrip.info
 PKGCONFIG_OVERRIDE+= libvcdinfo.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+= rm:-Wl,--version-script=libvcdinfo.la.ver
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
