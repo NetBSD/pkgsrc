@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/29 00:30:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/07 15:25:14 cjep Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
@@ -19,7 +19,7 @@ PATCHDIR=		${.CURDIR}/../../x11/XFree86-libs/patches
 
 XBUILD_DIRS=		lib/font lib/lbxutil lib/Xdmcp lib/Xau \
 			programs/Xserver
-XINCLUDE_DIRS=		lib/xkbfile lib/xtrans 
+XINCLUDE_DIRS=		lib/xkbfile lib/xtrans
 XINSTALL_DIRS=		lib/font/FreeType lib/font/X-TrueType \
 			lib/font/Speedo lib/font/Type1 \
 			lib/font/bitmap programs/Xserver
