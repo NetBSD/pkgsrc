@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21 2002/12/02 20:30:30 jmmv Exp $
+$NetBSD: TODO,v 1.22 2002/12/02 21:37:43 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -214,8 +214,6 @@ Suggested package updates
 	o suck-4.3.1
 	o sylpheed-claws-0.8.6
 	o tcl/tk-8.4.1 [bjoern]
-	o texmacs-1.0.0.17 [pkg/18495]
-	o texmacs-1.0.0.23
 	o ttf2pt1-3.4.2
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
