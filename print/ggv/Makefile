@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/10/19 10:54:56 rh Exp $
+# $NetBSD: Makefile,v 1.33 2002/10/27 03:35:21 rh Exp $
 #
 
 DISTNAME=	ggv-1.0.2
@@ -17,6 +17,7 @@ USE_LIBTOOL=	YES
 USE_X11BASE=	YES
 BUILD_USES_MSGFMT=	YES
 CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var/lib
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/ghostscript.mk"
