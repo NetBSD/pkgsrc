@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 01:14:11 uebayasi Exp $
+share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.el
+share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/leim/leim-list.el
 share/emacs/${PKGVERSION}/leim/quail/4Corner.el
 share/emacs/${PKGVERSION}/leim/quail/4Corner.elc
@@ -8,8 +10,8 @@ share/emacs/${PKGVERSION}/leim/quail/CCDOSPY.el
 share/emacs/${PKGVERSION}/leim/quail/CCDOSPY.elc
 share/emacs/${PKGVERSION}/leim/quail/CTLau.el
 share/emacs/${PKGVERSION}/leim/quail/CTLau.elc
-share/emacs/${PKGVERSION}/leim/quail/CTLauB.el
-share/emacs/${PKGVERSION}/leim/quail/CTLauB.elc
+share/emacs/${PKGVERSION}/leim/quail/CTLau-b5.el
+share/emacs/${PKGVERSION}/leim/quail/CTLau-b5.elc
 share/emacs/${PKGVERSION}/leim/quail/ECDICT.el
 share/emacs/${PKGVERSION}/leim/quail/ECDICT.elc
 share/emacs/${PKGVERSION}/leim/quail/ETZY.el
@@ -66,6 +68,8 @@ share/emacs/${PKGVERSION}/leim/quail/lao.el
 share/emacs/${PKGVERSION}/leim/quail/lao.elc
 share/emacs/${PKGVERSION}/leim/quail/latin-alt.el
 share/emacs/${PKGVERSION}/leim/quail/latin-alt.elc
+share/emacs/${PKGVERSION}/leim/quail/latin-ltx.el
+share/emacs/${PKGVERSION}/leim/quail/latin-ltx.elc
 share/emacs/${PKGVERSION}/leim/quail/latin-post.el
 share/emacs/${PKGVERSION}/leim/quail/latin-post.elc
 share/emacs/${PKGVERSION}/leim/quail/latin-pre.el
@@ -94,7 +98,5 @@ share/emacs/${PKGVERSION}/leim/quail/tsang-cns.el
 share/emacs/${PKGVERSION}/leim/quail/tsang-cns.elc
 share/emacs/${PKGVERSION}/leim/quail/viqr.el
 share/emacs/${PKGVERSION}/leim/quail/viqr.elc
+@dirrm share/emacs/${PKGVERSION}/leim/ja-dic
 @dirrm share/emacs/${PKGVERSION}/leim/quail
-share/emacs/${PKGVERSION}/leim/skk/skkdic.el
-share/emacs/${PKGVERSION}/leim/skk/skkdic.elc
-@dirrm share/emacs/${PKGVERSION}/leim/skk
