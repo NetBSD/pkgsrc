@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.11 2003/07/10 23:10:08 grant Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.12 2003/07/10 23:12:40 grant Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -14,7 +14,7 @@
 #	#
 #	.include "../../mk/pthread.buildlink2.mk"
 #
-#	.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+#	.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 #	CONFIGURE_ARGS+=	--without-pthreads
 #	.endif
 #
@@ -33,7 +33,7 @@
 #	#
 #	.include "../../mk/pthread.buildlink2.mk"
 #
-#	.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+#	.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 #	CONFIGURE_ARGS+=	--without-pthreads
 #	.endif
 #
@@ -72,7 +72,7 @@
 #	#
 #	.include "../../mk/pthread.buildlink2.mk"
 #
-#	.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+#	.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 #	.  include "../../devel/ptl2/buildlink2.mk"
 #	.endif
 #
@@ -116,7 +116,7 @@ PTHREAD_OPTS?=	# empty
 #
 .undef PTHREAD_TYPE
 PREFER_NATIVE_PTHREADS?=	YES
-.if exists(/usr/include/pthread.h) && (${PREFER_NATIVE_PTHREADS} == "YES")
+.if exists(/usr/include/pthread.h) && ${PREFER_NATIVE_PTHREADS} == "YES"
 PTHREAD_TYPE=	native
 .else
 .  if !empty(PTHREAD_OPTS:Mnative)
@@ -131,7 +131,7 @@ PTHREAD_TYPE=	none
 PTHREAD_TYPE=	${_PKG_PTHREAD}
 .      endif
 .    endfor
-.    if (${PTHREAD_TYPE} == "none") && \
+.    if ${PTHREAD_TYPE} == "none" && \
 	!empty(PTHREAD_OPTS:Mrequire) && empty(PTHREAD_OPTS:Moptional)
 PKG_FAIL_REASON= "${PKGNAME} requires a working pthreads implementation."
 .    endif
