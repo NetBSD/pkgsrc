@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.14 2004/04/25 01:11:11 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/09/30 02:51:36 tv Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.unixodbc.org/
 
