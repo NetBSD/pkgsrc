@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2003/11/25 08:43:51 tron Exp $
+# $NetBSD: Makefile,v 1.33 2003/12/26 15:25:42 tron Exp $
 
-DISTNAME=	bidwatcher-1.3.11-rc1
-PKGNAME=	${DISTNAME:S/-rc/rc/}
+DISTNAME=	bidwatcher-1.3.11
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bidwatcher/}
 
