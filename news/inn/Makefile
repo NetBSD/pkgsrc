@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/05/22 18:58:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.56 2004/05/23 14:40:00 tron Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -6,10 +6,6 @@ CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
-
-PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
-PATCHFILES=		inn-${INN_VERSION}-v6-20030327.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.isc.org/inn.html
@@ -74,10 +70,17 @@ RCD_SCRIPTS=		innd
 .include "../../mk/bsd.prefs.mk"
 
 # IPv6 support
+#
+# The IPv6 patch is somewhat broken unfortunately. It uses APIs which often
+# are not available under operating systems without IPv4 support. We therefore
+# apply it only if we really want IPv6 support.
+
 .if defined(USE_INET6) && ${USE_INET6} == YES
+PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
+PATCHFILES=		inn-${INN_VERSION}-v6-20030327.diff.gz
+PATCH_DIST_STRIP=	-p1
+
 CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if ${OPSYS} == "SunOS"
