@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/16 14:43:08 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/02 14:11:28 wiz Exp $
 bin/add-html-signature
 bin/compare-version
 bin/copy-if-changed
@@ -22,5 +22,41 @@ bin/search-package
 bin/texi2html-wrapper
 libexec/papaya-lib.pl
 libexec/papaya-lib.sh
+share/doc/papaya/Copying.html
+share/doc/papaya/Indexes.html
+share/doc/papaya/Introduction.html
+share/doc/papaya/Library-Manual.html
+share/doc/papaya/Manual.html
+share/doc/papaya/Overview.html
+share/doc/papaya/Problems.html
+share/doc/papaya/Utility-Manual.html
+share/doc/papaya/add-html-signature.html
+share/doc/papaya/compare-version.html
+share/doc/papaya/copy-if-changed.html
+share/doc/papaya/default-configure.html
+share/doc/papaya/default-make.html
+share/doc/papaya/extract-package.html
+share/doc/papaya/find-include-dir.html
+share/doc/papaya/get-tarball-version.html
+share/doc/papaya/index.html
+share/doc/papaya/insert-date-string.html
+share/doc/papaya/insert-executer.html
+share/doc/papaya/make-install.html
+share/doc/papaya/papaya-config.html
+share/doc/papaya/papaya-lib.pl.html
+share/doc/papaya/papaya-lib.sh.html
 share/doc/papaya/papaya.html
+share/doc/papaya/papaya_1.html
+share/doc/papaya/papaya_2.html
+share/doc/papaya/papaya_3.html
+share/doc/papaya/papaya_4.html
+share/doc/papaya/papaya_5.html
+share/doc/papaya/papaya_6.html
+share/doc/papaya/papaya_abt.html
+share/doc/papaya/papaya_ovr.html
+share/doc/papaya/papaya_toc.html
+share/doc/papaya/plain-to-html.html
+share/doc/papaya/recursive-make.html
+share/doc/papaya/search-exec.html
+share/doc/papaya/texi2html-wrapper.html
 @dirrm share/doc/papaya
