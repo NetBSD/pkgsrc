@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: apache.sh,v 1.5 2001/02/06 10:58:18 itojun Exp $
+# $NetBSD: apache.sh,v 1.6 2001/02/07 15:11:18 tron Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -30,7 +30,7 @@ then
 		;;
 
 	stop)
-		if [ -a -f ${pidfile} ]
+		if [ -f ${pidfile} ]
 		then
 			echo "Stopping ${name}."
 			${ctl_command} ${cmd} > /dev/null
