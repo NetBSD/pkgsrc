@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2003/12/18 14:18:16 adam Exp $
+
+--- configure.orig	2003-12-08 18:54:07.000000000 +0000
++++ configure
+@@ -4388,9 +4388,9 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.
+ 
+ # Use the tools built into the package, not the ones that are installed.
+ 
+-INTLTOOL_EXTRACT='$(top_builddir)/intltool-extract'
+-INTLTOOL_MERGE='$(top_builddir)/intltool-merge'
+-INTLTOOL_UPDATE='$(top_builddir)/intltool-update'
++INTLTOOL_EXTRACT='${PREFIX}/bin/intltool-extract'
++INTLTOOL_MERGE='${PREFIX}/bin/intltool-merge'
++INTLTOOL_UPDATE='${PREFIX}/bin/intltool-update'
+ 
+ 
+ 
