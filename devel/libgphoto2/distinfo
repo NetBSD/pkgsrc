@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/02/21 22:58:08 cube Exp $
+$NetBSD: distinfo,v 1.5 2005/01/05 15:52:52 drochner Exp $
 
-SHA1 (libgphoto2-2.1.4.tar.bz2) = aa437f6bff0f58049b84ded2f96fee89e124cb34
-Size (libgphoto2-2.1.4.tar.bz2) = 1819325 bytes
-SHA1 (patch-aa) = db286753834c8a792abc8d2d4b3d1ddfc1d78b19
-SHA1 (patch-ab) = fdf52725d0cf10bec23e98e936c277f71b3b4b5f
+SHA1 (libgphoto2-2.1.5.tar.gz) = b5576fe22dd8a83bf69238a79ad9496a8f081384
+Size (libgphoto2-2.1.5.tar.gz) = 2946757 bytes
+SHA1 (patch-ac) = c9dd7f2cd24eb273f6db2b93e9b54614101d6c2b
