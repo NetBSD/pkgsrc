@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/07/14 08:03:16 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/28 12:41:13 jdolecek Exp $
 
 MODNAME=		mssql
 CATEGORIES+=		databases
 COMMENT=		PHP4 extension for MS SQL databases
-
-DISTINFO_FILE=		${.CURDIR}/distinfo
 
 .include "../../www/php4/Makefile.module"
 

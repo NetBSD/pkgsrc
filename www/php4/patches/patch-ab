@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.15 2004/04/20 19:19:23 jdolecek Exp $
+$NetBSD: patch-ab,v 1.16 2004/09/28 12:41:13 jdolecek Exp $
 
---- scripts/phpize.in.orig	2003-11-14 04:21:15.000000000 +0100
-+++ scripts/phpize.in	2004-04-02 20:23:49.000000000 +0200
+--- scripts/phpize.in.orig	2004-06-19 22:37:55.000000000 +0200
++++ scripts/phpize.in	2004-09-28 11:35:45.000000000 +0200
 @@ -54,18 +54,25 @@
  
  touch install-sh mkinstalldirs missing
@@ -9,8 +9,8 @@ $NetBSD: patch-ab,v 1.15 2004/04/20 19:19:23 jdolecek Exp $
 -aclocal || exit 1
 -autoconf || exit 1
 -autoheader || exit 1
--test -x $builddir/build/shtool || chmod +x $builddir/build/shtool
--if test ! -x $builddir/build/shtool; then
+-test -x "$builddir/build/shtool" || chmod +x "$builddir/build/shtool"
+-if test ! -x "$builddir/build/shtool"; then
 -  echo "shtool at '$builddir/build/shtool' not executable. "
 -  echo "Make sure that the file exists and is executable and then rerun this script. "
 -  echo 
@@ -19,8 +19,8 @@ $NetBSD: patch-ab,v 1.15 2004/04/20 19:19:23 jdolecek Exp $
 +if [ -z "$AUTOCONF" ]; then AUTOCONF=autoconf; fi
 +if [ -z "$AUTOHEADER" ]; then AUTOHEADER=autoheader; fi
 +if [ -z "$LIBTOOLIZE" ]; then
-+	test -x $builddir/build/shtool || chmod +x $builddir/build/shtool
-+	if test ! -x $builddir/build/shtool; then
++	test -x "$builddir/build/shtool" || chmod +x "$builddir/build/shtool"
++	if test ! -x "$builddir/build/shtool"; then
 +	  echo "shtool at '$builddir/build/shtool' not executable. "
 +	  echo "Make sure that the file exists and is executable and then rerun this script. "
 +	  echo 
