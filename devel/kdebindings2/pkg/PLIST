@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 17:33:12 skrll Exp $
+include/dcopc/dcopc.h
+include/dcopc/dcopobject.h
+include/dcopc/marshal.h
+include/dcopc/util.h
+include/xkparts/gtkbrowserextension.h
+include/xkparts/gtkpart.h
+include/xkparts/kparthost.h
+include/xkparts/xpart.h
+include/xkparts/xparthost.h
+lib/libdcopc.a
+lib/libdcopc.la
+lib/libdcopc.so
+lib/libdcopc.so.1
+lib/libdcopc.so.1.0
+lib/libgtkxparts.a
+lib/libgtkxparts.la
+lib/libgtkxparts.so
+lib/libgtkxparts.so.0
+lib/libgtkxparts.so.0.0
+lib/libkdexparts.a
+lib/libkdexparts.la
+lib/libkdexparts.so
+lib/libkdexparts.so.1
+lib/libkdexparts.so.1.0
+@dirrm include/xkparts
+@dirrm include/dcopc
+@cwd ${LOCALBASE}
+@cwd ${LOCALBASE}
+${PYTHON_LIBDIR}/site-packages/pcop.la
+${PYTHON_LIBDIR}/site-packages/pcop.a
+${PYTHON_LIBDIR}/site-packages/libpyqt.so
+${PYTHON_LIBDIR}/site-packages/libpyqt.la
+${PYTHON_LIBDIR}/site-packages/libpyqt.a
+${PYTHON_LIBDIR}/site-packages/pcop.so
+${PYTHON_LIBDIR}/dcop.py
+${PYTHON_LIBDIR}/qt.py
