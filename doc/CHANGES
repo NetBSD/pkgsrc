@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9624 2005/03/25 12:59:51 chris Exp $
+$NetBSD: CHANGES,v 1.9625 2005/03/25 13:15:13 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1742,3 +1742,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sylpheed-claws-image-viewer to 1.0.4 [chris 2005-03-25]
 	Updated sylpheed-claws-trayicon to 1.0.4 [chris 2005-03-25]
 	Added sylpheed-devel-1.9.6 [chris 2005-03-25]
+	Updated horde to 3.0.3nb1 [adrianp 2005-03-25]
+	Updated imp to 4.0.1nb1 [adrianp 2005-03-25]
