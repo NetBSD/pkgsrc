@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.704 2001/03/29 22:08:21 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.705 2001/04/02 20:58:01 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -548,7 +548,6 @@ GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 .endif
 HEAD?=		/usr/bin/head
 ID?=		/usr/xpg4/bin/id
-IDENT?=		${LOCALBASE}/bin/ident
 LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
 LS?=		/usr/bin/ls
@@ -597,7 +596,6 @@ GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 ID?=		/usr/bin/id
-IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
@@ -642,7 +640,6 @@ GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 ID?=		/usr/bin/id
-IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
