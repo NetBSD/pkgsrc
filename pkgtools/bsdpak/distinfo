@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:11:29 agc Exp $
+
+MD5 (bsdpak-0.40.tar.gz) = 7e64d6ebd4868122c31f1de98551b736
+SHA1 (patch-aa) = 93314c8e2ec83531264a8304c5ae6bf7ddd3f797
