@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/06/17 11:39:35 grant Exp $
+
+SHA1 (mpgtx-1.0-1-src.tgz) = 677f7c09d876ad0429d42b06ca001a9034a69ac9
+Size (mpgtx-1.0-1-src.tgz) = 70063 bytes
+SHA1 (patch-aa) = 45812e7ad44f3815a696105365c4903456c7c50e
