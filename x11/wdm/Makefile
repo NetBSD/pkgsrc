@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/03 18:50:00 reed Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/25 23:19:21 minskim Exp $
 
 DISTNAME=		wdm-1.25
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		WINGs display manager
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES
@@ -56,10 +56,10 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps/wdm
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/wdm
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../wm/windowmaker/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../wm/windowmaker/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
