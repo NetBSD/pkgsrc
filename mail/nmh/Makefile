@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/03/11 08:57:50 skrll Exp $
+# $NetBSD: Makefile,v 1.47 2002/06/15 21:20:01 cjep Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-pager=${NMH_PAGER}
 .endif
 
 .if defined(KERBEROS)
-USE_KERBEROS=		# defined
+PKG_USE_KERBEROS=	# defined
 CONFIGURE_ARGS+=	--with-krb4
 .else
 CONFIGURE_ARGS+=	--without-krb4
