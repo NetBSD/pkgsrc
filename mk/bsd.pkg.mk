@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.659 2001/02/05 18:35:48 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.660 2001/02/12 01:17:24 sommerfeld Exp $
 #
 # This file is in the public domain.
 #
@@ -1931,6 +1931,8 @@ show-shlib-type:
 		case `${FILE} a.$$$$.out` in				\
 		*ELF*dynamically*)					\
 			sotype=ELF ;;					\
+		*shared*library*)					\
+			sotype="a.out" ;;				\
 		*dynamically*)						\
 			sotype="a.out" ;;				\
 		esac;							\
