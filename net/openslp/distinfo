@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/12/14 22:30:07 jlam Exp $
+$NetBSD: distinfo,v 1.4 2002/01/31 17:00:50 jlam Exp $
 
-SHA1 (openslp-1.0.6.tar.gz) = 1ce55daf3e74b383641bbc09a7694f4b6633843a
-Size (openslp-1.0.6.tar.gz) = 593530 bytes
+SHA1 (openslp-1.0.7.tar.gz) = 92d9ee09cf40b5316205e143833e870bb28798d0
+Size (openslp-1.0.7.tar.gz) = 598738 bytes
 SHA1 (patch-aa) = a324a75ca0482f127abafba39cfa00f37d9f4ba9
