@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/04/14 16:15:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/20 13:13:42 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	3
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -12,7 +11,7 @@ CONFLICTS=	timidity-[0-9]*
 DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 DEPENDS+=	trm>=0.2.1:../../audio/trm
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 
 REPLACE_PERL=		kscd/workman2cddb.pl
@@ -26,7 +25,8 @@ BUILDLINK_DEPENDS.xine-lib=	xine-lib>=1rc0anb1
 CONFIGURE_ARGS+=	--enable-audio=oss
 .endif
 
-CONFIGURE_ARGS+=	--disable-cdparanoia
+CONFIGURE_ARGS+=	--enable-cdparanoia
+CONFIGURE_ARGS+=	--with-cdparanoia=${BUILDLINK_PREFIX.cdparanoia}
 CONFIGURE_ARGS+=	--with-vorbis=${BUILDLINK_PREFIX.libvorbis}
 
 # Ensure we export symbols in the linked shared object.
@@ -44,13 +44,15 @@ PLIST_SUBST+=		XV_WORKAROUND=""
 PLIST_SUBST+=		XV_SUFFIX="so"
 .endif
 
-.include "../../audio/musicbrainz/buildlink2.mk"
-.include "../../audio/taglib/buildlink2.mk"
-.include "../../audio/arts/buildlink2.mk"
-.include "../../meta-pkgs/kde3/buildlink2.mk"
-.include "../../multimedia/xine-lib/buildlink2.mk"
-.include "../../x11/kdebase3/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../audio/arts/buildlink3.mk"
+.include "../../audio/cdparanoia/buildlink3.mk"
+.include "../../audio/musicbrainz/buildlink3.mk"
+.include "../../audio/taglib/buildlink3.mk"
+.include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../x11/kdebase3/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
