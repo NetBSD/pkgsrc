@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:31:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/28 14:53:43 hubertf Exp $
 bin/pkg_tarup
+bin/pkg_tarup_all
