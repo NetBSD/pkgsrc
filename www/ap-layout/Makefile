@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/25 02:55:22 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/24 19:45:30 jlam Exp $
 #
 
 DISTNAME=	mod_layout-3.0.4
@@ -12,8 +12,7 @@ HOMEPAGE=	http://software.tangent.org/
 COMMENT=	Apache module to wrap static or dynamic content
 
 DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-# For "apxs":
-BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
+USE_PERL5=	build	# for "apxs"
 
 LAYOUT_DIR=	${PREFIX}/share/httpd/htdocs/manual/mod/mod_layout
 

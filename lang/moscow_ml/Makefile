@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/07/23 20:52:24 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/07/24 19:45:24 jlam Exp $
 
 DISTNAME=       mos20src
 PKGNAME=        moscow_ml-2.00
@@ -11,7 +11,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.dina.kvl.dk/~sestoft/mosml.html
 COMMENT=	Moscow ML, a version of Standard ML
 
-BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
+USE_PERL5=	build
 
 ALL_TARGET=	clean world
 

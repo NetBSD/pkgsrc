@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/14 10:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/24 19:45:25 jlam Exp $
 #
 
 DISTNAME=	kanjipad-1.2.1
@@ -9,7 +9,7 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.gtk.org/~otaylor/kanjipad/index.html
 COMMENT=	Japanese handwriting recognition with GTK interface
 
-BUILD_DEPENDS+=	perl>=5.0:../../lang/perl5
+USE_PERL5=	build
 
 USE_BUILDLINK_ONLY=	YES
 

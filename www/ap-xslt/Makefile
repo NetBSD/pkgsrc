@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/22 22:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/24 19:45:30 jlam Exp $
 
 DISTNAME=	modxslt
 PKGNAME=	ap-xslt-1.1
@@ -13,8 +13,7 @@ COMMENT=	Simple, fast XSLT transformations for apache
 DEPENDS+=	apache{,6}-1.3.*:../../www/apache
 DEPENDS+=	sablotron-*:../../textproc/sablotron
 
-# For "apxs":
-BUILD_DEPENDS+= perl>=${PERL5_REQD}:../../lang/perl5
+USE_PERL5=	build	# for "apxs"
 
 do-install:
 		${LOCALBASE}/sbin/apxs -i ${WRKSRC}/mod_xslt.so

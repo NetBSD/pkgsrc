@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/07/03 13:18:30 abs Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/24 19:45:27 jlam Exp $
 
 DISTNAME=	rconfig-0.11
 CATEGORIES=	sysutils
@@ -10,8 +10,9 @@ COMMENT=	Manage configuration files for many machines via rdist trees
 
 DEPENDS+=	fping-[0-9]*:../../net/fping
 DEPENDS+=	freerdist-[0-9]*:../../net/rdist6
-DEPENDS+=	perl>=5.0:../../lang/perl5
 DEPENDS+=	srsh-[0-9]*:../../net/srsh
+
+USE_PERL5=	# defined
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rconfig.pl ${PREFIX}/sbin/rconfig
