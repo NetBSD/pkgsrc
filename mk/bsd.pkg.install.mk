@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.75 2005/01/28 07:39:13 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.76 2005/01/28 08:17:53 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -265,7 +265,7 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "	\$${CAT} > ./+DIRS << 'EOF_DIRS'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/dirs;		\
 	${ECHO} "";							\
-	case "${CONF_FILES}${CONF_FILES_PERMS}${SUPPORT_FILES}${SUPPORT_FILES_PERMS}" in \
+	case "${PKG_SYSCONFSUBDIR}${CONF_FILES}${CONF_FILES_PERMS}${SUPPORT_FILES}${SUPPORT_FILES_PERMS}" in \
 	"")	;;							\
 	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR} m" ;;			\
 	esac;								\
