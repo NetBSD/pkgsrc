@@ -1,0 +1,17 @@
+$NetBSD: patch-bt,v 1.1 2004/12/04 03:50:41 taya Exp $
+
+diff -ru ../Orig/mozilla/nsprpub/pr/src/io/prprf.c ./nsprpub/pr/src/io/prprf.c
+--- ../Orig/mozilla/nsprpub/pr/src/io/prprf.c	2004-03-09 12:18:19.000000000 +0900
++++ ./nsprpub/pr/src/io/prprf.c	2004-06-10 23:42:04.000000000 +0900
+@@ -53,6 +53,11 @@
+ */
+ #if (defined(LINUX) && defined(__x86_64__))
+ #define VARARGS_ASSIGN(foo, bar) __va_copy((foo), (bar))
++#elif (defined (__NetBSD__) && \
++	(defined(__amd64__) || \
++	(defined(__powerpc__) && __NetBSD_Version__ >= 105000000)))
++#include <stdarg.h>
++#define VARARGS_ASSIGN(foo, bar) __va_copy((foo), (bar))
+ #elif (defined(LINUX) && defined(__powerpc__)) || \
+     (defined(LINUX) && defined(__s390__)) || \
+     (defined(LINUX) && defined(__s390x__)) || \

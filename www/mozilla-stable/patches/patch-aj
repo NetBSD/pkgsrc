@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2004/06/05 10:20:55 taya Exp $
+$NetBSD: patch-aj,v 1.2 2004/12/04 03:50:40 taya Exp $
 
 diff -ru ../Orig/mozilla/gfx/src/freetype/nsFreeType.h ./gfx/src/freetype/nsFreeType.h
---- ../Orig/mozilla/gfx/src/freetype/nsFreeType.h	2003-04-23 01:25:02.000000000 +0900
-+++ ./gfx/src/freetype/nsFreeType.h	2004-06-05 15:49:06.000000000 +0900
+--- ../Orig/mozilla/gfx/src/freetype/nsFreeType.h	2004-04-17 06:31:42.000000000 +0900
++++ ./gfx/src/freetype/nsFreeType.h	2004-06-10 23:03:07.000000000 +0900
 @@ -104,13 +104,13 @@
  typedef FT_Error (*FT_New_Face_t)(FT_Library, const char*, FT_Long, FT_Face*);
  typedef FT_Error (*FT_Set_Charmap_t)(FT_Face face, FT_CharMap  charmap);
@@ -18,10 +18,10 @@ diff -ru ../Orig/mozilla/gfx/src/freetype/nsFreeType.h ./gfx/src/freetype/nsFree
                         FTC_Face_Requester, FT_Pointer, FTC_Manager*);
 -typedef FT_Error (*FTC_Image_Cache_New_t)(FTC_Manager, FTC_Image_Cache*);
 +typedef FT_Error (*FTC_Image_Cache_New_t)(FTC_Manager, FTC_ImageCache*);
- 
- typedef FT_ULong (*FT_Get_First_Char_t)(FT_Face, FT_UInt*);
- typedef FT_ULong (*FT_Get_Next_Char_t)(FT_Face, FT_ULong, FT_UInt*);
-@@ -157,7 +157,7 @@
+ // #ifdef MOZ_SVG
+ typedef FT_Error (*FT_Glyph_Transform_t)(FT_Glyph, FT_Matrix*, FT_Vector*);
+ typedef FT_Error (*FT_Get_Kerning_t)
+@@ -165,7 +165,7 @@
    FT_Outline_Decompose_t    nsFT_Outline_Decompose;
    FT_Set_Charmap_t          nsFT_Set_Charmap;
    FTC_Image_Cache_Lookup_t  nsFTC_Image_Cache_Lookup;
@@ -30,7 +30,7 @@ diff -ru ../Orig/mozilla/gfx/src/freetype/nsFreeType.h ./gfx/src/freetype/nsFree
    FTC_Manager_Done_t        nsFTC_Manager_Done;
    FTC_Manager_New_t         nsFTC_Manager_New;
    FTC_Image_Cache_New_t     nsFTC_Image_Cache_New;
-@@ -195,7 +195,7 @@
+@@ -213,7 +213,7 @@
    PRLibrary      *mSharedLib;
    FT_Library      mFreeTypeLibrary;
    FTC_Manager     mFTCacheManager;

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.2 2003/11/27 23:36:42 taya Exp $
+# $NetBSD: moz-install,v 1.3 2004/12/04 03:50:40 taya Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -35,7 +35,13 @@ done
 # install DSO
 for i in `${SED} -n -e '/^@comment begin DSO$/,/^@comment end DSO$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
-	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${src} ${PREFIX}/$i
+	${MOZ_INSTALL_LIB} ${WRKSRC}/${src} ${PREFIX}/$i
+done
+
+# install PKGCONFIG
+for i in `${SED} -n -e '/^@comment begin PKGCONFIG$/,/^@comment end PKGCONFIG$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | ${SED} -e "s@lib/pkgconfig@build/unix@"`;
+	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
 # install DATA
@@ -50,6 +56,12 @@ for i in `${SED} -n -e '/^@comment begin INCLUDE$/,/^@comment end INCLUDE$/p' ${
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
+# install INCLUDE-PUBLIC
+for i in `${SED} -n -e '/^@comment begin INCLUDE-PUBLIC$/,/^@comment end INCLUDE-PUBLIC$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/public@"`;
+	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
+done
+
 ${RM} -f ${TMP_PLIST}
 #
 #
@@ -57,3 +69,8 @@ ${RM} -f ${TMP_PLIST}
 cd ${PREFIX}/lib/${MOZILLA}
 ${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regxpcom
 ${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regchrome
+
+#
+# remove generated user conf directory ${WRKDIR}/.mozilla
+#
+${RM} -rf ${WRKDIR}/.mozilla
