@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/10/09 14:16:55 itojun Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/05/05 16:33:47 taca Exp $
 bin/gpg
 bin/gpgsplit
 bin/gpgv
@@ -24,8 +24,10 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnupg.mo
@@ -33,7 +35,9 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnupg.mo
 @dirrm share/gnupg
 @dirrm libexec/gnupg
