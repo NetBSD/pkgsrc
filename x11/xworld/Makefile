@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/28 17:21:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/17 15:26:31 fredb Exp $
 #
 
 DISTNAME=	xworld-2.0
@@ -10,5 +10,7 @@ MAINTAINER=	wennmach@geo.Uni-Koeln.DE
 #HOMEPAGE=
 
 HAS_CONFIGURE=	yes
+
+CONFIGURE_ENV+=	LDLIBS="-lm ${LDFLAGS} -lX11"
 
 .include "../../mk/bsd.pkg.mk"
