@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:13 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/26 06:49:47 jlam Exp $
 #
 
 DISTNAME=		Data-Buffer-0.04
@@ -12,10 +12,11 @@ MAINTAINER=		mcr@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module for low-level binary buffer
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Data/Buffer/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

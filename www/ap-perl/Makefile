@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/23 10:53:12 martti Exp $
+# $NetBSD: Makefile,v 1.17 2001/11/26 06:50:28 jlam Exp $
 #
 
 DISTNAME=		mod_perl-1.25
@@ -12,15 +12,17 @@ HOMEPAGE=		http://perl.apache.org/
 COMMENT=		Module that embeds a Perl interpreter into Apache
 
 DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
-DEPENDS+=		apache{,6}-1.3.*:../../www/apache
 DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 LIBPERL5_REQD=		${PERL5_REQD}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
 
+REPLACE_BUILDLINK=	blib/lib/Apache/MyConfig.pm
+REPLACE_BUILDLINK_SED=	-e "s|${APXS}|${PREFIX}/sbin/apxs|g"
+
 MAKE_PARAMS+=		USE_APXS=1
-MAKE_PARAMS+=		WITH_APXS=${PREFIX}/sbin/apxs
+MAKE_PARAMS+=		WITH_APXS=${APXS}
 MAKE_PARAMS+=		EVERYTHING=1
 
 do-configure:
@@ -31,6 +33,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod
 
+.include "../../lang/perl5/buildlink.mk"
+.include "../../www/apache/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if exists(${PERL5_ARCHLIB}/DynaLoader_pic.o)

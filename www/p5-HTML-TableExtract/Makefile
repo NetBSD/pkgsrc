@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/30 13:34:47 damon Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/26 06:50:36 jlam Exp $
 
 DISTNAME=		HTML-TableExtract-1.06
 PKGNAME=		p5-${DISTNAME}
@@ -11,10 +11,11 @@ COMMENT=		perl5 module to simplify extracting HTML tables
 
 DEPENDS+=		p5-HTML-Parser>=3.08:../../www/p5-HTML-Parser
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML-TableExtract/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/10/18 15:20:28 veego Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/26 06:50:07 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/09/14 02:54:03 jfitz Exp
 #
 
@@ -12,10 +12,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Array-PrintCols/PrintCols.html
 COMMENT=		perl5 module to print arrays of elements in sorted columns
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Array/PrintCols/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

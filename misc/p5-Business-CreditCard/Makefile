@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/18 15:20:28 veego Exp $
+# $NetBSD: Makefile,v 1.11 2001/11/26 06:50:07 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Business-CreditCard/CreditCard.html
 COMMENT=		perl5 module to validate/generate credit card checksums/names
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Business/CreditCard/.packlist
 
 pre-configure:
@@ -21,4 +21,5 @@ pre-configure:
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

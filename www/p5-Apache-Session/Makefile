@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:47 veego Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:30 jlam Exp $
 #
 
 DISTNAME=		Apache-Session-1.53
@@ -13,10 +13,11 @@ COMMENT=		perl5 module to provide persistent storage
 DEPENDS+=		p5-Storable>=1.0.11:../../devel/p5-Storable/
 DEPENDS+=		p5-Digest-MD5>=2.16:../../security/p5-Digest-MD5/
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Session/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
