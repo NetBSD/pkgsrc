@@ -1,0 +1,30 @@
+! $NetBSD: Rxvt,v 1.1 2001/08/06 06:09:56 martin Exp $
+!
+! This is a default Rxvt app defaults file that just disables greek keyboard
+! support and multibyte character encodings. We build rxvt with support
+! for these, but since the current rxvt version does not properly switch
+! these features on or off at runtime, we controll them via resources.
+!
+! To enable one of these features, just comment the current active one
+! and uncomment the one you prefere.
+
+! ---- NOTE -------------------
+! Greek keyboard support is not compiled into rxvt, as the following
+! resource is documented but not implemented in the current version.
+! ---- NOTE -------------------
+! greek keyboard support:
+! default:
+! Rxvt.greek_keyboard:	iso
+! Disable greek keyboard support (by disabling the toggle key):
+! Rxvt.greektoggle_key:	VoidSymbol
+! Enable default greek keyboard support: use ModeSwitch to switch
+! into greek input mode:
+! Rxvt.greektoggle_key:	ModeSwitch
+
+! Select multibyte character sheme
+Rxvt.multichar_encoding:	noenc
+! Rxvt.multichar_encoding:	eucj
+! Rxvt.multichar_encoding:	sjis
+! Rxvt.multichar_encoding:	big5
+! Rxvt.multichar_encoding:	gb
+! Rxvt.multichar_encoding:	kr
