@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.pre,v 1.1.1.1 2000/07/30 00:19:55 tsarna Exp $
-lib/libwxPyHelpers.so.0.0.0
+@comment $NetBSD: PLIST.pre,v 1.2 2000/10/26 16:34:17 tsarna Exp $
+lib/libwxPyHelpers.so.1.0.0
