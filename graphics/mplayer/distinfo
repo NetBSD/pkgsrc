@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/12/21 23:38:52 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2001/12/21 23:58:27 zuntum Exp $
 
 SHA1 (MPlayer-0.18pre.tgz) = ac440d64d69e26ca9bbc4df8b451c27857e1bd1a
 Size (MPlayer-0.18pre.tgz) = 1012232 bytes
@@ -24,7 +24,6 @@ SHA1 (patch-as) = 22efcab70397cd2fbeb1310b3a60fd499ae6e932
 SHA1 (patch-at) = dececd42336eadf991ec4029e001099554d01ed5
 SHA1 (patch-au) = ebb03b8b115d67386c99c2d1d3d9a76719687186
 SHA1 (patch-av) = 2a7c2650b16357ad1aafa055a62b09a9ac89941a
-SHA1 (patch-aw) = f25c6865c14d57d604b03098f1c99021816b0331
 SHA1 (patch-ax) = 92f88b1e7542d88e39784d3c68b861146f420eab
 SHA1 (patch-ay) = 68af26124eb96348098b382cb70d44134fe9b2d2
 SHA1 (patch-az) = a7b18e6efcea21d057e6cb184002a56aba0c78f8
