@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:34 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/05/06 09:51:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/12/08 15:45:27 tg Exp
 #
 
-DISTNAME=		rman-3.0.4
+DISTNAME=		rman-3.0.5
 CATEGORIES=		textproc
 MASTER_SITES=		ftp://ftp.cs.berkeley.edu/ucb/people/phelps/tcltk/
 EXTRACT_SUFX=		.tar.Z
