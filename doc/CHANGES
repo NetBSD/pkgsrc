@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8470 2004/12/27 11:26:42 wulf Exp $
+$NetBSD: CHANGES,v 1.8471 2004/12/27 11:29:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6584,3 +6584,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated db4 to 4.3.21 [jlam 2004-12-27]
 	Added qbrew-0.3.4 [wulf 2004-12-27]
 	Added gimp-docs-2.0.6 [wulf 2004-12-27]
+	Removed gnumeric0 [wiz 2004-12-27]
