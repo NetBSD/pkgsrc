@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/13 13:51:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 21:31:02 grant Exp $
 #
 
 DISTNAME=		guile-gtk-0.19
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.ping.de/sites/zagadka/guile-gtk/download/ \
 			http://erin.linuxbox.com/guile-gtk/download/ \
 			http://linux.cem.itesm.mx/~jarios/guile-gtk/download/
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.ping.de/sites/zagadka/guile-gtk/
 COMMENT=		Library to make GTK accesible from guile
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/10/25 18:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2003/07/17 21:26:58 grant Exp $
 #
 
 DISTNAME=	plptools-0.6
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.to.com/pub/psion/tarballs/
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	FTP-like and NFS-like access tools to talk to the PSION
 
 USE_BUILDLINK2=		YES

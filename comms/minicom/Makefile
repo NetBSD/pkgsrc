@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/07/14 08:25:40 tron Exp $
+# $NetBSD: Makefile,v 1.36 2003/07/17 21:26:52 grant Exp $
 
 DISTNAME=	minicom-1.83.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_BACKUP}
 #MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
 #		http://www.pp.clinet.fi/~walker/
 
-MAINTAINER=     tech-pkg@netbsd.org
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/projects/minicom/
 COMMENT=	MS-DOS Telix serial communication program "workalike"
 

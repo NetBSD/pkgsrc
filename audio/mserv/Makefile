@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/16 12:07:20 abs Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:22:59 grant Exp $
 #
 
 DISTNAME=	mserv-0.33
@@ -6,7 +6,7 @@ PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mserv.org/download/
 
-MAINTAINER=	martin@netbsd.org
+MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://www.mserv.org/
 COMMENT=	local centralised music server environment
 

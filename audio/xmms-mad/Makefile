@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:50:36 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:24:12 grant Exp $
 #
 
 DISTNAME=		xmms-mad-0.0.9
@@ -6,7 +6,7 @@ PKGREVISION=		5
 CATEGORIES=		audio
 MASTER_SITES=		http://www.superduper.net/downloads/xmms-mad/
 
-MAINTAINER=		jmcneill@netbsd.org
+MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://www.superduper.net/xmms-mad/
 COMMENT=		Input plugin for XMMS that uses libmad
 

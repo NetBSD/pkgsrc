@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/13 13:50:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:23:26 grant Exp $
 #
 
 DISTNAME=	sweep-0.8.2
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sweep/}
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://sweep.sourceforge.net/
 COMMENT=	Full-featured digital sound editor
 

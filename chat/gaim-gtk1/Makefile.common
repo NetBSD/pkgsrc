@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/07/13 13:50:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/07/17 21:25:44 grant Exp $
 #
 
 DISTNAME=	gaim-0.59.8
@@ -7,7 +7,7 @@ CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/} \
 		ftp://ftp.marko.net/pub/gaim/
 
-MAINTAINER=	rafal@netbsd.org
+MAINTAINER=	rafal@NetBSD.org
 HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK1-based client for the AOL Instant Messenger chat system
 

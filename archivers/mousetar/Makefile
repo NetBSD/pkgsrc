@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:21:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:21:28 grant Exp $
 #
 
 DISTNAME=	mousetar-20021217
 WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/mouse/tar/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/mouse/tar/
 DISTFILES=	tar.c tar.man
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	der Mouse's version of tar program
 

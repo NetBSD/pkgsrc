@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:28:14 grant Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Java interface to Sleepycat Software's Berkeley DB version 3
 

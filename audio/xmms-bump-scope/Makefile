@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:50:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:23:54 grant Exp $
 #
 
 DISTNAME=	bump_scope-0.0.3
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://staff.xmms.org/zinx/xmms/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://staff.xmms.org/zinx/xmms/
 COMMENT=	Moving light embossing occiliscope
 

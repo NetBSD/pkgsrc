@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2002/08/31 03:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:22:39 grant Exp $
 #
 
 DISTNAME=	libcdaudio-0.99.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcdaudio/}
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://libcdaudio.sourceforge.net
 COMMENT=	Multi-platform CD player development library
 

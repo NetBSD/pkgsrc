@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:21:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:22:50 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/01/07 14:58:04 torstenb Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	audio
 MASTER_SITES=   http://www.iuma.com/IUMA/ftp/audio_utils/mpeg_players/Workstations/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	MPEG audio player/decoder for layer I and II MPEG audio streams
 
 PATCH_STRIP=	-p2

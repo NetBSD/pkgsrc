@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2001/07/05 12:01:32 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:24:43 grant Exp $
 #
 
 DISTNAME=	acs-0.29
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/tools/acs/index.html
 COMMENT=	general purpose circuit simulator
 

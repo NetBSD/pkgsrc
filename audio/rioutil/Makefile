@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/05 12:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:23:15 grant Exp $
 #
 
 DISTNAME=	rioutil-1.3.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rioutil/}
 
-MAINTAINER=	schmonz@netbsd.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://rioutil.sourceforge.net/
 COMMENT=	program and library to interface with Rio 600, 800, Nike psa[play
 

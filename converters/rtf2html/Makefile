@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/12 13:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:27:34 grant Exp $
 #
 
 DISTNAME=	rtf2html
@@ -6,7 +6,7 @@ PKGNAME=	rtf2html-1.1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.45.free.net/~vitus/ice/misc/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.45.free.net/~vitus/ice/catdoc/
 COMMENT=	Rich Text to HTML file converter
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/26 18:01:27 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:23:38 grant Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://linux-speakup.org/pub/linux/goodies/trplayer/
 EXTRACT_SUFX=	-1.i386.rpm
 
-MAINTAINER=	fredb@netbsd.org
+MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.linux-speakup.org/trplayer.html
 COMMENT=	Text-mode Realmedia Player
 

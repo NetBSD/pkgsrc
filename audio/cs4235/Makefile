@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:22:02 grant Exp $
 #
 
 DISTNAME=	cs4235-20001009
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/cs4235
 CATEGORIES=	audio sysutils
 MASTER_SITES=	http://invisible.yi.org/~jmcneill/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://invisible.yi.org/~jmcneill/
 COMMENT=	Modifies the 3D mode on Crystal CS4235 sound cards
 

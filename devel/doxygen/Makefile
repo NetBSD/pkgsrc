@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/16 12:07:18 martti Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:30:21 grant Exp $
 
 DISTNAME=		doxygen-1.3.2.src
 PKGNAME=		doxygen-1.3.2
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.stack.nl/pub/users/dimitri/
 
-MAINTAINER=		groo@netbsd.org
+MAINTAINER=		groo@NetBSD.org
 HOMEPAGE=		http://www.doxygen.org/
 COMMENT=		Documentation system for C++, Java, IDL and C
 

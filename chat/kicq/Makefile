@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2003/07/13 17:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 21:25:56 grant Exp $
 
 DISTNAME=		kicq-1.0.0
 PKGREVISION=		2
 CATEGORIES=		chat kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kicq/}
 
-MAINTAINER=		magick@netbsd.org
+MAINTAINER=		magick@NetBSD.org
 HOMEPAGE=		http://kicq.sourceforge.net/
 COMMENT=		KDE ICQ client
 

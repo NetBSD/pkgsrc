@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2002/08/05 16:43:35 wennmach Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:29:53 grant Exp $
 
 DISTNAME=	chkpt-1.7.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://gutemine.geo.uni-koeln.de/pub/chkpt/ \
 		ftp://ftp.Uni-Koeln.DE/misc/
 
-MAINTAINER=	wennmach@netbsd.org
+MAINTAINER=	wennmach@NetBSD.org
 #HOMEPAGE=
 COMMENT=	User-level checkpointing library
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/05 10:14:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:29:24 grant Exp $
 #
 
 DISTNAME=	adocman-0.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sitedocs/}
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://sitedocs.sourceforge.net/
 COMMENT=	DocManager operation automation tool
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:21:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:27:58 grant Exp $
 #
 
 DISTVERSION=		1.3.0.0
 DISTFILES=		# none
 
-MAINTAINER=		tech-pkg@netbsd.org
-HOMEPAGE=		http://www.netbsd.org/
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Cross-compile environment for a.out NetBSD/m68k (static binaries only)
 
 WRKSRC=			${WRKDIR}/${BINUTILS_DISTNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:50:31 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:23:49 grant Exp $
 #
 
 DISTNAME=	xhippo-3.3
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	audio x11
 MASTER_SITES=	${MASTER_SITE_GNU:=xhippo/}
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/xhippo/xhippo.html
 COMMENT=	Generic playlist manager for UNIX
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/01/18 09:34:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:22:04 grant Exp $
 #
 
 DISTNAME=	disc-cover-1.4.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://home.wanadoo.nl/~jano/files/
 
-MAINTAINER=	drochner@netbsd.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://home.wanadoo.nl/~jano/disc-cover.html
 COMMENT=	generation of CD covers
 

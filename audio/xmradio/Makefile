@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2002/09/21 21:07:03 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 21:24:21 grant Exp $
 
 DISTNAME=	xmradio-1.2
 CATEGORIES=	audio
 MASTER_SITES=	http://core.de/~coto/radio/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://core.de/~coto/xmradio.html
 COMMENT=	Radio applicaton for Brooktree 848 compatible TV cards
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:21:08 grant Exp $
 
 DISTNAME=	cxunzip-0.96
 PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	http://gurb.ton.tut.fi/gnome/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gurb.ton.tut.fi/gnome
 COMMENT=	Cloned Xunzip is a GNOME zip-archive uncompressing program
 

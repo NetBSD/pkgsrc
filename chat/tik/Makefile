@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/10 01:28:14 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:26:19 grant Exp $
 #
 
 DISTNAME=		tik-0.90
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/tik
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tik/}
 
-MAINTAINER=		grant@netbsd.org
+MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://tik.sourceforge.net/
 COMMENT=		Tcl/Tk AOL Instant Messenger client
 

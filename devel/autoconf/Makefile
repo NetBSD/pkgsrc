@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2003/06/19 22:35:36 seb Exp $
+# $NetBSD: Makefile,v 1.41 2003/07/17 21:29:34 grant Exp $
 
 DISTNAME=		autoconf-2.57
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
-MAINTAINER=		wiz@netbsd.org
+MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=		Generates automatic source code configuration scripts
 

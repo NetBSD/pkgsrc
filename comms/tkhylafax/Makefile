@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/02 01:21:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/07/17 21:27:02 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.sgi.com/sgi/fax/contrib/tkhylafax/ \
 		ftp://ftp.tuwien.ac.at/infosys/fax/hylafax/contrib/tkhylafax/ \
 		http://gd.tuwien.ac.at/infosys/fax/hylafax/contrib/tkhylafax/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.elgro.demon.co.uk/resources.html
 COMMENT=	Tcl/tk interface to Sam Leffler's fax package
 

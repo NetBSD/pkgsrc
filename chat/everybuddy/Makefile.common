@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2003/06/23 14:23:20 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/07/17 21:25:40 grant Exp $
 
 DISTNAME=	everybuddy-0.2.0
 CATEGORIES=	chat
 MASTER_SITES=	http://www.everybuddy.com/files/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.everybuddy.com/
 COMMENT=	Universal Instant Messaging Client
 

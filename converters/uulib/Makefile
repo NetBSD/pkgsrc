@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/06/02 01:21:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/17 21:27:42 grant Exp $
 #
 
 DISTNAME=       uudeview-0.5.18
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/uulib
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
 

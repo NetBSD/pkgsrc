@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/12/28 21:22:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:29:10 grant Exp $
 #
 
 DISTNAME=	xmysql-1.10
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	databases x11
 MASTER_SITES=	http://web.wt.net/~dblhack/
 
-MAINTAINER=	bad@netbsd.org
+MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://web.wt.net/~dblhack
 COMMENT=	Graphical front end to the MySQL database engine
 
