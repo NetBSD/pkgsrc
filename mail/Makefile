@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2001/05/16 08:20:25 jlam Exp $
+# $NetBSD: Makefile,v 1.82 2001/05/29 05:47:24 tron Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -64,6 +64,7 @@ SUBDIR+=	teapop
 SUBDIR+=	tnef
 SUBDIR+=	vm
 SUBDIR+=	wl
+SUBDIR+=	wmbiff
 SUBDIR+=	wmmail
 SUBDIR+=	xbuffy
 SUBDIR+=	xfmail
