@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/04/12 14:32:50 martti Exp $
+# $NetBSD: Makefile,v 1.47 2002/07/03 21:59:07 hubertf Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -7,22 +7,30 @@
 
 DISTNAME=	abiword-${ABIWORD_VERS}
 PKGNAME=	abiword-personal-${ABIWORD_VERS}
-ABIWORD_VERS=	0.99.5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
-DIST_SUBDIR=	abisuite
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.abisource.com/
 COMMENT=	Open Source cross-platform word processor
 
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 
-USE_BUILDLINK_ONLY=	# defined
+DIST_SUBDIR=	abisuite
+ABIWORD_VERS=	1.0.2
 
+USE_BUILDLINK_ONLY=	# defined
 USE_X11=	# defined
 USE_GMAKE=	# defined
-ALL_TARGET=	compile canonical
+HAS_CONFIGURE=	# defined
+MAKEFILE=	GNUmakefile
+
+CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-psiconv=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--without-libwmf
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 
 OS_CFLAGS=	${CFLAGS}
 
@@ -30,22 +38,12 @@ OS_CFLAGS=	${CFLAGS}
 OS_CFLAGS+=	-DHAVE_INTTYPE_H=1
 .endif
 
-# AbiWord expects the iconv functions to be in the system libraries, so
-# unconditionally link against the pkgsrc libiconv.so.
-#
-XLDFLAGS=	${LDFLAGS} -liconv
-
 MAKE_ENV+=	OS_CFLAGS="${OS_CFLAGS}"
-MAKE_ENV+=	XLDFLAGS="${XLDFLAGS}"
-MAKE_ENV+=	prefix="${PREFIX}"
 
 MAKE_FLAGS+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
 MAKE_FLAGS+=	UNIX_CAN_BUILD_STATIC=0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/abi
-
-INSTALL_FILE=		${WRKDIR}/INSTALL
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
 FILES_SUBST=		LN=${LN:Q}
 FILES_SUBST+=		MKDIR=${MKDIR:Q}
@@ -54,16 +52,10 @@ FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-
-post-install:
-	${CHMOD} -R a+r ${PREFIX}/share/AbiSuite
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
-
 .include "../../converters/libiconv/buildlink.mk"
+.include "../../converters/psiconv/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
+.include "../../textproc/expat/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
