@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.12 2005/02/09 09:50:26 abs Exp $
+# $Id: pkg_chk.sh,v 1.13 2005/02/28 00:43:48 wiz Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -361,24 +361,25 @@ usage()
 	echo
     fi
     echo 'Usage: pkg_chk [opts]
-	-B      Check the "Build version" of packages (implies -i)
-	-P dir  Set PACKAGES dir (overrides any other setting)
-	-C conf Use pkgchk.conf file 'conf'
-	-D tags Comma separated list of additional pkgchk.conf tags to set
-	-L file Redirect output from commands run into file (should be fullpath)
-	-U tags Comma separated list of pkgchk.conf tags to unset
 	-a      Add all missing packages (implies -c)
+	-B      Check the "Build version" of packages (implies -i)
 	-b      Install binary packages
+	-C conf Use pkgchk.conf file 'conf'
 	-c      Check installed packages against pkgchk.conf
+	-D tags Comma separated list of additional pkgchk.conf tags to set
 	-f      Perform a 'make fetch' for all required packages
 	-g      Generate an initial pkgchk.conf file
 	-h      This help
 	-i	Check versions of installed packages (not using pkgchk.conf)
 	-k	Continue with further packages if errors are encountered
+	-L file Redirect output from commands run into file (should be fullpath)
 	-l	List binary packages including dependencies (implies -c)
+	-N	List installed packages for which a newer version is in TODO
 	-n	Display actions that would be taken, but do not perform them
+	-P dir  Set PACKAGES dir (overrides any other setting)
 	-r	Recursively remove mismatches (use with care) (implies -i)
 	-s      Install packages by building from source
+	-U tags Comma separated list of pkgchk.conf tags to unset
 	-u      Update all mismatched packages (implies -i)
 	-v      Verbose
 
@@ -399,31 +400,32 @@ verbose()
     fi
     }
 
-args=$(getopt BC:D:L:P:U:abcfghiklnrsuv $*)
+args=$(getopt BC:D:L:P:U:abcfghiklNnrsuv $*)
 if [ $? != 0 ]; then
     opt_h=1
 fi
 set -- $args
 while [ $# != 0 ]; do
     case "$1" in
-	-B )    opt_B=1 ; opt_i=1 ;;
-	-C )	opt_C="$2" ; shift;;
-	-D )	opt_D="$2" ; shift;;
-	-L )	opt_L="$2" ; shift;;
-	-P )	opt_P="$2" ; shift;;
-	-U )	opt_U="$2" ; shift;;
 	-a )	opt_a=1 ; opt_c=1 ;;
+	-B )    opt_B=1 ; opt_i=1 ;;
 	-b )	opt_b=1 ;;
+	-C )	opt_C="$2" ; shift;;
 	-c )	opt_c=1 ;;
+	-D )	opt_D="$2" ; shift;;
 	-f )	opt_f=1 ;;
 	-g )	opt_g=1 ;;
 	-h )	opt_h=1 ;;
 	-i )	opt_i=1 ;;
 	-k )	opt_k=1 ;;
+	-L )	opt_L="$2" ; shift;;
 	-l )	opt_l=1 ;;
+	-N )	opt_N=1 ;;
 	-n )	opt_n=1 ;;
+	-P )	opt_P="$2" ; shift;;
 	-r )	opt_r=1 ; opt_i=1 ;;
 	-s )	opt_s=1 ;;
+	-U )	opt_U="$2" ; shift;;
 	-u )	opt_u=1 ; opt_i=1 ;;
 	-v )	opt_v=1 ;;
 	-- )	shift; break ;;
@@ -435,9 +437,9 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_l" ];
+if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_N" -a -z "$opt_l" ];
 then
-    usage "Must specify at least one of -a, -c, -g, -i, -l, or -u";
+    usage "Must specify at least one of -a, -c, -g, -i, -l, -N, or -u";
 fi
 
 if [ -n "$opt_h" -o $# != 0 ];then
@@ -489,6 +491,22 @@ if [ -n "$opt_P" ] ; then
 fi
 if [ -d $PACKAGES/All ] ; then
     PACKAGES="$PACKAGES/All"
+fi
+
+if [ -n "$opt_N" ]; then
+	${PKG_INFO} | \
+		${SED} -e "s/[ 	].*//" -e "s/-[^-]*$//" \
+		       -e "s/py[0-9][0-9]pth-/py-/" \
+		       -e "s/py[0-9][0-9]-/py-/" | \
+		while read a
+		do
+			b=$(grep "o $a-[0-9]" $PKGSRCDIR/doc/TODO | \
+				sed -e "s/[ 	]*o //")
+		if [ "$b" ]
+		then
+			echo $a: $b
+		fi
+	done
 fi
 
 if [ -n "$opt_b" -a -z "$opt_s" -a -d $PACKAGES ] ; then
