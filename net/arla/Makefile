@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/25 04:18:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2001/03/29 21:02:57 wennmach Exp $
 #
 
 DISTNAME=		arla-0.34.5
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 COMMENT=		Free AFS implementation from KTH
 
 DEPENDS+=		kth-krb4-1.0.1:../../security/kth-krb4
+
+CONFLICTS+=		lwp-* rx-*
 
 OSVERSION_SPECIFIC=	yes
 GNU_CONFIGURE=		yes
