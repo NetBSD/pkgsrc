@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/10 16:55:13 abs Exp $
+bin/vncviewer
+share/doc/vncviewer/README
+@dirrm share/doc/vncviewer
