@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/10/25 13:32:59 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/21 04:19:45 snj Exp $
 #
 
 DISTNAME=	aterm-0.4.2
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://aterm.sourceforge.net/
 COMMENT=	Aterm (Afterstep XVT) - a VT102 emulator for the X window system
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
@@ -61,8 +61,8 @@ CONFIGURE_ARGS+=--enable-ttygid
 SPECIAL_PERMS=	${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
 .endif
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
