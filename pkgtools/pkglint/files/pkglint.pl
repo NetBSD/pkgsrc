@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.3 1998/10/23 21:16:20 tsarna Exp $
+# $NetBSD: pkglint.pl,v 1.4 1998/11/11 12:07:44 agc Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -170,8 +170,8 @@ foreach $i (@checker) {
 		$proc = $checker{$i};
 		&$proc($i) || &perror("Cannot open the file $i\n");
 		if ($i !~ /^patches\//) {
-			&checklastline($i)
-				|| &perror("Cannot open the file $i\n");
+			&checklastline($i) ||
+				&perror("Cannot open the file $i\n");
 		}
 	}
 }
@@ -242,7 +242,7 @@ sub checkplist {
 	local($inforemoveseen, $infoinstallseen, $infoseen) = (0, 0, 0);
 	local($infobeforeremove, $infoafterinstall) = (0, 0);
 	local($infooverwrite) = (0);
-	local($rcsidseen) = (0);
+	local($rcsidseen) = 0;
 
 	open(IN, "< $portdir/$file") || return 0;
 	while (<IN>) {
@@ -414,7 +414,7 @@ sub checklastline {
 			"terminated by \\n.");
 	}
 	if ($whole =~ /\n([ \t]*\n)+$/) {
-		&perror("WARN: $file seems to have unnecessery blank lines ".
+		&perror("WARN: $file seems to have unnecessary blank lines ".
 			"at the last part.");
 	}
 
@@ -423,11 +423,13 @@ sub checklastline {
 
 sub checkpatch {
 	local($file) = @_;
+	local($rcsidseen) = 0;
 	local($whole);
 
 	open(IN, "< $portdir/$file") || return 0;
 	$whole = '';
 	while (<IN>) {
+		$rcsidseen++ if /\$$rcsidstr[:\$]/;
 		$whole .= $_;
 	}
 	if ($committer && $whole =~ /.\$([A-Za-z0-9]+)[:\$]/) { # XXX
@@ -437,7 +439,10 @@ sub checkpatch {
 		&perror("WARN: $file includes possible RCS tag \"\$$1\$\". ".
 			"use binary mode (-ko) on commit/import.");
 	}
-
+	if (!$rcsidseen) {
+		&perror("FATAL: RCS tag \"\$$rcsidstr\$\" must be present ".
+			"in patch $file.")
+	}
 	close(IN);
 }
 
@@ -955,9 +960,7 @@ EOF
 
 				# check port dir existence
 				$k = (split(':', $k))[1];
-				if ($osname eq "NetBSD") {
-					$k =~ s/..\/../$ENV{'PORTSDIR'}/;
-				} else {
+				if ($osname ne "NetBSD") {
 					$k =~ s/\${PORTSDIR}/$ENV{'PORTSDIR'}/;
 				}
 				if (! -d $k) {
