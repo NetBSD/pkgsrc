@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.10 2003/03/23 01:14:08 jmc Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.11 2003/03/23 01:24:49 jmc Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -341,3 +341,36 @@ x11/lablgtk/PLIST.noopt				1.1 (new)
 	seems to work on alpha.
 
 	[dmcmahill, ticket #1219]
+
+net/samba/Makefile				1.95
+net/samba/Makefile.common			1.6
+net/samba/distinfo				1.27
+net/samba/patches/patch-aa			1.24
+net/samba/patches/patch-ab			1.20
+net/samba/patches/patch-ad			1.12
+net/samba/patches/patch-ar			1.2
+
+	Updated samba to 2.2.8
+
+	****************************************
+	* IMPORTANT: Security bugfix for Samba *
+	****************************************
+
+	The SuSE security audit team, in particular Sebastian Krahmer
+	<krahmer@suse.de>, has found a flaw in the Samba main smbd code which
+	could allow an external attacker to remotely and anonymously gain
+	Super User (root) privileges on a server running a Samba server.
+	
+	This flaw exists in previous versions of Samba from 2.0.x to 2.2.7a
+	inclusive.  This is a serious problem and all sites should either
+	upgrade to Samba 2.2.8 immediately or prohibit access to TCP ports 139
+	and 445. Advice created by Andrew Tridgell, the leader of the Samba
+	Team, on how to protect an unpatched Samba server is given at the end
+	of this section.
+
+	The SMB/CIFS protocol implemented by Samba is vulnerable to many
+	attacks, even without specific security holes.  The TCP ports 139 and
+	the new port 445 (used by Win2k and the Samba 3.0 alpha code in
+	particular) should never be exposed to untrusted networks.
+
+	[bouyer, ticket #1220]
