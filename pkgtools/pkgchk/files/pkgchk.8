@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.4 2001/07/31 17:32:07 tron Exp $
+.\"	$NetBSD: pkgchk.8,v 1.5 2001/08/23 11:55:17 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,7 +10,7 @@
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl abchinsuvB
+.Op Fl abchiknsuvB
 .Op Fl D Ar tags
 .Op Fl U Ar tags
 .Sh DESCRIPTION
@@ -58,6 +58,8 @@ Check versions of packages specified in pkgchk.conf.
 Brief help.
 .It Fl i
 Check versions of installed packages, ignoring pkgchk.conf.
+.It Fl k
+Continue with further packages if errors are encountered.
 .It Fl n
 Display actions that would be taken, but do not change anything.
 .It Fl s

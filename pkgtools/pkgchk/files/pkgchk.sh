@@ -1,11 +1,16 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.11 2001/08/10 11:05:55 abs Exp $
+# $Id: pkgchk.sh,v 1.12 2001/08/23 11:55:17 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
 
 PATH=/usr/sbin:${PATH}
+
+echo_n()
+    {
+    echo $ac_n "$*"$ac_c
+    }
 
 extract_variables()
     {
@@ -46,6 +51,7 @@ pkg_install()
     PKGNAME=$1
     PKGDIR=$2
     INSTALL=$3
+
     if [ -d /var/db/pkg/$PKGNAME ];then
 	echo "$PKGNAME installed in previous stage"
     elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
@@ -63,13 +69,21 @@ pkg_install()
 	fi
 	echo "pkg_add $PKGNAME.tgz"
 	if [ -z "$opt_n" ];then
-	    pkg_add $PACKAGES/All/$PKGNAME.tgz
+	    if [ -n "$opt_k" ]; then
+		pkg_add $PACKAGES/All/$PKGNAME.tgz || true
+	    else
+		pkg_add $PACKAGES/All/$PKGNAME.tgz
+	    fi
 	fi
     elif [ -n "$opt_s" ]; then
 	echo "make update for $PKGNAME"
 	cd $PKGSRCDIR/$PKGDIR
 	if [ -z "$opt_n" ];then
-	    ${MAKE} update
+	    if [ -n "$opt_k" ]; then
+		${MAKE} update || true
+	    else
+		${MAKE} update
+	    fi
 	fi
     fi
     }
@@ -106,14 +120,14 @@ get_build_version()
     ${GREP} '\$NetBSD' $files | ${SED} -e "s|^${real_pkgsrcdir}/||"
     }
 
-args=`getopt BD:U:abchinsuv $*`
+args=`getopt BD:U:abchiknsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
 set -- $args
 while [ $# != 0 ]; do
     case "$1" in
-	-B )    opt_B=1 ;;
+	-B )    opt_B=1 ; opt_i=1 ;;
 	-D )	opt_D="$2" ; shift;;
 	-U )	opt_U="$2" ; shift;;
 	-a )	opt_a=1 ; opt_c=1 ;;
@@ -121,6 +135,7 @@ while [ $# != 0 ]; do
 	-c )	opt_c=1 ;;
 	-h )	opt_h=1 ;;
 	-i )	opt_i=1 ;;
+	-k )	opt_k=1 ;;
 	-n )	opt_n=1 ;;
 	-s )	opt_s=1 ;;
 	-u )	opt_u=1 ; opt_i=1 ;;
@@ -142,7 +157,7 @@ fi
 
 if [ -n "$opt_h" -o $# != 1 ];then
     echo 'Usage: pkgchk [opts]
-	-B      Check the "Build version" of packages
+	-B      Check the "Build version" of packages (implies -i)
 	-D tags Comma separated list of additional pkgchk.conf tags to set
 	-U tags Comma separated list of pkgchk.conf tags to unset
 	-a      Add all missing packages (implies -c)
@@ -150,6 +165,7 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-c      Check installed packages against pkgchk.conf
 	-h      This help
 	-i	Check versions of installed packages (not using pkgchk.conf)
+	-k	Continue with further packages if errors are encountered
 	-n	Display actions that would be taken, but do not perform them
 	-s      Limit installations to building from source
 	-u      Update all mismatched packages (implies -i)
@@ -270,29 +286,29 @@ for pkgdir in $PKGDIRLIST ; do
 	exit 1
     fi
     if [ ! -d /var/db/pkg/$pkgname ];then
-	echo $ac_n "$pkgname: $ac_c"
+	echo_n "$pkgname: "
 	pkg=`echo $pkgname | sed 's/-[0-9].*//'`
 	pkginstalled=`pkg_info -e $pkg || true`
 	INSTALL=
 	if [ -n "$pkginstalled" ];then
-	    echo $ac_n "version mismatch - $pkginstalled$ac_c"
+	    echo_n "version mismatch - $pkginstalled"
 	    if [ -n "$opt_u" ]; then
 		UPDATE_TODO="$UPDATE_TODO $pkgname $pkgdir"
 	    fi
 	else
-	    echo $ac_n "missing$ac_c"
+	    echo_n "missing"
 	    if [ -n "$opt_a" ] ; then
 		INSTALL_TODO="$INSTALL_TODO $pkgname $pkgdir"
 	    fi
 	fi
 	if [ -f $PACKAGES/All/$pkgname.tgz ] ;then
-	    echo $ac_n " (binary package available)$ac_c"
+	    echo_n " (binary package available)"
 	fi
 	echo
     else
 	if [ -n "$opt_B" ];then
 	    current_build_version=`get_build_version`
-	    installed_build_version=`cat /var/db/pkg/$pkgname/+BUILD_VERSION`
+	    installed_build_version=`cat /var/db/pkg/$pkgname/+BUILD_VERSION | sed "s:^${real_pkgsrcdir}/::"`
 	    if [ x"$current_build_version" != x"$installed_build_version" ];then
 		echo "$pkgname: build version information mismatch"
 		# should we mark this pkg to be updated if -u is given ??
