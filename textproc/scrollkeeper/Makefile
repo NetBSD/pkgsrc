@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/23 21:50:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/24 15:13:20 grant Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -16,7 +16,7 @@ DEPENDS=		docbook-xml>=4.2:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/27 02:43:47 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/24 15:13:19 grant Exp $
 
 DISTNAME=       #
 PKGNAME=	dict-data-1.8.0
@@ -17,7 +17,7 @@ COMMENT=	Dictionary data for DICTD
 
 DEPENDS=	dict-server>=1.8.0nb1:../../textproc/dict-server
 
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 
 # Strip '.gz', strip '.tar'.
 DICTIONARIES=	${DISTFILES:R:R}

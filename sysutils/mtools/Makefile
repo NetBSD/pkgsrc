@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/12/11 16:05:40 adam Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/24 15:06:58 grant Exp $
 #
 
 DISTNAME=	mtools-3.9.9
@@ -13,7 +13,7 @@ COMMENT=	FAT (MS-DOS, Atari) disk access tools
 NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_MAKEINFO=		YES
 INFO_FILES=		mtools.info
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/24 15:13:19 grant Exp $
 #
 
 DISTNAME=	GutenMark_source_${GVER}
@@ -15,7 +15,7 @@ DEPENDS+=	GutenMark-words-[0-9]*:../../textproc/GutenMark-words
 WRKSRC=		${WRKDIR}/GutenMark-source
 GVER=		20020714
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 ALL_TARGET=	GutenMark
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/05 19:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/24 15:13:20 grant Exp $
 
 DISTNAME=		Sablot-1.0.1
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -12,7 +12,7 @@ COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
 USE_BUILDLINK2=		YES
 USE_GCC_SHLIB=		YES
 GNU_CONFIGURE=  	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

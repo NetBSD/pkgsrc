@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/24 15:06:57 grant Exp $
 #
 
 DISTNAME=	isapnptools-1.26
@@ -14,7 +14,7 @@ COMMENT=	Manually query and configure isapnp devices
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--disable-realtime --disable-pci
 
