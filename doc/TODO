@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1657 2004/04/21 10:37:08 xtraeme Exp $
+$NetBSD: TODO,v 1.1658 2004/04/21 12:09:49 dillo Exp $
 
 Suggested new packages
 ======================
@@ -315,7 +315,6 @@ Suggested package updates
 	o sawfish-1.3
 	o scm-5d9
 	o scmxx-0.7.0
-	o scsh-0.6.6
 	o scribus-1.1.6
 	o sendfile-20010424
 	o shorten-3.5.2
