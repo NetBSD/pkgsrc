@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/12/29 17:12:13 fredb Exp $
+# $NetBSD: Makefile,v 1.50 2005/01/21 21:40:43 tv Exp $
 
 DISTNAME=	nas-1.7.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -54,13 +54,18 @@ pre-configure:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
+.include "../../mk/bsd.prefs.mk"
+
 PLIST_SRC=	${PKGDIR}/PLIST.clients
-.if (${MACHINE_ARCH} == "i386") || \
-    (${MACHINE_ARCH} == "sparc")
-.  include "../../mk/ossaudio.buildlink3.mk"
+
+.if ${OPSYS} != "Interix"
+.  if (${MACHINE_ARCH} == "i386") || \
+      (${MACHINE_ARCH} == "sparc")
+.    include "../../mk/ossaudio.buildlink3.mk"
 EGDIR=		${PREFIX}/share/examples/nas
 PLIST_SRC+=	${PKGDIR}/PLIST.voxware
 CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
+.  endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
