@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/04/23 14:57:04 drochner Exp $
+$NetBSD: distinfo,v 1.4 2003/06/12 16:40:01 drochner Exp $
 
-SHA1 (zope/CMFPlone1.0.1.tar.gz) = 1fa1ef2df430ad1feb88f0c416f150f4781a4846
-Size (zope/CMFPlone1.0.1.tar.gz) = 1185141 bytes
+SHA1 (zope/CMFPlone1.0.2.tar.gz) = 890bda1b48325f4f980847e50eae94326fe7a43a
+Size (zope/CMFPlone1.0.2.tar.gz) = 1233259 bytes
