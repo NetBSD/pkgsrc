@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2000/06/12 10:45:53 itojun Exp $
+--- Makefile.in.orig	Fri Jun  9 06:30:38 2000
++++ Makefile.in	Mon Jun 12 00:20:22 2000
+@@ -77,15 +77,6 @@
+ 	$(INSTALL) -s -o bin -g bin -m 555 racoon $(prefix)/sbin
+ 	$(INSTALL) -o bin -g bin -m 444 racoon.8 $(mandir)/man8
+ 	$(INSTALL) -o bin -g bin -m 444 racoon.conf.5 $(mandir)/man5
+-	-mkdir -p ${sysconfdir}/racoon
+-	for i in $(CONF); do \
+-		if test ! -f ${sysconfdir}/racoon/$$i; then \
+-			$(INSTALL) -o bin -g bin -m 444 samples/$$i \
+-				${sysconfdir}/racoon; \
+-		fi; \
+-		$(INSTALL) -o bin -g bin -m 444 samples/$$i \
+-			${sysconfdir}/racoon/$$i.dist; \
+-	done
+ 
+ clean:
+ 	-rm -f $(PROG) *.o *.core y.tab.h

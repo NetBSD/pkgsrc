@@ -1,16 +1,23 @@
-# $NetBSD: Makefile,v 1.6 2000/04/25 19:10:10 thorpej Exp $
+# $NetBSD: Makefile,v 1.7 2000/06/12 10:45:52 itojun Exp $
 #
 
-DISTNAME=	racoon-0.0
+DISTNAME=	racoon-20000612a
 CATEGORIES=	security net
+MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
 MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http:/www.kame.net/
+
+NO_PACKAGE=	"crypto"
+NO_CDROM=	"crypto"
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
 IGNORE+=		"requires ipsec-ready NetBSD"
 .endif
+
+.include "../../mk/bsd.prefs.mk"
+BUILD_DEFS+=	USE_INET6
 
 # openssl is necessary for RSA libraries
 # if PATENTEDOPENSSLSRC is defined, then we assume that
@@ -18,19 +25,15 @@ IGNORE+=		"requires ipsec-ready NetBSD"
 # base distribution.
 .if !defined(PATENTEDOPENSSLSRC)
 DEPENDS+=	openssl-0.9.*:../../security/openssl
+CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include CFLAGS=-I${LOCALBASE}/include \
+		LIBS="-L${LOCALBASE}/lib -L${WRKSRC}/../libipsec"
+.else
+CONFIGURE_ENV+=	LIBS="-L${WRKSRC}/../libipsec"
 .endif
-BUILD_DEPENDS+=	cvs:../../devel/cvs
 
 CONFLICTS+=	racoon-*
 
-# crypto-intl configuration.  needs "cvs login".
-ANONCVS=	:pserver:anoncvs@anoncvs.jp.netbsd.org:/cvs/cvsroot
-INTL=		intl
-# crypto-us configuration.  needs "CVS_RSH = ssh".  not tested.
-#ANONCVS=	anoncvs@anoncvs.netbsd.org:/cvsroot
-#INTL=		us
-
-WRKSRC=		${WRKDIR}/racoon
+WRKSRC=		${WRKDIR}/${DISTNAME}/racoon
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-debug
@@ -39,18 +42,14 @@ CONFIGURE_ARGS+=--enable-ipv6
 .else
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
+CONFIGURE_ARGS+=--sysconfdir=/etc/racoon
 
-do-fetch::
+pre-configure:
+	(cd ${WRKSRC}/../libipsec; make)
 
-do-extract:
-	${MKDIR} ${WRKDIR}
-	(cd ${WRKDIR}; cvs -d ${ANONCVS} co -P -d racoon \
-		cryptosrc-${INTL}/crypto-${INTL}/dist/kame/racoon)
-	(cd ${WRKDIR}; cvs -d ${ANONCVS} co -P -d libpfkey \
-		cryptosrc-${INTL}/crypto-${INTL}/dist/kame/libpfkey)
-	${CP} ${FILESDIR}/Makefile.libpfkey ${WRKDIR}/libpfkey/Makefile
-
-pre-build:
-	(cd ${WRKDIR}/libpfkey; make)
+post-install:
+	${MKDIR} ${PREFIX}/share/examples/racoon
+	${INSTALL_DATA} ${WRKSRC}/samples/racoon.conf.sample \
+		${PREFIX}/share/examples/racoon
 
 .include "../../mk/bsd.pkg.mk"
