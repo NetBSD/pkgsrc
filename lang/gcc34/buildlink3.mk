@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/29 14:57:03 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/10/30 10:35:34 shannonjr Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -36,7 +36,12 @@ BUILDLINK_FILES_CMD.gcc34=	\
 BUILDLINK_TRANSFORM.gcc34=	-e s:\buildlink:buildlink/gcc34:
 
 # Packages that link against shared libraries need a full dependency.
-BUILDLINK_DEPMETHOD.gcc34?=	full
+.  if defined(USE_GCC_SHLIB)
+BUILDLINK_DEPMETHOD.gcc+=	full
+.  else
+BUILDLINK_DEPMETHOD.gcc?=	build
+.  endif
+
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
