@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6395 2004/06/29 14:48:05 grant Exp $
+$NetBSD: CHANGES,v 1.6396 2004/06/29 18:05:34 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3176,3 +3176,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mpc to 0.11.1 [simonb 2004-06-29]
 	Updated nail to 10.8 [cjep 2004-06-29]
 	Updated firefox-bin to 0.9 [grant 2004-06-29]
+	Added gcc34-3.4.1 [shannonjr 2004-06-29]
+	Added gcc34-ada-3.4.1 [shannonjr 2004-06-29]
