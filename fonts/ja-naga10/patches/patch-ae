@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/03/15 20:43:09 kei Exp $
+
+--- 6x12rk.bdf.orig	Fri Feb 20 23:42:53 1998
++++ 6x12rk.bdf	Sun Jan 12 10:27:03 2003
+@@ -1,10 +1,10 @@
+ STARTFONT 2.1
+-FONT -Misc-Fixed-Medium-R-Normal--12-110-75-75-C-60-jisx0201.1976-0
++FONT -Naga-Fixed-Medium-R-Normal--12-110-75-75-C-60-jisx0201.1976-0
+ SIZE 11 75 75
+ FONTBOUNDINGBOX 6 12 0 -2
+ STARTPROPERTIES 23
+ FONTNAME_REGISTRY ""
+-FOUNDRY "Misc"
++FOUNDRY "Naga"
+ FAMILY_NAME "Fixed"
+ WEIGHT_NAME "Medium"
+ SLANT "R"

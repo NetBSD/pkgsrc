@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/15 20:43:09 kei Exp $
+
+SHA1 (knj10-1.1.tar.gz) = 7aaf20d3ca0fd9f989a078f1bf02b2d4a7ec1991
+Size (knj10-1.1.tar.gz) = 301108 bytes
+SHA1 (6x12.tar.gz) = c5d729220452d7d3a7c606471296a1872e33e0e7
+Size (6x12.tar.gz) = 7759 bytes
+SHA1 (patch-aa) = 84218e33c6e894938661cb3c689cd2fdf0ddbf6f
+SHA1 (patch-ab) = 048047e094abdacf6a8602f989e39a0b2711dd17
+SHA1 (patch-ac) = d5d46adc7427d938d8c1bbe81d637856fab1d42e
+SHA1 (patch-ad) = 306b287482e4d724d7ebdb8ef38c2ded484de62d
+SHA1 (patch-ae) = 924b07ecbfff2b2a400c62a8b5e5f00e3e3cc827

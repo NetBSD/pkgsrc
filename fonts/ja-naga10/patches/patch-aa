@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/15 20:43:09 kei Exp $
+
+--- maru10.bdf.orig	Tue Dec 31 12:28:38 2002
++++ maru10.bdf	Tue Dec 31 12:28:38 2002
+@@ -2,7 +2,7 @@
+ COMMENT maru10.bdf Ver.1.1 (1999.5.30)
+ COMMENT Copyright 1998, 1999 (c) NAGAO, Sadakazu.  All rights reserved.
+ COMMENT E-mail: snagao@tkb.att.ne.jp
+-FONT -NagaMaru-Fixed-Medium-R-Normal--10-90-75-75-C-100-jisx0208.1983-0
++FONT -NagaMaru-Marumoji-Medium-R-Normal--10-90-75-75-C-100-jisx0208.1983-0
+ SIZE 10 75 75
+ FONTBOUNDINGBOX 10 10 0 -2
+ STARTPROPERTIES 20
