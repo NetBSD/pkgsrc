@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2003/04/19 04:44:59 rh Exp $
+# $NetBSD: Makefile,v 1.239 2003/04/19 07:56:20 rh Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -16,6 +16,7 @@ SUBDIR+=	Mesa
 SUBDIR+=	MesaDemos
 SUBDIR+=	MesaLib
 SUBDIR+=	Ngraph
+SUBDIR+=	PanoTools
 SUBDIR+=	RenderKit
 SUBDIR+=	SDLKit
 SUBDIR+=	SDL_image
