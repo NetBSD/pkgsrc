@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/09 00:53:48 chris Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/15 12:18:51 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -227,7 +227,7 @@ lib/kde3/noatun_winskin.so
 lib/kde3/noatunsimple.la
 lib/kde3/noatunsimple.so
 lib/kde3/videothumbnail.la
-lib/kde3/videothumbnail.so
+lib/kde3/videothumbnail.${XV_SUFFIX}
 ${XV_WORKAROUND}lib/libarts_mpeglib-0.3.0.so.0
 ${XV_WORKAROUND}lib/libarts_mpeglib-0.3.0.so.0.3
 lib/libarts_mpeglib.la
