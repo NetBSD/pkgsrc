@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 1999/05/01 12:37:51 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/02 15:15:49 rh Exp $
 #
 
-DISTNAME=	control-center-1.0.4
+DISTNAME=	control-center-1.0.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.circ.us.eu.org/mirrors/ftp.gnome.org/sources/ \
@@ -11,8 +11,8 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	gnome-core-1.0.4:../../x11/gnome-core
-DEPENDS+=	xscreensaver-3.09:../../x11/xscreensaver
+DEPENDS+=	gnome-core-1.0.5:../../x11/gnome-core
+DEPENDS+=	xscreensaver-3.10:../../x11/xscreensaver
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
