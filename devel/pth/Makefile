@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/01/10 15:18:25 rh Exp $
+# $NetBSD: Makefile,v 1.19 2000/01/21 03:06:37 wiz Exp $
 #
 
 DISTNAME=	pth-1.2.2
@@ -13,5 +13,10 @@ CONFLICTS=	pth-current-*
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-pthread
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pth/
+	${INSTALL_DATA} ${WRKSRC}/pthread.ps ${PREFIX}/share/doc/pth/
+	${INSTALL_DATA} ${WRKSRC}/rse-pmt.ps ${PREFIX}/share/doc/pth/
 
 .include "../../mk/bsd.pkg.mk"
