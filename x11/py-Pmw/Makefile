@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/02 05:23:21 snj Exp $
 #
 
 DISTNAME=	Pmw.0.8.5
@@ -13,7 +13,7 @@ COMMENT=	Python meta widgets
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
 
 WRKSRC=		${WRKDIR}/Pmw
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 do-build:
 
@@ -29,5 +29,5 @@ do-install:
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-Tk/buildlink2.mk"
+.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

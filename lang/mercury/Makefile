@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/03/07 00:19:29 seb Exp $
+# $NetBSD: Makefile,v 1.21 2004/05/02 04:59:23 snj Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.mu.oz.au/mercury/
 COMMENT=		Modern logic/functional programming language
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	yes	# rl_prep_term_function
@@ -46,6 +46,6 @@ do-install:
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" -print | ${XARGS} ${RM} -f
 	cd ${WRKSRC}/samples && ${PAX} -rw . ${PREFIX}/share/examples/mercury
 
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
