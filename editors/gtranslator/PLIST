@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/05 17:00:36 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/21 04:20:56 xtraeme Exp $
 bin/gtranslator
 bin/pozilla.sh
 man/man1/gtranslator.1.gz
