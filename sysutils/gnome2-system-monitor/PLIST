@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/20 21:25:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/03/22 16:35:35 jmmv Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -33,6 +33,7 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-system-monitor.mo
@@ -56,6 +57,7 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-system-monitor.mo
@@ -71,14 +73,13 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-system-monitor.mo
 share/omf/gnome-system-monitor/gnome-system-monitor-C.omf
-share/pixmaps/procman.png
-@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnome-system-monitor
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gnome-system-monitor/C/figures
