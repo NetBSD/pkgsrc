@@ -1,0 +1,30 @@
+#	$NetBSD: patch-ae,v 1.1 2002/10/02 08:25:16 minoura Exp $
+--- doc/Makefile.in.orig	Sun Sep  8 04:25:49 2002
++++ doc/Makefile.in	Tue Oct  1 06:17:22 2002
+@@ -12,7 +12,7 @@
+ prefix  = @prefix@
+ datadir = @datadir@
+ mandir  = $(datadir)/man/man1
+-infodir = $(datadir)/info
++infodir = $(prefix)/info
+ 
+ all: info
+ 
+@@ -63,7 +63,7 @@
+ 	texi2pdf gauche-refe.texi
+ 
+ gauche-refe.texi : gauche-ref.texi extract
+-	gosh ./extract -en -o gauche-refe.texi gauche-ref.texi
++	$(GOSH) ./extract -en -o gauche-refe.texi gauche-ref.texi
+ 
+ gauche-refe.info.gz : gauche-refe.texi
+ 	if test X$(MAKEINFO) != X -a X$(GZIP_PROGRAM) != X; then \
+@@ -85,7 +85,7 @@
+ 	texi2pdf gauche-refj.texi
+ 
+ gauche-refj.texi : gauche-ref.texi extract
+-	gosh ./extract -jp -o gauche-refj.texi gauche-ref.texi
++	$(GOSH) ./extract -jp -o gauche-refj.texi gauche-ref.texi
+ 
+ gauche-refj.info.gz : gauche-refj.texi
+ 	if test X$(MAKEINFO) != X -a X$(GZIP_PROGRAM) != X; then \
