@@ -1,58 +1,65 @@
-# $NetBSD: Makefile,v 1.29 1999/10/07 17:42:01 tron Exp $
+# $NetBSD: Makefile,v 1.30 2000/03/28 21:41:42 dmcmahill Exp $
 #
 
-DISTNAME=	qt-1.44
+DISTNAME=	qt-2.0.2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 		ftp://ftp.fu-berlin.de/unix/X11/gui/Qt/source/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.troll.no/products/qt.html
 
-CONFLICTS=	qt-1.*
+DEPENDS+=	Mesa-*:../../graphics/Mesa
+DEPENDS+=	png-*:../../graphics/png
 
-USE_X11BASE=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+HAS_CONFIGURE=		yes
+USE_X11BASE=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+CONFIGURE_ENV+=		QTDIR=${WRKSRC}
+CONFIGURE_ARGS+=	-static -sm -system-zlib -system-libpng \
+			-I${LOCALBASE}/include -L${LOCALBASE}/lib \
 
-MAKE_ENV=	QTDIR=${WRKSRC}
+MAKE_ENV+=	QTDIR=${WRKSRC}
 ALL_TARGET=	src
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_GIF)
+CONFIGURE_ARGS+=	-gif
+.endif
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	egcs-1.1.2:../../lang/egcs
 CXX=		${LOCALBASE}/egcs/bin/g++
 .endif
 
-do-configure:
-	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${LOWER_OPSYS}-g++-static
-
-.if defined(USE_GIF)
-pre-build:
-	cd ${WRKSRC} && ${PATCH} <${FILESDIR}/enablegif.patch
-.endif
+QTPREFIX=	${PREFIX}/qt2
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${PREFIX}/bin/
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${PREFIX}/lib/
-	${INSTALL_DATA_DIR} ${PREFIX}/include/qt
-	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/qt/
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1/
+	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
+	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib
+	${LN} -fs ${QTPREFIX}/lib/libqt.so.2.0 ${PREFIX}/lib/libqt.so.2.0
+	${INSTALL_DATA_DIR} ${QTPREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
+	${INSTALL_MAN_DIR} ${QTPREFIX}/man/man1
+	${INSTALL_MAN_DIR} ${QTPREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${QTPREFIX}/man/man1
 	@cd ${WRKSRC}/man/man3; PAGES="`ls -1 | ${SED} -e 's,3qt$$,3,'`"; \
 	(for PAGE in $$PAGES; do \
-	    ${ECHO} installing ${PREFIX}/man/man3/$${PAGE}; \
+	    ${ECHO} installing ${QTPREFIX}/man/man3/$${PAGE}; \
 	    set - X `head -1 $${PAGE}qt`; \
 	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
-		${RM} -f ${PREFIX}/man/man3/$${PAGE}; \
-		${LN} -s `basename $$3 | ${SED} s/qt$$//` \
-		${PREFIX}/man/man3/$${PAGE}; \
+		${LN} -fs `basename $$3 | ${SED} s/qt$$//` \
+		  ${QTPREFIX}/man/man3/$${PAGE}; \
 	    else \
-		${INSTALL_MAN} $${PAGE}qt \
-		${PREFIX}/man/man3/$${PAGE}; \
+		${INSTALL_MAN} $${PAGE}qt ${QTPREFIX}/man/man3/$${PAGE}; \
 	    fi; \
 	 done)
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/qt
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT ${PREFIX}/share/doc/qt/
+	${INSTALL_DATA_DIR} ${QTPREFIX}/share/doc/qt
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT \
+	  ${WRKSRC}/doc/* ${QTPREFIX}/share/doc/qt
 
 .include "../../mk/bsd.pkg.mk"
