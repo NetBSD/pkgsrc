@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1999/12/02 21:19:12 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2000/05/08 17:23:46 drochner Exp $
 #
 
-DISTNAME=	t1lib-1.0
+DISTNAME=	t1lib-1.0.1
 CATEGORIES=	textproc devel graphics
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/} \
 		ftp://ftp.neuroinformatik.ruhr-uni-bochum.de/pub/software/t1lib/
@@ -14,7 +14,7 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 USE_X11BASE=	yes
 
-WRKSRC=		${WRKDIR}/T1-1.0
+WRKSRC=		${WRKDIR}/T1-1.0.1
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 ALL_TARGET=	without_doc
 
