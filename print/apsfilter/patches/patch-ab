@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2002/05/14 17:27:26 tron Exp $
+$NetBSD: patch-ab,v 1.2 2003/04/15 09:25:05 martti Exp $
 
---- bin/apsfilter.in.orig	Tue May 14 19:23:24 2002
-+++ bin/apsfilter.in	Tue May 14 19:25:02 2002
-@@ -1028,9 +1028,9 @@
+--- bin/apsfilter.in.orig	2002-11-09 18:54:23.000000000 +0200
++++ bin/apsfilter.in	2003-04-15 08:56:50.000000000 +0300
+@@ -1041,9 +1041,9 @@
  
      cat > "$APS_TMPDIR/pdf"
      if find_filter acroread4; then
