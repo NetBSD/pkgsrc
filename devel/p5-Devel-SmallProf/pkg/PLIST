@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/26 18:16:05 bad Exp $
+lib/perl5/man/man3/Devel::SmallProf.3
+lib/perl5/site_perl/Devel/SmallProf.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Devel/SmallProf/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Devel/SmallProf
