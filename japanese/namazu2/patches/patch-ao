@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.2 2002/01/04 08:57:07 taca Exp $
+$NetBSD: patch-ao,v 1.3 2002/01/10 17:54:32 taca Exp $
 
 --- filter/powerpoint.pl.orig	Tue Dec 26 13:59:01 2000
 +++ filter/powerpoint.pl
@@ -10,7 +10,7 @@ $NetBSD: patch-ao,v 1.2 2002/01/04 08:57:07 taca Exp $
  use File::Copy;
  require 'util.pl';
  require 'gfilter.pl';
-@@ -32,13 +33,15 @@
+@@ -32,15 +33,17 @@
  
  my $pptconvpath  = undef;
  my $utfconvpath = undef;
@@ -22,11 +22,13 @@ $NetBSD: patch-ao,v 1.2 2002/01/04 08:57:07 taca Exp $
  
  sub status() {
 -	$pptconvpath = util::checkcmd('pptHtml');
-+	$pptconvpath = (util::checkcmd('ppthtml') or util::checkcmd('pptHtml'));
-+	$pptconvname = basename($pptconvpath);
++	$pptconvpath = util::checkcmd('ppthtml') || util::checkcmd('pptHtml');
  #	return 'no' unless defined $pptconvpath
  	if (defined $pptconvpath) {
++	    $pptconvname = basename($pptconvpath);
  		if (!util::islang("ja")) {
+ 			return 'yes';
+ 		} else {
 @@ -82,7 +85,7 @@
        = @_;
      my $err = undef;
