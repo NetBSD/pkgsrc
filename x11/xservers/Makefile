@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/01/07 18:55:16 tron Exp $#
+# $NetBSD: Makefile,v 1.17 2005/02/20 12:49:35 grant Exp $#
 
 DISTNAME=	xservers-3.3.6.3
 CATEGORIES=	x11
@@ -18,9 +18,9 @@ USE_X11BASE=	YES
 .if !defined(X11_RELEASE) && !defined(CHECK_X11)
 X11_RELEASE!=	${MAKE} CHECK_X11=YES print-x11-release
 MAKEFLAGS+=	X11_RELEASE=${X11_RELEASE}
-.if (${X11_RELEASE} == "6.3")
+.  if ${X11_RELEASE} == "6.3"
 PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
-.endif
+.  endif
 .endif
 
 X11_SUBDIR=	X11R6.3

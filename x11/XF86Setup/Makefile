@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/01/22 03:58:32 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2005/02/20 12:48:59 grant Exp $
 
 DISTNAME=		XF86Setup-3.3.6
 PKGREVISION=		2
@@ -22,9 +22,9 @@ USE_IMAKE=		yes
 .if !defined(X11_RELEASE) && !defined(CHECK_X11)
 X11_RELEASE!=	${MAKE} CHECK_X11=YES print-x11-release
 MAKEFLAGS+=	X11_RELEASE=${X11_RELEASE}
-.if (${X11_RELEASE} == "6.4")
+.  if ${X11_RELEASE} == "6.4"
 PKG_SKIP_REASON= "This package doesn't work with your X11 distribution."
-.endif
+.  endif
 .endif
 
 .include "../../lang/tcl/buildlink3.mk"
