@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2004/06/26 23:56:21 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.34 2004/07/02 19:00:12 jmmv Exp $
 
 DISTNAME=		icewm-1.2.14
 CATEGORIES=		x11 wm
@@ -35,24 +35,30 @@ PKG_SYSCONFSUBDIR=	icewm
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 CXXFLAGS+=		-DSTART_PIXMAP=\"\\\"bsd-daemon.xpm\\\"\"
 .endif
+
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+= --with-unicode-set=utf-32
+.  if !empty(OS_VERSION:M1.*)
+CONFIGURE_ARGS+=	--disable-i18n
+.  else
+CONFIGURE_ARGS+=	--with-unicode-set=utf-32
+.    include "../../converters/libiconv/buildlink3.mk"
+.  endif
+.else
+.  include "../../converters/libiconv/buildlink3.mk"
 .endif
 
 DOCDIR=			${PREFIX}/share/doc/icewm
-HTMLDIR=		${PREFIX}/share/doc/icewm/html
 INSTALL_TARGET=		install-base install-nls
 
 post-extract:
 	@${CP} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	for file in BUGS CHANGES COPYING README README.wm-session TODO; do\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCDIR}
 
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
