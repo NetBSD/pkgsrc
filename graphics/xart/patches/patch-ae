@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1999/01/01 03:15:56 garbled Exp $
+--- rw/rwTable.c.orig	Thu Dec 31 20:12:10 1998
++++ rw/rwTable.c	Thu Dec 31 20:13:44 1998
+@@ -231,11 +231,6 @@
+ char *
+ RWGetMsg()
+ {
+-#if defined(BSD4_4)
+-    __const extern char *__const sys_errlist[];
+-#else
+-    extern char *sys_errlist[];
+-#endif
+     extern int errno;
+ 
+     if (RWtableMsg[0] == '\0') {
