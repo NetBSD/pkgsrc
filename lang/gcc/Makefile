@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2004/02/19 17:51:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.76 2004/03/25 23:34:01 jlam Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		5
@@ -20,6 +20,7 @@ NOT_FOR_PLATFORM=	Darwin-*-* *-*-x86_64
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
+MAKEFLAGS+=		GMAKE_LOCALE=no
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
