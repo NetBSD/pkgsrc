@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/09 15:24:23 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/09 16:17:16 mjl Exp $
 #
 
 VERSION=	2.5q
@@ -13,6 +13,7 @@ WRKSRC=		${WRKDIR}/lclint-${VERSION}/
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=  YES
+PLIST_SUBST+=	VERSION=${VERSION}
 
 do-build:
 	cd ${WRKSRC}; unset CFLAGS; ${GMAKE}
