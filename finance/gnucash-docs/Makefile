@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/10/28 11:45:46 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/06 21:46:00 jdolecek Exp $
 
 DISTNAME=		gnucash-docs-1.8.4
-PKGREVISION=		# empty
+PKGREVISION=		1
 CATEGORIES=		finance
-MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
+MASTER_SITES=		http://www.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
 MAINTAINER=		jdolecek@NetBSD.org
@@ -27,6 +27,12 @@ post-buildlink:
 	${LN} -s /usr/include/db.h ${BUILDLINK_DIR}/include/db_185.h
 .endif
 
-.include "../../mk/bdb.buildlink3.mk"
+BUILD_DEPENDS=			docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+BUILDLINK_DEPMETHOD.libxml2=	build
+BUILDLINK_DEPMETHOD.libxslt=	build
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
