@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/02/22 17:35:23 jdolecek Exp $
+$NetBSD: distinfo,v 1.6 2004/11/19 19:15:46 jdolecek Exp $
 
-SHA1 (hpijs-1.5.tar.gz) = 42590063029a5f37ef9ea5da1c0e4710e3d1120b
-Size (hpijs-1.5.tar.gz) = 1141804 bytes
+SHA1 (hpijs-1.7.1.tar.gz) = 7ed373a059ba01d9fc2f6f4181e33d49f08d0389
+Size (hpijs-1.7.1.tar.gz) = 845193 bytes
