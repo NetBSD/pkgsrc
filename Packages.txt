@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.48 1999/01/30 23:21:26 agc Exp $
+# $NetBSD: Packages.txt,v 1.49 1999/02/10 14:55:00 frueauf Exp $
 ###########################################################################
 
 			==========================
@@ -186,6 +186,10 @@ must exist on your system for the packages system to be able to build it.
 If it's not, then ftp(1) is used to fetch the distribution files
 automatically.
 
+You can overwrite some of the major distribution sites to fit to sites
+that are close to your own. Have a look at /usr/pkgsrc/mk/mk.conf.example
+to find some examples. This may save some of your bandwith and time.
+
 If you don't have a permanent Internet connection and you want to know
 which files to download, "make fetch-list" will tell you what you'll need.
 Put these distfiles into /usr/pkgsrc/distfiles.
@@ -230,6 +234,10 @@ packages outside the X11 tree, in that libraries and header files may
 not be found by other software, and Application Defaults may not be
 found.  For that reason, you are advised to leave X11 packages in the
 X11 tree.  We are looking at ways to change this. 
+
+Some packages look in /etc/mk.conf to alter some configuration options
+at build time. Have a look at /usr/pkgsrc/mk/mk.conf.example to get an
+overview of what you can set there.
 
 
  3 Making a precompiled package
@@ -295,8 +303,8 @@ one is used, they need to be separated by spaces:
 	comms       editors    math      plan9      www
 	converters  emulators  mbone     print      x11
 
-See /usr/pkgsrc/mk/bsd.pkg.mk for a description of all available options
-and variables.
+See the NetBSD packages(7) manual page for a description of all available
+options and variables.
 
 Please pay attention to the following gotchas, especially when preparing a
 package from the FreeBSD ports collection:
@@ -459,7 +467,7 @@ attention to the following things in pkg/PLIST:
    agreeing with usage policy, etc.
 
  * pkg/MESSAGE
-   Display this file (using more(1))  after installing the package.
+   Display this file after installation of the package.
    Useful for things like legal notices on almost-free software,
    etc.
 
@@ -493,6 +501,7 @@ directory.  It can be removed by typing
 at the shell prompt. Also, this directory is used to keep various
 timestamp files. 
 
+
  4.7 importing the package into CVS
  ==================================
 
@@ -511,6 +520,10 @@ E.g:
 	cvs rm patches/patch-a
 	cvs add patches/patch-aa
 	cvs ci
+
+Please note all package updates/additions in doc/pkg-CHANGES! Its very important
+to keep this file uptodate, cause it will be used from scripts to automatically
+update some pages on www.netbsd.org.
 
 
  5 PLIST* issues
@@ -655,6 +668,11 @@ To test whether you are working on a 4.4 BSD-derived system, you should use
 the BSD definition, which is defined in <sys/param.h> on said systems.
 Unfortunately, it may not always be appropriate to include that header file
 without checking whether it's available:
+
+  [ Note that this will no longer work with NetBSD 1.3I (current)
+    and later since we no longer define "unix" or "__unix__" by
+    default with the compiler! Someone with knowledge how to solve
+    this cleanly should correct this note.                         ]
 
         #if (defined(__unix__) || defined(unix)) && !defined(USG)
         #include <sys/param.h>
@@ -1157,6 +1175,7 @@ issues. To subscribe do:
 
 Add the following to your /etc/mk.conf file: PASSIVE_FETCH=1
 
+
  9.12 Dependencies on other packages
  ===================================
 
@@ -1208,6 +1227,7 @@ it runs, and that is specified:
 RUN_DEPENDS=    latex:../../print/teTeX \
                 ispell:../../textproc/ispell
 
+
  9.13 Conflicts with other packages
  ==================================
 
@@ -1230,6 +1250,7 @@ CONFLICTS=      cvs-1.9 cvs-1.9.26 cvs-1.9.27
 assuming that cvs is version 1.9 and cvs-current is cvs-1.9.28, and we had
 already cvs-1.9.26 and cvs-1.9.27 in our pkgsrc tree.
 
+
  9.14 Software which has a WWW Home Page
  =======================================
 
@@ -1238,6 +1259,7 @@ If the software being packaged has a home page, the Makefile should
 include the URL for that page in the HOMEPAGE variable. The definition
 of the variable should be placed immediately after the MAINTAINER
 variable.
+
 
  10 Submitting
  =============
