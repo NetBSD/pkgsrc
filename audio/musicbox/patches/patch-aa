@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/08 23:07:11 tron Exp $
+$NetBSD: patch-aa,v 1.2 1999/07/07 14:15:37 tron Exp $
 
 --- Makefile.orig	Wed Nov 12 20:01:58 1997
 +++ Makefile	Wed Jun  9 00:47:52 1999
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/08 23:07:11 tron Exp $
  
  all:	${ALL}
 -	${GCC} ${ALL} -o ${PKG} -L${LIB} -I${INC} -lqt
-+	${GCC} ${ALL} -o ${PKG} -L${LIB} -Wl,-R${LIB} -lqt -lX11 -lossaudio
++	${GCC} ${ALL} -o ${PKG} -L${LIB} -Wl,-R${LIB} -lqt -lX11 -lXext -lossaudio
  
 -player.o:
 -	${GCC} -c player.cpp -o player.o ${CFLAGS} -L${LIB} -I${INC}
