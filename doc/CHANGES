@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5570 2004/04/14 08:05:03 jmmv Exp $
+$NetBSD: CHANGES,v 1.5571 2004/04/14 09:04:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1944,3 +1944,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkam to 0.1.11 [reed 2004-04-13]
 	Updated epiphany-extensions to 0.8.2 [jmmv 2004-04-13]
 	Updated libxklavier to 1.02 [jmmv 2004-04-14]
+	Updated audit-packages to 1.30 [wiz 2004-04-14]
