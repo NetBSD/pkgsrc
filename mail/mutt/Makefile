@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2004/02/15 13:13:52 tron Exp $
+# $NetBSD: Makefile,v 1.114 2004/03/01 12:13:44 tron Exp $
 
 DISTNAME=		mutt-1.4.2i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -40,8 +40,9 @@ USE_NCURSES=		yes
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 .endif
 
-# There seems to be a problem using NetBSD's /bin/sh, so use /bin/ksh instead.
-.if ${OPSYS} == "NetBSD"
+# There is a problem using NetBSD's /bin/sh under old NetBSD releases,
+# so use /bin/ksh there.
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-5]*-*)
 CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 .endif
 
