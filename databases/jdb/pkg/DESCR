@@ -1,4 +1,4 @@
-JDB isa package of commands for manipulating flat-ASCII databases from
+JDB is a package of commands for manipulating flat-ASCII databases from
 shell scripts.  JDB is useful to process medium amounts of data.  JDB is
 very good at doing things like:
 
