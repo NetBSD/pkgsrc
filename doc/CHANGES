@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4974 2004/02/23 17:26:24 minskim Exp $
+$NetBSD: CHANGES,v 1.4975 2004/02/23 17:54:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -999,3 +999,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ion to 20040207 [cube 2004-02-23]
 	Added py-pexpect-0.99 [minskim 2004-02-23]
 	Updated py-dns to 1.2.0 [minskim 2004-02-23]
+	Added tcpick-0.1.19 [minskim 2004-02-23]
