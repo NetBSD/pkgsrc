@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:13 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/06/15 12:30:47 grant Exp $
 
 SHA1 (gif320-3.3.tar.Z) = cb2c7914f33a8023edc9de0b4909e283b40938a7
 Size (gif320-3.3.tar.Z) = 43290 bytes
-SHA1 (patch-aa) = 6e4021b880b5df0489a2ba5ee1e30ec12634c1cf
+SHA1 (patch-aa) = 376572c40618c7bf68fa03dfc88d0cda27636b58
