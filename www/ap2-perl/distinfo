@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2002/11/19 23:23:11 jlam Exp $
+$NetBSD: distinfo,v 1.2 2003/02/03 20:18:03 drochner Exp $
 
-SHA1 (mod_perl-1.99_07.tar.gz) = fb39dbbc77577c220a5b9b9112a50e2cadefc90d
-Size (mod_perl-1.99_07.tar.gz) = 610901 bytes
+SHA1 (mod_perl-1.99_08.tar.gz) = 3789332cfe9625209a67aece7443aa37d6d4a61b
+Size (mod_perl-1.99_08.tar.gz) = 653469 bytes
