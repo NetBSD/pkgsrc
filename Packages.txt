@@ -1,32 +1,32 @@
-# $NetBSD: Packages.txt,v 1.1 1997/11/05 09:35:52 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.2 1997/11/10 00:35:47 hubertf Exp $
+###########################################################################
+
 
 		  =======================================
 		    An attempt of some documentation on
-		       the NetBSD's Packages system
-                  =======================================
+			 NetBSD's Packages system
+		  =======================================
 
 		      Alistair Crooks, Hubert Feyrer
-		       Tue Nov  4 11:20:56 GMT 1997
 
 
 0. Introduction and Overview
 ============================
 
-There's an awful lot of freely-available software available, some of
-which has also been "ported" to NetBSD.  The NetBSD packages
-collection, which is derived from the FreeBSD ports collection,
-incorporates any changes necessary to make that software run on
-NetBSD, and makes the installation of the package easy by means of a
-single command.  De-installation is equally simple.
+There's an awful lot of freely-available software available, some of which
+has also been "ported" to NetBSD.  The NetBSD packages collection, which is
+derived from the FreeBSD ports collection, incorporates any changes
+necessary to make that software run on NetBSD, and makes the installation
+of the package easy by means of a single command.  De-installation is
+equally simple.
 
-The NetBSD package system is derived from the FreeBSD ports system. 
-It is used to enable third-party software to be built easily on NetBSD
-hosts.  Once the software has been built, it is manipulated with the
-pkg_* tools so that installation and de-installation is simple, and
-inventory printed, and one-line comments and more verbose descriptions
-can be retrieved.
+The NetBSD package system is derived from the FreeBSD ports system.  It is
+used to enable third-party software to be built easily on NetBSD hosts.
+Once the software has been built, it is manipulated with the pkg_* tools so
+that installation and de-installation is simple, and inventory printed, and
+one-line comments and more verbose descriptions can be retrieved.
 
-this document detailes 4 sections below. They are:
+This document detailes 4 sections below. They are:
 
  1. To install packages by building
  2. To make a binary package
@@ -45,12 +45,16 @@ without attribution.
 1. To install packages by Building
 ====================================
 
-This assumes that the package is already part of the NetBSD package
-system.  If it is not, then you are advised to read section 4 of this
-document:  "Making your own package".
+This assumes that the package is already part of the NetBSD package system.
+If it is not, then you are advised to read section 4 of this document:
+"Making your own package".
 
-Firstly, become root and change into the relevant directory. You can then
-type
+To get the package source going, you need to get the pkgsrc.tar.gz file
+from ftp://ftp.netbsd.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz and
+unpack it into /usr/pkgsrc.
+
+Assuming that has been done, become root and change into the relevant
+directory. You can then type
 
 	make
 
@@ -76,8 +80,8 @@ look like:
 	ftp_proxy=ftp://orpheus.amdahl.com:80/
 	http_proxy=http://orpheus.amdahl.com:80/
 
-Taking the top system utility as an example, we can install it on
-our system by building as shown in the typescript below:
+Taking the top system utility as an example, we can install it on our
+system by building as shown in the typescript below:
 
 > Script started on Fri Oct  3 13:22:31 1997
 > root@pumpy:/u/pkgsrc/sysutils/top(1342)# make
@@ -148,10 +152,10 @@ our system by building as shown in the typescript below:
 > ===>  Registering installation for top-3.5beta5
 > root@pumpy:/u/pkgsrc/sysutils/top(1344)# 
 
-As you can see, the package is installed under the default root of
-the packages tree - /usr/pkg. Should this not conform to your tastes,
-simply set the PREFIX variable in your environment, and it will use that
-value as the root of your packages tree. So, to use /usr/local, set
+As you can see, the package is installed under the default root of the
+packages tree - /usr/pkg. Should this not conform to your tastes, simply
+set the PREFIX variable in your environment, and it will use that value as
+the root of your packages tree. So, to use /usr/local, set
 
 	PREFIX=/usr/local
 
@@ -161,19 +165,19 @@ in your environment.
 2. To make a binary package
 ===========================
 
-Once you have built and installed the package mentioned in section 1
-above, you can build it into a "binary package" - you might want to do
-this so that you can use the binaries you have just built on another
-NetBSD system, or to provide a simple means for others to use your
-binary package - this is done by changing to the appropriate directory
-in the pkgsrc tree, and typing the command
+Once you have built and installed the package mentioned in section 1 above,
+you can build it into a "binary package" - you might want to do this so
+that you can use the binaries you have just built on another NetBSD system,
+or to provide a simple means for others to use your binary package - this
+is done by changing to the appropriate directory in the pkgsrc tree, and
+typing the command
 
 	make package
 
-at the shell prompt.  This will build and install your package, and
-then construct a binary package out of the results so that you can use
-the pkg_* tools to manipulate this. At the present time, this binary
-package is in the form of a gzipped tar file.
+at the shell prompt.  This will build and install your package, and then
+construct a binary package out of the results so that you can use the pkg_*
+tools to manipulate this. At the present time, this binary package is in
+the form of a gzipped tar file.
 
 > root@pumpy:/u/pkgsrc/sysutils/top(1344)# make package
 > >> Checksum OK for top-3.5beta5.tar.gz.
@@ -190,9 +194,9 @@ package is in the form of a gzipped tar file.
 To install a binary package on a NetBSD system, you should use the
 pkg_add(1) command.  Please pay very careful attention to the warnings
 expressed in that manual page about the inherent dangers of installing
-binary packages which you did not create yourself, and the security
-holes that can be introduced onto your system by indiscriminate adding
-of such files.
+binary packages which you did not create yourself, and the security holes
+that can be introduced onto your system by indiscriminate adding of such
+files.
 
 Any packages needed to run the package in question will be installed too,
 assuming they are present on your system.
@@ -207,9 +211,9 @@ directory."
 
 4.1 Category
 
-Firstly, you should consider into which category your software falls. 
-The NetBSD package collection is divided into categories.  At the time
-of writing, these categories are:
+Firstly, you should consider into which category your software falls.  The
+NetBSD package collection is divided into categories.  At the time of
+writing, these categories are:
 
   archivers
   astro
@@ -246,11 +250,10 @@ of writing, these categories are:
   www
   x11
 
-It is possible that your package may fall into more than one category
-- in that case, you should pick the one most likely to describe your
-software.  After all, that is the place that most people will look for
-it, and so you have more chance of other people using it if you
-describe it properly.
+It is possible that your package may fall into more than one category - in
+that case, you should pick the one most likely to describe your software.
+After all, that is the place that most people will look for it, and so you
+have more chance of other people using it if you describe it properly.
 
 
 4.2 A package's directory and its component directories and files
@@ -272,7 +275,7 @@ decisions taken by the guy who maintains the port can complain vigorously.
 (Actually, in my experience, the FreeBSD maintainers have all been very
 responsive.)
 
-See /usr/share/mk/bsd.port.mk for a description of all available options. 
+See /usr/share/mk/bsd.port.mk for a description of all available options.
 
 
 4.2.2 The files directory
@@ -284,24 +287,19 @@ could simply diff the file against /dev/null, and use the patch mechanism
 to manage the creation of this file.
 
 Besides that, this directory contains the (mandatory) md5 checksome of all
-the distfiles need for the package to compile. 
+the distfiles need for the package to compile.
 
 
 4.2.2.1 The files/md5 file
 
-This file contains an md5 checksum of the distribution file(s).  It can be
-generated by hand using the md5(1) command.  An md5 checksum is kept on
-most ports to ensure that the file retrieved from the Internet has not been
-altered by a malign force to introduce a security hole.  The file contains
-the md5 checksum of the original distribution file used to create the
-NetBSD package, from which any patches were generated etc.
+This file contains an md5 checksum of the distribution file(s) to ensure
+that the file retrieved from the Internet has not been altered by a malign
+force to introduce a security hole.  The file contains the md5 checksum of
+the original distribution file used to create the NetBSD package, from
+which any patches were generated etc.
 
-(I usually create this by doing
-
-	md5 <dist-file> > files/md5
-
-and then manually editing the name of the file to delete any directory
-names)
+It can be generated by hand using the md5(1) command or by invoking "make
+makesum".
 
 
 4.2.3 The patches directory
@@ -320,26 +318,26 @@ the FreeBSD ports system if you format your diffs in a unified fashion.
 
 4.2.4 The pkg directory
 
-This directory contains three files used to manage the creation of
-binary packages.  Files from this directory are used in the binary
-package itself, and will thus be installed on other machines, so you
-should be aware that there is a wider audience than you might think
-for your comments and witticisms.
+This directory contains three files used to manage the creation of binary
+packages.  Files from this directory are used in the binary package itself,
+and will thus be installed on other machines, so you should be aware that
+there is a wider audience than you might think for your comments and
+witticisms.
 
 
 4.2.4.1 The pkg/COMMENT file
 
-A one-line description of the piece of software. There is no need
-to mention the package's name - this will automatically be added by
-the pkg_* tools when they are invoked.
+A one-line description of the piece of software. There is no need to
+mention the package's name - this will automatically be added by the pkg_*
+tools when they are invoked.
 
 
 4.2.4.2 The pkg/DESCR file
 
-A multi-line description of the piece of software.  This should
-include any credits where they are due.  Please bear in mind that
-others do not share your sense of humour (or spelling idiosyncracies),
-and that others will read everything that you write here.
+A multi-line description of the piece of software.  This should include any
+credits where they are due.  Please bear in mind that others do not share
+your sense of humour (or spelling idiosyncracies), and that others will
+read everything that you write here.
 
 
 4.2.4.3 The pkg/PLIST file
@@ -347,13 +345,13 @@ and that others will read everything that you write here.
 This file governs the files that are installed on your system: all the
 binaries, manual pages, etc. There are other directives which may be
 entered in this file, to control the creation and deletion of directories,
-and the location of inserted files.  
+and the location of inserted files.
 
 
 4.2.5 The scripts directory
 
-This directory contains any files that are necessary for configuration
-of your software, etc.
+This directory contains any files that are necessary for configuration of
+your software, etc.
 
 
 4.2.6 The work directory
@@ -368,50 +366,49 @@ at the shell prompt.
 
 4.3 CPP definitions
 
-To port an application to NetBSD, it's usually necessary for the
-compiler to be able to judge the system on which it's compiling,
-and we use definitions so that the C pre-processor can do this.
+To port an application to NetBSD, it's usually necessary for the compiler
+to be able to judge the system on which it's compiling, and we use
+definitions so that the C pre-processor can do this.
 
-The really impatient should just note that a number of the FreeBSD
-ports (which are called packages in the NetBSD world) rely on the CPP
-definition __FreeBSD__.  I believe that this should be used sparingly,
-for FreeBSD-specific features, but unfortunately this is not always
-the case.  A number also rely on the fact that the CPU type is an
-Intel-based little-endian CPU.
+The really impatient should just note that a number of the FreeBSD ports
+(which are called packages in the NetBSD world) rely on the CPP definition
+__FreeBSD__.  I believe that this should be used sparingly, for
+FreeBSD-specific features, but unfortunately this is not always the case.
+A number also rely on the fact that the CPU type is an Intel-based
+little-endian CPU.
 
-To test whether you are working on a 4.4 BSD-derived system, you
-should use the BSD definition, which is defined in <sys/param.h> on
-said systems.  Unfortunately, it may not always be appropriate to
-include that header file without checking whether it's available -
+To test whether you are working on a 4.4 BSD-derived system, you should use
+the BSD definition, which is defined in <sys/param.h> on said systems.
+Unfortunately, it may not always be appropriate to include that header file
+without checking whether it's available -
 
         #ifdef (defined(__unix__) || defined(unix)) && !defined(USG)
         #include <sys/param.h>
         #endif
 
-and then you can surround the BSD-specific parts of your port using
-the conditional:
+and then you can surround the BSD-specific parts of your port using the
+conditional:
 
 	#if (defined(BSD) && BSD >= 199306)
 	...
 	#endif
 
-Please use the __NetBSD__ definition sparingly - it should only apply
-to features of NetBSD that are not present in other 4.4-lite derived
-BSDs.
+Please use the __NetBSD__ definition sparingly - it should only apply to
+features of NetBSD that are not present in other 4.4-lite derived BSDs.
 
 You should also avoid defining __FreeBSD__=1 and then simply using the
-FreeBSD port, if only from an aesthetic viewpoint (see section 4.4,
-FreeBSD ports).
+FreeBSD port, if only from an aesthetic viewpoint (see section 4.4, FreeBSD
+ports).
 
 
 4.4 FreeBSD ports
 
-It's quite possible that a FreeBSD port exists for the piece of
-software you're trying to build on NetBSD.  If that is the case, it's
-very possible that the FreeBSD port will work on NetBSD.  However,
-check that the person who ported the software to FreeBSD has not
-played fast and loose with the __FreeBSD__ cpp definition without good
-cause - a simple way to do this is to do
+It's quite possible that a FreeBSD port exists for the piece of software
+you're trying to build on NetBSD.  If that is the case, it's very possible
+that the FreeBSD port will work on NetBSD.  However, check that the person
+who ported the software to FreeBSD has not played fast and loose with the
+__FreeBSD__ cpp definition without good cause - a simple way to do this is
+to do
 
 	grep -i freebsd patches/patch-??
 
@@ -424,8 +421,8 @@ in the package directory.
 
 > GNU_CONFIGURE= yes
 
-Note that this appends --prefix=${PREFIX} to CONFIGURE_ARGS, so you
-don't have to do that yourself, and this may not be what you want.
+Note that this appends --prefix=${PREFIX} to CONFIGURE_ARGS, so you don't
+have to do that yourself, and this may not be what you want.
 
 
 4.5.2 If your package uses imake or xmkmf
@@ -437,10 +434,11 @@ don't have to do that yourself, and this may not be what you want.
 patches, but it won't hurt you either.
 
 
-4.5.4 If your package uses a different distribution method from
-.tar.gz:  take a look at the packages for sam, which uses a gzipped
-shell archive (shar), but the quick solution is to set EXTRACT_SUFX to
-the name after the DIST_NAME field, and
+4.5.4 If your package uses a different distribution method from .tar.gz:
+take a look at the packages for sam, which uses a gzipped shell archive
+(shar), but the quick solution is to set EXTRACT_SUFX to the name after the
+DIST_NAME field, and
+
 > EXTRACT_SUFX=   .msg.gz
 > EXTRACT_CMD=            zcat
 > EXTRACT_BEFORE_ARGS=
@@ -450,19 +448,21 @@ the name after the DIST_NAME field, and
 4.5.5 Your package doesn't create a subdirectory for itself (like GNU
 software does, for instance), but extracts itself in the current directory:
 see sam again, but the quick answer is:
+
 > NO_WRKSUBDIR=   yes
 
 
-4.5.6 Your package uses a weird Configure script:
-See the top package, but the quick answer is
+4.5.6 Your package uses a weird Configure script: See the top package, but
+the quick answer is
+
 > HAS_CONFIGURE=          yes
 > CONFIGURE_SCRIPT=       Configure
 > CONFIGURE_ARGS=	netbsd13
 
 
-4.5.7 Your package has an HTTP URL:
-No problem, see the libutf and mysql packages, just use the http URL
-and ftp(1) will handle it.
+4.5.7 Your package has an HTTP URL: No problem, see the libutf and mysql
+packages, just use the http URL and ftp(1) will handle it.
+
 > MASTER_SITES=   http://www.tcx.se/ \
 >                 http://www.buoy.com/mysql/ \
 >                 http://web.tryc.on.ca/mysql/ \
@@ -472,6 +472,7 @@ and ftp(1) will handle it.
 
 4.5.8 Your package builds in a different directory from its base DIST_NAME:
 see tcl and tk packages:
+
 > WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
 
 
@@ -480,6 +481,7 @@ with danger if you're using GNU configure, as (see 4.5.1)
 --prefix=${PREFIX} is automatically appended to CONFIGURE_ARGS.  SO take a
 look at mit-pthreads, omit GNU_CONFIGURE=yes, use HAS_CONFIGURE=yes, and
 manually add the modified PREFIX to CONFIGURE_ARGS yourself:
+
 > HAS_CONFIGURE= yes
 > CONFIGURE_ARGS += ${PREFIX}/dirname
 
@@ -487,9 +489,9 @@ manually add the modified PREFIX to CONFIGURE_ARGS yourself:
 4.6 A worked example
 
 I checked to find a piece of software that isn't in the FreeBSD ports
-collection, and picked GNU bison.  Quite why someone would want to
-have bison when Berkeley yacc is already present in the tree is beyond
-me, but it's useful for the purposes of this exercise.
+collection, and picked GNU bison.  Quite why someone would want to have
+bison when Berkeley yacc is already present in the tree is beyond me, but
+it's useful for the purposes of this exercise.
 
 > root@pumpy:/u/pkgsrc/lang(1765)# cd /usr/pkgsrc/lang
 > root@pumpy:/u/pkgsrc/lang(1765)# mkdir bison
@@ -615,17 +617,17 @@ me, but it's useful for the purposes of this exercise.
 > ===>  Cleaning for bison-1.25
 > root@pumpy:/u/pkgsrc/lang/bison(1788)# 
 
-Finally, please tar up and gzip the package directory (without the
-binary package) and mail it to me (agc@netbsd.org), remembering to
-uuencode it first.
+Finally, please tar up and gzip the package directory (without the binary
+package) and mail it to me (agc@netbsd.org), remembering to uuencode it
+first.
 
 
-4.7 Gotchas
+4.7 Do-it-yourself - Gotchas
 
 Whenever you're preparing a port from the FreeBSD collection or doing it
 from scratch, there's a number of points to take care for in order to get
-everything done propperly. Here is an attempt of list of all these
-gotchas. 
+everything done propperly. Here is an attempt of list of all these gotchas.
+
 
 4.7.1 Makefile
 
@@ -635,11 +637,13 @@ gotchas.
  - Replace /usr/local by ${PREFIX} in all Files but Makefiles (see patches
    below) 
 
+
 4.7.2 pkg/PLIST
 
  - If there's a "@exec ldconfig ...", add an "@unexec ldconfig ...", so the
    hints-file for ld.so doesn't grow without end.
  - Add any missing @dirrm statements
+
 
 4.7.3 Debugging
 
@@ -662,6 +666,7 @@ only with some debugging aids ;):
  - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla: if this brings up any files,
    they are missing pkg/PLIST; add them.
  - Compare pkg/PLIST against /tmp/x, fix the further one
+   ( sort /tmp/x >/tmp/x2 ; sort pkg/PLIST >/tmp/P ; sdiff /tmp/x2 /tmp/P )
  - make reinstall && make package
  - pkg_delete blub
  - find /usr/pkg/ /usr/X11R6/ -type f -newer /tmp/bla shouldn't find anything
@@ -671,3 +676,9 @@ only with some debugging aids ;):
  - pkg_delete - still no file should be left (re-run above find)
  - submit :)
 
+
+###########################################################################
+# Local Variables:
+# mode:		Text
+# fill-column:	75
+# End:
