@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/13 14:56:02 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/10/27 01:06:12 hubertf Exp $
 # New ports collection makefile for:	rpm
 # Version required:	2.4.8
 # Date created:		23 January 1997
@@ -17,6 +17,7 @@ MAINTAINER=	tg@FreeBSD.ORG
 BUILD_DEPENDS=	${PREFIX}/lib/libgdbm.a:${PORTSDIR}/databases/gdbm
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	${ARCH}--netbsd
 USE_GMAKE=	yes
 MAN8=		rpm.8 rpm2cpio.8
 
