@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/08/28 14:53:15 agc Exp $
+
+--- src/Makefile.in	2002/08/27 17:42:12	1.1
++++ src/Makefile.in	2002/08/27 17:45:06
+@@ -108,7 +108,7 @@
+ SESSIONTIMEOUT=-DCLIENT_TIMEOUT=1800
+ LIBDIFF=$(TOPDIR)/../libgdiff/libgdiff.a
+ LIBZ=$(TOPDIR)/../zlib/libz.a
+-LIBGC=$(TOPDIR)/../gc6.0/.libs/libgc.a
++LIBGC=@prefix@/lib/libgc.a
+ 
+ XCFLAGS = -Wmissing-prototypes -Wall -Wreturn-type -DDATADIR=\"$(datadir)\"
+ # XCFLAGS += -Wno-unused -Werror
