@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.5 2004/11/26 01:56:17 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.6 2004/11/26 01:58:47 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -20,8 +20,8 @@ DLOPEN_BUILDLINK3_MK:=	${DLOPEN_BUILDLINK3_MK}+
 # support.
 #
 _DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
-	NetBSD-2.[0-9] NetBSD-2.[0-8][0-9]* NetBSD-2.9[0-8]*		\
-	NetBSD-2.99.[0-9] NetBSD-2.99.10
+	NetBSD-2.[0-9]-* NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*	\
+	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*
 
 _DLOPEN_REQUIRE_PTHREADS?=	no
 .for _pattern_ in ${_DLOPEN_REQUIRE_PTHREAD_PLATFORMS}
