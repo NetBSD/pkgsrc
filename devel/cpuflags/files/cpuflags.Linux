@@ -1,16 +1,18 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.4 2001/11/27 02:31:48 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.5 2001/11/27 12:26:12 abs Exp $
 
 hw_model=`uname -m`
 
 case $hw_model in
     # i386
-    i386*)		FLAGS='-march=i386'		;;
-    i486*)		FLAGS='-march=i486'		;;
-    i586*)		FLAGS='-march=pentium'		;;
-    i686*)		FLAGS='-march=pentiumpro'	;;
+    i386)	FLAGS='-march=i386'		;;
+    i486)	FLAGS='-march=i486'		;;
+    i586)	FLAGS='-march=pentium'		;;
+    i686)	FLAGS='-march=pentiumpro'	;;
     #
-    *)			echo "Unknown hw.model '$hw_model'" >&2
+    *)		echo "Unknown hw.model '$hw_model'"			>&2
+		echo "Please send machine details to abs@netbsd.org"	>&2
+						;;
 esac
 
 # Fixup flags for old gcc
