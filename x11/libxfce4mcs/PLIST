@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:40:37 martti Exp $
+include/xfce4/libxfce4mcs/mcs-client.h
+include/xfce4/libxfce4mcs/mcs-common.h
+include/xfce4/libxfce4mcs/mcs-manager.h
+lib/libxfce4mcs-client.a
+lib/libxfce4mcs-client.la
+lib/libxfce4mcs-client.so
+lib/libxfce4mcs-client.so.1
+lib/libxfce4mcs-client.so.1.0
+lib/libxfce4mcs-manager.a
+lib/libxfce4mcs-manager.la
+lib/libxfce4mcs-manager.so
+lib/libxfce4mcs-manager.so.1
+lib/libxfce4mcs-manager.so.1.0
+lib/pkgconfig/libxfce4mcs-client-1.0.pc
+lib/pkgconfig/libxfce4mcs-manager-1.0.pc
+@dirrm include/xfce4/libxfce4mcs
