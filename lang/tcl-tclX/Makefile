@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/01/08 23:14:52 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2005/01/13 14:39:25 minskim Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclx/}
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://tclx.sourceforge.net/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
+
+.include "../../lang/tcl/Makefile.version"
 
 CONFLICTS+=		tclX-[0-9]*
 BUILDLINK_DEPENDS.tcl+=	tcl>=8.4.7
@@ -27,7 +29,7 @@ TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
-PKGSRC_TCL_SRC_DIR=	${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.9
+PKGSRC_TCL_SRC_DIR=	${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl${TCL_VERSION}
 CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR="${PKGSRC_TCL_SRC_DIR}"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
