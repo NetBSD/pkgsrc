@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/14 23:09:02 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/06 22:30:23 jmmv Exp $
 bin/nautilus
 bin/nautilus-file-management-properties
 bin/nautilus-server-connect
@@ -105,6 +105,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/nautilus.mo
