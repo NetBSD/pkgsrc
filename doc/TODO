@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.597 2003/05/28 15:54:49 jschauma Exp $
+$NetBSD: TODO,v 1.598 2003/05/28 17:28:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -73,7 +73,7 @@ Suggested package updates
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o arch-1.0pre17 [pkg/20776]
-	o arch-1.0pre23
+	o arch-1.0pre24
 	o asm2html-1.4 [pkg/21319]
 	o asp2php-0.76.15 [pkg/20506]
 	o atari800-1.3
@@ -82,12 +82,14 @@ Suggested package updates
 	o balsa-1.4.4
 	o balsa2-2.0.11
 	o beaver-0.3.0 [pkg/21259]
+	o bidwatcher-1.3.8
 	o binutils-2.13.2.1
 	o bogofilter-0.11.2
 	o boolean-6.4
 	o bzflag-1.7g0
 	o calamaris-2.58 [pkg/21662]
 	o canna-3.6p3 [pkg/20208]
+	o cdrtools-2.00.3
 	o centericq-4.9.4
 	o cervisia-2.0
 	o cfengine-1.6.5 [pkg/19459|seb]
@@ -103,14 +105,15 @@ Suggested package updates
 	o ddd-3.3.5
 	o dircproxy-1.0.5 [pkg/21644]
 	o disc-cover-1.5.0
-	o distcc-2.4
-	o docbook-xsl-1.61.2
+	o distcc-2.5
+	o doxygen-1.3.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl101c
 	o ettercap-0.6.a
 	o exim-4.12 [pkg/19850]
 	o exim-4.20
+	o feh-1.2.6
 	o festival-1.4.3
 	o filerunner-2.2.4 [pkg/21626]
 	o fltk-1.1.3
@@ -125,6 +128,7 @@ Suggested package updates
 	o gcvs-1.0-1
 	o gd-2.0.12
 	o gdm-2.4.1.1
+	o geda-20030525
 	o generator-0.35
 	o getmail-3.1.2
 	o gettext-0.12
@@ -135,7 +139,7 @@ Suggested package updates
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
-	o gnucash-1.8.3
+	o gnucash-1.8.4
 	o gnuchess-5.06
 	o gpa-0.6.1
 	o gq-0.6.0 [pkg/21284]
@@ -145,6 +149,7 @@ Suggested package updates
 	o gtkmm-2.2.2
 	o guile-1.6.4
 	o hatari-0.30
+	o host-20030527
 	o icepref-2.2
 	o icewm-1.2.7
 	o inform-6.21.3 [pkg/19298]
@@ -202,7 +207,6 @@ Suggested package updates
 	o openh323-1.11.2
 	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
-	o openslp-1.0.11
 	o openssh-3.6.1p2
 	o openssl-0.9.7b
 	o oss-3.9.7j
@@ -244,6 +248,7 @@ Suggested package updates
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
 	o swig-1.3.17 [epg]
+	o sylpheed-0.9.1
 	o sylpheed-claws-0.9.0
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
