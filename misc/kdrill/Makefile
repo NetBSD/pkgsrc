@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/07 13:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/08 21:50:41 wiz Exp $
 #
 
 DISTNAME=	kdrill5.11.6
@@ -12,6 +12,8 @@ COMMENT=	kanji quiz and japanese dictionary
 
 USE_IMAKE=	yes
 USE_X11BASE=	yes
+
+SCRIPTS_ENV+=	BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kdrill
