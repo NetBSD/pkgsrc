@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/02/18 14:40:35 salo Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/03 19:05:52 salo Exp $
 #
 
-DISTNAME=		silc-server-0.9.16
+DISTNAME=		silc-server-0.9.18
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -69,11 +69,11 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-# If you want to debug silc-server, uncomment this.
+# If you want to debug silc-server, uncomment the line below.
 #
 #CONFIGURE_ARGS+=       --enable-debug
 
-.if (${MACHINE_ARCH} != "i386")
+.if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
