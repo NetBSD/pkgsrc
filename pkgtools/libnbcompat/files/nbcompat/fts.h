@@ -1,4 +1,4 @@
-/*	$NetBSD: fts.h,v 1.2 2003/12/19 22:16:14 grant Exp $	*/
+/*	$NetBSD: fts.h,v 1.3 2003/12/19 22:23:00 grant Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -41,8 +41,8 @@ typedef struct {
 	dev_t fts_dev;			/* starting device # */
 	char *fts_path;			/* path for this descent */
 	int fts_rfd;			/* fd for root */
-	int fts_pathlen;		/* sizeof(path) */
-	int fts_nitems;			/* elements in the sort array */
+	u_int fts_pathlen;		/* sizeof(path) */
+	u_int fts_nitems;		/* elements in the sort array */
 	int (*fts_compar)		/* compare function */
 	    (const struct _ftsent **, const struct _ftsent **);
 
