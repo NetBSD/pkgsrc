@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4546 2004/01/22 12:04:38 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4547 2004/01/22 12:21:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nmap to 3.50 [salo 2004-01-22]
 	Added wv2-0.2.1 [markd 2004-01-22]
 	Added quake3server-excessive-003 [xtraeme 2004-01-22]
+	Updated adns to 1.1 [xtraeme 2004-01-22]
