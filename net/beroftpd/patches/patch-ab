@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 1999/03/07 16:51:45 rh Exp $
+
+--- src/ftpcmd.y.orig	Sun Mar  7 16:36:53 1999
++++ src/ftpcmd.y	Sun Mar  7 16:39:23 1999
+@@ -830,16 +830,16 @@
+         = {
+             if (log_commands) syslog(LOG_INFO, "SYST");
+ 	if ($2)
+-#ifdef unix
+ #ifdef BSD
+             reply(215, "UNIX Type: L%d Version: BSD-%d",
+                 NBBY, BSD);
+ #else  /* BSD */
++#ifdef unix
+             reply(215, "UNIX Type: L%d", NBBY);
+-#endif /* BSD */
+ #else  /* unix */
+             reply(215, "UNKNOWN Type: L%d", NBBY);
+ #endif /* unix */
++#endif /* BSD */
+         }
+ 
+         /*
