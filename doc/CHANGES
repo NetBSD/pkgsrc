@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.933 2002/12/28 15:39:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.934 2002/12/28 19:50:29 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4290,3 +4290,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sylpheed to 0.8.7nb1 [jmmv 2002-12-28]
 	Updated sysbuild to 1.7 [jmmv 2002-12-28]
 	Added fooseti-0.6.6 [jmmv 2002-12-28]
+	Updated xforms to 1.0 [jschauma 2002-12-28]
