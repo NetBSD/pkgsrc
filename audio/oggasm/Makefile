@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/22 12:26:16 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/14 03:43:18 schmonz Exp $
 #
 
 DISTNAME=	oggasm_1.4.0
@@ -15,7 +15,7 @@ DEPENDS+=	vorbis-tools>=1.0.0.7:../../audio/vorbis-tools
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
 
 USE_PERL5=	yes
-REPLACE_PERL=	${WRKSRC}/oggasm
+REPLACE_PERL=	oggasm
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/12 18:29:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/14 03:43:20 schmonz Exp $
 #
 
 DISTNAME=	SnortSnarf-020516.1
@@ -13,7 +13,7 @@ COMMENT=	Generate HTML report summaries from snort incident alerts
 DEPENDS+=	p5-Time>=101.062101:../../time/p5-Time
 
 USE_PERL5=	YES
-REPLACE_PERL=	${WRKSRC}/snortsnarf.pl
+REPLACE_PERL=	snortsnarf.pl
 NO_BUILD=	# defined
 
 post-configure:

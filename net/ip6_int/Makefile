@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/25 18:47:02 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/14 03:43:19 schmonz Exp $
 #
 
 DISTNAME=	ip6_int
@@ -14,7 +14,7 @@ EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 WRKSRC=		${WRKDIR}
 
 USE_PERL5=	yes
-REPLACE_PERL=	${WRKSRC}/ip6_int
+REPLACE_PERL=	ip6_int
 NO_BUILD=	yes
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/10/03 21:10:43 markd Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/14 03:43:19 schmonz Exp $
 
 DISTNAME=	kdevelop-2.1.3_for_KDE_3.0
 PKGNAME=	kdevelop-base-2.1.3
@@ -25,8 +25,8 @@ CONFLICTS+=	kdevelop<=1.3
 USE_PERL5=	yes
 
 REPLACE_PERL= \
-	${WRKSRC}/kdevelop/tools/processesend.pl \
-	${WRKSRC}/kdevelop/tools/processes.pl.in
+	kdevelop/tools/processesend.pl \
+	kdevelop/tools/processes.pl.in
 
 EVAL_PREFIX+=	\
 	QT3DIR=qt3 \
