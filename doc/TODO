@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3249 2005/03/22 09:05:14 cjep Exp $
+$NetBSD: TODO,v 1.3250 2005/03/22 09:25:17 adam Exp $
 
 Suggested new packages
 ======================
@@ -705,7 +705,6 @@ Suggested package updates
 	o nullmailer-1.0.0
 	o nut-10.15
 	o obexftp-0.10.6
-	o octave-current-2.1.66
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
 	o ogre-0.12.3
