@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1307 2003/02/03 05:09:48 fredb Exp $
+$NetBSD: CHANGES,v 1.1308 2003/02/03 16:15:06 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -539,3 +539,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p0f to 1.8.2nb1 [jmmv 2003-02-02]
 	Updated lsof to 4.66nb1 [atatat 2003-02-02]
 	Updated gmplayer to 0.90rc13nb1 [fredb 2003-02-02]
+	Updated htmllint to 20030203 [jschauma 2003-02-03]
