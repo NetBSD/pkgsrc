@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/11 00:47:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/02 04:22:47 minskim Exp $
 #
 
 DISTNAME=	cdparanoia-III-alpha9.8
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.xiph.org/paranoia/
 COMMENT=	CDDA reading utility with extra data verification features
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* Linux-*-*
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
