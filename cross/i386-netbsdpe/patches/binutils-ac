@@ -1,13 +1,14 @@
-$NetBSD: binutils-ac,v 1.1 2001/10/21 12:24:16 kent Exp $
+$NetBSD: binutils-ac,v 1.2 2002/03/18 03:04:41 kent Exp $
 
---- ld/configure.tgt.dist	Mon Jun 11 19:05:08 2001
+--- ld/configure.tgt.orig	Wed Dec  5 15:47:58 2001
 +++ ld/configure.tgt
-@@ -144,6 +144,8 @@
- i[3456]86-*-solaris2*)	targ_emul=elf_i386 ;;
- i[3456]86-*-unixware)	targ_emul=elf_i386 ;;
- i[3456]86-*-solaris*)	targ_emul=elf_i386 ;;
+@@ -154,6 +154,9 @@
+ i[3456]86-*-netbsdelf*)	targ_emul=elf_i386
+ 			targ_extra_emuls=i386nbsd
+ 			;;
 +i[3456]86-*-netbsdpe*)	targ_emul=i386pe ;
-+			targ_extra_ofiles="deffilep.o pe-dll.o" ;;
- i[3456]86-*-netbsd*)	targ_emul=i386nbsd ;;
- i[3456]86-*-netware)	targ_emul=i386nw ;;
- i[3456]86-*-elf*)	targ_emul=elf_i386 ;;
++			targ_extra_ofiles="deffilep.o pe-dll.o"
++			;;
+ i[3456]86-*-netbsd*)	targ_emul=i386nbsd
+ 			targ_extra_emuls=elf_i386
+ 			;;

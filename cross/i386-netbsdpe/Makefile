@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/10/21 12:24:15 kent Exp $
-# $PEACE: Makefile,v 1.16 2001/10/19 07:43:09 kent Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/18 03:04:40 kent Exp $
+# $PEACE: Makefile,v 1.18 2001/12/05 07:13:57 kent Exp $
 
-DISTVERSION=		1.2.1
+DISTVERSION=		1.3.0
 CROSS_DISTFILES=		# none
 
 MAINTAINER=		peace-sacrifice@hauN.org
