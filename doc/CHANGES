@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9609 2005/03/24 16:31:35 agc Exp $
+$NetBSD: CHANGES,v 1.9610 2005/03/24 17:07:18 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1718,3 +1718,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox-gtk1 to 1.0.2 [taya 2005-03-24]
 	Updated fluxbox to 0.9.12 [jmcneill 2005-03-24]
 	Updated tinyscheme to 1.35 [agc 2005-03-24]
+	Updated p5-Cache-Simple-TimedExpiry to 0.23 [cube 2005-03-24]
+	Updated p5-DBIx-SearchBuilder to 1.22 [cube 2005-03-24]
+	Updated rt3 to 3.2.3 [cube 2005-03-24]
