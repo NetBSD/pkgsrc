@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2002/01/31 23:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.272 2002/01/31 23:15:30 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -137,12 +137,12 @@ SUBDIR+=	pchar
 SUBDIR+=	pconsole
 SUBDIR+=	pen
 SUBDIR+=	pfnet
-SUBDIR+=	pim6dd
-SUBDIR+=	pim6sd
 SUBDIR+=	php3-snmp
 SUBDIR+=	php4-ftp
 SUBDIR+=	php4-sockets
 SUBDIR+=	php4-yp
+SUBDIR+=	pim6dd
+SUBDIR+=	pim6sd
 SUBDIR+=	pload
 SUBDIR+=	poink
 SUBDIR+=	polsms
