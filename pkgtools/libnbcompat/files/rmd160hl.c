@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $	*/
+/*	$NetBSD: rmd160hl.c,v 1.4 2003/09/05 18:36:04 jlam Exp $	*/
 
 /* rmd160hl.c
  * ----------------------------------------------------------------------------
@@ -18,7 +18,7 @@
 #include "nbcompat/nbtypes.h"
 
 #ifndef lint
-__RCSID("$NetBSD: rmd160hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
+__RCSID("$NetBSD: rmd160hl.c,v 1.4 2003/09/05 18:36:04 jlam Exp $");
 #endif	/* not lint */
 
 
@@ -31,7 +31,7 @@ __RCSID("$NetBSD: rmd160hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
 #if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-#include <rmd160.h>
+#include "nbcompat/rmd160.h"
 #include <stdio.h>
 #include <stdlib.h>
 #if HAVE_UNISTD_H

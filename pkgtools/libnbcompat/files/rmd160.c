@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.3 2003/09/03 13:11:15 jlam Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.4 2003/09/05 18:36:03 jlam Exp $	*/
 
 /********************************************************************\
  *
@@ -25,7 +25,7 @@
 #include "nbcompat/nbtypes.h"
 
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.4 2003/09/05 18:36:03 jlam Exp $");
 #endif	/* not lint */
 
 /* header files */
@@ -33,7 +33,7 @@ __RCSID("$NetBSD: rmd160.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
 /* #include "namespace.h" */
 
 #include <assert.h>
-#include <rmd160.h>
+#include "nbcompat/rmd160.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

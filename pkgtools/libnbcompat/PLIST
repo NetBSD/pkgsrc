@@ -1,26 +1,19 @@
-@comment $NetBSD: PLIST,v 1.8 2003/09/03 13:11:12 jlam Exp $
-include/libnbcompat/extern.h
-include/libnbcompat/ftpglob.h
-include/libnbcompat/getopt.h
-include/libnbcompat/md5.h
-include/libnbcompat/mtree.h
-include/libnbcompat/nbcompat.h
-include/libnbcompat/nbcompat/err.h
-include/libnbcompat/nbcompat/fts.h
-include/libnbcompat/nbcompat/nbconfig.h
-include/libnbcompat/nbcompat/nbtypes.h
-include/libnbcompat/nbcompat/poll.h
-include/libnbcompat/nbcompat/statfs.h
-include/libnbcompat/nbcompat/vis.h
-include/libnbcompat/pack_dev.h
-include/libnbcompat/pwcache.h
-include/libnbcompat/rmd160.h
-include/libnbcompat/sha1.h
-include/libnbcompat/sha2.h
-include/libnbcompat/stat_flags.h
-include/libnbcompat/util.h
+@comment $NetBSD: PLIST,v 1.9 2003/09/05 18:35:58 jlam Exp $
+include/nbcompat.h
+include/nbcompat/err.h
+include/nbcompat/fts.h
+include/nbcompat/getopt.h
+include/nbcompat/glob.h
+include/nbcompat/md5.h
+include/nbcompat/nbconfig.h
+include/nbcompat/nbtypes.h
+include/nbcompat/poll.h
+include/nbcompat/rmd160.h
+include/nbcompat/sha1.h
+include/nbcompat/sha2.h
+include/nbcompat/statfs.h
+include/nbcompat/vis.h
 lib/libnbcompat.a
-@dirrm include/libnbcompat/nbcompat
-@dirrm include/libnbcompat
+@dirrm include/nbcompat
 @unexec ${RMDIR} -p %D/include 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/lib 2>/dev/null || ${TRUE}

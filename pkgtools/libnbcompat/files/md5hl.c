@@ -1,4 +1,4 @@
-/*	$NetBSD: md5hl.c,v 1.3 2003/09/03 13:11:14 jlam Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.4 2003/09/05 18:36:01 jlam Exp $	*/
 
 /*
  * Written by Jason R. Thorpe <thorpej@netbsd.org>, April 29, 1997.
@@ -14,13 +14,13 @@
 
 #define	MDALGORITHM	MD5
 
-#include <md5.h>
+#include "nbcompat/md5.h"
 
 #ifndef _DIAGASSERT
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-/*	$NetBSD: md5hl.c,v 1.3 2003/09/03 13:11:14 jlam Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.4 2003/09/05 18:36:01 jlam Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------

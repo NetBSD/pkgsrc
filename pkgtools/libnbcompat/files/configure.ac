@@ -31,7 +31,7 @@ AC_HEADER_STDC
 AC_HEADER_TIME
 
 AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
-	errno.h fcntl.h fts.h inttypes.h libutil.h limits.h \
+	errno.h fcntl.h fts.h getopt.h glob.h inttypes.h libutil.h limits.h \
 	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
 	paths.h poll.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
@@ -39,6 +39,8 @@ AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	sys/param.h sys/poll.h sys/queue.h sys/time.h sys/ttycom.h \
 	sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h sys/vfs.h termcap.h \
 	termios.h time.h tzfile.h unistd.h util.h utmp.h])
+
+AC_CHECK_HEADERS([md5.h rmd160.h sha1.h sha2.h])
 
 dnl Check that this vis.h has *vis()-related functions because Solaris'
 dnl vis.h doesn't.  Also, only consider the header found if it defines
@@ -82,19 +84,46 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv glob inet_ntop \
-		inet_pton isblank lchflags lchmod lchown lutimes mkstemp \
-		mkdtemp poll setenv setprogname snprintf strdup strerror \
-		strlcat strlcpy strmode strptime strsep strtoll timegm \
-		usleep])
+AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv getopt_long glob \
+	inet_ntop inet_pton isblank lchflags lchmod lchown lutimes mkstemp \
+	mkdtemp poll setenv setprogname snprintf strdup strerror strlcat \
+	strlcpy strmode strptime strsep strtoll timegm usleep])
 
-AC_CHECK_FUNCS([MD5File RMD160File SHA1File])
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
-AC_CHECK_FUNCS([getmode setmode])
+AC_CHECK_FUNCS([getmode setmode],
+	[pkg_use_nbcompat_setmode=no], [pkg_use_nbcompat_setmode=yes])
+
+if test $pkg_use_nbcompat_setmode = yes; then
+	AC_LIBOBJ(setmode)
+fi
+
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
-		uid_from_user user_from_uid])
-AC_CHECK_FUNCS(fts_open, [:], [AC_LIBOBJ(__fts13)])
+		uid_from_user user_from_uid],
+	[pkg_use_nbcompat_pwcache=no], [pkg_use_nbcompat_pwcache=yes])
+
+if test $pkg_use_nbcompat_setmode = yes; then
+	AC_LIBOBJ(pwcache)
+fi
+
+AC_CHECK_FUNC(fts_open, [:], [AC_LIBOBJ(__fts13)])
+
+AC_CHECK_FUNC(MD5File, [:], [
+	AC_LIBOBJ(md5c)
+	AC_LIBOBJ(md5hl)
+])
+AC_CHECK_FUNC(RMD160File, [:], [
+	AC_LIBOBJ(rmd160)
+	AC_LIBOBJ(rmd160hl)
+])
+AC_CHECK_FUNC(SHA1File, [:], [
+	AC_LIBOBJ(sha1)
+	AC_LIBOBJ(sha1hl)
+])
+AC_CHECK_FUNC(SHA256_File, [:], [
+	AC_LIBOBJ(sha2)
+	AC_LIBOBJ(sha2hl)
+])
 
 AC_CHECK_FUNCS([strunvis strvis strsvis],
 	[pkg_use_nbcompat_vis=no],
@@ -110,7 +139,6 @@ if test $pkg_use_nbcompat_vis = yes; then
 fi
 
 AC_CHECK_FUNCS([getpassphrase getpgrp memmove poll select])
-AC_CHECK_FUNCS([getopt_long])
 
 AC_CHECK_FUNC(getpgrp, [AC_FUNC_GETPGRP])
 
