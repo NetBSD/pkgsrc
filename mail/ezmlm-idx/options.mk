@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2004/11/17 19:56:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.5 2004/12/21 03:42:25 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ezmlm-idx
 PKG_SUPPORTED_OPTIONS=	mysql pgsql
@@ -22,7 +22,7 @@ PKG_FAIL_REASON+=       "MySQL and PostgreSQL cannot both be compiled in." \
 post-configure:
 	${ECHO} -I${BUILDLINK_PREFIX.mysql-client}/include/mysql > ${WRKSRC}/sub_mysql/conf-sqlcc
 	${ECHO} -L${BUILDLINK_PREFIX.mysql-client}/lib/mysql -Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql -lmysqlclient > ${WRKSRC}/sub_mysql/conf-sqlld
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} mysql
+	${ECHO} mysql > ${WRKSRC}/conf-sub
 .  else
 PKG_FAIL_REASON+=	"mysql: can't define post-configure target"
 .  endif
@@ -37,7 +37,7 @@ PKG_FAIL_REASON+=	"mysql: can't define post-configure target"
 post-configure:
 	${ECHO} -I${PGSQL_PREFIX}/include > ${WRKSRC}/sub_pgsql/conf-sqlcc
 	${ECHO} -L${PGSQL_PREFIX}/lib -Wl,-R${PGSQL_PREFIX}/lib -lpq > ${WRKSRC}/sub_pgsql/conf-sqlld
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} pgsql
+	${ECHO} pgsql > ${WRKSRC}/conf-sub
 .  else
 PKG_FAIL_REASON+=	"pgsql: can't define post-configure target"
 .  endif
