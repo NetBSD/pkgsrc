@@ -1,10 +1,5 @@
-# New ports collection makefile for:	a2ps-j
-# Version required:	1.44
-# Date created:		16 Nov 1996
-# Whom:			SAITO Itsuro <saito@miv.t.u-tokyo.ac.jp>
-#
-# $Id: Makefile,v 1.1.1.1 1999/06/07 07:14:19 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/06/07 07:18:37 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.5 1999/04/16 04:57:06 taoka Exp $
 
 DISTNAME=	a2ps.pl-1.44
 PKGNAME=	ja-a2ps-1.44
@@ -13,15 +8,15 @@ MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/ \
 		ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=	# None
 
-MAINTAINER=	saito@miv.t.u-tokyo.ac.jp
+MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 
-EXTRACT_CMD=	${CP}
-EXTRACT_BEFORE_ARGS=
-EXTRACT_AFTER_ARGS=	.
+USE_PERL5=	YES
+
+EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/a2ps.pl-1.44 ${PREFIX}/bin/a2ps-j
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
