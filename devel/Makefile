@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2001/07/09 09:37:45 zuntum Exp $
+# $NetBSD: Makefile,v 1.229 2001/07/09 16:01:01 tv Exp $
 #
 
 COMMENT=	Development utilities
@@ -139,8 +139,6 @@ SUBDIR+=	p5-Data-Dumper
 SUBDIR+=	p5-Data-ShowTable
 SUBDIR+=	p5-Date-Calc
 SUBDIR+=	p5-Date-Manip
-SUBDIR+=	p5-Devel-DProf
-SUBDIR+=	p5-Devel-Peek
 SUBDIR+=	p5-Devel-SmallProf
 SUBDIR+=	p5-Devel-Symdump
 SUBDIR+=	p5-Event
