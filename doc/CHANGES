@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8175 2004/11/30 12:13:53 hannken Exp $
+$NetBSD: CHANGES,v 1.8176 2004/11/30 12:32:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5668,3 +5668,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Class-Inner-0.1 [wiz 2004-11-30]
 	Updated p5-Test-Unit to 0.24 [wiz 2004-11-30]
 	Updated chrony to 1.20 [hannken 2004-11-30]
+	Updated BitTornado to 0.3.8 [wiz 2004-11-30]
+	Updated BitTornado-gui to 0.3.8 [wiz 2004-11-30]
