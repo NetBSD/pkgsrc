@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2001/03/28 15:06:12 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/22 22:01:10 zuntum Exp $
 # FreeBSD Id: ports/irc/bnc/Makefile,v 1.9 2000/05/22 06:38:58 will Exp
 
 DISTNAME=	bnc2.8.2
 PKGNAME=	bnc-2.8.2
 CATEGORIES=	chat
-MASTER_SITES=	http://hometown.psn.net/~andrews/dist/			\
-		http://zuntum.eik.pl/distfiles/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://bnc.dragondata.com
