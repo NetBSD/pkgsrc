@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/09/27 16:12:04 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/01/09 22:52:14 recht Exp $
 
-SHA1 (tar-1.14.tar.gz) = 484d3ac9c15a598f2ee110155d87b3daecc7b13c
-Size (tar-1.14.tar.gz) = 1485633 bytes
+SHA1 (tar-1.15.1.tar.gz) = 21574ae5d39b698f7f577e2cecc91a5ec89b659c
+Size (tar-1.15.1.tar.gz) = 2204322 bytes
