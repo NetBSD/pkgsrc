@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/10/23 13:14:52 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/24 22:10:55 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-gtk-/}
 COMMENT=		Freeciv client with GTK+ interface
@@ -18,8 +18,8 @@ do-install:
 	cd ${WRKSRC}/client; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
