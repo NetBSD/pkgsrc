@@ -1,4 +1,4 @@
-icbirc is a proxy that allows to connect an IRC client to an ICB server.
+icbirc is a proxy that allows users to connect an IRC client to an ICB server.
 The proxy accepts client connections, connects to the server, and for-
 wards data between those two connections.
 
