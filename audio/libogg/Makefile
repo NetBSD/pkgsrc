@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/02 12:32:44 lukem Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/03 21:59:19 tron Exp $
 
 DISTNAME=	libogg-1.0rc3
 PKGNAME=	libogg-1.0.0.7
@@ -16,9 +16,9 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
-GCC_VERSION!=gcc --version
+GCC_VERSION!=		gcc --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs)
-IGNORE=		"gcc ${GCC_VERSION} cannot be used, as it generates bad ogg files"
+.include "../../lang/gcc/Makefile.gcc"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
