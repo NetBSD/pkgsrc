@@ -1,5 +1,7 @@
 #!/bin/sh
-
+#
+# $NetBSD: upsd,v 1.2 2001/11/20 16:59:10 jlam Exp $
+#
 # PROVIDE: upsd
 # REQUIRE: NETWORK syslogd mountcritremote
 
