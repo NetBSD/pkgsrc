@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:20:04 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/25 02:14:11 snj Exp $
 #
 
 DISTNAME=	fplsa
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.gap-system.org/Share/fplsa.html
 COMMENT=	GAP interface to FPLSA
 
 WRKSRC=		${WRKDIR}/fplsa
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GAP_PKG_NAME=	fplsa
 ALL_TARGET=	default
 
