@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/20 09:15:52 xtraeme Exp $
+etc/rc.d/honeydarpd
+man/man8/honeyd-arpd.8
+sbin/honeyd-arpd

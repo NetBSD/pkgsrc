@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/20 09:15:53 xtraeme Exp $
+
+--- arpd.c.orig	Fri Jun  6 21:47:35 2003
++++ arpd.c	Fri Jun  6 21:48:13 2003
+@@ -33,7 +33,7 @@
+ #define ARPD_MAX_ACTIVE		600
+ #define ARPD_MAX_INACTIVE	300
+ 
+-#define PIDFILE			"/var/run/arpd.pid"
++#define PIDFILE			"/var/run/honeyd-arpd.pid"
+ 
+ struct arp_req {
+ 	struct addr		pa;
