@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1199 2003/06/14 21:13:13 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1200 2003/06/17 14:33:17 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -557,20 +557,14 @@ DIGEST_REQD=		20010302
 
 uptodate-digest:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} ]; then \
-		case ${PKGNAME} in					\
-		digest-* | pkgchk-*)					\
-			;;						\
-		*)							\
-			{ cd ${_PKGSRCDIR}/pkgtools/digest;		\
-			${MAKE} clean;					\
-			if [ -f ${DIGEST} ]; then			\
-				${MAKE} ${MAKEFLAGS} deinstall;		\
-			fi;						\
-			${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};		\
-			${MAKE} ${MAKEFLAGS} clean; } 			\
-			;;						\
-		esac							\
+	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
+		{ cd ${_PKGSRCDIR}/pkgtools/digest;			\
+		${MAKE} clean;						\
+		if [ -f ${DIGEST} ]; then				\
+			${MAKE} ${MAKEFLAGS} deinstall;			\
+		fi;							\
+		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};			\
+		${MAKE} ${MAKEFLAGS} clean; } 				\
 	fi
 
 # Latest version of pkgtools required for correct pkgsrc operation.
