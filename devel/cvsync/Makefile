@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2003/03/06 13:15:48 gehenna Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/06 13:31:05 wiz Exp $
 #
 
 DISTNAME=	cvsync-0.14.1
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.daemon-systems.org/cvsync/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gehenna@NetBSD.ORG
 HOMEPAGE=	http://www.daemon-systems.org/cvsync/
-COMMENT=	a portable incremental cvs repository syncer
+COMMENT=	portable incremental cvs repository syncer
 
-WRKSRC=		${WRKDIR}/cvsync-0.14.1
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 USE_GMAKE=	YES
