@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:15 agc Exp $
+
+MD5 (gtop-1.0.9.tar.gz) = 37c85bfc2749156859cedbe0d0c0dae7
+SHA1 (patch-aa) = b5b2dd08464695ba430f9ca7a6f0f01326a5f5e2

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:51 agc Exp $
+
+MD5 (Fortify-1.4.6-unix-src.tar.gz) = 129ab43043a62e7494b991ab5182c1f8
+SHA1 (patch-aa) = b2d7540da220e4005bb76508fde52bfc5e28ae94

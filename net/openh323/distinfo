@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:30 agc Exp $
+
+MD5 (openh323_1.1beta3.tar.gz) = d02e02348fa6697d43bc955605d365c7
+SHA1 (patch-aa) = 45961ac114254f14d3ac4225cefd0c4e45d64597
+SHA1 (patch-ab) = 4519059c4d69fac1f5cc097b7af8d81dccad7d2a
+SHA1 (patch-ac) = b91879fb293c92334d5b58fe508d11197311c40a

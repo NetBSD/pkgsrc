@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:50 agc Exp $
+
+MD5 (bchunk-1.0.0.tar.gz) = 09ee48d87a4643dcaefe471f7ca4becb
+SHA1 (patch-aa) = c19fef146f0bddd685fc07b3da15191b3a14dd20

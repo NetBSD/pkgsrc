@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:29 agc Exp $
+
+MD5 (arpd.tar.gz) = f1d8c301919d0a60fc976764ccc0bba6
+SHA1 (patch-aa) = ba2501cf1e3aae38836df4f193ec2e642e146aae
+SHA1 (patch-ab) = b0d53d1e32a7fe260a22f7d8018c13cccfaa7571
+SHA1 (patch-ac) = 565f484cc246984aeeb6f414882aa2ccc6e33872

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:48 agc Exp $
+
+MD5 (cyrus-sasl-1.5.24.tar.gz) = ac3837c071c258b80021325936db2583
+SHA1 (patch-aa) = 4e6d027a6d4d66d54f7a565a0e5c48b34f05bb08
+SHA1 (patch-ab) = 82359390958c020348e7e7ebc39315da552d34c7
+SHA1 (patch-ac) = b5f99dd4789c19e36c29bbc3fbf47c556e32876e
+SHA1 (patch-ad) = faa888873c16c3c322e110a6f90380748b138942
+SHA1 (patch-ae) = b9f4295f80a64defe0381bce7def7b462bf5d196
+SHA1 (patch-af) = 3910389c08f72aaea6c964dbb846843fc57889df
+SHA1 (patch-ag) = acfc55182396a96d3fccdb93ba3c6207eb7c154f
+SHA1 (patch-ah) = 66ce42b201558c959be0a584e7d4121a283ae3db
+SHA1 (patch-ai) = 55ade1200d2c5b8f20b4c1775d6c3b7d3b8ef278

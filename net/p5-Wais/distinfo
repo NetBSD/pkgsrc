@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:44 agc Exp $
+
+MD5 (Wais-2.311.tar.gz) = 839b7c5a97769d4718127d4fdf3fb8a0
+SHA1 (patch-aa) = 3deb424eaeaa07efdd3c86a3b5505396d043fdf0
+SHA1 (patch-ab) = 62f5c7bd7d2087f75bd349d0fb2102b5f0f51c77
+SHA1 (patch-ac) = c1ae0bdd9fa016aa53a7f8efe9b029715bfe9da6

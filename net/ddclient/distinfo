@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:51:07 agc Exp $
+
+MD5 (ddclient-2.3.2.tar.gz) = c2d8447174f7f59f2cc7c87167a2d953
+SHA1 (patch-aa) = 07781a138843f558399239c474ca48c237e686ac
