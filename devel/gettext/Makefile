@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2002/12/12 01:56:23 grant Exp $
+# $NetBSD: Makefile,v 1.44 2002/12/22 05:14:41 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
 DISTNAME=		gettext-0.11.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=gettext/}
 
@@ -26,19 +27,13 @@ CONFIGURE_ARGS+=	--without-included-gettext
 INFO_FILES=		gettext.info
 TEXINFO_OVERRIDE=	YES
 
-PLIST_SRC=		${WRKDIR}/PLIST
-OPTIONAL_FILES+=	share/gettext/gettext.jar
+CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ=
+CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
+CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
+CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
 
 post-install:
 	cd ${WRKSRC}/intl; ${MAKE_PROGRAM} install-data
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@(							\
-	for FILE in ${OPTIONAL_FILES}; do			\
-	  ${TEST} ! -e ${PREFIX}/$$FILE || ${ECHO} $$FILE;	\
-	done;							\
-	${ECHO} "@dirrm share/gettext";				\
-	) >>${PLIST_SRC}
-
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
