@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.30 2004/01/17 09:38:18 grant Exp $
+# $NetBSD: build,v 1.31 2004/01/20 07:01:18 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -115,6 +115,7 @@ if [ -d pkgtools/pkglint ]; then
 	GREP=`${BMAKE} show-var VARNAME=GREP` || fail=yes
 	SED=`${BMAKE} show-var VARNAME=SED` || fail=yes
 	MAIL=`${BMAKE} show-var VARNAME=MAIL` || fail=yes
+	MACHINE_ARCH=`${BMAKE} show-var VARNAME=MACHINE_ARCH` || fail=yes
 else
 	echo "The pkgtools/pkglint directory does not exist.  Please update"
 	echo "your pkgsrc tree in ${USR_PKGSRC}"
@@ -206,7 +207,7 @@ do
 	if [ $? -ne 0 ]; then
 		built=`wc -l $BUILDLOG | ${AWK} '{print $1}'`
 		percent=`echo $built $tot | ${AWK} '{printf("%4.1f%%",$1*100/$2);}'`
-		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes bulk-package </dev/null | ${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ `uname -p`> ;g")
+		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes bulk-package </dev/null | ${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ ${MACHINE_ARCH}> ;g")
 		echo "$pkgdir" >> $BUILDLOG
 	fi
 done
