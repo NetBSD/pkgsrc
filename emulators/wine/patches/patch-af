@@ -1,5 +1,5 @@
 --- multimedia/mcicda.c.orig	Sun May 31 18:14:54 1998
-+++ multimedia/mcicda.c	Wed Jun 17 19:00:35 1998
++++ multimedia/mcicda.c	Fri Jun 19 19:30:10 1998
 @@ -15,6 +15,10 @@
  #include "mmsystem.h"
  #include "debug.h"
@@ -478,7 +478,7 @@
      	TRACE(cdaudio,"(%04X, %08lX, %p);\n", wDevID, dwFlags, lpParms);
  	if (lpParms == NULL) return MCIERR_INTERNAL;
  /*
-@@ -959,24 +950,22 @@
+@@ -959,24 +950,24 @@
  		}
  	if (dwFlags & MCI_SET_DOOR_OPEN) {
          	TRACE(cdaudio, "MCI_SET_DOOR_OPEN !\n");
@@ -507,11 +507,13 @@
  			  /* XXX should it be ",1" ??? */
 +#else
 +                if (ioctl(CDADev[wDevID].unixdev, CDIOCALLOW, 0)) return MCIERR_HARDWARE;
++#ifdef CDIOCCLOSE
 +                if (ioctl(CDADev[wDevID].unixdev, CDIOCCLOSE, 0)) return MCIERR_HARDWARE;
++#endif
  #endif
  		CDADev[wDevID].nTracks = 0;
  		}
-@@ -1002,7 +991,7 @@
+@@ -1002,7 +993,7 @@
  LONG CDAUDIO_DriverProc(DWORD dwDevID, HDRVR16 hDriv, WORD wMsg, 
  			DWORD dwParam1, DWORD dwParam2)
  {
@@ -520,7 +522,7 @@
  	switch(wMsg) {
  		case DRV_LOAD:
  			return 1;
-@@ -1059,23 +1048,22 @@
+@@ -1059,23 +1050,24 @@
  				(LPMCI_SEEK_PARMS)PTR_SEG_TO_LIN(dwParam2));
  		case MCI_SET_DOOR_OPEN:
              		TRACE(cdaudio, "MCI_SET_DOOR_OPEN !\n");
@@ -548,7 +550,9 @@
  			if (ioctl(CDADev[dwDevID].unixdev, CDROMEJECT, 1)) return MCIERR_HARDWARE;
 +#else
 +			if (ioctl(CDADev[dwDevID].unixdev, CDIOCALLOW, 0)) return MCIERR_HARDWARE;
++#ifdef CDIOCCLOSE
 +			if (ioctl(CDADev[dwDevID].unixdev, CDIOCCLOSE, 0)) return MCIERR_HARDWARE;
++#endif
 +			if (ioctl(CDADev[dwDevID].unixdev, CDIOCPREVENT, 0)) return MCIERR_HARDWARE;
  #endif
  			CDADev[dwDevID].nTracks = 0;
