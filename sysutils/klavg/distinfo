@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:04 agc Exp $
-
-SHA1 (klavg-1.1.tar.gz) = 9eb8eb8296aee655aa7a007676aae2d4611806c4
-Size (klavg-1.1.tar.gz) = 15225 bytes
-SHA1 (patch-aa) = 7a027f64e30892199cce3203eaae6f0bf0b596ef
-SHA1 (patch-ab) = 5a023d20eb73ba9f0eb8181423e70bdcf36bc706

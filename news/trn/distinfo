@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 13:37:55 agc Exp $
-
-SHA1 (trn4-test74.tar.gz) = 8dc5f96c07d2379ae04584c1e9e79027b8a411f7
-Size (trn4-test74.tar.gz) = 569282 bytes
-SHA1 (patch-ac) = 178f9146921719bccad9716cdce2d8a2b30c5e79
-SHA1 (patch-ad) = 78c18d634cb0861754e1d555a0e514299136ecbc

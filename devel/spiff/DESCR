@@ -1,9 +1,0 @@
-Spiff compares the contents of file1 and file2 and prints a
-description of the important differences between the files.  White
-space is ignored except to separate other objects.  Spiff maintains
-tolerances below which differences between two floating point numbers
-are ignored.  Differences in floating point notation (such as 3.4 3.40
-and 3.4e01) are treated as unimportant.  User specified delimited
-strings (i.e.  comments) can also be ignored.  Inside other user
-specified delimited strings (i.e.  quoted strings) whitespace can be
-significant.

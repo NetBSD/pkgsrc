@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/06/03 19:27:52 jmmv Exp $
-
-SHA1 (intltool-0.26.tar.bz2) = f44ce2c4d2d53d8e7f7a6af2db1df32a6ef48677
-Size (intltool-0.26.tar.bz2) = 100410 bytes
-SHA1 (patch-aa) = 794677370898ca3e4261a0be01c0b06c11ae1730

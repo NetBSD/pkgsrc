@@ -1,8 +1,0 @@
-British English male voice for the festival speech synthesis system.
-
-This voice uses a very small and efficient pulse-excited LPC diphone
-synthesis method.  It was originally written by Steve Isard.  The
-front end uses the same British English lexicon, intonation and
-duration methods as rab_diphone
-
-This voice can be activated via (voice_don_diphone)

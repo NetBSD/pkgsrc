@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/10/02 22:08:43 dillo Exp $
-
-SHA1 (libesmtp-1.0rc1.tar.bz2) = ae74259df8457ce5efb6e838674cd9464ffda2ce
-Size (libesmtp-1.0rc1.tar.bz2) = 251615 bytes
-SHA1 (patch-aa) = 83f000765b7bf3b498f0fa2130360c1aae85a043
-SHA1 (patch-ab) = cc027b93ae55b84c1b569ddcdd2644d4f63a33a5
-SHA1 (patch-ac) = e3c9b741915b7e24e307c9adfde2063a06430f5d

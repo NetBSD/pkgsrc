@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/01/19 10:27:56 salo Exp $
-
-SHA1 (wmfishtime-1.23.tar.gz) = d5ce95b0937014a17573c604e626a88d8f449b58
-Size (wmfishtime-1.23.tar.gz) = 21730 bytes
-SHA1 (patch-aa) = 8122c7a1213914145b3fd43956e6982dca1c1214
-SHA1 (patch-ba) = cd739472544fe79dcc12b22fa0b1dbc0281ac7bd
-SHA1 (patch-bb) = d35e6a640d89db0ea2ae60101cffb1957e836f58

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/01/17 04:43:06 uebayasi Exp $
-
-SHA1 (guile-1.4.1.tar.gz) = 81a91ea7480ca06d1aeda94b90a89b27e9bdea7a
-Size (guile-1.4.1.tar.gz) = 1502840 bytes
-SHA1 (patch-aa) = 22a9181066193cadc3663ae43d42e9f81d55c8e1
-SHA1 (patch-ad) = c692027caed122ef840a9ef3bf78eb125b26441e
-SHA1 (patch-ae) = 98174a540753d1eb5ac9071fb3ebd073158d8e93

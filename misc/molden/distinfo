@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/16 22:12:31 jmc Exp $
-
-SHA1 (molden3.8.tar.Z) = cde94fc88ad14085e03bff8cb7d585366d3c79d1
-Size (molden3.8.tar.Z) = 3198187 bytes
-SHA1 (patch-aa) = 62168b37335cc74737c2d967234c0e846ab7bfa3

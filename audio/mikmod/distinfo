@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:35 agc Exp $
-
-SHA1 (mikmod-3.1.6-a.tar.gz) = 240f85b1f7c91a14cddcb45931426c3bcf5c7703
-Size (mikmod-3.1.6-a.tar.gz) = 135187 bytes
-SHA1 (patch-aa) = 6c2a0cab092e15818c6eaa8a8381ca55da178a89

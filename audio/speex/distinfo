@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/05 13:18:10 wiz Exp $
-
-SHA1 (speex-1.0.1.tar.gz) = 6a2d3542f7c1eb201e4b2dea190d548c41d0d202
-Size (speex-1.0.1.tar.gz) = 388296 bytes
-SHA1 (patch-ab) = 2dc0e651926233e47aea62f37ed372f8f5f0df17

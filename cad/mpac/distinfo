@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/07/01 18:36:03 dmcmahill Exp $
-
-SHA1 (mpac-0.2.2.tar.gz) = fda07774e9ffb2ef6269df1a0655f3298ecdf11a
-Size (mpac-0.2.2.tar.gz) = 29911 bytes
-SHA1 (patch-aa) = f77fdebb18070cfa852fabeff9091d175fd2f30c

@@ -1,8 +1,0 @@
-# Uncomment the following line and change it to reflect the
-# requirements of your MPI installation; the line below is for MPICH
-# installed in a standard location searched by the compiler and
-# linker.
-
-# NOTE: The MPI compiler is specified at the top of compile.py .
-
-Scientific_mpi -I../../Include Scientific_mpi.c -L@MPICHPREFIX@/lib -lmpich

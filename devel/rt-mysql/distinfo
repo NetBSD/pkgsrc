@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/19 21:40:45 atatat Exp $
-
-SHA1 (rt-2-0-13.tar.gz) = 7e7a5ec27d463bd0683242cbc7f8e0f7cbe6ea38
-Size (rt-2-0-13.tar.gz) = 346050 bytes
-SHA1 (patch-aa) = 0d79c39dc73a8c4f9672e853ddae6c50fd23035a

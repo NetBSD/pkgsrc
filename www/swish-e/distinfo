@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/21 05:43:23 zuntum Exp $
-
-SHA1 (swish-efiles.1.3.2.tar.gz) = 001ba5c69296931c682ba8a8ee3fba56284112ab
-Size (swish-efiles.1.3.2.tar.gz) = 116381 bytes
-SHA1 (patch-aa) = 3485009ce9526a2221a998b52659607d7bc29fdf
-SHA1 (patch-ab) = 95fe9f4a2e33b9092364cd8b10a91b53edbf2a68

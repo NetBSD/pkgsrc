@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:36 zuntum Exp $
-bin/qident
-man/man1/qident.1
-man/cat1/qident.0

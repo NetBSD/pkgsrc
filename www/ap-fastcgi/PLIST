@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:15:44 zuntum Exp $
-lib/httpd/mod_fastcgi.so
-share/httpd/htdocs/manual/mod/mod_fastcgi.html

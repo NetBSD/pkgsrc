@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2002/05/21 12:04:42 wiz Exp $
-
-SHA1 (mod_dtcl-0.11.6.tar.gz) = 8a48b2292bb1048b17fd268011d1a4307ef5770e
-Size (mod_dtcl-0.11.6.tar.gz) = 90374 bytes
-SHA1 (patch-aa) = 512e310549e475fbd6106eef52d2f789f4a0390b

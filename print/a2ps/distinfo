@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/11/26 11:02:05 jmmv Exp $
-
-SHA1 (a2ps-4.13b.tar.gz) = cfc79a3e54115e569f667fa3fd2c2ec16d22b31a
-Size (a2ps-4.13b.tar.gz) = 1944289 bytes
-SHA1 (patch-aa) = 67f0c9ddf6e9829aeecb3de596c925d451990877
-SHA1 (patch-ab) = ba7446a32733d60910036190be957045d4ec1218

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:04:21 agc Exp $
-
-SHA1 (lrzsz-0.12.20.tar.gz) = 451e6a1813dfb71a412c973acd1b88b9ee3f28c4
-Size (lrzsz-0.12.20.tar.gz) = 280938 bytes
-SHA1 (patch-aa) = aaf33281da19658906eee6a922397968a200f186
-SHA1 (patch-ab) = 273f343a3e4ca8190ae4ab52483600f7bcf8e404

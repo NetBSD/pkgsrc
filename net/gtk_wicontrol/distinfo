@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/03/04 15:00:26 wiz Exp $
-
-SHA1 (gtk_wicontrol-0.17.tar.gz) = be477075dcc82b6a549d1d6b8f4bb6ef7be2bfc5
-Size (gtk_wicontrol-0.17.tar.gz) = 116130 bytes
-SHA1 (patch-aa) = b1b5a3f4764af06d345e6041e5cec0042334a7e2

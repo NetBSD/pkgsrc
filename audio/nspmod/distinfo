@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:36 agc Exp $
-
-SHA1 (nspmod-0.1.tar.gz) = 3409323d6dbf13e3236a85eb1b8ff9e51ee4de0c
-Size (nspmod-0.1.tar.gz) = 32579 bytes
-SHA1 (patch-ac) = e116d9701c1f0fc9e7c4a441d332ad22aee4be24
-SHA1 (patch-ad) = a1a6f68bcaffe0ace1f5e32acb21a1c6bc2a2e47
-SHA1 (patch-ae) = 2788fd634fb11f667038089fd356e14f9d19ff6c
-SHA1 (patch-ba) = a2707702edc798949cfb004aae4f750139648c3b
-SHA1 (patch-bb) = fa08fafe222c41eb336b226d2f335dc22e934bc9

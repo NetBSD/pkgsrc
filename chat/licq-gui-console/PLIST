@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/24 23:57:36 hubertf Exp $
-lib/licq/licq_console.la
-lib/licq/licq_console.so

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/11 11:59:55 rh Exp $
-
-SHA1 (xine-ui-0.9.20.tar.gz) = 07fb529584df6cbde01b3fa0c0f8cac88280dbdf
-Size (xine-ui-0.9.20.tar.gz) = 2460849 bytes
-SHA1 (patch-aa) = 2206a9399a5fed0b30c69cfa830e67bcb76c979c
-SHA1 (patch-ab) = 7f3a44781d0a0418f277c082486e606058fa5357
-SHA1 (patch-ac) = 44925827dd883dabb5864ad739ed47a99fd10bda
-SHA1 (patch-ad) = d285a0142c2c91ebec169839bc266c8cbe7a47e4
-SHA1 (patch-ae) = 813c897b89edbc1e37b731008b87fe6b04cf53f2

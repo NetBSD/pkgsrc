@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2002/09/21 06:31:43 jlam Exp $
-
-SHA1 (felt-3.05.src.tar.gz) = da3e1ced626cc1c65a570d3e6e242252c039c28b
-Size (felt-3.05.src.tar.gz) = 956901 bytes
-SHA1 (felt-3.05.ps.gz) = 10fbac9927fe20cec3884d989204fe1a92d61784
-Size (felt-3.05.ps.gz) = 626985 bytes
-SHA1 (patch-aa) = fbf4c14dec40fc1e5aa5009625c6465bc8d763ab
-SHA1 (patch-ab) = 60feea9b0b0af2b71b2a8780227eccbd223b12c5

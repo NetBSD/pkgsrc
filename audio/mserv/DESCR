@@ -1,7 +1,0 @@
-The main purpose of Mserv is to play songs that those in the room want
-to hear. It works by each user rating the songs they hear - at the
-moment this means they type rate good via telnet or click GOOD via web,
-but hopefully there will be Windows/X clients available soon. Mserv
-uses the ratings, the date the song was last played, the filter
-settings and who is currently logged in. It then compiles a 'top' list
-of songs that are most likely to be played.

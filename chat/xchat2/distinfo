@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/11 10:52:17 jmmv Exp $
-
-SHA1 (xchat-2.0.3.tar.bz2) = 2f7c071a85cd98a9c890a352fe11e3263f141d4c
-Size (xchat-2.0.3.tar.bz2) = 812511 bytes
-SHA1 (xc203-fix-cps.diff) = ae4d5022a02f7e7734fe1623b1d17447a4f2fb78
-Size (xc203-fix-cps.diff) = 438 bytes
-SHA1 (xc203-fixtint.diff) = 56c8fe3ca2136e96a504498936aeab959d95bf75
-Size (xc203-fixtint.diff) = 558 bytes

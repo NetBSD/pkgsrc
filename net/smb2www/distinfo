@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:33 wiz Exp $
-
-SHA1 (smb2www-980804.tar.gz) = 289e3d04e1b8804d28147b851b7a8865d9b2e0cd
-Size (smb2www-980804.tar.gz) = 67213 bytes
-SHA1 (patch-aa) = 6cc879bc2845dd2e9943ccc21c171652325e2913

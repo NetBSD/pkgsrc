@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/11/25 11:01:17 schmonz Exp $
-
-SHA1 (suse73/i386/slang.rpm) = 5e79a6497306bd8a58a6f50d8b3617d006a7b73b
-Size (suse73/i386/slang.rpm) = 566998 bytes
-SHA1 (suse73/ppc/slang.rpm) = 708af2f2f35f55c635b76cbf06659aadc01101e3
-Size (suse73/ppc/slang.rpm) = 635226 bytes

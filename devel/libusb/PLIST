@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2002/11/18 06:25:51 schmonz Exp $
-bin/libusb-config
-include/usb.h
-lib/libusb-0.1.so
-lib/libusb-0.1.so.7
-lib/libusb-0.1.so.7.0
-lib/libusb.a
-lib/libusb.la
-lib/libusb.so

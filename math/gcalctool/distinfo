@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/07/11 23:04:48 jmmv Exp $
-
-SHA1 (gcalctool-4.2.83.tar.gz) = 750f1fe8d18dff8da49b9986b4f3cc9eb2e8b5ad
-Size (gcalctool-4.2.83.tar.gz) = 408661 bytes
-SHA1 (patch-aa) = 9d08c52f687d3a33960f73212020fc2432475346

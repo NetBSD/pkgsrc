@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:13:28 agc Exp $
-
-SHA1 (paranoia.c) = 08bf04a11e6051b3b8d68d9571e9f5e96d557ddf
-Size (paranoia.c) = 58985 bytes
-SHA1 (patch-aa) = 596225abb8d2e4c7458ba9fd33c39313121d5e5c

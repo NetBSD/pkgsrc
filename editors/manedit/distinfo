@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/12/30 00:00:17 kristerw Exp $
-
-SHA1 (manedit-0.5.6.tar.bz2) = 1a6f413f614e5f3620fd9fae16d754eb722984e6
-Size (manedit-0.5.6.tar.bz2) = 425714 bytes
-SHA1 (patch-aa) = 9ace1dfdc027cbda50e2c06f08db6c16e2c27b63
-SHA1 (patch-ab) = 80a4e693601b353c271d1fbd9afb31bace75f75e
-SHA1 (patch-ac) = 05b59bc0315256dc9486f361699e1fa1688a3a04
-SHA1 (patch-ad) = c59ff342f72f33834b1a25e300a36d2579330686

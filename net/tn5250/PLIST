@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:33 zuntum Exp $
-bin/tn5250
-bin/scs2ascii
-bin/xt5250
-man/man1/tn5250.1
-man/man1/scs2ascii.1

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/06/09 07:47:15 martti Exp $
-
-SHA1 (mrtg-2.9.29.tar.gz) = 3cb13d8bef44e1a032b63875e901979d475ddaed
-Size (mrtg-2.9.29.tar.gz) = 1026837 bytes
-SHA1 (patch-aa) = 8aabf3fb03fe025b6a0e08c5202c0c89f5aff6a3
-SHA1 (patch-ab) = bf367e6c43030a9cb64a88336b66932d7e05025c
-SHA1 (patch-ac) = 77e5a9894e6214962d453421abba00e896761dbb
-SHA1 (patch-ad) = 3ebddc07d04c4871fbefe781423d6e22f440a186
-SHA1 (patch-ae) = 98f93ae72aac4cc63e5c6b11152e5ccec425def3

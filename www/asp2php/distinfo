@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/06/10 06:55:15 wiz Exp $
-
-SHA1 (asp2php-0.76.17.tar.gz) = 9fe485f8f738c11a7104b935cbcadf365195bac4
-Size (asp2php-0.76.17.tar.gz) = 53793 bytes
-SHA1 (patch-aa) = ed0ca8c9925a9ac90dde14a843a71990617eb987

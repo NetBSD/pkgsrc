@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/30 13:25:49 damon Exp $
-
-SHA1 (gkrellm-gnome.tar.gz) = d8d18ebdf09a4b314ac305e37c9412f44f722bc5
-Size (gkrellm-gnome.tar.gz) = 5825 bytes
-SHA1 (patch-aa) = 02414b2eb6d2697b295870a8827d9e626367f4e8

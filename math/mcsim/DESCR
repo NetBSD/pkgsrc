@@ -1,7 +1,0 @@
-MCSim is a general purpose modeling and simulation program which also
-performs standard or Markov chain Monte Carlo simulations. It allows
-you to specify a set of linear or nonlinear equations (eventually
-differential), and solve them using parameter values you choose or
-parameter values sampled from specified statistical distributions.
-Simulation outputs can be compared to experimental data for parameter
-estimation.

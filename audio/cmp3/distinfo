@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/02/24 22:36:48 wiz Exp $
-
-SHA1 (cmp3-2.0pre5.tar.gz) = 9f8953fb34fdff8bafe198e1cd860d772e69cb7d
-Size (cmp3-2.0pre5.tar.gz) = 40207 bytes
-SHA1 (patch-aa) = 9bfd95a35696361effbfde89d55bcc9c47aaa260
-SHA1 (patch-ab) = dbe2565fe5388528b6a3b32af5cf50da8512bd51
-SHA1 (patch-ac) = f242ccaeed2b194938fad2978c24dc8619dcfaf4
-SHA1 (patch-ad) = a50d87140e557eb3bef1a5d68ad3e18bba73e03e

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:03 zuntum Exp $
-bin/exchess
-lib/exchess/search.par
-share/doc/exchess/readme.txt
-@dirrm share/doc/exchess
-@dirrm lib/exchess

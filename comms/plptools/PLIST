@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:38 zuntum Exp $
-bin/plpftp
-lib/libplp.a
-lib/libplp.la
-lib/libplp.so
-lib/libplp.so.1
-lib/libplp.so.1.0
-sbin/ncpd
-sbin/plpnfsd

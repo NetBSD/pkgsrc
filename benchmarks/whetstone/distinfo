@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:13:29 agc Exp $
-
-SHA1 (whetstone.c) = bb093b7f00561cbe74b25ec39b6e48ac98c55e93
-Size (whetstone.c) = 8121 bytes
-SHA1 (patch-aa) = d963b9c4c77558f264da085055cbb1a9ed36ac08

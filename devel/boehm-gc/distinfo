@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.16 2003/06/27 10:49:42 jmmv Exp $
-
-SHA1 (gc6.2.tar.gz) = ef17f8f56e9853ef41808fdf5c4c7bf2f78f1fec
-Size (gc6.2.tar.gz) = 750883 bytes
-SHA1 (patch-aa) = 90e279f7efba12194c2fbcecfe62bd902d842654
-SHA1 (patch-ab) = 8e85e84a5408dfab53d19bb84cc25140331906b6
-SHA1 (patch-ac) = 38b22813cf2861dcbc9739d70f9fefe69acf3210
-SHA1 (patch-ad) = 79a5ec4a2e2cfa227a5578e0356bff16dd193331
-SHA1 (patch-ae) = 6e99458a388b5a408e03c133f9b1fdc8b170e87f

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:01:01 agc Exp $
-
-SHA1 (vscmV0r4.tar.gz) = 8a571a4f1dfe0dbd568fb13efd61f66caf189980
-Size (vscmV0r4.tar.gz) = 136981 bytes
-SHA1 (bugfix.txt) = e0aea092fc71ab931ba4ca2eb495b171ec6921f5
-Size (bugfix.txt) = 1184 bytes
-SHA1 (patch-aa) = 5b98a6330ac897ea26beb838b28c97503f419e0d
-SHA1 (patch-ab) = ccc424a8d0523b2570676a0a942d43605b35207a
-SHA1 (patch-ac) = 73adae14da2fb236fb41277a17e0b936a75b9433

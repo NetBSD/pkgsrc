@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/04/17 04:45:13 fredb Exp $
-
-SHA1 (xsqlmenu-2.10.tar.gz) = d97c3237d5bfd2213648067196b5f6d4a57fe706
-Size (xsqlmenu-2.10.tar.gz) = 31458 bytes
-SHA1 (patch-aa) = 68c45a0787adf3a840343cf968d1c2172822a080

@@ -1,0 +1,91 @@
+$NetBSD: PKGVIEWS,v 1.1.2.1 2003/07/16 09:33:46 jlam Exp $
+
+Package views integration plan:
+==============================
+
+(1) Modify pkgsrc internals (bsd.pkg.mk & friends) to build and
+    install depoted packages if PKG_INSTALLATION_TYPE is set to
+    "pkgviews" in the package Makefile, and to add the depoted
+    package to the default view.  The depoted package will include
+    all of it's metadata files in the depot directory, and we rely
+    on pkg_view to copy the metadata files into /var/db/pkg as
+    part of adding the package to the default view.  We only
+    support the default view.  Depoted packages will install into
+    either ${LOCALBASE}/packages or ${X11BASE}/packages, but the
+    default view will be through ${LOCALBASE} for all packages.
+
+Using this infrastructure, depoted packages that have been added to
+the default view should look and feel like a non-depoted package in
+all respects, down to what you find in /var/db/pkg/${PKGNAME}, so
+non-depoted packages can depend on depoted packages without change.
+
+(2) Migrate packages set PKG_INSTALLATION_TYPE to "pkgviews".
+    Depoted packages can only depend on other depoted packages.  A
+    depoted package will have <deppkg_dir>/lib and ${LOCALBASE}/lib
+    in the run-time library search path (-Wl,-R*) so that wildcard
+    dependencies on library packages will still work (so long as
+    the major number of the shlib hasn't increased).
+
+At this point, all packages in pkgsrc will be depoted, and we can
+unconditionally set PKG_INSTALLATION_TYPE to "pkgviews" for all of
+pkgsrc.  We don't actually require that xpkgwedge be used since
+depoted packages can live anywhere, and it's up to pkg_view(1) to
+add the depoted package to the default view.
+
+(3) Allow for different package views.  At this point, this step
+    should be trivial.
+
+Possible problems:
+-----------------
+
+(1) I may be wrong about xpkgwedge.  We may need some sort of
+    xpkgwedge package in order to properly handle USE_IMAKE packages
+    so that they install into depot directories, but I'm ignoring them
+    for now, or at least until we get much further along on step (2).
+    Also, I'll figure out how to deal with binary packages later on.
+
+(2) INSTALL scripts currently do several things.  The main things
+    nowadays are to handle: users/groups, config files, directories,
+    info files, and shell registration.  There are some things that we
+    only want to happen once, when the package is installed into its
+    depot directory: handling users/group creation, config files,
+    non-${PREFIX} directories, and shell registration.  There are some
+    things that we want to happen every time a package is added to a
+    view: adding info files to info/dir.  How do we modify pkg_add(1)
+    and pkg_view(1) to do this?
+
+(3) DEINSTALL scripts also do several things.  The main things are to
+    remove: config files, directories, info files, and de-register
+    shells.  We only want some things to happen once when the package
+    is pkg_delete'd from it's depot directory: removing config files,
+    non-${PREFIX} directories, and de-registering shells.  We want
+    some things to happen every time a package is removed from a view:
+    removing info file entries from info/dir.  How do we modify
+    pkg_delete(1) and pkg_view(1) to do this?
+
+I think we need to have the scripts learn two new actions:
+VIEW-INSTALL and VIEW-DEINSTALL for the INSTALL and DEINSTALL scripts,
+respectively.  We need to separate out the stuff we want to happen
+for views into these new actions, and we must enhance pkg_add(1) and
+pkg_delete(1) to invoke the INSTALL/DEINSTALL scripts with the new
+actions.  We want the order to be:
+	
+        INSTALL:   PRE-INSTALL POST-INSTALL VIEW-INSTALL
+        DEINSTALL: VIEW-DEINSTALL DEINSTALL POST-DEINSTALL
+
+We teach pkg_view(1) to run only the VIEW-INSTALL action of the
+INSTALL script after adding a package to a view, and to run only the
+VIEW-DEINSTALL action of the DEINSTALL script after deleting a package
+from a view.
+
+For depoted packages, /var/db/pkg/${PKGNAME} should contain a +DEPOT
+file token that contains the path of the depot directory for
+${PKGNAME}.  Then we teach pkg_delete(1) to only run the
+VIEW-DEINSTALL action of the DEINSTALL script if the +DEPOT file token
+is present, but to run all of the actions otherwise.  For non-depoted
+packages, pkg_delete runs all of the actions since they don't have
++DEPOT file tokens.  Running pkg_delete on the depoted package itself
+would also cause all of the actions to be executed since the depoted
+package also wouldn't have a +DEPOT file token.  Also, pkg_delete(1)
+should remove the relevant PKG_DBDIR from the +VIEWS file of the
+package named in +DEPOT when it's invoked to remove a package.

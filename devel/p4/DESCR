@@ -1,5 +1,0 @@
-P4 is a small, self-contained Perforce client program that offers
-access to all Perforce SCM (software configuration management)
-features through a command line. It can be used in command shells
-and scripts, and is the ideal interface for automated processes
-that perform SCM tasks.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/11/30 14:48:35 grant Exp $
-
-SHA1 (baduki-0.2.9.tar.gz) = a70a2c11b66b97bae979f597de831a99d6c8121f
-Size (baduki-0.2.9.tar.gz) = 193558 bytes
-SHA1 (patch-ad) = c65aac612e200bbaf10ee57f6bd4bbd1fd6b4653

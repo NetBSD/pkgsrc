@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/08 08:53:19 wiz Exp $
-
-SHA1 (brs.4.00.l1.tar.gz) = 12406ad5738caeb828e0773a45290ed5e098940a
-SHA1 (patch-aa) = e56ae128d024387784921ab91a89400be825d304
-SHA1 (patch-ab) = 392a451cea87ba91f9a4316dc07c278dc86635b9

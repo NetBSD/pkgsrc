@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.10 2003/03/22 12:37:24 jmmv Exp $
-
-SHA1 (exim-4.10.tar.bz2) = cd374dde11a24fd12aa1c0ff72270d876d9c180d
-Size (exim-4.10.tar.bz2) = 1037997 bytes
-SHA1 (patch-aa) = c892a73a1850a9ce53828e88ca9d646407aa0ff2
-SHA1 (patch-ab) = 1180e73bff8f7cee712fb64d8c2a647057a56184
-SHA1 (patch-ac) = 6bb782eb07c724da82be3aefcdf9a4bf90906687
-SHA1 (patch-ad) = 2e4fe6eec1772946c6ed615df56459abc0f2d06d
-SHA1 (patch-ae) = 18c0ad924a709abc5c2a7e334ce53cb3413d4d3b

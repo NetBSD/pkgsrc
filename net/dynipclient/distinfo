@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/28 13:10:46 tv Exp $
-
-SHA1 (dynip_3.00.tar.gz) = 51f92eb9fbfcf2f12349c5e3673ea967cc3256d4
-Size (dynip_3.00.tar.gz) = 37239 bytes
-SHA1 (patch-aa) = ff1a5be64b46675f331b73415acdb04abc62936b
-SHA1 (patch-ab) = d17b71dababab0149322e6954757eb3e46d9383c

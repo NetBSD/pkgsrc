@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/23 14:44:27 seb Exp $
-bin/scli
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/scli.info
-info/scli.info
-info/scli.info-1
-info/scli.info-2
-info/scli.info-3
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/scli.info
-man/man1/scli.1

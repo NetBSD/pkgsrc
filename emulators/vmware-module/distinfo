@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/02/16 19:37:28 bad Exp $
-
-SHA1 (vmware-netbsd-1.2.tgz) = 383512f5a9f6cbc50ad5d25ea7e2ae921b00bb1a
-Size (vmware-netbsd-1.2.tgz) = 97596 bytes
-SHA1 (patch-ab) = 19ff0b151b62870835a2b87e69a52b1cb3d95045

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/27 22:32:16 salo Exp $
-
-SHA1 (irssi-icb-0.14.tar.gz) = 31d7a5d04a896e0e19db44b4d76b7ac85af1a5d4
-Size (irssi-icb-0.14.tar.gz) = 172647 bytes
-SHA1 (silc-client-0.9.12.tar.bz2) = c7dcf7d256cc14d7cb5d03f74a5aa451b23eb499
-Size (silc-client-0.9.12.tar.bz2) = 1528592 bytes
-SHA1 (patch-aa) = aa93fcebd8e8baba7dd34688a4d4fcef22061594
-SHA1 (patch-ab) = fc4a2725f6e235c55b3c481da5a7c3b31c1a4b58

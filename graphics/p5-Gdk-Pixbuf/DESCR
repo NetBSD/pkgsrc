@@ -1,7 +1,0 @@
-The Gtk module allows Perl access to the Gtk+ graphical user interface
-library. You can find more information about Gtk+ on http://www.gtk.org.
-The Perl binding tries to follow the C interface as much as possible,
-providing at the same time a fully object-oriented interface and
-Perl-style calling conventions.
-
-This is the Gtk::Gdk::Pixbuf extention of the Gtk module.

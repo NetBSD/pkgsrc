@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/02/11 13:28:46 grant Exp $
-
-See `${PREFIX}/share/doc/ircd-hybrid/pkg-setup.txt' for information
-about configuring ${PKGNAME}.
-
-===========================================================================

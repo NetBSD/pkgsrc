@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:08 zuntum Exp $
-${RUBY_SITEARCHLIBDIR}/BigFloat.so
-${RUBY_DOCDIR}/bigfloat/README
-@dirrm ${RUBY_DOCDIR}/bigfloat

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/01/10 19:36:02 jmmv Exp $
-
-SHA1 (libglade-2.0.1.tar.gz) = 15197752962c8b12efd4a2832d78c3577d11ffea
-Size (libglade-2.0.1.tar.gz) = 354841 bytes
-SHA1 (patch-aa) = 2aee085383d9f712fd75ea34fc033be53ea4484a
-SHA1 (patch-ab) = 2f911c8763e936ae5ed9f0f5326064136540cfcc

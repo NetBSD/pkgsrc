@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/25 00:44:46 wiz Exp $
-bin/dnstop
-man/man8/dnstop.8
-share/doc/dnstop/LICENSE
-@dirrm share/doc/dnstop

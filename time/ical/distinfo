@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/10/15 17:09:44 tron Exp $
-
-SHA1 (ical-2.2.1.tar.gz) = ba6af590a4d81360f6933762f2adab0886bb4e5f
-Size (ical-2.2.1.tar.gz) = 261959 bytes
-SHA1 (patch-aa) = 52c4adac05aa32913e6587e33a3818b497f6a0e6
-SHA1 (patch-ab) = a73037d1f1adf1397029fde66f8d965e9076aba5
-SHA1 (patch-ac) = 002612db5040469d0f316893a40eb067d94e677e
-SHA1 (patch-ad) = 8d77fd27aad3d6a19cbe1596d716eec78203c5ba

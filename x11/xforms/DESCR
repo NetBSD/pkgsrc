@@ -1,9 +1,0 @@
-This is the Open Source distribution of the XForms Library,
-a graphical user interface toolkit for X Windows. XForms is
-licensed under the LGPL (Lesser Gnu Public License) version 2.1.
-
-This package includes Form Designer (fdesign), a WYSIWYG interface
-builder program. fdesign output can also be translated into
-Postscript.
-
-This package is built without OpenGL support.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/08/16 10:16:17 abs Exp $
-
-SHA1 (mmv_1.01b.orig.tar.gz) = 538a26b1d7e8b9bc286843e6aa2d8d959d8914bb
-Size (mmv_1.01b.orig.tar.gz) = 25656 bytes
-SHA1 (patch-aa) = ca985e048ae9c56a0d38a9e1f035e6776c5ec877
-SHA1 (patch-ab) = 1fc216f9d3ea0747ce57498e9738c1182c8555ee

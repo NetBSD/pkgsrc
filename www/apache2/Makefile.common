@@ -1,7 +1,0 @@
-DISTNAME=		httpd-${APACHE_VERSION}
-APACHE_VERSION=		2.0.47
-APR_VERSION=            0.9.4
-MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
-			${MASTER_SITE_APACHE:=httpd/old/} \
-			http://www.netbsd.org/images/logos/
-MAINTAINER=		jlam@netbsd.org

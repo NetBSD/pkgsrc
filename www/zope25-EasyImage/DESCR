@@ -1,5 +1,0 @@
-Easy Image is an extension of the Image class in Zope that adds the
-following features:
-  Automatic thumbnail creation
-  Resizing
-  Conversion from several file types to JPG and PNG (and BMP)

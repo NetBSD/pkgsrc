@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/06/29 04:24:57 uebayasi Exp $
-
-SHA1 (zsh-4.1.1.tar.bz2) = a47a6e698530d89988ed12dc7aaa6428e7336c5e
-Size (zsh-4.1.1.tar.bz2) = 1924514 bytes
-SHA1 (patch-ac) = fb983a8d7281f97023be5ea8df505b9eab93b32f
-SHA1 (patch-ad) = 744b188c8d273238ce74ea37e9f77a53800ac823

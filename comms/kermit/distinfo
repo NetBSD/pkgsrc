@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/07/02 20:37:35 kim Exp $
-
-SHA1 (cku209.tar.gz) = f98febc545b8826ab29a8f035860c7ab428de73e
-Size (cku209.tar.gz) = 2876409 bytes
-SHA1 (patch-aa) = b0b602c2d8147a0c3c4b604e5f0c6e42f7c45348
-SHA1 (patch-ab) = 24032ad61815ce88e8638d0bbcdaf86175b9715b

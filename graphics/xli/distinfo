@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/06/14 17:50:56 fredb Exp $
-
-SHA1 (xli.1.16.tar.gz) = ee1f390bacc94760ee5ae83c3c979d4c01eb7986
-Size (xli.1.16.tar.gz) = 287692 bytes
-SHA1 (xli-png.tar.gz) = 18ae7d10c31b68be3f978cfa137f5cbad706cfd1
-Size (xli-png.tar.gz) = 6393 bytes
-SHA1 (patch-aa) = 0e9bbf5d290db20d67e34f59ce63cf5c78b44ed6
-SHA1 (patch-ab) = 6aaeb485e6bc59f486c4cc1534f03bfa47587441
-SHA1 (patch-ac) = fc3a9f5b78391f95ef30adcf9aaacaba3019a4ac

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:05 zuntum Exp $
-share/festival/lib/voices/spanish/hvs_diphone/festvox/hvs_diphone.scm
-share/festival/lib/voices/spanish/hvs_diphone/festvox/hvsdiph.msec
-share/festival/lib/voices/spanish/hvs_diphone/group/hvs_di_resLPC.group
-@dirrm share/festival/lib/voices/spanish/hvs_diphone/group
-@dirrm share/festival/lib/voices/spanish/hvs_diphone/festvox
-@dirrm share/festival/lib/voices/spanish/hvs_diphone

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/03 14:32:21 wiz Exp $
-
-SHA1 (defendguin-0.0.10.tar.gz) = 3d43e9335dcc9c00c81151761cea01f914b34f1b
-Size (defendguin-0.0.10.tar.gz) = 2299261 bytes
-SHA1 (patch-aa) = 7da312b35c4885370f7b6eedfea457e716dbba43

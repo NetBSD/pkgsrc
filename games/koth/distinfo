@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/04/02 12:19:31 wiz Exp $
-
-SHA1 (koth-0.8.0.tar.bz2) = 6cb04ae1f09c4fb521fb47465ab91a1d67986c41
-Size (koth-0.8.0.tar.bz2) = 140569 bytes
-SHA1 (patch-ab) = 69ce8862b3cdba97f3a4040b0004254b89de3606

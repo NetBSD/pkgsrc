@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/05/24 14:38:17 salo Exp $
-
-SHA1 (amaya-src-8.0.tgz) = af00de3f055219d61398844a79973ba6604eb82c
-Size (amaya-src-8.0.tgz) = 8095311 bytes
-SHA1 (patch-aa) = daa3b4ad4e00d6e6ca855bb638cc8ec8d2565791
-SHA1 (patch-ab) = ea97ea600b9b9f785146b28c0eaae06de1f7aed4
-SHA1 (patch-ac) = 01804caad910698bc61a8f0c6dea73cafbd610c2

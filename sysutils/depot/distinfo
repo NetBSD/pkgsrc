@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:01 agc Exp $
-
-SHA1 (depot-5.14.tar.gz) = 378e09973fcc5f42e69d3988b04fc64fde5c974a
-Size (depot-5.14.tar.gz) = 204216 bytes
-SHA1 (patch-aa) = 5b11b84bf134b292e65b05c42bf2dce277f6bc37

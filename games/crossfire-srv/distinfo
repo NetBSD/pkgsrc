@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2001/10/26 11:10:36 agc Exp $
-
-SHA1 (crossfire-1.0.0.tar.bz2) = 2ec13e71591d245726e19aa10de7619a2e113b0d
-Size (crossfire-1.0.0.tar.bz2) = 2767828 bytes
-SHA1 (crossfire-1.0.0-maps.tar.bz2) = 81d11a2561adf2bc2ee36192160014e9a1bdcf08
-Size (crossfire-1.0.0-maps.tar.bz2) = 3066588 bytes
-SHA1 (patch-aa) = 48b06c6db01ed17a0cc1c7263ae74d5559cff8ca
-SHA1 (patch-ab) = c702d3432ee2481175c3b6f863cd1f1357a6f7ed
-SHA1 (patch-ac) = f5e2103dfd33e993a8ed8dc8fd78198d51801dc1

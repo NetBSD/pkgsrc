@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/02/14 23:25:33 wiz Exp $
-
-SHA1 (flac-1.1.0.tar.gz) = 80334c1ebc693fb92e01f5a55ed332fbe9809592
-Size (flac-1.1.0.tar.gz) = 1201861 bytes
-SHA1 (patch-aa) = b4eff7abd3fdd327cdb6bc7cf3ca827ef4cc748a
-SHA1 (patch-ab) = c2f9d4ad2dbe3879f8c2e83e55bc0e03829ec163
-SHA1 (patch-ac) = 1e850825745c452bceb9412dc7c0f14d3c5d12c1
-SHA1 (patch-ad) = cfdc250fa293d22d587eb04a2b967d067e059d92
-SHA1 (patch-ae) = 2eaa8afcb460761c08af2623fbc149634c1815c5

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:30:06 zuntum Exp $
-bin/zorro
-share/zorro/DOTzorrorc
-@dirrm share/zorro

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/05/27 15:17:36 dmcmahill Exp $
-
-SHA1 (binutils-2.9.1.tar.gz) = 9df3cdcd34f81118ee403f8794b277ad28a57e14
-Size (binutils-2.9.1.tar.gz) = 5694541 bytes
-SHA1 (egcs-1.1.1.tar.gz) = 381f6c15ab042a4d3605490c29620ea5ad5592a6
-Size (egcs-1.1.1.tar.gz) = 11604853 bytes
-SHA1 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 85ebc334bf9472b9595c4348a6bc440e836b922a
-Size (egcs-1.1.1-NetBSD-19980104.diff.gz) = 59770 bytes
-SHA1 (patch-aa) = 3537031f77c5921c4331fd5f7a79dbf237466566

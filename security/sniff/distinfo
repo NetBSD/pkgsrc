@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:39 agc Exp $
-
-SHA1 (sniff-2.0.tar.gz) = 9e9ef76eaccaa6cbb3c23054a29a08dd9faed328
-Size (sniff-2.0.tar.gz) = 10720 bytes
-SHA1 (patch-aa) = e9b9dd7ade75d67a4d202b3deddd04d4593afe46

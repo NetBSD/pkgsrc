@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/05 23:39:27 hubertf Exp $
-
-SHA1 (dhisd-5.0.tar.gz) = 05e0a40bf07a2274d40b90b663a2a853b3aa526b
-Size (dhisd-5.0.tar.gz) = 27737 bytes
-SHA1 (patch-aa) = c025fc3f6dbc59675e33ae476f000dc87a9355a1
-SHA1 (patch-ab) = d1078120ee1579335d431d943f82bbea606e0d37

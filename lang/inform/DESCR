@@ -1,9 +1,0 @@
-Inform is an Interactive Fiction (text adventure) game compiler -- it takes
-source code you write and turns it into a game data file which is then
-played using an 'interpreter'.  There are several interpreters available
-which can play Inform games on different machines (e.g. frotz, jzip) -- you
-can probably obtain one from the same place you got this package.
-
-Inform is written by Graham Nelson <graham@gnelson.demon.co.uk>, and you
-are free to redistribute it under certain conditions -- see the file
-COPYING for details.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:30 agc Exp $
-
-SHA1 (ddos_scan.tar) = 97e695f19df0edef4d833afb8114b24822e3db27
-Size (ddos_scan.tar) = 30720 bytes
-SHA1 (patch-aa) = 934117d4d3806244137a9a6438d781cd9372487b

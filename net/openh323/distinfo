@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/12/04 04:52:25 dan Exp $
-
-SHA1 (openh323_1.10.4.tar.gz) = 2884944d64b6b129ced05a8df2a17bc581e63532
-Size (openh323_1.10.4.tar.gz) = 1881298 bytes
-SHA1 (patch-aa) = 9c6ecbbd7fa1a0a8ea51deb2b8b99888f2228a6f
-SHA1 (patch-ac) = 985ed16a87ed719d1b768d8d3901c4527f1736e4

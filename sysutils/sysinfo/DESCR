@@ -1,6 +1,0 @@
-Sysinfo displays various types of information about a host's hardware
-and operating system software.  It is intended to provide information
-in both human-readable and program-parsable formats.  System
-administrators can use sysinfo to obtain hardware asset information
-and OS configuration information.  Programs which use sysinfo can
-obtain this information in a platform-independent manner.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2003/01/18 08:33:42 martti Exp $
-
-SHA1 (stunnel-4.04.tar.gz) = 9f0f85eb0620ee4f4f68d833eb3f39eb31960f31
-Size (stunnel-4.04.tar.gz) = 309072 bytes
-SHA1 (patch-aa) = 616058e0fb75ba4d3edaa079b24b5c72e7a8f1f5
-SHA1 (patch-ab) = e4001b6d4d54421bef439ee98c65fce96f6face0

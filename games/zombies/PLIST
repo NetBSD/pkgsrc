@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:58:15 zuntum Exp $
-bin/zombies
-man/man6/zombies.6
-share/games/zombies_score.dist
-@exec if [ ! -f /var/games/zombies_score ]; then cp -p %D/share/games/zombies_score.dist /var/games/zombies_score; fi

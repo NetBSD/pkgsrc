@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/07/12 17:26:15 taca Exp $
-
-SHA1 (vtun-2.6.tar.gz) = ba6474a551856a7bb55b4cc21d858b8275a2e610
-Size (vtun-2.6.tar.gz) = 95637 bytes
-SHA1 (patch-aa) = 88e8f9bec1cfd3fe9baf95fd870d3b94ff120aba
-SHA1 (patch-ab) = e1891ef0c50ef79ee05967e06e110ce64891ab0a

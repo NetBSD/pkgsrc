@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/06/28 16:03:02 agc Exp $
-
-SHA1 (iso-pern_src-0_2_6.tar.gz) = f71a815e4942dbf59dc6611abf5b538c8a8d1519
-Size (iso-pern_src-0_2_6.tar.gz) = 2432783 bytes
-SHA1 (patch-aa) = d4f09c254e71e1395e8f0968d7bc6478ad3f976c
-SHA1 (patch-ab) = 38c59b5dc94995e14d41efaf18913245095d681c
-SHA1 (patch-ac) = dcb200fafe4d5bcb33a5d4f79611a0c06fdcbd6d
-SHA1 (patch-ad) = 8b61fe17be89749f762b53ce4a59bdcbd7fb1b95
-SHA1 (patch-ae) = 432986b90f9caad12d09213e8609b345490b7cf8

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/07/02 12:41:43 wiz Exp $
-
-SHA1 (efax-0.9.tar.gz) = 8965407996737e6ec2c8a198ba34811f5134b5d1
-Size (efax-0.9.tar.gz) = 96736 bytes
-SHA1 (patch-aa) = 902bb87c90179d599fe4fa1bf96d052432a0fb46
-SHA1 (patch-ab) = ea5a18f3558f28b71085a6dd2e13ddc5e17f5f26
-SHA1 (patch-ac) = afe6aaafe504f41c13a644aae4eb9c7584466db6

@@ -1,6 +1,0 @@
-$NetBSD: patch-ad,v 1.2 2003/04/29 23:40:02 jtb Exp $
-
---- /dev/null	Thu May  2 17:26:15 2002
-+++ System/Platforms/netbsd/CONFIG	Thu May  2 17:34:27 2002
-@@ -0,0 +1 @@
-+CC_OPTIONS:	"-I@X11BASE@/include -I@TCL_PREFIX@/include -I@TK_PREFIX@/include @_OPSYS_RPATH_NAME@@X11BASE@/lib -L@X11BASE@/lib @_OPSYS_RPATH_NAME@@TCL_PREFIX@/lib -L@TCL_PREFIX@/lib @_OPSYS_RPATH_NAME@@TK_PREFIX@/lib -L@TK_PREFIX@/lib";

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/08 08:53:19 wiz Exp $
-bin/bible
-lib/bible.data
-lib/bible.data.conc
-man/man1/bible.1

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/29 16:20:47 drochner Exp $
-${PYSITELIB}/unittestgui.py
-${PYSITELIB}/unittestgui.pyc

@@ -1,5 +1,0 @@
-Adaptec Storage Manager, event logger and associated tools.
-For use with DPT and Adaptec I2O SCSI & IDE RAID adapters.
-
-See also the "sysutils/dptutil" package (in particular, for
-old EATA adapters, which this package does not support).

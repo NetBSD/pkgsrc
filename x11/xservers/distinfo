@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/06/04 12:36:16 tron Exp $
-
-SHA1 (patch-aa) = 023c69ba09127bc4de484f0cd372aef3a8ea1ed7
-SHA1 (patch-ab) = 49380b43e031c878297eb32aaf014ac9244b1785
-SHA1 (patch-ac) = 35f3f5f7e431a0ca2e1ff97ba5ffc22a65681d4d
-SHA1 (patch-ad) = d2625138dba810be59a99e1ba8d28460f7edb789

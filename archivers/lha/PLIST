@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:31 zuntum Exp $
-bin/lha
-man/ja_JP.EUC/man1/lha.1

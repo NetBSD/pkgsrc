@@ -1,6 +1,0 @@
-bbweather is a tool which displays the current weather conditions in an
-decorated window, simulating the look of the Blackbox toolbar (Blackbox is a
-Windowmanager for X11).  This tool is heavily based on "bbdate" by John
-Kennis.  Furthermore, bbweather was inspired by wmWeather by Michael G.
-Henderson, from where the perl-script to fetch the weather-conditions from
-your local station originated.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/01 19:39:50 jmmv Exp $
-bin/sysbuild
-man/man8/sysbuild.8
-share/examples/sysbuild/crontab
-share/examples/sysbuild/default.conf
-share/examples/sysbuild/profile
-@dirrm share/examples/sysbuild

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/25 14:55:59 dmcmahill Exp $
-
-SHA1 (tmake-1.7.tar.gz) = 39df9db9be67293694b82a944b38f17659d29a83
-Size (tmake-1.7.tar.gz) = 46518 bytes
-SHA1 (patch-aa) = daa9e10c3ae1dce66620657919e06b2db07049d1
-SHA1 (patch-ab) = b81f6022a9103a9ae0fe3d9adddbf57d374d51d9
-SHA1 (patch-ac) = 14c1cd48a8facdced5249c4ca0513b6b2a1c7799

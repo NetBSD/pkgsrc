@@ -1,7 +1,0 @@
-# $NetBSD: exclude,v 1.2 2003/01/05 20:12:22 jlam Exp $
-#
-man1/ecpg.1
-man1/pgtclsh.1
-man1/pgtksh.1
-man1/postgres.1
-man1/postmaster.1

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:08 agc Exp $
-
-SHA1 (bottlerocket-0.04c.tar.gz) = 70f4877cea17653ae8e21d93c1a620c7ddeeeb69
-Size (bottlerocket-0.04c.tar.gz) = 40533 bytes
-SHA1 (patch-aa) = e5c7c6226658322ff10bd5ec311ced7ad4fe7c7f

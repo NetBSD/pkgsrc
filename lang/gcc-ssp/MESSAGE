@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:07 wiz Exp $
-
-To use ${PKGNAME} invoke "${MAKE}" like this:
-
-${MAKE} MAKECONF=${PREFIX}/etc/${PKGBASENAME}.mk [...]
-
-This compiler can not compile the NetBSD kernel easily at this moment.
-===========================================================================

@@ -1,9 +1,0 @@
-$NetBSD: patch-ad,v 1.6 2003/02/22 04:31:07 dmcmahill Exp $
-
---- routines/system/inisci-c.c.orig	Wed Nov 27 05:02:30 2002
-+++ routines/system/inisci-c.c	Fri Feb 21 06:52:05 2003
-@@ -1,2 +1,4 @@
-+#include <string.h>
-+
- #include "../machine.h" 
- #include "../sun/Sun.h" 

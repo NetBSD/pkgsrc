@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/18 14:27:31 nra Exp $
-
-SHA1 (xphoon.tar.Z) = 1f267a69be8b00c07d2bce97623b8eba100eac42
-Size (xphoon.tar.Z) = 95407 bytes
-SHA1 (patch-aa) = c033d65d9190b963912ed6726922acbfe5b44dc9
-SHA1 (patch-ab) = 1aa0b58125cf41bb94c708bd53402357ec031423
-SHA1 (patch-ac) = 37b241180fad657de9d40b0acc02f91fe87afd62

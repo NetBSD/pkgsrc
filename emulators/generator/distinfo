@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/11/19 20:54:20 agc Exp $
-
-SHA1 (generator-0.34.tar.gz) = abf57875c60f63c9ffb97894f4ce9c638f60054f
-Size (generator-0.34.tar.gz) = 442852 bytes
-SHA1 (patch-aa) = 0878709485d884c1e4956b5ac4659024e31ef3ac
-SHA1 (patch-ac) = 418547b9c791824822a8eac3b1964dccb5ba39ce
-SHA1 (patch-ad) = c6e79f872595a427a08c34d802f19495c6985022

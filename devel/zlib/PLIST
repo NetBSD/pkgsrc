@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:23 zuntum Exp $
-include/zconf.h
-include/zlib.h
-lib/libz.a
-lib/libz.la
-lib/libz.so
-lib/libz.so.0
-lib/libz.so.0.1

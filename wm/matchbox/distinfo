@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/12/20 15:59:44 tsarna Exp $
-
-SHA1 (matchbox-0.3.6.tar.gz) = 2bedd60387fcf1a614bd55150e56ee5e294aa307
-Size (matchbox-0.3.6.tar.gz) = 332086 bytes
-SHA1 (patch-aa) = c4f6d89d10f0f1b7f30ff30a2ad5312ade1769b0
-SHA1 (patch-ab) = c7e73b8c32dd10f7b3ef0b8af9921ba461925230
-SHA1 (patch-ac) = 1b0b60ea25a4d8f0799917e9c28dc9481258bb16

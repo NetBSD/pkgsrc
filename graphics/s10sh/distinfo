@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/22 16:09:15 drochner Exp $
-
-SHA1 (s10sh-0.2.0.tar.gz) = a8ada7c84ff64be98a1195612d48e2042f293eba
-Size (s10sh-0.2.0.tar.gz) = 172203 bytes
-SHA1 (patch-aa) = 1708337ee44567e66e227903e0ae15101670ed31
-SHA1 (patch-ab) = 83e20d2bbda9de83a3db5a5990f6cc7f1fb1a18c
-SHA1 (patch-ac) = e41f7769729ae35ee412287a3bffc045f54079ae
-SHA1 (patch-ad) = 691819ca731ce6181deb4a2ded4ac81f575ce2cb
-SHA1 (patch-ae) = dd896e869507e9b50728f2d25c2bb23cb2195fb2

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/05/12 15:58:14 schmonz Exp $
-
-SHA1 (jam-2.4.tar) = b30d24130ce86cd5713be940fc95d313cc4ca51a
-Size (jam-2.4.tar) = 583680 bytes
-SHA1 (patch-aa) = 593cfe30545bd5eeee674e8b1a7fbc596110d6b0

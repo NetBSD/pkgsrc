@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2003/05/05 12:22:40 cjep Exp $
-
-SHA1 (leafnode-1.9.39.rel.tar.bz2) = 0309d59583218cd86706d16e3d70ac5b61d440e1
-Size (leafnode-1.9.39.rel.tar.bz2) = 615892 bytes
-SHA1 (patch-aa) = d1aa900eb9040f8810afd7dbe4f26551c7dad99e

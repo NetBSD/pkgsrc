@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/19 04:42:46 rh Exp $
-lib/mozilla-linux/components/flashplayer.xpt
-lib/mozilla-linux/plugins/libflashplayer.so
-${DOCDIR}/readme.txt
-${DOCDIR}/ReadMe.htm
-@dirrm ${DOCDIR}

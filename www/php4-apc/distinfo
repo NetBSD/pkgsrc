@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/12/31 23:54:49 jlam Exp $
-
-SHA1 (apc-1.1.0pl1.tar.gz) = 7deac1c4c1989ab4cf9e2b9f16b7823d3731b6b4
-Size (apc-1.1.0pl1.tar.gz) = 240886 bytes
-SHA1 (patch-aa) = 20cf6cc1568979a1a3d103c40f62463ae2354e3e
-SHA1 (patch-ab) = a3794f8bf99e603ea8b0c9849475450c22c78b9e
-SHA1 (patch-ac) = 309224a4b0bc7a20a1748708785ee7df1d10ad42
-SHA1 (patch-ad) = 5ecbaeff574a696d5c4106dc2ec419cdceb25d16
-SHA1 (patch-ae) = 4e1e3b89ee359a84a32197099d272e13f8cba38b

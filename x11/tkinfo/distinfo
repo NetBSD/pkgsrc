@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:45 skrll Exp $
-
-SHA1 (tkinfo-2.5.tar.gz) = 3d2ac8c187b59585e8038779b66f69ebcd3216e1
-Size (tkinfo-2.5.tar.gz) = 54752 bytes
-SHA1 (patch-aa) = de0d921c1cd757e66aa5a2bb1533bfc1e1b4452b

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/14 17:06:34 jmmv Exp $
-
-SHA1 (aspell-0.50.3.tar.gz) = aea3c1e47c10bf2f189dbff91c3c137170af6a72
-Size (aspell-0.50.3.tar.gz) = 939063 bytes
-SHA1 (patch-aa) = ec9eff280bdb169814e134f541dee7c879a58fdd

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/10/26 20:04:31 bouyer Exp $
-
-SHA1 (gnome-chess-0.3.3.tar.gz) = a8af8cb2ad11b455547fb2b6712c554777c69fd3
-Size (gnome-chess-0.3.3.tar.gz) = 342099 bytes
-SHA1 (patch-aa) = 51d5d8b4266cb2c97035344b13a6456a30ac1306
-SHA1 (patch-ab) = d95180e805dac3979c2eadb760ef6aecf9d02d03

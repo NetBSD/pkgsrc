@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-#	$NetBSD: sosetup,v 1.1.1.1 1999/11/22 21:23:49 rh Exp $
-#
-cd $HOME
-export LD_LIBRARY_PATH=@@PREFIX@@/Office51:@@PREFIX@@/Office51/lib
-@@PREFIX@@/Office51/bin/setup /D:$HOME/Office51

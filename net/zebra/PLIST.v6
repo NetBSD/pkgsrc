@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.v6,v 1.1 2001/10/31 23:13:40 zuntum Exp $
-man/man8/ospf6d.8
-man/man8/ripngd.8
-sbin/ospf6d
-sbin/ripngd
-share/examples/zebra/ospf6d.conf.sample
-share/examples/zebra/ripngd.conf.sample

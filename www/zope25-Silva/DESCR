@@ -1,8 +1,0 @@
-Silva is a Zope-based web application designed for the creation and
-management of structured, textual content. Silva allows users to
-enter new documents as well as edit existing documents using a web
-interface.
-
-Silva stores the content in a structured format (XML), and keeps a
-strict separation between the way the content is used and the way it
-is presented.

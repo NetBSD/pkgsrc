@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:56 zuntum Exp $
-lib/tcl/stooop/pkgIndex.tcl
-lib/tcl/stooop/stooop.tcl
-lib/tcl/stooop/switched.tcl
-share/doc/tcl/stooop/stooop.htm
-share/doc/tcl/stooop/switched.htm
-@dirrm lib/tcl/stooop

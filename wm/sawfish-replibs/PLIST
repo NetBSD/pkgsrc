@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:27 zuntum Exp $
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.la
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.a
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.so
-@dirrm libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish

@@ -1,5 +1,0 @@
-Communicator is a WWW and ftp browser, mail client, newsgroup reader, web
-page editor and address book organizer. The standalone browser is
-available in pkgsrc as 'navigator'. This is the commercially distributed
-version from Netscape. A freely available version of the Netscape browser
-is available in pkgsrc as 'mozilla'.

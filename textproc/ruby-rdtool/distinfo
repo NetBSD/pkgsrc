@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/06 15:10:23 taca Exp $
-
-SHA1 (ruby/rdtool-0.6.11.tar.gz) = 064b3402ef2e92c4a23e4bca50a2c888b85dd79c
-Size (ruby/rdtool-0.6.11.tar.gz) = 50097 bytes
-SHA1 (patch-aa) = b583193e1f5977ab7721241da02cc57c40de4cb0

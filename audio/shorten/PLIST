@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:52 zuntum Exp $
-bin/shorten
-man/man1/shorten.1
-share/doc/shorten/tr156.tex
-share/doc/shorten/tr156.ps
-@dirrm share/doc/shorten

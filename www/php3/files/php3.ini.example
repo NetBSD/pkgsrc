@@ -1,3 +1,0 @@
-#	$NetBSD: php3.ini.example,v 1.2 2002/01/10 13:17:12 jlam Exp $
-
-extension_dir=@PREFIX@/@PHP_EXTENSION_DIR@

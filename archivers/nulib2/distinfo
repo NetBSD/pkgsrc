@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/08/25 21:49:18 jlam Exp $
-
-SHA1 (nulibdist.tar.gz) = c3b351663444c20cd5e2f82763e1522298033280
-Size (nulibdist.tar.gz) = 280311 bytes
-SHA1 (patch-aa) = c6f629810a94376cf5150b3bff233e37bcb2bc44
-SHA1 (patch-ab) = 35c2cea8fc6c19d4ba759cbdce07fa85149808cb
-SHA1 (patch-ac) = 7d2de2035c5b16492dc93c040e4bfe2bcaf95ca5

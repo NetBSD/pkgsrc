@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/17 09:56:52 martti Exp $
-lib/httpd/mod_php4.so
