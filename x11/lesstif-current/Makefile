@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/15 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/17 17:18:50 tv Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	packages@netbsd.org
 
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+
 CONFLICTS=	lesstif-0.82 lesstif-0.83 lesstif-0.84 lesstif-0.85 \
 		lesstif-0.85.2 lesstif-0.85.3
 
@@ -16,7 +18,8 @@ MIRROR_DISTFILE= no
 GNU_CONFIGURE=  yes
 USE_X11=	yes
 # change this for debugging
-CONFIGURE_ENV=	CCFLAGS="-O -pipe" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+CONFIGURE_ENV=	CCFLAGS="-O -pipe" INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+		LIBTOOL=${PREFIX}/bin/libtool
 
 pre-fetch:
 	@if [ -d ${X11BASE}/include/Xm ]; then 				\
