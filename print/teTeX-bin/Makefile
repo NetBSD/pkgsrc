@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/09/27 23:18:37 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/10/24 00:28:48 kei Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - executables
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
+DEPENDS+=	teTeX-share>=1.0.2nb1:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	libwww>=5.2.8:../../www/libwww
 DEPENDS+=	png>=1.0.11:../../graphics/png
