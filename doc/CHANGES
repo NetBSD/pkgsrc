@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3699 2003/10/17 05:33:13 itojun Exp $
+$NetBSD: CHANGES,v 1.3700 2003/10/17 09:46:18 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4210,3 +4210,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated silc-client-icb to 0.14nb2 [salo 2003-10-16]
 	Updated slurm to 0.3.1 [cube 2003-10-16]
 	Updated quagga to 0.96.3 [itojun 2003-10-17]
+	Updated audit-packages to 1.24 [agc 2003-10-17]
