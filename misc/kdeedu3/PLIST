@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/09 12:19:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/20 13:33:00 markd Exp $
 bin/celestrongps
 bin/flashkard
 bin/indiserver
@@ -1632,10 +1632,6 @@ share/kde/icons/hicolor/48x48/apps/kids.png
 share/kde/icons/hicolor/48x48/apps/menubar.png
 share/kde/icons/locolor/16x16/actions/edit_add.png
 share/kde/icons/locolor/16x16/actions/edit_remove.png
-share/kde/icons/locolor/16x16/apps/kbruch.png
-share/kde/icons/locolor/16x16/apps/kig.png
-share/kde/icons/locolor/32x32/apps/kbruch.png
-share/kde/icons/locolor/32x32/apps/kig.png
 share/kde/mimelnk/application/x-edu.desktop
 share/kde/mimelnk/application/x-edugallery.desktop
 share/kde/mimelnk/application/x-kgeo.desktop

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2004/02/07 14:19:08 xtraeme Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/20 13:33:00 markd Exp $
 
---- kiten/Makefile.in.orig	2004-02-07 15:02:19.000000000 +0100
-+++ kiten/Makefile.in	2004-02-07 15:02:48.000000000 +0100
-@@ -393,7 +393,7 @@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
- 	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+--- kiten/Makefile.in.orig	2004-04-06 02:40:43.000000000 +1200
++++ kiten/Makefile.in
+@@ -104,7 +104,7 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
 -LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 +LINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CFLAGS) $(CFLAGS) \
