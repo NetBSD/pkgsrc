@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/02/12 01:59:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/02/12 02:35:06 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -56,8 +56,18 @@ BUILDLINK_USE_BUILTIN.gettext=	YES
 BUILDLINK_USE_BUILTIN.gettext=	NO
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mgettext)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    !empty(BUILDLINK_IS_BUILTIN.gettext:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.gettext=	YES
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.gettext=	NO
+.endif
+.if !empty(PREFER_NATIVE:Mgettext) && \
+    !empty(BUILDLINK_IS_BUILTIN.gettext:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.gettext=	YES
+.endif
+.if !empty(PREFER_PKGSRC:Mgettext)
 BUILDLINK_USE_BUILTIN.gettext=	NO
 .endif
 

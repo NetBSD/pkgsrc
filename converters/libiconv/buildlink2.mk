@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.17 2004/02/12 01:59:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.18 2004/02/12 02:35:06 jlam Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
@@ -29,18 +29,32 @@ _BLNK_LIBICONV_FOUND=	NO
 .endfor
 
 .if ${_BUILTIN_ICONV} == "YES"
-_NEED_ICONV=		NO
+_NEED_ICONV=	NO
 .else
-_NEED_ICONV=		YES
+_NEED_ICONV=	YES
 .endif
 
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_ICONV} == "YES"
+_NEED_ICONV=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_ICONV=	YES
+.endif
+.if !empty(PREFER_NATIVE:Miconv) && \
+    ${_BUILTIN_ICONV} == "YES"
+_NEED_ICONV=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Miconv)
+_NEED_ICONV=	YES
+.endif
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:Miconv)
-_NEED_ICONV=		YES
+_NEED_ICONV=	YES
 .endif
 
 .if defined(USE_GNU_ICONV)
-_NEED_ICONV=		YES
+_NEED_ICONV=	YES
 .endif
 
 .if ${_NEED_ICONV} == "YES"
