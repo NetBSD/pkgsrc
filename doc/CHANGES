@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2639 2003/06/30 11:48:28 grant Exp $
+$NetBSD: CHANGES,v 1.2640 2003/06/30 15:19:54 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gopher to 3.0.5 [wiz 2003-06-30]
 	Updated readline to 4.3pl5 [uebayasi 2003-06-30]
 	Updated pax to 20030630 [grant 2003-06-30]
+	Updated libnbcompat to 20030630 [grant 2003-06-30]
