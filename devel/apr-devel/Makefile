@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/03 01:30:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/03 14:41:04 hubertf Exp $
 
 DISTNAME=	apr_20020725223645
 PKGNAME=	apr-devel-0.20020725223645
@@ -21,7 +21,10 @@ pre-configure:
 	(cd ${WRKDIR}/apr-util && ./buildconf)
 
 do-configure:
-	(cd ${WRKDIR}/apr && ${SETENV} ${CONFIGURE_ENV} ./configure --prefix=${PREFIX})
+	(cd ${WRKDIR}/apr && ${SETENV} ${CONFIGURE_ENV} ./configure \
+		--prefix=${PREFIX} \
+		--with-devrandom=/dev/urandom \
+		)
 	(cd ${WRKDIR}/apr-util && ${SETENV} ${CONFIGURE_ENV} ./configure --prefix=${PREFIX} --with-apr=../apr --with-expat=${LOCALBASE})
 
 do-build:
