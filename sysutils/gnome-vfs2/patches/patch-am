@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.9 2004/10/24 18:03:24 recht Exp $
+$NetBSD: patch-am,v 1.10 2004/11/28 13:00:17 recht Exp $
 
---- libgnomevfs/gnome-vfs-unix-mounts.c.orig	2004-08-25 09:37:37.000000000 +0200
-+++ libgnomevfs/gnome-vfs-unix-mounts.c
-@@ -452,7 +455,11 @@ get_mtab_monitor_file (void)
+--- libgnomevfs/gnome-vfs-unix-mounts.c.orig	Fri Oct 15 10:00:02 2004
++++ libgnomevfs/gnome-vfs-unix-mounts.c	Sat Nov 27 20:53:08 2004
+@@ -475,7 +475,11 @@
  gboolean
  _gnome_vfs_get_current_unix_mounts (GList **return_list)
  {
@@ -14,7 +14,7 @@ $NetBSD: patch-am,v 1.9 2004/10/24 18:03:24 recht Exp $
  	int num_mounts, i;
  	GnomeVFSUnixMount *mount_entry;
  
-@@ -469,7 +476,11 @@ _gnome_vfs_get_current_unix_mounts (GLis
+@@ -492,7 +496,11 @@
  		mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
  		mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
  		mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
