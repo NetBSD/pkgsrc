@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/08/30 01:31:11 taca Exp $
+# $NetBSD: Makefile,v 1.20 2003/08/30 22:51:25 jlam Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,7 @@ CONFLICTS+=		samba-[0-9]*
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 USE_PKGLOCALEDIR=	YES
 

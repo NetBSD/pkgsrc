@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/08/30 19:45:00 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2003/08/30 22:51:23 jlam Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	1
@@ -14,10 +14,13 @@ BUILD_USES_MSGFMT=	yes
 CONFLICTS+=		rpm2cpio<1.0nb1
 
 USE_BUILDLINK2=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
+
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 # The rpm databases are kept under ${RPM_DB_PREFIX}/lib/rpm.
 CONFIGURE_ENV+=		varprefix="${RPM_DB_PREFIX}"

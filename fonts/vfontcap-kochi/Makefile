@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/20 04:49:28 kei Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/30 22:51:18 jlam Exp $
 
 DISTNAME=		vfontcap-kochi-0.0
 WRKSRC=			${WRKDIR}
@@ -18,6 +18,8 @@ NO_BUILD=		YES
 USE_X11=		YES # kochi font defines this as well.
 
 USE_PKGINSTALL=		YES
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 VFONTCAPDIR=		${PREFIX}/share/VFlib/2.24.2
 FILES_SUBST+=		VFONTCAPDIR=${VFONTCAPDIR}

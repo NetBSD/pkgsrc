@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/07/16 10:35:15 abs Exp $
+# $NetBSD: Makefile,v 1.33 2003/08/30 22:51:14 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -13,6 +13,8 @@ NOT_FOR_PLATFORM=	*-*-mips
 .include "../postgresql/Makefile.common"
 
 USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs

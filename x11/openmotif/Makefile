@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/08/08 09:25:16 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/08/30 22:51:38 jlam Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -29,8 +29,8 @@ USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 ALL_TARGET=		World
 
-DEINSTALL_TMPL=		${.CURDIR}/DEINSTALL
-INSTALL_TMPL=		${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 FILES_SUBST+=		X11BASE=${X11BASE}
 

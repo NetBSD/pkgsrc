@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/08/09 11:16:17 seb Exp $
+# $NetBSD: Makefile,v 1.37 2003/08/30 22:51:23 jlam Exp $
 
 DISTNAME=		arla-0.35.12
 #PKGREVISION=
@@ -16,9 +16,12 @@ OSVERSION_SPECIFIC=	yes
 INFO_FILES=		arla.info
 
 USE_BUILDLINK2=		yes
-USE_PKGINSTALL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
+
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .if exists(/usr/lib/libroken.a)
 CONFIGURE_ARGS+=	--with-krb4-lib=/usr/lib

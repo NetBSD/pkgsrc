@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/08/09 10:34:47 seb Exp $
+# $NetBSD: Makefile,v 1.34 2003/08/30 22:51:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -19,7 +19,10 @@ BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
 CONFLICTS=	hylafax-[0-9]*
 
 USE_BUILDLINK2=		yes
+
 USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 MAKE_ENV=		MGETTY_CONFDIR=${PKG_SYSCONFDIR}
 
