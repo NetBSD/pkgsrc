@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/07/22 15:46:20 tron Exp $
+# $NetBSD: Makefile,v 1.39 2001/07/26 12:15:03 tron Exp $
 
 DISTNAME=	wget-1.7
 CATEGORIES=	net
@@ -11,6 +11,8 @@ PATCH_DIST_STRIP=-p1
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
+
+BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
 BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK_ONLY=	YES
