@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/03/08 19:40:40 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.24 2004/03/11 22:35:45 tron Exp $
 
 DISTNAME=		balsa-2.0.16
 PKGREVISION=		4
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--enable-pcre
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv_open=yes
 
 EGDIR=		${PREFIX}/share/examples/balsa
 .for cnf in balsa.soundlist email.soundlist
