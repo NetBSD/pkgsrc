@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2000/06/15 11:28:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/27 02:43:32 fredb Exp $
 
-DISTNAME=		ascp-1.0.2
+DISTNAME=		ascp-1.0.3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/apps/ascp/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://hubble.colorado.edu/~nwanua/htmldir/ascp.html
@@ -10,10 +11,15 @@ HOMEPAGE=		http://hubble.colorado.edu/~nwanua/htmldir/ascp.html
 DEPENDS+=		afterstep-1.8.*:../../x11/afterstep
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
+USE_X11=		yes
 
-CONFIGURE_ENV+=		"LIBS= -lgnumalloc"
+CONFIGURE_ENV+=		GTK_CONFIG="${X11PREFIX}/bin/gtk-config"
+
+IGNORE=			"Not for Afterstep 1.8.x!"
+
+pre-configure:
+	${RM} ${WRKSRC}/config.cache
 
 post-install:
 	@${CHMOD} a+x ${PREFIX}/share/afterstep/ascp/icons
