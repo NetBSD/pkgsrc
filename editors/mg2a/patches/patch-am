@@ -1,8 +1,19 @@
-$NetBSD: patch-am,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+$NetBSD: patch-am,v 1.2 2000/07/10 18:26:55 tron Exp $
 
---- ./file.c.orig	Sun Jul  3 10:48:57 1988
-+++ ./file.c	Thu Mar 30 08:37:30 2000
-@@ -447,14 +447,151 @@
+--- file.c.orig	Sun Jul  3 10:48:57 1988
++++ file.c	Wed May 31 16:36:36 2000
+@@ -2,6 +2,10 @@
+  *		File commands.
+  */
+ #include	"def.h"
++#include <stdio.h>     // refling
++#include <sys/types.h>
++#include <sys/stat.h>
++
+ 
+ BUFFER	*findbuffer();
+ VOID	makename();
+@@ -447,14 +451,147 @@
  writeout(bp, fn) register BUFFER *bp; char *fn; {
  	register int	s;
  
@@ -10,10 +21,6 @@ $NetBSD: patch-am,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
 +// ------------------> if .original subdir exists in the same dir as
 +// ------------------> the file to save, and there is an EMPTY file
 +// ------------------> name with the same name as we wish to save
-+
-+#include <stdio.h>
-+#include <sys/types.h>
-+#include <sys/stat.h>
 +
 +// main(int argc, char **argv) {
 +   char *last_slash, *file_name_no_dir, dir_name[1000], cmd[1000], *end_of_dirname;

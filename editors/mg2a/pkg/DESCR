@@ -9,7 +9,7 @@ The NetBSD version has a few minor cosmetic changes, better locating
 of the startup file (mg.rc), journaling and original mirroring of
 files. 
 
-A similarly small and fast MSDOS version is available at
+A similarly small and fast MSDOS version will be available sometime at
 ftp://ftp.cdrom.com/pub/simtelnet/msdos/editor/mg2a_exe.zip, without
 my enhancements.  Hopefully , I'll have time to make a port of this
 enhanced version to MSDOS under djgpp (LFN support), and post it as:

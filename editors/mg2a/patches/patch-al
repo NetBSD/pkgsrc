@@ -1,14 +1,17 @@
-$NetBSD: patch-al,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+$NetBSD: patch-al,v 1.2 2000/07/10 18:26:55 tron Exp $
 
---- ./README.NetBSD.orig	Thu Mar 30 08:35:36 2000
-+++ ./README.NetBSD	Thu Mar 30 08:35:36 2000
-@@ -0,0 +1,37 @@
-+Modified by John P. Refling, Dec 1999.  This is version 1.00 of the
-+mods.  Basically consists of the port to NetBSD and a change to the
-+mg.rc startup file name and search paths. 
+--- README.NetBSD.orig	Wed May 31 16:36:36 2000
++++ README.NetBSD	Wed May 31 16:36:36 2000
+@@ -0,0 +1,49 @@
++Version 1.11
++~~~~~~~~~~~~
++(May 2000) don't edit non-regular files.
 +
-+Version 1.10 (Jan 2000) added journaling and the inital mirroring
-+of files: 
++
++
++Version 1.10 
++~~~~~~~~~~~~
++(Jan 2000) added journaling and the inital mirroring of files: 
 +
 +Journaling
 +~~~~~~~~~~
@@ -40,3 +43,12 @@ $NetBSD: patch-al,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
 +If the environment variable MG_DOT_ORIG is set, then the edited
 +file is copied to a .orig file, if the .orig file does not exist.
 +Helpful for creating diffs.
++
++
++
++Version 1.00
++~~~~~~~~~~~~
++Modified by John P. Refling, Dec 1999.  This is version 1.00 of the
++mods.  Basically consists of the port to NetBSD and a change to the
++mg.rc startup file name and search paths. 
++
