@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/10/19 03:03:50 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/24 13:18:05 drochner Exp $
 
 PKGNAME=		postgresql-client-${BASE_VERS}
 COMMENT=		PostgreSQL database client programs
@@ -12,6 +12,12 @@ CONFIGURE_ARGS+=	--enable-readline
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
 BUILD_DIRS=		${WRKSRC}/src/bin
+
+# we need the real GNU tar
+BUILD_DEPENDS+=		gtar-base-*:../../archivers/gtar-base
+EVAL_PREFIX+=		GTARPREFIX=gtar-base
+GTARPREFIX_DEFAULT=	${LOCALBASE}
+GTAR=			${GTARPREFIX}/bin/gtar
 
 pre-build:
 	cd ${WRKSRC}/src/bin/psql &&					\
