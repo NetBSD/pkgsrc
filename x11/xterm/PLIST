@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/17 14:34:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/14 11:24:49 grant Exp $
 bin/resize
-bin/xterm
 bin/uxterm
-lib/X11/etc/xterm.termcap
-lib/X11/etc/xterm.terminfo
-lib/app-defaults/XTerm
-lib/app-defaults/UXTerm
-lib/app-defaults/XTerm-color
-share/man/man1/resize.1
-share/man/man1/xterm.1
+bin/xterm
+lib/X11/app-defaults/UXTerm
+lib/X11/app-defaults/XTerm
+lib/X11/app-defaults/XTerm-color
+man/man1/resize.1
+man/man1/xterm.1
