@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2002/04/23 11:13:53 zuntum Exp $
+$NetBSD: patch-ae,v 1.1 2002/04/23 11:24:00 zuntum Exp $
 
 --- bozohttpd.c.orig	Sat Sep 22 12:10:00 2001
 +++ bozohttpd.c
@@ -10,3 +10,12 @@ $NetBSD: patch-ad,v 1.1 2002/04/23 11:13:53 zuntum Exp $
  			break;
  #else
  			error(1, "CGI is not enabled");
+@@ -1734,7 +1735,7 @@
+ 	int savederrno;
+ 	
+ 	/* only log if the level is low enough */
+-	if (level < dflag)
++	if (dflag < level)
+ 		return;
+ 
+ 	savederrno = errno;
