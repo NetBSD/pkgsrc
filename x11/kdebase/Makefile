@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 1999/10/27 11:10:12 tron Exp $
+# $NetBSD: Makefile,v 1.53 1999/11/09 01:13:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -56,5 +56,13 @@ post-install:
 	@${ECHO} "@exec mkdir -p %D/${DIR}" >>${PLIST_SRC}
 	@${ECHO} "@dirrm ${DIR}" >>${PLIST_SRC}
 .endfor
+	#
+	# NetBSD Advertisement O:-)
+	cd ${PREFIX}/share/kde/config ; \
+	${CP} kdmrc kdmrc.new ; \
+	${SED} \
+		-e 's|^\(GreetString\)=.*|\1=Welcome to NetBSD! [HOSTNAME]|' \
+		<kdmrc.new >kdmrc ; \
+	${RM} kdmrc.new
 
 .include "../../mk/bsd.pkg.mk"
