@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.122 2003/09/02 06:59:44 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.123 2003/09/12 10:49:31 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -289,6 +289,12 @@ PKG_INSTALLATION_TYPE?=	${PKG_INSTALLATION_TYPES:M${_pref_}:S/^/_pkginsttype_/1:
 .  endif
 .endfor
 PKG_INSTALLATION_TYPE?=	none
+
+USE_BUILDLINK2?=	no	# default to not using buildlink2
+USE_BUILDLINK3?=	no	# default to not using buildlink3
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
+.endif
 
 # This is the package database directory for the default view.
 PKG_DBDIR?=		${DESTDIR}/var/db/pkg
