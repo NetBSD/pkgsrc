@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/08/25 18:39:37 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/02 13:27:11 grant Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -6,6 +6,7 @@ DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
 WRKSRC=		${WRKDIR}/socks5-v1.0r2
 CATEGORIES=	net security
+PKGREVISION=	1
 MASTER_SITES=	# empty -- manual fetch needed
 EXTRACT_SUFX=	_tar.gz
 
@@ -36,9 +37,12 @@ CONFIGURE_ARGS=		--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 			${EXTRA_CONFIGURE_ARGS}
 LIBS+=			-lcrypt
 
+RCD_SCRIPTS=		socks5
+
 post-install:
 	${MV} ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
 	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so.0
 	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
