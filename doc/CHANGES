@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5884 2004/05/09 22:46:09 snj Exp $
+$NetBSD: CHANGES,v 1.5885 2004/05/09 23:47:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2437,3 +2437,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkg_chk to 1.48 [abs 2004-05-09]
 	Updated roundup to 0.7.0 [recht 2004-05-09]
 	Updated gtk-thinice-engine to 2.0.2nb5 [snj 2004-05-09]
+	Updated kdrill to 5.6.11nb2 [wiz 2004-05-09]
