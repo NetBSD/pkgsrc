@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/02/13 07:33:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/24 05:29:06 grant Exp $
 #
 
 DISTNAME=	grep-2.5.1
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == "SunOS"
 CONFIGURE_SCRIPT=	${SH} ./configure
 .endif
 
