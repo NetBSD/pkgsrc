@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/06/15 13:49:52 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/11/29 21:18:59 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.cs.wisc.edu/~larus/SPIM/ \
 			ftp://ftp.cs.wisc.edu/pub/spim/
 
-MAINTAINER=		deberg@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.wisc.edu/~larus/spim.html
 COMMENT=		MIPS R2000 Simulator
 
