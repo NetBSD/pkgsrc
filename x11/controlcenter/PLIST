@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/23 23:20:36 fredb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/03/24 01:07:47 rh Exp $
 bin/background-properties-capplet
 bin/file-types-capplet
 bin/gnome-edit-properties-capplet
@@ -172,3 +172,4 @@ share/pixmaps/control-center.png
 @dirrm share/control-center/Documents
 @dirrm share/control-center/Desktop
 @dirrm share/control-center
+@dirrm include/libcapplet1
