@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.369 2004/12/27 15:25:57 jlam Exp $
+# $NetBSD: Makefile,v 1.370 2004/12/27 23:51:49 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -30,6 +30,7 @@ SUBDIR+=	ap-mp3
 SUBDIR+=	ap-perl
 SUBDIR+=	ap-php
 SUBDIR+=	ap-python
+SUBDIR+=	ap-rivet
 SUBDIR+=	ap-ruby
 SUBDIR+=	ap-ssl
 SUBDIR+=	ap-throttle
