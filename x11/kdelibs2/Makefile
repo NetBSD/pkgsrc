@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2002/10/26 13:07:29 bouyer Exp $
+# $NetBSD: Makefile,v 1.46 2002/12/05 15:28:29 tron Exp $
 
 DISTNAME=	kdelibs-2.2.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -70,6 +70,8 @@ ICONSIZES=	16x16 22x22 32x32 48x48 64x64
 ICONDIRS=	actions/kde actions apps devices filesystems mimetypes
 
 post-install:
+	${RM} -f ${PREFIX}/share/kde/services/rlogin.protocol \
+	  ${PREFIX}/share/kde/services/telnet.protocol
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/locale
 .if ${OPSYS} == "NetBSD"
 .  if ${OS_VERSION:M1.5.[12]*} || ${OS_VERSION:M1.[0-4]*}
