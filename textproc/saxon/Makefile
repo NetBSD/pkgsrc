@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/18 21:33:55 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/26 20:52:12 jlam Exp $
 #
 
 DISTNAME=	saxon
@@ -28,5 +28,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/saxon
 	(cd ${WRKSRC} && ${PAX} -r -w -s '/^samples/saxon/' samples ${PREFIX}/share/examples/java)
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
