@@ -1,15 +1,14 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:20 agc Exp $
+$NetBSD: patch-ad,v 1.3 1998/12/04 11:09:46 frueauf Exp $
 
---- lex/Makefile.orig	Wed Oct 23 10:42:57 1996
-+++ lex/Makefile	Tue Feb 17 00:24:04 1998
-@@ -34,8 +34,8 @@
+--- lex/Makefile.orig	Mon Apr  6 15:01:22 1998
++++ lex/Makefile	Thu Dec  3 03:21:13 1998
+@@ -34,7 +34,8 @@
  	rm -f Makefile.bak
  
  install:
 -	cat $(LIBDIR)/header mosmllex > $(BINDIR)/mosmllex
--	chmod a+x $(BINDIR)/mosmllex
 +	cat $(LIBDIR)/header mosmllex > mosmllex.bin
-+	${BSD_INSTALL_SCRIPT} mosmllex.bin $(BINDIR)/mosmllex
++	${INSTALL_SCRIPT} mosmllex.bin $(BINDIR)/mosmllex
+ 	chmod a+x $(BINDIR)/mosmllex
  
  Grammar.sml Grammar.sig: Grammar.grm
- 	$(MOSMLYACC) Grammar.grm

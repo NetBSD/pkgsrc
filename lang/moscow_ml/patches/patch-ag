@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.2 1998/08/07 11:09:21 agc Exp $
+$NetBSD: patch-ag,v 1.3 1998/12/04 11:09:46 frueauf Exp $
 
---- runtime/Makefile.orig	Tue Jul 29 02:51:01 1997
-+++ runtime/Makefile	Mon Feb 16 23:59:45 1998
-@@ -36,7 +36,7 @@
+--- runtime/Makefile.orig	Fri Apr 17 07:51:45 1998
++++ runtime/Makefile	Thu Dec  3 03:01:16 1998
+@@ -42,7 +42,7 @@
  	rm -f primitives prims.c opnames.h jumptbl.h
  
  install:
 -	cp camlrunm $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} camlrunm $(BINDIR)
++	${INSTALL_PROGRAM} camlrunm $(BINDIR)
  
  primitives : $(PRIMS)
  	sed -n -e '/\/\* ML \*\//s/.* \([a-zA-Z0-9_][a-zA-Z0-9_]*\) *(.*/\1/p' \
