@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.31 2005/01/27 13:51:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/02/05 18:16:15 jklos Exp $
 
 IM_MAJOR_VER=		6.1.9
 IM_MINOR_VER=		4
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
+PKGREVISION=		1
 
 .if (${IM_MINOR_VER} != NONE)
 DISTSUFFIX=	${IM_MAJOR_VER}-${IM_MINOR_VER}
