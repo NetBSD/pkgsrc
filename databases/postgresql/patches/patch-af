@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 1999/05/18 15:52:19 bad Exp $
+$NetBSD: patch-af,v 1.5 1999/07/11 20:00:43 bad Exp $
 
 *** include/storage/s_lock.h  Sat Apr 10 19:43:01 1999
 --- include/storage/s_lock.h  Wed Apr  7 03:06:53 1999
@@ -27,20 +27,3 @@ $NetBSD: patch-af,v 1.4 1999/05/18 15:52:19 bad Exp $
   #if defined(sparc)
   #define TAS(lock) tas(lock)
   
-*** include/port/bsd.h        Sat Apr 10 19:43:01 1999
---- include/port/bsd.h        Wed Apr  7 03:31:22 1999
-***************
-*** 24,29 ****
---- 24,33 ----
-  #define HAS_TEST_AND_SET
-  #endif
-  
-+ #if defined(__arm32__)
-+ #define HAS_TEST_AND_SET
-+ #endif
-+ 
-  #if defined(__powerpc__)
-  #define HAS_TEST_AND_SET
-  typedef unsigned int slock_t;
-
-
