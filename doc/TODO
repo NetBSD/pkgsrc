@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1915 2004/07/10 17:39:04 wiz Exp $
+$NetBSD: TODO,v 1.1916 2004/07/11 13:41:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -248,7 +248,6 @@ Suggested package updates
 	o gqmpeg-0.91.1
 	o grace-5.1.16
 	o grhino-0.12.0
-	o groff-1.19.1
 	o gsasl-0.1.1
 	o gss-0.0.11
 	o gtar-1.14
@@ -312,8 +311,9 @@ Suggested package updates
 	o nano-1.2.4
 	o nap-1.5.2
 	o napshare-1.2
+	o ncmpc-0.11.0 [pkg/26237]
 	o nessus-2.1.0
-	o netatalk-1.6.3 [pkg/21930]
+	o netatalk-1.6.3 [pkg/21930|markd]
 	o netcdf-3.5.1
 	o nosefart-2.1
 	o ns-flash-6.0.79
@@ -398,6 +398,7 @@ Suggested package updates
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wine-20040615
+	o wistumbler-2.00pre9 [pkg/26245]
 	o wmaker-conf-2.9.1
 	o wwwoffle-2.8c
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
