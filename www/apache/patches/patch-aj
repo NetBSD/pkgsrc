@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 1998/12/03 17:23:54 tv Exp $
+$NetBSD: patch-aj,v 1.2 1999/05/23 21:16:52 tv Exp $
 
 --- conf/httpd.conf-dist.orig	Thu Dec  3 11:05:29 1998
 +++ conf/httpd.conf-dist	Thu Dec  3 11:07:26 1998
@@ -12,8 +12,8 @@ $NetBSD: patch-aj,v 1.1 1998/12/03 17:23:54 tv Exp $
 +<IfDefine SSL>
 +### Uncomment the following if you wish to use SSL and you need RSAREF: ###
 +#LoadFile !librsaref.so.2
-+LoadFile !libcrypto.so.0
-+LoadFile !libssl.so.0
++LoadFile !libcrypto.so.1
++LoadFile !libssl.so.1
 +LoadModule ssl_module lib/httpd/mod_ssl.so
 +AddModule mod_ssl.c
 +</IfDefine>
