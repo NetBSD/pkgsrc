@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.5 2004/11/11 21:46:43 kristerw Exp $
+
+--- testsuite/multifilesink/multifilesrc_test.c.orig	Thu Nov 11 22:40:09 2004
++++ testsuite/multifilesink/multifilesrc_test.c	Thu Nov 11 22:40:56 2004
+@@ -3,8 +3,6 @@
+ int
+ main (int argc, char **argv)
+ {
+-  gst_init (&argc, &argv);
+-
+   GSList *locations;
+   int i;
+ 
+@@ -12,6 +10,7 @@
+ 
+   GstElement *pipeline, *src, *sink;
+ 
++  gst_init (&argc, &argv);
+   g_print ("creating sink\n");
+   sink = gst_element_factory_make ("multifilesink", "sink");
+   g_object_set (G_OBJECT (sink), "location", "format%d.tmp", NULL);
