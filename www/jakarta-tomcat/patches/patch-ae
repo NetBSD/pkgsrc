@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.2 2002/05/20 19:06:03 cjep Exp $
 --- src/share/org/apache/tomcat/loader/AdaptiveClassLoader.java.orig	Fri Apr 19 10:40:20 2002
 +++ src/share/org/apache/tomcat/loader/AdaptiveClassLoader.java	Fri Apr 19 10:40:48 2002
 @@ -813,7 +813,7 @@
