@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.557 2004/11/03 23:49:21 cube Exp $
+# $NetBSD: Makefile,v 1.558 2004/11/05 18:23:01 tv Exp $
 #
 
 COMMENT=	Development utilities
@@ -204,6 +204,7 @@ SUBDIR+=	libebml
 SUBDIR+=	libelf
 SUBDIR+=	libetm
 SUBDIR+=	libevent
+SUBDIR+=	libextractor
 SUBDIR+=	libffi
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgetopt
