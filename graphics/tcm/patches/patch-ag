@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/02/24 01:30:06 jtb Exp $
+
+--- sd/bv/atdiagram.c.orig	Thu Feb 22 17:31:41 2001
++++ sd/bv/atdiagram.c
+@@ -46,6 +46,10 @@
+ #include "atgraph.h"
+ #include "atviewer.h"
+ #include "atwindow.h"
++#ifdef __NetBSD__
++#include <limits.h>
++#define MAXINT INT_MAX
++#endif
+ 
+ const int ATDiagram::DOT_WIDTH = 8;
+  

@@ -1,0 +1,51 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/02/24 01:30:06 jtb Exp $
+
+--- gl/system.c.orig	Tue Nov 21 12:32:14 2000
++++ gl/system.c
+@@ -47,7 +47,7 @@
+ 
+ const char System::TOOLKIT_HOME_VAR_NAME[] = "TCM_HOME";
+ 
+-const char System::TOOLKIT_HOME_DEFAULT[] = "/home/tcm";
++const char System::TOOLKIT_HOME_DEFAULT[] = "@PREFIX@";
+ 
+ bool System::sendBugEmail = True;
+ char System::emailAddress[MAXNAME] = "tcm@cs.vu.nl";
+@@ -63,13 +63,11 @@
+ // most common Unix directories for system wide available binaries.
+ const char *System::STD_SEARCH_DIRS[] =
+ 	{"./", "/bin/", "/usr/bin/", "/usr/local/bin/", 
+-	 "/usr/local/tcm/bin", "/home/tcm/bin", "/usr/bin/X11/", 
+-	 "/usr/ucb/", "/usr/sbin/", "/usr/X11/bin/", "/usr/openwin/bin/", 
+-	 "/opt/tcm/bin", "/usr/local/X11/bin", "/usr/local/bin/X11/",
+-	 "/usr/openwin/contrib/bin", "/Window/X11/bin",
+-	 "/Window/X11/contrib/bin", 0};
++	 "@PREFIX@/bin/", "@X11BASE@/bin/", "@LOCALBASE@/bin/",
++	 "/usr/openwin/bin", "/usr/sbin/", "/usr/X11/bin/",
++	 "/opt/tcm/bin", "/usr/local/X11/bin", "/usr/local/bin/X11/", 0};
+ 
+-#if defined(LINUX) || defined(AIX) || defined(HPUX) || defined(OSF1)
++#if defined(LINUX) || defined(AIX) || defined(HPUX) || defined(OSF1) || defined(__NetBSD__)
+ typedef void (*SIG_PF)(int);
+ #endif
+ 
+@@ -177,11 +175,14 @@
+ 			return;
+ 		}
+ 		else {
+-			cerr << "Error: " << TOOLKIT_HOME_VAR_NAME
+-				<< " environment variable is not set" << endl;
+-			cerr << "please set this variable to the"
+-				" directory where the software is installed "
+-				"and try it again" << endl;
++		  char *p2 = TOOLKIT_HOME_DEFAULT;
++		  strncpy(home, p2, MAXNAME-1);
++		  return;
++		  //			cerr << "Error: " << TOOLKIT_HOME_VAR_NAME
++		  //	<< " environment variable is not set" << endl;
++		  //cerr << "please set this variable to the"
++		  //	" directory where the software is installed "
++		  //	"and try it again" << endl;
+ 		}
+ 		exit(1);
+ 	}
