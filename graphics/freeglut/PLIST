@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/19 18:36:02 xtraeme Exp $
+include/GL/freeglut.h
+include/GL/freeglut_ext.h
+include/GL/freeglut_std.h
+include/GL/glut.h
+lib/libglut.a
+lib/libglut.la
+lib/libglut.so
+lib/libglut.so.11
+lib/libglut.so.11.0
+@unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}
