@@ -1,0 +1,125 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 18:27:48 jmmv Exp $
+share/icons/hicolor/index.theme
+@exec ${MKDIR} %D/share/icons/hicolor/scalable/mimetypes
+@dirrm share/icons/hicolor/scalable/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/scalable/filesystems
+@dirrm share/icons/hicolor/scalable/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/scalable/devices
+@dirrm share/icons/hicolor/scalable/devices
+@exec ${MKDIR} %D/share/icons/hicolor/scalable/apps
+@dirrm share/icons/hicolor/scalable/apps
+@exec ${MKDIR} %D/share/icons/hicolor/scalable/actions
+@dirrm share/icons/hicolor/scalable/actions
+@dirrm share/icons/hicolor/scalable
+@exec ${MKDIR} %D/share/icons/hicolor/96x96/mimetypes
+@dirrm share/icons/hicolor/96x96/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/96x96/filesystems
+@dirrm share/icons/hicolor/96x96/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/96x96/devices
+@dirrm share/icons/hicolor/96x96/devices
+@exec ${MKDIR} %D/share/icons/hicolor/96x96/apps
+@dirrm share/icons/hicolor/96x96/apps
+@exec ${MKDIR} %D/share/icons/hicolor/96x96/actions
+@dirrm share/icons/hicolor/96x96/actions
+@dirrm share/icons/hicolor/96x96
+@exec ${MKDIR} %D/share/icons/hicolor/72x72/mimetypes
+@dirrm share/icons/hicolor/72x72/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/72x72/filesystems
+@dirrm share/icons/hicolor/72x72/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/72x72/devices
+@dirrm share/icons/hicolor/72x72/devices
+@exec ${MKDIR} %D/share/icons/hicolor/72x72/apps
+@dirrm share/icons/hicolor/72x72/apps
+@exec ${MKDIR} %D/share/icons/hicolor/72x72/actions
+@dirrm share/icons/hicolor/72x72/actions
+@dirrm share/icons/hicolor/72x72
+@exec ${MKDIR} %D/share/icons/hicolor/64x64/mimetypes
+@dirrm share/icons/hicolor/64x64/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/64x64/filesystems
+@dirrm share/icons/hicolor/64x64/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/64x64/devices
+@dirrm share/icons/hicolor/64x64/devices
+@exec ${MKDIR} %D/share/icons/hicolor/64x64/apps
+@dirrm share/icons/hicolor/64x64/apps
+@exec ${MKDIR} %D/share/icons/hicolor/64x64/actions
+@dirrm share/icons/hicolor/64x64/actions
+@dirrm share/icons/hicolor/64x64
+@exec ${MKDIR} %D/share/icons/hicolor/48x48/mimetypes
+@dirrm share/icons/hicolor/48x48/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/48x48/filesystems
+@dirrm share/icons/hicolor/48x48/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/48x48/devices
+@dirrm share/icons/hicolor/48x48/devices
+@exec ${MKDIR} %D/share/icons/hicolor/48x48/apps
+@dirrm share/icons/hicolor/48x48/apps
+@exec ${MKDIR} %D/share/icons/hicolor/48x48/actions
+@dirrm share/icons/hicolor/48x48/actions
+@dirrm share/icons/hicolor/48x48
+@exec ${MKDIR} %D/share/icons/hicolor/36x36/mimetypes
+@dirrm share/icons/hicolor/36x36/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/36x36/filesystems
+@dirrm share/icons/hicolor/36x36/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/36x36/devices
+@dirrm share/icons/hicolor/36x36/devices
+@exec ${MKDIR} %D/share/icons/hicolor/36x36/apps
+@dirrm share/icons/hicolor/36x36/apps
+@exec ${MKDIR} %D/share/icons/hicolor/36x36/actions
+@dirrm share/icons/hicolor/36x36/actions
+@dirrm share/icons/hicolor/36x36
+@exec ${MKDIR} %D/share/icons/hicolor/32x32/mimetypes
+@dirrm share/icons/hicolor/32x32/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/32x32/filesystems
+@dirrm share/icons/hicolor/32x32/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/32x32/devices
+@dirrm share/icons/hicolor/32x32/devices
+@exec ${MKDIR} %D/share/icons/hicolor/32x32/apps
+@dirrm share/icons/hicolor/32x32/apps
+@exec ${MKDIR} %D/share/icons/hicolor/32x32/actions
+@dirrm share/icons/hicolor/32x32/actions
+@dirrm share/icons/hicolor/32x32
+@exec ${MKDIR} %D/share/icons/hicolor/22x22/mimetypes
+@dirrm share/icons/hicolor/22x22/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/22x22/filesystems
+@dirrm share/icons/hicolor/22x22/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/22x22/devices
+@dirrm share/icons/hicolor/22x22/devices
+@exec ${MKDIR} %D/share/icons/hicolor/22x22/apps
+@dirrm share/icons/hicolor/22x22/apps
+@exec ${MKDIR} %D/share/icons/hicolor/22x22/actions
+@dirrm share/icons/hicolor/22x22/actions
+@dirrm share/icons/hicolor/22x22
+@exec ${MKDIR} %D/share/icons/hicolor/192x192/mimetypes
+@dirrm share/icons/hicolor/192x192/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/192x192/filesystems
+@dirrm share/icons/hicolor/192x192/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/192x192/devices
+@dirrm share/icons/hicolor/192x192/devices
+@exec ${MKDIR} %D/share/icons/hicolor/192x192/apps
+@dirrm share/icons/hicolor/192x192/apps
+@exec ${MKDIR} %D/share/icons/hicolor/192x192/actions
+@dirrm share/icons/hicolor/192x192/actions
+@dirrm share/icons/hicolor/192x192
+@exec ${MKDIR} %D/share/icons/hicolor/16x16/mimetypes
+@dirrm share/icons/hicolor/16x16/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/16x16/filesystems
+@dirrm share/icons/hicolor/16x16/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/16x16/devices
+@dirrm share/icons/hicolor/16x16/devices
+@exec ${MKDIR} %D/share/icons/hicolor/16x16/apps
+@dirrm share/icons/hicolor/16x16/apps
+@exec ${MKDIR} %D/share/icons/hicolor/16x16/actions
+@dirrm share/icons/hicolor/16x16/actions
+@dirrm share/icons/hicolor/16x16
+@exec ${MKDIR} %D/share/icons/hicolor/128x128/mimetypes
+@dirrm share/icons/hicolor/128x128/mimetypes
+@exec ${MKDIR} %D/share/icons/hicolor/128x128/filesystems
+@dirrm share/icons/hicolor/128x128/filesystems
+@exec ${MKDIR} %D/share/icons/hicolor/128x128/devices
+@dirrm share/icons/hicolor/128x128/devices
+@exec ${MKDIR} %D/share/icons/hicolor/128x128/apps
+@dirrm share/icons/hicolor/128x128/apps
+@exec ${MKDIR} %D/share/icons/hicolor/128x128/actions
+@dirrm share/icons/hicolor/128x128/actions
+@dirrm share/icons/hicolor/128x128
+@dirrm share/icons/hicolor
+@dirrm share/icons
