@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.26 2002/02/12 09:24:38 martti Exp $
+# $NetBSD: Makefile.common,v 1.27 2002/03/24 19:39:08 martti Exp $
 
-VIM_VERSION=		6.0.220
-DISTNAME=		vim-${VIM_VERSION:C/\.[0-9]*$//}
+VIM_VERSION=		6.1
+VIM_PATCHLEVEL=		0
+DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
@@ -9,21 +10,22 @@ MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
-#
-# Combine the first 220 patches into one big patch
-#
-PATCH_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
-PATCHFILES+=		vim-6.0-001-220.diff.gz
+##PATCH_SITES+=		${MASTER_SITES:S/unix/patches/}
+##PATCHFILES!=		jot -s " " -w ${VIM_VERSION}.%03d ${VIM_PATCHLEVEL}
+##SKIP_PATCHES=		
+##.for p in ${SKIP_PATCHES}
+##PATCHFILES:=		${PATCHFILES:N${VIM_VERSION}.${p}}
+##.endif
 
 MAINTAINER=		martti@netbsd.org
 HOMEPAGE=		http://www.vim.org/
 
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/vim60/src
+WRKSRC=			${WRKDIR}/vim61/src
 
-PATCH_ARGS=		-d ${WRKDIR}/vim60 --forward --quiet \
+PATCH_ARGS=		-d ${WRKDIR}/vim61 --forward --quiet \
 				-E ${PATCH_STRIP}
-PATCH_DIST_ARGS=	-d ${WRKDIR}/vim60 --forward --quiet \
+PATCH_DIST_ARGS=	-d ${WRKDIR}/vim61 --forward --quiet \
 				-E ${PATCH_DIST_STRIP}
 PATCHDIR?=		${.CURDIR}/../vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../vim-share/distinfo

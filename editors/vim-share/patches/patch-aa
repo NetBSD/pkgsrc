@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/10/09 10:11:34 martti Exp $
+$NetBSD: patch-aa,v 1.6 2002/03/24 19:39:09 martti Exp $
 
---- src/auto/configure.orig	Thu Oct  4 14:19:08 2001
-+++ src/auto/configure	Thu Oct  4 14:20:12 2001
-@@ -2212,6 +2212,7 @@
+--- src/auto/configure.orig	Mon Feb  4 19:21:35 2002
++++ src/auto/configure	Thu Mar  7 08:52:13 2002
+@@ -2236,6 +2236,7 @@
    # Look for the header file in a standard set of common directories.
  # Check X11 before X11Rn because it is often a symlink to the current release.
    for ac_dir in               \
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.5 2001/10/09 10:11:34 martti Exp $
      /usr/X11/include          \
      /usr/X11R6/include        \
      /usr/X11R5/include        \
-@@ -2287,6 +2288,7 @@
+@@ -2311,6 +2312,7 @@
  # First see if replacing the include by lib works.
  # Check X11 before X11Rn because it is often a symlink to the current release.
  for ac_dir in `echo "$ac_x_includes" | sed s/include/lib/` \
