@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1233 2003/08/08 12:04:40 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1234 2003/08/09 10:24:54 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -553,12 +553,12 @@ PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 # base vs. GNU tools
 . include "../../mk/tools.mk"
 
-.if defined(USE_NEW_TEXINFO)
-INFO_FILES?=
+# Handle info files
+#
+INFO_FILES?=			# default to no info files to handle 
 USE_MAKEINFO?=	no		# default to not using makeinfo
-.  if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
-.    include "../../mk/texinfo.mk"
-.  endif
+.if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
+. include "../../mk/texinfo.mk"
 .endif
 
 .if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
@@ -2437,13 +2437,6 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
-.if !defined(USE_NEW_TEXINFO)
-.  for f in ${INFO_FILES}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
-	${INSTALL_INFO} --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
-	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
-.  endfor
-.endif # !USE_NEW_TEXINFO
 	@# PLIST must be generated at this late point (instead of
 	@# depending on it somewhere earlier), as the
 	@# pre/do/post-install aren't run then yet:
