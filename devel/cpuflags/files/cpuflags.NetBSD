@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.23 2002/07/17 10:10:40 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.24 2002/07/19 09:31:05 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -22,7 +22,7 @@ case $hw_machine_arch in
     alpha)
 	# cpu0 at mainbus0: ID 0 (primary), 21164A-0 (unknown ...
 	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
-	    *\ 21164A\ *)	FLAGS="-mcpu=21164a" ;;
+	    *\ 21164A[-\ ]*)	FLAGS="-mcpu=21164a" ;;
 	    *\ 21066\ *)	FLAGS="-mcpu=21064" ;;
 	esac
 	;;
