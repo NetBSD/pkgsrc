@@ -1,0 +1,12 @@
+--- config/unix/Config/icont.make.orig	Fri Jun 19 04:53:49 1998
++++ config/unix/Config/icont.make	Fri Jun 19 04:54:09 1998
+@@ -27,3 +27,3 @@
+ 		cp icont ../../bin
+-		strip ../../bin/icont
++#		strip ../../bin/icont
+ 
+@@ -67,3 +67,3 @@
+ 			-o iconx.hdr $(LIBS)
+-		strip iconx.hdr
++#		strip iconx.hdr
+ ixhdr.o:	../h/path.h ../h/header.h

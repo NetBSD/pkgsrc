@@ -1,0 +1,5 @@
+--- /dev/null	Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/rtt.hdr	Wed Oct  1 17:32:25 1997
+@@ -0,0 +1,2 @@
++CFLAGS+= -DTokDotH="\"../rtt/ltoken.h\""
++SHELL=/bin/sh

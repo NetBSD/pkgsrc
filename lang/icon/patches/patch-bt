@@ -1,0 +1,7 @@
+--- config/unix/Config/iconc.make.orig	Fri Jun 19 04:53:34 1998
++++ config/unix/Config/iconc.make	Fri Jun 19 04:53:44 1998
+@@ -25,3 +25,3 @@
+ 		cp iconc ../../bin
+-		strip ../../bin/iconc
++#		strip ../../bin/iconc
+ 
