@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2002/09/13 06:54:59 jlam Exp $
+# $NetBSD: Makefile,v 1.87 2002/09/13 20:12:02 jlam Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -27,6 +27,7 @@ SUBDIR+=	ggv
 SUBDIR+=	ghostscript
 SUBDIR+=	ghostscript-gnu
 SUBDIR+=	ghostscript-gnu-nox11
+SUBDIR+=	ghostscript-gnu-x11
 SUBDIR+=	ghostscript-nox11
 SUBDIR+=	gimp-print
 SUBDIR+=	gimp-print-cups
