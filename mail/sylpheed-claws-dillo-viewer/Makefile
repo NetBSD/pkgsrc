@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/18 10:01:02 recht Exp $
 #
 
 PLUGIN_NAME=	dillo_viewer
 .include "../../mail/sylpheed-claws/plugins.mk"
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 MAINTAINER=	cube@NetBSD.org
 COMMENT=	Plugin to allow Sylpheed-claws to render HTML attachments
