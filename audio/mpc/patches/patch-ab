@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/05/02 07:24:52 mrg Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/29 08:26:38 simonb Exp $
 
-diff -ru src/command.h mpc-0.10.3.orig/src/command.h
---- src/command.h	2004-03-20 10:40:02.000000000 +1100
-+++ src/command.h	2004-05-02 16:42:18.000000000 +1000
-@@ -26,6 +26,7 @@
+--- src/command.h.orig	2004-05-31 23:52:41.000000000 +1000
++++ src/command.h
+@@ -26,6 +26,7 @@ int cmd_play ( int argc, char ** argv, m
  int cmd_next ( int argc, char ** argv, mpd_Connection * conn );
  int cmd_prev ( int argc, char ** argv, mpd_Connection * conn );
  int cmd_pause ( int argc, char ** argv, mpd_Connection * conn );
