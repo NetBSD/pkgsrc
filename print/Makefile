@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.30 1999/11/29 02:19:32 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2000/01/14 15:21:22 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
     SUBDIR += LPRng
     SUBDIR += a2ps
     SUBDIR += acroread
+    SUBDIR += acroread3
 #    SUBDIR += afm
 #    SUBDIR += apsfilter
 #    SUBDIR += asprint
