@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/12/05 18:32:05 drochner Exp $
-
+@comment $NetBSD: PLIST,v 1.3 2000/12/26 13:00:15 skrll Exp $
 qt2/bin/moc
 qt2/include/jri.h
 qt2/include/jritypes.h
@@ -43,7 +42,6 @@ qt2/include/qconfig-dist.h
 qt2/include/qconfig-large.h
 qt2/include/qconfig-medium.h
 qt2/include/qconfig-minimal.h
-qt2/include/qconfig-qpe.h
 qt2/include/qconfig-small.h
 qt2/include/qconfig.h
 qt2/include/qconnect.h
@@ -265,6 +263,7 @@ qt2/include/qvariant.h
 qt2/include/qvbox.h
 qt2/include/qvbuttongroup.h
 qt2/include/qvector.h
+qt2/include/qvfbhdr.h
 qt2/include/qvgroupbox.h
 qt2/include/qwhatsthis.h
 qt2/include/qwidcoll.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/12/05 18:32:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/12/26 13:00:14 skrll Exp $
 
 qt2/doc/README
 qt2/doc/README.QT
@@ -305,7 +305,6 @@ qt2/doc/man/man3/QValueStack.3
 qt2/doc/man/man3/QVariant.3
 qt2/doc/man/man3/QVector.3
 qt2/doc/man/man3/QWMatrix.3
-qt2/doc/man/man3/QWSDecoration.3
 qt2/doc/man/man3/QWaitCondition.3
 qt2/doc/man/man3/QWhatsThis.3
 qt2/doc/man/man3/QWheelEvent.3
@@ -645,7 +644,6 @@ qt2/doc/man/man3/qwindowsstyle.3
 qt2/doc/man/man3/qwizard.3
 qt2/doc/man/man3/qwmatrix.3
 qt2/doc/man/man3/qworkspace.3
-qt2/doc/man/man3/qwsdecoration.3
 qt2/doc/man/man3/qxmlattributes.3
 qt2/doc/man/man3/qxmlcontenthandler.3
 qt2/doc/man/man3/qxmldeclhandler.3
