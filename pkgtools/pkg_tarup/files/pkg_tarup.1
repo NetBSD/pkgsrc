@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_tarup.1,v 1.1 2004/07/14 16:08:48 erh Exp $
+.\" $NetBSD: pkg_tarup.1,v 1.2 2004/07/14 16:51:05 wiz Exp $
 .Dd July 14, 2004
 .Dt PKG_TARUP 1
 .Os
@@ -9,10 +9,10 @@
 .Nm
 .Op Fl a
 .Bk -words
-.Op Fl K Ar pkg_dbdir
+.Op Fl d Ar pkgrepository
 .Ek
 .Bk -words
-.Op Fl d Ar pkgrepository
+.Op Fl K Ar pkg_dbdir
 .Ek
 .Bk -words
 .Op Fl s Ar pkg_sufx
@@ -22,52 +22,57 @@
 .Sh DESCRIPTION
 The
 .Nm
-command is used to create a packed up file from an installed package.
-It can be used to tar up one or more packages, including dependant packges,
-if desired.
+command is used to create a binary package from an installed package.
+It can be used to tar up one or more packages, including dependent
+packges, if desired.
 .Pp
 The following options are available:
 .Bl -tag -width indent
 .It Fl a
-Create packages for all dependant packages too.
-.It Fl K Ar pkg_dbdir
-Set
-.Ar pkg_dbdir
-as the package database directory.
-If this option isn't specified, then the package database directory is
-taken from the value of the environment variable
-.Ev PKG_DBDIR
-if it's set, otherwise it defaults to
-.Pa @PKG_DBDIR@ .
+Create packages for all dependent packages too.
 .It Fl d Ar pkgrepository
 Set
 .Ar pkgrepository
 as the destination directory for the created package file(s).
-If this option isn't specified, then /tmp is used.
+If this option isn't specified, then
+.Pa /tmp
+is used.
+.It Fl K Ar pkg_dbdir
+Set
+.Ar pkg_dbdir
+as the package database directory.
+If this option isn't specified, then the package database directory
+is taken from the value of the environment variable
+.Ev PKG_DBDIR
+if it is set, otherwise it defaults to
+.Pa @PKG_DBDIR@ .
 .It Fl s Ar pkg_sufx
 Set
 .Ar pkg_sufx
 as the extension used for the created package file(s).
-If this option isn't specified, then .tgz is used.
+If this option isn't specified, then
+.Pa .tgz
+is used.
 .El
 .Sh EXIT STATUS
 The
 .Nm
-utility exits 0 on success.
+utility exits 0 on success and 1 on errors.
 .Sh ENVIRONMENT
 The following environment variables affect the execution of
 .Nm :
 .Bl -tag -width indent
 .It Ev PREFIX
 Package binaries installation prefix used to build the path.
-Defaults to 
+Defaults to
 .Pa @PREFIX@ .
-.It Ev ECHO, ID, SED, SU, GREP
-Actual commands to use.  These default to 
-.Pa @ECHO@ , 
-.Pa @ID@ , 
-.Pa @SED@ , 
-.Pa @SU@
+.It Ev ECHO , ID , SED , SU , GREP
+Actual commands to use.
+These default to
+.Pa @ECHO@ ,
+.Pa @ID@ ,
+.Pa @SED@ ,
+.Pa @SU@ ,
 and
 .Pa @GREP@ .
 .It Ev PKG_DBDIR
@@ -96,14 +101,17 @@ The default is
 .Pa /tmp .
 .El
 .Pp
-Any variable that affects 
-.Xr pkg_info 1 
-or 
+Any variable that affects
+.Xr pkg_info 1
+or
 .Xr pkg_create 1 .
 .Sh SEE ALSO
-.Xr pkg_info 1 ,
 .Xr pkg_create 1 ,
+.Xr pkg_info 1 ,
 .Xr packages 7
 .Sh BUGS
-Packages that contain files with spaces in their names probably won't work.
-There is no way to safely tell pkg_create about these files.
+Packages that contain files with spaces in their names probably
+won't work.
+There is no way to safely tell
+.Xr pkg_create 1
+about these files.
