@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/02 07:32:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/16 15:21:21 agc Exp $
 bin/gossip
 share/applications/gossip.desktop
 share/gconf/schemas/gossip.schemas
@@ -47,4 +47,5 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gossip.mo
 @dirrm share/gossip
