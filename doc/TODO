@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1894 2004/07/03 23:08:42 recht Exp $
+$NetBSD: TODO,v 1.1895 2004/07/04 14:27:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -9,10 +9,6 @@ Suggested new packages
 	figfonts
 	More fonts for figlet.
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
-
-	florist
-	Open-source implementation of POSIX Ada binding
-	wip/florist, PR#23628. Requires Ada compiler.
 
 	pfaedit -> fontforge rename
 	http://pfaedit.sourceforge.net/
@@ -213,7 +209,7 @@ Suggested package updates
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-3.0
-	o efax-gtk-2.2.8
+	o efax-gtk-2.2.8a
 	o elk-3.99.6
 	o elm-me-2.4pl117
 	o evolution-1.5.2
@@ -229,7 +225,6 @@ Suggested package updates
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o gauche-0.8
-	o gcc-3.4.0 [pkgsrc-wip]
 	o gcvs-1.0-1
 	o gdb-6.1 [pkgsrc-wip]
 	o generator-0.35
@@ -342,6 +337,7 @@ Suggested package updates
 	o phppgadmin-3.4 [pkg/26130]
 	o physfs-1.0.0
 	o plib-1.7.0
+	o postfix-2.1.4
 	o povray-3.6.0
 	o prc-tools-2.3
 	o psi-0.9.2
