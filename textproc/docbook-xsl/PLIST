@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/12/21 10:01:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/12/28 16:15:09 jmmv Exp $
 share/doc/docbook-xsl/ChangeLog
 share/doc/docbook-xsl/book.xsl
 share/doc/docbook-xsl/ch01s02.html
@@ -469,14 +469,14 @@ share/doc/docbook-xsl/html/htmlhelp.hhk.html
 share/doc/docbook-xsl/html/htmlhelp.hhp.html
 share/doc/docbook-xsl/html/htmlhelp.hhp.tail.html
 share/doc/docbook-xsl/html/htmlhelp.hhp.window.html
-share/doc/docbook-xsl/html/htmlhelp.hhp.windows'.html
+share/doc/docbook-xsl/html/htmlhelp.hhp.windows.apos.html
 share/doc/docbook-xsl/html/htmlhelp.map.file.html
 share/doc/docbook-xsl/html/htmlhelp.only.html
 share/doc/docbook-xsl/html/htmlhelp.remember.window.position.html
 share/doc/docbook-xsl/html/htmlhelp.show.advanced.search.html
 share/doc/docbook-xsl/html/htmlhelp.show.favorities.html
 share/doc/docbook-xsl/html/htmlhelp.show.menu.html
-share/doc/docbook-xsl/html/htmlhelp.show.toolbar.text'.html
+share/doc/docbook-xsl/html/htmlhelp.show.toolbar.text.apos.html
 share/doc/docbook-xsl/html/htmlhelp.title.html
 share/doc/docbook-xsl/html/htmlhelp.use.hhk.html
 share/doc/docbook-xsl/html/htmlhelp.window.geometry.html
