@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/11/20 16:00:35 uebayasi Exp $
+# $NetBSD: Makefile,v 1.23 2004/11/21 01:37:36 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 #
 
@@ -70,10 +70,10 @@ EGDIR=		${PREFIX}/share/examples/eb/
 # XXX Better than having unflexible/static patches.  IMO.
 # -    ZLIBLIBS="-L$z_libdir -lz"
 # +    ZLIBLIBS="-Wl,-R$z_libdir -L$z_libdir -lz"
-SUBST_CLASSES=		dynlink
-SUBST_STAGE.dynlink=	post-patch
-SUBST_FILES.dynlink=	configure configure.ac
-SUBST_SED.dynlink=	-e 's|^\(.*LIBS=.\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'
+SUBST_CLASSES=		runpath
+SUBST_STAGE.runpath=	post-patch
+SUBST_FILES.runpath=	configure configure.ac
+SUBST_SED.runpath=	-e 's|^\(.*LIBS=['\''"]\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'
 
 post-extract:
 	${RM} -rf ${WRKSRC}/zlib
