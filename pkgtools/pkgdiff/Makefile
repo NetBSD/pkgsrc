@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2000/08/26 04:40:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/17 23:16:44 hubertf Exp $
 #
 
-DISTNAME=		pkgdiff-0.95
+DISTNAME=		pkgdiff-0.96
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -29,13 +29,14 @@ NROFF=		nroff
 .endif
 
 do-build:
-.for FILE in mkpatches patchdiff
+.for FILE in mkpatches patchdiff 
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		< ${FILESDIR}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
 	${CP} ${FILESDIR}/pkgdiff ${WRKSRC}
-.for FILE in mkpatches patchdiff pkgdiff
+	${CP} ${FILESDIR}/pkgvi ${WRKSRC}
+.for FILE in mkpatches patchdiff pkgdiff pkgvi
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		< ${FILESDIR}/${FILE}.1			\
 		> ${WRKSRC}/${FILE}.1
@@ -43,7 +44,7 @@ do-build:
 .endfor
 
 do-install:
-.for FILE in mkpatches patchdiff pkgdiff
+.for FILE in mkpatches patchdiff pkgdiff pkgvi
 	${INSTALL_SCRIPT} ${WRKSRC}/${FILE} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${PREFIX}/man/cat1
 	${INSTALL_MAN} ${WRKSRC}/${FILE}.1 ${PREFIX}/man/man1
