@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1998/11/22 11:37:19 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/29 19:31:12 tron Exp $
 #
 
 DISTNAME=	icb.2.1.4
 PKGNAME=	tkicb-2.1.4
-CATEGORIES=	x11 net
+CATEGORIES=	net x11
 MASTER_SITES=	ftp://shoshin.armory.com/pub/
 EXTRACT_SUFX=	.tar.Z
 
