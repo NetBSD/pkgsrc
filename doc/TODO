@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.883 2003/09/19 17:36:07 wiz Exp $
+$NetBSD: TODO,v 1.884 2003/09/20 00:48:32 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -277,9 +277,7 @@ Suggested package updates
 	o xerces-j-2.5.0
 	o xfstt-1.6
 	o xisp-2.7 [pkg/19566]
-	o xmame-0.74.1
 	o xmcd-3.2.1
-	o xmess-0.74.1
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.2
 	o xosview-1.8.0 [pkg/20265]
