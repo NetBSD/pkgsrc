@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.1.2.2 2004/10/18 17:03:48 agc Exp $
+
+--- libtiff/tif_compress.c.orig	2002-04-09 19:51:29.000000000 +0200
++++ libtiff/tif_compress.c	2004-10-18 16:25:32.000000000 +0200
+@@ -210,9 +210,11 @@
+ 		cd->info->init = init;
+ 		cd->next = registeredCODECS;
+ 		registeredCODECS = cd;
+-	} else
++	} else {
+ 		TIFFError("TIFFRegisterCODEC",
+ 		    "No space to register compression scheme %s", name);
++		return NULL;
++	}
+ 	return (cd->info);
+ }
+ 

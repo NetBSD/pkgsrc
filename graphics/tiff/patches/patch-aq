@@ -1,0 +1,23 @@
+$NetBSD: patch-aq,v 1.1.2.2 2004/10/18 17:03:48 agc Exp $
+
+--- libtiff/tif_extension.c.orig	2003-12-22 09:22:15.000000000 +0100
++++ libtiff/tif_extension.c	2004-10-18 16:25:32.000000000 +0200
+@@ -32,6 +32,7 @@
+  */
+ 
+ #include "tiffiop.h"
++#include <assert.h>
+ 
+ int TIFFGetTagListCount( TIFF *tif )
+ 
+@@ -100,8 +101,10 @@
+     */
+ 
+     link = (TIFFClientInfoLink *) _TIFFmalloc(sizeof(TIFFClientInfoLink));
++    assert (link != NULL);
+     link->next = tif->tif_clientinfo;
+     link->name = (char *) _TIFFmalloc(strlen(name)+1);
++    assert (link->name != NULL);
+     strcpy(link->name, name);
+     link->data = data;
+ 
