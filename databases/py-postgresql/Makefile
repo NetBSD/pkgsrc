@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/12/17 23:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/12/22 18:42:54 jlam Exp $
 
 DISTNAME=	PyGreSQL-3.1
 PKGNAME=	py-postgresql-3.1
@@ -19,9 +19,7 @@ PYTHON=		${LOCALBASE}/bin/python
 PYTHON_LIBDIR=	${LOCALBASE}/lib/python2.0
 PLIST_SUBST+=	PYTHON_LIBDIR=lib/python2.0
 
-.include "../../mk/bsd.prefs.mk"
-
-PGUSER?=	pgsql
+DOCDIR=		${PREFIX}/share/doc/py-postgresql
 
 do-configure:
 	${SED}	-e "s,@LOCALBASE@,${LOCALBASE},g" \
@@ -34,14 +32,12 @@ post-build:
 	cd ${WRKSRC}; ${PYTHON} -O ${PYTHON_LIBDIR}/compileall.py .
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/*.py ${WRKSRC}/*.py[co] \
+	cd ${WRKSRC}; ${INSTALL_SCRIPT} pg*.py pg*.py[co] \
 		${PYTHON_LIBDIR}/site-packages
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/py-postgresql/tutorial
-	${INSTALL_DATA} ${WRKSRC}/README \
-		${PREFIX}/share/doc/py-postgresql
+	${INSTALL_DATA_DIR} ${DOCDIR}/tutorial
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	for file in ${WRKSRC}/tutorial/*.py; do \
-		${INSTALL_DATA} $${file} \
-			${PREFIX}/share/doc/py-postgresql/tutorial; \
+		${INSTALL_DATA} $${file} ${DOCDIR}/tutorial; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
