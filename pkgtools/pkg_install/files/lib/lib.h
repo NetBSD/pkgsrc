@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.5 2003/09/23 13:22:42 grant Exp $ */
+/* $NetBSD: lib.h,v 1.6 2003/10/29 23:00:28 jlam Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -226,8 +226,6 @@ typedef int (*matchfn) (const char *, void *);
 
 /* Prototypes */
 /* Misc */
-int     vsystem(const char *,...)
-	__attribute__((__format__(__printf__, 1, 2)));
 void    cleanup(int);
 char   *make_playpen(char *, size_t, size_t);
 char   *where_playpen(void);
@@ -250,7 +248,6 @@ int     pmatch(const char *, const char *);
 int     findmatchingname(const char *, const char *, matchfn, void *); /* doesn't really belong to "strings" */
 char   *findbestmatchingname(const char *, const char *);	/* neither */
 int     ispkgpattern(const char *);
-char   *strnncpy(char *, size_t, char *, size_t);
 void	strip_txz(char *, char *, const char *);
 
 /* callback functions for findmatchingname */
@@ -277,6 +274,7 @@ Boolean make_preserve_name(char *, size_t, char *, char *);
 void    write_file(char *, char *);
 void    copy_file(char *, char *, char *);
 void    move_file(char *, char *, char *);
+void    remove_files(const char *, const char *);
 int     delete_hierarchy(char *, Boolean, Boolean);
 int     unpack(const char *, const char *, const char *);
 void    format_cmd(char *, size_t, char *, char *, char *);
@@ -285,7 +283,7 @@ void    format_cmd(char *, size_t, char *, char *, char *);
 int	expandURL(char *, const char *);
 int	unpackURL(const char *, const char *);
 int	ftp_cmd(const char *, const char *);
-int	ftp_start(char *);
+int	ftp_start(const char *);
 void	ftp_stop(void);
 
 /* Packing list */

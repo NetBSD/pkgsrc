@@ -1,4 +1,4 @@
-PKG_ADD(1)              NetBSD General Commands Manual              PKG_ADD(1)
+PKG_ADD(1)                  NetBSD Reference Manual                 PKG_ADD(1)
 
 NNAAMMEE
      ppkkgg__aadddd - a utility for installing and upgrading software package distri-
@@ -7,7 +7,7 @@ NNAAMMEE
 SSYYNNOOPPSSIISS
      ppkkgg__aadddd [--ffIILLMMnnRRSSuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e]
              [--tt _t_e_m_p_l_a_t_e] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w]
-             [ftp://[_u_s_e_r[:_p_a_s_s_w_o_r_d_]@]_h_o_s_t[:_p_o_r_t]][/_p_a_t_h_/]pkg-name ...
+             [[ftp|http]://[_u_s_e_r[:_p_a_s_s_w_o_r_d_]@]_h_o_s_t[:_p_o_r_t]][/_p_a_t_h_/]pkg-name ...
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__aadddd command is used to extract and upgrade packages that have
@@ -15,7 +15,7 @@ DDEESSCCRRIIPPTTIIOONN
      prepared collections of pre-built binaries, documentation, configura-
      tions, installation instructions and/or other files.  ppkkgg__aadddd can recur-
      sively install other packages that the current package depends on or re-
-     quires from both local disk and via FTP.
+     quires from both local disk and via FTP or HTTP.
 
 WWAARRNNIINNGG
      _S_i_n_c_e _t_h_e ppkkgg__aadddd _c_o_m_m_a_n_d _m_a_y _e_x_e_c_u_t_e _s_c_r_i_p_t_s _o_r _p_r_o_g_r_a_m_s _c_o_n_t_a_i_n_e_d _w_i_t_h_-
@@ -146,14 +146,15 @@ OOPPTTIIOONNSS
      One or more _p_k_g_-_n_a_m_e arguments may be specified, each being either a file
      containing the package (these usually ending with the ``.tgz'' suffix) or
      a URL pointing at a file available on an ftp or web site.  Thus you may
-     extract files directly from their anonymous ftp or WWW locations (e.g.
+     extract files directly from their anonymous ftp or WWW locations (e.g.,
      ppkkgg__aadddd ftp://ftp.NetBSD.org/pub/NetBSD/pack-
-     ages/1.5/i386/shells/bash-2.04.tgz).  Note:  If you wish to use _p_a_s_s_i_v_e
-     _m_o_d_e ftp in such transfers, set the variable _F_T_P___P_A_S_S_I_V_E___M_O_D_E to some
-     value in your environment.  Otherwise, the more standard ACTIVE mode may
-     be used.  If ppkkgg__aadddd consistently fails to fetch a package from a site
-     known to work, it may be because you have a firewall that demands the us-
-     age of _p_a_s_s_i_v_e _m_o_d_e ftp.
+     ages/1.5/i386/shells/bash-2.04.tgz or ppkkgg__aadddd http://www.exam-
+     ple.org/packages/screen-4.0.tbz).  Note:  For ftp transfers, if you wish
+     to use _p_a_s_s_i_v_e _m_o_d_e  ftp in such transfers, set the variable _F_T_P___P_A_S_-
+     _S_I_V_E___M_O_D_E  to some value in your environment.  Otherwise, the more stan-
+     dard ACTIVE mode may be used.  If ppkkgg__aadddd consistently fails to fetch a
+     package from a site known to work, it may be because you have a firewall
+     that demands the usage of _p_a_s_s_i_v_e _m_o_d_e  ftp.
 
 TTEECCHHNNIICCAALL DDEETTAAIILLSS
      ppkkgg__aadddd extracts each package's "packing list" into a special staging di-
@@ -320,6 +321,8 @@ AAUUTTHHOORRSS
              NetBSD refinements.
      Hubert Feyrer
              NetBSD wildcard dependency processing, pkgdb, upgrading, etc.
+     Thomas Klausner
+             HTTP support.
 
 BBUUGGSS
      Hard links between files in a distribution are only preserved if either
@@ -334,4 +337,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 1.6                     September 8, 2003                    NetBSD 1.6
+NetBSD 1.6.1                    October 3, 2003                              6

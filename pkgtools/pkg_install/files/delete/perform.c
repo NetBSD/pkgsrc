@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.9 2003/09/23 13:22:39 grant Exp $	*/
+/*	$NetBSD: perform.c,v 1.10 2003/10/29 23:00:28 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.9 2003/09/23 13:22:39 grant Exp $");
+__RCSID("$NetBSD: perform.c,v 1.10 2003/10/29 23:00:28 jlam Exp $");
 #endif
 #endif
 
@@ -628,7 +628,7 @@ pkg_do(char *pkg)
 		TAILQ_INIT(&trypkgs);
 		snprintf(try, FILENAME_MAX, "%s-[0-9]*", pkg);
 		if (findmatchingname(_pkgdb_getPKGDB_DIR(), try,
-			add_to_list_fn, &trypkgs) == NULL) {
+			add_to_list_fn, &trypkgs) == 0) {
 			warnx("package '%s' not installed", pkg);
 			return 1;
 		}
@@ -836,7 +836,7 @@ pkg_do(char *pkg)
 	if (!Fake) {
 		/* Finally nuke the +-files and the pkgdb-dir (/var/db/pkg/foo) */
 		if (is_depoted_pkg) {
-			(void) vsystem("%s %s/+*", REMOVE_CMD, LogDir);
+			(void) remove_files(LogDir, "+*");
 			if (isemptydir(LogDir))
 				(void) fexec(RMDIR_CMD, LogDir, NULL);
 			else

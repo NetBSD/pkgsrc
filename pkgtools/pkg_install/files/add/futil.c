@@ -1,4 +1,4 @@
-/*	$NetBSD: futil.c,v 1.5 2003/09/23 13:22:38 grant Exp $	*/
+/*	$NetBSD: futil.c,v 1.6 2003/10/29 23:00:28 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: futil.c,v 1.7 1997/10/08 07:45:39 charnier Exp";
 #else
-__RCSID("$NetBSD: futil.c,v 1.5 2003/09/23 13:22:38 grant Exp $");
+__RCSID("$NetBSD: futil.c,v 1.6 2003/10/29 23:00:28 jlam Exp $");
 #endif
 #endif
 
@@ -95,8 +95,8 @@ apply_perms(char *dir, char *arg)
 	if (Owner != NULL && Group != NULL) {
 		if (snprintf(owner_group, sizeof(owner_group),
 			     "%s:%s", Owner, Group) > sizeof(owner_group)) {
-			warnx("'%s:%s' is too long (%d max)",
-			      Owner, Group, sizeof(owner_group));
+			warnx("'%s:%s' is too long (%lu max)",
+			      Owner, Group, (unsigned long) sizeof(owner_group));
 			return;
 		}
 		if (fcexec(cd_to, CHOWN_CMD, "-R", owner_group, arg))
