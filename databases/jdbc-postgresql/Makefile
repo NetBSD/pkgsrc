@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/05/09 18:30:12 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/07 14:58:57 jwise Exp $
 #
 
-DISTNAME=		postgresql-6.5.3
+DISTNAME=		postgresql-7.0
 PKGNAME=		jdbc-${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/interfaces/jdbc
 CATEGORIES=		databases
@@ -22,9 +22,8 @@ MD5_FILE=		${PKGSRCDIR}/databases/postgresql/files/md5
 USE_GMAKE=
 USE_JAVA=
 NO_CONFIGURE=
-NO_PATCH=
 ALL_TARGET=		jdbc1 doc
-MAKE_ENV+=		CLASSPATH=${CLASSPATH}:.
+CLASSPATH:=		${CLASSPATH}:.
 
 HELP_FILES=		README README_6.3 Implementation CHANGELOG
 

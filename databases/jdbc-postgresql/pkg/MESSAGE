@@ -1,0 +1,7 @@
+========================================================================
+
+  Please note that in this release of the JDBC drivers for PostgreSQL
+  the class names have changed from postgresql.* to org.postgresql.*
+  and update your code accordingly.
+
+========================================================================
