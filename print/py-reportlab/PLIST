@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/07 18:02:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/26 15:00:58 drochner Exp $
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
+${PYSITELIB}/reportlab/MANIFEST.in
 ${PYSITELIB}/reportlab/README
 ${PYSITELIB}/reportlab/__init__.py
 ${PYSITELIB}/reportlab/changes
@@ -68,12 +69,14 @@ ${PYSITELIB}/reportlab/graphics/charts/areas.py
 ${PYSITELIB}/reportlab/graphics/charts/axes.py
 ${PYSITELIB}/reportlab/graphics/charts/barcharts.py
 ${PYSITELIB}/reportlab/graphics/charts/dotbox.py
+${PYSITELIB}/reportlab/graphics/charts/doughnut.py
 ${PYSITELIB}/reportlab/graphics/charts/legends.py
 ${PYSITELIB}/reportlab/graphics/charts/linecharts.py
 ${PYSITELIB}/reportlab/graphics/charts/lineplots.py
 ${PYSITELIB}/reportlab/graphics/charts/markers.py
 ${PYSITELIB}/reportlab/graphics/charts/piecharts.py
 ${PYSITELIB}/reportlab/graphics/charts/slidebox.py
+${PYSITELIB}/reportlab/graphics/charts/spider.py
 ${PYSITELIB}/reportlab/graphics/charts/textlabels.py
 ${PYSITELIB}/reportlab/graphics/charts/utils.py
 ${PYSITELIB}/reportlab/graphics/renderPDF.py
@@ -81,11 +84,29 @@ ${PYSITELIB}/reportlab/graphics/renderPM.py
 ${PYSITELIB}/reportlab/graphics/renderPS.py
 ${PYSITELIB}/reportlab/graphics/renderSVG.py
 ${PYSITELIB}/reportlab/graphics/renderbase.py
+${PYSITELIB}/reportlab/graphics/samples/__init__.py
+${PYSITELIB}/reportlab/graphics/samples/bubble.py
+${PYSITELIB}/reportlab/graphics/samples/clustered_bar.py
+${PYSITELIB}/reportlab/graphics/samples/clustered_column.py
+${PYSITELIB}/reportlab/graphics/samples/excelcolors.py
+${PYSITELIB}/reportlab/graphics/samples/exploded_pie.py
+${PYSITELIB}/reportlab/graphics/samples/filled_radar.py
+${PYSITELIB}/reportlab/graphics/samples/line_chart.py
+${PYSITELIB}/reportlab/graphics/samples/linechart_with_markers.py
+${PYSITELIB}/reportlab/graphics/samples/radar.py
+${PYSITELIB}/reportlab/graphics/samples/runall.py
+${PYSITELIB}/reportlab/graphics/samples/scatter.py
+${PYSITELIB}/reportlab/graphics/samples/scatter_lines.py
+${PYSITELIB}/reportlab/graphics/samples/scatter_lines_markers.py
+${PYSITELIB}/reportlab/graphics/samples/simple_pie.py
+${PYSITELIB}/reportlab/graphics/samples/stacked_bar.py
+${PYSITELIB}/reportlab/graphics/samples/stacked_column.py
 ${PYSITELIB}/reportlab/graphics/shapes.py
 ${PYSITELIB}/reportlab/graphics/testdrawings.py
 ${PYSITELIB}/reportlab/graphics/testshapes.py
 ${PYSITELIB}/reportlab/graphics/widgetbase.py
 ${PYSITELIB}/reportlab/graphics/widgets/__init__.py
+${PYSITELIB}/reportlab/graphics/widgets/eventcal.py
 ${PYSITELIB}/reportlab/graphics/widgets/flags.py
 ${PYSITELIB}/reportlab/graphics/widgets/grids.py
 ${PYSITELIB}/reportlab/graphics/widgets/markers.py
@@ -119,6 +140,7 @@ ${PYSITELIB}/reportlab/lib/pyHnjmodule.c
 ${PYSITELIB}/reportlab/lib/randomtext.py
 ${PYSITELIB}/reportlab/lib/rparsexml.py
 ${PYSITELIB}/reportlab/lib/sequencer.py
+${PYSITELIB}/reportlab/lib/set_ops.py
 ${PYSITELIB}/reportlab/lib/setup.py
 ${PYSITELIB}/reportlab/lib/setup.py.orig
 ${PYSITELIB}/reportlab/lib/sgmlop.c
@@ -161,7 +183,6 @@ ${PYSITELIB}/reportlab/platypus/tables.py
 ${PYSITELIB}/reportlab/platypus/xpreformatted.py
 ${PYSITELIB}/reportlab/rl_config.py
 ${PYSITELIB}/reportlab/setup.py
-${PYSITELIB}/reportlab/setup_reportlab.py
 ${PYSITELIB}/reportlab/test/00readme.txt
 ${PYSITELIB}/reportlab/test/__init__.py
 ${PYSITELIB}/reportlab/test/pythonpowered.gif
@@ -176,6 +197,7 @@ ${PYSITELIB}/reportlab/test/test_graphics_speed.py
 ${PYSITELIB}/reportlab/test/test_hello.py
 ${PYSITELIB}/reportlab/test/test_lib_colors.py
 ${PYSITELIB}/reportlab/test/test_lib_sequencer.py
+${PYSITELIB}/reportlab/test/test_lib_utils.py
 ${PYSITELIB}/reportlab/test/test_lib_validators.py
 ${PYSITELIB}/reportlab/test/test_multibyte_chs.py
 ${PYSITELIB}/reportlab/test/test_multibyte_cht.py
@@ -189,10 +211,12 @@ ${PYSITELIB}/reportlab/test/test_pdfbase_pdfutils.py
 ${PYSITELIB}/reportlab/test/test_pdfbase_ttfonts.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_callback.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_general.py
+${PYSITELIB}/reportlab/test/test_pdfgen_links.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_pagemodes.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_pycanvas.py
 ${PYSITELIB}/reportlab/test/test_platypus_breaking.py
 ${PYSITELIB}/reportlab/test/test_platypus_general.py
+${PYSITELIB}/reportlab/test/test_platypus_indents.py
 ${PYSITELIB}/reportlab/test/test_platypus_paragraphs.py
 ${PYSITELIB}/reportlab/test/test_platypus_tables.py
 ${PYSITELIB}/reportlab/test/test_platypus_toc.py
@@ -200,6 +224,7 @@ ${PYSITELIB}/reportlab/test/test_platypus_xref.py
 ${PYSITELIB}/reportlab/test/test_pyfiles.py
 ${PYSITELIB}/reportlab/test/test_renderSVG.py
 ${PYSITELIB}/reportlab/test/test_source_chars.py
+${PYSITELIB}/reportlab/test/test_table_layout.py
 ${PYSITELIB}/reportlab/test/test_tools_pythonpoint.py
 ${PYSITELIB}/reportlab/test/test_widgetbase_tpc.py
 ${PYSITELIB}/reportlab/test/test_widgets_grids.py
@@ -233,6 +258,7 @@ ${PYSITELIB}/reportlab/tools/pythonpoint/customshapes.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/LeERC___.AFM
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/LeERC___.PFB
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/examples.py
+${PYSITELIB}/reportlab/tools/pythonpoint/demos/htu.xml
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/leftlogo.a85
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/leftlogo.gif
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/lj8100.jpg
@@ -248,6 +274,7 @@ ${PYSITELIB}/reportlab/tools/pythonpoint/pythonpoint.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/stdparser.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/styles/__init__.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/styles/horrible.py
+${PYSITELIB}/reportlab/tools/pythonpoint/styles/htu.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/styles/modern.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/styles/projection.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/styles/standard.py
@@ -264,6 +291,7 @@ ${PYSITELIB}/sgmlop.so
 @dirrm ${PYSITELIB}/reportlab/pdfbase
 @dirrm ${PYSITELIB}/reportlab/lib
 @dirrm ${PYSITELIB}/reportlab/graphics/widgets
+@dirrm ${PYSITELIB}/reportlab/graphics/samples
 @dirrm ${PYSITELIB}/reportlab/graphics/charts
 @dirrm ${PYSITELIB}/reportlab/graphics
 @dirrm ${PYSITELIB}/reportlab/fonts
