@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2001/10/25 19:29:13 agc Exp $
+$NetBSD: patch-ab,v 1.7 2003/04/05 20:29:41 wiz Exp $
 
---- src/Makefile.in.orig	Sun Oct  7 23:48:16 2001
-+++ src/Makefile.in	Tue Oct  9 09:16:12 2001
+--- src/Makefile.in.orig	Sun Oct 20 08:55:30 2002
++++ src/Makefile.in
 @@ -13,8 +13,7 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.6 2001/10/25 19:29:13 agc Exp $
  BIN_DIR = @bindir@
  MAN_DIR = @mandir@/man1
  INSTALL		= @INSTALL@
-@@ -154,7 +153,7 @@
+@@ -158,7 +157,7 @@
  rgrep: $(OBJDIR)/rgrep
  	@echo rgrep created in $(OBJDIR)
  $(OBJDIR)/rgrep: $(OBJDIR)/vfile.o $(OBJDIR)/rgrep.o
@@ -21,10 +21,10 @@ $NetBSD: patch-ab,v 1.6 2001/10/25 19:29:13 agc Exp $
  #
  getmail: $(OBJDIR)/getmail
  	@echo getmail created in $(OBJDIR)
-@@ -186,7 +185,6 @@
- 
+@@ -191,7 +190,6 @@
  install: all install_directories
  	$(INSTALL) $(OBJDIR)/jed $(DEST_BIN_DIR)/
+ 	-cd $(DEST_BIN_DIR); ln -sf jed jed-script
 -	-$(INSTALL) $(OBJDIR)/xjed $(DEST_BIN_DIR)/
  	-$(INSTALL) $(OBJDIR)/rgrep $(DEST_BIN_DIR)/
  	-$(INSTALL) $(OBJDIR)/getmail $(DEST_JED_ROOT)/bin/

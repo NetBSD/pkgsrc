@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2002/03/14 17:43:41 wiz Exp $
+$NetBSD: distinfo,v 1.7 2003/04/05 20:29:41 wiz Exp $
 
-SHA1 (jed-B0.99-15.tar.gz) = dfcb1b5ea0330666e919a83a3ebf01b4444d2e07
-Size (jed-B0.99-15.tar.gz) = 833835 bytes
-SHA1 (patch-ab) = 41bd984d5fdc26b0c7652981df9ed187b9c9ae27
+SHA1 (jed-0.99-16.tar.bz2) = 34649571fb5caa61314553c10db2e15ebf248d82
+Size (jed-0.99-16.tar.bz2) = 667623 bytes
+SHA1 (patch-ab) = 38c8708fbfff84afa67aeb8691bdbd021156ab82
