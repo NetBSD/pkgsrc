@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.10 1997/12/01 15:11:11 mrg Exp $
+#	$NetBSD: Makefile,v 1.11 1997/12/05 00:16:59 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -7,38 +7,38 @@
     SUBDIR += cal
     SUBDIR += chord
     SUBDIR += colorls
-#    SUBDIR += ctk		# broken w/ tcl/tk V8.0 - HF
-#    SUBDIR += dejagnu		# needs expect - HF
+#   SUBDIR += ctk		# broken w/ tcl/tk V8.0 - HF
+#   SUBDIR += dejagnu		# needs expect - HF
     SUBDIR += dotfile
-#    SUBDIR += ecc		# broken - HF
-#    SUBDIR += estic		# left for someone w/ an Istec - HF
+#   SUBDIR += ecc		# broken - HF
+#   SUBDIR += estic		# left for someone w/ an Istec - HF
     SUBDIR += fd
     SUBDIR += fep
     SUBDIR += figlet
     SUBDIR += git
     SUBDIR += gnuls
-#    SUBDIR += ical		# broken w/ tcl/tk V8.0 - HF
+#   SUBDIR += ical		# broken w/ tcl/tk V8.0 - HF
     SUBDIR += jive
     SUBDIR += kp
-    SUBDIR += less
+#   SUBDIR += less
     SUBDIR += libutf
     SUBDIR += lile
     SUBDIR += logsurfer
     SUBDIR += mc
-#    SUBDIR += mmv
+#   SUBDIR += mmv
     SUBDIR += most
-    SUBDIR += mshell		# displays nothing, needs debugging - HF
-    SUBDIR += nwrite
+#   SUBDIR += mshell		# displays nothing, needs debugging - HF
+#   SUBDIR += nwrite
     SUBDIR += p5-Array-PrintCols
     SUBDIR += p5-Business-CreditCard
     SUBDIR += p5-Locale-Codes
     SUBDIR += p5-Search
-#    SUBDIR += plan		# requires Motif/Lesstif - HF
+#   SUBDIR += plan		# requires Motif/Lesstif - HF
     SUBDIR += rpm
     SUBDIR += screen
     SUBDIR += splitvt
     SUBDIR += team
-    SUBDIR += viz
+#   SUBDIR += viz
 # These programs shouldbe in ../x11
 #    SUBDIR += xcalendar
 #    SUBDIR += xmaddressbook	# needs Motif/Lesstif - HF
