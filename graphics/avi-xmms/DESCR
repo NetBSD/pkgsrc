@@ -1,0 +1,4 @@
+avi-xmms is a plugin for XMMS to play files supported by the avifile library.
+Recognized formats are AVI (including DivX) and ASF. It is able to resize
+movies with aspected ratio, fullscreen and lots of other useful features,
+like seekbar in fullscreen mode.
