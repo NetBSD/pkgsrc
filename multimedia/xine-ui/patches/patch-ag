@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/01/26 13:04:47 jmmv Exp $
+$NetBSD: patch-ag,v 1.2 2005/02/22 00:44:20 wiz Exp $
 
---- src/xitk/common.h.orig	2004-01-26 01:39:55.000000000 +0100
-+++ src/xitk/common.h	2004-01-26 01:43:43.000000000 +0100
-@@ -76,6 +76,14 @@
+--- src/xitk/common.h.orig	2004-07-02 23:41:02.000000000 +0200
++++ src/xitk/common.h
+@@ -80,6 +80,14 @@
  #include <lirc/lirc_client.h>
  #endif
  
