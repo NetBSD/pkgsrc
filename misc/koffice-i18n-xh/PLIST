@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/06 22:03:44 markd Exp $
+share/doc/kde/HTML/xh/kugar/datadtd.docbook
+share/doc/kde/HTML/xh/kugar/dataref.docbook
+share/doc/kde/HTML/xh/kugar/template.docbook
+share/doc/kde/HTML/xh/kugar/templatedtd.docbook
+share/doc/kde/HTML/xh/kword/formulas.docbook
+share/doc/kde/HTML/xh/kword/graphics.docbook
+share/doc/kde/HTML/xh/kword/kparts.docbook
+share/doc/kde/HTML/xh/kword/opt.docbook
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/csvfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/desktop_koffice.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/example.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/karbon.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kchart.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kexi.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kfile_koffice.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kformula.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kformulalatexfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kformulapngfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kivio.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/koconverter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kocryptfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/koffice.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/koshell.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kounavail.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kplato.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kpresenter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kpresenterkwordfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/krita.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kscan_plugin.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kspread.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kspreadcalc_calc.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kspreadqprofilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kthesaurus.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kugar.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kword.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kwordasciifilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kwordhtmlexportfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kwordhtmlimportfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kwordlatexfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kwordmswritefilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/olefilterswinword97filter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/thesaurus_tool.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/xsltexportfilter.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/xsltimportfilter.mo
+@dirrm share/doc/kde/HTML/xh/kword
+@dirrm share/doc/kde/HTML/xh/kugar
+@comment in kde: @dirrm share/doc/kde/HTML/xh
+@comment in kde: @dirrm share/doc/kde/HTML
