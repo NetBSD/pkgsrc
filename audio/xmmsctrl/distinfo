@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/09 04:42:46 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/06/12 01:05:37 grant Exp $
 
 SHA1 (xmmsctrl-1.6.tar.gz) = 0cfb33cf841eba3bbc0230f66f22d1fa3347a799
 Size (xmmsctrl-1.6.tar.gz) = 7843 bytes
-SHA1 (patch-aa) = 0284292749623dbd435ee6e4b64a0932a5f78bf8
+SHA1 (patch-aa) = 7ef892ee09bee6d3e80863f5599973021b076ff0
 SHA1 (patch-ab) = 1e208da231e3b547a9dccf8cfcf406b7143732c8
