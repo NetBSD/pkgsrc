@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2004/03/07 11:18:33 markd Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/10 10:48:33 markd Exp $
 
---- mimedefang.pl.in.orig	2004-03-06 04:35:35.000000000 +1300
+--- mimedefang.pl.in.orig	2004-11-10 01:09:25.000000000 +1300
 +++ mimedefang.pl.in
-@@ -89,25 +89,25 @@ $VirusScannerRoutinesInitialized = 0;
- 
+@@ -100,26 +100,26 @@ $VirusScannerRoutinesInitialized = 0;
  $SALocalTestsOnly = 1;
+ $DoStatusTags = 0;
  
 -$Features{'Virus:AVP'}      = ('@AVP@' ne '/bin/false' ? '@AVP@' : 0);
 -$Features{'Virus:AVP5'}      = ('@AVP5@' ne '/bin/false' ? '@AVP5@' : 0);
@@ -36,10 +36,12 @@ $NetBSD: patch-ac,v 1.1 2004/03/07 11:18:33 markd Exp $
 -$Features{'Virus:SOPHOS'}   = ('@SOPHOS@' ne '/bin/false' ? '@SOPHOS@' : 0);
 -$Features{'Virus:TREND'}    = ('@TREND@' ne '/bin/false' ? '@TREND@' : 0);
 -$Features{'Virus:TROPHIE'}  = ('@TROPHIE@' ne '/bin/false' ? '@TROPHIE@' : 0);
+-$Features{'Virus:CSAV'}     = ('@CSAV@' ne '/bin/false' ? '@CSAV@' : 0);
 +$Features{'Virus:SOPHIE'}   = ((('@SOPHIE@' ne '/bin/false') and (-x '@SOPHIE@')) ? '@SOPHIE@' : 0);
 +$Features{'Virus:SOPHOS'}   = ((('@SOPHOS@' ne '/bin/false') and (-x '@SOPHOS@')) ? '@SOPHOS@' : 0);
 +$Features{'Virus:TREND'}    = ((('@TREND@' ne '/bin/false') and (-x '@TREND@')) ? '@TREND@' : 0);
 +$Features{'Virus:TROPHIE'}  = ((('@TROPHIE@' ne '/bin/false') and (-x '@TROPHIE@')) ? '@TROPHIE@' : 0);
++$Features{'Virus:CSAV'}     = ((('@CSAV@' ne '/bin/false') and (-x '@CSAV@')) ? '@CSAV@' : 0);
  
  $Features{'Path:SENDMAIL'}  = '@SENDMAILPROG@';
  $Features{'Path:QUARANTINEDIR'} = '@QDIR@';
