@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2803 2003/07/16 12:07:50 abs Exp $
+$NetBSD: CHANGES,v 1.2804 2003/07/16 13:54:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2834,3 +2834,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postgresql-server to 7.3.3nb1 [abs 2003-07-16]
 	Updated dc_gui2 to 0.75 [wiz 2003-07-16]
 	Updated mserv to 0.33nb7 [abs 2003-07-16]
+	Updated bidwatcher to 1.3.9nb1 [tron 2003-07-16]
