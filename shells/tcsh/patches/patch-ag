@@ -42,3 +42,14 @@
   		    (void) catclose(catd);
   		    nlsinit();
   # endif /* NLS_CATALOGS && LC_MESSAGES */
+--- Makefile.in	1997/10/24 15:41:23	1.1
++++ Makefile.in	1997/10/24 15:41:34
+@@ -261,7 +261,7 @@
+ PARALLEL=12				# Make the multi-max run fast.
+ #P=&					# Use Sequent's parallel make
+ P=
+-DESTDIR=/usr/local
++DESTDIR=@prefix@
+ MANSECT=1
+ DESTBIN=${DESTDIR}/bin
+ DESTMAN=${DESTDIR}/man/man${MANSECT}
