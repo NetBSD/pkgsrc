@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/25 15:52:02 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/03/08 10:53:57 agc Exp $
 # $FreeBSD Id: Makefile,v 1.2 1997/07/21 19:28:46 max Exp
 #
 
@@ -21,7 +21,7 @@ post-extract:
 	@${LN} -s ${FILESDIR}/Makefile.unrumba ${WRKDIR}/unrumba/Makefile
 
 post-build:
-	cd ${WRKDIR}/unrumba && make
+	cd ${WRKDIR}/unrumba && ${MAKE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rumba ${PREFIX}/sbin

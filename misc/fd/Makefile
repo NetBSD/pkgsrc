@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/08/31 20:58:04 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/03/08 10:53:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/01/06 06:38:33 max Exp
 #
 
@@ -21,7 +21,7 @@ ALL_TARGET=	goal
 INSTALL_TARGET=	install
 
 do-configure:
-	cd ${WRKSRC} ; make config
+	cd ${WRKSRC} ; ${MAKE} config
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fd ${PREFIX}/bin

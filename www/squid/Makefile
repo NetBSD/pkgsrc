@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/02/20 22:48:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1999/03/08 10:53:57 agc Exp $
 #
 
 DISTNAME=	squid-2.0.PATCH2
@@ -52,7 +52,7 @@ pre-install:
 	) > ${WRKDIR}/PLIST.share
 
 post-install:
-	cd ${WRKSRC}/src; make install-pinger
+	cd ${WRKSRC}/src; ${MAKE} install-pinger
 	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid.sh
 	@${SETENV} ${MAKE_ENV} ${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/11/16 15:27:28 agc Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/08 10:53:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/27 23:01:53 cwt Exp
 #
 
@@ -22,7 +22,7 @@ post-extract:
 	@${RM} -f ${WRKSRC}/../doc/http.n
 
 pre-install:
-	@cd ${WRKSRC};make sinstall
+	@cd ${WRKSRC};${MAKE} sinstall
 	@${CP} ${WRKSRC}/../tnm/ntping/ntping.8 ${WRKSRC}/../doc
 
 .include "../../mk/bsd.pkg.mk"
