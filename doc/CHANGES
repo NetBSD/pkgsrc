@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2332 2003/05/27 08:19:17 wiz Exp $
+$NetBSD: CHANGES,v 1.2333 2003/05/27 08:41:59 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2168,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sablotron to 0.96nb1 [grant 2003-05-27]
 	Updated scummvm to 0.4.1 [wiz 2003-05-27]
 	Updated docbook-xsl to 1.61.2 [wiz 2003-05-27]
+	Updated gcc to 2.95.3nb2 [grant 2003-05-27]
