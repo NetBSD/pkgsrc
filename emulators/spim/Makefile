@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/05 17:53:12 grant Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
@@ -26,15 +26,16 @@ pre-configure:
 	@${RM} -f ${WRKSRC}/y.tab.*
 
 pre-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/spim && ${CHMOD} a+rx ${PREFIX}/share/spim
+	${INSTALL_DATA_DIR} ${PREFIX}/share/spim
+	${CHMOD} a+rx ${PREFIX}/share/spim
 
 post-install:
 	@${ECHO} "Installing spim/xspim documentation"
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/spim  \
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/spim \
 		&& ${CHMOD} a+rx ${PREFIX}/share/doc/spim
-	${INSTALL_DATA} ${WRKSRC}/Documentation/spim.ps  \
+	${INSTALL_DATA} ${WRKSRC}/Documentation/spim.ps \
 		${PREFIX}/share/doc/spim
-	${INSTALL_DATA} ${WRKSRC}/Documentation/cycle.ps  \
+	${INSTALL_DATA} ${WRKSRC}/Documentation/cycle.ps \
 		${PREFIX}/share/doc/spim
 	${GZIP_CMD} ${PREFIX}/share/doc/spim/*.ps
 
