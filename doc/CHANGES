@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4138 2003/12/16 00:14:49 dillo Exp $
+$NetBSD: CHANGES,v 1.4139 2003/12/16 02:25:45 ben Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5186,3 +5186,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated jdb to 1.21 [bad 2003-12-15]
 	Updated sylpheed to 0.9.8a [chris 2003-12-15]
 	Updated tin to 1.6.1 [dillo 2003-12-16]
+	Updated gqview-devel to 1.3.6 [ben 2003-12-16]
