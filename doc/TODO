@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2526 2004/11/27 15:08:19 he Exp $
+$NetBSD: TODO,v 1.2527 2004/11/27 15:13:10 he Exp $
 
 Suggested new packages
 ======================
@@ -827,7 +827,6 @@ Suggested package updates
 	o p5-Apache-Gallery-0.9.1
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-1.70_01
-	o p5-Apache-Test-1.16
 	o p5-AppConfig-1.56
 	o p5-Archive-Tar-1.22
 	o p5-Archive-Zip-1.14
