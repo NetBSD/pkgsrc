@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/10/03 00:13:27 tv Exp $
+# $NetBSD: Makefile,v 1.73 2004/10/04 11:19:40 grant Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 
 MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/doc/API/glib/index.html
-COMMENT=		Some useful routines for C programming
+COMMENT=		Some useful routines for C programming (glib1)
 
 CONFLICTS=		gtk+-1.0.*
 
