@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.597 2002/11/25 14:47:15 taca Exp $
+$NetBSD: CHANGES,v 1.598 2002/11/25 16:44:16 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3714,3 +3714,4 @@ Changes to the packages collection and infrastructure in 2002:
 	vcdimager: Downgraded to 0.6.2 [wiz 2002-11-25]
 	Added vcdimager-devel-0.7.12 [wiz 2002-11-25]
 	Updated squid to 2.5.2nb1 [taca 2002-11-25]
+	Updated gtk-gnutella to 0.91.1 [jschauma 2002-11-25]
