@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
+$NetBSD: patch-ab,v 1.47.2.1 2004/12/23 03:35:47 snj Exp $
 
 --- configure.orig	2004-09-19 22:22:04.000000000 +1000
 +++ configure
@@ -16,6 +16,22 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      elif (test -f /bin/ksh || test -f /bin/ksh$ac_exeext) &&
  	 test "X$CONFIG_SHELL" != X/bin/ksh; then
        # If we have ksh, try running configure again with it.
+@@ -4496,13 +4496,13 @@ darwin* | rhapsody*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-freebsd* | kfreebsd*-gnu)
++freebsd* | kfreebsd*-gnu | dragonfly*)
+   if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
+     case $host_cpu in
+     i*86 )
+       # Not sure whether the presence of OpenBSD here was a mistake.
+       # Let's accept both of them until this is cleared up.
+-      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD)/i[3-9]86 (compact )?demand paged shared library'
++      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD|DragonFly)/i[3-9]86 (compact )?demand paged shared library'
+       lt_cv_file_magic_cmd=/usr/bin/file
+       lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
+       ;;
 @@ -4534,6 +4534,10 @@ hpux10.20* | hpux11*)
    esac
    ;;
@@ -50,6 +66,15 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
  
  
  
+@@ -5974,7 +5971,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* )
++  netbsd* | freebsd* | openbsd* | darwin* | dragonfly* )
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
 @@ -6909,9 +6906,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
@@ -156,7 +181,24 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        need_version=yes
        ;;
    esac
-@@ -8422,15 +8454,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -8366,6 +8398,16 @@ freebsd*)
+   esac
+   ;;
+ 
++dragonfly*)
++  version_type=dragonfly
++  need_version=no
++  need_lib_prefix=no
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=no
++  hardcode_into_libs=yes
++  ;;
++
+ gnu*)
+   version_type=linux
+   need_lib_prefix=no
+@@ -8422,15 +8464,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -185,7 +227,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -8507,11 +8546,11 @@ knetbsd*-gnu)
+@@ -8507,11 +8556,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -199,7 +241,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -8542,10 +8581,10 @@ nto-qnx*)
+@@ -8542,10 +8591,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -212,7 +254,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -10105,9 +10144,7 @@ echo "$as_me: error: tag name \"$tagname
+@@ -10105,9 +10154,7 @@ echo "$as_me: error: tag name \"$tagname
  
        case $tagname in
        CXX)
@@ -223,7 +265,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
  	  ac_ext=cc
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -10659,7 +10696,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10659,7 +10706,7 @@ if test -z "$aix_libpath"; then aix_libp
            archive_cmds_CXX='$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
            module_cmds_CXX='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -232,7 +274,16 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
            module_expsym_cmds_CXX='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -10817,6 +10854,16 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10693,7 +10740,7 @@ if test -z "$aix_libpath"; then aix_libp
+   freebsd-elf*)
+     archive_cmds_need_lc_CXX=no
+     ;;
+-  freebsd* | kfreebsd*-gnu)
++  freebsd* | kfreebsd*-gnu | dragonfly*)
+     # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
+     # conventions
+     ld_shlibs_CXX=yes
+@@ -10817,6 +10864,16 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
@@ -249,7 +300,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -10934,14 +10981,29 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10934,14 +10991,29 @@ if test -z "$aix_libpath"; then aix_libp
      ;;
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
@@ -281,7 +332,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      ;;
    openbsd2*)
      # C++ shared libraries are fairly broken
-@@ -11324,6 +11386,21 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -11324,6 +11396,21 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
      esac
    done
  
@@ -303,7 +354,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -11371,9 +11448,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11371,9 +11458,11 @@ echo $ECHO_N "checking for $compiler opt
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -316,7 +367,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -11395,6 +11474,10 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11395,6 +11484,10 @@ echo $ECHO_N "checking for $compiler opt
  	;;
        esac
        ;;
@@ -327,7 +378,16 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      *)
        lt_prog_compiler_pic_CXX='-fPIC'
        ;;
-@@ -11469,6 +11552,8 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11441,7 +11534,7 @@ echo $ECHO_N "checking for $compiler opt
+ 	    ;;
+ 	esac
+ 	;;
+-      freebsd* | kfreebsd*-gnu)
++      freebsd* | kfreebsd*-gnu | dragonfly*)
+ 	# FreeBSD uses GNU C++
+ 	;;
+       hpux9* | hpux10* | hpux11*)
+@@ -11469,6 +11562,8 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -336,7 +396,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -11939,6 +12024,7 @@ beos*)
+@@ -11939,6 +12034,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -344,7 +404,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -12053,16 +12139,17 @@ kfreebsd*-gnu)
+@@ -12053,16 +12149,17 @@ kfreebsd*-gnu)
    ;;
  
  freebsd*)
@@ -368,7 +428,24 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        need_version=yes
        ;;
    esac
-@@ -12138,15 +12225,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -12082,6 +12179,16 @@ freebsd*)
+   esac
+   ;;
+ 
++dragonfly*)
++  version_type=dragonfly
++  need_version=no
++  need_lib_prefix=no
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=no
++  hardcode_into_libs=yes
++  ;;
++
+ gnu*)
+   version_type=linux
+   need_lib_prefix=no
+@@ -12138,15 +12245,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -397,7 +474,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -12223,11 +12317,11 @@ knetbsd*-gnu)
+@@ -12223,11 +12337,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -411,7 +488,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -12258,10 +12352,10 @@ nto-qnx*)
+@@ -12258,10 +12372,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -424,7 +501,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -13805,9 +13899,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -13805,9 +13919,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -437,7 +514,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        ;;
  
      msdosdjgpp*)
-@@ -13836,6 +13932,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -13836,6 +13952,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -449,7 +526,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      *)
        lt_prog_compiler_pic_F77='-fPIC'
        ;;
-@@ -14221,6 +14322,17 @@ EOF
+@@ -14221,6 +14342,17 @@ EOF
        fi
        ;;
  
@@ -467,7 +544,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -14593,7 +14705,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14593,7 +14725,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds_F77='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds_F77='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -476,7 +553,16 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
            module_expsym_cmds_F77='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -14708,6 +14820,21 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14633,7 +14765,7 @@ if test -z "$aix_libpath"; then aix_libp
+       ;;
+ 
+     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+-    freebsd* | kfreebsd*-gnu)
++    freebsd* | kfreebsd*-gnu | dragonfly*)
+       archive_cmds_F77='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
+       hardcode_libdir_flag_spec_F77='-R$libdir'
+       hardcode_direct_F77=yes
+@@ -14708,6 +14840,21 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -498,7 +584,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -15099,6 +15226,7 @@ beos*)
+@@ -15099,6 +15246,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -506,7 +592,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15213,16 +15341,17 @@ kfreebsd*-gnu)
+@@ -15213,16 +15361,17 @@ kfreebsd*-gnu)
    ;;
  
  freebsd*)
@@ -530,7 +616,24 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        need_version=yes
        ;;
    esac
-@@ -15298,15 +15427,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -15242,6 +15391,16 @@ freebsd*)
+   esac
+   ;;
+ 
++dragonfly*)
++  version_type=dragonfly
++  need_version=no
++  need_lib_prefix=no
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=no
++  hardcode_into_libs=yes
++  ;;
++
+ gnu*)
+   version_type=linux
+   need_lib_prefix=no
+@@ -15298,15 +15457,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -559,7 +662,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15383,11 +15519,11 @@ knetbsd*-gnu)
+@@ -15383,11 +15549,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -573,7 +676,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -15418,10 +15554,10 @@ nto-qnx*)
+@@ -15418,10 +15584,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -586,7 +689,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -16147,9 +16283,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -16147,9 +16313,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -599,7 +702,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        ;;
  
      msdosdjgpp*)
-@@ -16178,6 +16316,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -16178,6 +16346,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -611,7 +714,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      *)
        lt_prog_compiler_pic_GCJ='-fPIC'
        ;;
-@@ -16563,6 +16706,17 @@ EOF
+@@ -16563,6 +16736,17 @@ EOF
        fi
        ;;
  
@@ -629,7 +732,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -16955,7 +17109,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -16955,7 +17139,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds_GCJ='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds_GCJ='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -638,7 +741,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
            module_expsym_cmds_GCJ='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -17070,6 +17224,21 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -17070,6 +17254,21 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -660,7 +763,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -17461,6 +17630,7 @@ beos*)
+@@ -17461,6 +17660,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -668,7 +771,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17575,16 +17745,17 @@ kfreebsd*-gnu)
+@@ -17575,16 +17775,17 @@ kfreebsd*-gnu)
    ;;
  
  freebsd*)
@@ -692,7 +795,24 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
        need_version=yes
        ;;
    esac
-@@ -17660,15 +17831,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -17604,6 +17805,16 @@ freebsd*)
+   esac
+   ;;
+ 
++dragonfly*)
++  version_type=dragonfly
++  need_version=no
++  need_lib_prefix=no
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=no
++  hardcode_into_libs=yes
++  ;;
++
+ gnu*)
+   version_type=linux
+   need_lib_prefix=no
+@@ -17660,15 +17871,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -721,7 +841,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -17745,11 +17923,11 @@ knetbsd*-gnu)
+@@ -17745,11 +17963,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -735,7 +855,7 @@ $NetBSD: patch-ab,v 1.47 2004/12/18 17:42:24 grant Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -17780,10 +17958,10 @@ nto-qnx*)
+@@ -17780,10 +17998,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
