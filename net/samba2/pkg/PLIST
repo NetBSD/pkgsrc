@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/01/09 20:49:27 kleink Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/02/11 17:11:34 bouyer Exp $
 bin/mksmbpasswd.sh
 bin/addtosmbpass
 bin/convert_smbpasswd
@@ -143,7 +143,7 @@ share/doc/samba/NT4_PlainPassword.reg
 share/doc/samba/Win95_PlainPassword.reg
 share/doc/samba/THANKS
 etc/rc.d/samba.sh.sample
-etc/smb.conf.sample
+share/examples/smb.conf.sample
 @dirrm share/doc/samba/faq
 @dirrm share/doc/samba/textdocs
 @dirrm share/doc/samba
