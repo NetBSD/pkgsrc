@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:24:36 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/10/29 14:09:37 gavan Exp $
 #
 
 DISTNAME=		bicom101
@@ -14,6 +14,7 @@ COMMENT=		Data compressor in the PPM family
 
 LICENSE=		no-commercial-use
 USE_BUILDLINK2=		# defined
+USE_GCC_SHLIB=		yes
 
 do-build:
 	for i in bialib bicom; do					\
@@ -24,7 +25,8 @@ do-build:
 		done;							\
 	done
 	cd ${WRKSRC}/bicom &&						\
-		${BUILDLINK_CXX} ${CXXFLAGS} -o bicom *.o ../bialib/*.o
+		${BUILDLINK_CXX} ${CXXFLAGS} ${LDFLAGS}			\
+			-o bicom *.o ../bialib/*.o
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bicom/bicom ${PREFIX}/bin
