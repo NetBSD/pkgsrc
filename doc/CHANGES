@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7425 2004/10/14 02:39:19 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7426 2004/10/14 04:01:41 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4708,3 +4708,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icecast to 2.0.2 [adrianp 2004-10-13]
 	Updated biew to 5.6.2 [ben 2004-10-13]
 	Updated ccache to 2.4 [xtraeme 2004-10-14]
+	Updated gtkhtml30 to 3.0.10nb2 [grant 2004-10-14]
