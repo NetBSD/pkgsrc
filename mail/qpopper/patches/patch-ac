@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.7 1999/05/11 20:24:46 tron Exp $
+$NetBSD: patch-ac,v 1.8 1999/09/07 17:58:22 bad Exp $
 
---- configure.in.orig	Fri Jul 10 01:44:06 1998
-+++ configure.in	Tue May 11 22:11:08 1999
+--- configure.in.orig	Thu Jul  9 16:44:06 1998
++++ configure.in	Tue Sep  7 09:51:28 1999
 @@ -13,7 +13,7 @@
  fi
  if test "$GCC" = yes 
@@ -25,8 +25,19 @@ $NetBSD: patch-ac,v 1.7 1999/05/11 20:24:46 tron Exp $
  dbm.h \
  shadow.h \
  )
-@@ -212,7 +214,6 @@
+@@ -209,10 +211,17 @@
+ AC_CHECK_LIB(socket, socket, NETWORK_LIBS="$NETWORK_LIBS -lsocket")
+ AC_CHECK_LIB(resolv, res_init, NETWORK_LIBS="$NETWORK_LIBS -lresolv")
+ AC_CHECK_LIB(mail, maillock, NETWORK_LIBS="$NETWORK_LIBS -lmail"; AC_DEFINE(MAILOCK))
++AC_ARG_ENABLE(kerberos,
++	[  --enable-kerberos	compile in Kerberos authentification support],
++	[with_kerberos=$enableval],
++	[with_kerberos=no])
++if test "$with_kerberos" = "yes" ;then
  AC_CHECK_LIB(krb, krb_recvauth, KERBEROS_LIBS="$KERBEROS_LIBS -lkrb")
++AC_CHECK_LIB(des, des_set_key, KERBEROS_LIBS="$KERBEROS_LIBS -ldes")
++AC_DEFINE(KERBEROS)
++fi
  AC_CHECK_LIB(ndbm, dbm_open, DBM_LIBS="-lndbm")
  AC_CHECK_LIB(dbm, dbm_open, DBM_LIBS="-ldbm")
 -AC_CHECK_LIB(gdbm, gdbm_open, DBM_LIBS="-lgdbm"; AC_DEFINE(GDBM))
