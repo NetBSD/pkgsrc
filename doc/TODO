@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.447 2003/04/06 18:54:53 wiz Exp $
+$NetBSD: TODO,v 1.448 2003/04/06 20:00:18 salo Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o wine-20030318
 	o wmbiff-0.4.15
 	o wwwoffle-2.7h
-	o wxGTK-2.4.0 [pkg/20640]
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xdialog-2.1.0
