@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/07/12 08:25:11 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/01/17 12:56:13 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_MIXER_BUILDLINK3_MK:=	${XFCE4_MIXER_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-mixer}
 BUILDLINK_PACKAGES+=	xfce4-mixer
 
 .if !empty(XFCE4_MIXER_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-mixer+=		xfce4-mixer>=4.0.6
+BUILDLINK_DEPENDS.xfce4-mixer+=		xfce4-mixer>=4.2.0
 BUILDLINK_PKGSRCDIR.xfce4-mixer?=	../../audio/xfce4-mixer
 .endif	# XFCE4_MIXER_BUILDLINK3_MK
 

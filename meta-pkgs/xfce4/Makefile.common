@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.16 2004/07/12 08:25:11 martti Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/01/17 12:56:13 martti Exp $
 
-MASTER_SITES=		http://www.xfce.org/archive/xfce-4.0.6/src/ \
-			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.0.6/src/ \
-			http://linux.imp.mx/xfce4/xfce_4.0.6/src/
+MASTER_SITES=		http://www.xfce.org/archive/xfce-4.2.0/src/ \
+			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.2.0/src/ \
+			http://linux.imp.mx/xfce4/xfce_4.2.0/src/
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 
-XFCE4_VERSION=		4.0.6
+XFCE4_VERSION=		4.2.0
 
 # Do NOT put a PKGREVISION statement in this file!
 

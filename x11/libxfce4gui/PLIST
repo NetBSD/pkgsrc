@@ -1,11 +1,35 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:10:05 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/01/17 12:56:13 martti Exp $
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libxfcegui4.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libxfcegui4.mo
 include/xfce4/libxfcegui4/dialogs.h
 include/xfce4/libxfcegui4/gtk_style.h
 include/xfce4/libxfcegui4/gtktoxevent.h
 include/xfce4/libxfcegui4/icons.h
 include/xfce4/libxfcegui4/libnetk.h
+include/xfce4/libxfcegui4/libxfcegui4-config.h
 include/xfce4/libxfcegui4/libxfcegui4.h
 include/xfce4/libxfcegui4/netk-application.h
+include/xfce4/libxfcegui4/netk-class-group.h
 include/xfce4/libxfcegui4/netk-enum-types.h
 include/xfce4/libxfcegui4/netk-marshal.h
 include/xfce4/libxfcegui4/netk-pager.h
@@ -13,11 +37,20 @@ include/xfce4/libxfcegui4/netk-screen.h
 include/xfce4/libxfcegui4/netk-tasklist.h
 include/xfce4/libxfcegui4/netk-trayicon.h
 include/xfce4/libxfcegui4/netk-util.h
+include/xfce4/libxfcegui4/netk-window-action-menu.h
 include/xfce4/libxfcegui4/netk-window-menu.h
 include/xfce4/libxfcegui4/netk-window.h
 include/xfce4/libxfcegui4/netk-workspace.h
 include/xfce4/libxfcegui4/preview_filesel.h
 include/xfce4/libxfcegui4/session-client.h
+include/xfce4/libxfcegui4/xfce-appmenuitem.h
+include/xfce4/libxfcegui4/xfce-colorbutton.h
+include/xfce4/libxfcegui4/xfce-exec.h
+include/xfce4/libxfcegui4/xfce-filechooser.h
+include/xfce4/libxfcegui4/xfce-gdk-extensions.h
+include/xfce4/libxfcegui4/xfce-gtk-extensions.h
+include/xfce4/libxfcegui4/xfce-icontheme.h
+include/xfce4/libxfcegui4/xfce_aboutdialog.h
 include/xfce4/libxfcegui4/xfce_clock.h
 include/xfce4/libxfcegui4/xfce_decorbutton.h
 include/xfce4/libxfcegui4/xfce_decortoggle.h
@@ -30,6 +63,47 @@ include/xfce4/libxfcegui4/xfce_scaled_image.h
 include/xfce4/libxfcegui4/xfce_systemtray.h
 include/xfce4/libxfcegui4/xfce_togglebutton.h
 include/xfce4/libxfcegui4/xinerama.h
+include/xfce4/xfce4-modules/combo.h
+include/xfce4/xfce4-modules/constants.h
+include/xfce4/xfce4-modules/mime.h
+include/xfce4/xfce4-modules/mime_icons.h
 lib/libxfcegui4.la
 lib/pkgconfig/libxfcegui4-1.0.pc
+lib/xfce4/modules/libxfce4_combo.la
+lib/xfce4/modules/libxfce4_mime.la
+lib/xfce4/modules/libxfce4_mime_icons.la
+share/gtk-doc/html/libxfcegui4/XfceAboutDialog.html
+share/gtk-doc/html/libxfcegui4/XfceAppMenuItem.html
+share/gtk-doc/html/libxfcegui4/XfceFramebox.html
+share/gtk-doc/html/libxfcegui4/XfceIconTheme.html
+share/gtk-doc/html/libxfcegui4/home.png
+share/gtk-doc/html/libxfcegui4/index.html
+share/gtk-doc/html/libxfcegui4/index.sgml
+share/gtk-doc/html/libxfcegui4/left.png
+share/gtk-doc/html/libxfcegui4/libxfcegui4-Standard-Macros.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-Xfce-Gdk-extensions.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-Xfce-Gtk+-extensions.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-XfceFileChooser.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-core.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-dialogs.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-fundamentals.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-netk.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4-xfce-exec.html
+share/gtk-doc/html/libxfcegui4/libxfcegui4.devhelp
+share/gtk-doc/html/libxfcegui4/reference.html
+share/gtk-doc/html/libxfcegui4/right.png
+share/gtk-doc/html/libxfcegui4/up.png
+share/xfce4/hicolor-index.theme
+share/xfce4/mime/applications.xml
+share/xfce4/mime/freedesktop.org.xml
+share/xfce4/mime/gnome.mime.xml
+share/xfce4/mime/hicolor.mime.xml
+share/xfce4/mime/types.xml
+share/xfce4/mime/xfce.org.xml
+share/xfce4/xfce-svg-test.svg
+@dirrm include/xfce4/xfce4-modules
 @dirrm include/xfce4/libxfcegui4
+@dirrm lib/xfce4/modules
+@dirrm lib/xfce4
+@dirrm share/gtk-doc/html/libxfcegui4
+@dirrm share/xfce4/mime

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/07/12 08:25:11 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/01/17 12:56:13 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_DESKTOP_BUILDLINK3_MK:=	${XFCE4_DESKTOP_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-desktop}
 BUILDLINK_PACKAGES+=	xfce4-desktop
 
 .if !empty(XFCE4_DESKTOP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-desktop+=	xfce4-desktop>=4.0.6
+BUILDLINK_DEPENDS.xfce4-desktop+=	xfce4-desktop>=4.2.0
 BUILDLINK_PKGSRCDIR.xfce4-desktop?=	../../x11/xfce4-desktop
 .endif	# XFCE4_DESKTOP_BUILDLINK3_MK
 
