@@ -1,0 +1,6 @@
+ELISA FONT is an 8x8 dots bitmap font for Japanese.  It was made in
+NIFTY-Serve FYHPPC `ELISA FONT PJ' for HP 100LX/200LX palmtop computers,
+then converted to BDF format for X Window System.
+
+This package also contains 4x8 dots for JIS X 0201 and ISO-8859-1
+1-byte charset fonts.
