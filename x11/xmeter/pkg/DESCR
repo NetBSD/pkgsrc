@@ -1,0 +1,10 @@
+Xmeter displays a number of remote machine load meters.  This package
+monitors system activity, displaying a histogram of data returned by
+rstat(3) as a meter.  It can be told to monitor multiple hosts, or to
+monitor multiple statistics on the same host.  Meters can be displayed
+in a vertical, horizontal or rectangular arrangement.  As statistics
+range between 4 user defineable levels (OK, WARN, ERROR or FATAL), the
+background, foreground, highlight, border and internal border colors,
+and the background bitmap of each meter can be changed.  Xmeter uses
+the StripChart widget of the Athena Widget Set to graph each
+statistic. 
