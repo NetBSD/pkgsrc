@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2002/03/06 13:33:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/26 16:01:37 grant Exp $
 #
 
-DISTNAME=       less-374
+DISTNAME=       less-378
 CATEGORIES=     misc
-MASTER_SITES=   ${MASTER_SITE_GNU:=less/}
+MASTER_SITES=   http://www.greenwoodsoftware.com/less/ \
+		${MASTER_SITE_GNU:=less/}
 
 MAINTAINER=     bouyer@netbsd.org
-HOMEPAGE=       http://www.gnu.org/software/less/less.html
+HOMEPAGE=       http://www.greenwoodsoftware.com/less/
 COMMENT=	pager similar to more and pg
 
 GNU_CONFIGURE=  	yes
