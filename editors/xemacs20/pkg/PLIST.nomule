@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST.nomule,v 1.1 1998/08/02 19:49:58 frueauf Exp $
+@comment $NetBSD: PLIST.nomule,v 1.2 1998/09/17 13:16:09 frueauf Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
 bin/install-sid
 bin/pstogif
+bin/xemacs
 bin/xemacs-20.4
 bin/xemacs-b2m
 bin/xemacs-ctags
 bin/xemacs-etags
 bin/xemacs-rcs-checkin
 bin/xemacs-send-pr
-@exec ln -s %D/%F %B/xemacs
-@unexec rm %B/xemacs
 @exec mkdir -p %D/lib/xemacs/lock ; chmod 1777 %D/lib/xemacs/lock
 @exec mkdir -p %D/lib/xemacs/site-lisp ; chmod 755 %D/lib/xemacs/site-lisp
 @unexec rm -rf %D/lib/xemacs
