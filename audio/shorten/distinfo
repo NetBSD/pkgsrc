@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:37 agc Exp $
 
 SHA1 (shorten-3.1.tar.gz) = 4f5b939614bc8a6c756f92a95909a39a499932f5
+Size (shorten-3.1.tar.gz) = 162942 bytes
 SHA1 (patch-aa) = eeb637249df8eb5a28018ada92a7e270c8c40ba7
 SHA1 (patch-ab) = ed8ce4a276bf6250600cb6e5559400295d14ed7e
 SHA1 (patch-ac) = c82529b4c1824a1be80834d018782b70dfa17f0d
