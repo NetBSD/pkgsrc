@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/03 08:32:06 wiz Exp $
 #
 
-DISTNAME=	adom-100-elf
-PKGNAME=	adom-1.00
+DISTNAME=	adom-111-elf
+PKGNAME=	adom-1.1.1
 WRKSRC=		${WRKDIR}/adom
 CATEGORIES=	games
 MASTER_SITES=	http://www.adom.de/adom/download/linux/
