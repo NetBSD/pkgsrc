@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/15 21:58:10 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/16 06:28:08 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -23,9 +23,11 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 BIND_VERSION=	9.1.0b1
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
+# dnssec-keygen needs "good enough" random number, use /dev/urandom
 CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
-		--localstatedir=/var
+		--localstatedir=/var \
+		--with-randomdev=/dev/urandom
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 
 post-install:
