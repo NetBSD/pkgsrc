@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/02/09 10:48:48 grant Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/02/10 11:06:25 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -8,12 +8,12 @@ CATEGORIES=		www
 .if ${MOZILLA} == "MozillaFirebird"
 MOZILLA_SHORT=		firebird
 MOZ_DIR=		${MOZ_VER}
-.elif ${MOZILLA} == "firefox"
-MOZILLA_SHORT=		firefox
-MOZ_DIR=		${MOZ_VER}
-.else
+.elif ${MOZILLA} == "mozilla"
 MOZILLA_SHORT=		${MOZILLA}
 MOZ_DIR=		mozilla${MOZ_VER}
+.else
+MOZILLA_SHORT=		${MOZILLA}
+MOZ_DIR=		${MOZ_VER}
 .endif
 
 MASTER_SITES?=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
