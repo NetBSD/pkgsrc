@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/05/31 00:53:09 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/08 13:22:37 wiz Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
@@ -10,24 +10,12 @@ DEPENDS+=		sawfish-replibs-${SF_VERS}nb2:../../wm/sawfish-replibs
 
 USE_X11BASE=		# defined
 
-CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
-MAKE_ENV+=		LOCALEDIR=${LOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 TEXINFO_OVERRIDE=	YES
 BUILD_USES_MSGFMT=	YES
 
 PLIST_SUBST+=		SF_VERS=${SF_VERS}
-
-.include "../../mk/bsd.prefs.mk"
-
-# The directory in which locale files are found is:
-#
-#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
-#
-.if ${OPSYS} == "SunOS"
-LOCALEDIR=		lib
-.else
-LOCALEDIR=		share
-.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sawfish/themes
