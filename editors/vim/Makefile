@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/06/11 06:34:32 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/06/20 18:59:37 jlam Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -10,9 +10,10 @@ DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share
 
 CONFLICTS=		vim-xaw-* vim-gtk-*
 
-CONFIGURE_ARGS+=	--enable-gui=no --without-x
+USE_BUILDLINK_ONLY=	# defined
 
-USE_CURSES=		yes
+CONFIGURE_ARGS+=	--enable-gui=no --without-x
+CONFIGURE_ARGS+=	--with-tlib=ncurses
 
 ALL_TARGET=		vim
 INSTALL_TARGET=		installvimbin
@@ -23,14 +24,5 @@ post-install:
 		${LN} -s vim ${PREFIX}/bin/$$f;			\
 	done
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${NEED_NCURSES} == "YES"
-CONFIGURE_ARGS+=	--with-tlib=ncurses
-CPPFLAGS+=              -I${LOCALBASE}/include  # for ncurses' termcap.h
-LDFLAGS+=               -L${LOCALBASE}/lib      # for -lncurses
-.else
-CONFIGURE_ARGS+=	--with-tlib=curses
-.endif
-
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
