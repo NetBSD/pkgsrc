@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 1999/06/21 09:18:30 sakamoto Exp $
+# $NetBSD: Makefile,v 1.47 1999/06/29 01:52:03 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -59,6 +59,7 @@
     SUBDIR += rayshade
     SUBDIR += sane
 #    SUBDIR += sced
+    SUBDIR += sketch
 #    SUBDIR += spigot
 #    SUBDIR += splitmpg
     SUBDIR += tgif
