@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/15 20:35:58 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/05/12 21:26:40 mycroft Exp $
 
 --- ../libao-0.6.0.orig/src/plugins/oss/ao_oss.c	Fri Feb 23 17:31:48 2001
 +++ src/plugins/oss/ao_oss.c	Wed Mar 14 22:12:22 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/15 20:35:58 wiz Exp $
  	} else {
  		/* default: first try the devfs path */
 -		state->dev = strdup("/dev/sound/dsp");
-+		state->dev = strdup("/dev/audio");
++		state->dev = strdup("/dev/sound");
  		state->fd=open(state->dev,O_WRONLY);
  		if(state->fd < 0) 
  		{
