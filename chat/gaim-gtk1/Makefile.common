@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/03/08 19:40:36 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=	gaim-0.59.8
@@ -17,8 +17,7 @@ PATCHDIR=	${.CURDIR}/../gaim-gtk1/patches
 PKGDIR=		${.CURDIR}/../gaim-gtk1
 PLIST_SRC=      ${.CURDIR}/../gaim-gtk1/PLIST.common
 
-DEPENDS+=	gnome1-dirs>=1.5:../../misc/gnome1-dirs
-
+USE_DIRS+=		gnome1-1.5
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES

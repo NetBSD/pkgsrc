@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/04/05 02:45:45 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/04/14 16:15:26 jmmv Exp $
 
 DISTNAME=	gftp-${VERSION}
 CATEGORIES=	net
@@ -10,9 +10,9 @@ MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://gftp.seul.org/
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

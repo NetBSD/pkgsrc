@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/14 16:15:25 jmmv Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 PKGREVISION=	3
@@ -11,9 +11,9 @@ CONFLICTS=	timidity-[0-9]*
 
 DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 DEPENDS+=	trm>=0.2.1:../../audio/trm
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK2=		YES
+USE_DIRS+=		xdg-1.1
 
 REPLACE_PERL=		kscd/workman2cddb.pl
 

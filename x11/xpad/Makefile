@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/08 19:40:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/14 16:15:30 jmmv Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -12,10 +12,10 @@ HOMEPAGE=	http://xpad.sourceforge.net/
 COMMENT=	Sticky notes application in GTK 2
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes

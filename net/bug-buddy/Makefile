@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/01 18:54:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/14 16:15:26 jmmv Exp $
 #
 
 DISTNAME=		bug-buddy-2.6.0
@@ -11,10 +11,10 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Graphical GNOME2 bug reporting tool
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/26 02:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=	gq-1.0beta1
@@ -10,9 +10,8 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://biot.com/gq/
 COMMENT=	GTK-based LDAP client
 
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
-
 USE_BUILDLINK2=		yes
+USE_DIRS+=		gnome2-1.5
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

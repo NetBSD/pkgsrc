@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.25 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/14 16:15:25 jmmv Exp $
 
 DISTNAME=	kdeaddons-${_KDE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Add ons for the KDE integrated X11 desktop
 
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
-
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		YES
+USE_DIRS+=		xdg-1.1
 
 .include "../../mk/bsd.prefs.mk"
 

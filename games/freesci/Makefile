@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/20 15:16:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/14 16:15:22 jmmv Exp $
 #
 
 DISTNAME=		freesci-0.3.4a
@@ -11,9 +11,8 @@ MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://freesci.linuxgames.com/
 COMMENT=		Interpreter for Sierra On-Line's SCI games
 
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
-
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

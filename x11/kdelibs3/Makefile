@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/03/26 02:28:01 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2004/04/14 16:15:30 jmmv Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	1
@@ -8,9 +8,9 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 CONFLICTS+=	koffice3<=1.1.1
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK2=		YES
+USE_DIRS+=		xdg-1.1
 USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/08 19:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/14 16:15:25 jmmv Exp $
 #
 
 DISTNAME=	hh2000-0.6
@@ -11,11 +11,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hirame.hiram.edu/~worleyam
 COMMENT=	Astronomical simulation and visualization program
 
-DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
-
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
+USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/gettext-lib/buildlink2.mk"

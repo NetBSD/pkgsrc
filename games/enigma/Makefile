@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/08 19:40:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 16:15:22 jmmv Exp $
 #
 
 DISTNAME=		enigma-0.81
@@ -13,11 +13,10 @@ COMMENT=		Puzzle game similar to Oxyd/Rock'n'Roll/Marble Madness
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
-
 GCC_REQD+=		2.95
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/06 09:53:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=	rhythmbox-0.7.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.rhythmbox.org/
 COMMENT=	Music management application for GNOME
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gst-plugins-esound>=0.8.0:../../audio/gst-plugins-esound
 DEPENDS+=		gst-plugins-gnomevfs>=0.8.0:../../sysutils/gst-plugins-gnomevfs
 DEPENDS+=		gst-plugins-mad>=0.8.0:../../audio/gst-plugins-mad
@@ -19,6 +18,7 @@ DEPENDS+=		gst-plugins-vorbis>=0.8.0:../../audio/gst-plugins-vorbis
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
