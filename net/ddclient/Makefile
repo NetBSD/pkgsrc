@@ -1,32 +1,55 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:18:45 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2001/12/09 19:55:35 jlam Exp $
 
-DISTNAME=	ddclient-2.3.2
+DISTNAME=	ddclient-3.6
 CATEGORIES=	net
-MASTER_SITES=	http://burry.net/ddclient/
+MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://burry.net/ddclient
-COMMENT=	Client to update dynamic DNS entries for accounts on dyndns.org
+HOMEPAGE=	http://burry.ca:4141/ddclient/
+COMMENT=	Client to update dynamic DNS entries
 
-NO_BUILD=	yes
+USE_BUILDLINK_ONLY=	YES
+
+DOCDIR=			${PREFIX}/share/doc/ddclient
+EGDIR=			${PREFIX}/share/examples/ddclient
+RCD_SCRIPTS=		ddclient
+CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
+			${PKG_SYSCONFDIR}/ddclient.conf			\
+			${ROOT_USER} ${ROOT_GROUP} 0600
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
+
+do-configure:
+	cd ${WRKSRC}; for file in ddclient; do				\
+		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
+			-e "s|@PERL5@|${PERL5}|g"			\
+			$${file} > $${file}.fixed;			\
+		if [ -x $${file} ]; then				\
+			${CHMOD} +x $${file}.fixed;			\
+		fi;							\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+
+do-build:	# empty
+
+pre-install:
+	@for script in ${RCD_SCRIPTS}; do				\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
+			> ${WRKDIR}/$${script};				\
+	done
 
 do-install:
-	${SED} \
-		-e 's,@LOCALBASE@,${LOCALBASE},g' \
-		-e 's,@PREFIX@,${PREFIX},g' \
-		${WRKSRC}/ddclient >${PREFIX}/bin/ddclient
-	${CHMOD} +x ${PREFIX}/bin/ddclient
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ddclient
-	for F in README COPYING COPYRIGHT sample-etc_cron.d_ddclient	     \
-		sample-etc_dhcpc_dhcpcd-eth0.exe sample-etc_ppp_ip-up.local; \
-	do								     \
-		${INSTALL_DATA} ${WRKSRC}/$$F ${PREFIX}/share/doc/ddclient; \
+	for script in ${RCD_SCRIPTS}; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
+			${PREFIX}/etc/rc.d/$${script};			\
 	done
-	${INSTALL_DATA} ${WRKSRC}/sample-ddclient.conf			     \
-		${PREFIX}/etc/ddclient.conf-example
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ddclient/contrib
-	${INSTALL_DATA} ${WRKSRC}/contrib/*				     \
-		 ${PREFIX}/share/doc/ddclient/contrib
+	${INSTALL_SCRIPT} ${WRKSRC}/ddclient ${PREFIX}/sbin
+	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.cisco ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/sample-* ${EGDIR}
 
+.include "../../lang/perl5/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
