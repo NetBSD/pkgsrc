@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5144 2004/03/07 23:47:48 snj Exp $
+$NetBSD: CHANGES,v 1.5145 2004/03/07 23:59:01 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1232,3 +1232,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated loudmouth to 0.15.1nb3 [jmmv 2004-03-07]
 	Updated xscorch to 0.1.16 [snj 2004-03-07]
 	Updated wmusic to 1.4.7nb3 [snj 2004-03-07]
+	Updated wistumbler2 to 2.00pre7 [xtraeme 2004-03-07]
