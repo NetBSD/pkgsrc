@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2002/09/15 05:39:11 rh Exp $
+# $NetBSD: Makefile,v 1.79 2002/09/15 05:58:56 rh Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		gtk-doc>=0.9:../../textproc/gtk-doc
 BUILD_USES_MSGFMT=	YES
 
 .include "../../mk/bsd.prefs.mk"
-.if (${LOCALBASE} == ${X11BASE})
+.if (${LOCALBASE} == ${X11PREFIX})
 BUILDLINK_DEPENDS.gnome-pixmaps=gnome{,2}-pixmaps>=1.4.2
 .endif
 
