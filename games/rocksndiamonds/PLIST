@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2004/11/03 15:14:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/12/22 16:46:19 reed Exp $
 bin/rocksndiamonds
-man/man1/rocksndiamonds.1
+man/man6/rocksndiamonds.6
 @dirrm share/rocksndiamonds/sounds/snd_classic
 @dirrm share/rocksndiamonds/sounds
 @dirrm share/rocksndiamonds/music/mus_classic
