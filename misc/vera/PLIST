@@ -1,17 +1,1 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/17 15:51:12 hubertf Exp $
-info/vera.info
-info/vera.info-1
-info/vera.info-2
-info/vera.info-3
-info/vera.info-4
-info/vera.info-5
-info/vera.info-6
-info/vera.info-7
-info/vera.info-8
-info/vera.info-9
-info/vera.info-10
-info/vera.info-11
-info/vera.info-12
-info/vera.info-13
-info/vera.info-14
-info/vera.info-15
+@comment $NetBSD: PLIST,v 1.5 2004/03/08 22:24:04 seb Exp $
