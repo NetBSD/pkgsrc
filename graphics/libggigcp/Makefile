@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/18 00:57:50 snj Exp $
 #
 
 DISTNAME=		libggigcp-0.8.2.src
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.ggi-project.org/packages/libggigcp.html
 COMMENT=		Color management extension for GGI
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -23,5 +23,5 @@ PKG_SYSCONFSUBDIR=	ggi
 EGDIR=			${PREFIX}/share/examples/libggigcp
 CONF_FILES=		${EGDIR}/libggigcp.conf ${PKG_SYSCONFDIR}/libggigcp.conf
 
-.include "../../graphics/libggi/buildlink2.mk"
+.include "../../graphics/libggi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
