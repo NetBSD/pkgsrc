@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/04 03:01:12 itojun Exp $
+--- Makefile.in.orig	Mon Apr  3 19:34:51 2000
++++ Makefile.in	Mon Apr  3 19:38:45 2000
+@@ -9,7 +9,7 @@
+ OPTFLAG=@OPTFLAG@
+ CFLAGS=	@CFLAGS@ @CPPFLAGS@ @DEFS@ $(CPPFLAGS) $(OPTFLAG) -DIPSEC -I. -I$(srcdir) -Dss_family=__ss_family -Dss_len=__ss_len -DSYSCONFDIR=\"${sysconfdir}\"
+ CFLAGS+=-DYY_NO_UNPUT
+-LIBS=	@LIBS@
++LIBS=	@LIBS@ -L${srcdir}/../libpfkey -lpfkey
+ YFLAGS+=-d
+ 
+ prefix=	@prefix@
+@@ -78,10 +78,6 @@
+ 	$(INSTALL) -o bin -g bin -m 444 racoon.conf.5 $(mandir)/man5
+ 	-mkdir -p ${sysconfdir}/racoon
+ 	for i in $(CONF); do \
+-		if test ! -f ${sysconfdir}/racoon/$$i; then \
+-			$(INSTALL) -o bin -g bin -m 444 samples/$$i \
+-				${sysconfdir}/racoon; \
+-		fi; \
+ 		$(INSTALL) -o bin -g bin -m 444 samples/$$i \
+ 			${sysconfdir}/racoon/$$i.dist; \
+ 	done
