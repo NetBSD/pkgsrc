@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2003/04/25 20:05:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2003/05/21 14:07:45 seb Exp $
 
-DISTNAME=	audit-packages-1.14
+DISTNAME=	audit-packages-1.15
 WRKSRC=		${WRKDIR}
 CATEGORIES=	security pkgtools
 MASTER_SITES=	# empty
@@ -15,12 +15,11 @@ NO_MTREE=	yes
 
 do-configure:
 	@for f in audit-packages download-vulnerability-list; do	\
-		${SED} -e 's|\$${PKGVULNDIR}|${PKGVULNDIR}|g' 		\
-			-e 's|\$${AWK}|${AWK}|g'			\
-			-e 's|\$${FETCH_CMD}|${FETCH_CMD}|g'		\
-			-e 's|\$${PKG_TOOLS_BIN}|${PKG_TOOLS_BIN}|g'	\
-			-e 's|\$${SH}|${SH}|g'				\
-			-e 's|\$${TOUCH}|${TOUCH}|g'			\
+		${SED} -e 's|@PKGVULNDIR@|${PKGVULNDIR}|g' 		\
+			-e 's|@AWK@|${AWK}|g'				\
+			-e 's|@FETCH_CMD@|${FETCH_CMD}|g'		\
+			-e 's|@PKG_TOOLS_BIN@|${PKG_TOOLS_BIN}|g'	\
+			-e 's|@SH@|${SH}|g'				\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
 
