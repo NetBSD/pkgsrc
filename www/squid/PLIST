@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/03/27 06:44:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2003/05/24 12:31:34 taca Exp $
 bin/squidclient
 etc/rc.d/squid
 libexec/cachemgr.cgi
@@ -11,4 +11,5 @@ share/examples/squid/squid.conf
 sbin/RunAccel
 sbin/RunCache
 sbin/squid
+@dirrm share/doc/squid
 @dirrm share/examples/squid
