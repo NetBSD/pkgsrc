@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2004/06/09 18:55:11 xtraeme Exp $
+$NetBSD: distinfo,v 1.13 2004/11/27 01:41:24 lukem Exp $
 
-SHA1 (cvsweb-3.0.1.tar.gz) = 52ae5e8cc65cef7c3fdc33f9369fe00b2c5af8da
-Size (cvsweb-3.0.1.tar.gz) = 69916 bytes
+SHA1 (cvsweb-3.0.4.tar.gz) = 0b1946b3b12db7fd49aa41f344d3d0ad3ea6fe87
+Size (cvsweb-3.0.4.tar.gz) = 71453 bytes
