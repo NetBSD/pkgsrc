@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.834 2001/10/26 16:03:26 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.835 2001/10/26 17:03:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1515,6 +1515,29 @@ do-libtool:
 	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif
 
+.if defined(AUTOMAKE_OVERRIDE) && (${AUTOMAKE_OVERRIDE} == "YES")
+#
+# Prevent invocation of GNU "auto*" during the build process driven by the
+# generated Makefiles by touching various auto{conf,make} source files to
+# make them up-to-date.
+#
+AUTOMAKE_PATTERNS+=	*.m4
+AUTOMAKE_PATTERNS+=	*.in
+AUTOMAKE_PATTERNS+=	configure
+_AUTOMAKE_PATTERNS_FIND=	\
+	${AUTOMAKE_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
+
+_CONFIGURE_PREREQ+=	suppress-automake
+suppress-automake:
+.  if defined(HAS_CONFIGURE)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${WRKSRC};							\
+	${FIND} . ${_AUTOMAKE_PATTERNS_FIND} | ${XARGS} ${TOUCH} ${TOUCH_ARGS}
+.  else
+	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
+.  endif
+.endif	# AUTOMAKE_OVERRIDE
+
 .if !target(do-configure)
 do-configure: ${_CONFIGURE_PREREQ}
 .  if defined(HAS_CONFIGURE)
@@ -1527,7 +1550,6 @@ do-configure: ${_CONFIGURE_PREREQ}
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-
 .  endif
 .  if defined(USE_IMAKE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
