@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/08 23:15:12 jmmv Exp $
+bin/screentest
+share/doc/screentest/AUTHORS
+share/doc/screentest/ChangeLog
+share/doc/screentest/NEWS
+share/doc/screentest/README
+@dirrm share/doc/screentest

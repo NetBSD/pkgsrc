@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/08 23:15:13 jmmv Exp $
+
+--- ChangeLog.orig	Mon Aug 20 20:10:54 2001
++++ ChangeLog
+@@ -1,2 +1,7 @@
++Tue Aug 21 10:23:25 CEST 2001
++"Background color -> Red" yields now really to the red background instead
++	of white (missing userdata in the signal handler). Thanks to 
++	Leo Hadacz for reporting this.
++
+ Mon Aug 20 19:02:08 CEST 2001
+ Initial revision.
