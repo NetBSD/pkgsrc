@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2003/10/28 00:14:11 kristerw Exp $
+
+--- ssh_buffer.c.orig	Tue Oct 28 00:50:00 2003
++++ ssh_buffer.c	Tue Oct 28 00:50:17 2003
+@@ -716,7 +716,7 @@
+  * of the buffer.
+  */
+ int 
+-buf_put_rsa_publickey(struct ssh_buf * buf, const ssh_RSA * key)
++buf_put_rsa_publickey(struct ssh_buf * buf, ssh_RSA * key)
+ {
+ 	struct ssh_mpint mpi;
+ 	if (buf_put_int32(buf, bignum_num_bits(ssh_rsa_npart(key))) != 0) {
