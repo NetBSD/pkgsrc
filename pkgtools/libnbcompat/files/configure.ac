@@ -98,13 +98,13 @@ dnl different interface from NetBSD's statfs.
 pkg_have_nbcompat_statfs=yes
 AC_CHECK_FUNC(statfs, [
 	case $host_os in
-	linux*|freebsd*|netbsd*)
-		pkg_have_nbcompat_statfs=no
+	sunos*|solaris*)
+		AC_CHECK_FUNC(statvfs, [:], [
+			AC_MSG_ERROR(statfs can't be implemented correctly)
+		])
 		;;
 	*)
-		AC_CHECK_FUNC(statvfs, [:], [
-			AC_MSG_ERROR(statfs isn't supported and can't be implemented)
-		])
+		pkg_have_nbcompat_statfs=no
 		;;
 	esac
 ])

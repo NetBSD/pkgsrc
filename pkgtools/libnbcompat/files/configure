@@ -6621,10 +6621,7 @@ echo "${ECHO_T}$ac_cv_func_statfs" >&6
 if test $ac_cv_func_statfs = yes; then
 
 	case $host_os in
-	linux*|freebsd*|netbsd*)
-		pkg_have_nbcompat_statfs=no
-		;;
-	*)
+	sunos*|solaris*)
 		echo "$as_me:$LINENO: checking for statvfs" >&5
 echo $ECHO_N "checking for statvfs... $ECHO_C" >&6
 if test "${ac_cv_func_statvfs+set}" = set; then
@@ -6701,12 +6698,15 @@ if test $ac_cv_func_statvfs = yes; then
   :
 else
 
-			{ { echo "$as_me:$LINENO: error: statfs isn't supported and can't be implemented" >&5
-echo "$as_me: error: statfs isn't supported and can't be implemented" >&2;}
+			{ { echo "$as_me:$LINENO: error: statfs can't be implemented correctly" >&5
+echo "$as_me: error: statfs can't be implemented correctly" >&2;}
    { (exit 1); exit 1; }; }
 
 fi
 
+		;;
+	*)
+		pkg_have_nbcompat_statfs=no
 		;;
 	esac
 
