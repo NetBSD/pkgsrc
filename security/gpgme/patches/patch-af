@@ -1,0 +1,33 @@
+$NetBSD: patch-af,v 1.1 2004/10/23 15:00:48 shannonjr Exp $
+
+--- ./gpgme/get-env.c.orig	2003-09-13 11:45:04.000000000 -0600
++++ ./gpgme/get-env.c
+@@ -52,7 +52,26 @@ _gpgme_getenv (const char *name, char **
+ 
+ #else
+ 
+-/* FIXME: Implement this when we have the specification for it.  */
+-#error Use of getenv_r not implemented.
++/* Retrieve the environment variable NAME and return a copy of it in a
++   malloc()'ed buffer in *VALUE.  If the environment variable is not
++   set, return NULL in *VALUE.  */
++gpgme_error_t
++_gpgme_getenv (const char *name, char **value)
++{
++  char env_value[256];
++  int err;
++  if (err = getenv_r (name, env_value, 256))
++      *value = NULL;
++  else
++    {
++      *value = strdup (env_value);
++      if (!*value)
++        err = ENOMEM;
++    }
++  if (err)
++      return gpg_error_from_errno (err);
++  else
++      return (0);
++}
+ 
+ #endif
