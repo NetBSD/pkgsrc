@@ -1,15 +1,21 @@
+$NetBSD: patch-aa,v 1.32 2003/12/11 22:15:30 reed Exp $
+
 --- ltconfig.in.orig	Mon May 21 00:05:06 2001
-+++ ltconfig.in	Sat Oct  4 14:32:02 2003
-@@ -1052,7 +1052,7 @@
++++ ltconfig.in	Mon Dec  8 21:47:31 2003
+@@ -1051,9 +1051,10 @@
+   lt_cv_dlopen_self=yes
    ;;
  
- bsdi4*)
+-bsdi4*)
 -  version_type=linux
++bsdi*)
 +  version_type=sunos
    need_version=no
++  need_lib_prefix=no
    library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
    soname_spec='${libname}${release}.so$major'
-@@ -1104,7 +1104,7 @@
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
+@@ -1104,7 +1105,7 @@
    version_type=darwin
    need_lib_prefix=no
    need_version=no
@@ -18,7 +24,7 @@
    soname_spec='${libname}${release}${major}.`test .$module = .yes && echo so || echo dylib`'
    shlibpath_overrides_runpath=yes
    shlibpath_var=DYLD_LIBRARY_PATH
-@@ -1116,16 +1116,17 @@
+@@ -1116,16 +1117,17 @@
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -42,7 +48,7 @@
        need_version=yes
        ;;
    esac
-@@ -1167,7 +1168,7 @@
+@@ -1167,7 +1169,7 @@
    ;;
  
  irix5* | irix6*)
@@ -51,7 +57,7 @@
    need_lib_prefix=no
    need_version=no
    soname_spec='${libname}${release}.so$major'
-@@ -1198,7 +1199,7 @@
+@@ -1198,7 +1200,7 @@
  
  # This must be Linux ELF.
  linux-gnu*)
@@ -60,7 +66,7 @@
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-@@ -1236,6 +1237,8 @@
+@@ -1236,6 +1238,8 @@
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
@@ -69,7 +75,7 @@
    ;;
  
  newsos6)
-@@ -1282,7 +1285,7 @@
+@@ -1282,7 +1286,7 @@
    ;;
  
  solaris*)

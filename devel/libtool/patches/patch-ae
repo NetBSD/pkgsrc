@@ -1,8 +1,24 @@
-$NetBSD: patch-ae,v 1.5 2002/03/21 09:00:13 skrll Exp $
+$NetBSD: patch-ae,v 1.6 2003/12/11 22:15:30 reed Exp $
 
---- configure.orig	Thu Jun 14 05:06:29 2001
-+++ configure
-@@ -1533,9 +1533,9 @@
+--- configure.orig	Thu Jun 14 00:06:29 2001
++++ configure	Mon Dec  8 21:54:21 2003
+@@ -1448,8 +1448,13 @@
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-bsdi4*)
+-  lt_cv_deplibs_check_method='file_magic ELF [0-9][0-9]*-bit [ML]SB (shared object|dynamic lib)'
++# Versions of BSD/OS prior to 4.0 did not have real dynamic linking
++bsdi1*|bsdi2*|bsdi3*)
++  dynamic_linker=no
++  ;;
++
++bsdi*)
++  lt_cv_deplibs_check_method=pass_all
+   lt_cv_file_magic_cmd='/usr/bin/file -L'
+   lt_cv_file_magic_test_file=/shlib/libc.so
+   ;;
+@@ -1533,9 +1538,9 @@
  
  netbsd*)
    if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
