@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/02/15 15:00:50 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/02/15 19:30:33 tron Exp $
 
 DISTNAME=		WindowMaker-0.51.0
 PKGNAME=		windowmaker-0.51.0
@@ -27,7 +27,17 @@ CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
 			--with-gfx-incs="-I${LOCALBASE}/include \
 				-I${LOCALBASE}/include/giflib" \
 			--with-gfx-libs=-L${LOCALBASE}/lib \
-			--enable-modelock --enable-gnome --enable-kde
+			--enable-modelock
+
+# WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
+# to support.  Currently supported options:
+#
+#	kde		enable support for kde/kwm window manager hints
+#	gnome		enable support for GNOME window manager hints
+#	openlook	enable support for OPEN LOOK(tm) window manager hints
+#	lite		remove Window Maker redundancies with KDE
+#
+WINDOWMAKER_OPTIONS?=	gnome kde
 
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
@@ -61,20 +71,6 @@ CONFIGURE_ARGS+=	--enable-kanji
 .endif # ENABLE_WM_KANJI
 .endif # LINGUAS
 
-# WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
-# to support.  Currently supported options:
-#
-#	kde		enable support for kde/kwm window manager hints
-#	gnome		enable support for GNOME window manager hints
-#	openlook	enable support for OPEN LOOK(tm) window manager hints
-#	lite		remove Window Maker redundancies with KDE
-#
-# Default: not defined
-#
-.for option in ${WINDOWMAKER_OPTIONS}
-CONFIGURE_ARGS+=	--enable-${option}
-.endfor
-
 post-extract:
 	${RM} -f ${WRKDIR}/WindowMaker-data/pixmaps/tile.xpm
 
@@ -105,3 +101,7 @@ post-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+
+.for OPTION in ${WINDOWMAKER_OPTIONS}
+CONFIGURE_ARGS+=	--enable-${OPTION}
+.endfor
