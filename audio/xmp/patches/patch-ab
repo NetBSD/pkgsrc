@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/28 01:25:40 hubertf Exp $
+
+--- src/player/readrc.c.orig	Sat Sep 16 01:35:21 2000
++++ src/player/readrc.c	Sat Sep 16 01:38:24 2000
+@@ -56,7 +56,7 @@
+     if ((rc = fopen (myrc2, "r")) == NULL) {
+ 	if ((rc = fopen (myrc, "r")) == NULL) {
+ #ifndef __EMX__
+-	    if ((rc = fopen ("/etc/xmp.conf", "r")) == NULL) {
++	    if ((rc = fopen ("ETCDIR/xmp.conf", "r")) == NULL) {
+ #else
+ 	    if ((rc = fopen ("xmp.conf", "r")) == NULL) {
+ #endif
+@@ -202,7 +202,7 @@
+     myrc = malloc ((home ? strlen (home) : 0) + 20);
+ #ifndef __EMX__
+     sprintf (myrc, "%s/.xmp/modules.conf", home);
+-    parse_modconf (ctl, "/etc/xmp-modules.conf", crc, size);
++    parse_modconf (ctl, "ETCDIR/xmp-modules.conf", crc, size);
+ #else
+     sprintf (myrc, "%s\\.xmp\\modules.conf", home);
+     parse_modconf (ctl, "xmp-modules.conf", crc, size);
