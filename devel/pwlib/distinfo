@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2002/12/01 18:31:41 jdolecek Exp $
+$NetBSD: distinfo,v 1.6 2002/12/03 13:00:17 jdolecek Exp $
 
 SHA1 (pwlib_1.4.4.tar.gz) = 5432ba3e4771fb281283161bb956b5a19e5200c7
 Size (pwlib_1.4.4.tar.gz) = 907721 bytes
 SHA1 (patch-aa) = 13d2e40664a725bf59569d837df54c06d707eda2
-SHA1 (patch-ab) = 9da2c47c9c8b09ac0f7f74171f1ff5895075b39f
+SHA1 (patch-ab) = 0be1aec99542d677f8ec983a358712b2f5f5cc58
 SHA1 (patch-ac) = 07fa4e45663840e273e21b8f240ec749fff4a13a
 SHA1 (patch-ae) = 02d323e53908049146c4b389e2b2d32ebf2c4a61
 SHA1 (patch-af) = e410a5e918e4e957ad8902b29f0a2f385c116bde
