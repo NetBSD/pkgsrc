@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2004/07/02 14:40:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2004/07/06 11:32:49 abs Exp $
+
+# Note: Regen distinfo with SUN_JRE14_USE_JCE=YES
 
 DISTNAME=	j2re-1_4_2_05-linux-i586
 PKGNAME=	sun-jre14-2.5
@@ -30,9 +32,24 @@ SUPPORT_FILES=	# empty
 SUPPORT_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		SUN_JRE14_USE_JCE
+PLIST_SRC=      	${WRKDIR}/PLIST
+
+.if !empty(SUN_JRE14_USE_JCE:M[Yy][Ee][Ss])
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_4_2.zip
+.endif
+
 do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f $$file $$file.default;				\
 	done
+.if !empty(SUN_JRE14_USE_JCE:M[Yy][Ee][Ss])
+	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
+	${SED} 's/@SUN_JRE14_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
+.else
+	${SED} '/@SUN_JRE14_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
+.endif
 
 .include "../../lang/sun-jre14/Makefile.common"
