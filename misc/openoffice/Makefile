@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/10/16 07:11:41 mrauch Exp $
+# $NetBSD: Makefile,v 1.40 2004/01/11 01:09:12 grant Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		2
@@ -39,7 +39,7 @@ LDFLAGS+=		${RPATH_FLAG}${GCCPREFIX}/lib
 .endif
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
+BUILD_DEPENDS+=		{tcsh-standalone,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		stlport>=4.0nb1:../../devel/stlport
