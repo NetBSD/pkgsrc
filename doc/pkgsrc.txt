@@ -1662,7 +1662,7 @@ The following message is displayed as part of the audit-packages installation
 procedure:
 
 ===========================================================================
-$NetBSD: faq.xml,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $
+$NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -4690,29 +4690,40 @@ files are created from it:
     server itself. This means you must make sure that your changes haven't
     broken the build!
    
+  * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf: PDF version of the
+    pkgsrc guide.
+   
+  * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps: PostScript version of
+    the pkgsrc guide.
+   
 D.2. Procedure
 
 The procedure to edit the pkgsrc guide is:
 
-  * Edit the XML file(s) in pkgsrc/doc/guide/files
+  * Make sure you have the packages needed to re-generate the pkgsrc guide (and
+    other XML-based NetBSD documentation) installed. These are "pkgsrc-doc" for
+    creating the ASCII- and HTML-version, and "pkgsrc-doc-print"for the
+    PostScript- and PDF version. You will need both packages installed, to make
+    sure documentation is consistent across all formats. The packages can be
+    found in pkgsrc/meta-pkgs/netbsd-doc and pkgsrc/meta-pkgs/netbsd-doc-print.
    
-  * Run make do-lint in pkgsrc/doc/guide to check the XML syntax, and fix it if
-    needed
+  * Edit the XML file(s) in pkgsrc/doc/guide/files.
    
-  * Run make in pkgsrc/doc/guide to build the HTML and ASCII version
+  * Run make extract && make do-lint in pkgsrc/doc/guide to check the XML
+    syntax, and fix it if needed.
    
-  * Run make OUTPUT=pdf in pkgsrc/doc/guide to build the PDF version.
+  * Run make in pkgsrc/doc/guide to build the HTML and ASCII version.
    
   * If all is well, run make install-doc to put the generated files into pkgsrc
     /doc.
    
   * cvs commit pkgsrc/doc/guide/files
    
-  * cvs commit pkgsrc/doc/pkgsrc.{html,txt}
+  * cvs commit -m re-generate pkgsrc/doc/pkgsrc.{html,txt}
    
   * Until the webserver on www.NetBSD.org is really updated automatically to
     pick up changes to the pkgsrc guide automatically, also run make
-    install-htdoc HTDOCSDIR=../../../htdocs (or similar, adjust HTDOCSDIR!)
+    install-htdoc HTDOCSDIR=../../../htdocs (or similar, adjust HTDOCSDIR!).
    
   * cvs commit htdocs/Documentation/pkgsrc
    

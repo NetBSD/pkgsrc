@@ -740,7 +740,7 @@ alink="#0000FF">
             <dt><span class="sect1"><a href="#id2575861">D.1.
             Targets</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2576046">D.2.
+            <dt><span class="sect1"><a href="#id2576068">D.2.
             Procedure</a></span></dt>
           </dl>
         </dd>
@@ -4250,7 +4250,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
           audit-packages installation procedure:</p>
           <pre class="screen">
 ===========================================================================
-$NetBSD: faq.xml,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $
+$NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -10861,7 +10861,7 @@ Registering depends:.
           <dt><span class="sect1"><a href="#id2575861">D.1.
           Targets</a></span></dt>
 
-          <dt><span class="sect1"><a href="#id2576046">D.2.
+          <dt><span class="sect1"><a href="#id2576068">D.2.
           Procedure</a></span></dt>
         </dl>
       </div>
@@ -10905,6 +10905,18 @@ Registering depends:.
               "emphasis"><em>must</em></span> make sure that your
               changes haven't broken the build!</p>
             </li>
+
+            <li>
+              <p><tt class=
+              "filename">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf</tt>:
+              PDF version of the pkgsrc guide.</p>
+            </li>
+
+            <li>
+              <p><tt class=
+              "filename">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps</tt>:
+              PostScript version of the pkgsrc guide.</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -10914,8 +10926,8 @@ Registering depends:.
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2576046" id=
-              "id2576046"></a>D.2.&nbsp;Procedure</h2>
+              "id2576068" id=
+              "id2576068"></a>D.2.&nbsp;Procedure</h2>
             </div>
           </div>
         </div>
@@ -10925,28 +10937,38 @@ Registering depends:.
         <div class="itemizedlist">
           <ul type="disc">
             <li>
-              <p>Edit the XML file(s) in <tt class=
-              "filename">pkgsrc/doc/guide/files</tt></p>
+              <p>Make sure you have the packages needed to
+              re-generate the pkgsrc guide (and other XML-based
+              NetBSD documentation) installed. These are
+              &#8220;<span class="quote">pkgsrc-doc</span>&#8221;
+              for creating the ASCII- and HTML-version, and
+              &#8220;<span class=
+              "quote">pkgsrc-doc-print</span>&#8221;for the
+              PostScript- and PDF version. You will need both
+              packages installed, to make sure documentation is
+              consistent across all formats. The packages can be
+              found in <tt class=
+              "filename">pkgsrc/meta-pkgs/netbsd-doc</tt> and
+              <tt class=
+              "filename">pkgsrc/meta-pkgs/netbsd-doc-print</tt>.</p>
             </li>
 
             <li>
-              <p>Run <span><b class="command">make
-              do-lint</b></span> in <tt class=
+              <p>Edit the XML file(s) in <tt class=
+              "filename">pkgsrc/doc/guide/files</tt>.</p>
+            </li>
+
+            <li>
+              <p>Run <span><b class="command">make extract
+              &amp;&amp; make do-lint</b></span> in <tt class=
               "filename">pkgsrc/doc/guide</tt> to check the XML
-              syntax, and fix it if needed</p>
+              syntax, and fix it if needed.</p>
             </li>
 
             <li>
               <p>Run <span><b class="command">make</b></span> in
               <tt class="filename">pkgsrc/doc/guide</tt> to build
-              the HTML and ASCII version</p>
-            </li>
-
-            <li>
-              <p>Run <span><b class="command">make
-              OUTPUT=pdf</b></span> in <tt class=
-              "filename">pkgsrc/doc/guide</tt> to build the PDF
-              version.</p>
+              the HTML and ASCII version.</p>
             </li>
 
             <li>
@@ -10961,7 +10983,7 @@ Registering depends:.
             </li>
 
             <li>
-              <p><span><b class="command">cvs commit
+              <p><span><b class="command">cvs commit -m re-generate
               pkgsrc/doc/pkgsrc.{html,txt}</b></span></p>
             </li>
 
@@ -10971,7 +10993,7 @@ Registering depends:.
               pkgsrc guide automatically, also run <span><b class=
               "command">make install-htdoc
               HTDOCSDIR=../../../htdocs</b></span> (or similar,
-              adjust <tt class="varname">HTDOCSDIR</tt>!)</p>
+              adjust <tt class="varname">HTDOCSDIR</tt>!).</p>
             </li>
 
             <li>
