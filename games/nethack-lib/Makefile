@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/12/24 22:29:59 pooka Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/27 08:54:55 tron Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.win.tue.nl/games/roguelike/nethack/
 
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	sys/unix/setup.sh
+CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 ALL_TARGET=		datastuff
 INSTALL_TARGET=		manpages install-dat
 
