@@ -1,0 +1,62 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/06 23:37:01 tv Exp $
+bin/comp_err
+bin/isamchk
+bin/isamlog
+bin/mysql_install_db
+bin/perror
+bin/replace
+bin/resolveip
+bin/safe_mysqld
+libexec/mysqld
+share/mysql/czech/errmsg.sys
+share/mysql/czech/errmsg.txt
+share/mysql/dutch/errmsg.sys
+share/mysql/dutch/errmsg.txt
+share/mysql/english/errmsg.sys
+share/mysql/english/errmsg.txt
+share/mysql/french/errmsg.sys
+share/mysql/french/errmsg.txt
+share/mysql/german/errmsg.sys
+share/mysql/german/errmsg.txt
+share/mysql/hungarian/errmsg.sys
+share/mysql/hungarian/errmsg.txt
+share/mysql/italian/errmsg.sys
+share/mysql/italian/errmsg.txt
+share/mysql/japanese/errmsg.sys
+share/mysql/japanese/errmsg.txt
+share/mysql/korean/errmsg.sys
+share/mysql/korean/errmsg.txt
+share/mysql/norwegian-ny/errmsg.sys
+share/mysql/norwegian-ny/errmsg.txt
+share/mysql/norwegian/errmsg.sys
+share/mysql/norwegian/errmsg.txt
+share/mysql/polish/errmsg.sys
+share/mysql/polish/errmsg.txt
+share/mysql/portuguese/errmsg.sys
+share/mysql/portuguese/errmsg.txt
+share/mysql/russian/errmsg.sys
+share/mysql/russian/errmsg.txt
+share/mysql/spanish/errmsg.sys
+share/mysql/spanish/errmsg.txt
+share/mysql/slovak/errmsg.sys
+share/mysql/slovak/errmsg.txt
+share/mysql/swedish/errmsg.sys
+share/mysql/swedish/errmsg.txt
+@exec %D/bin/mysql_install_db --force
+@dirrm share/mysql/czech
+@dirrm share/mysql/dutch
+@dirrm share/mysql/english
+@dirrm share/mysql/french
+@dirrm share/mysql/german
+@dirrm share/mysql/hungarian
+@dirrm share/mysql/italian
+@dirrm share/mysql/japanese
+@dirrm share/mysql/korean
+@dirrm share/mysql/norwegian
+@dirrm share/mysql/norwegian-ny
+@dirrm share/mysql/polish
+@dirrm share/mysql/portuguese
+@dirrm share/mysql/russian
+@dirrm share/mysql/spanish
+@dirrm share/mysql/slovak
+@dirrm share/mysql/swedish
