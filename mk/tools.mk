@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.14 2003/09/19 00:22:09 grant Exp $
+# $NetBSD: tools.mk,v 1.15 2003/09/21 17:40:40 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -198,7 +198,9 @@ _TOOLS_PROGNAME.awk=	${AWK}
 BUILD_DEPENDS+=		gawk>=3.1.1:../../lang/gawk
 _TOOLS_OVERRIDE.awk=	YES
 _TOOLS_PROGNAME.awk=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
+.  if exists(${_TOOLS_PROGNAME.awk})
 AWK:=			${_TOOLS_PROGNAME.awk}
+.  endif
 .endif
 .if !empty(PKGPATH:Mlang/gawk)
 _TOOLS_OVERRIDE.awk=	NO
@@ -213,7 +215,9 @@ _TOOLS_PROGNAME.grep=	${GREP}
 BUILD_DEPENDS+=		grep>=2.5.1:../../textproc/grep
 _TOOLS_OVERRIDE.grep=	YES
 _TOOLS_PROGNAME.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+.  if exists(${_TOOLS_PROGNAME.grep})
 GREP:=			${_TOOLS_PROGNAME.grep}
+.  endif
 .endif
 .if !empty(PKGPATH:Mtextproc/grep)
 _TOOLS_OVERRIDE.grep=	NO
@@ -228,7 +232,9 @@ _TOOLS_PROGNAME.m4=	${M4}
 BUILD_DEPENDS+=		m4>=1.4:../../devel/m4
 _TOOLS_OVERRIDE.m4=	YES
 _TOOLS_PROGNAME.m4=	${LOCALBASE}/bin/gm4	# "gm4" always exists
+.  if exists(${_TOOLS_PROGNAME.m4})
 M4:=			${_TOOLS_PROGNAME.m4}
+.  endif
 .endif
 .if !empty(PKGPATH:Mdevel/m4)
 _TOOLS_OVERRIDE.m4=	NO
@@ -243,7 +249,9 @@ _TOOLS_PROGNAME.make=	${GMAKE}
 BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
 _TOOLS_OVERRIDE.make=	YES
 _TOOLS_PROGNAME.make=	${LOCALBASE}/bin/gmake	# "gmake" always exists
+.  if exists(${_TOOLS_PROGNAME.make})
 GMAKE:=			${_TOOLS_PROGNAME.make}
+.  endif
 .endif
 .if !empty(PKGPATH:Mdevel/gmake)
 _TOOLS_OVERRIDE.make=	NO
@@ -258,7 +266,9 @@ _TOOLS_PROGNAME.sed=	${SED}
 BUILD_DEPENDS+=		gsed>=3.0.2:../../textproc/gsed
 _TOOLS_OVERRIDE.sed=	YES
 _TOOLS_PROGNAME.sed=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
+.  if exists(${_TOOLS_PROGNAME.sed})
 SED:=			${_TOOLS_PROGNAME.sed}
+.  endif
 .endif
 .if !empty(PKGPATH:Mtextproc/gsed)
 _TOOLS_OVERRIDE.sed=	NO
