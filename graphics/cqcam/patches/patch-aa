@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2004/07/10 22:18:23 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2005/01/22 03:04:31 minskim Exp $
 
 --- Makefile.orig	1997-10-28 00:07:06.000000000 +0100
 +++ Makefile
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.7 2004/07/10 22:18:23 wiz Exp $
 -#REMOTE_CFLAGS =
 +REMOTE_OBJS = xqcctl-tk.o            # code module for the remote
 +REMOTE_DEFS = -DREMOTE
-+REMOTE_LIBS = -lm -L${PREFIX}/lib -ltk83 -ltcl83    # libraries necessary for the remote
++REMOTE_LIBS = -lm -L${PREFIX}/lib -ltk -ltcl    # libraries necessary for the remote
 +REMOTE_LDFLAGS =
 +REMOTE_CFLAGS = -I${PREFIX}/include
  ######################################################################
