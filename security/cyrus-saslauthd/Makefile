@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/12 03:16:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/12 04:12:58 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.17
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -55,6 +55,7 @@ CPPFLAGS+=		-I/usr/include/krb5
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 RCD_SCRIPTS=		saslauthd
+FILES_SUBST+=		ROOT_USER=${ROOT_USER}
 
 post-configure:
 	${LN} -sf saslauthd.h ${WRKSRC}/config.h
