@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.3 1998/01/15 11:39:10 agc Exp $
 # New ports collection makefile for:	xmmix
 # Version required:     1.2-pl2
 # Date created:		97-10-24
 # Whom:			augustss@cs.chalmers.se
+#
+# $NetBSD: Makefile,v 1.4 1998/01/19 01:23:24 hubertf Exp $
+# FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
 DISTNAME=       xmmix-1.2
