@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/03 20:28:09 frueauf Exp $
+
+--- xllist.c.orig	Tue Nov 25 13:07:14 1997
++++ xllist.c	Fri Oct  2 18:19:47 1998
+@@ -991,7 +991,7 @@
+ }
+ 
+ /* xsort - built-in function 'sort' */
+-LOCAL LVAL mergesort P3C(LVAL, list, LVAL, sortfcn, LVAL, sortkey)
++LOCAL LVAL xlmergesort P3C(LVAL, list, LVAL, sortfcn, LVAL, sortkey)
+ {
+   /* Strategy: divide into two parts, (recurse) to sort each, then
+      merge them together */
+@@ -1018,8 +1018,8 @@
+     rplacd(temp, NIL);		/* split left and right parts */
+   }
+ 
+-  left = mergesort(left, sortfcn, sortkey);
+-  right = mergesort(right, sortfcn, sortkey);
++  left = xlmergesort(left, sortfcn, sortkey);
++  right = xlmergesort(right, sortfcn, sortkey);
+ 
+   {
+     LVAL result, resultt = NULL, leftarg, rightarg;
+@@ -1094,12 +1094,12 @@
+     {
+       LVAL etype = gettvecetype(list);
+       list = coerce_to_list(list);
+-      list = mergesort(list, sortfcn, sortkey);
++      list = xlmergesort(list, sortfcn, sortkey);
+       list = coerce_to_tvec(list, etype);
+       break;
+     }
+   case CONS:
+-    list = mergesort(list, sortfcn, sortkey);
++    list = xlmergesort(list, sortfcn, sortkey);
+     break;
+   default: xlbadtype(list);
+   }

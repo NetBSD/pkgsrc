@@ -1,0 +1,44 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/10/03 20:28:09 frueauf Exp $
+
+--- Makefile.in.orig	Sat Oct  3 16:06:56 1998
++++ Makefile.in	Sat Oct  3 16:48:58 1998
+@@ -34,7 +34,8 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ 
+-XLSLIB=${prefix}/lib/xlispstat
++XLSLIB=${prefix}/share/xlispstat
++LIBEXEC=${prefix}/libexec/xlispstat
+ BINDIR=${exec_prefix}/bin
+ 
+ GRAPHSYS = @GRAPHSYS@
+@@ -120,7 +121,7 @@
+ all: xlispstat
+ 
+ xlispstat: setup.shell xlisp.wks
+-	./setup.shell xlispstat ${XLSLIB}
++	./setup.shell xlispstat ${XLSLIB} ${LIBEXEC}
+ 	chmod a+x xlispstat
+ 
+ xlisp.wks: xlisp ${CMPFSLFILES} ${FSLFILES} ${AUTOFSLFILES}
+@@ -144,10 +145,10 @@
+ 
+ installexecs: xlispstat xlisp installdirs
+ 	-cp xlispstat ${BINDIR}/xlispstat
+-	-cp xlisp ${XLSLIB}
++	-cp xlisp ${LIBEXEC}
+ 
+ installlsp: xlisp.wks xlisp.hlp ${AUTOFSLFILES} ${CMPFSLFILES} installdirs
+-	-cp xlisp.wks ${XLSLIB}
++	-cp xlisp.wks ${LIBEXEC}
+ 	-cp xlisp.hlp ${XLSLIB}
+ 	-cp Autoload/_autoidx.lsp Autoload/*.fsl ${XLSLIB}/Autoload
+ 	-cp Data/*.lsp ${XLSLIB}/Data
+@@ -157,6 +158,7 @@
+ installdirs:
+ 	-mkdir -p ${BINDIR}
+ 	-mkdir -p ${XLSLIB}
++	-mkdir -p ${LIBEXEC}
+ 	-mkdir ${XLSLIB}/Data
+ 	-mkdir ${XLSLIB}/Examples
+ 	-mkdir ${XLSLIB}/Autoload
