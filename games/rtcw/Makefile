@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 13:55:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/14 09:00:46 xtraeme Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -11,6 +11,8 @@ HOMEPAGE=	http://games.activision.com/games/wolfenstein/
 COMMENT=	Return to Castle Wolfenstein for Linux
 
 ONLY_FOR_PLATFORM=	*-*-i386
+NOT_FOR_PLATFORM=	NetBSD-*-*
+
 CHECK_SHLIBS=		no
 NO_BUILD=		yes
 RTCWDIR=		${PREFIX}/lib/lokigames/rtcw
