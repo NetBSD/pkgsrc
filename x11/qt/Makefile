@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:54 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/21 18:51:31 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
 DISTNAME=	qt-1.33
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.troll.no/qt/source/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/Incoming/ \
+		ftp://ftp.caldera.com/pub/mirrors/kde/Incoming/ \
+		ftp://ftp.troll.no/qt/source/
 
 MAINTAINER=	tron@netbsd.org
 
