@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.206 2004/01/15 12:48:00 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.207 2004/01/18 18:55:24 epg Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -589,6 +589,16 @@ APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
 # which suexec will be allowed to work.
 # Possible: Any valid directory
 # Default: ${LOCALBASE}/share/httpd/htdocs
+
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
+APR_USE_DB4?= NO
+.else
+APR_USE_DB4?= YES
+.endif
+# Used in apr to determine whether to use db4.  This should be the
+# default, but apr is broken on NetBSD/powerpc so it is disabled
+# there.
+# Default: YES
 
 ARLA_CACHE?=	${LOCALBASE}/cache
 # Used in arla to specify the location of the cache used by arla. Should
