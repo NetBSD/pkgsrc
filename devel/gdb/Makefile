@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/26 06:05:24 snj Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
@@ -27,5 +27,5 @@ INFO_FILES=		bfd.info gdb.info gdbint.info mmalloc.info stabs.info
 CONFIGURE_ENV+=		ac_cv_header_curses_h=yes
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
