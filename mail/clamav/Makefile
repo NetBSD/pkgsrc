@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/05/02 11:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/07 17:39:15 jmmv Exp $
 
 DISTNAME=	clamav-0.54
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://clamav.elektrapro.com/stable/
 
@@ -15,9 +15,13 @@ USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--disable-clamav
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_GROUPS+=    ${CLAMAV_GROUP}
 PKG_USERS+=     ${CLAMAV_USER}:${CLAMAV_GROUP}::Clamav\\ User
+
+EGDIR=		${PREFIX}/share/examples/clamav
+CONF_FILES=	${EGDIR}/clamav.conf ${PKG_SYSCONFDIR}/clamav.conf
 
 pre-configure:
 	cd ${WRKSRC}; ${AUTOCONF}
