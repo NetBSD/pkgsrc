@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/05/07 18:28:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/06/11 17:21:57 tron Exp $
 ${PKGNAME}/${MACHINE_GCC_PLATFORM}/include/_G_config.h
 ${PKGNAME}/bin/${MACHINE_GCC_PLATFORM}-gcc
 ${PKGNAME}/bin/c++
@@ -164,72 +164,6 @@ ${PKGNAME}/include/g++-3/utility
 ${PKGNAME}/include/g++-3/valarray
 ${PKGNAME}/include/g++-3/vector
 ${PKGNAME}/include/g++-3/vector.h
-@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/chill.info
-${PKGNAME}/info/chill.info
-@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/chill.info
-@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/cpp.info
-${PKGNAME}/info/cpp.info
-${PKGNAME}/info/cpp.info-1
-${PKGNAME}/info/cpp.info-2
-${PKGNAME}/info/cpp.info-3
-@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/cpp.info
-@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/g77.info
-${PKGNAME}/info/g77.info
-${PKGNAME}/info/g77.info-1
-${PKGNAME}/info/g77.info-10
-${PKGNAME}/info/g77.info-11
-${PKGNAME}/info/g77.info-12
-${PKGNAME}/info/g77.info-13
-${PKGNAME}/info/g77.info-14
-${PKGNAME}/info/g77.info-15
-${PKGNAME}/info/g77.info-16
-${PKGNAME}/info/g77.info-17
-${PKGNAME}/info/g77.info-18
-${PKGNAME}/info/g77.info-19
-${PKGNAME}/info/g77.info-2
-${PKGNAME}/info/g77.info-20
-${PKGNAME}/info/g77.info-21
-${PKGNAME}/info/g77.info-3
-${PKGNAME}/info/g77.info-4
-${PKGNAME}/info/g77.info-5
-${PKGNAME}/info/g77.info-6
-${PKGNAME}/info/g77.info-7
-${PKGNAME}/info/g77.info-8
-${PKGNAME}/info/g77.info-9
-@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/g77.info
-@unexec install-info --delete --info-dir=%D/info %D/${PKGNAME}/info/gcc.info
-${PKGNAME}/info/gcc.info
-${PKGNAME}/info/gcc.info-1
-${PKGNAME}/info/gcc.info-10
-${PKGNAME}/info/gcc.info-11
-${PKGNAME}/info/gcc.info-12
-${PKGNAME}/info/gcc.info-13
-${PKGNAME}/info/gcc.info-14
-${PKGNAME}/info/gcc.info-15
-${PKGNAME}/info/gcc.info-16
-${PKGNAME}/info/gcc.info-17
-${PKGNAME}/info/gcc.info-18
-${PKGNAME}/info/gcc.info-19
-${PKGNAME}/info/gcc.info-2
-${PKGNAME}/info/gcc.info-20
-${PKGNAME}/info/gcc.info-21
-${PKGNAME}/info/gcc.info-22
-${PKGNAME}/info/gcc.info-23
-${PKGNAME}/info/gcc.info-24
-${PKGNAME}/info/gcc.info-25
-${PKGNAME}/info/gcc.info-26
-${PKGNAME}/info/gcc.info-27
-${PKGNAME}/info/gcc.info-28
-${PKGNAME}/info/gcc.info-29
-${PKGNAME}/info/gcc.info-3
-${PKGNAME}/info/gcc.info-30
-${PKGNAME}/info/gcc.info-4
-${PKGNAME}/info/gcc.info-5
-${PKGNAME}/info/gcc.info-6
-${PKGNAME}/info/gcc.info-7
-${PKGNAME}/info/gcc.info-8
-${PKGNAME}/info/gcc.info-9
-@exec install-info --info-dir=%D/info %D/${PKGNAME}/info/gcc.info
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/SYSCALLS.c.X
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1chill
@@ -303,6 +237,72 @@ ${PKGNAME}/man/man1/g++.1
 ${PKGNAME}/man/man1/g77.1
 ${PKGNAME}/man/man1/gcc.1
 etc/${PKGNAME}.mk
+@unexec install-info --delete --info-dir=%D/info %D/info/chill.info
+info/chill.info
+@exec install-info --info-dir=%D/info %D/info/chill.info
+@unexec install-info --delete --info-dir=%D/info %D/info/cpp.info
+info/cpp.info
+info/cpp.info-1
+info/cpp.info-2
+info/cpp.info-3
+@exec install-info --info-dir=%D/info %D/info/cpp.info
+@unexec install-info --delete --info-dir=%D/info %D/info/g77.info
+info/g77.info
+info/g77.info-1
+info/g77.info-10
+info/g77.info-11
+info/g77.info-12
+info/g77.info-13
+info/g77.info-14
+info/g77.info-15
+info/g77.info-16
+info/g77.info-17
+info/g77.info-18
+info/g77.info-19
+info/g77.info-2
+info/g77.info-20
+info/g77.info-21
+info/g77.info-3
+info/g77.info-4
+info/g77.info-5
+info/g77.info-6
+info/g77.info-7
+info/g77.info-8
+info/g77.info-9
+@exec install-info --info-dir=%D/info %D/info/g77.info
+@unexec install-info --delete --info-dir=%D/info %D/info/gcc.info
+info/gcc.info
+info/gcc.info-1
+info/gcc.info-10
+info/gcc.info-11
+info/gcc.info-12
+info/gcc.info-13
+info/gcc.info-14
+info/gcc.info-15
+info/gcc.info-16
+info/gcc.info-17
+info/gcc.info-18
+info/gcc.info-19
+info/gcc.info-2
+info/gcc.info-20
+info/gcc.info-21
+info/gcc.info-22
+info/gcc.info-23
+info/gcc.info-24
+info/gcc.info-25
+info/gcc.info-26
+info/gcc.info-27
+info/gcc.info-28
+info/gcc.info-29
+info/gcc.info-3
+info/gcc.info-30
+info/gcc.info-4
+info/gcc.info-5
+info/gcc.info-6
+info/gcc.info-7
+info/gcc.info-8
+info/gcc.info-9
+@exec install-info --info-dir=%D/info %D/info/gcc.info
 @dirrm ${PKGNAME}/man/man1
 @dirrm ${PKGNAME}/man
 @dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc
@@ -311,7 +311,6 @@ etc/${PKGNAME}.mk
 @dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}
 @dirrm ${PKGNAME}/lib/gcc-lib
 @dirrm ${PKGNAME}/lib
-@dirrm ${PKGNAME}/info
 @dirrm ${PKGNAME}/include/g++-3/std
 @dirrm ${PKGNAME}/include/g++-3
 @dirrm ${PKGNAME}/include
