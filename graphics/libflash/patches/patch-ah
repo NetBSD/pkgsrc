@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+$NetBSD: patch-ah,v 1.2 2001/12/03 04:44:58 mycroft Exp $
 
---- Plugin/plugin.c.orig	Sat Aug 26 06:41:31 2000
-+++ Plugin/plugin.c
+--- Plugin/plugin.c.orig	Mon Jun 12 08:24:09 2000
++++ Plugin/plugin.c	Mon Dec  3 04:43:37 2001
 @@ -162,7 +162,11 @@
  
  		FlashSetCursorOnOffMethod(This->fh, cursorOnOff, (void*)instance);
@@ -14,3 +14,11 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
  
  		return NPERR_NO_ERROR;
  	}
+@@ -193,6 +197,7 @@
+ 			XSync(This->dpy,False);
+ 			XFreePixmap(This->dpy, This->canvas);
+ 			shmdt(This->segInfo.shmaddr);
++			shmctl(This->segInfo.shmid, IPC_RMID, 0);
+ 
+ 			FlashClose(This->fh);
+ 			This->fh = 0;
