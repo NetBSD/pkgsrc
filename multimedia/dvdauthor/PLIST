@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/25 06:58:42 sekiya Exp $
+bin/dvdauthor
+bin/dvddirdel
+bin/dvdunauthor
+bin/mpeg2desc
+bin/spumux
+bin/spuunmux
+man/man1/dvdauthor.1
+man/man1/spumux.1
