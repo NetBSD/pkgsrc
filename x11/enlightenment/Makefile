@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/11/08 21:22:14 tron Exp $
+# $NetBSD: Makefile,v 1.18 2000/03/05 22:37:58 soren Exp $
 
 DISTNAME=		enlightenment-0.16.2
 CATEGORIES=		x11 gnome
@@ -8,7 +8,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.enlightenment.org/
 
 DEPENDS+=		esound-*:../../audio/esound
-DEPENDS+=		imlib-*:../../graphics/imlib
+DEPENDS+=		imlib>=1.9.8:../../graphics/imlib
 DEPENDS+=		fnlib-0.5:../../graphics/fnlib
 DEPENDS+=		freetype-*:../../graphics/freetype
 DEPENDS+=		libghttp-*:../../www/libghttp
