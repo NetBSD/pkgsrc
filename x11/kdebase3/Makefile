@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/28 07:15:39 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/02 02:11:19 markd Exp $
 
 DISTNAME=	kdebase-3.0.3
 CATEGORIES=	x11
@@ -10,9 +10,10 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
-CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_DIR}"
+CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
+CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap}"
 CONFIGURE_ARGS+=	--without-pam
 CONFIGURE_ARGS+=	--without-cdparanoia
 CONFIGURE_ARGS+=	--without-lame
@@ -21,7 +22,7 @@ CONFIGURE_ARGS+=	--without-vorbis
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-LIBS+=			-Wl,--export-dynamic
+LIBS+=			${EXPORT_SYMBOLS_LDFLAGS}
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms
@@ -35,14 +36,14 @@ BUILD_DEFS+=		KDE3_NSPLUGINS
 
 .if ${KDE3_NSPLUGINS} == "YES"
 PLIST_SRC+=		${PKGDIR}/PLIST.nsplugins
-CONFIGURE_ARGS+=	--with-motif-includes="${BUILDLINK_DIR}/include"
-CONFIGURE_ARGS+=	--with-motif-libraries="${BUILDLINK_DIR}/lib"
-.include "../../mk/motif.buildlink.mk"
+CONFIGURE_ARGS+=	--with-motif-includes="${BUILDLINK_PREFIX.motif}/include"
+CONFIGURE_ARGS+=	--with-motif-libraries="${BUILDLINK_PREFIX.motif}/lib"
+.include "../../mk/motif.buildlink2.mk"
 .else
 CONFIGURE_ARGS+=	--without-motif
 .endif
 
-_KDE3_EXTRA_INCLUDES=	${BUILDLINK_DIR}/include:${BUILDLINK_X11_DIR}/include:${BUILDLINK_DIR}/include/freetype2
+_KDE3_EXTRA_INCLUDES=	${LOCALBASE}/include:${X11BASE}/include:${BUILDLINK_PREFIX.freetype2}/include/freetype2
 
 # Don't execute kappfinder_install at install-time.  This causes random
 # applications to be found which causes random .desktop files to be created
@@ -110,10 +111,9 @@ post-install:
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
 .endif
 
-.include "../../databases/openldap/buildlink.mk"
-.include "../../graphics/freetype2/buildlink.mk"
-.include "../../x11/qt3-tools/buildlink.mk"
-.include "../../x11/kde3/buildlink.mk"
-.include "../../x11/kdelibs3/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../databases/openldap/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../x11/kde3/buildlink2.mk"
+.include "../../x11/kdelibs3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
