@@ -1,0 +1,39 @@
+--- src/cpuintrf.c.orig	Fri Mar 26 10:03:35 1999
++++ src/cpuintrf.c	Sun May  9 14:41:55 1999
+@@ -82,9 +82,34 @@
+ #define LOG(x)
+ #endif
+ 
+-#define CPUINFO_SIZE	(5*sizeof(int)+4*sizeof(void*)+2*sizeof(double))
++/*
++ * The filler object and the CPUINFO_* defs have various problems. (1) If
++ * there is a hole at the end of the struct, the first few bytes of filler
++ * won't extend the size. This is the case if the last object isn't one with
++ * the maximum alignment restriction. (2) The calculation of CPUINFO_SIZE
++ * ignores internal holes added by the compiler for field alignment. That
++ * can be fixed by reordering fields, but then you get problem #1.
++ */
++
++typedef struct cpuinfo_test_struct
++{
++	struct cpu_interface *intf; 	/* pointer to the interface functions */
++	int iloops; 			/* number of interrupts remaining this frame */
++	int totalcycles;		/* total CPU cycles executed */
++	int vblankint_countdown;	/* number of vblank callbacks left until we interrupt */
++	int vblankint_multiplier;	/* number of vblank callbacks per interrupt */
++	void *vblankint_timer;		/* reference to elapsed time counter */
++	double vblankint_period;	/* timing period of the VBLANK interrupt */
++	void *timedint_timer;		/* reference to this CPU's timer */
++	double timedint_period; 	/* timing period of the timed interrupt */
++	int save_context;		/* need to context switch this CPU? yes or no */
++	void *context;			/* dynamically allocated context buffer */
++	UINT8 filler[0];		/* make the array aligned to next power of 2 */
++} cpuinfo_test;
++
+ /* How do I calculate the next power of two from CPUINFO_SIZE using a macro? */
+-#define CPUINFO_ALIGN	(64-CPUINFO_SIZE)
++
++#define CPUINFO_ALIGN ((sizeof(cpuinfo_test) > 64 ? 128 : 64) - sizeof(cpuinfo_test))
+ 
+ struct cpuinfo
+ {
