@@ -1,12 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2000/12/11 16:43:12 jlam Exp $
+# $NetBSD: INSTALL,v 1.4 2001/03/25 11:29:37 wennmach Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 USER=@PGUSER@
 GROUP=@PGGROUP@
+PGHOME=@PGHOME@
 
 ADDUSER="@ADDUSER@"
 ADDGROUP="@ADDGROUP@"
@@ -20,8 +21,6 @@ MKDIR="@MKDIR@"
 RM="@RM@"
 SU="@SU@"
 TOUCH="@TOUCH@"
-
-PGHOME=${PKG_PREFIX}/${USER}
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -54,8 +53,16 @@ EOF
 		echo "Creating '${USER}' user..."
 		${ADDUSER} \
 			-c "PostgreSQL database administrator" \
-			-b ${PKG_PREFIX} \
-			-g ${GROUP} -s /bin/sh ${USER}
+			-d ${PGHOME} \
+			-g ${GROUP} \
+			-s /bin/sh \
+			${USER}
+	# "useradd -d" in NetBSD-1.5 creates a home directory and  populates
+	# it with dot files regardless if -m was given or not. This behaviour
+	# was changed in later versions. We delete the newly created .profile
+	# here so that the sample profile.pgsql  gets installed in the
+	# POST-INSTALL stage.
+		${RM} -f ${PGHOME}/.profile
 		echo "Done."
 	else
 		echo "User '${USER}' already exists...proceeding."
@@ -66,7 +73,9 @@ EOF
 
 POST-INSTALL)
 	if [ ! -f ${PGHOME}/.profile ]; then
-		${CP} ${PGHOME}/.profile.pgsql ${PGHOME}/.profile
+		${CP} ${PKG_PREFIX}/share/postgresql/profile.pgsql.sample \
+			${PGHOME}/.profile
+		${CHOWN} ${USER} ${PGHOME}/.profile
 		${CHMOD} 644 ${PGHOME}/.profile
 	fi
 	${CAT} << EOF

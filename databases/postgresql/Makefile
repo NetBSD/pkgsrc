@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2001/02/26 18:09:40 lukem Exp $
+# $NetBSD: Makefile,v 1.63 2001/03/25 11:29:37 wennmach Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -18,16 +18,18 @@ NOT_FOR_PLATFORM=	*-*-mips
 
 # PGUSER	username of the database administrator
 # PGGROUP	group of the database administrator
+# PGHOME	home directory of the database administrator and
+#		location of the databases
 #
 PGUSER?=		pgsql
 PGGROUP?=		pgsql
+PGHOME?=		${PREFIX}/${PGUSER}
 
 MESSAGE=		${FILESDIR}/post-install-notes
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
-PGHOME=			${PREFIX}/${PGUSER}
 
-BUILD_DEFS=		PGUSER PGROUP
+BUILD_DEFS=		PGUSER PGROUP PGHOME
 PLIST_SUBST=		PGUSER=${PGUSER}
 PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SRC+=		${PKGDIR}/PLIST.spi
@@ -66,6 +68,7 @@ post-build:
 		< ${FILESDIR}/profile.pgsql > ${WRKDIR}/profile.pgsql
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g" \
 		-e "s|@PGUSER@|${PGUSER}|g" \
+		-e "s|@PGHOME@|${PGHOME}|g" \
 		-e "s|@SU@|${SU}|g" \
 		< ${FILESDIR}/pgsql.sh > ${WRKDIR}/pgsql.sh
 
@@ -84,10 +87,12 @@ pre-install:
 
 	${SED}	-e 's|@PGUSER@|${PGUSER}|g' \
 		-e "s,@PGGROUP@,${PGGROUP},g" \
+		-e "s,@PGHOME@,${PGHOME},g" \
 		-e "s,@CAT@,${CAT},g" \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s,@PGUSER@,${PGUSER},g" \
 		-e "s,@PGGROUP@,${PGGROUP},g" \
+		-e "s,@PGHOME@,${PGHOME},g" \
 		-e "s,@ADDUSER@,${ADDUSER},g" \
 		-e "s,@ADDGROUP@,${ADDGROUP},g" \
 		-e "s,@CAT@,${CAT},g" \
@@ -120,9 +125,8 @@ post-install:
 .for PROG in ecpg pg_dump pg_encoding pg_id pg_passwd pg_version postgres psql
 	strip ${PREFIX}/bin/${PROG}
 .endfor
-	${INSTALL_DATA} ${WRKDIR}/profile.pgsql ${PGHOME}/.profile.pgsql
-	${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PGHOME}
-	${CHOWN} -R ${PGUSER}:${PGGROUP} ${PGHOME}
+	${INSTALL_DATA} ${WRKDIR}/profile.pgsql \
+		${PREFIX}/share/postgresql/profile.pgsql.sample
 
 	${INSTALL_SCRIPT} ${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
 

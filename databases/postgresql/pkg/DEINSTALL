@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.4 2000/12/11 16:43:12 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.5 2001/03/25 11:29:37 wennmach Exp $
 #
 
 PKGNAME=$1
@@ -8,10 +8,10 @@ STAGE=$2
 
 USER="@PGUSER@"
 GROUP="@PGGROUP@"
+PGHOME="@PGHOME@"
 
 CAT="@CAT@"
 
-PGHOME=${PKG_PREFIX}/${USER}
 
 case ${STAGE} in
 DEINSTALL)
