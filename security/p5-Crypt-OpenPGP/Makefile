@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:40 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/02 11:41:57 agc Exp $
 #
 
 DISTNAME=		Crypt-OpenPGP-0.17
@@ -27,8 +27,7 @@ DEPENDS+=		p5-Crypt-DSA-[0-9]*:../../security/p5-Crypt-DSA
 # hmmm
 #DEPENDS+=		p5-Crypt-IDEA-[0-9]*:../../security/p5-Crypt-IDEA
 
-# hmmm
-IS_INTERACTIVE=		# defined
+INTERACTIVE_STAGE=	configure # need to select ciphers and digests
 
 USE_PERL5=		# defined
 # more than one?
