@@ -1,5 +1,5 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.5 2002/06/25 12:18:40 itojun Exp $
+$NetBSD: MESSAGE,v 1.6 2002/06/26 11:38:44 itojun Exp $
 
                            *===* NOTICE *===*
 
@@ -13,7 +13,7 @@ You need to create UID sshd, and GID sshd, for privilege separation.  For
 security reasons, UsePrivilegeSeparation has to be yes (the default value).
 For example, add the following into /etc/passwd and /etc/group:
 
-	sshd:*:16:16:sshd privsep:/var/chroot/sshd:/sbin/nologin
+	sshd:*:16:16::0:0:sshd privsep:/var/chroot/sshd:/sbin/nologin
 	sshd:*:16:
 
 ==========================================================================
