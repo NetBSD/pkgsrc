@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 13:55:30 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 04:59:52 snj Exp $
 
 DISTNAME=	sigrot_1.2-1
 PKGNAME=	sigrot-1.2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://packages.debian.org/stable/mail/sigrot.html
 COMMENT=	Signature file rotation program
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 DOCDIR=		${PREFIX}/share/doc/sigrot
