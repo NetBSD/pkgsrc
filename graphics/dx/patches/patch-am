@@ -1,0 +1,11 @@
+--- src/uipp/dxuilib/PacketIF.C.orig	Sat Jul 31 17:08:32 1999
++++ src/uipp/dxuilib/PacketIF.C	Sat Jan 29 18:53:56 2000
+@@ -1388,7 +1388,7 @@
+     int fd;
+     int sts;
+     int oldPort;
+-#if !defined(linux) && !defined(cygwin) && !defined(freebsd)
++#if !defined(linux) && !defined(cygwin) && !defined(freebsd) && !defined(__NetBSD__)
+     extern int errno;
+ #endif
+     int tries;
