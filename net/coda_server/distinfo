@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:13 wiz Exp $
 
-MD5 (coda-4.6.6.tgz) = e05c12cbe7bd20619a253ea24b4f951e
+SHA1 (coda-4.6.6.tgz) = 4872262bb08cef32f65b7e1b8b61ae9658bbe0d3
+Size (coda-4.6.6.tgz) = 2583462 bytes
 SHA1 (patch-aa) = fdced1cd7811a9adb732c05a1a03b07814eb49a3
 SHA1 (patch-ab) = df2acb522bf10721bef1cd56d085c11a82a1fac5
 SHA1 (patch-ba) = 76d001a971abc011371d7f04097e695577c9390c

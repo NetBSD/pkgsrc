@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:12 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:23 wiz Exp $
 
-MD5 (netatalk-990130.tar.gz) = 4cdc86e616e61ece3a581fb30bd85528
+SHA1 (netatalk-990130.tar.gz) = 30f16274edc756bd68b0dc00946d5978b7102b3c
+Size (netatalk-990130.tar.gz) = 244708 bytes
 SHA1 (patch-aa) = 18980f712f55c07b82b17489a2a0218d5ee1d76b
 SHA1 (patch-ab) = 7ea187513b53a9e3b57db7e7584a45e948aceb32
 SHA1 (patch-ac) = 92a3f18cc48723eed347f7c8c28f866488312126

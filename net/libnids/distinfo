@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:20 wiz Exp $
 
-MD5 (libnids-1.14.tar.gz) = d81f29181d3059067c26b341938e95c7
+SHA1 (libnids-1.14.tar.gz) = b74640282d545a295643a74c6df60bc1f0aa4948
+Size (libnids-1.14.tar.gz) = 67695 bytes

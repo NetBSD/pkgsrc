@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:38 wiz Exp $
 
-MD5 (ppp-001107.src.tar.gz) = 9abb06fbf3bbb1eb8fe6d73423248840
+SHA1 (ppp-001107.src.tar.gz) = 3ba073a99f747579d8ffbe7f80b72a2af924eca2
+Size (ppp-001107.src.tar.gz) = 380594 bytes
 SHA1 (patch-aa) = 50a3fc373f329071fe2a01da2db68487d7936365
 SHA1 (patch-ab) = 5ba8182dad8777c519fb6e695ea6c54f3a1e3440
 SHA1 (patch-ac) = 22825b6be3847679a5f49a102a8e5a37d44d93fd

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:09 wiz Exp $
 
-MD5 (airportbasestationconfig-1.2.2/configurator.zip) = 02f4057cc5419f661e1032f02bed28f9
+SHA1 (airportbasestationconfig-1.2.2/configurator.zip) = 38ac3f0709036aed9b5baee87e04f72017e55646
+Size (airportbasestationconfig-1.2.2/configurator.zip) = 116768 bytes

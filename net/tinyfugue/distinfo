@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:36 wiz Exp $
 
-MD5 (tf-40a6.tar.gz) = 1606dd42b62bcf19242177d3719473e8
+SHA1 (tf-40a6.tar.gz) = d813227481e855fc527efd44dc3a5e502ce692f0
+Size (tf-40a6.tar.gz) = 330574 bytes
 SHA1 (patch-ab) = f6a691a2d6f1555da2adacb419b0f63316ab5b9a
 SHA1 (patch-ac) = fddc7d415ca8716be1fc45c95a5b5e6888cbf1ae

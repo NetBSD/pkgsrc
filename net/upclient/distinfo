@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:38 wiz Exp $
 
-MD5 (upclient-4.09.tar.gz) = 9bf44128c2b24df3e88afe7b10a50e73
+SHA1 (upclient-4.09.tar.gz) = cc1b8a0172f705b317e328e4e937964b79cb7a69
+Size (upclient-4.09.tar.gz) = 15454 bytes
 SHA1 (patch-aa) = 7bbce119c4e84b8b16294d10871eb2c83d31c55c
 SHA1 (patch-ab) = 55347f85a97c7a910f0085ac4cdb2447b14039dc

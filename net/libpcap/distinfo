@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:21 wiz Exp $
 
-MD5 (libpcap-0.6.1.tar.gz) = 9e79abace0c9776e2f90514638ef37e6
+SHA1 (libpcap-0.6.1.tar.gz) = 0b1f7290ba9859141c6dbe836c91b20c159210b8
+Size (libpcap-0.6.1.tar.gz) = 170681 bytes

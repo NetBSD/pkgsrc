@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:20 wiz Exp $
 
 SHA1 (lftp-2.3.9.tar.bz2) = 5bf4c7ed4ae59b735ff446b2dce792f331f9cf4c
+Size (lftp-2.3.9.tar.bz2) = 838319 bytes

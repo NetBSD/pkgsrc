@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:00 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:31 wiz Exp $
 
-MD5 (ppp-2.3.9.tar.gz) = 3bda111ae5391ac8b875c14a49514fd1
-MD5 (ppp-2.3.8-mppe-others-norc4_TH7.diff.gz) = 07480c9f47268d66fe93cf42b3a7ed9a
+SHA1 (ppp-2.3.9.tar.gz) = ef5ef4686f6738193ec88972902f9a5a6fb8f5dd
+Size (ppp-2.3.9.tar.gz) = 768540 bytes
 SHA1 (patch-aa) = 847bd9cc39f47a7c76e5b6d28ecf1b9a08a7032d
 SHA1 (patch-ab) = 8f9008515d5facc61d1b3137e260163b813b5158
 SHA1 (patch-ac) = 22c4393a8c9b72ca5d34f209feb3f8c291246024

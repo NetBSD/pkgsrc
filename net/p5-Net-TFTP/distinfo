@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:27 wiz Exp $
 
-MD5 (Net-TFTP-0.10.tar.gz) = e65e0a255e40df72086492e325d93464
+SHA1 (Net-TFTP-0.10.tar.gz) = e09da51ba2da1388ae769c2ed8e08c0cc49a10ef
+Size (Net-TFTP-0.10.tar.gz) = 6525 bytes
