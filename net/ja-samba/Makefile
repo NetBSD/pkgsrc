@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2004/06/05 13:16:35 taca Exp $
+# $NetBSD: Makefile,v 1.27 2004/07/23 16:45:42 taca Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ja-samba-${SAMBA_BASE_VERS}.${SAMBA_JA_VERS}
+PKGREVISION=		1
 CATEGORIES=		net
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
