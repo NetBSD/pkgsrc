@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/07/18 16:20:20 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2002/07/19 12:43:47 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -49,9 +49,12 @@ SUBDIR+=	mozilla-fonts
 SUBDIR+=	ms-ttf
 SUBDIR+=	p5-Font-AFM
 SUBDIR+=	p5-Font-TTF
+SUBDIR+=	t1lib
+SUBDIR+=	t1utils
 SUBDIR+=	ttf2pt1
 SUBDIR+=	ttftot42
 SUBDIR+=	ttmkfdir
+SUBDIR+=	type1inst
 SUBDIR+=	watanabe_vfont
 
 .include "../mk/bsd.pkg.subdir.mk"

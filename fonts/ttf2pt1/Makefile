@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/16 15:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/19 12:43:51 wiz Exp $
 #
 
 DISTNAME=	ttf2pt1-3.4.0
@@ -11,7 +11,7 @@ MAINTAINER=	reinoud@netbsd.org
 HOMEPAGE=	http://ttf2pt1.sourceforge.net
 COMMENT=	TrueType font converter to Postscript type 1
 
-DEPENDS+=	t1utils-[0-9]*:../../textproc/t1utils
+DEPENDS+=	t1utils-[0-9]*:../../fonts/t1utils
 
 USE_CONFIG_WRAPPER=	yes
 
