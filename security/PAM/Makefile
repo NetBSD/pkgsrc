@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2004/10/03 00:18:07 tv Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/16 07:46:57 jlam Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
 PKGNAME=	${DISTNAME:S/Linux-//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.kernel.org/pub/linux/libs/pam/pre/library/ \
 		ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/ \
@@ -19,6 +19,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-docdir=${PREFIX}/share/doc/PAM
@@ -58,15 +59,15 @@ CONFIGURE_ARGS+=	--without-libcrack
 PLIST_SUBST+=		USE_LIBCRACK="@comment "
 .endif
 
-.if defined(LDCONFIG) && !exists(${LDCONFIG})
-LDCONFIG=
-.endif
-MAKE_ENV+=	PKG_LDCONFIG=${LDCONFIG}
-
 .if !empty(OPSYS:M*BSD)
 CFLAGS+=		-DUSE_GETLOGIN=1
 .endif
 MAKE_FLAGS+=		OS_CFLAGS="${CFLAGS}"
+
+# pam_userdb uses ndbm if it finds it, otherwise it will use Berkeley DB.
+.if !exists(/usr/include/ndbm.h)
+.  include "../../mk/bdb.buildlink3.mk"
+.endif
 
 PKG_SYSCONFSUBDIR?=	pam
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -84,10 +85,15 @@ CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASEDIR}/pam.conf
 .for FILE in ${CFILES}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
-
-.include "../../mk/bdb.buildlink3.mk"
+SPECIAL_PERMS=		${PREFIX}/sbin/unix_chkpwd ${SETUID_ROOT_PERMS}
 
 post-configure:
+	cd ${WRKSRC}; for file in Make.Rules; do			\
+		${SED}	-e "s|@LIBTOOL@|${LIBTOOL}|g"			\
+			-e "s|@SHLIBTOOL@|${SHLIBTOOL}|g"		\
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+	done
 	cd ${WRKSRC}; for file in libpam/pam_private.h; do		\
 		${SED}	-e "s|/etc/|${PKG_SYSCONFBASEDIR}/|g"		\
 			$$file > $$file.new;				\
@@ -110,6 +116,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/security/modules/pam_limits/limits.skel \
 		${EGDIR}/limits.conf
 .endif
-	${INSTALL_DATA_DIR} ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
