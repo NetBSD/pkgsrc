@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3098 2003/08/25 11:28:13 drochner Exp $
+$NetBSD: CHANGES,v 1.3099 2003/08/25 12:35:41 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rpc2 to 1.19 [drochner 2003-08-25]
 	Updated rvm to 1.8 [drochner 2003-08-25]
 	Updated verilog-current to 20030815 [drochner 2003-08-25]
+	Updated tnftp to 20030825 [lukem 2003-08-25]
