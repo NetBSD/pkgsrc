@@ -57,7 +57,7 @@ if (`ifconfig -a | grep fe80: | wc -l` <= 0 or
 #
 # Figure out IP#s etc.
 #
-$localadr4 = `ifconfig $out_if inet | grep inet`;
+$localadr4 = `ifconfig $out_if inet | grep inet | grep -v alias`;
 $localadr4 =~ s/^.*inet\s*//;
 $localadr4 =~ s/\s.*$//;
 chomp($localadr4);
