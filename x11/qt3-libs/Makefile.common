@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2003/09/28 05:27:06 grant Exp $
+# $NetBSD: Makefile.common,v 1.24 2003/10/05 10:07:09 xtraeme Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -86,6 +86,7 @@ post-patch:
 		-e 's:@YACC@:${YACC}:g' \
 		-e 's:@AR@:${AR}:g' \
 		-e 's:@LIBQT@:${LIBQT}:g' \
+		-e 's:@PTHREAD_LDFLAGS@:${PTHREAD_LDFLAGS}:g' \
 		${FILESDIR}/qmake.conf > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \
 		${CP} ${WRKSRC}/qmake.conf $${dir}; \
