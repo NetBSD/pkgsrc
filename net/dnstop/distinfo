@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/01/01 14:26:36 cjep Exp $
+$NetBSD: distinfo,v 1.4 2003/04/23 16:38:50 wiz Exp $
 
 SHA1 (dnstop-20021224.tar.gz) = 94aada6e3fa0882923cd6776a003490ecef83dd9
 Size (dnstop-20021224.tar.gz) = 6460 bytes
-SHA1 (dnstop.8) = 462848986b993981611fa38bdd7636fc735e7d45
-Size (dnstop.8) = 1464 bytes
+SHA1 (dnstop.8) = cd4b6110bf3334e0b803d2c23edc6dc7afce03cb
+Size (dnstop.8) = 1463 bytes
