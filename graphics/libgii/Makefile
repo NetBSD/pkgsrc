@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/02 12:03:41 wiz Exp $
 #
 
-DISTNAME=	libgii-0.6
-PKGREVISION=	1
+DISTNAME=	libgii-0.8.3.src
+PKGNAME=	${DISTNAME:S/.src//}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/current/
+MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/v2.0/ \
+		http://www.ggi-project.org/ftp/ggi/v2.0/ \
+		${MASTER_SITE_SOURCEFORGE:=ggi/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ggi-project.org/
@@ -25,5 +29,8 @@ CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
 PKG_SYSCONFSUBDIR=	ggi
 EGDIR=			${PREFIX}/share/examples/ggi
 CONF_FILES=		${EGDIR}/libgii.conf ${PKG_SYSCONFDIR}/libgii.conf
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/filter
+CONF_FILES+=		${EGDIR}/filter/keytrans ${PKG_SYSCONFDIR}/filter/keytrans
+CONF_FILES+=		${EGDIR}/filter/mouse ${PKG_SYSCONFDIR}/filter/mouse
 
 .include "../../mk/bsd.pkg.mk"
