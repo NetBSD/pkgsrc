@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/01/31 09:53:11 markd Exp $
+# $NetBSD: Makefile,v 1.39 2005/01/31 13:33:23 markd Exp $
 
 DISTNAME=	netatalk-2.0.2
 PKGREVISION=	1
@@ -82,6 +82,7 @@ pre-install:
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
