@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/09/19 19:24:26 agc Exp $
+# $NetBSD: Makefile,v 1.44 2000/10/15 17:28:01 itojun Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -9,6 +9,7 @@
     SUBDIR += cyrus-sasl
     SUBDIR += ddos-scan
     SUBDIR += dsniff
+    SUBDIR += egd
     SUBDIR += fortify
     SUBDIR += fsh
     SUBDIR += gnupg
@@ -25,6 +26,7 @@
     SUBDIR += openssl
     SUBDIR += p5-Digest-MD5
     SUBDIR += p5-MD5
+    SUBDIR += p5-SHA
     SUBDIR += pgp2
     SUBDIR += pgp5
     SUBDIR += pks
