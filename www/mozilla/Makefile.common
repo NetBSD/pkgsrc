@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2004/02/05 17:29:06 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.32 2004/02/09 03:26:39 jlam Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -124,8 +124,6 @@ PTHREAD_OPTS+=	native optional
 
 .if !empty(CC_VERSION:Mgcc*)
 COPTS?=			-O2
-.else
-COPTS?=			-O
 .endif
 CONFIGURE_ARGS+=	--enable-optimize=${COPTS:Q}
 
