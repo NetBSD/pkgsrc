@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/06/17 20:13:10 tron Exp $
+# $NetBSD: Makefile,v 1.46 2002/06/17 20:21:46 tron Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -31,7 +31,7 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
-BUILD_DEFS+=    USE_INET6
+BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_LDAP USE_DB2 USE_STARTTLS
 
 .include "../../mk/bsd.prefs.mk"
 
