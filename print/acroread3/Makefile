@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 17:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/25 04:18:11 hubertf Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -67,7 +67,7 @@ pre-install:
 #	${SED} -e 's|@PLATFORM@|${PLATFORM}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 do-install:
-	@${MKDIR} ${PREFIX}/Acrobat3
+	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat3
 	@${ECHO} accept | PAGER=${CAT} ReadInstallDir=${PREFIX}/Acrobat3 ${WRKSRC}/INSTALL
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/16 13:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/25 04:17:37 hubertf Exp $
 #
 
 DISTNAME=		snd
@@ -22,7 +22,7 @@ MAKE_ENV+=		MOTIFBASE=${MOTIFBASE}
 do-install:
 	cd ${WRKSRC} ; ${INSTALL_PROGRAM} snd ${PREFIX}/bin
 	cd ${WRKSRC} ; ${INSTALL_DATA} Snd.ad ${PREFIX}/lib/X11/app-defaults/Snd
-	${MKDIR} ${PREFIX}/share/doc/snd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snd
 	cd ${WRKSRC} ; ${INSTALL_DATA} *.gif *.html *.txt README.Snd ${PREFIX}/share/doc/snd
 
 .include "../../mk/bsd.pkg.mk"

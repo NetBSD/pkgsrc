@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:59 hubertf Exp $
 
 DISTNAME=	sendmail.8.8.8
 PKGNAME=	sendmail-8.8.8
@@ -123,7 +123,7 @@ do-configure:
 	done
 
 pre-install:
-	${MKDIR} ${PREFIX}/libexec/sendmail ${M4DIR} ${M4DIR}/cf \
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/sendmail ${M4DIR} ${M4DIR}/cf \
 	  ${M4DIR}/domain ${M4DIR}/feature ${M4DIR}/hack ${M4DIR}/m4 \
 	  ${M4DIR}/mailer ${M4DIR}/ostype ${M4DIR}/siteconfig \
 	  ${M4DIR}/mailer ${M4DIR}/sh

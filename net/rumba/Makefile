@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 18:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/25 04:18:08 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.2 1997/07/21 19:28:46 max Exp
 #
 
@@ -27,7 +27,7 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rumba ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKDIR}/unrumba/unrumba ${PREFIX}/sbin
-	${MKDIR} ${PREFIX}/share/doc/rumba
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rumba
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/rumba/README
 	${INSTALL_MAN} ${WRKSRC}/smbmount.8 ${PREFIX}/man/man8/rumba.8
 

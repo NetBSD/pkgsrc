@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:38 hubertf Exp $
 # FreeBSD Id: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp
 
 DISTNAME=	xengine-1.0.1
@@ -23,8 +23,8 @@ pre-patch:
 	@cd ${WRKSRC} ; ${PATCH} ${PATCH_DIST_ARGS} < xengine.patch1
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/doc/xengine
-	@${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/xengine
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xengine
+	@${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xengine
 	@${ECHO} ""
 	@${ECHO} "Example value:"
 	@${ECHO} "   1067 RPMs with P100, Winner 2000PRO/X, resolution: 1152x900"

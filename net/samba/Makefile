@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/02/17 18:19:35 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2001/02/25 04:18:08 hubertf Exp $
 
 DISTNAME=		samba-2.0.7-ja-1.3
 PKGNAME=		samba-2.0.7.1.3
@@ -83,7 +83,7 @@ post-install:
 
 	# Install Samba examples.
 	#
-	${MKDIR} ${PREFIX}/share/examples/samba
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/samba
 	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${PREFIX}/share/examples/samba
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/samba
 	${CHMOD} -R ugo-w ${PREFIX}/share/examples/samba

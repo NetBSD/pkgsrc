@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/02/17 18:38:36 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2001/02/25 04:17:47 hubertf Exp $
 #
 
 DISTNAME=		xmame-0.37b6.1
@@ -63,7 +63,7 @@ do-install:
 		${PREFIX}/bin/xmame)
 	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.6 \
 		${PREFIX}/man/man6/xmame.6)
-	${MKDIR} ${ROMPATH}
+	${INSTALL_DATA_DIR} ${ROMPATH}
 	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${ROMPATH}/xmamerc)
 	@${ECHO} Remember to set ROMPATH to ${ROMPATH}.
 

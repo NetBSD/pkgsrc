@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/03/31 11:52:07 flathill Exp $
 
 DISTNAME=	namazu-1.3.0.11
@@ -54,7 +54,7 @@ post-build:
 post-install:
 	@cd ${WRKSRC}; ${MAKE} install_cgi
 	@${INSTALL_SCRIPT} ${WRKDIR}/bnamazu ${LOCALBASE}/bin
-	@${TEST} -d ${LOCALBASE}/etc/namazu || ${MKDIR} ${LOCALBASE}/etc/namazu
+	@${TEST} -d ${LOCALBASE}/etc/namazu || ${INSTALL_DATA_DIR} ${LOCALBASE}/etc/namazu
 	@${SH} ${WRKDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

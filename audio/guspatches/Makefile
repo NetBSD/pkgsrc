@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/20 11:40:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:36 hubertf Exp $
 #
 
 DISTNAME=	dgguspat
@@ -27,7 +27,7 @@ do-build:
 		${WRKDIR}/timidity.cfg
 
 do-install:
-	${MKDIR} ${PREFIX}/share/timidity
+	${INSTALL_DATA_DIR} ${PREFIX}/share/timidity
 	cd ${PREFIX}/share/timidity && unzip -oqL ${DISTDIR}/${DISTFILES}
 	${INSTALL_DATA} ${FILESDIR}/midia.cfg ${PREFIX}/share/timidity
 	${INSTALL_DATA} ${WRKDIR}/gravis.cfg ${PREFIX}/share/timidity

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:18:21 hubertf Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
@@ -28,9 +28,9 @@ LOCALEDIR=		share
 .endif
 
 post-install:
-	${MKDIR} ${PREFIX}/share/sawfish/themes
+	${INSTALL_DATA_DIR} ${PREFIX}/share/sawfish/themes
 	${TOUCH} ${PREFIX}/share/sawfish/themes/.directory
-	${MKDIR} ${PREFIX}/share/sawfish/sounds
+	${INSTALL_DATA_DIR} ${PREFIX}/share/sawfish/sounds
 	${TOUCH} ${PREFIX}/share/sawfish/sounds/.directory
 
 .include "../../wm/sawfish/Makefile.common"

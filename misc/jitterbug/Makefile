@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/17 18:09:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/25 04:18:02 hubertf Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -170,8 +170,8 @@ pre-install:
 	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
-	${MKDIR} ${PREFIX}/${JB_CONFIGDIR}
-	-${MKDIR} ${PREFIX}/${JB_DATADIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/${JB_CONFIGDIR}
+	-${INSTALL_DATA_DIR} ${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${CONFIGDIR}/footer.html ${PREFIX}/${JB_CONFIGDIR}
 	[ -f ${PREFIX}/${JB_DATADIR}/footer.html ] ||                         \
@@ -202,23 +202,23 @@ do-install:
 	[ -f ${PREFIX}/${JB_DATADIR}/users ] ||                               \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${CONFIGDIR}/users ${PREFIX}/${JB_DATADIR}
-	-${MKDIR} ${PREFIX}/${CGIBINDIR}
+	-${INSTALL_PROGRAM_DIR} ${PREFIX}/${CGIBINDIR}
 	${INSTALL} -c -o root -g nobody -m 4710                               \
 		${WRKSRC}/jitterbug ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}
 	${LN} -f ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE} ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
 	${CHOWN} root ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
 	${CHGRP} nobody ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
 	${CHMOD} 4710 ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
-	${MKDIR} ${PREFIX}/${JB_USER}/bin
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/${JB_USER}/bin
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 755                     \
 		${WRKSRC}/new_message ${PREFIX}/${JB_USER}/bin
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${WRKSRC}/jitterbug ${PREFIX}/${JB_USER}/bin
-	${MKDIR} ${PREFIX}/${JB_USER}/etc
+	${INSTALL_DATA_DIR} ${PREFIX}/${JB_USER}/etc
 	[ -f ${PREFIX}/${JB_USER}/etc ] ||                                    \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 755             \
 		${WRKDIR}/jitterbug.auth ${PREFIX}/${JB_USER}/etc
-	${MKDIR} ${PREFIX}/${JB_USER}/doc
+	${INSTALL_DATA_DIR} ${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${MESSAGE} ${PREFIX}/${JB_USER}/doc/POSTINSTALL
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
@@ -239,7 +239,7 @@ do-install:
 		>${PREFIX}/${JB_CONFIGDIR}/jitterbug.config
 	${CHOWN} -R ${JB_USER} ${PREFIX}/${JB_USER}
 	${CHGRP} -R ${JB_GROUP} ${PREFIX}/${JB_USER}
-	-${MKDIR} ${PREFIX}/etc/jitterbug
+	-${INSTALL_DATA_DIR} ${PREFIX}/etc/jitterbug
 	[ -f ${PREFIX}/etc/jitterbug/${JB_PACKAGE} ] ||                       \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${PREFIX}/${JB_CONFIGDIR}/jitterbug.config                    \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 15:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/25 04:17:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
@@ -28,7 +28,7 @@ MAKEFILE=	makefile
 ALL_TARGET=
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/urt ${PREFIX}/share/examples/urt
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/urt ${PREFIX}/share/examples/urt
 	cd ${PREFIX}/share/doc/urt && (\
 	    ${GTAR} xf ${DISTDIR}/urt-doc.tar; \
 	    cd doc; \

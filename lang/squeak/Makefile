@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 09:07:31 agc Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/25 04:17:56 hubertf Exp $
 #
 
 DISTNAME=	Squeak2.7-src
@@ -27,7 +27,7 @@ pre-configure:
 	cd ${WRKSRC}/conf; ${LOCALBASE}/bin/autoconf
 
 do-install:
-	${MKDIR} ${PREFIX}/share/squeak
+	${INSTALL_DATA_DIR} ${PREFIX}/share/squeak
 	${INSTALL_PROGRAM} ${WRKSRC}/`${WRKSRC}/conf/config.guess`/squeak ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/ReadMe.txt ${PREFIX}/share/squeak
 	for f in Squeak2.7.changes Squeak2.7.image SqueakV2.sources ; do	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 17:22:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/25 04:18:23 hubertf Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -37,12 +37,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 TEMPDIR?=	/tmp
 TEMPFILE!=echo ${TEMPDIR}/jsdk20.location.$$$$
 
-pre-fetch:
-	if [ ! -x ${LOCALBASE}/bin/urlget ]; \
-	then \
-		${ECHO} '==> Installing urlget to fetch jsdk20' ; \
-		${MAKE} ${MAKEFLAGS} install-build-depends ; \
-	fi
+pre-fetch: install-build-depends
 
 do-fetch:
 	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; \
@@ -60,13 +55,13 @@ do-fetch:
 	fi
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/lib/jsdk.jar ${PREFIX}/lib/java
-	${MKDIR} ${PREFIX}/share/doc/java/jsdk20
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jsdk20
 	cd ${WRKSRC}/doc ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/jsdk20 ; ${GTAR} pvxf - )
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/jsdk20
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README ${PREFIX}/share/doc/java/jsdk20
-	${MKDIR} ${PREFIX}/share/examples/java/jsdk20
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/jsdk20
 	cd ${WRKSRC}/examples ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/examples/java/jsdk20 ; ${GTAR} pvxf - )
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/java/jsdk20
 

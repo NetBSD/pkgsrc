@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 13:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/25 04:17:38 hubertf Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 CATEGORIES=	comms
@@ -31,7 +31,7 @@ post-extract:
 		@${CHMOD} +x ${WRKSRC}/Setup
 
 do-install:
-		${MKDIR} ${PM_PERL_DIR} ${PM_DOC_DIR}
+		${INSTALL_DATA_DIR} ${PM_PERL_DIR} ${PM_DOC_DIR}
 		for FILE in ${WRKSRC}/*.pm; do \
 		  ${INSTALL_DATA} $$FILE ${PM_PERL_DIR}; \
 		done
@@ -39,7 +39,7 @@ do-install:
 		${LN} -fs ${PM_PERL_DIR}/PilotMgr.pm ${PREFIX}/bin/PilotManager
 		cd ${WRKSRC}; \
 		for DIR in lib/*; do \
-		  ${MKDIR} ${PM_PERL_DIR}/$$DIR; \
+		  ${INSTALL_DATA_DIR} ${PM_PERL_DIR}/$$DIR; \
 		  for FILE in $$DIR/*; do \
 		    ${INSTALL_DATA} $$FILE ${PM_PERL_DIR}/$$DIR; \
 		  done; \

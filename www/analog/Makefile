@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/17 17:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/25 04:18:22 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
 DISTNAME=       analog-4.16
@@ -16,7 +16,8 @@ ALL_TARGET=	analog
 MAKE_ENV+=	PREFIX=${PREFIX}
 
 do-install:
-	${MKDIR} ${PREFIX}/share/doc/analog ${PREFIX}/lib/analog/lang \
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/analog \
+	  ${PREFIX}/lib/analog/lang \
 	  ${PREFIX}/lib/analog/images
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${PREFIX}/share/doc/analog
 	${INSTALL_DATA} ${WRKSRC}/images/* ${PREFIX}/lib/analog/images

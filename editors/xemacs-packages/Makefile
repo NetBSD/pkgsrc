@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/20 13:37:18 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/25 04:17:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -43,7 +43,7 @@ PLIST_SUBST+=	ELSUFX=
 .endif
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/xemacs/xemacs-packages
+	@${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs/xemacs-packages
 .for DISTFILE in ${DISTFILES}
 	@${ECHO_MSG} -n "Extracting ${DISTFILE} ... "
 	@${GTAR} xCzf ${PREFIX}/lib/xemacs/xemacs-packages \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 14:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:40 hubertf Exp $
 #
 
 DISTNAME=		postgresql-7.0.3
@@ -29,12 +29,12 @@ CLASSPATH:=		${CLASSPATH}:.
 HELP_FILES=		README README_6.3 Implementation CHANGELOG
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/postgresql.jar ${PREFIX}/lib/java
-	${MKDIR} ${PREFIX}/share/examples/java/jdbc-postgresql
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/jdbc-postgresql
 	${INSTALL_DATA} ${WRKSRC}/example/*.java ${PREFIX}/share/examples/java/jdbc-postgresql
-	${MKDIR} ${PREFIX}/share/doc/java/jdbc-postgresql
-	${MKDIR} ${PREFIX}/share/doc/java/jdbc-postgresql/api
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jdbc-postgresql
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jdbc-postgresql/api
 .for X in ${HELP_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${X} ${PREFIX}/share/doc/java/jdbc-postgresql
 .endfor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:10 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -20,7 +20,7 @@ WRKSRC=			${WRKDIR}/vnc_unixsrc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
-	${MKDIR} ${PREFIX}/share/doc/vncviewer
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vncviewer
 	${INSTALL_DATA} ${WRKSRC}/vncviewer/README ${PREFIX}/share/doc/vncviewer/README
 
 .include "../../mk/bsd.pkg.mk"

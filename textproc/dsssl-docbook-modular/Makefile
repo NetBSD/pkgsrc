@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/25 04:18:16 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	db157
@@ -24,7 +24,7 @@ do-build:
 	@${RM} -Rf ${WRKSRC}/docsrc
 
 pre-install:
-	@[ -d ${INSTDIR} ] || ${MKDIR} ${INSTDIR}
+	${INSTALL_DATA_DIR} ${INSTDIR}
 #	@${FIND} ${WRKDIR} -name '*~' -exec ${RM} {} \;
 #	@${FIND} ${WRKDIR} -name '*.orig' -exec ${RM} {} \;
 

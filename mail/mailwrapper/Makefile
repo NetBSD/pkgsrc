@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:24:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:58 hubertf Exp $
 
 DISTNAME=	mailwrapper-19990412
 CATEGORIES=	mail
@@ -26,7 +26,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/mailer.conf ${PREFIX}/etc/mailer.conf.default
 	${TEST} -e ${MAILER_CONF} || \
 	${LN} -s ${PREFIX}/etc/mailer.conf.default /etc/mailer.conf
-	${MKDIR} ${LIBEXECDIR}
+	${INSTALL_DATA_DIR} ${LIBEXECDIR}
 	${MV} -i ${SENDMAIL} ${LIBEXECDIR} </dev/null 2>/dev/null || ${TRUE}
 	${LN} -fs ${PREFIX}/sbin/mailwrapper /usr/bin/mailq
 	${LN} -fs ${PREFIX}/sbin/mailwrapper /usr/bin/newaliases

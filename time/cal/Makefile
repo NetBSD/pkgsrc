@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:19 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
@@ -16,7 +16,7 @@ ALL_TARGET=		cal
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cal ${PREFIX}/bin/cal
 	${INSTALL_MAN}  ${WRKSRC}/cal.1 ${PREFIX}/man/man1/cal.1
-	@${MKDIR} ${PREFIX}/etc/cal
+	@${INSTALL_DATA_DIR} ${PREFIX}/etc/cal
 	@${CHMOD} 0755  ${PREFIX}/etc/cal
 	if [ ! -f ${PREFIX}/etc/cal/calcol ]; then ${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.col ${PREFIX}/etc/cal/calcol; fi
 	if [ ! -f ${PREFIX}/etc/cal/caldat ]; then ${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.dat ${PREFIX}/etc/cal/caldat; fi

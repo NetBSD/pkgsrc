@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:06 hubertf Exp $
 #
 
 DISTNAME=	mrt-2.2.2a-Aug11
@@ -21,7 +21,7 @@ post-extract:
 
 post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	${MKDIR} ${PREFIX}/share/examples/mrt
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mrt
 	${INSTALL_DATA} ${WRKSRC}/programs/*/*.conf \
 		${PREFIX}/share/examples/mrt
 	(cd ${PREFIX}; ${FIND} share/examples/mrt -type f -print \

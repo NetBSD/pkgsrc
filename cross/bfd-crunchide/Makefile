@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:39 hubertf Exp $
 
 DISTNAME=	bfd-crunchide-1.0
 CATEGORIES=	cross
@@ -28,6 +28,6 @@ do-extract:
 		${WRKSRC}
 
 pre-install:
-	@if [ ! -d ${PREFIX}/bin ]; then ${MKDIR} ${PREFIX}/bin; fi
+	@if [ ! -d ${PREFIX}/bin ]; then ${INSTALL_PROGRAM_DIR} ${PREFIX}/bin; fi
 
 .include "../../mk/bsd.pkg.mk"

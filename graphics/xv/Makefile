@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/02/16 15:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2001/02/25 04:17:53 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -41,7 +41,7 @@ pre-build:
 .endif
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/xv
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/17 17:50:07 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/25 04:18:13 hubertf Exp $
 #
 
 DISTNAME=		rsaref
@@ -31,7 +31,7 @@ do-configure:
 	@${RM} -f ${WRKDIR}/source/rsaref && ${LN} -sf . ${WRKDIR}/source/rsaref
 
 do-install:
-	${MKDIR} ${PREFIX}/include/rsaref ${PREFIX}/share/doc/rsaref
+	${INSTALL_DATA_DIR} ${PREFIX}/include/rsaref ${PREFIX}/share/doc/rsaref
 	cd ${WRKSRC} && ${LIBTOOL} ${INSTALL_DATA} librsaref.la ${PREFIX}/lib
 .for file in des.h global.h md2.h md5.h rsa.h rsaref.h
 	${INSTALL_DATA} ${WRKDIR}/source/${file} ${PREFIX}/include/rsaref/

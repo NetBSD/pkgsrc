@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:51 hubertf Exp $
 
 DISTNAME=       mgl2-alpha-019
 PKGNAME=        mgl-0.1.9a
@@ -69,17 +69,17 @@ post-install:
 	@${TOUCH} ${PREFIX}/sbin/calibconf
 	@${TOUCH} ${PREFIX}/sbin/calibdata-update
 	#
-	@${MKDIR} ${PREFIX}/share/mgl2
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/mgl2
 .for i in ${MGLFONTUTILS}
 	@${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/mgl2
 .endfor
 	@${RM} -f -r ${PREFIX}/share/doc/mgl2
-	@${MKDIR} ${PREFIX}/share/doc/mgl2
-	@${MKDIR} ${PREFIX}/share/doc/mgl2/memo
-	@${MKDIR} ${PREFIX}/share/doc/mgl2/mgterm
-	@${MKDIR} ${PREFIX}/share/doc/mgl2/mil
-	@${MKDIR} ${PREFIX}/share/doc/mgl2/bin
-	@${MKDIR} ${PREFIX}/share/doc/mgl2/doc
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/memo
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mgterm
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mil
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/bin
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/doc
 .for i in ${MGLDOCS}
 	@${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/mgl2/doc/
 .endfor

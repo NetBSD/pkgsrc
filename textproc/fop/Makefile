@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:37:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:16 hubertf Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -24,7 +24,7 @@ post-extract:
 	@${FIND} -d ${WRKSRC} -type d -name CVS -exec ${RM} -rf '{}' \;
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/fop_bin_0_13_0.jar ${PREFIX}/lib/java/fop.jar
 	${MKDIR} ${PREFIX}/share/doc/java/fop
 	cd ${WRKSRC}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/fop ; ${GTAR} pvxf - )

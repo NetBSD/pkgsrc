@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 14:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:43 hubertf Exp $
 
 DISTNAME=		w32api-0.4-20001122-bjy
 PKGNAME=		w32api-0.4nb2
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=		${PREFIX}/cross/i386-netbsdpe/bin/gcc:../../cross/i386-netbsdpe
 do-build:
 
 do-install:
-	${MKDIR} ${PREFIX}/cross/i386-netbsdpe/include 
+	${INSTALL_DATA_DIR} ${PREFIX}/cross/i386-netbsdpe/include 
 	${CP} ${WRKSRC}/include/*.h ${PREFIX}/cross/i386-netbsdpe/include
 
 .include "../../mk/bsd.pkg.mk"

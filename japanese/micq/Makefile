@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 15:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:54 hubertf Exp $
 
 DISTNAME=	micq-0.4.3
 PKGNAME=	ja-${DISTNAME}
@@ -21,7 +21,7 @@ BROKEN=		${PKGNAME} requires fixes for remote buffer overflow\
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/micq ${PREFIX}/bin/jmicq
-		${MKDIR} ${PREFIX}/share/doc/ja-micq
+		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ja-micq
 		${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ja-micq
 
 .include "../../mk/bsd.pkg.mk"

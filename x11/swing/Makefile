@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:06:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:27 hubertf Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -39,12 +39,7 @@ ROOT_GROUP?=	wheel
 TEMPDIR?=	/tmp
 TEMPFILE!=echo ${TEMPDIR}/swing.location.$$$$
 
-pre-fetch:
-	if [ ! -x ${LOCALBASE}/bin/urlget ]; \
-	then \
-		${ECHO} '==> Installing urlget to fetch swing' ; \
-		${MAKE} ${MAKEFLAGS} install-build-depends ; \
-	fi
+pre-fetch: install-build-depends
 
 do-fetch:
 	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; then \
@@ -61,7 +56,7 @@ do-fetch:
 	fi
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/java/swing
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/swingall.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/beaninfo.jar ${PREFIX}/lib/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/mac.jar ${PREFIX}/lib/java/swing
@@ -69,13 +64,13 @@ do-install:
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/multi.jar ${PREFIX}/lib/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/swing.jar ${PREFIX}/lib/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/windows.jar ${PREFIX}/lib/java/swing
-	${MKDIR} ${PREFIX}/share/doc/java/swing
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/swing
 	cd ${WRKSRC}/doc ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/swing ; ${GTAR} pvxf - )
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/CHANGES.txt ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/LICENSE.txt ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.html ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.txt ${PREFIX}/share/doc/java/swing
-	${MKDIR} ${PREFIX}/share/examples/java/swing
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/swing
 	cd ${WRKSRC}/examples ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/examples/java/swing ; ${GTAR} pvxf - )
 	${CHOWN} -R root:${ROOT_GROUP} ${PREFIX}/share/doc/java/swing \
 		${PREFIX}/share/examples/java/swing

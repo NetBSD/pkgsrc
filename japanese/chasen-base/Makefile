@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/23 15:03:45 taca Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:53 hubertf Exp $
 #
 
 DISTNAME=		chasen-${CHASEN_VERSION}
@@ -16,7 +16,7 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-install:
-	${MKDIR} ${LOCALBASE}/share/chasen/dic
+	${INSTALL_DATA_DIR} ${LOCALBASE}/share/chasen/dic
 
 .include "Makefile.common"
 .include "../../mk/bsd.pkg.mk"

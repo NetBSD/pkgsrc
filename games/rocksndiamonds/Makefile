@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:10:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:50 hubertf Exp $
 #
 
 DISTNAME=		rocksndiamonds-1.4.0
@@ -18,11 +18,11 @@ do-install:
 	${INSTALL_PROGRAM} -o games -g games -m 2755 \
 		${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 ${PREFIX}/man/man1/
-	${MKDIR} ${PREFIX}/share/rocksndiamonds
+	${INSTALL_DATA_DIR} ${PREFIX}/share/rocksndiamonds
 	cd ${WRKSRC} && ${PAX} -r -w sounds graphics levels \
 		${PREFIX}/share/rocksndiamonds/
 	${CHOWN} -R games:games ${PREFIX}/share/rocksndiamonds
-	${MKDIR} ${SCORE_PATH}/scores
+	${INSTALL_DATA_DIR} ${SCORE_PATH}/scores
 	${CHMOD} 755 ${SCORE_PATH}
 	${CHMOD} 775 ${SCORE_PATH}/scores
 .for directory in classic_boulderdash classic_emerald_mine \
@@ -33,7 +33,7 @@ do-install:
 	rnd_martin_herrmann rnd_pavel_machek rnd_tobias_authmann \
 	rnd_visa_hastrup rnd_warwick_allison rnd_stephan_beyer \
 	bd_boulderdash_16 bd_boulderdash_2 bd_xbd
-		${MKDIR} ${SCORE_PATH}/scores/${directory} \
+		${INSTALL_DATA_DIR} ${SCORE_PATH}/scores/${directory} \
 		&& ${CHMOD} 775 ${SCORE_PATH}/scores/${directory}
 .endfor
 	${CHOWN} -R games:games ${SCORE_PATH}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:25 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
 
 DISTNAME=	w3c-httpd-3.0A
@@ -23,7 +23,7 @@ pre-configure:
 .endif
 
 do-install:
-	${MKDIR} ${PREFIX}/etc/w3c-httpd ${PREFIX}/share/w3c-httpd
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/w3c-httpd ${PREFIX}/share/w3c-httpd
 	${CP} -R ${WRKSRC}/server_root/icons ${PREFIX}/share/w3c-httpd
 	${CP} ${WRKSRC}/server_root/config/*.conf ${PREFIX}/etc/w3c-httpd
 	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/httpd ${PREFIX}/sbin/w3c-httpd

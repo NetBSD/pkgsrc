@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 18:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/25 04:18:04 hubertf Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -40,11 +40,11 @@ post-build:
 PLIST_SRC=	${WRKDIR}/PLIST
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/bind9
-	${MKDIR} ${PREFIX}/share/doc/bind9/arm
-	${MKDIR} ${PREFIX}/share/doc/bind9/draft
-	${MKDIR} ${PREFIX}/share/doc/bind9/misc
-	${MKDIR} ${PREFIX}/share/doc/bind9/rfc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/arm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/draft
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/misc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/rfc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/bind9
 	${INSTALL_DATA} ${WRKSRC}/doc/arm/* ${PREFIX}/share/doc/bind9/arm
 	${INSTALL_DATA} ${WRKSRC}/doc/draft/* ${PREFIX}/share/doc/bind9/draft

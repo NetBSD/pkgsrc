@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:48 hubertf Exp $
 #
 
 DISTNAME=	crossfire-client-0.95.8
@@ -33,7 +33,7 @@ pre-build:
 	cd ${WRKSRC} && ${MAKE} soundsdef.h
 
 post-install:
-	@${MKDIR} ${LOCALBASE}/share/cfclient
+	@${INSTALL_DATA_DIR} ${LOCALBASE}/share/cfclient
 	cd ${LOCALBASE}/share/cfclient && \
 	    ${GZCAT} ${DISTDIR}/${CF_SND} | ${GTAR} xmf -
 	cd ${LOCALBASE}/share/cfclient && \

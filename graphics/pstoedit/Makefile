@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 15:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:52 hubertf Exp $
 
 DISTNAME=	pstoedit_3_20
 PKGNAME=	pstoedit-3.20
@@ -36,7 +36,7 @@ DOCDIR=		${PREFIX}/share/pstoedit/doc
 DOCSRC=		${WRKSRC}/..
 
 post-install:
-	${MKDIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${DOCSRC}/*.htm		${DOCDIR}
 	${INSTALL_DATA} ${DOCSRC}/readme.txt	${DOCDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 15:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/05/19 09:41:06 tg Exp $
 
 DISTNAME=	sketch-0.6.3
@@ -30,15 +30,15 @@ do-build:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} python setup.py build)
 
 do-install:
-	${MKDIR} ${SKETCHDIR}
+	${INSTALL_DATA_DIR} ${SKETCHDIR}
 .for dir in Filter Pax Plugins Resources Script Sketch
 	(cd ${WRKSRC}; ${GTAR} -c -f - --exclude-from=${FILESDIR}/excludelist ${dir}) | \
 	    (cd ${SKETCHDIR}/; ${GTAR} xf -)
 .endfor
 	(cd ${WRKSRC}; ${INSTALL_SCRIPT} finishinst.py sk2ps.py sketch.py ${SKETCHDIR})
-	${MKDIR} ${SKETCHDOCDIR}
+	${INSTALL_DATA_DIR} ${SKETCHDOCDIR}
 	(cd ${WRKSRC}; ${GTAR} cf - ${SKETCHDOCS}) | (cd ${SKETCHDOCDIR}; ${GTAR} xf -)
-	${MKDIR} ${SKETCHEXDIR}
+	${INSTALL_DATA_DIR} ${SKETCHEXDIR}
 	(cd ${WRKSRC}/Examples; ${GTAR} cf - .) | (cd ${SKETCHEXDIR}; ${GTAR} xf -)
 	(cd ${SKETCHDIR}; python finishinst.py)
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" < ${FILESDIR}/sketch.in > ${PREFIX}/bin/sketch

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 14:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:43 hubertf Exp $
 #
 
 DISTNAME=	tavrasm
@@ -19,7 +19,7 @@ MAKEFILE=	makefile
 DIST_SUBDIR=	${PKGNAME}
 
 do-install:
-	${MKDIR} ${PREFIX}/share/doc/tavrasm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tavrasm
 	${INSTALL_DATA} ${WRKSRCTOP}/README ${PREFIX}/share/doc/tavrasm/README
 	${INSTALL_PROGRAM} ${WRKSRC}/tavrasm ${PREFIX}/bin
 

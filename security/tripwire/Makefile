@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:15 hubertf Exp $
 #
 
 DISTNAME=       tripwire-1.2
@@ -23,8 +23,8 @@ post-patch:
 PRE_ROOT_CMD=	${CHMOD} -R go+rwx ${WRKDIR}
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/tripwire ${PREFIX}/etc/tripwire/databases
-	${INSTALL_MAN} ${WRKSRC}/docs/designdoc.ps ${PREFIX}/share/doc/tripwire
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tripwire ${PREFIX}/etc/tripwire/databases
+	${INSTALL_DATA} ${WRKSRC}/docs/designdoc.ps ${PREFIX}/share/doc/tripwire
 	${SED} -e 's|@localbase@|${LOCALBASE}|g' -e 's|@x11base@|${X11BASE}|g' \
 		${FILESDIR}/tw.conf.${LOWER_OPSYS} > ${PREFIX}/etc/tripwire/tripwire.conf
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 18:09:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:03 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -21,7 +21,7 @@ post-patch:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${PREFIX}/bin/zorro
-	${MKDIR} ${PREFIX}/share/zorro
+	${INSTALL_DATA_DIR} ${PREFIX}/share/zorro
 	${INSTALL_DATA} ${WRKSRC}/DOTzorrorc ${PREFIX}/share/zorro
 	@${ECHO} ""
 	@${ECHO} "Take a look at ${PREFIX}/share/zorro/DOTzorrorc"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:05 hubertf Exp $
 #
 
 DISTNAME=	gtksamba-0.3.2pl1
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CFLAGS="-DPREFIX='\"${PREFIX}\"' ${CFLAGS}"
 
 post-install:
-	@ ${MKDIR} ${PREFIX}/share/doc/gtksamba
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtksamba
 .for file in COPYING README TODO ChangeLog
 	@ ${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/gtksamba
 .endfor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/17 17:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/25 04:18:11 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
 COMMENT=	View, distribute and print PDF documents
 
-IS_INTERACTIVE=	YES
+#HF#IS_INTERACTIVE=	YES
 RESTRICTED=	"Original installer required to redistribute."
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -68,7 +68,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.pre \
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
 do-install:
-	@${MKDIR} ${PREFIX}/Acrobat4
+	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat4
 	@( ${ECHO} accept ) | PAGER=${CAT} ReadInstallDir=${PREFIX}/Acrobat4 ${WRKSRC}/INSTALL
 
 post-install:

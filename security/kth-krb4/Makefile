@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/25 04:18:12 hubertf Exp $
 #
 
 DISTNAME=		krb4-1.0.1
@@ -21,7 +21,7 @@ post-patch:
 	@${MV} ${WRKSRC}/lib/kafs/kafs.h.sed ${WRKSRC}/lib/kafs/kafs.h
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/examples/kth-krb4
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/krb.realms ${PREFIX}/share/examples/kth-krb4
 	${INSTALL_DATA} ${WRKSRC}/etc/inetd.conf.changes ${PREFIX}/share/examples/kth-krb4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:12 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -26,7 +26,7 @@ do-install:
 	@${ECHO} "Extracting ${DISTFILES} to ${PREFIX}/share/texmf/source"
 	@${ECHO} "  Get yourself a shower and a mug of coffee, this will take long!"
 	@${ECHO} ""
-	${MKDIR} ${PREFIX}/share/texmf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
 	${GTAR} plzxCf ${PREFIX}/share/texmf ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
 
 .include "../../mk/bsd.pkg.mk"

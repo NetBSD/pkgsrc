@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 15:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/05/26 04:04:11 mph Exp
 #
 
@@ -31,10 +31,10 @@ do-install:
 	${RANLIB} ${PREFIX}/lib/libray.a
 	${INSTALL_DATA} ${WRKSRC}/libshade/libshade.a ${PREFIX}/lib
 	${RANLIB} ${PREFIX}/lib/libshade.a
-	${MKDIR} ${PREFIX}/share/doc/rayshade
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rayshade
 	${INSTALL_DATA} ${WRKSRC}/Doc/Guide/* ${PREFIX}/share/doc/rayshade
 	${INSTALL_DATA} ${WRKSRC}/Doc/quickref.txt ${PREFIX}/share/doc/rayshade
-	${MKDIR} ${PREFIX}/share/examples/rayshade
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rayshade
 	${INSTALL_DATA} ${WRKSRC}/Examples/* ${PREFIX}/share/examples/rayshade
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 18:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/25 04:18:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -32,21 +32,21 @@ pre-patch:
 do-install:
 	@ ${SED} s!@PREFIX@!${PREFIX}!g ${WRKSRC}/abacus >${WRKSRC}/abacus.sh
 	@ ${INSTALL_SCRIPT} ${WRKSRC}/abacus.sh ${PREFIX}/bin/abacus
-	@ ${MKDIR} ${PREFIX}/share/abacus
-	@ ${MKDIR} ${PREFIX}/share/abacus/display
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/abacus
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/abacus/display
 	@ ${INSTALL_DATA} ${WRKSRC}/display/*.tcl ${PREFIX}/share/abacus/display
-	@ ${MKDIR} ${PREFIX}/share/abacus/graphics
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/abacus/graphics
 	@ ${INSTALL_DATA} ${WRKSRC}/graphics/*.tcl ${PREFIX}/share/abacus/graphics
-	@ ${MKDIR} ${PREFIX}/share/abacus/runlib
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/abacus/runlib
 	@ ${INSTALL_DATA} ${WRKSRC}/runlib/*.tcl ${PREFIX}/share/abacus/runlib
 	@ ${INSTALL_DATA} ${WRKSRC}/runlib/version ${PREFIX}/share/abacus/runlib
-	@ ${MKDIR} ${PREFIX}/share/abacus/runlib/bitmaps
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/abacus/runlib/bitmaps
 	@ ${INSTALL_DATA} ${WRKSRC}/runlib/bitmaps/* ${PREFIX}/share/abacus/runlib/bitmaps
-	@ ${MKDIR} ${PREFIX}/share/abacus/tcl_interf
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/abacus/tcl_interf
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/tcl_interf/nxlc ${PREFIX}/share/abacus/tcl_interf
-	@ ${MKDIR} ${PREFIX}/share/examples/abacus
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/examples/abacus
 	@ ${INSTALL_DATA} ${WRKSRC}/regressive/* ${PREFIX}/share/examples/abacus
-	@ ${MKDIR} ${PREFIX}/share/doc/abacus
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/abacus
 	@ ${INSTALL_DATA} ${WRKSRC}/doc/abacus.ps ${PREFIX}/share/doc/abacus
 	@ ${INSTALL_DATA} ${WRKSRC}/doc/abacus.1 ${PREFIX}/man/man1
 

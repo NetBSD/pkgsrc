@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:07 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:53:13 jfitz Exp
 #
 
@@ -30,7 +30,7 @@ post-build:
 
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/README ${PERL5_SITELIB}/README.SNMP
-	@${MKDIR} ${PREFIX}/share/examples/p5-SNMP
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/p5-SNMP
 	@for i in ${PLFILES} ; do ${INSTALL_SCRIPT} ${WRKDIR}/$$i ${PREFIX}/share/examples/p5-SNMP/$$i ; done
 
 test:

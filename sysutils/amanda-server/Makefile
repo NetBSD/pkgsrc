@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/17 17:42:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/25 04:18:15 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--without-client
 BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
 # post-install:
-# 	${MKDIR} ${PREFIX}/share/doc/amanda
-# 	${MKDIR} ${PREFIX}/share/examples/amanda
+# 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amanda
+# 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/amanda
 # 	for i in ${WRKDIR}/${DISTNAME}/docs/* ; do \
 # 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/amanda; \
 # 	done

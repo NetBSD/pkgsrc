@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:47 hubertf Exp $
 #
 
 DISTNAME=		xfinans-5.9
@@ -18,8 +18,8 @@ post-patch:
 	${TOUCH} ${WRKSRC}/xfinans.man
 
 post-install:
-	${MKDIR} ${PREFIX}/share/examples/Xfinans
-	${MKDIR} ${PREFIX}/share/doc/Xfinans
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Xfinans
 	${CP} ${WRKSRC}/../XFinans.defaults ${PREFIX}/lib/X11/app-defaults/XFinans
 	${CP} ${WRKSRC}/../*.acc ${PREFIX}/share/examples/Xfinans
 	${CP} ${WRKSRC}/../xfin.ps ${PREFIX}/share/doc/Xfinans

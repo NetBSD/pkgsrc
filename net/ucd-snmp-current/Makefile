@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 18:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:09 hubertf Exp $
 #
 
 DISTNAME=	ucd-snmp-4.0.1
@@ -41,7 +41,7 @@ pre-configure:
 
 # Need to run INSTALL script as this doesn't happen automagically from pkgsrc.
 post-install:
-	@${MKDIR} ${PREFIX}/share/examples/ucd-snmp
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ucd-snmp
 	@for F in ${WRKSRC}/etc/* ; do \
 		${INSTALL_DATA} $$F ${PREFIX}/share/examples/ucd-snmp ; \
 	done

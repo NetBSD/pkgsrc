@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:31:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:19 hubertf Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/bin/asclock-gtk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/asclock-gtk
 	${INSTALL_DATA} ${WRKSRC}/README.THEMES ${PREFIX}/share/doc/asclock-gtk
-	${MKDIR} ${PREFIX}/share/asclock-gtk
+	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-gtk
 	${CP} -R ${WRKSRC}/themes/* ${PREFIX}/share/asclock-gtk
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/asclock-gtk
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:06 hubertf Exp $
 
 DISTNAME=	nap-1.4.3
 CATEGORIES=	net
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/nap ${PREFIX}/share/examples/nap
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nap ${PREFIX}/share/examples/nap
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/nap
 	${INSTALL_DATA} ${WRKSRC}/nap.conf.dist \
 	  ${PREFIX}/share/examples/nap/nap.conf

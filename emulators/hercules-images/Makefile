@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/22 16:45:49 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/25 04:17:45 hubertf Exp $
 
 DISTNAME=		mftr33
 PKGNAME=		hercules-images-20010222
@@ -16,7 +16,7 @@ EXTRACT_ONLY=
 WRKSRC=			${WRKDIR}
 
 do-install:
-	${MKDIR} ${PREFIX}/share/data/hercules
+	${INSTALL_DATA_DIR} ${PREFIX}/share/data/hercules
 	cd ${PREFIX}/share/data/hercules;				\
 	(${GZCAT} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ; dd if=/dev/zero bs=10k count=2) | ${PAX} -r
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:07:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:18:30 hubertf Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
@@ -14,7 +14,7 @@ USE_IMAKE=	YES
 NO_INSTALL_MANPAGES=	YES
 
 post-install:
-	${MKDIR} ${PREFIX}/share/examples/xscribble
-	${CP} ${WRKSRC}/classifiers/*.cl ${PREFIX}/share/examples/xscribble
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xscribble
+	${INSTALL_DATA} ${WRKSRC}/classifiers/*.cl ${PREFIX}/share/examples/xscribble
 
 .include "../../mk/bsd.pkg.mk"

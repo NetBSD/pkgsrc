@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 15:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/25 04:17:53 hubertf Exp $
 #
 
 DISTNAME=	xplot-0.90
@@ -15,7 +15,7 @@ DOCFILES=	ANNOUNCE README README.tcp_plots demo.0 demo.1 demo.2 \
 		demo.3 demo.4 demo.5 demo.6 demo.7
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/xplot
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xplot
 .for file in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/xplot
 .endfor

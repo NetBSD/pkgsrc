@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:58 hubertf Exp $
 # FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
 #
 
@@ -35,8 +35,8 @@ pre-extract:
 	  ${FALSE}; fi
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/examples/mailagent
-	@${MKDIR} ${PREFIX}/share/examples/mailagent/misc
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent/misc
 	${CP} -pR ${WRKSRC}/misc/* ${PREFIX}/share/examples/mailagent/misc
 	@${LN} -fs ${PREFIX}/lib/mailagent/examples \
 		${PREFIX}/share/examples/mailagent/agent

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/02/17 18:25:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2001/02/25 04:17:59 hubertf Exp $
 
 DISTNAME=	sendmail.8.11.2
 PKGNAME=	sendmail-8.11.2
@@ -98,7 +98,7 @@ post-build:
 .endif
 
 pre-install:
-	${MKDIR} ${PREFIX}/libexec/sendmail
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/sendmail
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail ${PREFIX}/etc

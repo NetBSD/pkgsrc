@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 17:22:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/25 04:18:25 hubertf Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -30,7 +30,7 @@ do-configure:
 
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	${MKDIR} ${ZOPEDIR}
+	${INSTALL_DATA_DIR} ${ZOPEDIR}
 	(cd ${WRKSRC}; ${PAX} -r -w -s'/.*\.[cho]$$//' . ${ZOPEDIR})
 	${PREFIX}/bin/python \
 		${PREFIX}/lib/python2.0/compileall.py ${ZOPEDIR}

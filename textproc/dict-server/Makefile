@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:16 hubertf Exp $
 
 DISTNAME=       dictd-1.4.9
 PKGNAME=	dict-server-1.4.9
@@ -46,7 +46,7 @@ LEXICONS=	easton.dict.dz \
 post-install:
 	${SED} "s#/usr/lib/dict#${PREFIX}/share/dictd#" \
 		${WRKSRC}/dictd.conf >${PREFIX}/etc/dictd.conf
-	${MKDIR} ${PREFIX}/share/dictd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/dictd
 .for FILE in ${LEXICONS}
 		${INSTALL_DATA} ${WRKDIR}/${FILE} ${PREFIX}/share/dictd
 .endfor

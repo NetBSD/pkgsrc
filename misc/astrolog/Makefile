@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 18:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:01 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
@@ -24,7 +24,7 @@ ALL_TARGET=     astrolog
 NO_WRKSUBDIR=   yes
 
 do-install:
-	-@${MKDIR} ${PREFIX}/lib/astrolog
+	-@${INSTALL_DATA_DIR} ${PREFIX}/lib/astrolog
 	cd ${DISTDIR}/${DIST_SUBDIR} && \
 		${INSTALL_DATA} ${EPHEM} ${PREFIX}/lib/astrolog
 	cd ${WRKSRC} && \
@@ -34,7 +34,7 @@ do-install:
 			${INSTALL_DATA} astrolog.dat ${PREFIX}/lib/astrolog; \
 		fi
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} astrolog ${PREFIX}/bin
-	-@${MKDIR} ${PREFIX}/share/doc/astrolog
+	-@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} Helpfile.530 ${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \

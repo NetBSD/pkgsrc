@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:10:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:49 hubertf Exp $
 #
 
 DISTNAME=	manual-1.8.1-2
@@ -14,7 +14,7 @@ NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/manual
 
 do-install:
-	${MKDIR} ${PREFIX}/share/doc/html/freeciv/img
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/freeciv/img
 	cd ${WRKSRC} && \
 	${INSTALL_DATA} *.html ${PREFIX}/share/doc/html/freeciv
 	cd ${WRKSRC}/img && \

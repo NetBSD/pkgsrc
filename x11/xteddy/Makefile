@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:18:30 hubertf Exp $
 
 DISTNAME=	xteddy-1.1
 CATEGORIES=	x11 games
@@ -13,7 +13,7 @@ USE_XPM=	YES
 GNU_CONFIGURE=	YES
 
 pre-install:
-	${MKDIR} ${PREFIX}/share/xteddy
-	${MKDIR} ${PREFIX}/share/xteddy/pixmaps
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xteddy
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xteddy/pixmaps
 
 .include "../../mk/bsd.pkg.mk"

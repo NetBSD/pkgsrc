@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 15:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:50 hubertf Exp $
 # FreeBSD Id: ports/games/pysol/Makefile,v 1.20 1999/12/08 11:01:01 tg Exp
 
 DISTNAME=       pysol-4.10
@@ -21,7 +21,7 @@ do-install:
 	${SED} -e "s|@pkgdatadir@|${PREFIX}/share/pysol|" < ${WRKSRC}/pysol > ${PREFIX}/bin/pysol
 	${CHMOD} +x ${PREFIX}/bin/pysol
 	${INSTALL_DATA} ${WRKSRC}/pysol.6 ${PREFIX}/man/man6
-	@${MKDIR} ${PREFIX}/share/pysol
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/pysol
 	(cd ${WRKSRC}/data; tar cf - *) | \
 		(cd ${PREFIX}/share/pysol; tar xf -)
 	(cd ${WRKDIR}/${CARDSETS}/data; tar cf - *) | \

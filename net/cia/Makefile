@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:05 hubertf Exp $
 
 DISTNAME=	cia-20000716
 CATEGORIES=	net
@@ -13,9 +13,9 @@ EXAMPLES_DIR=	${PREFIX}/share/examples/cia
 MAKE_ENV+=	BINDIR="${PREFIX}/bin"
 
 post-install:
-	${MKDIR} ${DOC_DIR}
+	${INSTALL_DATA_DIR} ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/README ${DOC_DIR}
-	${MKDIR} ${EXAMPLES_DIR}
+	${INSTALL_DATA_DIR} ${EXAMPLES_DIR}
 	${INSTALL_DATA} ${WRKSRC}/ipstat/examples/*.cfg ${EXAMPLES_DIR}
 
 .include "../../mk/bsd.pkg.mk"

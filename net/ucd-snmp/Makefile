@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2001/02/17 18:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2001/02/25 04:18:09 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
-DISTNAME=	ucd-snmp-4.1.2
+DISTNAME=	ucd-snmp-4.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ucd-snmp.ucdavis.edu/ \
@@ -58,7 +58,7 @@ post-build:
 	${SED} 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/snmptrapd.sh > ${WRKDIR}/snmptrapd
 
 post-install:
-	${MKDIR} ${PREFIX}/share/examples/ucd-snmp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
 	${INSTALL_SCRIPT} ${WRKDIR}/snmpd ${PREFIX}/etc/rc.d

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 09:06:59 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:55 hubertf Exp $
 #
 
 DISTNAME=       b105
@@ -19,8 +19,8 @@ EXAMPLEDIR=	${PREFIX}/share/examples/brandy
 MAKEFILE=	makefile
 
 do-install:
-	${MKDIR} ${DOCDIR}
-	${MKDIR} ${EXAMPLEDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	cd ${WRKSRC}/docs && ${GTAR} -cf - `ls |grep -v .orig` | (cd ${DOCDIR} && tar xf -)
 	cd ${WRKSRC}/examples && ${GTAR} -cf - [a-z]* | (cd ${EXAMPLEDIR} && tar xf -)
 	${INSTALL_PROGRAM} ${WRKSRC}/brandy ${PREFIX}/bin/brandy

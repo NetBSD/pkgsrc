@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:49 hubertf Exp $
 #
 
 DISTNAME=	icbm3d.0.3
@@ -15,7 +15,7 @@ MAKEFILE=	makefile
 USE_X11BASE=	yes
 
 pre-install:
-	${MKDIR} ${PREFIX}/share/doc/icbm3d
-	${CP} ${WRKSRC}/README.txt ${PREFIX}/share/doc/icbm3d
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/icbm3d
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/icbm3d
 
 .include "../../mk/bsd.pkg.mk"

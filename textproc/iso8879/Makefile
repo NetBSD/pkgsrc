@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/20 11:40:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:17 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -20,7 +20,7 @@ NO_WRKSUBDIR=	yes
 INSTDIR=	${PREFIX}/share/sgml/iso8879
 
 pre-install:
-	@[ -d ${INSTDIR} ] || ${MKDIR} ${INSTDIR}
+	${MKDIR} ${INSTDIR}
 
 do-install:
 	@unzip -a -q -o ${DISTDIR}/${DISTFILES} -d ${INSTDIR}

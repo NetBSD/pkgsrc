@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:08 hubertf Exp $
 # $FreeBSD: ports/net/tcpillust/Makefile,v 1.1.1.1 2000/07/29 06:26:00 sada Exp $
 #
 
@@ -24,11 +24,11 @@ DOCS=	README
 SAMPLES= tcpclient.log tcpserver.log
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/tcpillust
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcpillust
 	for i in ${DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/tcpillust; \
 	done
-	${MKDIR} ${PREFIX}/share/doc/tcpillust/sample
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcpillust/sample
 	for i in ${SAMPLES}; do \
 		${INSTALL_DATA} ${WRKSRC}/sample/$$i ${PREFIX}/share/doc/tcpillust/sample; \
 	done

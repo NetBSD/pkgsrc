@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:14 hubertf Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -18,7 +18,7 @@ MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .endif
 
 do-install:
-	${MKDIR} ${PREFIX}/share/doc/tcp_wrappers
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcp_wrappers
 	cd ${WRKSRC} && \
 	${INSTALL_PROGRAM} tcpdmatch try-from safe_finger tcpdchk \
 	  ${PREFIX}/bin && \

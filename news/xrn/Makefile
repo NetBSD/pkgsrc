@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:11 hubertf Exp $
 #
 
 DISTNAME=	9.01
@@ -17,7 +17,7 @@ USE_IMAKE=	yes
 NO_WRKSUBDIR=	yes
 
 pre-install:
-	${MKDIR} ${X11PREFIX}/share/doc/xrn
+	${INSTALL_DATA_DIR} ${X11PREFIX}/share/doc/xrn
 	for f in COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog; do		\
 		${INSTALL_DATA} ${WRKSRC}/$$f ${X11PREFIX}/share/doc/xrn; \
 	done

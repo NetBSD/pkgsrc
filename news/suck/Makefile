@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:10 hubertf Exp $
 #
 
 DISTNAME=	suck-4.2.2
@@ -30,7 +30,7 @@ post-patch:
 	@${MV} ${WRKSRC}/Makefile.tmp ${WRKSRC}/Makefile.in
 
 post-install:
-	${MKDIR} ${LOCALBASE}/share/examples/suck
+	${INSTALL_DATA_DIR} ${LOCALBASE}/share/examples/suck
 	${CP} ${WRKSRC}/sample/* ${LOCALBASE}/share/examples/suck
 	${CHMOD} 644 ${LOCALBASE}/share/examples/suck/*
 

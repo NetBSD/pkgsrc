@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.6 2001/02/17 18:18:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:04 hubertf Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -25,7 +25,7 @@ post-build:
 
 post-install:
 	@(cd ${WRKDIR}/doc/man && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
-	${MKDIR} ${PREFIX}/share/doc/bind8
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind8
 	${INSTALL_DATA} ${WRKDIR}/doc/html/* ${PREFIX}/share/doc/bind8
 
 .include "../../mk/bsd.pkg.mk"

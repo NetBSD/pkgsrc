@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/17 17:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/25 04:18:26 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
@@ -20,7 +20,7 @@ post-extract:
 	${CP} ${WRKSRC}/Makefiles/Makefile.netbsd_gcc ${WRKSRC}/Makefile
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/FileRunner/bitmaps
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/FileRunner/bitmaps
 	${INSTALL_SCRIPT} ${WRKSRC}/fr ${PREFIX}/lib/FileRunner
 	${LN} -sf ${PREFIX}/lib/FileRunner/fr ${PREFIX}/bin
 .for FILE in FAQ HISTORY QuickStart.txt Tips Users_Guide.txt chmod.tcl cmd.tcl config.tcl dialog_about.tcl ext.so font.tcl ftp.tcl http.tcl tclIndex

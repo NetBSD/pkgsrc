@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 09:07:20 agc Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/25 04:17:56 hubertf Exp $
 
 DISTNAME=       mos20src
 PKGNAME=        moscow_ml-2.00
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 ALL_TARGET=	clean world
 
 post-install:
-	${MKDIR} ${PREFIX}/share/examples/moscow_ml
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/moscow_ml
 	${CP} -R ${WRKDIR}/mosml/examples/* ${PREFIX}/share/examples/moscow_ml
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/moscow_ml
 	${CHMOD} -R ugo+r ${PREFIX}/share/examples/moscow_ml

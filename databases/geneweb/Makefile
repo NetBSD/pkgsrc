@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:17:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:40 hubertf Exp $
 #
 
 DISTNAME=	geneweb-3.07
@@ -32,12 +32,12 @@ post-build:
 			>${WRKDIR}/geneweb.sh
 
 do-install:
-		${MKDIR} ${PREFIX}/share/examples/geneweb
-		${MKDIR} ${PREFIX}/share/doc/geneweb
-		${MKDIR} ${PREFIX}/share/geneweb/etc
-		${MKDIR} ${PREFIX}/share/geneweb/images
-		${MKDIR} ${PREFIX}/share/geneweb/lang
-		${MKDIR} ${PREFIX}/share/geneweb/setup
+		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geneweb
+		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/geneweb
+		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/etc
+		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/images
+		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/lang
+		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/setup
 		cd ${WRKSRC}/distribution/gw && \
 		${INSTALL_PROGRAM} gwd ${PREFIX}/libexec && \
 		${INSTALL_PROGRAM} consang ${PREFIX}/bin && \

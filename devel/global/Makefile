@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 14:38:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:41 hubertf Exp $
 #
 
 DISTNAME=	global-4.0.1
@@ -20,6 +20,6 @@ MAKE_ENV+=      LINTLIBDIR="${PREFIX}/libdata/lint"
 MAKE_ENV+=      BINDIR="${PREFIX}/bin"
 
 pre-install:
-	@if [ ! -d ${PREFIX}/libdata/lint ];then ${MKDIR} ${PREFIX}/libdata/lint;fi
+	@if [ ! -d ${PREFIX}/libdata/lint ];then ${INSTALL_DATA_DIR} ${PREFIX}/libdata/lint;fi
 
 .include "../../mk/bsd.pkg.mk"

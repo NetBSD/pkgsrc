@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:09:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:02 hubertf Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -20,14 +20,14 @@ MAKE_ENV=		LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
 
 do-configure:
 	${CP} ${FILESDIR}/Makefile.netbsd ${WRKDIR}/src
-	${MKDIR} ${WRKDIR}/bin
-	${MKDIR} ${WRKDIR}/lib
-	${CP} ${PREFIX}/cint/MAKEINFO ${WRKDIR}/cint
-	${CP} ${PREFIX}/cint/include/iosenum.h ${WRKDIR}/cint/include
+	${INSTALL_PROGRAM_DIR} ${WRKDIR}/bin
+	${INSTALL_DATA_DIR} ${WRKDIR}/lib
+	${INSTALL_DATA} ${PREFIX}/cint/MAKEINFO ${WRKDIR}/cint
+	${INSTALL_DATA} ${PREFIX}/cint/include/iosenum.h ${WRKDIR}/cint/include
 
 do-install:
-	${MKDIR} ${PREFIX}/root
-	${MKDIR} ${PREFIX}/root/include
+	${INSTALL_DATA_DIR} ${PREFIX}/root
+	${INSTALL_DATA_DIR} ${PREFIX}/root/include
 	(cd ${WRKDIR}/src; ${CP} *.h MAIN_rmain.cxx ${PREFIX}/root/include)
 	(cd ${WRKDIR}; tar cf - lib bin cint)|(cd ${PREFIX}/root;tar xf -)
 	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/root.sh >${PREFIX}/bin/root

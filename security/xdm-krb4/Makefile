@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/24 02:09:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:15 hubertf Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.2
@@ -26,7 +26,7 @@ pre-install:
 		>${WRKDIR}/xdm-krb4.sh
 
 post-install:
-	-${MKDIR} ${PREFIX}/etc/rc.d
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/rc.d
 	${INSTALL_DATA}                                                       \
 		${WRKDIR}/xdm-krb4.sh                                         \
 		${PREFIX}/etc/rc.d/xdm-krb4

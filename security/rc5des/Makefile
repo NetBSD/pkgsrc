@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/25 04:18:13 hubertf Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -32,7 +32,7 @@ do-build:
 #	cd ${WRKSRC}; ${RM} -f master.ini.orig master.ini.in rc5.sh.orig
 
 do-install:
-	${MKDIR} ${PREFIX}/RC5
+	${INSTALL_DATA_DIR} ${PREFIX}/RC5
 	cd ${WRKSRC}; ${PAX} -r -w . ${PREFIX}/RC5
 
 .include "../../mk/bsd.pkg.mk"

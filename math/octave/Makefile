@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/17 18:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/25 04:18:01 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.16
@@ -29,7 +29,7 @@ INFO_FILES=	liboctave.info octave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 liboctave.info-2 liboctave.info-3
 
 post-install:
-	${MKDIR} ${PREFIX}/share/octave/2.0.16/doc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/2.0.16/doc
 .for file in ${LIBOCTAVE_INFO}
 	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${file} ${PREFIX}/info
 .endfor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 13:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:38 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/08/13 09:20:41 itojun Exp $
 
 DISTNAME=	snooper-19991202
@@ -15,7 +15,7 @@ pre-build:
 	cd ${WRKSRC} ; ${MAKE} depend
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/snooper
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snooper
 	${INSTALL_DATA} ${WRKSRC}/../README ${PREFIX}/share/doc/snooper
 
 .include "../../mk/bsd.pkg.mk"

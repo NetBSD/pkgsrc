@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:37 hubertf Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -35,11 +35,11 @@ SKIN_DIR=	${PREFIX}/lib/X11/xamp
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin
 		${INSTALL_MAN} ${WRKSRC}/xamp.1 ${PREFIX}/man/man1
-		@${MKDIR} ${SKIN_DIR}/bfamp-xamp
+		@${INSTALL_DATA_DIR} ${SKIN_DIR}/bfamp-xamp
 		${INSTALL_DATA} ${WRKDIR}/bfamp-xamp/*.bmp ${SKIN_DIR}/bfamp-xamp
-		@${MKDIR} ${SKIN_DIR}/chrome-xamp
+		@${INSTALL_DATA_DIR} ${SKIN_DIR}/chrome-xamp
 		${INSTALL_DATA} ${WRKDIR}/chrome-xamp/*.bmp ${SKIN_DIR}/chrome-xamp
-		@${MKDIR} ${SKIN_DIR}/mmxxamp-xamp
+		@${INSTALL_DATA_DIR} ${SKIN_DIR}/mmxxamp-xamp
 		${INSTALL_DATA} ${WRKDIR}/mmxxamp-xamp/*.bmp ${SKIN_DIR}/mmxxamp-xamp
 
 .include "../../mk/bsd.pkg.mk"
