@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/26 13:04:32 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/04 23:54:38 jtb Exp $
 #
 
 DISTNAME=	dvi2tty
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://tug.ctan.org/pub/tex-archive/dviware/
 
 MAINTAINER=	fredb@netbsd.org
 COMMENT=	Program for previewing DVI files
+
+LICENSE=	no-commercial-use
 
 pre-patch:
 	cd ${WRKSRC};						\
