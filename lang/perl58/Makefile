@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/04/12 03:07:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.41 2004/04/24 21:04:43 tv Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -8,7 +8,7 @@ PERL5_RC_VERS=	# empty
 
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
-PKGREVISION=	# empty
+PKGREVISION=	1
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -95,7 +95,13 @@ PERL5_CC=		${CC:T}
 CONFIGURE_ARGS+=	-Dcc="${PERL5_CC}"
 MAKE_ENV+=		LANG=""
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Interix"
+#
+# On Interix, the shared perl is actually faster, so default to that.
+#
+STATIC_PERL?=	no
+
+.elif ${OPSYS} == "Darwin"
 #
 # The perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
@@ -205,6 +211,19 @@ PERL5_SITEARCH?=	${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-$
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
 MESSAGE_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB}
+
+# Some platforms may want the directory mode not to be 0755.  This is,
+# unfortunately, hardcoded in quite a few places in Perl.  So let's substitute
+# what pkgsrc said instead.
+post-patch:
+.if ${PKGDIRMODE} != "755"
+.for f in installhtml installman installperl lib/ExtUtils/Install.pm
+	cd ${WRKSRC} && \
+		${MV} -f $f $f.dirmode && \
+		${SED} -e 's/755/${PKGDIRMODE}/g;/umask(/d' \
+		$f.dirmode >$f
+.endfor
+.endif
 
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
