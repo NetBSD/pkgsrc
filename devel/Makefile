@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2004/06/30 07:01:34 grant Exp $
+# $NetBSD: Makefile,v 1.511 2004/06/30 11:25:38 shannonjr Exp $
 #
 
 COMMENT=	Development utilities
@@ -114,6 +114,7 @@ SUBDIR+=	ffcall
 SUBDIR+=	fhist
 SUBDIR+=	flex
 SUBDIR+=	flim
+SUBDIR+=	florist
 SUBDIR+=	fortran-utils
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
