@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/05/05 18:04:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/01 00:51:23 wiz Exp $
 #
 
 DISTNAME=	wonka-src-0.9.6-release
@@ -22,8 +22,7 @@ WRKSRC=		${WRKDIR}/open-wonka
 USE_BUILDLINK3=	yes
 USE_X11=	# defined
 
-JVM_HOME=	${LOCALBASE}/java/${PKGBASE}
-NO_MTREE=	# defined, since we change PREFIX below
+JVM_HOME=	${PREFIX}/java/${PKGBASE}
 
 SEDFILES=	\
 	${WRKSRC}/tool/mauve/java/gnu/testlet/wonka/lang/ClassLoader/AcuniaClassLoaderTest.java \
@@ -41,13 +40,13 @@ SEDFILES=	\
 
 post-extract:
 	@${MKDIR} -p ${WRKSRC}/class/doclet/com/acunia/doclet
-	@${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+	@${SED}	-e "s|@PREFIX@|${JVM_HOME}|g"				\
 		${FILESDIR}/pkgsrc 					\
 		> ${WRKSRC}/Configuration/wonka/pkgsrc
 
 post-patch:
 	@for file in ${SEDFILES}; do					\
-		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
+		${SED}	-e "s|@PREFIX@|${JVM_HOME}|g"			\
 			-e "s|@CC@|${CC}|g"				\
 			-e "s|@LD@|${LD}|g"				\
 			-e "s|@AS@|${CC} -c|g"				\
@@ -72,14 +71,11 @@ do-build:
 
 do-install:
 	${JAM_COMMAND} install
-	${RM} -f ${PREFIX}/bin/java
-	${LN} -sf wonka ${PREFIX}/bin/java
+	${RM} -f ${JVM_HOME}/bin/java
+	${LN} -sf wonka ${JVM_HOME}/bin/java
 
 test:	install
-	cd ${WRKDIR} && LD_LIBRARY_PATH=${PREFIX}/test			\
-		${PREFIX}/bin/wonka gnu.testlet.TestRunner
+	cd ${WRKDIR} && LD_LIBRARY_PATH=${JVM_HOME}/test		\
+		${JVM_HOME}/bin/wonka gnu.testlet.TestRunner
 
 .include "../../mk/bsd.pkg.mk"
-
-# This needs to be after bsd.pkg.mk
-PREFIX=		${JVM_HOME}
