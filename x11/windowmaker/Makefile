@@ -4,7 +4,7 @@
 # Whom:			handy@physics.montana.edu (FreeBSD)
 # 			explorer@netbsd.org (NetBSD)
 #
-# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:47 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/09 00:13:19 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
 #
 
@@ -16,13 +16,14 @@ MASTER_SITES=	http://isolation.ml.org/oxygen/wm/bin/ \
 
 MAINTAINER=	handy@physics.montana.edu
 
-LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm \
-		png.0.:${PORTSDIR}/graphics/png \
-		jpeg.7.:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
+		png\\.0\\.:${PORTSDIR}/graphics/png \
+		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-STRIP=
-CONFIGURE_ARGS+=	--includedir=${LOCALBASE}/include
+#STRIP=
+MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 
 .include <bsd.port.mk>
