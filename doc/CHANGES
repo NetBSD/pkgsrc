@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4594 2004/01/24 18:20:31 kim Exp $
+$NetBSD: CHANGES,v 1.4595 2004/01/24 19:45:36 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -463,3 +463,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added rhythmbox-0.6.5 [jmmv 2004-01-24]
 	Updated pflogsumm to 1.1.0 [kim 2004-01-24]
 	Updated roller to 1.14 [kim 2004-01-24]
+	Updated pygopherd to 2.09 [recht 2004-01-24]
