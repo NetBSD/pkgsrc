@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/04 13:49:41 minoura Exp $
-info/mime-ui-en.info
-info/mime-ui-ja.info
+@comment $NetBSD: PLIST,v 1.5 2004/02/16 18:02:06 seb Exp $
 ${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/auto-autoloads.el
 ${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/auto-autoloads.elc
 ${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/custom-load.el
