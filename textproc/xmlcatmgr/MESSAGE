@@ -1,8 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/01/10 19:24:48 jmmv Exp $
+$NetBSD: MESSAGE,v 1.2 2003/01/11 21:08:42 jmmv Exp $
 
-The default catalog is ${PREFIX}/share/xml/catalog.  If you will be
-using xmlcatmgr to manage catalogs from inside other packages, please do
-not manually specify it.
+The following catalogs have been installed:
+
+	* ${PKG_SYSCONFDIR}/catalog
+	  System wide catalog. This can be edited by the administrator and
+	  is not changed by packages.
+
+	* ${PREFIX}/share/sgml/catalog
+	  Handles SGML stuff installed under ${PREFIX}/share/sgml.
+	  Automatically handled by packages.
+
+	* ${PREFIX}/share/xml/catalog
+	  Handles XML stuff installed under ${PREFIX}/share/xml.
+	  Automatically handled by packages.
 
 ===========================================================================
