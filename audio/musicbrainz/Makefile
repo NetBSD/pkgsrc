@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/19 20:23:58 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/05 16:10:26 wiz Exp $
 
 DISTNAME=	musicbrainz-1.1.0
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://www.musicbrainz.org/
