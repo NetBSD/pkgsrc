@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/05 00:06:49 jtb Exp $
+
+--- memtort.c.orig	Fri Jan 14 00:46:45 1994
++++ memtort.c
+@@ -32,9 +32,9 @@
+ 
+ #include        <stdio.h>
+ #include        <math.h>
+-#include        "matrix2.h"
+-#include 	"sparse2.h"
+-#include  	"zmatrix2.h"
++#include        <meschach/matrix2.h>
++#include 	<meschach/sparse2.h>
++#include  	<meschach/zmatrix2.h>
+ 
+ 
+ #define errmesg(mesg)   printf("Error: %s error: line %d\n",mesg,__LINE__)

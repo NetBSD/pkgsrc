@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/05 00:06:46 jtb Exp $
+include/meschach/err.h
+include/meschach/iter.h
+include/meschach/machine.h
+include/meschach/matlab.h
+include/meschach/matrix.h
+include/meschach/matrix2.h
+include/meschach/meminfo.h
+include/meschach/oldnames.h
+include/meschach/sparse.h
+include/meschach/sparse2.h
+include/meschach/zmatrix.h
+include/meschach/zmatrix2.h
+lib/libmeschach.a
+lib/libmeschach.la
+lib/libmeschach.so.0.0
+share/meschach/README
+share/meschach/copyright
+share/meschach/fnindex.txt
+share/meschach/tests/Makefile
+share/meschach/tests/iotort.c
+share/meschach/tests/itertort.c
+share/meschach/tests/memtort.c
+share/meschach/tests/mfuntort.c
+share/meschach/tests/sptort.c
+share/meschach/tests/torture.c
+share/meschach/tests/ztorture.c
+share/meschach/tutadv.c
+share/meschach/tutorial.c
+share/meschach/tutorial.txt
+@dirrm share/meschach/tests
+@dirrm share/meschach
+@dirrm include/meschach

@@ -1,0 +1,34 @@
+CC = @CC@
+
+DEFS = @DEFS@
+LIBS = @LIBS@
+LIBDIR = ${PREFIX}/lib
+CFLAGS = -O2 -ansi -pedantic
+
+OBJ =   copy.o err.o matrixio.o memory.o vecop.o matop.o pxop.o		   \
+	submat.o init.o otherio.o machine.o matlab.o ivecop.o version.o	   \
+	meminfo.o memstat.o lufactor.o bkpfacto.o chfactor.o qrfactor.o	   \
+	solve.o hsehldr.o givens.o update.o norm.o hessen.o symmeig.o	   \
+	schur.o svd.o fft.o mfunc.o bdfactor.o sparse.o sprow.o sparseio.o \
+	spchfctr.o splufctr.o spbkp.o spswap.o iter0.o itersym.o	   \
+	iternsym.o zmachine.o zcopy.o zmatio.o zmemory.o zvecop.o zmatop.o \
+	znorm.o zfunc.o zlufctr.o zsolve.o zmatlab.o zhsehldr.o		   \
+	zqrfctr.o zgivens.o zhessen.o zschur.o conjgrad.o lanczos.o	   \
+	arnoldi.o
+
+all: libmeschach
+
+libmeschach: $(OBJ)
+	@$(LIBTOOL) $(CC) -O -o libmeschach.la $(OBJ:.o=.lo) -rpath $(LIBDIR)
+
+install:
+	@$(LIBTOOL) --mode=install install -c libmeschach.la $(LIBDIR)
+
+.c.o:
+	@$(LIBTOOL) $(CC) -c $(CFLAGS) $(DEFS) $<
+
+clean:
+	rm -fr *.o *.lo *.core asx5213a.mat iotort.dat *.la
+	rm -fr torture sptort ztorture memtort itertort mfuntort iotort
+	rm -fr makefile machine.h config.status maxint macheps
+

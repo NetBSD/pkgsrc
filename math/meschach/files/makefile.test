@@ -1,0 +1,41 @@
+LIBS = -L%%PREFIX%%/lib -lmeschach -lm
+
+CFLAGS = -I%%PREFIX%%/include -O2 -ansi
+
+TORTURE = torture.o sptort.o ztorture.o memtort.o itertort.o \
+	 mfuntort.o iotort.o
+
+all: alltorture
+
+alltorture: torture sptort ztorture memtort itertort mfuntort iotort
+
+torture: torture.o
+	$(CC) $(CFLAGS) -O -o torture torture.o $(LIBS)
+
+sptort: sptort.o
+	$(CC) $(CFLAGS) -O -o sptort sptort.o $(LIBS)
+
+memtort: memtort.o
+	$(CC) $(CFLAGS) -O -o memtort memtort.o $(LIBS)
+
+ztorture: ztorture.o
+	$(CC) $(CFLAGS) -O -o ztorture ztorture.o $(LIBS)
+
+itertort: itertort.o
+	$(CC) $(CFLAGS) -O -o itertort itertort.o $(LIBS)
+
+iotort: iotort.o
+	$(CC) $(CFLAGS) -O -o iotort iotort.o $(LIBS)
+
+mfuntort: mfuntort.o
+	$(CC) $(CFLAGS) -O -o mfuntort mfuntort.o $(LIBS)
+
+tstmove: tstmove.o
+	$(CC) $(CFLAGS) -O -o tstmove tstmove.o $(LIBS)
+
+tstpxvec: tstpxvec.o
+	$(CC) $(CFLAGS) -O -o tstpxvec tstpxvec.o $(LIBS)
+
+clean:
+	rm -fr *.o *.core iotort.dat torture sptort ztorture \
+	memtort itertort mfuntort iotort asx5213a.mat

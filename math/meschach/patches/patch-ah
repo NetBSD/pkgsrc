@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/12/05 00:06:49 jtb Exp $
+
+--- ztorture.c.orig	Mon Dec 12 20:01:19 1994
++++ ztorture.c
+@@ -33,7 +33,7 @@
+ 
+ #include	<stdio.h>
+-#include 	"zmatrix2.h"
++#include 	<meschach/zmatrix2.h>
+ #include	<math.h>
+-#include        "matlab.h"
++#include        <meschach/matlab.h>
+ 
+ 
