@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/01/05 04:41:20 xtraeme Exp $
+$NetBSD: distinfo,v 1.7 2004/01/06 00:08:06 xtraeme Exp $
 
-SHA1 (cvsup-i386-1.6/cvsup-static-16.1.h.tgz) = 8a9cfd3e5e24e8bdc7c174c5bab0eb728aad1837
-Size (cvsup-i386-1.6/cvsup-static-16.1.h.tgz) = 1291666 bytes
+SHA1 (cvsup-snap-16.1h.tar.gz) = 976439eb09c9e929d3bb2837b5e4db14719393b2
+Size (cvsup-snap-16.1h.tar.gz) = 430951 bytes
+SHA1 (patch-aa) = 21e66792dfb53c592577710ade53ae4bd2d425bc

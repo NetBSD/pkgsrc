@@ -1,39 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2004/01/05 04:41:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/06 00:08:06 xtraeme Exp $
 
-DISTNAME=	cvsup-static-16.1.h
-PKGNAME=	${DISTNAME:C/-static//}
-WRKSRC=		${WRKDIR}
-CATEGORIES=	devel
-MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
-EXTRACT_SUFX=	.tgz
+.include "${.CURDIR}/../../devel/cvsup/Makefile.common"
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://people.freebsd.org/~jdp/
-COMMENT=	cvsup daemon and client
+PKGNAME=	cvsup-16.1.h
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386
-DIST_SUBDIR=	cvsup-${MACHINE_ARCH}-${OS_VERSION:C/(...).*/\1/}
+M3FLAGS+=	-DNOGUI
 
-do-install:
-	for i in cvpasswd cvsup ; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/bin/$$i ${PREFIX}/bin; \
-	done
-	for i in cvsupd; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/sbin/$$i ${PREFIX}/sbin; \
-	done
-	for i in cvpasswd.1 cvsup.1; do \
-		${INSTALL_MAN} ${WRKSRC}/man/man1/$$i ${PREFIX}/man/man1; \
-	done
-	for i in cvsupd.8; do \
-		${INSTALL_MAN} ${WRKSRC}/man/man8/$$i ${PREFIX}/man/man8; \
-	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cvsup
-	${INSTALL_DATA} ${WRKSRC}/share/doc/cvsup/License \
-		${PREFIX}/share/doc/cvsup
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cvsup
-	${INSTALL_DATA} ${FILESDIR}/supfile* \
-		${PREFIX}/share/examples/cvsup
+CONFLICTS=	cvsup-{bin,gui}-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
