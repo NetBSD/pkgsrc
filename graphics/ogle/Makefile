@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/12/11 04:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/12 01:32:33 enami Exp $
 
 DISTNAME=	ogle-0.8.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/index.html
+HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	DVD player with menus
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
