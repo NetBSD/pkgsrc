@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.15 2001/09/27 23:18:44 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/08/22 11:20:26 martti Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
-DISTNAME=	docbook-4.1
+DISTNAME=	docbook-4.2
 CATEGORIES=	textproc
 MASTER_SITES=	\
+		http://www.oasis-open.org/docbook/sgml/4.2/ \
 		http://www.oasis-open.org/docbook/sgml/4.1/ \
 		http://www.oasis-open.org/docbook/sgml/4.0/ \
 		http://www.oasis-open.org/docbook/sgml/3.1/ \
 		http://www.oasis-open.org/docbook/sgml/3.0/ \
 		http://www.oasis-open.org/docbook/sgml/2.4.1/
-DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip
+DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
+		docbook-4.2.zip
 
 MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.ora.com/davenport/
@@ -33,6 +35,7 @@ pre-install:
 	@[ -d ${INSTDIR}/3.1 ] || ${MKDIR} ${INSTDIR}/3.1
 	@[ -d ${INSTDIR}/4.0 ] || ${MKDIR} ${INSTDIR}/4.0
 	@[ -d ${INSTDIR}/4.1 ] || ${MKDIR} ${INSTDIR}/4.1
+	@[ -d ${INSTDIR}/4.2 ] || ${MKDIR} ${INSTDIR}/4.2
 
 do-install:
 	#
@@ -71,6 +74,13 @@ do-install:
 	@${EGREP} '^PUBLIC.*(DocBook|Table)' ${INSTDIR}/4.1/docbook.cat >${INSTDIR}/4.1/catalog
 	@${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/4.1/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.1/*
+	#
+	# 4.2:
+	#
+	@(cd ${INSTDIR}/4.2; unzip ${DISTDIR}/docbook-4.2.zip)
+	@${EGREP} '^PUBLIC.*(DocBook|Table)' ${INSTDIR}/4.2/docbook.cat >${INSTDIR}/4.2/catalog
+	@${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/4.2/catalog
+	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.2/*
 	#
 	# General cleanup
 	#
