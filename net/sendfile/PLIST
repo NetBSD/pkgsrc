@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/01 15:44:43 jmmv Exp $
 bin/sf_cleanup
 bin/sfdconf
 bin/sfconf
@@ -14,8 +14,6 @@ bin/utf7decode
 bin/sf
 bin/sm
 bin/rf
-etc/sendfile.deny
-etc/sendfile.cf
 man/man1/sendfile.1
 man/man1/sendmsg.1
 man/man1/receive.1
@@ -26,3 +24,6 @@ man/man1/utf7decode.1
 man/man7/fetchfile.7
 man/man8/sendfiled.8
 sbin/sendfiled
+share/examples/sendfile/sendfile.cf
+share/examples/sendfile/sendfile.deny
+@dirrm share/examples/sendfile
