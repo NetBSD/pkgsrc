@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/21 23:25:18 jmmv Exp $
+bin/sweep
+include/sweep/sweep.h
+include/sweep/sweep_filter.h
+include/sweep/sweep_i18n.h
+include/sweep/sweep_sample.h
+include/sweep/sweep_selection.h
+include/sweep/sweep_sounddata.h
+include/sweep/sweep_typeconvert.h
+include/sweep/sweep_types.h
+include/sweep/sweep_undo.h
+include/sweep/sweep_version.h
+lib/sweep/libbyenergy.a
+lib/sweep/libbyenergy.la
+lib/sweep/libbyenergy.so
+lib/sweep/libbyenergy.so.1
+lib/sweep/libbyenergy.so.1.0
+lib/sweep/libecho.a
+lib/sweep/libecho.la
+lib/sweep/libecho.so
+lib/sweep/libecho.so.1
+lib/sweep/libecho.so.1.0
+lib/sweep/libfade.a
+lib/sweep/libfade.la
+lib/sweep/libfade.so
+lib/sweep/libfade.so.1
+lib/sweep/libfade.so.1.0
+lib/sweep/libladspameta.a
+lib/sweep/libladspameta.la
+lib/sweep/libladspameta.so
+lib/sweep/libladspameta.so.1
+lib/sweep/libladspameta.so.1.0
+lib/sweep/libnormalise.a
+lib/sweep/libnormalise.la
+lib/sweep/libnormalise.so
+lib/sweep/libnormalise.so.1
+lib/sweep/libnormalise.so.1.0
+lib/sweep/libreverse.a
+lib/sweep/libreverse.la
+lib/sweep/libreverse.so
+lib/sweep/libreverse.so.1
+lib/sweep/libreverse.so.1.0
+man/man1/sweep.1
+share/gnome/apps/Multimedia/sweep.desktop
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sweep.mo
+${PKGLOCALEDIR}/locale/en_AU/LC_MESSAGES/sweep.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sweep.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/sweep.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sweep.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sweep.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sweep.mo
+share/pixmaps/sweep.png
+share/sweep/sweep_logo.ppm
+@dirrm share/sweep
+@dirrm lib/sweep
+@dirrm include/sweep
