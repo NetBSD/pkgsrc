@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/07/12 17:41:58 bad Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/03 20:30:41 bad Exp $
 #
 
 DISTNAME=		mysql-3.22.22
@@ -29,7 +29,7 @@ CFLAGS+=		-Dunix
 
 # platforms on which included mit-pthreads is usable
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
-			NetBSD-*-sparc SunOS-*-sparc
+			NetBSD-*-sparc NetBSD-*-m68k SunOS-*-sparc
 
 USE_GMAKE=
 USE_PERL5=
