@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2001/04/27 15:28:26 agc Exp $
+# $NetBSD: Makefile,v 1.120 2001/07/26 12:38:03 zuntum Exp $
 #
 
 COMMENT=	Games
@@ -86,6 +86,7 @@ SUBDIR+=	nighthawk
 SUBDIR+=	omega
 SUBDIR+=	pacman
 SUBDIR+=	plib
+SUBDIR+=	prboom
 SUBDIR+=	pysol
 SUBDIR+=	quake
 SUBDIR+=	quake3arena
@@ -130,6 +131,7 @@ SUBDIR+=	xracer
 SUBDIR+=	xroach
 SUBDIR+=	xroads
 SUBDIR+=	xscavenger
+SUBDIR+=	xscorch
 SUBDIR+=	xscrabble
 SUBDIR+=	xskat
 SUBDIR+=	xsoldier
