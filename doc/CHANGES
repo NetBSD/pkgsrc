@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1456 2003/02/21 16:16:02 mycroft Exp $
+$NetBSD: CHANGES,v 1.1457 2003/02/21 17:31:39 mycroft Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -795,3 +795,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postgresql-plperl to 7.3.2 [mycroft 2003-02-21]
 	Updated postgresql-pltcl to 7.3.2 [mycroft 2003-02-21]
 	Updated postgresql-server to 7.3.2 [mycroft 2003-02-21]
+	Updated timidity to 2.11.3nb2 [mycroft 2003-02-21]
