@@ -1,7 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
---- kdevelop/Makefile.in.orig	Tue Jul  9 15:55:13 2002
-+++ kdevelop/Makefile.in	Tue Jul  9 16:02:06 2002
-@@ -242,8 +242,7 @@
+$NetBSD: patch-ad,v 1.4 2003/03/11 13:30:44 markd Exp $
+
+--- kdevelop/Makefile.in.orig	Mon Jan 20 14:25:57 2003
++++ kdevelop/Makefile.in
+@@ -255,8 +255,7 @@ kdevelop_LDADD = ./vc/libkdevelopvc.la .
  
  SUBDIRS = classparser kpp classwizard dbg examples gfxview kwrite pics templates tools vc widgets ctags setup 
  
@@ -11,7 +12,7 @@ $NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
  
  ####### kdevelop will overwrite this part!!! (end)############
  INCLUDES = -I$(top_srcdir)/kdevelop/widgets/qextmdi/include -I$(top_builddir)/kdevelop/ctags -I$(top_builddir)/kdevelop/kpp -I$(top_srcdir)/kdevelop/kpp -I$(top_srcdir)/kdevelop/kwrite $(all_includes)
-@@ -267,7 +266,6 @@
+@@ -280,7 +279,6 @@ tipdir = $(kde_datadir)/kdevelop
  mime_DATA = x-kdevelop-project.desktop
  mimedir = $(kde_mimedir)/application
  
@@ -19,7 +20,7 @@ $NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
  subdir = kdevelop
  mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h
-@@ -343,7 +341,6 @@
+@@ -355,7 +353,6 @@ kdevelop_DEPENDENCIES = ./vc/libkdevelop
  	./kpp/libkdevelopkpp.la ./classparser/libclassparser.a \
  	./ctags/libctags.a ./setup/libkdevelopsetup.la \
  	./widgets/qextmdi/src/libkdevelopqextmdi.la
@@ -27,35 +28,33 @@ $NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
  
  
  DEFS = @DEFS@
-@@ -485,27 +482,6 @@
- kdevelop$(EXEEXT): $(kdevelop_OBJECTS) $(kdevelop_DEPENDENCIES) 
+@@ -560,25 +557,6 @@ kdevelop$(EXEEXT): $(kdevelop_OBJECTS) $
  	@rm -f kdevelop$(EXEEXT)
  	$(CXXLINK) $(kdevelop_LDFLAGS) $(kdevelop_OBJECTS) $(kdevelop_LDADD) $(LIBS)
+ binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
 -install-binSCRIPTS: $(bin_SCRIPTS)
 -	@$(NORMAL_INSTALL)
 -	$(mkinstalldirs) $(DESTDIR)$(bindir)
 -	@list='$(bin_SCRIPTS)'; for p in $$list; do \
--	f="`echo $$p|sed '$(transform)'`"; \
--	if test -f $$p; then \
--	echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/$$f"; \
--	$(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/$$f; \
--	elif test -f $(srcdir)/$$p; then \
--	echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/$$f"; \
--	$(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/$$f; \
--	else :; fi; \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  if test -f $$d$$p; then \
+-	    f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
+-	    echo " $(binSCRIPT_INSTALL) $$d$$p $(DESTDIR)$(bindir)/$$f"; \
+-	    $(binSCRIPT_INSTALL) $$d$$p $(DESTDIR)$(bindir)/$$f; \
+-	  else :; fi; \
 -	done
 -
 -uninstall-binSCRIPTS:
 -	@$(NORMAL_UNINSTALL)
 -	@list='$(bin_SCRIPTS)'; for p in $$list; do \
--	f="`echo $$p|sed '$(transform)'`"; \
--	echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
--	rm -f $(DESTDIR)$(bindir)/$$f; \
+-	  f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
+-	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
+-	  rm -f $(DESTDIR)$(bindir)/$$f; \
 -	done
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT) core *.core
-@@ -794,7 +770,7 @@
+@@ -888,7 +866,7 @@ distdir: $(DISTFILES)
  	done
  check-am: all-am
  check: check-recursive
@@ -64,7 +63,7 @@ $NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
  installdirs: installdirs-recursive
  installdirs-am:
  	$(mkinstalldirs) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) $(DESTDIR)$(datadir) $(DESTDIR)$(mimedir) $(DESTDIR)$(rcdir) $(DESTDIR)$(tipdir)
-@@ -849,7 +825,7 @@
+@@ -944,7 +922,7 @@ info-am:
  install-data-am: install-kde-icons  install-dataDATA install-mimeDATA install-rcDATA \
  	install-tipDATA
  
@@ -73,21 +72,21 @@ $NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
  
  install-info: install-info-recursive
  
-@@ -866,11 +842,11 @@
+@@ -961,11 +939,11 @@ mostlyclean: mostlyclean-recursive
  mostlyclean-am: mostlyclean-compile mostlyclean-generic \
  	mostlyclean-libtool
  
 -#>- uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
 +#>- uninstall-am: uninstall-binPROGRAMS \
- #>- uninstall-dataDATA uninstall-info-am uninstall-mimeDATA \
- #>- uninstall-rcDATA uninstall-tipDATA
+ #>- 	uninstall-dataDATA uninstall-info-am uninstall-mimeDATA \
+ #>- 	uninstall-rcDATA uninstall-tipDATA
  #>+ 3
 -uninstall-am: uninstall-kde-icons  uninstall-binPROGRAMS uninstall-binSCRIPTS \
 +uninstall-am: uninstall-kde-icons  uninstall-binPROGRAMS \
  	uninstall-dataDATA uninstall-info-am uninstall-mimeDATA \
  	uninstall-rcDATA uninstall-tipDATA
  
-@@ -881,7 +857,7 @@
+@@ -976,7 +954,7 @@ uninstall-info: uninstall-info-recursive
  	distclean distclean-compile distclean-depend distclean-generic \
  	distclean-libtool distclean-recursive distclean-tags distdir \
  	dvi dvi-am dvi-recursive info info-am info-recursive install \
@@ -96,7 +95,7 @@ $NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
  	install-data-am install-data-recursive install-dataDATA \
  	install-exec install-exec-am install-exec-recursive \
  	install-info install-info-am install-info-recursive install-man \
-@@ -891,7 +867,7 @@
+@@ -986,7 +964,7 @@ uninstall-info: uninstall-info-recursive
  	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
  	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
  	mostlyclean-recursive tags tags-recursive uninstall \

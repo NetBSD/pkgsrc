@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/01/09 11:21:41 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/11 13:30:42 markd Exp $
 #
 # This Makefile fragment is included by packages that use kdesdk.
 #
@@ -9,14 +9,20 @@
 KDESDK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdesdk
-BUILDLINK_DEPENDS.kdesdk?=		kdesdk>=3.0.5.1
+BUILDLINK_DEPENDS.kdesdk?=		kdesdk>=3.1
 BUILDLINK_PKGSRCDIR.kdesdk?=		../../devel/kdesdk3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdesdk=kdesdk
 BUILDLINK_PREFIX.kdesdk_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.kdesdk+=	include/kbabel/*
+BUILDLINK_FILES.kdesdk+=	include/kprofilemethod.h
 BUILDLINK_FILES.kdesdk+=	include/kspy.h
+BUILDLINK_FILES.kdesdk+=	lib/kde3/kabcformat_kdeaccounts.*
+BUILDLINK_FILES.kdesdk+=	lib/kde3/kfile_cpp.*
+BUILDLINK_FILES.kdesdk+=	lib/kde3/kfile_diff.*
+BUILDLINK_FILES.kdesdk+=	lib/kde3/kfile_po.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/libdbsearchengine.*
+BUILDLINK_FILES.kdesdk+=	lib/kde3/libkomparenavtreepart.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/libkomparepart.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/libpoauxiliary.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/libpocompendium.*
