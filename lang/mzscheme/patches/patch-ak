@@ -1,0 +1,11 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- src/makeexn.orig	Tue Dec 15 21:13:56 1998
++++ src/makeexn	Sun Jan  9 00:02:04 2000
+@@ -1,5 +1,5 @@
+ #!/bin/sh
+-string=? ; if [ "$PLTHOME" = "" ] ; then PLTHOME=/usr/local/lib/plt ; export PLTHOME ; fi
++string=? ; if [ "$PLTHOME" = "" ] ; then PLTHOME=XXXPREFIXXXX/lib/plt ; export PLTHOME ; fi
+ string=? ; exec ${PLTHOME}/bin/mzscheme -gqr $0 "$@"
+ 
+ (define doc? (and (= (vector-length argv) 1)

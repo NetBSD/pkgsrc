@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- Makefile.orig	Sat Jan  8 19:45:36 2000
++++ Makefile	Sat Jan  8 19:47:11 2000
+@@ -158,7 +158,7 @@
+ 	dlltool --def include/gmzwin.def --output-exp gmzwin.exp --output-lib gmzwin.a --dllname mzscheme.exe
+ 
+ g-c: $(GCDIR)/objects $(GCDIR)/$(OBJDIR)
+-	cd $(GCDIR); $(XMAKE) -e $(OBJDIR)/gc.a 
++	cd $(GCDIR); $(XMAKE) CFLAGS='-DNO_SIGNALS -DNO_EXECUTE_PERMISSION -DSILENT -DOLD_BLOCK_ALLOC -O2' -e $(OBJDIR)/gc.a 
+ 	$(XMAKE) $(LIBDIR)/libgc.a
+ 	$(XMAKE) $(GCLIBMAKEEXTRA)
+ 
