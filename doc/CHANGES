@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5361 2004/03/29 18:35:14 epg Exp $
+$NetBSD: CHANGES,v 1.5362 2004/03/29 20:30:57 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1593,3 +1593,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed ucd-snmp-4.2.4nb4 [cube 2004-03-29]
 	Updated subversion to 1.0.1 [epg 2004-03-29]
 	Updated trac to 0.6 [epg 2004-03-29]
+	Added vls-0.5.6 [xtraeme 2004-03-29]
