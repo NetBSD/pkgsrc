@@ -1,0 +1,109 @@
+$NetBSD: patch-aa,v 1.7 2005/01/25 20:07:25 bouyer Exp $
+
+--- src/connect.c.orig	Sat Nov  1 15:08:22 2003
++++ src/connect.c	Sun Jan 23 22:11:24 2005
+@@ -155,11 +155,11 @@
+   int sock, save_errno;
+ 
+   /* Set port and protocol */
+-  wget_sockaddr_set_address (&sa, ip_default_family, port, addr);
++  wget_sockaddr_set_address (&sa, port, addr, addr->family);
+ 
+   if (!silent)
+     {
+-      char *pretty_addr = pretty_print_address (addr);
++      char *pretty_addr = pretty_print_address (addr->bytes);
+       if (connection_host_name
+ 	  && 0 != strcmp (connection_host_name, pretty_addr))
+ 	logprintf (LOG_VERBOSE, _("Connecting to %s[%s]:%hu... "),
+@@ -170,7 +170,7 @@
+     }
+ 
+   /* Make an internet socket, stream type.  */
+-  sock = socket (ip_default_family, SOCK_STREAM, 0);
++  sock = socket (addr->family, SOCK_STREAM, 0);
+   if (sock < 0)
+     goto out;
+ 
+@@ -196,8 +196,8 @@
+     {
+       /* Bind the client side to the requested address. */
+       wget_sockaddr bsa;
+-      wget_sockaddr_set_address (&bsa, ip_default_family, 0, &bind_address);
+-      if (bind (sock, &bsa.sa, sockaddr_len ()))
++      wget_sockaddr_set_address (&bsa, 0, &bind_address, bind_address.family);
++      if (bind (sock, &bsa.sa, sockaddr_len (bind_address.family)))
+ 	{
+ 	  CLOSE (sock);
+ 	  sock = -1;
+@@ -206,7 +206,7 @@
+     }
+ 
+   /* Connect the socket to the remote host.  */
+-  if (connect_with_timeout (sock, &sa.sa, sockaddr_len (),
++  if (connect_with_timeout (sock, &sa.sa, sockaddr_len (addr->family),
+ 			    opt.connect_timeout) < 0)
+     {
+       CLOSE (sock);
+@@ -248,8 +248,11 @@
+ 
+       sock = connect_to_one (&addr, port, silent);
+       if (sock >= 0)
+-	/* Success. */
+-	return sock;
++        {
++	  /* Success. */
++          ip_default_family = addr.family;
++	  return sock;
++        }
+ 
+       address_list_set_faulty (al, i);
+ 
+@@ -316,9 +319,10 @@
+ #endif
+ 
+   resolve_bind_address ();
+-  wget_sockaddr_set_address (&srv, ip_default_family, htons (*port),
+-			     bind_address_resolved ? &bind_address : NULL);
+-  if (bind (msock, &srv.sa, sockaddr_len ()) < 0)
++  wget_sockaddr_set_address (&srv, htons (*port),
++			     bind_address_resolved ? &bind_address : NULL,
++                             family);
++  if (bind (msock, &srv.sa, sockaddr_len (family)) < 0)
+     {
+       CLOSE (msock);
+       msock = -1;
+@@ -327,7 +331,7 @@
+   DEBUGP (("Master socket fd %d bound.\n", msock));
+   if (!*port)
+     {
+-      socklen_t sa_len = sockaddr_len ();
++      socklen_t sa_len = sockaddr_len (family);
+       if (getsockname (msock, &srv.sa, &sa_len) < 0)
+ 	{
+ 	  CLOSE (msock);
+@@ -389,7 +393,7 @@
+ uerr_t
+ acceptport (int *sock)
+ {
+-  socklen_t addrlen = sockaddr_len ();
++  socklen_t addrlen = sockaddr_len (ip_default_family);
+ 
+ #ifdef HAVE_SELECT
+   if (opt.connect_timeout)
+@@ -429,11 +433,13 @@
+     {
+ #ifdef ENABLE_IPV6
+     case AF_INET6:
+-      memcpy (ip, &mysrv.sin6.sin6_addr, 16);
++      memcpy (ip->bytes, &mysrv.sin6.sin6_addr, 16);
++      ip->family = AF_INET6;
+       return 1;
+ #endif
+     case AF_INET:
+-      map_ipv4_to_ip ((ip4_address *)&mysrv.sin.sin_addr, ip);
++      memcpy (ip->bytes, &mysrv.sin.sin_addr, 4);
++      ip->family = AF_INET;
+       return 1;
+     default:
+       abort ();
