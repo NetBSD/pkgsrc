@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/11/14 23:59:06 heinz Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/21 10:35:14 jlam Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
@@ -101,6 +101,8 @@ post-install-manpage:
 .endif
 
 .if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
+USE_PKGINSTALL=		YES
+
 do-install:
 	@cd ${WRKSRC} && ${ECHO} "n" | ./install.sh --prefix=${PREFIX}
 	@${ECHO} "=> You can ignore the previous lines about '... cannot be prefixed'"
@@ -108,8 +110,6 @@ do-install:
 
 post-install:
 	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/man/man1
-
-.include "../../mk/bsd.pkg.install.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
