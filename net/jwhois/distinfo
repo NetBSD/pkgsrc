@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2002/08/25 21:50:00 jlam Exp $
+$NetBSD: distinfo,v 1.8 2003/02/15 05:18:09 salo Exp $
 
-SHA1 (jwhois-3.2.0.tar.gz) = dc325c688c56a31acd494029a053a7497a8df843
-Size (jwhois-3.2.0.tar.gz) = 361144 bytes
+SHA1 (jwhois-3.2.1.tar.gz) = d515079df2c58a7d3b7bdfed887a20f0b6ebbcbe
+Size (jwhois-3.2.1.tar.gz) = 377777 bytes
 SHA1 (patch-aa) = 649e4ff47b7ae8985573cd4bc53954d3cd4d5fe3
+SHA1 (patch-ab) = e2b35b66adae6caba8a778194ff0238a31006b0b
