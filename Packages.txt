@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.78 2000/01/13 23:39:18 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.79 2000/01/14 09:20:47 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1032,15 +1032,21 @@ perform the equivalent of:
    version.  The package and all depending packages first get deinstalled,
    then current versions of the corresponding packages get compiled and
    installed.  This is similar to manually noting which packages are
-   currently installed, then performing a series of "make deinstall",
-   "make clean", and "make install" for these packages.
+   currently installed, then performing a series of "make deinstall" and
+   and "make install" (or whatever DEPENDS_TARGET is set to) for these
+   packages.
 
    You can use the "update" target to resume package updating in case a
-   previous "make update" was interrupted for some reason.  However, make
-   sure you don't call "make clean" or otherwise remove the list of
-   dependent packages in ${WRKDIR}.  Otherwise you lose the ability to
-   automatically update the current package along with the dependent
-   packages you have installed.
+   previous "make update" was interrupted for some reason.  However, in
+   this case, make sure you don't call "make clean" or otherwise remove
+   the list of dependent packages in ${WRKDIR}.  Otherwise you lose the
+   ability to automatically update the current package along with the
+   dependent packages you have installed.
+
+   Resuming an interrupted 'make update' will only work as long as the
+   package tree remains unchanged.  If the source code for one of the
+   packages to be updated has been changed, resuming 'make update' will
+   most certainly fail!
 
    The following variables can be used either on the command line or in
    /etc/mk.conf to alter the behaviour of "make update":
