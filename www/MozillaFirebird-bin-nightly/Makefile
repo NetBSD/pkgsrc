@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/17 02:57:10 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/17 03:10:42 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -39,6 +39,10 @@ ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  include "Makefile.${OPSYS}.${ARCH}"
 .endif
 
+.if ${PLATFORM} == "linux" && ${OPSYS} == "NetBSD"
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.compat_linux
+.endif
+
 do-build:
 
 post-build:
@@ -71,7 +75,7 @@ post-install:
 	${LN} -s libglib.so libglib-1.2.so.0;				\
 	${LN} -s libgmodule.so libgmodule-1.2.so.0
 .endif
-.if ${_COMPAT16_LIBSTDCXX} == "YES"
+.if defined(_COMPAT16_LIBSTDCXX)
 	@cd ${MOZILLA_LIB} && \
 	${LN} -s ${PREFIX}/emul/netbsd16/usr/lib/libstdc++.so* .
 .endif
