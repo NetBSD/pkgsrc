@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.248 1999/04/08 07:51:21 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.249 1999/04/08 12:46:08 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2341,6 +2341,7 @@ ${PLIST}: ${PLIST_SRC}
 				-e 's|\$${OS_VERSION}|${OS_VERSION}|g'	\
 				-e 's|\$${MACHINE_ARCH}|${MACHINE_ARCH}|g' \
 				-e 's|\$${MACHINE_GNU_ARCH}|${MACHINE_GNU_ARCH}|g' \
+				-e 's|\$${LOWER_VENDOR}|${LOWER_VENDOR}|g'\
 				-e 's|\$${LOWER_OPSYS}|${LOWER_OPSYS}|g'\
 			> ${PLIST}; 					\
 	fi
