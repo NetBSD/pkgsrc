@@ -1,0 +1,29 @@
+$NetBSD: patch-ag,v 1.1 1999/08/15 11:07:14 tron Exp $
+
+
+--- agent/mibgroup/mibII/ip.c.orig	Fri Mar 12 18:15:05 1999
++++ agent/mibgroup/mibII/ip.c	Thu Jun 17 10:08:11 1999
+@@ -728,7 +728,11 @@
+ #ifdef linux
+             return (u_char *)&((struct sockaddr_in *)&lowin_ifnet.ia_subnetmask)->sin_addr.s_addr;
+ #else
++#ifdef netbsd1
++	    long_return = lowin_ifaddr.ia_subnetmask;
++#else
+ 	    long_return = ntohl(lowin_ifaddr.ia_subnetmask);
++#endif
+ 	    return(u_char *) &long_return;
+ #endif
+ #endif
+@@ -737,7 +741,11 @@
+ #if defined(linux) || defined(sunV3)
+ 	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifnet.ifu_broadaddr)->sin_addr.s_addr) & 1;
+ #else
++#ifdef netbsd1
++          long_return = (((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
++#else
+           long_return = ntohl(((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
++#endif
+ #endif
+ 	    return(u_char *) &long_return;	   
+ 	case IPADREASMMAX:
