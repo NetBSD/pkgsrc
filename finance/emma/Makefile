@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/02 23:28:39 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/09 18:19:15 wiz Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -13,12 +13,10 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://rainbow.mimuw.edu.pl/~la181249/
 COMMENT=	Money management program
 
-DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
-
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
-USE_LIBINTL=	yes
 BUILD_USES_MSGFMT=	yes
 CONFIGURE_ENV+=	PYTHONBIN=${PYTHONBIN}
 
@@ -26,6 +24,8 @@ PYTHON_VERSIONS_ACCEPTED=	15
 
 WRKSRC=		${WRKDIR}/emma-0.8
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../lang/python/application.mk"
-.include "../../time/py-mxDateTime/buildlink.mk"
+.include "../../time/py-mxDateTime/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
