@@ -1,4 +1,4 @@
-/*	$NetBSD: extract.c,v 1.6 2003/09/02 08:28:22 jlam Exp $	*/
+/*	$NetBSD: extract.c,v 1.7 2003/09/23 13:22:37 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "FreeBSD - Id: extract.c,v 1.17 1997/10/08 07:45:35 charnier Exp";
 #else
-__RCSID("$NetBSD: extract.c,v 1.6 2003/09/02 08:28:22 jlam Exp $");
+__RCSID("$NetBSD: extract.c,v 1.7 2003/09/23 13:22:37 grant Exp $");
 #endif
 #endif
 
@@ -195,6 +195,8 @@ extract_plist(char *home, package_t *pkg)
 								    "unable to back up %s to %s, aborting pkg_add",
 								    try, pf);
 								rollback(PkgName, home, pkg->head, p);
+								free(perm_args);
+								free(where_args);
 								return 0;
 							}
 						}
