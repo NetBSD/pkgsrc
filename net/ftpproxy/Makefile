@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/09 16:20:58 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/09 16:55:51 taca Exp $
 #
 
 DISTNAME=	ftpproxy-1.1.5
@@ -18,6 +18,8 @@ COMMENT=	application level gateway for FTP
 .if ${OPSYS} == "SunOS"
 NROFF?=		nroff
 MANDOC?=	-man
+LIBS+=		"-lsocket -lnsl"
+MAKE_ENV+=	LIBS=${LIBS}
 .else
 NROFF?=		nroff
 MANDOC?=	-mandoc
