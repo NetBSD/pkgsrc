@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/09/26 02:03:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/30 09:50:24 markd Exp $
 
-DISTNAME=		mimedefang-2.21
+DISTNAME=		mimedefang-2.24
 CATEGORIES=		mail
 MASTER_SITES=		http://www.roaringpenguin.com/mimedefang/
 
@@ -48,6 +48,7 @@ CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
 CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR}
 CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR}
+CONFIGURE_ARGS+=	--disable-anti-virus
 
 do-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
@@ -55,9 +56,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/gen-ip-validator.pl ${SHAREDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/md-mx-ctrl ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang-multiplexor ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mimedefang.pl ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/md-mx-ctrl.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/mimedefang.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/mimedefang.pl.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/mimedefang-multiplexor.8 ${PREFIX}/man/man8
