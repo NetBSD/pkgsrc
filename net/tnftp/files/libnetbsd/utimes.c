@@ -1,4 +1,4 @@
-/*	$NetBSD: utimes.c,v 1.1 2004/03/11 13:45:55 grant Exp $	*/
+/*	$NetBSD: utimes.c,v 1.1 2004/03/11 13:48:58 grant Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
