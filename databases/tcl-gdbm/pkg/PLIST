@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/07 15:14:25 bouyer Exp $
-lib/Tclgdbm/Tclgdbm0.6.so
-lib/Tclgdbm/pkgIndex.tcl
+@comment $NetBSD: PLIST,v 1.2 2000/08/29 21:05:50 jwise Exp $
+lib/tcl/tclgdbm/libtclgdbm.so.0.0
+lib/tcl/tclgdbm/libtclgdbm.la
+lib/tcl/tclgdbm/libtclgdbm.a
+lib/tcl/tclgdbm/pkgIndex.tcl
 man/mann/tclgdbm.n
-@dirrm lib/Tclgdbm
+@dirrm lib/tcl/tclgdbm
