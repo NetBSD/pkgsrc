@@ -1,3 +1,4 @@
+$NetBSD: patch-af,v 1.12 2000/09/03 09:51:19 wiz Exp $
 --- pl/tcl/Makefile.orig	Mon May 22 22:12:44 2000
 +++ pl/tcl/Makefile	Fri Sep  1 09:41:04 2000
 @@ -56,10 +56,11 @@
