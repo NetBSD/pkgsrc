@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1372 2003/02/15 06:17:33 salo Exp $
+$NetBSD: CHANGES,v 1.1373 2003/02/15 07:05:53 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -668,3 +668,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated jwhois to 3.2.1 [salo 2003-02-15]
 	Updated centericq to 4.9.2 [salo 2003-02-15]
 	Updated atk to 1.2.2 [salo 2003-02-15]
+	Added oroborus-2.0.11 [salo 2003-02-15]
