@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/06/02 22:06:01 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/02 22:19:20 recht Exp $
 #
 
 DISTNAME=	ngrep-1.42
@@ -20,7 +20,7 @@ ALL_TARGET=		ngrep
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} = "FreeBSD"
+.if ${OPSYS} == "FreeBSD"
 CONFIGURE_ARGS+=	--disable-pcap-restart
 .endif
 
