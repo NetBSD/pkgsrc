@@ -1,7 +1,7 @@
-$NetBSD: patch-aw,v 1.1 2002/03/23 02:36:49 wiz Exp $
+$NetBSD: patch-aw,v 1.2 2003/12/04 00:34:06 kristerw Exp $
 
---- soundio.c.orig	Sat May 19 03:29:57 2001
-+++ soundio.c
+--- soundio.c.orig	Sat May 19 12:29:57 2001
++++ soundio.c	Wed Dec  3 23:54:20 2003
 @@ -57,7 +57,7 @@
  extern  int     rtrecord(char *, int);
  extern  void    rtplay(char *, int);
@@ -21,6 +21,15 @@ $NetBSD: patch-aw,v 1.1 2002/03/23 02:36:49 wiz Exp $
  #ifdef PIPES
  FILE* pin=NULL, *pout=NULL;
  /*sbrandon: added NeXT to line below*/
+@@ -166,7 +169,7 @@
+         return(sreadin(isfd,inbuf,nbytes,p));
+ }
+ 
+-#if !defined(SYMANTEC) && !defined(_macintosh) && !defined(LINUX) && !defined(__BEOS__)
++#if !defined(SYMANTEC) && !defined(_macintosh) && !defined(LINUX) && !defined(__BEOS__) && !defined(__NetBSD__)
+ extern int write(int, const void*, unsigned int);
+ #endif
+ /* RWD.2.98 WAVE floats format must be NORMALIZED +- 1 */
 @@ -469,6 +472,10 @@
  #endif
  # ifdef LINUX
