@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8874 2005/01/22 18:14:01 adrianp Exp $
+$NetBSD: CHANGES,v 1.8875 2005/01/22 18:18:28 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -498,3 +498,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Gdk-Imlib-0.7009 [adrianp 2005-01-22]
 	Added p5-Gnome-0.7009 [adrianp 2005-01-22]
 	Added tinyca-0.6.7 [adrianp 2005-01-22]
+	Added ov519view-0.00 [hamajima 2005-01-22]
