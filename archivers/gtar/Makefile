@@ -3,12 +3,12 @@
 # Date created:		1 March 1998
 # Whom:			tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.2 1998/03/04 15:14:26 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/05 20:09:46 tv Exp $
 #
 
 DISTNAME=       tar-1.12
 PKGNAME=	gtar-1.12
-CATEGORIES=	devel
+CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GNU}
 
 MAINTAINER=	packages@netbsd.org
