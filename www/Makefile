@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.315 2004/04/11 18:26:43 snj Exp $
+# $NetBSD: Makefile,v 1.316 2004/04/12 18:20:30 kim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -161,6 +161,7 @@ SUBDIR+=	p5-CGI-FastTemplate
 SUBDIR+=	p5-CGI-FormBuilder
 SUBDIR+=	p5-CGI-Minimal
 SUBDIR+=	p5-CGI_Lite
+SUBDIR+=	p5-ExtUtils-XSBuilder
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-HTML-Clean
 SUBDIR+=	p5-HTML-FillInForm
@@ -187,6 +188,7 @@ SUBDIR+=	p5-URI
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-WWW-Amazon-Wishlist
 SUBDIR+=	p5-libapreq
+SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
 SUBDIR+=	pear-HTML_Common
 SUBDIR+=	pear-HTML_Select
