@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.3 2002/03/19 07:48:45 lukem Exp $
+
+--- ogg123/buffer.c.orig	Tue Mar 19 18:02:36 2002
++++ ogg123/buffer.c
+@@ -232,7 +232,7 @@
+     /* No need to lock mutex here because the other thread will
+        NEVER reduce the number of bytes stored in the buffer */
+     DEBUG("Sending %d bytes to the audio device", write_amount);
+-    buf->write_func(buf->buffer + buf->start, write_amount,
++    write_amount = buf->write_func(buf->buffer + buf->start, write_amount,
+ 		    /* Only set EOS if this is the last chunk */
+ 		    write_amount == buf->curfill ? buf->eos : 0,
+ 		    buf->write_arg);
+
+--- ogg123/callbacks.c.orig	Thu Dec 27 01:22:26 2001
++++ ogg123/callbacks.c
+@@ -30,7 +30,11 @@
+   audio_play_arg_t *play_arg = (audio_play_arg_t *) arg;
+   int ret;
+ 
++  pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, NULL);
++
+   ret = audio_devices_write(play_arg->devices, ptr, nbytes);
++
++  pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
+ 
+   return ret ? nbytes : 0;
+ }
