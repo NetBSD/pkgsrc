@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2005/01/11 18:09:22 skrll Exp $
+# $NetBSD: Makefile,v 1.277 2005/01/12 00:01:21 hubertf Exp $
 
 COMMENT=	System utilities
 
@@ -45,6 +45,7 @@ SUBDIR+=	depot
 SUBDIR+=	desktop-file-utils
 SUBDIR+=	dmassage
 SUBDIR+=	dmesg2gif
+SUBDIR+=	dmidecode
 SUBDIR+=	dog
 SUBDIR+=	dptutil
 SUBDIR+=	duplicity
