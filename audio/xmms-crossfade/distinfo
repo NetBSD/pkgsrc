@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/23 20:17:22 rh Exp $
+
+SHA1 (xmms-crossfade-0.2.7.tar.gz) = c06059134e923d695228accc7b3896832eb5c972
+Size (xmms-crossfade-0.2.7.tar.gz) = 195983 bytes
+SHA1 (patch-aa) = 1f710760444071888612a76d4ac698930b7ea999
+SHA1 (patch-ab) = cd98f4d68b0a0aabcd590c8dfdd7bfa80dd4a0e9
+SHA1 (patch-ac) = 57e7452262c0522fd641ad27139398dfac3c046a
+SHA1 (patch-ad) = d2a1f96dc6544020d49b7e21b1860224a71fa1c6
+SHA1 (patch-ae) = fd3b3e9aae83884defbb449a2cae47a06aec4ee5
