@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2004/03/31 04:59:18 xtraeme Exp $
 #
 
-DISTNAME=		abiword-2.0.4
-PKGREVISION=		4
+DISTNAME=		abiword-2.0.5
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 EXTRACT_SUFX=		.tar.bz2
