@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: adsl.sh,v 1.6 2004/12/23 18:11:18 skrll Exp $
+# $NetBSD: adsl.sh,v 1.7 2005/02/02 22:09:50 tron Exp $
 #
 # PROVIDE: adsl
 # REQUIRE: NETWORKING
@@ -38,7 +38,9 @@ adsl_start()
 
 	# Ensure we have at least tun0 - NetBSD 1.6 and later
 	ifconfig tun0 >/dev/null 2>&1 || ifconfig tun0 create
-	if ! @PREFIX@/sbin/modem_run -f @PREFIX@/libdata/speedtouch/$firmware; then
+	ipcrm -S -559038737  >/dev/null 2>&1
+	if ! @PREFIX@/sbin/modem_run -f @PREFIX@/libdata/speedtouch/$firmware
+	then
 		echo "Couldn't download firmware to modem."
 		exit 1
 	fi
@@ -48,13 +50,14 @@ adsl_start()
 
 adsl_stop()
 {
-	PPID="`ps ax | awk '/ppp -ddial adsl$/{print $1}'`
-	MPID="`ps ax | awk '/modem_run -f /{print $1}'`
-	if [ -n "$PPID $MPID" ]; then
+	PPID="`ps -ax | awk '/ppp -ddial adsl *$/{print $1}'`"
+	MPID="`ps -ax | awk '/modem_run -f /{print $1}'`"
+	if [ -n "$PPID $MPID" ]
+	then
 		echo "Stopping speedtouch adsl."
-		for pid in $PPID $MPID; do
-			kill $pid
-		done
+		kill $PPID $MPID >/dev/null 2>&1
+		sleep 1
+		ipcrm -S -559038737 >/dev/null 2>&1
 	fi
 }
 
