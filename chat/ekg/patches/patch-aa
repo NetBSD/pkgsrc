@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/18 06:42:34 zuntum Exp $
+
+--- src/Makefile.in.orig	Mon Mar 18 02:47:04 2002
++++ src/Makefile.in
+@@ -21,7 +21,7 @@
+ all:	ekg @do_ioctl@
+ 
+ ekg:	$(OBJS) $(LOBJS)
+-	$(CC) -o $(NAME) $(OBJS) $(LOBJS) $(LIBS) 
++	$(CC) -o $(NAME) $(OBJS) $(LOBJS) $(LIBS) -Wl -R${LOCALBASE}/lib
+ 
+ ioctl_daemon:	ioctl_daemon.c
+ 	$(CC) ioctl_daemon.c -o $(IOCTL_DAEMON_NAME)
