@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 1999/09/03 02:00:09 jlam Exp $
+
+--- applets/mixer/Makefile.in.orig	Mon Jul 19 19:02:48 1999
++++ applets/mixer/Makefile.in	Thu Sep  2 20:18:08 1999
+@@ -162,7 +162,7 @@
+ mixer_applet_SOURCES =  	mixer.c			vslider.c		vslider.h		hslider.c		hslider.h		lamp-small.xpm  	lamp-small-red.xpm 
+ 
+ 
+-mixer_applet_LDADD = ../../panel/libpanel_applet.la 		     $(GNOME_LIBDIR) $(ORB_LIBS)      		     $(GNOMEGNORBA_LIBS) $(INTLLIBS) 
++mixer_applet_LDADD = ../../panel/libpanel_applet.la 		     $(GNOME_LIBDIR) $(ORB_LIBS) $(ESD_LIBS)		     $(GNOMEGNORBA_LIBS) $(INTLLIBS) 
+ 
+ 
+ EXTRA_DIST = mixer_applet.desktop mixer_applet.gnorba
