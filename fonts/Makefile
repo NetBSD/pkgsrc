@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/01/29 06:37:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.66 2004/02/19 00:24:47 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -85,6 +85,7 @@ SUBDIR+=	p5-Font-TTF
 SUBDIR+=	pcf2bdf
 SUBDIR+=	pfaedit
 SUBDIR+=	profont
+SUBDIR+=	py-fonttools
 SUBDIR+=	sgi-fonts
 SUBDIR+=	t1lib
 SUBDIR+=	t1utils
