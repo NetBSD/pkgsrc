@@ -1,0 +1,61 @@
+diff -rc2 postgresql-6.4.2-orig/src/config.sub postgresql-6.4.2/src/config.sub
+*** postgresql-6.4.2-orig/src/config.sub	Tue Mar 25 02:16:33 1997
+--- postgresql-6.4.2/src/config.sub	Thu Mar  4 21:46:43 1999
+***************
+*** 150,154 ****
+  	# Recognize the basic CPU types without company name.
+  	# Some are omitted here because they have special meanings below.
+! 	tahoe | i860 | m68k | m68000 | m88k | ns32k | arm \
+  		| arme[lb] | pyramid \
+  		| tron | a29k | 580 | i960 | h8300 | hppa | hppa1.0 | hppa1.1 \
+--- 150,154 ----
+  	# Recognize the basic CPU types without company name.
+  	# Some are omitted here because they have special meanings below.
+! 	tahoe | i860 | m68k | m68000 | m88k | ns32k | arm | arm32 \
+  		| arme[lb] | pyramid \
+  		| tron | a29k | 580 | i960 | h8300 | hppa | hppa1.0 | hppa1.1 \
+***************
+*** 178,182 ****
+  	      | pn-* | np1-* | xps100-* | clipper-* | orion-* | sparclite-* \
+  	      | pdp11-* | sh-* | powerpc-* | powerpcle-* | sparc64-* | mips64-* | mipsel-* \
+! 	      | mips64el-* | mips64orion-* | mips64orionel-* | f301-*)
+  		;;
+  	# Recognize the various machine names and aliases which stand
+--- 178,182 ----
+  	      | pn-* | np1-* | xps100-* | clipper-* | orion-* | sparclite-* \
+  	      | pdp11-* | sh-* | powerpc-* | powerpcle-* | sparc64-* | mips64-* | mipsel-* \
+! 	      | mips64el-* | mips64orion-* | mips64orionel-* | f301-* | arm32-*)
+  		;;
+  	# Recognize the various machine names and aliases which stand
+diff -rc2 postgresql-6.4.2-orig/src/configure postgresql-6.4.2/src/configure
+*** postgresql-6.4.2-orig/src/configure	Sun Dec 13 15:08:20 1998
+--- postgresql-6.4.2/src/configure	Thu Mar  4 21:52:02 1999
+***************
+*** 741,745 ****
+  rm -f conftest.sh
+  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
+! . conftest.sh
+  rm -f conftest.sh
+  
+--- 741,745 ----
+  rm -f conftest.sh
+  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
+! . ./conftest.sh
+  rm -f conftest.sh
+  
+diff -rc2 postgresql-6.4.2-orig/src/configure.in postgresql-6.4.2/src/configure.in
+*** postgresql-6.4.2-orig/src/configure.in	Sun Dec 13 15:08:20 1998
+--- postgresql-6.4.2/src/configure.in	Thu Mar  4 21:54:10 1999
+***************
+*** 148,152 ****
+  rm -f conftest.sh
+  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
+! . conftest.sh
+  rm -f conftest.sh
+  ]
+--- 148,152 ----
+  rm -f conftest.sh
+  sed 's/^\([A-Za-z_]*\):\(.*\)$/\1="\2"/' "template/$TEMPLATE" >conftest.sh
+! . ./conftest.sh
+  rm -f conftest.sh
+  ]
