@@ -1,19 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2001/10/30 14:17:03 agc Exp $
+$NetBSD: patch-ac,v 1.2 2001/12/17 21:23:42 agc Exp $
 
 On Darwin, grab the md5 files and headers from the digest package
 
 --- lib/Makefile	2001/10/29 21:07:57	1.1
 +++ lib/Makefile	2001/10/29 21:08:11
-@@ -5,13 +5,25 @@
+@@ -5,13 +5,23 @@
  SRCS+=		exec.c file.c ftpio.c global.c lpkg.c pen.c pkgdb.c \
  		plist.c str.c version.c
  
 +OPSYS!= 	uname -s
 +
 +.if ${OPSYS} == "Darwin"
-+.PATH:		${DIGESTDIR}
 +SRCS+=		md5c.c md5hl.c
-+CPPFLAGS+=	-I${DIGESTDIR}
 +.endif
 +
  MKLINT=		no
