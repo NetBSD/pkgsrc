@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/01 11:01:03 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/01 12:03:42 rh Exp $
 #
 # This Makefile fragment is included by packages that use oaf.
 #
@@ -18,7 +18,7 @@ OAF_BUILDLINK_MK=	# defined
 .include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.oaf?=	oaf>=0.6.6
-DEPENDS+=	${BUILDLINK_DEPENDS.oaf}:../../textproc/oaf
+DEPENDS+=	${BUILDLINK_DEPENDS.oaf}:../../devel/oaf
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.oaf=oaf
 BUILDLINK_PREFIX.oaf_DEFAULT=	${LOCALBASE}
