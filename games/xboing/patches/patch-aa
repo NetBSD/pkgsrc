@@ -1,20 +1,21 @@
-$NetBSD: patch-aa,v 1.3 2000/05/31 14:49:14 dmcmahill Exp $
---- Imakefile.orig	Thu Nov 21 18:28:46 1996
-+++ Imakefile	Mon Sep 14 16:23:07 1998
+$NetBSD: patch-aa,v 1.4 2002/07/15 09:01:43 wiz Exp $
+
+--- Imakefile.orig	Fri Nov 22 02:28:46 1996
++++ Imakefile
 @@ -24,23 +24,23 @@
  XCOMM This is the directory where the highscore, level & sound data will be 
  XCOMM placed. Default will be the current directory.
  
 -    XBOING_DIR = .
-+    XBOING_DIR = $(X11BASE)/share/xboing
++    XBOING_DIR = $(X11PREFIX)/share/xboing
  
  XCOMM These are some defines that must be set. Some may be overwritten in the
  XCOMM machine arch section.
  
 -    XPMLIB 				= -L/usr/X11/lib -lXpm
 -    XPMINCLUDE 			= -I/usr/X11/include/X11
-+    XPMLIB 			= -L$(X11BASE)/lib -lXpm
-+    XPMINCLUDE 			= -I$(X11BASE)/include/X11
++    XPMLIB 			= -L$(BUILDLINK_X11_DIR)/lib -lXpm
++    XPMINCLUDE 			= -I$(BUILDLINK_X11_DIR)/include/X11
      XBOINGINCLUDE 		= -I./include
 -    LEVEL_INSTALL_DIR 	= $(XBOING_DIR)/levels
 +    LEVEL_INSTALL_DIR 		= $(XBOING_DIR)/levels
@@ -28,10 +29,24 @@ $NetBSD: patch-aa,v 1.3 2000/05/31 14:49:14 dmcmahill Exp $
      AUDIO_INCLUDE 		=
      AUDIO_LIB 			=
 -	CDEBUGFLAGS         = -g
-+    CDEBUGFLAGS         	= -O
++    CDEBUGFLAGS         	= -O -g
  
  XCOMM Uncomment this if you want to use ANY of the AUDIO sound systems
  #define COMPILE_IN_AUDIO    
+@@ -60,11 +60,11 @@
+     AUDIO_LIB 		= -laudio
+ #endif /* HPArchitecture */
+ 
+-#if defined(LinuxArchitecture) && defined(COMPILE_IN_AUDIO)
++#if defined(NetBSDArchitecture) && defined(COMPILE_IN_AUDIO)
+     AUDIO_AVAILABLE = True
+     AUDIO_SRC 		= audio/LINUXaudio.c
+     AUDIO_INCLUDE 	=
+-    AUDIO_LIB 		= 
++    AUDIO_LIB 		= -lossaudio
+ #endif /* linux */
+ 
+ #if defined(svr4) && defined(COMPILE_IN_AUDIO)
 @@ -81,7 +81,7 @@
      AUDIO_LIB 		= -laudio
  #endif /* SGIArchitecture */
@@ -47,7 +62,7 @@ $NetBSD: patch-aa,v 1.3 2000/05/31 14:49:14 dmcmahill Exp $
          -DSOUNDS_DIR=\"$(SOUNDS_DIR)\" \
 -        -DREADMEP_FILE=\"$(XBOING_DIR)/docs/problems.doc\"
 -XCOMM   -DUSE_FLOCK=\"True\" \
-+        -DREADMEP_FILE=\"$(XBOING_DIR)/docs/problems.doc\" \
++        -DREADMEP_FILE=\"$(XBOING_DIR)/problems.doc\" \
 +        -DUSE_FLOCK=\"True\" \
  XCOMM   -DNEED_USLEEP=\"True\" \
  XCOMM   -DNO_LOCKING=\"True\" 

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/15 09:01:42 wiz Exp $
 bin/xboing
 man/man6/xboing.6
-share/xboing/problems.doc
 share/xboing/levels/demo.data
 share/xboing/levels/editor.data
 share/xboing/levels/level01.data
@@ -85,5 +84,53 @@ share/xboing/levels/level78.data
 share/xboing/levels/level79.data
 share/xboing/levels/level80.data
 share/xboing/levels/new.data
+share/xboing/problems.doc
+share/xboing/sounds/Doh1.au
+share/xboing/sounds/Doh2.au
+share/xboing/sounds/Doh3.au
+share/xboing/sounds/Doh4.au
+share/xboing/sounds/ammo.au
+share/xboing/sounds/applause.au
+share/xboing/sounds/ball2ball.au
+share/xboing/sounds/balllost.au
+share/xboing/sounds/ballshot.au
+share/xboing/sounds/boing.au
+share/xboing/sounds/bomb.au
+share/xboing/sounds/bonus.au
+share/xboing/sounds/buzzer.au
+share/xboing/sounds/click.au
+share/xboing/sounds/ddloo.au
+share/xboing/sounds/evillaugh.au
+share/xboing/sounds/game_over.au
+share/xboing/sounds/gate.au
+share/xboing/sounds/hithere.au
+share/xboing/sounds/hypspc.au
+share/xboing/sounds/intro.au
+share/xboing/sounds/key.au
+share/xboing/sounds/looksbad.au
+share/xboing/sounds/metal.au
+share/xboing/sounds/mgun.au
+share/xboing/sounds/ouch.au
+share/xboing/sounds/paddle.au
+share/xboing/sounds/ping.au
+share/xboing/sounds/shark.au
+share/xboing/sounds/shoot.au
+share/xboing/sounds/shotgun.au
+share/xboing/sounds/spring.au
+share/xboing/sounds/stamp.au
+share/xboing/sounds/sticky.au
+share/xboing/sounds/supbons.au
+share/xboing/sounds/toggle.au
+share/xboing/sounds/tone.au
+share/xboing/sounds/touch.au
+share/xboing/sounds/wallsoff.au
+share/xboing/sounds/warp.au
+share/xboing/sounds/weeek.au
+share/xboing/sounds/whizzo.au
+share/xboing/sounds/whoosh.au
+share/xboing/sounds/wzzz.au
+share/xboing/sounds/wzzz2.au
+share/xboing/sounds/youagod.au
+@dirrm share/xboing/sounds
 @dirrm share/xboing/levels
 @dirrm share/xboing

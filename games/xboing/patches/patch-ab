@@ -1,10 +1,17 @@
-$NetBSD: patch-ab,v 1.1 1998/08/18 09:25:17 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 2002/07/15 09:01:43 wiz Exp $
 
---- ball.c.orig	Mon Aug 17 22:31:15 1998
-+++ ball.c	Mon Aug 17 22:31:34 1998
-@@ -52,3 +52,5 @@
- #include <math.h>
-+#ifndef __NetBSD__
- #include <values.h>
+--- audio/LINUXaudio.c.orig	Fri Nov 22 02:28:33 1996
++++ audio/LINUXaudio.c
+@@ -55,7 +55,12 @@
+ #include <unistd.h>
+ #include <stdio.h>
+ #include <fcntl.h>
++#include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <linux/soundcard.h>
 +#endif
- #include <xpm.h>
+ 
+ #include "include/error.h"
+ #include "include/audio.h"
