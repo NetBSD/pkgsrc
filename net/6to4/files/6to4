@@ -64,11 +64,18 @@ $prefix = sprintf("2002:%02x%02x:%02x%02x", @l4c[0..3]);
 	
 $localadr6 = sprintf("$prefix:%04x", $v6_net);
 
-chomp($remoteadr4 = `host $peer`);
-$remoteadr4 =~ s/^.*address //;
+if ($peer eq "6to4-anycast") {
+    # magic values from rfc 3068
+    $remoteadr4 =  "192.88.99.1";
+    $remoteadr6 =  "2002:c058:6301::";
+} 
+else {
+    chomp($remoteadr4 = `host $peer`);
+    $remoteadr4 =~ s/^.*address //;
 
-chomp($remoteadr6 = `host -t AAAA $peer`);
-$remoteadr6 =~ s/^.*address //;
+    chomp($remoteadr6 = `host -t AAAA $peer`);
+    $remoteadr6 =~ s/^.*address //;
+}
 
 
 if ($verbose) {
