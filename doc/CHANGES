@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9283 2005/02/24 06:28:08 veego Exp $
+$NetBSD: CHANGES,v 1.9284 2005/02/24 09:56:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1058,3 +1058,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Apache-Test to 1.20 [wiz 2005-02-23]
 	Updated p5-libapreq to 1.33 [wiz 2005-02-23]
 	Updated glut to 6.2.1nb2 [veego 2005-02-24]
+	Updated abiword to 2.2.4 [adam 2005-02-24]
+	Updated abiword-plugins to 2.2.4 [adam 2005-02-24]
