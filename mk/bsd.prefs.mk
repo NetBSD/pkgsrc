@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.46 2001/07/02 08:02:34 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.47 2001/07/03 02:20:38 mjl Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -42,6 +42,7 @@ GNU_ARCH.mips?=		mipsel
 GNU_ARCH.mipseb?=	mipseb
 GNU_ARCH.mipsel?=	mipsel
 GNU_ARCH.ns32k?=	ns32k
+GNU_ARCH.powerpc?=	powerpc
 GNU_ARCH.sparc?=	sparc
 GNU_ARCH.vax?=		vax
 MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
