@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2001/01/25 02:48:09 kei Exp $
+# $NetBSD: Makefile,v 1.82 2001/02/01 14:35:04 wiz Exp $
 #
 
     SUBDIR += 9menu
@@ -25,6 +25,7 @@
     SUBDIR += git
     SUBDIR += gnome-pim
     SUBDIR += gnome-utils
+    SUBDIR += gone
     SUBDIR += gperiodic
     SUBDIR += heyu
     SUBDIR += hitchhiker
