@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/15 18:25:38 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/16 12:45:00 tron Exp $
 #
 
 DISTNAME=	mxDateTime-1.3.0
@@ -18,7 +18,7 @@ RESTRICTED=	No commercial distribution
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-PYTHON_VERSIONS_ACCEPTED=	20 21 # 22 doesn't work
+PYTHON_VERSIONS_ACCEPTED=	21 # 20 and 22 doen't work
 USE_PYPKGPREFIX=	yes
 PY_PATCHPLIST=		yes
 
