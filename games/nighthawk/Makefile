@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 15:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/19 03:56:35 jlam Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -29,8 +29,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk/data
 	( cd ${WRKSRC}/data ; tar plcf - . ) | ( cd ${PREFIX}/share/nighthawk/data ; tar plvxf - )
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/nighthawk
-	${FIND} ${PREFIX}/share/nighthawk -type f -print | xargs ${CHMOD} 444
-	${FIND} ${PREFIX}/share/nighthawk -type d -print | xargs ${CHMOD} 555
+	${FIND} ${PREFIX}/share/nighthawk -type f -print | ${XARGS} ${CHMOD} 444
+	${FIND} ${PREFIX}/share/nighthawk -type d -print | ${XARGS} ${CHMOD} 555
 	${INSTALL_PROGRAM} ${WRKSRC}/src/nighthawk ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src_sound/nighthawk_sound ${PREFIX}/bin
 	${CHGRP} games ${PREFIX}/bin/nighthawk

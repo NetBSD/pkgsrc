@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/27 03:19:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/05/19 03:56:35 jlam Exp $
 
 DISTNAME=	Atari800-0.9.9a
 PKGNAME=	atari800-0.9.9a
@@ -27,7 +27,7 @@ MAKE_FLAGS=	LDFLAGS="${LDFLAGS} -L${X11BASE}/lib" OBJ="atari_x11.o" \
 MAKE_ENV+=      HOME=${WRKSRC}
 
 post-extract:
-	@${FIND} ${WRKDIR} -type f -print | xargs ${CHMOD} 0644
+	@${FIND} ${WRKDIR} -type f -print | ${XARGS} ${CHMOD} 0644
 	@${MV} ${WRKDIR}/Atari800-0.9.9a/* ${WRKSRC}/
 
 do-build:

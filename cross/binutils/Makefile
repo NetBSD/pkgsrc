@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/03/13 12:01:43 agc Exp $
+# $NetBSD: Makefile,v 1.27 2001/05/19 03:56:32 jlam Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -45,8 +45,8 @@ ENABLE_TARGETS+=	alpha-netbsd arm-netbsd \
 
 # make sure configure/Makefile.in is newer than configure.in/Makefile.am
 post-patch:
-	${FIND} ${WRKSRC} -name configure -print | xargs ${TOUCH}
-	${FIND} ${WRKSRC} -name Makefile.in -print | xargs ${TOUCH}
+	${FIND} ${WRKSRC} -name configure -print | ${XARGS} ${TOUCH}
+	${FIND} ${WRKSRC} -name Makefile.in -print | ${XARGS} ${TOUCH}
 
 # check that path does not contain cwd
 pre-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/11 09:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/19 03:56:36 jlam Exp $
 #
 
 DISTNAME=       blackdown-jdk-1.3.0.nb2
@@ -41,8 +41,8 @@ post-fetch:
 post-patch:
 	@${CP} ${WRKDIR}/libhpi.so \
 	    ${WRKSRC}/jre/lib/ppc/native_threads/libhpi.so
-	@${FIND} ${WRKSRC} -name '*.orig' -print | xargs ${RM} -f
-	@${FIND} ${WRKSRC} -name '*.1.gz' -print | xargs ${GUNZIP_CMD}
+	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -name '*.1.gz' -print | ${XARGS} ${GUNZIP_CMD}
 
 # This is ugly.  The chown should happen after copying, ot tar should have
 # a way to override permissions.
@@ -50,8 +50,8 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${JDK_HOME}
 	${CHOWN} -hR ${BINOWN}:${BINGRP} ${WRKSRC}
 	${CHMOD} -R uog+r ${WRKSRC}
-	${FIND} ${WRKSRC}/bin ${WRKSRC}/jre/bin -type f | xargs ${CHMOD} uog+rx
-	${FIND} ${WRKSRC} -type d | xargs ${CHMOD} uog+rx
+	${FIND} ${WRKSRC}/bin ${WRKSRC}/jre/bin -type f | ${XARGS} ${CHMOD} uog+rx
+	${FIND} ${WRKSRC} -type d | ${XARGS} ${CHMOD} uog+rx
 	${GTAR} -C ${WRKSRC} -cf- . | ${GTAR} -C ${JDK_HOME} -xpf-
 
 .include "../../mk/bsd.pkg.mk"
