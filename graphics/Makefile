@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.331 2004/08/25 17:23:22 snj Exp $
+# $NetBSD: Makefile,v 1.332 2004/08/27 13:29:49 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -244,6 +244,7 @@ SUBDIR+=	urt
 SUBDIR+=	vcg
 SUBDIR+=	vid
 SUBDIR+=	viewfax
+SUBDIR+=	vp
 SUBDIR+=	vtk
 SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
