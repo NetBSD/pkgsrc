@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.9 2003/06/06 08:58:43 jtb Exp $
+$NetBSD: patch-af,v 1.10 2003/06/29 23:06:47 jtb Exp $
 
 --- /dev/null
 +++ config/netbsd/i386.c
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.9 2003/06/06 08:58:43 jtb Exp $
 +		asm ("movl 0(%eax),%esp");
 +		asm ("movl $0,%ebp");
 +		new_context (0, 0);
-+		syserr ("interp() returned in coswitch");
++		syserr ("new_context() returned in coswitch");
 +	}
 +	else {
 +		asm ("movl 0(%eax),%esp");
