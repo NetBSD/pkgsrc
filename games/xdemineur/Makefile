@@ -3,10 +3,10 @@
 # Date created:         29 Jan 1998
 # Whom:                 bouyer
 #
-# $NetBSD: Makefile,v 1.3 1998/02/02 20:56:14 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/11 12:35:26 bouyer Exp $
 #
 
-DISTNAME=       xdemineur-2.0
+DISTNAME=       xdemineur-2.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_XCONTRIB}  \
 		ftp://ftp.agm-ita.ensta.fr/pub/babafou/
