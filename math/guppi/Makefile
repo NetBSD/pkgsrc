@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/01/24 12:22:54 tron Exp $
+# $NetBSD: Makefile,v 1.12 2002/01/25 02:00:11 rh Exp $
 
 DISTNAME=	Guppi-0.40.0
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -10,8 +10,10 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/guppi/
 COMMENT=	Plot program with integrated statistics capabilities
 
-DEPENDS+=	gnome-core>=1.4:../../x11/gnome-core
 DEPENDS+=	gnumeric>=0.75:../../math/gnumeric0
+BUILDLINK_DEPENDS.gnome-core=		gnome-core>=1.4
+BUILDLINK_DEPENDS.gdk-pixbuf=		gdk-pixbuf>=0.11.0
+BUILDLINK_DEPENDS.gdk-pixbuf-gnome=	gdk-pixbuf-gnome>=0.11.0
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
@@ -29,4 +31,5 @@ post-install:
 .include "../../lang/python/pyversion.mk"
 .include "../../devel/libglade/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
+.include "../../x11/gnome-core/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
