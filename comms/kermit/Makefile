@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/02/13 16:33:47 tron Exp $
+# $NetBSD: Makefile,v 1.27 2000/06/12 17:24:21 rh Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -61,11 +61,11 @@ LIBS+=          -ltermcap
 .if ${USE_SOCKS} == 4
 DEPENDS+=	socks4-2.2:../../net/socks4
 KFLAGS+=	-DSOCKS
-LIBS+=		-lsocks
+LIBS+=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lsocks
 .elif ${USE_SOCKS} == 5
 DEPENDS+=	socks5-1.0.2:../../net/socks5
 KFLAGS+=	-DSOCKS -DCK_SOCKS5
-LIBS+=		-lsocks
+LIBS+=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lsocks5
 .endif
 .endif
 
