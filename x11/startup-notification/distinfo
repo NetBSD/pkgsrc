@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/12/17 14:59:16 sketch Exp $
+$NetBSD: distinfo,v 1.3 2004/04/03 11:20:20 recht Exp $
 
-SHA1 (startup-notification-0.5.tar.bz2) = 54ae80d94e608c0bcecd0f9f1c85fd7ab4f48740
-Size (startup-notification-0.5.tar.bz2) = 156294 bytes
-SHA1 (patch-aa) = 7ac5a73bd27ca2210b7ee5160b70d9e70b7ed4a2
+SHA1 (startup-notification-0.6.tar.bz2) = 7aebcbfbc060d6bad0f98811a98ced13f5873cce
+Size (startup-notification-0.6.tar.bz2) = 206341 bytes
+SHA1 (patch-aa) = 6ad6128961e8e21fd7b21b242788dad8f3e07e0b
