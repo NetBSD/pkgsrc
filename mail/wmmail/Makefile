@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2000/10/08 07:05:39 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/10/15 21:54:54 tron Exp $
 
-DISTNAME=	WMMail.app-0.63a
-PKGNAME=	wmmail-0.63a
+DISTNAME=	WMMail.app-0.64
+PKGNAME=	wmmail-0.64
 CATEGORIES=	mail x11
-MASTER_SITES=	http://www.eecg.utoronto.ca/~chanb/
+MASTER_SITES=	http://www.eecg.utoronto.ca/~chanb/WMMail.app/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.eecg.toronto.edu/cgi-bin/cgiwrap/chanb/index.cgi?wmmail
