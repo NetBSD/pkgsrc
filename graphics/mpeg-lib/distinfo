@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/10/04 15:54:39 danw Exp $
+$NetBSD: distinfo,v 1.7 2004/04/24 00:49:45 wiz Exp $
 
 SHA1 (mpeg_lib-1.3.1.tar.gz) = 0ea4f8b31e4f316d99c2034d76619988f75147dc
 Size (mpeg_lib-1.3.1.tar.gz) = 152092 bytes
@@ -17,4 +17,4 @@ SHA1 (patch-al) = f63df4035b3f33ac778e7bde1e478434826c34ba
 SHA1 (patch-am) = b2f7afdd74c28bd6345f1ac291577103bf8196f3
 SHA1 (patch-an) = 3b23f238fcdc1321d17d19be74c7e670b249c5fc
 SHA1 (patch-ao) = 84caaa6c7b9cb5eb7f7455323767aa6753e92ff7
-SHA1 (patch-ap) = 89ce52d7878966120638a1bce22666ee8b83fa7e
+SHA1 (patch-ap) = 2d7536517bcf3e9ed52fdc09ab5a5f721aab6c5d
