@@ -1,10 +1,6 @@
-# $NetBSD: Makefile.SunOS.sparc,v 1.1.1.1 2003/12/04 05:25:42 grant Exp $
-#
+# $NetBSD: Makefile.SunOS.sparc,v 1.2 2004/01/04 05:01:02 grant Exp $
 
 DISTNAME=	thunderbird-sparc-sun-solaris2.7
 MASTER_SITES=	http://ftp.mozilla.org/pub/thunderbird/nightly/contrib/latest-trunk/
 
-DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
-
-PLATFORM=	solaris
-MOZILLA_LIB=	${PREFIX}/lib/thunderbird-${PLATFORM}
+MOZ_PLATFORM=	solaris

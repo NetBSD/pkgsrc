@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1 2004/01/04 05:01:03 grant Exp $
+
+MASTER_SITES=	http://ftp.mozilla.org/pub/${MOZILLA_SHORT}/nightly/${MOZ_CONTRIB}latest-trunk/ \
+		ftp://ftp.mozilla.org/pub/${MOZILLA_SHORT}/nightly/${MOZ_CONTRIB}latest-trunk/
+
+DIST_SUBDIR=	${PKGNAME}
+NO_CHECKSUM=	# defined
+NO_SRC_ON_FTP=	# defined
+
+.include "../../mk/bsd.prefs.mk"
+
+MOZ_VER!=	${DATE} +%Y%m%d
+
+.include "../../www/mozilla-bin/Makefile.common"

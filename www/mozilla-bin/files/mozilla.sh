@@ -1,7 +1,7 @@
 #!@SH@
-# $NetBSD: mozilla.sh,v 1.3 2003/07/18 07:31:16 grant Exp $
+# $NetBSD: mozilla.sh,v 1.4 2004/01/04 05:01:03 grant Exp $
 
-LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:@PREFIX@/lib/mozilla-@PLATFORM@:@PREFIX@/lib"
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:@PREFIX@/lib/@MOZILLA@@MOZ_EXTRA@-@MOZ_PLATFORM@:@PREFIX@/lib"
 export LD_LIBRARY_PATH
 
-exec @PREFIX@/lib/mozilla-@PLATFORM@/mozilla "$@"
+exec @PREFIX@/lib/@MOZILLA@@MOZ_EXTRA@-@MOZ_PLATFORM@/@MOZILLA@ "$@"
