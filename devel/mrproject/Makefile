@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/23 21:50:44 jmmv Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.codefactory.se/pub/software/mrproject/source/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/01/22 08:24:29 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/23 21:50:43 jmmv Exp $
 #
 
 DISTNAME=	gconfmm-2.0.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmm/}
 
