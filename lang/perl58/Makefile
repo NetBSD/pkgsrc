@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/04/05 10:43:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2004/04/12 03:07:50 jschauma Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -82,7 +82,7 @@ CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 
 MKPIC?=		yes
 
-.if ${OPSYS} == "IRIX"
+.if ${OPSYS} == "IRIX" && defined(USE_MIPSPRO)
 .  if ${ABI} == "32"
 PERL5_CC=		${CC:T} -n32
 .  elif ${ABI} == "64"
