@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6354 2004/06/27 20:21:52 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6355 2004/06/27 21:41:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3114,3 +3114,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated intltool to 0.31 [jmmv 2004-06-27]
 	Removed xml-i18n-tools [jmmv 2004-06-27]
 	Updated uptimec to 0.2p3 [xtraeme 2004-06-27]
+	Added cambevao 2.0 [abs 2004-06-27]
+
