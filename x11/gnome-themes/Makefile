@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/06/28 15:15:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/07/03 21:09:54 minskim Exp $
 #
 
 DISTNAME=		gnome-themes-2.6.2
@@ -23,6 +23,7 @@ GNU_CONFIGURE=		yes
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gtk2-engines/buildlink3.mk"
 
