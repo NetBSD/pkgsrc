@@ -1,16 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/24 03:53:06 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/11 21:22:41 jschauma Exp $
 
---- TailFile.cc.orig	Wed Jan 24 04:44:29 2001
-+++ TailFile.cc
-@@ -417,7 +417,10 @@
+--- TailFile.cc.orig	2004-01-11 16:19:14.000000000 -0500
++++ TailFile.cc	2004-01-11 16:20:33.000000000 -0500
+@@ -375,7 +375,7 @@
+    // check if there isn't a follow buffer
+    if (m_follow_buffer == NULL)
+    {
+-      m_follow_buffer = new ostrstream();
++      m_follow_buffer = new std::ostrstream();
+    }
+ 
+    // make buffer
+@@ -417,6 +417,9 @@
        int ch = fgetc(m_file);
  
        // add the character to the string
--      m_follow_buffer->put(ch);
-+     if (ch == EOF)
-+	  clearerr(m_file);	// required by POSIX and ANSI
-+     else
-+          m_follow_buffer->put(ch);
++      if (ch == EOF)
++          clearerr(m_file);     // required by POSIX and ANSI
++      else
+       m_follow_buffer->put(ch);
        
        // check if return
-       if (ch == '\n')
