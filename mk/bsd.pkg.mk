@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1318 2003/12/11 22:27:40 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1319 2003/12/13 00:34:39 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -2685,7 +2685,7 @@ _AOUT_AWK = \
 	BEGIN { linkc = 1 }			\
 	/^@/ { lines[NR] = $$0; next }		\
 	function libtool_release(lib) {		\
-		if (gsub("-[^-]+\.so\.", "\.so\.", lib)) { \
+		if (gsub("-[^-]+\\.so\\.", ".so.", lib)) { \
 			if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
 				rels[NR] = lib; \
 			}			\
@@ -2694,13 +2694,13 @@ _AOUT_AWK = \
 	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
 		libtool_release($$0);		\
 		lines[NR] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\.so$$", "\.so")) { \
+		if (sub("-[^-]+\\.so$$", ".so")) { \
 			links[linkc++] = $$0;	\
 		}				\
 		next				\
@@ -2708,11 +2708,11 @@ _AOUT_AWK = \
 	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
 		libtool_release($$0);		\
 		lines[NR] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\.so$$", "\.so")) { \
+		if (sub("-[^-]+\\.so$$", ".so")) { \
 			links[linkc++] = $$0;	\
 		}				\
 		next				\
@@ -2734,7 +2734,7 @@ _AOUT_AWK = \
 _DYLIB_AWK= \
 	/^@/ { lines[NR] = $$0; next }		\
 		function libtool_release(lib) {		\
-		if (gsub("\.so\.", "\.", lib) || gsub("\.so$$", "", lib)) { \
+		if (gsub("\\.so\\.", ".", lib) || gsub("\\.so$$", "", lib)) { \
 			lib = lib ".dylib"; \
 			if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
 				rels[NR] = lib; \
@@ -2745,13 +2745,13 @@ _DYLIB_AWK= \
 		libtool_release($$0);		\
 		lines[NR] = $$0;		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\.so$$", "\.so")) { \
+		if (sub("-[^-]+\\.so$$", ".so")) { \
 			links[linkc++] = $$0;	\
 		}				\
 		next				\
@@ -2760,11 +2760,11 @@ _DYLIB_AWK= \
 		libtool_release($$0);		\
 		lines[NR] = $$0;		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\.so$$", "\.so")) { \
+		if (sub("-[^-]+\\.so$$", ".so")) { \
 			links[linkc++] = $$0;	\
 		}				\
 		next				\
@@ -2773,9 +2773,9 @@ _DYLIB_AWK= \
 		libtool_release($$0);		\
 		lines[NR] = $$0;		\
 		links[linkc++] = $$0;		\
-		sub("\.[0-9]+$$", "");		\
+		sub("\\.[0-9]+$$", "");		\
 		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\.so$$", "\.so")) { \
+		if (sub("-[^-]+\\.so$$", ".so")) { \
 			links[linkc++] = $$0;	\
 		}				\
 		next				\
@@ -2787,7 +2787,7 @@ _DYLIB_AWK= \
 		}				\
 		libtool_release($$0);		\
 		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\.so$$", "\.so")) { \
+		if (sub("-[^-]+\\.so$$", ".so")) { \
 			links[linkc++] = $$0;	\
 		}				\
 		next				\
@@ -2824,8 +2824,8 @@ _DYLIB_AWK= \
 _AIXLIB_AWK= \
 	/^@/ { lines[NR] = $$0; next }		\
 	/.*\/lib[^\/]+\.so(\.[0-9]+)*$$/ {	\
-		sub("(\.[0-9]+)*$$", "");	\
-		sub("\.so$$", "\.a");       	\
+		sub("(\\.[0-9]+)*$$", "");	\
+		sub("\\.so$$", ".a");       	\
 		lines[NR] = $$0;     		\
 		next				\
 	}					\
@@ -2839,7 +2839,7 @@ _AIXLIB_AWK= \
 			}			\
 			if (j >= nlibs)		\
 				print lines[i];	\
-			if (match(lines[i], ".*\/lib[^\/]+\.a$$")) { \
+			if (match(lines[i], ".*/lib[^/]+\\.a$$")) { \
 				libs[nlibs] = lines[i]; \
 				nlibs++;	\
 			}			\
@@ -4126,7 +4126,7 @@ binpkg-list:
 					release = $$1;			\
 					arch = $$2; 			\
 					pkg = $$3;			\
-					gsub("\.tgz","", pkg);		\
+					gsub("\\.tgz","", pkg);		\
 					if (arch != "m68k" && arch != "mipsel") { \
 						if (arch in urls)	\
 							urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a>, " urls[arch]; \
@@ -4489,19 +4489,19 @@ print-PLIST:
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
 			print $$0;					\
-			sub("\.[0-9]+$$", "");				\
+			sub("\\.[0-9]+$$", "");				\
 			if ('$$genlinks') print $$0;			\
-			sub("\.[0-9]+$$", "");				\
+			sub("\\.[0-9]+$$", "");				\
 			if ('$$genlinks') print $$0;			\
-			sub("\.[0-9]+$$", "");				\
+			sub("\\.[0-9]+$$", "");				\
 			if ('$$genlinks') print $$0;			\
 			next;						\
 		}							\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ { 		\
 			print $$0;					\
-			sub("\.[0-9]+$$", "");				\
+			sub("\\.[0-9]+$$", "");				\
 			if ('$$genlinks') print $$0;			\
-			sub("\.[0-9]+$$", "");				\
+			sub("\\.[0-9]+$$", "");				\
 			if ('$$genlinks') print $$0;			\
 			next;						\
 		}							\
@@ -4858,7 +4858,7 @@ _MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$
 .endif
 
 _MANINSTALL_CMD= ${AWK} 'BEGIN{						\
-		start="^([^\/]*\/)*man\/([^\/]*\/)?";			\
+		start="^([^/]*/)*man/([^/]*/)?";			\
 		end="[1-9ln]"; }					\
 		{ if (!"${MANINSTALL:Mmaninstall}" && 			\
 				match($$0, start "man" end)) {next;}	\
@@ -4870,8 +4870,8 @@ _MANINSTALL_CMD= ${AWK} 'BEGIN{						\
 _IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
 	sect = $$0; n = match(sect, "/cat[1-9ln]");			\
 	sect = sprintf(".%s", substr(sect, n + 4, 1));			\
-	s = $$0; sub("/cat", "/man", s); sub("\.0(\.gz)?$$", sect, s);	\
-	if (match($$0, "\.gz$$") > 0) { ext = ".gz";} else { ext = "";} \
+	s = $$0; sub("/cat", "/man", s); sub("\\.0(\\.gz)?$$", sect, s);\
+	if (match($$0, "\\.gz$$") > 0) { ext = ".gz";} else { ext = "";} \
 	$$0 = sprintf("%s%s", s, ext);					\
 	} { print $$0; }' |
 .  else
