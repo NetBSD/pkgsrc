@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/01/19 12:54:13 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/17 15:31:34 wiz Exp $
 
---- ra.sh.orig	2004-12-21 17:48:00.000000000 +0100
+--- ra.sh.orig	2005-02-10 19:17:57.000000000 +0100
 +++ ra.sh
 @@ -23,7 +23,7 @@
  SERVER="_RADMIND_HOST"
@@ -9,9 +9,9 @@ $NetBSD: patch-ab,v 1.1 2005/01/19 12:54:13 wiz Exp $
 -DEFAULTS="/etc/defaults/radmind"
 +DEFAULTS="_PKG_SYSCONFDIR/radmind.defaults"
  FSDIFFROOT="."
- FLAG="/var/radmind/client/.RadmindRunning"
- 
-@@ -46,14 +46,6 @@ fi
+ FLAG="_RADMIND_DIR/client/.RadmindRunning"
+ CHECKEDOUT="_RADMIND_DIR/client/.CheckedOut"
+@@ -49,14 +49,6 @@ fi
  LTMP="${TMPDIR}/lapply.out"
  FTMP="${TMPDIR}/fsdiff.out"
  
