@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/28 10:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/30 06:11:09 jlam Exp $
 
 DISTNAME=	imp-2.2.4
 CATEGORIES=	mail www
@@ -16,12 +16,18 @@ NO_CONFIGURE=	# defined
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-CONFDIR=	${PREFIX}/etc/httpd
 DOCDIR=		${PREFIX}/share/doc/imp
+EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
 
 MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+BUILD_DEFS+=		APACHE_SYSCONFDIR
+MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
 post-extract:
 	cd ${WRKSRC}/config;						\
@@ -60,12 +66,14 @@ pre-install:
 	${SED}	-e "s|@IMPDIR@|${IMPDIR}|g"				\
 		${FILESDIR}/imp.conf.dist > ${WRKDIR}/imp.conf.dist
 	${SED}	-e "s|@IMPDIR@|${IMPDIR:S/^${PREFIX}\///}|g"		\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
 		-e "s|@TRUE@|${TRUE}|g"					\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s|@IMPDIR@|${IMPDIR:S/^${PREFIX}\///}|g"		\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@CHMOD@|${CHMOD}|g"				\
 		-e "s|@CP@|${CP}|g"					\
@@ -73,8 +81,8 @@ pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
-	${INSTALL_DATA_DIR} ${CONFDIR} ${DOCDIR} ${IMPDIR}
-	cd ${WRKDIR}; ${INSTALL_DATA} imp.conf.dist ${CONFDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${IMPDIR}
+	cd ${WRKDIR}; ${INSTALL_DATA} imp.conf.dist ${EGDIR}/imp.conf
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING README docs/* ${DOCDIR}
 	cd ${WRKSRC}; ${CP} -R graphics lib locale scripts templates ${IMPDIR}
 	${INSTALL_DATA_DIR} ${IMPDIR}/config
