@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/08/22 11:37:35 salo Exp $
+# $NetBSD: Makefile,v 1.50 2004/02/26 12:51:37 jmmv Exp $
 #
 
 COMMENT=	Communication utilities
@@ -27,6 +27,8 @@ SUBDIR+=	malsync
 SUBDIR+=	mgetty+sendfax
 SUBDIR+=	minicom
 SUBDIR+=	modemd
+SUBDIR+=	obexftp
+SUBDIR+=	openobex
 SUBDIR+=	p5-Device-Gsm
 SUBDIR+=	p5-Device-Modem
 SUBDIR+=	p5-Device-SerialPort
