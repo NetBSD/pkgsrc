@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/10 06:36:09 manu Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/16 21:45:25 wiz Exp $
 #
 
 DISTNAME=	sodipodi-0.23
@@ -15,7 +15,6 @@ DEPENDS+=	bonobo>=1.0.4:../../devel/bonobo
 DEPENDS+=	libxml>=1.8.11:../../textproc/libxml
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	pth>=1.3.7:../../devel/pth
-DEPENDS+=	xpm>=3.4k:../../graphics/xpm
 DEPENDS+=	ORBit>=0.5.8:../../net/ORBit
 DEPENDS+=	gal>=0.7:../../devel/gal
 
@@ -23,6 +22,7 @@ GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_LIBTOOL=	YES
 USE_X11BASE=	YES
+USE_XPM=	YES
 USE_LIBINTL=	YES
 
 .include "../../mk/bsd.pkg.mk"
