@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/08/02 17:34:00 drochner Exp $
+$NetBSD: patch-af,v 1.1 2004/06/26 18:00:21 grant Exp $
 
 --- video/reconstruct.c.orig	Tue Jul 31 17:23:42 2001
 +++ video/reconstruct.c	Tue Jul 31 17:24:52 2001
