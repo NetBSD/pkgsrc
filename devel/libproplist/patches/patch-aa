@@ -1,21 +1,19 @@
-$NetBSD: patch-aa,v 1.2 1999/04/22 04:09:41 jlam Exp $
+$NetBSD: patch-aa,v 1.3 1999/10/05 20:18:33 tron Exp $
 
---- configure.orig	Mon Jan 25 18:41:05 1999
-+++ configure	Wed Apr 21 16:57:13 1999
-@@ -1512,7 +1512,8 @@
-   ac_tool_prefix=
- fi
+--- configure.orig	Tue Oct  5 16:58:56 1999
++++ configure	Tue Oct  5 22:14:23 1999
+@@ -1301,6 +1301,7 @@
  
--# Always use our own libtool.
-+# Use NetBSD's pkglibtool.
-+if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
  # Check for any special flags to pass to ltconfig.
-@@ -1744,6 +1745,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++if false; then
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+ test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
+@@ -1453,6 +1454,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
