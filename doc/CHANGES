@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7116 2004/09/07 19:46:21 adrianp Exp $
+$NetBSD: CHANGES,v 1.7117 2004/09/07 19:53:07 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4214,3 +4214,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libsidplay to 1.36.59 [wiz 2004-09-07]
 	Updated GridSim to 3.0.2 [jschauma 2004-09-07]
 	Updated apache to 2.0.50nb1 [adrianp 2004-09-07]
+	Updated tidy to 20040811nb1 [reed 2004-09-07]
