@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.105 2004/05/13 10:46:01 salo Exp $
+# $NetBSD: pkglint.pl,v 1.106 2004/06/06 16:37:53 schmonz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -148,7 +148,7 @@ if (! -f "$portdir/Makefile") {
 %checker = ("$pkgdir/DESCR", 'checkdescr');
 
 if ($extrafile) {
-	foreach $i ((<$portdir/$scriptdir/*>, <$portdir/$pkgdir/*>)) {
+	foreach $i ((<$portdir/$filesdir/*>, <$portdir/$pkgdir/*>)) {
 		next if (! -T $i);
 		next if ($i =~ /distinfo$/);
 		next if ($i =~ /Makefile$/);
@@ -271,6 +271,8 @@ sub checkdescr {
 			  	   "lines, make it shorter if possible");
 	local($longlines, $linecnt, $tmp) = (0, 0, "");
 
+	&checkperms("$portdir/$file");
+
 	$shortname = basename($file);
 	open(IN, "< $portdir/$file") || return 0;
 
@@ -303,6 +305,8 @@ sub checkdescr {
 sub checkdistinfo {
 	local($file) = @_;	# distinfo
 	local(%indistinfofile);
+
+	&checkperms("$portdir/$file");
 
 	open(SUM,"<$portdir/$file") || return 0;
 	$_ = <SUM>;
@@ -354,6 +358,8 @@ sub checkmessage {
 	local($file) = @_;
 	local($longlines, $lastline, $tmp) = (0, "", "");
 
+	&checkperms("$portdir/$file");
+
 	$shortname = basename($file);
 	open(IN, "< $portdir/$file") || return 0;
 
@@ -397,6 +403,8 @@ sub checkplist {
 	local($rcsidseen) = 0;
 	local($docseen) = 0;
 	local($etcseen) = 0;
+
+	&checkperms("$portdir/$file");
 
 	open(IN, "< $portdir/$file") || return 0;
 	while (<IN>) {
@@ -520,12 +528,26 @@ sub checkplist {
 	return 1;
 }
 
+sub checkperms {
+	local($file) = @_;
+
+	if (-f $file && -x $file) {
+		&perror("WARN: \"$file\" is executable.");
+	}
+}
+
 #
 # misc files
 #
 sub checkpathname {
 	local($file) = @_;
 	local($whole);
+
+	&checkperms("$portdir/$file");
+
+	if ($file =~ /$filesdir\//) {
+		return 1;
+	}
 
 	open(IN, "< $portdir/$file") || return 0;
 	$whole = '';
@@ -572,6 +594,8 @@ sub checkpatch {
 		&perror("WARN: is $file a backup file? If so, please remove it \n"
 		       ."      and rerun '@MAKE@ makepatchsum'");
 	}
+
+	&checkperms("$portdir/$file");
 
 	open(IN, "< $portdir/$file") || return 0;
 	$whole = '';
@@ -691,6 +715,8 @@ sub checkmakefile {
 	local($bogusdistfiles) = (0);
 	local($realwrksrc, $wrksrc, $nowrksubdir) = ('', '', '');
 	local($includefile);
+
+	&checkperms("$portdir/$file");
 
 	$tmp = 0;
 	$rawwhole = readmakefile("$portdir/$file");
