@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/06/20 06:04:54 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/07/22 16:34:45 wiz Exp $
 
---- configure.in.orig	Wed Mar 31 01:37:26 1999
-+++ configure.in
-@@ -29,8 +29,6 @@
- debug=on
- ,
- x=disabled
+--- configure.orig	Wed Mar 31 01:45:41 1999
++++ configure
+@@ -859,8 +859,6 @@
+ 
+ else
+   x=disabled
 -CFLAGS="-O2"
 -LDFLAGS=""
  debug=off
- )dnl
- AC_SUBST(debug)
+ 
+ fi
