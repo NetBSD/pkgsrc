@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1918 2004/07/11 19:54:22 cube Exp $
+$NetBSD: TODO,v 1.1919 2004/07/12 13:54:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -295,6 +295,7 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
+	o mathomatic-11.3
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.43
@@ -329,6 +330,7 @@ Suggested package updates
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o opera-7.52
 	o oss-3.99.1c
+	o p0f-2.0.4
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
 	o p5-Exception-Class-1.17
@@ -399,6 +401,7 @@ Suggested package updates
 	o wine-20040615
 	o wistumbler-2.00pre9 [pkg/26245]
 	o wmaker-conf-2.9.1
+	o wmweather-2.4.3
 	o wwwoffle-2.8c
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanalyser-1.23
@@ -428,7 +431,7 @@ Suggested package updates
 	o xzgv-0.8
 	o yacas-1.0.55
 	o yaz-2.0.12
-	o ysm-2.9.5
+	o ysm-2.9.6
 	o zenicb 1.31 (needs merge with lots of local changes)
 
 Infrastructure problems which need addressing
