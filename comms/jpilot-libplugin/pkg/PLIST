@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/15 21:19:40 rh Exp $
+lib/libplugin.a
+lib/libplugin.la
+lib/libplugin.so.0.0
+include/jpilot/libplugin.h
+include/jpilot/prefs.h
+include/jpilot/utils.h
+@dirrm include/jpilot
