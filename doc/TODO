@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2229 2004/10/19 16:46:54 adrianp Exp $
+$NetBSD: TODO,v 1.2230 2004/10/20 00:20:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -200,7 +200,6 @@ Suggested package updates
 	o bitchx-1.1
 	o bitlbee-0.91
 	o blender-2.34
-	o bogofilter-0.92.6
 	o boson-0.10
 	o cdrtools-2.01
 	o celestia-1.3.2
