@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/08/31 16:46:28 wiz Exp $
+$NetBSD: distinfo,v 1.6 2003/09/19 21:32:12 jmmv Exp $
 
 SHA1 (centericq-4.9.6.tar.bz2) = 53c815753c5adc4027b72ef4a046793ea3966f13
 Size (centericq-4.9.6.tar.bz2) = 933355 bytes
+SHA1 (patch-aa) = b5c297628e965e7bfc6e85da51045c75fd0e21fd
