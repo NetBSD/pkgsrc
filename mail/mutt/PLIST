@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2004/07/17 00:33:15 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/08/05 07:19:25 jlam Exp $
 bin/flea
 bin/mutt
 bin/muttbug
+${MUTT_DOTLOCK}bin/mutt_dotlock
 bin/pgpewrap
 bin/pgpring
 man/man1/flea.1
@@ -31,7 +32,6 @@ share/doc/mutt/html/manual-7.html
 share/doc/mutt/html/manual.html
 share/doc/mutt/manual.txt
 share/doc/mutt/patch-notes.txt
-share/doc/mutt/samples
 share/examples/mutt/Mush.rc
 share/examples/mutt/Muttrc
 share/examples/mutt/Pine.rc
