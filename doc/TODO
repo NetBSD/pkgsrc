@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1771 2004/05/24 06:24:56 snj Exp $
+$NetBSD: TODO,v 1.1772 2004/05/24 15:03:08 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -179,6 +179,7 @@ Suggested package updates
 	o centericq-4.9.12
 	o cervisia-2.1.2
 	o checkbot-1.74
+	o clanlib-0.7.8
 	o classpath-0.09
 	o cocoon-2.1.4
 	o conserver-8.1.5
