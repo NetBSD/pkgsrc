@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-logic,v 1.4 2004/02/02 01:36:14 grant Exp $
+# $NetBSD: sunpro-cc-post-logic,v 1.5 2004/02/16 12:18:15 grant Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the SunPro compiler equivalents.  This makes the SunPro
@@ -32,6 +32,11 @@ case $arg in
 	# In fact, SunPro compilers don't even understand any -W*
 	# arguments, so just silently ignore them all.
 	#
+	arg=
+	addtoprivatecache=yes
+	;;
+-ansi)
+	# No flag is required to specify ANSI C.
 	arg=
 	addtoprivatecache=yes
 	;;
