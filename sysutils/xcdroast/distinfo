@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2005/02/24 13:40:59 agc Exp $
+$NetBSD: distinfo,v 1.13 2005/03/23 18:02:48 reed Exp $
 
 SHA1 (xcdroast-0.98alpha15.tar.gz) = f354ea9ffe918c4ec11312d5537e6e245730fecc
 RMD160 (xcdroast-0.98alpha15.tar.gz) = 9198f67659023ce8f508fa2c331df9d9c8b81a8f
@@ -6,4 +6,5 @@ Size (xcdroast-0.98alpha15.tar.gz) = 3282794 bytes
 SHA1 (gtk2locale.patch) = bb3d2f2c7edede86af6c367c8b5b09339251250c
 Size (gtk2locale.patch) = 643 bytes
 SHA1 (patch-aa) = 0beee32a5550646cd360459d90281cb0ec9a826a
+SHA1 (patch-ab) = 085da3b440ba1d6a0e305626e1ac3fba49d2f546
 SHA1 (patch-ad) = 417a82344e14ae2a9f602254b152337c33afae4a
