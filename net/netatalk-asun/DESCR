@@ -14,3 +14,5 @@ to the Unix file system. Refer to the appropriate man pages for
 operational information.
 
 This version has been enhanced by Adrian Sun.
+
+This version is out-dated.  See pkgsrc/net/netatalk.
