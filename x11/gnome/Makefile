@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2000/03/16 22:25:29 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/22 10:46:32 rh Exp $
 
-DISTNAME=	gnome-1.0.53.3
+DISTNAME=	gnome-1.0.53.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,7 +21,7 @@ DEPENDS+=	gnome-pim>=1.0.55:../../misc/gnome-pim
 DEPENDS+=	gnome-python>=1.0.51:../gnome-python
 DEPENDS+=	gnome-users-guide>=1.0.72:../gnome-users-guide
 DEPENDS+=	gnome-utils>=1.0.51:../../misc/gnome-utils
-DEPENDS+=	gnumeric>=0.48:../../math/gnumeric
+DEPENDS+=	gnumeric>=0.52:../../math/gnumeric
 DEPENDS+=	gtk-->=1.0.3:../gtk--
 DEPENDS+=	gtk-engines>=0.8:../gtk-engines
 DEPENDS+=	xchat>=1.4.1:../../net/xchat
