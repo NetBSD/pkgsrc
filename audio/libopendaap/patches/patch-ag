@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.1 2005/03/16 11:51:00 rillig Exp $
+
+gcc-2.95.3 does not like code intermixed with declarations.
+
+--- ioloop.c.orig	Tue Dec 14 05:39:31 2004
++++ ioloop.c	Tue Mar 15 23:35:17 2005
+@@ -113,10 +113,10 @@ void fd_event_signal(fd_event *event)
+ 
+ void fd_event_reset(fd_event *event)
+ {
+-    event->signalled = 0;
+     char buf[1] = {0};
+     int flags;
+ 
++    event->signalled = 0;
+     /* set non-blocking on read pipe */
+     flags = fcntl(event->pipe[0], F_GETFL, 0);
+     if (flags == -1) flags = 0;

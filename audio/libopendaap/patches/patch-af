@@ -1,0 +1,34 @@
+$NetBSD: patch-af,v 1.1 2005/03/16 11:51:00 rillig Exp $
+
+gcc-2.95.3 does not like code intermixed with declarations.
+
+--- client.c.orig	Mon Jan  3 09:20:54 2005
++++ client.c	Tue Mar 15 23:34:55 2005
+@@ -1235,11 +1235,10 @@ int DAAP_ClientHost_GetAudioFile(DAAP_SC
+     int requestid = 0;
+ 
+     HTTP_Connection *http_connection;
++    HTTP_GetResult *httpRes;
+ 
+     if (strlen(songformat) > 4) return -1;
+ 
+-    HTTP_GetResult *httpRes;
+-
+     if (pCHThis->version_major != 3)
+     {
+         sprintf(buf, songUrl_42, databaseid, songid, songformat,
+@@ -1489,13 +1488,13 @@ static void update_watch_cb(void *pv_pCH
+ static void AsyncWaitUpdate(void *pv_pCHThis, void *unused)
+ {
+     DAAP_SClientHost *pCHThis = (DAAP_SClientHost*)pv_pCHThis;
+-    TRACE("()\n");
+     char hash[33] = {0};
+     char updateUrl[] = "/update?session-id=%i&revision-number=%i&delta=%i";
+     char buf[sizeof(updateUrl) + 11 + 11 + 11];
+ 
+     HTTP_GetResult *httpRes;
+ 
++    TRACE("()\n");
+     sprintf(buf, updateUrl, pCHThis->sessionid, pCHThis->revision_number,
+             pCHThis->revision_number);
+ 
