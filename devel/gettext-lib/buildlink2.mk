@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/18 01:05:45 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/24 22:10:59 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -51,9 +51,7 @@ BUILDLINK_TARGETS+=		gettext-libintl-la
 _BLNK_INTLLIBS=		# empty
 .if ${_NEED_GNU_GETTEXT} == "YES"
 _BLNK_INTLLIBS+=	-L${BUILDLINK_DIR}/lib
-.  if ${_USE_RPATH} == "yes"
 _BLNK_INTLLIBS+=	-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
-.  endif
 .endif
 _BLNK_INTLLIBS+=	-lintl
 .if defined(GNU_CONFIGURE)
