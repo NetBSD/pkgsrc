@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2744 2004/12/24 12:30:49 jmmv Exp $
+$NetBSD: TODO,v 1.2745 2004/12/24 18:30:14 seb Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ Suggested package updates
 	o grace-5.1.17
 	o gramps-1.0.8
 	o grap-1.32
-	o graphviz-2.0
 	o grepmail-5.3030
 	o gri-2.12.8
 	o gsasl-0.2.3
