@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/14 22:21:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/15 11:04:29 wiz Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
 bin/atktopbm
 bin/bioradtopgm
+bin/bmptopnm
 bin/bmptoppm
 bin/brushtopbm
 bin/cmuwmtopbm
@@ -34,6 +35,7 @@ bin/palmtopnm
 bin/pamchannel
 bin/pamcut
 bin/pamdeinterlace
+bin/pamdice
 bin/pamfile
 bin/pamoil
 bin/pamstretch
@@ -124,6 +126,7 @@ bin/pnmmargin
 bin/pnmmontage
 bin/pnmnlfilt
 bin/pnmnoraw
+bin/pnmnorm
 bin/pnmpad
 bin/pnmpaste
 bin/pnmpsnr
@@ -237,6 +240,7 @@ bin/ybmtopbm
 bin/yuvsplittoppm
 bin/yuvtoppm
 bin/zeisstopnm
+include/bitio.h
 include/pam.h
 include/pammap.h
 include/pbm.h
@@ -251,7 +255,7 @@ include/shhopt.h
 lib/libpbm.a
 lib/libpbm.so
 lib/libpbm.so.9
-lib/libpbm.so.9.23
+lib/libpbm.so.9.25
 lib/libpgm.a
 lib/libpgm.so
 lib/libpgm.so.9
@@ -259,11 +263,11 @@ lib/libpgm.so.9.19
 lib/libpnm.a
 lib/libpnm.so
 lib/libpnm.so.9
-lib/libpnm.so.9.23
+lib/libpnm.so.9.25
 lib/libppm.a
 lib/libppm.so
 lib/libppm.so.9
-lib/libppm.so.9.16
+lib/libppm.so.9.25
 lib/palmcolor8.map
 lib/palmgray1.map
 lib/palmgray2.map
@@ -273,7 +277,7 @@ man/man1/anytopnm.1
 man/man1/asciitopgm.1
 man/man1/atktopbm.1
 man/man1/bioradtopgm.1
-man/man1/bmptoppm.1
+man/man1/bmptopnm.1
 man/man1/brushtopbm.1
 man/man1/cmuwmtopbm.1
 man/man1/eyuvtoppm.1
@@ -302,6 +306,7 @@ man/man1/palmtopnm.1
 man/man1/pamchannel.1
 man/man1/pamcut.1
 man/man1/pamdeinterlace.1
+man/man1/pamdice.1
 man/man1/pamfile.1
 man/man1/pamoil.1
 man/man1/pamstretch-gen.1
@@ -356,7 +361,6 @@ man/man1/pgmenhance.1
 man/man1/pgmhist.1
 man/man1/pgmkernel.1
 man/man1/pgmnoise.1
-man/man1/pgmnorm.1
 man/man1/pgmramp.1
 man/man1/pgmslice.1
 man/man1/pgmtexture.1
@@ -390,6 +394,7 @@ man/man1/pnminvert.1
 man/man1/pnmmargin.1
 man/man1/pnmmontage.1
 man/man1/pnmnlfilt.1
+man/man1/pnmnorm.1
 man/man1/pnmpad.1
 man/man1/pnmpaste.1
 man/man1/pnmpsnr.1
@@ -434,7 +439,6 @@ man/man1/ppmhist.1
 man/man1/ppmlabel.1
 man/man1/ppmmake.1
 man/man1/ppmmix.1
-man/man1/ppmnorm.1
 man/man1/ppmntsc.1
 man/man1/ppmpat.1
 man/man1/ppmquant.1

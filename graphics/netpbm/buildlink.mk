@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2002/03/14 22:21:42 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.8 2002/03/15 11:04:29 wiz Exp $
 #
 # This Makefile fragment is included by packages that use netpbm.
 #
@@ -22,7 +22,8 @@ DEPENDS+=	${BUILDLINK_DEPENDS.netpbm}:../../graphics/netpbm
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.netpbm=netpbm
 BUILDLINK_PREFIX.netpbm_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.netpbm=		include/pam.h
+BUILDLINK_FILES.netpbm=		include/bitio.h
+BUILDLINK_FILES.netpbm+=	include/pam.h
 BUILDLINK_FILES.netpbm+=	include/pammap.h
 BUILDLINK_FILES.netpbm+=	include/pbm.h
 BUILDLINK_FILES.netpbm+=	include/pgm.h
