@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1314 2004/01/20 02:50:30 jschauma Exp $
+$NetBSD: TODO,v 1.1315 2004/01/20 13:50:10 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,6 @@ Suggested package updates
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdb-6.0
-	o gdm-2.4.4.6 [pkgsrc-wip]
 	o generator-0.35
 	o gettext-0.13.1
 	o gforth-0.6.2
