@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/15 17:51:43 agc Exp $
+
+SHA1 (dar-2.0.2.tar.gz) = 2dc5deb0d17034fcfb7e7bd39e3f9670f6d8f7fa
+Size (dar-2.0.2.tar.gz) = 624364 bytes
+SHA1 (patch-aa) = 5e3b7da43d2287942ab3b16c130e651501e26d18
