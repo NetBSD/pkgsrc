@@ -1,13 +1,22 @@
-$NetBSD: distinfo,v 1.3 2001/05/04 01:33:57 dmcmahill Exp $
+$NetBSD: distinfo,v 1.4 2001/05/04 14:25:11 dmcmahill Exp $
 
+SHA1 (xforms-alpha/bxform-088.tgz) = a82b5e2d3c9841323e54003c3d2fbf5e506fbd42
+Size (xforms-alpha/bxform-088.tgz) = 1197562 bytes
+SHA1 (xforms-arm32/bxform-088.tgz) = f07e8e0a744278afc2fc86c51b442fab7c36197c
+Size (xforms-arm32/bxform-088.tgz) = 1067594 bytes
 SHA1 (xforms-i386/bxform-088-ELF.tgz) = 3097a16a87d72fda0dca10f3aa9d52d328b83ab5
 Size (xforms-i386/bxform-088-ELF.tgz) = 851405 bytes
-MD5 (xforms-alpha/bxform-088.tgz) = 2593c141d312a43b1d8fb9ab8d7dbc5c
-MD5 (xforms-arm32/bxform-088.tgz) = 709b4094b6cbcb718d66c979882de471
-MD5 (xforms-i386/bxform-088.tgz) = 0e54cf437813298ccf6874d47fd01db1
-MD5 (xforms-m68k/bxform-088.tgz) = aac3b9873af7ed8c8daa6d79edf4d796
-MD5 (xforms-mipsel/bxform-088.tgz) = 5d6d1f1dca54d1ee8f0ecff2f5232e2a
-MD5 (xforms-ns32k/bxform-088.tgz) = e84b3226eda1cce93bcd54e037d6a72f
-MD5 (xforms-powerpc/bxform-088.tgz) = 5fecafe04bf7e47bcdafcfd16724e7d4
-MD5 (xforms-sparc/bxform-088.tgz) = 0ce08b5fefc0876ac1e7e3904ff1045f
-MD5 (xforms-sparc/bxform-088-ELF.tgz) = 95e4be755a55444d72109934e4ec7a22
+SHA1 (xforms-i386/bxform-088.tgz) = 943f8052846d375ca1eb30d221a5b0777fd19945
+Size (xforms-i386/bxform-088.tgz) = 887615 bytes
+SHA1 (xforms-m68k/bxform-088.tgz) = c1299ff67eaa245d1fe789b8a5b2b7c38506a0e7
+Size (xforms-m68k/bxform-088.tgz) = 842740 bytes
+SHA1 (xforms-mipsel/bxform-088.tgz) = ac279319dd924263b613ac3a3e4462d3c5866b34
+Size (xforms-mipsel/bxform-088.tgz) = 1097766 bytes
+SHA1 (xforms-ns32k/bxform-088.tgz) = 9730944f4534c384e6f994164ccdc9d122dc9d4f
+Size (xforms-ns32k/bxform-088.tgz) = 818317 bytes
+SHA1 (xforms-powerpc/bxform-088.tgz) = 7076c4933054da54affcccd67e995626f3dfbc99
+Size (xforms-powerpc/bxform-088.tgz) = 1014785 bytes
+SHA1 (xforms-sparc/bxform-088-ELF.tgz) = 081be01417707d739cb71f3fa473fdc7e32eced5
+Size (xforms-sparc/bxform-088-ELF.tgz) = 673651 bytes
+SHA1 (xforms-sparc/bxform-088.tgz) = 7c364dad70b65b1b613f54f3b693c958d9c4b27a
+Size (xforms-sparc/bxform-088.tgz) = 1017705 bytes
