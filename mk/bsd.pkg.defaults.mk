@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.122 2002/12/28 17:14:10 kristerw Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.123 2003/01/02 05:55:11 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -466,6 +466,26 @@ APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
 ARLA_CACHE?=	${LOCALBASE}/cache
 # Specifies the location of the cache used by arla. Should be on a local disk.
 # Default: ${LOCALBASE}/cache
+
+ATERM_USE_KANJI?= NO
+# Enable kanji support in aterm
+# Possible: YES or undefined or anything else
+# Default: NO
+
+ATERM_USE_BIG5?= NO
+# Enable chinese support in aterm (?)
+# Possible: YES or undefined or anything else
+# Default: NO
+
+ATERM_USE_XTERM_SCROLL?= NO
+# Use xterm scrollbar instead of NeXT-like
+# Possible: YES or undefined or anything else
+# Default: NO
+
+ATERM_USE_GREEK?= NO
+# Enable greek keyboard support
+# Possible: YES or undefined or anything else
+# Default: NO
 
 #AVIFILE_USE_QT=	YES
 # Enable support for qt2 in avifile-devel package. These utilities will be built
