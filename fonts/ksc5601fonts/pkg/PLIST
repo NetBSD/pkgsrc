@@ -1,0 +1,80 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/29 08:04:57 itojun Exp $
+lib/X11/fonts/local/batang10.pcf.gz
+lib/X11/fonts/local/batang10b.pcf.gz
+lib/X11/fonts/local/batang12.pcf.gz
+lib/X11/fonts/local/batang12b.pcf.gz
+lib/X11/fonts/local/batang14.pcf.gz
+lib/X11/fonts/local/batang14b.pcf.gz
+lib/X11/fonts/local/batang16.pcf.gz
+lib/X11/fonts/local/batang16b.pcf.gz
+lib/X11/fonts/local/batang18.pcf.gz
+lib/X11/fonts/local/batang18b.pcf.gz
+lib/X11/fonts/local/batang20.pcf.gz
+lib/X11/fonts/local/batang20b.pcf.gz
+lib/X11/fonts/local/batang24.pcf.gz
+lib/X11/fonts/local/batang24b.pcf.gz
+lib/X11/fonts/local/dotum10.pcf.gz
+lib/X11/fonts/local/dotum12.pcf.gz
+lib/X11/fonts/local/dotum14.pcf.gz
+lib/X11/fonts/local/dotum16.pcf.gz
+lib/X11/fonts/local/dotum18.pcf.gz
+lib/X11/fonts/local/dotum20.pcf.gz
+lib/X11/fonts/local/dotum24.pcf.gz
+lib/X11/fonts/local/gulim10.pcf.gz
+lib/X11/fonts/local/gulim10b.pcf.gz
+lib/X11/fonts/local/gulim12.pcf.gz
+lib/X11/fonts/local/gulim12b.pcf.gz
+lib/X11/fonts/local/gulim14.pcf.gz
+lib/X11/fonts/local/gulim14b.pcf.gz
+lib/X11/fonts/local/gulim16.pcf.gz
+lib/X11/fonts/local/gulim16b.pcf.gz
+lib/X11/fonts/local/gulim18.pcf.gz
+lib/X11/fonts/local/gulim18b.pcf.gz
+lib/X11/fonts/local/gulim20.pcf.gz
+lib/X11/fonts/local/gulim20b.pcf.gz
+lib/X11/fonts/local/gulim24.pcf.gz
+lib/X11/fonts/local/gulim24b.pcf.gz
+lib/X11/fonts/local/hgm10.pcf.gz
+lib/X11/fonts/local/hgm12.pcf.gz
+lib/X11/fonts/local/hgm14.pcf.gz
+lib/X11/fonts/local/hgm16.pcf.gz
+lib/X11/fonts/local/hgm18.pcf.gz
+lib/X11/fonts/local/hgm20.pcf.gz
+lib/X11/fonts/local/hline10.pcf.gz
+lib/X11/fonts/local/hline12.pcf.gz
+lib/X11/fonts/local/hline14.pcf.gz
+lib/X11/fonts/local/hline16.pcf.gz
+lib/X11/fonts/local/hline18.pcf.gz
+lib/X11/fonts/local/hline20.pcf.gz
+lib/X11/fonts/local/hline24.pcf.gz
+lib/X11/fonts/local/hmm10.pcf.gz
+lib/X11/fonts/local/hmm12.pcf.gz
+lib/X11/fonts/local/hmm14.pcf.gz
+lib/X11/fonts/local/hmm16.pcf.gz
+lib/X11/fonts/local/hmm18.pcf.gz
+lib/X11/fonts/local/hmm20.pcf.gz
+lib/X11/fonts/local/mzgt16e.pcf.gz
+lib/X11/fonts/local/mzgt16h.pcf.gz
+lib/X11/fonts/local/mzgt16h1.pcf.gz
+lib/X11/fonts/local/mzmj16e.pcf.gz
+lib/X11/fonts/local/mzmj16h.pcf.gz
+lib/X11/fonts/local/mzpg16e.pcf.gz
+lib/X11/fonts/local/mzpg16h.pcf.gz
+lib/X11/fonts/local/mzsm16e.pcf.gz
+lib/X11/fonts/local/mzsm16h.pcf.gz
+@comment lib/X11/fonts/local/ptpB08.pcf.gz
+@comment lib/X11/fonts/local/ptpB10.pcf.gz
+@comment lib/X11/fonts/local/ptpB12.pcf.gz
+@comment lib/X11/fonts/local/ptpB14.pcf.gz
+@comment lib/X11/fonts/local/ptpB18.pcf.gz
+@comment lib/X11/fonts/local/ptpB24.pcf.gz
+@comment lib/X11/fonts/local/ptpR08.pcf.gz
+@comment lib/X11/fonts/local/ptpR10.pcf.gz
+@comment lib/X11/fonts/local/ptpR12.pcf.gz
+@comment lib/X11/fonts/local/ptpR14.pcf.gz
+@comment lib/X11/fonts/local/ptpR18.pcf.gz
+@comment lib/X11/fonts/local/ptpR24.pcf.gz
+@comment lib/X11/fonts/local/ptptB14.pcf.gz
+@comment lib/X11/fonts/local/pttpB14.pcf.gz
+@exec %D/bin/mkfontdir %D/lib/X11/fonts/local
+@unexec %D/bin/mkfontdir %D/lib/X11/fonts/local
