@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.61 2003/04/17 15:33:27 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.62 2003/07/11 14:33:45 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -16,7 +16,7 @@ DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/usr/ucb/echo
 EGREP?=		/usr/xpg4/bin/egrep
-EXPR?=		/usr/bin/expr
+EXPR?=		/usr/xpg4/bin/expr
 FALSE?=		/usr/bin/false
 FGREP?=		/usr/xpg4/bin/fgrep
 FILE_CMD?=	/usr/bin/file
