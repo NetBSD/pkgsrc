@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2147 2003/05/05 12:23:29 cjep Exp $
+$NetBSD: CHANGES,v 1.2148 2003/05/05 12:50:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1854,3 +1854,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added elfsh-0.43b [mjl 2003-05-05]
 	Updated xdialog to 1.4.6nb2 [wiz 2003-05-05]
 	Updated leafnode to 1.9.39 [cjep 2003-05-05]
+	Updated kdegraphics to 3.1.1nb6 [markd 2003-05-05]
+	Added kmymoney2-0.5.1 [markd 2003-05-05]
