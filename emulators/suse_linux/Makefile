@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2000/08/09 13:09:50 abs Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/29 12:36:29 tron Exp $
 
-DISTNAME=		suse_linux-6.3nb1
+DISTNAME=		suse_linux-6.3nb2
 CATEGORIES=		emulators
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -8,6 +8,7 @@ DISTFILES=		# empty
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
+DEPENDS+=		suse_audio-6.3:../suse_audio
 DEPENDS+=		suse_libc5-6.3:../suse_libc5
 DEPENDS+=		suse_gtk-6.3:../suse_gtk
 DEPENDS+=		suse_xforms-6.3:../suse_xforms
