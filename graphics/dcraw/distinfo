@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/20 13:43:29 drochner Exp $
+
+SHA1 (dcraw-1.169/dcraw.c) = ba3365cdd7e0e72b127b02e9740df8268f8c79e9
+Size (dcraw-1.169/dcraw.c) = 90479 bytes
+SHA1 (dcraw-1.169/dcraw.1) = fc91c9282ff44a1597894b456fd02c6538a29ad7
+Size (dcraw-1.169/dcraw.1) = 3237 bytes
