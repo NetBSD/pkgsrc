@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1482 2004/08/04 02:56:01 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1483 2004/08/04 06:22:39 minskim Exp $
 #
 # This file is in the public domain.
 #
@@ -4342,14 +4342,19 @@ print-pkg-size-this:
 # dependencies are all installed.
 .PHONY: print-pkg-size-depends
 print-pkg-size-depends:
-	@${MAKE} ${MAKEFLAGS} run-depends-list				\
-	| ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS}			\
-	| ${SORT} -u							\
-	| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs			\
-	| ${AWK} -- 'BEGIN { print("0 "); }				\
-		/^[0-9]+$$/ { print($$1, " + "); }			\
-		END { print("p"); }'					\
-	| ${DC}
+	@pkglist=`${MAKE} ${MAKEFLAGS} run-depends-list`;		\
+	if [ "X$${pkglist}" != "X" ]; then				\
+		${ECHO} $${pkglist}					\
+		| ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS}		\
+		| ${SORT} -u						\
+		| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs		\
+		| ${AWK} -- 'BEGIN { print("0 "); }			\
+			/^[0-9]+$$/ { print($$1, " + "); }		\
+			END { print("p"); }'				\
+		| ${DC};						\
+	else								\
+		${ECHO} "0";						\
+	fi
 
 
 ###
