@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2004/11/08 17:10:24 tv Exp $
+# $NetBSD: Makefile,v 1.97 2004/12/18 16:20:36 grant Exp $
 
 DISTNAME=       pine4.61
 PKGNAME=        pine-4.61
@@ -30,6 +30,7 @@ BUILDFILE=	lnx
 .elif ${OPSYS} == "Darwin"
 BUILDNAME=	osx
 BUILDFILE=	osx
+LIBS+=		-lcurses
 .else
 BUILDNAME=	neb
 BUILDFILE=	neb
@@ -70,7 +71,8 @@ do-build:
 	${SETENV} ${MAKE_ENV} ./build ${BUILDNAME}			\
 		${PINE_LDAPCFLAGS} ${PINE_LDAPLIBS}			\
 		PREFIX=${PREFIX}					\
-		CC="${CC} ${CFLAGS} ${LDFLAGS}"
+		CC="${CC} ${CFLAGS}"					\
+		EXTRALDFLAGS="${LDFLAGS} ${LIBS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
