@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.497 2003/04/25 06:01:49 rh Exp $
+$NetBSD: TODO,v 1.498 2003/04/25 13:07:54 rh Exp $
 
 Suggested new packages
 ======================
@@ -140,7 +140,6 @@ Suggested package updates
 	o gnomeicu-0.99
 	o gnucash-1.8.2
 	o gnuchess-5.06
-	o gnumeric-1.0.13
 	o gpa-0.6.1
 	o gperiodic-2.0.4
 	o gq-0.6.0 [pkg/21284]
