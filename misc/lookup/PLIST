@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/08 22:20:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/19 16:05:49 uebayasi Exp $
 ${EMACS_LISPPREFIX}/lookup/evi-mule.el
 ${EMACS_LISPPREFIX}/lookup/evi-mule.elc
 ${EMACS_LISPPREFIX}/lookup/evi.el
@@ -25,6 +25,8 @@ ${EMACS_LISPPREFIX}/lookup/lookup.el
 ${EMACS_LISPPREFIX}/lookup/lookup.elc
 ${EMACS_LISPPREFIX}/lookup/ndcookie.el
 ${EMACS_LISPPREFIX}/lookup/ndcookie.elc
+${EMACS_LISPPREFIX}/lookup/ndeb-binary.el
+${EMACS_LISPPREFIX}/lookup/ndeb-binary.elc
 ${EMACS_LISPPREFIX}/lookup/ndeb.el
 ${EMACS_LISPPREFIX}/lookup/ndeb.elc
 ${EMACS_LISPPREFIX}/lookup/ndic.el
