@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1069 2002/10/20 11:47:04 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1070 2002/10/21 01:17:11 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -735,17 +735,6 @@ XPMDIR_DEFAULT=		${X11BASE}
 .  endif
 .  undef __BUILTIN_XPM
 .endif	# USE_XPM
-
-# If USE_MESA is set, depend on Mesa (or Mesa-glx if USE_GLX is defined and
-# Mesa/GLX is not included in XFree86)
-.if defined(USE_MESA)
-.  if (defined(USE_GLX) && defined(HAVE_BUILTIN_MESA) && ${HAVE_BUILTIN_MESA} == "NO")
-DEPENDS+=		Mesa-glx>=20000813:../../graphics/Mesa-glx
-.  else
-DEPENDS+=		Mesa>=3.2.1:../../graphics/Mesa
-.  endif
-.  undef __BUILTIN_MESA
-.endif	# USE_MESA
 
 # Check if we got "rman" with XFree86, for packages that need "rman". 
 .if defined(USE_RMAN)
