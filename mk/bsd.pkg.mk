@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1110 2002/12/23 01:59:43 cjep Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1111 2002/12/23 14:15:35 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -139,7 +139,7 @@ PATH:=			${PKG_JAVA_HOME}/bin:${PATH}
 .endif	! JAVA_MK
 
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
-# that if no buildlink.mk files are included, then they still point to
+# that if no buildlink2.mk files are included, then they still point to
 # where headers and libraries for installed packages and X11R6 may be found.
 #
 USE_BUILDLINK2?=	no		# default to not using buildlink2
@@ -273,8 +273,6 @@ PKG_FC?=	f2c-f77
 # shared Fortran libs
 .    if empty(USE_BUILDLINK2:[nN][oO])
 .      include "../../lang/f2c/buildlink2.mk"
-.    elif defined(USE_BUILDLINK_ONLY)
-.      include "../../lang/f2c/buildlink.mk"
 .    else
 DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
 .    endif
