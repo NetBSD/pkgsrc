@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7933 2004/11/20 22:46:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.7934 2004/11/21 09:00:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5364,3 +5364,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xbindkeys to 1.7.1 [jmmv 2004-11-20]
 	Updated xbindkeys-tk to 1.7.1 [jmmv 2004-11-20]
 	Removed xbindkeys-config [jmmv 2004-11-20]
+	Updated sylpheed to 1.0.0beta3 [jmmv 2004-11-21]
