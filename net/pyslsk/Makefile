@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/01/10 14:25:42 recht Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:49 wiz Exp $
 #
 
 DISTNAME=	pyslsk-1.2.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net audio x11
 MASTER_SITES=	http://www.sensi.org/~ak/pyslsk/
 

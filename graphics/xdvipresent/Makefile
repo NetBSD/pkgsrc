@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:18:17 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:42 wiz Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
 PKGNAME=	xdvipresent-0.6.1.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics textproc print x11
 MASTER_SITES=	http://clip.dia.fi.upm.es/Software/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 16:39:12 martti Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:36 wiz Exp $
 #
 
 DISTNAME=	pgaccess-0.98.8
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgaccess.org/download/
 

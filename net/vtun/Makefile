@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/26 02:27:50 wiz Exp $
 
 DISTNAME=	vtun-2.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://vtun.sourceforge.net/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/05 19:25:36 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/03/26 02:27:42 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON20_BUILDLINK3_MK:=	${PYTHON20_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	python20
 
 .if !empty(PYTHON20_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.python20+=	python20>=2.0
+BUILDLINK_RECOMMENDED.python20?=	python20>=2.0.1nb7
 BUILDLINK_PKGSRCDIR.python20?=	../../lang/python20
 
 .if defined(BUILDLINK_DEPMETHOD.python)

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2004/02/15 11:10:50 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/03/26 02:27:38 wiz Exp $
 #
 # This Makefile fragment is included by packages that use kdesdk.
 #
@@ -10,6 +10,7 @@ KDESDK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdesdk
 BUILDLINK_DEPENDS.kdesdk?=		kdesdk>=3.2.0
+BUILDLINK_RECOMMENDED.kdesdk?=		kdesdk>=3.2.1nb1
 BUILDLINK_PKGSRCDIR.kdesdk?=		../../devel/kdesdk3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdesdk=kdesdk

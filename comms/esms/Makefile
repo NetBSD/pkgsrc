@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/02/10 02:22:49 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/26 02:27:35 wiz Exp $
 
 DISTNAME=	esms-0.9.5
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esms/}
 
