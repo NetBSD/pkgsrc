@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/06/10 09:56:16 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/06/18 13:28:28 epg Exp $
 
 .if !defined(SUBVERSION_PYTHON_BUILDLINK2_MK)
 SUBVERSION_PYTHON_BUILDLINK2_MK=		#defined
 
 BUILDLINK_PACKAGES+=			subversion-python
-BUILDLINK_DEPENDS.subversion-python?=	${PYPKGPREFIX}-subversion-${SVNVER}nb1:../../devel/subversion-python
+BUILDLINK_DEPENDS.subversion-python?=	${PYPKGPREFIX}-subversion-${SVNVER}:../../devel/subversion-python
 BUILDLINK_PKGSRCDIR.subversion-python?=	../../devel/subversion-python
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.subversion-python=subversion-python
