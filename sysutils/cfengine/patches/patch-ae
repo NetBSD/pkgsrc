@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1 1999/11/09 16:14:59 abs Exp $
+--- src/image.c.orig	Tue Sep 14 09:28:09 1999
++++ src/image.c	Tue Nov  9 15:37:00 1999
+@@ -193,9 +193,12 @@
+    DeleteItemList(namecache);
+    }
+  
+-DeleteCompressedArray(ip->inode_cache);
+-
+-ip->inode_cache = NULL;
++	/* Only flush when exiting initial call to RecursiveImage() */
++if (strcmp(from,ip->path) == 0)
++   {
++   DeleteCompressedArray(ip->inode_cache);
++   ip->inode_cache = NULL;
++   }
+ 
+ cfclosedir(dirh);
+ }
