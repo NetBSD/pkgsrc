@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/17 15:50:56 lukem Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/11/18 00:41:20 lukem Exp $
 bin/aeg
 bin/apcsmart
 bin/belkin
@@ -40,6 +40,7 @@ etc/nut/upssched.conf.sample
 etc/nut/upsset.conf.sample
 etc/rc.d/upsd
 man/man5/ups.conf.5
+man/man5/upssched.conf.5
 man/man8/apcsmart.8
 man/man8/belkin.8
 man/man8/bestups.8
@@ -50,7 +51,9 @@ man/man8/upsc.8
 man/man8/upscmd.8
 man/man8/upsct.8
 man/man8/upsct2.8
+man/man8/upsd.8
 man/man8/upslog.8
+man/man8/upsmon.8
 man/man8/upssched.8
 sbin/upsd
 sbin/upsmon
