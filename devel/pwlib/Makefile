@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/03 20:20:36 jdolecek Exp $
+# $NetBSD: Makefile,v 1.19 2002/12/08 01:30:23 salo Exp $
 #
 
 DISTNAME=		pwlib_1.4.4
@@ -19,9 +19,11 @@ BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
 WRKSRC=			${WRKDIR}/pwlib
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
+
+PTHREAD_OPTS+=		require
 
 MAKE_ENV+=		PWLIBDIR="${WRKSRC}"
 MAKE_ENV+=		CC="${CC}"
