@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/10/10 01:11:20 danw Exp $
+# $NetBSD: Makefile,v 1.48 2003/10/10 08:24:09 tron Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -32,14 +32,6 @@ INFO_FILES=		latex.info dvips.info web2c.info kpathsea.info
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 GNU_CONFIGURE=		yes
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/texk/config.guess
-CONFIG_GUESS_OVERRIDE+=	${WRKSRC}/config/config.guess
-CONFIG_GUESS_OVERRIDE+=	${WRKSRC}/libs/ncurses/config.guess
-CONFIG_GUESS_OVERRIDE+=	${WRKSRC}/texinfo/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/texk/config.sub
-CONFIG_SUB_OVERRIDE+=	${WRKSRC}/config/config.sub
-CONFIG_SUB_OVERRIDE+=	${WRKSRC}/libs/ncurses/config.sub
-CONFIG_SUB_OVERRIDE+=	${WRKSRC}/texinfo/config.sub
 CONFIGURE_ARGS+=	--without-texinfo
 CONFIGURE_ARGS+=	--without-dialog
 CONFIGURE_ARGS+=	--disable-multiplatform
@@ -69,11 +61,6 @@ CONFIGURE_ARGS+=	--enable-a4
 
 .if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-auto-core
-.endif
-
-.if ${OPSYS} == "Darwin" && ${OS_VERSION} >= 6.0
-# Darwin 6.x's default (3.1ish) g++ has a bug that breaks the xpdf build
-CXX=			g++2
 .endif
 
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
