@@ -1,4 +1,4 @@
-$NetBSD: patch-ib,v 1.2 2004/10/13 12:06:36 tv Exp $
+$NetBSD: patch-ib,v 1.3 2004/10/13 15:15:53 tv Exp $
 
 --- mkspecs/interix-g++/qmake.conf.orig	Tue Oct 12 16:51:42 2004
 +++ mkspecs/interix-g++/qmake.conf
@@ -60,7 +60,7 @@ $NetBSD: patch-ib,v 1.2 2004/10/13 12:06:36 tv Exp $
 +
 +QMAKE_LIBS		=
 +QMAKE_LIBS_DYNLOAD	=
-+QMAKE_LIBS_X11		= -lXext -lX11 -lm -ldl -lbind
++QMAKE_LIBS_X11		= -lXext -lX11 -lm -lbind -ldb -ldl
 +QMAKE_LIBS_X11SM	= -lSM -lICE
 +QMAKE_LIBS_QT		= -lqt
 +QMAKE_LIBS_QT_THREAD	= -lqt-mt

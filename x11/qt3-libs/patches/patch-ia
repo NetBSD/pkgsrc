@@ -1,14 +1,16 @@
-$NetBSD: patch-ia,v 1.1 2004/10/13 02:08:43 tv Exp $
+$NetBSD: patch-ia,v 1.2 2004/10/13 15:15:53 tv Exp $
 
 --- mkspecs/interix-g++/qplatformdefs.h.orig	Tue Oct 12 16:43:29 2004
 +++ mkspecs/interix-g++/qplatformdefs.h
-@@ -0,0 +1,82 @@
+@@ -0,0 +1,85 @@
 +#ifndef QPLATFORMDEFS_H
 +#define QPLATFORMDEFS_H
 +
 +// Get Qt defines/settings
 +
 +#include "qglobal.h"
++
++extern "C" { // it is nonstandard to include C headers without protection!
 +
 +// Set any POSIX/XOPEN defines at the top of this file to turn on specific APIs
 +
@@ -48,6 +50,7 @@ $NetBSD: patch-ia,v 1.1 2004/10/13 02:08:43 tv Exp $
 +#include <arpa/nameser.h>
 +#include <resolv.h>
 +
++}; // extern "C"
 +
 +#if !defined(QT_NO_COMPAT)
 +#define QT_STATBUF		struct stat
