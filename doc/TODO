@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1682 2004/04/29 13:23:39 grant Exp $
+$NetBSD: TODO,v 1.1683 2004/04/29 15:17:02 minskim Exp $
 
 Suggested new packages
 ======================
@@ -350,7 +350,6 @@ Suggested package updates
 	o texi2html-1.70
 	o texinfo-4.7
 	o thy-0.9.0 [pkg/25318]
-	o tkcvs-7.2.1
 	o tkdesk-2.0
 	o tkman-2.2
 	o tmda-1.0.2
