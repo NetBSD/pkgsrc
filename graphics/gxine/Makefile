@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/26 13:08:20 jmmv Exp $
 #
 
 DISTNAME=		gxine-0.3.3
@@ -17,7 +17,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../graphics/xine-lib/buildlink2.mk"
+.include "../../multimedia/xine-lib/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
