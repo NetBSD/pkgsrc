@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.45 2004/02/14 15:29:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.46 2004/02/18 07:55:51 skrll Exp $
 #
 
 DISTNAME=	libtool-1.5.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
 
