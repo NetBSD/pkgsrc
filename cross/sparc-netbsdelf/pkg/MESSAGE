@@ -1,0 +1,12 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/02/03 13:00:43 tv Exp $
+
+This pkg DOES NOT install headers or runtime link libraries.  Only the
+compilers are installed.
+
+In order to have a complete development setup, you need to install
+includes and libraries in ${CROSSBASE}/sparc-netbsdelf/include and
+${CROSSBASE}/sparc-netbsdelf/lib respectively, or symlink these paths to
+the appropriate places.
+
+=============================================================================
