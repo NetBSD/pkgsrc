@@ -1,0 +1,10 @@
+$NetBSD: patch-aq,v 1.1 2003/01/15 21:02:07 he Exp $
+
+--- network/native/hal/hostos/netbsd/include/network.h.orig	Wed Jan 15 21:58:56 2003
++++ network/native/hal/hostos/netbsd/include/network.h
+@@ -29,4 +29,5 @@
+ */
+ 
++#include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/time.h>
