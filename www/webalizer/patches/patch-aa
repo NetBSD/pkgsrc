@@ -1,23 +1,36 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/07 13:22:53 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/03/23 21:16:06 mjl Exp $
 
-*** Makefile.orig	Sat Nov  7 00:12:47 1998
---- Makefile	Sat Nov  7 00:20:43 1998
-***************
-*** 18,25 ****
-  CC=gcc
-  CFLAGS= -O2 -Wall -fsigned-char
-  
-! GDLIB = /usr/local/include/gd
-! LIBS= -lgd -lm
-  
-  all: webalizer
-  
---- 18,25 ----
-  CC=gcc
-  CFLAGS= -O2 -Wall -fsigned-char
-  
-! GDLIB = ${PREFIX}/include/gd
-! LIBS= -L${PREFIX}/lib -lgd -lm
-  
-  all: webalizer
-  
+--- Makefile.orig	Tue Mar  2 08:37:06 1999
++++ Makefile	Tue Mar 23 21:49:01 1999
+@@ -17,14 +17,14 @@
+ #LIBS   = -lgd -lm
+ 
+ # These for Linux (most GCC based systems)
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man/man1
++BINDIR = ${PREFIX}/bin
++MANDIR = ${PREFIX}/man/man1
+ CC     = gcc
+-CFLAGS = -O2 -Wall -fsigned-char
+-LIBS   = -lgd -lm
++CFLAGS = -O2 -Wall -fsigned-char -DPREFIX=\"${PREFIX}\"
++LIBS   = -L${PREFIX}/lib -lgd -lm
+ 
+ # where are the GD header files?
+-GDLIB  = /usr/local/include/gd
++GDLIB  = ${PREFIX}/include/gd
+ 
+ # Shouldn't have to touch below here!
+ 
+@@ -51,9 +51,9 @@
+ install: all
+ 	cp webalizer.1 ${MANDIR}/webalizer.1
+ 	cp webalizer   ${BINDIR}/webalizer
+-	cp sample.conf /etc/webalizer.conf.sample
++	cp sample.conf ${PREFIX}/etc/webalizer.conf.sample
+ 
+ uninstall:
+ 	rm -f ${MANDIR}/webalizer.1
+ 	rm -f ${BINDIR}/webalizer
+-	rm -f /etc/webalizer.conf.sample
++	rm -f ${PREFIX}/etc/webalizer.conf.sample
