@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24 2002/12/03 10:59:57 wiz Exp $
+$NetBSD: TODO,v 1.25 2002/12/04 13:54:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -65,6 +65,7 @@ Suggested package updates
 	o Mesa-5.0 [jschauma]
 	o SDL-image-1.2.2
 	o acroread-5.1
+	o amaya-7.0
 	o anjuta-1.0.0
 	o aspell-0.50.3
 	o atari800-1.2.5
@@ -85,7 +86,9 @@ Suggested package updates
 	o courier-0.40 [jlam]
 	o courier-imap-1.6 [jlam]
 	o crafty-19.1
+	o crossfire-1.4.0
 	o ctwm-3.6
+	o cups-1.1.17
 	o curl-7.10.2
 	o cyrus-imapd-2.1.10
 	o dante-1.1.13
@@ -97,7 +100,7 @@ Suggested package updates
 	o elinks-0.3.2 (0.4pre18)
 	o elm-me-2.4pl99e
 	o eterm-0.9.2
-	o evilwm-0.99.11
+	o evilwm-0.99.11 [pkg/19257]
 	o evolution-1.1.1
 	o exim-{,html-}4.10 [pkg/19231]
 	o fags-0.2.0
@@ -147,7 +150,7 @@ Suggested package updates
 	o kdevelop-2.1.4 [3.0alpha1]
 	o lbreakout2-2.3.5
 	o lcms-1.0.9
-	o leafnode-1.9.29
+	o leafnode-1.9.30
 	o lesstif-0.93.36 [drochner]
 	o lftp-2.6.2
 	o libexif-0.5.7
@@ -181,7 +184,7 @@ Suggested package updates
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
 	o opensp-1.5
-	o opera-6.1
+	o opera-6.11
 	o oss-397f
 	o pen-0.9.5 [pkg/19216]
 	o phoenix-0.4
@@ -224,6 +227,7 @@ Suggested package updates
 	o suck-4.3.1
 	o sylpheed-claws-0.8.6
 	o tcl/tk-8.4.1 [bjoern]
+	o tightvnc-1.2.7
 	o ttf2pt1-3.4.2
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
