@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1137 2003/02/09 14:38:51 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1138 2003/02/09 14:59:12 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3626,7 +3626,7 @@ show-vulnerabilities-html:
 	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
 		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
 			 gsub("\>", "\\&gt;", $$1);			\
-			 printf("<STRONG><LI>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG>\n", $$1, $$2, $$3, $$3) }' \
+			 printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$1, $$2, $$3, $$3) }' \
 			${DISTDIR}/vulnerabilities;			\
 	fi
 
