@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/06/16 04:55:26 itojun Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/16 09:24:14 itojun Exp $
 
-DISTNAME=	cue-snap-20030616
-PKGNAME=	cue-20030616
+DISTNAME=	cue-snap-20030714
+PKGNAME=	cue-20030714
 CATEGORIES=	mail
 MASTER_SITES=	ftp://sh.wide.ad.jp/WIDE/free-ware/cue/snap/
 
@@ -13,7 +13,7 @@ USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	USE_INET6 USE_IDEA
+BUILD_DEFS+=	USE_INET6 USE_IDEA USE_CANNA
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 CONFIGURE_ARGS+=	--enable-ipv6
