@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2002/10/19 10:55:01 rh Exp $
+# $NetBSD: Makefile,v 1.79 2002/10/23 17:09:39 bouyer Exp $
 
 DISTNAME=		gnome-libs-1.4.1.4
 PKGREVISION=		1
@@ -50,7 +50,7 @@ post-extract:
 .for file in gnome-app-helper-convenience-macros.htm			\
 	     gnome-app-helper-keybindings-config.htm
 	cd ${WRKSRC}/devel-docs/gnome-dev-info/gnome-dev-info &&	\
-	( [ -e ${file}l ] || ${MV} ${file} ${file}l )
+	( [ -f ${file}l ] || ${MV} ${file} ${file}l )
 .endfor
 
 post-patch:
