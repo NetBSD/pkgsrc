@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/17 16:03:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/03/14 15:07:01 wiz Exp $
 
-SHA1 (blackbox-0.61.1.tar.gz) = c8c784705ae772dc6b4b6b7c59d00fd2d9b0cb01
-Size (blackbox-0.61.1.tar.gz) = 235682 bytes
+SHA1 (blackbox-0.62.1.tar.gz) = 9ce078ae312271f4279adade9169c84199444631
+Size (blackbox-0.62.1.tar.gz) = 299604 bytes
