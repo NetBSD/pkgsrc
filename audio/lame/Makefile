@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/04/14 09:13:20 adam Exp $
+# $NetBSD: Makefile,v 1.41 2004/05/31 16:47:47 minskim Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -13,6 +13,8 @@ COMMENT=	Fast, high quality MP3 encoder
 VERS=		3.96
 
 LICENSE=	fee-based-commercial-use
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
