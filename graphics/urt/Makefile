@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/20 12:18:17 agc Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/27 00:53:11 heinz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -34,7 +34,7 @@ post-install:
 	cd ${PREFIX}/share/doc/urt && (\
 	    ${GTAR} xf ${DISTDIR}/urt-doc.tar; \
 	    cd doc; \
-	    ${FIND} -d . | cpio -dump ..; \
+	    ${FIND} -d . -print | cpio -dump ..; \
 	    cd ..; \
 	    ${RM} -rf doc)
 	cd ${PREFIX}/share/examples/urt && (\

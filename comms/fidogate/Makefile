@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/01/22 07:51:12 grant Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/27 00:53:12 heinz Exp $
 #
 
 DISTNAME=	fidogate-4.4.5
@@ -54,9 +54,9 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/fidogate/sendmail/mailer
 
 post-install:
-	cd ${WRKSRC}/examples && for f in `${FIND} [m-p]* -type d`; do \
+	cd ${WRKSRC}/examples && for f in `${FIND} [m-p]* -type d -print`; do \
 		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/fidogate/$$f; done
-	cd ${WRKSRC}/examples && for f in `${FIND} README [m-p]* -type f`; do \
+	cd ${WRKSRC}/examples && for f in `${FIND} README [m-p]* -type f -print`; do \
 		${INSTALL_DATA} $$f ${PREFIX}/share/examples/fidogate/$$f; done
 	cd ${WRKSRC}/sendmail/mailer && ${INSTALL_DATA} ffx.m4 ftn.m4 \
 		${PREFIX}/share/fidogate/sendmail/mailer

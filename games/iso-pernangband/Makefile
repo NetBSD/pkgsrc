@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/27 00:53:11 heinz Exp $
 #
 
 DISTNAME=		iso-pern_src-0_2_6
@@ -42,7 +42,7 @@ do-install:
 		${PREFIX}/share/iso-pernangband
 	${CHOWN} -R bin:games ${PREFIX}/share/iso-pernangband
 	${CHMOD} -R 0664 ${PREFIX}/share/iso-pernangband
-	${FIND} ${PREFIX}/share/iso-pernangband -type d | ${XARGS} ${CHMOD} 0775
+	${FIND} ${PREFIX}/share/iso-pernangband -type d -print | ${XARGS} ${CHMOD} 0775
 	${INSTALL} -c -s -o bin -g games -m 2755 \
 		${WRKSRC}/testing \
 		${PREFIX}/bin/iso-pernangband

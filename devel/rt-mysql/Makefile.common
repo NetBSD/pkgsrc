@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/07/17 21:33:37 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/01/27 00:53:10 heinz Exp $
 
 DISTNAME=      	rt-2-0-13
 CATEGORIES=	devel
@@ -90,7 +90,7 @@ DEPENDS+=	p5-Apache-DBI-[0-9]*:../../databases/p5-Apache-DBI
 
 pre-configure:
 	@${ECHO} "=> Removing CVS directories from work directory"
-	@${FIND} ${WRKSRC} -name CVS -type d | ${XARGS} ${RM} -rf
+	@${FIND} ${WRKSRC} -name CVS -type d -print | ${XARGS} ${RM} -rf
 	@${CP} ${FILESDIR}/rtconfig ${WRKSRC}/rtconfig
 	@${CP} ${FILESDIR}/README ${WRKSRC}/README.pkg
 	@cd ${WRKSRC} ; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/27 00:53:12 heinz Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -15,9 +15,9 @@ USE_GNU_TOOLS+=	make
 USE_X11BASE=	yes
 
 post-extract:
-	@${FIND} ${WRKSRC} -type f -name '*~' | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -type f -name '*~' -print | ${XARGS} ${RM} -f
 	@${LN} -fs ${FILESDIR}/Makefile ${WRKSRC}
-	for FILE in `find ${WRKSRC} -name "*.hc" -type f`; do	\
+	for FILE in `${FIND} ${WRKSRC} -name "*.hc" -type f -print`; do	\
 	  echo >>$$FILE "";					\
 	done
 
