@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
+
+--- configure.orig	Mon Jul 23 05:55:55 2001
++++ configure
+@@ -1667,6 +1667,10 @@
+         ac_default_prefix=/boot/beos
+         GAME_INSTALLDIR="\$(prefix)/games/$PACKAGE"
+         ;;
++    *-*-netbsd*)
++        GAME_INSTALLDIR="\$(prefix)/share/$PACKAGE"
++        DOC_INSTALLDIR="\$(prefix)/share/doc/$PACKAGE"
++        ;;
+     *)
+         GAME_INSTALLDIR="\$(prefix)/games/$PACKAGE"
+         ;;

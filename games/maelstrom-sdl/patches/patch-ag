@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
+
+--- maclib/Makefile.in.orig	Thu Jul 11 15:06:44 2002
++++ maclib/Makefile.in
+@@ -78,7 +78,7 @@
+ libSDLmac_a_SOURCES =  	Mac_Compat.h			Mac_FontServ.cpp		Mac_FontServ.h			Mac_Resource.cpp		Mac_Resource.h			Mac_Sound.cpp			Mac_Sound.h			Mac_Wave.cpp			Mac_Wave.h			applefile.h			bitesex.h
+ 
+ 
+-bin_PROGRAMS = macres playwave snd2wav
++bin_PROGRAMS = macres snd2wav
+ 
+ macres_SOURCES = macres.cpp
+ macres_LDADD = libSDLmac.a
