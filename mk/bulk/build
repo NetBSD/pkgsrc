@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.13 2001/10/14 20:34:53 dmcmahill Exp $
+# $NetBSD: build,v 1.14 2001/10/15 17:19:23 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -33,6 +33,11 @@
 #
 # Do builk build
 #
+
+# Set ressource limits as high as possible
+ulimit -S -s `ulimit -H -s`
+ulimit -S -d `ulimit -H -d`
+
 
 echo Bulk build started: `date`
 echo ""
