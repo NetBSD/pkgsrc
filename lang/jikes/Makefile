@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:44:43 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/08/23 15:14:00 jschauma Exp $
 #
 
 DISTNAME=	jikes-1.18
-CATEGORIES=	lang
+CATEGORIES=	lang java
 MASTER_SITES=	http://oss.software.ibm.com/pub/jikes/1.18/
 EXTRACT_SUFX=	.tar.bz2
 
