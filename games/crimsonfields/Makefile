@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/04/14 16:15:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/10 14:53:04 wiz Exp $
 #
 
-DISTNAME=		crimson-0.4.1
+DISTNAME=		crimson-0.4.2
 PKGNAME=		${DISTNAME:S/crimson/crimsonfields/}
 CATEGORIES=		games
 MASTER_SITES=		http://crimson.seul.org/files/
@@ -14,7 +14,8 @@ COMMENT=		Tactical war game in the tradition of Battle Isle
 USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
-USE_PKGLOCALEDIR=	yes
+# not standard locale files
+#USE_PKGLOCALEDIR=	no
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-bi2cf --enable-cfed --enable-comet
