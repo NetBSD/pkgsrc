@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.894 2003/09/22 14:13:36 jmmv Exp $
+$NetBSD: TODO,v 1.895 2003/09/23 09:10:41 grant Exp $
 
 Suggested new packages
 ======================
@@ -287,11 +287,13 @@ Suggested package updates
 Infrastructure problems which need addressing
 =============================================
 
-	o fix mk/gcc.buildlink2.mk to handle non-gcc compilers,
-	  eg. MIPSPro on IRIX, SunPro on Solaris.
+	o fix mk/compiler.mk to handle non-pkgsrc gcc,
+	  eg. /opt/sfw/bin/gcc. [grant]
 
-	o fix mk/gcc.buildlink2.mk to handle non-pkgsrc gcc,
-	  eg. /opt/sfw/bin/gcc.
+	  need to figure out how to override buildlink2's hiding of
+	  /usr/local, as the installation of gcc I am testing with is
+	  in that directory.
+	
 
 Suggested pkgsrc enhancements
 =============================
