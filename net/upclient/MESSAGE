@@ -1,5 +1,5 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/05/07 22:20:59 hubertf Exp $
+$NetBSD: MESSAGE,v 1.2 2002/05/07 22:25:02 hubertf Exp $
 
 To start the Uptime Client, run the ${PREFIX}/etc/rc.d/upclient
 script either manually or via /etc/rc.local.
