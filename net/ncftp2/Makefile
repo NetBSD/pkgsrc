@@ -3,7 +3,7 @@
 # Date created:         4 Nov 1994
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.2 1998/02/20 14:28:46 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/22 20:30:20 tron Exp $
 # $FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -16,7 +16,7 @@ MAINTAINER=	ache@FreeBSD.ORG
 LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ARGS+=	--with-curses=${PREFIX} --disable-readline
+CONFIGURE_ARGS+=	--disable-readline
 MAN1=		ncftp2.1
 
 do-install:
