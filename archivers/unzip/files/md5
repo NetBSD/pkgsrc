@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.4 1998/08/07 13:16:52 agc Exp $
+$NetBSD: md5,v 1.5 1998/12/27 17:29:25 hubertf Exp $
 
-MD5 (unzip532.tar.gz) = 0481e4c1792de60d9fd70fcb16e2eb9b
-MD5 (zcrypt27.zip) = 705945343dae4c9344b3c3cf9b2c5ded
+MD5 (unzip540.tar.gz) = 062a9a8ad80f0bf8a307063958f1de2a
+MD5 (zcrypt28.zip) = 87ece6fe69c8cb71eec0e1a945542f37
