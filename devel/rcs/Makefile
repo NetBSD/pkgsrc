@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/07/23 17:13:47 seb Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/02 09:42:55 martti Exp $
 #
 
 DISTNAME=		rcs-5.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/rcs/rcs.html
 COMMENT=		GNU Revision Control System - version control software
 
-ONLY_FOR_PLATFORM=	SunOS-*-* Darwin-*-*	# in NetBSD base system
+ONLY_FOR_PLATFORM=	SunOS-*-* Darwin-*-* Linux-*-*	# in NetBSD base system
 
 .include "../../mk/bsd.prefs.mk"
 
