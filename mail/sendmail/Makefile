@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/10 16:41:21 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/10 17:22:43 tron Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -14,7 +14,8 @@ DEPENDS+=	db-2.7.3:../../databases/db
 LICENSE=	no-profit
 
 NO_CONFIGURE=	yes
-MAKE_ENV+=	MANOWN="${MANOWN}" MANGRP="${MANGRP}" MANMODE="${MANMODE}"
+MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
+		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}/${PKGNAME}
