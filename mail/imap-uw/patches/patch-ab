@@ -1,17 +1,16 @@
-$NetBSD: patch-ab,v 1.14 2004/08/12 12:13:54 adam Exp $
-
---- src/osdep/unix/Makefile.orig	2004-08-12 13:26:38.000000000 +0000
-+++ src/osdep/unix/Makefile
-@@ -29,8 +29,6 @@ IP=4
+--- src/osdep/unix/Makefile.orig	2005-03-06 08:53:53.000000000 -0800
++++ src/osdep/unix/Makefile	2005-03-06 08:56:06.000000000 -0800
+@@ -29,9 +29,6 @@
  
  # Extended flags needed for SSL.  You may need to modify.
  
 -SSLDIR=/usr/local/ssl
 -SSLCERTS=$(SSLDIR)/certs
- SSLKEYS=$(SSLCERTS)
+-SSLKEYS=$(SSLCERTS)
  SSLINCLUDE=$(SSLDIR)/include
  SSLLIB=$(SSLDIR)/lib
-@@ -48,7 +46,7 @@ SSLRSA= # -lRSAglue -lrsaref
+ 
+@@ -48,7 +45,7 @@
  
  SSLCFLAGS= -I$(SSLINCLUDE) -I$(SSLINCLUDE)/openssl\
   -DSSL_CERT_DIRECTORY=\"$(SSLCERTS)\" -DSSL_KEY_DIRECTORY=\"$(SSLKEYS)\"
@@ -20,7 +19,7 @@ $NetBSD: patch-ab,v 1.14 2004/08/12 12:13:54 adam Exp $
  
  
  # Extended flags needed for non-standard passwd types.  You may need to modify.
-@@ -92,14 +90,14 @@ LOCKPGM=/etc/mlock
+@@ -92,14 +89,14 @@
  # set certain other formats (e.g. mbx and mx) as the EMPTYPROTO since these
  # formats can never be empty files.
  
@@ -37,7 +36,7 @@ $NetBSD: patch-ab,v 1.14 2004/08/12 12:13:54 adam Exp $
  LN=ln -s
  RANLIB=ranlib
  
-@@ -391,9 +389,9 @@ gso:	os_sol.h	# GCC Solaris
+@@ -391,9 +388,9 @@
  	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
  	 ACTIVEFILE=/usr/share/news/active \
  	 RSHPATH=/usr/bin/rsh \
@@ -49,7 +48,7 @@ $NetBSD: patch-ab,v 1.14 2004/08/12 12:13:54 adam Exp $
  
  gsu:	# GCC SUN-OS
  	$(BUILD) `$(CAT) SPECIALS` OS=sun \
-@@ -483,9 +481,9 @@ neb:	# NetBSD
+@@ -483,9 +480,9 @@
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -61,7 +60,7 @@ $NetBSD: patch-ab,v 1.14 2004/08/12 12:13:54 adam Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -911,7 +909,7 @@ onceenv:
+@@ -911,7 +908,7 @@
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS

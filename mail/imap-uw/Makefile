@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2005/03/05 22:01:47 adrianp Exp $
+# $NetBSD: Makefile,v 1.91 2005/03/06 17:03:06 thorpej Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system with Kerberos libraries
@@ -6,7 +6,7 @@
 
 DISTNAME=       imap-2004c1
 PKGNAME=        imap-uw-2004c1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -70,6 +70,7 @@ CCLIENT_MFILES=	src/imapd/Makefile					\
 		src/osdep/unix/Makefile
 
 MESSAGE_SUBST+=	SSLCERTS="${SSLCERTS}"
+MESSAGE_SUBST+=	SSLKEYS="${SSLKEYS}"
 PLIST_SUBST+=	CCLIENT_MAJOR="${CCLIENT_MAJOR}"
 PLIST_SUBST+=	CCLIENT_MINOR="${CCLIENT_MINOR}"
 
@@ -77,6 +78,7 @@ MANFILES=	src/imapd/imapd.8 src/ipopd/ipopd.8
 
 MAKE_ENV+=	SSLDIR=${SSLBASE:Q}
 MAKE_ENV+=	SSLCERTS=${SSLCERTS:Q}
+MAKE_ENV+=	SSLKEYS=${SSLKEYS:Q}
 MAKE_ENV+=	CCLIENT_MAJOR=${CCLIENT_MAJOR:Q}
 MAKE_ENV+=	CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 MAKE_ENV+=	CREATEPROTO=${IMAP_UW_CCLIENT_MBOX_FMT:Q}proto
