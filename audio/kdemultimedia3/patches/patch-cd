@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.4 2003/05/22 03:05:41 markd Exp $
+$NetBSD: patch-cd,v 1.5 2003/07/30 14:56:04 markd Exp $
 
---- noatun/modules/splitplaylist/Makefile.in.orig	Thu May  8 00:05:29 2003
+--- noatun/modules/splitplaylist/Makefile.in.orig	2003-07-15 22:14:00.000000000 +1200
 +++ noatun/modules/splitplaylist/Makefile.in
-@@ -381,7 +381,7 @@ kde_module_LTLIBRARIES = noatun_splitpla
+@@ -382,7 +382,7 @@ kde_module_LTLIBRARIES = noatun_splitpla
  noatun_splitplaylist_la_SOURCES = splitplaylist.cpp playlist.cpp view.cpp find.cpp
  
  noatun_splitplaylist_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-cd,v 1.4 2003/05/22 03:05:41 markd Exp $
  
  #>- noatun_splitplaylist_la_METASOURCES = AUTO
  
-@@ -398,7 +398,7 @@ CONFIG_CLEAN_FILES =
+@@ -399,7 +399,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_splitplaylist_la_DEPENDENCIES = \
@@ -20,34 +20,42 @@ $NetBSD: patch-cd,v 1.4 2003/05/22 03:05:41 markd Exp $
  am_noatun_splitplaylist_la_OBJECTS = splitplaylist.lo playlist.lo \
  	view.lo find.lo
  #>- noatun_splitplaylist_la_OBJECTS = $(am_noatun_splitplaylist_la_OBJECTS)
-@@ -643,7 +643,7 @@ distclean-tags:
+@@ -644,7 +644,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=splui.rc LICENSE splitplaylist.plugin 
-+KDE_DIST=splitplaylist.plugin LICENSE splui.rc 
++KDE_DIST=splitplaylist.plugin LICENSE splui.rc Makefile.in.rej 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -796,20 +796,20 @@ noatun_splitplaylist.la.closure: $(noatu
+@@ -797,18 +797,18 @@ noatun_splitplaylist.la.closure: $(noatu
  
  
  #>+ 3
 -view.moc: $(srcdir)/view.h
 -	$(MOC) $(srcdir)/view.h -o view.moc
 -
+-#>+ 1
+-mocs: view.moc
 -#>+ 3
  find.moc: $(srcdir)/find.h
  	$(MOC) $(srcdir)/find.h -o find.moc
  
+ #>+ 1
+ mocs: find.moc
  #>+ 3
 +view.moc: $(srcdir)/view.h
 +	$(MOC) $(srcdir)/view.h -o view.moc
 +
++#>+ 1
++mocs: view.moc
 +#>+ 3
  playlist.moc: $(srcdir)/playlist.h
  	$(MOC) $(srcdir)/playlist.h -o playlist.moc
  
+@@ -816,7 +816,7 @@ playlist.moc: $(srcdir)/playlist.h
+ mocs: playlist.moc
  #>+ 3
  clean-metasources:
 -	-rm -f  view.moc find.moc playlist.moc
@@ -55,7 +63,7 @@ $NetBSD: patch-cd,v 1.4 2003/05/22 03:05:41 markd Exp $
  
  #>+ 3
  clean-closures:
-@@ -826,7 +826,7 @@ force-reedit:
+@@ -833,7 +833,7 @@ force-reedit:
  
  
  #>+ 11
@@ -64,7 +72,7 @@ $NetBSD: patch-cd,v 1.4 2003/05/22 03:05:41 markd Exp $
  	@echo 'creating noatun_splitplaylist_la.all_cpp.cpp ...'; \
  	rm -f noatun_splitplaylist_la.all_cpp.files noatun_splitplaylist_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_splitplaylist_la.all_cpp.final; \
-@@ -862,9 +862,9 @@ kde-rpo-clean:
+@@ -869,9 +869,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7
