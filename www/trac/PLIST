@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/31 01:57:25 epg Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/08/28 00:30:45 epg Exp $
 bin/trac-admin
 bin/tracd
 bin/tracdb2env
@@ -29,15 +29,15 @@ ${PYSITELIB}/trac/Logging.pyo
 ${PYSITELIB}/trac/Mimeview.py
 ${PYSITELIB}/trac/Mimeview.pyc
 ${PYSITELIB}/trac/Mimeview.pyo
+${PYSITELIB}/trac/ModPythonHandler.py
+${PYSITELIB}/trac/ModPythonHandler.pyc
+${PYSITELIB}/trac/ModPythonHandler.pyo
 ${PYSITELIB}/trac/Module.py
 ${PYSITELIB}/trac/Module.pyc
 ${PYSITELIB}/trac/Module.pyo
 ${PYSITELIB}/trac/Notify.py
 ${PYSITELIB}/trac/Notify.pyc
 ${PYSITELIB}/trac/Notify.pyo
-${PYSITELIB}/trac/PermissionError.py
-${PYSITELIB}/trac/PermissionError.pyc
-${PYSITELIB}/trac/PermissionError.pyo
 ${PYSITELIB}/trac/Report.py
 ${PYSITELIB}/trac/Report.pyc
 ${PYSITELIB}/trac/Report.pyo
@@ -62,9 +62,6 @@ ${PYSITELIB}/trac/auth.pyo
 ${PYSITELIB}/trac/core.py
 ${PYSITELIB}/trac/core.pyc
 ${PYSITELIB}/trac/core.pyo
-${PYSITELIB}/trac/db.py
-${PYSITELIB}/trac/db.pyc
-${PYSITELIB}/trac/db.pyo
 ${PYSITELIB}/trac/db_default.py
 ${PYSITELIB}/trac/db_default.pyc
 ${PYSITELIB}/trac/db_default.pyo
@@ -142,6 +139,7 @@ share/trac/htdocs/file.png
 share/trac/htdocs/folder.png
 share/trac/htdocs/milestone.png
 share/trac/htdocs/newticket.png
+share/trac/htdocs/parent.png
 share/trac/htdocs/topbar_active.png
 share/trac/htdocs/topbar_gradient.png
 share/trac/htdocs/trac.js
@@ -181,8 +179,14 @@ share/trac/wiki-default/TracInstall
 share/trac/wiki-default/TracLinks
 share/trac/wiki-default/TracLogging
 share/trac/wiki-default/TracNotification
+share/trac/wiki-default/TracOnDebian
+share/trac/wiki-default/TracOnFreeBsd
+share/trac/wiki-default/TracOnGentoo
+share/trac/wiki-default/TracOnMandrakelinux
 share/trac/wiki-default/TracOnNetBsd
 share/trac/wiki-default/TracOnOsx
+share/trac/wiki-default/TracOnRedhat
+share/trac/wiki-default/TracOnWindows
 share/trac/wiki-default/TracPermissions
 share/trac/wiki-default/TracReports
 share/trac/wiki-default/TracRss
