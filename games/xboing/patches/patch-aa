@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2004/08/04 03:06:55 jschauma Exp $
+$NetBSD: patch-aa,v 1.8 2004/12/27 22:11:31 minskim Exp $
 
---- Imakefile.orig	1996-11-21 20:28:46.000000000 -0500
-+++ Imakefile	2004-08-01 14:02:34.000000000 -0400
-@@ -24,23 +24,23 @@
+--- Imakefile.orig	1996-11-21 19:28:46.000000000 -0600
++++ Imakefile
+@@ -24,23 +24,23 @@ XCOMM ==================================
  XCOMM This is the directory where the highscore, level & sound data will be 
  XCOMM placed. Default will be the current directory.
  
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.7 2004/08/04 03:06:55 jschauma Exp $
      SOUNDS_DIR 			= $(XBOING_DIR)/sounds
      BACKUP_DIR 			= $(XBOING_DIR)/../backups
 -    HIGH_SCORE_FILE 	= $(XBOING_DIR)/.xboing.scr
-+    HIGH_SCORE_FILE 		= /var/games/xboing.scr
++    HIGH_SCORE_FILE 		= $(VARBASE)/games/xboing.scr
      AUDIO_AVAILABLE 	= False
      AUDIO_SRC 			= audio/NOaudio.c
      AUDIO_INCLUDE 		=
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.7 2004/08/04 03:06:55 jschauma Exp $
  
  XCOMM Uncomment this if you want to use ANY of the AUDIO sound systems
  #define COMPILE_IN_AUDIO    
-@@ -60,11 +60,11 @@
+@@ -60,11 +60,11 @@ XCOMM Below are the special defines for 
      AUDIO_LIB 		= -laudio
  #endif /* HPArchitecture */
  
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.7 2004/08/04 03:06:55 jschauma Exp $
  #endif /* linux */
  
  #if defined(svr4) && defined(COMPILE_IN_AUDIO)
-@@ -81,7 +81,7 @@
+@@ -81,7 +81,7 @@ XCOMM Below are the special defines for 
      AUDIO_LIB 		= -laudio
  #endif /* SGIArchitecture */
  
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.7 2004/08/04 03:06:55 jschauma Exp $
      AUDIO_AVAILABLE	= True
      AUDIO_SRC 		= audio/SUNaudio.c
  
-@@ -132,8 +132,8 @@
+@@ -132,8 +132,8 @@ XCOMM hasn't a usleep() function.
          -DLEVEL_INSTALL_DIR=\"$(LEVEL_INSTALL_DIR)\" \
          -DAUDIO_AVAILABLE=\"$(AUDIO_AVAILABLE)\" \
          -DSOUNDS_DIR=\"$(SOUNDS_DIR)\" \
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.7 2004/08/04 03:06:55 jschauma Exp $
  XCOMM   -DNEED_USLEEP=\"True\" \
  XCOMM   -DNO_LOCKING=\"True\" 
  
-@@ -204,8 +204,8 @@
+@@ -204,8 +204,8 @@ install:: $(PROGRAMS)
  	 fi
  	@:
  	@echo "Creating a highscore file " $(HIGH_SCORE_FILE)
