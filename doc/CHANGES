@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1292 2003/01/31 01:27:14 salo Exp $
+$NetBSD: CHANGES,v 1.1293 2003/01/31 11:03:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -513,3 +513,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bnc to 2.8.6 [salo 2003-01-31]
 	Updated xaric to 0.12.1 [salo 2003-01-31]
 	Updated roxirc to 1.8 [salo 2003-01-31]
+	Updated dvdrecord to 0.1.3nb1 [abs 2003-01-31]
+
