@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2001/11/29 01:12:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/12/22 00:03:25 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	1
+PKGREVISION=	2
 SCIBASE=	scilab-2.6
 WRKSRC=		${WRKDIR}/${DISTNAME:.src=}
 CATEGORIES=	math
@@ -45,11 +45,20 @@ post-extract:
 	${RM} -f ${WRKSRC}/examples/callsci/callsciC/config/config
 	${RM} -f ${WRKSRC}/examples/callsci/callsciC++/config/config
 
+# make sure that the 'whatis' files in the man directories get rebuilt
+pre-build:
+	cd ${WRKSRC}/man && ${MAKE_ENV} ${MAKE_PROGRAM} cleanall
+
+post-build:
+	cd ${WRKSRC}/man && ${MAKE_ENV} ${MAKE_PROGRAM} all
+
 # clean up any possible leftovers from 'make test' so that our PLIST
-# will still be right
+# will still be right.  Also clean up .orig files we may have 
+# created during patching so they don't corrupt our PLIST
 pre-install:
 	cd ${WRKSRC}/tests && ${MAKE_PROGRAM} distclean
 	cd ${WRKSRC}/examples && ${MAKE_PROGRAM} distclean
+	find ${WRKSRC}/ -name \*.orig -print -exec rm {} \;
 
 post-install:
 	${LN} -sf ${X11PREFIX}/bin/xless ${PREFIX}/${SCIBASE}/bin/xless
