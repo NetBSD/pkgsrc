@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2003/12/19 16:48:06 ben Exp $
+$NetBSD: patch-ab,v 1.4 2004/11/25 17:24:27 ben Exp $
 
---- SpiralInfo.C.orig	2000-11-26 07:52:43.000000000 -0800
+--- SpiralInfo.C.orig	Sun Jun  2 08:44:31 2002
 +++ SpiralInfo.C
 @@ -22,7 +22,7 @@
  
@@ -11,8 +11,8 @@ $NetBSD: patch-ab,v 1.3 2003/12/19 16:48:06 ben Exp $
  {
  	return s+((rand()%10000/10000.0)*(e-s));
  }
-@@ -41,7 +41,7 @@ long   SpiralInfo::MAXSAMPLE   = 32767;
- float  SpiralInfo::VALUECONV   = 1.0f/MAXSAMPLE;
+@@ -42,7 +42,7 @@ int    SpiralInfo::SAMPLERATE  = 44100;
+ float  SpiralInfo::MAXSAMPLE   = 1.0f;
  bool   SpiralInfo::WANTMIDI    = true;
  int    SpiralInfo::FILTERGRAN  = 50;
 -string SpiralInfo::OUTPUTFILE  = "/dev/dsp";
