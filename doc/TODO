@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2963 2005/01/26 10:16:22 salo Exp $
+$NetBSD: TODO,v 1.2964 2005/01/26 16:29:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -280,7 +280,7 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o alee-ttf-4.1
 	o algae-4.3.6
-	o allegro-4.1.17
+	o allegro-4.1.18
 	o amavis-0.3.12
 	o amavisd-new-2.2.1
 	o amule-2.0.0rc8 [pkg/28762]
@@ -322,6 +322,7 @@ Suggested package updates
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
 	o bibtex2html-1.74 [requires ocaml>=3.07]
+	o bind-9.3.1
 	o bins-1.1.27
 	o bioperl-1.4
 	o bison-2.0
@@ -531,6 +532,7 @@ Suggested package updates
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
+	o gtk-send-pr-0.4.3
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -687,7 +689,7 @@ Suggested package updates
 	o multitail-3.4.5
 	o muse-0.9.1
 	o nail-11.20
-	o naim-0.11.7.3
+	o naim-0.11.7.3.1
 	o nano-1.3.5 [devel version]
 	o nap-1.5.3
 	o navi2ch-1.7.5
@@ -886,7 +888,7 @@ Suggested package updates
 	o pim6sd-20040824a
 	o pircbot-1.4.2
 	o plan-1.8.7
-	o plib-1.8.3
+	o plib-1.8.4
 	o pload-0.9.5
 	o ploticus-examples-230
 	o plplot-5.3.1
@@ -1056,7 +1058,6 @@ Suggested package updates
 	o tcm-2.20
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
-	o tcpdump-3.8.3
 	o tcpick-0.2.1
 	o tcpillust-1.00b
 	o tcptrace-6.6.7
