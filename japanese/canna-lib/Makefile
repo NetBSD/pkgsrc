@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2002/04/05 12:40:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2002/04/05 23:44:40 wiz Exp $
 #
 
 DISTNAME=	Canna35b2
-PKGNAME=	Canna-lib-3.5b2
+PKGNAME=	Canna-lib-3.5.2
 PKGREVISION=	1
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/Canna35/
