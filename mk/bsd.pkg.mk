@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.200 1999/01/04 19:23:30 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.201 1999/01/09 20:52:30 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -925,10 +925,12 @@ do-patch:
 		fi; \
 		case $$i in \
 			*.Z|*.gz) \
-				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS}; \
+				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
+				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 				;; \
 			*) \
-				${PATCH} ${PATCH_DIST_ARGS} < $$i; \
+				${PATCH} ${PATCH_DIST_ARGS} < $$i \
+				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 				;; \
 		esac; \
 	  done)
@@ -950,7 +952,8 @@ do-patch:
 						if [ ${PATCH_DEBUG_TMP} = yes ]; then \
 							${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
 						fi; \
-						${PATCH} ${PATCH_ARGS} < $$i; \
+						${PATCH} ${PATCH_ARGS} < $$i \
+						|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 						;; \
 				esac; \
 			done; \
