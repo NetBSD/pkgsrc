@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2035 2004/08/14 20:57:48 ben Exp $
+$NetBSD: TODO,v 1.2036 2004/08/14 21:55:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -214,6 +214,7 @@ Suggested package updates
 	o distcc-2.17
 	o dmalloc-5.3.0
 	o docbook-4.3
+	o doclifter-1.13
 	o docsis-0.9.1
 	o dvipng-1.1 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
@@ -221,10 +222,12 @@ Suggested package updates
 	o efax-gtk-2.2.9a
 	o elk-3.99.6
 	o elm-me-2.4pl119
+	o esound-0.2.35
 	o ettercap-0.7.0
 	o evolution-1.5.2
 	o exim-4.34
 	o fastDNAml-1.2.2
+	o fceu-0.98.11
 	o festival-1.4.3
 	o file-4.10
 	o findutils-4.1.20
@@ -257,7 +260,7 @@ Suggested package updates
 	o gogo-3.11p1
 	o gpsdrive-2.09
 	o gqmpeg-0.91.1
-	o grace-5.1.16
+	o grace-5.1.17
 	o gramps-1.0.5
 	o grhino-0.12.0
 	o gsasl-0.1.4
@@ -402,6 +405,7 @@ Suggested package updates
 	o snes9x-1.42
 	o snownews-1.5.3
 	o socat-1.4.0.0
+	o source-highlight-1.10
 	o sqlite-3.0.2
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
@@ -431,7 +435,7 @@ Suggested package updates
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wesnoth-0.8.1
-	o wine-20040716
+	o wine-20040813
 	o wistumbler-2.00pre9 [pkg/26245]
 	o wmakerconf-2.9.2
 	o wmweather-2.4.3
@@ -463,6 +467,7 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.6
 	o zenicb 1.31 (needs merge with lots of local changes)
+	o zsh-4.2.1
 
 Infrastructure problems which need addressing
 =============================================
