@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2003/12/28 15:40:14 zuntum Exp $
+
+--- util/Regex.h.orig	2002-12-21 16:10:43.000000000 +0100
++++ util/Regex.h
+@@ -6,6 +6,7 @@
+ #include <map>
+ #include <utility>
+ #include <stdexcept>
++#include <cassert>
+ #include <sys/types.h>
+ #include "c_regex.h"
+ 
