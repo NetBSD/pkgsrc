@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/08 18:33:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/07/02 15:40:01 drochner Exp $
 ${GCC_SUBPREFIX}/bin/gnat
 ${GCC_SUBPREFIX}/bin/gnatbind
 ${GCC_SUBPREFIX}/bin/gnatbl
@@ -11,12 +11,6 @@ ${GCC_SUBPREFIX}/bin/gnatmake
 ${GCC_SUBPREFIX}/bin/gnatname
 ${GCC_SUBPREFIX}/bin/gnatprep
 ${GCC_SUBPREFIX}/bin/gnatxref
-${GCC_SUBPREFIX}/info/gnat-style.info
-${GCC_SUBPREFIX}/info/gnat_rm.info
-${GCC_SUBPREFIX}/info/gnat_ug_unx.info
-${GCC_SUBPREFIX}/info/gnat_ug_vms.info
-${GCC_SUBPREFIX}/info/gnat_ug_vxw.info
-${GCC_SUBPREFIX}/info/gnat_ug_wnt.info
 ${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/adainclude/a-astaco.adb
 ${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/adainclude/a-astaco.ads
 ${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/adainclude/a-caldel.adb
