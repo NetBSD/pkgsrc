@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.16 2002/12/02 00:14:34 kristerw Exp $
---- doc/xmamerc.dist.orig	Fri Nov 29 01:45:12 2002
-+++ doc/xmamerc.dist	Mon Dec  2 00:42:16 2002
-@@ -69,20 +69,19 @@
+$NetBSD: patch-ae,v 1.17 2002/12/14 14:59:39 kristerw Exp $
+--- doc/xmamerc.dist.orig	Mon Dec  9 03:15:24 2002
++++ doc/xmamerc.dist	Sat Dec 14 14:00:15 2002
+@@ -69,13 +69,13 @@
  mouse                   1
  
  ### Fileio Related ###
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.16 2002/12/02 00:14:34 kristerw Exp $
 -cheat_file              /usr/games/lib/xmame/cheat.dat
 -hiscore_file            /usr/games/lib/xmame/hiscore.dat
 -history_file            /usr/games/lib/xmame/history.dat
--mameinfo_fie            /usr/games/lib/xmame/mameinfo.dat
+-mameinfo_file           /usr/games/lib/xmame/mameinfo.dat
 +cheat_file              @SPOOLDIR@/cheat.dat
 +hiscore_file            @SPOOLDIR@/hiscore.dat
 +history_file            @SPOOLDIR@/history.dat
@@ -21,10 +21,3 @@ $NetBSD: patch-ae,v 1.16 2002/12/02 00:14:34 kristerw Exp $
  
  ### Mame Related ###
  defaultgame             pacman
- language                english
- fuzzycmp                1
- cheat                   0
--debug                   0
- 
- ### Frontend Related ###
- clones                  1
