@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/12/25 21:41:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/07 15:34:54 frueauf Exp $
 
 DISTNAME=       siag-3.1.2
 CATEGORIES=     misc textproc math
@@ -16,6 +16,7 @@ GNU_CONFIGURE=  yes
 USE_GMAKE=	yes
 
 CFLAGS+=	-Dunix
+LDFLAGS+=	-Wl,-R${X11BASE}/lib
 STRIPFLAG=
 
 pre-configure:
