@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
+
+--- disasm/badautil.c.orig	Sun Jul 23 23:42:23 2000
++++ disasm/badautil.c	Sun Jul 23 23:49:07 2000
+@@ -213,13 +213,12 @@
+    level--;
+ }
+ 
+-char buf[BUFSIZE];
+-
+ void show_line(FILE* f, int* cur_ifile)
+    /* write the source file line inputfile[*cur_ifile].line_no to */
+    /* file 'f', indicating the proper file include level.         */
+ {
+    int i;
++   char buf[BUFSIZE];
+ 
+    for (i = 0; i< level; i++) fputc('>',f);
+    fgets(buf,BUFSIZE,inputfile[*cur_ifile].f);
