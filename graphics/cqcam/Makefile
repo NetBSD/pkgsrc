@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 15:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/05/05 19:51:15 jlam Exp $
 #
 
 DISTNAME=		cqcam-0.45a
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.cs.duke.edu/~reynolds/cqcam/
 COMMENT=		Free Color QuickCam control program
 
 DEPENDS=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		tk-8.3.2:../../x11/tk
+DEPENDS+=		tk>=8.3.2:../../x11/tk
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-alpha
 

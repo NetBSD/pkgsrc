@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/17 18:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/05/05 19:51:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.beedub.com/exmh/
 COMMENT=	X11/TK based mail reader front end to MH
 
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	nmh>=1.0:../../mail/nmh
 DEPENDS+=	mm>=2.7:../../mail/metamail
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/25 04:18:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/05 19:51:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/abacus.html
 COMMENT=	Spread sheet for X Window System
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 BROKEN=		This package has been updated to compile with tcl-8.3.2, but dumps core on startup.
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/25 04:17:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/05/05 19:51:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
 COMMENT=	X11 program for uu/xx/Base64/BinHex de-/encoding
 
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	uulib-0.5.13:../../converters/uulib
 
 USE_X11BASE=	yes
