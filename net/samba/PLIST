@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/02/18 14:02:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/03/28 08:36:47 jlam Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -416,9 +416,5 @@ share/samba/swat/using_samba/toc.html
 @dirrm share/examples/samba
 @dirrm share/doc/samba
 @dirrm lib/samba/vfs
-@dirrm lib/samba/rpc
-@dirrm lib/samba/pdb
-@dirrm lib/samba/idmap
 @dirrm lib/samba/charset
-@dirrm lib/samba/auth
 @dirrm lib/samba
