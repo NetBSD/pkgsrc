@@ -1,0 +1,11 @@
+  This package contains a set of C++ libraries for multimedia streaming,
+using open standard protocols (RTP/RTCP, RTSP, SIP).  These libraries can
+be used to build streaming applications.  The libraries are already being
+used to implement applications such as "liveCaster" and "playRTPMPEG" (for
+streaming MP3 audio using RTP/RTCP).  The libraries can also be used to
+stream, receive, and process MPEG or H.263+ video, and several audio
+codecs.  They can easily be extended to support additional (audio or video)
+codecs, and can also be used to build basic RTSP or SIP clients and
+servers, and have been used to add streaming support to existing media
+player applications, such as "MPlayer".  (For some specific examples of
+how these libraries can be used, see the included test programs.)

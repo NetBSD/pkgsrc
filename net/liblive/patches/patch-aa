@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/04 22:37:34 rh Exp $
+
+--- testProgs/Makefile.tail.orig	Fri Apr  4 16:54:27 2003
++++ testProgs/Makefile.tail
+@@ -1,6 +1,6 @@
+ ##### End of variables to change
+ 
+-ALL = testMP3Streamer$(EXE) testMP3Receiver$(EXE) testRelay$(EXE) testMPEGSplitter$(EXE) testMPEGVideoStreamer$(EXE) testMPEGVideoReceiver$(EXE) testMPEGAudioVideoStreamer$(EXE) vobStreamer$(EXE) openRTSP$(EXE) playSIP$(EXE) sapWatch$(EXE) 
++ALL = testMP3Streamer$(EXE) testMP3Receiver$(EXE) testRelay$(EXE) testMPEGSplitter$(EXE) testMPEGVideoStreamer$(EXE) testMPEGVideoReceiver$(EXE) testMPEGAudioVideoStreamer$(EXE) vobStreamer$(EXE) openRTSP$(EXE) playSIP$(EXE) sapWatch$(EXE) qtParse$(EXE)
+ all:	$(ALL)
+ 
+ misc:	testMCT$(EXE) testGSMStreamer$(EXE)
+@@ -22,6 +22,7 @@ VOB_STREAMER_OBJS	= vobStreamer.$(OBJ)
+ OPEN_RTSP_OBJS    = openRTSP.$(OBJ) playCommon.$(OBJ)
+ PLAY_SIP_OBJS     = playSIP.$(OBJ) playCommon.$(OBJ)
+ SAP_WATCH_OBJS = sapWatch.$(OBJ)
++QT_PARSE_OBJS = qtParse.$(OBJ)
+ TEST_MCT_OBJS     = testMCT.$(OBJ)
+ GSM_STREAMER_OBJS = testGSMStreamer.$(OBJ) testGSMEncoder.$(OBJ)
+ 
+@@ -61,6 +62,8 @@ openRTSP$(EXE):	$(OPEN_RTSP_OBJS) $(LOCA
+ 	$(LINK)$@ $(CONSOLE_LINK_OPTS) $(OPEN_RTSP_OBJS) $(LIBS)
+ playSIP$(EXE):	$(PLAY_SIP_OBJS) $(LOCAL_LIBS)
+ 	$(LINK)$@ $(CONSOLE_LINK_OPTS) $(PLAY_SIP_OBJS) $(LIBS)
++qtParse$(EXE):	$(QT_PARSE_OBJS) $(LOCAL_LIBS)
++	$(LINK)$@ $(CONSOLE_LINK_OPTS) $(QT_PARSE_OBJS) $(LIBS)
+ sapWatch$(EXE):	$(SAP_WATCH_OBJS) $(LOCAL_LIBS)
+ 	$(LINK)$@ $(CONSOLE_LINK_OPTS) $(SAP_WATCH_OBJS) $(LIBS)
+ testMCT$(EXE):	$(TEST_MCT_OBJS) $(LOCAL_LIBS)
