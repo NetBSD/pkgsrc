@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2004/02/21 13:55:01 grant Exp $
+# $NetBSD: Makefile,v 1.110 2004/02/23 00:33:42 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -29,6 +29,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 # the next line is needed if you have the gmp package installed
 LDFLAGS+=		-Lgmp-2.0.2-ssh-2
 GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,7 +44,6 @@ CONFIGURE_ARGS+=	--with-libwrap
 .endif
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "IRIX"
-DEPENDS+=		zlib-[0-9]*:../../devel/zlib
 CONFIGURE_ENV+=		X_CFLAGS="-I${LOCALBASE}/include"
 .endif
 
@@ -203,4 +203,5 @@ post-install:
 BUILD_DEFS+=		USE_IDEA SSH_SUID USE_RSAREF2
 BUILD_DEFS+=		LIBWRAP_FWD M68060 USE_SOCKS
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
