@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2002/07/11 19:40:55 wiz Exp $
+# $NetBSD: Makefile,v 1.256 2002/07/17 12:32:53 skrll Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -50,6 +50,7 @@ SUBDIR+=	kdebase
 SUBDIR+=	kdebase2
 SUBDIR+=	kdebase3
 SUBDIR+=	kdelibdocs2
+SUBDIR+=	kdelibdocs3
 SUBDIR+=	kdelibs
 SUBDIR+=	kdelibs2
 SUBDIR+=	kdelibs3
