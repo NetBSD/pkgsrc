@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2003/06/10 17:58:34 jschauma Exp $
+$NetBSD: patch-aa,v 1.6 2004/03/26 11:02:14 jlam Exp $
 
---- Makefile.orig	Mon Aug 21 10:59:52 2000
-+++ Makefile	Tue Jun 10 10:29:53 2003
-@@ -44,7 +44,7 @@
+--- Makefile.orig	Mon Aug 21 13:59:52 2000
++++ Makefile
+@@ -44,7 +44,7 @@ what:
  #REAL_DAEMON_DIR=/usr/etc
  #
  # SysV.4 Solaris 2.x OSF AIX
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2003/06/10 17:58:34 jschauma Exp $
  #
  # BSD 4.4
  #REAL_DAEMON_DIR=/usr/libexec
-@@ -144,7 +144,7 @@
+@@ -144,7 +144,7 @@ freebsd:
  linux:
  	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
  	LIBS= RANLIB=ranlib ARFLAGS=rv AUX_OBJ=setenv.o \
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.5 2003/06/10 17:58:34 jschauma Exp $
  
  # This is good for many SYSV+BSD hybrids with NIS, probably also for HP-UX 7.x.
  hpux hpux8 hpux9 hpux10:
-@@ -185,6 +185,7 @@
+@@ -185,6 +185,7 @@ irix5:
  
  # IRIX 6.2 (tucker@math.unc.edu). Must find a better value than 200000.
  irix6:
@@ -28,7 +28,16 @@ $NetBSD: patch-aa,v 1.5 2003/06/10 17:58:34 jschauma Exp $
  	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
  	LIBS= RANLIB=echo ARFLAGS=rv VSYSLOG= \
  	NETGROUP=-DNETGROUP EXTRA_CFLAGS="-DBSD=200000" TLI= all
-@@ -669,7 +670,7 @@
+@@ -602,7 +603,7 @@ ACCESS	= -DHOSTS_ACCESS
+ # look for access control information. Watch out for the quotes and
+ # backslashes when you make changes.
+ 
+-TABLES	= -DHOSTS_DENY=\"/etc/hosts.deny\" -DHOSTS_ALLOW=\"/etc/hosts.allow\"
++TABLES	= -DHOSTS_DENY=\"${PKG_SYSCONFDIR}/hosts.deny\" -DHOSTS_ALLOW=\"${PKG_SYSCONFDIR}/hosts.allow\"
+ 
+ ####################################################
+ # Optional: dealing with host name/address conflicts
+@@ -669,7 +670,7 @@ HOSTNAME= -DALWAYS_HOSTNAME
  # Protection against weird shells or weird make programs.
  
  SHELL	= /bin/sh
@@ -37,7 +46,7 @@ $NetBSD: patch-aa,v 1.5 2003/06/10 17:58:34 jschauma Exp $
  
  CFLAGS	= -O -DFACILITY=$(FACILITY) $(ACCESS) $(PARANOID) $(NETGROUP) \
  	$(BUGS) $(SYSTYPE) $(AUTH) $(UMASK) \
-@@ -696,7 +697,7 @@
+@@ -696,7 +697,7 @@ KIT	= README miscd.c tcpd.c fromhost.c h
  	refuse.c tcpdchk.8 setenv.c inetcf.c inetcf.h scaffold.c \
  	scaffold.h tcpdmatch.8 README.NIS
  
@@ -46,7 +55,7 @@ $NetBSD: patch-aa,v 1.5 2003/06/10 17:58:34 jschauma Exp $
  
  all other: config-check tcpd tcpdmatch try-from safe_finger tcpdchk
  
-@@ -713,31 +714,29 @@
+@@ -713,31 +714,29 @@ config-check:
  cflags: config-check
  
  $(LIB):	$(LIB_OBJ)
