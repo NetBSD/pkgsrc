@@ -1,17 +1,8 @@
-$NetBSD: patch-ac,v 1.15 2003/10/01 20:48:31 abs Exp $
+$NetBSD: patch-ac,v 1.16 2003/11/27 17:38:29 abs Exp $
 
---- abcde.orig	Sun May 18 20:01:13 2003
+--- abcde.orig	2003-11-05 16:08:37.000000000 +0000
 +++ abcde
-@@ -337,7 +337,7 @@ do_batch_encode ()
- 			do
- 				TRACKFILES="$TRACKFILES track$UTRACKNUM.wav"
- 			done
--			nice $ENCNICE $ENCODER $ENCODEROPTS --nogap $TRACKFILES
-+			nice $ENCNICE $MP3ENCODER $MP3ENCODEROPTS --nogap $TRACKFILES
- 			RETURN=$?
- 			if [ "$RETURN" != "0" ]; then
- 				echo "batch-encode: $ENCODER returned code $RETURN" >> errors
-@@ -928,7 +928,12 @@ do_cddbedit ()
+@@ -963,7 +963,12 @@ do_cddbedit ()
  		echo "abcde: internal error: cddb-choice not recorded." >&2
  		exit 1
  	fi
@@ -24,7 +15,7 @@ $NetBSD: patch-ac,v 1.15 2003/10/01 20:48:31 abs Exp $
  
  	if [ "$INTERACTIVE" = "y" ]; then
  		echo -n "Edit selected CDDB data? [y/n] (n): " >&2
-@@ -1233,8 +1238,8 @@ if [ -z "$WAVOUTPUTDIR" ]; then
+@@ -1281,8 +1286,8 @@ if [ -z "$WAVOUTPUTDIR" ]; then
  fi
  
  # Load system defaults
@@ -35,7 +26,7 @@ $NetBSD: patch-ac,v 1.15 2003/10/01 20:48:31 abs Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -1260,8 +1265,8 @@ else
+@@ -1308,8 +1313,8 @@ else
  	elif [ -e /dev/acd0c ]; then
  		CDROM=/dev/acd0c
  	else
@@ -46,7 +37,7 @@ $NetBSD: patch-ac,v 1.15 2003/10/01 20:48:31 abs Exp $
  	fi
  fi
  
-@@ -1308,7 +1313,7 @@ done
+@@ -1356,7 +1361,7 @@ done
  case "$CDROMREADERSYNTAX" in
  	cdparanoia|debug)
  		CDROMREADER="$CDPARANOIA"
@@ -55,7 +46,7 @@ $NetBSD: patch-ac,v 1.15 2003/10/01 20:48:31 abs Exp $
  		;;
  	cdda2wav)
  		CDROMREADER="$CDDA2WAV"
-@@ -1427,7 +1432,8 @@ for X in $CDROMREADER $CDDISCID ${NEEDTA
+@@ -1485,7 +1490,8 @@ for X in $CDROMREADER $CDDISCID ${NEEDTA
  do
  	# Cut off the command-line options we just added in
  	X=$(echo $X | cut -d' ' -f2)

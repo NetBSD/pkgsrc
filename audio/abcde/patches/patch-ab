@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2002/09/20 00:33:12 hubertf Exp $
+$NetBSD: patch-ab,v 1.6 2003/11/27 17:38:29 abs Exp $
 
---- abcde.conf.orig	Mon Jan 21 03:35:31 2002
+--- abcde.conf.orig	2003-11-05 16:07:09.000000000 +0000
 +++ abcde.conf
-@@ -96,7 +96,7 @@
+@@ -131,7 +131,7 @@
  #NOCDDBQUERY=n
  
  # CD device you want to read from
