@@ -1,4 +1,4 @@
-$NetBSD: buildlink2.txt,v 1.6 2002/08/29 17:08:49 jlam Exp $
+$NetBSD: buildlink2.txt,v 1.7 2002/12/25 05:16:12 schmonz Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tries to do its work up-front before the configure
@@ -15,8 +15,16 @@ munge them into references into ${BUILDLINK_DIR}.
 
 To-do list:
 
-    (*) regression test targets to make sure _BLNK_TRANSFORM_SED is doing
-	what it's supposed to do
+    (*) Write regression test targets to make sure _BLNK_TRANSFORM_SED
+	is doing what it's supposed to do.
+
+    (*) Since buildlink2 is a layer of abstraction atop the toolchain,
+	it's a logical place to deal with the vagaries of unusual
+	toolchains. For example, on Darwin we could reliably pass
+	the "-no-cpp-precomp" switch to every compiler invocation
+	by emitting it from the compiler wrapper. Likewise, the
+	use of _USE_RPATH in bsd.pkg.mk might be better handled in
+	the linker wrapper.
 
 Here are some FAQs and answers regarding buildlink2:
 
