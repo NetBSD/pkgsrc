@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/06/29 17:19:07 wiz Exp $
+$NetBSD: distinfo,v 1.5 2001/06/30 09:33:21 wiz Exp $
 
-SHA1 (procmail-3.20.tar.gz) = 4776bf0b1bb816f3fe07d956dbef0432c6c13095
-Size (procmail-3.20.tar.gz) = 225060 bytes
+SHA1 (procmail-3.21.tar.gz) = 537f42ef25e1d878eb6afd7b268e0e219bd6d51e
+Size (procmail-3.21.tar.gz) = 225202 bytes
 SHA1 (patch-aa) = 29d0b8bc73313fe655c97f7d5adafab5b9104309
 SHA1 (patch-ab) = 6655435092feacfc1b0a8ab6908ea7856532ce09
 SHA1 (patch-ac) = fe2350e704546c2262d546bb615175dd0591ba8b
