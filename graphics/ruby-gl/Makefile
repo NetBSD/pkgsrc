@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/03 15:35:40 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/15 12:06:42 rh Exp $
 #
 
 DISTNAME=	rbogl
@@ -11,9 +11,9 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www2.giganet.net/~yoshi/
 
 DEPENDS+=	ruby-1.4.*:../../lang/ruby
-DEPENDS+=	Mesa-*:../../graphics/Mesa
 
 USE_X11=	yes
+USE_MESA=	yes
 WRKSRC=		${WRKDIR}/ruby-gl
 RUBY_VERSION=	1.4
 PLIST_SUBST=	RUBY_VERSION=${RUBY_VERSION}

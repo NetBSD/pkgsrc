@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/14 14:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/10/15 12:06:32 rh Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -14,13 +14,13 @@ MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.0/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.xmms.org/
 
-DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=	libmikmod>=3.1.7:../libmikmod
 DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
 
 USE_LIBTOOL=	yes
 USE_X11=	yes
+USE_MESA=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --without-gnome
 CPPFLAGS=	-I${LOCALBASE}/include
