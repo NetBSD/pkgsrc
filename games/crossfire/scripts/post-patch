@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: post-patch,v 1.2 1998/08/07 10:40:40 agc Exp $
+# $NetBSD: post-patch,v 1.3 1999/03/07 16:08:26 hubertf Exp $
 #
 #this script changes all the /usr/local/bin/perl stuff to what it should be.
 
 pl=`which perl | sed 's/\//\\\\\\//g'`
-find work -name \*.pl | (
+find ${WRKDIR} -name \*.pl | (
 	while read a; do
 	   cp $a tmp
 	   sed "s/#! *\/usr\/local\/bin\/perl/#!$pl/" tmp > $a
