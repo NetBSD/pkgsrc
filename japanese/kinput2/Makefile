@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/08 09:02:55 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 2000/02/05 19:41:56 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/06/06 13:19:49 taoka Exp $
 
 DISTNAME=	kinput2-v3
@@ -28,7 +28,7 @@ KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include \
 
 #.if defined(USE_WNN6) && ${USE_WNN6} == YES
 #DEPENDS+=
-#KINPUT2_DEF+=	-DUseWnn -DUseWnn6 -Dport_WNNINCDIR=$(LOCALBASE)/include/wnn \
+#KINPUT2_DEF+=	-DUseWnn -DUseWnn6 -Dport_WNNINCDIR=${LOCALBASE}/include/wnn \
 #		-Dport_WNNLIB="${LDFLAGS} -lwnn6 -lcrypt"
 #.elif (!defined(USE_WNN4) || ${USE_WNN4} == YES)
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
