@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/26 02:27:41 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/12 02:41:45 snj Exp $
 #
 
 DISTNAME=		blender-2.32
@@ -15,7 +15,7 @@ COMMENT=		Fully integrated 3D graphics creation suite
 USE_X11=		YES
 HAS_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 LDFLAGS+=		-lcrypto
@@ -35,21 +35,21 @@ DEPENDS+=		blender-doc:../../graphics/blender-doc
 
 .if defined(BLENDER_USE_OGG)
 CONFIGURE_ARGS+=	--with-ogg=${PREFIX}
-.include "../../audio/libogg/buildlink2.mk"
+.include "../../audio/libogg/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ogg --disable-oggtest
 .endif
 
 .if defined(BLENDER_USE_VORBIS)
 CONFIGURE_ARGS+=	--with-vorbis=${PREFIX}
-.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-vorbis --disable-vorbistest
 .endif
 
 .if defined(BLENDER_USE_OPENAL)
 CONFIGURE_ARGS+=	--enable-openal
-.include "../../audio/openal/buildlink2.mk"
+.include "../../audio/openal/buildlink3.mk"
 .endif
 
 .if defined(BLENDER_USE_EXPPYTHON)
@@ -58,14 +58,14 @@ CONFIGURE_ARGS+=	--enable-exppython
 CONFIGURE_ARGS+=	--disable-exppython
 .endif
 
-.include "../../audio/openal/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../devel/libtool/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../audio/openal/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../lang/python/pyversion.mk"
 
