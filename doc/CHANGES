@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8557 2005/01/01 10:39:35 wiz Exp $
+$NetBSD: CHANGES,v 1.8558 2005/01/01 16:39:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -18,3 +18,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated grap to 1.30nb1 [minskim 2005-01-01]
 	Updated poptop to 1.2.1 [cube 2005-01-01]
 	Updated automake to 1.9.4 [wiz 2005-01-01]
+	Updated gnumeric14 to 1.4.1nb1 [minskim 2005-01-01]
