@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.netbsd-alpha,v 1.1 2001/10/31 23:31:15 zuntum Exp $
+@comment $NetBSD: PLIST.NetBSD-alpha,v 1.1 2005/02/21 21:26:15 veego Exp $
 Acrobat3/Reader/${PLATFORM}/lib/libagm.so
 Acrobat3/Reader/${PLATFORM}/lib/libagm.so.2.0
 Acrobat3/Reader/${PLATFORM}/lib/libpfs.so
