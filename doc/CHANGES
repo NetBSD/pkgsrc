@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4489 2004/01/17 16:01:53 jmmv Exp $
+$NetBSD: CHANGES,v 1.4490 2004/01/17 17:14:48 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -313,3 +313,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libcdio-0.65 [recht 2004-01-17]
 	Added libcddb-0.9.4 [recht 2004-01-17]
 	Updated xmlcatmgr to 2.0alpha2 [jmmv 2004-01-17]
+	Updated xmame to 0.78.1 [kristerw 2004-01-17]
+	Updated xmess to 0.78.1 [kristerw 2004-01-17]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1306 2004/01/16 09:03:03 xtraeme Exp $
+$NetBSD: TODO,v 1.1307 2004/01/17 17:14:48 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -339,9 +339,7 @@ Suggested package updates
 	o xine-lib-1rc3a
 	o xine-ui-0.9.23
 	o xisp-2.7 [pkg/19566]
-	o xmame-0.78.1
 	o xmcd-3.2.1
-	o xmess-0.78.1
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
 	o xnc-5.0.2
