@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10.2.2 2002/06/21 23:05:55 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.3 2002/07/01 06:26:45 jlam Exp $
 #
 
 PKGNAME=		qt2-designer-kde-${QTVERSION}
@@ -27,6 +27,6 @@ do-install:
 	${PKGLIBTOOL} ${INSTALL_PROGRAM} \
 		${WRKSRC}/tools/designer/designer/designer ${QTPREFIX}/bin
 
-.include "../../x11/kdelibs2/buildlink.mk"
+.include "../../x11/kdelibs2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
