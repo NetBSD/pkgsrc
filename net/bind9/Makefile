@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/28 01:05:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/29 01:28:44 hubertf Exp $
 #
 
 DISTNAME=	bind-9.0.0b1
@@ -34,7 +34,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/misc/* ${PREFIX}/share/doc/bind9/misc
 	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${PREFIX}/share/doc/bind9/rfc
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/rndc/rndc ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/lwresd/lwresd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/lwresd/lwresd ${PREFIX}/sbin
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(cd ${PREFIX}; \
 	 ${FIND} share/doc/bind9 \( -type f -or -type l \) | \
