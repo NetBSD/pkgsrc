@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/09 18:05:10 tsarna Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/28 13:15:03 simonb Exp $
 
---- makefile.orig	Mon Nov  2 11:31:56 1998
-+++ makefile	Mon Nov  2 11:41:40 1998
-@@ -251,14 +251,14 @@
+--- makefile.orig	Fri Feb  5 10:13:30 1999
++++ makefile	Tue Sep 28 17:36:53 1999
+@@ -248,14 +248,14 @@
  DBFIX   = 0
  
  USESTAT = 1
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/09 18:05:10 tsarna Exp $
  
  LIBFONT = font
  LIBMAPS = maps
-@@ -274,8 +274,8 @@
+@@ -271,8 +271,8 @@
  LOC_FR	= fr
  LOC_DE	= de
  
@@ -33,7 +33,16 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/09 18:05:10 tsarna Exp $
  ZLIBPATH	=
  
  CC	= gcc
-@@ -312,6 +312,9 @@
+@@ -299,7 +299,7 @@
+ 	  -DCHAR_OUT=$(CHAROUT)					\
+ 	  -DLOCALE_ON=$(USELOC)					\
+ 	  -DASSERT_ON=1 $(COPTS)				\
+-	  -DDEBUG_ON=1  -g					\
++	  -DDEBUG_ON=1  -g -O2					\
+ 	  -DPDF_COMPRESSION=$(PDF_COMPRESSION)			\
+ 	  $(ZLIBPATH)
+ 
+@@ -309,6 +309,9 @@
  	  z25.o z26.o z27.o z28.o z29.o z30.o z31.o z32.o	\
  	  z33.o z34.o z35.o z36.o z37.o z38.o z39.o z40.o	\
  	  z41.o z42.o z43.o z44.o z45.o z46.o z47.o z48.o
