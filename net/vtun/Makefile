@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/06/06 07:21:46 kleink Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/16 12:54:25 tron Exp $
 #
 
 DISTNAME=	vtun-2.3
@@ -12,8 +12,8 @@ DEPENDS+=	liblzo-1.*:../../archivers/liblzo
 
 GNU_CONFIGURE=	YES
 USE_SSL=	YES
-CONFIGURE_ARGS+=--with-crypto-headers=${SSLBASE}/include/openssl \
-		--with-crypto-lib=${SSLBASE}/lib \
+CONFIGURE_ARGS+=--with-ssl-headers=${SSLBASE}/include/openssl \
+		--with-ssl-lib=${SSLBASE}/lib \
 		--with-lzo-headers=${LOCALBASE}/include \
 		--with-lzo-lib=${LOCALBASE}/lib
 PLIST_SUBST+=	PREFIX=${PREFIX}
