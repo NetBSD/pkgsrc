@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.4 2003/09/20 00:46:22 chris Exp $
+# $NetBSD: automake.mk,v 1.5 2003/12/12 07:12:38 wiz Exp $
 #
 # makefile fragment for packages that use automake
 # AUTOMAKE_REQD can be set to the minimum version required.
@@ -7,19 +7,19 @@
 #	AUTOMAKE:	automake binary to use
 #	ACLOCAL:	aclocal binary to use
 # autoconf required version will default to 2.13 if automake 1.4* is used,
-# and to 2.50 otherwise.
+# and to 2.58 otherwise.
 #
 
 .if !defined(AUTOMAKE_MK)
 AUTOMAKE_MK=	# defined
 
 # minimal required version
-AUTOMAKE_REQD?= 1.7
+AUTOMAKE_REQD?= 1.8
 
 .if ${AUTOMAKE_REQD:M1.4*} == ""
 BUILD_DEPENDS+=		automake>=${AUTOMAKE_REQD}:../../devel/automake
-_AUTOMAKE_API_VERSION=	1.7
-AUTOCONF_REQD?=		2.50
+_AUTOMAKE_API_VERSION=	1.8
+AUTOCONF_REQD?=		2.58
 .else
 BUILD_DEPENDS+=		automake14>=${AUTOMAKE_REQD}:../../devel/automake14
 _AUTOMAKE_API_VERSION=	1.4
