@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2760 2003/07/12 15:26:36 wiz Exp $
+$NetBSD: CHANGES,v 1.2761 2003/07/12 15:31:07 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2782,3 +2782,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added pure-ftpd-1.0.15 [salo 2003-07-12]
 	Updated privoxy to 3.0.2nb2 [salo 2003-07-12]
 	Updated abcde to 2.1.4nb3 [wiz 2003-07-12]
+	Updated bogofilter to 0.13.6.2 [itojun 2003-07-12]
