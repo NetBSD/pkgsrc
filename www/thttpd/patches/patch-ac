@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1 1999/11/21 23:03:38 tron Exp $
+
+--- cgi-src/Makefile.in.orig	Wed Sep 15 17:57:19 1999
++++ cgi-src/Makefile.in	Sun Nov 21 23:57:31 1999
+@@ -66,15 +66,15 @@
+ 
+ install:	all
+ 	rm -f $(CGIBINDIR)/nph-redirect
+-	cp nph-redirect $(CGIBINDIR)/nph-redirect
++	$(BSD_INSTALL_PROGRAM) nph-redirect $(CGIBINDIR)/nph-redirect
+ 	rm -f $(MANDIR)/man8/nph-redirect.8
+-	cp nph-redirect.8 $(MANDIR)/man8/nph-redirect.8
++	$(BSD_INSTALL_MAN) nph-redirect.8 $(MANDIR)/man8/nph-redirect.8
+ 	rm -f $(CGIBINDIR)/ssi
+-	cp ssi $(CGIBINDIR)/ssi
++	$(BSD_INSTALL_PROGRAM) ssi $(CGIBINDIR)/ssi
+ 	rm -f $(MANDIR)/man8/ssi.8
+-	cp ssi.8 $(MANDIR)/man8/ssi.8
++	$(BSD_INSTALL_MAN) ssi.8 $(MANDIR)/man8/ssi.8
+ 	rm -f $(CGIBINDIR)/phf
+-	cp phf $(CGIBINDIR)/phf
++	$(BSD_INSTALL_PROGRAM) phf $(CGIBINDIR)/phf
+ 
+ clean:
+ 	rm -f $(CLEANFILES)
