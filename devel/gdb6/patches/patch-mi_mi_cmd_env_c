@@ -1,0 +1,22 @@
+$NetBSD: patch-mi_mi_cmd_env_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/mi/mi-cmd-env.c.orig	2004-01-18 18:20:12.000000000 -0700
++++ gdb/mi/mi-cmd-env.c
+@@ -126,7 +126,7 @@ mi_cmd_env_path (char *command, char **a
+   static struct mi_opt opts[] =
+   {
+     {"r", RESET_OPT, 0},
+-    0
++    {0}
+   };
+ 
+   dont_repeat ();
+@@ -198,7 +198,7 @@ mi_cmd_env_dir (char *command, char **ar
+   static struct mi_opt opts[] =
+   {
+     {"r", RESET_OPT, 0},
+-    0
++    {0}
+   };
+ 
+   dont_repeat ();

@@ -1,0 +1,12 @@
+$NetBSD: patch-i387_tdep_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/i387-tdep.c.orig	2004-02-28 13:43:51.000000000 -0700
++++ gdb/i387-tdep.c
+@@ -206,7 +206,6 @@ i387_print_float_info (struct gdbarch *g
+ 		       struct frame_info *frame, const char *args)
+ {
+   struct gdbarch_tdep *tdep = gdbarch_tdep (get_frame_arch (frame));
+-  char buf[4];
+   ULONGEST fctrl;
+   ULONGEST fstat;
+   ULONGEST ftag;

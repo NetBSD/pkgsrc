@@ -1,0 +1,13 @@
+$NetBSD: patch-cli_cli_decode_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- ./gdb/cli/cli-decode.c.orig	2004-02-10 12:08:15.000000000 -0700
++++ ./gdb/cli/cli-decode.c
+@@ -1207,8 +1207,6 @@ deprecated_cmd_warning (char **text)
+   struct cmd_list_element *alias = NULL;
+   struct cmd_list_element *prefix_cmd = NULL;
+   struct cmd_list_element *cmd = NULL;
+-  struct cmd_list_element *c;
+-  char *type;
+  
+   if (!lookup_cmd_composition (*text, &alias, &prefix_cmd, &cmd))
+     /* return if text doesn't evaluate to a command */

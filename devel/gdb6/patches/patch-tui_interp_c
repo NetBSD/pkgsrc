@@ -1,0 +1,12 @@
+$NetBSD: patch-tui_interp_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/tui/tui-interp.c.orig	2004-02-06 21:40:36.000000000 -0700
++++ gdb/tui/tui-interp.c
+@@ -194,7 +194,6 @@ _initialize_tui_interp (void)
+     tui_display_prompt_p,
+     tui_command_loop,
+   };
+-  struct interp *tui_interp;
+ 
+   /* Create a default uiout builder for the TUI. */
+   tui_out = tui_out_new (gdb_stdout);
