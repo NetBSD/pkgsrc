@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/08 19:05:33 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/08 19:11:18 adrianp Exp $
 
 DISTNAME=	mantis-0.19.1
 CATEGORIES=	devel www
@@ -52,7 +52,7 @@ SUBST_SED.conf=		-e "s|localhost|${M_DB_HOST}|g"	\
 			-e "s|root|${M_DB_USER}|g" \
 			-e "s|\"\"|\"${M_DB_PASS}\"|g" \
 			-e "s|bugtracker|${M_DB_DATABASE}|g" \
-			-e "s|example.com|${DOMAIN}|g" \
+			-e "s|example.com|${M_DOMAIN}|g" \
 			-e "s|@MANTIS_HOME@|${MANTIS_HOME}|g"
 SUBST_MESSAGE.conf=	"Fixing configuration files."
 
