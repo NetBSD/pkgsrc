@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/03/30 22:06:02 itojun Exp $
+$NetBSD: patch-af,v 1.2 2001/04/08 10:55:22 itojun Exp $
 
---- Makefile.in.orig	Sun Mar 11 23:54:12 2001
-+++ Makefile.in	Fri Mar 30 23:18:34 2001
-@@ -24,6 +24,8 @@
+--- Makefile.in.orig	Wed Apr  4 02:03:35 2001
++++ Makefile.in	Sun Apr  8 12:05:30 2001
+@@ -25,6 +25,8 @@
  include $(top_srcdir)/build/rules.mk
  include $(top_srcdir)/build/program.mk
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/03/30 22:06:02 itojun Exp $
  install-conf:
  	@echo Installing configuration files
  	@test -d $(sysconfdir) || $(MKINSTALLDIRS) $(sysconfdir)
-@@ -32,7 +34,7 @@
+@@ -33,7 +35,7 @@
  		$(INSTALL_DATA) $$i $(sysconfdir); \
  	done; \
  	for i in *-std*; do \
@@ -20,7 +20,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/03/30 22:06:02 itojun Exp $
  		    -e 's#@@Port@@#$(PORT)#g' \
  			< $$i > $(sysconfdir)/$$i; \
  		chmod 0644 $(sysconfdir)/$$i; \
-@@ -41,7 +43,7 @@
+@@ -42,7 +44,7 @@
  			file=`echo $$file|sed s/.*.conf/$(PROGRAM_NAME).conf/`; \
  		fi; \
  		if test "$$file" != "$$i" && test ! -f $(sysconfdir)/$$file; then \
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/03/30 22:06:02 itojun Exp $
  		fi; \
  	done
  
-@@ -78,10 +80,10 @@
+@@ -79,10 +81,10 @@
  	@echo Installing Support Binaries
  	@test -d $(bindir) || $(MKINSTALLDIRS) $(bindir)
  	@cp -p $(srcdir)/support/httpd.exp $(bindir)
