@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.739 2002/12/09 19:31:49 wiz Exp $
+$NetBSD: CHANGES,v 1.740 2002/12/09 19:46:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3881,3 +3881,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-Text-Substitute to 0.15 [abs 2002-12-09]
 	Updated p5-Text-CSV-Hash to 0.16 [abs 2002-12-09]
 	Added grhino-0.7.0 [wiz 2002-12-09]
+	Updated automake to 1.7.2 [wiz 2002-12-09]
