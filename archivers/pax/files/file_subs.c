@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.7 2004/06/26 13:30:59 grant Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.8 2004/07/03 02:50:21 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.7 2004/06/26 13:30:59 grant Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.8 2004/07/03 02:50:21 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -433,7 +433,7 @@ node_creat(ARCHD *arcn)
 	file_mode = arcn->sb.st_mode & FILEBITS(arcn->type == PAX_DIR);
 
 	for (;;) {
-		switch(arcn->type) {
+		switch (arcn->type) {
 		case PAX_DIR:
 			/*
 			 * If -h (or -L) was given in tar-mode, follow the
@@ -447,7 +447,8 @@ node_creat(ARCHD *arcn)
 					    sizeof target - 1);
 					if (len == -1) {
 						syswarn(0, errno,
-						   "cannot follow symlink %s in chain for %s",
+						   "cannot follow symlink %s "
+						   "in chain for %s",
 						    nm, arcn->name);
 						res = -1;
 						goto badlink;
@@ -480,7 +481,7 @@ badlink:
 			tty_warn(0,
 			    "%s skipped. Sockets cannot be copied or extracted",
 			    nm);
-			return(-1);
+			return (-1);
 		case PAX_SLK:
 			res = symlink(arcn->ln_name, nm);
 			break;
@@ -494,7 +495,7 @@ badlink:
 			 */
 			tty_warn(0, "%s has an unknown file type, skipping",
 			    nm);
-			return(-1);
+			return (-1);
 		}
 
 		/*
@@ -509,15 +510,20 @@ badlink:
 		 * we failed to make the node
 		 */
 		oerrno = errno;
-		if ((ign = unlnk_exist(nm, arcn->type)) < 0)
-			return(-1);
-
-		if (++pass <= 1)
+		switch (pass++) {
+		case 0:
+			if ((ign = unlnk_exist(nm, arcn->type)) < 0)
+				return (-1);
 			continue;
 
-		if (nodirs || chk_path(nm,arcn->sb.st_uid,arcn->sb.st_gid) < 0) {
-			syswarn(1, oerrno, "Cannot create %s", nm);
-			return(-1);
+		case 1:
+			if (nodirs ||
+			    chk_path(nm, arcn->sb.st_uid,
+			    arcn->sb.st_gid) < 0) {
+				syswarn(1, oerrno, "Cannot create %s", nm);
+				return (-1);
+			}
+			continue;
 		}
 
 		/*
