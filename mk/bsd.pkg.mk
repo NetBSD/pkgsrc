@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.274 1999/05/24 21:25:00 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.275 1999/05/24 23:04:52 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -124,12 +124,12 @@ MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
 # there is no way to refer to them cleanly from within the macro AFAIK.
-EXTRACT_COOKIE?=	${WRKDIR}/.extract_done
-CONFIGURE_COOKIE?=	${WRKDIR}/.configure_done
-INSTALL_COOKIE?=	${WRKDIR}/.install_done
-BUILD_COOKIE?=		${WRKDIR}/.build_done
-PATCH_COOKIE?=		${WRKDIR}/.patch_done
-PACKAGE_COOKIE?=	${WRKDIR}/.package_done
+EXTRACT_COOKIE=		${WRKDIR}/.extract_done
+CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
+INSTALL_COOKIE=		${WRKDIR}/.install_done
+BUILD_COOKIE=		${WRKDIR}/.build_done
+PATCH_COOKIE=		${WRKDIR}/.patch_done
+PACKAGE_COOKIE=		${WRKDIR}/.package_done
 
 # Miscellaneous overridable commands:
 XMKMF?=			xmkmf -a
@@ -702,30 +702,14 @@ IGNORE=	"Unacceptable license: ${LICENSE} - set ACCEPTABLE_LICENSES in /etc/mk.c
 .endif
 
 .if defined(IGNORE)
-.if defined(IGNORE_SILENT)
-IGNORECMD=	${DO_NADA}
-.else
-IGNORECMD=	${ECHO_MSG} "===>  ${PKGNAME} ${IGNORE}."
+.if defined(IGNORE_FAIL)
+IGNORECMD?=	${ECHO} "===>  ${PKGNAME} ${IGNORE}." && ${FALSE}
+.elif defined(IGNORE_SILENT)
+IGNORECMD?=	${DO_NADA}
 .endif
-fetch:
-	@${IGNORECMD}
-checksum:
-	@${IGNORECMD}
-extract:
-	@${IGNORECMD}
-patch:
-	@${IGNORECMD}
-configure:
-	@${IGNORECMD}
-all:
-	@${IGNORECMD}
-build:
-	@${IGNORECMD}
-install:
-	@${IGNORECMD}
-deinstall:
-	@${IGNORECMD}
-package:
+IGNORECMD?=	${ECHO_MSG} "===>  ${PKGNAME} ${IGNORE}."
+fetch checksum extract patch configure all build install deinstall package \
+depends check-depends:
 	@${IGNORECMD}
 .endif # IGNORE
 .endif # !NO_IGNORE
@@ -1536,7 +1520,7 @@ fetch-list:
 fetch-list-recursive:
 	@${MAKE} fetch-list-one-pkg
 .if ${RECURSIVE_FETCH_LIST} != "NO"
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
+	@for dir in `${ECHO} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
 		(cd $$dir && ${MAKE} fetch-list-recursive; );		\
 	done
 .endif # ${RECURSIVE_FETCH_LIST} != "NO"
@@ -1728,10 +1712,6 @@ depends: misc-depends
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
 
-.if make(fetch-depends)
-DEPENDS_TMP+=	${FETCH_DEPENDS}
-.endif
-
 .if make(build-depends)
 DEPENDS_TMP+=	${BUILD_DEPENDS}
 .endif
@@ -1740,7 +1720,7 @@ DEPENDS_TMP+=	${BUILD_DEPENDS}
 DEPENDS_TMP+=	${RUN_DEPENDS}
 .endif
 
-_DEPENDS_USE:	.USE
+_DEPENDS_USE:
 .if defined(DEPENDS_TMP)
 .if !defined(NO_DEPENDS)
 .for i in ${DEPENDS_TMP}
@@ -1774,7 +1754,7 @@ _DEPENDS_USE:	.USE
 		if [ ! -d "$$dir" ]; then				\
 			${ECHO_MSG} ">> No directory for $$prog.  Skipping.."; \
 		else							\
-			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target);	\
+			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) &&	\
 			${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
@@ -1804,14 +1784,10 @@ misc-depends: uptodate-pkgtools
 		if [ ! -d $$dir ]; then					\
 			${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
 		else							\
-			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target);	\
-			found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`"; \
-			if [ X"$$found" = X"" ]; then		\
-				${ECHO_MSG} "===> $$package did not install properly"; \
-				exit 1 ; 				\
-			fi;						\
-		fi							\
-	fi							
+			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) &&	\
+			${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
+		fi;							\
+	fi
 .endfor
 .endif	# !NO_DEPENDS
 .else
@@ -1820,11 +1796,21 @@ misc-depends: uptodate-pkgtools
 
 .endif
 
+real-fetch: check-depends
+.if !target(check-depends)
+check-depends:
+.if (defined(DEPENDS) || defined(BUILD_DEPENDS) || defined(RUN_DEPENDS)) && \
+    !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS)
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "===>  Validating dependencies for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 depends || \
+		(${ECHO_MSG} "===>  ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
+.endif
+.endif
+
 .if !target(clean-depends)
 clean-depends:
-.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) \
-	|| defined(DEPENDS) || defined(RUN_DEPENDS)
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
+.if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
+	@for dir in `${ECHO} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ] ; then					\
 			(cd $$dir && ${MAKE} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
 		fi							\
@@ -1834,7 +1820,7 @@ clean-depends:
 
 .if !target(depends-list)
 depends-list:
-.for dir in ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS}
+.for dir in ${BUILD_DEPENDS} ${DEPENDS}
 	@cd ${dir:C/^[^:]*://:C/:.*//} && ${MAKE} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
 .endfor
 .endif
@@ -1905,8 +1891,8 @@ describe:
 		${ECHO} -n "|/dev/null";				\
 	fi;								\
 	${ECHO} -n "|${MAINTAINER}|${CATEGORIES}|";			\
-	case "A${FETCH_DEPENDS}B${BUILD_DEPENDS}C${DEPENDS}D" in	\
-		ABCD) ;;						\
+	case "A${BUILD_DEPENDS}B${DEPENDS}C" in	\
+		ABC) ;;							\
 		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} depends-list|sort -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
@@ -2015,7 +2001,7 @@ show-pkgtools-version:
 
 .if !target(print-depends-list)
 print-depends-list:
-.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) || defined(DEPENDS)
+.if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This port requires package(s) "'
 	@${ECHO} -n `${MAKE} depends-list | sort -u`
 	@${ECHO} '" to build.'
