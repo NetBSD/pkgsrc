@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/27 09:06:37 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/11/01 03:38:18 jlam Exp $
 #
 
 DISTNAME=	webalizer-1.30-04-src
@@ -12,18 +12,19 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://www.mrunix.net/webalizer/
 
-DEPENDS=	gd-1.6.3:../../graphics/gd
+DEPENDS+=	gd-1.7.3:../../graphics/gd
 
 WRKSRC=		${WRKDIR}/webalizer-1.30-04
 
+USE_X11=	yes
 GNU_CONFIGURE=  yes
-CONFIGURE_ARGS= --with-gdlib=${PREFIX}/lib \
-		--with-gd=${PREFIX}/include/gd
+CONFIGURE_ARGS=	--with-gd=${LOCALBASE}/include
 
 post-patch:
 	@for f in webalizer.1; do \
-	${SED} 's:@@prefix@@:'${PREFIX}':g' ${WRKSRC}/$$f >${WRKSRC}/$$f.new && \
-		 ${MV} ${WRKSRC}/$$f.new ${WRKSRC}/$$f; \
+		${SED} 's:@@prefix@@:'${PREFIX}':g' ${WRKSRC}/$$f \
+			>${WRKSRC}/$$f.new && \
+		${MV} ${WRKSRC}/$$f.new ${WRKSRC}/$$f; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
