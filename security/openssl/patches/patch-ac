@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.16 2004/03/26 02:22:38 wiz Exp $
+$NetBSD: patch-ac,v 1.17 2004/04/25 20:36:11 tv Exp $
 
---- Configure.orig	Thu Jan 29 00:59:17 2004
+--- Configure.orig	Sun Apr 25 13:07:42 2004
 +++ Configure
 @@ -129,55 +129,6 @@ my %table=(
  "gcc",		"gcc:-O3::(unknown)::BN_LLONG:::",
@@ -89,7 +89,7 @@ $NetBSD: patch-ac,v 1.16 2004/03/26 02:22:38 wiz Exp $
  "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::-pthread -D_REENTRANT -D_THREAD_SAFE -D_THREADSAFE::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
  "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}",
  "bsdi-gcc",     "gcc:-O3 -ffast-math -DL_ENDIAN -DPERL5 -m486::(unknown)::RSA_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_bsdi_asm}",
-@@ -507,6 +441,89 @@ my %table=(
+@@ -507,6 +441,91 @@ my %table=(
  ##### Compaq Non-Stop Kernel (Tandem)
  "tandem-c89","c89:-Ww -D__TANDEM -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D_TANDEM_SOURCE -DB_ENDIAN::(unknown)::THIRTY_TWO_BIT:::",
  
@@ -107,6 +107,8 @@ $NetBSD: patch-ac,v 1.16 2004/03/26 02:22:38 wiz Exp $
 + "NetBSD-sparc64", "gcc:-DTERMIOS -O2 -Wall::(unknown):-Wl,-R\$(INSTALLTOP)/lib:SIXTY_FOUR_BIT_LONG DES_INT DES_RISC1::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 + "NetBSD-vax", "gcc:-DTERMIOS -O2 -Wall -DL_ENDIAN::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 + "NetBSD-x86",	"gcc:-DTERMIOS -O2 -Wall::(unknown):-Wl,-R\$(INSTALLTOP)/lib:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
++
++"Interix3","gcc:-DTERMIOS -O2 -Wall::(unknown):-Wl,-R\$(INSTALLTOP)/lib -ldl:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}::::::::::dlfcn:bsd-gcc-shared::-Wl,--image-base,\$\$((\$\$RANDOM %64/2*1048576+1577058304)):.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +
 +##### Solaris (pkgsrc)
 +
@@ -179,7 +181,7 @@ $NetBSD: patch-ac,v 1.16 2004/03/26 02:22:38 wiz Exp $
  );
  
  my @WinTargets=qw(VC-NT VC-WIN32 VC-WIN16 VC-W31-16 VC-W31-32 VC-MSDOS BC-32
-@@ -680,7 +697,7 @@ PROCESS_ARGS:
+@@ -680,7 +699,7 @@ PROCESS_ARGS:
  			}
  		elsif (/^[-+]/)
  			{
