@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3151 2003/08/30 16:21:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3152 2003/08/30 19:05:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3397,3 +3397,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xchat2 to 2.0.4 [xtraeme 2003-08-30]
 	Added xfe-0.54.2 [xtraeme 2003-08-30]
 	Added raptor-0.9.12 [xtraeme 2003-08-30]
+	Added p5-Cache-Cache-1.02 [he 2003-08-30]
+	Added p5-Class-Container-0.10 [he 2003-08-30]
+	Added p5-Class-Data-Inheritable-0.02 [he 2003-08-30]
+	Added p5-Exception-Class-1.14 [he 2003-08-30]
+	Added p5-Scalar-List-Utils-1.12 [he 2003-08-30]
