@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.pam,v 1.1 2000/12/12 16:04:06 jlam Exp $
+share/examples/cups/cups.pam
