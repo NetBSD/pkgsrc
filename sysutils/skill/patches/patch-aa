@@ -1,0 +1,69 @@
+--- Makefile.orig	Wed Oct 29 14:28:22 1997
++++ Makefile	Sat Aug  1 20:56:09 1998
+@@ -50,22 +50,29 @@
+ SHELL=	/bin/sh
+ 
+ # CONFIGURE: Set location of executable, it's group and mode.
+-BINDIR=	/usr/local/bin
++BINDIR=	${PREFIX}/bin
+ BINGRP=	kmem
+ BINMOD=	2755
+ 
+ # CONFIGURE: Set location of man directory and man page suffix.
+-MANDIR=	/usr/man/manl
+-MANSFX=	l
++MANDIR=	${PREFIX}/man/man1
++MANSFX=	1
+ 
+ # CONFIGURE(Config): Select an OSTYPE for your machine from the list above.
+-OSTYPE=	sys-5r4
++OSTYPE=	bsd-44
+ 
+ # CONFIGURE(Config): Add any OS-specific options here.
+ COPTS=	
+ 
++.ifndef UVM
++UVM=
++.endif
++.if ${UVM} != ""
++COPTS+= -DUVM
++.endif
++
+ # CONFIGURE(Config): Add any special libraries your system needs.
+-LIBS=	
++LIBS=	-lkvm
+ 
+ SRCS=	main.c argparse.c getproc.c
+ OBJS=	main.o argparse.o getproc.o
+@@ -86,20 +93,20 @@
+ 
+ install: skill
+ #(SysV)	filepriv -d ${DESTDIR}/${BINDIR}/skill
+-	rm -f ${DESTDIR}/${BINDIR}/skill ${DESTDIR}/${MANDIR}/skill.${MANSFX}
+-	rm -f ${DESTDIR}/${BINDIR}/snice ${DESTDIR}/${MANDIR}/snice.${MANSFX}
++#	rm -f ${DESTDIR}/${BINDIR}/skill ${DESTDIR}/${MANDIR}/skill.${MANSFX}
++#	rm -f ${DESTDIR}/${BINDIR}/snice ${DESTDIR}/${MANDIR}/snice.${MANSFX}
+ #	install -c -g ${BINGRP} -m ${BINMOD} -s skill ${DESTDIR}/${BINDIR}
+-	cp skill ${DESTDIR}/${BINDIR}/skill
+-	strip ${DESTDIR}/${BINDIR}/skill
+-	chgrp ${BINGRP} ${DESTDIR}/${BINDIR}/skill
+-	chmod ${BINMOD} ${DESTDIR}/${BINDIR}/skill
+-	ln ${DESTDIR}/${BINDIR}/skill ${DESTDIR}/${BINDIR}/snice
++#	cp skill ${DESTDIR}/${BINDIR}/skill
++#	strip ${DESTDIR}/${BINDIR}/skill
++#	chgrp ${BINGRP} ${DESTDIR}/${BINDIR}/skill
++#	chmod ${BINMOD} ${DESTDIR}/${BINDIR}/skill
++#	ln ${DESTDIR}/${BINDIR}/skill ${DESTDIR}/${BINDIR}/snice
+ #(SysV)	filepriv -f dacread ${DESTDIR}/${BINDIR}/skill
+ #	install -c -m 644 skill.1 ${DESTDIR}/${MANDIR}/skill.${MANSFX}
+-	cp skill.1 ${DESTDIR}/${MANDIR}/skill.${MANSFX}
+-	chmod 644 ${DESTDIR}/${MANDIR}/skill.${MANSFX}
+-	ln ${DESTDIR}/${MANDIR}/skill.${MANSFX}\
+-		${DESTDIR}/${MANDIR}/snice.${MANSFX}
++#	cp skill.1 ${DESTDIR}/${MANDIR}/skill.${MANSFX}
++#	chmod 644 ${DESTDIR}/${MANDIR}/skill.${MANSFX}
++#	ln ${DESTDIR}/${MANDIR}/skill.${MANSFX}\
++#		${DESTDIR}/${MANDIR}/snice.${MANSFX}
+ 
+ config Config: FRC
+ 	./Config
