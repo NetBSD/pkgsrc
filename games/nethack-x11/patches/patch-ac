@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2002/03/22 17:26:28 pooka Exp $
+$NetBSD: patch-ac,v 1.1.6.1 2003/03/05 14:10:59 agc Exp $
 
---- include/system.h.orig	Thu Jan  6 21:20:08 2000
-+++ include/system.h	Thu Aug 10 18:16:03 2000
-@@ -77,10 +77,10 @@
+--- include/system.h.orig	2003-02-23 16:43:22.000000000 +0200
++++ include/system.h	2003-03-01 16:34:46.000000000 +0200
+@@ -79,10 +79,10 @@
  # if !defined(__SC__) && !defined(LINUX)
  E  long NDECL(random);
  # endif
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.1 2002/03/22 17:26:28 pooka Exp $
  E int FDECL(srandom, (unsigned int));
  #  endif
  # endif
-@@ -130,7 +130,7 @@
+@@ -132,7 +132,7 @@
  E void FDECL(qsort, (genericptr_t,size_t,size_t,
  		     int(*)(const genericptr,const genericptr)));
  #else
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.1 2002/03/22 17:26:28 pooka Exp $
  E  int qsort();
  # else
  #  if !defined(LATTICE) && !defined(AZTEC_50)
-@@ -413,7 +413,7 @@
+@@ -421,7 +421,7 @@
  # ifdef HPUX
  E unsigned int	FDECL(strlen, (char *));
  #  else
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.1 2002/03/22 17:26:28 pooka Exp $
  E int	FDECL(strlen, (const char *));
  #   endif
  #  endif /* HPUX */
-@@ -513,11 +513,13 @@
+@@ -521,11 +521,13 @@
  #  endif
  # endif
  

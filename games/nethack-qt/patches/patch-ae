@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2002/03/22 17:26:26 pooka Exp $
+$NetBSD: patch-ae,v 1.1.6.1 2003/03/05 14:10:57 agc Exp $
 
---- sys/unix/Makefile.doc.orig	Fri Jan 14 22:49:48 2000
-+++ sys/unix/Makefile.doc	Thu Aug 10 18:17:40 2000
-@@ -34,7 +34,7 @@
+--- sys/unix/Makefile.doc.orig	2003-02-23 16:43:39.000000000 +0200
++++ sys/unix/Makefile.doc	2003-03-01 16:36:19.000000000 +0200
+@@ -38,7 +38,7 @@
  
  
  GAME	= nethack
