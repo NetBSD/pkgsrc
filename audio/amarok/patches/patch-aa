@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/17 09:45:45 seb Exp $
+
+--- amarok/src/vis/libvisual/libvisual.cpp.orig	2004-10-09 12:52:12.000000000 +0000
++++ amarok/src/vis/libvisual/libvisual.cpp
+@@ -267,11 +267,11 @@ namespace SDL
+                 break;
+ 
+             case SDL_MOUSEBUTTONDOWN:
+-                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_DOWN);
++                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_DOWN, 0, 0);
+                 break;
+ 
+             case SDL_MOUSEBUTTONUP:
+-                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_UP);
++                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_UP, 0, 0);
+                 break;
+ 
+             case SDL_QUIT:
