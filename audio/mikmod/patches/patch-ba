@@ -1,3 +1,5 @@
+$NetBSD: patch-ba,v 1.2 1998/08/07 10:35:58 agc Exp $
+
 --- /dev/null	Sat Jul  4 02:20:57 1998
 +++ build-mikmod.netbsd.sh	Sat Jul  4 02:28:22 1998
 @@ -0,0 +1,13 @@

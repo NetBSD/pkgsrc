@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:24 agc Exp $
+
 --- indent.texinfo	1997/10/08 15:35:14	1.1
 +++ indent.texinfo	1997/10/08 15:37:15
 @@ -18,7 +18,21 @@

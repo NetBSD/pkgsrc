@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:55 agc Exp $
+
 --- ./xvpcd.c.org	Wed Jul  2 23:59:27 1997
 +++ ./xvpcd.c	Thu Jul  3 00:17:25 1997
 @@ -623,7 +623,7 @@

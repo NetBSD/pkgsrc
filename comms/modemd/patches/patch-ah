@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 10:36:45 agc Exp $
+
 --- outgoing/mpoold.8.orig	Tue Sep 10 02:27:44 1996
 +++ outgoing/mpoold.8	Tue Mar  3 17:19:07 1998
 @@ -40,6 +40,11 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ba,v 1.2 1998/08/07 10:36:15 agc Exp $
+
 --- config.h.orig	Sat Jun  1 08:54:49 1996
 +++ config.h	Sat Mar  7 13:17:30 1998
 @@ -325,6 +325,18 @@

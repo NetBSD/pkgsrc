@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.4 1998/08/07 10:40:46 agc Exp $
+
 --- xtp/Imakefile.orig	Fri Jan 30 21:06:09 1998
 +++ xtp/Imakefile	Thu Feb  5 02:01:50 1998
 @@ -45,5 +45,5 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/08/07 10:35:49 agc Exp $
+
 --- src/extract.c.orig	Tue Apr 22 20:05:57 1997
 +++ src/extract.c	Fri Mar  6 14:33:05 1998
 @@ -103,7 +103,7 @@

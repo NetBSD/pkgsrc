@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 1998/08/07 10:36:06 agc Exp $
+
 *** /dev/null	Fri Mar  6 05:54:22 1998
 --- dacio-netbsd.c	Fri Mar  6 06:51:04 1998
 ***************

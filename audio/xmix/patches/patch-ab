@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:21 agc Exp $
+
 diff -u ../../work/xmix/Imakefile ./Imakefile
 --- ../../work/xmix/Imakefile	Thu Oct 30 01:21:25 1997
 +++ ./Imakefile	Thu Oct 30 00:46:39 1997

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:07 agc Exp $
+
 --- lib/regex.h.orig	Sun Jan 18 20:42:26 1998
 +++ lib/regex.h	Sun Jan 18 20:42:56 1998
 @@ -473,7 +473,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 10:40:37 agc Exp $
+
 --- src/unix/devices.c.orig	Wed Jun 17 05:48:00 1998
 +++ src/unix/devices.c	Sat Jul  4 07:42:07 1998
 @@ -60,7 +60,7 @@

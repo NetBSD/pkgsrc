@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:35:51 agc Exp $
+
 *** os.c.bak	Mon May 19 23:58:11 1997
 --- os.c	Tue May 20 00:22:57 1997
 ***************

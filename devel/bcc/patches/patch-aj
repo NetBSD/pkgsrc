@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.2 1998/08/07 10:40:21 agc Exp $
+
 --- as/macro.c.orig	Thu Jul 16 20:03:05 1998
 +++ as/macro.c	Thu Jul 16 20:03:15 1998
 @@ -95,7 +95,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/08/07 10:36:10 agc Exp $
+
 --- snd.orig/snd-ufun.c	Mon Dec 22 17:24:11 1997
 +++ snd-ufun.c	Sun Feb 22 02:12:45 1998
 @@ -2,7 +2,7 @@

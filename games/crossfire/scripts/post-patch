@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: post-patch,v 1.2 1998/08/07 10:40:40 agc Exp $
+#
 #this script changes all the /usr/local/bin/perl stuff to what it should be.
 
 pl=`which perl | sed 's/\//\\\\\\//g'`

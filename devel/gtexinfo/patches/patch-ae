@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.5 1998/08/07 10:40:25 agc Exp $
+
 *** info/terminal.c.orig	Tue Jul 29 17:42:05 1997
 --- info/terminal.c	Sat Nov 15 17:07:42 1997
 ***************

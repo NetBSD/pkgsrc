@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.4 1998/08/07 10:35:53 agc Exp $
+
 --- audioIO.c.old	Sun Oct 26 10:55:27 1997
 +++ audioIO.c	Sun Oct 26 10:56:03 1997
 @@ -18,7 +18,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.5 1998/08/07 10:40:50 agc Exp $
+
 --- pnm/Makefile.orig	Mon Jan 31 09:47:32 1994
 +++ pnm/Makefile	Sat Jun 20 04:21:57 1998
 @@ -62,6 +62,7 @@

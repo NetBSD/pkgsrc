@@ -1,3 +1,5 @@
+$NetBSD: patch-be,v 1.2 1998/08/07 10:36:17 agc Exp $
+
 --- misc.tcl.orig	Fri Mar 29 04:19:49 1996
 +++ misc.tcl	Sat Mar  7 14:17:27 1998
 @@ -207,7 +207,7 @@

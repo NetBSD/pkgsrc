@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.3 1998/08/07 10:36:25 agc Exp $
+
 --- bonnie.1.orig	Thu Feb 26 23:50:18 1998
 +++ bonnie.1	Thu Feb 26 23:50:18 1998
 @@ -0,0 +1,68 @@

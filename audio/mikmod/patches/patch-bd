@@ -1,3 +1,5 @@
+$NetBSD: patch-bd,v 1.2 1998/08/07 10:35:59 agc Exp $
+
 --- /dev/null	Sat Jul  4 02:20:57 1998
 +++ usercode/makefile.netbsd	Sat Jul  4 02:29:45 1998
 @@ -0,0 +1,13 @@

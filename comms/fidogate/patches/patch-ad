@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.3 1998/08/07 10:36:36 agc Exp $
+
 --- subst.pl.orig	Sat Sep 28 04:13:51 1996
 +++ subst.pl	Thu Jul 16 18:35:06 1998
 @@ -41,5 +41,6 @@

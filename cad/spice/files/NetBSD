@@ -1,4 +1,6 @@
-# FreeBSD config exception file
+# FreeBSD/NetBSD config exception file
+# $NetBSD: NetBSD,v 1.2 1998/08/07 10:36:28 agc Exp $
+
 
 MAKE		= /usr/bin/make
 INTERFACE_OPTS  = -DWANT_X11

@@ -1,3 +1,5 @@
+$NetBSD: patch-al,v 1.2 1998/08/07 10:40:49 agc Exp $
+
 --- ordered.c.orig	Mon Sep 25 10:22:09 1995
 +++ ordered.c	Sat Jun 20 00:33:30 1998
 @@ -26,2 +26,5 @@

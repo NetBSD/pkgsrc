@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:35:51 agc Exp $
+
 *** smallfn.c.bak	Mon May 19 23:58:11 1997
 --- smallfn.c	Tue May 20 00:19:28 1997
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:35:57 agc Exp $
+
 *** obuffer.cc.orig	Thu Jun 23 05:14:36 1994
 --- obuffer.cc	Tue Feb 14 04:17:17 1995
 ***************

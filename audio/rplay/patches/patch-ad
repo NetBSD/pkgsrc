@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:36:07 agc Exp $
+
 --- doc/RPLAY.texi.orig	Sun Jan 18 20:59:52 1998
 +++ doc/RPLAY.texi	Sun Jan 18 21:04:54 1998
 @@ -2,6 +2,10 @@

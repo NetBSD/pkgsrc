@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1998/08/07 10:36:24 agc Exp $
+
 --- FWF/FWF.rules.orig	Mon Jan 29 18:55:22 1996
 +++ FWF/FWF.rules	Sat Feb 21 20:45:05 1998
 @@ -23,9 +23,6 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-bc,v 1.2 1998/08/07 10:36:16 agc Exp $
+
 --- sun_a.c.orig	Mon May 20 09:09:47 1996
 +++ sun_a.c	Sat Mar  7 13:28:46 1998
 @@ -33,7 +33,7 @@

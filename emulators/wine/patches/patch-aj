@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.2 1998/08/07 10:40:36 agc Exp $
+
 --- scheduler/sysdeps.c.orig	Sun May 31 18:15:25 1998
 +++ scheduler/sysdeps.c	Thu Jun 18 00:38:41 1998
 @@ -16,6 +16,8 @@

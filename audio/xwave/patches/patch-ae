@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:36:23 agc Exp $
+
 --- orig/xwave/src/button.c	Tue Nov 19 13:27:11 1996
 +++ src/button.c	Sat Sep 13 04:19:49 1997
 @@ -521,7 +521,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-bn,v 1.2 1998/08/07 10:40:51 agc Exp $
+
 --- ./pnm/pnmsmooth.1.orig	Mon Oct  4 05:11:56 1993
 +++ ./pnm/pnmsmooth.1	Sun Aug 13 00:21:28 1995
 @@ -1,25 +1,42 @@

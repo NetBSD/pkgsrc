@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:35:48 agc Exp $
+
 --- cpio.1.orig	Wed Nov 30 19:23:38 1994
 +++ cpio.1	Tue Mar  3 14:11:31 1998
 @@ -1,8 +1,8 @@

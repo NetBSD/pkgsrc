@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:22 agc Exp $
+
 *** doc/cvs.texinfo.orig	Wed Oct  2 02:03:43 1996
 --- doc/cvs.texinfo	Sun Nov 16 23:08:07 1997
 ***************

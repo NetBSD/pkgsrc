@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:35:52 agc Exp $
+
 --- fileio.c.orig	Sat Aug 29 21:51:00 1992
 +++ fileio.c	Sat Jun 20 17:26:18 1998
 @@ -59,16 +59,6 @@

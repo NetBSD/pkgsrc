@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:54 agc Exp $
+
 --- dynPenOp.c.orig	Tue Apr 21 00:57:13 1998
 +++ dynPenOp.c	Tue Apr 21 01:08:15 1998
 @@ -24,11 +24,12 @@

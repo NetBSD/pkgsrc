@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
+
 --- Magick.tmpl.orig	Wed Mar 11 21:28:31 1998
 +++ Magick.tmpl	Thu Mar 19 09:58:46 1998
 @@ -43,11 +43,11 @@

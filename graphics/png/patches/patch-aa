@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 1998/08/07 10:40:53 agc Exp $
+
 --- scripts/makefile.std.orig	Tue Jul 14 21:39:10 1998
 +++ scripts/makefile.std	Tue Jul 14 21:49:54 1998
 @@ -8,41 +8,34 @@

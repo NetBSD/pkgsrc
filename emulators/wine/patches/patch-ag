@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 10:40:36 agc Exp $
+
 --- multimedia/mmaux.c.orig	Sun May 31 18:14:58 1998
 +++ multimedia/mmaux.c	Wed Jun 17 00:56:12 1998
 @@ -16,11 +16,15 @@

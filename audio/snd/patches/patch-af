@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 10:36:09 agc Exp $
+
 --- snd.orig/snd-clm.c	Thu Feb 12 15:37:13 1998
 +++ snd-clm.c	Sun Feb 22 02:20:40 1998
 @@ -753,7 +753,11 @@

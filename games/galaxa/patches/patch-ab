@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:40 agc Exp $
+
 --- galaxa.c.orig	Fri Jul 24 03:06:10 1998
 +++ galaxa.c	Fri Jul 24 03:27:53 1998
 @@ -2694,7 +2694,7 @@

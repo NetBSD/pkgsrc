@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:32 agc Exp $
+
 *** main.c.old	Sun Jan 22 03:21:08 1995
 --- main.c	Tue Oct 15 16:54:32 1996
 ***************

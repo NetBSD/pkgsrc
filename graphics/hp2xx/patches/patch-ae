@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:40:48 agc Exp $
+
 --- doc/hp2xxinf.tex.orig	Thu Jul  9 17:30:12 1998
 +++ doc/hp2xxinf.tex	Fri Jul 10 11:04:20 1998
 @@ -33,6 +33,5 @@

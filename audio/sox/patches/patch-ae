@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:36:12 agc Exp $
+
 --- sox.c.old	Fri Oct  7 23:10:11 1994
 +++ sox.c	Wed Dec 17 15:12:54 1997
 @@ -444,12 +444,10 @@

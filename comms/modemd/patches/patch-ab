@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:44 agc Exp $
+
 --- common/ttio.c.orig	Sat Feb 22 00:06:09 1997
 +++ common/ttio.c	Tue Mar  3 17:19:06 1998
 @@ -73,6 +73,16 @@

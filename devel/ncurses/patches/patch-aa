@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 1998/08/07 10:40:26 agc Exp $
+
 --- c++/Makefile.in.orig	Wed Nov 26 13:39:11 1997
 +++ c++/Makefile.in	Wed Nov 26 13:39:59 1997
 @@ -50,6 +50,8 @@

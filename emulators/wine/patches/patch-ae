@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:40:35 agc Exp $
+
 --- multimedia/dsound.c.orig	Sun May 31 18:14:50 1998
 +++ multimedia/dsound.c	Wed Jun 17 00:00:14 1998
 @@ -45,13 +45,17 @@

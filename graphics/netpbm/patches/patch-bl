@@ -1,3 +1,5 @@
+$NetBSD: patch-bl,v 1.2 1998/08/07 10:40:51 agc Exp $
+
 --- /dev/null	Thu Oct 16 09:27:24 1997
 +++ ./pnm/pnmhisteq.c	Sun Aug 13 00:13:48 1995
 @@ -0,0 +1,371 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:36:22 agc Exp $
+
 --- orig/xwave/src/XWave	Tue Nov 19 13:25:36 1996
 +++ src/XWave	Fri Feb 20 20:13:48 1998
 @@ -2,7 +2,7 @@

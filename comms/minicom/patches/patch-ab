@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:42 agc Exp $
+
 --- install.sh.orig	Sat Sep 27 10:21:12 1997
 +++ install.sh	Sat Jan 10 01:16:04 1998
 @@ -29,6 +29,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:22 agc Exp $
+
 diff -u ../../work/xmix/xmix.c ./xmix.c
 --- ../../work/xmix/xmix.c	Thu Oct 30 01:23:01 1997
 +++ ./xmix.c	Thu Oct 30 01:25:53 1997

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:34 agc Exp $
+
 --- signal.c.orig	Fri Jul 17 23:00:17 1998
 +++ signal.c	Fri Jul 17 23:00:34 1998
 @@ -98,7 +98,7 @@

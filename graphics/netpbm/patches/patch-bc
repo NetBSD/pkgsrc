@@ -1,3 +1,5 @@
+$NetBSD: patch-bc,v 1.2 1998/08/07 10:40:50 agc Exp $
+
 --- ./pbm/pbmmerge.c.orig	Wed Nov  3 04:28:55 1993
 +++ ./pbm/pbmmerge.c	Sat Aug 12 23:51:57 1995
 @@ -29,6 +29,10 @@
