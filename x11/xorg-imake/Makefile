@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/01/12 20:21:49 reed Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/01 19:00:11 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src3.tar.gz
@@ -57,7 +56,7 @@ pre-configure:
 	@( \
 	${ECHO} "#define XORG_VERSION_MAJOR  6";	\
 	${ECHO} "#define XORG_VERSION_MINOR  8";	\
-	${ECHO} "#define XORG_VERSION_PATCH  1";	\
+	${ECHO} "#define XORG_VERSION_PATCH  2";	\
 	${ECHO} "#define XORG_VERSION_SNAP   0";	\
 	) > ${WRKSRC}/config/cf/version.def
 

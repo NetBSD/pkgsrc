@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2005/02/09 11:39:19 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2005/03/01 19:00:11 xtraeme Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -311,7 +311,6 @@ ${X11ROOT_PREFIX}/include/X11/extensions/Xvproto.h
 ${X11ROOT_PREFIX}/include/X11/extensions/bigreqstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/composite.h
 ${X11ROOT_PREFIX}/include/X11/extensions/compositeproto.h
-${X11ROOT_PREFIX}/include/X11/extensions/damage.h
 ${X11ROOT_PREFIX}/include/X11/extensions/damageproto.h
 ${X11ROOT_PREFIX}/include/X11/extensions/damagewire.h
 ${X11ROOT_PREFIX}/include/X11/extensions/dpms.h
@@ -496,6 +495,9 @@ ${X11ROOT_PREFIX}/lib/X11/locale/mulelao-1/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/mulelao-1/XLC_LOCALE
 ${X11ROOT_PREFIX}/lib/X11/locale/nokhchi-1/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/nokhchi-1/XLC_LOCALE
+${X11ROOT_PREFIX}/lib/X11/locale/pt_BR.UTF-8/Compose
+${X11ROOT_PREFIX}/lib/X11/locale/pt_BR.UTF-8/XI18N_OBJS
+${X11ROOT_PREFIX}/lib/X11/locale/pt_BR.UTF-8/XLC_LOCALE
 ${X11ROOT_PREFIX}/lib/X11/locale/tatar-cyr/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/tatar-cyr/XLC_LOCALE
 ${X11ROOT_PREFIX}/lib/X11/locale/th_TH.UTF-8/XI18N_OBJS
