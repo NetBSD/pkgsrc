@@ -1,0 +1,10 @@
+#! /bin/sh
+
+${AWK} '
+	/^#.*/ { next }
+	NF == 0 { next }
+	{ cmd = sprintf("${PKG_INFO} -qe \"%s\" && echo Package \"`${PKG_INFO} -e \"%s\"`\" has a %s vulnerability, see %s", $1, $1, $2, $3);
+	  system(cmd); }
+' ${DISTDIR}/vulnerabilities
+
+exit 0
