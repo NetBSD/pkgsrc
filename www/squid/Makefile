@@ -1,59 +1,31 @@
-# $NetBSD: Makefile,v 1.117 2004/10/03 16:06:18 taca Exp $
+# $NetBSD: Makefile,v 1.118 2004/10/13 15:35:55 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE6
-PKGNAME=	squid-2.5.6
-PKGREVISION=	3
+DISTNAME=	squid-2.5.STABLE7
+PKGNAME=	squid-2.5.7
+PKGREVISION=
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
 
-PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE6-ufs_no_valid_dir.patch \
-		squid-2.5.STABLE6-ldap_helpers.patch \
-		squid-2.5.STABLE6-concurrent_dns_lookups.patch \
-		squid-2.5.STABLE6-request_header_max_size.patch \
-		squid-2.5.STABLE6-partial_hit_is_miss.patch \
-		squid-2.5.STABLE6-HEAD.patch \
-		squid-2.5.STABLE6-ufs_create_error.patch \
-		squid-2.5.STABLE6-basic_auth_caseinsensitive.patch \
-		squid-2.5.STABLE6-active_requests_delaypool.patch \
-		squid-2.5.STABLE6-client_db_gc.patch \
-		squid-2.5.STABLE6-ntlmtruncated.patch \
-		squid-2.5.STABLE6-grammar.patch \
-		squid-2.5.STABLE6-errorpage_quote.patch \
-		squid-2.5.STABLE6-heap_segfault.patch \
-		squid-2.5.STABLE6-initgroups.patch \
-		squid-2.5.STABLE6-external_acl_newlines.patch \
-		squid-2.5.STABLE6-ntlm_fetch_string.patch \
-		squid-2.5.STABLE6-ntlm_noreuse_leak.patch \
-		squid-2.5.STABLE6-ntlm_challengereuse_leak.patch \
-		squid-2.5.STABLE6-rotate_error.patch \
-		squid-2.5.STABLE6-digest_crash.patch \
-		squid-2.5.STABLE6-acl_times.patch \
-		squid-2.5.STABLE6-http_header_range.patch \
-		squid-2.5.STABLE6-Content-Disposition.patch \
-		squid-2.5.STABLE6-freebsd_arp_nowarning.patch \
-		squid-2.5.STABLE6-huge_tcp_windows.patch \
-		squid-2.5.STABLE6-arbitrary_headers.patch \
-		squid-2.5.STABLE6-ncsa_auth_lineendings.patch \
-		squid-2.5.STABLE6-basic_auth_caseinsensitive-2.patch \
-		squid-2.5.STABLE6-program-prefix.patch \
-		squid-2.5.STABLE6-CONNECT.patch \
-		squid-2.5.STABLE6-balance_on_multiple_ip.patch \
-		squid-2.5.STABLE6-CARP-cache_peer_access.patch
-PATCH_DIST_STRIP=       -p1
-
+#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
+#PATCHFILES=
+#PATCH_DIST_STRIP=       -p1
+#
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_PERL5=	build
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}-${DIST_STAMP}
 DOCDIR=		${PREFIX}/share/doc/squid
 EXAMPLESDIR=	${PREFIX}/share/examples/squid
+
+# Update this time stamp pattern if any of official distfiles has changed.
+#
+DIST_STAMP=	2004101300
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
