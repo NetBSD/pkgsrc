@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/28 23:24:03 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/30 16:08:58 jwise Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xerces-J,
 # because although Xerces runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -21,6 +21,7 @@ USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/xerces-1_1_0
 
 do-install:
+	${MKDIR} ${PREFIX}/lib/java
 	${INSTALL} -c ${WRKSRC}/xerces.jar ${PREFIX}/lib/java
 	${MKDIR} ${PREFIX}/share/doc/java/xerces
 	cd ${WRKSRC}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/xerces ; ${GTAR} pvxf - )
