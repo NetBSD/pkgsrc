@@ -3,7 +3,7 @@
 perl util/perlpath.pl /usr/pkg/bin
 perl util/ssldir.pl /usr/pkg
 
-case `uname -m` in
+case "$1" in
     i386)
 	conf=NetBSD-x86
 	;;
