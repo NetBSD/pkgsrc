@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1004 2002/07/11 15:52:35 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1005 2002/07/13 23:27:54 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -529,6 +529,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		MACHINE_ARCH=${MACHINE_ARCH}				\
 		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}			\
 		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
+		LN=${LN:Q}						\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
 		LOWER_OS_VERSION=${LOWER_OS_VERSION}			\
