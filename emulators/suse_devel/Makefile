@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/04/04 09:46:57 tron Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/09 07:14:24 grant Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
+PKGREVISION=		1
 MASTER_SITES=		${MASTER_SITE_SUSE:=d1/} \
 			${MASTER_SITE_SUSE:=d2/} \
 			${MASTER_SITE_SUSE_UPD:=d1/}
@@ -21,6 +22,6 @@ NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		bin86.rpm binutils.rpm cpp.rpm g77.rpm gcc.rpm \
-			glibc-devel-2.2.4-64.i386.rpm gpp.rpm make.rpm
+			glibc-devel-2.2.4-77.i386.rpm gpp.rpm make.rpm
 
 .include "../suse_linux/Makefile.common"
