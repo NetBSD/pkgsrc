@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.5 2003/08/16 11:10:08 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.6 2003/08/16 19:44:00 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -101,26 +101,28 @@ BUILDLINK_CPPFLAGS=	# empty
 BUILDLINK_LDFLAGS=	# empty
 
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-.  for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}}
-_dir_:=			${BUILDLINK_DEPOT.${_pkg_}}/${_dir_}
-.    if exists(${_dir_})
-.      if empty(BUILDLINK_CPPFLAGS:M-I${_dir_})
+.  if !empty(BUILDLINK_INCDIRS.${_pkg_})
+.    for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:S/^/${BUILDLINK_DEPOT.${_pkg_}}\//}
+.      if exists(${_dir_})
+.        if empty(BUILDLINK_CPPFLAGS:M-I${_dir_})
 BUILDLINK_CPPFLAGS+=	-I${_dir_}
+.        endif
 .      endif
-.    endif
-.  endfor
-.  for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}}
-_dir_:=			${BUILDLINK_DEPOT.${_pkg_}}/${_dir_}
-.    if exists(${_dir_})
-.      if empty(BUILDLINK_LDFLAGS:M-L${_dir_})
+.    endfor
+.  endif
+.  if !empty(BUILDLINK_LIBDIRS.${_pkg_})
+.    for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:S/^/${BUILDLINK_DEPOT.${_pkg_}}\//}
+.      if exists(${_dir_})
+.        if empty(BUILDLINK_LDFLAGS:M-L${_dir_})
 BUILDLINK_LDFLAGS+=	-L${_dir_}
-.      endif
-.      if (${_USE_RPATH} == "yes") && !empty(_COMPILER_LD_FLAG) && \
+.        endif
+.        if (${_USE_RPATH} == "yes") && !empty(_COMPILER_LD_FLAG) && \
 	  empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
 BUILDLINK_LDFLAGS+=		${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
+.        endif
 .      endif
-.    endif
-.  endfor
+.    endfor
+.  endif
 .endfor
 #
 # Add the default view library directory to the runtime library search
