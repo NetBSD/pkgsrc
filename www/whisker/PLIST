@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 12:29:40 hubertf Exp $
+bin/whisker
+share/doc/whisker/plugins.txt
+share/doc/whisker/tests.txt
+share/doc/whisker/CHANGES
+share/doc/whisker/README
+share/whisker/LW.pm
+share/whisker/html.plugin
+share/whisker/main.test
+share/whisker/newbie.help
+@dirrm share/doc/whisker
+@dirrm share/whisker

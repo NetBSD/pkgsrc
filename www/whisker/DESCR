@@ -1,0 +1,5 @@
+The primary purpose of whisker is to be a URL scanner, which is 
+used to search for known vulnerable CGIs on websites.  Whisker does 
+this by both scanning the the CGIs directly as well as crawling the 
+website in order to determine what CGIs are already currently in
+use.
