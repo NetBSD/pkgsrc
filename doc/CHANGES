@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2298 2003/05/23 18:06:36 salo Exp $
+$NetBSD: CHANGES,v 1.2299 2003/05/23 21:03:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2111,3 +2111,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added scli-0.2.12 [seb 2003-05-23]
 	Updated gimp to 1.2.4 [salo 2003-05-23]
 	Updated gimp-base to 1.2.4 [salo 2003-05-23]
+	Updated easytag to 0.27.1nb1 [wiz 2003-05-23]
