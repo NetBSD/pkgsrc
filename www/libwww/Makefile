@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/09/09 19:40:24 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2000/10/15 12:56:25 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.w3.org/Library/
-
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
@@ -25,7 +23,11 @@ DOCDIR=			${PREFIX}/share/doc/libwww
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 pre-configure:
-	cd ${WRKSRC}; autoconf
+	cd ${WRKSRC}; \
+	    for foo in configure.in aclocal.m4 `find . -name Makefile.in` \
+		    configure stamp-h.in; do \
+		${TOUCH} $$foo; \
+	    done
 
 .include "../../mk/bsd.prefs.mk"
 
