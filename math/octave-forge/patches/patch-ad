@@ -1,0 +1,132 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
+
+get rid of bash-isms
+
+--- main/sparse/buildtests.sh.orig	Wed Jul  7 15:25:45 2004
++++ main/sparse/buildtests.sh
+@@ -89,7 +89,7 @@ EOF
+ # =======================================================
+ # Section separator
+ 
+-function gen_section {
++gen_section() {
+ cat >>$TESTS <<EOF
+ 
+ # ==============================================================
+@@ -104,7 +104,7 @@ EOF
+ # =======================================================
+ # If a sparse operation yields zeros, then those elements 
+ # of the returned sparse matrix should be eaten.
+-function gen_eat_zeros {
++gen_eat_zeros() {
+ cat >>$TESTS <<EOF
+ %% Make sure newly introduced zeros get eaten
+ %!assert(nnz(sparse([bf,bf,1]).^realmax),1);
+@@ -126,7 +126,7 @@ cat >>$TESTS <<EOF
+ EOF
+ }
+ 
+-function gen_specific {
++gen_specific() {
+ cat >>$TESTS <<EOF
+ 
+ %!test # segfault test from edd@debian.org
+@@ -158,7 +158,7 @@ EOF
+ }
+ 
+ 
+-function gen_specific_tests {
++gen_specific_tests() {
+     gen_section
+     gen_specific
+     gen_section
+@@ -184,7 +184,7 @@ EOF
+ # =======================================================
+ # Main function definition
+ 
+-function gen_function {
++gen_function() {
+     if $preset; then
+ 	cat >>$TESTS <<EOF
+ ##
+@@ -227,7 +227,7 @@ EOF
+ # matrix ops
+ 
+ # test ordered comparisons: uses as,af,bx,bf
+-function gen_ordering_tests {
++gen_ordering_tests() {
+     cat >>$TESTS <<EOF
+ %% real values can be ordered (uses as,af)
+ %!assert(as<=bx,af<=bf)
+@@ -243,7 +243,7 @@ EOF
+ }
+ 
+ # test element-wise binary operations: uses as,af,bx,bf
+-function gen_elementop_tests {
++gen_elementop_tests() {
+     cat >>$TESTS <<EOF
+ %% Elementwise binary tests (uses as,af,bx,bf)
+ %!assert(as==bx,af==bf)
+@@ -268,7 +268,7 @@ EOF
+ }
+ 
+ # test matrix-matrix operations: uses as,af,bx,bf
+-function gen_matrixop_tests {
++gen_matrixop_tests() {
+     cat >>$TESTS <<EOF
+ %% Matrix-matrix operators (uses af,as,bx,bf)
+ %!assert(as*bx',af*bf')
+@@ -280,7 +280,7 @@ EOF
+ }
+ 
+ # test matrix operations: uses as,af
+-function gen_unaryop_tests {
++gen_unaryop_tests() {
+     cat >>$TESTS <<EOF
+ %% Unary matrix tests (uses af,as)
+ %!assert(is_sparse(as),1)
+@@ -343,7 +343,7 @@ EOF
+ }
+ 
+ # operations which require square matrices.
+-function gen_square_tests {
++gen_square_tests() {
+     cat >>$TESTS <<EOF
+ %!test ;# permuted LU
+ %! [L,U] = splu(bx);
+@@ -369,7 +369,7 @@ EOF
+ }
+ 
+ # test scalar operations: uses af and real scalar bf; modifies as,bx
+-function gen_scalar_tests {
++gen_scalar_tests() {
+     echo '%!test as=sparse(af);' >> $TESTS
+     echo '%!test bx=bf;' >> $TESTS
+     gen_elementop_tests
+@@ -378,7 +378,7 @@ function gen_scalar_tests {
+ }
+ 
+ # test matrix operations: uses af and bf; modifies as,bx
+-function gen_rectangular_tests {
++gen_rectangular_tests() {
+     echo '%!test as=sparse(af);' >> $TESTS
+     echo '%!test bx=bf;' >>$TESTS
+     gen_unaryop_tests
+@@ -393,7 +393,7 @@ function gen_rectangular_tests {
+ # =======================================================
+ # sparse assembly tests
+ 
+-function gen_assembly_tests {
++gen_assembly_tests() {
+ echo >>$TESTS <<EOF
+ %%Assembly tests
+ %!test
+@@ -422,7 +422,7 @@ EOF
+ # =======================================================
+ # sparse selection tests
+ 
+-function gen_select_tests {
++gen_select_tests() {
+     cat >>$TESTS <<EOF
+ %!test as=sparse(af);
+ 
