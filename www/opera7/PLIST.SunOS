@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.3 2004/07/18 17:03:00 heinz Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.4 2005/03/18 03:33:10 dmcmahill Exp $
 bin/opera
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/missingsyms.so
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/opera
@@ -25,7 +25,6 @@ share/opera/help/fonts.html
 share/opera/help/glossary.html
 share/opera/help/help.css
 share/opera/help/history.html
-share/opera/help/hotlist.html
 share/opera/help/index.html
 share/opera/help/input.html
 share/opera/help/keyboard.html
