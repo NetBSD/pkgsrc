@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/27 09:13:51 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/28 14:41:59 skrll Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -41,5 +41,5 @@ do-install:
 	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
 	done)
 
-.include "../../x11/qt3-libs/buildlink.mk"
+.include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
