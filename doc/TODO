@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3039 2005/02/18 14:51:36 wiz Exp $
+$NetBSD: TODO,v 1.3040 2005/02/18 14:52:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -276,7 +276,6 @@ Suggested package updates
 	o afterstep-2.00.02
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
-	o alee-ttf-4.1
 	o algae-4.3.6
 	o amarok-1.2
 	o amavis-0.3.12
