@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/10/26 13:09:07 bouyer Exp $
+# $NetBSD: Makefile,v 1.40 2002/12/30 20:19:27 tron Exp $
 
 DISTNAME=	kdebase-2.2.2
 PKGREVISION=	1
@@ -15,12 +15,11 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_BUILDLINK2=		YES
 
-CONFIGURE_ARGS+=	--with-ssl-dir="${SSLBASE}"
-CONFIGURE_ARGS+=	--disable-greet-lib
-CONFIGURE_ARGS+=	--without-pam
-CONFIGURE_ARGS+=	--without-cdparanoia
-CONFIGURE_ARGS+=	--without-lame
-CONFIGURE_ARGS+=	--without-vorbis
+CONFIGURE_ARGS+=	--with-ssl-dir="${SSLBASE}" \
+			--with-ldap=${BUILDLINK_PREFIX.openldap} \
+			--disable-greet-lib \
+			--without-pam --without-cdparanoia \
+			--without-lame --without-vorbis
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,8 +38,8 @@ BUILD_DEFS+=		KDE2_NSPLUGINS
 
 .if ${KDE2_NSPLUGINS} == "YES"
 PLIST_SRC+=		${PKGDIR}/PLIST.nsplugins
-CONFIGURE_ARGS+=	--with-motif-includes="${MOTIFBASE}/include"
-CONFIGURE_ARGS+=	--with-motif-libraries="${MOTIFBASE}/lib"
+CONFIGURE_ARGS+=	--with-motif-includes="${MOTIFBASE}/include" \
+			--with-motif-libraries="${MOTIFBASE}/lib"
 .include "../../mk/motif.buildlink2.mk"
 .else
 CONFIGURE_ARGS+=	--without-motif
