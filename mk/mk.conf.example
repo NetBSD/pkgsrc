@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.157 2000/10/15 07:20:43 veego Exp $
+# $NetBSD: mk.conf.example,v 1.158 2000/10/15 12:14:57 rh Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -689,6 +689,11 @@ PAPERSIZE=	A4
 # Possible: defined, not defined
 # Default: not defined
 
+#USE_GLX=
+# Use Mesa-glx instead of Mesa
+# Possible: not defined, YES
+# Default: not defined
+
 #USE_IDEA=	NO
 # Used in speakfreely and ssh to choose whether to compile using
 # the patented IDEA encryption algorithm.
@@ -711,7 +716,7 @@ PAPERSIZE=	A4
 # Possible: not defined, YES
 # Default: not defined
 
-#USE_MESA=
+#BATTLEBALL_USE_MESA=
 # Used in battleball to build in support for OpenGL/Mesa. Will use
 # Mesa-glx (rather than Mesa) if Mesa-glx is already installed.
 # Possible: not defined, YES
