@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/23 19:17:40 hubertf Exp $
 #
 
 DISTNAME=	zircon-1.18.245
@@ -25,7 +25,7 @@ do-install:
 	@${ECHO} "Please just click <Install> and <Quit> to ensure proper installation."
 	@${ECHO} ""
 	@( cd ${WRKSRC} && ./installZircon )
-	@${MKDIR} ${PREFIX}/share/doc/zircon
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zircon
 .for file in BUGS COPYRIGHT FAQ MANUAL MIRRORS README.ONS README.load README.look README.prefs TODO
 	@${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/zircon
 .endfor
