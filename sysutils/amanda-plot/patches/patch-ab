@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/09/06 18:11:22 bad Exp $
+
+--- Makefile.in.orig	Sat Nov 21 18:32:54 1998
++++ Makefile.in	Sat Sep  4 02:53:32 1999
+@@ -157,10 +157,7 @@
+ AUTOCONF = @AUTOCONF@ --localdir=config
+ 
+ SUBDIRS=config		\
+-	common-src	client-src	tape-src	\
+-	server-src	restore-src	recover-src	\
+-	changer-src	amplot		man		\
+-	example
++	amplot		man
+ 
+ EXTRA_DIST = \
+ 	COPYRIGHT			\
