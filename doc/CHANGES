@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8548 2004/12/31 17:02:09 wiz Exp $
+$NetBSD: CHANGES,v 1.8549 2004/12/31 17:14:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6707,6 +6707,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lilypond to 2.4.3 [dmcmahill 2004-12-30]
 	Updated dvd+rw-tools to 5.21.4.10.8 [jmmv 2004-12-30]
 	Added edcommon-32 [rh 2004-12-30]
+	Updated nut to 10.14 [wiz 2004-12-30]
 	Added pdbar-0.5.1 [minskim 2004-12-30]
 	Updated tcl to 8.4.8nb1 [kristerw 2004-12-30]
 	Updated avr-libc to 1.0.4 [kristerw 2004-12-30]
