@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2000/07/15 08:41:28 jlam Exp $
+
+--- sigc++/Makefile.in.orig	Sat May 20 14:47:52 2000
++++ sigc++/Makefile.in	Sat Jul 15 04:31:27 2000
+@@ -90,7 +90,7 @@
+ libsigc_la_SOURCES =     object.cc   scope.cc   marshal.cc   slot.cc    basic_signal.cc adaptor.cc thread.cc
+ 
+ 
+-libsigc_la_LDFLAGS = -version-info $(LIBSIGC_SO_VERSION)                      -release $(SIGC_RELEASE) -no-undefined
++libsigc_la_LDFLAGS = -version-info $(LIBSIGC_SO_VERSION) -no-undefined
+ 
+ libsigcdir = $(prefix)/include/sigc++
+ 
