@@ -1,0 +1,94 @@
+<!-- $NetBSD: ftp-layout.xml,v 1.1.1.1 2004/10/21 14:27:37 grant Exp $ -->
+
+<appendix id="ftp-layout">
+  <title>Layout of the FTP server's package archive</title>
+
+  <para>Layout for precompiled binary packages on ftp.NetBSD.org:</para>
+
+  <!-- BEWARE! Use no tabs here, only spaces! -->
+  <programlisting>
+/pub/NetBSD/packages/
+                distfiles/
+
+                # Unpacked pkgsrc trees
+                pkgsrc-current -> /pub/NetBSD/NetBSD-current/pkgsrc
+                pkgsrc-2003Q4 -> N/A
+                pkgsrc-2004Q1/pkgsrc
+
+                # pkgsrc archives
+                pkgsrc-current.tar.gz -> ../NetBSD-current/tar_files/pkgsrc.tar.gz
+                pkgsrc-2003Q4.tar.gz -> N/A
+                pkgsrc-2004Q1.tar.gz -> N/A
+
+                # Per pkgsrc-release/OS-release/arch package archives
+                pkgsrc-2003Q4/
+                        NetBSD-1.6.2/
+                                i386/
+                                        All/
+                                        archivers/
+                                                foo -> ../All/foo
+                                        ...
+                pkgsrc-2004Q1/
+                        NetBSD-1.6.2/
+                                i386/
+                                        All/
+                                        ...
+                        NetBSD-2.0/
+                                i386/
+                                        All/
+                                        ...
+                        SunOS-5.9/
+                                sparc/
+                                        All/
+                                        ...
+                                x86/
+                                        All/
+                                        ...
+
+                # Per os-release package archive convenience links
+                NetBSD-1.6.2 -> 1.6.2
+                1.6.2/
+                        i386 -> ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
+                        m68k/
+                                All/
+                                archivers/
+                                        foo -> ../All/foo
+                                ...
+                        amiga -> m68k
+                        atari -> m68k
+                        ...
+
+                2.0 -> NetBSD-2.0       # backward compat, historic
+                NetBSD-2.0/
+                        i386 -> ../pkgsrc-2004Q1/NetBSD-2.0/i386
+                SunOS-5.9/
+                        sparc -> ../pkgsrc-2004Q1/SunOS-5.9/sparc
+                        x86 -> ../pkgsrc-2004Q1/SunOS-5.9/x86
+			</programlisting>
+
+  <para>
+    To create:</para>
+
+  <orderedlist>
+    <listitem>
+      <para> Run bulk build, see <xref linkend="bulkbuild"/> </para>
+    </listitem>
+
+    <listitem>
+      <para> Upload /usr/pkgsrc/packages to </para>
+
+      <programlisting>    ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
+	pkgsrc-2004Q3/\				# pkgsrc-branch
+	`uname -s`-`uname -r`/			# OS & version
+	`uname -p`				# architecture
+       </programlisting>
+
+    </listitem>
+
+    <listitem>
+      <para> If necessary, create a symlink <command>ln -s `uname -m` `uname
+      -p`</command> (amiga -> m68k, ...) </para>
+    </listitem>
+  </orderedlist>
+
+</appendix>

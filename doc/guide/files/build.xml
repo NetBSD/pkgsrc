@@ -1,0 +1,710 @@
+<!-- $NetBSD: build.xml,v 1.1.1.1 2004/10/21 14:27:38 grant Exp $ -->
+
+<chapter id="build">
+  <title>The build process</title>
+
+  <para>The basic steps for building a program are always the same.  First the
+    program's source (<emphasis>distfile</emphasis>) must be brought to the
+    local system and then extracted. After any patches to compile properly
+    on &os; are applied, the software can be configured, then built
+    (usually by compiling), and finally the generated binaries, etc. can be
+    put into place on the system. These are exactly the steps performed by
+    the &os; package system, which is implemented as a series of targets
+    in a central Makefile, <filename>pkgsrc/mk/bsd.pkg.mk</filename>.</para>
+
+  <sect1 id="build.prefix">
+    <title>Program location</title>
+
+    <para>Before outlining the process performed by the &os; package system in
+      the next section, here's a brief discussion on where programs are
+      installed, and which variables influence this.</para>
+
+    <para>The automatic variable <varname>PREFIX</varname> indicates
+      where all files of the final program shall be installed. It is
+      usually set to <varname>LOCALBASE</varname>
+      (<filename>/usr/pkg</filename>), or <varname>CROSSBASE</varname>
+      for pkgs in the <quote>cross</quote> category.  The value of
+      <varname>PREFIX</varname> needs to be put 
+      into the various places in the program's source where paths to
+      these files are encoded.  See <xref
+      linkend="components.patches"/> and <xref
+      linkend="fixes.libtool"/> for more details.</para>
+
+    <para>When choosing which of these variables to use,
+      follow the following rules:</para>
+
+    <itemizedlist>
+      <listitem>
+	<para><varname>PREFIX</varname> always points to the location where the current
+	  pkg will be installed.  When referring to a pkg's own installation path,
+	  use <quote>${PREFIX}</quote>.</para>
+      </listitem>
+
+      <listitem>
+	<para><varname>LOCALBASE</varname> is where all non-X11 pkgs are installed.
+	  If you need to construct a -I or -L argument to the compiler to find
+	  includes and libraries installed by another non-X11 pkg, use
+	  <quote>${LOCALBASE}</quote>.</para>
+      </listitem>
+
+      <listitem>
+	<para><varname>X11BASE</varname> is where the actual X11 distribution (from
+	  xsrc, etc.) is installed. When looking for
+	  <emphasis>standard</emphasis> X11 includes (not
+	  those installed by a pkg), use <quote>${X11BASE}</quote>.</para>
+      </listitem>
+
+      <listitem>
+	<para>X11 based are special in that they may be installed in either
+	  <varname>X11BASE</varname> or <varname>LOCALBASE</varname>.</para>
+
+	<para>Usually, X11 packages should be installed under
+	  <varname>LOCALBASE</varname> whenever possible.  Note that you will
+	  need to set <varname>USE_X11</varname> in them to request the
+	  presence of X11 and to get the right compilation flags.</para>
+
+	<para>Even though, there are some packages that cannot be installed
+	  under <varname>LOCALBASE</varname>: those that come with app-defaults
+	  files. These packages are special and they must be placed under
+	  <varname>X11BASE</varname>. To accomplish this, set either
+	  <varname>USE_X11BASE</varname> or <varname>USE_IMAKE</varname> in
+	  your package.</para>
+
+	<para>Some notes: <varname>USE_X11</varname> and
+	  <varname>USE_X11BASE</varname> are mutually exclusive. If you need
+	  to find includes or libraries installed by a pkg that has
+	  <varname>USE_IMAKE</varname> or <varname>USE_X11BASE</varname> in
+	  its pkg <filename>Makefile</filename>, you need to use
+	  <emphasis>both</emphasis> <filename>${X11BASE}</filename> and
+	  <filename>${LOCALBASE}</filename>. To force installation of
+	  all X11 packages in <varname>LOCALBASE</varname>, the 
+	  <pkg>pkgtools/xpkgwedge</pkg> is enabled by default.</para>
+      </listitem>
+
+      <listitem>
+	<para><varname>X11PREFIX</varname> should be used to refer to the installed
+	  location of an X11 package. <varname>X11PREFIX</varname> will be set to
+	  <varname>X11BASE</varname> if xpkgwedge is not installed,
+	  and to <varname>LOCALBASE</varname> if xpkgwedge is installed.</para>
+      </listitem>
+
+      <listitem>
+	<para>If xpkgwedge is installed, it is possible to have some packages installed
+	  in <varname>X11BASE</varname> and some in <varname>LOCALBASE</varname>.
+	  To determine the prefix of an installed package, the
+	  <varname>EVAL_PREFIX</varname> definition can be used. It takes pairs in the
+	  format <quote>DIRNAME=&lt;package&gt;</quote>, and the make(1) variable
+	  <varname>DIRNAME</varname> will be set to the prefix of the installed
+	  package &lt;package&gt;, or <quote>${X11PREFIX}</quote> if the package is
+	  not installed.</para>
+
+	<para>This is best illustrated by example.</para>
+
+	<para>The following lines are taken from
+	  <filename>pkgsrc/wm/scwm/Makefile</filename>:</para>
+
+	<programlisting>EVAL_PREFIX+=		GTKDIR=gtk+
+CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
+			--with-gtk-prefix="${GTKDIR}"		\
+			--enable-multibyte</programlisting>
+
+	<para>Specific defaults can be defined for the packages evaluated using
+	  <varname>EVAL_PREFIX</varname>, by using a definition of the form:</para>
+
+	<programlisting>GTKDIR_DEFAULT= ${LOCALBASE}</programlisting>
+
+	<para>where <varname>GTKDIR</varname> corresponds
+	  to the first definition in
+	  the <varname>EVAL_PREFIX</varname> pair.</para>
+      </listitem>
+      
+      <listitem>
+        <para>Within <filename>${PREFIX}</filename>, packages should
+          install files according to hier(7), with the exception that
+          manual pages go into <filename>${PREFIX}/man</filename>, not
+          <filename>${PREFIX}/share/man</filename>.</para> 
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Main targets</title>
+
+    <para>The main targets used during the build process defined in
+      <filename>bsd.pkg.mk</filename> are:</para>
+
+    <variablelist>
+      <varlistentry>
+	<term>fetch</term>
+
+	<listitem>
+	  <para>This will check if the file(s) given in the variables
+	    <varname>DISTFILES</varname> and <varname>PATCHFILES</varname> (as
+	    defined in the package's Makefile) are present on the
+	    local system in <filename>/usr/pkgsrc/distfiles</filename>. If they
+	    are not present, an attempt will be made to fetch them using commands
+	    of the form:</para>
+
+	  <programlisting>${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}</programlisting>
+
+	  <para>where ${site} varies through several possibilities in turn: first,
+	    <varname>MASTER_SITE_OVERRIDE</varname> is tried, then the sites
+	    specified in either <varname>SITES_file</varname> if defined, else
+	    <varname>MASTER_SITES</varname> or <varname>PATCH_SITES</varname>, as
+	    applies, then finally the value of
+	    <varname>MASTER_SITE_BACKUP</varname>. The order of all except the
+	    first can be optionally sorted by the user, via setting either
+	    <varname>MASTER_SORT_AWK</varname> or
+	    <varname>MASTER_SORT_REGEX</varname>.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>checksum</term>
+
+	<listitem>
+	  <para>After the distfile(s) are fetched, their checksum is generated and
+	    compared with the checksums stored in the distinfo file. If the
+	    checksums don't match, the build is aborted. This is to ensure the same
+	    distfile is used for building, and that the distfile wasn't changed,
+	    e.g. by some malign force, deliberately changed distfiles on the master
+	    distribution site or network lossage.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>extract</term>
+
+	<listitem>
+	  <para>When the distfiles are present on the local system,
+	    they need to be extracted, as they are usually in the form
+	    of some compressed archive format, most commonly
+	    <filename>.tar.gz</filename>. </para>
+
+	  <para> If only some of the
+	    distfiles need to be uncompressed, the files to be
+	    uncompressed should be put into
+	    <varname>EXTRACT_ONLY</varname>.</para>
+
+	  <para> If the distfiles are not in
+	    <filename>.tar.gz</filename> format, they can be extracted
+	    by setting either <varname>EXTRACT_SUFX</varname>, or
+	    <varname>EXTRACT_CMD</varname>,
+	    <varname>EXTRACT_BEFORE_ARGS</varname> and
+	    <varname>EXTRACT_AFTER_ARGS</varname>. In the former case,
+	    pkgsrc knows how to extract a number of suffixes
+	    (<filename>.tar.gz</filename>, <filename>.tgz</filename>,
+	    <filename>.tar.gz2</filename>, <filename>.tbz</filename>,
+	    <filename>.tar.Z</filename>, <filename>.tar</filename>,
+	    <filename>.shar.gz</filename>,
+	    <filename>.shar.bz2</filename>,
+	    <filename>.shar.Z</filename>, <filename>.shar</filename>,
+	    <filename>.Z</filename>, <filename>.bz2</filename> and
+	    <filename>.gz</filename>; see the definition of the
+	    various <varname>DECOMPRESS_CMD</varname> variables
+	    <filename>bsd.pkg.mk</filename> for a complete
+	    list). Here's an example on how to use the other variables
+	    for a program that comes with a compressed shell archive
+	    whose name ends in <filename>.msg.gz</filename>:</para>
+
+	  <programlisting>     EXTRACT_SUFX=   .msg.gz
+     EXTRACT_CMD=            zcat
+     EXTRACT_BEFORE_ARGS=
+     EXTRACT_AFTER_ARGS=     |sh</programlisting>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>patch</term>
+
+	<listitem>
+	  <para>After extraction, all the patches named by the
+	    <varname>PATCHFILES</varname>, those present in the patches
+	    subdirectory of the package as well as in $LOCALPATCHES/$PKGPATH (e.g.
+	    <filename>/usr/local/patches/graphics/png</filename>) are applied.
+	    Patchfiles ending in <filename>.Z</filename> or
+	    <filename>.gz</filename> are uncompressed before they are applied,
+	    files ending in <filename>.orig</filename> or
+	    <filename>.rej</filename> are ignored. Any special options to patch(1)
+	    can be handed in <varname>PATCH_DIST_ARGS</varname>.
+	    See <xref linkend="components.patches"/> for more details.</para>
+
+	  <para>By default patch(1) is given special args to make it fail if the
+	    patches apply with some lines of fuzz. Please fix (regen) the patches
+	    so that they apply cleanly. The rationale behind this is that
+	    patches that don't apply cleanly may end up being applied in the wrong
+	    place, and cause severe harm there.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>configure</term>
+
+	<listitem>
+	  <para>Most pieces of software need information on the header files,
+	    system calls, and library routines which are available in &os;.
+	    This is the process known as configuration, and is usually
+	    automated.  In most cases, a script is supplied with the source,
+	    and its invocation results in generation of header files,
+	    Makefiles, etc.</para>
+
+	  <para>If the program's distfile contains its own configure
+	    script, this can be invoked by setting
+	    <varname>HAS_CONFIGURE</varname>. If the configure script
+	    is a GNU autoconf script, <varname>GNU_CONFIGURE</varname>
+	    should be specified instead. In either case, any arguments
+	    to the configure script can be specified in the
+	    <varname>CONFIGURE_ARGS</varname> variable, and the
+	    configure script's name can be set in
+	    <varname>CONFIGURE_SCRIPT</varname> if it differs from the
+	    default <quote>configure</quote>. Here's an example from
+	    the <pkg>sysutils/top</pkg> package:</para>
+
+	  <programlisting>HAS_CONFIGURE=          yes
+CONFIGURE_SCRIPT=       Configure
+CONFIGURE_ARGS+=        netbsd13</programlisting>
+
+	  <para>If the program uses an Imakefile for configuration, the appropriate
+	    steps can be invoked by setting <varname>USE_IMAKE</varname> to
+	    <quote>YES</quote>. (If you only want the package installed in
+	    <varname>$X11PREFIX</varname> but xmkmf not being run, set
+	    <varname>USE_X11BASE</varname> instead!)</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>build</term>
+
+	<listitem>
+	  <para>Once configuration has taken place, the software will be built 
+	    by invoking <varname>$MAKE_PROGRAM</varname> on
+	    <varname>$MAKEFILE</varname> with <varname>$ALL_TARGET</varname> as
+	    the target to build.  The default <varname>MAKE_PROGRAM</varname> is
+	    <quote>gmake</quote> if <varname>USE_GMAKE</varname> is set,
+	    <quote>make</quote> otherwise. <varname>MAKEFILE</varname> is set to
+	    <quote>Makefile</quote> by default, and <varname>ALL_TARGET</varname>
+	    defaults to <quote>all</quote>.  Any of these variables
+	    can be set in the package's Makefile to change the default
+	    build process.</para> 
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>install</term>
+
+	<listitem>
+	  <para>Once the build stage has completed, the final step is to install
+	    the software in public directories, so users can access
+	    the programs and files.  As in the
+	    build-target, <varname>$MAKE_PROGRAM</varname> is invoked on
+	    <varname>$MAKEFILE</varname> here, but with the
+	    <varname>$INSTALL_TARGET</varname> instead, the latter defaulting to
+	    <quote>install</quote> (plus <quote>install.man</quote>, if
+	    <varname>USE_IMAKE</varname> is set).</para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>If no target is specified, the default is <quote>build</quote>.
+      If a subsequent stage is requested, all prior stages are made: e.g.
+      <command>make build</command> will also perform the equivalent of:</para>
+
+    <programlisting>
+make fetch
+make checksum
+make extract
+make patch
+make configure
+make build</programlisting>
+  </sect1>
+
+  <sect1 id="build.helpful-targets">
+    <title>Other helpful targets</title>
+
+    <variablelist>
+      <varlistentry>
+	<term>pre/post-*</term>
+
+	<listitem>
+	  <para>For any of the main targets described in the previous section, two
+	    auxiliary targets exist with <quote>pre-</quote> and
+	    <quote>post-</quote> used as a prefix
+	    for the main target's name.  These targets are invoked before and
+	    after the main target is called, allowing extra configuration or
+	    installation steps be performed from a package's Makefile, for
+	    example, which a program's configure script 
+	    or install target omitted.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>do-*</term>
+
+	<listitem>
+	  <para>Should one of the main targets do the wrong thing, and should there
+	    be no variable to fix this, you can redefine it with the do-*
+	    target.  (Note that redefining the target itself instead of the
+	    do-* target is a bad idea, as the pre-* and post-* targets won't be
+	    called anymore, etc.) You will not usually need to do this.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>reinstall</term>
+
+	<listitem>
+	  <para>If you did a <command>make install</command> and you noticed some file
+	    was not installed properly, you can repeat the installation with this
+	    target, which will ignore the <quote>already installed</quote> flag.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>deinstall</term>
+
+	<listitem>
+	  <para>This target does a pkg_delete(1) in the current directory,
+	    effectively de-installing the package. The following variables can
+	    be used to tune the behaviour:</para>
+
+	  <variablelist>
+	    <varlistentry>
+	      <term><varname>PKG_VERBOSE</varname></term>
+
+	      <listitem>
+		<para>Add a "-v" to the &man.pkg.delete.1; command.</para>
+	      </listitem>
+	    </varlistentry>
+
+	    <varlistentry>
+	      <term><varname>DEINSTALLDEPENDS</varname></term>
+
+	      <listitem>
+		<para>Remove all packages that require (depend on) the given package.
+		  This can be used to remove any packages that may have been pulled in
+		  by a given package, e.g. if <command>make deinstall
+		    DEINSTALLDEPENDS=1</command> is done in
+		  <filename>pkgsrc/x11/kde</filename>, this is likely to remove whole
+		  KDE. Works by adding <quote>-R</quote> to the &man.pkg.delete.1; command line.</para>
+	      </listitem>
+	    </varlistentry>
+	  </variablelist>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>update</term>
+
+	<listitem>
+	  <para>This target causes the current package to be updated to the latest
+	    version.  The package and all depending packages first get de-installed,
+	    then current versions of the corresponding packages get compiled and
+	    installed.  This is similar to manually noting which packages are
+	    currently installed, then performing a series of <command>make
+	      deinstall</command> and <command>make install</command> (or whatever
+	    <varname>UPDATE_TARGET</varname> is set to) for these packages.</para>
+
+	  <para>You can use the <quote>update</quote> target to resume package
+	    updating in case a previous <command>make update</command> was interrupted
+	    for some reason.  However, in this case, make sure you don't call
+	    <command>make clean</command> or otherwise remove the list of dependent
+	    packages in <varname>WRKDIR</varname>.  Otherwise you lose the
+	    ability to automatically update the current package along with the
+	    dependent packages you have installed.</para>
+
+	  <para>Resuming an interrupted <command>make update</command> will only work as
+	    long as the package tree remains unchanged.  If the source code for
+	    one of the packages to be updated has been changed, resuming
+	    <command>make update</command> will most certainly fail!</para>
+
+	  <para>The following variables can be used either on the command line or in
+	    <filename>/etc/mk.conf</filename> to alter the behaviour of
+	    <command>make update</command>:</para>
+
+	  <variablelist>
+	    <varlistentry>
+	      <term><varname>UPDATE_TARGET</varname></term>
+
+	      <listitem>
+		<para>Install target to recursively use for the updated package and the
+		  dependent packages.  Defaults to <varname>DEPENDS_TARGET</varname> if set,
+		  <quote>install</quote> otherwise for <command>make update</command>.
+		  e.g. <command>make update UPDATE_TARGET=package</command></para>
+	      </listitem>
+	    </varlistentry>
+
+	    <varlistentry>
+	      <term><varname>NOCLEAN</varname></term>
+
+	      <listitem>
+		<para>Don't clean up after updating.  Useful if you want to leave the
+		  work sources of the updated packages around for inspection or
+		  other purposes.  Be sure you eventually clean up the source
+		  tree (see the <quote>clean-update</quote> target below) or you may
+		  run into troubles with old source code still lying around on your
+		  next <command>make</command> or <command>make update</command>.</para>
+	      </listitem>
+	    </varlistentry>
+
+	    <varlistentry>
+	      <term><varname>REINSTALL</varname></term>
+
+	      <listitem>
+		<para>Deinstall each package before installing (making
+		  <varname>DEPENDS_TARGET</varname>). This may be necessary if the
+		  <quote>clean-update</quote> target (see below) was called after
+		  interrupting a running <command>make update</command>.</para>
+	      </listitem>
+	    </varlistentry>
+
+	    <varlistentry>
+	      <term><varname>DEPENDS_TARGET</varname></term>
+
+	      <listitem>
+		<para>Allows you to disable recursion and hardcode the target for
+		  packages.  The default is <quote>update</quote> for the update target,
+		  facilitating a recursive update of prerequisite packages.
+		  Only set <varname>DEPENDS_TARGET</varname> if you want to disable
+		  recursive updates. Use <varname>UPDATE_TARGET</varname> instead to just
+		  set a specific target for each package to be installed during
+		  <command>make update</command> (see above).</para>
+	      </listitem>
+	    </varlistentry>
+	  </variablelist>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>clean-update</term>
+
+	<listitem>
+	  <para>Clean the source tree for all packages that would get updated if
+	    <command>make update</command> was called from the current directory.
+	    This target should not be used if the current package (or any of its
+	    depending packages) have already been de-installed (e.g., after calling
+	    <command>make update</command>) or you may lose some packages you intended
+	    to update. As a rule of thumb: only use this target
+	    <emphasis>before</emphasis> the first time you run
+	    <command>make update</command> and only if you have a dirty package tree
+	    (e.g., if you used <varname>NOCLEAN</varname>).</para>
+
+	  <para>If you unsure about whether your tree is clean you can either perform
+	    a <command>make clean</command> at the top of the tree, or use the
+	    following sequence of commands from the directory of the package you
+	    want to update (<emphasis>before</emphasis> running
+	    <command>make update</command> for the first time, otherwise you lose
+	    all the packages you wanted to update!):</para>
+
+	  <screen><prompt>#</prompt> <userinput>make clean-update</userinput>
+<prompt>#</prompt> <userinput>make clean CLEANDEPENDS=YES</userinput>
+<prompt>#</prompt> <userinput>make update</userinput></screen>
+
+	  <para>The following variables can be used either on the command line or in
+	    <filename>/etc/mk.conf</filename> to alter the behaviour of
+	    <command>make clean-update</command>:</para>
+
+	  <variablelist>
+	    <varlistentry>
+	      <term><varname>CLEAR_DIRLIST</varname></term>
+
+	      <listitem>
+		<para>After <command>make clean</command>, do not reconstruct the list of
+		  directories to update for this package.  Only use this if <command>make
+		    update</command> successfully installed all packages you wanted to
+		  update.  Normally, this is done automatically on <command>make
+		    update</command>, but may have been suppressed by the
+		  <varname>NOCLEAN</varname> variable (see above).</para>
+	      </listitem>
+	    </varlistentry>
+	  </variablelist>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>info</term>
+
+	<listitem>
+	  <para>This target invokes &man.pkg.info.1; for the current
+	    package. You can use this to check which version of a package is
+	    installed.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>readme</term>
+
+	<listitem>
+	  <para>This target generates a <filename>README.html</filename> file, which
+	    can be viewed using a browser such as <pkg>www/mozilla</pkg> or
+	    <pkg>www/links</pkg>. The generated files contain references to any
+	    packages which are in the <varname>PACKAGES</varname> directory on
+	    the local host. The generated files can be made to refer to URLs based on
+	    <varname>FTP_PKG_URL_HOST</varname> and
+	    <varname>FTP_PKG_URL_DIR</varname>. For example, if I wanted to generate
+	    <filename>README.html</filename> files which pointed to binary packages
+	    on the local machine, in the directory
+	    <filename>/usr/packages</filename>, set
+	    <varname>FTP_PKG_URL_HOST=file://localhost</varname> and
+	    <varname>FTP_PKG_URL_DIR=/usr/packages</varname>. The
+	    <varname>${PACKAGES}</varname> directory and its subdirectories will be
+	    searched for all the binary packages.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>readme-all</term>
+
+	<listitem>
+	  <para>Use this target to create a file <filename>README-all.html</filename>
+	    which contains a list of all packages currently available in the &os;
+	    Packages Collection, together with the category they belong to and a
+	    short description. This file is compiled from the
+	    <filename>pkgsrc/*/README.html</filename> files, so be sure to run
+	    this <emphasis>after</emphasis> a <command>make readme</command>.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>cdrom-readme</term>
+
+	<listitem>
+	  <para>This is very much the same as the <quote>readme</quote> target (see
+	    above), but is to be used when generating a pkgsrc tree to be written
+	    to a CD-ROM.  This target also produces
+	    <filename>README.html</filename> files, and can be made to refer
+	    to URLs based on <varname>CDROM_PKG_URL_HOST</varname> and
+	    <varname>CDROM_PKG_URL_DIR</varname>.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>show-distfiles</term>
+
+	<listitem>
+	  <para>This target shows which distfiles and patchfiles are needed to build
+	    the package. (<varname>DISTFILES</varname> and
+	    <varname>PATCHFILES</varname>, but not <filename>patches/*</filename>)</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>show-downlevel</term>
+
+	<listitem>
+	  <para>This target shows nothing if the package is not installed. If a version
+	    of this package is installed, but is not the version provided in this
+	    version of pkgsrc, then a warning message is displayed. This target can
+	    be used to show which of your installed packages are downlevel, and so
+	    the old versions can be deleted, and the current ones added.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>show-pkgsrc-dir</term>
+
+	<listitem>
+	  <para>This target shows the directory in the pkgsrc hierarchy from which the
+	    package can be built and installed. This may not be the same directory
+	    as the one from which the package was installed. This target is intended
+	    to be used by people who may wish to upgrade many packages on a single
+	    host, and can be invoked from the top-level pkgsrc Makefile by using the
+	    <quote>show-host-specific-pkgs</quote> target.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>show-installed-depends</term>
+
+	<listitem>
+	  <para>This target shows which installed packages match the current package's
+	    <varname>DEPENDS</varname>. Useful if out of date dependencies are
+	    causing build problems.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>check-shlibs</term>
+
+	<listitem>
+	  <para>After a package is installed, check all its binaries and (on ELF
+	    platforms) shared libraries to see if they find the shared libs they need.
+	    Run by default if <varname>PKG_DEVELOPER</varname> is set in
+	    <filename>/etc/mk.conf</filename>.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>print-PLIST</term>
+
+	<listitem>
+	  <para>After a <quote>make install</quote> from a new or
+	    upgraded pkg, this prints out an attempt to generate a new
+	    <filename>PLIST</filename> from a <command>find -newer
+	    work/.extract_done</command>.  An attempt is made to care
+	    for shared libs etc., but it is
+	    <emphasis>strongly</emphasis> recommended to review the
+	    result before putting it into
+	    <filename>PLIST</filename>. On upgrades, it's useful to
+	    diff the output of this command against an already
+	    existing <filename>PLIST</filename> file.</para>
+
+	  <para>If the package installs files via tar(1) or other
+	    methods that don't update file access times, be sure to
+	    add these files manually to your
+	    <filename>PLIST</filename>, as the <quote>find
+	    -newer</quote> command used by this target won't catch
+	    them!</para>
+
+	  <para> See <xref linkend="print-PLIST"/> for more
+	    information on this target.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>bulk-package</term>
+
+	<listitem>
+	  <para>Used to do bulk builds. If an appropriate binary package already exists,
+	    no action is taken. If not, this target will compile, install and
+	    package it (and it's depends, if <varname>PKG_DEPENDS</varname> is
+	    set properly. See <xref linkend="binary.configuration"/>.
+	    After creating the binary
+	    package, the sources, the just-installed package and it's required
+	    packages are removed, preserving free disk space.</para>
+
+	  <para><emphasis>Beware that this target may deinstall all
+	    packages installed on a system!</emphasis></para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>bulk-install</term>
+
+	<listitem>
+	  <para>Used during bulk-installs to install required packages. If an
+	    upto-date binary package is available, it will be installed via
+	    &man.pkg.add.1;. If not, <command>make bulk-package</command> will be executed,
+	    but the installed binary not be removed. </para>
+
+	  <para> A binary package is considered <quote>upto-date</quote> to be
+	    installed via &man.pkg.add.1; if:</para>
+
+	  <itemizedlist>
+	    <listitem>
+	      <para>None of the package's files (<filename>Makefile</filename>,
+		...) were modified since it was built.</para>
+	    </listitem>
+
+	    <listitem>
+	      <para>None of the package's required (binary) packages were
+		modified since it was built.</para>
+	    </listitem>
+	  </itemizedlist>
+
+	  <para><emphasis>Beware that this target may deinstall all
+	    packages installed on a system!</emphasis></para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </sect1>
+</chapter>

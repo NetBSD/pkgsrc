@@ -1,0 +1,59 @@
+<!-- $NetBSD: getting.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+
+<chapter id="getting">
+  <title>Where to get pkgsrc</title>
+
+  <para>There are three ways to get pkgsrc. Either as a tar file, via SUP, or
+    via CVS. All three ways are described here.</para>
+
+  <sect1>
+    <title>As tar file</title>
+    
+    <para>To get pkgsrc going, you need to get the pkgsrc.tar.gz file
+      from <ulink
+      url="ftp://ftp.NetBSD.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz">ftp.NetBSD.org</ulink>
+      and unpack it into <filename>/usr/pkgsrc</filename>.</para> 
+  
+  </sect1>
+
+  <sect1>
+    <title>Via SUP</title>
+    
+    <para>As an alternative to the tar file, you can get pkgsrc via
+      the Software Update Protocol, SUP. To do so, make sure your
+      supfile has a line</para>
+  
+    <programlisting>release=pkgsrc</programlisting>
+  
+    <para>in it, see the examples in
+      <filename>/usr/share/examples/supfiles</filename>, and that the
+      <filename>/usr/pkgsrc</filename> directory exists. Then, simply run
+      <command>sup -v <replaceable>/path/to/your/supfile</replaceable></command>.</para>
+  </sect1>
+
+  <sect1>
+    <title>Via CVS</title>
+    
+    <para>To get pkgsrc via CVS, make sure you have <quote>cvs</quote> installed. If not present on
+      your system, it can be found as precompiled binary on ftp.NetBSD.org.
+      To do an initial (full) checkout of pkgsrc, do the following steps:</para>
+  
+    <screen>&cprompt; <userinput>setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot</userinput>
+&cprompt; <userinput>setenv CVS_RSH ssh</userinput>
+&cprompt; <userinput>cd /usr</userinput>
+&cprompt; <userinput>cvs checkout -P pkgsrc</userinput></screen>
+  
+    <para>This will create the <filename>pkgsrc</filename> directory in your
+      <filename>/usr</filename>, and all the package source will be stored
+      under <filename>/usr/pkgsrc</filename>.  To update pkgsrc
+      after the initial checkout, make sure you have
+      <varname>CVS_RSH</varname> set as above, then do:</para>
+  
+    <screen>&cprompt; <userinput>cd /usr/pkgsrc</userinput>
+&cprompt; <userinput>cvs -q update -dP</userinput></screen>
+  
+    <para>Please also note that it is possible to have multiple copies of the
+      pkgsrc hierarchy in use at any one time - all work is done relatively
+      within the pkgsrc tree.</para>
+  </sect1>
+</chapter>

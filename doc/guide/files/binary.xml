@@ -1,0 +1,421 @@
+<!-- $NetBSD: binary.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+
+<chapter id="binary">
+  <title>Creating binary packages</title>
+
+  <sect1>
+    <title>Building a single binary package</title>
+
+    <para>Once you have built and installed a package, you can create a
+      <emphasis>binary package</emphasis> which can be installed on another
+      system with &man.pkg.add.1;  This saves having to build the same package on
+      a group of hosts and wasting CPU time. It also provides a simple means
+      for others to install your package, should you distribute it.</para>
+
+    <para>To create a binary package, change into the appropriate
+      directory in pkgsrc, and run <command>make package</command>:</para>
+
+    <screen>&rprompt; <userinput>cd misc/figlet</userinput>
+&rprompt; <userinput>make package</userinput></screen>
+
+    <para>This will build and install your package (if not already done), and then
+      build a binary package from what was installed. You can then use the
+      <command>pkg_*</command> tools to manipulate it. Binary packages are
+      created by default in <filename>/usr/pkgsrc/packages</filename>, in the
+      form of a gzipped tar file. See <xref linkend="logs.package"/> for
+      a continuation of the above <pkg>misc/figlet</pkg> example.</para>
+
+    <para>See <xref linkend="submit"/> for information on how to submit such a
+      binary package.</para>
+  </sect1>
+
+  <sect1>
+    <title>Settings for creation of binary packages</title>
+
+    <para>See <xref linkend="build.helpful-targets"/>.</para>
+  </sect1>
+
+  <sect1 id="bulkbuild">
+    <title>Doing a bulk build of all packages</title>
+
+    <para>If you want to get a full set of precompiled binary packages, this section
+      describes how to get them. Beware that the bulk build will remove all
+      currently installed packages from your system! Having a FTP server
+      configured either on the machine doing the bulk builds or on a nearby NFS
+      server can help to make the packages available to everyone. See
+      &man.ftpd.8; for
+      more information. If you use a remote NFS server's storage, be sure to not
+      actually compile on NFS storage, as this slows things down a lot.</para>
+
+    <sect2 id="binary.configuration">
+      <title>Configuration</title>
+
+      <sect3 id="binary.mk.conf">
+	<title>/etc/mk.conf</title>
+
+	<para>You may want to set things in <filename>/etc/mk.conf</filename>.
+	  Look at <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename> for
+	  details of the default settings. You will want to ensure that
+	  <varname>ACCEPTABLE_LICENSES</varname> meet your local policy.
+	  As used in this example, <varname>_ACCEPTABLE=yes</varname>
+	  accepts <emphasis>all</emphasis> licenses.</para>
+
+	<programlisting>PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
+WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
+BSDSRCDIR=      /usr/src
+BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
+OBJHOSTNAME?=   yes               # use work.`hostname`
+FAILOVER_FETCH= yes               # insist on the correct checksum
+PKG_DEVELOPER?= yes
+_ACCEPTABLE=    yes</programlisting>
+      </sect3>
+
+      <sect3>
+	<title><filename>build.conf</filename></title>
+
+	<para>In <filename>pkgsrc/mk/bulk</filename>, copy
+	  <filename>build.conf-example</filename> to
+	  <filename>build.conf</filename> and
+	  edit it, following the comments in that file. This is the config
+	  file that determines where log files are generated after the build,
+	  where to mail the build report to, where your pkgsrc tree is located and
+	  which user to &man.su.8; to to do a <command>cvs update</command>.</para>
+      </sect3>
+
+      <sect3>
+	<title><filename>pre-build.local</filename></title>
+
+	<para>It is possible to configure the bulk build to perform certain site
+	  specific tasks at the end of the pre-build stage.  If the file
+	  <filename>pre-build.local</filename> exists in
+	  <filename>/usr/pkgsrc/mk/bulk</filename> it will be executed
+	  (as a sh(1) script) at the end of the usual pre-build stage.  An
+	  example use of <filename>pre-build.local</filename> is to have the
+	  line:</para>
+
+	<screen>&rprompt; <userinput>echo "I do not have enough disk space to build this pig." \
+    &gt; pkgsrc/games/crafty-book-enormous/$BROKENF</userinput></screen>
+
+	<para>to prevent the system from trying to build a particular package
+	  which requires nearly 3 GB of disk space.</para>
+      </sect3>
+    </sect2>
+
+    <sect2>
+      <title>Other environmental considerations</title>
+
+      <para>As <filename>/usr/pkg</filename> will be completely deleted at the
+	start of bulk builds, make sure your login shell is placed somewhere
+	else. Either drop it into <filename>/usr/local/bin</filename>
+	(and adjust your login shell in the passwd file), or (re-)install
+	it via &man.pkg.add.1; from
+	<filename>/etc/rc.local</filename>, so you can login after a reboot
+	(remember that your current process won't die if the package is
+	removed, you just can't start any new instances of the shell any more).
+	Also, if you use &os; earlier than 1.5, or you still want to use the
+	pkgsrc version of ssh for some reason, be sure to install ssh before
+	starting it from <filename>rc.local</filename>:</para>
+
+      <programlisting>( cd /usr/pkgsrc/security/ssh ; make bulk-install )
+if [ -f	/usr/pkg/etc/rc.d/sshd ]; then
+    /usr/pkg/etc/rc.d/sshd
+fi</programlisting>
+
+      <para>Not doing so will result in you being not able to log in via ssh
+	after the bulk build is finished or if the machine gets rebooted
+	or crashes. You have been warned! :)</para>
+    </sect2>
+
+    <sect2>
+      <title>Operation</title>
+
+      <para>Make sure you don't need any of the packages still installed.</para>
+
+      <warning>
+	<para>During the bulk build, <emphasis>all packages will be
+	    removed!</emphasis></para>
+      </warning>
+
+      <para>Be sure to remove all other things that might
+	interfere with builds, like some libs installed in
+	<filename>/usr/local</filename>, etc. then become root and type:</para>
+
+      <screen>&rprompt; <userinput>cd /usr/pkgsrc</userinput>
+&rprompt; <userinput>sh mk/bulk/build</userinput></screen>
+
+      <para>If for some reason your last build didn't complete (power failure,
+	system panic, ...), you can continue it by running:</para>
+
+      <screen>&rprompt; <userinput>sh mk/bulk/build restart</userinput></screen>
+
+      <para>At the end of the bulk build, you will get a summary via mail, and find
+	build logs in the directory specified by <varname>FTP</varname> in the
+	<filename>build.conf</filename> file.</para>
+    </sect2>
+
+    <sect2>
+      <title>What it does</title>
+
+      <para>The bulk builds consist of three steps:</para>
+
+      <variablelist>
+	<varlistentry>
+	  <term>1. pre-build</term>
+
+	  <listitem>
+	    <para>The script updates your pkgsrc tree via (anon)cvs, then cleans
+	      out any broken distfiles, and removes all packages installed.</para>
+	  </listitem>
+	</varlistentry>
+
+	<varlistentry>
+	  <term>2. the bulk build</term>
+
+	  <listitem>
+	    <para>This is basically
+	      <quote>make bulk-package</quote> with an optimised
+	      order in which packages will be built. Packages that don't require
+	      other packages will be built first, and packages with many dependencies
+	      will be built later.</para>
+	  </listitem>
+	</varlistentry>
+
+	<varlistentry>
+	  <term>3. post-build</term>
+
+	  <listitem>
+	    <para>Generates a report that's placed in the directory specified
+	      in the <filename>build.conf</filename> file named
+	      <filename>broken.html</filename>, a short version of
+	      that report will also be mailed to the build's admin.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+
+      <para>During the build, a list of broken packages will be compiled in
+	<filename>/usr/pkgsrc/.broken</filename> (or
+	<filename>.../.broken.${MACHINE}</filename> if
+	<varname>OBJMACHINE</varname> is set),
+	individual build logs of broken builds can be found in the package's
+	directory. These files are used by the bulk-targets to mark broken builds
+	to not waste time trying to rebuild them, and they can be used to debug
+	these broken package builds later.</para>
+    </sect2>
+
+    <sect2>
+      <title>Disk space requirements</title>
+
+      <para>Currently, roughly the following requirements are valid for
+	NetBSD 2.0/i386:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>10 GB - distfiles (NFS ok)</para>
+	</listitem>
+
+	<listitem>
+	  <para>8 GB - full set of all binaries (NFS ok)</para>
+	</listitem>
+
+	<listitem>
+	  <para>5 GB - temp space for compiling (local disk recommended)</para>
+	</listitem>
+      </itemizedlist>
+
+      <para>Note that all pkgs will be de-installed as soon as they are turned into a
+	binary package, and that sources are removed, so there is no excessively huge
+	demand to disk space. Afterwards, if the package is needed again, it will
+	be installed via &man.pkg.add.1; instead of building again, so
+	there are no cycles wasted by recompiling.</para>
+    </sect2>
+
+    <sect2>
+      <title>Setting up a sandbox for chroot'ed builds</title>
+
+      <para>If you don't want all the pkgs nuked from a machine (rendering it useless
+	for anything but pkg compiling), there is the possibility of doing the pkg
+	bulk build inside a chroot environment.</para>
+
+      <para>The first step to do so is setting up a chroot
+	sandbox, e.g. <filename>/usr/sandbox</filename>.
+	After extracting all the sets from a &os; installation or doing a
+	<command>make distribution DESTDIR=/usr/sandbox</command> in
+	<filename>/usr/src/etc</filename>, be sure the following
+	items are present and properly configured:</para>
+
+      <procedure>
+	<step>
+	  <para>Kernel</para>
+
+	  <screen>&rprompt; <userinput>cp /netbsd /usr/sandbox</userinput></screen>
+	</step>
+
+	<step>
+	  <para><filename>/dev/*</filename></para>
+
+	  <screen>&rprompt; <userinput>cd /usr/sandbox/dev ; sh MAKEDEV all</userinput></screen>
+	</step>
+
+	<step>
+	  <para><filename>/etc/resolv.conf</filename> (for <pkg>security/smtpd</pkg> and mail):</para>
+
+	  <screen>&rprompt; <userinput>cp /etc/resolv.conf /usr/sandbox/etc</userinput></screen>
+	</step>
+
+	<step>
+	  <para>Working(!) mail config (hostname, sendmail.cf):</para>
+
+	  <screen>&rprompt; <userinput>cp /etc/mail/sendmail.cf /usr/sandbox/etc/mail</userinput></screen>
+	</step>
+
+	<step>
+	  <para><filename>/etc/localtime</filename> (for <pkg>security/smtpd</pkg>):</para>
+
+	  <screen>&rprompt; <userinput>ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime</userinput></screen>
+	</step>
+
+	<step>
+	  <para><filename>/usr/src</filename> (system sources, for <pkg>sysutils/aperture</pkg>,
+	    <pkg>net/ppp-mppe</pkg>):</para>
+
+	  <screen>&rprompt; <userinput>ln -s ../disk1/cvs .</userinput>
+&rprompt; <userinput>ln -s cvs/src-1.6 src</userinput></screen>
+	</step>
+
+	<step>
+	  <para>Create <filename>/var/db/pkg</filename> (not part of default install):</para>
+
+	  <screen>&rprompt; <userinput>mkdir /usr/sandbox/var/db/pkg</userinput></screen>
+	</step>
+
+	<step>
+	  <para>Create <filename>/usr/pkg</filename> (not part of default install):</para>
+
+	  <screen>&rprompt; <userinput>mkdir /usr/sandbox/usr/pkg</userinput></screen>
+	</step>
+
+	<step>
+	  <para>Checkout pkgsrc via cvs into
+	    <filename>/usr/sandbox/usr/pkgsrc</filename>:</para>
+
+	  <screen>&rprompt; <userinput>cd /usr/sandbox/usr</userinput>
+&rprompt; <userinput>cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -d -P pkgsrc</userinput></screen>
+
+          <para>Do not mount/link this to the copy of your pkgsrc tree
+	    you do development in, as this will likely cause problems!
+	    </para> 
+	</step>
+
+	<step>
+	  <para>Make
+	    <filename>/usr/sandbox/usr/pkgsrc/packages</filename> and
+	    <filename>.../distfiles</filename> point somewhere
+	    appropriate. NFS- and/or nullfs-mounts may come in handy!
+	    </para>
+	</step>
+
+	<step>
+	  <para>Edit <filename>/etc/mk.conf</filename>, see <xref linkend="binary.mk.conf"/>.</para>
+	</step>
+
+	<step>
+	  <para>Adjust <filename>mk/bulk/build.conf</filename> to suit your needs.</para>
+	</step>
+
+	<step>
+	  <para>If you have set <varname>CVS_USER</varname> in
+	    <filename>build.conf</filename>, make sure that 
+	    account exists and can do a <command>cvs ${CVS_FLAGS}
+	    update</command> properly!</para> 
+	</step>
+      </procedure>
+
+      <para>When the chroot sandbox is setup, you can start
+	the build with the following steps:</para>
+
+      <screen>&rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>
+&rprompt; <userinput>sh mk/bulk/do-sandbox-build</userinput></screen>
+
+      <para>This will just jump inside the sandbox and start building.
+	At the end of the build, mail will be sent with the results of the build.
+	Created binary pkgs will be in
+	<filename>/usr/sandbox/usr/pkgsrc/packages</filename> (wherever
+	that points/mounts to/from).</para>
+    </sect2>
+
+    <sect2>
+      <title>Building a partial set of packages</title>
+
+      <para> In addition to building a complete set of all packages in
+        pkgsrc, the <filename>pkgsrc/mk/bulk/build</filename> script
+        may be used to build a subset of the packages contained in
+        pkgsrc.  By setting defining <varname>SPECIFIC_PKGS</varname>
+        in <filename>/etc/mk.conf</filename>, the variables</para>
+
+      <itemizedlist>
+	<listitem><para>SITE_SPECIFIC_PKGS</para></listitem>
+	<listitem><para>HOST_SPECIFIC_PKGS</para></listitem>
+	<listitem><para>GROUP_SPECIFIC_PKGS</para></listitem>
+	<listitem><para>USER_SPECIFIC_PKGS</para></listitem>
+      </itemizedlist>
+
+      <para> will define the set of packages which should be built.
+        The bulk build code will also include any packages which are
+        needed as dependencies for the explicitly listed packages.
+	</para>
+
+      <para> One use of this is to do a bulk build with
+        <varname>SPECIFIC_PKGS</varname> in a chroot sandbox
+        periodically to have a complete set of the binary packages
+        needed for your site available without the overhead of
+        building extra packages that are not needed.  </para>
+
+    </sect2>
+  </sect1>
+
+  <sect1>
+    <title>Creating a multiple CD-ROM packages collection</title>
+
+    <para>After your pkgsrc bulk-build has completed, you may wish to create a CD-ROM
+      set of the resulting binary packages to assist in installing packages on
+      other machines.  The <pkg>pkgtools/cdpack</pkg> package provides a simple
+      tool for creating the ISO 9660 images. <command>cdpack</command> arranges
+      the packages on the CD-ROMs in a way that keeps all the dependencies for
+      given package on the same CD as that package.</para>
+
+    <sect2>
+      <title>Example of cdpack</title>
+
+      <para>Complete documentation for cdpack is found in the
+	cdpack(1) manpage. The following
+	short example assumes that the binary packages are left in
+	<filename>/usr/pkgsrc/packages/All</filename> and that sufficient disk
+	space exists in <filename>/u2</filename> to hold the ISO 9660 images.</para>
+
+      <screen>&rprompt; <userinput>mkdir /u2/images</userinput>
+&rprompt; <userinput>pkg_add /usr/pkgsrc/packages/All/cdpack</userinput>
+&rprompt; <userinput>cdpack /usr/pkgsrc/packages/All /u2/images</userinput></screen>
+
+      <para>If you wish to include a common set of files
+	(<filename>COPYRIGHT</filename>, <filename>README</filename>, etc.)
+	on each CD in the collection, then you need to create a directory which
+	contains these files. e.g.</para>
+
+      <screen>&rprompt; <userinput>mkdir /tmp/common</userinput>
+&rprompt; <userinput>echo "This is a README" &gt; /tmp/common/README</userinput>
+&rprompt; <userinput>echo "Another file" &gt; /tmp/common/COPYING</userinput>
+&rprompt; <userinput>mkdir /tmp/common/bin</userinput>
+&rprompt; <userinput>echo "#!/bin/sh" &gt; /tmp/common/bin/myscript</userinput>
+&rprompt; <userinput>echo "echo Hello world" &gt;&gt; /tmp/common/bin/myscript</userinput>
+&rprompt; <userinput>chmod 755 /tmp/common/bin/myscript</userinput></screen>
+
+      <para>Now create the images:</para>
+
+      <screen>&rprompt; <userinput>cdpack -x /tmp/common /usr/pkgsrc/packages/All /u2/images</userinput></screen>
+
+      <para>Each image will contain <filename>README</filename>,
+	<filename>COPYING</filename>, and <filename>bin/myscript</filename>
+	in their root directories.</para>
+    </sect2>
+  </sect1>
+</chapter>
