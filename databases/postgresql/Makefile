@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.56 2000/12/07 16:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2000/12/11 16:43:11 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
+.include "../../databases/postgresql/Makefile.common"
+
+# NetBSD libedit's readline emulation doesn't support enough features, yet.
 DEPENDS+=		readline-*:../../devel/readline
 
 MAKEFILE=		GNUmakefile
 
-.include "../../mk/bsd.prefs.mk"
-
-.if exists(/usr/sbin/user)
-USERDIR=		/usr/sbin
-.else
-DEPENDS+=		user>=20000313:../../sysutils/user
-USERDIR=		${LOCALBASE}/sbin
-.endif
-
 # Needs ELF clue, mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-alpha *-*-mips
+
+.include "../../mk/bsd.prefs.mk"
 
 # PGUSER	username of the database administrator
 # PGGROUP	group of the database administrator
@@ -39,6 +35,20 @@ CONFIGURE_ARGS+=	--without-perl --without-odbc --without-tcl
 CONFIGURE_ARGS+=	--with-includes="${LOCALBASE}/include"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
+.if ${OPSYS} == "NetBSD"
+.if exists(/usr/sbin/user)
+ADDUSER=		/usr/sbin/useradd
+ADDGROUP=		/usr/sbin/groupadd
+.else
+DEPENDS+=		user>=20000313:../../sysutils/user
+ADDUSER=		${LOCALBASE}/sbin/useradd
+ADDGROUP=		${LOCALBASE}/sbin/groupadd
+.endif
+.elif ${OPSYS} == "SunOS"
+ADDUSER=		useradd
+ADDGROUP=		groupadd
+.endif
+
 pre-install:
 	@case "X${PGUSER}" in						\
 	Xbin|Xetc|Xinclude|Xinfo|Xlib|Xlibdata|Xlibexec|Xman|Xsbin|Xshare) \
@@ -53,10 +63,23 @@ pre-install:
 	esac
 
 	${SED}	-e 's|@PGUSER@|${PGUSER}|g' \
+		-e "s,@PGGROUP@,${PGGROUP},g" \
+		-e "s,@CAT@,${CAT},g" \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e 's|@PGUSER@|${PGUSER}|g' \
-		-e 's|@PGGROUP@|${PGGROUP}|g' \
-		-e 's|@USERDIR@|${USERDIR}|g' \
+	${SED}	-e "s,@PGUSER@,${PGUSER},g" \
+		-e "s,@PGGROUP@,${PGGROUP},g" \
+		-e "s,@ADDUSER@,${ADDUSER},g" \
+		-e "s,@ADDGROUP@,${ADDGROUP},g" \
+		-e "s,@CAT@,${CAT},g" \
+		-e "s,@CHGRP@,${CHGRP},g" \
+		-e "s,@CHMOD@,${CHMOD},g" \
+		-e "s,@CHOWN@,${CHOWN},g" \
+		-e "s,@CP@,${CP},g" \
+		-e "s,@GREP@,${GREP},g" \
+		-e "s,@MKDIR@,${MKDIR},g" \
+		-e "s,@RM@,${RM},g" \
+		-e "s,@SU@,${SU},g" \
+		-e "s,@TOUCH@,${TOUCH},g" \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
@@ -88,8 +111,7 @@ post-install:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g" \
 		-e "s|@PGUSER@|${PGUSER}|g" \
 		< ${FILESDIR}/pgsql.sh.tmpl > ${WRKDIR}/pgsql.sh
-	${INSTALL} -c -o root -g ${PGGROUP} -m 554 \
-		${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
+	${INSTALL_SCRIPT} ${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
 
 	${CAT} ${FILESDIR}/exclude ${FILESDIR}/man.tcl ${FILESDIR}/man.tk \
 		| ${SED} "s,^#.*,," \
@@ -109,4 +131,4 @@ post-install:
 
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include "../../databases/postgresql/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

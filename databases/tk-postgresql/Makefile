@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2000/09/01 14:34:21 jwise Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/11 16:43:13 jlam Exp $
+
+.include "../../databases/postgresql/Makefile.common"
 
 PKGNAME=		tk-${DISTNAME}
 
 DEPENDS+=		tcl-postgresql-${PG_VERS}:../../databases/tcl-postgresql
-DEPENDS+=		tk-8.3.2:../../x11/tk
+DEPENDS+=		tk>=8.3.2:../../x11/tk
 
-TCLSH=			${LOCALBASE}/bin/tclsh
-TCL_INCDIR=		${LOCALBASE}/include
-TCL_CONFIGDIR=		${LOCALBASE}/lib
+EVAL_PREFIX+=		TCLDIR=tcl
+TCLSH=			${TCLDIR}/bin/tclsh
+TCL_INCDIR=		${TCLDIR}/include
+TCL_CONFIGDIR=		${TCLDIR}/lib
 
-TK_INCDIR=		${LOCALBASE}/include
-TK_CONFIGDIR=		${LOCALBASE}/lib
+EVAL_PREFIX+=		TKDIR=tk
+TK_INCDIR=		${TKDIR}/include
+TK_CONFIGDIR=		${TKDIR}/lib
 
 USE_X11=		# defined
 
@@ -21,7 +25,7 @@ CONFIGURE_ARGS+=	--with-tcl \
 			--with-tclconfig="${TCL_CONFIGDIR}" \
 			--with-tkconfig="${TK_CONFIGDIR}" \
 			--with-includes="${TCL_INCDIR} ${TK_INCDIR}" \
-			--with-libraries="${LOCALBASE}/lib"
+			--with-libraries="${LOCALBASE}/lib ${TCLDIR}/lib ${TKDIR}/lib"
 CONFIGURE_ENV+=		TCLSH="${TCLSH}"
 
 do-build:
@@ -36,4 +40,4 @@ do-install:
 		${WRKDIR}/${DISTNAME}/doc/man.tar.gz \
 		`${SED} -e "s/#.*//" ${FILESDIR}/man.tk`
 
-.include "../../databases/postgresql/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
