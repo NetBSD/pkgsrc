@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/04 23:16:57 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/04 23:58:42 jtb Exp $
 
 DISTNAME=	netio114
 PKGNAME=	netio-1.14
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	tron@netbsd.org
 COMMENT=	Network benchmark for DOS, OS/2 2.x, Windows NT/2000 and Unix
 
-LICENSE=	non-commercial
+LICENSE=	no-commercial-use
 
 ALL_TARGET=	pkgsrc
 WRKSRC=		${WRKDIR}
