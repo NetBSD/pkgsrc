@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/29 15:32:12 schmonz Exp $
+
+--- greylist.orig	2003-10-20 09:53:04.000000000 -0400
++++ greylist
+@@ -27,8 +27,9 @@ my $version = "0.2";
+ 
+ # TODO: alternative logging options, instead of syslog?
+ 
+-use Sys::Syslog;
++use Sys::Syslog qw(:DEFAULT setlogsock);
+ 
++setlogsock('unix');
+ 
+ openlog "greylist", "pid", "mail";
+ 
+@@ -277,14 +278,14 @@ cleanup_maybe;
+ # TODO: change to an immediate error here..?
+ unless ( defined $ENV{TCPREMOTEIP} )
+ {
+-	syslog "err", "ENV{TCPREMOEIP} not set!";
++	syslog "err", "ENV{TCPREMOTEIP} not set!";
+ 	smtp_temp_fail "Cannot find remote IP";
+ }
+ 
+ # now this should never happen...
+ unless ( $ENV{TCPREMOTEIP} =~ m{^(\d+\.\d+\.\d+\.\d+)$} )
+ {
+-	syslog "err", "ENV{TCPREMOEIP} = $ENV{TCPREMOTEIP} - bad format!";
++	syslog "err", "ENV{TCPREMOTEIP} = $ENV{TCPREMOTEIP} - bad format!";
+ 	smtp_temp_fail "Bad format for remote IP";
+ }
+ 
