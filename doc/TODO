@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2940 2005/01/20 18:10:05 adrianp Exp $
+$NetBSD: TODO,v 1.2941 2005/01/20 20:38:22 bad Exp $
 
 Suggested new packages
 ======================
@@ -584,7 +584,6 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.3
 	o jakarta-tomcat-5.0.30
-	o jdb-1.13
 	o jessie-1.0.0
 	o jftpgw-0.13.5
 	o jhead-2.2
