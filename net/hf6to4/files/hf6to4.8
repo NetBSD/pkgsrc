@@ -1,4 +1,4 @@
-.\"     $NetBSD: hf6to4.8,v 1.2 2003/09/16 13:05:58 hubertf Exp $
+.\"     $NetBSD: hf6to4.8,v 1.3 2004/01/31 23:56:47 snj Exp $
 .Dd August 23, 2003
 .Dt hf6to4 8
 .Os
@@ -30,7 +30,7 @@ properly, help is provided for setting up the border router here.
 .Pp
 This script takes the burden to calculate your IPv6 address from
 existing IPv4 address and runs the commands to setup (and tear down)
-automatic 6to4 IPv6 tunnelling. In a seperate step, router
+automatic 6to4 IPv6 tunnelling. In a separate step, router
 advertisement for the inside network can be started and stopped.
 .Pp
 Possible options are:
@@ -58,7 +58,7 @@ Stops 6to4 IPv6. All addresses are removed from the
 .Xr stf 4
 device, and the default route is removed. If
 .Sy in_if
-is set, the 6to4 adresses are removed from that interface too.
+is set, the 6to4 addresses are removed from that interface too.
 .It Sy rtadvd-start
 Starts router advertizement and IPv6 packet forwarding,
 turning the machine into a IPv6 router.
