@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/29 17:46:13 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/03 18:49:37 reed Exp $
 #
 # This Makefile fragment is included by packages that use at-spi.
 #
@@ -9,7 +9,7 @@
 AT_SPI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			at-spi
-BUILDLINK_DEPENDS.at-spi?=		at-spi>=1.3.8
+BUILDLINK_DEPENDS.at-spi?=		at-spi>=1.3.8nb1
 BUILDLINK_PKGSRCDIR.at-spi?=		../../devel/at-spi
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.at-spi=at-spi

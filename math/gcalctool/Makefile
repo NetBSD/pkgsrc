@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/12/28 23:37:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:45 reed Exp $
 #
 
 DISTNAME=		gcalctool-4.2.83
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=calctool/}
 

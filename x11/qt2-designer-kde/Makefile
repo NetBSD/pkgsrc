@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/07/13 13:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/03 18:50:00 reed Exp $
 #
 
 PKGNAME=		qt2-designer-kde-${QTVERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 COMMENT=		Visual (WYSIWYG) QT GUI builder with KDE widget support
 
 CONFLICTS+=		qt2-designer-[0-9]*

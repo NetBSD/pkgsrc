@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/07/13 13:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:47 reed Exp $
 
 DISTNAME=	kdeutils-2.2.2
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Utilities for the KDE integrated X11 desktop
 
 CONFLICTS=	efax-[0-9]*

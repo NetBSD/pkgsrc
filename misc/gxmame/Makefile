@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/23 09:02:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:46 reed Exp $
 #
 
 DISTNAME=	gxmame-0.34b
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxmame/}
 
