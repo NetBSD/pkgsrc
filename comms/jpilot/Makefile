@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/06/22 05:59:58 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/06/27 18:07:53 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -45,7 +45,7 @@ post-install:
 	cd ${WRKSRC}/docs; ${INSTALL_MAN} *.1 ${MAN1DIR}
 	${TOUCH} ${PLUGINSDIR}/.directory
 
-.include "../../comms/pilot-link/buildlink.mk"
+.include "../../comms/pilot-link-libs/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

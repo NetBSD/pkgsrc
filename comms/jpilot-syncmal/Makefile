@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/22 06:20:28 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/27 18:07:54 jlam Exp $
 
 DISTNAME=		jpilot-syncmal_0.60
 PKGNAME=		jpilot-syncmal-0.60
@@ -36,5 +36,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.libs/libsyncmal.so ${PLUGINSDIR}
 
 .include "../../comms/jpilot/buildlink.mk"
-.include "../../comms/pilot-link/buildlink.mk"
+.include "../../comms/pilot-link-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
