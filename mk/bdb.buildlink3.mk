@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.12 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.13 2005/01/09 23:56:21 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  bdb.buildlink3.mk will:
@@ -11,11 +11,22 @@
 # There are two variables that can be used to tweak the selection of
 # the Berkeley DB implementation:
 #
-# BDB_DEFAULT is a user-settable variable whose value is the default
-#       Berkeley DB implementation to use.
+# BDB_DEFAULT is a user-settable variable whose value represents the
+#	package we use when either a db-1.85 interface isn't required,
+#	or a db-1.85 interface is required, but it's not built-in.
+#
+# BDB185_DEFAULT is a user-settable variable whose value represents the
+#	package we use when a db-1.85 interface is required.  It defaults
+#	to "db1" if it's built-in, or to ${BDB_DEFAULT} otherwise.
 #
 # BDB_ACCEPTED is a package-settable list of Berkeley DB implementations
 #       that may be used by the package.
+#
+# Note for when databases/db1 is imported:
+#   (1) Remove the section that conditionally sets the default
+#	value for BDB185_DEFAULT and always set it to be "db1".
+#   (2) Remove the special case for ${BDB_TYPE} == "db1" at the end.
+#   (3) Move mk/db1.builtin.mk to databases/db1/builtin.mk.
 
 BDB_BUILDLINK3_MK:=	${BDB_BUILDLINK3_MK}+
 
@@ -34,100 +45,60 @@ USE_DB185?=	no
 USE_DB185?=	yes
 .  endif
 
-BDB_DEFAULT?=	# empty
+# _BDB_PKGS is an exhaustive list of all of the Berkeley DB
+# implementations that may be used with bdb.buildlink3.mk.
+#
+_BDB_PKGS?=	db1 db2 db3 db4
+
+BDB_DEFAULT?=	db4
 BDB_ACCEPTED?=	${_BDB_PKGS}
 
-# _BDB_PKGS is an exhaustive list of all of the Berkeley DB
-# implementations that may be used with bdb.buildlink3.mk, in order
-# of precedence.
-#
-.  if !empty(USE_DB185:M[yY][eE][sS])
 CHECK_BUILTIN.db1:=	yes
-.    include "../../mk/db1.builtin.mk"
+.  include "../../mk/db1.builtin.mk"
 CHECK_BUILTIN.db1:=	no
-.    if defined(IS_BUILTIN.db1) && !empty(IS_BUILTIN.db1:M[yY][eE][sS])
-# Prefer the builtin db1 support if we requested it
-_BDB_PKGS?=	db1 db4 db3 db2
-.    else
-_BDB_PKGS?=	db4 db3 db2 db1
-.    endif
+.  if defined(IS_BUILTIN.db1) && !empty(IS_BUILTIN.db1:M[yY][eE][sS])
+BDB185_DEFAULT?=	db1
 .  else
-_BDB_PKGS?=	db4 db3 db2
+BDB185_DEFAULT?=	${BDB_DEFAULT}
 .  endif
 
-_BDB_PKGBASE.db2=	db
-_BDB_PKGSRCDIR.db2=	../../databases/db
+_BDB_PKGBASE.db2=		db
+_BDB_PKGSRCDIR.db2=		../../databases/db
 .  for _bdb_ in ${_BDB_PKGS}
 _BDB_PKGBASE.${_bdb_}?=		${_bdb_}
 _BDB_PKGSRCDIR.${_bdb_}?=	../../databases/${_bdb_}
 .  endfor
 
-_BDB_DEFAULT=	${BDB_DEFAULT}
-_BDB_ACCEPTED=	${BDB_ACCEPTED}
-
-# Mark the acceptable Berkeley DB packages and check which, if any, are
-# already installed.
-#
-.  for _bdb_ in ${_BDB_ACCEPTED}
-_BDB_OK.${_bdb_}=	yes
-.    if !defined(_BDB_INSTALLED.${_bdb_})
-_BDB_INSTALLED.${_bdb_}!=	\
-	if ${PKG_INFO} -qe ${_BDB_PKGBASE.${_bdb_}}; then		\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-MAKEFLAGS+=	_BDB_INSTALLED.${_bdb_}=${_BDB_INSTALLED.${_bdb_}}
-.    endif
-.  endfor
-
-.  if defined(USE_BUILTIN.db1)
-_BDB_OK.db1=		${USE_BUILTIN.db1}
-_BDB_INSTALLED.db1=	${USE_BUILTIN.db1}
-.  else
-_BDB_OK.db1=		no
-_BDB_INSTALLED.db1=	no
-.  endif
+_BDB_DEFAULT=		${BDB_DEFAULT}
+_BDB185_DEFAULT=	${BDB185_DEFAULT}
+_BDB_ACCEPTED=		${BDB_ACCEPTED}
 
 .  if !defined(_BDB_TYPE)
-#
-# Prefer the default one if it's accepted,...
-#
-.    if !empty(_BDB_DEFAULT) && \
-	defined(_BDB_OK.${_BDB_DEFAULT}) && \
-	!empty(_BDB_OK.${_BDB_DEFAULT}:M[yY][eE][sS])
+.    if !empty(USE_DB185:M[yY][eE][sS])
+_BDB_TYPE=	${_BDB185_DEFAULT}
+.    else
 _BDB_TYPE=	${_BDB_DEFAULT}
 .    endif
-#
-# ...otherwise, use one of the installed Berkeley DB packages,...
-#
-.    for _bdb_ in ${_BDB_ACCEPTED}
-.      if !empty(_BDB_INSTALLED.${_bdb_}:M[yY][eE][sS])
-_BDB_TYPE?=	${_bdb_}
-.      endif
-.    endfor
-#
-# ...otherwise, just use the first accepted Berkeley DB package.
-#
-.    for _bdb_ in ${_BDB_ACCEPTED}
-_BDB_TYPE?=	${_bdb_}
-.    endfor
-_BDB_TYPE?=	none
-MAKEFLAGS+=	_BDB_TYPE=${_BDB_TYPE}
 .  endif
 
+.  if !empty(_BDB_ACCEPTED:M${_BDB_TYPE})
 BDB_TYPE=	${_BDB_TYPE}
-BUILD_DEFS+=	BDB_TYPE
-BUILD_DEFS+=	BDBBASE
+.  else
+BDB_TYPE=	none
+.  endif
 
 # Define some public variables to refer to package-specific variables.
 BDBBASE=	${BUILDLINK_PREFIX.${_BDB_PKGBASE.${BDB_TYPE}}}
 BDB_LIBS=	${BUILDLINK_LDADD.${_BDB_PKGBASE.${BDB_TYPE}}}
 
+BUILD_DEFS+=	BDB_TYPE
+BUILD_DEFS+=	BDBBASE
+
 .endif	# BDB_BUILDLINK3_MK
 
 .if ${BDB_TYPE} == "none"
-PKG_FAIL_REASON=	"No acceptable Berkeley DB implementation found."
+PKG_FAIL_REASON=	\
+	"${_BDB_TYPE} is not an acceptable Berkeley DB type for ${PKGNAME}."
 .elif ${BDB_TYPE} == "db1"
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndb1}
 BUILDLINK_PACKAGES+=		db1
