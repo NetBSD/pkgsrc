@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1169 2003/04/17 12:36:54 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1170 2003/04/17 13:04:57 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1410,13 +1410,17 @@ check-vulnerable:
 
 .if !target(do-fetch)
 do-fetch:
+.  if !defined(ALLOW_VULNERABLE_PACKAGES)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;			\
 	case "$$vul" in							\
 	"")	;;							\
-	*)	${ECHO} "$$vul"; ${FALSE} ;;				\
+	*)	${ECHO} "$$vul";					\
+		${ECHO} "or define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
+		${FALSE} ;;						\
 	esac
+.  endif
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
