@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/02/14 21:08:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/21 11:54:18 jmmv Exp $
 #
 
 DISTNAME=		gnome-session-2.2.0.2
@@ -23,7 +23,6 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--program-transform-name=s,gnome,gnome2,
-CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
