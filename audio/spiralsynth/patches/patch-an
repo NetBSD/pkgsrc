@@ -1,0 +1,16 @@
+$NetBSD: patch-an,v 1.1 2004/11/25 17:24:27 ben Exp $
+
+--- SpiralSound/Midi.C.orig	Tue Jun 11 15:08:56 2002
++++ SpiralSound/Midi.C
+@@ -174,7 +174,10 @@ void MidiDevice::SendEvent(int Device,co
+ void MidiDevice::ReadByte(unsigned char *c)
+ {
+ 	*c=MIDI_CLOCK;
+-	do read(m_MidiFd,c,1);				
++	do {
++		read(m_MidiFd,c,1);				
++		sched_yield();
++	}
+ 	while (*c>=STATUS_END);		
+ }
+ 
