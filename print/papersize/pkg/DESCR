@@ -1,0 +1,4 @@
+Many packages have the ability to set default paper sizes, so that,
+at run time, the correct papersize is chosen. This package can be used
+to show the current default paper size settings, and to set the default
+paper size setting as well.
