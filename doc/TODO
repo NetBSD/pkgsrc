@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.174 2003/01/11 04:45:25 grant Exp $
+$NetBSD: TODO,v 1.175 2003/01/11 13:40:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -73,14 +73,13 @@ Suggested package updates
 	o adobe-cmaps-1.5 [pkg/19646]
 	o amaya-7.0
 	o aspell-0.50.3
-	o auctex-11.14
 	o aumix-2.8
 	o balsa-1.4.2
 	o binutils-2.13.2.1
 	o bitchx-1.0c19 [pkg/19296]
 	o bluefish-0.8
 	o bochs-2.0.1
-	o bonnie++-1.93c
+	o bonnie++-1.03c
 	o bzflag-1.7g0
 	o cdlabelgen-2.5.0
 	o centericq-4.9.1
