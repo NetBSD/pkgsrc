@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.46 2001/10/24 19:46:45 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.47 2001/10/25 16:45:03 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -241,7 +241,7 @@ MAKEFILE_PATTERNS+=	Makefile
 MAKEFILE_PATTERNS+=	Makeconf
 MAKEFILE_PATTERNS+=	*.mk
 
-.if (${OBJECT_FMT} == "a.out")
+.if (${OBJECT_FMT} == "a.out") || defined(BUILDLINK_AOUT_DEBUG)
 REPLACE_LIBNAME_PATTERNS+=	${MAKEFILE_PATTERNS}
 _REPLACE_LIBNAME_PATTERNS_FIND=	\
 	${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
