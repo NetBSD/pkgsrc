@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/02/18 13:40:37 mrg Exp $
+# $NetBSD: Makefile,v 1.38 2004/02/18 13:51:14 jlam Exp $
 #
 
 DISTNAME=	bozohttpd-20040218
@@ -16,17 +16,17 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 
-MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
-
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 CPPFLAGS+=	-DINET6
 .endif
-
 CPPFLAGS+=	-Wno-error
+MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
 
 INSTALLATION_DIRS=	libexec man/cat8 man/man8
+
+.include "../../security/openssl/buildlink3.mk"
 
 pre-build:
 	cd ${WRKSRC}; for file in bozohttpd.8; do			\
