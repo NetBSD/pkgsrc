@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/02/13 20:27:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/14 18:51:58 jschauma Exp $
 #
 
 DISTNAME=		tor-0.0.9.4
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
@@ -38,7 +39,10 @@ CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 
 RCD_SCRIPT=		tor
 
-.include "../../mk/bsd.prefs.mk"
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+
+FILES_SUBST+=		PKG_HOME=${PKG_HOME}
+FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 CFLAGS+=		-c99
@@ -53,9 +57,6 @@ post-patch:
 		-e 's|@RCD_SCRIPTS_SHELL@|${RCD_SCRIPTS_SHELL}|g'	\
 		${FILESDIR}/tor.in > ${WRKSRC}/tor.pkgsrc.rc
 
-pre-install:
-	${MKDIR} -m 0700 ${PKG_HOME}
-
 post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/tor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tor
@@ -64,7 +65,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
 	${INSTALL_DATA} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
-	${CHOWN} ${TOR_USER}:${TOR_GROUP} ${PKG_HOME}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
