@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/19 19:28:43 minskim Exp $
 
 DISTNAME=	randlib.c-1.3
 PKGNAME=	randlib-1.3
@@ -11,6 +11,8 @@ COMMENT=	Library of C Routines for Random Number Generation
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/randlib.c/src
+
+MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/randlib
