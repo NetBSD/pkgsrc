@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.7 2004/02/05 03:35:20 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.8 2004/02/05 03:39:17 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	one
@@ -35,7 +35,7 @@ CC_VERSION=	sunpro
 # The following section is included only if we're not being included by
 # bsd.prefs.mk.
 #
-.if empty(BSD_PREFS_MK:M+*)
+.if empty(BSD_PREFS_MK)
 .  if empty(COMPILER_SUNPRO_MK:Mtwo)
 COMPILER_SUNPRO_MK+=	two
 
