@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.601 2003/05/29 01:06:27 grant Exp $
+$NetBSD: TODO,v 1.602 2003/05/29 11:16:59 salo Exp $
 
 Suggested new packages
 ======================
@@ -150,6 +150,7 @@ Suggested package updates
 	o guile-1.6.4
 	o hatari-0.30
 	o host-20030527
+	o hpijs-1.4
 	o icepref-2.2
 	o icewm-1.2.7
 	o inform-6.21.3 [pkg/19298]
