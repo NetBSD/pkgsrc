@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/13 19:04:56 tron Exp $
+bin/xjewel
+man/cat6/xjewel.0
+@exec touch /var/games/xjewel.scores && chown games:games /var/games/xjewel.scores && chmod 664 /var/games/xjewel.scores

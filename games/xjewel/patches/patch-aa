@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/13 19:04:56 tron Exp $
+
+--- Imakefile.orig	Wed Feb 16 11:35:06 1994
++++ Imakefile	Fri Aug 13 20:47:32 1999
+@@ -4,12 +4,11 @@
+ CDEBUGFLAGS = -O  
+ 
+ # CHANGE HSCORE_FILE TO SUIT
+-#HSCORE_FILE=/usr/local/lib/xjewel.scores
+-HSCORE_FILE=xjewel.scores
++HSCORE_FILE=/var/games/xjewel.scores
+ 
+ # ADD YOUR ARCHITECTURE IF YOU USE SELECT INSTEAD OF POLL
+ #if defined(HPArchitecture) || defined(ApolloArchitecture) || \
+- 	defined(UltrixArchitecture)
++ 	defined(UltrixArchitecture) || defined(NetBSDArchitecture)
+ #define sel -DUSE_SELECT
+ #else
+ #define sel 
+@@ -21,10 +20,10 @@
+ # DEFINE 'GETPWENT' if you dont have the cuserid ftn (hscore.c)
+ # DEFINE 'SLOW_FONTS=n' if your server is overly fast on fonts
+ # DEFINE 'SLOW_DRAW=n' if your server is overly fast on drawing
+-USERDEFS = -DICON_WINDOW
++USERDEFS = -DICON_WINDOW -DGETPWENT
+ 
+ # CHANGE FFILE TO REFLECT THE EXTENSION USED FOR COMPILED FONTS
+-FFILE = snf
++FFILE = pcf.gz
+ 
+ ##############################################################################
+ # X-STUFF...
+@@ -42,15 +41,19 @@
+ 
+ 
+ # LETS GET TO IT...
++INSTPGMFLAGS = -s -m 2555 -o root -g games
+ ComplexProgramTarget(xjewel)
+ 
+ # IF YOUR SERVER DOES NOT LIKE THE DEFAULT FONT COMPILER, EDIT HERE...
+ FontTarget($(FONT))
+ 	$(MKFONTDIR) bitmaps/
+ 
++MANSUFFIX=6
++
+ # FORCE FONT TO BE BUILT
+ all:: $(CFONT)
+ 
+ install::
+-	touch  $(HSCORE_FILE)
+-	chmod a+w $(HSCORE_FILE)
++	touch $(HSCORE_FILE)
++	chown games:games $(HSCORE_FILE)
++	chmod 664 $(HSCORE_FILE)
