@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/05/02 14:01:44 wiz Exp $
+
+--- doc/Makefile.in.orig	Mon Apr 30 10:28:33 2001
++++ doc/Makefile.in	Mon Apr 30 10:28:37 2001
+@@ -89,7 +89,7 @@
+ 
+ SUBDIRS = vorbisfile vorbisenc
+ 
+-docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)
++docdir = $(datadir)/doc/html/$(PACKAGE)-$(VERSION)
+ 
+ doc_DATA = v-comment.html vorbisword2.png white-ogg.png programming.html 	vorbis.html wait.png white-xifish.png vorbis-clip.txt 	vorbis-errors.txt
+ 
