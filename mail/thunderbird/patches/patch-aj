@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2004/05/08 04:35:38 taya Exp $
+$NetBSD: patch-aj,v 1.2 2004/06/24 23:09:55 taya Exp $
 
 diff -ru ../Orig/mozilla/gfx/src/freetype/nsFreeType.h ./gfx/src/freetype/nsFreeType.h
 --- ../Orig/mozilla/gfx/src/freetype/nsFreeType.h	2004-04-17 06:31:42.000000000 +0900
-+++ ./gfx/src/freetype/nsFreeType.h	2004-05-05 23:20:07.000000000 +0900
++++ ./gfx/src/freetype/nsFreeType.h	2004-06-15 23:55:59.000000000 +0900
 @@ -104,13 +104,13 @@
  typedef FT_Error (*FT_New_Face_t)(FT_Library, const char*, FT_Long, FT_Face*);
  typedef FT_Error (*FT_Set_Charmap_t)(FT_Face face, FT_CharMap  charmap);
