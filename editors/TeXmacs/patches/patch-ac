@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.4 2004/03/30 12:41:28 recht Exp $
+
+--- plugins/python/progs/init-python.scm.orig	2004-03-30 14:17:43.000000000 +0200
++++ plugins/python/progs/init-python.scm	2004-03-30 14:18:11.000000000 +0200
+@@ -1,5 +1,5 @@
+ (plugin-configure python
+-  (:require (url-exists-in-path? "python"))
++  (:require (url-exists-in-path? "@PYTHONBIN@"))
+   (:launch "tm_python --texmacs")
+   (:tab-completion #t)
+   (:session "Python"))
