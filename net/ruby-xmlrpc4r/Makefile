@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/27 15:31:18 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/05 07:45:30 jmc Exp $
 #
 
 DISTNAME=	xmlrpc4r-1_7_9
@@ -10,8 +10,7 @@ MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://www.fantasy-coders.de/ruby/xmlrpc4r/
 COMMENT=	implementation of the XML-RPC protocol for Ruby
 
-#DEPENDS+=	${RUBY_PKGNAMEPREFIX}nqxml>=1.1.1:../../textproc/ruby-nqxml
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}nqxml>=1.1.1:../ruby-nqxml
+DEPENDS+=	${RUBY_PKGNAMEPREFIX}nqxml>=1.1.1:../../textproc/ruby-nqxml
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 NO_BUILD=	yes
