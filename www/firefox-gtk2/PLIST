@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/29 17:46:52 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/03 17:54:38 bouyer Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -103,6 +103,7 @@ lib/${MOZILLA}/libxlibrgb.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom_compat.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
+${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
 @comment end DSO
 @comment begin DATA
 lib/${MOZILLA}/bloaturls.txt
