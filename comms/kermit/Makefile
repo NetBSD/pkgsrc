@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/01/04 01:49:13 fredb Exp $
+# $NetBSD: Makefile,v 1.21 2000/01/05 23:13:36 tron Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -37,7 +37,6 @@ LIBS+=		-lsocks
 .endif
 .endif
 
-MANCOMPRESSED_IF_MANZ=	yes
 PLIST_SRC=		${WRKDIR}/PLIST
 
 do-install:
