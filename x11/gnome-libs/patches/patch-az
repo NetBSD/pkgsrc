@@ -1,0 +1,13 @@
+$NetBSD: patch-az,v 1.1 2002/07/01 10:10:01 agc Exp $
+
+--- libart_lgpl/doc/Makefile.in	2002/06/28 10:35:09	1.1
++++ libart_lgpl/doc/Makefile.in	2002/06/28 10:35:23
+@@ -371,8 +371,6 @@
+ 	    echo '-- Installing '$$i ; \
+ 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
+ 	  done; \
+-	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+-	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
+ 	fi)
+ 
+ #

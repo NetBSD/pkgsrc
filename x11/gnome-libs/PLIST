@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/06/26 10:30:11 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/07/01 10:10:00 agc Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -484,7 +484,6 @@ share/gtk-doc/html/libart/fdl-section8.html
 share/gtk-doc/html/libart/fdl-section9.html
 share/gtk-doc/html/libart/fdl-using.html
 share/gtk-doc/html/libart/fdl.html
-share/gtk-doc/html/libart/index.sgml
 share/gtk-doc/html/libart/internals-intersector.html
 share/gtk-doc/html/libart/internals.html
 share/gtk-doc/html/libart/intro-file-names.html
