@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.380 2002/10/27 16:12:02 chris Exp $
+$NetBSD: CHANGES,v 1.381 2002/10/27 16:37:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2838,6 +2838,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkgchk to 1.32 [abs 2002-09-13]
 	Updated bins to 1.1.15nb1 [wiz 2002-09-13]
 	Added ghostscript-gnu-x11-7.05 [jlam 2002-09-13]
+	Updated bozohttpd to 5.15 [mrg 2002-09-13]
 	Updated eagle to 4.09r2 [rh 2002-09-14]
 	Updated ghostscript-gnu to 7.05nb1 [jlam 2002-09-13]
 	Updated ghostscript-gnu-nox11 to 7.05nb1 [jlam 2002-09-13]
@@ -3394,7 +3395,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated less to 378 [grant 2002-10-26]
 	Updated freetds to 0.60 [grant 2002-10-26]
 	Updated bins to 1.1.18 [dmcmahill 2002-10-26]
-	Updated bozohttpd to 0.15nb1 [wiz 2002-10-26]
+	Updated bozohttpd to 5.15nb1 [wiz 2002-10-26]
 	Added guile-pg-0.07 [cjones 2002-10-26]
 	Updated gnupg to 1.2.1 [chris 2002-10-27]
 	Updated gpgme to 0.3.12 [chris 2002-10-27]
