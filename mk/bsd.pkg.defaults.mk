@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.201 2004/01/08 19:48:05 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.202 2004/01/11 16:42:04 kim Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2045,6 +2045,12 @@ WINDOWMAKER_THEMES?= freebsdtheme-0.52 netbsddrinkingteam-0.60.0 netbsd_-0.52
 # installed.
 # Possible: see http://wm.themes.org/
 # Default: freebsdtheme-0.52 netbsddrinkingteam-0.60.0 netbsd_-0.52
+
+#X10_PORT=
+# The serial device for misc/bottlerocket to use to communicate
+# to the X10 adaptor.
+# Possible:  /dev/your_favorite_serial_device
+# Default: defaults to ${DEFAULT_SERIAL_DEVICE}
 
 WXGTK_USE_GTK1?= NO
 # Used in the wxGTK package to request support for GTK+ v1.x instead of v2.x.
