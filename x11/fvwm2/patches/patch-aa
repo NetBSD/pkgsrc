@@ -1,52 +1,16 @@
-$NetBSD: patch-aa,v 1.4 1998/09/16 19:01:58 garbled Exp $
---- Fvwm.tmpl.orig	Wed Sep 16 11:04:08 1998
-+++ Fvwm.tmpl	Wed Sep 16 11:17:31 1998
-@@ -97,7 +97,7 @@
-  * Set this to YES if you would like the programs in the utils directory
-  * installed.
-  *************************************************************************/
--#define InstallUtils NO
-+#define InstallUtils YES
+--- utils/Makefile.in.orig	Wed Jan 20 06:29:27 1999
++++ utils/Makefile.in	Mon Feb 22 03:54:05 1999
+@@ -83,10 +83,10 @@
+ xpm_CFLAGS = @xpm_CFLAGS@
+ xpm_LIBS = @xpm_LIBS@
  
+-bin_PROGRAMS = @XPMROOT@
+-EXTRA_PROGRAMS = xpmroot
++#bin_PROGRAMS = @XPMROOT@
++#EXTRA_PROGRAMS = xpmroot
  
- /**************************************************************************
-@@ -257,17 +257,19 @@
- OPTION_DEFINES += -DVECTOR_BUTTONS -DPIXMAP_BUTTONS -DGRADIENT_BUTTONS
- OPTION_DEFINES += -DMULTISTYLE -DEXTENDED_TITLESTYLE
- OPTION_DEFINES += -DBORDERSTYLE -DUSEDECOR -DWINDOWSHADE
--
- #else
+-man_MANS = xpmroot.1
++#man_MANS = xpmroot.1
+ EXTRA_DIST = BuildXLockMenu fvwmrc_convert quantize_pixmaps $(man_MANS)
  
- /* the works, not using '+=': */
--OPTION_DEFINES  = -DSHAPE -DI18N -DACTIVEDOWN_BTNS -DINACTIVE_BTNS -DMINI_ICONS -DVECTOR_BUTTONS -DPIXMAP_BUTTONS -DGRADIENT_BUTTONS -DMULTISTYLE -DEXTENDED_TITLESTYLE -DBORDERSTYLE -DUSEDECOR -DWINDOWSHADE
-+OPTION_DEFINES  = -DSHAPE -DI18N -DACTIVEDOWN_BTNS -DINACTIVE_BTNS -DMINI_ICONS -DVECTOR_BUTTONS -DPIXMAP_BUTTONS -DGRADIENT_BUTTONS -DMULTISTYLE -DEXTENDED_TITLESTYLE -DBORDERSTYLE -DUSEDECOR -DWINDOWSHADE -DFVWM_CPP=\"/usr/bin/cpp\"
- 
- #endif
- 
- /* Or if you prefer a more minimal setup, you could try something like: */
- /* OPTION_DEFINES = -DSHAPE -DVECTOR_BUTTONS */
- 
-+/* FreeBSD ports -- Assumes += notation is allowed */
-+OPTION_DEFINES += -DENABLE_REMOTE_CHANGEDESKS
-+/* FreeBSD ports */
- 
- /***************************************************************************
-  * The following section only needs to be changed if you do not want
-@@ -388,7 +390,7 @@
- #endif
- 
- #ifndef FvwmIconPath
--#define FvwmIconPath $(INCDIR)/bitmaps\:$(INCDIR)/pixmaps
-+#define FvwmIconPath $(FVWMDIR)/pixmaps\:$(INCDIR)/bitmaps\:$(INCDIR)/pixmaps
- #endif
- 
-    ICONPATH = FvwmIconPath
-@@ -397,7 +399,7 @@
- 
- /* take care of libs not correctly added by Imake on some systems */
- /* #ifdef AlphaArchitecture */
--#if defined(AlphaArchitecture) && !defined(linux)
-+#if defined(AlphaArchitecture) && !defined(linux) && !defined(NetBSDArchitecture)
- KLUDGE_LIBS = -ldnet_stub
- #else
- #ifdef HPArchitecture
+ LDADD = -L$(top_builddir)/libs -lfvwm $(xpm_LIBS) 	$(X_LIBS) $(X_PRE_LIBS) -lXext -lX11 $(X_EXTRA_LIBS)
