@@ -1,0 +1,27 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/01/26 23:31:53 hubertf Exp $
+
+--- vfu/vfu.cpp.orig	Sun Jan 24 18:55:40 1999
++++ vfu/vfu.cpp	Tue Jan 26 22:48:59 1999
+@@ -18,7 +18,12 @@
+ #include "vfuarc.h"
+ #include "vfutools.h"
+ #include "grep.h"
+-#include <sys/vfs.h>
++#ifdef __Linux__
++#  include <sys/vfs.h>
++#else
++#  include <sys/param.h>
++#  include <sys/mount.h>
++#endif
+ 
+ ////////////////////////////////////////////////////////////////////////
+ //
+@@ -1725,7 +1730,7 @@
+ "`      -- Goto preset dir (Alt+0..9 also available on some terminals)\n"
+ "ESC+ESC -- exits VF/U, `Q' or `q' -- exit here, `X' or `x' -- exit to old dir\n"
+ "NOTE: Alt-Letter keys are equal to Upper case letters in the commands context\n"
+-"vfu uses these config files:  $HOME/.vfurc  or  /usr/local/lib/vfurc\n"
++"vfu uses these config files:  $HOME/.vfurc  or  " PREFIX "/etc/vfurc\n"
+ "\n--press a key---\n\n"
+ );
+ // tcsetattr(1, TCSANOW,&newstate);
