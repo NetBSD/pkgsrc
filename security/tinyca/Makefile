@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/22 18:11:56 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/28 22:01:22 adrianp Exp $
 
-DISTNAME=	tinyca-0.6.7
+DISTNAME=	tinyca-0.6.8
 CATEGORIES=	security
 MASTER_SITES=	http://tinyca.sm-zone.net/
 
@@ -41,7 +41,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tinyca ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/lib/*.pm ${CADIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/GUI/*.pm ${CADIR}/GUI
-	${INSTALL_DATA} ${WRKSRC}/lib/GUI/pod2* ${CADIR}/GUI
 	${INSTALL_DATA} ${WRKSRC}/templates/openssl.cnf ${CADIR}/templates
 
 .include "../../mk/bsd.pkg.mk"
