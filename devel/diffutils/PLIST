@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/19 05:15:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/23 10:39:55 seb Exp $
 bin/${GNU_PROGRAM_PREFIX}cmp
 bin/${GNU_PROGRAM_PREFIX}diff
 bin/${GNU_PROGRAM_PREFIX}diff3
@@ -7,6 +7,4 @@ man/man1/${GNU_PROGRAM_PREFIX}cmp.1
 man/man1/${GNU_PROGRAM_PREFIX}diff.1
 man/man1/${GNU_PROGRAM_PREFIX}diff3.1
 man/man1/${GNU_PROGRAM_PREFIX}sdiff.1
-@unexec ${INSTALL_INFO} --delete %D/info/diff.info %D/info/dir
 info/diff.info
-@exec ${INSTALL_INFO} %D/info/diff.info %D/info/dir
