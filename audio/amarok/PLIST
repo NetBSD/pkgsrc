@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/22 01:09:08 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/03/29 16:24:14 seb Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
 bin/amarokapp
 lib/kde3/konqsidebar_universalamarok.la
+lib/kde3/libamarok_aKode-engine.la
 lib/kde3/libamarok_artsengine_plugin.la
 lib/kde3/libamarok_gstengine_plugin.la
 lib/kde3/libamarok_void-engine_plugin.la
@@ -386,6 +387,7 @@ share/kde/icons/crystalsvg/22x22/apps/amarok.png
 share/kde/icons/crystalsvg/32x32/apps/amarok.png
 share/kde/icons/crystalsvg/48x48/apps/amarok.png
 share/kde/icons/crystalsvg/64x64/apps/amarok.png
+share/kde/services/amarok_aKode-engine.desktop
 share/kde/services/amarok_artsengine_plugin.desktop
 share/kde/services/amarok_gstengine_plugin.desktop
 share/kde/services/amarok_void-engine_plugin.desktop
@@ -420,6 +422,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/amarok.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/amarok.mo
