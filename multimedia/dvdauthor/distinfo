@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/07/10 21:06:55 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 11:24:02 agc Exp $
 
 SHA1 (dvdauthor-0.6.10.tar.gz) = bee2c9beb58a020bcf0ccfd39eca8d30ebd54602
+RMD160 (dvdauthor-0.6.10.tar.gz) = c9df3ac669161e8f07e837e2a6fc76e7af97c1a1
 Size (dvdauthor-0.6.10.tar.gz) = 240010 bytes
 SHA1 (patch-aa) = b86c7a584fddaf733662c0bc32df239a1bb37e98

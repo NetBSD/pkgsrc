@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/01/03 12:48:29 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 11:24:03 agc Exp $
 
 SHA1 (libdv-0.104.tar.gz) = 521a079193f4ae8f9995091b0590c87fde130650
+RMD160 (libdv-0.104.tar.gz) = a91708ecb75533caf2b9038ca68064c7707dcfdf
 Size (libdv-0.104.tar.gz) = 554691 bytes
 SHA1 (patch-aa) = 6910450f2c93ac4989e8c132368d208ddd65cf0d

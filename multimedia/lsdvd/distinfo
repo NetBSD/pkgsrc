@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/11 02:50:51 snj Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:24:03 agc Exp $
 
 SHA1 (lsdvd-0.10.tar.gz) = 910bab96300dade7b07baa7cb2037ef473c035d6
+RMD160 (lsdvd-0.10.tar.gz) = a3c718dba1f6556a8e03d66f453483f3e50f2027
 Size (lsdvd-0.10.tar.gz) = 36206 bytes
