@@ -1,0 +1,7 @@
+Chkpt provides a simple interface (C and Fortran) to user-level
+checkpointing.  ``Checkpointing'' describes the action to periodically
+save process information on permanent storage (on hard disk,
+typically).  After a system failure a process may be continued from
+the saved state, from the checkpoint.
+
+Author: Alexandre Wennmacher  (wennmach@geo.Uni-Koeln.DE)
