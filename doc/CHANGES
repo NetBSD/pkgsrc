@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4655 2004/01/31 22:44:35 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4656 2004/01/31 22:57:01 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -540,3 +540,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxml2 to 2.6.5 [xtraeme 2004-01-31]
 	Updated py-libxml2 to 2.6.5 [xtraeme 2004-01-31]
 	Updated xchm to 0.8.11 [xtraeme 2004-01-31]
+	Updated gpart to 0.1h [xtraeme 2004-01-31]
