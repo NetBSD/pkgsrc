@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/19 14:10:04 tron Exp $
+
+--- configure.orig	Sat Jan 20 20:40:38 2001
++++ configure	Wed Dec 19 15:04:10 2001
+@@ -77,7 +77,7 @@
+ verbose=
+ x_includes=NONE
+ x_libraries=NONE
+-bindir='${exec_prefix}/bin'
++bindir='${exec_prefix}/libexec/everybuddy'
+ sbindir='${exec_prefix}/sbin'
+ libexecdir='${exec_prefix}/libexec'
+ datadir='${prefix}/share'
+@@ -2415,7 +2415,7 @@
+ CFLAGS="$CFLAGS -I/usr/local/include -I/opt/include" 
+ 
+ EB_CFLAGS="$CFLAGS -I../"
+-EB_LIBS="$LIBS -L../libmsn -lmsn -L../libyahoo -lyahoo -L../libproxy -lproxy -L../libtoc -ltoc -lpthread -L../libicq -licq -L../libjabber -lEBjabber -ljabber -L../libxode -lxode"
++EB_LIBS="$LIBS ../libmsn/libmsn.a ../libyahoo/libyahoo.a ../libproxy/libproxy.a ../libtoc/libtoc.a -lpthread ../libicq/libicq.a ../libjabber/libEBjabber.a ../libjabber/libjabber.a ../libxode/libxode.a"
+ EB_LDADD="$LDADD"
+ 
+ EB_CFLAGS="$EB_CFLAGS -D_REENTRANT -Wall -g "
