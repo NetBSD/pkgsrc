@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.1 2002/02/10 00:50:42 rh Exp $
+
+CATEGORIES?=	graphics
+MASTER_SITES?=	ftp://ftp.mostang.com/pub/sane/sane-${SANE_VERSION}/ \
+		ftp://ftp.mostang.com/pub/sane/old-versions/sane-${SANE_VERSION}/ \
+		ftp://gd.tuwien.ac.at/hci/sane/sane-${SANE_VERSION}/ \
+		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/sane-${SANE_VERSION}/
+
+MAINTAINER?=	packages@netbsd.org
+HOMEPAGE?=	http://www.mostang.com/sane/
+COMMENT?=	API for access to scanners, digitals camera, frame grabbers etc.
+
+SANE_MAJOR=	1
+SANE_MINOR=	0
+SANE_MICRO=	7
+SANE_VERSION=	${SANE_MAJOR}.${SANE_MINOR}.${SANE_MICRO}
+PLIST_SUBST+=	SANE_MAJOR=${SANE_MAJOR}
+PLIST_SUBST+=	SANE_MINOR=${SANE_MINOR}
+PLIST_SUBST+=	SANE_MICRO=${SANE_MICRO}
+PLIST_SUBST+=	SANE_VERSION=${SANE_VERSION}
+
+CONFLICTS+=	sane<=1.0.3
