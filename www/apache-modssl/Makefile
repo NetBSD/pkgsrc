@@ -1,6 +1,5 @@
+# $NetBSD: Makefile,v 1.2 1998/09/05 09:08:07 explorer Exp $
 # FreeBSD: Makefile,v 1.2 1998/08/29 21:24:13 rse Exp
-# $NetBSD: Makefile,v 1.1.1.1 1998/09/04 23:37:23 explorer Exp $
-#
 
 DISTNAME=	apache_1.3.1
 PKGNAME=	apache-modssl-1.3.1
