@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2001/05/03 18:37:47 fredb Exp $
+$NetBSD: distinfo,v 1.4 2001/05/03 18:46:07 fredb Exp $
 
 SHA1 (hanterm-3.1.4.tar.gz) = 6b88d880f78a85e46ffc7d1c448148ba551dff8f
 Size (hanterm-3.1.4.tar.gz) = 219740 bytes
-SHA1 (patch-aa) = ecb7dc3d4a4b155b3d71e873f3ce5b56c2d6a91f
+SHA1 (patch-aa) = 515b7d8e253a18196ea9175d6aa132f88fd22a17
 SHA1 (patch-ab) = 8b861979eeffc3e9763f4a2162c0e007c61f1a6c
 SHA1 (patch-ac) = 4c6b6efc12f2e1fba6eb577c65c94d701574353b
 SHA1 (patch-ad) = e6bf91a30c1b318c2f60ac8590e4842d9e8bab12
