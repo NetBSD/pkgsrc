@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/04/05 11:52:31 markd Exp $
+
+--- kommander/widgets/closebutton.cpp.orig	2004-04-05 13:21:29.000000000 +1200
++++ kommander/widgets/closebutton.cpp
+@@ -92,7 +92,7 @@ void CloseButton::startProcess()
+ 
+ 	if(!at.isEmpty())
+ 	{
+-		KShellProcess *process = new KShellProcess;
++		KShellProcess *process = new KShellProcess ("/bin/sh");
+ 
+ 		*process << at;
+ 
