@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5419 2004/04/02 11:59:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.5420 2004/04/02 12:34:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1747,3 +1747,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-menueditor to 1.05 [martti 2004-04-02]
 	Updated libsndfile to 1.0.9 [adam 2004-04-02]
 	Renamed gnome-themes-extra to gnome-themes-extras [jmmv 2004-04-02]
+	Updated gtkmm to 2.2.10 [adam 2004-04-02]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1567 2004/04/02 10:23:56 adam Exp $
+$NetBSD: TODO,v 1.1568 2004/04/02 12:34:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -211,7 +211,6 @@ Suggested package updates
 	o gsasl-0.0.14
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.6
-	o gtkmm-2.2.9
 	o gtksee-0.5.5.1
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
