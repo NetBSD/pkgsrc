@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2004/03/10 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.100 2004/03/12 21:33:28 jlam Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		3
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
 			X11BASE=${X11BASE} \
 			PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ENV+=		${CONFIGURE_ENV.db-${BDB_TYPE}}
 
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
@@ -34,6 +35,17 @@ LOCALSTATEDIR=		/var/gnome
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
 			LOCALEDIR=${LOCALEDIR} \
 			LOCALSTATEDIR=${LOCALSTATEDIR}
+
+.include "../../audio/esound/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../net/ORBit/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
+
+CONFIGURE_ENV.db-${BDB_TYPE}?=	ac_cv_func_dbopen=no
+CONFIGURE_ENV.db-native=	# empty
 
 post-extract:
 .for file in gnome-app-helper-convenience-macros.htm			\
@@ -59,13 +71,5 @@ post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
 		${LOCALBASE}/share/aclocal/libart.m4
-
-.include "../../audio/esound/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/imlib/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
-.include "../../net/ORBit/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
