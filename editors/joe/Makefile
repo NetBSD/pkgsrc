@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/26 03:51:52 tv Exp $
+# $NetBSD: Makefile,v 1.18 2004/06/02 20:22:54 reed Exp $
 #
 
 DISTNAME=	joe2.8
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.std.com/src/editors/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	explorer@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Joe's own editor
 
 WRKSRC=		${WRKDIR}/joe
