@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2002/08/07 13:47:46 he Exp $
+# $NetBSD: Makefile,v 1.261 2002/09/07 20:29:05 jschauma Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -13,6 +13,7 @@ SUBDIR+=	XmHTML
 SUBDIR+=	acidlaunch
 SUBDIR+=	asnap
 SUBDIR+=	aterm
+SUBDIR+=	bbapm
 SUBDIR+=	blt
 SUBDIR+=	controlcenter
 SUBDIR+=	dfm
