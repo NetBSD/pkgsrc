@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 1998/12/12 18:10:31 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/22 19:31:07 tv Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.flame.org/NetBSD/
 ONLY_FOR_ARCHS=		i386
+ONLY_FOR_OPSYS=		NetBSD
 
 MAINTAINER=		packages@netbsd.org
 
@@ -19,24 +20,15 @@ MAINTAINER=		packages@netbsd.org
 MIRROR_DISTFILE=	no
 
 NO_BUILD=		yes
-EXTRACT_ONLY=		# empty
 NO_WRKSUBDIR=		yes
 
-EMUL_DIR=	${PREFIX}/emul
-FREEBSD_DIR=	${EMUL_DIR}/freebsd
-
-pre-install:
-	@[ -d ${EMUL_DIR} ] || ${MKDIR} ${EMUL_DIR}
-	@if [ ! -e /emul ] || \
-	    [ "`ls -i /emul/.`" != "`ls -i ${EMUL_DIR}`" ]; \
-	 then \
-	   ${ECHO} -n "You must create a link \"/emul\" "; \
-	   ${ECHO} "pointing to \"${EMUL_DIR}\"."; \
-	   exit 1; \
-	 fi
-
 do-install:
-	${MKDIR} ${FREEBSD_DIR}
-	(cd ${FREEBSD_DIR}; pax -rzf ${DISTDIR}/${DISTNAME}.tar.gz)
+	@${INSTALL_DATA_DIR} ${PREFIX}/emul/freebsd
+	@(cd ${WRKSRC} && find usr -type d -print) | \
+		(cd ${PREFIX}/emul/freebsd && xargs ${INSTALL_DATA_DIR})
+	@cd ${WRKSRC} && for file in `find usr -name '*.*' -print`; do \
+		${INSTALL_DATA} $$file ${PREFIX}/emul/freebsd/$$file; \
+	done
+	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
