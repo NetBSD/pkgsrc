@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/10/04 12:55:14 kleink Exp $
+# $NetBSD: Makefile,v 1.27 2000/10/04 20:08:55 martin Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.9
@@ -18,6 +18,7 @@ USE_XAW=	yes
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=	jpeg-*:../../graphics/jpeg
 
 NOT_FOR_PLATFORM=	*-*-mips*	#fails purespace dumping
 
