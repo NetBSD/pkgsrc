@@ -1,0 +1,16 @@
+--- doc/xmamerc.dist.orig	Sat Feb 14 05:42:01 1998
++++ doc/xmamerc.dist	Sat Feb 14 05:43:14 1998
+@@ -25,6 +25,6 @@
+ # This option can be overriden by MAMEDIR environment variable
+-mamedir		/usr/games/lib/mame
++mamedir		XXX
+ 
+ # Also Mame needs a public-writable directory to store high scores
+-spooldir        /var/games/mame
++spooldir        XXX
+ 
+@@ -77,3 +77,3 @@
+ # Do you want use trackball emulation via mouse?
+-use_trakball	0
++#use_trakball	0
+ 
