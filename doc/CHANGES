@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.383 2002/10/28 08:46:43 skrll Exp $
+$NetBSD: CHANGES,v 1.384 2002/10/28 09:04:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3415,3 +3415,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated qt3-docs to 3.0.6 [skrll 2002-10-28]
 	Updated qt3-tools to 3.0.6 [skrll 2002-10-28]
 	Updated qt3 to 3.0.6 [skrll 2002-10-28]
+	Updated tuxpaint to 2002.10.26 [wiz 2002-10-28]
+	Updated tuxpaint-stamps to 2002.10.26 [wiz 2002-10-28]
