@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2005/02/17 13:34:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/27 12:29:17 recht Exp $
 
-DISTNAME=	cairo-0.3.0
+DISTNAME=	cairo-0.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
@@ -14,12 +14,17 @@ USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	cairo.pc.in
+CONFIGURE_ARGS+=	--disable-atsui
+CONFIGURE_ARGS+=	--disable-xcb
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"
