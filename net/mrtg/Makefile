@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/03/06 10:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/04/26 08:38:12 tron Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -19,9 +19,10 @@ COMMENT=	The Multi-Router Traffic Grapher
 
 DEPENDS=	gd>=1.8.1:../../graphics/gd
 
-USE_PERL5=	# defined
-USE_X11=	# defined
-GNU_CONFIGURE=	# defined
+USE_PERL5=	YES
+PERL5_REQD=	5.6.0
+USE_X11=	YES
+GNU_CONFIGURE=	YES
 CONFIGURE_ARGS= --with-gd-inc=${LOCALBASE}/include \
 		--with-gd-lib=${LOCALBASE}/lib
 
