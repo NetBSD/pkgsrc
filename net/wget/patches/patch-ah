@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2003/12/08 21:44:35 wiz Exp $
+$NetBSD: patch-ah,v 1.5 2004/05/16 20:27:04 danw Exp $
 
 --- configure.orig	Wed Nov 12 00:42:20 2003
 +++ configure
@@ -11,12 +11,3 @@ $NetBSD: patch-ah,v 1.4 2003/12/08 21:44:35 wiz Exp $
  
  
  echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
-@@ -12524,7 +12524,7 @@ fi
-             SSL_INCLUDES=
-     else
-             SSL_INCLUDES=-I$ssl_root/include
--                  LDFLAGS="-L$ssl_root/lib -R$ssl_root/lib $wget_save_LDFLAGS"
-+                  LDFLAGS="${OPENSSL_LDFLAGS} $wget_save_LDFLAGS"
-     fi
- 
-     echo "$as_me:$LINENO: result: Looking for SSL libraries in $ssl_root" >&5
