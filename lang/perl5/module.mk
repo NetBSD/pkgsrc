@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.11 2003/08/03 11:47:01 jmmv Exp $
+# $NetBSD: module.mk,v 1.12 2003/08/03 20:52:30 jmmv Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -51,6 +51,7 @@ do-configure: perl5-configure
 .else
 do-configure: perl5-configure
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.endif
 .endif
 
 # OTHERLDFLAGS is the hook provided by the perl5 MakeMaker module to allow
