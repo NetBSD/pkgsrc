@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:18:13 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/20 20:45:55 jmmv Exp $
 
-DISTNAME=	seahorse-0.7.3
-PKGREVISION=	13
+DISTNAME=	seahorse-0.7.4
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=seahorse/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/0.7/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://seahorse.sourceforge.net/
@@ -18,10 +18,16 @@ USE_GNU_TOOLS+=		make
 USE_X11=		yes
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+
+CONFIGURE_ARGS=		--disable-gedit
 
 GCONF2_SCHEMAS= 	seahorse.schemas
 
+BUILDLINK_DEPENDS.gpgme=	gpgme>=1.0.0
+
 .include "../../databases/gnome-mime-data/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
@@ -29,7 +35,8 @@ GCONF2_SCHEMAS= 	seahorse.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../security/gpgme03/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
