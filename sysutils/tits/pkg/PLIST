@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/09 14:25:48 scw Exp $
+share/examples/tits.conf
+sbin/tits
+man/man8/tits.8
+man/cat8/tits.0
