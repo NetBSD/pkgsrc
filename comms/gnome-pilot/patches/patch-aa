@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/09/28 16:14:45 tron Exp $
+
+--- gpilotd/orbit_daemon_glue.h.orig	2001-07-30 23:31:37.000000000 +0200
++++ gpilotd/orbit_daemon_glue.h	2003-09-28 17:56:58.000000000 +0200
+@@ -34,7 +34,7 @@
+ #ifdef GPC_DEBUG
+ #define LOG(format,args...) g_log (G_LOG_DOMAIN, \
+                                    G_LOG_LEVEL_MESSAGE, \
+-                                   "gpilotd: "##format, ##args)
++                                   "gpilotd: " format, args)
+ #else
+ #define LOG(format,args...)
+ #endif

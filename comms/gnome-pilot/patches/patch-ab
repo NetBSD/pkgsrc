@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2003/09/28 16:14:45 tron Exp $
+
+--- gpilotd/queue_io.c.orig	2001-11-05 11:03:24.000000000 +0100
++++ gpilotd/queue_io.c	2003-09-28 17:59:49.000000000 +0200
+@@ -365,7 +365,7 @@
+ 	gchar *prefix = NULL;
+ 	int num;
+ 
+-	LOG("gpc_queue_purge_request()");
++	LOG("%s", "gpc_queue_purge_request()");
+ 
+ 	g_return_if_fail(req!=NULL);
+ 	g_return_if_fail(*req!=NULL);

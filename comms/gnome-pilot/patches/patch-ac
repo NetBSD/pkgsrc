@@ -1,0 +1,126 @@
+$NetBSD: patch-ac,v 1.1 2003/09/28 16:14:45 tron Exp $
+
+--- gpilotd/orbit_daemon_glue.c.orig	2002-11-22 17:14:46.000000000 +0100
++++ gpilotd/orbit_daemon_glue.c	2003-09-28 18:11:57.000000000 +0200
+@@ -210,7 +210,7 @@
+ 		
+ 		client_id = CORBA_ORB_object_to_string(orb,cb,&ev);
+ 		if(ev._major != CORBA_NO_EXCEPTION) {
+-			LOG("unable to resolve IOR for client");
++			LOG("%s", "unable to resolve IOR for client");
+ 			LOGEXN (ev);
+ 			CORBA_exception_free(&ev);
+ 			return NULL;
+@@ -613,18 +613,18 @@
+ 		CORBA_exception_init(&my_ev);
+ 		tmp_client_id = CORBA_ORB_object_to_string(orb,cb,&my_ev);
+ 		if(my_ev._major != CORBA_NO_EXCEPTION) {
+-			LOG("*** Client appears to be disconnected...");
++			LOG("%s", "*** Client appears to be disconnected...");
+ 			LOGEXN (my_ev);
+ 		} else {
+-			LOG("Client seems ok");
++			LOG("%s", "Client seems ok");
+ 		}
+ 		tmpcb = CORBA_ORB_string_to_object(orb,(CORBA_char*)tmp_client_id,&my_ev); 
+ 		if(my_ev._major != CORBA_NO_EXCEPTION) {
+-			LOG("**** Client appears to be disconnected...");
++			LOG("%s", "**** Client appears to be disconnected...");
+ 			LOGEXN (my_ev);
+ 			g_assert_not_reached();
+ 		} else {
+-			LOG("Client seems ok");
++			LOG("%s", "Client seems ok");
+ 		}
+ 	}
+ #endif
+@@ -977,7 +977,7 @@
+ 			CORBA_Environment *ev) 
+ {
+ 
+-	LOG("corba: get_users()");
++	LOG("%s", "corba: get_users()");
+ 
+ 	/* FIXME: this isn't complete, it only gives one user, and
+ 	   doesn't make any NULL checks... */
+@@ -998,7 +998,7 @@
+ 			  CORBA_Environment *ev) 
+ {
+ 
+-	LOG("corba: get_cradles(...)");
++	LOG("%s", "corba: get_cradles(...)");
+ 
+ 	if(g_list_length(orb_context->gpilotd_context->devices)>0) {
+ 		GNOME_Pilot_StringSequence *cradles;
+@@ -1023,7 +1023,7 @@
+ 			 CORBA_Environment *ev) 
+ {
+ 
+-	LOG("corba: get_pilots(...)");
++	LOG("%s", "corba: get_pilots(...)");
+ 
+ 	if(g_list_length(orb_context->gpilotd_context->pilots)>0) {
+ 		GNOME_Pilot_StringSequence *pilots;
+@@ -1048,7 +1048,7 @@
+ 			    CORBA_Environment *ev) 
+ {
+ 
+-	LOG("corba: get_pilot_ids(...)");
++	LOG("%s", "corba: get_pilot_ids(...)");
+ 
+ 	if(g_list_length(orb_context->gpilotd_context->pilots)>0) {
+ 		GNOME_Pilot_LongSequence *pilots;
+@@ -1212,7 +1212,7 @@
+ gpilotd_get_pilot_id_from_name(PortableServer_Servant _servant, 
+ 			       CORBA_char * pilot_name, 
+ 			       CORBA_Environment * ev) {
+-	LOG("corba: get_user_pilot_id_from_name");
++	LOG("%s","corba: get_user_pilot_id_from_name");
+ 
+ 	return pilot_id_from_name(pilot_name,orb_context->gpilotd_context);
+ }
+@@ -1240,7 +1240,7 @@
+ 	char **databases,*pfx;
+ 	int num_bases;
+ 	guint32 pilot_id;
+-	LOG("corba: get_databases_from_cache(...)");
++	LOG("%s", "corba: get_databases_from_cache(...)");
+ 
+ 	pilot_id = pilot_id_from_name(pilot_name,
+ 				      orb_context->gpilotd_context);
+@@ -1415,7 +1415,7 @@
+ 
+ 	cb = CORBA_ORB_string_to_object(orb,(CORBA_char*)IOR,&ev);
+ 	if(ev._major != CORBA_NO_EXCEPTION) {
+-		LOG("Client appears to be disconnected...");
++		LOG("%s", "Client appears to be disconnected...");
+ 		g_warning ("%s:%d Exception: %s\n",
+ 			   __FILE__,__LINE__, CORBA_exception_id (&ev));
+ 		CORBA_exception_free(&ev);
+@@ -1481,7 +1481,7 @@
+ 			break;
+ 		}
+ 		if(ev._major != CORBA_NO_EXCEPTION) {
+-			LOG("Client appears to be disconnected...");
++			LOG("%s", "Client appears to be disconnected...");
+ 			LOGEXN (ev);
+ 			CORBA_exception_free(&ev);
+ 			carrier->purge_list = g_slist_prepend(carrier->purge_list,
+@@ -1573,7 +1573,7 @@
+ 	GNOME_Pilot_Client cb;
+ 	gchar *pilot_name;
+ 
+-	LOG("orbed_notify_completion(...)");
++	LOG("%s", "orbed_notify_completion(...)");
+ 
+ 	g_return_if_fail(req!=NULL);
+ 	g_return_if_fail(*req!=NULL);
+@@ -1595,7 +1595,7 @@
+ 	/* get the ior, if it fails, print exception and purge request */
+ 	cb = CORBA_ORB_string_to_object(orb,(CORBA_char*)(*req)->client_id,&ev);
+ 	if(ev._major != CORBA_NO_EXCEPTION) {
+-		LOG("unable to resolve object for IOR");
++		LOG("%s", "unable to resolve object for IOR");
+ 		LOGEXN (ev);
+ 		CORBA_exception_free(&ev);
+ 		/* FIXME: This purges monitors for the client.
