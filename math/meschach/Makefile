@@ -1,8 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:53 jtb Exp $
-#
-#  XXX The tests run during configuration should not be compiled 
-#      with optimization as they determine machine parameters and
-#      may give incorrect results if optimized.
+# $NetBSD: Makefile,v 1.7 2001/04/28 23:59:20 jtb Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
@@ -22,32 +18,24 @@ pre-patch:
 	${CP} ${FILESDIR}/makefile.in ${WRKSRC}
 
 post-patch:
-	${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${FILESDIR}/makefile.test \
-	> ${WRKSRC}/Makefile
+	${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${FILESDIR}/makefile.test 	\
+		> ${WRKSRC}/Makefile
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/meschach
-	@for f in err.h machine.h matlab.h matrix.h meminfo.h sparse.h	\
-	zmatrix.h iter.h matrix2.h oldnames.h sparse2.h zmatrix2.h; do	\
-	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/include/meschach/";	\
-	${ECHO} $$i; $$i;						\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} err.h machine.h matlab.h 	\
+		matrix.h meminfo.h sparse.h zmatrix.h iter.h matrix2.h 	\
+		oldnames.h sparse2.h zmatrix2.h ${PREFIX}/include/meschach/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/meschach
 	${INSTALL_DATA_DIR} ${PREFIX}/share/meschach/tests
-	@for f in torture.c sptort.c ztorture.c memtort.c itertort.c	   \
-	mfuntort.c iotort.c; do						   \
-	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/meschach/tests/"; \
-	${ECHO} $$i; $$i;						   \
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} torture.c sptort.c ztorture.c 	\
+		memtort.c itertort.c mfuntort.c iotort.c 		\
+		${PREFIX}/share/meschach/tests/
 	${INSTALL_DATA} ${WRKSRC}/Makefile ${PREFIX}/share/meschach/tests
-	@for f in ${WRKSRC}/README ${WRKSRC}/DOC/*; do			\
-	i="${INSTALL_DATA} $$f ${PREFIX}/share/meschach/";		\
-	${ECHO} $$i; $$i;						\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} README ./DOC/* 			\
+		${PREFIX}/share/meschach/
 	${INSTALL_DATA} ${WRKSRC}/copyright ${PREFIX}/share/meschach
-	@for f in tutadv.c tutorial.c; do				\
-	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/meschach/";	\
-	${ECHO} $$i; $$i;						\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} tutadv.c tutorial.c		\
+		${PREFIX}/share/meschach/
 
 .include "../../mk/bsd.pkg.mk"

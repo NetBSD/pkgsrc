@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/14 21:43:56 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/28 23:59:21 jtb Exp $
 
 DISTNAME=		rlab-2.1.05
 CATEGORIES=		math
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 USE_FORTRAN=		YES
 
 EVAL_PREFIX+=		GC_PREFIX=boehm-gc
-CONFIGURE_ARGS+=	"--with-GC=${GC_PREFIX}"
+CONFIGURE_ARGS+=	--with-GC=${GC_PREFIX}
 
 PLIST_SRC=		${PKGDIR}/PLIST
 
@@ -27,31 +27,31 @@ RLAB_PLOT_PKG?=		gnuplot
 .if (${RLAB_PLOT_PKG} == "plplot")
 DEPENDS+=		plplot>=5.0.1:../../graphics/plplot
 EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
-CONFIGURE_ARGS+=	"--with-plplot=${PLPLOT_PREFIX}"
+CONFIGURE_ARGS+=	--with-plplot=${PLPLOT_PREFIX}
 PLIST_SRC+=		${PKGDIR}/PLIST.plplot
 .elif (${RLAB_PLOT_PKG} == "plotmtv")
 DEPENDS+=		plotmtv-[0-9]*:../../graphics/plotmtv
-CONFIGURE_ARGS+=	"--with-plotmtv=yes"
+CONFIGURE_ARGS+=	--with-plotmtv=yes
 PLIST_SRC+=		${PKGDIR}/PLIST.plotmtv
 .elif (${RLAB_PLOT_PKG} == "pgraf")
 DEPENDS+=		pgraf-[0-9]*:../../graphics/pgraf
 EVAL_PREFIX+=		PGRAF_PREFIX=pgraf
-CONFIGURE_ARGS+=	"--with-pgraf=yes"
+CONFIGURE_ARGS+=	--with-pgraf=yes
 PLIST_SRC+=		${PKGDIR}/PLIST.pgraf
 .else
 DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot
-CONFIGURE_ARGS+=	"--with-gnuplot=yes"
+CONFIGURE_ARGS+=	--with-gnuplot=yes
 PLIST_SRC+=		${PKGDIR}/PLIST.gnuplot
 .endif
 
 RLAB_USE_SUPERLU?=	YES
 .if (${RLAB_USE_SUPERLU} == YES)
 DEPENDS+=		superlu-[0-9]*:../../math/superlu
-CONFIGURE_ARGS+=	"--enable-SUPERLU"
+CONFIGURE_ARGS+=	--enable-SUPERLU
 .endif
 
 .if defined(RLAB_PAGER)
-CONFIGURE_ENV+=		"PAGER=${RLAB_PAGER}"
+CONFIGURE_ENV+=		PAGER="${RLAB_PAGER}"
 .endif
 
 pre-configure:

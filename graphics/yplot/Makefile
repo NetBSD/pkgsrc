@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:46 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/28 23:59:19 jtb Exp $
 
 DISTNAME=		yplot-1.0.3
 CATEGORIES=		graphics math
@@ -24,19 +24,13 @@ pre-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/yplot ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/yplotl ${PREFIX}/bin
-	@for f in yplot.i yplotl.i yplot_body.i; do			\
-	i="${INSTALL_DATA} ${WRKSRC}/$$f				\
-	${PREFIX}/share/yorick/1.4/startup/";				\
-	${ECHO} $$i; $$i;						\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} yplot.i yplotl.i yplot_body.i	\
+		${PREFIX}/share/yorick/1.4/startup/
 	${INSTALL_DATA} ${WRKSRC}/doc/yplot.doc				\
 	${PREFIX}/share/yorick/1.4/doc/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/yplot
 	${INSTALL_DATA} ${WRKSRC}/doc/ytut.ps ${PREFIX}/share/doc/yplot
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/yplot
-	@for f in ${WRKSRC}/doc/*.i; do					\
-	i="${INSTALL_DATA} $$f ${PREFIX}/share/examples/yplot/";	\
-	${ECHO} $$i; $$i;						\
-	done
+	${INSTALL_DATA} ${WRKSRC}/doc/*.i ${PREFIX}/share/examples/yplot/
 
 .include "../../mk/bsd.pkg.mk"

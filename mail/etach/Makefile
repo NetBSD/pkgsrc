@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:48 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/28 23:59:19 jtb Exp $
 
 DISTNAME=		etach-1.1.6
 CATEGORIES=		mail
@@ -27,10 +27,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/etach.el ${PREFIX}/${LISPDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/etach
-	@for t in ${WRKSRC}/README.txt ${WRKSRC}/FAQ.txt \
-	${WRKSRC}/LICENSE.txt; do \
-		c="${INSTALL_DATA} $$t ${PREFIX}/share/doc/etach/"; \
-		${ECHO} $$c; $$c; \
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} README.txt FAQ.txt LICENSE.txt	\
+		${PREFIX}/share/doc/etach/
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:44 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/28 23:59:19 jtb Exp $
 
 DISTNAME=		pgraf-20010131
 CATEGORIES=		graphics
@@ -20,9 +20,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/man3/pgraf.3 ${PREFIX}/man/man3
 	${INSTALL_DATA} ${WRKSRC}/man/man5/pgraf.5 ${PREFIX}/man/man5
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pgraf
-	@for f in ${WRKSRC}/metagens/*.r ${WRKSRC}/tests/*; do 		 \
-		i="${INSTALL_DATA} $$f ${PREFIX}/share/examples/pgraf/"; \
-		${ECHO} $$i; $$i; 					 \
-	done
+	${INSTALL_DATA} ${WRKSRC}/metagens/*.r ${WRKSRC}/tests/*	\
+		${PREFIX}/share/examples/pgraf/
 
 .include "../../mk/bsd.pkg.mk"
