@@ -1,39 +1,22 @@
-$NetBSD: patch-aa,v 1.12 2001/12/28 07:22:30 tron Exp $
+$NetBSD: patch-aa,v 1.13 2003/01/18 08:33:43 martti Exp $
 
---- Makefile.in.orig	Sun Dec 23 20:03:25 2001
-+++ Makefile.in	Fri Dec 28 08:13:29 2001
-@@ -9,7 +9,7 @@
- sbindir=@sbindir@
- libdir=@libdir@
- man8dir=@mandir@/man8
--piddir=@localstatedir@/stunnel/
-+piddir=/var/run/
- ssldir=@ssldir@
- openssl=$(ssldir)/bin/openssl
- PEM_DIR=@PEM_DIR@
-@@ -24,7 +24,7 @@
- LIBS=@LIBS@
- HEADERS=common.h prototypes.h client.h
- OBJS=client.o stunnel.o ssl.o protocol.o sthreads.o pty.o log.o options.o
--DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8  $(PEM_DIR)/stunnel.pem
-+DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8
+--- tools/Makefile.in.orig	Sun Jan 12 15:48:39 2003
++++ tools/Makefile.in	Sat Jan 18 08:08:05 2003
+@@ -83,7 +83,7 @@
  
- WINGCC=i386-mingw32msvc-gcc 
- WINCFLAGS=-O2 -Wall -DUSE_WIN32=1 -DHAVE_OPENSSL=1 -DFD_SETSIZE=4096 -DVERSION=\"@VERSION@\" -I../openssl-0.9.6b/outinc
-@@ -33,7 +33,7 @@
  
- # standard external rules
+ confdir = $(sysconfdir)/stunnel
+-conf_DATA = stunnel.conf-sample stunnel.pem
++conf_DATA = stunnel.conf-sample
  
--all: stunnel stunnel.8 stunnel.html stunnel.so stunnel.pem
-+all: stunnel stunnel.8 stunnel.html stunnel.so
+ docdir = $(datadir)/doc/stunnel
+ examplesdir = $(docdir)/examples
+@@ -251,7 +251,7 @@
+ 		-in stunnel.pem
  
- install: all installdirs $(DESTFILES)
+ install-data-hook:
+-	chmod 0600 $(confdir)/stunnel.pem
++	true
  
-@@ -62,7 +62,6 @@
- 
- installdirs: mkinstalldirs
- 	./mkinstalldirs $(sbindir) $(libdir) $(man8dir) $(PEM_DIR) $(piddir)
--	chmod a=rwx,+t $(piddir)
- 
- # non-standard external rules
- 
+ clean-local:
+ 	-rm -f stunnel.rnd
