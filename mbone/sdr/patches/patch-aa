@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.8 1999/10/28 02:40:24 hubertf Exp $
+
 --- sdr/src/polluted.c.orig	Tue Jun 22 16:54:15 1999
 +++ sdr/src/polluted.c	Sat Oct  2 20:39:08 1999
 @@ -514,7 +514,7 @@

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/10/27 17:14:09 agc Exp $
+# $NetBSD: Makefile,v 1.24 1999/10/28 02:40:23 hubertf Exp $
 #
 
 DISTNAME=	sdr-2.7
@@ -8,13 +8,10 @@ MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/2.7/
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 
-BROKEN=		Bad patch sum file
-
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 MIRROR_DISTFILE=	no
 USE_GMAKE=	yes
-USE_X11BASE=	yes
 
 RESTRICTED=	"Uses encryption"
 
