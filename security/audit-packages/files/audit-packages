@@ -6,7 +6,7 @@ if [ ! -f ${DISTDIR}/vulnerabilities ] ;then
     exit 1
 fi
 
-if [ -n "$(find ${DISTDIR}/vulnerabilities -mtime +7)" ]
+if [ -n "$(find ${DISTDIR}/vulnerabilities -ctime +7)" ]
 then
     echo "** ${DISTDIR}/vulnerabilities more than a week old" 1>&2
     echo "** run download-vulnerability-list" 1>&2
