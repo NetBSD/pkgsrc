@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5401 2004/04/01 03:02:20 danw Exp $
+$NetBSD: CHANGES,v 1.5402 2004/04/01 05:20:37 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1645,3 +1645,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ical to 2.2.1nb1 [minskim 2004-04-01]
 	Updated racoon to 20040401a [itojun 2004-04-01]
 	Added user_darwin-20040331 [danw 2004-04-01]
+	Added thy-0.8.10 [xtraeme 2004-04-01]
