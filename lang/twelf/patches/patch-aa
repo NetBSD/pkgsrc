@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/22 22:41:23 kristerw Exp $
+
+--- emacs/twelf-init.el.orig	Fri Oct 20 20:10:45 2000
++++ emacs/twelf-init.el
+@@ -1,5 +1,7 @@
+ ;;; Begin Twelf mode setup
+ 
++(setq twelf-root "@TWELF_LIBDIR@/")
++
+ ;; Extend emacs load path, if necessary
+ (cond ((not (member (concat twelf-root "emacs") load-path))
+        (setq load-path (cons (concat twelf-root "emacs") load-path))))
