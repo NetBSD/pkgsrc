@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:25:34 agc Exp $
+# $NetBSD: Makefile,v 1.25 2004/07/29 22:19:57 wiz Exp $
 
 DISTNAME=		vlnx424e
-PKGNAME=		uvscan-4.24.0
+PKGNAME=		uvscan-4.24.1
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.24/intel/
 EXTRACT_SUFX=		.tar.Z
@@ -28,7 +28,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 DOCDIR=			${PREFIX}/share/doc/uvscan
 DATDIR=			${PREFIX}/share/uvscan
 UVSCANDIR=		${PREFIX}/libexec/uvscan
-DATFILES=		clean.dat internet.dat names.dat scan.dat readme.txt
+DATFILES=		clean.dat internet.dat names.dat scan.dat pkgdesc.ini
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -39,7 +39,6 @@ FILES_SUBST+=		DATFILES=${DATFILES:Q}
 SUPPORT_FILES=		${DATDIR}/clean.dat ${UVSCANDIR}/clean.dat
 SUPPORT_FILES+=		${DATDIR}/names.dat ${UVSCANDIR}/names.dat
 SUPPORT_FILES+=		${DATDIR}/scan.dat ${UVSCANDIR}/scan.dat
-SUPPORT_FILES+=		${DATDIR}/readme.txt ${UVSCANDIR}/readme.txt
 OWN_DIRS=		${UVSCANDIR}
 
 do-build:
