@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2002/08/19 19:53:22 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2002/08/19 23:03:27 fredb Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -38,9 +38,8 @@ ALL_TARGET=
 .include	"../../graphics/png/buildlink.mk"
 .include	"../../graphics/freetype2/buildlink.mk"
 
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
-			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
-			NetBSD-1.[5-9]*-* Linux-*-* SunOS-*-*
+# NetBSD-*-m68k builds, but "regchrome" dumps core.
+NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
 
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
