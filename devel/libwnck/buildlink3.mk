@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:10 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWNCK_BUILDLINK3_MK:=	${LIBWNCK_BUILDLINK3_MK}+
@@ -13,11 +13,10 @@ BUILDLINK_PACKAGES+=	libwnck
 .if !empty(LIBWNCK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libwnck+=	libwnck>=2.4.0.1nb1
 BUILDLINK_PKGSRCDIR.libwnck?=	../../devel/libwnck
+.endif	# LIBWNCK_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
-
-.endif	# LIBWNCK_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:09 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCONF2_BUILDLINK3_MK:=	${GCONF2_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	GConf2
 .if !empty(GCONF2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.4.0.1
 BUILDLINK_PKGSRCDIR.GConf2?=	../../devel/GConf2
+.endif	# GCONF2_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -21,8 +22,8 @@ BUILDLINK_PKGSRCDIR.GConf2?=	../../devel/GConf2
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
 
+.if !empty(GCONF2_BUILDLINK3_MK:M+)
 BUILDLINK_TARGETS+=	GConf2-buildlink-fake
-
 _GCONF2_FAKE=		${BUILDLINK_DIR}/bin/gconftool-2
 
 GConf2-buildlink-fake:
@@ -33,7 +34,6 @@ GConf2-buildlink-fake:
 		${ECHO} "#!${SH}" > ${_GCONF2_FAKE};			\
 		${CHMOD} +x ${_GCONF2_FAKE};				\
 	fi
-
 .endif	# GCONF2_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
