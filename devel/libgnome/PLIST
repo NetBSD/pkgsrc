@@ -1,0 +1,205 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/11 23:31:16 rh Exp $
+etc/gconf/gconf.xml.defaults/desktop/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility/keyboard/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/applications/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/applications/browser/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/applications/help_viewer/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/applications/terminal/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/applications/window_manager/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/background/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/file_views/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/interface/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/mouse/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/sound/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/applications/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/ghelp/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/info/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/man/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/server-settings/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/start-here/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/system-settings/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/trash/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/unknown/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/accessibility/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/accessibility/keyboard/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/browser/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/help_viewer/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/terminal/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/window_manager/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/background/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/file-views/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/interface/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/mouse/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/sound/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/applications/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/ghelp/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/info/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/man/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/server-settings/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/start-here/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/system-settings/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/trash/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/unknown/%gconf.xml
+etc/gconf/schemas/desktop_gnome_accessibility_keyboard.schemas
+etc/gconf/schemas/desktop_gnome_applications_browser.schemas
+etc/gconf/schemas/desktop_gnome_applications_help_viewer.schemas
+etc/gconf/schemas/desktop_gnome_applications_terminal.schemas
+etc/gconf/schemas/desktop_gnome_applications_window_manager.schemas
+etc/gconf/schemas/desktop_gnome_background.schemas
+etc/gconf/schemas/desktop_gnome_file_views.schemas
+etc/gconf/schemas/desktop_gnome_interface.schemas
+etc/gconf/schemas/desktop_gnome_peripherals_keyboard.schemas
+etc/gconf/schemas/desktop_gnome_peripherals_mouse.schemas
+etc/gconf/schemas/desktop_gnome_sound.schemas
+etc/gconf/schemas/desktop_gnome_url_handlers.schemas
+etc/gnome-vfs-2.0/modules/help-methods.conf
+etc/sound/events/gnome-2.soundlist
+etc/sound/events/gtk-events-2.soundlist
+include/libgnome-2.0/libgnome/gnome-config.h
+include/libgnome-2.0/libgnome/gnome-exec.h
+include/libgnome-2.0/libgnome/gnome-gconf.h
+include/libgnome-2.0/libgnome/gnome-help.h
+include/libgnome-2.0/libgnome/gnome-i18n.h
+include/libgnome-2.0/libgnome/gnome-init.h
+include/libgnome-2.0/libgnome/gnome-macros.h
+include/libgnome-2.0/libgnome/gnome-program.h
+include/libgnome-2.0/libgnome/gnome-score.h
+include/libgnome-2.0/libgnome/gnome-sound.h
+include/libgnome-2.0/libgnome/gnome-triggers.h
+include/libgnome-2.0/libgnome/gnome-url.h
+include/libgnome-2.0/libgnome/gnome-util.h
+include/libgnome-2.0/libgnome/libgnome.h
+include/libgnome-2.0/libgnome/libgnometypebuiltins.h
+lib/bonobo/monikers/libmoniker_extra_2.a
+lib/bonobo/monikers/libmoniker_extra_2.la
+lib/bonobo/monikers/libmoniker_extra_2.so
+lib/bonobo/servers/GNOME_Moniker_std.server
+lib/gnome-vfs-2.0/modules/libvfs-help.a
+lib/gnome-vfs-2.0/modules/libvfs-help.la
+lib/gnome-vfs-2.0/modules/libvfs-help.so
+lib/libgnome-2.a
+lib/libgnome-2.la
+lib/libgnome-2.so
+lib/libgnome-2.so.0
+lib/libgnome-2.so.0.0
+lib/pkgconfig/libgnome-2.0.pc
+libexec/gnome2-db2html
+libexec/gnome2-info2html
+libexec/gnome2-man2html
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
+share/sgml/docbook/gnome-customization-0.1/gnome-custom.xsl
+share/sgml/docbook/gnome-customization-0.1/gnome-customization.xsl
+share/sgml/docbook/gnome-customization-0.1/l10n.xml
+@dirrm share/sgml/docbook/gnome-customization-0.1
+@exec ${MKDIR} %D/share/gtk-doc/html/libgnome
+@dirrm share/gtk-doc/html/libgnome
+@unexec ${RMDIR} %D/lib/bonobo/servers 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/bonobo/monikers 2>/dev/null || ${TRUE}
+@dirrm include/libgnome-2.0/libgnome
+@dirrm include/libgnome-2.0
+@unexec ${RMDIR} %D/etc/sound/events 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/sound 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gnome-vfs-2.0/modules 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gconf/schemas 2>/dev/null || ${TRUE}
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/unknown
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/trash
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/system-settings
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/start-here
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/server-settings
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/preferences
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/man
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/info
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/ghelp
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/applications
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/sound
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/mouse
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/interface
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/file-views
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/background
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/window_manager
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/terminal
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/help_viewer
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/browser
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/accessibility/keyboard
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/accessibility
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/schemas/desktop 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/schemas 2>/dev/null || ${TRUE}
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/unknown
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/trash
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/system-settings
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/start-here
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/server-settings
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/preferences
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/man
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/info
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/ghelp
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/applications
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/sound
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/mouse
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/interface
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/file_views
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/background
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/window_manager
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/terminal
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/help_viewer
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/browser
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility/keyboard
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/desktop 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults 2>/dev/null || ${TRUE}

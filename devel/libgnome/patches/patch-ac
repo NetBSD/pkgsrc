@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/09/11 23:31:16 rh Exp $
+
+--- libgnome/gnome-init.h.orig	Fri Sep  6 23:02:37 2002
++++ libgnome/gnome-init.h	Fri Sep  6 23:02:47 2002
+@@ -32,8 +32,8 @@
+ G_BEGIN_DECLS
+ 
+ /* This is where the user specific files are stored under $HOME */
+-#define GNOME_DOT_GNOME		".gnome2/"
+-#define GNOME_DOT_GNOME_PRIVATE	".gnome2_private/"
++#define GNOME_DOT_GNOME		".gnome2"
++#define GNOME_DOT_GNOME_PRIVATE	".gnome2_private"
+ 
+ #define LIBGNOME_MODULE libgnome_module_info_get()
+ const GnomeModuleInfo *libgnome_module_info_get (void) G_GNUC_CONST;
