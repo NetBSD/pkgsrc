@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2004/07/27 16:42:41 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2004/08/13 13:27:06 wiz Exp $
 #
 
-DISTNAME=	automake-1.8.5
+DISTNAME=	automake-1.9.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=automake/} \
 		ftp://sources.redhat.com/pub/automake/
@@ -15,7 +15,7 @@ DEPENDS=	autoconf>=2.58:../../devel/autoconf
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PLIST_SUBST+=		PKG_DIR_VERSION=1.8
+PLIST_SUBST+=		PKG_DIR_VERSION=1.9
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV=		PERL=${PERL5}
