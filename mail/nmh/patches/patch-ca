@@ -1,4 +1,7 @@
-$NetBSD: patch-ca,v 1.1 1999/03/04 09:12:42 kim Exp $
+$NetBSD: patch-ca,v 1.2 2000/01/18 15:50:33 agc Exp $
+
+Use ${INSTALL_SCRIPT} to install scripts
+Install configuration files as <conf-file>.dist
 
 --- etc/Makefile.in.orig	Fri Oct  2 23:38:38 1998
 +++ etc/Makefile.in	Thu Mar  4 01:41:05 1999
@@ -10,7 +13,19 @@ $NetBSD: patch-ca,v 1.1 1999/03/04 09:12:42 kim Exp $
  
  # Path to search for programs to handle MIME
  # content.  Used to create mhn.defaults
-@@ -88,7 +89,7 @@
+@@ -79,16 +80,16 @@
+ 	  $(INSTALL_DATA) $(srcdir)/$$file $(etcdir)/$$file; \
+ 	done
+ 	for file in $(GEN_FILES); do \
+-	  if [ -f $(etcdir)/$$file ]; then \
+-	    mv $(etcdir)/$$file $(etcdir)/$$file.old; \
++	  if [ -f $(etcdir)/$$file.dist ]; then \
++	    mv $(etcdir)/$$file.dist $(etcdir)/$$file.dist.old; \
+ 	  fi; \
+-	  $(INSTALL_DATA) $$file $(etcdir)/$$file; \
++	  $(INSTALL_DATA) $$file $(etcdir)/$$file.dist; \
+ 	done
+ 
  install-scripts:
  	$(top_srcdir)/mkinstalldirs $(libdir)
  	for script in $(SCRIPTS); do \
