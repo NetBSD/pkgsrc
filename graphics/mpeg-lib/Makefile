@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/16 15:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/29 21:38:24 zuntum Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.mni.mcgill.ca/pub/mpeg/ \
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Library for decoding MPEG movies
 
+USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 ALL_TARGET=	libmpeg.la
