@@ -1,0 +1,51 @@
+--- pbuf.c.orig	Mon Aug  3 08:50:07 1998
++++ pbuf.c	Sat Aug  8 17:22:28 1998
+@@ -100,7 +100,7 @@
+ /* Static */
+ static clock_t lastTime;
+ static int lastNumLines, lastNumCols;
+-static char domainName[64];
++static char domainName[MAXHOSTNAMELEN];
+ static short sortSendMode=0;
+ static char hex[] = "0123456789ABCDEF";
+ static short screenNumber=0;
+@@ -289,6 +289,8 @@
+ 
+ void init_curses ()
+ {
++  char *p;
++
+   if(webMode) return;
+ 
+   initscr ();
+@@ -305,7 +307,12 @@
+   
+   lastNumLines = LINES;
+   lastNumCols = COLS;
+-  domainName[0] = '\0';
++  if ((gethostname(domainName, MAXHOSTNAMELEN) == 0)
++    && ((p = memchr(domainName, '.', MAXHOSTNAMELEN)) != NULL)) {
++    domainName[MAXHOSTNAMELEN - 1] = '\0';
++    memmove(domainName, ++p, MAXHOSTNAMELEN + domainName - p);
++  } else
++    domainName[0] = '\0';
+   printHeader();  
+ }
+ 
+@@ -418,16 +425,6 @@
+       if (hp && (hp->h_name)) {
+ 	char *dotp = (char*)hp->h_name;    
+ 
+-	if((domainName[0] == '\0') 
+-	   && ((hostIpAddress.s_addr & netmask) == localnet)) {
+-	  int i;
+-	  
+-	  for(i=0; dotp[i] != '\0' && dotp[i] != '.'; i++);
+-	  
+-	  if((dotp[i] == '.') && (isalpha(dotp[strlen(dotp)-1])))
+-	    strcpy(domainName, &dotp[i+1]);
+-	}
+-	
+ 	if(domainName[0] != '\0') {
+ 	  int len = strlen(dotp)-strlen(domainName);
+ 	  
