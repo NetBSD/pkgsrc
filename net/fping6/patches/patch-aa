@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/24 15:21:36 bouyer Exp $
+
+--- Makefile.in.orig	Fri Mar 21 15:42:12 2003
++++ Makefile.in	Fri Mar 21 15:42:55 2003
+@@ -63,9 +63,9 @@
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ 
+-sbin_PROGRAMS = fping
++sbin_PROGRAMS = fping6
+ fping_SOURCES = fping.c options.h linux.h
+-man_MANS = fping.8
++man_MANS = fping6.8
+ AUTOMAKE_OPTIONS = foreign
+ EXTRA_DIST = $(man_MANS)
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -193,8 +193,8 @@
+ 
+ maintainer-clean-compile:
+ 
+-fping: $(fping_OBJECTS) $(fping_DEPENDENCIES)
+-	@rm -f fping
++fping6: $(fping_OBJECTS) $(fping_DEPENDENCIES)
++	@rm -f fping6
+ 	$(LINK) $(fping_LDFLAGS) $(fping_OBJECTS) $(fping_LDADD) $(LIBS)
+ 
+ install-man8:
