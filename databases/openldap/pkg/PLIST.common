@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/09/10 10:41:41 hwr Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2000/07/17 09:19:44 veego Exp $
 bin/ud
 bin/ldapsearch
 bin/ldapmodify
