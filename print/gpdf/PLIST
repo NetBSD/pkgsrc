@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/21 17:12:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/03/22 16:32:56 jmmv Exp $
 bin/gpdf
 lib/bonobo/servers/GNOME_PDF.server
 libexec/gnome-pdf-viewer
@@ -36,6 +36,7 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gpdf.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gpdf.mo
@@ -60,6 +61,7 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gpdf.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gpdf.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gpdf.mo
