@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.438 2002/11/02 00:25:53 wiz Exp $
+$NetBSD: CHANGES,v 1.439 2002/11/02 00:36:15 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3503,3 +3503,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kde to 1.1.2nb2 [wiz 2002-11-01]
 	Updated kde2 to 2.2.2nb4 [wiz 2002-11-01]
 	Updated kde3 to 3.0.4nb1 [wiz 2002-11-01]
+	Added gbib-0.1.1b [rh 2002-11-02]
