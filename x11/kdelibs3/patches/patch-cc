@@ -1,8 +1,8 @@
-$NetBSD: patch-cc,v 1.5 2004/02/29 12:00:57 markd Exp $
+$NetBSD: patch-cc,v 1.6 2005/03/23 21:37:48 markd Exp $
 
---- kdeui/ksconfig.cpp.orig	2003-11-30 22:46:51.000000000 +1300
+--- kdeui/ksconfig.cpp.orig	2005-02-04 12:33:10.000000000 +1300
 +++ kdeui/ksconfig.cpp
-@@ -432,6 +432,8 @@ void KSpellConfig::getAvailDictsIspell (
+@@ -429,6 +429,8 @@ void KSpellConfig::getAvailDictsIspell (
    // dictionary path
    QFileInfo dir ("/usr/lib/ispell");
    if (!dir.exists() || !dir.isDir())
@@ -11,16 +11,16 @@ $NetBSD: patch-cc,v 1.5 2004/02/29 12:00:57 markd Exp $
      dir.setFile ("/usr/local/lib/ispell");
    if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/local/share/ispell");
-@@ -495,6 +497,8 @@ void KSpellConfig::getAvailDictsAspell (
-   // FIXME: use "aspell dump config" to find out the dict-dir
-   QFileInfo dir ("/usr/lib/aspell");
+@@ -498,6 +500,8 @@ void KSpellConfig::getAvailDictsAspell (
+   if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/lib/aspell-0.60");
    if (!dir.exists() || !dir.isDir())
 +    dir.setFile ("@LOCALBASE@/lib");
 +  if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/local/lib/aspell");
    if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/share/aspell");
-@@ -559,6 +563,8 @@ KSpellConfig::fillDicts( QComboBox* box,
+@@ -579,6 +583,8 @@ KSpellConfig::fillDicts( QComboBox* box,
        // dictionary path
        QFileInfo dir ("/usr/lib/ispell");
        if (!dir.exists() || !dir.isDir())
@@ -29,7 +29,7 @@ $NetBSD: patch-cc,v 1.5 2004/02/29 12:00:57 markd Exp $
          dir.setFile ("/usr/local/lib/ispell");
        if (!dir.exists() || !dir.isDir())
          dir.setFile ("/usr/local/share/ispell");
-@@ -623,6 +629,8 @@ KSpellConfig::fillDicts( QComboBox* box,
+@@ -647,6 +653,8 @@ KSpellConfig::fillDicts( QComboBox* box,
        // FIXME: use "aspell dump config" to find out the dict-dir
        QFileInfo dir ("/usr/lib/aspell");
        if (!dir.exists() || !dir.isDir())
