@@ -1,36 +1,27 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/29 18:24:55 erh Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/05/26 15:16:26 xtraeme Exp $
 tomcat/LICENSE
+tomcat/NOTICE
 tomcat/RELEASE-NOTES
 tomcat/RUNNING.txt
 tomcat/bin/LauncherBootstrap.class
 tomcat/bin/bootstrap.jar
-tomcat/bin/catalina.bat
 tomcat/bin/catalina.sh
 tomcat/bin/catalina.xml
 tomcat/bin/commons-daemon.jar
 tomcat/bin/commons-launcher.jar
 tomcat/bin/commons-logging-api.jar
-tomcat/bin/cpappend.bat
-tomcat/bin/digest.bat
 tomcat/bin/digest.sh
+tomcat/bin/jmx.jar
 tomcat/bin/jsvc.tar.gz
 tomcat/bin/launcher.properties
-tomcat/bin/service.bat
-tomcat/bin/setclasspath.bat
 tomcat/bin/setclasspath.sh
-tomcat/bin/shutdown-using-launcher.bat
 tomcat/bin/shutdown-using-launcher.sh
-tomcat/bin/shutdown.bat
 tomcat/bin/shutdown.sh
-tomcat/bin/startup-using-launcher.bat
 tomcat/bin/startup-using-launcher.sh
-tomcat/bin/startup.bat
 tomcat/bin/startup.sh
-tomcat/bin/tomcat.exe
-tomcat/bin/tomcatw.exe
-tomcat/bin/tool-wrapper-using-launcher.bat
+tomcat/bin/tomcat5.exe
+tomcat/bin/tomcat5w.exe
 tomcat/bin/tool-wrapper-using-launcher.sh
-tomcat/bin/tool-wrapper.bat
 tomcat/bin/tool-wrapper.sh
 tomcat/common/endorsed/xercesImpl.jar
 tomcat/common/endorsed/xmlParserAPIs.jar
@@ -41,23 +32,12 @@ tomcat/common/lib/commons-el.jar
 tomcat/common/lib/commons-pool-1.1.jar
 tomcat/common/lib/jasper-compiler.jar
 tomcat/common/lib/jasper-runtime.jar
-tomcat/common/lib/jmx.jar
 tomcat/common/lib/jsp-api.jar
 tomcat/common/lib/naming-common.jar
 tomcat/common/lib/naming-factory.jar
 tomcat/common/lib/naming-java.jar
 tomcat/common/lib/naming-resources.jar
 tomcat/common/lib/servlet-api.jar
-tomcat/conf/Catalina/localhost/admin.xml.default
-tomcat/conf/Catalina/localhost/balancer.xml.default
-tomcat/conf/Catalina/localhost/manager.xml.default
-tomcat/conf/catalina.policy.default
-tomcat/conf/catalina.properties.default
-tomcat/conf/jk2.properties.default
-tomcat/conf/server-minimal.xml
-tomcat/conf/server.xml.default
-tomcat/conf/tomcat-users.xml.default
-tomcat/conf/web.xml.default
 tomcat/server/lib/catalina-ant.jar
 tomcat/server/lib/catalina-cluster.jar
 tomcat/server/lib/catalina-i18n-es.jar
@@ -155,7 +135,17 @@ tomcat/server/webapps/manager/images/update.gif
 tomcat/server/webapps/manager/images/void.gif
 tomcat/server/webapps/manager/manager-howto.html
 tomcat/server/webapps/manager/manager.xml
+tomcat/server/webapps/manager/status.xsd
 tomcat/server/webapps/manager/xform.xsl
+tomcat/share/examples/jakarta-tomcat/Catalina/localhost/admin.xml
+tomcat/share/examples/jakarta-tomcat/Catalina/localhost/balancer.xml
+tomcat/share/examples/jakarta-tomcat/Catalina/localhost/manager.xml
+tomcat/share/examples/jakarta-tomcat/catalina.policy
+tomcat/share/examples/jakarta-tomcat/catalina.properties
+tomcat/share/examples/jakarta-tomcat/jk2.properties
+tomcat/share/examples/jakarta-tomcat/server.xml
+tomcat/share/examples/jakarta-tomcat/tomcat-users.xml
+tomcat/share/examples/jakarta-tomcat/web.xml
 tomcat/webapps/ROOT/RELEASE-NOTES.txt
 tomcat/webapps/ROOT/WEB-INF/classes/org/apache/jsp/index_jsp.class
 tomcat/webapps/ROOT/WEB-INF/lib/catalina-root.jar
@@ -661,6 +651,7 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/N
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/SSLAuthenticator.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/SavedRequest.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/SingleSignOn.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/SingleSignOnEntry.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/package-frame.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/package-summary.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator/package-tree.html
@@ -725,6 +716,7 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/Constant
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/Reloader.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/ResourceEntry.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/StandardClassLoader.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/StandardClassLoaderMBean.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/WebappClassLoader.PrivilegedFindResource.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/WebappClassLoader.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader/WebappLoader.html
@@ -793,6 +785,7 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/security/packag
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/security/package-tree.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.CGIEnvironment.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.CGIRunner.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.NameValuePair.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/CGIServlet.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/Constants.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets/DefaultServlet.ResourceInfo.html
@@ -999,14 +992,18 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat4/package-f
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat4/package-summary.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat4/package-tree.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/Constants.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteAdapter.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteConnector.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteInputStream.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteOutputStream.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyotePrincipal.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteReader.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteRequest.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteRequestFacade.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteResponse.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteResponseFacade.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteServerSocketFactory.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/CoyoteWriter.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/InputBuffer.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/MapperListener.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5/OutputBuffer.html
@@ -1722,38 +1719,279 @@ tomcat/webapps/webdav/WEB-INF/web.xml
 tomcat/webapps/webdav/index.html
 tomcat/webapps/webdav/tomcat-power.gif
 tomcat/webapps/webdav/tomcat.gif
-@comment must explicitly remove webapp working files, but not any user files in webapps
-@unexec /rescue/rm -rf %D/tomcat/webapps/ROOT
-@unexec /rescue/rm -rf %D/tomcat/webapps/balancer
-@unexec /rescue/rm -rf %D/tomcat/webapps/jsp-examples
-@unexec /rescue/rm -rf %D/tomcat/webapps/servlets-examples
-@unexec /rescue/rm -rf %D/tomcat/webapps/tomcat-docs
-@unexec /rescue/rm -rf %D/tomcat/webapps/webdav
-@unexec /rescue/rm -rf %D/tomcat/server/webapps
-@comment must explicitly remove tomcat working stash
-@unexec /rescue/rm -rf %D/tomcat/work
-@comment also remove auto-generated conf fragments, if present
-@unexec /rescue/rm -f %D/tomcat/conf/iis_redirect.reg-auto
-@unexec /rescue/rm -f %D/tomcat/conf/mod_jk.conf-auto
-@unexec /rescue/rm -f %D/tomcat/conf/obj.conf-auto
-@unexec /rescue/rm -f %D/tomcat/conf/uriworkermap.properties-auto
+@exec ${MKDIR} %D/tomcat/work
+@dirrm tomcat/work
+@dirrm tomcat/webapps/webdav/WEB-INF
+@dirrm tomcat/webapps/webdav
+@dirrm tomcat/webapps/tomcat-docs/servletapi/resources
+@dirrm tomcat/webapps/tomcat-docs/servletapi/javax/servlet/http/class-use
+@dirrm tomcat/webapps/tomcat-docs/servletapi/javax/servlet/http
+@dirrm tomcat/webapps/tomcat-docs/servletapi/javax/servlet/class-use
+@dirrm tomcat/webapps/tomcat-docs/servletapi/javax/servlet
+@dirrm tomcat/webapps/tomcat-docs/servletapi/javax
+@dirrm tomcat/webapps/tomcat-docs/servletapi
+@dirrm tomcat/webapps/tomcat-docs/printer
+@dirrm tomcat/webapps/tomcat-docs/jspapi/resources
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet/jsp/tagext/doc-files
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet/jsp/tagext/class-use
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet/jsp/tagext
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet/jsp/el/class-use
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet/jsp/el
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet/jsp/class-use
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet/jsp
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax/servlet
+@dirrm tomcat/webapps/tomcat-docs/jspapi/javax
+@dirrm tomcat/webapps/tomcat-docs/jspapi
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/resources
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/xmlparser
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/util
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/tagplugins/jstl
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/tagplugins
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/servlet
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/security
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/runtime
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/tagplugin
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api/org
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs/api
+@dirrm tomcat/webapps/tomcat-docs/jasper/docs
+@dirrm tomcat/webapps/tomcat-docs/jasper
+@dirrm tomcat/webapps/tomcat-docs/images
+@dirrm tomcat/webapps/tomcat-docs/config/printer
+@dirrm tomcat/webapps/tomcat-docs/config
+@dirrm tomcat/webapps/tomcat-docs/catalina/funcspecs/printer
+@dirrm tomcat/webapps/tomcat-docs/catalina/funcspecs
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/resources
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/threads
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/res
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/net/puretls
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/net/jsse
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/net
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/log
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/http/mapper
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/http
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/compat
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/collections
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util/buf
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat/util
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/tomcat
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/naming/resources/jndi
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/naming/resources
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/naming/java
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/naming/factory
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/naming
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/server
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/core
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/config
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/common
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk/apr
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/jk
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat5
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat4
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/tomcat3
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/memory
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/http11/filters
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote/http11
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/coyote
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/valves
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/util
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/users
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/startup
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/session
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/servlets
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/security
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/realm
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/net
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/mbeans
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/logger
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/loader
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/launcher
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/deploy
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/core
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/connector
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/authenticator
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ant
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat33
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api/org
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs/api
+@dirrm tomcat/webapps/tomcat-docs/catalina/docs
+@dirrm tomcat/webapps/tomcat-docs/catalina
+@dirrm tomcat/webapps/tomcat-docs/architecture/startup
+@dirrm tomcat/webapps/tomcat-docs/architecture/requestProcess
+@dirrm tomcat/webapps/tomcat-docs/architecture/printer
+@dirrm tomcat/webapps/tomcat-docs/architecture
+@dirrm tomcat/webapps/tomcat-docs/appdev/sample/web/images
+@dirrm tomcat/webapps/tomcat-docs/appdev/sample/web/WEB-INF
+@dirrm tomcat/webapps/tomcat-docs/appdev/sample/web
+@dirrm tomcat/webapps/tomcat-docs/appdev/sample/src/mypackage
+@dirrm tomcat/webapps/tomcat-docs/appdev/sample/src
+@dirrm tomcat/webapps/tomcat-docs/appdev/sample/docs
+@dirrm tomcat/webapps/tomcat-docs/appdev/sample
+@dirrm tomcat/webapps/tomcat-docs/appdev/printer
+@dirrm tomcat/webapps/tomcat-docs/appdev
+@dirrm tomcat/webapps/tomcat-docs/WEB-INF
+@dirrm tomcat/webapps/tomcat-docs
+@dirrm tomcat/webapps/servlets-examples/images
+@dirrm tomcat/webapps/servlets-examples/WEB-INF/classes/util
+@dirrm tomcat/webapps/servlets-examples/WEB-INF/classes/listeners
+@dirrm tomcat/webapps/servlets-examples/WEB-INF/classes/filters
+@dirrm tomcat/webapps/servlets-examples/WEB-INF/classes/compressionFilters
+@dirrm tomcat/webapps/servlets-examples/WEB-INF/classes
+@dirrm tomcat/webapps/servlets-examples/WEB-INF
+@dirrm tomcat/webapps/servlets-examples
+@dirrm tomcat/webapps/jsp-examples/xml
+@dirrm tomcat/webapps/jsp-examples/tagplugin
+@dirrm tomcat/webapps/jsp-examples/snp
+@dirrm tomcat/webapps/jsp-examples/simpletag
+@dirrm tomcat/webapps/jsp-examples/sessions
+@dirrm tomcat/webapps/jsp-examples/security/protected
+@dirrm tomcat/webapps/jsp-examples/security
+@dirrm tomcat/webapps/jsp-examples/plugin/applet
+@dirrm tomcat/webapps/jsp-examples/plugin
+@dirrm tomcat/webapps/jsp-examples/num
+@dirrm tomcat/webapps/jsp-examples/jsptoserv
+@dirrm tomcat/webapps/jsp-examples/jsp2/tagfiles
+@dirrm tomcat/webapps/jsp-examples/jsp2/simpletag
+@dirrm tomcat/webapps/jsp-examples/jsp2/misc
+@dirrm tomcat/webapps/jsp-examples/jsp2/jspx
+@dirrm tomcat/webapps/jsp-examples/jsp2/jspattribute
+@dirrm tomcat/webapps/jsp-examples/jsp2/el
+@dirrm tomcat/webapps/jsp-examples/jsp2
+@dirrm tomcat/webapps/jsp-examples/include
+@dirrm tomcat/webapps/jsp-examples/images
+@dirrm tomcat/webapps/jsp-examples/forward
+@dirrm tomcat/webapps/jsp-examples/error
+@dirrm tomcat/webapps/jsp-examples/dates
+@dirrm tomcat/webapps/jsp-examples/colors
+@dirrm tomcat/webapps/jsp-examples/checkbox
+@dirrm tomcat/webapps/jsp-examples/cal
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/tags
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/lib
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/jsp2
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/jsp/applet
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/jsp
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/validators
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/util
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/sessions
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/xml
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tagplugin
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tag/web
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/tag
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/snp
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/simpletag
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/sessions
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/security/protected_
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/security
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/plugin
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/num
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsptoserv
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/tagfiles
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/simpletag
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/misc
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/jspx
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/jspattribute
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/el
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/include
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/forward
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/error
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/dates
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/colors
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/checkbox
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/cal
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache/jsp
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org/apache
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/org
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/num
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/listeners
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/jsp2/examples/simpletag
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/jsp2/examples/el
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/jsp2/examples
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/jsp2
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/filters
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/examples
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/error
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/dates
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/compressionFilters
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/colors
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/checkbox
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes/cal
+@dirrm tomcat/webapps/jsp-examples/WEB-INF/classes
+@dirrm tomcat/webapps/jsp-examples/WEB-INF
+@dirrm tomcat/webapps/jsp-examples
+@exec ${MKDIR} %D/tomcat/webapps/balancer/images
+@dirrm tomcat/webapps/balancer/images
+@dirrm tomcat/webapps/balancer/WEB-INF/lib
+@dirrm tomcat/webapps/balancer/WEB-INF/config
+@dirrm tomcat/webapps/balancer/WEB-INF
+@dirrm tomcat/webapps/balancer
+@dirrm tomcat/webapps/ROOT/WEB-INF/lib
+@dirrm tomcat/webapps/ROOT/WEB-INF/classes/org/apache/jsp
+@dirrm tomcat/webapps/ROOT/WEB-INF/classes/org/apache
+@dirrm tomcat/webapps/ROOT/WEB-INF/classes/org
+@dirrm tomcat/webapps/ROOT/WEB-INF/classes
+@dirrm tomcat/webapps/ROOT/WEB-INF
+@dirrm tomcat/webapps/ROOT
 @dirrm tomcat/webapps
+@exec ${MKDIR} %D/tomcat/temp
 @dirrm tomcat/temp
+@exec ${MKDIR} %D/tomcat/shared/lib
 @dirrm tomcat/shared/lib
+@exec ${MKDIR} %D/tomcat/shared/classes
 @dirrm tomcat/shared/classes
 @dirrm tomcat/shared
+@dirrm tomcat/share/examples/jakarta-tomcat/Catalina/localhost
+@dirrm tomcat/share/examples/jakarta-tomcat/Catalina
+@dirrm tomcat/share/examples/jakarta-tomcat
+@dirrm tomcat/share/examples
+@dirrm tomcat/share
+@dirrm tomcat/server/webapps/manager/images
+@dirrm tomcat/server/webapps/manager/WEB-INF/lib
+@dirrm tomcat/server/webapps/manager/WEB-INF
+@dirrm tomcat/server/webapps/manager
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/valve
+@dirrm tomcat/server/webapps/admin/valve
+@dirrm tomcat/server/webapps/admin/users
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/service
+@dirrm tomcat/server/webapps/admin/service
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/server
+@dirrm tomcat/server/webapps/admin/server
+@dirrm tomcat/server/webapps/admin/resources
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/realm
+@dirrm tomcat/server/webapps/admin/realm
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/logger
+@dirrm tomcat/server/webapps/admin/logger
+@dirrm tomcat/server/webapps/admin/images
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/host
+@dirrm tomcat/server/webapps/admin/host
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/defaultcontext
+@dirrm tomcat/server/webapps/admin/defaultcontext
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/context
+@dirrm tomcat/server/webapps/admin/context
+@exec ${MKDIR} %D/tomcat/server/webapps/admin/connector
+@dirrm tomcat/server/webapps/admin/connector
+@dirrm tomcat/server/webapps/admin/WEB-INF/lib
+@dirrm tomcat/server/webapps/admin/WEB-INF
+@dirrm tomcat/server/webapps/admin
+@dirrm tomcat/server/webapps
 @dirrm tomcat/server/lib
+@exec ${MKDIR} %D/tomcat/server/classes
 @dirrm tomcat/server/classes
 @dirrm tomcat/server
+@exec ${MKDIR} %D/tomcat/logs
 @dirrm tomcat/logs
 @dirrm tomcat/common/lib
 @dirrm tomcat/common/endorsed
+@exec ${MKDIR} %D/tomcat/common/classes
 @dirrm tomcat/common/classes
 @dirrm tomcat/common
-@dirrm tomcat/conf/Catalina/localhost
-@dirrm tomcat/conf/Catalina
-@comment Directory removal handled by PKG_SYSCONFDIR setting:
-@comment tomcat/conf
 @dirrm tomcat/bin
-@comment Directory removal handled by PKG_SYSCONFDIR setting:
-@comment tomcat
+@unexec ${RMDIR} -p %D/tomcat 2> /dev/null || ${TRUE}
