@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2000/07/26 18:15:04 frueauf Exp $
+$NetBSD: patch-aa,v 1.9 2000/09/10 18:00:21 fredb Exp $
 
 --- driver/Makefile.in.orig	Wed Jul 19 09:37:22 2000
 +++ driver/Makefile.in	Tue Jul 25 23:23:19 2000
@@ -13,37 +13,6 @@ $NetBSD: patch-aa,v 1.8 2000/07/26 18:15:04 frueauf Exp $
  		  $(PASSWD_LIBS)
  
  CMD_LIBS	= $(LIBS) $(X_LIBS) \
-@@ -328,17 +328,17 @@
-          lost2=""                                                            ;\
-          if [ "$(install_prefix)$(GNOME_DATADIR)" != "" ]; then               \
-            echo    $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop   \
--             $(install_prefix)$(GNOME_CCDIR)/screensaver-properties.desktop  ;\
-+             $(install_prefix)$(GNOME_CCDIR)/xscreensaver-properties.desktop  ;\
-            if      $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop   \
--             $(install_prefix)$(GNOME_CCDIR)/screensaver-properties.desktop  ;\
-+             $(install_prefix)$(GNOME_CCDIR)/xscreensaver-properties.desktop  ;\
-              then true                                                       ;\
-            else                                                               \
-              lost1="$(install_prefix)$(GNOME_CCDIR)"                         ;\
-            fi                                                                ;\
-            echo $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop      \
--                        $(GNOME_PANELDIR)/screensaver-properties.desktop     ;\
-+                        $(GNOME_PANELDIR)/xscreensaver-properties.desktop     ;\
-            if   $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop      \
--       $(install_prefix)$(GNOME_PANELDIR)/screensaver-properties.desktop     ;\
-+       $(install_prefix)$(GNOME_PANELDIR)/xscreensaver-properties.desktop     ;\
-              then true                                                       ;\
-            else                                                               \
-              lost2="$(install_prefix)$(GNOME_PANELDIR)"                      ;\
-@@ -368,7 +368,7 @@
- 
- uninstall-gnome:
- 	@if [ "$(install_prefix)$(GNOME_DATADIR)" != "" ]; then		      \
--          f=screensaver-properties.desktop                                   ;\
-+          f=xscreensaver-properties.desktop                                   ;\
-           echo rm -f $(install_prefix)$(GNOME_CCDIR)/$$f                     ;\
-                rm -f $(install_prefix)$(GNOME_CCDIR)/$$f                     ;\
-           echo rm -f $(install_prefix)$(GNOME_PANELDIR)/$$f                  ;\
 @@ -377,11 +377,11 @@
  
  install-kde:
