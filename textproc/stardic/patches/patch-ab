@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/06/15 09:21:44 shell Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/03 23:00:20 wiz Exp $
 
---- trans.cc.orig	Sat Jan 29 11:34:27 2000
+--- trans.cc.orig	2000-01-29 04:34:27.000000000 +0100
 +++ trans.cc
-@@ -103,6 +103,7 @@
+@@ -22,6 +22,8 @@
+ #include <sys/mman.h>
+ #include <string.h>
+ #include <Xm/DialogS.h>
++#include <iostream>
++using namespace std;
+ 
+ // In HP_UX , MAP_FAILED is not defined. msa add 1999.9.26
+ #ifndef MAP_FAILED
+@@ -103,6 +105,7 @@ char sErrorMessage[MAX_STR_LEN+1];
  char sHomeDir[MAX_STR_LEN+1];
  PixmapClass *poBackImage;
  char* asSearchDirs[]={
@@ -10,7 +19,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/06/15 09:21:44 shell Exp $
  	"/opt/dic",
  	"/usr/local/dic",
  	"/dic",
-@@ -2468,6 +2469,11 @@
+@@ -2468,6 +2471,11 @@ AppFrame::AppFrame():oAppCore(this)
  void AppFrame::vInit(int argc,char **argv)
  {
          Atom DELETE_WIN;
