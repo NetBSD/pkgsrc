@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/05 04:08:27 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/05 04:53:08 jtb Exp $
 bin/zsh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak) >/etc/shells
@@ -354,42 +354,11 @@ share/zsh/4.0.1/functions/promptnl
 share/zsh/4.0.1/functions/run-help
 share/zsh/4.0.1/functions/smart-insert-last-word
 share/zsh/4.0.1/functions/zed
-share/zsh/4.0.1/functions/zfanon
-share/zsh/4.0.1/functions/zfautocheck
-share/zsh/4.0.1/functions/zfcd
-share/zsh/4.0.1/functions/zfcd_match
-share/zsh/4.0.1/functions/zfcget
-share/zsh/4.0.1/functions/zfclose
-share/zsh/4.0.1/functions/zfcput
-share/zsh/4.0.1/functions/zfdir
-share/zsh/4.0.1/functions/zffcache
-share/zsh/4.0.1/functions/zfgcp
-share/zsh/4.0.1/functions/zfget
-share/zsh/4.0.1/functions/zfget_match
-share/zsh/4.0.1/functions/zfgoto
-share/zsh/4.0.1/functions/zfhere
-share/zsh/4.0.1/functions/zfinit
-share/zsh/4.0.1/functions/zfls
-share/zsh/4.0.1/functions/zfmark
-share/zsh/4.0.1/functions/zfopen
-share/zsh/4.0.1/functions/zfparams
-share/zsh/4.0.1/functions/zfpcp
-share/zsh/4.0.1/functions/zfput
-share/zsh/4.0.1/functions/zfrglob
-share/zsh/4.0.1/functions/zfrtime
-share/zsh/4.0.1/functions/zfsession
-share/zsh/4.0.1/functions/zfstat
-share/zsh/4.0.1/functions/zftp_chpwd
-share/zsh/4.0.1/functions/zftp_progress
-share/zsh/4.0.1/functions/zftransfer
-share/zsh/4.0.1/functions/zftype
-share/zsh/4.0.1/functions/zfuget
-share/zsh/4.0.1/functions/zfuput
 share/zsh/4.0.1/functions/zkbd
 share/zsh/4.0.1/functions/zmv
 share/zsh/4.0.1/functions/zrecompile
 share/zsh/4.0.1/functions/zstyle+
-@dirrm share/zsh/site-functions
-@dirrm share/zsh/4.0.1/functions
-@dirrm share/zsh/4.0.1
-@dirrm share/zsh
+@unexec rmdir %D/share/zsh/site-functions 2>/dev/null || true
+@unexec rmdir %D/share/zsh/4.0.1/functions 2>/dev/null || true
+@unexec rmdir %D/share/zsh/4.0.1 2>/dev/null || true
+@unexec rmdir %D/share/zsh 2>/dev/null || true
