@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9391 2005/03/02 17:58:54 wiz Exp $
+$NetBSD: CHANGES,v 1.9392 2005/03/02 18:00:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1233,3 +1233,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed libsieve [wiz 2005-03-02]
 	Updated unalz to 0.31 [minskim 2005-03-02]
 	Updated docbook-website to 2.5.0 [wiz 2005-03-02]
+	Updated netbsd-www to 1.3 [wiz 2005-03-02]
