@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/17 17:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/05/24 19:51:07 dmcmahill Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -11,10 +11,10 @@ HOMEPAGE=		http://www.epm.ornl.gov/pvm/pvm_home.html
 COMMENT=		Parallel Virtual Machine libraries and environment
 
 .if exists(/usr/bin/ssh)
-SSH=		/usr/bin/ssh
+PVM_SSH?=		/usr/bin/ssh
 .else
 DEPENDS+=		{openssh-*,ssh{,6}-1.2.27*}:../../security/ssh
-SSH=		${LOCALBASE}/bin/ssh
+PVM_SSH?=		${LOCALBASE}/bin/ssh
 .endif
 
 USE_FORTRAN=		yes
@@ -22,7 +22,7 @@ USE_X11=		yes
 WRKSRC=			${WRKDIR}/pvm3
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 MAKE_ENV+=		PVM_ARCH=
-MAKE_ENV+=		SSH=${SSH}
+MAKE_ENV+=		SSH=${PVM_SSH}
 ALL_TARGET=		all install
 PLIST_SRC=		${WRKDIR}/PLIST-src
 
