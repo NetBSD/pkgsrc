@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:19 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/24 23:40:02 jwise Exp $
 #
 
 DISTNAME=	expect
-PKGNAME=	tcl-expect-5.32.1
+PKGNAME=	tcl-expect-5.33
 CATEGORIES=	lang
 MASTER_SITES=	http://expect.nist.gov/
 
@@ -14,8 +14,8 @@ DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 
 CONFLICTS+=	expect-[0-9]*
 
-WRKSRC=		${WRKDIR}/expect-5.32
-DIST_SUBDIR=	expect-5.32.1
+WRKSRC=		${WRKDIR}/expect-5.33
+DIST_SUBDIR=	expect-5.33
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
