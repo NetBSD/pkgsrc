@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/22 16:12:07 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/16 18:47:17 wiz Exp $
 bin/Pnews
 bin/Rnmail
-bin/newsetup
-bin/newsgroups
 bin/nntplist
 bin/rn
 bin/trn
@@ -15,10 +13,22 @@ libdata/trn/makedir
 libdata/trn/mbox.saver
 libdata/trn/newsnews
 libdata/trn/norm.saver
+libdata/trn/nntpserver
+libdata/trn/organization
+libdata/trn/access.def
+libdata/trn/HelpFiles/changelog
+libdata/trn/HelpFiles/hints
+libdata/trn/HelpFiles/quickstart
+libdata/trn/HelpFiles/top
+libdata/trn/HelpFiles/samples/access
+libdata/trn/HelpFiles/samples/index
+libdata/trn/HelpFiles/samples/trnrc
+@dirrm libdata/trn/HelpFiles/samples
+@dirrm libdata/trn/HelpFiles
 @dirrm libdata/trn
+libexec/trn/inews
+@dirrm libexec/trn
 man/man1/Pnews.1
 man/man1/Rnmail.1
-man/man1/newsetup.1
-man/man1/newsgroups.1
 man/man1/rn.1
 man/man1/trn.1
