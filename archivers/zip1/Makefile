@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/06/04 17:12:42 jtb Exp $
+# $NetBSD: Makefile,v 1.14 2001/07/16 10:29:51 jlam Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -23,7 +23,8 @@ MAKEFILE=	makefile
 MAKE_FLAGS=	CFLAGS="${CFLAGS} -DDIRENT" LFLAGS2="-lcompat"
 ALL_TARGET=	zip
 
-NO_WRKSUBDIR=	yes
+USE_BUILDLINK_ONLY=	yes
+NO_WRKSUBDIR=		yes
 PLIST_SRC=	${WRKSRC}/PLIST
 
 BUILD_DEFS+=	ZIP_ENCRYPTION

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 13:15:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/16 10:29:50 jlam Exp $
 
 DISTNAME=       lha-114f
 CATEGORIES=	archivers
@@ -8,8 +8,10 @@ MASTER_SITES=   http://www2m.biglobe.ne.jp/~dolphin/lha/prog/ \
 MAINTAINER=     packages@netbsd.org
 COMMENT=	Archive files using LZW compression (.lzh files)
 
-MAKE_FLAGS=	MAKE="${MAKE}" CC="${CC}" OPTIMIZE="${CFLAGS}" \
-		MACHINE="-DSYSTIME_HAS_NO_TM -DTIMELOCAL -DUSESTRCASECMP -DSYSV_SYSTEM_DIR" \
+USE_BUILDLINK_ONLY=	# defined
+
+MAKE_FLAGS=	CC="${CC}"
+MAKE_FLAGS+=	MACHINE="-DSYSTIME_HAS_NO_TM -DTIMELOCAL -DUSESTRCASECMP -DSYSV_SYSTEM_DIR"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${PREFIX}/bin/
