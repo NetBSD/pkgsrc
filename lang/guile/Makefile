@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 1999/02/20 22:48:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/03/01 16:43:27 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
 DISTNAME=	guile-1.3
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU}
+MASTER_SITES=	${MASTER_SITE_GNU:=/guile/}
 
 MAINTAINER=	perry@piermont.com
 HOMEPAGE=	http://www.gnu.org/software/guile/guile.html
