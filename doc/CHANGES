@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4734 2004/02/08 21:53:11 kim Exp $
+$NetBSD: CHANGES,v 1.4735 2004/02/08 23:31:46 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -706,3 +706,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-IO-String to 1.04 [kim 2004-02-08]
 	Updated p5-Image-Info to 1.16 [kim 2004-02-08]
 	Updated p5-Apache-Gallery to 0.7nb3 [kim 2004-02-08]
+	Updated logtime to 1.2 [kim 2004-02-08]
