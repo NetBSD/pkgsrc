@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2004/12/03 23:03:09 jlam Exp $
+# $NetBSD: builtin.mk,v 1.7 2004/12/11 00:04:14 jlam Exp $
 
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
@@ -188,13 +188,17 @@ buildlink-openssl-des-old.h:
 
 .if defined(PKG_SYSCONFDIR.openssl)
 SSLCERTS=	${PKG_SYSCONFDIR.openssl}/certs
+SSLKEYS=	${PKG_SYSCONFDIR.openssl}/private
 .elif ${OPSYS} == "NetBSD"
 SSLCERTS=	/etc/openssl/certs
+SSLKEYS=	/etc/openssl/private
 .elif !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 SSLCERTS=	/etc/ssl/certs		# likely place where certs live
+SSLKEYS=	/etc/ssl/private	# likely place where private keys live
 .else
 SSLCERTS=	${PKG_SYSCONFBASEDIR}/openssl/certs
+SSLKEYS=	${PKG_SYSCONFBASEDIR}/openssl/private
 .endif
-BUILD_DEFS+=	SSLCERTS
+BUILD_DEFS+=	SSLCERTS SSLKEYS
 
 .endif	# CHECK_BUILTIN.openssl
