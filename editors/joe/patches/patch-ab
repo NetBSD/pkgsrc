@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2003/04/27 17:45:31 cjep Exp $
 
---- b.c.orig	Fri Jan 20 09:38:25 1995
+--- b.c.orig	1995-01-20 08:38:25.000000000 +0000
 +++ b.c
-@@ -21,6 +21,9 @@
+@@ -21,6 +21,9 @@ JOE; see the file COPYING.  If not, writ
  #include <pwd.h>
  #endif
  #include <errno.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
  
  #include "config.h"
  #include "blocks.h"
-@@ -201,6 +204,7 @@
+@@ -201,6 +204,7 @@ long amnt, nlines;
   if(prop) b->o=prop->o;
   else b->o=pdefault;
   mset(b->marks,0,sizeof(b->marks));
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
   b->rdonly=0;
   b->orphan=0;
   b->oldcur=0;
-@@ -255,6 +259,10 @@
+@@ -255,6 +259,10 @@ B *b;
   {
   if(b && !--b->count)
    {
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
    if(b->changed) abrerr(b->name);
    if(b==errbuf) errbuf=0;
    if(b->undo) undorm(b->undo);
-@@ -1671,7 +1679,8 @@
+@@ -1671,7 +1679,8 @@ char *s;
   B *b;
   long skip,amnt;
   char *n;
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
  
   if(!s || !s[0])
    {
-@@ -1704,6 +1713,28 @@
+@@ -1704,6 +1713,28 @@ char *s;
    else fclose(fi);
    fi=fopen(n,"r");
    if(!fi) nowrite=0;
@@ -70,7 +70,7 @@ $NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
    }
   joesep(n);
  
-@@ -1761,6 +1792,7 @@
+@@ -1761,6 +1792,7 @@ char *s;
   vsrm(n);
  
   b->er=error;
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
   return b;
   }
  
-@@ -1928,7 +1960,7 @@
+@@ -1928,7 +1960,7 @@ long size;
   if(s[0]=='!') pclose(f);
   else
  #endif
@@ -87,9 +87,12 @@ $NetBSD: patch-ab,v 1.4 2001/05/22 12:23:28 wiz Exp $
   else fflush(f);
  
   opnerr:;
-@@ -1990,7 +2022,18 @@
+@@ -1988,9 +2020,20 @@ extern char *ctime();
+ 
+ void ttsig(sig)
   {
-  long tim=time(0);
+- long tim=time(0);
++ time_t tim=time(0);
   B *b;
 - FILE *f=fopen("DEADJOE","a");
 + FILE *f;
