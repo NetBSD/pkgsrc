@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/14 02:07:43 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/10 16:56:33 jtb Exp $
 
 DISTNAME=	felt-3.05.src
 PKGNAME=	felt-3.05
@@ -26,8 +26,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/felt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/felt
 	${INSTALL_DATA} ${WRKSRC}/felt.ps ${PREFIX}/share/doc/felt
-	@for i in FAQ* README* COPYING CHANGELOG TODO; do \
-	${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/felt; done
+	@for i in FAQ FAQ.html README README.old COPYING CHANGELOG TODO; do \
+	${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/felt;		    \
+	done
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/felt
 
 .include "../../mk/bsd.pkg.mk"
