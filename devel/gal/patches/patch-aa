@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/17 17:12:26 rh Exp $
+
+--- configure.orig	Tue Oct 17 12:12:31 2000
++++ configure
+@@ -4981,8 +4981,8 @@
+ 
+ 
+ GAL_LIBDIR='-L${libdir}'
+-GAL_INCLUDEDIR=" -I${includedir} `$GNOME_CONFIG --cflags gnomeui gdk_pixbuf print libglade unicode`"
+-GAL_LIBS="-lgal `$GNOME_CONFIG --libs gnomeui gdk_pixbuf print libglade unicode`"
++GAL_INCLUDEDIR=" -I${includedir} `$GNOME_CONFIG --cflags gnomeui gdk_pixbuf print libglade` -Wl,-R${PREFIX}/lib `unicode-config --cflags`"
++GAL_LIBS="-lgal `$GNOME_CONFIG --libs gnomeui gdk_pixbuf print libglade` -Wl,-R${PREFIX}/lib `unicode-config --cflags`"
+ 
+ 
+ 
