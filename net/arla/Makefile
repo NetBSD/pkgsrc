@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/08/30 22:51:23 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2004/07/01 13:42:09 wiz Exp $
 
 DISTNAME=		arla-0.35.12
 #PKGREVISION=
@@ -15,7 +15,7 @@ CONFLICTS+=		rx-[0-9]*
 OSVERSION_SPECIFIC=	yes
 INFO_FILES=		arla.info
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--with-krb4-include=/usr/include/kerberosIV
 CONFIGURE_ARGS+=	--with-roken=/usr
 CONFIGURE_ARGS+=	--with-roken-include=/usr/include/krb5
 .else
-.  include "../../security/kth-krb4/buildlink2.mk"
+.  include "../../security/kth-krb4/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-krb4-lib=${BUILDLINK_PREFIX.kth-krb4}
 CONFIGURE_ARGS+=	--with-krb4-include=${BUILDLINK_PREFIX.kth-krb4}/include
 CONFIGURE_ARGS+=	--with-roken=${BUILDLINK_PREFIX.kth-krb4}
