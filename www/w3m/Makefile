@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2000/04/21 04:30:32 itohy Exp $
+# $NetBSD: Makefile,v 1.11 2000/05/19 07:34:33 itohy Exp $
 
-DISTNAME=	w3m-0.1.8
+DISTNAME=	w3m-0.1.9
 CATEGORIES=	www
 MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/
 
@@ -87,7 +87,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/w3mhelp-lynx_ja.html ${LOCALBASE}/${HELPDIR}
 	# Use pax to discard uid/gid
 	(cd ${WRKSRC}; ${PAX} -w doc doc-jp) | \
-	    (cd ${LOCALBASE}/${HELPDIR}; ${PAX} -r -c \*.orig \*.rej \*.x)
+	    (cd ${LOCALBASE}/${HELPDIR}; ${PAX} -r)
 	${INSTALL_DATA_DIR} ${LOCALBASE}/${HELPERDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/w3mbookmark ${LOCALBASE}/${HELPERDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/w3mhelperpanel ${LOCALBASE}/${HELPERDIR}
