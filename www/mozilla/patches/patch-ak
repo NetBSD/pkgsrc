@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 1999/02/01 11:39:52 frueauf Exp $
+
+--- modules/schedulr/src/Makefile-patch	Thu Oct  8 22:23:43 1998
++++ modules/schedulr/src/Makefile	Fri Jan 29 20:58:20 1999
+@@ -17,8 +17,8 @@
+ 
+ DEPTH		= ../../..
+ 
+-MODULE		= schedulr 
+-LIBRARY_NAME	= sched 
++MODULE		= schedulr
++LIBRARY_NAME	= sched
+ 
+ REQUIRES	= nspr util
+ 

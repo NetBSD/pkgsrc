@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.5 1999/02/01 11:39:46 frueauf Exp $
+
+--- nsprpub/pr/include/md/_netbsd.h-patch	Fri Jan 29 16:42:39 1999
++++ nsprpub/pr/include/md/_netbsd.h	Fri Jan 29 17:10:57 1999
+@@ -35,6 +35,8 @@
+ #define _PR_SI_ARCHITECTURE "sparc"
+ #elif defined(__arm32__)
+ #define _PR_SI_ARCHITECTURE "arm32"
++#elif defined(__mips__)
++#define _PR_SI_ARCHITECTURE "mips"
+ #endif
+ 
+ #define PR_DLL_SUFFIX		".so.1.0"
+@@ -73,6 +75,8 @@
+ #else
+ #define JB_SP_INDEX _JB_REG_R13
+ #endif
++#elif defined(__mips__)
++#define JB_SP_INDEX 32	/* XXX simonb - * 4 for bytes, this is longs */
+ #else
+ #error "Need to define SP index in jmp_buf here"
+ #endif
+@@ -83,6 +87,18 @@
+ /*
+ ** Initialize a thread context to run "_main()" when started
+ */
++#if defined(__mips__)
++#define JB_PC_INDEX 2
++#define JB_T9_INDEX 28
++#define _MD_INIT_CONTEXT(_thread, _sp, _main, status)  \
++{  \
++    *status = PR_TRUE;  \
++    sigsetjmp(CONTEXT(_thread), 1); \
++    _MD_GET_SP(_thread) = (unsigned char*) ((_sp) - 64); \
++    _thread->md.context[JB_PC_INDEX] = _main; \
++    _thread->md.context[JB_T9_INDEX] = _main; \
++}
++#else
+ #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)  \
+ {  \
+     *status = PR_TRUE;  \
+@@ -91,6 +107,7 @@
+     }  \
+     _MD_GET_SP(_thread) = (unsigned char*) ((_sp) - 64); \
+ }
++#endif
+ 
+ #define _MD_SWITCH_CONTEXT(_thread)  \
+     if (!sigsetjmp(CONTEXT(_thread), 1)) {  \

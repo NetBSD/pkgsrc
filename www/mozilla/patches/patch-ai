@@ -1,0 +1,35 @@
+$NetBSD: patch-ai,v 1.1 1999/02/01 11:39:51 frueauf Exp $
+
+--- config/NetBSD.mk-patch	Fri Jan 29 16:42:40 1999
++++ config/NetBSD.mk	Fri Jan 29 17:34:40 1999
+@@ -27,8 +27,12 @@
+ ifeq (86,$(findstring 86,$(OS_TEST)))
+ CPU_ARCH		:= x86
+ else
++ifeq ($(OS_TEST),pmax)
++CPU_ARCH		:= mips
++else
+ CPU_ARCH		:= $(OS_TEST)
+ endif
++endif
+ GFX_ARCH		:= x
+ 
+ OS_INCLUDES		= -I/usr/X11R6/include
+@@ -98,7 +102,16 @@
+ # For NetBSD > 1.3, this can all be -shared.
+ #
+ ifneq (,$(filter alpha mips pmax,$(CPU_ARCH)))
+-DSO_LDOPTS		= -shared
++### 1.3.3 g++ on mips loses
++ifeq ($(CPU_ARCH),mips)
++CCC			= c++
++endif
++DSO_LDOPTS		= -shared -soname lib$(LIBRARY_NAME).so.1
++#DSO_LDOPTS		= -shared
++### temp until links working
++DLL_SUFFIX		= so.1.0
++OS_LIBS			=
++LD_FLAGS		+= -Wl,-rpath,/usr/X11R6/lib:/usr/X11R6/lib/mozilla
+ else
+ DSO_LDOPTS		= -Bshareable
+ endif
