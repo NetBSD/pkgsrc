@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.841 2003/09/09 13:11:00 recht Exp $
+$NetBSD: TODO,v 1.842 2003/09/09 13:42:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -66,7 +66,6 @@ Suggested package updates
 	o Amaya-8.1a
 	o ImageViewer-0.6.3
 	o R-1.7.1
-	o SDL-1.2.6
 	o TeXmacs-1.0.1.21
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
