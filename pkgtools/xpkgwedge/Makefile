@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/10/14 16:42:58 tron Exp $
+# $NetBSD: Makefile,v 1.31 2002/02/26 21:49:06 jlam Exp $
 
 DISTNAME=	xpkgwedge-1.7
 CATEGORIES=	pkgtools devel x11
@@ -17,11 +17,19 @@ NO_CHECKSUM=	# defined
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-FILES_SUBST=		X11BASE=${X11BASE}
+# FONT_PROGS are symlinked from ${X11BASE}/bin to ${PREFIX}/bin to allow
+# ${PREFIX}/bin/${prog} to always work.
+#
+FONT_PROGS=		bdftopcf fstobdf mkfontdir
+
+FILES_SUBST=		FONT_PROGS=${FONT_PROGS:Q}
+FILES_SUBST+=		X11BASE=${X11BASE}
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		ECHO=${ECHO:Q}
 FILES_SUBST+=		GREP=${GREP:Q}
+FILES_SUBST+=		LN=${LN:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
@@ -46,9 +54,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
 	${INSTALL_DATA} ${FILESDIR}/xpkgwedge.def ${PREFIX}/lib/X11/config
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${PREFIX}/bin/pkgxmkmf
-	for FILE in bdftopcf fstobdf mkfontdir; do \
-	  ${LN} -fs ${X11BASE}/bin/$$FILE ${PREFIX}/bin; \
-	done
 
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
