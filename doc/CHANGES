@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6329 2004/06/26 17:49:39 grant Exp $
+$NetBSD: CHANGES,v 1.6330 2004/06/26 17:50:59 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3080,3 +3080,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated win32-codecs to 20040626 [grant 2004-06-26]
 	Updated drivel to 1.0.1 [jmmv 2004-06-26]
 	Updated fuse-utils to 0.6.2nb2 [grant 2004-06-26]
+	Added libdv-0.102 [grant 2004-06-26]
