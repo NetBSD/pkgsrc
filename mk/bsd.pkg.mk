@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.462 2000/06/03 19:12:17 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.463 2000/06/03 19:20:55 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -1958,21 +1958,23 @@ clean: pre-clean
 .endif
 	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
 .if !defined(NO_WRKDIR)
-.ifdef WRKOBJDIR
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKOBJDIR}/${PKGPATH}
-	-${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR_BASENAME}
-.else	# WRKOBJDIR
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${WRKDIR} ]; then		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -d ${WRKDIR} ]; then					\
 		if [ -w ${WRKDIR} ]; then				\
 			${RM} -rf ${WRKDIR};				\
 		else							\
 			${ECHO_MSG} "${_PKGSRC_IN}> ${WRKDIR} not writable, skipping"; \
 		fi;							\
 	fi
+.ifdef WRKOBJDIR
+	-${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RMDIR} ${BUILD_DIR};						\
+	${RM} -f ${WRKDIR_BASENAME}
 .endif
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.*_done SizeAll \
-		SizePkg .build_info .build_version .DESCR .PLIST
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RM} -f ${WRKDIR}/.*_done SizeAll SizePkg .build_info .build_version \
+	    .DESCR .PLIST
 .endif
 .endif
 
