@@ -1,31 +1,36 @@
-$NetBSD: patch-aa,v 1.6 2003/09/01 11:51:27 martti Exp $
-
---- config/config_default.php.orig	Mon Jul  7 10:28:21 2003
-+++ config/config_default.php	Mon Sep  1 09:41:14 2003
-@@ -193,7 +193,7 @@
+--- config/config_default.php.orig	2004-04-21 20:21:54.000000000 +0300
++++ config/config_default.php	2004-05-31 21:32:43.000000000 +0300
+@@ -383,7 +383,7 @@
   * false. (Cyrus works fine whether it's true OR false).
+  * @global bool $show_contain_subfolders_option
   */
- global $show_contain_subfolders_option;
 -$show_contain_subfolders_option = false;
 +$show_contain_subfolders_option = true;
  
  /**
-  * This option controls what character set is used when sending mail
-@@ -220,7 +220,7 @@
+  * These next two options set the defaults for the way that the
+@@ -442,7 +442,7 @@
   *   $data_dir = SM_PATH . 'data/';
+  * @global string $data_dir
   */
- global $data_dir;
 -$data_dir = SM_PATH . 'data/';
 +$data_dir = '@USER_PREFS_DIR@/';
  
  /**
-  * Path to directory used for storing attachments while a mail is
-@@ -236,7 +236,7 @@
+  * Attachments directory
+@@ -460,7 +460,7 @@
   *    + It should probably be another directory than data_dir.
+  * @global string $attachment_dir
   */
- global $attachment_dir;
--$attachment_dir = "$data_dir";
-+$attachment_dir = "@ATTACHMENTS_DIR@/";
+-$attachment_dir = $data_dir;
++$attachment_dir = '@ATTACHMENTS_DIR@/';
  
- /* Hash level used for data directory. */
- global $dir_hash_level;
+ /**
+  * Hash level used for data directory.
+@@ -823,4 +823,4 @@
+  * sent and regular output to begin, which will majorly screw
+  * things up when we try to send more headers later.
+  */
+-?>
+\ No newline at end of file
++?>
