@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/03/04 17:36:16 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:11 agc Exp $
 
 SHA1 (cook-2.22.tar.gz) = ade3818f8b0a719a5e715cd80c470d1f57b15ec9
+RMD160 (cook-2.22.tar.gz) = 15626036d57c14985b05728f26a1f8a55ddab8aa
 Size (cook-2.22.tar.gz) = 861591 bytes

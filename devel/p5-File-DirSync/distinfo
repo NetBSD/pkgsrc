@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/17 06:25:44 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:25 agc Exp $
 
 SHA1 (File-DirSync-1.11.tar.gz) = e732e98d1408f4c29cf067c4a0efe916815b361d
+RMD160 (File-DirSync-1.11.tar.gz) = eebf2cb854bb39f4e575480c9268fd3f1c6a0774
 Size (File-DirSync-1.11.tar.gz) = 12504 bytes

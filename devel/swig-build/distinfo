@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/08/28 22:33:14 epg Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:34 agc Exp $
 
 SHA1 (swig-1.3.19.tar.gz) = d27fd1d271938d96d86d7f10c10bbf37353611df
+RMD160 (swig-1.3.19.tar.gz) = 5b7239dc92b975f4242f82577ebe4df8b8f70ec5
 Size (swig-1.3.19.tar.gz) = 1778701 bytes
 SHA1 (patch-aa) = d505ff487b3aa7079d46cbab377a23b1d102603b
 SHA1 (patch-ab) = e3cf3d76885943dba9ec160a0e81ef4fb22fe837

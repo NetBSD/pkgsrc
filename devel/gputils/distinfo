@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/03 23:54:29 wulf Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:15 agc Exp $
 
 SHA1 (gputils-0.11.6.tar.gz) = 271db69d21c0b6e74322cc528e783ac832453db6
+RMD160 (gputils-0.11.6.tar.gz) = a2f0a6efad50fdb6555a68227a03d5a396b226b4
 Size (gputils-0.11.6.tar.gz) = 790905 bytes

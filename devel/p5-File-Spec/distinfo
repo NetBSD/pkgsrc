@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/12/05 19:18:07 he Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:25 agc Exp $
 
 SHA1 (File-Spec-0.90.tar.gz) = 0db734c7b3e881c9a4b5752263515121f30791c4
+RMD160 (File-Spec-0.90.tar.gz) = 4808bb07413d1ae540721fcb7d01959cdda8f3f4
 Size (File-Spec-0.90.tar.gz) = 33064 bytes

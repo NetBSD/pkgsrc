@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/26 22:09:49 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:30 agc Exp $
 
 SHA1 (pcre++-0.9.5.tar.gz) = 7cb640555c6adf34bf366139b22f6d1a66bd1fb0
+RMD160 (pcre++-0.9.5.tar.gz) = 1aa3c933f271caacaeec08af02c7903dd4405c41
 Size (pcre++-0.9.5.tar.gz) = 381589 bytes
 SHA1 (patch-aa) = 723291f6afdfc474c5cf737e20cf51b3905a9759
