@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2004/10/03 00:12:53 tv Exp $
+# $NetBSD: Makefile,v 1.84 2004/10/11 16:56:28 abs Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -44,7 +44,7 @@ MAKE_ENV+=	GSS_EXTRA_LDFLAGS="-ldes"
 .  endif
 .endif
 
-BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT
+BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT IMAP_UW_USE_WHOSON
 CCLIENT_INCS=	c-client.h env.h env_unix.h flocksim.h flstring.h	\
 		fs.h ftl.h imap4r1.h linkage.c linkage.h mail.h misc.h	\
 		netmsg.h newsrc.h nl.h nntp.h osdep.h rfc822.h		\
@@ -71,8 +71,13 @@ MAKE_ENV+=	CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 MAKE_ENV+=	CREATEPROTO=${IMAP_UW_CCLIENT_MBOX_FMT:Q}proto
 
 ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
-ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
+.if defined(IMAP_UW_USE_WHOSON) && ${IMAP_UW_USE_WHOSON} == "YES"
+ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS} -lwhoson"
+ALL_TARGET+=	EXTRACFLAGS="${CFLAGS} -DUSE_WHOSON"
+.else
 ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
+ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
+.endif
 .if defined(IMAP_UW_NO_CLEARTEXT) && ${IMAP_UW_NO_CLEARTEXT} == "YES"
 ALL_TARGET+=	SSLTYPE="nopwd"
 .elif !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
@@ -167,6 +172,10 @@ do-install:
 
 .if !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
 .include "../../security/openssl/buildlink3.mk"
+.endif
+
+.if defined(IMAP_UW_USE_WHOSON) && ${IMAP_UW_USE_WHOSON} == "YES"
+.include "../../net/whoson/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
