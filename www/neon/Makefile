@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/09/10 04:34:08 epg Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/23 12:18:57 recht Exp $
 
 DISTNAME=		neon-0.24.1
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/neon/
 
@@ -12,6 +13,7 @@ USE_BUILDLINK2=		# defined
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	neon.pc.in
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=yes
