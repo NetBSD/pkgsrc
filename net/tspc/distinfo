@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/08/22 18:14:52 grant Exp $
+
+SHA1 (freenet6-0.9.6.tgz) = f3e063a25a199b10b03a322f83fdf49cd7818f72
+Size (freenet6-0.9.6.tgz) = 334333 bytes
+SHA1 (patch-aa) = ba2521fe708a9bae5c8efdd6c3c7b7f957f82dd5
+SHA1 (patch-ab) = 6f3da6e14e0a0fbf1eac1735b364b38e89d845d3
+SHA1 (patch-ac) = e586056941f011765f3f4d7c96da215a24e8d054
