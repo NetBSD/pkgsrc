@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2005/01/05 11:16:38 adam Exp $
+# $NetBSD: Makefile,v 1.78 2005/03/10 16:07:26 wiz Exp $
 
 DISTNAME=	lesstif-0.94.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +16,7 @@ USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-production --disable-debug --disable-verbose
 CONFIGURE_ARGS+=	--enable-editres --enable-xdnd
 
