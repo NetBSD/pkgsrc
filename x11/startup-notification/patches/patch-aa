@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/12/17 14:59:16 sketch Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/03 11:20:20 recht Exp $
 
---- libsn/sn-launcher.c.orig	2003-12-16 16:58:09.089918618 +0000
-+++ libsn/sn-launcher.c	2003-12-16 16:58:36.533023772 +0000
-@@ -176,7 +176,7 @@
+--- libsn/sn-launcher.c.orig	2004-03-23 17:53:03.000000000 +0100
++++ libsn/sn-launcher.c
+@@ -182,7 +182,7 @@ sn_launcher_context_initiate (SnLauncher
    if (context->startup_id != NULL)
      {
        fprintf (stderr, "%s called twice for the same SnLaunchContext\n",
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1 2003/12/17 14:59:16 sketch Exp $
        return;
      }
  
-@@ -362,7 +362,7 @@
+@@ -368,7 +368,7 @@ sn_launcher_context_setup_child_process 
  /* FIXME use something pluggable, not fprintf */
  #define WARN_ALREADY_INITIATED(context) do { if ((context)->startup_id != NULL) {               \
        fprintf (stderr, "%s called for an SnLauncherContext that has already been initiated\n", \
