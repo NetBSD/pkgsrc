@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 1999/03/11 08:24:21 agc Exp $
+# $NetBSD: Makefile,v 1.17 1999/08/16 23:01:21 kim Exp $
 #
 
-DISTNAME=	tcsh-6.08
-PKGNAME=	tcsh-6.08.00
+DISTNAME=	tcsh-6.09
+PKGNAME=	tcsh-6.09.00
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.gw.com/pub/unix/tcsh/ \
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 
 MAINTAINER=	kim@tac.nyc.ny.us
 
-WRKSRC=		${WRKDIR}/tcsh-6.08.00
+WRKSRC=		${WRKDIR}/${PKGNAME}
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all catalogs
