@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2004/10/01 12:56:33 adam Exp $
+# $NetBSD: Makefile,v 1.99 2004/10/02 19:27:50 adrianp Exp $
 
 DISTNAME=	netpbm-10.18.15
 CATEGORIES=	graphics
@@ -21,7 +21,7 @@ MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
 MAKEFILE=	GNUmakefile
 PLIST_SRC=	${WRKDIR}/PLIST_STAGE
 REPLACE_PERL=	editor/ppmfade editor/ppmshadow editor/pnmquant \
-		generator/ppmrainbow manweb
+		generator/ppmrainbow manweb editor/pnmflip
 STAGEDIR=	${WRKDIR}/staging
 
 LIBS.SunOS=	-lsocket -lnsl
