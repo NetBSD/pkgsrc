@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/11/23 00:37:04 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/11/23 04:21:34 jlam Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -22,21 +22,15 @@ PLIST_SRC=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.bdb
 CONFIGURE_ARGS+=	--without-berkeley-db
 .endif
 
-# XXX Timestamps are broken in 1.0.1 tar file; should go away in 1.0.2.
+SUBST_CLASSES=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=      contrib/cgi/tweak-log.cgi
+SUBST_SED.paths=        -e "s|/usr/local/bin/|${PREFIX}/bin|g"
+SUBST_MESSAGE.paths=    "Fixing hardcoded /usr/local/bin paths."
+
+# Suppress attempt to build the .info documentation.
 post-build:
 	${TOUCH} ${WRKSRC}/doc/programmer/design/svn-design.info
-
-post-patch:
-	${SED} -e 's|@BUILDLINK_PREFIX.db4@|${BUILDLINK_PREFIX.db4}|g' \
-		< ${WRKSRC}/tools/backup/hot-backup.py.in \
-		> ${WRKSRC}/tools/backup/hot-backup.py.in.new
-	${MV} ${WRKSRC}/tools/backup/hot-backup.py.in.new \
-		${WRKSRC}/tools/backup/hot-backup.py.in
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
-		< ${WRKSRC}/contrib/cgi/tweak-log.cgi \
-		> ${WRKSRC}/contrib/cgi/tweak-log.cgi.new
-	${MV} ${WRKSRC}/contrib/cgi/tweak-log.cgi.new \
-		${WRKSRC}/contrib/cgi/tweak-log.cgi
 
 post-install:
 	${INSTALL_DATA_DIR} ${SVNDOC}
