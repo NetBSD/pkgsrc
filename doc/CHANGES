@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9655 2005/03/27 20:41:15 wiz Exp $
+$NetBSD: CHANGES,v 1.9656 2005/03/27 20:50:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated DatUtil to 2.16 [wiz 2005-03-27]
 	Updated rtf-tools to 1.10nb2 [ben 2005-03-27]
 	Updated flyspell to 1.7h [wiz 2005-03-27]
+	Updated p5-Term-ProgressBar to 2.09 [wiz 2005-03-27]

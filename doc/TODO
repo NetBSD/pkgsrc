@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3310 2005/03/27 20:41:15 wiz Exp $
+$NetBSD: TODO,v 1.3311 2005/03/27 20:50:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -816,7 +816,6 @@ Suggested package updates
 	o p5-String-Approx-3.24
 	o p5-Sys-Hostname-Long-1.2
 	o p5-Template-Extract-0.38
-	o p5-Term-ProgressBar-2.09
 	o p5-Test-Cmd-1.05
 	o p5-Test-Harness-2.46
 	o p5-Test-Inline-0.16
