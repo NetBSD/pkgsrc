@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2004/02/22 18:34:54 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/09/14 08:32:16 wiz Exp $
 
 DISTNAME=	thttpd-2.25b
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -18,6 +19,10 @@ USE_PKGINSTALL=	yes
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
 BUILD_DEFS+=	USE_INET6
+# thttpd syslogs at level LOG_DAEMON by default
+# change this to your preferred syslog level
+THTTPD_LOG_FACILITY?=	LOG_DAEMON
+BUILD_DEFS+=	THTTPD_LOG_FACILITY
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/thttpd.conf ${PKG_SYSCONFDIR}/thttpd.conf
@@ -33,6 +38,9 @@ pre-configure:
 		${SED}	-e "s,\.htpasswd,XXX,g;s,htpasswd,thtpasswd,g;s,XXX,.htpasswd,g" \
 			${WRKSRC}/$${FILE}.bak > ${WRKSRC}/$${FILE};	\
 	done
+	${MV} -f ${WRKSRC}/config.h ${WRKSRC}/config.h.bak
+	${SED} -e "s/LOG_DAEMON/${THTTPD_LOG_FACILITY}/" ${WRKSRC}/config.h.bak \
+			> ${WRKSRC}/config.h
 
 post-build:
 	@for FILE in thttpd.conf; do					\
