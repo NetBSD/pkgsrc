@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1558 2005/01/13 20:19:57 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1559 2005/01/14 00:10:01 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1115,6 +1115,7 @@ CONFIG_GUESS_OVERRIDE?=		\
 	config.guess */config.guess */*/config.guess
 CONFIG_SUB_OVERRIDE?=		\
 	config.sub */config.sub */*/config.sub
+CONFIG_RPATH_OVERRIDE?=		# set by platform file as needed
 #
 # By default, override config.status for GNU configure packages.  We
 # never want it to execute after the configure phase has ended as it
@@ -2265,12 +2266,11 @@ do-ltconfig-override:
 .  endfor
 .endif
 
-.if defined(CONFIG_GUESS_OVERRIDE) || defined(CONFIG_SUB_OVERRIDE)
 _CONFIGURE_PREREQ+=	do-config-star-override
 .PHONY: do-config-star-override
 do-config-star-override:
-.  if defined(CONFIG_GUESS_OVERRIDE) && !empty(CONFIG_GUESS_OVERRIDE)
-.    for _pattern_ in ${CONFIG_GUESS_OVERRIDE}
+.if !empty(CONFIG_GUESS_OVERRIDE)
+.  for _pattern_ in ${CONFIG_GUESS_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
 	for file in ${_pattern_}; do					\
 		if [ -f "$$file" ]; then				\
@@ -2279,10 +2279,10 @@ do-config-star-override:
 				$$file;					\
 		fi;							\
 	done
-.    endfor
-.  endif
-.  if defined(CONFIG_SUB_OVERRIDE) && !empty(CONFIG_SUB_OVERRIDE)
-.    for _pattern_ in ${CONFIG_SUB_OVERRIDE}
+.  endfor
+.endif
+.if !empty(CONFIG_SUB_OVERRIDE)
+.  for _pattern_ in ${CONFIG_SUB_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
 	for file in ${_pattern_}; do					\
 		if [ -f "$$file" ]; then				\
@@ -2291,8 +2291,19 @@ do-config-star-override:
 				$$file;					\
 		fi;							\
 	done
-.    endfor
-.  endif
+.  endfor
+.endif
+.if !empty(CONFIG_RPATH_OVERRIDE)
+.  for _pattern_ in ${CONFIG_RPATH_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
+	for file in ${_pattern_}; do					\
+		if [ -f "$$file" ]; then				\
+			${RM} -f $$file;				\
+			${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.rpath \
+				$$file;					\
+		fi;							\
+	done
+.  endfor
 .endif
 
 PKGCONFIG_OVERRIDE_SED= \
