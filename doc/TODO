@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2436 2004/11/24 08:16:20 salo Exp $
+$NetBSD: TODO,v 1.2437 2004/11/24 13:38:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,7 @@ Suggested package updates
 	o cwtext-0.94
 	o cxref-1.6
 	o cyrus-imapd21-2.1.16
-	o cyrus-imapd22-2.2.9
+	o cyrus-imapd22-2.2.10
 	o daapd-0.2.3
 	o dact-0.8.37
 	o db4-4.3.21
@@ -462,7 +462,7 @@ Suggested package updates
 	o feh-1.2.9
 	o festival-1.4.3
 	o fhist-1.14
-	o file-4.10
+	o file-4.11
 	o file-roller-2.9.0
 	o fillets-ng-0.6.0
 	o fillets-ng-data-0.6.0
@@ -1025,7 +1025,7 @@ Suggested package updates
 	o sudo-1.6.8p4
 	o sunclock-1.5
 	o sweep-0.8.3
-	o swfdec-0.3.1
+	o swfdec-0.3.2
 	o swi-prolog-5.4.3
 	o swi-prolog-lite-5.4.3
 	o swi-prolog-packages-5.4.3
@@ -1158,6 +1158,7 @@ Suggested package updates
 	o xmountains-2.7
 	o xnap-2.5r3
 	o xpad-2.0
+	o xpdf-3.00pl1
 	o xpenguins-2.2
 	o xpuyopuyo-0.9.5
 	o xskat-4.0
