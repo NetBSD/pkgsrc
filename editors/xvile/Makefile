@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/01/20 08:43:57 agc Exp $
+# $NetBSD: Makefile,v 1.23 2000/02/05 18:32:02 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+= --with-screen=Xaw --with-xpm --with-perl --with-lib-dir=${X11BA
 INSTALL_TARGET=	install install-perl
 
 post-install:
-	-@${MKDIR} -p ${PREFIX}/share/examples/xvile
+	-@${MKDIR} ${PREFIX}/share/examples/xvile
 	@for f in filters/spell.rc filters/filters.rc		\
 		macros/digraphs.rc macros/pictmode.rc		\
 		macros/manpage.rc visvile/visvile.rc; do	\
