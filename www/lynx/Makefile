@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/09/09 19:40:24 fredb Exp $
+# $NetBSD: Makefile,v 1.31 2000/11/01 17:26:40 itojun Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -27,7 +27,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		fb@enteract.com
 HOMEPAGE=		http://lynx.browser.org/
 
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+USE_LIBINTL=		yes
 
 DIST_SUBDIR=		lynx
 EXTRACT_ONLY=		${DISTFILES:M*.tar.bz2}
@@ -96,7 +97,7 @@ post-configure:
 	${ECHO} 'SSL_DEFINES= -DUSE_SSL ${SSLINCS}') \
 	    >> ${WRKSRC}/makefile
 	(${ECHO}; \
-	${ECHO} 'INTLLIB= ${LOCALBASE}/lib/libintl.a'; \
+	${ECHO} 'INTLLIB= -L${LOCALBASE}/lib -lintl'; \
 	${ECHO} 'INTLDIR_CPPFLAGS= -I${LOCALBASE}/include') \
 	    >> ${WRKSRC}/src/makefile
 
