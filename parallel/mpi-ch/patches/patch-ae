@@ -1,0 +1,7 @@
+$NetBSD: patch-ae,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- mpid/ch_p4/p4/MACHINES.orig	Wed Aug  5 19:23:57 1998
++++ mpid/ch_p4/p4/MACHINES	Wed Aug  5 19:24:12 1998
+@@ -2,2 +2,3 @@
+     LINUX
++    NETBSD
+     FREEBSD

@@ -1,0 +1,7 @@
+$NetBSD: patch-af,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- src/tdpro.c.orig	Fri Aug  7 00:43:15 1998
++++ src/tdpro.c	Fri Aug  7 00:43:37 1998
+@@ -207,2 +207,3 @@
+ #ifdef NEEDMENDIAN
++#include <sys/types.h>
+ #include <machine/endian.h>

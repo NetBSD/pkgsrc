@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- mpid/ch_p4/p4/lib/p4_MD.c.orig	Wed Aug  5 19:40:58 1998
++++ mpid/ch_p4/p4/lib/p4_MD.c	Wed Aug  5 19:45:56 1998
+@@ -1305,2 +1305,3 @@
+  || defined(MULTIMAX) || defined(IBM3090) || defined(FREEBSD) \
++ || defined(NETBSD) \
+  || (defined(HP)  &&  !defined(SUN_SOLARIS))
+@@ -1355,2 +1356,3 @@
+  || defined(MULTIMAX) || defined(IBM3090) || defined(FREEBSD) \
++ || defined(NETBSD) \
+  || (defined(HP)  &&  !defined(SUN_SOLARIS))
+@@ -1584,2 +1586,3 @@
+     if (strcmp(machine_type, "FREEBSD") == 0)         return 2;
++    if (strcmp(machine_type, "NETBSD") == 0)         return 2;
+     if (strcmp(machine_type, "I86_SOLARIS") == 0)     return 2;
