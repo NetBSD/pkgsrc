@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8180 2004/11/30 15:41:23 adam Exp $
+$NetBSD: CHANGES,v 1.8181 2004/11/30 15:42:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5675,3 +5675,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba to 3.0.9 [xtraeme 2004-11-30]
 	Removed filmgimp [adam 2004-11-30]
 	Added cinepaint-0.18.3 [adam 2004-11-30]
+	Updated emacs-packages to 0.6 [wiz 2004-11-30]
