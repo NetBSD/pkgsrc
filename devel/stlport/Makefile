@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/26 20:00:30 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/30 20:41:11 jlam Exp $
 
 DISTNAME=	STLport-4.0
 PKGNAME=	stlport-4.0
@@ -9,7 +9,7 @@ MAINTAINER=	p99dreyf@criens.u-psud.fr
 HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
-DEPENDS+=	{gcc,pgcc}-${GCC_VERS}*:../../lang/gcc
+DEPENDS+=	{gcc,pgcc}>=${GCC_VERS}:../../lang/gcc
 GCC_VERS=	2.95.2
 
 USE_GMAKE=	# defined
@@ -17,9 +17,8 @@ USE_LIBTOOL=	# defined
 
 NO_CONFIGURE=	# defined
 
-MAKE_ENV+=	CC="${GCC_BINDIR}/gcc"
-MAKE_ENV+=	CPP="${GCC_BINDIR}/cpp"
-MAKE_ENV+=	CXX="${GCC_BINDIR}/c++"
+MAKE_ENV+=	CC="--tag CC ${GCC_BINDIR}/cc"
+MAKE_ENV+=	CXX="--tag CXX ${GCC_BINDIR}/c++"
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 MAKEFILE=	gcc-libtool.mak
@@ -43,11 +42,11 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INCDIR}
 	${CHMOD} -R ${SHAREMODE} ${INCDIR}
 	${CHMOD} -R a+X ${INCDIR}
-	for lib in \
-		libstlport_gcc.la \
-		libstlport_gcc_debug.la \
-		libstlport_gcc_stldebug.la; \
-	do \
+	for lib in							\
+		libstlport_gcc.la					\
+		libstlport_gcc_debug.la					\
+		libstlport_gcc_stldebug.la;				\
+	do								\
 		${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/$${lib} ${LIBDIR}; \
 	done
 	${INSTALL_DATA_DIR} ${HTMLDIR}
