@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/06/14 14:41:01 tron Exp $
+
+--- src/main.c.orig	Sun May 27 05:26:22 2001
++++ src/main.c	Tue Jun 12 23:17:55 2001
+@@ -2,7 +2,9 @@
+ #include "gnutella.h"
+ 
+ #include <signal.h>
++#ifndef __NetBSD__
+ #include <mcheck.h>
++#endif
+ 
+ #include "interface.h"
+ #include "support.h"
