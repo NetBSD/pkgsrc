@@ -1,6 +1,6 @@
---- lib-src/Makefile.in.in.orig	Fri Feb 13 18:39:45 1998
-+++ lib-src/Makefile.in.in	Fri Feb 13 18:40:20 1998
-@@ -197,7 +198,7 @@
+--- lib-src/Makefile.in.in.orig	Sun Oct 12 03:39:30 1997
++++ lib-src/Makefile.in.in	Sun Feb 22 23:32:28 1998
+@@ -197,7 +197,7 @@
  	if test `(cd ${archlibdir} && $(pwd))` \
  	     != `(cd ${srcdir}     && $(pwd))`; then \
  	  for f in ${SCRIPTS}; do \
@@ -9,11 +9,26 @@
  	  done ; \
  	fi
  
-@@ -210,7 +211,7 @@
- 	  (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
+@@ -207,10 +207,20 @@
+ install: ${archlibdir}
+ 	@echo; echo "Installing utilities for users to run."
+ 	for file in ${INSTALLABLES} ; do \
+-	  (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
++	  if [ $${file} = etags ] || [ $${file} = ctags ] || [ $${file} = b2m ] ; \
++	  then \
++	    (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/xemacs-$${file}) ; \
++	  else \
++	    (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
++	  fi \
  	done
  	for file in ${INSTALLABLE_SCRIPTS} ; do \
 -	  (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/$${file}) ; \
-+	  (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/$${file}) ; \
++	  if [ $${file} = rcs-checkin ] || [ $${file} = send-pr ] ; \
++	  then \
++	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/xemacs-$${file}) ; \
++	  else \
++	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/$${file}) ; \
++	  fi \
  	done
  
+ uninstall:
