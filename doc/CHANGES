@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5464 2004/04/06 13:28:43 adam Exp $
+$NetBSD: CHANGES,v 1.5465 2004/04/06 13:58:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1813,3 +1813,10 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nautilus-media to 0.8.0nb1 [jmmv 2004-04-06]
 	Updated p5-Apache-DBI to 0.94 [recht 2004-04-06]
 	Updated gqview to 1.4.2 [adam 2004-04-06]
+	Added libdvdnav-0.8.0 [jmmv 2004-04-06]
+	Added libtheora-1.0alpha3 [jmmv 2004-04-06]
+	Added gst-plugins-dvdnav-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-dvdread-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-mpeg2dec-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-theora-0.8.0 [jmmv 2004-04-06]
+	Added gst-player-0.8.0 [jmmv 2004-04-06]
