@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.5 2003/01/08 17:57:42 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.6 2003/01/24 09:41:28 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -456,7 +456,11 @@ pkg_chroot()
 
     fsmount
     echo "PKG_COMP ==> Entering chroot: $DESTDIR"
-    chroot $DESTDIR $ROOTSHELL
+    if [ $# -eq 0 ]; then
+        chroot $DESTDIR $ROOTSHELL
+    else
+        chroot $DESTDIR $*
+    fi
     echo
     fsumount
 }
@@ -551,7 +555,7 @@ fi
 
 target="$1"
 shift
-pkgnames="$*"
+args="$*"
 
 readconf()
 {
@@ -607,19 +611,19 @@ case "$target" in
     build)
         readconf
         checkroot
-        pkg_build $pkgnames
+        pkg_build $args
         exit 0
         ;;
     install)
         readconf
         checkroot
-        pkg_install $pkgnames
+        pkg_install $args
         exit 0
         ;;
     chroot)
         readconf
         checkroot
-        pkg_chroot
+        pkg_chroot $args
         exit 0
         ;;
     removepkgs)
@@ -638,13 +642,13 @@ case "$target" in
         if [ -z "$REAL_PACKAGES" ]; then
             err "this is useless without REAL_PACKAGES"
         fi
-        if [ -z "$MAKE_PACKAGES" -a -z "$pkgnames" ]; then
+        if [ -z "$MAKE_PACKAGES" -a -z "$args" ]; then
             err "this is useless without MAKE_PACKAGES nor package names"
         fi
         pkg_makeroot
         checkroot
-        if [ -n "$pkgnames" ]; then
-            pkg_build $pkgnames
+        if [ -n "$args" ]; then
+            pkg_build $args
         fi
         pkg_removeroot
         ;;
