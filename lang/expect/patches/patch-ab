@@ -1,0 +1,11 @@
+--- Makefile.in	1998/01/27 17:45:49	1.1
++++ Makefile.in	1998/01/27 17:48:11
+@@ -104,7 +104,7 @@
+ # Some Make's screw up if you delete all of them because SCRIPTS is a
+ # target.  If this is a problem, just comment out the SCRIPTS target itself.
+ SCRIPTS = timed-run timed-read ftp-rfc autopasswd lpunlock weather \
+-	passmass rftp kibitz rlogin-cwd xpstat tkpasswd dislocate xkibitz \
++	passmass expect-rftp kibitz rlogin-cwd xpstat tkpasswd dislocate xkibitz \
+ 	tknewsbiff unbuffer mkpasswd cryptdir decryptdir autoexpect
+ # A couple of the scripts have man pages of their own.
+ # You can delete these too if you don't want'em.
