@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2000/09/03 14:54:56 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2000/09/08 02:48:05 jwise Exp $
 --- configure.orig	Wed Jan 12 15:15:36 2000
-+++ configure	Fri Sep  1 13:03:47 2000
++++ configure	Thu Sep  7 21:55:22 2000
 @@ -2694,13 +2694,13 @@
  TK_LIB_DIR=${TK_EXEC_PREFIX}/lib
  
@@ -30,3 +30,12 @@ $NetBSD: patch-ab,v 1.4 2000/09/03 14:54:56 wiz Exp $
      fi
      ;;
  
+@@ -3542,7 +3543,7 @@
+ #	Propagate prefix argument as installation directory.
+ #--------------------------------------------------------------------
+ 
+-BLT_LIBRARY="${prefix}/lib/blt${BLT_VERSION}"
++BLT_LIBRARY="${prefix}/lib/tcl/blt${BLT_VERSION}"
+ 
+ 
+ #--------------------------------------------------------------------
