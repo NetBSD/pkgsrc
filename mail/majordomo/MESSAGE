@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:12 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2003/02/24 13:10:58 seb Exp $
 
 Post-Install Notes for Majordomo
 ===========================================================================
@@ -33,7 +33,7 @@ manually:
 
 	  or a line similar to the following to your m4 macros file:
 
-	  define(`ALIAS_FILE',/etc/aliases,/etc/aliases.majordomo')
+	  define(`ALIAS_FILE',`/etc/aliases,/etc/aliases.majordomo')
 
 	- if the group for ${MAJORDOMO_USER} (${MAJORDOMO_GROUP}) is not
 	  daemon, add ${MAJORDOMO_USER} as a trusted user for sendmail.
