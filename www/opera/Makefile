@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:22:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/20 19:23:24 tron Exp $
 
-DISTNAME=	opera-4.0-b5-20010103.014-static.i386
-PKGNAME=	opera-4.0b5
+DISTNAME=	opera-5.0-b6-20010212.017-static.i386
+PKGNAME=	opera-5.0b6
 CATEGORIES=	www
 MASTER_SITES=	http://opera.online.no/linux/tgz/ \
 		ftp://ftp.fh-koblenz.de/pub/InternetClients/Opera/english/4.0b4/linux/intel-x86/static/ \
@@ -39,7 +39,8 @@ do-install:
 	cd ${WRKSRC} && \
 	${INSTALL_SCRIPT} opera ${PREFIX}/bin && \
 	${INSTALL_DATA} LICENSE ${PREFIX}/share/doc/opera && \
-	${INSTALL_DATA} opera.adr ${PREFIX}/share/opera && \
+	${INSTALL_DATA} opera.adr opera.desktop opera.wmconfig opera.xpm \
+	  opera_*.png ${PREFIX}/share/opera && \
 	${INSTALL_DATA} buttons/default/* ${PREFIX}/share/opera/buttons/default && \
 	${INSTALL_DATA} buttons/defsmall/* ${PREFIX}/share/opera/buttons/defsmall && \
 	${INSTALL_DATA} images/* ${PREFIX}/share/opera/images && \
