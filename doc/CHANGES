@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4255 2003/12/25 16:36:55 taca Exp $
+$NetBSD: CHANGES,v 1.4256 2003/12/25 19:54:09 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5377,3 +5377,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnupg to 1.2.4 [wiz 2003-12-25]
 	Updated nut to 9.5 [wiz 2003-12-25]
 	Updated squid to 2.5.4nb6 [taca 2003-12-25]
+	Updated roundup to 0.6.4 [recht 2003-12-25]
