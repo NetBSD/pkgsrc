@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/21 06:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/29 10:12:48 jlam Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -22,14 +22,10 @@ CONFLICTS=	lyx-[0-9]*
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=	teTeX-bin>=1.0.7nb1:../../print/teTeX-bin
 
-GCC_VERSION!=	gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
-# "egcs" cannot be used, as this package tickles c++ compiler bugs
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
 USE_BUILDLINK2=		yes
 USE_PERL5=		yes
+USE_X11=		yes
+USE_CXX=		yes
 GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=		yes
@@ -38,6 +34,7 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/sigc++/libtool
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../x11/xforms/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
