@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:15 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/06 17:50:09 kristerw Exp $
 #
 
 DISTNAME=	weechat-0.0.6
@@ -18,6 +18,8 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+INCOMPAT_CURSES+=	NetBSD-1.*
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
