@@ -1,15 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+$NetBSD: patch-ag,v 1.2 2004/08/31 15:47:56 jmmv Exp $
 
---- beep/beep.desktop.in.orig	Sat Nov 29 04:13:49 2003
-+++ beep/beep.desktop.in
-@@ -2,8 +2,8 @@
- Name=Beep
- Comment=Beep media player
+--- beep/bmp.desktop.in.orig	2004-07-07 09:56:34.000000000 +0200
++++ beep/bmp.desktop.in
+@@ -2,7 +2,7 @@
+ Name=Beep Media Player
+ Comment=Play music
  Exec=beep-media-player
--Icon=beep.svg
-+Icon=@prefix@/share/bmp/beep.svg
+-Icon=bmp.svg
++Icon=@prefix@/share/bmp/bmp.svg
  MimeType=audio/x-scpls;audio/x-mpegurl;audio/mpegurl;audio/mp3;audio/x-mp3;audio/mpeg;audio/x-mpeg;audio/x-wav;application/x-ogg
--Categories=GTK;AudioVideo;Player
-+Categories=Application;AudioVideo;
- Terminal=0
- Type=Application
+ Categories=Application;GTK;AudioVideo;Player;
+ Terminal=false
