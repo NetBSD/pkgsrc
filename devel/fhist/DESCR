@@ -1,0 +1,24 @@
+The FHist package contains 3 utilities, a file history tool ``fhist'',
+a file comparison tool ``fcomp'', and a file merging tool ``fmerge'.
+All three are bundled together, because they all use the same algorithm.
+
+fhist
+
+    Keeps track of versions of a file.  It works correctly when given
+    binary files as input.  See fhist(1) for more information.
+
+fcomp
+
+    Compares two versions of a file, usually line-for- line textual
+    comparison.  It is capable of comparing two binary files byte-for-byte.
+    See fcomp(1) for more information.
+
+fmerge
+
+    Merges together edits from two descendants of a file.  See fmerge(1)
+    for more information.
+
+The history tool presented here, fhist, is a minimal history tool.
+It provides no locking or branching.  This can be useful in contexts
+where the configuration management or change control be being
+provided by some other tool.
