@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/06/17 11:31:10 grant Exp $
+# $NetBSD: Makefile,v 1.44 2002/06/17 20:02:25 tron Exp $
 #
 
 COMMENT=	Communication utilities
@@ -9,6 +9,7 @@ SUBDIR+=	conserver
 SUBDIR+=	dl-ezkit
 SUBDIR+=	efax
 SUBDIR+=	efax-gtk
+SUBDIR+=	esms
 SUBDIR+=	estic
 SUBDIR+=	fidogate
 SUBDIR+=	gkermit
