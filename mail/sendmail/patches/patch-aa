@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2003/12/02 05:45:12 ben Exp $
+$NetBSD: patch-aa,v 1.17 2003/12/03 03:31:16 ben Exp $
 
---- devtools/OS/NetBSD.orig	Fri Mar 22 11:59:25 2002
-+++ devtools/OS/NetBSD	Mon Sep 16 15:01:23 2002
-@@ -6,13 +6,17 @@
+--- devtools/OS/NetBSD.orig	2002-03-21 15:59:25.000000000 -0800
++++ devtools/OS/NetBSD
+@@ -6,13 +6,15 @@ dnl	Place personal settings in devtools/
  define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
  define(`confENVDEF', ` -DNETISO')
  define(`confDEPEND_TYPE', `CC-M')
@@ -23,5 +23,3 @@ $NetBSD: patch-aa,v 1.16 2003/12/02 05:45:12 ben Exp $
  define(`confMAN5EXT', `0')
  define(`confMAN8EXT', `0')
 +define(`confLDOPTS', `${LDFLAGS}')
-+define(`confINST_DEP', `')
-+define(`confNO_STATISTICS_INSTALL', `')
