@@ -1,0 +1,9 @@
+RDP compiles attributed LL(1) grammars decorated with C-language
+semantic actions into recursive descent compilers. RDP is written in
+strict ANSI C and produces strict ANSI C. RDP is designed to be easy
+to use, and comes with library support for many of the things that are
+left to the user in more traditional tools.
+
+More information on RDP can be gleaned from:
+
+	http://www.dcs.rhbnc.ac.uk/la/rdp.html
