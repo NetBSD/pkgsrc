@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/04/17 11:57:41 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/04/17 12:26:17 tron Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -17,6 +17,7 @@ SUBDIR+=	httperf
 SUBDIR+=	iozone
 SUBDIR+=	linpack
 SUBDIR+=	lmbench
+SUBDIR+=	netio
 SUBDIR+=	nsieve
 SUBDIR+=	paranoia
 SUBDIR+=	postmark
