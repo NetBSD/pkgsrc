@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/31 09:56:58 minoura Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/15 13:52:28 minoura Exp $
 #
 
-DISTNAME=	Gauche-0.3.13
+DISTNAME=	Gauche-0.4.2
 CATEGORIES=	lang
 MASTER_SITES=	http://prdownloads.sourceforge.net/gauche/
 EXTRACT_SUFX=	.tgz
@@ -16,12 +16,15 @@ DEPENDS+=	slib-*:../../devel/slib
 # XXX: On newer SunOS/Linux we have to use their native iconv(3)...?
 DEPENDS+=	libiconv-*:../../converters/libiconv
 
-NOT_FOR_PLATFORM= *-*-alpha *-*-sparc64	# Gauche is not LP64 safe for now
+# Due to GC dynamic loading support, this package runs on limited platforms
+# Plus, it is not LP64-safe
+ONLY_FOR_PLATFORM= NetBSD-*-sparc NetBSD-*-mipsel NetBSD-*-powerpc
+ONLY_FOR_PLATFORM+= Linux-*-* SunOS-*-*
 
 WRKSRC=		${WRKDIR}/Gauche
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
-CONFIGURE_ARGS+=	--with-iconv=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-iconv=${PREFIX} --with-iconv-lib=iconv
 CFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"
