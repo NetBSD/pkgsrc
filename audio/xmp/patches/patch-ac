@@ -1,13 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/28 01:25:40 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2002/01/29 07:41:28 martti Exp $
 
---- etc/Makefile.orig	Wed Feb  2 21:20:34 2000
-+++ etc/Makefile	Fri Sep 15 23:22:03 2000
-@@ -21,7 +21,7 @@
- 	@if [ -f /etc/xmp-modules.conf ]; then \
- 	    mv -f /etc/xmp-modules.conf /etc/xmp-modules.conf.old; \
+--- etc/Makefile.orig	Mon Jan 28 15:55:41 2002
++++ etc/Makefile	Mon Jan 28 15:56:18 2002
+@@ -20,5 +20,5 @@
+ 	@if [ -f $(DEST_DIR)/etc/xmp-modules.conf ]; then \
+ 	    mv -f $(DEST_DIR)/etc/xmp-modules.conf $(DEST_DIR)/etc/xmp-modules.conf.old; \
  	fi
--	$(INSTALL) -m644 xmp.conf xmp-modules.conf /etc
+-	$(INSTALL) -m644 xmp.conf xmp-modules.conf $(DEST_DIR)/etc
 +	$(INSTALL) -m644 xmp.conf xmp-modules.conf ${PREFIX}/etc
  
- xmp.spec: xmp.spec.in ../Makefile.rules
- 	cat $@.in | sed 's/@VERSION@/$(VERSION)/g' > $@
