@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3452 2003/09/19 09:34:21 wiz Exp $
+$NetBSD: CHANGES,v 1.3453 2003/09/19 09:41:57 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3840,3 +3840,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated streamtuner to 0.10.1 [xtraeme 2003-09-18]
 	Added msmtp-0.5.0 [wiz 2003-09-19]
 	Updated p5-Devel-StackTrace to 1.0.3 [wiz 2003-09-19]
+	Updated rconfig to 0.19 [abs 2003-09-19]
+
