@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.39 2003/08/27 01:59:45 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.40 2003/08/27 03:56:50 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -116,16 +116,15 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages.
 .endif
 
 USE_BUILDLINK2?=	no	# default to not using buildlink2
+USE_BUILDLINK3?=	no	# defualt to not using buildlink3
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_USE_BUILDLINK3=	yes	# pkgviews requires buildlink3
-.else
-_USE_BUILDLINK3=	no
+USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
 .endif
-.if empty(USE_BUILDLINK2:M[nN][oO]) && empty(_USE_BUILDLINK3:M[nN][oO])
-PKG_FAIL_REASON+=	"Please undefine USE_BUILDLINK2 when using pkgviews."
+.if empty(USE_BUILDLINK2:M[nN][oO]) && empty(USE_BUILDLINK3:M[nN][oO])
+PKG_FAIL_REASON+=	"Please undefine USE_BUILDLINK2 or USE_BUILDLINK3."
 .endif
 
-.if empty(_USE_BUILDLINK3:M[yY][eE][sS])
+.if !empty(USE_BUILDLINK3:M[nN][oO])
 #
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
 # that if no buildlink2.mk files are included, then they still point to
@@ -390,13 +389,11 @@ X11_LDFLAGS=		# empty
 X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
 X11_LDFLAGS+=		-L${X11BASE}/lib
 .endif
-.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(_USE_BUILDLINK3:M[nN][oO])
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
 LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
 LDFLAGS+=		-L${LOCALBASE}/lib
-.    if defined(USE_X11)
+.  if defined(USE_X11)
 LDFLAGS+=		${X11_LDFLAGS}
-.    endif
 .  endif
 .endif
 FIX_RPATH+=		LDFLAGS
@@ -1286,12 +1283,12 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(_USE_BUILDLINK3:M[nN][oO])
+.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
 NO_BUILDLINK=		# defined
 .endif
 
 .if !defined(NO_BUILDLINK)
-.  if empty(_USE_BUILDLINK3:M[nN][oO])
+.  if empty(USE_BUILDLINK3:M[nN][oO])
 .    include "../../mk/buildlink3/bsd.buildlink3.mk"
 .  elif empty(USE_BUILDLINK2:M[nN][oO])
 .    include "../../mk/buildlink2/bsd.buildlink2.mk"
