@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/14 20:26:51 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/04/15 20:20:49 tron Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BIND_BUILDLINK3_MK:=	${BIND_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	bind
 
 .if !empty(BIND_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.bind+=	bind>=9.2.2
-BUILDLINK_RECOMMENDED.bind?=	bind>=9.2.3nb2
+BUILDLINK_RECOMMENDED.bind?=	bind>=9.2.3nb4
 BUILDLINK_PKGSRCDIR.bind?=	../../net/bind9
 .endif	# BIND_BUILDLINK3_MK
 
