@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.13 1999/09/18 15:33:55 kim Exp $
+# $NetBSD: bsd.prefs.mk,v 1.14 2000/01/24 07:04:28 itojun Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -90,6 +90,11 @@ MAKE_ENV+=		EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
 	@${ECHO_MSG} "You can NOT set PREFIX manually or in mk.conf.  Set LOCALBASE or X11BASE"
 	@${ECHO_MSG} "depending on your needs.  See the pkg system documentation for more info."
 	@${FALSE}
+.endif
+
+# if the system is IPv6-ready NetBSD, compile with IPv6 support turned on.
+.if (${OPSYS} == "NetBSD") && exists(/sbin/ping6)
+USE_INET6?=		YES
 .endif
 
 # Preload all default values for CFLAGS, LDFLAGS, etc. before bsd.pkg.mk
