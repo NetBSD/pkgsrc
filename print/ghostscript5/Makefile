@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 1999/12/02 13:46:50 tron Exp $
+# $NetBSD: Makefile,v 1.43 1999/12/02 14:26:30 tron Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -33,9 +33,7 @@ ALL_TARGET=	std
 MAKEFILE=	unix-gcc.mak
 MAKE_ENV+=	MAKEOBJDIR=. prefix=${PREFIX}
 .if ${OPSYS} == "SunOS"
-MAKE_ENV+=	XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/bsd/lib -L${LOCALBASE}/bsd/lib"
-.else
-MAKE_ENV+=	XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib"
+LDFLAGS+=	-L${LOCALBASE}/bsd/lib
 .endif
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 MAKE_FLAGS+=	-DA4
