@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4674 2004/02/03 17:49:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4675 2004/02/03 20:49:34 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libgdiplus-0.1 [recht 2004-02-03]
 	Added mini_httpd-1.19 [reed 2004-02-03]
 	Updated dosbox to 0.61 [xtraeme 2004-02-03]
+	Updated spamprobe to 0.9h [hubertf 2004-02-03]
