@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/17 19:40:55 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/01 01:43:30 jlam Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -21,7 +21,7 @@ ALL_TARGET=	it
 INSTALL_TARGET=	setup check
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=	3.0
+GCC_REQD+=	3.0
 .endif
 
 post-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/01 01:43:29 jlam Exp $
 
 DISTNAME=	ogle_gui-0.9.2
 PKGREVISION=	2
@@ -17,7 +17,7 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/lib/ogle
 
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

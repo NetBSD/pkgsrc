@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2004/01/05 20:57:52 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2004/02/01 01:43:28 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -41,7 +41,7 @@ CONFIGURE_ENV+=		glib_cv_rtldglobal_broken=no
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 .endif
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}

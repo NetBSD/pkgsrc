@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2004/01/26 09:54:43 tron Exp $
+# $NetBSD: Makefile,v 1.90 2004/02/01 01:43:29 jlam Exp $
 
 DISTNAME=	netpbm-10.11.8
 PKGREVISION=	1
@@ -28,7 +28,7 @@ STAGEDIR=	${WRKDIR}/staging
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 .endif
 
 .if ${OPSYS} == SunOS

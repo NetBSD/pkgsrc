@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 15:46:42 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/01 01:43:29 jlam Exp $
 #
 
 DISTNAME=		aqsis-0.6.4
@@ -17,7 +17,7 @@ USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 USE_BUILDLINK2=		yes
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 USE_GCC_SHLIB=		yes
 
 .include "../../devel/libargparse/buildlink2.mk"

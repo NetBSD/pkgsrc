@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/28 08:43:11 markd Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/01 01:43:29 jlam Exp $
 
 DISTNAME=	koffice-1.3
 CATEGORIES=	misc kde
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 
 PTHREAD_OPTS+=		require
 

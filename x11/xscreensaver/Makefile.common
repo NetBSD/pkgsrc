@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2004/01/27 18:56:23 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.67 2004/02/01 01:43:30 jlam Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -61,7 +61,7 @@ CFLAGS+=		-fno-strict-aliasing
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 .endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"

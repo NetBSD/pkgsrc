@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/25 17:03:27 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/01 01:43:28 jlam Exp $
 #
 
 DISTNAME=	fastcap-2.0-15Jul92
@@ -25,7 +25,7 @@ CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		4
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 .endif
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/12/19 15:43:31 skrll Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/01 01:43:30 jlam Exp $
 #
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
@@ -9,7 +9,7 @@ PKGNAME=		qt3-libs-${QTVERSION}
 COMMENT=		C++ X GUI toolkit
 
 USE_BUILDLINK2=		yes
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 
 ALL_TARGET=		sub-plugins
 
