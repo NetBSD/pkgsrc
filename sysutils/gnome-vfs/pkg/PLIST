@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2001/01/04 15:10:56 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/04/06 22:03:09 rh Exp $
 bin/gnome-vfs-config
-bin/gnome-vfs-gen-mimedb
 bin/gnome-vfs-slave
-bin/nautilus-mime-type-capplet
 etc/gnome-vfs-mime-magic
 etc/vfs/modules/default-modules.conf
 include/libgnomevfs/gnome-vfs-application-registry.h
@@ -14,7 +12,6 @@ include/libgnomevfs/gnome-vfs-configuration.h
 include/libgnomevfs/gnome-vfs-constants.h
 include/libgnomevfs/gnome-vfs-context.h
 include/libgnomevfs/gnome-vfs-directory-filter.h
-include/libgnomevfs/gnome-vfs-directory-list.h
 include/libgnomevfs/gnome-vfs-directory.h
 include/libgnomevfs/gnome-vfs-file-info.h
 include/libgnomevfs/gnome-vfs-file-size.h
@@ -29,7 +26,7 @@ include/libgnomevfs/gnome-vfs-method.h
 include/libgnomevfs/gnome-vfs-mime-handlers.h
 include/libgnomevfs/gnome-vfs-mime-info.h
 include/libgnomevfs/gnome-vfs-mime-magic.h
-include/libgnomevfs/gnome-vfs-mime-sniff-buffer-private.h
+include/libgnomevfs/gnome-vfs-mime-monitor.h
 include/libgnomevfs/gnome-vfs-mime-sniff-buffer.h
 include/libgnomevfs/gnome-vfs-mime.h
 include/libgnomevfs/gnome-vfs-module-shared.h
@@ -39,7 +36,6 @@ include/libgnomevfs/gnome-vfs-parse-ls.h
 include/libgnomevfs/gnome-vfs-private-types.h
 include/libgnomevfs/gnome-vfs-private-utils.h
 include/libgnomevfs/gnome-vfs-private.h
-include/libgnomevfs/gnome-vfs-process.h
 include/libgnomevfs/gnome-vfs-regexp-filter.h
 include/libgnomevfs/gnome-vfs-result.h
 include/libgnomevfs/gnome-vfs-seekable.h
@@ -103,9 +99,6 @@ lib/vfs/modules/libgzip.so
 lib/vfs/modules/libhttp.a
 lib/vfs/modules/libhttp.la
 lib/vfs/modules/libhttp.so
-lib/vfs/modules/libnfs.a
-lib/vfs/modules/libnfs.la
-lib/vfs/modules/libnfs.so
 lib/vfs/modules/libvfs-pipe.a
 lib/vfs/modules/libvfs-pipe.la
 lib/vfs/modules/libvfs-pipe.so
@@ -120,15 +113,8 @@ lib/vfscorbaConf.sh
 lib/vfspthreadConf.sh
 man/man5/gnome-vfs-mime.5
 share/application-registry/gnome-vfs.applications
-share/control-center/nautilus-mime-type.desktop
-share/gnome/apps/Settings/nautilus-mime-type.desktop
 share/gnome/html/gnome-vfs-decl.txt
 share/gnome/html/gnome-vfs-sections.txt
-share/gnome/html/gnome-vfs.html
-share/gnome/html/gnome-vfs/book1.html
-share/gnome/html/gnome-vfs/gnome-vfs-gnome-vfs-mime-info.html
-share/gnome/html/gnome-vfs/gnome-vfs-gnome-vfs-mime.html
-share/gnome/html/gnome-vfs/libgnome.html
 share/mime-info/gnome-vfs.keys
 share/mime-info/gnome-vfs.mime
 @dirrm share/gnome/html/gnome-vfs
