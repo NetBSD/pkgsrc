@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/04/27 05:44:23 snj Exp $
+# $NetBSD: Makefile,v 1.25 2004/06/21 16:22:26 martti Exp $
 #
 
-DISTNAME=	bins-1.1.25
+DISTNAME=	bins-1.1.26
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -71,10 +71,32 @@ do-install:
 		${WRKSRC}/templates.joi/static/*.png			\
 		${WRKSRC}/templates.joi/static/*.js			\
 		${PREFIX}/share/examples/bins/templates.joi/static/
+	# template: marc
+	${INSTALL_DATA_DIR}						\
+		${PREFIX}/share/examples/bins/templates.marc		\
+		${PREFIX}/share/examples/bins/templates.marc/static
+	${INSTALL_DATA} ${WRKSRC}/templates.marc/*.html			\
+		${PREFIX}/share/examples/bins/templates.marc/
+	${INSTALL_DATA}							\
+		${WRKSRC}/templates.marc/static/*.css			\
+		${WRKSRC}/templates.marc/static/*.png			\
+		${WRKSRC}/templates.marc/static/*.js			\
+		${PREFIX}/share/examples/bins/templates.marc/static/
 	# template: new
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.new
 	${INSTALL_DATA} ${WRKSRC}/templates.new/*.html			\
 		${PREFIX}/share/examples/bins/templates.new/
+	# template: petrus
+	${INSTALL_DATA_DIR}						\
+		${PREFIX}/share/examples/bins/templates.petrus		\
+		${PREFIX}/share/examples/bins/templates.petrus/static
+	${INSTALL_DATA} ${WRKSRC}/templates.petrus/*.html		\
+		${PREFIX}/share/examples/bins/templates.petrus/
+	${INSTALL_DATA}							\
+		${WRKSRC}/templates.petrus/static/*.css			\
+		${WRKSRC}/templates.petrus/static/*.png			\
+		${WRKSRC}/templates.petrus/static/*.js			\
+		${PREFIX}/share/examples/bins/templates.petrus/static/
 	# template: satyap
 	${INSTALL_DATA_DIR}						\
 		${PREFIX}/share/examples/bins/templates.satyap		\
