@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+
+--- configure.orig	Sat Apr  5 20:28:23 2003
++++ configure
+@@ -13777,7 +13777,7 @@ if test "${ac_cv_lib_GL_glBegin+set}" = 
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lGL $X_LIBS $X_PRE_LIBS -lGL $X_EXTRA_LIBS $LIBS"
++LIBS="-lGL $X_LIBS $X_PRE_LIBS -lGL -lm $X_EXTRA_LIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -13957,7 +13957,7 @@ echo "${ECHO_T}$ac_cv_header_GL_gl_h" >&
+ fi
+ if test $ac_cv_header_GL_gl_h = yes; then
+    ac_have_opengl="yes"
+-               OPENGL_LIBS="-lGL"
++               OPENGL_LIBS="-lGL -lm"
+ 	       echo "$as_me:$LINENO: checking for glutInit in -lglut" >&5
+ echo $ECHO_N "checking for glutInit in -lglut... $ECHO_C" >&6
+ if test "${ac_cv_lib_glut_glutInit+set}" = set; then
