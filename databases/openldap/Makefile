@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/01/31 05:06:54 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2002/02/01 18:32:34 jlam Exp $
 
 DISTNAME=	openldap-2.0.21
 SVR4_PKGNAME=	oldap
@@ -48,6 +48,12 @@ PLIST_SRC=		${.CURDIR}/PLIST.slurpd ${.CURDIR}/PLIST
 .include "../../databases/db/buildlink.mk"
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
+.endif
+
+.if defined(USE_SASL) && (${USE_SASL} == "YES")
+.include "../../security/cyrus-sasl/buildlink.mk"
+CONFIGURE_ARGS+=	--with-cyrus-sasl
+CONFIGURE_ARGS+=	--enable-spasswd
 .endif
 
 .if defined(KERBEROS)
