@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/02 01:32:28 wiz Exp $
+
+--- params.h.orig	Tue Feb  1 07:16:24 2000
++++ params.h	Sun Apr  2 00:29:09 2000
+@@ -62,7 +62,9 @@
+  * Do we have shadow passwords? (Not for *BSD.)
+  * Note: password aging is not supported.
+  */
++/* we do, but not this way
+ #define AUTH_SHADOW			1
++*/
+ 
+ /*
+  * A salt used to waste some CPU time on dummy crypt(3) calls and make
+@@ -81,7 +83,7 @@
+  * Your mail spool directory. Note: only local (non-NFS) mode 775 mail
+  * spools are currently supported.
+  */
+-#define MAIL_SPOOL_PATH			"/var/spool/mail"
++#define MAIL_SPOOL_PATH			"/var/mail"
+ 
+ /*
+  * How do we talk to syslogd? These should be fine for most systems.
