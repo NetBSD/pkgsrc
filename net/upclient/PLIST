@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/07 22:20:59 hubertf Exp $
+bin/upclient
+etc/rc.d/upclient
+etc/upclient.conf
+share/doc/upclient/AUTHORS
+share/doc/upclient/COPYING
+share/doc/upclient/HISTORY
+share/doc/upclient/README
+share/doc/upclient/FAQ
+share/doc/upclient/INSTALL
+@dirrm share/doc/upclient
