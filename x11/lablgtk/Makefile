@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/16 16:40:24 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/16 17:24:45 dillo Exp $
 #
 
 DISTNAME=	lablgtk-1.2.5
@@ -20,6 +20,10 @@ MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 		configure USE_DOTOPT=1 USE_CC=1 CC=${CC}
+
+post-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
+		opt
 
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../lang/ocaml/buildlink2.mk"
