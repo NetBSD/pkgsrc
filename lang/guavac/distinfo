@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:51 agc Exp $
-
-SHA1 (guavac-1.2.tar.gz) = 1384cc0b4fbea0a4177532a6b2a2b0a03bffc484
-Size (guavac-1.2.tar.gz) = 642113 bytes
-SHA1 (patch-aa) = bbb97b1e49a7caee0d90612b7431000542121f5b
