@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.397 2002/10/29 01:43:24 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.398 2002/10/29 11:38:04 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3431,3 +3431,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xscreensaver-gnome to 4.06 [wiz 2002-10-28]
 	Updated xscreensaver to 4.06 [wiz 2002-10-28]
 	Added tkgate-1.6i [dmcmahill 2002-10-28]
+	Updated libxml2 to 2.4.26 [martti 2002-10-29]
+	Updated libxslt to 1.0.22 [martti 2002-10-29]
