@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/08 08:25:31 tron Exp $
+
+--- handhelds/Imakefile.orig	2003-02-28 14:19:21.000000000 +0100
++++ handhelds/Imakefile	2003-03-08 08:49:40.000000000 +0100
+@@ -11,7 +11,7 @@
+ all:: name								@@\
+ 									@@\
+ name: name.cfg CursorSources(name)					@@\
+-	$(XCURSORGEN) -p $(PNGDIR) name.cfg name			@@\
++	../xcursorgen -p $(PNGDIR) name.cfg name			@@\
+ 									@@\
+ clean::									@@\
+ 	$(RM) name							@@\
