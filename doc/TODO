@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3128 2005/02/27 00:47:47 wiz Exp $
+$NetBSD: TODO,v 1.3129 2005/02/27 11:53:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,7 @@ Suggested package updates
 	o ec-fonts-mftraced-1.0.9
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-2.2.14
+	o efax-gtk-2.2.15
 	o efont-unicode-0.4.2
 	o egtk-0.3.6
 	o electricfence-2.4.13
@@ -676,7 +676,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.24
-	o mathomatic-12.1b
+	o mathomatic-12.1c
 	o mc-4.6.1-pre3
 	o memcached-1.2
 	o memtest86-3.2
@@ -690,6 +690,7 @@ Suggested package updates
 	o minicom-2.1
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
+	o mkvtoolnix-1.4.0
 	o mlterm-2.9.1 [pkg/29061]
 	o mlview-0.7.1
 	o mmix-20041014
@@ -705,7 +706,7 @@ Suggested package updates
 	o mplayer-plugin-firefox-2.80
 	o mrproject-0.9.1
 	o mserv-devel-0.41
-	o msmtp-1.3.7
+	o msmtp-1.3.8
 	o mtail-1.1.1
 	o mtr-0.69
 	o mtr-gtk-0.69
@@ -803,6 +804,7 @@ Suggested package updates
 	o p5-Font-AFM-1.19
 	o p5-Graph-0.20105
 	o p5-GraphViz-2.01
+	o p5-HTML-TableExtract-1.09
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
@@ -921,6 +923,7 @@ Suggested package updates
 	o poppy-4.01
 	o posh-0.3.14
 	o postgresql-autodoc-1.24
+	o potrace-1.6
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o pptpd-1.2.3
 	o prc-tools-2.3
@@ -1053,7 +1056,7 @@ Suggested package updates
 	o smalltalk-2.1.10
 	o smartmontools-5.33
 	o smlnj-110.51 [pkgsrc-wip]
-	o smlnj-110.52
+	o smlnj-110.53
 	o smokeping-1.38
 	o snd-7.10
 	o snes9x-1.43
