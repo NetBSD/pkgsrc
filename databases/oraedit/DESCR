@@ -1,14 +1,7 @@
-oraedit is capable of editing functions, procedure,
-package bodies and specification, type body and specifications
-as well as views stored in Oracle. The only thing required is
-working sqlplus client or working rsh/ssh connection
-to a computer with one (and Python, of course).
+oraedit is simple wrapper for editing Oracle stored functions,
+procedures, packages, types and views. Requires only Oracle sqlplus
+binary, or rsh/ssh connection to computer with one. Any local editor
+can be used with oraedit, including vim or pico.
 
-oraedit was used as a replacement for Platinum's SQL-Station,
-to get rid MS Windows for a development box. It surely
-doesn't have every feature SQL-Station has, but hey - the
-fact it works under Unix is appealing :) It's particularly
-usable in connection with some decent GUI editor, such as vim.
-
-Documentation is currently not present, you have to figure out
-usage yourself ATM, sorry.
+Documentation is currently not present, but hopefully the configuration
+and usage is reasoably straighforward.
