@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/22 09:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/26 19:54:48 jlam Exp $
 #
 
 DISTNAME=	ebuilder-0.56d
@@ -10,17 +10,15 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://web.inter.nl.net/users/eavdmeer/index.html
 COMMENT=	GUI builder for the Qt library
 
-DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
-DEPENDS+=	png>=1.0.11:../../graphics/png
+USE_BUILDLINK_ONLY=	yes
+USE_X11=		yes
+USE_GMAKE=		yes
+MAKEFILE=		GNUmakefile
 
-USE_X11=	yes
-USE_GMAKE=	yes
-MAKEFILE=	GNUmakefile
-
-EVAL_PREFIX+=	QT2DIR=qt2-libs
-MAKE_ENV=	QTDIR=${QT2DIR}/qt2
+MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/ebuilder ${PREFIX}/bin
 
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

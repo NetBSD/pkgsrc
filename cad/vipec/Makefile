@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/11 06:34:20 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/06/26 20:26:16 jlam Exp $
 #
 
 DISTNAME=	vipec-2.0.4
@@ -9,19 +9,14 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.netfold.com/~vipec/
 COMMENT=	Network analyser for electrical networks
 
-DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_X11=	yes
+USE_X11=		yes
+USE_BUILDLINK_ONLY=	yes
 
-EVAL_PREFIX+=	QT2DIR=qt2-libs
-# make sure configure finds png
-CPPFLAGS+=              -I${LOCALBASE}/include
-CONFIGURE_ENV+=	"QTDIR=${QT2DIR}/qt2" \
-		USER_LDFLAGS="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
-CONFIGURE_ARGS+=	"--with-qt-dir=${QT2DIR}/qt2"
+CONFIGURE_ARGS+=	--with-qt-dir=${BUILDLINK_QTDIR}
+CONFIGURE_ENV+=		USER_LDFLAGS="${LDFLAGS}"
 
 post-patch:
 	${MV} -f ${WRKSRC}/vipec/helpwindow.cpp ${WRKSRC}/vipec/helpwindow.cpp.in
@@ -40,4 +35,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/vipec/help/models/*.html ${PREFIX}/share/doc/vipec/models
 	${INSTALL_DATA} ${WRKSRC}/vipec/help/models/*.png ${PREFIX}/share/doc/vipec/models
 
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
