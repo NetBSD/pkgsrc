@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.351 2002/11/09 05:24:41 rh Exp $
+# $NetBSD: Makefile,v 1.352 2002/11/18 12:50:12 cjep Exp $
 #
 
 COMMENT=	Development utilities
@@ -9,6 +9,7 @@ SUBDIR+=	Gorm
 SUBDIR+=	SDL
 SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf
+SUBDIR+=	aap
 SUBDIR+=	acme
 SUBDIR+=	acunia-jam
 SUBDIR+=	aegis
