@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:29 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/09/22 06:11:40 garbled Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -6,6 +6,8 @@ DISTNAME=       Mosaic-src-2.7b5
 PKGNAME=        mosaic-2.7b5
 CATEGORIES=     www
 MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
+
+NOT_FOR_ARCHS=	alpha	#LP64 problems
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/

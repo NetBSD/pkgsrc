@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:17:12 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/22 06:11:39 garbled Exp $
 #
 
 DISTNAME=	dync-1.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.westley.demon.co.uk/src/
+
+NOT_FOR_ARCHS=	alpha	#dync: can't dlopen `lib1.so.1.0'
 
 MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.westley.demon.co.uk/software.html

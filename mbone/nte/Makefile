@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.10 1998/09/15 17:05:05 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/09/22 06:11:38 garbled Exp $
 #
 
 DISTNAME=	nt.1.5a23
 PKGNAME=	nte-1.5a23
 CATEGORIES=	mbone tk80
 MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/nte/
+
+NOT_FOR_ARCHS=	alpha	# ANSI headers cause LP64 problems
 
 MAINTAINER=	mycroft@netbsd.org
 

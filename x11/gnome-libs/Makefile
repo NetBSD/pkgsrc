@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/04 22:14:25 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/22 06:11:41 garbled Exp $
 #
 
 DISTNAME=	gnome-libs-0.27
@@ -6,6 +6,8 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/v0.27/ \
 		ftp://ftp.gnome.org/pub/GNOME/sources/ \
 		ftp://ftp.geo.net/pub/gnome/v0.27/
+
+NOT_FOR_ARCHS=	alpha	# problems with gtk
 
 MAINTAINER=	packages@netbsd.org
 
