@@ -1,8 +1,21 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/09/02 17:22:26 agc Exp $
+$NetBSD: patch-ab,v 1.2 2003/01/04 12:26:39 cjep Exp $
 
---- Makefile.in	2002/09/02 17:17:33	1.1
-+++ Makefile.in	2002/09/02 17:19:05
-@@ -819,9 +819,9 @@
+--- Makefile.in.orig	Wed May 15 11:11:12 2002
++++ Makefile.in
+@@ -73,9 +73,9 @@ SHLIBS = @SHLIBS@ @DLFCNLIBDIR@
+ BOTHLIBS = @BOTHLIBS@ @MH_MT_LIBS@ $(SHLIBS)
+ LD_RXLIB_A1 = @LD_RXLIB_A1@
+ LD_RXLIB_A2 = @LD_RXLIB_A2@
+-LD_RXLIB_B1 = @LD_RXLIB_B1@
+-LD_RXLIB_B2 = @LD_RXLIB_B2@
+-DYNAMIC_LDFLAGS = @DYNAMIC_LDFLAGS@
++LD_RXLIB_B1 = @LD_RXLIB_B1@ -R$(PREFIX)/lib
++LD_RXLIB_B2 = @LD_RXLIB_B2@ -R$(PREFIX)/lib
++DYNAMIC_LDFLAGS = $(LDFLAGS) @DYNAMIC_LDFLAGS@
+ SHL_LD = @SHL_LD@ $(BOTHLIBS)
+ SHL_TARGETS = @SHL_TARGETS@
+ OTHER_INSTALLS = @OTHER_INSTALLS@
+@@ -819,9 +819,9 @@ installbase: all
  	$(INSTALL) -m 755 -c ./rxstack$(EXE) $(bindir)/rxstack$(EXE)
  	$(INSTALL) -m 755 -c ./trexx$(EXE) $(bindir)/trexx$(EXE)
  	$(INSTALL) -m 755 -c ./regina-config $(bindir)/$(SHLFILE)-config
