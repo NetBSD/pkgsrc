@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3326 2003/09/11 15:43:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.3327 2003/09/11 15:50:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3638,3 +3638,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-postgresql to 0.7.1 [taca 2003-09-11]
 	Updated ruby-mysql to 2.4.5 [taca 2003-09-11]
 	Updated gmplayer to 1.0rc1nb1 [jmmv 2003-09-11]
+	Updated squid to 2.5.1nb5 [taca 2003-09-11]
