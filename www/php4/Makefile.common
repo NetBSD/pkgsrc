@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2004/05/19 13:11:40 junyoung Exp $
+# $NetBSD: Makefile.common,v 1.39 2004/05/20 21:12:14 wiz Exp $
 
 DISTNAME?=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -17,7 +17,7 @@ HOMEPAGE?=		http://www.php.net/
 #
 PHP_DIST_VERS=		4.3.6
 PHP_BASE_VERS=		${PHP_DIST_VERS}
-PKGREVISION=		2	
+PKGREVISION=		2
 
 DISTFILES?=		${PHP_DISTFILE}
 PHP_DISTFILE=		${DISTNAME}${EXTRACT_SUFX}
