@@ -7,6 +7,6 @@
 +BINDIR=${PREFIX}/bin
 +MANDIR=${PREFIX}/man
 +
-+MANZ=	1
++MANINSTALL=	maninstall catinstall
 +
 +.include <bsd.prog.mk>

@@ -3,7 +3,7 @@
 # Date created:		Oct 27, 1994
 # Whom:			pst
 #
-# $NetBSD: Makefile,v 1.5 1998/03/10 13:39:53 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/20 22:04:08 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -19,12 +19,12 @@ RESTRICTED=	"'No redistribution' copyright"
 MIRROR_DISTFILE= no
 NO_WRKSUBDIR=	yes
 
-PLIST_SRC=	${WRKDIR}/.PLIST-src
+# Do not list MAN/CAT pages here. It will confuse if MANZ is set.
+# The pkg uses BSD-style-Makefiles itself, so it does the right thing.
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kermit
 	${INSTALL_DATA} ${FILESDIR}/dot.kermrc ${PREFIX}/share/examples/kermit
 	@${CAT} ${PKGDIR}/DESCR
-	[ "X$$MANZ" = X"" ] && ${SED} -e 's|.gz$$||' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 .include <bsd.port.mk>
