@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.207 2001/05/08 17:28:08 jlam Exp $
+# $NetBSD: mk.conf.example,v 1.208 2001/05/13 19:02:47 kim Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -936,6 +936,13 @@ PAPERSIZE=	A4
 # (pkgsrc/mail/face)
 # Possible: not defined, YES
 # Default: not defined
+
+#VTUN_SYSCONFDIR=	/etc
+# Specifies the location for vtund.conf, the configuration file.
+# If your ${LOCALBASE} is shared between machines use /etc or
+# a similar directory that is local to each machine.
+# Possible: Any valid directory
+# Default: ${LOCALBASE}/etc
 
 #WINDOWMAKER_OPTIONS=
 # Options for building windowmaker package. Used to add support for
