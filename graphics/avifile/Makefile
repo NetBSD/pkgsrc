@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/24 02:22:25 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/24 02:25:51 zuntum Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -19,7 +19,7 @@ USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV+=	SDL_CONFIG="${SDL_CONFIG}" MOC="${MOC}" UIC="${UIC}"
+CONFIGURE_ENV+=	SDL_CONFIG="${SDL_CONFIG}"
 
 CONFIGURE_ARGS+=--prefix=${PREFIX}						\
 		--with-win32-path=${LOCALBASE}/lib/win32			\
@@ -27,8 +27,6 @@ CONFIGURE_ARGS+=--prefix=${PREFIX}						\
 		--without-qt
 
 SDL_CONFIG?=	${LOCALBASE}/bin/sdl-config
-MOC?=		${X11BASE}/qt2/bin/moc
-UIC?=		${X11BASE}/qt2/bin/uic
 
 .include "../../devel/pth/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
