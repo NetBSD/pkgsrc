@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/03 04:25:27 rafal Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/03 11:58:05 drochner Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -24,6 +24,7 @@ HAS_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
+CONFIGURE_ARGS+=	--enable-languages="c c++"
 UNLIMIT_RESOURCES=	datasize
 
 # as this is named gcc3, use DISTNAME instead.
@@ -32,7 +33,7 @@ MESSAGE_SUBST+=		PKGNAME_NOREV=${DISTNAME}
 
 TEXINFO_REQD=		4.2
 
-INFO_FILES=		cpp.info g77.info gcc.info gcj.info
+INFO_FILES=		cpp.info gcc.info
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/pthread.h)
