@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 1999/06/04 00:11:36 tron Exp $
+# $NetBSD: Makefile,v 1.32 1999/06/05 21:27:18 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
-DISTNAME=	kdegames-1.1
+DISTNAME=	kdegames-1.1.1
 CATEGORIES=	games kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1.1/distribution/tar/generic/source/bz2/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/1.1.1/distribution/tar/generic/source/bz2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
