@@ -1,0 +1,10 @@
+Isearch is software for indexing and searching text documents.  It
+supports full text and field based search, relevance ranked results,
+Boolean queries, and heterogeneous databases.  Isearch can parse many
+kinds of documents "out of the box," including HTML, mail folders,
+list digests, SGML-style tagged data, and USMARC.  It can be extended
+to support other formats by creating descendant classes in C++ that
+define the document structure.  It is pretty easy to customize in this
+way, provided that you know some C++.  A CGI interface for web based
+searching is also included in the source distribution (but not
+installed by default).
