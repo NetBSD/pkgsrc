@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/10/24 22:11:16 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/11/01 09:43:39 tron Exp $
 
 DISTNAME=	wterm-6.2.9
 CATEGORIES=	x11
@@ -17,6 +17,7 @@ USE_X11BASE=		YES
 CONFIGURE_ARGS+= --enable-utmp --enable-wtmp --enable-xpm-background
 CONFIGURE_ARGS+= --enable-menubar --enable-graphics --enable-next-scroll
 CONFIGURE_ARGS+= --enable-half-shadow
+CONFIGURE_ARGS+= --with-xpm-library=${PREFIX}
 
 post-install:
 	${CHMOD} 4755 ${PREFIX}/bin/wterm
