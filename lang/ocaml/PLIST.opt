@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.5 2004/04/24 14:45:15 danw Exp $
+@comment $NetBSD: PLIST.opt,v 1.6 2004/11/27 01:34:09 dmcmahill Exp $
 bin/camlp4o.opt
 bin/camlp4r.opt
 bin/ocamlc.opt
@@ -140,6 +140,7 @@ lib/ocaml/lazy.cmx
 lib/ocaml/lexing.cmx
 lib/ocaml/libasmrun.a
 lib/ocaml/libasmrunp.a
+lib/ocaml/libthreadsnat.a
 lib/ocaml/list.cmx
 lib/ocaml/listLabels.cmx
 lib/ocaml/map.cmx
@@ -188,6 +189,7 @@ lib/ocaml/threads/event.cmx
 lib/ocaml/threads/mutex.cmx
 lib/ocaml/threads/thread.cmx
 lib/ocaml/threads/threadUnix.cmx
+lib/ocaml/threads/threads.a
 lib/ocaml/threads/threads.cmxa
 lib/ocaml/unix.a
 lib/ocaml/unix.cmx
