@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2004/02/11 11:41:43 grant Exp $
+# $NetBSD: Makefile,v 1.96 2004/03/13 19:12:26 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -32,6 +32,14 @@ NO_PKG_REGISTER=	# defined
 NO_PACKAGE=		Deinstallation is not permitted
 NO_TOOLS=		# defined
 PKG_PRESERVE=		# defined
+
+# This is needed to solve a chicken-and-egg problem where pkgsrc uses
+# newer features of pkg_install, but older NetBSD installations won't
+# support them.  In this case, we explicitly use the native GCC
+# compiler to avoid problems with depending on pkgsrc GCC for building
+# pkg_install.
+#
+USE_NATIVE_GCC=		yes
 
 PLIST_SUBST+=		MANDIR=${MANDIR}
 PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN}
