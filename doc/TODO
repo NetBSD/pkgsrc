@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2997 2005/02/05 14:54:33 chris Exp $
+$NetBSD: TODO,v 1.2998 2005/02/05 16:59:38 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -454,8 +454,6 @@ Suggested package updates
 	o file-4.12
 	o findutils-4.2.15
 	o firefox-bin-1.0
-	o firewalk-5.0
-	o firewalk-gtk-5.0
 	o flim-1.14.7
 	o fluxbox-0.9.11 [pkg/28736]
 	o fmsx-28
