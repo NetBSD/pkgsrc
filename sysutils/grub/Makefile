@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/07/20 12:42:36 tron Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/20 13:27:32 tron Exp $
 
 DISTNAME=	grub-0.92
 CATEGORIES=	sysutils
@@ -24,6 +24,11 @@ PLIST_SUBST+=		NETBOOT=
 .for GRUB_NETWORK_CARD in ${GRUB_NETWORK_CARDS}
 CONFIGURE_ARGS+=	--enable-${GRUB_NETWORK_CARD}
 .endfor
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/grub
+	${INSTALL_DATA} ${WRKSRC}/netboot/README.netboot \
+	  ${PREFIX}/share/doc/grub
 .else
 PLIST_SUBST+=		NETBOOT="@comment "
 .endif
