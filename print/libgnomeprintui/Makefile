@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.16 2003/12/14 19:51:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/12/18 11:05:25 adam Exp $
 #
 
-DISTNAME=		libgnomeprintui-2.4.0
-CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.4/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	libgnomeprintui-2.4.2
+CATEGORIES=	print gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.4/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		jmmv@NetBSD.org
-HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
-COMMENT=		Graphical library for the GNOME2 Printing Architecture
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://www.levien.com/gnome/print-arch.html
+COMMENT=	Graphical library for the GNOME2 Printing Architecture
 
-BUILD_USES_MSGFMT=	yes
+BUILD_USES_MSGFMT=	YES
 
-GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
-USE_GMAKE=		yes
-USE_X11=		yes
-USE_LIBTOOL=		yes
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_GMAKE=		YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	ibgnomeprintui/libgnomeprintui-2.2.pc.in
