@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/17 04:57:55 sakamoto Exp $
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/tcltklib.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/tkutil.so
+@comment $NetBSD: PLIST,v 1.3 2000/07/03 07:32:22 sakamoto Exp $
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/tcltklib.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/tkutil.so
 lib/ruby/${RUBY_VERSION}/tcltk.rb
 lib/ruby/${RUBY_VERSION}/tk.rb
 lib/ruby/${RUBY_VERSION}/tkafter.rb
