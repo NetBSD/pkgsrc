@@ -1,0 +1,3 @@
+Utility to optimize JPEG files.  Provides lossless optimization
+(based on optimizing the Huffman tables) and "lossy" optimization
+based on setting maximum quality factor.
