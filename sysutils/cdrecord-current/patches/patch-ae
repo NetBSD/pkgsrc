@@ -1,7 +1,5 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/09/17 08:18:34 tron Exp $
-
---- cdda2wav/Makefile.orig	Mon Aug 30 17:07:31 1999
-+++ cdda2wav/Makefile	Fri Sep 17 09:52:39 1999
+--- cdda2wav/Makefile.orig	Tue Nov 16 00:48:52 1999
++++ cdda2wav/Makefile	Tue Nov 16 00:49:23 1999
 @@ -7,7 +7,8 @@
  
  INSDIR=		bin
@@ -12,12 +10,12 @@ $NetBSD: patch-ae,v 1.1.1.1 1999/09/17 08:18:34 tron Exp $
  CFILES=		cdda2wav.c interface.c semshm.c resample.c \
  		toc.c wav.c sun.c raw.c md5c.c setuid.c ringbuff.c \
  		sndconfig.c scsi_cmds.c aiff.c aifc.c \
-@@ -17,7 +19,7 @@
+@@ -17,7 +18,7 @@
  		config.h saveargs.h sndfile.h aiff.h aifc.h \
- 		sndconfig.h scsi_cmds.h lowlevel.h byteorder.h mycdrom.h
- #LIBS=		-lschily $(LIB_SOCKET)
--LIBS=		-lscg -lschily $(SCSILIB)
-+LIBS=		-lscg -lschily $(SCSILIB) -lossaudio
+ 		sndconfig.h scsi_cmds.h lowlevel.h byteorder.h mycdrom.h \
+ 		base64.h sha.h mmsystem.h
+-LIBS=		-lscg -lschily $(SCSILIB) $(EXTRALIB)
++LIBS=		-lscg -lschily $(SCSILIB) $(EXTRALIB) -lossaudio
  XMK_FILE=	Makefile.man
  
  LCONFIG=	local.cnf
