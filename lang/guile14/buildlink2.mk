@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/01/17 04:43:06 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/01/19 04:38:01 uebayasi Exp $
 
 .if !defined(GUILE14_BUILDLINK2_MK)
 GUILE14_BUILDLINK2_MK=	# defined
@@ -6,12 +6,6 @@ GUILE14_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=		guile14
 BUILDLINK_DEPENDS.guile14?=	guile14>=1.4nb2
 BUILDLINK_PKGSRCDIR.guile14?=	../../lang/guile14
-
-# Put only 'bin/guile' and 'bin/guile-config' at ${BUILDLINK_DIR}
-_GUILE14_BIN=		${BUILDLINK_PREFIX.guile14}/guile/1.4/bin/guile
-_GUILE14_BUILDLINK_BIN=	${BUILDLINK_DIR}/bin/guile
-_GUILE14_CONFIG=	${BUILDLINK_PREFIX.guile14}/guile/1.4/bin/guile-config
-_GUILE14_BUILDLINK_CONFIG=	${BUILDLINK_DIR}/bin/guile-config
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.guile14=guile14
 BUILDLINK_PREFIX.guile14=		${LOCALBASE}
@@ -29,14 +23,15 @@ USE_GNU_READLINE=	# defined
 .include "../../devel/readline/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	guile14-buildlink
-BUILDLINK_TARGETS+=	guile14-buildlink-config
+BUILDLINK_TARGETS+=	guile14-buildlink-bin
 
 guile14-buildlink: _BUILDLINK_USE
 
-guile14-buildlink-config:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG} "Linking executable ${_GUILE14_BUILDLINK_BIN}."
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -s ${_GUILE14_BIN} ${_GUILE14_BUILDLINK_BIN}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG} "Linking config script ${_GUILE14_BUILDLINK_CONFIG}."
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -s ${_GUILE14_CONFIG} ${_GUILE14_BUILDLINK_CONFIG}
+# Put only bin/guile, bin/guile-config, and bin/guile-snarf into
+# ${BUILDLINK_DIR}/bin.  Other files (headers/libraries) are put in
+# ${BUILDLINK_DIR}/guile/1.4/...
+guile14-buildlink-bin:
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG} "Linking Guile executables."
+	${_PKG_SILENT}${_PKG_DEBUG}${LN} -s ${BUILDLINK_PREFIX.guile14}/guile/1.4/bin/guile* ${BUILDLINK_DIR}/bin
 
 .endif	# GUILE14_BUILDLINK2_MK
