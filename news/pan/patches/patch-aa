@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2002/10/02 03:08:51 rh Exp $
+$NetBSD: patch-aa,v 1.6 2002/10/02 03:42:06 rh Exp $
 
---- configure.orig	Tue Dec  4 23:47:08 2001
+--- configure.orig	Mon Jul 15 04:21:08 2002
 +++ configure
-@@ -6387,12 +6387,12 @@
+@@ -4711,7 +4711,7 @@ fi
+ 
+ 
+ 
+-ALL_LINGUAS="ca da de el en_GB es et fi fr ga gl hu it ja ko lt no nl pl pt pt_BR ru sk sl sp sr sv tr uk zh_CN"
++ALL_LINGUAS="ca da de el en_GB es et fi fr ga gl hu it ja ko lt no nl pl pt pt_BR ru sk sl sp sr sv uk zh_CN"
+ echo "$as_me:$LINENO: checking for $CC option to accept ANSI C" >&5
+ echo $ECHO_N "checking for $CC option to accept ANSI C... $ECHO_C" >&6
+ if test "${ac_cv_prog_cc_stdc+set}" = set; then
+@@ -6689,12 +6689,12 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    CATOBJEXT=.gmo
@@ -17,7 +26,7 @@ $NetBSD: patch-aa,v 1.5 2002/10/02 03:08:51 rh Exp $
  fi
  rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
  		INSTOBJEXT=.mo
-@@ -6659,7 +6659,7 @@
+@@ -6964,7 +6964,7 @@ echo "${ECHO_T}found xgettext program is
        # We need to process the po/ directory.
        POSUB=po
      else

@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/10/02 03:08:50 rh Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/02 03:42:06 rh Exp $
 #
 
-DISTNAME=	pan-0.11.2
-PKGREVISION=	2
+DISTNAME=	pan-0.11.4
 CATEGORIES=	news gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/pan/} \
-		http://pan.rebelbase.com/download/${DISTNAME:C/pan-//}/SOURCE/
+MASTER_SITES=	http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@netbsd.org
