@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/05/15 21:09:57 jtb Exp $
+
+--- compiler/Mmakefile.orig	Mon Feb 19 14:50:26 2001
++++ compiler/Mmakefile
+@@ -40,7 +40,6 @@
+ 			-I$(TRACE_DIR) \
+ 			-I$(LIBRARY_DIR) \
+ 			-I$(RUNTIME_DIR) \
+-			-I$(BOEHM_GC_DIR) \
+ 			-I$(BOEHM_GC_DIR)/include \
+ 		"
+ SMC	=	$(MC) --search-directory $(BROWSER_DIR)
+@@ -69,7 +68,7 @@
+ 				echo $(BOEHM_GC_DIR)/libpar_gc_prof.$A ;; \
+ 			*.par*.gc*)	echo $(BOEHM_GC_DIR)/libpar_gc.$A ;; \
+ 			*.gc*.prof*)	echo $(BOEHM_GC_DIR)/libgc_prof.$A ;; \
+-			*.gc*)		echo $(BOEHM_GC_DIR)/libgc.$A ;; \
++			*.gc*)		echo -L$(BOEHM_GC_DIR)/lib -lgc ;; \
+ 		    esac \
+ 		` \
+ 		$(GCC_BACKEND_LIBS) \

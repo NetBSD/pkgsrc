@@ -1,0 +1,24 @@
+$NetBSD: patch-ak,v 1.1.1.1 2001/05/15 21:09:57 jtb Exp $
+
+--- scripts/Mmake.vars.in.orig	Mon May 14 23:40:32 2001
++++ scripts/Mmake.vars.in
+@@ -507,13 +512,13 @@
+ INSTALL_LIBDIR		= $(INSTALL_PREFIX)/lib/mercury
+ FINAL_INSTALL_LIBDIR	= $(FINAL_INSTALL_PREFIX)/lib/mercury
+ INSTALL_INFO_DIR	= $(INSTALL_PREFIX)/info
+-INSTALL_DVI_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_TEXT_DIR	= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_PS_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
++INSTALL_DVI_DIR		= $(INSTALL_PREFIX)/share/doc/mercury
++INSTALL_TEXT_DIR	= $(INSTALL_PREFIX)/share/doc/mercury
++INSTALL_PS_DIR		= $(INSTALL_PREFIX)/share/doc/mercury
+ INSTALL_MAN_DIR		= $(INSTALL_PREFIX)/man
+-INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/lib/mercury/html
+-INSTALL_MDB_DOC_DIR	= $(INSTALL_PREFIX)/lib/mercury/mdb
+-INSTALL_ELISP_DIR	= $(INSTALL_PREFIX)/lib/mercury/elisp
++INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/share/doc/html/mercury
++INSTALL_MDB_DOC_DIR	= $(INSTALL_PREFIX)/share/doc/mercury/mdb
++INSTALL_ELISP_DIR	= $(INSTALL_PREFIX)/share/examples/mercury/elisp
+ 
+ # You should not need to override anything below here
+ 

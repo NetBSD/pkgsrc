@@ -1,0 +1,134 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/05/15 21:09:56 jtb Exp $
+
+--- Mmakefile.orig	Mon May 14 17:50:21 2001
++++ Mmakefile
+@@ -25,7 +25,6 @@
+ SUBDIRS = \
+ 		scripts \
+ 		util \
+-		boehm_gc \
+ 		runtime \
+ 		library \
+ 		trace \
+@@ -116,33 +115,28 @@
+ scripts:
+ 	cd scripts && $(SUBDIR_MMAKE)
+ 
+-.PHONY: boehm_gc
+-boehm_gc: scripts
+-	gc_grade=`scripts/ml --grade $(GRADE) --print-gc-grade`; \
+-	cd boehm_gc && $(SUBDIR_MMAKE) GC_GRADE=$$gc_grade
+-
+ .PHONY: runtime
+-runtime: scripts boehm_gc
++runtime: scripts
+ 	cd runtime && $(SUBDIR_MMAKE)
+ 
+ .PHONY: library
+-library: dep_library scripts util boehm_gc runtime
++library: dep_library scripts util runtime
+ 	cd library && $(SUBDIR_MMAKE)
+ 
+ .PHONY: browser
+-browser: dep_browser scripts util boehm_gc runtime library
++browser: dep_browser scripts util runtime library
+ 	cd browser && $(SUBDIR_MMAKE)
+ 
+ .PHONY: runtime
+-trace: scripts boehm_gc runtime library browser
++trace: scripts runtime library browser
+ 	cd trace && $(SUBDIR_MMAKE)
+ 
+ .PHONY: compiler
+-compiler: dep_compiler scripts util boehm_gc runtime library browser trace
++compiler: dep_compiler scripts util runtime library browser trace
+ 	cd compiler && $(SUBDIR_MMAKE)
+ 
+ .PHONY: libmmc
+-libmmc: dep_compiler scripts util boehm_gc runtime library browser trace
++libmmc: dep_compiler scripts util runtime library browser trace
+ 	cd compiler && $(SUBDIR_MMAKE) libmmc
+ 
+ .PHONY: doc
+@@ -150,7 +144,7 @@
+ 	cd doc && $(SUBDIR_MMAKE)
+ 
+ .PHONY: profiler
+-profiler: dep_profiler scripts util boehm_gc runtime library browser trace
++profiler: dep_profiler scripts util runtime library browser trace
+ 	cd profiler && $(SUBDIR_MMAKE)
+ 
+ #-----------------------------------------------------------------------------#
+@@ -230,7 +224,7 @@
+ 	cd doc && mmake distclean
+ 	-rm -f errs errs2 update.log
+ 	-rm -f config.status config.cache config.log configure.log a.out
+-	-rm -f runtime/mercury_conf.h boehm_gc/mercury_boehm_gc_conf.h
++	-rm -f runtime/mercury_conf.h
+ 	-rm -f Mmake.common
+ 	chmod -R a+r *
+ 	# Package up the mercury directory with some subdirectories
+@@ -295,7 +289,7 @@
+ 
+ .PHONY: install_main
+ install_main: all \
+-		install_scripts install_util install_runtime install_boehm_gc \
++		install_scripts install_util install_runtime \
+   		install_library install_browser install_trace \
+ 		install_compiler install_profiler install_doc 
+  
+@@ -315,11 +309,6 @@
+ install_trace: trace
+ 	cd trace && $(SUBDIR_MMAKE) install
+ 
+-.PHONY: install_boehm_gc
+-install_boehm_gc: boehm_gc
+-	gc_grade=`scripts/ml --grade $(GRADE) --print-gc-grade`; \
+-	cd boehm_gc && $(SUBDIR_MMAKE) install GC_GRADE=$$gc_grade
+-
+ .PHONY: install_library
+ install_library: dep_library library
+ 	cd library && $(SUBDIR_MMAKE) install
+@@ -342,8 +331,6 @@
+ 
+ .PHONY: install_grades
+ install_grades: scripts
+-	cd boehm_gc && rm -rf tmp_dir && mkdir tmp_dir && \
+-		{ mv -f *.$O *.pic_o *.$A *.so tmp_dir || true; }
+ 	cd runtime && rm -rf tmp_dir && mkdir tmp_dir && \
+ 		{ mv -f *.$O *.pic_o *.$A *.so tmp_dir || true; }
+ 	cd library && rm -rf tmp_dir && mkdir tmp_dir && \
+@@ -366,9 +353,6 @@
+ 	for grade in x $(LIBGRADES); do \
+ 	    if [ "$$grade" != "x" ]; then \
+ 	    	gc_grade=`scripts/ml --grade $$grade --print-gc-grade`; \
+-	        ( cd boehm_gc && \
+-		  $(SUBDIR_MMAKE) MC=mmc GRADE=$$grade GC_GRADE=$$gc_grade \
+-		  	install_lib ) && \
+ 		( cd runtime && \
+ 		  $(SUBDIR_MMAKE) MC=mmc GRADE=$$grade install_lib ) && \
+ 		( cd library && \
+@@ -380,7 +364,6 @@
+ 		  $(SUBDIR_MMAKE) MC=mmc GRADE=$$grade install_library ) && \
+ 		( cd trace && \
+ 		  $(SUBDIR_MMAKE) MC=mmc GRADE=$$grade install_lib ) && \
+-		( cd boehm_gc && rm -f *.$O *.pic_o *.$A *.so ) && \
+ 		( cd runtime && rm -f *.$O *.pic_o *.$A *.so ) && \
+ 		( cd library && rm -f *.dep *.h *.c *.$O *.pic_o *.$A *.so \
+ 				Mercury/cs/*.c Mercury/os/*.$O ) && \
+@@ -391,7 +374,6 @@
+ 		|| { scripts/mercury_cleanup_install; exit 1; }; \
+ 	    fi; \
+ 	done
+-	cd boehm_gc && { mv tmp_dir/* . ; rmdir tmp_dir; true; }
+ 	cd runtime  && { mv tmp_dir/* . ; rmdir tmp_dir; true; }
+ 	cd library  && { [ -d Mercury/cs ] && mv tmp_dir/*.c Mercury/cs; \
+ 			 [ -d Mercury/os ] && mv tmp_dir/*.$O Mercury/os; \
+@@ -456,7 +438,6 @@
+ 	touch profiler/*.dep
+ 	touch doc/*.texi configure
+ 	sleep 1
+-	touch boehm_gc/*.c
+ 	touch runtime/*.c
+ 	touch library/*.c
+ 	touch browser/*.c
