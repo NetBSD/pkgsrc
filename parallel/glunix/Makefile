@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/01/10 01:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/02/19 01:30:43 wiz Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -43,14 +43,6 @@ pre-configure:
 	if [ "$$addgroup" != "--exists--" ]; then			\
 		${ECHO} "Adding group $$addgroup";			\
 		${ECHO} "$$addgroup" >> /etc/group;			\
-	fi
-
-# On arm32, with UVM, pmap.h contains a C++ keyword. Workaround this.
-pre-build:
-	@if [ ${MACHINE} = "arm32" -a ! -z "${UVM}" ]; then		\
-		${MKDIR} ${WRKSRC}/glunix/include/machine;		\
-		${SED} -e 's|virtual|virt|' /usr/include/machine/pmap.h \
-			> ${WRKSRC}/glunix/include/machine/pmap.h; 	\
 	fi
 
 pre-install:
