@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/03/17 13:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/03 21:13:31 wiz Exp $
 #
 
-DISTNAME=	rp8codecs${RP_ARCH}-20040626
+DISTNAME=	rp8codecs${RP_ARCH}-20050115
 PKGNAME=	realplayer-codecs-8.20050115
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://mplayerhq.hu/MPlayer/releases/codecs/
@@ -17,6 +17,9 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc *-*-alpha
 
 .if ${MACHINE_ARCH} == "i386"
 RP_ARCH=
+# The distfile has not been updated.
+DISTFILES=	rp8codecs-20040626.tar.bz2
+WRKSRC=		${WRKDIR}/rp8codecs-20040626
 .elif ${MACHINE_ARCH} == "powerpc"
 RP_ARCH=	-ppc
 .elif ${MACHINE_ARCH} == "alpha"
