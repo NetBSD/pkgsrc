@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.1 2004/08/21 15:39:02 markd Exp $
+$NetBSD: patch-ag,v 1.2 2005/03/23 22:38:45 markd Exp $
 
---- languages/ada/Makefile.in.orig	2004-08-21 16:21:34.000000000 +1200
+--- languages/ada/Makefile.in.orig	2005-03-05 01:47:59.000000000 +1300
 +++ languages/ada/Makefile.in
-@@ -427,7 +427,7 @@ KDE_CXXFLAGS = $(USE_EXCEPTIONS)
- INCLUDES = -I$(top_srcdir)/lib/antlr -I$(top_srcdir)/lib/interfaces -I$(top_srcdir)/lib/external_interfaces -I$(top_srcdir)/lib/util $(all_includes)
+@@ -439,7 +439,7 @@ INCLUDES = -I$(top_srcdir)/lib/antlr -I$
+ 
  SUBDIRS = app_templates file_templates doc
  kde_module_LTLIBRARIES = libkdevadasupport.la
 -libkdevadasupport_la_LDFLAGS = $(LEXLIB) $(all_libraries) $(KDE_PLUGIN)
