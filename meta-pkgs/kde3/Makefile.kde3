@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.17 2004/08/21 18:56:52 tron Exp $
+# $NetBSD: Makefile.kde3,v 1.18 2004/08/21 19:04:10 tron Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -18,7 +18,6 @@ MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
 		ftp://download.tw.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
 		ftp://www.t.ring.gr.jp/pub/X/kde/stable/${_KDE_VERSION}/src/ \
 		http://www.t.ring.gr.jp/archives/X/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
 		ftp://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/ \
 		http://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/
