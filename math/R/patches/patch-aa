@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2001/07/23 13:14:44 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2002/03/01 10:46:53 markd Exp $
 
---- configure.in.orig	Sun Jun 17 12:41:20 2001
+--- configure.in.orig	Fri Dec 14 04:16:03 2001
 +++ configure.in
-@@ -380,9 +380,9 @@
+@@ -426,9 +426,9 @@
  if ${use_libmoto}; then
    AC_CHECK_LIB(moto, sin)
  fi
@@ -14,4 +14,12 @@ $NetBSD: patch-aa,v 1.6 2001/07/23 13:14:44 jlam Exp $
 +    AC_CHECK_LIB(ncurses, main)
  ))
  AC_CHECK_LIB(dl, dlopen)
- AC_CHECK_LIB(z, main)
+ 
+@@ -776,6 +776,7 @@
+     main_ldflags="-export-dynamic"
+     ;;
+   netbsd*)
++    fpicflags="-fPIC"
+     if ${CPP} - -dM < /dev/null | grep -q __ELF__; then
+       main_ldflags="-export-dynamic"
+       shlib_ldflags="-shared"
