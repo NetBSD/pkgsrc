@@ -3,7 +3,7 @@
 # Date created:		11 October 1997
 # Whom:			hubertf
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 04:42:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/25 00:48:02 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-pop --with-x --with-x-toolkit=lucid
 STRIP=
 MAN1=		emacs.1 etags.1 ctags.1
+OPSYS!=         uname -s
 
 post-install:
 .for file in emacs-20.2 emacsclient etags ctags b2m
