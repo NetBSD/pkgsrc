@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/11/29 17:24:49 taca Exp $
+
+--- README.orig	2002-11-04 23:21:08.000000000 +0900
++++ README
+@@ -103,7 +103,7 @@
+     operations.
+ 
+   2.3 Settings of aica.cnf
+-      After installation of the AiCA, "PREFIX/lib/aica.cnf" file will be
++      After installation of the AiCA, "PREFIX/etc/AiCA/aica.cnf" file will be
+     created for command configuration. ("PREFIX" means install directory)
+ 
+   2.3.1 Settings of "default CA"

@@ -1,0 +1,8 @@
+#
+# $NetBSD
+
+case ${STAGE} in
+POST-INSTALL)
+	${PREFIX}/bin/aistore -new
+	;;
+esac
