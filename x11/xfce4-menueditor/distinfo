@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/02/04 11:51:57 martti Exp $
+$NetBSD: distinfo,v 1.3 2004/04/02 10:07:26 martti Exp $
 
-SHA1 (xfce4-menueditor-1.0rc3.tar.bz2) = 26518275618fd3abbc5ef76a26d5a66a900a5ab6
-Size (xfce4-menueditor-1.0rc3.tar.bz2) = 170156 bytes
-SHA1 (patch-aa) = d45f6ac9e129953f69d0d89ee1c483cc39839b4d
+SHA1 (xfce4-menueditor-1.05.tar.bz2) = 4e1d7380a2148bb61bcb51e18026c4822e858bf1
+Size (xfce4-menueditor-1.05.tar.bz2) = 222093 bytes
