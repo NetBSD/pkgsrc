@@ -1,0 +1,11 @@
+--- tape-src/Makefile.in.old	Tue Feb 23 11:45:50 1999
++++ tape-src/Makefile.in	Tue Feb 23 11:45:21 1999
+@@ -162,7 +162,7 @@
+ 
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(AMANDA_CFLAGS)
+ 
+-lib_LTLIBRARIES = 	@BUILD_TAPE_LTLIB@
++lib_LTLIBRARIES = 	libamtape.la
+ EXTRA_LTLIBRARIES = 	libamtape.la
+ 
+ noinst_LIBRARIES = 	@BUILD_TAPE_LIB@

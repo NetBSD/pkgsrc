@@ -1,0 +1,57 @@
+--- changer-src/chg-scsi.c.orig	Sat Sep 19 03:55:13 1998
++++ changer-src/chg-scsi.c	Mon Feb 22 20:00:39 1999
+@@ -527,6 +527,15 @@
+ {
+   FILE *out=NULL;
+   int cnt=0;
++
++  /* if we have a long timeout, sleep a long time before access.
++   * This is avoid lots of error messages for drives which need a lot of time
++   */
++  if ((timeout /2) > 1) {
++	timeout = timeout / 2;
++	sleep(timeout);
++  }
++	
+   while ((cnt<timeout) && (NULL==(out=fopen(tapedev,"w+")))){
+     cnt++;
+     sleep(1);
+@@ -634,7 +643,10 @@
+ 
+     /* Get the configuration parameters */
+     if (tape_device[0] >= '0' && tape_device[0] <= '9' && tape_device[1] == 0){
+-      read_config(changer_file,&chg);
++      if (read_config(changer_file,&chg) == -1) {
++	perror(changer_file);
++	exit(1);
++      }
+       confnum=atoi(tape_device);
+       use_slots    = chg.conf[confnum].end-chg.conf[confnum].start+1;
+       slot_offset  = chg.conf[confnum].start;
+@@ -717,7 +729,7 @@
+ 		    if (need_eject)
+ 		      eject_tape(tape_device);
+ 		    (void)unload(fd, drive_num, oldtarget);
+-		    if (ask_clean(tape_device,need_sleep))
++		    if (clean_slot != -1 && ask_clean(tape_device,need_sleep))
+ 			clean_tape(fd,tape_device,clean_file,drive_num,
+                                    clean_slot,maxclean,time_file);
+ 		    loaded=0;
+@@ -751,7 +763,7 @@
+ 		if (need_eject)
+ 		    eject_tape(tape_device);
+ 		(void)unload(fd, drive_num, target);
+-		if (ask_clean(tape_device,need_sleep))
++		if (clean_slot != -1 && ask_clean(tape_device,need_sleep))
+ 		    clean_tape(fd,tape_device,clean_file,drive_num,clean_slot,
+                                maxclean,time_file);
+ 	    }
+@@ -776,7 +788,7 @@
+ 		if (need_eject)
+ 		  eject_tape(tape_device);
+ 		(void)unload(fd, drive_num, target);
+-		if (ask_clean(tape_device,need_sleep))
++		if (clean_slot != -1 && ask_clean(tape_device,need_sleep))
+ 		    clean_tape(fd,tape_device,clean_file,drive_num,clean_slot,
+                                maxclean,time_file);
+ 		printf("%d %s\n", target, tape_device);
