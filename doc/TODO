@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.420 2003/03/25 23:56:25 wiz Exp $
+$NetBSD: TODO,v 1.421 2003/03/26 14:19:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -133,6 +133,7 @@ Suggested package updates
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
 	o gnucash-1.8.2
+	o gnustep-0.8.5
 	o gpa-0.6.1
 	o gperiodic-2.0.2
 	o grace-5.1.12
@@ -161,6 +162,7 @@ Suggested package updates
 	o libggi-2.0.3
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
+	o libxml-2.5.5
 	o lilypond-1.6.8
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
@@ -225,6 +227,7 @@ Suggested package updates
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o soappy-0.9.8 [pkg/20787]
+	o source-highlight-1.7
 	o spamassassin-2.52 [heinz]
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
