@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7687 2004/11/04 10:16:47 adam Exp $
+$NetBSD: CHANGES,v 1.7688 2004/11/04 10:37:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5061,4 +5061,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Bit-Vector to 6.4 [adrianp 2004-11-03]
 	Updated p5-Date-Calc to 5.4 [adrianp 2004-11-03]
 	Added RTFM-2.0.4 [cube 2004-11-03]
-	Updated unrar to 3.4.3 [adam 2004-11-03]
+	Updated unrar to 3.4.3 [adam 2004-11-04]
+	Updated libsigc++2 to 2.0.6 [adam 2004-11-04]
