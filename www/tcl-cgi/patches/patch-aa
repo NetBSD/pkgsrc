@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/09/03 14:55:20 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2002/11/20 15:57:37 bouyer Exp $
 --- cgi.tcl.in.orig	Wed Aug 30 11:07:29 2000
 +++ cgi.tcl.in	Wed Aug 30 11:08:26 2000
 @@ -2040,7 +2040,7 @@
@@ -7,7 +7,8 @@ $NetBSD: patch-aa,v 1.3 2000/09/03 14:55:20 wiz Exp $
  
 -    if {[file executable /usr/lib/sendmail]} {
 +    if {[file executable /usr/sbin/sendmail]} {
- 	exec /usr/lib/sendmail -t -odb < $_cgi(mailfile)
+-	exec /usr/lib/sendmail -t -odb < $_cgi(mailfile)
++	exec /usr/sbin/sendmail -t -odb < $_cgi(mailfile)
  	# Explanation:
  	# -t   means: pick up recipient from body
 @@ -2056,6 +2056,9 @@
