@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/30 21:40:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/01 12:11:31 frueauf Exp $
 bin/genlab
 bin/imaze
 bin/imazesrv
 bin/ninja
+lib/X11/app-defaults/IMaze
 man/man6/genlab.6
 man/man6/imaze.6
 man/man6/imazesrv.6
@@ -14,7 +15,6 @@ share/imaze/sound/miss.au
 share/imaze/sound/pause.au
 share/imaze/sound/shoot.au
 share/imaze/sound/title.au
-lib/X11/app-defaults/IMaze
 share/imaze/labs/10x10.lab
 share/imaze/labs/15x15.lab
 share/imaze/labs/25x25.lab
@@ -30,4 +30,3 @@ share/imaze/labs/october.lab
 @dirrm share/imaze/labs
 @dirrm share/imaze/sound
 @dirrm share/imaze
-
