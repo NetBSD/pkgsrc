@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/08/10 09:18:02 agc Exp $
+$NetBSD: patch-aa,v 1.5 1999/08/13 14:04:16 agc Exp $
 
---- Makefile.in	Mon Jun 23 17:05:42 1997
-+++ Makefile.in	Mon Nov  3 00:06:51 1997
-@@ -20,7 +20,6 @@
+--- Makefile.in.orig	Wed Aug 11 21:19:51 1999
++++ Makefile.in	Fri Aug 13 14:56:14 1999
+@@ -21,7 +21,6 @@
  ETCSCREENRC = `sed < config.h -n -e '/define ETCSCREENRC/s/^.*"\([^"]*\)"/\1/p'`
  
  CC = @CC@
@@ -10,3 +10,12 @@ $NetBSD: patch-aa,v 1.4 1999/08/10 09:18:02 agc Exp $
  LDFLAGS =
  LIBS = @LIBS@
  
+@@ -84,7 +83,7 @@
+ install: installdirs install_bin
+ 	cd doc ; $(MAKE) install
+ 	-if [ -d /usr/lib/terminfo ]; then \
+-		PATH="$PATH:/usr/5bin" tic ${srcdir}/terminfo/screeninfo.src; \
++		PATH="$$PATH:/usr/5bin" tic ${srcdir}/terminfo/screeninfo.src; \
+ 		chmod 644 /usr/lib/terminfo/s/screen*; \
+ 	fi
+ # Better do this by hand. E.g. under RCS...
