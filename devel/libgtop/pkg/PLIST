@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/07 13:11:35 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/18 22:31:00 tron Exp $
 bin/libgtop_daemon
 bin/libgtop_server
 bin/libgtop-config
@@ -42,7 +42,6 @@ include/glibtop_server.h
 include/glibtop_machine.h
 include/glibtop_suid.h
 include/glibtop.h
-lib/locale/fr/LC_MESSAGES
 lib/locale/fr/LC_MESSAGES/libgtop.cat
 lib/libgtop_sysdeps.so.0.0
 lib/libgtop_sysdeps.a
