@@ -1,0 +1,90 @@
+--- configure.orig	Mon Apr 12 22:40:50 1999
++++ configure	Mon Apr 12 22:41:23 1999
+@@ -3487,13 +3487,13 @@
+ LDSHARED=""
+ if test "$LIB_TARGET" = "libwine.so.1.0"
+ then
+-  echo $ac_n "checking "whether we can build a Linux dll"""... $ac_c" 1>&6
+-echo "configure:3492: checking "whether we can build a Linux dll"" >&5
+-if eval "test \"`echo '$''{'ac_cv_c_dll_linux'+set}'`\" = set"; then
++  echo $ac_n "checking "whether we can build a NetBSD dll"""... $ac_c" 1>&6
++echo "configure:3492: checking "whether we can build a NetBSD dll"" >&5
++if eval "test \"`echo '$''{'ac_cv_c_dll_netbsd'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   saved_cflags=$CFLAGS
+-  CFLAGS="$CFLAGS -fPIC -shared -Wl,-soname,conftest.so.1.0"
++  CFLAGS="$CFLAGS -fPIC -Bshareable -Bforcearchive"
+   cat > conftest.$ac_ext <<EOF
+ #line 3499 "configure"
+ #include "confdefs.h"
+@@ -3504,31 +3504,31 @@
+ EOF
+ if { (eval echo configure:3506: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   rm -rf conftest*
+-  ac_cv_c_dll_linux="yes"
++  ac_cv_c_dll_netbsd="yes"
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+-  ac_cv_c_dll_linux="no"
++  ac_cv_c_dll_netbsd="no"
+ fi
+ rm -f conftest*
+   CFLAGS=$saved_cflags
+   
+ fi
+ 
+-echo "$ac_t""$ac_cv_c_dll_linux" 1>&6
+-  if test "$ac_cv_c_dll_linux" = "yes"
++echo "$ac_t""$ac_cv_c_dll_netbsd" 1>&6
++  if test "$ac_cv_c_dll_netbsd" = "yes"
+   then
+     DLLFLAGS="-fPIC"
+-    LDSHARED="\$(CC) -shared -Wl,-soname,libwine.so"
++    LDSHARED="ld -Bshareable -Bforcearchive"
+   else
+-    echo $ac_n "checking "whether we can build a NetBSD dll"""... $ac_c" 1>&6
+-echo "configure:3527: checking "whether we can build a NetBSD dll"" >&5
+-if eval "test \"`echo '$''{'ac_cv_c_dll_netbsd'+set}'`\" = set"; then
++    echo $ac_n "checking "whether we can build a Linux dll"""... $ac_c" 1>&6
++echo "configure:3527: checking "whether we can build a Linux dll"" >&5
++if eval "test \"`echo '$''{'ac_cv_c_dll_linux'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   saved_cflags=$CFLAGS
+-    CFLAGS="$CFLAGS -fPIC -Bshareable -Bforcearchive"
++    CFLAGS="$CFLAGS -fPIC -shared -Wl,-soname,conftest.so.1.0"
+     cat > conftest.$ac_ext <<EOF
+ #line 3534 "configure"
+ #include "confdefs.h"
+@@ -3539,23 +3539,23 @@
+ EOF
+ if { (eval echo configure:3541: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   rm -rf conftest*
+-  ac_cv_c_dll_netbsd="yes"
++  ac_cv_c_dll_linux="yes"
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+-  ac_cv_c_dll_netbsd="no"
++  ac_cv_c_dll_linux="no"
+ fi
+ rm -f conftest*
+     CFLAGS=$saved_cflags
+     
+ fi
+ 
+-echo "$ac_t""$ac_cv_c_dll_netbsd" 1>&6
+-    if test "$ac_cv_c_dll_netbsd" = "yes"
++echo "$ac_t""$ac_cv_c_dll_linux" 1>&6
++    if test "$ac_cv_c_dll_linux" = "yes"
+     then
+       DLLFLAGS="-fPIC"
+-      LDSHARED="ld -Bshareable -Bforcearchive"
++      LDSHARED="\$(CC) -shared -Wl,-soname,libwine.so"
+     fi
+   fi
+   if test "$ac_cv_c_dll_linux" = "no" -a "$ac_cv_c_dll_netbsd" = "no"
