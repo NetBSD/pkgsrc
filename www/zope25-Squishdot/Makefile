@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2003/05/02 11:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/05 19:05:23 jmmv Exp $
 #
 
 DISTNAME=	Squishdot-1-5-0
-PKGREVISION=	1
 PKGNAME=	zope25-Squishdot-1.5.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://squishdot.org/Download/
 

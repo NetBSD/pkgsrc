@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/05/05 16:27:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/05 19:05:11 jmmv Exp $
 #
 
 DISTNAME=		iso-pern_src-0_2_6
-PKGREVISION=		1
 PKGNAME=		iso-pernangband-0.2.6
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/iso-pern_src/src
 CATEGORIES=		games
 MASTER_SITES=		http://www.simugraph.com/simutrans/data/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/05/02 13:07:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/05 19:05:09 jmmv Exp $
 #
 
 DISTNAME=	ipal-20001210
-PKGREVISION=	1
 PKGNAME=	ipal-current-20001210
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/ipal/snapshots/
 
