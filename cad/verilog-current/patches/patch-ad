@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/03/07 16:09:16 dmcmahill Exp $
+
+don't use -O2 on parse.cc because of compiler bugs on sparc and pmax
+(maybe others).
+
+--- Makefile.in.orig	Sat Feb  5 01:40:35 2000
++++ Makefile.in	Sun Feb 13 11:13:10 2000
+@@ -111,4 +111,5 @@
+ 
+ parse.o dep/parse.d: parse.cc
++	$(CXX) -c -I. $(CPPFLAGS)  $<
+ 
+ parse.h parse.cc: $(srcdir)/parse.y
