@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2737 2004/12/21 20:16:07 xtraeme Exp $
+$NetBSD: TODO,v 1.2738 2004/12/22 21:11:19 skrll Exp $
 
 Suggested new packages
 ======================
@@ -1075,7 +1075,7 @@ Suggested package updates
 	o socat-1.4.1.0
 	o sox-12.17.7
 	o spamassassin-3.0.2
-	o speedtouch-1.2beta3
+	o speedtouch-1.3.1 [skrll]
 	o spim-7.0
 	o splint-3.1.1
 	o spruce-0.6.5
