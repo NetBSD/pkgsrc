@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2001/10/15 17:09:44 tron Exp $
+$NetBSD: patch-ad,v 1.2 2004/04/01 00:52:39 minskim Exp $
 
---- item_tcl.C.orig	Thu Aug  1 21:25:10 1996
-+++ item_tcl.C	Mon Oct 15 19:07:06 2001
+--- item_tcl.C.orig	1996-08-01 14:25:10.000000000 -0500
++++ item_tcl.C
 @@ -14,6 +14,9 @@
  #include "item_tcl.h"
  #include "dispatch.h"
@@ -12,7 +12,135 @@ $NetBSD: patch-ad,v 1.1 2001/10/15 17:09:44 tron Exp $
  /*
   * Item* -> Item_Tcl* map.
   */
-@@ -232,14 +235,14 @@
+@@ -63,47 +66,47 @@ Item_Tcl* Item_Tcl::find(Item* item) {
+ /*
+  * Forward declaration of handler procedures.
+  */
+-static int item_length	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_startt	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_clone	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_is	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_delete	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_cal	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_text	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_uid	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_early	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_owner	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_owned	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_own	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_hilite	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_todo	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_is_done	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_done	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_alarms	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_option	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_doption	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_empty	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_repeat	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_first	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_type	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_desc	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_cont	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_next	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_range	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_date	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_start	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_finish	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_ondel	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_dayr	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_wdays	(ClientData, Tcl_Interp*, int, char*[]);
+-
+-static int item_monthr		(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_mday		(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_mlday		(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_mworkday	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_mlworkday	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_mweekday	(ClientData, Tcl_Interp*, int, char*[]);
+-static int item_mlweekday	(ClientData, Tcl_Interp*, int, char*[]);
++static int item_length	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_startt	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_clone	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_is	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_delete	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_cal	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_text	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_uid	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_early	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_owner	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_owned	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_own	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_hilite	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_todo	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_is_done	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_done	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_alarms	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_option	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_doption	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_empty	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_repeat	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_first	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_type	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_desc	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_cont	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_next	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_range	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_date	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_start	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_finish	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_ondel	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_dayr	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_wdays	(ClientData, Tcl_Interp*, int, const char*[]);
++
++static int item_monthr		(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_mday		(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_mlday		(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_mworkday	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_mlworkday	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_mweekday	(ClientData, Tcl_Interp*, int, const char*[]);
++static int item_mlweekday	(ClientData, Tcl_Interp*, int, const char*[]);
+ 
+ static Dispatch_Entry item_dispatch[] = {
+     { "delete",			0, 0, item_delete	},
+@@ -156,7 +159,7 @@ static Dispatch_Entry item_dispatch[] = 
+     { 0,			0, 0, 0			}
+ };
+ 
+-int Item_Tcl::method(int argc, char* argv[]) {
++int Item_Tcl::method(int argc, const char* argv[]) {
+     return Dispatch(item_dispatch, (ClientData)this, tcl(), argc, argv);
+ }
+ 
+@@ -164,7 +167,7 @@ int Item_Tcl::method(int argc, char* arg
+  * Handler procedures.
+  */
+ 
+-static int item_length(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_length(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     Appointment* appt = item->value()->AsAppointment();
+@@ -193,7 +196,7 @@ static int item_length(ClientData c, Tcl
+     TCL_Error(tcl, "unknown command");
+ }
+ 
+-static int item_startt(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_startt(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     Appointment* appt = item->value()->AsAppointment();
+@@ -222,27 +225,27 @@ static int item_startt(ClientData c, Tcl
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_clone(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_clone(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     Item_Tcl* clone = new Item_Tcl(tcl, item->value()->Clone(), 0);
+     TCL_Return(tcl, (char*) clone->handle());
+ }
+ 
+-static int item_is(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_is(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
      Item_Tcl* item = (Item_Tcl*) c;
  
      if ((strcmp(argv[0], "note") == 0) && (item->value()->AsNotice() != 0)) {
@@ -29,17 +157,84 @@ $NetBSD: patch-ad,v 1.1 2001/10/15 17:09:44 tron Exp $
 +    TCL_Return(tcl, Zero);
  }
  
- static int item_delete(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
-@@ -329,7 +332,7 @@
+-static int item_delete(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_delete(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = ((Item_Tcl*) c);
+     if (! check_permission(tcl, item)) return TCL_ERROR;
  
- static int item_owned(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
+@@ -262,7 +265,7 @@ static int item_delete(ClientData c, Tcl
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_cal(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_cal(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     CalFile* cal = item->calendar();
+@@ -272,7 +275,7 @@ static int item_cal(ClientData c, Tcl_In
+     TCL_Return(tcl, (char*)(cal->GetName()));
+ }
+ 
+-static int item_text(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_text(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     if (argc == 0) {
+@@ -286,12 +289,12 @@ static int item_text(ClientData c, Tcl_I
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_uid(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_uid(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     TCL_Return(tcl, (char*) item->value()->GetUid());
+ }
+ 
+-static int item_early(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_early(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     if (argc == 0) {
+@@ -313,7 +316,7 @@ static int item_early(ClientData c, Tcl_
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_owner(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_owner(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     if (argc == 0) {
+@@ -327,12 +330,12 @@ static int item_owner(ClientData c, Tcl_
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_owned(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_owned(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
      Item_Tcl* item = (Item_Tcl*) c;
 -    TCL_Return(tcl, (item->value()->IsMine() ? "1" : "0"));
 +    TCL_Return(tcl, (item->value()->IsMine() ? One : Zero));
  }
  
- static int item_own(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
-@@ -360,7 +363,7 @@
+-static int item_own(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_own(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     if (! check_permission(tcl, item)) return TCL_ERROR;
+     item->value()->MakeOwner();
+@@ -341,7 +344,7 @@ static int item_own(ClientData c, Tcl_In
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_hilite(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_hilite(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     if (argc == 0) {
+@@ -356,11 +359,11 @@ static int item_hilite(ClientData c, Tcl
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_todo(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_todo(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
      Item_Tcl* item = (Item_Tcl*) c;
  
      if (argc == 0) {
@@ -48,31 +243,108 @@ $NetBSD: patch-ad,v 1.1 2001/10/15 17:09:44 tron Exp $
      }
  
      int todo;
-@@ -376,7 +379,7 @@
+@@ -374,12 +377,12 @@ static int item_todo(ClientData c, Tcl_I
+     TCL_Return(tcl, "");
+ }
  
- static int item_is_done(ClientData c, Tcl_Interp* tcl,int argc,char* argv[]) {
+-static int item_is_done(ClientData c, Tcl_Interp* tcl,int argc,char* argv[]) {
++static int item_is_done(ClientData c, Tcl_Interp* tcl,int argc, const char* argv[]) {
      Item_Tcl* item = (Item_Tcl*) c;
 -    TCL_Return(tcl, (char*)(item->value()->IsDone() ? "1" : "0"));
 +    TCL_Return(tcl, (char*)(item->value()->IsDone() ? One : Zero));
  }
  
- static int item_done(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
-@@ -492,12 +495,12 @@
+-static int item_done(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_done(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     if (! check_permission(tcl, item)) return TCL_ERROR;
  
- static int item_empty(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
+@@ -394,7 +397,7 @@ static int item_done(ClientData c, Tcl_I
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_alarms(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_alarms(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     Appointment* appt = item->value()->AsAppointment();
+@@ -431,7 +434,7 @@ static int item_alarms(ClientData c, Tcl
+     }
+ 
+     int count;
+-    char** list;
++    const char** list;
+     if (Tcl_SplitList(tcl, argv[0], &count, &list) != TCL_OK) {
+ 	TCL_Error(tcl, "invalid alarm list");
+     }
+@@ -460,7 +463,7 @@ static int item_alarms(ClientData c, Tcl
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_option(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_option(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     if (argc == 1) {
+@@ -476,7 +479,7 @@ static int item_option(ClientData c, Tcl
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_doption(ClientData c, Tcl_Interp* tcl, int argc,char* argv[]) {
++static int item_doption(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     if (! check_permission(tcl, item)) return TCL_ERROR;
+@@ -490,17 +493,17 @@ static int item_doption(ClientData c, Tc
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_empty(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_empty(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
      Item_Tcl* item = (Item_Tcl*) c;
 -    TCL_Return(tcl, (item->value()->empty()?"1":"0"));
 +    TCL_Return(tcl, (item->value()->empty()?One:Zero));
  }
  
- static int item_repeat(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
+-static int item_repeat(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_repeat(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
      Item_Tcl* item = (Item_Tcl*) c;
 -    TCL_Return(tcl,(item->value()->repeats()?"1":"0"));
 +    TCL_Return(tcl,(item->value()->repeats()?One:Zero));
  }
  
- static int item_first(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
-@@ -576,7 +579,7 @@
+-static int item_first(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_first(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     Date d;
+     if (! item->value()->first(d)) {
+@@ -513,7 +516,7 @@ static int item_first(ClientData c, Tcl_
+     return TCL_OK;
+ }
+ 
+-static int item_type(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_type(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     char* result;
+     switch (item->value()->repeat_type()) {
+@@ -560,7 +563,7 @@ static int item_type(ClientData c, Tcl_I
+     TCL_Return(tcl, result);
+ }
+ 
+-static int item_desc(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_desc(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     charArray buffer;
+     item->value()->describe(&buffer);
+@@ -569,17 +572,17 @@ static int item_desc(ClientData c, Tcl_I
+     return TCL_OK;
+ }
+ 
+-static int item_cont(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_cont(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     int dateDays;
+     if (Tcl_GetInt(tcl, argv[0], &dateDays) != TCL_OK) {
  	TCL_Error(tcl, "invalid date");
      }
      Date date(dateDays);
@@ -80,8 +352,21 @@ $NetBSD: patch-ad,v 1.1 2001/10/15 17:09:44 tron Exp $
 +    TCL_Return(tcl, (item->value()->contains(date)?One:Zero));
  }
  
- static int item_next(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
-@@ -609,10 +612,10 @@
+-static int item_next(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_next(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     int dateDays;
+     if (Tcl_GetInt(tcl, argv[0], &dateDays) != TCL_OK) {
+@@ -597,7 +600,7 @@ static int item_next(ClientData c, Tcl_I
+     return TCL_OK;
+ }
+ 
+-static int item_range(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_range(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     Date s, f;
+@@ -609,14 +612,14 @@ static int item_range(ClientData c, Tcl_
  	sprintf(buffer, "%d", f.EpochDays());
  	if (Tcl_SetVar(tcl, argv[1], buffer, 0) == NULL)
  	    TCL_Error(tcl, "could not set range finish variable");
@@ -94,12 +379,127 @@ $NetBSD: patch-ad,v 1.1 2001/10/15 17:09:44 tron Exp $
      }
  }
  
-@@ -719,7 +722,7 @@
+-static int item_date(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_date(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     int dateDays;
+     if (Tcl_GetInt(tcl, argv[0], &dateDays) != TCL_OK) {
+@@ -630,7 +633,7 @@ static int item_date(ClientData c, Tcl_I
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_start(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_start(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     int dateDays;
+     if (Tcl_GetInt(tcl, argv[0], &dateDays) != TCL_OK) {
+@@ -644,7 +647,7 @@ static int item_start(ClientData c, Tcl_
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_finish(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_finish(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     int dateDays;
+     if (Tcl_GetInt(tcl, argv[0], &dateDays) != TCL_OK) {
+@@ -658,7 +661,7 @@ static int item_finish(ClientData c, Tcl
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_ondel(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_ondel(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+     int dateDays;
+     if (Tcl_GetInt(tcl, argv[0], &dateDays) != TCL_OK) {
+@@ -672,7 +675,7 @@ static int item_ondel(ClientData c, Tcl_
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_dayr(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_dayr(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int interval;
+@@ -693,7 +696,7 @@ static int item_dayr(ClientData c, Tcl_I
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_monthr(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_monthr(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int interval;
+@@ -719,8 +722,8 @@ static int item_monthr(ClientData c, Tcl
  // effects	Parses "n", "anchor" and "interval" from the command
  //		arguments.  Returns TCL_OK iff successful.  If "anchor"
  //		and "interval" are not specified in the command arguments,
 -//		then "anchor" is set to today and "interval" is set to "1".
+-static int parse_month_args(Tcl_Interp* tcl, int argc, char* argv[],
 +//		then "anchor" is set to today and "interval" is set to One.
- static int parse_month_args(Tcl_Interp* tcl, int argc, char* argv[],
++static int parse_month_args(Tcl_Interp* tcl, int argc, const char* argv[],
  			    int& n, Date& anchor, int& interval)
  {
+     if ((argc != 1) && (argc != 3)) TCL_Error(tcl,"wrong number of arguments");
+@@ -745,7 +748,7 @@ static int parse_month_args(Tcl_Interp* 
+     return TCL_OK;
+ }
+ 
+-static int item_mday(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_mday(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int n, interval;
+@@ -760,7 +763,7 @@ static int item_mday(ClientData c, Tcl_I
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_mlday(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_mlday(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int n, interval;
+@@ -776,7 +779,7 @@ static int item_mlday(ClientData c, Tcl_
+ }
+ 
+ static int item_mworkday(ClientData c, Tcl_Interp* tcl,
+-			 int argc, char* argv[]) {
++			 int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int n, interval;
+@@ -792,7 +795,7 @@ static int item_mworkday(ClientData c, T
+ }
+ 
+ static int item_mlworkday(ClientData c, Tcl_Interp* tcl,
+-			  int argc, char* argv[]) {
++			  int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int n, interval;
+@@ -808,7 +811,7 @@ static int item_mlworkday(ClientData c, 
+ }
+ 
+ static int item_mweekday(ClientData c, Tcl_Interp* tcl,
+-			 int argc, char* argv[]) {
++			 int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int wday;
+@@ -829,7 +832,7 @@ static int item_mweekday(ClientData c, T
+ }
+ 
+ static int item_mlweekday(ClientData c, Tcl_Interp* tcl,
+-			  int argc, char* argv[]) {
++			  int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     int wday;
+@@ -849,7 +852,7 @@ static int item_mlweekday(ClientData c, 
+     TCL_Return(tcl, "");
+ }
+ 
+-static int item_wdays(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++static int item_wdays(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Item_Tcl* item = (Item_Tcl*) c;
+ 
+     /* Collect weekdays */

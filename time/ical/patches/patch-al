@@ -1,0 +1,40 @@
+$NetBSD: patch-al,v 1.1 2004/04/01 00:52:39 minskim Exp $
+
+--- ical_tcl.C.orig	1996-02-09 21:17:37.000000000 -0600
++++ ical_tcl.C
+@@ -10,7 +10,7 @@
+  *	notice <name>
+  */
+ 
+-int Cmd_CreateNotice(ClientData, Tcl_Interp* tcl, int argc, char* argv[]) {
++int Cmd_CreateNotice(ClientData, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     if (argc != 1) {
+ 	TCL_Error(tcl, "invalid arguments to notice");
+     }
+@@ -25,7 +25,7 @@ int Cmd_CreateNotice(ClientData, Tcl_Int
+  *	appointment <name>	-- Returns <name>
+  */
+ 
+-int Cmd_CreateAppt(ClientData, Tcl_Interp* tcl, int argc, char* argv[]) {
++int Cmd_CreateAppt(ClientData, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     if (argc != 1) {
+ 	TCL_Error(tcl, "invalid arguments to appointment");
+     }
+@@ -40,7 +40,7 @@ int Cmd_CreateAppt(ClientData, Tcl_Inter
+  *	calendar <name> <filename>	-- Returns <name>
+  */
+ 
+-int Cmd_CreateCalendar(ClientData, Tcl_Interp* tcl, int argc, char* argv[]) {
++int Cmd_CreateCalendar(ClientData, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     if (argc != 3) {
+ 	TCL_Error(tcl, "invalid arguments to calendar");
+     }
+@@ -62,7 +62,7 @@ int Cmd_CreateCalendar(ClientData, Tcl_I
+  *		of the translation fails, this routine returns an
+  *		error.  Otherwise it returns the translated file name.
+  */
+-int Cmd_ExpandFileName(ClientData, Tcl_Interp* tcl, int argc, char* argv[]) {
++int Cmd_ExpandFileName(ClientData, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     if (argc != 2) {
+ 	TCL_Error(tcl, "invalid arguments to expand_file_name");
+     }
