@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.8 2000/05/20 19:34:19 jlam Exp $
+$NetBSD: patch-ad,v 1.9 2000/07/14 04:44:13 jlam Exp $
 
---- interfaces/ecpg/lib/Makefile.in.orig	Thu Mar 30 06:41:34 2000
-+++ interfaces/ecpg/lib/Makefile.in	Sat May 20 00:18:02 2000
+--- interfaces/ecpg/lib/Makefile.in.orig	Wed May 17 02:03:13 2000
++++ interfaces/ecpg/lib/Makefile.in	Mon Jul 10 22:21:20 2000
 @@ -12,7 +12,7 @@
  
  NAME= ecpg
  SO_MAJOR_VERSION= 3
--SO_MINOR_VERSION= 1.0
+-SO_MINOR_VERSION= 1.1
 +SO_MINOR_VERSION= 1
  
  SRCDIR= @top_srcdir@
