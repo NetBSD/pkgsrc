@@ -1,0 +1,15 @@
+  XRN is a Usenet News reader for the X window system.  It requires an
+NNTP server to talk to (i.e., it cannot read news from local disk
+files), and the NNTP server must support the XHDR command (most
+servers nowadays do; if yours doesn't, XRN will complain when you try
+to run it).
+
+  XRN is currently maintained by Jonathan Kamens.  Bug reports or
+comments about it should be sent to bug-xrn@kamens.brookline.ma.us.
+Please do *not* write to that address with basic questions about
+compiling the program; if you are unfamiliar with compiling X
+applications and the instructions below are not sufficient, you should
+seek help at your site.
+
+  Versions of XRN prior to 7.00 were maintained by Ellen Santovich and
+Rick Spickelmier.
