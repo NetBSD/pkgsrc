@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/02/22 10:06:45 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/02/22 15:41:55 tron Exp $
 bin/emacs-etags
 bin/emacs-ctags
 bin/emacsclient
@@ -1308,14 +1308,14 @@ share/emacs/20.2/lisp/COPYING
 @dirrm share/emacs/20.2/lisp/term
 @dirrm share/emacs/20.2/lisp
 @exec   f=%D/share/emacs/20.2/site-lisp ; [ ! -d $f ] && mkdir $f
-@unexec f=%D/share/emacs/20.2/site-lisp ; [ -d $f ] && rmdir $f
+@unexec f=%D/share/emacs/20.2/site-lisp ; [ -d $f ] && rm -rf $f
 @dirrm share/emacs/20.2/etc/e
 @dirrm share/emacs/20.2/etc
 @exec   f=%D/share/emacs/20.2/leim ; [ ! -d $f ] && mkdir $f
-@unexec f=%D/share/emacs/20.2/leim ; [ -d $f ] && rmdir $f
+@unexec f=%D/share/emacs/20.2/leim ; [ -d $f ] && rm -rf $f
 @dirrm share/emacs/20.2
 @exec   f=%D/share/emacs/site-lisp ; [ ! -d $f ] && mkdir $f
-@unexec f=%D/share/emacs/site-lisp ; [ -d $f ] && rmdir $f
+@unexec f=%D/share/emacs/site-lisp ; [ -d $f ] && rm -rf $f
 @dirrm share/emacs
 @dirrm libexec/emacs/20.2/${MACHINE_ARCH}--netbsd
 @dirrm libexec/emacs/20.2
