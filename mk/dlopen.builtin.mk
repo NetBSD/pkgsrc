@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.2 2004/11/26 08:15:25 jlam Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.3 2004/11/26 08:26:51 jlam Exp $
 
 .for _lib_ in dl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -36,7 +36,11 @@ CHECK_BUILTIN.dl?=	no
 .  if !empty(USE_BUILTIN.dl:M[yY][eE][sS])
 BUILDLINK_PREFIX.dl=	/usr
 .    if !empty(_BLNK_LIB_FOUND.dl:M[yY][eE][sS])
-BUILDLINK_LIBS.dl=	-ldl
+#
+# No need to add this to BUILDLINK_LIBS.dl since most GNU configure
+# scripts already check for -ldl themselves.
+#
+BUILDLINK_LDADD.dl=	-ldl
 .    endif
 #
 # The following platforms require pthreads to be linked into the
