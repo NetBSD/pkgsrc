@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2004/11/01 16:35:59 gavan Exp $
+# $NetBSD: Makefile,v 1.63 2004/11/08 12:50:18 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -63,20 +64,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
 PKG_SUPPORTED_OPTIONS=	samba
 .include "../../mk/bsd.options.mk"
 
-.if exists(${X11BASE}/include/X11/extensions/Xrandr.h)
-HAVE_RANDR!=		${GREP} XRRSetScreenConfigAndRate  ${X11BASE}/include/X11/extensions/Xrandr.h; ${ECHO}
-.endif
-.if defined(HAVE_RANDR) && !empty(HAVE_RANDR)
-PLIST_SUBST+=		HAVE_RANDR=""
-.else
-PLIST_SUBST+=		HAVE_RANDR="@comment "
-.endif
-
-.if exists(${X11BASE}/lib/libXcursor.so)
-PLIST_SUBST+=		HAVE_XCURSOR=""
-.else
-PLIST_SUBST+=		HAVE_XCURSOR="@comment "
-.endif
+BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
 
 .if !empty(PKG_OPTIONS:Msamba)
 .include "../../net/samba/buildlink3.mk"
@@ -139,6 +127,8 @@ post-install:
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
