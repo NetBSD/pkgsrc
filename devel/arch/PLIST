@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/21 03:02:33 jonb Exp $
-bin/arch--release-arch--1.0--patch-9-cfg
+@comment $NetBSD: PLIST,v 1.5 2002/07/24 22:59:28 jonb Exp $
+bin/arch--release-arch--1.0--patch-16-cfg
 bin/arch--release-arch-cfg
 bin/arch-cfg
 bin/as-daemon
@@ -8,8 +8,11 @@ bin/dangerous-rename
 bin/file-metadata
 bin/file-tag
 bin/ftp-push
+bin/inventory
 bin/larch
+bin/mkpatch
 bin/need-args
+bin/pipe-friendly
 bin/read-link
 bin/set-file-metadata
 bin/unfold
@@ -52,7 +55,9 @@ include/hackerlab/fmt/cvt-double-constants.h
 include/hackerlab/fmt/cvt-double-tables.h
 include/hackerlab/fmt/cvt-double.h
 include/hackerlab/fmt/cvt.h
+include/hackerlab/fs/cwd.h
 include/hackerlab/fs/file-names.h
+include/hackerlab/fs/tmp-files.h
 include/hackerlab/hash/hash-utils.h
 include/hackerlab/hash/hashtree.h
 include/hackerlab/machine/alignment.h
@@ -81,6 +86,7 @@ include/hackerlab/os/signal.h
 include/hackerlab/os/stdarg.h
 include/hackerlab/os/stddef.h
 include/hackerlab/os/stdlib.h
+include/hackerlab/os/sys/mman.h
 include/hackerlab/os/sys/param.h
 include/hackerlab/os/sys/socket.h
 include/hackerlab/os/sys/stat.h
@@ -112,6 +118,7 @@ include/hackerlab/rx/nfa-cache.h
 include/hackerlab/rx/nfa.h
 include/hackerlab/rx/super.h
 include/hackerlab/rx/tree.h
+include/hackerlab/sort/qsort.h
 include/hackerlab/uni/coding-inlines.h
 include/hackerlab/uni/coding.h
 include/hackerlab/uni/invariant.h
@@ -158,7 +165,6 @@ lib/libhackerlab.a
 libexec/arch/arch/add
 libexec/arch/arch/add-log
 libexec/arch/arch/add-pristine
-libexec/arch/arch/arch
 libexec/arch/arch/arch-rmrf
 libexec/arch/arch/archive-cache-revision
 libexec/arch/arch/archive-cached-revisions
@@ -207,10 +213,12 @@ libexec/arch/arch/get-archive-name
 libexec/arch/arch/get-patch
 libexec/arch/arch/heading
 libexec/arch/arch/import
+libexec/arch/arch/indicated-config-file
 libexec/arch/arch/indicated-revision
 libexec/arch/arch/init-tree
 libexec/arch/arch/inventory
 libexec/arch/arch/join-branch
+libexec/arch/arch/larch
 libexec/arch/arch/library-add
 libexec/arch/arch/library-archives
 libexec/arch/arch/library-branches
@@ -298,6 +306,7 @@ libexec/arch/arch/update-config
 libexec/arch/arch/update-distributions
 libexec/arch/arch/valid-archive-location
 libexec/arch/arch/valid-archive-name
+libexec/arch/arch/valid-config-name
 libexec/arch/arch/valid-id
 libexec/arch/arch/valid-log-file
 libexec/arch/arch/valid-package-name
@@ -431,16 +440,17 @@ libexec/arch/local-cache/pristines
 libexec/arch/local-cache/take-from-cache
 libexec/arch/local-cache/wd-mv-pristine
 libexec/arch/local-cache/what-changed
-libexec/arch/local/patch
 libexec/arch/naming-conventions/Help.category
 libexec/arch/naming-conventions/Help.category_title
 libexec/arch/naming-conventions/Help.list
+libexec/arch/naming-conventions/indicated-config-file
 libexec/arch/naming-conventions/indicated-revision
 libexec/arch/naming-conventions/parse-package-name
 libexec/arch/naming-conventions/patch-level-lt
 libexec/arch/naming-conventions/sort-revisions
 libexec/arch/naming-conventions/valid-archive-location
 libexec/arch/naming-conventions/valid-archive-name
+libexec/arch/naming-conventions/valid-config-name
 libexec/arch/naming-conventions/valid-id
 libexec/arch/naming-conventions/valid-package-name
 libexec/arch/naming-conventions/valid-patch-level-name
@@ -624,6 +634,7 @@ share/examples/arch/notifier/=rules.archives
 @dirrm include/hackerlab/unidata
 @dirrm include/hackerlab/unicode
 @dirrm include/hackerlab/uni
+@dirrm include/hackerlab/sort
 @dirrm include/hackerlab/rx-xml
 @dirrm include/hackerlab/rx-posix
 @dirrm include/hackerlab/rx
