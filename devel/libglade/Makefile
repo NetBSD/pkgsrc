@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/03/13 17:36:51 fredb Exp $
+# $NetBSD: Makefile,v 1.36 2002/04/09 23:05:42 jlam Exp $
 #
 
 DISTNAME=		libglade-0.17
@@ -10,16 +10,14 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.daa.com.au/~james/gnome/
 COMMENT=		Runtime interpreter for GLADE gui files
 
-BUILD_USES_MSGFMT=	yes
+BUILD_USES_MSGFMT=	YES
+
+USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
+GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
-USE_X11BASE=		YES
-
-GNU_CONFIGURE=		YES
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
-
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
 	${RM} ${WRKSRC}/libgladeConf.sh
