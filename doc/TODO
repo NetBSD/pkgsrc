@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.726 2003/07/16 15:36:35 adam Exp $
+$NetBSD: TODO,v 1.727 2003/07/16 22:11:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -66,7 +66,7 @@ Suggested package updates
 	o Amaya-8.1a
 	o ImageViewer-0.6.2
 	o R-1.7.1
-	o TeXmacs-1.0.1.17
+	o TeXmacs-1.0.1.18
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o angband-3.0.3
@@ -78,6 +78,7 @@ Suggested package updates
 	o biew-5.5.0
 	o bind-8.4.0
 	o bzflag-1.7g0
+	o centericq-4.9.5
 	o cervisia-2.0
 	o courier-0.42.2
 	o courier-imap-2.0
@@ -94,6 +95,7 @@ Suggested package updates
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
+	o easytag-0.28.1
 	o echoping-5.0.1
 	o elm-me-2.4pl102
 	o ettercap-0.6.b
@@ -149,6 +151,7 @@ Suggested package updates
 	o jwhois-3.2.2
 	o kaffe-1.1.0 [pkg/22155]
 	o kdbg-1.2.8
+	o lavaps-2.3
 	o lcms-1.0.9
 	o leafnode-1.9.42
 	o lesstif-0.93.44
@@ -190,7 +193,7 @@ Suggested package updates
 	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
-	o oss-3.9.7k
+	o oss-3.9.7l
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-XML-LibXML-1.54
 	o pcre-4.3
@@ -213,9 +216,10 @@ Suggested package updates
 	o sablotron-0.97
 	o sawfish-1.3
 	o scmxx-0.6.3.8
-	o scribus-0.8
+	o scribus-1.0
 	o sendfile-20010424
 	o sketch-0.6.15
+	o smalltalk-2.1.4
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snd-6.8
 	o snes9x-1.39a
@@ -235,8 +239,9 @@ Suggested package updates
 	o tcl/tk-8.4.3
 	o tcpreplay-1.4.4
 	o tightvnc-1.2.8
+	o tinyproxy-1.6.0
 	o tkman-2.2
-	o top-3.5b12.5
+	o top-3.5b12.6
 	o ttf2pt1-3.4.3
 	o transcode-0.6.8
 	o tuxpaint-0.9.11
