@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/12/15 06:00:44 proff Exp $
 bin/ghc
 bin/ghc-4.04
 bin/hp2ps
