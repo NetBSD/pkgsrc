@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/12/09 10:52:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/14 18:59:44 tron Exp $
 #
 
 DISTNAME=		zenicb-19981202
@@ -13,7 +13,7 @@ MIRROR_DISTFILE=	no
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_XEMACS)
 EMACS=			xemacs
-RUN_DEPENDS+=		xemacs-20.4:../../editors/xemacs20
+RUN_DEPENDS+=		xemacs-21.1.4:../../editors/xemacs
 .else
 EMACS=			emacs
 RUN_DEPENDS+=		emacs-20.3:../../editors/emacs
