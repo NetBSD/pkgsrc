@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/21 20:30:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/23 18:30:27 xtraeme Exp $
 #
 
 DISTNAME=	mips64emul-${DIST_VER}
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/mips64emul-${DIST_VER}
 
 INSTALLATION_DIRS=	bin
 
-DIST_VER=	20040619
+DIST_VER=	20040623
 
 GLOBAL_LDFLAGS=	-L${X11BASE}/lib \
 		${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
