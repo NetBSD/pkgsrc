@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/29 12:33:22 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/16 22:37:30 tron Exp $
 
 DISTNAME=		suse_audio-6.3
 CATEGORIES=		emulators
@@ -18,4 +18,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		audiofil.rpm
 
-.include "../suse_linux/suse.mk"
+.include "../suse_linux/Makefile.common"
