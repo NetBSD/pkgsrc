@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2000/05/22 02:00:57 hubertf Exp $
+$NetBSD: patch-af,v 1.2 2000/07/22 16:14:54 rh Exp $
 
 --- RULES/mk-gmake.id.orig	Thu Mar  9 22:36:18 2000
 +++ RULES/mk-gmake.id	Thu Mar  9 22:36:52 2000

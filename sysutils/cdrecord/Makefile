@@ -1,43 +1,40 @@
-# $NetBSD: Makefile,v 1.31 2000/07/06 00:05:22 dmcmahill Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
-#
+# $NetBSD: Makefile,v 1.32 2000/07/22 16:14:48 rh Exp $
 
-DISTNAME=	cdrecord-1.8
+DISTNAME=	cdrecord-1.9
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.fokus.gmd.de/nthp/employees/schilling/cdrecord.html
+HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
 
 CONFLICTS=	mkisofs-*
-
 USE_GMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 TARGET_ARCH=	${MACHINE_ARCH}-netbsd-cc
 TARGET_DIR=	OBJ/${TARGET_ARCH}
 #override ARCH to avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=	ARCH=""
+MAKE_ENV+=      ARCH=""
 
-post-configure:
+do-configure:
 	${MKDIR} ${WRKSRC}/include/sys
 	${LN} -fs /usr/include/soundcard.h ${WRKSRC}/include/sys
-	cd ${WRKSRC}/RULES ; \
+	cd ${WRKSRC}/RULES; \
 	${TEST} -f netbsd-cc.rul || ${MV} i386-netbsd-cc.rul netbsd-cc.rul; \
 	${TEST} -f netbsd-gcc.rul || ${MV} i386-netbsd-gcc.rul netbsd-gcc.rul; \
 	${LN} -sf netbsd-gcc.rul ${MACHINE}-netbsd-gcc.rul; \
-	${LN} -sf netbsd-cc.rul ${TARGET_ARCH}.rul;
+	${LN} -sf netbsd-cc.rul ${TARGET_ARCH}.rul
 
 do-install:
 	cd ${WRKSRC}/cdda2wav; \
-	${INSTALL_PROGRAM} ${TARGET_DIR}/cdda2wav ${PREFIX}/bin; \
-	${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
+	    ${INSTALL_PROGRAM} ${TARGET_DIR}/cdda2wav ${PREFIX}/bin; \
+	    ${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
 	cd ${WRKSRC}/cdrecord; \
-	${INSTALL_PROGRAM} ${TARGET_DIR}/cdrecord ${PREFIX}/bin; \
-	${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/misc/${TARGET_DIR}/readcd ${PREFIX}/bin
+	    ${INSTALL_PROGRAM} ${TARGET_DIR}/cdrecord ${PREFIX}/bin; \
+	    ${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
 	cd ${WRKSRC}/mkisofs; \
-	${INSTALL_PROGRAM} ${TARGET_DIR}/mkisofs ${PREFIX}/bin; \
-	${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
+	    ${INSTALL_PROGRAM} ${TARGET_DIR}/mkisofs ${PREFIX}/bin; \
+	    ${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/misc/${TARGET_DIR}/readcd ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,23 @@
-$NetBSD: patch-ae,v 1.2 2000/03/03 15:22:19 scw Exp $
+$NetBSD: patch-ae,v 1.3 2000/07/22 16:14:53 rh Exp $
 
---- include/vadefs.h.orig	Sat Nov 27 19:25:44 1999
-+++ include/vadefs.h	Fri Mar  3 14:41:00 2000
-@@ -51,7 +51,7 @@
- #	endif
- #endif
+--- cdda2wav/Makefile.orig	Tue Nov 16 00:48:52 1999
++++ cdda2wav/Makefile	Tue Nov 16 00:49:23 1999
+@@ -7,7 +7,8 @@
  
--#if (defined(__linux__) || defined(__linux) || defined(sun)) && \
-+#if (defined(__linux__) || defined(__linux) || defined(sun) || defined(__NetBSD__)) && \
- 		(defined(__ppc) || defined(__PPC) || defined(powerpc) || defined(__powerpc__))
+ INSDIR=		bin
+ TARGET=		cdda2wav
+-CPPOPTS +=	-DFIFO -I../cdrecord $(CDDA2WAVDEFS)
++CPPOPTS +=	-DFIFO -I../cdrecord $(CDDA2WAVDEFS) \
++		-DECHO_TO_SOUNDCARD -DHAVE_OSS=1 -DHAVE_SYS_SOUNDCARD_H
+ CFILES=		cdda2wav.c interface.c semshm.c resample.c \
+ 		toc.c wav.c sun.c raw.c md5c.c setuid.c ringbuff.c \
+ 		sndconfig.c scsi_cmds.c aiff.c aifc.c \
+@@ -17,7 +18,7 @@
+ 		config.h saveargs.h sndfile.h aiff.h aifc.h \
+ 		sndconfig.h scsi_cmds.h lowlevel.h byteorder.h mycdrom.h \
+ 		base64.h sha.h mmsystem.h
+-LIBS=		-lscg -lschily $(SCSILIB) $(EXTRALIB)
++LIBS=		-lscg -lschily $(SCSILIB) $(EXTRALIB) -lossaudio
+ XMK_FILE=	Makefile.man
  
- #	ifndef	VA_LIST_IS_ARRAY
+ LCONFIG=	local.cnf
