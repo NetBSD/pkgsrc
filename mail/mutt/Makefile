@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 1998/07/15 12:39:45 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/30 21:18:34 tron Exp $
 
-DISTNAME=	mutt-0.93.1i
+DISTNAME=	mutt-0.93.2i
 CATEGORIES=	mail
 MASTER_SITES=	ftp://riemann.iam.uni-bonn.de/pub/mutt/ \
 		ftp://ftp.gbnet.net/pub/mutt-international/ \
@@ -12,7 +12,7 @@ MAINTAINER=	tron@netbsd.org
 
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
-CONFLICTS=	mutt-0.89.1i mutt-0.91i mutt-0.91.1i mutt-0.93i
+CONFLICTS=	mutt-0.89.1i mutt-0.91i mutt-0.91.1i mutt-0.93i mutt-0.93.1i
 
 RESTRICTED=	"Uses PGP"
 MIRROR_DISTFILE= no
