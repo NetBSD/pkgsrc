@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7106 2004/09/06 10:47:42 adam Exp $
+$NetBSD: CHANGES,v 1.7107 2004/09/06 13:11:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4204,3 +4204,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mailman to 2.1.4nb1 [lukem 2004-09-06]
 	Updated nail to 11.5 [cjep 2004-09-06]
 	Updated lame to 3.96.1 [adam 2004-09-06]
+	Updated ImageMagick to 6.0.7-1 [adam 2004-09-06]
