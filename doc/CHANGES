@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1163 2003/01/19 08:47:09 salo Exp $
+$NetBSD: CHANGES,v 1.1164 2003/01/19 09:12:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -328,3 +328,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated diffutils to 2.8.1 [wiz 2003-01-19]
 	Updated evilwm to 0.99.14 [salo 2003-01-19]
 	Updated pnm2ppa to 1.04nb1 [salo 2003-01-19]
+	Updated asm2html to 1.2 [jmmv 2003-01-19]
