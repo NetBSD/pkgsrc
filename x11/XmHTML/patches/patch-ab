@@ -1,35 +1,25 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/01/22 06:27:04 mellon Exp $
+$NetBSD: patch-ab,v 1.2 1999/10/31 12:08:26 mrg Exp $
 
-diff -rc2 --exclude Makefile --exclude *.o --exclude Makefile.bak XmHTML-1.1.5/XmHTML.cf XmHTML-1.1.5-hacked/XmHTML.cf
-*** XmHTML-1.1.5/XmHTML.cf	Thu Jan 21 14:41:49 1999
---- XmHTML-1.1.5-hacked/XmHTML.cf	Thu Jan 21 14:38:50 1999
-***************
-*** 12,19 ****
-  XCOMM Root of XmHTML Source Tree
-  XCOMM ----------------------------------------------------------------------
-- XCOMM If BUILDINCTOP is not or incorrectly set on your system, you can
-- XCOMM override it here.
-- XCOMM BUILDINCTOP=<path to root of the XmHTML source tree>
-- XCOMM BUILDINCTOP=/home/newt/src/XmHTML/XmHTML
-  
-  XCOMM ----------------------------------------------------------------------
---- 12,15 ----
-***************
-*** 21,28 ****
-  XCOMM ----------------------------------------------------------------------
-  XCOMM This specifies where the XmHTML and http library will be installed
-! #define XmHTMLLibDir $(USRLIBDIR)
-  
-  XCOMM This specifies where the XmHTML and http header files will be installed
-! #define XmHTMLIncDir $(INCROOT)/XmHTML
-  
-  XCOMM ----------------------------------------------------------------------
---- 17,24 ----
-  XCOMM ----------------------------------------------------------------------
-  XCOMM This specifies where the XmHTML and http library will be installed
-! #define XmHTMLLibDir ${PREFIX}/lib
-  
-  XCOMM This specifies where the XmHTML and http header files will be installed
-! #define XmHTMLIncDir ${PREFIX}/include/XmHTML
-  
-  XCOMM ----------------------------------------------------------------------
+diff -ru /tmp/XmHTML-1.1.5/book/Imakefile XmHTML-1.1.5/book/Imakefile
+--- /tmp/XmHTML-1.1.5/book/Imakefile	Tue Nov 11 11:11:19 1997
++++ XmHTML-1.1.5/book/Imakefile	Sun Oct 31 21:01:09 1999
+@@ -24,15 +24,15 @@
+ XCOMM
+ 
+ #if DebugLibXmHTML
+-   XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML_d.a
++   XMHTMLLIB = $(TOP)/src/libXmHTML_d.a
+ #else
+ #if SharedLibXmHTML
+-   XMHTMLLIB = -L$(BUILDINCTOP)/src -lXmHTML
++   XMHTMLLIB = -L$(TOP)/src -lXmHTML
+ #else
+-   XMHTMLLIB = $(BUILDINCTOP)/src/libXmHTML.a
++   XMHTMLLIB = $(TOP)/src/libXmHTML.a
+ #endif
+ #endif
+-XCOMM    INCLUDES = -I$(BUILDINCTOP)/src $(DMALLOCINC)
++XCOMM    INCLUDES = -I$(TOP)/src $(DMALLOCINC)
+      DEPLIBS = $(DEPXMLIB) $(DEPXTOOLLIB) $(DEPXLIB)
+ 
+ XCOMM required libraries
