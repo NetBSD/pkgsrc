@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2603 2004/11/30 15:01:22 adam Exp $
+$NetBSD: TODO,v 1.2604 2004/11/30 15:27:19 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1071,7 +1071,6 @@ Suggested package updates
 	o sablevm-1.1.7
 	o sablevm-classpath-1.1.7
 	o sablevm-classpath-gui-1.1.7
-	o samba-3.0.9
 	o same-1.8
 	o sarah-0.9.1b
 	o sawfish-1.3
