@@ -4,7 +4,7 @@
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com> (FreeBSD)
 #			itojun@itojun.org
 #
-# $NetBSD: Makefile,v 1.5 1999/07/06 16:31:40 itojun Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/07 08:54:55 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -19,7 +19,11 @@ HOMEPAGE=	http://www.zebra.org/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/zebra
-# non-IPv6 build at this moment
+.if !defined(USE_INET6)
 CONFIGURE_ARGS+=--disable-ospf6d --disable-ripngd
+PLIST_SRC=	${PKGDIR}/PLIST
+.else
+PLIST_SRC=	${PKGDIR}/PLIST.v6
+.endif
 
 .include "../../mk/bsd.pkg.mk"
