@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2004/12/15 13:09:58 taca Exp $
+
+--- src/output.c.orig	2004-03-21 00:02:51.000000000 +0900
++++ src/output.c
+@@ -490,7 +490,7 @@ print_query(const char * qs, int w)
+ 	if (strncmp(qs, "whence=", strlen("whence=")) == 0) {
+ 	    foo = 1;
+ 	    printf("whence=%d", w);
+-	    for (qs += strlen("whence="); isdigit(*qs); qs++);
++	    for (qs += strlen("whence="); isdigit((unsigned char)*qs); qs++);
+ 	} else {
+ 	    /* '"' is converted to entities "&quot;" */
+ 	    putc_entitize(*qs);

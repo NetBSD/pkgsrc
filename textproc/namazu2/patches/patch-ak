@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 2004/12/15 13:09:58 taca Exp $
+
+--- src/result.c.orig	2004-03-21 00:02:51.000000000 +0900
++++ src/result.c
+@@ -315,8 +315,8 @@ emphasize(char *str)
+ static int
+ is_wordboundary(char *p)
+ {
+-  if (isalpha(*p) && isalpha(*(p + 1))) return 0;
+-  if (isdigit(*p) && isdigit(*(p + 1))) return 0;
++  if (isalpha((unsigned char)*p) && isalpha((unsigned char)*(p + 1))) return 0;
++  if (isdigit((unsigned char)*p) && isdigit((unsigned char)*(p + 1))) return 0;
+   return 1;
+ }
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.3 2004/12/15 13:09:58 taca Exp $
+
+--- src/form.c.orig	2004-12-08 16:35:06.000000000 +0900
++++ src/form.c
+@@ -96,7 +96,7 @@ cmp_element(const char *s1, const char *
+             }
+             s2++;
+         }
+-        if (toupper(*s1) != toupper(*s2)) {
++        if (toupper((unsigned char)*s1) != toupper((unsigned char)*s2)) {
+             break;
+         }
+     }
