@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.834 2002/12/19 11:45:49 tron Exp $
+$NetBSD: CHANGES,v 1.835 2002/12/19 12:09:01 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4006,3 +4006,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added xmountains-2.6 [grant 2002-12-19]
 	Added roxirc-1.72 [grant 2002-12-19]
 	Updated bidwatcher to 1.3.6nb1 [tron 2002-12-19]
+	Added ninja-1.5.8.1 [grant 2002-12-19]
