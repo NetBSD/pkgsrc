@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2004/02/26 15:41:50 adam Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/29 08:08:13 adam Exp $
 
---- src/Makefile.in.orig	2004-02-25 09:08:59.000000000 +0000
+--- src/Makefile.in.orig	2004-03-14 08:43:56.000000000 +0000
 +++ src/Makefile.in
-@@ -850,7 +850,7 @@ Symbols: create_symbols_file.sh
+@@ -859,7 +859,7 @@ libsndfile.def: create_symbols_file.py
+ 	./create_symbols_file.py win32 $(VERSION) > libsndfile.def
+ 
+ # Fake dependancy to force the creation of these files.
+-sndfile.c : Symbols.linux Symbols.darwin libsndfile.def
++sndfile.c:
  
  # Dependancies.
  
--sndfile.c : Symbols
-+sndfile.c:
- 
- aiff.c au.c au_g72x.c ircam.c mat4.c mat5.c nist.c paf.c pvf.c : sndfile.h common.h
- raw.c svx.c voc.c w64.c wav.c wav_w64.c htk.c sd2.c rx2.c txw.c : sndfile.h common.h
