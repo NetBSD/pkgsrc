@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/05/07 22:20:59 hubertf Exp $
+
+--- conf/upclient.conf.orig	Sat Jun 16 18:33:54 2001
++++ conf/upclient.conf
+@@ -9,7 +9,7 @@
+ AuthKey = <your_authkey>		# Your Authorization key
+ 
+ Interval	= 120			# Transmit interval
+-UptimeServer	= data.uptimes.net	# Uptimes Project's data server
++UptimeServer	= uptimes.wonko.net	# Uptimes Project's data server
+ 
+ SendIdleTime	= 1			# Send your idle time
+ SendLoadAvg	= 1			# Send load average
