@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/14 17:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/12 03:58:36 snj Exp $
 #
 
 DISTNAME=	Xbae-4.9.1
@@ -9,7 +9,7 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.lesstif.org/Xbae.html
 COMMENT=	Motif-compatible widgets: XbaeMatrix, XbaeCaption, XbaeInput
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 
@@ -25,5 +25,5 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/ac_find_xbae.m4 \
 		${LOCALBASE}/share/aclocal/ac_find_xbae.m4
 
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
