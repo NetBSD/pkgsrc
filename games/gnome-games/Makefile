@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/10/03 01:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2002/10/06 01:34:17 wiz Exp $
 
 DISTNAME=		gnome-games-1.4.0.4
 PKGREVISION=		2
@@ -13,13 +13,12 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME games collection
 
-# Required for ports which don't build "libgtop".
-DEPENDS+=		guile-[0-9]*:../../lang/guile
 BUILD_USES_MSGFMT=	YES
 
 CONFLICTS=		xbill-[0-9]*
 
 AUTOMAKE_REQD=		1.4
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
@@ -65,8 +64,10 @@ post-install:
 	${LN} -s gnome-mines ${PREFIX}/share/gnome/help/gnomine
 	${LN} -s same-gnome ${PREFIX}/share/gnome/help/samegnome
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../x11/gnome-core/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+# Required for ports which don't build "libgtop".
+.include "../../lang/guile/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
