@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/10/28 14:22:48 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/11/13 12:51:22 sketch Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.5
@@ -30,6 +30,13 @@ CONFIGURE_ARGS+=	--disable-xshm
 CONFIGURE_ARGS+=	--disable-xvideo
 CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	--disable-tests
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+# SunPro cc understands __func__ but CC does not, so disable explicitly.
+CONFIGURE_ENV+=		have_func=no
+.endif
 
 # Disable all drivers by default.
 .for driver in	a52dec \
