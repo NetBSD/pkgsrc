@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/10/08 21:18:32 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2000/01/04 02:05:44 wiz Exp $
 #
 
 DISTNAME=	netpbm
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.wustl.edu/graphics/graphics/packages/NetPBM/ \
 DISTFILES=	netpbm-1mar1994.tar.gz \
 		pcxtoppm.tar.gz \
 		rletopnm.tar.gz \
-		pnmtopng-2.37.2.tar.gz
+		pnmtopng-2.37.3.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 
@@ -25,7 +25,7 @@ post-extract:
 # move updates into source tree
 	cd ${WRKSRC}; \
 	${MV} ../*pcx*.? ppm; \
-	${MV} ../*rle*.? ../pnmtopng-2.37.2/*png*.? pnm;
+	${MV} ../*rle*.? ../pnmtopng-2.37.3/*png*.? pnm;
 	${CHMOD} -R o+r ${WRKDIR}
 
 .include "../../mk/bsd.pkg.mk"
