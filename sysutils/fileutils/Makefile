@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/10/09 17:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/09 17:26:18 wiz Exp $
 
 DISTNAME=		fileutils-4.1.8
 PKGREVISION=		1
@@ -13,7 +13,7 @@ COMMENT=		GNU file management utilities
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 CONFIGURE_ARGS+=	--program-prefix=g \
-			--with-libiconv-prefix=${BUILDLINK_DIR}
+			--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../converters/libiconv/buildlink2.mk"
