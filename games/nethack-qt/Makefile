@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/10/19 08:06:56 skrll Exp $
+# $NetBSD: Makefile,v 1.23 2000/10/22 09:21:05 skrll Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -14,7 +14,7 @@ USE_XPM=		YES
 
 ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
-EVAL_PREFIX+=		QT2DIR=qt2
+EVAL_PREFIX+=		QT2DIR=qt2-libs
 PATH=   		${QT2DIR}/qt2/bin:$$PATH
 MAKE_ENV+=		GTYPE=-qt QTDIR=${QT2DIR}/qt2
 

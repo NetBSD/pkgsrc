@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/19 07:57:17 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/22 09:21:56 skrll Exp $
 #
 
 DISTNAME=	ebuilder-0.56d
@@ -16,7 +16,7 @@ USE_X11=	yes
 USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
 
-EVAL_PREFIX+=	QT2DIR=qt2
+EVAL_PREFIX+=	QT2DIR=qt2-libs
 MAKE_ENV=	QTDIR=${QT2DIR}/qt2
 
 do-install:
