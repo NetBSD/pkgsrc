@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 1998/09/05 22:02:21 garbled Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2000/08/28 23:03:55 wiz Exp $
 bin/hbench/argsort
 bin/hbench/config.guess
 bin/hbench/config.sub
@@ -25,3 +25,6 @@ share/hbench/conf/full.test
 share/hbench/conf/sample.run
 @dirrm bin/hbench
 @dirrm share/doc/hbench
+@dirrm share/hbench/Results
+@dirrm share/hbench/conf
+@dirrm share/hbench
