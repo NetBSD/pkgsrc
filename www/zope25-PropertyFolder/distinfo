@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/11/14 15:51:25 drochner Exp $
+$NetBSD: distinfo,v 1.2 2002/11/27 16:27:03 drochner Exp $
 
-SHA1 (zope/PropertyFolder-1.10.tgz) = 2c50ad8a69d9c97e3bd22fd99121ed6ffee3bbe2
-Size (zope/PropertyFolder-1.10.tgz) = 14179 bytes
+SHA1 (zope/PropertyFolder-1.2.1.tar.gz) = 1660f8784d3b06c1d48b2db2e93f442a63137eb1
+Size (zope/PropertyFolder-1.2.1.tar.gz) = 13728 bytes
