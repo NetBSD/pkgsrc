@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/30 00:22:18 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/05 09:33:17 jlam Exp $
 
 DISTNAME=	libapache-mod-dtcl_0.8.1-1
 PKGNAME=	ap-dtcl-0.8.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://comanche.com.dtu.dk/dave/
 DEPENDS+=	apache-1.3.*:../../www/apache
 DEPENDS+=	tcl-8.3.2:../../lang/tcl
 # For "apxs":
-BUILD_DEPENDS=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
 
 INCLUDES=	-I${PREFIX}/include/
 LIBS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -ltcl83 -lm

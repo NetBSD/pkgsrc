@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/28 09:14:51 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/05 09:33:17 jlam Exp $
 
 DISTNAME=	auth_ldap-1.4.2
 PKGNAME=	ap-auth-ldap-1.4.2
@@ -12,7 +12,7 @@ DEPENDS+=	apache-1.3.*:../../www/apache
 DEPENDS+=	openldap-1.2.*:../../databases/openldap
 
 # For "apxs":
-BUILD_DEPENDS=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
 
 do-build:
 	@cd ${WRKSRC} && ${LOCALBASE}/sbin/apxs -c			\
