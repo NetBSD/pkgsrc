@@ -1,16 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/05 03:10:59 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/14 23:15:54 hubertf Exp $
 
---- e2fsck/journal.c.orig	Sat Aug  5 04:28:05 2000
-+++ e2fsck/journal.c	Sat Aug  5 04:29:09 2000
-@@ -59,7 +59,11 @@
- 	 * Now that it mounted cleanly, the filesystem will have been
- 	 * recovered, so we can now unmount it.
- 	 */
-+#ifdef __NetBSD__
-+	ret = unmount(device, 0);
-+#else
- 	ret = umount(device);
-+#endif
- 	if (ret)
- 		return errno;
- 	/*
+--- lib/ext2fs/flushb.c.orig    Thu Oct 31 12:17:24 2002
++++ lib/ext2fs/flushb.c
+@@ -11,6 +11,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <sys/param.h>
+ #if HAVE_ERRNO_H
+ #include <errno.h>
+ #endif
