@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/09 17:48:39 agc Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/09 17:59:46 agc Exp $
 #
 
 VERSION=	1.1.8
@@ -52,7 +52,7 @@ pre-install:
 	@(cd ${WRKSRC}/lib/i386/green_threads;				\
 	${LN} -s libXm.so libXm.so.2;					\
 	for X in lib*.so ;do						\
-		if [ "$X" = "libXm.so" ]; then continue; fi;		\
+		if [ "$$X" = "libXm.so" ]; then continue; fi;		\
 		if [ -f $$X.* ] ;then					\
 			${MV} $$X $$X.* ;				\
 			${LN} -s $$X.* $$X; 				\
