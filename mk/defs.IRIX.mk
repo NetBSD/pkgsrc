@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.54 2004/08/15 22:21:14 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.55 2004/08/26 00:41:45 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -56,6 +56,7 @@ MV?=		/sbin/mv
 NICE?=		/sbin/nice
 .if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch)
 PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
+_OPSYS_GPATCH_REQD=	YES
 .else
 PATCHV!=	/usr/sbin/patch -v 2>&1 | ${CUT} -d" " -f3
 .  if ${PATCHV} == "2.1"
