@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/04/26 05:51:57 snj Exp $
+# $NetBSD: Makefile,v 1.43 2004/06/27 17:28:58 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Applets for GNOME
-
-BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
 
 BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 
@@ -27,6 +25,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 
 .include "../../sysutils/libgtop/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-core/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
