@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.6 2004/10/13 15:31:31 tv Exp $
+# $NetBSD: Interix.mk,v 1.7 2004/10/13 17:50:01 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -69,7 +69,7 @@ SU?=		/bin/su
 TAIL?=		/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/bin/tee
-TEST?=		test				# Shell builtin
+TEST?=		/bin/test	# shell builtin has bugs with symlinks
 TOUCH?=		/bin/touch
 TR?=		/bin/tr
 TRUE?=		true				# Shell builtin
