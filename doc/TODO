@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.632 2003/06/10 13:26:04 wiz Exp $
+$NetBSD: TODO,v 1.633 2003/06/10 14:24:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -156,8 +156,6 @@ Suggested package updates
 	o lcms-1.0.9
 	o leafnode-1.9.41
 	o lesstif-0.93.41
-	o libgda-0.11.0 [pkg/21532]
-	o libgnomedb-0.11.0 [pkg/21533]
 	o libiconv-1.9.1
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
