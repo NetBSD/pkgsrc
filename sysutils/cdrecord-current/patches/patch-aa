@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2000/03/04 10:10:10 tron Exp $
+$NetBSD: patch-aa,v 1.4 2000/03/15 00:28:43 hubertf Exp $
 
---- TARGETS/Targetdirs.orig	Mon Aug 30 17:19:44 1999
-+++ TARGETS/Targetdirs	Fri Sep 17 00:29:27 1999
+--- TARGETS/Targetdirs.orig	Thu Jan  6 00:15:21 2000
++++ TARGETS/Targetdirs	Wed Mar 15 01:22:00 2000
 @@ -1,4 +1,4 @@
  #ident %W% %E% %Q%
  ###########################################################################
--DIRS=		patches conf inc lib libdeflt libscg cdrecord mkisofs-1.12b5 mkisofs-1.12b5/diag cdda2wav misc man
+-DIRS=		patches conf inc lib libdeflt libscg cdrecord mkisofs mkisofs/diag cdda2wav misc man
 +DIRS=		patches conf inc lib libdeflt libscg cdrecord cdda2wav misc
  ###########################################################################
