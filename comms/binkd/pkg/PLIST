@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/22 20:47:13 tv Exp $
-etc/binkd.cfg
+@comment $NetBSD: PLIST,v 1.2 1999/08/05 15:46:28 tv Exp $
+etc/binkd.cfg.dist
 man/man8/binkd.8
 sbin/binkd
