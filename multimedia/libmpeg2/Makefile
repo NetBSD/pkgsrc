@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/23 16:27:02 wiz Exp $
 
-DISTNAME=	mpeg2dec-0.4.0
-PKGNAME=	libmpeg2-0.4.0
-PKGREVISION=	1
+DISTNAME=	mpeg2dec-0.4.0b
+PKGNAME=	libmpeg2-0.4.0b
 CATEGORIES=	multimedia
 MASTER_SITES=	http://libmpeg2.sourceforge.net/files/
 
@@ -11,6 +10,9 @@ HOMEPAGE=	http://libmpeg2.sourceforge.net/
 COMMENT=	Library for decoding mpeg-2 and mpeg-1 video streams
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+# remove on next update, only needed for 0.4.0b
+WRKSRC=		${WRKDIR}/mpeg2dec-0.4.0
 
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
