@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.163 2004/07/30 07:38:01 xtraeme Exp $
+# $NetBSD: bsd.prefs.mk,v 1.164 2004/07/30 20:59:08 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -298,9 +298,11 @@ PKG_INSTALLATION_TYPE?=	none
 .  if empty(USE_INET6:M[Yy][Ee][Ss]) || defined(USE_SOCKS)
 USE_INET6=		NO
 .  else
+PKG_DEFAULT_OPTIONS+=	inet6
 USE_INET6=		YES
 .  endif
 .elif empty(_OPSYS_HAS_INET6:M[nN][oO]) && !defined(USE_SOCKS)
+PKG_DEFAULT_OPTIONS+=	inet6
 USE_INET6=		YES
 .else
 USE_INET6=		NO
@@ -495,5 +497,8 @@ WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 # picked up and used by tools.mk, bsd.buildlink3.mk, etc.
 #
 WRKLOG?=		${WRKDIR}/.work.log
+
+PKG_DEFAULT_OPTIONS?=	# empty
+PKG_OPTIONS?=		# empty
 
 .endif	# BSD_PKG_MK
