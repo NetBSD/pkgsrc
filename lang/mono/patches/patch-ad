@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/03/01 13:11:47 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2003/09/25 16:05:21 recht Exp $
 
---- mono/metadata/icall.c.orig	2003-02-21 23:42:15.000000000 +0100
-+++ mono/metadata/icall.c
-@@ -3074,7 +3074,7 @@ ves_icall_System_Configuration_DefaultCo
+--- mono/metadata/icall.c.orig	2003-08-02 14:39:37.000000000 +0200
++++ mono/metadata/icall.c	2003-09-25 01:58:13.000000000 +0200
+@@ -3551,7 +3551,7 @@
  	if (mcpath != NULL)
  		return mcpath;
  
