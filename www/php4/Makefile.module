@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.26 2004/09/04 23:29:42 kim Exp $
+# $NetBSD: Makefile.module,v 1.27 2004/09/04 23:40:44 wiz Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -12,7 +12,6 @@
 PKGNAME?=		php-${MODNAME}-${PHP_BASE_VERS}
 PKGREVISION?=		# empty
 
-AUTOMAKE_REQD?=		1.9
 .include "../../mk/automake.mk"
 
 PKGMODNAME?=		${MODNAME:S/-/_/}
