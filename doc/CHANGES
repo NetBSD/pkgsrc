@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4813 2004/02/13 17:41:30 jschauma Exp $
+$NetBSD: CHANGES,v 1.4814 2004/02/13 17:52:04 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added netscape7-acroread-1.0 [jschauma 2004-02-13]
 	Added netscape7-acroread3-1.0 [jschauma 2004-02-13]
 	Added netscape7-acroread5-1.0 [jschauma 2004-02-13]
+	Updated p5-SNMP to 5.0.9 [seb 2004-02-13]
