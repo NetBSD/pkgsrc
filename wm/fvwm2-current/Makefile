@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/27 15:14:58 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/02 09:35:47 zuntum Exp $
 #
 
 DISTNAME=	fvwm-${FVWM_VERSION}
@@ -15,6 +15,7 @@ COMMENT=	Popular virtual window manager for X
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 DEPENDS+=	readline-*:../../devel/readline
 DEPENDS+=	rplay-3.*:../../audio/rplay
+DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
