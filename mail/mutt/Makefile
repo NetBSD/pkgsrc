@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2000/01/31 23:51:30 tron Exp $
+# $NetBSD: Makefile,v 1.41 2000/02/09 01:12:13 tron Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+= --with-curses=${LOCALBASE} --with-exec-shell=/bin/ksh \
 		 --enable-pop --enable-imap
 LDFLAGS+=	-s
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	LOCALEBASE=lib
@@ -32,6 +32,8 @@ PLIST_SUBST+=	LOCALEBASE=share
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 .endif
+
+.include "../../mk/bsd.pkg.mk"
 
 MUTT_BASE_VERSION=	1.0.1
 .if defined(MUTT_INTERNATIONAL) && ${MUTT_INTERNATIONAL} == YES
