@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.57 2004/11/20 10:10:35 grant Exp $
+# $NetBSD: Makefile.common,v 1.58 2004/11/29 03:15:35 tv Exp $
 #
 
 DISTNAME=	libtool-1.5.10
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	tv@duh.org
 HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 
 CONFLICTS=	glibtool-[0-9]*
