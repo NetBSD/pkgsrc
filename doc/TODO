@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2884 2005/01/12 10:59:32 adam Exp $
+$NetBSD: TODO,v 1.2885 2005/01/12 15:53:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -687,7 +687,6 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.23
-	o marbles-1.0.6
 	o mc-4.6.0 [pkgsrc-wip]
 	o memtest86-3.2
 	o mergeant-0.52
