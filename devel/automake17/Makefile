@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/10 02:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/11 00:56:51 jlam Exp $
 #
 
 DISTNAME=	automake-1.7.9
@@ -16,7 +16,8 @@ DEPENDS=	autoconf>=2.54:../../devel/autoconf
 CONFLICTS=	automake-1.7*
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.7
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
+USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV=		PERL=${PERL5}
 _STRIPFLAG_INSTALL=	# none
@@ -33,5 +34,5 @@ PERL5_REQD+=		5.5
 
 TEST_TARGET=		check
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
