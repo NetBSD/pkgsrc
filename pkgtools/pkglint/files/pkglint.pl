@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.79 2003/01/15 23:41:32 rh Exp $
+# $NetBSD: pkglint.pl,v 1.80 2003/01/24 15:16:32 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1563,19 +1563,19 @@ sub category_check {
 	# get list of dirs to compare against
 	@dirlist=glob("*/");
 	foreach $i (@dirlist) {
-	    # drop trailing slash and enter into hash
-	    $i =~ s/\/$//;
-	    $hash{$i} = 1;
+		# drop trailing slash and enter into hash
+		$i =~ s/\/$//;
+		$hash{$i} = 1;
 	}
 	# we expect the CVS dir to be here
 	$hash{CVS} = 0;
 	# remove comments
 	foreach $n (split "\n", $contents) {
-		if ($n =~ /^SUBDIR(\+*)=\s*(\S+)(\s*#.*|\s*)$/) {
-			$sub = $2;
+		if ($n =~ /^(#)?SUBDIR(\+*)=\s*(\S+)(\s*#.*|\s*)$/) {
+			$sub = $3;
 			if ($first == 0) {
-				if ($1 ne "+") {
-					&perror("FATAL: use SUBDIR+=, not SUBDIR$1=");
+				if ($2 ne "+") {
+					&perror("FATAL: use SUBDIR+=, not SUBDIR$2=");
 				}
 				if ($lastsub ge $sub) {
 					&perror("FATAL: $sub should come before $lastsub");
@@ -1586,10 +1586,13 @@ sub category_check {
 			}
 			$lastsub = $sub;
 			if ($hash{$sub} == 1) {
-			    $hash{$sub} = 0;
+				$hash{$sub} = 0;
 			}
 			else {
-			    $hash{$sub} = -1;
+				$hash{$sub} = -1;
+			}
+			if ($1 eq "#" and not $4 =~ /#\s*\w+/) {
+				&perror("WARN: $3 commented out without giving a reason");
 			}
 		}
 	}
