@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/30 06:19:09 rh Exp $
+
+--- gconf/gconftool.c.orig	Sun Jul 16 19:50:58 2000
++++ gconf/gconftool.c	Sun Jul 16 19:51:07 2000
+@@ -21,7 +21,7 @@
+ #include "gconf-internals.h"
+ #include <stdio.h>
+ #include <unistd.h>
+-#include <popt.h>
++#include <popt-gnome.h>
+ #include <gnome-xml/tree.h>
+ #include <gnome-xml/parser.h>
+ #include <stdlib.h>
