@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1 1999/10/06 13:07:04 agc Exp $
+
+Define FIONREAD on Solaris
+
+--- spawn.c	1999/10/06 12:59:44	1.1
++++ spawn.c	1999/10/06 13:01:57
+@@ -85,6 +85,11 @@
+     }
+ }
+ 
++#if defined(__sun__) && defined(__svr4__)
++/* for FIONREAD on Solaris */
++#include <sys/filio.h>
++#endif
++
+ static void
+ spawn_output_input(gpointer data, gint source, GdkInputCondition condition)
+ {
