@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/13 10:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/27 02:46:08 jlam Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -10,7 +10,7 @@ DISTFILES+=	${DISTNAME}.tar.gz
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.php.net/
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 
 .include "../../mk/bsd.prefs.mk"
@@ -29,7 +29,7 @@ PATCHDIR?=	${PKGSRCDIR}/www/php3/patches
 .endif
 
 # Here we configure only for what NetBSD ships.  We add the rest via modules.
-GNU_CONFIGURE=  YES
+GNU_CONFIGURE=	# defined
 CONFIGURE_ARGS+=--with-system-regex --without-gd \
 		--with-gdbm=${PREFIX} \
 		--with-yp --with-zlib --with-dbase --with-filepro \
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=--with-system-regex --without-gd \
 		--enable-track-vars --enable-force-cgi-redirect \
 		--enable-discard-path --enable-memory-limit \
 		--enable-sysvsem --enable-sysvshm
-CONFIGURE_ENV+=	PERL_PATH=${LOCALBASE}/bin/perl
+CONFIGURE_ENV+=	PERL_PATH=${PERL5}
 
 .if !defined(BUILDING_EXTENSION_MODULE)
 CONFIGURE_ENV+=	CPPFLAGS="-DPHP_INTERNAL_FUNCS"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/03/27 08:54:59 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/27 02:46:06 jlam Exp $
 #
 
 DISTNAME=		trn4-test72
@@ -23,34 +23,37 @@ DEPENDS=		nntpclnt-1.6.1:../nntpclnt
 # foo.y.z.com for the purposes of allowing cancels.
 TRN_HOSTBITS?=		0
 
-USE_PERL5=		yes
+USE_PERL5=		# defined
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ENV=		PREFIX=${PREFIX}
 CONFIGURE_ARGS=		-d -e -D bin=${PREFIX}/bin \
-		-D binexp=${PREFIX}/bin \
-		-D phost=${PREFIX}'/etc/nntp/domainname' \
-		-D filexp=${PREFIX}'/share/trn/filexp' \
-		-D hostbits=${TRN_HOSTBITS} \
-		-D installbin=${PREFIX}'/bin' \
-		-D installmansrc=${PREFIX}'/man/man1' \
-		-D installprivlib=${PREFIX}'/share/trn' \
-		-D libpth=${PREFIX}'/lib /usr/lib' \
-		-D mansrc=${PREFIX}'/man/man1' \
-		-D mansrcexp=${PREFIX}'/man/man1' \
-		-D mimecap=${PREFIX}'/etc/mimecap' \
-		-D orgname=${PREFIX}'/etc/nntp/organization' \
-		-D perl=${PREFIX}'/bin/perl' \
-		-D perlpath=${PREFIX}'/bin/perl' \
-		-D prefix=${PREFIX} \
-		-D prefixexp=${PREFIX} \
-		-D privlib=${PREFIX}'/share/trn' \
-		-D privlibexp=${PREFIX}'/share/trn' \
-		-D servername=${PREFIX}'/etc/nntp/server' \
-		-D d_nntp -U d_local -D libs=' ' -D usevfork=false \
-		-D inews=${PREFIX}'/bin/inews' \
-		-D useinews=${PREFIX}'/bin/inews'
+			-D binexp=${PREFIX}/bin \
+			-D phost=${PREFIX}'/etc/nntp/domainname' \
+			-D filexp=${PREFIX}'/share/trn/filexp' \
+			-D hostbits=${TRN_HOSTBITS} \
+			-D installbin=${PREFIX}'/bin' \
+			-D installmansrc=${PREFIX}'/man/man1' \
+			-D installprivlib=${PREFIX}'/share/trn' \
+			-D libpth=${PREFIX}'/lib /usr/lib' \
+			-D mansrc=${PREFIX}'/man/man1' \
+			-D mansrcexp=${PREFIX}'/man/man1' \
+			-D mimecap=${PREFIX}'/etc/mimecap' \
+			-D orgname=${PREFIX}'/etc/nntp/organization' \
+			-D perl=${PERL5} \
+			-D perlpath=${PERL5} \
+			-D prefix=${PREFIX} \
+			-D prefixexp=${PREFIX} \
+			-D privlib=${PREFIX}'/share/trn' \
+			-D privlibexp=${PREFIX}'/share/trn' \
+			-D servername=${PREFIX}'/etc/nntp/server' \
+			-D d_nntp \
+			-U d_local \
+			-D libs=' ' \
+			-D usevfork=false \
+			-D inews=${PREFIX}'/bin/inews' \
+			-D useinews=${PREFIX}'/bin/inews'
 
 post-install:
 	@${RM} -f ${PREFIX}/bin/rn ${PREFIX}/man/man1/rn.1 \

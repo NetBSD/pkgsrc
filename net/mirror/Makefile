@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/04/19 16:16:51 kim Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/27 02:46:05 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp 
 #
 
@@ -8,10 +8,11 @@ MASTER_SITES=	ftp://src.doc.ic.ac.uk/computing/archiving/mirror/
 
 MAINTAINER=	packages@netbsd.org
 
-USE_PERL5=	yes
+USE_PERL5=	# defined
 
-NO_WRKSUBDIR=	yes
+NO_WRKSUBDIR=	# defined
 MAKEFILE=	makefile
+SCRIPTS_ENV+=	PERL5=${PERL5}
 
 # If you are tempted to add a target that runs ${SED} (or other stuff)
 # on the files, please look at scripts/configure first.

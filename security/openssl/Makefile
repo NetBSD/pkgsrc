@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/08/21 21:01:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2000/08/27 02:46:06 jlam Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.openssl.org/
 
 CONFLICTS=		SSLeay-* ssleay-*
 
-USE_PERL5=		yes
+USE_PERL5=		# defined
 
 RESTRICTED=		"Crypto; export-controlled"
 NO_SRC_ON_FTP=	${RESTRICTED}
@@ -68,10 +68,9 @@ pre-patch:
 
 # The Perl stuff doesn't work yet (nor did it work properly in SSLeay...)
 do-configure:
-	@cd ${WRKSRC} && ${LOCALBASE}/bin/perl util/perlpath.pl ${LOCALBASE}/bin
+	@cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${LOCALBASE}/bin
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./config ${CONFIGURE_ARGS}
-#	@cd ${WRKSRC}/perl && ${SETENV} ${CONFIGURE_ENV} ${LOCALBASE}/bin/perl \
-#		Makefile.PL
+#	@cd ${WRKSRC}/perl && ${SETENV} ${CONFIGURE_ENV} ${PERL5} Makefile.PL
 
 #post-build:
 #	@cd ${WRKSRC}/perl && ${MAKE}

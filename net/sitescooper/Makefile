@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/07 16:48:56 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/27 02:46:05 jlam Exp $
 #
 
 DISTNAME=	sitescooper-2.2.8
@@ -11,13 +11,13 @@ HOMEPAGE=	http://sitescooper.cx/
 DEPENDS+=	p5-libwww>=5.46:../../www/p5-libwww
 DEPENDS+=	pilotmgr-*:../../comms/pilotmgr
 
-USE_PERL5=	YES
-NO_BUILD=	YES
+USE_PERL5=	# defined
+NO_BUILD=	# defined
 
 do-configure:
 .for file in sitescooper rss-to-site subs-to-site
 	cd ${WRKSRC} && \
-	${SED} -e 's:/usr/bin/perl:${PREFIX}/bin/perl:g' <${file}.pl >${file}
+	${SED} -e 's:/usr/bin/perl:${PERL5}:g' <${file}.pl >${file}
 .endfor
 .for file in lib/Scoop.pm sitescooper.cf
 	cd ${WRKSRC} && ${CP} ${file} ${file}.orig && \
