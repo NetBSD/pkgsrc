@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/03/04 13:13:43 sekiya Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/05 00:34:44 sekiya Exp $
 #
 
 DISTNAME=	indent-2.2.8a
@@ -15,10 +15,6 @@ COMMENT=	GNU version of pretty-printer for C source code
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
-
-CONFIG_GUESS_OVERRIDE+=	${WRKSRC}/config/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKSRC}/config/config.sub
-
 
 INFO_FILES=	indent.info
 
