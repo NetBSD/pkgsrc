@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/20 07:10:53 itohy Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/09 05:14:27 itohy Exp $
 
 DISTNAME=	skkinput-2.03
 CATEGORIES=	japanese
@@ -6,6 +6,8 @@ MASTER_SITES=	http://member.nifty.ne.jp/Tatari_SAKAMOTO/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.yajima.kuis.kyoto-u.ac.jp/staffs/sakamoto/skkinput/skkinput.html
+
+BUILD_DEFS+=	USE_INET6
 
 USE_IMAKE=	YES
 
