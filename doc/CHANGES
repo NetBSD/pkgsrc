@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9277 2005/02/23 16:07:54 wiz Exp $
+$NetBSD: CHANGES,v 1.9278 2005/02/23 16:31:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1051,3 +1051,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated glut to 6.2.1nb1 [grant 2005-02-23]
 	Updated gimp to 2.2.4 [adam 2005-02-23]
 	Updated loudmouth to 0.17.2 [wiz 2005-02-23]
+	Updated p5-Exception-Class to 1.20 [wiz 2005-02-23]
