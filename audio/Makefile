@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 1998/06/29 11:42:19 frueauf Exp $
+# $NetBSD: Makefile,v 1.21 1998/07/16 23:07:39 thorpej Exp $
 #
 
     SUBDIR += amp
     SUBDIR += cam
+    SUBDIR += cdd
     SUBDIR += cddbd
     SUBDIR += gsm
     SUBDIR += maplay
