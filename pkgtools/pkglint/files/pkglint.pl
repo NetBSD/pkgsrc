@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.63 2001/11/29 01:56:37 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.64 2002/02/13 08:42:12 abs Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -853,7 +853,7 @@ EOF
 	# check the order of items.
         @tocheck=split(/\s+/, <<EOF);
 DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME WRKSRC NO_WRKSUBDIR CATEGORIES 
-MASTER_SITES MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
+MASTER_SITES DYNAMIC_MASTER_SITES MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
 EOF
 	push(@tocheck,"ONLY_FOR_ARCHS");
 	push(@tocheck,"NO_SRC_ON_FTP");
@@ -896,9 +896,14 @@ EOF
 				print "OK: non-URL \"$i\" ok.\n"
 					if ($verbose);
 			}
+		if ($tmp !~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
+			&perror("WARN: MASTER_SITES and DYNAMIC_MASTER_SITES ".
+				"found. Is this ok?");
+			}
 		}
-	} else {
-		&perror("WARN: no MASTER_SITES found. Is this ok?");
+	} elsif ($tmp !~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
+		&perror("WARN: no MASTER_SITES or DYNAMIC_MASTER_SITES found.".
+			"Is this ok?");
 	}
 
 	# check DISTFILES and related items.
