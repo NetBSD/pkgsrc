@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2002/03/13 17:37:30 fredb Exp $
+# $NetBSD: Makefile,v 1.12 2002/04/29 17:05:06 magick Exp $
 
-DISTNAME=	gtm-0.4.10
-PKGREVISION=	1
+DISTNAME=	gtm-0.4.11
+
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtm/}
 
@@ -17,7 +17,7 @@ USE_X11BASE=	YES
 USE_GMAKE=	YES
 USE_LIBINTL=	YES
 
-post-install:
-	${RMDIR} ${PREFIX}/share/gnome/help/gtm/C/images
+#post-install:
+#	${RMDIR} ${PREFIX}/share/gnome/help/gtm/C/images
 
 .include "../../mk/bsd.pkg.mk"
