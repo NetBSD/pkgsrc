@@ -1,4 +1,4 @@
-/* nbcompat/nbconfig.h.in.  Generated from configure.ac by autoheader.  */
+/* nbcompat/config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Define to 1 if the `getpgrp' function requires zero arguments. */
 #undef GETPGRP_VOID
