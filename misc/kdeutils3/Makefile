@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/07 03:54:12 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/07 07:36:42 jlam Exp $
 
 DISTNAME=	kdeutils-3.0.3
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -12,7 +12,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 
-SPECIAL_PERMS+=	${PREFIX}/bin/efax ${ROOT_USER} ${ROOT_GROUP} 4711
+SPECIAL_PERMS+=	${PREFIX}/bin/efax ${ROOT_USER} ${ROOT_GROUP} 4755
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h)
 CPPFLAGS+=             -D__NetBSD_APM__
