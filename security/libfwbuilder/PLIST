@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 18:04:40 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/07 16:27:13 tv Exp $
 bin/libfwbuilder-config
 include/fwbuilder/Address.hh
 include/fwbuilder/AddressRange.hh
@@ -55,14 +55,8 @@ include/fwcompiler/OSConfigurator.hh
 include/fwcompiler/PolicyCompiler.hh
 include/fwcompiler/RuleProcessor.hh
 include/fwcompiler/manifest.hh
-lib/libfwbuilder.a
-lib/libfwbuilder.so
-lib/libfwbuilder.so.5
-lib/libfwbuilder.so.5.1
-lib/libfwcompiler.a
-lib/libfwcompiler.so
-lib/libfwcompiler.so.5
-lib/libfwcompiler.so.5.1
+lib/libfwbuilder.la
+lib/libfwcompiler.la
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/ChangeLog
