@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 1999/01/04 22:37:32 tv Exp $
+
+--- ld/emultempl/elf32.em.orig	Fri May  1 11:48:55 1998
++++ ld/emultempl/elf32.em	Mon Jan  4 14:11:48 1999
+@@ -342,6 +342,9 @@
+   fi
+ fi
+ cat >>e${EMULATION_NAME}.c <<EOF
++	  lib_path = (const char *) getenv ("LD_RPATH_LINK");
++	  if (gld${EMULATION_NAME}_search_needed (lib_path, l->name, force))
++	    break;
+ 	}
+ 
+       if (force < 2)

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 1998/08/26 19:35:37 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/01/04 22:37:33 tv Exp $
 #
 
-DISTVERSION=		2.01.1
+DISTVERSION=		2.02.0
 DISTFILES=		${DJGPP_FILES}
 EXTRACT_ONLY=		# none of the djgpp files
 MASTER_SITES=		ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2/ \
@@ -12,40 +12,44 @@ HOMEPAGE=		http://www.delorie.com/djgpp/
 
 BUILD_DEPENDS=		unzip:../../archivers/unzip
 
-USE_CROSS_GNU=		yes
+WRKSRC=			${WRKDIR}/djgpp
 
-DJGPP_FILES=		djcrx201.zip wmemu2b.zip
+USE_CROSS_BINUTILS=	yes
+BINUTILS_GNUTARGET=	coff-go32
+BINUTILS_LDEMULATION=	i386go32
+USE_CROSS_EGCS=		yes
+
+DJGPP_FILES=		djcrx202.zip wmemu2b.zip
 
 TARGET_ARCH=		i386-msdosdjgpp
-SYS_INCLUDE=		${WRKDIR}/djgpp/include
-SYS_LIB=		${WRKDIR}/djgpp/lib
+SYS_INCLUDE=		${WRKSRC}/include
+SYS_LIB=		${WRKSRC}/lib
 
 post-extract:
-	@${MKDIR} ${WRKDIR}/djgpp
-	@cd ${WRKDIR}/djgpp; \
+	@${MKDIR} ${WRKSRC}
+	@cd ${WRKSRC}; \
 		for file in ${DJGPP_FILES}; do \
 			unzip -Loq ${_DISTDIR}/$$file; \
 		done; \
-		echo 'Stripping CR-LF in includes...'; \
 		for file in `find include -type f`; do \
 			${CAT} $$file | col >$$file.new; \
 			${MV} -f $$file.new $$file; \
 		done
-	@${LN} -f ${SYS_LIB}/crt0.o ${WRKSRC}/gcc/
+	@${LN} -f ${SYS_LIB}/crt0.o ${EGCS_WRKSRC}/gcc/
 	@${RM} -f ${SYS_LIB}/djgpp.djl ${SYS_LIB}/specs
 
 post-patch:
-	@${RM} -f ${SYS_INCLUDE}/sys/djtypes.h.orig
+	@${RM} -f ${SYS_INCLUDE}/sys/*.orig
 
-post-build:
-	cd ${WRKDIR}/djgpp/src/stub && ${LINK.c} -o stubedit stubedit.c
-	cd ${WRKDIR}/djgpp/src/stub && ${LINK.c} -o stubify stubify.c
+do-build:
+	cd ${WRKSRC}/src/stub && ${LINK.c} -o stubedit stubedit.c
+	cd ${WRKSRC}/src/stub && ${LINK.c} -o stubify stubify.c
 
-post-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/djgpp/src/stub/stubedit ${TARGET_DIR}/bin/
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/stub/stubedit ${TARGET_DIR}/bin/
 	${LN} -f ${TARGET_DIR}/bin/stubedit ${PREFIX}/bin/${TARGET_ARCH}-stubedit
-	${INSTALL_PROGRAM} ${WRKDIR}/djgpp/src/stub/stubify ${TARGET_DIR}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/stub/stubify ${TARGET_DIR}/bin/
 	${LN} -f ${TARGET_DIR}/bin/stubedit ${PREFIX}/bin/${TARGET_ARCH}-stubify
-	${INSTALL_DATA} ${WRKDIR}/djgpp/bin/wmemu387.dxe ${TARGET_DIR}/lib/
+	${INSTALL_DATA} ${WRKSRC}/bin/wmemu387.dxe ${TARGET_DIR}/lib/
 
 .include "../COMMON/cross.mk"

@@ -1,0 +1,3 @@
+binutils-*/*/tests/*
+binutils-*/*/testsuite/*
+binutils-*/etc/*

@@ -1,8 +1,9 @@
-$NetBSD: md5,v 1.1 1998/08/12 02:44:16 tv Exp $
+$NetBSD: md5,v 1.2 1999/01/04 22:37:33 tv Exp $
 
 MD5 (libc-5.3.12-18.i386.rpm) = 0f14dc6e43739d10148af57423a14c53
 MD5 (libc-devel-5.3.12-18.i386.rpm) = c03ad5d961928d56cf90be35e827ef6e
 MD5 (libc-static-5.3.12-18.i386.rpm) = 0662b25878f2c4bb3c10ded7fcb79c92
 MD5 (kernel-headers-2.0.30-2.i386.rpm) = cc3a5ce8114f7885b483e057180eabee
 MD5 (binutils-2.9.1.tar.gz) = 8f9ad1a6e96742fd3069479171a63c22
-MD5 (egcs-19980803.tar.gz) = 3c6e28dd25140187e322c890231bfc72
+MD5 (egcs-1.1.1.tar.gz) = 0b3f0e856dcbb2241c183081fc7271af
+MD5 (egcs-1.1.1-NetBSD-19980104.diff.gz) = f6496aa337d9e7289b91cc834d7d3401
