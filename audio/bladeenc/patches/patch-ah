@@ -1,0 +1,25 @@
+$NetBSD: patch-ah,v 1.1 1999/09/13 03:33:35 simonb Exp $
+
+--- huffman.c.orig	Sat Jul 24 07:50:33 1999
++++ huffman.c	Mon Sep 13 12:53:06 1999
+@@ -111,9 +111,9 @@
+          return (-4);
+       }
+ #ifdef NO_ZERO_CALLOC
+-      ht[n].hlen=(unsigned char *) calloc((xl*yl)+1,sizeof(unsigned char));
++      ht[n].hlen=(u_int8_t *) calloc((xl*yl)+1,sizeof(u_int8_t));
+ #else
+-      ht[n].hlen=(unsigned char *) calloc(xl*yl,sizeof(unsigned char));
++      ht[n].hlen=(u_int8_t *) calloc(xl*yl,sizeof(u_int8_t));
+ #endif
+       if (ht[n].hlen == NULL) {
+          fprintf(stderr,"unsufficient heap error\n");
+@@ -143,7 +143,7 @@
+                n,i,j);
+           };
+           ht[n].table[i*xl+j] = h;
+-          ht[n].hlen[i*xl+j] = (unsigned char) len;
++          ht[n].hlen[i*xl+j] = (u_int8_t) len;
+           do {
+             strcpy( line, aHuffcode[index++] );
+ /*                                      fgets(line,99,fi); */

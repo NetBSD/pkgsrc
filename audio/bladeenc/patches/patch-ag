@@ -1,0 +1,29 @@
+$NetBSD: patch-ag,v 1.1 1999/09/13 03:33:35 simonb Exp $
+
+--- encoder.h.orig	Sat Jul 24 07:50:33 1999
++++ encoder.h	Mon Sep 13 12:52:54 1999
+@@ -118,9 +118,9 @@
+ 
+ /* The following functions are in the file "musicin.c" */
+ 
+-extern void   obtain_parameters(frame_params*, int*, unsigned long*,
++extern void   obtain_parameters(frame_params*, int*, unsigned int*,
+                            char[MAX_NAME_SIZE], char[MAX_NAME_SIZE]);
+-extern void   parse_args(int, char**, frame_params*, int*, unsigned long*,
++extern void   parse_args(int, char**, frame_params*, int*, unsigned int*,
+                            char[MAX_NAME_SIZE], char[MAX_NAME_SIZE]);
+ extern void   print_config(frame_params*, int*,
+                            char[MAX_NAME_SIZE], char[MAX_NAME_SIZE]);
+@@ -129,9 +129,9 @@
+ 
+ /* The following functions are in the file "encode.c" */
+ 
+-extern unsigned long    read_samples(FILE*, short[2304], unsigned long,
+-                           unsigned long);
+-extern unsigned long    get_audio(FILE*, short[2][1152], unsigned long,
++extern unsigned int    read_samples(FILE*, short[2304], unsigned int,
++                           unsigned int);
++extern unsigned int    get_audio(FILE*, short[2][1152], unsigned int,
+                            int, layer* info);
+ extern void   read_ana_window(double[HAN_SIZE]);
+ extern void   window_subband(short**, double[HAN_SIZE], int);
