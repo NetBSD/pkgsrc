@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/15 15:55:00 drochner Exp $
+qt3/include/qextscintilla.h
+qt3/include/qextscintillaapis.h
+qt3/include/qextscintillabase.h
+qt3/include/qextscintillacommand.h
+qt3/include/qextscintillacommandset.h
+qt3/include/qextscintillaglobal.h
+qt3/include/qextscintillalexer.h
+qt3/include/qextscintillalexercpp.h
+qt3/include/qextscintillalexercsharp.h
+qt3/include/qextscintillalexerhtml.h
+qt3/include/qextscintillalexeridl.h
+qt3/include/qextscintillalexerjava.h
+qt3/include/qextscintillalexerjavascript.h
+qt3/include/qextscintillalexerpython.h
+qt3/include/qextscintillalexersql.h
+qt3/include/qextscintillamacro.h
+qt3/include/qextscintillaprinter.h
+qt3/lib/libqscintilla.a
+qt3/lib/libqscintilla.la
+qt3/lib/libqscintilla.so
+qt3/lib/libqscintilla.so.2
+qt3/lib/libqscintilla.so.2.0
