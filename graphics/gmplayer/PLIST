@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/04/21 20:36:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/07/24 12:56:52 tron Exp $
 bin/gmplayer
 man/man1/gmplayer.1
 share/mplayer/Skin/AlienMind/README
@@ -524,7 +524,6 @@ share/mplayer/Skin/xine-lcd/sub.png
 share/mplayer/Skin/xine-lcd/volume.png
 @dirrm share/mplayer/Skin/xine-lcd
 @dirrm share/mplayer/Skin/xanim
-@dirrm share/mplayer/Skin/trium
 @dirrm share/mplayer/Skin/slim
 @dirrm share/mplayer/Skin/proton
 @dirrm share/mplayer/Skin/plastic
