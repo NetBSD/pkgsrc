@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/09/25 13:51:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.51 2003/09/26 10:39:15 martti Exp $
 #
 
 COMMENT=	Window managers (for X)
@@ -64,5 +64,7 @@ SUBDIR+=	wmextra
 SUBDIR+=	wmthemes
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
+SUBDIR+=	xfce4-wm
+SUBDIR+=	xfce4-wm-themes
 
 .include "../mk/bsd.pkg.subdir.mk"
