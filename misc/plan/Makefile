@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/02/09 22:17:45 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/11 09:55:51 agc Exp $
 #
 
 DISTNAME=	plan-1.8.2
@@ -14,11 +14,11 @@ USE_MOTIF=	YES
 ALL_TARGET=	netbsd
 
 pre-install:
-	${MKDIR} ${X11BASE}/libexec/plan ${X11BASE}/share/plan \
-		${X11BASE}/share/plan/holiday
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/holiday/holiday_* ${X11BASE}/share/plan/holiday
-.for file in HISTORY README
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/${file} ${X11BASE}/share/plan
-.endfor
+	${MKDIR} ${X11PREFIX}/libexec/plan ${X11PREFIX}/share/plan \
+		${X11PREFIX}/share/plan/holiday
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/holiday/holiday_* ${X11PREFIX}/share/plan/holiday
+	for f in HISTORY README; do					\
+		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${X11PREFIX}/share/plan; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
