@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux,v 1.1 2002/09/29 22:51:39 jschauma Exp $
+@comment $NetBSD: PLIST.linux,v 1.3 2002/09/30 13:45:47 jschauma Exp $
 lib/netscape/netscape7/libgmodule-1.2.so.0
 lib/netscape/netscape7/libglib-1.2.so.0
 lib/netscape/netscape7/libstdc++-libc6.1-1.so.2
