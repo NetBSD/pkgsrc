@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/18 16:25:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/14 11:31:12 xtraeme Exp $
 
 DISTNAME=		libjpeg
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -12,7 +12,7 @@ COMMENT=		Linux compatibility package for the JPEG library
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
