@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:22 agc Exp $
+
+MD5 (kdeutils-1.1.2.tar.bz2) = 43ca9fcd2c9f3842201f4d5848cd32d9
+SHA1 (patch-aa) = e174a2883b2dfc97675e40513bb4b58ca61aafe6

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:46 agc Exp $
+
+MD5 (randlib.c-1.3.tar.gz) = 1cd3a8f8424f43862199484e2c9668dd
+SHA1 (patch-aa) = d4ec41f0dc0da1ebc4facff2066a21f1746e3526

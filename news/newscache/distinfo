@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:02 agc Exp $
+
+MD5 (NewsCache-0.99.15.tar.gz) = f2358e3bfb2ffa0086ce329161439616
+SHA1 (patch-aa) = 875f37be9f753c638af4fc868958439156c424ce
+SHA1 (patch-ab) = 30da9db48ce320a5e21bb74a38cdbff05b3db28c
+SHA1 (patch-ac) = f53a37461ef03e9f73ef8dc1509c0072ac6ea528
+SHA1 (patch-ad) = 93ca8786fea2c745587e6acdc9ec8f422cdbe8ee
+SHA1 (patch-ae) = 223f000653fe32953fcb743a71e4bd3b0b201def

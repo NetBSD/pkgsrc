@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:40 agc Exp $
+
+MD5 (pspp-0.3.0.tar.gz) = e01db3c380604220caa36100f7239bdf
+SHA1 (patch-aa) = 7d332aa82e51da9192cefd6a450d20e2d7c493c8
+SHA1 (patch-ab) = b6e70c52e780cd58fc8bed770b22642e0d67d820
+SHA1 (patch-ac) = 9b7c87e6729616b3c21d683764719c894480624a
+SHA1 (patch-ad) = 1ace1a75fdc0df11b7fe74358660efc8ab6ca914
+SHA1 (patch-ae) = 9f3f6cbe2817ab5282e70559e245cf7df0016ba3
+SHA1 (patch-ag) = 3a565a2becf76af67e1cf6b443ed51e24b4fd0f0
+SHA1 (patch-ah) = 8fd5821c09fcc5ea4f96a198186c99e0d958842d

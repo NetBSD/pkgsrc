@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:36 agc Exp $
+
+MD5 (xmailbox-2.5.tar.gz) = 31ac48e470724267ec00f8f93ccf22af
+SHA1 (patch-aa) = 31682497caef92bed7b0cde4c1ace990079938af
+SHA1 (patch-ab) = de5e0dc8ec927827c156d61a1e4291ddaa6973dc
