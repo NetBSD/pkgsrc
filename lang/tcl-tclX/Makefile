@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/09/06 16:40:03 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/06 16:47:31 jwise Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -10,6 +10,8 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.neosoft.com/TclX/
 
 DEPENDS+=	tcl-8.3.2:../../lang/tcl
+
+CONFLICTS+=	tclX-*
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

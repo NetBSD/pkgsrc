@@ -1,3 +1,4 @@
+$NetBSD: patch-af,v 1.2 2000/09/06 16:47:32 jwise Exp $
 --- ../tk/unix/Makefile.in.orig	Sun Feb  6 19:54:01 2000
 +++ ../tk/unix/Makefile.in	Wed Sep  6 11:52:31 2000
 @@ -65,8 +65,8 @@
