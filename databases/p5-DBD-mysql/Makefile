@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/05/11 19:27:21 christos Exp $
+# $NetBSD: Makefile,v 1.6 2000/05/25 08:08:30 rh Exp $
 #
 
 DISTNAME=	Msql-Mysql-modules-1.2214
@@ -16,14 +16,14 @@ DEPENDS+=	p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable
 
 USE_PERL5=	YES
 
-MYSQL_HEADERDIR=	${LOCALBASE}/include/mysql
-MYSQL_LIBDIR=	${LOCALBASE}/lib/mysql
+MYSQL_HEADERDIR= ${PREFIX}/include/mysql
+MYSQL_LIBDIR=	${PREFIX}/lib/mysql
 
 CONFIGURE_ENV+=	MYSQL_HEADERDIR="${MYSQL_HEADERDIR}"
 CONFIGURE_ENV+=	MYSQL_LIBDIR="${MYSQL_LIBDIR}"
 CONFIGURE_ENV+=	IN_MYSQL_DISTRIBUTION=1
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} ${LOCALBASE}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL --noprompt --mysql-install --nomsql-install --nomsql1-install --mysql-incdir=${MYSQL_HEADERDIR} --mysql-libdir=${MYSQL_LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"
