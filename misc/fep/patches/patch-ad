@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2000/02/07 03:18:11 christos Exp $
+
+--- fep_defs.h.orig	Mon May 10 01:23:33 1993
++++ fep_defs.h	Sun Feb  6 21:07:33 2000
+@@ -5,7 +5,7 @@
+     "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ad,v 1.1 2000/02/07 03:18:11 christos Exp $ (SRA)"
+ #endif lint
+ 
+-#define	MAXCOMLEN		512	/* maximum command length */
++#define	MAXCMDLEN		512	/* maximum command length */
+ #define MAXARGS			64	/* maximum number of arguments */
+ #define ON			1	/* on switch */
+ #define OFF			0	/* off switch */
