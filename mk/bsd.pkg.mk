@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.310 1999/08/10 05:06:36 christos Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.311 1999/08/10 10:48:23 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -703,31 +703,31 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 .endif
 
 ################################################################
-# Many ways to disable a port.
+# Many ways to disable a package.
 #
-# If we're in BATCH mode and the port is interactive, or we're
-# in interactive mode and the port is non-interactive, skip all
+# If we're in BATCH mode and the package is interactive, or we're
+# in interactive mode and the package is non-interactive, skip all
 # the important targets.  The reason we have two modes is that
 # one might want to leave a build in BATCH mode running
 # overnight, then come back in the morning and do _only_ the
 # interactive ones that required your intervention.
 #
-# Don't attempt to build ports that require Motif if you don't
+# Don't attempt to build packages that require Motif if you don't
 # have Motif.
 #
-# Ignore ports that can't be resold if building for a CDROM.
+# Ignore packages that can't be resold if building for a CDROM.
 #
-# Don't build a port if it's restricted and we don't want to get
+# Don't build a package if it's restricted and we don't want to get
 # into that.
 #
-# Don't build a port if it's broken.
+# Don't build a package if it's broken.
 ################################################################
 
 .if !defined(NO_IGNORE)
 .if (defined(IS_INTERACTIVE) && defined(BATCH))
-IGNORE=	"is an interactive port"
+IGNORE=	"is an interactive package"
 .elif (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
-IGNORE=	"is not an interactive port"
+IGNORE=	"is not an interactive package"
 .elif (defined(NO_CDROM) && defined(FOR_CDROM))
 IGNORE=	"may not be placed on a CDROM: ${NO_CDROM}"
 .elif (defined(RESTRICTED) && defined(NO_RESTRICTED))
@@ -786,7 +786,7 @@ DEPENDS_TARGET=	install
 # disabling some bit of default target behavior you don't want.
 # They still check to see if the target exists, and if so don't
 # do anything, since you might want to set this globally for a
-# group of ports in a Makefile.inc, but still be able to
+# group of packages in a Makefile.inc, but still be able to
 # override from an individual Makefile.
 ################################################################
 
@@ -1163,7 +1163,7 @@ PLIST_SRC=
 .endif  # !PLIST_SRC
 
 ################################################################
-# This is the "generic" port target, actually a macro used from the
+# This is the "generic" package target, actually a macro used from the
 # six main targets.  See below for more.
 ################################################################
 
@@ -1214,7 +1214,7 @@ root-install:
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "===>  $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "      If so, you may wish to \`\`pkg_delete $$found'' and install"; \
-		${ECHO_MSG} "      this port again by \`\`${MAKE} reinstall'' to upgrade it properly."; \
+		${ECHO_MSG} "      this package again by \`\`${MAKE} reinstall'' to upgrade it properly."; \
 		${ECHO_MSG} "      If you really wish to overwrite the old package of $$found"; \
 		${ECHO_MSG} "      without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
 		${ECHO_MSG} "      in your environment or the \"${MAKE} install\" command line."; \
@@ -1224,7 +1224,7 @@ root-install:
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` != ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "===>  Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "      If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
-		${ECHO_MSG} "      and install this port again by \`\`${MAKE} deinstall reinstall''."; \
+		${ECHO_MSG} "      and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
 .if !defined(NO_MTREE)
@@ -2032,7 +2032,7 @@ binpkg-list:
 # This target generates an index entry suitable for aggregation into
 # a large index.  Format is:
 #
-# distribution-name|port-path|installation-prefix|comment| \
+# distribution-name|package-path|installation-prefix|comment| \
 #  description-file|maintainer|categories|build deps|run deps|for arch
 #
 .if !target(describe)
@@ -2155,7 +2155,7 @@ show-pkgtools-version:
 .if !target(print-depends-list)
 print-depends-list:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS)
-	@${ECHO} -n 'This port requires package(s) "'
+	@${ECHO} -n 'This package requires package(s) "'
 	@${ECHO} -n `${MAKE} depends-list | sort -u`
 	@${ECHO} '" to build.'
 .endif
@@ -2164,14 +2164,14 @@ print-depends-list:
 .if !target(print-package-depends)
 print-package-depends:
 .if defined(RUN_DEPENDS) || defined(DEPENDS)
-	@${ECHO} -n 'This port requires package(s) "'
+	@${ECHO} -n 'This package requires package(s) "'
 	@${ECHO} -n "`${MAKE} package-depends | sort -u`"
 	@${ECHO} '" to run.'
 .endif
 .endif
 
 # Fake installation of package so that user can pkg_delete it later.
-# Also, make sure that an installed port is recognized correctly in
+# Also, make sure that an installed package is recognized correctly in
 # accordance to the @pkgdep directive in the packing lists
 
 .if !target(fake-pkg)
@@ -2266,7 +2266,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	fi
 .endif
 
-# Depend is generally meaningless for arbitrary ports, but if someone wants
+# Depend is generally meaningless for arbitrary packages, but if someone wants
 # one they can override this.  This is just to catch people who've gotten into
 # the habit of typing `${MAKE} depend all install' as a matter of course.
 #
