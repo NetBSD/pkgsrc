@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1999/09/19 04:24:53 jlam Exp $
+# $NetBSD: Makefile,v 1.41 1999/09/20 03:56:25 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -36,11 +36,16 @@ HAS_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-# If you want to use the tcl/tk frontend pgaccess, then you need to build
-# postgresql with tcl support by defining `PGSQL_USE_TCL=' in /etc/mk.conf
-# or by typing: ${MAKE} PGSQL_USE_TCL=.
+# If you don't want to use the Tcl/Tk frontend pgaccess, then you need to
+# remove Tcl/Tk support by defining `PGSQL_USE_TCL=NO' in /etc/mk.conf
+# or by typing: ${MAKE} PGSQL_USE_TCL=NO.
 #
-.if defined(PGSQL_USE_TCL)
+
+# Default to building with Tcl/Tk interface.
+#
+PGSQL_USE_TCL?=		YES
+
+.if (${PGSQL_USE_TCL} == "YES")
 DEPENDS+=		tcl-8.0.5:../../lang/tcl80
 DEPENDS+=		tk-8.0.5:../../x11/tk80
 
@@ -63,12 +68,12 @@ PGUSER?=		pgsql
 PGGROUP?=		ingres
 PGPREFIX=		${PREFIX}/${PGUSER}
 
-BUILD_DEFS=		PGUSER PGROUP
+BUILD_DEFS=		PGUSER PGROUP PGSQL_USE_TCL
 MESSAGE_FILE=		${FILESDIR}/post-install-notes
 REQ_FILE=		${WRKDIR}/REQ
 
 PLIST_SRC=		${PKGDIR}/PLIST.notcl
-.if defined(PGSQL_USE_TCL)
+.if (${PGSQL_USE_TCL} == "YES")
 PLIST_SRC+=		${PKGDIR}/PLIST.tcl
 .endif
 PLIST_SRC+=		${PKGDIR}/PLIST.doc ${PKGDIR}/PLIST.dirrm
@@ -98,15 +103,17 @@ pre-extract:
 		${ECHO} "";						\
 		${FALSE};						\
 	fi)
-.if defined(PGSQL_USE_TCL)
-	@${ECHO} "Building PostgreSQL with \"libpgtcl\"."
-.else
-	@${ECHO} "To build the \"PostgreSQL Tcl interface library\","
-	@${ECHO} "libpgtcl, type: \"${MAKE} PGSQL_USE_TCL=\"."
-.endif
+
+post-extract:
+	@${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
 
 pre-build:
-	@${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
+.if ${PGSQL_USE_TCL} == "YES"
+	@${ECHO} "Building PostgreSQL with \"libpgtcl\"."
+.else
+	@${ECHO} "To build without the \"PostgreSQL Tcl interface library\","
+	@${ECHO} "libpgtcl, type: \"${MAKE} PGSQL_USE_TCL=NO\"."
+.endif
 
 post-build:
 	@${ECHO} "------------------------------------------------------------"
