@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.304 2003/07/28 08:08:59 seb Exp $
+# $NetBSD: Packages.txt,v 1.305 2003/08/09 10:25:43 seb Exp $
 ###########################################################################
 
 			==========================
@@ -2333,11 +2333,6 @@ If the package does not use the buildlink2 framework patch files are likely
 to be needed so the build and installation process of the software
 picks up the -possibly dummys- values of INSTALL_INFO and MAKEINFO in the
 environment.
-
-*NOTE* Temporally the variable USE_NEW_TEXINFO must be defined in the
-package Makefile. Previously info files, install-info and makeinfo
-were handled somewhat differently and the two ways will coexist for
-a short period of time until all older packages are updated.
 
  10.25 Packages whose distfiles aren't available for plain downloading
  =====================================================================
