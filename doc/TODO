@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1903 2004/07/06 13:34:37 recht Exp $
+$NetBSD: TODO,v 1.1904 2004/07/06 23:26:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -247,6 +247,7 @@ Suggested package updates
 	o grhino-0.12.0
 	o groff-1.19.1
 	o gsasl-0.1.1
+	o gsed-4.1.1
 	o gss-0.0.11
 	o gtar-1.14
 	o gtetrinet-0.7.4
