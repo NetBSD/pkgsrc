@@ -1,0 +1,65 @@
+$NetBSD: patch-ab,v 1.13 2002/02/05 00:36:26 taca Exp $
+
+--- configure.orig	Sun Feb  3 09:46:35 2002
++++ configure
+@@ -19,6 +19,8 @@
+ ac_help="$ac_help
+   --with-lockdir=DIR      Where to put lock files ($ac_default_prefix/var/locks)"
+ ac_help="$ac_help
++  --with-piddir=DIR      Where to put lock files (\${VARDIR}/run)"
++ac_help="$ac_help
+   --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)"
+ ac_help="$ac_help
+   --with-configdir=DIR    Where to put configuration files (\$libdir)"
+@@ -604,6 +606,7 @@
+   codepagedir="\$(DATADIR)/samba/codepages"
+     configdir="${sysconfdir}/samba"
+     lockdir="\${VARDIR}/cache/samba"
++    piddir="\$(VARDIR)/run"
+     logfilebase="\${VARDIR}/log/samba"
+     privatedir="\${CONFIGDIR}/private"
+     swatdir="\${DATADIR}/samba/swat"
+@@ -611,7 +614,8 @@
+   codepagedir="\$(LIBDIR)/codepages"
+     configdir="\$(LIBDIR)"
+     lockdir="\$(VARDIR)/locks"
+-    logfilebase="\$(VARDIR)"
++    piddir="\${VARDIR}/run"
++    logfilebase="\$(VARDIR)/log"
+     privatedir="\${prefix}/private"
+     swatdir="\${prefix}/swat"
+ fi
+@@ -656,6 +660,25 @@
+ 
+ 
+ #################################################
++# set pid directory location
++# Check whether --with-piddir or --without-piddir was given.
++if test "${with_piddir+set}" = set; then
++  withval="$with_piddir"
++   case "$withval" in
++  yes|no)
++  #
++  # Just in case anybody calls it without argument
++  #
++    echo "configure: warning: --with-piddir called without argument - will use default" 1>&2
++  ;;
++  * )
++    piddir="$withval"
++    ;;
++  esac
++fi
++
++
++#################################################
+ # set SWAT directory location
+ # Check whether --with-swatdir or --without-swatdir was given.
+ if test "${with_swatdir+set}" = set; then
+@@ -13167,6 +13190,7 @@
+ s%@configdir@%$configdir%g
+ s%@lockdir@%$lockdir%g
+ s%@logfilebase@%$logfilebase%g
++s%@piddir@%$piddir%g
+ s%@privatedir@%$privatedir%g
+ s%@swatdir@%$swatdir%g
+ s%@RUNPROG@%$RUNPROG%g
