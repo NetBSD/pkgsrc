@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4704 2004/02/06 18:55:04 jmmv Exp $
+$NetBSD: CHANGES,v 1.4705 2004/02/06 19:10:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -669,3 +669,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated intltool to 0.30 [minskim 2004-02-06]
 	Updated gnome2-games to 2.4.2 [jmmv 2004-02-06]
 	Updated gnome-mime-data to 2.4.1 [jmmv 2004-02-06]
+	Updated gnome-vfs2 to 2.4.2 [jmmv 2004-02-06]
