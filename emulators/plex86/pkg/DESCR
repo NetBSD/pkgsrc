@@ -1,0 +1,18 @@
+   The  goal of the Plex86 project is to create an extensible open source
+   PC virtualization software program which will allow PC and workstation
+   users  to  run  multiple  operating  systems  concurrently on the same
+   machine.
+
+   Plex86  will  run  as  much  of  the  operating system and application
+   software  natively  as  possible,  the  rest  being emulated by the PC
+   virtualization monitor.
+
+   A  highly  visible  and  often  requested  use,  would be to allow for
+   Windows  software  to  be  run  inside of GNU/Linux or other UNIX like
+   operating  system.  This  gives  users  a migration path towards UNIX,
+   allowing   them   to   run  legacy  software  until  native  ports  or
+   alternatives  are available. It also provides a transitionary step for
+   software  vendors who plan to port their product to UNIX, but have not
+   yet done so. Users could buy the Windows version product and run it at
+   near  native speeds on UNIX, using Plex86, until a UNIX native version
+   is ready.

@@ -1,0 +1,16 @@
+===========================================================================
+
+plex86 has been compiled, but must be run in-place for now. To do so, do:
+
+ * su
+ * cd work*/plex86/.
+ * cd misc
+ * modload -e plex86_lkmentry -p netbsd_post.sh ../kernel/plex86.o
+ * mkfontdir `pwd`
+ * xset fp+ `pwd`
+ * cd ../conf
+ * Set up a config file (manuall edit necessary!)
+ * cd ../user
+ * ./plex86 -f ../conf/yourconfigfile
+
+===========================================================================
