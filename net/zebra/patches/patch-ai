@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 2003/12/29 21:59:01 heas Exp $
+
+--- configure.ac.orig	2003-12-22 03:44:07.000000000 +0000
++++ configure.ac	2003-12-22 04:13:39.000000000 +0000
+@@ -216,6 +216,7 @@
+   "no" ) VTYSH="";;
+   *    ) ;;
+ esac
++AM_CONDITIONAL([VTY_OPT], [test "${enable_vtysh}" = yes])
+ 
+ dnl ----------
+ dnl PAM module
+@@ -511,6 +512,7 @@
+   AC_MSG_RESULT(IPv4 only)
+ fi
+ fi
++AM_CONDITIONAL([V6_OPT], [test "${enable_ipv6}" = yes])
+ 
+ dnl --------------------
+ dnl Daemon disable check

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.v6,v 1.1 2001/10/31 23:13:40 zuntum Exp $
+@comment $NetBSD: PLIST.v6,v 1.2 2003/12/29 21:59:01 heas Exp $
 man/man8/ospf6d.8
 man/man8/ripngd.8
 sbin/ospf6d
