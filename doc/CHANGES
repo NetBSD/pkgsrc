@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4263 2003/12/27 16:56:38 seb Exp $
+$NetBSD: CHANGES,v 1.4264 2003/12/27 19:19:51 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libxml2 to 2.6.4 [jmmv 2003-12-26]
 	Updated libxslt to 1.1.2 [jmmv 2003-12-26]
 	Updated isync to 0.9.2 [seb 2003-12-27]
+	Updated spamassassin to 2.61 [heinz 2003-12-27]
