@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2000/09/01 16:22:00 jwise Exp $
---- configure.orig	Tue Aug  8 15:19:32 2000
-+++ configure	Thu Aug 31 12:35:15 2000
+$NetBSD: patch-ab,v 1.5 2001/04/18 18:15:41 jwise Exp $
+
+--- configure.orig	Tue Aug  8 19:19:32 2000
++++ configure
 @@ -1873,6 +1873,7 @@
  		SHLIB_LD="ld -Bshareable -x"
  		SHLIB_LD_LIBS=""
@@ -27,6 +28,17 @@ $NetBSD: patch-ab,v 1.4 2000/09/01 16:22:00 jwise Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
+@@ -3415,8 +3416,8 @@
+ if test "x${x_libraries}" != "x"; then
+     LIB_RUNTIME_DIR="${LIB_RUNTIME_DIR}:${x_libraries}"
+ fi
+-if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
+-    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
++if test "${TCL_LD_SEARCH_FLAGS}" = '-Wl,-rpath,${LIB_RUNTIME_DIR}'; then
++    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -Wl,-rpath,/g'`
+ fi
+ 
+ # The statement below is very tricky!  It actually *evaluates* the
 @@ -4088,7 +4089,7 @@
  if test "${SHARED_BUILD}" = "1" -a "${SHLIB_SUFFIX}" != ""; then
      TK_SHLIB_CFLAGS="${SHLIB_CFLAGS}"
