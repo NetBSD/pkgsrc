@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2002/09/12 00:43:50 wiz Exp $
+
+--- src/main.c.orig	Tue Sep 10 09:36:42 2002
++++ src/main.c
+@@ -27,6 +27,7 @@
+ #ifdef __FreeBSD__
+ #include <floatingpoint.h>
+ #endif
++#include <locale.h>
+ #include <string.h>
+ 
+ #include <popt.h>

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/10 06:36:09 manu Exp $
+$NetBSD: distinfo,v 1.2 2002/09/12 00:43:49 wiz Exp $
 
-SHA1 (sodipodi-0.23.tar.gz) = 28653daccd0f72eb822cb46f30dd602038788dda
-Size (sodipodi-0.23.tar.gz) = 1133185 bytes
+SHA1 (sodipodi-0.25.tar.gz) = 6c2b056c3c3f76a8581a92487dea3dcc094154f8
+Size (sodipodi-0.25.tar.gz) = 1260296 bytes
 SHA1 (patch-aa) = 15fa39918a35e36dacfc8e397af7de0cac182b5c
+SHA1 (patch-ab) = 3410f7cc009c4777515eaacd4279f7608337d200
