@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/11/28 18:48:16 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/16 00:35:08 wiz Exp $
 
 .include "../gdk-pixbuf/Makefile.common"
 
@@ -7,11 +7,11 @@ COMMENT=	the GNOME image loading library GNOME canvas support add-on
 
 CONFLICTS+=	gdk-pixbuf<0.10.1
 
-BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.11.0nb1
-
 USE_X11=	# defined
-# gtk-doc wants an X11 DISPLAY during build, so disable it
-CONFIGURE_ENV+=	GTKDOC=false
+# don't enable the next line -- else the package will conflict
+# with gtk2!
+# CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gdk-pixbuf/gnome-canvas-pixbuf.h \
