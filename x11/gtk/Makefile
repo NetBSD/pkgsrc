@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.35 1999/10/07 17:42:00 tron Exp $
+# $NetBSD: Makefile,v 1.36 1999/10/22 23:35:04 tron Exp $
 
-DISTNAME=	gtk+-1.2.4
+DISTNAME=	gtk+-1.2.6
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
 		http://www.ameth.org/gimp/pub/gtk/v1.2/ \
 		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.2/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gtk.org/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	glib-1.2.4:../../devel/glib
+DEPENDS+=	glib-1.2.*:../../devel/glib
 BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 USE_LIBTOOL=	yes
@@ -25,10 +25,16 @@ INFO_FILES=	gdk.info gtk.info
 
 CPPFLAGS=	-I${LOCALBASE}/include				# libintl.h
 LDFLAGS=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lintl
+PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
 
 # The following ensures that `gtk-config --libs' includes the correct linker
 # flags for linking the X11 libs.
 #
 X_LDFLAGS=	-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+
+post-install:
+	${TEST} ${PREFIX} = ${LOCALBASE} || \
+	${LN} -fs ${PREFIX}/share/aclocal/gtk.m4 \
+	  ${LOCALBASE}/share/aclocal/gtk.m4
 
 .include "../../mk/bsd.pkg.mk"
