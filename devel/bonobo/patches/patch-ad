@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2002/09/21 10:38:57 jlam Exp $
+
+--- storage-modules/Makefile.in.orig	Sat Sep 21 03:15:12 2002
++++ storage-modules/Makefile.in
+@@ -186,8 +186,7 @@ libstorage_efs_la_SOURCES = \
+ 
+ libstorage_efs_la_LDFLAGS = \
+ 	$(common_ldflags) 			\
+-	-L$(top_builddir)/libefs/src		\
+-	-lefs
++	$(top_builddir)/libefs/src/libefs.la
+ 
+ 
+ #
