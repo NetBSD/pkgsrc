@@ -1,0 +1,27 @@
+# $NetBSD: Makefile.common,v 1.1 2004/01/22 12:43:10 jmmv Exp $
+#
+
+DISTNAME=	librsvg-2.5.0
+CATEGORIES=	graphics gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.5/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://librsvg.sourceforge.net/
+COMMENT=	SVG library for GNOME2
+
+DISTINFO_FILE=		${.CURDIR}/../../graphics/librsvg2/distinfo
+PATCHDIR=		${.CURDIR}/../../graphics/librsvg2/patches
+
+USE_BUILDLINK2=		YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/librsvg-2.0.pc.in
+
+CONFIGURE_ARGS+=	--disable-gtk-doc
+CONFIGURE_ARGS+=	--with-gimp=no
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/librsvg2
+
+.include "../../x11/gtk2/buildlink2.mk"

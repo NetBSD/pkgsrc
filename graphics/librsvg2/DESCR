@@ -1,2 +1,4 @@
-  This is the GNOME 2.0 platform development version of
-librsvg, Raph's scalable vector graphics library.
+librsvg is Raph's scalable vector graphics library.  It provides support for
+SVG graphics, and is used by the GNOME 2 desktop.
+
+This package provides the librsvg2 library.
