@@ -1,35 +1,37 @@
-$NetBSD: patch-ac,v 1.1 2001/02/06 10:58:18 itojun Exp $
+$NetBSD: patch-ac,v 1.2 2001/10/08 13:23:37 martti Exp $
 
---- htdocs/index.html.en.orig	Fri Jan 19 14:39:47 2001
-+++ htdocs/index.html.en
-@@ -33,12 +33,26 @@
- <HR WIDTH="50%" SIZE="8">
+--- htdocs/index.html.en.orig	Fri May  4 02:00:38 2001
++++ htdocs/index.html.en	Mon Oct  8 14:33:54 2001
+@@ -27,12 +27,31 @@
  
- <p>The Apache <A HREF="manual/">documentation</A> has been included with
--this distribution.</p>
-+this distribution.  If the <STRONG>mod_ssl</STRONG> SSL extension has
+ <hr width="50%" size="8" />
+ <p>The Apache <a href="manual/">documentation</a> has been included
++this distribution. If the <STRONG>mod_ssl</STRONG> SSL extension has
 +been installed, then please carefully read the
-+<A HREF="manual/mod/mod_ssl/index.html">SSL documentation</A>.</p>
++<a href="manual/mod/mod_ssl/index.html">SSL documentation</a>.</p>
+ with this distribution.</p>
  
--<p>You are free to use the image below on an Apache-powered web server. 
--Thanks for using Apache!</p>
 +<p>Information on the NetBSD multi-platform operating system can be found at
-+<A HREF="http://www.netbsd.org/">The NetBSD Project homepage</A></p>
- 
--<DIV ALIGN="CENTER"><IMG SRC="apache_pb.gif" ALT=""></DIV>
-+<p>Please feel free to use the images below on an Apache/NetBSD-powered web
-+server.  Thanks for using
-+<A HREF="http://www.apache.org/">Apache</A> on
-+<A HREF="http://www.netbsd.org/">NetBSD</A>!</p>
++<a href="http://www.netbsd.org/">The NetBSD Project homepage</a></p>
 +
-+<DIV ALIGN="CENTER">
-+ <A HREF="http://www.apache.org/">
-+  <IMG SRC="apache_pb.gif" BORDER=0 ALT="Powered by Apache">
-+ </A>
-+ <A HREF="http://www.netbsd.org/">
-+  <IMG SRC="sitedrivenby.gif" BORDER=0 ALT="Site driven by NetBSD">
-+ </A>
-+</DIV>
+ <p>You are free to use the image below on an Apache-powered web
+ server. Thanks for using Apache!</p>
  
- </BODY>
- </HTML>
+-<div align="center"><img src="apache_pb.gif" alt="" /></div>
++<p>Please feel free to use the images below on an Apache/NetBSD-powered web
++server. Thanks for using
++<a href="http://www.apache.org/">Apache</a> on
++<a href="http://www.netbsd.org/">NetBSD</a>!</p>
++
++<div align="CENTER">
++ <a href="http://www.apache.org/">
++  <img src="apache_pb.gif" border=0 alt="Powered by Apache">
++ </a>
++ <a href="http://www.netbsd.org/">
++  <img src="sitedrivenby.gif" border=0 alt="Site driven by NetBSD">
++ </a>
++</div>
++
+ </body>
+ </html>
+ 

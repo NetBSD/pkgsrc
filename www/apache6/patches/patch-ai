@@ -1,14 +1,14 @@
-$NetBSD: patch-ai,v 1.1 2001/02/06 10:58:19 itojun Exp $
+$NetBSD: patch-ai,v 1.2 2001/10/08 13:23:38 martti Exp $
 
---- src/support/apxs.pl.orig	Fri Feb  2 00:42:14 2001
-+++ src/support/apxs.pl
-@@ -427,8 +427,7 @@
-         my $t = $f;
-         $t =~ s|^.+/([^/]+)$|$1|;
-         if ($opt_i) {
--            push(@cmds, "cp $f $CFG_LIBEXECDIR/$t");
--            push(@cmds, "chmod 755 $CFG_LIBEXECDIR/$t");
-+            push(@cmds, "install -c -m 555 -o root -g wheel $f $CFG_LIBEXECDIR/$t");
+--- src/support/apxs.pl.orig	Fri May  4 08:22:17 2001
++++ src/support/apxs.pl	Mon Oct  8 14:35:47 2001
+@@ -459,8 +459,7 @@
+         if ($^O ne "MSWin32") {
+             $t =~ s|^.+/([^/]+)$|$1|;
+             if ($opt_i) {
+-                push(@cmds, "cp $f $CFG_LIBEXECDIR/$t");
+-                push(@cmds, "chmod 755 $CFG_LIBEXECDIR/$t");
++                push(@cmds, "install -c -m 555 -o root -g wheel $f $CFG_LIBEXECDIR/$t");
+             }
          }
- 
-         #   determine module symbolname and filename
+ 	else {

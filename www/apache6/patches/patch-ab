@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2001/04/29 21:21:14 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2001/10/08 13:23:37 martti Exp $
 
---- conf/httpd.conf-dist.orig	Tue Feb  6 19:40:11 2001
-+++ conf/httpd.conf-dist	Tue Feb  6 19:42:15 2001
-@@ -204,7 +204,12 @@
+--- conf/httpd.conf-dist.orig	Sun May 13 19:59:49 2001
++++ conf/httpd.conf-dist	Mon Oct  8 14:28:52 2001
+@@ -197,7 +197,12 @@
  # the order below without expert advice.
  #
  # Example:
