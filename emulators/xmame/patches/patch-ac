@@ -1,0 +1,60 @@
+$NetBSD: patch-ac,v 1.6 2002/01/06 22:09:32 kristerw Exp $
+--- src/unix/joystick-drivers/joy_usb.c.orig	Wed Jan  2 03:45:55 2002
++++ src/unix/joystick-drivers/joy_usb.c	Sun Jan  6 22:17:55 2002
+@@ -21,7 +21,11 @@
+ #endif
+ 
+ #if defined(__ARCH_netbsd)
++#ifdef HAVE_USBHID_H
++#include <usbhid.h>
++#else
+ #include <usb.h>
++#endif
+ #elif defined(__ARCH_freebsd)
+ #include <libusb.h>
+ #endif
+@@ -69,7 +73,7 @@
+ 
+ static int joy_initialize_hid(int i)
+ {
+-  int size, is_joystick, report_id;
++  int size, is_joystick, report_id = 0;
+   struct hid_data *d;
+   struct hid_item h;
+   report_desc_t rd;
+@@ -82,7 +86,19 @@
+ 
+   priv_joy_data[i].hids = NULL;
+ 
++#ifdef HAVE_USBHID_H
++  if (ioctl(joy_data[i].fd, USB_GET_REPORT_ID, &report_id) < 0)
++    {
++      fprintf(stderr_file, "error: /dev/uhid%d: %s", i, strerror(errno));
++      return FALSE;
++    }
++
++  size = hid_report_size(rd, hid_input, report_id);
++  priv_joy_data[i].offset = 0;
++#else
+   size = hid_report_size(rd, hid_input, &report_id);
++  priv_joy_data[i].offset = (report_id != 0);
++#endif
+   if ((priv_joy_data[i].data_buf = malloc(size)) == NULL)
+     {
+       fprintf(stderr_file, "error: couldn't malloc %d bytes\n", size);
+@@ -90,10 +106,14 @@
+       return FALSE;
+     }
+   priv_joy_data[i].dlen = size;
+-  priv_joy_data[i].offset = (report_id != 0);
+ 
+   is_joystick = 0;
++#ifdef HAVE_USBHID_H
++  for (d = hid_start_parse(rd, 1 << hid_input, report_id);
++       hid_get_item(d, &h); )
++#else
+   for (d = hid_start_parse(rd, 1 << hid_input); hid_get_item(d, &h); )
++#endif
+     {
+       int axis, usage, page, interesting_hid;
+ 
