@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2094 2004/08/31 15:54:26 dillo Exp $
+$NetBSD: TODO,v 1.2095 2004/09/01 11:11:11 recht Exp $
 
 Suggested new packages
 ======================
@@ -277,7 +277,6 @@ Suggested package updates
 	o hp2xx-3.4.4
 	o hylafax-4.2.0
 	o icepref-2.3
-	o icewm-1.2.16
 	o idesk-0.5.6
 	o imp-3.2.5
 	o inform-6.30 [pkg/24631]
