@@ -1,0 +1,12 @@
+Qterm is a program that queries terminals to find out what kind of
+terminal is responding.  It is useful to automagically define your
+terminal type.  It prints the name of the terminal (compatible,
+hopefully, with a termcap/terminfo name) such as "vt100" to standard
+output.  See the manual for details.
+
+			  Michael A. Cooper
+		    University Computing Services
+		  University of Southern California
+			   mcooper@usc.edu
+
+[I have simply added GNU autoconfiguration - agc April 14th, 1997.]
