@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:11 agc Exp $
 
-MD5 (xbatt-1.3pr1.tar.gz) = ab1562e8a40b2f1ece672c361549cf99
+SHA1 (xbatt-1.3pr1.tar.gz) = dc6a8624c134d9e4262ea87640d3eda028973bcf
+Size (xbatt-1.3pr1.tar.gz) = 14412 bytes
 SHA1 (patch-aa) = b822b75668a3494a72b496d820b67720b732add4
 SHA1 (patch-ab) = 216fe440e6600c8de38171cc478ea029feb2ae19

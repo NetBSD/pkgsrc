@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:01 agc Exp $
 
-MD5 (fileutils-4.0.tar.gz) = 082ab37b7f37c00e768b04e37bc736be
+SHA1 (fileutils-4.0.tar.gz) = 7fe286ff074e37dc573d5f8a23512d6693a66385
+Size (fileutils-4.0.tar.gz) = 1171072 bytes

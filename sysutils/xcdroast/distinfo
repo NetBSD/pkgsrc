@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:26 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:11 agc Exp $
 
-MD5 (xcdroast-0.98alpha8.tar.gz) = b26664d09a530f798e062cfb9f8aac8f
+SHA1 (xcdroast-0.98alpha8.tar.gz) = 16b1fdb3b94515531f04d083632c7cc4cf651c57
+Size (xcdroast-0.98alpha8.tar.gz) = 559887 bytes
 SHA1 (patch-aa) = 96207a9ae670099258507894854a351fca321050
 SHA1 (patch-ab) = bb019f49215db561d29f52971d186600f1db710e
 SHA1 (patch-ac) = abc9f5273a273bae7f5e3aac6266375a16eff605
