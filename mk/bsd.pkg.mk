@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.771 2001/06/28 16:54:07 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.772 2001/06/29 18:29:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -98,11 +98,15 @@ SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 X11PREFIX=		${LOCALBASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
+XMKMF_FLAGS?=		-a
+.if defined(USE_BUILDLINK_ONLY)
+XMKMF_FLAGS+=		-DBuildLink
+.endif
 .else
 X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
-.endif
 XMKMF_FLAGS?=		-a
+.endif
 XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS}
 
 .if defined(USE_MOTIF12)
@@ -128,7 +132,10 @@ MOTIFBASE?=		${X11PREFIX}
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-BUILD_DEPENDS+=		xpkgwedge>=1.0:../../pkgtools/xpkgwedge
+BUILD_DEPENDS+=		xpkgwedge>=1.3:../../pkgtools/xpkgwedge
+MAKE_ENV+=		PKGSRC_CPPFLAGS="${CPPFLAGS}"
+MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
+MAKE_ENV+=		PKGSRC_CXXFLAGS="${CXXFLAGS}"
 .endif
 PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
