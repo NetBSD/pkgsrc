@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3785 2003/11/05 04:51:46 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3786 2003/11/05 05:21:23 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4307,3 +4307,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated x2vnc to 1.5.1nb1 [heinz 2003-11-04]
 	Updated coreutils to 5.0nb3 [recht 2003-11-05]
 	Updated prboom to 2.2.4 [xtraeme 2003-11-05]
+	Updated fetchmail to 6.2.5 [itojun 2003-11-05]
+	Updated fetchmailconf to 6.2.5 [itojun 2003-11-05]
