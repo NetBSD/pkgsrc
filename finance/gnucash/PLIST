@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/10/23 09:22:46 jdolecek Exp $
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
@@ -337,6 +337,22 @@ share/gnucash/accounts/fr_FR/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_business.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_carloan.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_cdmoneymkt.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_checkbook.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_childcare.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_common.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_eduloan.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_fixedassets.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_homeloan.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_renter.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_retiremt.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_spouseinc.gnucash-xea
+share/gnucash/accounts/hu_HU/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/it/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/it/acctchrt_carloan.gnucash-xea
 share/gnucash/accounts/it/acctchrt_checkbook.gnucash-xea
@@ -628,6 +644,7 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/accounts/pt_BR
 @dirrm share/gnucash/accounts/it
 @dirrm share/gnucash/accounts/fr_FR
+@dirrm share/gnucash/accounts/hu_HU
 @dirrm share/gnucash/accounts/es_ES
 @dirrm share/gnucash/accounts/el_GR
 @dirrm share/gnucash/accounts/de_DE
