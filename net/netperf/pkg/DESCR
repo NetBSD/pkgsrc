@@ -22,5 +22,3 @@ This port of netperf has been configured to support:
 	Unix domain sockets
 
 WWW: http://www.netperf.org/
-
-- Koshy
