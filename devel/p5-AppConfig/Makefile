@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:49:44 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/13 22:22:52 seb Exp $
 
 DISTNAME=	AppConfig-1.52
 PKGNAME=	p5-${DISTNAME}
@@ -10,11 +10,8 @@ MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.kfs.org/~abw/
 COMMENT=	perl5 module for parsing config files and command line arguments
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/AppConfig/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
