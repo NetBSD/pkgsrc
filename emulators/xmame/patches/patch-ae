@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.11 2000/07/13 20:54:04 martin Exp $
---- doc/xmamerc.dist.orig	Mon May  8 20:57:08 2000
-+++ doc/xmamerc.dist	Wed Jul 12 23:58:34 2000
-@@ -2,15 +2,15 @@
+$NetBSD: patch-ae,v 1.12 2000/11/05 00:43:32 mycroft Exp $
+--- doc/xmamerc.dist.orig	Sun Sep 10 22:00:37 2000
++++ doc/xmamerc.dist	Sat Nov  4 23:40:23 2000
+@@ -2,7 +2,7 @@
  
  ### Digital sound related ###
  # dsp-plugin            <NULL> (not set)
@@ -10,26 +10,16 @@ $NetBSD: patch-ae,v 1.11 2000/07/13 20:54:04 martin Exp $
  
  ### Sound mixer related ###
  # sound-mixer-plugin    <NULL> (not set)
- 
- ### Video Related ###
- bpp                     0
--heightscale             1.000000
--widthscale              1.000000
-+heightscale             2.000000
-+widthscale              2.000000
- autodouble              1
- dirty                   1
- scanlines               0
 @@ -61,7 +61,7 @@
  samplefreq              22050
- bufsize                 2.000000
+ bufsize                 3.000000
  volume                  -3
 -# audiodevice           <NULL> (not set)
 +audiodevice             /dev/audio0
  # mixerdevice           <NULL> (not set)
  
  ### Input Related ###
-@@ -70,8 +70,8 @@
+@@ -70,13 +70,13 @@
  mouse                   1
  
  ### Fileio Related ###
@@ -38,5 +28,14 @@ $NetBSD: patch-ae,v 1.11 2000/07/13 20:54:04 martin Exp $
 +rompath                 @ROMPATH@
 +spooldir                @SPOOLDIR@
  screenshotdir           .
- cheatfile               /usr/games/lib/xmame/cheat.dat
- historyfile             /usr/games/lib/xmame/history.dat
+-cheatfile               /usr/games/lib/xmame/cheat.dat
+-hiscorefile             /usr/games/lib/xmame/hiscore.dat
+-historyfile             /usr/games/lib/xmame/history.dat
+-mameinfofile            /usr/games/lib/xmame/mameinfo.dat
++cheatfile               @SPOOLDIR@/cheat.dat
++hiscorefile             @SPOOLDIR@/hiscore.dat
++historyfile             @SPOOLDIR@/history.dat
++mameinfofile            @SPOOLDIR@/mameinfo.dat
+ 
+ ### Mame Related ###
+ defaultgame             pacman
