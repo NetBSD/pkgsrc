@@ -1,0 +1,58 @@
+$NetBSD: patch-ag,v 1.1 1998/11/04 23:43:39 tron Exp $
+
+--- log-server.c.orig	Wed Jul  8 18:40:36 1998
++++ log-server.c	Thu Nov  5 00:31:23 1998
+@@ -134,7 +134,7 @@
+   if (log_quiet)
+     return;
+   va_start(args, fmt);
+-  vsprintf(buf, fmt, args);
++  vsnprintf(buf, sizeof(buf), fmt, args);
+   va_end(args);
+   if (log_on_stderr)
+     fprintf(stderr, "log: %s\n", buf);
+@@ -175,7 +175,7 @@
+   if (log_quiet)
+     return;
+   va_start(args, fmt);
+-  vsprintf(buf, fmt, args);
++  vsnprintf(buf, sizeof(buf), fmt, args);
+   va_end(args);
+   if (log_on_stderr)
+     fprintf(stderr, "log: %s\n", buf);
+@@ -191,7 +191,7 @@
+   if (!log_debug || log_quiet)
+     return;
+   va_start(args, fmt);
+-  vsprintf(buf, fmt, args);
++  vsnprintf(buf, sizeof(buf), fmt, args);
+   va_end(args);
+   if (log_on_stderr)
+     fprintf(stderr, "debug: %s\n", buf);
+@@ -207,7 +207,7 @@
+   if (log_quiet)
+     return;
+   va_start(args, fmt);
+-  vsprintf(buf, fmt, args);
++  vsnprintf(buf, sizeof(buf), fmt, args);
+   va_end(args);
+   if (log_on_stderr)
+     fprintf(stderr, "error: %s\n", buf);
+@@ -302,7 +302,7 @@
+   if (log_quiet)
+     exit(1);
+   va_start(args, fmt);
+-  vsprintf(buf, fmt, args);
++  vsnprintf(buf, sizeof(buf), fmt, args);
+   va_end(args);
+   if (log_on_stderr)
+     fprintf(stderr, "fatal: %s\n", buf);
+@@ -321,7 +321,7 @@
+   if (log_quiet)
+     exit(1);
+   va_start(args, fmt);
+-  vsprintf(buf, fmt, args);
++  vsnprintf(buf, sizeof(buf), fmt, args);
+   va_end(args);
+   if (log_on_stderr)
+     fprintf(stderr, "fatal: %s\n", buf);

@@ -1,68 +1,42 @@
-$NetBSD: patch-ao,v 1.5 1998/08/07 11:13:50 agc Exp $
+$NetBSD: patch-ao,v 1.6 1998/11/04 23:43:39 tron Exp $
 
-*** newchannels.c.orig	Tue Jan 20 07:24:06 1998
---- newchannels.c	Wed Mar 18 20:44:26 1998
-***************
-*** 241,247 ****
-  #include "authfd.h"
-  #include "emulate.h"
-  #include "servconf.h"
-! #ifdef LIBWRAP
-  #include <tcpd.h>
-  #include <syslog.h>
-  #ifdef NEED_SYS_SYSLOG_H
---- 241,247 ----
-  #include "authfd.h"
-  #include "emulate.h"
-  #include "servconf.h"
-! #if defined(LIBWRAP) && defined(LIBWRAP_FWD)
-  #include <tcpd.h>
-  #include <syslog.h>
-  #ifdef NEED_SYS_SYSLOG_H
-***************
-*** 881,887 ****
-  	      sprintf(buf, "X11 connection from %.200s port %d",
-  		      remote_hostname, get_peer_port(newsock));
-  	      xfree(remote_hostname);
-! #ifdef LIBWRAP
-  	      {
-  		struct request_info req;
-  		struct servent *serv;
---- 881,887 ----
-  	      sprintf(buf, "X11 connection from %.200s port %d",
-  		      remote_hostname, get_peer_port(newsock));
-  	      xfree(remote_hostname);
-! #if defined(LIBWRAP) && defined(LIBWRAP_FWD)
-  	      {
-  		struct request_info req;
-  		struct servent *serv;
-***************
-*** 932,938 ****
-  		      ch->listening_port, remote_hostname,
-  		      get_peer_port(newsock));
-  	      xfree(remote_hostname);
-! #ifdef LIBWRAP
-  	      {
-  		struct request_info req;
-  		struct servent *serv;
---- 932,938 ----
-  		      ch->listening_port, remote_hostname,
-  		      get_peer_port(newsock));
-  	      xfree(remote_hostname);
-! #if defined(LIBWRAP) && defined(LIBWRAP_FWD)
-  	      {
-  		struct request_info req;
-  		struct servent *serv;
-***************
-*** 2324,2329 ****
---- 2324,2333 ----
-       ssh-agent connections on your system */
-    old_umask = umask(S_IRUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH);
-    
-+   /* Make sure the socket doesn't already exist, left over from a system
-+      crash perhaps. */
-+   unlink(channel_forwarded_auth_socket_name);
-+ 
-    if (bind(sock, (struct sockaddr *)&sunaddr, AF_UNIX_SIZE(sunaddr)) < 0)
-      packet_disconnect("Agent socket bind failed: %.100s", strerror(errno));
-    
+--- newchannels.c.orig	Wed Jul  8 18:40:36 1998
++++ newchannels.c	Thu Nov  5 00:28:07 1998
+@@ -263,7 +263,7 @@
+ #include "authfd.h"
+ #include "emulate.h"
+ #include "servconf.h"
+-#ifdef LIBWRAP
++#if defined(LIBWRAP) && defined(LIBWRAP_FWD)
+ #include <tcpd.h>
+ #include <syslog.h>
+ #ifdef NEED_SYS_SYSLOG_H
+@@ -923,7 +923,7 @@
+ 	      sprintf(buf, "X11 connection from %.200s port %d",
+ 		      remote_hostname, get_peer_port(newsock));
+ 	      xfree(remote_hostname);
+-#ifdef LIBWRAP
++#if defined(LIBWRAP) && defined(LIBWRAP_FWD)
+ 	      {
+ 		struct request_info req;
+ 		struct servent *serv;
+@@ -974,7 +974,7 @@
+ 		      ch->listening_port, remote_hostname,
+ 		      get_peer_port(newsock));
+ 	      xfree(remote_hostname);
+-#ifdef LIBWRAP
++#if defined(LIBWRAP) && defined(LIBWRAP_FWD)
+ 	      {
+ 		struct request_info req;
+ 		struct servent *serv;
+@@ -2388,6 +2388,10 @@
+      ssh-agent connections on your system */
+   old_umask = umask(S_IRUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH);
+   
++  /* Make sure the socket doesn't already exist, left over from a system
++     crash perhaps. */
++  unlink(channel_forwarded_auth_socket_name);
++
+   if (bind(sock, (struct sockaddr *)&sunaddr, AF_UNIX_SIZE(sunaddr)) < 0)
+     packet_disconnect("Agent socket bind failed: %.100s", strerror(errno));
+   

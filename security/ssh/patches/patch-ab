@@ -1,87 +1,54 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:13:49 agc Exp $
+$NetBSD: patch-ab,v 1.5 1998/11/04 23:43:39 tron Exp $
 
-Index: configure
-*** configure.orig	Tue Jan 20 05:24:14 1998
---- configure	Sat Jan 24 19:04:05 1998
-***************
-*** 1759,1770 ****
-  
-  export CFLAGS CC
-  
-- # Socket pairs appear to be broken on several systems.  I don't know exactly
-- # where, so I'll use pipes everywhere for now.
-- cat >> confdefs.h <<\EOF
-- #define USE_PIPES 1
-- EOF
-- 
-  
-  echo $ac_n "checking that the compiler works""... $ac_c" 1>&6
-  echo "configure:1771: checking that the compiler works" >&5
---- 1759,1764 ----
-***************
-*** 6853,6867 ****
-     case "$enableval" in
-    no)
-         echo "$ac_t""no" 1>&6
-!        SSHINSTALLMODE=0711
-         ;;
-    *)   echo "$ac_t""yes" 1>&6
-!        SSHINSTALLMODE=04711
-         ;;
-    esac 
-  else
-    echo "$ac_t""yes" 1>&6
-!   SSHINSTALLMODE=04711
-  
-  fi
-  
---- 6847,6861 ----
-     case "$enableval" in
-    no)
-         echo "$ac_t""no" 1>&6
-!        SSHINSTALLMODE=0511
-         ;;
-    *)   echo "$ac_t""yes" 1>&6
-!        SSHINSTALLMODE=04511
-         ;;
-    esac 
-  else
-    echo "$ac_t""yes" 1>&6
-!   SSHINSTALLMODE=04511
-  
-  fi
-  
-***************
-*** 7013,7019 ****
-  ac_given_srcdir=$srcdir
-  ac_given_INSTALL="$INSTALL"
-  
-! trap 'rm -fr `echo "Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
-  EOF
-  cat >> $CONFIG_STATUS <<EOF
-  
---- 7007,7013 ----
-  ac_given_srcdir=$srcdir
-  ac_given_INSTALL="$INSTALL"
-  
-! trap 'rm -fr `echo "Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
-  EOF
-  cat >> $CONFIG_STATUS <<EOF
-  
-***************
-*** 7118,7124 ****
-  
-  cat >> $CONFIG_STATUS <<EOF
-  
-! CONFIG_FILES=\${CONFIG_FILES-"Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile"}
-  EOF
-  cat >> $CONFIG_STATUS <<\EOF
-  for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
---- 7112,7118 ----
-  
-  cat >> $CONFIG_STATUS <<EOF
-  
-! CONFIG_FILES=\${CONFIG_FILES-"Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile"}
-  EOF
-  cat >> $CONFIG_STATUS <<\EOF
-  for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
+--- configure.orig	Wed Jul  8 18:41:14 1998
++++ configure	Thu Nov  5 00:28:07 1998
+@@ -1996,12 +1996,6 @@
+ 
+ export CFLAGS CC
+ 
+-# Socket pairs appear to be broken on several systems.  I don't know exactly
+-# where, so I'll use pipes everywhere for now.
+-cat >> confdefs.h <<\EOF
+-#define USE_PIPES 1
+-EOF
+-
+ 
+ echo $ac_n "checking that the compiler works""... $ac_c" 1>&6
+ echo "configure:2008: checking that the compiler works" >&5
+@@ -7344,15 +7338,15 @@
+    case "$enableval" in
+   no)
+        echo "$ac_t""no" 1>&6
+-       SSHINSTALLMODE=0711
++       SSHINSTALLMODE=0511
+        ;;
+   *)   echo "$ac_t""yes" 1>&6
+-       SSHINSTALLMODE=04711
++       SSHINSTALLMODE=04511
+        ;;
+   esac 
+ else
+   echo "$ac_t""yes" 1>&6
+-  SSHINSTALLMODE=04711
++  SSHINSTALLMODE=04511
+ 
+ fi
+ 
+@@ -7632,7 +7626,7 @@
+ ac_given_srcdir=$srcdir
+ ac_given_INSTALL="$INSTALL"
+ 
+-trap 'rm -fr `echo "Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
++trap 'rm -fr `echo "Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
+ EOF
+ cat >> $CONFIG_STATUS <<EOF
+ 
+@@ -7740,7 +7734,7 @@
+ 
+ cat >> $CONFIG_STATUS <<EOF
+ 
+-CONFIG_FILES=\${CONFIG_FILES-"Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile"}
++CONFIG_FILES=\${CONFIG_FILES-"Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile"}
+ EOF
+ cat >> $CONFIG_STATUS <<\EOF
+ for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
