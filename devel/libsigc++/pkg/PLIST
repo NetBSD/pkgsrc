@@ -1,0 +1,53 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/15 08:00:45 jlam Exp $
+bin/sigc-config
+include/sigc++/adaptor.h
+include/sigc++/basic_signal.h
+include/sigc++/bind.h
+include/sigc++/class_slot.h
+include/sigc++/convert.h
+include/sigc++/func_slot.h
+include/sigc++/generator.h
+include/sigc++/handle.h
+include/sigc++/handle_system.h
+include/sigc++/macros/basic_signal.h.m4
+include/sigc++/macros/bind.h.m4
+include/sigc++/macros/class_slot.h.m4
+include/sigc++/macros/convert.h.m4
+include/sigc++/macros/func_slot.h.m4
+include/sigc++/macros/object_slot.h.m4
+include/sigc++/macros/retbind.h.m4
+include/sigc++/macros/rettype.h.m4
+include/sigc++/macros/slot.h.m4
+include/sigc++/macros/template.macros.m4
+include/sigc++/marshal.h
+include/sigc++/object.h
+include/sigc++/object_slot.h
+include/sigc++/retbind.h
+include/sigc++/rettype.h
+include/sigc++/scope.h
+include/sigc++/signal_system.h
+include/sigc++/slot.h
+include/sigc++/thread.h
+include/sigc++/type.h
+lib/sigc++/include/sigc++config.h
+lib/libsigc.a
+lib/libsigc.la
+lib/libsigc-1.0.so.0.0
+share/aclocal/sigc++.m4
+share/doc/sigc++/API
+share/doc/sigc++/FAQ
+share/doc/sigc++/UML
+share/doc/sigc++/conventions
+share/doc/sigc++/diagrams
+share/doc/sigc++/marshal
+share/doc/sigc++/powerusers
+share/doc/sigc++/requirements
+share/doc/sigc++/riscos
+share/doc/sigc++/signals
+share/doc/sigc++/win32
+@dirrm share/doc/sigc++
+@dirrm lib/sigc++/include
+@dirrm lib/sigc++
+@dirrm include/sigc++/macros
+@dirrm include/sigc++
+@unexec rmdir %D/share/aclocal 2> /dev/null || true
