@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2000/06/09 12:35:23 tron Exp $
+# $NetBSD: Makefile,v 1.52 2000/07/22 02:18:45 dmcmahill Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -67,7 +67,7 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf; \
-		${LOCALBASE}/bin/automake --no-force
+		${RM} doc/Makefile.in ; ${LOCALBASE}/bin/automake --no-force
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/SoundSets
