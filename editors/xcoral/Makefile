@@ -1,20 +1,15 @@
-# New ports collection makefile for:    xcoral
-# Version required:	3.2
-# Date created:         
-# Whom:                 erich@rrnet.com
-#
-# Id: Makefile,v 1.6 1999/01/26 02:16:00 steve Exp
+# $NetBSD: Makefile,v 1.2 1999/02/02 23:14:04 tron Exp $
+# FreeBSD Id: Makefile,v 1.6 1999/01/26 02:16:00 steve Exp
 #
 
-DISTNAME=	xcoral-3.2
-CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_XCONTRIB}
+DISTNAME=		xcoral-3.2
+CATEGORIES=		editors
+MASTER_SITES=		${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	editors
 
-MAINTAINER=	erich@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
-USE_X_PREFIX=	yes
-
+USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 
 LIBFILES=	DEPEND README cmd.sc color.sc comments.sc compare-win.sc \
@@ -26,17 +21,12 @@ LIBFILES=	DEPEND README cmd.sc color.sc comments.sc compare-win.sc \
 		utilities.sc version.sc window-utilities.sc xcoralrc.lf
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/xcoral/
-
-.for i in ${LIBFILES}
-	${INSTALL_DATA} ${WRKSRC}/SmacLib/${i} ${PREFIX}/lib/xcoral/
+	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${PREFIX}/bin
+	@${MKDIR} ${PREFIX}/lib/xcoral
+.for FILE in ${LIBFILES}
+	${INSTALL_DATA} ${WRKSRC}/SmacLib/${FILE} ${PREFIX}/lib/xcoral
 .endfor
-
-	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${PREFIX}/bin/
-
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/xcoral/HTML/icons
-	${CP} -r ${WRKSRC}/Doc/ ${PREFIX}/share/doc/xcoral/
-.endif
+	${CP} -r ${WRKSRC}/Doc/* ${PREFIX}/share/doc/xcoral
 
-.include <bsd.port.mk>
+.include <../../mk/bsd.pkg.mk>
