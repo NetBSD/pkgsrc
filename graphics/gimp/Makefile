@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2001/07/29 14:54:56 tron Exp $
+# $NetBSD: Makefile,v 1.72 2001/08/02 13:33:09 jlam Exp $
 
 DISTNAME=		gimp-1.2.2
 CATEGORIES=		graphics
@@ -13,54 +13,60 @@ MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
 COMMENT=		Image manipulation program similar to Photoshop[tm]
 
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		gnome-libs>=1.2.0:../../x11/gnome-libs
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		tiff-*:../../graphics/tiff
-
 GIMP_DATA=		gimp-data-extras-1.2.0
 
+USE_BUILDLINK_ONLY=	yes
+REPLACE_BUILDLINK=	gimptool
+
 USE_X11BASE=		yes
-USE_XPM=		yes
 USE_GMAKE=		yes
-USE_LIBINTL=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 BUILD_USES_MSGFMT=	yes
 
-EVAL_PREFIX+=		GTKDIR=gtk+
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
-			--disable-perl \
-			--disable-python
-CONFIGURE_ENV=		GNOME_CONFIG=no \
-			INTLDEPS="-I${BUILDLINK_DIR}/include"
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-python
 
-CPPFLAGS=		-I${BUILDLINK_DIR}/include
-LDFLAGS+=		-L${BUILDLINK_DIR}/lib
+# Add settings for MPEG, LIBMPEG, and GAP_DECODE_MPEG to properly support
+# the MPEG library from graphics/mpeg-lib that changed it's name, as the
+# configure script will default to searching from -lmpeg.
+#
+CONFIGURE_ENV+=		MPEG="mpeg"
+CONFIGURE_ENV+=		LIBMPEG="-lmpeg_lib"
+CONFIGURE_ENV+=		GAP_DECODE_MPEG="gap_decode_mpeg"
+
+LDFLAGS+=		-Wl,--export-dynamic
+
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OBJECT_FMT} == ELF)
-LDFLAGS+=		-Wl,-E
-.endif
+# Remove -I$(includedir) from the INCLUDES passed to the compiler as this
+# defeats buildlink.
+#
+post-patch:
+	cd ${WRKSRC};							\
+	files=`${FIND} . -name "Makefile.in" -print`;			\
+	for file in $${files}; do					\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED} -e "/^INCLUDES.*=.*/s|[ 	]*-I\$$(includedir)||"	\
+			$${file}.fixme > $${file};			\
+		${RM} $${file}.fixme;					\
+	done
 
 pre-build:
 	${LINK.c} -o ${WRKSRC}/docs/pdb_self_doc ${FILESDIR}/pdb_self_doc.c
 
 post-install:
 	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
-	(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV} \
-		./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
-	(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
-		 ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
-	${TEST} ${PREFIX} = ${LOCALBASE} || \
-	${LN} -fs ${PREFIX}/share/aclocal/gimp.m4 \
-	  ${LOCALBASE}/share/aclocal/gimp.m4
+	cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV}		\
+		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+	cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+	${TEST} ${PREFIX} = ${LOCALBASE} ||				\
+		${LN} -fs ${PREFIX}/share/aclocal/gimp.m4		\
+			${LOCALBASE}/share/aclocal/gimp.m4
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/mpeg-lib/buildlink.mk"
-
+.include "../../x11/gnome-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
