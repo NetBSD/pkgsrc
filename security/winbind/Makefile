@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:20 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:20:39 martti Exp $
 
 PKGNAME=		winbind-${SAMBA_DIST_VERS}
 CATEGORIES=		security
@@ -10,7 +10,7 @@ USE_PKGINSTALL=		yes
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.samba.org/
-COMMENT=		unified logon information between UNIX and Windows NT
+COMMENT=		Unified logon information between UNIX and Windows NT
 
 DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
 
