@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/22 16:08:27 hamajima Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/23 04:58:21 hamajima Exp $
 #
 
 DISTNAME=	dtcp-20030228
@@ -17,11 +17,10 @@ DEPENDS+=	qpopper-*:../../mail/qpopper
 RCD_SCRIPTS=	dtcpc dtcps
 CONF_DEPENDS=	YES
 
-post-configure:
-	@cd ${WRKSRC} && \
-	for f in dtcpauth.8 dtcpc.8 dtcps.8 ; do		\
-		${MV} $$f $$f.orig;				\
-		${SED} 's|/usr/local|${PREFIX}|g' $$f.orig > $$f;	\
-	done
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	dtcpauth.8 dtcpc.8 dtcps.8
+SUBST_SED.paths=	's|/usr/local|${PREFIX}|g'
 
 .include "../../mk/bsd.pkg.mk"
