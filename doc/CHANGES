@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6008 2004/05/22 20:23:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.6009 2004/05/22 21:34:37 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2623,3 +2623,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xen12-040418 [cl 2004-05-22]
 	Updated sun-jre13 to 1.0.11 [jmmv 2004-05-22]
 	Updated sun-jdk13 to 1.0.11 [jmmv 2004-05-22]
+	Updated sun-jre14 to 2.4nb1 [jmmv 2004-05-22]
+	Updated sun-jdk14 to 2.4nb1 [jmmv 2004-05-22]
