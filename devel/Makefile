@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.598 2005/01/18 17:54:34 peter Exp $
+# $NetBSD: Makefile,v 1.599 2005/01/20 18:10:05 adrianp Exp $
 #
 
 COMMENT=	Development utilities
@@ -237,6 +237,7 @@ SUBDIR+=	libmatchbox
 SUBDIR+=	libmemmgr
 SUBDIR+=	libmm
 SUBDIR+=	libnet
+SUBDIR+=	libnet11
 SUBDIR+=	libntlm
 SUBDIR+=	libole2
 SUBDIR+=	liboop
