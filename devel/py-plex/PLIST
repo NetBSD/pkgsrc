@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/17 20:47:20 tsarna Exp $
+${PYSITELIB}/Plex/Actions.py
+${PYSITELIB}/Plex/Actions.pyc
+${PYSITELIB}/Plex/DFA.py
+${PYSITELIB}/Plex/DFA.pyc
+${PYSITELIB}/Plex/Errors.py
+${PYSITELIB}/Plex/Errors.pyc
+${PYSITELIB}/Plex/Lexicons.py
+${PYSITELIB}/Plex/Lexicons.pyc
+${PYSITELIB}/Plex/Machines.py
+${PYSITELIB}/Plex/Machines.pyc
+${PYSITELIB}/Plex/Regexps.py
+${PYSITELIB}/Plex/Regexps.pyc
+${PYSITELIB}/Plex/Scanners.py
+${PYSITELIB}/Plex/Scanners.pyc
+${PYSITELIB}/Plex/test_tm.py
+${PYSITELIB}/Plex/test_tm.pyc
+${PYSITELIB}/Plex/Timing.py
+${PYSITELIB}/Plex/Timing.pyc
+${PYSITELIB}/Plex/Traditional.py
+${PYSITELIB}/Plex/Traditional.pyc
+${PYSITELIB}/Plex/Transitions.py
+${PYSITELIB}/Plex/Transitions.pyc
+${PYSITELIB}/Plex/__init__.py
+${PYSITELIB}/Plex/__init__.pyc
+@dirrm ${PYSITELIB}/Plex
