@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.110 2000/09/07 09:53:13 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.111 2000/09/08 12:55:12 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -303,11 +303,21 @@ actually compile on NFS storage, as this slows things down a lot.
 
 You may want to set things in /etc/mk.conf:
 
-    PACKAGES?=       ${PKGSRCDIR}/packages/${MACHINE_ARCH}
-    OBJMACHINE?=    1                    # use work.${MACHINE_ARCH}
-    WRKOBJDIR?=     /usr/tmp/pkgsrc      # build here instead of in pkgsrc
     BATCH=                  yes          # required for bulk builds 
-    FAILOVER_FETCH=         yes          # insist on the correct checksum
+    DEPENDS_TARGET?=        bulk-install
+    PACKAGES?=              ${PKGSRCDIR}/packages/${MACHINE_ARCH}
+    OBJMACHINE?=            1                 # use work.${MACHINE_ARCH}
+    WRKOBJDIR?=             /usr/tmp/pkgsrc   # build here instead of in pkgsrc
+    FAILOVER_FETCH=         yes               # insist on the correct checksum
+    PKG_DEVELOPER?=         yes
+    ACCEPTABLE_LICENSES=    shareware \
+                            fee-based-commercial-use \
+                            no-profit \
+                            no-commercial-use \
+                            non-commercial-use \
+                            limited-redistribution
+
+
 
     
  3.2.2 Other environmental considerations
