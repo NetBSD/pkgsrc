@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/09/19 23:58:42 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/09/19 23:59:34 tron Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-6.1p1
@@ -16,8 +16,5 @@ NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
-
-post-install:
-	${ECHO} ${EMULSUBDIR}/usr/lib/libncurses.so.2.1 >>${PLIST_SRC}
 
 .include "../suse_linux/suse.mk"
