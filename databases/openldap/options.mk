@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:51 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/09/27 04:11:52 rh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap
 PKG_SUPPORTED_OPTIONS=	dynamic kerberos sasl slp
@@ -26,19 +26,12 @@ PKG_OPTIONS+=		sasl
 .endif
 
 ###
-### SASL authentication
+### SASL authentication (requires SASL2)
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.  if !defined(USE_SASL2) && !defined(USE_SASL)
-.    include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl
-.  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-.    include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl
-.  elif defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
-.    include "../../security/cyrus-sasl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl
-.  endif
+CONFIGURE_ARGS+=		--with-cyrus-sasl
+BUILDLINK_DEPENDS.cyrus-sasl+=  cyrus-sasl>=2.1.15
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 
 ###
