@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 1999/08/01 18:57:08 tron Exp $
+$NetBSD: patch-ac,v 1.2 2002/08/26 19:39:30 mjl Exp $
 
---- po/Makefile.in.in.orig	Fri Jul  9 07:51:25 1999
-+++ po/Makefile.in.in	Sun Aug  1 20:48:32 1999
-@@ -19,7 +19,7 @@
+--- po/Makefile.in.in.orig	Sun Jun  2 18:44:16 2002
++++ po/Makefile.in.in	Sun Jun  9 00:33:10 2002
+@@ -23,7 +23,7 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
- datadir = $(prefix)/@DATADIRNAME@
+ datadir = @datadir@
 -localedir = $(datadir)/locale
 +localedir = $(prefix)/share/locale
- gnulocaledir = $(prefix)/share/locale
- gettextsrcdir = $(prefix)/share/gettext/po
- subdir = po
+ gettextsrcdir = $(datadir)/gettext/po
+ 
+ INSTALL = @INSTALL@
