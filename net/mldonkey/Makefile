@@ -1,50 +1,29 @@
-# $NetBSD: Makefile,v 1.24 2004/12/24 17:21:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/25 19:13:34 jmmv Exp $
 #
 
-DISTNAME=	mldonkey-2.5.21
-PKGREVISION=	2
-CATEGORIES=	net
-MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/
+.include "Makefile.common"
 
-MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/mldonkey/
-COMMENT=	Free peer-to-peer client with eDonkey support and more
+PKGREVISION=		3
 
-GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
-USE_GNU_TOOLS+=		make
-USE_PERL5=		build
+USE_PKGINSTALL=		YES
 
-MLDONKEY_SUBST=		PREFIX="${PREFIX}"
-MLDONKEY_SUBST_SED=	${MLDONKEY_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+CONFIGURE_ARGS+=	--disable-gui
 
-CONFIGURE_ENV+=		WGET=""
-CONFIGURE_ENV+=		ac_cv_prog_WGET="no"
-MAKE_ENV+=		BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread}
-CONFIGURE_ARGS+=	--enable-pthread-lib
+RCD_SCRIPTS=		mldonkey
 
-UNLIMIT_RESOURCES=	stacksize
+BUILD_DEFS+=		MLDONKEY_GROUP MLDONKEY_HOME MLDONKEY_USER
 
-pre-build:
-	${SED} ${MLDONKEY_SUBST_SED} ${FILESDIR}/mldonkey.sh > \
-	    ${WRKDIR}/mldonkey.sh
-	${CHMOD} +x ${WRKDIR}/mldonkey.sh
+OWN_DIRS_PERMS=		${MLDONKEY_HOME} ${MLDONKEY_USER} ${MLDONKEY_GROUP} 0700
+
+PKG_GROUPS=		${MLDONKEY_GROUP}
+PKG_USERS=		${MLDONKEY_USER}:${MLDONKEY_GROUP}::Dedicated\\ mldonkey\\ server:${MLDONKEY_HOME}:${SH}
+
+FILES_SUBST+=		MLDONKEY_GROUP="${MLDONKEY_GROUP}"
+FILES_SUBST+=		MLDONKEY_HOME="${MLDONKEY_HOME}"
+FILES_SUBST+=		MLDONKEY_USER="${MLDONKEY_USER}"
 
 do-install:
-	cd ${WRKDIR} && \
-	    ${INSTALL_SCRIPT} mldonkey.sh ${PREFIX}/bin/mldonkey
-	cd ${WRKSRC} && \
-	    ${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mlchat ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mlguistarter ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mlgui ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mlim ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mlnet ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mlnet+gui ${PREFIX}/libexec/mldonkey
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey
+	${INSTALL_PROGRAM} ${WRKSRC}/mlnet ${PREFIX}/libexec/mldonkey
 
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
-.include "../../x11/lablgtk/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
