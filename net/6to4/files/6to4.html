@@ -1,7 +1,7 @@
 <html>
 <head>
      <title>
-           February 11, 2001 6to4 8
+           February 18, 2001 6to4 8
 
      </title>
         <style type="text/css">
@@ -81,9 +81,15 @@ turning the machine into a IPv6 router.
 <code>rtadvd(8)</code>
 is invoked with a custom config file created under
 <code></code><code>/var/run</code>.
-Clients need to be told to use the router as
-default (IPv6) router, e.g. by adding a static route.
-Follow the on-screen instructions to do so.
+Clients just need to be told to accept router advertizements, i.e.
+the
+`net.inet6.ip6.accept_rtadv'
+sysctl needs to be set to
+`1'.
+You can arrange that by setting
+``ip6mode=autohost''
+in
+<code></code><code>/etc/rc.conf</code>.
 <p><dt><b></b><b>rtadvd-stop</b><dd>
 Stops router advertizement and IPv6 packet forwarding.
 <code>rtadvd(8)</code>
@@ -113,8 +119,28 @@ pseudo-device  stf  1    # 6to4 IPv6 over IPv4 encapsulation
 </code>
 </dl>
      <p>
+In systems that run past-1.5 NetBSD-current, you will have to
+explicitly create an
+<code>stf(4)</code>
+device after compiling it in the kernel. You do this by running
+the following command before calling the
+<b>6to4</b>
+script:
+<dl compact><dt><dd>
+<code>
+<pre>
+ifconfig stf0 create
+</pre>
+</code>
+</dl>
+     <p>
 No special values are needed in
-<code></code><code>/etc/rc.conf</code>.
+<code></code><code>/etc/rc.conf</code>
+to run this script, but see comment on setting up IPv6-clients
+`behind'
+your 6to4 router for the
+<b></b><b>rtadvd-start</b>
+command!
      <h3>
      CONFIGURATION
      </h3>
@@ -206,5 +232,9 @@ The
 <b>6to4</b>
 utility and manpage were writte by
 Hubert Feyrer <hubert@feyrer.de>.
-</font></body>
-</html>
+     <h3>
+     BUGS
+     </h3>
+On systems running past-1.5 NetBSD-current, the
+``ifconfig stf0 create''
+should be run automatically.
