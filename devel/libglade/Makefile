@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/31 19:06:08 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/27 14:31:02 rh Exp $
 #
 
-DISTNAME=	libglade-0.2
+DISTNAME=	libglade-0.4
 CATEGORIES=	devel
 MASTER_SITES=	http://gd.tuwien.ac.at/hci/gnome.org/GNOME/sources/libglade/ \
 		ftp://gnomeftp.wgn.net/pub/gnome/sources/libglade/ \
