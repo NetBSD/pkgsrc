@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/09/06 04:12:46 lukem Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/06 06:29:42 lukem Exp $
 
 DISTNAME=	mailman-2.1.4
 PKGREVISION=	1
@@ -58,6 +58,8 @@ MAKE_DIRS_PERMS+=	${MAILMAN_DATADIR}/spam ${MAILMAN_USER} ${MAILMAN_GROUP} 775
 
 CONF_FILES+=		${EGDIR}/mailman.conf ${PKG_SYSCONFDIR}/mailman.conf
 CONF_FILES+=		${EXECDIR}/Mailman/mm_cfg.py.dist ${EXECDIR}/Mailman/mm_cfg.py
+
+RCD_SCRIPTS=		mailman
 
 PYTHON_VERSIONS_ACCEPTED= 23 23pth 22 22pth 21 21pth
 PYTHON_PATCH_SCRIPTS+=	Mailman/Archiver/pipermail.py
