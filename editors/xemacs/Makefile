@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/10/03 17:35:26 martin Exp $
+# $NetBSD: Makefile,v 1.26 2000/10/04 12:55:14 kleink Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.9
@@ -26,7 +26,7 @@ USE_XPM=	YES
 
 DIST_SUBDIR=	xemacs
 
-BUILD_DEFS+=	USE_XFACE
+BUILD_DEFS+=	USE_LDAP USE_XFACE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,6 +36,13 @@ XAW_TYPE?=	3d
 WITH_DIALOGS=	--with-dialogs=athena
 .else
 WITH_DIALOGS=	--with-dialogs=athena3d
+.endif
+
+.if defined(USE_LDAP) && ${USE_LDAP} == YES
+WITH_LDAP=	--with-ldap=yes
+DEPENDS+=	openldap-1.2.*:../../databases/openldap
+.else
+WITH_LDAP=	--with-ldap=no
 .endif
 
 .if defined(USE_XFACE) && ${USE_XFACE} == YES
@@ -48,7 +55,7 @@ WITH_XFACE=	--with-xface=no
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM} --prefix=${PREFIX} \
 			--with-clash-detection --with-mule=yes \
 			--with-ncurses=no --with-session=yes \
-			${WITH_DIALOGS} ${WITH_XFACE} \
+			${WITH_DIALOGS} ${WITH_LDAP} ${WITH_XFACE} \
 			--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
 			--lockdir=/var/tmp/xemacs.lock \
 			--site-includes=${PREFIX}/include:${WRKDIR} \
@@ -63,6 +70,7 @@ post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
 
 pre-configure:
+	@${ECHO} "To compile in the support for LDAP, set the environment variable USE_LDAP."
 	@${ECHO} "To compile in the support for xface, set the environment variable USE_XFACE."
 	@${MKDIR} ${WRKDIR}/sys
 	@${LN} -s /usr/include/soundcard.h ${WRKDIR}/sys
