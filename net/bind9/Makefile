@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/31 11:15:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/28 06:43:00 itojun Exp $
 #
 
 DISTNAME=	bind-9.0.0b2
@@ -7,6 +7,10 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/9.0.0b2/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
+
+# IPv6 ready, automatically detected
+.include "../../mk/bsd.prefs.mk"
+BUILD_DEFS+=	USE_INET6
 
 # Sync these with devel/unproven-pthreads:
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
