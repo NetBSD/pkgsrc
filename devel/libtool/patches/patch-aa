@@ -1,23 +1,56 @@
-$NetBSD: patch-aa,v 1.10 2000/06/04 17:56:17 rh Exp $
-
---- ltconfig.in.orig	Sat May 27 03:58:57 2000
-+++ ltconfig.in	Sun Jun  4 19:35:00 2000
-@@ -1194,11 +1194,11 @@
+$NetBSD: patch-aa,v 1.11 2000/06/29 08:06:06 skrll Exp $
+--- ./ltconfig.in.orig	Sat May 27 02:58:57 2000
++++ ./ltconfig.in	Thu Jun 29 09:00:00 2000
+@@ -1194,11 +1194,20 @@
  
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
 -      archive_cmds='$CC -shared $libobjs $deplibs $linkopts ${wl}-soname $wl$soname -o $lib'
 -      archive_expsym_cmds='$CC -shared $libobjs $deplibs $linkopts ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
--    else
-       archive_cmds='$LD -Bshareable $libobjs $deplibs $linkopts -o $lib'
-       # can we support soname and/or expsyms with a.out? -oliva
-+    else
++      if $CC -dumpspecs | grep 'c++rt0' >/dev/null; then
++        # This a.out compiler supports the -shared option
++        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $wllinkopts'
++      else
++        archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'
++        wlarc=
++        if test -f /usr/lib/c++rt0.o; then
++          # Add in C++ constructor/destructor support
++          archive_cmds="$archive_cmds /usr/lib/c++rt0.o"
++        fi
++      fi
+     else
+-      archive_cmds='$LD -Bshareable $libobjs $deplibs $linkopts -o $lib'
+-      # can we support soname and/or expsyms with a.out? -oliva
 +      archive_cmds='$CC -shared $libobjs $deplibs $wllinkopts ${wl}-soname $wl$soname -o $lib'
 +      archive_expsym_cmds='$CC -shared $libobjs $deplibs $wllinkopts ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
      fi
      ;;
  
-@@ -2012,6 +2012,9 @@
+@@ -1392,9 +1401,22 @@
+ 
+   netbsd*)
+     if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-      archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'  # a.out
++      if $CC -dumpspecs | grep 'c++rt0' > /dev/null; then
++        # This a.out compiler supports the -shared option
++        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $wllinkopts'
++      else
++        archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linkopts'
++        wl=
++        if test -f /usr/lib/c++rt0.o; then
++          # Add in C++ constructor/destructor support
++          archive_cmds="$archive_cmds /usr/lib/c++rt0.o"
++        fi
++      fi
+     else
++      # I don't think there are any ELF toolchains with non-gnu ld.
++      # I'm not touching this just in case!
+       archive_cmds='$LD -shared -o $lib $libobjs $deplibs $linkopts'      # ELF
++      wl=
+     fi
+     hardcode_libdir_flag_spec='${wl}-R$libdir'
+     hardcode_direct=yes
+@@ -2012,6 +2034,9 @@
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
