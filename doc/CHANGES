@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1782 2003/03/27 08:44:52 zuntum Exp $
+$NetBSD: CHANGES,v 1.1783 2003/03/27 12:58:09 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1324,3 +1324,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.47 [atatat 2003-03-26]
 	Updated rxvt to 2.7.10 [wiz 2003-03-27]
 	Updated polsms to 1.9.1h [zuntum 2003-03-27]
+	Updated mined to 2000.6 [agc 2003-03-27]

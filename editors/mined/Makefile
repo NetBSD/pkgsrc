@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/05 14:25:36 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/27 12:56:21 agc Exp $
 #
 
-DISTNAME=	mined-2000.5
+DISTNAME=	mined-2000.6
 CATEGORIES=	editors
 MASTER_SITES=	http://towo.net/mined/
 
