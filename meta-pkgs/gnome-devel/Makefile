@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/03/11 16:54:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/28 10:32:59 jmmv Exp $
 
 DISTNAME=	gnome-devel-2.4.2
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +14,6 @@ DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	autoconf213>=2.13:../../devel/autoconf213
 DEPENDS+=	automake>=1.8.2:../../devel/automake
 DEPENDS+=	automake14>=1.4.6:../../devel/automake14
-DEPENDS+=	automake17>=1.7.9:../../devel/automake17
 DEPENDS+=	gettext-m4>=0.11.5:../../devel/gettext-m4
 DEPENDS+=	gnome-common>=2.4.0:../../devel/gnome-common
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
