@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/03 22:15:46 rh Exp $
+
+--- source/thread.c.orig	Mon Aug 30 03:10:11 1999
++++ source/thread.c	Fri Sep  3 19:00:27 1999
+@@ -86,7 +86,12 @@
+ 	 return -1;
+       }
+       
++#ifdef HAVE_STRERROR_R
+       strerror_r(rc, message, 64);
++#else
++      strncpy (message, strerror (rc), 64);
++      message[63]='\0';
++#endif
+       fputs("Error invoking pthread_create: ", stderr);
+       fputs(message, stderr);
+       fputc('\n', stderr);

@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/09/03 22:15:46 rh Exp $
+
+--- images/Makefile.in.orig	Fri Sep  3 03:56:10 1999
++++ images/Makefile.in	Fri Sep  3 19:15:08 1999
+@@ -166,18 +166,18 @@
+ 
+ 
+ install-data-am:
+-	$(mkinstalldirs) ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 blues.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 data.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 folk.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 jazz.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 misc.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 newage.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 nodisc.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 reggae.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 rock.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 soundtrack.png ${prefix}/share/gdcd
+-	$(INSTALL) -m 644 unknown.png ${prefix}/share/gdcd
++	$(mkinstalldirs) ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} blues.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} data.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} folk.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} jazz.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} misc.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} newage.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} nodisc.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} reggae.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} rock.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} soundtrack.png ${prefix}/share/pixmaps/gdcd
++	${BSD_INSTALL_DATA} unknown.png ${prefix}/share/pixmaps/gdcd
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
