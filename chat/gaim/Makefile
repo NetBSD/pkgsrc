@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2003/07/13 13:50:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2003/07/17 16:13:07 jmmv Exp $
 #
 
-DISTNAME=	gaim-0.64
-PKGREVISION=	3
+DISTNAME=	gaim-0.65
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
-
-PATCH_SITES=		http://www.chipx86.com/
-PATCHFILES=		${DISTNAME}-msncrashes-20030705-0044.diff
-PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	mjl@luckie.org.nz
 HOMEPAGE=	http://gaim.sourceforge.net/
