@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/11 04:47:10 xtraeme Exp $
 #
 
 DISTNAME=		gnome-desktop-2.4.1.1
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
@@ -24,13 +24,13 @@ USE_X11=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../graphics/gnome2-pixmaps/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../x11/startup-notification/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../graphics/gnome2-pixmaps/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/11 04:47:34 xtraeme Exp $
 #
 
 DISTNAME=		bug-buddy-2.4.2
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
@@ -23,15 +23,15 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../x11/gnome-desktop/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
