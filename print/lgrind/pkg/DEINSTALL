@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 1999/09/08 19:29:16 jwise Exp $
+#
+
+echo \
+"===========================================
+When deinstallation is complete, please run
+
+	${PKG_PREFIX}/bin/texconfig rehash
+
+as root to rebuild the teTeX ls-R database.
+==========================================="
