@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/10 13:45:25 wiz Exp $
 #
 
 DISTNAME=		vlc-0.7.1
@@ -77,7 +77,7 @@ PLIST_SUBST+=	DVDCSS="@comment "
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-#.include "../../graphics/ffmpeg/buildlink3.mk"
+#.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
