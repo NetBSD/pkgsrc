@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2002/09/11 10:12:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.28 2002/10/02 22:08:44 wiz Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.18.0
@@ -8,9 +8,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gdk-pixbuf/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
-
+AUTOCONF_REQD=		2.13
+AUTOMAKE_REQD=		1.4
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11BASE=		YES
@@ -28,12 +27,13 @@ PATCHDIR=		${.CURDIR}/../gdk-pixbuf/patches
 
 pre-configure:
 	cd ${WRKSRC};							\
-	${LOCALBASE}/bin/aclocal;					\
-	${LOCALBASE}/bin/autoheader;					\
-	${LOCALBASE}/bin/automake -a --foreign -i;			\
-	${LOCALBASE}/bin/autoconf
+	${ACLOCAL};							\
+	${AUTOHEADER};							\
+	${AUTOMAKE} -a --foreign -i;					\
+	${AUTOCONF}
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
+.include "../../mk/automake.mk"
