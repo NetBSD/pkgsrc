@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2658 2003/07/02 14:58:04 grant Exp $
+$NetBSD: CHANGES,v 1.2659 2003/07/02 15:24:12 taya Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2651,3 +2651,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wmsmixer to 0.5.1 [agc 2003-07-02]
 	Added multi-aterm-0.0.4 [jmmv 2003-07-02]
 	Updated mozilla-bin to 1.4 [agc 2003-07-02]
+	Updated galeon to 1.2.11nb1 [taya 2003-07-02]
