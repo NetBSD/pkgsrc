@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3939 2003/12/03 19:26:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3940 2003/12/03 19:58:26 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4801,3 +4801,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libntlm-0.3.2 [xtraeme 2003-12-03]
 	Added gsasl-0.0.8 [xtraeme 2003-12-03]
 	Added gss-0.0.6 [xtraeme 2003-12-03]
+	Added p5-Digest-BubbleBabble-0.01 [heinz 2003-12-03]
