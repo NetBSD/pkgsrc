@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2554 2003/06/23 08:49:42 jlam Exp $
+$NetBSD: CHANGES,v 1.2555 2003/06/23 09:20:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2520,3 +2520,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xerces-c to 1.7.0 [jlam 2003-06-23]
 	Updated xerces-p to 1.7.0.3 [jlam 2003-06-23]
 	Renamed xerces-p to p5-XML-Xerces [jlam 2003-06-23]
+	Updated wine to 20030618 [adam 2003-06-23]
