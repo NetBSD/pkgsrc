@@ -1,0 +1,48 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/12 20:09:42 kei Exp $
+
+--- man/lpd.conf.5.in.orig	Fri Aug 27 21:38:52 1999
++++ man/lpd.conf.5.in	Mon Sep 13 11:35:56 1999
+@@ -250,7 +250,7 @@
+ Formfeed string.
+ .TP
+ \fBfilter_ld_path\fR
+-(default: /lib:/usr/lib:/usr/5lib:/usr/ucblib)
++(default: @@FILTER_LD_PATH@@)
+ The value for the environment variable LD_LIBRARY_PATH, 
+ both used when executing, and passed on to filters.
+ This variable is used to find shared libraries on
+@@ -268,7 +268,7 @@
+ (see of_filter_options, filter_options, bk_filter_options, bk_of_filter_options)
+ .TP
+ \fBfilter_path\fR
+-(default: /bin:/usr/bin:/usr/ucb:/usr/sbin:/usr/etc:/etc)
++(default: @@FILTER_PATH@@)
+ The value for the environment variable PATH, both used to find filters
+ and passed on to filters run by \fBlpd\fR and \fBlpr\fR.
+ .TP
+@@ -387,7 +387,7 @@
+ interfere with a previous installation of
+ LPD or LPRng.
+ .TP
+-\fBlpd_printcap_path\fR (default: "/etc/lpd_printcap:/usr/etc/lpd_printcap")
++\fBlpd_printcap_path\fR (default: @@LPD_PRINTCAP_PATH@@)
+ The location of additional 
+ .B lpd
+ server printcap database information.
+@@ -487,14 +487,14 @@
+ See \fBprintcap\fP(5) for details.
+ .TP
+ \fBprintcap_path\fR
+-(default: "etc/printcap:/usr/etc/printcap:/var/spool/lpd/printcap.%h")
++(default: @@PRINTCAP_PATH@@)
+ The location of the printcap database information.
+ If a file or filter does not exist, it is skipped.
+ All valid entries in these files will be used.
+ See PRINTCAP LOOKUP for details.
+ .TP
+ \fBperms_path\fR
+-(default: /etc/lpd.perms:/usr/etc/lpd.perms:/var/spool/lpd/lpd.perms.%h)
++(default: @@LPD_PERMS_PATH@@)
+ The location of the printer permissions database.
+ If a file or filter does not exist, it is skipped.
+ The first file or filter that exists and is readable will be used.
