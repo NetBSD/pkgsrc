@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 09:17:20 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/28 10:55:46 jmmv Exp $
+bin/ed2k
 bin/xmule
 share/applications/xmule.desktop
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xmule.mo
@@ -6,8 +7,6 @@ ${PKGLOCALEDIR}/locale/ee/LC_MESSAGES/xmule.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xmule.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xmule.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xmule.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xmule.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xmule.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xmule.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xmule.mo
 share/pixmaps/xmule.xpm
