@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3365 2003/09/14 04:58:30 jlam Exp $
+$NetBSD: CHANGES,v 1.3366 2003/09/14 05:35:04 kim Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3679,3 +3679,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fetchmailconf to 6.2.4nb1 [tron 2003-09-13]
 	Updated cyrus-imap21 to 2.1.15 [jlam 2003-09-13]
 	Updated pkg_install to 20030914 [jlam 2003-09-14]
+	Updated p5-CGI to 2.98 [kim 2003-09-14]
