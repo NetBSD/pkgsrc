@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:23:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/22 09:23:15 martti Exp $
 bin/nano
 @unexec install-info --delete --info-dir=%D/info %D/info/nano.info
 info/nano.info
@@ -6,6 +6,7 @@ info/nano.info
 man/man1/nano.1
 share/locale/ca/LC_MESSAGES/nano.mo
 share/locale/cs/LC_MESSAGES/nano.mo
+share/locale/da/LC_MESSAGES/nano.mo
 share/locale/de/LC_MESSAGES/nano.mo
 share/locale/es/LC_MESSAGES/nano.mo
 share/locale/fi/LC_MESSAGES/nano.mo
@@ -14,3 +15,8 @@ share/locale/gl/LC_MESSAGES/nano.mo
 share/locale/hu/LC_MESSAGES/nano.mo
 share/locale/id/LC_MESSAGES/nano.mo
 share/locale/it/LC_MESSAGES/nano.mo
+share/locale/nl/LC_MESSAGES/nano.mo
+share/locale/no/LC_MESSAGES/nano.mo
+share/locale/ru/LC_MESSAGES/nano.mo
+share/locale/sv/LC_MESSAGES/nano.mo
+share/locale/uk/LC_MESSAGES/nano.mo
