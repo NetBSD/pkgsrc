@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.29 2004/01/27 16:11:47 agc Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.30 2004/01/31 12:28:48 xtraeme Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -114,15 +114,14 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 # imake installs manpages in weird places
-# XXX: assume NetBSD defaults until somebody determines correct values
-IMAKE_MAN_SOURCE_PATH=	man/cat
+IMAKE_MAN_SOURCE_PATH=	man/man
 IMAKE_MAN_SUFFIX=	1
 IMAKE_LIBMAN_SUFFIX=	3
 IMAKE_FILEMAN_SUFFIX=	5
 IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
 IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_MANNEWSUFFIX=	0
+IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
