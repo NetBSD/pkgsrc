@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/03/29 20:08:49 kim Exp $
+# $NetBSD: Makefile,v 1.17 2001/04/12 09:26:15 wennmach Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 
@@ -29,8 +29,10 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.wu-ftpd.org/
 COMMENT=	Replacement ftp server for Un*x systems
 
-CONFLICTS+=	wu-ftpd-vr-* beroftpd-*
+CONFLICTS=	wu-ftpd-vr-*
+CONFLICTS+=	beroftpd-*
 CONFLICTS+=	kth-krb4-*
+CONFLICTS+=	lukemftpd-*
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--enable-quota --enable-noop --enable-skey
