@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2002/11/29 19:20:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.89 2002/12/04 18:49:32 drochner Exp $
 #
 
 COMMENT=	Databases
@@ -27,6 +27,7 @@ SUBDIR+=	kmysqladmin
 SUBDIR+=	kpsql
 SUBDIR+=	libgda
 SUBDIR+=	libgnomedb
+SUBDIR+=	metakit-lib
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-client
 SUBDIR+=	mysql-server
@@ -72,6 +73,7 @@ SUBDIR+=	postgresql-pltcl
 SUBDIR+=	postgresql-server
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
+SUBDIR+=	py-metakit
 SUBDIR+=	py-mysqldb
 SUBDIR+=	py-postgresql
 SUBDIR+=	py-psycopg
