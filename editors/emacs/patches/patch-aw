@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.1 1999/01/31 17:29:33 frueauf Exp $
+$NetBSD: patch-aw,v 1.2 1999/12/28 14:09:14 tron Exp $
 
---- src/emacs.c-orig	Tue Jul 21 03:39:52 1998
-+++ src/emacs.c	Sat Jan 30 14:29:44 1999
-@@ -1004,7 +1004,7 @@
+--- src/emacs.c.orig	Wed Jun 30 02:11:06 1999
++++ src/emacs.c	Fri Aug  6 08:59:59 1999
+@@ -1048,7 +1048,7 @@
      }
  
    no_loadup
