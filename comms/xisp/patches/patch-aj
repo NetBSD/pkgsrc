@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1.1.1 1998/12/03 15:08:53 frueauf Exp $
+
+--- xisprccv.c.orig	Mon Oct 26 05:35:01 1998
++++ xisprccv.c	Mon Nov 30 16:40:18 1998
+@@ -465,13 +465,13 @@
+ {
+ 	char emsg[MSGLEN_ERR+1];
+ 
+-#ifndef SUNOS5x
++#ifdef HAVE_STRERROR
++	sprintf(emsg, "xisprccv: %s: %s\n", msg, strerror(errno));
++#else
+ 	if (errno < sys_nerr)
+ 		sprintf(emsg, "xisprccv: %s: %s\n", msg, sys_errlist[errno]);
+ 	else
+ 		sprintf(emsg, "xisprccv: %s: error #%d\n", msg, errno);
+-#else
+-	sprintf(emsg, "xisprccv: %s: %s\n", msg, strerror(errno));
+ #endif
+ 	fputs(emsg, stderr);
+ 	exit(1);
