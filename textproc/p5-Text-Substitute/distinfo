@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/02/27 11:22:20 abs Exp $
+$NetBSD: distinfo,v 1.2 2002/04/16 11:50:18 abs Exp $
 
-SHA1 (Text-Substitute-0.10.tar.gz) = bbb044dcabe0dc1911001a309a55f43c7410d5c1
-Size (Text-Substitute-0.10.tar.gz) = 5295 bytes
+SHA1 (Text-Substitute-0.12.tar.gz) = 5f6f997ff0ca4a8ce35da0a9c8d784f96a67e673
+Size (Text-Substitute-0.12.tar.gz) = 5541 bytes
