@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.83 2004/04/07 14:26:51 tv Exp $
+# $NetBSD: defs.SunOS.mk,v 1.84 2004/04/19 20:19:46 jmmv Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -186,3 +186,11 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 .else
 PKG_TOOLS_BIN?=		${LOCALBASE}/bin
 .endif
+
+# check for maximum command line length and set it in configure's environment,
+# to avoid a test required by the libtool script that takes forever.
+# FIXME: Adjust to work on this system and enable the lines below.
+#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
+#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+#.endif
