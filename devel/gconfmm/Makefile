@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/09 20:56:35 minskim Exp $
 #
 
 DISTNAME=	gconfmm-2.0.1
@@ -11,15 +11,16 @@ HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ interface to GConf2
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE=	gconf/gconfmm-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gconf/gconfmm-2.0-uninstalled.pc.in
 
-.include "../../devel/GConf2/buildlink2.mk"
-.include "../../devel/libsigc++/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/gtkmm/buildlink2.mk"
+.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
