@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.6 2005/03/15 15:50:04 tron Exp $
+
 --- lib/bind/configure.orig	Tue Apr  6 16:25:51 2004
 +++ lib/bind/configure	Tue Apr  6 16:26:15 2004
 @@ -1822,16 +1822,16 @@
