@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6135 2004/06/05 10:22:16 taya Exp $
+$NetBSD: CHANGES,v 1.6136 2004/06/05 10:25:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2787,3 +2787,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added snx101util-0.2 [hamajima 2004-06-05]
 	Added dtcp-20030228 [hamajima 2004-06-05]
 	Updated mozilla-stable to 1.4nb5 [taya 2004-06-05]
+	Added gtk2-engines-industrial-20030725 [jmmv 2004-06-05]
