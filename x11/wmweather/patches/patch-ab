@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/12 05:57:52 rh Exp $
+
+--- GrabWeather.orig	Fri Apr 16 23:41:53 1999
++++ GrabWeather	Tue May  2 13:50:28 2000
+@@ -49,7 +49,7 @@
+     #  for some people? Dont know why... (Perhaps they have a ~/.wgetrc file
+     #  that overrides command line options?).
+     #
+-    $GrabCmd = "wget --proxy=off --passive-ftp --tries 0 -q -O $home/.wmWeatherReports/$StationID.TXT $URL";
++    $GrabCmd = "/usr/bin/ftp -o $home/.wmWeatherReports/$StationID.TXT $URL";
+     system "$GrabCmd";
+ 
+ 
