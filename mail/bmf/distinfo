@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/10/10 11:05:31 mjl Exp $
+
+SHA1 (bmf-0.84.tar.gz) = 9ac63586403f0984e0569b11b3f81354469b7a56
+Size (bmf-0.84.tar.gz) = 40101 bytes
+SHA1 (patch-aa) = 2dccc61f00373e67868bdc8e49e791e7b41fa8c0
+SHA1 (patch-ab) = ee28061f04567832d7497cf50f2678c2df327bfe
