@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5870 2004/05/08 18:26:33 salo Exp $
+$NetBSD: CHANGES,v 1.5871 2004/05/08 20:23:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gmpc to 0.10.2nb2 [grant 2004-05-08]
 	Updated mkvtoolnix to 0.8.9 [salo 2004-05-08]
 	Added mmg-0.8.9 [salo 2004-05-08]
+	Updated tkpasman to 2.2anb3 [jmmv 2004-05-08]
