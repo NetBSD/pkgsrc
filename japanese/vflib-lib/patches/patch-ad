@@ -1,0 +1,90 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+
+--- tools/Imakefile.in.orig	Tue Oct 27 03:02:45 1998
++++ tools/Imakefile.in	Mon May  1 04:41:40 2000
+@@ -23,19 +23,19 @@
+   VFLIB_INCDIR = ../src
+   VFLIB_LIBDIR = ../src
+ 
+-      VFLIB = $(VFLIB_LIBDIR)/libVFlib2.la
++      VFLIB = $(LDFLAGS) -lVFlib2 -lttf -lintl -lm
+ 
+           PROGRAMS = disol    kban    ktest    vfperf    vftest    fmtest  
+               SRCS = disol.c  kban.c  ktest.c  vfperf.c  vftest.c  fmtest.c
+               OBJS = disol.lo kban.lo ktest.lo vfperf.lo vftest.lo fmtest.lo
+-  INSTALL_PROGRAMS = ktest
++  INSTALL_PROGRAMS = $(PROGRAMS)
+ 
+ default all:: $(PROGRAMS)
+ include ../make-sub
+ 
+ 
+ /* DISOL */
+-disol: disol.lo $(VFLIB)
++disol: disol.lo
+ 	$(LIBTOOL) --mode=link \
+ 		$(CC) -o $@ disol.lo $(VFLIB) 
+ disol.lo: disol.c
+@@ -43,7 +43,7 @@
+ 		$(CC) $(CFLAGS) -c disol.c
+ 
+ /* KBAN */
+-kban: kban.lo $(VFLIB)
++kban: kban.lo
+ 	$(LIBTOOL) --mode=link \
+ 		$(CC) -o $@ kban.lo $(VFLIB) 
+ kban.lo: kban.c
+@@ -51,7 +51,7 @@
+ 		$(CC) $(CFLAGS) -c kban.c
+ 
+ /* KTEST */
+-ktest: ktest.lo $(DEPXLIB) $(VFLIB)
++ktest: ktest.lo $(DEPXLIB)
+ 	$(LIBTOOL) --mode=link \
+ 		$(CC) -o $@ $(LDOPTIONS) ktest.lo $(XLIB) $(VFLIB) 
+ ktest.lo: ktest.c
+@@ -59,7 +59,7 @@
+ 		$(CC) $(CFLAGS) $(ALLINCLUDES) -c ktest.c
+ 
+ /* VF2BDF */
+-vf2bdf: vf2bdf.lo $(VFLIB)
++vf2bdf: vf2bdf.lo
+ 	$(LIBTOOL) --mode=link \
+ 		$(CC) -o $@ vf2bdf.lo $(VFLIB) 
+ vf2bdf.lo: vf2bdf.c
+@@ -67,7 +67,7 @@
+ 		$(CC) $(CFLAGS) -c vf2bdf.c
+ 
+ /* VFPERF */
+-vfperf: vfperf.lo $(VFLIB)
++vfperf: vfperf.lo
+ 	$(LIBTOOL) --mode=link \ 
+ 		$(CC) -o $@ vfperf.lo $(VFLIB)
+ vfperf.lo: vfperf.c
+@@ -75,7 +75,7 @@
+ 		$(CC) $(CFLAGS) -c vfperf.c
+ 
+ /* VFTEST */
+-vftest: vftest.lo $(DEPXLIB) $(VFLIB)
++vftest: vftest.lo $(DEPXLIB)
+ 	$(LIBTOOL) --mode=link \ 
+ 		$(CC) -o $@ $(LDOPTIONS) vftest.lo $(XLIB) $(VFLIB) 
+ vftest.lo: vftest.c
+@@ -83,7 +83,7 @@
+ 		$(CC) $(CFLAGS) $(ALLINCLUDES) -c vftest.c
+ 
+ /* FMTEST */
+-fmtest: fmtest.lo $(VFLIB)
++fmtest: fmtest.lo
+ 	$(LIBTOOL) --mode=link \ 
+ 		$(CC) -o $@ fmtest.lo $(VFLIB) 
+ fmtest.lo: fmtest.c
+@@ -96,7 +96,7 @@
+ 	@if [ ! -d $(bindir) ] ; then \
+ 	    ./recmkdir $(bindir); fi
+ 	@for P in $(INSTALL_PROGRAMS) ; do \
+-	    $(LIBTOOL) $(CP)  $$P $(bindir)/$$P ;  \
++	    $(LIBTOOL) $(BSD_INSTALL_PROGRAM)  $$P $(bindir)/$$P ;  \
+ 	done; 
+ uninstall::
+ 	@for P in $(INSTALL_PROGRAMS) ; do \

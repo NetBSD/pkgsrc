@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+
+--- configure.in.orig	Wed Feb 17 23:58:02 1999
++++ configure.in	Mon May  1 04:37:48 2000
+@@ -54,6 +54,11 @@
+ fi
+ AC_SUBST(XX_CFLAGS)
+ 
++AC_ARG_ENABLE(
++ tools,
++ [  --enable-tools                   Build VFlib tools],
++ build_tools=yes,
++ build_tools=no)
+ 
+ AC_SUBST(freetype_includedir)
+ AC_SUBST(freetype_libdir)
+@@ -117,6 +122,7 @@
+ AC_CONFIG_HEADER(src/with.h src/config.h)
+ AC_OUTPUT(Makefile make-sub src/Makefile tools/Imakefile)
+ 
++if test "$build_tools" = "yes" ; then
+ if test -d /usr/openwin ; then \
+ 	(cd tools; \
+ 	 OPENWINHOME=/usr/openwin; \
+@@ -124,6 +130,7 @@
+      	 xmkmf;)  \
+ else \
+ 	(cd tools; xmkmf -a) \
++fi
+ fi
+ 
+ dnl EOF
