@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.2 2004/10/22 00:24:48 hubertf Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -831,7 +831,7 @@ pre-configure:
     </sect2>
 
     <sect2>
-      <title>User Interaction</title>
+      <title>User interaction</title>
 
       <para>Occasionally, packages require interaction from the user, and this can be
         in a number of ways:</para>

@@ -1,4 +1,4 @@
-<!-- $NetBSD: features.xml,v 1.1.1.1 2004/10/21 14:27:38 grant Exp $ -->
+<!-- $NetBSD: features.xml,v 1.2 2004/10/22 00:24:48 hubertf Exp $ -->
 
 <chapter id="features"> <?dbhtml filename="features.html"?>
 <title>FAQs &amp; features of the package system</title>
@@ -421,7 +421,7 @@ with the older version <quote>Xaw3d-1.3</quote>.
 
 
 <sect1>
-<title>Software which has a WWW Home Page</title>
+<title>Software which has a homepage</title>
 
 <para>
 The NetBSD packages system now supports a variable called

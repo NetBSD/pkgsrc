@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.2 2004/10/22 00:24:48 hubertf Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -99,7 +99,7 @@ packages here:
 </sect1>
 
 <sect1>
-<title>Updating a Package to a Newer Version</title>
+<title>Updating a package to a newer version</title>
 <para>
   Please always put a concise, appropriate and relevant summary of the
   changes between old and new versions into the commit log when updating
@@ -143,7 +143,7 @@ packages here:
 </sect1>
 
 <sect1>
-<title>Moving a Package in pkgsrc</title>
+<title>Moving a package in pkgsrc</title>
 
 <orderedlist>
 <listitem><para>Make a copy of the directory somewhere else.</para></listitem>
