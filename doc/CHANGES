@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.507 2002/11/12 17:16:52 itojun Exp $
+$NetBSD: CHANGES,v 1.508 2002/11/12 19:40:55 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3586,3 +3586,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xfce to 3.8.18 [martti 2002-11-12]
 	Updated opera6 to 6.10nb1 [tron 2002-11-12]
 	Added ami-1.0.11 [itojun 2002-11-12]
+	Updated jasper to 1.600.0 [dillo 2002-11-12]
