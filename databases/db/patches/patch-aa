@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/07/27 14:18:02 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2004/05/26 15:45:14 jschauma Exp $
 
 --- ../dist/Makefile.in.orig	Mon Dec  7 14:05:59 1998
 +++ ../dist/Makefile.in	Mon Apr 19 16:30:04 1999
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.4 2000/07/27 14:18:02 jlam Exp $
 -	$(rm) -f $@
 -	$(ar) $@ $(OBJS) $(LOBJS)
 -	test ! -f $(ranlib) || $(ranlib) $@
-+	$(LIBTOOL) --mode=link @CC@ -rpath $(prefix)/lib -version-info 2:7 -o $@ $(OBJS:.o=.lo) $(LOBJS:.o=.lo)
++	$(LIBTOOL) --mode=link @CC@ @CFLAGS@ -rpath $(prefix)/lib -version-info 2:7 -o $@ $(OBJS:.o=.lo) $(LOBJS:.o=.lo)
  
  DBA=	db_archive.o $(POBJS)
  db_archive: $(DBA) $(libdb)
