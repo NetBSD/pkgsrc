@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/10/24 04:52:26 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2003/11/01 00:52:50 kristerw Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.ntp.org/
 COMMENT=	Network Time Protocol Version 4
 
 GNU_CONFIGURE=	YES
+USE_PERL5=	build
 #USE_BUILDLINK2=YES ***FIXME: Causes lots of "missing prototype" warnings.***
 
 CONFIGURE_ENV+=	PATH_PERL="${PERL5}"
