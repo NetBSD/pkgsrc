@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.171 2001/07/16 11:00:32 jlam Exp $
+# $NetBSD: Packages.txt,v 1.172 2001/07/16 11:06:48 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1589,6 +1589,13 @@ buildlink.mk files:
     USE_MOTIF12	-->	.include "../../x11/lesstif12/buildlink.mk"
     USE_SSL	-->	.include "../../security/openssl/buildlink.mk"
     USE_XPM	-->	.include "../../graphics/xpm/buildlink.mk"
+
+In addition, packages that have an explicit dependency on ncurses should
+set USE_NCURSES to the reason why the system curses is insufficient, and
+include "../../devel/ncurses/buildlink.mk" afterwards.  This helps to
+identify where the system curses differs from ncurses, and when the
+development of the system curses catches up in functionality, the
+USE_NCURSES setting may be removed.
 
 The use of EVAL_PREFIX to find the installation prefix for packages may be
 removed since references to package library and header files are found
