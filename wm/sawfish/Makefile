@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/11/30 18:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/28 23:18:18 reed Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
-PKGREVISION=		9
+PKGREVISION=		10
 
 COMMENT=		GNOME-aware window manager that is fully configurable in Lisp
 

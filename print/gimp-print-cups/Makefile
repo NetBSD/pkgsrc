@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/11/25 14:13:32 adam Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/28 23:18:16 reed Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGNAME=	gimp-print-cups-4.2.7
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 
