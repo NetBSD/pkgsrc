@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/17 08:32:14 abs Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 14:47:06 pooka Exp $
 #
 
 DISTNAME=	xworld-2.0
@@ -11,6 +11,7 @@ COMMENT=	Earth as seen from the direction of the sun
 
 HAS_CONFIGURE=	yes
 
+CONFIGURE_ENV+=	PREFIX="${PREFIX}"
 CONFIGURE_ENV+=	LDLIBS="-lm ${LDFLAGS} -lX11"
 
 .include "../../mk/bsd.pkg.mk"
