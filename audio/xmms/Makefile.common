@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/05/06 18:10:20 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/05/12 18:50:21 drochner Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -45,8 +45,8 @@ CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}		\
 			--with-cdda-dir=/cdrom/
 CPPFLAGS+=		-DHAVE_NANOSLEEP=1
 
-.  if ${MACHINE_ARCH} == "i386"
 post-patch:
+.  if ${MACHINE_ARCH} == "i386"
 .    if ${OBJECT_FMT} == "a.out"
 	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/Input/mpg123/decode_i586.s
 .    endif
@@ -54,6 +54,7 @@ post-patch:
 	${MV} decode_i586.s decode_i586.s.orig && \
 	${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
 .  endif
+	${RM} -f ${WRKSRC}/Output/OSS/soundcard.h
 .endif
 
 .if ${OPSYS} == "SunOS"
