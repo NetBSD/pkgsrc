@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.142 1998/08/11 19:30:48 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.143 1998/08/12 01:30:13 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -118,6 +118,7 @@ PREFIX=			${X11BASE}
 .endif
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
+NO_MTREE=		yes
 .else
 PREFIX=			${LOCALBASE}
 .endif
