@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2002/12/07 02:38:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.67 2003/01/21 10:12:29 tron Exp $
 
 DISTNAME=		libgtop-1.0.13
+PKGREVISION=		1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/1.0/}
 EXTRACT_SUFX=		.tar.bz2

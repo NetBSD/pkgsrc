@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.13 2001/08/10 10:48:13 martin Exp $
+$NetBSD: patch-al,v 1.14 2003/01/21 10:12:31 tron Exp $
 
---- sysdeps/freebsd/prockernel.c.orig	Sat Oct 16 20:31:43 1999
-+++ sysdeps/freebsd/prockernel.c	Fri Aug 10 12:38:19 2001
+--- sysdeps/freebsd/prockernel.c.orig	Mon Nov 26 23:37:59 2001
++++ sysdeps/freebsd/prockernel.c	Tue Jan 21 11:09:24 2003
 @@ -34,7 +34,7 @@
  #if (!defined __OpenBSD__) && (!defined __bsdi__)
  #include <sys/user.h>
@@ -26,10 +26,27 @@ $NetBSD: patch-al,v 1.13 2001/08/10 10:48:13 martin Exp $
  static const unsigned long _glibtop_sysdeps_proc_kernel_pstats =
  (1L << GLIBTOP_PROC_KERNEL_MIN_FLT) +
  (1L << GLIBTOP_PROC_KERNEL_MAJ_FLT) +
-@@ -129,8 +137,15 @@
+@@ -101,6 +109,7 @@
+ 	if ((pinfo == NULL) || (count != 1))
+ 		glibtop_error_io_r (server, "kvm_getprocs (%d)", pid);
+ 
++#if !defined(__NetBSD__) || !defined(SACTIVE)
+ 	buf->nwchan = (unsigned long) pinfo [0].kp_proc.p_wchan &~ KERNBASE;
+ 	buf->flags |= (1L << GLIBTOP_PROC_KERNEL_NWCHAN);
+ 
+@@ -112,6 +121,7 @@
+ 	} else {
+ 		buf->wchan [0] = 0;
+ 	}
++#endif
+ 
+ 	/* Taken from `saveuser ()' in `/usr/src/bin/ps/ps.c'. */
+ 
+@@ -129,8 +139,16 @@
  
  	glibtop_suid_enter (server);
  
++#if !defined(__NetBSD__) || !defined(SACTIVE)
 +#ifdef __NetBSD__
 +	/* On NetBSD, there is no kvm_uread(), and kvm_read() always reads
 +	 * from kernel memory.  */
@@ -42,9 +59,11 @@ $NetBSD: patch-al,v 1.13 2001/08/10 10:48:13 martin Exp $
  		       (unsigned long) &u_addr->u_stats,
  		       (char *) &pstats, sizeof (pstats)) == sizeof (pstats))
  		{
-@@ -149,8 +164,12 @@
+@@ -148,9 +166,14 @@
+ 			
  			buf->flags |= _glibtop_sysdeps_proc_kernel_pstats;
  		}
++#endif
  
 +#ifdef __NetBSD__
 +	if (kvm_read (server->machine.kd,
@@ -55,7 +74,7 @@ $NetBSD: patch-al,v 1.13 2001/08/10 10:48:13 martin Exp $
  		       (unsigned long) &u_addr->u_pcb,
  		       (char *) &pcb, sizeof (pcb)) == sizeof (pcb))
  		{
-@@ -167,14 +186,39 @@
+@@ -167,14 +190,39 @@
  			/*xxx FreeBSD/Alpha? */
  #endif
  #else
