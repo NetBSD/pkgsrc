@@ -1,0 +1,5 @@
+This little program polls network statistics and does a few things
+with the data it gets.  It has small blinking lights for the rx and tx
+of IP packets, a digital speedometer of your polled stat's current
+speed and a bar graph like xload et. al which has a tx speed graph
+from bottom-up and rx speed graph from the top-down.
