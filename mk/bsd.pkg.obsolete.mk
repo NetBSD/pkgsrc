@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.3 2001/11/26 05:18:01 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.4 2001/11/28 14:01:16 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -9,6 +9,7 @@ PKG_SYSCONFDIR.ap-ssl?=			${APACHE_SYSCONFDIR}
 PKG_SYSCONFDIR.apache?=			${APACHE_SYSCONFDIR}
 PKG_SYSCONFDIR.apache6?=		${APACHE_SYSCONFDIR}
 PKG_SYSCONFDIR.apc-gui?=		${APACHE_SYSCONFDIR}
+PKG_SYSCONFDIR.cvsweb?=			${APACHE_SYSCONFDIR}
 PKG_SYSCONFDIR.imp?=			${APACHE_SYSCONFDIR}
 PKG_SYSCONFDIR.horde?=			${APACHE_SYSCONFDIR}
 PKG_SYSCONFDIR.p5-HTTPD-User-Manage?=	${APACHE_SYSCONFDIR}
