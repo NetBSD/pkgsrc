@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/06/04 08:32:04 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2002/06/04 08:47:45 uebayasi Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -15,5 +15,6 @@ SUBDIR+=	sj3-server
 SUBDIR+=	skkfep
 SUBDIR+=	skkinput
 SUBDIR+=	skkserv
+SUBDIR+=	xcin
 
 .include "../mk/bsd.pkg.subdir.mk"
