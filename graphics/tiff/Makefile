@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/07/17 21:42:52 grant Exp $
+# $NetBSD: Makefile,v 1.47 2003/08/30 23:01:32 jlam Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -19,6 +19,12 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(X11BASE:M*openwin)
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL.OpenWindows
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL.OpenWindows
+.endif
 
 .if defined(USE_GIF)
 LZW_VERSION=	1.3
@@ -49,11 +55,4 @@ pre-patch:
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
-
-.if !empty(X11BASE:M*openwin)
-USE_PKGINSTALL=	yes
-DEINSTALL_TMPL=	${INSTALL_TMPL}
-INSTALL_TMPL=	${.CURDIR}/INSTALL.OpenWindows
-.endif
-
 .include "../../mk/bsd.pkg.mk"
