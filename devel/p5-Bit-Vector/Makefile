@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/03 17:16:40 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/27 07:11:01 jlam Exp $
 #
 
 DISTNAME=	Bit-Vector-5.7
@@ -9,9 +9,10 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bit/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Bit-Vector/Vector.html
 
-USE_PERL5=	yes
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Bit/Vector/.packlist
 
 do-configure:
-		@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

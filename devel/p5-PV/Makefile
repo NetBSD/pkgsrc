@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/16 14:37:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/27 07:11:07 jlam Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/06/24 18:43:28 jfitz Exp
 #
 
@@ -12,13 +12,22 @@ MAINTAINER=	packages@netbsd.org
 
 DEPENDS+=	p5-Curses-1.02:../../devel/p5-Curses
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/PV/.packlist
 
-NO_WRKSUBDIR=	YES
-NO_BUILD=	YES
+NO_WRKSUBDIR=	# defined
+DOCDIR=		${PREFIX}/share/doc/PerlVision
 
-do-install:
-	${INSTALL_DATA} ${WRKDIR}/PV.pm ${PREFIX}/lib/perl5/site_perl
-	${INSTALL_DATA} ${WRKDIR}/PerlVision.doc ${PREFIX}/lib/perl5/site_perl
+pre-configure:
+	${RM} -f ${WRKSRC}/Makefile
+	${CP} ${FILESDIR}/Makefile.PL ${WRKSRC}/Makefile.PL
+
+do-configure:
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/PerlVision.doc ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/README ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,17 +1,1 @@
-@comment $NetBSD: PLIST,v 1.3 1999/04/12 17:57:25 hubertf Exp $
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk/Gtk.so
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk/Gtk.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Types.pm
-lib/perl5/site_perl/auto/Gtk/Gdk/autosplit.ix
-lib/perl5/site_perl/auto/Gtk/autosplit.ix
-lib/perl5/site_perl/Gtk/Atoms.pm
-lib/perl5/site_perl/Gtk/ColorSelectButton.pm
-lib/perl5/site_perl/Gtk/Gdk.pm
-lib/perl5/site_perl/Gtk/LogHandler.pm
-lib/perl5/man/man3/Gtk::GtkColorSelectButton.3
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk
-@dirrm lib/perl5/site_perl/auto/Gtk/Gdk
-@dirrm lib/perl5/site_perl/auto/Gtk
-@dirrm lib/perl5/site_perl/Gtk
+@comment $NetBSD: PLIST,v 1.4 2000/08/27 07:11:26 jlam Exp $

@@ -1,7 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/03 17:16:41 kim Exp $
-lib/perl5/man/man3/Bit::Vector.3
-lib/perl5/site_perl/Bit/Vector.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Bit/Vector/Vector.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Bit/Vector/Vector.so
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Bit/Vector/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Bit/Vector
+@comment $NetBSD: PLIST,v 1.2 2000/08/27 07:11:01 jlam Exp $

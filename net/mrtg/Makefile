@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/03/17 23:31:48 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/27 07:11:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -18,10 +18,10 @@ HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 
 DEPENDS=	gd>=1.8.1:../../graphics/gd
 
-USE_PERL5=	YES
-USE_X11=	YES
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+= --with-gd-inc=${LOCALBASE}/include \
+USE_PERL5=	# defined
+USE_X11=	# defined
+GNU_CONFIGURE=	# defined
+CONFIGURE_ARGS= --with-gd-inc=${LOCALBASE}/include \
 		--with-gd-lib=${LOCALBASE}/lib
 
 .include "../../mk/bsd.prefs.mk"
@@ -60,9 +60,10 @@ do-install:
 	done
 	${INSTALL_PROGRAM} ${WRKSRC}/run/rateup ${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/run/mrtg ${PREFIX}/bin/
+	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
 	${INSTALL_SCRIPT} ${WRKSRC}/run/BER.pm ${WRKSRC}/run/SNMP_Session.pm \
 		${WRKSRC}/run/SNMP_util.pm ${WRKSRC}/run/locales_mrtg.pm \
-		${PREFIX}/lib/perl5/site_perl/
+		${PERL5_SITELIB}
 	for file in cfgmaker cfgmaker_ip indexmaker; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/run/$$file \
 			${PREFIX}/bin/mrtg$$file; \
