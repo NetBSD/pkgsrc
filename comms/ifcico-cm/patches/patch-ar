@@ -1,7 +1,16 @@
-$NetBSD: patch-ar,v 1.1 1998/12/21 15:45:21 tv Exp $
+$NetBSD: patch-ar,v 1.2 2001/02/21 18:50:37 tv Exp $
 
---- ifcico/zmrecv.c.orig	Mon Dec 21 09:56:18 1998
-+++ ifcico/zmrecv.c	Mon Dec 21 09:57:09 1998
+--- ifcico/zmrecv.c.orig	Sun Jul  5 16:18:59 1998
++++ ifcico/zmrecv.c	Wed Feb 21 10:53:21 2001
+@@ -24,7 +24,7 @@
+ static FILE *fout=NULL;
+ 
+ static int Usevhdrs;
+-static long rxbytes;
++static off_t rxbytes;
+ static int Eofseen;		/* indicates cpm eof (^Z) has been received */
+ static int errors;
+ static time_t startime,etime;
 @@ -461,7 +461,7 @@
  	Bytesleft = DEFBYTL; Filemode = 0; Modtime = 0L;
  
