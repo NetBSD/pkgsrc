@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2004/01/20 21:26:13 snj Exp $
+# $NetBSD: Makefile,v 1.161 2004/01/21 04:04:55 atatat Exp $
 #
 
 COMMENT=	Security tools
@@ -37,6 +37,7 @@ SUBDIR+=	fsh
 SUBDIR+=	gnupg
 SUBDIR+=	gnutls
 SUBDIR+=	gpa
+SUBDIR+=	gpg2dot
 SUBDIR+=	gpgme
 SUBDIR+=	gpgme03
 SUBDIR+=	gsasl
