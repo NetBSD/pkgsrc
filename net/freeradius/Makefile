@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/30 14:50:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/11/03 10:09:50 cube Exp $
 
 DISTNAME=	freeradius-0.7
 CATEGORIES=	net
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
 
@@ -17,6 +17,7 @@ USE_BUILDLINK2= YES
 USE_LIBTOOL=	YES
 USE_PKGINSTALL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+PTHREAD_OPTS+=	native
 
 CONFIGURE_ARGS=		--quiet
 CONFIGURE_ARGS+=	--with-logdir=/var/log
@@ -34,15 +35,6 @@ PKG_SYSCONFSUBDIR=	raddb
 EGDIR=			${PREFIX}/share/examples/freeradius
 CONF_FILES=		# Contents set in HEADER file
 
-.include "../../mk/bsd.prefs.mk"
-
-# Needs semaphore functions as well as thread libs.
-.if ${OPSYS} == "NetBSD"
-.  if ${OS_VERSION:M1.[0-5]*} || ${OS_VERSION} == "1.6" || ${OS_VERSION:M1.6[A-M]*} || ${OS_VERSION:M1.6.1*}
-CONFIGURE_ARGS+=	--with-threads=no
-.  endif
-.endif
-
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/raddb && for f in [a-z]*; do \
@@ -50,6 +42,11 @@ post-install:
 	done
 
 .include "../../databases/gdbm/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+CONFIGURE_ARGS+=	--with-threads=no
+.endif
+
 .include "../../mk/bsd.pkg.mk"
