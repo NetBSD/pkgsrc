@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/23 21:50:45 jmmv Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/3DKit/GeometryKit/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 COMMENT=	Objective-C class library for calculating 3D geometry
 
