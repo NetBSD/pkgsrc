@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/01/22 12:58:07 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/01/23 19:37:18 jlam Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -8,6 +8,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/Lib//}
 CATEGORIES=	graphics
 MASTER_SITES= 	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
+
+MESA_VERSION=	6.0
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/
@@ -26,5 +28,4 @@ pre-install:
 	    ${LIBTOOL} --mode=install ${INSTALL_DATA} $${lib} ${PREFIX}/lib ; \
 	done;
 
-.include "../../graphics/Mesa/version.mk"
 .include "../../mk/bsd.prefs.mk"
