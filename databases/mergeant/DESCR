@@ -1,0 +1,4 @@
+Mergeant is a GTK2/GNOME2 font-end for GNOME-DB database administrators and
+database application developers. It uses libgda/libgnomedb as the backend to
+access databases, so it can work with almost any database engine (mysql,
+postgresql, xml, etc...)"
