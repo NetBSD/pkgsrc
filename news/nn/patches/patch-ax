@@ -1,0 +1,23 @@
+$NetBSD: patch-ax,v 1.1 1999/07/26 21:19:33 tron Exp $
+
+--- nntp.c.orig	Thu Nov 25 10:39:37 1993
++++ nntp.c	Mon Jul 26 23:11:38 1999
+@@ -85,7 +85,9 @@
+ import int silent, no_update;
+ 
+ import int sys_nerr;
++#ifndef __NetBSD__
+ import char *sys_errlist[];
++#endif
+ extern void nn_exitmsg();
+ extern void sys_error();
+ extern int sys_warning();
+@@ -1098,7 +1100,7 @@
+ 
+      case OK_BODY:
+ 	tmp = open_file(cptr->file_name, OPEN_APPEND|MUST_EXIST);
+-	fseek(tmp, (off_t)0, 2);
++	fseek(tmp, (long)0, 2);
+ 	if (copy_text(tmp) < 0)
+ 	    return NULL;
+ 	if (fclose(tmp) == EOF) goto err;

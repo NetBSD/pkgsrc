@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.3 1999/07/26 21:19:26 tron Exp $
+
+--- answer.c.orig	Mon Sep 13 19:42:02 1993
++++ answer.c	Mon Jul 26 23:11:39 1999
+@@ -132,9 +132,13 @@
+     nn_gethostname(host, 64);
+ #endif
+ 
++#if 0
+     fprintf(t, "Path: %s!%s\n", host, user_name());
++#endif
+     fprintf(t, "Date: %s %s %s %s GMT\n", date+8, date+4, date+22, date+11);
++#if 0
+     fprintf(t, "Message-ID: <%s.%ld@%s>\n", user_name(), (long)now, host);
++#endif
+     ed_line += 3;
+ }
+ #endif

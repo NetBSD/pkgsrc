@@ -1,0 +1,152 @@
+$NetBSD: patch-ai,v 1.1 1999/07/26 21:19:27 tron Exp $
+
+--- config.h.orig	Fri Feb 18 03:15:47 1994
++++ config.h	Mon Jul 26 23:11:39 1999
+@@ -32,7 +32,7 @@
+ #define NOV
+ 
+ /* Optional */
+-#define NOV_DIRECTORY "/usr/spool/news"
++#define NOV_DIRECTORY "/var/news/spool/over.view"
+ 
+ /*********************** NETWORK DEPENDENT DEFINITIONS **********************
+  *
+@@ -69,7 +69,7 @@
+  *	Consult the file NNTP for further information on the use of NNTP.
+  */
+ 
+-#undef NNTP
++#define NNTP
+ 
+ /*
+  *	Define NNTP_SERVER to the name of a file containing the name of the
+@@ -84,7 +84,7 @@
+  *	NOTE: If you plan to use the included inews, it MUST be a full pathname
+  */
+ 
+-#define NNTP_SERVER	"/usr/lib/nntp_server"
++#define NNTP_SERVER     PREFIX "/etc/nntp/server"
+ 
+ /*
+  *	Define NNTP_POST if you want nn to reject attempts to post via
+@@ -104,7 +104,7 @@
+  *	be present, define NNTP_MINI_INEWS_HEADER below.
+  */
+ 
+-#define NNTP_MINI_INEWS_HEADER	/* uses "broken" mini-inews */
++#undef NNTP_MINI_INEWS_HEADER
+ 
+ /*
+  *	Define NNTP_PATH_HOSTNAME to force a specific hostname into the
+@@ -126,7 +126,7 @@
+  *	conf/s-template.h as a starting point for writing you own.
+  */
+ 
+-#include "s-sys5-4.h"
++#include "s-netbsd.h"
+ 
+ /*
+  *	Define DEFAULT_PAGER as the initial value of the 'pager' variable.
+@@ -141,8 +141,8 @@
+  *	nn's :print command pipes text into this command.
+  */
+ 
+-#define DEFAULT_PRINTER		"lp -s"			/* System V */
+-/* #define DEFAULT_PRINTER	"lpr -p -JNEWS"	*/ 	/* bsd */
++/* #define DEFAULT_PRINTER         "lp -s"                 /* System V */
++#define DEFAULT_PRINTER      "lpr -p -JNEWS"       /* bsd */
+ 
+ /*
+  * 	Define RESIZING to make nn understand dynamic window-resizing.
+@@ -203,8 +203,8 @@
+  *	Common choices are:  (news, news)  and   (your uid, your gid)
+  */
+ 
+-#define OWNER	"news"
+-#define	GROUP	"news"
++#define OWNER	BINOWN
++#define	GROUP	BINGRP
+ 
+ 
+ /**************************** LOCALIZATION ****************************
+@@ -237,9 +237,9 @@
+  *			   (= LIB_DIRECTORY/Log if undefined).
+  */
+ 
+-#define BIN_DIRECTORY	"/usr/local/bin"
+-#define LIB_DIRECTORY	"/usr/local/lib/nn"
+-
++#define BIN_DIRECTORY	PREFIX "/bin"
++#define LIB_DIRECTORY	PREFIX "/lib/nn"
++#define TMP_DIRECTORY   "/var/tmp"
+ 
+ /**************************** DATABASE LOCATION **************************
+  *
+@@ -270,7 +270,7 @@
+  *	     (The file system must support long file names!!)
+  */
+ 
+-#define DB_DIRECTORY	"/usr/spool/nn"
++#define DB_DIRECTORY    "/var/news/spool/nn"
+ 
+ 
+ /*************************** NEWS TRANSPORT **************************
+@@ -292,10 +292,10 @@
+  *				  Default: NEWS_LIB_DIR/{rm,del}group
+  */
+ 
+-#define NEWS_DIRECTORY		"/usr/spool/news"
+-#define NEWS_LIB_DIRECTORY	"/usr/lib/news"
++#define NEWS_DIRECTORY		"/var/news/spool"
++#define NEWS_LIB_DIRECTORY	"/var/news/etc"
+ 
+-/* #define INEWS_PATH		"/usr/lib/news/inews"	*/
++#define INEWS_PATH		BIN_DIRECTORY "/inews"
+ 
+ 
+ /*
+@@ -317,7 +317,7 @@
+  */
+ 
+ /* #define REC_MAIL	"/usr/lib/news/recmail"	*/	/* non-sendmail */
+-#define REC_MAIL	"/usr/lib/sendmail -t"		/* sendmail */
++#define REC_MAIL        "/usr/sbin/sendmail -t"          /* sendmail */
+ 
+ 
+ /*
+@@ -379,13 +379,13 @@
+  *	DAEMON_MAN	- nnmaster
+  */
+ 
+-#define USER_MAN_DIR 	"/usr/man/man1"
++#define USER_MAN_DIR    PREFIX "/man/man1"
+ #define USER_MAN_SECTION 	"1"
+ 
+-#define SYS_MAN_DIR 	"/usr/man/man1"
+-#define SYS_MAN_SECTION 	"1m"
++#define SYS_MAN_DIR     PREFIX "/man/man1"
++#define SYS_MAN_SECTION         "1"
+ 
+-#define DAEMON_MAN_DIR 	"/usr/man/man8"
++#define DAEMON_MAN_DIR  PREFIX "/man/man8"
+ #define DAEMON_MAN_SECTION 	"8"
+ 
+ 
+@@ -445,7 +445,7 @@
+  *	was accepted, whereas with INN, it only takes seconds.
+  */
+ 
+-#define INEWS_IS_FAST		/* comment out for C-News */
++/*#define INEWS_IS_FAST           /* comment out for C-News */
+ 
+ /*
+  *	Synchronous posting: If set this will cause NN to wait until a
+@@ -457,7 +457,7 @@
+  *	via some sort of NNTP.
+  */
+ 
+-#define SYNCHRONOUS_POSTING	/* comment out for C-News */
++/*#define SYNCHRONOUS_POSTING     /* comment out for C-News */
+ 
+ /*
+  *	PUT_TIMESTAMP_IN_SCRIPTS

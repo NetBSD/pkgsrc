@@ -1,18 +1,40 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 11:11:11 agc Exp $
+$NetBSD: patch-af,v 1.3 1999/07/26 21:19:26 tron Exp $
 
---- answer.c.orig	Mon Sep 13 19:42:02 1993
-+++ answer.c	Fri May 22 01:26:35 1998
-@@ -132,9 +132,13 @@
-     nn_gethostname(host, 64);
- #endif
+--- articles.c.orig	Fri Feb 18 03:15:47 1994
++++ articles.c	Mon Jul 26 23:11:38 1999
+@@ -259,7 +259,7 @@
+     int dbstatus;
+ #else /* NOV */
+     FILE *data;
+-    off_t data_offset, data_size;
++    long data_offset, data_size;
+ #endif /* NOV */
+     cross_post_number cross_post;
+     attr_type leave_attr;
+@@ -281,7 +281,7 @@
+     data = open_data_file(gh, 'd', OPEN_READ);
+     if (data == NULL) return -10;
  
-+#if 0
-     fprintf(t, "Path: %s!%s\n", host, user_name());
-+#endif
-     fprintf(t, "Date: %s %s %s %s GMT\n", date+8, date+4, date+22, date+11);
-+#if 0
-     fprintf(t, "Message-ID: <%s.%ld@%s>\n", user_name(), (long)now, host);
-+#endif
-     ed_line += 3;
- }
- #endif
+-    if ((data_offset = get_data_offset(gh, first_article)) == (off_t)(-1))
++    if ((data_offset = get_data_offset(gh, first_article)) == (long)(-1))
+ 	return -11;
+ #endif /* NOV */
+ 
+@@ -350,7 +350,7 @@
+ 	}
+ 	data_offset += data_size;
+ #endif /* NOV */
+-	if (db_hdr.dh_lpos == (off_t)0)
++	if (db_hdr.dh_lpos == (long)0)
+ 	    continue;	/* article not accessible */
+ 
+ 	if (db_hdr.dh_number > gh->last_db_article
+@@ -413,7 +413,7 @@
+ 	}
+ 
+ 	ah->hpos = db_hdr.dh_hpos;
+-	ah->fpos = ah->hpos + (off_t)(db_hdr.dh_fpos);
++	ah->fpos = ah->hpos + (long)(db_hdr.dh_fpos);
+ 	ah->lpos = db_hdr.dh_lpos;
+ 
+ 	ah->attr = test_article(ah);
