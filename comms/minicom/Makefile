@@ -4,6 +4,7 @@
 # Date created:         Fri Dec 01, 1995
 # Whom:                 obrien@cs.ucdavis.edu
 #
+# $NetBSD: Makefile,v 1.2 1998/02/11 22:04:29 tron Exp $
 # $FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 

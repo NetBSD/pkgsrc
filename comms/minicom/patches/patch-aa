@@ -1,5 +1,5 @@
---- Makefile.orig	Sun Apr 28 07:16:29 1996
-+++ Makefile	Sat Jan  3 02:45:02 1998
+--- Makefile.orig	Sun Apr 28 16:16:29 1996
++++ Makefile	Wed Feb 11 22:56:40 1998
 @@ -12,17 +12,17 @@
  #
  
@@ -46,7 +46,7 @@
  #CC	= cc
 +
 +# Take these compilation flags for FreeBSD.
-+FLAGS	= -Wall -D_POSIX -D_BSD43 -D_SELECT -D_HAVE_MACROS -D_DCDFLOW
++FLAGS	= -Wall -D_POSIX -D_BSD43 -D_SELECT -D_HAVE_MACROS -D_DCDFLOW -DBINDIR=\"${BINDIR}\"
 +PROGS	= minicom runscript ascii-xfr
 +LFLAGS	= -s
 +LIBS	= -ltermcap
