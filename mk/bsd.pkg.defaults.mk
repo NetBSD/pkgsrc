@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.241 2004/05/22 19:09:53 cl Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.242 2004/05/23 16:01:49 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1374,6 +1374,24 @@ KERBEROS_PREFIX_CMDS?=	no
 # find latex2html's icons.
 # Possible:  a URL prefix
 # Default: none
+
+LEAFNODE_DATA_DIR?= /var/news
+# Used by leafnode to specify the data directory.
+# Possible: any path you like
+# Default: /var/news
+# Note: default is the same as INN_DATA_DIR
+
+LEAFNODE_USER?=	news
+# Used by leafnode to specify the username 
+# Possible: any valid username 
+# Default: news
+# Note: default is the same as INN_USER
+
+LEAFNODE_GROUP?=	news
+# Used by leafnode to specify the groupname
+# Possible: any valid groupname
+# Default: news
+# Note: default is the same as INN_GROUP
 
 LINUX_LOCALES?=								\
 	af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl	\
