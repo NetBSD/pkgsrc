@@ -1,29 +1,31 @@
-$NetBSD: patch-aa,v 1.3 2003/08/17 19:47:39 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2003/12/13 17:19:26 jmmv Exp $
 
---- Makefile.in.orig	2003-08-12 02:07:57.000000000 +0200
+--- Makefile.in.orig	2003-12-08 23:47:27.000000000 +0100
 +++ Makefile.in
-@@ -75,13 +75,13 @@ SUBDIRS = . tests doc doc-i18n-tool
+@@ -70,7 +70,7 @@ SUBDIRS = . tests doc doc-i18n-tool modu
  
  NULL = 
  
 -aclocal_macros = intltool.m4 xml-i18n-tools.m4
 +aclocal_macros = intltool.m4
  
- CLEANFILES =  	intltoolize					xml-i18n-toolize				intltool-extract.in				intltool-merge.in				intltool-update.in				intltool-extract				intltool-merge					intltool-prepare				intltool-update					*.gz						$(NULL)
+ CLEANFILES = \
+ 	intltoolize				\
+@@ -99,9 +99,6 @@ pkgdata_DATA = \
+ 	intltool-po-Makefile.in.in-patch-6	\
+ 	intltool-po-Makefile.in.in-patch-7	\
+ 	intltool-po-Makefile.in.in-patch-8	\
+-	xml-i18n-po-Makefile.in.in-patch-1	\
+-	xml-i18n-po-Makefile.in.in-patch-2	\
+-	xml-i18n-po-Makefile.in.in-patch-5	\
+ 	$(NULL)
  
  
- # These are required by intltoolize and xml-i18n-toolize.
--pkgdata_DATA =  	intltool-extract.in				intltool-merge.in				intltool-update.in				intltool-po-Makefile.in.in-patch-1		intltool-po-Makefile.in.in-patch-2		intltool-po-Makefile.in.in-patch-3		intltool-po-Makefile.in.in-patch-4		intltool-po-Makefile.in.in-patch-5		intltool-po-Makefile.in.in-patch-6		intltool-po-Makefile.in.in-patch-7		xml-i18n-po-Makefile.in.in-patch-1		xml-i18n-po-Makefile.in.in-patch-2		xml-i18n-po-Makefile.in.in-patch-5		$(NULL)
-+pkgdata_DATA =  	intltool-extract.in				intltool-merge.in				intltool-update.in				intltool-po-Makefile.in.in-patch-1		intltool-po-Makefile.in.in-patch-2		intltool-po-Makefile.in.in-patch-3		intltool-po-Makefile.in.in-patch-4		intltool-po-Makefile.in.in-patch-5		intltool-po-Makefile.in.in-patch-6		intltool-po-Makefile.in.in-patch-7	$(NULL)
+@@ -112,7 +109,6 @@ aclocal_DATA = $(aclocal_macros)
  
- 
- # This macro file should be visible to Automake's aclocal.
-@@ -89,7 +89,7 @@ aclocal_DATA = $(aclocal_macros)
- 
- # The intltool distributor and installed versions of scripts
- 
--bin_SCRIPTS =  	intltoolize					xml-i18n-toolize				intltool-update					intltool-merge					intltool-extract				intltool-prepare				$(NULL)
-+bin_SCRIPTS =  	intltoolize					intltool-update					intltool-merge					intltool-extract				intltool-prepare				$(NULL)
- 
- 
- EXTRA_DIST =  	$(aclocal_macros)				intltoolize.in					xml-i18n-toolize.in				intltool-extract.in.in				intltool-merge.in.in				intltool-update.in.in				intltool-prepare.in				intltool.spec.in				$(pkgdata_DATA)					$(NULL)
+ bin_SCRIPTS = \
+ 	intltoolize				\
+-	xml-i18n-toolize			\
+ 	intltool-update				\
+ 	intltool-merge				\
+ 	intltool-extract			\
