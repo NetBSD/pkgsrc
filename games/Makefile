@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2000/10/15 02:11:30 jlam Exp $
+# $NetBSD: Makefile,v 1.95 2000/10/15 08:41:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -45,6 +45,8 @@
     SUBDIR += jetpack
     SUBDIR += kdegames
     SUBDIR += kdetoys
+    SUBDIR += knightcap
+    SUBDIR += knightcap-brain
     SUBDIR += koth
     SUBDIR += lincity
     SUBDIR += maelstrom
