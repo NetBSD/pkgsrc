@@ -1,18 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/30 10:32:14 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/14 21:13:35 jmmv Exp $
 bin/gnome2-terminal
-etc/gconf/gconf.xml.defaults/apps/gnome-terminal/global/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnome-terminal/keybindings/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnome-terminal/profiles/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnome-terminal/profiles/Default/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnome-terminal/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/global/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/keybindings/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/profiles/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/profiles/Default/%gconf.xml
-etc/gconf/schemas/gnome-terminal.schemas
 lib/bonobo/servers/gnome-terminal.server
 share/applications/gnome-terminal.desktop
+share/gconf/schemas/gnome-terminal.schemas
 share/gnome-terminal/glade/gnome-terminal.glade2
 share/gnome/help/gnome-terminal/C/gnome-terminal.xml
 share/gnome/help/gnome-terminal/C/figures/gnome-terminal-default.png
@@ -57,13 +47,3 @@ share/pixmaps/gnome-terminal.png
 @dirrm share/gnome/help/gnome-terminal
 @dirrm share/gnome-terminal/glade
 @dirrm share/gnome-terminal
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/profiles/Default
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/profiles
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/keybindings
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal/global
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-terminal
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-terminal/profiles/Default
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-terminal/profiles
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-terminal/keybindings
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-terminal/global
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-terminal
