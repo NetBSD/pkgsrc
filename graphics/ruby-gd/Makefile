@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/05/02 03:55:16 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/20 21:52:08 xtraeme Exp $
 
 DISTNAME=	ruby-GD-${VER}-1
 PKGNAME=	ruby-gd-${VER}.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://tam.0xfa.com/ruby-gd/
 
