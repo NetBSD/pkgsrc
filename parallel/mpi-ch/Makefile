@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2003/11/26 12:42:12 wennmach Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/27 17:02:25 wennmach Exp $
 
 DISTNAME=		mpich-1.2.5-1a
 PKGNAME=		mpich-1.2.5.1.1
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-1a//}
 CATEGORIES=		parallel
 MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
