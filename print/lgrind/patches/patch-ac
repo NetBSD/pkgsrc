@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/03/10 17:03:13 jwise Exp $
+--- lgrindef.5.orig	Tue Mar  9 13:22:25 1999
++++ lgrindef.5	Tue Mar  9 13:23:12 1999
+@@ -17,7 +17,7 @@
+ This man page is not yet much outdated, but might be soon except somebody
+ asks me to work on it. Consider the LaTeX docs the real docs.
+ .SH SYNOPSIS
+-.B /usr/TeX/texmf/tex/latex/lgrind/lgrindef
++.B @PREFIX@/share/texmf/tex/latex/lgrind/lgrindef
+ .SH DESCRIPTION
+ .IX  "lgrindef file"  ""  "\fLlgrindef\fP \(em LGrind language definitions"
+ .B lgrindef
+@@ -237,8 +237,8 @@
+ .BR lgrind (1)
+ as `c' or `C', since case is not significant here.
+ .SH FILES
+-.ta \w'/usr/TeX/texmf/tex/latex/lgrind/lgrindef   'u
+-\fB/usr/TeX/texmf/tex/latex/lgrind/lgrindef\fR	file containing terminal descriptions
++.ta \w'@PREFIX@/share/texmf/tex/latex/lgrind/lgrindef   'u
++\fB@PREFIX@/share/texmf/tex/latex/lgrind/lgrindef\fR	file containing terminal descriptions
+ .SH "SEE ALSO"
+ .BR latex (1),
+ .BR lgrind (1),
