@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:20 agc Exp $
 
-MD5 (tkirc1.202.tar.gz) = f00d23922764bb5091ab0e4f8a10a528
+SHA1 (tkirc1.202.tar.gz) = f3a420f46b79ff40d8cfad07780d3d956eb3d3b2
+Size (tkirc1.202.tar.gz) = 93428 bytes

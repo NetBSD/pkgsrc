@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:16 agc Exp $
 
-MD5 (gnomeicu-0.96.tar.bz2) = e4fa4d3244095116310230fa1bce5ab7
+SHA1 (gnomeicu-0.96.tar.bz2) = 88916f2c5220617a9c1cd44b70376438a4f3543e
+Size (gnomeicu-0.96.tar.bz2) = 704025 bytes

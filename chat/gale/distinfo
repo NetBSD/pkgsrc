@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:16 agc Exp $
 
-MD5 (gale-0.99a.tar.gz) = ebb72dde51299182e93fe15da3aa4209
+SHA1 (gale-0.99a.tar.gz) = c3439917c0e19ce8ccd8dd03367d0a521d6e33fd
+Size (gale-0.99a.tar.gz) = 331494 bytes
 SHA1 (patch-aa) = eef7b28bbe134c119e3000bdd9446782d2802780

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:16 agc Exp $
 
-MD5 (gaim-0.11.0pre4.tar.gz) = 740253d439577dbcf6ab6df768d76719
+SHA1 (gaim-0.11.0pre4.tar.gz) = 1a19cab9c1ba0fd01acf2b556e02f418570e302a
+Size (gaim-0.11.0pre4.tar.gz) = 1086406 bytes
