@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/03/01 01:50:11 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.25 2000/05/14 01:00:42 dmcmahill Exp $
 #
 
 DISTNAME=       bxform-088
@@ -22,6 +22,8 @@ ARCH_SUBDIR=    netBSD-${MACHINE_ARCH}
 .endif
 
 DIST_SUBDIR=		xforms-${MACHINE_ARCH}
+
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
