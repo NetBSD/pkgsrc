@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.3 2001/03/26 22:37:34 bad Exp $
+$NetBSD: patch-ae,v 1.4 2001/05/02 08:22:31 jlam Exp $
 
---- configure.in.orig	Fri Mar 16 01:51:51 2001
-+++ configure.in	Sat Mar 24 02:44:15 2001
+--- configure.in.orig	Thu Mar 15 19:51:51 2001
++++ configure.in
 @@ -581,7 +581,10 @@
          AC_MSG_RESULT(yes)
          AC_DEFINE(LIBWRAP)
@@ -14,7 +14,20 @@ $NetBSD: patch-ae,v 1.3 2001/03/26 22:37:34 bad Exp $
          AC_MSG_RESULT(no)
          CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags}),
        CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags})
-@@ -1951,7 +1954,7 @@
+@@ -1589,7 +1592,11 @@
+   # This requires readline to be in a standard place. Mosty for linux
+   # there readline may be a shared library.
+   readline_dir=""
+-  readline_link="-lreadline"
++  if test -z "$readline_lib"
++  then
++    readline_lib="readline"
++  fi
++  readline_link="-l$readline_lib"
+ fi
+ AC_SUBST(readline_dir)
+ AC_SUBST(readline_link)
+@@ -1951,7 +1958,7 @@
      AC_DEFINE(HAVE_mit_thread)
      MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
      AC_SUBST(MT_INCLUDES)
