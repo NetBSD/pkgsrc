@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/15 03:11:50 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/12 20:54:52 reed Exp $
 bin/inkscape
 bin/inkview
+lib/inkscape/plugins/libgimpgrad.la
 man/man1/inkscape.1
 man/man1/inkview.1
 share/applications/inkscape.desktop
@@ -12,33 +13,38 @@ share/inkscape/clipart/ribbon.svg
 share/inkscape/clipart/tux.png
 share/inkscape/clipart/tux.svg
 share/inkscape/examples/README
+share/inkscape/examples/data_uri.svg
+share/inkscape/examples/flowsample.svg
 share/inkscape/examples/gradient.svg
 share/inkscape/examples/i18n.svg
+share/inkscape/examples/istest.pov
 share/inkscape/examples/markers.svg
 share/inkscape/examples/stars.svgz
+share/inkscape/examples/text-on-path.svg
 share/inkscape/examples/tiger.svgz
 share/inkscape/extensions/SpSVG.pm
-share/inkscape/extensions/ai_input.inkmod
-share/inkscape/extensions/ai_output.inkmod
-share/inkscape/extensions/dia.inkmod
+share/inkscape/extensions/ai_input.inx
+share/inkscape/extensions/ai_output.inx
+share/inkscape/extensions/dia.inx
 share/inkscape/extensions/dia2svg.sh
-share/inkscape/extensions/dropshadow.inkmod
-share/inkscape/extensions/eps_input.inkmod
-share/inkscape/extensions/epsi_output.inkmod
+share/inkscape/extensions/dropshadow.inx
+share/inkscape/extensions/eps_input.inx
+share/inkscape/extensions/epsi_output.inx
+share/inkscape/extensions/gimpgrad.inx
 share/inkscape/extensions/ill2svg.pl
 share/inkscape/extensions/ps2epsi.sh
-share/inkscape/extensions/ps_input.inkmod
+share/inkscape/extensions/ps_input.inx
 share/inkscape/extensions/roundhole
-share/inkscape/extensions/roundhole.inkmod
+share/inkscape/extensions/roundhole.inx
 share/inkscape/extensions/roundhole.xpm
 share/inkscape/extensions/sk2svg.sh
-share/inkscape/extensions/sk_input.inkmod
+share/inkscape/extensions/sk_input.inx
 share/inkscape/extensions/svg_dropshadow
-share/inkscape/extensions/svgz_input.inkmod
-share/inkscape/extensions/svgz_output.inkmod
-share/inkscape/extensions/txt2svg.inkmod
+share/inkscape/extensions/svgz_input.inx
+share/inkscape/extensions/svgz_output.inx
+share/inkscape/extensions/txt2svg.inx
 share/inkscape/extensions/txt2svg.pl
-share/inkscape/extensions/wmf_input.inkmod
+share/inkscape/extensions/wmf_input.inx
 share/inkscape/fonts/README
 share/inkscape/gradients/README
 share/inkscape/icons/add.xpm
@@ -217,18 +223,46 @@ share/inkscape/patterns/README
 share/inkscape/screens/about.svg
 share/inkscape/screens/keys.sl.svg
 share/inkscape/screens/keys.svg
+share/inkscape/templates/A4.svg
+share/inkscape/templates/A4_landscape.svg
+share/inkscape/templates/CD_cover_300dpi.svg
+share/inkscape/templates/Letter.svg
+share/inkscape/templates/Letter_landscape.svg
 share/inkscape/templates/README
+share/inkscape/templates/black_opaque.svg
+share/inkscape/templates/business_card_90x50mm.svg
+share/inkscape/templates/default.svg
+share/inkscape/templates/desktop_1024x768.svg
+share/inkscape/templates/desktop_1600x1200.svg
+share/inkscape/templates/desktop_640x480.svg
+share/inkscape/templates/desktop_800x600.svg
+share/inkscape/templates/icon_16x16.svg
+share/inkscape/templates/icon_32x32.svg
+share/inkscape/templates/icon_48x48.svg
+share/inkscape/templates/icon_64x64.svg
+share/inkscape/templates/no_borders.svg
+share/inkscape/templates/no_layers.svg
+share/inkscape/templates/web_banner_468x60.svg
+share/inkscape/templates/web_banner_728x90.svg
+share/inkscape/templates/white_opaque.svg
 share/inkscape/tutorials/elementsofdesign.sl.svg
 share/inkscape/tutorials/elementsofdesign.svg
+share/inkscape/tutorials/oldguitar.jpg
+share/inkscape/tutorials/potrace.png
 share/inkscape/tutorials/tipsandtricks.sl.svg
 share/inkscape/tutorials/tipsandtricks.svg
 share/inkscape/tutorials/tutorial-advanced.fr.svg
 share/inkscape/tutorials/tutorial-advanced.sl.svg
 share/inkscape/tutorials/tutorial-advanced.svg
 share/inkscape/tutorials/tutorial-basic.fr.svg
+share/inkscape/tutorials/tutorial-basic.nn.svg
 share/inkscape/tutorials/tutorial-basic.ru.svg
 share/inkscape/tutorials/tutorial-basic.sl.svg
 share/inkscape/tutorials/tutorial-basic.svg
+share/inkscape/tutorials/tutorial-calligraphy.svg
+share/inkscape/tutorials/tutorial-shapes.svg
+share/inkscape/tutorials/tutorial-tracing.svg
+share/inkscape/tutorials/tux.png
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/inkscape.mo
@@ -246,8 +280,9 @@ ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/inkscape.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/inkscape.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/inkscape.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/inkscape.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/inkscape.mo
@@ -277,3 +312,5 @@ share/pixmaps/inkscape.png
 @dirrm share/inkscape/clipart
 @dirrm share/inkscape
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/inkscape/plugins
+@dirrm lib/inkscape
