@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2942 2005/01/20 21:25:01 bad Exp $
+$NetBSD: TODO,v 1.2943 2005/01/20 22:01:02 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1065,7 +1065,6 @@ Suggested package updates
 	o tcpdump-3.8.3
 	o tcpick-0.2.1
 	o tcpillust-1.00b
-	o tcpreplay-2.3.2
 	o tcptrace-6.6.7
 	o tct-1.15
 	o tdir-1.67
