@@ -9,5 +9,5 @@ copy, runtime type identification, optional runtime procedure and data
 access checking as well as tracing.
 
 As stooop is entirely written in Tcl, it will run on all Tcl supported
-platforms, including Windows and the Mac Intosh, if you have Tcl
+platforms, including Windows and the Macintosh, if you have Tcl
 version 8.0 or 8.1.
