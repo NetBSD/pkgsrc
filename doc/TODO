@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.622 2003/06/06 13:26:44 wiz Exp $
+$NetBSD: TODO,v 1.623 2003/06/06 18:32:18 drochner Exp $
 
 Suggested new packages
 ======================
@@ -218,7 +218,6 @@ Suggested package updates
 	o povray-3.5
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
-	o python-2.2.3
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.19
