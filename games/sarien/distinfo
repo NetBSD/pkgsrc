@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/10 16:16:36 jmmv Exp $
+
+SHA1 (sarien-0.7.0.tar.gz) = f1c3236ed554cbde479fbbfa52cbc95cb9759fde
+Size (sarien-0.7.0.tar.gz) = 284109 bytes
+SHA1 (patch-aa) = 437bf3108d437f265c97a813a1a1d512003f20b4
