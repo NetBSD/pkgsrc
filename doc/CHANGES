@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4985 2004/02/24 19:40:38 snj Exp $
+$NetBSD: CHANGES,v 1.4986 2004/02/24 21:42:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1011,3 +1011,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bozohttpd to 20040218nb1 [wiz 2004-02-24]
 	Added drwright-0.17 [jmmv 2004-02-24]
 	Updated abcde to 2.1.15 [snj 2004-02-24]
+	Added gnome-pkgview-1.0.5 [jmmv 2004-02-24]
