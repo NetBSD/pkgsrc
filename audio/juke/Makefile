@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/28 09:13:55 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/11 17:20:32 xtraeme Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -10,7 +10,7 @@ MAINTAINER=	mob@bicekru.org
 HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/
 COMMENT=	Simple ncurses based jukebox
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
@@ -34,5 +34,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/juke.conf ${EGDIR}/juke.conf.default
 	${INSTALL_DATA} ${WRKSRC}/MANUAL ${PREFIX}/share/doc/juke/
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
