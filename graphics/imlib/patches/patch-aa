@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.5 1999/03/05 23:46:19 tron Exp $
+$NetBSD: patch-aa,v 1.6 1999/03/09 23:00:38 tron Exp $
 
---- configure.orig	Wed Dec 16 04:14:28 1998
-+++ configure	Wed Jan  6 01:36:14 1999
-@@ -1174,6 +1174,7 @@
- 
+--- configure.orig	Thu Feb 25 00:44:38 1999
++++ configure	Tue Mar  9 23:51:33 1999
+@@ -1533,6 +1533,7 @@
+ fi
  
  # Always use our own libtool.
 +if false; then
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- 
-@@ -1253,6 +1254,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ # Check for any special flags to pass to ltconfig.
+@@ -1764,6 +1765,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
- 
- echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
-@@ -1533,6 +1535,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -2118,6 +2120,7 @@
    else
      GTK_CFLAGS=`$GTK_CONFIG $gtk_config_args --cflags`
      GTK_LIBS=`$GTK_CONFIG $gtk_config_args --libs`
@@ -26,3 +26,16 @@ $NetBSD: patch-aa,v 1.5 1999/03/05 23:46:19 tron Exp $
      gtk_config_major_version=`$GTK_CONFIG $gtk_config_args --version | \
             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
      gtk_config_minor_version=`$GTK_CONFIG $gtk_config_args --version | \
+@@ -5325,10 +5328,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
