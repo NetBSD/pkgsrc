@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:02:33 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/26 16:14:42 grant Exp $
 lib/win32/3ivX.qtx
 lib/win32/BeHereiVideo.qtx
 lib/win32/CLRVIDDC.DLL
@@ -82,6 +82,8 @@ lib/win32/vivog723.acm
 lib/win32/voxmsdec.ax
 lib/win32/vp31vfw.dll
 lib/win32/vp4vfw.dll
+lib/win32/vp5vfw.dll
+lib/win32/vp6vfw.dll
 lib/win32/vssh264.dll
 lib/win32/vssh264core.dll
 lib/win32/vssh264dec.dll
