@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:23 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/10 15:58:03 jdolecek Exp $
 
 PKGNAME=		postgresql73-client-${BASE_VERS}
 PKGREVISION=	1
@@ -29,7 +29,7 @@ pre-build:
 
 post-install:
 	cd ${PREFIX}/man && 						\
-		${PAX} -O -crzf ${WRKSRC}/doc/man.tar.gz `${GREP} -v ^# ${FILESDIR}/exclude`
+		${PAX} -crzf ${WRKSRC}/doc/man.tar.gz `${GREP} -v ^# ${FILESDIR}/exclude`
 
 .include "../../databases/postgresql73-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
