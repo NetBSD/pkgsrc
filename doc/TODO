@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2558 2004/11/28 23:04:56 wiz Exp $
+$NetBSD: TODO,v 1.2559 2004/11/28 23:09:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -890,7 +890,6 @@ Suggested package updates
 	o p5-Log-Dispatch-2.10
 	o p5-Log-Dispatch-Config-1.01
 	o p5-MARC-1.38
-	o p5-MIME-tools-6.200_02
 	o p5-MIME-Types-1.13
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.02
