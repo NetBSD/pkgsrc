@@ -1,0 +1,32 @@
+*** uname.c.orig	Wed Mar 25 11:12:00 1998
+--- uname.c	Wed Mar 25 13:51:09 1998
+***************
+*** 66,79 ****
+  char *uptr;
+  {
+      FILE * uucpf;
+!     char * hostname;
+      if ((uucpf = fopen(HOSTFILE,"r")) == NULL) {
+  	fprintf(stderr,"Couldn't open %s to determine hostname. Contact your system administrator.\n", 
+  		HOSTFILE); 
+  	exit(1);
+      } else {
+  	fgets(uptr, 256, uucpf);
+- 	fclose(tmpfp);
+      }
+  	p = index(uptr, '\n');
+  	if (p)
+--- 66,78 ----
+  char *uptr;
+  {
+      FILE * uucpf;
+!     char * p;
+      if ((uucpf = fopen(HOSTFILE,"r")) == NULL) {
+  	fprintf(stderr,"Couldn't open %s to determine hostname. Contact your system administrator.\n", 
+  		HOSTFILE); 
+  	exit(1);
+      } else {
+  	fgets(uptr, 256, uucpf);
+      }
+  	p = index(uptr, '\n');
+  	if (p)
