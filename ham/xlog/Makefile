@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/04/11 08:54:13 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/06 13:41:45 wulf Exp $
 #
 
-DISTNAME=	xlog-0.9.1
-PKGREVISION=	1
+DISTNAME=	xlog-0.9.3
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/pg4i/download/
 
@@ -12,6 +11,7 @@ COMMENT=	Amateur Radio logging program
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
+USE_PKGLOCALDIR=yes
 USE_GNU_TOOLS+=	make
 
 CONFIGURE_ARGS=	--enable-hamlib
