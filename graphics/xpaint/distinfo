@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.7 2003/03/17 01:19:12 dmcmahill Exp $
+$NetBSD: distinfo,v 1.8 2003/07/17 09:01:01 adam Exp $
 
-SHA1 (xpaint-2.6.7.tar.bz2) = d45948c8ee368ad936a3ea0e6081f6d1d3756852
-Size (xpaint-2.6.7.tar.bz2) = 502319 bytes
+SHA1 (xpaint-2.7.0.tar.bz2) = 9a718e279d15b043f4763a29a552f7cf609bb80e
+Size (xpaint-2.7.0.tar.bz2) = 548641 bytes
 SHA1 (patch-aa) = 1c1c2cb9d4cf99d46f6ab8e4247e226d5371d489
-SHA1 (patch-ab) = a0644e605edd5c1769b5b11a6004c4b512960b46
-SHA1 (patch-ac) = dbdf4d975268f3cc9f9d3e8c4526a61505e4d7e5
-SHA1 (patch-ad) = c4a4df43dbde8ec2c42c39c49df99d8110eb8007
-SHA1 (patch-ae) = 36895e2e3da56a15087e6b8b155b71df20fdc1d3
-SHA1 (patch-af) = 7758d2ec39a599cdb51bfeced3b068c94b0daec2
-SHA1 (patch-ag) = 3cfdfe9885ed4fb2bb08885c29c6365c7a191814
+SHA1 (patch-ab) = 37e778cba2875691d5e411ae57374c47cee43bf6
+SHA1 (patch-ac) = 9bfad6abed6f1547eaa77c1cd98fdc4006f9474b
+SHA1 (patch-ae) = 9d45899230246b8651c2c9061fdbb47b09b7e489
+SHA1 (patch-af) = 2bf7c952d8cc8cc3d17c300d94541fc371e7d129
+SHA1 (patch-ag) = 5a9752c48f9b9b7ea2c73875202299ecf0b7d395
