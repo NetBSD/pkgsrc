@@ -1,22 +1,18 @@
-$NetBSD: patch-ai,v 1.4 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-ai,v 1.5 2003/04/05 05:42:56 jtb Exp $
 
---- /dev/null	Mon Mar 24 09:43:29 2003
-+++ config/unix/netbsd/status	Mon Mar 24 10:13:52 2003
-@@ -0,0 +1,30 @@
+--- /dev/null
++++ config/unix/netbsd/status
+@@ -0,0 +1,26 @@
 +System configuration:
 +
-+	NetBSD
++	NetBSD SPARC, Alpha, PowerPC, i386, MIPS, VAX, m68k
 +
 +Latest Icon version:
 +
 +	Version 9.4.1
 +
 +Installer:
-+	Alistair G. Crooks <agc@netbsd.org>	     (Intel)
-+	John Hayward <John.C.Hayward@wheaton.edu>    (Intel)
-+	David A. Holland <dholland@eecs.harvard.edu> (SPARC)
-+	Tim Rightnour <root@garbled.net>	     (Alpha)
-+       Jason Beegan <jtb@netbsd.org>                (PowerPC)
++	The NetBSD Project
 +
 +Missing features:
 +
