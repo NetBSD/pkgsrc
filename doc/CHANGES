@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7201 2004/09/21 15:53:51 adrianp Exp $
+$NetBSD: CHANGES,v 1.7202 2004/09/21 17:06:43 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4308,3 +4308,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated aide06 to 0.6nb1 [agc 2004-09-21]
 	Updated wv to 1.0.2 [adam 2004-09-21]
 	Updated snort to 2.2.0 [adrianp 2004-09-21]
+	Added xcompmgr-20040917 [xtraeme 2004-09-21]
