@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.4 2003/09/23 07:13:53 grant Exp $ */
+/* $NetBSD: lib.h,v 1.5 2003/09/23 13:22:42 grant Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -237,6 +237,7 @@ void    save_dirs(char **, char **);
 void    restore_dirs(char *, char *);
 void    show_version(void);
 int	fexec(const char *, ...);
+int	fexec_skipempty(const char *, ...);
 int	fcexec(const char *, const char *, ...);
 
 /* String */
@@ -277,7 +278,7 @@ void    write_file(char *, char *);
 void    copy_file(char *, char *, char *);
 void    move_file(char *, char *, char *);
 int     delete_hierarchy(char *, Boolean, Boolean);
-int     unpack(const char *, const char *);
+int     unpack(const char *, const char *, const char *);
 void    format_cmd(char *, size_t, char *, char *, char *);
 
 /* ftpio.c: FTP handling */

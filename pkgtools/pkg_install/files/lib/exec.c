@@ -1,4 +1,4 @@
-/*	$NetBSD: exec.c,v 1.4 2003/09/23 07:13:52 grant Exp $	*/
+/*	$NetBSD: exec.c,v 1.5 2003/09/23 13:22:40 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: exec.c,v 1.6 1997/10/08 07:47:50 charnier Exp";
 #else
-__RCSID("$NetBSD: exec.c,v 1.4 2003/09/23 07:13:52 grant Exp $");
+__RCSID("$NetBSD: exec.c,v 1.5 2003/09/23 13:22:40 grant Exp $");
 #endif
 #endif
 
@@ -63,6 +63,7 @@ vsystem(const char *fmt,...)
 	if (vsnprintf(cmd, maxargs, fmt, args) >= maxargs) {
 		warnx("vsystem args are too long");
 		va_end(args);
+		free(cmd);
 		return 1;
 	}
 #ifdef VSYSTEM_DEBUG
