@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/23 04:41:01 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/06 05:32:29 tv Exp $
 #
 
 DISTNAME=		pkg_install-info-${VERSION}
@@ -27,6 +27,6 @@ MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP}
 INSTALLATION_DIRS=	bin
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
