@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2971 2003/08/02 17:01:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.2972 2003/08/03 00:14:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3178,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added avidemux-2.0.10 [jmmv 2003-08-02]
 	Updated exim-user to 4.10nb1 [jmmv 2003-08-02]
 	Updated exim to 4.10nb2 [jmmv 2003-08-02]
+	Updated git to 4.3.17nb1 [seb 2003-08-03]
