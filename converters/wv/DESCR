@@ -1,5 +1,8 @@
-wv is a collection of programs that understand the Microsoft Word 6,
-7, and 8 binary file formats (Office 95/97/2000), display information
-about them and can convert them to HTML or LaTeX.
+wv is a library which allows access to Microsoft Word files.
+It can load and parse the Word 6-9 formats (Word 6, 95, 97, 2000).
 
-It also supports reading encrypted Word documents.
+And several converter executables called wvWare are also provided:
+	wvHtml, wvLatex, wvCleanLatex, wvDVI, wvPS, wvPDF,
+	wvText, wvAbw, wvWml, wvMime
+
+note: wvHtml is previously known as MSWordView.

@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/03 13:21:37 adam Exp $
-bin/libwv-config
+@comment $NetBSD: PLIST,v 1.5 2003/12/13 23:45:12 xtraeme Exp $
 bin/wvAbw
 bin/wvCleanLatex
 bin/wvConvert
-bin/wvDocBook
 bin/wvDVI
+bin/wvDocBook
 bin/wvHtml
 bin/wvLatex
 bin/wvMime
@@ -16,13 +15,16 @@ bin/wvText
 bin/wvVersion
 bin/wvWare
 bin/wvWml
-include/wv.h
-lib/libwv.so
-lib/libwv-0.7.so
-lib/libwv-0.7.so.6
-lib/libwv-0.7.so.6.0
+include/wv/libole2/ms-ole-summary.h
+include/wv/libole2/ms-ole.h
+include/wv/wv.h
+lib/libwv-1.0.so
+lib/libwv-1.0.so.0
+lib/libwv-1.0.so.0.0
 lib/libwv.a
 lib/libwv.la
+lib/libwv.so
+lib/pkgconfig/wv-1.0.pc
 man/man1/wvAbw.1
 man/man1/wvCleanLatex.1
 man/man1/wvDVI.1
@@ -488,3 +490,5 @@ share/wv/wvXml.xml
 @dirrm share/wv/wingdingfont
 @dirrm share/wv/patterns
 @dirrm share/wv
+@dirrm include/wv/libole2
+@dirrm include/wv
