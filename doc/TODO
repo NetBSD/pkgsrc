@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2093 2004/08/31 15:31:10 reed Exp $
+$NetBSD: TODO,v 1.2094 2004/08/31 15:54:26 dillo Exp $
 
 Suggested new packages
 ======================
@@ -429,7 +429,6 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
-	o vice-1.15
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vsftpd-2.01 [pkg/26811]
 	o vttest-20030301
