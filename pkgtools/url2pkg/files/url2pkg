@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.8 2000/04/01 20:55:24 hubertf Exp $
+# $NetBSD: url2pkg,v 1.9 2000/04/03 12:52:28 hubertf Exp $
 #
 # url2pkg
 # (c) 1999 Hubert Feyrer
@@ -43,6 +43,9 @@ if [ ! -f w*/.extract_done ]; then
 			DISTNAME=`expr ${DISTNAME} : '\(.*\)\.[^.]*'`
 			;;
 	*.tar.gz)	EXTRACT_SUFX=.tar.gz 
+			DISTNAME=`expr ${DISTNAME} : '\(.*\)\.[^.]*\.[^.]*'`
+			;;
+        *.tar.bz2)	EXTRACT_SUFX=.tar.bz2
 			DISTNAME=`expr ${DISTNAME} : '\(.*\)\.[^.]*\.[^.]*'`
 			;;
 	*)		EXTRACT_SUFX=`expr ${DISTNAME} : '.*\(\.[^.]*\)'`
