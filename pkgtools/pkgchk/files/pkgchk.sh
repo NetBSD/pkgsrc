@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.16 2001/09/28 09:58:15 abs Exp $
+# $Id: pkgchk.sh,v 1.17 2001/09/28 11:30:55 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -325,7 +325,7 @@ for pkgdir in $PKGDIRLIST ; do
 	    installed_build_version=`cat /var/db/pkg/$PKGNAME/+BUILD_VERSION | sed "s:^${real_pkgsrcdir}/::"`
 	    if [ x"$current_build_version" != x"$installed_build_version" ];then
 		echo "$PKGNAME: build version information mismatch"
-		mismatch="$mismatch $pkginstalled"
+		mismatch="$mismatch $PKGNAME"
 		# should we mark this pkg to be updated if -u is given ??
 	    elif [ -n "$opt_v" ];then
 		echo "$PKGNAME: OK"
