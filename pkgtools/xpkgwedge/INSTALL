@@ -1,14 +1,17 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/10/31 21:19:17 zuntum Exp $
+# $NetBSD: INSTALL,v 1.2 2002/02/26 21:49:06 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CP="@CP@"
+ECHO="@ECHO@"
 GREP="@GREP@"
+LN="@LN@"
 RM="@RM@"
 
+FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
 X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
 HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
@@ -18,12 +21,22 @@ PRE-INSTALL)
 	;;
 
 POST-INSTALL)
+	for prog in ${FONT_PROGS}
+	do
+		if [ -f ${X11BASE}/bin/${prog} -a			\
+		     ${PKG_PREFIX} != ${X11BASE} ]
+		then
+			${LN} -fs ${X11BASE}/bin/${prog}		\
+				${PKG_PREFIX}/bin/${prog}
+		fi
+	done
+
 	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]
 	then
-		echo -n "Updating ${HOSTDEF}..."
+		${ECHO} -n "Updating ${HOSTDEF}..."
 		${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
 	else
-		echo -n "Creating ${HOSTDEF}..."
+		${ECHO} -n "Creating ${HOSTDEF}..."
 		if [ -f ${X11_HOSTDEF} ]
 		then 
 			${CP} -f ${X11_HOSTDEF} ${HOSTDEF}.bak
@@ -31,15 +44,15 @@ POST-INSTALL)
 			${CP} -f /dev/null ${HOSTDEF}.bak
 		fi
 	fi
-	( echo '#include <xpkgwedge.def>';				\
+	( ${ECHO} '#include <xpkgwedge.def>';				\
 	  ${GREP} -v xpkgwedge ${HOSTDEF}.bak;				\
 	) > ${HOSTDEF}
 	${RM} -f ${HOSTDEF}.bak
-	echo "done."
+	${ECHO} "done."
 	;;
 
 *)
-	echo "Unexpected argument: ${STAGE}"
+	${ECHO} "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
