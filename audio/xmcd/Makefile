@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/09 13:36:48 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/18 16:15:11 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/09/08 13:20:10 tg Exp 
 #
 
@@ -11,9 +11,6 @@ MAINTAINER=	hubertf@netbsd.org
 USE_MOTIF=	yes
 USE_IMAKE=	yes
 IS_INTERACTIVE=	yes	# asks a lot of questions
-
-MAN1=		xmcd.1 cda.1 cddbcmd.1 wm2xmcd.1
-CAT1=		xmcd.0 cda.0 cddbcmd.0 wm2xmcd.0
 
 post-install:
 	@strip ${PREFIX}/bin/xmcd

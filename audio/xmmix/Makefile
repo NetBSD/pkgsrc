@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/09 13:36:49 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/18 16:15:11 agc Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
@@ -10,8 +10,6 @@ MAINTAINER=	augustss@cs.chalmers.se
 
 USE_IMAKE=	yes
 USE_MOTIF=	yes
-
-CAT1=		xmmix.0
 
 post-patch:
 	for file in ${WRKSRC}/XMmix.ad ${WRKSRC}/resource.h; do \
