@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/08 06:23:08 martti Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_DATETIME_PLUGIN_BUILDLINK3_MK:=	${XFCE4_DATETIME_PLUGIN_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-datetime-plugin}
 BUILDLINK_PACKAGES+=	xfce4-datetime-plugin
 
 .if !empty(XFCE4_DATETIME_PLUGIN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-datetime-plugin+=	xfce4-datetime-plugin>=0.2nb4
+BUILDLINK_DEPENDS.xfce4-datetime-plugin+=	xfce4-datetime-plugin>=0.3.1
 BUILDLINK_PKGSRCDIR.xfce4-datetime-plugin?=	../../time/xfce4-datetime-plugin
 .endif	# XFCE4_DATETIME_PLUGIN_BUILDLINK3_MK
 
