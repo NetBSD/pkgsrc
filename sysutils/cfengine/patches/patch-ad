@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 1999/11/05 13:52:52 abs Exp $
---- src/misc.c.orig	Fri Nov  5 06:44:40 1999
-+++ src/misc.c	Fri Nov  5 10:37:17 1999
-@@ -652,3 +652,40 @@
+$NetBSD: patch-ad,v 1.2 1999/11/09 17:22:16 abs Exp $
+--- src/misc.c.orig	Tue Sep 14 09:46:53 1999
++++ src/misc.c	Tue Nov  9 16:27:25 1999
+@@ -652,3 +652,41 @@
  
  AddClassToHeap(CanonifyName(VDOMAIN)); 
  }
@@ -28,7 +28,8 @@ $NetBSD: patch-ad,v 1.1 1999/11/05 13:52:52 abs Exp $
 +     */
 +
 +    /* This is also a convenient method to ensure valid dotted quad */
-+if (inet_aton(netmask,&nm) && inet_aton(VIPADDRESS,&ip))
++if ( (nm.s_addr = inet_addr(netmask)) != INADDR_NONE &&
++	    (ip.s_addr = inet_addr(VIPADDRESS)) != INADDR_NONE )
 +    {
 +    ip.s_addr &= nm.s_addr;	/* Will not work with IPv6 */
 +    strcpy(ipbuf,inet_ntoa(ip));
