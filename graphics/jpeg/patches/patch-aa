@@ -47,12 +47,16 @@
   
   rdjpgcom: rdjpgcom.o
   	$(LN) $(LDFLAGS) -o rdjpgcom rdjpgcom.o $(LDLIBS)
---- 137,153 ----
+--- 137,157 ----
   	$(AR) libjpeg.a  $(LIBOBJECTS)
   	$(AR2) libjpeg.a
   
 ! libjpeg.so.7.0: @ANSI2KNR@  $(LIBOBJECTS:S/o$/so/g)
+! .if 	(${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "mips")
+! 	ld -x -Bshareable --whole-archive -o libjpeg.so.7.0 $(LIBOBJECTS:S/o$/so/g)
+! .else
 ! 	ld -x -Bshareable -Bforcearchive -o libjpeg.so.7.0 $(LIBOBJECTS:S/o$/so/g)
+! .endif
 ! 
 ! cjpeg: $(COBJECTS) libjpeg.so.7.0
 ! 	$(LN) $(LDFLAGS) -o cjpeg $(COBJECTS) -L. -ljpeg $(LDLIBS)
