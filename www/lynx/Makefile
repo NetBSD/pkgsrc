@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2004/10/03 00:18:26 tv Exp $
+# $NetBSD: Makefile,v 1.77 2004/11/30 15:33:53 xtraeme Exp $
 #
 
 DISTNAME=	lynx2.8.5
@@ -32,7 +32,7 @@ USE_GNU_TOOLS+=		make
 INSTALL_TARGET=		install-full install-lss
 MAKEFILE=       	makefile
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 # For nls/gettext
 CONFIGURE_ARGS+=	--enable-nls
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--with-ssl
 
 # Note: --enable-{default-colors,scrollbar} are simply ignored
 # for certain settings of --with-screen.
-CONFIGURE_ARGS+=	--with-screen=${LYNX_SCREEN_LIB}
+CONFIGURE_ARGS+=	--with-screen=${SCREENTYPE}
 CONFIGURE_ARGS+=	--enable-default-colors
 CONFIGURE_ARGS+=	--enable-scrollbar
 
@@ -64,7 +64,6 @@ CONFIGURE_ARGS+=	--enable-nested-tables
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
-.include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
