@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2002/07/31 14:34:01 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/24 11:24:55 dmcmahill Exp $
 #
 
-DISTNAME=	bins-1.1.10
-PKGREVISION=	2
+DISTNAME=	bins-1.1.14
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	wiz@netbsd.org
+MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://bins.sautret.org/
 COMMENT=	static HTML photo album generator
 
@@ -20,6 +19,7 @@ DEPENDS+=	p5-PerlMagick>=5.3.9nb1:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-XML-Grove>=0.46.0.1:../../textproc/p5-XML-Grove
 DEPENDS+=	p5-XML-Handler-YAWriter-0.23:../../textproc/p5-XML-YAWriter
 DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
+DEPENDS+=	p5-HTML-Clean>=0.8:../../www/p5-HTML-Clean
 DEPENDS+=	p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Template>=2.5:../../www/p5-HTML-Template
 DEPENDS+=	p5-URI>=1.19:../../www/p5-URI
