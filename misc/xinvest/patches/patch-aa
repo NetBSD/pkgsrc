@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/26 16:03:00 garbled Exp $
+$NetBSD: patch-aa,v 1.2 1999/01/29 21:33:13 tron Exp $
 --- portfolio.c.orig	Mon Sep 22 16:50:40 1997
 +++ portfolio.c	Tue Dec 22 13:08:26 1998
 @@ -32,7 +32,7 @@
