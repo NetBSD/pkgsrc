@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8385 2004/12/21 04:23:33 schmonz Exp $
+$NetBSD: CHANGES,v 1.8386 2004/12/21 05:34:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6446,3 +6446,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added firefox-gtk2-bin-acroread-1.0 [xtraeme 2004-12-21]
 	Updated ezmlm-idx to 0.43 [schmonz 2004-12-21]
 	Updated ezmlm to 0.53nb1 [schmonz 2004-12-21]
+	Updated qmail to 1.03nb10 [schmonz 2004-12-21]
