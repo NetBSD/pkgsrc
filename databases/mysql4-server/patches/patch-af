@@ -1,11 +1,13 @@
-$NetBSD: patch-af,v 1.2 2004/03/07 19:42:55 martti Exp $
+$NetBSD: patch-af,v 1.4 2004/10/28 01:12:44 xtraeme Exp $
 
---- configure.orig	Tue Feb 10 20:16:56 2004
-+++ configure	Sun Mar  7 20:20:28 2004
-@@ -32023,27 +32023,11 @@
+--- configure.orig	2004-10-27 23:22:36.000000000 +0200
++++ configure	2004-10-27 23:23:13.000000000 +0200
+@@ -34120,30 +34120,10 @@
+ fi;
  
- echo "$as_me:$LINENO: checking for ORBit" >&5
- echo $ECHO_N "checking for ORBit... $ECHO_C" >&6
+ 
+-echo "$as_me:$LINENO: checking for ORBit" >&5
+-echo $ECHO_N "checking for ORBit... $ECHO_C" >&6
 -orbit_config_path=`which orbit-config`
 -if test -n "$orbit_config_path" -a $? = 0
 -then
@@ -15,7 +17,8 @@ $NetBSD: patch-af,v 1.2 2004/03/07 19:42:55 martti Exp $
 -  orbit_idl="$orbit_exec_prefix/bin/orbit-idl"
 -  echo "$as_me:$LINENO: result: found!" >&5
 -echo "${ECHO_T}found!" >&6
--  cat >>confdefs.h <<\_ACEOF
+-
+-cat >>confdefs.h <<\_ACEOF
 -#define HAVE_ORBIT 1
 -_ACEOF
 -
@@ -24,17 +27,9 @@ $NetBSD: patch-af,v 1.2 2004/03/07 19:42:55 martti Exp $
    orbit_includes=
    orbit_libs=
    orbit_idl=
-   echo "$as_me:$LINENO: result: not found" >&5
+-  echo "$as_me:$LINENO: result: not found" >&5
 -echo "${ECHO_T}not found" >&6
 -fi
  
  
  
-@@ -32277,7 +32261,6 @@
- else
-   bench_dirs=""
- fi
--bench_dirs="$bench_dirs mysql-test"
- 
- 
- # Don't build readline, i have it already

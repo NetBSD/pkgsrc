@@ -1,18 +1,19 @@
-$NetBSD: patch-aq,v 1.2 2004/03/07 19:42:55 martti Exp $
+$NetBSD: patch-aq,v 1.4 2004/10/28 01:12:44 xtraeme Exp $
 
---- include/Makefile.in.orig	Tue Feb 10 20:16:49 2004
-+++ include/Makefile.in	Sun Mar  7 20:21:23 2004
-@@ -272,13 +272,8 @@
- vio_dir = @vio_dir@
+--- include/Makefile.in.orig	2004-10-27 23:27:39.000000000 +0200
++++ include/Makefile.in	2004-10-27 23:28:13.000000000 +0200
+@@ -296,14 +296,8 @@
  vio_libs = @vio_libs@
+ zlib_dir = @zlib_dir@
  
 -BUILT_SOURCES = mysql_version.h m_ctype.h my_config.h
--pkginclude_HEADERS = my_dbug.h m_string.h my_sys.h my_list.h \
+-pkginclude_HEADERS = my_dbug.h m_string.h my_sys.h my_list.h my_xml.h \
 -			mysql.h mysql_com.h mysqld_error.h mysql_embed.h \
 -		  	my_semaphore.h my_pthread.h my_no_pthread.h raid.h \
 -			errmsg.h my_global.h my_net.h my_alloc.h \
--			my_getopt.h sslopt-longopts.h my_dir.h \
--			sslopt-vars.h sslopt-case.h $(BUILT_SOURCES)
+-			my_getopt.h sslopt-longopts.h my_dir.h typelib.h \
+-			sslopt-vars.h sslopt-case.h sql_common.h keycache.h \
+-			sql_state.h mysql_time.h $(BUILT_SOURCES)
 +BUILT_SOURCES = 
 +pkginclude_HEADERS = $(BUILT_SOURCES)
  
