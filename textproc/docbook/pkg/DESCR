@@ -1,4 +1,4 @@
-The DocBook DTD defines structural and content-based SGML markup
+  The DocBook DTD defines structural and content-based SGML markup
 for computer documentation, with a primary emphasis on software
 documentation and related classes of technical documents. Its
 main high-level hierarchical structures are for books, reference
@@ -7,10 +7,7 @@ maintained by the Davenport Group (about which see the Davenport
 archive at http://www.ora.com/davenport/ or
 ftp://ftp.ora.com/pub/davenport/).
 
-This port contains DocBook versions 2.4.1 and 3.0.
+  This package contains DocBook versions 2.4.1 and 3.0.
 
-The DocBook documentation is available in ASCII and PDF
+  Some documentation for DocBook is available in ASCII and PDF
 at http://www.freebsd.org/~wosch/docbook/
-
-John Fieber
-jfieber@FreeBSD.org
