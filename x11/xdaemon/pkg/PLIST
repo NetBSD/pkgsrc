@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/05 05:03:25 hubertf Exp $
+bin/xdaemon
+bin/xdaemon2
+share/xteddy/pixmaps/xdaemon_bw.xbm
+share/xteddy/pixmaps/xdaemon2_bw.xbm
+share/xteddy/pixmaps/xdaemon_color.xpm
+share/xteddy/pixmaps/xdaemon2_color.xpm
+share/xteddy/pixmaps/xdaemon_icon.xbm
+share/xteddy/pixmaps/xdaemon2_icon.xbm
+share/xteddy/pixmaps/xdaemon_mask.xbm
+share/xteddy/pixmaps/xdaemon2_mask.xbm
+share/doc/xdaemon.README

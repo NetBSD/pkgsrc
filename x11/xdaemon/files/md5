@@ -1,0 +1,11 @@
+$NetBSD: md5,v 1.1.1.1 2000/01/05 05:03:25 hubertf Exp $
+
+MD5 (xdaemon_bw.xbm) = b3ae29ba05c64c7329ea151360cada33
+MD5 (xdaemon2_bw.xbm) = 545e9eb1bc2b9569abc10b3bab561d10
+MD5 (xdaemon_color.xpm) = 8663e14014620c213229119fb5e8485b
+MD5 (xdaemon2_color.xpm) = 4aa22bb512d612cdb50dcb4dbca4b703
+MD5 (xdaemon_icon.xbm) = f475b3d956e9a77e7c15454e8a378792
+MD5 (xdaemon2_icon.xbm) = cbed99d72167cdc61f1a6579cbb2bb12
+MD5 (xdaemon_mask.xbm) = 6ae22b35ea6e70b1861d2871aa20940c
+MD5 (xdaemon2_mask.xbm) = d2c16a0146f4a19d36cdc7628d4bc9ef
+MD5 (Daemon.README) = d9b6293606deccc7b7d4cfbe80b12291
