@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.17 1998/08/20 15:16:51 tsarna Exp $
+# $NetBSD: Makefile,v 1.18 1998/08/31 20:29:27 tron Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
-DISTNAME=	emacs-20.2
-WRKSRC=		${WRKDIR}/emacs-20.2
+DISTNAME=	emacs-20.3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU}
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+
+CONFLICTS=	emacs-20.2
 
 GNU_CONFIGURE=	yes
 #USE_GMAKE=	yes
@@ -18,12 +19,8 @@ MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG} \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode message
 
-post-build:
-	(cd ${WRKSRC}/lisp/mail; \
-	${WRKSRC}/src/emacs -batch -f batch-byte-compile mh-funcs.el mh-utils.el)
-
 post-install:
-	${RM} -f ${PREFIX}/share/emacs/20.2/etc/DOC-20.2.[13-9]*
+	${RM} -f ${PREFIX}/share/emacs/20.3/etc/DOC-20.3.[13-9]*
 	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 .if (${OPSYS} != "NetBSD")
 	if [ ! -f ${PREFIX}/info/dir ]; then \
