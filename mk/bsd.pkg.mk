@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.2 2004/11/23 15:35:20 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.3 2004/11/23 16:50:18 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1034,6 +1034,8 @@ fi; exit 1
 .  endif
 PKGSRC_PATCH_FAIL?=	exit 1
 
+_REAL_TARGETS.patch+=	patch-message pre-patch do-patch post-patch
+
 .endif	# !empty(PKG_PHASES:Mpatch) && !defined(_PKG_SKIPPED)
 
 ############################################################################
@@ -1044,6 +1046,8 @@ do-tools: .OPTIONAL
 .if !empty(PKG_PHASES:Mtools) && !defined(_PKG_SKIPPED)
 
 .  include "../../mk/tools.mk"
+
+_REAL_TARGETS.tools+=	tools-message pre-tools do-tools post-tools
 
 .endif	# !empty(PKG_PHASES:Mtools) && !defined(_PKG_SKIPPED)
 
@@ -1060,6 +1064,8 @@ USE_LANGUAGES?=		# empty
 .  endif
 .  include "../../mk/compiler.mk"
 .  include "../../mk/wrapper/bsd.wrapper.mk"
+
+_REAL_TARGETS.wrapper+=	wrapper-message pre-wrapper do-wrapper post-wrapper
 
 .endif	# !empty(PKG_PHASES:Mwrapper) && !defined(_PKG_SKIPPED)
 
@@ -1124,6 +1130,8 @@ CONFIG_STATUS_OVERRIDE?=	\
 	config.status */config.status */*/config.status
 .  endif
 
+_REAL_TARGETS.configure+=configure-message pre-configure pre-configure-override do-configure post-configure
+
 .endif	# !empty(PKG_PHASES:Mconfigure) && !defined(_PKG_SKIPPED)
 
 ############################################################################
@@ -1132,6 +1140,8 @@ CONFIG_STATUS_OVERRIDE?=	\
 
 .if !empty(PKG_PHASES:Mbuild) && !defined(_PKG_SKIPPED)
 
+_REAL_TARGETS.build+=	build-message pre-build do-build post-build
+
 .endif	# !empty(PKG_PHASES:Mbuild) && !defined(_PKG_SKIPPED)
 
 ############################################################################
@@ -1139,6 +1149,9 @@ CONFIG_STATUS_OVERRIDE?=	\
 ############################################################################
 
 .if !empty(PKG_PHASES:Mtest)
+
+_REAL_TARGETS.test+=	test-message pre-test do-test post-test
+
 .endif	# !empty(PKG_PHASES:Mtest)
 
 ############################################################################
@@ -1440,11 +1453,25 @@ _REAL_TARGETS.su-install+=	check-shlibs
 .endif	# !empty(PKG_PHASES:Minstall)
 
 ############################################################################
+# Special install phase `replace'
+############################################################################
+
+_REAL_TARGETS.replace+=	do-su-replace
+
+_REAL_TARGETS.su-replace+=
+
+_REAL_TARGETS.undo-replace+= do-su-undo-replace
+
+############################################################################
 # Phase `package'
 ############################################################################
 
+_REAL_TARGETS.package+=	do-su-package
+
+_REAL_TARGETS.su-package+=
+
 ############################################################################
-# Recursive invocation support
+# Variables calculated after all the above, and recursion support
 ############################################################################
 
 # explicit "-f Makefile" here to work around problems with the MAKEFILE var
@@ -1455,17 +1482,6 @@ _REAL_TARGETS.su-install+=	check-shlibs
 recurse-${targ}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKGDIR} && ${MAKE} -f Makefile ${targ}
 .endfor
-
-# Find out the PREFIX of dependencies where the PREFIX is needed at build time.
-.if defined(EVAL_PREFIX)
-.  for def in ${EVAL_PREFIX}
-.    if !defined(${def:C/=.*$//})
-${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
-_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
-${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
-.    endif
-.  endfor
-.endif
 
 # convenience target, to display make variables from command line
 # i.e. "make show-var VARNAME=var", will print var's value
@@ -1479,6 +1495,17 @@ show-vars show-vars-noeval:
 .for VARNAME in ${VARNAMES}
 	@${ECHO} ${${VARNAME}:Q}
 .endfor
+
+# Find out the PREFIX of dependencies where the PREFIX is needed at build time.
+.if defined(EVAL_PREFIX)
+.  for def in ${EVAL_PREFIX}
+.    if !defined(${def:C/=.*$//})
+${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
+_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
+${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
+.    endif
+.  endfor
+.endif
 
 PREPEND_PATH?=		# empty
 .if !empty(PREPEND_PATH)
@@ -1507,10 +1534,13 @@ _PKG_ALL_TARGET=	test
 .MAIN: all
 all dependall: recurse-${_PKG_ALL_TARGET:Ubuild}
 
-### If this package will be skipped, use placebo targets.
+##### If this package will be skipped, use placebo targets.
 
 .if defined(_PKG_SKIPPED)
-.  for targ in ${_PKG_PHASES_ALL} replace update
+
+.  for targ in ${_PKG_PHASES_ALL} \
+		replace undo-replace \
+		update
 ${targ}:
 .    if !defined(SKIP_SILENT)
 	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON} ; \
@@ -1522,21 +1552,11 @@ ${targ}:
 	@${FALSE}
 .    endif
 .  endfor
-.endif	# _PKG_SKIPPED
 
-### Skip specific phases based on package settings.
+.else	# !defined(_PKG_SKIPPED)
 
-.if defined(NO_PACKAGE) && !defined(FORCE_PACKAGE)
-real-package: .MADE
-.  if !defined(SKIP_SILENT)
-	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
-.  endif
-.endif
-
-### Real targets.  These don't have any commands attached; they simply defer
-### to other implementation targets below.
-
-.if !defined(_PKG_SKIPPED)
+##### Real targets.  These don't have any commands attached; they simply defer
+##### to other implementation targets below.
 
 .PHONY: ${_PKG_PHASES_ALL} replace undo-replace
 fetch: real-fetch
@@ -1554,7 +1574,151 @@ package: install acquire-package-lock ${package_COOKIE} release-package-lock
 replace: build real-replace
 undo-replace: real-undo-replace
 
+##### *_COOKIE to real-* layer for targets which use cookies.
+
+.  for targ in ${_PKG_PHASES_WRKDIR}
+${${targ}_COOKIE}: real-${targ}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >${${targ}_COOKIE}
+.  endfor
+
+# mark a stage as complete if its cookie (and all parent cookies) exist
+.  if exists(${depends_COOKIE})
+${depends_COOKIE}: .MADE
+.    if exists(${extract_COOKIE})
+${extract_COOKIE}: .MADE
+.      if exists(${patch_COOKIE})
+${patch_COOKIE}: .MADE
+.        if exists(${tools_COOKIE})
+${tools_COOKIE}: .MADE
+.          if exists(${wrapper_COOKIE})
+${wrapper_COOKIE}: .MADE
+.            if exists(${configure_COOKIE})
+${configure_COOKIE}: .MADE
+.              if exists(${build_COOKIE})
+${build_COOKIE}: .MADE
+.                if exists(${test_COOKIE})
+${test_COOKIE}: .MADE
+.                  if exists(${install_COOKIE})
+${install_COOKIE}: .MADE
+.                    if exists(${package_COOKIE})
+${package_COOKIE}: .MADE
+.                    endif
+.                  endif
+.                endif
+.              endif
+.            endif
+.          endif
+.        endif
+.      endif
+.    endif
+.  endif
+
+##### NO_* for skipping phases
+
+.  if defined(NO_DEPENDS) || (empty(DEPENDS) && empty(BUILD_DEPENDS))
+${depends_COOKIE}: .MADE
+.  endif
+.  if defined(NO_TOOLS)
+${tools_COOKIE}: .MADE
+.  endif
+.  if defined(NO_WRAPPER)
+${wrapper_COOKIE}: .MADE
+.  endif
+.  if defined(NO_CONFIGURE)
+${configure_COOKIE}: .MADE
+.  endif
+.  if defined(NO_BUILD)
+${build_COOKIE}: .MADE
+.  endif
+.  if empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+real-test: .MADE
+.  endif
+.  if defined(NO_INSTALL)
+${install_COOKIE}: .MADE
+.  endif
+
+.  if defined(NO_PACKAGE) && !defined(FORCE_PACKAGE)
+_REAL_TARGETS.package:=	no-package
+no-package:
+.    if !defined(SKIP_SILENT)
+	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
+.    endif
+.  endif
+
+.  for targ in extract configure build install
+.    if !empty(INTERACTIVE_STAGE:M${targ}) && defined(BATCH)
+_REAL_TARGETS.${targ}:=	${targ}-is-interactive
+${targ}-is-interactive:
+	@${ECHO} "*** The ${targ} stage of this package requires user interaction"
+	@${ECHO} "*** Please ${targ} manually with \"cd ${PKGDIR} && ${MAKE} ${targ}\""
+	@${FALSE}
+.    endif
+.  endfor
+
+##### User-visible messages for most targets
+
+_PHASE_MSG.depends=	Verifying dependencies
+_PHASE_MSG.extract=	Extracting
+_PHASE_MSG.patch=	Patching
+_PHASE_MSG.tools=	Overriding tools
+_PHASE_MSG.wrapper=	Creating toolchain wrappers
+_PHASE_MSG.configure=	Configuring
+_PHASE_MSG.build=	Building
+_PHASE_MSG.test=	Testing
+_PHASE_MSG.install=	Installing
+_PHASE_MSG.package=	Packaging
+
+.  for targ in ${_PKG_PHASES_WRKDIR}
+.PHONY: ${targ}-message
+${targ}-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> ${_PHASE_MSG.${targ}} for ${PKGNAME}"
+.  endfor
+
+##### real-* to actual component target layer
+
+# Simple dependencies are not used, deliberately, so that it is possible
+# to invoke a single subtarget by hand while working on a new package.
+#
+# Please note that the order of the targets in _REAL_TARGETS.<phase> is
+# important, and should not be modified (.ORDER is not recognized by
+# make(1) in a serial make; i.e., without "-j n").
+
+.  for targ in ${_PKG_PHASES_ALL} replace undo-replace su-install
+.PHONY: real-${targ}
+.ORDER: ${_REAL_TARGETS.${targ}}
+real-${targ}: ${_REAL_TARGETS.${targ}}
+.  endfor
+
 .endif	# !defined(_PKG_SKIPPED)
+
+##### su target support
+
+.for targ in install package replace undo-replace deinstall
+.PHONY: do-su-${targ}
+do-su-${targ}:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
+		${MAKE} ${MAKEFLAGS} $$realtarget;			\
+	elif [ "X${BATCH}" != X"" ]; then				\
+		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
+		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
+	else								\
+		args="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
+		if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then		\
+			args="$$args FORCE_PKG_REGISTER=1";		\
+		fi;							\
+		if [ "X${PKG_DEBUG_LEVEL}" != X"" ]; then		\
+			args="$$args PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL}"; \
+		fi;							\
+		if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then		\
+			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
+			${PRE_ROOT_CMD};				\
+		fi;                                             	\
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to ${targ} ${PKGBASE}."; \
+		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
+		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} real-su-${targ} $$realflags"; \
+	fi
+.endfor
 
 ############################################################################
 # Package maintenance targets
@@ -2943,161 +3107,6 @@ release-${targ}-lock:
 .  endif # PKGSRC_LOCKTYPE
 .endfor
 
-################################################################
-# Skeleton targets start here
-#
-# You shouldn't have to change these.  Either add the pre-* or
-# post-* targets/scripts or redefine the do-* targets.  These
-# targets don't do anything other than checking for cookies and
-# call the necessary targets/scripts.
-################################################################
-
-##### *_COOKIE to real-* layer
-
-.for targ in ${_PKG_PHASES_WRKDIR}
-${${targ}_COOKIE}: real-${targ}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >${${targ}_COOKIE}
-.endfor
-
-# mark a stage as complete if its cookie (and all parent cookies) exist
-.if exists(${depends_COOKIE})
-${depends_COOKIE}: .MADE
-.  if exists(${extract_COOKIE})
-${extract_COOKIE}: .MADE
-.    if exists(${patch_COOKIE})
-${patch_COOKIE}: .MADE
-.      if exists(${tools_COOKIE})
-${tools_COOKIE}: .MADE
-.        if exists(${wrapper_COOKIE})
-${wrapper_COOKIE}: .MADE
-.          if exists(${configure_COOKIE})
-${configure_COOKIE}: .MADE
-.            if exists(${build_COOKIE})
-${build_COOKIE}: .MADE
-.              if exists(${test_COOKIE})
-${test_COOKIE}: .MADE
-.                if exists(${install_COOKIE})
-${install_COOKIE}: .MADE
-.                  if exists(${package_COOKIE})
-${package_COOKIE}: .MADE
-.                  endif
-.                endif
-.              endif
-.            endif
-.          endif
-.        endif
-.      endif
-.    endif
-.  endif
-.endif
-
-# NO_* for skipping phases
-# XXX this should be a .for loop, but we need the :tu modifier for that
-.if defined(NO_DEPENDS) || (empty(DEPENDS) && empty(BUILD_DEPENDS))
-${depends_COOKIE}: .MADE
-.endif
-.if defined(NO_TOOLS)
-${tools_COOKIE}: .MADE
-.endif
-.if defined(NO_WRAPPER)
-${wrapper_COOKIE}: .MADE
-.endif
-.if defined(NO_CONFIGURE)
-${configure_COOKIE}: .MADE
-.endif
-.if defined(NO_BUILD)
-${build_COOKIE}: .MADE
-.endif
-.if empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
-real-test: .MADE
-.endif
-.if defined(NO_INSTALL)
-${install_COOKIE}: .MADE
-.endif
-
-##### real-* to actual component target layer
-
-# Simple dependencies are not used, deliberately, so that it is possible
-# to invoke a single subtarget by hand while working on a new package.
-#
-# Please note that the order of the following targets is important, and
-# should not be modified (.ORDER is not recognised by make(1) in a serial
-# make i.e. without -j n)
-
-_REAL_TARGETS.patch=	patch-message pre-patch do-patch post-patch
-_REAL_TARGETS.tools=	tools-message pre-tools do-tools post-tools
-_REAL_TARGETS.wrapper=	wrapper-message pre-wrapper do-wrapper post-wrapper
-_REAL_TARGETS.configure=configure-message pre-configure pre-configure-override do-configure post-configure
-_REAL_TARGETS.build=	build-message pre-build do-build post-build
-_REAL_TARGETS.test=	test-message pre-test do-test post-test
-_REAL_TARGETS.package=	do-su-package
-_REAL_TARGETS.replace=	do-su-replace
-_REAL_TARGETS.undo-replace= do-su-undo-replace
-
-_REAL_TARGETS.su-package=	
-_REAL_TARGETS.su-replace=	
-
-.for targ in extract configure build install
-.  if !empty(INTERACTIVE_STAGE:M${targ}) && defined(BATCH)
-_REAL_TARGETS.${targ}:=	${targ}-is-interactive
-${targ}-is-interactive:
-	@${ECHO} "*** The ${targ} stage of this package requires user interaction"
-	@${ECHO} "*** Please ${targ} manually with \"cd ${PKGDIR} && ${MAKE} ${targ}\""
-	@${FALSE}
-.  endif
-.endfor
-
-.for targ in ${_PKG_PHASES_ALL} replace undo-replace su-install
-.PHONY: real-${targ}
-.ORDER: ${_REAL_TARGETS.${targ}}
-real-${targ}: ${_REAL_TARGETS.${targ}}
-.endfor
-
-##### target internals
-
-_PHASE_MSG.depends=	Verifying dependencies
-_PHASE_MSG.extract=	Extracting
-_PHASE_MSG.patch=	Patching
-_PHASE_MSG.tools=	Overriding tools
-_PHASE_MSG.wrapper=	Creating toolchain wrappers
-_PHASE_MSG.configure=	Configuring
-_PHASE_MSG.build=	Building
-_PHASE_MSG.test=	Testing
-_PHASE_MSG.install=	Installing
-_PHASE_MSG.package=	Packaging
-
-.for targ in ${_PKG_PHASES_WRKDIR}
-.PHONY: ${targ}-message
-${targ}-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> ${_PHASE_MSG.${targ}} for ${PKGNAME}"
-.endfor
-
-.for targ in install package replace undo-replace deinstall
-.PHONY: do-su-${targ}
-do-su-${targ}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
-		${MAKE} ${MAKEFLAGS} $$realtarget;			\
-	elif [ "X${BATCH}" != X"" ]; then				\
-		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
-		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
-	else								\
-		args="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
-		if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then		\
-			args="$$args FORCE_PKG_REGISTER=1";		\
-		fi;							\
-		if [ "X${PKG_DEBUG_LEVEL}" != X"" ]; then		\
-			args="$$args PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL}"; \
-		fi;							\
-		if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then		\
-			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
-			${PRE_ROOT_CMD};				\
-		fi;                                             	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to ${targ} ${PKGBASE}."; \
-		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} real-su-${targ} $$realflags"; \
-	fi
-.endfor
 
 # Empty pre-* and post-* targets
 
