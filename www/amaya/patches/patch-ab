@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.8 2003/03/22 06:46:21 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2003/12/03 01:36:12 xtraeme Exp $
 
---- ../configure.orig	Mon Feb  3 09:43:57 2003
+--- ../configure.orig	Tue Nov  4 09:01:02 2003
 +++ ../configure
-@@ -3008,7 +3008,7 @@ EOF
- fi
+@@ -5577,7 +5577,7 @@
  
  
--for ac_hdr in stdio.h
-+for ac_hdr in stdio.h wchar.h
+ 
+-for ac_header in stdio.h
++for ac_header in stdio.h wchar.h
  do
- ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
- echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-@@ -7019,6 +7019,8 @@ fi
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -14772,6 +14772,8 @@
  if test "$with_dav" = "yes" ; then
-     
+ 
      dav_frag=$srcdir/davlib/Makefile.dav
 +else
 +    dav_frag=/dev/null
