@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1997/10/31 08:24:15 augustss Exp $
+# $NetBSD: Makefile,v 1.7 1997/10/31 22:08:34 augustss Exp $
 #
 
     SUBDIR += amp
@@ -9,8 +9,7 @@
     SUBDIR += mikmod
     SUBDIR += mpg123
     #SUBDIR += nas
-    #SUBDIR += nspmod
-    #SUBDIR += radio
+    SUBDIR += nspmod
     #SUBDIR += rplay
     #SUBDIR += rsynth
     SUBDIR += sox
