@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: apache.sh,v 1.12 2001/05/08 18:13:51 jlam Exp $
+# $NetBSD: apache.sh,v 1.13 2001/05/14 21:27:25 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -13,10 +13,25 @@ name="apache"
 rcvar=$name
 command="@PREFIX@/sbin/apachectl"
 
+apache_start=start
 if [ -f @APACHE_SYSCONFDIR@/apache_start.conf ]
 then
 	# This file can reset apache_start to "startssl"
 	. @APACHE_SYSCONFDIR@/apache_start.conf
+fi
+
+# set defaults
+if [ -r /etc/rc.conf ]
+then
+	. /etc/rc.conf
+else
+	eval ${rcvar}=YES
+fi
+
+# $flags from environment overrides ${rcvar}_flags
+if [ -n "${flags}" ]
+then
+	eval ${rcvar}_flags="${flags}"
 fi
 
 apache_doit()
@@ -29,7 +44,7 @@ apache_doit()
 	restart)	echo -n "Restarting ${name}: " ;;
 	esac
 
-	${command} ${command_args} ${action}
+	${command} ${apache_flags} ${command_args} ${action}
 }
 
 checkyesno()
@@ -45,17 +60,16 @@ checkyesno()
 	esac
 }
 
-if [ -r /etc/rc.conf ]
-then
-	. /etc/rc.conf
-else
+cmd=${1:-start}
+case ${cmd} in
+force*)
+	cmd=${cmd#force}
 	eval ${rcvar}=YES
-fi
+	;;
+esac
 
 if checkyesno ${rcvar}
 then
-	cmd=${1:-start}
-
 	if [ -x ${command} ]
 	then
 		case ${cmd} in
