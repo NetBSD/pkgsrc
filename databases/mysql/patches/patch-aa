@@ -1,92 +1,13 @@
-$NetBSD: patch-aa,v 1.5 1999/04/08 21:52:21 bad Exp $
+$NetBSD: patch-aa,v 1.6 1999/04/09 15:39:38 bad Exp $
 
---- client/Makefile.in.orig	Wed Jul  8 11:10:53 1998
-+++ client/Makefile.in	Thu Feb  4 17:12:10 1999
-@@ -42,8 +42,8 @@
- AUTOHEADER = @AUTOHEADER@
- 
- INSTALL = @INSTALL@
--INSTALL_PROGRAM = @INSTALL_PROGRAM@
--INSTALL_DATA = @INSTALL_DATA@
-+INSTALL_PROGRAM = $(LIBTOOL) --mode=install @INSTALL_PROGRAM@
-+INSTALL_DATA = $(LIBTOOL) --mode=install @INSTALL_DATA@
- INSTALL_SCRIPT = @INSTALL_SCRIPT@
- transform = @program_transform_name@
- 
-@@ -115,21 +115,21 @@
- mystrings_charset = @mystrings_charset@
- perl_dirs = @perl_dirs@
- readline_dir = @readline_dir@
--readline_link = @readline_link@
-+readline_link = ../readline/libreadline.a
- server_scripts = @server_scripts@
- sql_server_dirs = @sql_server_dirs@
- 
- INCLUDES =		-I$(srcdir)/../include -I../include \
- 			-I$(srcdir)/.. -I$(top_srcdir) -I..
- LIBS =			@CLIENT_LIBS@
--LDADD =			-L. -lmysqlclient
--pkglib_LIBRARIES =	libmysqlclient.a
--LIBFILES =		libmysqlclient.a @shlib@
-+LDADD =			libmysqlclient.la
-+pkglib_LIBRARIES =	libmysqlclient.la
-+LIBFILES =		libmysqlclient.la
- bin_PROGRAMS =		mysql mysqladmin mysqlshow mysqldump mysqlimport
- noinst_PROGRAMS =	insert_test select_test
- noinst_HEADERS =	sql_string.h completion_hash.h
- mysql_SOURCES =		mysql.cc readline.cc sql_string.cc completion_hash.cc
--mysql_LDADD =		@readline_link@ @TERMCAP_LIB@ $(LDADD)
-+mysql_LDADD =		$(readline_link) @TERMCAP_LIB@ $(LDADD)
- mysql_DEPENDENCIES=		$(LIBRARIES)
- mysqladmin_DEPENDENCIES=	$(LIBRARIES)
- mysqlshow_DEPENDENCIES=		$(LIBRARIES)
-@@ -167,7 +167,7 @@
- CLEANFILES =		$(libmysqlclient_a_LIBADD) $(SHLIBOBJS) \
- 			libmysqlclient.so libmysqlclient.so.@VERSION@
- 
+--- client/Makefile.in.orig	Mon Mar 15 15:49:57 1999
++++ client/Makefile.in	Sun Mar 21 23:11:42 1999
+@@ -181,7 +181,7 @@
+ libmysqlclient_la_LDFLAGS = -version-info @SHARED_LIB_VERSION@
+ CLEANFILES =		$(libmysqlclient_la_LIBADD) $(SHLIBOBJS) \
+ 			libmysqclient.la
 -DEFS =			-DUNDEF_THREADS_HACK
 +DEFS =			-DUNDEF_THREADS_HACK -Dunix
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../config.h
  CONFIG_CLEAN_FILES = 
-@@ -218,10 +218,10 @@
- select_test_LDFLAGS = 
- CXXFLAGS = @CXXFLAGS@
- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
--CXXLINK = $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
-+CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
- CFLAGS = @CFLAGS@
--COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
--LINK = $(CC) $(CFLAGS) $(LDFLAGS) -o $@
-+COMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
-+LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
- HEADERS =  $(noinst_HEADERS)
- 
- DIST_COMMON =  Makefile.am Makefile.in
-@@ -265,12 +265,6 @@
- 	  else :; fi; \
- 	done
- 	@$(POST_INSTALL)
--	@list='$(pkglib_LIBRARIES)'; for p in $$list; do \
--	  if test -f $$p; then \
--	    echo " $(RANLIB) $(pkglibdir)/$$p"; \
--	    $(RANLIB) $(pkglibdir)/$$p; \
--	  else :; fi; \
--	done
- 
- uninstall-pkglibLIBRARIES:
- 	$(NORMAL_UNINSTALL)
-@@ -291,10 +285,9 @@
- 
- maintainer-clean-compile:
- 
--libmysqlclient.a: $(libmysqlclient_a_OBJECTS) $(libmysqlclient_a_DEPENDENCIES)
--	rm -f libmysqlclient.a
--	$(AR) cru libmysqlclient.a $(libmysqlclient_a_OBJECTS) $(libmysqlclient_a_LIBADD)
--	$(RANLIB) libmysqlclient.a
-+libmysqlclient.la: $(libmysqlclient_a_OBJECTS) $(libmysqlclient_a_DEPENDENCIES)
-+	$(LIBTOOL) --mode=link $(CC) -o libmysqlclient.la $(libmysqlclient_a_OBJECTS:.o=.lo) $(libmysqlclient_a_LIBADD:.o=.lo) \
-+		-rpath $(pkglibdir) -version-info 321:33
- 
- mostlyclean-binPROGRAMS:
- 
