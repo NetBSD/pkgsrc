@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/03/18 01:14:32 tron Exp $
+
+Please consider running BIND under the pseudo user account "${BIND_USER}"
+in a change root environment for securiy reasons.
+
+To achieve this set the variable "named_chrootdir" in /etc/rc.conf to
+the directory with the change root environement e.g "${BIND_DIR}".
+
+===========================================================================
