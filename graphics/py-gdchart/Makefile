@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/17 12:34:17 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/17 12:36:21 drochner Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
@@ -22,6 +22,7 @@ MODULE_FILES=	chart.py gdchart.so
 EXAMPLE_FILES=	test.html test.py CHANGES
 EXAMPLE_DIR=	${PREFIX}/share/examples/${PYPKGPREFIX}-gdchart
 PY_PATCHPLIST=	yes
+PYBINMODULE=	yes
 
 do-install:
 .for f in ${MODULE_FILES}
