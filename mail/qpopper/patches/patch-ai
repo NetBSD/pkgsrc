@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
+$NetBSD: patch-ai,v 1.1 1999/07/09 15:58:34 itojun Exp $
 
---- pop_init.c.orig	Thu Nov 20 06:20:38 1997
-+++ pop_init.c	Thu May 14 14:28:25 1998
+--- pop_init.c.orig	Thu Jul  9 16:44:07 1998
++++ pop_init.c	Fri Jul  9 08:20:24 1999
 @@ -44,6 +44,8 @@
  
  #include <popper.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
  /* CNS Kerberos IV */
  #ifdef KERBEROS
  AUTH_DAT kdata;
-@@ -75,9 +77,31 @@
+@@ -75,9 +77,37 @@
  }
  #endif
  
@@ -19,7 +19,11 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
 +sock_ntop(p)
 +    struct sockaddr *p;
 +{
++#ifndef INET6
 +    static char ntop_buf[INET6_ADDRSTRLEN];
++#else
++    static char ntop_buf[INET_ADDRSTRLEN];
++#endif
 +    union sockunion *su;
 +
 +    su = (union sockunion *)p;
@@ -28,10 +32,12 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
 +	inet_ntop(su->su_family, &su->su_sin.sin_addr, ntop_buf,
 +	    sizeof(ntop_buf));
 +	return ntop_buf;
++#ifdef INET6
 +    case AF_INET6:
 +	inet_ntop(su->su_family, &su->su_sin6.sin6_addr, ntop_buf,
 +	    sizeof(ntop_buf));
 +	return ntop_buf;
++#endif
 +    default:
 +	return "(unsupported AF)";
 +    }
@@ -44,7 +50,7 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
  {
  
  #ifdef KERBEROS
-@@ -87,10 +111,10 @@
+@@ -87,10 +117,10 @@
      char version[9];
      int auth;
    
@@ -57,7 +63,7 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
  			    &kdata, "", schedule, version);
  	
  	if (auth != KSUCCESS) {
-@@ -105,7 +129,7 @@
+@@ -105,7 +135,7 @@
  # ifdef DEBUG
  	if (p->debug)
  	    pop_log(p, POP_DEBUG, "%s.%s@%s (%s): ok", kdata.pname, 
@@ -66,7 +72,7 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
  # endif /* DEBUG */
  
  	strncpy(p->user, kdata.pname, sizeof(p->user));
-@@ -126,7 +150,7 @@
+@@ -126,7 +156,7 @@
  char    **      argmessage;
  {
  
@@ -75,7 +81,7 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
      struct hostent      *   ch;                 /*  Client host information */
      int                     errflag = 0;
      int                     c;
-@@ -272,13 +296,23 @@
+@@ -272,13 +302,25 @@
  
      /*  Save the dotted decimal form of the client's IP address 
          in the POP parameter block */
@@ -92,9 +98,11 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
 +    case AF_INET:
 +	ch = gethostbyaddr((char *) &cs.su_sin.sin_addr, sizeof(cs.su_sin.sin_addr), AF_INET);
 +	break;
++#ifdef INET6
 +    case AF_INET6:
 +	ch = gethostbyaddr((char *) &cs.su_sin6.sin6_addr, sizeof(cs.su_sin6.sin6_addr), AF_INET6);
 +	break;
++#endif
 +    default:
 +	ch = NULL;
 +	break;
@@ -102,15 +110,15 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
      if (ch == NULL){
          pop_log(p,POP_PRIORITY,
              "(v%s) Unable to get canonical name of client, err = %d",
-@@ -320,6 +354,7 @@
+@@ -320,6 +362,7 @@
  
  	strncpy(h_name, ch->h_name, sizeof(h_name));
  
-+#if 0
++#ifndef INET6
          /*  See if the name obtained for the client's IP 
              address returns an address */
          if ((ch_again = gethostbyname(h_name)) == NULL) {
-@@ -336,7 +371,7 @@
+@@ -336,7 +379,7 @@
              /*  Look for the client's IP address in the list returned 
                  for its name */
              for (addrp=ch_again->h_addr_list; *addrp; ++addrp)
@@ -119,7 +127,7 @@ $NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
  
              if (!*addrp) {
                  pop_log (p,POP_PRIORITY,
-@@ -345,6 +380,54 @@
+@@ -345,6 +388,54 @@
                  p->client = p->ipaddr;
              }
          }
