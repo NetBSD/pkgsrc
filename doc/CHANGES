@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2951 2003/07/31 07:59:59 lukem Exp $
+$NetBSD: CHANGES,v 1.2952 2003/07/31 09:18:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3151,3 +3151,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added awstats-5.1 [jschauma 2003-07-30]
 	Removed lukemftp [lukem 2003-07-31]
 	Added tnftp-20030731 [lukem 2003-07-31]
+	Updated fix4SA110rev2 to 1.0nb1 [abs 2003-07-31]
