@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/11 10:16:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/23 04:50:36 rh Exp $
 bin/lbreakout2
 bin/lbreakout2server
 share/doc/html/lbreakout2/b0.jpg
@@ -10,6 +10,7 @@ share/doc/html/lbreakout2/b5.jpg
 share/doc/html/lbreakout2/b6.jpg
 share/doc/html/lbreakout2/index.html
 share/doc/html/lbreakout2/screen.jpg
+share/doc/html/lbreakout2/warp.jpg
 share/doc/html/lbreakout2/x0.jpg
 share/doc/html/lbreakout2/x1.jpg
 share/doc/html/lbreakout2/x10.jpg
@@ -50,6 +51,8 @@ share/games/lbreakout2/gfx/AbsoluteB/fr_top.png
 share/games/lbreakout2/gfx/AbsoluteB/life.png
 share/games/lbreakout2/gfx/AbsoluteB/menuback.png
 share/games/lbreakout2/gfx/AbsoluteB/paddle.png
+share/games/lbreakout2/gfx/AbsoluteB/shot.png
+share/games/lbreakout2/gfx/AbsoluteB/weapon.png
 share/games/lbreakout2/gfx/Classic/ABOUT
 share/games/lbreakout2/gfx/Moiree/ABOUT
 share/games/lbreakout2/gfx/Moiree/back0.png
@@ -116,6 +119,7 @@ share/games/lbreakout2/gfx/fr_top.png
 share/games/lbreakout2/gfx/fr_vert.png
 share/games/lbreakout2/gfx/life.png
 share/games/lbreakout2/gfx/menuback.png
+share/games/lbreakout2/gfx/nukeback.png
 share/games/lbreakout2/gfx/paddle.png
 share/games/lbreakout2/gfx/scroll_down.png
 share/games/lbreakout2/gfx/scroll_track.png
@@ -123,8 +127,29 @@ share/games/lbreakout2/gfx/scroll_up.png
 share/games/lbreakout2/gfx/sel_frame.png
 share/games/lbreakout2/gfx/shine.png
 share/games/lbreakout2/gfx/shot.png
+share/games/lbreakout2/gfx/warp.png
 share/games/lbreakout2/gfx/weapon.png
 share/games/lbreakout2/gfx/win_icon.png
+share/games/lbreakout2/gui_theme/box_frame.png
+share/games/lbreakout2/gui_theme/box_wallpaper.png
+share/games/lbreakout2/gui_theme/button_frame_clicked.png
+share/games/lbreakout2/gui_theme/button_frame_normal.png
+share/games/lbreakout2/gui_theme/button_wallpaper_focused.png
+share/games/lbreakout2/gui_theme/button_wallpaper_normal.png
+share/games/lbreakout2/gui_theme/checkbox.png
+share/games/lbreakout2/gui_theme/click.wav
+share/games/lbreakout2/gui_theme/edit.wav
+share/games/lbreakout2/gui_theme/font.png
+share/games/lbreakout2/gui_theme/list_item_color.png
+share/games/lbreakout2/gui_theme/progress_high.png
+share/games/lbreakout2/gui_theme/progress_low.png
+share/games/lbreakout2/gui_theme/progress_medium.png
+share/games/lbreakout2/gui_theme/scrollbar_arrows.png
+share/games/lbreakout2/gui_theme/spinbutton_arrows.png
+share/games/lbreakout2/gui_theme/wallpaper.png
+share/games/lbreakout2/gui_theme/widget_frame.png
+share/games/lbreakout2/gui_theme/widget_wallpaper.png
+share/games/lbreakout2/levels/Abc
 share/games/lbreakout2/levels/AddOn-1
 share/games/lbreakout2/levels/AddOn-2
 share/games/lbreakout2/levels/Afl
@@ -132,25 +157,44 @@ share/games/lbreakout2/levels/Arcade
 share/games/lbreakout2/levels/BeOS-4ever
 share/games/lbreakout2/levels/Bombs
 share/games/lbreakout2/levels/Chaos
+share/games/lbreakout2/levels/Composers
+share/games/lbreakout2/levels/Color
 share/games/lbreakout2/levels/Demons
+share/games/lbreakout2/levels/Flower
+share/games/lbreakout2/levels/Fly
+share/games/lbreakout2/levels/Freek
+share/games/lbreakout2/levels/Gatinha
+share/games/lbreakout2/levels/GreenWall
+share/games/lbreakout2/levels/GreenWall2
 share/games/lbreakout2/levels/HereWeGo
 share/games/lbreakout2/levels/HighBall
 share/games/lbreakout2/levels/Holidays
 share/games/lbreakout2/levels/Hommage
+share/games/lbreakout2/levels/IoriYagami
+share/games/lbreakout2/levels/Kazan-1
 share/games/lbreakout2/levels/Kevin
+share/games/lbreakout2/levels/Lapis
+share/games/lbreakout2/levels/Lattsville
 share/games/lbreakout2/levels/LinuxFun
 share/games/lbreakout2/levels/MP_Arenas
 share/games/lbreakout2/levels/MP_Snapshots
 share/games/lbreakout2/levels/Megadoomer
+share/games/lbreakout2/levels/OpenSource
 share/games/lbreakout2/levels/Original
 share/games/lbreakout2/levels/Pabelo
+share/games/lbreakout2/levels/Pawset
 share/games/lbreakout2/levels/Ph33r
 share/games/lbreakout2/levels/R-World
 share/games/lbreakout2/levels/Runes
 share/games/lbreakout2/levels/Shimitar
+share/games/lbreakout2/levels/Silly
+share/games/lbreakout2/levels/SnyMaxx
 share/games/lbreakout2/levels/TheGauntlet
+share/games/lbreakout2/levels/Tricky
 share/games/lbreakout2/levels/Twilight
 share/games/lbreakout2/levels/Wolvie
+share/games/lbreakout2/levels/X
+share/games/lbreakout2/levels/Yexter
 share/games/lbreakout2/levels/Zufallswelt
 share/games/lbreakout2/sounds/attach.wav
 share/games/lbreakout2/sounds/bonus_magnet.wav
@@ -194,6 +238,7 @@ share/games/lbreakout2/sounds/wontgiveup.wav
 @dirrm share/games/lbreakout2/gfx/Classic
 @dirrm share/games/lbreakout2/gfx/AbsoluteB
 @dirrm share/games/lbreakout2/gfx
+@dirrm share/games/lbreakout2/gui_theme
 @dirrm share/games/lbreakout2
 @dirrm share/doc/html/lbreakout2
 @unexec echo Please remove highscore file %D/share/games/lbreakout2.hscr manually.
