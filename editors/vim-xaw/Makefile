@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/02/18 14:37:44 pooka Exp $
+# $NetBSD: Makefile,v 1.7 2000/06/25 11:50:40 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -20,12 +20,26 @@ INSTALL_TARGET=		installvimbin
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD")
-DEPENDS+=		ncurses>=4.2:../../devel/ncurses
-CONFIGURE_ARGS+=	--with-tlib=ncurses
-.elif ${OPSYS} == "SunOS"
+.if ${OPSYS} == "NetBSD"
+GOOD_CURSES=    1.4[Y-Z] 1.4Z[A-Z] 1.[5-9]*
+
+.for PATTERN in ${GOOD_CURSES}
+.if ${OS_VERSION:M${PATTERN}} != ""
+CURSES_GOOD?=   #defined
+.endif
+.endfor
+.endif
+
+.if ${OPSYS} == "SunOS"
+CURSES_GOOD?=   #defined
+.endif
+
+.if defined(CURSES_GOOD)
 CPPFLAGS=
-CONFIGURE_ARGS+=	--with-tlib=curses
+CONFIGURE_ARGS+=        --with-tlib=curses
+.else
+DEPENDS+=               ncurses>=4.2:../../devel/ncurses
+CONFIGURE_ARGS+=        --with-tlib=ncurses
 .endif
 
 post-install:
