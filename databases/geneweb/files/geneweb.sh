@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: geneweb.sh,v 1.1.1.1 2000/07/25 13:02:08 wulf Exp $
+# $NetBSD: geneweb.sh,v 1.2 2001/07/15 15:33:22 wulf Exp $
 #
 if [ -x @PREFIX@/libexec/gwd ]
 then
 	@PREFIX@/libexec/gwd \
 		-hd @PREFIX@/share/geneweb \
-		-bd @PREFIX@/share/geneweb \
+		-bd @PREFIX@/share/geneweb/db \
 		-dd @PREFIX@/share/doc/geneweb \
 		-log /var/log/geneweb.log \
 		-lang en \
