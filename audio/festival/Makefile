@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/04 19:32:33 proff Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/04 22:03:14 proff Exp $
 
 DISTNAME=	festival-1.3.1
 WRKSRC=		${WRKDIR}
@@ -13,6 +13,8 @@ MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
 DEPENDS+=	nas-1.2.5:../nas
+
+LICENSE=	no-commercial-use
 
 USE_GMAKE=	yes
 
