@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.4 2000/04/26 16:18:59 sakamoto Exp $
+# $NetBSD: port2pkg.pl,v 1.5 2000/05/12 10:07:36 sakamoto Exp $
 #
 
 require 'getopts.pl';
@@ -10,18 +10,19 @@ use vars qw($opt_m);
 my($maintainer) = "packages\@netbsd.org";
 my($makefile, $master_site_subdir, $extract_cmd);
 my($portsdir, $pkgdir);
-my($namespace, $portname, $portversion, $distname, $pkgname);
+my($namespace, $portname, $portversion, $distname,
+   $pkgname, $pkgnameprefix, $pkgnamesuffix);
 my(@man, @cat);
 
-if (! &Getopts('m:')) {&usage_and_exit();}
+&usage_and_exit() if (! &Getopts('m:'));
 $|=1;
 
 $portsdir = shift;
 $pkgdir = shift;
-if (! $portsdir || ! $pkgdir) {&usage_and_exit();}
+&usage_and_exit() if (! $portsdir || ! $pkgdir);
 
-if ($opt_m) {$maintainer = $opt_m;}
-if (! -d "$portsdir") {die "$portsdir: $!\n";}
+$maintainer = $opt_m if ($opt_m);
+die "$portsdir: $!\n" if (! -d "$portsdir");
 if (! -d "$pkgdir") {
 	if (mkdir($pkgdir, 0755) == 0) {
 		die "$pkgdir: $!\n";
@@ -63,6 +64,10 @@ sub read_Makefile {
 			$portname = $2;
 		} elsif (/^PORTVERSION\?*=\s*(.*)/) {
 			$portversion = $1;
+		} elsif (/^PKGNAMEPREFIX\?*=\s*(.*)/) {
+			$pkgnameprefix = $1;
+		} elsif (/^PKGNAMESUFFIX\?*=\s*(.*)/) {
+			$pkgnamesuffix = $1;
 		} elsif (/^DISTNAME\?*=\s*(.*)/) {
 			$distname = $1;
 		} elsif (/^MASTER_SITE_SUBDIR\?*=\s*(.*)/) {
@@ -104,6 +109,14 @@ sub read_Makefile {
 	} else {
 		$distname = "$portname-$portversion";
 	}
+	if (defined($pkgnameprefix)) {
+		$pkgname = $distname unless (defined($pkgname));
+		$pkgname = $pkgnameprefix . $pkgname;
+	}
+	if (defined($pkgnamesuffix)) {
+		$pkgname = $distname unless (defined($pkgname));
+		$pkgname .= $pkgnamesuffix;
+	}
 }
 
 sub conv_Makefile {
@@ -116,7 +129,7 @@ sub conv_Makefile {
 
 	# header
 	while (<PORTS>) {
-		if (! /^\#/) {last;}
+		last if (! /^\#/);
 
 		if (/\$FreeBSD(: .*) \$/ || /\$Id(: .*) \$/) {
 			print PKG "\# FreeBSD Id$1\n";
@@ -168,6 +181,8 @@ sub conv_Makefile {
 		}
 
 		if (/^PORTVERSION/ ||
+		    /^PKGNAMEPREFIX/ ||
+		    /^PKGNAMESUFFIX/ ||
 		    /^DISTNAME/ ||
 		    /^MAN(.)\?*=/ ||
 		    /^CAT(.)\?*=/ ||
@@ -198,10 +213,10 @@ sub conv_Makefile {
 		} elsif ($noportdocs || /^\.if.*NOPORTDOCS/) {
 			if (/^\.if/) {
 				$noportdocs++;
-				if ($noportdocs > 2) {print PKG $_;}
+				print PKG $_ if ($noportdocs > 2);
 			} elsif (/^\.endif/) {
 				$noportdocs--;
-				if ($noportdocs > 2) {print PKG $_;}
+				print PKG $_ if ($noportdocs > 2);
 			} else {
 				print PKG $_;
 			}
@@ -218,7 +233,7 @@ sub add_manual {
 	my ($FILE, $category) = @_;
 
 	for (my $i = 1; $i <= 8; $i++) {
-		if (!defined(eval "\$$category\[\$i\]")) {next;}
+		next if (!defined(eval "\$$category\[\$i\]"));
 			foreach my $item (sort(split(/[ \t\n]+/,
 			    eval "\$$category\[\$i\]"))) {
 				print $FILE "$category/$category$i/$item\n";
@@ -228,9 +243,9 @@ sub add_manual {
 
 sub conv_PLIST {
 	my ($file, $plist);
-	if (opendir(PKGDIR, "$portsdir/pkg") == 0) {return 0;}
+	return 0 if (opendir(PKGDIR, "$portsdir/pkg") == 0);
 	while ($plist = readdir(PKGDIR)) {
-		if (!($plist =~ /^PLIST/)) {next;}
+		next if (!($plist =~ /^PLIST/));
 
 		open(PORTS, "$portsdir/pkg/$plist")
 			|| die "$portsdir/pkg/$plist: $!\n";
@@ -241,7 +256,7 @@ sub conv_PLIST {
 		my ($cat_added, $man_added);
 		while (<PORTS>) {
 			s|\%\%([^\%]+)\%\%|\${$1}|g;
-			if (/^\@.*ldconfig/) {next;}
+			next if (/^\@.*ldconfig/);
 			if (defined($cat_added) && $cat_added == 0 && /^[d-z]/){
 				&add_manual(*PKG, "cat");
 				$cat_added++;
@@ -277,7 +292,7 @@ sub add_NetBSD_ID {
 		close(MD5);
 	}
 
-	if (opendir(PATCHDIR, "$portsdir/patches") == 0) {return 0;}
+	return 0 if (opendir(PATCHDIR, "$portsdir/patches") == 0);
 	while ($patch = readdir(PATCHDIR)) {
 		if ($patch eq "\." || $patch eq "\.."
 			|| $patch eq "CVS") {next;}
