@@ -1,13 +1,11 @@
-$NetBSD: patch-aa,v 1.12 2002/08/25 19:23:02 jlam Exp $
+$NetBSD: patch-aa,v 1.13 2004/09/14 22:09:40 dmcmahill Exp $
 
-Add a top level Makefile
-
---- /dev/null	Thu Apr  5 17:09:09 2001
-+++ Makefile	Thu Apr  5 18:31:35 2001
-@@ -0,0 +1,64 @@
+--- Makefile.orig	Tue Sep 14 16:47:52 2004
++++ Makefile
+@@ -0,0 +1,43 @@
 +# Top level Makefile for f2c, libF77, and libI77
 +
-+all: f2c libf2c/libf2c.a f2c-f77 man
++all: f2c libF77/libF77.la libI77/libI77.la  f2c-f77 man
 +
 +
 +f2c:
@@ -15,29 +13,13 @@ Add a top level Makefile
 +	cd src; ${MAKE} all
 +	cp src/f2c f2c
 +
-+libF77/libF77.a:
++libF77/libF77.la:
 +	@echo Making all in 'libF77'
-+	cd libF77 &&  ${MAKE} all
++	cd libF77 &&  ${MAKE} all LIBDIR=${PREFIX}/lib
 +
-+libI77/libI77.a:
++libI77/libI77.la:
 +	@echo Making all in 'libI77'
-+	cd libI77 &&  ${MAKE} all
-+
-+libf2c/libf2c.a: libI77/libI77.a libF77/libF77.a
-+	-mkdir libf2c
-+	if [ -f libF77/libF77.a ]; then  cd libf2c && ar x ../libF77/libF77.a ; fi
-+	if [ -f libF77/libF77_p.a ]; then cd libf2c && ar x ../libF77/libF77_p.a ; fi
-+	if [ -f libF77/libF77_pic.a ]; then cd libf2c && ar x ../libF77/libF77_pic.a ; fi
-+	if [ -f libI77/libI77.a ]; then cd libf2c && ar x ../libI77/libI77.a ; fi
-+	if [ -f libI77/libI77_p.a ]; then cd libf2c && ar x ../libI77/libI77_p.a ; fi
-+	if [ -f libI77/libI77_pic.a ]; then cd libf2c && ar x ../libI77/libI77_pic.a ; fi
-+	if [ -f libF77/libF77.a ]; then cd libf2c && ar cruv libf2c.a *.o ; fi
-+	if [ -f libF77/libF77_p.a ]; then cd libf2c && ar cruv libf2c_p.a *.po ; fi
-+	if [ -f libF77/libF77_pic.a ]; then cd libf2c && ar cruv libf2c_pic.a *.so ; fi
-+	if [ -f libF77/libF77_pic.a ]; then cd libf2c && \
-+		ld -Bshareable -soname libf2c.so.${F2CMAJOR} -o libf2c.so.${F2CMAJOR}.${F2CMINOR} *.so ; fi
-+	if [ "${MACHINE_ARCH}" = "mipsel" ]; then cd libf2c && \
-+		ld -Bshareable -soname libf2c.so.${F2CMAJOR} -o libf2c.so.${F2CMAJOR}.${F2CMINOR} *.o ; fi
++	cd libI77 &&  ${MAKE} all LIBDIR=${PREFIX}/lib
 +
 +man: f2c.0
 +
@@ -54,11 +36,6 @@ Add a top level Makefile
 +	-@mkdir -p ${PREFIX}/lib
 +	@cd libI77 && ${MAKE} install LIBDIR=${PREFIX}/lib
 +	@cd libF77 && ${MAKE} install LIBDIR=${PREFIX}/lib
-+	${BSD_INSTALL_DATA} ./libf2c/libf2c.a ${PREFIX}/lib
-+	if [ -f ./libf2c/libf2c_p.a ]; then ${BSD_INSTALL_DATA} ./libf2c/libf2c_p.a ${PREFIX}/lib ; fi
-+	if [ -f ./libf2c/libf2c_pic.a ]; then ${BSD_INSTALL_DATA} ./libf2c/libf2c_pic.a ${PREFIX}/lib ; fi
-+	if [ -f ./libf2c/libf2c.so.${F2CMAJOR}.${F2CMINOR} ]; then \
-+		${BSD_INSTALL_DATA} ./libf2c/libf2c.so.${F2CMAJOR}.${F2CMINOR} ${PREFIX}/lib ; fi
 +	-@mkdir -p ${PREFIX}/include
 +	${BSD_INSTALL_DATA} ./f2c.h ${PREFIX}/include
 +	-@mkdir -p ${PREFIX}/share/doc/f2c
@@ -69,4 +46,3 @@ Add a top level Makefile
 +
 +f2c-f77: fc
 +	sed 's!@PREFIX@!${PREFIX}!g' fc > f2c-f77
-+
