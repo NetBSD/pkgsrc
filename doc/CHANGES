@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6578 2004/07/16 23:35:20 abs Exp $
+$NetBSD: CHANGES,v 1.6579 2004/07/17 00:14:28 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3417,4 +3417,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thy to 0.9.3 [xtraeme 2004-07-16]
 	Updated vice to 1.14nb1 [kristerw 2004-07-16]
 	Updated mserv_irman to 0.19 [abs 2004-07-17]
+	Updated rconfig to 0.35 [abs 2004-07-17]
 
