@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8112 2004/11/28 17:10:28 ben Exp $
+$NetBSD: CHANGES,v 1.8113 2004/11/28 17:13:19 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated roundup to 0.7.9 [recht 2004-11-28]
 	Updated squid to 2.5.7nb1 [recht 2004-11-28]
 	Removed csound-bath [ben 2004-11-28]
+	Removed csound-dev [ben 2004-11-28]
