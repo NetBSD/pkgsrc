@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/10 12:39:17 wulf Exp $
+$NetBSD: distinfo,v 1.2 2005/02/21 23:26:24 bad Exp $
 
-SHA1 (openvpn-1.5.0.tar.gz) = 13f443adbff5c657cfd8400011e8df804b57f7ff
-Size (openvpn-1.5.0.tar.gz) = 403792 bytes
+SHA1 (openvpn-1.6.0.tar.gz) = 1a7a4e1b610564902f50b488f19254ab9a1f9c7e
+Size (openvpn-1.6.0.tar.gz) = 430324 bytes
+SHA1 (patch-aa) = 1467b3f2cacc16657e88bc292c778ef7cfc48d66
+SHA1 (patch-ab) = b32248e2d9dc6dfdf015d86873770544a214103b
+SHA1 (patch-ac) = b689cd044be21205eb4c53edd856ea2161b45cc1
