@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 1999/03/01 13:16:24 rh Exp $
+$NetBSD: patch-aa,v 1.6 1999/03/28 21:22:25 rh Exp $
 
---- configure.orig	Fri Feb 26 06:00:00 1999
-+++ configure	Mon Mar  1 13:43:44 1999
-@@ -1327,7 +1327,6 @@
+--- configure.orig	Sat Mar 27 06:00:00 1999
++++ configure	Sun Mar 28 22:08:28 1999
+@@ -1336,7 +1336,6 @@
  fi
  
  # Always use our own libtool.
@@ -10,14 +10,12 @@ $NetBSD: patch-aa,v 1.5 1999/03/01 13:16:24 rh Exp $
  
  # Check for any special flags to pass to ltconfig.
  libtool_flags=
-@@ -2892,8 +2891,8 @@
- fi
+@@ -2901,7 +2900,7 @@
  
  
--CFLAGS="$CFLAGS $CFEXTRA `$GTKCONFIG --cflags`"
+ CFLAGS="`$GTKCONFIG --cflags` $CFLAGS $CFEXTRA"
 -LDFLAGS="$LDEXTRA `$GTKCONFIG --libs` -lgtk -lgdk -lglib $LDFLAGS -lm"
-+CFLAGS="`$GTKCONFIG --cflags` $CFLAGS $CFEXTRA"
 +LDFLAGS="$LDEXTRA `$GTKCONFIG --libs` $LDFLAGS -lm"
  
  echo $ac_n "checking for the rest of gtk""... $ac_c" 1>&6
- echo "configure:2900: checking for the rest of gtk" >&5
+ echo "configure:2908: checking for the rest of gtk" >&5

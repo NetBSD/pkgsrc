@@ -1,18 +1,31 @@
-@comment $NetBSD: PLIST,v 1.4 1999/03/01 13:16:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/03/28 21:22:25 rh Exp $
 bin/geda
-bin/gpcb
 bin/gschem
+bin/gpcb
 bin/gnetlist
 bin/gsymcheck
+bin/gschcheck
+bin/mk_sym
+bin/smash_megafile
+bin/convert_sym
 lib/libgeda.so.2.2
 lib/libgeda.a
-share/gEDA/scheme/gpcb.scm
 share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/gnetlist.scm
+share/gEDA/scheme/gpcb.scm
 share/gEDA/scheme/gsymcheck.scm
+share/gEDA/scheme/gschcheck.scm
 share/gEDA/sym/local/555-1.sym
+share/gEDA/sym/local/BNC-1.sym
+share/gEDA/sym/local/DB25-1.sym
+share/gEDA/sym/local/DB9-1.sym
+share/gEDA/sym/local/bridge-1.sym
 share/gEDA/sym/local/icl7660-1.sym
+share/gEDA/sym/local/lm-135-1.sym
+share/gEDA/sym/local/lm-75-1.sym
+share/gEDA/sym/local/mains-plug-1.sym
 share/gEDA/sym/local/osc-1.sym
+share/gEDA/sym/local/pwrxfmr-1.sym
 share/gEDA/sym/local/test.sym
 share/gEDA/sym/74/7400-1.sym
 share/gEDA/sym/74/7400-2.sym
@@ -33,6 +46,7 @@ share/gEDA/sym/74/7409-1.sym
 share/gEDA/sym/74/7409-2.sym
 share/gEDA/sym/74/7410-1.sym
 share/gEDA/sym/74/7410-2.sym
+share/gEDA/sym/74/74107-1.sym
 share/gEDA/sym/74/74109-1.sym
 share/gEDA/sym/74/7411-1.sym
 share/gEDA/sym/74/7411-2.sym
@@ -186,6 +200,9 @@ share/gEDA/sym/font/w.sym
 share/gEDA/sym/font/x.sym
 share/gEDA/sym/font/y.sym
 share/gEDA/sym/font/z.sym
+share/gEDA/sym/analog/battery-1.sym
+share/gEDA/sym/analog/battery-2.sym
+share/gEDA/sym/analog/battery-3.sym
 share/gEDA/sym/analog/capacitor-1.sym
 share/gEDA/sym/analog/capacitor-2.sym
 share/gEDA/sym/analog/capacitor-variable-1.sym
@@ -200,28 +217,33 @@ share/gEDA/sym/analog/nmos-1.sym
 share/gEDA/sym/analog/nmos-2.sym
 share/gEDA/sym/analog/npn-1.sym
 share/gEDA/sym/analog/npn-2.sym
+share/gEDA/sym/analog/npn-3.sym
 share/gEDA/sym/analog/opamp-1.sym
 share/gEDA/sym/analog/pmos-1.sym
 share/gEDA/sym/analog/pmos-2.sym
 share/gEDA/sym/analog/pnp-1.sym
 share/gEDA/sym/analog/pnp-2.sym
+share/gEDA/sym/analog/pnp-3.sym
 share/gEDA/sym/analog/resistor-1.sym
 share/gEDA/sym/analog/resistor-variable-1.sym
 share/gEDA/sym/analog/speaker-1.sym
 share/gEDA/sym/analog/speaker-2.sym
 share/gEDA/sym/analog/voltage-1.sym
+share/gEDA/sym/analog/voltage-2.sym
 share/gEDA/sym/analog/zener-1.sym
 share/gEDA/sym/memory/27256-1.sym
 share/gEDA/sym/memory/27512-1.sym
 share/gEDA/sym/memory/62256-1.sym
 share/gEDA/sym/memory/am9128-1.sym
-share/gEDA/sym/micro/68000.sym
-share/gEDA/sym/micro/68K_reset.sym
+share/gEDA/sym/micro/8031.sym
 share/gEDA/sym/micro/8086-1.sym
 share/gEDA/sym/micro/8088-1.sym
 share/gEDA/sym/micro/8254-1.sym
 share/gEDA/sym/micro/8255A-1.sym
 share/gEDA/sym/micro/8259A-1.sym
+share/gEDA/sym/micro/DS80C310.sym
+share/gEDA/sym/micro/DS80C320.sym
+share/gEDA/sym/micro/pic16C74A-1.sym
 share/gEDA/sym/IEC417/ac-ac.sym
 share/gEDA/sym/IEC417/ac-dc.sym
 share/gEDA/sym/IEC417/adc.sym
@@ -336,17 +358,18 @@ share/gEDA/sym/radio/loop_antenna-1.sym
 share/gEDA/sym/radio/loop_antenna-2.sym
 share/gEDA/sym/radio/osc_coil_aircore-1.sym
 share/gEDA/sym/idt/idt7204-1.sym
+share/gEDA/sym/4000/4016-1.sym
 share/gEDA/sym/4000/4020-1.sym
 share/gEDA/sym/4000/4040-1.sym
 share/gEDA/sym/4000/4046-1.sym
 share/gEDA/sym/4000/4051-1.sym
+share/gEDA/sym/4000/4066-1.sym
+share/gEDA/sym/4000/4538-1.sym
 share/gEDA/sym/foot/cap.foot
 share/gEDA/sym/foot/dip300_18.foot
 share/gEDA/sym/foot/led.foot
 share/gEDA/sym/foot/led_7seg.foot
 share/gEDA/sym/foot/resistor.foot
-share/gEDA/sym/foot/test.foot
-share/gEDA/source/68K_reset_1.sch
 share/gEDA/source/7400-1_1.sch
 share/gEDA/source/7400-1_2.sch
 share/gEDA/source/7408-1_1.sch
@@ -358,8 +381,8 @@ share/gEDA/system-gschemrc
 share/gEDA/system-gnetlistrc
 share/gEDA/system-gsymcheckrc
 share/gEDA/system-gedarc
-@dirrm share/gEDA/scheme
-@dirrm share/gEDA/source
+share/gEDA/system-gschcheckrc
+share/gEDA/system-gpcbrc
 @dirrm share/gEDA/sym/4000
 @dirrm share/gEDA/sym/74
 @dirrm share/gEDA/sym/IEC417
@@ -374,4 +397,6 @@ share/gEDA/system-gedarc
 @dirrm share/gEDA/sym/radio
 @dirrm share/gEDA/sym/tube
 @dirrm share/gEDA/sym
+@dirrm share/gEDA/scheme
+@dirrm share/gEDA/source
 @dirrm share/gEDA
