@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/07/19 01:19:41 rumble Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:19:55 agc Exp $
 
 SHA1 (nn-6.6.4.tar.gz) = 9e89a1b93b4315d3ed484bf87495f357bb9cc7b4
+RMD160 (nn-6.6.4.tar.gz) = cbae15c77344e903537b217e19c1e26c3250c863
 Size (nn-6.6.4.tar.gz) = 581672 bytes
 SHA1 (patch-aa) = cd3319db3229a7eea907849b7f37a7c409200bfe
 SHA1 (patch-ab) = 262d50b08031187e2fc99bf49f547fbcf21a2f39
