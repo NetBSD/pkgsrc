@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.61 2002/12/02 17:08:40 jschauma Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.62 2002/12/03 08:31:41 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -442,21 +442,31 @@ unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
 #
 USE_PKGLOCALEDIR?=		no
 _PKGLOCALEDIR=			${PREFIX}/${PKGLOCALEDIR}/locale
+REPLACE_LOCALEDIR_PATTERNS?=	# empty
+_REPLACE_LOCALEDIR_PATTERNS=	${REPLACE_LOCALEDIR_PATTERNS}
+.if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
+_REPLACE_LOCALEDIR_PATTERNS+=	Makefile.in*
+.else
+_REPLACE_LOCALEDIR_PATTERNS+=	Makefile*
+.endif
+_REPLACE_LOCALEDIR_PATTERNS_FIND= \
+	\( ${_REPLACE_LOCALEDIR_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
+
+REPLACE_LOCALEDIR?=		# empty
+_REPLACE_LOCALEDIR= \
+	${REPLACE_LOCALEDIR}						\
+	`${FIND} . ${_REPLACE_LOCALEDIR_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${GREP} -v '\.orig' | ${SORT} -u`
+
 BUILDLINK_SUBST_MESSAGE.pkglocaledir= \
 	"Fixing locale directory references."
-.if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
-_PKGLOCALEDIR_FILES=		"Makefile.in\*"
-.else
-_PKGLOCALEDIR_FILES=		"Makefile\*"
-.endif
 BUILDLINK_SUBST_FILES.pkglocaledir= \
-	`${FIND} . -name "${_PKGLOCALEDIR_FILES}" -print | ${GREP} -v "\.orig"`
+	${_REPLACE_LOCALEDIR}
 BUILDLINK_SUBST_SED.pkglocaledir= \
-	-e 's|^\(localedir[     ]*=\).*|\1 ${_PKGLOCALEDIR}|' \
-	-e 's|^\(gnulocaledir[  ]*=\).*|\1 ${_PKGLOCALEDIR}|' \
-	-e 's|\(-DLOCALEDIR[    ]*=\)[^ 	]*\(.*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
+	-e 's|^\(localedir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|' \
+	-e 's|^\(gnulocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|' \
+	-e 's|\(-DLOCALEDIR[ 	]*=\)[^ 	]*\(.*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
 
-.if (${PKGLOCALEDIR} != "share") && empty(USE_PKGLOCALEDIR:M[nN][oO])
+.if empty(USE_PKGLOCALEDIR:M[nN][oO])
 pre-configure: pkglocaledir-buildlink-subst
 .endif
 pkglocaledir-buildlink-subst: _BUILDLINK_SUBST_USE
