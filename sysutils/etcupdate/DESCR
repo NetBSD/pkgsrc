@@ -1,0 +1,9 @@
+etcupdate helps you to update the configuration files in /etc after
+performing an operating system upgrade.
+
+The idea for this script (including code fragments, variable names etc.)
+came from the FreeBSD mergemaster (by Douglas Barton). Unlike the FreeBSD
+mergemaster, this does not use CVS version tags to compare if the files
+need to be updated. Files are compared with /usr/bin/cmp as this is more
+reliable and the only way if the version numbers are same even though the
+files are different.
