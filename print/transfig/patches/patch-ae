@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2003/11/10 03:06:12 danw Exp $
+
+--- fig2dev/fig2dev.h.orig	Sun Nov  9 21:59:10 2003
++++ fig2dev/fig2dev.h	Sun Nov  9 21:59:12 2003
+@@ -22,7 +22,6 @@
+ #include <sys/file.h>
+ #include <signal.h>
+ #include <string.h>
+-#include <varargs.h>
+ #include <pwd.h>
+ #include <errno.h>
+ #include <time.h>
