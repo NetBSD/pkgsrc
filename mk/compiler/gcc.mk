@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.77 2004/11/30 14:50:37 jlam Exp $
+# $NetBSD: gcc.mk,v 1.78 2005/01/12 15:32:01 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -435,5 +435,22 @@ ${_GCC_${_var_}}:
 .    endfor
 .  endif
 .endfor
+
+# On older NetBSD systems and where the Fortran compiler doesn't exist,
+# force the use of f2c-f77.
+#
+_GCC_USE_F2C=	no
+.if !exists(${FCPATH})
+_GCC_USE_F2C=	yes
+.else
+.  for _pattern_ in 0.* 1.[0-4] 1.[0-4].*
+.    if !empty(MACHINE_PLATFORM:MNetBSD-${_pattern_}-*)
+_GCC_USE_F2C=	yes
+.    endif
+.  endfor
+.endif
+.if !empty(_GCC_USE_F2C:M[yY][eE][sS])
+.  include "../../mk/compiler/f2c.mk"
+.endif
 
 .endif	# COMPILER_GCC_MK

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:12:56 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/12 15:32:01 jlam Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-2.1.5
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/
@@ -19,7 +19,7 @@ CONFIGURE_ARGS=		--enable-shared
 CONFIGURE_ARGS+=	--enable-i386-hacks
 .endif
 USE_BUILDLINK3=		yes
-USE_FORTRAN=		yes
+USE_LANGUAGES=		fortran
 USE_GNU_TOOLS+=		make
 USE_MAKEINFO=		yes
 INFO_FILES=		fftw.info

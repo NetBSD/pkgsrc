@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.6 2004/11/30 14:50:37 jlam Exp $
+# $NetBSD: ccc.mk,v 1.7 2005/01/12 15:32:01 jlam Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -83,5 +83,15 @@ ${_CCC_${_var_}}:
 .    endfor
 .  endif
 .endfor
+
+# Force the use of f2c-f77 for compiling Fortran.
+_CCC_USE_F2C=	no
+FCPATH=		/nonexistent
+.if !exists(${FCPATH})
+_CCC_USE_F2C=	yes
+.endif
+.if !empty(_CCC_USE_F2C:M[yY][eE][sS])
+.  include "../../mk/compiler/f2c.mk"
+.endif
 
 .endif	# COMPILER_CCC_MK

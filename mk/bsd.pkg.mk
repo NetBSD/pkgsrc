@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1556 2005/01/11 20:09:14 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1557 2005/01/12 15:32:01 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -341,34 +341,6 @@ MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB:Q}
 .  endif     # !defined(PERL5_*)
 .endif       # USE_PERL5 == run
 
-.if defined(USE_FORTRAN)
-.  if !exists(/usr/bin/f77)
-PKG_FC?=		f2c-f77
-.  endif
-# it is anticipated that once /usr/bin/f77 is more stable that the following
-# default will be changed to f77.  However, in the case where there is no
-# /usr/bin/f77, the default will remain as f2c-f77.
-.for __tmp__ in 1.[5-9]* [2-9].*
-.  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-*} != ""
-PKG_FC?=		f77
-.  endif    # MACHINE_PLATFORM
-.endfor     # __tmp__
-PKG_FC?=	f2c-f77
-.  if  (${PKG_FC} == "f2c-f77")
-# this is a DEPENDS not BUILD_DEPENDS because of the
-# shared Fortran libs
-.    if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-.      include "../../lang/f2c/buildlink3.mk"
-.    else
-DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
-.    endif
-.  endif
-FC=             ${PKG_FC}
-F77=            ${PKG_FC}
-MAKE_ENV+=	F77="${F77}"
-MAKE_ENV+=	FC="${FC}"
-.endif
-
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=
 .if defined(UNLIMIT_RESOURCES)
@@ -407,12 +379,12 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-.  if defined(USE_FORTRAN)
+.  if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran)
 LIBTOOL_REQD?=		1.5.10nb7
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 .  else
 LIBTOOL_REQD?=		1.5.10nb1
-BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
+BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD}:../../devel/libtool-base
 .  endif
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
@@ -486,6 +458,12 @@ MAKE_ENV+=		CPP="${CPP}"
 .endif
 .if defined(CXXFLAGS)
 MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
+.endif
+.if defined(F77)
+MAKE_ENV+=		F77="${F77}"
+.endif
+.if defined(FC)
+MAKE_ENV+=		FC="${FC}"
 .endif
 
 TOUCH_FLAGS?=		-f

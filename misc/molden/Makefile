@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/12 15:32:01 jlam Exp $
 
 DISTNAME=	molden4.2
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -17,7 +17,7 @@ BUILD_TARGET=	molden
 
 USE_BUILDLINK3=		yes
 USE_X11=		# defined
-USE_FORTRAN=		# defined
+USE_LANGUAGES=		fortran
 
 INTERACTIVE_STAGE=	fetch
 
