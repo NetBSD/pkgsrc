@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/07/26 21:41:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/28 09:32:13 jmmv Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sunsite.auc.dk/pub/os/linux/loki/open-source/smpeg/ \
 		ftp://ftp.linuxgames.com/loki/open-source/smpeg/
@@ -22,6 +22,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CPPFLAGS+=		-Dunix=1
 
 .include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
