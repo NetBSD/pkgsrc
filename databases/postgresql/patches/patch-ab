@@ -1,13 +1,136 @@
-$NetBSD: patch-ab,v 1.10 2000/05/20 19:34:17 jlam Exp $
+$NetBSD: patch-ab,v 1.11 2001/05/14 14:52:38 jlam Exp $
 
---- bin/pgtclsh/Makefile.orig	Tue Mar  7 20:58:21 2000
-+++ bin/pgtclsh/Makefile	Sat May 20 00:14:18 2000
-@@ -22,7 +22,7 @@
- include Makefile.tkdefs
- endif
+--- configure.orig	Sat May  5 16:05:37 2001
++++ configure
+@@ -19,6 +19,8 @@
+ ac_help="$ac_help
+   --with-libs=DIRS        alternative spelling of --with-libraries"
+ ac_help="$ac_help
++  --disable-readline      disable readline support"
++ac_help="$ac_help
+   --enable-locale         enable locale support"
+ ac_help="$ac_help
+   --enable-recode         enable character set recode support"
+@@ -53,6 +55,8 @@
+ ac_help="$ac_help
+   --with-python           build Python interface module"
+ ac_help="$ac_help
++  --with-python-compile   byte-compile modules if Python is enabled"
++ac_help="$ac_help
+   --with-java             build JDBC interface and Java tools"
+ ac_help="$ac_help
+   --with-krb4[=DIR]       build with Kerberos 4 support [/usr/athena]"
+@@ -811,10 +815,36 @@
  
--CFLAGS+= $(X_CFLAGS) -I$(LIBPGTCLDIR)
-+CFLAGS+= $(X_CFLAGS) -I$(LIBPQDIR) -I$(LIBPGTCLDIR)
  
- ifdef KRBVERS
- LDFLAGS+= $(KRBLIBS)
+ #
++# Readline support
++#
++echo $ac_n "checking whether to build with readline support""... $ac_c" 1>&6
++echo "configure:822: checking whether to build with readline support" >&5
++# Check whether --enable-readline was given
++if test x"${enable_readline+set}" = xset; then
++  case $enable_readline in
++    yes)
++      :
++      ;;
++    no)
++      :
++      ;;
++    *)
++      enableval=$enable_readline
++      { echo "configure: error: no argument expected for --enable-readline option" 1>&2; exit 1; }
++      ;;
++  esac # $enable_readline
++else
++  enable_readline=yes
++
++fi
++echo "$ac_t""$enable_readline" 1>&6
++
++
++#
+ # Locale (--enable-locale)
+ #
+ echo $ac_n "checking whether to build with locale support""... $ac_c" 1>&6
+-echo "configure:818: checking whether to build with locale support" >&5
++echo "configure:848: checking whether to build with locale support" >&5
+ # Check whether --enable-locale was given
+ if test x"${enable_locale+set}" = xset; then
+   case $enable_locale in
+@@ -1905,11 +1935,40 @@
+ fi
+ 
+ 
++# If python is enabled (above), then optionally byte-compile the modules.
++echo $ac_n "checking whether to byte-compile Python modules""... $ac_c" 1>&6
++echo "configure:1941: checking whether to byte-compile Python modules" >&5
++if test "$with_python" = yes; then
++  # Check whether --with-python_compile was given
++if test x"${with_python_compile+set}" = xset; then
++  case $with_python_compile in
++    yes)
++      :
++      ;;
++    no)
++      :
++      ;;
++    *)
++      withval=$with_python_compile
++      { echo "configure: error: no argument expected for --with-python_compile option" 1>&2; exit 1; }
++      ;;
++  esac # $with_python_compile
++else
++  with_python_compile=no
++
++fi
++else
++  with_python_compile=no
++fi
++echo "$ac_t""$with_python_compile" 1>&6
++
++
++
+ #
+ # Optionally build the Java/JDBC tools
+ #
+ echo $ac_n "checking whether to build Java/JDBC tools""... $ac_c" 1>&6
+-echo "configure:1913: checking whether to build Java/JDBC tools" >&5
++echo "configure:1972: checking whether to build Java/JDBC tools" >&5
+ # Check whether --with-java was given
+ if test x"${with_java+set}" = xset; then
+   case $with_java in
+@@ -3095,8 +3154,9 @@
+ ## Libraries
+ ##
+ 
+-echo $ac_n "checking for readline""... $ac_c" 1>&6
+-echo "configure:3100: checking for readline" >&5
++if test "$enable_readline" = yes; then
++echo $ac_n "checking for readline""... $ac_c" 1>&6
++echo "configure:3160: checking for readline" >&5
+ 
+ if eval "test \"`echo '$''{'pgac_cv_check_readline'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -3208,11 +3268,12 @@
+ else :
+   
+ fi
++fi
+ 
+ if test "$PORTNAME" != "aix" -a "$PORTNAME" != "alpha"
+ then
+ 	echo $ac_n "checking for main in -lbsd""... $ac_c" 1>&6
+-echo "configure:3216: checking for main in -lbsd" >&5
++echo "configure:3277: checking for main in -lbsd" >&5
+ ac_lib_var=`echo bsd'_'main | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -8103,6 +8164,7 @@
+ s%@python_moduledir@%$python_moduledir%g
+ s%@python_extmakefile@%$python_extmakefile%g
+ s%@with_python@%$with_python%g
++s%@with_python_compile@%$with_python_compile%g
+ s%@ANT@%$ANT%g
+ s%@with_java@%$with_java%g
+ s%@with_krb4@%$with_krb4%g

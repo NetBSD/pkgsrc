@@ -1,44 +1,42 @@
-# $NetBSD: Makefile.common,v 1.11 2001/05/04 01:05:19 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2001/05/14 14:52:36 jlam Exp $
 #
-# This file is included by the following packages:
-#
-#	postgresql
-#	odbc-postgresql
-#	tcl-postgresql
-#	tk-postgresql
+# This Makefile fragment is included by all PostgreSQL packages built from
+# the main sources of the PostgreSQL distribution.
 
-DISTNAME=		postgresql-${PG_VERS}
-PG_VERS=		7.0.3
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
-CATEGORIES=		databases
-MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/v${PG_VERS}/ \
-			ftp://ftp.de.postgresql.org/v${PG_VERS}/ \
-			ftp://ch.postgresql.org/mirror/postgresql/pub/v${PG_VERS}/ \
-			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/v${PG_VERS}/ \
-			ftp://looking-glass.usask.ca/pub/postgresql/v${PG_VERS}/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/v${PG_VERS}/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/v${PG_VERS}/
+DISTNAME=		postgresql-${PG_DIST_VERS}
+CATEGORIES+=		databases
+MASTER_SITES=		http://www.postgresql.org/ftpsite/v${PG_DIST_VERS}/ \
+			ftp://ftp.PostgreSQL.org/pub/v${PG_DIST_VERS}/ \
+			ftp://ftp.de.postgresql.org/v${PG_DIST_VERS}/ \
+			ftp://ch.postgresql.org/mirror/postgresql/pub/v${PG_DIST_VERS}/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/v${PG_DIST_VERS}/ \
+			ftp://looking-glass.usask.ca/pub/postgresql/v${PG_DIST_VERS}/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/v${PG_DIST_VERS}/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/v${PG_DIST_VERS}/
 
 MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.PostgreSQL.ORG/
+HOMEPAGE=		http://www.postgresql.org/
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+DISTINFO_FILE=		${.CURDIR}/../../databases/postgresql/distinfo
+COMMON_FILESDIR=	${.CURDIR}/../../databases/postgresql/files
+PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
+
+# Version numbering scheme:
+#
+# PG_DIST_VERS		version number on the postgresql distfile
+# PG_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
+# PG_PKG_VERS		pkgsrc revisions of postgresql (nbX, etc.)
+# PG_VERS		pkgsrc version number of package
+#
+PG_DIST_VERS=		7.1.1
+PG_BASE_VERS=		${PG_DIST_VERS}
+PG_PKG_VERS?=		# empty
+PG_VERS=		${PG_BASE_VERS}${PG_PKG_VERS}
 
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
-#
-# We don't USE_LIBTOOL for the shared libs since libtool doesn't seem to
-# support inter-library dependencies across all platforms yet.
-
-DISTINFO_FILE=		${.CURDIR}/../../databases/postgresql/distinfo
-FILESDIR=		${.CURDIR}/../../databases/postgresql/files
-PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
 
 .include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
-CONFIGURE_ARGS+=	--with-setproctitle
-CONFIGURE_ARGS+=	--enable-locale
 
 # PG_MB_ENCODING may be set to any of:
 #
@@ -53,11 +51,35 @@ CONFIGURE_ARGS+=	--enable-multibyte=${PG_MB_ENCODING}
 CONFIGURE_ARGS+=	--enable-multibyte	# accept default
 .endif
 
-# Pass CFLAGS from environment into the PostgreSQL build.
-MAKE_ENV+=		COPT="${CFLAGS}"
+CONFIGURE_ARGS+=	--disable-odbc
+CONFIGURE_ARGS+=	--without-java
+CONFIGURE_ARGS+=	--without-perl
+CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-tcl
+CONFIGURE_ARGS+=	--without-tk
+
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/pgsql
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/html/postgresql
+
+CONFIGURE_ARGS+=	--disable-readline
+CONFIGURE_ARGS+=	--enable-locale
+CONFIGURE_ARGS+=	--enable-syslog
+CONFIGURE_ARGS+=	--with-CXX
+CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
+
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		LIBS="${LIBS}"
+MAKE_ENV+=		CUSTOM_COPT="${CFLAGS}"
+
+WRKINCDIR=		${WRKDIR}/include
+CPPFLAGS+=		-I${WRKINCDIR}
+CFLAGS+=		-I${WRKINCDIR}
 
 post-extract:
-	${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
+	${MKDIR} -p ${WRKINCDIR}
+	${RM} -f ${WRKSRC}/src/Makefile.custom
+	${CP} -f ${COMMON_FILESDIR}/Makefile.custom			\
+		${WRKSRC}/src/Makefile.custom
+	${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile
+	${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq			\
+		${WRKSRC}/src/interfaces/libpq/GNUmakefile
