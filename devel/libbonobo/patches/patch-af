@@ -1,12 +1,16 @@
-$NetBSD: patch-af,v 1.1 2004/04/14 20:21:49 adam Exp $
+$NetBSD: patch-af,v 1.2 2004/04/24 19:30:15 danw Exp $
 
---- bonobo-activation/Makefile.in.orig	Wed Apr 14 21:30:19 2004
-+++ bonobo-activation/Makefile.in
-@@ -223,7 +223,6 @@ INCLUDES = \
- AM_LDFLAGS = \
- 	$(LIBBONOBO_LIBS)			\
- 	$(BONOBO_ACTIVATION_LT_VERSION_INFO)	\
--	-no-undefined				\
- 	$(NULL)
+--- bonobo-activation/bonobo-activation-client.c.orig	Mon Apr 12 18:42:20 2004
++++ bonobo-activation/bonobo-activation-client.c
+@@ -197,6 +197,11 @@ get_lang_list (void)
+         return result;
+ }
  
++#if defined(__APPLE__)
++#include <crt_externs.h>
++#define environ (*_NSGetEnviron())
++#endif
++
+ extern char **environ;
  
+ void
