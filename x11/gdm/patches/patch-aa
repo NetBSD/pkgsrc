@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.11 2004/09/01 14:42:59 jmmv Exp $
+$NetBSD: patch-aa,v 1.12 2004/12/28 21:51:12 jmmv Exp $
 
---- configure.orig	2004-08-18 22:09:11.000000000 +0200
+--- configure.orig	2004-10-27 01:06:14.000000000 +0200
 +++ configure
 @@ -21231,7 +21231,8 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
@@ -28,18 +28,19 @@ $NetBSD: patch-aa,v 1.11 2004/09/01 14:42:59 jmmv Exp $
              echo "$as_me:$LINENO: result: $DAEMON_LIBS" >&5
  echo "${ECHO_T}$DAEMON_LIBS" >&6
          else
-@@ -28163,6 +28164,10 @@ else
-    X_CONF_PATH="/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
+@@ -28158,6 +28159,11 @@ else
     X_CONFIG_OPTIONS="-audit 0"
  fi
+ 
 +X_PATH="${X11BASE}/bin"
 +X_SERVER_PATH="${X11BASE}/bin"
 +X_SERVER="${X11BASE}/bin/X ${X_SERVER_ARGS}"
 +X_CONF_PATH="${X11BASE}/bin"
- 
- 
- 
-@@ -28218,6 +28223,8 @@ prefix=$old_prefix
++
+ # On Solaris, Xnest is only shipped in /usr/openwin/, so set path
+ # properly.  The Xsun version of Xnest also requires the -pn
+ # argument so it can be run as the user.  Note that you can have
+@@ -28233,6 +28239,8 @@ prefix=$old_prefix
  exec_prefix=$old_exec_prefix
  
                                                                                                                                                                                                                                                                                                                                                                                                                                      ac_config_files="$ac_config_files Makefile daemon/Makefile gui/Makefile gui/greeter/Makefile gui/greeter/themes/Makefile gui/greeter/themes/circles/Makefile gui/greeter/themes/happygnome/Makefile gui/greeter/themes/happygnome-list/Makefile gui/modules/Makefile gui/modules/AccessKeyMouseEvents gui/modules/AccessDwellMouseEvents utils/Makefile pixmaps/Makefile pixmaps/16x16/Makefile pixmaps/32x32/Makefile pixmaps/48x48/Makefile config/Makefile po/Makefile.in vicious-extensions/Makefile docs/Makefile docs/C/Makefile docs/de/Makefile docs/es/Makefile docs/fr/Makefile docs/it/Makefile docs/sv/Makefile docs/ja/Makefile docs/ko/Makefile docs/zh_CN/Makefile docs/zh_HK/Makefile docs/zh_TW/Makefile config/gdm.conf config/Xsession config/Default config/PreSession config/PostSession daemon/gdm gdm-stop gdm-restart gdm-safe-restart gdmsetup-security gdm.spec"
