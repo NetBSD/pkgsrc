@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.16 2001/05/14 20:35:17 tron Exp $
+$NetBSD: patch-aa,v 1.17 2001/05/19 22:30:59 tron Exp $
 
 --- Makefile.orig	Tue May  1 12:38:33 2001
 +++ Makefile	Mon May 14 22:29:27 2001
 @@ -1,12 +1,17 @@
- # Makefile for analog 5.0
+ # Makefile for analog 5.01
  # Please read docs/Readme.html, or http://www.analog.cx/
 -CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
 +#CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
