@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2003/11/17 00:26:49 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/20 17:29:51 veego Exp $
 bin/btcompletedir.py
 bin/btcompletedirgui.py
 bin/btdownloadcurses.py
 bin/btdownloadgui.py
 bin/btdownloadheadless.py
+bin/btdownloadlibrary.py
 bin/btlaunchmany.py
 bin/btlaunchmanycurses.py
 bin/btmakemetafile.py
