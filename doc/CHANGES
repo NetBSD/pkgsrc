@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9634 2005/03/25 23:24:51 kristerw Exp $
+$NetBSD: CHANGES,v 1.9635 2005/03/26 09:27:12 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1756,3 +1756,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sun-jre15 to 5.0.2 [tv 2005-03-25]
 	Added lbdb-0.29 [kim 2005-03-25]
 	Removed xspeakfree [kristerw 2005-03-25]
+	Updated cgiirc to 0.5.6 [adrianp 2005-03-26]
