@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3775 2003/11/03 01:04:39 heinz Exp $
+$NetBSD: CHANGES,v 1.3776 2003/11/03 05:50:43 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4298,3 +4298,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dovecot to 0.99.10nb3 [salo 2003-11-02]
 	Updated dmesg2gif to 1.2 [cube 2003-11-02]
 	Updated spamassassin to 2.60 [heinz 2003-11-03]
+	Updated cvsync to 0.24.11 [gehenna 2003-11-03]
