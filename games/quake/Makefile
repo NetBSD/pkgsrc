@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/10/03 00:14:46 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/02/17 18:23:24 xtraeme Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -26,27 +26,30 @@ USE_X11=	yes
 MAKE_ENV+=	MESA_DIR=${BUILDLINK_PREFIX.Mesa}
 MAKE_ENV+=	X11BASE=${X11BASE}
 
+LIBS+=		${LIBOSSAUDIO}
+
 do-configure:
 	cd ${WRKSRC}/qw && ${LN} -fs makefile.linux ${MAKEFILE}
 	cd ${WRKSRC}/winquake && ${LN} -fs makefile.linuxi386 ${MAKEFILE}
 
-#pre-build:
-#	cd ${WRKSRC}/winquake && \
-#		${MV} common.c common.c.orig && \
-#		${SED} "s@GAMENAME, basedir@GAMENAME, \"${PREFIX}/share/quake/\"@" \
-#			< common.c.orig > common.c
-
 do-build:
-	( cd ${WRKSRC}/qw ; ${SETENV} ${MAKE_ENV} ${GMAKE} MAINDIR=`pwd` CFLAGS="${CFLAGS}" all)
-	( cd ${WRKSRC}/winquake ; ${SETENV} ${MAKE_ENV} ${GMAKE} MAINDIR=`pwd` CFLAGS="${CFLAGS}" \
+	( cd ${WRKSRC}/qw ; ${SETENV} ${MAKE_ENV} \
+	    ${GMAKE} MAINDIR=`pwd` CFLAGS="${CFLAGS}" all)
+	( cd ${WRKSRC}/winquake ; ${SETENV} ${MAKE_ENV} \
+	    ${GMAKE} MAINDIR=`pwd` CFLAGS="${CFLAGS}" \
 		WRKSRC="${WRKSRC}" all)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/qwsv ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/qwcl.x11 ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/glqwcl.glx ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/glquake.glx ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/quake.x11 ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/qwsv \
+	    ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/qwcl.x11 \
+	    ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/glqwcl.glx \
+	    ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/glquake.glx \
+	    ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/quake.x11 \
+	    ${PREFIX}/bin
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

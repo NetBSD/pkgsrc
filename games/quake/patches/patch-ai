@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.6 2003/03/09 19:46:53 jschauma Exp $
+$NetBSD: patch-ai,v 1.7 2005/02/17 18:23:24 xtraeme Exp $
 
 --- winquake/makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
 +++ winquake/makefile.linuxi386
@@ -30,7 +30,7 @@ $NetBSD: patch-ai,v 1.6 2003/03/09 19:46:53 jschauma Exp $
  	-fomit-frame-pointer -fexpensive-optimizations
  DEBUG_CFLAGS=$(BASE_CFLAGS) -g
 -LDFLAGS=-lm
-+LDFLAGS+=-lm -lossaudio
++LDFLAGS+=-lm
  SVGALDFLAGS=-lvga
 -XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lXxf86dga
 -XCFLAGS=-DX11
