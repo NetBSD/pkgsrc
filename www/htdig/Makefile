@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/12/04 00:16:55 fredb Exp $
+# $NetBSD: Makefile,v 1.17 2003/12/18 04:05:28 grant Exp $
 
 DISTNAME=	htdig-3.1.6
 CATEGORIES=	www databases
@@ -15,31 +15,32 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 
-DEPENDS+=	db>=2.7.7:../../databases/db
+USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-common-dir=${PREFIX}/share/htdig/common \
-		--with-config-dir=${PKG_SYSCONFDIR}/htdig/ \
-		--with-database-dir=/var/db/htdig \
+		--with-config-dir=${PKG_SYSCONFDIR} \
+		--with-database-dir=${DBDIR} \
 		--with-image-dir=${PREFIX}/share/examples/htdig \
 		--with-search-dir=${PREFIX}/share/examples/htdig
 CXXFLAGS+=	-Wno-deprecated
-CPPFLAGS+=	-I${PREFIX}/include/db2 ${CXXFLAGS}
-PLIST_SUBST=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.db} ${CXXFLAGS}
+LDFLAGS+=	${BUILDLINK_LDFLAGS.db}
+
+INSTALL_EXTRA_TMPL=     ${PKGDIR}/INSTALL
+PKG_SYSCONFSUBDIR=	htdig
+
+DBDIR?=		/var/db/htdig
+MESSAGE_SUBST+=	DBDIR=${DBDIR}
+OWN_DIRS+=	${DBDIR}
+
+CONF_FILES+=	${PREFIX}/share/examples/htdig/htdig.conf \
+		${PKG_SYSCONFDIR}/htdig.conf
 
 post-patch:
 	${TOUCH} ${WRKSRC}/configure
-
-post-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/htdig
-	if [ ! -f ${PKG_SYSCONFDIR}/htdig/htdig.conf ]; then \
-		${CP} ${PREFIX}/share/examples/htdig/htdig.conf \
-			${PKG_SYSCONFDIR}/htdig/; \
-	fi
-	${PREFIX}/bin/htfuzzy -v synonyms
-	${PREFIX}/bin/htfuzzy -v endings
-	${INSTALL_DATA_DIR} /var/db/htdig
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(EXTRACT_USING_PAX)
@@ -48,4 +49,5 @@ EXTRACT_ELEMENTS= -c ${DISTNAME}/db*
 EXTRACT_ELEMENTS= --exclude ${DISTNAME}/db*
 .endif
 
+.include "../../databases/db/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
