@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.100 1998/06/17 22:00:15 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.101 1998/06/18 11:45:33 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -185,7 +185,7 @@ TOUCH_FLAGS?=	-f
 PATCH?=			/usr/bin/patch
 PATCH_STRIP?=	-p0
 PATCH_DIST_STRIP?=	-p0
-.if defined(PATCH_DEBUG)
+.if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
 PATCH_DEBUG_TMP=	yes
 PATCH_ARGS?=	-d ${WRKSRC} -E ${PATCH_STRIP}
 PATCH_DIST_ARGS?=	-d ${WRKSRC} -E ${PATCH_DIST_STRIP}
@@ -963,6 +963,26 @@ delete-package:
 	@${RM} -f ${PKGFILE}
 .endif
 
+# Set the PLIST_SRC definition, if necessary
+.if !defined(PLIST_SRC)
+.if exists(${PKGDIR}/PLIST)
+PLIST_SRC=	${PKGDIR}/PLIST
+.elif exists(${PKGDIR}/PLIST-mi) && \
+      exists(${PKGDIR}/PLIST-md.shared) && \
+      exists(${PKGDIR}/PLIST-md.static)
+PLIST_SRC=	${PKGDIR}/PLIST-mi
+.if ${MACHINE_ARCH} == "powerpc" ||  ${MACHINE_ARCH} == "mips" ||  ${MACHINE_ARCH} == "alpha"
+# XXX this is mostly for perl; alpha can be removed once perl knows
+#  how to do dynamic loading - hubertf
+PLIST_SRC+=	${PKGDIR}/PLIST-md.static
+.else
+PLIST_SRC+=	${PKGDIR}/PLIST-md.shared
+.endif  # powerpc || mips || alpha
+.else   # no PLIST at all
+PLIST_SRC=
+.endif  # ${PKGDIR}/PLIST
+.endif  # !PLIST_SRC
+
 ################################################################
 # This is the "generic" port target, actually a macro used from the
 # six main targets.  See below for more.
@@ -1035,7 +1055,8 @@ _PORT_USE: .USE
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} \
 			${SCRIPTDIR}/${.TARGET:S/^real-/post-/}; \
 	fi
-.if make(real-install) && (defined(_MANPAGES) || defined(_CATPAGES))
+.if make(real-install)
+.if defined(_MANPAGES) || defined(_CATPAGES)
 .if defined(MANCOMPRESSED) && !defined(MANZ)
 	@${ECHO_MSG} "===>   Uncompressing manual pages for ${PKGNAME}"
 .for manpage in ${_MANPAGES} ${_CATPAGES}
@@ -1053,10 +1074,43 @@ _PORT_USE: .USE
 		${GZIP_CMD} ${manpage}; \
 	fi
 .endfor
-.endif
-.endif
-.if make(real-install) && !defined(NO_PKG_REGISTER)
+.endif # !MANCOMPRESSED && MANZ
+.else
+	@(newmanpages=`/usr/bin/egrep '^man/([^/]*/)?man[1-9ln]/.*\.[1-9ln](\.gz)?' ${PLIST_SRC} || /usr/bin/true`; \
+	newcatpages=`/usr/bin/egrep '^man/([^/]*/)?cat[1-9ln]/.*\.0(\.gz)?' ${PLIST_SRC} || /usr/bin/true`; \
+	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
+		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
+		${ECHO_MSG} "===>   Decompressing manual pages for ${PKGNAME}";	\
+		for manpage in $$newmanpages $$newcatpages; do		\
+			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
+			${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;		\
+			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
+				${ECHO_MSG} "$$manpage";		\
+			fi;						\
+		done;							\
+	fi;								\
+	if [ X"${MANCOMPRESSED}" = X"" -a X"${MANZ}" != X"" ]; then	\
+		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
+		${ECHO_MSG} "===>   Compressing manual pages for ${PKGNAME}";	\
+		for manpage in $$newmanpages $$newcatpages; do		\
+			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
+			if [ -L ${PREFIX}/$$manpage ]; then		\
+				set - `${FILE} ${PREFIX}/$$manpage`;	\
+				shift `expr $$# - 1`;			\
+				${LN} -sf $${1}.gz ${PREFIX}/$$manpage.gz; \
+				${RM} ${PREFIX}/$$manpage;		\
+			else						\
+				${GZIP_CMD} ${PREFIX}/$$manpage;	\
+			fi;						\
+			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
+				${ECHO_MSG} "$$manpage";		\
+			fi;						\
+		done;							\
+	fi)
+.endif # _MANPAGES || _CATPAGES
+.if !defined(NO_PKG_REGISTER)
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fake-pkg
+.endif # NO_PKG_REGISTER
 .endif
 .if !make(real-fetch) \
 	&& (!make(real-patch) || !defined(PATCH_CHECK_ONLY)) \
@@ -1173,7 +1227,11 @@ reinstall:
 .if !target(deinstall)
 deinstall:
 	@${ECHO_MSG} "===> Deinstalling for ${PKGNAME}"
+.ifdef PKG_VERBOSE
+	@pkg_delete -v -f ${PKGNAME}
+.else
 	@pkg_delete -f ${PKGNAME}
+.endif
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 .endif
 
@@ -1756,29 +1814,10 @@ tags:
 #   PLIST even when they install manpages without compressing them)
 # - substituting machine architecture (uname -m) for <$ARCH>
 
-.if !defined(PLIST_SRC)
-.if exists(${PKGDIR}/PLIST)
-PLIST_SRC=	${PKGDIR}/PLIST
-.elif exists(${PKGDIR}/PLIST-mi) && \
-      exists(${PKGDIR}/PLIST-md.shared) && \
-      exists(${PKGDIR}/PLIST-md.static)
-PLIST_SRC=	${PKGDIR}/PLIST-mi
-.if ${MACHINE_ARCH} == "powerpc" ||  ${MACHINE_ARCH} == "mips" ||  ${MACHINE_ARCH} == "alpha"
-# XXX this is mostly for perl; alpha can be removed once perl knows
-#  how to do dynamic loading - hubertf
-PLIST_SRC+=	${PKGDIR}/PLIST-md.static
-.else
-PLIST_SRC+=	${PKGDIR}/PLIST-md.shared
-.endif  # powerpc || mips || alpha
-.else   # no PLIST at all
-PLIST_SRC=
-.endif  # ${PKGDIR}/PLIST
-.endif  # !PLIST_SRC
-
 ${PLIST}: ${PLIST_SRC}
 	@if [ -z "${PLIST_SRC}" ] ; then \
 		${ECHO} "No ${PKGDIR}/PLIST, and no ${PKGDIR}/PLIST-{mi,md.shared,md.static}" ; \
-		${ECHO} "Package must care for making ${PLIST} by setting PLIST_SRC!" ; \
+		${ECHO} "The package Makefile must make ${PLIST} by setting PLIST_SRC!" ; \
 	fi
 .if defined(MANZ)
 	@if [ ! -z "${PLIST_SRC}" ] ; then \
