@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2004/11/20 05:07:17 rh Exp $
+$NetBSD: distinfo,v 1.17 2004/12/17 23:22:37 salo Exp $
 
-SHA1 (cgoban-unix-2.6.7.tar.bz2) = 19a48828f06f4db63e5359206f0caa58ae53f87a
-Size (cgoban-unix-2.6.7.tar.bz2) = 1124981 bytes
+SHA1 (cgoban-unix-2.6.8.tar.bz2) = 469396d478dca8467aa6f4cc34f7cc2d87157136
+Size (cgoban-unix-2.6.8.tar.bz2) = 1124130 bytes
