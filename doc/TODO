@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1296 2004/01/11 16:48:22 cjep Exp $
+$NetBSD: TODO,v 1.1297 2004/01/12 21:21:09 adam Exp $
 
 Suggested new packages
 ======================
@@ -350,7 +350,6 @@ Suggested package updates
 	o yacas-1.0.55
 	o ysm-2.9.0
 	o zenicb 1.31 (needs merge with lots of local changes)
-	o zlib-1.2.1
 	o zsh-4.0.9
 
 Infrastructure problems which need addressing
