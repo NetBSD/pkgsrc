@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/08/19 09:29:26 agc Exp $
+
+Use NetBSD's libtool pkg
+
+--- configure	1998/08/19 09:46:33	1.1
++++ configure	1998/08/19 09:47:07
+@@ -1258,6 +1258,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1303,6 +1304,8 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++
++fi
+ 
+ 
+ echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
