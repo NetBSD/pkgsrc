@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/01/17 13:10:00 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2002/04/29 11:04:37 rh Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -6,6 +6,7 @@ COMMENT=	Tools for use in the packages collection
 SUBDIR+=	bsdpak
 #SUBDIR+=	buildlink-x11	# Only under instruction of user
 SUBDIR+=	cdpack
+SUBDIR+=	createbuildlink
 SUBDIR+=	digest
 SUBDIR+=	gensolpkg
 #SUBDIR+=	pax		# Only needed on 1.3 systems
