@@ -1,4 +1,4 @@
-# $NetBSD: mfs_rcd,v 1.3 2004/04/27 21:12:43 xtraeme Exp $ 
+# $NetBSD: mfs_rcd,v 1.4 2004/10/29 17:47:30 xtraeme Exp $ 
 #
 # Mount mfs directories and unpack the required file
 # before anything.
@@ -29,7 +29,7 @@ mfsrc_start()
 
 	for f in mfs_dev mfs_etc mfs_var mfs_root
 	do
-	    tar xfjp /stand/$f.tbz -C / 
+	    @TAR@ xfzp /stand/$f.tgz -C / 
 	done
 	echo "=> Finished successfully."
 }
