@@ -1,0 +1,87 @@
+--- mp3lib/dct36_k7.s.orig	Wed May  9 11:59:55 2001
++++ mp3lib/dct36_k7.s	Mon Jul 30 21:20:01 2001
+@@ -1,44 +1,44 @@
+-///
+-/// Replacement of dct36() with AMD's 3DNowEx(DSP)! SIMD operations support
+-///
+-/// This code based 'dct36_3dnow.s' by Syuuhei Kashiyama
+-/// <squash@mb.kcom.ne.jp>,only some types of changes have been made:
+-///
+-///  - added new opcode PSWAPD
+-///  - change function name for support 3DNowEx! automatic detect
+-///
+-/// note: because K7 processors are an aggresive out-of-order three-way
+-///       superscalar ones instruction order is not significand for them.
+-///
+-/// Modified by Nick Kurshev <nickols_k@mail.ru>
+-///
+-/
+-/ dct36_3dnow.s - 3DNow! optimized dct36()
+-/
+-/ This code based 'dct36_3dnow.s' by Syuuhei Kashiyama
+-/ <squash@mb.kcom.ne.jp>,only two types of changes have been made:
+-/
+-/ - remove PREFETCH instruction for speedup
+-/ - change function name for support 3DNow! automatic detect
+-/
+-/ You can find Kashiyama's original 3dnow! support patch
+-/ (for mpg123-0.59o) at
+-/ http://user.ecc.u-tokyo.ac.jp/~g810370/linux-simd/ (Japanese).
+-/
+-/ by KIMURA Takuhiro <kim@hannah.ipc.miyakyo-u.ac.jp> - until 31.Mar.1999
+-/                    <kim@comtec.co.jp>               - after  1.Apr.1999
+-/
++#//
++#// Replacement of dct36() with AMD's 3DNowEx(DSP)! SIMD operations support
++#//
++#// This code based 'dct36_3dnow.s' by Syuuhei Kashiyama
++#// <squash@mb.kcom.ne.jp>,only some types of changes have been made:
++#//
++#//  - added new opcode PSWAPD
++#//  - change function name for support 3DNowEx! automatic detect
++#//
++#// note: because K7 processors are an aggresive out-of-order three-way
++#//       superscalar ones instruction order is not significand for them.
++#//
++#// Modified by Nick Kurshev <nickols_k@mail.ru>
++#//
++#
++# dct36_3dnow.s - 3DNow! optimized dct36()
++#
++# This code based 'dct36_3dnow.s' by Syuuhei Kashiyama
++# <squash@mb.kcom.ne.jp>,only two types of changes have been made:
++#
++# - remove PREFETCH instruction for speedup
++# - change function name for support 3DNow! automatic detect
++#
++# You can find Kashiyama's original 3dnow! support patch
++# (for mpg123-0.59o) at
++# http://user.ecc.u-tokyo.ac.jp/~g810370/linux-simd/ (Japanese).
++#
++# by KIMURA Takuhiro <kim@hannah.ipc.miyakyo-u.ac.jp> - until 31.Mar.1999
++#                    <kim@comtec.co.jp>               - after  1.Apr.1999
++#
+ 	
+-///
+-/// Replacement of dct36() with AMD's 3DNow! SIMD operations support
+-/// 
+-/// Syuuhei Kashiyama <squash@mb.kcom.ne.jp>
+-/// 
+-/// The author of this program disclaim whole expressed or implied
+-/// warranties with regard to this program, and in no event shall the
+-/// author of this program liable to whatever resulted from the use of
+-/// this program. Use it at your own risk.
+-/// 
++#//
++#// Replacement of dct36() with AMD's 3DNow! SIMD operations support
++#// 
++#// Syuuhei Kashiyama <squash@mb.kcom.ne.jp>
++#// 
++#// The author of this program disclaim whole expressed or implied
++#// warranties with regard to this program, and in no event shall the
++#// author of this program liable to whatever resulted from the use of
++#// this program. Use it at your own risk.
++#// 
+ 
+ 	.globl dct36_3dnowex
+ 	.type	 dct36_3dnowex,@function

@@ -1,0 +1,105 @@
+--- mp3lib/dct64_k7.s.orig	Fri Jul  6 14:59:14 2001
++++ mp3lib/dct64_k7.s	Mon Jul 30 21:20:01 2001
+@@ -31,7 +31,7 @@
+ 	orl %ecx,%ecx
+ 	movl %esp,%ecx
+ 
+-/* Phase 1*/
++#* Phase 1*/
+ 	movq	(%eax), %mm0
+ 	movq	8(%eax), %mm4
+ 	movq	%mm0, %mm3
+@@ -116,7 +116,7 @@
+ 	movq	%mm3, 72(%edx)
+ 	movq	%mm7, 64(%edx)
+ 
+-/* Phase 2*/
++#* Phase 2*/
+ 
+ 	movq	(%edx), %mm0
+ 	movq	8(%edx), %mm4
+@@ -160,7 +160,7 @@
+ 	movq	%mm3, 40(%ecx)
+ 	movq	%mm7, 32(%ecx)
+ 
+-/* Phase 3*/
++#* Phase 3*/
+ 
+ 	movq	64(%edx), %mm0
+ 	movq	72(%edx), %mm4
+@@ -204,7 +204,7 @@
+ 	movq	%mm3, 104(%ecx)
+ 	movq	%mm7, 96(%ecx)
+ 	
+-/* Phase 4*/
++#* Phase 4*/
+ 
+ 	movq	96(%ebx), %mm2
+ 	movq	104(%ebx), %mm6
+@@ -293,7 +293,7 @@
+ 	movq	%mm3, 120(%edx)
+ 	movq	%mm7, 112(%edx)
+ 
+-/* Phase 5 */
++#* Phase 5 */
+ 
+ 	movq	112(%ebx), %mm2
+ 
+@@ -382,8 +382,8 @@
+ 	movq	%mm7, 120(%ecx)
+ 	
+ 	
+-/* Phase 6. This is the end of easy road. */
+-/* Code below is coded in scalar mode. Should be optimized */
++#* Phase 6. This is the end of easy road. */
++#* Code below is coded in scalar mode. Should be optimized */
+ 
+ 	movd	plus_1f, %mm6
+ 	punpckldq 120(%ebx), %mm6      /* mm6 = 1.0 | 120(%ebx)*/
+@@ -442,7 +442,7 @@
+ 	movq	%mm1, 56(%edx)
+ 	movq	%mm0, 48(%edx)
+ 
+-/*---*/
++#*---*/
+ 
+ 	movd   92(%ecx), %mm1
+ 	pfsub  88(%ecx), %mm1
+@@ -501,8 +501,8 @@
+ 
+ 	jnz .L01
+ 	
+-/* Phase 7*/
+-/* Code below is coded in scalar mode. Should be optimized */
++#* Phase 7*/
++#* Code below is coded in scalar mode. Should be optimized */
+ 
+ 	movd      (%ecx), %mm0
+ 	pfadd    4(%ecx), %mm0
+@@ -545,7 +545,7 @@
+ 	pfadd  %mm3, %mm2
+ 	movd   %mm2, 256(%edi)
+ 	
+-/* Phase 8*/
++#* Phase 8*/
+ 
+ 	movq   32(%edx), %mm0
+ 	movq   48(%edx), %mm1
+@@ -620,7 +620,7 @@
+ 
+ 	jmp	.L_bye
+ .L01:	
+-/* Phase 9*/
++#* Phase 9*/
+ 
+ 	movq	(%ecx), %mm0
+ 	movq	%mm0, %mm1
+@@ -678,7 +678,7 @@
+ 	movd   %mm2, %eax
+ 	movw   %ax, 128(%edi)
+ 	
+-/* Phase 10*/
++#* Phase 10*/
+ 
+ 	movq    32(%edx), %mm0
+ 	movq    48(%edx), %mm1

@@ -1,0 +1,263 @@
+--- libao2/ao_netbsd.c.orig	Thu Jan  1 03:00:00 1970
++++ libao2/ao_netbsd.c	Mon Jul 30 22:10:09 2001
+@@ -0,0 +1,260 @@
++#include <stdio.h>
++#include <sys/ioctl.h>
++#include <sys/types.h>
++#include <sys/audioio.h>
++#include <fcntl.h>
++#include <unistd.h>
++
++#include "../config.h"
++
++#include "afmt.h"
++#include "audio_out.h"
++#include "audio_out_internal.h"
++
++static ao_info_t info =
++{
++	"NetBSD audio output",
++	"netbsd",
++	"Sergey Svishchev <svs@ropnet.ru>",
++	""
++};
++
++LIBAO_EXTERN(netbsd)
++	static char    *dsp = "/dev/sound";
++	static int      audio_fd = -1;
++	static char    *mixer = "/dev/mixer";
++	static int      mixer_fd = -1;
++	static audio_info_t audio_info;
++	static mixer_ctrl_t mixer_pcm;
++	static mixer_ctrl_t mixer_master;
++
++	static int      control(int cmd, void *arg)
++{
++	int             rc;
++	mixer_ctrl_t   *mc;
++	ao_control_vol_t *vol;
++
++	switch (cmd) {
++		case AOCONTROL_SET_DEVICE:
++			if (arg) {
++				dsp = strdup((char *) arg);
++				return CONTROL_OK;
++			} else
++				return CONTROL_ERROR;
++		case AOCONTROL_QUERY_FORMAT:
++			return CONTROL_TRUE;
++		case AOCONTROL_SET_MIXER_DEVICE:
++			if (arg) {
++				mixer = strdup((char *) arg);
++				return CONTROL_OK;
++			} else
++				return CONTROL_ERROR;
++		case AOCONTROL_GET_VOLUME:
++			vol = (ao_control_vol_t *) arg;
++			mc = vol->usemaster ? &mixer_master : &mixer_pcm;
++			rc = ioctl(mixer_fd, AUDIO_MIXER_READ, mc);
++			if (rc == -1)
++				return CONTROL_ERROR;
++			switch (mc->un.value.num_channels) {
++			case 1:
++				vol->left = vol->right =
++					(float) mc->un.value.level[AUDIO_MIXER_LEVEL_MONO] / 2.55;
++				break;
++			case 2:
++				vol->left =
++					(float) mc->un.value.level[AUDIO_MIXER_LEVEL_LEFT] / 2.55;
++				vol->right =
++					(float) mc->un.value.level[AUDIO_MIXER_LEVEL_RIGHT] / 2.55;
++				break;
++			default:
++			}
++			return CONTROL_ERROR;
++		case AOCONTROL_SET_VOLUME:
++			vol = (ao_control_vol_t *) arg;
++			mc = vol->usemaster ? &mixer_master : &mixer_pcm;
++			switch (mc->un.value.num_channels) {
++			case 1:
++				vol->left = vol->right =
++					mc->un.value.level[AUDIO_MIXER_LEVEL_MONO] = (u_char)
++					(vol->left + vol->right) * 2.55 / 2.0;
++				break;
++			case 2:
++				mc->un.value.level[AUDIO_MIXER_LEVEL_LEFT] = 
++					(u_char) (vol->left * 2.55);
++				mc->un.value.level[AUDIO_MIXER_LEVEL_RIGHT] = 
++					(u_char) (vol->right * 2.55);
++				break;
++			default:
++				return CONTROL_ERROR;
++			}
++			rc = ioctl(mixer_fd, AUDIO_MIXER_WRITE, mc);
++			if (rc == -1)
++				return CONTROL_ERROR;
++		default:
++	}
++	return CONTROL_UNKNOWN;
++}
++
++/*
++ * open & setup audio device.  returns: 1 = success 0 = fail
++ */
++static int
++init(int rate, int channels, int format, int flags)
++{
++	int             rc, mci, mco;
++	mixer_devinfo_t mi;
++
++	audio_fd = open(dsp, O_WRONLY);
++	if (audio_fd < 0) {
++		perror("libao2(netbsd): Can't open audio device");
++		return 0;
++	}
++	rc = ioctl(audio_fd, AUDIO_GETINFO, &audio_info);
++	if (rc < 0) {
++		perror("libao2(netbsd): Can't query device parameters");
++		return 0;
++	}
++	switch (format) {
++	case AFMT_A_LAW:
++		audio_info.play.precision = 8;
++		audio_info.play.encoding = AUDIO_ENCODING_ALAW;
++		break;
++	case AFMT_MU_LAW:
++		audio_info.play.precision = 8;
++		audio_info.play.encoding = AUDIO_ENCODING_ULAW;
++		break;
++	case AFMT_S16_LE:
++		audio_info.play.precision = 16;
++		audio_info.play.encoding = AUDIO_ENCODING_SLINEAR_LE;
++		break;
++	case AFMT_U8:
++		audio_info.play.precision = 8;
++		audio_info.play.encoding = AUDIO_ENCODING_ULINEAR;
++		break;
++	default:
++		printf("libao2(netbsd): unhandled sample format %08x\n", format);
++		return 0;
++	}
++	ao_format = format;
++	ao_buffersize = audio_info.play.buffer_size;
++	audio_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
++	audio_info.play.sample_rate = ao_samplerate = rate;
++	audio_info.play.channels = ao_channels = channels;
++#if 1
++	audio_info.blocksize = ao_buffersize / 12;
++	audio_info.hiwat = 12;
++	audio_info.lowat = 9;
++#endif
++	rc = ioctl(audio_fd, AUDIO_SETINFO, &audio_info);
++	if (rc < 0) {
++		perror("libao2(netbsd): Can't set desired device parameters");
++		return 0;
++	}
++	ao_outburst = audio_info.blocksize;
++
++	mixer_fd = open(mixer, O_RDWR);
++	if (mixer_fd < 0) {
++		perror("libao2(netbsd): Can't open mixer device");
++		goto out;
++	}
++	mi.index = 0;
++	mixer_master.dev = mixer_pcm.dev = -1;
++	mci = mco = -1;
++	rc = ioctl(mixer_fd, AUDIO_MIXER_DEVINFO, &mi);
++	while (rc != -1) {
++		if (mi.type == AUDIO_MIXER_CLASS && !strcmp(mi.label.name, AudioCinputs))
++			mci = mi.index;
++		if (mi.type == AUDIO_MIXER_CLASS && !strcmp(mi.label.name, AudioCoutputs))
++			mco = mi.index;
++		mi.index++;
++		rc = ioctl(mixer_fd, AUDIO_MIXER_DEVINFO, &mi);
++	}
++
++	mi.index = 0;
++	rc = ioctl(mixer_fd, AUDIO_MIXER_DEVINFO, &mi);
++	while (rc != -1) {
++		if (mi.type == AUDIO_MIXER_VALUE && mi.mixer_class == mci &&
++		    !strcmp(mi.label.name, AudioNdac)) {
++			mixer_pcm.dev = mi.index;
++			mixer_pcm.type = AUDIO_MIXER_VALUE;
++			mixer_pcm.un.value.num_channels = mi.un.v.num_channels;
++		}
++		if (mi.type == AUDIO_MIXER_VALUE && mi.mixer_class == mco &&
++		    !strcmp(mi.label.name, AudioNmaster)) {
++			mixer_master.dev = mi.index;
++			mixer_master.type = AUDIO_MIXER_VALUE;
++			mixer_master.un.value.num_channels = mi.un.v.num_channels;
++		}
++		mi.index++;
++		rc = ioctl(mixer_fd, AUDIO_MIXER_DEVINFO, &mi);
++	}
++	rc = ioctl(mixer_fd, AUDIO_MIXER_READ, &mixer_pcm);
++	rc = ioctl(mixer_fd, AUDIO_MIXER_READ, &mixer_master);
++	/*
++	printf("found mixers: pcm %d (%d channels), master %d (%d channels)\n",
++	       mixer_pcm.dev,
++	       mixer_pcm.dev == -1 ? -1 : mixer_pcm.un.value.num_channels,
++	       mixer_master.dev,
++	  mixer_master.dev == -1 ? -1 : mixer_master.un.value.num_channels);
++	*/
++
++out:
++	return 1;
++}
++
++static void
++uninit()
++{
++	ioctl(audio_fd, AUDIO_DRAIN);
++	close(audio_fd);
++	audio_fd = -1;
++}
++
++static void
++reset()
++{
++	ioctl(audio_fd, AUDIO_DRAIN);
++}
++
++static void
++audio_pause()
++{
++	ioctl(audio_fd, AUDIO_DRAIN);
++	ioctl(audio_fd, AUDIO_GETINFO, &audio_info);
++	audio_info.play.pause = 1;
++	ioctl(audio_fd, AUDIO_SETINFO, &audio_info);
++}
++
++static void
++audio_resume()
++{
++	ioctl(audio_fd, AUDIO_GETINFO, &audio_info);
++	audio_info.play.pause = 0;
++	audio_info.play.seek = 0;
++	ioctl(audio_fd, AUDIO_SETINFO, &audio_info);
++}
++
++static int
++play(void *data, int len, int flags)
++{
++	len /= ao_outburst;
++	return audio_fd > 0 ? write(audio_fd, data, len * ao_outburst) : -1;
++}
++
++static int
++get_space()
++{
++	audio_info_t    ai;
++
++	int             rc = ioctl(audio_fd, AUDIO_GETINFO, &ai);
++	return (rc == -1) ? ao_outburst : (ao_buffersize - ai.play.seek);
++}
++
++static int
++get_delay()
++{
++	audio_info_t    ai;
++
++	int             rc = ioctl(audio_fd, AUDIO_GETINFO, &ai);
++	return (rc == -1) ? 0 : ai.play.seek;
++}

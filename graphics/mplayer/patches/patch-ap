@@ -1,0 +1,101 @@
+--- mp3lib/d_cpu.s.orig	Mon Jul  2 12:07:41 2001
++++ mp3lib/d_cpu.s	Mon Jul 30 21:20:01 2001
+@@ -1,8 +1,8 @@
+ 
+-/ ---------------------------------------------------------------------------
+-/  Cpu function detect by Pontscho/fresh!mindworkz (c) 2000 - 2000
+-/  3dnow-dsp detection by Nick Kurshev (C) 2001
+-/ ---------------------------------------------------------------------------
++# ---------------------------------------------------------------------------
++#  Cpu function detect by Pontscho/fresh!mindworkz (c) 2000 - 2000
++#  3dnow-dsp detection by Nick Kurshev (C) 2001
++# ---------------------------------------------------------------------------
+ 
+ .text
+ 
+@@ -11,10 +11,10 @@
+ .globl a3dnow
+ .globl isse
+ 
+-/ ---------------------------------------------------------------------------
+-/  in C: unsigned long CpuDetect( void );
+-/   return: cpu ident number.
+-/ ---------------------------------------------------------------------------
++# ---------------------------------------------------------------------------
++#  in C: unsigned long CpuDetect( void );
++#   return: cpu ident number.
++# ---------------------------------------------------------------------------
+ CpuDetect:
+         pushl %ebx
+         pushl %ecx
+@@ -44,12 +44,12 @@
+         popl  %ebx
+         ret
+ 
+-/ ---------------------------------------------------------------------------
+-/  in C: unsigled long ipentium( void );
+-/  return: 0 if this processor i386 or i486
+-/          1 otherwise
+-/          3 if this cpu supports mmx
+-/ ---------------------------------------------------------------------------
++# ---------------------------------------------------------------------------
++#  in C: unsigled long ipentium( void );
++#  return: 0 if this processor i386 or i486
++#          1 otherwise
++#          3 if this cpu supports mmx
++# ---------------------------------------------------------------------------
+ ipentium:
+         pushl  %ebx
+         pushl  %ecx
+@@ -84,12 +84,12 @@
+         popl   %ebx
+         ret
+ 
+-/ ---------------------------------------------------------------------------
+-/  in C: unsigned long a3dnow( void );
+-/  return: 0 if this processor does not support 3dnow!
+-/          1 otherwise
+-/          3 if this cpu supports 3dnow-dsp extension
+-/ ---------------------------------------------------------------------------
++# ---------------------------------------------------------------------------
++#  in C: unsigned long a3dnow( void );
++#  return: 0 if this processor does not support 3dnow!
++#          1 otherwise
++#          3 if this cpu supports 3dnow-dsp extension
++# ---------------------------------------------------------------------------
+ a3dnow:
+         pushl  %ebx
+         pushl  %edx
+@@ -109,11 +109,11 @@
+         xorl   %eax,%eax
+         testl  $0x80000000,%edx
+         jz     exit2
+-/// eax=1 - K6 3DNow!
++#// eax=1 - K6 3DNow!
+         inc    %eax
+         testl  $0x40000000,%edx
+         jz     exit2
+-/// eax=2 - K7 3DNowEx!	
++#// eax=2 - K7 3DNowEx!	
+         orl    $2, %eax
+ exit2:
+ 
+@@ -122,12 +122,12 @@
+         popl   %ebx
+         ret
+ 
+-/ ---------------------------------------------------------------------------
+-/  in C: unsigned long isse( void );
+-/  return: 0 if this processor does not support sse
+-/          1 otherwise
+-/          3 if this cpu supports sse2 extension
+-/ ---------------------------------------------------------------------------
++# ---------------------------------------------------------------------------
++#  in C: unsigned long isse( void );
++#  return: 0 if this processor does not support sse
++#          1 otherwise
++#          3 if this cpu supports sse2 extension
++# ---------------------------------------------------------------------------
+ isse:
+         pushl  %ebx
+         pushl  %edx

@@ -1,0 +1,11 @@
+--- libao2/ao_sdl.c.orig	Wed Jun 27 15:40:15 2001
++++ libao2/ao_sdl.c	Mon Jul 30 22:10:10 2001
+@@ -120,7 +120,7 @@
+ 
+ 
+ // to set/get/query special features/parameters
+-static int control(int cmd,int arg){
++static int control(int cmd,void* arg){
+     return -1;
+ }
+ 

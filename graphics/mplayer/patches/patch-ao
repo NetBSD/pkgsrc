@@ -1,0 +1,16 @@
+--- mixer.c.orig	Sat Jun  9 03:33:55 2001
++++ mixer.c	Mon Jul 30 21:20:01 2001
+@@ -15,7 +15,13 @@
+  * Mixer interface using OSS style soundcard commands.
+  */
+ 
++#ifdef	HAVE_SYS_SOUNDCARD_H
+ #include <sys/soundcard.h>
++#endif
++
++#ifdef	HAVE_SOUNDCARD_H
++#include <soundcard.h>
++#endif
+ 
+ 
+ char * mixer_device=DEV_MIXER;

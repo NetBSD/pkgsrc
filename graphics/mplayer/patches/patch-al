@@ -1,0 +1,22 @@
+--- libao2/audio_out.c.orig	Fri Jun 22 02:34:58 2001
++++ libao2/audio_out.c	Mon Jul 30 22:10:10 2001
+@@ -31,6 +31,9 @@
+ #ifdef HAVE_SDL
+ extern ao_functions_t audio_out_sdl;
+ #endif
++#ifdef __NetBSD__
++extern ao_functions_t audio_out_netbsd;
++#endif
+ #ifdef USE_SUN_AUDIO
+ extern ao_functions_t audio_out_sun;
+ #endif
+@@ -57,6 +60,9 @@
+ #endif
+ #ifdef USE_SUN_AUDIO
+         &audio_out_sun,
++#endif
++#ifdef __NetBSD__
++	&audio_out_netbsd,
+ #endif
+ 	&audio_out_pcm,
+ //	&audio_out_pss,

@@ -1,0 +1,11 @@
+--- vcd_read_fbsd.c.orig	Thu Jun 21 04:06:40 2001
++++ vcd_read_fbsd.c	Mon Jul 30 21:24:00 2001
+@@ -1,6 +1,8 @@
+ #include <sys/cdio.h>
+ #include <sys/cdrio.h>
+ 
++#define HAVE_VCD 1
++
+ //=================== VideoCD ==========================
+ #define	CDROM_LEADOUT	0xAA
+ 

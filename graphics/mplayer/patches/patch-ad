@@ -1,0 +1,11 @@
+--- libao2/ao_alsa5.c.orig	Tue Jun 12 18:13:26 2001
++++ libao2/ao_alsa5.c	Mon Jul 30 22:10:09 2001
+@@ -41,7 +41,7 @@
+ static int alsa_rate = SND_PCM_RATE_CONTINUOUS;
+ 
+ /* to set/get/query special features/parameters */
+-static int control(int cmd, int arg)
++static int control(int cmd, void* arg)
+ {
+     return(CONTROL_UNKNOWN);
+ }

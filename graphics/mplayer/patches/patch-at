@@ -1,0 +1,83 @@
+--- mp3lib/dct64_MMX.s.orig	Thu Jul  5 13:44:18 2001
++++ mp3lib/dct64_MMX.s	Mon Jul 30 21:20:01 2001
+@@ -14,7 +14,7 @@
+ 	pushl %edi
+ 	subl $256,%esp
+ 	movl 280(%esp),%eax
+-/* Phase 1*/
++#* Phase 1*/
+ 	flds     (%eax)
+ 	leal 128(%esp),%edx
+ 	fadds 124(%eax)
+@@ -165,7 +165,7 @@
+ 	fmuls  60(%ebx)
+ 	fstps  64(%edx)
+ 	
+-/* Phase 2*/
++#* Phase 2*/
+ 
+ 	flds     (%edx)
+ 	fadds  60(%edx)
+@@ -239,7 +239,7 @@
+ 	fmuls  92(%ebx)
+ 	fstps  32(%ecx)
+ 	
+-/* Phase 3*/
++#* Phase 3*/
+ 
+ 	flds   64(%edx)
+ 	fadds 124(%edx)
+@@ -313,7 +313,7 @@
+ 	fmuls  92(%ebx)
+ 	fstps  96(%ecx)
+ 	
+-/* Phase 4*/
++#* Phase 4*/
+ 
+ 	flds     (%ecx)
+ 	fadds  28(%ecx)
+@@ -603,7 +603,7 @@
+ 	fmuls 116(%ebx)
+ 	fstps 120(%ecx)
+ 	
+-/* Phase 5*/
++#* Phase 5*/
+ 
+ 	flds   32(%ecx)
+ 	fadds  36(%ecx)
+@@ -715,7 +715,7 @@
+ 	fstps 120(%edx)
+ 	jnz .L01
+ 	
+-/* Phase 6*/
++#* Phase 6*/
+ 
+ 	flds      (%ecx)
+ 	fadds    4(%ecx)
+@@ -755,7 +755,7 @@
+ 	faddp    %st(1)
+ 	fstps 256(%edi)
+ 	
+-/* Phase 7*/
++#* Phase 7*/
+ 
+ 	flds   32(%edx)
+ 	fadds  48(%edx)
+@@ -852,7 +852,7 @@
+ 	popl %ebx
+ 	ret
+ .L01:	
+-/* Phase 8*/
++#* Phase 8*/
+ 
+ 	flds      (%ecx)
+ 	fadds    4(%ecx)
+@@ -893,7 +893,7 @@
+ 	faddp    %st(1)
+ 	fistp  128(%edi)
+ 	
+-/* Phase 9*/
++#* Phase 9*/
+ 
+ 	flds    32(%edx)
+ 	fadds   48(%edx)

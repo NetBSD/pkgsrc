@@ -1,0 +1,39 @@
+--- stream.c.orig	Thu Jun 21 04:06:40 2001
++++ stream.c	Mon Jul 30 22:10:10 2001
+@@ -12,8 +12,12 @@
+ #ifdef __FreeBSD__
+ #include "vcd_read_fbsd.c" 
+ #else
++#ifdef __NetBSD__
++#include "vcd_read_nbsd.c" 
++#else
+ #include "vcd_read.c"
+ #endif
++#endif
+ 
+ //=================== STREAMER =========================
+ 
+@@ -37,6 +41,7 @@
+   s->buf_len=len;
+   s->pos+=len;
+ //  printf("[%d]",len);fflush(stdout);
++	if(s->type == STREAMTYPE_VCD) vcd_set_msf(s->pos/VCD_SECTOR_DATA);
+   return len;
+ }
+ 
+@@ -68,6 +73,7 @@
+     s->pos=newpos; // real seek
+     if(lseek(s->fd,s->pos,SEEK_SET)<0) s->eof=1;
+     break;
++#ifdef HAVE_VCD
+   case STREAMTYPE_VCD:
+     s->pos=newpos; // real seek
+ #ifdef VCD_CACHE
+@@ -76,6 +82,7 @@
+     vcd_set_msf(s->pos/VCD_SECTOR_DATA);
+ #endif
+     break;
++#endif
+   case STREAMTYPE_STREAM:
+     //s->pos=newpos; // real seek
+     if(newpos<s->pos){

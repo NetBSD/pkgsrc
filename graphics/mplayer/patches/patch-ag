@@ -1,0 +1,11 @@
+--- libao2/ao_null.c.orig	Tue Jun  5 22:40:44 2001
++++ libao2/ao_null.c	Mon Jul 30 22:10:10 2001
+@@ -23,7 +23,7 @@
+ // ao_buffersize
+ 
+ // to set/get/query special features/parameters
+-static int control(int cmd,int arg){
++static int control(int cmd,void* arg){
+     return -1;
+ }
+ 

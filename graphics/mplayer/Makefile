@@ -1,0 +1,39 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/12/21 23:38:52 zuntum Exp $
+#
+
+DISTNAME=	MPlayer-0.18pre
+PKGNAME=	mplayer-0.18pre
+CATEGORIES=	graphics
+MASTER_SITES=	http://mp.dev.hu/MPlayer/releases/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	svs@ropnet.ru,zuntum@netbsd.org
+HOMEPAGE=	http://mplayer.sourceforge.net/
+COMMENT=	Software only MPEG-1/2/4 video decoder
+
+ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386
+
+DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
+BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
+
+USE_X11=		YES
+USE_GMAKE=		YES
+HAS_CONFIGURE=		YES
+
+WRKSRC=			${WRKDIR}/MPlayer-0.18pre5
+
+CONFIGURE_ARGS+=	--prefix="${PREFIX}"
+CONFIGURE_ARGS+=	--with-extraincdir="${BUILDLINK_DIR}/include"
+CONFIGURE_ARGS+=	--with-extralibdir="${BUILDLINK_DIR}/lib"
+CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
+#CONFIGURE_ARGS+=	--disable-gcc-checking
+CONFIGURE_ARGS+=	--disable-css
+CONFIGURE_ARGS+=	--disable-streaming 
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
+	${CP} -R ${WRKSRC}/DOCS ${PREFIX}/share/mplayer
+
+.include "../../devel/SDL/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../mk/bsd.pkg.mk"

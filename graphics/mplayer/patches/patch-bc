@@ -1,0 +1,11 @@
+--- loader/Makefile.orig	Thu Jul 12 21:02:55 2001
++++ loader/Makefile	Tue Jul 31 14:45:12 2001
+@@ -26,7 +19,7 @@
+ distclean: clean
+ 
+ .c.o: $@
+-	$(CC) $(CFLAGS) $(DEFINES) -c $<
++	$(CC) $(CFLAGS) $(DEFINES) $(EXTRA_INC) -c $<
+ 
+ libloader.a:  $(LIB_OBJECTS) stubs.s
+ 	$(CC) -c ./stubs.s -o stubs.o

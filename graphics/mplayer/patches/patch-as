@@ -1,0 +1,105 @@
+--- mp3lib/dct64_3dnow.s.orig	Fri Jul  6 14:59:14 2001
++++ mp3lib/dct64_3dnow.s	Mon Jul 30 21:20:01 2001
+@@ -30,7 +30,7 @@
+ 	orl %ecx,%ecx
+ 	movl %esp,%ecx
+ 
+-/* Phase 1*/
++#* Phase 1*/
+ 	movq	(%eax), %mm0
+ 	movq	8(%eax), %mm4
+ 	movq	%mm0, %mm3
+@@ -147,7 +147,7 @@
+ 	movd	%mm3, 72(%edx)
+ 	movd	%mm7, 64(%edx)
+ 
+-/* Phase 2*/
++#* Phase 2*/
+ 
+ 	movq	(%edx), %mm0
+ 	movq	8(%edx), %mm4
+@@ -207,7 +207,7 @@
+ 	movd	%mm3, 40(%ecx)
+ 	movd	%mm7, 32(%ecx)
+ 
+-/* Phase 3*/
++#* Phase 3*/
+ 
+ 	movq	64(%edx), %mm0
+ 	movq	72(%edx), %mm4
+@@ -267,7 +267,7 @@
+ 	movd	%mm3, 104(%ecx)
+ 	movd	%mm7, 96(%ecx)
+ 	
+-/* Phase 4*/
++#* Phase 4*/
+ 
+ 	movq	(%ecx), %mm0
+ 	movq	8(%ecx), %mm4
+@@ -385,7 +385,7 @@
+ 	movd	%mm3, 120(%edx)
+ 	movd	%mm7, 112(%edx)
+ 
+-/* Phase 5 */
++#* Phase 5 */
+ 
+ 	movq	(%edx), %mm0
+ 	movq	16(%edx), %mm4
+@@ -503,8 +503,8 @@
+ 	movd	%mm3, 104(%ecx)
+ 	movd	%mm7, 120(%ecx)
+ 	
+-/* Phase 6. This is the end of easy road. */
+-/* Code below is coded in scalar mode. Should be optimized */
++#* Phase 6. This is the end of easy road. */
++#* Code below is coded in scalar mode. Should be optimized */
+ 
+ 	movd	plus_1f, %mm6
+ 	punpckldq 120(%ebx), %mm6      /* mm6 = 1.0 | 120(%ebx)*/
+@@ -563,7 +563,7 @@
+ 	movq	%mm1, 56(%edx)
+ 	movq	%mm0, 48(%edx)
+ 
+-/*---*/
++#*---*/
+ 
+ 	movd   92(%ecx), %mm1
+ 	pfsub  88(%ecx), %mm1
+@@ -622,8 +622,8 @@
+ 
+ 	jnz .L01
+ 	
+-/* Phase 7*/
+-/* Code below is coded in scalar mode. Should be optimized */
++#* Phase 7*/
++#* Code below is coded in scalar mode. Should be optimized */
+ 
+ 	movd      (%ecx), %mm0
+ 	pfadd    4(%ecx), %mm0
+@@ -666,7 +666,7 @@
+ 	pfadd  %mm3, %mm2
+ 	movd   %mm2, 256(%edi)
+ 	
+-/* Phase 8*/
++#* Phase 8*/
+ 
+ 	movq   32(%edx), %mm0
+ 	movq   48(%edx), %mm1
+@@ -741,7 +741,7 @@
+ 
+ 	jmp	.L_bye
+ .L01:	
+-/* Phase 9*/
++#* Phase 9*/
+ 
+ 	movq	(%ecx), %mm0
+ 	movq	%mm0, %mm1
+@@ -799,7 +799,7 @@
+ 	movd   %mm2, %eax
+ 	movw   %ax, 128(%edi)
+ 	
+-/* Phase 10*/
++#* Phase 10*/
+ 
+ 	movq    32(%edx), %mm0
+ 	movq    48(%edx), %mm1
