@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.54 2003/09/06 11:28:13 cjep Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.55 2004/04/07 14:14:12 tv Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -137,7 +137,7 @@ README.html: .PRECIOUS
 	@> $@.tmp
 .for entry in ${SUBDIR}
 .if defined(PKGSRCTOP)
-	@${ECHO} -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`${ECHO} ${entry} | ${HTMLIFY}`"'</a>: <TD>' >> $@.tmp
+	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`${ECHO} ${entry} | ${HTMLIFY}`"'</a>: <TD>' >> $@.tmp
 	@${ECHO} `cd ${entry} && ${MAKE} ${MAKEFLAGS} show-comment | ${HTMLIFY}` >> $@.tmp
 .else
 	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} ${MAKEFLAGS} make-readme-html-help`" >> $@.tmp
