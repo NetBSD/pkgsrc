@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/07/20 15:41:01 tron Exp $
+# $NetBSD: Makefile,v 1.20 2001/01/26 04:58:57 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -37,7 +37,7 @@ pre-configure:
 post-install:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/rplayd.sh > ${WRKDIR}/rplayd.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/rplayd.sh ${PREFIX}/etc/rc.d/rplayd.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/rplayd.sh ${PREFIX}/etc/rc.d/rplayd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
