@@ -1,30 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/02 21:38:14 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/17 16:21:00 seb Exp $
 bin/imf2x
 bin/x2imf
 bin/xconq
 bin/ximfapp
-info/hacking.info
-info/xcdesign.info
-info/xcdesign.info-1
-info/xcdesign.info-10
-info/xcdesign.info-11
-info/xcdesign.info-12
-info/xcdesign.info-13
-info/xcdesign.info-2
-info/xcdesign.info-3
-info/xcdesign.info-4
-info/xcdesign.info-5
-info/xcdesign.info-6
-info/xcdesign.info-7
-info/xcdesign.info-8
-info/xcdesign.info-9
-info/xconq.info
-info/xconq.info-1
-info/xconq.info-2
-info/xconq.info-3
-info/xconq.info-4
-info/xconq.info-5
-info/xconq.info-6
 man/man6/xconq.6
 share/xconq/images/advt24x26.gif
 share/xconq/images/advt32x32.gif
