@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.19 2002/09/16 19:55:56 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.20 2002/09/17 06:20:14 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -246,12 +246,13 @@ _BLNK_TRANSFORM_SED.3+=	${_BLNK_PROTECT_SED}
 # Change "/usr/pkg/lib/libfoo.so"   into "-L/usr/pkg/lib -lfoo" and
 #        "/usr/X11R6/lib/libbar.so" into "-L/usr/X11R6/lib -lbar".
 #
-_BLNK_TRANSFORM_SED.1+= \
+_BLNK_TRANSFORM_SED.libpath+= \
 	-e "s|\(${LOCALBASE}/[^	 ]*\)/lib\([^	 ]*\)\.a|-L\1 -l\2|g"	\
 	-e "s|\(${LOCALBASE}/[^	 ]*\)/lib\([^	 ]*\)\.so|-L\1 -l\2|g"
-_BLNK_TRANSFORM_SED.1+= \
+_BLNK_TRANSFORM_SED.libpath+= \
 	-e "s|\(${X11BASE}/[^	 ]*\)/lib\([^	 ]*\)\.a|-L\1 -l\2|g"	\
 	-e "s|\(${X11BASE}/[^	 ]*\)/lib\([^	 ]*\)\.so|-L\1 -l\2|g"
+_BLNK_TRANSFORM_SED.1+=		${_BLNK_TRANSFORM_SED.libpath}
 #
 # Transform "I:/usr/pkg:/buildlink" into:
 #	-e "s|-I/usr/pkg |-I/buildlink |g"
@@ -259,15 +260,17 @@ _BLNK_TRANSFORM_SED.1+= \
 #	-e "s|-I/usr/pkg/\([^	 ]*\)|-I/buildlink/\1|g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:MI\:*\:*}
-_BLNK_TRANSFORM_SED.2+= \
+_BLNK_TRANSFORM_SED.I+= \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/} |-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/} |g" \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}$$|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}|g" \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}/\([^	 ]*\)|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}/\1|g"
-_BLNK_UNTRANSFORM_SED.2+= \
+_BLNK_UNTRANSFORM_SED.I+= \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/} |-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/} |g" \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}$$|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}|g" \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}/\([^	 ]*\)|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}/\1|g"
 .endfor
+_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.I}
+_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.I}
 #
 # Transform "II:/usr/X11R6:/buildlink,/x11-links" into:
 #	-e "s|-I/usr/X11R6 |-I/buildlink -I/x11-links |g"
@@ -275,11 +278,11 @@ _BLNK_UNTRANSFORM_SED.2+= \
 #	-e "s|-I/usr/X11R6/\([^	 ]*\)|-I/buildlink/\1 -I/x11-links/\1|g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:MII\:*\:*,*}
-_BLNK_TRANSFORM_SED.2+= \
+_BLNK_TRANSFORM_SED.II+= \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |g" \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}|g" \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\1 -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\1|g"
-_BLNK_UNTRANSFORM_SED.2+= \
+_BLNK_UNTRANSFORM_SED.II+= \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
@@ -287,6 +290,8 @@ _BLNK_UNTRANSFORM_SED.2+= \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g" \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g"
 .endfor
+_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.II}
+_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.II}
 #
 # Transform "L:/usr/pkg:/buildlink" into:
 #	-e "s|-L/usr/pkg |-L/buildlink |g"
@@ -294,15 +299,17 @@ _BLNK_UNTRANSFORM_SED.2+= \
 #	-e "s|-L/usr/pkg/\([^	 ]*\)|-L/buildlink/\1|g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:ML\:*\:*}
-_BLNK_TRANSFORM_SED.2+= \
+_BLNK_TRANSFORM_SED.L+= \
 	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/} |-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/} |g" \
 	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}$$|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}|g" \
 	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}/\([^	 ]*\)|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}/\1|g"
-_BLNK_UNTRANSFORM_SED.2+= \
+_BLNK_UNTRANSFORM_SED.L+= \
 	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/} |-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/} |g" \
 	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}$$|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}|g" \
 	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}/\([^	 ]*\)|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}/\1|g"
 .endfor
+_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.L}
+_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.L}
 #
 # Transform "LL:/usr/X11R6:/buildlink,/x11-links" into:
 #	-e "s|-L/usr/X11R6 |-L/buildlink -L/x11-links |g"
@@ -310,11 +317,11 @@ _BLNK_UNTRANSFORM_SED.2+= \
 #	-e "s|-L/usr/X11R6/\([^  ]*\)|-L/buildlink/\1 -L/x11-links/\1|g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:MLL\:*\:*,*}
-_BLNK_TRANSFORM_SED.2+= \
+_BLNK_TRANSFORM_SED.LL+= \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |g" \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}$$|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}|g" \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\([^	 ]*\)|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\1 -L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\1|g"
-_BLNK_UNTRANSFORM_SED.2+= \
+_BLNK_UNTRANSFORM_SED.LL+= \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} |-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}$$|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
@@ -322,16 +329,19 @@ _BLNK_UNTRANSFORM_SED.2+= \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\([^	 ]*\)|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g" \
 	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\([^	 ]*\)|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g"
 .endfor
+_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.LL}
+_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.LL}
 #
 # Transform "l:foo:bar" into:
 #	-e "s|-lfoo |-lbar |g"
 #	-e "s|-lfoo$|-lbar|g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:Ml\:*}
-_BLNK_TRANSFORM_SED.3+= \
+_BLNK_TRANSFORM_SED.l+= \
 	-e "s|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\1/} |-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\2/} |g" \
 	-e "s|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\1/}$$|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\2/}|g"
 .endfor
+_BLNK_TRANSFORM_SED.3+=		${_BLNK_TRANSFORM_SED.l}
 #
 # Fix up references to the x11-links directory.
 #
@@ -346,11 +356,12 @@ _BLNK_TRANSFORM_SED.3+= \
 #	-e "s|-I/usr/local/\([^	 ]*\)||g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:Mr\:*}
-_BLNK_TRANSFORM_SED.3+= \
+_BLNK_TRANSFORM_SED.r+= \
 	-e "s|${_transform_:S/^r://} ||g"				\
 	-e "s|${_transform_:S/^r://}$$||g"				\
 	-e "s|${_transform_:S/^r://}/[^	 ]*||g"
 .endfor
+_BLNK_TRANSFORM_SED.3+=		${_BLNK_TRANSFORM_SED.r}
 #
 # Explicitly remove "-I/usr/include" and "-L/usr/lib" as they're redundant.
 #
@@ -363,6 +374,77 @@ _BLNK_TRANSFORM_SED.3+= \
 _BLNK_TRANSFORM_SED.1+=	${_BLNK_UNPROTECT_SED}
 _BLNK_TRANSFORM_SED.2+=	${_BLNK_UNPROTECT_SED}
 _BLNK_TRANSFORM_SED.3+=	${_BLNK_UNPROTECT_SED}
+
+_BLNK_CHECK_IS_TEXT_FILE?= \
+	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
+
+# _BUILDLINK_SUBST_USE is a make macro that executes code to do general text
+# replacement in files in ${WRKSRC}.  The following variables are used:
+#
+# BUILDLINK_SUBST_MESSAGE.<package>	message to display, noting what is
+#					being substituted
+#                                       
+# BUILDLINK_SUBST_FILES.<package>	files on which to run the substitution;
+#					these are relative to ${WRKSRC}
+#
+# BUILDLINK_SUBST_SED.<package>		sed(1) substitution expression to run
+#					on the specified files.
+#
+# The _BUILDLINK_SUBST_USE macro code will try to verify that a file is a text
+# file before attempting any substitutions.
+#
+_BUILDLINK_SUBST_USE: .USE
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink-subst//:S/-/_/g}_buildlink_subst_done; \
+	if [ ! -f $${cookie} ]; then					\
+		${MKDIR} ${BUILDLINK_DIR};				\
+		if [ -n "${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}:C/[ 	]//g:Q}" ]; then \
+			cd ${WRKSRC};					\
+			files="${BUILDLINK_SUBST_FILES.${.TARGET:S/-buildlink-subst//}}"; \
+			if [ -n "$${files}" ]; then			\
+				${ECHO_BUILDLINK_MSG} ${BUILDLINK_SUBST_MESSAGE.${.TARGET:S/-buildlink-subst//}}; \
+				cd ${WRKSRC};				\
+				for file in $${files}; do		\
+					if ${_BLNK_CHECK_IS_TEXT_FILE}; then \
+						${SED}  ${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}} \
+							$${file} > $${file}.modified; \
+						if [ -x $${file} ]; then \
+							${CHMOD} +x $${file}.modified; \
+						fi;			\
+						if ! ${CMP} -s $${file} $${file}.modified; then \
+							${MV} -f $${file}.modified $${file}; \
+							${ECHO} $${file} >> $${cookie}; \
+						fi;			\
+					fi;				\
+				done;					\
+			fi;						\
+		fi;							\
+	fi
+
+REPLACE_BUILDLINK_PATTERNS?=	# empty
+_REPLACE_BUILDLINK_PATTERNS=	${REPLACE_BUILDLINK_PATTERNS}
+_REPLACE_BUILDLINK_PATTERNS+=	*-config
+_REPLACE_BUILDLINK_PATTERNS+=	*Conf.sh
+_REPLACE_BUILDLINK_PATTERNS+=	*.pc
+_REPLACE_BUILDLINK_PATTERNS_FIND= \
+	\( ${_REPLACE_BUILDLINK_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
+
+REPLACE_BUILDLINK?=		# empty
+_REPLACE_BUILDLINK= \
+	${REPLACE_BUILDLINK}						\
+	`${FIND} . ${_REPLACE_BUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT} -u`
+
+REPLACE_BUILDLINK_SED?=		# empty
+_REPLACE_BUILDLINK_SED=		${REPLACE_BUILDLINK_SED}
+_REPLACE_BUILDLINK_SED+=	${_BLNK_TRANSFORM_SED.l}
+
+BUILDLINK_SUBST_MESSAGE.unbuildlink= \
+	"Fixing buildlink references in files-to-be-installed."
+BUILDLINK_SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
+BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
+
+post-build: unbuildlink-buildlink-subst
+unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
 
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
