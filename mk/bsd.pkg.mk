@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.961 2002/04/10 12:03:10 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.962 2002/04/16 04:10:08 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3901,8 +3901,7 @@ PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do 
 PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
 			${PERL5_PACKLIST_FILES}; \
 			${PERL5_PACKLIST_DIRS}
-.else
-PERL5_GENERATE_PLIST=	${TRUE}
+GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 .endif
 
 message: ${MESSAGE}
@@ -3919,11 +3918,17 @@ ${MESSAGE}: ${MESSAGE_SRC}
 	fi
 .endif
 
+# GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
+#	that outputs contents for a PLIST to stdout and is appended to
+#	the contents of ${PLIST_SRC}.
+#
+GENERATE_PLIST?=	${TRUE};
+_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
+
 plist: ${PLIST}
 ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	{ ${CAT} ${PLIST_SRC};						\
-	  ${PERL5_GENERATE_PLIST}; } | 					\
+	{ ${_GENERATE_PLIST} } | 					\
 		${_MANINSTALL_CMD}					\
 		${_MANZ_NAWK_CMD} 					\
 		${_IMAKE_MAN_CMD} 					\
