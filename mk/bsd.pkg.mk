@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.262 1999/04/29 14:27:28 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.263 1999/05/02 03:24:59 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1420,8 +1420,7 @@ show-shlib-type:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKDIR} &&							\
 	sotype=none;							\
-	if [ "X${MKPIC}" != "Xno" -a "X${MKPICINSTALL}" != "Xno" -a	\
-	     "X${NOPIC}" = "X" -a "X${NOPICINSTALL}" = "X" ]; then	\
+	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
 		${ECHO} "int main() { exit(0); }" > a.$$$$.c;		\
 		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
 		case `${FILE} a.$$$$.out` in				\
