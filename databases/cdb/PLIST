@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/10 18:11:46 martti Exp $
+bin/cdbdump
+bin/cdbget
+bin/cdbmake
+bin/cdbmake-12
+bin/cdbmake-sv
+bin/cdbstats
+bin/cdbtest
+include/cdb.h
+lib/libcdb.a
