@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.SunOS.i386,v 1.5 2004/02/29 00:27:40 grant Exp $
-
-DISTNAME=	${MOZILLA}-${MOZ_VER}-i386-pc-solaris2.8
-
-MOZ_PLATFORM=	solaris
