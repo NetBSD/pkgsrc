@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.80 2003/01/24 15:16:32 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.81 2003/01/28 22:44:01 abs Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1361,6 +1361,17 @@ EOF
 		if ($wrksrc eq 'work' || $wrksrc =~ /^$[\{\(]WRKDIR[\}\)]/) {
 			&perror("WARN: definition of WRKSRC not necessary. ".
 				"WRKSRC is \${WRKDIR} by default.");
+		}
+	}
+
+	foreach $i (grep(/^(\W+_ENV)[?+]?=/, split(/\n/, $tmp))) {
+		$i =~ s/^(\W+_ENV)[?+]?=[ \t]*//;
+		$j = $1;
+		foreach $k (split(/\s+/, $i)) {
+			if ($k !~/^".*"$/ && $k =~ /\${/ && $k !~/:Q}/) {
+				&perror("WARN: definition of $k in $j. ".
+				"should use :Q or be quoted.");
+			}
 		}
 	}
 
