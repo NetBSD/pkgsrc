@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/09 13:36:49 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/20 14:07:58 tron Exp $
 #
 
 DISTNAME=	unix-19980429
@@ -10,10 +10,9 @@ MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 
 MAINTAINER=	fvdl@netbsd.org
 
-USE_X11=	yes
+USE_MOTIF=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
-USE_MOTIF=	yes
 
 WRKSRC=		${WRKDIR}/19980429/mozilla
 
