@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/11/06 17:23:46 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/17 00:19:36 tron Exp $
 
 DISTNAME=	SuSE-5.3
 PKGNAME=	linux_SuSE-5.3
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.suse.com/
 
 DEPENDS+=	rpm-2.5.4:../../misc/rpm
 
-CONFLICTS=	linux_lib-2.4
+CONFLICTS=	linux_lib-2.4 suse_*
 
 DIST_SUBDIR=	SuSE
 MIRROR_DISTFILE= no
