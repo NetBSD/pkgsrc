@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.161 1998/09/15 17:05:08 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.162 1998/09/15 17:28:34 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -836,17 +836,8 @@ mirror-distfiles:
 .if !target(do-extract)
 do-extract:
 .ifndef NO_WRKDIR
-.ifdef WRKOBJDIR
-	@${RM} -rf ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME}
-	@${MKDIR} -p ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME}
-	@if [ ${WRKDIR} != ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME} ]; then \
-		${ECHO} "${WRKDIR} -> ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME}"; \
-		@${LN} -sf ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME} ${WRKDIR}; \
-	fi
-.else
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
-.endif
 .endif
 	@for file in ${EXTRACT_ONLY}; do \
 		if ! (cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
