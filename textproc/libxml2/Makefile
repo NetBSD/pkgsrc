@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2003/05/02 11:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/05/08 09:34:58 wiz Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.5/}
 
@@ -15,14 +14,13 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libxml-2.0.pc.in
 
-LIBXML_VERSION=		2.5.6
+LIBXML_VERSION=		2.5.7
 PLIST_SUBST+=		LIBXML_VERSION=${LIBXML_VERSION}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-python
-CONFIGURE_ARGS+=	--with-threads
 
 MAKE_ENV+=		PAX=${PAX:Q}
 
