@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.8 2005/01/13 09:29:18 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/01/27 17:38:45 reed Exp $
 
+# Be sure to run "make makesum" in editors/abiword-plugins also when updating.
 ABIWORD_DIST_VERSION=	2.2.3
 DISTNAME=	abiword-${ABIWORD_DIST_VERSION}
 
