@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2004/11/09 09:18:37 adam Exp $
+$NetBSD: distinfo,v 1.29 2005/01/03 11:00:51 wiz Exp $
 
-SHA1 (curl-7.12.2.tar.bz2) = 0823103ada811175dfbfbea07ec57ff6d5a9745a
-Size (curl-7.12.2.tar.bz2) = 1246427 bytes
+SHA1 (curl-7.12.3.tar.bz2) = 8e81488b18baabdb61aeb46095fee6f1d7325cdf
+Size (curl-7.12.3.tar.bz2) = 1830712 bytes
