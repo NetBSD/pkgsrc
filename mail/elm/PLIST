@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/23 14:36:36 jschauma Exp $
 bin/answer
 bin/checkalias
 bin/elm
@@ -7,7 +7,6 @@ bin/fastmail
 bin/frm
 bin/listalias
 bin/messages
-bin/mmencode
 bin/newalias
 bin/newmail
 bin/nfrm
@@ -34,7 +33,6 @@ man/man1/fastmail.1
 man/man1/frm.1
 man/man1/listalias.1
 man/man1/messages.1
-man/man1/mmencode.1
 man/man1/newalias.1
 man/man1/newmail.1
 man/man1/printmail.1
@@ -48,7 +46,6 @@ man/cat1/fastmail.1
 man/cat1/frm.1
 man/cat1/listalias.1
 man/cat1/messages.1
-man/cat1/mmencode.1
 man/cat1/newalias.1
 man/cat1/newmail.1
 man/cat1/printmail.1
