@@ -1,7 +1,10 @@
-# $NetBSD: compiler.mk,v 1.7 2003/09/17 14:37:32 grant Exp $
+# $NetBSD: compiler.mk,v 1.8 2003/09/17 19:58:08 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
+#
+# This file should NOT be included from pkg Makefiles, as it is
+# automatically included by bsd.pkg.mk.
 #
 # The following variables are used:
 #
