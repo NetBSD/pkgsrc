@@ -1,5 +1,5 @@
-getmail is intended as a simple replacement for fetchmail. It retrieves mail
-(either all messages, or only unread messages) from one or more POP3 servers
-for one or more email accounts, and reliably delivers into a qmail-style
-Maildir (or mbox file) specified on a per-account basis. It also has support
-for domain (multidrop) mailboxes.
+getmail is a mail retriever designed to allow you to get your mail
+from one or more mail accounts on various mail servers to your
+local machine for reading with a minimum of fuss. getmail is designed
+to be secure, flexible, reliable, and easy-to-use. getmail is
+designed to replace other mail retrievers such as fetchmail.

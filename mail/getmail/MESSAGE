@@ -1,13 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/03/22 03:40:21 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2004/08/01 08:29:56 schmonz Exp $
 
-There are two incompatible changes from 2.x.
-
-	Mbox delivery is now accomplished via an external MDA including
-	getmail_mbox, which is included in this version of getmail.
-	It assumes mboxrd format and flock locking. Use with care.
-
-	The recipient_header directive is renamed to "envelope_recipient".
-	You might have to update your getmailrc.
+The getmail rc file (configuration file) format has changed since
+version 3.x. If you are upgrading from version 3, you will need to
+write a new configuration file based on the contents of your old
+one. The new file format resembles the old in many ways. Each
+account you retrieve mail from will require a separate rc file,
+but getmail can operate with multiple rc files simultaneously if
+you wish to retrieve mail from multiple accounts.
 
 ===========================================================================
