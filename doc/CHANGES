@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8513 2004/12/29 13:00:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.8514 2004/12/29 13:11:40 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6690,3 +6690,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcpflow to 0.21 [adrianp 2004-12-29]
 	Updated glade2 to 2.6.5nb1 [jmmv 2004-12-29]
 	Added glade2-gnome-2.6.5 [jmmv 2004-12-29]
+	bsd.pkg.mk: portability mods - abstract the path size in pkg_install
+		[agc 2004-12-29]
