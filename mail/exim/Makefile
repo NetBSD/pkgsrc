@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/26 00:21:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/07/11 13:18:27 ad Exp $
 
 DISTNAME=	exim-3.20
 CATEGORIES=	mail net
@@ -45,8 +45,5 @@ post-install:
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/exim/mailer.conf.exim
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/exim
-	${RM} ${WRKDIR}/exim-html-3.20/doc/html/spec
-	${CP} -R ${WRKDIR}/exim-html-3.20/doc/html/* ${PREFIX}/share/doc/exim
 
 .include "../../mk/bsd.pkg.mk"
