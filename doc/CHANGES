@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8813 2005/01/19 10:04:43 drochner Exp $
+$NetBSD: CHANGES,v 1.8814 2005/01/19 11:09:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -417,3 +417,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gdchart to 0.11.5 [adam 2005-01-18]
 	Added gdome2-0.8.1 [adam 2005-01-18]
 	Updated xpdf to 3.00pl3 [drochner 2005-01-19]
+	Updated ntop to 3.1nb2 [adam 2005-01-19]
