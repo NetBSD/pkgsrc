@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/06 19:04:50 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2000/07/07 13:28:55 wulf Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -59,5 +59,7 @@ do-install:
 	 done)
 	${INSTALL_DATA_DIR} ${QTPREFIX}/share/doc/qt
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT ${QTPREFIX}/share/doc/qt/
+	${INSTALL_DATA_DIR} ${QTPREFIX}/share/doc/qt/html
+	${INSTALL_DATA} ${WRKSRC}/html/* ${QTPREFIX}/share/doc/qt/html
 
 .include "../../mk/bsd.pkg.mk"
