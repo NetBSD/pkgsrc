@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2002/08/25 21:51:55 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2002/08/29 14:12:29 martti Exp $
 
---- Makefile.in.orig	Sat Jun 15 18:41:03 2002
-+++ Makefile.in	Wed Jun 19 07:39:04 2002
+--- Makefile.in.orig	Thu Jul 25 17:47:12 2002
++++ Makefile.in	Mon Aug 12 15:01:27 2002
 @@ -14,7 +14,7 @@
  PROGRAMS        = $(PROGRAM_NAME)
  TARGETS         = $(PROGRAMS) $(shared_build) $(other_targets)
@@ -11,22 +11,22 @@ $NetBSD: patch-aa,v 1.6 2002/08/25 21:51:55 jlam Exp $
  	install-other install-cgi install-include install-suexec install-man \
  	install-build
  
-@@ -68,6 +68,7 @@
- 					< $$i; \
- 			fi \
- 		) > $(DESTDIR)$(sysconfdir)/$$i; \
+@@ -71,6 +71,7 @@
+ 	    				< $$i; \
+ 	    		fi \
+ 	    	) > $(DESTDIR)$(sysconfdir)/$$i; \
 +		if false; then \
- 		chmod 0644 $(DESTDIR)$(sysconfdir)/$$i; \
- 		file=`echo $$i|sed s/-std//`; \
- 		if [ "$$file" = "httpd.conf" ]; then \
-@@ -76,12 +77,15 @@
- 		if test "$$file" != "$$i" && test ! -f $(DESTDIR)$(sysconfdir)/$$file; then \
- 			$(INSTALL_DATA) $(DESTDIR)$(sysconfdir)/$$i $(DESTDIR)$(sysconfdir)/$$file; \
- 		fi; \
-+		fi; \
+ 	    	chmod 0644 $(DESTDIR)$(sysconfdir)/$$i; \
+ 	    	file=`echo $$i|sed s/-std//`; \
+ 	    	if [ "$$file" = "httpd.conf" ]; then \
+@@ -79,12 +80,15 @@
+ 	    	if test "$$file" != "$$i" && test ! -f $(DESTDIR)$(sysconfdir)/$$file; then \
+ 	    		$(INSTALL_DATA) $(DESTDIR)$(sysconfdir)/$$i $(DESTDIR)$(sysconfdir)/$$file; \
+ 	    	fi; \
++	    	fi; \
+ 	    done ; \
  	done ; \
- 	done
- 	@if test -f "$(builddir)/envvars-std"; then \
+ 	if test -f "$(builddir)/envvars-std"; then \
  	    cp -p envvars-std $(DESTDIR)$(sbindir); \
 +	    if false; then \
  	    if test ! -f $(DESTDIR)$(sbindir)/envvars; then \

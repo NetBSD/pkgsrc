@@ -1,10 +1,8 @@
-$NetBSD: patch-ao,v 1.3 2002/08/25 21:51:57 jlam Exp $
+$NetBSD: patch-ao,v 1.4 2002/08/29 14:12:29 martti Exp $
 
---with-randomdev=foo does not work.
-
---- srclib/apr/configure-	Wed Jun 19 08:23:54 2002
-+++ srclib/apr/configure	Wed Jun 19 08:34:18 2002
-@@ -25347,11 +25347,11 @@
+--- srclib/apr/configure.orig	Fri Aug  9 19:47:46 2002
++++ srclib/apr/configure	Mon Aug 12 15:02:57 2002
+@@ -25353,11 +25353,11 @@
    elif test "$apr_devrandom" != "no"; then
      if test -r "$apr_devrandom"; then
        cat >>confdefs.h <<\_ACEOF
