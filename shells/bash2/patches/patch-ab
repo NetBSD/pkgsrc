@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.5 2000/03/30 11:56:32 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2001/04/16 11:35:36 tron Exp $
 
---- Makefile.in.orig	Wed Mar  1 20:52:12 2000
-+++ Makefile.in	Thu Mar 30 13:09:26 2000
-@@ -582,7 +582,7 @@
+--- Makefile.in.orig	Tue Apr  3 21:03:24 2001
++++ Makefile.in	Mon Apr 16 12:44:31 2001
+@@ -111,7 +111,7 @@
+ SYSTEM_FLAGS = -DPROGRAM='"$(Program)"' -DCONF_HOSTTYPE='"$(Machine)"' -DCONF_OSTYPE='"$(OS)"' -DCONF_MACHTYPE='"$(MACHTYPE)"' -DCONF_VENDOR='"$(VENDOR)"'
+ 
+ CCFLAGS	= $(PROFILE_FLAGS) $(SYSTEM_FLAGS) $(LOCAL_DEFS) \
+-	  $(DEFS) $(LOCAL_CFLAGS) $(CPPFLAGS) $(INCLUDES) $(CFLAGS)
++	  $(DEFS) $(LOCAL_CFLAGS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+ 
+ INCLUDES = -I. @RL_INCLUDE@ -I$(srcdir) -I$(BASHINCDIR) -I$(LIBSRC) -I$(includedir)
+ 
+@@ -599,7 +599,7 @@
  
  install:	.made installdirs
  	$(INSTALL_PROGRAM) $(INSTALLMODE) $(Program) $(bindir)/$(Program)
