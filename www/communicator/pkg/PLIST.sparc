@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sparc,v 1.4 1999/06/04 18:07:41 thorpej Exp $
+@comment $NetBSD: PLIST.sparc,v 1.5 1999/06/14 21:40:25 cgd Exp $
 bin/communicator-${NS_VERS}_nis
 bin/netscape_nis
 lib/netscape/communicator-${NS_VERS}/netscape_nis
@@ -7,4 +7,5 @@ lib/netscape/communicator-${NS_VERS}/dynfonts/libTrueDoc.so
 lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so
 lib/netscape/communicator-${NS_VERS}/nls/C
 lib/netscape/communicator-${NS_VERS}/nls/nls.dir
+@dirrm lib/netscape/communicator-${NS_VERS}/dynfonts
 @dirrm lib/netscape/communicator-${NS_VERS}/nls
