@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2004/10/19 10:37:30 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/27 12:03:09 veego Exp $
 
 DISTNAME=	transcode-0.6.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.zebra.fh-weingarten.de/~transcode/pre/
+MASTER_SITES=	http://dl.fkb.wormulon.net/transcode/ \
+		http://dl.kel.wormulon.net/transcode/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.zebra.fh-weingarten.de/~transcode/
+HOMEPAGE=	http://www.transcoding.org/cgi-bin/transcode
 COMMENT=	Command line video-stream processing tool
 
 BUILD_DEPENDS+=		nasm>=0.98.36:../../devel/nasm
