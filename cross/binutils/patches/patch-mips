@@ -1,7 +1,7 @@
-$NetBSD: patch-mips,v 1.1 2000/02/19 00:48:58 tsutsui Exp $
+$NetBSD: patch-mips,v 1.2 2000/05/04 09:01:09 rh Exp $
 
---- config.sub.orig	Thu Oct  7 01:50:14 1999
-+++ config.sub	Thu Oct  7 01:50:32 1999
+--- config.sub.orig	Fri May  1 17:48:46 1998
++++ config.sub	Thu May  4 10:50:49 2000
 @@ -177,7 +177,7 @@
  		| alpha | alphaev5 | alphaev56 | alphapca56 | alphaev6 \
  		| we32k | ns16k | clipper | i370 | sh | powerpc | powerpcle \
@@ -20,9 +20,10 @@ $NetBSD: patch-mips,v 1.1 2000/02/19 00:48:58 tsutsui Exp $
  	      | mips64el-* | mips64orion-* | mips64orionel-* \
  	      | mipstx39-* | mipstx39el-* \
  	      | f301-*)
---- ld/configure.tgt.orig	Thu Oct  7 01:51:22 1999
-+++ ld/configure.tgt	Thu Oct  7 01:55:30 1999
-@@ -148,6 +148,7 @@
+--- ld/configure.tgt.orig	Thu May  4 10:50:49 2000
++++ ld/configure.tgt	Thu May  4 10:50:49 2000
+@@ -148,7 +148,8 @@
+ mips*el-*-ecoff*)	targ_emul=mipsidtl ;;
  mips*-*-ecoff*)		targ_emul=mipsidt ;;
  mips*-dec-bsd*)		targ_emul=mipsbsd ;;
 -mips*-dec-netbsd*)	targ_emul=elf32lmip ;;
@@ -30,3 +31,4 @@ $NetBSD: patch-mips,v 1.1 2000/02/19 00:48:58 tsutsui Exp $
 +mips*eb-*-netbsd*)	targ_emul=elf32ebmip ;;
  mips*-*-bsd*)		targ_emul=mipsbig ;;
  mips*vr4300el-*-elf*)	targ_emul=elf32l4300 ;;
+ mips*vr4300-*-elf*)	targ_emul=elf32b4300 ;;
