@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8640 2005/01/06 18:23:11 cube Exp $
+$NetBSD: CHANGES,v 1.8641 2005/01/06 21:02:16 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -154,3 +154,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gphoto2 to 2.1.5 [drochner 2005-01-06]
 	Updated py-MyHDL to 0.4.1 [drochner 2005-01-06]
 	Updated mppe-lkm to 0.0.4nb1 [cube 2005-01-06]
+	Updated vim-share to 6.3.045 [adrianp 2005-01-06]
+	Updated vim to 6.3.045 [adrianp 2005-01-06]
+	Updated vim-gtk to 6.3.045 [adrianp 2005-01-06]
+	Updated vim-gtk2 to 6.3.045 [adrianp 2005-01-06]
+	Updated vim-motif to 6.3.045 [adrianp 2005-01-06]
+	Updated vim-xaw to 6.3.045 [adrianp 2005-01-06]
