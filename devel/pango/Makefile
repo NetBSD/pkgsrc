@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/22 13:39:23 jmmv Exp $
 #
 
 DISTNAME=		pango-1.2.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -27,13 +28,8 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/pangox.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pangowin32.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pangoxft.pc.in
 
-PKG_SYSCONFSUBDIR=	pango
-EGDIR=			${PREFIX}/share/examples/pango
-CONF_FILES=		${EGDIR}/pango.modules ${PKG_SYSCONFDIR}/pango.modules
-CONF_FILES+=		${EGDIR}/pangox.aliases ${PKG_SYSCONFDIR}/pangox.aliases
-
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=	--with-qt=no
 
