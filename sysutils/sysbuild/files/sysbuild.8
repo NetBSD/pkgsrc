@@ -1,4 +1,4 @@
-.\" $NetBSD: sysbuild.8,v 1.5 2002/12/18 11:28:09 jmmv Exp $
+.\" $NetBSD: sysbuild.8,v 1.6 2003/01/08 17:45:09 jmmv Exp $
 .\"
 .\" sysbuild - Automatic NetBSD system builds
 .\" Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -367,6 +367,13 @@ The first one is the kernel that will be installed when running
 Directory which holds kernel configuration files.
 Defaults to
 .Pa @SYSBUILD_HOMEDIR@ .
+.It MACHINE
+Machine name.
+It is appended to
+.Va RELEASEDIR .
+Do not set if you are not building
+.Nx Ns -current .
+This variable may be used for cross-building in a future.
 .It MOUNT_PRECMD
 Specifies a command to be called to gain privileges when running
 .Xr mount_union 8
@@ -520,10 +527,12 @@ There are many other things to do, but are left for future releases.
 Here is a small list with some ideas:
 .Bl -bullet -width indent
 .It
-Add support for X11R6 unprivileged builds.
-This will require the use of
-.Xr mount_union 8
-because X11R6 build system creates object files together with sources.
-.It
 Support building for multiple architectures.
+.It
+Create our own
+.Nm nbmake
+wrapper (using
+.Nm build.sh Ns )
+at the beginning of each build, instead of passing all the
+variables when calling the program itself.
 .El
