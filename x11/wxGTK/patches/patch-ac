@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2003/03/31 17:44:22 jmmv Exp $
+$NetBSD: patch-ac,v 1.5 2003/09/04 13:07:01 adam Exp $
 
 --- src/makelib.env.in.orig	Thu Mar  6 01:16:24 2003
 +++ src/makelib.env.in	Thu Mar  6 23:16:16 2003
@@ -19,11 +19,11 @@ $NetBSD: patch-ac,v 1.4 2003/03/31 17:44:22 jmmv Exp $
  
  .cpp.o:
 -	$(CXX) -c $(CXXFLAGS) $(PICFLAGS) -o $@ $<
-+	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS)  -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CXXFLAGS) $(CPPFLAGS) -o $@ $<
  
  .cxx.o:
 -	$(CXX) -c $(CXXFLAGS) $(PICFLAGS) -o $@ $<
-+	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS)  -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CXXFLAGS) $(CPPFLAGS) -o $@ $<
  
  # the comment at the end of the next line is needed because otherwise autoconf
  # would remove this line completely - it contains a built-in hack to remove
