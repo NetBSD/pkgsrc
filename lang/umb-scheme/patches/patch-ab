@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/02 11:59:07 itojun Exp $
+
+--- Makefile-	Thu Nov  2 20:49:05 2000
++++ Makefile	Thu Nov  2 20:49:21 2000
+@@ -1,6 +1,6 @@
+ # Makefile for the UMB Scheme interpreter.
+ CC = gcc
+-CFLAGS =  -g -O   -pedantic -Wall
++CFLAGS =  -g -O   -pedantic -Wall -I${.CURDIR}
+ 
+ #CC = cc
+ #CFLAGS = -O 
