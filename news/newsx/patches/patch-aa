@@ -1,41 +1,63 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:28:36 cube Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/16 09:48:37 cube Exp $
 
---- configure.orig	2003-05-18 19:25:34.000000000 +0200
+--- configure.orig	2004-01-11 18:31:22.000000000 +0100
 +++ configure
-@@ -1965,35 +1965,8 @@ echo $ECHO_N "checking history... $ECHO_
+@@ -861,6 +861,8 @@ Optional Packages:
+   --without-history       do not perform history database lookup
+   --with-history=FILE     use FILE as history database
+ \
++  --with-history-mode={indexed|tagged}    set history hash mode
++\
+   --with-errlog=LOG_XX    do syslog in category LOG_XX
+ \
+   --with-inhosts=DIR      use DIR as in.hosts directory
+@@ -1743,6 +1745,12 @@ _ACEOF
+ 
+ 	    fi
+ 
++# Check whether --with-history-mode or --without-history-mode was given.
++if test "${with_history_mode+set}" = set; then
++  withval="$with_history_mode"
++
++fi;
++
+ # Check whether --with-errlog or --without-errlog was given.
+ if test "${with_errlog+set}" = set; then
+   withval="$with_errlog"
+@@ -1964,6 +1972,28 @@ echo $ECHO_N "checking history... $ECHO_
+ 		    HISTORY="$with_history"
  		fi
  	    fi
++	    if test x$with_history_mode != x; then
++		case x$with_history_mode in
++		xindexed )
++		    echo "$as_me:$LINENO: result: $HISTORY" >&5
++echo "${ECHO_T}$HISTORY" >&6
++		    ;;
++		xtagged )
++		    echo "$as_me:$LINENO: result: $HISTORY" >&5
++echo "${ECHO_T}$HISTORY" >&6
++
++cat >>confdefs.h <<_ACEOF
++#define DO_TAGGED_HASH 1
++_ACEOF
++
++		    ;;
++		* )
++		    echo "$as_me:$LINENO: result: ERROR: unknown hash mode $with_history_mode" >&5
++echo "${ECHO_T}ERROR: unknown hash mode $with_history_mode" >&6
++		    exit 1
++		    ;;
++		esac
++	    else
  	    if test -f $HISTORY; then
--		if test -f $HISTORY.index; then
--		    echo "$as_me:$LINENO: result: $HISTORY" >&5
--echo "${ECHO_T}$HISTORY" >&6
--		elif test -f $HISTORY.pag; then
--
--cat >>confdefs.h <<_ACEOF
--#define DO_TAGGED_HASH 1
--_ACEOF
--
--		    echo "$as_me:$LINENO: result: $HISTORY" >&5
--echo "${ECHO_T}$HISTORY" >&6
--		elif test -f $HISTORY.n.index; then
--		    echo "$as_me:$LINENO: result: $HISTORY" >&5
--echo "${ECHO_T}$HISTORY" >&6
--		elif test -f $HISTORY.n.pag; then
--
--cat >>confdefs.h <<_ACEOF
--#define DO_TAGGED_HASH 1
--_ACEOF
--
--		    echo "$as_me:$LINENO: result: $HISTORY" >&5
-+		echo "$as_me:$LINENO: result: $HISTORY" >&5
- echo "${ECHO_T}$HISTORY" >&6
--		else
--		    echo "$as_me:$LINENO: result: ERROR: cannot determine hash mode of $HISTORY" >&5
--echo "${ECHO_T}ERROR: cannot determine hash mode of $HISTORY" >&6
--		    echo "$as_me:$LINENO: result: Try running makehistory first" >&5
--echo "${ECHO_T}Try running makehistory first" >&6
--		    exit 1
--		fi
- 	    else
- 		echo "$as_me:$LINENO: result: ERROR: cannot find database $HISTORY" >&5
+ 		if test -f $HISTORY.index; then
+ 		    echo "$as_me:$LINENO: result: $HISTORY" >&5
+@@ -1999,6 +2029,7 @@ echo "${ECHO_T}Try running makehistory f
  echo "${ECHO_T}ERROR: cannot find database $HISTORY" >&6
+ 		exit 1
+ 	    fi
++	    fi
+ 	fi
+ 
+ 			echo "$as_me:$LINENO: checking locks" >&5
