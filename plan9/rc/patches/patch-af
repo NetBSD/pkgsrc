@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 1998/10/25 10:14:06 frueauf Exp $
+
+--- config.h-dist-orig	Mon May 25 20:12:57 1992
++++ config.h-dist	Sun Oct 25 10:56:32 1998
+@@ -88,8 +88,8 @@
+  * define PROTECT_ENV for this hack. (Known offenders: every sh I have tried;
+  * SunOS (silently discards), NeXT (aborts with error), SGI (aborts with
+  * error), Ultrix (sh seems to work, sh5 aborts with error))
+-#define PROTECT_ENV
+  */
++#define PROTECT_ENV
+ 
+ /*
+  * Define the macro NOECHO if you wish to omit rc's echo builtin from the
