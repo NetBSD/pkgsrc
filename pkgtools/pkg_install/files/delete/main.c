@@ -1,13 +1,17 @@
-/*	$NetBSD: main.c,v 1.6 2003/06/26 00:29:01 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.7 2003/09/01 16:27:13 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.6 2003/06/26 00:29:01 jschauma Exp $");
-#endif
+__RCSID("$NetBSD: main.c,v 1.7 2003/09/01 16:27:13 jlam Exp $");
 #endif
 #endif
 
@@ -31,19 +35,17 @@ __RCSID("$NetBSD: main.c,v 1.6 2003/06/26 00:29:01 jschauma Exp $");
  * This is the delete module.
  *
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
+#if HAVE_ERRNO_H
 #include <errno.h>
+#endif
 #include "lib.h"
 #include "delete.h"
 
-static char Options[] = "DFORVdfhnp:rv";
+static char Options[] = "DFK:ORVdfhnp:rv";
 
 char   *Prefix = NULL;
 char   *ProgramPath = NULL;
@@ -75,22 +77,6 @@ main(int argc, char **argv)
 
 	while ((ch = getopt(argc, argv, Options)) != -1)
 		switch (ch) {
-		case 'v':
-			Verbose = TRUE;
-			break;
-
-		case 'f':
-			Force = TRUE;
-			break;
-
-		case 'F':
-			File2Pkg = TRUE;
-			break;
-
-		case 'p':
-			Prefix = optarg;
-			break;
-
 		case 'D':
 			NoDeInstall = TRUE;
 			break;
@@ -99,26 +85,46 @@ main(int argc, char **argv)
 			CleanDirs = TRUE;
 			break;
 
+		case 'F':
+			File2Pkg = TRUE;
+			break;
+
+		case 'f':
+			Force += 1;
+			break;
+
+		case 'K':
+			_pkgdb_setPKGDB_DIR(optarg);
+			break;
+
 		case 'n':
 			Fake = TRUE;
 			Verbose = TRUE;
-			break;
-
-		case 'r':
-			Recurse_up = TRUE;
-			break;
-
-		case 'R':
-			Recurse_down = TRUE;
 			break;
 
 		case 'O':
 			OnlyDeleteFromPkgDB = TRUE;
 			break;
 
+		case 'p':
+			Prefix = optarg;
+			break;
+
+		case 'R':
+			Recurse_down = TRUE;
+			break;
+
+		case 'r':
+			Recurse_up = TRUE;
+			break;
+
 		case 'V':
 			show_version();
 			/* NOTREACHED */
+
+		case 'v':
+			Verbose = TRUE;
+			break;
 
 		case 'h':
 		case '?':
@@ -134,8 +140,8 @@ main(int argc, char **argv)
 
 	/* Get all the remaining package names, if any */
 	if (File2Pkg && !pkgdb_open(ReadOnly)) {
-			err(EXIT_FAILURE, "cannot open pkgdb");
-		}
+		err(EXIT_FAILURE, "cannot open pkgdb");
+	}
 
 	/* Get all the remaining package names, if any */
 	for ( ; *argv ; argv++) {
@@ -148,20 +154,29 @@ main(int argc, char **argv)
 			if ((s = pkgdb_retrieve(*argv)) == NULL) {
 				errx(EXIT_FAILURE, "No matching pkg for %s in pkgdb.", *argv);
 			}
-				lpp = alloc_lpkg(s);
-				TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
+			lpp = alloc_lpkg(s);
+			TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
 		} else if (ispkgpattern(*argv)) {
 			switch(findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs)) {
 			case 0:
-					errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
+				errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 			case -1:
 				errx(EXIT_FAILURE, "error expanding '%s' ('%s' nonexistent?)", *argv, _pkgdb_getPKGDB_DIR());
 			}
-			} else {
-				lpp = alloc_lpkg(*argv);
-				TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
+		} else {
+			char   *dbdir;
+
+			dbdir = _pkgdb_getPKGDB_DIR();
+			if (**argv == '/' && strncmp(*argv, dbdir, strlen(dbdir)) == 0) {
+				*argv += strlen(dbdir) + 1;
+				if ((*argv)[strlen(*argv) - 1] == '/') {
+					(*argv)[strlen(*argv) - 1] = 0;
+				}
 			}
+			lpp = alloc_lpkg(*argv);
+			TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
 		}
+	}
 
 	if (File2Pkg) {
 		pkgdb_close();
@@ -188,11 +203,11 @@ main(int argc, char **argv)
 		for (lpp = TAILQ_FIRST(&pkgs); lpp ; lpp = TAILQ_NEXT(lpp, lp_link)) {
 			if (!pkgdb_remove_pkg(lpp->lp_name)) {
 				ex = EXIT_FAILURE;
-						}
-					}
+			}
+		}
 		pkgdb_close();
 		return ex;
-			}
+	}
 	if ((ex = pkg_perform(&pkgs)) != 0) {
 		if (Verbose) {
 			warnx("%d package deletion(s) failed", ex);

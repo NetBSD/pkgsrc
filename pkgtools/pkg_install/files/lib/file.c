@@ -1,13 +1,17 @@
-/*	$NetBSD: file.c,v 1.4 2003/04/11 14:40:36 grant Exp $	*/
+/*	$NetBSD: file.c,v 1.5 2003/09/01 16:27:14 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.4 2003/04/11 14:40:36 grant Exp $");
-#endif
+__RCSID("$NetBSD: file.c,v 1.5 2003/09/01 16:27:14 jlam Exp $");
 #endif
 #endif
 
@@ -33,31 +37,22 @@ __RCSID("$NetBSD: file.c,v 1.4 2003/04/11 14:40:36 grant Exp $");
 
 #include "lib.h"
 
-#ifdef HAVE_SYS_WAIT_H
-#include <sys/wait.h>
-#endif
-
-#ifdef HAVE_ASSERT_H
+#if HAVE_ASSERT_H
 #include <assert.h>
 #endif
-
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
-#ifdef HAVE_NETDB_H
+#if HAVE_NETDB_H
 #include <netdb.h>
 #endif
-
-#ifdef HAVE_PWD_H
+#if HAVE_PWD_H
 #include <pwd.h>
 #endif
-
-#ifdef HAVE_TIME_H
+#if HAVE_TIME_H
 #include <time.h>
 #endif
-
-#ifdef HAVE_FCNTL_H
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
 
@@ -261,7 +256,7 @@ fileGetURL(const char *spec)
 
 	rp = NULL;
 	if (!IS_URL(spec)) {
-		errx(EXIT_FAILURE, "fileGetURL was called with non-url arg '%s'", spec);
+		errx(EXIT_FAILURE, "fileGetURL was called with non-URL arg '%s'", spec);
 	}
 
  	/* Some sanity checks on the URL */
@@ -377,7 +372,7 @@ fileFindByPath(const char *fname)
 	struct path *path;
 
 	/*
-	 * 1. if fname is an absolute pathname or a url,
+	 * 1. if fname is an absolute pathname or a URL,
 	 *    just use it.
 	 */
 	if (IS_FULLPATH(fname) || IS_URL(fname))
@@ -559,12 +554,12 @@ unpack(const char *pkg, const char *flist)
 		else if (!strcmp(suf, "tar"))
 			decompress_cmd = "cat";
 		else
-			errx(EXIT_FAILURE, "don't know how to decompress %s", pkg);
+			errx(EXIT_FAILURE, "don't know how to decompress %s, sorry", pkg);
 	} else
 		decompress_cmd = GZIP_CMD " -c -d";
-	strcat(args, "xpf -");
-	if (vsystem("%s %s | %s %s %s", decompress_cmd, pkg, TAR_FULLPATHNAME, args, flist ? flist : "")) {
-		warnx("%s extract of %s failed!", TAR_FULLPATHNAME, pkg);
+	strlcat(args, "xpf -", sizeof(args));
+	if (vsystem("%s %s | %s %s %s", decompress_cmd, pkg, TAR_CMD, args, flist ? flist : "")) {
+		warnx("%s extract of %s failed!", TAR_CMD, pkg);
 		return 1;
 	}
 	return 0;

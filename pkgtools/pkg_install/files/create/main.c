@@ -1,13 +1,17 @@
-/*	$NetBSD: main.c,v 1.2 2003/01/14 15:18:34 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.3 2003/09/01 16:27:12 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: main.c,v 1.17 1997/10/08 07:46:23 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.2 2003/01/14 15:18:34 jschauma Exp $");
-#endif
+__RCSID("$NetBSD: main.c,v 1.3 2003/09/01 16:27:12 jlam Exp $");
 #endif
 #endif
 
@@ -21,18 +25,14 @@ __RCSID("$NetBSD: main.c,v 1.2 2003/01/14 15:18:34 jschauma Exp $");
  * This is the create module.
  *
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
 #include "lib.h"
 #include "create.h"
 
-static const char Options[] = "B:C:D:FI:L:OP:RS:UVX:b:c:d:f:hi:k:lm:n:p:r:s:t:v";
+static const char Options[] = "B:C:D:EFI:K:L:OP:RS:UVX:b:c:d:f:hi:k:lm:n:p:r:s:t:v";
 
 char   *Prefix = NULL;
 char   *Comment = NULL;
@@ -56,6 +56,7 @@ char   *realprefix = NULL;
 char    PlayPen[FILENAME_MAX];
 size_t  PlayPenSize = sizeof(PlayPen);
 int	update_pkgdb = 1;
+int	create_views = 0;
 int     Dereference = 0;
 int     PlistOnly = 0;
 int     RelativeLinks = 0;
@@ -66,7 +67,7 @@ static void
 usage(void)
 {
 	fprintf(stderr, "%s\n%s\n%s\n%s\n%s\n%s\n",
-	    "usage: pkg_create [-ORUhlVv] [-P dpkgs] [-C cpkgs] [-p prefix] [-f contents]",
+	    "usage: pkg_create [-ORUEhlVv] [-P dpkgs] [-C cpkgs] [-p prefix] [-f contents]",
 	    "                  [-i iscript] [-k dscript] [-r rscript] [-t template]",
 	    "                  [-X excludefile] [-D displayfile] [-m mtreefile]",
 	    "                  [-b build-version-file] [-B build-info-file]",
@@ -83,11 +84,14 @@ main(int argc, char **argv)
 	lpkg_t *lpp;
 
 	setprogname(argv[0]);
-
 	while ((ch = getopt(argc, argv, Options)) != -1)
 		switch (ch) {
 		case 'v':
 			Verbose = TRUE;
+			break;
+
+		case 'E':
+			create_views = 1;
 			break;
 
 		case 'I':
@@ -134,6 +138,10 @@ main(int argc, char **argv)
 			Install = optarg;
 			break;
 
+		case 'K':
+			_pkgdb_setPKGDB_DIR(optarg);
+			break;
+
 		case 'k':
 			DeInstall = optarg;
 			break;
@@ -151,7 +159,7 @@ main(int argc, char **argv)
 			break;
 
 		case 't':
-			strcpy(PlayPen, optarg);
+			strlcpy(PlayPen, optarg, sizeof(PlayPen));
 			break;
 
 		case 'X':
