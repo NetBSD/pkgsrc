@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/04 15:47:17 taya Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/19 15:02:22 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
+lib/${MOZILLA}/${MOZILLA_BIN}
 lib/${MOZILLA}/dirver
-lib/${MOZILLA}/mozilla-bin
 lib/${MOZILLA}/nsinstall
 lib/${MOZILLA}/regExport
 lib/${MOZILLA}/regchrome
