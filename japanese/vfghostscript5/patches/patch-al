@@ -1,3 +1,4 @@
+$NetBSD: patch-al,v 1.2 2000/01/05 01:10:03 wiz Exp $
 *** ../dmp_site.ps.orig	Tue May 27 09:57:00 1997
 --- ../dmp_site.ps	Sun Jul  6 00:56:56 1997
 ***************
