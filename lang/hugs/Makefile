@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/28 05:06:28 snj Exp $
+# $NetBSD: Makefile,v 1.26 2004/08/28 16:29:55 danw Exp $
 
 DISTNAME=	hugs98-Dec2001
 PKGNAME=	hugs98-200112
@@ -15,6 +15,14 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-readline
 ALL_TARGET=		default
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# Trick it into not checking if symbols have leading underscores,
+# since the dlcompat layer expects you to not be that clever.
+CONFIGURE_ENV+=		ac_cv_header_nlist_h=no
+.endif
 
 do-build:
 	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \
