@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.1 2004/10/06 20:51:47 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.2 2004/10/13 15:31:31 tv Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -148,7 +148,7 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=
 _INCOMPAT_ICONV=	UnixWare-*-*
 
 # XXX Where are those variables used?
-.if !defined(DEBUG_FLAGS)
+.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=			# cc(1) option to strip
 _STRIPFLAG_INSTALL?=		# install(1) option to strip
 .endif

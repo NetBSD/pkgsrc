@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.3 2004/10/12 08:38:19 uebayasi Exp $
+# $NetBSD: SunOS.mk,v 1.4 2004/10/13 15:31:31 tv Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -145,7 +145,7 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-z defaultextract
 # incompatible.
 _INCOMPAT_ICONV=	SunOS-*-*
 
-.if !defined(DEBUG_FLAGS)
+.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif

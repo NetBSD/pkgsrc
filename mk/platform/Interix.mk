@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.5 2004/10/12 04:41:39 tv Exp $
+# $NetBSD: Interix.mk,v 1.6 2004/10/13 15:31:31 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -155,7 +155,7 @@ BUILD_DEPENDS+=		${USE_X11BASE:D${_XPKGWEDGE_DEPENDS}}
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
-.if !defined(DEBUG_FLAGS)
+.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
