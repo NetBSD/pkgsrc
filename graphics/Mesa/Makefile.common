@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2004/02/07 19:25:27 minskim Exp $
+# $NetBSD: Makefile.common,v 1.25 2004/02/07 23:00:14 minskim Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -22,6 +22,8 @@ NO_CONFIGURE=		yes
 DIST_SUBDIR=		Mesa-${MESA_VERSION}
 PATCHDIR?=		${.CURDIR}/../../graphics/MesaLib/patches
 DISTINFO_FILE?=		${.CURDIR}/../../graphics/MesaLib/distinfo
+
+INSTALLATION_DIRS+=	lib
 
 pre-install:
 	for lib in ${INSTLIBS}; do	\
