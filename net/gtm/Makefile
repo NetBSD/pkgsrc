@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2001/09/27 23:18:27 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/05 21:34:33 magick Exp $
 
-DISTNAME=	gtm-0.4.9
+DISTNAME=	gtm-0.4.10
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtm/}
 
