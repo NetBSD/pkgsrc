@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 1999/02/17 22:44:22 tron Exp $
+$NetBSD: patch-ac,v 1.5 1999/06/05 16:38:46 tron Exp $
 
---- configure.orig	Sat Feb  6 18:55:41 1999
-+++ configure	Wed Feb 17 22:20:07 1999
-@@ -512,9 +512,9 @@
+--- configure.orig	Wed Apr 28 17:26:00 1999
++++ configure	Sat Jun  5 17:54:26 1999
+@@ -513,9 +513,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
    if test "x$prefix" != xNONE; then
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.4 1999/02/17 22:44:22 tron Exp $
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -1972,6 +1972,7 @@
+@@ -2006,6 +2006,7 @@
  CC=$CXX
  CFLAGS="$CXXFLAGS"
  # Always use our own libtool.
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.4 1999/02/17 22:44:22 tron Exp $
  LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
  
  
-@@ -2200,6 +2201,7 @@
+@@ -2238,6 +2239,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
@@ -30,60 +30,61 @@ $NetBSD: patch-ac,v 1.4 1999/02/17 22:44:22 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -4013,37 +4015,37 @@
- echo "configure:4014: checking for KDE paths" >&5
+@@ -4081,37 +4083,37 @@
+ if test "$ac_use_path_checking" = "default"; then
  
    if test -z "$kde_htmldir"; then
--    kde_htmldir="\$(prefix)/share/doc/HTML"
-+    kde_htmldir="\$(prefix)/share/doc/kde/HTML"
+-    kde_htmldir='\$(prefix)/share/doc/HTML'
++    kde_htmldir='\$(prefix)/share/kde/doc/HTML'
    fi
    if test -z "$kde_appsdir"; then
--    kde_appsdir="\$(prefix)/share/applnk"
-+    kde_appsdir="\$(prefix)/share/kde/applnk"
+-    kde_appsdir='\$(prefix)/share/applnk'
++    kde_appsdir='\$(prefix)/share/kde/applnk'
    fi
    if test -z "$kde_icondir"; then
--    kde_icondir="\$(prefix)/share/icons"
-+    kde_icondir="\$(prefix)/share/kde/icons"
+-    kde_icondir='\$(prefix)/share/icons'
++    kde_icondir='\$(prefix)/share/kde/icons'
    fi
    if test -z "$kde_sounddir"; then
--    kde_sounddir="\$(prefix)/share/sounds"
-+    kde_sounddir="\$(prefix)/share/kde/sounds"
+-    kde_sounddir='\$(prefix)/share/sounds'
++    kde_sounddir='\$(prefix)/share/kde/sounds'
    fi
    if test -z "$kde_datadir"; then
--    kde_datadir="\$(prefix)/share/apps"
-+    kde_datadir="\$(prefix)/share/kde/apps"
+-    kde_datadir='\$(prefix)/share/apps'
++    kde_datadir='\$(prefix)/share/kde/apps'
    fi
    if test -z "$kde_locale"; then
--    kde_locale="\$(prefix)/share/locale"
-+    kde_locale="\$(prefix)/share/kde/locale"
+-    kde_locale='\$(prefix)/share/locale'
++    kde_locale='\$(prefix)/share/kde/locale'
    fi
    if test -z "$kde_cgidir"; then
-     kde_cgidir="\$(exec_prefix)/cgi-bin"
+-    kde_cgidir='\$(exec_prefix)/cgi-bin'
++    kde_cgidir='\$(libexecdir)/kde-cgi-bin'
    fi
    if test -z "$kde_confdir"; then
--    kde_confdir="\$(prefix)/share/config"
-+    kde_confdir="\$(prefix)/share/kde/config"
+-    kde_confdir='\$(prefix)/share/config'
++    kde_confdir='\$(prefix)/share/kde/config'
    fi
    if test -z "$kde_mimedir"; then
--    kde_mimedir="\$(prefix)/share/mimelnk"
-+    kde_mimedir="\$(prefix)/share/kde/mimelnk"
+-    kde_mimedir='\$(prefix)/share/mimelnk'
++    kde_mimedir='\$(prefix)/share/kde/mimelnk'
    fi
    if test -z "$kde_toolbardir"; then
--    kde_toolbardir="\$(prefix)/share/toolbar"
-+    kde_toolbardir="\$(prefix)/share/kde/toolbar"
+-    kde_toolbardir='\$(prefix)/share/toolbar'
++    kde_toolbardir='\$(prefix)/share/kde/toolbar'
    fi
    if test -z "$kde_wallpaperdir"; then
--    kde_wallpaperdir="\$(prefix)/share/wallpapers"
-+    kde_wallpaperdir="\$(prefix)/share/kde/wallpapers"
+-    kde_wallpaperdir='\$(prefix)/share/wallpapers'
++    kde_wallpaperdir='\$(prefix)/share/kde/wallpapers'
    fi
    if test -z "$kde_bindir"; then
-     kde_bindir="\$(exec_prefix)/bin"
-@@ -4120,7 +4122,7 @@
+     kde_bindir='\$(exec_prefix)/bin'
+@@ -4204,7 +4206,7 @@
  
  echo $ac_n "checking for KDE libraries installed""... $ac_c" 1>&6
- echo "configure:4123: checking for KDE libraries installed" >&5
--ac_link='/bin/sh ./libtool --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore -lqt -lXext -lX11 $LIBSOCKET $KDE_TEST_RPATH 1>&5'
-+ac_link='${LIBTOOL} --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore -lqt -lXext -lX11 $LIBSOCKET $KDE_TEST_RPATH 1>&5'
+ echo "configure:4207: checking for KDE libraries installed" >&5
+-ac_link='/bin/sh ./libtool --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
++ac_link='${LIBTOOL} --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
  
- if { (eval echo configure:4126: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then 
+ if { (eval echo configure:4210: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then 
    echo "$ac_t""yes" 1>&6
