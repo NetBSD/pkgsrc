@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/27 11:17:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/28 07:20:08 sakamoto Exp $
 
 DISTNAME=	w3m-990902
 PKGNAME=	w3m-19990902
@@ -9,6 +9,12 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/
 
 DEPENDS=	boehm-gc-5.0a3:../../devel/boehm-gc
+
+.if defined(EXTRACT_USING_PAX)
+EXTRACT_ELEMENTS=	-c w3m/gc\*
+.else
+EXTRACT_ELEMENTS=	--exclude w3m/gc\*
+.endif
 
 WRKSRC=		${WRKDIR}/w3m
 HELPDIR=	share/doc/w3m
@@ -45,6 +51,13 @@ CONFIGURE_ENV+=	def_use_menu=y def_use_matrix=y
 CONFIGURE_ENV+=	editor=vi mailer=Mail dbrowser=
 CONFIGURE_ENV+=	cc="${CC}" termlib="-ltermcap"
 CONFIGURE_ENV+=	dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
+
+pre-build:
+	@(cd ${WRKSRC}; \
+	 ${MAKE} XXMakefile; \
+	 ${MV} XXMakefile XXMakefile.gen; \
+	 ${SED} -e '/^GCLIB/s|gc/gc.a|-lgc|' -e '/^GCTARGET/s|gc/gc.a||' \
+		XXMakefile.gen > XXMakefile)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/w3m ${LOCALBASE}/bin
