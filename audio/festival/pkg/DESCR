@@ -9,5 +9,3 @@ package (infact, the festvox packages are dependent on this package).
 
 festival --tts foo.bar will speak ASCII file foo.bar, (SayText "Oh
 Dad! We're ALL Devo!")
-
--Julian Assange <proff@iq.org>
