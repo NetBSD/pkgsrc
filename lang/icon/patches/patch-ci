@@ -1,0 +1,44 @@
+$NetBSD: patch-ci,v 1.1 2000/06/19 15:56:36 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/rswitch.c    Thu Jun  8 22:14:54 2000
+@@ -0,0 +1,39 @@
++/*
++ * coswitch for Sun-4 Sparc.
++ * 
++ * Compile this with 'cc -c rswitch.c'.  Do not use cc -O.
++ */
++
++/* #include <sys/asm_linkage.h> */
++/*#include <sys/trap.h>*/
++
++int coswitch(old_cs, new_cs, first)
++int *old_cs, *new_cs;
++int first;
++{
++   asm("ta     0x03");                 /* ST_FLUSH_WINDOWS in trap.h     */
++   asm("ld     [%fp+0x44], %o0");      /* load old_cs into %o0           */
++   asm("st     %sp,[%o0]");            /* Save user stack pointer        */
++   asm("st     %fp,[%o0+0x4]");        /* Save frame pointer             */
++   asm("st     %i7,[%o0+0x8]");        /* Save return address            */
++
++   if (first == 0) {                   /* this is the first activation   */
++      asm("ld  [%fp+0x48], %o0");      /* load new_cs into %o0           */
++      asm("ld  [%o0], %o1");           /* load %o1 from cstate[0]        */
++
++      /* Decrement new stack pointer value before loading it into sp.    */
++      /* The top 64 bytes of the stack are reserved for the kernel, to    */
++      /* save the 8 local and 8 in registers into, on context switches,   */
++      /* interrupts, traps, etc.                                         */
++
++      asm("save  %o1,-96, %sp");       /* load %sp from %o1              */
++      new_context(0,0);
++      syserr("new_context() returned in coswitch");
++
++   } else {
++      asm("ld  [%fp+0x48], %o0");      /* load new_cs into %o0           */
++      asm("ld  [%o0+0x4],%fp");        /* Load frame pointer             */
++      asm("ld  [%o0+0x8],%i7");        /* Load return address            */
++      asm("ld  [%o0],%sp");            /* Load user stack pointer        */
++   }
++}

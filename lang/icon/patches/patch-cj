@@ -1,0 +1,7 @@
+$NetBSD: patch-cj,v 1.1 2000/06/19 15:56:36 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/rtt.hdr      Thu Jun  8 22:10:28 2000
+@@ -0,0 +1,2 @@
++CFLAGS+= -DTokDotH="\"../rtt/ltoken.h\""
++SHELL=/bin/sh

@@ -1,0 +1,6 @@
+$NetBSD: patch-cq,v 1.1 2000/06/19 15:56:40 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/xpm.hdr      Thu Jun  8 22:10:28 2000
+@@ -0,0 +1 @@
++DEFINES= -DZPIPE

@@ -1,0 +1,56 @@
+$NetBSD: patch-ca,v 1.3 2000/06/19 15:56:28 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/common.hdr   Thu Jun  8 22:10:28 2000
+@@ -0,0 +1,10 @@
++#  The -D$D option to CFLAGS makes it possible to specify a definition
++#  at the Make command level without revising the Makefile, as
++#  in
++#
++#      make D=Debug
++#
++D=NOTHING
++CFLAGS+= -D$D
++SHELL=/bin/sh
++RSWITCH=rswitch.c
+diff -u /dev/null config/unix/sun_netbsd/copybin.c
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/copybin.c    Thu Jun  8 22:10:28 2000
+@@ -0,0 +1,3 @@
++#include "../../../src/h/define.h"
++#include "paths.h"
++#include "../Generic/copybin.h"
+diff -u /dev/null config/unix/sun_netbsd/define.h
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/define.h     Thu Jun  8 22:17:12 2000
+@@ -0,0 +1,30 @@
++#define Standard
++#define IconGcvt
++#define index strchr
++#define rindex strrchr
++#define GetHost
++#define MaxHdr 13400
++#define MaxStatSize 20480
++
++#define GenericBSD
++#define BSD_4_4_LITE    1      /* This is new, for 4.4Lite specific stuff */
++#define UNIX 1
++#define LoadFunc
++#define ExecImages
++
++#define KeyboardFncs
++#define HaveTioc
++#define USE_OLD_TTY
++#define AllowConst
++#define SysOpt
++#define CComp "gcc"
++#define COpts "-O2"
++
++/* Sun parameters */
++/*#define SUN*/
++#define ZERODIVIDE
++
++/* CPU architecture */
++#define Double
++#define StackAlign 8
++

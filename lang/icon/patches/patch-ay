@@ -1,17 +1,25 @@
-$NetBSD: patch-ay,v 1.2 1998/08/07 11:09:10 agc Exp $
+$NetBSD: patch-ay,v 1.3 2000/06/19 15:56:28 pooka Exp $
 
---- /dev/null	Wed Oct  1 17:23:30 1997
-+++ config/unix/intel_netbsd/xpm.hdr	Wed Oct  1 17:32:26 1997
-@@ -0,0 +1 @@
-+DEFINES= -DZPIPE
---- src/common/save.c	1997/10/02 07:49:07	1.1
-+++ src/common/save.c	1997/10/02 08:00:57
-@@ -91,7 +91,11 @@
+--- /dev/null   Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/xpm.hdr    Wed Oct  1 17:32:26 1997
+@@ -0,0 +1 @@                                                   
++DEFINES= -DZPIPE                                               
+--- src/common/save.c   1997/10/02 07:49:07     1.1             
++++ src/common/save.c   1997/10/02 08:00:57                     
+@@ -79,6 +79,7 @@
+  */
+ 
+ #ifdef GenericBSD
++#include <sys/param.h>
+ #include <a.out.h>
+ wrtexec(ef)
+ int ef;
+@@ -91,7 +92,11 @@
      * Construct the header.  The text and data region sizes must be multiples
      *  of 1024.
      */
 +#ifdef __NetBSD__
-+   N_SETMAGIC(hdr, ZMAGIC, MID_I386, EX_DYNAMIC);
++   N_SETMAGIC(hdr, ZMAGIC, MID_MACHINE, EX_DYNAMIC);
 +#else
     hdr.a_magic = ZMAGIC;
 +#endif
