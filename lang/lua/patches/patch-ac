@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1 2003/02/22 00:51:59 jtb Exp $
+
+--- /dev/null	Fri Feb 21 23:53:43 2003
++++ build/liblualib/Makefile
+@@ -0,0 +1,27 @@
++LIB= lualib
++
++SHLIB_MAJOR= 0
++SHLIB_MINOR= 0
++
++LIBDIR= ${PREFIX}/lib
++INCDIR= ${PREFIX}/include
++
++CPPFLAGS+= -I${.CURDIR}/../../include
++CPPFLAGS+= -DPOPEN
++
++LDADD+= -R${LIBDIR} -L${.CURDIR}/../liblua -llua -lm
++
++NOLINT= 1
++
++.PATH:	${.CURDIR}/../../src/lib
++
++INCLUDES= lualib.h
++
++SRCS= lauxlib.c lbaselib.c ldblib.c liolib.c lmathlib.c lstrlib.c
++
++afterinstall:
++	for i in ${INCLUDES}; do					\
++	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/$$i ${INCDIR};	\
++	done
++
++.include <bsd.lib.mk>
