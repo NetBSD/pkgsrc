@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5219 2004/03/11 21:07:57 markd Exp $
+$NetBSD: CHANGES,v 1.5220 2004/03/11 21:12:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1423,3 +1423,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated grace to 5.1.14 [minskim 2004-03-11]
 	Updated kmplayer to 0.8.2nb2 [markd 2004-03-11]
 	Updated R to 1.8.1nb2 [markd 2004-03-11]
+	Updated ocaml to 3.06nb5 [tron 2004-03-11]
