@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/09/20 05:04:06 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/12/02 03:03:32 sakamoto Exp $
 bin/sk2ps
 bin/sketch
 share/doc/sketch/BUGS
@@ -62,6 +62,11 @@ share/doc/sketch/Doc/devguide-20.html
 share/doc/sketch/Doc/devguide-21.html
 share/doc/sketch/Doc/devguide-22.html
 share/doc/sketch/Doc/devguide-23.html
+share/doc/sketch/Doc/devguide-24.html
+share/doc/sketch/Doc/devguide-25.html
+share/doc/sketch/Doc/devguide-26.html
+share/doc/sketch/Doc/devguide-27.html
+share/doc/sketch/Doc/devguide-28.html
 share/doc/sketch/Doc/devguide-3.html
 share/doc/sketch/Doc/devguide-4.html
 share/doc/sketch/Doc/devguide-5.html
@@ -136,6 +141,7 @@ share/sketch/Plugins/Objects/regpoly.py
 share/sketch/Plugins/Objects/regpoly.pyc
 share/sketch/Resources/Fontmetrics/alias.sfd
 share/sketch/Resources/Fontmetrics/gs.sfd
+share/sketch/Resources/Fontmetrics/gsopt.sfd
 share/sketch/Resources/Fontmetrics/pagd.afm
 share/sketch/Resources/Fontmetrics/pagdo.afm
 share/sketch/Resources/Fontmetrics/pagk.afm
@@ -384,6 +390,7 @@ share/sketch/Sketch/Pixmaps/New12/MiniPrintOff.xbm
 share/sketch/Sketch/Pixmaps/New12/MiniPrintOn.xbm
 share/sketch/Sketch/Pixmaps/NewDocument.gif
 share/sketch/Sketch/Pixmaps/NewDocument.xbm
+share/sketch/Sketch/Pixmaps/NoPattern.xbm
 share/sketch/Sketch/Pixmaps/Open.gif
 share/sketch/Sketch/Pixmaps/Open.xbm
 share/sketch/Sketch/Pixmaps/Portrait.xbm
