@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.4 1999/10/01 07:49:19 simonb Exp $
+$NetBSD: patch-ab,v 1.5 2000/05/24 09:15:58 agc Exp $
 
-diff -ur ../faces-DIST/Makefile ./Makefile
---- ../faces-DIST/Makefile	Fri Oct  1 14:36:38 1999
-+++ ./Makefile	Fri Oct  1 14:32:03 1999
-@@ -0,0 +1,478 @@
+--- /dev/null	Wed May 24 10:07:55 2000
++++ Makefile	Wed May 24 10:11:02 2000
+@@ -0,0 +1,475 @@
 +#
 +#  Makefile for faces, an icon face server, plus associated software.
 +#
@@ -29,7 +28,7 @@ diff -ur ../faces-DIST/Makefile ./Makefile
 +#
 +#========================================================================
 +# Installation prefix.
-+PREFIX           ?=@localbase@
++PREFIX           ?=/usr/local
 +#------------------------------------------------------------------------
 +#  If you want audio support, then the following line should be uncommented.
 +#
@@ -39,7 +38,7 @@ diff -ur ../faces-DIST/Makefile ./Makefile
 +#  play audio files. Alternatively you can specify your own custom
 +#  command here. Uncomment the following line and set appropriately.
 +#
-+AUDIO_CMD         = -DAUDIO_CMD=\"@localbase@/bin/rplay\"
++AUDIO_CMD         = -DAUDIO_CMD=\"/usr/local/bin/rplay\"
 +#========================================================================
 +#  Faces displays a background pattern in its' window. When the window
 +#  is not completely full, this gives the appearance of trying to blend
@@ -47,7 +46,7 @@ diff -ur ../faces-DIST/Makefile ./Makefile
 +#  can specify the name of a file containing an alternate pattern to use.
 +#  Uncomment the next two lines and set appropriately.
 +#
-+#BACKNAME          = @localbase@/sample-background
++#BACKNAME          = /usr/local/sample-background
 +#BACKGROUND        = -DBACKGROUND=\"$(BACKNAME)\"
 +#------------------------------------------------------------------------
 +#  Uncomment the following two lines to use the Domain Name Service to 
@@ -81,12 +80,12 @@ diff -ur ../faces-DIST/Makefile ./Makefile
 +#
 +#DONTSHOWUSER     = -DDONTSHOWUSER
 +#------------------------------------------------------------------------
-+#  By default, faces looks for the face images in @localbase@/faces. If
++#  By default, faces looks for the face images in /usr/local/faces. If
 +#  you wish to specify an alternate location, then these two lines should
 +#  be uncommented and set appropriately. Note that the value must be
 +#  a single directory name, not a colon separated list of paths.
 +#               
-+FACEDIR           = @localbase@/share/faces
++FACEDIR           = /usr/local/share/faces
 +CFACEDIR	= -DFACEDIR=\"$(FACEDIR)\"
 +#------------------------------------------------------------------------
 +#  It is possible to determine what type of monitoring faces does at
@@ -321,9 +320,6 @@ diff -ur ../faces-DIST/Makefile ./Makefile
 +
 +BINARIES	= psfaces svfaces xfaces xvfaces
 +
-+CC		= cc
-+MAKE		= make
-+
 +STDSRCS		= address.c get.c main.c mon.c parsefrom.c rec.c
 +STDOBJS		= address.o get.o main.o mon.o parsefrom.o rec.o
 +STDLIBS		= -L./compface -lcompface $(DNSLIB) $(SGILIBS)
@@ -374,15 +370,15 @@ diff -ur ../faces-DIST/Makefile ./Makefile
 +		@echo
 +		@echo "You need to specify one of the following options:"
 +		@echo
-+		@echo "  make sunview    - to make the SunView version."
-+		@echo "  make news       - to make the NeWS version."
-+		@echo "  make x11        - to make the X11 version."
-+		@echo "  make xview      - to make the XView version."
++		@echo "  ${MAKE} sunview    - to make the SunView version."
++		@echo "  ${MAKE} news       - to make the NeWS version."
++		@echo "  ${MAKE} x11        - to make the X11 version."
++		@echo "  ${MAKE} xview      - to make the XView version."
 +		@echo
 +		@echo "This should be followed by:"
 +		@echo
-+		@echo "  make install"
-+		@echo "  make clean"
++		@echo "  ${MAKE} install"
++		@echo "  ${MAKE} clean"
 +		@echo
 +
 +all:		x11
@@ -421,7 +417,7 @@ diff -ur ../faces-DIST/Makefile ./Makefile
 +		-install -c -m 644 people.tab $(FACEDIR)
 +
 +install:
-+		make tables
++		${MAKE} tables
 +		(cd compface; $(MAKE) $(MAKEOPTS) install)
 +		(cd filters; $(MAKE) $(MAKEOPTS) install)
 +		(cd scripts; $(MAKE) $(MAKEOPTS) install)
