@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/03/10 10:29:36 agc Exp $
+# $NetBSD: Makefile,v 1.28 2000/03/20 02:25:29 itojun Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -23,6 +23,7 @@
     SUBDIR += rsaref
     SUBDIR += srp_client
     SUBDIR += ssh
+    SUBDIR += ssh6
     SUBDIR += ssh-ip-tunnel
     SUBDIR += sudo
     SUBDIR += tripwire

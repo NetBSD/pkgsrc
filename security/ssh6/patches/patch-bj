@@ -1,0 +1,156 @@
+$NetBSD: patch-bj,v 1.1 2000/03/20 02:25:43 itojun Exp $
+
+--- ssh.h.orig	Wed May 12 07:19:28 1999
++++ ssh.h	Fri Dec 24 21:50:42 1999
+@@ -176,6 +176,16 @@
+ #include "randoms.h"
+ #include "cipher.h"
+ 
++#ifdef HESIOD
++#include <hesiod.h>
++
++#define getpwnam(a) hes_getpwnam(a)
++#define getpwuid(a) hes_getpwuid(a)
++
++extern struct passwd *hes_getpwnam(const char *name);
++extern struct passwd *hes_getpwuid(uid_t uid);
++#endif /* HESIOD */
++
+ /* The default cipher used if IDEA is not supported by the remote host. 
+    It is recommended that this be one of the mandatory ciphers (DES, 3DES),
+    though that is not required. */
+@@ -307,12 +317,13 @@
+    protocol.)  */
+ #define SSH_SESSION_KEY_LENGTH          32
+ 
+-#ifdef KERBEROS
+ #ifdef KRB5
+ #include <krb5.h>
+-#define KRB_SERVICE_NAME                "host"
++#define KRB5_SERVICE_NAME                "host"
+ #endif /* KRB5 */
+-#endif /* KERBEROS */
++#ifdef KRB4
++#define KRB4_SERVICE_NAME		"rcmd"
++#endif /* KRB4 */
+ 
+ /* Authentication methods.  New types can be added, but old types should not
+    be removed for compatibility.  The maximum allowed value is 31. */
+@@ -336,6 +347,10 @@
+ 
+ /* If you add new methods add them after this using random number between 16-31
+    so if someone else adds also new methods you dont use same number. */
++#ifdef AFS
++#define SSH_PASS_AFS_TOKEN	21
++#endif /* AFS */
++
+ 
+ /* Protocol flags.  These are bit masks. */
+ #define SSH_PROTOFLAG_SCREEN_NUMBER     1 /* X11 forwarding includes screen */
+@@ -410,7 +425,9 @@
+ /* If ou add new messages add them starting from something after 64, better to
+    use some random number between 64-127 so if someone else adds something else
+    you dont use same numbers */
+-
++#ifdef AFS
++#define SSH_CMSG_HAVE_AFS_TOKEN			65
++#endif /* AFS */
+ 
+ /* define this and debug() will print local hostname */
+ #define LOCAL_HOSTNAME_IN_DEBUG 1
+@@ -430,7 +447,7 @@
+ /* Records that the user has logged in.  This does many things normally
+    done by login(1). */
+ void record_login(int pid, const char *ttyname, const char *user, uid_t uid,
+-                  const char *host, struct sockaddr_in *addr);
++		  const char *host, struct sockaddr *addr);
+ 
+ /* Records that the user has logged out.  This does many thigs normally
+    done by login(1) or init. */
+@@ -447,6 +464,9 @@
+    connection is successful, this calls packet_set_connection for the
+    connection. */
+ int ssh_connect(const char *host, int port, int connection_attempts,
++#ifdef ENABLE_ANOTHER_PORT_TRY
++		int another_port,
++#endif /* ENABLE_ANOTHER_PORT_TRY */
+                 int anonymous, uid_t original_real_uid,
+                 const char *proxy_command, RandomState *random_state);
+ 
+@@ -479,12 +499,12 @@
+ 
+ /* Tries to authenticate the user using password.  Returns true if
+    authentication succeeds. */
+-#if defined(KERBEROS) && defined(KRB5)
++#ifdef KRB5
+ int auth_password(const char *server_user, const char *password,
+                   krb5_principal client);
+-#else /* defined(KERBEROS) && defined(KRB5) */
++#else /* KRB5 */
+ int auth_password(const char *server_user, const char *password);
+-#endif /* defined(KERBEROS) && defined(KRB5) */
++#endif /* KRB5 */
+ 
+ /* Performs the RSA authentication dialog with the client.  This returns
+    0 if the client could not be authenticated, and 1 if authentication was
+@@ -872,5 +892,60 @@
+ #else
+ #define UID_ROOT 0
+ #endif
++
++#ifdef HAVE_SOCKADDR_STORAGE
++#ifndef HAVE_NEW_SS_FAMILY
++#define	__ss_len	ss_len
++#define	__ss_family	ss_family
++#endif
++#else
++#define	_SS_MAXSIZE	128	/* Implementation specific max size */
++#define	_SS_ALIGNSIZE	(sizeof(int))
++#define	_SS_PAD1SIZE	(_SS_ALIGNSIZE - sizeof(u_short))
++#define	_SS_PAD2SIZE	(_SS_MAXSIZE - (sizeof(u_short) + \
++					_SS_PAD1SIZE + _SS_ALIGNSIZE))
++struct sockaddr_storage {
++#ifdef HAVE_SOCKADDR_LEN
++  u_char	__ss_len;
++  u_char	__ss_family;
++#else
++  u_short	__ss_family;
++#endif
++  char		__ss_pad1[_SS_PAD1SIZE];
++  int		__ss_align;
++  char		__ss_pad2[_SS_PAD2SIZE];
++};
++#endif
++
++#ifdef INET6_ADDRSTRLEN
++#define ADDRSTRLEN	INET6_ADDRSTRLEN
++#else
++#define ADDRSTRLEN	46
++#endif
++
++#define	PORTSTRLEN	16
++
++/* AF_UNSPEC or AF_INET or AF_INET6 */
++extern int IPv4or6;
++
++#ifndef ENABLE_IPV6
++/* dummy value for old netdb.h */
++#ifndef AI_PASSIVE
++#define AI_PASSIVE	1
++#define NI_NUMERICHOST	2
++#define NI_NAMEREQD	4
++#define NI_NUMERICSERV	8
++struct addrinfo {
++	int	ai_flags;	/* AI_PASSIVE, AI_CANONNAME */
++	int	ai_family;	/* PF_xxx */
++	int	ai_socktype;	/* SOCK_xxx */
++	int	ai_protocol;	/* 0 or IPPROTO_xxx for IPv4 and IPv6 */
++	size_t	ai_addrlen;	/* length of ai_addr */
++	char	*ai_canonname;	/* canonical name for hostname */
++	struct sockaddr *ai_addr;	/* binary address */
++	struct addrinfo *ai_next;	/* next structure in linked list */
++};
++#endif
++#endif /* not ENABLE_IPV6 */
+ 
+ #endif /* SSH_H */

@@ -1,0 +1,102 @@
+$NetBSD: patch-az,v 1.1 2000/03/20 02:25:41 itojun Exp $
+
+--- config.h.in.orig	Wed May 12 07:20:04 1999
++++ config.h.in	Fri Dec 24 21:50:38 1999
+@@ -244,12 +244,6 @@
+ /* Support for Secure RPC */
+ #undef SECURE_RPC
+ 
+-/* Support for Secure NFS */
+-#undef SECURE_NFS
+-
+-/* Support for NIS+ */
+-#undef NIS_PLUS
+-
+ /* Define this to disable all port forwardings in server (except X11) */
+ #undef SSHD_NO_PORT_FORWARDING
+ 
+@@ -296,16 +290,23 @@
+ /* Define this if your gettimeofday doesn't have TZ parameter */
+ #undef HAVE_NO_TZ_IN_GETTIMEOFDAY
+ 
+-/* Define this if you want to compile in Kerberos support. */
+-#undef KERBEROS
+-
+ /* Define this if you want to compile in Kerberos V5 support.
+-   KERBEROS must be compiled in as well. This can be done at configure
+-   time with the --with-kerberos5 argument*/
++   This can be done at configure time with the --with-krb5 argument. */
+ #undef KRB5
+ 
+-/* Define this if you want to pass the Kerberos TGT. */
+-#undef KERBEROS_TGT_PASSING
++/* Define this if you want to compile in Kerberos V4 support.
++   This can be done at configure time with the --with-krb4 argument. */
++#undef KRB4
++
++/* Define this if you what to build ssh with Hesiod support. */
++#undef HESIOD
++
++/* Define this if you want to compile in AFS support.
++   This can be done at configure time with the --with-afs argument. */
++#undef AFS
++
++/* Define this if you have the AFS lifetime conversion routines. */
++#undef HAVE_KRB_LIFE_TO_TIME
+ 
+ /* Define this if you dont have SIGINFO as signal but some other macro */
+ #undef HAVE_INCOMPATIBLE_SIGINFO
+@@ -323,6 +324,24 @@
+    /etc/nologin.allow. */
+ #undef NOLOGIN_ALLOW
+ 
++/* Define this if you have struct sockaddr_storage. */
++#undef HAVE_SOCKADDR_STORAGE
++
++/* Define this if you have __sa_family in struct sockaddr_storage. */
++#undef HAVE_NEW_SS_FAMILY
++
++/* Define this if you have ss_len in struct sockaddr. */
++#undef HAVE_SOCKADDR_LEN
++
++/* Define this if you want to enable IPv6 support. */
++#undef ENABLE_IPV6
++ 
++/* Define this if you want to enable another port try support. */
++#undef ENABLE_ANOTHER_PORT_TRY
++
++/* Define this if you want to enable logging auth info support. */
++#undef ENABLE_LOG_AUTH
++
+ /* Where to find the X11 socket */
+ #undef X11_DIR
+ 
+@@ -375,12 +394,18 @@
+ /* Define if you have the ftruncate function.  */
+ #undef HAVE_FTRUNCATE
+ 
++/* Define if you have the getaddrinfo function.  */
++#undef HAVE_GETADDRINFO
++
+ /* Define if you have the getdtablesize function.  */
+ #undef HAVE_GETDTABLESIZE
+ 
+ /* Define if you have the gethostname function.  */
+ #undef HAVE_GETHOSTNAME
+ 
++/* Define if you have the getnameinfo function.  */
++#undef HAVE_GETNAMEINFO
++
+ /* Define if you have the getpseudotty function.  */
+ #undef HAVE_GETPSEUDOTTY
+ 
+@@ -518,6 +543,9 @@
+ 
+ /* Define if you have the <sys/dir.h> header file.  */
+ #undef HAVE_SYS_DIR_H
++
++/* Define if you have the <sys/filio.h> header file.  */
++#undef HAVE_SYS_FILIO_H
+ 
+ /* Define if you have the <sys/ioctl.h> header file.  */
+ #undef HAVE_SYS_IOCTL_H

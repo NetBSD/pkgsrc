@@ -1,4 +1,4 @@
-$NetBSD: patch-bm,v 1.1 1999/12/25 05:28:37 kim Exp $
+$NetBSD: patch-bm,v 1.1 2000/03/20 02:25:43 itojun Exp $
 
 --- README-IPv6.orig	Wed Dec 31 19:00:00 1969
 +++ README-IPv6	Fri Dec 24 21:50:38 1999

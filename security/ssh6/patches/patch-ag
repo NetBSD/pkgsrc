@@ -1,0 +1,97 @@
+$NetBSD: patch-ag,v 1.1 2000/03/20 02:25:34 itojun Exp $
+
+--- log-server.c.orig	Wed May 12 07:19:26 1999
++++ log-server.c	Sat Dec 25 00:17:29 1999
+@@ -146,6 +146,25 @@
+   syslog(LOG_INFO, "log: %.500s", buf);
+ }
+ 
++#ifdef ENABLE_LOG_AUTH
++void log_auth(const char *fmt, ...)
++{
++  char buf[1024];
++  va_list args;
++  extern int log_auth_flag;
++  if (!log_auth_flag)
++    return;
++  if (log_quiet)
++    return;
++  va_start(args, fmt);
++  vsprintf(buf, fmt, args);
++  va_end(args);
++  if (log_on_stderr)
++    fprintf(stderr, "log: %s\n", buf);
++  syslog(LOG_INFO|LOG_AUTH, "%.500s", buf);
++}
++#endif /* ENABLE_LOG_AUTH */
++
+ /* Converts portable syslog severity to machine-specific syslog severity. */
+ 
+ static int syslog_severity(int severity)
+@@ -265,9 +284,12 @@
+ {
+   struct fatal_cleanup *cu, *next_cu;
+   static int fatal_called = 0;
+-#ifdef KERBEROS
++#if defined(KRB4) || defined(KRB5)
+   extern char *ticket;
+-#endif
++#ifdef AFS
++  extern char *xauthfile;
++#endif /* AFS */
++#endif /* KRB4 || KRB5 */
+ 
+   if (!fatal_called)
+     {
+@@ -281,19 +303,27 @@
+                 (unsigned long)cu->proc, (unsigned long)cu->context);
+           (*cu->proc)(cu->context);
+         }
+-#ifdef KERBEROS
++#if defined(KRB4) || defined(KRB5)
+       /* If you forwarded a ticket you get one shot for proper
+          authentication. */
+       /* If tgt was passed unlink file */
+       if (ticket)
+         {
+           if (strcmp(ticket,"none"))
++#ifdef KRB5
+             /* ticket -> FILE:path */
+             unlink(ticket + 5);
++#else /* KRB4 */
++	    unlink(ticket);
++#endif
+           else
+             ticket = NULL;
+         }
+-#endif /* KERBEROS */
++#ifdef AFS
++      /* If local XAUTHORITY was created, remove it. */
++      if (xauthfile) unlink(xauthfile);
++#endif /* AFS */
++#endif /* KRB4 || KRB5 */
+     }
+ }
+ 
+@@ -322,6 +352,9 @@
+ {
+   char buf[1024];
+   va_list args;
++#ifdef ENABLE_LOG_AUTH
++  extern char *unauthenticated_user;
++#endif /* ENABLE_LOG_AUTH */
+ 
+   if (log_quiet)
+     exit(1);
+@@ -331,6 +364,11 @@
+   if (log_on_stderr)
+     fprintf(stderr, "fatal: %s\n", buf);
+   syslog(syslog_severity(severity), "fatal: %.500s", buf);
++#ifdef ENABLE_LOG_AUTH
++  if (unauthenticated_user)
++    log_auth("LOGIN FAILED %.100s from %.200s",
++	     unauthenticated_user, get_canonical_hostname());
++#endif /* ENABLE_LOG_AUTH */
+ 
+   do_fatal_cleanups();
+ 
