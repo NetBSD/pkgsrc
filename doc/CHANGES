@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8519 2004/12/29 16:36:26 schmonz Exp $
+$NetBSD: CHANGES,v 1.8520 2004/12/29 18:47:42 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6697,3 +6697,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated oinkmaster to 1.1 [adrianp 2004-12-29]
 	Updated qmail-run to 20041229 [schmonz 2004-12-29]
 	Updated djbdns-run to 20041229 [schmonz 2004-12-29]
+	Updated anomy-sanitizer to 1.69 [kim 2004-12-29]
