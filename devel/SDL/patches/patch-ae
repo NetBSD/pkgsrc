@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.4 2001/07/03 06:17:33 rh Exp $
+$NetBSD: patch-ae,v 1.5 2001/09/24 14:28:55 rh Exp $
 
---- src/audio/SDL_sysaudio.h.orig	Sat Jun 16 03:51:42 2001
+--- src/audio/SDL_sysaudio.h.orig	Mon Jul 23 04:58:42 2001
 +++ src/audio/SDL_sysaudio.h
 @@ -109,7 +109,7 @@
- #ifdef __OpenBSD__
- extern AudioBootStrap OBSD_bootstrap;
+ #ifdef ALSA_SUPPORT
+ extern AudioBootStrap ALSA_bootstrap;
  #endif
 -#if (defined(unix) && !defined(__CYGWIN32__)) && \
 +#if (defined(__NetBSD__) || defined(unix) && !defined(__CYGWIN32__)) && \
