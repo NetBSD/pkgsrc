@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.15 1999/05/22 21:47:01 tv Exp $
+# $NetBSD: Makefile,v 1.16 1999/05/24 20:39:35 tv Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
-DISTNAME=       rarbsd
-PKGNAME=        rar-2.01
-CATEGORIES=	archivers
-MASTER_SITES=   ftp://ftp.inetpros.net/pub/rar/ \
-		ftp://ftp.kiarchive.ru/pub/unix/arcers/
-EXTRACT_SUFX=   .exe
-ONLY_FOR_ARCHS=	i386
-ONLY_FOR_OPSYS=	NetBSD
+DISTNAME=		rarbsd
+PKGNAME=		rar-2.01
+CATEGORIES=		archivers
+MASTER_SITES=		ftp://ftp.inetpros.net/pub/rar/ \
+			ftp://ftp.kiarchive.ru/pub/unix/arcers/
+EXTRACT_SUFX=		.exe
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=		packages@netbsd.org
 
-NO_PACKAGE=     Only unmodified original package can be distributed
+NO_PACKAGE=		Only unmodified original package can be distributed
 
-NO_WRKSUBDIR=   yes
-EXTRACT_CMD=	${DOWNLOADED_DISTFILE} >/dev/null
+NO_WRKSUBDIR=		yes
+EXTRACT_CMD=		${DOWNLOADED_DISTFILE} >/dev/null
 
 pre-extract:
 	@${CHMOD} a+x ${DISTDIR}/${DISTFILES}
