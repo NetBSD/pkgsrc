@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.6 2003/05/22 02:42:47 markd Exp $
+$NetBSD: patch-ai,v 1.7 2003/07/30 13:34:59 markd Exp $
 
---- kcontrol/access/Makefile.in.orig	Tue May 13 23:07:53 2003
+--- kcontrol/access/Makefile.in.orig	2003-07-15 22:03:17.000000000 +1200
 +++ kcontrol/access/Makefile.in
-@@ -426,16 +426,20 @@ INCLUDES = $(all_includes)
+@@ -427,16 +427,20 @@ INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kaccess
  
@@ -133,11 +133,11 @@ $NetBSD: patch-ai,v 1.6 2003/05/22 02:42:47 markd Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=kaccess.h configure.in.in kcmaccess.desktop kaccess.desktop 
-+KDE_DIST=kcmaccess.desktop kaccess.desktop kaccess.h configure.in.in 
++KDE_DIST=configure.in.in Makefile.in.rej kcmaccess.desktop kaccess.desktop kaccess.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -924,21 +942,18 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -924,25 +942,22 @@ uninstall-am: uninstall-binPROGRAMS unin
  messages:
  	$(XGETTEXT) $(kaccess_la_SOURCES) -o $(podir)/kaccess.pot
  	$(XGETTEXT) $(kcm_access_la_SOURCES) -o $(podir)/kcmaccess.pot
@@ -152,18 +152,24 @@ $NetBSD: patch-ai,v 1.6 2003/05/22 02:42:47 markd Exp $
 -kcmaccess.moc: $(srcdir)/kcmaccess.h
 -	$(MOC) $(srcdir)/kcmaccess.h -o kcmaccess.moc
 -
+-#>+ 1
+-mocs: kcmaccess.moc
 -#>+ 3
  kaccess.moc: $(srcdir)/kaccess.h
  	$(MOC) $(srcdir)/kaccess.h -o kaccess.moc
  
+ #>+ 1
+ mocs: kaccess.moc
 +#>+ 3
 +kcmaccess.moc: $(srcdir)/kcmaccess.h
 +	$(MOC) $(srcdir)/kcmaccess.h -o kcmaccess.moc
 +
++#>+ 1
++mocs: kcmaccess.moc
  #>+ 8
  kcm_access.la.closure: $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES)
  	@echo "int main() {return 0;}" > kcm_access_la_closure.cpp
-@@ -950,7 +965,7 @@ kcm_access.la.closure: $(kcm_access_la_O
+@@ -954,7 +969,7 @@ kcm_access.la.closure: $(kcm_access_la_O
  
  #>+ 3
  clean-metasources:
@@ -172,7 +178,7 @@ $NetBSD: patch-ai,v 1.6 2003/05/22 02:42:47 markd Exp $
  
  #>+ 3
  clean-closures:
-@@ -967,33 +982,33 @@ force-reedit:
+@@ -971,33 +986,33 @@ force-reedit:
  
  
  #>+ 11
@@ -219,7 +225,7 @@ $NetBSD: patch-ai,v 1.6 2003/05/22 02:42:47 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1003,7 +1018,7 @@ kde-rpo-clean:
+@@ -1007,7 +1022,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5

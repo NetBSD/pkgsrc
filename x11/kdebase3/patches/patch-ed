@@ -1,8 +1,8 @@
-$NetBSD: patch-ed,v 1.4 2003/03/11 13:10:28 markd Exp $
+$NetBSD: patch-ed,v 1.5 2003/07/30 13:35:00 markd Exp $
 
---- kwin/clients/riscos/Makefile.in.orig	Fri Jan 17 09:03:12 2003
+--- kwin/clients/riscos/Makefile.in.orig	2003-07-15 22:03:50.000000000 +1200
 +++ kwin/clients/riscos/Makefile.in
-@@ -299,7 +299,7 @@ StickyButton.cpp \
+@@ -436,7 +436,7 @@ StickyButton.cpp \
  HelpButton.cpp \
  Static.cpp
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ed,v 1.4 2003/03/11 13:10:28 markd Exp $
  kwin_riscos_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -325,7 +325,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -462,7 +462,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,7 +20,16 @@ $NetBSD: patch-ed,v 1.4 2003/03/11 13:10:28 markd Exp $
  am_kwin_riscos_la_OBJECTS = Button.lo CloseButton.lo IconifyButton.lo \
  	LowerButton.lo Manager.lo MaximiseButton.lo StickyButton.lo \
  	HelpButton.lo Static.lo
-@@ -683,40 +683,40 @@ kwin_riscos.la.closure: $(kwin_riscos_la
+@@ -711,7 +711,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=riscos.desktop Palette.h 
++KDE_DIST=riscos.desktop Palette.h Makefile.in.rej 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -861,11 +861,11 @@ kwin_riscos.la.closure: $(kwin_riscos_la
  
  
  #>+ 3
@@ -29,46 +38,69 @@ $NetBSD: patch-ed,v 1.4 2003/03/11 13:10:28 markd Exp $
 +Button.moc: $(srcdir)/Button.h
 +	$(MOC) $(srcdir)/Button.h -o Button.moc
  
+ #>+ 1
+-mocs: LowerButton.moc
++mocs: Button.moc
  #>+ 3
  StickyButton.moc: $(srcdir)/StickyButton.h
  	$(MOC) $(srcdir)/StickyButton.h -o StickyButton.moc
- 
+@@ -873,44 +873,44 @@ StickyButton.moc: $(srcdir)/StickyButton
+ #>+ 1
+ mocs: StickyButton.moc
  #>+ 3
 -MaximiseButton.moc: $(srcdir)/MaximiseButton.h
 -	$(MOC) $(srcdir)/MaximiseButton.h -o MaximiseButton.moc
 +LowerButton.moc: $(srcdir)/LowerButton.h
 +	$(MOC) $(srcdir)/LowerButton.h -o LowerButton.moc
  
+ #>+ 1
+-mocs: MaximiseButton.moc
++mocs: LowerButton.moc
  #>+ 3
 -HelpButton.moc: $(srcdir)/HelpButton.h
 -	$(MOC) $(srcdir)/HelpButton.h -o HelpButton.moc
 +IconifyButton.moc: $(srcdir)/IconifyButton.h
 +	$(MOC) $(srcdir)/IconifyButton.h -o IconifyButton.moc
  
+ #>+ 1
+-mocs: HelpButton.moc
++mocs: IconifyButton.moc
  #>+ 3
 -Button.moc: $(srcdir)/Button.h
 -	$(MOC) $(srcdir)/Button.h -o Button.moc
 +Manager.moc: $(srcdir)/Manager.h
 +	$(MOC) $(srcdir)/Manager.h -o Manager.moc
  
+ #>+ 1
+-mocs: Button.moc
++mocs: Manager.moc
  #>+ 3
 -CloseButton.moc: $(srcdir)/CloseButton.h
 -	$(MOC) $(srcdir)/CloseButton.h -o CloseButton.moc
 +HelpButton.moc: $(srcdir)/HelpButton.h
 +	$(MOC) $(srcdir)/HelpButton.h -o HelpButton.moc
  
+ #>+ 1
+-mocs: CloseButton.moc
++mocs: HelpButton.moc
  #>+ 3
 -Manager.moc: $(srcdir)/Manager.h
 -	$(MOC) $(srcdir)/Manager.h -o Manager.moc
 +CloseButton.moc: $(srcdir)/CloseButton.h
 +	$(MOC) $(srcdir)/CloseButton.h -o CloseButton.moc
  
+ #>+ 1
+-mocs: Manager.moc
++mocs: CloseButton.moc
  #>+ 3
 -IconifyButton.moc: $(srcdir)/IconifyButton.h
 -	$(MOC) $(srcdir)/IconifyButton.h -o IconifyButton.moc
 +MaximiseButton.moc: $(srcdir)/MaximiseButton.h
 +	$(MOC) $(srcdir)/MaximiseButton.h -o MaximiseButton.moc
  
+ #>+ 1
+-mocs: IconifyButton.moc
++mocs: MaximiseButton.moc
  #>+ 3
  clean-metasources:
 -	-rm -f  LowerButton.moc StickyButton.moc MaximiseButton.moc HelpButton.moc Button.moc CloseButton.moc Manager.moc IconifyButton.moc
@@ -76,7 +108,7 @@ $NetBSD: patch-ed,v 1.4 2003/03/11 13:10:28 markd Exp $
  
  #>+ 3
  clean-closures:
-@@ -733,7 +733,7 @@ force-reedit:
+@@ -927,7 +927,7 @@ force-reedit:
  
  
  #>+ 11
@@ -85,7 +117,7 @@ $NetBSD: patch-ed,v 1.4 2003/03/11 13:10:28 markd Exp $
  	@echo 'creating kwin_riscos_la.all_cpp.cpp ...'; \
  	rm -f kwin_riscos_la.all_cpp.files kwin_riscos_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kwin_riscos_la.all_cpp.final; \
-@@ -769,19 +769,19 @@ kde-rpo-clean:
+@@ -963,19 +963,19 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 17
