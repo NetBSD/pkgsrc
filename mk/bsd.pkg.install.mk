@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.25 2002/09/18 21:15:18 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.26 2002/09/19 09:02:40 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -57,6 +57,9 @@ INSTALL_TEMPLATES+=	${_FOOTER_TMPL}
 DEINSTALL_SRC?=		${DEINSTALL_TEMPLATES}
 INSTALL_SRC?=		${INSTALL_TEMPLATES}
 
+# FILES_SUBST lists what to substitute in DEINSTALL/INSTALL scripts and in
+# rc.d scripts.
+#
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		LOCALBASE=${LOCALBASE}
 FILES_SUBST+=		X11BASE=${X11BASE}
@@ -184,7 +187,9 @@ PKG_CONFIG?=		YES
 FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP}
 FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG}
 
-# Substitute for various programs used in the DEINSTALL/INSTALL scripts.
+# Substitute for various programs used in the DEINSTALL/INSTALL scripts and
+# in the rc.d scripts.
+#
 FILES_SUBST+=		AWK=${AWK:Q}
 FILES_SUBST+=		BASENAME=${BASENAME:Q}
 FILES_SUBST+=		CAT=${CAT:Q}
@@ -224,7 +229,7 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 pre-install-script: generate-install-scripts
 	PKG_PREFIX=${PREFIX} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
-post-install-script:
+post-install-script: install-rcd-scripts
 	PKG_PREFIX=${PREFIX} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 generate-install-scripts:
@@ -234,5 +239,48 @@ generate-install-scripts:
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${INSTALL_SRC} |		\
 		${SED} ${FILES_SUBST_SED} > ${INSTALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${INSTALL_FILE}
+
+# rc.d scripts are automatically generated and installed into the rc.d
+# scripts example directory at the post-install step.  The following
+# variables are relevent to this process:
+#
+# RCD_SCRIPTS			lists the basenames of the rc.d scripts
+#
+# RCD_SCRIPT_SRC.<script>	the source file for <script>; this will
+#				be run through FILES_SUBST to generate
+#				the rc.d script
+#
+# RCD_SCRIPTS_EXAMPLEDIR	the directory in which to install the
+#				example rc.d scripts
+#
+# If the source rc.d script is not present, then the automatic handling
+# doesn't occur.
+
+generate-rcd-scripts:	# do nothing
+install-rcd-scripts:	# do nothing
+
+.for _script_ in ${RCD_SCRIPTS}
+RCD_SCRIPT_SRC.${_script_}?=	${FILESDIR}/${_script_}.sh
+
+generate-rcd-scripts: generate-rcd-${_script_}
+generate-rcd-${_script_}:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${WRKDIR}/${_script_} ] &&				\
+	   [ -f ${RCD_SCRIPT_SRC.${_script_}} ]; then			\
+		${SED}	${FILES_SUBST_SED}				\
+			${RCD_SCRIPT_SRC.${_script_}}			\
+			> ${WRKDIR}/${_script_};			\
+		${CHMOD} +x ${WRKDIR}/${_script_};			\
+	fi
+
+install-rcd-scripts: install-rcd-${_script_}
+install-rcd-${_script_}: generate-rcd-${_script_}
+	${_PKG_SILENT}${_PKG_DEBUG}${INSTALL_DATA_DIR} ${RCD_SCRIPTS_EXAMPLEDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${WRKDIR}/${_script_} ]; then				\
+		${INSTALL_SCRIPT} ${WRKDIR}/${_script_}			\
+			${RCD_SCRIPTS_EXAMPLEDIR};			\
+	fi
+.endfor
 
 .endif	# BSD_PKG_INSTALL_MK
