@@ -1,0 +1,25 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2004/11/02 11:20:10 markd Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	ETCDIR=@PKG_SYSCONFDIR@/netatalk
+
+	${MKDIR} -p ${ETCDIR}
+
+	${ECHO} "Installing configuration files:"
+	for file in \
+		AppleVolumes.default AppleVolumes.system afpd.conf \
+		atalkd.conf netatalk.conf papd.conf
+	do
+		if [ -f ${ETCDIR}/${file} ]; then
+			${ECHO} "  ${ETCDIR}/${file} already exists"
+		else
+			${ECHO} "  ${ETCDIR}/${file}"
+			${CP} ${PKG_PREFIX}/share/examples/netatalk/${file} \
+				${ETCDIR}/${file}
+			${CHMOD} 644 ${ETCDIR}/${file}
+		fi
+	done
+	${ECHO} "done."
+	;;
+esac
