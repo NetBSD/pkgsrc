@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.4 2001/11/25 18:54:57 jlam Exp $
+# $NetBSD: header,v 1.5 2001/11/25 21:16:30 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -34,7 +34,7 @@ TRUE="@TRUE@"
 USERADD="@USERADD@"
 
 PKG_USER="@PKG_USER@"
-PKG_GROUP="@PKG_GROUP@"
+PKG_USERID="@PKG_USERID@"
 PKG_GROUP="@PKG_GROUP@"
 PKG_GROUPID="@PKG_GROUPID@"
 
