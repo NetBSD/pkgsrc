@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.15 2002/08/04 23:38:43 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.16 2002/08/09 17:12:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -114,7 +114,13 @@ SSLBASE=			/usr
 . endif
 .endif
 
+.if defined(PKG_SYSCONFDIR.openssl)
+SSLCERTS=			${PKG_SYSCONFDIR.openssl}/certs
+.elif ${OPSYS} == "NetBSD"
 SSLCERTS=			/etc/openssl/certs
+.else
+SSLCERTS=			${PKG_SYSCONFBASE}/openssl/certs
+.endif
 BUILD_DEFS+=			SSLBASE SSLCERTS
 
 BUILDLINK_FILES.openssl=	bin/openssl
