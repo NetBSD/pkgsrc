@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/01/12 11:47:44 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/11/13 15:26:06 mycroft Exp $
 bin/buildhash
 bin/findaffix
 bin/icombine
@@ -8,6 +8,7 @@ bin/munchlist
 bin/sq
 bin/tryaffix
 bin/unsq
+info/ispell
 share/emacs/site-lisp/ispell.el
 lib/american.hash
 lib/americanmed+.hash
