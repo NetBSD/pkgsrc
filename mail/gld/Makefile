@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/25 05:42:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/25 07:19:32 xtraeme Exp $
 #
 
 DISTNAME=		gld-1.4
@@ -17,7 +17,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=		${EGDIR}/gld.conf ${PKG_SYSCONFDIR}/gld.conf
+CONF_FILES_PERMS=	${EGDIR}/gld.conf ${PKG_SYSCONFDIR}/gld.conf	\
+			${BINOWN} ${GLD_GROUP} 0740
 
 RCD_SCRIPTS=		gld
 GLD_USER?=		gld
