@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/07 10:38:45 cjep Exp $
 
---- README.orig	Sat Apr 13 21:05:20 2002
+--- README.orig	Sun Sep 20 16:34:46 1998
 +++ README
 @@ -34,8 +34,8 @@
  to make a note of it.  Off to usage...
