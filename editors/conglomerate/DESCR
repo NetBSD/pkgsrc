@@ -1,0 +1,6 @@
+Conglomerate is a project to create a complete structured information
+authoring, management, archival, revision control and transformation system. 
+Conglomerate uses XML semantics and powerful graphical editing, coupled with 
+a centralised storage model and a flexible transformation language to create 
+an environment which is easy to use, produces high-quality structured output
+and lets the user target several output media with a single source document.
