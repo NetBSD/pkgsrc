@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.58 2001/10/31 18:39:27 zuntum Exp $
+# $NetBSD: pkglint.pl,v 1.59 2001/11/03 21:14:18 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -133,10 +133,11 @@ if (! -f "$portdir/Makefile") {
 if ($extrafile) {
 	foreach $i ((<$portdir/$scriptdir/*>, <$portdir/$pkgdir/*>)) {
 		next if (! -T $i);
+		next if ($i =~ /distinfo$/);
+		next if ($i =~ /Makefile$/);
 		$i =~ s/^\Q$portdir\E\///;
 		next if (defined $checker{$i});
-		if ($i =~ /pkg\/PLIST$/ ||
-                    ($i =~ /pkg\/PLIST/)) {
+		if ($i =~ /PLIST/) {
 		        unshift(@checker, $i);
 			$checker{$i} = 'checkplist';
 		} else {
