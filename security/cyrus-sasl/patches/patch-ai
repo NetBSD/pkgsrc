@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2001/01/31 22:47:53 jlam Exp $
+$NetBSD: patch-ai,v 1.2 2002/12/16 10:55:03 martti Exp $
 
---- acconfig.h.orig	Wed Jul  5 12:59:25 2000
-+++ acconfig.h
-@@ -123,10 +123,15 @@
+--- acconfig.h.orig	Sat Feb 17 06:06:28 2001
++++ acconfig.h	Mon Dec 16 11:44:12 2002
+@@ -128,11 +128,20 @@
  /* define if your system has getpid() */
  #undef HAVE_GETPID
  
@@ -16,6 +16,11 @@ $NetBSD: patch-ai,v 1.1 2001/01/31 22:47:53 jlam Exp $
 +#ifdef SASL_DEV_RANDOM
 +#define DEV_RANDOM SASL_DEV_RANDOM
 +#else
++#if defined(__NetBSD__)
++#define DEV_RANDOM "/dev/urandom"
++#else
  #define DEV_RANDOM "/dev/random"
++#endif
  #endif
  
+ /* Make Solaris happy... */
