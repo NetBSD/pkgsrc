@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 1998/12/29 19:34:48 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 1999/06/04 15:29:33 drochner Exp $
 bin/moc
 include/qt/jri.h
 include/qt/jri_md.h
@@ -168,6 +168,7 @@ include/qt/qstatusbar.h
 include/qt/qstring.h
 include/qt/qstrlist.h
 include/qt/qstrvec.h
+include/qt/qt_gif.h
 include/qt/qtabbar.h
 include/qt/qtabdialog.h
 include/qt/qtabdlg.h
@@ -192,8 +193,9 @@ include/qt/qwindefs.h
 include/qt/qwindow.h
 include/qt/qwindowdefs.h
 include/qt/qwmatrix.h
+include/qt/qxt.h
 lib/libqt.a
-lib/libqt.so.1.42
+lib/libqt.so.1.44
 man/man1/moc.1
 man/man3/QAccel.3
 man/man3/QApplication.3
@@ -252,8 +254,6 @@ man/man3/QGCache.3
 man/man3/QGCacheIterator.3
 man/man3/QGDict.3
 man/man3/QGDictIterator.3
-man/man3/QGIFFormat.3
-man/man3/QGIFFormatType.3
 man/man3/QGLContext.3
 man/man3/QGLFormat.3
 man/man3/QGLWidget.3
@@ -429,8 +429,6 @@ man/man3/qgcache.3
 man/man3/qgcacheiterator.3
 man/man3/qgdict.3
 man/man3/qgdictiterator.3
-man/man3/qgifformat.3
-man/man3/qgifformattype.3
 man/man3/qglcontext.3
 man/man3/qglformat.3
 man/man3/qglist.3
