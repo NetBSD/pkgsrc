@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2464 2003/06/09 01:54:18 kim Exp $
+$NetBSD: CHANGES,v 1.2465 2003/06/09 07:47:30 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2386,3 +2386,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated binutils to 2.13.2.1 [fredb 2003-06-08]
 	Updated naim to 0.11.5.9 [wiz 2003-06-08]
 	Updated dlcompat to 20030522 [schmonz 2003-06-08]
+	Updated mrtg to 2.9.29 [martti 2003-06-09]
