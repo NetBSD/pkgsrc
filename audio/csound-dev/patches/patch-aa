@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/02/19 04:49:40 ben Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/17 23:10:19 ben Exp $
 
 --- Makefile.defs.orig	2003-02-25 19:24:01.000000000 -0800
 +++ Makefile.defs
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/19 04:49:40 ben Exp $
  DEFINES = -DWINDOWS -DSFIRCAM -DSYS5 -DLINUX -DHAVE_TERMIOS_H		\
  	  -DIV_VERSION -DPIPES -DMACROS -DHAVE_FLTK -D_REENTRANT	\
 -	  -DHAVE_SSTREAM -DMYFLT=float
-+	  -DHAVE_SSTREAM -DMYFLT=float -DBSD -DDEVOSSSOUND="\"$(DEVOSSSOUND)\""
++	  -DHAVE_SSTREAM -DMYFLT=float -DDEVOSSSOUND="\"$(DEVOSSSOUND)\""
  # choose any of -
  #	-DSYS5		invoke System V headers, e.g. 'string.h' for 'strings.h'
  #	-DHAVE_SSTREAM	include <sstream> header from C++ sources, instead of
