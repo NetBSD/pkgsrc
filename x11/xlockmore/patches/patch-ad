@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2005/01/11 22:56:34 hubertf Exp $
+
+--- Makefile.in.orig	2002-09-22 00:58:54.000000000 +0200
++++ Makefile.in
+@@ -24,7 +24,7 @@ SHELL = /bin/sh
+ 
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
+-VPATH = @srcdir@/
++#HF#VPATH = @srcdir@/
+ 
+ TAR = tar
+ RM = rm -f
