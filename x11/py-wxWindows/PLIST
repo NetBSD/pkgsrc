@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/09 11:59:03 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/25 21:12:51 recht Exp $
 ${PYSITELIB}/wx/__init__.py
 ${PYSITELIB}/wx/__init__.pyc
 ${PYSITELIB}/wx/__init__.pyo
@@ -113,6 +113,9 @@ ${PYSITELIB}/wx/lib/filebrowsebutton.pyo
 ${PYSITELIB}/wx/lib/floatbar.py
 ${PYSITELIB}/wx/lib/floatbar.pyc
 ${PYSITELIB}/wx/lib/floatbar.pyo
+${PYSITELIB}/wx/lib/floatcanvas.py
+${PYSITELIB}/wx/lib/floatcanvas.pyc
+${PYSITELIB}/wx/lib/floatcanvas.pyo
 ${PYSITELIB}/wx/lib/gridmovers.py
 ${PYSITELIB}/wx/lib/gridmovers.pyc
 ${PYSITELIB}/wx/lib/gridmovers.pyo
@@ -134,9 +137,15 @@ ${PYSITELIB}/wx/lib/intctrl.pyo
 ${PYSITELIB}/wx/lib/layoutf.py
 ${PYSITELIB}/wx/lib/layoutf.pyc
 ${PYSITELIB}/wx/lib/layoutf.pyo
+${PYSITELIB}/wx/lib/maskedctrl.py
+${PYSITELIB}/wx/lib/maskedctrl.pyc
+${PYSITELIB}/wx/lib/maskedctrl.pyo
 ${PYSITELIB}/wx/lib/maskededit.py
 ${PYSITELIB}/wx/lib/maskededit.pyc
 ${PYSITELIB}/wx/lib/maskededit.pyo
+${PYSITELIB}/wx/lib/maskednumctrl.py
+${PYSITELIB}/wx/lib/maskednumctrl.pyc
+${PYSITELIB}/wx/lib/maskednumctrl.pyo
 ${PYSITELIB}/wx/lib/mixins/__init__.py
 ${PYSITELIB}/wx/lib/mixins/__init__.pyc
 ${PYSITELIB}/wx/lib/mixins/__init__.pyo
@@ -158,6 +167,9 @@ ${PYSITELIB}/wx/lib/multisash.pyo
 ${PYSITELIB}/wx/lib/mvctree.py
 ${PYSITELIB}/wx/lib/mvctree.pyc
 ${PYSITELIB}/wx/lib/mvctree.pyo
+${PYSITELIB}/wx/lib/newevent.py
+${PYSITELIB}/wx/lib/newevent.pyc
+${PYSITELIB}/wx/lib/newevent.pyo
 ${PYSITELIB}/wx/lib/popupctl.py
 ${PYSITELIB}/wx/lib/popupctl.pyc
 ${PYSITELIB}/wx/lib/popupctl.pyo
@@ -515,6 +527,9 @@ ${PYSITELIB}/wxPython/lib/filebrowsebutton.pyo
 ${PYSITELIB}/wxPython/lib/floatbar.py
 ${PYSITELIB}/wxPython/lib/floatbar.pyc
 ${PYSITELIB}/wxPython/lib/floatbar.pyo
+${PYSITELIB}/wxPython/lib/floatcanvas.py
+${PYSITELIB}/wxPython/lib/floatcanvas.pyc
+${PYSITELIB}/wxPython/lib/floatcanvas.pyo
 ${PYSITELIB}/wxPython/lib/gridmovers.py
 ${PYSITELIB}/wxPython/lib/gridmovers.pyc
 ${PYSITELIB}/wxPython/lib/gridmovers.pyo
@@ -536,9 +551,15 @@ ${PYSITELIB}/wxPython/lib/intctrl.pyo
 ${PYSITELIB}/wxPython/lib/layoutf.py
 ${PYSITELIB}/wxPython/lib/layoutf.pyc
 ${PYSITELIB}/wxPython/lib/layoutf.pyo
+${PYSITELIB}/wxPython/lib/maskedctrl.py
+${PYSITELIB}/wxPython/lib/maskedctrl.pyc
+${PYSITELIB}/wxPython/lib/maskedctrl.pyo
 ${PYSITELIB}/wxPython/lib/maskededit.py
 ${PYSITELIB}/wxPython/lib/maskededit.pyc
 ${PYSITELIB}/wxPython/lib/maskededit.pyo
+${PYSITELIB}/wxPython/lib/maskednumctrl.py
+${PYSITELIB}/wxPython/lib/maskednumctrl.pyc
+${PYSITELIB}/wxPython/lib/maskednumctrl.pyo
 ${PYSITELIB}/wxPython/lib/mixins/__init__.py
 ${PYSITELIB}/wxPython/lib/mixins/__init__.pyc
 ${PYSITELIB}/wxPython/lib/mixins/__init__.pyo
@@ -560,6 +581,9 @@ ${PYSITELIB}/wxPython/lib/multisash.pyo
 ${PYSITELIB}/wxPython/lib/mvctree.py
 ${PYSITELIB}/wxPython/lib/mvctree.pyc
 ${PYSITELIB}/wxPython/lib/mvctree.pyo
+${PYSITELIB}/wxPython/lib/newevent.py
+${PYSITELIB}/wxPython/lib/newevent.pyc
+${PYSITELIB}/wxPython/lib/newevent.pyo
 ${PYSITELIB}/wxPython/lib/popupctl.py
 ${PYSITELIB}/wxPython/lib/popupctl.pyc
 ${PYSITELIB}/wxPython/lib/popupctl.pyo
