@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:54 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/25 12:09:11 rh Exp $
 bin/lbreakout
 share/games/lbreakout/ball.bmp
 share/games/lbreakout/bkgnd0.bmp
@@ -48,4 +48,4 @@ share/games/lbreakout/wontgiveup.wav
 @exec install -c -m 666 -o games -g games %D/share/games/lbreakout/lbreakout.hscr /var/games
 @unexec echo "===> High scores have been preserved in '/var/games/lbreakout.hscr'" ; echo "     If you no longer need this file, you can delete it manually."
 @dirrm share/games/lbreakout
-@dirrm share/games
+@unexec ${RMDIR} %D/share/games 2>/dev/null || ${TRUE}
