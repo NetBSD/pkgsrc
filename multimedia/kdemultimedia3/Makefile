@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/15 12:18:51 markd Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/18 13:33:41 jlam Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 PKGREVISION=	1
@@ -16,7 +16,7 @@ USE_BUILDLINK2=		YES
 
 REPLACE_PERL=		kscd/workman2cddb.pl
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3.*)
 BUILDLINK_DEPENDS.xine-lib=	xine-lib>=1rc0anb1
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2004/02/08 04:03:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.29 2004/02/18 13:33:41 jlam Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -39,7 +39,7 @@ MAKE_ENV+=              QTDIR="${WRKSRC}"
 # directory
 SCRIPTS_ENV+=		HOME="${WRKDIR}"
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	-no-g++-exceptions
