@@ -1,4 +1,4 @@
-# $NetBSD: marshall,v 1.6 2003/11/25 14:44:39 jlam Exp $
+# $NetBSD: marshall,v 1.7 2004/01/15 09:59:29 jlam Exp $
 #
 # Handle cases where multiple consecutive arguments must be processed
 # together, either by merging the arguments or "skipping" the extra
@@ -6,9 +6,15 @@
 #
 case $arg in
 #
-# Merge "-Wl,--rpath -Wl,/path/to/dir" into a single argument
-# "-Wl,--rpath,/path/to/dir" so that we can look it up in the cache.
+# Merge "-Wl,R -Wl,/path/to/dir" into a single argument
+# "-Wl,R/path/to/dir" and merge "-Wl,--rpath -Wl,/path/to/dir" into
+# "-Wl,--rpath,/path/to/dir" so that we can look them up in the cache.
 #
+-Wl,-R)
+	nextarg=`$echo "X$1" | $Xsed -e "s|^-Wl,||g"`
+	arg="$arg$nextarg"
+	shift
+	;;
 -Wl,-rpath|-Wl,-rpath-link|\
 -Wl,--rpath|-Wl,--rpath-link)
 	nextarg=`$echo "X$1" | $Xsed -e "s|^-Wl,||g"`
