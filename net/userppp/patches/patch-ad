@@ -1,0 +1,7 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/07 17:26:58 ad Exp $
+
+--- /dev/null	Sat Jul 29 16:32:22 2000
++++ Makefile.inc	Tue Nov  7 15:24:26 2000
+@@ -0,0 +1,2 @@
++BINDIR=	${PREFIX}/sbin
++MANDIR=	${PREFIX}/man

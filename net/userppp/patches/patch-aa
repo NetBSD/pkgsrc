@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/07 17:26:58 ad Exp $
+
+--- Makefile.orig	Tue Nov  7 15:27:16 2000
++++ Makefile	Tue Nov  7 15:27:25 2000
+@@ -1,5 +1,5 @@
+ SUBDIR+=libhack ppp pppctl
+-EXAMPLES=/usr/share/examples/ppp
++EXAMPLES=${PREFIX}/share/examples/ppp
+ .include <bsd.subdir.mk>
+ afterinstall:
+ 	if [ ! -d /etc/ppp ]; then mkdir -p /etc/ppp; chmod 755 /etc/ppp; fi
