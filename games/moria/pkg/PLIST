@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
+bin/moria
+share/games/moria/hours
+share/games/moria/news
+share/games/moria/origcmds.hlp
+share/games/moria/owizcmds.hlp
+share/games/moria/roglcmds.hlp
+share/games/moria/rwizcmds.hlp
+share/games/moria/scores.dist
+share/games/moria/version.hlp
+share/games/moria/welcome.hlp
+@exec if [ ! -f /var/games/moria.scores ]; then cp -p %D/share/games/moria/scores.dist /var/games/moria.scores; fi
+@dirrm share/games/moria

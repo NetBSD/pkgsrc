@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
+--- unix/unix.c.orig	Fri Jul 22 08:37:08 1994
++++ unix/unix.c	Wed Dec  2 23:17:35 1998
+@@ -43,6 +43,11 @@
+ #include <sys/param.h>
+ #endif
+ 
++#if (defined(BSD) && BSD >= 199306)
++#include <fcntl.h>
++#include <unistd.h>
++#endif
++
+ #ifdef __linux__
+ #include <sys/time.h>
+ #include <sys/types.h>
+@@ -276,7 +281,9 @@
+ void user_name(buf)
+ char *buf;
+ {
++#if !(defined(BSD) && BSD >= 199306)
+   extern char *getlogin();
++#endif
+   struct passwd *pwline;
+   register char *p;
+ 
+@@ -314,7 +321,10 @@
+ 	  user[i] = '\0';
+ 	  if (i == 0)
+ 	    {
+-	      char *login = (char *) getlogin();
++#if !(defined(BSD) && BSD >= 199306)
++	      extern char *getlogin();
++#endif
++	      char *login = getlogin();
+ 
+ 	      if (login != NULL)
+ 		(void) strcpy (user, login);

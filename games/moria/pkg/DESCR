@@ -1,0 +1,5 @@
+Moria is a Roguelike game with a different sense of scale than Rogue.
+It features a town level, with an endless(?) dungeon.  But rather than
+being limited to one terminal screen in size, each dungeon level is
+several screens wide and long.  Games of Moria generally take weeks to
+complete, rather than hours or days.

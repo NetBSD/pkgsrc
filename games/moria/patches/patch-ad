@@ -1,0 +1,50 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
+--- source/io.c.orig	Fri Jul 22 11:47:26 1994
++++ source/io.c	Wed Dec  2 11:35:27 1998
+@@ -90,6 +90,10 @@
+ #include <sys/types.h>
+ #endif
+ 
++#if (defined(BSD) && BSD >= 199306)	/* XXX for all post 1993 BSDs? */
++#include <sgtty.h>
++#endif
++
+ #ifdef USG
+ #ifndef ATARI_ST
+ #include <string.h>
+@@ -331,7 +335,7 @@
+ #if defined(atarist) && defined(__GNUC__)
+   (void) signal (SIGTSTP, (__Sigfunc)suspend);
+ #else
+-#ifdef  __386BSD__
++#if defined(__386BSD__) || (defined(BSD) && BSD >= 199306)
+   (void) signal (SIGTSTP, (sig_t)suspend);
+ #else
+   (void) signal (SIGTSTP, suspend);
+@@ -527,6 +531,7 @@
+ }
+ #else
+ {
++  int y, x;
+ #ifdef AMIGA
+   closetimer ();
+ #endif
+@@ -542,7 +547,8 @@
+   pause_line(15);
+ #endif
+   /* this moves curses to bottom right corner */
+-  mvcur(stdscr->_cury, stdscr->_curx, LINES-1, 0);
++  getyx(stdscr, y, x);
++  mvcur(y, x, LINES-1, 0);
+   endwin();  /* exit curses */
+   (void) fflush (stdout);
+ #ifdef MSDOS
+@@ -757,7 +763,7 @@
+       msg_print("Fork failed. Try again.");
+       return;
+     }
+-#if defined(USG) || defined(__386BSD__)
++#if defined(USG) || defined(__386BSD__) || (defined(BSD) && BSD >= 199306)
+   (void) wait((int *) 0);
+ #else
+   (void) wait((union wait *) 0);

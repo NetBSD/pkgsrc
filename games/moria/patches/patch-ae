@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
+--- source/signals.c.orig	Fri Jul 22 11:47:42 1994
++++ source/signals.c	Wed Dec  2 11:35:43 1998
+@@ -89,7 +89,7 @@
+ 
+ /*ARGSUSED*/
+ #ifndef USG
+-#ifdef __386BSD__
++#if defined(__386BSD__) || (defined(BSD) && BSD >= 199306)
+ static void signal_handler(sig, code, scp)
+ #else
+ static int signal_handler(sig, code, scp)
+@@ -217,7 +217,7 @@
+ #if defined(atarist) && defined(__GNUC__)
+   (void) signal(SIGTSTP, (__Sigfunc)suspend);
+ #else
+-#ifdef  __386BSD__
++#if defined(__386BSD__) || (defined(BSD) && BSD >= 199306)
+   (void) signal(SIGTSTP, (sig_t)suspend);
+ #else
+   (void) signal(SIGTSTP, suspend);
