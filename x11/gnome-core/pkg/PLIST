@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/04/04 22:35:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/04/16 21:55:20 tron Exp $
 bin/gmenu
 bin/jbc_applet
 bin/gnome-edit
@@ -175,6 +175,7 @@ share/gnome/apps/Utilities/.directory
 share/gnome/apps/Utilities/gnome-terminal.desktop
 share/gnome/apps/.order
 share/gnome/apps/gnome-help.desktop
+share/gnome/help/gnome-terminal/C/environment.html
 share/gnome/help/gnome-terminal/C/docbook.css
 share/gnome/help/gnome-terminal/C/topic.dat
 share/gnome/help/gnome-terminal/C/index.html
@@ -182,12 +183,10 @@ share/gnome/help/gnome-terminal/C/authors.html
 share/gnome/help/gnome-terminal/C/classes.html
 share/gnome/help/gnome-terminal/C/config.html
 share/gnome/help/gnome-terminal/C/emulation.html
-share/gnome/help/gnome-terminal/C/enviroment.html
 share/gnome/help/gnome-terminal/C/menus.html
 share/gnome/help/gnome-terminal/C/options.html
 share/gnome/help/gnome-terminal/C/pointerusage.html
 share/gnome/help/gnome-terminal/C/terminal.html
-share/gnome/help/gnome-terminal/C/termtech.html
 share/gnome/help/gnome-terminal/no/index.html
 share/gnome/help/gnome-terminal/no/topic.dat
 share/gnome/help/gnome-terminal/no/authors.html
@@ -319,6 +318,7 @@ share/locale/pl/LC_MESSAGES/gnome-core.mo
 share/locale/hu/LC_MESSAGES/gnome-core.mo
 share/locale/nl/LC_MESSAGES/gnome-core.mo
 share/locale/es_MX/LC_MESSAGES/gnome-core.mo
+share/locale/wa/LC_MESSAGES/gnome-core.mo
 share/mc/templates/GIMP.desktop
 share/panelrc
 share/pixmaps/gkb.xpm
@@ -392,6 +392,16 @@ share/pixmaps/gnome-networktool.png
 share/pixmaps/gnome-note.png
 share/pixmaps/gnome-qeye.png
 share/pixmaps/gnome-talk.png
+share/pixmaps/gnome-cardgame.png
+share/pixmaps/gnome-die1.png
+share/pixmaps/gnome-die2.png
+share/pixmaps/gnome-die3.png
+share/pixmaps/gnome-die4.png
+share/pixmaps/gnome-die5.png
+share/pixmaps/gnome-die6.png
+share/pixmaps/gnome-eterm.png
+share/pixmaps/tiles/tile-drc-4-up.png
+share/pixmaps/tiles/tile-drc-4-down.png
 share/pixmaps/tiles/tile-blue-up.png
 share/pixmaps/tiles/tile-blue-down.png
 share/pixmaps/tiles/tile-normal-up.png
