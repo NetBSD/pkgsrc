@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2151 2004/09/21 07:44:13 tron Exp $
+$NetBSD: TODO,v 1.2152 2004/09/21 10:48:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -189,6 +189,7 @@ Suggested package updates
 	o aspell-0.60
 	o atari800-1.3.3
 	o auctex-11.53
+	o automake-1.9.2
 	o avidemux-2.0.28
 	o balsa-1.4.4
 	o bash3-3.0
@@ -237,8 +238,8 @@ Suggested package updates
 	o eggdrop-1.6.17
 	o elk-3.99.6
 	o elm-me-2.4pl120
-	o ettercap-0.7.0
-	o evolution-1.5.2
+	o ettercap-0.7.1
+	o evolution-2.0.0
 	o feh-1.2.7
 	o festival-1.4.3
 	o file-4.10
@@ -259,7 +260,7 @@ Suggested package updates
 	o gdb-6.2.1
 	o gdm-2.6.0.5
 	o generator-0.35
-	o getmail-4.1.5
+	o getmail-4.2.0
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
@@ -291,7 +292,7 @@ Suggested package updates
 	o hylafax-4.2.0
 	o icepref-2.3
 	o idesk-0.5.6
-	o imp-3.2.5
+	o imp-3.2.6
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
 	o iozone-3.221
@@ -313,7 +314,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libpng-1.2.7
 	o libsigc++-2.0.3
-	o libtool-1.5.8
+	o libtool-1.5.10
 	o licq-1.2.7
 	o liferea-0.6.0
 	o lilypond-2.2
@@ -386,7 +387,7 @@ Suggested package updates
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
 	o privoxy-3.0.3 [kim]
-	o proftpd-1.2.10
+	o proftpd-1.2.10 [pkg/27012]
 	o psi-0.9.2
 	o pth-2.0.2
 	o pureftpd-1.0.20
@@ -442,7 +443,7 @@ Suggested package updates
 	o tkdesk-2.0
 	o tkgate-1.8.5
 	o tkman-2.2
-	o tla-1.2.1
+	o treecc-0.3.2 [pkg/27013]
 	o tripwire-2.3.1 [see also pkg/22362]
 	o txt2html-2.30 [wennmach]
 	o uptimec-0.2p3 [pkg/26082]
