@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
+$NetBSD: patch-ac,v 1.8 2002/12/10 11:58:11 markd Exp $
 
---- configure.orig	Mon Jun 17 23:20:30 2002
-+++ configure	Sun Sep  8 23:52:19 2002
-@@ -10666,13 +10666,13 @@
+--- configure.orig	Fri Nov  1 22:48:07 2002
++++ configure
+@@ -2020,7 +2020,7 @@
+   WANT_R_SHLIB_FALSE=
+ fi
+ if test "${want_R_shlib}" = yes; then
+-  LIBR="-L\$(R_HOME)/bin -lR"
++  LIBR="-Wl,-R${prefix}/lib/R/bin -L\$(R_HOME)/bin -lR"
+ else
+   LIBR=
+ fi
+@@ -10754,13 +10754,13 @@
  fi
  
  
@@ -20,7 +29,7 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  #include "confdefs.h"
-@@ -10704,33 +10704,33 @@
+@@ -10792,33 +10792,33 @@
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -65,7 +74,7 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  #include "confdefs.h"
-@@ -10762,33 +10762,33 @@
+@@ -10850,33 +10850,33 @@
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -110,7 +119,7 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  #include "confdefs.h"
-@@ -10820,23 +10820,23 @@
+@@ -10908,23 +10908,23 @@
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -141,7 +150,7 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
  
  fi
  
-@@ -14899,6 +14899,9 @@
+@@ -14975,6 +14975,9 @@
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -151,7 +160,7 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -14983,6 +14986,9 @@
+@@ -15063,6 +15066,9 @@
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -161,14 +170,14 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -15870,121 +15876,6 @@
+@@ -16008,121 +16014,6 @@
  fi
  
      fi
 -    if test "${G77}" = yes; then
 -      ac_safe=`echo "-mieee" | sed 'y%./+-:=%__p___%'`
--echo "$as_me:$LINENO: checking whether ${F77-f77} accepts -mieee" >&5
--echo $ECHO_N "checking whether ${F77-f77} accepts -mieee... $ECHO_C" >&6
+-echo "$as_me:$LINENO: checking whether ${F77} accepts -mieee" >&5
+-echo $ECHO_N "checking whether ${F77} accepts -mieee... $ECHO_C" >&6
 -if eval "test \"\${r_cv_prog_f77_flag_${ac_safe}+set}\" = set"; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
 -else
@@ -224,8 +233,8 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
 -
 -    else
 -      ac_safe=`echo "-fpe3" | sed 'y%./+-:=%__p___%'`
--echo "$as_me:$LINENO: checking whether ${F77-f77} accepts -fpe3" >&5
--echo $ECHO_N "checking whether ${F77-f77} accepts -fpe3... $ECHO_C" >&6
+-echo "$as_me:$LINENO: checking whether ${F77} accepts -fpe3" >&5
+-echo $ECHO_N "checking whether ${F77} accepts -fpe3... $ECHO_C" >&6
 -if eval "test \"\${r_cv_prog_f77_flag_${ac_safe}+set}\" = set"; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
 -else
@@ -283,11 +292,11 @@ $NetBSD: patch-ac,v 1.7 2002/09/09 00:59:03 markd Exp $
      if test "${GXX}" = yes; then
        ac_safe=`echo "-mieee" | sed 'y%./+-:=%__p___%'`
  echo "$as_me:$LINENO: checking whether ${CXX-c++} accepts -mieee" >&5
-@@ -16719,6 +16610,7 @@
+@@ -16862,6 +16753,7 @@
      fpicflags=
      ;;
    netbsd*)
 +    fpicflags="-fPIC"
-     if ${CPP} - -dM < /dev/null | grep -q __ELF__; then
+     if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-export-dynamic"
        shlib_ldflags="-shared"
