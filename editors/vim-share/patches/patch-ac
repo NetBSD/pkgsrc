@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/12/21 13:20:33 pooka Exp $
+
+--- Makefile.orig	Sun Sep 19 14:27:33 1999
++++ Makefile	Mon Dec 20 20:14:59 1999
+@@ -721,7 +721,7 @@
+ ### might not work when they are changed!)
+ VIMDIR = /vim
+ VIMRTDIR = /vim55
+-HELPSUBDIR = /doc
++HELPSUBDIR = /../../doc/vim
+ SYNSUBDIR = /syntax
+ MACROSUBDIR = /macros
+ TOOLSSUBDIR = /tools
+@@ -1330,6 +1330,7 @@
+ 
+ # install the help files; first adjust the contents for the location
+ installvimhelp: $(HELPSOURCE)/vim.1 $(MANSUBDIR) $(VIMLOC) $(VIMRTLOC) $(HELPSUBLOC) $(SYNSUBLOC) $(TUTORSUBLOC)
++	ln -s ${HELPSUBLOC} ${VIMRTLOC}/doc
+ 	@echo generating $(MANSUBDIR)/$(VIMNAME).1
+ 	@sed -e s+/usr/local/lib/vim+$(VIMLOC)+ \
+ 		-e s+$(VIMLOC)/doc+$(HELPENDLOC)+ \
