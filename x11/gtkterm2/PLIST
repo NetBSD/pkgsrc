@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/03 09:08:07 xtraeme Exp $
+bin/gtkterm2
+share/doc/GTKTerm/ABOUT-NLS
+share/doc/GTKTerm/AUTHORS
+share/doc/GTKTerm/COPYING
+share/doc/GTKTerm/ChangeLog
+share/doc/GTKTerm/INSTALL
+share/doc/GTKTerm/NEWS
+share/doc/GTKTerm/README
+share/doc/GTKTerm/TODO
+share/gtkterm2/pixmaps/gtkterm2.png
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkterm2.mo
+@dirrm share/gtkterm2/pixmaps
+@dirrm share/gtkterm2
+@dirrm share/doc/GTKTerm
