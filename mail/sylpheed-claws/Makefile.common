@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/07/18 09:56:47 recht Exp $
-#
+# $NetBSD: Makefile.common,v 1.9 2004/10/05 15:37:45 adam Exp $
 
 DISTNAME=	sylpheed-claws-${SYLPHEED_VERSION}
 CATEGORIES=	mail news x11
@@ -21,4 +20,4 @@ GNU_CONFIGURE=		YES
 # Force gnome detection off to avoid installing some extra files
 CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 
-SYLPHEED_VERSION=	0.9.12
+SYLPHEED_VERSION=	0.9.12b
