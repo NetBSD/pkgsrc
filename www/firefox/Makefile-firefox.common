@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.5 2004/10/16 20:08:48 reed Exp $
+# $NetBSD: Makefile-firefox.common,v 1.6 2004/10/19 21:01:47 reed Exp $
 
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	0.10.1
@@ -30,8 +30,8 @@ BUILD_MATHML=		# defined
 MESSAGE=		${.CURDIR}/../../www/firefox/MESSAGE
 
 pre-install:
-	${CP} -RL ${WRKSRC}/dist/bin/defaults/profile/extensions \
-							${WRKSRC}/dist/bin
+	cd ${WRKSRC}/dist/bin/defaults/profile/ && \
+		${PAX} -Lrw extensions ${WRKSRC}/dist/bin
 	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
 		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
 
