@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.13 2004/02/06 04:37:02 jlam Exp $
+# $NetBSD: distcc.mk,v 1.14 2004/02/07 02:58:10 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	one
@@ -38,12 +38,14 @@ _DISTCCBASE?=		${LOCALBASE}
 _DISTCC_DIR=	${WRKDIR}/.distcc
 _DISTCC_LINKS=	# empty
 .      if !empty(_LANGUAGES.distcc:Mc)
-CC:=	${_DISTCC_DIR}/bin/${CC:T}
-_DISTCC_LINKS+=	CC
+_DISTCC_CC:=	${_DISTCC_DIR}/bin/${CC:T}
+_DISTCC_LINKS+=	_DISTCC_CC
+CC=		${_DISTCC_CC}
 .      endif
 .      if !empty(_LANGUAGES.distcc:Mc++)
-CXX:=	${_DISTCC_DIR}/bin/${CXX:T}
-_DISTCC_LINKS+=	CXX
+_DISTCC_CXX:=	${_DISTCC_DIR}/bin/${CXX:T}
+_DISTCC_LINKS+=	_DISTCC_CXX
+CXX=		${_DISTCC_CXX}
 .      endif
 .    endif
 .  endif
@@ -56,6 +58,7 @@ _DISTCC_LINKS+=	CXX
 .  if empty(COMPILER_DISTCC_MK:Mtwo)
 COMPILER_DISTCC_MK+=	two
 
+# Prepend the path to the compiler to the PATH.
 .    if !empty(_USE_DISTCC:M[yY][eE][sS])
 .      if !empty(_LANGUAGES.distcc)
 .        if empty(PREPEND_PATH:M${_DISTCC_DIR}/bin)
@@ -63,17 +66,20 @@ PREPEND_PATH+=	${_DISTCC_DIR}/bin
 PATH:=		${_DISTCC_DIR}/bin:${PATH}
 .        endif
 .      endif
-.    endif
 
+# Add the dependency on distcc.
 BUILD_DEPENDS+=	distcc-[0-9]*:../../devel/distcc
 
+# Create symlinks for the compiler into ${WRKDIR}.
 .      if exists(${_DISTCCBASE}/bin/distcc)
 .        for _target_ in ${_DISTCC_LINKS}
+.          if !target(${${_target_}})
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${LN} -fs ${_DISTCCBASE}/bin/distcc ${.TARGET}
+.          endif
 .        endfor
 .      endif
 .    endif
