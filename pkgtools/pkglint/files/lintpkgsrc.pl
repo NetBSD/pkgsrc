@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.52 2001/05/31 17:37:25 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.53 2001/06/21 15:15:02 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1038,7 +1038,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 				$distfiles{$2}{'sum'} ne $3)
 			    {
 			    push(@distwarn, "checksum mismatch between '$1' ".
-			    "in $cat/$pkgdir and $distfiles{$1}{'path'}\n");
+			    "in $cat/$pkgdir and $distfiles{$2}{'path'}\n");
 			    }
 			}
 		    }
