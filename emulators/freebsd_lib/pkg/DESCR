@@ -1,0 +1,6 @@
+These libraries are part of the FreeBSD compatibility options
+for NetBSD.
+
+The kernel option `COMPAT_FREEBSD' needs to be in your kernel config
+file for this to work as well.
+
