@@ -1,0 +1,11 @@
+--- configure.orig	2004-10-09 00:01:54.000000000 +0200
++++ configure	2004-10-09 00:02:59.000000000 +0200
+@@ -1825,7 +1825,7 @@
+   { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
+ echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
+    { (exit 1); exit 1; }; }
+-if test -r "${PWLIBDIR}/version.h"; then
++if test -r "${PWLIBDIR}/include/ptlib/version.h"; then
+   eval "$as_ac_File=yes"
+ else
+   eval "$as_ac_File=no"
