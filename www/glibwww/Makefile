@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/01/03 18:49:55 reed Exp $
-#
+# $NetBSD: Makefile,v 1.16 2004/03/16 11:04:19 tron Exp $
 
 DISTNAME=		glibwww-0.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www gnome devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glibwww/0.2/}
 
@@ -16,6 +15,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../databases/db4/buildlink2.mk"
 .include "../../www/libwww/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 
