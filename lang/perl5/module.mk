@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.12 2003/08/03 20:52:30 jmmv Exp $
+# $NetBSD: module.mk,v 1.13 2003/09/12 23:39:42 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -29,9 +29,15 @@
 .if !defined(_PERL5_MODULE_MK)
 _PERL5_MODULE_MK=	# defined
 
+.include "../../mk/bsd.prefs.mk"
+
 BUILDLINK_DEPMETHOD.perl+=	full
 
-.include "../../lang/perl5/buildlink2.mk"
+.if !defined(NO_BUILDLINK)
+.  if empty(USE_BUILDLINK2:M[nN][oO])
+.    include "../../lang/perl5/buildlink2.mk"
+.  endif
+.endif
 
 PERL5_CONFIGURE?=	YES
 PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
@@ -46,12 +52,48 @@ perl5-configure:
 	done
 
 .if defined(PERL5_CONFIGURE) && !empty(PERL5_CONFIGURE:M[yY][eE][sS])
-.if target(do-configure)
+.  if target(do-configure)
 do-configure: perl5-configure
-.else
+.  else
 do-configure: perl5-configure
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.  endif
 .endif
+
+.if !defined(_PERL5_SITEPREFIX)
+.  if exists(${PERL5})
+_PERL5_SITEPREFIX!=	\
+	eval `${PERL5} -V:siteprefix 2>/dev/null`; ${ECHO} $${siteprefix}
+MAKEFLAGS+=	_PERL5_SITEPREFIX="${_PERL5_SITEPREFIX}"
+#
+# Repoint all of the site-specific variables to be under the perl5
+# module's ${PREFIX}.
+#
+_PERL5_VAR.INSTALLSITEBIN=	installsitebin
+_PERL5_VAR.INSTALLSITELIB=	installsitelib
+_PERL5_VAR.INSTALLSITEARCH=	installsitearch
+_PERL5_VAR.INSTALLSITEMAN1DIR=	installsiteman1dir
+_PERL5_VAR.INSTALLSITEMAN3DIR=	installsiteman3dir
+_PERL5_VAR.SITELIBEXP=		sitelibexp
+_PERL5_VAR.SITEARCHEXP=		sitearchexp
+
+.    for _var_ in							\
+	INSTALLSITEBIN INSTALLSITELIB INSTALLSITEARCH			\
+	INSTALLSITEMAN1DIR INSTALLSITEMAN3DIR				\
+	SITELIBEXP SITEARCHEXP
+_PERL5_SUB_${_var_}!=	\
+	eval `${PERL5} -V:${_PERL5_VAR.${_var_}} 2>/dev/null`;		\
+	${ECHO} $${${_PERL5_VAR.${_var_}}} |				\
+	${SED} -e "s,^${_PERL5_SITEPREFIX}/,,"
+_PERL5_${_var_}=	${PREFIX}/${_PERL5_SUB_${_var_}}
+MAKEFLAGS+=	${_var_}="${_PERL5_${_var_}}"
+MAKE_FLAGS+=	${_var_}="${_PERL5_${_var_}}"
+.    endfor
+.  endif
+.endif
+
+.if defined(DEFAULT_VIEW.perl)
+DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.perl}
 .endif
 
 # OTHERLDFLAGS is the hook provided by the perl5 MakeMaker module to allow
