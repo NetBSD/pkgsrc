@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/02/22 01:40:04 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/22 04:01:57 schmonz Exp $
 #
 # This Makefile fragment is included by packages that use libtcpa.
 #
@@ -16,6 +16,7 @@ BUILDLINK_DEPENDS+=	libtcpa
 BUILDLINK_PACKAGES+=			libtcpa
 BUILDLINK_DEPENDS.libtcpa+=		libtcpa>=1.1b
 BUILDLINK_PKGSRCDIR.libtcpa?=		../../security/libtcpa
+BUILDLINK_DEPMETHOD.libtcpa?=		build
 
 .include "../../security/openssl/buildlink3.mk"
 
