@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.119 2004/03/14 20:27:17 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.120 2004/03/15 17:55:31 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -471,12 +471,17 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 .  endif
 .endfor
 #
-# Add the X11 library directory to the runtime library search path if
-# the package uses X11.
+# Add the X11 library directory to the library search paths if the package
+# uses X11.
 #
-.if defined(USE_X11) && (${_USE_RPATH} == "yes") && \
-    empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib)
+.if defined(USE_X11)
+.  if empty(BUILDLINK_LDFLAGS:M-L${X11BASE}/lib)
+BUILDLINK_LDFLAGS+=	-L${X11BASE}/lib
+.  endif
+.  if (${_USE_RPATH} == "yes") && \
+      empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib)
 BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
+.  endif
 .endif
 
 .for _flag_ in ${BUILDLINK_CFLAGS}
