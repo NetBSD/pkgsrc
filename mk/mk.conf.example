@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.59 1999/07/07 13:30:22 itojun Exp $
+# $NetBSD: mk.conf.example,v 1.60 1999/07/07 13:47:34 itojun Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -334,6 +334,7 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Default: not defined
 
 #USE_INET6=			# Enable IPv6 support on certain packages.
+				# Use IPv6-ready kernel if you define this.
 				# Possible: defined, not defined
 				# Default: not defined
 
