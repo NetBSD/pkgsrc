@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.283 2003/02/20 17:37:10 salo Exp $
+$NetBSD: TODO,v 1.284 2003/02/20 23:20:26 salo Exp $
 
 Suggested new packages
 ======================
@@ -127,7 +127,6 @@ Suggested package updates
 	o gimp-print-4.2.5
 	o gkrellm-2.1.7
 	o gkrellm-volume-2.1.7
-	o glade-0.6.4
 	o glade2-1.1.3 [pkg/19154]
 	o gmp-4.1.2
 	o gnome-applets-2.0.0
