@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/07/17 22:52:36 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/11/05 21:04:07 dmcmahill Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 PKGREVISION=		1
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--enable-cxx=no
 CPPFLAGS+=		-Dunix
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
