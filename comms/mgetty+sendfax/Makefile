@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/06/21 17:02:23 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2001/08/22 02:21:44 jlam Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -12,8 +12,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://alpha.greenie.net/mgetty/
 COMMENT=	Handle external logins, send and receive faxes
 
-DEPENDS=	netpbm-[0-9]*:../../graphics/netpbm
-
 CONFLICTS=	hylafax-*
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
@@ -23,6 +21,8 @@ INSTALL_FILE=	${WRKDIR}/INSTALL
 MGETTY_CONFDIR=	${PREFIX}/etc/mgetty+sendfax
 #MGETTY_CONFDIR=/etc/mgetty
 MAKE_ENV+=	MGETTY_CONFDIR=${MGETTY_CONFDIR}
+
+USE_BUILDLINK_ONLY=	# defined
 
 post-configure:
 	${SED} -e 's#$${INSTALL_DATA_DIR}#${INSTALL_DATA_DIR}#' \
@@ -40,4 +40,5 @@ post-install:
 	cd ${PREFIX}/share/examples/mgetty+sendfax; \
 	    ${PAX} -r -w -pe -k * ${MGETTY_CONFDIR}
 
+.include "../../graphics/netpbm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
