@@ -1,81 +1,17 @@
-$NetBSD: patch-aa,v 1.11 2004/01/15 10:15:14 markd Exp $
+$NetBSD: patch-aa,v 1.12 2004/02/04 14:25:58 markd Exp $
 
---- configure.orig	2003-12-17 14:22:44.000000000 +1300
+--- configure.orig	2004-01-26 08:22:39.000000000 +1300
 +++ configure
-@@ -22983,7 +22983,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; then
+@@ -27907,7 +27907,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
+ 	# if you're trying to debug this check and think it's incorrect,
+ 	# better check your installation. The check _is_ correct - your
+ 	# installation is not.
 -	if test -f actest.cpp && grep klineedit actest.cpp > /dev/null; then
 +	if test -f actest.cpp && grep -i klineedit actest.cpp > /dev/null; then
  		kde_cv_uic_plugins=yes
  	fi
  fi
-@@ -31436,63 +31436,6 @@ _ACEOF
- 
- 
- 
--  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
--echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
--  cat >conftest.$ac_ext <<_ACEOF
--/* #line $LINENO "configure" */
--/* confdefs.h.  */
--_ACEOF
--cat confdefs.h >>conftest.$ac_ext
--cat >>conftest.$ac_ext <<_ACEOF
--/* end confdefs.h.  */
--
--int
--main ()
--{
--
--    #if SIZEOF_SIZE_T != SIZEOF_UNSIGNED_LONG
--       choke me
--    #endif
--
--  ;
--  return 0;
--}
--_ACEOF
--rm -f conftest.$ac_objext
--if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; }; then
--  echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6
--else
--  echo "$as_me: failed program was:" >&5
--sed 's/^/| /' conftest.$ac_ext >&5
--
--
--      echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6
--      { { echo "$as_me:$LINENO: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
--       does not apply. Please mail kde-devel@kde.org with a description of your system!
--      " >&5
--echo "$as_me: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
--       does not apply. Please mail kde-devel@kde.org with a description of your system!
--      " >&2;}
--   { (exit 1); exit 1; }; }
--
--fi
--rm -f conftest.$ac_objext conftest.$ac_ext
--
--
- echo "$as_me:$LINENO: checking if it's safe to enable UTMP" >&5
- echo $ECHO_N "checking if it's safe to enable UTMP... $ECHO_C" >&6
- 
-@@ -33636,6 +33579,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -38076,6 +38076,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -99,7 +35,7 @@ $NetBSD: patch-aa,v 1.11 2004/01/15 10:15:14 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -38585,6 +38545,7 @@ fi
+@@ -45372,6 +45389,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
