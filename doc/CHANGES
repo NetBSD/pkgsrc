@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9122 2005/02/12 17:59:03 kim Exp $
+$NetBSD: CHANGES,v 1.9123 2005/02/12 21:34:47 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -857,3 +857,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkglint to 4.02 [rillig 2005-02-12]
 	Updated roundup to 0.7.11 [recht 2005-02-12]
 	Added cisco-mibs-20050210 [kim 2005-02-12]
+	Updated pkglint to 4.03 [rillig 2005-02-12]
