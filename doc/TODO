@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1371 2004/02/12 05:31:17 snj Exp $
+$NetBSD: TODO,v 1.1372 2004/02/13 03:26:43 minskim Exp $
 
 Suggested new packages
 ======================
@@ -128,6 +128,7 @@ Suggested package updates
 	o amule-1.2.5
 	o anjuta-1.2.0 [cube]
 	o asc-1.14.0
+	o aspell-0.50.5
 	o autogen-5.5.6
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
@@ -215,6 +216,7 @@ Suggested package updates
 	o icepref-2.3
 	o inn-2.4.1
 	o jakarta-tomcat-3.3.1a
+	o jam-2.5
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
 	o kaffe-1.1.3 [pkg/24148]
@@ -301,6 +303,7 @@ Suggested package updates
 	o snd-7.1
 	o snes9x-1.42
 	o snownews-1.4.4
+	o sodipodi-0.34
 	o sqlite-2.8.9
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
