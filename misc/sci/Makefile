@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/15 18:46:30 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/16 13:50:13 wiz Exp $
 #
 
 DISTNAME=	sci.0.3.8
@@ -14,9 +14,9 @@ DEPENDS+=       ncurses>=4.2:../../devel/ncurses
 WRKSRC=         ${WRKDIR}/sci
 
 pre-build:
-		-@ln -s ${WRKSRC}/makefile ${WRKSRC}/Makefile >/dev/null
+		-@${LN} -s ${WRKSRC}/makefile ${WRKSRC}/Makefile >/dev/null
 
 pre-install:
-		-@gunzip ${WRKSRC}/sci.1.gz
+		-@${GUNZIP_CMD} ${WRKSRC}/sci.1.gz
 
 .include "../../mk/bsd.pkg.mk"
