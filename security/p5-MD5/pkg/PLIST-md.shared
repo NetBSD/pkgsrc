@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1 1997/11/22 05:09:19 hubertf Exp $
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/MD5/MD5.so
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/MD5/MD5.bs
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/MD5
