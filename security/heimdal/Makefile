@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/11/09 19:48:52 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/11/15 14:56:36 jlam Exp $
 
 DISTNAME=	heimdal-0.6.3
 PKGREVISION=	1
@@ -30,18 +30,12 @@ CONFIGURE_ARGS+=	--without-krb4
 .include "../../mk/bsd.prefs.mk"
 
 # Heimdal's configure script expects to find the readline.h header as
-# <readline.h>.  Also, the configure script checks for some libraries
-# in the wrong order, since -lreadline also needs either -ltermcap,
-# -lcurses, -lncurses in the link command to resolve all symbols used
-# in the readline library.
+# <readline.h>.
 #
-BUILDLINK_INCDIRS.readline=	include/readline
-BUILDLINK_TRANSFORM+=		l:readline:readline:${READLINE_TERMLIB}
-.include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
-OPSYSVARS+=			READLINE_TERMLIB
-READLINE_TERMLIB.Linux=		curses
-READLINE_TERMLIB.*=		termcap
+BUILDLINK_INCDIRS.readline=	include/readline
+BROKEN_READLINE_DETECTION=	yes
+.include "../../devel/readline/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .include "../../security/openssl/buildlink3.mk"
