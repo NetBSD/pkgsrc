@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/07/19 21:22:34 tv Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/21 21:13:46 tv Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -24,6 +24,6 @@ CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--without-libgif" \
 		"--without-libgdbm" \
 		"--without-libuulib"
-CONFIGURE_ENV=	LIBTOOL=${LOCALBASE}/bin/libtool
+CONFIGURE_ENV=	LIBTOOL="${LOCALBASE}/bin/libtool --install-la"
 
 .include "../../mk/bsd.pkg.mk"
