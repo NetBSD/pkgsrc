@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 08:43:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/24 09:12:52 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -24,7 +24,7 @@ DEPENDS+=	flex-[0-9]*:../../devel/flex
 USE_GNU_TOOLS+=	make
 .endif
 
-.include "../../wip/XFree86/Makefile.common"
+.include "../../meta-pkgs/XFree86/Makefile.common"
 
 post-extract:
 .for F in ${SYSTEMS}
