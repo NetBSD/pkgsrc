@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/10/02 23:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2002/10/09 13:05:02 wiz Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -60,7 +60,7 @@ CXXFLAGS+=		-Wl,-R${X11BASE}/lib
 CONFIGURE_ARGS+=	--enable-qt
 CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
 
-.  include "../../x11/qt2-designer/buildlink.mk"
+.  include "../../x11/qt2-designer/buildlink2.mk"
 .endif
 
 pre-configure:
