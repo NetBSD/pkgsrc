@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.18 2003/01/21 14:28:14 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.19 2003/02/26 15:15:38 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -89,6 +89,17 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		${FALSE}
+
+# imake installs manpages in weird places
+# XXX: assume NetBSD defaults until somebody determines correct values
+IMAKE_MAN_SOURCE_PATH=	man/cat
+IMAKE_MAN_SUFFIX=	1
+IMAKE_LIBMAN_SUFFIX=	3
+IMAKE_FILEMAN_SUFFIX=	5
+IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
+IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
+IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
+IMAKE_MANNEWSUFFIX=	0
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}		# program which gets invoked by imake
