@@ -1,13 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/14 01:32:38 jwise Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
 # required to build it.
+#
+# Note: please do NOT update this package to a more recent version of FOP --
+# this is the most recent version which works with cocoon.  If you need a
+# newer version, let me know, and I will import the latest version as
+# fop-current -- jwise@netbsd.org
+#
 
-DISTNAME=	fop-0_13_0
-PKGNAME=	fop-0.13.0
+DISTNAME=	fop-0_15_0-forBeginners
+PKGNAME=	fop-0.15.0
+NO_WRKSUBDIR=
 CATEGORIES=	textproc www
-MASTER_SITES=	http://xml.apache.org/dist/fop/
+MASTER_SITES=	http://xml.apache.org/dist/fop/recent/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://xml.apache.org/fop/
@@ -18,16 +26,14 @@ NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
 
-WRKSRC=		${WRKDIR}/fop-0_13_0
-
 post-extract:
-	@${FIND} -d ${WRKSRC} -type d -name CVS -exec ${RM} -rf '{}' \;
+	${FIND} -d ${WRKSRC}/docs -name cvs -exec ${RM} -r '{}' \;
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/fop_bin_0_13_0.jar ${PREFIX}/lib/java/fop.jar
-	${MKDIR} ${PREFIX}/share/doc/java/fop
-	cd ${WRKSRC}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/fop ; ${GTAR} pvxf - )
+	${INSTALL_DATA} ${WRKSRC}/build/fop.jar ${PREFIX}/lib/java/fop.jar
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/fop
+	cd ${WRKSRC}/docs; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/fop ; ${GTAR} pvxf - )
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/fop
 
 .include "../../mk/bsd.pkg.mk"
