@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/02/08 23:45:05 hubertf Exp $
 lib/X11/xfig/CompKeyDB
 lib/X11/app-defaults/Fig
 lib/X11/app-defaults/Fig-color
