@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6474 2004/07/06 19:52:01 jdolecek Exp $
+$NetBSD: CHANGES,v 1.6475 2004/07/06 23:00:43 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3284,3 +3284,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added rfstool-0.14 [agc 2004-07-06]
 	Added libfwbuilder-1.0.2 [agc 2004-07-06]
 	Updated php4 to 4.3.7 [jdolecek 2004-07-06]
+	Updated cpuflags to 0.72 [abs 2004-07-06]
+
