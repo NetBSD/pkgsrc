@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1702 2004/05/03 21:39:18 reed Exp $
+$NetBSD: TODO,v 1.1703 2004/05/04 02:46:21 taca Exp $
 
 Suggested new packages
 ======================
@@ -307,7 +307,7 @@ Suggested package updates
 	o physfs-1.0.0
 	o plib-1.7.0
 	o ploticus-2.20
-	o postfix-2.1.0
+	o postfix-2.1.1
 	o psi-0.9.1
 	o pwlib-1.5.2
 	o py-psycopg-1.1.10
