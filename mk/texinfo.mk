@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.22 2003/09/02 06:59:48 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.23 2003/09/09 09:10:55 seb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES is
 # not empty or USE_MAKEINFO is not "no".
@@ -55,6 +55,8 @@ FILES_SUBST+=		INFO_DIR=${INFO_DIR:Q}
 
 # Minimum required version for the GNU makeinfo command.
 TEXINFO_REQD?=	3.12
+_TEXINFO_REQD_MAJOR=	${TEXINFO_REQD:C|\..*$||}
+_TEXINFO_REQD_MINOR=	${TEXINFO_REQD:C|^[0-9]+\.||:C|\..*$||}
 
 # Argument to specify maximum info files size for newer versions
 # of makeinfo. This argument is supported since makeinfo 4.1.
@@ -76,8 +78,9 @@ _MAKEINFO=	${_i_}
 .  endfor
 
 # Record makeinfo's version.
-# If makeinfo's version contains useful information outside [0-9].[0-9],
-# the following would have to be changed as well as the comparison below.
+# If makeinfo's version contains useful information outside the first
+# two dot separated numbers the following would have to be changed as well
+# as _{MAKEINFO,TEXINFO_REQD}_{MAJOR,MINOR} and their comparison below.
 .  if !empty(_MAKEINFO) && !defined(MAKEINFO_VERSION)
 MAKEINFO_VERSION_OUTPUT!=	${_MAKEINFO} --version 2>/dev/null || ${ECHO}
 MAKEINFO_VERSION=
@@ -95,8 +98,14 @@ MAKEFLAGS+=			MAKEINFO_VERSION=${MAKEINFO_VERSION}
 # Here it is assumed devel/gtexinfo's makeinfo version will be
 # superior or equal to TEXINFO_REQD.
 _NEED_TEXINFO=		YES
-.  if defined(MAKEINFO_VERSION) && ${MAKEINFO_VERSION} >= ${TEXINFO_REQD}
+.  if defined(MAKEINFO_VERSION)
+_MAKEINFO_VERSION_MAJOR=	${MAKEINFO_VERSION:C|\..*$||}
+_MAKEINFO_VERSION_MINOR=	${MAKEINFO_VERSION:C|^[0-9]+\.||:C|\..*$||}
+.    if ${_MAKEINFO_VERSION_MAJOR} > ${_TEXINFO_REQD_MAJOR}
 _NEED_TEXINFO=		NO
+.    elif ${_MAKEINFO_VERSION_MAJOR} == ${_TEXINFO_REQD_MAJOR} && ${_MAKEINFO_VERSION_MINOR} >= ${_TEXINFO_REQD_MINOR}
+_NEED_TEXINFO=		NO
+.    endif
 .  endif
 .  if !empty(_NEED_TEXINFO:M[yY][eE][sS])
 BUILD_DEPENDS+=		gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
