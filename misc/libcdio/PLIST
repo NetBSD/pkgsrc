@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/17 14:38:22 recht Exp $
+include/cdio/cd_types.h
+include/cdio/cdio.h
+include/cdio/iso9660.h
+include/cdio/logging.h
+include/cdio/sector.h
+include/cdio/types.h
+include/cdio/util.h
+include/cdio/version.h
+include/cdio/xa.h
+info/libcdio.info
+lib/libcdio.a
+lib/libcdio.la
+lib/libcdio.so
+lib/libcdio.so.0
+lib/libcdio.so.0.0
+lib/libiso9660.a
+lib/libiso9660.la
+lib/libiso9660.so
+lib/libiso9660.so.0
+lib/libiso9660.so.0.0
+lib/pkgconfig/libcdio.pc
+lib/pkgconfig/libiso9660.pc
+@dirrm include/cdio
