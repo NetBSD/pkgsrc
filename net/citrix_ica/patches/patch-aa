@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/20 19:06:12 wiz Exp $
+
+--- linuxx86/hinst.orig	Tue Aug  8 20:24:55 2000
++++ linuxx86/hinst
+@@ -112,7 +112,7 @@
+ 
+ # The hosts file name
+ CAT_CMD=cat
+-MORE_CMD=more
++MORE_CMD="echo Please read "
+ CAT_HOST_ARG=/etc/hosts
+ 
+ # The command to read host information from NIS
+@@ -835,13 +835,13 @@
+ 		echo_no_nl $calcspace3
+ 		read dummy
+ 
+-		/bin/false
++		/usr/bin/false
+ 		return 
+ 	fi
+ 
+ 	$ECHO_CMD $calcspace4
+ 
+-	/bin/true
++	/usr/bin/true
+ 	return
+ }
+ 
