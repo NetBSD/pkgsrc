@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2004/02/15 08:02:23 itojun Exp $
+$NetBSD: patch-ab,v 1.4 2004/06/02 06:56:07 itojun Exp $
 
---- Makefile.in.orig	2004-01-30 08:33:49.000000000 +0900
-+++ Makefile.in	2004-02-15 16:40:20.000000000 +0900
-@@ -473,7 +473,7 @@
+--- Makefile.in.orig	2004-05-21 06:21:13.000000000 +0900
++++ Makefile.in	2004-06-02 15:31:19.000000000 +0900
+@@ -536,7 +536,7 @@
   configure.lineno
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
@@ -11,27 +11,25 @@ $NetBSD: patch-ab,v 1.3 2004/02/15 08:02:23 itojun Exp $
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
  
-@@ -1256,10 +1256,10 @@
+@@ -1440,9 +1440,9 @@
  
  # Install docs and sources.
- install-data-local : doc-html
+ install-data-local : chicken.html
 -	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/doc
--	-for file in $(DOCFILES); do cp $(srcdir)/doc/$$file $(DESTDIR)$(pkgdatadir)/doc; done
--	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/doc/manual
--	-cp $(srcdir)/doc/manual/* $(DESTDIR)$(pkgdatadir)/doc/manual
+-	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(pkgdatadir)/doc; done
+-	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
-+	-for file in $(DOCFILES); do cp $(srcdir)/doc/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
-+	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken/manual
-+	-cp $(srcdir)/doc/manual/* $(DESTDIR)$(prefix)/share/doc/chicken/manual
- 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
- 	./chicken-setup
- clean-local:
-@@ -1455,7 +1455,7 @@
++	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
+ 
+ chicken.html: chicken.texi
+ 	$(MAKEINFO) --no-split --html chicken.texi
+@@ -1630,7 +1630,7 @@
  .PHONY : test
  
  test :
 -	cd testsuites; $(MAKE) CC="$(CC)" CHICKEN="../chicken" LIBDIR=../.libs CFLAGS="$(CFLAGS)"; cd ..
 +	cd testsuites; $(MAKE) CHICKEN="../chicken" LIBDIR=../.libs; cd ..
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ 
+ # Benchmarks:
+ 
