@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.38 2004/11/22 22:24:47 wiz Exp $
+# $NetBSD: compiler.mk,v 1.39 2004/11/28 21:32:47 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -116,6 +116,14 @@ _PKGSRC_COMPILER:=	${_compiler_} ${_PKGSRC_COMPILER}
 .  endif
 .endfor
 _PKGSRC_COMPILER:=	${_COMPILER} ${_PKGSRC_COMPILER}
+
+# Set initial values for PKG_{CC,CPP,CXX,FC} which are used within the
+# ${compiler}.mk files to discover the short names of the compilers.
+#
+PKG_CC:=	${CC}
+PKG_CPP:=	${CPP}
+PKG_CXX:=	${CXX}
+PKG_FC:=	${FC}
 
 .for _compiler_ in ${_PKGSRC_COMPILER}
 .  include "../../mk/compiler/${_compiler_}.mk"
