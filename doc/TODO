@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2030 2004/08/14 15:56:35 snj Exp $
+$NetBSD: TODO,v 1.2031 2004/08/14 20:30:33 ben Exp $
 
 Suggested new packages
 ======================
@@ -329,6 +329,7 @@ Suggested package updates
 	o msmtp-1.2.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
+	o mummer-3.15
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
