@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.7 2004/09/08 15:28:38 sketch Exp $
+
+--- support/strcasestr.c.orig	2000-07-01 19:36:29.000000000 +0100
++++ support/strcasestr.c	2004-09-08 16:25:25.000000000 +0100
+@@ -25,4 +25,7 @@
+  
+ ****************************************************************************/
++#include "config.h"
++
++#ifndef HAVE_STRCASESTR
+ #include <string.h>
+ /*
+@@ -46,2 +49,3 @@
+     return ((char *) s);
+ }
++#endif
