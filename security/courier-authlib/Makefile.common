@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/02/10 03:21:30 jlam Exp $
+
+MAINTAINER=		jlam@NetBSD.org
+HOMEPAGE=		http://www.courier-mta.org/
+
+COURIER_USER?=		courier
+COURIER_GROUP?=		courier
+FILES_SUBST+=		COURIER_USER=${COURIER_USER}
+FILES_SUBST+=		COURIER_GROUP=${COURIER_GROUP}
+
+USE_PKGINSTALL=		yes
+PKG_GROUPS=		${COURIER_GROUP}
+PKG_USERS=		${COURIER_USER}:${COURIER_GROUP}::Courier\\ user
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-mailuser=${COURIER_USER}
+CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
