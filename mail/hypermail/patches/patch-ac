@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.2.2 2003/03/08 12:31:27 grant Exp $
+
+--- src/Makefile.in.orig	Wed Mar  5 10:33:51 2003
++++ src/Makefile.in
+@@ -56,7 +56,7 @@ MAILOBJS=	mail.o ../libcgi/libcgi.a
+ .c.o:
+ 	$(CC) -c $(CFLAGS) $<
+ 
+-all:    pcre/libpcre.a @FNV_DEP@ hypermail$(SUFFIX) mail$(SUFFIX) lang$(SUFFIX)
++all:    @FNV_DEP@ hypermail$(SUFFIX) mail$(SUFFIX) lang$(SUFFIX)
+ 
+ pcre/libpcre.a:
+ 	@cd pcre; $(MAKE) libtool libpcre.a CC="$(CC)" CFLAGS="$(CFLAGS)"
