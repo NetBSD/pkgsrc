@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/08 12:25:34 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/20 03:00:06 jlam Exp $
 
 DISTNAME=	kdeaddons-2.2.2
 COMMENT=	Add ons for the KDE integrated X11 desktop
 
 .include "../../x11/kde2/Makefile.kde2"
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	YES
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../x11/kde2/buildlink2.mk"
+.include "../../x11/kdebase2/buildlink2.mk"
 
-.include "../../x11/kde2/buildlink.mk"
-.include "../../x11/kdebase2/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
