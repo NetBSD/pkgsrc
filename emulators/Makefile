@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/18 04:59:11 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/21 11:21:13 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -28,5 +28,6 @@
 #    SUBDIR += x48
 #    SUBDIR += xgs
    SUBDIR += xmame
+   SUBDIR += xmess
 
 .include "../mk/bsd.pkg.subdir.mk"
