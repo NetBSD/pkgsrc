@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/23 08:21:59 skrll Exp $
+
+--- host/gtk/gtk-screen.c.orig	Wed Oct 29 02:03:26 2003
++++ host/gtk/gtk-screen.c
+@@ -114,13 +114,23 @@ _tme_gtk_screen_th_update(struct tme_gtk
+ static unsigned int
+ _tme_gtk_gdkimage_bipp(GdkImage *image)
+ {
+-  unsigned int bipp, total_bits_halved;
++  unsigned int bipp, total_bits;
+ 
+-  total_bits_halved = image->bpl;
+-  total_bits_halved = (total_bits_halved * 8) / 2;
+-  for (bipp = image->depth;
+-       (bipp * image->width) <= total_bits_halved;
+-       bipp <<= 1);
++  /* if the bytes per pixel value is greater than one, or if the image
++     depth is 8 or greater, just convert the bytes per pixel value to
++     bits per pixel: */
++  if (image->bpp > 1
++      || image->depth >= 8) {
++    return (image->bpp * 8);
++  }
++
++  /* otherwise, we know that the depth of the image is less than
++     eight, and the number of bits per pixel is eight or less: */
++  total_bits = image->bpl;
++  total_bits *= 8;
++  for (bipp = 8;
++       bipp > image->depth && (bipp * image->width) > total_bits;
++       bipp >>= 1);
+   return (bipp);
+ }
+ 
