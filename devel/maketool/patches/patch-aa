@@ -1,20 +1,97 @@
-$NetBSD: patch-aa,v 1.3 2000/01/03 23:36:19 fredb Exp $
+$NetBSD: patch-aa,v 1.4 2000/08/11 18:47:40 fredb Exp $
 
---- Makefile.in.orig	Sun Nov  7 05:09:56 1999
-+++ Makefile.in	Sun Nov 21 14:47:41 1999
-@@ -26,13 +26,13 @@
- PACKAGE=	@PACKAGE@
- VERSION=	@VERSION@
- @USRDOC@DOCDIR=		$(prefix)/doc/$(PACKAGE)-$(VERSION)
--localedir=	$(prefix)/@DATADIRNAME@/locale
-+localedir=	$(prefix)/share/locale
+--- configure.orig	Tue Jul 18 12:58:44 2000
++++ configure	Fri Aug 11 12:53:21 2000
+@@ -927,16 +927,16 @@
  
- CC=		@CC@
- CFLAGS=		@CFLAGS@
- CPPFLAGS=	@GTK_CFLAGS@ -D_USE_BSD -I. -Iicons -Iintl \
- 		-DLOCALEDIR=\"$(localedir)\" \
--		$(TESTCPPFLAGS)
-+		@CPPFLAGS@ $(TESTCPPFLAGS)
- LDLIBS=		@GTK_LIBS@ @INTLLIBS@
- O=		objs
+ fi
  
+-DOCDIR=/usr/doc
+-echo $ac_n "checking for presence of $DOCDIR""... $ac_c" 1>&6
+-echo "configure:933: checking for presence of $DOCDIR" >&5
+-if test -d $DOCDIR ; then
+-  USRDOC=
+-  echo "$ac_t""yes" 1>&6
+-else
++#DOCDIR=/usr/doc
++#echo $ac_n "checking for presence of $DOCDIR""... $ac_c" 1>&6
++#echo "configure:933: checking for presence of $DOCDIR" >&5
++#if test -d $DOCDIR ; then
++#  USRDOC=
++#  echo "$ac_t""yes" 1>&6
++#else
+   USRDOC="#USRDOC#"
+-  echo "$ac_t""no" 1>&6
+-fi
++#  echo "$ac_t""no" 1>&6
++#fi
+ 
+ 
+ 
+@@ -2255,8 +2255,8 @@
+ if eval "test \"`echo '$''{'gt_cv_func_gettext_libintl'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+-  echo $ac_n "checking for gettext in -lintl""... $ac_c" 1>&6
+-echo "configure:2260: checking for gettext in -lintl" >&5
++#  echo $ac_n "checking for gettext in -lintl""... $ac_c" 1>&6
++#echo "configure:2260: checking for gettext in -lintl" >&5
+ ac_lib_var=`echo intl'_'gettext | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -2298,7 +2298,7 @@
+ 
+ fi
+ 
+-echo "$ac_t""$gt_cv_func_gettext_libintl" 1>&6
++#echo "$ac_t""$gt_cv_func_gettext_libintl" 1>&6
+ else
+   echo "$ac_t""no" 1>&6
+ fi
+@@ -2466,27 +2466,27 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-		cat > conftest.$ac_ext <<EOF
+-#line 2471 "configure"
+-#include "confdefs.h"
+-
+-int main() {
+-extern int _nl_msg_cat_cntr;
+-			       return _nl_msg_cat_cntr
+-; return 0; }
+-EOF
+-if { (eval echo configure:2479: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+-  rm -rf conftest*
+-  CATOBJEXT=.gmo
++#		cat > conftest.$ac_ext <<EOF
++##line 2471 "configure"
++##include "confdefs.h"
++#
++#int main() {
++#extern int _nl_msg_cat_cntr;
++#			       return _nl_msg_cat_cntr
++#; return 0; }
++#EOF
++#if { (eval echo configure:2479: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
++#  rm -rf conftest*
++#  CATOBJEXT=.gmo
+ 		   DATADIRNAME=share
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
++#else
++#  echo "configure: failed program was:" >&5
++#  cat conftest.$ac_ext >&5
++#  rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
+-fi
+-rm -f conftest*
++#		   DATADIRNAME=lib
++#fi
++#rm -f conftest*
+ 		INSTOBJEXT=.mo
+ 	      fi
+ 	    fi
