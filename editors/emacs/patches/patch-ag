@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.6 1999/12/28 14:08:56 tron Exp $
+$NetBSD: patch-ag,v 1.7 2000/06/24 17:03:38 minoura Exp $
 
---- src/config.in.orig	Mon Apr 26 14:19:44 1999
-+++ src/config.in	Fri Dec 17 14:32:45 1999
-@@ -234,6 +234,7 @@
- #undef HAVE_GETCWD
- #undef HAVE_SHUTDOWN
+--- src/config.in.orig	Sat May 20 23:58:21 2000
++++ src/config.in	Sun Jun 18 09:00:34 2000
+@@ -236,6 +236,7 @@
  #undef HAVE_STRFTIME
+ #undef HAVE_GRANTPT
+ #undef HAVE_GETPT
 +#undef HAVE_GETADDRINFO
  
  #undef LOCALTIME_CACHE

@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.2 2000/03/10 15:45:35 minoura Exp $
+$NetBSD: md5,v 1.3 2000/06/24 17:03:40 minoura Exp $
 
-MD5 (emacs-20.6.tar.gz) = cfcaa33b5fc7d64210d3428f13570f8d
-MD5 (leim-20.6.tar.gz) = d5e35be67636b266b604fd606aefcb01
+MD5 (emacs-20.7.tar.gz) = c732cf5e668d4ac67d9418ecb103ecf5
+MD5 (leim-20.7.tar.gz) = 74766f5336675ca8e951037339077c09
