@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/11/30 23:01:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/21 20:48:29 hubertf Exp $
 
-DISTNAME=		silc-client-0.6.6
-PKGREVISION=		1
+DISTNAME=		silc-client-0.7.1
 CATEGORIES=		chat
-MASTER_SITES=		http://ftp.silcnet.org/client/sources/ \
+MASTER_SITES=		http://silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
 			http://www.planetmirror.com/pub/silcnet/client/sources/ \
 			ftp://ftp.au.silcnet.org/pub/silcnet/client/sources/ \
