@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/07 20:49:45 tron Exp $
+
+--- radio.c.orig	Thu Oct 21 22:14:07 1999
++++ radio.c	Sun May  7 22:45:51 2000
+@@ -61,7 +61,7 @@
+ #include <sys/param.h>
+ #include <sys/wait.h>
+ #ifdef __NetBSD__
+-#include <dev/pci/bt848var.h>
++#include <dev/ic/bt8xx.h>
+ #include <soundcard.h>
+ #else
+ #ifdef linux
