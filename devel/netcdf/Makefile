@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/05 03:56:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/23 22:04:26 dmcmahill Exp $
 #
 
 DISTNAME=	netcdf-3.4
@@ -11,12 +11,9 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.unidata.ucar.edu/packages/netcdf/index.html
 
-.if ! exists(/usr/bin/fort77)
-DEPENDS+=	fort77-1.14a:../../lang/fort77
-.endif
-
 CONFIGURE_ENV+=	CPPFLAGS="-Df2cFortran -Dunix"
 
+USE_FORTRAN=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
