@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/11/01 23:59:13 adrianp Exp $
+$NetBSD: MESSAGE,v 1.2 2005/04/04 09:31:46 adam Exp $
 
 The local state directory is now explictily defined as ${VARBASE}/nessus
-for nessus components. 
+for nessus components.
 
 ===========================================================================
