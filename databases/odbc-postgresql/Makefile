@@ -1,30 +1,28 @@
-# $NetBSD: Makefile,v 1.2 2001/04/06 23:48:49 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/14 14:52:06 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
+.include "../../databases/postgresql/Makefile.ssl"
 
-PKGNAME=		odbc-${DISTNAME}
-
+PKGNAME=		odbc-postgresql-${PG_VERS}
+PG_PKG_VERS=		# empty
 COMMENT=		ODBC interface to PostgreSQL
+
 MAINTAINER=		jwise@netbsd.org
 
-DEPENDS+=		postgresql-${PG_VERS}:../../databases/postgresql
+CONFIGURE_ARGS+=	--with-odbc
+CONFIGURE_ARGS+=	--with-odbcinst=/etc
 
-MAKE_ENV+=		INSTALLED_LIBPQ=1
-
-CONFIGURE_ARGS+=	--without-perl --without-tcl
-CONFIGURE_ARGS+=	--with-odbc --with-odbcinst=/etc
-
-DIRS_TO_BUILD=		interfaces/odbc
+DIRS_TO_BUILD=		src/interfaces/odbc
 
 do-build:
 .for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV} \
+	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${ALL_TARGET}
 .endfor
 
 do-install:
 .for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV} \
+	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 .endfor
 
