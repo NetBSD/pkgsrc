@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2004/09/30 22:12:54 rh Exp $
+# $NetBSD: Makefile,v 1.194 2004/09/30 23:48:16 rh Exp $
 #
 
 COMMENT=	Programming languages
@@ -145,6 +145,7 @@ SUBDIR+=	squeak
 SUBDIR+=	stalin
 SUBDIR+=	sun-jdk13
 SUBDIR+=	sun-jdk14
+SUBDIR+=	sun-jdk15
 SUBDIR+=	sun-jre13
 SUBDIR+=	sun-jre14
 SUBDIR+=	sun-jre15
