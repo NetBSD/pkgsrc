@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/16 09:24:14 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2003/07/17 09:09:59 uebayasi Exp $
 
 DISTNAME=	cue-snap-20030714
 PKGNAME=	cue-20030714
@@ -13,16 +13,20 @@ USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	USE_INET6 USE_IDEA USE_CANNA
+BUILD_DEFS+=	USE_INET6 USE_IDEA CUE_USE_CANNA
 
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-# require Canna, for now, cue assumes Japanese encoding anyways
-CONFIGURE_ARGS+=	--with-canna=${BUILDLINK_PREFIX.canna-lib}
+.if defined(CUE_USE_CANNA) && !empty(CUE_USE_CANNA:M[Yy][Ee][Ss])
+.include "../../inputmethod/canna-lib/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-canna=${BUILDLINK_PREFIX.canna}
+.else
+CONFIGURE_ARGS+=	--without-canna
+.endif
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .if defined(USE_IDEA)
 CONFIGURE_ARGS+=	--enable-idea
@@ -36,6 +40,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cue.hlp  ${PREFIX}/share/doc/cue
 	${INSTALL_DATA} ${WRKSRC}/cue.html ${PREFIX}/share/doc/cue
 
-.include "../../inputmethod/canna-lib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
