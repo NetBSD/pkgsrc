@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2002/07/17 11:23:10 skrll Exp $
+
+--- configure.orig	Tue Jul 16 09:08:39 2002
++++ configure
+@@ -8159,6 +8159,7 @@
+   LIBQT="$LIBQT $LIBPNG $LIBJPEG"
+ fi
+ 
++if false; then
+ echo "$as_me:8162: checking for Qt" >&5
+ echo $ECHO_N "checking for Qt... $ECHO_C" >&6
+ 
+@@ -8673,6 +8674,7 @@
+    fi
+ 
+ LIB_QT="$kde_int_qt "'$(LIBPNG) $(LIBJPEG) -lXext $(LIB_X11) $(LIBSM)'
++fi
+ 
+ echo "$as_me:8677: checking for rpath" >&5
+ echo $ECHO_N "checking for rpath... $ECHO_C" >&6
