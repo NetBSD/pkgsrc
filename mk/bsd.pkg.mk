@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.923 2002/02/07 20:34:21 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.924 2002/02/13 20:05:04 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -1295,6 +1295,14 @@ SITES_${fetchfile:T}?= ${PATCH_SITES}
 _FETCH_ALLFILES= ${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR};
 _FETCH_ALLFILES+= cd ${_DISTDIR};
 .    for fetchfile in ${_ALLFILES}
+.      if defined(DYNAMIC_MASTER_SITES)
+_FETCH_ALLFILES+= 							\
+	file="${fetchfile}";						\
+	bfile="${fetchfile:T}";						\
+	sites=`sh ${FILESDIR}/getsite.sh $${file}`; 			\
+	${_CHECK_DIST_PATH};						\
+	${_FETCH_FILE};
+.      else
 _FETCH_ALLFILES+= 							\
 	unsorted_sites="${SITES_${fetchfile:T}} ${_MASTER_SITE_BACKUP}"; \
 	sites="${ORDERED_SITES}";					\
@@ -1302,6 +1310,7 @@ _FETCH_ALLFILES+= 							\
 	bfile="${fetchfile:T}";						\
 	${_CHECK_DIST_PATH};						\
 	${_FETCH_FILE};
+.      endif
 .    endfor
 .  endif
 _FETCH_ALLFILES?= ${DO_NADA}
