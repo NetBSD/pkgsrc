@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/19 09:12:27 agc Exp $
+bin/enriched2html
