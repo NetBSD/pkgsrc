@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2519 2004/11/27 11:15:39 gson Exp $
+$NetBSD: TODO,v 1.2520 2004/11/27 12:14:10 gson Exp $
 
 Suggested new packages
 ======================
@@ -1206,7 +1206,6 @@ Suggested package updates
 	o sqlrelay-0.35
 	o sqwebmail-4.0.7
 	o srp_client-1.7.5 [jlam]
-	o st-1.5.1
 	o staroffice-7p1
 	o stellarium-0.6.1
 	o stlport-4.6.2
