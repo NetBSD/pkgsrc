@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8400 2004/12/22 06:22:48 jlam Exp $
+$NetBSD: CHANGES,v 1.8401 2004/12/22 08:55:09 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6463,3 +6463,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added netgroup-0.0 [christos 2004-12-21]
 	Updated tiff to 3.6.1nb6 [reed 2004-12-22]
 	Updated openldap to 2.2.19 [jlam 2004-12-22]
+	Updated 3ddesktop to 0.2.5nb6 [snj 2004-12-22]
