@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2002/10/05 02:54:22 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/12/25 03:47:36 wiz Exp $
 
 SHA1 (aspell-.33.7.1.tar.gz) = 050f7736b5a162fc717d203905ecee9981666aff
 Size (aspell-.33.7.1.tar.gz) = 1647417 bytes
+SHA1 (aspell-.33-fix2.diff) = b9a711f7194ddd2099c9bcfbd05c246a66dcc3ad
+Size (aspell-.33-fix2.diff) = 1421 bytes
