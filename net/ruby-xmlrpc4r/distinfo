@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/27 15:31:18 taca Exp $
+$NetBSD: distinfo,v 1.2 2004/11/28 04:18:24 taca Exp $
 
-SHA1 (ruby/xmlrpc4r-1_7_9.tar.gz) = 322998d757524d82c1beb5cd0529c63ec212763c
-Size (ruby/xmlrpc4r-1_7_9.tar.gz) = 60834 bytes
+SHA1 (ruby/xmlrpc4r-1_7_16.tar.gz) = e72092533619003e99dd638fa6132ab6436db228
+Size (ruby/xmlrpc4r-1_7_16.tar.gz) = 64066 bytes
