@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1998/09/07 03:25:45 garbled Exp $
+# $NetBSD: Makefile,v 1.38 1998/10/13 00:46:11 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -17,6 +17,7 @@
 #    SUBDIR += cgoban
 #    SUBDIR += connect4
 #    SUBDIR += cosmo
+    SUBDIR += craft
     SUBDIR += crossfire
 #    SUBDIR += dontspace
 #    SUBDIR += doom
