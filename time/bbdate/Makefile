@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/09/05 23:47:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/22 21:02:33 wiz Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
@@ -11,6 +11,6 @@ COMMENT=	Display the current date
 
 GNU_CONFIGURE=  YES
 USE_X11=        YES
-USE_GCC_SHLIB=	YES
+USE_LANGUAGES=	c++
 
 .include "../../mk/bsd.pkg.mk"
