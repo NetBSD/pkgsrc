@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1257 2003/01/28 08:38:17 jlam Exp $
+$NetBSD: CHANGES,v 1.1258 2003/01/28 09:07:02 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -453,3 +453,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tk-expect to 5.38 [markd 2003-01-28]
 	Added umbrello-1.1.1 [markd 2003-01-28]
 	Updated cgoban-java to 2.4.57 [jlam 2003-01-28]
+	Updated ap-layout to 3.2 [grant 2003-01-28]
