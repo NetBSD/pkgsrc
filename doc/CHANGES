@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.301 2002/10/18 14:53:41 minoura Exp $
+$NetBSD: CHANGES,v 1.302 2002/10/18 17:07:11 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3313,3 +3313,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated rpm2cpio to 1.1 [wiz 2002-10-18]
 	Updated tuxpaint-stamps to 2002.10.16 [wiz 2002-10-18]
 	Updated w3 to 4.0b47 [minoura 2002-10-18]
+	Added pyca-0.6.5.20020902 [jlam 2002-10-18]
