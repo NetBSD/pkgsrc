@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/02/19 23:07:21 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/23 19:13:00 tron Exp $
 #
 
 DISTNAME=	kdegraphics-1.1
@@ -21,7 +21,11 @@ CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}
 		"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
-CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+CFLAGS+=	-I${LOCALBASE}/include
+CONFIGURE_ENV=  KDEDIR=${PREFIX} \
+		CXXFLAGS="${CFLAGS}" \
+		all_libraries="-L${LOCALBASE}/lib" \
+                INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
