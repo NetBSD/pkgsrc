@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2001/11/01 09:41:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.22 2001/12/02 21:29:21 wiz Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -19,8 +19,8 @@ DISTFILES+=		${GS_SOURCES}
 # Adobe's JPEG implementation in their PDF/PS documents is non-standard,
 # so we can't use an already installed libjpeg.so.
 #
-MASTER_SITES+=		ftp://ftp.uu.net/graphics/jpeg/
 JPEG_SOURCES=		jpegsrc.v6b.tar.gz
+MASTER_SITES_${JPEG_SOURCES}=		ftp://ftp.uu.net/graphics/jpeg/
 DISTFILES+=		${JPEG_SOURCES}
 EXTRACT_LIST+=		${JPEG_SOURCES}
 
@@ -30,19 +30,19 @@ PATCHFILES=		gs${GS_VERS}-jpdf-exp.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 # PostScript source to decode encrypted PDF files
-MASTER_SITES+=		http://www.ozemail.com.au/~geoffk/pdfencrypt/
 PDF_SEC=		pdf_sec.ps
+MASTER_SITES_${PDF_SEC}=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES+=		${PDF_SEC}
 
 # Additional driver for several HP deskjets
-MASTER_SITES+=		ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
 HPDJ_DRV=		hpdj-2.6
+MASTER_SITES_${HPDJ_DRV}.tar.gz=	ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
 DISTFILES+=		${HPDJ_DRV}.tar.gz
 EXTRACT_LIST+=		${HPDJ_DRV}.tar.gz
 
 # I don't know the primary destribution sites of these drivers....
-MASTER_SITES+=		ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 DMPRT_DRV=		dmprt-2.01
+MASTER_SITES_${DMPRT_DRV}.tar.gz=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 DISTFILES+=		${DMPRT_DRV}.tar.gz
 EXTRACT_LIST+=		${DMPRT_DRV}.tar.gz
 
@@ -61,26 +61,26 @@ DISTFILES+=		${MD5000_DRV}.tar.gz
 EXTRACT_LIST+=		${MD5000_DRV}.tar.gz
 
 # Alps MD-2000/2010/4000/1300/1500/5000
-MASTER_SITES+=		http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
 MD2000_DRV=		gdevmd2k-0.2a
+MASTER_SITES_${MD2000_DRV}.tar.gz=	http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
 DISTFILES+=		${MD2000_DRV}.tar.gz
 EXTRACT_LIST+=		${MD2000_DRV}.tar.gz
 
 # Canon LIPS II+, III, IV; EPSON ESC/Page; NEC NPDL drivers
-MASTER_SITES+=		http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
 LIPS_DRV=		gdevlips-2.3.6
+MASTER_SITES_${LIPS_DRV}.tar.gz=	http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
 DISTFILES+=		${LIPS_DRV}.tar.gz
 EXTRACT_LIST+=		${LIPS_DRV}.tar.gz
 
 # Ricoh RPDL
-MASTER_SITES+=		http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
 RPDL_DRV=		gdevrpdl
+MASTER_SITES_${RPDL_DRV}.tar.gz=	http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
 DISTFILES+=		${RPDL_DRV}.tar.gz
 EXTRACT_LIST+=		${RPDL_DRV}.tar.gz
 
 # Kyocera Prescribe
-MASTER_SITES+=		${MASTER_SITE_LOCAL}
 PRESCR_DRV=		gdevprsc-0.3
+MASTER_SITES_${PRESCR_DRV}.tar.gz=	${MASTER_SITE_LOCAL}
 DISTFILES+=		${PRESCR_DRV}.tar.gz
 EXTRACT_LIST+=		${PRESCR_DRV}.tar.gz
 

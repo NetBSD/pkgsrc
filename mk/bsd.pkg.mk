@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.872 2001/12/02 03:11:35 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.873 2001/12/02 21:29:21 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -857,7 +857,7 @@ PATCH_SITES+=	${_MASTER_SITE_BACKUP}
 MASTER_SITES:=	${_MASTER_SITE_OVERRIDE} ${MASTER_SITES}
 PATCH_SITES:=	${_MASTER_SITE_OVERRIDE} ${PATCH_SITES}
 .endif
-  
+
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 .if defined(PKGREVISION) && ${PKGREVISION} != ""
@@ -1229,20 +1229,22 @@ _FETCH_FILE=								\
 					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
 					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4;}' <${DISTINFO_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
-						continue 2;		\
+						break;			\
 					else				\
 						${ECHO_MSG} "=> Checksum failure - trying next site."; \
 					fi;				\
 				elif [ ! -f ${_DISTDIR}/$$bfile ]; then \
 					${ECHO_MSG} "=> FTP didn't fetch expected file, trying next site." ; \
 				else					\
-					continue 2;			\
+					break;				\
 				fi;					\
 			fi						\
 		done;							\
-		${ECHO_MSG} "=> Couldn't fetch $$bfile - please try to retrieve this";\
-		${ECHO_MSG} "=> file manually into ${_DISTDIR} and try again."; \
-		exit 1;							\
+		if [ ! -f ${_DISTDIR}/$$bfile ]; then \
+			${ECHO_MSG} "=> Couldn't fetch $$bfile - please try to retrieve this";\
+			${ECHO_MSG} "=> file manually into ${_DISTDIR} and try again."; \
+			exit 1;						\
+		fi;							\
 	fi
 
 _CHECK_DIST_PATH=							\
@@ -1277,23 +1279,25 @@ SORTED_PATCH_SITES_CMD= ${ECHO} '${PATCH_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
 .if !target(do-fetch)
 do-fetch:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DISTDIR}
+.for fetchfile in ${_DISTFILES}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	 sites=`${SORTED_MASTER_SITES_CMD}`;				\
-	 for file in "" ${_DISTFILES}; do				\
-		if [ "X$$file" = X"" ]; then continue; fi;		\
-		bfile=`${BASENAME} $$file`;				\
-		${_CHECK_DIST_PATH};					\
-		${_FETCH_FILE}						\
-	 done
+	sortedsites=`${SORTED_MASTER_SITES_CMD}`;			\
+	sites="${MASTER_SITES_${fetchfile:T}} $$sortedsites";		\
+	file="${fetchfile}";						\
+	bfile="${fetchfile:T}";						\
+	${_CHECK_DIST_PATH};						\
+	${_FETCH_FILE}
+.endfor
 .  if defined(_PATCHFILES)
+.for fetchfile in ${_PATCHFILES}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	 sites=`${SORTED_PATCH_SITES_CMD}`;				\
-	 for file in "" ${_PATCHFILES}; do				\
-		if [ "X$$file" = X"" ]; then continue; fi;		\
-		bfile=`${BASENAME} $$file`;				\
-		${_CHECK_DIST_PATH};					\
-		${_FETCH_FILE}						\
-	 done
+	sortedsites=`${SORTED_PATCH_SITES_CMD}`;			\
+	sites="${PATCH_SITES_${fetchfile:T}} $$sortedsites";		\
+	file="${fetchfile}";						\
+	bfile="${fetchfile:T}";						\
+	${_CHECK_DIST_PATH};						\
+	${_FETCH_FILE}
+.endfor
 .  endif
 .endif
 
@@ -1989,7 +1993,7 @@ show-shlib-type:
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
 .endif
- 
+
 
 ################################################################
 # Skeleton targets start here
@@ -2482,33 +2486,29 @@ fetch-list-one-pkg:
 	@${MKDIR} ${_DISTDIR}
 	@[ -z "${_DISTDIR}" ] || ${ECHO} "${MKDIR} ${_DISTDIR}"
 .  if defined(DISTFILES)
+.for fetchfile in ${DISTFILES}
 	@(cd ${_DISTDIR};						\
-	for file in "" ${DISTFILES}; do					\
-		if [ "X$$file" = X"" ]; then continue; fi;		\
-		bfile=`${BASENAME} $$file`;				\
-		if [ ! -f $$file -a ! -f $$bfile ]; then		\
-			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f $$bfile ] || "; \
-			for site in "" `${SORTED_MASTER_SITES_CMD}`; do	\
-				if [ "X$$site" = X"" ]; then continue; fi; \
-				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} "'"$${site}$${file}"'" "${FETCH_AFTER_ARGS}" '|| '; \
-			done;						\
-			${ECHO} "${ECHO} $${file} not fetched";		\
-		fi							\
-	done)
+	if [ ! -f ${fetchfile} -a ! -f ${fetchfile:T} ]; then		\
+		${ECHO} -n "cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] || "; \
+		for site in "" ${MASTER_SITES_${fetchfile:T}} `${SORTED_MASTER_SITES_CMD}`; do	\
+			if [ "X$$site" = X"" ]; then continue; fi; 	\
+			${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} "'"$${site}${fetchfile}"'" "${FETCH_AFTER_ARGS}" '|| '; \
+		done;							\
+		${ECHO} "${ECHO} ${fetchfile} not fetched";		\
+	fi)
+.endfor
 .  endif # DISTFILES
 .  if defined(PATCHFILES)
+.for fetchfile in ${PATCHFILE}
 	@(cd ${_DISTDIR};						\
-	for file in "" ${PATCHFILES}; do				\
-		if [ "X$$file" = X"" ]; then continue; fi;		\
-		bfile=`${BASENAME} $$file`;				\
-		if [ ! -f $$file -a ! -f $$bfile ]; then		\
-			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f $$bfile ] || "; \
-			for site in `${SORTED_PATCH_SITES_CMD}`; do	\
-				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| '; \
-			done;						\
-			${ECHO} "${ECHO} $${file} not fetched";		\
-		fi							\
-	done)
+	if [ ! -f ${fetchfile} -a ! -f ${fetchfile:T} ]; then		\
+		${ECHO} -n "cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] || "; \
+		for site in ${PATCH_SITES_${fetchfile:T}} `${SORTED_PATCH_SITES_CMD}`; do		\
+			${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${fetchfile} "${FETCH_AFTER_ARGS}" '|| '; \
+		done;							\
+		${ECHO} "${ECHO} $${fetchfile} not fetched";		\
+	fi)
+.endfor
 .  endif # defined(PATCHFILES)
 .endif # !target(fetch-list-one-pkg)
 
