@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/20 18:56:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/27 17:58:33 adrianp Exp $
 
-DISTNAME=	xmltv-0.5.35
+DISTNAME=	xmltv-0.5.36
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmltv/}
