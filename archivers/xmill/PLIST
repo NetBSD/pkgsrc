@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/17 09:20:25 grant Exp $
+bin/xmill
+bin/xdemill
+bin/xbmill
+bin/xbdemill
+share/doc/xmill/COPYRIGHT.txt
+share/doc/xmill/LICENSE.txt
+share/doc/xmill/MANUAL.txt
+share/doc/xmill/README.txt
+share/doc/xmill/xmill.ps.gz
+@dirrm share/doc/xmill

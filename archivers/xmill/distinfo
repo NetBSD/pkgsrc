@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/17 09:20:25 grant Exp $
+
+SHA1 (xmill-0-7.zip) = d4771e8fc860936e0d7360e5df4fce01152469c7
+Size (xmill-0-7.zip) = 1315864 bytes
+SHA1 (patch-aa) = 0c93f9dc66b283f9de7b12ad159023d94675126a
+SHA1 (patch-ab) = 1103d1d987fa070b80490e7a891a6869d32e7f0d
+SHA1 (patch-ac) = 33d8a8e1950de7e55bcdf579a2fbb3dc24709cc4
