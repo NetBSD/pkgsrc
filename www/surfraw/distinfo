@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:21 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 21:55:03 wiz Exp $
 
 SHA1 (surfraw-1.0.3.tar.gz) = c98cb9aed84098e475f598b196fb2699da04574e
+Size (surfraw-1.0.3.tar.gz) = 65476 bytes
 SHA1 (patch-aa) = 2a3d06f8de7364444aac446746124119282bb00b

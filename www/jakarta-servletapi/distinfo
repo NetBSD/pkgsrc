@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:49 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 21:54:38 wiz Exp $
 
 SHA1 (jakarta-servletapi-3.2-src.tar.gz) = 2f5bff6565a8f0550294a7dc899a589883a80dbc
+Size (jakarta-servletapi-3.2-src.tar.gz) = 101001 bytes
