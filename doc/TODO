@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2801 2004/12/29 13:22:53 adrianp Exp $
+$NetBSD: TODO,v 1.2802 2004/12/29 13:54:43 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -713,7 +713,6 @@ Suggested package updates
 	o odbc-postgresql-7.4.6
 	o offlineimap-4.0.8
 	o ogre-0.12.3
-	o oinkmaster-1.1
 	o oo2c-2.1.5
 	o open2300-1.8
 	o opencobol-0.30
