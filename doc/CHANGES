@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5462 2004/04/06 10:10:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.5463 2004/04/06 10:36:12 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1811,3 +1811,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rhythmbox to 0.7.2 [jmmv 2004-04-06]
 	Updated gnome2-media to 2.6.0nb1 [jmmv 2004-04-06]
 	Updated nautilus-media to 0.8.0nb1 [jmmv 2004-04-06]
+	Updated p5-Apache-DBI to 0.94 [recht 2004-04-06]
