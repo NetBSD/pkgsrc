@@ -1,4 +1,4 @@
-/*	$NetBSD: mtree.c,v 1.2 2003/09/05 04:38:47 grant Exp $	*/
+/*	$NetBSD: mtree.c,v 1.3 2004/08/21 04:10:45 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1990, 1993
@@ -32,6 +32,10 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -45,7 +49,7 @@ __COPYRIGHT("@(#) Copyright (c) 1989, 1990, 1993\n\
 #if 0
 static char sccsid[] = "@(#)mtree.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: mtree.c,v 1.2 2003/09/05 04:38:47 grant Exp $");
+__RCSID("$NetBSD: mtree.c,v 1.3 2004/08/21 04:10:45 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -93,7 +97,7 @@ main(int argc, char **argv)
 	dir = NULL;
 	init_excludes();
 
-	while ((ch = getopt(argc, argv, "cCdDeE:f:I:ik:K:lLmN:p:PrR:s:tuUWxX:"))
+	while ((ch = getopt(argc, argv, "cCdDeE:f:I:ik:K:lLmMN:p:PrR:s:tuUWxX:"))
 	    != -1) {
 		switch((char)ch) {
 		case 'c':
@@ -145,6 +149,9 @@ main(int argc, char **argv)
 		case 'm':
 			mflag = 1;
 			break;
+		case 'M':
+			mtree_Mflag = 1;
+			break;
 		case 'N':
 			if (! setup_getid(optarg))
 				mtree_err(
@@ -182,7 +189,7 @@ main(int argc, char **argv)
 			Uflag = uflag = 1;
 			break;
 		case 'W':
-			Wflag = 1;
+			mtree_Wflag = 1;
 			break;
 		case 'x':
 			ftsoptions |= FTS_XDEV;
@@ -235,7 +242,7 @@ usage(void)
 {
 
 	fprintf(stderr,
-	    "usage: %s [-cCdDelLPruUWx] [-i|-m] [-f spec] [-k key]\n"
+	    "usage: %s [-cCdDelLMPruUWx] [-i|-m] [-f spec] [-k key]\n"
 	    "\t\t[-K addkey] [-R removekey] [-I inctags] [-E exctags]\n"
 	    "\t\t[-N userdbdir] [-X exclude-file] [-p path] [-s seed]\n",
 	    getprogname());
