@@ -1,24 +1,24 @@
-$NetBSD: TODO,v 1.1 2002/09/19 12:45:30 lukem Exp $
+$NetBSD: TODO,v 1.2 2002/11/23 02:43:58 schmonz Exp $
 
-packages TODO (Suggested new packages)
-^^^^^^^^^^^^^
-	compat_solaris8
-	Solaris and Intel compat libraries
-	http://www.sun.com/software/solaris/binaries/download.html
+Suggested new packages
+======================
+
+	any unresolved PRs (if you have commit access)
+	http://www.netbsd.org/Gnats/category/pkg.html
 
 	driftnet
-	listens to network traffic and picks out images from TCP streams
+	Listens to network traffic and picks out images from TCP streams.
 	http://www.ex-parrot.com/~chris/driftnet/
 
 	figfonts
-	More fonts for figlet
+	More fonts for figlet.
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
 
 	gd-noX11
-	version of gd for systems without X11
+	Version of gd for systems without X11.
 
 	jabber
-	Messaging client
+	Messaging client.
 	http://www.jabber.com/downloads/index.shtml
 
 	kde-i18n
@@ -26,52 +26,210 @@ packages TODO (Suggested new packages)
 	ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
 
 	loserjabber
-	GTK application which allows posting of journal entries to http://www.livejournal.com
+	GTK application which allows posting of journal entries to
+	  http://www.livejournal.com/ .
 	http://loserjabber.sourceforge.net/
 
 	nautilus
-	Full featured file manager for gnome.  FreeBSD has a port mostly working now
+	Full featured file manager for GNOME. FreeBSD has a port
+	  mostly working now.
 	http://cvs.gnome.org/lxr/source/nautilus/
 
 	resin
-	Fast JSP server
-	I will import this when we have a native java 2 -- it can't be built with our native jdk [jwise]
+	Fast JSP server. (I will import this when we have a native
+	  Java 2 -- it can't be built with our native jdk. [jwise])
 	http://www.caucho.com/products/resin/index.xtp
 
 	squirm
-	fast and configurable redirector for Squid
+	Fast and configurable redirector for Squid.
 	http://squirm.foote.com.au/
 
 	smsclient
-	send SMS messages to mobile phones and pagers on wide range of providers [pkg/16430 is relevant]
+	Send SMS messages to mobile phones and pagers on wide range
+	  of providers. [pkg/16430 is relevant]
 	http://www.styx.demon.co.uk/
 
 	SquirrelMail plugins
-	SquirrelMail has a plugings features and several plugins exist.
+	SquirrelMail has a plugin feature and several plugins exist.
+	  (See mail/sq-squirrelspell for an example.)
 	http://www.squirrelmail.org/index.php3?page=15
-	see mail/sq-squirrelspell for an example of a SquirrelMail plugin package
 
 	vmsbackup
-	Read VMS backup tapes
+	Read VMS backup tapes.
 	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 
-package update TODO (Suggested package updates)
-^^^^^^^^^^^^^^^^^^^
-	o update automake to 1.5
+
+Suggested package updates
+=========================
+
+	o Mesa-5.0
+	o ORBit2-2.5.0 [pkg/18707]
+	o acroread-5.1
+	o anjuta-1.0.0
+	o aspell-0.50.2
+	o atari800-1.2.4
+	o autotrace-0.31.1
+	o balsa-1.4.1
+	o balsa-2.0.3
+	o bash-2.05b
+	o binutils-2.13.1
+	o bison-1.75
+	o bzflag-1.7e6
+	o cdlabelgen-2.5.0
+	o cdrecord-1.11a39 [pkg/19073]
+	o centericq-4.8.7
+	o clisp-2.30
+	o courier-0.40 [jlam]
+	o courier-imap-1.6 [jlam]
+	o crafty-19.1
+	o ctwm-3.6
+	o cyrus-imapd-2.1.10
+	o dante-1.1.13
+	o db4-4.1.24
+	o dopewars-1.5.8
+	o dylan-*-2.3.9
+	o easytags-0.25
+	o elinks-0.3.2 (0.4pre18)
+	o eterm-0.9.2
+	o ettercap-0.6.7 [pkg/19061]
+	o evilwm-0.99.11
+	o evolution-1.1.1
+	o fags-0.2.0
+	o fileroller-2.0
+	o fltk-1.1.1
+	o fox-1.1.16
+	o freeciv-1.13.0
+	o freetype-2.1.2
+	o gcvs-1.0b4
+	o gd-2.0.4
+	o gedit-2.0.0
+	o gentoo-0.11.34
+	o gettext-0.11.5 [drochner]
+	o gkrellm-2.0.4
+	o gnome-applets-2.0.0
+	o gnome-file-manager-2.0.1
+	o gnome-python-1.4.4
+	o gnome-python-1.99.13
+	o gnomeicu-0.99beta
+	o gnucash-1.7.2
+	o gnumeric-1.1.11 [devel]
+	o gtar
+	o gtkmm-2.0.1
+	o guile-1.6.0
+	o htmldoc-1.8.23
+	o icewm-1.2.2
+	o id3lib-3.8.1
+	o ivtools-1.0.5
+	o jakarta-ant-1.5 [pkg/18322]
+	o jasper-1.600.0
+	o jed-0.99.16 [pkg/18937]
+	o jgloss-1.0.6
+	o joe-2.9 [pkg/18022]
+	o johntheripper-1.6.32
+	o jpilot-0.99.2 [dillo]
+	o kdevelop-3.0alpha1
+	o lbreakout2-2.3.5
+	o lcms-1.0.9
+	o leafnode-1.9.29
+	o lesstif-0.93.36 [drochner]
+	o lftp-2.6.2
+	o libole2-2.2.8
+	o libmng-1.0.5rc1
+	o librep-0.16.1
+	o libsidplay-1.36.57
+	o libslang-1.4.6
+	o lilypond-1.6.0
+	o links-2.1pre7
+	o lmbench-2.0.3
+	o lout-3.26 [pkg/18687]
+	o lsh-1.4.1
+	o lynx-2.8.5dev9 (lynx-current)
+	o mcrypt-2.6.3
+	o memtest86-3.0
+	o mgp-1.09a
+	o mixer.app-1.8.0
+	o mkfontscale-20020618 (needs freetype-2.1.1)
+	o mp3blaster-3.1.2
+	o mplayer-0.90pre10
+	o mrproject-0.6
+	o multi-gnome-terminal-1.6.1
+	o mysql-4.0.3
+	o naim-0.11.4.12
+	o nas-1.5 [pkg/18684]
+	o nas-1.6
+	o nasm-0.98.35
+	o ncurses-5.3
+	o netpbm-10.8
+	o nessus-1.2.6
+	o nxtvepg-2.3.1
+	o openoffice-1.0.1 [skrll]
+	o openoffice-643 [post-1.0.1]
+	o openssh-3.5p1
+	o oss-397f
+	o pilot-link-0.11.4 [dillo]
+	o pkgconfig-0.14.0
+	o plib-1.6.0
+	o povray-3.5
+	o psi-0.8.7
+	o pwlib-1.4.2
+	o pygtk-0.6.11
+	o pygtk-1.9.13
+	o r-1.6.1 [markd]
+	o readline-4.3
+	o rep-gtk-0.16
+	o rox-filer-1.3.3
+	o rox-session-0.1.17
+	o rrdtool-1.0.39
+	o rt-2.1.15
+	o sane-1.0.9
+	o sane-frontends-1.0.9
+	o sawfish-1.2
+	o scribus-0.8
+	o scrollkeeper-0.3.11
+	o sendfile-20010424
+	o siag-office-3.5.3
+	o sidplay-1.0.8
+	o silc-client-0.9.8
+	o silc-server-0.9.8
+	o sed-4.0.1
+	o smalltalk-2.0.8
+	o snes9x-1.39a
+	o sodipodi-0.26
+	o speex-1.0beta2
+	o splint-3.0.1.6 (replacing lclint) [bjoern]
+	o squeak-3.2 [fredb|pkg/17950]
+	o srp-1.7.5 [jlam]
+	o stunnel-4.03
+	o subversion-0.14.3
+	o suck-4.3.1
+	o sylpheed-0.8.6
+	o tcl/tk-8.4.1 [bjoern]
+	o texinfo-4.3
+	o texmacs-1.0.0.17 [pkg/18495]
+	o texmacs-1.0.0.21
+	o ttf2pt1-3.4.2
+	o vnc-3.3.4 [http://www.realvnc.com/download.html]
+	o whitebox-4.2 [pkg/18232]
+	o xalan-c-1.4
+	o xbae-4.50.0
+	o xforms-1.0RC4
+	o xpaint-2.6.6
+	o xpuyopuyo-0.9.5
+	o xsane-0.87 [rh|pkg/17952]
+	o xsidplay-1.6.5pre15
+	o ysm-2.8.1
+	o yudit-2.6.4
 
 
-pksgrc TODO (Suggested pkgsrc features and enhancements)
-^^^^^^^^^^^
+Suggested pkgsrc enhancements
+=============================
 
 	o Add a default test target to mk/*.mk and override it in any pkgs
 	  that have testsuites. Use it in bulk builds/test.
 
 	o Add a sort check to pkglint for PLISTs.
 
-	o Make pkgsrc work under HP-UX. (10.20, I mean)  I (IMHO) finished the
-	  modifications for bsd.pkg.mk and will commit them after freeze.  The
-	  remaining and harder part is to make the cross-environment for HP-UX.
-	  [kei]
+	o Make pkgsrc work on more operating systems.
 
-	o cross-building of packages which are capable of doing so (e.g.
-	  ones that use GNU autoconf properly).
+	o Permit cross-building of packages which are capable of
+	  doing so (e.g. ones that use GNU autoconf properly).
