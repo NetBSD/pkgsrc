@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/07/21 20:38:55 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/21 22:29:36 tron Exp $
 
 DISTNAME=		inn-2.2
 CATEGORIES=		news
@@ -29,7 +29,6 @@ CONFIGURE_ENV+=		_PATH_PERL=${LOCALBASE}/bin/perl
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
-#INSTALL_TARGET=		update
 
 post-build:
 	${SED} -e 's#@@INN_DATA_DIR@@#${INN_DATA_DIR}#g' \
@@ -50,7 +49,8 @@ post-install:
 		     ${EGREP} -v '\.(in|orig)$'`; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/examples/inn; \
 	done
+	cd ${WRKSRC}/site && \
 	${INSTALL_SCRIPT} ${WRKDIR}/innd.sh ${PREFIX}/etc/rc.d
-#	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
