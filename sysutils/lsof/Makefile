@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2001/10/09 13:57:46 atatat Exp $
+# $NetBSD: Makefile,v 1.48 2001/10/22 12:39:17 atatat Exp $
 #
 
-DISTNAME=		lsof_4.58_W
-PKGNAME=		lsof-4.58
+DISTNAME=		lsof_4.59_W
+PKGNAME=		lsof-4.59
 WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
