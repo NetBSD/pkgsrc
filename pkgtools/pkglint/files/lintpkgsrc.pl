@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.69 2002/08/13 15:05:31 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.70 2002/09/22 15:58:33 atatat Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -20,6 +20,7 @@ use Getopt::Std;
 use File::Find;
 use Cwd;
 my(	$pkglist,		# list of Pkg packages
+	$pkg_installver,	# installed version of pkg_install pseudo-pkg
 	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
 	%opt,			# Command line options
 	%vuln,			# vulnerability data
@@ -532,7 +533,7 @@ sub list_installed_packages
     close(PKG_INFO);
 
     # pkg_install is not in the pkg_info -a output, add it manually
-    $pkgver = `pkg_info -V 2>/dev/null || echo 20010302`;
+    $pkg_installver = $pkgver = `pkg_info -V 2>/dev/null || echo 20010302`;
     chomp($pkgver);
     push(@pkgs, "pkg_install-$pkgver");
     @pkgs;
@@ -711,6 +712,8 @@ sub parse_makefile_pkgsrc
 	{ $pkgname = $vars->{PKGNAME}; }
     elsif (defined $vars->{DISTNAME})
 	{ $pkgname = $vars->{DISTNAME}; }
+    if ($pkgname =~ /^pkg_install-(\d+)$/ && $1 < $pkg_installver)
+	{ $pkgname = "pkg_install-$pkg_installver"; }
     if (defined $pkgname)
 	{
 	if (defined $vars->{PKGREVISION}
