@@ -1,0 +1,57 @@
+# $Id: mfs_rcd,v 1.1.1.1 2004/02/26 03:58:56 xtraeme Exp $
+#
+# Mount mfs directories and unpack the required file
+# before anything.
+
+# PROVIDE: LiveCD
+# BEFORE: disks
+
+. /etc/rc.subr
+
+name="mfsrc"
+rcvar=$name
+
+start_cmd="mfsrc_start"
+stop_cmd="mfsrc_stop"
+
+mfsrc_start()
+{
+	cat <<_EOF
+
+##############################################################################
+##############################################################################
+#######								##############
+#######	    Welcome to the NetBSD Live CD!			##############
+#######	    Please visit us: http://www.NetBSD.org/		##############
+#######								##############
+#######	    Copyright (C) 2004, Juan RP <xtraeme@NetBSD.org>	##############
+#######								##############
+##############################################################################
+##############################################################################
+
+_EOF
+	echo "=> Mounting Memory based filesystems..."
+	mount_mfs @MNT_DEV_ARGS@ swap /dev
+	mount_mfs @MNT_ETC_ARGS@ swap /etc
+	mount_mfs @MNT_VAR_ARGS@ swap /var
+	mount_mfs @MNT_ROOT_ARGS@ swap /root
+	mount_mfs @MNT_TMP_ARGS@ swap /tmp
+	@HOME@
+	@HOMETAR@
+	@USRPKGETC@
+	@USRPKGETCTAR@
+
+	for f in mfs_dev mfs_etc mfs_var mfs_root
+	do
+	    tar xfjp /stand/$f.tbz -C / 
+	done
+	echo "=> Finished successfully."
+}
+
+mfsrc_stop()
+{
+	echo "Please don't do that :-)"
+}
+
+load_rc_config $name
+run_rc_command "$1"

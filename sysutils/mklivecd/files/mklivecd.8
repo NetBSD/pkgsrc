@@ -1,0 +1,309 @@
+.\" $NetBSD: mklivecd.8,v 1.1.1.1 2004/02/26 03:58:54 xtraeme Exp $
+.\"
+.\" mklivecd - Build a NetBSD Live CD for i386 machines
+.\" Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Neither the name of The NetBSD Foundation nor the names of its
+.\"    contributors may be used to endorse or promote products derived
+.\"    from this software without specific prior written permission.
+.\" 3. Neither the name of author nor the names of its contributors may
+.\"    be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+.\" ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+.\" TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+.\" PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+.\" BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+.\" CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+.\" SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+.\" CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+.\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+.\" POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd February 25, 2004
+.Dt MKLIVECD 8
+.Os
+.Sh NAME
+.Nm mklivecd
+.Nd build a
+.Nx
+Live CD for i386 machines
+.Sh SYNOPSIS
+.Nm
+.Ar target
+.Sh DESCRIPTION
+.Nm
+allows you to build your own
+.Nx
+Live CD, so you don't need to install
+.Nx
+to any disk, because it will run directly from the CD-ROM.
+.Sh CONFIGURATION
+.Nm
+reads the parameters of the main configuration file
+stored inside
+.Pa $HOME/.mklivecd/mklivecd.conf ,
+so be sure you have modified it with your
+preferences before starting any target.
+.Pp
+Configuration files are simple shell scripts that define
+variables.
+The default values shown here are those written in the template when
+issuing the
+.Ar config
+target.
+.Bl -tag -width 15n -offset indent
+.It SOURCEDIR
+The
+.Nx
+source directory.
+Defaults to
+.Pa /usr/src .
+.It PKGSRCDIR
+The
+.Nx
+packages collection directory.
+When the
+.Ar chroot
+target is invoked, the pkgsrc directory will be mounted via
+.Xr mount_null 8 ,
+and you could install any package.
+Defaults to
+.Pa /usr/pkgsrc .
+.It SHAREDIR
+The main directory used to store the Makefiles, kernel, example configuration
+files, etc.
+Defaults to
+.Pa $PREFIX/share/mklivecd/ .
+.It BASEDIR
+Primary directory used to store the main directories and the final ISO image.
+Defaults to
+.Pa $HOME/livecd .
+.It WORKDIR
+Directory used to store the object files and kernel built by the target
+.Ql kernel .
+Defaults to
+.Pa $BASEDIR/work .
+.It ISODIR
+Directory used to store the main
+.Nx
+base distribution.
+Defaults to
+.Pa $BASEDIR/iso .
+.It BASE_SETS_DIR
+The base sets directory.
+Defaults to
+.Pa $HOME/release/binary/sets .
+.It X11_SETS_DIR
+The X11 sets directory.
+Defaults to
+.Pa $BASE_SETS_DIR .
+.It BASE_SETS
+Base sets which will be unpacked into
+.Pa $ISODIR .
+Sets used by default are:
+.Pa etc.tgz base.tgz comp.tgz text.tgz .
+.It X11_SETS
+X11 sets which will be unpacked into
+.Pa $ISODIR .
+Sets used by default are:
+.Pa xbase.tgz xcomp.tgz xfont.tgz xserver.tgz .
+.It ENABLE_X11
+If set to
+.Sy yes
+then X11 sets and configuration files will be unpacked automatically.
+Defaults to
+.Sy no .
+.It BLANK_BEFORE_BURN
+Used in the
+.Ar burn
+target to blank a CD-RW before burning the
+.Nx
+Live CD ISO image.
+Useful if you use CD-RW.
+Defaults to
+.Sy no .
+.It CDROM_DEVICE
+Used in the target
+.Ar burn
+to specify the CD-ROM device.
+Defaults to
+.Sy 15,1,0 .
+.It PERSONAL_CONFIG
+If set to
+.Sy yes ,
+then
+.Pa personal_config
+file will be used.
+See below for details.
+Defaults to
+.Sy no .
+.It BOOTKERN
+Name of the
+.Nx
+kernel used for the boot image.
+Defaults to
+.Sy KERN-LIVECD .
+.It KERNEL_NAME
+Name of the built
+.Nx
+kernel.
+Useful if you want to change the default behaviour of the build process.
+Defaults to
+.Sy MKLIVECD .
+.It IMAGE_NAME
+Name of the final ISO image, e.g.:
+.Pa My_NetBSD_Live_CD_ISO_Image.iso .
+Defaults to
+.Sy NetBSD-LiveCD .
+.It PKG_SYSCONFDIR
+Directory where the pkgsrc settings are stored, by default
+.Nm
+preserves this behaviour and uses
+.Pa usr/pkg/etc .
+.It REMOVE_DIRS
+Take care with this option, because it will remove all directories when
+the target
+.Ar iso
+is invoked.
+It could be useful if you don't want to include some directories
+on the CD, or your free space is small.
+Defaults to
+.Pa altroot rescue usr/share/info .
+.It MNT_{MOUNT_POINT}_ARGS
+This specifies the arguments passed to the
+.Xr mount 8
+command used in the
+.Pa mfs_rcd
+script, when the
+.Nx
+Live CD is booted.
+You shouldn't add
+.Sy swap
+at the end, because it will be added automatically by
+the script.
+.El
+.Sh TARGETS
+A target specifies what
+.Nm
+should do (as in make).
+The following list describes all supported targets,
+in the logical order in which you should call them.
+.Bl -tag -width 15n -offset indent
+.It Ar config
+Create a sample
+.Pa mklivecd.conf
+file.
+You should edit it after the creation as you will probably want to
+change the default configuration, especially paths.
+.It Ar kernel
+Builds the specified kernel
+.Pa $BOOTKERN
+into the
+.Pa $ISODIR
+directory.
+.It Ar base
+Install the
+.Pa $BASE_SETS
+and
+.Pa $X11_SETS
+into the
+.Pa $ISODIR
+directory and prepare the base system for the next target,
+which is the most important:
+.Ar chroot .
+.It Ar chroot
+Enters the chroot environment.
+Uses
+.Xr ksh 1
+as default shell.
+.It Ar iso
+Builds the ISO image
+.Pa $IMAGE_NAME
+into
+.Pa $BASEDIR
+and removes all directories specified in
+.Pa $REMOVE_DIRS
+before it, to save some space.
+.It Ar burn
+Burns the ISO image
+.Pa $IMAGE_NAME
+on the CD-ROM with
+.Xr cdrecord 1 .
+Use the
+.Pa $CDROM_DEVICE
+variable to specify the default device.
+.It Ar clean
+Cleans the
+.Pa $WORKDIR
+directory and the base
+.Nx
+tree in
+.Pa $ISODIR ,
+except the CD-ROM boot image
+.Pa /stand/cdlive-boot.fs
+and the
+.Nx
+kernel
+.Pa /netbsd .
+.El
+.Ss What should I do in the chroot jail?
+While working in the chroot environment, you can
+add users, install binary packages, modify
+.Pa /etc/ttys ,
+etc.
+You can enter the chroot as often as you want,
+.Nm
+will create the tarballs automatically when you leave
+the chroot.
+.Ss How can I use the PERSONAL_CONFIG option?
+When
+.Ar PERSONAL_CONFIG
+is set to
+.Sy yes ,
+.Pa $HOME/.mklivecd/personal_config
+will be used.
+For example, you can copy some configuration directories
+from
+.Ar $HOME
+to the
+.Ar $ISODIR/$HOME
+directory.
+Please take a look at the example file located in
+.Ar ${PREFIX}/share/mklivecd .
+.Sh NOTES
+.Pa PKG_SYSCONFDIR
+defaults to
+.Ar usr/pkg/etc
+without a starting slash.
+This shouldn't be added because
+.Nm
+adds this automatically in the script, otherwise your real PKG_SYSCONFDIR
+directory will be copied instead of the one located in
+.Pa $ISODIR .
+.Pp
+An example kernel config file,
+.Pa KERN-LIVECD ,
+has been installed into
+.Ar ${PREFIX}/share/mklivecd ,
+based on the -current branch.
+You should copy your own kernel config file into
+.Ar $HOME/.mklivecd .
+The
+.Sy BOOTKERN
+variable should point at it.
+.Sh SEE ALSO
+.Xr packages 7 ,
+.Xr mount_null 8
+.Sh AUTHORS
+The
+.Nm
+utility was written by
+.An Juan RP Aq xtraeme@NetBSD.org .
