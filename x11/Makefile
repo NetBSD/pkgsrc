@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 1999/06/07 07:31:36 tron Exp $
+# $NetBSD: Makefile,v 1.94 1999/06/09 11:39:20 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -51,6 +51,7 @@
     SUBDIR += kdebase
     SUBDIR += kdelibs
     SUBDIR += khostchooser
+    SUBDIR += kterm
     SUBDIR += lesstif
 #    SUBDIR += libdnd
 #    SUBDIR += libsx
