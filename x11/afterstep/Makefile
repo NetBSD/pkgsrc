@@ -1,39 +1,35 @@
-# $NetBSD: Makefile,v 1.5 1998/11/19 15:40:47 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/12/28 23:36:43 tron Exp $
 
-DISTNAME=		AfterStep-1.4.5.0
-PKGNAME=		afterstep-1.450
+DISTNAME=		AfterStep-1.6.0
+PKGNAME=		afterstep-1.6.0
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.afterstep.org/pub/ \
-			ftp://ftp.digex.net/pub/os/wm/AfterStep/
-EXTRACT_SUFX=		.tgz
+MASTER_SITES=		ftp://ftp.afterstep.org/pub/stable/ \
+			ftp://ftp.digex.net/pub/os/wm/AfterStep/stable/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.afterstep.org/
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
+DEPENDS+=		jpeg-6b:../../graphics/jpeg
+DEPENDS+=		png-1.0.2:../../graphics/png
+DEPENDS+=		rplay-3.2.0b6:../../audio/rplay
 DEPENDS+=		asclock-11:../../x11/asclock
 
-WRKSRC=			${WRKDIR}/AfterStep
+CONFLICTS=		afterstep-*
+
 USE_X11=		yes
-INSTALL_TARGET=		install install.man
+GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--with-png-includes=${LOCALBASE}/include \
+			--with-png-lib=${LOCALBASE}/lib \
+			--with-jpeg-includes=${LOCALBASE}/include \
+			--with-jpeg-lib=${LOCALBASE}/lib
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 
 post-patch:
-	@${MV} ${WRKSRC}/configure.h ${WRKSRC}/foo
-	${SED} -e 's@###x11###@${X11BASE}@g' < ${WRKSRC}/foo > ${WRKSRC}/configure.h
-	@${MV} ${WRKSRC}/afterdoc/afterstepdoc ${WRKSRC}/foo
-	${SED} -e 's@###x11###@${X11BASE}@g' < ${WRKSRC}/foo > ${WRKSRC}/afterdoc/afterstepdoc
-	@${RM} -f ${WRKSRC}/foo
-	${TOUCH} ${WRKSRC}/apps/asload/asload.man
-	${TOUCH} ${WRKSRC}/apps/asprint/asprint.man
-	${TOUCH} ${WRKSRC}/modules/ASSound/ASSound.man
-
-do-configure:
-	(cd ${WRKSRC}; ./configure ;xmkmf; make Makefiles)
-
-post-install:
-	${RM} ${PREFIX}/man/man1/asload.0
-	${RM} ${PREFIX}/man/man1/asprint.0
-	${RM} ${PREFIX}/man/man1/ASSound.0
-	chmod 664 ${PREFIX}/share/afterstep/feels/feel.paul
+	for i in ` find ${WRKSRC} -name "*.man" -print `; do \
+	  ${CP} $$i $$i.orig ;\
+	  ${SED} -e 's@/usr/local/@${PREFIX}/@g' < $$i.orig > $$i ; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
