@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/12/16 22:03:12 mjl Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/07 22:14:19 hubertf Exp $
 #
 
 DISTNAME=	sp-1.3.4
@@ -15,6 +15,7 @@ MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://www.jclark.com/sp/
 
 CONFLICTS+=	jade-*
+CONFLICTS+=	opensp-*
 
 MAKE_ENV+=	INSTALL="${INSTALL}"
 

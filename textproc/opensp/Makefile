@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/23 17:20:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/07 22:14:18 hubertf Exp $
 #
 
 DISTNAME=	OpenSP-1.4
@@ -10,6 +10,8 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://openjade.sourceforge.net/doc-1.4/index.htm
 
 DEPENDS+=	unproven-pthreads-[0-9]*:../../devel/unproven-pthreads
+
+CONFLICTS+=     sp-*
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--enable-http \
