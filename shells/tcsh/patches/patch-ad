@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2002/08/11 05:11:18 kim Exp $
+$NetBSD: patch-ad,v 1.7 2004/05/19 17:42:35 kim Exp $
 
 --- config_f.h.orig	Fri Mar  8 12:36:45 2002
 +++ config_f.h	Sun Aug 11 00:19:17 2002
@@ -15,28 +15,3 @@ $NetBSD: patch-ad,v 1.6 2002/08/11 05:11:18 kim Exp $
  
  /*
   * LOGINFIRST   Source ~/.login before ~/.cshrc
-@@ -113,14 +117,22 @@
-  *		be used with SHORT_STRINGS
-  *
-  */
--#undef KANJI
-+#if defined(__NetBSD__)
-+# define KANJI
-+#else
-+# undef KANJI
-+#endif
- 
- /*
-  * DSPMBYTE	add variable "dspmbyte" and display multi-byte string at
-  *		only output, when "dspmbyte" is set. Should be used with
-  *		KANJI
-  */
--#undef DSPMBYTE
-+#if defined(__NetBSD__)
-+# define DSPMBYTE
-+#else
-+# undef DSPMBYTE
-+#endif
- 
- /*
-  * MBYTEDEBUG	when "dspmbyte" is changed, set multi-byte checktable to
