@@ -1,9 +1,0 @@
-SKK is one of Japanese input methods on Emacs. SKK was designed and created in
-1987 by Masahiko Sato(a professor of Kyoto University). We will expand SKK in
-this openlab in accordance with the GPL.
-
-SKK is an abbreviation of `Simple Kana to Kanji conversion program'. Some
-people say SKK should be `simple' as its name indicates and should not be
-complicated in both of its features and structure of files. The goal of this
-openlab is that we can say, `SKK is still simple in its main features, but
-optionally exandable and still fast!'
