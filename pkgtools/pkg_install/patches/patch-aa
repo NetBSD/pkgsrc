@@ -1,16 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2001/03/07 00:54:19 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2001/03/07 01:03:13 hubertf Exp $
 
-Index: Makefile
-===================================================================
-RCS file: /cvsroot/basesrc/usr.sbin/pkg_install/Makefile,v
-retrieving revision 1.5
-diff -u -r1.5 Makefile
---- Makefile	2001/01/09 03:13:43	1.5
-+++ Makefile	2001/03/06 23:54:39
-@@ -1,6 +1,7 @@
+--- Makefile.orig	Wed Jan 10 03:25:36 2001
++++ Makefile
+@@ -2,4 +2,6 @@
  # Original from FreeBSD, no rcs id.
  
--SUBDIR=lib .WAIT add admin create delete info
++# .WAIT was introduced in post-1.5 NetBSD-current:
 +#HF#SUBDIR=lib .WAIT add admin create delete info
-+SUBDIR=lib add admin create delete info
+ SUBDIR=lib .WAIT add admin create delete info
  
