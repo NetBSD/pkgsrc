@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/05 03:52:47 groo Exp $
 
---- sconfig.h.orig	Thu Oct 21 22:06:12 1999
-+++ sconfig.h	Wed Jan 12 15:09:48 2000
-@@ -285,6 +285,37 @@
+--- mzscheme/sconfig.h.orig	Sat Jun 24 05:01:25 2000
++++ mzscheme/sconfig.h	Tue Sep  4 22:00:42 2001
+@@ -278,6 +278,37 @@
  
  #endif
  
@@ -39,13 +39,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
 +
    /************** x86/OpenBSD with gcc ****************/
                /* Thanks to Bengt Kleberg */
- 
-@@ -505,7 +536,7 @@
- 
-   /************** ALPHA/OSF1 with gcc ****************/
- 
--#if defined(__alpha)
-+#if defined(__alpha) && !defined(__NetBSD__)
- 
- # define SCHEME_PLATFORM_LIBRARY_SUBPATH "alpha-osf1"
  

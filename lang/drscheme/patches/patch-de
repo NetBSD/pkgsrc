@@ -1,7 +1,7 @@
-$NetBSD: patch-de,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-de,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- ../../bin/help-desk.orig	Sat May 20 16:35:35 2000
-+++ ../../bin/help-desk	Sat May 20 16:36:05 2000
+--- ../bin/help-desk.orig	Sat May 20 16:35:35 2000
++++ ../bin/help-desk	Sat May 20 16:36:05 2000
 @@ -1,13 +1,12 @@
  #!/bin/sh
  # This script was created by make-mred-launcher
