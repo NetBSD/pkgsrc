@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:58:16 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/22 20:48:16 jmmv Exp $
 #
 
 DISTNAME=	netbsd-doc-1.2
@@ -21,6 +21,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 do-install:	# empty
 

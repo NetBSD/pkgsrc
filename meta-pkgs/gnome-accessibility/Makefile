@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/22 20:42:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/22 20:48:15 jmmv Exp $
 
 DISTNAME=	gnome-accessibility-2.4.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -20,6 +20,7 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_BUILDLINK=	yes
+NO_MTREE=	yes
 
 do-install:	# empty
 

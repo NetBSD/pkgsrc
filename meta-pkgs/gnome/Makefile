@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/02/22 20:42:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2004/02/22 20:48:15 jmmv Exp $
 
 DISTNAME=	gnome-2.4.2
 PKGREVISION=	2
@@ -41,6 +41,7 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_BUILDLINK=	yes
+NO_MTREE=	yes
 
 do-install:	# empty
 
