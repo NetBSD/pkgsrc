@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 1998/09/07 22:54:50 mycroft Exp $
+$NetBSD: patch-ae,v 1.6 1998/12/15 10:34:34 mycroft Exp $
 
---- doc/xmamerc.dist.orig	Sat Sep  5 18:08:38 1998
-+++ doc/xmamerc.dist	Mon Sep  7 18:44:30 1998
+--- doc/xmamerc.dist.orig	Fri Oct 23 08:41:44 1998
++++ doc/xmamerc.dist	Tue Dec 15 05:05:19 1998
 @@ -23,10 +23,10 @@
  
  # Where does your Mame rom files reside? 
@@ -13,5 +13,14 @@ $NetBSD: patch-ae,v 1.5 1998/09/07 22:54:50 mycroft Exp $
 -spooldir        /usr/games/lib/xmame
 +spooldir        @SPOOLDIR@
  
- # What is your loved game? ( remember that mame defaults to "pacman" )
- defaultgame	galturbo
+ # Where can xmame find the cheat database?
+ cheatfile	/usr/games/lib/xmame/CHEAT.DAT
+@@ -77,7 +77,7 @@
+ mouse		1
+ 
+ # Use joystick if available
+-joy		1
++joytype		1
+ 
+ # Is your joystick analog?
+ analogstick	0
