@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2005/01/19 17:43:59 tv Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/02/04 21:35:51 adrianp Exp $
 
-DISTNAME=	ocaml-3.06
+DISTNAME=	ocaml-3.08.2
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/cristal/ocaml/${DISTNAME}/
+MASTER_SITES=	ftp://ftp.inria.fr/INRIA/cristal/ocaml/ocaml-3.08/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
@@ -22,15 +22,19 @@ CONFIGURE_ARGS+=	-with-pthread
 
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
+# See PR# 28772 as the above should work but it appears to be ignored
+# so we set it explicitly below not to stip installed binaries.
+_STRIPFLAG_CC=
+_STRIPFLAG_INSTALL=
 .endif
 
 post-extract: cp-power-bsd cp-gnu-config
 
 cp-power-bsd:
-	${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
+	@${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
 
 cp-gnu-config:
-	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/config/gnu/
-	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/config/gnu/
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/config/gnu/
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/config/gnu/
 
 .include "../../mk/pthread.buildlink3.mk"

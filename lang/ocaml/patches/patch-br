@@ -1,9 +1,9 @@
-$NetBSD: patch-br,v 1.1 2004/04/22 09:18:46 tron Exp $
+$NetBSD: patch-br,v 1.2 2005/02/04 21:35:51 adrianp Exp $
 
---- stdlib/Makefile.orig	Wed Jun  5 14:08:38 2002
-+++ stdlib/Makefile	Thu Apr 22 10:34:37 2004
-@@ -47,7 +47,7 @@
- allopt-prof: stdlib.p.cmxa std_exit.p.cmx
+--- stdlib/Makefile.orig	2004-10-15 15:40:41.000000000 +0100
++++ stdlib/Makefile	2004-10-15 15:41:45.000000000 +0100
+@@ -47,13 +47,13 @@
+ 	rm -f std_exit.p.cmi
  
  install:
 -	cp stdlib.cma std_exit.cmo *.cmi *.mli *.ml camlheader camlheader_ur \
@@ -11,3 +11,19 @@ $NetBSD: patch-br,v 1.1 2004/04/22 09:18:46 tron Exp $
             $(LIBDIR)
  
  installopt: installopt-default installopt-$(PROFILING)
+ 
+ installopt-default:
+-	cp stdlib.cmxa stdlib.a std_exit.o *.cmx $(LIBDIR)
++	${BSD_INSTALL_DATA} stdlib.cmxa stdlib.a std_exit.o *.cmx $(LIBDIR)
+ 	cd $(LIBDIR); $(RANLIB) stdlib.a
+ 
+ installopt-noprof:
+@@ -64,7 +64,7 @@
+ 	rm -f $(LIBDIR)/std_exit.p.o; ln -s std_exit.o $(LIBDIR)/std_exit.p.o
+ 
+ installopt-prof:
+-	cp stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o $(LIBDIR)
++	${BSD_INSTALL_DATA} stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o $(LIBDIR)
+ 	cd $(LIBDIR); $(RANLIB) stdlib.p.a
+ 
+ stdlib.cma: $(OBJS)

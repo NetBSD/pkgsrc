@@ -1,13 +1,65 @@
-$NetBSD: patch-bs,v 1.1 2004/04/22 09:18:47 tron Exp $
+$NetBSD: patch-bs,v 1.2 2005/02/04 21:35:51 adrianp Exp $
 
---- tools/Makefile.orig	Mon Apr 22 12:06:59 2002
-+++ tools/Makefile	Thu Apr 22 10:34:37 2004
-@@ -44,7 +44,7 @@
- 	rm -f ocamldep
+--- tools/Makefile.orig	2003-04-02 02:17:58.000000000 +0100
++++ tools/Makefile	2004-10-12 22:57:30.000000000 +0100
+@@ -48,9 +48,9 @@
+ 	rm -f ocamldep.opt
  
  install::
 -	cp ocamldep $(BINDIR)/ocamldep$(EXE)
 +	${BSD_INSTALL_SCRIPT} ocamldep $(BINDIR)/ocamldep$(EXE)
+ 	if test -f ocamldep.opt; \
+-	  then cp ocamldep.opt $(BINDIR)/ocamldep.opt$(EXE); else :; fi
++	  then ${BSD_INSTALL_PROGRAM} ocamldep.opt $(BINDIR)/ocamldep.opt$(EXE); else :; fi
  
  # The profiler
  
+@@ -66,9 +66,9 @@
+ 	$(CAMLC) $(LINKFLAGS) -o ocamlcp main_args.cmo ocamlcp.cmo
+ 
+ install::
+-	cp ocamlprof $(BINDIR)/ocamlprof$(EXE)
+-	cp ocamlcp $(BINDIR)/ocamlcp$(EXE)
+-	cp profiling.cmi profiling.cmo $(LIBDIR)
++	${BSD_INSTALL_SCRIPT} ocamlprof $(BINDIR)/ocamlprof$(EXE)
++	${BSD_INSTALL_SCRIPT} ocamlcp $(BINDIR)/ocamlcp$(EXE)
++	${BSD_INSTALL_DATA} profiling.cmi profiling.cmo $(LIBDIR)
+ 
+ clean::
+ 	rm -f ocamlprof ocamlcp
+@@ -80,7 +80,7 @@
+ 	chmod +x ocamlmktop
+ 
+ install::
+-	cp ocamlmktop $(BINDIR)/ocamlmktop
++	${BSD_INSTALL_SCRIPT} ocamlmktop $(BINDIR)/ocamlmktop
+ 
+ clean::
+ 	rm -f ocamlmktop
+@@ -91,7 +91,7 @@
+ 	$(CAMLC) $(LINKFLAGS) -o ocamlmklib ocamlmklib.cmo
+ 
+ install::
+-	cp ocamlmklib $(BINDIR)/ocamlmklib
++	${BSD_INSTALL_SCRIPT} ocamlmklib $(BINDIR)/ocamlmklib
+ 
+ clean::
+ 	rm -f ocamlmklib
+@@ -139,7 +139,7 @@
+ 	$(CAMLLEX) lexer301.mll
+ 
+ install::
+-	cp scrapelabels $(LIBDIR)
++	${BSD_INSTALL_DATA} scrapelabels $(LIBDIR)
+ 
+ clean::
+ 	rm -f scrapelabels lexer301.ml
+@@ -155,7 +155,7 @@
+ 		$(ADDLABELS_IMPORTS) addlabels.ml
+ 
+ install::
+-	cp addlabels $(LIBDIR)
++	${BSD_INSTALL_DATA} addlabels $(LIBDIR)
+ 
+ clean::
+ 	rm -f addlabels

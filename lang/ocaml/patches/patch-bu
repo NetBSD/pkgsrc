@@ -1,0 +1,21 @@
+$NetBSD: patch-bu,v 1.1 2005/02/04 21:35:51 adrianp Exp $
+
+--- asmrun/Makefile.orig	2004-10-15 15:49:45.000000000 +0100
++++ asmrun/Makefile	2004-10-15 15:52:40.000000000 +0100
+@@ -58,14 +58,14 @@
+ install: install-default install-$(PROFILING)
+ 
+ install-default:
+-	cp libasmrun.a $(LIBDIR)/libasmrun.a
++	${BSD_INSTALL_DATA} libasmrun.a $(LIBDIR)/libasmrun.a
+ 	cd $(LIBDIR); $(RANLIB) libasmrun.a
+ 
+ install-noprof:
+ 	rm -f $(LIBDIR)/libasmrunp.a; ln -s libasmrun.a $(LIBDIR)/libasmrunp.a
+ 
+ install-prof:
+-	cp libasmrunp.a $(LIBDIR)/libasmrunp.a
++	${BSD_INSTALL_DATA} libasmrunp.a $(LIBDIR)/libasmrunp.a
+ 	cd $(LIBDIR); $(RANLIB) libasmrunp.a
+ 
+ power.o: power-$(SYSTEM).o

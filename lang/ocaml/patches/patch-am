@@ -1,25 +1,29 @@
-$NetBSD: patch-am,v 1.2 2004/04/22 09:18:37 tron Exp $
+$NetBSD: patch-am,v 1.3 2005/02/04 21:35:51 adrianp Exp $
 
---- camlp4/lib/Makefile.orig	Fri Jul 19 16:53:47 2002
-+++ camlp4/lib/Makefile	Thu Apr 22 10:34:37 2004
-@@ -36,15 +36,15 @@
+--- camlp4/lib/Makefile.orig	2004-10-14 16:11:43.000000000 +0100
++++ camlp4/lib/Makefile	2004-10-14 16:14:08.000000000 +0100
+@@ -42,19 +42,19 @@
  	done
  
  install:
--	-$(MKDIR) $(LIBDIR)/camlp4
--	cp $(TARGET) *.mli $(LIBDIR)/camlp4/.
--	cp *.cmi $(LIBDIR)/camlp4/.
+-	-$(MKDIR) "$(LIBDIR)/camlp4"
+-	cp $(TARGET) *.mli "$(LIBDIR)/camlp4/."
+-	cp *.cmi "$(LIBDIR)/camlp4/."
 +	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
-+	${BSD_INSTALL_DATA} $(TARGET) *.mli $(LIBDIR)/camlp4/.
-+	${BSD_INSTALL_DATA} *.cmi $(LIBDIR)/camlp4/.
- 	if test -f $(TARGET:.cma=.cmxa); then $(MAKE) installopt LIBDIR=$(LIBDIR); fi
++	${BSD_INSTALL_DATA} $(TARGET) *.mli "$(LIBDIR)/camlp4/."
++	${BSD_INSTALL_DATA} *.cmi "$(LIBDIR)/camlp4/."
+ 	test -f $(TARGET:.cma=.cmxa) && $(MAKE) installopt LIBDIR="$(LIBDIR)" || true
  
  installopt:
--	cp $(TARGET:.cma=.cmxa) *.cmx $(LIBDIR)/camlp4/.
-+	${BSD_INSTALL_DATA} $(TARGET:.cma=.cmxa) *.cmx $(LIBDIR)/camlp4/.
- 	if test -f $(TARGET:.cma=.lib); then \
--	  cp $(TARGET:.cma=.lib) $(LIBDIR)/camlp4/.; \
-+	  ${BSD_INSTALL_DATA} $(TARGET:.cma=.lib) $(LIBDIR)/camlp4/.; \
- 	else \
- 	  tar cf - $(TARGET:.cma=.a) | (cd $(LIBDIR)/camlp4/.; tar xf -); \
- 	fi
+ 	for f in $(TARGET:.cma=.cmxa) $(TARGET:.cma=.p.cmxa) *.cmx ; do \
+-		test -f $$f && cp $$f "$(LIBDIR)/camlp4/." || true ; \
++		test -f $$f && ${BSD_INSTALL_DATA} $$f "$(LIBDIR)/camlp4/." || true ; \
+ 	done
+ 	# Special treatment for this one: some versions of make don't like $(A) in $(TARGET:.cma=.$(A)) 
+ 	target="`echo $(TARGET) | sed -e 's/\.cma$$/.$(A)/'`" ; \
+ 	   if test -f $$target ; then \
+-	      cp $$target "$(LIBDIR)/camlp4/." && ( cd "$(LIBDIR)/camlp4/." && $(RANLIB) $$target ) \
++	      ${BSD_INSTALL_DATA} $$target "$(LIBDIR)/camlp4/." && ( cd "$(LIBDIR)/camlp4/." && $(RANLIB) $$target ) \
+ 	  fi
+ 
+ include .depend

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.stub,v 1.1 2005/02/04 21:35:51 adrianp Exp $
+lib/ocaml/stublibs/dllbigarray.so
+lib/ocaml/stublibs/dllmldbm.so
+lib/ocaml/stublibs/dllnums.so
+lib/ocaml/stublibs/dllstr.so
+lib/ocaml/stublibs/dllthreads.so
+lib/ocaml/stublibs/dllunix.so
+lib/ocaml/stublibs/dllvmthreads.so
+@unexec ${RMDIR} %D/lib/ocaml/stublibs
+@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
