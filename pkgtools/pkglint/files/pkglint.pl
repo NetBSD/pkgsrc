@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.76 2002/12/23 14:05:45 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.77 2003/01/02 22:58:43 schmonz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -179,7 +179,7 @@ if (-e <$portdir/$distinfo>) {
 		}
 	}
 	if ($patches && ! -f "$portdir/$distinfo" ) {
-		&perror("WARN: no $portdir/$distinfo file. Please run 'make makepatchsum'.");
+		&perror("WARN: no $portdir/$distinfo file. Please run '@MAKE@ makepatchsum'.");
 	}
 }
 foreach $i (@checker) {
@@ -201,14 +201,14 @@ if (-e <$portdir/$distinfo> ) {
 	}
 } else {
 	if ( ! $seen_NO_CHECKSUM ) {
-		&perror("WARN: no $portdir/$distinfo file. Please run 'make makesum'.");
+		&perror("WARN: no $portdir/$distinfo file. Please run '@MAKE@ makesum'.");
 	}
 }
 if (-e <$portdir/$filesdir/md5> ) {
-	&perror("FATAL: $filesdir/md5 is deprecated -- run 'make mdi' to generate distinfo.");
+	&perror("FATAL: $filesdir/md5 is deprecated -- run '@MAKE@ mdi' to generate distinfo.");
 }
 if (-e <$portdir/$filesdir/patch-sum> ) {
-	&perror("FATAL: $filesdir/patch-sum is deprecated -- run 'make mps' to generate distinfo.");
+	&perror("FATAL: $filesdir/patch-sum is deprecated -- run '@MAKE@ mps' to generate distinfo.");
 }
 if (-e <$pkgdir/COMMENT> ) {
 	&perror("FATAL: $pkgdir/COMMENT is deprecated -- please use a COMMENT variable instead.");
@@ -314,11 +314,11 @@ sub checkdistinfo {
 			chomp($calcsum);
 			if ( "$sum" ne "$calcsum" ) {
 				&perror("FATAL: checksum of $patch differs between $portdir/$file and\n"
-				       ."       $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
+				       ."       $portdir/$patchdir/$patch. Rerun '@MAKE@ makepatchsum'.");
 			}
 		} elsif ($patch =~ /^patch-[a-z0-9]+$/)  {
 			&perror("FATAL: patchfile '$patch' is in $file\n"
-			       ."       but not in $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
+			       ."       but not in $portdir/$patchdir/$patch. Rerun '@MAKE@ makepatchsum'.");
 		}
 
 		$indistinfofile{$patch} = 1;
@@ -329,7 +329,7 @@ sub checkdistinfo {
 		$patch =~ /\/([^\/]+)$/;
 		if (! $indistinfofile{$1}) {
 			&perror("FATAL: patchsum of '$1' is in $portdir/$patchdir/$1 but not in\n"
-			       ."       $file. Rerun 'make makepatchsum'.");
+			       ."       $file. Rerun '@MAKE@ makepatchsum'.");
 		}
 	}
 
@@ -556,7 +556,7 @@ sub checkpatch {
 
 	if ($file =~ /.*~$/) {
 		&perror("WARN: is $file a backup file? If so, please remove it \n"
-		       ."      and rerun 'make makepatchsum'");
+		       ."      and rerun '@MAKE@ makepatchsum'");
 	}
 
 	open(IN, "< $portdir/$file") || return 0;
@@ -782,6 +782,10 @@ sub checkmakefile {
 	if ($whole =~ /\nNO_PACKAGE/) {
 		&perror("WARN: use of NO_PACKAGE to enforce license ".
 			"restrictions is deprecated.");
+	}
+	print "OK: checking NO_PATCH.\n" if ($verbose);
+	if ($whole =~ /\nNO_PATCH/) {
+		&perror("WARN: use of NO_PATCH deprecated.");
 	}
 	print "OK: checking IGNORE.\n" if ($verbose);
 	if ($whole =~ /\nIGNORE/) {
