@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2003/06/02 01:18:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2003/06/16 04:55:26 itojun Exp $
 
-DISTNAME=	cue-snap-20030421
-PKGNAME=	cue-20030421
+DISTNAME=	cue-snap-20030616
+PKGNAME=	cue-20030616
 CATEGORIES=	mail
 MASTER_SITES=	ftp://sh.wide.ad.jp/WIDE/free-ware/cue/snap/
 
