@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/24 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/01 16:40:39 snj Exp $
 
 DISTNAME=	adobe-cidfonts-20000901
 CATEGORIES=	fonts
@@ -26,7 +26,6 @@ DISTFILES+=	WadaMin-Bold WadaMin-Bold.afm
 DISTFILES+=	WadaMin-Regular WadaMin-Regular.afm
 DISTFILES+=	WadaMin-RegularH WadaMin-RegularH.afm
 
-USE_BUILDLINK2=	# defined
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
