@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2000/06/25 12:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/25 17:25:03 rh Exp $
 #
 
-DISTNAME=	gnome-applets-1.2.0
+DISTNAME=	gnome-applets-1.2.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-applets/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	gnome-core-*:../../x11/gnome-core
+DEPENDS+=	gnome-core>=1.2.1:../../x11/gnome-core
 DEPENDS+=	libgtop-*:../../devel/libgtop
 
 USE_GMAKE=	yes
