@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.38 2000/10/21 22:45:28 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2000/11/09 03:37:26 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
-DISTNAME=       pine4.21
-PKGNAME=        pine-4.21nb1
+DISTNAME=       pine4.30
+PKGNAME=        pine-4.30
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
-DEPENDS+=	pico-3.7:../../editors/pico
-DEPENDS+=	imap-uw>=4.7c6:../../mail/imap-uw
+DEPENDS+=	pico-3.8:../../editors/pico
+DEPENDS+=	imap-uw>=2000:../../mail/imap-uw
 
 USE_LIBTOOL=	yes
 CONFIGURE_ENV+=	LT=${LIBTOOL}
 MAKE_ENV+=	LT=${LIBTOOL}
+#MAKE_ENV+=	STRIPFLAG=		# debug
 
 pre-patch:
 	# Make sure the imap lib that comes with pine4.21 isn't
@@ -37,7 +38,6 @@ do-build:
 
 do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/pine/pine ${PREFIX}/bin/
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/pine/abookcpy ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpdecode ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpsign ${PREFIX}/bin/
@@ -52,8 +52,13 @@ do-install:
 	    >${PREFIX}/share/examples/pine/pine.conf
 	${INSTALL_DATA}	${FILESDIR}/pine.conf.fixed ${PREFIX}/share/examples/pine/
 	@[ -f ${PREFIX}/etc/pine.conf ] || ${CP} ${PREFIX}/share/examples/pine/pine.conf ${PREFIX}/etc/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pine
-	${INSTALL_DATA} ${WRKSRC}/doc/tech-notes.txt ${PREFIX}/share/doc/pine/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/pine
+	${INSTALL_DATA_DIR} ${PREFIX}/share/pine/contrib
+	${INSTALL_DATA_DIR} ${PREFIX}/share/pine/contrib/utils
+	${INSTALL_DATA} ${WRKSRC}/doc/tech-notes.txt ${PREFIX}/share/pine/
+	${INSTALL_DATA} ${WRKSRC}/contrib/krb5-setup ${PREFIX}/share/pine/contrib
+	${INSTALL_DATA} ${WRKSRC}/contrib/ldap-setup ${PREFIX}/share/pine/contrib
+	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
 
 .include "../../mk/bsd.pkg.mk"
 .if ${OPSYS} == "SunOS"
