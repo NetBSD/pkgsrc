@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/05/06 15:51:35 adam Exp $
+# $NetBSD: Makefile,v 1.73 2004/08/28 21:09:08 ben Exp $
 #
 
 DISTNAME=	Wine-20040505
@@ -40,6 +40,7 @@ REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
 # against the libraries.
 #
 CONFIGURE_ENV+=		X_LIBS="${LDFLAGS}"
+CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\""
 LIBS+=			${LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
@@ -62,6 +63,6 @@ post-install:
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
-
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
