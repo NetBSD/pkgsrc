@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2001/09/27 23:17:51 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/15 15:53:15 kei Exp $
 #
 
-DISTNAME=		wv-0.6.5
+DISTNAME=		wv-0.6.7
 CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
@@ -29,6 +29,5 @@ post-install:
 .include "../../devel/glib/buildlink.mk"
 .include "../../graphics/ImageMagick/buildlink.mk"
 .include "../../graphics/libwmf/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
