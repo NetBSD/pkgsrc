@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2906 2003/07/28 10:11:06 seb Exp $
+$NetBSD: CHANGES,v 1.2907 2003/07/28 10:12:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3035,3 +3035,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added psi-ssl 2.0 [jdolecek 2003-07-27]
 	Updated smpeg to 0.4.4nb4 [jmmv 2003-07-28]
 	Updated graphviz to 1.10 [seb 2003-07-28]
+	Updated libiconv to 1.9.1nb1 [jmmv 2003-07-28]
