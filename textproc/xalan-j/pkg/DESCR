@@ -1,0 +1,5 @@
+Xalan (named after a rare musical instrument) fully implements the W3C
+Recommendation 16 November 1999 XSL Transformations (XSLT) Version 1.0
+and the XML Path Language (XPath) Version 1.0. XSLT is the first part
+of the XSL stylesheet language for XML. It includes the XSL Transformation
+vocabulary and XPath, a language for addressing parts of XML documents.
