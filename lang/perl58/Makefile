@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/05/27 21:57:26 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 14:05:06 abs Exp $
 
 .include "Makefile.common"
 
@@ -205,6 +205,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
 .if ${MACHINE_ARCH} == "alpha"
-.  include "../../lang/gcc/buildlink2.mk"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

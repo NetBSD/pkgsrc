@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:15:35 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 14:05:09 abs Exp $
 
 DISTNAME=	xephem-3.5.2
 PKGREVISION=	1
@@ -24,7 +24,7 @@ BUILD_DIRS=	${LIBSRC1} ${LIBSRC2} ${WRKSRC}
 INSTALL_DIRS=	${WRKSRC}
 
 .if (${MACHINE_ARCH} == "arm32")
-.  include "../../lang/gcc/buildlink2.mk"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 post-install:
