@@ -1,12 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/10/16 05:39:57 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/31 23:57:39 jlam Exp $
 
---- php_imap.c.orig	Wed May 30 13:27:49 2001
+--- php_imap.c.orig	Fri Dec  7 11:47:59 2001
 +++ php_imap.c
-@@ -432,7 +432,11 @@
+@@ -410,6 +410,11 @@
+ 
  	ZEND_INIT_MODULE_GLOBALS(imap, php_imap_init_globals, NULL)
  
- 
--#if 1
 +/*
 + * Use the installed c-client linkage.c to determine which drivers and
 + * authenticators are linked in.
@@ -14,4 +13,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/10/16 05:39:57 jlam Exp $
 +#if 0
  #ifndef PHP_WIN32
  	mail_link(&unixdriver);		/* link in the unix driver */
- #endif
+ 	mail_link(&mhdriver);		/* link in the mh driver */
+@@ -430,6 +435,10 @@
+ 	mail_link(&tenexdriver);	/* link in the tenex driver */
+ 	mail_link(&mtxdriver);		/* link in the mtx driver */
+ 	mail_link(&dummydriver);	/* link in the dummy driver */
++#else
++        /* link in the c-client mail and auth drivers */
++#include "linkage.c"
++#endif
+ 
+ 	/* lets allow NIL */
+ 	REGISTER_MAIN_LONG_CONSTANT("NIL", NIL, CONST_PERSISTENT | CONST_CS);
