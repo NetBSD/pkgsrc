@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 21:43:18 dmcmahill Exp $
 
-MD5 (f2c-20001205.tar.gz) = 65d9b9413556083143d7a31fb2b2f9bb
-SHA1 (patch-aa) = 81be1056f42c7d7fa54ac52a3cc59039acc74689
+SHA1 (f2c-20001205.tar.gz) = f3cc1653eb962fee45d850df50890fc53448a17f
+Size (f2c-20001205.tar.gz) = 988607 bytes
+SHA1 (patch-aa) = 488a5adc6bf30a28fa221351224fa16952d54537
 SHA1 (patch-ab) = ddd695d45ac7819578b22a8a8aed0f09803cd3a0
 SHA1 (patch-ac) = 2d9d23d9a391c5490e6cf7a12c316d7edb49394f
 SHA1 (patch-ad) = 0144d0cdf55ce8117d179a56acc4db64fe67c8e0
