@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.31 2003/08/23 09:45:53 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.32 2003/08/25 19:37:45 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -185,10 +185,13 @@ NO_MTREE=		yes
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
 
+# _PKG_DBDIR is the actual packages database directory where we register
+# packages.
+#
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-PKG_DBDIR=		${PKG_DBDIR_DFLT}
+_PKG_DBDIR=		${PKG_DBDIR}
 .elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PKG_DBDIR=		${DEPOTBASE}
+_PKG_DBDIR=		${DEPOTBASE}
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
 # in pkg_views(1).  It's used by the dynamic PLIST generator to skip
@@ -2429,7 +2432,7 @@ real-su-install: ${MESSAGE}
 .     endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${WRKDIR}/.CONFLICTS ]; then				\
-		found=`${SED} -e s'|${PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
+		found=`${SED} -e s'|${_PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
 		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
 		${ECHO_MSG} "*** They install the same files into the same place."; \
 		${ECHO_MSG} "*** Please remove $$found first with pkg_delete(1)."; \
@@ -3369,7 +3372,7 @@ tarup:
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX};			\
-	${SETENV} PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
+	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}	\
 		PKGREPOSITORY=${PACKAGES}/All				\
 		${LOCALBASE}/bin/pkg_tarup ${PKGNAME};			\
 	for CATEGORY in ${CATEGORIES}; do				\
@@ -3382,18 +3385,18 @@ tarup:
 
 # shared code for replace and undo-replace
 _REPLACE=								\
-	if [ -f ${PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then		\
-		${MV} ${PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ${WRKDIR}/.req; \
+	if [ -f ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then	\
+		${MV} ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ${WRKDIR}/.req; \
 	fi;								\
 	${MAKE} deinstall;						\
 	$$replace_action;						\
 	if [ -f ${WRKDIR}/.req ]; then					\
-		${MV} ${WRKDIR}/.req ${PKG_DBDIR}/$$newpkgname/+REQUIRED_BY; \
-		for pkg in `${CAT} ${PKG_DBDIR}/$$newpkgname/+REQUIRED_BY`; do \
+		${MV} ${WRKDIR}/.req ${_PKG_DBDIR}/$$newpkgname/+REQUIRED_BY; \
+		for pkg in `${CAT} ${_PKG_DBDIR}/$$newpkgname/+REQUIRED_BY`; do \
 			${SETENV} NEWPKGNAME=$$newpkgname		\
 				${AWK} '/^@pkgdep '$$oldpkgname'/ { print "@pkgdep " ENVIRON["NEWPKGNAME"]; next } { print }' \
-				< ${PKG_DBDIR}/$$pkg/+CONTENTS > ${PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ && \
-			${MV} ${PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ ${PKG_DBDIR}/$$pkg/+CONTENTS; \
+				< ${_PKG_DBDIR}/$$pkg/+CONTENTS > ${_PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ && \
+			${MV} ${_PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ ${_PKG_DBDIR}/$$pkg/+CONTENTS; \
 		done;							\
 	fi
 
@@ -4420,14 +4423,14 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -d ${PKG_DBDIR} ]; then					\
-		${RM} -f ${PKG_DBDIR};					\
-		${MKDIR} ${PKG_DBDIR};					\
+	if [ ! -d ${_PKG_DBDIR} ]; then				\
+		${RM} -f ${_PKG_DBDIR};				\
+		${MKDIR} ${_PKG_DBDIR};				\
 	fi
 .  if defined(FORCE_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
 .    if ${PKG_INSTALLATION_TYPE} == "overwrite"
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${_PKG_DBDIR}/${PKGNAME}
 .    endif
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
@@ -4514,44 +4517,44 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	doit=yes;							\
 	case ${PKG_INSTALLATION_TYPE} in				\
-	overwrite)	if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
+	overwrite)	if [ -d ${_PKG_DBDIR}/${PKGNAME} ]; then	\
 				doit=no;				\
 			fi ;;						\
 	esac;								\
 	case $$doit in							\
 	yes)								\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
-		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
-		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
-		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
-		${ECHO} ${COMMENT:Q} > ${PKG_DBDIR}/${PKGNAME}/+COMMENT; \
-		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
-		${CP} ${BUILD_INFO_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
+		${MKDIR} ${_PKG_DBDIR}/${PKGNAME};			\
+		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${_PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
+		${CP} ${DESCR} ${_PKG_DBDIR}/${PKGNAME}/+DESC;	\
+		${ECHO} ${COMMENT:Q} > ${_PKG_DBDIR}/${PKGNAME}/+COMMENT; \
+		${CP} ${BUILD_VERSION_FILE} ${_PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
+		${CP} ${BUILD_INFO_FILE} ${_PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
 		if ${TEST} -e ${SIZE_PKG_FILE}; then 			\
-			${CP} ${SIZE_PKG_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_PKG; \
+			${CP} ${SIZE_PKG_FILE} ${_PKG_DBDIR}/${PKGNAME}/+SIZE_PKG; \
 		fi ; 							\
 		if ${TEST} -e ${SIZE_ALL_FILE}; then 			\
-			${CP} ${SIZE_ALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
+			${CP} ${SIZE_ALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
 		fi ; 							\
 		if ${TEST} -e ${PRESERVE_FILE}; then 			\
-			${CP} ${PRESERVE_FILE} ${PKG_DBDIR}/${PKGNAME}/+PRESERVE; \
+			${CP} ${PRESERVE_FILE} ${_PKG_DBDIR}/${PKGNAME}/+PRESERVE; \
 		fi ; 							\
 		if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then	\
-			${TOUCH} ${PKG_DBDIR}/${PKGNAME}/+VIEWS;	\
+			${TOUCH} ${_PKG_DBDIR}/${PKGNAME}/+VIEWS;	\
 		fi ;							\
 		if [ -n "${INSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${INSTALL_FILE}; then		\
-				${CP} ${INSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
+				${CP} ${INSTALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+INSTALL; \
 			fi;						\
 		fi;							\
 		if [ -n "${DEINSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${DEINSTALL_FILE}; then		\
-				${CP} ${DEINSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
+				${CP} ${DEINSTALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
 			fi;						\
 		fi;							\
 		if [ -n "${MESSAGE}" ]; then				\
 			if ${TEST} -e ${MESSAGE}; then			\
-				${CP} ${MESSAGE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
+				${CP} ${MESSAGE} ${_PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
 		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | ${SORT} -u`" ; \
@@ -4567,16 +4570,16 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | ${SORT} -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
-			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
-				if ${TEST} ! -e ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
-					${TOUCH} ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
+			elif [ -d ${_PKG_DBDIR}/$$realdep ]; then	\
+				if ${TEST} ! -e ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
+					${TOUCH} ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				fi; 					\
 				${AWK} 'BEGIN { found = 0; } 		\
 					$$0 == "${PKGNAME}" { found = 1; } \
 					{ print $$0; } 			\
 					END { if (!found) { printf("%s\n", "${PKGNAME}"); }}' \
-					< ${PKG_DBDIR}/$$realdep/+REQUIRED_BY > ${PKG_DBDIR}/$$realdep/reqby.$$$$; \
-				${MV} ${PKG_DBDIR}/$$realdep/reqby.$$$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
+					< ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY > ${_PKG_DBDIR}/$$realdep/reqby.$$$$; \
+				${MV} ${_PKG_DBDIR}/$$realdep/reqby.$$$$ ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				${ECHO} "${PKGNAME} requires installed package $$realdep"; \
 			fi;						\
 		done ;;							\
@@ -4605,7 +4608,7 @@ real-su-build-views:
 	${MKDIR} ${LOCALBASE};						\
 	for v in ${PKGVIEWS}; do					\
 		case "$$v" in						\
-		"")	dbdir=${PKG_DBDIR_DFLT}; viewname=standard ;;	\
+		"")	dbdir=${PKG_DBDIR}; viewname=standard ;;	\
 		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
 		esac;							\
 		${ECHO} "=> Performing package view clash check for ${PKGNAME} in $$viewname view"; \
