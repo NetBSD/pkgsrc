@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7955 2004/11/23 11:24:25 wulf Exp $
+$NetBSD: CHANGES,v 1.7956 2004/11/23 12:03:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nas to 1.7 [adam 2004-11-23]
 	Updated gnupg-devel to 1.9.12 [shannonjr 2004-11-22]
 	Updated hamlib to 1.2.3 [wulf 2004-11-23]
+	Updated acidrip to 0.14 [xtraeme 2004-11-23]
