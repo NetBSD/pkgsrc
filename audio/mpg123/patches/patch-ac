@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.1 1998/08/15 10:58:41 frueauf Exp $
+$NetBSD: patch-ac,v 1.2 1999/04/08 07:34:57 tron Exp $
 
---- audio_sun.c.orig	Mon Jan  5 12:41:31 1998
-+++ audio_sun.c	Sat Aug 15 12:15:25 1998
+--- audio_sun.c.orig	Mon Jan 11 07:54:46 1999
++++ audio_sun.c	Wed Apr  7 16:12:21 1999
 @@ -17,6 +17,8 @@
  
  #include "mpg123.h"
  
 +extern int outburst;
 +
+ #ifndef SPARCLINUX
  #include <sys/filio.h>
  #ifdef SUNOS
- #include <sun/audioio.h>
-@@ -74,6 +76,13 @@
+@@ -78,6 +80,13 @@
    }
  
  #ifndef NETBSD
@@ -24,4 +24,4 @@ $NetBSD: patch-ac,v 1.1 1998/08/15 10:58:41 frueauf Exp $
 +
    AUDIO_INITINFO(&ainfo);
  
-   switch(ai->output) {
+   if(ai->output > 0)
