@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/03 22:42:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/09 14:29:10 minskim Exp $
 bin/xchm
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xchm.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xchm.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xchm.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xchm.mo
 share/pixmaps/xchm-128.xpm
 share/pixmaps/xchm-16.xpm
 share/pixmaps/xchm-32.xpm
@@ -10,3 +14,4 @@ share/pixmaps/xchmdoc-128.xpm
 share/pixmaps/xchmdoc-16.xpm
 share/pixmaps/xchmdoc-32.xpm
 share/pixmaps/xchmdoc-48.xpm
+@comment in xdg-dirs: @dirrm share/pixmaps

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/03/03 22:42:10 minskim Exp $
+$NetBSD: distinfo,v 1.5 2004/04/09 14:29:10 minskim Exp $
 
-SHA1 (xchm-0.9.tar.gz) = bb4181c5eb51559797d80b54d2dd5ae1349bb877
-Size (xchm-0.9.tar.gz) = 308785 bytes
+SHA1 (xchm-0.9.1.tar.gz) = ccda39772d3dbe78120248286a72899902a411ee
+Size (xchm-0.9.1.tar.gz) = 317656 bytes
