@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.7 1999/08/02 18:18:17 bad Exp $
+$NetBSD: patch-ak,v 1.8 1999/09/10 20:38:23 bad Exp $
 
 --- config/configure.in.orig	Wed Nov 13 22:03:08 1996
-+++ config/configure.in	Mon Aug  2 19:48:50 1999
++++ config/configure.in	Fri Sep 10 20:54:50 1999
 @@ -124,6 +124,19 @@
  name=$host_cpu-$host_os
  
@@ -82,17 +82,27 @@ $NetBSD: patch-ak,v 1.7 1999/08/02 18:18:17 bad Exp $
      i386-*-netbsd1.1* | i386-*-netbsd1.2*)
  	name=i386-netbsd-1.0
  	sysincludes=netbsd-1.1
-@@ -195,6 +247,9 @@
+@@ -193,8 +245,18 @@
+ 	name=i386-netbsd-0.9
+ 	sysincludes=netbsd-0.9
  	;;
-     m68*-*-netbsd*)
+-    m68*-*-netbsd*)
++changequote(,)dnl
++    m68*-*-netbsd1.3[H-Z]|m68*-*-netbsd1.4*)
  	name=m68000-netbsd
 +	sysincludes=netbsd-1.1
 +	except="lseek ftruncate pipe fstat"
 +	available_syscalls="sigsuspend sigprocmask"
++	;;
++changequote([,])dnl
++    m68*-*-netbsd1.3*)
++	name=m68000-netbsd
++	sysincludes=netbsd-1.1
++	except="lseek ftruncate pipe fstat sigsuspend sigprocmask"
  	;;
      i386-*-freebsd2.*)
          name=i386-freebsd-2.0
-@@ -304,6 +359,16 @@
+@@ -304,6 +366,16 @@
  AC_MSG_RESULT($pthreads_cv_timespec_in_time)
  if test $pthreads_cv_timespec_in_time = yes ; then
    AC_DEFINE(_OS_HAS_TIMESPEC)

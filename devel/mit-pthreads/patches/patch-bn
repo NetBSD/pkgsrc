@@ -1,12 +1,12 @@
-$NetBSD: patch-bn,v 1.2 1999/08/01 22:12:29 bad Exp $
+$NetBSD: patch-bn,v 1.3 1999/09/10 20:38:23 bad Exp $
 
---- /dev/null	Fri Jul 30 03:20:45 1999
-+++ machdep/syscall-m68000-netbsd.S	Fri Jul 30 23:23:08 1999
+--- /dev/null	Fri Sep 10 15:38:20 1999
++++ machdep/syscall-m68000-netbsd.S	Fri Sep 10 20:57:21 1999
 @@ -0,0 +1,83 @@
 +
 +#ifndef lint
 +    .text
-+    .asciz "$Id: patch-bn,v 1.2 1999/08/01 22:12:29 bad Exp $";
++    .asciz "$Id: patch-bn,v 1.3 1999/09/10 20:38:23 bad Exp $";
 +#endif
 +
 +#include <machine/asm.h>
@@ -56,7 +56,7 @@ $NetBSD: patch-bn,v 1.2 1999/08/01 22:12:29 bad Exp $
 +ENTRY(machdep_sys_sigsuspend)
 +	movl	sp@(4),a0
 +	movl	a0@,sp@(4)
-+	movl	#SYS_compat_13_sigsuspend13,d0
++	movl	#SYS_sigsuspend,d0
 +	trap	#0
 +	jcs	err
 +	clrl	d0
@@ -75,7 +75,7 @@ $NetBSD: patch-bn,v 1.2 1999/08/01 22:12:29 bad Exp $
 +	movl	sp@(8),a0
 +	movl	a0@,sp@(8)
 +doit:
-+	movl	#SYS_compat_13_sigprocmask13,d0
++	movl	#SYS_sigprocmask,d0
 +	trap	#0
 +	jcs	err
 +	tstl	sp@(12)
