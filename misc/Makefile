@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.45 1999/06/16 21:42:06 mjl Exp $
+#	$NetBSD: Makefile,v 1.46 1999/06/21 15:11:57 sommerfeld Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += astrolog
@@ -46,6 +46,7 @@
     SUBDIR += rpm
     SUBDIR += sci
     SUBDIR += screen
+    SUBDIR += sc
     SUBDIR += siag
     SUBDIR += splitvt
     SUBDIR += team
