@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 1998/10/28 18:18:08 bad Exp $
+
+--- mit-pthreads/pthreads/fd_kern.c.orig	Wed Nov 26 09:43:02 1997
++++ mit-pthreads/pthreads/fd_kern.c	Sat Oct 24 22:37:05 1998
+@@ -575,6 +575,7 @@
+ off_t __fd_kern_lseek(union fd_data fd_data, int f, off_t offset, int whence)
+ {
+ 	int fd = fd_data.i;
++	extern off_t machdep_sys_lseek(int, off_t, int);
+ 	off_t ret=machdep_sys_lseek(fd, offset, whence);
+ 	if ((long) ret < 0L && (long) ret >=  -255L)
+ 	{

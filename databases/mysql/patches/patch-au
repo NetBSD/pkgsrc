@@ -1,0 +1,36 @@
+$NetBSD: patch-au,v 1.1 1998/10/28 18:18:09 bad Exp $
+
+--- mit-pthreads/machdep/syscall-i386-netbsd-1.3.S.orig	Mon Mar  2 19:44:34 1998
++++ mit-pthreads/machdep/syscall-i386-netbsd-1.3.S	Mon Oct 19 00:12:26 1998
+@@ -88,6 +88,7 @@
+ 	jb 3f;
+ 	ret
+ 
++#ifndef SYS___sigsuspend14
+ /* ==========================================================================
+  * machdep_sys_sigsuspend()
+  */
+@@ -102,6 +103,7 @@
+ 	int $0x80;						
+ 	jb 3f;
+ 	ret
++#endif
+ 
+ 3:
+ 	
+@@ -148,6 +150,7 @@
+         leave
+         ret  
+ 
++#ifndef SYS___sigprocmask14
+ /* ==========================================================================
+  * machdep_sys_sigprocmask()
+  */
+@@ -162,6 +165,7 @@
+ 	int  $0x80;						
+ 	jb   3b;
+ 	ret
++#endif
+ 
+ /* ==========================================================================
+  * machdep_sys_pipe()

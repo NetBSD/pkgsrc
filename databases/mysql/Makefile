@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 1998/10/19 19:02:45 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 1998/10/28 18:18:07 bad Exp $
 #
 
 # note: if updated, update shlib version number in patch-aa
-DISTNAME=	mysql-3.21.33
+DISTNAME=	mysql-3.21.33b
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.digex.net/pub/database/mysql/Downloads/MySQL-3.21/ \
 		ftp://ftp.netcasting.net/pub/mysql/Downloads/MySQL-3.21/
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.digex.net/pub/database/mysql/Downloads/MySQL-3.21/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tcx.se/
 
-CONFLICTS=	mysql-3.21.31 mysql-3.21.32a
+CONFLICTS=	mysql-3.21.31 mysql-3.21.32a mysql-3.21.33
 
 NO_CDROM=	"Restrictive license."
 
@@ -35,7 +35,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 	@${CP} ${PKGDIR}/PLIST-client ${PLIST_SRC}
 
-.if (${MACHINE_ARCH} != "i386") && (${MACHINE_ARCH} != "alpha")
+.if (${MACHINE_ARCH} != "i386") && (${MACHINE_ARCH} != "alpha") && (${MACHINE_ARCH} != "sparc")
 CONFIGURE_ARGS+=--without-server
 pre-configure:
 	@${ECHO} '########## Client-only support! ##########'
