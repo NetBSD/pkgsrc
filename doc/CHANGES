@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3318 2003/09/10 21:52:21 itojun Exp $
+$NetBSD: CHANGES,v 1.3319 2003/09/10 22:37:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3617,3 +3617,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_chk to 1.40 [jmmv 2003-09-10]
 	Added fondu-030428 [manu 2003-09-10]	
 	Added resize_image-0.6 [itojun 2003-09-10]	
+	Updated povray to 3.50cnb1 [jmmv 2003-09-10]
