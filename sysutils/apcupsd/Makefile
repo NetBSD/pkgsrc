@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/10/27 07:00:53 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/02 22:20:49 dillo Exp $
 
 DISTNAME=		apcupsd-3.6.2
 CATEGORIES=		sysutils
@@ -8,7 +8,6 @@ MAINTAINER=		bouyer@netbsd.org
 HOMEPAGE=		http://www.sibbald.com/apcupsd/
 COMMENT=		UPS power management for APCC Products
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
 USE_GMAKE=		# defined
@@ -25,9 +24,6 @@ GNU_CONFIGURE=		# defined
 
 CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
 
 # we should probably allow the tty to be set in /etc/mk.conf too
 #
