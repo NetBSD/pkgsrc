@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/03/23 04:52:57 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/07 13:15:54 salo Exp $
 
 DISTNAME=		xjump_2.7.5.orig
 PKGNAME=		xjump-2.7.5
-CATEGORIES=		wip games
+CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/\
 			http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/x/xjump/
 
