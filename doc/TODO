@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2301 2004/11/03 15:41:49 taca Exp $
+$NetBSD: TODO,v 1.2302 2004/11/03 15:55:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -618,7 +618,6 @@ Suggested package updates
 	o xmms-spectogram-1.2.1
 	o xmmsctrl-1.8
 	o xpad-2.0
-	o xpaint-2.7.2
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsane-0.96
