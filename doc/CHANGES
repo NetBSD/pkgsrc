@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.895 2002/12/24 09:06:24 tron Exp $
+$NetBSD: CHANGES,v 1.896 2002/12/24 16:29:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4236,3 +4236,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated glib to 2.2.0 [wiz 2002-12-24]
 	Updated atk to 1.2.0 [wiz 2002-12-24]
 	Updated pango to 1.2.0 [wiz 2002-12-24]
+	Updated pkg_comp to 1.4 [jmmv 2002-12-24]
