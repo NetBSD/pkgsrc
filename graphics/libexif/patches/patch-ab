@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1.2.2 2005/03/11 06:08:38 snj Exp $
+
+--- libexif/exif-data.c.orig	Tue Oct  5 21:10:04 2004
++++ libexif/exif-data.c
+@@ -628,7 +628,7 @@ exif_data_load_data (ExifData *data, con
+ 		  "Found EXIF header.");
+ 
+ 	/* Byte order (offset 6, length 2) */
+-	if (ds < 12)
++	if (ds < 14)
+ 		return;
+ 	if (!memcmp (d + 6, "II", 2))
+ 		data->priv->order = EXIF_BYTE_ORDER_INTEL;
+@@ -646,12 +646,18 @@ exif_data_load_data (ExifData *data, con
+ 	exif_log (data->priv->log, EXIF_LOG_CODE_DEBUG, "ExifData", 
+ 		  "IFD 0 at %i.", (int) offset);
+ 
++	if (ds < 6 + 4 + offset)
++		return;
++
+ 	/* Parse the actual exif data (offset 14) */
+ 	exif_data_load_data_content (data, data->ifd[EXIF_IFD_0], d + 6,
+ 				     ds - 6, offset);
+ 
+ 	/* IFD 1 offset */
+ 	n = exif_get_short (d + 6 + offset, data->priv->order);
++	if (ds < 6 + offset + 2 + 12 * n + 4)
++		return;
++
+ 	offset = exif_get_long (d + 6 + offset + 2 + 12 * n, data->priv->order);
+ 	if (offset) {
+ 		exif_log (data->priv->log, EXIF_LOG_CODE_DEBUG, "ExifData",
