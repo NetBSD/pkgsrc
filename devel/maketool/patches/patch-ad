@@ -1,16 +1,31 @@
-$NetBSD: patch-ad,v 1.1 1999/10/13 11:31:28 fredb Exp $
+$NetBSD: patch-ad,v 1.2 2000/01/03 23:36:20 fredb Exp $
 
---- preferences.c.orig	Sun Sep  5 06:39:31 1999
-+++ preferences.c	Wed Oct 13 04:45:37 1999
-@@ -274,9 +274,9 @@
-     prefs_set_var_environment();
-     prefs_set_var_make_flags();
-     
--    prefs.prog_make = ui_config_get_string("prog_make", "make %n %m %k %p %v %t");
-+    prefs.prog_make = ui_config_get_string("prog_make", "GNU_MAKE %n %m %k %p %v %t");
-     prefs.prog_list_targets = ui_config_get_string("prog_list_targets", "extract_targets %m %v");
--    prefs.prog_list_version = ui_config_get_string("prog_list_version", "make --version");
-+    prefs.prog_list_version = ui_config_get_string("prog_list_version", "GNU_MAKE --version");
-     prefs.prog_edit_source = ui_config_get_string("prog_edit_source", "nc -noask %{l:+-line %l} %f");
+This patch supplied by the author, Greg Banks <gnb@alphalink.com.au>,
+in private mail.
+
+--- glib_extra.c.orig	Sat Nov 13 19:23:07 1999
++++ glib_extra.c	Mon Jan  3 17:22:50 2000
+@@ -153,6 +153,14 @@
+ g_unix_source_destroy
+ };
  
-     prefs.win_width = ui_config_get_int("win_width", 300);
++/*
++ * TODO: there is some bizarre subtle problem with either my code
++ * or one of gtk or gdk which causes strange display bugs when
++ * this priority is made equal to 1. This needs to be properly
++ * tracked down and exterminated, but for the time being making
++ * the priority equal to G_PRIORITY_DEFAULT works -- Greg, 3Jan2000.
++ */
++#define G_UNIX_REAP_PRIORITY	G_PRIORITY_DEFAULT
+ 
+ void
+ g_unix_reap_init(void)
+@@ -163,7 +171,7 @@
+     {
+     	first = FALSE;
+ 	g_source_add(
+-		1,			/* priority */
++		G_UNIX_REAP_PRIORITY,	/* priority */
+ 		TRUE,			/* can_recurse */
+ 		&reaper_source_funcs,
+ 		(gpointer)0,		/* source_data */

@@ -1,18 +1,38 @@
-$NetBSD: patch-ac,v 1.1 1999/10/06 13:07:04 agc Exp $
+$NetBSD: patch-ac,v 1.2 2000/01/03 23:36:19 fredb Exp $
 
-Define FIONREAD on Solaris
-
---- spawn.c	1999/10/06 12:59:44	1.1
-+++ spawn.c	1999/10/06 13:01:57
-@@ -85,6 +85,11 @@
-     }
- }
+--- configure.in.orig	Sat Nov 13 19:25:31 1999
++++ configure.in	Sun Nov 21 14:08:05 1999
+@@ -22,10 +22,10 @@
+ dnl
  
-+#if defined(__sun__) && defined(__svr4__)
-+/* for FIONREAD on Solaris */
-+#include <sys/filio.h>
-+#endif
-+
- static void
- spawn_output_input(gpointer data, gint source, GdkInputCondition condition)
- {
+ AC_INIT(main.c)
+-sinclude(/usr/share/aclocal/gettext.m4)dnl
+-sinclude(/usr/share/aclocal/lcmessage.m4)dnl
+-sinclude(/usr/share/aclocal/progtest.m4)dnl
+-sinclude(/usr/share/aclocal/gtk.m4)dnl
++sinclude(/usr/pkg/share/aclocal/gettext.m4)dnl
++sinclude(/usr/pkg/share/aclocal/lcmessage.m4)dnl
++sinclude(/usr/pkg/share/aclocal/progtest.m4)dnl
++sinclude(/usr/X11R6/share/aclocal/gtk.m4)dnl
+ AC_CONFIG_HEADER(config.h)
+ 
+ PACKAGE=maketool
+@@ -56,13 +56,13 @@
+ DOCDIR=/usr/doc
+ AC_MSG_CHECKING(for presence of $DOCDIR)
+ changequote(,)dnl
+-if test -d $DOCDIR ; then
+-  USRDOC=
+-  AC_MSG_RESULT(yes)
+-else
++#if test -d $DOCDIR ; then
++#  USRDOC=
++#  AC_MSG_RESULT(yes)
++#else
+   USRDOC="#USRDOC#"
+   AC_MSG_RESULT(no)
+-fi
++#fi
+ changequote([,])dnl
+ AC_SUBST(USRDOC)
+ 

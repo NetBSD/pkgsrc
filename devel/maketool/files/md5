@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/10/13 11:31:27 fredb Exp $
+$NetBSD: md5,v 1.3 2000/01/03 23:36:18 fredb Exp $
 
-MD5 (maketool-0.4-src.tgz) = 4cd25403af019ad72cd120bce283926e
+MD5 (maketool-0.5.1-src.tgz) = e7d3d673967da0446bdf6bb5225e369b
