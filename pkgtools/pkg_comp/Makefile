@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/21 13:08:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/03/10 13:32:39 xtraeme Exp $
 
 DISTNAME=	pkg_comp-1.17
 CATEGORIES=	pkgtools
@@ -9,6 +9,7 @@ MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Build packages inside a chroot jail
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
