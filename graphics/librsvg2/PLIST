@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/18 14:15:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/22 12:43:10 jmmv Exp $
 bin/rsvg
 include/librsvg-2/librsvg/librsvg-features.h
 include/librsvg-2/librsvg/rsvg-gz.h
 include/librsvg-2/librsvg/rsvg.h
-lib/gtk-2.0/2.2.0/engines/libsvg.a
-lib/gtk-2.0/2.2.0/engines/libsvg.la
-lib/gtk-2.0/2.2.0/engines/libsvg.so
-lib/gtk-2.0/2.2.0/loaders/svg_loader.a
-lib/gtk-2.0/2.2.0/loaders/svg_loader.la
-lib/gtk-2.0/2.2.0/loaders/svg_loader.so
 lib/librsvg-2.a
 lib/librsvg-2.la
 lib/librsvg-2.so
@@ -31,8 +25,5 @@ share/doc/html/librsvg2/rsvg-creating-a-svgz-reader.html
 share/doc/html/librsvg2/rsvg.html
 share/doc/html/librsvg2/up.png
 @dirrm share/doc/html/librsvg2
-@comment in gtk2: @dirrm lib/gtk-2.0/2.2.0/loaders
-@comment in gtk2: @dirrm lib/gtk-2.0/2.2.0/engines
-@comment in gtk2: @dirrm lib/gtk-2.0/2.2.0
 @dirrm include/librsvg-2/librsvg
 @dirrm include/librsvg-2

@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2004/01/22 12:43:10 jmmv Exp $
+
+--- gtk-engine/Makefile.in.orig	2003-12-07 20:35:56.000000000 +0100
++++ gtk-engine/Makefile.in
+@@ -130,7 +130,7 @@ libsvg_la_SOURCES = \
+ 
+ 
+ libsvg_la_LDFLAGS = -avoid-version -module $(no_undefined)
+-libsvg_la_LIBADD = $(GTK_LIBS) $(LIBRSVG_LIBS) $(LIBCROCO_LIBS) $(top_builddir)/librsvg-2.la
++libsvg_la_LIBADD = $(GTK_LIBS) $(LIBRSVG_LIBS) $(LIBCROCO_LIBS) `pkg-config --libs librsvg-2.0`
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -141,7 +141,7 @@ DEFS = @DEFS@ -I. -I$(srcdir) -I..
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-libsvg_la_DEPENDENCIES =  $(top_builddir)/librsvg-2.la
++libsvg_la_DEPENDENCIES =
+ libsvg_la_OBJECTS =  svg-draw.lo svg-main.lo svg-render.lo \
+ svg-rc-style.lo
+ CFLAGS = @CFLAGS@
