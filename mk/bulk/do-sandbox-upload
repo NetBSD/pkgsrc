@@ -1,0 +1,11 @@
+#!/bin/sh
+#	$NetBSD: do-sandbox-upload,v 1.2.2.2 2005/01/13 20:11:55 tv Exp $
+
+#
+# Script to start a sandbox build
+#
+# See pkgsrc/Packages.txt for documentation!
+#
+
+sh=`which sh`
+chroot /usr/sandbox $sh -c "cd /usr/pkgsrc/ ; $sh mk/bulk/upload $@"

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.12.2.6 2005/01/10 16:15:25 tv Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.12.2.7 2005/01/13 20:11:55 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -187,7 +187,7 @@ _WRAP_LOGIC?=			${WRAPPER_TMPDIR}/logic
 _WRAP_REORDERLIBS?=		${WRAPPER_TMPDIR}/reorderlibs
 _WRAP_SCAN?=			${WRAPPER_TMPDIR}/scan
 _WRAP_SHELL_LIB?=		${WRAPPER_TMPDIR}/shell-lib
-_WRAP_SKIP_TRANSFORM?=		yes
+_WRAP_SKIP_TRANSFORM?=		no
 _WRAP_TRANSFORM?=		${_WRAP_EMPTY_FILE}
 _WRAP_TRANSFORM_SED?=		# empty
 _WRAP_TRANSFORM_SEDFILE?=	${WRAPPER_TMPDIR}/transform.sed
@@ -264,7 +264,7 @@ _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
 _WRAP_CMD_SINK.LD=		${WRAPPER_TMPDIR}/cmd-sink-ld
-_WRAP_TRANSFORM_SED.IMAKE=	# empty
+_WRAP_SKIP_TRANSFORM.IMAKE=	yes
 
 # XXX
 # XXX This section is ${OPSYS}-specific and shouldn't be here.

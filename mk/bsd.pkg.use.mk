@@ -1,7 +1,9 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.5 2005/01/10 16:15:25 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.6 2005/01/13 20:11:55 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
+
+PREPEND_PATH+=		${LOCALBASE}/bin
 
 ############################################################################
 # ${PREFIX} selection
