@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.3 2004/05/03 06:45:28 adam Exp $
+$NetBSD: patch-ad,v 1.4 2004/06/21 19:48:41 adam Exp $
 
---- app/base/cpu-accel.c.orig	Sun May  2 23:15:36 2004
+--- app/base/cpu-accel.c.orig	2004-06-15 09:21:39.000000000 +0000
 +++ app/base/cpu-accel.c
-@@ -366,7 +366,7 @@ arch_accel (void)
+@@ -395,7 +395,7 @@ arch_accel (void)
    canjump = 1;
  
    asm volatile ("mtspr 256, %0\n\t"
--		"vand %%v0, %%v0, %%v0"
-+		"vand v0, v0, v0"
- 		:
- 		: "r" (-1));
+-                "vand %%v0, %%v0, %%v0"
++                "vand v0, v0, v0"
+                 :
+                 : "r" (-1));
  
