@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/17 03:04:03 snj Exp $
+
+--- libs/audio/targets/Makefile.in.orig	2003-12-28 00:08:57.000000000 -0800
++++ libs/audio/targets/Makefile.in	2003-12-28 00:09:28.000000000 -0800
+@@ -353,7 +353,7 @@
+ snd_output_alsa0_9_la_SOURCES = snd_alsa_0_9.c
+ 
+ snd_output_oss_la_LDFLAGS = $(plugin_ldflags)
+-snd_output_oss_la_LDADD = $(OSS_LIBS)
++snd_output_oss_la_LDADD = $(OSS_LIBS) $(LIBOSSAUDIO)
+ snd_output_oss_la_CFLAGS = $(OSS_CFLAGS)
+ snd_output_oss_la_SOURCES = snd_oss.c
+ 
