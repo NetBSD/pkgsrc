@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2002/11/14 18:37:55 drochner Exp $
+# $NetBSD: Makefile,v 1.228 2002/11/15 12:46:12 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -209,6 +209,7 @@ SUBDIR+=	zope25-Silva
 SUBDIR+=	zope25-Squishdot
 SUBDIR+=	zope25-TinyTablePlus
 SUBDIR+=	zope25-XMLWidgets
+SUBDIR+=	zope25-ZMySQLDA
 SUBDIR+=	zope25-ZNavigator
 SUBDIR+=	zope25-ZPhotoSlides
 SUBDIR+=	zope25-ZPsycopgDA
