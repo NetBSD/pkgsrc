@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.13 2002/12/31 13:41:16 cjep Exp $
+# $NetBSD: mksandbox,v 1.14 2002/12/31 13:52:50 cjep Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -52,6 +52,7 @@ Darwin)
 	gtarprog=/usr/bin/gnutar
 	idprog=/usr/bin/id
 	mkdirprog="/bin/mkdir -p"
+	mountflags="-t null"
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
@@ -64,6 +65,7 @@ Linux)
 	gtarprog=/bin/tar
 	idprog=/usr/bin/id
 	mkdirprog="/bin/mkdir -p"
+	mountflags="-t null"
 	mountprog=/sbin/mount
 	paxprog=""
 	sedprog=/bin/sed
@@ -76,6 +78,7 @@ NetBSD)
 	gtarprog=/usr/bin/tar
 	idprog=/usr/bin/id
 	mkdirprog="/bin/mkdir -p"
+	mountflags="-t null"
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
@@ -88,6 +91,7 @@ SunOS)
 	gtarprog=""
 	idprog=/usr/xpg4/bin/id
 	mkdirprog="/usr/bin/mkdir -p"
+	mountflags="-F lofs"
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/xpg4/bin/sed
@@ -101,6 +105,7 @@ SunOS)
 	gtarprog="tar"
 	idprog="id"
 	mkdirprog="mkdir -p"
+	mountflags="-t null"
 	mountprog=mount
 	paxprog=pax
 	sedprog=sed
@@ -192,7 +197,7 @@ for d in	/bin							\
 		/var/mail; do						\
 	test -d $d || continue;						\
 	$mkdirprog $sandbox$d;						\
-	$mountprog -r -t null $d $sandbox$d;				\
+	$mountprog $mountflags -r $d $sandbox$d;			\
 	echo "$d $d ro \\" >> $sandbox_script
 done
 
@@ -207,19 +212,19 @@ $chmodprog 2775 $sandbox/var/games
 
 echo "Mount $src from $sandbox"
 $mkdirprog $sandbox/usr/src
-$mountprog -r -t null $src $sandbox/usr/src
+$mountprog $mountflags -r $src $sandbox/usr/src
 echo "$src /usr/src ro \\" >> $sandbox_script
 
 echo "Mount $pkgsrc from $sandbox"
 $mkdirprog $sandbox/usr/pkgsrc
-$mountprog -t null $pkgsrc $sandbox/usr/pkgsrc
+$mountprog $mountflags $pkgsrc $sandbox/usr/pkgsrc
 echo "$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
 
 echo "Mounting $packages and $distfiles from $sandbox"
 $mkdirprog $sandbox/$packages $sandbox/$distfiles
 $mkdirprog $packages $distfiles
-$mountprog -t null $packages $sandbox/$packages
-$mountprog -t null $distfiles $sandbox/$distfiles
+$mountprog $mountflags $packages $sandbox/$packages
+$mountprog $mountflags $distfiles $sandbox/$distfiles
 echo "$packages $packages rw \\" >> $sandbox_script
 echo "$distfiles $distfiles rw \\" >> $sandbox_script
 test -n "$localpatches" && echo "$localpatches $localpatches rw \\" >> $sandbox_script
@@ -235,8 +240,8 @@ case x\$1 in
 		mntpoint=\$1; shift
 		rwro=\$1; shift
 		case \$rwro in
-			ro) mount -r -t null \$fs \$sandbox/\$mntpoint || exit 1 ;;
-			rw) mount -t null \$fs \$sandbox/\$mntpoint || exit 1 ;;
+			ro) mount $mountflags -r \$fs \$sandbox/\$mntpoint || exit 1 ;;
+			rw) mount $mountflags \$fs \$sandbox/\$mntpoint || exit 1 ;;
 		esac
 	done
 	;;
