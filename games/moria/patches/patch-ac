@@ -1,21 +1,33 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
---- source/config.h.orig	Fri Jul 22 11:47:13 1994
-+++ source/config.h	Thu Dec  3 14:50:58 1998
-@@ -200,10 +200,16 @@
+$NetBSD: patch-ac,v 1.2 2004/04/26 10:55:27 seb Exp $
+
+--- source/config.h.orig	1994-07-22 01:47:13.000000000 +0000
++++ source/config.h
+@@ -200,16 +200,18 @@ some of the system defines set up here.
  
  /* This must be unix; change MORIA_LIB as appropriate.  */
  #define MORIA_SAV	"moria.save"
 -#define MORIA_LIB(xxx)  "/home/math/grabiner/moria/files/xxx"
-+#ifdef __STDC__
-+#define MORIA_LIB(xxx)	LIBDIR ## "/" ## #xxx
-+#else
-+#define MORIA_LIB(xxx)  LIBDIR/**/"/xxx"
-+#endif
- #define MORIA_HOU	MORIA_LIB(hours)
- #define MORIA_MOR	MORIA_LIB(news)
+-#define MORIA_HOU	MORIA_LIB(hours)
+-#define MORIA_MOR	MORIA_LIB(news)
+-#define MORIA_TOP	MORIA_LIB(scores)
+-#define MORIA_HELP	MORIA_LIB(roglcmds.hlp)
+-#define MORIA_ORIG_HELP	MORIA_LIB(origcmds.hlp)
+-#define MORIA_WIZ_HELP	MORIA_LIB(rwizcmds.hlp)
+-#define MORIA_OWIZ_HELP	MORIA_LIB(owizcmds.hlp)
+-#define MORIA_WELCOME	MORIA_LIB(welcome.hlp)
+-#define MORIA_VER	MORIA_LIB(version.hlp)
++#define MORIA_LIB(xxx)	LIBDIR "/" xxx
++#define MORIA_HOU	MORIA_LIB("hours")
++#define MORIA_MOR	MORIA_LIB("news")
 +#ifndef MORIA_TOP
- #define MORIA_TOP	MORIA_LIB(scores)
++#define MORIA_TOP	MORIA_LIB("scores")
 +#endif
- #define MORIA_HELP	MORIA_LIB(roglcmds.hlp)
- #define MORIA_ORIG_HELP	MORIA_LIB(origcmds.hlp)
- #define MORIA_WIZ_HELP	MORIA_LIB(rwizcmds.hlp)
++#define MORIA_HELP	MORIA_LIB("roglcmds.hlp")
++#define MORIA_ORIG_HELP	MORIA_LIB("origcmds.hlp")
++#define MORIA_WIZ_HELP	MORIA_LIB("rwizcmds.hlp")
++#define MORIA_OWIZ_HELP	MORIA_LIB("owizcmds.hlp")
++#define MORIA_WELCOME	MORIA_LIB("welcome.hlp")
++#define MORIA_VER	MORIA_LIB("version.hlp")
+ 
+ #endif
+ #endif
