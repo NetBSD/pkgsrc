@@ -1,4 +1,4 @@
-/* $NetBSD: memory_netbsd.cpp,v 1.1 1999/07/19 09:43:08 tron Exp $ */
+/* $NetBSD: memory_netbsd.cpp,v 1.2 2000/05/20 20:39:41 abs Exp $ */
 
 #include <sys/param.h>
 #if __NetBSD_Version__ > 103080000
@@ -9,9 +9,10 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/sysctl.h>
-#include <vm/vm_swap.h>
 #ifdef UVM
 #include <uvm/uvm_extern.h>
+#else
+#include <vm/vm_swap.h>
 #endif
 
 void KMemoryWidget::update()
