@@ -1,4 +1,16 @@
-$NetBSD: patch-ad,v 1.1 1999/09/23 01:33:30 fredb Exp $
+$NetBSD: patch-ad,v 1.2 1999/10/05 19:25:55 fredb Exp $
+
+Note to Porters
+===============
+
+This patch isn't actually used by the package, rather it's included for
+the convenience of the packagers. If the subsequent patch to configure
+fails, the patched configure.in can be used to regenerate configure...
+
+  (cd work && tar xzvf /usr/pkgsrc/distfiles/htdig-* htdig-*/db)
+  make do-configure; cd work/htdig-*; gmake configure
+
+and the new configure can be used to reconstruct the patch. 
 
 --- configure.in.orig	Wed Apr 21 21:47:53 1999
 +++ configure.in	Tue Sep 21 15:43:57 1999
