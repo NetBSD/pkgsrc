@@ -1,8 +1,22 @@
-$NetBSD: patch-aa,v 1.19 2001/09/14 05:00:36 jlam Exp $
+$NetBSD: patch-aa,v 1.20 2001/09/17 11:14:51 tron Exp $
 
---- Configure.orig	Sun Mar 18 22:03:33 2001
-+++ Configure	Fri Sep 14 00:55:04 2001
-@@ -6807,9 +6807,12 @@
+--- Configure.orig	Mon Mar 19 04:03:33 2001
++++ Configure	Mon Sep 17 11:59:02 2001
+@@ -1033,7 +1033,12 @@
+ libswanted='sfio socket bind inet nsl nm ndbm gdbm dbm db malloc dl'
+ libswanted="$libswanted dld ld sun m c cposix posix"
+ libswanted="$libswanted ndir dir crypt sec"
+-libswanted="$libswanted ucb bsd BSD PW x iconv util"
++if [ -x /usr/bin/uname ] && [ "`/usr/bin/uname -s`" = SunOS ]
++then
++ libswanted="$libswanted ucb bsd BSD PW x util"
++else
++ libswanted="$libswanted ucb bsd BSD PW x iconv util"
++fi
+ : We probably want to search /usr/shlib before most other libraries.
+ : This is only used by the lib/ExtUtils/MakeMaker.pm routine extliblist.
+ glibpth=`echo " $glibpth " | sed -e 's! /usr/shlib ! !'`
+@@ -6807,9 +6812,12 @@
  	aix)
  		# We'll set it in Makefile.SH...
  		;;
@@ -16,7 +30,7 @@ $NetBSD: patch-aa,v 1.19 2001/09/14 05:00:36 jlam Exp $
  	freebsd)
  		xxx="-Wl,-R$shrpdir"
  		;;
-@@ -14719,7 +14722,7 @@
+@@ -14719,7 +14727,7 @@
  eval $inhdr
  
  : see if this is a ieeefp.h system
