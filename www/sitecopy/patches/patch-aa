@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/15 23:27:07 jlam Exp $
+
+--- Makefile.in.orig	Wed Feb 14 18:39:36 2001
++++ Makefile.in
+@@ -21,8 +21,8 @@
+ datadir = $(prefix)/@DATADIRNAME@
+ # Previously I had:
+ # datadir = @datadir@/sitecopy
+-docdir = $(prefix)/doc/sitecopy
+-sc_datadir = $(datadir)/sitecopy
++docdir = $(prefix)/share/doc/sitecopy
++sc_datadir = $(prefix)/share/sitecopy
+ 
+ top_srcdir = @top_srcdir@
+ top_builddir = .

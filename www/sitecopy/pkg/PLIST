@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/15 23:27:07 jlam Exp $
+bin/sitecopy
+man/man1/sitecopy.1
+share/doc/sitecopy/FAQ
+share/doc/sitecopy/NEWS
+share/doc/sitecopy/README
+share/doc/sitecopy/THANKS
+share/doc/sitecopy/update.sh
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sitecopy.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sitecopy.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sitecopy.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/sitecopy.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sitecopy.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/sitecopy.mo
+share/sitecopy/changes.awk
+share/sitecopy/examplerc
+@dirrm share/sitecopy
+@dirrm share/doc/sitecopy
