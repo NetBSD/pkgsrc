@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2001/07/16 22:06:03 martin Exp $
+$NetBSD: patch-ac,v 1.5 2002/09/30 21:20:06 martin Exp $
 
 --- configure.orig	Sun Mar 26 09:47:39 2000
-+++ configure	Tue Jul 17 00:01:45 2001
++++ configure	Mon Sep 30 22:27:36 2002
 @@ -4163,6 +4163,7 @@
    cat > conftest.$ac_ext <<EOF
  #line 4165 "configure"
@@ -10,6 +10,15 @@ $NetBSD: patch-ac,v 1.4 2001/07/16 22:06:03 martin Exp $
  #include <stdio.h>
  #include <utmp.h>
  #include <errno.h>
+@@ -4337,7 +4338,7 @@
+ #ifdef UTMPX_FILE
+ 	UTMPX_FILE,
+ #endif
+-    "/var/adm/utmpx", "/etc/utmpx", NULL };
++    "/var/run/utmpx", "/var/adm/utmpx", "/etc/utmpx", NULL };
+     FILE *a, *f=fopen("conftestval", "w");
+     struct stat statu, statux;
+     if (!f) exit(1);
 @@ -5047,7 +5048,7 @@
  EOF
  
