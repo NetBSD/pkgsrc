@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/27 15:18:08 adam Exp $
 
---- Makefile.orig	Sun Oct 14 19:32:29 2001
+--- Makefile.orig	2002-08-30 18:03:07.000000000 +0000
 +++ Makefile
 @@ -20,7 +20,7 @@
  #
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
  # For GNU C
  #
 @@ -54,7 +54,7 @@ LIBS_SYS= -lm
- # This WON'T BUILD with FT2-beta8, use the FreeType release 2.0.
- # http://download.sourceforge.net/freetype/freetype-2.0.tar.gz
+ # This WON'T BUILD with FT2-beta8, use the FreeType release 2.0.4
+ # http://download.sourceforge.net/freetype/freetype-2.0.4.tar.gz
  
 -CFLAGS_FT= 
 +CFLAGS_FT= -DUSE_FREETYPE `freetype-config --cflags`
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
  
  # To enable use of the FreeType-2 library
  # (if the include and lib directory do not match your installation,
-@@ -84,20 +84,20 @@ CFLAGS_PREF=
+@@ -111,20 +111,20 @@ CFLAGS_PREF=
  #CFLAGS_PREF= -DPREFER_FREETYPE
  
  # Uncomment the second line to not compile t1asm into ttf2pt1
@@ -38,9 +38,9 @@ $NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
 +#CFLAGS_EXTT1ASM=
 +CFLAGS_EXTT1ASM= -DEXTERNAL_T1ASM
  
--CFLAGS= $(CFLAGS_SYS) $(CFLAGS_FT) $(CFLAGS_PREF)
-+CFLAGS+= $(CFLAGS_SYS) $(CFLAGS_FT) $(CFLAGS_PREF)
- LIBS= $(LIBS_SYS) $(LIBS_FT)
+-CFLAGS= $(CFLAGS_SYS) $(CFLAGS_FT) $(CFLAGS_AT) $(CFLAGS_PREF)
++CFLAGS+= $(CFLAGS_SYS) $(CFLAGS_FT) $(CFLAGS_AT) $(CFLAGS_PREF)
+ LIBS= $(LIBS_SYS) $(LIBS_FT) $(LIBS_AT)
  
  # Installation-related stuff
  # 
@@ -55,8 +55,8 @@ $NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
  # for scripts, maps/encodings etc.
  SHAREDIR = $(INSTDIR)/share/ttf2pt1
  MANDIR = $(INSTDIR)/man
-@@ -118,12 +118,12 @@ DOCS=CHANGES README FONTS FONTS.hpux enc
- 	app/X11/README app/netscape/README
+@@ -145,12 +145,12 @@ DOCS=CHANGES README FONTS FONTS.hpux enc
+ 	app/X11/README app/netscape/README app/TeX/README
  
  SUBDIRS = app encodings maps scripts other
 -TXTFILES = README* FONTS* CHANGES* COPYRIGHT
@@ -70,7 +70,7 @@ $NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
  
  docs: $(DOCS)
  
-@@ -175,7 +175,7 @@ runt1asm.o: runt1asm.c global.h
+@@ -203,7 +203,7 @@ runt1asm.o: runt1asm.c global.h
  	$(CC) $(CFLAGS) $(CFLAGS_EXTT1ASM) -c runt1asm.c
  
  ttf2pt1:	ttf2pt1.o pt1.o runt1asm.o ttf.o ft.o bdf.o bitmap.o
@@ -79,15 +79,15 @@ $NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
  
  CHANGES: CHANGES.html
  	scripts/unhtml <CHANGES.html >CHANGES
-@@ -202,31 +202,21 @@ FONTS.hpux: FONTS.hpux.html
+@@ -233,31 +233,21 @@ FONTS.hpux: FONTS.hpux.html
  	scripts/unhtml <FONTS.hpux.html >FONTS.hpux
  
  install: all
--	scripts/inst_dir $(BINDIR)
--	scripts/inst_dir $(LIBXDIR)
--	scripts/inst_dir $(SHAREDIR)
--	scripts/inst_dir $(MANDIR)/man1
--	scripts/inst_dir $(MANDIR)/man5
+-	scripts/inst_dir $(BINDIR) $(OWNER) $(GROUP) 0755
+-	scripts/inst_dir $(LIBXDIR) $(OWNER) $(GROUP) 0755
+-	scripts/inst_dir $(SHAREDIR) $(OWNER) $(GROUP) 0755
+-	scripts/inst_dir $(MANDIR)/man1 $(OWNER) $(GROUP) 0755
+-	scripts/inst_dir $(MANDIR)/man5 $(OWNER) $(GROUP) 0755
 -	cp -R $(TXTFILES) $(SUBDIRS) $(SHAREDIR)
 -	chown -R $(OWNER) $(SHAREDIR)
 -	chgrp -R $(GROUP) $(SHAREDIR)
@@ -106,7 +106,7 @@ $NetBSD: patch-aa,v 1.2 2002/10/08 09:58:21 jlam Exp $
 -	scripts/inst_file scripts/x2gs $(BINDIR)/ttf2pt1_x2gs $(OWNER) $(GROUP) 0755
 +	$(BSD_INSTALL_SCRIPT) cvt.tmp $(BINDIR)/ttf2pt1_convert
 +	rm -f cvt.tmp
-+	$(BSD_INSTALL_SCRIPT) scripts/x2gs $(BINDIR)/ttf2pt1_x2gs 
++	$(BSD_INSTALL_SCRIPT) scripts/x2gs $(BINDIR)/ttf2pt1_x2gs
  	for i in $(MANS1); do { \
  		sed 's|TTF2PT1_BINDIR|$(BINDIR)|;\
  			s|TTF2PT1_LIBXDIR|$(LIBXDIR)|;\
