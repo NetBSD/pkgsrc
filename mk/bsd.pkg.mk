@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1055 2002/09/24 21:54:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1056 2002/09/25 06:31:00 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -759,13 +759,6 @@ INSTALL_TARGET+=	install.man
 # If this host is behind a filtering firewall, use passive ftp(1)
 .if defined(PASSIVE_FETCH)
 FETCH_BEFORE_ARGS += -p
-.endif
-
-# If USE_MOTIF (deprecated) is set, then include motif.buildlink.mk for the
-# Motif discovery logic.
-#
-.if defined(USE_MOTIF)
-.  include "../../mk/motif.buildlink.mk"
 .endif
 
 # If USE_XPM is set, depend on xpm.
