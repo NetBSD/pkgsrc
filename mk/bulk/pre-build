@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.33 2003/12/07 11:43:22 agc Exp $
+# $NetBSD: pre-build,v 1.34 2004/01/15 09:57:50 grant Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -23,7 +23,8 @@ PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
 
 # extract the name of the files used for the build log and broken build log.
 # these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
-export BROKENF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
+BROKENF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
+export BROKENF
 if [ "$BROKENF" = "" ]; then
 	echo "Had problems determining the name of the .broken files"
 	exit 1
