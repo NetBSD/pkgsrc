@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9601 2005/03/24 11:04:45 wiz Exp $
+$NetBSD: CHANGES,v 1.9602 2005/03/24 11:14:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1705,3 +1705,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome-core to 1.4.2nb17 [wiz 2005-03-24]
 	Updated gnome-panel to 1.4.2nb12 [wiz 2005-03-24]
 	Updated gnome-session to 1.4.2nb12 [wiz 2005-03-24]
+	Updated bzflag to 1.10.6nb2 [wiz 2005-03-24]
