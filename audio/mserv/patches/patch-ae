@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2003/07/16 12:07:21 abs Exp $
+$NetBSD: patch-ae,v 1.6 2003/07/16 12:22:45 abs Exp $
 
 --- mserv/configure.orig	Sat Jul 15 19:33:45 2000
 +++ mserv/configure
@@ -3813,7 +3813,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/16 12:07:21 abs Exp $
    ac_cv_header_stdc=no
  fi
  rm -f conftest*
-@@ -1310,123 +3124,420 @@ fi
+@@ -1310,123 +3124,421 @@ fi
  
  if test $ac_cv_header_stdc = yes; then
    # /bin/cc in Irix-4.0.5 gets non-ANSI ctype macros unless using -ansi.
@@ -4267,7 +4267,8 @@ $NetBSD: patch-ae,v 1.5 2003/07/16 12:07:21 abs Exp $
 +    { echo "$as_me:$LINENO: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&5
 +echo "$as_me: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&2;}
 +    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
-+echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
++echo "$as_me: WARNING: $ac_header: proceeding with the compilers's result" >&2;}
++	ac_header_preproc=ac_header_compiler
 +    (
 +      cat <<\_ASBOX
 +## ------------------------------------ ##
@@ -4323,7 +4324,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/16 12:07:21 abs Exp $
  done
  
          if [ "x$SOUND" = "0" ]; then
-@@ -1436,118 +3547,159 @@ done
+@@ -1436,118 +3548,159 @@ done
  	fi
  
  
@@ -4575,7 +4576,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/16 12:07:21 abs Exp $
   ;;
  esac
  
-@@ -1561,58 +3713,87 @@ esac
+@@ -1561,58 +3714,87 @@ esac
  	CFLAGS="-c $CFLAGS"
  
  
@@ -4702,7 +4703,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/16 12:07:21 abs Exp $
  fi
  done
  
-@@ -1622,374 +3803,1100 @@ done
+@@ -1622,374 +3804,1100 @@ done
  		program_prefix=""
  	fi
  
