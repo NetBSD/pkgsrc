@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8781 2005/01/16 22:40:43 epg Exp $
+$NetBSD: CHANGES,v 1.8782 2005/01/17 07:56:28 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -338,8 +338,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.7nb6 [taca 2005-01-16]
 	Added rubber-0.99.8 [cube 2005-01-16]
 	Updated nmh to 1.0.4nb6 [jmmv 2005-01-16]
-	Added horde-3.0.2 [adrianp 2004-01-16]
-	Added imp-4.0.1 [adrianp 2004-01-16]
+	Added horde-3.0.2 [adrianp 2005-01-16]
+	Added imp-4.0.1 [adrianp 2005-01-16]
 	Updated p5-TimeDate to 1.16 [epg 2005-01-16]
 	Updated subversion to 1.1.3 [epg 2005-01-16]
 	Updated p5-SVN-Mirror to 0.54 [epg 2005-01-16]
