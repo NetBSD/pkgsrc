@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/02 14:16:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/13 08:18:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -52,18 +52,36 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.freetype2}
 BUILDLINK_TARGETS.freetype2=	freetype2-buildlink
 
 .if ${_NEED_FREETYPE2} == "YES"
-BUILDLINK_TARGETS.freetype2+=	freetype2-buildlink-config-wrapper
-
+BUILDLINK_TARGETS.freetype2+=		freetype2-buildlink-config-wrapper
 BUILDLINK_CONFIG.freetype2=		${LOCALBASE}/bin/freetype-config
 BUILDLINK_CONFIG_WRAPPER.freetype2=	${BUILDLINK_DIR}/bin/freetype-config
+
+freetype2-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
+
+.else
+BUILDLINK_TARGETS.freetype2+=		freetype2-buildlink-config
+BUILDLINK_CONFIG.freetype2=		${BUILDLINK_DIR}/bin/freetype-config
+BUILDLINK_CONFIG_WRAPPER.freetype2=	${BUILDLINK_CONFIG.freetype2}
+
+freetype2-buildlink-config:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${BUILDLINK_CONFIG.freetype2} ]; then			\
+		${ECHO_MSG} "Creating config script ${BUILDLINK_CONFIG.freetype2}."; \
+		${MKDIR} ${BUILDLINK_CONFIG.freetype2:H};		\
+		${SED}	-e "s|@AWK@|${AWK}|g"				\
+			-e "s|@SED@|${SED}|g"				\
+			-e "s|@X11BASE@|${X11BASE}|g"			\
+			-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
+			${.CURDIR}/../../graphics/freetype2/buildlink-freetype-config.in \
+			> ${BUILDLINK_CONFIG.freetype2};		\
+		${CHMOD} +x ${BUILDLINK_CONFIG.freetype2};		\
+	fi
+.endif	# _NEED_FREETYPE2
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
 FREETYPE_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.freetype2}
 CONFIGURE_ENV+=		FREETYPE_CONFIG="${FREETYPE_CONFIG}"
 .endif
-
-freetype2-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-.endif	# _NEED_FREETYPE2
 
 pre-configure: ${BUILDLINK_TARGETS.freetype2}
 freetype2-buildlink: _BUILDLINK_USE
