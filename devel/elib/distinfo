@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/08 21:29:13 cjones Exp $
+$NetBSD: distinfo,v 1.2 2002/02/18 15:14:09 seb Exp $
 
 SHA1 (elib-1.0.tar.gz) = 1f7450a949a2388efadece015aba53bbbada62cf
 Size (elib-1.0.tar.gz) = 58335 bytes
+SHA1 (patch-aa) = d78586bf11e732fbbcf6512ad415fd4cf7b3f78a

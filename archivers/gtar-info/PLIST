@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:26 zuntum Exp $
-@unexec install-info --delete --info-dir=%D/info %D/info/tar.info
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:01 seb Exp $
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/tar.info
 info/tar.info
 info/tar.info-1
 info/tar.info-2
@@ -9,4 +9,4 @@ info/tar.info-5
 info/tar.info-6
 info/tar.info-7
 info/tar.info-8
-@exec install-info --info-dir=%D/info %D/info/tar.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/tar.info

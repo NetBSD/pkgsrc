@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:42 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:39 seb Exp $
 bin/gpg
 bin/gpgv
-@unexec install-info --delete --info-dir=%D/info %D/info/gpg.info
-@unexec install-info --delete --info-dir=%D/info %D/info/gpgv.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gpg.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gpgv.info
 info/gpg.info
 info/gpgv.info
-@exec install-info --info-dir=%D/info %D/info/gpg.info
-@exec install-info --info-dir=%D/info %D/info/gpgv.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gpg.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gpgv.info
 ${IDEA}lib/gnupg/idea
 lib/gnupg/rndegd
 lib/gnupg/rndunix

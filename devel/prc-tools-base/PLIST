@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:58 zuntum Exp $
-@unexec install-info --delete %D/info/prc-tools.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:15 seb Exp $
+@unexec ${INSTALL_INFO} --delete %D/info/prc-tools.info %D/info/dir
 info/prc-tools.info
-@exec install-info %D/info/prc-tools.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/prc-tools.info %D/info/dir
 m68k-palmos/include/ctype.h
 m68k-palmos/include/errno.h
 m68k-palmos/include/malloc.h

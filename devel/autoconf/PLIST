@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:07 seb Exp $
 bin/autoconf
 bin/autoheader
 bin/autoreconf
 bin/autoscan
 bin/autoupdate
 bin/ifnames
-@unexec install-info --delete %D/info/autoconf.info %D/info/dir
-@unexec install-info --delete %D/info/standards.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/autoconf.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/standards.info %D/info/dir
 info/autoconf.info
 info/standards.info
-@exec install-info %D/info/autoconf.info %D/info/dir
-@exec install-info %D/info/standards.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/autoconf.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/standards.info %D/info/dir
 share/autoconf/acconfig.h
 share/autoconf/acfunctions
 share/autoconf/acgeneral.m4

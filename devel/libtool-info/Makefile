@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/10/18 15:20:11 veego Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/18 15:14:14 seb Exp $
 #
 
 .include "../libtool/Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=	Generic shared library support script - info pages
 
 CONFLICTS+=	libtool<1.3.5nb11
 
-USE_GTEXINFO=	yes
+TEXINFO_OVERRIDE=	YES
 
 # It seems the info-files distributed with libtool 1.3.5 are broken.
 # To test, type "info libtool|" and hold down space. See it stop with a
@@ -20,9 +20,10 @@ post-extract:
 	${RM} -f ${WRKSRC}/doc/libtool.info*
 
 do-build:
-	cd ${WRKSRC}/doc ; ${MAKE_PROGRAM}
+	cd ${WRKSRC}/doc ; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 
 do-install:
-	cd ${WRKSRC}/doc ; ${MAKE_PROGRAM} install
+	cd ${WRKSRC}/doc ; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

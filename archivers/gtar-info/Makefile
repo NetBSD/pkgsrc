@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/27 18:32:32 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/18 15:14:01 seb Exp $
 #
 
 DISTNAME=       tar-1.12
@@ -12,7 +12,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
 COMMENT=	Info format documentation for the GNU tape archiver
 
-USE_GTEXINFO=	yes
 INFO_FILES=	tar.info
 
 NO_PATCH=	yes
@@ -25,4 +24,5 @@ do-install:
 	    ${INSTALL_DATA} $${i} ${PREFIX}/info ; \
 	done
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/07 10:52:11 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:41 seb Exp $
 bin/gbasename
 bin/gchroot
 bin/gdate
@@ -31,9 +31,9 @@ bin/gusers
 bin/gwho
 bin/gwhoami
 bin/gyes
-@unexec install-info --delete %D/info/sh-utils.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/sh-utils.info %D/info/dir
 info/sh-utils.info
-@exec install-info %D/info/sh-utils.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/sh-utils.info %D/info/dir
 man/man1/gbasename.1
 man/man1/gchroot.1
 man/man1/gdate.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:28 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:37 seb Exp $
 bin/a2ps
 bin/card
 bin/composeglyphs
@@ -12,9 +12,9 @@ bin/texi2dvi4a2ps
 etc/a2ps-site.cfg
 etc/a2ps.cfg
 include/liba2ps.h
-@unexec install-info --delete %D/info/a2ps.info %D/info/dir
-@unexec install-info --delete %D/info/ogonkify.info %D/info/dir
-@unexec install-info --delete %D/info/regex.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/a2ps.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/ogonkify.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/regex.info %D/info/dir
 info/a2ps.info
 info/a2ps.info-1
 info/a2ps.info-2
@@ -27,9 +27,9 @@ info/regex.info
 info/regex.info-1
 info/regex.info-2
 info/regex.info-3
-@exec install-info %D/info/a2ps.info %D/info/dir
-@exec install-info %D/info/ogonkify.info %D/info/dir
-@exec install-info %D/info/regex.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/a2ps.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/ogonkify.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/regex.info %D/info/dir
 lib/liba2ps.a
 lib/liba2ps.la
 lib/liba2ps.so

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/05/17 08:38:44 abs Exp $
+# $NetBSD: Makefile,v 1.20 2002/02/18 15:14:13 seb Exp $
 #
 
 DISTNAME=	libg++-${GXXVERSION}
@@ -33,4 +33,5 @@ post-install:
 		/bin/ls 2>/dev/null -1d lib/libg++*.a lib/libg++.so*) \
 		>${PLIST_SRC}
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

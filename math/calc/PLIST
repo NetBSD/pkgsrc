@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:10 zuntum Exp $
-@unexec install-info --delete --info-dir=%D/info %D/info/calc.info
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:29 seb Exp $
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/calc.info
 info/calc.info
 info/calc.info-1
 info/calc.info-10
@@ -35,7 +35,7 @@ info/calc.info-6
 info/calc.info-7
 info/calc.info-8
 info/calc.info-9
-@exec install-info --info-dir=%D/info %D/info/calc.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/calc.info
 ${SITE_LISP}/calc/calc-aent.el
 ${SITE_LISP}/calc/calc-aent.elc
 ${SITE_LISP}/calc/calc-alg-2.el

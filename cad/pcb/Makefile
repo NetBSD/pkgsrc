@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 13:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/18 15:14:03 seb Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
@@ -28,4 +28,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/pcb.ps ${PREFIX}/share/doc/pcb/
 	${INSTALL_MAN} ${WRKSRC}/doc/refcard.ps ${PREFIX}/share/doc/pcb/
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

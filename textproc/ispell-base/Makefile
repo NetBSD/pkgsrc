@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/29 01:12:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/18 15:14:43 seb Exp $
 #
 
 DISTNAME=	ispell-3.1.20
@@ -17,7 +17,6 @@ MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
 
 WRKSRC=		${WRKDIR}/ispell-3.1
 
-USE_GTEXINFO=	yes
 INFO_FILES=	ispell.info
 
 .if exists(/usr/include/inttypes.h)
@@ -38,4 +37,5 @@ do-configure:
 	${ECHO} "#define ELISPDIR \"${PREFIX}/share/emacs/site-lisp\"" >> local.h; \
 	${ECHO} "#define CFLAGS \"${CFLAGS}\"" >> local.h
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

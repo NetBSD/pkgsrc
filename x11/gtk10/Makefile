@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/04/27 11:43:40 tron Exp $
+# $NetBSD: Makefile,v 1.14 2002/02/18 15:14:45 seb Exp $
 
 DISTNAME=	gtk+-1.0.6
 PKGNAME=	gtk10-1.0.6
@@ -19,8 +19,10 @@ CONFIGURE_ARGS=	--includedir=${PREFIX}/include/gtk10
 
 CFLAGS=		-pipe -O2
 INFO_FILES=	gdk10.info glib10.info gtk10.info
+TEXINFO_OVERRIDE=	YES
 
 post-extract:
 	cd ${WRKSRC}/docs && ${RM} -f ${INFO_FILES}
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:26 seb Exp $
 bin/c2init
 bin/canonical_grade
 bin/info_to_mdb
@@ -17,7 +17,7 @@ bin/mprof_merge_runs
 bin/mtags
 bin/sicstus_conv
 bin/vpath_find
-@unexec install-info --delete --info-dir=%D/info %D/info/mercury.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mercury.info
 info/mercury.info
 info/mercury_faq.info
 info/mercury_library.info
@@ -46,7 +46,7 @@ info/mercury_user_guide.info-1
 info/mercury_user_guide.info-2
 info/mercury_user_guide.info-3
 info/mercury_user_guide.info-4
-@exec install-info --info-dir=%D/info %D/info/mercury.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mercury.info
 lib/mercury/bin/${MACHINE_ARCH}--${LOWER_OPSYS}/mercury_compile
 lib/mercury/bin/${MACHINE_ARCH}--${LOWER_OPSYS}/mercury_profile
 lib/mercury/inc/gc.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/03 09:59:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:12 seb Exp $
 bin/aid
 bin/defid
 bin/eid
@@ -8,9 +8,9 @@ bin/gid
 bin/lid
 bin/mkid
 bin/xtokid
-@unexec install-info --delete --info-dir=%D/info %D/info/id-utils.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/id-utils.info
 info/id-utils.info
-@exec install-info --info-dir=%D/info %D/info/id-utils.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/id-utils.info
 share/id-lang.map
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/id-utils.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/id-utils.mo

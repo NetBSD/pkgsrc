@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:50 zuntum Exp $
-@comment @unexec install-info --delete %D/info/zenirc.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:03 seb Exp $
+@comment @unexec ${INSTALL_INFO} --delete %D/info/zenirc.info %D/info/dir
 @comment info/zenirc.info
-@comment @exec install-info %D/info/zenirc.info %D/info/dir
+@comment @exec ${INSTALL_INFO} %D/info/zenirc.info %D/info/dir
 share/emacs/site-lisp/zenirc-18.elc
 share/emacs/site-lisp/zenirc-8ball.elc
 share/emacs/site-lisp/zenirc-away.elc

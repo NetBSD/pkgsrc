@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/23 21:01:30 tron Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:40 seb Exp $
 
 DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
@@ -14,6 +14,7 @@ COMMENT=	The Z shell
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	zsh.info
+TEXINFO_OVERRIDE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,4 +28,5 @@ post-install:
 	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak || ${TRUE}; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
 	${RM} /etc/shells.bak
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

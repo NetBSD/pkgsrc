@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/04/09 11:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2002/02/18 15:14:02 seb Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
@@ -26,7 +26,7 @@ INFO_FILES=		tracker.info
 
 pre-install:
 	cd ${WRKSRC}/Docs && \
-	makeinfo --no-split tracker.texinfo -o tracker.info && \
+	${MAKEINFO} --no-split tracker.texinfo -o tracker.info && \
 	${CP} tracker.info ${PREFIX}/info && \
 	${RM} -f tracker.info *.orig
 
@@ -34,4 +34,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tracker
 	${CP} -R ${WRKSRC}/Docs/* ${PREFIX}/share/doc/tracker
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
