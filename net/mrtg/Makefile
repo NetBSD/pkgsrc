@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/10/20 16:06:16 bouyer Exp $
+# $NetBSD: Makefile,v 1.20 2000/10/23 13:47:53 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -13,7 +13,7 @@ MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://ftp.chg.ru/pub/networking/management/mrtg/ \
 		ftp://ftp.onet.pl/pub/unix/network/mrtg/pub/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 
 DEPENDS=	gd>=1.8.1:../../graphics/gd
