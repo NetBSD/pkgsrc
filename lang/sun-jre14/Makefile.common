@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2003/01/29 11:13:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2003/02/05 03:37:45 jlam Exp $
 
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
@@ -15,6 +15,8 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+INTERACTIVE_STAGE=	fetch
 
 .include "../../mk/bsd.prefs.mk"
 
