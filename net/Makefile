@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2000/05/22 03:57:12 sakamoto Exp $
+# $NetBSD: Makefile,v 1.126 2000/05/26 14:57:33 itojun Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -67,6 +67,7 @@
     SUBDIR += p5-Net-DNS
     SUBDIR += p5-Net-Telnet
     SUBDIR += p5-SNMP
+    SUBDIR += p5-Socket6
     SUBDIR += p5-Wais
     SUBDIR += pchar
     SUBDIR += pfnet
