@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/09/28 09:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/16 12:54:14 cube Exp $
 #
 
-DISTNAME=	slurm-0.2.1
-PKGREVISION=	1
+DISTNAME=	slurm-0.3.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.raisdorf.net/files/code/
 
@@ -11,13 +10,19 @@ HOMEPAGE=	http://www.raisdorf.net/projects/slurm/
 COMMENT=	Realtime traffic statistics
 
 USE_BUILDLINK2=	YES
-NO_CONFIGURE=	YES
+GNU_CONFIGURE=	YES
 
-USE_NCURSES=	# use_default_colors
+post-patch:
+	${SED} -e s,@PREFIX@,${PREFIX}, ${WRKSRC}/theme.c > ${WRKSRC}/theme.c.sed
+	${MV} ${WRKSRC}/theme.c.sed ${WRKSRC}/theme.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/slurm ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/slurm.1 ${PREFIX}/man/man1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/slurm
+	for theme in blue cyan foo; do								\
+		${INSTALL_DATA} ${WRKSRC}/themes/$${theme}.theme ${PREFIX}/share/slurm ;	\
+	done
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
