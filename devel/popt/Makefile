@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/08/28 16:18:10 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/03 16:07:55 martti Exp $
 #
 
-DISTNAME=	popt-1.6.3
+DISTNAME=	popt-1.6.4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.0.x/		\
 		http://gd.tuwien.ac.at/z7/utils/rpm.org/dist/rpm-4.0.x/	\

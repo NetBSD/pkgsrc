@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/01/10 07:49:35 martti Exp $
+$NetBSD: patch-aa,v 1.5 2002/10/03 16:07:56 martti Exp $
 
---- configure.orig	Thu Nov 29 20:04:04 2001
-+++ configure	Wed Jan  9 09:51:00 2002
-@@ -7334,7 +7334,7 @@
+--- configure.orig	Thu Feb 14 00:03:19 2002
++++ configure	Thu Oct  3 18:01:35 2002
+@@ -7342,7 +7342,7 @@
          nls_cv_header_intl=
      nls_cv_header_libgt=
  
