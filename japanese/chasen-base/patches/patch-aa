@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/10 14:45:03 taca Exp $
+
+--- chasen/chasen.c.orig	Tue Dec 19 05:08:20 2000
++++ chasen/chasen.c
+@@ -41,6 +41,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <unistd.h>
+ 
+ #include "chalib.h"
+ #include "pat.h"
+@@ -375,7 +376,7 @@
+ #endif
+ 	  rc = chasen_standalone(argv, output);
+ 	if (output != stdout)
+-	  close(output);
++	  fclose(output);
+ 	return rc;
+     }
+ }
