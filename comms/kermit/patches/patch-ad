@@ -1,37 +1,13 @@
-$NetBSD: patch-ad,v 1.5 1999/10/06 22:27:15 tron Exp $
+$NetBSD: patch-ad,v 1.6 1999/12/20 12:33:49 fredb Exp $
 
---- ckutio.c.orig	Mon Nov 25 11:20:49 1996
-+++ ckutio.c	Wed Oct  6 23:02:25 1999
-@@ -4572,6 +4572,9 @@ ttsspd(cps) int cps; {
- #endif /* MINIX */
-       case 240: s = B2400; break;
-       case 480: s = B4800; break;
-+#ifdef B7200
-+      case 720: s = B7200; break;
-+#endif
- #ifndef MINIX
-       case 888: s = B75; s2 = B1200; break; /* 888 = 75/1200 split speed */
- #endif /* MINIX */
-@@ -4918,6 +4921,10 @@ ttgspd() {				/* Get current serial devi
-       case B4800: ss = 4800L; break;
- #endif /* B4800 */
- 
-+#ifdef B7200
-+      case B7200: ss = 7200L; break;
-+#endif /* B7200 */
-+
- #ifdef B9600
-       case B9600: ss = 9600L; break;
- #endif /* B9600 */
-@@ -7174,9 +7181,9 @@ ztime(s) char **s; {
- #ifdef ATTSV				/* AT&T way */
+--- ckutio.c.orig	Tue Dec  7 18:40:00 1999
++++ ckutio.c	Thu Dec 16 06:41:46 1999
+@@ -10411,7 +10411,7 @@
  /*  extern long time(); */		/* Theoretically these should */
      char *ctime();			/* already been dcl'd in <time.h> */
+ #ifdef BSD44
 -    long clock_storage;
 +    time_t clock_storage;
-     clock_storage = time(
--#ifdef IRIX60
-+#if defined(IRIX60) || defined(__NetBSD__)
- 			 (time_t *)
  #else
- 			 (long *)
+     time_t clock_storage;
+ #endif /* BSD44 */

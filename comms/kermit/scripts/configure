@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: configure,v 1.2 1998/08/07 10:36:41 agc Exp $
-#
-# shuffle things around for bmake to work right
-#
-mv ${WRKDIR}/makefile  ${WRKDIR}/makefile.dist
-sed -e "s@%%PREFIX%%@${PREFIX}@" < ${FILESDIR}/Makefile.sed > ${WRKDIR}/Makefile
-cp ${FILESDIR}/dot.kermrc ${WRKDIR}
