@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/07/07 03:42:01 taca Exp $
+$NetBSD: distinfo,v 1.3 2003/12/17 15:24:15 taca Exp $
 
-SHA1 (ruby/webrick-1.2.3.tar.gz) = af14b545719fdbff6a5ff32d5f26b2706a8c6495
-Size (ruby/webrick-1.2.3.tar.gz) = 52500 bytes
+SHA1 (ruby/webrick-1.3.1.tar.gz) = 86ced9c5f04ba43ba94d04e5109295f0923c370a
+Size (ruby/webrick-1.3.1.tar.gz) = 71575 bytes
