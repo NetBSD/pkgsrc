@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:20 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/02 05:33:58 jlam Exp $
 #
 # This Makefile fragment is included by packages that use smpeg.
 #
@@ -35,7 +35,8 @@ BUILDLINK_CONFIG.smpeg=		${LOCALBASE}/bin/smpeg-config
 BUILDLINK_CONFIG_WRAPPER.smpeg=	${BUILDLINK_DIR}/bin/smpeg-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
-CONFIGURE_ENV+=		SMPEG_CONFIG="${BUILDLINK_CONFIG_WRAPPER.smpeg}"
+SMPEG_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.smpeg}
+CONFIGURE_ENV+=		SMPEG_CONFIG="${SMPEG_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.smpeg}
