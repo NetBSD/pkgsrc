@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.4 2003/08/27 08:17:23 wiz Exp $
+
+--- esd.c.orig	Fri Aug  1 15:58:30 2003
++++ esd.c
+@@ -479,8 +479,10 @@ int open_listen_socket(const char *hostn
+ 	  fprintf(stderr,"Unable to bind port %d\n", port );
+ 	  exit(1);
+ 	}
++#if defined (ENABLE_IPV6)
+       if ( result )
+ 	  freeaddrinfo ( result );
++#endif
+     }
+     else
+     {
