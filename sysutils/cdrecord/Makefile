@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/07/17 22:53:28 grant Exp $
+# $NetBSD: Makefile,v 1.52 2004/01/05 12:48:30 jlam Exp $
 
 DISTNAME=	cdrtools-2.00.3
 PKGNAME=	cdrecord-2.00.3
@@ -11,16 +11,13 @@ COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs
 
 CONFLICTS=	mkisofs-[0-9]*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_GMAKE=		# defined
 TBL?=			tbl
-
-.if ${LOCALBASE} != "/opt/schily"
-BUILDLINK_TRANSFORM=	r:/opt/schily
-BUILDLINK_TRANSFORM+=	r:/opt/schily
-.endif
 
 # avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
@@ -47,6 +44,8 @@ MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF}
 
 CDRECORD_CONF_FILES=	cdrecord/defaults.c cdrecord/cdrecord.1
 CDRECORD_CONF_FILES+=	readcd/readcd.1
+
+INSTALLATION_DIRS=	bin man/man1 man/man8
 
 post-patch:
 	@cd ${WRKSRC}; for file in ${CDRECORD_CONF_FILES}; do		\
@@ -89,5 +88,5 @@ do-install:
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

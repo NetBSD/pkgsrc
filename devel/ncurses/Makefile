@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/12/20 08:49:27 reed Exp $
+# $NetBSD: Makefile,v 1.54 2004/01/05 12:53:10 jlam Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.3
@@ -12,7 +12,9 @@ MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://dickey.his.com/ncurses/ncurses.html
 COMMENT=		CRT screen handling and optimization package
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_GCC_SHLIB=		YES
 USE_LIBTOOL=		YES
 
