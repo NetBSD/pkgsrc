@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/10/03 10:43:19 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/10/16 15:25:32 jlam Exp $
 
 .if !defined(OSS_BUILDLINK2_MK)
 OSS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		oss
-BUILDLINK_DEPENDS.oss?=		oss>=3.97c
+BUILDLINK_DEPENDS.oss?=		oss-[0-9]*
 BUILDLINK_PKGSRCDIR.oss?=	../../audio/oss
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.oss=oss
@@ -17,7 +17,6 @@ BUILDLINK_FILES.oss+=	lib/oss/libOSSlib.*
 
 _OSSLIBDIR=		${BUILDLINK_PREFIX.oss}/lib/oss
 BUILDLINK_CPPFLAGS.oss=	-I${_OSSLIBDIR}/include
-BUILDLINK_LDFLAGS.oss=	-L${_OSSLIBDIR} -Wl,-R${_OSSLIBDIR}
 
 BUILDLINK_PREFIX.ossaudio=	${_OSSLIBDIR}
 BUILDLINK_FILES.ossaudio=	include/sys/awe_voice.h
