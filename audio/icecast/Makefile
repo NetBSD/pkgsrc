@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/21 06:02:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/28 16:49:37 wiz Exp $
 #
 
 DISTNAME=	icecast-1.3.7
@@ -10,6 +10,10 @@ HOMEPAGE=	http://www.icecast.org/
 
 DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
 DEPENDS+=	readline-4.*:../../devel/readline
+
+# Sync these with devel/unproven-pthreads
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-m68k
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-readline \
