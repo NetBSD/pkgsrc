@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/07 13:11:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/10/18 22:12:40 tron Exp $
 #
 
 DISTNAME=	libgtop-0.26.0
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ \
 		ftp://ftp.gnome.org/pub/GNOME/sources/ \
 		ftp://ftp.geo.net/pub/gnome/sources/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gnome-libs-0.30.1:../../x11/gnome-libs
