@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2191 2003/05/09 05:08:03 taca Exp $
+$NetBSD: CHANGES,v 1.2192 2003/05/09 07:40:39 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1903,3 +1903,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added celestia-gnome-1.3.0 [salo 2003-05-08]
 	Added celestia-kde-1.3.0 [salo 2003-05-08]
 	Updated squid to 2.5.2nb3 [taca 2003-05-09]
+	Added utftools-1.6 [agc 2003-05-09]
