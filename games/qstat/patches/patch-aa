@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/18 17:51:19 peter Exp $
+
+--- Makefile.orig	2002-10-11 05:55:07.000000000 +0200
++++ Makefile	2004-06-11 13:45:56.000000000 +0200
+@@ -1,6 +1,4 @@
+ 
+-CFLAGS =
+-
+ # Uncomment if you have gcc
+ # CC = gcc
+ 
