@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.3 2004/11/26 08:26:51 jlam Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.4 2004/11/26 17:42:42 jlam Exp $
 
 .for _lib_ in dl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -29,6 +29,35 @@ USE_BUILTIN.dl=		${IS_BUILTIN.dl}
 USE_BUILTIN.dl=		no	# Darwin uses devel/dlcompat
 .  endif
 .endif
+#
+# The following platforms require pthreads to be linked into the
+# application if it uses dlopen() or else the applications will core
+# dump when they dlopen a shared module that _is_ linked with pthread
+# support.
+#
+_DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
+	NetBSD-2.[0-9]-* NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*	\
+	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*
+
+_DLOPEN_REQUIRE_PTHREADS?=	no
+.for _pattern_ in ${_DLOPEN_REQUIRE_PTHREAD_PLATFORMS}
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    if !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
+_DLOPEN_REQUIRE_PTHREADS=	yes
+.    endif
+.  endif
+.endfor
+#
+# DLOPEN_REQUIRE_PTHREADS is a user- and package-settable yes/no variable
+#	whose value decides whether pthread.buildlink3.mk is automatically
+#	included or not.  Its default value depends on whether native
+#	pthreads exist.
+#
+.if defined(DLOPEN_REQUIRE_PTHREADS)
+_DLOPEN_REQUIRE_PTHREADS:=      ${DLOPEN_REQUIRE_PTHREADS}
+.else
+DLOPEN_REQUIRE_PTHREADS=        ${_DLOPEN_REQUIRE_PTHREADS}
+.endif
 
 CHECK_BUILTIN.dl?=	no
 .if !empty(CHECK_BUILTIN.dl:M[nN][oO])
@@ -41,35 +70,6 @@ BUILDLINK_PREFIX.dl=	/usr
 # scripts already check for -ldl themselves.
 #
 BUILDLINK_LDADD.dl=	-ldl
-.    endif
-#
-# The following platforms require pthreads to be linked into the
-# application if it uses dlopen() or else the applications will core
-# dump when they dlopen a shared module that _is_ linked with pthread
-# support.
-#
-_DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
-	NetBSD-2.[0-9]-* NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*	\
-	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*
-
-_DLOPEN_REQUIRE_PTHREADS?=	no
-.    for _pattern_ in ${_DLOPEN_REQUIRE_PTHREAD_PLATFORMS}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
-.        if !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
-_DLOPEN_REQUIRE_PTHREADS=	yes
-.        endif
-.      endif
-.    endfor
-#
-# DLOPEN_REQUIRE_PTHREADS is a user- and package-settable yes/no variable
-#	whose value decides whether pthread.buildlink3.mk is automatically
-#	included or not.  Its default value depends on whether native
-#	pthreads exist.
-#
-.    if defined(DLOPEN_REQUIRE_PTHREADS)
-_DLOPEN_REQUIRE_PTHREADS:=      ${DLOPEN_REQUIRE_PTHREADS}
-.    else
-DLOPEN_REQUIRE_PTHREADS=        ${_DLOPEN_REQUIRE_PTHREADS}
 .    endif
 .    if !empty(_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
