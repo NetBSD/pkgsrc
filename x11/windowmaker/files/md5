@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.15 1999/10/05 20:46:55 tron Exp $
+$NetBSD: md5,v 1.16 2000/04/06 22:38:19 jlam Exp $
 
-MD5 (WindowMaker-0.61.1.tar.bz2) = 74c4f4b74feb3fc5def8f2cfc1dc9e65
+MD5 (WindowMaker-0.62.0.tar.bz2) = 104189babbc8640e81515896c26aa503
