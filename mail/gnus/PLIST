@@ -1,40 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/31 13:56:41 uebayasi Exp $
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ognus.info
-info/ognus
-info/ognus-1
-info/ognus-10
-info/ognus-11
-info/ognus-12
-info/ognus-13
-info/ognus-14
-info/ognus-15
-info/ognus-16
-info/ognus-17
-info/ognus-18
-info/ognus-19
-info/ognus-2
-info/ognus-20
-info/ognus-21
-info/ognus-22
-info/ognus-3
-info/ognus-4
-info/ognus-5
-info/ognus-6
-info/ognus-7
-info/ognus-8
-info/ognus-9
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ognus.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/message.info
-info/message
-info/message-1
-info/message-2
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/message.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/pgg.info
-info/pgg
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/pgg.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/sieve.info
-info/sieve
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/sieve.info
+@comment $NetBSD: PLIST,v 1.2 2003/07/08 09:58:53 seb Exp $
+share/doc/gnus/info/emacs-mime
+share/doc/gnus/info/gnus
+share/doc/gnus/info/gnus-1
+share/doc/gnus/info/gnus-10
+share/doc/gnus/info/gnus-11
+share/doc/gnus/info/gnus-12
+share/doc/gnus/info/gnus-13
+share/doc/gnus/info/gnus-14
+share/doc/gnus/info/gnus-15
+share/doc/gnus/info/gnus-16
+share/doc/gnus/info/gnus-17
+share/doc/gnus/info/gnus-18
+share/doc/gnus/info/gnus-19
+share/doc/gnus/info/gnus-2
+share/doc/gnus/info/gnus-20
+share/doc/gnus/info/gnus-21
+share/doc/gnus/info/gnus-22
+share/doc/gnus/info/gnus-3
+share/doc/gnus/info/gnus-4
+share/doc/gnus/info/gnus-5
+share/doc/gnus/info/gnus-6
+share/doc/gnus/info/gnus-7
+share/doc/gnus/info/gnus-8
+share/doc/gnus/info/gnus-9
+share/doc/gnus/info/message
+share/doc/gnus/info/message-1
+share/doc/gnus/info/message-2
+share/doc/gnus/info/pgg
+share/doc/gnus/info/sieve
 share/gnus/gnus-tut.txt
 share/gnus/gnus/bar.xbm
 share/gnus/gnus/bar.xpm
@@ -458,6 +451,8 @@ ${EMACS_LISPPREFIX}/gnus/uudecode.el
 ${EMACS_LISPPREFIX}/gnus/uudecode.elc
 ${EMACS_LISPPREFIX}/gnus/yenc.el
 ${EMACS_LISPPREFIX}/gnus/yenc.elc
+@dirrm share/doc/gnus/info
+@dirrm share/doc/gnus
 @dirrm share/gnus/smilies
 @dirrm share/gnus/gnus
 @dirrm share/gnus

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/31 13:56:41 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/08 09:58:53 seb Exp $
 
 DISTNAME=	gnus-5.10.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://quimby.gnus.org/gnus/dist/
 
@@ -13,11 +14,13 @@ COMMENT=	Gnus is a flexible message reader running under GNU Emacs
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX}/gnus
 CONFIGURE_ARGS+=	--with-etcdir=${PREFIX}/share/gnus
+# Avoid conflicting with Emacsen provided gnus info files
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/share/doc/gnus/info
 
-post-extract:
-	${MV} ${WRKSRC}/texi/gnus.texi ${WRKSRC}/texi/ognus.texi
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
+INFO_DIR=		share/doc/gnus/info
+INFO_FILES=		emacs-mime gnus message pgg sieve
 
 .include "../../mk/emacs.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
-
