@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/19 03:19:31 mjl Exp $
+$NetBSD: distinfo,v 1.2 2003/12/10 21:54:48 heinz Exp $
 
-SHA1 (Digest-MD4-1.1.tar.gz) = 553478ab8c5eedd46f8fdd4caa68aa7122539441
-Size (Digest-MD4-1.1.tar.gz) = 10456 bytes
+SHA1 (Digest-MD4-1.3.tar.gz) = 6af439308b973854e9b8042c3b467946191a0807
+Size (Digest-MD4-1.3.tar.gz) = 28917 bytes
