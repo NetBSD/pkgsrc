@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1284 2003/01/30 11:15:15 jmmv Exp $
+$NetBSD: CHANGES,v 1.1285 2003/01/30 12:22:52 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -496,3 +496,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated TeXmacs to 1.0.1nb1 [jmmv 2003-01-30]
 	Updated gnome-libs to 1.4.1.4nb3 [jmmv 2003-01-30]
 	Updated gnome-core to 1.4.2nb2 [jmmv 2003-01-30]
+	Updated flashplayer-0.4.10nb2 [jlam 2003-01-30]
+	Updated libflash-0.4.10nb4 [jlam 2003-01-30]
+	Updated moz-flash-1.0nb2 [jlam 2003-01-30]
