@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/06/07 19:05:21 skrll Exp $
+
+--- diskb_del.c.orig	Mon Jun 30 11:34:34 1997
++++ diskb_del.c	Sun Jun  4 16:57:25 2000
+@@ -29,9 +29,9 @@
+ /*   #ifdef NL
+    printf("Naam van het bbc diskbeeld?");
+    #else
+-   printf("Name of the bbc disk image?");
++   printf("Name of the bbc disk image?\n");
+    #endif
+-   scanf("%50s", disk);
++   exit(1);
+    } else {strcpy(disk, argv[1+options]); options++;}
+ */
+ 
+@@ -55,7 +55,7 @@
+     #ifdef NL
+     printf("niets op het diskbeeld\n\n");
+     #else
+-    printf("Nothing on the diskimage\n\n");
++    printf("Nothing on the diskimage\n");
+     #endif
+     exit(1);
+   }

@@ -1,0 +1,132 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/06/07 19:05:21 skrll Exp $
+
+--- intersplits.c.orig	Mon Jun 30 11:36:21 1997
++++ intersplits.c	Sun Jun  4 16:57:25 2000
+@@ -9,7 +9,6 @@
+ 
+ void interss(int argc, char *argv[], int options) {
+   char  side0[50],  side1[50], interleaved[50]; 
+-  char option2[5];
+   unsigned char byte;
+   FILE *fp0, *fp1, *fp_inter;
+   int sec_per_track, track, i;
+@@ -20,21 +19,26 @@
+     #ifdef NL
+     printf("Single density (sd) of double density (dd)?");
+     #else
+-    printf("Single density (sd) or double density (dd)?");
++    printf("Single density (sd) or double density (dd)?\n");
+     #endif
+-    scanf("%2s", option2);
+-  } else {strcpy(option2, argv[1+options]); options++;}
+-
+-  if (!strcmp(option2, "dd")) dd=1;
+-
++    exit(1);
++  } else {
++    if (!strcmp(argv[1+options], "dd")) {
++      dd=1;
++      options++;
++    } else if (!strcmp(argv[1+options], "sd")) {
++      dd=0;
++      options++;
++    }
++  }
+ 
+   if ((argc-options)==1) {
+     #ifdef NL
+     printf("Naam van het diskbeeld voor zijde 0?");
+     #else
+-    printf("Name of the disk image for side 0?");
++    printf("Name of the disk image for side 0?\n");
+     #endif
+-    scanf("%50s", side0);
++    exit(1);
+   } else strcpy(side0, argv[1+options]);
+ 
+ 
+@@ -42,9 +46,9 @@
+     #ifdef NL
+     printf("Naam van het diskbeeld voor zijde 1?");
+     #else
+-    printf("Name of the disk image for side 1?");
++    printf("Name of the disk image for side 1?\n");
+     #endif
+-    scanf("%50s", side1);
++    exit(1);
+   } else strcpy(side1, argv[2+options]);
+ 
+ 
+@@ -52,9 +56,9 @@
+     #ifdef NL
+     printf("Naam van om-en-om beeld?");
+     #else
+-    printf("Name of the interleaved diskimage?");
++    printf("Name of the interleaved diskimage?\n");
+     #endif
+-    scanf("%50s", interleaved);
++    exit(1);
+   } else strcpy(interleaved, argv[3+options]);
+ 
+ 
+@@ -64,7 +68,7 @@
+     #ifdef NL
+     printf("Bestand %s is niet te openen\n\n", side0);
+     #else
+-    printf("File %s cannot be opened\n\n", side0);
++    printf("File %s cannot be opened\n", side0);
+     #endif
+     exit(1);
+   }
+@@ -76,7 +80,7 @@
+       #ifdef NL
+       printf("Bestand %s is niet te openen\n\n", side1);
+       #else
+-      printf("File %s cannot be opened\n\n", side1);
++      printf("File %s cannot be opened\n", side1);
+       #endif
+       exit(1);
+     }
+@@ -130,7 +134,6 @@
+ 
+ void splitds(int argc, char *argv[], int options) {
+   char  side0[50],  side1[50], interleaved[50]; 
+-  char option2[5];
+   unsigned char byte;
+   FILE *fp0, *fp1, *fp_inter;
+   int sec_per_track, track;
+@@ -141,21 +144,26 @@
+     #ifdef NL
+     printf("Single density (sd) of double density (dd)?");
+     #else
+-    printf("Single density (sd) or double density (dd)?");
++    printf("Single density (sd) or double density (dd)?\n");
+     #endif
+-    scanf("%2s", option2);
+-  } else {strncpy(option2, argv[1+options],2); options++;}
+-
+-  if (!strcmp(option2, "dd")) dd=1;
+-
++    exit(1);
++  } else {
++    if (!strcmp(argv[1+options], "dd")) {
++      dd=1;
++      options++;
++    } else if (!strcmp(argv[1+options], "sd")) {
++      dd=0;
++      options++;
++    }
++  }
+ 
+   if ((argc-options)==1) {
+     #ifdef NL
+     printf("Naam van de om-en-om diskdump?");
+     #else
+-    printf("Name of the interleaved diskdump?");
++    printf("Name of the interleaved diskdump?\n");
+     #endif
+-    scanf("%50s", interleaved);
++    exit(1);
+   } else strcpy(interleaved, argv[1+options]);
+ 
+   strcpy(side0, interleaved);
