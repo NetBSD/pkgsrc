@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/09/21 23:47:25 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/11/30 12:22:02 salo Exp $
 #
 
 DISTNAME=		oregano-0.20
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.dtek.chalmers.se/~d4hult/oregano/
 COMMENT=		application for schematic capture/simulation of electrical circuits
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
