@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/20 03:54:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/28 14:55:00 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/glut.so
 ${RUBY_SITEARCHLIBDIR}/opengl.so
 ${RUBY_EXAMPLESDIR}/opengl/aaindex.rb
@@ -21,6 +21,7 @@ ${RUBY_EXAMPLESDIR}/opengl/drawf.rb
 ${RUBY_EXAMPLESDIR}/opengl/feedback.rb
 ${RUBY_EXAMPLESDIR}/opengl/fog.rb
 ${RUBY_EXAMPLESDIR}/opengl/font.rb
+${RUBY_EXAMPLESDIR}/opengl/font-glut.rb
 ${RUBY_EXAMPLESDIR}/opengl/hello.rb
 ${RUBY_EXAMPLESDIR}/opengl/image.rb
 ${RUBY_EXAMPLESDIR}/opengl/jitter.rb
@@ -34,6 +35,7 @@ ${RUBY_EXAMPLESDIR}/opengl/pickdepth.rb
 ${RUBY_EXAMPLESDIR}/opengl/plane.rb
 ${RUBY_EXAMPLESDIR}/opengl/planet.rb
 ${RUBY_EXAMPLESDIR}/opengl/quadric.rb
+${RUBY_EXAMPLESDIR}/opengl/readpixel.rb
 ${RUBY_EXAMPLESDIR}/opengl/robot.rb
 ${RUBY_EXAMPLESDIR}/opengl/select.rb
 ${RUBY_EXAMPLESDIR}/opengl/smooth.rb
