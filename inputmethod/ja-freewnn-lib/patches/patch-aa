@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:00:48 seb Exp $
+
+--- ./Wnn/Makefile.in.orig	Tue Mar 23 21:10:52 1999
++++ ./Wnn/Makefile.in	Thu Sep  2 19:21:52 1999
+@@ -611,6 +611,4 @@
+ # Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
+-WNNOWNER= wnn
+-
+ JSERVERDIR = jserver
+ 
+@@ -629,9 +627,15 @@
+ JDDIR = jd
+ 
+-WNNMANDIR = man
+-
+ JLIBV3DIR = jlib.V3
+ 
+-SUBDIRS = $(JDDIR) $(JSERVERDIR) $(JLIBDIR) $(WNNCLIENTSDIR) $(WNNJUTILDIR)         $(PUBDICDIR) $(WNNCONSDIR) $(WNNMANDIR) $(WNNENVDIR) $(JLIBV3DIR)
++.if (${WNN_TARGET} == "SERVER")
++WNNMANDIR = man/2.env man/4.cmd man/6.jutil
++SUBDIRS_INST = $(JSERVERDIR) $(WNNJUTILDIR) $(PUBDICDIR) $(WNNCONSDIR)			 $(WNNMANDIR)
++SUBDIRS = $(JDDIR) $(SUBDIRS_INST)
++.else
++WNNMANDIR = man/3.libwnn
++SUBDIRS_INST = $(JDDIR) $(JLIBDIR) $(WNNCLIENTSDIR) $(WNNMANDIR) $(WNNENVDIR) $(JLIBV3DIR)
++SUBDIRS = $(SUBDIRS_INST)
++.endif
+ 
+ all::
+@@ -699,5 +703,5 @@
+ 	@for flag in ${MAKEFLAGS} ''; do \
+ 	case "$$flag" in *=*) ;; *[ik]*) set +e;; esac; done; \
+-	for i in $(SUBDIRS) ;\
++	for i in $(SUBDIRS_INST) ;\
+ 	do \
+ 	echo "installing" "in $(CURRENT_DIR)/$$i..."; \
+@@ -709,5 +713,5 @@
+ 	@for flag in ${MAKEFLAGS} ''; do \
+ 	case "$$flag" in *=*) ;; *[ik]*) set +e;; esac; done; \
+-	for i in $(SUBDIRS) ;\
++	for i in $(SUBDIRS_INST) ;\
+ 	do \
+ 	echo "installing man pages" "in $(CURRENT_DIR)/$$i..."; \
+@@ -719,5 +723,5 @@
+ 	@for flag in ${MAKEFLAGS} ''; do \
+ 	case "$$flag" in *=*) ;; *[ik]*) set +e;; esac; done; \
+-	for i in $(SUBDIRS) ;\
++	for i in $(SUBDIRS_INST) ;\
+ 	do \
+ 	echo "installing link kit" "in $(CURRENT_DIR)/$$i..."; \
