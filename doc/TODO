@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2736 2004/12/21 18:00:25 salo Exp $
+$NetBSD: TODO,v 1.2737 2004/12/21 20:16:07 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -570,7 +570,6 @@ Suggested package updates
 	o gwenview-1.1.7
 	o hackbot-2.21
 	o haskell-mode-1.45
-	o hatari-0.60
 	o hdf5-1.6.3
 	o hercules-3.01
 	o hevea-1.07
