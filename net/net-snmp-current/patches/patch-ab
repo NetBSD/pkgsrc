@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/03/14 06:29:03 itojun Exp $
+
+--- snmplib/Makefile.in-	Thu Mar 14 11:44:11 2002
++++ snmplib/Makefile.in	Thu Mar 14 11:44:36 2002
+@@ -108,7 +108,7 @@
+ 	snprintf.c strtol.c strtoul.c				\
+ 	snmp_transport.c @transport_src_list@                   \
+ 	snmp_secmod.c @security_src_list@ snmp_version.c	\
+-	cmu_compat.c ucd_compat.c
++	cmu_compat.c ucd_compat.c libwrap.c
+ 
+ OBJS=	snmp_client.o mib.o parse.o snmp_api.o snmp.o 		\
+ 	snmp_auth.o asn1.o md5.o snmp_parse_args.o	  	\
+@@ -121,7 +121,7 @@
+ 	snprintf.o strtol.o strtoul.o				\
+ 	snmp_transport.o @transport_obj_list@                   \
+ 	snmp_secmod.o @security_obj_list@ snmp_version.o	\
+-	cmu_compat.o ucd_compat.o
++	cmu_compat.o ucd_compat.o libwrap.o
+ 
+ LOBJS=	snmp_client.lo mib.lo parse.lo snmp_api.lo snmp.lo 	\
+ 	snmp_auth.lo asn1.lo md5.lo snmp_parse_args.lo		\
+@@ -134,7 +134,7 @@
+ 	snprintf.lo strtol.lo strtoul.lo			\
+ 	snmp_transport.lo @transport_lobj_list@                 \
+         snmp_secmod.lo @security_lobj_list@ snmp_version.lo	\
+-	cmu_compat.lo ucd_compat.lo
++	cmu_compat.lo ucd_compat.lo libwrap.lo
+ 
+ # just in case someone wants to remove libtool, change this to OBJS.
+ TOBJS=$(LOBJS)

@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2002/03/14 06:29:03 itojun Exp $
+
+--- Makefile.rules-	Thu Mar 14 14:42:54 2002
++++ Makefile.rules	Thu Mar 14 14:43:00 2002
+@@ -21,7 +21,7 @@
+ 	        done \
+ 	fi
+ 
+-install: installheaders installlibs installprogs $(OTHERINSTALL)
++install: installheaders installlibs installprogs installsubdirs $(OTHERINSTALL)
+ 
+ installprogs: installbin installsbin
+ 
