@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.708 2002/12/06 21:06:58 cjep Exp $
+$NetBSD: CHANGES,v 1.709 2002/12/07 00:28:40 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated silc-client to 0.9.10 [salo 2002-12-06]
 	Updated silc-server to 0.9.10 [salo 2002-12-06]
 	Updated atari800 to 1.2.5 [cjep 2002-12-06]
+	Added cgoban-java-2.4.55 [rh 2002-12-07]
