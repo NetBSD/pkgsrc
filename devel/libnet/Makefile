@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/25 04:13:14 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/25 05:35:44 minskim Exp $
 #
 
 DISTNAME=	libnet-1.0.1b
@@ -10,6 +10,8 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.packetfactory.net/libnet/
 COMMENT=	C library for portable packet creation and injection
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 WRKSRC=		${WRKDIR}/${DISTNAME:C/l/L/}
 USE_BUILDLINK3= yes
 
@@ -17,6 +19,8 @@ USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	LIBNET_CONFIG_CFLAGS="-I${PREFIX}/include" \
 		LIBNET_CONFIG_LIBS="${LDFLAGS}"
+
+INSTALLATION_DIRS=	bin share/examples
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}/doc
