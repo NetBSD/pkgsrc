@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 1999/03/28 17:29:53 christos Exp $
+$NetBSD: patch-aa,v 1.7 1999/04/21 10:40:41 agc Exp $
 
 --- Configure.orig	Sat Feb 27 10:40:33 1999
 +++ Configure	Sun Mar 28 11:53:00 1999
@@ -17,3 +17,12 @@ $NetBSD: patch-aa,v 1.6 1999/03/28 17:29:53 christos Exp $
        fi	# }
      fi	# }
      rm -rf dialects/n+obsd/uvm_include
+@@ -2921,7 +2928,7 @@
+   then
+     echo "AR=	$LSOF_AR" >> ${LSOF_LIB}/$LSOF_LIBMKF
+   fi	# }
+-  if test "X$LSOF_RANLIB" != "X"	# {
++  if test "X$LSOF_TGT" = "Xsolaris" -o "X$LSOF_RANLIB" != "X"	# {
+   then
+     echo "RANLIB=	$LSOF_RANLIB" >> ${LSOF_LIB}/$LSOF_LIBMKF
+   fi	# }
