@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1847 2003/04/05 20:31:39 wiz Exp $
+$NetBSD: CHANGES,v 1.1848 2003/04/05 21:41:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added liblive-2003.04.04 [rh 2003-04-04]
 	Updated etcupdate to 20030305 [perry 2003-03-05]
 	Updated jed to 0.99.16 [wiz 2003-03-05]
+	Updated xjed to 0.99.16 [wiz 2003-03-05]
