@@ -1,0 +1,8 @@
+--- all.c.orig	Fri Jul 31 00:22:37 1998
++++ all.c	Fri Jul 31 00:23:07 1998
+@@ -640,3 +640,5 @@
+   extern int sys_nerr;
++#ifndef __NetBSD__
+   extern char *sys_errlist[];
++#endif
+   

@@ -1,0 +1,9 @@
+Mr Is is a version of the Mr Do video arcade game for the X Window System. 
+
+You control a gnome, who can walk around a garden, along paths already
+marked, or create new paths wherever you wish. You also have a ball, which
+can be thrown in the direction you're facing, towards the gnome's feet.
+Points are scored for collecting cherries (if you collect eight cherries
+without stopping or pushing an apple, you get a bonus), killing monsters
+(by squashing them, or throwing the ball at them), and collecting the
+prize left when all the monsters have come out of their den.
