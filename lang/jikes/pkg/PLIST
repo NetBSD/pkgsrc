@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/19 09:52:39 agc Exp $
+bin/jikes
+man/man1/jikes.1
