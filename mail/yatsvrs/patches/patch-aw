@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- yatd/inc.c.orig	Fri Jun 22 12:05:02 2001
++++ yatd/inc.c
+@@ -650,7 +650,7 @@
+       GOTO LBL_ERROR;
+   }
+ 
+-  Msg2Cli(SUCCESS, "You have %d message(s) (%d octets).",
++  Msg2Cli(SUCCESS, "You have %d message(s) (%ld octets).",
+ 	  SysData.pFldrCur->nMailAvail,
+ 	  SysData.pFldrCur->sizMailsAvail);
+   return SUCCESS;
