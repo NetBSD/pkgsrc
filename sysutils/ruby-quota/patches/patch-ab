@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2004/11/28 04:21:42 taca Exp $
+$NetBSD: patch-ab,v 1.2 2004/12/15 13:23:12 taca Exp $
 
 --- quota.c.orig	2002-03-30 23:59:12.000000000 +0900
 +++ quota.c
@@ -14,3 +14,21 @@ $NetBSD: patch-ab,v 1.1 2004/11/28 04:21:42 taca Exp $
    int i, count, ret;
    
    buff = 0;
+@@ -187,12 +191,16 @@ rb_quotactl(int cmd, char *dev, VALUE vu
+ static int
+ rb_quotactl(int cmd, char *dev, VALUE vuid, caddr_t addr)
+ {
+-  struct quotctl qctl = {cmd, uid, addr};
++  struct quotctl qctl;
+   int fd;
+   uid_t uid;
+ 
+   get_uid(vuid, &uid, 0);
+ 
++  qctl.op = cmd;
++  qctl.uid = uid;
++  qctl.addr = addr;
++
+   switch( cmd ){
+   case Q_QUOTAON:
+   case Q_QUOTAOFF:
