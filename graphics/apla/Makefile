@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/06/27 11:02:57 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/27 11:19:34 zuntum Exp $
 #
 
-DISTNAME=	apla-1.0.2
+DISTNAME=	apla-1.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://pd37.warszawa.sdi.tpnet.pl/NetBSD/
 
