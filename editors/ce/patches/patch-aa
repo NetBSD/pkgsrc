@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/04/08 19:59:08 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/08 07:46:15 schmonz Exp $
 
---- Makefile.in.orig	Fri May 16 15:15:48 1997
+--- Makefile.in.orig	2001-11-07 12:20:44.000000000 -0500
 +++ Makefile.in
-@@ -51,6 +51,7 @@
+@@ -40,6 +40,7 @@ LPR =		lpr
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
 +INSTALL_SCRIPT = @INSTALL_SCRIPT@
  
- XLIBS=		-lX11
- LINTFLAGS=	-chx
-@@ -199,28 +200,31 @@
+ # could also be, e.g., `date +'%Y%m%d'`
+ OLDEXT = old
+@@ -232,29 +233,32 @@ backup:
  depend:
- 		makedepend -- $(CCFLAGS) -- $(CFILES)
+ 	makedepend -- $(CCFLAGS) -- $(CFILES)
  
 -installdirs:
 +install:	${PROG}
@@ -21,13 +21,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/08 19:59:08 schmonz Exp $
 -	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DOCDIR)   
 -
 -install:	${PROG} ${XPROG} installdirs
--	$(RM) ${DESTDIR}/${PROG} ${DESTDIR}/${XPROG}
+-	$(MV) ${DESTDIR}/${PROG} ${DESTDIR}/${PROG}.${OLDEXT}
+-	$(MV) ${DESTDIR}/${XPROG} ${DESTDIR}/${XPROG}.${OLDEXT}
  	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)/${PROG}
 +
 +install-x11:	${XPROG}
 +	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DESTDIR)
  	$(INSTALL_PROGRAM) $(XPROG) $(DESTDIR)/${XPROG}
--	$(INSTALL_PROGRAM) $(TEACHCE) $(DESTDIR)/$(TEACHCE)
+-	$(INSTALL_PROGRAM) -m 755 $(TEACHCE) $(DESTDIR)/$(TEACHCE)
++
  
  install-strip:
  	$(MAKE) $(MFLAGS) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' \
@@ -36,18 +38,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/04/08 19:59:08 schmonz Exp $
 -doc-install:	man-install installdirs
 +doc-install:
 +	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DOCDIR)   
- 	${INSTALL_DATA} doc/TUTORIAL $(DOCDIR)/TUTORIAL
- 	${INSTALL_DATA} doc/ce.help  $(DOCDIR)/ce.help
- 	${INSTALL_DATA} doc/FUNCTIONS $(DOCDIR)/FUNCTIONS
+ 	${INSTALL_DATA} ${DOC_SRC}/TUTORIAL $(DOCDIR)/TUTORIAL
+ 	${INSTALL_DATA} ${DOC_SRC}/ce.help  $(DOCDIR)/ce.help
+ 	${INSTALL_DATA} ${DOC_SRC}/FUNCTIONS $(DOCDIR)/FUNCTIONS
 +	$(INSTALL_SCRIPT) $(TEACHCE) $(DESTDIR)/$(TEACHCE)
  
 -man-install: installdirs
 +man-install:
 +	@${SHELL} $(SUPPORT_SRC)/mkdirs $(MANDIR)
- 	${INSTALL_DATA} doc/ce.1 $(MANDIR)/ce.1
+ 	${INSTALL_DATA} ${DOC_SRC}/ce.1 $(MANDIR)/ce.1
 +
 +man-install-x11:
 +	@${SHELL} $(SUPPORT_SRC)/mkdirs $(MANDIR)
- 	${INSTALL_DATA} doc/xce.1 $(MANDIR)/xce.1
+ 	${INSTALL_DATA} ${DOC_SRC}/xce.1 $(MANDIR)/xce.1
  
- uninstall:
+ all-install:	install doc-install man-install

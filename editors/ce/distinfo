@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/07/28 17:24:28 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2005/01/08 07:46:15 schmonz Exp $
 
-SHA1 (ce-4.4.tar.gz) = f5ab8a5ff1e81212c020831675d3b06a4425fa3d
-Size (ce-4.4.tar.gz) = 207221 bytes
-SHA1 (patch-aa) = 4705b744bd5edbfb48fcbcdbfc56bc2970359089
-SHA1 (patch-ab) = 33aa1a7959d865f09f1e92fcc8d4941a8a13aefb
-SHA1 (patch-ac) = c95263dbddc2e19395cb7b74f709fdd9a9bb2afc
-SHA1 (patch-ad) = bb705fd400901b5fb512653342c031e5da6044d2
+SHA1 (ce-4.5.tar.gz) = 081f2f06097bc02044150d0681fcb3bb10a8862e
+Size (ce-4.5.tar.gz) = 242624 bytes
+SHA1 (patch-aa) = ff29933d850f2b4b3d1565a5c6c6242f7c55221b
+SHA1 (patch-ab) = 4c9cc4535ce750e84efc65ce9aed08581aa302d6
