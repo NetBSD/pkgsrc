@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/09/27 23:18:27 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/12/12 18:25:39 wiz Exp $
 
 DISTNAME=	gnapster-1.5.0
 CATEGORIES=	net
@@ -8,15 +8,16 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.faradic.net/~jasta/programs.html
 COMMENT=	simple client for the online mp3 community
 
-DEPENDS+=	gnome-core-[0-9]*:../../x11/gnome-core
-BUILD_USES_MSGFMT=	yes
+BUILD_USES_MSGFMT=	YES
 
-USE_X11BASE=	YES
 USE_GMAKE=	YES
-USE_LIBINTL=	YES
 USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+USE_BUILDLINK_ONLY=	YES
 
 GNU_CONFIGURE=	YES
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../x11/gnome-core/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
