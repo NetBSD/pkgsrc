@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/01/21 15:46:39 frueauf Exp $
+# $NetBSD: options.mk,v 1.8 2005/01/21 20:45:09 frueauf Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 kerberos gssapi ssl
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--with-gssapi=no
 ### KPOP (POP3 + Kerberos IV) support.
 ###
 .if !empty(PKG_OPTIONS:Mkerberos4)
-CRYPTO+=		uses Kerberos encryption code
 PKG_USE_KERBEROS=	# defined
 CONFIGURE_ARGS+=	--with-kerberos=yes
 .  if empty(MACHINE_PLATFORM:MNetBSD-1.[0-4]*-i386)
