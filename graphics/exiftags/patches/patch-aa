@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/10/24 01:44:35 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2004/05/20 17:41:39 minskim Exp $
 
---- Makefile.orig	2003-10-24 03:41:03.000000000 +0200
-+++ Makefile	2003-10-24 03:41:41.000000000 +0200
-@@ -11,12 +11,12 @@
+--- Makefile.orig	2004-05-07 00:46:29.000000000 -0500
++++ Makefile
+@@ -12,12 +12,12 @@ MKRS=makers.o canon.o olympus.o fuji.o n
  NOMKRS=makers_stub.o
  
  #
@@ -20,3 +20,15 @@ $NetBSD: patch-aa,v 1.2 2003/10/24 01:44:35 xtraeme Exp $
  
  OBJS=exif.o tagdefs.o exifutil.o exifgps.o jpeg.o
  HDRS=exif.h exifint.h jpeg.h makers.h
+@@ -44,9 +44,5 @@ clean:
+ 	timevary.o exiftags exifcom exiftime
+ 
+ install: all
+-	cp exiftags exifcom exiftime $(PREFIX)/bin
+-	chmod a+x $(PREFIX)/bin/exiftags $(PREFIX)/bin/exifcom \
+-	$(PREFIX)/bin/exiftime
+-	cp exiftags.1 exifcom.1 exiftime.1 $(PREFIX)/man/man1
+-	chmod a+r $(PREFIX)/man/man1/exiftags.1 $(PREFIX)/man/man1/exifcom.1 \
+-	$(PREFIX)/man/man1/exiftime.1
++	${BSD_INSTALL_PROGRAM} exiftags exifcom exiftime ${PREFIX}/bin
++	${BSD_INSTALL_MAN} exiftags.1 exifcom.1 exiftime.1 ${PREFIX}/man/man1

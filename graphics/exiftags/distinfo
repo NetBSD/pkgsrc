@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/10/24 01:44:35 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/05/20 17:41:39 minskim Exp $
 
-SHA1 (exiftags-0.98.tar.gz) = 737f4cd4a4d0d2b10da94e2385089d0152131ad1
-Size (exiftags-0.98.tar.gz) = 50195 bytes
-SHA1 (patch-aa) = 14db4d393f55d7e279bc5c77aaae41333f5acca9
+SHA1 (exiftags-0.99.1.tar.gz) = d72105b4b93946133135cf15279e5d1b73cf8ec9
+Size (exiftags-0.99.1.tar.gz) = 62397 bytes
+SHA1 (patch-aa) = 1d741e83e05ceb866c7dcd36206b0ed2edd9ea18
