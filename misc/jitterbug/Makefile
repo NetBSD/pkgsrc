@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/18 16:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/22 15:04:19 wennmach Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -50,7 +50,12 @@ JB_CONFIGDIR=	${JB_USER}/config
 JB_LOCALMAIL?=	${JB_PACKAGE}-bugs
 
 .if !defined(JB_FQHOSTNAME)
-JB_FQHOSTNAME!=	(${HOSTCMD} `/bin/hostname` 2>/dev/null || echo totally.unknown.domain) | /usr/bin/awk '{ print $$1; exit }'
+JB_TMP!=	${HOSTCMD} `/bin/hostname` 2>/dev/null
+.if (${JB_TMP} == "")
+JB_FQHOSTNAME="totally.unknown.domain"
+.else
+JB_FQHOSTNAME!= echo ${JB_TMP} | /usr/bin/awk '{ print $$1; exit}'
+.endif
 .endif
 JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
 
@@ -73,7 +78,7 @@ pre-extract:
 	@${ECHO} "pkgsrc will build jitterbug with \$$JB_PACKAGE = \"test\""
 	@${ECHO} "so that you can easily evaluate this package."
 	@${ECHO} "If you decide to use jitterbug for a real application"
-	@${ECHO} "you can safly deinstall jitterbug and reinstall it with"
+	@${ECHO} "you can safely deinstall jitterbug and reinstall it with"
 	@${ECHO} "\$$JB_PACKAGE set to something more senseful."
 	@${ECHO}
 	@${ECHO} "You may override the following environment variables:"
