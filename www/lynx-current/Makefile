@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/07/17 22:55:41 grant Exp $
+# $NetBSD: Makefile,v 1.46 2003/09/27 17:07:38 grant Exp $
 #
 
 DISTNAME=		lynx2.8.5dev.7
@@ -66,7 +66,7 @@ post-install:
 .  include "../../devel/libslang/buildlink2.mk"
 .elif (${LYNX_SCREEN_LIB} == ncurses)
 USE_NCURSES=		color
-.  include "../../devel/ncurses/buildlink2.mk"
+.  include "../../mk/curses.buildlink2.mk"
 CONFIGURE_ARGS+=	--enable-color-style
 .elif (${LYNX_SCREEN_LIB} == curses)
 .  if ${MACHINE_PLATFORM:MNetBSD-1.5*-i386} != ""
