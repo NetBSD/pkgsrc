@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/02/26 18:39:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/26 18:43:18 wiz Exp $
 bin/gnomeicu
 bin/gnomeicu-client
 etc/CORBA/servers/GnomeICU.gnorba

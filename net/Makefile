@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2001/02/24 23:31:01 tron Exp $
+# $NetBSD: Makefile,v 1.193 2001/02/26 18:44:28 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -42,7 +42,6 @@ SUBDIR+=	freewais-sf
 SUBDIR+=	gated
 SUBDIR+=	gnapfetch
 SUBDIR+=	gnapster
-SUBDIR+=	gnomeicu
 SUBDIR+=	gnubile
 SUBDIR+=	gnut
 SUBDIR+=	gtk-gnutella
