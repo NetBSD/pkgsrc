@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/11/27 14:16:35 he Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/20 11:30:58 grant Exp $
 
 DISTNAME=	Algorithm-Diff-1.1901
 PKGNAME=	p5-${DISTNAME:S/1901/19.01/}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 EXTRACT_SUFX=	.zip

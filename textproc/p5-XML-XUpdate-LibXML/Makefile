@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/29 01:58:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:11 grant Exp $
 #
 
 DISTNAME=	XML-XUpdate-LibXML-0.2.3
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5xlx
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 

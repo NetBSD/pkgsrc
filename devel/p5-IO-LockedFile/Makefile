@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/20 04:11:07 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:00 grant Exp $
 #
 
 DISTNAME=	IO-LockedFile-0.23
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5iol
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/20 04:19:40 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:01 grant Exp $
 #
 
 DISTNAME=	Log-LogLite-0.82
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5llt
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/01/05 22:16:25 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/20 11:31:01 grant Exp $
 #
 
 DISTNAME=     	Inline-0.44
 PKGNAME=       	p5-${DISTNAME}
 SVR4_PKGNAME=	p5inl
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Inline/}
 

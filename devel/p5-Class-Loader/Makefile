@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2004/04/25 04:14:21 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/20 11:30:58 grant Exp $
 #
 
 DISTNAME=		Class-Loader-2.02
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5clo
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 

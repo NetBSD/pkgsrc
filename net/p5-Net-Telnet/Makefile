@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2004/04/27 06:05:57 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/20 11:31:06 grant Exp $
 #
 
 DISTNAME=	Net-Telnet-3.03
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5nte
+PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
