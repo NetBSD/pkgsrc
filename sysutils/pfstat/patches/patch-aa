@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/05 15:07:15 peter Exp $
+
+--- pfstat.c.orig	2003-09-10 19:45:27.000000000 +0200
++++ pfstat.c	2004-06-08 13:36:51.000000000 +0200
+@@ -167,26 +167,26 @@
+ 	}
+ 	close(dev);
+ 	if (s.running) {
+-		printf("%u %u", time(NULL), s.since);
++		printf("%u %u", (unsigned int)time(NULL), s.since);
+ 		printf(" %llu %llu %llu %llu",
+-		    s.bcounters[0][0],
+-		    s.bcounters[0][1],
+-		    s.bcounters[1][0],
+-		    s.bcounters[1][1]);
++		    (unsigned long long)s.bcounters[0][0],
++		    (unsigned long long)s.bcounters[0][1],
++		    (unsigned long long)s.bcounters[1][0],
++		    (unsigned long long)s.bcounters[1][1]);
+ 		printf(" %llu %llu %llu %llu %llu %llu %llu %llu",
+-		    s.pcounters[0][0][PF_PASS],
+-		    s.pcounters[0][0][PF_DROP],
+-		    s.pcounters[0][1][PF_PASS],
+-		    s.pcounters[0][1][PF_DROP],
+-		    s.pcounters[1][0][PF_PASS],
+-		    s.pcounters[1][0][PF_DROP],
+-		    s.pcounters[1][1][PF_PASS],
+-		    s.pcounters[1][1][PF_DROP]);
++		    (unsigned long long)s.pcounters[0][0][PF_PASS],
++		    (unsigned long long)s.pcounters[0][0][PF_DROP],
++		    (unsigned long long)s.pcounters[0][1][PF_PASS],
++		    (unsigned long long)s.pcounters[0][1][PF_DROP],
++		    (unsigned long long)s.pcounters[1][0][PF_PASS],
++		    (unsigned long long)s.pcounters[1][0][PF_DROP],
++		    (unsigned long long)s.pcounters[1][1][PF_PASS],
++		    (unsigned long long)s.pcounters[1][1][PF_DROP]);
+ 		printf(" %u", s.states);
+ 		for (i = 0; i < FCNT_MAX; ++i)
+-			printf(" %lld", s.fcounters[i]);
++			printf(" %lld", (long long)s.fcounters[i]);
+ 		for (i = 0; i < PFRES_MAX; ++i)
+-			printf(" %lld", s.counters[i]);
++			printf(" %lld", (long long)s.counters[i]);
+ 		printf("\n");
+ 	}
+ 	return (0);
