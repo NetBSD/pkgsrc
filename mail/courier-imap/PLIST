@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/23 23:23:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/04/23 22:07:54 reed Exp $
 bin/couriertls
 bin/imapd
 bin/pop3d
-etc/rc.d/courierimap
-etc/rc.d/courierimaps
-etc/rc.d/courierpop
-etc/rc.d/courierpops
 libexec/courier/courierlogger
 libexec/courier/couriertcpd
 libexec/courier/imapd-ssl.rc

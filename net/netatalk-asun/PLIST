@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:37 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:56 reed Exp $
 bin/adv1tov2
 bin/aecho
 bin/getzones
@@ -15,7 +15,6 @@ bin/single2bin
 bin/unbin
 bin/unhex
 bin/unsingle
-etc/rc.d/netatalk
 include/atalk/adouble.h
 include/atalk/aep.h
 include/atalk/afp.h

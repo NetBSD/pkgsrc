@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/10 00:56:54 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:58 reed Exp $
 bin/dirsearch
 bin/newaid
 bin/rex
@@ -8,8 +8,6 @@ bin/sfsdeclog
 bin/sfskey
 bin/sfsproac
 bin/ssu
-etc/rc.d/sfscd
-etc/rc.d/sfssd
 include/sfs
 include/${PKGNAME}/aclnt.h
 include/${PKGNAME}/aes.h
