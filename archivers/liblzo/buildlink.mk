@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:08 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/16 09:56:04 jlam Exp $
 #
 # This Makefile fragment is included by packages that use liblzo.
 #
@@ -12,22 +12,33 @@
 # (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 
-.if !defined(liblzo_BUILDLINK_MK)
-liblzo_BUILDLINK_MK=	# defined
+.if !defined(LIBLZO_BUILDLINK_MK)
+LIBLZO_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.liblzo?=	liblzo>=1.04
+BUILDLINK_DEPENDS.liblzo?=	liblzo>=1.06
 DEPENDS+=	${BUILDLINK_DEPENDS.liblzo}:../../archivers/liblzo
 
 BUILDLINK_PREFIX.liblzo=	${LOCALBASE}
-BUILDLINK_FILES.liblzo=		include/liblzo.h
-BUILDLINK_FILES.liblzo+=	lib/libliblzo.*
+BUILDLINK_FILES.liblzo=		include/lzo1.h
+BUILDLINK_FILES.liblzo+=	include/lzo16bit.h
+BUILDLINK_FILES.liblzo+=	include/lzo1a.h
+BUILDLINK_FILES.liblzo+=	include/lzo1b.h
+BUILDLINK_FILES.liblzo+=	include/lzo1c.h
+BUILDLINK_FILES.liblzo+=	include/lzo1f.h
+BUILDLINK_FILES.liblzo+=	include/lzo1x.h
+BUILDLINK_FILES.liblzo+=	include/lzo1y.h
+BUILDLINK_FILES.liblzo+=	include/lzo1z.h
+BUILDLINK_FILES.liblzo+=	include/lzo2a.h
+BUILDLINK_FILES.liblzo+=	include/lzoconf.h
+BUILDLINK_FILES.liblzo+=	include/lzoutil.h
+BUILDLINK_FILES.liblzo+=	lib/liblzo.*
 
 BUILDLINK_TARGETS.liblzo=	liblzo-buildlink
-BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.liblzo}
+BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.liblzo}
 
 pre-configure: ${BUILDLINK_TARGETS.liblzo}
 liblzo-buildlink: _BUILDLINK_USE
 
-.endif	# liblzo_BUILDLINK_MK
+.endif	# LIBLZO_BUILDLINK_MK
