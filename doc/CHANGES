@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9118 2005/02/12 00:43:39 rillig Exp $
+$NetBSD: CHANGES,v 1.9119 2005/02/12 00:47:45 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -853,3 +853,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Kwiki-PagePrivacy-0.10 [jlam 2005-02-11]
 	Added logfinder-0.1 [jschauma 2005-02-11]
 	Updated pkglint to 4.01 [rillig 2005-02-11]
+	Updated gnetman to 20041222 [dmcmahill 2005-02-11]
