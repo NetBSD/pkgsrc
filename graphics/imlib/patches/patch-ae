@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.3 2001/06/16 19:54:50 jlam Exp $
+
+--- imlib-config.in.orig	Thu Jan 14 04:43:29 1999
++++ imlib-config.in	Fri Jun 15 22:58:16 2001
+@@ -55,15 +55,15 @@
+       if test @includedir@ != /usr/include ; then
+         includes=-I@includedir@
+       fi
+-      echo `@GTK_CONFIG@ --cflags` $includes @X_CFLAGS@
++      echo `gtk-config --cflags` $includes @X_CFLAGS@
+       ;;
+     --libs)
+-      libdirs=-L@libdir@
+-      echo $libdirs -lImlib $gx_libs @LDFLAGS@ @X_LIBS@ @X_PRE_LIBS@ -lXext -lX11 @X_EXTRA_LIBS@
++      libdirs="-L@libdir@ -Wl,-R@libdir@"
++      echo $libdirs -lImlib $gx_libs @X_LDFLAGS@ @X_LIBS@ @X_PRE_LIBS@ -lXext -lX11 @X_EXTRA_LIBS@
+       ;;
+     --libs-gdk)
+-      libdirs=-L@libdir@
+-      echo $libdirs -lgdk_imlib$gdk_gx_libs `@GTK_CONFIG@ --libs` $gdk_libs
++      libdirs="-L@libdir@ -Wl,-R@libdir@"
++      echo $libdirs -lgdk_imlib$gdk_gx_libs `gtk-config --libs` $gdk_libs
+       ;;
+     *)
+       echo "${usage}" 1>&2
