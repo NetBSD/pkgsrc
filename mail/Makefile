@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2001/04/10 00:25:21 itojun Exp $
+# $NetBSD: Makefile,v 1.74 2001/04/13 05:08:23 itojun Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -48,6 +48,7 @@ SUBDIR+=	qpopper
 SUBDIR+=	rblcheck
 SUBDIR+=	sendmail
 SUBDIR+=	sendmail88
+SUBDIR+=	sendmail-current
 SUBDIR+=	smtpfeed
 SUBDIR+=	spruce
 SUBDIR+=	squirrelmail
