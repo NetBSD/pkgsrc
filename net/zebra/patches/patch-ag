@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1 2000/08/27 08:32:56 itojun Exp $
+--- configure.in.orig	Thu Aug 17 02:32:30 2000
++++ configure.in	Tue Aug 22 18:27:42 2000
+@@ -148,2 +148,3 @@
+          AC_DEFINE(VTYSH)
++         AC_CHECK_LIB(curses, tputs)
+          AC_CHECK_LIB(readline, main)
+@@ -152,3 +153,2 @@
+          fi
+-         AC_CHECK_LIB(ncurses, tputs)
+          ;;
