@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 1998/12/26 22:11:07 agc Exp $
+# $NetBSD: Makefile,v 1.47 1999/01/06 05:17:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -61,6 +61,7 @@
     SUBDIR += p5-SNMP
 #    SUBDIR += pcnfsd
     SUBDIR += pfnet
+    SUBDIR += pload
 #    SUBDIR += pmf
 #    SUBDIR += radius
 #    SUBDIR += ratoolset
