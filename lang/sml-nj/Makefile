@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/20 09:43:21 wiz Exp $
 # FreeBSD Id: ports/lang/sml-nj/Makefile,v 1.9 1999/08/25 06:35:27 obrien Exp
 
 DISTNAME=	${SML_VERSION}-bin.${BOX}-unix
@@ -23,7 +23,7 @@ SML_VERSION=	110.9.1
 # sml-nj also supports hppa, sparc, ppc, mlrisc & alpha
 # pkg support for those platforms, and say, solaris-x86
 # is left as an (easy) exercise for the reader.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc NetBSD-*-sparc
 
 # Other mirror sites that generally carry only released versions of SML
 # 	ftp://rodin.stanford.edu/pub/smlnj/release/
@@ -50,6 +50,9 @@ BOX=		sparc
 OS=		${LOWER_OPSYS}
 .elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 BOX=		x86
+OS=		bsd
+.elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
+BOX=		sparc
 OS=		bsd
 .endif
 
