@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.957 2002/04/05 11:39:25 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.958 2002/04/05 23:26:49 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1088,7 +1088,7 @@ IGNORE+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 #
 .  if defined(IGNORE)
 fetch checksum extract patch configure all build install package \
-install-depends:
+update install-depends:
 .    if defined(IGNORE_SILENT)
 	@${DO_NADA}
 .    else
@@ -2542,6 +2542,7 @@ real-su-deinstall:
 # The 'update' target can be used to update a package and all
 # currently installed packages that depend upon this package.
 
+.if !target(update)
 .if exists(${DDIR})
 RESUMEUPDATE?=	YES
 CLEAR_DIRLIST?=	NO
@@ -2610,6 +2611,8 @@ clean-update:
 		${ECHO_MSG} "${_PKGSRC_IN}>          \`\`${MAKE} update'' may fail.  It is advised to use";\
 		${ECHO_MSG} "${_PKGSRC_IN}>          \`\`${MAKE} update REINSTALL=YES'' instead!"
 .endif
+
+.endif	# !target(update)
 
 
 update-dirlist:
