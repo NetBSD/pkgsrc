@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2003/12/13 00:45:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/14 19:45:45 jmmv Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2-ui/}
-PKGREVISION=	4
 
 CONFIGURE_ENV+=	PKG_USE_GTK=yes
 
-do-build:
-	@cd ${WRKSRC}/gconf && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
-		-f Makefile gconf-sanity-check-2
+BUILD_DIRS=	${WRKSRC}/gconf
+BUILD_TARGETS=	GConfX.h gconf-sanity-check-2
+
+#do-build:
+#	@cd ${WRKSRC}/gconf && \
+#		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
+#		-f Makefile GConfX.h gconf-sanity-check-2
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gconf/.libs/gconf-sanity-check-2 \
