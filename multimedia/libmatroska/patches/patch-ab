@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/07 12:52:16 salo Exp $
+
+MPlayer depends on this.
+
+--- matroska/KaxConfig.h.orig	2004-01-18 00:40:47.000000000 +0300
++++ matroska/KaxConfig.h
+@@ -78,7 +78,7 @@
+ #endif
+ 
+ #if !defined(MATROSKA_VERSION)
+-#define MATROSKA_VERSION  1
++#define MATROSKA_VERSION  2
+ #endif // MATROSKA_VERSION
+ 
+ 
