@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/15 08:32:48 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/02 13:01:35 wiz Exp $
 #
 
 .include "../snort/Makefile.common"
@@ -11,9 +11,8 @@ CONFLICTS+=	snort-[0-9]*
 
 CONFIGURE_ARGS+=--with-postgresql=${BUILDLINK_DIR}
 
-PKGDIR=		${.CURDIR}/../snort
-PATCHDIR=	${PKGDIR}/patches
-DISTINFO_FILE=	${PKGDIR}/distinfo
+PATCHDIR=	../snort/patches
+DISTINFO_FILE=	../snort/distinfo
 
 .include "../../databases/postgresql-lib/buildlink.mk"
 .include "../../net/libpcap/buildlink.mk"
