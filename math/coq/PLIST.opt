@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.opt,v 1.1.1.1 2003/03/22 18:20:55 kristerw Exp $
+bin/coq-interface.opt
+bin/coqtop.opt
+bin/parser
+man/man1/coqtop.opt.1
+man/man1/parser.1
