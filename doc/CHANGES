@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6461 2004/07/06 09:46:37 cube Exp $
+$NetBSD: CHANGES,v 1.6462 2004/07/06 09:56:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3268,3 +3268,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added hlfl-0.60.1 [xtraeme 2004-07-06]
 	Added xwpe-1.5.29a [xtraeme 2004-07-06]
 	Updated libkver to 0.5 [cube 2004-07-06]
+	Updated gtk-gnutella to 0.93.4 [adam 2004-07-06]
