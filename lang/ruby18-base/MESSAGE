@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/03/06 16:36:56 taca Exp $
+
+Note that this is minimum package.
+
+Original Ruby ${RUBY_VERSION} includes more extention libraries and
+some of them are provided as separate packages:
+
+	converters/ruby-iconv:		Iconv module
+	databases/ruby-dbm:		DBM module
+	databases/ruby-gdbm:		GDBM module
+	devel/ruby-curses:		Curses module
+	devel/ruby-readline:		readline module
+	devel/ruby-zlib:		Zlib module
+	security/ruby-digest:		message digest module
+	security/ruby-openssl:		OpenSSL module
+	x11/ruby-tcltklib:		Tcl/Tk libraries
+	x11/ruby-tk:			Tk modules
+
+===========================================================================
