@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.8 1999/10/07 17:41:47 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/17 03:43:48 fredb Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
-DISTNAME=	mgetty1.1.19-Nov24
-PKGNAME=	mgetty-1.1.19
+DISTNAME=	mgetty1.1.21-Jul24
+PKGNAME=	mgetty-1.1.21
 CATEGORIES=	comms
-MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/
+MASTER_SITES=	ftp://alpha.greenie.net/pub/mgetty/source/1.1/
+
+PATCH_SITES=	http://www-internal.alphanet.ch/~schaefer/vgetty/global_patches/CURRENT/
+PATCHFILES=	mgetty-1.1.21-to-current.bz2
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.leo.org/~doering/mgetty/index.html
+HOMEPAGE=	http://alpha.greenie.net/mgetty/
 
 CONFLICTS=	hylafax-*
 
