@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/20 22:19:54 tron Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/20 23:17:31 tron Exp $
 
 DISTNAME=	gtk+-1.0.4
 CATEGORIES=	x11
@@ -15,13 +15,5 @@ USE_X11=	yes
 
 CFLAGS=		-pipe -O2
 INFO_FILES=	gdk.info glib.info gtk.info
-
-PLIST_SRC=	${WRKDIR:T}/.PLIST-src
-
-pre-install:
-	@if [ ! -f ${PREFIX}/info/dir ]; then \
-	  ${SED} -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > ${PREFIX}/info/dir; \
-	 fi
-	@${SED} -e 's|\$${LOCALBASE}|'${LOCALBASE}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
