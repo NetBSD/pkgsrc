@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/11/16 04:37:54 darcy Exp $
+# $NetBSD: Makefile,v 1.10 2000/11/16 05:25:51 darcy Exp $
 
 DISTNAME=	PyGreSQL-3.1
 PKGNAME=	py-postgresql-3.1
@@ -9,15 +9,15 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.druid.net/pygresql/
 
-DEPENDS+=	python-1.5.2:../../lang/python
+DEPENDS+=	python-2.*:../../lang/python
 DEPENDS+=	postgresql-7.*:../../databases/postgresql
 DEPENDS+=	py-mxDateTime-*:../../misc/py-mxDateTime
 
 ALL_TARGET=	default
 
 PYTHON=		${LOCALBASE}/bin/python
-PYTHON_LIBDIR=	${LOCALBASE}/lib/python1.5
-PLIST_SUBST+=	PYTHON_LIBDIR=lib/python1.5
+PYTHON_LIBDIR=	${LOCALBASE}/lib/python2.0
+PLIST_SUBST+=	PYTHON_LIBDIR=lib/python2.0
 
 .include "../../mk/bsd.prefs.mk"
 
