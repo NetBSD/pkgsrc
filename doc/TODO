@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3124 2005/02/26 17:50:37 wiz Exp $
+$NetBSD: TODO,v 1.3125 2005/02/26 17:52:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -799,7 +799,6 @@ Suggested package updates
 	o p5-ExtUtils-XSBuilder-0.27
 	o p5-FD-2.06c
 	o p5-File-DirSync-1.12
-	o p5-File-Temp-0.16
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Filter-1.30
 	o p5-Font-AFM-1.19
