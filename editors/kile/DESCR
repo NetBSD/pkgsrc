@@ -3,11 +3,9 @@ the creation and modification of LaTeX source code documents as well as the
 use of LaTeX-related programs for users who want to retain control over their
 LaTeX documents.
 
-Features:   
-+ an editor to write your LaTeX source files (syntax highlighting, undo / redo,
-  search / replace, spellcheck, etc.);
+Features include:
++ syntax highlighting, help menus and spell checking;
 + integrated DVI, PS, PDF and HTML viewers;
-+ a GnuPlot front end (adapted from Xgfe);
 + wizards for generating LaTeX code (Quick document, Quick letter, tabular and
   array environments);
 + direct insertion of the principal LaTeX tags via the LaTeX, Math and Greek
@@ -23,4 +21,3 @@ Features:
   in the editor;
 + a "structure view" with links for jumping directly to different parts of the
   document in the "Structure" frame;
-+ a Help menu entry featuring extensive LaTeX documentation.
