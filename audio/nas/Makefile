@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/10/28 00:50:21 grant Exp $
+# $NetBSD: Makefile,v 1.36 2003/10/28 14:11:47 fredb Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://radscan.com/nas/ \
 		ftp://ftp.uni-duisburg.de/Sound/NAS/ \
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://radscan.com/nas.html
 COMMENT=	Network Audio System
 
