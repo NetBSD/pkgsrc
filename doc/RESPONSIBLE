@@ -1,4 +1,4 @@
-$NetBSD: RESPONSIBLE,v 1.2 2004/08/31 15:39:08 seb Exp $
+$NetBSD: RESPONSIBLE,v 1.3 2005/02/10 02:14:45 reed Exp $
 
 List of sections of the system, and who is responsible for them (or
 at least considered an expert on them).
@@ -22,5 +22,5 @@ bootstrap	grant, jlam
 Solaris		salo, grant
 Darwin		grant, schmonz
 IRIX		jschauma
-Linux		jschauma, grant
+Linux		jschauma, grant, reed
 FreeBSD		grant
