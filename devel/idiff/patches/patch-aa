@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/22 10:04:36 agc Exp $
+
+Don't overwrite read-only strings, so they can be placed in the text
+segment by a decent optimising compiler.
+
+--- idiff.c	2001/03/19 13:19:52	1.1
++++ idiff.c	2001/03/19 13:27:03
+@@ -1,5 +1,7 @@
+ /* idiff:  interactive diff */
+ 
++#include <sys/param.h>
++
+ #include <stdio.h>
+ #include <ctype.h>
+ char	*progname;
+@@ -11,6 +13,7 @@
+ {
+ 	FILE *fin, *fout, *f1, *f2, *efopen();
+ 	char buf[BUFSIZ], *mktemp();
++	char	realdiffname[MAXPATHLEN];
+ 	char *diffout = "idiff.XXXXXX";
+ 
+ 	progname = argv[0];
+@@ -21,6 +24,8 @@
+ 	f1 = efopen(argv[1], "r");
+ 	f2 = efopen(argv[2], "r");
+ 	fout = efopen("idiff.out", "w");
++	(void) strcpy(realdiffname, diffout);
++	diffout = realdiffname;
+ 	mktemp(diffout);
+ 	sprintf(buf,"diff %s %s >%s",argv[1],argv[2],diffout);
+ 	system(buf);
+@@ -34,11 +39,14 @@
+ idiff(f1, f2, fin, fout)	/* process diffs */
+ 	FILE *f1, *f2, *fin, *fout;
+ {
++	char	realtempfile[MAXPATHLEN];
+ 	char *tempfile = "idiff.XXXXXX";
+ 	char buf[BUFSIZ], buf2[BUFSIZ], *mktemp();
+ 	FILE *ft, *efopen();
+ 	int cmd, n, from1, to1, from2, to2, nf1, nf2;
+ 
++	(void) strcpy(realtempfile, tempfile);
++	tempfile = realtempfile;
+ 	mktemp(tempfile);
+ 	nf1 = nf2 = 0;
+ 	while (fgets(buf, sizeof buf, fin) != NULL) {
