@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2004/11/28 12:59:10 recht Exp $
+$NetBSD: patch-aa,v 1.3 2005/02/19 00:14:23 wiz Exp $
 
---- configure.orig	Sat Nov 13 22:54:25 2004
-+++ configure	Sat Nov 27 22:31:53 2004
-@@ -3632,8 +3632,6 @@
- 
+--- configure.orig	2005-01-27 14:16:39.000000000 +0100
++++ configure
+@@ -3651,8 +3651,6 @@ rm -f conftest.err conftest.$ac_objext c
+ if test $ac_cv_c_compiler_gnu != no; then
  	if test x$opt_developer_mode = xyes; then
  	  CFLAGS="${CFLAGS} -g -Wno-format-y2k -Wall -Wcast-align -W -Wpointer-arith -Wchar-subscripts -Wformat-security -Wmissing-braces -Winline -Wstrict-prototypes"
 -	else
