@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/05/01 18:05:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/01 18:35:46 jmmv Exp $
 
 DISTNAME=	radiusd-cistron-1.6.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.cistron.nl/pub/people/miquels/radius/ \
 		ftp://ftp.freeradius.org/pub/radius/
@@ -12,13 +13,30 @@ COMMENT=	RADIUS-compliant remote authentication and accouting server
 CONFLICTS+=	freeradius*
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 
 MAKEFILE=	Makefile.BSD
 BUILD_DIRS=	${WRKSRC}/src
 INSTALL_DIRS=	${WRKSRC}/src
 
+RCD_SCRIPTS=	radiusd
+
+OWN_DIRS_PERMS=	/var/log/radacct ${ROOT_USER} ${ROOT_GROUP} 700
+
+PKG_SYSCONFSUBDIR=	raddb
+EGDIR=		${PREFIX}/share/examples/raddb
+CONF_FILES=
+.for cfile in	clients.sample dictionary dictionary.ascend dictionary.bay \
+		dictionary.cisco dictionary.cistron dictionary.compat \
+		dictionary.erx dictionary.livingston dictionary.redback \
+		dictionary.shiva dictionary.tunnel dictionary.usr \
+		dictionary.versanet hints.sample huntgroups.sample \
+		naslist.sample naspasswd.sample realms.sample users.sample
+CONF_FILES+=	${EGDIR}/${cfile} ${PKG_SYSCONFDIR}/${cfile:S/.sample//}
+.endfor
+.undef cfile
+
 post-install:
-	@${MKDIR} -m 700 /var/log/radacct
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/radiusd-cistron
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/radiusd-cistron
 	${INSTALL_DATA} ${WRKSRC}/doc/ChangeLog ${PREFIX}/share/doc/radiusd-cistron
@@ -43,9 +61,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/radiusd.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/radrelay.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/radwatch.8 ${PREFIX}/man/man8
-	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" ${FILESDIR}/radiusd.sh.tmpl \
-		> ${PREFIX}/etc/rc.d/radiusd
-	@${CHMOD} 555 ${PREFIX}/etc/rc.d/radiusd
-	@${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/etc/rc.d/radiusd
 
 .include "../../mk/bsd.pkg.mk"
