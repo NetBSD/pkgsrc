@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7389 2004/10/10 10:12:48 minskim Exp $
+$NetBSD: CHANGES,v 1.7390 2004/10/10 12:32:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated moss to 0.1.11 [minskim 2004-10-10]
 	Updated pkgdiff to 0.115 [dillo 2004-10-10]
 	Added p5-POE-0.29 [minskim 2004-10-10]
+	Updated cdparanoia to 3.0.9.8nb2 [mycroft 2004-10-10]
