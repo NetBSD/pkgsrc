@@ -1,16 +1,8 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.57 2004/11/14 21:51:05 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.58 2004/12/22 15:12:18 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
-if [ "$1" = -v ] ; then
-    shift
-    opt_v=1
-fi
-if [ -n "$1" ]; then
-    CC=$1
-else
-    CC=gcc
-fi
+AWK=awk
 
 display_hw_details()
     {
@@ -86,6 +78,7 @@ case $hw_machine_arch in
 	*AMD\ K6*)			FLAGS='-march=k6'		;;
 	*AMD\ Duron*)			FLAGS='-march=athlon'		;;
 	*AMD\ Athlon\ 4*)		FLAGS='-march=athlon-4'		;;
+	*AMD\ Athlon\ Model\ 4\ \(Thunderbird\)*) FLAGS='-march=athlon-tbird';;
 	*AMD\ Athlon\ MP*)		FLAGS='-march=athlon-mp'	;;
 	*AMD\ K7\ \(Athlon\)\ XP\ *)	FLAGS='-march=athlon-xp'	;;
 	*AMD\ Athlon\ XP\ *)		FLAGS='-march=athlon-xp'	;;
@@ -135,7 +128,8 @@ case $hw_machine_arch in
 	603\ *)			FLAGS='-mcpu=603'	;; # Untested
 	603e\ *|603ev\ *)	FLAGS='-mcpu=603e'	;; # Umax C500 / PM4400
 	604\ *)			FLAGS='-mcpu=604'	;; # Mac 8500
-	604ev\ *)		FLAGS='-mcpu=604e'	;; # upgr B&W G3
+	604e\ *)		FLAGS='-mcpu=604e'	;; # upgr B&W G3
+	604ev\ *)		FLAGS='-mcpu=604e'	;; # usually 604e
 	620\ *)			FLAGS='-mcpu=620'	;; # Untested
 	7400\ *)		FLAGS='-mcpu=7400'	;; # AGP G4/400 Mac
 	7410\ *)		FLAGS='-mcpu=7400'	;; # powerbook g4
@@ -173,6 +167,16 @@ esac
 ############
 # Everything from this point common between all cpuflags variants.
 
+if [ "$1" = -v ] ; then
+    shift
+    opt_v=1
+fi
+if [ -n "$1" ]; then
+    CC=$1
+else
+    CC=gcc
+fi
+
 if [ -n "$opt_v" ] ; then
     if [ -z "$NONE" ] ; then
 	echo "CPUFLAGS=Unknown"
@@ -196,7 +200,7 @@ fi
 
 if [ -n "$FLAGS" ]; then
     gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
-    FLAGS=`awk -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+    FLAGS=`$AWK -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
 	{ if (gcc_ver < $1){map[$2] = ""$3} }
 	END { while (flags in map) {flags = map[flags]} print flags }
 	' <<EOD
