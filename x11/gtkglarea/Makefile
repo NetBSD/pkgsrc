@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.35 2005/02/21 20:26:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2005/03/24 09:52:28 adam Exp $
 
-DISTNAME=		gtkglarea-1.2.2
-PKGREVISION=		5
-CATEGORIES=		x11 graphics
-MASTER_SITES=		http://www.student.oulu.fi/~jlof/gtkglarea/download/
+DISTNAME=	gtkglarea-1.2.3
+CATEGORIES=	x11 graphics
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openev/} \
+		http://www.student.oulu.fi/~jlof/gtkglarea/download/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.student.oulu.fi/~jlof/gtkglarea/
-COMMENT=		OpenGL/Mesa widget for GTK+ GUI toolkit
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.student.oulu.fi/~jlof/gtkglarea/
+COMMENT=	OpenGL/Mesa widget for GTK+ GUI toolkit
 
-USE_X11BASE=		YES
-USE_BUILDLINK3=		YES
-USE_LIBTOOL=		YES
-
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+USE_X11BASE=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lib-MesaGL
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
