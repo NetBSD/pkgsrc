@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/03/24 22:41:58 markd Exp $
+# $NetBSD: Makefile,v 1.24 2005/03/25 12:25:21 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
@@ -29,6 +29,15 @@ CONFIGURE_ARGS+=	--enable-audio=oss
 CONFIGURE_ARGS+=	--enable-cdparanoia
 CONFIGURE_ARGS+=	--with-cdparanoia=${BUILDLINK_PREFIX.cdparanoia}
 CONFIGURE_ARGS+=	--with-vorbis=${BUILDLINK_PREFIX.libvorbis}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kdemultimedia
+PKG_SUPPORTED_OPTIONS=	gstreamer
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgstreamer)
+.include "../../multimedia/gstreamer/buildlink3.mk"
+.include "../../multimedia/gst-plugins/buildlink3.mk"
+.endif
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
