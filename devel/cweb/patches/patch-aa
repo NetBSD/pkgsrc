@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 17:23:28 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/28 04:27:43 jtb Exp $
 
---- Makefile.orig	Mon Jul 24 07:15:41 2000
+--- Makefile.orig	Mon Jan  1 04:13:48 2001
 +++ Makefile
 @@ -18,23 +18,23 @@
  #
@@ -38,21 +38,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/25 17:23:28 jtb Exp $
  
  # We keep debugging info around, for fun, but most users don't need it
 -CFLAGS = -g
--#CFLAGS = -O
--LINKFLAGS = -g
--#LINKFLAGS = -s # for smaller (stripped) executables on many UNIX systems
 +#CFLAGS = -g
-+CFLAGS = -O
-+#LINKFLAGS = -g
-+LINKFLAGS = -s # for smaller (stripped) executables on many UNIX systems
+ #CFLAGS = -O
+-LINKFLAGS = -g
++LINKFLAGS = $(LDFLAGS)
+ #LINKFLAGS = -s # for smaller (stripped) executables on many UNIX systems
  
  # What C compiler are you using?
 -CC = cc
 +#CC = cc
  
  # RM and CP are used below in case rm and cp are aliased
- RM= /bin/rm
- CP= /bin/cp
+-RM= /bin/rm
+-CP= /bin/cp
++#RM= /bin/rm
++#CP= /bin/cp
  
  # uncomment the second line if you use pdftex to bypass .dvi files
 -PDFTEX = dvipdfm
@@ -62,3 +62,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/25 17:23:28 jtb Exp $
  
  ##########  You shouldn't have to change anything after this point #######
  
+@@ -106,7 +106,7 @@
+ 	 pdftex ) pdftex $* ;; \
+ 	esac
+ 
+-all: ctangle cweave
++all: ctangle cweave fullmanual
+ 
+ cautiously: ctangle
+ 	$(CP) common.c SAVEcommon.c
