@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 1999/02/18 11:50:08 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.11 1999/03/29 16:15:34 bouyer Exp $
 bin/mksmbpasswd.sh
 bin/addtosmbpass
 bin/convert_smbpasswd
@@ -8,7 +8,6 @@ bin/nmblookup
 bin/rpcclient
 bin/smbclient
 bin/smbpasswd
-bin/smbrun
 bin/smbstatus
 bin/smbtar
 bin/testparm
@@ -99,6 +98,7 @@ share/doc/samba/textdocs/BROWSING-Config.txt
 share/doc/samba/textdocs/BROWSING.txt
 share/doc/samba/textdocs/BUGS.txt
 share/doc/samba/textdocs/CVS_ACCESS.txt
+share/doc/samba/textdocs/CRLF-LF-Conversions.txt
 share/doc/samba/textdocs/DHCP-Server-Configuration.txt
 share/doc/samba/textdocs/DIAGNOSIS.txt
 share/doc/samba/textdocs/DNIX.txt
@@ -106,6 +106,7 @@ share/doc/samba/textdocs/DOMAIN.txt
 share/doc/samba/textdocs/DOMAIN_CONTROL.txt
 share/doc/samba/textdocs/DOMAIN_MEMBER.txt
 share/doc/samba/textdocs/ENCRYPTION.txt
+share/doc/samba/textdocs/File-Cacheing.txt
 share/doc/samba/textdocs/Faxing.txt
 share/doc/samba/textdocs/GOTCHAS.txt
 share/doc/samba/textdocs/HINTS.txt
@@ -113,6 +114,7 @@ share/doc/samba/textdocs/INSTALL.sambatar
 share/doc/samba/textdocs/MIRRORS.txt
 share/doc/samba/textdocs/Macintosh_Clients.txt
 share/doc/samba/textdocs/NTDOMAIN.txt
+share/doc/samba/textdocs/NT-Guest-Access.txt
 share/doc/samba/textdocs/NetBIOS.txt
 share/doc/samba/textdocs/OS2-Client-HOWTO.txt
 share/doc/samba/textdocs/PRINTER_DRIVER.txt
