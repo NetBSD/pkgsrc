@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/04 00:48:04 hubertf Exp $
+
+--- Makefile.orig	Thu Aug  8 20:19:15 1996
++++ Makefile	Sun Jul  4 02:41:11 1999
+@@ -1,7 +1,7 @@
+ # Makefile for giftrans
+ 
+ CC=gcc 
+-CFLAGS=-O2 -m486
++CFLAGS=-O2 -DRGBTXT=\"${X11BASE}/lib/X11/rgb.txt\"
+ 
+ all: giftrans
+ 
