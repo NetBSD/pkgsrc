@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/10/09 07:58:47 tron Exp $
+# $NetBSD: Makefile,v 1.33 2002/11/25 11:01:13 schmonz Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -12,15 +12,23 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386 NetBSD-*-powerpc
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		aaa_dir.rpm glibc-2.2.4-77.i386.rpm \
-			gppshare.rpm libz-1.1.3-597.i386.rpm ncurses.rpm \
+RPMFILES=		aaa_dir.rpm gppshare.rpm ncurses.rpm \
 			readline.rpm bash.rpm sh-utils.rpm
+
+.include "../suse_linux/arch.mk"
+
+.if ${SUSE_ARCH} == "i386"
+RPMFILES+=	glibc-2.2.4-77.${SUSE_ARCH}.rpm libz-1.1.3-597.${SUSE_ARCH}.rpm
+.else
+RPMFILES+=	glibc.rpm libz.rpm
+.endif
+
 RPMIGNOREPATH=		tmp usr/tmp var
 
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
