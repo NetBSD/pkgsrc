@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/08/23 14:32:13 abs Exp $
+# $NetBSD: Makefile,v 1.28 2002/08/25 19:43:33 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.106
@@ -11,13 +11,14 @@ HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Tools to ease creating and maintaining patches for pkgsrc
 
 PERL5_REQD=	5.6.0
-USE_PERL5=	YES
 
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
+
+USE_BUILDLINK2=	yes
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR}
 
@@ -58,4 +59,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/${FILE}.1 ${PREFIX}/man/man1
 .endfor
 
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
