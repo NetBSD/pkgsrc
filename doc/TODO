@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2487 2004/11/26 21:05:55 wiz Exp $
+$NetBSD: TODO,v 1.2488 2004/11/26 21:15:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,6 @@ Suggested package updates
 	o covered-current-20040325
 	o cpio-2.5.90
 	o crafty-19.5
-	o crimsonfields-0.4.5
 	o criticalmass-0.99
 	o crossfire-1.5.0
 	o crypto++-52
