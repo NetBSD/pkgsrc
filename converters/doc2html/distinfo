@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/14 14:03:20 agc Exp $
+
+SHA1 (doc2html.tar.gz) = 78f78950a87f9134dc871d68e897857c7fa76dbc
+Size (doc2html.tar.gz) = 12444 bytes
+SHA1 (patch-aa) = 86ca749c41251845b06bab5fe59cdddcde01ab63

@@ -1,0 +1,15 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/05/14 14:03:20 agc Exp $
+
+To use with htdig, add the following to your htdig.conf file:
+
+external_parsers:	application/rtf->text/html ${PREFIX}/bin/doc2html \
+			text/rtf->text/html ${PREFIX}/bin/doc2html \
+			application/pdf->text/html ${PREFIX}/bin/doc2html \
+			application/postscript->text/html ${PREFIX}/bin/doc2html \
+			application/msword->text/html ${PREFIX}/bin/doc2html \
+			application/msexcel->text/html ${PREFIX}/bin/doc2html \
+			application/vnd.ms-excel->text/html ${PREFIX}/bin/doc2html \
+			application/vnd.ms-powerpoint->text/html ${PREFIX}/bin/doc2html
+
+==========================================================================
