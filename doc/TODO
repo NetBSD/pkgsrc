@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1161 2003/12/12 10:12:54 adam Exp $
+$NetBSD: TODO,v 1.1162 2003/12/12 11:58:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -176,7 +176,6 @@ Suggested package updates
 	o gdb-6.0
 	o gdm-2.4.4.4
 	o generator-0.35
-	o gentoo-0.11.45
 	o gettext-0.13
 	o gforth-0.6.2
 	o gftp-2.0.16
