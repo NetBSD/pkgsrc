@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/09/13 15:19:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/13 20:25:04 jlam Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -9,13 +9,14 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
 
-DEPENDS=		xview-lib-3.2.1:../../x11/xview-lib
+DEPENDS=		xview-lib>=3.2.1:../../x11/xview-lib
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 EXTRACT_ELEMENTS=	${DISTNAME}/clients ${DISTNAME}/images
 WRKSRC=			${WRKDIR}/${DISTNAME}/clients
 USE_IMAKE=		# defined
+XMKMF=			${X11PREFIX}/bin/xvmkmf -a
 
 post-patch:
 	@${MV} ${WRKSRC}/olwm/openwin-menu-programs ${WRKSRC}/foo
