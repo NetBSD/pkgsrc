@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8702 2005/01/11 14:02:30 adam Exp $
+$NetBSD: CHANGES,v 1.8703 2005/01/11 14:44:02 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -247,3 +247,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated enlightenment to 0.16.7.2 [adam 2005-01-11]
 	Updated libast to 0.6.1 [adam 2005-01-11]
 	Updated eterm to 0.9.3 [adam 2005-01-11]
+	Updated pkg_notify to 0.4.1 [xtraeme 2005-01-11]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2882 2005/01/11 14:02:31 adam Exp $
+$NetBSD: TODO,v 1.2883 2005/01/11 14:44:02 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -925,7 +925,6 @@ Suggested package updates
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pircbot-1.4.2
-	o pkg_notify-0.4.0
 	o plan-1.8.7
 	o plib-1.8.3
 	o pload-0.9.5
