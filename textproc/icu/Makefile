@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2003/07/21 17:27:34 martti Exp $
+# $NetBSD: Makefile,v 1.22 2003/10/18 12:46:37 cjep Exp $
 #
 
 DISTNAME=	icu-2.6
 WRKSRC=		${WRKDIR}/${PKGBASE}/source
 CATEGORIES=	textproc
-EXTRACT_SUFX=	.tgz
 #
 # The IBM site has long delays that can cause ftp to timeout.  Use the
 # backup FTP repositories in preference to the IBM one.
 #
 MASTER_SITES=	${MASTER_SITE_BACKUP} \
 		ftp://www-126.ibm.com/pub/icu/${PKGVERSION}/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://oss.software.ibm.com/icu/
