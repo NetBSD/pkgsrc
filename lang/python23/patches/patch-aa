@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/09 10:48:09 recht Exp $
 
---- Python-2.3.3/Modules/_cursesmodule.c.orig	2002-11-21 09:17:51.000000000 -0500
-+++ Python-2.3.3/Modules/_cursesmodule.c
-@@ -313,17 +313,9 @@ Window_OneArgNoReturnFunction(wattroff, 
+--- Modules/_cursesmodule.c.orig	2002-11-21 15:17:51.000000000 +0100
++++ Modules/_cursesmodule.c	2004-04-09 12:45:06.000000000 +0200
+@@ -313,17 +313,9 @@
  Window_OneArgNoReturnFunction(wattrset, attr_t, "l;attr")
  Window_OneArgNoReturnFunction(clearok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(idlok, int, "i;True(1) or False(0)")
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
  Window_OneArgNoReturnFunction(notimeout, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(scrollok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(winsdelln, int, "i;nlines")
-@@ -784,11 +776,7 @@ PyCursesWindow_GetKey(PyCursesWindowObje
+@@ -784,11 +776,7 @@
    } else if (rtn<=255)
      return Py_BuildValue("c", rtn);
    else
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
  }
  
  static PyObject *
-@@ -1946,7 +1934,6 @@ PyCurses_IntrFlush(PyObject *self, PyObj
+@@ -1946,7 +1934,6 @@
    return PyCursesCheckERR(intrflush(NULL,ch), "intrflush");
  }
  
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
  static PyObject *
  PyCurses_KeyName(PyObject *self, PyObject *args)
  {
-@@ -1965,7 +1952,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
+@@ -1965,7 +1952,6 @@
  
    return PyString_FromString((knp == NULL) ? "" : (char *)knp);
  }
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
  
  static PyObject *  
  PyCurses_KillChar(PyObject *self)  
-@@ -2392,9 +2378,7 @@ static PyMethodDef PyCurses_methods[] = 
+@@ -2392,9 +2378,7 @@
    {"initscr",             (PyCFunction)PyCurses_InitScr, METH_NOARGS},
    {"intrflush",           (PyCFunction)PyCurses_IntrFlush, METH_VARARGS},
    {"isendwin",            (PyCFunction)PyCurses_isendwin, METH_NOARGS},
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
    {"killchar",            (PyCFunction)PyCurses_KillChar, METH_NOARGS}, 
    {"longname",            (PyCFunction)PyCurses_longname, METH_NOARGS}, 
    {"meta",                (PyCFunction)PyCurses_Meta, METH_VARARGS},
-@@ -2490,9 +2474,7 @@ init_curses(void)
+@@ -2490,9 +2474,7 @@
  	SetDictInt("A_DIM",		A_DIM);
  	SetDictInt("A_BOLD",		A_BOLD);
  	SetDictInt("A_ALTCHARSET",	A_ALTCHARSET);
@@ -68,7 +68,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
  	SetDictInt("A_PROTECT",         A_PROTECT);
  	SetDictInt("A_CHARTEXT",        A_CHARTEXT);
  	SetDictInt("A_COLOR",           A_COLOR);
-@@ -2564,7 +2546,6 @@ init_curses(void)
+@@ -2564,7 +2546,6 @@
  	  int key;
  	  char *key_n;
  	  char *key_n2;
@@ -76,7 +76,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/02 10:56:22 darcy Exp $
  	  for (key=KEY_MIN;key < KEY_MAX; key++) {
  	    key_n = (char *)keyname(key);
  	    if (key_n == NULL || strcmp(key_n,"UNKNOWN KEY")==0)
-@@ -2588,7 +2569,6 @@ init_curses(void)
+@@ -2588,7 +2569,6 @@
  	    if (key_n2 != key_n)
  	      free(key_n2);
  	  }
