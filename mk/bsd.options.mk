@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.11 2004/11/28 08:00:51 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.12 2004/12/05 09:20:48 grant Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -175,6 +175,22 @@ _PKG_OPTIONS_WORDWRAP_FILTER=						\
 		}							\
 		END { if (length(line) > 0) print "	"line }		\
 	'
+
+.if !defined(_PKG_OPTIONS_AVAILABLE)
+_PKG_OPTIONS_AVAILABLE!=	${ECHO} ${PKG_SUPPORTED_OPTIONS} | ${XARGS} -n 1 | ${SORT}
+.endif
+.if !defined(_PKG_OPTIONS_DEFAULT)
+_PKG_OPTIONS_DEFAULT!=		${ECHO} ${PKG_DEFAULT_OPTIONS} | ${XARGS} -n 1 | ${SORT}
+.endif
+.if !defined(_PKG_OPTIONS_ENABLED)
+_PKG_OPTIONS_ENABLED!=		${ECHO} ${PKG_OPTIONS} | ${XARGS} -n 1 | ${SORT}
+.endif
+
+.PHONY: show-options
+show-options:
+	@${ECHO} "available: ${_PKG_OPTIONS_AVAILABLE}"
+	@${ECHO} "default: ${_PKG_OPTIONS_DEFAULT}"
+	@${ECHO} "enabled: ${_PKG_OPTIONS_ENABLED}"
 
 .PHONY: pre-install-depends supported-options-message
 pre-install-depends: supported-options-message
