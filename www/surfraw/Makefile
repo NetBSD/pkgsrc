@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.5 2000/08/12 12:16:03 proff Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/31 13:10:18 jlam Exp $
 #
 
-DISTNAME=	surfraw-0.5.7
+DISTNAME=	surfraw-1.0.2
 CATEGORIES=	www
 MASTER_SITES=	http://download.sourceforge.net/surfraw/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://surfraw.sourceforge.net/
 
 CONFLICTS+=	surfaw-*
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=	# defined
+
+DOCDIR=		${PREFIX}/share/doc/surfraw
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/surfraw
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/surfraw
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
