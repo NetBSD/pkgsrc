@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:32 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/10/25 19:02:47 agc Exp $
 
 SHA1 (sendfile-2.1a.tar.gz) = cdf6ff67bdc11709209c5f93ac94d380fa1abac3
 Size (sendfile-2.1a.tar.gz) = 292130 bytes
-SHA1 (patch-aa) = f50d62076fb4c2f2c0996b87add938e46934afe2
+SHA1 (patch-aa) = 6c242d962625986cf6c0ed20696a979f8852c85f
 SHA1 (patch-ab) = c74cf201573068d8e1afa8e285831181d1be789e
 SHA1 (patch-ac) = bd81d52fc1eada9170b48404f6c0d7779acdea84
