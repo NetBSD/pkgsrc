@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2004/01/11 20:54:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.24 2004/03/08 19:40:36 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -350,7 +350,6 @@ share/sounds/gaim/receive.wav
 share/sounds/gaim/redalert.wav
 share/sounds/gaim/send.wav
 @dirrm share/sounds/gaim
-@unexec ${RMDIR} %D/share/sounds 2>/dev/null || ${TRUE}
 @dirrm share/pixmaps/gaim/status/default
 @dirrm share/pixmaps/gaim/status
 @dirrm share/pixmaps/gaim/smileys/default

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2004/03/07 12:09:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/08 19:40:39 jmmv Exp $
 #
 
 DISTNAME=	eog-2.5.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.5/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Eye of GNOME: an image viewing and cataloging program
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_X11=		YES

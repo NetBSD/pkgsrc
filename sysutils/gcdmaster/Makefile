@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/08 19:40:42 jmmv Exp $
 #
 
 DISTNAME=		cdrdao-1.1.7.src
 PKGNAME=		gcdmaster-1.1.7
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
@@ -12,6 +12,7 @@ HOMEPAGE=		http://cdrdao.sourceforge.net/gcdmaster/index.html
 COMMENT=		GUI for cdrdao with some editing capability
 
 DEPENDS+=		cdrdao-1.1.7:../../sysutils/cdrdao
+DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 
 WRKSRC=			${WRKDIR}/cdrdao-1.1.7
 USE_X11BASE=		YES

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/03/04 17:44:08 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/08 19:40:36 jmmv Exp $
 
 DISTNAME=	liteamp-0.2.4.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://download.kldp.net/liteamp/
 
@@ -8,8 +9,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://kldp.net/projects/liteamp/
 COMMENT=	Light-weight Music Player for GNOME2
 
-DEPENDS+=	xdg-dirs>=1.0:../../misc/xdg-dirs
-DEPENDS+=	gnome2-dirs>=1.2nb1:../../misc/gnome2-dirs
+DEPENDS+=	gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes

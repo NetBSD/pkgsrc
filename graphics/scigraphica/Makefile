@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/08 19:40:39 jmmv Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
@@ -10,7 +10,7 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://scigraphica.sourceforge.net/
 COMMENT=	Data analysis and technical graphics
 
-DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
+DEPENDS+=	gnome1-dirs>=1.5:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES

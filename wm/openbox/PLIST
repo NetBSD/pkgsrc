@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/23 08:41:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/08 19:40:43 jmmv Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
@@ -61,7 +61,6 @@ share/themes/TheBear/openbox-3/themerc
 @unexec ${RMDIR} %D/share/themes/Artwiz 2>/dev/null || ${TRUE}
 @dirrm share/themes/Allegro/openbox-3
 @unexec ${RMDIR} %D/share/themes/Allegro 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
 @dirrm share/examples/openbox

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/18 04:14:05 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/08 19:40:39 jmmv Exp $
 bin/sodipodi
 lib/sodipodi/extensions/ill2svg.pl
 man/man1/sodipodi.1
@@ -209,6 +209,4 @@ share/sodipodi/zoom_out.xpm
 share/sodipodi/zoom_page.xpm
 share/sodipodi/zoom_select.xpm
 @unexec ${RMDIR} %D/share/oaf 2> /dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Graphics 2> /dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps 2> /dev/null || ${TRUE}
 @dirrm share/sodipodi

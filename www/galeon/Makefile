@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2004/03/08 19:40:43 jmmv Exp $
 
 DISTNAME=	galeon-1.2.13
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -12,6 +12,7 @@ COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
+DEPENDS+=	xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 EVAL_PREFIX+=	MOZILLA_PREFIX=mozilla
 EVAL_PREFIX+=	ICONV_PREFIX=libiconv

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/02/11 06:37:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 19:40:39 jmmv Exp $
 #
 
 DISTNAME=		gnome-icon-theme-1.0.9
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/1.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme consisting of a set of icons for GNOME
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes

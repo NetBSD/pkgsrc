@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/01/23 21:50:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/08 19:40:37 jmmv Exp $
 #
 
 DISTNAME=	gq-1.0beta1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqclient/}
 
@@ -10,7 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://biot.com/gq/
 COMMENT=	GTK-based LDAP client
 
-DEPENDS+=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes

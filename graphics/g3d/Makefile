@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/08 19:40:39 jmmv Exp $
 #
 
 DISTNAME=	g3d-0.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 
 MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 COMMENT=	3D modeller with a view of 3D modelling
+
+DEPENDS+=	xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 WRKSRC=		${WRKDIR}/g3d
 USE_LIBTOOL=	YES

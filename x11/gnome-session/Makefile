@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2004/03/08 15:24:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/08 19:40:43 jmmv Exp $
 #
 
 DISTNAME=		gnome-session-2.4.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.4/}
 SITES_gnome-splash-2.4.2.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -13,7 +13,7 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 session management utilities
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 CONFLICTS+=		gnome-core<1.4.2nb4
 
