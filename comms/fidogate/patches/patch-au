@@ -1,0 +1,11 @@
+--- src/include/prototypes.h.orig	2003-10-10 18:39:41.000000000 +1000
++++ src/include/prototypes.h	2003-10-10 18:39:55.000000000 +1000
+@@ -271,6 +271,8 @@
+ extern int verbose;
+ extern int no_debug;
+ 
++#define log fido_log
++
+ char   *strerror		(int);
+ void	log			(const char *, ...)
+     __attribute__ ((format (printf, 1, 2)));
