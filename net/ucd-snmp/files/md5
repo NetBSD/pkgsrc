@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.6 1999/04/05 00:59:08 hubertf Exp $
+$NetBSD: md5,v 1.7 2000/01/23 10:41:10 itojun Exp $
 
-MD5 (ucd-snmp-3.6.1.tar.gz) = 4ebb94d59c086cef4dbb27396f9b77cb
+MD5 (ucd-snmp-4.0.1.tar.gz) = ba72a7b8c9efd226b72baf74d68d4511
+MD5 (ucd-snmp-4.0.1-v6-20000121a.diff.gz) = 3244e4e34abe212eca6370b4bbfa054f

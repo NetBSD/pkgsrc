@@ -1,25 +1,26 @@
-$NetBSD: patch-ae,v 1.1 1999/08/15 09:44:01 tron Exp $
-
---- apps/snmpnetstat/Makefile.in.orig	Sat Mar  6 02:25:46 1999
-+++ apps/snmpnetstat/Makefile.in	Sun Aug 15 11:31:31 1999
-@@ -23,13 +23,13 @@
- CPPFLAGS=@CPPFLAGS@ -I../.. -I$(srcdir)/../.. -I$(srcdir)/../../snmplib
+$NetBSD: patch-ae,v 1.2 2000/01/23 10:41:10 itojun Exp $
+--- apps/snmpnetstat/Makefile.in.orig	Fri Jan 21 05:33:13 2000
++++ apps/snmpnetstat/Makefile.in	Fri Jan 21 05:46:14 2000
+@@ -23,13 +23,15 @@
+ CPPFLAGS=-I../.. -I$(srcdir)/../.. -I$(srcdir)/../../snmplib @CPPFLAGS@
  CC = @CC@ $(CPPFLAGS)
  
 -USELIBS=../../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
 -LIBS=	 -L../../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@
++#USELIBS=../../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
++#LIBS=	 -L../../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@
 +USELIBS=../../snmplib/libsnmp.la
 +LIBS=	 ${USELIBS} @LIBS@
  
  all: $(TARG)
  
  snmpnetstat: ${OBJS} ${USELIBS}
--	${CC} -o $@ ${CFLAGS} ${OBJS} ${LDFLAGS} ${LIBS}
-+	${LIBTOOL} ${CC} -o $@ ${CFLAGS} ${OBJS} ${LDFLAGS} ${LIBS}
+-	${CC} -o $@ ${OBJS} ${LDFLAGS} ${LIBS}
++	${LIBTOOL} ${CC} -o $@ ${OBJS} ${LDFLAGS} ${LIBS}
  
  distclean: clean
  
-@@ -49,7 +49,7 @@
+@@ -49,7 +51,7 @@
  	@$(SHELL) $(srcdir)/../../mkinstalldirs $(snmplibdir) $(bindir)
  
  install: installdirs $(TARG)

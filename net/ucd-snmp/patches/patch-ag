@@ -1,9 +1,7 @@
-$NetBSD: patch-ag,v 1.1 1999/08/15 11:07:14 tron Exp $
-
-
---- agent/mibgroup/mibII/ip.c.orig	Fri Mar 12 18:15:05 1999
-+++ agent/mibgroup/mibII/ip.c	Thu Jun 17 10:08:11 1999
-@@ -728,7 +728,11 @@
+$NetBSD: patch-ag,v 1.2 2000/01/23 10:41:10 itojun Exp $
+--- agent/mibgroup/mibII/ip.c.orig	Tue Aug 24 14:17:30 1999
++++ agent/mibgroup/mibII/ip.c	Fri Jan 21 05:48:22 2000
+@@ -761,7 +761,11 @@
  #ifdef linux
              return (u_char *)&((struct sockaddr_in *)&lowin_ifnet.ia_subnetmask)->sin_addr.s_addr;
  #else
@@ -15,14 +13,14 @@ $NetBSD: patch-ag,v 1.1 1999/08/15 11:07:14 tron Exp $
  	    return(u_char *) &long_return;
  #endif
  #endif
-@@ -737,7 +741,11 @@
+@@ -770,7 +774,11 @@
  #if defined(linux) || defined(sunV3)
  	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifnet.ifu_broadaddr)->sin_addr.s_addr) & 1;
  #else
 +#ifdef netbsd1
-+          long_return = (((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
++	    long_return = (((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
 +#else
-           long_return = ntohl(((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
+ 	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
 +#endif
  #endif
  	    return(u_char *) &long_return;	   
