@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.35 2002/12/06 16:51:38 jmmv Exp $
+$NetBSD: TODO,v 1.36 2002/12/06 17:47:01 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -231,7 +231,6 @@ Suggested package updates
 	o sylpheed-claws-0.8.6
 	o tcl/tk-8.4.1 [bjoern]
 	o ted-2.12
-	o texmacs-1.0.0.24
 	o tightvnc-1.2.7
 	o ttf2pt1-3.4.3
 	o vfu-4.00
