@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 17:36:44 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/14 00:50:09 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=	Tcl/tk interface to Sam Leffler's fax package
 
 DEPENDS+=	hylafax>=4.1:../../comms/hylafax
 DEPENDS+=	tk>=8.3.2:../../x11/tk
-DEPENDS+=	gv-3.5.8:../../print/gv
+DEPENDS+=	gv>=3.5.8nb1:../../print/gv
 
 WRKSRC=		${WRKDIR}/tkhylafax
 
