@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.5 1999/04/16 22:30:52 abs Exp $
+--- Makefile.in.orig	Fri Apr 16 15:11:50 1999
++++ Makefile.in	Fri Apr 16 15:12:02 1999
+@@ -170,7 +170,7 @@
+ # easily.
+ #
+ filt_parser.c: filt_parser.y filter.h
+-	bison -vd -p filtyy filt_parser.y -o filt_parser.c
++	yacc -vd -p filtyy -o filt_parser.c filt_parser.y
+ 	cp filt_parser.c flex_bison
+ 	cp filt_parser.h flex_bison
+ filt_scanner.c: filt_scanner.l filter.h filt_parser.h
