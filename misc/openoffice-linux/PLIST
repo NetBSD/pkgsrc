@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/14 17:35:00 mrauch Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/02/15 10:48:56 mrauch Exp $
 OpenOffice.org1.1.0/LICENSE
 OpenOffice.org1.1.0/LICENSE.html
 OpenOffice.org1.1.0/README
@@ -3942,7 +3942,6 @@ bin/scalc
 bin/sdraw
 bin/simpress
 bin/swriter
-${JAVA_HOME}/jre
 @dirrm OpenOffice.org1.1.0/user/wordbook
 @dirrm OpenOffice.org1.1.0/user/uno_packages
 @dirrm OpenOffice.org1.1.0/user/template
