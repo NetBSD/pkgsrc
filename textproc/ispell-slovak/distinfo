@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/02 03:19:53 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2002/08/10 16:02:49 jschauma Exp $
 
-SHA1 (ispell-sk-0.1.8.1.tar.gz) = 99dca0c139760ec246e5330ed8ebc7013468d9ee
-Size (ispell-sk-0.1.8.1.tar.gz) = 258829 bytes
-SHA1 (patch-aa) = 69a3f1b2c553e329704dae34cfa35ae0fc22c245
+SHA1 (ispell-sk-0.1.9.1.tar.gz) = 69f972e58ba8d69f8b6083e797f95d162b323122
+Size (ispell-sk-0.1.9.1.tar.gz) = 265862 bytes
+SHA1 (patch-aa) = 756d348dcafb467efac6be6818bb7a3e30825916
