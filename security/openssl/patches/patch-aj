@@ -1,10 +1,10 @@
-$NetBSD: patch-aj,v 1.2 1999/11/25 18:51:47 erh Exp $
+$NetBSD: patch-aj,v 1.3 2000/04/22 05:07:04 fredb Exp $
 
---- e_os.h.orig	Thu Jun 10 03:12:20 1999
-+++ e_os.h	Wed Oct 20 17:50:34 1999
-@@ -231,7 +231,7 @@
-      /* !defined VMS */
- #    include OPENSSL_UNISTD
+--- e_os.h.orig	Thu Mar 23 14:31:49 2000
++++ e_os.h	Fri Apr 21 23:51:15 2000
+@@ -289,7 +289,7 @@
+ #      define ssize_t int /* ditto */
+ #    endif
  
 -#    define OPENSSL_CONF	"openssl.cnf"
 +#    define OPENSSL_CONF	"etc/openssl.cnf"
