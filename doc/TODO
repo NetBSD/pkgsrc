@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1909 2004/07/07 20:56:02 salo Exp $
+$NetBSD: TODO,v 1.1910 2004/07/08 10:02:39 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -176,7 +176,6 @@ Suggested package updates
 	o balsa-1.4.4
 	o bind-9.3
 	o bitchx-1.1
-	o bitlbee-0.90a
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
 	o boson-0.10
@@ -307,7 +306,6 @@ Suggested package updates
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.1
-	o musicpd-0.11.2
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
