@@ -1,0 +1,6 @@
+Wireless LAN access point utilities for UNIX to configure
+and monitor Wireless Access Points using the SNMP protocol.
+Utilities probably work with all Access Points based on
+Atmel chipset and may also configure APs with    
+IEEE 802.11 MIB and NWN DOT11EXT MIB support, such as
+Compex WP11.
