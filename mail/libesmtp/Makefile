@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 13:55:30 grant Exp $
 
 DISTNAME=	libesmtp-1.0.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.stafford.uklinux.net/libesmtp/
 COMMENT=	Library to manage posting of electronic mail
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=      yes
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 

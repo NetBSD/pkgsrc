@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/23 21:50:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/24 13:55:30 grant Exp $
 #
 
 DISTNAME=	GNUMail-1.1.1
@@ -12,7 +12,7 @@ COMMENT=	GNUstep clone of NeXT's Mail.app application
 
 WRKSRC=			${WRKDIR}/GNUMail
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 NO_CONFIGURE=		YES
 MAKEFILE=		GNUmakefile
