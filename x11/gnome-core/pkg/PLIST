@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2001/05/26 13:28:41 rh Exp $
+@comment $NetBSD: PLIST,v 1.29 2001/10/24 12:17:02 tron Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -1229,8 +1229,6 @@ share/omf/gnome-core/panel-ja.omf
 share/omf/gnome-core/printer_applet-C.omf
 share/omf/gnome-core/printer_applet-da.omf
 share/omf/gnome-core/printer_applet-it.omf
-share/omf/gnome-core/session-C.omf
-share/omf/gnome-core/session-ja.omf
 share/omf/gnome-core/tasklist_applet-C.omf
 share/pixmaps/apple-green.png
 share/pixmaps/apple-red.png
