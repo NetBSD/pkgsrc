@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2004/07/30 21:05:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.23 2004/09/12 05:00:53 jlam Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -24,8 +24,8 @@ bin/testparm
 bin/testprns
 bin/wbinfo
 include/libsmbclient.h
-lib/libnss_winbind.so
-lib/libnss_wins.so
+${NSS_WINBIND}
+${NSS_WINS}
 lib/libsmbclient.a
 lib/libsmbclient.so
 lib/libsmbclient.so.0
