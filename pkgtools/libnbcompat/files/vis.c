@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.3 2003/09/03 13:11:16 jlam Exp $	*/
+/*	$NetBSD: vis.c,v 1.4 2004/03/12 15:21:13 grant Exp $	*/
 
 /*-
  * Copyright (c) 1999 The NetBSD Foundation, Inc.
@@ -45,7 +45,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.3 2003/09/03 13:11:16 jlam Exp $");
+__RCSID("$NetBSD: vis.c,v 1.4 2004/03/12 15:21:13 grant Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #include "namespace.h"
@@ -58,6 +58,7 @@ __RCSID("$NetBSD: vis.c,v 1.3 2003/09/03 13:11:16 jlam Exp $");
 #include "nbcompat/vis.h"
 #include <stdlib.h>
 
+#if 0
 #ifndef __ELF__
 #define _strsvis	strsvis
 #define _strsvisx	strsvisx
@@ -73,6 +74,7 @@ __weak_alias(strvis,_strvis)
 __weak_alias(strvisx,_strvisx)
 __weak_alias(svis,_svis)
 __weak_alias(vis,_vis)
+#endif
 #endif
 #endif
 
