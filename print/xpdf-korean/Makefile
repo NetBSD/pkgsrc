@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/06 14:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/19 19:21:39 kei Exp $
 #
 
 DISTNAME=	xpdf-korean
@@ -33,6 +33,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/CMap/* ${X11PREFIX}/share/xpdf/korean/CMap
 
 post-install:
-	${CAT} ${WRKSRC}/add-to-xpdfrc >> ${X11PREFIX}/etc/xpdfrc
+	${CAT} ${WRKSRC}/add-to-xpdfrc >> ${PKG_SYSCONFDIR}/xpdfrc
 
 .include "../../mk/bsd.pkg.mk"
