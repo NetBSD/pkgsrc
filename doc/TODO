@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1866 2004/06/25 16:44:41 wiz Exp $
+$NetBSD: TODO,v 1.1867 2004/06/25 17:13:52 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -247,7 +247,6 @@ Suggested package updates
 	o gnucash-1.8.9
 	o gnumeric-1.2.13
 	o gnunet-0.6.2a
-	o gnuplot-4.0.0 [pkg/25450]
 	o gnustep-0.9.3
 	o gnutls-1.0.14
 	o gogo-3.11p1
