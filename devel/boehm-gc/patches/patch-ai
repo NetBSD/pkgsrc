@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1 2001/03/30 04:08:34 thorpej Exp $
+
+*** gc.h.orig	Thu Mar 29 19:57:39 2001
+--- gc.h	Thu Mar 29 20:00:24 2001
+***************
+*** 370,375 ****
+--- 370,380 ----
+  #   define GC_RETURN_ADDR (GC_word)__return_address
+  #endif
+  
++ #if defined(__GNUC__)
++ #   define GC_ADD_CALLER
++ #   define GC_RETURN_ADDR (GC_word)__builtin_return_address(0)
++ #endif
++ 
+  #ifdef GC_ADD_CALLER
+  #  define GC_EXTRAS GC_RETURN_ADDR, __FILE__, __LINE__
+  #  define GC_EXTRA_PARAMS GC_word ra, GC_CONST char * s, int i
