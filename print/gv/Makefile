@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/04/13 15:31:07 agc Exp $
+# $NetBSD: Makefile,v 1.18 1999/08/25 13:37:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -9,10 +9,14 @@ MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~plass/gv/
 
-DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
 DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
 
 USE_IMAKE=	yes
+USE_XAW=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+XAW_TYPE?=	3d
 
 post-extract:
 	${MV} ${WRKSRC}/doc/gv.man ${WRKSRC}/source/
