@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6344 2004/06/27 07:13:31 epg Exp $
+$NetBSD: CHANGES,v 1.6345 2004/06/27 07:39:37 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3094,7 +3094,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.2c [minskim 2004-06-26]
 	Updated p5-Socket6 to 0.17 [adrianp 2004-06-26]
 	Updated bmp to 0.9.6.1nb1 [jmmv 2004-06-26]
-	Updated icbirc to 1.7 [adrianp 2006-06-26]
+	Updated icbirc to 1.7 [adrianp 2004-06-26]
 	Updated icewm to 1.2.14 [xtraeme 2004-06-26]
 	Updated TeXmacs to 1.0.3.9 [recht 2004-06-27]
 	Added py-feedparser-3.0.1 [schmonz 2004-06-27]
