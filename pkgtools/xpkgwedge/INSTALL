@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.9 2003/12/02 15:41:55 gavan Exp $
+# $NetBSD: INSTALL,v 1.10 2004/04/27 18:33:52 tv Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -16,7 +16,7 @@ SITEDEF_SUBST_SED="-e s/\#endif.*VendorCF.*/\#include <host.def>\\
 
 case ${STAGE} in
 POST-INSTALL)
-	${ECHO} -n "Symlinking font programs..."
+	${ECHO_N} "Symlinking font programs..."
 	for prog in ${FONT_PROGS}; do
 		if [ -f ${X11BASE}/bin/$prog -a				\
 		     ${PKG_PREFIX} != ${X11BASE} ]; then
@@ -29,10 +29,10 @@ POST-INSTALL)
 
 VIEW-INSTALL)
 	if [ ${PKG_PREFIX} = ${X11BASE} -o -s ${HOSTDEF} ]; then
-		${ECHO} -n "Updating ${HOSTDEF}..."
+		${ECHO_N} "Updating ${HOSTDEF}..."
 		${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
 	else
-		${ECHO} -n "Creating ${HOSTDEF}..."
+		${ECHO_N} "Creating ${HOSTDEF}..."
 		if [ -f ${X11_HOSTDEF} ]; then
 			${CP} -f ${X11_HOSTDEF} ${HOSTDEF}.bak
 		else
@@ -46,7 +46,7 @@ VIEW-INSTALL)
 	${ECHO} "done."
 	case ${X11BASE} in
 	*openwin)
-		${ECHO} -n "Patching OpenWindows templates..."
+		${ECHO_N} "Patching OpenWindows templates..."
 		${SED} "${SITEDEF_SUBST_SED}" ${X11_SITEDEF} > ${SITEDEF}
 		${SED} "${SV4LIB_SUBST_SED}" ${X11_SV4LIB} > ${SV4LIB}
 		${ECHO} "done."
