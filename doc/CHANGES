@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4364 2004/01/05 22:11:15 hubertf Exp $
+$NetBSD: CHANGES,v 1.4365 2004/01/05 22:15:44 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sablotron to 1.0.1 [wiz 2004-01-05]
 	Updated file-roller to 2.4.2 [xtraeme 2004-01-05]
 	Updated spamprobe to 0.9e [hubertf 2004-01-05]
+	Updated stlport to 4.6 [mrauch 2004-01-05]
