@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9317 2005/02/26 11:53:41 bad Exp $
+$NetBSD: CHANGES,v 1.9318 2005/02/26 13:25:26 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1116,3 +1116,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated links-gui to 2.1.0.17 [wiz 2005-02-26]
 	Updated libfwbuilder to 2.0.6 [bad 2005-02-26]
 	Updated fwbuilder to 2.0.6 [bad 2005-02-26]
+	Added ppower-0.1.5 [dsainty 2005-02-26]
