@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2002/01/29 21:08:48 jlam Exp $
 include/security/_pam_aconf.h
 include/security/_pam_compat.h
 include/security/_pam_macros.h
