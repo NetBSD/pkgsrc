@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/08/25 13:37:35 agc Exp $
+# $NetBSD: Makefile,v 1.13 1999/08/26 14:51:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.6
@@ -32,7 +32,11 @@ BUILD_DEFS+=	USE_XFACE
 
 XAW_TYPE?=	3d
 
+.if (${XAW_TYPE} == "standard")
+WITH_DIALOGS=	--with-dialogs=athena
+.else
 WITH_DIALOGS=	--with-dialogs=athena3d
+.endif
 
 .if defined(USE_XFACE) && ${USE_XFACE} == YES
 WITH_XFACE=	--with-xface=yes
