@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1662 2003/03/16 16:38:23 taca Exp $
+$NetBSD: CHANGES,v 1.1663 2003/03/16 18:20:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1164,3 +1164,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Date-Calc to 5.3 [mjl 2003-03-16]
 	Updated p5-DBI to 1.35 [mjl 2003-03-16]
 	Updated p5-Jcode to 0.83 [taca 2003-03-16]
+	Added kmess-1.1 [jmmv 2003-03-16]
