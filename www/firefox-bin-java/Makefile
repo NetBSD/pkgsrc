@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/03/22 03:23:58 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/16 18:16:59 abs Exp $
 
-DISTNAME=		firefox-bin-java-1.0
+DISTNAME=		firefox-bin-java-1.1
 CATEGORIES=		www lang
 MASTER_SITES=		# empty
 DISTFILES=		# empty
