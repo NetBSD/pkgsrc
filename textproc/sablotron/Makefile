@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/06 11:44:59 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/25 00:50:46 xtraeme Exp $
 
 DISTNAME=		Sablot-1.0.1
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -11,7 +11,7 @@ COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=  	YES
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
@@ -19,7 +19,7 @@ USE_LIBTOOL=		YES
 
 # sablotron needs iconv but assumes it is in libc, so add what
 # buildlink2 finds.
-LIBS+=			${_BLNK_ICONV_LDFLAGS}
+LIBS+=			${_BUILDLINK_LDADD.iconv}
 
 .include "../../mk/compiler.mk"
 
@@ -36,7 +36,7 @@ LIBS+=			-lstdc++ -lm
 LIBS+=			-lstdc++ -lm
 .endif
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
