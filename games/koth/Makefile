@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/07/24 22:56:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/05 01:56:57 hubertf Exp $
 #
 
-DISTNAME=	koth-0.6
+DISTNAME=	koth-0.7.2
 CATEGORIES=	games
 MASTER_SITES=	http://www-unix.oit.umass.edu/~tetron/koth/
 
