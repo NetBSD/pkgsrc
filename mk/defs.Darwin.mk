@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.26 2002/07/15 16:24:01 schmonz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.26.6.1 2002/10/24 16:59:53 wiz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -58,6 +58,7 @@ XARGS?=		/usr/bin/xargs
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
+EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		${FALSE}			# XXX - Fix me!
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type

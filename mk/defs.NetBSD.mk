@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.26 2002/07/15 16:24:01 schmonz Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.26.6.1 2002/10/24 16:59:53 wiz Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -68,6 +68,11 @@ DEPENDS+=	user>=20000313:../../sysutils/user
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
+.if ${OBJECT_FMT} == "ELF"
+EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
+.else
+EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
+.endif
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		/sbin/nologin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/02/28 06:14:46 jlam Exp $
+# $NetBSD: Makefile,v 1.23.8.1 2002/10/24 16:59:55 wiz Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -12,7 +12,8 @@ USE_BUILDLINK_ONLY=	YES
 .include "Makefile.php"
 
 # Ensure we export symbols in the linked shared object.
-LDFLAGS+=		-Wl,--export-dynamic
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
