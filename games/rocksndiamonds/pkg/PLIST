@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/03 17:23:27 wiz Exp $
-bin/rocksndiamonds
+@comment $NetBSD: PLIST,v 1.2 2000/01/05 01:02:13 wiz Exp $
 man/man1/rocksndiamonds.1
+@owner games
+@group games
+@mode 2755
+bin/rocksndiamonds
+@mode
 share/rocksndiamonds/graphics/RocksDC.pcx
 share/rocksndiamonds/graphics/RocksDoor.pcx
 share/rocksndiamonds/graphics/RocksFont.pcx
@@ -1202,3 +1206,27 @@ share/rocksndiamonds/levels/Tutorials/rnd_tutorial/levelinfo.conf
 @dirrm share/rocksndiamonds/levels/Tutorials
 @dirrm share/rocksndiamonds/levels
 @dirrm share/rocksndiamonds
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/classic_boulderdash
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/classic_emerald_mine
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/classic_sokoban
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/classic_supaplex
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_tutorial
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_ben_braithwaite
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_charles_briscoe-smith
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_gerhard_haeusler
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_holger_schemel
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_jan_hubicka
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_kimball_robinson
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_kjell_kristiansson
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_martin_herrmann
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_pavel_machek
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_tobias_authmann
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_visa_hastrup
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_warwick_allison
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/rnd_stephan_beyer
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/bd_boulderdash_16
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/bd_boulderdash_2
+@exec install -d -m 775 -o games -g games /var/games/rocksndiamonds/scores/bd_xbd
+@unexec echo Delete /var/games/rocksndiamonds if you do not need your hiscores anymore.
