@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/11 19:29:10 bouyer Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -472,6 +472,31 @@ share/horde/imp/locale/local/prefs.lang
 share/horde/imp/locale/local/select.lang
 share/horde/imp/locale/local/spelling.lang
 share/horde/imp/locale/local/status.lang
+share/horde/imp/locale/lt/compose.help
+share/horde/imp/locale/lt/compose.lang
+share/horde/imp/locale/lt/contacts.help
+share/horde/imp/locale/lt/contacts.lang
+share/horde/imp/locale/lt/folders.help
+share/horde/imp/locale/lt/folders.lang
+share/horde/imp/locale/lt/help.lang
+share/horde/imp/locale/lt/horde.lang
+share/horde/imp/locale/lt/ldap.result.lang
+share/horde/imp/locale/lt/ldap.search.lang
+share/horde/imp/locale/lt/login.help
+share/horde/imp/locale/lt/login.lang
+share/horde/imp/locale/lt/mailbox.lang
+share/horde/imp/locale/lt/menu.lang
+share/horde/imp/locale/lt/message.lang
+share/horde/imp/locale/lt/newuser.entro.txt
+share/horde/imp/locale/lt/newuser.intro.txt
+share/horde/imp/locale/lt/newuser.lang
+share/horde/imp/locale/lt/newuser.start.txt
+share/horde/imp/locale/lt/openwin.lang
+share/horde/imp/locale/lt/passwd.lang
+share/horde/imp/locale/lt/prefs.lang
+share/horde/imp/locale/lt/select.lang
+share/horde/imp/locale/lt/spelling.lang
+share/horde/imp/locale/lt/status.lang
 share/horde/imp/locale/nl/compose.help
 share/horde/imp/locale/nl/compose.lang
 share/horde/imp/locale/nl/contacts.help
@@ -495,29 +520,6 @@ share/horde/imp/locale/nl/prefs.lang
 share/horde/imp/locale/nl/select.lang
 share/horde/imp/locale/nl/spelling.lang
 share/horde/imp/locale/nl/status.lang
-share/horde/imp/locale/lt/compose.help
-share/horde/imp/locale/lt/compose.lang
-share/horde/imp/locale/lt/contacts.help
-share/horde/imp/locale/lt/contacts.lang
-share/horde/imp/locale/lt/folders.help
-share/horde/imp/locale/lt/folders.lang
-share/horde/imp/locale/lt/help.lang
-share/horde/imp/locale/lt/horde.lang
-share/horde/imp/locale/lt/login.help
-share/horde/imp/locale/lt/login.lang
-share/horde/imp/locale/lt/mailbox.lang
-share/horde/imp/locale/lt/menu.lang
-share/horde/imp/locale/lt/message.lang
-share/horde/imp/locale/lt/newuser.entro.txt
-share/horde/imp/locale/lt/newuser.intro.txt
-share/horde/imp/locale/lt/newuser.lang
-share/horde/imp/locale/lt/newuser.start.txt
-share/horde/imp/locale/lt/openwin.lang
-share/horde/imp/locale/lt/passwd.lang
-share/horde/imp/locale/lt/prefs.lang
-share/horde/imp/locale/lt/select.lang
-share/horde/imp/locale/lt/spelling.lang
-share/horde/imp/locale/lt/status.lang
 share/horde/imp/locale/no-bok/compose.help
 share/horde/imp/locale/no-bok/compose.lang
 share/horde/imp/locale/no-bok/contacts.help
@@ -725,6 +727,29 @@ share/horde/imp/locale/sl/prefs.lang
 share/horde/imp/locale/sl/select.lang
 share/horde/imp/locale/sl/spelling.lang
 share/horde/imp/locale/sl/status.lang
+share/horde/imp/locale/zh/compose.help
+share/horde/imp/locale/zh/compose.lang
+share/horde/imp/locale/zh/contacts.help
+share/horde/imp/locale/zh/contacts.lang
+share/horde/imp/locale/zh/folders.help
+share/horde/imp/locale/zh/folders.lang
+share/horde/imp/locale/zh/help.lang
+share/horde/imp/locale/zh/horde.lang
+share/horde/imp/locale/zh/login.help
+share/horde/imp/locale/zh/login.lang
+share/horde/imp/locale/zh/mailbox.lang
+share/horde/imp/locale/zh/menu.lang
+share/horde/imp/locale/zh/message.lang
+share/horde/imp/locale/zh/newuser.entro.txt
+share/horde/imp/locale/zh/newuser.intro.txt
+share/horde/imp/locale/zh/newuser.lang
+share/horde/imp/locale/zh/newuser.start.txt
+share/horde/imp/locale/zh/openwin.lang
+share/horde/imp/locale/zh/passwd.lang
+share/horde/imp/locale/zh/prefs.lang
+share/horde/imp/locale/zh/select.lang
+share/horde/imp/locale/zh/spelling.lang
+share/horde/imp/locale/zh/status.lang
 share/horde/imp/locale/zh-tw/compose.help
 share/horde/imp/locale/zh-tw/compose.lang
 share/horde/imp/locale/zh-tw/contacts.help
@@ -846,6 +871,7 @@ share/horde/imp/view.php3
 @dirrm share/horde/imp/templates
 @dirrm share/horde/imp/scripts
 @dirrm share/horde/imp/locale/zh-tw
+@dirrm share/horde/imp/locale/zh
 @dirrm share/horde/imp/locale/sl
 @dirrm share/horde/imp/locale/sk
 @dirrm share/horde/imp/locale/se
@@ -856,6 +882,7 @@ share/horde/imp/view.php3
 @dirrm share/horde/imp/locale/no-nyn
 @dirrm share/horde/imp/locale/no-bok
 @dirrm share/horde/imp/locale/nl
+@dirrm share/horde/imp/locale/lt
 @dirrm share/horde/imp/locale/local
 @dirrm share/horde/imp/locale/kr
 @dirrm share/horde/imp/locale/it
