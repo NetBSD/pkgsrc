@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/05 17:26:00 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/10 15:53:02 tsarna Exp $
 bin/garble
 bin/gpsdrive
 bin/gpsfetchmap
@@ -6,7 +6,6 @@ bin/gpsfetchmap.pl
 bin/gpspoint2gpsdrive.pl
 bin/wpcvt
 bin/wpget
-gpsdrive/locale/locale.alias
 lib/libfly.a
 lib/libfly.la
 lib/libfly.so
