@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/16 13:30:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/03/31 10:22:24 zuntum Exp $
 
 DISTNAME=	festival-1.4.0
 WRKSRC=		${WRKDIR}
@@ -27,23 +27,23 @@ FHOME=		${PREFIX}/share/festival
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS} \
-		EST_HOME=${SPEECHTOOLS} \
-		PKG_FESTIVAL_BUILD_HOME=${FESTIVAL} \
-		PKG_FESTIVAL_HOME=${FHOME} \
-		PKG_COMPILER=${PKG_COMPILER} \
-		PKG_X11BASE=${X11BASE} \
-		PKG_PREFIX=${PREFIX} \
-		EGCS_CC=${CC} \
-		EGCS_CXX=${CXX} \
-		GCC28_CC=${CC} \
-		GCC28_CXX=${CXX} \
-		GCC27_CC=${CC} \
-		GCC27_CXX=${CXX} \
-		GCC26_CC=${CC} \
-		GCC26_CXX=${CXX} \
-		CC=${CC} \
-		CXX=${CXX}
+MAKE_ENV+=	PKG_EST_HOME="${SPEECHTOOLS}"				\
+		EST_HOME="${SPEECHTOOLS}"				\
+		PKG_FESTIVAL_BUILD_HOME="${FESTIVAL}"			\
+		PKG_FESTIVAL_HOME="${FHOME}"				\
+		PKG_COMPILER="${PKG_COMPILER}"				\
+		PKG_X11BASE="${X11BASE}"				\
+		PKG_PREFIX="${PREFIX}"					\
+		EGCS_CC="${CC}"						\
+		EGCS_CXX="${CXX}"					\
+		GCC28_CC="${CC}"					\
+		GCC28_CXX="${CXX}"					\
+		GCC27_CC="${CC}"					\
+		GCC27_CXX="${CXX}"					\
+		GCC26_CC="${CC}"					\
+		GCC26_CXX="${CXX}"					\
+		CC="${CC}"						\
+		CXX="${CXX}"
 
 pre-patch:
 	@ ${CP} ${SPEECHTOOLS}/config/config-dist ${SPEECHTOOLS}/config/config && \
