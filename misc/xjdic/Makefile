@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 12:59:46 seb Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/14 17:34:22 wiz Exp $
 #
 
 DISTNAME=	xjdic23
 PKGNAME=	xjdic-2.3
+PKGREVISION=	1
 CATEGORIES=	japanese misc
 MASTER_SITES=	http://www.bcit-broadcast.com/monash/
 EXTRACT_SUFX=	.tgz
