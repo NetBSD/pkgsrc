@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.5 2002/08/27 17:34:04 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.6 2002/08/28 04:49:16 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -476,6 +476,7 @@ BUILDLINK_${_wrappee_}=	\
 	${BUILDLINK_DIR}/bin/${${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 
 buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
+.if !target(${BUILDLINK_${_wrappee_}})
 ${BUILDLINK_${_wrappee_}}:						\
 		${_BLNK_WRAPPER_SH.${_wrappee_}}			\
 		${_BLNK_WRAP_PRE_CACHE.${_wrappee_}}			\
@@ -526,6 +527,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 			-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g" \
 		> ${.TARGET};						\
 	${CHMOD} +x ${.TARGET}
+.endif
 
 .  for _alias_ in ${_ALIASES.${_wrappee_}:S/^/${BUILDLINK_DIR}\/bin\//}
 .    if !target(${_alias_})
