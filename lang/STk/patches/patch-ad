@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2000/09/26 02:02:33 hubertf Exp $
+$NetBSD: patch-ad,v 1.3 2003/05/10 00:26:34 jtb Exp $
 
---- configure.orig	Sat Jun  6 14:19:03 1998
-+++ configure
-@@ -553,7 +553,10 @@
+--- configure.in.orig
++++ configure.in
+@@ -16,7 +16,10 @@
  # determine the kind of the machine which is running this script
  os=`uname -s`
  version=`uname -r`
@@ -14,30 +14,30 @@ $NetBSD: patch-ad,v 1.2 2000/09/26 02:02:33 hubertf Exp $
  
  case $os in
    Linux*) 
-@@ -969,7 +972,7 @@
-   # just checking for Solaris.
-   # It would also be nice to do this for all -L options, not just this one.
-   if test -n "$x_libraries"; then
--    X_LIBS="$X_LIBS -L$x_libraries"
-+    X_LIBS="$X_LIBS -Wl,-R$x_libraries -L$x_libraries"
-     if test "`(uname) 2>/dev/null`" = SunOS &&
-       uname -r | grep '^5' >/dev/null; then
-       X_LIBS="$X_LIBS -R $x_libraries"
-@@ -979,7 +982,7 @@
-   # Check for libraries that X11R6 Xt/Xaw programs need.
- 
-   ac_save_LDFLAGS="$LDFLAGS"
--  LDFLAGS="$LDFLAGS -L$x_libraries"
-+  LDFLAGS="$LDFLAGS -Wl,-R$x_libraries -L$x_libraries"
-   # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
-   # check for ICE first), but we must link in the order -lSM -lICE or
-   # we get undefined symbols.  So assume we have SM if we have ICE.
-@@ -1193,7 +1196,7 @@
- 
- if test "$x_libraries" != ""
- then
--   XLIBSW="-L$x_libraries"
-+   XLIBSW="-Wl,-R$x_libraries -L$x_libraries"
- fi
- 
- XLIBSW="$XLIBSW $X_PRE_LIBS -lX11 $X_EXTRA_LIBS"
+@@ -113,7 +116,7 @@
+   ULTRIX*)   OS=ULTRIX;;
+   HP*)	     OS=HPUX; DFLGS="$DFLGS -Dhpux";;
+   Linux*)    OS=LINUX;;
+-  NetBSD-1*) OS=NETBSD1;;
++  NetBSD*)   OS=NETBSD;;
+   FreeBSD*)  OS=FREEBSD;;
+   IRIX-5*)   OS=IRIX5;;
+   IRIX*-6*)  OS=IRIX5;;
+@@ -443,11 +446,12 @@
+      SH_LDFLAGS="-shared -o"
+      SH_LOADER="ld"
+      SH_SUFFIX='so' ;;
+-   NETBSD1) 
+-     SH_CCFLAGS="-fpic"
+-     SH_LDFLAGS="-Bshareable -o"
+-     SH_LOADER="ld"
+-     SH_SUFFIX='so';;
++   NETBSD) 
++     SH_CCFLAGS="-fPIC"
++     SH_LDFLAGS="-shared -o"
++     SH_LOADER="cc"
++     SH_SUFFIX="so"
++     STKLDFLAGS="-Wl,-E";;
+    HPUX)
+      SH_CCFLAGS="+Z"
+      SH_LDFLAGS="-b -o"
