@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2004/02/08 11:21:58 skrll Exp $
+# $NetBSD: Makefile.common,v 1.45 2004/02/14 15:29:15 jlam Exp $
 #
 
 DISTNAME=	libtool-1.5.2
@@ -20,11 +20,4 @@ DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
 FILESDIR=	${.CURDIR}/../libtool/files
 PATCHDIR=	${.CURDIR}/../libtool/patches
 
-CONFIG_GUESS_OVERRIDE=	\
-	${WRKSRC}/config.guess \
-	${WRKSRC}/libltdl/config.guess
-
-CONFIG_SUB_OVERRIDE=	\
-	${WRKSRC}/config.sub \
-	${WRKSRC}/libltdl/config.sub
 AUTOMAKE_OVERRIDE=	NO
