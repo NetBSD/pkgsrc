@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/29 08:26:54 lukem Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/29 08:58:37 lukem Exp $
 
 DISTNAME=	cdrtools-1.11a34
 PKGNAME=	cdrecord-devel-1.11a34
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/pr
 COMMENT=	This program allows you to create CD's on a CD-Recorder
 
 CONFLICTS=	mkisofs-[0-9]*
+CONFLICTS+=	cdrecord-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
