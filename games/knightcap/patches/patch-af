@@ -1,0 +1,55 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/10/15 08:38:23 jlam Exp $
+
+--- movement.c.orig	Sun May 17 19:09:21 1998
++++ movement.c
+@@ -258,33 +258,38 @@
+ 	}
+ 
+ 
++	/*
++	 * There's some weird gcc codegen bug here when going NORTH_WEST,
++	 * even with no optimization, but when it's re-written to go
++	 * SOUTH_EAST, everything's fine.  Ugh!
++	 */
+ 	for (i=0;i<8;i++) {
+-		dir = NORTH_WEST;
+-		p1 = A1 + i*EAST;
+-		p2 = A1 + i*NORTH;
++		dir = SOUTH_EAST;
++		p1 = A1 + i*NORTH;
++		p2 = A1 + i*EAST;
+ 
+ 		mask = 0;
+-		for (s1=p1; s1>=p2; s1+=dir)
++		for (s1=p1; s1<p2; s1+=dir)
+ 			mask |= ((uint64)1<<s1);
+ 
+-		for (s1=p1;s1>=p2;s1+=dir)
+-			for (s2=p1;s2>=p2;s2+=dir)
++		for (s1=p1;s1<p2;s1+=dir)
++			for (s2=p1;s2<p2;s2+=dir)
+ 				if (s1 != s2) {
+ 					same_line_mask[s1][s2] = mask;
+ 				}
+ 	}
+ 
+ 	for (i=1;i<8;i++) {
+-		dir = NORTH_WEST;
+-		p1 = H1 + i*NORTH;
+-		p2 = A8 + i*EAST;
++		dir = SOUTH_EAST;
++		p1 = A8 + i*EAST;
++		p2 = H1 + i*NORTH;
+ 
+ 		mask = 0;
+-		for (s1=p1; s1>=p2; s1+=dir)
++		for (s1=p1; s1<p2; s1+=dir)
+ 			mask |= ((uint64)1<<s1);
+ 
+-		for (s1=p1;s1>=p2;s1+=dir)
+-			for (s2=p1;s2>=p2;s2+=dir)
++		for (s1=p1;s1<p2;s1+=dir)
++			for (s2=p1;s2<p2;s2+=dir)
+ 				if (s1 != s2) {
+ 					same_line_mask[s1][s2] = mask;
+ 				}

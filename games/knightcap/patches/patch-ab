@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/15 08:38:22 jlam Exp $
+
+--- display.c.orig	Sun May 17 19:09:21 1998
++++ display.c
+@@ -12,8 +12,6 @@
+ #include <GL/glut.h>
+ #include "trackball.h"
+ 
+-static int window_size = 500;
+-
+ #define SLEEP_TIME 100000 /* microseconds */
+ 
+ 

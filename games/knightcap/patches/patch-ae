@@ -1,0 +1,54 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/10/15 08:38:23 jlam Exp $
+
+--- log.c.orig	Sun May 17 19:09:21 1998
++++ log.c
+@@ -6,6 +6,9 @@
+ static FILE *cfile;
+ static FILE *dfile;
+ 
++/* Make this buffer big enough to print the help file. */
++#define FMT_SIZE (4096)
++
+ void log_close(void)
+ {
+ 	fclose(logfile);
+@@ -15,7 +18,7 @@
+ int lprintf(int level, char *format_str, ...)
+ {
+ 	va_list ap;  
+-	char fmt[1024];
++	char fmt[FMT_SIZE];
+ 	char *p;
+ 
+ 	if (!logfile) {
+@@ -29,7 +32,9 @@
+ 	va_start(ap, format_str);
+ 
+ 
+-	strcpy(fmt, format_str);
++	/* Make this safer by using strncpy() instead of strcpy(). */
++	strncpy(fmt, format_str, FMT_SIZE - 1);
++	fmt[FMT_SIZE - 1] = '\0';
+ 	if (sizeof(short) == sizeof(etype)) {
+ 		while ((p = strstr(fmt, "%e"))) {
+ 			p[1] = 'd';
+@@ -63,7 +68,7 @@
+ int status_printf(int rew, char *format_str, ...)
+ {
+ 	va_list ap;  
+-	char fmt[1024];
++	char fmt[FMT_SIZE];
+ 	char *p;
+ 
+ 	if (!sfile) {
+@@ -80,7 +85,9 @@
+ 	va_start(ap, format_str);
+ 
+ 
+-	strcpy(fmt, format_str);
++	/* Make this safer by using strncpy() instead of strcpy(). */
++	strncpy(fmt, format_str, FMT_SIZE - 1);
++	fmt[FMT_SIZE - 1] = '\0';
+ 	if (sizeof(short) == sizeof(etype)) {
+ 		while ((p = strstr(fmt, "%e"))) {
+ 			p[1] = 'd';

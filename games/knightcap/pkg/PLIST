@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 08:38:22 jlam Exp $
+bin/KnightCap
+share/doc/knightcap/README
+@dirrm share/doc/knightcap
