@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cupsd.sh,v 1.13 2002/10/20 08:09:46 jlam Exp $
+# $NetBSD: cupsd.sh,v 1.14 2002/10/31 23:33:12 jlam Exp $
 #
 # Common UNIX Printing System daemon
 #
@@ -15,6 +15,7 @@ fi
 name="cupsd"
 rcvar=${name}
 command="@PREFIX@/sbin/${name}"
+command_args="& sleep 2"
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 extra_commands="reload"
 
