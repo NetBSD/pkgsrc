@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2002/11/14 22:21:14 seb Exp $
+$NetBSD: patch-aa,v 1.3 2003/05/26 06:53:09 martti Exp $
 
---- configure.in.orig	Fri Oct 11 22:56:29 2002
-+++ configure.in
-@@ -114,6 +114,13 @@ target=$save_target
+--- configure.in.orig	2003-04-14 20:59:44.000000000 +0300
++++ configure.in	2003-05-21 09:11:03.000000000 +0300
+@@ -114,6 +114,13 @@
  
  dnl ltconfig might not have found support for shared libs
  dnl just do static libs if so.
@@ -16,13 +16,13 @@ $NetBSD: patch-aa,v 1.2 2002/11/14 22:21:14 seb Exp $
  if test "$ac_cv_can_build_shared" = no; then
  	enable_shared=no
  	enable_static=yes
-@@ -832,6 +839,9 @@ AC_SUBST(LTGETNAMEINFOOBJS)
- LTLIBOBJS=`echo "$LIBOBJS" | sed 's/\.o/.lo/g'`
+@@ -805,6 +812,9 @@
  AC_SUBST(LIBOBJS)
  AC_SUBST(LTLIBOBJS)
-+
+ 
 +dnl Check for /dev/urandom
 +AC_CHECK_FILE(/dev/urandom, AC_DEFINE_UNQUOTED(SASL_DEV_RANDOM, "/dev/urandom"))
- 
++
  AC_C_CONST
  AC_C_INLINE
+ AC_TYPE_MODE_T
