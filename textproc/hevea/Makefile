@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/06/25 21:01:47 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/29 22:57:14 jtb Exp $
 
-DISTNAME=	hevea-1.05
-PKGREVISION=	1
+DISTNAME=	hevea-1.06
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/para/hevea/
+MASTER_SITES=	http://para.inria.fr/~maranget/hevea/distri/
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://para.inria.fr/~maranget/hevea/
