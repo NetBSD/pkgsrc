@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
+
+--- vobcopy.c.orig	2003-09-02 12:53:29.000000000 +0200
++++ vobcopy.c	2003-09-02 12:54:40.000000000 +0200
+@@ -62,7 +62,7 @@
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <dirent.h> /*for readdir*/
+-#if (defined(__unix__) || defined(unix)) && !defined(USG)  || (defined(__APPLE__) && defined(__GNUC__))
++#if (defined(__unix__) || defined(unix)) && !defined(USG)  || (defined(__APPLE__) && defined(__GNUC__)) || defined(__NetBSD__)
+ #include <sys/param.h>
+ #else
+ #include <sys/vfs.h>
