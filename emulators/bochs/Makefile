@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/06/13 08:42:24 grant Exp $
+# $NetBSD: Makefile,v 1.36 2004/06/13 08:43:00 grant Exp $
 
 DISTNAME=		bochs-2.1.1
 CATEGORIES=		emulators
@@ -12,6 +12,8 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_GCC_SHLIB=		yes
 USE_LANGUAGES=		c c++
+
+ONLY_FOR_COMPILER=	gcc
 
 # These options are not enabled by default because they can adversely impact
 # performance. The number of processors can be either 1 (default), 2, or 4.
