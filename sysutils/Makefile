@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2005/03/12 09:14:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.289 2005/03/20 16:56:44 jmmv Exp $
 
 COMMENT=	System utilities
 
@@ -14,7 +14,6 @@ SUBDIR+=	amanda-plot
 SUBDIR+=	amanda-server
 SUBDIR+=	apcupsd
 SUBDIR+=	aperture
-SUBDIR+=	apotheke
 SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	bacula

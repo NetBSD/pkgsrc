@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9522 2005/03/20 15:56:41 hubertf Exp $
+$NetBSD: CHANGES,v 1.9523 2005/03/20 16:56:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1423,3 +1423,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated avr-gcc to 3.3.2003.05.11nb1 [jmmv 2005-03-20]
 	Updated fprot-workstation-bin to 4.5.4 [ben 2005-03-20]
 	Updated pkg_install to 20050318 [hubertf 2005-03-20]
+	Removed apotheke [jmmv 2005-03-20]
