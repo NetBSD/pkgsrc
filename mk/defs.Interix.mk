@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.24 2004/05/31 16:47:00 jschauma Exp $
+# $NetBSD: defs.Interix.mk,v 1.25 2004/06/18 11:22:41 kristerw Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -92,7 +92,6 @@ DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
-MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 PKGDIRMODE?=		775

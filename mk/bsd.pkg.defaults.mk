@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.249 2004/06/06 22:04:55 minskim Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.250 2004/06/18 11:22:41 kristerw Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -165,12 +165,6 @@ VARBASE?=	/var
 # on the system.
 # Possible: any path
 # Default: ${X11PREFIX} or where openmotif or lesstif is installed
-
-#MOTIF12BASE?=	/usr/X11R6
-# Where Motif-1.2-compatible headers and libraries are installed
-# on the system.
-# Possible: any path
-# Default: ${X11PREFIX} or where lesstif12 is installed
 
 USE_XPKGWEDGE?=	yes
 # Whether we should use xpkgwedge or not to install all packages into
@@ -1535,21 +1529,6 @@ MPLAYER_USE_MEDIALIB?= NO
 # Used by motif.buildlink2.mk as the final default value for MOTIF_TYPE.
 # Possible:  openmotif, lesstif, dt (Irix and Solaris only)
 # Default: openmotif, or dt (Irix and Solaris only)
-
-#MOTIF12_TYPE?=	lesstif12
-# Used by motif.buildlink2.mk to choose which Motif-1.2-compatible
-# installation to use.  This value is also automatically set by
-# motif.buildlink2.mk to whichever Motif-1.2 installation represented by
-# the possible values below is already installed, but defaults to
-# ${MOTIF12_TYPE_DEFAULT}.  This value is ignored if MOTIF12BASE is
-# explicitly set.
-# Possible: lesstif12, dt (Irix and Solaris only)
-# Default: ${MOTIF12_TYPE_DEFAULT}
-
-#MOTIF12_TYPE_DEFAULT?=	lesstif12
-# Used by motif.buildlink2.mk as the final default value for MOTIF12_TYPE.
-# Possible:  lesstif12, dt (Irix and Solaris only)
-# Default: lesstif12, or dt (Irix and Solaris only)
 
 #MPG123_ARM_FIXED64=YES
 # Used by mpg123 and mpg123-esound to enable ARM to use 64bit fixedpoint
