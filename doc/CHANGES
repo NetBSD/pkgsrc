@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2289 2003/05/23 03:39:53 taya Exp $
+$NetBSD: CHANGES,v 1.2290 2003/05/23 06:01:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated galeon to 1.2.10nb2 [taya 2003-05-23]
 	Updated mozilla-stable to 1.0.2nb4 [taya 2003-05-23]
 	Updated phoenix to 0.6nb1 [taya 2003-05-23]
+	Updated ogmtools to 1.0.3 [wiz 2003-05-23]
