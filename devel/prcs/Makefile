@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2004/06/12 09:10:08 grant Exp $
+# $NetBSD: Makefile,v 1.30 2004/06/25 16:43:54 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
-DISTNAME= 		prcs-1.2.15
-PKGREVISION=		1
+DISTNAME= 		prcs-1.3.3
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.xcf.berkeley.edu/pub/prcs/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=prcs/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://prcs.sourceforge.net/
@@ -20,5 +19,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		lispdir=${PREFIX}/share/examples/prcs
 INFO_FILES=		prcs.info
 USE_LANGUAGES=		c c++
+CONFIGURE_ENV+=		EMACS=no
 
 .include "../../mk/bsd.pkg.mk"
