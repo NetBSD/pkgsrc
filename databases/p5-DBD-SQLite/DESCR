@@ -1,0 +1,7 @@
+SQLite is a public domain RDBMS database engine.
+
+Rather than ask you to install SQLite first, because SQLite is
+public domain, DBD::SQLite includes the entire thing in the
+distribution. So in order to get a fast transaction capable RDBMS
+working for your perl project you simply have to install this module,
+and nothing else. 
