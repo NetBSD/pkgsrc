@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:08 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/28 16:17:03 wiz Exp $
 #
 
 DISTNAME=	Audio-CD-0.05
@@ -6,10 +6,10 @@ PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 SVR4_PKGNAME=	p5acd
 CATEGORIES=	audio
-MASTER_SITES=	http://home.wanadoo.nl/~jano/files/
+MASTER_SITES=	http://homepages.cwi.nl/~jvhemert/files/
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	http://home.wanadoo.nl/~jano/disc-cover.html
+HOMEPAGE=	http://homepages.cwi.nl/~jvhemert/disc-cover.html
 COMMENT=	Audio-CD perl module for use with disc-cover
 
 USE_BUILDLINK3=		YES
