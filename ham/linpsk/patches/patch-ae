@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1 2005/03/16 15:32:12 rillig Exp $
+
+Needed for g++-2.95.3.
+
+--- src/interfaces/renamemacro.ui.h.orig	Sun Jul  4 17:50:45 2004
++++ src/interfaces/renamemacro.ui.h	Wed Mar 16 02:28:54 2005
+@@ -12,6 +12,7 @@
+ 
+ #include <qmessagebox.h>
+ 
++#include <pkgsrc_fixes.h>
+ 
+ //using namespace std;
+ 
+@@ -41,7 +42,7 @@ if (NewName->text().length() ==0 )
+     return;
+  }
+ else 
+- AllMacros->MacroNames.at(MacroNumber)=NewName->text();
++ at_replacement(AllMacros->MacroNames, MacroNumber)=NewName->text();
+ QDialog::accept();  
+     
+ }

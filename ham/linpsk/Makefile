@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/31 13:47:04 wulf Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/16 15:32:12 rillig Exp $
 #
 
 DISTNAME=	linpsk-0.8.0.4
@@ -22,6 +22,9 @@ GNU_CONFIGURE=	yes
 LDFLAGS+= ${LIBOSSAUDIO} -lqt-mt
 
 CONFIGURE_ARGS+="--with-fftw-dir=${LOCALBASE}"
+
+post-configure:
+	${_PKG_DEBUG}${_PKG_SILENT}${LN} -s ${FILESDIR}/pkgsrc_fixes.h ${BUILDLINK_DIR}/include/
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
