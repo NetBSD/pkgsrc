@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/02 14:49:31 wulf Exp $
+
+--- dvdbackup.c.orig	Mon Feb  3 09:56:44 2003
++++ dvdbackup.c	Mon Feb  3 09:57:09 2003
+@@ -782,7 +782,7 @@
+ 	 to consider the second one a feature title we are doing two checks (biggest  + biggest - second) /second == 1
+ 	 and biggest%second * 3 < biggest */
+ 
+-	if ( CheckSizeArray(size_size_array, 0, 1)  == 1 ) {
++	if ( title_sets > 1 && CheckSizeArray(size_size_array, 0, 1)  == 1 ) {
+ 		/* We have a dual DVD with two feature films - now lets see if they have the same amount of chapters*/
+ 
+ 		chapters_1 = 0;
