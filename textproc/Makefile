@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/01/12 11:52:30 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/31 13:07:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -19,7 +19,7 @@
     SUBDIR += rman
 #    SUBDIR += sgmlformat
 #    SUBDIR += sp
-#    SUBDIR += unroff
+    SUBDIR += unroff
 #    SUBDIR += wdiff
 
 .include <bsd.port.subdir.mk>
