@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 1998/06/03 21:04:00 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/15 19:06:24 tv Exp $
 #
 
-DISTNAME=	egcs-19980531
+DISTNAME=	egcs-19980608
 CATEGORIES=	lang
-MASTER_SITES=	ftp://egcs.cygnus.com/pub/egcs/snapshots/1998-05-31/
+MASTER_SITES=	ftp://egcs.cygnus.com/pub/egcs/snapshots/1998-06-08/
 
 MAINTAINER=	tv@netbsd.org
 
@@ -17,10 +17,16 @@ PLIST_SRC=	${WRKSRC}/.PLIST
 MAN1=		cccp.1 g++.1 g77.1 gcc.1
 INFO_FILES=	cpp.info g77.info gcc.info
 
+.include "../../mk/bsd.prefs.mk"
+.if defined(BOOTSTRAP_EGCS)
+ALL_TARGET=	bootstrap-lean
+.endif
+
 post-extract:
 	@cd ${WRKSRC} && ${RM} -rf texinfo
 
 post-build:
+# XXX this must improve.
 .if (${MACHINE_ARCH} != "vax")
 	@cd ${WRKSRC}/libraries/libstdc++ && \
 		${MAKE} piclist && \
@@ -33,7 +39,7 @@ post-install:
 	${LN} -f ${PREFIX}/bin/g77 ${PREFIX}/bin/f77
 	@cd ${PREFIX}/bin && \
 		strip c++ c++filt cc f77 gcov protoize unprotoize
-	@cd ${PREFIX}/lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34 && \
+	@cd ${PREFIX}/lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40 && \
 		strip cc1* collect2 cpp f771
 	@${CP} ${PKGDIR}/PLIST.pre ${PLIST_SRC}
 .if (${MACHINE_ARCH} != "vax")
