@@ -1,11 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2002/09/04 14:47:38 agc Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/09/20 11:44:15 jlam Exp $
 
 CATEGORIES=	misc kde
 VERSION=	1.1.1
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite with text processor, spreadsheet, etc.
-
-USE_BUILDLINK_ONLY=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,6 +30,3 @@ post-install:
 	@# else users won't be able to alter them after copying them to
 	@# their local directories.
 	${CHMOD} u+w ${PREFIX}/share/kde/templates/.source/*
-
-.include "../../mk/x11.buildlink.mk"
-.include "../../mk/bsd.pkg.mk"
