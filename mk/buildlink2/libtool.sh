@@ -1,30 +1,47 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.7 2002/12/22 19:02:44 jlam Exp $
+# $NetBSD: libtool.sh,v 1.8 2002/12/26 17:08:57 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
 
+private_pre_cache="@_BLNK_WRAP_PRIVATE_PRE_CACHE@"
+private_cache_add="@_BLNK_WRAP_PRIVATE_CACHE_ADD@"
+private_cache="@_BLNK_WRAP_PRIVATE_CACHE@"
+private_post_cache="@_BLNK_WRAP_PRIVATE_POST_CACHE@"
 pre_cache="@_BLNK_WRAP_PRE_CACHE@"
+cache_add="@_BLNK_WRAP_CACHE_ADD@"
 cache="@_BLNK_WRAP_CACHE@"
 post_cache="@_BLNK_WRAP_POST_CACHE@"
 logic="@_BLNK_WRAP_LOGIC@"
-specificlogic="@_BLNK_WRAP_SPECIFIC_LOGIC@"
-libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
+post_logic="@_BLNK_WRAP_POST_LOGIC@"
 wrapperlog="@_BLNK_WRAP_LOG@"
+
+libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
+libtool_do_install="@_BLNK_LIBTOOL_DO_INSTALL@"
+fixlibpath=${BUILDLINK_FIX_IMPROPER_LIBTOOL_LIBPATH-yes}
+
 updatecache=${BUILDLINK_UPDATE_CACHE-yes}
 cacheall=${BUILDLINK_CACHE_ALL-no}
 
+cat="@CAT@"
+echo="@ECHO@"
+test="@TEST@"
+
+BUILDLINK_DIR="@BUILDLINK_DIR@"
+BUILDLINK_X11_DIR="@BUILDLINK_X11_DIR@"
+WRKDIR="@WRKDIR@"
+WRKSRC="@WRKSRC@"
+
 cmd="@WRAPPEE@"
 lafile=
-doinstall=
 case "$1" in
 *install|*cp|*install-sh|*install.sh)
 	arg="$1"; shift
-	doinstall=yes
+	. $libtool_do_install
 	;;
 *)
-	while @TEST@ $# -gt 0; do
+	while $test $# -gt 0; do
 		arg="$1"; shift
 		case $arg in
 		--fix-la)
@@ -37,9 +54,9 @@ case "$1" in
 			esac
 			;;
 		--mode|--mode=install)
-			if @TEST@ "$arg" = "--mode=install" || \
-			   @TEST@ "$arg" = "--mode" -a "$1" = "install"; then
-				doinstall=yes
+			if $test "$arg" = "--mode=install" || \
+			   $test "$arg" = "--mode" -a "$1" = "install"; then
+				. $libtool_do_install
 				break
 			fi
 			;;
@@ -49,44 +66,30 @@ case "$1" in
 			esac
 			;;
 		*)
-			cacheupdated=
-			. $logic
-			case "$cacheupdated" in
-			yes) @CAT@ $pre_cache $cache $post_cache > $logic ;;
+			cachehit=no
+			skipcache=no
+			. $private_cache
+			case $skipcache,$cachehit in
+			no,no)	. $cache ;;
+			esac
+			case $cachehit in
+			no)	. $logic ;;
 			esac
 			;;
 		esac
-		. $specificlogic
 		cmd="$cmd $arg"
 	done
 	;;
 esac
-if @TEST@ -n "$doinstall"; then
-	cmd="$cmd $arg"
-	while @TEST@ $# -gt 0; do
-		arg="$1"; shift
-		case $arg in
-		*[\`\"\$\\]*)
-			arg=`@ECHO@ "X$arg" | $Xsed -e "$sed_quote_subst"`
-			;;
-		esac
-		case $arg in
-		*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-			arg="\"$arg\""
-			;;
-		esac
-		cmd="$cmd $arg"
-	done
-fi
 
 @_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
 
-@ECHO@ $cmd >> $wrapperlog
+$echo $cmd >> $wrapperlog
 eval $cmd
 wrapper_result=$?
 
-if @TEST@ -n "$lafile" && @TEST@ -f "$lafile"; then
+if $test -n "$lafile" && $test -f "$lafile"; then
 	. $libtool_fix_la
 fi
 

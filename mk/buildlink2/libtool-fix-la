@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.13 2002/12/22 19:02:44 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.14 2002/12/26 17:08:56 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -16,7 +16,7 @@ labase=`@BASENAME@ $lafile .la`
 ladir=`@DIRNAME@ $lafile`
 latimestamp=${ladir}/.${labase}.la.timestamp
 laifile=${ladir}/.libs/${labase}.lai
-if @TEST@ -f $lafile; then
+if $test -f $lafile; then
 	. ${ladir}/${labase}.la
 
 	deps=
@@ -44,7 +44,7 @@ if @TEST@ -f $lafile; then
 				fixla=1
 				;;
 			esac
-			if @TEST@ $fixla -gt 0; then
+			if $test $fixla -gt 0; then
 				case "$deps" in
 				*"-L$ltlibsdir "*) ;;
 				*"-L$ltlibsdir") ;;
@@ -89,7 +89,7 @@ if @TEST@ -f $lafile; then
 				fixla=1
 				;;
 			esac
-			if @TEST@ $fixla -gt 0; then
+			if $test $fixla -gt 0; then
 				case "$relink" in
 				*"-L$ltlibsdir "*) ;;
 				*"-L$ltlibsdir") ;;
@@ -103,33 +103,33 @@ if @TEST@ -f $lafile; then
 			;;
 		esac
 	done
-	if @TEST@ -n "$deps" || @TEST@ -n "$relink" && \
+	if $test -n "$deps" || $test -n "$relink" && \
 	   ! @EGREP@ "^#.*modified by buildlink2" $lafile >/dev/null 2>&1; then
 		@MV@ -f $lafile ${lafile}.blsav
-		if @TEST@ -n "$deps"; then
+		if $test -n "$deps"; then
 			(
-			@CAT@ ${lafile}.blsav | @SED@ -e '/^dependency_libs=/,$d'
-			@ECHO@ "dependency_libs='$deps'"
-			@CAT@ ${lafile}.blsav | @SED@ -e '1,/^dependency_libs=/d'
+			$cat ${lafile}.blsav | @SED@ -e '/^dependency_libs=/,$d'
+			$echo "dependency_libs='$deps'"
+			$cat ${lafile}.blsav | @SED@ -e '1,/^dependency_libs=/d'
 			) > ${lafile}.tmp
 		else
-			@CAT@ ${lafile}.blsav > ${lafile}.tmp
+			$cat ${lafile}.blsav > ${lafile}.tmp
 		fi
-		if @TEST@ -n "$relink"; then
+		if $test -n "$relink"; then
 			(
-			@CAT@ ${lafile}.tmp | @SED@ -e '/^relink_command=/,$d'
-			@ECHO@ "relink_command='$relink'"
-			@CAT@ ${lafile}.tmp | @SED@ -e '1,/^relink_command=/d'
+			$cat ${lafile}.tmp | @SED@ -e '/^relink_command=/,$d'
+			$echo "relink_command='$relink'"
+			$cat ${lafile}.tmp | @SED@ -e '1,/^relink_command=/d'
 			) > $lafile
 		else
-			@CAT@ ${lafile}.tmp > $lafile
+			$cat ${lafile}.tmp > $lafile
 		fi
-		@ECHO@ >> $lafile
-		@ECHO@ "# This file has been modified by buildlink2." >> $lafile
+		$echo >> $lafile
+		$echo "# This file has been modified by buildlink2." >> $lafile
 		@RM@ ${lafile}.tmp
-		@ECHO@ "==> Fixed $lafile" >> $wrapperlog
+		$echo "==> Fixed $lafile" >> $wrapperlog
 	fi
-	if @TEST@ -n "$laifile" && @TEST@ -f "$laifile" && \
+	if $test -n "$laifile" && $test -f "$laifile" && \
 	   ! @EGREP@ "^#.*modified by buildlink2" $laifile >/dev/null 2>&1; then
 		@SED@	@_BLNK_WRAP_LT_UNTRANSFORM_SED@ \
 			@_BLNK_UNTRANSFORM_SED@ \
@@ -163,19 +163,19 @@ if @TEST@ -f $lafile; then
 			esac
 			prev="$i"
 		done
-		if @TEST@ -z "$lexist"; then
+		if $test -z "$lexist"; then
 			L=
 		fi
 		deps="$L$l"
 		@MV@ -f $laifile ${laifile}.blsav
 		(
-			@CAT@ ${laifile}.tmp | @SED@ -e '/^dependency_libs=/,$d'
-			@ECHO@ "dependency_libs='$deps'"
-			@CAT@ ${laifile}.tmp | @SED@ -e '1,/^dependency_libs=/d'
-			@ECHO@
-			@ECHO@ "# This file has been modified by buildlink2."
+			$cat ${laifile}.tmp | @SED@ -e '/^dependency_libs=/,$d'
+			$echo "dependency_libs='$deps'"
+			$cat ${laifile}.tmp | @SED@ -e '1,/^dependency_libs=/d'
+			$echo
+			$echo "# This file has been modified by buildlink2."
 		) > ${laifile}
 		@RM@ -f ${laifile}.tmp
-		@ECHO@ "==> Fixed $laifile" >> $wrapperlog
+		$echo "==> Fixed $laifile" >> $wrapperlog
 	fi
 fi

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.66 2002/12/23 22:33:16 jschauma Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.67 2002/12/26 17:08:56 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -562,22 +562,25 @@ _ALIASES.LD=		ld
 #
 _BLNK_SANITIZED_PATH!=	${ECHO} ${PATH} | ${SED}			\
 	-e "s|:${BUILDLINK_DIR}[^:]*||" -e "s|${BUILDLINK_DIR}[^:]*:||"
-_BLNK_WRAP_SANITIZE_PATH=		PATH="${_BLNK_SANITIZED_PATH}"
-_BLNK_WRAP_ENV?=			${BUILDLINK_WRAPPER_ENV}
-_BLNK_WRAP_PRE_CACHE=			${BUILDLINK_DIR}/bin/.pre-cache
-_BLNK_WRAP_POST_CACHE=			${BUILDLINK_DIR}/bin/.post-cache
-_BLNK_WRAP_CACHE=			${BUILDLINK_DIR}/bin/.cache
-_BLNK_WRAP_LOGIC=			${BUILDLINK_DIR}/bin/.logic
-_BLNK_WRAP_POST_CACHE_TRANSFORM=	${BUILDLINK_DIR}/bin/.post-cache-trans
-_BLNK_WRAP_CACHE_TRANSFORM=		${BUILDLINK_DIR}/bin/.cache-trans
-_BLNK_WRAP_LOGIC_TRANSFORM=		${BUILDLINK_DIR}/bin/.logic-trans
-_BLNK_WRAP_SPECIFIC_LOGIC=		${BUILDLINK_DIR}/bin/.std-logic
-_BLNK_WRAP_LOG=				${BUILDLINK_DIR}/.wrapper.log
-_BLNK_LIBTOOL_FIX_LA=			${BUILDLINK_DIR}/bin/.libtool-fix-la
-_BLNK_FAKE_LA=				${BUILDLINK_DIR}/bin/.fake-la
-_BLNK_GEN_TRANSFORM=			${BUILDLINK_DIR}/bin/.gen-transform
-_BLNK_TRANSFORM_SEDFILE=		${BUILDLINK_DIR}/bin/.transform.sed
-_BLNK_UNTRANSFORM_SEDFILE=		${BUILDLINK_DIR}/bin/.untransform.sed
+_BLNK_WRAP_SANITIZE_PATH=	PATH="${_BLNK_SANITIZED_PATH}"
+_BLNK_EMPTY_FILE?=		${BUILDLINK_DIR}/bin/.empty
+_BLNK_WRAP_ENV?=		${BUILDLINK_WRAPPER_ENV}
+_BLNK_WRAP_PRIVATE_PRE_CACHE=	${BUILDLINK_DIR}/bin/.private-pre-cache
+_BLNK_WRAP_PRE_CACHE=		${BUILDLINK_DIR}/bin/.pre-cache
+_BLNK_WRAP_CACHE_ADD=		${BUILDLINK_DIR}/bin/.cache-add
+_BLNK_WRAP_CACHE=		${BUILDLINK_DIR}/bin/.cache
+_BLNK_WRAP_CACHE_ADD_TRANSFORM=	${BUILDLINK_DIR}/bin/.cache-add-trans
+_BLNK_WRAP_CACHE_TRANSFORM=	${BUILDLINK_DIR}/bin/.cache-trans
+_BLNK_WRAP_POST_CACHE=		${BUILDLINK_DIR}/bin/.post-cache
+_BLNK_WRAP_LOGIC=		${BUILDLINK_DIR}/bin/.logic
+_BLNK_WRAP_LOGIC_TRANSFORM=	${BUILDLINK_DIR}/bin/.logic-trans
+_BLNK_WRAP_LOG=			${BUILDLINK_DIR}/.wrapper.log
+_BLNK_LIBTOOL_DO_INSTALL=	${BUILDLINK_DIR}/bin/.libtool-do-install
+_BLNK_LIBTOOL_FIX_LA=		${BUILDLINK_DIR}/bin/.libtool-fix-la
+_BLNK_FAKE_LA=			${BUILDLINK_DIR}/bin/.fake-la
+_BLNK_GEN_TRANSFORM=		${BUILDLINK_DIR}/bin/.gen-transform
+_BLNK_TRANSFORM_SEDFILE=	${BUILDLINK_DIR}/bin/.transform.sed
+_BLNK_UNTRANSFORM_SEDFILE=	${BUILDLINK_DIR}/bin/.untransform.sed
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 #
@@ -586,13 +589,16 @@ _BLNK_UNTRANSFORM_SEDFILE=		${BUILDLINK_DIR}/bin/.untransform.sed
 #
 _BLNK_WRAPPER_SH.${_wrappee_}=	${.CURDIR}/../../mk/buildlink2/wrapper.sh
 _BLNK_WRAP_SETENV.${_wrappee_}=	${_wrappee_}="${BUILDLINK_${_wrappee_}:T}"
-_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}=	${_BLNK_WRAP_SANITIZE_PATH}
-_BLNK_WRAP_ENV.${_wrappee_}=		${_BLNK_WRAP_ENV}
-_BLNK_WRAP_PRE_CACHE.${_wrappee_}=	${_BLNK_WRAP_PRE_CACHE}
-_BLNK_WRAP_POST_CACHE.${_wrappee_}=	${_BLNK_WRAP_POST_CACHE_TRANSFORM}
-_BLNK_WRAP_CACHE.${_wrappee_}=		${_BLNK_WRAP_CACHE_TRANSFORM}
-_BLNK_WRAP_LOGIC.${_wrappee_}=		${_BLNK_WRAP_LOGIC_TRANSFORM}
-_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}=	${_BLNK_WRAP_SPECIFIC_LOGIC}
+_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}=		${_BLNK_WRAP_SANITIZE_PATH}
+_BLNK_WRAP_ENV.${_wrappee_}=			${_BLNK_WRAP_ENV}
+_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}=	${_BLNK_EMPTY_FILE}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}=	${_BLNK_EMPTY_FILE}
+_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}=		${_BLNK_EMPTY_FILE}
+_BLNK_WRAP_PRIVATE_POST_CACHE.${_wrappee_}=	${_BLNK_EMPTY_FILE}
+_BLNK_WRAP_CACHE_ADD.${_wrappee_}=		${_BLNK_WRAP_CACHE_ADD_TRANSFORM}
+_BLNK_WRAP_CACHE.${_wrappee_}=			${_BLNK_WRAP_CACHE_TRANSFORM}
+_BLNK_WRAP_LOGIC.${_wrappee_}=			${_BLNK_WRAP_LOGIC_TRANSFORM}
+_BLNK_WRAP_POST_LOGIC.${_wrappee_}=		${_BLNK_EMPTY_FILE}
 .endfor
 
 # Don't bother adding AS, CPP to the configure or make environments as
@@ -617,8 +623,11 @@ _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 # We need to "unbuildlinkify" any libtool archives.
 _BLNK_WRAP_LT_UNTRANSFORM_SED=		${_REPLACE_BUILDLINK_SED}
 
-# The ld wrapper script accepts "-Wl,*" arguments.
-_BLNK_WRAP_SPECIFIC_LOGIC.LD=	${BUILDLINK_DIR}/bin/.ld-logic
+_BLNK_WRAP_PRIVATE_PRE_CACHE.LD=	${_BLNK_WRAP_PRIVATE_PRE_CACHE}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.LD=	${BUILDLINK_DIR}/bin/.ld-cache-add
+_BLNK_WRAP_PRIVATE_CACHE.LD=		${BUILDLINK_DIR}/bin/.ld-cache
+_BLNK_WRAP_PRIVATE_POST_CACHE.LD=	${BUILDLINK_DIR}/bin/.ld-post-cache
+_BLNK_WRAP_POST_LOGIC.LD=		${BUILDLINK_DIR}/bin/.ld-logic
 
 # Allow BUILDLINK_SETENV.<wrappee> to override _BLNK_WRAP_SETENV.<wrappee>.
 .for _wrappee_ in ${_BLNK_WRAPPEES}
@@ -631,16 +640,12 @@ _BLNK_WRAP_SETENV.${_wrappee_}=	${BUILDLINK_SETENV.${_wrappee_}}
 # to generate Makefiles, so that imake will find its config files.
 #
 .if defined(USE_X11)
-_BLNK_WRAP_PRE_CACHE.IMAKE=	${_BLNK_WRAP_PRE_CACHE}
-_BLNK_WRAP_POST_CACHE.IMAKE=	${_BLNK_WRAP_POST_CACHE}
+_BLNK_WRAP_CACHE_ADD.IMAKE=	${_BLNK_WRAP_CACHE_ADD}
 _BLNK_WRAP_CACHE.IMAKE=		${_BLNK_WRAP_CACHE}
 _BLNK_WRAP_LOGIC.IMAKE=		${_BLNK_WRAP_LOGIC}
 .endif
 
-buildlink-wrappers: ${_BLNK_WRAP_CACHE}
-buildlink-wrappers: ${_BLNK_WRAP_CACHE_TRANSFORM}
-buildlink-wrappers: ${_BLNK_WRAP_LOGIC}
-buildlink-wrappers: ${_BLNK_WRAP_LOGIC_TRANSFORM}
+buildlink-wrappers: ${_BLNK_LIBTOOL_DO_INSTALL}
 buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
 buildlink-wrappers: ${_BLNK_FAKE_LA}
 
@@ -654,18 +659,26 @@ BUILDLINK_${_wrappee_}=	\
 _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"			\
 	-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"			\
+	-e "s|@WRKDIR@|${WRKDIR}|g"					\
+	-e "s|@WRKSRC@|${WRKSRC}|g"					\
 	-e "s|@CAT@|${CAT:Q}|g"						\
 	-e "s|@ECHO@|${ECHO:Q}|g"					\
 	-e "s|@SED@|${SED:Q}|g"						\
 	-e "s|@TEST@|${TEST:Q}|g"					\
 	-e "s|@TOUCH@|${TOUCH:Q}|g"					\
+	-e "s|@_BLNK_LIBTOOL_DO_INSTALL@|${_BLNK_LIBTOOL_DO_INSTALL:Q}|g" \
 	-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g"	\
 	-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"			\
-	-e "s|@_BLNK_WRAP_PRE_CACHE@|${_BLNK_WRAP_PRE_CACHE.${_wrappee_}:Q}|g" \
-	-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_PRIVATE_PRE_CACHE@|${_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_PRIVATE_CACHE_ADD@|${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_PRIVATE_CACHE@|${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_PRIVATE_POST_CACHE@|${_BLNK_WRAP_PRIVATE_POST_CACHE.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_PRE_CACHE@|${_BLNK_WRAP_PRE_CACHE:Q}|g"	\
+	-e "s|@_BLNK_WRAP_CACHE_ADD@|${_BLNK_WRAP_CACHE_ADD.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_CACHE@|${_BLNK_WRAP_CACHE.${_wrappee_}:Q}|g"	\
+	-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE:Q}|g"	\
 	-e "s|@_BLNK_WRAP_LOGIC@|${_BLNK_WRAP_LOGIC.${_wrappee_}:Q}|g"	\
-	-e "s|@_BLNK_WRAP_SPECIFIC_LOGIC@|${_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_POST_LOGIC@|${_BLNK_WRAP_POST_LOGIC.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_ENV@|${_BLNK_WRAP_ENV.${_wrappee_}:Q}|g"	\
 	-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g"
 
@@ -673,9 +686,10 @@ buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
 .if !target(${BUILDLINK_${_wrappee_}})
 ${BUILDLINK_${_wrappee_}}:						\
 		${_BLNK_WRAPPER_SH.${_wrappee_}}			\
-		${_BLNK_WRAP_PRE_CACHE.${_wrappee_}}			\
-		${_BLNK_WRAP_POST_CACHE.${_wrappee_}}			\
-		${_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}}
+		${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}}		\
+		${_BLNK_WRAP_CACHE.${_wrappee_}}			\
+		${_BLNK_WRAP_LOGIC.${_wrappee_}}			\
+		${_BLNK_WRAP_POST_LOGIC.${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
 		"Creating wrapper: ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -759,69 +773,96 @@ buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 	fi
 .endfor
 
+${_BLNK_EMPTY_FILE}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+
+${_BLNK_WRAP_PRIVATE_PRE_CACHE}:					\
+		${.CURDIR}/../../mk/buildlink2/private-pre-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
+
+.for _wrappee_ in ${_BLNK_WRAPPEES}
+.  if !target(${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}})
+${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.  endif
+.  if !target(${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}})
+${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}}:				\
+		${_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}}		\
+		${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}}		\
+		${_BLNK_WRAP_PRIVATE_POST_CACHE.${_wrappee_}}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.  endif
+.endfor
+
+${_BLNK_WRAP_PRIVATE_POST_CACHE.LD}:					\
+		${.CURDIR}/../../mk/buildlink2/ld-post-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
+
 ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
-		-e "s|@WRKDIR@|${WRKDIR}|g"				\
-		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"		\
-		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
-		${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
+
+${_BLNK_WRAP_CACHE_ADD}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+
+${_BLNK_WRAP_CACHE}:							\
+		${_BLNK_WRAP_PRE_CACHE}					\
+		${_BLNK_WRAP_CACHE_ADD}					\
+		${_BLNK_WRAP_POST_CACHE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_BLNK_WRAP_CACHE_ADD_TRANSFORM}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+
+${_BLNK_WRAP_CACHE_TRANSFORM}:						\
+		${_BLNK_WRAP_PRE_CACHE}					\
+		${_BLNK_WRAP_CACHE_ADD_TRANSFORM}			\
+		${_BLNK_WRAP_POST_CACHE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink2/post-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
+
+${_BLNK_WRAP_LOGIC}: ${.CURDIR}/../../mk/buildlink2/logic
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 		-e "s|@X11BASE@|${X11BASE}|g"				\
-		-e 's|@CAT@|${CAT}|g'					\
-		-e 's|@ECHO@|${ECHO}|g'					\
 		-e 's|@_BLNK_TRANSFORM_SED@||g'				\
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
-${_BLNK_WRAP_POST_CACHE_TRANSFORM}:					\
-		${.CURDIR}/../../mk/buildlink2/post-cache		\
+${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
+		${.CURDIR}/../../mk/buildlink2/logic			\
 		${_BLNK_TRANSFORM_SEDFILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 		-e "s|@X11BASE@|${X11BASE}|g"				\
-		-e 's|@CAT@|${CAT}|g'					\
-		-e 's|@ECHO@|${ECHO}|g'					\
 		-e 's|@_BLNK_TRANSFORM_SED@|${_BLNK_TRANSFORM_SED:Q}|g'	\
-		${.CURDIR}/../../mk/buildlink2/post-cache > ${.TARGET}.tmp
+		${.CURDIR}/../../mk/buildlink2/logic > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
-${_BLNK_WRAP_CACHE}:
+${_BLNK_WRAP_POST_LOGIC.LD}: ${.CURDIR}/../../mk/buildlink2/ld-logic
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
 
-${_BLNK_WRAP_CACHE_TRANSFORM}:
+${_BLNK_LIBTOOL_DO_INSTALL}: ${.CURDIR}/../../mk/buildlink2/libtool-do-install
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
-
-${_BLNK_WRAP_LOGIC}:							\
-		${_BLNK_WRAP_PRE_CACHE}					\
-		${_BLNK_WRAP_POST_CACHE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}
-
-${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
-		${_BLNK_WRAP_PRE_CACHE}					\
-		${_BLNK_WRAP_POST_CACHE_TRANSFORM}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}
-
-${_BLNK_WRAP_SPECIFIC_LOGIC}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
-
-${_BLNK_WRAP_SPECIFIC_LOGIC.LD}: ${.CURDIR}/../../mk/buildlink2/ld-logic
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
-		-e "s|@ECHO@|${ECHO:Q}|g"				\
-		${.ALLSRC} > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
 
 ${_BLNK_LIBTOOL_FIX_LA}:						\
 		${.CURDIR}/../../mk/buildlink2/libtool-fix-la		\
@@ -830,15 +871,12 @@ ${_BLNK_LIBTOOL_FIX_LA}:						\
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@WRKSRC@|${WRKSRC}|g"				\
 		-e "s|@BASENAME@|${BASENAME:Q}|g"			\
-		-e "s|@CAT@|${CAT:Q}|g"					\
 		-e "s|@CP@|${CP:Q}|g"					\
 		-e "s|@DIRNAME@|${DIRNAME:Q}|g"				\
-		-e "s|@ECHO@|${ECHO:Q}|g"				\
 		-e "s|@EGREP@|${EGREP:Q}|g"				\
 		-e "s|@MV@|${MV:Q}|g"					\
 		-e "s|@RM@|${RM:Q}|g"					\
 		-e "s|@SED@|${SED:Q}|g"					\
-		-e "s|@TEST@|${TEST:Q}|g"				\
 		-e "s|@TOUCH@|${TOUCH:Q}|g"				\
 		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
 		-e 's|@_BLNK_UNTRANSFORM_SED@|${_BLNK_UNTRANSFORM_SED:Q}|g' \
@@ -888,12 +926,6 @@ ${_BLNK_TRANSFORM_SEDFILE} ${_BLNK_UNTRANSFORM_SEDFILE}: ${_BLNK_GEN_TRANSFORM}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${_BLNK_GEN_TRANSFORM}		\
 		${_BLNK_TRANSFORM}
-
-clear-buildlink-cache: remove-buildlink-cache buildlink-wrappers
-
-remove-buildlink-cache:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_BLNK_WRAP_CACHE_TRANSFORM}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_BLNK_WRAP_LOGIC_TRANSFORM}
 
 _BLNK_CHECK_PATTERNS+=	-e "-I${LOCALBASE}/[a-rt-z]"
 _BLNK_CHECK_PATTERNS+=	-e "-L${LOCALBASE}/[a-rt-z]"
