@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2004/04/08 14:12:50 drochner Exp $
+$NetBSD: distinfo,v 1.8 2004/05/17 21:53:28 minskim Exp $
 
 SHA1 (libcdaudio-0.99.10.tar.gz) = 2735174b7a696340a8f124eb557901407e55062d
 Size (libcdaudio-0.99.10.tar.gz) = 353389 bytes
+SHA1 (patch-aa) = 2d0909282de53caa19a488e7e1eb7d9f6daae856
