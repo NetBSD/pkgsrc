@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:34:31 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/23 15:10:41 jschauma Exp $
 #
 
 DISTNAME=       jde-2.3.2
 WRKSRC=         ${WRKDIR}/${DISTNAME}/lisp
-CATEGORIES=     devel editors
+CATEGORIES=     devel editors java
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "real" site has silly naming conventions:
 #MASTER_SITES=   http://jdee.sunsite.dk/
@@ -21,6 +21,8 @@ DEPENDS+=       elib>=1.0:../../devel/elib
 
 # XEmacs has its own JDE package
 EMACS_VERSIONS_ACCEPTED=emacs21		# XXX Won't compile with emacs20...
+
+PKG_JVM=	sun-jdk14
 
 BUILD_ENV+=     EMACS=${EMACS}
 MAKE_ENV+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX}
