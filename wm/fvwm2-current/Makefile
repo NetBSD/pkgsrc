@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/20 14:54:36 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/27 15:14:58 zuntum Exp $
 #
 
-FVWM_VERSION=	2.3.29
 DISTNAME=	fvwm-${FVWM_VERSION}
 PKGNAME=	fvwm2-${FVWM_VERSION}
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		http://www.fvwm.org/generated/icon_download/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fvwm_icons.tgz
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/
@@ -18,7 +16,11 @@ DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 DEPENDS+=	readline-*:../../devel/readline
 DEPENDS+=	rplay-3.*:../../audio/rplay
 
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
 CONFLICTS=	fvwm-2.*
+
+FVWM_VERSION=	2.3.31
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
