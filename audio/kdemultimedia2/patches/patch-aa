@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:14:04 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/15 15:35:56 skrll Exp $
 
 --- configure.orig	Wed Feb 21 11:01:31 2001
 +++ configure
@@ -63,3 +63,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:14:04 skrll Exp $
    Linux)
      kde_mpeglib_compiles=yes
      ;;
+@@ -12105,6 +12111,7 @@
+   NetBSD)
+     echo "$ac_t""NetBSD :Unknown hardware. You will have problems!!" 1>&6
+     OS_TYPE="BSD"
++    LIBPTHREAD="-lpthread"
+     cat >> confdefs.h <<\EOF
+ #define OS_BSD 1
+ EOF
