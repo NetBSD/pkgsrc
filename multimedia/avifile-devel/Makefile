@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 15:13:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/20 23:45:43 jlam Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -21,6 +21,7 @@ BUILD_USES_GETTEXT_M4=	YES
 
 WRKSRC=			${WRKDIR}/avifile-0.6
 AUTOMAKE_REQD=		1.4
+AUTOCONF_REQD=		2.50
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -65,7 +66,7 @@ CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
 
 pre-configure:
 	cd ${WRKSRC} && libtoolize --force --copy
-	cd ${WRKSRC} && ${ACLOCAL}
+	cd ${WRKSRC} && ${ACLOCAL} -I .
 	cd ${WRKSRC} && ${AUTOHEADER}
 	cd ${WRKSRC} && ${AUTOCONF}
 	cd ${WRKSRC} && ${AUTOMAKE} --add-missing --copy --foreign
