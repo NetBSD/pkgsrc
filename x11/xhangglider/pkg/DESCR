@@ -1,0 +1,9 @@
+Hanggliders fly in the background of the X screen.
+You can build and run this program if you have C
+compiler, include files like Xlib.h, and X is available.
+
+I recommend 8bpp or more.
+
+For me, I like to run the program with options "-pilot
+4 -vario -frequency 0.2", without the option
+'-noflicker' or '-useclip'. It is much faster! 
