@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 2001/08/08 07:37:51 jlam Exp $
+# $NetBSD: INSTALL,v 1.5 2001/09/28 20:34:53 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -8,32 +8,50 @@ STAGE=$2
 LOCALBASE="@LOCALBASE@"
 
 CP="@CP@"
+ECHO="@ECHO@"
 GREP="@GREP@"
 LN="@LN@"
+MV="@MV@"
+RM="@RM@"
+
+LOCALBASE=@LOCALBASE@
+X11BASE=@X11BASE@
+X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
+HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
 
 case ${STAGE} in
 PRE-INSTALL)
 	;;
 
 POST-INSTALL)
-	X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
-
-	echo -n "Updating ${X11_HOSTDEF}..."
-	${CP} -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
-	( ${GREP} -v LessTif ${X11_HOSTDEF}.bak; \
-	  echo '#include <LessTif.def>' ) \
-		> ${X11_HOSTDEF}
-	echo "done."
+	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]
+	then
+		${ECHO} -n "Updating ${HOSTDEF}..."
+		${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
+	else
+		${ECHO} -n "Creating ${HOSTDEF}..."
+		if [ -f ${X11_HOSTDEF} ]
+		then 
+			${CP} -f ${X11_HOSTDEF} ${HOSTDEF}.bak
+		else
+			${CP} -f /dev/null ${HOSTDEF}.bak
+		fi
+	fi
+	( ${GREP} -v LessTif ${HOSTDEF}.bak;				\
+	  ${ECHO} '#include <LessTif.def>';				\
+	) > ${HOSTDEF}
+	${RM} -f ${HOSTDEF}.bak
+	${ECHO} "done."
 
 	if [ ${PKG_PREFIX} != ${LOCALBASE} ]
 	then
-		${LN} -fs ${PKG_PREFIX}/share/aclocal/ac_find_motif.m4 \
+		${LN} -fs ${PKG_PREFIX}/share/aclocal/ac_find_motif.m4	\
 			${LOCALBASE}/share/aclocal/ac_find_motif.m4
 	fi
 	;;
 
 *)
-	echo "Unexpected argument: ${STAGE}"
+	${ECHO} "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac

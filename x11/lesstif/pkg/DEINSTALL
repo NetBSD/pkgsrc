@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.4 2001/08/08 07:37:51 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.5 2001/09/28 20:34:53 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -8,33 +8,46 @@ STAGE=$2
 LOCALBASE="@LOCALBASE@"
 
 CP="@CP@"
+CMP="@CMP@"
+ECHO="@ECHO@"
 GREP="@GREP@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
+
+LOCALBASE=@LOCALBASE@
+X11BASE=@X11BASE@
+X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
+HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
 
 case ${STAGE} in
 DEINSTALL)
 	;;
 
 POST-DEINSTALL)
-	X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
-
-	echo -n "Updating ${X11_HOSTDEF}..."
-	${CP} -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
-	( ${GREP} -v LessTif ${X11_HOSTDEF}.bak || ${TRUE} ) \
-		> ${X11_HOSTDEF}
-	echo "done."
+	${ECHO} -n "Updating ${HOSTDEF}..."
+	${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
+	( ${GREP} -v LessTif ${HOSTDEF}.bak || ${TRUE} ) > ${HOSTDEF}
+	${RM} -f ${HOSTDEF}.bak
+	if [ ${PKG_PREFIX} != ${X11BASE} ] && \
+		[ -f ${X11_HOSTDEF} ] && \
+		${CMP} -s ${X11_HOSTDEF} ${HOSTDEF}
+	then
+		${RM} -f ${HOSTDEF}
+	fi
+	${ECHO} "done."
 
 	if [ ${PKG_PREFIX} != ${LOCALBASE} ]
 	then
 		${RM} -f ${LOCALBASE}/share/aclocal/ac_find_motif.m4
 		${RMDIR} -p ${PKG_PREFIX}/share/aclocal 2>/dev/null || ${TRUE}
 	fi
+
+	${RMDIR} -p ${PKG_PREFIX}/lib/X11/config 2>/dev/null || ${TRUE}
 	;;
 
 *)
-	echo "Unexpected argument: ${STAGE}"
+	${ECHO} "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
