@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3084 2005/02/21 10:11:53 adam Exp $
+$NetBSD: TODO,v 1.3085 2005/02/21 11:08:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -1146,7 +1146,6 @@ Suggested package updates
 	o zile-2.0.1
 	o zircon-1.18.256
 	o zopeedit-0.8
-	o zsh-4.2.4
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
