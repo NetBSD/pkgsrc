@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2000/10/19 23:31:04 jwise Exp $
+# $NetBSD: Makefile,v 1.59 2000/10/22 09:31:35 rh Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -21,6 +21,7 @@
     SUBDIR += ispell-gaeilge
     SUBDIR += jade
     SUBDIR += kdoc
+    SUBDIR += libpspell
     SUBDIR += libunicode
     SUBDIR += libxml
     SUBDIR += lout
