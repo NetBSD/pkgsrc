@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7565 2004/10/25 17:15:59 adrianp Exp $
+$NetBSD: CHANGES,v 1.7566 2004/10/25 17:40:00 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4865,3 +4865,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pam-smbpass to 2.2.12 [jdolecek 2004-10-25]
 	Updated postgresql74 to 7.4.6 [jdolecek 2004-10-25]
 	Updated socat to 1.4.0.3 [adrianp 2004-10-25]
+	Updated postgresql73 to 7.3.8 [jdolecek 2004-10-25]
