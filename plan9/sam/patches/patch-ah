@@ -1,0 +1,20 @@
+$NetBSD: patch-ah,v 1.1 1999/08/24 19:01:44 agc Exp $
+
+Generalise Solaris makefile
+
+--- samterm/Make.solaris	1999/08/24 18:39:40	1.1
++++ samterm/Make.solaris	1999/08/24 18:40:08
+@@ -16,11 +16,11 @@
+ #	SAMTERM contains the name of the file containing the samterm
+ #	executable.  SAMTERMDIR is the directory where it is installed.
+ SAMTERM=samterm
+-SAMTERMDIR=/usr/local/bin
++SAMTERMDIR=${PREFIX}/bin
+ 
+ #	set this if your X libraries are in different locations
+ #	or if you need extra libraries to load with X11 applications
+-XLIBS=-L/usr/openwin/lib -lXt -lX11 -lsocket -lnsl
++XLIBS=-L${X11BASE}/lib -lXt -lX11 ${OTHER_X_LIBS} -lsocket -lnsl
+ 
+ CFLAGS=$(OS) $(INCS) -D_LIBXG_EXTENSION
+ 
