@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/16 15:11:00 agc Exp $
+man/man8/mtr-gtk.8
+sbin/mtr-gtk
+share/doc/mtr-gtk/SECURITY
+@dirrm share/doc/mtr-gtk
