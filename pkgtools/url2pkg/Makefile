@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/04/11 00:48:51 rh Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/13 02:27:46 schmonz Exp $
 #
 
 DISTNAME=	url2pkg-1.25
@@ -10,10 +10,17 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	# Nothing
 COMMENT=	Tool to automate initial steps in building a package
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
+NO_BUILDLINK=	yes
 NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+USE_LANGUAGES=	# empty
 EXTRACT_CMD=	${ECHO}
+
+INSTALLATION_DIRS=	bin man/man8
 
 do-build:
 	${SED} -e 's|@MAKE@|${MAKE}|g'		\
