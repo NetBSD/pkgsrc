@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1 1997/11/22 03:50:38 hubertf Exp $
+@comment rest (m68k, arm32, i386, pc532, pica, sparc, vax):
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/DB_File/DB_File.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/DB_File/DB_File.bs
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/Fcntl/Fcntl.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/Fcntl/Fcntl.bs
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/IO/IO.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/IO/IO.bs
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/NDBM_File/NDBM_File.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/NDBM_File/NDBM_File.bs
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/Opcode/Opcode.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/Opcode/Opcode.bs
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/POSIX/POSIX.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/POSIX/POSIX.bs
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/SDBM_File/SDBM_File.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/SDBM_File/SDBM_File.bs
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/Socket/Socket.so
+lib/perl5/<$ARCH>-netbsd/5.00404/auto/Socket/Socket.bs
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/DB_File
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/Fcntl
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/IO
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/NDBM_File
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/Opcode
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/POSIX
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/SDBM_File
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto/Socket
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/auto
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404/pod
+@dirrm lib/perl5/<$ARCH>-netbsd/5.00404
+@dirrm lib/perl5/<$ARCH>-netbsd
+@dirrm lib/perl5
