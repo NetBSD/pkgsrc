@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/05/17 21:32:34 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/08/13 18:30:29 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCC3_C_BUILDLINK3_MK:=	${GCC3_C_BUILDLINK3_MK}+
@@ -24,8 +24,14 @@ GCC3_PKGMODIF=	_${GCC3_INSTALLTO_SUBPREFIX}
 .  endif
 BUILDLINK_DEPENDS.gcc3-c+=	gcc3${GCC3_PKGMODIF}-c>=${_GCC_REQD}
 BUILDLINK_PKGSRCDIR.gcc3-c?=	../../lang/gcc3-c
-BUILDLINK_LIBDIRS.gcc3-c?=	\
-	lib ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc3-c}\///}
+BUILDLINK_GCC3_LIBDIRS=		lib
+.  if defined(GCC3_INSTALLTO_SUBPREFIX)
+BUILDLINK_GCC3_LIBDIRS+=	${GCC3_INSTALLTO_SUBPREFIX}/lib
+.  else
+BUILDLINK_GCC3_LIBDIRS+=	gcc3/lib
+.  endif
+BUILDLINK_GCC3_LIBDIRS+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc3-c}\///}
+BUILDLINK_LIBDIRS.gcc3-c?=	${BUILDLINK_GCC3_LIBDIRS}
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(USE_GCC_SHLIB)
