@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/06/23 16:25:45 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/09/25 02:30:11 danw Exp $
 
 .if !defined(BZIP2_BUILDLINK2_MK)
 BZIP2_BUILDLINK2_MK=	# defined
@@ -26,8 +26,9 @@ _NEED_BZIP2=		NO
 .  endif
 #
 # Solaris 9 has bzip2 1.0.1, build it on older versions.
+# Darwin only has static libbz2.a, which can't be buildlinked
 #
-_INCOMPAT_BZIP2=	SunOS-5.[678]-*
+_INCOMPAT_BZIP2=	SunOS-5.[678]-* Darwin-*
 INCOMPAT_BZIP2?=	# empty
 .  for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
