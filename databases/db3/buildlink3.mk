@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/07/07 08:45:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/07/10 03:01:38 grant Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB3_BUILDLINK3_MK:=	${DB3_BUILDLINK3_MK}+
@@ -21,7 +21,10 @@ BUILDLINK_TRANSFORM+=		l:db-3:db3
 USE_DB185?=			yes
 .  if !empty(USE_DB185:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=		l:db:db3
+BUILDLINK_CPPFLAGS.db3=		-I${BUILDLINK_PREFIX.db3}/${BUILDLINK_INCDIRS.db3}
 .  endif
+BUILDLINK_LDFLAGS.db3=		-L${BUILDLINK_PREFIX.db3}/lib -Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db3}/lib
+BUILDLINK_LIBS.db3=		-ldb3
 .endif	# DB3_BUILDLINK3_MK
 
 .include "../../mk/pthread.buildlink3.mk"
