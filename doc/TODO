@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.888 2003/09/21 22:20:23 kim Exp $
+$NetBSD: TODO,v 1.889 2003/09/22 03:05:38 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -159,7 +159,6 @@ Suggested package updates
 	o jove-4.16.0.61
 	o jpilot-0.99.6
 	o jwhois-3.2.2 [pkg/22741]
-	o kaffe-1.1.0 [pkg/22155]
 	o kbiff-3.7
 	o latd-1.18 [pkg/22735]
 	o lavaps-2.3
