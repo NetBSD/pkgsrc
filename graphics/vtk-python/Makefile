@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/02 13:28:12 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/10 11:21:24 drochner Exp $
 #
 
 PKGNAME=	vtk-python-${VTKDIST_VERSION}
@@ -43,4 +43,5 @@ DEPENDS=	vtk>=${VTK_VERSION}:../../graphics/vtk
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
