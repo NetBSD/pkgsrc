@@ -1,4 +1,4 @@
-# $NetBSD: xsgi.buildlink2.mk,v 1.1 2003/06/12 15:29:52 jschauma Exp $
+# $NetBSD: xsgi.buildlink2.mk,v 1.2 2003/06/29 18:32:45 jschauma Exp $
 
 .if !defined(XSGI_BUILDLINK2_MK)
 XSGI_BUILDLINK2_MK=    # defined
@@ -611,6 +611,49 @@ BUILDLINK_FILES.XSgi+= lib32/libXm.so.2
 BUILDLINK_FILES.XSgi+= lib32/libXpm.so
 BUILDLINK_FILES.XSgi+= lib32/libXpm.so.1
 BUILDLINK_FILES.XSgi+= lib32/libXpm.so.2
+BUILDLINK_FILES.XSgi+= lib64/libFS.a
+BUILDLINK_FILES.XSgi+= lib64/libICE.a
+BUILDLINK_FILES.XSgi+= lib64/libSM.a
+BUILDLINK_FILES.XSgi+= lib64/libXTrap.a
+BUILDLINK_FILES.XSgi+= lib64/libXau.a
+BUILDLINK_FILES.XSgi+= lib64/libXaw.a
+BUILDLINK_FILES.XSgi+= lib64/libXdmcp.a
+BUILDLINK_FILES.XSgi+= lib64/libXext.a
+BUILDLINK_FILES.XSgi+= lib64/libXi.a
+BUILDLINK_FILES.XSgi+= lib64/libXmu.a
+BUILDLINK_FILES.XSgi+= lib64/libXnmbx.a
+BUILDLINK_FILES.XSgi+= lib64/libXt.a
+BUILDLINK_FILES.XSgi+= lib64/libXtst.a
+BUILDLINK_FILES.XSgi+= lib64/liboldX.a
+BUILDLINK_FILES.XSgi+= lib64/libxkbfile.a
+BUILDLINK_FILES.XSgi+= lib64/libz.a
+BUILDLINK_FILES.XSgi+= lib64/libICE.so
+BUILDLINK_FILES.XSgi+= lib64/libSM.so
+BUILDLINK_FILES.XSgi+= lib64/libX11.so
+BUILDLINK_FILES.XSgi+= lib64/libX11.so.1
+BUILDLINK_FILES.XSgi+= lib64/libXaw.so
+BUILDLINK_FILES.XSgi+= lib64/libXaw.so.2
+BUILDLINK_FILES.XSgi+= lib64/libXext.so
+BUILDLINK_FILES.XSgi+= lib64/libXi.so
+BUILDLINK_FILES.XSgi+= lib64/libXmu.so
+BUILDLINK_FILES.XSgi+= lib64/libXt.so
+BUILDLINK_FILES.XSgi+= lib64/libMrm.so
+BUILDLINK_FILES.XSgi+= lib64/libMrm.so.1
+BUILDLINK_FILES.XSgi+= lib64/libMrm.so.2
+BUILDLINK_FILES.XSgi+= lib64/libSgm.so
+BUILDLINK_FILES.XSgi+= lib64/libSgm.so.1
+BUILDLINK_FILES.XSgi+= lib64/libSgm.so.2
+BUILDLINK_FILES.XSgi+= lib64/libSgw.so
+BUILDLINK_FILES.XSgi+= lib64/libSgw.so.1
+BUILDLINK_FILES.XSgi+= lib64/libUil.so
+BUILDLINK_FILES.XSgi+= lib64/libUil.so.1
+BUILDLINK_FILES.XSgi+= lib64/libUil.so.2
+BUILDLINK_FILES.XSgi+= lib64/libXm.so
+BUILDLINK_FILES.XSgi+= lib64/libXm.so.1
+BUILDLINK_FILES.XSgi+= lib64/libXm.so.2
+BUILDLINK_FILES.XSgi+= lib64/libXpm.so
+BUILDLINK_FILES.XSgi+= lib64/libXpm.so.1
+BUILDLINK_FILES.XSgi+= lib64/libXpm.so.2
 
 BUILDLINK_TARGETS+=     XSgi-buildlink
 
