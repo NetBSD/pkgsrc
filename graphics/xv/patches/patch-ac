@@ -30,8 +30,8 @@
    * should not need to be changed
    */
   
-! #define GS_PATH "/usr/local/bin/gs"
-! #define GS_LIB  "/usr/local/lib/ghostscript"
+! #define GS_PATH "/usr/pkg/bin/gs"
+! #define GS_LIB  "/usr/pkg/share/ghostscript"
 ! #define GS_DEV  "ppmraw"
   
   
