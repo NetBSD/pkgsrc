@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:57:41 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:30 hubertf Exp $
 
 Note that the pconsole binary needs to be run as root. For security reasons
 it was not installed suid root, thus you need to run pconsole.sh as root.
@@ -13,3 +14,5 @@ hands. So, as root, execute:
 
 pconsole drops its root privileges when they're not needed, so the
 program maintains maximum security.
+
+===========================================================================

@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.1 2001/10/31 20:44:00 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:27 hubertf Exp $
 
 You will need to edit `${PREFIX}/etc/efax.rc' to set a number of
 important configuration options.  This file does not get deleted when
@@ -6,3 +7,4 @@ you deinstall efax.
 
 To fax Postscript files you will need to install Ghostscript.  To view
 faxes you can use any program that displays PGM files.
+===========================================================================
