@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.5 2002/12/14 23:23:08 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.6 2002/12/18 11:28:09 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -51,6 +51,7 @@ usage() {
     echo "    build-kernels     Build kernels"
     echo "    build-release     Build a complete release"
     echo "    build-sets        Build system sets only"
+    echo "    build-x-release   Build a complete X11R6 release"
     echo "    clean             Clean work directories"
     echo "    clean-srcs        Fix ownerships in source directories"
     echo "    config            Create or edit a configuration file"
@@ -60,6 +61,7 @@ usage() {
     echo "    init              Initialize work directories"
     echo "    install-kernel    Install a built kernel"
     echo "    install-sets      Install system sets"
+    echo "    install-x-sets    Install X11R6 sets"
     echo "    update-srcs       Use CVS to update source directories"
 }
 
@@ -320,6 +322,25 @@ sysbuild_install_sets() {
     echo "You MUST now run \`sysbuild etcupdate' by hand to update /etc."
 }
 
+sysbuild_install_x_sets() {
+    check_root
+    check_init
+
+    for _s in $XSETS; do
+        printf "Installing $_s:"
+        if [ ! -f $RELEASEDIR/binary/sets/$_s ]; then
+            echo " not built yet"
+        else
+            cd / && tar xzpf $RELEASEDIR/binary/sets/$_s > /dev/null 2>&1
+            if [ $? -ne 0 ]; then
+                echo " failed."
+            else
+                echo " done."
+            fi
+        fi
+    done
+}
+
 sysbuild_build_tools() {
     check_noroot
     check_init
@@ -353,6 +374,73 @@ sysbuild_build_tools() {
     fi
 }
 
+sysbuild_build_x_release() {
+    check_noroot
+    check_init
+
+    _log=`mktemp /tmp/sysbuild.XXXX`
+
+    sysbuild_clean
+    sysbuild_build_tools
+    if [ "$MAIL_CMDLOG" = "yes" ]; then
+        echo "Logging to $_log (will be removed later)"
+    else
+        echo "Logging to $_log (will NOT be removed later)"
+    fi
+
+    printf "Mounting $XSRCDIR below $BUILDDIR/obj:"
+    _mnt="ok"
+    if [ ! -d $XSRCDIR ]; then
+        echo " failed."
+        _mnt="fail"
+    else
+        if [ -z "${MOUNT_PRECMD}" ]; then
+            mount -t union -o -b $XSRCDIR $BUILDDIR/obj >> $_log 2>&1
+        else
+            ${MOUNT_PRECMD} "mount -t union -o -b $XSRCDIR $BUILDDIR/obj" >> $_log 2>&1
+        fi
+        if [ $? -ne 0 ]; then
+            echo " failed."
+            _mnt="fail"
+        else
+            echo " done."
+        fi
+    fi
+
+    if [ "$_mnt" = "ok" ]; then
+        printf "Building full X11R6 release:"
+        mkdir -p $RELEASEDIR
+        ( cd $BUILDDIR/obj && \
+            BSDSRCDIR=$SRCDIR NETBSDSRCDIR=$SRCDIR $BUILDDIR/tools/bin/nbmake-`uname -m` DESTDIR=$BUILDDIR/root release >> $_log 2>&1 )
+        if [ $? -ne 0 ]; then
+            echo " failed."
+        else
+            echo " done."
+        fi
+
+        chmod 644 $RELEASEDIR/binary/sets/x*.tgz
+        chown $USER:$OBJGROUP $RELEASEDIR/binary/sets/*
+    fi
+
+    printf "Unmounting $BUILDDIR/obj:"
+    if [ -z "${MOUNT_PRECMD}" ]; then
+        umount $BUILDDIR/obj >> $_log 2>&1
+    else
+        ${MOUNT_PRECMD} "umount $BUILDDIR/obj" >> $_log 2>&1
+    fi
+    if [ $? -ne 0 ]; then
+        echo " failed."
+    else
+        echo " done."
+    fi
+
+    if [ "$MAIL_CMDLOG" = "yes" ]; then
+        echo "Command log follows:"
+        cat $_log
+        rm -f $_log
+    fi
+}
+
 # --------------------------------------------------------------------
 # Cleanup functions
 # --------------------------------------------------------------------
@@ -360,6 +448,11 @@ sysbuild_build_tools() {
 sysbuild_clean() {
     check_noroot
     check_init
+
+    if [ -n "`mount | grep $BUILDDIR/obj`" ]; then
+        echo "$BUILDDIR/obj still mounted; cannot clean."
+        exit 1
+    fi
 
     printf "Cleaning $BUILDDIR/obj contents:"
     rm -rf $BUILDDIR/obj/*
@@ -607,6 +700,13 @@ case $target in
             sysbuild_build_sets
         fi
         ;;
+    build-x-release)
+        if [ "$maillog" = "yes" ]; then
+            sysbuild_build_x_release >> $maillogfile
+        else
+            sysbuild_build_x_release
+        fi
+        ;;
     clean)
         if [ "$maillog" = "yes" ]; then
             sysbuild_clean >> $maillogfile
@@ -648,6 +748,13 @@ case $target in
             sysbuild_install_sets >> $maillogfile
         else
             sysbuild_install_sets
+        fi
+        ;;
+    install-x-sets)
+        if [ "$maillog" = "yes" ]; then
+            sysbuild_install_x_sets >> $maillogfile
+        else
+            sysbuild_install_x_sets
         fi
         ;;
     update-srcs)
