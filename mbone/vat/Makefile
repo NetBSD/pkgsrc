@@ -3,13 +3,13 @@
 # Date created:		2 November 1996
 # Whom:			fenner
 #
-# Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
+# $NetBSD: Makefile,v 1.5 1998/01/24 20:47:31 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
 #
 
 DISTNAME=	vat-4.0b2
 CATEGORIES=	mbone tk80
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
-DISTFILES=	vatsrc-4.0b2.tar.gz
 
 MAINTAINER=	fenner@FreeBSD.ORG
 
