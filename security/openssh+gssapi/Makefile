@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/30 22:51:37 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/11 04:13:01 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -30,9 +30,6 @@ CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]* ssh2-[0-9]*
 CONFLICTS+=		openssh-[0-9]*
 
 USE_PERL5=		build
-
-# 0.9.5a can be used, with blowfish support broken.  so require 0.9.6.
-USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CRYPTO=			yes
 KERBEROS=		yes
