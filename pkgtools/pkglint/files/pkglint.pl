@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.102 2004/04/17 17:26:40 seb Exp $
+# $NetBSD: pkglint.pl,v 1.103 2004/04/24 00:17:19 reed Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -462,6 +462,13 @@ sub checkplist {
 				"registered in the PLIST (don't you use the ".
 				"PKG_SYSCONFDIR framework?)");
 			$etcseen = 1;
+		}
+
+		if ($_ =~ /etc\/rc\.d/ and !$etcrcdseen) {
+			&perror("FATAL: RCD_SCRIPTS must not be ".
+				"registered in the PLIST (don't you use the ".
+				"RCD_SCRIPTS framework?)");
+			$etcrcdseen = 1;
 		}
 
 		if ($_ =~ /^info\/dir$/) {
@@ -931,6 +938,11 @@ EOF
 	if ($whole =~ /\/wip\//
 	 && $category ne "wip") {
 		&perror("FATAL: possible pkgsrc-wip pathname detected.");
+	}
+
+	if ($whole =~ /etc\/rc\.d/) {
+		&perror("WARN: Use RCD_SCRIPTS mechanism to install rc.d ".
+			"scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
 	#

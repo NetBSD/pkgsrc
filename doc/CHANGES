@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5720 2004/04/23 18:43:37 itojun Exp $
+$NetBSD: CHANGES,v 1.5721 2004/04/24 00:17:21 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2224,3 +2224,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.0cnb1 [minskim 2004-04-23]
 	Added screws-0.52 [xtraeme 2004-04-23]
 	Updated nsd to 2.0.2 [itojun 2004-04-23]
+	Updated pkglint to 3.73 [reed 2004-04-23]
