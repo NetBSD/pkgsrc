@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.113 2000/09/18 10:24:59 abs Exp $
+# $NetBSD: Packages.txt,v 1.114 2000/10/11 14:02:27 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1297,15 +1297,15 @@ perform the equivalent of:
 
  * readme:
    This target generates a README.html file, which can be viewed using a
-   browser such as netscape (pkgsrc/www/mozilla) or lynx (pkgsrc/www/lynx).
-   The generated files contain references to any packages which are in the
-   ${PACKAGES} directory on the local host.  The generated files can
-   be made to refer to URLs based on FTP_PKG_URL_HOST and
-   FTP_PKG_URL_DIR.  (For example, if I wanted to generate README.html
+   browser such as navigator (pkgsrc/www/navigator) or lynx
+   (pkgsrc/www/lynx). The generated files contain references to any
+   packages which are in the ${PACKAGES} directory on the local host. The
+   generated files can be made to refer to URLs based on FTP_PKG_URL_HOST
+   and FTP_PKG_URL_DIR. For example, if I wanted to generate README.html
    files which pointed to binary packages on the local machine, in the
    directory /usr/packages, set FTP_PKG_URL_HOST=file://localhost and
    FTP_PKG_URL_DIR=/usr/packages. The ${PACKAGES} directory and its
-   subdirectories will be searched for all the binary packages.)
+   subdirectories will be searched for all the binary packages.
 
  * readme-all: 
    Use this target to create a file README-all.html which contains a
