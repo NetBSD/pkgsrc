@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3555 2003/09/27 20:31:46 recht Exp $
+$NetBSD: CHANGES,v 1.3556 2003/09/27 22:28:05 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3981,3 +3981,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated subversion-base to 0.30.0 [recht 2003-09-27]
 	Updated py-subversion to 0.30.0 [recht 2003-09-27]
 	Updated ap2-subversion to 0.30.0 [recht 2003-09-27]
+	Added mummer-3.04 [jschauma 2003-09-27]
