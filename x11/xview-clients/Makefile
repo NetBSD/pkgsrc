@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/20 12:28:29 agc Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/22 23:15:02 snj Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -8,7 +8,7 @@ PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		OpenLook applications and man pages
 
 NOT_FOR_PLATFORM=       *-*-alpha       # it builds but everything segfaults...
