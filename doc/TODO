@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.175 2003/01/11 13:40:04 wiz Exp $
+$NetBSD: TODO,v 1.176 2003/01/11 17:00:29 salo Exp $
 
 Suggested new packages
 ======================
@@ -72,7 +72,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o adobe-cmaps-1.5 [pkg/19646]
 	o amaya-7.0
-	o aspell-0.50.3
+	o aspell-0.50.3 [salo]
 	o aumix-2.8
 	o balsa-1.4.2
 	o binutils-2.13.2.1
