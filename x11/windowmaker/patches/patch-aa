@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 1998/11/26 19:21:32 tron Exp $
+
+--- doc/Makefile.in.orig	Fri Oct 23 08:03:58 1998
++++ doc/Makefile.in	Mon Nov 23 17:55:34 1998
+@@ -137,7 +137,7 @@
+ 	for i in $$list; do \
+ 	  if test -f $(srcdir)/$$i; then file=$(srcdir)/$$i; \
+ 	  else file=$$i; fi; \
+-	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//' | sed -e 's/[a-z]*$$//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man1dir)/$$inst"; \
