@@ -1,18 +1,21 @@
-$NetBSD: patch-aa,v 1.10 2000/08/11 05:37:10 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2000/09/04 11:20:59 itojun Exp $
 
---- configure.in.orig	Sat Jul 15 00:59:14 2000
-+++ configure.in	Fri Aug 11 00:38:43 2000
-@@ -319,6 +319,7 @@
- saved_LIBS="$LIBS"
- saved_LDFLAGS="$LDFLAGS"
+--- configure.in.orig	Thu Aug 31 07:20:05 2000
++++ configure.in	Mon Sep  4 20:16:40 2000
+@@ -234,6 +234,6 @@
+ # Checks for header files.
+-AC_CHECK_HEADERS(bstring.h endian.h floatingpoint.h lastlog.h limits.h login.h login_cap.h maillock.h netdb.h netgroup.h netinet/in_systm.h paths.h poll.h pty.h shadow.h security/pam_appl.h sys/bitypes.h sys/bsdtty.h sys/cdefs.h sys/poll.h sys/select.h sys/stat.h sys/stropts.h sys/sysmacros.h sys/time.h sys/ttcompat.h stddef.h time.h ttyent.h usersec.h util.h utmp.h utmpx.h)
++AC_CHECK_HEADERS(bstring.h endian.h floatingpoint.h lastlog.h limits.h login.h maillock.h netdb.h netgroup.h netinet/in_systm.h paths.h poll.h pty.h shadow.h security/pam_appl.h sys/bitypes.h sys/bsdtty.h sys/cdefs.h sys/poll.h sys/select.h sys/stat.h sys/stropts.h sys/sysmacros.h sys/time.h sys/ttcompat.h stddef.h time.h ttyent.h usersec.h util.h utmp.h utmpx.h)
+ 
+ dnl    Checks for library functions.
+-AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_af clock freeaddrinfo gai_strerror getaddrinfo getnameinfo getrusage getttyent inet_aton inet_ntoa innetgr login_getcapbool md5_crypt memmove mkdtemp on_exit openpty rresvport_af setenv seteuid setlogin setproctitle setreuid sigaction sigvec snprintf strerror strlcat strlcpy strsep vsnprintf vhangup _getpty __b64_ntop)
++AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_af clock freeaddrinfo gai_strerror getaddrinfo getnameinfo getrusage getttyent inet_aton inet_ntoa innetgr md5_crypt memmove mkdtemp on_exit openpty rresvport_af setenv seteuid setlogin setproctitle setreuid sigaction sigvec snprintf strerror strlcat strlcpy strsep vsnprintf vhangup _getpty __b64_ntop)
+ dnl    Checks for time functions
+@@ -337,2 +337,3 @@
  saved_CFLAGS="$CFLAGS"
 +crypto_LIBS=""
  if test "x$prefix" != "xNONE" ; then
- 	tryssldir="$tryssldir $prefix"
- fi
-@@ -335,12 +336,25 @@
- 			LDFLAGS="$saved_LDFLAGS"
- 		fi
+@@ -353,8 +354,21 @@
  
 -		LIBS="$saved_LIBS -lcrypto"
 -
@@ -40,11 +43,7 @@ $NetBSD: patch-aa,v 1.10 2000/08/11 05:37:10 jlam Exp $
 +			AC_TRY_RUN(
 +				[
  #include <string.h>
- #include <openssl/rand.h>
- int main(void) 
-@@ -350,12 +364,14 @@
- 	RAND_add(a, sizeof(a), sizeof(a));
- 	return(RAND_status() <= 0);
+@@ -368,8 +382,10 @@
  }
 -			],
 -			[
@@ -61,14 +60,8 @@ $NetBSD: patch-aa,v 1.10 2000/08/11 05:37:10 jlam Exp $
 +			)
 +		done
  
- 		if test ! -z "$found_crypto" ; then
- 			break;
-@@ -385,7 +401,7 @@
- 		blibpath="$blibpath:$ssldir:$ssldir/lib"
- 	fi
+@@ -403,3 +419,3 @@
  fi
 -LIBS="$saved_LIBS -lcrypto"
 +LIBS="$saved_LIBS $crypto_LIBS"
  
- # Now test RSA support
- saved_LIBS="$LIBS"
