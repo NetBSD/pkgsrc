@@ -1,0 +1,51 @@
+#!/bin/sh
+# $Id: build,v 1.1 2000/09/15 22:05:47 hubertf Exp $
+#
+# Do builk build
+#
+# (c) 2000 Hubert Feyrer, All Rights Reserved.
+#
+
+echo Bulk build started: `date`
+echo ""
+
+# Pull in ADMIN:
+if [ -f "$BULK_BUILD_CONF" ]; then
+    . $BULK_BUILD_CONF
+else
+	conf=`dirname $0`/build.conf
+	if [ -f "$conf" ]; then
+		. $conf
+	else
+		echo "$0: Cannot find config file $conf, aborting."
+		exit 1
+	fi
+fi
+
+unset DISPLAY		# allow sane failure for gimp, xlispstat
+
+cd ${USR_PKGSRC}
+
+if [ "$1" = "restart" ]; then
+	echo Restarting - skipping pre-build script
+else
+	sh mk/bulk/pre-build	# make veryveryclean :)
+fi
+
+# Figure out optimal build order, and build
+if [ "$1" != "restart" ]; then
+	sh mk/bulk/printdepends | tee .l
+fi
+nice -n 20 make \
+		SPECIFIC_PKGS=1 \
+		GROUP_SPECIFIC_PKGS="`tsort .l | tr '\012' ' '`" \
+		bulk-package
+rm .l
+
+# Perl was wiped, reinstall it!
+( cd lang/perl5-base ; make bulk-install )
+perl mk/bulk/post-build | mail -s "pkgsrc bulk build results" $ADMIN
+
+# Done!
+echo ""
+echo Bulk build ended: `date`
