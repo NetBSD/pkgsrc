@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/03/29 03:30:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/30 17:12:28 taca Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -29,6 +29,7 @@ RESTRICTED=	"Redistribution of modified package is forbidden"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
+DIST_SUBDIR=	${PKGNAME}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}				\
 		${DISTNAME}-man-${MANVERSION}.tar.gz
 
