@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2003/07/21 16:51:54 martti Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/27 02:27:47 dan Exp $
 #
 
-DISTNAME=	xplot-0.90
+DISTNAME=	xplot-0.90.7.1
 CATEGORIES=	graphics x11
-MASTER_SITES=	ftp://mercury.lcs.mit.edu/pub/shep/
+MASTER_SITES=	http://www.xplot.org/xplot/
+HOMEPAGE=	http://www.xplot.org/
 
 MAINTAINER=	thorpej@NetBSD.org
 COMMENT=	Plotting program, most often used in conjunction with tcptrace
@@ -11,8 +12,9 @@ COMMENT=	Plotting program, most often used in conjunction with tcptrace
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 
-DOCFILES=	ANNOUNCE README README.tcp_plots demo.0 demo.1 demo.2 \
-		demo.3 demo.4 demo.5 demo.6 demo.7
+DOCFILES=	ANNOUNCE README README.tcp_plots 
+# demo.? removed from interim .7.1 version
+#		demo.0 demo.1 demo.2 demo.3 demo.4 demo.5 demo.6 demo.7
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xplot
