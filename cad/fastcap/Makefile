@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/01 01:43:28 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/11 05:00:33 snj Exp $
 #
 
 DISTNAME=	fastcap-2.0-15Jul92
@@ -19,7 +19,7 @@ DIST_SUBDIR=	fastcap
 EXTRACT_ONLY=	fastcap-2.0-15Jul92.tar.Z
 
 WRKSRC=		${WRKDIR}/fastcap
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		4
