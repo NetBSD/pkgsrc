@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/19 23:49:44 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/20 14:05:02 tron Exp $
 # Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -14,7 +14,6 @@ MAINTAINER=     obrien@NUXI.com
 
 DEPENDS+=	xpm-3.4j:../../graphics/xpm
 
-USE_X11=	yes
 USE_MOTIF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

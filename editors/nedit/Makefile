@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/06/09 13:36:49 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/20 14:03:12 tron Exp $
 
 DISTNAME=	nedit_source
 PKGNAME=	nedit-5.0.2
@@ -8,7 +8,6 @@ MASTER_SITES=	ftp://ftp.fnal.gov/pub/nedit/v5_0_2/
 MAINTAINER=	tron@netbsd.org
 
 USE_MOTIF=	yes
-USE_X11=	yes
 
 NO_WRKSUBDIR=	yes
 NO_CONFIGURE=	yes
