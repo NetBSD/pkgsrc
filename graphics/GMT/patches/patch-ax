@@ -1,6 +1,6 @@
-$NetBSD: patch-ax,v 1.1 2001/01/27 08:16:02 jtb Exp $
+$NetBSD: patch-ax,v 1.2 2001/04/19 20:51:33 jtb Exp $
 
---- Makefile.orig	Sat Jan 27 04:38:15 2001
+--- Makefile.orig	Wed Apr 18 09:22:35 2001
 +++ Makefile
 @@ -62,7 +62,7 @@
  #	!! STOP EDITING HERE, THE REST IS FIXED !!
@@ -15,8 +15,26 @@ $NetBSD: patch-ax,v 1.1 2001/01/27 08:16:02 jtb Exp $
  		$(MAKE) uninstall; \
  		cd ..
  
--suppl:		mex_config xgrid_config
-+suppl:		xgrid_config
+-suppl:		gmtmacros mex_config xgrid_config
++suppl:		gmtmacros xgrid_config
  		for d in $(SUPPL); do \
- 			if [ -d src/$$d ] ; then \
+ 			if [ -d src/$$d ] && [ ! -f src/$$d/.skip ]; then \
  				cd src/$$d; \
+@@ -109,7 +109,7 @@
+ 			\rm -f config.{cache,log,status}; \
+ 			./configure; \
+ 		fi
+-		
++
+ xgrid_config:	
+ 		if [ ! -f src/xgrid/makefile ]; then \
+ 			cd src/xgrid; \
+@@ -227,7 +227,7 @@
+ 		else \
+ 			echo "Install wrapper man directory the same as distribution man directory - nothing installed"; \
+ 		fi
+-		
++
+ run-examples:
+ 		if [ -d examples ]; then \
+ 			cd examples; \

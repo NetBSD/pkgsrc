@@ -1,17 +1,20 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/11/26 22:48:16 jtb Exp $
+$NetBSD: patch-ae,v 1.2 2001/04/19 20:51:31 jtb Exp $
 
---- src/gmt_support.c.orig	Tue Oct 24 17:24:38 2000
+--- src/gmt_support.c.orig	Thu Apr 19 18:02:09 2001
 +++ src/gmt_support.c
-@@ -3456,7 +3456,7 @@
+@@ -3483,9 +3483,9 @@
+ 	char dir[BUFSIZ];
+ 	FILE *fp;
  
- 	/* First check the $GMTHOME/share directory */
+-	/* First check the $GMTHOME/share directory */
++	/* First check the $GMTHOME/gmt/share directory */
  	
 -	sprintf (path, "%s%cshare%c%s\0", GMTHOME, DIR_DELIM, DIR_DELIM, name);
 +	sprintf (path, "%s%cshare%cgmt%c%s\0", GMTHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM, name);
  	if (!access (path, R_OK)) return (TRUE);	/* File exists and is readable, return with name */
  	
  	/* File was not readable.  Now check if it exists */
-@@ -3470,7 +3470,7 @@
+@@ -3499,7 +3499,7 @@
  	 * It is not an error if we cannot find the named file, only if it is found
  	 * but cannot be read due to permission problems */
  	

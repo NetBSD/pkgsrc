@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/11/26 22:48:17 jtb Exp $
+$NetBSD: patch-af,v 1.2 2001/04/19 20:51:31 jtb Exp $
 
---- src/grd2cpt.c.orig	Tue Oct 24 17:24:38 2000
+--- src/grd2cpt.c.orig	Thu Apr 19 18:02:09 2001
 +++ src/grd2cpt.c
 @@ -64,7 +64,7 @@
  
