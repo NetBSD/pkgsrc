@@ -1,0 +1,62 @@
+$NetBSD: patch-ao,v 1.2.2.2 2003/03/02 10:13:07 agc Exp $
+
+--- configure.orig	Tue Dec 17 10:55:09 2002
++++ configure
+@@ -22223,57 +22223,6 @@ cat >>confdefs.h <<EOF
+ #define SIZEOF_UNSIGNED_INT $ac_cv_sizeof_unsigned_int
+ EOF
+ 
+-  echo "$as_me:22226: checking sizeof(size_t) == sizeof(unsigned int)" >&5
+-echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned int)... $ECHO_C" >&6
+-  cat >conftest.$ac_ext <<_ACEOF
+-#line 22229 "configure"
+-#include "confdefs.h"
+-
+-int
+-main ()
+-{
+-
+-    #if SIZEOF_SIZE_T != SIZEOF_UNSIGNED_INT
+-       choke me
+-    #endif
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:22245: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:22248: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:22251: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:22254: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  echo "$as_me:22256: result: yes" >&5
+-echo "${ECHO_T}yes" >&6
+-else
+-  echo "$as_me: failed program was:" >&5
+-cat conftest.$ac_ext >&5
+-
+-      echo "$as_me:22262: result: no" >&5
+-echo "${ECHO_T}no" >&6
+-      { { echo "$as_me:22264: error:
+-      Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned int)
+-       does not apply. Please mail kde-devel@kde.org with a description of your system!
+-      " >&5
+-echo "$as_me: error:
+-      Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned int)
+-       does not apply. Please mail kde-devel@kde.org with a description of your system!
+-      " >&2;}
+-   { (exit 1); exit 1; }; }
+-
+-fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-
+ CXXFLAGS="$CXXFLAGS -DQT_CLEAN_NAMESPACE  -DQT_NO_ASCII_CAST"
+ 
+ echo "$as_me:22279: checking for MAXPATHLEN" >&5
