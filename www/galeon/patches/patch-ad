@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2004/10/05 16:54:29 abs Exp $
+$NetBSD: patch-ad,v 1.5 2004/11/27 00:52:49 abs Exp $
 
---- sounds/Makefile.in.orig	2004-08-08 21:12:13.000000000 +0100
+--- sounds/Makefile.in.orig	2004-10-23 18:21:35.000000000 +0100
 +++ sounds/Makefile.in
-@@ -232,7 +232,8 @@ sharedstatedir = @sharedstatedir@
+@@ -231,7 +231,8 @@ sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  galeon_SOUNDS = clicked.wav
