@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2002/01/30 23:05:46 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2002/03/23 17:50:18 yyamano Exp $
 
 DISTNAME=		mutt-1.2.5.1
 CATEGORIES=		mail
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--enable-pop --enable-imap
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
 
-LDFLAGS+=		${STRIPFLAG}
+LDFLAGS+=		${_STRIPFLAG_CC}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 
 .include "../../mk/bsd.prefs.mk"
