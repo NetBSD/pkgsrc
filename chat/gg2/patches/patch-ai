@@ -1,0 +1,34 @@
+$NetBSD: patch-ai,v 1.1 2005/01/17 20:15:28 kristerw Exp $
+
+--- src/plugins/ignore/ignore.c.orig	Mon Jan 17 20:59:50 2005
++++ src/plugins/ignore/ignore.c	Mon Jan 17 21:01:57 2005
+@@ -102,10 +102,12 @@
+ 				{
+ 				case GGADU_IGNORE_ADD_ID:
+ 					{
++						gchar *ignored_list_prev;
++						gchar *ignored_list_after;
+ 						GGaduContact *k = g_new0(GGaduContact, 1);
+ 						k->id = g_strdup(kv->value);
+-						gchar *ignored_list_prev = ggadu_config_var_get(ignore_handler, "list");
+-						gchar *ignored_list_after = NULL;
++						ignored_list_prev = ggadu_config_var_get(ignore_handler, "list");
++						ignored_list_after = NULL;
+ 
+ 						ignored_list_after = ggadu_add_ignored_contact(ignored_list_prev, k);
+ 						if (ignored_list_after)
+@@ -142,10 +144,12 @@
+ 				{
+ 				case GGADU_IGNORE_REMOVE_ID:
+ 					{
++						gchar *ignored_list_prev;
++						gchar *ignored_list_after;
+ 						GGaduContact *k = g_new0(GGaduContact, 1);
+ 						k->id = g_strdup(kv->value);
+-						gchar *ignored_list_prev = ggadu_config_var_get(ignore_handler, "list");
+-						gchar *ignored_list_after = NULL;
++						ignored_list_prev = ggadu_config_var_get(ignore_handler, "list");
++						ignored_list_after = NULL;
+ 
+ 						ignored_list_after = ggadu_remove_ignored_contact(ignored_list_prev, k);
+ 						if (ignored_list_after)

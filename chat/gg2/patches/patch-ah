@@ -1,0 +1,23 @@
+$NetBSD: patch-ah,v 1.1 2005/01/17 20:15:28 kristerw Exp $
+
+--- src/plugins/jabber/jabber_login.c.orig	Mon Jan 17 20:58:07 2005
++++ src/plugins/jabber/jabber_login.c	Mon Jan 17 20:59:01 2005
+@@ -80,14 +80,14 @@
+ 
+ 	if (!jabber_data.connection || !lm_connection_is_open(jabber_data.connection))
+ 	{
+-		print_debug("jabber: Connecting to %s with %s", server,jid);
+-		jabber_data.connection = lm_connection_new(server);
+-		lm_connection_set_keep_alive_rate(jabber_data.connection,30);
+-
+ 		/* proxy setting taken from EKG project */
+ 		gint jabber_proxy_enabled = 0;
+ 		gchar *jabber_proxy_host = NULL;
+ 		gint jabber_proxy_port;
++
++		print_debug("jabber: Connecting to %s with %s", server,jid);
++		jabber_data.connection = lm_connection_new(server);
++		lm_connection_set_keep_alive_rate(jabber_data.connection,30);
+ 
+ 		if (ggadu_config_var_check(jabber_handler, "proxy"))
+ 		{
