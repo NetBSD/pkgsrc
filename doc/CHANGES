@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4938 2004/02/21 08:00:38 snj Exp $
+$NetBSD: CHANGES,v 1.4939 2004/02/21 08:05:23 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -953,3 +953,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added quake3server-osp-1.03a [xtraeme 2004-02-21]
 	Added rtcw-1.33 [xtraeme 2004-02-21]
 	Updated gqview to 1.4.0 [snj 2004-02-21]
+	Removed gqview-devel [snj 2004-02-21]
