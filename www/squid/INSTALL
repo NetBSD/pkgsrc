@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/11/01 02:18:53 zuntum Exp $
+# $NetBSD: INSTALL,v 1.2 2001/11/08 06:58:10 tron Exp $
 #
 
 PKGNAME=$1
-CONFDIR=${PKG_PREFIX}/share/squid/
+CONFDIR=${PKG_PREFIX}/etc/squid/
 SQUIDCONF=squid.conf
 MIMECONF=mime.conf
 
