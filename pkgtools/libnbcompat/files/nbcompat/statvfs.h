@@ -1,4 +1,4 @@
-/*	$NetBSD: statvfs.h,v 1.1 2004/08/06 16:55:09 jlam Exp $	*/
+/*	$NetBSD: statvfs.h,v 1.2 2004/08/10 18:47:55 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -36,8 +36,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _NBCOMPAT_STATVFS_H
-#define _NBCOMPAT_STATVFS_H
+#ifndef _NBCOMPAT_STATVFS_H_
+#define _NBCOMPAT_STATVFS_H_
+
+#if HAVE_SYS_STATVFS_H
+# include <sys/statvfs.h>
+#endif
+
+#if !HAVE_STATVFS
 
 #if HAVE_SYS_TYPES_H
 #include <sys/types.h>
@@ -124,4 +130,6 @@ struct statvfs {
 int	statvfs(const char *path, struct statvfs *vfs);
 int	fstatvfs(int fd, struct statvfs *vfs);
 
-#endif /* !_NBCOMPAT_STATVFS_H */
+#endif /* !HAVE_STATVFS */
+
+#endif /* !_NBCOMPAT_STATVFS_H_ */
