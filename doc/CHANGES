@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4256 2003/12/25 19:54:09 recht Exp $
+$NetBSD: CHANGES,v 1.4257 2003/12/25 21:15:31 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5378,3 +5378,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nut to 9.5 [wiz 2003-12-25]
 	Updated squid to 2.5.4nb6 [taca 2003-12-25]
 	Updated roundup to 0.6.4 [recht 2003-12-25]
+	Updated py-wxWindows to 2.4.2.4 [recht 2003-12-25]
