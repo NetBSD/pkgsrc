@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:04 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/27 17:20:29 cjep Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${CHESS_ENGINE}-book-${DIST_SUBDIR}
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.ast.cam.ac.uk/~cmf/chess/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.ast.cam.ac.uk/~cmf/chess/
+HOMEPAGE=		http://www.ast.cam.ac.uk/~cmf/chess/colchess/
 COMMENT=		chess opening book for ColChess (default)
 
 DEPENDS+=		colchess>=7.0:../../games/colchess
