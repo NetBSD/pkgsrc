@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/07 14:50:49 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/07 14:56:54 tsarna Exp $
 
 DISTNAME=	pycrypt100
 PKGNAME=	py-crypto-1.0.0
@@ -10,8 +10,8 @@ MAINTAINER=	tsarna@netbsd.org
 
 DEPENDS+=	python-1.5.1:../../lang/python
 
+RESTRICTED=	"Cryptographic software"
 MIRROR_DISTFILE=no
-RESTRICTED=	crypto
 
 WRKSRC=		${WRKDIR}/Extensions/Crypto
 MAKE_FLAGS=	'OPT=${CFLAGS}'
