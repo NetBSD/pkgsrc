@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/09/11 11:14:48 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/02 21:04:18 seb Exp $
 
 DISTNAME=	xboard-4.2.6
 CATEGORIES=	games
@@ -16,6 +16,9 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	xboard.info
+
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
@@ -26,5 +29,4 @@ CONFIGURE_ARGS+=	--with-Xaw3d
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/xaw.buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
