@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/24 10:54:08 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use mjpegtools.
 #
@@ -14,18 +14,9 @@ BUILDLINK_PKGSRCDIR.mjpegtools?=		../../graphics/mjpegtools
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mjpegtools=mjpegtools
 BUILDLINK_PREFIX.mjpegtools_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/audiolib.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/editlist.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/frequencies.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/jpegutils.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/lav_io.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/liblavplay.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/liblavrec.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/mjpeg_logging.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/mjpeg_types.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/mpegconsts.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/mpegtimecode.h
-BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/yuv4mpeg.h
+BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/*
+BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/mpeg2enc/*
+BUILDLINK_FILES.mjpegtools+=	include/mjpegtools/mplex/*
 BUILDLINK_FILES.mjpegtools+=	lib/liblavfile-1.6.*
 BUILDLINK_FILES.mjpegtools+=	lib/liblavfile.*
 BUILDLINK_FILES.mjpegtools+=	lib/liblavjpeg-1.6.*
