@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/09/23 14:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/22 12:12:59 wiz Exp $
 #
 
-DISTNAME=		xlhtml-0.5
+DISTNAME=		xlhtml.0.5.1
+PKGNAME=		${DISTNAME:S/./-/}
+WRKSRC=			${WRKDIR}/xlhtml
 CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chicago/}
 EXTRACT_SUFX=		.tgz
