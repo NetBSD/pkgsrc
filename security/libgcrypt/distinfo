@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.11 2004/12/18 23:54:58 grant Exp $
+$NetBSD: distinfo,v 1.12 2005/01/14 11:26:34 adam Exp $
 
-SHA1 (libgcrypt-1.2.0.tar.gz) = 3785a47abcb1c15079b18c5df47a474dfe647ec2
-Size (libgcrypt-1.2.0.tar.gz) = 949159 bytes
+SHA1 (libgcrypt-1.2.1.tar.gz) = 8627d483e26e73b4cfabb4807ae8423875c37cda
+Size (libgcrypt-1.2.1.tar.gz) = 960872 bytes
 SHA1 (patch-aa) = d8f659e4aac872abb152252731fd29bdaac635e3
 SHA1 (patch-ab) = bd713f7cbc6782ced8c2fd2b5541ac52d2a10fbe
-SHA1 (patch-ac) = 50934ca0527e5c33bdcfec20a9f505c5176abafe
 SHA1 (patch-ad) = f32281612b51c5bb3788cf03c6f5615bdfc0d3e8
