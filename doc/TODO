@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1497 2004/03/10 18:48:36 wiz Exp $
+$NetBSD: TODO,v 1.1498 2004/03/10 18:51:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -258,7 +258,6 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o netatalk-1.6.3 [pkg/21930]
-	o newscache-0.99.22p1
 	o ns-flash-6.0.79
 	o ocaml-3.07pl2
 	o onyx-5.1.0
