@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/05/14 22:05:23 tron Exp $
+
 *** configure.bak	Sat Oct 25 08:47:50 1997
 --- configure	Thu Nov  6 00:59:05 1997
 ***************
