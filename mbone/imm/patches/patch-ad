@@ -18,8 +18,8 @@
  	LIBS='-lm' \
 -	TKLIBS='-L$(PREFIX)/lib -L/usr/X11/lib -ltk4.2 -ltcl7.6 -lX11' \
 -	INCLUDES='-I. $(INCLUDE_DIR) -I/usr/X11/include' \
-+	TKLIBS='-L$(PREFIX)/lib -L/usr/X11R6/lib -ltk80 -ltcl80 -lX11' \
-+	INCLUDES='-I. $(INCLUDE_DIR) -I/usr/X11R6/include -I/usr/pkg/include/tcl8.0 -I/usr/pkg/include/tk8.0' \
++	TKLIBS='-L$(PREFIX)/lib -L${X11BASE}/lib -ltk80 -ltcl80 -lX11' \
++	INCLUDES='-I. $(INCLUDE_DIR) -I${X11BASE}/include -I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0' \
  	SYSDEFS='-g -DSIG_T=int -DMULTICAST -DERROR_TEST' \
 -	CC=gcc \
 +	CC='cc -O2'\
