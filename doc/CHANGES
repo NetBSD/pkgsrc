@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.25 2002/09/22 13:02:42 cjep Exp $
+$NetBSD: CHANGES,v 1.26 2002/09/22 16:20:15 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2930,3 +2930,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ns-plugger-navigator to 3.2nb1 [tron 2002-09-21]
 	Updated leafnode to 1.9.26 [cjep 2002-09-22]
 	Added libesmtp-1.0rc1 [cjep 2002-09-22]
+	Updated pkglint to 3.32 [atatat 2002-09-22]
