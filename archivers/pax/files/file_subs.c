@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.9 2004/08/21 03:28:56 jlam Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.10 2004/08/21 04:20:50 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.9 2004/08/21 03:28:56 jlam Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.10 2004/08/21 04:20:50 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -230,7 +230,7 @@ file_close(ARCHD *arcn, int fd)
 		(void)unlink(arcn->tmp_name);
 	}
 
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 	if (pfflags && arcn->type != PAX_SLK)
 		set_chflags(arcn->name, arcn->sb.st_flags);
 #endif
@@ -600,7 +600,7 @@ badlink:
 #endif
 		set_ftime(arcn->name, arcn->sb.st_mtime, arcn->sb.st_atime, 0);
 
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 	if (pfflags && arcn->type != PAX_SLK)
 		set_chflags(arcn->name, arcn->sb.st_flags);
 #endif

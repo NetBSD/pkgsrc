@@ -3,6 +3,14 @@
 /* Define to 1 if you have the <ctype.h> header file. */
 #undef HAVE_CTYPE_H
 
+/* Define to 1 if you have the declaration of `SF_SETTABLE', and to 0 if you
+   don't. */
+#undef HAVE_DECL_SF_SETTABLE
+
+/* Define to 1 if you have the declaration of `UF_SETTABLE', and to 0 if you
+   don't. */
+#undef HAVE_DECL_UF_SETTABLE
+
 /* Define to 1 if you have the <errno.h> header file. */
 #undef HAVE_ERRNO_H
 
@@ -149,3 +157,9 @@
 
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
+
+/* Define to 1 if the user- and root-changeable masks were detected */
+#if HAVE_STRUCT_STAT_ST_FLAGS && HAVE_DECL_UF_SETTABLE && HAVE_DECL_SF_SETTABLE
+#define HAVE_FILE_FLAGS 1
+#endif
+
