@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:56:21 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/03 17:41:21 gson Exp $
 # based on
 #    FreeBSD port:
 #    ID: ports/x11-wm/bbapm/Makefile,v 1.5 2002/09/02 01:30:15 lioux Exp
@@ -6,6 +6,7 @@
 #    http://bbtools.windsofstorm.net/sources/bbapm-0.0.1-openbsd-patch.diff
 
 DISTNAME=	bbapm-0.0.1
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 
