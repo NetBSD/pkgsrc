@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2004/04/01 16:00:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/26 22:17:36 adrianp Exp $
 
-DISTNAME=	icbirc-1.6
-PKGREVISION=	1
+DISTNAME=	icbirc-1.7
 CATEGORIES=	chat
 MASTER_SITES=	http://www.benzedrine.cx/
 
@@ -13,11 +12,7 @@ MAKE_ENV+=	BINDIR="${PREFIX}/bin" MANDIR="${PREFIX}/man"
 
 SRCS=		icb.c irc.c icbirc.c
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == SunOS
-LIBS+=	-lsocket -lnsl
-.endif
+LIBS.SunOS+=	-lsocket -lnsl
 
 do-build:
 	cd ${WRKSRC};							\
