@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2002/12/19 13:51:25 grant Exp $
+# $NetBSD: Makefile,v 1.221 2002/12/21 10:54:43 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -30,6 +30,7 @@ SUBDIR+=	aview
 SUBDIR+=	aview-x11
 SUBDIR+=	avifile
 SUBDIR+=	avifile-devel
+SUBDIR+=	avi-xmms
 SUBDIR+=	barcode
 SUBDIR+=	bktr2jpeg
 SUBDIR+=	blender
