@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/10 14:56:45 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/10 21:59:29 jlam Exp $
 
 DISTNAME=		heimdal-0.6
 CATEGORIES=		security
@@ -53,6 +53,7 @@ HEIMDAL_TRANSFORM=	"s/^ftp/kftp/"
 
 USE_PKGINSTALL=		yes
 OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
+RCD_SCRIPTS=		kdc
 
 pre-configure:
 	cd ${WRKSRC}; for file in lib/hdb/hdb.h; do			\
