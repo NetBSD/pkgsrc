@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.12 1998/02/14 22:19:05 frueauf Exp $
+# $NetBSD: Makefile,v 1.13 1998/02/15 10:41:05 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -72,14 +72,14 @@ DCOMPRESSUFFIX=	.gz
 DCOMPRESSUFFIX=
 .endif
 
+PLIST_SRC=	${WRKDIR}/PLIST.tmp
+
 pre-configure:
 	@echo "To compile in the MULE features, set the environment variable USE_MULE"
 
 pre-install:
-	@sed "s,@.GZ@,${DCOMPRESSUFFIX}," ${PKGDIR}/PLIST \
-		> ${PKGDIR}/PLIST.tmp
-
-PLIST_SRC=	${PKGDIR}/PLIST.tmp
+	sed "s,@.GZ@,${DCOMPRESSUFFIX}," ${PKGDIR}/PLIST \
+		> ${PLIST_SRC}
 
 post-install:
 .for file in b2m ctags etags gnuclient xemacs-20.3
@@ -89,8 +89,5 @@ post-install:
 .if defined(MANZ)
 	${.CURDIR}/work/xemacs-20.3/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-20.3/lisp
 .endif
-
-pre-clean:
-	@${RM} -f ${PKGDIR}/PLIST.tmp
 
 .include <bsd.port.mk>
