@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:39 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.4 2002/08/22 21:02:36 jlam Exp $
 #
 # Optionally define USE_OPENSSL_VERSION to the mininum OpenSSL version
 # number in <openssl/opensslv.h>, i.e. 0x0090600fL, etc.
@@ -13,49 +13,44 @@ OPENSSL_VERSION_095A=		0x0090581fL
 OPENSSL_VERSION_096=		0x0090600fL
 OPENSSL_VERSION_096A=		0x0090601fL
 OPENSSL_VERSION_096B=		0x0090602fL
+OPENSSL_VERSION_096D=		0x0090604fL
+OPENSSL_VERSION_096E=		0x0090605fL
+OPENSSL_VERSION_096F=		0x0090606fL
+OPENSSL_VERSION_096G=		0x0090607fL
 
-# Check for a usable installed version of OpenSSL.  Version must be greater
-# than 0.9.5a.  If a usable version isn't present, then use the pkgsrc
-# OpenSSL package.
+# Check for a usable installed version of OpenSSL. Version must be greater
+# than 0.9.6f, or else contain a fix for the 2002-07-30 security advisory.
+# If a usable version isn't present, then use the pkgsrc OpenSSL package.
 #
-USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_095A}
-
-# Associate OpenSSL dependency with version number.
-.if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_095A}
-BUILDLINK_DEPENDS.openssl=	{openssl-0.9.5a,openssl>=0.9.6}
-.else
-BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6
-.endif
-BUILDLINK_PKGSRCDIR.openssl=	../../security/openssl
-
 _NEED_OPENSSL=		YES
-.if ${OPSYS} == "Darwin"
-_OPENSSLV_H=		/usr/local/include/openssl/opensslv.h
-.else
+
 _OPENSSLV_H=		/usr/include/openssl/opensslv.h
-.endif
-.if exists(${_OPENSSLV_H})
+_SSL_H=			/usr/include/openssl/ssl.h
+
+.if exists(${_OPENSSLV_H}) && exists(${_SSL_H})
+_IN_TREE_OPENSSL_HAS_FIX!=						\
+		${AWK} 'BEGIN { ans = "NO" }				\
+		/SSL_R_SSL2_CONNECTION_ID_TOO_LONG/ { ans = "YES" }	\
+		END { print ans; exit 0 }' ${_SSL_H}
+
+.  if ${_IN_TREE_OPENSSL_HAS_FIX} == "YES"
+USE_OPENSSL_VERSION?=	${OPENSSL_VERSION_096F}
+.  else
+USE_OPENSSL_VERSION?=	${OPENSSL_VERSION_096G}
+.  endif
+
 _OPENSSL_VERSION!=	${AWK} '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
 				${_OPENSSLV_H}
 
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_095A}
+# There never was a package for this; only the in-tree openssl had it.
+#_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096F}		# OpenSSL 0.9.6f
+#BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6f
 
-.  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096}	# OpenSSL 0.9.6
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096}
+.  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096G}	# OpenSSL 0.9.6g
+_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096G}
+BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6g
 .  else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096}
-.  endif
-
-.  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096A}	# OpenSSL 0.9.6a
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096A}
-.  else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096A}
-.  endif
-
-.  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096B}	# OpenSSL 0.9.6b
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096B}
-.  else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096B}
+_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096G}
 .  endif
 
 .  for PATTERN in ${_VALID_SSL_VERSIONS}
@@ -63,26 +58,31 @@ _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096B}
 _NEED_OPENSSL=		NO
 .    endif
 .  endfor
-.endif	# exists(${_OPENSSLV_H})
+.endif	# exists(${_OPENSSLV_H}) && exists(${_SSL_H})
+
+BUILDLINK_DEPENDS.openssl?=	openssl>=0.9.6g
+BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 
 .if ${_NEED_OPENSSL} == "YES"
 BUILDLINK_PACKAGES+=		openssl
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openssl=openssl
 BUILDLINK_PREFIX.openssl_DEFAULT=	${LOCALBASE}
 SSLBASE=			${BUILDLINK_PREFIX.openssl}
-SSLCERTS=			${SSLBASE}/certs
 .else
-.  if ${OPSYS} == "Darwin"
-BUILDLINK_PREFIX.openssl=	/usr/local
-SSLBASE=			/usr/local
-.  else
 BUILDLINK_PREFIX.openssl=	/usr
 SSLBASE=			/usr
-.  endif
+.endif
+
+.if defined(PKG_SYSCONFDIR.openssl)
+SSLCERTS=			${PKG_SYSCONFDIR.openssl}/certs
+.elif ${OPSYS} == "NetBSD"
 SSLCERTS=			/etc/openssl/certs
+.else
+SSLCERTS=			${PKG_SYSCONFBASE}/openssl/certs
 .endif
 BUILD_DEFS+=			SSLBASE SSLCERTS
 
+BUILDLINK_FILES.openssl=	bin/openssl
 BUILDLINK_FILES.openssl+=	include/openssl/*
 BUILDLINK_FILES.openssl+=	lib/libRSAglue.*
 BUILDLINK_FILES.openssl+=	lib/libcrypto.*
@@ -92,7 +92,7 @@ BUILDLINK_FILES.openssl+=	lib/libssl.*
 .  include "../../security/rsaref/buildlink2.mk"
 .endif
 
-BUILDLINK_TARGETS+=		openssl-buildlink
+BUILDLINK_TARGETS+=	openssl-buildlink
 
 openssl-buildlink: _BUILDLINK_USE
 
