@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1192 2003/01/22 09:26:24 jmmv Exp $
+$NetBSD: CHANGES,v 1.1193 2003/01/22 10:27:33 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -364,3 +364,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated linc to 1.0.1 [jmmv 2003-01-22]
 	Updated libIDL to 0.8.0 [jmmv 2003-01-22]
 	Updated ORBit2 to 2.6.0 [jmmv 2003-01-22]
+	Updated aspell to 0.50.3nb1 [salo 2003-01-22]
