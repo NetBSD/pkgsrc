@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 00:05:39 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/01 19:10:22 jtb Exp $
 
 DISTNAME=		hdf5-1.4.0
 CATEGORIES=		devel
@@ -13,13 +13,14 @@ DEPENDS+=		jpeg>=6:../../graphics/jpeg
 
 GNU_CONFIGURE=		#defined
 USE_LIBTOOL=		#defined
-LTCONFIG_OVERRIDE= 	${WRKSRC}/bin/ltconfig
+LTCONFIG_OVERRIDE=	${WRKSRC}/bin/ltconfig
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hdf5
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${WRKSRC}/README	\
 	${WRKSRC}/RELEASE.txt ${PREFIX}/share/doc/hdf5
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/hdf5
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/doc/html/
 	(cd ${WRKSRC}/doc/html; ${GTAR} cf - . ) |		\
 	(cd ${PREFIX}/share/doc/html/hdf5/; ${GTAR} xf - )
 
