@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 2003/06/23 20:15:18 jtb Exp $
+
+--- configure.orig
++++ configure
+@@ -528,6 +528,7 @@
+   rs6000-*-aix*)                arch=power; model=rs6000; system=aix;;
+   powerpc-*-aix*)               arch=power; model=ppc; system=aix;;
+   powerpc-*-linux*)             arch=power; model=ppc; system=elf;;
++  powerpc-*-netbsd*)            arch=power; model=ppc; system=elf;;
+   powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
+   powerpc-*-darwin*)            arch=power; model=ppc; system=rhapsody;;
+   arm*-*-linux*)                arch=arm; system=linux;;
+@@ -601,6 +602,8 @@
+   alpha,*,digital) profiling='prof';;
+   i386,*,linux_elf) profiling='prof';;
+   i386,*,bsd_elf) profiling='prof';;
++  power,*,elf) profiling='prof';;
++  sparc,*,bsd) profiling='prof';;
+   *) profiling='noprof';;
+ esac
+ 

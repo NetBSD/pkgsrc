@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.1 2003/06/23 20:15:18 jtb Exp $
+
+--- asmcomp/sparc/emit.mlp.orig
++++ asmcomp/sparc/emit.mlp
+@@ -57,11 +57,10 @@
+   | {loc = Reg r; typ = Float} -> phys_reg (r + 16)
+   | _ -> fatal_error "Emit.next_in_pair"
+ 
+-(* Symbols are prefixed with _ under SunOS and BSD but not under Solaris
+-   nor Linux *)
++(* Symbols are prefixed with _ under SunOS *)
+ 
+ let symbol_prefix =
+-  if Config.system = "solaris" || Config.system = "linux" then "" else "_"
++  if Config.system = "sunos" then "_" else ""
+ 
+ let emit_symbol s =
+   if String.length s >= 1 & s.[0] = '.'
