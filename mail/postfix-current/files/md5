@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.2 2000/08/14 04:39:59 itojun Exp $
+$NetBSD: md5,v 1.3 2000/10/15 14:10:20 itojun Exp $
 
-MD5 (postfix/snapshot-20000531.tar.gz) = 5b25b37dc40e9982ec443cae1bda8c10
-MD5 (postfix/postfix-20000531snap-v6-20000814b.diff.gz) = e54eaf478fa509b160a0a5c3f285c643
+MD5 (postfix/snapshot-20001005.tar.gz) = 6a6f263037043536659bcfe3b58437f6
+MD5 (postfix/postfix-20001005snap-v6-20001011a.diff.gz) = 2aca31132e934918c38ee2e619431dc1
