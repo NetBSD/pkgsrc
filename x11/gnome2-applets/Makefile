@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2004/06/28 13:49:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2004/09/21 16:57:24 jmmv Exp $
 #
 
-DISTNAME=		gnome-applets-2.6.2
+DISTNAME=		gnome-applets-2.8.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -20,7 +20,7 @@ USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKGCONFIG_OVERRIDE+=	libgswitchit/gswitchit.pc.in
@@ -29,8 +29,7 @@ EGDIR=			${PREFIX}/share/examples/gnome-applets
 CONF_FILES=		${EGDIR}/sound/events/mailcheck.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/mailcheck.soundlist
 
-GCONF2_SCHEMAS=		cdplayer.schemas
-GCONF2_SCHEMAS+=	charpick.schemas
+GCONF2_SCHEMAS=		charpick.schemas
 GCONF2_SCHEMAS+=	drivemount.schemas
 GCONF2_SCHEMAS+=	geyes.schemas
 GCONF2_SCHEMAS+=	gkb.schemas
