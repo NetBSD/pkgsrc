@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2282 2004/10/30 06:31:02 minskim Exp $
+$NetBSD: TODO,v 1.2283 2004/10/30 07:13:47 minskim Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ Suggested package updates
 	o xbeeb-0.4.1
 	o xblast-2.9.22
 	o xboard-4.2.7
-	o xchm-0.9.6
 	o xcircuit-3.2.27
 	o xdaliclock-2.20
 	o xdx-1.2
