@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2004/06/28 18:24:07 jmmv Exp $
+$NetBSD: distinfo,v 1.12 2004/09/21 16:49:04 jmmv Exp $
 
-SHA1 (libgnomeprint-2.6.2.tar.bz2) = b377269a25f5e0c27c6dac277017c332ee67504e
-Size (libgnomeprint-2.6.2.tar.bz2) = 701216 bytes
+SHA1 (libgnomeprint-2.8.0.tar.bz2) = 41a756e69dd68d82e6c2ecb59b414af1a8730613
+Size (libgnomeprint-2.8.0.tar.bz2) = 749976 bytes
