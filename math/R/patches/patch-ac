@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
+$NetBSD: patch-ac,v 1.13 2004/11/18 12:31:29 markd Exp $
 
---- configure.orig	2004-04-12 21:28:02.000000000 +1200
+--- configure.orig	2004-09-21 11:05:49.000000000 +1200
 +++ configure
-@@ -2193,7 +2193,7 @@ else
+@@ -2204,7 +2204,7 @@ else
    WANT_R_SHLIB_FALSE=
  fi
  if test "${want_R_shlib}" = yes; then
--  LIBR="-L\$(R_HOME)/bin -lR"
-+  LIBR="-Wl,-R${prefix}/lib/R/bin -L\$(R_HOME)/bin -lR"
+-  LIBR="-L\$(R_HOME)/lib -lR"
++  LIBR="-Wl,-R${prefix}/lib/R/lib -L\$(R_HOME)/lib -lR"
  else
    LIBR=
  fi
-@@ -20883,13 +20932,13 @@ _ACEOF
+@@ -21299,13 +21299,13 @@ _ACEOF
  fi
  
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -20927,35 +20977,35 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21344,35 +21344,35 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -76,7 +76,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -20993,35 +21044,35 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21411,35 +21411,35 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -123,7 +123,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -21059,25 +21111,25 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21478,25 +21478,25 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -156,7 +156,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
  
  fi
  
-@@ -25738,6 +25851,7 @@ cat > conftest.c <<EOF
+@@ -26355,6 +26355,7 @@ cat > conftest.c <<EOF
  #else
  # define F77_SYMBOL(x)   x
  #endif
@@ -164,7 +164,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
  int main () {
    exit(0);
  }
-@@ -25806,6 +25920,9 @@ cat > conftest.c <<EOF
+@@ -26423,6 +26424,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -174,7 +174,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -25894,6 +26011,9 @@ typedef struct {
+@@ -26511,6 +26515,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -184,7 +184,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -27020,155 +27149,6 @@ echo "${ECHO_T}no" >&6
+@@ -27651,157 +27658,6 @@ echo "${ECHO_T}no" >&6
  fi
  
      fi
@@ -216,7 +216,8 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
 -  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
+-	 { ac_try='test -z "$ac_f77_werror_flag"
+-			 || test ! -s conftest.err'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
 -  ac_status=$?
@@ -290,7 +291,8 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
 -  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
+-	 { ac_try='test -z "$ac_f77_werror_flag"
+-			 || test ! -s conftest.err'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
 -  ac_status=$?
@@ -340,7 +342,7 @@ $NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
      if test "${GXX}" = yes; then
        ac_safe=_mieee
  echo "$as_me:$LINENO: checking whether ${CXX-c++} accepts -mieee" >&5
-@@ -28101,6 +28087,7 @@ fi ;;
+@@ -28751,6 +28607,7 @@ fi ;;
      fpicflags=
      ;;
    netbsd*)
