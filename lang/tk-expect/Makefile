@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/01 14:12:15 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/10/04 13:19:59 rh Exp $
 #
 
 DISTNAME=	expect
@@ -9,7 +9,7 @@ MASTER_SITES=	http://expect.nist.gov/
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/
 
-DEPENDS+=	tk-8.3.2:../../lang/tcl
+DEPENDS+=	tk-8.3.2:../../x11/tk
 DEPENDS+=	tcl-expect-5.32.1:../../lang/tcl-expect
 
 WRKSRC=		${WRKDIR}/expect-5.32
