@@ -1,5 +1,6 @@
-$NetBSD: patch-ac,v 1.8 1999/11/29 11:45:14 frueauf Exp $
+$NetBSD: patch-ac,v 1.9 2000/01/31 23:00:48 mrg Exp $
 
+Index: Makefile.in
 --- Makefile.in.orig	Mon Aug 23 13:46:48 1999
 +++ Makefile.in	Mon Nov 29 01:33:06 1999
 @@ -176,8 +176,8 @@
@@ -27,12 +28,3 @@ $NetBSD: patch-ac,v 1.8 1999/11/29 11:45:14 frueauf Exp $
  
  installscript: installdirs
  	(								\
-@@ -318,7 +316,7 @@
- 
- CAST_SRC = @CAST_SRC@
- 
--INCLUDES = -I. -I$(incdir)
-+INCLUDES = -I. -I$(incdir) -I${prefix}/include
- 
- .c.o:
- 	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -c $<

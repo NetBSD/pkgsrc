@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.18 1999/08/24 07:27:21 tron Exp $
-bin/irc-4.4L
+@comment $NetBSD: PLIST,v 1.19 2000/01/31 23:00:50 mrg Exp $
+bin/irc-4.4M
 bin/ircbug
 bin/irc
 bin/ircio
