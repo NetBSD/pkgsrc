@@ -1,10 +1,20 @@
-$NetBSD: patch-af,v 1.1 1999/05/09 18:47:22 tron Exp $
+$NetBSD: patch-af,v 1.2 1999/05/09 20:08:15 tron Exp $
 
---- Local.config.orig	Wed Aug 13 19:36:11 1997
-+++ Local.config	Wed Feb  4 17:44:44 1998
-@@ -130,9 +130,11 @@
- #if defined(FreeBSDArchitecture) || defined(NetBSDArchitecture) ||  \
-     defined(BSD386Architecture)
+--- Local.config.orig	Sat Jun 27 20:43:56 1998
++++ Local.config	Sun May  9 20:55:21 1999
+@@ -39,6 +39,9 @@
+ 
+ #ifdef NetBSDArchitecture
+ ARCH_DEFINES = -DHAVE_PARAM_H  
++#ifdef arm32Architecture
++CDEBUGFLAGS =
++#endif
+ #endif
+ 
+ #ifdef OS2Architecture
+@@ -133,11 +136,13 @@
+ 
+ #if defined(NetBSDArchitecture) || defined(BSD386Architecture)
  ARCH_DEFINES = -DHAVE_PARAM_H
 -TIFF_INCLUDE = -I/usr/local/include
 -TIFF_LIB     = -L/usr/local/lib -ltiff
@@ -19,3 +29,5 @@ $NetBSD: patch-af,v 1.1 1999/05/09 18:47:22 tron Exp $
 +PNG_LIB     = -L${LOCALBASE}/lib -lpng -lz
 +XPM_INCLUDE = -I${X11BASE}/include/X11
  #endif
+ 
+ #if defined(FreeBSDArchitecture)
