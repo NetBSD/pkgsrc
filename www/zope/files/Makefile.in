@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 1998/12/12 17:28:23 tsarna Exp $
+
+all: all-pcgi all-lib all-dt all-bobopos
+configure: configure-pcgi configure-lib configure-dt configure-bobopos
+	
+configure-pcgi:
+	(cd pcgi; ./configure)
+
+all-pcgi:
+	(cd pcgi; make)
+
+configure-lib:
+	(cd lib/python; \
+	make -f Makefile.pre.in boot PYTHON=@PREFIX@/bin/python)
+
+all-lib:
+	(cd lib/python; make)
+
+configure-dt:
+	(cd lib/python/DocumentTemplate; \
+	make -f Makefile.pre.in boot PYTHON=python)
+
+all-dt:
+	(cd lib/python/DocumentTemplate; make)
+
+configure-bobopos:
+	(cd lib/python/BoboPOS; \
+	make -f Makefile.pre.in boot PYTHON=python)
+
+all-bobopos:
+	(cd lib/python/BoboPOS; make)

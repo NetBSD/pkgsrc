@@ -1,0 +1,19 @@
+Zope is a free, open source web application platform used for building
+high-performance, dynamic web sites.
+
+The Zope architecture competes in the web application server market
+against products such as Cold Fusion, Silverstream, Netscape Application
+Server, and the like.  These products are aimed at systems programmers
+and relational databases.  Zope, however, contains a powerful and simple
+scripting object model and high-performance, integrated object database. 
+Thus the term "platform".
+
+Zope is divided into a number of systems, each described below.  First,
+the Z Publisher provides object publishing that integrates with common
+web servers using a number of protocols, such as Zope's Persistent CGI. 
+The Z Framework contains the foundation for the environment and builtin
+objects such as folders, documents, and images.  The Z Template system
+provides dynamic page generation.  The Z Object Database gives an
+advanced storage system that integrates tightly with Zope's web object
+model.  Finally, Z SQL Methods and Z Database Adapters provide
+object-relational integration of data in popular SQL servers
