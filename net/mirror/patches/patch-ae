@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.4 1999/12/28 18:15:43 itojun Exp $
+
 --- ftp.pl.orig	Tue May 23 23:53:25 1995
 +++ ftp.pl	Wed May 12 18:10:21 1999
 @@ -430,7 +430,7 @@
