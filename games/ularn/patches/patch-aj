@@ -1,8 +1,18 @@
-$NetBSD: patch-aj,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
+$NetBSD: patch-aj,v 1.2 2003/12/06 19:28:22 ben Exp $
 
---- header.h.orig	Sat Jan 13 21:51:26 2001
-+++ header.h	Sat Jan 13 21:51:43 2001
-@@ -120,7 +120,7 @@
+--- header.h.orig	1992-06-19 13:55:30.000000000 -0700
++++ header.h
+@@ -27,7 +27,8 @@
+ #include <pwd.h>
+ #include <signal.h>
+ #include <stdio.h>
+-#include <varargs.h>
++#include <stdarg.h>
++#include <stdlib.h>
+ #ifdef USG
+ #  include <strings.h>
+ #else
+@@ -120,7 +121,7 @@
  #define resetbold() {if (boldon) *lpnt++ = ST_END;}
  
  	/* clear the screen and home the cursor */

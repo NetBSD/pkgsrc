@@ -1,8 +1,17 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
+$NetBSD: patch-ae,v 1.2 2003/12/06 19:28:22 ben Exp $
 
---- data.c.orig	Fri Jun 19 13:55:29 1992
-+++ data.c	Sun Jan 14 13:42:03 2001
-@@ -114,27 +114,27 @@
+--- data.c.orig	1992-06-19 13:55:29.000000000 -0700
++++ data.c
+@@ -102,7 +102,7 @@ long skill[] = {
+ };
+ #undef MEG
+ 
+-char *tempfilename;
++char *tempfilename = NULL;
+ 
+ char 	*lpbuf,
+ 	*lpnt,
+@@ -114,27 +114,27 @@ char loginname[20];		/* players login na
  char logname[LOGNAMESIZE];	/* players name storage for scoring	*/
  char char_class[20];		/* character class */
  
@@ -44,7 +53,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  			** 2 means that the trap handling routines must do a
  			** showplayer() after a trap.  0 means don't showplayer()
  			**		0 - we are in create player screen
-@@ -142,27 +142,29 @@
+@@ -142,27 +142,29 @@ char predostuff=0;	/*  
  			**		2 - we are in the normal game	
  			*/
  
@@ -95,7 +104,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  
  long initialtime=0;		/* time playing began 	*/
  long gtime=0;			/* the clock for the game	*/
-@@ -289,7 +291,7 @@
+@@ -289,7 +291,7 @@ char *objectname[]=
   *
   *	array to do rnd() to create monsters <= a given level
   */
@@ -104,7 +113,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  
  struct monst monster[] = {
  
-@@ -380,82 +382,85 @@
+@@ -380,82 +382,85 @@ struct monst monster[] = {
  
  /*	name array for scrolls		*/
  char *scrollname[MAXSCROLL] = {
@@ -255,7 +264,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  	1,4,7,11,15,
  	20,24,28,30,32,
  	33,34,35,36,37,
-@@ -762,7 +767,7 @@
+@@ -762,7 +767,7 @@ char *spelmes[] = { 
   *	20 - remove curse	21 - annihilation			
   *	22 - pulverization	23 - life protection
   */
@@ -264,7 +273,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  	0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 
  	4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8,
  	9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 
-@@ -800,15 +805,15 @@
+@@ -800,15 +805,15 @@ char scprob[]= { 
   *  22 - poison		
   *  23 - see invisible
   */

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/12/06 18:26:47 ben Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/06 19:28:22 ben Exp $
 
 DISTNAME=		ularn
 PKGNAME=		ularn-6.12.92
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}
 CATEGORIES=		games
 MASTER_SITES=		http://www.cordier.com/ularn/
