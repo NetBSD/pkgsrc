@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/11/29 00:08:57 epg Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/12/05 21:53:51 epg Exp $
 
 DISTNAME=		clearsilver-0.9.13
 CLEARSILVER_BASE=       ${DISTNAME:S/-/-base-/}
@@ -27,4 +27,7 @@ CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
 
+PTHREAD_OPTS+=		require
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
