@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/08 19:40:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/22 03:31:25 kristerw Exp $
 
 DISTNAME=	alevt-1.6.0
 PKGREVISION=	2
@@ -14,7 +14,8 @@ DEPENDS+=	fxtv>=1.02:../../multimedia/fxtv
 DEPENDS+=	xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
-			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-*
+			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-* \
+			NetBSD-[2-9]*-*
 
 USE_X11BASE=	YES
 USE_GNU_TOOLS+=	make
