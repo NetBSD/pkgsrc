@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2005/03/22 16:04:44 jmmv Exp $
+$NetBSD: patch-aa,v 1.7 2005/04/02 13:01:28 jmmv Exp $
 
---- configure.orig	2005-01-19 02:14:43.000000000 +0100
+--- configure.orig	2005-01-19 01:14:43.000000000 +0000
 +++ configure
-@@ -21874,6 +21874,7 @@ echo "${ECHO_T}$GNOME_PRINT_LIBS" >&6
+@@ -21874,11 +21874,14 @@ echo "${ECHO_T}$GNOME_PRINT_LIBS" >&6
       \
  		have_gnome_print=no
    fi
@@ -10,7 +10,14 @@ $NetBSD: patch-aa,v 1.6 2005/03/22 16:04:44 jmmv Exp $
  
  
  if test "x$have_gnome_print" = "xyes"; then
-@@ -23633,6 +23634,7 @@ build_mozilla_plugin=no
+    GNOME_PRINT_CFLAGS="$GNOME_PRINT_CFLAGS -DHAVE_GNOME_PRINT=1"
+ fi
++GNOME_PRINT_CFLAGS=
++GNOME_PRINT_LIBS=
+ 
+ 
+ 
+@@ -23633,6 +23636,7 @@ build_mozilla_plugin=no
  if test "x$MOZILLA_CFLAGS" != "x"; then
     build_mozilla_plugin=yes
  fi
