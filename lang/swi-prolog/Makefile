@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/13 16:54:06 kristerw Exp $
+# $NetBSD: Makefile,v 1.28 2004/05/09 02:26:14 snj Exp $
 
 DISTNAME=		pl-lite-5.0.10
 PKGNAME=		swi-prolog-5.0.10
@@ -14,7 +14,7 @@ DIST_SUBDIR=		swi-prolog
 WRKSRC=			${WRKDIR}/${DISTNAME:S,-lite,,}
 
 GNU_CONFIGURE=		# defined
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	# uses rl_event_hook() interface
 
 SWIPL=			swi-prolog
@@ -34,6 +34,6 @@ PLIST_SUBST+=		BITS=64
 PLIST_SUBST+=		BITS=32
 .endif
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
