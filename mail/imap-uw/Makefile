@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/03/18 17:11:05 fredb Exp $
+# $NetBSD: Makefile,v 1.39 2002/03/18 17:25:28 fredb Exp $
 
 DISTNAME=       imap-2001a
 PKGNAME=        imap-uw-2001.1
@@ -27,6 +27,7 @@ ALL_TARGET=	gso
 ALL_TARGET=	neb
 .endif
 
+BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT
 CCLIENT_INCS=	c-client.h env.h env_unix.h flstring.h fs.h ftl.h	\
 		imap4r1.h linkage.c linkage.h mail.h misc.h netmsg.h	\
 		newsrc.h nl.h nntp.h osdep.h pop3.h rfc822.h smtp.h	\
@@ -49,7 +50,7 @@ MAKE_ENV+=	SSLDIR="${SSLBASE}"
 MAKE_ENV+=	SSLCERTS="${SSLCERTS}"
 MAKE_ENV+=	CCLIENT_MAJOR="${CCLIENT_MAJOR}"
 MAKE_ENV+=	CCLIENT_MINOR="${CCLIENT_MINOR}"
-MAKE_ENV+=	CREATEPROTO=${UMAP_IW_CCLIENT_MBOX_FMT}proto
+MAKE_ENV+=	CREATEPROTO=${UMAP_UW_CCLIENT_MBOX_FMT}proto
 
 ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
 ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
