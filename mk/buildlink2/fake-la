@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.11 2004/02/21 10:35:57 jlam Exp $
+# $NetBSD: fake-la,v 1.11.4.1 2004/07/09 06:55:13 agc Exp $
 
 AR="@AR@"
 AWK="@AWK@"
@@ -52,7 +52,7 @@ case $libname in
 		libbase=`${ECHO} $libname | ${SED} -e "s/\.a$//"`
 		ltlib="$realdir/$libbase.la"
 		# If there's already a libtool .la file, use it.
-		if ${TEST} -e "$ltlib" ; then
+		if ${TEST} -f "$ltlib" ; then
 			current=`${SED} -n -e'/^current=[[:digit:]]/{ s/^current=//; p; };' "$ltlib"`
 			rev=`${SED} -n -e'/^revision=[[:digit:]]/{ s/^revision=//; p; };' "$ltlib"`
 			current=$(($current + 0))
@@ -100,7 +100,7 @@ old_library=`${SED} -n -e"/^old_library='/{ s/^old_library='//; s/'$//; p; };" "
 
 for file in $dlname $library_names $old_library
 do
-	if ! [ -e $realdir/$file ]
+	if ${TEST} ! -r $realdir/$file
 	then
 		removal_pattern="$removal_pattern -e s,$file\([^.0-9]\),\1,g"
 	fi
