@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2004/03/27 21:45:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/14 22:03:55 dmcmahill Exp $
 #
 
 DISTNAME=		matlab.el
-PKGNAME=		matlab-mode-2.3.1
+# we do this because we want DIST_SUBDIR to not change based on
+# emacs vs xemacs
+BASEPKGNAME=		matlab-mode-2.3.1
+PKGNAME=		${BASEPKGNAME}
 CATEGORIES=		editors math
 MASTER_SITES=		http://www.mathworks.com/matlabcentral/files/104/
 EXTRACT_SUFX=
@@ -13,7 +16,7 @@ COMMENT=		Matlab mode for Emacs
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKDIR}
-DIST_SUBDIR=		${PKGNAME_NOREV}
+DIST_SUBDIR=		${BASEPKGNAME}
 
 .include "../../mk/emacs.mk"
 
