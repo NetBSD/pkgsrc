@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.93 2002/12/10 12:50:48 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.94 2002/12/12 03:02:41 jschauma Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -115,6 +115,10 @@ LOWER_ARCH!=		${UNAME} -p
 MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 LOWER_VENDOR?=		apple
+
+.elif ${OPSYS:MIRIX*} != ""
+LOWER_OPSYS?=		irix${OS_VERSION:C/\.[0-9]//}
+LOWER_VENDOR?=		sgi
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
