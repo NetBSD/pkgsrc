@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.5 1999/12/30 22:51:29 jlam Exp $
+$NetBSD: patch-af,v 1.6 2000/02/27 20:48:18 thorpej Exp $
 
---- configure.in.orig	Wed Dec  8 23:04:45 1999
-+++ configure.in	Thu Dec 30 17:14:53 1999
+--- configure.in.orig	Thu Jan 27 12:01:37 2000
++++ configure.in	Sun Feb 27 12:33:56 2000
 @@ -146,7 +146,7 @@
  		DEV=""
  		;;
@@ -11,13 +11,10 @@ $NetBSD: patch-af,v 1.5 1999/12/30 22:51:29 jlam Exp $
  		;;
  esac])
  
-@@ -162,6 +162,19 @@
+@@ -165,6 +165,19 @@
  		;;
-     no)		;;
-     *)		echo "Ignoring unknown argument to --with-csops: $with_csops"
-+		;;
-+esac])
-+
+ esac])
+ 
 +AC_ARG_WITH(nbsdops, [  --with-nbsdops          add NetBSD standard options],
 +[case $with_nbsdops in  
 +    yes)	echo 'Adding NetBSD standard options'
@@ -28,6 +25,31 @@ $NetBSD: patch-af,v 1.5 1999/12/30 22:51:29 jlam Exp $
 +		;;
 +    no)		;;
 +    *)		echo "Ignoring unknown argument to --with-nbsdops: $with_nbsdops"
- 		;;
- esac])
++		;;
++esac])
++
+ AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
+ [case $with_passwd in
+     yes)	;;
+@@ -1408,7 +1421,9 @@
+ dnl
+ if test "$with_kerb5" = "yes"; then
+     AC_DEFINE(HAVE_KERB5)
+-    if test -f "/usr/local/include/krb5.h"; then
++    if test -f "/usr/include/krb5/krb5.h"; then
++	CPPFLAGS="$CPPFLAGS -I/usr/include/krb5";
++    elif test -f "/usr/local/include/krb5.h"; then
+ 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+     elif test -f "/usr/local/kerberos/include/krb5.h"; then
+ 	CPPFLAGS="$CPPFLAGS -I/usr/local/kerberos/include"
+@@ -1418,7 +1433,9 @@
+ 	echo 'Unable to locate kerberos 5 include files, you will have to edit the Makefile and add -I/path/to/krb/includes to CPPFLAGS'
+     fi
  
+-    if test -f "/usr/local/lib/libkrb5.a"; then
++    if test -f "/usr/lib/libkrb5.a"; then
++	SUDO_LDFLAGS="${SUDO_LDFLAGS}";
++    elif test -f "/usr/local/lib/libkrb5.a"; then
+ 	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/lib"
+     elif test -f "/usr/local/kerberos/lib/libkrb5.a"; then
+ 	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/kerberos/lib"
