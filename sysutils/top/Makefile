@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/12/07 02:39:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2003/01/19 09:39:06 salo Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -29,8 +29,7 @@ CONFIGURE_ARGS+=	${CONF}
 PKG_SKIP_REASON=	"${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
-MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" \
-		COPY="${COPY}" STRIPFLAG="${_STRIPFLAG_INSTALL}"
+MAKE_ENV+=	COPY="${COPY}" STRIPFLAG="${_STRIPFLAG_INSTALL}"
 
 pre-configure:
 	${CP} ${FILESDIR}/defaults.${CONF} ${WRKSRC}/.defaults
