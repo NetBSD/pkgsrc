@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/14 17:47:27 rh Exp $
+bin/librsvg-config
+include/librsvg/art_render.h
+include/librsvg/art_render_gradient.h
+include/librsvg/art_render_mask.h
+include/librsvg/art_render_svp.h
+include/librsvg/art_rgba.h
+include/librsvg/librsvg-features.h
+include/librsvg/rsvg-bpath-util.h
+include/librsvg/rsvg-css.h
+include/librsvg/rsvg-defs.h
+include/librsvg/rsvg-ft.h
+include/librsvg/rsvg-paint-server.h
+include/librsvg/rsvg-path.h
+include/librsvg/rsvg.h
+lib/librsvg.a
+lib/librsvg.la
+lib/librsvg.so
+lib/librsvg.so.1
+lib/librsvg.so.1.0
+lib/librsvgConf.sh
+lib/pkgconfig/librsvg-1.0.pc
+share/aclocal/librsvg.m4
+@dirrm include/librsvg
