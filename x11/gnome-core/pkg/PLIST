@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/04/16 21:55:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 1999/05/20 19:12:12 tron Exp $
 bin/gmenu
 bin/jbc_applet
 bin/gnome-edit
@@ -20,10 +20,11 @@ bin/clockmail_applet
 bin/fifteen_applet
 bin/battery_applet
 bin/charpick_applet
+bin/mini_commander_applet
+bin/mixer_applet
 bin/modemlights_applet
 bin/gnome-help-caller
 bin/gnomepager_applet
-bin/mini_commander_applet
 bin/life_applet
 bin/another_clock_applet
 etc/CORBA/servers/life_applet.gnorba
@@ -41,6 +42,7 @@ etc/CORBA/servers/battery_applet.gnorba
 etc/CORBA/servers/charpick_applet.gnorba
 etc/CORBA/servers/gnomepager_applet.gnorba
 etc/CORBA/servers/mini-commander_applet.gnorba
+etc/CORBA/servers/mixer_applet.gnorba
 etc/CORBA/servers/modemlights_applet.gnorba
 etc/CORBA/servers/webcontrol_applet.gnorba
 etc/CORBA/servers/gkb_applet.gnorba
@@ -68,6 +70,7 @@ share/applets/Amusements/fifteen_applet.desktop
 share/applets/Monitors/.directory
 share/applets/Monitors/battery_applet.desktop
 share/applets/Multimedia/.directory
+share/applets/Multimedia/mixer_applet.desktop
 share/applets/Network/.directory
 share/applets/Network/mailcheck_applet.desktop
 share/applets/Network/dialer_applet.desktop
