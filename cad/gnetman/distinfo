@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2004/07/18 02:46:41 dmcmahill Exp $
 
 SHA1 (gnetman-07May04.tar.gz) = c11628e0294e4441da7926832d67e4fc10807991
 Size (gnetman-07May04.tar.gz) = 914828 bytes
@@ -12,8 +12,8 @@ SHA1 (patch-ag) = bf928baa1485c30c86b6c86adb1f6a1b1f7733c0
 SHA1 (patch-ah) = 0f04d4056e1880deea051a2c383d7c2129ef7fc2
 SHA1 (patch-ai) = d8750fce08003bc26deec03f063f0ffd5f1b7b06
 SHA1 (patch-aj) = 54fcfbcffc19949135a36165a43786d0b85aa191
-SHA1 (patch-ak) = 5e5eea06841e90adf72ef253369db4c63ec75bb6
-SHA1 (patch-al) = c1a22d64817e16000e781031a847c9f8dbb2ea14
+SHA1 (patch-ak) = db9783c61a91a23c194cf10742343b2aa7abf4e1
+SHA1 (patch-al) = 75c877b36d1c72a23c31ddc85c749e74de30b5bd
 SHA1 (patch-am) = 3259688e9c9d6476bc504e08adee1b989cdac7ea
 SHA1 (patch-an) = 953b97a4cfa0abc26d550aa71479df875e7085fd
 SHA1 (patch-ao) = 520f02290157412dde8a5a365210998a5e3d7996
