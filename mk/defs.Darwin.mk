@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.16 2001/12/27 21:27:07 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.17 2002/01/19 21:29:41 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -36,11 +36,13 @@ MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
 PKGLOCALEDIR?=	share
+PS?=		/bin/ps
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
+SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
 SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
