@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2393 2004/11/19 15:58:16 wiz Exp $
+$NetBSD: TODO,v 1.2394 2004/11/19 16:32:57 minskim Exp $
 
 Suggested new packages
 ======================
@@ -676,6 +676,7 @@ Suggested package updates
 	o tcpreplay-2.3.2
 	o tct-1.14
 	o teapop-0.3.8
+	o tela-2.01
 	o texi2html-1.70
 	o tfmxplay-1.1.6
 	o thunderbird-0.9
