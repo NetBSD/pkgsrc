@@ -1,0 +1,131 @@
+$NetBSD: patch-at,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/argiter.c.orig	Thu Jan  2 13:33:31 1997
++++ src/lib/argiter.c
+@@ -7,32 +7,38 @@
+ //
+ // ^HISTORY:
+ //    04/03/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cstdlib>
++#include <cstring>
++#include <cctype>
++#include <iostream>
+ 
+ #include "cmdline.h"
+ 
++namespace cmdline {
++
+ //-------------------------------------------------------- class CmdLineArgIter
+ 
+-CmdLineArgIter::CmdLineArgIter(void) {}
++CmdLineArgIter::CmdLineArgIter() {}
+ 
+-CmdLineArgIter::~CmdLineArgIter(void) {}
++CmdLineArgIter::~CmdLineArgIter() {}
+ 
+ //----------------------------------------------------------- class CmdArgvIter
+ 
+-CmdArgvIter::~CmdArgvIter(void) {}
++CmdArgvIter::~CmdArgvIter() {}
+ 
+ const char *
+-CmdArgvIter::operator()(void) {
++CmdArgvIter::operator()() {
+    return  ((index != count) && (array[index])) ? array[index++] : 0 ;
+ }
+ 
+ int
+-CmdArgvIter::is_temporary(void) const { return  0; }
++CmdArgvIter::is_temporary() const { return  0; }
+ 
+ //--------------------------------------------------------- class CmdStrTokIter
+ 
+@@ -46,7 +52,7 @@
+ }
+ 
+    // Destructor
+-CmdStrTokIter::~CmdStrTokIter(void)
++CmdStrTokIter::~CmdStrTokIter()
+ {
+    delete  tokstr;
+ }
+@@ -62,24 +68,24 @@
+    tokstr = NULL;
+    token = NULL;
+    if (tokens) {
+-      // Make a copy of the token-string (because ::strtok() modifies it)
++      // Make a copy of the token-string (because std::strtok() modifies it)
+       // and get the first token from the string
+       //
+-      tokstr = new char[::strlen(tokens) + 1] ;
+-      (void) ::strcpy(tokstr, tokens);
+-      token = ::strtok(tokstr, seps);
++      tokstr = new char[std::strlen(tokens) + 1] ;
++      std::strcpy(tokstr, tokens);
++      token = std::strtok(tokstr, seps);
+    }
+ }
+ 
+    // Iterator function -- operator()
+-   //   Just use ::strtok to get the next token from the string
++   //   Just use std::strtok to get the next token from the string
+    //
+ const char *
+-CmdStrTokIter::operator()(void)
++CmdStrTokIter::operator()()
+ {
+    if (seps == NULL)  seps = WHITESPACE ;
+    const char * result = token;
+-   if (token) token = ::strtok(NULL, seps);
++   if (token) token = std::strtok(NULL, seps);
+    return  result;
+ }
+ 
+@@ -87,7 +93,7 @@
+    // always points to temporary space.
+    //
+ int
+-CmdStrTokIter::is_temporary(void) const
++CmdStrTokIter::is_temporary() const
+ {
+    return  1;
+ }
+@@ -102,7 +108,7 @@
+ }
+ 
+    // Destructor
+-CmdIstreamIter::~CmdIstreamIter(void)
++CmdIstreamIter::~CmdIstreamIter()
+ {
+    delete  tok_iter;
+ }
+@@ -122,7 +128,7 @@
+    // consider the line to be a comment and we ignore it.
+    //
+ const char *
+-CmdIstreamIter::operator()(void)
++CmdIstreamIter::operator()()
+ {
+    const char * result = NULL;
+    if (tok_iter)  result = tok_iter->operator()();
+@@ -151,7 +157,9 @@
+    // the tokens we return are always in temporary storage
+    //
+ int
+-CmdIstreamIter::is_temporary(void) const
++CmdIstreamIter::is_temporary() const
+ {
+    return  1;
+ }
++
++} // namespace cmdline

@@ -1,0 +1,35 @@
+$NetBSD: patch-as,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/Makefile.orig	Thu Jan  2 13:33:31 1997
++++ src/lib/Makefile
+@@ -70,20 +70,25 @@
+ test: cmdtest$(EXECEXT)
+ 
+ cmdtest$(EXECEXT): cmdtest$(OBJEXT) $(OBJS)
+-	$(CC) $(EXE) $@ cmdtest$(OBJEXT) $(LIBRARY)
++	$(CC) $(EXE) $@ cmdtest$(OBJEXT) $(LIBRARY) $(USRLIBS)
+ 
+-$(LIBRARY): $(OBJS)
++lib$(LIBNAME).a: $(OBJS)
+ 	$(AR) $@ $(OBJS)
+ 	$(RANLIB) $@
+ 
++lib$(LIBNAME).la: $(OBJS)
++	$(LIBTOOL) g++ -o lib$(LIBNAME).la $(OBJS:.o=.lo) \
++		-rpath $(PREFIX)/lib -version-info 0:0
++
+ ###
+ # maintenance dependencies
+ ###
+ install: $(LIBRARY) $(LIBDIR) $(INCDIR) cmdline.h cmdargs.h
+ 	-$(RM) $(LIBDIR)$(LIBRARY) $(INCDIR)cmdline.h $(INCDIR)cmdargs.h
+-	$(CP) $(LIBRARY) $(LIBDIR)$(LIBRARY)
+-	$(CP) cmdline.h $(INCDIR)cmdline.h
+-	$(CP) cmdargs.h $(INCDIR)cmdargs.h
++	$(LIBTOOL) $(BSD_INSTALL_DATA) $(LIBRARY) $(LIBDIR)$(LIBRARY)
++	$(BSD_INSTALL_DATA) cmdline.h $(INCDIR)cmdline.h
++	$(BSD_INSTALL_DATA) cmdargs.h $(INCDIR)cmdargs.h
++	$(BSD_INSTALL_DATA) fifolist.h $(INCDIR)fifolist.h
+ 
+ clean:
+ 	-$(RM) *$(OBJEXT) core .exrc *~ \#*\#

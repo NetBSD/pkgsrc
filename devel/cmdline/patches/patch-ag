@@ -1,0 +1,123 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/cmdparse.h.orig	Thu Jan  2 13:33:28 1997
++++ src/cmd/cmdparse.h
+@@ -10,6 +10,10 @@
+ //
+ //    03/01/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added ALLOW_PLUS to list of CmdLine configuration flags
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Refer to namespace cmdline
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _cmdparse_h
+@@ -32,30 +36,30 @@
+    // CmdArgVers is a class that simply prints (on cerr) the version
+    // information for this command.
+    //
+-class  CmdArgVers : public CmdArg {
++class  CmdArgVers : public cmdline::CmdArg {
+ public:
+    CmdArgVers(char optchar, const char * keyword, const char * description);
+ 
+-   virtual ~CmdArgVers(void);
++   virtual ~CmdArgVers();
+ 
+    virtual  int
+-   operator()(const char * & arg, CmdLine & cmd);
++   operator()(const char * & arg, cmdline::CmdLine & cmd);
+ } ;
+ 
+ 
+ class  istream ;
+ class  ArgSyntax ;
+ class  UnixShell ;
+-class  CmdParseCommand : public CmdLine {
++class  CmdParseCommand : public cmdline::CmdLine {
+ public:
+ 
+    CmdParseCommand(const char * name);
+ 
+-   virtual  ~CmdParseCommand(void);
++   virtual  ~CmdParseCommand();
+ 
+       // Do whatever it is we need to do!
+    int
+-   operator()(CmdLineArgIter & iter) ;
++   operator()(cmdline::CmdLineArgIter & iter) ;
+ 
+ private:
+       // Dont allow copying or assignment
+@@ -68,7 +72,7 @@
+ 
+       // Parse the users argument declarations
+    int
+-   parse_declarations(void);
++   parse_declarations();
+ 
+    int
+    parse_declarations(const char * input);
+@@ -85,35 +89,35 @@
+ 
+    //------------------------------------------------ arguments to cmdparse(1)
+ 
+-   CmdArgBool     anywhere;         // clear OPTS_FIRST
+-   CmdArgBool     anycase;          // set ANY_CASE_OPTS
+-   CmdArgBool     no_abort;         // set NO_ABORT
+-   CmdArgBool     no_guessing;      // set NO_GUESSING
+-   CmdArgBool     prompt;           // set PROMPT_USER
+-   CmdArgBool     plus;             // set ALLOW_PLUS
+-   CmdArgBool     opts_only;        // set OPTS_ONLY
+-   CmdArgBool     kwds_only;        // set KWDS_ONLY
+-   CmdArgBool     quiet;            // set QUIET
+-
+-   CmdArgVers     version;          // print version and exit
+-   CmdArgBool     usage;            // print usage and exit
+-
+-   CmdArgBool     array_variant;    // use alternate array syntax
+-   CmdArgStr      true_str;         // TRUE for booleans
+-   CmdArgStr      false_str;        // FALSE for booleans
+-   CmdArgStr      suffix_str;       // suffix for missing optional-values
+-   CmdArgStr      usr_shell;        // the shell (command interpreter)
+-
+-   CmdArgStr      input_file;       // read declarations from file
+-   CmdArgStr      input_var;        // read declarations environment variable
+-   CmdArgStr      input_str;        // read declarations from string
++   cmdline::CmdArgBool     anywhere;         // clear OPTS_FIRST
++   cmdline::CmdArgBool     anycase;          // set ANY_CASE_OPTS
++   cmdline::CmdArgBool     no_abort;         // set NO_ABORT
++   cmdline::CmdArgBool     no_guessing;      // set NO_GUESSING
++   cmdline::CmdArgBool     prompt;           // set PROMPT_USER
++   cmdline::CmdArgBool     plus;             // set ALLOW_PLUS
++   cmdline::CmdArgBool     opts_only;        // set OPTS_ONLY
++   cmdline::CmdArgBool     kwds_only;        // set KWDS_ONLY
++   cmdline::CmdArgBool     quiet;            // set QUIET
++
++   CmdArgVers              version;          // print version and exit
++   cmdline::CmdArgBool     usage;            // print usage and exit
++
++   cmdline::CmdArgBool     array_variant;    // use alternate array syntax
++   cmdline::CmdArgStr      true_str;         // TRUE for booleans
++   cmdline::CmdArgStr      false_str;        // FALSE for booleans
++   cmdline::CmdArgStr      suffix_str;       // suffix for missing optional-values
++   cmdline::CmdArgStr      usr_shell;        // the shell (command interpreter)
++
++   cmdline::CmdArgStr      input_file;       // read declarations from file
++   cmdline::CmdArgStr      input_var;        // read declarations environment variable
++   cmdline::CmdArgStr      input_str;        // read declarations from string
+ 
+-   CmdArgDummy    dummy_arg;        // "--"
++   cmdline::CmdArgDummy    dummy_arg;        // "--"
+ 
+-   CmdArgStr      usr_prog;         // program name
+-   CmdArgStrList  usr_args;         // program arguments
++   cmdline::CmdArgStr      usr_prog;         // program name
++   cmdline::CmdArgStrList  usr_args;         // program arguments
+ 
+-   CmdLine        usr_cmd;          // the user's CmdLine object
++   cmdline::CmdLine        usr_cmd;          // the user's CmdLine object
+ } ;
+ 
+ #endif  /* _cmdparse_h */

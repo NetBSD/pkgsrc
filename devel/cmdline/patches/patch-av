@@ -1,0 +1,161 @@
+$NetBSD: patch-av,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/cmdarg.c.orig	Thu Jan  2 13:33:32 1997
++++ src/lib/cmdarg.c
+@@ -10,18 +10,26 @@
+ //
+ //    03/01/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added arg_sequence field to CmdArg
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cstdlib>
++#include <cstring>
++#include <cctype>
++#include <iostream>
+ 
+ #include "cmdline.h"
+ 
++namespace cmdline {
++
++using std::cerr;
++
+ //---------------------------------------------------------------------- CmdArg
+ 
+-int  CmdArg::is_dummy(void) { return  0; }
++int  CmdArg::is_dummy() { return  0; }
+ 
+    // Copy-Constructor
+ CmdArg::CmdArg(const CmdArg & cp)
+@@ -35,8 +43,8 @@
+      arg_description(cp.arg_description)
+ {
+    if (alloc_value_name) {
+-      char * val_name = new char[::strlen(cp.arg_value_name) + 1] ;
+-      ::strcpy((char *)val_name, cp.arg_value_name);
++      char * val_name = new char[std::strlen(cp.arg_value_name) + 1] ;
++      std::strcpy((char *)val_name, cp.arg_value_name);
+       arg_value_name = val_name;
+    }
+ }
+@@ -47,7 +55,7 @@
+                const char * keyword,
+                const char * value,
+                const char * description,
+-               unsigned     syntax_flags)
++               unsigned int syntax_flags)
+    : alloc_value_name(0),
+      arg_flags(0),
+      arg_syntax(syntax_flags),
+@@ -66,7 +74,7 @@
+ CmdArg::CmdArg(char         optchar,
+                const char * keyword,
+                const char * description,
+-               unsigned     syntax_flags)
++               unsigned int syntax_flags)
+    : alloc_value_name(0),
+      arg_flags(0),
+      arg_syntax(syntax_flags),
+@@ -83,7 +91,7 @@
+ 
+ CmdArg::CmdArg(const char * value,
+                const char * description,
+-               unsigned     syntax_flags)
++               unsigned int syntax_flags)
+    : alloc_value_name(0),
+      arg_flags(0),
+      arg_syntax(syntax_flags),
+@@ -100,7 +108,7 @@
+ 
+ 
+    // Destructor
+-CmdArg::~CmdArg(void)
++CmdArg::~CmdArg()
+ {
+    if (alloc_value_name)    delete [] (char *)arg_value_name;
+ }
+@@ -110,7 +118,7 @@
+ // ^FUNCTION: adjust_syntax - adjust command argument syntax
+ //
+ // ^SYNOPSIS:
+-//    CmdArg::adjust_syntax(void)
++//    CmdArg::adjust_syntax()
+ //
+ // ^PARAMETERS:
+ //    None.
+@@ -134,7 +142,7 @@
+ //    Follow along in the code ...
+ //-^^----------------
+ void
+-CmdArg::adjust_syntax(void)
++CmdArg::adjust_syntax()
+ {
+    static const char default_value_name[] = "value" ;
+ 
+@@ -207,7 +215,7 @@
+ // ^FUNCTION: parse_description - parse the argument description string
+ //
+ // ^SYNOPSIS:
+-//    CmdLine::parse_description(void)
++//    CmdLine::parse_description()
+ //
+ // ^PARAMETERS:
+ //    None.
+@@ -233,7 +241,7 @@
+ enum { c_HIDDEN = ';', c_OPEN = '[', c_CLOSE = ']', c_LIST = '.' } ;
+ 
+ void
+-CmdArg::parse_description(void)
++CmdArg::parse_description()
+ {
+    if (arg_description == NULL)  return;
+    while (isspace(*arg_description))  ++arg_description;
+@@ -249,7 +257,7 @@
+ // ^FUNCTION: parse_value - parse the argument value name
+ //
+ // ^SYNOPSIS:
+-//    CmdLine::parse_value(void)
++//    CmdLine::parse_value()
+ //
+ // ^PARAMETERS:
+ //    None.
+@@ -274,7 +282,7 @@
+ //    Its kind of hairy so follow along.
+ //-^^----------------
+ void
+-CmdArg::parse_value(void)
++CmdArg::parse_value()
+ {
+    const char * save_value = arg_value_name;
+    int  brace = 0;
+@@ -306,7 +314,7 @@
+    alloc_value_name = 1;
+    int  len = (int) (ptr - arg_value_name);
+    char * copied_value = new char[len + 1];
+-   (void) ::strncpy(copied_value, arg_value_name, len);
++   std::strncpy(copied_value, arg_value_name, len);
+    copied_value[len] = '\0';
+    arg_value_name = copied_value;
+ 
+@@ -338,7 +346,7 @@
+    }
+ 
+    // Not done - we had better see a "..."
+-   if (::strncmp(ptr, "...", 3) != 0) {
++   if (std::strncmp(ptr, "...", 3) != 0) {
+       cerr << "Error: unexpected token \"" << ptr << "\"." << endl ;
+       ++errors;
+    } else {
+@@ -365,3 +373,5 @@
+            << "\t(error occurred in CmdArg constructor)" << endl ;
+    }
+ }
++
++} // namespace cmdline

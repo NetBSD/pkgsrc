@@ -1,0 +1,108 @@
+$NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/private.c.orig	Thu Jan  2 13:33:34 1997
++++ src/lib/private.c
+@@ -18,20 +18,29 @@
+ //
+ //    03/03/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added exit_handler() and quit() member-functions to CmdLine
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
++//    - Find readline.h in newer versions of readline
+ //-^^---------------------------------------------------------------------
+ 
+-#include <iostream.h>
+-#include <strstream.h>
+-#include <fstream.h>
+-#include <stdlib.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <iostream>
++#include <strstream>
++#include <cctype>
++#include <cstdlib>
++#include <cstring>
++#include <cstdio>
+ 
+ extern "C" {
+   int  isatty(int fd);
+ 
+ #ifdef GNU_READLINE
+-# include <readline.h>
++# ifdef HAVE_READLINE_H
++#  include <readline.h>
++# elif HAVE_READLINE_READLINE_H
++#  include <readline/readline.h>
++# endif
+ #endif
+ 
+ }
+@@ -48,8 +57,14 @@
+ 
+ #include "cmdline.h"
+ #include "states.h"
+-#include "arglist.h"
+ 
++namespace cmdline {
++
++using std::cerr;
++using std::cin;
++using std::isupper;
++using std::ostrstream;
++using std::tolower;
+ 
+ // Need a portable version of tolower
+ //
+@@ -236,7 +251,7 @@
+ // ^FUNCTION: CmdLine::prompt_user - prompt the user for a missing argument
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::prompt_user(cmdarg);
++//    unsigned int CmdLine::prompt_user(cmdarg);
+ //
+ // ^PARAMETERS:
+ //    CmdArg * cmdarg;
+@@ -274,7 +289,7 @@
+ //    - if an invalid value was given return ARG_MISSING
+ //    - else return 0
+ //-^^----
+-unsigned
++unsigned int
+ CmdLine::prompt_user(CmdArg * cmdarg)
+ {
+    // dont prompt if cin or cerr is not interactive
+@@ -316,7 +331,7 @@
+       // try to handle the value we read (remember - buf is temporary)
+       if (! errs) {
+          const char * arg = buf;
+-         unsigned  save_cmd_flags = cmd_flags;
++         unsigned int save_cmd_flags = cmd_flags;
+          cmd_flags |= TEMP;
+          errs = handle_arg(cmdarg, arg);
+          if (errs) {
+@@ -387,7 +402,7 @@
+ // ^FUNCTION: CmdLine::missing_args - check for missing required arguments
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::missing_args(void);
++//    unsigned int CmdLine::missing_args(void);
+ //
+ // ^PARAMETERS:
+ //
+@@ -424,7 +439,7 @@
+ //    endfor
+ //    return the current cmd-status
+ //-^^----
+-unsigned
++unsigned int
+ CmdLine::missing_args(void)
+ {
+    char buf[256];
+@@ -649,3 +664,5 @@
+    } //for list_iter
+    return  last_pos_list ;
+ }
++
++} // namespace cmdline

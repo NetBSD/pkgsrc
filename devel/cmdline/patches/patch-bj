@@ -1,0 +1,173 @@
+$NetBSD: patch-bj,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/unix.c.orig	Thu Jan  2 13:33:35 1997
++++ src/lib/unix.c
+@@ -19,17 +19,26 @@
+ //
+ //    03/01/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added ALLOW_PLUS to list of CmdLine configuration flags
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <iostream.h>
+-#include <strstream.h>
+-#include <stdlib.h>
+-#include <string.h>
++#include <iostream>
++#include <strstream>
++#include <cstdlib>
++#include <cstring>
+ 
+ #include "exits.h"
+ #include "cmdline.h"
+ #include "states.h"
+ 
++namespace cmdline {
++
++using std::ostream;
++using std::strpbrk;
++
+ //
+ // Some Helper function for getting and recognizing prefixes
+ //
+@@ -42,7 +51,7 @@
+ 
+    // Function to return the option-prefix
+ inline static const char *
+-OptionPrefix(void) { return  "-" ; }
++OptionPrefix() { return  "-" ; }
+ 
+ 
+    // Function to tell us if an argument looks like a long-option.
+@@ -67,14 +76,14 @@
+ 
+    // Function to return the "end-of-options" string
+ inline static const char *
+-EndOptions(void) { return "--" ; }
++EndOptions() { return "--" ; }
+ 
+ 
+ //-------
+ // ^FUNCTION: CmdLine::parse_option - parse a Unix option
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::parse_option(arg);
++//    unsigned int CmdLine::parse_option(arg);
+ //
+ // ^PARAMETERS:
+ //    const char * arg;
+@@ -120,11 +129,11 @@
+ //       endif
+ //    endfor
+ //-^^----
+-unsigned
++unsigned int
+ CmdLine::parse_option(const char * arg)
+ {
+    const  char * save_arg = arg;
+-   unsigned  save_flags = 0, rc = 0 ;
++   unsigned int save_flags = 0, rc = 0 ;
+    CmdArg * cmdarg = NULL;
+    int  bad_val;
+ 
+@@ -242,7 +251,7 @@
+ // ^FUNCTION: CmdLine::parse_keyword - parse a Unix keyword
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::parse_keyword(arg);
++//    unsigned int CmdLine::parse_keyword(arg);
+ //
+ // ^PARAMETERS:
+ //    const char * arg;
+@@ -285,10 +294,10 @@
+ //       update the state of the argument.
+ //    endif
+ //-^^----
+-unsigned
++unsigned int
+ CmdLine::parse_keyword(const char * arg)
+ {
+-   unsigned  save_flags = 0, rc = 0 ;
++   unsigned int save_flags = 0, rc = 0 ;
+    CmdArg * cmdarg = NULL ;
+    int  ambiguous = 0, len = -1, bad_val;
+    const char * val = NULL ;
+@@ -412,7 +421,7 @@
+ // ^FUNCTION: CmdLine::parse_value - parse a Unix value
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::parse_value(arg);
++//    unsigned int CmdLine::parse_value(arg);
+ //
+ // ^PARAMETERS:
+ //    const char * arg;
+@@ -448,10 +457,10 @@
+ //    endif
+ //    handle the given value and update the argument and command states.
+ //-^^----
+-unsigned
++unsigned int
+ CmdLine::parse_value(const char * arg)
+ {
+-   unsigned  save_flags = 0, rc = 0 ;
++   unsigned int save_flags = 0, rc = 0 ;
+    int  bad_val;
+    CmdArg * cmdarg = NULL;
+ 
+@@ -514,7 +523,7 @@
+ // ^FUNCTION: CmdLine::parse_arg - parse an argv[] element unix-style
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::parse_arg(arg)
++//    unsigned int CmdLine::parse_arg(arg)
+ //
+ // ^PARAMETERS:
+ //    const char * arg;
+@@ -552,7 +561,7 @@
+ //       call parse_value()
+ //    endif
+ //-^^----
+-unsigned
++unsigned int
+ CmdLine::parse_arg(const char * arg)
+ {
+    if (arg == NULL)  return  cmd_status ;
+@@ -660,7 +669,7 @@
+ // ^FUNCTION: CmdLine::fmt_arg - format an argument for usage messages
+ //
+ // ^SYNOPSIS:
+-//    unsigned CmdLine::fmt_arg(cmdarg, buf, bufsize, syntax, level);
++//    unsigned int CmdLine::fmt_arg(cmdarg, buf, bufsize, syntax, level);
+ //
+ // ^PARAMETERS:
+ //    const CmdArg * cmdarg;
+@@ -669,7 +678,7 @@
+ //    char * buf;
+ //    -- where to print the formatted result
+ //
+-//    unsigned bufsize;
++//    unsigned int bufsize;
+ //    -- number of bytes allocated for buf.
+ //
+ //    CmdLine::CmdLineSyntax syntax;
+@@ -695,10 +704,10 @@
+ // ^ALGORITHM:
+ //    Its kind of tedious so follow along.
+ //-^^----
+-unsigned
++unsigned int
+ CmdLine::fmt_arg(const CmdArg           * cmdarg,
+                  char                   * buf,
+-                 unsigned                 bufsize,
++                 unsigned int             bufsize,
+                  CmdLine::CmdLineSyntax   syntax,
+                  CmdLine::CmdUsageLevel   level) const
+ {
+@@ -819,3 +828,4 @@
+    return  (oss.pcount() - 1) ;
+ }
+ 
++} // namespace cmdline

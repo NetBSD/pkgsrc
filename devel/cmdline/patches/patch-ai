@@ -1,0 +1,81 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/fsm.h.orig	Thu Jan  2 13:33:28 1997
++++ src/cmd/fsm.h
+@@ -7,6 +7,9 @@
+ //
+ // ^HISTORY:
+ //    03/27/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+ class SyntaxFSM {
+@@ -23,35 +26,35 @@
+ 
+    struct token_t {
+       const char * start;  // start address of token
+-      unsigned     len;    // length of token
++      unsigned int len;    // length of token
+ 
+-      token_t(void) : start(0), len(0) {}
++      token_t() : start(0), len(0) {}
+ 
+       void
+-      set(const char * s, unsigned l) { start = s, len = l; }
++      set(const char * s, unsigned int l) { start = s, len = l; }
+    } ;
+ 
+-   SyntaxFSM(void) : ntoks(0), nbpairs(0), lev(0), fsm_state(START) {}
++   SyntaxFSM() : ntoks(0), nbpairs(0), lev(0), fsm_state(START) {}
+ 
+       // Reset the FSM 
+    void
+-   reset(void) { ntoks = 0; nbpairs = 0; lev = 0; fsm_state = START; }
++   reset() { ntoks = 0; nbpairs = 0; lev = 0; fsm_state = START; }
+ 
+       // Return the number of tokens parsed thus far.
+-   unsigned
+-   num_tokens(void) const  { return  ntoks; }
++   unsigned int
++   num_tokens() const  { return  ntoks; }
+ 
+       // Return the number of balanced brace-pairs parsed thus far.
+-   unsigned
+-   num_braces(void) const  { return  nbpairs; }
++   unsigned int
++   num_braces() const  { return  nbpairs; }
+ 
+       // Return the current nesting level of brace-pairs
+    int
+-   level(void) const  { return  lev; }
++   level() const  { return  lev; }
+ 
+       // Return the current machine state
+    state_t
+-   state(void) const  { return  fsm_state; }
++   state() const  { return  fsm_state; }
+ 
+       // Get the next token from "input" and place it in "token"
+       // (consuming characters from "input").
+@@ -63,10 +66,10 @@
+    operator()(const char * & input, token_t & token);
+ 
+ protected:
+-   unsigned  ntoks;      // number of tokens parsed thus far
+-   unsigned  nbpairs;    // number of balanced brace-pairs parsed thus far
+-   int       lev;        // current nesting level of brace-pairs
+-   state_t   fsm_state;  // current machine state
++   unsigned int ntoks;      // number of tokens parsed thus far
++   unsigned int nbpairs;    // number of balanced brace-pairs parsed thus far
++   int          lev;        // current nesting level of brace-pairs
++   state_t      fsm_state;  // current machine state
+ 
+ private:
+    void
+@@ -75,4 +78,3 @@
+    void
+    parse_token(const char * & input);
+ } ;
+-
