@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.6 2005/03/21 10:06:15 adam Exp $
 
 --- config/cf/NetBSD.cf.in.orig	2004-08-15 09:03:36.000000000 +0900
 +++ config/cf/NetBSD.cf.in	2005-03-20 03:57:25.000000000 +0900
