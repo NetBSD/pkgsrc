@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 1999/10/07 17:41:58 tron Exp $
+# $NetBSD: Makefile,v 1.63 1999/10/19 08:49:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--with-secureid
 # Don't use IDEA. IDEA can be freely used for non-commercial use. However,
 # commercial use may require a license in a number of countries
 # Warning: untested !
-.if defined(DONT_USE_IDEA) && ${DONT_USE_IDEA} == YES
+.if defined(SSH_DONT_USE_IDEA) && ${SSH_DONT_USE_IDEA} == YES
 CONFIGURE_ARGS+=	--without-idea
 .endif
 
@@ -148,7 +148,7 @@ fetch-depends:
 	@${ECHO} to YES.  Users outside the USA MUST set this variable to
 	@${ECHO} NO.  Licensees may choose -- NO is faster.
 	@${ECHO}
-	@${ECHO} You may also want to set DONT_USE_IDEA to YES if this program
+	@${ECHO} You may also want to set SSH_DONT_USE_IDEA to YES if this program
 	@${ECHO} will be used for a commercial purpose.  There are other
 	@${ECHO} configure options\; look at the pkg Makefile for more info.
 	@${FALSE}
@@ -193,7 +193,7 @@ post-install:
 	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
 
-BUILD_DEFS+=		DONT_USE_IDEA SSH_CONF_DIR SSH_SUID USE_RSAREF2
+BUILD_DEFS+=		SSH_DONT_USE_IDEA SSH_CONF_DIR SSH_SUID USE_RSAREF2
 BUILD_DEFS+=		LIBWRAP_FWD M68060 USE_SOCKS USE_INET6
 
 .include "../../mk/bsd.pkg.mk"
