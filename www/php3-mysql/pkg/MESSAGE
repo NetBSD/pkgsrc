@@ -1,8 +1,8 @@
-$NetBSD: MESSAGE,v 1.1 2000/10/02 13:28:45 agc Exp $
+$NetBSD: MESSAGE,v 1.2 2000/10/02 14:29:23 agc Exp $
 
 To enable fully this package, you will need to ensure that the
 following lines appear in php3.ini (which is normally
-@PREFIX@/php3.ini)
+@PREFIX@/etc/php3.ini)
 
 	extension_dir=@PREFIX@/lib/php3
 	extension=mysql.so
