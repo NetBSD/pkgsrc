@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.11 2001/04/30 23:01:58 manu Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/11 09:14:00 wiz Exp $
 
-DISTNAME=		linuxppc_lib-2000.q4.5
+DISTNAME=		linuxppc_lib-2000.4.5
 CATEGORIES=		emulators
 MASTER_SITES+=		ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 MASTER_SITES+=		http://linuxppc.org/software/java/dl/motif/
 RPMFILES=	glibc-2.1.3-15f.ppc.rpm glib-1.2.8-3.ppc.rpm \
-				libjpeg-6b-13.ppc.rpm libpng-1.0.5-3.ppc.rpm \
-				libstdc++-2.10.0-2n.ppc.rpm libtermcap-2.0.8-20.ppc.rpm \
-				libtiff-3.5.5-2.ppc.rpm XFree86-libs-3.3.6-20b.ppc.rpm \
-				zlib-1.1.3-6.ppc.rpm ldconfig-1.9.5-16.ppc.rpm \
-				libjpeg6a-6a-5.ppc.rpm xpm-3.4k-1.ppc.rpm \
-				ncurses-5.0-12.ppc.rpm readline-2.2.1-7a.ppc.rpm
+		libjpeg-6b-13.ppc.rpm libpng-1.0.5-3.ppc.rpm \
+		libstdc++-2.10.0-2n.ppc.rpm libtermcap-2.0.8-20.ppc.rpm \
+		libtiff-3.5.5-2.ppc.rpm XFree86-libs-3.3.6-20b.ppc.rpm \
+		zlib-1.1.3-6.ppc.rpm ldconfig-1.9.5-16.ppc.rpm \
+		libjpeg6a-6a-5.ppc.rpm xpm-3.4k-1.ppc.rpm \
+		ncurses-5.0-12.ppc.rpm readline-2.2.1-7a.ppc.rpm
 DISTFILES+=	${RPMFILES}
-DISTFILES+= openmotif-2.1.30-3_MLI_jdk.tar.gz
+DISTFILES+=	openmotif-2.1.30-3_MLI_jdk.tar.gz
 
 MAINTAINER=		p99dreyf@criens.u-psud.fr
 HOMEPAGE=		http://www.linuxppc.org/
