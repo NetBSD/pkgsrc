@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/10 06:22:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/03/23 22:17:34 markd Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
@@ -32,6 +32,9 @@ share/doc/kde/HTML/en/kpackage/right-change.png
 share/doc/kde/HTML/en/kpackage/right-files.png
 share/doc/kde/HTML/en/kpackage/right-prop.png
 share/doc/kde/HTML/en/kpackage/rpmloc.png
+share/doc/kde/HTML/en/kpackage/search.png
+share/doc/kde/HTML/en/kpackage/searchf.png
+share/doc/kde/HTML/en/kpackage/searchl.png
 share/doc/kde/HTML/en/kpackage/slackloc.png
 share/doc/kde/HTML/en/kpackage/uninstall.png
 share/doc/kde/HTML/en/ksysv/common
@@ -41,6 +44,7 @@ share/doc/kde/HTML/en/kuser/common
 share/doc/kde/HTML/en/kuser/index.cache.bz2
 share/doc/kde/HTML/en/kuser/index.docbook
 share/doc/kde/HTML/en/kuser/kuser.png
+share/kde/apps/kcron/kcronui.rc
 share/kde/apps/kpackage/kpackageui.rc
 share/kde/apps/kpackage/pics/bnew.png
 share/kde/apps/kpackage/pics/bsd.png
@@ -106,6 +110,7 @@ share/kde/services/kfile_rpm.desktop
 @dirrm share/kde/apps/kuser
 @dirrm share/kde/apps/kpackage/pics
 @dirrm share/kde/apps/kpackage
+@dirrm share/kde/apps/kcron
 @comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/en/kuser
 @dirrm share/doc/kde/HTML/en/ksysv
