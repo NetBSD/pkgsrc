@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/07/21 16:06:23 shannonjr Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/26 17:28:40 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-ada-${GCC_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +24,37 @@ CONFIGURE_ARGS+=	--enable-languages="c,ada"
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 .include "../../mk/bsd.prefs.mk"
+
+# Determine whether to use binutils
+.if ${OPSYS} == "NetBSD"
+.  if !defined(USE_BINUTILS)
+AS_PATH:=	${AS}
+.    for _dir_ in ${PATH:C/\:/ /g}
+.      if empty(AS_PATH:M/*)
+.        if exists(${_dir_}/${AS})
+AS_PATH:=	${_dir_}/${AS}
+.        endif
+.      endif
+.    endfor
+.    if !empty(AS_PATH:M${LOCALBASE}/*)
+USE_BINUTILS=	YES
+.    else
+AS_VERSION!=	${AS} --version | ${AWK} '{	\
+	split($$3, v, /[.]/);	\
+	printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
+	exit;	\
+	}'
+USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
+.    endif
+MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS}
+.  endif
+.endif
+.if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
+DEPENDS+=	binutils>=2.14:../../devel/binutils
+CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/bin/as
+CONFIGURE_ARGS+=	--with-gnu-as
+CONFIGURE_ARGS+=	--with-gnu-ld
+.endif
 
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. Two
@@ -60,11 +92,11 @@ FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
-GCC_PLATFORM=		${MACHINE_GNU_ARCH}--netbsdelf2.0
 PTHREAD_OPTS+=		require native
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--enable-threads=gnat
 GCC_DIR=	${WRKDIR}/.gcc
 
@@ -141,4 +173,5 @@ BUILDLINK_DEPMETHOD.gcc34=	build
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
