@@ -1,0 +1,6 @@
+This SquirrelMail plugin adds a 'view' link for specific attachment types,
+as listed below: 
+
+	Text or HTML messages 
+	Images that are supported by your browser 
+	VCards (enables you to quickly add this person to your address book) 
