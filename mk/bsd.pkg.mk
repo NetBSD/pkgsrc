@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.928 2002/02/18 15:14:34 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.929 2002/02/25 04:43:55 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1405,6 +1405,8 @@ show-pkgsrc-dir:
 .  endif
 .endif
 
+# Extract
+
 # pkgsrc coarse-grained locking definitions and targets
 .if ${PKGSRC_LOCKTYPE} == "none"
 _ACQUIRE_LOCK=	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
@@ -1431,12 +1433,33 @@ _RELEASE_LOCK=								\
 	${RM} ${LOCKFILE}
 .endif # PKGSRC_LOCKTYPE
 
-# Extract
+${WRKDIR}:
+.if !defined(KEEP_WRKDIR)
+.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
+.    if !exists(${LOCKFILE})
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKDIR}
+.    endif
+.  endif
+.endif
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
+.ifdef WRKOBJDIR
+.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
+.    if !exists(${LOCKFILE})
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RM} -f ${WRKDIR_BASENAME} || ${TRUE}
+.    endif
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
+		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
+	fi
+.endif # WRKOBJDIR
 
 _EXTRACT_SUFFICES=	.tar.gz .tgz .tar.bz2 .tbz .tar
 _EXTRACT_SUFFICES+=	.shar.gz .shar.bz2 .shar.Z .shar
 _EXTRACT_SUFFICES+=	.zip
-_EXTRACT_SUFFICES+=	.lzh .lha
+_EXTRACT_SUFFICES+=	.lha .lzh
+_EXTRACT_SUFFICES+=	.Z .bz2 .gz
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
 # pulling in the "bzip2" package if necessary.  [Note: this is only for
@@ -1471,6 +1494,10 @@ DECOMPRESS_CMD.shar.bz2?=	${BZCAT}
 DECOMPRESS_CMD.shar.Z?=		${GZCAT}
 DECOMPRESS_CMD.shar?=		${CAT}
 
+DECOMPRESS_CMD.Z?=		${GZCAT}
+DECOMPRESS_CMD.bz2?=		${BZCAT}
+DECOMPRESS_CMD.gz?=		${GZCAT}
+
 DECOMPRESS_CMD?=		${GZCAT}
 .for __suffix__ in ${_EXTRACT_SUFFICES}
 .  if !defined(DECOMPRESS_CMD${__suffix__})
@@ -1481,14 +1508,18 @@ DECOMPRESS_CMD${__suffix__}?=	${DECOMPRESS_CMD}
 # If this is empty, then everything gets extracted.
 EXTRACT_ELEMENTS?=	# empty
 
-DOWNLOADED_DISTFILE=	${_DISTDIR}/$$file
+DOWNLOADED_DISTFILE=	$${extract_file}
 
-EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laq ${DOWNLOADED_DISTFILE}
-EXTRACT_CMD.lzh?=	${LOCALBASE}/bin/lha xq ${DOWNLOADED_DISTFILE}
-EXTRACT_CMD.lha?=	${EXTRACT_CMD.lzh}
+EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
+EXTRACT_CMD.lha?=	${LOCALBASE}/bin/lha xq $${extract_file}
+EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
+
+.for __suffix__ in .gz .bz2 .Z
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
+.endfor
 
 .for __suffix__ in .shar.gz .shar.bz2 .shar.Z .shar
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE} | ${SH}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${SH}
 .endfor
 
 # If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
@@ -1496,74 +1527,41 @@ EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE}
 # was written with a buggy version of GNU tar.
 #
 .if defined(EXTRACT_USING_PAX)
-_DFLT_EXTRACT_CMD?=	{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
+_DFLT_EXTRACT_CMD?=	{ ${DECOMPRESS_CMD} $${extract_file} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
 .else
-_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .endif
 
 .for __suffix__ in ${_EXTRACT_SUFFICES}
 .  if !defined(EXTRACT_CMD${__suffix__})
 .    if defined(EXTRACT_USING_PAX)
-EXTRACT_CMD${__suffix__}?=	{ ${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	{ ${DECOMPRESS_CMD${__suffix__}} $${extract_file} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
 .  else
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .    endif
 .  endif
 .endfor
 
-# _SHELL_EXTRACT is a case statement used to conditionalize the extraction
-# of $${file} based on the file extension.
+# _SHELL_EXTRACT is a "subroutine" for extracting an archive.  It extracts
+# the contents of archive named by the shell variable "extract_file" based
+# on the file extension of the archive.
 #
-_SHELL_EXTRACT=		case $$file in
+_SHELL_EXTRACT=		case $${extract_file} in
 .for __suffix__ in ${_EXTRACT_SUFFICES}
-_SHELL_EXTRACT+=							\
-	*${__suffix__})							\
-		{ cd ${WRKDIR} && ${EXTRACT_CMD${__suffix__}}; };	\
-		;;
+_SHELL_EXTRACT+=	*${__suffix__})	${EXTRACT_CMD${__suffix__}} ;;
 .endfor
-_SHELL_EXTRACT+=							\
-	*)								\
-		{ cd ${WRKDIR} && ${_DFLT_EXTRACT_CMD}; };		\
-		;;
-_SHELL_EXTRACT+=	esac;
+_SHELL_EXTRACT+=	*)		${_DFLT_EXTRACT_CMD} ;;
+_SHELL_EXTRACT+=	esac
 
-${WRKDIR}:
-.if !defined(KEEP_WRKDIR)
-.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
-.    if !exists(${LOCKFILE})
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKDIR}
-.    endif
-.  endif
-.endif
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
-.ifdef WRKOBJDIR
-.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
-.    if !exists(${LOCKFILE})
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR_BASENAME} || ${TRUE}
-.    endif
-.  endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
-		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
-	fi
-.endif # WRKOBJDIR
+EXTRACT_CMD?=		${_SHELL_EXTRACT}
 
 .if !target(do-extract)
 do-extract: ${WRKDIR}
-.  if defined(EXTRACT_CMD) && !empty(EXTRACT_CMD)
+.  for __file__ in ${EXTRACT_ONLY}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for file in "" ${EXTRACT_ONLY}; do				\
-		if [ "X$$file" = X"" ]; then continue; fi;		\
-		{ cd ${WRKDIR} && ${EXTRACT_CMD}; };			\
-	done                                                                    
-.  else
-.    for __file__ in ${EXTRACT_ONLY}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	file="${__file__}";						\
-	${_SHELL_EXTRACT}
-.    endfor	# __file__
-.  endif	# defined(EXTRACT_CMD)
+	extract_file="${_DISTDIR}/${__file__}";	export extract_file;	\
+	cd ${WRKDIR}; ${EXTRACT_CMD}
+.  endfor
 .endif
 
 # Patch
