@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.209 2003/01/22 08:32:02 jmmv Exp $
+$NetBSD: TODO,v 1.210 2003/01/22 10:20:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -104,6 +104,7 @@ Suggested package updates
 	o elm-me-2.4pl100
 	o exim-4.12 [pkg/19850]
 	o fetchmail-6.2.1
+	o file-roller-2.2.0
 	o fltk-1.1.1
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.30
@@ -115,6 +116,7 @@ Suggested package updates
 	o gdb-5.3
 	o gdm-2.4.1.1
 	o getmail-2.3.10 [pkg/19707]
+	o getmail-2.3.11
 	o gftp-2.0.14
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.3
@@ -153,6 +155,7 @@ Suggested package updates
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
 	o jpilot-0.99.4
+	o jpilot-syncmal-0.71.2
 	o kdevelop-2.1.4
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
@@ -181,7 +184,7 @@ Suggested package updates
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
 	o mowitz-0.2.2
-	o mrproject-0.7
+	o mrproject-0.8
 	o mysql-3.23.54
 	o naim-0.11.5.2
 	o napshare-1.2
@@ -234,6 +237,7 @@ Suggested package updates
 	o squeak-3.2 [fredb|pkg/17950]
 	o sqlite-2.7.5 [pkg/19719]
 	o srp_client-1.7.5 [jlam]
+	o subversion-0.17
 	o suck-4.3.1
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
