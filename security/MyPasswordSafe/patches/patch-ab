@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/10/06 00:13:20 wiz Exp $
+
+--- src/pwsafe/PwsPlatform.h.orig	2004-05-05 00:48:46.000000000 +0200
++++ src/pwsafe/PwsPlatform.h
+@@ -3,7 +3,11 @@
+ #ifndef PwsPlatform_h
+ #define PwsPlatform_h
+ 
++#ifdef __NetBSD__
++#include <sys/endian.h>
++#else
+ #include <endian.h>
++#endif
+ 
+ #ifndef BYTE_ORDER
+ #error BYTE_ORDER not defined
