@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/06 16:15:41 dillo Exp $
+
+--- src/dns.c.orig	Fri Aug 31 14:26:21 2001
++++ src/dns.c
+@@ -37,7 +37,10 @@
+ /*
+  * Note: comment the following line for debugging or gprof profiling.
+  */
++/* No threads on NetBSD */
++#ifndef __NetBSD__
+ #define G_DNS_THREADED
++#endif
+ 
+ /*
+  * Uncomment the following line for libc5 optimization
