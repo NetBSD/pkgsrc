@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3241 2003/09/04 13:10:58 salo Exp $
+$NetBSD: CHANGES,v 1.3242 2003/09/04 13:45:46 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3530,3 +3530,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gq to 0.6.0 [xtraeme 2003-09-04]
 	Updated exim-exiscan to 4.22-12 [abs 2003-09-04]
 	Updated ethemes to 0.1nb2 [salo 2003-09-04]
+	Added p5-Net-Gnats 0.0.4 [xtraeme 2003-09-04]
+	Added p5-Net-Jabber 1.26 [xtraeme 2003-09-04]
+	Added p5-Authen-SASL 0.07 [xtraeme 2003-09-04]
+	Added p5-Authen-SASL-Cyrus 2.04 [xtraeme 2003-09-04]
+	Added p5-Compress-Bzip2 1.01 [xtraeme 2003-09-04]
