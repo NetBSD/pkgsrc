@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2001/02/08 19:11:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/02/12 03:31:35 jlam Exp $
 include/c-client/c-client.h
 include/c-client/env.h
 include/c-client/env_unix.h
@@ -25,6 +25,7 @@ lib/libc-client.la
 lib/libc-client.so
 lib/libc-client.so.${CCLIENT_MAJOR}
 lib/libc-client.so.${CCLIENT_MAJOR}.${CCLIENT_MINOR}
+lib/libc-client_pic.a
 lib/libimapuw.a
 lib/libimapuw.la
 lib/libimapuw.so
