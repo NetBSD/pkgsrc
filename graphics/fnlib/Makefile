@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/03 18:49:42 reed Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/10 13:26:08 xtraeme Exp $
 #
 
 DISTNAME=		fnlib-0.5
@@ -14,7 +14,7 @@ COMMENT=		Color font rendering library for X11R6
 # XXX Delete when DISTNAME next changes
 DIST_SUBDIR=		fnlib
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
@@ -30,6 +30,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fnlib
 	${INSTALL_DATA} ${WRKSRC}/doc/fontinfo.README ${PREFIX}/share/doc/fnlib
 
-.include "../../graphics/imlib/buildlink2.mk"
+.include "../../graphics/imlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
