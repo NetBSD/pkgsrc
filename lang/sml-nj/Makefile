@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/09 16:35:18 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/09 01:19:11 wiz Exp $
 # FreeBSD Id: ports/lang/sml-nj/Makefile,v 1.9 1999/08/25 06:35:27 obrien Exp
 
 DISTNAME=	${SML_VERSION}-bin.${BOX}-unix
@@ -79,8 +79,8 @@ do-install:
 	${SED} -e "s,^BIN_DIR=.*\$$,BIN_DIR=${SML_BINDIR}," \
 		< ${WRKDIR}/bin/.run-sml > ${SML_BINDIR}/.run-sml
 	${CHMOD} 755 ${SML_BINDIR}/.run-sml
-	cd ${WRKDIR} && ${GTAR} -cf - `find . -name '*.stable' | ${GREP} CM` | \
-		${GTAR} -C ${SML_BASE} -xf -
+	cd ${WRKDIR} && ${GTAR} -cf - `${FIND} . -name '*.stable' | \
+		${GREP} CM` | ${GTAR} -C ${SML_BASE} -xf -
 	cd ${WRKDIR} && ${GTAR} -cf - `${SCRIPTDIR}/get-cm ${WRKDIR}` | \
 		${GTAR} -C ${SML_BASE} -xf -
 	for file in ${WRKDIR}/lib/*; do\

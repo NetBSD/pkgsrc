@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/12/27 18:20:11 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/09 01:19:11 wiz Exp $
 # FreeBSD Id: ports/lang/ghc/Makefile,v 1.1.1.1 1999/11/10 17:25:28 nectar Exp
 
 DISTNAME=	ghc-4.04
@@ -44,7 +44,7 @@ pre-build:
 	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} boot)
 
 post-build:
-	echo "GhcWithHscBuiltViaC=NO" >>${WRKSRC}/mk/build.mk
+	${ECHO} "GhcWithHscBuiltViaC=NO" >>${WRKSRC}/mk/build.mk
 	(cd ${WRKSRC}/ghc/lib; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} clean boot all)
 
 .include "../../mk/bsd.pkg.mk"
