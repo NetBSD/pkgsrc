@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/18 03:49:56 wiz Exp $
+bin/notification
+share/notification/pixmaps/deny-always.xpm
+share/notification/pixmaps/deny.xpm
+share/notification/pixmaps/logo.xpm
+share/notification/pixmaps/permit-always.xpm
+share/notification/pixmaps/permit.xpm
+share/notification/pixmaps/skull.xpm
+@dirrm share/notification/pixmaps
+@dirrm share/notification

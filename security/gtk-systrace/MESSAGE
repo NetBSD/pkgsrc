@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2002/12/18 03:49:56 wiz Exp $
+
+To use the GTK frontend with systrace, do
+
+	$ cd ${X11BASE}/bin && ln -s ${PREFIX}/bin/notification xsystrace
+
+You might need to remove/backup a previously existing xsystrace there.
+
+===========================================================================
