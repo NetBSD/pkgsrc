@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 22:52:40 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/12/24 12:51:31 jmmv Exp $
 #
 
-DISTNAME=	teTeX-texmf-1.0.2
-PKGNAME=	teTeX-share-1.0.2
-PKGREVISION=	2
+DISTNAME=	tetex-texmf-2.0.2
+PKGNAME=	teTeX-share-2.0.2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/2.0/distrib/}
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
-COMMENT=	Machine-independent part of teTeX
+COMMENT=	Machine-independent part of teTeX, version 2
 
-CONFLICTS+=	teTeX2-share-[2-9]*
+CONFLICTS+=	teTeX2-share-[0-9]*
 
 DIST_SUBDIR=	teTeX
 USE_BUILDLINK2=	yes
@@ -21,16 +20,15 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 
-EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
-
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
+.if defined(EXTRACT_USING_PAX)
 	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -O -cr `${CAT} ${FILESDIR}/exclude`
-
-post-install:
-	@cd ${PREFIX}/share/texmf/tex/latex/base && \
-	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${EXTRA_PATCH} && \
-	  ${RM} latex.ltx.orig
-	${CP} ${FILESDIR}/dvipdfm.def ${PREFIX}/share/texmf/tex/latex/graphics
+.else
+	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${GTAR} -X ${FILESDIR}/exclude -xpf -
+.endif
+	cd ${PREFIX}/share/texmf/dvipdfm/config && \
+	${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${FILESDIR}/dvipdfm-config.diff && \
+	${RM} config.orig
 
 .include "../../mk/bsd.pkg.mk"
