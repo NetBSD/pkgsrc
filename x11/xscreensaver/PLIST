@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/02/21 22:05:01 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/03/11 22:37:18 wiz Exp $
 @comment bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -35,6 +35,7 @@ libexec/xscreensaver/config/ant.xml
 libexec/xscreensaver/config/apollonian.xml
 libexec/xscreensaver/config/atlantis.xml
 libexec/xscreensaver/config/attraction.xml
+libexec/xscreensaver/config/atunnel.xml
 libexec/xscreensaver/config/barcode.xml
 libexec/xscreensaver/config/blaster.xml
 libexec/xscreensaver/config/blitspin.xml
@@ -129,6 +130,7 @@ libexec/xscreensaver/config/penetrate.xml
 libexec/xscreensaver/config/penrose.xml
 libexec/xscreensaver/config/petri.xml
 libexec/xscreensaver/config/phosphor.xml
+libexec/xscreensaver/config/piecewise.xml
 libexec/xscreensaver/config/pipes.xml
 libexec/xscreensaver/config/polyominoes.xml
 libexec/xscreensaver/config/popsquares.xml
