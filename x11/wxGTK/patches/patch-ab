@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.10 2004/01/10 14:23:52 recht Exp $
+$NetBSD: patch-ab,v 1.11 2004/05/19 15:16:39 drochner Exp $
 
 --- Makefile.in.orig	2003-09-21 13:31:27.000000000 +0200
 +++ Makefile.in	2004-01-10 10:30:56.000000000 +0100
@@ -209,7 +209,7 @@ $NetBSD: patch-ab,v 1.10 2004/01/10 14:23:52 recht Exp $
 -	$(SHARED_LD) $@ $(SONAME_FLAGS) $(OBJECTS) $(EXTRALIBS)
 +$(build_libdir)/lib@WX_LIBRARY_BASENAME@.la: $(OBJECTS)
 +	@$(INSTALL_DATA_DIR) $(build_libdir)
-+	${LIBTOOL} --mode=link cc -o $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la ${OBJECTS:.o=.lo} ${EXTRALIBS} -rpath ${PREFIX}/lib -version-info 0:1
++	${LIBTOOL} --mode=link ${CXX} -o $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la ${OBJECTS:.o=.lo} ${EXTRALIBS} -rpath ${PREFIX}/lib -version-info 0:1
  
  # NB: we used to have "-L$(build_libdir) @WXCONFIG_LIBS@" in the SHARED_LD line
  #     but this seems to result in problems with libwx_gtk being linked in twice
@@ -218,7 +218,7 @@ $NetBSD: patch-ab,v 1.10 2004/01/10 14:23:52 recht Exp $
 -	$(SHARED_LD) $@ $(SONAME_FLAGS_GL) glcanvas.o $(EXTRALIBS) $(LDFLAGS_GL) $(OPENGLLIBS)
 +$(build_libdir)/lib@WX_LIBRARY_GL@.la: glcanvas.o $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la
 +	@$(INSTALL_DATA_DIR) $(build_libdir)
-+	${LIBTOOL} --mode=link cc -o $(build_libdir)/lib@WX_LIBRARY_GL@.la glcanvas.lo ${EXTRALIBS} $(LDFLAGS_GL) $(OPENGLLIBS) -rpath ${PREFIX}/lib -version-info 0:1
++	${LIBTOOL} --mode=link ${CXX} -o $(build_libdir)/lib@WX_LIBRARY_GL@.la glcanvas.lo ${EXTRALIBS} $(LDFLAGS_GL) $(OPENGLLIBS) -rpath ${PREFIX}/lib -version-info 0:1
  
  $(build_libdir)/@WX_RESOURCES_MACOSX_DATA@: $(MACRESOURCES)
 -	@$(INSTALL) -d $(build_libdir)
