@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/08/09 16:48:19 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/13 03:15:48 minskim Exp $
 #
 
-DISTNAME=	ttf-alee_1.1
-PKGNAME=	alee-ttf-1.1
+DISTNAME=	ttf-alee_1.3
+PKGNAME=	alee-ttf-1.3
 CATEGORIES=	fonts korean
 MASTER_SITES=	http://ftp.debian.org/debian/pool/main/t/ttf-alee/
 
@@ -22,7 +22,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
 	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTS_TTF_DIRS}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Copyright ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
