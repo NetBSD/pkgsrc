@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2001/05/11 09:14:00 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/25 16:28:31 manu Exp $
 
-DISTNAME=		linuxppc_lib-2000.4.5
+DISTNAME=		linuxppc_lib-2000.4.6
 CATEGORIES=		emulators
 MASTER_SITES+=		ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 MASTER_SITES+=		http://linuxppc.org/software/java/dl/motif/
@@ -48,11 +48,26 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${EMUL_LINUX}
 	${INSTALL_DATA_DIR} /${EMUL_LINUX}
 	${RPM2PKG} -d ${PREFIX} -f ${WRKDIR}/PLIST_DYNAMIC -p emul/linux ${RPMARGS}
+	
+	# Fix Linux's ldd paths (ldd is a shell script on Linux)
+	${SED} 's|^\(TEXTDOMAINDIR=\)\(/usr/share/locale\)|\1${PREFIX}/${EMUL_LINUX}\2|; \
+		s|^\(RTLD=\)\(/lib/ld.so.1\)|\1${PREFIX}/${EMUL_LINUX}\2|' \
+		${PREFIX}/${EMUL_LINUX}/usr/bin/ldd > \
+		${PREFIX}/${EMUL_LINUX}/usr/bin/ldd.new
+	${MV} ${PREFIX}/${EMUL_LINUX}/usr/bin/ldd.new \
+	    ${PREFIX}/${EMUL_LINUX}/usr/bin/ldd
+	${CHMOD} 755 ${PREFIX}/${EMUL_LINUX}/usr/bin/ldd
+
+	# Unpack shared libraries for OpenMotif 
 	cd ${PREFIX}/${EMUL_LINUX}/usr/X11R6 ; ${GTAR} -x 'lib/*.so*' \
 	    -zvf ${DISTDIR}/${DIST_SUBDIR}/openmotif-2.1.30-3_MLI_jdk.tar.gz | \
 	    ${SED} -e "s|^|${EMUL_LINUX}/usr/X11R6/|" >> ${WRKDIR}/PLIST_DYNAMIC
+
+	# Make the link /usr/pkg/emul/linux -> /emul/linux
 	${TEST} -f /emul/linux/lib/ld.so.1 || ( ${RMDIR} /${EMUL_LINUX} && \
 	    ${LN} -sf ${PREFIX}/${EMUL_LINUX} /${EMUL_LINUX} )
+
+	# Create ld.so.conf and ld.so.cache. (uses Linux's ldconfig)
 	${TOUCH} ${PREFIX}/${EMUL_LINUX}/etc/ld.so.cache~
 	${CP} ${FILESDIR}/ld.so.conf ${PREFIX}/${EMUL_LINUX}/etc/ld.so.conf
 	${LINUX_LDCONFIG} -r ${PREFIX}/${EMUL_LINUX} -v | \
@@ -63,4 +78,5 @@ do-install:
 	${SORT} -r ${WRKDIR}/PLIST_DYNAMIC > ${WRKDIR}/PLIST_DYNAMIC.sorted
 	${MV} ${WRKDIR}/PLIST_DYNAMIC.sorted ${WRKDIR}/PLIST_DYNAMIC
 
+	
 .include "../../mk/bsd.pkg.mk"
