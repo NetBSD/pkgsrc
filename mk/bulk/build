@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.45 2004/11/16 18:34:12 jlam Exp $
+# $NetBSD: build,v 1.45.2.1 2004/11/23 20:54:12 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -189,6 +189,7 @@ fi
 fail=no
 if [ -d pkgtools/pkglint ]; then
 	cd pkgtools/pkglint
+	PERL5_PKGSRCDIR=`${BMAKE} show-var VARNAME=PERL5_PKGSRCDIR` || fail=yes
 	BULK_DBFILE=`${BMAKE} show-var VARNAME=BULK_DBFILE` || fail=yes
 	DEPENDSTREEFILE=`${BMAKE} show-var VARNAME=DEPENDSTREEFILE` || fail=yes
 	DEPENDSFILE=`${BMAKE} show-var VARNAME=DEPENDSFILE` || fail=yes
@@ -230,6 +231,7 @@ echo "----------------------------------"
 # make sure we have values for these very important
 # variables
 if [ $fail = "yes" -o \
+	-z "$PERL5_PKGSRCDIR" -o \
 	-z "$BULK_DBFILE" -o \
 	-z "$DEPENDSTREEFILE" -o \
 	-z "$DEPENDSFILE" -o \
@@ -355,7 +357,7 @@ echo "Post processing bulk build results..."
 #rm $DEPENDSTREEFILE $DEPENDSFILE $SUPPORTSFILE $INDEXFILE $ORDERFILE
 
 # Perl was wiped, reinstall it!
-( cd lang/perl58 && ${BMAKE} bulk-install )
+( cd pkgtools/pkglint && cd ${PERL5_PKGSRCDIR} && ${BMAKE} bulk-install )
 perl mk/bulk/post-build | ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results `date +%Y-%m-%d`" $ADMIN
 
 # Done!
