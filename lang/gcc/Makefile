@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/06/11 15:10:38 tron Exp $
+# $NetBSD: Makefile,v 1.26 2001/06/11 16:12:41 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -78,6 +78,7 @@ post-build:
 post-install:
 	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
 .endif
 
