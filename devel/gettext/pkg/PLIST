@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2000/11/29 05:05:29 itojun Exp $
+@comment $NetBSD: PLIST,v 1.13 2001/01/14 05:31:13 tron Exp $
 bin/gettext
 bin/gettextize
 bin/msgcmp
@@ -43,19 +43,19 @@ share/gettext/intl/po2tbl.sed.in
 share/gettext/intl/textdomain.c
 share/gettext/intl/xopen-msg.sed
 share/gettext/po/Makefile.in.in
-share/locale/da/LC_MESSAGES/gettext.mo
-share/locale/de/LC_MESSAGES/gettext.mo
-share/locale/es/LC_MESSAGES/gettext.mo
-share/locale/fr/LC_MESSAGES/gettext.mo
-share/locale/ko/LC_MESSAGES/gettext.mo
 share/locale/locale.alias
-share/locale/nl/LC_MESSAGES/gettext.mo
-share/locale/no/LC_MESSAGES/gettext.mo
-share/locale/no@nynorsk/LC_MESSAGES/gettext.mo
-share/locale/pl/LC_MESSAGES/gettext.mo
-share/locale/pt/LC_MESSAGES/gettext.mo
-share/locale/sl/LC_MESSAGES/gettext.mo
-share/locale/sv/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/da/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/de/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/es/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/fr/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/ko/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/nl/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/no/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/no@nynorsk/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/pl/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/pt/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/sl/LC_MESSAGES/gettext.mo
+${LOCALEBASE}/locale/sv/LC_MESSAGES/gettext.mo
 @dirrm share/gettext/po
 @dirrm share/gettext/intl
 @dirrm share/gettext
