@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2002/06/11 12:35:14 agc Exp $
+$NetBSD: patch-aa,v 1.6 2002/08/25 21:52:05 jlam Exp $
 
 --- src/writeout.c	2002/06/11 12:31:17	1.1
 +++ src/writeout.c	2002/06/11 12:31:35

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2002/07/18 18:01:56 mycroft Exp $
+$NetBSD: patch-ad,v 1.6 2002/08/25 21:50:53 jlam Exp $
 
 --- configure.orig	Thu Jul 18 17:50:10 2002
 +++ configure	Thu Jul 18 17:59:13 2002

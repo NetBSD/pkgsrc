@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/06/19 13:51:16 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/25 21:52:40 jlam Exp $
 
 DISTNAME=	mlterm-2.5.0
 CATEGORIES=	x11
@@ -11,17 +11,17 @@ COMMENT=	Multingual terminal emulator
 # CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
 ONLY_FOR_PLATFORM=	NetBSD-1.5[T-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 
-GNU_CONFIGURE=	yes
-
-USE_LIBTOOL=	yes
+USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE+=	${WRKSRC}/mkf/autoconf/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/autoconf/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/kiklib/autoconf/libtool
 
-CONFIGURE_ARGS+=--enable-imlib
-CONFIGURE_ARGS+=--enable-anti-alias
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-imlib
+CONFIGURE_ARGS+=	--enable-anti-alias
 
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | \
@@ -34,8 +34,8 @@ post-patch:
 		    $${f}.orig > $$f; \
 	done
 
-.include "../../devel/glib/buildlink.mk"
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/glib/buildlink2.mk"
+.include "../../graphics/imlib/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/05/22 15:01:28 fredb Exp $
+# $NetBSD: Makefile,v 1.40 2002/08/25 21:52:16 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.5dev.7
@@ -15,11 +15,10 @@ HOMEPAGE=		http://lynx.browser.org/
 COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK_ONLY=	yes
 
 WRKSRC=			${WRKDIR}/lynx2-8-5
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 INSTALL_TARGET=		install-full install-lss
@@ -63,10 +62,10 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if (${LYNX_SCREEN_LIB} == slang)
-.  include "../../devel/libslang/buildlink.mk"
+.  include "../../devel/libslang/buildlink2.mk"
 .elif (${LYNX_SCREEN_LIB} == ncurses)
 USE_NCURSES=		color
-.  include "../../devel/ncurses/buildlink.mk"
+.  include "../../devel/ncurses/buildlink2.mk"
 CONFIGURE_ARGS+=	--enable-color-style
 .elif (${LYNX_SCREEN_LIB} == curses)
 .  if ${MACHINE_PLATFORM:MNetBSD-1.5*-i386} != ""
@@ -97,10 +96,10 @@ pre-configure:
 .endif
 .if ${USE_SOCKS} == 4
 CONFIGURE_ARGS+= 	--with-socks
-.  include "../../net/socks4/buildlink.mk"
+.  include "../../net/socks4/buildlink2.mk"
 .else
 CONFIGURE_ARGS+= 	--with-socks5
-.  include "../../net/socks5/buildlink.mk"
+.  include "../../net/socks5/buildlink2.mk"
 .endif
 .endif
 
@@ -109,7 +108,8 @@ CONFIGURE_ARGS+= 	--with-socks5
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

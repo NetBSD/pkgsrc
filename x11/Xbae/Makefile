@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/08/25 18:40:27 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/08/25 21:52:27 jlam Exp $
 #
 
 DISTNAME=	Xbae-4.9.1
