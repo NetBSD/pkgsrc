@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2004/11/03 13:29:46 adam Exp $
+# $NetBSD: Makefile,v 1.108 2004/11/16 16:16:31 minskim Exp $
 
 DISTNAME=	gimp-2.0.6
 CATEGORIES=	graphics
@@ -67,6 +67,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../print/gimp-print-lib/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
