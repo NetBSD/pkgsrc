@@ -1,0 +1,103 @@
+$NetBSD: patch-aj,v 1.1 1999/07/06 07:57:26 jlam Exp $
+
+--- configure.in.orig	Thu Jan 21 11:09:56 1999
++++ configure.in	Tue Jul  6 01:41:27 1999
+@@ -9,10 +9,10 @@
+ AC_DEFUN(CDK_FIND_LIB, [
+ 	eval "cdk_$2_lib=no"
+ 
+-	for dir in /usr/local/lib/ /usr/lib/ /usr/5lib/ /usr/ccs/lib/ /opt/lib/; do
++	for dir in ${LOCALBASE}/lib /usr/local/lib/ /usr/lib/ /usr/5lib/ /usr/ccs/lib/ /opt/lib/; do
+ 	   if test -f ${dir}/$1; then
+ 	      LDFLAGS="$LDFLAGS -L$dir"
+-	      eval "cdk_$2_lib=no"
++	      eval "cdk_$2_lib=yes"
+ 	   fi
+ 	done])
+ 
+@@ -29,7 +29,7 @@
+ 	   value=$3
+ 	fi
+ 
+-	for dir in /usr/include /usr/local/include /opt/include; do
++	for dir in /usr/include ${LOCALBASE}/include /usr/local/include /opt/include; do
+ 	   if test -f ${dir}/$1; then
+ 	      count=`grep '$2;$' ${dir}/$1 | grep -c '^typedef'`
+ 	   fi
+@@ -38,7 +38,6 @@
+ 	if test $count -ne 0; then
+ 	   AC_MSG_RESULT("yes")
+ 	   eval "cdk_$2_type=yes"
+-           CFLAGS="$CFLAGS -DHAVE_CHTYPE=$value"
+ 	else
+ 	   AC_MSG_RESULT("no")
+ 	   eval "cdk_$2_type=no"
+@@ -62,14 +61,32 @@
+ fi
+ 
+ dnl
++dnl Set the LDPATH values depending where the
++dnl library is installed. If we found ncurses,
++dnl look for ncurses.
++dnl
++CDK_FIND_LIB(libncurses.a, ncurses)
++if test "$cdk_ncurses_lib" != "no"; then
++   LIBS="$LIBS -lncurses"
++   CFLAGS="$CFLAGS -DHAVE_LIBNCURSES=1"
++fi
++CDK_FIND_LIB(libcurses.a, curses)
++if test "$cdk_curses_lib" != "no"; then
++   if test "$cdk_ncurses_lib" = "no"; then
++      LIBS="$LIBS -lcurses"
++      CFLAGS="$CFLAGS -DHAVE_LIBNCURSES=0"
++   fi
++fi
++
++dnl
+ dnl Checks for libraries. If we have start_color
+ dnl set the HAVE_COLOR define.
+ dnl
+-AC_CHECK_LIB(m,sin)
+-AC_CHECK_LIB(termcap,waddstr)
++AC_CHECK_LIB(m, sin)
++AC_CHECK_LIB(termcap, waddstr)
+ AC_CHECK_LIB(ncurses, start_color)
+ if test "$ac_cv_lib_ncurses_start_color" != yes; then
+-   AC_CHECK_LIB(curses,initscr)
++   AC_CHECK_LIB(curses, initscr)
+ else
+    AC_DEFINE(HAVE_COLOR)
+ fi
+@@ -86,7 +103,9 @@
+ dnl
+ AC_TYPE_MODE_T
+ AC_STRUCT_TM
+-CDK_FIND_TYPE(curses.h, chtype)
++CDK_FIND_TYPE(ncurses.h, chtype)
++if test "$cdk_chtype_type" != "no"; then CFLAGS="$CFLAGS -DHAVE_CHTYPE=$value"
++fi
+ 
+ dnl
+ dnl Checks for library functions.
+@@ -98,21 +117,5 @@
+ dnl Set pre-processor compile time variables.
+ dnl
+ AC_CHECK_FUNC(XCursesExit, AC_DEFINE(HAVE_XCURSES))
+-
+-dnl
+-dnl Set the LDPATH values depending where the
+-dnl library is installed. If we found ncurses,
+-dnl look for ncurses.
+-dnl
+-CDK_FIND_LIB(libncurses.a, cdk_ncurses_lib)
+-if test "$cdk_ncurses_lib" != "no"; then
+-   LIBS="$LIBS -lncurses"
+-   CFLAGS="$CFLAGS -DHAVE_LIBNCURSES=1"
+-fi
+-CDK_FIND_LIB(libcurses.a, cdk_curses_lib)
+-if test "$cdk_ncurses_lib" != "no"; then
+-   LIBS="$LIBS -lcurses"
+-   CFLAGS="$CFLAGS -DHAVE_LIBNCURSES=0"
+-fi
+ 
+ AC_OUTPUT(Makefile examples/Makefile demos/Makefile)

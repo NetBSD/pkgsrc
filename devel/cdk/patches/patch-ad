@@ -1,7 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 1998/12/01 23:27:36 garbled Exp $
---- entry.c.orig	Tue Dec  1 14:09:46 1998
-+++ entry.c	Tue Dec  1 14:10:02 1998
-@@ -371,7 +371,7 @@
+$NetBSD: patch-ad,v 1.2 1999/07/06 07:57:22 jlam Exp $
+
+--- entry.c.orig	Mon Dec 14 15:21:54 1998
++++ entry.c	Tue Jul  6 00:57:47 1999
+@@ -376,7 +376,7 @@
                   }
                   break;
        
