@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2305 2004/11/04 11:10:38 wiz Exp $
+$NetBSD: TODO,v 1.2306 2004/11/04 12:16:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -584,7 +584,6 @@ Suggested package updates
 	o vfu-4.03
 	o vipec-3.2.0
 	o vlc-0.8.0
-	o vms-empire-1.7 [pkg/27847]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vsftpd-2.01 [pkg/26811]
 	o vttest-20030301
