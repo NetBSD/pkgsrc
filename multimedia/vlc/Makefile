@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/01 15:08:35 ben Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/21 21:04:06 veego Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -21,11 +21,6 @@ PTHREAD_OPTS+=		require
 VLC_VER=		0.7.2
 
 .include "../../mk/bsd.prefs.mk"
-
-PLIST_SRC=		${PKGDIR}/PLIST
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"
-PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH}
-.endif
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=        --disable-vcd
