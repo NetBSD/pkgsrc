@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/10/25 14:18:23 martti Exp $
+# $NetBSD: Makefile,v 1.39 2002/01/16 15:37:09 jwise Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -24,5 +24,8 @@ CONFIGURE_ARGS= 	--with-extra-lib="${X11BASE}/lib" \
 			--with-extra-inc="${X11BASE}/include ${X11BASE}/include/X11"
 
 LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
+
+post-install:
+	${CHMOD} +x ${PREFIX}/share/lyx/configure
 
 .include "../../mk/bsd.pkg.mk"
