@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2002/01/16 05:37:51 lukem Exp $
+$NetBSD: patch-ac,v 1.5 2002/03/06 09:55:23 martin Exp $
 
---- abcde.orig	Thu Aug 16 07:39:29 2001
-+++ abcde
+--- abcde.orig	Wed Aug 15 23:39:29 2001
++++ abcde	Wed Mar  6 10:47:22 2002
 @@ -199,6 +199,11 @@
  			TRACKARTIST="$(echo $DTITLEARTIST | cut -f1 -d~)"
  			TRACKNAME="$(echo $DTITLEARTIST | cut -f2 -d~)"
@@ -14,6 +14,15 @@ $NetBSD: patch-ac,v 1.4 2002/01/16 05:37:51 lukem Exp $
  		esac
  	else
  		TRACKARTIST=$DARTIST
+@@ -268,7 +273,7 @@
+ 			mp3enc) run_command encodetrack-$1 nice $ENCNICE $ENCODER -if "$IN" -of "$OUT" $ENCODEROPTS ;;
+ 			esac
+ 		else
+-			run_command encodetrack-$1 $DISTMP3 $DISTMP3OPTS $2 "$IN" "$OUT" >/dev/null 2>&1
++			run_command encodetrack-$1 $DISTMP3 $DISTMP3OPTS "$2" "$IN" "$OUT" >/dev/null 2>&1
+ 		fi
+ 		;;
+ 	ogg)
 @@ -552,7 +557,7 @@
  			fi
  			# List out disc title/author and contents
@@ -104,6 +113,15 @@ $NetBSD: patch-ac,v 1.4 2002/01/16 05:37:51 lukem Exp $
  ENCNICE=10
  READNICE=10
  VARIOUSARTISTS=n
+@@ -910,7 +922,7 @@
+ # Custom filename munging:
+ mungefilename ()
+ {
+-	echo "$@" | sed s,:,\ -,g | tr \ / __ | tr -d \'\? | tr -d \[:cntrl:\]
++	echo "$@" | sed s,:,\ -,g | tr / _ | tr -d \`\'\"\? | tr -d \[:cntrl:\]
+ }
+ 
+ # If CDDBAVAIL is set to n, no CDDB read is done
 @@ -926,17 +938,12 @@
  	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
