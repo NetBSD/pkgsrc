@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $Id: post-patch,v 1.1.1.1 2000/12/18 23:33:32 tsarna Exp $
+#
+# This script cleans out the pre-made binaries and patches the
+# com port to /dev/tty00
+
+cd ${WRKSRC}
+make clean
+
+echo s@/dev/cua0@/dev/tty00@ > sedcmd
+echo s@Linux DS2480@NetBSD DS2480@ >> sedcmd
+
+for file in `ls *.c`
+do
+  sed -f sedcmd < $file > $file.new
+  rm $file
+  mv $file.new $file
+done
+
+rm sedcmd
