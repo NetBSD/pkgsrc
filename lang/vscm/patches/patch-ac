@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/02 11:01:53 itojun Exp $
+
+--- main.c-	Thu Nov  2 19:51:47 2000
++++ main.c	Thu Nov  2 19:52:00 2000
+@@ -17,6 +17,8 @@
+ # include <string.h>
+ # include <errno.h>
+ 
++# include "path.h"
++
+ # include "main.h"
+ # include "storage.h"
+ # include "storext.h"

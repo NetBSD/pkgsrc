@@ -1,0 +1,8 @@
+VSCM -- A portable Scheme implementation
+
+This is VSCM, a complete and portable implementation of Scheme
+according to R4RS (The ``Revised revised revised revised Report of the
+Algorithmic Language Scheme'').
+
+VSCM is based on a virtual machine written in ANSI C and on a
+bytecode-compiler written in Scheme itself.

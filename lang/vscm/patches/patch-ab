@@ -1,0 +1,9 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/02 11:01:53 itojun Exp $
+
+--- Makefile	Sat Aug  6 00:31:07 1994
++++ Makefile	Thu Nov  2 19:41:00 2000
+@@ -415,3 +415,3 @@
+ 
+-scheme:	$(OBJECTS) $(TMPLIBS)
++scheme:	$(OBJECTS) non-ansi-lib $(TMPLIBS)
+ 	$(CC) -o scheme $(LDFLAGS) $(OBJECTS) $(LIBS) -lc $(TMPLIBS)
