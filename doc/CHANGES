@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.872 2002/12/22 18:31:52 cjep Exp $
+$NetBSD: CHANGES,v 1.873 2002/12/22 19:28:15 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4057,3 +4057,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pango to 1.0.5nb1 [jmmv 2002-12-22]
 	Added gp-autpgrp-1.1 [cjep 2002-12-22]
 	Added gp-lag-2.1 [cjep 2002-12-22]
+	Added xgap-4.16 [cjep 2002-12-22]
