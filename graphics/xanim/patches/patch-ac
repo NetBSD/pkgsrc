@@ -1,18 +1,25 @@
---- xa_audio.c.orig	Sun Jan 26 11:22:03 1997
-+++ xa_audio.c	Sat Mar  7 07:56:29 1998
-@@ -4479,26 +4479,57 @@
-   AUDIO_INITINFO(&a_info);
+--- xa_audio.c.orig	Mon Mar 23 18:54:59 1998
++++ xa_audio.c	Sun Apr 26 12:04:40 1998
+@@ -4508,31 +4508,53 @@
    a_info.blocksize = 1024;
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
+   AUDIO_INITINFO(&a_info);
+-
+-#ifndef AUDIO_ENCODING_SLINEAR
+-  a_info.play.encoding = AUDIO_ENCODING_PCM16;
+-#else
+-	/* NetBSD-1.3 */
+-  a_info.play.encoding = AUDIO_ENCODING_SLINEAR; /* Signed, nativeorder */
+-#endif
+-  ioctl(devAudio, AUDIO_SETINFO, &a_info);
+-  AUDIO_INITINFO(&a_info);
+   a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
    ioctl(devAudio, AUDIO_SETINFO, &a_info);
 +#ifdef AUDIO_ENCODING_SLINEAR
 +  /* Use new encoding names */
    AUDIO_INITINFO(&a_info);
--  a_info.play.encoding = AUDIO_ENCODING_PCM16;
-+  a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
-   ioctl(devAudio, AUDIO_SETINFO, &a_info);
-   AUDIO_INITINFO(&a_info);
 +  a_info.play.encoding = AUDIO_ENCODING_SLINEAR;
-+  a_info.play.precision = 16;
+   a_info.play.precision = 16;
 +  if (ioctl(devAudio, AUDIO_SETINFO, &a_info) < 0) {
 +    AUDIO_INITINFO(&a_info);
 +    a_info.play.encoding = AUDIO_ENCODING_ULINEAR;
@@ -21,11 +28,8 @@
 +  }
 +#else
 +  AUDIO_INITINFO(&a_info);
-   a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
-   ioctl(devAudio, AUDIO_SETINFO, &a_info);
-   AUDIO_INITINFO(&a_info);
 +  a_info.play.encoding = AUDIO_ENCODING_PCM16;
-   a_info.play.precision = 16;
++  a_info.play.precision = 16;
 +  if (ioctl(devAudio, AUDIO_SETINFO, &a_info) < 0) {
 +    AUDIO_INITINFO(&a_info);
 +    a_info.play.encoding = AUDIO_ENCODING_PCM;

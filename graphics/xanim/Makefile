@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:27 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/26 16:21:27 mycroft Exp $
 #
 
-DISTNAME=       xanim27064
-PKGNAME=        xanim-2.70.6.4
+DISTNAME=       xanim27070
+PKGNAME=        xanim-2.70.7.0
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://xanim.va.pubnix.com/\
 		ftp://xanim.va.pubnix.com/modules/
@@ -32,6 +32,7 @@ USE_IMAKE=	yes
 CAT1=		xanim.0
 
 post-extract:
+	ln -s docs/xanim.man ${WRKSRC}
 	@for file in ${EXTRA_FILES}; do \
 	  ${CP} ${DISTDIR}/$$file ${WRKSRC}; \
 	  ${GUNZIP_CMD} ${WRKSRC}/$$file; \
