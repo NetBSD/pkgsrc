@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.9 1999/04/15 20:39:48 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/05/01 18:23:51 tv Exp $
 #
 
-DISTNAME=			Xaw-Xpm-1.1
-WRKSRC=				${WRKDIR}/XawXpm
-CATEGORIES=			x11
-MASTER_SITES=			${MASTER_SITE_SUNSITE:=libs/X/}
+DISTNAME=		Xaw-XPM-1.1
+PKGNAME=		Xaw-Xpm-1.1
+WRKSRC=			${WRKDIR}/XawXpm
+CATEGORIES=		x11
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/X/}
 
-MAINTAINER=			root@garbled.net
-HOMEPAGE=			http://www.zip.com.au/~bb/XawXpm/
+MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.zip.com.au/~bb/XawXpm/
 
-DEPENDS+=			xpm-3.4k:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-CONFLICTS=			Xaw3d-*
+CONFLICTS=		Xaw3d-*
 
-USE_IMAKE=			yes
+USE_IMAKE=		yes
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/Xaw-Xpm
