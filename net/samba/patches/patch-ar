@@ -1,0 +1,16 @@
+$NetBSD: patch-ar,v 1.1 2003/02/18 11:25:58 jdolecek Exp $
+
+--- smbd/open.c.orig	Tue Feb 18 11:59:26 2003
++++ smbd/open.c	Tue Feb 18 11:59:39 2003
+@@ -947,8 +947,11 @@
+ 	fsp_open = open_file(fsp,conn,fname,psbuf,flags|flags2,mode,desired_access);
+ 
+ 	if (!fsp_open && (flags == O_RDWR) && (errno != ENOENT) && fcbopen) {
++		int saved_errno = errno;
+ 		if((fsp_open = open_file(fsp,conn,fname,psbuf,O_RDONLY,mode,desired_access)) == True)
+ 			flags = O_RDONLY;
++		else
++			errno = saved_errno;
+ 	}
+ 
+ 	if (!fsp_open) {
