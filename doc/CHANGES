@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5913 2004/05/12 19:36:20 drochner Exp $
+$NetBSD: CHANGES,v 1.5914 2004/05/12 21:51:57 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2496,3 +2496,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs2svn to 0.947 [seb 2004-05-12]
 	Updated xine-lib to 1-rc4 [drochner 2004-05-12]
 	Updated xine-ui to 0.99.1 [drochner 2004-05-12]
+	Updated libnbcompat to 20040512 [grant 2004-05-12]
