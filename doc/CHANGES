@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7889 2004/11/17 15:47:41 adam Exp $
+$NetBSD: CHANGES,v 1.7890 2004/11/17 16:17:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5317,3 +5317,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Addresses to 0.4.6 [rh 2004-11-17]
 	Updated openldap to 2.2.18 [jlam 2004-11-17]
 	Updated gtkballs to 3.1.5 [adam 2004-11-17]
+	Updated lbreakout2 to 2.5.1 [adam 2004-11-17]
