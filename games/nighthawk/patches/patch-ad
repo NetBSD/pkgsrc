@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1999/02/10 15:09:56 frueauf Exp $
+
 --- options.h.BAK	Sun Feb  7 01:25:16 1999
 +++ options.h	Sun Feb  7 01:31:44 1999
 @@ -8,8 +8,8 @@

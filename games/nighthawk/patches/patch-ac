@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1999/02/10 15:09:56 frueauf Exp $
+
 --- src/nighthawk.cc.BAK	Sun Feb  7 01:01:57 1999
 +++ src/nighthawk.cc	Sun Feb  7 01:02:10 1999
 @@ -85,7 +85,11 @@
