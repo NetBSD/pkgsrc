@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2005/01/17 20:39:18 snj Exp $
 #
 
 DISTNAME=	nbitools-R6.3
@@ -17,6 +17,12 @@ USE_BUILDLINK3=	yes
 
 BUILD_TARGET=	World
 MAKE_ENV+=	GCCCMD=gcc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+USE_GNU_TOOLS+=	make
+.endif
 
 post-patch:
 	@${MV} ${WRKSRC}/config/cf/site.def ${WRKSRC}/config/cf/site.def.orig
