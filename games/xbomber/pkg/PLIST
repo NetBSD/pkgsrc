@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/24 10:36:10 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/24 11:54:56 frueauf Exp $
 bin/xbomber
+share/doc/xbomber/README.txt
 share/xbomber/level/level00.dat
 share/xbomber/level/level01.dat
 share/xbomber/level/level02.dat
@@ -215,6 +216,7 @@ share/xbomber/bitmaps/title.xbm
 share/xbomber/bitmaps/tnt.xbm
 share/xbomber/bitmaps/totalfire.xbm
 share/xbomber/bitmaps/warp.xbm
+@dirrm share/doc/xbomber
 @dirrm share/xbomber/sounds/numbers
 @dirrm share/xbomber/sounds
 @dirrm share/xbomber/pixmap/jungle
