@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:53 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/03/02 14:34:08 hubertf Exp $
 #
 
-DISTNAME=	pload-0.9.2
+DISTNAME=	pload-0.9.3
 CATEGORIES=	net x11
 MASTER_SITES=	http://www.engr.utk.edu/~mdsmith/pload/
 
