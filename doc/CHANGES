@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8606 2005/01/04 23:54:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.8607 2005/01/05 00:32:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -98,3 +98,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added vino-2.8.1 [jmmv 2005-01-04]
 	Updated gnome to 2.8.2nb1 [jmmv 2005-01-04]
 	Updated gtk2 to 2.6.0nb2 [jmmv 2005-01-04]
+	Added revbump-0.1 [wiz 2005-01-05]
