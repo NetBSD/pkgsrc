@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/12 23:02:59 salo Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/24 12:33:16 wiz Exp $
 #
 
-DISTNAME=	libogg-1.1
+DISTNAME=	libogg-1.1.2
 CATEGORIES=	multimedia devel
-MASTER_SITES=	http://www.vorbis.com/files/1.0.1/unix/
+MASTER_SITES=	http://downloads.xiph.org/releases/ogg/
 
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ogg/
