@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/16 09:54:30 kei Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/29 01:32:43 seb Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -20,7 +20,6 @@ PATCHDIR=	${.CURDIR}/../sj3-lib/patches
 .include "../../mk/bsd.prefs.mk"
 
 NO_MTREE=       YES
-LOCALBASE=	${IMDICTDIR}
 SJ3OWNER?=	daemon
 SJ3GROUP?=	daemon
 MAKE_ENV+=	SJ3OWNER=${SJ3OWNER} SJ3GROUP=${SJ3GROUP} \
@@ -56,3 +55,6 @@ do-install:
 
 .include "../../devel/nbitools/nbitools.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# Need to set this here _after_ bsd.pkg.mk
+PREFIX=		${IMDICTDIR}
