@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/05 18:14:56 tron Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/10/05 21:15:10 tron Exp $
 #
 # This Makefile fragment is included by packages that use libglade.
 #
@@ -40,7 +40,6 @@ BUILDLINK_CONFIG_WRAPPER_SED+=	\
 
 BUILDLINK_TARGETS.libglade=	libglade-buildlink
 BUILDLINK_TARGETS.libglade+=	libglade-buildlink-config-wrapper
-BUILDLINK_TARGETS.libglade+=	libglade-buildlink-include-link
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libglade}
 
 BUILDLINK_CONFIG.libglade=	\
@@ -57,9 +56,5 @@ MAKE_ENV+=		LIBGLADE_CONFIG="${LIBGLADE_CONFIG}"
 pre-configure: ${BUILDLINK_TARGETS.libglade}
 libglade-buildlink: _BUILDLINK_USE
 libglade-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-libglade-buildlink-include-link:
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -fs libglade-1.0/glade \
-	  ${BUILDLINK_DIR}/include
 
 .endif	# LIBGLADE_BUILDLINK_MK
