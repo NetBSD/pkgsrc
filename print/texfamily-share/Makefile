@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/11/28 03:50:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/29 02:34:03 uebayasi Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	japanese print
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \
