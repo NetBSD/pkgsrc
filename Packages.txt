@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.348 2004/08/05 20:55:11 jlam Exp $
+# $NetBSD: Packages.txt,v 1.349 2004/08/06 15:27:21 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1783,7 +1783,9 @@ in a two step process:
 
 This normalizes the environment in which a package is built so that the
 package may be built consistently despite what may other software may
-installed.
+installed.  Please note that the normal system header and library paths,
+e.g. /usr/include, /usr/lib, etc., are always searched -- buildlink3 is
+designed to insulate the package build from non-system-supplied software.
 
 
  8.1 Converting packages to use buildlink3
