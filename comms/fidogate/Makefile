@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/07/06 20:15:51 tv Exp $
+# $NetBSD: Makefile,v 1.20 2002/07/06 20:52:07 tv Exp $
 #
 
 DISTNAME=	fidogate-4.4.5
@@ -17,6 +17,7 @@ MAKE_ENV=	DEBUG="${CFLAGS} -Werror" CC="${CC} ${_STRIPFLAG_CC}"
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/fidogate/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
+RCD_SCRIPTS=	fidogate
 
 post-extract:
 	@${CP} ${WRKSRC}/examples/orodruin/fidogate.conf \
