@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2003/11/10 17:18:28 agc Exp $
+$NetBSD: distinfo,v 1.9 2003/11/11 07:57:42 wiz Exp $
 
-SHA1 (xosview-1.8.1alpha.tar.gz) = f655f336a6c6d3e5ed2fd0bd8581de1d17ed0680
-Size (xosview-1.8.1alpha.tar.gz) = 241885 bytes
+SHA1 (xosview-1.8.1.tar.gz) = 3b74fb0cf01c99ff0a2da3d1f028bb32e4043e8e
+Size (xosview-1.8.1.tar.gz) = 237724 bytes
