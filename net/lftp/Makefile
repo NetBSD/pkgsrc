@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/06/14 08:42:17 salo Exp $
+# $NetBSD: Makefile,v 1.46 2004/07/10 03:14:45 grant Exp $
 #
 
 DISTNAME=		lftp-3.0.6
@@ -20,6 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	# uses GNU readline internal _rl_mark_modified_lines
