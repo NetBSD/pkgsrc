@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/03 16:49:06 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/23 21:58:56 snj Exp $
 bin/aspell
 bin/aspell-import
 bin/pspell-config
@@ -10,13 +10,22 @@ lib/libaspell.a
 lib/libaspell.la
 lib/libaspell.so
 lib/libaspell.so.15
-lib/libaspell.so.15.2
+lib/libaspell.so.15.3
 lib/libpspell.a
 lib/libpspell.la
 lib/libpspell.so
 lib/libpspell.so.15
-lib/libpspell.so.15.2
+lib/libpspell.so.15.3
 share/aspell/ASCII.dat
+share/aspell/cp1250.dat
+share/aspell/cp1251.dat
+share/aspell/cp1252.dat
+share/aspell/cp1253.dat
+share/aspell/cp1254.dat
+share/aspell/cp1255.dat
+share/aspell/cp1256.dat
+share/aspell/cp1257.dat
+share/aspell/cp1258.dat
 share/aspell/dvorak.kbd
 share/aspell/iso8859-1.dat
 share/aspell/iso8859-10.dat
@@ -36,12 +45,11 @@ share/aspell/koi8-f.dat
 share/aspell/koi8-r.dat
 share/aspell/koi8-u.dat
 share/aspell/spell
+share/aspell/split.kbd
 share/aspell/standard.kbd
 share/aspell/viscii.dat
 share/doc/aspell/dev-html/devel.css
 share/doc/aspell/dev-html/devel.html
-share/doc/aspell/dev-html/img1.png
-share/doc/aspell/dev-html/img2.png
 share/doc/aspell/dev-html/index.html
 share/doc/aspell/dev-html/nx_grp_g.png
 share/doc/aspell/dev-html/prev_g.png
