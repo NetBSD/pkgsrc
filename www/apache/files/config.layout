@@ -1,4 +1,4 @@
-# $NetBSD: config.layout,v 1.6 2002/08/25 18:40:19 jlam Exp $
+# $NetBSD: config.layout,v 1.7 2004/11/15 15:05:34 sketch Exp $
 
 <Layout pkgsrc>
 prefix: @PREFIX@
@@ -14,8 +14,8 @@ htdocsdir: ${prefix}/share/httpd/htdocs
 manualdir: ${prefix}/share/httpd/htdocs/manual
 cgidir: ${exec_prefix}/libexec/cgi-bin
 includedir: ${prefix}/include/httpd
-localstatedir: /var/httpd
-runtimedir: /var/run
-logfiledir: /var/log/httpd
-proxycachedir: /var/httpd/proxy
+localstatedir: @VARBASE@/httpd
+runtimedir: @VARBASE@/run
+logfiledir: @VARBASE@/log/httpd
+proxycachedir: @VARBASE@/httpd/proxy
 </Layout>
