@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5325 2004/03/28 21:57:05 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5326 2004/03/28 22:00:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1554,3 +1554,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dict-client to 1.8.0nb3 [jmmv 2004-03-28]
 	Updated dict-server to 1.8.0nb2 [jmmv 2004-03-28]
 	Added XFree86-dirs-1.0 [xtraeme 2004-03-28]
+	Updated fam to 2.7.0 [minskim 2004-03-28]

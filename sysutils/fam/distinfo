@@ -1,19 +1,18 @@
-$NetBSD: distinfo,v 1.7 2004/03/21 07:35:17 minskim Exp $
+$NetBSD: distinfo,v 1.8 2004/03/28 22:00:05 minskim Exp $
 
-SHA1 (fam-2.6.10.tar.gz) = 24899a1afe6a520c6980f1c41d5657db01d11692
-Size (fam-2.6.10.tar.gz) = 321189 bytes
-SHA1 (patch-ab) = 60897dc25f7e18f584cba0c6d22538b1d0b11ecf
-SHA1 (patch-ae) = e07e52e8011e2f22e0391d33764a223e6ac769a4
-SHA1 (patch-af) = c982b3e2ada3274881990c5ea183ca692ff543fe
-SHA1 (patch-ag) = 059eb7191fc03765e0840a0faed0b27eb6919b74
-SHA1 (patch-ah) = a31f816d61127636663d16ad8e87169715661e3c
-SHA1 (patch-ai) = 62e013a8559aa5207085d80ed0bb77e005a4788e
-SHA1 (patch-aj) = fef780df2fd6241144ba7e6da71ac66c61468ed0
-SHA1 (patch-ak) = dc18202214fc0ce153ecbab2a4f7759e32d9e11f
-SHA1 (patch-an) = 8416a0de32fec6cbf615083d44fd0b5add5cd8e3
-SHA1 (patch-ao) = aa9e0cd237460004d4e1f89a3f4bced11ee620b7
-SHA1 (patch-ap) = 75ca4b6a32f1c3ed1a085457b4de9bb228242fad
-SHA1 (patch-au) = 5e87df2bb202b6a45f588474a4df1e7ecc575288
-SHA1 (patch-av) = 8da3b718921df0f4a1e9a8924c6914d1bdc03bab
-SHA1 (patch-aw) = e94071bbefa01c54232915a0fbe211984e59943b
-SHA1 (patch-ax) = 40890a24d0c767324b1432fb0a0585f3084e6d17
+SHA1 (fam-2.7.0.tar.gz) = 6c2316f02acf89a41c42ffc3d7fd9cf5eada83a8
+Size (fam-2.7.0.tar.gz) = 301974 bytes
+SHA1 (patch-aa) = 22f1abd11e8367e0c1d0c146e4d8c14dc249a189
+SHA1 (patch-ab) = a486fd2b7330a0942717fd2aebb0fbdeb3c87dc7
+SHA1 (patch-ac) = 676966b0372780af4ee5536276132a04dd038863
+SHA1 (patch-ad) = b8e621acd36811a76a84af82e6f2b5962973e344
+SHA1 (patch-ae) = 225a0bd5195be3d3d75edf021b27bed19d84dc15
+SHA1 (patch-af) = 57946b3837479b641bb002620ae41008f49af995
+SHA1 (patch-ag) = fa5889ad6d93af72d7efe83784caf61b2ac39d6a
+SHA1 (patch-ah) = d7763198df76d1f0783342a8961b59879e8e1241
+SHA1 (patch-ai) = b80aafbb3849fc8c828b6829d8975b910e4d0fd5
+SHA1 (patch-aj) = 7aa752e629ad32925ec58cbe1532e8c9bd454a24
+SHA1 (patch-ao) = 64827309bf91a2018629e28fef20109dde3fbf01
+SHA1 (patch-ap) = b8084876217ca0b8510175ca753a6bbe9378438e
+SHA1 (patch-au) = 6bd507eb448b3fd126042759a3b6f70335401c5b
+SHA1 (patch-ax) = 3f341c6e63ca0014d28675dda174f63647e988f7
