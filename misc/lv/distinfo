@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/10/10 16:22:03 jschauma Exp $
+$NetBSD: distinfo,v 1.5 2003/12/21 04:56:15 uebayasi Exp $
 
-SHA1 (lv4495.tar.gz) = 11f8daa4fd5818676ac06ab0a20d6f252d4dca6f
-Size (lv4495.tar.gz) = 597451 bytes
+SHA1 (lv450.tar.gz) = 6438609aa6a320641201c3e90132676d53bb0456
+Size (lv450.tar.gz) = 604731 bytes
 SHA1 (patch-aa) = 9221506a523a0ada4153f81a18152de01bfac315
