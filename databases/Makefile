@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2000/04/28 00:42:55 garbled Exp $
+# $NetBSD: Makefile,v 1.35 2000/06/22 16:54:02 rh Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
     SUBDIR += db
     SUBDIR += db3
     SUBDIR += gdbm
+    SUBDIR += freetds
     SUBDIR += gtksql
     SUBDIR += gtranscript
     SUBDIR += iodbc
@@ -27,6 +28,7 @@
     SUBDIR += py-postgresql
     SUBDIR += rrdtool
     SUBDIR += sdbm
+    SUBDIR += sqsh
     SUBDIR += tcl-gdbm
     SUBDIR += tcl-postgresql
     SUBDIR += tk-postgresql
