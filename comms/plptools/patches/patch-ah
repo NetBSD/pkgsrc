@@ -1,13 +1,12 @@
-$NetBSD: patch-ah,v 1.1 2004/05/24 16:09:35 kristerw Exp $
+$NetBSD: patch-ah,v 1.2 2004/09/08 12:14:59 wiz Exp $
 
---- lib/ppsocket.cc.orig	2004-05-24 12:38:15.000000000 +0200
-+++ lib/ppsocket.cc	2004-05-24 17:42:47.000000000 +0200
-@@ -389,7 +389,7 @@
- {
- 	int i;
+--- lib/Enum.h.orig	2002-08-10 20:47:05.000000000 +0200
++++ lib/Enum.h
+@@ -28,6 +28,7 @@
+ #endif
  
--	cout << hex << (int) c << endl;
-+	cout << std::hex << (int) c << endl;
- 	i = writeTimeout(&c, 1, 0);
- 	if (i == SOCKET_ERROR || i == 0)
- 		return (false);
+ #include <plpintl.h>
++#include <assert.h>
+ 
+ #include <map>
+ #include <string>

@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1 2001/04/04 08:53:44 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2004/09/08 12:14:59 wiz Exp $
 
---- plpnfsd/mp_main.c.orig	Mon Jan 17 11:49:41 2000
+--- plpnfsd/mp_main.c.orig	2003-01-31 23:52:47.000000000 +0100
 +++ plpnfsd/mp_main.c
-@@ -17,7 +17,7 @@
+@@ -22,7 +22,7 @@
+ #include <errno.h>
  #include "nfs_prot.h"
  #include "mp.h"
- #include "defs.h"
 -#if defined (__SVR4) || defined(__sgi)
 +#if defined (__SVR4) || defined(__sgi) || defined(__NetBSD__)
  #include <stdlib.h>		/* getenv */
