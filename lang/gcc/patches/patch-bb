@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.1 2002/01/03 20:40:44 tron Exp $
+$NetBSD: patch-bb,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/vax/vax.c.orig	Wed Dec 16 22:14:24 1998
-+++ ../gcc-2.95.3/gcc/config/vax/vax.c	Thu Jan  3 20:37:54 2002
+--- ../gcc-2.95.3/gcc/config/vax/vax.c.orig 2000/07/26 00:18:55 1.1.1.1
++++ ../gcc-2.95.3/gcc/config/vax/vax.c 2002/02/23 21:02:50 1.11
 @@ -19,19 +19,24 @@
  Boston, MA 02111-1307, USA.  */
  
@@ -49,7 +49,7 @@ $NetBSD: patch-bb,v 1.1 2002/01/03 20:40:44 tron Exp $
  	  if (which_alternative == 0 && i == 0)
  	    {
  	      addr = XEXP (operands[i], 0);
-@@ -71,8 +77,24 @@
+@@ -71,9 +77,25 @@
       FILE *file;
       register rtx addr;
  {
@@ -57,7 +57,7 @@ $NetBSD: patch-bb,v 1.1 2002/01/03 20:40:44 tron Exp $
 +  register rtx reg1, breg, ireg;
    rtx offset;
 +  rtx orig_addr = addr;
-+
+ 
 +#if 0
 +  if (GET_CODE (addr) == PLUS && GET_CODE (XEXP (addr, 1)) == CONST)
 +    debug_rtx (addr);
@@ -72,21 +72,34 @@ $NetBSD: patch-bb,v 1.1 2002/01/03 20:40:44 tron Exp $
 +      fatal_insn ("Non-PIC operand escaped:\n", addr);
 +    }
 +#endif
- 
++
   retry:
    switch (GET_CODE (addr))
-@@ -83,6 +105,11 @@
+     {
+@@ -83,15 +105,20 @@
        goto retry;
  
      case REG:
+-      fprintf (file, "(%s)", reg_names[REGNO (addr)]);
 +      if (REGNO (addr) >= 16)
 +	{
 +	  debug_rtx (orig_addr);
 +	  abort ();
 +	}
-       fprintf (file, "(%s)", reg_names[REGNO (addr)]);
++      fprintf (file, "(%s%s)", REGISTER_PREFIX, reg_names[REGNO (addr)]);
        break;
  
+     case PRE_DEC:
+-      fprintf (file, "-(%s)", reg_names[REGNO (XEXP (addr, 0))]);
++      fprintf (file, "-(%s%s)", REGISTER_PREFIX, reg_names[REGNO (XEXP (addr, 0))]);
+       break;
+ 
+     case POST_INC:
+-      fprintf (file, "(%s)+", reg_names[REGNO (XEXP (addr, 0))]);
++      fprintf (file, "(%s%s)+", REGISTER_PREFIX, reg_names[REGNO (XEXP (addr, 0))]);
+       break;
+ 
+     case PLUS:
 @@ -139,7 +166,10 @@
  	  addr = XEXP (addr, 1);
  	}
@@ -198,7 +211,7 @@ $NetBSD: patch-bb,v 1.1 2002/01/03 20:40:44 tron Exp $
  	      ireg = reg1;
  	    }
  	  else
-@@ -232,14 +301,24 @@
+@@ -232,15 +301,25 @@
  	output_address (offset);
  
        if (breg != 0)
@@ -209,7 +222,7 @@ $NetBSD: patch-bb,v 1.1 2002/01/03 20:40:44 tron Exp $
 +	      debug_rtx (orig_addr);
 +	      abort ();
 +	    }
-+	  fprintf (file, "(%s)", reg_names[REGNO (breg)]);
++	  fprintf (file, "(%s%s)", REGISTER_PREFIX, reg_names[REGNO (breg)]);
 +	}
  
        if (ireg != 0)
@@ -218,13 +231,15 @@ $NetBSD: patch-bb,v 1.1 2002/01/03 20:40:44 tron Exp $
  	    ireg = XEXP (ireg, 0);
  	  if (GET_CODE (ireg) != REG)
 -	    abort ();
+-	  fprintf (file, "[%s]", reg_names[REGNO (ireg)]);
 +	    {
 +	      debug_rtx (orig_addr);
 +	      abort ();
 +	    }
- 	  fprintf (file, "[%s]", reg_names[REGNO (ireg)]);
++	  fprintf (file, "[%s%s]", REGISTER_PREFIX, reg_names[REGNO (ireg)]);
  	}
        break;
+ 
 @@ -249,7 +328,7 @@
      }
  }

@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 2002/01/03 20:40:42 tron Exp $
+$NetBSD: patch-af,v 1.4 2002/03/28 10:11:52 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/arm/arm.c.orig	Thu Jan 25 15:03:24 2001
-+++ ../gcc-2.95.3/gcc/config/arm/arm.c	Thu Jan  3 20:37:53 2002
+--- ../gcc-2.95.3/gcc/config/arm/arm.c.orig 2001/04/23 11:59:30 1.1.1.2
++++ ../gcc-2.95.3/gcc/config/arm/arm.c 2001/12/19 23:14:50 1.4
 @@ -281,7 +281,7 @@
        
        if (ptr->string != NULL && ptr->string[0] != '\0')

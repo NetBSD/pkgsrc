@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.2 2002/01/03 20:40:43 tron Exp $
+$NetBSD: patch-ap,v 1.3 2002/03/28 10:11:53 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/mips/mips.c.orig	Fri May  7 14:42:03 1999
-+++ ../gcc-2.95.3/gcc/config/mips/mips.c	Thu Jan  3 20:37:53 2002
+--- ../gcc-2.95.3/gcc/config/mips/mips.c.orig 2000/07/26 00:18:38 1.1.1.1
++++ ../gcc-2.95.3/gcc/config/mips/mips.c 2001/07/19 23:41:12 1.3
 @@ -93,7 +93,7 @@
  static void block_move_loop			PROTO ((rtx, rtx, int, int,
  							rtx, rtx));
