@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.1 2005/03/05 18:16:21 wiz Exp $
+# $NetBSD: builtin.mk,v 1.2 2005/03/22 15:52:35 jmmv Exp $
 
 _X11_EXTENSIONS_EXTUTIL_H=	${X11BASE}/include/X11/extensions/extutil.h
+_X11_EXTENSIONS_PC=		${X11BASE}/lib/pkgconfig/xextensions.pc
 
 .if !defined(IS_BUILTIN.xextensions)
 IS_BUILTIN.xextensions=	no
-.  if exists(${_X11_EXTENSIONS_EXTUTIL_H})
+.  if exists(${_X11_EXTENSIONS_EXTUTIL_H}) && exists(${_X11_EXTENSIONS_PC})
 IS_BUILTIN.xextensions=	yes
 # hardcode version for now, since there currently is only one, really
 BUILTIN_PKG.xextensions=	xextensions-1.0.1
