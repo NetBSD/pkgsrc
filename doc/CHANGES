@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9412 2005/03/03 16:53:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.9413 2005/03/03 21:32:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1257,6 +1257,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated svk to 0.30 [epg 2005-03-03]
 	Updated mpi-ch to 1.2.6 [garbled 2005-03-03]
 	Updated Gorm to 0.9.2 [adam 2005-03-03]
+	Updated ImageMagick to 6.2.0-4 [drochner 2005-03-03]
 	Updated xmms-flac to 1.1.2 [wiz 2005-03-03]
 	Updated anthy to 6300 [taya 2005-03-03]
 	Updated vte to 0.11.12 [jmmv 2005-03-03]
