@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/02/12 07:11:43 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2004/10/14 02:39:19 xtraeme Exp $
 
---- ccache.c.orig	Sat Sep 27 21:48:17 2003
-+++ ccache.c
-@@ -252,6 +252,7 @@ static void find_hash(ARGS *args)
+--- ccache.c.orig	2004-09-13 12:38:30.000000000 +0200
++++ ccache.c	2004-10-14 03:04:59.000000000 +0200
+@@ -255,6 +255,7 @@
  	int i;
  	char *path_stdout, *path_stderr;
  	char *hash_dir;
@@ -10,33 +10,38 @@ $NetBSD: patch-ab,v 1.1 2004/02/12 07:11:43 jlam Exp $
  	char *s;
  	struct stat st;
  	int status;
-@@ -314,15 +315,21 @@ static void find_hash(ARGS *args)
+@@ -317,13 +318,22 @@
  		hash_string(args->argv[i]);
  	}
  
 -	/* the compiler driver size and date. This is a simple minded way
 -	   to try and detect compiler upgrades. It is not 100% reliable */
--	if (stat(args->argv[0], &st) != 0) {
--		cc_log("Couldn't stat the compiler!? (argv[0]='%s')\n", args->argv[0]);
--		stats_update(STATS_COMPILER);
--		failed();
 +	/* If CCACHE_HASHCC is defined, then hash that string, otherwise, hash
-+	   the compiler driver size and date. This is a simple minded way to
-+	   try and detect compiler upgrades. It is not 100% reliable */
++	the compiler driver size and date. This is a simple minded way to
++	try and detect compiler upgrades. It is not 100% reliable */
++
 +	hash_cc = getenv("CCACHE_HASHCC");
 +	if (hash_cc) {
 +		hash_string(hash_cc);
 +	} else {
-+		if (stat(args->argv[0], &st) != 0) {
-+			cc_log("Couldn't stat the compiler!? (argv[0]='%s')\n", args->argv[0]);
-+			stats_update(STATS_COMPILER);
-+			failed();
-+		}
+ 	if (stat(args->argv[0], &st) != 0) {
+ 		cc_log("Couldn't stat the compiler!? (argv[0]='%s')\n", args->argv[0]);
+ 		stats_update(STATS_COMPILER);
+ 		failed();
+ 	}
 +		hash_int(st.st_size);
 +		hash_int(st.st_mtime);
++	}
+ 
+ 	/* also include the hash of the compiler name - as some compilers
+ 	   use hard links and behave differently depending on the real name */
+@@ -331,9 +341,6 @@
+ 		hash_string(str_basename(args->argv[0]));
  	}
+ 
 -	hash_int(st.st_size);
 -	hash_int(st.st_mtime);
- 
+-
  	/* possibly hash the current working directory */
  	if (getenv("CCACHE_HASHDIR")) {
+ 		char *cwd = gnu_getcwd();

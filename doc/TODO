@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2214 2004/10/13 22:18:06 ben Exp $
+$NetBSD: TODO,v 1.2215 2004/10/14 02:39:19 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -205,7 +205,6 @@ Suggested package updates
 	o bitlbee-0.91
 	o blender-2.34
 	o boson-0.10
-	o ccache-2.4
 	o cdrtools-2.01
 	o celestia-1.3.2
 	o centericq-4.12.0
