@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/15 21:20:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/28 16:30:31 jmmv Exp $
 bin/gst-complete
 bin/gst-complete-0.8
 bin/gst-compprep
@@ -19,6 +19,7 @@ bin/gst-xmlinspect
 bin/gst-xmlinspect-0.8
 bin/gst-xmllaunch
 bin/gst-xmllaunch-0.8
+include/gstreamer-0.8/gst/bytestream/adapter.h
 include/gstreamer-0.8/gst/bytestream/bytestream.h
 include/gstreamer-0.8/gst/control/control.h
 include/gstreamer-0.8/gst/control/dparam.h
@@ -27,6 +28,7 @@ include/gstreamer-0.8/gst/control/dparamcommon.h
 include/gstreamer-0.8/gst/control/dparammanager.h
 include/gstreamer-0.8/gst/control/dplinearinterp.h
 include/gstreamer-0.8/gst/control/unitconvert.h
+include/gstreamer-0.8/gst/dataprotocol/dataprotocol.h
 include/gstreamer-0.8/gst/getbits/getbits.h
 include/gstreamer-0.8/gst/gst.h
 include/gstreamer-0.8/gst/gstatomic.h
@@ -47,7 +49,6 @@ include/gstreamer-0.8/gst/gstformat.h
 include/gstreamer-0.8/gst/gstindex.h
 include/gstreamer-0.8/gst/gstinfo.h
 include/gstreamer-0.8/gst/gstinterface.h
-include/gstreamer-0.8/gst/gstlog.h
 include/gstreamer-0.8/gst/gstmacros.h
 include/gstreamer-0.8/gst/gstmarshal.h
 include/gstreamer-0.8/gst/gstmemchunk.h
@@ -87,6 +88,9 @@ lib/gstreamer-0.8/libgstbasicomegascheduler.so
 lib/gstreamer-0.8/libgstbytestream.a
 lib/gstreamer-0.8/libgstbytestream.la
 lib/gstreamer-0.8/libgstbytestream.so
+lib/gstreamer-0.8/libgstdataprotocol.a
+lib/gstreamer-0.8/libgstdataprotocol.la
+lib/gstreamer-0.8/libgstdataprotocol.so
 lib/gstreamer-0.8/libgstelements.a
 lib/gstreamer-0.8/libgstelements.la
 lib/gstreamer-0.8/libgstelements.so
@@ -117,33 +121,98 @@ lib/gstreamer-0.8/libgstspider.so
 lib/libgstcontrol-0.8.a
 lib/libgstcontrol-0.8.la
 lib/libgstcontrol-0.8.so
-lib/libgstcontrol-0.8.so.1
-lib/libgstcontrol-0.8.so.1.0
+lib/libgstcontrol-0.8.so.3
+lib/libgstcontrol-0.8.so.3.0
 lib/libgstreamer-0.8.a
 lib/libgstreamer-0.8.la
 lib/libgstreamer-0.8.so
-lib/libgstreamer-0.8.so.1
-lib/libgstreamer-0.8.so.1.0
+lib/libgstreamer-0.8.so.3
+lib/libgstreamer-0.8.so.3.0
 lib/pkgconfig/gstreamer-0.8.pc
 lib/pkgconfig/gstreamer-control-0.8.pc
 libdata/gstreamer-0.8/compreg.xml
 libdata/gstreamer-0.8/registry.xml
-man/man1/gst-complete-${PKGVERSION}
-man/man1/gst-compprep-${PKGVERSION}
-man/man1/gst-feedback-${PKGVERSION}
-man/man1/gst-inspect-${PKGVERSION}
-man/man1/gst-launch-${PKGVERSION}
-man/man1/gst-md5sum-${PKGVERSION}
-man/man1/gst-register-${PKGVERSION}
-man/man1/gst-typefind-${PKGVERSION}
-man/man1/gst-xmllaunch-${PKGVERSION}
+man/man1/gst-complete-0.8.1
+man/man1/gst-compprep-0.8.1
+man/man1/gst-feedback-0.8.1
+man/man1/gst-inspect-0.8.1
+man/man1/gst-launch-0.8.1
+man/man1/gst-md5sum-0.8.1
+man/man1/gst-register-0.8.1
+man/man1/gst-typefind-0.8.1
+man/man1/gst-xmllaunch-0.8.1
 share/aclocal/gst-element-check-0.8.m4
+share/doc/gstreamer-0.8/GstBin.html
+share/doc/gstreamer-0.8/GstClock.html
+share/doc/gstreamer-0.8/GstElementFactory.html
+share/doc/gstreamer-0.8/GstIndexFactory.html
+share/doc/gstreamer-0.8/GstObject.html
+share/doc/gstreamer-0.8/GstPadTemplate.html
+share/doc/gstreamer-0.8/GstPipeline.html
+share/doc/gstreamer-0.8/GstPluginFeature.html
+share/doc/gstreamer-0.8/GstQueue.html
+share/doc/gstreamer-0.8/GstRegistry.html
+share/doc/gstreamer-0.8/GstSchedulerFactory.html
+share/doc/gstreamer-0.8/GstThread.html
+share/doc/gstreamer-0.8/GstTypeFindFactory.html
+share/doc/gstreamer-0.8/GstXML.html
+share/doc/gstreamer-0.8/ch03.html
+share/doc/gstreamer-0.8/gstreamer-0.8.devhelp
+share/doc/gstreamer-0.8/gstreamer-GstSystemClock.html
+share/doc/gstreamer-0.8/gstreamer-gst.html
+share/doc/gstreamer-0.8/gstreamer-gstatomic.html
+share/doc/gstreamer-0.8/gstreamer-gstbuffer.html
+share/doc/gstreamer-0.8/gstreamer-gstcaps.html
+share/doc/gstreamer-0.8/gstreamer-gstconfig.html
+share/doc/gstreamer-0.8/gstreamer-gstcpu.html
+share/doc/gstreamer-0.8/gstreamer-gstdata.html
+share/doc/gstreamer-0.8/gstreamer-gsterror.html
+share/doc/gstreamer-0.8/gstreamer-gstevent.html
+share/doc/gstreamer-0.8/gstreamer-gstformat.html
+share/doc/gstreamer-0.8/gstreamer-gstinfo.html
+share/doc/gstreamer-0.8/gstreamer-gstinterface.html
+share/doc/gstreamer-0.8/gstreamer-gstmemchunk.html
+share/doc/gstreamer-0.8/gstreamer-gstparse.html
+share/doc/gstreamer-0.8/gstreamer-gstplugin.html
+share/doc/gstreamer-0.8/gstreamer-gstprobe.html
+share/doc/gstreamer-0.8/gstreamer-gstquery.html
+share/doc/gstreamer-0.8/gstreamer-gstregistrypool.html
+share/doc/gstreamer-0.8/gstreamer-gststructure.html
+share/doc/gstreamer-0.8/gstreamer-gsttag.html
+share/doc/gstreamer-0.8/gstreamer-gsttaginterface.html
+share/doc/gstreamer-0.8/gstreamer-gsturi.html
+share/doc/gstreamer-0.8/gstreamer-gstutils.html
+share/doc/gstreamer-0.8/gstreamer-gstvalue.html
+share/doc/gstreamer-0.8/gstreamer-support.html
+share/doc/gstreamer-0.8/gstreamer.html
+share/doc/gstreamer-0.8/home.png
+share/doc/gstreamer-0.8/index.html
+share/doc/gstreamer-0.8/index.sgml
+share/doc/gstreamer-0.8/ix01.html
+share/doc/gstreamer-0.8/left.png
+share/doc/gstreamer-0.8/right.png
+share/doc/gstreamer-0.8/up.png
+share/doc/gstreamer-libs-0.8/gstreamer-libs-0.8.devhelp
+share/doc/gstreamer-libs-0.8/gstreamer-libs-gstcontrol.html
+share/doc/gstreamer-libs-0.8/gstreamer-libs-gstdataprotocol.html
+share/doc/gstreamer-libs-0.8/gstreamer-libs-gstgetbits.html
+share/doc/gstreamer-libs-0.8/gstreamer-libs.html
+share/doc/gstreamer-libs-0.8/home.png
+share/doc/gstreamer-libs-0.8/index.html
+share/doc/gstreamer-libs-0.8/index.sgml
+share/doc/gstreamer-libs-0.8/left.png
+share/doc/gstreamer-libs-0.8/right.png
+share/doc/gstreamer-libs-0.8/up.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gstreamer-0.8.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gstreamer-0.8.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gstreamer-0.8.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gstreamer-0.8.mo
+@dirrm share/doc/gstreamer-libs-0.8
 @exec ${MKDIR} %D/share/doc/${PKGNAME}/pwg
 @dirrm share/doc/${PKGNAME}/pwg
 @exec ${MKDIR} %D/share/doc/${PKGNAME}/manual
@@ -151,9 +220,11 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gstreamer-0.8.mo
 @exec ${MKDIR} %D/share/doc/${PKGNAME}/faq
 @dirrm share/doc/${PKGNAME}/faq
 @dirrm share/doc/${PKGNAME}
+@dirrm share/doc/gstreamer-0.8
 @dirrm libdata/gstreamer-0.8
 @dirrm lib/gstreamer-0.8
 @dirrm include/gstreamer-0.8/gst/getbits
+@dirrm include/gstreamer-0.8/gst/dataprotocol
 @dirrm include/gstreamer-0.8/gst/control
 @dirrm include/gstreamer-0.8/gst/bytestream
 @dirrm include/gstreamer-0.8/gst
