@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/02 07:49:27 jtb Exp $
+
+--- tex-site.el.orig	Sat Dec  2 07:30:00 2000
++++ tex-site.el
+@@ -57,8 +57,12 @@
+ ;; Copy variables you need to change from the start of `tex.el' and
+ ;; insert them here.
+ 
+-(defvar TeX-lisp-directory "@AUCDIR"
++(defvar TeX-lisp-directory "%%PREFIX%%/share/emacs/site-lisp/auctex/"
+   "*The directory where the AUC TeX lisp files are located.")
++
++(defvar TeX-macro-global '("%%TEX_PREFIX%%/share/texmf/tex/")
++  "Directories containing the sites TeX macro files and style files.
++   The directory names *must* end with a slash.")
+ 
+ ;;; Autoloads:
+ 
