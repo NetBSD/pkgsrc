@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.685 2002/12/05 08:15:11 tron Exp $
+$NetBSD: CHANGES,v 1.686 2002/12/05 10:58:34 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3815,3 +3815,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added py-gnuplot-1.6 [drochner 2002-12-04]
 	Updated xlockmore to 5.06 [hubertf 2002-12-05]
 	Updated opera6 to 6.11 [tron 2002-12-05]
+	Updated xlife to 5.0nb1 [abs 2002-12-05]
