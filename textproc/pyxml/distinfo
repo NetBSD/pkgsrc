@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2002/05/08 11:31:36 drochner Exp $
+$NetBSD: distinfo,v 1.8 2002/08/20 12:54:21 drochner Exp $
 
-SHA1 (PyXML-0.7.1.tar.gz) = b548a6308a165a7b248fdebe2d1e2ab7b1ab068b
-Size (PyXML-0.7.1.tar.gz) = 606480 bytes
+SHA1 (PyXML-0.8.tar.gz) = 8e25b64403054645e2739d94cb2b49eef8c45ee2
+Size (PyXML-0.8.tar.gz) = 680754 bytes
 SHA1 (patch-aa) = 51af9ee51699a9a17ebaf000aba3aba5cb07fd94
