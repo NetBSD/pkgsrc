@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.917 2002/01/28 19:00:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.918 2002/01/28 19:08:18 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1425,7 +1425,8 @@ _EXTRACT_SUFFICES+=	.lzh .lha
 # the benefit of pre-1.5 NetBSD systems. "gzcat" on newer systems happily
 # decodes bzip2.]  Do likewise for ".zip" and ".lha" distfiles.
 #
-.if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz)
+.if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
+    !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
 .  if exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat <
 .  else
@@ -1433,10 +1434,11 @@ BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 BZCAT=			${LOCALBASE}/bin/bzcat
 .  endif
 .endif
-.if !empty(EXTRACT_ONLY:M*.zip)
+.if !empty(EXTRACT_ONLY:M*.zip) || !empty(EXTRACT_SUFX:M*.zip)
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 .endif
-.if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha)
+.if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
+    !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
 BUILD_DEPENDS+=		lha-[0-9]*:../../archivers/lha  
 .endif
 
