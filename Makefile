@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2000/12/15 00:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2000/12/17 23:40:54 wiz Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -42,6 +42,7 @@ SUBDIR += print
 SUBDIR += security
 SUBDIR += shells
 SUBDIR += sysutils
+SUBDIR += time
 SUBDIR += textproc
 SUBDIR += wm
 SUBDIR += www
