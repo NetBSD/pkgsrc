@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6473 2004/07/06 18:06:44 agc Exp $
+$NetBSD: CHANGES,v 1.6474 2004/07/06 19:52:01 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3283,3 +3283,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-libxslt to 1.1.8 [recht 2004-07-06]
 	Added rfstool-0.14 [agc 2004-07-06]
 	Added libfwbuilder-1.0.2 [agc 2004-07-06]
+	Updated php4 to 4.3.7 [jdolecek 2004-07-06]
