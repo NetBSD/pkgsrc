@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/01/26 10:59:14 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/05/30 09:07:31 rh Exp $
 bin/xml-config
 include/gnome-xml/entities.h
 include/gnome-xml/encoding.h
@@ -16,7 +16,8 @@ include/gnome-xml/nanohttp.h
 include/gnome-xml/valid.h
 include/gnome-xml/SAX.h
 include/gnome-xml/xlink.h
-lib/libxml.so.9.5
+include/gnome-xml/nanoftp.h
+lib/libxml.so.9.7
 lib/libxml.a
 lib/xmlConf.sh
 share/gnome-xml/html/gnome-xml/xml.html
@@ -39,6 +40,7 @@ share/gnome-xml/html/gnome-xml/gnome-xml-debugxml.html
 share/gnome-xml/html/gnome-xml/gnome-xml-encoding.html
 share/gnome-xml/html/gnome-xml/gnome-xml-sax.html
 share/gnome-xml/html/gnome-xml/gnome-xml-xmlio.html
+share/gnome-xml/html/gnome-xml/gnome-xml-nanoftp.html
 share/gnome-xml/html/gnome-xml/libxml-lib.html
 share/gnome-xml/html/gnome-xml/libxml-notes.html
 share/gnome-xml/html/gnome-xml/index.sgml
