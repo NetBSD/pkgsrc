@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: install-sh.in,v 1.1 2004/04/23 02:03:18 tv Exp $
+# $NetBSD: install-sh.in,v 1.2 2004/05/17 14:54:45 jschauma Exp $
 # This script now also installs multiple files, but might choke on installing
 # multiple files with spaces in the file names.
 #
@@ -151,6 +151,9 @@ else
 	then
 		echo "install: $src: not a regular file"
 		exit 1
+	elif [ x"$src" = x"/dev/null" ]
+	then
+		instcmd="$cpprog"
 	else
 		echo "install:  $src does not exist"
 		exit 1
