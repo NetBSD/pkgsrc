@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- mail.local/mail.local.c.orig	Sat Aug  2 16:20:08 1997
++++ mail.local/mail.local.c	Sat Feb 12 23:28:26 2000
+@@ -220,7 +220,7 @@
+ #endif
+ 
+ 	from = NULL;
+-	while ((ch = getopt(argc, argv, "df:r:")) != EOF)
++	while ((ch = getopt(argc, argv, "df:r:")) != -1)
+ 		switch(ch) {
+ 		case 'd':		/* Backward compatible. */
+ 			break;

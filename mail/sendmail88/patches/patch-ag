@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- mailstats/Makefile.orig	Sat Sep 21 20:38:18 1996
++++ mailstats/Makefile	Sat Feb 12 23:28:26 2000
+@@ -1,8 +1,7 @@
+ #	@(#)Makefile	8.2 (Berkeley) 9/21/96
+ 
+ PROG=	mailstats
+-MAN8=	mailstats.0
+-CFLAGS+=-I${.CURDIR}/../src
++MAN=	mailstats.8
++CPPFLAGS+=-I${.CURDIR}/../src
+ 
+-.include "../../Makefile.inc"
+ .include <bsd.prog.mk>

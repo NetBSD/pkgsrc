@@ -1,0 +1,21 @@
+$NetBSD: patch-ba,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/newaliases.1.orig	Sun Feb  2 01:24:51 1997
++++ src/newaliases.1	Sat Feb 12 23:28:27 2000
+@@ -34,7 +34,7 @@
+ .\"
+ .Dd February 1, 1997
+ .Dt NEWALIASES 1
+-.Os BSD 4
++.Os
+ .Sh NAME
+ .Nm newaliases
+ .Nd rebuild the data base for the mail aliases file
+@@ -61,6 +61,7 @@
+ .El
+ .Sh SEE ALSO
+ .Xr aliases 5 ,
++.Xr mailer.conf 5 ,
+ .Xr sendmail 8
+ .Sh HISTORY
+ The

@@ -1,0 +1,17 @@
+$NetBSD: patch-ap,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- smrsh/Makefile.orig	Sun Jul  2 17:34:31 1995
++++ smrsh/Makefile	Sat Feb 12 23:28:27 2000
+@@ -1,8 +1,9 @@
+ #	@(#)Makefile	8.1 (Berkeley) 7/2/95
+ 
++BINDIR=	${PREFIX}/libexec/sendmail
+ PROG=	smrsh
+-MAN8=	smrsh.0
+-CFLAGS+=-I${.CURDIR}/../src -DNDBM -DNEWDB
++MAN=	smrsh.8
++CPPFLAGS+=-I${.CURDIR}/../src -DNDBM -DNEWDB
++CPPFLAGS+=-DCMDDIR=\"${PREFIX}/libexec/sendmail/sm.bin\"
+ 
+-.include "../../Makefile.inc"
+ .include <bsd.prog.mk>

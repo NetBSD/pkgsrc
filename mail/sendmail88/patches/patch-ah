@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- mailstats/mailstats.8.orig	Sat Sep 21 20:31:16 1996
++++ mailstats/mailstats.8	Sat Feb 12 23:28:26 2000
+@@ -1,7 +1,7 @@
+ .\"	@(#)mailstats.8	8.1 (Berkeley) 9/21/96
+ .Dd April 25, 1996
+ .Dt MAILSTATS 1
+-.Os BSD 3
++.Os
+ .Sh NAME
+ .Nm mailstats
+ .Nd display mail statistics
