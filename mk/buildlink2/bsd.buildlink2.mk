@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.11 2003/08/18 15:37:36 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.12 2003/08/27 11:44:33 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -382,54 +382,6 @@ _BLNK_TRANSFORM+=	${_BLNK_UNPROTECT}
 _BLNK_TRANSFORM_SED+=	-f ${_BLNK_TRANSFORM_SEDFILE}
 _BLNK_UNTRANSFORM_SED+=	-f ${_BLNK_UNTRANSFORM_SEDFILE}
 
-_BLNK_CHECK_IS_TEXT_FILE?= \
-	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
-
-# _BUILDLINK_SUBST_USE is a make macro that executes code to do general text
-# replacement in files in ${WRKSRC}.  The following variables are used:
-#
-# BUILDLINK_SUBST_MESSAGE.<package>	message to display, noting what is
-#					being substituted
-#                                      
-# BUILDLINK_SUBST_FILES.<package>	files on which to run the substitution;
-#					these are relative to ${WRKSRC}
-#
-# BUILDLINK_SUBST_SED.<package>		sed(1) substitution expression to run
-#					on the specified files.
-#
-# The _BUILDLINK_SUBST_USE macro code will try to verify that a file is a text
-# file before attempting any substitutions.
-#
-_BUILDLINK_SUBST_USE: .USE
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink-subst//:S/-/_/g}_buildlink_subst_done; \
-	if [ ! -f $${cookie} ]; then					\
-		${MKDIR} ${BUILDLINK_DIR};				\
-		if [ -n "${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}:C/[ 	]//g:Q}" ]; then \
-			cd ${WRKSRC};					\
-			files="${BUILDLINK_SUBST_FILES.${.TARGET:S/-buildlink-subst//}}"; \
-			if [ -n "$${files}" ]; then			\
-				${ECHO_BUILDLINK_MSG} ${BUILDLINK_SUBST_MESSAGE.${.TARGET:S/-buildlink-subst//}}; \
-				cd ${WRKSRC};				\
-				for file in $${files}; do		\
-					if ${_BLNK_CHECK_IS_TEXT_FILE}; then \
-						${MV} -f $${file} $${file}.blsav; \
-						${SED}  ${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}} \
-							$${file}.blsav > $${file}; \
-						if [ -x $${file}.blsav ]; then \
-							${CHMOD} +x $${file}; \
-						fi;			\
-						if ${CMP} -s $${file}.blsav $${file}; then \
-							${MV} -f $${file}.blsav $${file}; \
-						else			\
-							${ECHO} $${file} >> $${cookie}; \
-						fi;			\
-					fi;				\
-				done;					\
-			fi;						\
-		fi;							\
-	fi
-
 REPLACE_BUILDLINK_PATTERNS?=	# empty
 _REPLACE_BUILDLINK_PATTERNS=	${REPLACE_BUILDLINK_PATTERNS}
 _REPLACE_BUILDLINK_PATTERNS+=	*-config
@@ -459,47 +411,13 @@ REPLACE_BUILDLINK_SED?=			# empty
 _REPLACE_BUILDLINK_SED=			${REPLACE_BUILDLINK_SED}
 _REPLACE_BUILDLINK_SED+=		${_LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
 
-BUILDLINK_SUBST_MESSAGE.unbuildlink= \
+SUBST_CLASSES+=			unbuildlink
+SUBST_STAGE.unbuildlink=	post-build
+SUBST_MESSAGE.unbuildlink=	\
 	"Fixing buildlink references in files-to-be-installed."
-BUILDLINK_SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
-BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
-BUILDLINK_SUBST_SED.unbuildlink+=	${_BLNK_UNTRANSFORM_SED}
-
-post-build: unbuildlink-buildlink-subst
-unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
-
-# Fix locale directory references.
-#
-USE_PKGLOCALEDIR?=		no
-_PKGLOCALEDIR=			${PREFIX}/${PKGLOCALEDIR}/locale
-REPLACE_LOCALEDIR_PATTERNS?=	# empty
-_REPLACE_LOCALEDIR_PATTERNS=	${REPLACE_LOCALEDIR_PATTERNS}
-.if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
-_REPLACE_LOCALEDIR_PATTERNS+=	Makefile.in*
-.else
-_REPLACE_LOCALEDIR_PATTERNS+=	Makefile*
-.endif
-_REPLACE_LOCALEDIR_PATTERNS_FIND= \
-	\( ${_REPLACE_LOCALEDIR_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
-
-REPLACE_LOCALEDIR?=		# empty
-_REPLACE_LOCALEDIR= \
-	${REPLACE_LOCALEDIR}						\
-	`${FIND} . ${_REPLACE_LOCALEDIR_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${GREP} -v '\.orig' | ${SORT} -u`
-
-BUILDLINK_SUBST_MESSAGE.pkglocaledir= \
-	"Fixing locale directory references."
-BUILDLINK_SUBST_FILES.pkglocaledir= \
-	${_REPLACE_LOCALEDIR}
-BUILDLINK_SUBST_SED.pkglocaledir= \
-	-e 's|^\(localedir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|' \
-	-e 's|^\(gnulocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|' \
-	-e 's|\(-DLOCALEDIR[ 	]*=\)[^ 	]*\(.*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
-
-.if empty(USE_PKGLOCALEDIR:M[nN][oO])
-pre-configure: pkglocaledir-buildlink-subst
-.endif
-pkglocaledir-buildlink-subst: _BUILDLINK_SUBST_USE
+SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
+SUBST_SED.unbuildlink=		${_REPLACE_BUILDLINK_SED}
+SUBST_SED.unbuildlink+=		${_BLNK_UNTRANSFORM_SED}
 
 .if !defined(USE_LIBTOOL)
 BUILDLINK_FAKE_LA=	${TRUE}
