@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 1998/08/07 11:10:29 agc Exp $
+$NetBSD: patch-af,v 1.7 1998/10/13 14:28:01 agc Exp $
 
 --- tools/Makefile.in.orig	Wed May 27 16:49:44 1998
 +++ tools/Makefile.in	Wed Jul 29 12:46:56 1998
-@@ -2,7 +2,7 @@
+@@ -2,10 +2,10 @@
  VPATH = @srcdir@
  top_srcdir = @top_srcdir@
  
@@ -10,7 +10,11 @@ $NetBSD: patch-af,v 1.6 1998/08/07 11:10:29 agc Exp $
 +.include "../Makefile.inc"
  
  PROGS = rpmlead rpmheader rpmarchive rpmsignature dump dumpdb
- LOADLIBES = @LIBS@ @LIBMISC@ @LIBINTL@
+-LOADLIBES = @LIBS@ @LIBMISC@ @LIBINTL@
++LDLIBS = @LIBS@ -lrpm @LIBMISC@ @LIBINTL@
+ 
+ TARGET=everything
+ 
 @@ -26,6 +26,6 @@
  
  $(PROGS): ../lib/librpm.a
