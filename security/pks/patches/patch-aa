@@ -1,21 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/27 16:10:24 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2003/10/11 12:06:04 grant Exp $
 
---- Makefile.in.orig	Thu Jul 27 11:11:28 2000
-+++ Makefile.in	Thu Jul 27 11:24:02 2000
-@@ -9,9 +9,9 @@
- SHELL = /bin/sh
+--- Makefile.in.orig	2003-10-11 21:56:03.000000000 +1000
++++ Makefile.in
+@@ -10,10 +10,11 @@ SHELL = /bin/sh
  
  ## this does recursion for db2, if it's in the tree
--
+ 
 -SUBDIRS = db2-sleepycat/dist
 -
+-depend all install check clean distclean maintainer-clean::
+-	for i in ${SUBDIRS}; do (test -d $$i && cd $$i && ${MAKE} $@) || exit 1; done
++# We use the installed db2, so we don't need this stuff anymore
++#SUBDIRS = db2-sleepycat/dist
 +#
-+# We use the installed db2, so we don't need this line anymore
-+#
- depend all install check clean distclean maintainer-clean::
- 	for i in ${SUBDIRS}; do (test -d $$i && cd $$i && ${MAKE} $@) || exit 1; done
++#depend all install check clean distclean maintainer-clean::
++#	for i in ${SUBDIRS}; do (test -d $$i && cd $$i && ${MAKE} $@) || exit 1; done
  
-@@ -32,12 +32,13 @@
+ ## this builds the keyserver
+ 
+@@ -32,12 +33,13 @@ all:: $(ALL) $(SYSCONF)
  all-pure:: $(ALL_PURE)
  all-utils:: $(UTILS)
  
@@ -32,7 +35,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/07/27 16:10:24 jlam Exp $
  SOCKLIBS = @LIBS@
  VPATH = @srcdir@
  
-@@ -60,7 +61,7 @@
+@@ -60,7 +62,7 @@ DBG = -DDEBUG
  DEFINES = $(DBG) @DEFS@
  CFLAGS = @gcc_cflags@ -g -O $(INCLUDES) $(DEFINES)
  
@@ -41,7 +44,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/07/27 16:10:24 jlam Exp $
  
  CLEAN = rm -f
  
-@@ -118,6 +119,8 @@
+@@ -118,6 +120,8 @@ wwwtest: $(O9)
  pgpdump: pgpdump.o pgpfile.o $(PGPOBJS) $(UTILOBJS)
  
  pgpsplit: pgpsplit.o $(PGPOBJS) $(UTILOBJS)
@@ -50,7 +53,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/07/27 16:10:24 jlam Exp $
  
  kvcv: kvcv.o pgpfile.o logging.o $(PGPOBJS) $(UTILOBJS)
  
-@@ -138,7 +141,7 @@
+@@ -138,7 +142,7 @@ installdirs::
  install:: all installdirs
  	for f in $(ALL); do $(INSTALL_PROGRAM) $$f $(bindir); done
  	for f in $(SYSCONF); do $(INSTALL_DATA) $$f $(sysconfdir); done
