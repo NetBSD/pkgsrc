@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/08/04 17:28:23 jmc Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/09/10 16:25:25 jlam Exp $
 #
 # Optionally define USE_OPENSSL_VERSION to the mininum OpenSSL version
 # number in <openssl/opensslv.h>, i.e. 0x0090600fL, etc.
@@ -117,8 +117,10 @@ BUILDLINK_FILES.openssl+=	lib/libRSAglue.*
 BUILDLINK_FILES.openssl+=	lib/libcrypto.*
 BUILDLINK_FILES.openssl+=	lib/libssl.*
 
-.if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-.  include "../../security/rsaref/buildlink2.mk"
+.if ${_NEED_OPENSSL} == "YES"
+.  if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
+.    include "../../security/rsaref/buildlink2.mk"
+.  endif
 .endif
 
 BUILDLINK_TARGETS+=	openssl-buildlink
