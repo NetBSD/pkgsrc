@@ -1,9 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/09 18:37:18 jwise Exp $
---- Imakefile.orig	Fri Jul  9 14:00:45 1999
-+++ Imakefile	Fri Jul  9 14:06:45 1999
-@@ -8,4 +8,4 @@
- 	shape.c resource.c version.c
+$NetBSD: patch-aa,v 1.2 2000/02/28 00:24:06 hubertf Exp $
+
+--- Imakefile.orig	Wed Oct 20 10:33:03 1999
++++ Imakefile	Mon Feb 28 01:22:33 2000
+@@ -7,6 +7,6 @@
+ SRCS = lwm.c manage.c mouse.c client.c cursor.c error.c disp.c shape.c resource.c
  OBJS = ${SRCS:.c=.o}
  
 -ComplexProgramTarget(lwm)
 +ComplexProgramTargetNoMan(lwm)
+ 
+ ${OBJS}: ${HEADERS}
