@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.367 2003/03/12 11:30:06 markd Exp $
+$NetBSD: TODO,v 1.368 2003/03/12 15:13:08 salo Exp $
 
 Suggested new packages
 ======================
@@ -100,7 +100,6 @@ Suggested package updates
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
-	o ethereal-0.9.11
 	o exim-4.12 [pkg/19850]
 	o exmh-2.6.1
 	o fltk-1.1.3
