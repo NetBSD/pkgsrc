@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2004/09/27 16:12:04 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2005/01/09 22:52:14 recht Exp $
 
---- src/extract.c.orig	2004-04-05 09:23:51.000000000 +0200
-+++ src/extract.c
-@@ -182,7 +182,11 @@ set_mode (char const *file_name,
+--- src/extract.c.orig	Mon Sep 13 10:12:04 2004
++++ src/extract.c	Sun Jan  9 18:26:07 2005
+@@ -195,7 +195,11 @@
        mode = cur_info->st_mode ^ invert_permissions;
      }
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ag,v 1.2 2004/09/27 16:12:04 wiz Exp $
      chmod_error_details (file_name, mode);
  }
  
-@@ -222,7 +226,12 @@ set_stat (char const *file_name,
+@@ -235,7 +239,12 @@
  {
    struct utimbuf utimbuf;
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ag,v 1.2 2004/09/27 16:12:04 wiz Exp $
      {
        /* We do the utime before the chmod because some versions of utime are
  	 broken and trash the modes of the file.  */
-@@ -235,6 +244,7 @@ set_stat (char const *file_name,
+@@ -248,6 +257,7 @@
  
  	  /* FIXME: incremental_option should set ctime too, but how?  */
  
@@ -35,7 +35,7 @@ $NetBSD: patch-ag,v 1.2 2004/09/27 16:12:04 wiz Exp $
  	  if (incremental_option)
  	    utimbuf.actime = stat_info->st_atime;
  	  else
-@@ -243,6 +253,16 @@ set_stat (char const *file_name,
+@@ -256,6 +266,16 @@
  	  utimbuf.modtime = stat_info->st_mtime;
  
  	  if (utime (file_name, &utimbuf) < 0)
