@@ -1,9 +1,9 @@
-.\"	$NetBSD: pkgdepgraph.1,v 1.8 2003/04/30 03:39:17 atatat Exp $
+.\"	$NetBSD: pkgdepgraph.1,v 1.9 2004/06/05 06:17:37 atatat Exp $
 .\"
-.\" Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
+.\" Copyright (c) 2002, 2003, 2004 by Andrew Brown <atatat@netbsd.org>
 .\" Absolutely no warranty.
 .\"
-.Dd March 6, 2003
+.Dd June 5, 2004
 .Dt PKGDEPGRAPH 1
 .Sh NAME
 .Nm pkgdepgraph
@@ -12,6 +12,7 @@
 .Nm
 .Op Fl AaCcDeFfgLloRrsv
 .Op Fl d Ar pkg_dbdir
+.Op Fl i Ar impact
 .Op Fl K Ar packages
 .Op Fl M Ar make
 .Op Fl m Ar target
@@ -184,6 +185,25 @@ or
 .Dq gimp )
 in a subgraph with a line around it so you can visually associate
 packages.
+.It Fl i Ar impact
+Specify the impact you want to allow when rebuilding packages.
+The impact of a given package being rebuilt is a number that reflects
+the longest path from the
+.Dq top
+of the installed packages (those packages upon which most other
+packages depend) to the
+.Dq bottom
+of the installed packages (those packages upon which no other packages
+depend).
+A package that needs to be rebuilt but has nothing above it in the
+tree requiring rebuilding and nothing below it has an impact of 0.
+Values of 10 or more for
+.Ar impact
+will probably eliminate nothing from the rebuild list.
+The value for
+.Ar impact
+can also be the name of a package to be avoided when constructing the
+list of things to be rebuilt.
 .It Fl K Ar packages
 The base location or url from which to install binary packages.
 This defaults to the value of PKG_PATH, or to PACKAGES with
@@ -401,6 +421,19 @@ all packages up to date:
 .Bd -literal -offset indent
 $ pkgdepgraph -D pkgdepgraph.in \*[Gt] delete_order
 $ pkgdepgraph -R pkgdepgraph.in \*[Gt] rebuild.sh
+.Ed
+.Pp
+To rebuild everything that has no other rebuild requirements:
+.Bd -literal -offset indent
+$ pkgdepgraph -D pkgdepgraph.in -i0 \*[Gt] delete_order
+$ pkgdepgraph -R pkgdepgraph.in -i0 \*[Gt] rebuild.sh
+.Ed
+.Pp
+Or, to rebuild everything except those things that would require
+rebuilding perl:
+.Bd -literal -offset indent
+$ pkgdepgraph -D pkgdepgraph.in -iperl \*[Gt] delete_order
+$ pkgdepgraph -R pkgdepgraph.in -iperl \*[Gt] rebuild.sh
 .Ed
 .Pp
 To subsequently delete all out of date and stale packages:
