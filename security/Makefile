@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2003/02/02 17:28:51 tron Exp $
+# $NetBSD: Makefile,v 1.126 2003/02/16 11:13:58 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -32,6 +32,7 @@ SUBDIR+=	hackbot
 SUBDIR+=	isakmpd
 SUBDIR+=	john
 SUBDIR+=	keychain
+SUBDIR+=	kssh
 SUBDIR+=	kth-krb4
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
