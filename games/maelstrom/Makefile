@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/27 14:06:08 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/14 19:34:23 garbled Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -29,8 +29,8 @@ post-install:
 	pax -rzf ${DISTDIR}/${SWARS} -p m
 	chown ${BINOWN}:games ${PREFIX}/bin/Maelstrom
 	chmod 2755 ${PREFIX}/bin/Maelstrom
-	chown ${BINOWN}:games ${PREFIX}/share/maelstrom/Maelstrom-Scores
-	chmod 0664 ${PREFIX}/share/maelstrom/Maelstrom-Scores
+	chown ${BINOWN}:games /var/games/Maelstrom-Scores
+	chmod 0664 /var/games/Maelstrom-Scores
 	${INSTALL_DATA} ${WRKSRC}/README.* ${PREFIX}/share/maelstrom
 	${INSTALL_PROGRAM} ${WRKSRC}/netplayd/netplayd ${PREFIX}/bin/Maelstrom_netplayd
 

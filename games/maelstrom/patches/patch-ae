@@ -1,7 +1,6 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 10:40:42 agc Exp $
-
---- Makefile.orig	Wed Feb  5 14:12:18 1997
-+++ Makefile	Fri Jul 31 00:59:32 1998
+$NetBSD: patch-ae,v 1.3 1998/09/14 19:34:23 garbled Exp $
+--- Makefile.orig	Wed Feb  5 06:12:18 1997
++++ Makefile	Mon Sep 14 12:10:06 1998
 @@ -18,7 +18,7 @@
  	@echo "Installing binaries in $(BINDIR)..."
  	@for i in $(MAELSTROM) ; do \
@@ -11,15 +10,18 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 10:40:42 agc Exp $
  	done
  	@if [ ! -d $(LIBDIR) ]; then \
  		mkdir $(LIBDIR); chmod 755 $(LIBDIR); \
-@@ -26,9 +26,10 @@
+@@ -26,10 +26,11 @@
  	@echo "Installing data files in $(LIBDIR) ..."
  	@tar cf - $(DATAFILES) | (cd $(LIBDIR); tar xvf -)
  	@chmod -R +r $(LIBDIR)
+-	@if [ ! -f "$(LIBDIR)/Maelstrom-Scores" ]; then \
 +	@chown -R ${BINOWN}:${BINGRP} $(LIBDIR)
- 	@if [ ! -f "$(LIBDIR)/Maelstrom-Scores" ]; then \
++	@if [ ! -f "/var/games/Maelstrom-Scores" ]; then \
  		echo "Installing Maelstrom high-scores file"; \
 -		$(INSTALL) -m 666 Maelstrom-Scores  $(LIBDIR); \
-+		$(INSTALL) -c -m 666 Maelstrom-Scores  $(LIBDIR); \
- 		chmod 666 $(LIBDIR)/Maelstrom-Scores; \
+-		chmod 666 $(LIBDIR)/Maelstrom-Scores; \
++		$(INSTALL) -c -m 666 Maelstrom-Scores  /var/games; \
++		chmod 666 /var/games/Maelstrom-Scores; \
  	fi
  	@-if [ "$(SYSTEM)" = "Linux" ]; then \
+ 		echo "Fixing permissions for Maelstrom (set-uid root)"; \
