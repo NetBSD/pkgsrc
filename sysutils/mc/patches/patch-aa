@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 1999/03/14 20:59:42 tron Exp $
+$NetBSD: patch-aa,v 1.8 1999/03/14 23:07:55 tron Exp $
 
 --- configure.orig	Mon May 25 06:16:04 1998
 +++ configure	Sun Oct  4 13:10:51 1998
@@ -11,11 +11,3 @@ $NetBSD: patch-aa,v 1.7 1999/03/14 20:59:42 tron Exp $
  		 INTLDEPS='$(top_builddir)/intl/libintl.a'
  		 INTLLIBS=$INTLDEPS
  		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
-@@ -11280,6 +11280,7 @@
-  s/@@/%@/; s/@@/@%/; s/@g\$/%g/' > conftest.subs <<\\CEOF
- $ac_vpsub
- $extrasub
-+s%@PACKAGE@%$PACKAGE%g
- s%@CFLAGS@%$CFLAGS%g
- s%@CPPFLAGS@%$CPPFLAGS%g
- s%@CXXFLAGS@%$CXXFLAGS%g
