@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/30 22:48:32 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 22:59:40 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -30,7 +30,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
 	cd ${WRKSRC} && ${PAX} -rw -pm . ${MOZILLA_LIB}
 	${INSTALL_SCRIPT} ${WRKDIR}/MozillaFirebird.sh \
-		${PREFIX}/bin/MozillaFirebird-xft2-${PLATFORM}
+		${PREFIX}/bin/MozillaFirebird-gtk2-${PLATFORM}
 	@${RM} -f ${MOZILLA_LIB}/plugins/libnullplugin.so
 
 post-install:
@@ -60,7 +60,7 @@ post-install:
 	${LN} -s libpangoxft-1.0.so libpangoxft-1.0.so.0
 .endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	@${ECHO} bin/MozillaFirebird-xft2-${PLATFORM} >> ${PLIST_SRC}
+	@${ECHO} bin/MozillaFirebird-gtk2-${PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
