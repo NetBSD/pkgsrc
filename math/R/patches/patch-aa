@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2003/12/03 12:05:18 markd Exp $
+$NetBSD: patch-aa,v 1.12 2004/01/05 12:20:57 markd Exp $
 
 --- configure.ac.orig	2003-09-17 11:01:04.000000000 +1200
 +++ configure.ac
@@ -11,6 +11,19 @@ $NetBSD: patch-aa,v 1.11 2003/12/03 12:05:18 markd Exp $
  else
    LIBR=
  fi
+@@ -436,9 +436,9 @@ AC_SUBST(LIBM)
+ ## AC_CHECK_LIBM computes LIBM but does not add to LIBS, hence we do
+ ## the following as well.
+ AC_CHECK_LIB(m, sin)
+-AC_CHECK_LIB(ncurses, main, [],
+-             AC_CHECK_LIB(termcap, main, [],
+-                          AC_CHECK_LIB(termlib, main)))
++AC_CHECK_LIB(termcap, main, [],
++             AC_CHECK_LIB(termlib, main, [],
++                          AC_CHECK_LIB(ncurses, main)))
+ case "${host_os}" in
+   darwin*)
+     AM_CONDITIONAL(BUILD_DLFCN_DARWIN, true)
 @@ -592,13 +592,6 @@ case "${host_cpu}" in
        R_PROG_CC_FLAG([-ieee_with_inexact],
                       R_SH_VAR_ADD(R_XTRA_CFLAGS, [-ieee_with_inexact]))
