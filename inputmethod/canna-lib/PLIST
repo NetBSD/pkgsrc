@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/27 08:41:24 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/31 08:28:34 uebayasi Exp $
 include/canna/RK.h
 include/canna/jrkanji.h
 include/canna/keydef.h
@@ -6,19 +6,19 @@ include/canna/mfdef.h
 lib/libRKC.a
 lib/libRKC.so
 lib/libRKC.so.1
-lib/libRKC.so.1.0
+lib/libRKC.so.1.1
 lib/libRKC16.a
 lib/libRKC16.so
 lib/libRKC16.so.1
-lib/libRKC16.so.1.0
+lib/libRKC16.so.1.1
 lib/libcanna.a
 lib/libcanna.so
 lib/libcanna.so.1
-lib/libcanna.so.1.0
+lib/libcanna.so.1.1
 lib/libcanna16.a
 lib/libcanna16.so
 lib/libcanna16.so.1
-lib/libcanna16.so.1.0
+lib/libcanna16.so.1.1
 man/ja_JP.EUC/man3/RkBgnBun.3
 man/ja_JP.EUC/man3/RkCloseRoma.3
 man/ja_JP.EUC/man3/RkCvtEuc.3
@@ -43,7 +43,7 @@ man/ja_JP.EUC/man3/RkIntro.3
 man/ja_JP.EUC/man3/RkLeft.3
 man/ja_JP.EUC/man3/RkMapPhonogram.3
 man/ja_JP.EUC/man3/RkMapRoma.3
-man/ja_JP.EUC/man3/RkMountD.3
+man/ja_JP.EUC/man3/RkMountDic.3
 man/ja_JP.EUC/man3/RkNext.3
 man/ja_JP.EUC/man3/RkNfer.3
 man/ja_JP.EUC/man3/RkOpenRoma.3
@@ -85,7 +85,7 @@ man/man3/RkIntro.3
 man/man3/RkLeft.3
 man/man3/RkMapPhonogram.3
 man/man3/RkMapRoma.3
-man/man3/RkMountD.3
+man/man3/RkMountDic.3
 man/man3/RkNext.3
 man/man3/RkNfer.3
 man/man3/RkOpenRoma.3
@@ -134,7 +134,6 @@ share/canna/dic/vje.cbp
 share/canna/dic/wx2+.cbp
 share/canna/sample/1.1.canna
 share/canna/sample/1.2.canna
-share/canna/sample/default.canna
 share/canna/sample/fixer.canna
 share/canna/sample/jdemon.canna
 share/canna/sample/just.canna
