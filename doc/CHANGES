@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1810 2003/03/31 17:45:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.1811 2003/03/31 20:51:00 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1354,3 +1354,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated if-psprint to 1.6 [abs 2003-03-31]
 	Added mldonkey-2.04rc1 [jmmv 2003-03-31]
 	Updated wxGTK to 2.4.0 [jmmv 2003-03-31]
+	Updated pvs to 3.1 [jschauma 2003-03-31]
