@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/03/14 00:44:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/04/20 13:52:06 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -279,6 +279,10 @@ lib/libkdeinit_kview.la
 lib/libkdeinit_kview.so
 lib/libkdeinit_mrmlsearch.la
 lib/libkdeinit_mrmlsearch.so
+lib/libkghostviewlib.la
+lib/libkghostviewlib.so
+lib/libkghostviewlib.so.0
+lib/libkghostviewlib.so.0.0
 lib/libkimageviewer.la
 lib/libkimageviewer.so
 lib/libkimageviewer.so.0
