@@ -1,25 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2001/07/29 05:38:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/10/01 20:51:45 jlam Exp $
 
-DISTNAME=		pdflib-4.0.1
-CATEGORIES=		print
-MASTER_SITES=		http://www.pdflib.com/pdflib/download/
+.include "Makefile.common"
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.pdflib.com/pdflib/index.html
+PKGNAME=		pdflib-${PDFLIB_VERS}
+PDFLIB_PKG_VERS=	# empty
 COMMENT=		C library to produce PDF files
 
-USE_BUILDLINK_ONLY=	yes
-REPLACE_BUILDLINK=	pdflib-config
-
-USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--with-tifflib
-CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--with-pnglib
-CPPFLAGS+=		-Dunix
-
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+USE_BUILDLINK_ONLY=	YES
+REPLACE_BUILDLINK+=	pdflib-config
 
 ALL_TARGET=		pdflib
 DOCDIR=			${PREFIX}/share/doc/pdflib
@@ -34,6 +22,4 @@ post-install:
 		${INSTALL_DATA} $${file} ${DOCDIR};			\
 	done
 
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
