@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 2002/03/20 01:52:31 wiz Exp $
+
 --- xdmshell.c.orig	Fri Aug 22 16:42:11 1997
 +++ xdmshell.c	Sun Dec 23 16:42:32 2001
 @@ -186,7 +186,7 @@

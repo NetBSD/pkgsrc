@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2002/03/20 01:52:31 wiz Exp $
+
 --- Imakefile.orig	Tue Aug 18 16:51:04 1998
 +++ Imakefile	Sun Dec 23 11:46:41 2001
 @@ -4,7 +4,7 @@
