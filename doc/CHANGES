@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2086 2003/04/29 23:06:55 jtb Exp $
+$NetBSD: CHANGES,v 1.2087 2003/04/29 23:17:48 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1790,3 +1790,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fftw to 3.0 [jtb 2003-04-29]
 	Updated yplot to 1.1.0nb2 [jtb 2003-04-29]
 	Updated hdf5 to 1.4.5 [jtb 2003-04-29]
+	Added lua4-4.0.1 [jtb 2003-04-29]
