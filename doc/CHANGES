@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7285 2004/09/28 23:02:28 rh Exp $
+$NetBSD: CHANGES,v 1.7286 2004/09/29 12:53:48 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4481,3 +4481,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lesstif to 0.93.96 [adam 2004-09-28]
 	Updated pcre to 5.0 [wiz 2004-09-28]
 	Added firefox-gtk2-bin-flash-6.0.79 [rh 2004-09-29]
+	Added gattrib-20040313 [wulf 2004-09-29]
