@@ -1,0 +1,123 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/08 16:28:39 sketch Exp $
+
+--- src/Makefile.in.orig	2003-12-08 15:42:42.000000000 +0000
++++ src/Makefile.in	2003-12-08 15:43:56.000000000 +0000
+@@ -105,12 +105,12 @@
+ oldincludedir = @oldincludedir@
+ prefix = @prefix@
+ program_transform_name = @program_transform_name@
+-sbindir = @sbindir@
++bindir = @bindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ 
+-sbin_PROGRAMS = apachetop
++bin_PROGRAMS = apachetop
+ 
+ apachetop_SOURCES = apachetop.cc log.cc hashes.cc ohtbl.cc map.cc \
+                     display.cc hits_circle.cc timed_circle.cc
+@@ -126,8 +126,8 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-sbin_PROGRAMS = apachetop$(EXEEXT)
+-PROGRAMS = $(sbin_PROGRAMS)
++bin_PROGRAMS = apachetop$(EXEEXT)
++PROGRAMS = $(bin_PROGRAMS)
+ 
+ am_apachetop_OBJECTS = apachetop.$(OBJEXT) log.$(OBJEXT) \
+ 	hashes.$(OBJEXT) ohtbl.$(OBJEXT) map.$(OBJEXT) \
+@@ -164,30 +164,30 @@
+ 	  $(AUTOMAKE) --gnu  src/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
+-sbinPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+-install-sbinPROGRAMS: $(sbin_PROGRAMS)
++binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
++install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sbindir)
+-	@list='$(sbin_PROGRAMS)'; for p in $$list; do \
++	$(mkinstalldirs) $(DESTDIR)$(bindir)
++	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+ 	  if test -f $$p \
+ 	  ; then \
+ 	    f=`echo "$$p1" | sed 's,^.*/,,;$(transform);s/$$/$(EXEEXT)/'`; \
+-	   echo " $(INSTALL_PROGRAM_ENV) $(sbinPROGRAMS_INSTALL) $$p $(DESTDIR)$(sbindir)/$$f"; \
+-	   $(INSTALL_PROGRAM_ENV) $(sbinPROGRAMS_INSTALL) $$p $(DESTDIR)$(sbindir)/$$f || exit 1; \
++	   echo " $(INSTALL_PROGRAM_ENV) $(binPROGRAMS_INSTALL) $$p $(DESTDIR)$(bindir)/$$f"; \
++	   $(INSTALL_PROGRAM_ENV) $(binPROGRAMS_INSTALL) $$p $(DESTDIR)$(bindir)/$$f || exit 1; \
+ 	  else :; fi; \
+ 	done
+ 
+-uninstall-sbinPROGRAMS:
++uninstall-binPROGRAMS:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(sbin_PROGRAMS)'; for p in $$list; do \
++	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  f=`echo "$$p" | sed 's,^.*/,,;s/$(EXEEXT)$$//;$(transform);s/$$/$(EXEEXT)/'`; \
+-	  echo " rm -f $(DESTDIR)$(sbindir)/$$f"; \
+-	  rm -f $(DESTDIR)$(sbindir)/$$f; \
++	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
++	  rm -f $(DESTDIR)$(bindir)/$$f; \
+ 	done
+ 
+-clean-sbinPROGRAMS:
+-	-test -z "$(sbin_PROGRAMS)" || rm -f $(sbin_PROGRAMS)
++clean-binPROGRAMS:
++	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+ apachetop$(EXEEXT): $(apachetop_OBJECTS) $(apachetop_DEPENDENCIES) 
+ 	@rm -f apachetop$(EXEEXT)
+ 	$(CXXLINK) $(apachetop_LDFLAGS) $(apachetop_OBJECTS) $(apachetop_LDADD) $(LIBS)
+@@ -320,7 +320,7 @@
+ all-am: Makefile $(PROGRAMS) $(HEADERS)
+ 
+ installdirs:
+-	$(mkinstalldirs) $(DESTDIR)$(sbindir)
++	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ install: install-am
+ install-exec: install-exec-am
+ install-data: install-data-am
+@@ -348,7 +348,7 @@
+ 	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
+ clean: clean-am
+ 
+-clean-am: clean-generic clean-sbinPROGRAMS mostlyclean-am
++clean-am: clean-generic clean-binPROGRAMS mostlyclean-am
+ 
+ distclean: distclean-am
+ 	-rm -rf ./$(DEPDIR)
+@@ -366,7 +366,7 @@
+ 
+ install-data-am:
+ 
+-install-exec-am: install-sbinPROGRAMS
++install-exec-am: install-binPROGRAMS
+ 
+ install-info: install-info-am
+ 
+@@ -391,18 +391,18 @@
+ 
+ ps-am:
+ 
+-uninstall-am: uninstall-info-am uninstall-sbinPROGRAMS
++uninstall-am: uninstall-info-am uninstall-binPROGRAMS
+ 
+ .PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \
+-	clean-sbinPROGRAMS ctags distclean distclean-compile \
++	clean-binPROGRAMS ctags distclean distclean-compile \
+ 	distclean-generic distclean-tags distdir dvi dvi-am info \
+ 	info-am install install-am install-data install-data-am \
+ 	install-exec install-exec-am install-info install-info-am \
+-	install-man install-sbinPROGRAMS install-strip installcheck \
++	install-man install-binPROGRAMS install-strip installcheck \
+ 	installcheck-am installdirs maintainer-clean \
+ 	maintainer-clean-generic mostlyclean mostlyclean-compile \
+ 	mostlyclean-generic pdf pdf-am ps ps-am tags uninstall \
+-	uninstall-am uninstall-info-am uninstall-sbinPROGRAMS
++	uninstall-am uninstall-info-am uninstall-binPROGRAMS
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
