@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2001/10/22 05:49:50 martti Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/22 06:41:29 martti Exp $
 #
 
-DISTNAME=	amavisd-snapshot-${VERSION}
-PKGNAME=	amavis-${VERSION}
+DISTNAME=	amavis-0.2.1
+PKGNAME=	amavis-0.2.1nb4
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.amavis.org/dist/ \
 		http://aachalon.de/AMaViS/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.amavis.org/
-COMMENT=	Mail virus scanner
+COMMENT=	mail virus scanner
 
 DEPENDS+=	uvscan-[0-9]*:../../security/uvscan
 DEPENDS+=	maildrop-[0-9]*:../../mail/maildrop
@@ -22,53 +22,23 @@ DEPENDS+=	lha-[0-9]*:../../archivers/lha
 DEPENDS+=	zoo-[0-9]*:../../archivers/zoo
 DEPENDS+=	freeze-[0-9]*:../../archivers/freeze
 DEPENDS+=	arc-[0-9]*:../../archivers/arc
-DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
-DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
-DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
-DEPENDS+=	p5-Convert-UUlib-[0-9]*:../../converters/p5-Convert-UUlib
-DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
-DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
-DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
-VERSION=	20010714
-
-SMTPPORT?=	10025			# target port for scanned mails
 VIRUSDIR?=	/var/log/virusmails	# where to put contaminated mails
 VIRUSMAILTO?=	security		# whom to notify about viruses
 
 GNU_CONFIGURE=	YES
-
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
-
-CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/amavis
 CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
-CONFIGURE_ARGS+=--enable-all
-CONFIGURE_ARGS+=--enable-smtp --with-smtp-port=${SMTPPORT}
 
 do-install:
-	# Program files
-	${INSTALL_PROGRAM} ${WRKSRC}/amavis/amavis ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/amavis/amavisd ${PREFIX}/sbin
-	# Documents
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.html ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.png ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.txt ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${FILESDIR}/LICENSE.sendmail ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.exim ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.milter ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.postfix ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.qmail ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.scanners ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.sendmail ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/amavis/amavisd.conf \
-		${PREFIX}/share/doc/amavis
-	${SED} "s+@PREFIX@+${PREFIX}+g" < ${FILESDIR}/amavis.m4 \
-		> ${WRKDIR}/amavis.m4
-	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${PREFIX}/share/doc/amavis
+	${INSTALL_PROGRAM} ${WRKSRC}/src/zipsecure/zipsecure ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/securetar/securetar ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/src/scanmails/scanmails ${PREFIX}/sbin
+	${SED} -e 's#@PREFIX@#${PREFIX}#g' < ${FILESDIR}/amavis.m4 \
+		>${WRKDIR}/amavis.m4
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/amavis
+	${INSTALL_DATA} ${FILESDIR}/LICENSE.sendmail ${PREFIX}/share/examples/amavis
+	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${PREFIX}/share/examples/amavis
 
 .include "../../mk/bsd.pkg.mk"
