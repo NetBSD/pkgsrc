@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/23 05:39:23 jlam Exp $
 #
 
 DISTNAME=	id3lib-3.8.3
@@ -10,7 +10,6 @@ HOMEPAGE=	http://id3lib.sourceforge.net/
 COMMENT=	Library for manipulating ID3v1 and ID3v2 tags
 
 USE_LANGUAGES=		c c++
-USE_GCC_SHLIB=		# defined
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
