@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2523 2004/11/27 14:21:24 he Exp $
+$NetBSD: TODO,v 1.2524 2004/11/27 14:24:16 magick Exp $
 
 Suggested new packages
 ======================
@@ -802,7 +802,6 @@ Suggested package updates
 	o nslint-2.1a3
 	o nulib2-2.0.3
 	o nut-10.11
-	o nxtvepg-2.7.2
 	o obexftp-0.10.6
 	o objc-3.2.6
 	o ocaml-3.08
