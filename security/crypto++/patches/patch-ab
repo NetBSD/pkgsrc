@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/26 15:18:44 minskim Exp $
+--- config.h.orig	2004-04-14 01:13:37.000000000 +0100
++++ config.h	2004-04-14 01:13:41.000000000 +0100
+@@ -194,7 +194,7 @@
+ #define CRYPTOPP_WIN32_AVAILABLE
+ #endif
+ 
+-#if defined(__unix__) || defined(__MACH__)
++#if defined(__unix__) || defined(__MACH__) || defined(__NetBSD__)
+ #define CRYPTOPP_UNIX_AVAILABLE
+ #endif
+ 
