@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.253 2002/06/27 09:50:42 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.254 2002/06/30 03:43:43 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1380,7 +1380,7 @@ perform the equivalent of:
    then current versions of the corresponding packages get compiled and
    installed.  This is similar to manually noting which packages are
    currently installed, then performing a series of "make deinstall" and
-   "make install" (or whatever DEPENDS_TARGET is set to) for these packages.
+   "make install" (or whatever UPDATE_TARGET is set to) for these packages.
 
    You can use the "update" target to resume package updating in case a
    previous "make update" was interrupted for some reason.  However, in
@@ -1397,10 +1397,11 @@ perform the equivalent of:
    The following variables can be used either on the command line or in
    /etc/mk.conf to alter the behaviour of "make update":
 
-    - DEPENDS_TARGET:
-      Install target to use for the updated package and the
-      dependent packages.  Defaults to "install".  E.g.
-      "make update DEPENDS_TARGET=package"
+    - UPDATE_TARGET:
+      Install target to recursively use for the updated package and the
+      dependent packages.  Defaults to ${DEPENDS_TARGET} if set, "install"
+      otherwise for "make update".
+      E.g. "make update UPDATE_TARGET=package"
 
     - NOCLEAN:
       Don't clean up after updating.  Useful if you want to leave the
@@ -1414,6 +1415,14 @@ perform the equivalent of:
       Deinstall each package before installing (making ${DEPENDS_TARGET}).
       This may be necessary if the "clean-update" target (see below) was
       called after interrupting a running "make update".
+
+    - DEPENDS_TARGET:
+      Allows you to disable recursion and hardcode the target for
+      packages.  The default is "update" for the update target,
+      facilitating a recursive update of prerequisite packages.
+      Only set DEPENDS_TARGET if you want to disable recursive updates.
+      Use "UPDATE_TARGET" instead to just set a specific target for
+      each package to be installed during "make update" (see above).
 
  * clean-update:
    Clean the source tree for all packages that would get updated if
