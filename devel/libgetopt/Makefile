@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/12/12 17:16:27 recht Exp $
+# $NetBSD: Makefile,v 1.16 2005/02/11 17:29:06 tv Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
+PKGREVISION=	1
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/ \
