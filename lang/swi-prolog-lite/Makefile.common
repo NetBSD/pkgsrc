@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+
+SWIPLVERS=		5.2.13
+DISTNAME=		pl-${SWIPLVERS}
+CATEGORIES=		lang
+MASTER_SITES=		ftp://ftp.swi.psy.uva.nl/SWI-Prolog/
+
+HOMEPAGE=		http://www.swi-prolog.org/
+
+DIST_SUBDIR=		swi-prolog
+DISTINFO_FILE=		${.CURDIR}/../../wip/swi-prolog-lite/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
+
+PLIST_SUBST+=           APPEND_ELF=${APPEND_ELF}
