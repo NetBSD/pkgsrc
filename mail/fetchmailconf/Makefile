@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/07/13 21:48:29 tron Exp $
+# $NetBSD: Makefile,v 1.38 2002/08/01 09:26:53 veego Exp $
 
 DISTNAME=	fetchmail-5.9.13
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -17,7 +17,7 @@ NO_BUILD=	YES
 USE_X11=	YES
 
 EXTRACT_ELEMENTS=	${DISTNAME}/fetchmailconf
-DISTINFO_FILE=		${.CURDIR}/../mail/fetchmail/distinfo
+DISTINFO_FILE=		${.CURDIR}/../../mail/fetchmail/distinfo
 
 PYTHON_PATCH_SCRIPTS= fetchmailconf
 
