@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/01/07 15:12:59 ben Exp $
+
+DISTNAME=	upx-1.24-src
+PKGNAME=	${DISTNAME:S/-src//}
+WRKSRC=		${WRKDIR}/${PKGNAME}
+CATEGORIES=	misc archivers
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upx/}
+
+MAINTAINER=	fab@gnux.info
+HOMEPAGE=	http://upx.sourceforge.net/
+COMMENT=	Ultimate packer for executables
+
+DEPENDS+=	ucl>=1.01:../../devel/ucl
+
+USE_GMAKE=	yes
+USE_PERL5=	build
+
+do-build:
+	(cd ${WRKSRC}/src && ${GMAKE} PREFIX=${PREFIX} target=netbsd)
+	(cd ${WRKSRC}/doc && ${GMAKE})
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/upx ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/upx/
+	${INSTALL_DATA} ${WRKSRC}/doc/upx.doc ${PREFIX}/share/doc/upx
+	${INSTALL_DATA} ${WRKSRC}/doc/upx.html ${PREFIX}/share/doc/upx
+
+.include "../../mk/bsd.pkg.mk"
