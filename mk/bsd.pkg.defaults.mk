@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.193 2003/12/04 10:28:31 veego Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.194 2003/12/17 03:00:11 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1270,6 +1270,12 @@ MAJORDOMO_USER?= majordom
 # Default: may set info files size for consistency across platforms and
 # makeinfo version, also various machine_archs arguments may be set in
 # mk/defs.${OPSYS}.mk with the _OPSYS_MAKEINFO_ARGS variable.
+
+#MOZILLA_USE_LINUX=
+# Used by mozilla binary packages to prefer the use of Linux
+# compatibility instead of native builds.
+# Possible: set, unset
+# Default: unset
 
 MOZILLA_USE_XFT?=	NO
 # Used by mozilla packages to enable Xft support where available.
