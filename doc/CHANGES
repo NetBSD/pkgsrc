@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1525 2003/03/02 22:27:40 wiz Exp $
+$NetBSD: CHANGES,v 1.1526 2003/03/03 11:35:49 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -878,8 +878,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gtkmm-2.2.0 [jmmv 2003-03-01]
 	Added gconfmm-2.0.1 [jmmv 2003-03-01]
 	Updated roundup to 0.5.6 [lukem 2003-03-02]
-        Updated netcdf to 3.5.0 [jtb 2003-03-02]
-        Updated ntl to 5.3.1 [jtb 2003-03-02]
+	Updated netcdf to 3.5.0 [jtb 2003-03-02]
+	Updated ntl to 5.3.1 [jtb 2003-03-02]
 	Updated prayer to 1.0.5nb1 [jmmv 2003-03-02]
 	Updated roundup to 0.5.6 [lukem 2003-03-02]
 	Added Aiksaurus-0.15 [kei 2003-03-02]
@@ -889,3 +889,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Spreadsheet-ParseExcel-0.2602 [mjl 2003-03-02]
 	Updated p5-CGI-Lite to 2.001 [mjl 2003-03-02]
 	Updated libsndfile to 1.0.4 [wiz 2003-03-02]
+	Updated p5-Net-DNS to 0.33 [mjl 2003-03-03]
+	Updated p5-Memoize to 1.01 [mjl 2003-03-03]
+	Updated p5-SQL-Statement to 1.005 [mjl 2003-03-03]
+	Updated p5-DBD-CSV to 0.2002 [mjl 2003-03-03]
+	Updated p5-XML-SAX to 0.12 [mjl 2003-03-03]
