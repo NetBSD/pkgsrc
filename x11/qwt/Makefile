@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/11 22:51:34 snj Exp $
 
 DISTNAME=	qwt-0.3.0
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/qwt
 COMMENT=	Qt widget library for technical purposes
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
@@ -28,5 +28,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${PREFIX}/include/qwt
 	${INSTALL_DATA} ${WRKSRC}/doc/man/man3/* ${PREFIX}/man/man3
 
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
