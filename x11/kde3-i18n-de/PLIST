@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/08/21 16:02:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/10/13 13:20:20 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -115,6 +115,7 @@ share/doc/kde/HTML/de/kasteroids/common
 share/doc/kde/HTML/de/kasteroids/index.cache.bz2
 share/doc/kde/HTML/de/kasteroids/index.docbook
 share/doc/kde/HTML/de/kate-plugins/common
+share/doc/kde/HTML/de/kate-plugins/filetemplates.docbook
 share/doc/kde/HTML/de/kate-plugins/htmltools.docbook
 share/doc/kde/HTML/de/kate-plugins/index.cache.bz2
 share/doc/kde/HTML/de/kate-plugins/index.docbook
@@ -671,9 +672,17 @@ share/doc/kde/HTML/de/klickety/index.docbook
 share/doc/kde/HTML/de/klines/common
 share/doc/kde/HTML/de/klines/index.cache.bz2
 share/doc/kde/HTML/de/klines/index.docbook
+share/doc/kde/HTML/de/klinkstatus/common
+share/doc/kde/HTML/de/klinkstatus/index.cache.bz2
+share/doc/kde/HTML/de/klinkstatus/index.docbook
+share/doc/kde/HTML/de/klinkstatus/screenshot.png
 share/doc/kde/HTML/de/klipper/common
 share/doc/kde/HTML/de/klipper/index.cache.bz2
 share/doc/kde/HTML/de/klipper/index.docbook
+share/doc/kde/HTML/de/kmag/common
+share/doc/kde/HTML/de/kmag/index.cache.bz2
+share/doc/kde/HTML/de/kmag/index.docbook
+share/doc/kde/HTML/de/kmag/screenshot.png
 share/doc/kde/HTML/de/kmail/common
 share/doc/kde/HTML/de/kmail/configure.docbook
 share/doc/kde/HTML/de/kmail/credits-and-licenses.docbook
@@ -710,6 +719,18 @@ share/doc/kde/HTML/de/kmix/index.docbook
 share/doc/kde/HTML/de/kmoon/common
 share/doc/kde/HTML/de/kmoon/index.cache.bz2
 share/doc/kde/HTML/de/kmoon/index.docbook
+share/doc/kde/HTML/de/kmousetool/common
+share/doc/kde/HTML/de/kmousetool/index.cache.bz2
+share/doc/kde/HTML/de/kmousetool/index.docbook
+share/doc/kde/HTML/de/kmouth/common
+share/doc/kde/HTML/de/kmouth/index.cache.bz2
+share/doc/kde/HTML/de/kmouth/index.docbook
+share/doc/kde/HTML/de/kmouth/kmouthcpref.png
+share/doc/kde/HTML/de/kmouth/kmouthctts.png
+share/doc/kde/HTML/de/kmouth/kmouthcwcp.png
+share/doc/kde/HTML/de/kmouth/kmouthedit.png
+share/doc/kde/HTML/de/kmouth/kmouthmain.png
+share/doc/kde/HTML/de/kmouth/kmouthwizard.png
 share/doc/kde/HTML/de/kmplot/axesdlg.png
 share/doc/kde/HTML/de/kmplot/axesopt.png
 share/doc/kde/HTML/de/kmplot/commands.docbook
@@ -824,6 +845,9 @@ share/doc/kde/HTML/de/konsole/common
 share/doc/kde/HTML/de/konsole/index.cache.bz2
 share/doc/kde/HTML/de/konsole/index.docbook
 share/doc/kde/HTML/de/konsole/konsole.png
+share/doc/kde/HTML/de/kontact/common
+share/doc/kde/HTML/de/kontact/index.cache.bz2
+share/doc/kde/HTML/de/kontact/index.docbook
 share/doc/kde/HTML/de/kooka/common
 share/doc/kde/HTML/de/kooka/index.cache.bz2
 share/doc/kde/HTML/de/kooka/index.docbook
@@ -1134,6 +1158,9 @@ share/doc/kde/HTML/de/kvoctrain/verb-query-dlg.png
 share/doc/kde/HTML/de/kwallet/common
 share/doc/kde/HTML/de/kwallet/index.cache.bz2
 share/doc/kde/HTML/de/kwallet/index.docbook
+share/doc/kde/HTML/de/kwatchgnupg/common
+share/doc/kde/HTML/de/kwatchgnupg/index.cache.bz2
+share/doc/kde/HTML/de/kwatchgnupg/index.docbook
 share/doc/kde/HTML/de/kweather/common
 share/doc/kde/HTML/de/kweather/index.cache.bz2
 share/doc/kde/HTML/de/kweather/index.docbook
@@ -1849,6 +1876,7 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kworldclock
 @dirrm share/doc/kde/HTML/de/kwin4
 @dirrm share/doc/kde/HTML/de/kweather
+@dirrm share/doc/kde/HTML/de/kwatchgnupg
 @dirrm share/doc/kde/HTML/de/kwallet
 @dirrm share/doc/kde/HTML/de/kvoctrain
 @dirrm share/doc/kde/HTML/de/kview
@@ -1893,6 +1921,7 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/korganizer
 @dirrm share/doc/kde/HTML/de/kopete
 @dirrm share/doc/kde/HTML/de/kooka
+@dirrm share/doc/kde/HTML/de/kontact
 @dirrm share/doc/kde/HTML/de/konsole
 @dirrm share/doc/kde/HTML/de/konquest
 @dirrm share/doc/kde/HTML/de/konqueror
@@ -1902,6 +1931,8 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/knode
 @dirrm share/doc/kde/HTML/de/knewsticker
 @dirrm share/doc/kde/HTML/de/kmplot
+@dirrm share/doc/kde/HTML/de/kmouth
+@dirrm share/doc/kde/HTML/de/kmousetool
 @dirrm share/doc/kde/HTML/de/kmoon
 @dirrm share/doc/kde/HTML/de/kmix
 @dirrm share/doc/kde/HTML/de/kmines
@@ -1910,7 +1941,9 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kmenuedit
 @dirrm share/doc/kde/HTML/de/kmathtool
 @dirrm share/doc/kde/HTML/de/kmail
+@dirrm share/doc/kde/HTML/de/kmag
 @dirrm share/doc/kde/HTML/de/klipper
+@dirrm share/doc/kde/HTML/de/klinkstatus
 @dirrm share/doc/kde/HTML/de/klines
 @dirrm share/doc/kde/HTML/de/klickety
 @dirrm share/doc/kde/HTML/de/klettres

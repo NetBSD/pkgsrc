@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/08/21 16:02:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/13 13:20:21 markd Exp $
 share/doc/kde/HTML/en_GB/common/1.png
 share/doc/kde/HTML/en_GB/common/10.png
 share/doc/kde/HTML/en_GB/common/2.png
@@ -545,7 +545,6 @@ share/kde/locale/en_GB/LC_MESSAGES/kcm_kviewcanvasconfig.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcm_kviewgeneralconfig.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcm_kviewpluginsconfig.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcm_kviewviewerpluginsconfig.mo
-share/kde/locale/en_GB/LC_MESSAGES/kcm_sambaconf.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmaccess.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmaccessibility.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmarts.mo
@@ -560,7 +559,6 @@ share/kde/locale/en_GB/LC_MESSAGES/kcmcrypto.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmcss.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmemail.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmenergy.mo
-share/kde/locale/en_GB/LC_MESSAGES/kcmfileshare.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmfonts.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmhtmlsearch.mo
 share/kde/locale/en_GB/LC_MESSAGES/kcmicons.mo

@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.11 2004/08/21 16:02:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/10/13 13:20:21 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
+share/doc/kde/HTML/fr/amor/common
+share/doc/kde/HTML/fr/amor/index.cache.bz2
+share/doc/kde/HTML/fr/amor/index.docbook
 share/doc/kde/HTML/fr/ark/common
 share/doc/kde/HTML/fr/ark/index.cache.bz2
 share/doc/kde/HTML/fr/ark/index.docbook
@@ -187,9 +190,12 @@ share/doc/kde/HTML/fr/katomic/common
 share/doc/kde/HTML/fr/katomic/index.cache.bz2
 share/doc/kde/HTML/fr/katomic/index.docbook
 share/doc/kde/HTML/fr/kbabel/catman.docbook
+share/doc/kde/HTML/fr/kbabel/common
 share/doc/kde/HTML/fr/kbabel/dictionaries.docbook
 share/doc/kde/HTML/fr/kbabel/faq.docbook
 share/doc/kde/HTML/fr/kbabel/glossary.docbook
+share/doc/kde/HTML/fr/kbabel/index.cache.bz2
+share/doc/kde/HTML/fr/kbabel/index.docbook
 share/doc/kde/HTML/fr/kbabel/kbabeldict.docbook
 share/doc/kde/HTML/fr/kbabel/menu.docbook
 share/doc/kde/HTML/fr/kbabel/preferences.docbook
@@ -760,6 +766,9 @@ share/doc/kde/HTML/fr/klickety/index.docbook
 share/doc/kde/HTML/fr/klines/common
 share/doc/kde/HTML/fr/klines/index.cache.bz2
 share/doc/kde/HTML/fr/klines/index.docbook
+share/doc/kde/HTML/fr/klinkstatus/common
+share/doc/kde/HTML/fr/klinkstatus/index.cache.bz2
+share/doc/kde/HTML/fr/klinkstatus/index.docbook
 share/doc/kde/HTML/fr/klipper/common
 share/doc/kde/HTML/fr/klipper/index.cache.bz2
 share/doc/kde/HTML/fr/klipper/index.docbook
@@ -831,6 +840,7 @@ share/doc/kde/HTML/fr/kmplot/common
 share/doc/kde/HTML/fr/kmplot/configuration.docbook
 share/doc/kde/HTML/fr/kmplot/credits.docbook
 share/doc/kde/HTML/fr/kmplot/developer.docbook
+share/doc/kde/HTML/fr/kmplot/firststeps.docbook
 share/doc/kde/HTML/fr/kmplot/index.cache.bz2
 share/doc/kde/HTML/fr/kmplot/index.docbook
 share/doc/kde/HTML/fr/kmplot/install.docbook
@@ -1052,7 +1062,7 @@ share/doc/kde/HTML/fr/kpercentage/install.docbook
 share/doc/kde/HTML/fr/kpercentage/introduction.docbook
 share/doc/kde/HTML/fr/kpercentage/main.png
 share/doc/kde/HTML/fr/kpercentage/using.docbook
-share/doc/kde/HTML/fr/kpercentage/wellcome.png
+share/doc/kde/HTML/fr/kpercentage/welcome.png
 share/doc/kde/HTML/fr/kpf/common
 share/doc/kde/HTML/fr/kpf/index.cache.bz2
 share/doc/kde/HTML/fr/kpf/index.docbook
@@ -1172,15 +1182,21 @@ share/doc/kde/HTML/fr/kstars/altvstime.docbook
 share/doc/kde/HTML/fr/kstars/altvstime.png
 share/doc/kde/HTML/fr/kstars/astroinfo.docbook
 share/doc/kde/HTML/fr/kstars/blackbody.docbook
+share/doc/kde/HTML/fr/kstars/blackbody.png
+share/doc/kde/HTML/fr/kstars/calc-altvstime.png
 share/doc/kde/HTML/fr/kstars/calc-angdist.docbook
+share/doc/kde/HTML/fr/kstars/calc-angdist.png
 share/doc/kde/HTML/fr/kstars/calc-apcoords.docbook
+share/doc/kde/HTML/fr/kstars/calc-apcoords.png
 share/doc/kde/HTML/fr/kstars/calc-appcoords.png
 share/doc/kde/HTML/fr/kstars/calc-dayduration.docbook
 share/doc/kde/HTML/fr/kstars/calc-daylength.png
 share/doc/kde/HTML/fr/kstars/calc-ecliptic.docbook
+share/doc/kde/HTML/fr/kstars/calc-ecliptic.png
 share/doc/kde/HTML/fr/kstars/calc-eqgal.docbook
 share/doc/kde/HTML/fr/kstars/calc-eqgal.png
 share/doc/kde/HTML/fr/kstars/calc-equinox.docbook
+share/doc/kde/HTML/fr/kstars/calc-equinox.png
 share/doc/kde/HTML/fr/kstars/calc-geodetic.docbook
 share/doc/kde/HTML/fr/kstars/calc-geodetic.png
 share/doc/kde/HTML/fr/kstars/calc-horizontal.docbook
@@ -1188,12 +1204,14 @@ share/doc/kde/HTML/fr/kstars/calc-horizontal.png
 share/doc/kde/HTML/fr/kstars/calc-julian.png
 share/doc/kde/HTML/fr/kstars/calc-julianday.docbook
 share/doc/kde/HTML/fr/kstars/calc-planetcoords.docbook
+share/doc/kde/HTML/fr/kstars/calc-planetcoords.png
 share/doc/kde/HTML/fr/kstars/calc-precess.docbook
 share/doc/kde/HTML/fr/kstars/calc-precess.png
 share/doc/kde/HTML/fr/kstars/calc-sidereal.docbook
 share/doc/kde/HTML/fr/kstars/calc-sidereal.png
 share/doc/kde/HTML/fr/kstars/calculator.docbook
 share/doc/kde/HTML/fr/kstars/cequator.docbook
+share/doc/kde/HTML/fr/kstars/color_indices.png
 share/doc/kde/HTML/fr/kstars/colorandtemp.docbook
 share/doc/kde/HTML/fr/kstars/commands.docbook
 share/doc/kde/HTML/fr/kstars/common
@@ -1205,6 +1223,7 @@ share/doc/kde/HTML/fr/kstars/darkmatter.docbook
 share/doc/kde/HTML/fr/kstars/dcop.docbook
 share/doc/kde/HTML/fr/kstars/detaildialog.png
 share/doc/kde/HTML/fr/kstars/details.docbook
+share/doc/kde/HTML/fr/kstars/devicemanager.png
 share/doc/kde/HTML/fr/kstars/dumpmode.docbook
 share/doc/kde/HTML/fr/kstars/ecliptic.docbook
 share/doc/kde/HTML/fr/kstars/ellipticalgalaxies.docbook
@@ -1224,6 +1243,7 @@ share/doc/kde/HTML/fr/kstars/hourangle.docbook
 share/doc/kde/HTML/fr/kstars/index.cache.bz2
 share/doc/kde/HTML/fr/kstars/index.docbook
 share/doc/kde/HTML/fr/kstars/indi.docbook
+share/doc/kde/HTML/fr/kstars/indiclient.png
 share/doc/kde/HTML/fr/kstars/install.docbook
 share/doc/kde/HTML/fr/kstars/jmoons.docbook
 share/doc/kde/HTML/fr/kstars/jmoons.png
@@ -2115,6 +2135,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/kmail
 @dirrm share/doc/kde/HTML/fr/kmag
 @dirrm share/doc/kde/HTML/fr/klipper
+@dirrm share/doc/kde/HTML/fr/klinkstatus
 @dirrm share/doc/kde/HTML/fr/klines
 @dirrm share/doc/kde/HTML/fr/klickety
 @dirrm share/doc/kde/HTML/fr/klettres
@@ -2258,5 +2279,6 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/artsbuilder/images
 @dirrm share/doc/kde/HTML/fr/artsbuilder
 @dirrm share/doc/kde/HTML/fr/ark
+@dirrm share/doc/kde/HTML/fr/amor
 @dirrm share/doc/kde/HTML/fr/KRegExpEditor
 @comment dirrm share/doc/kde/HTML/fr
