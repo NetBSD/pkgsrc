@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/09/03 22:00:52 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/09/07 17:58:00 bad Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -16,6 +16,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \
 			--sysconfdir=${PREFIX}/etc --enable-apop \
 			--with-apop=/etc/apop.auth --with-apopuid=root
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_KERBEROS4)
+CONFIGURE_ARGS+=--enable-kerberos
+RESTRICTED=     uses Kerberos encryption code
+.endif
+
 
 BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
 
