@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2004/08/23 21:15:17 xtraeme Exp $
 #
 
-DISTNAME=		sudo-1.6.7p5
-PKGNAME=		${DISTNAME:S/p/./}
+DISTNAME=		sudo-1.6.8
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -18,6 +17,7 @@ COMMENT=		Allow others to run commands as root
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
@@ -32,17 +32,7 @@ CONFIGURE_ARGS+=	--with-skey
 CONFIGURE_ARGS+=	--without-skey
 .endif
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
-PKG_SUPPORTED_OPTIONS=	kerberos
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mkerberos)
-.  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--without-kerb4
-CONFIGURE_ARGS+=	--with-kerb5
-.else
-CONFIGURE_ARGS+=	--without-kerb5
-.endif
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
 
@@ -55,6 +45,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/sudoers ${EGDIR}/sudoers
-	${INSTALL_DATA} ${WRKSRC}/sample.sudoers ${EGDIR}/sudoers.sample
+	${INSTALL_DATA} ${WRKSRC}/README* ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
