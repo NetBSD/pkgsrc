@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.5 2003/05/09 12:57:19 jmmv Exp $
+
+--- Makefile.in.orig	2003-03-11 01:45:17.000000000 +0100
++++ Makefile.in
+@@ -827,7 +827,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-includeHEADERS
++install-data-am:
+ 
+ install-exec-am: install-libLTLIBRARIES
+ 
