@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/01/20 12:07:07 agc Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/22 12:25:59 grant Exp $
 
 DISTNAME=	unzip550
 PKGNAME=	unzip-5.50
@@ -27,9 +27,9 @@ USE_BUILDLINK3=	yes
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic_zlib unzipsfx
 .if ${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin"
-MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
+MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="${_STRIPFLAG_CC} ${LDFLAGS} -lz"
 .else
-MAKE_FLAGS=	CF="${CFLAGS} -I. -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
+MAKE_FLAGS=	CF="${CFLAGS} -I. -DUNIX -Dunix -DUSE_UNSHRINK" LF2="${_STRIPFLAG_CC} ${LDFLAGS} -lz"
 .endif
 
 INSTALLATION_DIRS=	bin man/man1 share/doc
