@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/01/16 04:10:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/03/07 19:50:57 tron Exp $
 bin/libgtop_daemon
 bin/libgtop_server
 bin/libgtop-config
@@ -47,21 +47,34 @@ include/glibtop_machine.h
 include/glibtop_suid.h
 include/glibtop.h
 lib/libgtop-features.def
-lib/libgtop_sysdeps.so.0.2
+lib/libgtop_sysdeps.so.1.0
 lib/libgtop_sysdeps.a
-lib/libgtop_sysdeps_suid.so.0.2
+lib/libgtop_sysdeps_suid.so.1.0
 lib/libgtop_sysdeps_suid.a
-lib/libgtop_common.so.0.2
+lib/libgtop_common.so.1.0
 lib/libgtop_common.a
-lib/libgtop_suid_common.so.0.2
+lib/libgtop_suid_common.so.1.0
 lib/libgtop_suid_common.a
-lib/libgtop_names.so.0.2
+lib/libgtop_names.so.1.0
 lib/libgtop_names.a
-lib/libgtop_guile_names.so.0.2
+lib/libgtop_guile_names.so.1.0
 lib/libgtop_guile_names.a
-lib/libgtop_guile.so.0.2
+lib/libgtop_guile.so.1.0
 lib/libgtop_guile.a
-lib/libgtop.so.0.2
+lib/libgtop.so.1.0
 lib/libgtop.a
 lib/libgtopConf.sh
+share/locale/de/LC_MESSAGES/libgtop.mo
+share/locale/fr/LC_MESSAGES/libgtop.mo
+share/locale/es/LC_MESSAGES/libgtop.mo
+share/locale/no/LC_MESSAGES/libgtop.mo
+share/locale/ko/LC_MESSAGES/libgtop.mo
+share/locale/ja/LC_MESSAGES/libgtop.mo
+share/locale/es_DO/LC_MESSAGES/libgtop.mo
+share/locale/es_GT/LC_MESSAGES/libgtop.mo
+share/locale/es_HN/LC_MESSAGES/libgtop.mo
+share/locale/es_MX/LC_MESSAGES/libgtop.mo
+share/locale/es_PA/LC_MESSAGES/libgtop.mo
+share/locale/es_PE/LC_MESSAGES/libgtop.mo
+share/locale/es_SV/LC_MESSAGES/libgtop.mo
 @dirrm include/glibtop
