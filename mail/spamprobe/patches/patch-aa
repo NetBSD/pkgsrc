@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2004/01/20 03:03:46 lukem Exp $
+
+--- spamprobe.1.orig	2003-08-03 01:25:53.000000000 +1000
++++ spamprobe.1
+@@ -121,7 +121,7 @@ the database directory does not already 
+ .TP
+ .BI -d " directory"
+ By default SpamProbe stores its database in a directory named
+-\.spamprobe under your home directory.  The -d option allows you to
++\&.spamprobe under your home directory.  The -d option allows you to
+ specify a different directory to use.  This is necessary if your
+ home directory is NFS mounted for example.
+ .TP
+@@ -467,9 +467,11 @@ That having been said, my .procmailrc fi
+ MAILDIR=$HOME/IMAP
+ .IP
+ :0 c
++.br
+ saved
+ .IP
+ :0
++.br
+ SCORE=| /home/brian/bin/spamprobe receive
+ .br
+ :0 wf
