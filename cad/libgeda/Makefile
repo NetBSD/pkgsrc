@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/22 20:01:28 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/22 20:39:18 dmcmahill Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -15,8 +15,7 @@ COMMENT=		Library of shared modules for gEDA
 
 CONFLICTS+=		gEDA<19991011
 
-DIST_SUBDIR=		geda
-PKGVERSION=		20030901
+.include "../../cad/geda/Makefile.common"
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
