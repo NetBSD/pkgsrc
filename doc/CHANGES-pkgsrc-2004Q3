@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.9 2004/10/20 16:33:44 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.10 2004/10/24 11:52:09 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -21,3 +21,5 @@ Pullup ticket 122 - requested by Matthias Scheler
 security fix for tiff
 Pullup ticket 123 - requested by Takahiro Kambe
 security fix for squid
+Security Pullup - requested by Matthias Scheler
+security fix for ap-ssl
