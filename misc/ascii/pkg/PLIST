@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/25 18:37:13 jtb Exp $
+bin/ascii
+man/man1/ascii.1
+share/examples/ascii/ascii.cgi
+@dirrm share/examples/ascii
