@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3094 2005/02/22 01:09:44 minskim Exp $
+$NetBSD: TODO,v 1.3095 2005/02/22 12:41:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -268,7 +268,6 @@ Suggested package updates
 	o TeXmacs-1.0.4-R3
 	o YoSucker-65
 	o aap-0.144
-	o abiword1-1.0.7
 	o acpi-iasl-20040715
 	o adzap-20041124
 	o aewm++-1.0.27
