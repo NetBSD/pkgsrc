@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/09/16 18:55:05 jmmv Exp $
+
+--- html/Makefile.in.orig	2003-06-17 16:41:20.000000000 +0200
++++ html/Makefile.in
+@@ -302,7 +302,7 @@ uninstall-am: uninstall-htmlDATA uninsta
+ 
+ install-data-hook:
+ 	for dir in $(EXTRA_DIRS); do					\
+-	    cp -rp $(srcdir)/$$dir $(DESTDIR)$(htmldir);		\
++	    cp -r $(srcdir)/$$dir $(DESTDIR)$(htmldir);		\
+ 	    rm -rf $(DESTDIR)$(htmldir)/$$dir/CVS;			\
+ 	done
+ 

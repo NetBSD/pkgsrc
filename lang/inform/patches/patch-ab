@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2003/09/16 18:55:06 jmmv Exp $
+
+--- include/Makefile.in.orig	2003-06-13 10:32:30.000000000 +0200
++++ include/Makefile.in
+@@ -296,7 +296,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-includeHEADERS
++install-data-am: install-includeHEADERS install-data-local 
+ 
+ install-exec-am:
+ 
