@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.1 1998/12/28 22:22:00 bad Exp $
+
+--- config/config.sub.orig	Fri Jan 23 23:07:31 1998
++++ config/config.sub	Sun Oct 25 18:54:55 1998
+@@ -119,7 +119,7 @@
+ case $basic_machine in
+ 	# Recognize the basic CPU types without company name.
+ 	# Some are omitted here because they have special meanings below.
+-	tahoe | i[3456]86 | i860 | m68k | m68000 | m88k | ns32k | arm | pyramid \
++	tahoe | i[3456]86 | i860 | m68k | m68000 | m88k | ns32k | arm | arm32 | pyramid \
+ 		| tron | a29k | 580 | i960 | h8300 | hppa1.0 | hppa1.1 \
+ 		| alpha | we32k | ns16k | clipper | sparclite | i370 | sh \
+ 		| powerpc | sparc64 | 1750a | dsp16xx | mips64 | mipsel \
+@@ -133,7 +133,7 @@
+ 		;;
+ 	# Recognize the basic CPU types with company name.
+ 	vax-* | tahoe-* | i[3456]86-* | i860-* | m68k-* | m68000-* | m88k-* \
+-	      | sparc-* | ns32k-* | fx80-* | arm-* | c[123]* \
++	      | sparc-* | ns32k-* | fx80-* | arm-* | arm32-* | c[123]* \
+ 	      | mips-* | pyramid-* | tron-* | a29k-* | romp-* | rs6000-* \
+ 	      | none-* | 580-* | cray2-* | h8300-* | i960-* | xmp-* | ymp-* \
+ 	      | hppa1.0-* | hppa1.1-* | alpha-* | we32k-* | cydra-* | ns16k-* \
