@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/10/27 21:48:27 cube Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/19 13:35:43 adam Exp $
 bin/slrn
 bin/slrnpull
 man/man1/slrn.1
@@ -40,6 +40,7 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/slrn.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/slrn.mo
 share/slrn/macros/color.sl
 share/slrn/macros/gsort.sl
