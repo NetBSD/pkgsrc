@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/29 00:33:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/04 08:21:22 jmmv Exp $
 #
 
 DISTNAME=	tkgate-1.6i
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www-2.cs.cmu.edu/~hansen/tkgate/
 COMMENT=	Tcl/Tk based digital circuit editor and simulator
 
 BUILD_DEPENDS+=		bison>=1.35:../../devel/bison
+BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 
 USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
