@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/07/27 13:40:36 adam Exp $
+# $NetBSD: Makefile,v 1.26 2004/08/05 17:27:42 minskim Exp $
 
 DISTNAME=	scummvm-0.6.1-src
 PKGNAME=	scummvm-0.6.1
@@ -25,7 +25,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scummvm ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/scummvm.6 ${PREFIX}/man/man6
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/scummvm
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/scummvm.xpm ${PREFIX}/share/pixmaps
 
 .include "../../audio/libmad/buildlink3.mk"
