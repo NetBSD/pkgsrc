@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2002/11/10 12:41:51 grant Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.1 2003/04/14 20:28:22 grant Exp $
 
 	Mozilla requires your kernel to include 'COMPAT_LINUX' (plus in
 	NetBSD systems before 1.5 'EXEC_ELF32').
