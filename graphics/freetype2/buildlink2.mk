@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/10/08 09:32:33 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/10/08 09:57:32 jlam Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -57,6 +57,7 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.freetype2=freetype2
 BUILDLINK_PREFIX.freetype2_DEFAULT=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
+USE_X11=			# defined
 .endif
 
 BUILDLINK_FILES.freetype2=	include/ft2build.h
