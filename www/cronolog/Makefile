@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:55:31 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/07 10:38:53 seb Exp $
 #
 
 DISTNAME=	cronolog-1.6.2
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.cronolog.org/
 COMMENT=	Web log rotation utility that provides datestamp filenames
 
 GNU_CONFIGURE=	YES
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	cronolog.info
 
 post-patch:
 	${SED} "s,/www/sbin/cronolog,${PREFIX}/sbin/cronolog,g"		\
@@ -20,5 +22,4 @@ post-install:
 	${MV} ${PREFIX}/man/man1/cronolog.1m ${PREFIX}/man/man8/cronolog.8
 	${MV} ${PREFIX}/man/man1/cronosplit.1m ${PREFIX}/man/man8/cronosplit.8
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
