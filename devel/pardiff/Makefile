@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:43 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 23:41:26 snj Exp $
 #
 
 DISTNAME=	pardiff-0.9.4
@@ -9,7 +9,7 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://pardiff.sourceforge.net/
 COMMENT=	Converts diff output to paralleled (side-by-side) format
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	# defined
 
 .include "../../mk/bsd.pkg.mk"
