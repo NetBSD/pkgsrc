@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
+$NetBSD: patch-ab,v 1.10 2001/10/21 15:40:52 mycroft Exp $
 
 --- Imakefile.orig	Sun Mar 21 23:36:26 1999
 +++ Imakefile	Sun Oct 21 08:23:48 2001
@@ -35,7 +35,7 @@ $NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
  
  
  
-@@ -186,13 +186,35 @@
+@@ -186,13 +186,41 @@
  XCOMM  
  XCOMM  Again don't use these if you are using the dynamically loadable modules.
  XCOMM 
@@ -50,6 +50,9 @@ $NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
 +
 +.if (${MACHINE_OBJ_ARCH} == "i386-a.out") || (${MACHINE_OBJ_ARCH} == "i386-ELF") || (${MACHINE_OBJ_ARCH} == "m68k-a.out") || (${MACHINE_OBJ_ARCH} == "sparc-a.out")
 +XA_IV32_DEF = -DXA_IV32 
++XA_CVID_DEF = -DXA_CVID
++XA_CYUV_DEF = -DXA_CYUV
++.elif (${MACHINE_OBJ_ARCH} == "powerpc-ELF")
 +XA_CVID_DEF = -DXA_CVID
 +XA_CYUV_DEF = -DXA_CYUV
 +.endif
@@ -70,6 +73,9 @@ $NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
 +XA_IV32_LIB = mods/xa2.0_iv32_sparcCOFF.o
 +XA_CVID_LIB = mods/xa2.0_cvid_sparcCOFF.o
 +XA_CYUV_LIB = mods/xa1.0_cyuv_sparcAOUT.o
++.elif (${MACHINE_OBJ_ARCH} == "powerpc-ELF")
++XA_CVID_LIB = mods/xa2.0_cvid_linuxPPC.o
++XA_CYUV_LIB = mods/xa1.0_cyuv_linuxPPC.o
 +.else
 +XA_IV32_DEF =
 +XA_CVID_DEF =
@@ -78,7 +84,7 @@ $NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
  XCOMM 
  XCOMM ##########################
  XCOMM  NOTE: SGI Machines Only: 
-@@ -267,8 +289,8 @@
+@@ -267,8 +295,8 @@
  XCOMM  XA_AUDIO_DEFS =
  XCOMM 
  XCOMM ## -- Linux PCs ---------------------------------------------------------
@@ -89,7 +95,7 @@ $NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
  XCOMM 
  XCOMM  -- Linux PC's with OLD Rev sound drivers -------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_LINUX_OLDER_SND
-@@ -307,7 +329,7 @@
+@@ -307,7 +335,7 @@
  XCOMM  XA_AUDIO_DEFS = -DXA_SONY_AUDIO
  XCOMM 
  XCOMM  -- NetBSD-current (as of 30/April 1995)---------------------------------
@@ -98,7 +104,7 @@ $NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
  XCOMM 
  XCOMM  -- QNX 4.2 PC's --------------------------------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_SELECT
-@@ -465,7 +487,11 @@
+@@ -465,7 +493,11 @@
  
  PROGRAMS = $(XANIM)
  
