@@ -1,4 +1,4 @@
-# 	$NetBSD: Makefile,v 1.5 1999/09/22 08:52:05 ad Exp $
+# 	$NetBSD: Makefile,v 1.6 1999/10/06 23:02:35 ad Exp $
 
 DISTNAME=	exim-3.03
 DISTFILES=	exim-3.03.tar.gz exim-html-3.00.tar.gz
@@ -43,7 +43,7 @@ post-install:
 	chmod ugo+x ${PREFIX}/sbin/exim_newaliases
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/mailer.conf.exim \
-	    > ${PREFIX}/etc/mailer.conf.exim
+	    > ${PREFIX}/etc/exim/mailer.conf.exim
 	${MKDIR} ${PREFIX}/man/man8
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 	${MKDIR} ${PREFIX}/share/doc/exim
