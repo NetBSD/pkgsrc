@@ -1,0 +1,36 @@
+# $NetBSD: mipspro-cc-post-logic,v 1.1 2004/01/07 20:45:59 jlam Exp $
+#
+# Silently accept some GCC compiler arguments by silently converting
+# them to the MIPSpro compiler equivalents.  This makes the MIPSpro
+# compiler wrappers work with more software that seems to assume GCC
+# nowadays.
+
+case $arg in
+-O[123]|-Ofast|-Ofast=*)
+	# MIPSpro can handle -O[123] and -Ofast[=platform], so just pass
+	# them on through.
+	;;
+-O*)
+	# Ignore all other -O* options.
+	arg=
+	addtoprivatecache=yes
+	;;
+-Wl,-R*)
+	# Directories for the runtime library search path are passed
+	# via "-Wl,-rpath,<dir>", not "-Wl,-R<dir>".
+	#
+	arg=`$echo "X$arg" | $Xsed -e "s|^-Wl,-R|-Wl,-rpath,|g"`
+	addtoprivatecache=yes
+	;;
+-W[ablfpR]*,*)
+	# The MIPSpro compiler accepts these -W* directives, so just
+	# accept them and pass them on through.
+	;;
+-W*)
+	# Ignore all of the other -W* directives, which are likely to
+	# be GCCisms.
+	#
+	arg=
+	addtoprivatecache=yes
+	;;
+esac
