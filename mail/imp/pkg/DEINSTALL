@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/02/12 15:27:41 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/04/30 06:11:09 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -10,17 +10,36 @@ RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
 
-CONFDIR=${PKG_PREFIX}/etc/httpd
+APACHE_SYSCONFDIR="@APACHE_SYSCONFDIR@"
+SAMPLECONFDIR=${PKG_PREFIX}/share/examples/imp
+CONFDIR=${APACHE_SYSCONFDIR}
 IMPDIR=${PKG_PREFIX}/@IMPDIR@
 
-CONFFILES="${CONFDIR}/imp.conf ${IMPDIR}/config/defaults.php3 ${IMPDIR}/config/ldap.php3 ${IMPDIR}/config/servers.php3"
-NONCONFFILES="${IMPDIR}/config/MOTD.html ${IMPDIR}/config/header.txt ${IMPDIR}/config/html.php3 ${IMPDIR}/config/imp_module_config.php3 ${IMPDIR}/config/lang.php3 ${IMPDIR}/config/mailbox.php3 ${IMPDIR}/config/menu.txt ${IMPDIR}/config/mime.php3 ${IMPDIR}/config/prefs.php3 ${IMPDIR}/config/trailer.txt"
+CONFFILES="	${IMPDIR}/config/defaults.php3				\
+		${IMPDIR}/config/ldap.php3				\
+		${IMPDIR}/config/servers.php3"
+NONCONFFILES="	${IMPDIR}/config/MOTD.html				\
+		${IMPDIR}/config/header.txt				\
+		${IMPDIR}/config/html.php3				\
+		${IMPDIR}/config/imp_module_config.php3			\
+		${IMPDIR}/config/lang.php3				\
+		${IMPDIR}/config/mailbox.php3				\
+		${IMPDIR}/config/menu.txt				\
+		${IMPDIR}/config/mime.php3				\
+		${IMPDIR}/config/prefs.php3				\
+		${IMPDIR}/config/trailer.txt"
 
 case ${STAGE} in
 DEINSTALL)
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
+	FILE=${CONFDIR}/imp.conf
+	SAMPLEFILE=${SAMPLECONFDIR}/imp.conf
+	if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+	then
+		${RM} -f ${FILE}
+	fi
 	for FILE in ${CONFFILES} ${NONCONFFILES}
 	do
 		SAMPLEFILE=${FILE}.dist
@@ -33,7 +52,7 @@ DEINSTALL)
 
 POST-DEINSTALL)
 	modified_files=''
-	for FILE in ${CONFFILES} ${NONCONFFILES}
+	for FILE in ${CONFDIR}/imp.conf ${CONFFILES} ${NONCONFFILES}
 	do
 		if [ -f ${FILE} ]
 		then
