@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9349 2005/02/28 02:22:02 kim Exp $
+$NetBSD: CHANGES,v 1.9350 2005/02/28 02:50:43 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1191,3 +1191,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_chk to 1.56 [wiz 2005-02-28]
 	Updated adjustkernel to 1.7 [hubertf 2005-02-28]
 	Updated libshout to 2.1 [kim 2005-02-28]
+	Removed ularn [ben 2005-02-28]
