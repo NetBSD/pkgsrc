@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.9 2003/09/05 19:39:52 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.10 2003/11/08 06:58:10 jdolecek Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -7,8 +7,6 @@ PATCHDIR=		${.CURDIR}/../../www/php4/patches
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-
-CONFIGURE_ARGS+=	--disable-cli
 
 CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-iconv
