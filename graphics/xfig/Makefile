@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.26 2001/08/07 11:58:41 tron Exp $
+# $NetBSD: Makefile,v 1.27 2001/08/09 14:34:56 wiz Exp $
 #
 
-DISTNAME=		xfig.3.2.3a
-PKGNAME=		xfig-3.2.3a
-WRKSRC=			${WRKDIR}/${DISTNAME}
+DISTNAME=		xfig.3.2.3d.full
+PKGNAME=		xfig-3.2.3.4
+WRKSRC=			${WRKDIR}/xfig.3.2.3d
 CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/drawing_tools/xfig/}
+MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/drawing_tools/xfig/} \
+			ftp://www-epb.lbl.gov/xfig/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://epb1.lbl.gov/BVSmith/xfig/
-COMMENT=		CAD-like drawing tool.  Good for simple colorful scale drawings & ISO's
+COMMENT=		CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 
-DEPENDS+=		transfig>=3.2.3:../../print/transfig
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
+DEPENDS+=		transfig>=3.2.3.4:../../print/transfig
 
 USE_IMAKE=		YES
 USE_XAW=		YES
-USE_XPM=		YES
+NO_INSTALL_MANPAGES=	YES	# install.all does install.man
+INSTALL_TARGET=		install install.all
+CFLAGS+=		-I${BUILDLINK_DIR}/include/X11
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,6 +32,7 @@ pre-configure:
 .endif
 
 XFIGEXAMPLES=		${PREFIX}/share/examples/xfig
+XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 
 post-install:
 	${INSTALL_DATA_DIR} ${XFIGEXAMPLES}
@@ -38,5 +41,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Examples/*.jpg ${XFIGEXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/Examples/*.xbm ${XFIGEXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/Examples/*.xpm ${XFIGEXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT* ${XFIGDOCDIR}
 
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
