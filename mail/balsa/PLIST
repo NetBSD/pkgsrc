@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/21 01:49:09 mjl Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/21 02:23:53 mjl Exp $
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/balsa.mo
@@ -42,7 +42,6 @@ man/man1/balsa.1
 share/gnome/apps/Internet/balsa.desktop
 share/gnome/help/balsa/C/g1866.html
 share/gnome/help/balsa/C/g1958.html
-share/gnome/help/balsa/C/images
 share/gnome/help/balsa/C/images/address-book-ldap.png
 share/gnome/help/balsa/C/images/address-book-modify.png
 share/gnome/help/balsa/C/images/address-book-start.png
@@ -60,7 +59,6 @@ share/gnome/help/balsa/C/images/preferences-window.png
 share/gnome/help/balsa/C/images/spell-check.png
 share/gnome/help/balsa/C/index.html
 share/gnome/help/balsa/C/ln7.html
-share/gnome/help/balsa/C/stylesheet-images
 share/gnome/help/balsa/C/stylesheet-images/caution.gif
 share/gnome/help/balsa/C/stylesheet-images/home.gif
 share/gnome/help/balsa/C/stylesheet-images/important.gif
