@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/06/30 00:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/30 10:38:23 jmmv Exp $
 #
 
-DISTNAME=	dvd+rw-tools-5.19-1.4.9.7
-PKGNAME=	dvd+rw-tools-5.19.4.9.7
+DISTNAME=	dvd+rw-tools-5.21.4.10.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://fy.chalmers.se/~appro/linux/DVD+RW/tools/
 
@@ -20,7 +19,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-booktype ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-format ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-mediainfo ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/dvd+rw-tools
-	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/doc/html/dvd+rw-tools
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dvd+rw-tools
+	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/doc/dvd+rw-tools
 
 .include "../../mk/bsd.pkg.mk"
