@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.20 2004/02/03 21:51:45 jlam Exp $
+# $NetBSD: gcc.mk,v 1.21 2004/02/03 21:56:40 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -220,7 +220,9 @@ _GCC_ARCHDIR!=		\
 	fi
 _GCC_LDFLAGS=	# empty
 .  for _dir_ in ${_GCC_ARCHDIR} ${_GCC_PREFIX}lib
+.    if empty(_dir_:M*not_found*)
 _GCC_LDFLAGS+=	-L${_dir_} ${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
+.    endif
 .  endfor
 LDFLAGS+=	${_GCC_LDFLAGS}
 
