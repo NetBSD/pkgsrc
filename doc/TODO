@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1367 2004/02/11 04:15:00 minskim Exp $
+$NetBSD: TODO,v 1.1368 2004/02/11 04:22:44 minskim Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,7 @@ Suggested package updates
 	o wdm-1.26
 	o wistumbler2-2.00pre4 [xtraeme]
 	o wwwoffle-2.8a
-	o xalan-c-1.4
+	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanim-2.92.0 [pkg/19934]
 	o xboard-4.2.7
 	o xdaliclock-2.20
