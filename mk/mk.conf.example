@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.118 2000/01/23 02:30:26 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.119 2000/01/24 07:04:28 itojun Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -563,10 +563,14 @@ PAPERSIZE=	A4
 # Default: package-dependent
 
 #USE_INET6=
-# Enable IPv6 support on certain packages.  Use IPv6-ready kernel if
-# you define this.
-# Possible: not defined, YES
-# Default: not defined
+# Enable IPv6 support on certain packages.  It is safer to leave it undefined
+# in mk.conf and obey the default.  Reasons:
+# - it is just fine to use IPv6-ready packages on top of non-IPv6 kernel
+#   (assuming that you have IPv6-ready headers and libraries)
+# - it may cause some trouble to use a package compiled with USE_INET6=NO,
+#   on top of IPv6-ready kernel
+# Possible: not defined, NO, YES
+# Default: YES on IPv6-ready userland, not defined otherwise
 
 #USE_INN=
 # Used in trn and nn to specify use of "inn" instead of "nntpclnt"
