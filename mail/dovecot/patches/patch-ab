@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
+$NetBSD: patch-ab,v 1.6 2004/08/01 05:17:19 schmonz Exp $
 
---- dovecot-example.conf.orig	2003-12-20 05:14:19.000000000 +0100
+--- dovecot-example.conf.orig	2004-07-13 06:56:55.000000000 -0400
 +++ dovecot-example.conf
 @@ -1,17 +1,15 @@
  ## Dovecot 1.0 configuration file
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
  
  # IP or host address where to listen in for connections. It's not currently
  # possible to specify multiple addresses. "*" listens in all IPv4 interfaces.
-@@ -27,7 +27,7 @@
+@@ -27,7 +25,7 @@
  #pop3s_listen = 
  
  # Disable SSL/TLS support.
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
  
  # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
  # dropping root privileges, so keep the key file unreadable by anyone but
-@@ -81,7 +81,7 @@
+@@ -82,7 +80,7 @@
  login = imap
  
  # Executable location.
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
  
  # User to use for the login process. Create a completely new user for this,
  # and don't use it anywhere else. The user must also belong to a group where
-@@ -126,7 +126,7 @@
+@@ -127,7 +125,7 @@ login = imap
  login = pop3
  
  # Exception to above rule being the executable location.
@@ -50,7 +50,7 @@ $NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
  
  ##
  ## Mail processes
-@@ -318,7 +316,7 @@ login = pop3
+@@ -333,7 +331,7 @@ login = pop3
  ##
  
  # Executable location
@@ -59,7 +59,7 @@ $NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
  
  # Set max. process size in megabytes. Most of the memory goes to mmap()ing
  # files, so it shouldn't harm much even if this limit is set pretty high.
-@@ -326,14 +326,14 @@
+@@ -341,14 +339,14 @@ login = pop3
  
  # Support for dynamically loadable modules.
  #imap_use_modules = no
@@ -76,7 +76,7 @@ $NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
  
  # Set max. process size in megabytes. Most of the memory goes to mmap()ing
  # files, so it shouldn't harm much even if this limit is set pretty high.
-@@ -341,7 +341,7 @@
+@@ -356,7 +354,7 @@ login = pop3
  
  # Support for dynamically loadable modules.
  #pop3_use_modules = no
@@ -85,7 +85,7 @@ $NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
  
  ##
  ## Authentication processes
-@@ -390,9 +390,10 @@
+@@ -406,9 +404,10 @@ auth_userdb = passwd
  #   vpopmail: vpopmail authentication
  #   ldap <config path>: LDAP, see doc/dovecot-ldap.conf
  #   pgsql <config path>: a PostgreSQL database, see doc/dovecot-pgsql.conf
