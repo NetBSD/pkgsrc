@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/14 18:00:48 bad Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/30 17:05:21 tv Exp $
 #
 
 DISTNAME=	mod_fastcgi-2.0.18
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.fastcgi.com/
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.fastcgi.com/
 
-DEPENDS+=	apache-1.3.3.2:../../www/apache
+DEPENDS+=	apache-1.3.6p0:../../www/apache
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
