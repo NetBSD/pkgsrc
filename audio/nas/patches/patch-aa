@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2000/08/04 01:31:56 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2001/07/14 13:35:13 jlam Exp $
 
---- config/NetAudio.tmpl.orig	Sat Mar  4 21:40:50 2000
-+++ config/NetAudio.tmpl	Thu Aug  3 21:03:54 2000
-@@ -207,7 +207,7 @@
+--- config/NetAudio.tmpl.orig	Sun Mar 18 15:36:39 2001
++++ config/NetAudio.tmpl
+@@ -222,7 +222,7 @@
  #define	AuInstallManPage(file,destdir) AuInstallManPageLong(file,destdir,file)
  
  #define	AuInstallManPageLong(file,destdir,dest)				    @@\

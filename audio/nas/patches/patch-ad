@@ -1,28 +1,28 @@
-$NetBSD: patch-ad,v 1.6 2000/09/12 16:49:23 fredb Exp $
+$NetBSD: patch-ad,v 1.7 2001/07/14 13:35:13 jlam Exp $
 
---- server/dda/voxware/auvoxware.c.orig	Sat Mar  4 20:40:55 2000
-+++ server/dda/voxware/auvoxware.c	Tue Sep 12 11:41:20 2000
+--- server/dda/voxware/auvoxware.c.orig	Thu Oct  5 20:39:16 2000
++++ server/dda/voxware/auvoxware.c
 @@ -224,7 +224,11 @@
- 	256,
- 	3,
- 	32,
-+#ifdef __NetBSD__
-+	"/dev/audio",
+ 	256,			/* fragSize */
+ 	3,			/* minFrags */
+ 	32,			/* maxFrags */
++#if defined(__NetBSD__)
++	"/dev/audio",		/* device */
 +#else
- 	"/dev/dsp1",
+ 	"/dev/dsp1",		/* device */
 +#endif
- 	0
+ 	0			/* isPCSpeaker */
  }, sndStatOut =
  {
 @@ -237,7 +241,11 @@
- 	256,
- 	3,
- 	32,
-+#ifdef __NetBSD__
-+	"/dev/audio",
+ 	256,			/* fragSize */
+ 	3,			/* minFrags */
+ 	32,			/* maxFrags */
++#if defined(__NetBSD__)
++	"/dev/audio",		/* device */
 +#else
- 	"/dev/dsp",
+ 	"/dev/dsp",		/* device */
 +#endif
- 	0
+ 	0			/* isPCSpeaker */
  };
  
