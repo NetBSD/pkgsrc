@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.1 2004/10/22 00:26:56 hubertf Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.2 2004/11/09 17:37:50 hubertf Exp $ -->
 
 <appendix id="editing">
   <title>Editing guidelines for the pkgsrc guide</title>
@@ -59,6 +59,14 @@
       
       <listitem>
         <para>
+          Run <command>make do-lint</command> in
+          <filename>pkgsrc/doc/guide</filename> to check the XML
+          syntax, and fix it if needed
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
           Run <command>make</command> in
           <filename>pkgsrc/doc/guide</filename> to build the HTML and
           ASCII version
@@ -69,16 +77,14 @@
         <para>
           Run <command>make OUTPUT=pdf</command> in
           <filename>pkgsrc/doc/guide</filename> to build the PDF
-          version. Dont' omit this, as this does a very strict SGML
-          test, and doing this properly is important for getting proper
-          documentation on the web server!
+          version. 
         </para>
       </listitem>
       
       <listitem>
         <para>
           If all is well, run <command>make install-doc</command> to put
-          the generated files into <filename>pkgserc/doc</filename>. 
+          the generated files into <filename>pkgsrc/doc</filename>. 
         </para>
       </listitem>
       
@@ -91,6 +97,22 @@
       <listitem>
         <para>
           <command>cvs commit pkgsrc/doc/pkgsrc.{html,txt}</command>
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          Until the webserver on www.NetBSD.org is really updated
+          automatically to pick up changes to the pkgsrc guide
+          automatically, also run <command>make install-htdoc
+          HTDOCSDIR=../../../htdocs</command> (or similar, adjust
+          <varname>HTDOCSDIR</varname>!)
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          <command>cvs commit htdocs/Documentation/pkgsrc</command>
         </para>
       </listitem>
       
