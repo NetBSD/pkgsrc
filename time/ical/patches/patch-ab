@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:10 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2003/10/02 20:14:23 tron Exp $
 
---- configure.orig	Wed Oct 22 01:52:57 1997
-+++ configure	Tue Apr  6 01:03:05 1999
+--- configure.orig	1997-10-22 01:52:57.000000000 +0200
++++ configure	2003-10-02 22:12:00.000000000 +0200
 @@ -1089,8 +1089,8 @@
  
  #### Check that the library files exist
@@ -13,3 +13,66 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:10 wiz Exp $
  for f in "$lib1" "$lib2"; do
      if test ! -f "$f"; then
  	echo "$ac_t""$f not found" 1>&6
+@@ -1661,7 +1661,7 @@
+ #endif
+ 
+ #include <string.h>
+-static void* ptr = &strerror;
++static void* ptr = (void *) &strerror;
+ int main() {return 0;}
+ 
+ EOF
+@@ -1699,7 +1699,7 @@
+ #endif
+ 
+ #include <errno.h>
+-static void* ptr = &sys_errlist;
++static void* ptr = (void *) &sys_errlist;
+ int main() {return 0;}
+ 
+ EOF
+@@ -1737,7 +1737,7 @@
+ #endif
+ 
+ #include <sys/time.h>
+-static void* ptr = &gettimeofday;
++static void* ptr = (void *) &gettimeofday;
+ int main() {return 0;}
+ 
+ EOF
+@@ -1775,7 +1775,7 @@
+ #endif
+ 
+ #include <unistd.h>
+-static void* ptr = &gethostname;
++static void* ptr = (void *) &gethostname;
+ int main() {return 0;}
+ 
+ EOF
+@@ -1813,7 +1813,7 @@
+ #endif
+ 
+ #include <unistd.h>
+-static void* ptr = &getpid;
++static void* ptr = (void *) &getpid;
+ int main() {return 0;}
+ 
+ EOF
+@@ -1851,7 +1851,7 @@
+ #endif
+ 
+ #include <string.h>
+-static void* ptr = &strncasecmp;
++static void* ptr = (void *) &strncasecmp;
+ int main() {return 0;}
+ 
+ EOF
+@@ -1889,7 +1889,7 @@
+ #endif
+ 
+ #include <unistd.h>
+-static void* ptr = &gethostid;
++static void* ptr = (void *) &gethostid;
+ int main() {return 0;}
+ 
+ EOF
