@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2003/01/25 18:02:14 cjep Exp $
+# $NetBSD: Makefile,v 1.17 2003/04/08 11:00:05 martti Exp $
 #
 
-DISTNAME=	bins-1.1.20
+DISTNAME=	bins-1.1.21
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://bins.sautret.org/
-COMMENT=	static HTML photo album generator
+COMMENT=	Static HTML photo album generator
 
 DEPENDS+=	p5-gettext>=1.01:../../devel/p5-gettext
 DEPENDS+=	p5-Text-Iconv>=1.1:../../converters/p5-Text-Iconv
