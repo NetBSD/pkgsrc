@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/06/22 12:52:31 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/15 10:37:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -24,8 +24,5 @@ CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 pre-install:
 	@${SETENV} ${MAKE_ENV} addnerd -g ${AMANDA_GROUP} ${AMANDA_USER}
-
-post-install:
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
