@@ -1,0 +1,217 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
+
+--- Configure.orig	Mon Nov 13 14:35:43 2000
++++ Configure
+@@ -148,35 +148,10 @@
+ pth="\
+   /bin\
+   /usr/bin\
+-  /usr/locateal/bin\
+-  /usr/ucb\
+-  /usr/locateal\
+-  /usr/lbin\
+-  /usr/5bin\
+-  /etc\
+-  /usr/etc\
+-  /usr/gnu/bin\
+-  /usr/new\
+-  /usr/new/bin\
+-  /usr/nbin\
+-  /sys5.3/bin\
+-  /sys5.3/usr/bin\
+-  /bsd4.3/bin\
+-  /bsd4.3/usr/ucb\
+-  /bsd4.3/usr/bin\
+-  /usr/bsd\
+-  /bsd43/bin\
+-  /opt/ansic/bin\
+-  /usr/ccs/bin\
++  $LOCALBASE/bin\
+   /usr/lib\
+-  /usr/ucblib\
+-  /lib\
+-  /usr/ccs/lib\
+-  /sbin\
+-  /usr/sbin\
+-  /usr/libexec\
+-  /usr/openwin/bin\
+-  /usr/local/bin\
++  $LOCALBASE/lib\
++  $READLINE_PREFIX/lib
+ "
+ # /usr/openwin/bin added for xmkmf
+ 
+@@ -252,6 +227,13 @@
+ 	    *RT625*)        arch=sparcv8_super;; # HyperSparc
+ 	    *CY605*)        arch=sparcv8_super;;
+ 	    esac;;
++  netbsd)   case "`uname -m`" in
++	    alpha)      arch=alpha;;
++	    hp300)      arch=hppa;;
++	    i386)       arch=ix86;;
++	    sun3)       arch=m64k;;
++	    *)          arch=none;;
++	    esac;;
+   sunos)    case "$3" in 5*) osname=solaris;; esac
+ 	    case "$5" in
+ 	    sun3*)    arch=m68k;;
+@@ -294,7 +276,7 @@
+ ==========================================================================
+ I know of the following Operating Systems
+ EOM
+-  rep='os2 freebsd cygwin linux hpux aix osf1 solaris sunos nextstep concentrix irix';
++  rep='os2 freebsd netbsd cygwin linux hpux aix osf1 solaris sunos nextstep concentrix irix';
+   . ./display
+   echo $n ..."Any of these apply ? $c"
+   dflt=$osname; . ./myread
+@@ -330,7 +312,7 @@
+ #   Modifications for pretty name and asm file
+ #
+ case "$osname" in
+-  cygwin*|linux|freebsd|os2) pretty="$pretty running $osname";;
++  cygwin*|linux|freebsd|netbsd|os2) pretty="$pretty running $osname";;
+   nextstep) pretty="$pretty running $osname";
+             if test "$arch" = m68k; then asmarch=none; fi ;;
+ esac
+@@ -427,20 +409,9 @@
+ 	fi;;
+       os2) libpth=`echo $LIBRARY_PATH | sed 's/;/ /g' | sed 's,\\\\,/,g'`;;
+  	*) libpth="\
+- 	/usr/local/lib\
+- 	/lib\
+  	/usr/lib\
+- 	/opt/lib\
+- 	/opt/local/lib\
+- 	/opt/gnu/lib\
+- 	/lib/pa1.1\
+- 	/usr/lib/large\
+- 	/lib/large\
+- 	/usr/lib/small\
+- 	/lib/small\
+- 	/usr/ccs/lib\
+- 	/usc/ucblib\
+- 	/usr/shlib\
++	$LOCALBASE/lib\
++	$READLINE_PREFIX/lib\
+  	.\
+      ";;
+      esac
+@@ -523,9 +494,9 @@
+   if test -n "$readline"; then
+ # Readline -- TermCap
+     if test -n "`(nm $rl_fullname | grep tgetent)2>/dev/null`"; then
+-      lib=ncurses; . ./locatelib
++      lib=curses; . ./locatelib
+       if test -n "$try" -a -n "`(nm $try | grep tgetent)2>/dev/null`"; then
+-        rl_ncurses=$ncurses
++        rl_curses=$curses
+       else
+         lib=termcap; . ./locatelib
+         rl_termcap=$termcap
+@@ -546,17 +517,8 @@
+        $cygtop/H-${arch}-cygwin32/${arch}-cygwin32/include\
+      ";;
+       *) incpth="\
+-      /usr/local/include/readline\
+-      /usr/include/readline\
+-      /opt/include/readline\
+-      /opt/local/include/readline\
+-      /opt/gnu/include/readline\
+-      /usr/unsupported/include/readline\
+-      /usr/local/include\
+-      /usr/include\
+-      /opt/include\
+-      /opt/local/include\
+-      /opt/gnu/include\
++      $LOCALBASE/include\
++      $READLINE_PREFIX/include/readline
+     ";;
+     esac
+     pth="$readline_add $incpth"
+@@ -591,10 +553,10 @@
+ # in case headers are not installed correctly
+       RLINCLUDE="-I$rl_include -DREADLINE_LIBRARY"
+     fi
+-    RLLIBS="-L$readline -lreadline"
+-    if test -n "$rl_ncurses"; then
+-      echo ..."Library ncurses needed by readline"
+-      RLLIBS="$RLLIBS -lncurses"
++    RLLIBS="-R$readline -L$readline -lreadline"
++    if test -n "$rl_curses"; then
++      echo ..."Library curses needed by readline"
++      RLLIBS="$RLLIBS -lcurses"
+     fi
+     if test -n "$rl_termcap"; then
+       echo ..."Library termcap needed by readline"
+@@ -649,33 +611,7 @@
+       # X11 -- Headers
+       if test ! -f $Xincroot/X11/Xos.h; then
+         x11pth="\
+-          /usr/openwin/share/lib\
+-          /usr/openwin/lib\
+-          /usr/X11R6/lib\
+-          /usr/X11R5/lib\
+-          /usr/X11R4/lib\
+-          /usr/lib/X11R6\
+-          /usr/lib/X11R5\
+-          /usr/lib/X11R4\
+-          /usr/local/X11R6/lib\
+-          /usr/local/X11R5/lib\
+-          /usr/local/X11R4/lib\
+-          /usr/local/lib/X11R6\
+-          /usr/local/lib/X11R5\
+-          /usr/local/lib/X11R4\
+-          /usr/X11/lib\
+-          /usr/lib/X11\
+-          /usr/local/X11/lib\
+-          /usr/local/lib/X11\
+-          /usr/X386/lib\
+-          /usr/x386/lib\
+-          /usr/XFree86/lib/X11\
+-          /usr/lib\
+-          /usr/local/lib\
+-          /usr/unsupported/lib\
+-          /usr/athena/lib\
+-          /usr/local/x11r5/lib\
+-          /usr/lpp/Xamples/lib\
++          $X11BASE/lib\
+         ";
+         pth=`echo $x11pth | s,/lib,/include,g`
+         x=`./locate X11/Xos.h '' $pth`
+@@ -816,8 +752,8 @@
+ if test -n "$__gnuc__"; then
+   __GNUC__="-D__GNUC__"
+   warn="-Wall -Wno-implicit"
+-  OPTFLAGS="-O3 -DGCC_INLINE $warn"
+-  DBGFLAGS="-g $warn"
++  OPTFLAGS="-DGCC_INLINE $warn"
++  DBGFLAGS="$warn"
+   # Some architectures need -fPIC for building dynamic lib
+   case "$osname-$arch" in hpux-*) DLCFLAGS=-fPIC;; esac
+   # Specific optimisations for some architectures
+@@ -937,6 +873,7 @@
+       esac;;
+   solaris-*) LD=$CC; LDFLAGS=$cflags; runpathprefix=-R ;;
+   os2-*)     LD=$CC; LDFLAGS="$cflags -Zexe" ;;
++  netbsd-*)  LD=$CC ;;
+   *)         LD=$CC; LDFLAGS=$cflags ;;
+ esac
+ 
+@@ -1156,7 +1093,7 @@
+ dflt=$prefix/man/man1; . ./myread; mandir=$ans
+ 
+ echo $n ..."documentation, help scripts, and emacs macros ? $c"
+-dflt=$prefix/lib/pari; . ./myread; miscdir=$ans
++dflt=$prefix/share/pari; . ./myread; miscdir=$ans
+ 
+ echo $n ..."miscellaneous data (galois resolvents) ? $c"
+ dflt=$miscdir/data; . ./myread; datadir=$ans
+@@ -1211,7 +1148,7 @@
+ case "$osname" in
+   *cygwin*) LDDYN="-L$libdir -lpari_dll" ; runpath="$libdir" ;
+ 	    DYNLIBS=-lpari_dll ; DYNFLAGS=-Dlibpari_USE_DLL ;;
+-  *)        LDDYN="-L$libdir -lpari" ; runpath="$libdir" ;;
++  *)        LDDYN="-R$libdir -L$libdir -lpari" ; runpath="$libdir" ;;
+ esac
+ 
+ cat << EOT
