@@ -1,0 +1,11 @@
+--- drv_sun.c.orig	Sat Nov 30 22:09:55 1996
++++ drv_sun.c	Sat Mar  7 05:59:39 1998
+@@ -33,7 +33,7 @@
+ 
+ #include "mikmod.h"
+ 
+-#define DEFAULT_FRAGSIZE 2048
++#define DEFAULT_FRAGSIZE 8192
+ 
+ static int sndfd; /* we need these in a few places */
+ static int play_encoding = -1, play_precision, fragsize = DEFAULT_FRAGSIZE;
