@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1105 2002/12/10 13:11:38 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1106 2002/12/11 21:01:05 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -204,7 +204,7 @@ PERL5_PKGSRCDIR?=	../../lang/perl5
 # _PERL58_PATTERNS contains perl versions >=5.8.0 but before 6.0.
 _PERL58_PATTERNS=	5.8.* 5.9* 5.[1-9][0-9]*
 
-.if ${_OPSYS_PERL_REQD} != ""
+.if defined(_OPSYS_PERL_REQD) && ${_OPSYS_PERL_REQD} != ""
 _PERL58_REQD?=		${_OPSYS_PERL_REQD}
 .  for _pattern_ in ${_PERL58_PATTERNS}
 .    if !empty(PERL5_REQD:M${_pattern_})
@@ -397,7 +397,7 @@ PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
-.if ${_PATCH_CAN_BACKUP} == "yes"
+.if defined(_PATCH_CAN_BACKUP) && ${_PATCH_CAN_BACKUP} == "yes"
 PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
 PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig
 .endif
@@ -477,6 +477,7 @@ INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}"		\
 		BSD_INSTALL_SCRIPT="${INSTALL_SCRIPT}"			\
 		BSD_INSTALL_DATA="${INSTALL_DATA}"			\
 		BSD_INSTALL_MAN="${INSTALL_MAN}"			\
+		BSD_INSTALL="${INSTALL}"				\
 		BSD_INSTALL_PROGRAM_DIR="${INSTALL_PROGRAM_DIR}"	\
 		BSD_INSTALL_SCRIPT_DIR="${INSTALL_SCRIPT_DIR}"		\
 		BSD_INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"		\
