@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/09 03:52:51 itohy Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/09 05:14:27 itohy Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4nb1
@@ -12,6 +12,8 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/jisyo --forward --quiet
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
+
+BUILD_DEFS+=	USE_INET6
 
 DIST_SUBDIR=	skk
 
