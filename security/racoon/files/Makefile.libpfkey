@@ -1,0 +1,16 @@
+#	$NetBSD: Makefile.libpfkey,v 1.1.1.1 2000/04/04 03:01:12 itojun Exp $
+
+LIB=	pfkey
+SRCS=	pfkey.c pfkey_dump.c key_debug.c ipsec_strerror.c
+
+CPPFLAGS+=-I${.CURDIR}
+
+NOMAN=	yes
+MKPIC=	no
+MKPROFILE=no
+MKLINT=	no
+
+# only needed during build
+libinstall::
+
+.include <bsd.lib.mk>
