@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_alternatives.8,v 1.3 2005/01/25 16:47:20 jmmv Exp $
+.\" $NetBSD: pkg_alternatives.8,v 1.4 2005/01/28 12:59:57 wiz Exp $
 .\"
 .\" pkg_alternatives - Generic wrappers for programs with similar interfaces
 .\" Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -28,7 +28,7 @@
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
 .Dd January 25, 2005
-.Dt ALTERNATIVES 8
+.Dt PKG_ALTERNATIVES 8
 .Os
 .Sh NAME
 .Nm pkg_alternatives
@@ -37,15 +37,17 @@
 .Nm
 .Op Fl gsw
 .Op Fl p Ar prefix
-action
+.Cm action
 .Ar arg1 ... argN
 .Sh DESCRIPTION
 .Nm
 is a tool to manage the
 .Em alternatives system
-provided by The NetBSD Packages Collection, also known as pkgsrc.
-It creates, configures and destroys generic wrappers used to run programs
-with similar interfaces.
+provided by The
+.Nx
+Packages Collection, also known as pkgsrc.
+It creates, configures, and destroys generic wrappers used to run
+programs with similar interfaces.
 .Pp
 Consider, for example, the
 .Xr vi 1
@@ -55,7 +57,7 @@ Both
 and
 .Xr vim 1
 provide very similar functionality, although neither of them is named
-.Sq vi .
+.Pa vi .
 In this situation, it may be useful to have a
 .Em wrapper
 in place of the generic name which points to one of the multiple
@@ -68,11 +70,11 @@ forming
 of alternatives.
 In other words, a concrete package contains a list of all the wrappers it
 affects by providing alternatives to them.
-This makes things easier to the end user and/or the administrator who has
+This makes things easier for the end user and/or the administrator who has
 to deal with them, as they can manually select a group (package) rather than a
 bunch of wrappers.
 .Pp
-Wrappers are identified by its file name relative to the installation
+Wrappers are identified by their filename relative to the installation
 prefix, i.e.,
 .Pa @PREFIX@
 if the
@@ -82,7 +84,7 @@ In the example above, the wrapper could be identified by the
 .Pa bin/vi
 string.
 The identifier is the string used as the
-.Sq wrapper
+.Dq wrapper
 argument in all the actions that require it.
 .Pp
 The generic wrapper scans a list of available alternatives and tries to
@@ -97,30 +99,30 @@ are considered comments and are ignored.
 .Pp
 The following configuration files are read, in strict order, for each
 wrapper (replace the
-.Sq wrapper
+.Dq wrapper
 word with the wrapper's absolute file name):
 .Bl -tag -width XXXX
-.It ~/.alternatives/wrapper
+.It Pa ~/.alternatives/wrapper
 This is called the
 .Em user configuration file
 and is only read when not running as
-.Sq @ROOT_USER@ .
+.Dq @ROOT_USER@ .
 Otherwise, tools such as
 .Xr sudo 8
 could be used to execute any program in the system.
 This file can be freely edited by the user, either by hand or by using
 the
-.Sq manual
+.Cm manual
 action described below.
-.It @CONFDIR@/wrapper
+.It Pa @CONFDIR@/wrapper
 This is called the
 .Em system configuration file
 and is read if found.
 This file can be freely edited by the administrator, either by hand or
 by using the
-.Sq manual
+.Cm manual
 action described below.
-.It @DATADIR@/wrapper
+.It Pa @DATADIR@/wrapper
 This is called the
 .Em database configuration file
 and is always read.
@@ -156,32 +158,32 @@ working in group mode.
 All these actions are at a higher level than the same actions in wrapper
 mode.
 They always end up using the later at some point, so you should also
-read the next section to be aware of the exact effect of each the command.
+read the next section to be aware of the exact effect of each command.
 .Bl -tag -width XXXX
-.It auto Ar package
-Removes any manual configuration from each wrapper associated to the given
+.It Cm auto Ar package
+Removes any manual configuration from each wrapper associated with the given
 package.
-This means that all the affected wrappers are then free to choose whichever
+This means that all affected wrappers are then free to choose whichever
 alternative they prefer.
-.It destroy
+.It Cm destroy
 Removes the alternative database, found in
 .Pa @DBDIR@ ,
 and all its associated wrappers and manual pages.
 This action is intended to be used by the
 .Nm
 package.
-.It list
+.It Cm list
 Lists which of the installed packages provide alternatives.
 Any of the packages shown by this command can then be fed back to the
-.Sq auto
+.Cm auto
 and
-.Sq manual
+.Cm manual
 actions.
-.It manual Ar package
+.It Cm manual Ar package
 Manually selects all the alternatives that belong to
 .Ar package
 to be the default for their respective wrappers.
-.It rebuild
+.It Cm rebuild
 Rebuilds the alternatives database, found in
 .Pa @DBDIR@ ,
 based on the contents of the package database, usually available in
@@ -189,12 +191,12 @@ based on the contents of the package database, usually available in
 Basically, it scans the later looking for packages with an
 .Pa +ALTERNATIVES
 file in them, and, for each of those, the
-.Sq register
+.Cm register
 action is called with the appropriate file name.
 This action is intended to be used by the
 .Nm
 package or in case of database corruption.
-.It register Ar package wrapper alternative arguments
+.It Cm register Ar package wrapper alternative arguments
 Registers a new
 .Ar alternative
 for the given
@@ -205,12 +207,12 @@ If the package does not exist in the database, it is created.
 .Pp
 This action must not be used directly; packages providing alternatives
 will take care to execute it at installation time.
-.It status Ar package
+.It Cm status Ar package
 For each wrapper that belongs to
 .Ar package ,
 shows which alternative will be used by it in the next run.
 It also displays all available candidates for each of them.
-.It unregister Ar package
+.It Cm unregister Ar package
 Removes the
 .Ar package
 from the database.
@@ -226,27 +228,27 @@ Note that these actions work at a very low level as they are used to manage
 wrappers and alternative commands directly.
 In most situations, you will want to use these actions in group mode.
 .Bl -tag -width XXXX
-.It auto Ar wrapper
+.It Cm auto Ar wrapper
 Removes any manual configuration created for the given
 .Ar wrapper .
 That is, if running as
-.Sq @ROOT_USER@ ,
+.Dq @ROOT_USER@ ,
 the system configuration file is deleted; otherwise, the user configuration
 file is removed.
 The effect of this action is that the wrapper is then free to choose any
 alternative it wants.
-.It manual Ar wrapper alternative arguments
+.It Cm manual Ar wrapper alternative arguments
 Manually selects the
 .Ar alternative
 for the given
 .Ar wrapper .
 If running as
-.Sq @ROOT_USER@ ,
+.Dq @ROOT_USER@ ,
 the system configuration file is modified; otherwise, the user configuration
 file is changed.
 The effect of this action is that the wrapper will try to use your preferred
 alternatives, regardless of what is installed on the system.
-.It register Ar wrapper alternative arguments
+.It Cm register Ar wrapper alternative arguments
 Registers a new
 .Ar alternative
 for the given
@@ -260,12 +262,12 @@ program.
 .Pp
 This action should not be used directly; packages providing alternatives
 will take care to execute it at installation time.
-.It status Ar wrapper
+.It Cm status Ar wrapper
 Shows which alternative will be used by the
 .Ar wrapper
 in the next run.
 It also displays all available candidates for it.
-.It unregister Ar wrapper alternative
+.It Cm unregister Ar wrapper alternative
 Removes the
 .Ar alternative
 from the given
