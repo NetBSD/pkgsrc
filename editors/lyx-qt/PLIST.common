@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2004/03/17 15:52:37 martti Exp $
-bin/lyx
-bin/noweb2lyx
-bin/reLyX
-man/man1/lyx.1
-man/man1/reLyX.1
+@comment $NetBSD: PLIST.common,v 1.5 2004/12/21 07:00:52 martti Exp $
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/lyx.mo
@@ -19,6 +14,11 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/lyx.mo
+bin/lyx
+bin/noweb2lyx
+bin/reLyX
+man/man1/lyx.1
+man/man1/reLyX.1
 share/lyx/CREDITS
 share/lyx/bind/aqua.bind
 share/lyx/bind/broadway.bind
@@ -30,6 +30,7 @@ share/lyx/bind/fi_menus.bind
 share/lyx/bind/greekkeys.bind
 share/lyx/bind/hollywood.bind
 share/lyx/bind/latinkeys.bind
+share/lyx/bind/mac.bind
 share/lyx/bind/math.bind
 share/lyx/bind/menus.bind
 share/lyx/bind/pt_menus.bind
@@ -67,7 +68,9 @@ share/lyx/doc/es_Intro.lyx
 share/lyx/doc/es_TOC.lyx
 share/lyx/doc/es_Tutorial.lyx
 share/lyx/doc/escher-lsd.eps
+share/lyx/doc/eu_Customization.lyx
 share/lyx/doc/eu_Extended.lyx
+share/lyx/doc/eu_FAQ.lyx
 share/lyx/doc/eu_Intro.lyx
 share/lyx/doc/eu_TOC.lyx
 share/lyx/doc/eu_Tutorial.lyx
@@ -105,7 +108,6 @@ share/lyx/doc/pt_TOC.lyx
 share/lyx/doc/pt_Tutorial.lyx
 share/lyx/doc/ro_Intro.lyx
 share/lyx/doc/ro_TOC.lyx
-share/lyx/doc/ro_splash.lyx
 share/lyx/doc/ru_FAQ.lyx
 share/lyx/doc/ru_Intro.lyx
 share/lyx/doc/ru_TOC.lyx
@@ -182,6 +184,7 @@ share/lyx/examples/nl_voorbeeld_verlyxt.lyx
 share/lyx/examples/noweb2lyx.lyx
 share/lyx/examples/pl_splash.lyx
 share/lyx/examples/pt_splash.lyx
+share/lyx/examples/ro_splash.lyx
 share/lyx/examples/ru_splash.lyx
 share/lyx/examples/script_form.lyx
 share/lyx/examples/sl_primer_lyxan.lyx
@@ -838,6 +841,7 @@ share/lyx/layouts/stdsections.inc
 share/lyx/layouts/stdstarsections.inc
 share/lyx/layouts/stdstruct.inc
 share/lyx/layouts/stdtitle.inc
+share/lyx/layouts/svglobal.layout
 share/lyx/layouts/svjog.layout
 share/lyx/layouts/svjour.inc
 share/lyx/layouts/svprobth.layout
@@ -881,7 +885,7 @@ share/lyx/scripts/fen2ascii.py
 share/lyx/scripts/fig2pstex.py
 share/lyx/scripts/general_command_wrapper.py
 share/lyx/scripts/listerrors
-share/lyx/scripts/lyxpreview2bitmap.sh
+share/lyx/scripts/lyxpreview2ppm.py
 share/lyx/scripts/pic2ascii.py
 share/lyx/scripts/pic2png_eps.py
 share/lyx/scripts/pic2png_eps.sh
