@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1445 2003/02/21 11:22:50 mycroft Exp $
+$NetBSD: CHANGES,v 1.1446 2003/02/21 11:34:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -776,4 +776,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bluefish to 0.9 [salo 2003-02-20]
 	Updated glade to 0.6.4 [salo 2003-02-20]
 	Updated php4 to 4.2.3nb2 [lukem 2003-02-21]
-	Updated fetchmail to 6.2.1 [mycroft 2003-02-22]
+	Updated fetchmail to 6.2.1 [mycroft 2003-02-21]
+	Added gnome-common-1.2.4 [jmmv 2003-02-21]
