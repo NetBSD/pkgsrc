@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.8 2000/10/17 23:57:45 jlam Exp $
+$NetBSD: patch-ac,v 1.9 2001/09/30 21:14:34 rh Exp $
 
---- gnome-data/Makefile.in.orig	Thu Oct 12 23:04:15 2000
+--- gnome-data/Makefile.in.orig	Wed Aug 22 00:16:56 2001
 +++ gnome-data/Makefile.in
 @@ -156,7 +156,7 @@
  EXTRA_DIST =  	gnome.soundlist 		gtk-events.soundlist		mime-magic 			gnome.mime 			paper.config			type.convert			postscript.convert		gnome-make-postscript-mimes
  
  
--scoredir = $(DESTDIR)$(localstatedir)/games
+-scoredir = $(localstatedir)/games
 +scoredir = /var/games
  sysconf_DATA = paper.config mime-magic
  
@@ -16,9 +16,9 @@ $NetBSD: patch-ac,v 1.8 2000/10/17 23:57:45 jlam Exp $
  
  install-data-local:
 -	$(mkinstalldirs) $(DESTDIR)$(scoredir)
--	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(DESTDIR)$(scoredir)
+-	-chgrp $(GAMES_GROUP) $(DESTDIR)$(scoredir) && chmod g=rwXs $(DESTDIR)$(scoredir)
 +#	$(mkinstalldirs) $(DESTDIR)$(scoredir)
-+#	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(DESTDIR)$(scoredir)
++#	-chgrp $(GAMES_GROUP) $(DESTDIR)$(scoredir) && chmod g=rwXs $(DESTDIR)$(scoredir)
  	$(top_builddir)/libgnome/gnome-gen-mimedb $(DESTDIR)$(sysconfdir)/mime-magic
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
