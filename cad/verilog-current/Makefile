@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2002/08/29 11:15:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.29 2002/10/13 23:01:27 dmcmahill Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
-SNAPDATE=	20020828
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
 
@@ -18,6 +17,7 @@ BUILD_DEPENDS+=	gperf-2.7.2:../../devel/gperf
 
 CONFLICTS+=	verilog-[0-9]*
 
+SNAPDATE=	20020921
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
 #
