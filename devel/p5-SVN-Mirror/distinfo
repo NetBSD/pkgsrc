@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/11/06 23:01:06 epg Exp $
+$NetBSD: distinfo,v 1.3 2004/11/11 18:01:41 epg Exp $
 
-SHA1 (SVN-Mirror-0.49.tar.gz) = ceee156b0f01feacad6273e560fac50490d86385
-Size (SVN-Mirror-0.49.tar.gz) = 107962 bytes
+SHA1 (SVN-Mirror-0.50.tar.gz) = d2883f521acf08cf96a3019d9a46b08c9aeec19d
+Size (SVN-Mirror-0.50.tar.gz) = 107904 bytes
