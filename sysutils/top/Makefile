@@ -3,7 +3,7 @@
 # Date created:         25 Sep 1994
 # Whom:                 swallace
 #
-# $NetBSD: Makefile,v 1.9 1998/02/20 12:09:55 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1998/03/04 07:56:08 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -16,23 +16,13 @@ MAINTAINER=	agc@netbsd.org
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
 
-OPSYS!= uname -s
-.if (${OPSYS} == "FreeBSD")
-.if exists(/etc/make.conf)
-.include "/etc/make.conf"
-.endif
-.else
-.if exists(/etc/mk.conf)
-.include "/etc/mk.conf"
-.endif
-.endif
-
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" \
 		COPY="${COPY}" STRIPFLAG="${STRIPFLAG}" \
 		UVM=${UVM}
 
 MAN1=		top.1
 
+OPSYS!= uname -s
 .if (${OPSYS} == "FreeBSD")
 OSVERSION!=	sysctl -n kern.osreldate
 .if ${OSVERSION} >= 221002
