@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:20 agc Exp $
 
-MD5 (easytag-0.11.tar.gz) = 0bbc19f38f4f5f298a225f2b3de1ab00
+SHA1 (easytag-0.11.tar.gz) = b111566c7642ce692217c0f80a1ccea91944a632
+Size (easytag-0.11.tar.gz) = 284140 bytes
 SHA1 (patch-aa) = fff44172118fe2542bccc9badd96fec182e76e2a

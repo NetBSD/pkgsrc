@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:19 agc Exp $
 
 SHA1 (csound/unofficial-csound-4.09.0.0b-linux.src.tar.gz) = 615002ae5d5df7f76ad3aa6a7512458f5e654460
+Size (csound/unofficial-csound-4.09.0.0b-linux.src.tar.gz) = 1008572 bytes
 SHA1 (patch-aa) = 086efe8952d682a929ceff55b5eb6f38594943e6
 SHA1 (patch-ab) = 0003c95c4292309c35aae90fa7cfa76620370510
 SHA1 (patch-ac) = e86fe6149f34c9f8fc8e2532a0143dd5d91f54c6

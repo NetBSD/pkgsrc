@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:20 agc Exp $
 
-MD5 (dap-2.1.1.tgz) = 513b11421fd78cdd1f9bf45e7348191a
+SHA1 (dap-2.1.1.tgz) = 9dbf2b5ae2f91e737bb6dbc2e4db98cac2b8b274
+Size (dap-2.1.1.tgz) = 285848 bytes
 SHA1 (patch-aa) = ba3d0262457949cbbba9c0da0ae17b711d04996d
 SHA1 (patch-ab) = 0ccf4aa10dfc059eb45f60794c10844b28c2fd1a
 SHA1 (patch-ad) = 01d6e14e7e9fffb9e16a85ddfaf60c96cb98afab

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:21 agc Exp $
 
-MD5 (festdoc-1.4.0.1.tar.gz) = f99b1aa7c0a95a6f0ed2222a37035792
+SHA1 (festdoc-1.4.0.1.tar.gz) = 8738d5415e6e10b67daae3bba6d2c2136175a911
+Size (festdoc-1.4.0.1.tar.gz) = 1265147 bytes
 SHA1 (patch-aa) = 9905ed3fb3a66a5dd47697db52b4cd649bbd9fc9

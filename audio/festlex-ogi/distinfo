@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:22 agc Exp $
 
-MD5 (OGIlexicon-2.0.tar.gz) = 389f9262bbc5cb38bef8f2ec9fe29a74
+SHA1 (OGIlexicon-2.0.tar.gz) = d0ef5f5e197a0e6d1ca9c28a891f0aa1fd29f747
+Size (OGIlexicon-2.0.tar.gz) = 1602265 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:20 agc Exp $
 
-MD5 (emixer-0.05.5.tar.gz) = a1b67726aebc0ab9d7588ccc8c347811
+SHA1 (emixer-0.05.5.tar.gz) = acae7acf3cd11633d1f800047287d9f52e8e7d02
+Size (emixer-0.05.5.tar.gz) = 19609 bytes
 SHA1 (patch-aa) = f6039822d61548ba93ec9db9b31380f14c36cdd8
 SHA1 (patch-ab) = aa861305a5ddc9734e6ffb7a6638f86155d1a766
 SHA1 (patch-ac) = 453d5510e1a0c342b7a69fe3033c4677f9f77db5

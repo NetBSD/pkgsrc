@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:24 agc Exp $
 
-MD5 (voice_tll_di-2.0.tar.gz) = 4bf450a2cd6f9e6946abce6c67c73f6c
+SHA1 (voice_tll_di-2.0.tar.gz) = 3b253b89088e95608a50a9986d0fe086dce0fe99
+Size (voice_tll_di-2.0.tar.gz) = 4740378 bytes
