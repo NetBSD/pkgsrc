@@ -1,0 +1,23 @@
+--- libraries/clib/security/Makefile.in.orig	2004-04-06 17:39:24.000000000 +0200
++++ libraries/clib/security/Makefile.in	2004-04-06 17:42:21.000000000 +0200
+@@ -453,16 +453,16 @@
+ 	@list='$(security_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f"; \
+-	  $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f; \
++	  echo " $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f.default"; \
++	  $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f.default; \
+ 	done
+ 
+ uninstall-securityDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(security_DATA)'; for p in $$list; do \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " rm -f $(DESTDIR)$(securitydir)/$$f"; \
+-	  rm -f $(DESTDIR)$(securitydir)/$$f; \
++	  echo " rm -f $(DESTDIR)$(securitydir)/$$f.default"; \
++	  rm -f $(DESTDIR)$(securitydir)/$$f.default; \
+ 	done
+ 
+ ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
