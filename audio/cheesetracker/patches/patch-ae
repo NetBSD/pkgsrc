@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/11/22 15:37:20 agc Exp $
+
+--- src/loader_wav.cpp.orig	Wed Sep  5 21:51:35 2001
++++ src/loader_wav.cpp
+@@ -162,7 +162,7 @@
+    cout << "--- loading " << p_filename << endl;
+ 
+    // try and open the file
+-   FILE* Source = fopen( p_filename, "rb+" ); // haha I used b
++   FILE* Source = fopen( p_filename, "rb" ); // haha I used b
+    if( !Source ) return FILE_ERROR;
+ 
+    // our detection scheme is simple, we just need to see a riff chunk first thing.
