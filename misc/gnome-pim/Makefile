@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2002/10/19 10:54:55 rh Exp $
-#
+# $NetBSD: Makefile,v 1.33 2002/12/16 14:36:28 tron Exp $
 
 DISTNAME=		gnome-pim-1.4.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pim/1.4/}
 
@@ -11,8 +10,8 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Personal Information Manager for GNOME
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
 
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
@@ -34,4 +33,5 @@ LOCALEDIR=		lib
 LOCALEDIR=		share
 .endif
 
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
