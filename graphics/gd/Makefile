@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/02/04 13:34:53 adam Exp $
+# $NetBSD: Makefile,v 1.50 2004/02/04 15:50:37 adam Exp $
 #
 
 DISTNAME=	gd-2.0.22
@@ -19,7 +19,7 @@ REPLACE_PERL=		bdftogd
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LIBS+=			-lpthread
 
-BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
+BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
