@@ -1,13 +1,12 @@
---- Makefile.init.orig	Wed Mar  3 13:57:37 1999
-+++ Makefile.init	Wed Mar  3 13:57:48 1999
-@@ -1,10 +1,6 @@
- # Generated automatically from Makefile.init.in by configure.
- # -*-makefile-*-
+$NetBSD: patch-ab,v 1.2 1999/03/03 23:34:06 jwise Exp $
+--- Makefile.init.in.orig	Wed Mar  3 18:07:12 1999
++++ Makefile.init.in	Wed Mar  3 18:07:24 1999
+@@ -2,8 +2,6 @@
  
--
--
+ @SET_MAKE@
+ 
 -export SHELL=/bin/bash
 -
- srcdir  = .
+ srcdir  = @srcdir@
+ VPATH   = @srcdir@
  
- prefix=/usr/pkg
