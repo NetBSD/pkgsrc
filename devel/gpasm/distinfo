@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/24 13:22:36 wulf Exp $
+$NetBSD: distinfo,v 1.2 2001/05/07 16:05:07 dmcmahill Exp $
 
 SHA1 (gpasm-0.9.4.tar.gz) = f5bf7d82f6da7f58d36664fe14a6fc55cd7add93
 Size (gpasm-0.9.4.tar.gz) = 294672 bytes
+SHA1 (patch-aa) = c0b971bb2921436646b6de89cf3e00b2ea17aac1
