@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2000/12/13 23:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2000/12/15 07:47:02 garbled Exp $
 #
 
     SUBDIR += abuse
@@ -12,6 +12,7 @@
     SUBDIR += cbzone
     SUBDIR += cgoban
     SUBDIR += civctp-demo
+    SUBDIR += clanbomber
     SUBDIR += colchess
     SUBDIR += colchess-book-colchess
     SUBDIR += colchess-book-large
