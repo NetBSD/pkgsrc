@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.10 2001/11/30 16:29:28 jlam Exp $
+$NetBSD: patch-ab,v 1.11 2002/09/21 12:13:44 jlam Exp $
 
 --- Makefile.dist.orig	Sun Nov 24 18:55:28 1991
 +++ Makefile.dist
@@ -91,8 +91,8 @@ $NetBSD: patch-ab,v 1.10 2001/11/30 16:29:28 jlam Exp $
  #
 -#X11INCDIR         = -I$(OPENWINHOME)/include
 -#X11LIBDIR         = -L$(OPENWINHOME)/lib
-+X11INCDIR         = -I${BUILDLINK_X11_DIR}/include
-+X11LIBDIR         = -L${BUILDLINK_X11_DIR}/lib
++X11INCDIR         = -I${X11BASE}/include
++X11LIBDIR         = -L${X11BASE}/lib
  #------------------------------------------------------------------------
  #  If you are compiling the XView version, then the following two lines
  #  should be uncommented, and set appropriately.

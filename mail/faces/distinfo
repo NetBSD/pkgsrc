@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2002/08/25 19:23:05 jlam Exp $
+$NetBSD: distinfo,v 1.7 2002/09/21 12:13:44 jlam Exp $
 
 SHA1 (faces-1.6.1.tar.Z) = 8402a74e43e78345c23a975a417c2407322db65f
 Size (faces-1.6.1.tar.Z) = 249469 bytes
 SHA1 (patch-aa) = 99012a91d3ac39bdd0ad8b5ab454812ace346dbb
-SHA1 (patch-ab) = d134a61c7f6f470780c0ed27a20db0ca11cb85d5
+SHA1 (patch-ab) = e4a30df1518dd16014330f119a1590865fee47fb
 SHA1 (patch-ac) = adb2718262027b4ba68425ffd4bef37192ff6d0c
 SHA1 (patch-ad) = 8383d81ea922122c5fc1fa23fd44c4a45b376c68
 SHA1 (patch-ae) = 0a7e57277e0e8133c81997258ef7f7a656834088
