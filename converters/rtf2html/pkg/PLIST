@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/14 13:36:21 agc Exp $
+bin/rtf2html
