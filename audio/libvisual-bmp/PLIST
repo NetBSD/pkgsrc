@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 21:12:35 wiz Exp $
+lib/bmp/Visualization/libvisual_bmp.la
+share/libvisual-bmp/libvisual-bmp-vis.bmp
+share/libvisual-bmp/libvisual-bmp-vis.xpm
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libvisual-bmp.mo
+${PKGLOCALEDIR}/locale/es_AR/LC_MESSAGES/libvisual-bmp.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libvisual-bmp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libvisual-bmp.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libvisual-bmp.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libvisual-bmp.mo
+@dirrm share/libvisual-bmp
+@comment in bmp: @dirrm lib/bmp/Visualization
