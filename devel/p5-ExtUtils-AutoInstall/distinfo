@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/03 04:12:37 epg Exp $
+$NetBSD: distinfo,v 1.2 2005/03/03 04:23:13 epg Exp $
 
 SHA1 (ExtUtils-AutoInstall-0.61.tar.gz) = 133d3f0bd648e26f337533c726b3b5598605f97e
+RMD160 (ExtUtils-AutoInstall-0.61.tar.gz) = c948dc2055a3185eb2465b52daa3f6dbeeb81853
 Size (ExtUtils-AutoInstall-0.61.tar.gz) = 26021 bytes
