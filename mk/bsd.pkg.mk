@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.423 2000/04/13 23:19:20 hubertf Exp $
+i	$NetBSD: bsd.pkg.mk,v 1.424 2000/04/15 16:13:07 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2562,9 +2562,10 @@ print-package-depends:
 print-pkg-size:
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
 	${SHCOMMENT} "This pkg's files" ;				\
-	${SED} -n							\
-		-e 's,^[^@],${PREFIX}/&,'				\
-		-e '/^\//p'						\
+	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
+		/^@cwd/ { base = $$2 "/" }				\
+		/^@ignore/ { next }					\
+		NF == 1 { print base $$1 }'				\
 		<${PLIST} ;						\
 	${SHCOMMENT} "Any depending pkgs' files" ;			\
 	if [ "${SIZEDEPENDS}" != "" ]; then 				\
