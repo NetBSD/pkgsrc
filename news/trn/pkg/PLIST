@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/03/18 19:51:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/04/28 03:51:19 jtb Exp $
 bin/Pnews
 bin/Rnmail
 bin/nntplist
@@ -15,12 +15,17 @@ share/trn/newsnews
 share/trn/norm.saver
 share/trn/access.def
 share/trn/HelpFiles/changelog
+share/trn/HelpFiles/config/environment
+share/trn/HelpFiles/config/index
+share/trn/HelpFiles/config/macros
+share/trn/HelpFiles/config/options
 share/trn/HelpFiles/hints
 share/trn/HelpFiles/quickstart
 share/trn/HelpFiles/top
 share/trn/HelpFiles/samples/access
 share/trn/HelpFiles/samples/index
 share/trn/HelpFiles/samples/trnrc
+@dirrm share/trn/HelpFiles/config
 @dirrm share/trn/HelpFiles/samples
 @dirrm share/trn/HelpFiles
 @dirrm share/trn
