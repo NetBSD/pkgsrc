@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/09/17 06:46:31 simonb Exp $
+# $NetBSD: Makefile,v 1.14 2000/05/05 12:08:37 veego Exp $
 #
 
 DISTNAME=	openldap-1.2.7
@@ -18,15 +18,23 @@ CONFLICTS+=	ldapsdk*
 
 USE_LIBTOOL=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
 # unfortunately, --enable-phonetic cannot be disabled by runtime configuration
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-dns --enable-cldap \
-		--enable-wrappers --enable-passwd --enable-shell
+CONFIGURE_ARGS+=--enable-dns --enable-cldap --enable-passwd --enable-shell
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+= --enable-wrappers
+.endif
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=	db-2.7.7:../../databases/db
+CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include/db2"
+CONFIGURE_ENV+=	LIBS="-ldb2 -lpthread -lrt"
+.endif
 
 post-configure:
 	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
-
-.include "../../mk/bsd.prefs.mk"
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
 USE_KERBEROS=	yes
