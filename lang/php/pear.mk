@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.9 2004/07/14 07:06:05 jdolecek Exp $
+# $NetBSD: pear.mk,v 1.1 2004/11/01 19:55:57 jdolecek Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -15,8 +15,6 @@
 _PEAR_PACKAGE_MK=       # defined
 
 USE_BUILDLINK3=			YES
-
-.include "../../www/php4/buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,7 +39,7 @@ PEAR_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated"; \
 	PEAR_LIB="${PEAR_LIB}" WRKSRC="${WRKSRC}" \
 	PEAR_DIRRM_BASEDIR="${PEAR_DIRRM_BASEDIR}" \
-	${PREFIX}/bin/php ${PKGDIR}/../../www/php4/pear_plist.php;
+	${PREFIX}/bin/php ${PKGDIR}/../../lang/php/pear_plist.php;
 GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
 
 NO_BUILD=	# defined
@@ -51,5 +49,8 @@ post-extract:
 
 do-install:
 	cd ${WRKSRC} && ${PEAR_CMD} install package.xml
+
+.include "../../lang/php/phpversion.mk"
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
 
 .endif  # _PEAR_PACKAGE_MK
