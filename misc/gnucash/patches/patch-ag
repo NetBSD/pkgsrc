@@ -1,12 +1,12 @@
-$NetBSD: patch-ag,v 1.1 2000/02/28 02:34:44 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.2 2000/05/13 06:21:02 rh Exp $
 
---- ./src/swig/guile/Makefile.in.orig	Mon Nov 23 00:08:33 1998
-+++ ./src/swig/guile/Makefile.in	Sun Feb 27 21:23:21 2000
-@@ -31,5 +31,6 @@
-            -I@top_srcdir@/lib/ComboBox-1.33 \
-            -I@top_srcdir@/lib/Xbae-4.6.2-linas \
--           -I$(prefix)/include
-+           -I$(prefix)/include \
-+            @GUILE_INC@
+--- src/engine/util.h.orig	Thu May  4 16:27:13 2000
++++ src/engine/util.h	Thu May  4 16:27:32 2000
+@@ -28,6 +28,7 @@
+ #define __XACC_UTIL_H__
  
- CFLAGS   = @CFLAGS@ @X_CFLAGS@ -DCELL_WIDGETS=1 ${INCLPATH} -Wno-unused
+ #include <stdlib.h>
++#include <locale.h>
+ #include "config.h"
+ #include "gnc-common.h"
+ 
