@@ -1,6 +1,6 @@
---- src/procs.c.orig	Fri Aug  2 12:52:44 1996
-+++ src/procs.c	Sun Nov 30 18:32:48 1997
-@@ -75,7 +75,10 @@
+--- src/procs.c.orig	Fri Jan  9 18:16:22 1998
++++ src/procs.c	Thu Apr 23 00:52:42 1998
+@@ -66,7 +66,10 @@
  	    (ART_LIST_NODE *)XtMalloc(sizeof *temp);
  	temp->next  = NULL;
  	temp->first = 1;
