@@ -1,0 +1,10 @@
+--- GLextensions.H.orig	Wed Mar 28 12:26:44 2001
++++ GLextensions.H	Wed Mar 28 12:27:39 2001
+@@ -13,6 +13,7 @@
+ #endif
+ 
+ 
++#define GL_GLEXT_PROTOTYPES
+ #include <GL/gl.h>
+ #include <GL/glut.h>
+ 
