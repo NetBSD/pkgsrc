@@ -1,8 +1,8 @@
 THE LOUT DOCUMENT FORMATTING SYSTEM
 
 Lout is a document formatting system similar in style to LaTeX.  It
-offers a very full range of features, including PostScript, PDF, and
-plain text output, optimal paragraph and page breaking, automatic
+offers a very full range of features, including PostScript, and plain
+text output, optimal paragraph and page breaking, automatic
 hyphenation, PostScript EPS file inclusion and generation, equation
 formatting, tables, diagrams, rotation and scaling, sorted indexes,
 bibliographic databases, running headers and odd-even pages, automatic
