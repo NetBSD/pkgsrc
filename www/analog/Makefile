@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2001/07/22 08:12:45 tron Exp $
+# $NetBSD: Makefile,v 1.29 2001/11/08 08:27:02 tron Exp $
 
-DISTNAME=       analog-5.03
+DISTNAME=       analog-5.1
 CATEGORIES=	www
 MASTER_SITES=   ${HOMEPAGE} \
 		http://www.statslab.cam.ac.uk/~sret1/analog/ \
