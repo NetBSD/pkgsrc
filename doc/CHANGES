@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2883 2003/07/25 09:15:03 jmmv Exp $
+$NetBSD: CHANGES,v 1.2884 2003/07/25 09:27:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2932,3 +2932,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added openssh+gssapi-3.6.1.2.20030430 [jwise 2003-07-24]
 	Updated xmule to 1.4.2 [jmmv 2003-07-25]
 	Updated gnome2-terminal to 2.0.2 [jmmv 2003-07-25]
+	Updated xmms to 1.2.7nb9 [jmmv 2003-07-25]
+	Added xmms-esound-1.2.7 [jmmv 2003-07-25]
