@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/22 21:07:01 skrll Exp $
 #
 
-DISTNAME=	simhv30-2
-PKGNAME=	simh-3.0.2
+DISTNAME=	simhv33-0
+PKGNAME=	simh-3.3.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
