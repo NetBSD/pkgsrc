@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5714 2004/04/22 14:41:03 tv Exp $
+$NetBSD: CHANGES,v 1.5715 2004/04/22 15:36:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2218,3 +2218,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lablgtk to 1.2.6nb1 [tron 2004-04-22]
 	Updated cpuflags to 0.67 [abs 2004-04-22]
 	Updated libtool to 1.5.6 [tv 2004-04-22]
+	Updated flow-tools to 0.67 [seb 2004-04-22]
