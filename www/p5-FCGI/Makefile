@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2000/08/27 07:11:24 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/10/30 12:24:13 mjl Exp $
 #
 
-DISTNAME=       	FCGI-0.48
-PKGNAME=        	p5-FCGI-0.48
+PKGVER=				0.55
+DISTNAME=       	FCGI-${PKGVER}
+PKGNAME=        	p5-FCGI-${PKGVER}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=FCGI/}
 
