@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/17 18:39:39 nra Exp $
+
+--- user_manage.orig	Tue Feb 20 04:50:33 2001
++++ user_manage	Fri Jul 13 20:32:51 2001
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/pkg/bin/perl
+ 
+ use HTTPD::Realm 1.5
+ $VERSION = 1.58;
+@@ -33,7 +33,7 @@
+ 
+ # Path to our configuration file.  Change as appropriate for
+ # your site.
+-$CONFIG_FILE = './t/realms.conf';
++$CONFIG_FILE = '__PREFIX__/etc/httpd/realms.conf';
+ 
+ # Set this to the name of your server.  Only 'apache' is guaranteed
+ # to work. 'ncsa' and 'netscape' might work too -- you'll have to try.
+@@ -61,7 +61,7 @@
+ # owner writable (-rw-r--r--).  You may wish to change this to group-writable
+ # if you wish to make this script set-gid.
+ # e.g. $CREATE_MODE = 0664;
+-$CREATE_MODE = 0644;		# -rw-r--r-- 
++$CREATE_MODE = 0600;		# -rw-r--r-- 
+ 
+ # If you are using this script from the command line, you
+ # may need to change $STTY to point to the position of the 
