@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgdepgraph.1,v 1.7 2003/04/16 09:50:01 wiz Exp $
+.\"	$NetBSD: pkgdepgraph.1,v 1.8 2003/04/30 03:39:17 atatat Exp $
 .\"
 .\" Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 .\" Absolutely no warranty.
@@ -10,12 +10,14 @@
 .Nd visual representation of installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl ACcDFfgLloRv
+.Op Fl AaCcDeFfgLloRrsv
 .Op Fl d Ar pkg_dbdir
 .Op Fl K Ar packages
 .Op Fl M Ar make
+.Op Fl m Ar target
 .Op Fl O Ar package
 .Op Fl P Ar pkgsrcdir
+.Op Fl S Ar package
 .Op Fl t Ar target
 .Op Fl U Ar package
 .Op Pa data ...
@@ -75,12 +77,26 @@ The package has been removed and not yet replaced, or the graph is
 uncolored.
 The difference between an uncolored graph and a graph that has been
 recolored almost entirely black as a result of removing all the
-packages can be visually detected by the presence of the
+packages can be visually detected by the color of the
 .Nm
-package.
+package with which the graph was recolored.
 .El
 .Pp
-The options are as follows:
+It is important to note that all installed packages fall into one (or
+more) of the following categories:
+.Bl -tag -width out-of-date
+.It installed
+Any installed package.
+.It out of date
+Any package that can be upgraded.
+.It stale
+Any package that depends on a package that is out of date.
+.It leaf
+Any package that is not depended on by any other package.
+.El
+.Pp
+Selecting the type or types of packages that are listed, and how the
+information is put to use, can be controlled by the following options:
 .Bl -tag -width package
 .It Fl A
 This option modifies the output of
@@ -89,6 +105,21 @@ to use
 .Xr pkg_add 1
 to reinstall deleted packages, instead of building directly from the
 pkgsrc tree.
+.It Fl a
+All packages.
+This option can be specified more than once to augment the meaning of
+.Dq all
+as it relates to the selected output mode.
+For the default graph output, this option has no effect.
+When used with
+.Fl m
+where the default output is the list of out of date packages, one
+.Fl a
+will make
+.Nm
+also list stale packages, and a second
+.Fl a
+will make it list all installed packages.
 .It Fl C
 Asserts
 .Fl c
@@ -115,12 +146,21 @@ This is a good first step to take before rebuilding all your packages
 that are out of date (see the
 .Fl R
 option).
+This option is an alias for
+.Fl as .
 .It Fl d Ar pkg_dbdir
 The location of the package database files.
 This defaults to the value of the
 .Pa PKG_DBDIR
 environment variable, if it is set, or to
 .Pa @PKG_DBDIR@ .
+.It Fl e
+Adds an
+.Dq existence check
+to each of the lines of
+.Xr sh 1
+style output so that commands can be skipped if the package is already
+installed.
 .It Fl F
 Makes
 .Nm
@@ -128,6 +168,8 @@ emit a series of
 .Xr sh 1
 commands that will fetch all the required distfiles for rebuilding out
 of date packages.
+This option is an alias for
+.Fl m Ar fetch . 
 .It Fl f
 Force a rebuild of all dependent packages.
 This option is for use in conjunction with the
@@ -154,6 +196,13 @@ appended to it.
 .It Fl L
 Limit the graph to those packages that are out of date
 or ultimately depend on some package that is.
+When used with
+.Fl m
+or
+.Fl s ,
+this limits the list to
+.Dq leaf
+packages that are out of date or stale.
 .It Fl l
 Adds package
 .Dq location
@@ -176,6 +225,16 @@ command or the correct choice might not be named
 The default value for this is taken from the MAKE environment
 variable, if it is set, or is simply
 .Dq make .
+.It Fl m Ar target
+Emits generic
+.Xr sh 1
+commands to 
+.Dq make Ar target
+for each listed package.
+One interesting target to specify is
+.Ar '$*'
+since that will yield a script that will pass its own command
+line arguments to make for processing.
 .It Fl O Ar package
 Marks
 .Ar package
@@ -209,6 +268,61 @@ all the deleted leaf packages.
 Packages that are out of date should be deleted first (see the
 .Fl D
 option).
+This option is an alias for
+.Fl eLm Ar target .
+See the
+.Fl t
+option for a description of what value is used for
+.Ar target .
+.It Fl r
+Reverses the order in which the packages are listed.
+.It Fl S Ar package
+Selects a subgraph of the installed package base around which to
+generate output.
+By default, if a subgraph of
+.Ar package
+is requested, only
+.Ar package
+and those packages immediately above and below it in the graph will be
+listed.
+To select only those immediately below, prefix a
+.Dq -
+to the package name.
+To select all packages below
+.Ar package ,
+prefix
+.Dq --
+to the package name.
+To select packages above
+.Ar package ,
+use
+.Dq +
+and
+.Dq ++
+as appropriate.
+To select all packages remotely connected to
+.Ar package ,
+add
+.Dq =
+to the beginning.
+Note: take care when using this option with generated lists or sh
+scripts.
+Since the subgraph of packages selected by this option may not include
+all stale or out of date packages involved in a proper package update
+procedure, the lists may be incomplete and can cause problems.
+.It Fl s
+Print a simple list of packages instead of
+.Xr sh
+commands.
+The default output set for this command is out of date packages from
+the entire package set.
+Use combinations of
+.Fl a ,
+.Fl L ,
+.Fl O Ar package ,
+and
+.Fl S Ar package
+to select more or other package lists.
 .It Fl t Ar target
 Changes the target of the
 .Fl R
@@ -371,12 +485,15 @@ reasonable, despite what you may think of perl.
 .Pp
 The
 .Dq rebuild
-output and the
+output,
 .Dq fetch
+output, and the generic
+.Dq make target
 output (see the
-.Fl R
+.Fl R ,
+.Fl F ,
 and
-.Fl F
+.Fl m
 options) do not deal very well with packages that have moved within
 the pkgsrc tree.
 It is necessary that you edit the rebuild script by hand to work
