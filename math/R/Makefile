@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/06/24 11:09:05 markd Exp $
+# $NetBSD: Makefile,v 1.56 2004/07/06 22:56:32 wiz Exp $
 
 DISTNAME=		R-1.9.1
 CATEGORIES=		math
@@ -82,6 +82,7 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 R_LIBDIR=		${PREFIX}/lib/R
 R_INSTALL_DIRS=		${R_LIBDIR}
 
+# XXX: following comment still true for buildlink3?
 # R does ugly things in the configure to get the default list of arguments
 # for linking Fortran, which exposes the buildlink2 tricks so clean up
 # afterwards
