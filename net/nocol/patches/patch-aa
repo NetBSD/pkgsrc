@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:48 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/12/06 21:09:12 abs Exp $
 
---- Makefile.head	1998/07/23 14:17:28	1.1
-+++ Makefile.head	1998/07/23 14:21:04
-@@ -37,11 +37,13 @@
+--- Makefile.head.orig	Tue Nov 23 23:16:41 1999
++++ Makefile.head	Tue Nov 23 23:18:40 1999
+@@ -37,6 +37,7 @@
  #	DATADIR		where datafiles for monitoring programs are created
  #	MSGSDIR		for message files that the nocol display shows in
  #			in the 'messages' sub-window
 +#	EXAMPLESDIR	directory in which to store example files
+ #	HELPDIR		where helpfiles for webnocol are kept.
  BINDIR= 	$(ROOTDIR)/bin
  ETCDIR=		$(ROOTDIR)/etc
- PIDDIR=		$(ROOTDIR)/run
+@@ -44,6 +45,7 @@
  DATADIR=	$(ROOTDIR)/data
  MSGSDIR=	$(ROOTDIR)/msgs
+ HELPDIR=	$(ROOTDIR)/help
 +EXAMPLESDIR=	${ROOTDIR}/share/examples/nocol
  
  ##
