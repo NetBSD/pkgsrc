@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/11/18 16:10:55 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/11/28 18:41:03 jschauma Exp $
 share/examples/${PKGNAME}/book/README
 share/examples/${PKGNAME}/book/aaindex
 share/examples/${PKGNAME}/book/aaindex.c
@@ -103,7 +103,9 @@ share/examples/${PKGNAME}/book/teaambient
 share/examples/${PKGNAME}/book/teaambient.c
 share/examples/${PKGNAME}/book/teapots
 share/examples/${PKGNAME}/book/teapots.c
+share/examples/${PKGNAME}/book/tess
 share/examples/${PKGNAME}/book/tess.c
+share/examples/${PKGNAME}/book/tesswind
 share/examples/${PKGNAME}/book/tesswind.c
 share/examples/${PKGNAME}/book/texbind
 share/examples/${PKGNAME}/book/texbind.c

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/11/18 16:10:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/28 18:41:03 jschauma Exp $
 
 PKGNAME=		MesaDemos-${MESA_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
