@@ -1,0 +1,13 @@
+$NetBSD: patch-bq,v 1.1 2003/05/21 17:11:47 taya Exp $
+
+diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport2.cpp ./netwerk/base/src/nsSocketTransport2.cpp
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport2.cpp	2003-04-30 01:12:18.000000000 +0900
++++ ./netwerk/base/src/nsSocketTransport2.cpp	2003-05-22 00:33:20.000000000 +0900
+@@ -129,6 +129,7 @@
+         break;
+     case PR_CONNECT_REFUSED_ERROR:
+     case PR_NETWORK_UNREACHABLE_ERROR: // XXX need new nsresult for this!
++    case PR_HOST_UNREACHABLE_ERROR: // XXX need new nsresult for this!
+         rv = NS_ERROR_CONNECTION_REFUSED;
+         break;
+     case PR_IO_TIMEOUT_ERROR:
