@@ -1,0 +1,26 @@
+$NetBSD: patch-am,v 1.1 2003/04/15 00:02:26 heinz Exp $
+
+--- binaries.mk.in.orig	Thu Dec 19 14:19:08 2002
++++ binaries.mk.in
+@@ -4,6 +4,7 @@
+ CCDLFLAGS = @CCDLFLAGS@
+ 
+ LIBS = @LIBS@
++SSLLIBS = @SSLLIBS@
+ LDFLAGS = @LDFLAGS@
+ LDDLFLAGS = @LDDLFLAGS@
+ 
+@@ -33,11 +34,11 @@
+ 
+ spamd/sslspamc$(EXE_EXT): $(SPAMC_FILES) $(LIBSPAMC_FILES)
+ 	$(CC) $(SSLCFLAGS) $(CFLAGS) $(SPAMC_FILES) $(LIBSPAMC_FILES) \
+-		-o $@ $(LDFLAGS) $(LIBS)
++		-o $@ $(LDFLAGS) $(SSLLIBS) $(LIBS)
+ 
+ spamd/libsslspamc$(SHLIBEXT): $(LIBSPAMC_FILES)
+ 	$(CC) $(SSLCFLAGS) $(CCDLFLAGS) $(LIBSPAMC_FILES) \
+-		-o $@ $(LDDLFLAGS) $(LIBS)
++		-o $@ $(LDDLFLAGS) $(SSLLIBS) $(LIBS)
+ 
+ qmail/qmail-spamc: $(QMAIL_SPAMC_FILES)
+ 	$(CC) $(CFLAGS) $(QMAIL_SPAMC_FILES) \
