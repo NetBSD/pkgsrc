@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2001/02/27 08:20:25 skrll Exp $
+$NetBSD: patch-aa,v 1.23 2001/02/28 21:20:31 skrll Exp $
 
---- ltconfig.in.orig	Sat Feb  3 05:05:03 2001
+--- ltconfig.in.orig	Fri Feb 16 05:05:03 2001
 +++ ltconfig.in
-@@ -1120,6 +1120,8 @@
+@@ -1142,6 +1142,8 @@
  
  netbsd*)
    version_type=sunos
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.22 2001/02/27 08:20:25 skrll Exp $
    if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
      library_names_spec='${libname}${release}.so$versuffix ${libname}.so$versuffix'
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+@@ -1200,7 +1202,7 @@
+   ;;
+ 
+ solaris*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
