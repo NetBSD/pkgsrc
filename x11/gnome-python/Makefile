@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/02 18:11:22 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/02 19:55:15 tron Exp $
 
 DISTNAME=	gnome-python-1.0.50
 CATEGORIES=	x11 gnome
@@ -17,9 +17,11 @@ USE_GMAKE=	yes
 
 .if (${OBJECT_FMT} == a.out)
 post-configure:
-	${MV} ${WRKSRC}/pygnome/Makefile ${WRKSRC}/pygnome/Makefile.old
-	${SED} -e 's#-Wl,-R#-R#g' ${WRKSRC}/pygnome/Makefile.old \
-	  >${WRKSRC}/pygnome/Makefile
+.for DIR in pygtk pygnome
+	${MV} ${WRKSRC}/${DIR}/Makefile ${WRKSRC}/${DIR}/Makefile.old
+	${SED} -e 's#-Wl,-R#-R#g' ${WRKSRC}/${DIR}/Makefile.old \
+	  >${WRKSRC}/${DIR}/Makefile
+.endfor
 .endif
 
 .include "../../mk/bsd.pkg.mk"
