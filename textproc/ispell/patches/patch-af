@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 1998/10/27 07:21:19 garbled Exp $
+--- fields.c.orig	Mon Oct 26 23:27:45 1998
++++ fields.c	Mon Oct 26 23:31:02 1998
+@@ -32,6 +32,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "config.h"
+ #include "fields.h"
+ 
+@@ -62,7 +63,7 @@
+ extern char *	malloc ();
+ extern char *	realloc ();
+ extern char *	strchr ();
+-extern int	strlen ();
++/* extern int	strlen ();*/
+ 
+ /*
+  * Read one line of the given file into a buffer, break it up into
