@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/27 12:48:27 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/12/11 12:05:44 bouyer Exp $
 bin/mksmbpasswd.sh
 bin/addtosmbpass
 bin/convert_smbpasswd
@@ -42,7 +42,23 @@ man/man8/smbmount.8
 man/man8/smbpasswd.8
 man/man8/smbumount.8
 man/man8/swat.8
+share/swat/help/DOMAIN_MEMBER.html
+share/swat/help/lmhosts.5.html
+share/swat/help/make_smbcodepage.1.html
+share/swat/help/nmbd.8.html
+share/swat/help/nmblookup.1.html
+share/swat/help/samba.7.html
 share/swat/help/smb.conf.5.html
+share/swat/help/smbclient.1.html
+share/swat/help/smbd.8.html
+share/swat/help/smbpasswd.5.html
+share/swat/help/smbpasswd.8.html
+share/swat/help/smbrun.1.html
+share/swat/help/smbstatus.1.html
+share/swat/help/smbtar.1.html
+share/swat/help/swat.8.html
+share/swat/help/testparm.1.html
+share/swat/help/testprns.1.html
 share/swat/help/welcome.html
 share/swat/images/globals.gif
 share/swat/images/home.gif
