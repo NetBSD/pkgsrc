@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.71 2005/01/19 22:12:27 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.72 2005/01/21 13:11:46 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -205,7 +205,7 @@ bulk-check-uptodate:
 		if [ "${REF:T}" != "${PKGFILE:T}" ]; then \
 			${ECHO_MSG} >&2 "BULK> ${REF} is out of date (new version ${PKGNAME}); rebuilding..."; \
 			uptodate=0; \
-		elif [ "$USE_BULK_TIMESTAMPS" = "yes" ]; then \
+		elif [ "${USE_BULK_TIMESTAMPS}" = "yes" ]; then \
 			${SHCOMMENT} "Check files of this package"; \
 			newfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`"; \
 			nnewfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`"; \
@@ -231,10 +231,10 @@ bulk-check-uptodate:
 			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ; \
 			if [ -z "$$pkg" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
-				uptodate=0 ; \
-			elif [ "$USE_BULK_TIMESTAMPS" = "yes" ] && [ -n "$$(${FIND} $$pkg -prune -newer ${REF} -print)" ]; then \
+				uptodate=0; \
+			elif [ "${USE_BULK_TIMESTAMPS}" = "yes" ] && [ -n "`${FIND} $$pkg -prune -newer ${REF} -print`" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
-				uptodate=0 ; \
+				uptodate=0; \
 			else \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is usable. " ; \
 			fi ; \
