@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+$NetBSD: patch-ad,v 1.2 2001/06/09 15:14:26 magick Exp $
 
---- nxtvepg.1x.orig	Wed Feb 14 22:31:37 2001
-+++ nxtvepg.1x	Sun Feb 18 20:13:22 2001
+--- nxtvepg.1.orig	Wed Feb 14 22:31:37 2001
++++ nxtvepg.1	Sun Feb 18 20:13:22 2001
 @@ -234,7 +234,7 @@
  on Windows nxtvepg.ini in the current directory.
  .Ip "\fB\-dbdir\fR \fIdirectory\fR" 4
