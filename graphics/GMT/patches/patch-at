@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.4 2001/04/20 17:16:19 jtb Exp $
+$NetBSD: patch-at,v 1.5 2003/05/01 11:31:46 kivinen Exp $
 
---- src/x2sys/makefile.orig	Wed Apr 11 19:58:09 2001
-+++ src/x2sys/makefile
+--- src/x2sys/makefile.orig	2003-05-01 14:08:38.000000000 +0300
++++ src/x2sys/makefile	2003-05-01 14:09:44.000000000 +0300
 @@ -7,7 +7,7 @@
  #------------------------- stop here --------------------------
  
@@ -44,11 +44,13 @@ $NetBSD: patch-at,v 1.4 2001/04/20 17:16:19 jtb Exp $
  
  uninstall:	
  			for i in $(XSYSTEM); do \
-@@ -59,7 +55,7 @@
+@@ -58,8 +54,8 @@
+ spotless:		clean
  			\rm -f *.a
  
- $(XSYSTEM):		$(XSYSTEM_O) libx2sys.a
+-$(XSYSTEM):		$(XSYSTEM_O) libx2sys.a
 -			$(CC) $(CFLAGS) $@.o -o $@ -L. -lx2sys $(ALLLIB) $(LDFLAGS)
++$(XSYSTEM):		$(XSYSTEM_O) libx2sys.la
 +			@$(LIBTOOL) $(CC) $(CFLAGS) $@.lo -o $@ libx2sys.la $(ALLLIB) $(LDFLAGS)
  
  .c.o:
