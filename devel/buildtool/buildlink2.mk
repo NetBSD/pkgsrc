@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/07/25 11:52:53 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/08/31 19:29:07 jmmv Exp $
 
 .if !defined(BUILDTOOL_BUILDLINK2_MK)
 BUILDTOOL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		buildtool
-BUILDLINK_DEPENDS.buildtool?=	buildtool>=0.12nb1
+BUILDLINK_DEPENDS.buildtool?=	buildtool>=0.13
 BUILDLINK_PKGSRCDIR.buildtool?=	../../devel/buildtool
 BUILDLINK_DEPMETHOD.buildtool?=	build
 
@@ -31,12 +31,12 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 .if !target(do-build)
 do-build:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BUILDTOOL} make all
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BUILDTOOL} build
 .endif
 
 .if !target(do-install)
 do-install:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BUILDTOOL} make install
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BUILDTOOL} install
 .endif
 
 .endif	# BUILDTOOL_BUILDLINK2_MK
