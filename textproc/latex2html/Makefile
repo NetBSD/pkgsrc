@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/05/08 11:26:12 markd Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/13 06:53:43 jlam Exp $
 
 DISTNAME=	latex2html-2002-1
 PKGNAME=	latex2html-2002.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.latex2html.org
 COMMENT=	LaTeX to HTML converter
 
 DEPENDS+=       teTeX-bin>=1.0.6:../../print/teTeX-bin
-DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 
 USE_PERL5=		# defined
@@ -26,4 +25,5 @@ CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/share/latex2html
 CONFIGURE_ARGS+=	--with-iconpath=${LATEX2HTML_ICONPATH}
 .endif
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

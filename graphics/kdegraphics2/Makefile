@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/04 14:47:37 agc Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/13 06:53:34 jlam Exp $
 
 DISTNAME=	kdegraphics-2.2.2
 PKGREVISION=	1
@@ -22,5 +22,6 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../x11/kde2/buildlink.mk"
 .include "../../x11/kdebase2/buildlink.mk"
+.include "../../mk/ghostscript.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
