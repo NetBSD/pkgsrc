@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6426 2004/07/03 00:54:07 minskim Exp $
+$NetBSD: CHANGES,v 1.6427 2004/07/03 01:00:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3217,3 +3217,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated GConf2 to 2.6.3 [jmmv 2004-07-02]
 	Updated GConf2-ui to 2.6.3 [jmmv 2004-07-02]
 	Updated GeoIP to 1.3.4 [minskim 2004-07-03]
+	Added p5-Geo-IP-1.21 [minskim 2004-07-03]
