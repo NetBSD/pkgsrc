@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 18:56:51 jlam Exp $
 #
 
 DISTNAME=	libshout-2.0
@@ -9,11 +9,13 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.gnu.org/directory/audio/ogg/libshout.html
 COMMENT=	Connects and sends data to icecast servers
 
-USE_BUILDLINK2=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 PTHREAD_OPTS+=		require
 
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--disable-pkgconfig
+
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
