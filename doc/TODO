@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3288 2005/03/24 10:26:30 wiz Exp $
+$NetBSD: TODO,v 1.3289 2005/03/24 13:58:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,7 @@ Suggested package updates
 	o classpath-0.14
 	o classpath-gui-0.14
 	o clisp-2.33.2
-	o cocoon-2.1.6
+	o cocoon-2.1.7
 	o columba-1.0RC1
 	o common-mml-1.2.16
 	o conglomerate-0.7.16
@@ -658,6 +658,7 @@ Suggested package updates
 	o navi2ch-1.7.5
 	o nawk-20041222
 	o ncview-1.92e
+	o nessus-2.2.4
 	o net-snmp-5.2.1
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
@@ -678,7 +679,7 @@ Suggested package updates
 	o nsd-2.2.1
 	o nslint-2.1a3
 	o nullmailer-1.0.0
-	o nut-10.15
+	o nut-10.16
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
@@ -695,7 +696,7 @@ Suggested package updates
 	o oregano-0.40.3
 	o oroborus-2.0.13.1
 	o osh-050219
-	o oss-3.99.2b [for 2.0]
+	o oss-3.99.2c
 	o p11-2.10c
 	o p5-Apache-ASP-2.57
 	o p5-Apache-AuthCookieDBI-2.01
@@ -850,7 +851,7 @@ Suggested package updates
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
 	o proj-4.4.9
-	o proxsmtp-1.1
+	o proxsmtp-1.2
 	o pscal-1.16
 	o psi-0.9.3
 	o psmisc-21.5
@@ -1013,6 +1014,7 @@ Suggested package updates
 	o swig-perl-1.3.24
 	o swig-python-1.3.24
 	o swish-e-2.4.3
+	o sylpheed-1.0.4
 	o sylpheed-claws-1.0.3
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-4.1.5
@@ -1064,7 +1066,7 @@ Suggested package updates
 	o txt2man-1.4.8
 	o uae-0.8.23
 	o ubs-0.20
-	o ucarp-1.1
+	o ucarp-1.1 [pkg/29785]
 	o ucblogo-5.4
 	o ucl-1.03
 	o unison-2.10.2
@@ -1148,7 +1150,6 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xrn-9.02
 	o xsane-0.97
-	o xscreensaver-4.21
 	o xskat-4.0
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
