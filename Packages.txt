@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.156 2001/05/03 21:38:29 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.157 2001/05/04 15:09:59 agc Exp $
 ###########################################################################
 
 			==========================
@@ -1925,21 +1925,51 @@ inclusion of bsd.prefs.mk, since the variable is set there.
  9.21 Automated security check
  =============================
 
-Third party software as provided by pkgsrc unfortunately has it's bugs just
-as all other software has, and some of the bugs are security related. To
-aid in an automated check, users can install the
-pkgsrc/security/audit-packages package, which will provide two scripts:
+Please be aware that there can often be bugs in third-party software,
+and some of these bugs can leave a machine vulnerable to exploitation
+by attackers.  In an effort to lessen the exposure, the NetBSD
+packages team maintains a database of known-exploits to packages which
+have at one time been included in pkgsrc.  The database can be
+downloaded automatically, and a security audit of all packages
+installed on a system can take place.  To do this, install the
+pkgsrc/security/audit-packages package.  It has two components:
 
-(1) download-vulnerability-list, an easy way to download a list of
-security vulnerabilities which have been published.  This list is kept
-up to date by the NetBSD security officer.  It is held at the
-well-known URL:
+(1) download-vulnerability-list, an easy way to download a list of the
+security vulnerabilities information.  This list is kept up to date by
+the NetBSD security officer and the NetBSD packages team, and is
+distributed from the NetBSD ftp server:
 
-ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities
+	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities
 
 (2) audit-packages, an easy way to audit the current machine, checking
-each vulnerability listed by the security officer.  If a vulnerable
-package is installed, it will be shown by output to stdout.
+each vulnerability which is known.  If a vulnerable package is
+installed, it will be shown by output to stdout, including a description
+of the type of vulnerability, and a URL containing more information.
+
+Use of the audit-packages package is strongly recommended.
+
+The following message is displayed as part of the audit-packages
+installation procedure:
+
+======================================================================
+You may wish to have the vulnerabilities file downloaded daily so that
+it remains current.  This may be done by adding an appropriate entry
+to the root users crontab(5) entry.  For example the entry
+
+# download vulnerabilities file
+0 3 * * * ${PREFIX}/sbin/download-vulnerability-list >/dev/null 2>&1
+
+will update the vulnerability list every day at 3AM.
+
+In addition, you may wish to run the package audit from the daily
+security script.  This may be accomplished by adding the following
+lines to /etc/security.local
+
+if [ -x ${PREFIX}/sbin/audit-packages ]; then
+        ${PREFIX}/sbin/audit-packages
+fi
+======================================================================
+
 
 Note to package developers: When a vulnerability is found, this should be
 noted in localsrc/security/advisories/pkg-vulnerabilities, and after the
