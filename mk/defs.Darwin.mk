@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.70 2004/04/13 22:04:15 heinz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.71 2004/04/19 20:19:46 jmmv Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -145,3 +145,11 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
+
+# check for maximum command line length and set it in configure's environment,
+# to avoid a test required by the libtool script that takes forever.
+# FIXME: Adjust to work on this system and enable the lines below.
+#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
+#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+#.endif

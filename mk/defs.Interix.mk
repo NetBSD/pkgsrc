@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.9 2004/04/07 14:26:51 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.10 2004/04/19 20:19:46 jmmv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -148,3 +148,11 @@ SERIAL_DEVICES?=	/dev/null
 .if ${CPPFLAGS:M-D_ALL_SOURCE} == ""
 CPPFLAGS+=		-D_ALL_SOURCE
 .endif
+
+# check for maximum command line length and set it in configure's environment,
+# to avoid a test required by the libtool script that takes forever.
+# FIXME: Adjust to work on this system and enable the lines below.
+#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
+#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+#.endif
