@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2002/08/14 16:18:41 tron Exp $
+$NetBSD: patch-ae,v 1.2 2003/10/23 23:01:33 kristerw Exp $
 
 --- Network/UDPConnection.cc.orig	Tue Jul  7 23:02:47 1998
-+++ Network/UDPConnection.cc	Wed Aug 14 18:05:03 2002
++++ Network/UDPConnection.cc	Fri Oct 24 00:06:52 2003
 @@ -66,7 +66,7 @@
    }
     
@@ -20,12 +20,15 @@ $NetBSD: patch-ae,v 1.1 2002/08/14 16:18:41 tron Exp $
    if (getsockname (socket_fd, (sockaddr *) &addr, &addr_len)) {
      close(socket_fd);
      StdError("can't get sockname");
-@@ -166,7 +166,7 @@
+@@ -166,9 +166,9 @@
      return 0;
  
    // some data!
 -  int addr_len = sizeof(addr);
 +  socklen_t addr_len = sizeof(addr);
    sockaddr_in in_addr;
-   bzero(&in_addr, addr_len);
+-  bzero(&in_addr, addr_len);
++  bzero(&in_addr, (int)addr_len);
    int ret = recvfrom (socket_fd, buffer, maxsize, 0, (sockaddr *) &in_addr, &addr_len);
+   if (ret <= 0) {
+     StdError("can't receive message");
