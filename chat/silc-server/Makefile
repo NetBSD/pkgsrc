@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2003/11/01 16:41:37 salo Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/03 18:02:52 salo Exp $
 #
 
-DISTNAME=		silc-server-0.9.15
+DISTNAME=		silc-server-0.9.16
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -31,15 +31,16 @@ PKG_USERS=		${SILCD_USER}:${SILCD_GROUP}::SILC\\ Server\\ user
 
 PKG_SYSCONFSUBDIR?=	silcd
 
-MAKE_ENV+=		examplesdir=${PREFIX}/share/examples/silcd
+EGDIR=			${PREFIX}/share/examples/silcd
+
+MAKE_ENV+=		examplesdir=${EGDIR}
 
 CONF_FILES_MODE=	0600
-CONF_FILES+=		${PREFIX}/share/examples/silcd/silcd.conf.default \
+CONF_FILES+=		${EGDIR}/silcd.conf.default \
 			${PKG_SYSCONFDIR}/silcd.conf
-CONF_FILES+=		${PREFIX}/share/examples/silcd/silcalgs.conf.default \
+CONF_FILES+=		${EGDIR}/silcalgs.conf.default \
 			${PKG_SYSCONFDIR}/silcalgs.conf
-CONF_FILES_PERMS+=	${PREFIX}/share/examples/silcd/motd.txt.default \
-			${PKG_SYSCONFDIR}/motd.txt \
+CONF_FILES_PERMS+=	${EGDIR}/motd.txt.default ${PKG_SYSCONFDIR}/motd.txt \
 			${ROOT_USER} ${ROOT_GROUP} 0644
 
 RCD_SCRIPTS=		silcd
@@ -78,7 +79,7 @@ CONFIGURE_ARGS+=	--disable-asm
 
 post-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
-		> ${PREFIX}/share/examples/silcd/motd.txt.default
+		> ${EGDIR}/motd.txt.default
 
 .include "../../devel/glib/buildlink2.mk"
 
