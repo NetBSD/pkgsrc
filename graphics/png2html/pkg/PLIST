@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/23 17:06:37 hubertf Exp $
+bin/png2html
+share/doc/png2html/COPYING
+share/doc/png2html/CHANGES
+share/doc/png2html/README
