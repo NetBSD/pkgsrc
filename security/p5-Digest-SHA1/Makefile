@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:07 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:20:22 martti Exp $
 #
 
 DISTNAME=		Digest-SHA1-2.02
@@ -8,7 +8,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-COMMENT=		perl5 module for SHA1
+COMMENT=		Perl5 module for SHA1
 
 CONFLICTS+=		p5-Digest-MD5<=2.12
 
