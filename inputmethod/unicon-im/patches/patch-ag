@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/06/15 09:29:16 shell Exp $
+
+--- data/Makefile.in.orig	Sat Jun  8 20:34:49 2002
++++ data/Makefile.in
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+ CFLAGS = @CFLAGS@
+ install: 
+-	mkdir -p $(prefix)/lib/unicon2/freepy
+-	cp pinyin* sysphrase* usrphrase* $(prefix)/lib/unicon2/freepy
++	$(BSD_INSTALL_DATA_DIR) $(prefix)/lib/unicon/freepy
++	$(BSD_INSTALL_DATA) pinyin* sysphrase* usrphrase* $(prefix)/lib/unicon/freepy
+ distclean:
+ 	rm -f Makefile *.bak
