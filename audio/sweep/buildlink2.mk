@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/06/05 20:55:59 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/10 12:24:37 wiz Exp $
 #
 # This Makefile fragment is included by packages that use sweep.
 #
@@ -9,7 +9,7 @@
 SWEEP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			sweep
-BUILDLINK_DEPENDS.sweep?=		sweep>=0.8.2nb3
+BUILDLINK_DEPENDS.sweep?=		sweep>=0.8.2nb4
 BUILDLINK_PKGSRCDIR.sweep?=		../../audio/sweep
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.sweep=sweep
@@ -17,10 +17,10 @@ BUILDLINK_PREFIX.sweep_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.sweep+=	include/sweep/*
 BUILDLINK_FILES.sweep+=	lib/sweep/*
 
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../audio/libsamplerate/buildlink2.mk"
 .include "../../audio/libsndfile/buildlink2.mk"
-.include "../../audio/mad/buildlink2.mk"
 .include "../../audio/speex/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../databases/tdb/buildlink2.mk"
