@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.16 2002/12/11 22:22:47 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.17 2002/12/20 07:11:42 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -90,6 +90,9 @@ _BLNK_INCINTL+=		-I${BUILDLINK_PREFIX.gettext}/include
 _BLNK_LIBINTL+=		-L${BUILDLINK_PREFIX.gettext}/lib
 _BLNK_LIBINTL+=		-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
 _BLNK_LIBINTL+=		-lintl
+.  if ${_GETTEXT_NEEDS_ICONV} == "YES"
+_BLNK_LIBINTL+=		-liconv
+.  endif
 .else
 .  if ${_BLNK_LIBINTL_FOUND} == "YES"
 _BLNK_LIBINTL+=		-lintl
