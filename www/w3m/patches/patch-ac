@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.5 2000/08/15 03:42:22 itojun Exp $
+repair iso-8859 build.
+
+--- display.c-	Tue Aug 15 12:28:59 2000
++++ display.c	Tue Aug 15 12:29:10 2000
+@@ -719,4 +719,6 @@
+         buf->pos = l->len -1;
++#ifdef JP_CHARSET
+         if (CharType(p[buf->pos]) == PC_KANJI2)
+             buf->pos--;
++#endif
+     }
