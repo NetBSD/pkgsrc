@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/07/31 13:04:40 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/07/31 20:10:22 jmc Exp $
 #
 # Canna common makefile.
 #
@@ -19,7 +19,7 @@ PATCHDIR=	${.CURDIR}/../canna/patches
 # To be done.
 #USE_BUILDLINK2=	# defined
 
-.include "Makefile.version"
+.include "../canna/Makefile.version"
 
 CANNA_SPOOL=	${DESTDIR}/var/spool/canna
 CANNA_MODE=	0755
