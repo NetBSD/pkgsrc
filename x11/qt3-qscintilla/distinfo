@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/15 15:55:00 drochner Exp $
+$NetBSD: distinfo,v 1.2 2003/08/23 14:56:32 drochner Exp $
 
-SHA1 (qscintilla-1.53-x11-gpl-1.1.tar.gz) = 3ee253bc843de759cdd773f9b0596b14cdc5d80c
-Size (qscintilla-1.53-x11-gpl-1.1.tar.gz) = 557251 bytes
+SHA1 (qscintilla-1.54-x11-gpl-1.2.tar.gz) = 9d5dbd6fe8c8e1bf144086f3114490a1d6a6d7e6
+Size (qscintilla-1.54-x11-gpl-1.2.tar.gz) = 568362 bytes
 SHA1 (patch-aa) = 555698aa186033ad0b56ef5b0ba4d7b8dd75124f
