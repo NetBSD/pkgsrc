@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1285 2004/01/08 03:32:05 taca Exp $
+$NetBSD: TODO,v 1.1286 2004/01/08 06:06:48 grant Exp $
 
 Suggested new packages
 ======================
@@ -268,6 +268,7 @@ Suggested package updates
 	o p5-HTML-FillInForm-1.03 [pkg/23976]
 	o p5-XML-Xerces-2.3.0-4 [pkg/23862]
 	o pdmenu-1.2.81
+	o pgplot-5.2 [grant]
 	o plib-1.7.0
 	o ploticus-2.20
 	o postgresql-7.4.1
