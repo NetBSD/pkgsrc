@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/11/26 20:39:14 is Exp $
+
+SHA1 (globe_26mar94.tar.gz) = e1d27953237d3ae1648080045f86a0529cd01b7f
+Size (globe_26mar94.tar.gz) = 9813 bytes
+SHA1 (patch-aa) = 1026b2f69c4b2d02da6e643245a07ace9c49b663
