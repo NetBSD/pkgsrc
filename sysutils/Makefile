@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2001/05/31 11:29:43 abs Exp $
+# $NetBSD: Makefile,v 1.101 2001/06/07 09:58:08 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -18,7 +18,6 @@ SUBDIR+=	cdrdao
 SUBDIR+=	cdrecord
 SUBDIR+=	cfengine
 SUBDIR+=	cpogm
-SUBDIR+=	cpuflags
 SUBDIR+=	crashme
 SUBDIR+=	daemontools
 SUBDIR+=	depot
