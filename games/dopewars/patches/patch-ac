@@ -1,23 +1,21 @@
-$NetBSD: patch-ac,v 1.1 2001/01/04 21:50:14 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2001/06/04 16:14:06 wiz Exp $
 
---- dopewars.c.orig	Sun Jul  9 22:12:31 2000
-+++ dopewars.c
-@@ -35,8 +35,6 @@
- #include "clientside.h"
- #include "AIPlayer.h"
+--- src/curses_client.c.orig	Wed Apr 25 02:27:54 2001
++++ src/curses_client.c
+@@ -43,7 +43,6 @@
+ static void PrintHighScore(char *Data);
  
--SCREEN *cur_screen;
--
- #define CM_SERVER 0
- #define CM_PROMPT 1
- #define CM_META   2
-@@ -670,8 +668,7 @@
- }
+ static int ResizedFlag;
+-static SCREEN *cur_screen;
+ static char ConnectMethod=CM_SERVER;
+ static gboolean CanFire=FALSE,RunHere=FALSE;
+ static gchar FightPoint;
+@@ -76,7 +75,7 @@
  
- void start_curses() {
--/* Initialises the curses library for accessing the screen */
+ static void start_curses() {
+ /* Initialises the curses library for accessing the screen */
 -   cur_screen=newterm(NULL,stdout,stdin);
 +   initscr();
- /*   initscr();*/
     if (WantColour) {
        start_color();
+       init_pair(1,COLOR_MAGENTA,COLOR_WHITE);

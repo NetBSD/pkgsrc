@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2001/01/04 21:50:14 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2001/06/04 16:14:06 wiz Exp $
 
---- serverside.c.orig	Sun Jul  9 22:12:53 2000
-+++ serverside.c
-@@ -22,6 +22,7 @@
+--- src/serverside.c.orig	Sun May 13 05:24:02 2001
++++ src/serverside.c
+@@ -26,6 +26,7 @@
  #include <stdio.h>
  #include <string.h>
  #include <sys/types.h>
