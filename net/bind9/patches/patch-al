@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1 2004/05/18 07:05:34 tron Exp $
+$NetBSD: patch-al,v 1.1 2004/10/03 09:20:41 tron Exp $
 
 --- lib/bind/port_after.h.in.orig	2003-06-27 05:51:35.000000000 +0200
-+++ lib/bind/port_after.h.in	2004-05-18 08:47:05.000000000 +0200
++++ lib/bind/port_after.h.in	2004-05-18 08:15:19.000000000 +0200
 @@ -361,7 +361,7 @@
  #define gettimeofday isc__gettimeofday
  #ifdef NEED_GETTIMEOFDAY
