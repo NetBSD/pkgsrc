@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/22 11:59:18 tron Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/09 14:24:03 wiz Exp $
 
 DISTNAME=	ffmpeg-0.4.5
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=	MPEG decoding, encoding and streaming software
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
 HAS_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_LIBTOOL=	YES
 MAKE_ENV+=	EXTRA_LIBS="${LIBGETOPT}" \
@@ -29,5 +30,5 @@ post-install:
 	${MV} ${PREFIX}/share/doc/ffmpeg/ffserver.conf \
 	  ${PREFIX}/share/examples/ffmpeg
 
-.include "../../devel/libgetopt/buildlink.mk"
+.include "../../devel/libgetopt/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
