@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.10 2004/10/14 20:22:21 tv Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.11 2004/11/12 16:27:57 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -310,6 +310,8 @@ _WRAP_SUBST_SED.${_wrappee_}=						\
 	-e "s|@_WRAP_SKIP_TRANSFORM@|${_WRAP_SKIP_TRANSFORM.${_wrappee_}:Q}|g" \
 	-e "s|@_WRAP_TRANSFORM@|${_WRAP_TRANSFORM.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_TRANSFORM_SED@|${_WRAP_TRANSFORM_SED.${_wrappee_}:Q}|g" \
+	-e "s|@WRAPPER_DEBUG@|${WRAPPER_DEBUG}|g"			\
+	-e "s|@WRAPPER_UPDATE_CACHE@|${WRAPPER_UPDATE_CACHE}|g"		\
 	${_WRAP_SUBST_SED}
 
 _WRAP_COOKIE.${_wrappee_}=	${WRAPPER_DIR}/.wrapper_${_wrappee_}_done
