@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/11/07 16:31:26 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/06 16:58:15 jlam Exp $
 #
 
 DISTNAME=	LaBrea
@@ -17,8 +17,8 @@ post-extract:
 		${SED} -e 's/.$$//' -e 's|LaBrea.README|${PREFIX}/share/doc/LaBrea|g' LaBrea.c.in > LaBrea.c
 
 do-install:
-	${BSD_INSTALL_PROGRAM} ${WRKSRC}/LaBrea ${PREFIX}/sbin
-	${BSD_INSTALL_DATA} ${WRKSRC}/LaBrea.README ${PREFIX}/share/doc/LaBrea
+	${INSTALL_PROGRAM} ${WRKSRC}/LaBrea ${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/LaBrea.README ${PREFIX}/share/doc/LaBrea
 
 .include "../../devel/libnet/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

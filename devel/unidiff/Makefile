@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/18 10:23:36 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/06 16:58:14 jlam Exp $
 #
 
 DISTNAME=	part01
@@ -17,8 +17,8 @@ EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | gunshar
 WRKSRC=		${WRKDIR}
 
 do-install:
-	${BSD_INSTALL_PROGRAM} ${WRKSRC}/unify ${PREFIX}/bin
-	${BSD_INSTALL_PROGRAM} ${WRKSRC}/unipatch ${PREFIX}/bin
-	${BSD_INSTALL_MAN} ${WRKSRC}/unify.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/unify ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/unipatch ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/unify.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
