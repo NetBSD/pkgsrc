@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/30 12:31:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/01/28 16:19:17 veego Exp $
 bin/bt-t-make.py
 bin/btcompletedir.py
 bin/btcopyannounce.py
@@ -30,6 +30,9 @@ ${PYSITELIB}/BitTornado/BT1/Encrypter.pyo
 ${PYSITELIB}/BitTornado/BT1/FileSelector.py
 ${PYSITELIB}/BitTornado/BT1/FileSelector.pyc
 ${PYSITELIB}/BitTornado/BT1/FileSelector.pyo
+${PYSITELIB}/BitTornado/BT1/Filter.py
+${PYSITELIB}/BitTornado/BT1/Filter.pyc
+${PYSITELIB}/BitTornado/BT1/Filter.pyo
 ${PYSITELIB}/BitTornado/BT1/HTTPDownloader.py
 ${PYSITELIB}/BitTornado/BT1/HTTPDownloader.pyc
 ${PYSITELIB}/BitTornado/BT1/HTTPDownloader.pyo
@@ -129,6 +132,9 @@ ${PYSITELIB}/BitTornado/download_bt1.pyo
 ${PYSITELIB}/BitTornado/inifile.py
 ${PYSITELIB}/BitTornado/inifile.pyc
 ${PYSITELIB}/BitTornado/inifile.pyo
+${PYSITELIB}/BitTornado/iprangeparse.py
+${PYSITELIB}/BitTornado/iprangeparse.pyc
+${PYSITELIB}/BitTornado/iprangeparse.pyo
 ${PYSITELIB}/BitTornado/launchmanycore.py
 ${PYSITELIB}/BitTornado/launchmanycore.pyc
 ${PYSITELIB}/BitTornado/launchmanycore.pyo
@@ -150,6 +156,9 @@ ${PYSITELIB}/BitTornado/selectpoll.pyo
 ${PYSITELIB}/BitTornado/subnetparse.py
 ${PYSITELIB}/BitTornado/subnetparse.pyc
 ${PYSITELIB}/BitTornado/subnetparse.pyo
+${PYSITELIB}/BitTornado/torrentlistparse.py
+${PYSITELIB}/BitTornado/torrentlistparse.pyc
+${PYSITELIB}/BitTornado/torrentlistparse.pyo
 ${PYSITELIB}/BitTornado/zurllib.py
 ${PYSITELIB}/BitTornado/zurllib.pyc
 ${PYSITELIB}/BitTornado/zurllib.pyo
