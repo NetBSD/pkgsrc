@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/29 11:10:56 recht Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/29 11:12:10 recht Exp $
 #
 
 DISTNAME=	gnome-python-2.6.2
@@ -18,8 +18,7 @@ PKGCONFIG_OVERRIDE+=	gnome-python-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
-PYTHON_VERSIONS_ACCEPTED=	24pth 23pth 22pth
-BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
+PYTHON_VERSIONS_ACCEPTED=	24pth 23pth
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
