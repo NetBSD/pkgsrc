@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/24 16:53:38 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/24 16:54:34 minskim Exp $
 #
 
 DISTNAME=		libXrandr-1.0.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		X RandR extension (Library)
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
