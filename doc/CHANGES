@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5577 2004/04/14 21:05:04 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5578 2004/04/14 21:27:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1952,3 +1952,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libspf-alt-0.4.0 [manu 2004-04-14]
 	Updated milter-greylist to 1.2 [manu 2004-04-14]
 	Updated xchat2 to 2.0.8nb2 [xtraeme 2004-04-14]
+	Updated xchat to 1.8.11nb7 [tron 2004-04-14]
