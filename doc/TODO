@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.649 2003/06/20 09:58:26 wiz Exp $
+$NetBSD: TODO,v 1.650 2003/06/23 09:23:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -257,7 +257,6 @@ Suggested package updates
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wdm-1.25
-	o wine-20030618
 	o wmbiff-0.4.15
 	o wmweather-2.4.0
 	o wwwoffle-2.7h
