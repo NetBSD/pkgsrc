@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/08/19 16:55:31 ben Exp $
+$NetBSD: patch-aa,v 1.3 2004/08/23 14:41:06 ben Exp $
 
 --- Makefile.orig	Thu May 17 12:27:07 2001
 +++ Makefile
@@ -58,18 +58,22 @@ $NetBSD: patch-aa,v 1.2 2004/08/19 16:55:31 ben Exp $
  	-cd $(DATADIR) ; mkdir genpak ; 
  	@cd data ; cp -i $(DATAFILES) $(DATADIR)/genpak
  
-@@ -99,8 +99,8 @@ filelist:
+@@ -99,26 +99,26 @@ filelist:
  		echo "$(DATADIR)/genpak/"$$i >> FILES.TXT ; done
  
  docs:
 -	@if [ ! -O "$(TREE)" ] ; \
 -	then echo "File $(TREE) doesn't belong to you!" ; exit 1 ; fi ; \
+-	if [ ! -e $(DOCDIR) ] ; \
 +#	@if [ ! -O "$(TREE)" ] ; \
 +#	then echo "File $(TREE) doesn't belong to you!" ; exit 1 ; fi ; \
- 	if [ ! -e $(DOCDIR) ] ; \
++	if [ ! -d $(DOCDIR) ] ; \
  		then mkdir $(DOCDIR) ; fi ; \
- 	if [ ! -e $(DOCDIR)/gp ] ; then \
-@@ -110,15 +110,15 @@ docs:
+-	if [ ! -e $(DOCDIR)/gp ] ; then \
++	if [ ! -d $(DOCDIR)/gp ] ; then \
+ 		mkdir $(DOCDIR)/gp ; fi ; \
+ 	cp -r html README.TXT LICENSE.TXT CHANGES.TXT Makefile INSTALL.TXT  \
+ 		$(DOCDIR)/gp ;
  
  uninstall:
  
