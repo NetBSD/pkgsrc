@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1391 2004/02/17 03:24:57 minskim Exp $
+$NetBSD: TODO,v 1.1392 2004/02/17 03:26:46 snj Exp $
 
 Suggested new packages
 ======================
@@ -283,7 +283,7 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
-	o qiv-1.9
+	o qiv-1.9 [snj]
 	o qt-3.3 [recht]
 	o rep-gtk-0.17
 	o rox-1.2.2
