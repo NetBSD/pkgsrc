@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1 2000/07/08 15:22:32 sakamoto Exp $
+
+--- psiconv/gen_image.c.orig	Sat Dec  4 09:46:15 1999
++++ psiconv/gen_image.c	Sat Jul  8 18:49:11 2000
+@@ -33,8 +33,23 @@
+ static Image *get_paint_data_section(psiconv_paint_data_section sec)
+ {
+   Image *image;
+-  image = CreateImage(sec->xsize,sec->ysize,sec->red,sec->green,
+-                             sec->blue,NULL);
++  float *pixel, *p, *red, *green, *blue;
++  int x,y;
++
++  red = sec->red;
++  green = sec->green;
++  blue = sec->blue;
++  p = pixel = malloc(sec->xsize * sec->ysize * 3 * sizeof(float));
++  for (y = 0; y < sec->ysize; y++) {
++    for (x = 0; x < sec->xsize; x++) {
++      *p++ = *red++;
++      *p++ = *green++;
++      *p++ = *blue++;
++    }
++  }
++  image = CreateImage(sec->xsize,sec->ysize,"RGB",FloatPixel,pixel);
++  free(pixel);
++
+   return image;
+ }
+ 
