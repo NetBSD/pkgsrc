@@ -1,30 +1,27 @@
-@comment $NetBSD: PLIST,v 1.7 1999/04/20 16:39:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/01/26 22:11:38 jlam Exp $
 etc/rc.d/rplayd.sh
-etc/rplay.hosts
-@unexec rm -f %D/etc/rplay.conf
 bin/rplay
 bin/rptp
-@comment requires XForms
-@comment bin/xrplay
-sbin/rplayd
 include/rplay.h
-lib/librplay.a
-@unexec install-info --delete %D/info/librplay.info %D/info/dir
-@unexec install-info --delete %D/info/rplay.info %D/info/dir
-@unexec install-info --delete %D/info/RPLAY.info %D/info/dir
-@unexec install-info --delete %D/info/RPTP.info %D/info/dir
-info/librplay.info
-info/rplay.info
+@unexec	install-info --delete %D/info/RPLAY.info %D/info/dir
+@unexec	install-info --delete %D/info/RPTP.info %D/info/dir
+@unexec	install-info --delete %D/info/librplay.info %D/info/dir
+@unexec	install-info --delete %D/info/rplay.info %D/info/dir
 info/RPLAY.info
 info/RPTP.info
-@exec install-info %D/info/RPTP.info %D/info/dir
-@exec install-info %D/info/RPLAY.info %D/info/dir
-@exec install-info %D/info/rplay.info %D/info/dir
-@exec install-info %D/info/librplay.info %D/info/dir
-man/man1/rplay.1.gz
-man/man1/rplayd.1.gz
-man/man1/xrplay.1.gz
-man/man1/rptp.1.gz
-man/man5/rplay.conf.5.gz
-man/man5/rplay.hosts.5.gz
-man/man5/rplay.servers.5.gz
+info/librplay.info
+info/rplay.info
+@exec	install-info %D/info/RPLAY.info %D/info/dir
+@exec	install-info %D/info/RPTP.info %D/info/dir
+@exec	install-info %D/info/librplay.info %D/info/dir
+@exec	install-info %D/info/rplay.info %D/info/dir
+lib/librplay.a
+lib/librplay.so.0.0
+man/man1/rplay.1
+man/man1/rptp.1
+man/man5/rplay.conf.5
+man/man5/rplay.helpers.5
+man/man5/rplay.hosts.5
+man/man5/rplay.servers.5
+man/man8/rplayd.8
+sbin/rplayd
