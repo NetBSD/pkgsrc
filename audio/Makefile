@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2001/03/19 19:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2001/03/29 15:32:28 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -16,6 +16,7 @@ SUBDIR+=	cs4235
 SUBDIR+=	csound
 SUBDIR+=	csound-manual
 SUBDIR+=	dap
+SUBDIR+=	disc-cover
 SUBDIR+=	easytag
 SUBDIR+=	eawpatches
 SUBDIR+=	emixer
@@ -86,6 +87,7 @@ SUBDIR+=	mpg123
 SUBDIR+=	musicbox
 SUBDIR+=	nas
 SUBDIR+=	nspmod
+SUBDIR+=	p5-Audio-CD-disc-cover
 SUBDIR+=	p5-MP3-Tag
 SUBDIR+=	realplayer
 SUBDIR+=	rio
