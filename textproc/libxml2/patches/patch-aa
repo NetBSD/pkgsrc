@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.15 2003/12/26 21:49:08 jmmv Exp $
+$NetBSD: patch-aa,v 1.16 2004/03/28 21:31:46 jmmv Exp $
 
---- Makefile.in.orig	2003-12-10 05:56:54.000000000 -0600
+--- Makefile.in.orig	2004-03-23 12:43:08.000000000 +0100
 +++ Makefile.in
-@@ -318,8 +318,8 @@ pkgconfig_DATA = libxml-2.0.pc
- # Instll the tests program sources as examples 
+@@ -522,7 +522,7 @@ pkgconfig_DATA = libxml-2.0.pc
  #
  BASE_DIR = $(datadir)/doc
--DOC_MODULE = libxml2-$(VERSION)
+ DOC_MODULE = libxml2-$(VERSION)
 -EXAMPLES_DIR = $(BASE_DIR)/$(DOC_MODULE)/examples
-+DOC_MODULE = libxml2
-+EXAMPLES_DIR = $(datadir)/examples/$(DOC_MODULE)
- subdir = .
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
++EXAMPLES_DIR = $(datadir)/examples/libxml2
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
