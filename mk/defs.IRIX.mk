@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.26 2003/06/12 15:27:09 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.27 2003/06/23 21:36:29 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -146,3 +146,6 @@ LOCALBASE?=             ${DESTDIR}/usr/pkg
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 .endif
 PKG_TOOLS_BIN?=		${LOCALBASE}/bin
+
+CONFIGURE_ENV+=		ABI=${ABI}
+MAKE_ENV+=		ABI=${ABI}
