@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9530 2005/03/21 21:41:01 agc Exp $
+$NetBSD: CHANGES,v 1.9531 2005/03/21 21:41:34 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1431,3 +1431,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cfs to 1.4.1nb5 [wiz 2005-03-21]
 	bsd.pkg.mk: freeze ended for pkgsrc-2005Q1 branch [agc 2005-03-21]
 	Updated dspam to 3.4.1 [xtraeme 2005-03-21]
+	Added byacc-20040328 [tv 2005-03-21]
