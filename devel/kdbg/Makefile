@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 14:38:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/27 13:23:10 wulf Exp $
 
 DISTNAME=	kdbg-1.0.1
 CATEGORIES=	devel kde
@@ -12,7 +12,7 @@ COMMENT=	Graphical User Interface around gdb using KDE
 BUILD_DEPENDS+= msgfmt:../../devel/gettext
 DEPENDS+=	autoconf-2.13:../autoconf
 DEPENDS+=	automake-1.4:../automake
-DEPENDS+=	kdevelop-1.*:../kdevelop
+DEPENDS+=	kdebase-1.*:../../x11/kde
 DEPENDS+=	png>=1.0.6:../../graphics/png
 
 USE_X11BASE=	yes
