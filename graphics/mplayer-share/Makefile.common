@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2003/07/17 21:41:52 grant Exp $
+# $NetBSD: Makefile.common,v 1.36 2003/07/27 20:01:36 jmmv Exp $
 #
 
 MPLAYER_DIST_VERSION=	0.90
@@ -37,8 +37,6 @@ CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${LOCALBASE}/include/cdparanoia"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--with-extralibdir="${X11BASE}/lib"
 CONFIGURE_ARGS+=	--disable-mpdvdkit
-CONFIGURE_ARGS+=	--enable-faad
-CONFIGURE_ARGS+=	--disable-arts
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
@@ -64,3 +62,24 @@ CONFIGURE_ARGS+=	--enable-mlib
 .else
 CONFIGURE_ARGS+=	--disable-mlib
 .endif
+
+# Keep this list in sync with the one in bsd.pkg.defaults.mk, where
+# MPLAYER_DISABLE_DRIVERS is explained.
+MPLAYER_DRIVERS=	arts		audio/arts \
+			esd		audio/esound \
+			faad		audio/faad2 \
+			nas		audio/nas \
+			sdl		devel/SDL
+
+.if defined(PKGNAME) && !empty(PKGNAME:M*encoder*)
+MPLAYER_DISABLE_DRIVERS=arts esd faad nas sdl
+.else
+BUILD_DEFS+=		MPLAYER_DISABLE_DRIVERS
+.endif
+.for drv pkg in ${MPLAYER_DRIVERS}
+.  if empty(MPLAYER_DISABLE_DRIVERS:M${drv})
+CONFIGURE_ARGS+=	--enable-${drv}
+.  else
+CONFIGURE_ARGS+=	--disable-${drv}
+.  endif
+.endfor

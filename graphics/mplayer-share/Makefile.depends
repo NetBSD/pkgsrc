@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.depends,v 1.15 2003/07/10 17:27:32 agc Exp $
+# $NetBSD: Makefile.depends,v 1.16 2003/07/27 20:01:36 jmmv Exp $
 #
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
@@ -21,11 +21,15 @@ DEPENDS+=	realplayer-codecs>=8nb2:../../graphics/realplayer-codecs
 
 USE_X11=	YES
 
+.for drv pkg in ${MPLAYER_DRIVERS}
+.  if empty(MPLAYER_DISABLE_DRIVERS:M${drv})
+.    include "../../${pkg}/buildlink2.mk"
+.  endif
+.endfor
+
 .include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
-.include "../../audio/faad2/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
