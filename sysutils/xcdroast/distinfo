@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2002/10/27 21:46:11 martin Exp $
+$NetBSD: distinfo,v 1.7 2002/12/02 20:29:48 drochner Exp $
 
-SHA1 (xcdroast-0.98alpha9.tar.gz) = 7994b54ce0a0b55fe140f4b2ba14e0d1317d5d52
-Size (xcdroast-0.98alpha9.tar.gz) = 649469 bytes
-SHA1 (patch-aa) = 48365964de9a0ee2349fea063695c7b1d999b645
-SHA1 (patch-ab) = 39c716a03162a1c093e95442befbc65c8bd6fb76
-SHA1 (patch-ac) = 5d462c9c2521c85258b53030174fa91a2c76d73b
-SHA1 (patch-ad) = 875d4c2a31a3590d7a566d4452b253edf30a75d9
+SHA1 (xcdroast-0.98alpha11.tar.gz) = 201fd7dc4f70a2860ff6519577a8fb9c3f45adf6
+Size (xcdroast-0.98alpha11.tar.gz) = 2073809 bytes
+SHA1 (patch-aa) = 0beee32a5550646cd360459d90281cb0ec9a826a
+SHA1 (patch-ab) = 12115c9034f9bbb684e0b6138efff3f341fb5fa6
+SHA1 (patch-ac) = 577977e962fd13c2bbc22ac43a35829c2f103739
+SHA1 (patch-ad) = c1aa3ac7ac96e02337bec0144044517867395708
+SHA1 (patch-ae) = 6dbc961d201bee69c2cc90718a82f8a3fd1306de

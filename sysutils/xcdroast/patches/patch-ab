@@ -1,21 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2002/09/26 12:29:56 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2002/12/02 20:29:49 drochner Exp $
 
---- xcdroast.h.orig	Tue Jul 17 12:40:54 2001
-+++ xcdroast.h
-@@ -89,14 +89,14 @@
- #define SAVEMASTERTRACK "mkisofs.out"
- 
- /* default paths/configfile */
--#define PREFIX "/usr/local"
-+#define PREFIX "@PREFIX@"
- #define LIBDIR "lib/xcdroast-0.98"
- #define CONFIGDIR "~/.xcdroast"
- #define CONFFILE "xcdr098.cfg"
- #define LOGFILE "xcdr098.log"
- #define ISOOPTFILE "isoopt.cfg"
- #define ISOHEADERFILE "isoheader.cfg"
--#define ROOTCONFIG "/etc/xcdroast.conf"
-+#define ROOTCONFIG "@PKG_SYSCONFDIR@/xcdroast.conf"
- 
- /* language stuff*/
- #define MAXENTRIES 512 
+--- src/xcdroast.h.orig	Mon Dec  2 18:45:24 2002
++++ src/xcdroast.h	Mon Dec  2 18:50:33 2002
+@@ -83,7 +83,7 @@
+ #define UNAME "/bin/uname -a"
+ #define UNAME2 "/usr/bin/uname -a"
+ #define CHOWN "/bin/chown"
+-#define CHOWN2 "/usr/bin/chown"
++#define CHOWN2 "/usr/sbin/chown"
+ #define CHGRP "/bin/chgrp"
+ #define CHGRP2 "/usr/bin/chgrp"
+ #define CHMOD "/bin/chmod"
