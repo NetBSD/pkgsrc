@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2001/02/25 04:18:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.37 2001/02/28 15:07:41 atatat Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
-DISTNAME=		lsof_4.53_W
-PKGNAME=		lsof-4.53
+DISTNAME=		lsof_4.55_W
+PKGNAME=		lsof-4.55
 WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
