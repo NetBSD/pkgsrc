@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/03/29 08:42:14 agc Exp $
+# $NetBSD: Makefile,v 1.19 2001/05/17 14:35:50 abs Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -10,7 +10,7 @@ DISTFILES=      # empty
 
 MAINTAINER=	agc@netbsd.org
 HOMEPAGE=       http://www.netbsd.org/Documentation/software/packages.html
-COMMENT=	message digest wrapper utility
+COMMENT=	Message digest wrapper utility
 
 VERSION=	20010320
 
