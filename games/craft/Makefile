@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/27 00:53:12 heinz Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/10 02:44:36 snj Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -11,6 +11,7 @@ HOMEPAGE=	http://set.gmd.de/~hua/
 COMMENT=	Warcraft-like game for X11
 
 WRKSRC=		${WRKDIR}
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_X11BASE=	yes
 
@@ -18,7 +19,7 @@ post-extract:
 	@${FIND} ${WRKSRC} -type f -name '*~' -print | ${XARGS} ${RM} -f
 	@${LN} -fs ${FILESDIR}/Makefile ${WRKSRC}
 	for FILE in `${FIND} ${WRKSRC} -name "*.hc" -type f -print`; do	\
-	  echo >>$$FILE "";					\
+	  ${ECHO} >>$$FILE "";					\
 	done
 
 post-patch:
