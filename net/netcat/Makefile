@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/08 14:29:36 abs Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/07 10:19:46 cjep Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.avian.org/web1/hak/netcat.html
 COMMENT=	Read and write data across network connections
 
 MAKE_ENV+=	DFLAGS="-DGAPING_SECURITY_HOLE -DTELNET"
-ALL_TARGET=	netbsd
+ALL_TARGET=	${LOWER_OPSYS}
 
 EXTRA_PROGS=	data rservice xor
 EXAMPLE_DIR=	share/examples/nc
