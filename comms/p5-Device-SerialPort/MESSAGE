@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/02/13 19:29:33 mjl Exp $
-
-You will need to have run h2ph on at least /usr/include/sys/termios.h
-or else Device::SerialPort will no be functional due to missing
-constants.
-===========================================================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/02/13 19:29:33 mjl Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/13 19:39:40 mjl Exp $
 #
 
 DISTNAME=	Device-SerialPort-0.12
@@ -11,13 +11,12 @@ MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://members.aol.com/Bbirthisel/alpha.html
 COMMENT=	POSIX-based Perl module to control your serial port
 
+DEPENDS+=	p5-perl-headers-[0-9]*:../../devel/p5-perl-headers
+
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Device/SerialPort/.packlist
 
 MAKE_PARAMS=	${DEFAULT_SERIAL_DEVICE}
-
-pre-configure:
-	cd /usr/include; h2ph -d ${WRKSRC} -a sys/termios.h
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
