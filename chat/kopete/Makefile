@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/17 12:02:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/06 18:37:34 mycroft Exp $
 #
 
 DISTNAME=	kopete-0.7.2
@@ -22,7 +22,12 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-tags=CXX
 CONFIGURE_ENV+=		ac_cv_have_libpsi="no"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/lib/libXss.so)
 CONFIGURE_ENV+=		ac_cv_lib_Xss_XScreenSaverQueryInfo="no"
+.endif
 
 .include "../../audio/arts/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
