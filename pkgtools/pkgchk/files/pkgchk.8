@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.7 2001/10/10 09:55:32 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.8 2001/11/21 23:01:56 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -37,6 +37,8 @@ pkgchk.conf. Also includes
 Remove the comma separated list of tags from those checked when
 parsing pkgchk.conf. Also includes
 .Ev PKGCHK_NOTAGS .
+Package directories can also be skipped by listing them under
+.Fl U
 .It Fl a
 Automatically add any missing packages. If a binary package exists
 in
