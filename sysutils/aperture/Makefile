@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/07/28 14:10:20 tron Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/29 05:34:38 tron Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0nb1
@@ -21,20 +21,21 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}/}
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	XFree86 Framebuffer "aperture" driver for NetBSD/i386
 
-DIST_SUBDIR=	${PKGNAME}
-NO_WRKSUBDIR=	YES
-NO_CONFIGURE=	YES
-
-EXTRACT_CMD=	${SH} ${DOWNLOADED_DISTFILE}
-ALL_TARGET=	cleandir depend all
-INSTALL_TARGET=	dirs includes install
-
-MANCOMPRESSED_IF_MANZ=	YES
-OSVERSION_SPECIFIC=	YES
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+ALL_TARGET=		cleandir depend all
+DIST_SUBDIR=		${PKGNAME}
+EXTRACT_CMD=		${SH} ${DOWNLOADED_DISTFILE}
+INSTALL_FILE=		${WRKDIR}/INSTALL
+INSTALL_TARGET=		dirs includes install
+MANCOMPRESSED_IF_MANZ=	YES
+NO_WRKSUBDIR=		YES
+NO_CONFIGURE=		YES
+OSVERSION_SPECIFIC=	YES
 
 BSDSRCDIR?=	/nonexistent	# to override <bsd.own.mk>, MUST be
                                 # set this way BEFORE bsd.prefs.mk
+
 .include "../../mk/bsd.prefs.mk"
 
 pre-extract:
@@ -50,6 +51,10 @@ pre-extract:
 	@${ECHO_MSG} "(Or set BSDSRCDIR correctly in /etc/mk.conf.)"
 	@${FALSE}
 .endif
+
+post-build:
+	${SED} -e 's#$${PREFIX}#${PREFIX}#g' <${PKGDIR}/INSTALL \
+	  >${INSTALL_FILE}
 
 .include "../../mk/bsd.pkg.mk"
 
