@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2958 2005/01/24 14:41:51 taca Exp $
+$NetBSD: TODO,v 1.2959 2005/01/24 16:52:04 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1183,7 +1183,6 @@ Suggested package updates
 	o zircon-1.18.256
 	o zopeedit-0.8
 	o zsh-4.2.3
-	o zsnes-1.42
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
