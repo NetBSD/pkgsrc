@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/30 17:32:25 sommerfeld Exp $
+include/ares.h
+lib/libares.a
+man/man3/ares_destroy.3
+man/man3/ares_expand_name.3
+man/man3/ares_fds.3
+man/man3/ares_free_errmem.3
+man/man3/ares_free_hostent.3
+man/man3/ares_free_string.3
+man/man3/ares_gethostbyaddr.3
+man/man3/ares_gethostbyname.3
+man/man3/ares_init.3
+man/man3/ares_init_options.3
+man/man3/ares_mkquery.3
+man/man3/ares_parse_a_reply.3
+man/man3/ares_parse_ptr_reply.3
+man/man3/ares_process.3
+man/man3/ares_query.3
+man/man3/ares_search.3
+man/man3/ares_send.3
+man/man3/ares_strerror.3
+man/man3/ares_timeout.3
