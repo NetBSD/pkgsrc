@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/06/06 23:51:37 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/01/24 20:12:09 recht Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOOST_PYTHON_BUILDLINK3_MK:=	${BOOST_PYTHON_BUILDLINK3_MK}+
@@ -15,7 +15,7 @@ BUILDLINK_DEPENDS.boost-python+=	boost-python-1.31.*
 BUILDLINK_PKGSRCDIR.boost-python?=	../../devel/boost-python
 
 # the following should match the list in Makefile
-PYTHON_VERSIONS_INCOMPATIBLE+= 23pth 22pth 21 21pth 20 15
+PYTHON_VERSIONS_INCOMPATIBLE+= 23 22 21 20 15
 .endif	# BOOST_PYTHON_BUILDLINK3_MK
 
 .include "../../devel/boost/buildlink3.mk"
