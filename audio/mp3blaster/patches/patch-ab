@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/02/23 07:43:20 rxg Exp $
+
+--- src/Makefile.in.orig	Fri Feb 15 22:35:03 2002
++++ src/Makefile.in
+@@ -75,8 +75,7 @@
+ SRCDIRS = @SRCDIRS@
+ VERSION = @VERSION@
+ 
+-bin_PROGRAMS = mp3blaster mp3tag splay
+-#bin_PROGRAMS		= mp3blaster mp3tag
++bin_PROGRAMS = mp3blaster mp3tag
+ mp3blaster_SOURCES = fileman.cc 			  main.cc 			  scrollwin.cc 			  getopt.c 			  getopt1.c 			  fileman.h 			  genretab.h 			  getopt.h 				id3parse.cc 			  id3parse.h 			  mp3blaster.h 			  global.cc 			  global.h 			  config.cc 			  scrollwin.h 			  winitem.cc 			  winitem.h 			  mp3win.cc 			  mp3win.h 			  mp3item.cc 			  mp3item.h 				keybindings.h 			  @MP3B_MODULES@
+ 
+ splay_SOURCES = splay.cc splay.h splay_common.cc
