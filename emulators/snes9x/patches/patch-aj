@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2002/07/14 07:44:44 kristerw Exp $
+--- snes9x.cpp.orig	Sat Jul 13 22:00:14 2002
++++ snes9x.cpp	Sat Jul 13 22:04:07 2002
+@@ -141,6 +141,9 @@
+ -joydevX /dev/jsY         Use joystick device /dev/jsY for emulation of gamepad X\n");
+     S9xMessage (S9X_INFO, S9X_USAGE, "\
+ -joymapX 0 1 2 3 4 5 6 7  Joystick buttons which should be assigned to gamepad X - A B X Y TL TR Start and Select\n");
++#elif defined(__NetBSD__)
++    S9xMessage (S9X_INFO, S9X_USAGE, "\
++-joymapX 0 1 2 3 4 5 6 7  Joystick buttons which should be assigned to gamepad X - A B X Y TL TR Start and Select\n");
+ #else
+     S9xMessage (S9X_INFO, S9X_USAGE, "\
+ -four or -4               Single standard PC joystick has four buttons\n");
