@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/04/15 16:36:20 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/05/03 15:39:47 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_VFS2_BUILDLINK3_MK:=	${GNOME_VFS2_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/fam/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
