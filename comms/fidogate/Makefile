@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/04/24 01:59:00 tv Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/24 02:05:31 tv Exp $
 #
 
 DISTNAME=	fidogate-4.4.5
@@ -61,7 +61,7 @@ post-install:
 	cd ${WRKSRC}/sendmail/mailer && ${INSTALL_DATA} ffx.m4 ftn.m4 \
 		${PREFIX}/share/fidogate/sendmail/mailer
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/maintenance/rc.fidogate \
-		${PREFIX}/etc/rc.d/fidogate
+		${RCD_SCRIPTS_EXAMPLEDIR}/fidogate
 	${INSTALL_DATA} ${WRKSRC}/doc/fidogate.txt ${PREFIX}/share/doc/fidogate
 	${INSTALL_DATA} ${WRKSRC}/fidogate.conf ${EGDIR}
 
