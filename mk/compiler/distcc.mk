@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.14 2004/02/07 02:58:10 jlam Exp $
+# $NetBSD: distcc.mk,v 1.15 2004/02/08 02:59:14 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	one
@@ -38,14 +38,16 @@ _DISTCCBASE?=		${LOCALBASE}
 _DISTCC_DIR=	${WRKDIR}/.distcc
 _DISTCC_LINKS=	# empty
 .      if !empty(_LANGUAGES.distcc:Mc)
-_DISTCC_CC:=	${_DISTCC_DIR}/bin/${CC:T}
+_DISTCC_CC:=	${_DISTCC_DIR}/bin/${PKG_CC:T}
 _DISTCC_LINKS+=	_DISTCC_CC
-CC=		${_DISTCC_CC}
+PKG_CC=		${_DISTCC_CC}
+CC=		${PKG_CC:T}
 .      endif
 .      if !empty(_LANGUAGES.distcc:Mc++)
-_DISTCC_CXX:=	${_DISTCC_DIR}/bin/${CXX:T}
+_DISTCC_CXX:=	${_DISTCC_DIR}/bin/${PKG_CXX:T}
 _DISTCC_LINKS+=	_DISTCC_CXX
-CXX=		${_DISTCC_CXX}
+PKG_CXX=	${_DISTCC_CXX}
+CXX=		${PKG_CXX:T}
 .      endif
 .    endif
 .  endif
