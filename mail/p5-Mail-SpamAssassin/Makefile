@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2002/07/03 14:02:38 lukem Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/03 14:22:41 abs Exp $
 #
 
 DISTNAME=	Mail-SpamAssassin-2.31
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	p5msa
 CATEGORIES=	mail
 #MASTER_SITES=	http://spamassassin.taint.org/released/
@@ -14,6 +14,7 @@ HOMEPAGE=	http://www.spamassassin.org/
 COMMENT=	mail filter to identify spam
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
+DEPENDS+=	p5-Time-HiRes-[0-9]*:../../devel/p5-Time-HiRes
 
 USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SpamAssassin/.packlist
