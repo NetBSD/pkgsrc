@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/05/11 13:34:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/05/15 13:13:20 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -9,6 +9,7 @@ bin/xscreensaver.kss
 lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/anemone
 libexec/xscreensaver/ant
+libexec/xscreensaver/antinspect
 libexec/xscreensaver/antspotlight
 libexec/xscreensaver/apollonian
 libexec/xscreensaver/apple2
@@ -36,6 +37,7 @@ libexec/xscreensaver/compass
 libexec/xscreensaver/config/README
 libexec/xscreensaver/config/anemone.xml
 libexec/xscreensaver/config/ant.xml
+libexec/xscreensaver/config/antinspect.xml
 libexec/xscreensaver/config/antspotlight.xml
 libexec/xscreensaver/config/apollonian.xml
 libexec/xscreensaver/config/apple2.xml
@@ -94,6 +96,7 @@ libexec/xscreensaver/config/flurry.xml
 libexec/xscreensaver/config/flyingtoasters.xml
 libexec/xscreensaver/config/fontglide.xml
 libexec/xscreensaver/config/forest.xml
+libexec/xscreensaver/config/fuzzyflakes.xml
 libexec/xscreensaver/config/galaxy.xml
 libexec/xscreensaver/config/gears.xml
 libexec/xscreensaver/config/gflux.xml
@@ -158,10 +161,12 @@ libexec/xscreensaver/config/petri.xml
 libexec/xscreensaver/config/phosphor.xml
 libexec/xscreensaver/config/piecewise.xml
 libexec/xscreensaver/config/pipes.xml
+libexec/xscreensaver/config/polyhedra.xml
 libexec/xscreensaver/config/polyominoes.xml
 libexec/xscreensaver/config/polytopes.xml
 libexec/xscreensaver/config/pong.xml
 libexec/xscreensaver/config/popsquares.xml
+libexec/xscreensaver/config/providence.xml
 libexec/xscreensaver/config/pulsar.xml
 libexec/xscreensaver/config/pyro.xml
 libexec/xscreensaver/config/qix.xml
@@ -182,7 +187,7 @@ libexec/xscreensaver/config/slip.xml
 libexec/xscreensaver/config/sonar.xml
 libexec/xscreensaver/config/speedmine.xml
 libexec/xscreensaver/config/sphere.xml
-libexec/xscreensaver/config/sphereEversion.xml
+libexec/xscreensaver/config/sphereeversion.xml
 libexec/xscreensaver/config/spheremonics.xml
 libexec/xscreensaver/config/spiral.xml
 libexec/xscreensaver/config/spotlight.xml
@@ -257,6 +262,7 @@ libexec/xscreensaver/flurry
 libexec/xscreensaver/flyingtoasters
 libexec/xscreensaver/fontglide
 libexec/xscreensaver/forest
+libexec/xscreensaver/fuzzyflakes
 libexec/xscreensaver/galaxy
 libexec/xscreensaver/gears
 libexec/xscreensaver/gflux
@@ -321,10 +327,12 @@ libexec/xscreensaver/petri
 libexec/xscreensaver/phosphor
 libexec/xscreensaver/piecewise
 libexec/xscreensaver/pipes
+libexec/xscreensaver/polyhedra
 libexec/xscreensaver/polyominoes
 libexec/xscreensaver/polytopes
 libexec/xscreensaver/pong
 libexec/xscreensaver/popsquares
+libexec/xscreensaver/providence
 libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
 libexec/xscreensaver/qix
@@ -383,6 +391,7 @@ libexec/xscreensaver/xteevee
 libexec/xscreensaver/zoom
 man/man1/anemone.1
 man/man1/ant.1
+man/man1/antinspect.1
 man/man1/antspotlight.1
 man/man1/apollonian.1
 man/man1/apple2.1
@@ -438,6 +447,7 @@ man/man1/flurry.1
 man/man1/flyingtoasters.1
 man/man1/fontglide.1
 man/man1/forest.1
+man/man1/fuzzyflakes.1
 man/man1/galaxy.1
 man/man1/gears.1
 man/man1/gflux.1
@@ -502,9 +512,11 @@ man/man1/petri.1
 man/man1/phosphor.1
 man/man1/piecewise.1
 man/man1/pipes.1
+man/man1/polyhedra.1
 man/man1/polyominoes.1
 man/man1/polytopes.1
 man/man1/pong.1
+man/man1/providence.1
 man/man1/pulsar.1
 man/man1/pyro.1
 man/man1/qix.1
