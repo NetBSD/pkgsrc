@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9707 2005/03/31 22:13:18 hubertf Exp $
+$NetBSD: CHANGES,v 1.9708 2005/03/31 22:16:52 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1844,3 +1844,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Want to 0.08 [seb 2005-03-31]
 	Added teTeX-bin-3.0 [hubertf 2005-04-01]
 	Added teTeX-texmf-3.0 [hubertf 2005-04-01]
+	Added teTeX-texmfsrc-3.0 [hubertf 2005-04-01]
