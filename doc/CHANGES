@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2032 2003/04/25 03:10:11 martti Exp $
+$NetBSD: CHANGES,v 1.2033 2003/04/25 04:41:38 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1726,3 +1726,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added licq-gui-qt-1.2.6 [hubertf 2003-04-25]
 	Added licq-gui-console-1.2.6 [hubertf 2003-04-25]
 	Updated libxml to 1.8.17nb1 [martti 2003-04-25]
+	Added gstreamer-0.6.1 [rh 2003-04-25]
