@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7881 2004/11/16 14:51:06 adam Exp $
+$NetBSD: CHANGES,v 1.7882 2004/11/16 17:30:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5305,3 +5305,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libao to 0.8.5 [adam 2004-11-16]
 	Updated libao-arts to 0.8.5 [adam 2004-11-16]
 	Updated libao-esound to 0.8.5 [adam 2004-11-16]
+	Updated mysql-client to 4.0.22nb2 [tron 2004-11-16]
