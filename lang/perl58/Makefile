@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/08 06:10:05 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/23 00:31:56 jlam Exp $
 
 .include "Makefile.common"
 
@@ -15,6 +15,7 @@ CONFLICTS=		perl-5.00* perl-base-[0-9]* \
 			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 			perl-mk-[0-9]*
 
+USE_BUILDLINK2=		# defined
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
@@ -36,6 +37,12 @@ MKPIC?=			yes
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
 USE_GMAKE=	# defined
+#
+# There seems to be a bug when using the buildlink2 wrapper scripts to
+# build perl on Darwin.  Disable it for now until the problem is identified
+# and fixed.
+#
+.  undef USE_BUILDLINK2
 #
 # Perl is _always_ built using shared libraries on Darwin; there's no
 # way to build a statically-linked perl binary.
