@@ -1,17 +1,9 @@
 #!/bin/sh
 #
-#	$NetBSD: soffice,v 1.6 2004/04/11 14:57:03 mrauch Exp $
+#	$NetBSD: soffice,v 1.7 2004/06/27 16:07:36 mrauch Exp $
 #
-SOINST=@@PREFIX@@/OpenOffice.org1.1.1
-[ "$SOFFICE" = "" ] && SOFFICE=$HOME/OpenOffice.org1.1.1
-
-if [ `uname -s` = "NetBSD" -a ! -r /emul/linux/etc/mtab ]; then
-	echo 'ERROR: Before you are able to use this package, the file'
-	echo '       /emul/linux/etc/mtab must exist.'
-        echo '       Ask your system administrator to create this file,'
-	echo '       e.g. by running "touch /emul/linux/etc/mtab".'
-	exit 1
-fi
+SOINST=@@PREFIX@@/OpenOffice.org1.1.2
+[ "$SOFFICE" = "" ] && SOFFICE=$HOME/OpenOffice.org1.1.2
 
 if [ ! -d "$SOFFICE" ]; then
 	echo ""
@@ -34,7 +26,23 @@ if [ ! -d "$SOFFICE" ]; then
 	fi
 
 	cd $SOINST
-	./setup
+	BASENAME=`basename $0`
+	TMPFILE=`mktemp -q /tmp/$BASENAME.XXXXXX`
+	if [ $? -ne 0 ]; then
+		echo "$0: Can't create temp file, exiting..."
+		exit 1
+	fi
+	cat << EOF >> ${TMPFILE} 
+[ENVIRONMENT]
+INSTALLATIONMODE=INSTALL_WORKSTATION
+INSTALLATIONTYPE=WORKSTATION
+DESTINATIONPATH=$SOFFICE
+OUTERPATH=
+LOGFILE=
+
+EOF
+	./setup -nogui -r:${TMPFILE}
+	rm -f ${TMPFILE}
 
 	echo ""
 	echo "Done.  Starting OpenOffice ..."
@@ -44,5 +52,9 @@ fi
 # We've got a large number of shared libraries and other single files which 
 # have to be open for normal operation
 ulimit -n `ulimit -n -H`
+if [ -z $PTHREAD_DIAGASSERT ]; then
+PTHREAD_DIAGASSERT=AEL
+export PTHREAD_DIAGASSERT
+fi
 
 exec ${SOFFICE}/soffice "$@"
