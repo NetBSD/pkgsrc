@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2001/10/01 20:51:46 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2002/06/30 03:58:17 jschauma Exp $
 
---- configure.orig	Fri May 18 06:29:15 2001
-+++ configure
-@@ -3364,9 +3364,9 @@
+--- configure.orig	Sat Jun 29 21:46:02 2002
++++ configure	Sat Jun 29 21:47:37 2002
+@@ -7013,9 +7013,9 @@
  
  fi
  
--PDFLIBCONVENIENT="\$(top_builddir)/pdflib/libpdf_.la $INTERNALLIBS"
+-PDFLIBCONVENIENT="\$(top_builddir)/pdflib/libpdf_.la $INTERNALLIBS $EXTERNALLIBS"
 -PDFLIBLINKSELF="$RPATH $PDFLIBCONVENIENT"
 -PDFLIBLINK="\$(top_builddir)/pdflib/libpdf.la $EXTERNALLIBS"
 +PDFLIBCONVENIENT="-lpdf $EXTERNALLIBS"
