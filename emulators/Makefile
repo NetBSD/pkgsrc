@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2002/08/21 15:19:42 kent Exp $
+# $NetBSD: Makefile,v 1.72 2002/08/31 19:58:33 fredb Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -60,6 +60,7 @@ SUBDIR+=	suse_libjpeg
 SUBDIR+=	suse_libpng
 SUBDIR+=	suse_linux
 SUBDIR+=	suse_openmotif
+SUBDIR+=	suse_slang
 SUBDIR+=	suse_vmware
 SUBDIR+=	suse_x11
 SUBDIR+=	suse_xforms
