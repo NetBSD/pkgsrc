@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/08/18 20:37:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/24 00:57:32 wiz Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -37,6 +37,8 @@ CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 do-install:
 	(cd ${WRKSRC}; \
 	 ${INSTALL_PROGRAM} popper	${PREFIX}/libexec/qpopper; \
+	 ${INSTALL} -o root -c -g ${BINGRP} -m 4755 popauth \
+		${PREFIX}/bin/qpopauth; \
 	 ${INSTALL_MAN} popper.8	${PREFIX}/man/man8/qpopper.8; \
 	 ${INSTALL_MAN} popauth.8	${PREFIX}/man/man8/qpopauth.8 ; \
 	 ${INSTALL_MAN} License		${PREFIX}/share/doc/qpopper.License \
