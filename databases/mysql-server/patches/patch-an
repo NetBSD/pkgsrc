@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.3 2003/09/17 21:03:11 wiz Exp $
+
+--- sql/sql_acl.cc.orig	Thu Feb 14 18:30:21 2002
++++ sql/sql_acl.cc
+@@ -206,7 +206,7 @@ int  acl_init(bool dont_read_acl_tables)
+ 		      "Found old style password for user '%s'. Ignoring user. (You may want to restart using --old-protocol)",
+ 		      user.user ? user.user : ""); /* purecov: tested */
+     }
+-    else if (length % 8)		// This holds true for passwords
++    else if (length % 8 || length > 16)		// This holds true for passwords
+     {
+       sql_print_error(
+ 		      "Found invalid password for user: '%s@%s'; Ignoring user",
