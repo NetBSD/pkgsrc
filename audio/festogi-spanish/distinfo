@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 21:55:32 wiz Exp $
 
-MD5 (OGIspanish-2.0.tar.gz) = b56179c9071b881012e244c82e0d78e3
+SHA1 (OGIspanish-2.0.tar.gz) = 7f62aaba99d20fe403ababcf5afcc79eac57fee7
+Size (OGIspanish-2.0.tar.gz) = 15683 bytes
