@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 17:29:14 rh Exp $
+bin/socksify
+lib/libdsocks.a
+lib/libdsocks.la
+lib/libdsocks.so.1.0
+lib/libsocks.a
+lib/libsocks.la
+lib/libsocks.so.1.0
+man/man5/sockd.conf.5
+man/man5/socks.conf.5
+man/man8/sockd.8
+sbin/sockd
+share/examples/dante/sockd.conf
+share/examples/dante/socks-simple.conf
+share/examples/dante/socks.conf
+@dirrm share/examples/dante

@@ -1,0 +1,12 @@
+  Dante is a circuit-level firewall/proxy that can be used to provide
+convenient and secure network connectivity to a wide range of hosts while
+requiring only the server Dante runs on to have external network
+connectivity.  Once installed, Dante can in most cases be made transparent
+to the clients while offering detailed access control and logging facilities
+to the server administrator. Developed by Inferno Nettverk A/S, Dante
+usually comes installed as part of a bigger Inferno Nettverk firewall
+system.
+
+  The Dante version provided via FTP is under a BSD/CMU-type license and
+comes with complete source code, for your convenience and verification
+availability.
