@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/08/10 15:11:14 shannonjr Exp $
+# $NetBSD: Makefile,v 1.14 2004/08/11 19:08:15 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -116,9 +116,12 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 #ALT_GCC=	prefix/bin/gcc
 .  if defined(ALT_GCC)
 .     if exists(${ALT_GCC})
-ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
-ALT_GCC_RTS!=	${FIND} ${ALT_GCC_PREFIX} -name adalib
+ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
+.        if !empty(ALT_GCC_RTS)
 RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.        else
+PKG_SKIP_REASON=	"${ALT_GCC} does not appear to be an Ada compiler"
+.        endif
 .     else
 PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
 .     endif
@@ -137,17 +140,19 @@ CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
 .if ${OPSYS} == "NetBSD"
 # thread / crtbegin / __cxa_atexit support depend on a "netbsd2" OS name
-GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/_.*//}
+GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
+ABI_BASELINE_PAIR=	${GCC_PLATFORM:C/--/-/}
+MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR}
 .endif # NetBSD
 
 post-patch:
 .if ${OPSYS} == "NetBSD"
 .  if exists(${FILESDIR}/${LOWER_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt)
-	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/${GCC_PLATFORM:C/--/-/} || \
-		${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/${GCC_PLATFORM:C/--/-/})
+	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/${ABI_BASELINE_PAIR} || \
+		${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/${ABI_BASELINE_PAIR})
 	${CP} ${FILESDIR}/${LOWER_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt \
-		${WRKSRC}/libstdc++-v3/config/abi/${GCC_PLATFORM:C/--/-/}/baseline_symbols.txt
+		${WRKSRC}/libstdc++-v3/config/abi/${ABI_BASELINE_PAIR}/baseline_symbols.txt
 .  endif
 .endif
 	(cd ${FILESDIR}; \
