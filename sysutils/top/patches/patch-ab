@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 1998/10/13 20:15:38 frueauf Exp $
+$NetBSD: patch-ab,v 1.7 1999/02/06 21:41:25 hubertf Exp $
 
---- /dev/null	Tue Oct 13 11:23:39 1998
-+++ machine/m_netbsd13.c	Tue Oct 13 11:25:35 1998
-@@ -0,0 +1,881 @@
+--- machine/m_netbsd13.c.orig	Sat Feb  6 22:37:29 1999
++++ machine/m_netbsd13.c	Sat Feb  6 22:38:29 1999
+@@ -0,0 +1,882 @@
 +/*
 + * top - a top users display for Unix
 + *
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.6 1998/10/13 20:15:38 frueauf Exp $
 + *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.6 1998/10/13 20:15:38 frueauf Exp $
++ * $Id: patch-ab,v 1.7 1999/02/06 21:41:25 hubertf Exp $
 + */
 +
 +#include <sys/types.h>
@@ -383,6 +383,7 @@ $NetBSD: patch-ab,v 1.6 1998/10/13 20:15:38 frueauf Exp $
 +    memory_stats[4] = memory_stats[5] = 0;
 +
 +    sep = NULL;
++    seporig = NULL;
 +    do {
 +	nswap = swapctl(SWAP_NSWAP, 0, 0);
 +	if (nswap < 1)
