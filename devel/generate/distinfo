@@ -1,10 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/12/18 19:05:54 minskim Exp $
+$NetBSD: distinfo,v 1.4 2005/01/04 13:29:08 darcy Exp $
 
-SHA1 (generate-2.1.tgz) = 36f6a0088e01a067ea13f87cfdc186589479262b
-Size (generate-2.1.tgz) = 28471 bytes
-SHA1 (patch-aa) = 2681a9f31a6c6de2b33bfe90c8c7a87b58ac0072
-SHA1 (patch-ab) = 355d4c7e8421afb73c184b488b17de8d2e2c99d8
-SHA1 (patch-ac) = 9e6266c4b71b3f681c45dff7ba70a3f601cc136e
-SHA1 (patch-ad) = dbac0ca4aee6fc217d3002690f5d2d7b0d2f07cb
-SHA1 (patch-ae) = c1609b29b510cabc1461b306b67977a94ee3fcf5
-SHA1 (patch-af) = 600bdb35f83f243b02e16ecf894dd685147597a4
+SHA1 (generate-2.2.tgz) = fbd17b29226f683edc80f96b660c3e74fbec05c9
+Size (generate-2.2.tgz) = 28661 bytes
