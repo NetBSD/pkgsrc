@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/06 15:35:04 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/13 22:19:48 jlam Exp $
 
 DISTNAME=		mod_dav-1.0.3-1.3.6
 PKGNAME=		ap-dav-1.0.3
@@ -9,7 +9,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.webdav.org/mod_dav/
 COMMENT=		Apache WebDAV module
 
-# Ugly mess that says apache>=1.3.9 and apache<=2.0.
+# Ugly mess that says apache>=1.3.9 and apache<2.0.
 BUILDLINK_DEPENDS.apache=	{apache-1.3.9*,apache-1.3.[1-9][0-9]*,apache6-1.3.9*,apache6-1.3.[1-9][0-9]*}
 
 DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
