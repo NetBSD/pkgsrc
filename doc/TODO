@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3085 2005/02/21 11:08:46 adam Exp $
+$NetBSD: TODO,v 1.3086 2005/02/21 12:17:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -753,7 +753,6 @@ Suggested package updates
 	o p5-Locale-Maketext-1.09
 	o p5-Locale-Maketext-Lexicon-0.45
 	o p5-Log-Agent-0.306
-	o p5-Log-Dispatch-2.10
 	o p5-Log-Dispatch-Config-1.01
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
