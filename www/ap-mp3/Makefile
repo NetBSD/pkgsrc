@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:55:26 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/22 04:14:19 martti Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.tangent.org/pub/apache/ \
 
 MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://software.tangent.org/media/
-COMMENT=	apache module for streaming mp3 files
+COMMENT=	Apache module for streaming mp3 files
 
 USE_BUILDLINK2=	YES
 

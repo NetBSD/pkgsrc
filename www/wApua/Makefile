@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:06 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:39 martti Exp $
 #
 
 DISTNAME=	wApua-0.05
@@ -7,7 +7,7 @@ MASTER_SITES=	http://fsinfo.cs.uni-sb.de/~abe/wApua/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://fsinfo.cs.uni-sb.de/~abe/wApua/
-COMMENT=	web browser for WAP WML
+COMMENT=	Web browser for WAP WML
 
 DEPENDS+=	p5-URI>=1.03:../../www/p5-URI
 DEPENDS+=	p5-libwww>=5.47:../../www/p5-libwww

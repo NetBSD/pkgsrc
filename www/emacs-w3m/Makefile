@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:55:32 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:22 martti Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 CATEGORIES=	www
@@ -6,7 +6,7 @@ MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
-COMMENT=	simple w3m interface for Emacs
+COMMENT=	Simple w3m interface for Emacs
 
 EMACS_DEPENDS+=	{w3m,w3m-img}>=0.3.1:../../www/w3m
 BUILD_DEPENDS+=	semi-*:../../devel/semi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/25 09:33:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/22 04:14:23 martti Exp $
 
 DISTNAME=	http_load-04jan2002
 PKGNAME=	http_load-20020104
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.acme.com/software/http_load/
 
 MAINTAINER=	xs@nitric.net
 HOMEPAGE=	http://www.acme.com/software/http_load/
-COMMENT=	multiprocessing http test client
+COMMENT=	Multiprocessing http test client
 
 MAKE_ENV+=	SSLBASE="${SSLBASE}"
 USE_BUILDLINK2=	YES
