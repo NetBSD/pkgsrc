@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7977 2004/11/25 12:59:51 adam Exp $
+$NetBSD: CHANGES,v 1.7978 2004/11/25 13:22:13 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5413,3 +5413,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qalculate to 0.7.1 [adam 2004-11-25]
 	Updated gg2 to 2.2.3 [adam 2004-11-25]
 	Updated octave-current to 2.1.63 [adam 2004-11-25]
+	Updated xpdf to 3.00.1 [dillo 2004-11-25]
