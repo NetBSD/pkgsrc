@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 1998/02/02 09:00:29 hubertf Exp $
-lib/libqt.so.1.31
+@comment $NetBSD: PLIST,v 1.5 1998/03/17 22:57:54 tron Exp $
+lib/libqt.so.1.32
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true
 man/man1/moc.1.gz
