@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8832 2005/01/20 14:01:23 wiz Exp $
+$NetBSD: CHANGES,v 1.8833 2005/01/20 14:20:02 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -439,3 +439,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nmap to 3.78 [salo 2005-01-20]
 	Updated nmapfe to 0.9.5nb18 [salo 2005-01-20]
 	Removed thunderbird-bin [wiz 2005-01-20]
+	Updated mysql-client to 4.0.23a [xtraeme 2005-01-20]
+	Updated mysql-server to 4.0.23a [xtraeme 2005-01-20]
+	Updated mysql3-client to 3.23.58nb3 [xtraeme 2005-01-20]
