@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/07/14 01:34:40 rh Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/15 14:24:58 wiz Exp $
 #
 
 DISTNAME=		gnumeric-0.75
@@ -17,10 +17,8 @@ USE_GMAKE=		YES
 USE_PERL5=		YES
 USE_BUILDLINK_ONLY=	YES
 
-LDFLAGS+=      		-L${LOCALBASE}/lib
 LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
-CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-psiconv
@@ -35,10 +33,11 @@ pre-configure:
 	done
 
 .include "../../devel/gettext-lib/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
 .include "../../devel/libole2/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 .include "../../devel/gal/buildlink.mk"
+.include "../../textproc/libunicode/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
