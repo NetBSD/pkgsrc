@@ -44,6 +44,6 @@
 --- 1,5 ----
   # LANGS file
   
-! C/C/C                   /usr/local/share/nls/C
-! english/us/ascii        /usr/local/share/nls/en_US.ISO_8859-1
-! french/canada/8859      /usr/local/share/nls/fr_FR.ISO_8859-1
+! C/C/C                   __PREFIX/share/nls/C
+! english/us/ascii        __PREFIX/share/nls/en_US.ISO_8859-1
+! french/canada/8859      __PREFIX/share/nls/fr_FR.ISO_8859-1

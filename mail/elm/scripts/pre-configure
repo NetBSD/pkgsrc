@@ -1,7 +1,8 @@
 #!/bin/sh -
 #
 #	pre-configure script for Elm port to FreeBSD 2.0
-#	$Id: pre-configure,v 1.1.1.1 1998/01/23 12:19:45 bouyer Exp $
+#	$NetBSD: pre-configure,v 1.2 1998/01/23 13:17:18 bouyer Exp $
+#	FreeBSD: pre-configure,v 1.16 1996/12/23 06:08:21 ache Exp
 
 PortsDir=$PORTSDIR
   CurDir=$CURDIR
@@ -260,8 +261,8 @@ mansrc="${PREFIX}/man/man1"
 catmansrc="${PREFIX}/man/cat1"
 manext='.1'
 manext_choice='.1'
-catmanext='.1'
-catmanext_choice='.1'
+catmanext='.0'
+catmanext_choice='.0'
 packed='n'
 manroff='/usr/bin/nroff'
 manroffopts=''
