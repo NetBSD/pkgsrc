@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5168 2004/03/09 07:54:17 rh Exp $
+$NetBSD: CHANGES,v 1.5169 2004/03/09 10:45:22 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1269,3 +1269,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nam to 1.10 [minskim 2004-03-08]
 	Updated clamav to 1.66nb1 [grant 2004-03-09]
 	Updated cgoban-java to 2.5.7 [rh 2004-03-09]
+	Updated bittorrent to 3.4nb1 [recht 2004-03-09]
