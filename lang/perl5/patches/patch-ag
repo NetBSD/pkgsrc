@@ -1,7 +1,18 @@
-$NetBSD: patch-ag,v 1.7 2001/10/14 19:55:48 jlam Exp $
+$NetBSD: patch-ag,v 1.8 2003/05/27 21:57:25 jlam Exp $
 
 --- lib/ExtUtils/MM_Unix.pm.orig	Thu Mar 15 10:25:20 2001
-+++ lib/ExtUtils/MM_Unix.pm	Mon Oct  1 03:51:12 2001
++++ lib/ExtUtils/MM_Unix.pm	Tue May 27 17:03:53 2003
+@@ -604,8 +604,8 @@
+ 	      INST_HTMLSITELIBDIR INSTALLHTMLSITELIBDIR
+ 	      INST_HTMLSCRIPTDIR  INSTALLHTMLSCRIPTDIR
+ 	      INST_HTMLLIBDIR                    HTMLEXT
+-	      INST_MAN1DIR        INSTALLMAN1DIR MAN1EXT
+-	      INST_MAN3DIR        INSTALLMAN3DIR MAN3EXT
++	      INST_MAN1DIR        INSTALLMAN1DIR INSTALLSITEMAN1DIR	MAN1EXT
++	      INST_MAN3DIR        INSTALLMAN3DIR INSTALLSITEMAN3DIR	MAN3EXT
+ 	      /) {
+ 	next unless defined $self->{$tmp};
+ 	push @m, "$tmp = $self->{$tmp}\n";
 @@ -1059,6 +1059,22 @@
      my($ldfrom) = '$(LDFROM)';
      $armaybe = 'ar' if ($^O eq 'dec_osf' and $armaybe eq ':');
@@ -34,3 +45,42 @@ $NetBSD: patch-ag,v 1.7 2001/10/14 19:55:48 jlam Exp $
      push @m, '
  	$(CHMOD) $(PERM_RWX) $@
  ';
+@@ -1888,7 +1904,9 @@
+     }
+     for $install_variable (qw/
+ 			   INSTALLMAN1DIR
++			   INSTALLSITEMAN1DIR
+ 			   INSTALLMAN3DIR
++			   INSTALLSITEMAN3DIR
+ 			   /)
+     {
+ 	$self->prefixify($install_variable,$search_prefix,$replace_prefix);
+@@ -1898,6 +1916,8 @@
+     # installed
+     $self->{INSTALLMAN1DIR} = $Config::Config{installman1dir}
+ 	unless defined $self->{INSTALLMAN1DIR};
++    $self->{INSTALLSITEMAN1DIR} = $Config::Config{installsiteman1dir}
++	unless defined $self->{INSTALLSITEMAN1DIR};
+     unless (defined $self->{INST_MAN1DIR}){
+ 	if ($self->{INSTALLMAN1DIR} =~ /^(none|\s*)$/){
+ 	    $self->{INST_MAN1DIR} = $self->{INSTALLMAN1DIR};
+@@ -1909,6 +1929,8 @@
+ 
+     $self->{INSTALLMAN3DIR} = $Config::Config{installman3dir}
+ 	unless defined $self->{INSTALLMAN3DIR};
++    $self->{INSTALLSITEMAN3DIR} = $Config::Config{installsiteman3dir}
++	unless defined $self->{INSTALLSITEMAN3DIR};
+     unless (defined $self->{INST_MAN3DIR}){
+ 	if ($self->{INSTALLMAN3DIR} =~ /^(none|\s*)$/){
+ 	    $self->{INST_MAN3DIR} = $self->{INSTALLMAN3DIR};
+@@ -2153,8 +2175,8 @@
+ 		$(INST_SCRIPT) $(INSTALLSCRIPT) \
+ 		$(INST_HTMLLIBDIR) $(INSTALLHTMLSITELIBDIR) \
+ 		$(INST_HTMLSCRIPTDIR) $(INSTALLHTMLSCRIPTDIR) \
+-		$(INST_MAN1DIR) $(INSTALLMAN1DIR) \
+-		$(INST_MAN3DIR) $(INSTALLMAN3DIR)
++		$(INST_MAN1DIR) $(INSTALLSITEMAN1DIR) \
++		$(INST_MAN3DIR) $(INSTALLSITEMAN3DIR)
+ 	}.$self->{NOECHO}.q{$(WARN_IF_OLD_PACKLIST) \
+ 		}.$self->catdir('$(PERL_ARCHLIB)','auto','$(FULLEXT)').q{
+ 
