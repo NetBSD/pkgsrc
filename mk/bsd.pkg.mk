@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1337 2004/01/06 09:30:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1338 2004/01/06 14:43:02 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1622,14 +1622,14 @@ MASTER_SORT?=
 MASTER_SORT_REGEX?=
 MASTER_SORT_REGEX+= ${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^\/]*&\//}
 
-MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SORT_REGEX}"; }
+MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SORT_REGEX:S/\\/\\\\/g}"; }
 .  for srt in ${MASTER_SORT_REGEX}
-MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0 ; next; }
+MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt:S/\\/\\\\/g}"] = good["${srt:S/\\/\\\\/g}"] " " $$0 ; next; }
 .  endfor
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
 
 SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${MASTER_SORT_AWK}'
-ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD:C/"/\"/g}`
+ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD:S/\\/\\\\/g:C/"/\"/g}`
 .else
 ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
