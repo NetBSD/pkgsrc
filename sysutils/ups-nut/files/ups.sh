@@ -1,8 +1,7 @@
 #!/bin/sh
 #
-# $NetBSD: ups.sh,v 1.4 2001/11/21 21:38:55 jlam Exp $
+# $NetBSD: ups.sh,v 1.5 2001/11/22 00:55:51 lukem Exp $
 #
-# PROVIDE: ups
 # KEYWORD: nostart
 
 if [ -e /etc/rc.subr ]
