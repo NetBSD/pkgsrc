@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2003/12/04 08:35:10 agc Exp $
+# $NetBSD: Makefile,v 1.219 2003/12/04 15:28:00 epg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -136,6 +136,7 @@ SUBDIR+=	p5-Text-CSV-Hash
 SUBDIR+=	p5-Text-CSV_XS
 SUBDIR+=	p5-Text-ChaSen
 SUBDIR+=	p5-Text-DelimMatch
+SUBDIR+=	p5-Text-Diff
 SUBDIR+=	p5-Text-Format
 SUBDIR+=	p5-Text-Kakasi
 SUBDIR+=	p5-Text-Substitute
@@ -163,6 +164,7 @@ SUBDIR+=	p5-XML-XQL
 SUBDIR+=	p5-XML-XSLT
 SUBDIR+=	p5-XML-Xerces
 SUBDIR+=	p5-XML-YAWriter
+SUBDIR+=	p5-YAML
 SUBDIR+=	p5-libxml
 SUBDIR+=	p5-libxml-enno
 SUBDIR+=	par
