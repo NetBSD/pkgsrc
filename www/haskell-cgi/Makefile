@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/06 02:02:09 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/06 02:04:27 jtb Exp $
 
 DISTNAME=	haskell-cgi-20001206
 CATEGORIES=	www
@@ -18,9 +18,9 @@ HUGS_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=	HUGS_PREFIX=hugs
 
 do-configure:
-	@for i in ${WRKSRC}/*; do					     \
-		${SED} -e 's:\/soft\/bin\/runhugs:'${PREFIX}'/bin/runhugs:g' \
-		$$i > $$i.tmp && ${MV} $$i.tmp $$i;			     \
+	@for i in ${WRKSRC}/*; do					  \
+	${SED} -e 's:\/soft\/bin\/runhugs:'${HUGS_PREFIX}'/bin/runhugs:g' \
+	$$i > $$i.tmp && ${MV} $$i.tmp $$i;				  \
 	done
 
 do-install:
