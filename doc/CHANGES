@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.477 2002/11/07 06:53:41 frueauf Exp $
+$NetBSD: CHANGES,v 1.478 2002/11/07 15:13:19 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3548,3 +3548,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated spamassassin to 2.43nb1 [heinz 2002-11-06]
 	libxslt: Downgraded to 1.0.21 [tron 2002-11-06]
 	Updated popa3d to 0.5.9nb1 [dillo 2002-11-07]
+	Updated gkrellm to 1.2.11nb2 [fredb 2002-11-07]
