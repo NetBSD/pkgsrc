@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.918 2002/01/28 19:08:18 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.919 2002/01/28 20:55:26 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3179,15 +3179,17 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .endif
 
 show-vulnerabilities:
-	@if [ -f ${DISTDIR}/vulnerabilities ]; then			\
-		${AWK} '/^${PKGBASE}/ { print $$0 }' ${DISTDIR}/vulnerabilities; \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+		${AWK} '/^${PKGBASE}[-<>]/ { print $$0 }' ${DISTDIR}/vulnerabilities; \
 	else								\
 		${ECHO} "No vulnerabilities list found.";		\
 	fi
 
 show-vulnerabilities-html:
-	@if [ -f ${DISTDIR}/vulnerabilities ]; then			\
-		${AWK} '/^${PKGBASE}/ { gsub("\<", "\\&lt;", $$1);	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+		${AWK} '/^${PKGBASE}[-<>]/ { gsub("\<", "\\&lt;", $$1);	\
 			 gsub("\>", "\\&gt;", $$1);			\
 			 printf("<STRONG><LI>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG>\n", $$1, $$2, $$3, $$3) }' \
 			${DISTDIR}/vulnerabilities;			\
