@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.4 2005/01/17 08:37:31 jlam Exp $
+
+--- libtiff/tif_getimage.c.orig	2004-12-20 14:29:27.000000000 -0500
++++ libtiff/tif_getimage.c
+@@ -247,7 +247,7 @@ TIFFRGBAImageBegin(TIFFRGBAImage* img, T
+     TIFFGetFieldDefaulted(tif, TIFFTAG_SAMPLESPERPIXEL, &img->samplesperpixel);
+     TIFFGetFieldDefaulted(tif, TIFFTAG_EXTRASAMPLES,
+ 	&extrasamples, &sampleinfo);
+-    if (extrasamples > 1)
++    if (extrasamples >= 1)
+     {
+ 	switch (sampleinfo[0]) {
+ 	case EXTRASAMPLE_UNSPECIFIED:	/* Workaround for some images without */
