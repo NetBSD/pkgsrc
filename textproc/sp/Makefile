@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/09 03:26:39 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/18 13:33:41 jlam Exp $
 #
 
 DISTNAME=	sp-1.3.4
@@ -25,21 +25,21 @@ MAKE_ENV+=	SGML_DEFAULT_CATALOG="${SGML_DEFAULT_CATALOG}"
 
 SGML_CATALOGS=	${PREFIX}/share/sgml/dtd/html.soc
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sp ${PREFIX}/share/sgml/dtd
-	cd ${WRKSRC}/doc; for n in *.htm ; do ${INSTALL_DATA} $$n ${PREFIX}/share/doc/sp/$n ; done
-	cd ${WRKSRC}/pubtext; for n in * ; do ${INSTALL_DATA} $$n ${PREFIX}/share/sgml/dtd/$n ; done
-	cd ${WRKSRC}/lib; ${INSTALL_DATA} libsp.a ${PREFIX}/lib/libsp.a
+.include "../../mk/compiler.mk"
 
-.include "../../mk/bsd.prefs.mk"
-
-post-patch:
 .if !empty(CC_VERSION:Mgcc-2.8.1)
+post-patch:
 	@cd ${WRKSRC};							\
 	for FILE in ${PATCHDIR}/egcs-patch-*; do			\
 		${PATCH} ${PATCH_ARGS} < $$FILE;			\
 	done
 .endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sp ${PREFIX}/share/sgml/dtd
+	cd ${WRKSRC}/doc; for n in *.htm ; do ${INSTALL_DATA} $$n ${PREFIX}/share/doc/sp/$n ; done
+	cd ${WRKSRC}/pubtext; for n in * ; do ${INSTALL_DATA} $$n ${PREFIX}/share/sgml/dtd/$n ; done
+	cd ${WRKSRC}/lib; ${INSTALL_DATA} libsp.a ${PREFIX}/lib/libsp.a
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
