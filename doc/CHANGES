@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8936 2005/01/26 15:29:50 taca Exp $
+$NetBSD: CHANGES,v 1.8937 2005/01/26 15:56:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -612,3 +612,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Params-Validate to 0.76 [cube 2005-01-26]
 	Added p5-Class-Singleton-1.03 [cube 2005-01-26]
 	Updated squid to 2.5.7nb9 [taca 2005-01-26]
+	Updated awstats to 6.3nb2 [minskim 2005-01-26]
