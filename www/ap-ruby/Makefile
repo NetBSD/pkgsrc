@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/02/01 14:04:50 taca Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/12 14:06:53 taca Exp $
 # $FreeBSD: ports/www/mod_ruby/Makefile,v 1.10 2000/12/31 10:14:53 knu Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -16,7 +16,7 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}eruby>=0.9:../../textproc/ruby-eruby
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 RUBY_REQD=	1.6
-VERSION=	0.9.6
+VERSION=	0.9.7
 
 APXS=		${LOCALBASE}/sbin/apxs
 
