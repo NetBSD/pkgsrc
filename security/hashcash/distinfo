@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/29 19:01:34 tv Exp $
+$NetBSD: distinfo,v 1.2 2004/03/29 19:09:06 tv Exp $
 
-SHA1 (hashcash-0.28.tgz) = 8749d88003c1c5028615646eddffd422054c2804
-Size (hashcash-0.28.tgz) = 88924 bytes
+SHA1 (hashcash-0.30.tgz) = 7692499d78f0adae647b3c58c83d29f0e2b439c0
+Size (hashcash-0.30.tgz) = 88894 bytes
