@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/02/05 06:58:02 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/02/05 07:06:15 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BZIP2_BUILDLINK3_MK:=	${BZIP2_BUILDLINK3_MK}+
@@ -26,10 +26,9 @@ BUILDLINK_IS_BUILTIN.bzip2!=						\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.bzip2="${BUILDLINK_IS_BUILTIN.bzip2}"
 .endif
 
-.if defined(BUILDLINK_PREFER_PKGSRC)
-.  if empty(BUILDLINK_PREFER_PKGSRC) || \
-      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(BUILDLINK_PREFER_PKGSRC:Mbzip2)
+.if defined(PREFER_PKGSRC)
+.  if empty(PREFER_PKGSRC) || !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(PREFER_PKGSRC:Mbzip2)
 BUILDLINK_USE_BUILTIN.bzip2=	NO
 .  endif
 .endif

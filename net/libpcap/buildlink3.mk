@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/02/05 06:58:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/02/05 07:06:15 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPCAP_BUILDLINK3_MK:=	${LIBPCAP_BUILDLINK3_MK}+
@@ -20,10 +20,9 @@ BUILDLINK_IS_BUILTIN.libpcap=	YES
 .  endif
 .endif
 
-.if defined(BUILDLINK_PREFER_PKGSRC)
-.  if empty(BUILDLINK_PREFER_PKGSRC) || \
-      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(BUILDLINK_PREFER_PKGSRC:Mlibpcap)
+.if defined(PREFER_PKGSRC)
+.  if empty(PREFER_PKGSRC) || !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(PREFER_PKGSRC:Mlibpcap)
 BUILDLINK_USE_BUILTIN.libpcap=	NO
 .  endif
 .endif
