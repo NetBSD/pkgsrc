@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2100 2004/09/07 16:50:24 wiz Exp $
+$NetBSD: TODO,v 1.2101 2004/09/07 16:55:09 reed Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,7 @@ Suggested package updates
 	o abiword-2.0.10 [pkg/26695]
 	o ald-0.1.6 [pkg/26431]
 	o allegro-4.1.15
-	o amavisd-new-2.1.2
+	o amavisd-new-2.1.2 [pkg/26843]
 	o anjuta-1.2.2
 	o ap-jk-5.0.25
 	o apcupsd-3.10.13
