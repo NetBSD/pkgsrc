@@ -3,11 +3,11 @@
 # Date created:		26 Oct 1996
 # Whom:			Ville Eerola <ve@sci.fi>
 #
-# $NetBSD: Makefile,v 1.2 1998/02/28 11:35:39 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/07 22:25:18 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
 #
 
-DISTNAME=       fetchmail-4.3.6
+DISTNAME=       fetchmail-4.3.9
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/
 
