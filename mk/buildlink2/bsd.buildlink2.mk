@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.117 2004/02/17 16:56:47 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.118 2004/02/18 13:32:38 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -127,7 +127,6 @@ LDFLAGS+=	${FLAG}
 #
 .if empty(PREPEND_PATH:M${BUILDLINK_DIR}/bin)
 PREPEND_PATH+=	${BUILDLINK_DIR}/bin
-PATH:=		${BUILDLINK_DIR}/bin:${PATH}
 .endif
 
 .for _pkg_ in ${BUILDLINK_PACKAGES}

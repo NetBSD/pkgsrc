@@ -1,7 +1,9 @@
-# $NetBSD: mipspro.mk,v 1.21 2004/02/18 11:13:54 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.22 2004/02/18 13:32:38 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
-COMPILER_MIPSPRO_MK=	one
+COMPILER_MIPSPRO_MK=	defined
+
+.include "../../mk/bsd.prefs.mk"
 
 MIPSPROBASE?=	/usr
 
@@ -11,53 +13,42 @@ MIPSPROBASE?=	/usr
 # 
 LANGUAGES.mipspro=	c c++
 _LANGUAGES.mipspro=	# empty
-.  for _lang_ in ${USE_LANGUAGES}
+.for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
-.  endfor
+.endfor
 
 _MIPSPRO_DIR=		${WRKDIR}/.mipspro
 _MIPSPRO_LINKS=		# empty
-.  if exists(${MIPSPROBASE}/bin/cc)
+.if exists(${MIPSPROBASE}/bin/cc)
 _MIPSPRO_CC=		${_MIPSPRO_DIR}/bin/cc
 _MIPSPRO_LINKS+=	_MIPSPRO_CC
 PKG_CC=			${_MIPSPRO_CC}
 CC=			${PKG_CC:T}
-.  endif
-.  if exists(${MIPSPROBASE}/bin/CC)
+.endif
+.if exists(${MIPSPROBASE}/bin/CC)
 _MIPSPRO_CXX=		${_MIPSPRO_DIR}/bin/CC
 _MIPSPRO_LINKS+=	_MIPSPRO_CXX
 PKG_CXX=		${_MIPSPRO_CXX}
 CXX=			${PKG_CXX:T}
-.  endif
+.endif
 
-.  if exists(${MIPSPROBASE}/bin/cc)
+.if exists(${MIPSPROBASE}/bin/cc)
 # MIPSpro Compilers: Version 7.3.1.2m
 CC_VERSION_STRING!=	${MIPSPROBASE}/bin/cc -version 2>&1 || ${TRUE}
 CC_VERSION!=		${MIPSPROBASE}/bin/cc -version 2>&1 | ${GREP} '^MIPSpro'
-.  else
+.else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		MIPSpro Compilers
-.  endif
-.endif	# COMPILER_MIPSPRO_MK
-
-# The following section is included only if we're not being included by
-# bsd.prefs.mk.
-#
-.if empty(BSD_PREFS_MK)
-.  if empty(COMPILER_MIPSPRO_MK:Mtwo)
-COMPILER_MIPSPRO_MK+=	two
+.endif
 
 # Prepend the path to the compiler to the PATH.
-.    if !empty(_LANGUAGES.mipspro)
-.      if empty(PREPEND_PATH:M${_MIPSPRO_DIR}/bin)
+.if !empty(_LANGUAGES.mipspro)
 PREPEND_PATH+=	${_MIPSPRO_DIR}/bin
-PATH:=		${_MIPSPRO_DIR}/bin:${PATH}
-.      endif
-.    endif
+.endif
 
 # Create compiler driver scripts in ${WRKDIR}.
-.    for _target_ in ${_MIPSPRO_LINKS}
-.      if !target(${${_target_}})
+.for _target_ in ${_MIPSPRO_LINKS}
+.  if !target(${${_target_}})
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -66,7 +57,7 @@ ${${_target_}}:
 	 ${ECHO} 'exec ${MIPSPROBASE}/bin/${${_target_}:T} "$$@"';	\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.      endif
-.    endfor
-.  endif # COMPILER_MIPSPRO_MK
-.endif	 # BSD_PREFS_MK
+.  endif
+.endfor
+
+.endif	# COMPILER_MIPSPRO_MK
