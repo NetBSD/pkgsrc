@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.32 2005/04/03 03:27:07 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.33 2005/04/03 03:33:11 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -65,3 +65,5 @@ Pullup ticket 416 - requested by Klaus Heinz
 build infrastructure fix for perl5
 Pullup ticket 414 - requested by Lubomir Sedlacik
 security fix for gtk2
+Pullup ticket 415 - requested by Lubomir Sedlacik
+security fix for gdk-pixbuf
