@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/04/18 07:40:15 snj Exp $
+# $NetBSD: Makefile,v 1.44 2004/10/01 09:15:28 martti Exp $
 #
 
 DISTNAME=       fvwm-${PKG_VERSION}
@@ -11,7 +11,7 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.fvwm.org/generated/manpages/xpmroot.html
 COMMENT=	Sets the root window to an Xpm pixmap
 
-PKG_VERSION=	2.4.18
+PKG_VERSION=	2.4.19
 USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
