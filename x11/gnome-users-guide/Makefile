@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/10 16:10:26 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/08 18:44:36 tron Exp $
 #
 
 DISTNAME=	users-guide-1.0.71
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/users-guide/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/users-guide/project.shtml
+
+DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
