@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/10/08 02:16:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/20 15:59:44 tsarna Exp $
 #
 
-DISTNAME=	matchbox-0.3.5
+DISTNAME=	matchbox-0.3.6
 CATEGORIES=	wm
 MASTER_SITES=	http://handhelds.org/~mallum/downloadables/matchbox/
 
