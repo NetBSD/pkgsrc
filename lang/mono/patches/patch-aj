@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2003/12/03 00:12:12 recht Exp $
+$NetBSD: patch-aj,v 1.2 2003/12/03 17:08:24 recht Exp $
 
 --- libgc/include/private/gcconfig.h.orig	2003-08-26 23:01:26.000000000 +0200
 +++ libgc/include/private/gcconfig.h	2003-11-27 18:42:00.000000000 +0100
