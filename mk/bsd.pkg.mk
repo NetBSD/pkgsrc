@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.293 1999/07/09 13:14:21 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.294 1999/07/09 14:05:12 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1654,13 +1654,13 @@ makesum: fetch
 makepatchsum:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${FILESDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PATCH_SUM_FILE}
-	@${ECHO} -n "$$" > ${PATCH_SUM_FILE};				\
-		${ECHO} -n "NetBSD" >> ${PATCH_SUM_FILE}; 		\
-		${ECHO} "$$" >> ${PATCH_SUM_FILE};			\
-		${ECHO} "" >> ${PATCH_SUM_FILE}
 	${_PKG_SILENT}(${_PKG_DEBUG}					\
 	if [ -d ${PATCHDIR} ]; then					\
 		cd ${PATCHDIR};						\
+		${ECHO} -n "$$" > ${PATCH_SUM_FILE};			\
+		${ECHO} -n "NetBSD" >> ${PATCH_SUM_FILE}; 		\
+		${ECHO} "$$" >> ${PATCH_SUM_FILE};			\
+		${ECHO} "" >> ${PATCH_SUM_FILE};			\
 		for sumfile in "" patch-*; do				\
 			if [ "X$$sumfile" = X"" ]; then continue; fi;	\
 			case $$sumfile in				\
