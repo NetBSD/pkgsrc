@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2003/05/06 21:03:26 jmmv Exp $
+
+--- configs/wdm-config.in.orig	2003-03-31 18:37:40.000000000 +0200
++++ configs/wdm-config.in
+@@ -29,10 +29,10 @@ DisplayManager*wdmBg:           solid:Ro
+ ! DisplayManager*wdmBg:         dgradient:RoyalBlue,FireBrick,Black
+ ! DisplayManager*wdmBg:         hgradient:RoyalBlue,FireBrick,Black
+ ! DisplayManager*wdmBg:         vgradient:RoyalBlue,FireBrick,Black
+-! DisplayManager*wdmBg:         pixmap:@DMDIR@/pixmaps/Stars.jpg
++! DisplayManager*wdmBg:         pixmap:@prefix@/share/pixmaps/wdm/Stars.jpg
+ !
+ ! optional pixmap for logo
+-@PIXMAPCOMMENT@DisplayManager*wdmLogo:  @DMDIR@/pixmaps/@PIXMAPFILE@
++@PIXMAPCOMMENT@DisplayManager*wdmLogo:  @prefix@/share/pixmaps/wdm/@PIXMAPFILE@
+ !
+ ! optional help file to display in the help panel
+ ! long lines may cause an ugly display 
