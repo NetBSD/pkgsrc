@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/06 07:46:55 rh Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/DBI/.packlist
+lib/perl5/site_perl/Apache/DBI.pm
+lib/perl5/site_perl/Apache/AuthDBI.pm
+lib/perl5/man/man3/Apache::DBI.3
+lib/perl5/man/man3/Apache::AuthDBI.3
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/DBI
