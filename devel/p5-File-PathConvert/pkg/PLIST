@@ -1,5 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/03 17:15:27 kim Exp $
-lib/perl5/man/man3/File::PathConvert.3
-lib/perl5/site_perl/File/PathConvert.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File/PathConvert/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File/PathConvert
+@comment $NetBSD: PLIST,v 1.2 2000/08/27 07:11:06 jlam Exp $

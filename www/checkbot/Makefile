@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/16 19:36:46 abs Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/27 07:11:24 jlam Exp $
 #
 
 DISTNAME=	checkbot-1.60
@@ -13,9 +13,10 @@ DEPENDS+= 	p5-Net-*:../../net/p5-Net
 DEPENDS+= 	p5-URI-*:../../www/p5-URI
 DEPENDS+= 	p5-libwww-*:../../www/p5-libwww
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/checkbot/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/02 17:02:12 rh Exp $
-lib/perl5/site_perl/Convert/BER.pod
-lib/perl5/site_perl/Convert/BER.pm
-lib/perl5/man/man3/Convert::BER.3
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Convert/BER/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Convert/BER
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Convert
-@dirrm lib/perl5/site_perl/Convert
+@comment $NetBSD: PLIST,v 1.2 2000/08/27 07:11:21 jlam Exp $

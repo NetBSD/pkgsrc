@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/07/31 04:14:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/27 07:11:11 jlam Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -15,7 +15,7 @@ DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 USE_X11=		# defined
 USE_GMAKE=		# defined
 USE_PERL5=		# defined
-PERL=			${LOCALBASE}/bin/perl
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XRacer/.packlist
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -34,7 +34,7 @@ pre-patch:
 		mkcraft/xracer-mkcraft.pl \
 		mkmeshnotex/xracer-mkmeshnotex.pl
 	@${CP} ${WRKSRC}/tools/${perlfile} ${WRKSRC}/tools/${perlfile}.BAK
-	@${SED} 's!/usr/bin/perl!${PERL}!g' \
+	@${SED} 's!/usr/bin/perl!${PERL5}!g' \
 		< ${WRKSRC}/tools/${perlfile}.BAK > ${WRKSRC}/tools/${perlfile}
 	@${RM} ${WRKSRC}/tools/${perlfile}.BAK
 .endfor

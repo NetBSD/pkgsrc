@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/11 14:05:05 bad Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/27 07:11:18 jlam Exp $
 #
 
 DISTNAME=	Wais-2.311
@@ -11,9 +11,10 @@ MAINTAINER=	bad@netbsd.org
 DEPENDS+=	freewais-sf-2.2.12:../../net/freewais-sf
 DEPENDS+=	p5-Curses-1.02:../../devel/p5-Curses
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Wais/.packlist
 
 do-configure:
-		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
