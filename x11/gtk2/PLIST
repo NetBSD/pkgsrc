@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2004/09/22 08:09:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.33 2004/10/09 09:18:28 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -285,7 +285,6 @@ share/doc/gdk-pixbuf/license.html
 share/doc/gdk-pixbuf/right.png
 share/doc/gdk-pixbuf/rn01.html
 share/doc/gdk-pixbuf/rn02.html
-share/doc/gdk-pixbuf/style.css
 share/doc/gdk-pixbuf/up.png
 share/doc/gdk/GdkDisplay.html
 share/doc/gdk/GdkDisplayManager.html
@@ -387,7 +386,6 @@ share/doc/gdk/sizing.png
 share/doc/gdk/spider.png
 share/doc/gdk/spraycan.png
 share/doc/gdk/star.png
-share/doc/gdk/style.css
 share/doc/gdk/target.png
 share/doc/gdk/tcross.png
 share/doc/gdk/top_left_arrow.png
@@ -734,10 +732,14 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/az_IR/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/az_IR/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gtk20-properties.mo
