@@ -39,7 +39,7 @@ print "Amanda user $backup using uid $newUID\n";
 print "Amanda user $backup using gid $newGID\n";
 
 if ($addname) {
-	system( "/usr/bin/chpass -a \"$backup:*************:${newUID}:${newGID}::0:0:Amanda backup user:$ENV{'PREFIX'}/$backup:/bin/sh\"" );
+	system( "/usr/bin/chpass -l -a \"$backup:*************:${newUID}:${newGID}::0:0:Amanda backup user:$ENV{'PREFIX'}/$backup:/bin/sh\"" );
 }
 
 sub append_file {
