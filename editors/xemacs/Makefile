@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/03/12 10:57:07 uebayasi Exp $
+# $NetBSD: Makefile,v 1.61 2003/04/10 18:18:51 jmc Exp $
 
 DISTNAME=	xemacs-21.4.12
 PKGREVISION=	2
@@ -65,6 +65,12 @@ WITH_DIALOGS= \
 		--with-xim=xlib
 .include "../../mk/xaw.buildlink2.mk"
 #.endif
+
+.if ${OPSYS} == "SunOS"
+.  if !exists(/usr/demo/SOUND/libaudio.a) && !exists(/usr/demo/SOUND/lib/libaudio.a)
+CONFIGURE_ARGS+=	--with_sound=none
+.  endif
+.endif
 
 .if defined(USE_LDAP) && (${USE_LDAP} == "YES")
 WITH_LDAP=	--with-ldap
