@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2286 2003/05/22 17:04:23 salo Exp $
+$NetBSD: CHANGES,v 1.2287 2003/05/22 17:06:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2092,3 +2092,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rlab to 2.1.05nb1 [jmmv 2003-05-22]
 	Updated w3m to 0.4nb1 [jmmv 2003-05-22]
 	Updated mc to 4.5.51nb2 [salo 2003-05-22]
+	Updated libwnck to 2.2.1nb2 [jmmv 2003-05-22]
