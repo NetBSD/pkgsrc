@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/08 13:19:26 adam Exp $
 bin/psiconv
+bin/psiconv-config
 include/psiconv/buffer.h
 include/psiconv/common.h
+include/psiconv/configuration.h
 include/psiconv/data.h
 include/psiconv/error.h
 include/psiconv/general.h
@@ -10,9 +12,11 @@ include/psiconv/generate_routines.h
 include/psiconv/list.h
 include/psiconv/parse.h
 include/psiconv/parse_routines.h
+include/psiconv/unicode.h
 lib/libpsiconv.la
-share/doc/psiconv/ascii
-share/doc/psiconv/html
-share/doc/psiconv/html4
-@dirrm share/doc/psiconv
+man/man1/psiconv-config.1
+man/man1/psiconv.1
+share/examples/psiconv/psiconv.conf
+share/examples/psiconv/psiconv.conf.eg
 @dirrm include/psiconv
+@dirrm share/examples/psiconv
