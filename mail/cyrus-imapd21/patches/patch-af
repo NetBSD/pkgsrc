@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.1 2002/11/15 11:49:07 seb Exp $
+$NetBSD: patch-af,v 1.2 2002/12/08 00:39:43 chris Exp $
 
---- configure.in.orig	Tue Aug 27 17:05:26 2002
-+++ configure.in
-@@ -857,6 +857,10 @@ dnl compile perl stuff
-     EXTRA_SUBDIRS="${EXTRA_SUBDIRS} perl"
+--- configure.in.orig	Fri Dec  6 13:19:12 2002
++++ configure.in	Fri Dec  6 13:20:18 2002
+@@ -865,6 +865,10 @@
  dnl and compile perl/cyradm
      PERL_SUBDIRS="imap"
+     PERL="${with_perl}"
 +dnl add perl cccdlflags when building libraries
 +    eval `${PERL} -V:cccdlflags`
 +    PERL_CCCDLFLAGS="$cccdlflags"
