@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.1 2004/07/30 21:05:42 jlam Exp $
+# $NetBSD: Makefile.options,v 1.2 2004/08/01 19:43:45 jlam Exp $
 
 # Global and legacy options
 .if defined(KERBEROS) || defined(USE_PAM) || defined(USE_OPENLDAP) || \
@@ -37,13 +37,10 @@ CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
-.  include "../../security/openssl/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 PLIST_SUBST+=		LDAP=
 .else
-CONFIGURE_ARGS+=	--without-openssl
 PLIST_SUBST+=		LDAP="@comment "
 .endif
 
