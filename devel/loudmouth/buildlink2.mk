@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/01/23 09:45:51 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/02/19 17:54:06 wiz Exp $
 #
 # This Makefile fragment is included by packages that use loudmouth.
 #
@@ -19,7 +19,6 @@ BUILDLINK_FILES.loudmouth+=	lib/libloudmouth*
 BUILDLINK_FILES.loudmouth+=	lib/pkgconfig/loudmouth-1.0.pc
 
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .if defined(LOUDMOUTH_USE_SSL) && !empty(LOUDMOUTH_USE_SSL:M[Yy][Ee][Ss])
 BUILDLINK_DEPENDS.gnutls=	gnutls>=1.0.0
