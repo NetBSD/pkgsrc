@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2005/02/18 22:12:46 jlam Exp $
+$NetBSD: patch-ae,v 1.7 2005/03/23 04:07:03 jlam Exp $
 
---- imapd-ssl.rc.in.orig	2004-11-24 23:57:04.000000000 -0500
+--- imapd-ssl.rc.in.orig	2005-02-16 18:46:48.000000000 -0500
 +++ imapd-ssl.rc.in
 @@ -9,6 +9,7 @@ prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -10,13 +10,7 @@ $NetBSD: patch-ae,v 1.6 2005/02/18 22:12:46 jlam Exp $
  
  if test ! -f @sysconfdir@/imapd
  then
-@@ -35,11 +36,12 @@ start)
- 
- 	umask $IMAP_UMASK
- 	@ULIMIT@ $IMAP_ULIMITD
--	@SETENV@ - @SHELL@ -c " set -a ;
-+	@SETENV@ -i @SHELL@ -c " set -a ;
- 		prefix=@prefix@ ;
+@@ -40,6 +41,7 @@ start)
  		exec_prefix=@exec_prefix@ ;
  		bindir=@bindir@ ;
  		libexecdir=@libexecdir@ ;
