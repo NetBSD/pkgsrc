@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/29 05:45:40 tron Exp $
+
+--- Makefile.orig	Wed May 16 12:13:25 2001
++++ Makefile	Tue May 29 07:33:03 2001
+@@ -1,12 +1,14 @@
+ WMBIFF_VERSION="0.3.0"
+ DESTDIR=
+-prefix=/usr/local
++prefix=${PREFIX}
+ bindir=${prefix}/bin
+-mandir=${prefix}/share/man
++mandir=${prefix}/man
++datadir=${prefix}/share/examples/wmbiff
++
+ CONF=/etc
+ LIBDIR = -L/usr/X11R6/lib
+ LIBS   = -lXpm -lXext -lX11
+-CFLAGS = -O2 -Wall
++CFLAGS += -Wall -I${PREFIX}/include -I${X11BASE}/include
+ #CFLAGS = -g -Wall -pedantic 
+ 
+ EXTRAFLAGS = -DWMBIFF_VERSION='$(WMBIFF_VERSION)'
+@@ -21,12 +23,6 @@
+ 	../wmgeneral/list.o \
+ 	charutil.o
+ 
+-INSTALL = /usr/bin/install
+-INSTALL_DIR	= $(INSTALL) -p -d -o root -g root -m 755
+-INSTALL_PROGRAM	= $(INSTALL) -p -o root -g root -m 755
+-INSTALL_FILE 	= $(INSTALL) -p -o root -g root -m 644
+-
+-
+ .c.o:
+ 	gcc  $(CFLAGS) $(EXTRAFLAGS) -c $< -o $*.o
+ 
+@@ -36,7 +32,7 @@
+ 	ln -s wmbiff-master-led.xpm wmbiff-master.xpm
+ 
+ wmbiff:	$(OBJS)
+-	gcc $(CFLAGS) $(EXTRAFLAGS) -o wmbiff -lX11 -lnsl $^ $(LIBDIR) $(LIBS)
++	gcc $(CFLAGS) $(EXTRAFLAGS) -o wmbiff -lX11 $^ ${LDFLAGS} $(LIBDIR) $(LIBS)
+ 
+ clean:
+ 	for i in $(OBJS) ; do \
+@@ -45,12 +41,11 @@
+ 	rm -f wmbiff *~ tags core wmbiff-master.xpm
+ 
+ install: wmbiff
+-	$(INSTALL_DIR) $(DESTDIR)$(bindir)
+-	$(INSTALL_DIR) $(DESTDIR)$(mandir)/man1
+-	$(INSTALL_DIR) $(DESTDIR)$(mandir)/man5
+-	$(INSTALL_PROGRAM) wmbiff $(DESTDIR)$(bindir)
+-	$(INSTALL_FILE) wmbiff.1 $(DESTDIR)$(mandir)/man1
+-	$(INSTALL_FILE) wmbiffrc.5 $(DESTDIR)$(mandir)/man5
++	${BSD_INSTALL_PROGRAM} wmbiff $(DESTDIR)$(bindir)
++	${BSD_INSTALL_MAN} wmbiff.1 $(DESTDIR)$(mandir)/man1
++	${BSD_INSTALL_MAN} wmbiffrc.5 $(DESTDIR)$(mandir)/man5
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/$(datadir)
++	${BSD_INSTALL_DATA} sample.wmbiffrc $(DESTDIR)$(datadir)/
+ 
+ # CODING STYLE AND INDENTATION [2001-Mar-12]:
+ #
