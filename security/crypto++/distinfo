@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/26 15:18:44 minskim Exp $
+
+SHA1 (crypto51.zip) = 95905714c85f6fb563e66edb5478818df787fe2d
+Size (crypto51.zip) = 829560 bytes
+SHA1 (patch-aa) = f66abaac76ea6db3f94a8d3616114b7d893d8793
+SHA1 (patch-ab) = e9ec34d4dd5093c021cc27ea6233e87dc6262221

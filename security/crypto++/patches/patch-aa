@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/26 15:18:44 minskim Exp $
+
+--- GNUmakefile.orig	2003-03-19 19:24:11.000000000 -0600
++++ GNUmakefile
+@@ -1,5 +1,5 @@
+ # can't use -fno-rtti yet because it causes problems with exception handling in GCC 2.95.2
+-CXXFLAGS = -g
++CXXFLAGS = ${CFLAGS}
+ # Uncomment the next two lines to do a release build.
+ # Note that you must define NDEBUG for your own application if you define it for Crypto++.
+ # Also, make sure you run the validation tests and test your own program thoroughly
+@@ -47,16 +47,16 @@ OBJS = $(SRCS:.cpp=.o)
+ TESTOBJS = bench.o test.o validat1.o validat2.o validat3.o adhoc.o datatest.o regtest.o
+ LIBOBJS = $(filter-out $(TESTOBJS),$(OBJS))
+ 
+-all: cryptest.exe
++all: cryptest
+ 
+ clean:
+-	$(RM) cryptest.exe libcryptopp.a $(LIBOBJS) $(TESTOBJS)
++	$(RM) cryptest libcryptopp.a $(LIBOBJS) $(TESTOBJS)
+ 
+ libcryptopp.a: $(LIBOBJS)
+ 	$(AR) $(ARFLAGS) $@ $(LIBOBJS)
+ 	$(RANLIB) $@
+ 
+-cryptest.exe: libcryptopp.a $(TESTOBJS)
++cryptest: libcryptopp.a $(TESTOBJS)
+ 	$(CXX) -o $@ $(CXXFLAGS) $(TESTOBJS) -L. -lcryptopp $(LDFLAGS) $(LDLIBS)
+ 
+ nolib: $(OBJS)		# makes it faster to test changes
