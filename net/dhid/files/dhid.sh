@@ -1,6 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: dhid.sh,v 1.2 2000/08/09 21:00:10 hubertf Exp $
+# $NetBSD: dhid.sh,v 1.3 2000/09/20 05:14:11 jlam Exp $
+#
+# PROVIDE: dhid
+# REQUIRE: NETWORK
 
 DHID=@PREFIX@/sbin/dhid
 

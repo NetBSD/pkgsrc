@@ -1,7 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: thttpd.sh,v 1.2 2000/08/06 02:51:59 jlam Exp $
+# $NetBSD: thttpd.sh,v 1.3 2000/09/20 05:14:13 jlam Exp $
 #
+# PROVIDE: thttpd
+# REQUIRE: DAEMON
 
 name="thttpd"
 command=@PREFIX@/sbin/${name}

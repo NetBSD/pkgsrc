@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/03 13:19:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/20 05:14:11 jlam Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
@@ -26,7 +26,7 @@ post-build:
 		< ${FILESDIR}/pksd.sh > ${WRKDIR}/pksd.sh
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/pksd.sh ${PREFIX}/etc/rc.d
+	${INSTALL_SCRIPT} ${WRKDIR}/pksd.sh ${PREFIX}/etc/rc.d/pksd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

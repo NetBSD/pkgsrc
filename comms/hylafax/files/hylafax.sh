@@ -1,7 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: hylafax.sh,v 1.1 2000/08/30 09:50:45 abs Exp $
+# $NetBSD: hylafax.sh,v 1.2 2000/09/20 05:14:11 jlam Exp $
 #
+# PROVIDE: hylafax
+# REQUIRE: DAEMON
 
 command=${1:-start}
 
