@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2000/06/01 09:36:47 rh Exp $
+$NetBSD: patch-ab,v 1.9 2000/06/04 16:46:47 rh Exp $
 
 --- ltmain.in.orig	Sat May 27 03:53:15 2000
 +++ ltmain.in	Thu Jun  1 11:21:17 2000
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.8 2000/06/01 09:36:47 rh Exp $
 +           ;;
 +         esac
 +         arg="$arg $wl$flag"
-+         linkopts="$linkopts $flag"
++         linkopts="$linkopts $wl$flag"
 +       done
 +       IFS="$save_ifs"
 +       arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
