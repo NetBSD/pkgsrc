@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/03/15 18:20:59 kim Exp $
+$NetBSD: distinfo,v 1.7 2004/01/24 18:18:53 kim Exp $
 
-SHA1 (roller-1.13.tar.gz) = 5a662448a1025f3cfda485953474721cbec50adf
-Size (roller-1.13.tar.gz) = 29994 bytes
+SHA1 (roller-1.14.tar.gz) = 7dc5779d1f1a0a29784192abd3641c1ed3aab7bf
+Size (roller-1.14.tar.gz) = 30692 bytes
