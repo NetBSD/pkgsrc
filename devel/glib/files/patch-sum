@@ -1,7 +1,7 @@
-$NetBSD: patch-sum,v 1.9 2001/03/10 10:48:08 drochner Exp $
+$NetBSD: patch-sum,v 1.10 2001/03/10 14:46:59 tron Exp $
 
-SHA1 (patch-aa) = e9c6046c3766d74919bb03f12cd8e9e32cd4f2f9
-SHA1 (patch-ab) = 56e5035d8c144733752e38e0c1e790dfe44f87b7
-SHA1 (patch-ac) = ab176e926d9fee6d463096ad3853e06718129acc
-SHA1 (patch-ad) = e6f798caeebfa2e532d9835d2a24f52865eeb372
-SHA1 (patch-ae) = 222a1f4c470fd1123deb3b4dd918b036b3607e59
+SHA1 (patch-aa) = 78dc5715e7554620926c03e13973c892c154172e
+SHA1 (patch-ab) = dce49cf963a798b2cd5f51f7fd6cb2e133855a69
+SHA1 (patch-ac) = 422d29d488e8904c390047dc11da27e88b3d8de6
+SHA1 (patch-ad) = 745d6d527d65d3596c5c342a474d0b869da7c94c
+SHA1 (patch-ae) = 0338603f084120f823881f57c4435798759a97e9
