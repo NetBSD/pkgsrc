@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/06/12 04:35:15 sakamoto Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/21 11:56:47 jlam Exp $
 
 DISTNAME=	xemacs-21.5.5
 CATEGORIES=	editors
@@ -10,73 +10,76 @@ MAINTAINER=	magick@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	*BETA* XEmacs text editor version 21.5.5
 
+USE_BUILDLINK2=	YES
 USE_X11=	YES
-USE_BUILDLINK_ONLY=	YES
-HAS_CONFIGURE=	YES
 
 PLIST_SUBST+=	EMACSVER=xemacs-21.5-b5
 MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b5
 
 .if (${MACHINE_ARCH} == "arm32")
-.include "../../lang/gcc/Makefile.gcc"
+.  include "../../lang/gcc/Makefile.gcc"
 .endif
 
 .include "../../mk/bsd.prefs.mk"
 
-XEMACS_WIDGETS?= lucid
-.if ${XEMACS_WIDGETS} == gtk
-.include "../../x11/gtk/buildlink.mk"
+XEMACS_WIDGETS?=	lucid
+.if ${XEMACS_WIDGETS} == "gtk"
+.  include "../../x11/gtk/buildlink2.mk"
 WITH_WIDGETS=	--with-gtk
-.elif ${XEMACS_WIDGETS} == gnome
-.include "../../x11/gnome-libs/buildlink.mk"
+.elif ${XEMACS_WIDGETS} == "gnome"
+.  include "../../x11/gnome-libs/buildlink2.mk"
 WITH_WIDGETS=	--with-gnome
-.elif ${XEMACS_WIDGETS} == motif
-.include "../../mk/motif.buildlink.mk"
+.elif ${XEMACS_WIDGETS} == "motif"
+.  include "../../mk/motif.buildlink2.mk"
 .else
-USE_XAW=	YES
+.  include "../../mk/xaw.buildlink2.mk"
 WITH_WIDGETS=	--with-widgets=lucid
 .endif
 
-.if defined(XEMACS_ESD) && ${XEMACS_ESD} == YES
-.include "../../audio/esound/buildlink.mk"
+.if defined(XEMACS_ESD) && (${XEMACS_ESD} == "YES")
+.  include "../../audio/esound/buildlink2.mk"
 .endif
 
-.if defined(USE_LDAP) && ${USE_LDAP} == YES
-WITH_LDAP=	--with-ldap=yes
-.include "../../databases/openldap/buildlink.mk"
+.if defined(USE_LDAP) && (${USE_LDAP} == "YES")
+WITH_LDAP=	--with-ldap
+.  include "../../databases/openldap/buildlink2.mk"
 .else
-WITH_LDAP=	--with-ldap=no
+WITH_LDAP=	--without-ldap
 .endif
 
-.if defined(USE_XFACE) && ${USE_XFACE} == YES
-.include "../../mail/faces/buildlink.mk"
-WITH_XFACE=	--with-xface=yes
+.if defined(USE_XFACE) && (${USE_XFACE} == "YES")
+.  include "../../mail/faces/buildlink2.mk"
+WITH_XFACE=	--with-xface
 .else
-WITH_XFACE=	--with-xface=no
+WITH_XFACE=	--without-xface
 .endif
 
-.if defined(EMACS_CANNA) && ${EMACS_CANNA} == YES
-.include "../../inputmethod/canna-lib/buildlink.mk"
-WITH_CANNA=	--with-canna=yes
+.if defined(EMACS_CANNA) && (${EMACS_CANNA} == "YES")
+.  include "../../inputmethod/canna-lib/buildlink2.mk"
+WITH_CANNA=	--with-canna
 .else
-WITH_CANNA=	--with-canna=no
+WITH_CANNA=	--without-canna
 .endif
 
-.include "../../databases/gdbm/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
+.include "../../databases/gdbm/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
 
-CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM} --prefix=${PREFIX} \
-			--with-clash-detection --with-mule=yes \
-			--with-ncurses=no ${WITH_WIDGETS} \
-			${WITH_LDAP} ${WITH_XFACE} \
-			${WITH_CANNA} \
-			--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
-			--site-includes=${PREFIX}/include:${WRKDIR} \
-			--site-libraries=${PREFIX}/lib \
-			--error-checking=none \
-			--with-msw=no
+INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
+
+HAS_CONFIGURE=		YES
+CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-clash-detection
+CONFIGURE_ARGS+=	--error-checking=none
+CONFIGURE_ARGS+=	--with-mule=yes
+CONFIGURE_ARGS+=	--without-ncurses
+CONFIGURE_ARGS+=	--without-msw
+CONFIGURE_ARGS+=	${WITH_WIDGETS} ${WITH_LDAP} ${WITH_XFACE} ${WITH_CANNA}
+CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
+CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
+CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
 MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}"
@@ -84,5 +87,4 @@ MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}"
 post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
