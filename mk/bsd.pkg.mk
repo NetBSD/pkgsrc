@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1528 2004/10/27 21:45:53 recht Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1529 2004/10/28 14:05:56 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -4724,10 +4724,11 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
 		fi;							\
-		linklibs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^[^@].*\.so$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		linklibs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^[^@].*\.so\.[0-9\.]+$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		for i in $${linklibs}; do				\
 			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
-				${ECHO} "$$i: installed without execute permission; fixing (should use [BSD_]INSTALL_LIB)"; \
+				${TEST} "${PKG_DEVELOPER:Uno}" = "no" || \
+					${ECHO} "$$i: installed without execute permission; fixing (should use [BSD_]INSTALL_LIB)"; \
 				${CHMOD} +x $$i;			\
 			fi;						\
 		done;							\
