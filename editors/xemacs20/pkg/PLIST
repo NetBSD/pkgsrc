@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1997/12/24 09:44:48 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/01/28 15:33:52 hubertf Exp $
 bin/b2m
 bin/ctags
 bin/etags
@@ -2554,37 +2554,37 @@ lib/xemacs-20.3/info/xemacs.info-6
 lib/xemacs-20.3/info/xemacs.info-7
 lib/xemacs-20.3/info/xemacs.info-8
 lib/xemacs-20.3/info/xemacs.info-9
-lib/xemacs-20.3/<$ARCH>--netbsd/make-path
-lib/xemacs-20.3/<$ARCH>--netbsd/wakeup
-lib/xemacs-20.3/<$ARCH>--netbsd/profile
-lib/xemacs-20.3/<$ARCH>--netbsd/make-docfile
-lib/xemacs-20.3/<$ARCH>--netbsd/digest-doc
-lib/xemacs-20.3/<$ARCH>--netbsd/sorted-doc
-lib/xemacs-20.3/<$ARCH>--netbsd/movemail
-lib/xemacs-20.3/<$ARCH>--netbsd/cvtmail
-lib/xemacs-20.3/<$ARCH>--netbsd/fakemail
-lib/xemacs-20.3/<$ARCH>--netbsd/yow
-lib/xemacs-20.3/<$ARCH>--netbsd/hexl
-lib/xemacs-20.3/<$ARCH>--netbsd/gnuserv
-lib/xemacs-20.3/<$ARCH>--netbsd/mmencode
-lib/xemacs-20.3/<$ARCH>--netbsd/rcs2log
-lib/xemacs-20.3/<$ARCH>--netbsd/vcdiff
-lib/xemacs-20.3/<$ARCH>--netbsd/gzip-el.sh
-lib/xemacs-20.3/<$ARCH>--netbsd/install-sid
-lib/xemacs-20.3/<$ARCH>--netbsd/send-pr
-lib/xemacs-20.3/<$ARCH>--netbsd/tm-au
-lib/xemacs-20.3/<$ARCH>--netbsd/tm-file
-lib/xemacs-20.3/<$ARCH>--netbsd/tm-html
-lib/xemacs-20.3/<$ARCH>--netbsd/tm-image
-lib/xemacs-20.3/<$ARCH>--netbsd/tm-mpeg
-lib/xemacs-20.3/<$ARCH>--netbsd/tm-plain
-lib/xemacs-20.3/<$ARCH>--netbsd/tm-ps
-lib/xemacs-20.3/<$ARCH>--netbsd/tmdecode
-lib/xemacs-20.3/<$ARCH>--netbsd/xoobr
-lib/xemacs-20.3/<$ARCH>--netbsd/add-little-package.sh
-lib/xemacs-20.3/<$ARCH>--netbsd/add-big-package.sh
-lib/xemacs-20.3/<$ARCH>--netbsd/DOC
-lib/xemacs-20.3/<$ARCH>--netbsd/config.values
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/make-path
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/wakeup
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/profile
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/make-docfile
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/digest-doc
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/sorted-doc
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/movemail
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/cvtmail
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/fakemail
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/yow
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/hexl
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/gnuserv
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/mmencode
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/rcs2log
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/vcdiff
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/gzip-el.sh
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/install-sid
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/send-pr
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tm-au
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tm-file
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tm-html
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tm-image
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tm-mpeg
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tm-plain
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tm-ps
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/tmdecode
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/xoobr
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/add-little-package.sh
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/add-big-package.sh
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/DOC
+lib/xemacs-20.3/${MACHINE_ARCH}--netbsd/config.values
 @dirrm lib/xemacs-20.3/lisp/x11
 @dirrm lib/xemacs-20.3/lisp/w3
 @dirrm lib/xemacs-20.3/lisp/vm
@@ -2660,5 +2660,5 @@ lib/xemacs-20.3/<$ARCH>--netbsd/config.values
 @dirrm lib/xemacs-20.3/etc/app-defaults/ja
 @dirrm lib/xemacs-20.3/etc/app-defaults
 @dirrm lib/xemacs-20.3/etc
-@dirrm lib/xemacs-20.3/<$ARCH>--netbsd
+@dirrm lib/xemacs-20.3/${MACHINE_ARCH}--netbsd
 @dirrm lib/xemacs-20.3

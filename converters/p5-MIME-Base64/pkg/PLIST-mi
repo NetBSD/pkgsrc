@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST-mi,v 1.1 1997/11/22 05:04:14 hubertf Exp $
+@comment $NetBSD: PLIST-mi,v 1.2 1998/01/28 15:33:46 hubertf Exp $
 lib/perl5/site_perl/MIME/Base64.pm
 lib/perl5/site_perl/MIME/QuotedPrint.pm
 @dirrm lib/perl5/site_perl/MIME
 lib/perl5/man/man3/MIME::Base64.3.gz
 lib/perl5/man/man3/MIME::QuotedPrint.3.gz
-lib/perl5/site_perl/<$ARCH>-netbsd/auto/MIME/Base64/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/MIME/Base64/.packlist
