@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2002/07/31 00:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2002/08/01 01:02:25 mycroft Exp $
 
 DISTNAME=		mod_ssl-2.8.10-1.3.26
 PKGNAME=		ap-ssl-2.8.10
@@ -13,7 +13,7 @@ COMMENT=		SSL/TLS protocols module for Apache
 
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
-DEPENDS+=		apache-1.3.26nb3:../../www/apache
+DEPENDS+=		apache-1.3.26nb4:../../www/apache
 
 USE_BUILDLINK_ONLY=	YES
 
