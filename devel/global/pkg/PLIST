@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2000/04/21 06:46:13 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/09/09 14:58:50 wiz Exp $
 bin/btreeop
 bin/gctags
 bin/global
 bin/gtags
 bin/htags
-lib/libglodb.a
-lib/libglodb_pic.a
 lib/libgloutil.a
 lib/libgloutil_pic.a
-libdata/lint/llib-lglodb.ln
 libdata/lint/llib-lgloutil.ln
 man/cat1/btreeop.0
 man/cat1/gctags.0
