@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/20 14:33:30 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/03/01 19:00:11 xtraeme Exp $
 ${X11ROOT_PREFIX}/bin/Xmark
 ${X11ROOT_PREFIX}/bin/appres
 ${X11ROOT_PREFIX}/bin/atobm
@@ -508,6 +508,8 @@ ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg-it.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg.xml
+${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86-it.lst
+${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86.xml
 ${X11ROOT_PREFIX}/lib/X11/xkb/semantics/basic
 ${X11ROOT_PREFIX}/lib/X11/xkb/semantics/complete
 ${X11ROOT_PREFIX}/lib/X11/xkb/semantics/default

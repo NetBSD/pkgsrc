@@ -1,8 +1,8 @@
-/* $NetBSD*/
+/* $NetBSD: host.def,v 1.2 2005/03/01 19:00:11 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 
-#define XorgVersion 670
+#define XorgVersion 682
 
 #define MakeCmd @MAKE@
 #define HasGnuMake      NO

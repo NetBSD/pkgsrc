@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 17:36:24 wiz Exp $
+$NetBSD: distinfo,v 1.11 2005/03/01 19:00:11 xtraeme Exp $
 
-SHA1 (X11R6.8.1-src1.tar.gz) = 027d16317e07d9df166c0176a1f28b2614f38cc9
-RMD160 (X11R6.8.1-src1.tar.gz) = 3873afcaff4d5eece7b8243d26211c86c138c849
-Size (X11R6.8.1-src1.tar.gz) = 30562401 bytes
-SHA1 (X11R6.8.1-src3.tar.gz) = e17afc90b0c43f4f40b2ff7410f4ff5d4297de28
-RMD160 (X11R6.8.1-src3.tar.gz) = 46144cd9dd47569509fe7255c7148231d8098731
-Size (X11R6.8.1-src3.tar.gz) = 10014808 bytes
+SHA1 (X11R6.8.2-src1.tar.gz) = 23c60680274062a1db17f646a8388149309dc45c
+RMD160 (X11R6.8.2-src1.tar.gz) = bb170d7a11416c3d9bd1d23d461ba4cea9b1b2c8
+Size (X11R6.8.2-src1.tar.gz) = 32373802 bytes
+SHA1 (X11R6.8.2-src3.tar.gz) = de1569856b8023c58fc92bd0b3c8406214451fce
+RMD160 (X11R6.8.2-src3.tar.gz) = d3c90401ba81dfeea843373d0d0d386962b636a6
+Size (X11R6.8.2-src3.tar.gz) = 10379299 bytes
 SHA1 (patch-aa) = f8d35ceb67df85ca04d9567d66bf99c5d292d322
 SHA1 (patch-ab) = ae90c06b50d5d8b84054cc66beec0d0e3049d0aa
 SHA1 (patch-ac) = 1c12d9c5b976ac5c9b6667e0f3a98792eef433fc
