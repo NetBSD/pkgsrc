@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/04/10 23:31:39 rh Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/09/20 12:28:26 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_MAKE_BUILDLINK3_MK:=	${GNUSTEP_MAKE_BUILDLINK3_MK}+
@@ -18,6 +18,14 @@ BUILDLINK_PKGSRCDIR.gnustep-make?=	../../devel/gnustep-make
 
 BUILDLINK_LIBDIRS.gnustep-make=	lib ${GNUSTEP_BLDIRS}
 BUILDLINK_INCDIRS.gnustep-make=	include ${GNUSTEP_BIDIRS}
+
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/Local\/Headers$$/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/Local\/Library$$/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/Local\/Library\/Headers$$/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/Local\/Library\/Libraries$$/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library$$/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Headers$$/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Libraries$$/ { print "@comment " $$0; next; }
 
 .endif	# GNUSTEP_MAKE_BUILDLINK3_MK
 
