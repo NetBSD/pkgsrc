@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2002/10/30 10:44:27 tron Exp $
+# $NetBSD: Makefile.common,v 1.40 2002/10/30 11:34:41 tron Exp $
 #
 
 DISTNAME=		xscreensaver-4.06
@@ -53,4 +53,3 @@ CONFIGURE_ARGS+=	--without-kerberos
 
 .include "../../graphics/gle/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
-.include "../../mk/x11.buildlink2.mk"
