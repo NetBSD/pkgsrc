@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2004/06/28 14:50:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2004/09/21 16:57:02 jmmv Exp $
 #
 
-DISTNAME=		gnome-panel-2.6.2
+DISTNAME=		gnome-panel-2.8.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -22,8 +22,6 @@ PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
-
-BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.6.1
 
 GCONF2_SCHEMAS= 	clock.schemas
 GCONF2_SCHEMAS+=	fish.schemas
@@ -54,7 +52,6 @@ GCONF2_ENTRIES=		panel-default-setup.entries
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
-.include "../../x11/gnome2-control-center/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
