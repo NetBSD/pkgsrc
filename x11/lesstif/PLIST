@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/18 10:50:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/08/20 10:37:37 markd Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -174,9 +174,9 @@ include/uil/UilDef.h
 include/uil/UilSymDef.h
 include/uil/UilSymGl.h
 include/uil/XmAppl.uil
-lib/LessTif/config/LessTif.rules
-lib/LessTif/config/LessTif.tmpl
-lib/LessTif/config/LessTif.def
+lib/X11/config/LessTif.rules
+lib/X11/config/LessTif.tmpl
+lib/X11/config/LessTif.def
 lib/X11/app-defaults/Mwm
 lib/X11/mwm/README
 lib/X11/mwm/alt.map
