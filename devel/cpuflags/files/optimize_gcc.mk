@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.4 2003/06/08 12:44:10 abs Exp $
+# $Id: optimize_gcc.mk,v 1.5 2003/06/08 18:48:24 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -30,7 +30,7 @@ COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 PKG_EXCLUDE_RENAME_REGISTERS+=
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=lua4
 .if defined(USE_GCC3) # 1.6.1 needs this, but not 1.6T
-PKG_EXCLUDE_RENAME_REGISTERS+=perl5 perl58 ORBit
+PKG_EXCLUDE_RENAME_REGISTERS+=ORBit mozilla pango perl5 perl58
 .else
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=mozilla phoenix qt3-libs kdeedu3
 .endif
