@@ -1,0 +1,14 @@
+--- tools/cpmanpages.tcl	1998/03/08 02:16:19	1.1
++++ tools/cpmanpages.tcl	1998/03/08 02:16:44
+@@ -204,9 +204,9 @@
+         set targetFile  $targetDir/$manName.$extension
+         catch {file delete $targetFile}
+         if {[catch {
+-                link $firstFilePath $targetFile
++                link -sym $firstFilePath $targetFile
+             } msg] != 0} {
+-            puts stderr "error from: link $firstFilePath $targetFile"
++            puts stderr "error from: link -sym $firstFilePath $targetFile"
+             puts stderr "    $msg"
+         } else {
+             lappend created [file tail $targetFile]
