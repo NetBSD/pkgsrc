@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.90 1998/06/02 15:47:06 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.91 1998/06/03 17:48:33 tv Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -2095,6 +2095,7 @@ ${PLIST}: ${PLIST_SRC}
 			-e '/man\/${MANLANG}\/cat.*[^g][^z]$$/s/$$/.gz/' \
 			-e 's/<\$$ARCH>/'${ARCH}'/g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
+			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
 			>${PLIST} ; \
 	fi
 .else   # !MANZ
@@ -2106,6 +2107,7 @@ ${PLIST}: ${PLIST_SRC}
 			-e '/man\/${MANLANG}\/cat/s/\.gz$$//' \
 			-e 's/<\$$ARCH>/'${ARCH}'/g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
+			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
 			>${PLIST} ; \
 	fi
 .endif  # MANZ
