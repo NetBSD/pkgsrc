@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7655 2004/11/02 17:18:15 wiz Exp $
+$NetBSD: CHANGES,v 1.7656 2004/11/02 17:22:34 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5021,3 +5021,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtk-send-pr to 0.3.5 [xtraeme 2004-11-01]
 	Updated netatalk to 2.0.1 [markd 2004-11-02]
 	Updated liferea to 0.6.1 [minskim 2004-11-02]
+	Updated rt to 3.2.2 [cube 2004-11-02]
