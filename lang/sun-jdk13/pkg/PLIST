@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/18 00:37:15 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/12 16:31:46 skrll Exp $
 COPYRIGHT
 LICENSE
+LICENSE.fr
 README
 README.html
 bin/.java_wrapper
 bin/ControlPanel
+bin/HtmlConverter
 bin/appletviewer
 bin/awt_robot
 bin/extcheck
@@ -336,47 +338,6 @@ demo/jfc/Font2DTest/src/Font2DTest.java
 demo/jfc/Java2D/Java2Demo.html
 demo/jfc/Java2D/Java2Demo.jar
 demo/jfc/Java2D/README.txt
-demo/jfc/Java2D/fonts/A.ttf
-demo/jfc/Java2D/images/HotJava-16.gif
-demo/jfc/Java2D/images/bld.jpg
-demo/jfc/Java2D/images/boat.png
-demo/jfc/Java2D/images/box.gif
-demo/jfc/Java2D/images/boxwave.gif
-demo/jfc/Java2D/images/clone.gif
-demo/jfc/Java2D/images/clouds.jpg
-demo/jfc/Java2D/images/cupanim.gif
-demo/jfc/Java2D/images/duke.gif
-demo/jfc/Java2D/images/duke.png
-demo/jfc/Java2D/images/duke.running.gif
-demo/jfc/Java2D/images/dukeplug.gif
-demo/jfc/Java2D/images/fight.gif
-demo/jfc/Java2D/images/globe.gif
-demo/jfc/Java2D/images/java_logo.gif
-demo/jfc/Java2D/images/jumptojavastrip.png
-demo/jfc/Java2D/images/loop.gif
-demo/jfc/Java2D/images/looping.gif
-demo/jfc/Java2D/images/magnify.gif
-demo/jfc/Java2D/images/painting.gif
-demo/jfc/Java2D/images/print.gif
-demo/jfc/Java2D/images/remove.gif
-demo/jfc/Java2D/images/snooze.gif
-demo/jfc/Java2D/images/star7.gif
-demo/jfc/Java2D/images/start.gif
-demo/jfc/Java2D/images/start2.gif
-demo/jfc/Java2D/images/stop.gif
-demo/jfc/Java2D/images/stop2.gif
-demo/jfc/Java2D/images/surfing.gif
-demo/jfc/Java2D/images/thumbsup.gif
-demo/jfc/Java2D/images/tip.gif
-demo/jfc/Java2D/media/ambient.rmf
-demo/jfc/Java2D/media/bark.aiff
-demo/jfc/Java2D/media/bong.wav
-demo/jfc/Java2D/media/classical.rmf
-demo/jfc/Java2D/media/modern-rock.rmf
-demo/jfc/Java2D/media/sfx-medley.rmf
-demo/jfc/Java2D/media/spacemusic.au
-demo/jfc/Java2D/media/trance.rmf
-demo/jfc/Java2D/media/trippygaia1.mid
 demo/jfc/Java2D/src/AnimatingControlsSurface.java
 demo/jfc/Java2D/src/AnimatingSurface.java
 demo/jfc/Java2D/src/CloningFeature.java
@@ -427,7 +388,6 @@ demo/jfc/Java2D/src/demos/Lines/Joins.java
 demo/jfc/Java2D/src/demos/Lines/LineAnim.java
 demo/jfc/Java2D/src/demos/Mix/Balls.java
 demo/jfc/Java2D/src/demos/Mix/BezierScroller.java
-demo/jfc/Java2D/src/demos/Mix/JavaMedia.java
 demo/jfc/Java2D/src/demos/Mix/Stars3D.java
 demo/jfc/Java2D/src/demos/Paint/GradAnim.java
 demo/jfc/Java2D/src/demos/Paint/Gradient.java
@@ -539,193 +499,6 @@ demo/jfc/SwingSet2/README.txt
 demo/jfc/SwingSet2/SwingSet2.html
 demo/jfc/SwingSet2/SwingSet2.jar
 demo/jfc/SwingSet2/SwingSet2Plugin.html
-demo/jfc/SwingSet2/resources/ant.html
-demo/jfc/SwingSet2/resources/bug.html
-demo/jfc/SwingSet2/resources/images/About.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/COPYRIGHT
-demo/jfc/SwingSet2/resources/images/ImageClub/food/apple.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/asparagus.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/banana.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/broccoli.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/cantaloupe.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/carrot.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/corn.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/grapefruit.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/grapes.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/kiwi.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/onion.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/peach.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/pear.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/pepper.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/pickle.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/pineapple.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/raspberry.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/strawberry.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/tomato.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/food/watermelon.jpg
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/cab.gif
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/cab_small.gif
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/fish.gif
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/fish_small.gif
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/moon.gif
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/moon_small.gif
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/sun.gif
-demo/jfc/SwingSet2/resources/images/ImageClub/misc/sun_small.gif
-demo/jfc/SwingSet2/resources/images/Octavo/COPYRIGHT
-demo/jfc/SwingSet2/resources/images/Octavo/ant.jpg
-demo/jfc/SwingSet2/resources/images/Octavo/book.jpg
-demo/jfc/SwingSet2/resources/images/Octavo/bug.jpg
-demo/jfc/SwingSet2/resources/images/Octavo/bug2.jpg
-demo/jfc/SwingSet2/resources/images/Octavo/crest.jpg
-demo/jfc/SwingSet2/resources/images/Octavo/king.jpg
-demo/jfc/SwingSet2/resources/images/Octavo/micro.jpg
-demo/jfc/SwingSet2/resources/images/Octavo/seaweed.jpg
-demo/jfc/SwingSet2/resources/images/Splash.jpg
-demo/jfc/SwingSet2/resources/images/buttons/b1.gif
-demo/jfc/SwingSet2/resources/images/buttons/b1d.gif
-demo/jfc/SwingSet2/resources/images/buttons/b1p.gif
-demo/jfc/SwingSet2/resources/images/buttons/b1r.gif
-demo/jfc/SwingSet2/resources/images/buttons/b2.gif
-demo/jfc/SwingSet2/resources/images/buttons/b2d.gif
-demo/jfc/SwingSet2/resources/images/buttons/b2p.gif
-demo/jfc/SwingSet2/resources/images/buttons/b2r.gif
-demo/jfc/SwingSet2/resources/images/buttons/b3.gif
-demo/jfc/SwingSet2/resources/images/buttons/b3d.gif
-demo/jfc/SwingSet2/resources/images/buttons/b3p.gif
-demo/jfc/SwingSet2/resources/images/buttons/b3r.gif
-demo/jfc/SwingSet2/resources/images/buttons/bl.gif
-demo/jfc/SwingSet2/resources/images/buttons/bldn.gif
-demo/jfc/SwingSet2/resources/images/buttons/bm.gif
-demo/jfc/SwingSet2/resources/images/buttons/bmdn.gif
-demo/jfc/SwingSet2/resources/images/buttons/br.gif
-demo/jfc/SwingSet2/resources/images/buttons/brdn.gif
-demo/jfc/SwingSet2/resources/images/buttons/c.gif
-demo/jfc/SwingSet2/resources/images/buttons/cb.gif
-demo/jfc/SwingSet2/resources/images/buttons/cbr.gif
-demo/jfc/SwingSet2/resources/images/buttons/cbrs.gif
-demo/jfc/SwingSet2/resources/images/buttons/cbs.gif
-demo/jfc/SwingSet2/resources/images/buttons/cdn.gif
-demo/jfc/SwingSet2/resources/images/buttons/ml.gif
-demo/jfc/SwingSet2/resources/images/buttons/mldn.gif
-demo/jfc/SwingSet2/resources/images/buttons/mr.gif
-demo/jfc/SwingSet2/resources/images/buttons/mrdn.gif
-demo/jfc/SwingSet2/resources/images/buttons/rb.gif
-demo/jfc/SwingSet2/resources/images/buttons/rbp.gif
-demo/jfc/SwingSet2/resources/images/buttons/rbr.gif
-demo/jfc/SwingSet2/resources/images/buttons/rbrs.gif
-demo/jfc/SwingSet2/resources/images/buttons/rbs.gif
-demo/jfc/SwingSet2/resources/images/buttons/tl.gif
-demo/jfc/SwingSet2/resources/images/buttons/tldn.gif
-demo/jfc/SwingSet2/resources/images/buttons/tm.gif
-demo/jfc/SwingSet2/resources/images/buttons/tmdn.gif
-demo/jfc/SwingSet2/resources/images/buttons/toggle.gif
-demo/jfc/SwingSet2/resources/images/buttons/toggledn.gif
-demo/jfc/SwingSet2/resources/images/buttons/tr.gif
-demo/jfc/SwingSet2/resources/images/buttons/trdn.gif
-demo/jfc/SwingSet2/resources/images/combobox/brenteyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/brenthair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/brentmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/georgeseyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/georgeshair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/georgesmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/hanseyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/hanshair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/hansmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/howardeyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/howardhair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/howardmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jameseyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jameshair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jamesmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jeffeyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jeffhair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jeffmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/joneyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jonhair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/jonmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/laraeyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/larahair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/laramouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/larryeyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/larryhair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/larrymouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/lisaeyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/lisahair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/lisamouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/michaeleyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/michaelhair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/michaelmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/philipeyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/philiphair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/philipmouth.jpg
-demo/jfc/SwingSet2/resources/images/combobox/scotteyes.jpg
-demo/jfc/SwingSet2/resources/images/combobox/scotthair.jpg
-demo/jfc/SwingSet2/resources/images/combobox/scottmouth.jpg
-demo/jfc/SwingSet2/resources/images/filechooser/find.gif
-demo/jfc/SwingSet2/resources/images/filechooser/gifIcon.gif
-demo/jfc/SwingSet2/resources/images/filechooser/help.gif
-demo/jfc/SwingSet2/resources/images/filechooser/jpgIcon.jpg
-demo/jfc/SwingSet2/resources/images/htmldemo/back.jpg
-demo/jfc/SwingSet2/resources/images/htmldemo/forward.jpg
-demo/jfc/SwingSet2/resources/images/htmldemo/header.jpg
-demo/jfc/SwingSet2/resources/images/list/blue.gif
-demo/jfc/SwingSet2/resources/images/list/cyan.gif
-demo/jfc/SwingSet2/resources/images/list/gray.gif
-demo/jfc/SwingSet2/resources/images/list/green.gif
-demo/jfc/SwingSet2/resources/images/list/magenta.gif
-demo/jfc/SwingSet2/resources/images/list/red.gif
-demo/jfc/SwingSet2/resources/images/list/yellow.gif
-demo/jfc/SwingSet2/resources/images/optionpane/bottle.gif
-demo/jfc/SwingSet2/resources/images/optionpane/ibd.gif
-demo/jfc/SwingSet2/resources/images/optionpane/ibu.gif
-demo/jfc/SwingSet2/resources/images/scrollpane/COPYRIGHT
-demo/jfc/SwingSet2/resources/images/scrollpane/colheader.jpg
-demo/jfc/SwingSet2/resources/images/scrollpane/crayons.jpg
-demo/jfc/SwingSet2/resources/images/scrollpane/lowerleft.jpg
-demo/jfc/SwingSet2/resources/images/scrollpane/rowheader.jpg
-demo/jfc/SwingSet2/resources/images/scrollpane/upperleft.jpg
-demo/jfc/SwingSet2/resources/images/scrollpane/upperright.jpg
-demo/jfc/SwingSet2/resources/images/splitpane/README
-demo/jfc/SwingSet2/resources/images/splitpane/earth.jpg
-demo/jfc/SwingSet2/resources/images/splitpane/moon.jpg
-demo/jfc/SwingSet2/resources/images/tabbedpane/blake.gif
-demo/jfc/SwingSet2/resources/images/tabbedpane/brooke.gif
-demo/jfc/SwingSet2/resources/images/tabbedpane/david.gif
-demo/jfc/SwingSet2/resources/images/tabbedpane/ewan.gif
-demo/jfc/SwingSet2/resources/images/tabbedpane/ewan.jpg
-demo/jfc/SwingSet2/resources/images/tabbedpane/hania.jpg
-demo/jfc/SwingSet2/resources/images/tabbedpane/laine.jpg
-demo/jfc/SwingSet2/resources/images/tabbedpane/matthew.gif
-demo/jfc/SwingSet2/resources/images/tabbedpane/stephen.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JButton.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JColorChooser.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JComboBox.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JDesktop.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JDialog.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JEditorPane.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JFileChooser.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JList.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JMenu.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JOptionPane.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JProgressBar.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JRadioButton.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JScrollBar.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JScrollPane.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JSlider.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JSplitPane.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JTabbedPane.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JTable.gif
-demo/jfc/SwingSet2/resources/images/toolbar/JTree.gif
-demo/jfc/SwingSet2/resources/images/toolbar/ToolTip.gif
-demo/jfc/SwingSet2/resources/images/tooltip/cow.gif
-demo/jfc/SwingSet2/resources/index.html
-demo/jfc/SwingSet2/resources/king.html
-demo/jfc/SwingSet2/resources/preface.html
-demo/jfc/SwingSet2/resources/seaweed.html
-demo/jfc/SwingSet2/resources/swingset.properties
-demo/jfc/SwingSet2/resources/swingset_zh_CN.properties
-demo/jfc/SwingSet2/resources/title.html
-demo/jfc/SwingSet2/resources/tree.txt
 demo/jfc/SwingSet2/src/AquaTheme.java
 demo/jfc/SwingSet2/src/BezierAnimationPanel.java
 demo/jfc/SwingSet2/src/ButtonDemo.java
@@ -771,6 +544,15 @@ demo/jpda/examples.jar
 demo/sound/JavaSound.html
 demo/sound/JavaSound.jar
 demo/sound/README.txt
+demo/sound/media/ambient.rmf
+demo/sound/media/bark.aiff
+demo/sound/media/bong.wav
+demo/sound/media/classical.rmf
+demo/sound/media/modern-rock.rmf
+demo/sound/media/sfx-medley.rmf
+demo/sound/media/spacemusic.au
+demo/sound/media/trance.rmf
+demo/sound/media/trippygaia1.mid
 demo/sound/src/CapturePlayback.java
 demo/sound/src/ControlContext.java
 demo/sound/src/Groove.java
@@ -779,12 +561,6 @@ demo/sound/src/JavaSoundApplet.java
 demo/sound/src/Juke.java
 demo/sound/src/MidiSynth.java
 demo/sound/src/TempoDial.java
-include/jawt.h
-include/jni.h
-include/jvmdi.h
-include/jvmpi.h
-include/linux/jawt_md.h
-include/linux/jni_md.h
 include-old/StubPreamble.h
 include-old/alloc_cache.h
 include-old/bag.h
@@ -806,7 +582,6 @@ include-old/java_lang_ThreadGroup.h
 include-old/jawt.h
 include-old/jit.h
 include-old/jmath.h
-include-old/jni.h
 include-old/jvm.h
 include-old/jvmdi.h
 include-old/jvmpi.h
@@ -816,7 +591,6 @@ include-old/linux/hpi_md.h
 include-old/linux/io_md.h
 include-old/linux/jawt_md.h
 include-old/linux/jmath_md.h
-include-old/linux/jni_md.h
 include-old/linux/jvm_md.h
 include-old/linux/miscdefs_md.h
 include-old/linux/path_md.h
@@ -842,12 +616,37 @@ include-old/utf.h
 include-old/util.h
 include-old/vmprofiler.h
 include-old/wrap.h
+include/jawt.h
+include/jni.h
+include/jvmdi.h
+include/jvmpi.h
+include/linux/jawt_md.h
+include/linux/jni_md.h
 lib/dt.jar
+lib/htmlconverter.jar
 lib/i386/libdt_socket.so
 lib/i386/libjdwp.so
 lib/ir.idl
 lib/orb.idl
 lib/tools.jar
+man/ja
+man/ja_JP.eucJP/man1/appletviewer.1
+man/ja_JP.eucJP/man1/extcheck.1
+man/ja_JP.eucJP/man1/jar.1
+man/ja_JP.eucJP/man1/jarsigner.1
+man/ja_JP.eucJP/man1/java.1
+man/ja_JP.eucJP/man1/javac.1
+man/ja_JP.eucJP/man1/javadoc.1
+man/ja_JP.eucJP/man1/javah.1
+man/ja_JP.eucJP/man1/javap.1
+man/ja_JP.eucJP/man1/jdb.1
+man/ja_JP.eucJP/man1/keytool.1
+man/ja_JP.eucJP/man1/native2ascii.1
+man/ja_JP.eucJP/man1/rmic.1
+man/ja_JP.eucJP/man1/rmid.1
+man/ja_JP.eucJP/man1/rmiregistry.1
+man/ja_JP.eucJP/man1/serialver.1
+man/ja_JP.eucJP/man1/tnameserv.1
 man/man1/appletviewer.1
 man/man1/extcheck.1
 man/man1/jar.1
@@ -866,129 +665,112 @@ man/man1/rmiregistry.1
 man/man1/serialver.1
 man/man1/tnameserv.1
 src.jar
-@dirrm bin/i386/green_threads
-@dirrm bin/i386/native_threads
-@dirrm bin/i386
-@dirrm bin
-@dirrm demo/applets/Animator/audio
-@dirrm demo/applets/Animator/images/Beans
-@dirrm demo/applets/Animator/images/SimpleAnimation
-@dirrm demo/applets/Animator/images
-@dirrm demo/applets/Animator
-@dirrm demo/applets/ArcTest
-@dirrm demo/applets/BarChart
-@dirrm demo/applets/Blink
-@dirrm demo/applets/CardTest
-@dirrm demo/applets/Clock
-@dirrm demo/applets/DitherTest
-@dirrm demo/applets/DrawTest
-@dirrm demo/applets/Fractal
-@dirrm demo/applets/GraphLayout/audio
-@dirrm demo/applets/GraphLayout
-@dirrm demo/applets/GraphicsTest
-@dirrm demo/applets/ImageMap/audio
-@dirrm demo/applets/ImageMap/images
-@dirrm demo/applets/ImageMap
-@dirrm demo/applets/JumpingBox/sounds
-@dirrm demo/applets/JumpingBox
-@dirrm demo/applets/MoleculeViewer/models
-@dirrm demo/applets/MoleculeViewer
-@dirrm demo/applets/NervousText
-@dirrm demo/applets/SimpleGraph
-@dirrm demo/applets/SortDemo
-@dirrm demo/applets/SpreadSheet
-@dirrm demo/applets/SymbolTest
-@dirrm demo/applets/TicTacToe/audio
-@dirrm demo/applets/TicTacToe/images
-@dirrm demo/applets/TicTacToe
-@dirrm demo/applets/WireFrame/models
-@dirrm demo/applets/WireFrame
-@dirrm demo/applets
-@dirrm demo/jfc/DBDemos/CreateCoffees/MSAccess
-@dirrm demo/jfc/DBDemos/CreateCoffees/Sybase
-@dirrm demo/jfc/DBDemos/CreateCoffees
-@dirrm demo/jfc/DBDemos/CreateSuppliers/MSAccess
-@dirrm demo/jfc/DBDemos/CreateSuppliers/Sybase
-@dirrm demo/jfc/DBDemos/CreateSuppliers
-@dirrm demo/jfc/DBDemos/InsertCoffees/SQLSrvr
-@dirrm demo/jfc/DBDemos/InsertCoffees/Sybase
-@dirrm demo/jfc/DBDemos/InsertCoffees
-@dirrm demo/jfc/DBDemos/InsertSuppliers/MSAccess
-@dirrm demo/jfc/DBDemos/InsertSuppliers/Sybase
-@dirrm demo/jfc/DBDemos/InsertSuppliers
-@dirrm demo/jfc/DBDemos/JavaDB
-@dirrm demo/jfc/DBDemos
-@dirrm demo/jfc/FileChooserDemo/images
-@dirrm demo/jfc/FileChooserDemo/src
-@dirrm demo/jfc/FileChooserDemo
-@dirrm demo/jfc/Font2DTest/resources
-@dirrm demo/jfc/Font2DTest/src
-@dirrm demo/jfc/Font2DTest
-@dirrm demo/jfc/Java2D/fonts
-@dirrm demo/jfc/Java2D/images
-@dirrm demo/jfc/Java2D/media
-@dirrm demo/jfc/Java2D/src/demos/Arcs_Curves
-@dirrm demo/jfc/Java2D/src/demos/Clipping
-@dirrm demo/jfc/Java2D/src/demos/Colors
-@dirrm demo/jfc/Java2D/src/demos/Composite
-@dirrm demo/jfc/Java2D/src/demos/Fonts
-@dirrm demo/jfc/Java2D/src/demos/Images
-@dirrm demo/jfc/Java2D/src/demos/Lines
-@dirrm demo/jfc/Java2D/src/demos/Mix
-@dirrm demo/jfc/Java2D/src/demos/Paint
-@dirrm demo/jfc/Java2D/src/demos/Paths
+@dirrm man/man1
+@dirrm man/ja_JP.eucJP/man1
+@dirrm man/ja_JP.eucJP
+@dirrm man
+@dirrm lib/i386
+@dirrm lib
+@dirrm include/linux
+@dirrm include-old/linux
+@dirrm include-old
+@dirrm include
+@dirrm demo/sound/src
+@dirrm demo/sound/media
+@dirrm demo/sound
+@dirrm demo/jpda
+@dirrm demo/jfc/TableExample/src
+@dirrm demo/jfc/TableExample
+@dirrm demo/jfc/SwingSet2/src
+@dirrm demo/jfc/SwingSet2
+@dirrm demo/jfc/SwingApplet/src
+@dirrm demo/jfc/SwingApplet
+@dirrm demo/jfc/Stylepad/src
+@dirrm demo/jfc/Stylepad/resources
+@dirrm demo/jfc/Stylepad
+@dirrm demo/jfc/SimpleExample/src
+@dirrm demo/jfc/SimpleExample
+@dirrm demo/jfc/SampleTree/src
+@dirrm demo/jfc/SampleTree/images
+@dirrm demo/jfc/SampleTree
+@dirrm demo/jfc/Notepad/src
+@dirrm demo/jfc/Notepad/resources
+@dirrm demo/jfc/Notepad
+@dirrm demo/jfc/Metalworks/src
+@dirrm demo/jfc/Metalworks/images
+@dirrm demo/jfc/Metalworks/HelpFiles
+@dirrm demo/jfc/Metalworks
 @dirrm demo/jfc/Java2D/src/demos/Transforms
+@dirrm demo/jfc/Java2D/src/demos/Paths
+@dirrm demo/jfc/Java2D/src/demos/Paint
+@dirrm demo/jfc/Java2D/src/demos/Mix
+@dirrm demo/jfc/Java2D/src/demos/Lines
+@dirrm demo/jfc/Java2D/src/demos/Images
+@dirrm demo/jfc/Java2D/src/demos/Fonts
+@dirrm demo/jfc/Java2D/src/demos/Composite
+@dirrm demo/jfc/Java2D/src/demos/Colors
+@dirrm demo/jfc/Java2D/src/demos/Clipping
+@dirrm demo/jfc/Java2D/src/demos/Arcs_Curves
 @dirrm demo/jfc/Java2D/src/demos
 @dirrm demo/jfc/Java2D/src
 @dirrm demo/jfc/Java2D
-@dirrm demo/jfc/Metalworks/HelpFiles
-@dirrm demo/jfc/Metalworks/images
-@dirrm demo/jfc/Metalworks/src
-@dirrm demo/jfc/Metalworks
-@dirrm demo/jfc/Notepad/resources
-@dirrm demo/jfc/Notepad/src
-@dirrm demo/jfc/Notepad
-@dirrm demo/jfc/SampleTree/images
-@dirrm demo/jfc/SampleTree/src
-@dirrm demo/jfc/SampleTree
-@dirrm demo/jfc/SimpleExample/src
-@dirrm demo/jfc/SimpleExample
-@dirrm demo/jfc/Stylepad/resources
-@dirrm demo/jfc/Stylepad/src
-@dirrm demo/jfc/Stylepad
-@dirrm demo/jfc/SwingApplet/src
-@dirrm demo/jfc/SwingApplet
-@dirrm demo/jfc/SwingSet2/resources/images/ImageClub/food
-@dirrm demo/jfc/SwingSet2/resources/images/ImageClub/misc
-@dirrm demo/jfc/SwingSet2/resources/images/ImageClub
-@dirrm demo/jfc/SwingSet2/resources/images/Octavo
-@dirrm demo/jfc/SwingSet2/resources/images/buttons
-@dirrm demo/jfc/SwingSet2/resources/images/combobox
-@dirrm demo/jfc/SwingSet2/resources/images/filechooser
-@dirrm demo/jfc/SwingSet2/resources/images/htmldemo
-@dirrm demo/jfc/SwingSet2/resources/images/list
-@dirrm demo/jfc/SwingSet2/resources/images/optionpane
-@dirrm demo/jfc/SwingSet2/resources/images/scrollpane
-@dirrm demo/jfc/SwingSet2/resources/images/splitpane
-@dirrm demo/jfc/SwingSet2/resources/images/tabbedpane
-@dirrm demo/jfc/SwingSet2/resources/images/toolbar
-@dirrm demo/jfc/SwingSet2/resources/images/tooltip
-@dirrm demo/jfc/SwingSet2/resources/images
-@dirrm demo/jfc/SwingSet2/resources
-@dirrm demo/jfc/SwingSet2/src
-@dirrm demo/jfc/SwingSet2
-@dirrm demo/jfc/TableExample/src
-@dirrm demo/jfc/TableExample
+@dirrm demo/jfc/Font2DTest/src
+@dirrm demo/jfc/Font2DTest/resources
+@dirrm demo/jfc/Font2DTest
+@dirrm demo/jfc/FileChooserDemo/src
+@dirrm demo/jfc/FileChooserDemo/images
+@dirrm demo/jfc/FileChooserDemo
+@dirrm demo/jfc/DBDemos/JavaDB
+@dirrm demo/jfc/DBDemos/InsertSuppliers/Sybase
+@dirrm demo/jfc/DBDemos/InsertSuppliers/MSAccess
+@dirrm demo/jfc/DBDemos/InsertSuppliers
+@dirrm demo/jfc/DBDemos/InsertCoffees/Sybase
+@dirrm demo/jfc/DBDemos/InsertCoffees/SQLSrvr
+@dirrm demo/jfc/DBDemos/InsertCoffees
+@dirrm demo/jfc/DBDemos/CreateSuppliers/Sybase
+@dirrm demo/jfc/DBDemos/CreateSuppliers/MSAccess
+@dirrm demo/jfc/DBDemos/CreateSuppliers
+@dirrm demo/jfc/DBDemos/CreateCoffees/Sybase
+@dirrm demo/jfc/DBDemos/CreateCoffees/MSAccess
+@dirrm demo/jfc/DBDemos/CreateCoffees
+@dirrm demo/jfc/DBDemos
 @dirrm demo/jfc
-@dirrm demo/jpda
-@dirrm demo/sound/src
-@dirrm demo/sound
+@dirrm demo/applets/WireFrame/models
+@dirrm demo/applets/WireFrame
+@dirrm demo/applets/TicTacToe/images
+@dirrm demo/applets/TicTacToe/audio
+@dirrm demo/applets/TicTacToe
+@dirrm demo/applets/SymbolTest
+@dirrm demo/applets/SpreadSheet
+@dirrm demo/applets/SortDemo
+@dirrm demo/applets/SimpleGraph
+@dirrm demo/applets/NervousText
+@dirrm demo/applets/MoleculeViewer/models
+@dirrm demo/applets/MoleculeViewer
+@dirrm demo/applets/JumpingBox/sounds
+@dirrm demo/applets/JumpingBox
+@dirrm demo/applets/ImageMap/images
+@dirrm demo/applets/ImageMap/audio
+@dirrm demo/applets/ImageMap
+@dirrm demo/applets/GraphicsTest
+@dirrm demo/applets/GraphLayout/audio
+@dirrm demo/applets/GraphLayout
+@dirrm demo/applets/Fractal
+@dirrm demo/applets/DrawTest
+@dirrm demo/applets/DitherTest
+@dirrm demo/applets/Clock
+@dirrm demo/applets/CardTest
+@dirrm demo/applets/Blink
+@dirrm demo/applets/BarChart
+@dirrm demo/applets/ArcTest
+@dirrm demo/applets/Animator/images/SimpleAnimation
+@dirrm demo/applets/Animator/images/Beans
+@dirrm demo/applets/Animator/images
+@dirrm demo/applets/Animator/audio
+@dirrm demo/applets/Animator
+@dirrm demo/applets
 @dirrm demo
-@dirrm include/linux
-@dirrm include
-@dirrm include-old/linux
-@dirrm include-old
-@dirrm lib/i386
-@dirrm lib
-@dirrm man/man1
-@dirrm man
+@dirrm bin/i386/native_threads
+@dirrm bin/i386/green_threads
+@dirrm bin/i386
+@dirrm bin
