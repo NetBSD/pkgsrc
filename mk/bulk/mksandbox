@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.21 2003/07/29 20:31:05 seb Exp $
+# $NetBSD: mksandbox,v 1.22 2003/07/30 09:14:04 seb Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -44,7 +44,6 @@ src=/usr/src
 
 kernel=""
 sandboxDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
-
 sandboxEmptyDirs="/var/log /var/spool/mqueue"
 
 opsys=`uname -s`
