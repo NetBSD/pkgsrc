@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 00:36:31 wiz Exp $
+
+--- ../../old/libirc-0.2/src/irc_core.h	Wed Jan  5 12:20:56 2000
++++ src/irc_core.h	Tue Jan 11 02:04:54 2000
+@@ -20,7 +20,9 @@
+ #define __IRC_CORE_H__
+ 
+ #include <glib.h>
+-#include <sys/select.h>
++#include <sys/types.h>
++#include <sys/time.h>
++#include <unistd.h>
+ #include <btypes.h>
+ 
+ /* Macros and constants */
