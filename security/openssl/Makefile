@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.5 1999/06/08 16:58:26 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/06/10 05:08:02 tv Exp $
 #
 
-DISTNAME=		openssl-0.9.2c
+DISTNAME=		openssl-0.9.2b
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssl.org/source/
+
+PATCH_SITES=		${MASTER_SITES}
+PATCHFILES=		openssl-0.9.2b-rsaoaep.patch
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
