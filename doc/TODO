@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2936 2005/01/20 11:49:12 adam Exp $
+$NetBSD: TODO,v 1.2937 2005/01/20 12:07:26 salo Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ Suggested package updates
 	o nget-0.27.1
 	o nhc98-1.17
 	o nicotine-1.0.8
-	o nmap-3.78
 	o nn-6.6.5
 	o nrg2iso-0.4
 	o ns-flash-6.0.79
