@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.184 2001/09/04 13:33:56 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.185 2001/09/04 13:50:02 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -96,6 +96,19 @@ is a description of all the terminology used within this document:
    in several examples within this document, but as this document itself
    is managed by CVS, it can't list the RCS IDs in plaintext. Instead, the
    $s are written as <$>, resulting in <$>NetBSD<$> and <$>Id<$>.
+
+
+ 0.3 Typography
+ ==============
+
+Right now this document is written in plain ASCII text, and there's not
+much typography applied here. Future versions may move to something like
+HTML or DocBook, which have better ways theres.
+
+When giving examples for comands, shell prompts are used to show if the
+command should/can be issued as root, or if "normal" user privileges are
+sufficient. We use a "#" for root's shell prompt, and a "%" for users'
+shell prompt, assuming they use the C-shell or tcsh.
 
 
 ====================
