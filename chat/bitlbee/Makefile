@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/09/04 15:47:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/05 23:05:58 xtraeme Exp $
 #
 
-DISTNAME=		bitlbee-0.80
+DISTNAME=		bitlbee-0.82
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -22,7 +22,9 @@ CONFIGURE_ARGS+=	--config=${STATEDIR}
 
 PKG_SYSCONFSUBDIR=	bitlbee
 CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
+CONF_FILES+=		${EGDIR}/bitlbee.conf ${PKG_SYSCONFDIR}/bitlbee.conf
 
+EGDIR=			${PREFIX}/share/examples/bitlbee
 DATADIR=		${PREFIX}/share/bitlbee
 DOCDIR=			${PREFIX}/share/doc/bitlbee
 STATEDIR=		/var/db/bitlbee
@@ -32,7 +34,8 @@ OWN_DIRS_PERMS=		${STATEDIR} bitlbee nobody 700
 PKG_USERS=		bitlbee:nobody::Bitlbee\\ user:/var/db/bitlbee
 
 do-install:
-	${INSTALL_DATA_DIR} ${DATADIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DATADIR} ${DOCDIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/bitlbee.conf ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/bitlbee ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/help.txt ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/motd.txt ${DATADIR}
@@ -42,5 +45,7 @@ do-install:
 .endfor
 .undef f
 
-.include "../../devel/glib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../net/libsoup/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

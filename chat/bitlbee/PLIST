@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/02 09:03:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/05 23:05:58 xtraeme Exp $
 man/man8/bitlbee.8
 sbin/bitlbee
+share/examples/bitlbee/bitlbee.conf
 share/bitlbee/help.txt
 share/bitlbee/motd.txt
 share/doc/bitlbee/AUTHORS
@@ -8,4 +9,5 @@ share/doc/bitlbee/FAQ
 share/doc/bitlbee/README
 share/doc/bitlbee/TODO
 @dirrm share/doc/bitlbee
+@dirrm share/examples/bitlbee
 @dirrm share/bitlbee
