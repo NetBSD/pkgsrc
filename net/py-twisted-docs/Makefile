@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/30 13:33:44 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/30 13:37:47 recht Exp $
 #
 
 DISTNAME=		${TWISTED_DISTNAME}
@@ -26,5 +26,5 @@ do-install:
 	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
-.include "../../wip/py-twisted/Makefile.common"
+.include "../../net/py-twisted/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
