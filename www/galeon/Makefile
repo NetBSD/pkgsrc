@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2003/11/27 15:03:36 abs Exp $
+# $NetBSD: Makefile,v 1.56 2003/12/10 18:22:45 abs Exp $
 
 DISTNAME=	galeon-1.2.13
 CATEGORIES=	www
@@ -53,8 +53,13 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 pre-install:
 	${GCONF_PREFIX}/bin/gconftool --shutdown
 
+.if !empty(CC_VERSION:Mgcc-3*)
+# Workaround for gcc3 build issue
 post-buildlink:
-	perl -pi -e 's:(exec \$$cmd):$$1 -lstdc++ -lm:' work/.buildlink/bin/cc
+	${CP} work/.buildlink/bin/cc work/.buildlink/bin/cc.orig
+	${SED} 's:\(exec \$$cmd\):\1 -lstdc++ -lm:' work/.buildlink/bin/cc.orig\
+						> work/.buildlink/bin/cc
+.endif
 
 post-install:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA_PREFIX@,${MOZILLA_PREFIX},g" ${FILESDIR}/galeon.in > ${PREFIX}/bin/galeon
