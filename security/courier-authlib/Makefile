@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/10 03:21:30 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/10 03:50:03 jlam Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	courier-authlib-0.53
-COMMENT=	Courier Authentication Library
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	jlam@NetBSD.org
+COMMENT=	Courier Authentication Library
+HOMEPAGE=	http://www.courier-mta.org/authlib/
 
 CONFLICTS+=	courier-auth-[0-9]*
 CONFLICTS+=	courier-authldap-[0-9]*
