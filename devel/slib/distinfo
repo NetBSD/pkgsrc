@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:46 wiz Exp $
 
-MD5 (slib2c8.zip) = 26d74cbbaea3be998ff639c4429dbacb
+SHA1 (slib2c8.zip) = 84bd4a0d5f489bd5f81d9c591f5a6158a9b90f65
+Size (slib2c8.zip) = 567803 bytes
 SHA1 (patch-aa) = 272923dcaed2dcc0fae75fd523cfb40edeab1762

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:33 wiz Exp $
 
 SHA1 (oaf-0.6.5.tar.gz) = 50a78e04ceedb16591cb4f03ee63ee28c53a5b1c
+Size (oaf-0.6.5.tar.gz) = 454586 bytes
 SHA1 (patch-aa) = 19bd9038ffb933630c3d8040d7a34a54112814bb
 SHA1 (patch-ab) = db5966e5e649315b96f99e3aeb06a55dd2582ed5
 SHA1 (patch-ac) = aab19adb68c1969f7714e6ee0fe918e1905bd60d

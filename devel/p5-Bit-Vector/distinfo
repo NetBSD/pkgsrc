@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:34 wiz Exp $
 
-MD5 (Bit-Vector-5.8.tar.gz) = 733b61be1fe3bc9dd466aab8d800d2d4
+SHA1 (Bit-Vector-5.8.tar.gz) = 80b2006b5e0dc6e88e78835ecc1a2052b90b841e
+Size (Bit-Vector-5.8.tar.gz) = 112380 bytes

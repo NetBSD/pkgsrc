@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:16 wiz Exp $
 
-MD5 (ElectricFence-2.0.5.tar.gz) = d6a8459d2e9ef955eb4d3f76004617f8
+SHA1 (ElectricFence-2.0.5.tar.gz) = c78be01622e814f2a8239981a608b6f635e0288a
+Size (ElectricFence-2.0.5.tar.gz) = 24504 bytes
 SHA1 (patch-aa) = 4bf399ac54af53bd564158d3a55925ab1b38f551
 SHA1 (patch-ab) = 9adc0ebf72815829edc2e197a7ed73870c833cd4

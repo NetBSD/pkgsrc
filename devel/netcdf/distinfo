@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:31 wiz Exp $
 
-MD5 (netcdf-3.4.tar.Z) = 2d7f6d6f7f6a67500d176440f3dea485
+SHA1 (netcdf-3.4.tar.Z) = 95e36b8a405e4584eac4e2f58a867c53cda6779f
+Size (netcdf-3.4.tar.Z) = 1216131 bytes
 SHA1 (patch-aa) = 0aca001ad6c4d20436a2394bd6142f837c1bccc1
 SHA1 (patch-ab) = fabbbd94145d04f5ea823f5e3da9877789089811
 SHA1 (patch-ac) = 893888531d177b16fbb599fc5f4d16904601fc12

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:23 wiz Exp $
 
-MD5 (hdf5-1.4.0.tar.gz) = acc74bbe3ca2d0c85d2ad88116681dc5
+SHA1 (hdf5-1.4.0.tar.gz) = 79e1ea57be881f9aa0d63536ea264f21bff0e350
+Size (hdf5-1.4.0.tar.gz) = 2888740 bytes
 SHA1 (patch-aa) = b46bb91c2865229381d69f4927feb1698f8df1a8

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:22 wiz Exp $
 
-MD5 (guile-oops-0.9.0.tar.gz) = 42112e023e2f05d713bf27e35a24986c
+SHA1 (guile-oops-0.9.0.tar.gz) = c5d1473f2e555002c710751db6b5149b3877f339
+Size (guile-oops-0.9.0.tar.gz) = 448313 bytes

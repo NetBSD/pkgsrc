@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:17 wiz Exp $
 
-MD5 (ffcall-1.8.tar.gz) = 5ec9fa72c11fa0c62d08ca55fce2a7dd
+SHA1 (ffcall-1.8.tar.gz) = 24d39dfc7fb5e80cf659b2ed5f443c77251c1350
+Size (ffcall-1.8.tar.gz) = 603319 bytes
