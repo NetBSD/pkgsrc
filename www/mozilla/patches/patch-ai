@@ -1,0 +1,22 @@
+diff -ru ../mozilla-current.orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
+--- ../mozilla-current.orig/mozilla/nsprpub/pr/include/md/_netbsd.h	Thu Dec 23 08:58:07 1999
++++ ./nsprpub/pr/include/md/_netbsd.h	Sun Jun  4 14:06:24 2000
+@@ -54,6 +54,8 @@
+ #define _PR_STAT_HAS_ST_ATIMESPEC
+ #define _PR_HAVE_SYSV_SEMAPHORES
+ #define PR_HAVE_SYSV_NAMED_SHARED_MEMORY
++#define	_PR_POLL_AVAILABLE
++#define	_PR_USE_POLL
+ 
+ #define USE_SETJMP
+ 
+@@ -210,6 +212,9 @@
+  * unwrapped version.
+  */
+ #define _MD_SELECT(nfds,r,w,e,tv) syscall(SYS_select,nfds,r,w,e,tv)
++#if defined(_PR_POLL_AVAILABLE)
++#include <poll.h>
++#endif
+ #define _MD_POLL(fds,nfds,timeout) syscall(SYS_poll,fds,nfds,timeout)
+ 
+ #if NetBSD1_3 == 1L

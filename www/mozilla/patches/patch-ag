@@ -1,0 +1,18 @@
+diff -ru ../mozilla-current.orig/mozilla/nsprpub/lib/ds/Makefile ./nsprpub/lib/ds/Makefile
+--- ../mozilla-current.orig/mozilla/nsprpub/lib/ds/Makefile	Fri Jan 28 09:27:08 2000
++++ ./nsprpub/lib/ds/Makefile	Sun Jun  4 14:06:24 2000
+@@ -160,6 +160,14 @@
+ else
+ 	$(INSTALL) -m 444 $(SHARED_LIBRARY) $(DIST)/bin
+ endif
++ifeq ($(OS_ARCH),NetBSD)
++ifeq ($(OBJECT_FMT),ELF)
++	( cd $(DIST)/bin; \
++	ln -s -f lib$(LIBRARY_NAME)$(MOD_VERSION).$(DLL_SUFFIX).$(SHLIB_MAJOR).$(SHLIB_MINOR) lib$(LIBRARY_NAME)$(MOD_VERSION).$(DLL_SUFFIX).$(SHLIB_MAJOR); \
++	ln -s -f lib$(LIBRARY_NAME)$(MOD_VERSION).$(DLL_SUFFIX).$(SHLIB_MAJOR).$(SHLIB_MINOR) lib$(LIBRARY_NAME)$(MOD_VERSION).$(DLL_SUFFIX); \
++	)
++endif # ELF
++endif # NetBSD
+ ifeq ($(OS_ARCH), OpenVMS)
+ 	$(INSTALL) -m 444 $(SHARED_LIBRARY:.$(DLL_SUFFIX)=.vms) $(DIST)/lib
+ endif
