@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.391 2000/01/13 17:40:42 jwise Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.392 2000/01/14 11:39:31 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2197,7 +2197,16 @@ misc-depends: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}package="`${ECHO} \"${dep}\" | ${SED} -e s/:.\*//`"; \
 	dir="`${ECHO} \"${dep}\" | ${SED} -e s/.\*://`";		\
 	found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`";		\
-	if [ X"$$found" != X"" ]; then					\
+	if [ "X$$found" != "X" ]; then					\
+		instobjfmt=`${PKG_INFO} -B "$$package" | ${AWK} '/^OBJECT_FMT/ { print $$2 }'`; \
+		if [ "X$$instobjfmt" = "X" ]; then			\
+			${ECHO} "WARNING: Unknown object format for installed package $$package - continuing"; \
+		elif [ "X$$instobjfmt" != "X${OBJECT_FMT}" ]; then	\
+			${ECHO} "Installed package $$package is an $$instobjfmt package."; \
+			${ECHO} "You are building an ${OBJECT_FMT} package, which will not inter-operate."; \
+			${ECHO} "Please update the $$package package to ${OBJECT_FMT}"; \
+			exit 1;						\
+		fi;							\
 		if [ `${ECHO} $$found | wc -w` -gt 1 ]; then		\
 			${ECHO} '***' "WARNING: Dependency on '$$package' expands to several installed packages " ; \
 			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
