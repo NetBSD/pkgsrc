@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.23 1998/12/29 22:31:53 tron Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.24 1999/02/21 01:24:22 hubertf Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -30,6 +30,16 @@
 #	install, package, readmes, realinstall, reinstall, tags,
 #	mirror-distfiles
 #
+
+# Pull in stuff from mk.conf - need to check two places as this may be
+# called from pkgsrc or from pkgsrc/category.
+.if exists(${.CURDIR}/mk/bsd.prefs.mk)
+.include "${.CURDIR}/mk/bsd.prefs.mk"
+.else
+.if exists(${.CURDIR}/../mk/bsd.prefs.mk)
+.include "${.CURDIR}/../mk/bsd.prefs.mk"
+.endif	# exists(${.CURDIR}/../mk/bsd.prefs.mk)
+.endif	# exists(${.CURDIR}/mk/bsd.prefs.mk)
 
 
 .MAIN: all
