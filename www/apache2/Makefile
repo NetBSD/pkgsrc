@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/04/13 21:35:50 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/15 18:35:29 kei Exp $
 
 DISTNAME=		httpd-2.0.35
 PKGNAME=		apache-2.0.35
@@ -9,7 +9,7 @@ MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
-COMMENT=		HTTP (Web) server, version 2 (BETA)
+COMMENT=		HTTP (Web) server, version 2
 
 CONFLICTS=		apache-*modssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
