@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6887 2004/08/15 12:42:21 wiz Exp $
+$NetBSD: CHANGES,v 1.6888 2004/08/15 13:17:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3843,3 +3843,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nut to 10.1 [wiz 2004-08-15]
 	Updated gens to 2.12rc3nb1 [dillo 2004-08-15]
 	Updated libcaca to 0.9 [wiz 2004-08-15]
+	Updated libevent to 0.9 [wiz 2004-08-15]
