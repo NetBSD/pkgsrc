@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2002/10/21 12:22:21 wiz Exp $
+$NetBSD: distinfo,v 1.4 2004/10/02 06:09:08 dmcmahill Exp $
 
-SHA1 (xscrabble-1.0nb1/xscrabble.tar.gz) = ba7f1b54b81d74f2159fa57e0415b20acc30ad20
-Size (xscrabble-1.0nb1/xscrabble.tar.gz) = 498741 bytes
+SHA1 (xscrabble-1.0.tar.gz) = ba7f1b54b81d74f2159fa57e0415b20acc30ad20
+Size (xscrabble-1.0.tar.gz) = 498741 bytes
 SHA1 (patch-aa) = b40cc79e0a625d6b6c3e30cfa5bd31f306c9c984
 SHA1 (patch-ab) = cbaf1a8d437a1c400bb631fd5efd9dd55e61038e

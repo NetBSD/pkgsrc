@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2004/03/07 23:33:04 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/02 06:09:08 dmcmahill Exp $
 #
 
-DISTNAME=	xscrabble
-PKGNAME=	xscrabble-1.0
+DISTNAME=	xscrabble-1.0
 PKGREVISION=	1
 CATEGORIES=	games x11
-MASTER_SITES=	http://www.belgarath.demon.co.uk/programs/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.belgarath.demon.co.uk/programs/
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	X version of the popular board game, for 1 to 4 players
 
 WRKSRC=		${WRKDIR}/xscrabble
-DIST_SUBDIR=	${PKGNAME}
 USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
