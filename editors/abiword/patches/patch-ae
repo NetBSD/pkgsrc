@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.9 2002/04/12 14:32:51 martti Exp $
+$NetBSD: patch-ae,v 1.10 2002/07/03 21:59:10 hubertf Exp $
 
 --- src/other/spell/xp/ispell.h.orig	Fri Mar 22 15:31:57 2002
-+++ src/other/spell/xp/ispell.h	Fri Apr 12 12:45:12 2002
++++ src/other/spell/xp/ispell.h
 @@ -257,7 +257,7 @@
  ** character counts as two!
  */
@@ -18,7 +18,7 @@ $NetBSD: patch-ae,v 1.9 2002/04/12 14:32:51 martti Exp $
 -    int stringsize;				/* Size of string table */
 -    int lstringsize;				/* Size of lang. str tbl */
 +    PTRSIZE stringsize;				/* Size of string table */
-+    PTRSIZE lstringsize;			/* Size of lang. str tbl */
++    PTRSIZE lstringsize;			/* Size of lang. string table */
      int tblsize;				/* No. entries in hash tbl */
      int stblsize;				/* No. entries in sfx tbl */
      int ptblsize;				/* No. entries in pfx tbl */
