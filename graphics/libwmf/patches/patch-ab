@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1 2000/02/29 06:43:01 jlam Exp $
+
+--- configure.in.orig	Thu Dec 16 10:22:33 1999
++++ configure.in	Tue Feb 29 01:24:31 2000
+@@ -100,9 +100,8 @@
+     AC_MSG_RESULT("$result")
+ fi
+ if [ test "$SYSTEM_TTF" = 1 ]; then
+-	AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf"],
+-	AC_CHECK_LIB(ttf, TT_Done_FreeType, [TTF_LIBS="-lttf -lnsl"],
+-	no_ttf=yes, -lnsl))
++	AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf -lintl"],
++	no_ttf=yes, -lintl)
+ else
+     no_ttf=yes
+ fi
+@@ -128,9 +127,8 @@
+         AC_MSG_RESULT("$result")
+     fi
+     if [ test "$SYSTEM_TTF" = 1 ]; then
+-		AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf"],
+-		AC_CHECK_LIB(ttf, TT_Done_FreeType, [TTF_LIBS="-lttf -lnsl"],
+-		no_ttf=yes, -lnsl))
++		AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf -lintl"],
++		no_ttf=yes, -lintl)
+     else
+         no_ttf=yes
+     fi
+@@ -404,7 +402,7 @@
+     AC_MSG_RESULT("$result")
+ fi
+ if [ test "$SYSTEM_TTF" = 1 ]; then
+-    AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf"],no_ttf=yes,-lm)
++    AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf -lintl"],no_ttf=yes,-lintl)
+ else
+     no_ttf=yes
+ fi
+@@ -430,7 +428,7 @@
+         AC_MSG_RESULT("$result")
+     fi
+     if [ test "$SYSTEM_TTF" = 1 ]; then
+-        AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf"],no_ttf=yes,-lm)
++        AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf -lintl"],no_ttf=yes,-lintl)
+     else
+         no_ttf=yes
+     fi
