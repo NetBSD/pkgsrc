@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:26 wiz Exp $
 
-MD5 (chess-5.00.tar.gz) = 8bf7cd9250aa96c4e37e9770733d8fe3
+SHA1 (chess-5.00.tar.gz) = 86b364d60aab4a2ec5932fb800ef4857251a84cd
+Size (chess-5.00.tar.gz) = 157211 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:18 wiz Exp $
 
-MD5 (baduki-0.2.9.tar.gz) = c3c6930fd15627d1bb4c419968f15e4f
+SHA1 (baduki-0.2.9.tar.gz) = a70a2c11b66b97bae979f597de831a99d6c8121f
+Size (baduki-0.2.9.tar.gz) = 193558 bytes
 SHA1 (patch-aa) = ae4c386828c67d6ee922762d8ce4b76bf0f35c12
 SHA1 (patch-ab) = cffcf97af15693e1039f6a9819a9ee08691756cf
 SHA1 (patch-ac) = fbd0342b4ceda59e8d356f96b2643d0bc876481a

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:35 wiz Exp $
 
-MD5 (quake106.zip) = 8cee4d03ee092909fdb6a4f84f0c1357
+SHA1 (quake106.zip) = f8a1a509b094ccdbed3c54b96f7d9b351c0898f5
+Size (quake106.zip) = 9094045 bytes

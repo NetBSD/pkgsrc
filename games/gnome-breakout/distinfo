@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:25 wiz Exp $
 
-MD5 (gnome-breakout-0.4.tar.gz) = 0e6c125315dd8524a2518fa7bfd4849c
+SHA1 (gnome-breakout-0.4.tar.gz) = 0a9bc2c75b52f3246ca41d7039e6ff38abc9d7e4
+Size (gnome-breakout-0.4.tar.gz) = 199984 bytes
 SHA1 (patch-aa) = 626b913aa1664e96bc065af3981a1dbbe2ceb8af

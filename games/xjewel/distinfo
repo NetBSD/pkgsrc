@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:29:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:39 wiz Exp $
 
-MD5 (xjewel-1.6.tar.z) = b6448726269ec158c5db6eb54864bdfe
+SHA1 (xjewel-1.6.tar.z) = b202d4fdb70bf3a61707aed7a00607a907c80275
+Size (xjewel-1.6.tar.z) = 45439 bytes
 SHA1 (patch-aa) = e544ebd4d884e8d1f96cc13485501877974ab832

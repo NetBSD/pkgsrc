@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:35 wiz Exp $
 
-MD5 (spellcast.tar.Z) = 6aab445abaff102188e7a4e887a42286
+SHA1 (spellcast.tar.Z) = 3c51aa1746d4b8385a87ab5af5ed78b48cc4ac19
+Size (spellcast.tar.Z) = 129173 bytes
 SHA1 (patch-aa) = 8c81fd0791496d118b27a930ec0edc67284f1184

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:19 wiz Exp $
 
-MD5 (chessbooks/book_large.tgz) = 18904cbd59eddb8f8805e3269d7de6f7
+SHA1 (chessbooks/book_large.tgz) = a7284155cf8941f424f819556c97a0cfc1f3e0bb
+Size (chessbooks/book_large.tgz) = 529290 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:17 wiz Exp $
 
-MD5 (bacKgammon-1.9.1b.tar.gz) = faeeeb041d5db896b0321d60bb254e8e
+SHA1 (bacKgammon-1.9.1b.tar.gz) = 587783a247dcfc9880244de24c6d76d4403b8a81
+Size (bacKgammon-1.9.1b.tar.gz) = 297355 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:28 wiz Exp $
 
-MD5 (jetpack.tar.Z) = d1bae26b9f54f84090fcf78fc2183ed7
+SHA1 (jetpack.tar.Z) = 7898a971eed7a03e9e390c83d0365584f74dabc7
+Size (jetpack.tar.Z) = 70621 bytes
 SHA1 (patch-aa) = f601182dd4e08eeacddc1a25775de0a3c5e264f1
 SHA1 (patch-ab) = 206f2b078e4539950bb497e378e121f8692fec2a
 SHA1 (patch-ac) = 9a71f168173b5eba9fd9a46f0329ad89e7f278a2

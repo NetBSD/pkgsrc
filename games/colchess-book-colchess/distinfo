@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:19 wiz Exp $
 
-MD5 (colchess-7.0/colchess.tgz) = eed5e9629052c0b70ea70abc9573f3c4
+SHA1 (colchess-7.0/colchess.tgz) = 66ece148fb68ca43a8354cc90788dcfd6cc30793
+Size (colchess-7.0/colchess.tgz) = 141954 bytes

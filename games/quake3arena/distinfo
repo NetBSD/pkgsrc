@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:42 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:34 wiz Exp $
 
-MD5 (linuxq3apoint-1.17.x86.run) = d099a07e91cea00ba4f9c38bae1eb4d0
+SHA1 (linuxq3apoint-1.17.x86.run) = b0dcf5c12621d15c6a417cb1e1dc4e6da4aa8801
+Size (linuxq3apoint-1.17.x86.run) = 9845235 bytes

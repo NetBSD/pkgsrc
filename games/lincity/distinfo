@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:30 wiz Exp $
 
-MD5 (lincity-1.11.tar.gz) = fa64ddfe0a6ca95a614843ac2fcd2473
+SHA1 (lincity-1.11.tar.gz) = b3b7fb00fffea90352fa5e5c6b7bf76d49cd493b
+Size (lincity-1.11.tar.gz) = 475037 bytes
 SHA1 (patch-aa) = ac8b6a23b0167f98bf21bbdea7966f99aec3f61a
 SHA1 (patch-ab) = 09860dec60aefe24c020aa3daf130512ec893d09

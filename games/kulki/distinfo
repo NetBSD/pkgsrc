@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:29 wiz Exp $
 
 SHA1 (kulki-1.01.tgz) = 20f14bdbde44dc56d914e4451ae33824f30abaf1
+Size (kulki-1.01.tgz) = 1190074 bytes
 SHA1 (patch-aa) = 0b1398098aaf5d2f49e983c4babf731659171774

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:17 wiz Exp $
 
-MD5 (abuse_pd.tgz) = 86f5884a806999ff6166eb10c00c92ef
-MD5 (abuse_data.tar.gz) = a9daedbb5fbfbf240d21661e706fe28b
+SHA1 (abuse_pd.tgz) = 52a703abea31d6f00937d4cc0160af7a454e6630
+Size (abuse_pd.tgz) = 2525552 bytes
+SHA1 (abuse_data.tar.gz) = 2e7fad6b866fbbc8f34e3ac68cf2689c91596e48
+Size (abuse_data.tar.gz) = 1593160 bytes
 SHA1 (patch-aa) = 78310a49fa028f0ba313bb182bd32e4e69252cd7
 SHA1 (patch-ab) = 3a6a9152e2b797ebe9ac09583d175fe52ecd0bfd
 SHA1 (patch-ac) = e0583190b67566a54868f6ca979ba35a1826803c

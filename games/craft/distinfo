@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:20 wiz Exp $
 
-MD5 (craftcc35.tar.Z) = e55d412d330f28798d10d13ab28596c0
+SHA1 (craftcc35.tar.Z) = 8862b9001aa7d752a597033ef45d38ebfcee533f
+Size (craftcc35.tar.Z) = 3123677 bytes
 SHA1 (patch-ab) = 291127560f460a415fb7bff0591bced78eabc29c
 SHA1 (patch-ac) = a1e525c3064cd0ce4246302b6bd35719aafd1eba
 SHA1 (patch-ad) = 3f49591294314cd187f0b214a56eed86c75c5af7

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:29 wiz Exp $
 
-MD5 (lbreakout-001018.tar.gz) = 64cfdae38846205ba0cebfef7ecf7280
+SHA1 (lbreakout-001018.tar.gz) = b40f5a170f0610ef77d7e52c4a8835d6d3af88ea
+Size (lbreakout-001018.tar.gz) = 630499 bytes
 SHA1 (patch-aa) = be9c9409d101f58d8cdb05255007d349a9ff83c5
 SHA1 (patch-ab) = ce3f989c5daeeda7aa9b665a61c12a9e23ba5c67
 SHA1 (patch-ac) = 8416415c020bbb1c39738b0e992451a9256e9b6b
