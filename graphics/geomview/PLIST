@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/03 17:38:27 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/17 16:55:40 seb Exp $
 bin/.geomview-animate
 bin/.geomview-drawbdy
 bin/anytooff
@@ -18,14 +18,6 @@ bin/polymerge
 bin/togeomview
 bin/ucdtooff
 bin/vrml2oogl
-info/geomview
-info/geomview-1
-info/geomview-2
-info/geomview-3
-info/geomview-4
-info/geomview-5
-info/geomview-6
-info/geomview-7
 man/man1/anytooff.1
 man/man1/anytoucd.1
 man/man1/bdy.1
