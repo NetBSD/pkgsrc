@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/02/20 18:30:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/11 20:01:33 dent Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/08/09 23:37:33 fenner Exp 
 #
 
@@ -13,7 +13,7 @@ MASTER_SITES=		http://my.netian.com/~polarb/ \
 			ftp://ftp.cit.nepean.uws.edu.au/unix/misc/audio/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://synergy.kaist.ac.kr/~jwj/
+HOMEPAGE=		http://splay.sourceforge.net/
 
 # endian and alignment issues
 NOT_FOR_PLATFORM=      *-*-sparc *-*-m68k *-*-macppc *-*-sparc64
