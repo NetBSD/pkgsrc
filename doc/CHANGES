@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3816 2003/11/11 16:44:52 abs Exp $
+$NetBSD: CHANGES,v 1.3817 2003/11/12 03:37:25 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4335,7 +4335,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xosview to 1.8.1 [wiz 2003-11-11]
 	Updated xpdf-greek to 20030628 [wiz 2003-11-11]
 	Updated xpdf-cyrillic to 20030628 [wiz 2003-11-11]
-	Update mserv to 0.35nb3 [abs 2003-11-11]
+	Updated mserv to 0.35nb3 [abs 2003-11-11]
 	Updated ipcheck to 0.207 [wiz 2003-11-11]
 	Updated xjdic to 2.3nb2 [wiz 2003-11-11]
 	Updated x10_heyu to 1.35 [wiz 2003-11-11]
@@ -4343,5 +4343,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated links-gui to 2.1.0.14 [wiz 2003-11-11]
 	Updated superlu to 3.0 [wiz 2003-11-11]
 	Updated dmesg2gif to 1.3 [hubertf 2003-11-11]
-	Update rconfig to 0.27 [abs 2003-11-11]
-
+	Updated rconfig to 0.27 [abs 2003-11-11]
