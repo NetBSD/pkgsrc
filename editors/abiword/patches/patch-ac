@@ -1,13 +1,18 @@
-$NetBSD: patch-ac,v 1.4 2000/05/02 23:35:56 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2001/05/24 04:28:20 jlam Exp $
 
---- src/config/abi_defs.mk.orig	Mon Mar 13 17:48:16 2000
-+++ src/config/abi_defs.mk	Tue May  2 18:12:28 2000
-@@ -325,7 +325,7 @@
- ##			a date stamp in a nightly build system).
- ##
- 
--ABI_BUILD_VERSION	= unnumbered
-+ABI_BUILD_VERSION	?= unnumbered
- ABI_BUILD_ID		=
- 
- ##################################################################
+--- src/af/util/xp/ut_endian.h.orig	Sat Feb 24 03:49:29 2001
++++ src/af/util/xp/ut_endian.h
+@@ -28,6 +28,13 @@
+ 	#else
+ 		#define UT_BIG_ENDIAN
+ 	#endif
++#elif defined(__NetBSD__)
++	#include <machine/endian.h>
++	#if BYTE_ORDER == LITTLE_ENDIAN		
++		#define UT_LITTLE_ENDIAN
++	#elif BYTE_ORDER == BIG_ENDIAN
++		#define UT_BIG_ENDIAN
++	#endif
+ #else /* this is for Linux */
+ 	#include <endian.h>
+ 	#if __BYTE_ORDER == __LITTLE_ENDIAN		

@@ -1,13 +1,15 @@
-$NetBSD: patch-ae,v 1.3 2000/05/02 23:35:56 jlam Exp $
+$NetBSD: patch-ae,v 1.4 2001/05/24 04:28:20 jlam Exp $
 
---- src/config/require/unix/Makefile.orig	Tue Feb 29 16:37:57 2000
-+++ src/config/require/unix/Makefile	Tue May  2 18:16:28 2000
-@@ -159,7 +159,7 @@
- # was something you installed yourself.  
- 
- _LIBICONV_:
--	@if [ ! -r /usr/include/iconv.h -a ! -r /usr/local/include/iconv.h ]; then	\
-+	@if true; then	\
- 		if [ -d $(ABI_ROOT)/../libiconv ]; then                        	\
- 			echo Found libiconv in peer directory;                  \
- 			if [ ! -r $(ABI_ROOT)/../libiconv/src/config.h ]; then  \
+--- src/other/spell/ispell.h.orig	Sat Mar 24 20:30:02 2001
++++ src/other/spell/ispell.h
+@@ -517,8 +517,8 @@
+     short maxstringcharlen;			/* Max strchr len supported */
+     short compoundmin;				/* Min lth of compound parts */
+     short compoundbit;				/* Flag 4 compounding roots */
+-    int stringsize;				/* Size of string table */
+-    int lstringsize;				/* Size of lang. str tbl */
++    PTRSIZE stringsize;				/* Size of string table */
++    PTRSIZE lstringsize;				/* Size of lang. str tbl */
+     int tblsize;				/* No. entries in hash tbl */
+     int stblsize;				/* No. entries in sfx tbl */
+     int ptblsize;				/* No. entries in pfx tbl */
