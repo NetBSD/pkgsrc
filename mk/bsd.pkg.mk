@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1058 2002/09/26 21:04:11 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1059 2002/09/27 10:36:53 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -823,6 +823,15 @@ MASTER_SITE_GNU+=	\
 	ftp://ftp.gnu.org/pub/gnu/ \
 	ftp://ftp.gwdg.de/pub/gnu/ \
 	ftp://ftp.progsoc.uts.edu.au/pub/gnu/
+
+MASTER_SITE_GNUSTEP+=	\
+	ftp://ftp.gnustep.org/pub/gnustep/ \
+	ftp://ftp.planetmirror.com/pub/gnustep/gnustep/ \
+	http://www.peanuts.org/peanuts/Mirrors/GNUstep/gnustep/ \
+	ftp://archive.progeny.com/gnustep/ \
+	http://archive.progeny.com/gnustep/ \
+	ftp://ftp.easynet.nl/mirror/GNUstep/ \
+	http://ftp.easynet.nl/mirror/GNUstep/
 
 MASTER_SITE_PERL_CPAN+=	\
 	ftp://cpan.pair.com/pub/CPAN/modules/by-module/ \
