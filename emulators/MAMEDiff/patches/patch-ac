@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/03/04 12:05:13 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2005/03/14 16:20:58 wiz Exp $
 
 --- src/compare.c.orig	2005-02-20 16:08:38.000000000 +0100
 +++ src/compare.c
