@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1095 2002/12/03 18:57:53 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1096 2002/12/03 19:11:30 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -351,21 +351,13 @@ M4?=			/usr/bin/m4
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
 .  if ${_USE_RPATH} == "yes"
-.    if ${OPSYS} == "IRIX"
-X11_LDFLAGS+=		-Wl,-rpath,${X11BASE}/lib
-.    else
-X11_LDFLAGS+=		-Wl,-R${X11BASE}/lib	
-.    endif
+X11_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${X11BASE}/lib	
 .  endif
 X11_LDFLAGS+=		-L${X11BASE}/lib
 LDFLAGS+=		${X11_LDFLAGS}
 .endif
 .if ${_USE_RPATH} == "yes"
-.  if ${OPSYS} == "IRIX"
-LDFLAGS+=		-Wl,-rpath,${LOCALBASE}/lib
-.  else
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
-.  endif
+LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${LOCALBASE}/lib
 .else
 .  if empty(USE_BUILDLINK2:M[nN][oO])
 LDFLAGS:=		${LDFLAGS:N*-Wl,-R*:N*-rpath*}
@@ -589,13 +581,8 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
 
-.if ${OPSYS} == "IRIX"
 PKGCONFIG_OVERRIDE_SED=	\
-		'-e s|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-rpath,\2 -L\2\3|'
-.else
-PKGCONFIG_OVERRIDE_SED=	\
-		'-e s|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'
-.endif
+		'-e s|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,${_OPSYS_RPATH_NAME}\2 -L\2\3|'
 
 # Latest version of digest(1) required for pkgsrc
 DIGEST_REQD=		20010302

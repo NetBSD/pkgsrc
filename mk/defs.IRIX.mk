@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.2 2002/12/03 18:57:52 agc Exp $
+# $NetBSD: defs.IRIX.mk,v 1.3 2002/12/03 19:11:31 agc Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -95,6 +95,7 @@ _OPSYS_HAS_GMAKE=	no		# GNU make is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
+_OPSYS_RPATH_NAME=	-path,		# name of symbol in rpath directive to linker 
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_RPATH=		yes		# add rpath to LDFLAGS
 
