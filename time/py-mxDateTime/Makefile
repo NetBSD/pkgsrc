@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/16 20:40:12 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2002/02/25 04:47:23 jlam Exp $
 #
 
 DISTNAME=	mxDateTime-1.3.0
@@ -11,8 +11,6 @@ EXTRACT_SUFX=   .zip
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://starship.python.net/~lemburg/mxDateTime.html
 COMMENT=	Python extension that provides new types and conversions for dates
-
-EXTRACT_CMD=	unzip -Laqo ${DOWNLOADED_DISTFILE}
 
 RESTRICTED=	No commercial distribution
 NO_SRC_ON_CDROM=	${RESTRICTED}
