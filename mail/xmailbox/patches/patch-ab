@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/01/09 01:50:02 wiz Exp $
 --- MailboxP.h.orig	Tue May 25 17:10:18 1999
 +++ MailboxP.h	Tue May 25 17:10:28 1999
 @@ -36,7 +36,7 @@
