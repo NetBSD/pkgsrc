@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 1999/03/29 12:58:59 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/04/20 16:39:11 tron Exp $
 etc/rc.d/rplayd.sh
 etc/rplay.hosts
-etc/rplay.conf
+@unexec rm -f %D/etc/rplay.conf
 bin/rplay
 bin/rptp
 @comment requires XForms
