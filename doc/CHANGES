@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1396 2003/02/16 06:05:36 salo Exp $
+$NetBSD: CHANGES,v 1.1397 2003/02/16 06:51:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -453,6 +453,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tk-expect to 5.38 [markd 2003-01-28]
 	Added umbrello-1.1.1 [markd 2003-01-28]
 	Updated cgoban-java to 2.4.57 [jlam 2003-01-28]
+	Updated squid to 2.5.1nb2 [jlam 2003-02-16]
 	Updated ap-layout to 3.2 [grant 2003-01-28]
 	Updated glib2 to 2.2.0nb2 [tron 2003-01-28]
 	Updated docbook-website to 2.3nb2 [grant 2003-01-28]
@@ -699,3 +700,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added streamtuner-0.9.0 [salo 2003-02-16]
 	Added streamtuner-local-0.2.1 [salo 2003-02-16]
 	Added streamtuner-live365-0.3.0 [salo 2003-02-16]
+	Updated squid to 2.5.1nb3 [taca 2003-02-16]
