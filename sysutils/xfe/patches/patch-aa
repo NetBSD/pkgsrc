@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/30 16:09:22 xtraeme Exp $
+
+--- Makefile.in.orig	2003-08-08 19:06:28.000000000 +0200
++++ Makefile.in	2003-08-08 19:08:12.000000000 +0200
+@@ -103,9 +103,6 @@
+ SUBDIRS = intl po m4 src xfv xfq icons
+ DIST_SUBDIRS = intl po m4 src xfv xfq icons
+ 
+-rcdir = $(prefix)/lib/foxrc
+-rc_DATA = Desktop
+-
+ EXTRA_DIST = config.h i18n.h xfe.1 xfv.1 xfq.1 ABOUT-NLS TODO FAQ BUGS xfe.spec.in Desktop.in xfe.png icons/* src/icons/*
+ 
+ icondir = $(prefix)/share/pixmaps
+@@ -121,7 +118,7 @@
+ 
+ NROFF = nroff
+ MANS = $(man_MANS)
+-DATA = $(icon_DATA) $(rc_DATA)
++DATA = $(icon_DATA)
+ 
+ 
+ RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
+@@ -239,23 +236,6 @@
+ 	  echo " rm -f $(DESTDIR)$(icondir)/$$f"; \
+ 	  rm -f $(DESTDIR)$(icondir)/$$f; \
+ 	done
+-install-rcDATA: $(rc_DATA)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(rcdir)
+-	@list='$(rc_DATA)'; for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(rcdir)/$$f"; \
+-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(rcdir)/$$f; \
+-	done
+-
+-uninstall-rcDATA:
+-	@$(NORMAL_UNINSTALL)
+-	@list='$(rc_DATA)'; for p in $$list; do \
+-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " rm -f $(DESTDIR)$(rcdir)/$$f"; \
+-	  rm -f $(DESTDIR)$(rcdir)/$$f; \
+-	done
+ 
+ # This directory's subdirectories are mostly independent; you can cd
+ # into them and run `make' without going through this Makefile.
