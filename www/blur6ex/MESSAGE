@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/02/18 07:07:43 xtraeme Exp $
+
+To configure blur6ex, the following steps should be completed:
+
+$ mysql -e "create database blur6ex"
+$ mysql -e "grant all on blur6ex.* to ''@'' identified by 'PASSWORD'"
+$ mysql blur6ex < ${PREFIX}/share/doc/blur6ex/blur6ex_tables.sql
+
+Modify "PASSWORD" with your desired password.
+
+Modify ${PKG_SYSCONFDIR.blur6exdb}/db.php and
+${PKG_SYSCONFDIR.blur6ex}/index.php.
+
+Now you can access to it with the following url:
+
+http://localhost/blog/
+
+===========================================================================
