@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2440 2004/11/25 09:34:48 adam Exp $
+$NetBSD: TODO,v 1.2441 2004/11/25 10:04:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -1023,7 +1023,6 @@ Suggested package updates
 	o subtitleripper-0.3-4
 	o sudo-1.6.8p4
 	o sunclock-1.5
-	o sweep-0.8.3
 	o swfdec-0.3.2
 	o swi-prolog-5.4.3
 	o swi-prolog-lite-5.4.3

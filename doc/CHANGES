@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7974 2004/11/25 09:34:48 adam Exp $
+$NetBSD: CHANGES,v 1.7975 2004/11/25 10:04:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kapooka-0.2 [wiz 2004-11-24]
 	Added gld-1.4 [xtraeme 2004-11-25]
 	Updated balsa2 to 2.2.6 [adam 2004-11-25]
+	Updated qalculate to 0.7.1 [adam 2004-11-25]
