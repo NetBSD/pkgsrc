@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
+
+--- src/helpwin.c.orig	Tue Nov 18 15:32:04 1997
++++ src/helpwin.c	Tue Feb  9 15:34:13 1999
+@@ -44,7 +44,7 @@
+         errmsg(buf);
+     } else {
+         /* xmhelp doesn't like "file://localhost/" prefix */
+-        sprintf(URL, "file:%s/doc/%s", xmgrdir, ha);
++        sprintf(URL, "file:%s/share/doc/xmgr/%s", xmgrdir, ha);
+         get_help(w, (XtPointer) URL, ha);
+     }
+ #else /* usual HTML browser */
+@@ -52,7 +52,7 @@
+     if (strstr(ha, "http:")) {
+         strcpy(URL, ha);
+     } else {
+-        sprintf(URL, "file://localhost%s/doc/%s", xmgrdir, ha);
++        sprintf(URL, "file://localhost%s/share/doc/xmgr/%s", xmgrdir, ha);
+     }
+     
+     len = strlen(help_viewer);
