@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.120 1998/07/16 16:24:40 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.121 1998/07/21 11:09:11 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -578,16 +578,16 @@ IGNORE=	"is restricted: ${RESTRICTED}"
 IGNORE=	"uses X11, but ${X11BASE} not found"
 .elif defined(BROKEN)
 IGNORE=	"is marked as broken: ${BROKEN}"
-.elif defined(LICENCE)
-.ifdef ACCEPTABLE_LICENCES
-.for _lic in ${ACCEPTABLE_LICENCES}
-.if ${LICENCE} == "${_lic}"
+.elif defined(LICENSE)
+.ifdef ACCEPTABLE_LICENSES
+.for _lic in ${ACCEPTABLE_LICENSES}
+.if ${LICENSE} == "${_lic}"
 _ACCEPTABLE=	yes
 .endif
 .endfor	# _lic
-.endif	# ACCEPTABLE_LICENCES
+.endif	# ACCEPTABLE_LICENSES
 .ifndef _ACCEPTABLE
-IGNORE=	"Unacceptable licence: ${LICENCE}"
+IGNORE=	"Unacceptable licence: ${LICENSE}"
 .endif
 .endif
 
