@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/21 22:26:59 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/21 04:43:29 jtb Exp $
 
 DISTNAME=	efax-0.9
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/fax/}
 
 MAINTAINER=	packages@netbsd.org
-COMMENT=	set of small programs for sending and receiving faxes
+HOMEPAGE=	http://www.cce.com/efax/
+COMMENT=	collection of small programs for sending and receiving faxes
 
 .include "../../mk/bsd.prefs.mk"
 
