@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2000/03/12 22:30:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.26 2000/05/26 05:38:21 rh Exp $
 bin/gtk-config
 etc/gtk/gtkrc.cs
 etc/gtk/gtkrc.hr
@@ -42,6 +42,12 @@ etc/gtk/gtkrc.ka
 etc/gtk/gtkrc.vi_VN.viscii111
 etc/gtk/gtkrc.vi_VN.tcvn5712
 etc/gtk/gtkrc.vi
+etc/gtk/gtkrc.cp1255
+etc/gtk/gtkrc.sp
+etc/gtk/gtkrc.he_IL.cp1255
+etc/gtk/gtkrc.he_IL.microsoftcp1255
+etc/gtk/gtkrc.yi
+etc/gtk/gtkrc.lv
 include/gdk/gdk.h
 include/gdk/gdkrgb.h
 include/gdk/gdkcursors.h
@@ -162,9 +168,9 @@ include/gtk/gtklayout.h
 include/gtk/gtkplug.h
 include/gtk/gtksocket.h
 include/gtk/gtkthemes.h
-lib/libgdk.so.12.7
+lib/libgdk.so.12.8
 lib/libgdk.a
-lib/libgtk.so.12.7
+lib/libgtk.so.12.8
 lib/libgtk.a
 man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
@@ -180,6 +186,7 @@ info/gtk.info-6
 @exec install-info %D/info/gdk.info %D/info/dir
 @exec install-info %D/info/gtk.info %D/info/dir
 share/aclocal/gtk.m4
+share/locale/nn/LC_MESSAGES/gtk+.mo
 share/locale/gl/LC_MESSAGES/gtk+.mo
 share/locale/lt/LC_MESSAGES/gtk+.mo
 share/locale/nl/LC_MESSAGES/gtk+.mo
