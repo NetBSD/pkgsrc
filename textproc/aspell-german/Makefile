@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/14 18:13:49 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/11 04:35:20 xtraeme Exp $
 #
 
 DISTNAME=	aspell-de-0.50-2
@@ -12,11 +12,11 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	German language support for aspell
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	ASPELL=${PREFIX}/bin/aspell
 CONFIGURE_ENV+=	WORD_LIST_COMPRESS=${PREFIX}/bin/word-list-compress
 
-.include "../../textproc/aspell/buildlink2.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
