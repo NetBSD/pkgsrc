@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7732 2004/11/06 00:48:54 wiz Exp $
+$NetBSD: CHANGES,v 1.7733 2004/11/06 01:31:58 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5117,3 +5117,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gmplayer to 1.0rc5nb7 [wiz 2004-11-06]
 	Updated mencoder to 1.0rc5nb3 [wiz 2004-11-06]
 	Updated mplayer to 1.0rc5nb3 [wiz 2004-11-06]
+	Added p5-Class-WhiteHole-0.03 [he 2004-11-06]
+	Added p5-DBIx-ContextualFetch-1.01 [he 2004-11-06]
+	Added p5-Ima-DBI-0.33 [he 2004-11-06]
