@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:03 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/12/08 09:44:32 rh Exp $
 
---- MkInstal.in.orig	Thu Oct  2 18:21:41 1997
-+++ MkInstal.in	Fri Apr  3 23:45:39 1998
+--- MkInstal.in.orig	Thu May 27 23:29:24 1999
++++ MkInstal.in	Wed Dec  8 10:43:54 1999
 @@ -10,9 +10,6 @@
  # multiple files at once.
  ################################################################
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:09:03 agc Exp $
 -
  install		:: install_bin install_lib            # the bare minimum
  install		:: install_libs                       # lotsa libraries
- install		:: install_demos install_Haskore      # goodies
+ install		:: install_demos		      # goodies
 @@ -22,8 +19,8 @@
  
  install_bin	:: hugs$(EXE) runhugs$(EXE)
