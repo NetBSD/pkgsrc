@@ -3,7 +3,8 @@
 # Date created:				September 30th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-#   $Id: Makefile,v 1.1.1.1 1997/11/22 05:06:27 hubertf Exp $
+#   $NetBSD: Makefile,v 1.2 1997/11/22 05:09:14 hubertf Exp $
+#   FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:23 jfitz Exp
 #
 
 DISTNAME=	MD5-1.7
