@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2075 2004/08/26 00:00:56 wiz Exp $
+$NetBSD: TODO,v 1.2076 2004/08/26 00:01:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -258,7 +258,6 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gqmpeg-0.91.1
 	o grace-5.1.17
-	o gramps-1.0.6
 	o gsasl-0.1.4
 	o gtar-1.14
 	o gtkglext-1.0.6
