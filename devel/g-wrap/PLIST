@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/02 21:49:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/03/02 21:50:12 wiz Exp $
 bin/g-wrap-config
 include/ffi.h
 include/ffitarget.h
@@ -21,10 +21,10 @@ share/guile/site/g-wrap/enumeration.scm
 share/guile/site/g-wrap/guile.scm
 share/guile/site/g-wrap/guile/ws/standard.scm
 share/guile/site/g-wrap/gw-glib-spec.scm
+share/guile/site/g-wrap/gw-glib.scm
 share/guile/site/g-wrap/gw-standard-spec.scm
 share/guile/site/g-wrap/gw-wct-spec.scm
 share/guile/site/g-wrap/gw-wct.scm
-share/guile/site/g-wrap/gw-glib.scm
 share/guile/site/g-wrap/gw/standard.scm
 share/guile/site/g-wrap/rti.scm
 share/guile/site/g-wrap/simple-type.scm
