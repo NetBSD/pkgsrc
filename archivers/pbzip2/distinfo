@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/01/14 13:08:51 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/01/21 02:39:23 tv Exp $
 
 SHA1 (pbzip2-0.8.3.tar.gz) = d1b9aaa822b196f572eeabf9f501957093cb3466
 Size (pbzip2-0.8.3.tar.gz) = 13145 bytes
-SHA1 (patch-aa) = c937d872b3c35d6e162df7f61f6698e0e538a54b
+SHA1 (patch-aa) = fa47ae1bab608b8d92e6788fb077a4f4ad9283e5
