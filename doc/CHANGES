@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3301 2003/09/09 19:17:40 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3302 2003/09/10 00:13:24 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3599,3 +3599,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.20 [agc 2003-09-09]
 	Updated cvsync to 0.24.6 [gehenna 2003-09-09]
 	Updated balsa2 to 2.0.14 [xtraeme 2003-09-09]
+	Updated python23 to 2.3nb1 [recht 2003-09-10]
+	Updated python23-pth to 2.3nb1 [recht 2003-09-10]
