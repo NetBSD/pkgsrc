@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1 2004/11/18 10:20:00 shannonjr Exp $
+
+--- configure.orig	2004-05-09 14:23:32.000000000 -0600
++++ configure
+@@ -3120,7 +3120,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+   if test "$GXX" = "yes" || test "$CXX" = "KCC"; then
+     if test "$kde_use_debug_code" != "no"; then
+       if test "$CXX" = "KCC"; then
+-        CXXFLAGS="+K0 -Wall -pedantic -W -Wpointer-arith -Wmissing-prototypes -Wwrite-strings $CXXFLAGS"
++        CXXFLAGS="+K0 -Wall -W -Wpointer-arith -Wmissing-prototypes -Wwrite-strings $CXXFLAGS"
+       else
+         if test "$kde_use_debug_code" = "full"; then
+           CXXFLAGS="-g3 $CXXFLAGS"
+@@ -3453,8 +3453,8 @@ fi
+       if test "$GCC" = "yes"; then
+         case $host in
+           *-*-linux-gnu)
+-            CFLAGS="-ansi -W -Wall -pedantic -Wchar-subscripts -Wshadow -Wpointer-arith -Wmissing-prototypes -Wwrite-strings -D_XOPEN_SOURCE=500 -D_BSD_SOURCE $CFLAGS"
+-            CXXFLAGS="-ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts $CXXFLAGS"
++            CFLAGS="-W -Wall -Wchar-subscripts -Wshadow -Wpointer-arith -Wmissing-prototypes -Wwrite-strings -D_XOPEN_SOURCE=500 -D_BSD_SOURCE $CFLAGS"
++            CXXFLAGS="-D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts $CXXFLAGS"
+ 
+ echo "$as_me:$LINENO: checking whether $CXX supports -Wmissing-format-attribute" >&5
+ echo $ECHO_N "checking whether $CXX supports -Wmissing-format-attribute... $ECHO_C" >&6
+@@ -3532,7 +3532,7 @@ fi
+ 
+           ;;
+         esac
+-        CXXFLAGS="-Wall -pedantic -W -Wpointer-arith -Wwrite-strings $CXXFLAGS"
++        CXXFLAGS="-Wall -W -Wpointer-arith -Wwrite-strings $CXXFLAGS"
+ 
+ echo "$as_me:$LINENO: checking whether $CXX supports -Wundef" >&5
+ echo $ECHO_N "checking whether $CXX supports -Wundef... $ECHO_C" >&6
