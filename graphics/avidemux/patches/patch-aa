@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/02 15:51:41 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/18 03:43:30 xtraeme Exp $
 
---- configure.orig	2003-07-14 13:07:07.000000000 +0200
-+++ configure
-@@ -18732,6 +18732,7 @@ echo "$as_me: error: *** no pthread foun
+--- configure.orig	2003-12-18 04:24:04.000000000 +0100
++++ configure	2003-12-18 04:25:26.000000000 +0100
+@@ -18902,6 +18902,7 @@
     { (exit 1); exit 1; }; }
  fi
  
@@ -10,24 +10,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/02 15:51:41 jmmv Exp $
  
  echo "$as_me:$LINENO: checking for Divx encode" >&5
  echo $ECHO_N "checking for Divx encode... $ECHO_C" >&6
-@@ -18927,6 +18928,8 @@ if test "x$have_divx" = "xyes"; then
+@@ -19097,7 +19098,8 @@
  echo "$as_me: WARNING: DIVX support removed until it works on p4" >&2;}
  fi
  
+-
 +fi
 +have_divx="no"
  
- 
  echo "$as_me:$LINENO: checking for xvid codec" >&5
-@@ -19457,6 +19460,7 @@ _ACEOF
+ echo $ECHO_N "checking for xvid codec... $ECHO_C" >&6
+@@ -19792,7 +19794,7 @@
+ 
  fi
  
- 
+-
 +if false; then
  
  echo "$as_me:$LINENO: checking for Arts audio support" >&5
  echo $ECHO_N "checking for Arts audio support... $ECHO_C" >&6
-@@ -19669,6 +19673,8 @@ _ACEOF
+@@ -20005,6 +20007,8 @@
  	  fi
  	  CPPFLAGS=$old_flags
   fi
@@ -36,23 +38,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/02 15:51:41 jmmv Exp $
  if test "x$have_arts" = "xno"; then
  	   	ARTS_LIBS=""
      	ARTS_CFLAGS=""
-@@ -21357,8 +21364,10 @@ echo $ECHO_N "checking cpu type ... $ECH
- echo $host_cpu
- echo "Machine vendor : $host_vendor"
- use_mmx=1
-+_saved_hv="$host_vendor"
-+if [ -z "$host_vendor" ]; then host_vendor="$host_cpu"; fi
- case $host_vendor in
--	pc)
-+	pc|i386)
- 		have_little_endian=yes;
- 
- cat >>confdefs.h <<\_ACEOF
-@@ -21415,6 +21424,7 @@ _ACEOF
- ;;
- esac
- echo "cpu done"
-+host_vendor="$_saved_hv"
- 
- 
- cat >>confdefs.h <<\_ACEOF
