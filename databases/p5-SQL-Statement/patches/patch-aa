@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2002/02/14 16:02:51 mjl Exp $
+
+--- Makefile.PL.orig	Thu Feb 14 16:57:52 2002
++++ Makefile.PL	Thu Feb 14 16:58:16 2002
+@@ -18,8 +18,8 @@
+ 
+ END_OF_WARNING
+ print "Press enter to continue ... ";
+-my $x = <STDIN>;
+-last if $x;
++#my $x = <STDIN>;
++#last if $x;
+   }
+ };
+ 
