@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2003/09/20 00:45:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.101 2003/12/03 00:17:22 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.74.1
+DISTNAME=		xmame-0.77.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -75,6 +75,11 @@ MAKE_FLAGS+=		JOY_I386=1
 .  if exists(/usr/lib/libusb.a) || exists(/usr/lib/libusbhid.a)
 MAKE_FLAGS+=		JOY_USB=1
 .  endif
+.endif
+
+.if !empty(CC_VERSION:Mgcc-2*)
+# Prevent memory explosion for gcc 2.95 and older.
+MAKE_FLAGS+=		LOW_MEM=1
 .endif
 
 OWN_DIRS=		${SPOOLDIR}
