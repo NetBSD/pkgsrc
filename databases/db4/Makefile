@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:13:18 tv Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/05 09:24:39 grant Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -18,6 +18,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
+CONFIG_SUB_OVERRIDE=	${WRKDIR}/${DISTNAME}/dist/config.sub
+CONFIG_GUESS_OVERRIDE=	${WRKDIR}/${DISTNAME}/dist/config.guess
 
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--enable-rpc
