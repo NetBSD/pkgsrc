@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.15 2004/01/14 23:55:29 jlam Exp $	*/
+/*	$NetBSD: perform.c,v 1.16 2004/03/29 02:24:11 tv Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.15 2004/01/14 23:55:29 jlam Exp $");
+__RCSID("$NetBSD: perform.c,v 1.16 2004/03/29 02:24:11 tv Exp $");
 #endif
 #endif
 
@@ -720,9 +720,13 @@ ignore_replace_depends_check:
 	if (!NoRecord && !Fake) {
 		char    contents[FILENAME_MAX];
 
+#ifdef __INTERIX
+		umask(002);
+#else
 		umask(022);
 		if (getuid() != 0)
 			warnx("not running as root - trying to record install anyway");
+#endif
 		if (!PkgName) {
 			warnx("no package name! can't record package, sorry");
 			errc = 1;
