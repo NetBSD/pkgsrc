@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/01 00:58:32 mycroft Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/25 12:56:58 wiz Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -11,24 +11,13 @@ MAINTAINER=		cjones@netbsd.org
 HOMEPAGE=		http://www.arsdigita.com/acs-repository/one-version?version_id=601
 COMMENT=		Module that emulates AOLServer in Apache
 
-DEPENDS+=		postgresql-lib>=7.0:../../databases/postgresql-lib
-DEPENDS+=		libmm>=1.2.1:../../devel/libmm
-DEPENDS+=		tcl>=8.3:../../lang/tcl
-DEPENDS+=		apache{,6}-1.3.*:../../www/apache
+GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 
-HAS_CONFIGURE=	# yes
-GNU_CONFIGURE=	# yes
-
-CONFIGURE_ARGS+=	--with-database=postgres --with-mm=${PREFIX}
-CONFIGURE_ENV+=		CPPFLAGS="-I${PREFIX}/include/pgsql -I${PREFIX}/include/httpd"
+CONFIGURE_ARGS+=	--with-database=postgres --with-mm=${BUILDLINK_PREFIX.libmm}
+CONFIGURE_ENV+=		CPPFLAGS="-I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql -I${BUILDLINK_PREFIX.apache}/include/httpd"
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
-
-_FETCH_MESSAGE= \
-	${ECHO} "===================================================================="; \
-	${ECHO} "  Please fetch ${DISTFILES} into ${DISTDIR}" ; \
-	${ECHO} "  from ${HOMEPAGE} ." ; \
-	${ECHO} "===================================================================="
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mod_aolserver
@@ -36,5 +25,8 @@ post-install:
 		${WRKSRC}/tcl_modules/nsd.ini.sample \
 		${PREFIX}/share/examples/mod_aolserver
 
-.include "../../www/apache/buildlink.mk"
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../devel/libmm/buildlink2.mk"
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../www/apache/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
