@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2004/12/04 22:46:29 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/03/22 16:28:37 jmmv Exp $
 bin/eog
 share/applications/eog.desktop
+share/eog/eog-gtk-ui.xml
 share/eog/glade/eog.glade
 share/gconf/schemas/eog.schemas
-share/gnome-2.0/ui/eog-gtk-ui.xml
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
@@ -107,7 +107,6 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/eog.mo
-${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
 share/omf/eog/eog-de.omf
 share/omf/eog/eog-es.omf
@@ -158,7 +157,6 @@ share/pixmaps/gnome-eog.png
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/eog/glade
 @dirrm share/eog
