@@ -1,4 +1,4 @@
 This command-line utility will allow you to modify MP3's id3v2
-tags. The are more powerful than the default id3v1; they can store
+tags.  They are more powerful than the default id3v1; they can store
 infomation about what band recorded the song, the song name, etc. and
 without string length limits.
