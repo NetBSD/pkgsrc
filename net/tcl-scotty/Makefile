@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/06/04 14:44:31 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/04 14:47:02 minskim Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
 PKGNAME=	tcl-scotty-${DIST_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net tcl
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
@@ -11,18 +11,22 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 COMMENT=	Network management extensions to TCL
 
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl83
+BUILDLINK_DEPENDS.tcl+=	tcl>=8.4.6nb4
 
 DIST_VERS=	2.1.11
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=  yes
-CONFIGURE_ARGS+= --with-tcl-config=${PREFIX}/lib --enable-multicast \
+CONFIGURE_ARGS+=--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
+		--enable-multicast				\
 		--enable-gdmo --without-tk-config
 CONFIGURE_ENV+=	TARGET=scotty
 
 USE_LIBTOOL=	yes
 NO_EXPORT_CPP=	yes
+
+.include "../../lang/tcl/buildlink3.mk"
 
 post-extract:
 	@${RM} -f ${WRKSRC}/../doc/http.n
