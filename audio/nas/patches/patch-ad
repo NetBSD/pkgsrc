@@ -1,0 +1,11 @@
+--- server/dia/auevents.c.orig	Thu Apr 21 17:50:59 1994
++++ server/dia/auevents.c	Sat Oct 17 23:26:34 1998
+@@ -27,7 +27,7 @@
+ #ifdef sgi
+ #define		_BSD_SIGNALS
+ #endif
+-#include 	<sys/signal.h>
++#include 	<signal.h>
+ #include	<audio/audio.h>
+ #include	<audio/Aproto.h>
+ #include	"au.h"
