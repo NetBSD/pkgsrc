@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.3 2002/11/26 15:07:32 jmmv Exp $
+
+--- src/prefs.c.orig	Wed Apr  3 18:31:46 2002
++++ src/prefs.c
+@@ -243,8 +244,7 @@ static gint Prefs_load(void)
+    file = a_Misc_prepend_user_home(".dillo/dillorc");
+    fd = open(file, O_RDONLY);
+    g_free(file);
+-   if (fd < 0 && (fd = open("/etc/dillorc", O_RDONLY)) < 0)
+-      if ((fd = open("/usr/local/etc/dillorc", O_RDONLY)) < 0)
++   if (fd < 0 && (fd = open(PKG_SYSCONFDIR "/dillorc", O_RDONLY)) < 0)
+          return FILE_NOT_FOUND;
+ 
+    scanner = g_scanner_new(NULL);
