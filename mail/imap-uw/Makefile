@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/09/19 13:13:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2000/09/27 08:34:25 toshii Exp $
 #
 
 DISTNAME=       imap-2000.RELEASE-CANDIDATE.6
@@ -18,6 +18,14 @@ INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
 DOC_DIR=	${PREFIX}/share/doc/imap-uw
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+BUILDNAME=	gso
+.else
+BUILDNAME=	neb
+.endif
+
 do-configure:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
 		< ${WRKSRC}/src/imapd/imapd.8c > ${WRKDIR}/imapd.8
@@ -27,7 +35,7 @@ do-configure:
 		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-build:
-	cd ${WRKSRC} && ${MAKE} neb PREFIX=${PREFIX} CC="${LIBTOOL} ${CC}"
+	cd ${WRKSRC} && ${MAKE} ${BUILDNAME} PREFIX=${PREFIX} CC="${LIBTOOL} ${CC}"
 
 do-install:
 	${INST_LIB} ${WRKSRC}/c-client/libimapuw.la ${PREFIX}/lib
