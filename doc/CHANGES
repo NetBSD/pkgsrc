@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3368 2003/09/14 14:08:18 recht Exp $
+$NetBSD: CHANGES,v 1.3369 2003/09/14 15:18:12 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3682,3 +3682,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-CGI to 2.98 [kim 2003-09-14]
 	Updated python23 to 2.3nb2 [recht 2003-09-14]
 	Updated python23-pth to 2.3nb2 [recht 2003-09-14]
+	Updated bsdgrep-devel to 20030914 [cjep 2003-09-14]
