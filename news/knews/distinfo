@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2001/07/24 17:18:38 tron Exp $
+$NetBSD: distinfo,v 1.4 2001/07/25 07:17:06 tron Exp $
 
 SHA1 (knews-1.0b.1.tar.gz) = b56046036d4c6688439e6730b8ae2a2eade922db
 Size (knews-1.0b.1.tar.gz) = 392225 bytes
-SHA1 (patch-aa) = b125c5b5078e809dd0483a17d83fd0f055604639
+SHA1 (patch-aa) = 1f68aed0378d11b959a940185963f9081c596e15
 SHA1 (patch-ab) = c91ef1a71a9bd63a64d87e59a0a441386dc3d3c0
 SHA1 (patch-ac) = 8e087270e5b0be25b161b2462b61fcdce6edea42
 SHA1 (patch-ad) = c8ccc9dcd9e4aadd209366f738f2d6eb71464d59
