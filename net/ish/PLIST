@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/11 23:48:26 minskim Exp $
+bin/ish
+sbin/ishd

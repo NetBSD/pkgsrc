@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/11 23:48:26 minskim Exp $
+
+SHA1 (ish-v0.2.tar.gz) = 2d5d16cdd8c097220ee885bedbefb7f41115e6b2
+Size (ish-v0.2.tar.gz) = 6531 bytes
+SHA1 (patch-aa) = 76ffb5afb5deb44ce4d48f853ebdb0d229f081b1
