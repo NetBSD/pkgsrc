@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2003/06/01 16:17:00 salo Exp $
+$NetBSD: patch-aa,v 1.6 2003/08/12 06:44:37 jlam Exp $
 
---- Makefile.orig	2003-05-28 23:58:16.000000000 +0200
-+++ Makefile	2003-06-01 17:56:52.000000000 +0200
-@@ -32,32 +32,16 @@
+--- Makefile.orig	Wed May 28 14:58:16 2003
++++ Makefile	Wed Jul 16 03:44:16 2003
+@@ -32,32 +32,18 @@
  	$(CC) $(OBJS) $(LDFLAGS) -o $@
  
  pwm.1x: pwm.1x.in
@@ -33,7 +33,9 @@ $NetBSD: patch-aa,v 1.5 2003/06/01 16:17:00 salo Exp $
 -		echo "Installing sample configuration file $(ETCDIR)/pwm/pwm.conf"; \
 -		$(INSTALL) -m $(DATA_MODE) etc/pwm/sample.conf $(ETCDIR)/pwm/pwm.conf; \
 -	fi
++	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) pwm $(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man1
 +	$(BSD_INSTALL_MAN) pwm.1x $(MANDIR)/man1/pwm.1
 +	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)/pwm
 +	$(BSD_INSTALL_DATA) config.txt LICENSE $(DOCDIR)/pwm
