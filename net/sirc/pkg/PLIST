@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1997/11/09 23:39:41 hubertf Exp $
+bin/ssfe
+bin/sirc
+lib/sirc/dsirc
+lib/sirc/ssfe.c
+lib/sirc/sirc.help.gz
+lib/sirc/n0thing.pl
+lib/sirc/README
+lib/sirc/PROGRAMMING
+lib/sirc/ChangeLog
+lib/sirc/sircsock.ph
+@dirrm lib/sirc
