@@ -1,8 +1,17 @@
-$NetBSD: patch-ai,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-ai,v 1.2 2005/01/08 09:39:57 taca Exp $
 
---- yatconfd/Makefile.in.orig	Mon Jul  9 18:19:11 2001
+--- yatconfd/Makefile.in.orig	2001-12-20 21:31:51.000000000 +0900
 +++ yatconfd/Makefile.in
-@@ -127,18 +127,18 @@
+@@ -68,7 +68,7 @@ VERSION = @VERSION@
+ YAT5SYSDIR = @YAT5SYSDIR@
+ YATSYSDIROLD = @YATSYSDIROLD@
+ 
+-AM_CPPFLAGS = -I../common -DYATSYSDIROLD=\"@YATSYSDIROLD@\" 	-DYAT5SYSDIR=\"$(YAT5SYSDIR)\" -Wall -Wstrict-prototypes 
++AM_CPPFLAGS = -I../common -DYATSYSDIROLD=\"@YATSYSDIROLD@\" 	-DYAT5SYSDIR=\"$(YAT5SYSDIR)\"
+ 
+ 
+ sbin_PROGRAMS = yatconfd
+@@ -127,18 +127,18 @@ maintainer-clean-sbinPROGRAMS:
  
  install-sbinPROGRAMS: $(sbin_PROGRAMS)
  	@$(NORMAL_INSTALL)
@@ -25,7 +34,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  	done
  
  .c.o:
-@@ -268,7 +268,7 @@
+@@ -268,7 +268,7 @@ all-redirect: all-am
  install-strip:
  	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
  installdirs:
