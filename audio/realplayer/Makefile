@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/04/04 12:29:46 tron Exp $
+# $NetBSD: Makefile,v 1.10 2002/07/02 11:28:30 agc Exp $
 
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 PKGNAME=		realplayer-8.0.1
@@ -22,7 +22,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 CRYPTO=			# defined
-IS_INTERACTIVE=		# defined
+INTERACTIVE_STAGE=	fetch
 CHECK_SHLIBS=		NO
 
 XAUTHORITY?=		${HOME}/.Xauthority
