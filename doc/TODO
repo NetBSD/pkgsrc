@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.255 2003/02/14 22:11:34 wiz Exp $
+$NetBSD: TODO,v 1.256 2003/02/14 23:59:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -104,12 +104,10 @@ Suggested package updates
 	o db4-4.1.25 [pkg/20289]
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o easytag-0.27
 	o elm-me-2.4pl100
 	o exim-4.12 [pkg/19850]
 	o exmh-2.6
 	o fetchmail-6.2.1 [pkg/20143,pkg/20144]
-	o flac-1.1.0
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.31
@@ -143,8 +141,6 @@ Suggested package updates
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.1
 	o gpgme-0.4.0
-	o gqmpeg-0.20.0
-	o gqview-1.3.0
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
 	o gtk---2.2.0
@@ -200,7 +196,6 @@ Suggested package updates
 	o maildrop-1.5.2
 	o mcrypt-2.6.3
 	o memtest86-3.0
-	o metacity-2.4.13
 	o mhonarc-2.5.13 [pkg/19366]
 	o micq-0.4.10.1 [pkg/20294]
 	o midnight-commander-4.6.0
@@ -220,7 +215,6 @@ Suggested package updates
 	o netscape-7.01
 	o neXtaw-0.13.0
 	o ns-flash-6.0.69
-	o opencm-0.1.2alpha3
 	o openh323-1.11.2
 	o openoffice-1.0.2 [skrll]
 	o openoffice-643 [post-1.0.1]
