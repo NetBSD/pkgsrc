@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1236 2003/08/12 14:55:42 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1237 2003/08/12 15:51:29 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4222,12 +4222,13 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 				if ( i == 0 ){ 				\
 					cwd = $$1 ; 			\
 				} else {				\
-					cwd = cwd "\\\\/" $$1 ; 	\
+					cwd = cwd "\\/" $$1 ; 	\
 				} 					\
-				print "-e \"/^" cwd "$$$$/d\"";		\
+				print "/^" cwd "$$$$/ { next; }";	\
 				i=i+1 ; 				\
 			} 						\
 		} 							\
+		END { print "{ print $$$$0; }"; }			\
 	' <${MTREE_FILE}
 .endif
 
@@ -4284,7 +4285,7 @@ print-PLIST:
 			| ${SED}					\
 				-e 's@${PREFIX}/./@@'			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
-			| ${SORT} -r | ${SED} ${COMMON_DIRS}` ;		\
+			| ${SORT} -r | ${AWK} '${COMMON_DIRS}'` ;	\
 	do								\
 		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
 			${ECHO} @exec \$${MKDIR} %D/$$i ;		\
