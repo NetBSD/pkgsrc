@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2004/02/15 11:03:12 markd Exp $
+$NetBSD: distinfo,v 1.14 2004/03/09 11:37:39 markd Exp $
 
-SHA1 (kdelibs-3.2.0.tar.bz2) = 64780c60e66b954ba9cddfd10f1c7c20772ce4cb
-Size (kdelibs-3.2.0.tar.bz2) = 12453641 bytes
+SHA1 (kdelibs-3.2.1.tar.bz2) = 2666308f573ee77c3830ab900112b039ae9304fe
+Size (kdelibs-3.2.1.tar.bz2) = 12596863 bytes
