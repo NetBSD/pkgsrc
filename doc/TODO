@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2493 2004/11/26 22:06:56 wiz Exp $
+$NetBSD: TODO,v 1.2494 2004/11/26 22:18:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -562,7 +562,6 @@ Suggested package updates
 	o gnotime-2.2.1
 	o gnugk-2.2.0
 	o gnumeric0-0.76
-	o gnunet-0.6.5
 	o gnuserv-3.12.7
 	o gnutls-1.0.23
 	o gobo-eiffel-3.3
