@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2001/12/03 05:36:47 kent Exp $
+# $NetBSD: Makefile,v 1.52 2001/12/05 15:00:46 agc Exp $
 
 DISTNAME=	postfix-20010228-pl08
 PKGNAME=	postfix-20010228pl8
@@ -76,7 +76,7 @@ post-build:
 pre-install:
 	${INSTALL_DATA_DIR} /etc/postfix ${PREFIX}/share/postfix \
 	    ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
-	${CHOWN} root:wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
+	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	-${RM} -f ${WRKSRC}/conf/*.orig
 .if defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/12/04 06:15:00 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/12/05 15:00:48 agc Exp $
 #
 
 DISTNAME=	mtr-0.42
@@ -17,7 +17,7 @@ USE_BUILDLINK_ONLY=	YES
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
-	${INSTALL} -c -s -m 4755 -o root -g wheel ${WRKSRC}/mtr ${PREFIX}/sbin
+	${INSTALL} -c -s -m 4755 -o ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC}/mtr ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/mtr
 
