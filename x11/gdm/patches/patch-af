@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.6 2001/03/28 22:32:03 wennmach Exp $
+
 --- daemon/slave.c.orig	Mon Mar  5 01:29:54 2001
 +++ daemon/slave.c	Tue Mar 20 02:59:34 2001
 @@ -457,11 +457,11 @@
