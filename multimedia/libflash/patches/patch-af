@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/01/26 13:34:46 jmmv Exp $
+$NetBSD: patch-af,v 1.2 2004/04/24 22:25:31 wiz Exp $
 
---- Player/Makefile.orig	Wed Jun  7 11:19:50 2000
+--- Player/Makefile.orig	2000-06-07 20:19:50.000000000 +0200
 +++ Player/Makefile
-@@ -1,14 +1,12 @@
+@@ -1,14 +1,13 @@
 -FLASH=../Lib
 -CPPFLAGS=-I$(FLASH)
 -CFLAGS=-O3
@@ -10,6 +10,7 @@ $NetBSD: patch-af,v 1.1.1.1 2004/01/26 13:34:46 jmmv Exp $
 -CC=gcc
 -LDFLAGS=
 +LIBS = -lflash -ljpeg -lz ${LIBOSSAUDIO} -lX11 -lXext -lm $(LIBSTDCPP)
++CFLAGS+= -I${PREFIX}/include/flash
  
 -swfplayer: main.o $(FLASH)/libflash.a ../Zlib/libz.a ../Jpeg/libjpeg.a
 +all: swfplayer
