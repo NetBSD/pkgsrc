@@ -1,48 +1,29 @@
-# $NetBSD: Makefile,v 1.20 2001/03/27 03:20:03 hubertf Exp $
-#
+# $NetBSD: Makefile,v 1.21 2001/06/30 14:30:02 taca Exp $
+# FreeBSD: ports/lang/ruby/Makefile,v 1.40 2001/01/18 19:53:38 knu Exp
 
-DISTNAME=	ruby-1.4.6
+DISTNAME=	ruby-${RUBY_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
-		ftp://ftp.iij.ad.jp/pub/lang/ruby/ \
-		ftp://ftp.netlab.co.jp/pub/lang/ruby/ \
-		ftp://blade.nagaokaut.ac.jp/pub/lang/ruby/ \
-		ftp://ftp.krnet.ne.jp/pub/ruby/ \
-		ftp://ftp.mirror.nucba.ac.jp/mirror/ruby/ \
-		http://mirror.nucba.ac.jp/mirror/ruby/
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
-MAINTAINER=	sakamoto@netbsd.org
-HOMEPAGE=	http://www.ruby-lang.org/
-COMMENT=	the Object-Oriented Script Language
+MAINTAINER=	taca@netbsd.org
+HOMEPAGE=	http://www.ruby-lang.org/en/
+COMMENT=	Ruby, object-oriented interpreted scripting language
 
-BUILD_DEPENDS=	bison-*:../../devel/bison
-DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
-DEPENDS+=	readline>=4.0:../../devel/readline
+DEPENDS+=	${RUBY_PKGNAMEPREFIX}base>=${RUBY_VERSION}:../../lang/${RUBY_PKGNAMEPREFIX}base
+DEPENDS+=	${RUBY_PKGNAMEPREFIX}gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
+DEPENDS+=	${RUBY_PKGNAMEPREFIX}md5>=${RUBY_VERSION}:../../security/ruby-md5
+DEPENDS+=	${RUBY_PKGNAMEPREFIX}readline>=${RUBY_VERSION}:../../devel/${RUBY_PKGNAMEPREFIX}readline
+DEPENDS+=	${RUBY_PKGNAMEPREFIX}tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
+DEPENDS+=	${RUBY_PKGNAMEPREFIX}tk>=${RUBY_VERSION}:../../x11/${RUBY_PKGNAMEPREFIX}tk
 
-BUILD_DEFS+=    USE_INET6
+NO_CHECKSUM=	# defined
+NO_PATCH=	# defined
+NO_CONFIGURE=	# defined
+NO_BUILD=	# defined
 
-.include "../../mk/bsd.prefs.mk"
+do-install:
+	@${ECHO_MSG} This is only a meta package.
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --enable-shared
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+= --enable-ipv6
-.else
-CONFIGURE_ARGS+= --disable-ipv6
-.endif
-MAKE_ENV+=	XLDFLAGS="${LDFLAGS}" DLDFLAGS="-L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
-
-PLIST_SUBST=	RUBY_VERSION=1.4
-
-post-patch:
-	${RM} -f ${WRKSRC}/ext/tcltklib/MANIFEST
-	${RM} -f ${WRKSRC}/ext/tk/MANIFEST
-
-post-install:
-	strip ${PREFIX}/bin/ruby
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby
-	${INSTALL_DATA} ${WRKSRC}/sample/* ${PREFIX}/share/examples/ruby
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby/misc
-	${INSTALL_DATA} ${WRKSRC}/misc/* ${PREFIX}/share/examples/ruby/misc
-
+.include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
