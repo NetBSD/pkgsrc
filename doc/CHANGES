@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6306 2004/06/24 23:51:47 ben Exp $
+$NetBSD: CHANGES,v 1.6307 2004/06/25 07:00:54 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3055,3 +3055,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed iso-pernangband [ben 2004-06-24]
 	Added lcab-1.0b10 [ben 2004-06-24]
 	Updated shorten to 3.6.0 [ben 2004-06-24]
+	Added dvdauthor-0.6.10 [sekiya 2004-06-25]
