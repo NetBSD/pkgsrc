@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/22 14:22:44 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/03 13:07:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -19,6 +19,9 @@ CONFIGURE_ARGS= --enable-shared \
 		--with-tclinclude=${PREFIX}/include/tcl8.0 \
 		--with-tkconfig=${PREFIX}/lib/tk8.0 \
 		--with-tkinclude=${PREFIX}/include/tk8.0
+
+.include "../../mk/bsd.prefs.mk"
+
 # needed for japanese/expect
 .if !defined(NO_MAN_INSTALL)
 MAN1=		autoexpect.1 cryptdir.1 decryptdir.1 dislocate.1 \
