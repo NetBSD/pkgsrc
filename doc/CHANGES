@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1645 2003/03/15 09:00:08 jmmv Exp $
+$NetBSD: CHANGES,v 1.1646 2003/03/15 16:15:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1133,3 +1133,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mono to 0.23 [jmmv 2003-03-15]
 	Added regexx-0.98.1 [rh 2003-03-15]
 	Updated esound to 0.2.29nb1 [jmmv 2003-03-15]
+	Updated nasm-devel to 0.98.36 [wiz 2003-03-15]
