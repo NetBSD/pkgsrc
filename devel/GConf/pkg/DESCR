@@ -1,0 +1,9 @@
+  GConf is a configuration database system, functionally similar to the
+Windows registry but lots better. :-)  It's being written for the GNOME
+desktop.
+
+  GCONF IS SO INCREDIBLY ALPHA. AS IN, THERE ARE MORE UNTESTED CODE PATHS
+THAN TESTED ONES.  However, it "theoretically" works and I'm interested in
+people trying it out and looking for bugs.
+
+  Havoc Pennington <hp@redhat.com>

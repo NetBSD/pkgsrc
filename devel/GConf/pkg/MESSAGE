@@ -1,0 +1,9 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/08/30 06:19:08 rh Exp $
+
+==========================================================================
+  GConf has now been installed on your system.
+
+  If this is your first install of GConf, you may need to move
+  @@X11PREFIX@@/etc/gconf/1/path.example to @@X11PREFIX@@/etc/gconf/1/path
+  so that the default configuration is sane.
+==========================================================================
