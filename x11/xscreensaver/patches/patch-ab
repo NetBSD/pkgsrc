@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 1999/07/02 15:23:13 frueauf Exp $
+$NetBSD: patch-ab,v 1.3 1999/11/21 13:14:21 tron Exp $
 
---- hacks/Makefile.in.orig	Thu Jun 24 01:00:24 1999
-+++ hacks/Makefile.in	Wed Jun 30 18:33:52 1999
+--- hacks/Makefile.in.orig	Fri Nov 12 11:46:28 1999
++++ hacks/Makefile.in	Sun Nov 21 12:47:32 1999
 @@ -42,7 +42,7 @@
  # Note: see comment in ../driver/Makefile.in for explanation of X_LIBS, etc.
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 1999/07/02 15:23:13 frueauf Exp $
  HACK_LIBS	= $(HACK_PRE)            @HACK_LIBS@ $(HACK_POST)
  XPM_LIBS	= $(HACK_PRE) @XPM_LIBS@ @HACK_LIBS@ $(HACK_POST)
  XLOCK_LIBS	= $(HACK_LIBS)
-@@ -181,8 +181,8 @@
+@@ -185,8 +185,8 @@
  	  else								\
  	    p=$(srcdir)/$$program ;					\
  	  fi ;								\
@@ -22,3 +22,15 @@ $NetBSD: patch-ab,v 1.2 1999/07/02 15:23:13 frueauf Exp $
  	done
  
  munge-scripts: $(SCRIPTS)
+@@ -489,6 +489,11 @@
+ 
+ bsod:	 	bsod.o		$(HACK_OBJS) $(COL)
+ 	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(COL) $(HACK_LIBS) $(XPM_LIBS)
++
++.if ($(MACHINE_ARCH) == arm32)
++distort.o: distort.c
++	$(CC) -c $(INCLUDES) $(DEFS) $(CFLAGS:S/-O2//) $(X_CFLAGS) $<
++.endif
+ 
+ distort:	distort.o	$(HACK_OBJS) $(GRAB) $(SHM)
+ 	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(GRAB) $(SHM) $(HACK_LIBS) $(GRAB_LIBS)
