@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.42 2001/10/09 14:07:41 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.43 2001/10/20 03:00:16 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -290,7 +290,7 @@ REPLACE_RPATH+=	\
 	`cd ${WRKSRC}; ${FIND} . ${REPLACE_RPATH_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 
 REPLACE_RPATH_SED+=	\
-	-e "s|-R${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
+	-e "s|-R[ 	]*${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
 
 post-configure: replace-rpath
 
