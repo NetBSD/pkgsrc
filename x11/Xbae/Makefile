@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/06/01 11:23:43 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/19 11:19:36 drochner Exp $
 #
 
-DISTNAME=	Xbae-4.8.1
+DISTNAME=	Xbae-4.8.2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/
 
@@ -9,7 +9,8 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.lesstif.org/Xbae.html
 
 USE_MOTIF=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--disable-build-12 \
