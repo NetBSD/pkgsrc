@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/01 18:56:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/07 11:52:27 jmmv Exp $
 bin/ggv
 lib/bonobo/servers/GNOME_GGV.server
 libexec/ggv-postscript-viewer
@@ -42,6 +42,7 @@ share/gnome/help/ggv/zh_TW/figures/ggv_window.png
 share/gnome/help/ggv/zh_TW/ggv.xml
 share/gnome/help/ggv/zh_TW/legal.xml
 share/idl/Ggv.idl
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/ggv.mo
@@ -54,6 +55,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/ggv.mo
@@ -68,6 +70,7 @@ ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/ggv.mo
@@ -81,6 +84,7 @@ ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/ggv.mo
