@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 09:07:22 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:32 agc Exp $
 #
 
 DISTNAME=       awk
@@ -12,7 +12,7 @@ COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
 DIST_SUBDIR=	${PKGNAME}
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
 ALL_TARGET=	a.out
 

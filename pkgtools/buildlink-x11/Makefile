@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/08/22 17:45:57 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:41 agc Exp $
 
 DISTNAME=	buildlink-x11-0.8
 CATEGORIES=	pkgtools devel x11
@@ -11,7 +11,7 @@ COMMENT=	allows X11 pkgs to be built using the buildlink.mk infrastructure
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	# defined
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 NO_MTREE=	# defined
 USE_X11BASE=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/22 14:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:33 agc Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -12,7 +12,7 @@ COMMENT=		Small-footprint implementation of the Scheme programming language
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# untested on NetBSD
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
 ALL_TARGET=		${OPSYS}
 MAKE_ENV+=		CC="${CC}"

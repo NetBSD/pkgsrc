@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/11 16:19:45 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/09 20:36:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		deberg@netbsd.org
 HOMEPAGE=		http://www.cs.wisc.edu/~larus/spim.html
 COMMENT=		MIPS R2000 Simulator
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure

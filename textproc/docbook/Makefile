@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/27 03:20:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/09 20:36:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
@@ -22,7 +22,7 @@ DEPENDS+=	iso8879-1986:../../textproc/iso8879
 NO_MTREE=       yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 INSTDIR=	${PREFIX}/share/sgml/docbook
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog

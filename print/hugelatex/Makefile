@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/02 19:51:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:44 agc Exp $
 #
 
 DISTNAME=	hugelatex-1.0
@@ -15,7 +15,7 @@ EXTRACT_ONLY=	# nothing
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_BUILD=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/08 01:16:45 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1996/11/11 05:49:31 obrien Exp
 #
 
@@ -15,7 +15,7 @@ RESTRICTED=	Do not redistribute for a fee
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 MANCOMPRESSED=	yes
 
 .include "../../mk/bsd.pkg.mk"

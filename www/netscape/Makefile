@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/27 14:26:18 abs Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:53 agc Exp $
 #
 
 COMMENT=	Open new communicator, navigator, or mozilla window
@@ -22,7 +22,7 @@ DISTFILES=	# empty
 MASTER_SITES=	# empty
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes

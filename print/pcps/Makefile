@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:45 agc Exp $
 #
 
 DISTNAME=	pcps840
 PKGNAME=	pcps-8.40
-NO_WRKSUBDIR=	yes
 CATEGORIES=	print textproc
 MASTER_SITES=	ftp://garbo.uwasa.fi/unix/pcps/
 
@@ -15,6 +14,7 @@ MAKEFILE=	makefile
 ALL_TARGET=
 MAKE_ENV+=	"CC=${CC} ${CFLAGS} -DUNIX"
 NO_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}
 
 LICENSE=        shareware
 RESTRICTED=	This is shareware for your evaluation and subsequent payment

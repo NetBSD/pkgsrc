@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/25 04:18:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/09 20:36:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp 
 #
 
@@ -11,7 +11,7 @@ COMMENT=	Mirror packages on remote sites
 
 USE_PERL5=	# defined
 
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
 SCRIPTS_ENV+=	PERL5=${PERL5}
 

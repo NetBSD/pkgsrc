@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/15 11:51:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/09 20:36:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp 
 #
 
@@ -15,7 +15,7 @@ RESTRICTED=	"Do not modify. Do not charge for redistribution"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK_ONLY=	yes
 
 do-install:

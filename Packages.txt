@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.186 2001/09/08 20:09:46 jlam Exp $
+# $NetBSD: Packages.txt,v 1.187 2001/09/09 20:36:08 agc Exp $
 ###########################################################################
 
 			==========================
@@ -1789,7 +1789,13 @@ Your package doesn't create a subdirectory for itself (like GNU software
 does, for instance), but extracts itself in the current directory: see
 pkgsrc/editors/sam again, but the quick answer is:
 
+	WRKSRC=		${WRKDIR}
+
+Please note that the old 
+
 	NO_WRKSUBDIR=   yes
+
+has been deprecated and should not be used.
 
 
  10.4 Custom configuration process

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:53 agc Exp $
 
 DISTNAME=		netscape-v304-export.x86-unknown-bsd
 PKGNAME=		navigator3-3.04
@@ -17,7 +17,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 USE_X11BASE=		yes
 SCRIPTS_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 NO_BUILD=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/05/01 09:16:24 agc Exp $
+# $NetBSD: Makefile,v 1.18 2001/09/09 20:36:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -13,7 +13,7 @@ COMMENT=		Unix version of Rob Pike's editor for plan9
 
 DEPENDS+=		libXgFonts-1.0:../../fonts/Xg
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 MANCOMPRESSED=		yes

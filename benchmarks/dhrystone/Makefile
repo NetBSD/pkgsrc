@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:13 agc Exp $
 
 DISTNAME=		dhry2.1
 PKGNAME=		dhrystone-2.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		root@garbled.net
 COMMENT=		Reinhold Weicker's DHRYSTONE 2.1 integer benchmark
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dry2 ${PREFIX}/bin/dry2

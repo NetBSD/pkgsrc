@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:42:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/09 20:36:47 agc Exp $
 #
 
 DISTNAME=       	crashme-2.4
@@ -10,7 +10,7 @@ MAINTAINER=		agc@netbsd.org
 HOMEPAGE=		http://people.delphi.com/gjc/crashme.html
 COMMENT=		Try to crash machine with random arguments to random system calls
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${SH} ${DOWNLOADED_DISTFILE}
 MAKEFILE=		makefile
 

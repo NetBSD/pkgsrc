@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/04/28 23:59:17 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/09 20:36:33 agc Exp $
 # FreeBSD Id: ports/lang/sml-nj/Makefile,v 1.9 1999/08/25 06:35:27 obrien Exp
 
 DISTNAME=	${SML_VERSION}-bin.${BOX}-unix
@@ -33,7 +33,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc NetBSD-*-sparc
 # 	ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/
 
 DIST_SUBDIR=	sml-nj
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	${SML_VERSION}-config.tar.Z
 USE_GMAKE=	yes
 

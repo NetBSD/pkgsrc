@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:48 agc Exp $
 #
 
 DISTNAME=	detex-2.7
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cs.purdue.edu/homes/trinkle/detex/
 COMMENT=	remove LaTeX commands
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/detex ${PREFIX}/bin

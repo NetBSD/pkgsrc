@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/05/20 05:23:26 jonb Exp $
+# $NetBSD: Makefile,v 1.21 2001/09/09 20:36:52 agc Exp $
 #
 # There are a few more mod_auth_cookie's out there doing slightly
 # different things.  This one pkg would be a good place to dump them all in
@@ -6,7 +6,6 @@
 
 DISTNAME=	mod_auth_cookie.c
 PKGNAME=	ap-auth-cookie-1.7
-NO_WRKSUBDIR=	yes
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.kciLink.com/pub/
 EXTRACT_SUFX=	.gz
@@ -20,6 +19,7 @@ DEPENDS+=	apache{,6}-1.3.*:../../www/apache
 BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
 
 EXTRACT_CMD=	${DO_NADA}
+WRKSRC=		${WRKDIR}
 
 post-extract:
 	@(${ECHO} '#include "ap_compat.h"'; ${GZIP_CMD} -dc ${DISTDIR}/${DISTFILES}) \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 15:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/09/09 20:36:27 agc Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -21,7 +21,7 @@ EXTRACT_CMD=	unzip -q ${DOWNLOADED_DISTFILE}
 USE_GMAKE=	yes
 MAKE_ENV+=	MAINDIR=${WRKSRC}
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 USE_MESA=	yes
 

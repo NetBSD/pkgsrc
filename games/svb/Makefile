@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:28 agc Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 COMMENT=		Spy Vs. Bob, the timeless classic
 
 USE_IMAKE=		yes
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 NO_INSTALL_MANPAGES=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:49 agc Exp $
 #
 
 DISTNAME=	html-4.0b
@@ -14,7 +14,7 @@ DEPENDS+=	iso8879-1986:../../textproc/iso8879
 NO_MTREE=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 INSTDIR=        ${PREFIX}/share/sgml/html
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog

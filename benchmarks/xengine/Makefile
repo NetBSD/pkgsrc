@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:15 agc Exp $
 # FreeBSD Id: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp
 
 DISTNAME=	xengine-1.0.1
@@ -14,7 +14,7 @@ COMMENT=	Reciprocating engine for X
 BUILD_DEPENDS=	gsharutils-4.2.1:../../archivers/gsharutils
 
 DIST_SUBDIR=	xengine
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 USE_IMAKE=	yes
 
 EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | gunshar

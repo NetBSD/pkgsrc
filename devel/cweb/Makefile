@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/17 08:38:43 abs Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/09 20:36:19 agc Exp $
 #
 # XXX This package needs to be installed with the same PREFIX as teTeX
 #
@@ -13,7 +13,6 @@ COMMENT=		CWEB System of Structured Documentation
 
 DEPENDS+= 		teTeX-[0-9]*:../../print/teTeX
 
-NO_WRKSUBDIR=		# defined
 WRKSRC=			${WRKDIR}
 
 post-patch:

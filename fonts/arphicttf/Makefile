@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/29 18:17:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:23 agc Exp $
 #
 
 DISTNAME=	arphicttf-2.11
@@ -23,7 +23,7 @@ MISC_FILES=	ARPHICPL.TXT logo.gif release.txt
 DIST_SUBDIR=	${PKGNAME}
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

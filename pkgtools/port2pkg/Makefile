@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/24 11:06:09 sakamoto Exp $
+# $NetBSD: Makefile,v 1.13 2001/09/09 20:36:43 agc Exp $
 #
 
 DISTNAME=	port2pkg-1.9
@@ -14,7 +14,7 @@ DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 USE_PERL5=	YES
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes

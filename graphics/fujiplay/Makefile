@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:29 agc Exp $
 #
 
 DISTNAME=	fujiplay
@@ -11,7 +11,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://topo.math.u-psud.fr/~bousch/fujiplay.html
 COMMENT=	Download pictures from some Fujifilm digital cameras
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	fujiplay-1.33
 
 do-install:

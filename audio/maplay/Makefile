@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/16 22:10:28 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:12 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/01/07 14:58:04 torstenb Exp 
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	MPEG audio player/decoder for layer I and II MPEG audio streams
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 PATCH_STRIP=	-p2
 
 pre-configure:

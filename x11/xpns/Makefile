@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/09 20:36:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.informatik.uni-stuttgart.de/ipvr/bv/pns/pns.html
 COMMENT=	Petri-Net Simulator for Xwindows
 
 USE_X11BASE=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
 ALL_TARGET=	pns
 

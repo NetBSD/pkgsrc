@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/05/31 10:24:40 dent Exp $
+# $NetBSD: Makefile,v 1.15 2001/09/09 20:36:42 agc Exp $
 #
 
 DISTNAME=		pkgdiff-0.100
@@ -13,7 +13,7 @@ COMMENT=		Tools to ease creating and maintaining patches for pkgsrc
 USE_PERL5=		YES
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes

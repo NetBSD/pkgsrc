@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/02/16 13:15:36 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/09/09 20:36:10 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -19,7 +19,7 @@ RESTRICTED=		Only unmodified original package can be distributed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${DOWNLOADED_DISTFILE} >/dev/null
 
 pre-extract:

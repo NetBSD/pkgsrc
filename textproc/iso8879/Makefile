@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
 NO_MTREE=       yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 INSTDIR=	${PREFIX}/share/sgml/iso8879
 

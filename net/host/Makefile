@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/10 17:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:38 agc Exp $
 
 DISTNAME=	host_991529
 PKGNAME=	host-991529
@@ -19,7 +19,7 @@ MAKE_ENV+=	ALLOW_HOSTALIASES=-DALLOW_HOSTALIASES
 .endif
 
 NO_CONFIGURE=	yes
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 # MAKE_ENV will have the right effect...
 MAKEFLAGS+=	-e

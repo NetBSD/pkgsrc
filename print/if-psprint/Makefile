@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/07/24 10:35:45 abs Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:44 agc Exp $
 #
 
 DISTNAME=		if-psprint-1.4
@@ -15,7 +15,7 @@ DEPENDS+=	enscript-[0-9]*:../../print/enscript
 USE_PERL5=		YES
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/15 18:29:11 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/09 20:36:44 agc Exp $
 
 DISTNAME=	cupsomatic
 PKGNAME=	${DISTNAME}-1.6
@@ -31,7 +31,7 @@ DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	mpage-[0-9]*:../../print/mpage
 
 USE_PERL5=	# defined
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 
