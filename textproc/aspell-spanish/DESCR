@@ -1,0 +1,1 @@
+Spanish language support for aspell, e.g. `aspell -d spanish -c $myfile'.
