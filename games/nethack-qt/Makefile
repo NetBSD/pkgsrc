@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/06/06 12:10:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2004/04/11 22:57:11 snj Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=		The QT-Enhanced X11 version of NetHack
 
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 
 ALL_TARGET=		x11tiles nethack
@@ -24,7 +24,7 @@ post-install:
 	@${CP} -f ${WRKSRC}/dat/x11tiles ${WRKSRC}/dat/tiles.xpm
 	@${INSTALL_DATA} ${WRKSRC}/dat/tiles.xpm ${PREFIX}/share/${NETHACK_DIR}
 
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
