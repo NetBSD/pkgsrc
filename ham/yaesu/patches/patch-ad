@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2002/05/10 00:18:21 hubertf Exp $
 
 --- main.c.orig	Sat Apr 13 21:07:41 2002
 +++ main.c
@@ -8,8 +8,8 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
               case '0':
 -             if ((fdSer = open("/dev/ttyS0", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS0 failed!!!\n");
-+             if ((fdSer = open("/dev/ttyE0", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE0 failed!!!\n");
++             if ((fdSer = open("/dev/tty00", O_RDWR )) < 0) {
++                perror("open of /dev/tty00 failed!!!\n");
                  exit(3);
               }
               break;
@@ -17,8 +17,8 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
               case '1':
 -             if ((fdSer = open("/dev/ttyS1", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS1 failed!!!\n");
-+             if ((fdSer = open("/dev/ttyE1", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE1 failed!!!\n");
++             if ((fdSer = open("/dev/tty01", O_RDWR )) < 0) {
++                perror("open of /dev/tty01 failed!!!\n");
                  exit(3);
               }
               break;
@@ -26,8 +26,8 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
               case '2':
 -             if ((fdSer = open("/dev/ttyS2", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS2 failed");
-+             if ((fdSer = open("/dev/ttyE2", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE2 failed");
++             if ((fdSer = open("/dev/tty02", O_RDWR )) < 0) {
++                perror("open of /dev/tty02 failed");
                  exit(3);
               }
               break;
@@ -35,8 +35,8 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
               case '3':
 -             if ((fdSer = open("/dev/ttyS3", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS3 failed");
-+             if ((fdSer = open("/dev/ttyE3", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE3 failed");
++             if ((fdSer = open("/dev/tty03", O_RDWR )) < 0) {
++                perror("open of /dev/tty03 failed");
                  exit(3);
               }
               break;
