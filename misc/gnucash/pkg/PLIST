@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/08/29 14:56:24 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/12/04 03:25:51 briggs Exp $
 bin/gnc-prices
 bin/gnucash
 etc/gnucash/config
@@ -44,6 +44,7 @@ share/gnucash/doc/examples/trading2.xac
 share/gnucash/doc/examples/web.qif
 share/gnucash/doc/examples/xfer.xac
 share/gnucash/doc/gnc.html
+share/gnucash/doc/gnucash.engine_wrap.doc
 share/gnucash/doc/guile-hackers.txt
 share/gnucash/html/C/RAW-NOTES
 share/gnucash/html/C/bofa-mym.html
@@ -68,6 +69,7 @@ share/gnucash/html/C/image/logo-sgi.gif
 share/gnucash/html/C/image/logo-skunkware.gif
 share/gnucash/html/C/image/newaccwin-code.gif
 share/gnucash/html/C/image/newaccwin-trade.gif
+share/gnucash/html/C/image/recninfo.gif
 share/gnucash/html/C/image/recnwin.gif
 share/gnucash/html/C/image/regwin-double.gif
 share/gnucash/html/C/image/regwin-multi.gif
