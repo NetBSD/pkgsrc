@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 1998/08/12 02:42:31 tv Exp $
+$NetBSD: patch-aa,v 1.2 1998/08/14 00:12:53 tv Exp $
 
 --- Makefile.in.orig	Sat Jun 27 18:08:28 1998
-+++ Makefile.in	Mon Aug  3 18:24:12 1998
++++ Makefile.in	Thu Aug 13 17:32:08 1998
 @@ -349,6 +349,7 @@
  	"NM_FOR_TARGET=$(NM_FOR_TARGET)" \
  	"RANLIB_FOR_TARGET=$(RANLIB_FOR_TARGET)" \
@@ -18,3 +18,11 @@ $NetBSD: patch-aa,v 1.1 1998/08/12 02:42:31 tv Exp $
  	"prefix=$(prefix)" \
  	"tooldir=$(tooldir)" \
  	"gxx_include_dir=$(gxx_include_dir)" \
+@@ -405,6 +407,7 @@
+ 	'CXXFLAGS=$$(CXXFLAGS_FOR_TARGET)' \
+ 	'DLLTOOL=$$(DLLTOOL_FOR_TARGET)' \
+ 	'LD=$$(LD_FOR_TARGET)' \
++	'LDFLAGS=$$(LDFLAGS_FOR_TARGET)' \
+ 	'LIBCFLAGS=$$(LIBCFLAGS_FOR_TARGET)' \
+ 	'LIBCXXFLAGS=$$(LIBCXXFLAGS_FOR_TARGET)' \
+ 	'NM=$$(NM_FOR_TARGET)' \

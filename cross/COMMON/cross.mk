@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.1 1998/08/12 02:42:29 tv Exp $
+#	$NetBSD: cross.mk,v 1.2 1998/08/14 00:12:52 tv Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -27,6 +27,7 @@ CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 MASTER_SITES+=		${MASTER_SITE_GNU}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
+#CROSS_PATCHFILES+=	${COMMON_DIR}/patches-binutils/patch-*
 USE_CROSS_EGCS=		yes
 
 post-extract: post-extract-binutils
@@ -76,11 +77,19 @@ CONFIGURE_ARGS+= 	--target=${TARGET_ARCH} \
 			--enable-version-specific-runtime-libs
 CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 USE_GMAKE=		yes
-MAKE_FLAGS+=		CC_FOR_TARGET="${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ -idirafter ${SYS_INCLUDE} -L${SYS_LIB}" \
+MAKE_FLAGS+=		CC_FOR_TARGET="${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ ${CFLAGS_FOR_TARGET}" \
 			GCC_FOR_TARGET='$${CC_FOR_TARGET}' \
 			CXX_FOR_TARGET='$${CC_FOR_TARGET}' \
-			LANGUAGES="c c++ f77 objc" \
-			SYSTEM_HEADER_DIR="${SYS_INCLUDE}"
+			LDFLAGS_FOR_TARGET="${LDFLAGS_FOR_TARGET}" \
+			LANGUAGES="c c++ f77 objc"
+
+.if defined(SYS_INCLUDE)
+CFLAGS_FOR_TARGET+=	-idirafter ${SYS_INCLUDE}
+MAKE_FLAGS+=		SYSTEM_HEADER_DIR="${SYS_INCLUDE}"
+.endif
+.if defined(SYS_LIB)
+LDFLAGS_FOR_TARGET+=	-L${SYS_LIB}
+.endif
 
 post-extract: post-extract-egcs
 post-extract-egcs:
