@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/10/03 16:15:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/14 00:54:45 grant Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.tcptrace.org/
 COMMENT=	TCP dump file analysis tool
 
 GNU_CONFIGURE=	yes
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_BUILDLINK2=	yes
 
 ALL_TARGET=	tcptrace
