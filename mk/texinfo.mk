@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.15 2003/07/31 08:58:24 grant Exp $
+# $NetBSD: texinfo.mk,v 1.16 2003/07/31 13:50:13 seb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES and
 # USE_NEW_TEXINFO are defined.
@@ -19,6 +19,8 @@ TEXINFO_MK=	# defined
 # the new framework.
 #
 .if defined(USE_NEW_TEXINFO)
+
+.if !empty(INFO_FILES)
 #
 # Handle install-info.
 # 
@@ -34,22 +36,22 @@ INFO_DIR?=	info
 # Does the system have the install-info command?
 # Any version will fit (really?).
 _INSTALL_INFO=
-.for _i_ in /usr/bin/install-info /sbin/install-info
-.  if exists(${_i_})
+.  for _i_ in /usr/bin/install-info /sbin/install-info
+.    if exists(${_i_})
 _INSTALL_INFO=			${_i_}
-.  endif
-.endfor
+.    endif
+.  endfor
 
 # If no install-info was found provide one with the pkg_install-info package.
 # And set INSTALL_INFO to the install-info command it provides.
-.if empty(_INSTALL_INFO)
+.  if empty(_INSTALL_INFO)
 _PKG_INSTALL_INFO_PREFIX_DEFAULT=	${LOCALBASE}
 DEPENDS+=	pkg_install-info-[0-9]*:../../pkgtools/pkg_install-info
 EVAL_PREFIX+=	_PKG_INSTALL_INFO_PREFIX=pkg_install-info
 INSTALL_INFO=	${_PKG_INSTALL_INFO_PREFIX}/bin/pkg_install-info
-.else
+.  else
 INSTALL_INFO=	${_INSTALL_INFO}
-.endif
+.  endif
 
 # Generate INSTALL/DEINSTALL scripts code for handling install-info.
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/install-info
@@ -57,6 +59,7 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/install-info
 FILES_SUBST+=		INFO_FILES=${INFO_FILES:Q}
 FILES_SUBST+=		INSTALL_INFO=${INSTALL_INFO:Q}
 FILES_SUBST+=		INFO_DIR=${INFO_DIR:Q}
+.endif # INFO_FILES
 
 # When not using buildlink2 set INSTALL_INFO in environment to ${ECHO}
 # so the package build/install step does not register itself the info
@@ -69,17 +72,13 @@ CONFIGURE_ENV+=		INSTALL_INFO="${TRUE}"
 MAKE_ENV+=		INSTALL_INFO="${TRUE}"
 .endif
 
+.if empty(USE_MAKEINFO:M[nN][oO])
 #
-# Handle makeinfo if requested.
+# Handle makeinfo.
 #
 
 # Minimum required version for the GNU makeinfo command.
 TEXINFO_REQD?=	3.12
-
-# By default makeinfo is not needed for building.
-USE_MAKEINFO?=		NO
-
-.if empty(USE_MAKEINFO:M[nN][oO])
 
 # Argument to specify maximum info files size for newer versions
 # of makeinfo. This argument is supported since makeinfo 4.1.
