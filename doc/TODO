@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2476 2004/11/26 09:25:11 adam Exp $
+$NetBSD: TODO,v 1.2477 2004/11/26 09:26:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1162,7 +1162,7 @@ Suggested package updates
 	o rtcw-1.41-3
 	o ruby-1.8.1 [taca]
 	o ruby-bigfloat-1.2.1
-	o ruby-digest-1.8.2
+	o ruby-digest-1.8.1
 	o ruby-fcgi-0.8.5
 	o ruby-fox-1.2.0
 	o ruby-gsl-0.2.0
