@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 1998/08/23 05:52:47 garbled Exp $
+*** utils.c.orig	Wed Aug 20 15:26:52 1997
+--- utils.c	Wed Aug 20 15:28:11 1997
+***************
+*** 5,10 ****
+--- 5,12 ----
+  #include "rc.h"
+  #include "jbwrap.h"
+  
++ #include <sys/param.h>
++ 
+  /* print error with line number on noninteractive shells (i.e., scripts) */
+  
+  extern void pr_error(char *s) {
+***************
+*** 19,26 ****
+--- 21,30 ----
+  /* our perror */
+  
+  extern void uerror(char *s) {
++ #if !(defined(BSD) && BSD >= 199306)
+  	extern int sys_nerr;
+  	extern char *sys_errlist[];
++ #endif
+  	if (errno > sys_nerr)
+  		return;
+  	if (s != NULL)

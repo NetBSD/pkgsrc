@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1998/08/23 05:52:47 garbled Exp $
+--- nalloc.c.orig	Mon Jul 13 02:32:50 1998
++++ nalloc.c	Mon Jul 13 02:34:46 1998
+@@ -113,3 +113,5 @@
+ extern void *ealloc(SIZE_T n) {
++#if !(defined(BSD) && BSD >= 199306)
+ 	extern void *malloc(SIZE_T);
++#endif
+ 	void *p = malloc(n);
+@@ -123,3 +125,5 @@
+ extern void *erealloc(void *p, SIZE_T n) {
++#if !(defined(BSD) && BSD >= 199306)
+ 	extern void *realloc(void *, SIZE_T);
++#endif
+ 	if (p == NULL)		/* convenience feature */
