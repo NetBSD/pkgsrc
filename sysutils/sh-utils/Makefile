@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/31 09:55:26 dent Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/12 21:20:37 tron Exp $
 
 DISTNAME=		sh-utils-2.0
 CATEGORIES=		sysutils
@@ -11,5 +11,6 @@ COMMENT=		GNU shell utilities
 USE_GTEXINFO=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
+CONFIGURE_ENV+=		ac_cv_func_uname=no
 
 .include "../../mk/bsd.pkg.mk"
