@@ -3,4 +3,4 @@ for building expert systems which administrate and configure large
 computer networks. Cfengine uses the idea of classes and a primitive
 form of intelligence to define and automate the configuration of
 large systems in the most economical way possible. Cfengine is
-designed to be a part of computer immune system
+designed to be a part of computer immune system.
