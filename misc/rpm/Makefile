@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/10/20 23:09:27 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2002/10/20 23:19:40 jlam Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -22,7 +22,6 @@ DEINSTALL_TMPL=		${.CURDIR}/DEINSTALL
 INSTALL_TMPL=		${.CURDIR}/INSTALL
 
 # The rpm databases are kept under ${RPM_DB_PREFIX}/lib/rpm.
-RPM_DB_PREFIX?=		${LOCALBASE}
 CONFIGURE_ENV+=		varprefix="${RPM_DB_PREFIX}"
 
 RPMDIR=			${RPM_DB_PREFIX}/lib/rpm
