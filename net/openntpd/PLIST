@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/19 19:17:25 xtraeme Exp $
+man/man5/ntpd.conf.5
+man/man8/ntpd.8
+sbin/ntpd
+share/examples/openntpd/ntpd.conf
+@dirrm share/examples/openntpd
