@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/10/10 01:01:09 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/13 09:32:49 jlam Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -16,15 +16,13 @@ PATCH_DIST_ARGS=	-d ${WRKSRC}/.. --forward --quiet
 DISTINFO_FILE?=		${.CURDIR}/../db3/distinfo
 PATCHDIR?=		${.CURDIR}/../db3/patches
 
-USE_JAVA=		yes
-JDK_BASE=		${PKG_JAVA_HOME}
-JAVAC=			${JDK_BASE}/bin/javac
-JAR=			${JDK_BASE}/bin/jar
+JAVAC=			${PKG_JAVA_HOME}/bin/javac
+JAR=			${PKG_JAVA_HOME}/bin/jar
 JAVACABS=		${JAVAC}
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKDIR}/${DISTNAME}/dist/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 
@@ -35,17 +33,14 @@ CONFIGURE_ARGS+=	--enable-java
 CONFIGURE_ENV+=		JAVAC="${JAVAC}"
 CONFIGURE_ENV+=		JAVACABS="${JAVACABS}"
 CONFIGURE_ENV+=		JAR="${JAR}"
+
+CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PKG_JVM}}
+
 ALL_TARGET=		libdb3_java.la java
 INSTALL_TARGET=		install_java
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 
-.include "../../databases/db3/buildlink.mk"
+.include "../../databases/db3/buildlink2.mk"
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if ${PKG_JVM} == "jdk"
-CPPFLAGS+=		-I${JDK_BASE}/include/netbsd
-.elif ${PKG_JVM} == "sun-jdk"
-JDK_BASE=		${LOCALBASE}/java
-CPPFLAGS+=		-I${JDK_BASE}/include/linux
-.endif
