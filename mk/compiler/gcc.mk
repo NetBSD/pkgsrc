@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.56 2004/03/05 14:36:34 wiz Exp $
+# $NetBSD: gcc.mk,v 1.57 2004/03/10 05:13:38 dmcmahill Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -284,6 +284,7 @@ _GCC_FC=	${_GCC_DIR}/bin/g77
 _GCC_LINKS+=	_GCC_FC
 PKG_FC=		${_GCC_FC}
 FC=		${PKG_FC:T}
+F77=		${PKG_FC:T}
 .endif
 
 # GCC passes flags to the linker using "-Wl,".
