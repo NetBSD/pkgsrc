@@ -66,3 +66,23 @@
   			if (param.outmode == DECODE_AUDIO)
   				audio_queueflush (ai);
   #endif
+*** common.c.old	Sat Feb 28 15:42:24 1998
+--- common.c	Sat Feb 28 15:42:36 1998
+***************
+*** 587,593 ****
+                 too much distortion in the audio output).  */
+          do {
+            try++;
+!           rd->head_shift(hbuf,&newhead);
+            if (!oldhead)
+              goto init_resync;       /* "considered harmful", eh? */
+  
+--- 587,594 ----
+                 too much distortion in the audio output).  */
+          do {
+            try++;
+!           if (rd->head_shift(hbuf,&newhead) == 0)
+! 	    return 0;
+            if (!oldhead)
+              goto init_resync;       /* "considered harmful", eh? */
+  
