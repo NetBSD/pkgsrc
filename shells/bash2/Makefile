@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/03/30 11:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2000/10/04 10:22:56 toshii Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -17,6 +17,12 @@ GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 MAKE_ENV+=	INSTALL_SCRIPT='${INSTALL_SCRIPT}'
 
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(BASH_STATIC) && ${BASH_STATIC} == YES
+CONFIGURE_ARGS+=	--enable-static-link
+.endif
+
 post-install:
 	${CP} /etc/shells /etc/shells.bak
 	(${GREP} -v ${PREFIX}/bin/bash /etc/shells.bak; ${ECHO} ${PREFIX}/bin/bash) >/etc/shells
@@ -32,7 +38,3 @@ post-install:
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 
 .include "../../mk/bsd.pkg.mk"
-
-.if defined(BASH_STATIC) && ${BASH_STATIC} == YES
-CONFIGURE_ARGS+=	--enable-static-link
-.endif
