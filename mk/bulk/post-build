@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.47 2004/11/22 12:53:56 wiz Exp $
+# $NetBSD: post-build,v 1.48 2004/11/23 19:31:46 jlam Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -93,7 +93,7 @@ system("mkdir -p ${FTP}");
 
 # Copy over the output from the build process
 chdir($USR_PKGSRC);
-system("find . -name $BROKENFILE -o -name $BROKENWRKLOG -print | $GTAR -T - -plcf - | (cd $FTP; $GTAR -plxf -)");
+system("find . -name $BROKENFILE -print -o -name $BROKENWRKLOG -print | $GTAR -T - -plcf - | (cd $FTP; $GTAR -plxf -)");
 
 # Copy over the cache files used during the build
 foreach my $f ($BULK_DBFILE, $DEPENDSTREEFILE, $DEPENDSFILE, $SUPPORTSFILE, $INDEXFILE, $ORDERFILE) {
