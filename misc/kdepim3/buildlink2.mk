@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/08/05 13:46:26 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/12/08 14:41:40 wiz Exp $
 #
 # This Makefile fragment is included by packages that use kdepim.
 #
@@ -9,7 +9,7 @@
 KDEPIM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdepim
-BUILDLINK_DEPENDS.kdepim?=		kdepim>=3.1.3nb1
+BUILDLINK_DEPENDS.kdepim?=		kdepim>=3.1.4nb1
 BUILDLINK_PKGSRCDIR.kdepim?=		../../misc/kdepim3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdepim=kdepim

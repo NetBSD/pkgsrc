@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2003/08/05 13:36:47 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2003/12/08 14:41:39 wiz Exp $
 
 DISTNAME=	kdevelop-2.1.5_for_KDE_3.1
 PKGNAME=	kdevelop-base-2.1.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel kde
 
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/kdevelop-2.1.5/src/ \
