@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/10 13:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/25 21:49:26 wiz Exp $
 
-DISTNAME=	ffmpeg-0.4.5
-PKGREVISION=	2
+DISTNAME=	ffmpeg-0.4.8
 CATEGORIES=	multimedia net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
 
@@ -11,7 +10,6 @@ COMMENT=	MPEG decoding, encoding and streaming software
 
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
-WRKSRC=		${WRKDIR}/ffmpeg
 HAS_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
@@ -21,26 +19,22 @@ MAKE_ENV+=	EXTRA_LIBS="${LIBGETOPT}" \
 		LOCALBASE="${LOCALBASE}"
 
 CONFIGURE_ARGS=	--cc=${CC} --disable-grab --disable-mmx --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-vhook
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/libav
-	${INSTALL_DATA_DIR} ${PREFIX}/include/libavcodec
-	${INSTALL_DATA_DIR} ${PREFIX}/include/libavcodec/i386
-	${INSTALL_DATA_DIR} ${PREFIX}/include/libavcodec/libac3
-	${INSTALL_DATA} ${WRKSRC}/libav/*.h ${PREFIX}/include/libav
-	${INSTALL_DATA} ${WRKSRC}/libavcodec/*.h ${PREFIX}/include/libavcodec
-	${INSTALL_DATA} ${WRKSRC}/libavcodec/i386/*.h \
-		${PREFIX}/include/libavcodec/i386
-	${INSTALL_DATA} ${WRKSRC}/libavcodec/libac3/*.h \
-		${PREFIX}/include/libavcodec/libac3
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ffmpeg \
 		${PREFIX}/share/examples/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/libavcodec/apiexample.c \
 		${PREFIX}/share/doc/ffmpeg
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/doc/* \
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/doc/TODO \
 		${PREFIX}/share/doc/ffmpeg
-	${MV} ${PREFIX}/share/doc/ffmpeg/ffserver.conf \
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.txt \
+		${PREFIX}/share/doc/ffmpeg
+	${INSTALL_DATA} ${WRKSRC}/doc/ffserver.conf \
 		${PREFIX}/share/examples/ffmpeg
+	# ffplay not installed
+	${RM} ${PREFIX}/man/man1/ffplay.1
 
 .include "../../devel/libgetopt/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
