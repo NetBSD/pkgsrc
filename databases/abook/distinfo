@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/07/28 02:51:31 kim Exp $
+$NetBSD: distinfo,v 1.6 2004/11/29 01:39:17 minskim Exp $
 
-SHA1 (abook-0.5.2.tar.gz) = 08f7382bd1a085172c9471922bcc984aa131eb80
-Size (abook-0.5.2.tar.gz) = 183852 bytes
-SHA1 (patch-aa) = c96b08e93dca5aa1a91abfaf8649b368d4f37be2
+SHA1 (abook-0.5.3.tar.gz) = a6c4b7f9d25f3f0b0a67d0ffb0456a0e19018e8f
+Size (abook-0.5.3.tar.gz) = 183011 bytes
