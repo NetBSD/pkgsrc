@@ -1,8 +1,8 @@
-$NetBSD: patch-cj,v 1.5 2003/05/22 02:42:50 markd Exp $
+$NetBSD: patch-cj,v 1.6 2003/07/30 13:35:00 markd Exp $
 
---- konqueror/client/Makefile.in.orig	Tue May 13 23:07:59 2003
+--- konqueror/client/Makefile.in.orig	2003-07-15 22:03:39.000000000 +1200
 +++ konqueror/client/Makefile.in
-@@ -423,14 +423,18 @@ x_libraries = @x_libraries@
+@@ -424,14 +424,18 @@ x_libraries = @x_libraries@
  AM_CPPFLAGS = -DQT_NO_CAST_ASCII
  
  bin_PROGRAMS = kfmclient
@@ -26,7 +26,7 @@ $NetBSD: patch-cj,v 1.5 2003/05/22 02:42:50 markd Exp $
  
  noinst_HEADERS = kfmclient.h
  #>- METASOURCES = AUTO
-@@ -438,9 +442,9 @@ noinst_HEADERS = kfmclient.h
+@@ -439,39 +443,50 @@ noinst_HEADERS = kfmclient.h
  KonquerorIface_DIR = $(srcdir)/..
  KDesktopIface_DIR = $(top_srcdir)/kdesktop
  
@@ -36,9 +36,8 @@ $NetBSD: patch-cj,v 1.5 2003/05/22 02:42:50 markd Exp $
 -kfmclient_LDADD = kfmclient.la
 +kfmclient_LDADD = libkfmclient_main.la
  subdir = konqueror/client
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
-@@ -448,30 +452,41 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -128,7 +127,21 @@ $NetBSD: patch-cj,v 1.5 2003/05/22 02:42:50 markd Exp $
  
  distclean-depend:
  	-rm -rf ./$(DEPDIR)
-@@ -816,15 +835,16 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -683,7 +702,12 @@ GTAGS:
+ 
+ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+-DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
++#>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
++#>+ 4
++KDE_DIST=Makefile.in.rej 
++
++DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
++
+ 
+ top_distdir = ../..
+ distdir = $(top_distdir)/$(PACKAGE)-$(VERSION)
+@@ -816,15 +840,18 @@ uninstall-am: uninstall-binPROGRAMS unin
  	uninstall-libLTLIBRARIES
  
  
@@ -145,21 +158,25 @@ $NetBSD: patch-cj,v 1.5 2003/05/22 02:42:50 markd Exp $
 +kfmclient.moc: $(srcdir)/kfmclient.h
 +	$(MOC) $(srcdir)/kfmclient.h -o kfmclient.moc
 +
++#>+ 1
++mocs: kfmclient.moc
  #>+ 9
  KonquerorIface.kidl: $(srcdir)/../KonquerorIface.h $(DCOP_DEPENDENCIES)
- 	$(DCOPIDL) $(srcdir)/../KonquerorIface.h > KonquerorIface.kidl || ( rm -f KonquerorIface.kidl ; /bin/false )
-@@ -836,10 +856,6 @@ KDesktopIface_stub.h: KDesktopIface.kidl
+ 	$(DCOPIDL) $(srcdir)/../KonquerorIface.h > KonquerorIface.kidl || ( rm -f KonquerorIface.kidl ; false )
+@@ -836,12 +863,6 @@ KDesktopIface_stub.h: KDesktopIface.kidl
  	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-skel KDesktopIface.kidl
  
  #>+ 3
 -kfmclient.moc: $(srcdir)/kfmclient.h
 -	$(MOC) $(srcdir)/kfmclient.h -o kfmclient.moc
 -
+-#>+ 1
+-mocs: kfmclient.moc
 -#>+ 3
  clean-metasources:
  	-rm -f  kfmclient.moc
  
-@@ -860,33 +876,33 @@ force-reedit:
+@@ -862,33 +883,33 @@ force-reedit:
  
  
  #>+ 11
@@ -206,7 +223,7 @@ $NetBSD: patch-cj,v 1.5 2003/05/22 02:42:50 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -896,8 +912,8 @@ kde-rpo-clean:
+@@ -898,8 +919,8 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 6
