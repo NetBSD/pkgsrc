@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.3 1998/12/06 12:42:01 tron Exp $
+$NetBSD: patch-ae,v 1.4 1999/11/12 16:25:30 rh Exp $
 
---- icons/Makefile.in.orig	Mon Feb  2 14:39:25 1998
-+++ icons/Makefile.in	Thu Oct  1 16:26:08 1998
+--- icons/Makefile.in.orig	Mon Apr 19 03:24:10 1999
++++ icons/Makefile.in	Fri Nov 12 17:20:06 1999
 @@ -4,6 +4,7 @@
  exec_prefix	= @exec_prefix@
  top_srcdir	= @top_srcdir@
@@ -17,5 +17,5 @@ $NetBSD: patch-ae,v 1.3 1998/12/06 12:42:01 tron Exp $
 -DEFAULT_ICON_DIR        = $(sysconfdir)/icons
 +DEFAULT_ICON_DIR        = $(datadir)/squid/icons
  
- SHARFILE	= $(srcdir)/icons.shar
  ICONS		= anthony-binhex.gif \
+ 		  anthony-bomb.gif \

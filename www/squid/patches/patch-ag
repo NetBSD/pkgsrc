@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 1998/12/06 12:42:01 tron Exp $
+$NetBSD: patch-ag,v 1.5 1999/11/12 16:25:30 rh Exp $
 
---- configure.orig	Tue Sep 22 19:46:09 1998
-+++ configure	Thu Oct  1 17:39:47 1998
-@@ -636,11 +636,11 @@
+--- configure.orig	Fri Nov 12 17:22:01 1999
++++ configure	Fri Nov 12 17:22:01 1999
+@@ -644,11 +644,11 @@
  REGEXLIB=''	# -lregex
  LIBREGEX=''	# libregex.a
  
@@ -18,4 +18,4 @@ $NetBSD: patch-ag,v 1.4 1998/12/06 12:42:01 tron Exp $
 +#fi
  
  case "$host_os" in
- cygwin32)
+ cygwin32|os2)
