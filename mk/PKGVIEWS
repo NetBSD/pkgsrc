@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.4 2003/07/29 20:37:50 jlam Exp $
+$NetBSD: PKGVIEWS,v 1.1.2.5 2003/07/30 11:25:10 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -38,37 +38,8 @@ add the depoted package to the default view.
 Possible problems:
 -----------------
 
-(1) I may be wrong about xpkgwedge.  We may need some sort of
+(*) I may be wrong about xpkgwedge.  We may need some sort of
     xpkgwedge package in order to properly handle USE_IMAKE packages
     so that they install into depot directories, but I'm ignoring them
     for now, or at least until we get much further along on step (2).
     Also, I'll figure out how to deal with binary packages later on.
-
-(2) INSTALL scripts currently do several things.  The main things
-    nowadays are to handle: users/groups, config files, directories,
-    info files, and shell registration.  There are some things that we
-    only want to happen once, when the package is installed into its
-    depot directory: handling users/group creation, config files, and
-    non-${PREFIX} directories.  There are some things that we want to
-    happen every time a package is added to a view: adding info files
-    to info/dir and shell registration.
-
-(3) DEINSTALL scripts also do several things.  The main things are to
-    remove: config files, directories, info files, and de-register
-    shells.  We only want some things to happen once when the package
-    is pkg_delete'd from it's depot directory: removing config files
-    and non-${PREFIX} directories.  We want some things to happen every
-    time a package is removed from a view: removing info file entries
-    from info/dir and de-registering shells.
-
-(4) The last step that pkg_delete(1) does is
-    "rm -r ${PKG_DBDIR}/${PKGNAME}", which is a cleanup step that
-    avoids problems of undeleted temp files hanging around in the
-    directory and preventing a clean removal of the package when
-    PKG_DBDIR is "/var/db/pkg".  This is key behaviour that we should
-    preserve for when we use pkg_delete(1) to remove a package from a
-    view.  I can enhance pkg_delete to do an alternative cleanup step
-    of just removing all of the package metafiles if it's the package
-    in its depot directory (I can test for the presence of +VIEWS),
-    and then have pkg_delete(1) note that it can't remove the
-    ${PKGNAME} directory because it's nonempty.
