@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/01/17 09:31:28 frueauf Exp $
+
+--- main.c.orig	Sun Jan 17 01:05:27 1999
++++ main.c	Sun Jan 17 01:05:39 1999
+@@ -548,5 +548,5 @@
+ S "\n");
+ S "If you have access to the Internet, you should visit:\n");
+-S "        http://www.funet.fi/pub/sci/electrical/tesla\n");
++S "        http://www.nic.funet.fi/pub/sci/electrical/tesla\n");
+ S "where you will find a large quantity of information on Tesla Coils.\n");
+ S "\n");
