@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2542 2003/06/19 17:15:33 kristerw Exp $
+$NetBSD: CHANGES,v 1.2543 2003/06/19 18:09:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2493,6 +2493,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xpdf to 2.02pl1 [simonb 2003-06-18]
 	Updated lsof to 4.68 [atatat 2003-06-19]
 	Updated acroread5 to 5.07 [tron 2003-06-19]
+	Updated qt2 to 2.3.1nb4 [wiz 2003-06-19]
 	Updated cfengine to 1.6.5 [seb 2003-06-19]
 	Updated pkgchk to 1.39 [tron 2003-06-19]
 	Added rc.subr-20030619 [grant 2003-06-19]
