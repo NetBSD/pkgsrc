@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.96 2002/12/15 01:15:24 taca Exp $
+# $NetBSD: bsd.prefs.mk,v 1.97 2002/12/18 06:18:14 schmonz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -193,23 +193,6 @@ SHAREMODE?=		${DOCMODE}
 	@${FALSE}
 .endif
 
-# if the system is IPv6-ready, compile with IPv6 support turned on.
-.if (${OPSYS} == "NetBSD") && !defined(USE_SOCKS) && \
-    exists(/usr/include/netinet6)
-USE_INET6?=		YES
-.elif ${OPSYS} == "SunOS" && exists(/usr/include/netinet/ip6.h)
-USE_INET6?=		YES
-.elif ${OPSYS} == "Darwin"
-.  if ${OS_VERSION} < 6.0
-USE_INET6?=		NO
-.  endif
-# other KAME
-.elif exists(/usr/include/netinet6)
-USE_INET6?=		YES
-.else
-USE_INET6?=		NO
-.endif
-
 # Preload all default values for CFLAGS, LDFLAGS, etc. before bsd.pkg.mk
 # or a pkg Makefile modifies them.
 .include <sys.mk>
@@ -228,6 +211,13 @@ USE_INET6?=		NO
 .include "${.CURDIR}/../mk/defs.NetBSD.mk"
 .else exists(${.CURDIR}/mk/defs.NetBSD.mk)
 .include "${.CURDIR}/mk/defs.NetBSD.mk"
+.endif
+
+# if the system is IPv6-ready, compile with IPv6 support turned on.
+.if empty(_OPSYS_HAS_INET6:M[nN][oO]) && !defined(USE_SOCKS)
+USE_INET6?=		YES
+.else
+USE_INET6?=		NO
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
