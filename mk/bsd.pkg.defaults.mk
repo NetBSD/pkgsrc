@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.225 2004/03/28 23:14:29 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.226 2004/03/29 11:01:24 recht Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1384,6 +1384,14 @@ MAJORDOMO_USER?= majordom
 # Default: may set info files size for consistency across platforms and
 # makeinfo version, also various machine_archs arguments may be set in
 # mk/defs.${OPSYS}.mk with the _OPSYS_MAKEINFO_ARGS variable.
+
+MKTTINTERP?= no
+# Used by freetype2 to enable the TrueType bytecode interpreter.
+# Since there are important patent issues related to the to
+# use of the interpreter, default to no.
+# See http://www.freetype.org/patents.html for details.
+# Possible: yes, no
+# Default: no
 
 #MOZILLA_USE_LINUX=
 # Used by mozilla binary packages to prefer the use of Linux
