@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:13:14 tv Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/11 00:21:53 minskim Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		2
@@ -57,9 +57,11 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.h ${IRSSI_CONFIG_H}
 	${INSTALL_DATA} ${WRKSRC}/irssi-config ${IRSSI_CONFIG}
 
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
