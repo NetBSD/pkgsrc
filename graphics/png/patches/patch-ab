@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.7 2004/08/09 07:37:35 recht Exp $
+$NetBSD: patch-ab,v 1.8 2004/08/09 10:49:00 kristerw Exp $
 
---- pngtest.c.orig	2004-08-08 04:42:44.000000000 +0200
-+++ pngtest.c	2004-08-08 12:27:49.000000000 +0200
-@@ -579,7 +579,7 @@
+--- pngtest.c.orig	Sun Aug  8 04:42:44 2004
++++ pngtest.c	Mon Aug  9 12:44:34 2004
+@@ -511,8 +511,9 @@
+       buffer and once to get a new free list entry. */
+    {
+       /* Disable malloc_fn and free_fn */
++      memory_infop pinfo;
+       png_set_mem_fn(png_ptr, NULL, NULL, NULL);
+-      memory_infop pinfo = (memory_infop)png_malloc(png_ptr,
++      pinfo = (memory_infop)png_malloc(png_ptr,
+          (png_uint_32)png_sizeof (*pinfo));
+       pinfo->size = size;
+       current_allocation += size;
+@@ -579,7 +580,7 @@
           }
           if (pinfo->next == NULL)
           {
@@ -11,7 +22,7 @@ $NetBSD: patch-ab,v 1.7 2004/08/09 07:37:35 recht Exp $
              break;
           }
           ppinfo = &pinfo->next;
-@@ -1438,8 +1438,8 @@
+@@ -1438,8 +1439,8 @@
                 current_allocation);
              while (pinfo != NULL)
              {
@@ -22,7 +33,7 @@ $NetBSD: patch-ab,v 1.7 2004/08/09 07:37:35 recht Exp $
                 pinfo = pinfo->next;
              }
           }
-@@ -1513,8 +1513,8 @@
+@@ -1513,8 +1514,8 @@
                  current_allocation);
               while (pinfo != NULL)
               {

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2004/08/09 07:37:35 recht Exp $
+$NetBSD: distinfo,v 1.21 2004/08/09 10:49:00 kristerw Exp $
 
 SHA1 (libpng-1.2.6rc2.tar.bz2) = c149c61a2595c9c5ddf4d60d45ed529c47de5c75
 Size (libpng-1.2.6rc2.tar.bz2) = 377856 bytes
 SHA1 (patch-aa) = 0b3d28e526f8d1530e82c30be46aea19e5a32d6a
-SHA1 (patch-ab) = 58b007d8ac0a41118b90e826ec2df32f64b06411
+SHA1 (patch-ab) = e43e77be19c1677e7039d4e0fa91128d9f2f1602
 SHA1 (patch-ad) = 5b880c6d47682349bd994eaea8aeac6c51d264e5
 SHA1 (patch-ae) = d5be0cdcfdd6c30a17b9633e28afb868911195aa
