@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/04/10 15:32:00 kent Exp $
+# $NetBSD: Makefile,v 1.15 2003/04/28 08:59:28 skrll Exp $
 #
 
 DISTNAME=	icu-2.4
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://oss.software.ibm.com/icu/download/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	skrll@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://oss.software.ibm.com/icu
 COMMENT=	Robust and full-featured unicode support
 
