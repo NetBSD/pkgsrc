@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/03/14 23:07:55 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/15 00:11:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
@@ -12,6 +12,8 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
 
 DEPENDS+=	libslang-1.2.2:../../devel/libslang
+
+CONFLICTS+=	gmc-*
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		yes
