@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.709 2003/07/12 12:23:55 wiz Exp $
+$NetBSD: TODO,v 1.710 2003/07/12 12:24:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -186,7 +186,6 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o neon-0.24.0
-	o neon-0.24.0
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netatalk-1.6.3 [pkg/21930]
@@ -232,7 +231,6 @@ Suggested package updates
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
-	o subversion-0.24.2
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
 	o swig-1.3.17 [epg]
