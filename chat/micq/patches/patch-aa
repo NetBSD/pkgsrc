@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2002/10/20 03:09:08 shell Exp $
+$NetBSD: patch-aa,v 1.6 2003/02/15 04:20:18 salo Exp $
 
---- doc/Makefile.in.orig	Sat Oct  5 22:35:35 2002
-+++ doc/Makefile.in
-@@ -81,7 +81,7 @@ am__include = @am__include@
- am__quote = @am__quote@
- install_sh = @install_sh@
+--- doc/Makefile.in.orig	Fri Jan 24 20:03:17 2003
++++ doc/Makefile.in	Sat Feb 15 05:00:29 2003
+@@ -118,7 +118,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
  
--SUBDIRS = de fr es ru pt_BR
-+SUBDIRS = 
+-SUBDIRS = de fr es ru pt_BR uk
++SUBDIRS =
  
  man_MANS = micq.1    micq.7    micqrc.5
  doc_DIST = README README.SOCKS5 commands.txt icq091.txt html/*.html html/*.gif
