@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/01/17 05:38:54 christos Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/27 13:49:44 hubertf Exp $
 #
 
 DISTNAME=		openssh-1.2.1pre26
-PKGNAME=		openssh-1.2.1-26
+PKGNAME=		openssh-1.2.1.26
 CATEGORIES=		security
 MASTER_SITES=		ftp://thermo.stat.ncsu.edu/pub/openssh/files/
 
