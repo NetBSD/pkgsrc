@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1415 2003/02/17 11:53:34 zuntum Exp $
+$NetBSD: CHANGES,v 1.1416 2003/02/17 12:33:34 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -719,3 +719,4 @@ Changes to the packages collection and infrastructure in 2003:
         Updated nullmailer to 1.0.0rc7 [jtb 2003-02-17]
         Added xmill-0.7 [grant 2003-02-17]
 	Added proxycheck-0.41 [zuntum 2003-02-17]
+	Updated boehm-gc to 6.1nb2 [kei 2003-02-17]
