@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/11 09:56:57 agc Exp $
+$NetBSD: distinfo,v 1.2 2002/07/10 13:05:32 agc Exp $
 
-SHA1 (extipl-5.03.tar.gz) = 9d7094f9f96e94b9c5dd7f101560f0f81f68e4ef
-Size (extipl-5.03.tar.gz) = 85021 bytes
+SHA1 (extipl-5.04.tar.gz) = 41b42bc4ba0bfad86e6abdc2b02620c9934c2cd9
+Size (extipl-5.04.tar.gz) = 85382 bytes
 SHA1 (patch-aa) = 12240b347d1d5d6d363a070376b1c115a004f454
