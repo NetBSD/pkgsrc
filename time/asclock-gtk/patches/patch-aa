@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:13 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/16 00:52:52 jlam Exp $
 
 --- ./Makefile.orig	Fri Mar 26 02:08:33 1999
 +++ ./Makefile	Thu Oct  7 04:41:07 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:13 wiz Exp $
  MKDIR=mkdir -p
  
 -CFLAGS = -Wall -g
-+CFLAGS = -Wall
++CFLAGS += -Wall
  
 -GNOME_CC = gcc $(CFLAGS) -DASCLOCK_THEMES_DIR=\""/usr/local/share/asclock"\" \
 +GNOME_CC = $(CC) $(CFLAGS) -DASCLOCK_THEMES_DIR=\""${PREFIX}/share/asclock-gtk/"\" \
