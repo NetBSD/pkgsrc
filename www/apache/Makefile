@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/04/30 23:51:39 tv Exp $
+# $NetBSD: Makefile,v 1.32 1999/05/11 16:04:03 tron Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -39,7 +39,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
 			--with-perl=${PREFIX}/bin/perl
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
-.if defined(APACHE_SUEXEC)
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
 CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
 			--suexec-safepath='/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin'
 .endif
@@ -49,6 +51,8 @@ CONFIGURE_ARGS+=	--disable-rule=STATUS
 OPTIM+=			-DBUFFERED_LOGS
 CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
+
+PLIST_SRC=		${WRKDIR}/PLIST
 
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
@@ -74,8 +78,16 @@ post-patch:
 	@find ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM}
 
 post-install:
-	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
-	@${MV} ${PREFIX}/lib/httpd/libproxy.so ${PREFIX}/lib/httpd/mod_proxy.so 2>/dev/null || ${MKDIR} ${PREFIX}/lib/httpd
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif \
+	  ${PREFIX}/share/httpd/htdocs
+	@${MV} ${PREFIX}/lib/httpd/libproxy.so \
+	  ${PREFIX}/lib/httpd/mod_proxy.so 2>/dev/null || \
+	  ${MKDIR} ${PREFIX}/lib/httpd
+.for FILE in lib/httpd/mod_proxy.so man/man8/suexec.8 sbin/suexec
+	@${TEST} -e ${PREFIX}/${FILE} && ${ECHO} ${FILE} >>${PLIST_SRC}
+.endfor
+	@${ECHO} @dirrm lib/httpd >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
 
