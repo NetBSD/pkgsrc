@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/23 13:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/12 20:33:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -29,12 +29,12 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/socks5-v1.0r2
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=  LIBS=-lcrypt
 CONFIGURE_ARGS=	--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 		--with-srvconffile=${PREFIX}/etc/socks5.conf \
 		--with-srvpidfile=/var/run/socks5.pid \
 		--with-srvidtfile=/var/run/socks5.ident \
 		${EXTRA_CONFIGURE_ARGS}
+LIBS=		-lcrypt
 
 post-install:
 	${MV} ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
