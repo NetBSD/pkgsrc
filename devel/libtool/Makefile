@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2001/02/16 14:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2001/02/27 08:20:24 skrll Exp $
 #
 
 DISTFILES=	# empty
 .include "Makefile.common"
 
-PKGNAME=	${DISTNAME}${PKGREV}
+PKGNAME=	${PKGPFX}${PKGREV}
+
+DEPENDS+=	${PKGPFX:C/-/-base-/}${PKGREV}:../libtool-base
+DEPENDS+=	${PKGPFX:C/-/-info-/}${PKGREV}:../libtool-info
 
 COMMENT=	Generic shared library support script
-
-DEPENDS+=	${DISTNAME:C/-/-base-/}${PKGREV}:../libtool-base
-DEPENDS+=	${DISTNAME:C/-/-info-/}${PKGREV}:../libtool-info
 
 NO_CONFIGURE=	yes
 NO_PATCH=	yes
