@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1999/02/10 15:09:56 frueauf Exp $
+$NetBSD: patch-ab,v 1.3 1999/07/05 02:05:11 hubertf Exp $
 
 --- src/Makefile.orig	Sun Feb  7 01:25:16 1999
 +++ src/Makefile	Sun Feb  7 01:26:48 1999
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.2 1999/02/10 15:09:56 frueauf Exp $
 -INCLUDE		=
 -LIBS		= -L/usr/X11R6/lib -lXpm -lX11
 +INCLUDE		= -I${X11BASE}/include
-+LIBS		= -L${X11BASE}/lib -lXpm -lX11
++LIBS		= -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -lXpm -lX11
  EVERYTHING	= $(OPTIONS) $(INCLUDE) $(LIBS)
  
  ###############################
