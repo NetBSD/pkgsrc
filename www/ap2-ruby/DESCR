@@ -1,0 +1,5 @@
+mod_ruby embeds the Ruby interpreter into the Apache web server,
+allowing Ruby CGI scripts to be executed natively.  These scripts will
+start up much faster than without mod_ruby.
+This package is the development version, which supports apache2 under
+the prefork and threaded MVM. For Apache 1.3.XX, see www/ap-ruby.

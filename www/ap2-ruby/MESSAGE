@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/07/21 17:43:53 taca Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  Include ${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf
+
+(${RUBY_EXAMPLESDIR} is something like /usr/pkg/share/examples/ruby)
+===========================================================================

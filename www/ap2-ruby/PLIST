@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/21 17:43:53 taca Exp $
+lib/httpd/mod_ruby.so
+${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf
+@dirrm ${RUBY_EXAMPLESDIR}/mod_ruby
+${RUBY_DOCDIR}/mod_ruby/Makefile
+${RUBY_DOCDIR}/mod_ruby/Makefile.in
+${RUBY_DOCDIR}/mod_ruby/classes.en.rd
+${RUBY_DOCDIR}/mod_ruby/classes.ja.euc.rd
+${RUBY_DOCDIR}/mod_ruby/default.css
+${RUBY_DOCDIR}/mod_ruby/directives.en.rd
+${RUBY_DOCDIR}/mod_ruby/directives.ja.euc.rd
+${RUBY_DOCDIR}/mod_ruby/faq.en.rd
+${RUBY_DOCDIR}/mod_ruby/faq.ja.euc.rd
+${RUBY_DOCDIR}/mod_ruby/index.en.rd
+${RUBY_DOCDIR}/mod_ruby/index.ja.euc.rd
+${RUBY_DOCDIR}/mod_ruby/install.en.rd
+${RUBY_DOCDIR}/mod_ruby/install.ja.euc.rd
+@dirrm ${RUBY_DOCDIR}/mod_ruby
