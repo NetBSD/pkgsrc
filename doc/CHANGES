@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8216 2004/12/02 16:57:23 minskim Exp $
+$NetBSD: CHANGES,v 1.8217 2004/12/02 21:09:30 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5714,3 +5714,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated asc to 1.15.2.1 [wiz 2004-12-02]
 	Updated ng-spice to 15c [dmcmahill 2004-12-02]
 	Updated liferea to 0.6.4 [minskim 2004-12-02]
+	Added gob2-2.0.11 [dillo 2004-12-02]
