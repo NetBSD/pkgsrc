@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.21 2005/01/24 15:00:48 jschauma Exp $
+# $NetBSD: upload,v 1.22 2005/03/30 22:26:37 hubertf Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -111,6 +111,8 @@ failed=no
 cd $packages
 
 if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
+
+	echo "Calculating checksum files..."
 
 	SUMFILES="BSDSUM CKSUM MD5 SHA1 SYSVSUM"
 
