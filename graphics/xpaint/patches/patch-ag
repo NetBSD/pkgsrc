@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2004/11/03 15:54:31 adam Exp $
+$NetBSD: patch-ag,v 1.6 2005/03/31 11:08:16 adam Exp $
 
---- Imakefile.orig	2004-09-03 07:19:00.000000000 +0000
+--- Imakefile.orig	2005-03-20 20:15:32.000000000 +0000
 +++ Imakefile
-@@ -97,7 +97,7 @@ SGI_LIB = -limage
+@@ -98,7 +98,7 @@ SGI_LIB = -limage
  #endif
  
  DEPLIBS = always xpaint.man XPaint.ad
@@ -11,42 +11,32 @@ $NetBSD: patch-ag,v 1.5 2004/11/03 15:54:31 adam Exp $
  
  SUBDIRS = rw
  
-@@ -133,10 +133,10 @@ install::
- xaw::
- 	-$(RM) $(XAW95DEPENDS)
- 	echo "SYS_LIBRARIES = XawClientLibs -lm" > Local.xawdefs
--	xmkmf ; make
-+	${XMKMF} ; ${MAKE}
+@@ -151,7 +151,7 @@ xaw::
+ 	-$(RM) xaw_incdir ; ln -sf /usr/include/X11/Xaw xaw_incdir
+ 	echo "XAWLIB_DEFINES = -DXAWPLAIN" > Local.xawdefs			
+ 	echo "SYS_LIBRARIES = XawClientLibs -lm" >> Local.xawdefs
+-	xmkmf -a ; make
++	${XMKMF} -a ; ${MAKE}
+ 	@echo ""
+ 	@echo "'xpaint' compiled with Xaw widgets (old and ugly)"
+ 	@echo "You should rather use Xaw3d, neXtaw or Xaw95 !!"	
+@@ -191,12 +191,15 @@ nextaw::
+ 	@echo "Variants are 'make xaw3d' and 'make xaw95'"
+ 	@echo ""	
  
- libXaw95.so:
--	cd xaw95-1.1.4 ; xmkmf -a ; make
-+	cd xaw95-1.1.4 ; ${XMKMF} ; ${MAKE}
- 	-$(RM) libXaw95.so libXaw95.a
- 	-$(LN) xaw95-1.1.4/libXaw95.so libXaw95.so
- 	-$(LN) xaw95-1.1.4/libXaw95.a libXaw95.a
-@@ -147,13 +147,13 @@ xaw95:: libXaw95.so
- 	-$(RM) $(XAW95DEPENDS)
+-xaw95::
++libXaw95.a:
++	cd ../xaw95-1.1.4 ; ${XMKMF} ; ${MAKE}
++
++xaw95:: libXaw95.a
+ 	-$(RM) $(XAWDEPENDS)
+-	-$(RM) xaw_incdir ; ln -sf /usr/include/X11/Xaw95 xaw_incdir	
++	-$(RM) xaw_incdir ; ln -sf ${X11BASE}/include/X11/Xaw xaw_incdir	
  	echo "XAWLIB_DEFINES = -DXAW95" > Local.xawdefs
- 	echo "SYS_LIBRARIES = -lXaw95 -L." >> Local.xawdefs
--	xmkmf ; make
-+	${XMKMF} ; ${MAKE}
- 
- xaw95static:: libXaw95.a
- 	-$(RM) $(XAW95DEPENDS)
- 	echo "XAWLIB_DEFINES = -DXAW95" > Local.xawdefs
--	echo "SYS_LIBRARIES = ./libXaw95.a -lm -lX11 -lXt -lXmu" >> Local.xawdefs
--	xmkmf ; make
-+	echo "SYS_LIBRARIES = ./xaw95-1.1.4/libXaw95.a -lm -lX11 -lXt -lXmu" >> Local.xawdefs
-+	${XMKMF} ; ${MAKE}
- 
- clean::
- 	-$(RM) preproc substads XPaint.ad XPaint.ad.h DefaultRC.txt.h PGP.*
-@@ -162,7 +162,7 @@ clean::
- 	cd share/messages ; $(RM) *~
- 	cd app-defaults ; $(RM) core *~ substads
- 	cd app-defaults/out ; $(RM) -f Xpaint*
--	cd xaw95-1.1.4 ; if [ -r Makefile ] ; then make clean ; fi
-+	cd xaw95-1.1.4 ; if [ -r Makefile ] ; then ${MAKE} clean ; fi
- 
- includes:: XPaint.ad.h DefaultRC.txt.h messages.h
- 	cd bitmaps; $(RM) tools; \
+-	echo "SYS_LIBRARIES = -lXaw95 -L." >> Local.xawdefs
+-	xmkmf -a ; make
++	echo "SYS_LIBRARIES = ../xaw95-1.1.4/libXaw95.a -lm -lX11 -lXt -lXmu" >> Local.xawdefs
++	${XMKMF} -a ; ${MAKE}
+ 	@echo ""	
+ 	@echo "'xpaint' compiled with Xaw95 widgets"
+ 	@echo "Another alternative is to use the Xaw3d widgets :"	
