@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/21 23:59:30 reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/09/18 07:50:14 minskim Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
@@ -25,5 +25,6 @@ MAKE_ENV+=	FREETYPE_CONFIG=${FREETYPE_CONFIG}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin
 
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
