@@ -1,3 +1,4 @@
+Index: newchannels.c
 --- newchannels.c.orig	Tue Apr 22 17:40:11 1997
 +++ newchannels.c	Sat Jul 19 11:42:06 1997
 @@ -2139,6 +2139,10 @@
