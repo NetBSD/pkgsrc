@@ -1,0 +1,33 @@
+--- configs/netbsd-g++-static.orig	Sun Jul 19 14:18:04 1998
++++ configs/netbsd-g++-static	Sun Jul 19 16:51:29 1998
+@@ -2,9 +2,9 @@
+ SYSCONF_CC		= g++
+ 
+ # Compiling with support libraries
+-SYSCONF_CFLAGS_X11	= -I/usr/X11R6/include
++SYSCONF_CFLAGS_X11	= -I$(X11BASE)/include
+ SYSCONF_CFLAGS_QT	= -I$(QTDIR)/include
+-SYSCONF_CFLAGS_OPENGL	= -I/usr/X11R6/include
++SYSCONF_CFLAGS_OPENGL	= -I$(X11BASE)/include
+ 
+ # Compiline YACC output
+ SYSCONF_CFLAGS_YACC     = -Wno-unused -Wno-parentheses
+@@ -45,14 +45,14 @@
+ #   - Build the $(TARGET) library, eg. lib$(TARGET).a
+ #   - Place target in $(DESTDIR) - which has a trailing /
+ #
+-SYSCONF_AR		= ar cqs
+-SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).a
++SYSCONF_AR		= $(LOCALBASE)/bin/libtool $(SYSCONF_CC) -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) -o
++SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).la
+ SYSCONF_LINK_LIB_STATIC	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC);  \
+-				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS) $(OBJMOC)
++				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo)
+ # Compiling application source
+ SYSCONF_CFLAGS		= -O2 -fno-strength-reduce
+ # Compiling library source
+-SYSCONF_CFLAGS_LIB	= -O2 -fno-strength-reduce -fPIC
++SYSCONF_CFLAGS_LIB	= 
+ # Compiling shared-object source
+ SYSCONF_CFLAGS_SHOBJ	= -O2 -fno-strength-reduce -fPIC
+ SYSCONF_LINK_LIB	= $(SYSCONF_LINK_LIB_STATIC)
