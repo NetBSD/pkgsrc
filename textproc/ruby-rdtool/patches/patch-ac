@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1 2004/02/11 15:46:32 taca Exp $
+
+--- rdtoolconf.rb.orig	2003-03-08 21:45:07.000000000 +0900
++++ rdtoolconf.rb
+@@ -4,12 +4,11 @@
+ 
+ require 'mkmf'
+ require 'rbconfig'
+-require 'amstd/rbparams'
+ 
+ STDERR.print "creating Makefile\n"
+ 
+-$bindir = RubyParams::BINDIR
+-$siterubydir = RubyParams::SITE_RB
++$bindir = CONFIG["bindir"]
++$siterubydir = CONFIG["sitedir"]
+ $rddir = CONFIG["datadir"] + "/ruby/rd"
+ $racc = "racc"
+ 
+@@ -18,6 +17,8 @@ mfile.print  <<"EOM"
+ #
+ # RDtool makefile
+ 
++prefix = #{CONFIG["prefix"]}
++exec_prefix = #{CONFIG["exec_prefix"]}
+ BIN_DIR = #{$bindir}
+ SITE_RUBY = #{$siterubydir}
+ RD_DIR = #{$rddir}
