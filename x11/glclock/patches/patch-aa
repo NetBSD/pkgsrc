@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/22 21:55:56 drochner Exp $
+$NetBSD: patch-aa,v 1.2 1999/07/22 23:20:00 tron Exp $
 
---- makefile.orig	Thu Jul 22 22:03:13 1999
-+++ makefile	Thu Jul 22 22:21:59 1999
+--- makefile.orig	Thu Feb  4 07:13:25 1999
++++ makefile	Fri Jul 23 01:17:14 1999
 @@ -7,10 +7,10 @@
               LN = g++
              OPT = -O2
  
 -   INCLUDE_PATH = -I/usr/local/X11R6/include
 -       LIB_PATH = -L/usr/local/X11R6/lib
-+   INCLUDE_PATH = -I/usr/X11R6/include
-+       LIB_PATH = -L/usr/X11R6/lib
++   INCLUDE_PATH = -I${X11BASE}/include
++       LIB_PATH = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
  
 -           LIBS = -lglut -lGLU -lGL -lXext -lXmu -lX11 -lm
 +           LIBS = -lglut -lGLU -lGL -lXext -lXmu -lXt -lSM -lICE -lXi -lX11 -lm
