@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2000/08/18 16:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2000/09/01 16:27:07 veego Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -24,6 +24,7 @@
     SUBDIR += gcombust
     SUBDIR += genpasswd
     SUBDIR += gmc
+    SUBDIR += gpart
     SUBDIR += gtop
     SUBDIR += hfsutils
     SUBDIR += kapm
