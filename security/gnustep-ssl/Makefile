@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:08 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/16 01:20:53 rh Exp $
 #
 
-DISTNAME=		gnustep-base-1.10.0
+DISTNAME=		gnustep-base-1.10.1
 PKGNAME=		${DISTNAME:S/base/ssl/}
-PKGREVISION=	1
 CATEGORIES=		security gnustep
 MASTER_SITES=		ftp://ftp.gnustep.org/pub/gnustep/core/
 
@@ -11,9 +10,10 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnustep.org/
 COMMENT=		GNUstep SSL bundle
 
-BUILDLINK_DEPENDS.gnustep-base=	gnustep-base>=1.10.0
+BUILDLINK_DEPENDS.gnustep-base=	gnustep-base>1.10.1
 
-CONFLICTS+=	gnustep-base<1.9.1
+CONFLICTS+=		gnustep-base<1.9.1
+CONFLICTS+=		gnustep-base-1.10.1
 
 PTHREAD_LIBS=		-lpthread
 
