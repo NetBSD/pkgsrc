@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2001/05/11 09:15:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.38 2001/07/23 18:30:26 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -28,7 +28,9 @@ DISTUNAME=	sparc-sun-solaris2.5.1
 DIST_DIR_NAME=	supported/sunos551
 WRKNAME=	sparc-sun-solaris2.5.1
 VENDOR_NAME=	Solaris 2.5.1
+.if !defined(NS_NO_FLASH)
 DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
+.endif
 #
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
@@ -56,7 +58,9 @@ DISTUNAME=	x86-unknown-linux2.2
 DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
 VENDOR_NAME=	Linux 2.2
+.if !defined(NS_NO_FLASH)
 DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
+.endif
 #
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
