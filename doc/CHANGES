@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4512 2004/01/20 03:28:02 lukem Exp $
+$NetBSD: CHANGES,v 1.4513 2004/01/20 05:18:55 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -349,3 +349,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glut to 6.0 [jschauma 2004-01-19]
 	Updated stunnel to 4.04nb3 [grant 2004-01-20]
 	Updated procmail to procmail-3.22nb1 [lukem 2004-01-20]
+	Updated py-ldap to 2.0.0pre15 [cube 2004-01-20]
