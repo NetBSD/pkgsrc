@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/01/29 11:00:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/15 15:19:52 xtraeme Exp $
 
 DISTNAME=	xcdroast-0.98alpha15
 PKGNAME=	xcdroast-0.98a15
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 DEPENDS+=		cdrecord-xcdroast-0.98a15.*:../cdrecord-xcdroast
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -52,10 +52,10 @@ post-install:
 		${INSTALL_DATA} $${file} ${DOCDIR};			\
 	done)
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
