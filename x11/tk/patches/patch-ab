@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/08/29 16:16:07 jwise Exp $
+$NetBSD: patch-ab,v 1.2 2000/08/30 20:22:36 jwise Exp $
 --- configure.orig	Tue Aug  8 15:19:32 2000
 +++ configure	Tue Aug 29 10:06:15 2000
 @@ -3338,7 +3338,7 @@
@@ -35,7 +35,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/08/29 16:16:07 jwise Exp $
 -    TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
 -    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_FLAG}"
 +    TK_BUILD_LIB_SPEC=libtk83.la
-+    TK_LIB_SPEC="-L${exec_prefix}/lib -Wl,R${exec_prefix}/lib ${TK_LIB_FLAG}"
++    TK_LIB_SPEC="-L${exec_prefix}/lib -Wl,-R${exec_prefix}/lib ${TK_LIB_FLAG}"
      TK_BUILD_EXP_FILE=""
      TK_EXP_FILE=""
  else
