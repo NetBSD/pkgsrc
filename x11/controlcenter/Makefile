@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/03/24 01:07:47 rh Exp $
+# $NetBSD: Makefile,v 1.38 2002/04/09 21:39:24 jlam Exp $
 
 DISTNAME=		control-center-1.4.0.4
 CATEGORIES=		x11 gnome
@@ -17,14 +17,26 @@ USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 LOCALSTATEDIR=		${X11PREFIX}/var/gnome
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
 
+# Remove -I$(includedir) from the INCLUDES passed to the compiler as this
+# defeats buildlink.  Also replace "imlib-config" with "$(IMLIB_CONFIG)"
+# so we use the config wrapper script.
+#
 post-patch:
+	cd ${WRKSRC};							\
+	files="control-center/Makefile.in capplets/*/Makefile.in";	\
+	for file in $${files}; do					\
+                ${SED}	-e "s|[ 	]*-I\$$(includedir)||"		\
+			-e "s|imlib-config|\$$(IMLIB_CONFIG)|g"		\
+                        $${file} > $${file}.fixed;			\
+                ${MV} -f $${file}.fixed $${file};			\
+        done
 	@${ECHO} >>${WRKSRC}/control-center/cappletConf.sh.in ""
 
 .include "../../devel/popt/buildlink.mk"
