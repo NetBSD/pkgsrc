@@ -1,22 +1,27 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 22:51:55 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/08/20 08:28:56 grant Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
-DISTNAME=	tcptrace.5.2.1
-PKGNAME=	tcptrace-5.2.1
-WRKSRC=         ${WRKDIR}/tcptrace_5.2.1
+DISTNAME=	tcptrace-6.4.2
 CATEGORIES=	net
-MASTER_SITES=	http://jarok.cs.ohiou.edu/software/tcptrace/files/5.2.1/
+MASTER_SITES=	http://www.tcptrace.org/download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://jarok.cs.ohiou.edu/software/tcptrace/tcptrace.html
+HOMEPAGE=	http://www.tcptrace.org/
 COMMENT=	TCP dump file analysis tool
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 
 ALL_TARGET=	tcptrace
 
-DOCFILES=	COPYRIGHT README README.tput_graphs
+DOCFILES=	COPYRIGHT FAQ README README.tput_graphs
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=	-lnsl -lsocket -lm
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${PREFIX}/bin
@@ -26,4 +31,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/tcptrace
 .endfor
 
+.include "../../archivers/bzip2/buildlink2.mk"
+.include "../../net/libpcap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
