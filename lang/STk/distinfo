@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:30:36 agc Exp $
+
+MD5 (STk-3.99.2.tar.gz) = cdbffa5cb442f682038ef65794a7b1ad
+SHA1 (patch-aa) = 15c6df46138d136fc88028ff1602e5e4dbc2891c
+SHA1 (patch-ab) = 8bb28ec0015b7886efa73ecf4adc52139c24c0a8
+SHA1 (patch-ac) = 316c0866640038a1ecc4814d950dd3b491b84b63
+SHA1 (patch-ad) = 2f32a8880682eac68a501c42b4fd239240e8c733

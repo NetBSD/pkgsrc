@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:34 agc Exp $
+
+MD5 (minischeme.tar.gz) = 65d7f82ff0de046ad73f92be2411ab06
+SHA1 (patch-aa) = 393d2e2eaf9cfbee6d701068870a95ff22226180

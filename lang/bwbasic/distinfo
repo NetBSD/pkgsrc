@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:30:43 agc Exp $
+
+MD5 (bwbasic-2.20.tar.Z) = 21fb5e2fb95db515aa2282312d35f88d
+MD5 (bwb-2.20-patch01.tar.Z.uu.txt) = 70f2098727f498f827814173315aa107
+MD5 (bwb-2.20-patch02.tar.Z.uu.txt) = 23292b19750812f358c08fd09282a09c
+SHA1 (patch-aa) = e397e2e5b88ccccb44750702bff6d65054d96641
+SHA1 (patch-ac) = e316d334098ba1919239959333804973619dbc81

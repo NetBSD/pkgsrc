@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:28:30 agc Exp $
+
+MD5 (nighthawk-2.1.tgz) = c155827001c140366c1a24fbc5b1c383
+MD5 (nighthawk-2.1a.patch) = 02fcd04d7f91968b098da89c5466802e
+SHA1 (patch-aa) = 34a11d0be9d7f83e341a85af986042013ad804ba
+SHA1 (patch-ab) = c1085e131ae6f4563e966c5bed8083b1c0e24f92
+SHA1 (patch-ac) = 27ed902d915bb8063aeb31ee1d34bb206d022293
+SHA1 (patch-ad) = e59c729c4700d36ca61809e40721f88d2d22c09d
+SHA1 (patch-ae) = 1699979e5013e86dc158722faef525b46ce30076
+SHA1 (patch-ba) = c4669336ea8fdeb1352390e4109513c01915bd54
+SHA1 (patch-bb) = f1d5bfb5985fbd41c57e719c86303f714344c14f

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:06 agc Exp $
+
+MD5 (gforth-0.5.0.tar.gz) = db16b64e9d63934bc4455e9b2aebbe13
+SHA1 (patch-aa) = 426205f27609f24f818837a853c974134c0d4035
+SHA1 (patch-ab) = a80fd7553acce1168931171b9c100eb25e2fa19a
+SHA1 (patch-ac) = d9155ee2d7f06b3aafeaa5fc2719948deb1c9c7e

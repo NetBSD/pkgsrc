@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:22:49 agc Exp $
+
+MD5 (cdlabelgen-1.5.0.tar.gz) = 3ed7968301825d658d470de5f00812aa
+SHA1 (patch-aa) = f33817230b73212c31735f21596aa99a0f138400
+SHA1 (patch-ab) = c7246d7b685450f38f985165431a531a7599c91d
+SHA1 (patch-ac) = f2563bfe1f2572e3bc56a69a2d4b3719129c92b8

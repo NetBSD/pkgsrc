@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:30:07 agc Exp $
+
+MD5 (xtux-arena-src-nov-15.tar.gz) = bf9645263f74f7e1d94b7a152a60a2ce
+SHA1 (patch-aa) = fe14a4bdba903e18ede0874629515ccd286d70aa
+SHA1 (patch-ab) = a2cd15c9bc6f51ddadf22cc7a205f7763b83bc0b
+SHA1 (patch-ac) = aada5a97d3304b99c5ab3905e4e7c5003e642be0
+SHA1 (patch-ad) = 852dd838d0baca64258c77033bdf81b1c85523e7

@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:32:11 agc Exp $
+
+MD5 (stalin.tar.Z) = d821a1abea9849da5b8a845efccfee46
+SHA1 (patch-aa) = cf1991353f00728d5db21ea4b83b9dfdb32a2ee6
+SHA1 (patch-ab) = 1dc86f98e00372235bea8d6764bccfbdca365366
+SHA1 (patch-ac) = d9bb97e5053a30379fdc2f3380a10b3fb28bab8a
+SHA1 (patch-ad) = 1814a187ee014eab7b16d677381f1837eca267dc
+SHA1 (patch-ae) = ed14a101d338a2c35dfc57451040bf97fcc222b3
+SHA1 (patch-af) = 4c27160466921bb454d0853ee100cb233adcee0c
+SHA1 (patch-ag) = 17119bd12a9800027d6d50d40f8f91fcb14bec95
+SHA1 (patch-ah) = 0d2ed181607c2e0ca63179a7d1f99d5b12da27b5
+SHA1 (patch-ai) = 625a4e12c126755602056c207b96dee8766d1c4e
+SHA1 (patch-aj) = 1dd57097c6a2249541f8b63ba9aa061f0c67ee4b
+SHA1 (patch-ak) = b3e5c6c222675bc4f29726be9e2eb7d8759be2e7
+SHA1 (patch-al) = 478a6cb853651e1d5bc785fc5b3f5e00ed0a7f38

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:29:59 agc Exp $
+
+MD5 (xscavenger-140.tgz) = 736760d39da23ba84dee35e4cc3bfc80
+SHA1 (patch-aa) = 387e4f8fc87f5cbc939d28f972b769506fe8d048
+SHA1 (patch-ab) = 57ab1655f7e748fc59d4f474393426a06ca06d36

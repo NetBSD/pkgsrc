@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:02 agc Exp $
+
+MD5 (gemdropx.tar.gz) = c12aef7ad4cee538f6fb42a88ea9dcbc
+SHA1 (patch-aa) = 474c608fb8af18bd0d9ee9ee70d5bca3bf565c35
+SHA1 (patch-ab) = 665e99db7a34c7540cba850e6398196f34253fc7
+SHA1 (patch-ac) = 547e5d92c70add4e9c8dffc35065e766270d70c0

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:10 agc Exp $
+
+MD5 (gnome-breakout-0.4.tar.gz) = 0e6c125315dd8524a2518fa7bfd4849c
+SHA1 (patch-aa) = 626b913aa1664e96bc065af3981a1dbbe2ceb8af

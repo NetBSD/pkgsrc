@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:29:09 agc Exp $
+
+MD5 (xbill-2.0.tgz) = 132e4b340618924b6a41ec5ec106ca32
+SHA1 (patch-aa) = 0dfe8041d71e101e2ecdf989cbb544c96ef93c99
+SHA1 (patch-ab) = 245573e1ea2223ed1bde91c16db81a658bfcc8f6

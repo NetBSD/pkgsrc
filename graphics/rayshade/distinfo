@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:26:25 agc Exp $
+
+MD5 (rayshade.4.0.tar.Z) = c81f9507c20cd6060a8bdc611a6771ff
+SHA1 (patch-aa) = 13ffaabe7dc670b6e3945f548770190f0a0e86c7
+SHA1 (patch-ab) = 13b48848c4a40d86ee5ceef8dddf10988b59e088
+SHA1 (patch-ac) = 3a2d67bf28e6b0e96d2ec037efa5b219e9935a57
+SHA1 (patch-ba) = d36261ceede5f89645ff23f5a108b231fd5ea18d

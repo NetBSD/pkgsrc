@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:24:04 agc Exp $
+
+MD5 (igmt_v1.2.tar.gz) = 2fd8dc169e825a81f758123cfbe049bb
+SHA1 (patch-aa) = b40ce475b8833bf0c03dc97e84f5768cd9bab5d8
+SHA1 (patch-ab) = d83c7bb69562848afc5dd1f14dcf0a19c0a4e8ac

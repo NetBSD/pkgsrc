@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:04 agc Exp $
+
+MD5 (opendis-0.0.3.tar.gz) = 150bbf038ccb6220d7aff43d712224ed
+SHA1 (patch-aa) = 856ce675b8e21b3193ef730a888abeefd7040fa4
+SHA1 (patch-ab) = 844ae151a882e4be0344e396443824a00ed987e6

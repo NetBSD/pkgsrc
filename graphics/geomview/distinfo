@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:23:19 agc Exp $
+
+SHA1 (geomview-1.8.1.tar.gz) = 026a22ecba471f7d55c407de4fc409213d166477
+SHA1 (patch-aa) = a9ee95f1ee26a4533a3f34a05a5b5314eaddc4f3
+SHA1 (patch-ab) = 706b10ccfb3ba02baa48b461123707cdd9cbfdff
+SHA1 (patch-ac) = dfc755b29ad0bb37311ad6d46022f2afcc56ccd9
+SHA1 (patch-ad) = 9db6fb9ffae5939f80bfcae8aa5da389437d627c
+SHA1 (patch-ae) = f9b721883520a701ae66ab28f4e4b7e6e307fea7
+SHA1 (patch-af) = a9eab9b45dfaed20d08472b56d1b1fb880081a0e

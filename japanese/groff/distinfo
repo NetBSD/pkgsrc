@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:26:06 agc Exp $
+
+MD5 (groff-1.10.tar.gz) = cc58a06abafe82ada7c02f0f2b2c8509
+MD5 (jgroff-0.99.diff.gz) = 0055c596a6cb641e3a8e844465e81623
+SHA1 (patch-aa) = 221047d658720f939c99509defea8cd8d628c489
+SHA1 (patch-ab) = edcf06b85d0ae9861905ad8b0cf36856e78c2c8f
+SHA1 (patch-ac) = fb2f711205c3856d819c3dafe4f58eeea5433c29
+SHA1 (patch-ad) = 8e87b782b582c675606286fc29b1bbfcb8a4b09d
+SHA1 (patch-ae) = b7c0ba9d485c6ceebce19e44a92d354cd770fff0
+SHA1 (patch-af) = 8de7a41489471d387a264f1677959ee99f569929
+SHA1 (patch-ag) = 7943286207679123f302d5ccb1a4bd7e0eb5571c
+SHA1 (patch-ah) = 6bcf32bc8441a0d5182cabe8d811f696678dc144
+SHA1 (patch-ai) = 4bfc39d00cc63ed0de02489ce45d01e49563871e
+SHA1 (patch-aj) = 70ec56a901457c6534c77bd1c67e6c2d6f7b7cd3
+SHA1 (patch-ak) = 2cd8539d364edee3f305bb49c5b2518735e76666

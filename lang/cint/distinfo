@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:30:49 agc Exp $
+
+MD5 (cint-5.14.40/cint5.14.tar.gz) = f0e85f103f06560581d91e8920a96cb3
+SHA1 (patch-aa) = 3813554ba0650dac2281697e2bd876c1a1105d11

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:50 agc Exp $
+
+MD5 (Canna35b2.tar.gz) = 09ae4dd3a5d33168ba17470ad9242cf3
+MD5 (Canna35b2-unoff1.patch.gz) = 88de4ac6a46697e4f664f1a362ecd1d2
+MD5 (Canna35b2-unoff2.patch.gz) = 7253b322dd6224376e03a95bec8a1c8f
+MD5 (Canna35b2-hack1.patch.gz) = a3969af8317798d1b586f7a68089ff4a
+MD5 (Canna35b2-v6-20000602.diff.gz) = d4a22262e8d4cb335def8fe0b2cb6583
+SHA1 (patch-aa) = d74119cb2c37a3db1c5d5417c1e35362b1eac655
+SHA1 (patch-ab) = 38f3ad4e022299a4dfd8d9391b1742b0d0f02a71
+SHA1 (patch-ac) = 8f910e59d71ef09434a40abde698d730ed7fc1c5
+SHA1 (patch-ad) = dd2eb94e75dc4789e298aa1601280d32fbe5ec96
+SHA1 (patch-ae) = e44c60ddf1e042ab5df1457b6723071c38baae02

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:24:42 agc Exp $
+
+MD5 (libmng-1.0.0.tar.gz) = 54c9cb5bf9aa5f76dfa4d63cddea539a
+SHA1 (patch-aa) = ff3745f9b6f1d7058f4c43583195cfcb0fb522ed

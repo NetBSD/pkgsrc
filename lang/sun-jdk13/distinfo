@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:32:12 agc Exp $
+
+SHA1 (j2sdk-1_3_0_02-linux.bin) = 71ed382de5596a345649f10936c0bd837e7743e8
+SHA1 (patch-aa) = a79ba245b0bcb1a35489437db1e08ec7ae5b3305

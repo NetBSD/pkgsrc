@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:26:05 agc Exp $
+
+MD5 (pstoedit_3_20.zip) = b9f113d99004f79208a9b7dea53360ea
+SHA1 (patch-aa) = 1986e25c2b7fdbac91b4b9a91505e3f459ec3971
+SHA1 (patch-ab) = 3ec29a5fc62d476df1b3156728fbb597a353b0fb
+SHA1 (patch-ac) = 1c69b7942d6bbc5e87a06326c96e8cd9b89db15b
+SHA1 (patch-ad) = 771de9e3b67590ea077218d3c104fe074f833927
+SHA1 (patch-ae) = 47b9b17b1f1af2bcec5975b56238fce3a664f075
+SHA1 (patch-af) = 73534b7983ee0076f517b76bf512fcce2f3ba094
+SHA1 (patch-ag) = f313d6219b0b91eea504084f866e492a260d75f3

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:26:20 agc Exp $
+
+MD5 (crossfire-0.95.8.tar.bz2) = 7c7714f1504b8d7b7055afe7da5c49ee
+MD5 (crossfire-0.95.8.maps.tar.bz2) = 954bcfaaf7c7e8a54b9fc17f50ab06c1
+SHA1 (patch-aa) = 4aa2b97f6f9c1e720c91acab3b6f66918b31ddc5
+SHA1 (patch-ab) = ab798839fb83318c1000f0b66c8c05953c14559c

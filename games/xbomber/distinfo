@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:29:18 agc Exp $
+
+MD5 (xbomber.0.8.tar.gz) = c17b5dda0241d29ea4644b2906985716
+SHA1 (patch-aa) = 17ee5cb37c736009c533c961aba7f658f2ddece7
+SHA1 (patch-ab) = 934cd3bba0f7f257c7e5dd9490c4114413f4a094

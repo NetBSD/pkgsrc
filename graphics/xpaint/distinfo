@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:36 agc Exp $
+
+SHA1 (xpaint-2.6.1.tar.gz) = a26d495bdb4190640756dbbfd214307e92422139
+SHA1 (patch-aa) = 1c1c2cb9d4cf99d46f6ab8e4247e226d5371d489
+SHA1 (patch-ab) = a0644e605edd5c1769b5b11a6004c4b512960b46
+SHA1 (patch-ac) = dbdf4d975268f3cc9f9d3e8c4526a61505e4d7e5
+SHA1 (patch-ad) = 694cd49256c0dc6330e5538427d69f486de45006
+SHA1 (patch-ae) = daae6772cac1b2ab2fc6b024661f2f22cdee588d
+SHA1 (patch-af) = 715457d4efb5bddcfd956f0c31965fd9602e42f2

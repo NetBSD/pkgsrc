@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:28:34 agc Exp $
+
+MD5 (Pacman-0.3-CVS-00-11-17.tar.gz) = 85ea26d9b6e21e4e528007c4f0cb5373
+SHA1 (patch-aa) = 13abb2b7c9448ea67b92c804379f56fbb1ab13b0
+SHA1 (patch-ab) = 8d20c41dfb1a010586a3ebfb3ab4e7f675b93400

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:29:48 agc Exp $
+
+MD5 (xpilot-4.1.0.tar.gz) = 049f4e51d8f033911d3ce055b3b6b701
+SHA1 (patch-aa) = 2d504fd90022f7c3ac9ab0d268e003d4356d65b4

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:41 agc Exp $
+
+MD5 (colchess-7.0/colchess.tgz) = eed5e9629052c0b70ea70abc9573f3c4
+SHA1 (patch-aa) = c3b880c6dcc9c23c4493187a2b374a21825c9736
+SHA1 (patch-ab) = 209fb507c3548d830e83350a20c43378b0cfd091
+SHA1 (patch-ac) = 057161b911035d5450da4aa86a0f6f177a798bf0

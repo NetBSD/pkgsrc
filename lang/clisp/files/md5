@@ -1,4 +1,0 @@
-$NetBSD: md5,v 1.8 2001/03/23 14:36:05 wiz Exp $
-
-SHA1 (clisp-2000-03-06.tar.bz2) = b7158545055995c712d3db231a315e8f76868a5c
-SHA1 (clisp-2000-03-06-bugfix1.diff) = 61ed18b5218435b35c05208234b9b48abfdd59bd

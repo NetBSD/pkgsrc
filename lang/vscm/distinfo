@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:32:28 agc Exp $
+
+MD5 (vscmV0r4.tar.gz) = 4c05cc25ad619a4d620b303068ee67bd
+MD5 (bugfix.txt) = c9ae37d60b77bcdbe3e6f3723b810f69
+SHA1 (patch-aa) = 5b98a6330ac897ea26beb838b28c97503f419e0d
+SHA1 (patch-ab) = ccc424a8d0523b2570676a0a942d43605b35207a
+SHA1 (patch-ac) = 73adae14da2fb236fb41277a17e0b936a75b9433

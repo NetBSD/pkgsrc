@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:26:56 agc Exp $
+
+MD5 (tiff-v3.5.5.tar.gz) = 407d65a98c7621ad6e2c64cd3d1e7a40
+MD5 (libtiff-lzw-compression-kit-1.1.tar.gz) = 453fa2cbd533491d1510a2fdca9ca1ad
+SHA1 (patch-aa) = 622053a43caf20c552c31e8a9bbf00c4845682a3
+SHA1 (patch-ab) = 0e030a9e57fff45ab96ba4a9ab170e13a6ed1306
+SHA1 (patch-ac) = 593b5d3ef434f1befa74ec59acfae05dbb48d82b
+SHA1 (patch-ad) = b78ec528c62aab7cc9d4349427cf749703f0687d
+SHA1 (patch-ae) = 2dbeeec944c356dd6f658bde895117d8d9dbd3da
+SHA1 (patch-af) = efb9f0036738927c7527d318d840848fcddd3ef6

@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:46 agc Exp $
+
+MD5 (perl-5.6.0.tar.gz) = b2940e2cc6312bcfa52355b684e70b9d
+SHA1 (patch-aa) = 574152b70a041dcd13f0f7c57a33d8068bbf776e
+SHA1 (patch-ab) = 97dc3d00c3621b923d4d37d48c5f482658094d5b
+SHA1 (patch-ac) = 0e6b9cd8f0adb0d7791c15f9216535fca6f9d813
+SHA1 (patch-ad) = 3dbd2399666ffa270b6463494752ead99aa755fd
+SHA1 (patch-ae) = 78f12e1e9f68d1ad93bbf5845ade7a8651d21208
+SHA1 (patch-af) = ecc2a7ff8d8ce6f40ddfbf1873ed04d5b3ab7e55
+SHA1 (patch-ag) = fd4cd3f029329a3dbb8fd786f19a8d97881fa2af
+SHA1 (patch-ah) = c293738f1822d474f26558b15a4071f806d5ea94
+SHA1 (patch-ai) = cb48b1316abceec5f7f337cf44b20eb6ab4056bf
+SHA1 (patch-aj) = bea0d2037649dda059872de663bb0b2c2ff32af0

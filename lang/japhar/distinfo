@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:18 agc Exp $
+
+MD5 (japhar-0.08.tar.gz) = 8308142a95ca263b9e3f39f8fa1e416f
+SHA1 (patch-ac) = 26b8f7321fad1944d5df4eba757c35f9e32fa015
+SHA1 (patch-ad) = 640ebdda8fe1a6d51de69dde2626c62f6b2cf1e0
+SHA1 (patch-ae) = 25e5f05ad68b1788247d31144410a87fc2deec1f

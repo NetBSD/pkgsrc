@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:22:51 agc Exp $
+
+MD5 (ClanLib-0.4.4.tar.gz) = 13d52e35b0fa17c658a5980bbf576a1b
+SHA1 (patch-aa) = 80882e6b178238572a07f70a5222691f79209059
+SHA1 (patch-ab) = 38acc42d60694482b61853fb14e0460a437a1653
+SHA1 (patch-ac) = fa01bf8e697a6aa444e325b238af70d7bf2f59e7
+SHA1 (patch-ad) = ea6da825d77090177c2c5c73362fc5caa80181f3
+SHA1 (patch-ae) = 2fb537e21cb8e670b492d80a8864b26b44db2ad1
+SHA1 (patch-af) = 0ccbcce72e2a64805fcbccb678e36aefe81cf7fa
+SHA1 (patch-ag) = d1681ff5d11c06ad4829b91109c6356870a3bfbc
+SHA1 (patch-ah) = 005f8f44408a5d800d370d9091e66e836b323186
+SHA1 (patch-ai) = 502f2f050ec81618a0fb9b7b5c450adf04f476fa
+SHA1 (patch-aj) = 75baea86b4b666a72eb2318af5fce15ad9457edb
+SHA1 (patch-ak) = 9ffe1e63c36a12fc30e94b47405f88f7190cd587

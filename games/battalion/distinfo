@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:22 agc Exp $
+
+MD5 (battalionSource1.4.tar.Z) = 90d915ef289f59714b060b27826049a5
+MD5 (battalionSUN4.tar.gz) = 6efb30da50beadefd50e575b6beae309
+SHA1 (patch-aa) = acd9eab9a631e816bc3145433dc3de203031fe1a
+SHA1 (patch-ab) = a47c5be93d82555b4fed23f5d5e71169859ebb49

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:23:00 agc Exp $
+
+MD5 (fbm-1.2.tgz) = 9081bc67c6169e07688086d59efdc3a5
+SHA1 (patch-aa) = c6d838a7f9f818921c15074edf075325a02a320f

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:26:44 agc Exp $
+
+MD5 (freeciv-1.11.4.tar.bz2) = 06e495a5b34daa556e6a1cd5b85dab19
+SHA1 (patch-aa) = 989be2bf58f9e83fca20c56629d37783f21298a9

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:23:21 agc Exp $
+
+MD5 (get_ds7_1.2.4.tar) = a10d8bd9d00d94acffd495d42cffc5d7
+SHA1 (patch-aa) = 15c75da504a229ee67b3f6235a0b37f2d60bfc17

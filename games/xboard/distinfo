@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:29:15 agc Exp $
+
+MD5 (xboard-4.2.3.tar.gz) = 6d2caef309675faa07633e6469cf655b
+SHA1 (patch-aa) = fb4fd5f625c071524fb750ca9ef11a8fbe9caf67

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:28:29 agc Exp $
+
+MD5 (netris-0.5.tar.gz) = a30c950fd4e4779a26f856bc7cd1aaff
+MD5 (netris-0.5-v6-19991206a.diff.gz) = 2fa50a7c9a55e8da531e7ae9bb4e1e85
