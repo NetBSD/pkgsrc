@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/26 16:34:24 martti Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/22 20:48:16 jmmv Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -11,6 +11,7 @@ COMMENT=	XFce4 extras
 NO_CHECKSUM=	# defined
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
+NO_MTREE=	# defined
 
 do-install:	# empty
 
