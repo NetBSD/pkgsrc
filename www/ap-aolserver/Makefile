@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/11/26 16:00:12 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/11/26 16:03:07 jlam Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -14,7 +14,9 @@ COMMENT=		Module that emulates AOLServer in Apache
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 
-CONFIGURE_ARGS+=	--with-database=postgres --with-mm=${BUILDLINK_PREFIX.libmm}
+CONFIGURE_ARGS+=	--with-database=postgres
+CONFIGURE_ARGS+=	--with-mm=${BUILDLINK_PREFIX.libmm}
+
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 CFLAGS+=	`${APXS} -q CFLAGS CFLAGS_SHLIB`
 
