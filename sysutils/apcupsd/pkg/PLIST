@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
-
-bin/apcaccess
+@comment $NetBSD: PLIST,v 1.2 2000/08/05 07:31:24 jlam Exp $
+sbin/apcaccess
 sbin/apcupsd
 sbin/powersc
-etc/apcupsd.conf.sample
+etc/rc.d/apcupsd
 man/man8/apcupsd.8
 share/doc/apcupsd/README.BackUPS-Pro
+share/doc/apcupsd/README.NEW
 share/doc/apcupsd/README.NewerBackUPS-Pro
 share/doc/apcupsd/README.Share-UPS
 share/doc/apcupsd/README.SmartUPS-VS
 share/doc/apcupsd/README.apcaccess
 share/doc/apcupsd/README.autoconfig
 share/doc/apcupsd/README.cable
+share/doc/apcupsd/README.developers
+share/doc/apcupsd/Statement.APCC
 share/doc/apcupsd/minicom.apcupsd
+share/doc/apcupsd/port.gif
+share/examples/apcupsd.conf
 @dirrm share/doc/apcupsd

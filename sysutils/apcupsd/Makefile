@@ -1,29 +1,66 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/05 07:31:15 jlam Exp $
 #
 
-DISTNAME=	apcupsd-3.5.8.src
-PKGNAME=	apcupsd-3.5.8
-CATEGORIES=	sysutils
-MASTER_SITES=	ftp://sunsite.unc.edu/pub/linux/system/ups/
+DISTNAME=		apcupsd-3.6.2
+CATEGORIES=		sysutils
+MASTER_SITES=		http://www.brisse.dk/dlarea/
 
-MAINTAINER=	bouyer@netbsd.org
-HOMEPAGE=	http://www.brisse.dk/site/apcupsd/
+MAINTAINER=		bouyer@netbsd.org
+HOMEPAGE=		http://www.brisse.dk/site/apcupsd/
 
-USE_GMAKE=	yes
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/apcupsd-netbsd ${PREFIX}/sbin/apcupsd
-	${INSTALL_PROGRAM} ${WRKSRC}/apcaccess-netbsd ${PREFIX}/bin/apcaccess
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|' ${WRKSRC}/installs/powersc > \
-		${WRKDIR}/powersc
-	${INSTALL_SCRIPT} ${WRKDIR}/powersc ${PREFIX}/sbin/
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|' ${WRKSRC}/installs/apcupsd.conf > \
-		${WRKDIR}/apcupsd.conf.sample
-	${INSTALL_DATA} ${WRKDIR}/apcupsd.conf.sample ${PREFIX}/etc/
-	@${MKDIR} ${PREFIX}/share/doc/apcupsd
-	${INSTALL_DATA} ${WRKSRC}/readmes/README* \
-		${WRKSRC}/readmes/minicom.apcupsd ${PREFIX}/share/doc/apcupsd/
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|' ${WRKSRC}/docs/apcupsd.man8 > \
-		${WRKDIR}/apcupsd.8
-	${INSTALL_MAN} ${WRKDIR}/apcupsd.8 ${PREFIX}/man/man8/
+USE_GMAKE=		# defined
+
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--enable-http		# include http support
+
+# Thread support is needed to compile powerflute, which has a curses interface
+#
+#DEPENDS+=		ncurses-*:../../devel/ncurses
+#CONFIGURE_ARGS+=	--enable-threads	# compile threading code
+#CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
+
+CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
+CONFIGURE_ARGS+=	--enable-nls		# i18n support
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
+CFLAGS+=		-I${LOCALBASE}/include	# libintl.h
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf --force
+
+# we should probably allow the tty to be set in /etc/mk.conf too
+#
+post-build:
+	${SED} -e 's|@@PREFIX@@|${PREFIX}|' ${WRKSRC}/examples/apcupsd.conf > \
+		${WRKDIR}/apcupsd.conf
+	${SED} -e 's|@@PREFIX@@|${PREFIX}|' ${FILESDIR}/apcupsd > \
+		${WRKDIR}/apcupsd
+	${SED} -e 's|@@PREFIX@@|${PREFIX}|' ${WRKSRC}/doc/apcupsd.man > \
+		${WRKSRC}/doc/apcupsd.8
+
+DOCS=	README.BackUPS-Pro	\
+	README.NEW		\
+	README.NewerBackUPS-Pro	\
+	README.Share-UPS	\
+	README.SmartUPS-VS	\
+	README.apcaccess	\
+	README.autoconfig	\
+	README.cable		\
+	README.developers	\
+	Statement.APCC 		\
+	minicom.apcupsd		\
+	port.gif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples
+	${INSTALL_DATA} ${WRKDIR}/apcupsd.conf ${PREFIX}/share/examples
+	${INSTALL_SCRIPT} ${WRKDIR}/apcupsd ${PREFIX}/etc/rc.d
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/apcupsd
+.for file in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/apcupsd
+.endfor
+
 .include "../../mk/bsd.pkg.mk"
