@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2001/05/22 06:54:43 jlam Exp $
+
+--- configure.orig	Tue Feb 29 05:29:00 2000
++++ configure	Tue May 22 02:48:58 2001
+@@ -3628,8 +3628,8 @@
+   -Wno-parentheses \
+   "
+ 
+-CFLAGS="-g"
+-OPTFLAGS="-O2"
++test -z "$CFLAGS" && CFLAGS="-g"
++test -z "$OPTFLAGS" && OPTFLAGS="-O2"
+ 
+ if test "$enable_lint" = yes; then
+     if test "$ac_cv_prog_CC" = "gcc"; then
+@@ -3645,6 +3645,7 @@
+     fi
+ 
+ if test "$enable_debug" = yes; then
++    CFLAGS="-g"
+     OPTFLAGS=""
+ else
+     DEBUGFLAGS=""

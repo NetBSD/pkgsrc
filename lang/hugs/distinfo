@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/05/22 06:38:09 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/05/22 06:54:43 jlam Exp $
 
 SHA1 (hugs98-Feb2000.tar.gz) = acadac22bad6509213a25035180f6373bd0192f5
 Size (hugs98-Feb2000.tar.gz) = 567528 bytes
 SHA1 (patch-aa) = c7e05ca44740a4a39595ab95149e6064b9d99ca9
 SHA1 (patch-ab) = 81d75e31db129be9f3e38e330c6c7f3cca375784
+SHA1 (patch-ac) = 60bd202e68adf91444e0fa0b848277702ebd5146
