@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.573 2000/09/15 09:04:51 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.574 2000/09/15 09:14:21 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2868,17 +2868,17 @@ print-pkg-size-this:
 # dependencies are all installed
 print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} print-pkg-size-depends-help 		\
-	| ${AWK} 'BEGIN { print("0"); }					\
-		  { print($$1, " +"); }			\
-		  END { print("p"); }'					\
 	| ${DC}
 # need this in a make look to prevent the shell clobbering the depends
 # also includes size of depends of depends (XXX)
 print-pkg-size-depends-help:
+	@${ECHO} "0"
 .for dep in ${DEPENDS}
 	@pkg="${dep:C/:.*//}";						\
-	${PKG_INFO} -qS "$$pkg" | ${HEAD} -1
+	size=`${PKG_INFO} -qS "$$pkg"`;					\
+	${TEST} -z "$$size" || ${ECHO} "$$size +"
 .endfor
+	@${ECHO} "p"
 
 
 ###
