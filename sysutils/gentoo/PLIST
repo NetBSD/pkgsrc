@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2002/09/02 16:56:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/07 10:12:42 jmmv Exp $
 bin/gentoo
-etc/gentoogtkrc
-etc/gentoorc
+share/examples/gentoo/gentoogtkrc
+share/examples/gentoo/gentoorc
 share/gentoo/icons/AbiWord.xpm
 share/gentoo/icons/Amiga.xpm
 share/gentoo/icons/Animation.xpm
@@ -130,3 +130,4 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gentoo.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gentoo.mo
 @dirrm share/gentoo/icons
 @dirrm share/gentoo
+@dirrm share/examples/gentoo
