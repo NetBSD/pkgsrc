@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/07/19 21:09:22 tv Exp $
+# $NetBSD: Makefile,v 1.7 1998/07/20 15:08:29 tv Exp $
 #
 
 DISTNAME=	kdegraphics-1.0
@@ -18,7 +18,7 @@ CONFLICTS=	kdegraphics-4.1b
 
 USE_X11=	yes
 USE_GMAKE=	yes
-HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
 		"--datadir=${PREFIX}/share/kde" \
