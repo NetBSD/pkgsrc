@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.9 2003/07/28 21:53:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.10 2003/07/28 21:56:31 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -120,7 +120,7 @@ PLIST_SRC=		# empty, since we use dynamic PLIST generation
 #
 _PLIST_IGNORE_FILES=	+*			# package metadata files
 _PLIST_IGNORE_FILES+=	info/dir
-_PLIST_IGNORE_FILES+=	*[~#] *.OLD *.orig	# scratch config files
+_PLIST_IGNORE_FILES+=	*[~#] *.OLD *.orig *,v	# scratch config files
 _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 
