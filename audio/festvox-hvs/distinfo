@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 22:01:17 wiz Exp $
 
-MD5 (voice_hvs_di-2.0.tar.gz) = c0aeade9f11333ae5ca9d5c2e69447c0
+SHA1 (voice_hvs_di-2.0.tar.gz) = 455fc478ac837f3fae5b01b7f042f4fa711c1834
+Size (voice_hvs_di-2.0.tar.gz) = 2325245 bytes
