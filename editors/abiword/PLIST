@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2004/10/21 06:30:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/11/22 13:31:46 adam Exp $
 bin/AbiWord-2.0
 bin/abiword
 bin/ttfadmin.sh
 bin/ttftool
 lib/bonobo/servers/GNOME_AbiWord_Control_2_0.server
-man/man8/abiword.8
+man/man1/abiword.1
 share/AbiSuite-2.0/AbiWord.exe.MANIFEST
 share/AbiSuite-2.0/AbiWord/glade/ap_UnixDialog_Break.glade
 share/AbiSuite-2.0/AbiWord/glade/ap_UnixDialog_Field.glade
@@ -328,9 +328,11 @@ share/AbiSuite-2.0/icons/abiword_48.png
 share/AbiSuite-2.0/icons/abiword_48.tif
 share/AbiSuite-2.0/icons/abiword_48.xpm
 share/AbiSuite-2.0/templates/A4.awt
+share/AbiSuite-2.0/templates/Business-Letter.awt
 share/AbiSuite-2.0/templates/Business-Report.awt
 share/AbiSuite-2.0/templates/Employee-Directory.awt
 share/AbiSuite-2.0/templates/Fax-Coversheet.awt
+share/AbiSuite-2.0/templates/Friendly-Letter.awt
 share/AbiSuite-2.0/templates/Memo.awt
 share/AbiSuite-2.0/templates/Two-Columns.awt
 share/AbiSuite-2.0/templates/US-Letter.awt
