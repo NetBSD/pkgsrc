@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6145 2004/06/05 17:47:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6146 2004/06/05 18:50:59 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2799,3 +2799,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated raine to 0.40.2 [xtraeme 2004-06-05]
 	Updated mew to 2.3nb1 [minskim 2004-06-05]
 	Added weechat-0.0.6 [xtraeme 2004-06-05]
+	Updated openmsx to 0.4.0nb1 [xtraeme 2004-06-05]
