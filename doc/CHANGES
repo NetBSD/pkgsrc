@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6679 2004/07/26 06:42:24 minskim Exp $
+$NetBSD: CHANGES,v 1.6680 2004/07/26 08:40:04 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated freenet-tools to 0.2.23 [tv 2004-07-25]
 	Added anise-0beta10 [minskim 2004-07-25]
 	Updated liferea to 0.5.2b [minskim 2004-07-26]
+	Updated doxygen to 1.3.8 [martti 2004-07-26]
