@@ -1,5 +1,6 @@
+# $FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp $
 # $OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp $
-# $NetBSD: Makefile,v 1.3 2000/10/30 10:13:56 mjl Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/31 01:13:14 mjl Exp $
 
 PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
@@ -28,15 +29,16 @@ post-patch:
 # fix sections
 	cd ${WRKSRC}/doc/man; for n in man1/*.1 man3/*.3 man4/*.4 man5/*.5 ; \
 		do ${SED} 's/user cmd/1/g; s/library call/3/g; s/special file/5/g; s/file formats/5/g;' $$n >$$n.new && ${MV} -f $$n.new $$n; done
-	${MV} -f ${WRKSRC}/doc/man/man4/mwmrc.4 ${WRKSRC}/doc/man/man5/mwmrc.5
-	@cd ${WRKSRC}/config/cf && \
-	    ${SED} -e "s|%%PREFIX%%|${PREFIX}|g" < site.def > site.def.new && \
-	    ${MV} -f site.def.new site.def && \
-	    ${SED} -e "s|%%PREFIX%%|${PREFIX}|g" < Motif.tmpl > Motif.tmpl.new && \
-	    ${MV} -f Motif.tmpl.new Motif.tmpl
-	${CP} -f `ls ${X11BASE}/lib/X11/config/* | ${GREP} -v '\(Motif\|cde\|\/site.def\)'` ${WRKDIR}/motif/config/cf
+	${CP} -f ${WRKSRC}/doc/man/man4/mwmrc.4 ${WRKSRC}/doc/man/man5/mwmrc.5
+	cd ${WRKSRC}/config/cf && \
+	    for n in site.def Motif.tmpl host.def ; \
+		do ${SED} -e 's|%%PREFIX%%|${PREFIX}|g; s|%%X11BASE%%|${X11BASE}|g' $$n > $$n.new && ${MV} -f $$n.new $$n ; \
+	    done
+
+do-configure:
+	${CP} -f `ls ${X11BASE}/lib/X11/config/* | ${GREP} -v '\(Motif\|cde\|\/site.def\|host.def\)'` ${WRKDIR}/motif/config/cf
 	${MKDIR} ${WRKSRC}/imports/x11
-	@cd ${WRKSRC}/imports/x11 && for i in bin include lib ; do \
+	cd ${WRKSRC}/imports/x11 && for i in bin include lib ; do \
 	    if [ -f $$i ] ; then ${RM} $$i; fi; \
 	    ${LN} -s ${X11BASE}/$$i $$i; \
 	done
