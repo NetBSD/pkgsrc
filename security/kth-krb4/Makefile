@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/03/29 20:09:09 kim Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/29 21:17:40 wennmach Exp $
 #
 
 DISTNAME=		krb4-1.0.1
@@ -11,10 +11,13 @@ HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
 COMMENT=		Kerberos IV distribution from KTH
 
 CONFLICTS+=		wu-ftpd-*
+CONFLICTS+=		cyrus-imapd-*
+CONFLICTS+=		lukemftp-*
+CONFLICTS+=		zephyr-*
+CONFLICTS+=		libdes-*
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
-#USE_GTEXINFO=		yes #not currently needed
 
 post-patch:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
