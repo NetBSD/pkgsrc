@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/22 13:22:05 tron Exp $
-bin/cntsrclines
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 12:45:57 markd Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -13,19 +12,12 @@ bin/graphdraw
 bin/iclass
 bin/idemo
 bin/idraw
-bin/ivcd
-bin/ivct
 bin/ivdl
-bin/ivds
-bin/ivdt
-bin/ivfb
-bin/ivgd
 bin/ivgetjpg
 bin/ivmkmf
+bin/ivtext
 bin/ivtiftopnm
 bin/ivtmpnam
-bin/mkgif89a
-bin/mkgif89ac
 bin/pnmtopgm
 bin/stdcmapppm
 include/AttrGlyph/attredit.h
@@ -642,41 +634,41 @@ lib/ivtools/config/solaris-gcc.mk
 lib/ivtools/config/sunos4-gcc.mk
 lib/ivtools/config/template
 lib/libAttrGlyph.so
-lib/libAttrGlyph.so.1.0.3
+lib/libAttrGlyph.so.${PKGVERSION}
 lib/libAttribute.so
-lib/libAttribute.so.1.0.3
+lib/libAttribute.so.${PKGVERSION}
 lib/libComGlyph.so
-lib/libComGlyph.so.1.0.3
+lib/libComGlyph.so.${PKGVERSION}
 lib/libComTerp.so
-lib/libComTerp.so.1.0.3
+lib/libComTerp.so.${PKGVERSION}
 lib/libComUnidraw.so
-lib/libComUnidraw.so.1.0.3
+lib/libComUnidraw.so.${PKGVERSION}
 lib/libComUtil.so
-lib/libComUtil.so.1.0.3
+lib/libComUtil.so.${PKGVERSION}
 lib/libDrawServ.so
-lib/libDrawServ.so.1.0.3
+lib/libDrawServ.so.${PKGVERSION}
 lib/libFrameUnidraw.so
-lib/libFrameUnidraw.so.1.0.3
+lib/libFrameUnidraw.so.${PKGVERSION}
 lib/libGraphUnidraw.so
-lib/libGraphUnidraw.so.1.0.3
+lib/libGraphUnidraw.so.${PKGVERSION}
 lib/libIV-common.so
-lib/libIV-common.so.1.0.3
+lib/libIV-common.so.${PKGVERSION}
 lib/libIV.so
-lib/libIV.so.1.0.3
+lib/libIV.so.${PKGVERSION}
 lib/libIVGlyph.so
-lib/libIVGlyph.so.1.0.3
+lib/libIVGlyph.so.${PKGVERSION}
 lib/libOverlayUnidraw.so
-lib/libOverlayUnidraw.so.1.0.3
+lib/libOverlayUnidraw.so.${PKGVERSION}
 lib/libTime.so
-lib/libTime.so.1.0.3
+lib/libTime.so.${PKGVERSION}
 lib/libTopoFace.so
-lib/libTopoFace.so.1.0.3
+lib/libTopoFace.so.${PKGVERSION}
 lib/libUniIdraw.so
-lib/libUniIdraw.so.1.0.3
+lib/libUniIdraw.so.${PKGVERSION}
 lib/libUnidraw-common.so
-lib/libUnidraw-common.so.1.0.3
+lib/libUnidraw-common.so.${PKGVERSION}
 lib/libUnidraw.so
-lib/libUnidraw.so.1.0.3
+lib/libUnidraw.so.${PKGVERSION}
 man/man1/comdraw.1
 man/man1/comterp.1
 man/man1/dclock.1
@@ -852,6 +844,7 @@ man/man3/viewcmds.3
 @dirrm include/IVGlyph
 @dirrm include/IV-look
 @dirrm include/IV-X11
+@exec ${MKDIR} %D/include/IV-3_1
 @dirrm include/IV-3_1
 @dirrm include/IV-2_6/InterViews
 @dirrm include/IV-2_6
