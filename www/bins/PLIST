@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/12/07 15:17:08 martti Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/06/21 16:22:26 martti Exp $
 bin/anti_bins
 bin/bins
 bin/bins_cleanupgallery
@@ -24,6 +24,7 @@ share/doc/html/bins/usage_custom.html
 share/doc/html/bins/usage_desc.html
 share/doc/html/bins/usage_desc_cli.html
 share/doc/html/bins/usage_desc_gui.html
+share/doc/html/bins/usage_desc_gui_feh.html
 share/doc/html/bins/usage_desc_gui_gqview.html
 share/doc/html/bins/usage_desc_gui_nautilus.html
 share/doc/html/bins/usage_desc_xml.html
@@ -74,6 +75,8 @@ share/examples/bins/templates.joi/static/mediumActive.png
 share/examples/bins/templates.joi/static/meshman.css
 share/examples/bins/templates.joi/static/next.png
 share/examples/bins/templates.joi/static/nextInactive.png
+share/examples/bins/templates.joi/static/pink.css
+share/examples/bins/templates.joi/static/pink2.css
 share/examples/bins/templates.joi/static/prev.png
 share/examples/bins/templates.joi/static/prevInactive.png
 share/examples/bins/templates.joi/static/preview.js
@@ -90,8 +93,94 @@ share/examples/bins/templates.joi/thumbnav.html
 share/examples/bins/templates.joi/thumbnavrow.html
 share/examples/bins/templates.joi/tree.html
 share/examples/bins/templates.joi/xlink.html
+share/examples/bins/templates.marc/details.html
+share/examples/bins/templates.marc/footer.html
+share/examples/bins/templates.marc/image.html
+share/examples/bins/templates.marc/imagelist.html
+share/examples/bins/templates.marc/imagenavbar.html
+share/examples/bins/templates.marc/navbar.html
+share/examples/bins/templates.marc/path.html
+share/examples/bins/templates.marc/static/actthumb.png
+share/examples/bins/templates.marc/static/albumtree.png
+share/examples/bins/templates.marc/static/back.png
+share/examples/bins/templates.marc/static/contact.png
+share/examples/bins/templates.marc/static/exit.png
+share/examples/bins/templates.marc/static/home.png
+share/examples/bins/templates.marc/static/imagelist.png
+share/examples/bins/templates.marc/static/info.png
+share/examples/bins/templates.marc/static/joi.css
+share/examples/bins/templates.marc/static/joi.js
+share/examples/bins/templates.marc/static/large.png
+share/examples/bins/templates.marc/static/largeActive.png
+share/examples/bins/templates.marc/static/media.png
+share/examples/bins/templates.marc/static/medium.png
+share/examples/bins/templates.marc/static/mediumActive.png
+share/examples/bins/templates.marc/static/meshman.css
+share/examples/bins/templates.marc/static/next.png
+share/examples/bins/templates.marc/static/nextInactive.png
+share/examples/bins/templates.marc/static/prev.png
+share/examples/bins/templates.marc/static/prevInactive.png
+share/examples/bins/templates.marc/static/preview.js
+share/examples/bins/templates.marc/static/related.png
+share/examples/bins/templates.marc/static/small.png
+share/examples/bins/templates.marc/static/smallActive.png
+share/examples/bins/templates.marc/static/subalbum.png
+share/examples/bins/templates.marc/static/thumbnails.png
+share/examples/bins/templates.marc/static/up.png
+share/examples/bins/templates.marc/subalbum.html
+share/examples/bins/templates.marc/subjectpath.html
+share/examples/bins/templates.marc/thumbnail.html
+share/examples/bins/templates.marc/thumbnav.html
+share/examples/bins/templates.marc/thumbnavrow.html
+share/examples/bins/templates.marc/tree.html
+share/examples/bins/templates.marc/xlink.html
 share/examples/bins/templates.new/th.html
 share/examples/bins/templates.new/thubnail.html
+share/examples/bins/templates.petrus/details.html
+share/examples/bins/templates.petrus/footer.html
+share/examples/bins/templates.petrus/image.html
+share/examples/bins/templates.petrus/imagelist.html
+share/examples/bins/templates.petrus/imagenavbar.html
+share/examples/bins/templates.petrus/moreinfos.html
+share/examples/bins/templates.petrus/navbar.html
+share/examples/bins/templates.petrus/path.html
+share/examples/bins/templates.petrus/static/actthumb.png
+share/examples/bins/templates.petrus/static/albumtree.png
+share/examples/bins/templates.petrus/static/back.png
+share/examples/bins/templates.petrus/static/contact.png
+share/examples/bins/templates.petrus/static/exit.png
+share/examples/bins/templates.petrus/static/home.png
+share/examples/bins/templates.petrus/static/huge.png
+share/examples/bins/templates.petrus/static/hugeActive.png
+share/examples/bins/templates.petrus/static/imagelist.png
+share/examples/bins/templates.petrus/static/info.png
+share/examples/bins/templates.petrus/static/joi.css
+share/examples/bins/templates.petrus/static/joi.js
+share/examples/bins/templates.petrus/static/large.png
+share/examples/bins/templates.petrus/static/largeActive.png
+share/examples/bins/templates.petrus/static/media.png
+share/examples/bins/templates.petrus/static/medium.png
+share/examples/bins/templates.petrus/static/mediumActive.png
+share/examples/bins/templates.petrus/static/next.png
+share/examples/bins/templates.petrus/static/nextInactive.png
+share/examples/bins/templates.petrus/static/petrus.css
+share/examples/bins/templates.petrus/static/prev.png
+share/examples/bins/templates.petrus/static/prevInactive.png
+share/examples/bins/templates.petrus/static/preview.js
+share/examples/bins/templates.petrus/static/related.png
+share/examples/bins/templates.petrus/static/small.png
+share/examples/bins/templates.petrus/static/smallActive.png
+share/examples/bins/templates.petrus/static/subalbum.png
+share/examples/bins/templates.petrus/static/thumbnails.png
+share/examples/bins/templates.petrus/static/up.png
+share/examples/bins/templates.petrus/subalbum.html
+share/examples/bins/templates.petrus/subjectpath.html
+share/examples/bins/templates.petrus/thumbnail.html
+share/examples/bins/templates.petrus/thumbnav.html
+share/examples/bins/templates.petrus/thumbnavrow.html
+share/examples/bins/templates.petrus/title1.html
+share/examples/bins/templates.petrus/tree.html
+share/examples/bins/templates.petrus/xlink.html
 share/examples/bins/templates.satyap/bodyheader.html
 share/examples/bins/templates.satyap/details.html
 share/examples/bins/templates.satyap/footer.html
@@ -121,7 +210,11 @@ ${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/bins.mo
 @dirrm share/examples/bins/templates.jab
 @dirrm share/examples/bins/templates.joi/static
 @dirrm share/examples/bins/templates.joi
+@dirrm share/examples/bins/templates.marc/static
+@dirrm share/examples/bins/templates.marc
 @dirrm share/examples/bins/templates.new
+@dirrm share/examples/bins/templates.petrus/static
+@dirrm share/examples/bins/templates.petrus
 @dirrm share/examples/bins/templates.satyap/static
 @dirrm share/examples/bins/templates.satyap
 @dirrm share/examples/bins
