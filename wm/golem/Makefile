@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:18:32 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 00:54:46 grant Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -15,8 +15,6 @@ USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 CONFIGURE_ARGS=	--enable-i18n
 

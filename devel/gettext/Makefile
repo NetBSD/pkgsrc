@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/12/05 18:15:49 erh Exp $
+# $NetBSD: Makefile,v 1.54 2004/02/14 00:54:45 grant Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -19,8 +19,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_GNU_GETTEXT=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/31 23:04:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 00:54:45 grant Exp $
 
 DISTNAME=	otcl-1.0a8
 PKGNAME=	tcl-${DISTNAME:S/a/rc/}
@@ -17,9 +17,6 @@ USE_X11=	yes
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
-
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.tcl}/include/tcl/generic
 

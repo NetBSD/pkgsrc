@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/12 01:57:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/14 00:54:45 grant Exp $
 
 DISTNAME=		bochs-2.1.1
 CATEGORIES=		emulators
@@ -9,8 +9,6 @@ HOMEPAGE=		http://bochs.sourceforge.net/
 COMMENT=		i386 machine emulator capable of running DOS/Windows
 
 GNU_CONFIGURE=		yes
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_GNU_TOOLS+=		make
 USE_GCC_SHLIB=		yes
 # These options are not enabled by default because they can adversely impact

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/02/10 02:33:26 sekiya Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/14 00:54:45 grant Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -19,9 +19,6 @@ USE_X11BASE=		YES
 USE_GNU_TOOLS+=		lex yacc
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
-CONFIG_GUESS_OVERRIDE+=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE+=	${WRKSRC}/config.sub
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
