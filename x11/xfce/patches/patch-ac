@@ -1,13 +1,11 @@
-$NetBSD: patch-ac,v 1.4 2000/10/02 07:25:19 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2000/10/15 02:39:02 jlam Exp $
 
---- libs/configure.h.orig	Tue Nov  9 21:20:00 1999
-+++ libs/configure.h
-@@ -69,7 +69,7 @@
- #define CLOSE_STRING4 "quit"
+--- other/xfsoundrc.in.orig	Mon Sep  4 13:26:09 2000
++++ other/xfsoundrc.in
+@@ -1,5 +1,5 @@
+ Play
+-xfplay
++/usr/bin/audioplay
+ XFCE_DIR/sounds/beep03.wav
+ XFCE_DIR/sounds/pop02.wav
  
- /* #ifdef __alpha */
--#if defined(__alpha) && !defined(linux)
-+#if defined(__alpha) && !(defined(linux) || defined(__NetBSD__) || defined(__OpenBSD__))
- #define NEEDS_ALPHA_HEADER
- #undef BROKEN_SUN_HEADERS
- #endif /* (__alpha) */
