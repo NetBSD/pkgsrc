@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3632 2003/10/04 02:12:16 toshii Exp $
+$NetBSD: CHANGES,v 1.3633 2003/10/04 19:19:12 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated jpeg to 6bnb1 [salo 2003-10-03]
 	Added chkfontpath-1.9.7 [hubertf 2003-10-03]
 	Updated navi2ch to 1.7.1 [toshii 2003-10-04]
+	Added xylem-1.8.7 [jschauma 2003-10-04]
