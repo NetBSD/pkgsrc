@@ -1,9 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2004/05/02 07:24:52 mrg Exp $
+$NetBSD: patch-ac,v 1.2 2004/06/29 08:26:38 simonb Exp $
 
-diff -ru src/main.c mpc-0.10.3.orig/src/main.c
---- src/main.c	2004-03-20 10:44:14.000000000 +1100
-+++ src/main.c	2004-05-02 16:42:03.000000000 +1000
-@@ -51,6 +51,7 @@
+--- src/main.c.orig	2004-05-31 23:52:41.000000000 +1000
++++ src/main.c
+@@ -51,6 +51,7 @@ struct _mpc_table {
  	{"next", 0, 0, 0, cmd_next, "","Play the next song in the current playlist"},
  	{"prev", 0, 0, 0, cmd_prev,"","Play the previous song in the current playlist"},
  	{"pause", 0, 0, 0, cmd_pause, "", "Pauses the currently playing song"},
