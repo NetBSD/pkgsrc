@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.9 2005/03/25 08:28:10 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.10 2005/03/25 08:30:41 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -19,3 +19,5 @@ Pullup ticket 387 - requested by Chris Gilbert
 security fix for sylpheed
 Pullup ticket 388 - requested by Min Sik Kim
 portability fix for arj
+Pullup ticket 385 - requested by Shin'ichiro TAYA
+security fix for firefox
