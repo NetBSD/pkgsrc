@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.milter,v 1.1 2003/09/28 23:39:24 chris Exp $
-man/man1/clamav-milter.1
+@comment $NetBSD: PLIST.milter,v 1.2 2004/01/29 17:14:16 cube Exp $
+man/man8/clamav-milter.8

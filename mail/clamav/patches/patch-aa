@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/09/28 23:39:24 chris Exp $
+$NetBSD: patch-aa,v 1.5 2004/01/29 17:14:16 cube Exp $
 
---- configure.in.orig	2003-06-21 04:05:32.000000000 +0100
-+++ configure.in	2003-09-28 23:35:17.000000000 +0100
-@@ -74,12 +74,16 @@
+--- configure.in.orig	Wed Nov 12 02:27:29 2003
++++ configure.in
+@@ -74,12 +74,15 @@ then
      AC_CHECK_LIB(bz2, bzReadOpen, AC_DEFINE(NOBZ2PREFIX),)
  fi
  
@@ -19,11 +19,10 @@ $NetBSD: patch-aa,v 1.4 2003/09/28 23:39:24 chris Exp $
 +then
 +	AC_CHECK_HEADER(libmilter/mfapi.h,[have_milter=yes],)
 +fi
-+
  
- AC_CHECK_HEADER(syslog.h,AC_DEFINE(CLAMD_USE_SYSLOG),)
- 
-@@ -255,8 +259,12 @@
+ want_dsig="yes"
+ AC_ARG_ENABLE(dsig,
+@@ -271,8 +274,12 @@ openbsd*)
      AC_DEFINE(C_BSD)
      ;;
  netbsd*)
