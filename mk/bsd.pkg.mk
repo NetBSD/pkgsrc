@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1434 2004/03/31 11:19:09 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1435 2004/04/02 19:09:18 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -822,7 +822,7 @@ PRESERVE_FILE=		${WRKDIR}/.PRESERVE
 PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true | ${SORT} -u`"
+PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`"
 .  if defined(CONFLICTS) && (${PKG_INSTALLATION_TYPE} == "overwrite")
 PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
 .  endif
@@ -4088,10 +4088,6 @@ make-readme-html-help:
 # Show (recursively) all the packages this package depends on.
 # If PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
 PACKAGE_DEPENDS_WITH_PATTERNS?=true
-# To be used (-> true) ONLY if the pkg in question is known to be installed
-# (i.e. when calling for pkg_create args, and for fake-pkg)
-# Will probably not work with PACKAGE_DEPENDS_WITH_PATTERNS=false ...
-PACKAGE_DEPENDS_QUICK?=false
 .PHONY: run-depends-list
 .if !target(run-depends-list)
 run-depends-list:
@@ -4104,16 +4100,6 @@ run-depends-list:
 	else								\
 		if cd $$dir 2>/dev/null; then				\
 			${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
-		else 							\
-			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
-		fi;							\
-	fi;								\
-	if ${PACKAGE_DEPENDS_QUICK}; then 				\
-		found=`${PKG_BEST_EXISTS} "$$pkg"`;			\
-		${PKG_INFO} -qf "$$found" | ${AWK} '/^@pkgdep/ {print $$2}'; \
-	else 								\
-		if cd $$dir 2>/dev/null; then				\
-			${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE} PACKAGE_DEPENDS_WITH_PATTERNS=${PACKAGE_DEPENDS_WITH_PATTERNS}; \
 		else 							\
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi;							\
@@ -4522,7 +4508,7 @@ print-pkg-size-this:
 # dependencies are all installed.
 .PHONY: print-pkg-size-depends
 print-pkg-size-depends:
-	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true \
+	@${MAKE} ${MAKEFLAGS} run-depends-list				\
 	| ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS}			\
 	| ${SORT} -u							\
 	| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs			\
@@ -4828,7 +4814,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				${CP} ${MESSAGE} ${_PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | ${SORT} -u`" ; \
+		list="`${MAKE} ${MAKEFLAGS} run-depends-list ECHO_MSG=${TRUE} | ${SORT} -u`" ; \
 		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS} | ${SORT} -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
