@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/23 19:01:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/23 19:04:59 jmmv Exp $
 #
 
 DISTNAME=	dasher-3.2.3
-CATEGORIES=	editors
+CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/3.2/}
 
 MAINTAINER=	jmmv@NetBSD.org
