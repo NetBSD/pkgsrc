@@ -1,0 +1,22 @@
+Blackened is a console irc client. Features: 
+* Built-in away message recorder
+* Built-in auto-ops
+* Many built-in commands for IRC Operators
+* Snazzy new look!
+
+   Channel stuff with timestamp:
+   [30-Oct:12:36 Toast] woooooiiii
+   [30-Oct:12:37 Toast:#blackened] *suspicious*
+
+   Private stuff with timestamp:
+   [30-Oct:12:38] *DarkToast!toast@FadeTo.Blackened.COM* hi toast
+   [30-Oct:12:38] -> *DarkToast* hi darktoast
+
+   Timestamps timestamps everywhere!
+
+* Temporary bans
+* tabkey script no longer necessary -- it's built in!
+* Added statistics in /LUSERS output.
+* Random signoff messages
+* New /WHOIS and /WHOWAS format for better readability
+* Easier window manipulation through new key bindings
