@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/05 19:08:55 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/13 11:47:05 tron Exp $
 
 DISTNAME=		gtop-1.0.9
 CATEGORIES=		sysutils gnome
@@ -21,10 +21,10 @@ USE_LIBINTL=		YES
 
 GNU_CONFIGURE=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
+CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
 CFLAGS+=		-I${LOCALBASE}/include
 
-PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
+PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}
@@ -36,12 +36,12 @@ pre-configure:
 
 # The directory in which locale files are found is:
 #
-#	${PREFIX}/${LOCALEBASE}/locale/<lang>/LC_MESSAGES
+#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
 #
 .if ${OPSYS} == "SunOS"
-LOCALEBASE=		lib
+LOCALEDIR=		lib
 .else
-LOCALEBASE=		share
+LOCALEDIR=		share
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.28 2001/02/06 03:16:58 fredb Exp $
+## $NetBSD: Makefile,v 1.29 2001/02/13 11:47:03 tron Exp $
 
 DISTNAME=		gnome-utils-1.2.0
 CATEGORIES=		misc x11 gnome
@@ -20,9 +20,9 @@ USE_LIBINTL=		# defined
 USE_X11BASE=		# defined
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
+CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
 
-PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
+PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}
@@ -34,12 +34,12 @@ pre-configure:
 
 # The directory in which locale files are found is:
 #
-#	${PREFIX}/${LOCALEBASE}/locale/<lang>/LC_MESSAGES
+#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
 #
 .if ${OPSYS} == "SunOS"
-LOCALEBASE=		lib
+LOCALEDIR=		lib
 .else
-LOCALEBASE=		share
+LOCALEDIR=		share
 .endif
 
 .if ${NEED_NCURSES} == "YES"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2001/01/14 05:31:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2001/02/13 11:47:00 tron Exp $
 bin/gettext
 bin/gettextize
 bin/msgcmp
@@ -44,18 +44,18 @@ share/gettext/intl/textdomain.c
 share/gettext/intl/xopen-msg.sed
 share/gettext/po/Makefile.in.in
 share/locale/locale.alias
-${LOCALEBASE}/locale/da/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/de/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/es/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/fr/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/ko/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/nl/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/no/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/no@nynorsk/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/pl/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/pt/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/sl/LC_MESSAGES/gettext.mo
-${LOCALEBASE}/locale/sv/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/da/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/de/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/es/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/fr/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/ko/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/nl/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/no/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/no@nynorsk/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/pl/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/pt/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/sl/LC_MESSAGES/gettext.mo
+${LOCALEDIR}/locale/sv/LC_MESSAGES/gettext.mo
 @dirrm share/gettext/po
 @dirrm share/gettext/intl
 @dirrm share/gettext

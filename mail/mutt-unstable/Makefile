@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/12 18:34:38 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/13 11:47:02 tron Exp $
 
 DISTNAME=	mutt-unstable-20010212
 PKGNAME=	mutt-1.3.14.20010212i
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+= --without-ssl
 .endif
 
 BUILD_DEFS+=	MUTT_USE_SSL
-PLIST_SUBST+=	LOCALEBASE=${LOCALEBASE}
+PLIST_SUBST+=	LOCALEDIR=${LOCALEDIR}
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf

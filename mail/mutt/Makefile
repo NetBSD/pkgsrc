@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2001/02/12 14:53:57 tron Exp $
+# $NetBSD: Makefile,v 1.66 2001/02/13 11:47:02 tron Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -45,6 +45,6 @@ CONFIGURE_ARGS+= --without-ssl
 .endif
 
 BUILD_DEFS+=	MUTT_USE_SSL
-PLIST_SUBST+=	LOCALEBASE=${LOCALEBASE}
+PLIST_SUBST+=	LOCALEDIR=${LOCALEDIR}
 
 .include "../../mk/bsd.pkg.mk"
