@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/06/08 10:40:29 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/27 05:49:42 sakamoto Exp $
 bin/mknmz
 bin/namazu
 lib/namazu/bin/clnmz
@@ -10,7 +10,7 @@ lib/namazu/bin/namazu
 lib/namazu/bin/rvnmz
 lib/namazu/bin/vfnmz
 lib/namazu/bin/wdnmz
-lib/namazu/contrib/MHonArc-2.2.0-Japanize-Namazu.patch-1.3a.gz
+lib/namazu/contrib/MHonArc-Japanize-patch-1.6.gz
 lib/namazu/contrib/NamazuJAVA.030.tar.gz
 lib/namazu/contrib/bnamazu
 lib/namazu/contrib/namazu.el-1999.05.10.gz
@@ -37,11 +37,12 @@ lib/namazu/lib/NMZ.foot.ja
 lib/namazu/lib/NMZ.head.en
 lib/namazu/lib/NMZ.head.ja
 lib/namazu/lib/namazu.conf-dist
-@dirrm lib/namazu/bin
-@dirrm lib/namazu/contrib
-@dirrm lib/namazu/doc/en
+@exec mkdir %D/lib/namazu/index
+@unexec rmdir %D/lib/namazu/index
 @dirrm lib/namazu/doc/ja
+@dirrm lib/namazu/doc/en
 @dirrm lib/namazu/doc
-@dirrm lib/namazu/index
 @dirrm lib/namazu/lib
+@dirrm lib/namazu/contrib
+@dirrm lib/namazu/bin
 @dirrm lib/namazu
