@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/08 00:07:26 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/08 19:18:00 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -34,6 +34,7 @@ CONFIGURE_ENV+=		ac_cv_prog_HAVE_PS2PDF=no
 
 PAM_MODULEDIR=		${VIEWBASE}/lib/security
 MAKE_ENV+=		PAM_MODULEDIR="${PAM_MODULEDIR}"
+MESSAGE_SUBST+=		PAM_MODULEDIR=${PAM_MODULEDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
