@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8503 2004/12/29 01:20:33 wiz Exp $
+$NetBSD: CHANGES,v 1.8504 2004/12/29 04:10:56 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6677,3 +6677,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-InlineEgg to 1.08 [adrianp 2004-12-28]
 	Updated tiff to 3.7.1 [reed 2004-12-28]
 	Added p5-Math-Random-0.67 [wiz 2004-12-28]
+	Updated roller to 1.19 [kim 2004-12-29]
