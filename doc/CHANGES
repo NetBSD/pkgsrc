@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3949 2003/12/03 23:51:41 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3950 2003/12/04 00:29:21 ben Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4815,3 +4815,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tei-4 [xtraeme 2003-12-03]
 	Added teixsl-fo-3.0 [xtraeme 2003-12-03]
 	Added teixsl-html-3.0 [xtraeme 2003-12-03]
+	Updated fkiss to 0.33a [ben 2003-12-03]
