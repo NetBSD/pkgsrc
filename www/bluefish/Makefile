@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/21 11:39:43 wulf Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/15 11:29:38 hubertf Exp $
 #
 
 DISTNAME=       bluefish-0.4
@@ -10,7 +10,7 @@ MAINTAINER=     wulf@ping.net.au
 HOMEPAGE=       http://bluefish.openoffice.nl/
 
 BUILD_DEPENDS+= ${LOCALBASE}/bin/msgfmt:../../devel/gettext
-DEPENDS+=	gtk+-1.2.7:../../x11/gtk
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	imlib-*:../../graphics/imlib
 DEPENDS+=	weblint-*:../../www/weblint
 
