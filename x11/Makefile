@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1998/03/08 21:22:22 tron Exp $
+# $NetBSD: Makefile,v 1.25 1998/03/11 02:46:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -101,6 +101,7 @@
     SUBDIR += xmascot
 #    SUBDIR += xmbdfed
 #    SUBDIR += xmold
+    SUBDIR += xmove
     SUBDIR += xneko
     SUBDIR += xpns
 #    SUBDIR += xpostit
