@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.13 2003/12/04 19:33:38 xtraeme Exp $
+$NetBSD: patch-ad,v 1.14 2003/12/26 21:49:08 jmmv Exp $
 
---- doc/Makefile.in.orig	2003-12-04 18:41:38.000000000 +0100
-+++ doc/Makefile.in	2003-12-04 18:43:47.000000000 +0100
-@@ -175,7 +175,7 @@
+--- doc/Makefile.in.orig	2003-12-24 05:53:04.000000000 -0600
++++ doc/Makefile.in
+@@ -186,7 +186,7 @@ install_sh = @install_sh@
  pythondir = @pythondir@
- 
+ SUBDIRS = examples
  # The name of the module.
 -DOC_MODULE = libxml2-$(VERSION)
 +DOC_MODULE = libxml2
  
  # The top-level SGML file.
  DOC_MAIN_XML_FILE = gnome-xml.xml
-@@ -186,7 +186,7 @@
+@@ -197,7 +197,7 @@ DOC_SOURCE_DIR = ..
  # A file in win32 depends upon one of the doc files
  WIN32_DIR = $(top_srcdir)/win32
  
@@ -20,11 +20,3 @@ $NetBSD: patch-ad,v 1.13 2003/12/04 19:33:38 xtraeme Exp $
  PAGES = architecture.html bugs.html contribs.html docs.html DOM.html \
      downloads.html entities.html example.html help.html index.html \
      interface.html intro.html library.html namespaces.html news.html \
-@@ -467,7 +467,6 @@
- 	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial/images/callouts
- 	-@INSTALL@ -m 0644 $(srcdir)/tutorial/images/callouts/*.* \
- 		$(DESTDIR)$(TARGET_DIR)/tutorial/images/callouts
--	-(cd $(DESTDIR); gtkdoc-fixxref --module=libxml --html-dir=$(HTML_DIR))
- 
- .PHONY : html xml templates scan
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
