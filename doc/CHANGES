@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5201 2004/03/11 08:20:20 grant Exp $
+$NetBSD: CHANGES,v 1.5202 2004/03/11 08:31:20 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1403,3 +1403,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cabextract to 1.0 [ben 2004-03-10]
 	Updated firefox-gtk2 to 0.8nb2 [snj 2004-03-03-11]
 	Updated xmms-infinity to 0.2nb4 [grant 2004-03-03-11]
+	Updated eggdrop to 1.6.15nb2 [grant 2004-03-11]
