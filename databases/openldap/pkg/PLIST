@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/03/29 14:35:53 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/05/04 00:08:44 tv Exp $
 bin/ldapsearch
 bin/ldapmodify
 bin/ldapdelete
@@ -6,10 +6,38 @@ bin/ldapmodrdn
 bin/ldapadd
 bin/ldappasswd
 bin/ud
-lib/liblber.la
+etc/openldap/ldap.conf.default
+@exec [ -f %B/ldap.conf ] || cp %D/%F %B/ldap.conf
+etc/openldap/ldapfilter.conf.default
+@exec [ -f %B/ldapfilter.conf ] || cp %D/%F %B/ldapfilter.conf
+etc/openldap/ldaptemplates.conf.default
+@exec [ -f %B/ldaptemplates.conf ] || cp %D/%F %B/ldaptemplates.conf
+etc/openldap/ldapsearchprefs.conf.default
+@exec [ -f %B/ldapsearchprefs.conf ] || cp %D/%F %B/ldapsearchprefs.conf
+etc/openldap/slapd.conf.default
+@exec [ -f %B/slapd.conf ] || cp %D/%F %B/slapd.conf
+etc/openldap/slapd.at.conf.default
+@exec [ -f %B/slapd.at.conf ] || cp %D/%F %B/slapd.at.conf
+etc/openldap/slapd.oc.conf.default
+@exec [ -f %B/slapd.oc.conf ] || cp %D/%F %B/slapd.oc.conf
+include/ldap.h
+include/lber.h
+include/ldap_cdefs.h
+include/disptmpl.h
+include/srchpref.h
 lib/liblber.a
-lib/libldap.la
+lib/liblber.so.1.0
 lib/libldap.a
+lib/libldap.so.1.0
+libexec/in.xfingerd
+libexec/go500
+libexec/go500gw
+libexec/mail500
+libexec/rp500
+libexec/fax500
+libexec/xrpcomp
+libexec/rcpt500
+libexec/slapd
 man/man1/ldapdelete.1
 man/man1/ldapmodify.1
 man/man1/ldapadd.1
@@ -175,35 +203,6 @@ man/man8/fax500.8
 man/man8/rcpt500.8
 man/man8/slapd.8
 man/man8/slurpd.8
-etc/openldap/ldap.conf
-etc/openldap/ldap.conf.default
-etc/openldap/ldapfilter.conf
-etc/openldap/ldapfilter.conf.default
-etc/openldap/ldaptemplates.conf
-etc/openldap/ldaptemplates.conf.default
-etc/openldap/ldapsearchprefs.conf
-etc/openldap/ldapsearchprefs.conf.default
-etc/openldap/slapd.conf
-etc/openldap/slapd.conf.default
-etc/openldap/slapd.at.conf
-etc/openldap/slapd.at.conf.default
-etc/openldap/slapd.oc.conf
-etc/openldap/slapd.oc.conf.default
-@dirrm etc/openldap
-include/ldap.h
-include/lber.h
-include/ldap_cdefs.h
-include/disptmpl.h
-include/srchpref.h
-libexec/in.xfingerd
-libexec/go500
-libexec/go500gw
-libexec/mail500
-libexec/rp500
-libexec/fax500
-libexec/xrpcomp
-libexec/rcpt500
-libexec/slapd
 sbin/ldif2ldbm
 sbin/ldif2index
 sbin/ldif2id2entry
@@ -215,4 +214,5 @@ sbin/ldbmtest
 share/openldap/ldapfriendly
 share/openldap/go500gw.help
 share/openldap/rcpt500.help
+@unexec rmdir etc/openldap 2>/dev/null || true
 @dirrm share/openldap
