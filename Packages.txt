@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.152 2001/04/25 07:27:44 skrll Exp $
+# $NetBSD: Packages.txt,v 1.153 2001/04/27 15:40:47 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -178,6 +178,9 @@ packages the "xbase" and "xcomp" distribution sets are required, too.
  2.2 Where to get pkgsrc
  =======================
 
+There are three ways to get pkgsrc. Either as tar file, via SUP, or via
+CVS. All three ways are described here. 
+
 To get the package source going, you need to get the pkgsrc.tar.gz file
 from ftp://ftp.netbsd.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz and
 unpack it into /usr/pkgsrc.
@@ -187,6 +190,22 @@ SUP. To do so, make sure your supfile has a line saying "release=pkgsrc" in
 it, see the examples in /usr/share/examples/supfiles, and that the
 directory /usr/pkgsrc does exist. Then, simply start "sup -v
 /path/to/your/supfile".
+
+To get pkgsrc via CVS, make sure you have cvs installed. If not present on
+your system, it can be found as precompiled binary on ftp.netbsd.org. 
+To do an initial (full) checkout of pkgsrc, do the following steps:
+
+	% setenv CVSROOT anoncvs@anoncvs.netbsd.org:/cvsroot
+	% setenv CVS_RSH ssh 
+	% cd /usr
+	% cvs checkout pkgsrc
+
+This will create the "pkgsrc" directory in your /usr, and all the package
+source will be stored under /usr/pkgsrc. To update pkgsrc after the initial
+checkout, make sure you have CVS_RSH set as above, then do:
+
+	% cd /usr/pkgsrc
+	% cvs update
 
 
  2.3 Fetching distfiles
