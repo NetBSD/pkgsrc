@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5397 2004/03/31 17:26:00 minskim Exp $
+$NetBSD: CHANGES,v 1.5398 2004/03/31 18:15:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed blackbook [jmmv 2004-03-31]
 	Renamed dbxml to bdb-xml [minskim 2004-03-31]
 	Renamed py-dbxml to py-bdb-xml [minskim 2004-03-31]
+	Added mathomatic-10.9b [minskim 2004-03-31]
