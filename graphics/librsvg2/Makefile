@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:19:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/07 14:14:25 jmmv Exp $
 #
 
 DISTNAME=		librsvg-2.0.1
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/librsvg/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@netbsd.org
-HOMEPAGE=		http://www.levien.com/svg/
+HOMEPAGE=		http://librsvg.sourceforge.net/
 COMMENT=		SVG library for GNOME2
 
 USE_BUILDLINK2=		YES
