@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/08 07:59:18 sakamoto Exp $
+bin/smidump
+bin/smilint
+bin/smiquery
+include/smi.h
+lib/libsmi.a
+lib/libsmi.so.1.1
+man/man1/smidump.1
+man/man1/smilint.1
+man/man1/smiquery.1
+man/man3/libsmi.3
+man/man3/smi_config.3
+man/man3/smi_macro.3
+man/man3/smi_module.3
+man/man3/smi_node.3
+man/man3/smi_type.3
+share/libsmi/mibs/IRTF-NMRG-SMING-EXTENSIONS.sming
+share/libsmi/mibs/IRTF-NMRG-SMING-TYPES.sming
+share/libsmi/mibs/IRTF-NMRG-SMING.sming
+share/libsmi/mibs/RFC-1212
+share/libsmi/mibs/RFC-1213
+share/libsmi/mibs/RFC-1215
+share/libsmi/mibs/RFC1155-SMI
+share/libsmi/mibs/RFC1158-MIB
+share/libsmi/mibs/RFC1213-MIB
+share/libsmi/mibs/RFC1271-MIB
+share/libsmi/mibs/SNMPv2-CONF
+share/libsmi/mibs/SNMPv2-SMI
+share/libsmi/mibs/SNMPv2-TC
+@dirrm share/libsmi/mibs
+@dirrm share/libsmi
