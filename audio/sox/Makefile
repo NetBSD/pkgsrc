@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2002/09/21 21:05:35 jlam Exp $
-# FreeBSD Id: Makefile,v 1.9 1997/02/04 10:32:34 max Exp 
+# $NetBSD: Makefile,v 1.19 2002/11/25 19:02:45 wiz Exp $
 #
 
 DISTNAME=	sox-12.17.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://home.sprynet.com/~cbagwell/
 
@@ -15,6 +15,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fast-ulaw \
 			--enable-fast-alaw \
 			--with-sun-audio \
-			--without-oss-dsp
+			--without-oss-dsp \
+			--with-ogg-vorbislib=${BUILDLINK_PREFIX.libvorbis}/lib \
+			--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
 
+.include "../../audio/libvorbis/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
