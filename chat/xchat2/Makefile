@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/16 16:00:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/17 14:19:05 jmmv Exp $
 #
 
 DISTNAME=	xchat-2.0.0
+PKGREVISION=	1
 CATEGORIES=	chat gnome
 MASTER_SITES=	http://www.xchat.org/files/source/2.0/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +24,6 @@ USE_X11=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-tcl=no
-CONFIGURE_ARGS+=	--enable-xft
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 
@@ -51,6 +51,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xchat/plugins
 
 .include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
