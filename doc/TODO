@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.74 2002/12/16 22:27:52 wiz Exp $
+$NetBSD: TODO,v 1.75 2002/12/16 23:22:28 grant Exp $
 
 Suggested new packages
 ======================
@@ -203,7 +203,6 @@ Suggested package updates
 	o pen-0.9.5 [pkg/19216]
 	o pilot-link-0.11.4 [dillo]
 	o plib-1.6.0
-	o ploticus-2.10
 	o postgresql-7.3
 	o povray-3.5
 	o psi-0.8.7
@@ -230,7 +229,6 @@ Suggested package updates
 	o speex-1.0beta2
 	o squeak-3.2 [fredb|pkg/17950]
 	o srp-1.7.5 [jlam]
-	o star-1.4.2
 	o stunnel-4.03 [pkg/19310]
 	o suck-4.3.1
 	o swig-1.3.17
