@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/26 20:53:53 jtb Exp $
+
+--- Makefile.orig	Sun Mar 25 11:17:10 2001
++++ Makefile
+@@ -7,13 +7,14 @@
+ 
+ ####### Compiler, tools and options
+ 
+-CC	=	g++
+-CFLAGS	=	-Wall -W -O2 -fno-strength-reduce
++#CC	=	g++
++CXXFLAGS+=	-fno-strength-reduce
++CFLAGS+=	-fno-strength-reduce
+ INCPATH	=	-I$(QTDIR)/include
+-LINK	=	g++
+-LFLAGS	=	-static
+-LIBS	=	-L$(QTDIR)/lib -lqt -L/usr/X11R6/lib -lX11
+-MOC	=	moc
++LINK	=	$(CXX)
++#LFLAGS	=	-static
++LIBS	=	-Wl,-R$(QTDIR)/lib -L$(QTDIR)/lib -lqt -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lGLU -lGL -lXmu -lXext -lX11 -lm -lSM -lICE -lXmu -Wl,-R${PNG_PREFIX}/lib -L${PNG_PREFIX}/lib -lpng -lz -Wl,-R${JPEG_PREFIX}/lib -L${JPEG_PREFIX}/lib -ljpeg
++MOC	=	${QTDIR}/bin/moc
+ 
+ ####### Files
+ 
+@@ -367,13 +368,13 @@
+ .SUFFIXES: .cpp .cxx .cc .C .c
+ 
+ .cpp.o:
+-	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
++	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .cxx.o:
+-	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
++	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .cc.o:
+-	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
++	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .C.o:
+ 	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
+@@ -386,7 +387,7 @@
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJECTS) $(OBJMOC) 
+-	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
++	$(LINK) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
+ 
+ moc: $(SRCMOC)
+ 
