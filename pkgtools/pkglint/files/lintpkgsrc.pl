@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.65 2002/01/03 11:04:50 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.66 2002/03/22 15:57:55 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -494,11 +494,17 @@ sub listdir
 sub list_installed_packages
     {
     my(@pkgs);
+    my $pkgver;
 
     open(PKG_INFO, 'pkg_info -a|') || fail("Unable to run pkg_info: $!");
     while ( <PKG_INFO> )
 	{ push(@pkgs, (split)[0]); }
     close(PKG_INFO);
+
+    # pkg_install is not in the pkg_info -a output, add it manually
+    $pkgver = `pkg_info -V 2>/dev/null || echo 20010302`;
+    chomp($pkgver);
+    push(@pkgs, "pkg_install-$pkgver");
     @pkgs;
     }
 
