@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/23 23:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/19 14:59:10 wiz Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.biscom.net/~cade/away/vfu/
 COMMENT=	Small, handy, easy-to-use file manager
 
 USE_BUILDLINK2=	# defined
+USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	YES
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
