@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:03 agc Exp $
 
-MD5 (bunzip021.c.gz) = 2a1843ca28bc1b5bfc2b7a7b10dccfd3
+SHA1 (bunzip021.c.gz) = 0b12f8327807721d29e4bde44557b536ae9ecfc5
+Size (bunzip021.c.gz) = 20317 bytes
 SHA1 (patch-aa) = 720b94ce1de0d00139eec7e2d257a2c551a948dc

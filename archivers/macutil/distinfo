@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:07 agc Exp $
 
-MD5 (macutil2.0b3.shar.Z) = 2994c01ce0cf86ef6e76e0d88b6c0f3f
+SHA1 (macutil2.0b3.shar.Z) = 820e4dd278fe8d043306134aaafccab10b832218
+Size (macutil2.0b3.shar.Z) = 167565 bytes
 SHA1 (patch-aa) = 5fc09feeb2f808cca1742f8964f31e3b19e82382

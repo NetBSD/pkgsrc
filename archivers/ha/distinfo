@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:05 agc Exp $
 
-MD5 (ha0999.tgz) = 77f3266a451712bec55d60df67f61486
+SHA1 (ha0999.tgz) = 8dd106748619772f988ee0bce59937a4de1677ed
+Size (ha0999.tgz) = 44271 bytes
 SHA1 (patch-aa) = 0d25173f4c8236157cb8784826ba681ae8e13f64
