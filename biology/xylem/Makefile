@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:08:40 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/11 04:12:04 snj Exp $
 #
 
 DISTNAME=		xylem.1.8.7
@@ -12,7 +12,7 @@ HOMEPAGE=		http://home.cc.umanitoba.ca/~psgendb/XYLEM.html
 COMMENT=		Tools for manipulation of genetic databases
 
 WRKSRC=                 ${WRKDIR}/xylem/src.c
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 do-configure:
 	${CP} ${WRKSRC}/p2c.h.standard ${WRKSRC}/p2c.h

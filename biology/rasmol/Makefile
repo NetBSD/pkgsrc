@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/01 01:43:28 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/11 04:09:11 snj Exp $
 
 DISTNAME=	RasMol_2.7.1
 PKGNAME=	rasmol-2.7.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.bernstein-plus-sons.com/software/rasmol/
 COMMENT=	Molecular Graphics Visualisation Tool
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 MAKE_ENV+=	DEPTHDEF="${DEPTHDEF}"
