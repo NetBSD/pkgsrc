@@ -3,6 +3,7 @@
 # Date created:		19 Nov 1997
 # Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
 #
+# $NetBSD: Makefile,v 1.2 1998/01/09 09:58:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/20 08:18:40 tg Exp
 #
 
@@ -13,7 +14,6 @@ MASTER_SITES=	http://www.muraroa.demon.co.uk/
 
 MAINTAINER=	ports@FreeBSD.org
 
-FETCH_BEFORE_ARGS=	-b
 MAN1=		bzip2.1 bunzip2.1
 
 do-install:
