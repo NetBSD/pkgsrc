@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/07 21:18:33 cjep Exp $
+bin/wdm
+bin/wdmLogin
+etc/wdm/GiveConsole
+etc/wdm/TakeConsole
+etc/wdm/Xaccess
+etc/wdm/Xclients
+etc/wdm/Xclients.in
+etc/wdm/Xresources
+etc/wdm/Xservers
+etc/wdm/Xservers.fs
+etc/wdm/Xservers.ws
+etc/wdm/Xsession
+etc/wdm/Xsession.XFree86
+etc/wdm/Xsession.in
+etc/wdm/Xsetup_0
+etc/wdm/pixmaps/Eagle.xpm
+etc/wdm/pixmaps/Earth.jpg
+etc/wdm/pixmaps/Earth200x130.xpm
+etc/wdm/pixmaps/GnuLinux-logo.jpg
+etc/wdm/pixmaps/README
+etc/wdm/pixmaps/Stars.jpg
+etc/wdm/pixmaps/StarsLogo.jpg
+etc/wdm/pixmaps/gnuLogo.xpm
+etc/wdm/wdm-config
+etc/wdm/wdm-config.in
+etc/wdm/wdmReconfig
+man/man1/wdm.1
+man/man1/wdmLogin.1
+@exec ${MKDIR} %D/etc/wdm/authdir
+@exec ${CHMOD} 700 %D/etc/wdm/authdir
+@exec ${MKDIR} %D/etc/wdm/authdir/authdir
+@exec ${CHMOD} 700 %D/etc/wdm/authdir/authdir
+@exec ${MKDIR} %D/etc/wdm/authdir/authdir/authfiles
+@exec ${CHMOD} 700 %D/etc/wdm/authdir/authdir/authfiles
+@dirrm etc/wdm/pixmaps
+@dirrm etc/wdm/authdir/authdir/authfiles
+@dirrm etc/wdm/authdir/authdir
+@dirrm etc/wdm/authdir
+@dirrm etc/wdm
