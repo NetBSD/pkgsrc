@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1999/04/07 23:01:27 mellon Exp $
+$NetBSD: patch-ab,v 1.2 1999/04/08 15:17:28 mellon Exp $
 
-diff -rc2 gnupg-0.9.5/configure gnupg-0.9.5-hacked/configure
-*** gnupg-0.9.5/configure	Sat Mar 20 04:34:01 1999
---- gnupg-0.9.5-hacked/configure	Wed Apr  7 17:38:32 1999
+diff -rc2 configure configure
+*** configure	Sat Mar 20 04:34:01 1999
+--- configure	Wed Apr  7 17:38:32 1999
 ***************
 *** 1597,1600 ****
 --- 1597,1607 ----
