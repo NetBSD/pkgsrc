@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
+$NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
 
 --- gram.y.orig	Thu Sep 22 22:14:31 1988
-+++ gram.y	Wed Dec 22 22:32:46 1999
++++ gram.y	Thu Dec 23 15:11:08 1999
 @@ -111,24 +111,26 @@
  	|	';'
  	;
@@ -142,15 +142,16 @@ $NetBSD: patch-ad,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
  	|	/* empty */	{ $$ = NULL; }
  	;
  %%
-@@ -572,6 +574,7 @@
+@@ -572,6 +574,8 @@
          setbinding(ICON, index, mask, name);
      if (context & WINDOW)
          setbinding(WINDOW, index, mask, name);
-+    free(name);
++    if (name)
++	free(name);
  }
  
  /*
-@@ -599,12 +602,13 @@
+@@ -599,12 +603,13 @@
  char *mname;		/* Pointer to menu name, if needed. */
  {
      Binding *ptr;
@@ -165,7 +166,7 @@ $NetBSD: patch-ad,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
  
      switch (m & (LeftMask | MiddleMask | RightMask)) {
      case LeftMask:
-@@ -771,9 +775,8 @@
+@@ -771,9 +776,8 @@
      else {
          for(ptr = list; ptr->next; ptr = ptr->next) /* NULL */;
          ptr->next = link;
