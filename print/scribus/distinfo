@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2004/02/27 21:14:08 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2004/08/14 21:36:22 hubertf Exp $
 
-SHA1 (scribus-1.1.1.tar.gz) = 640e1007fd0b16c1b4f797910d8628b2be0923a2
-Size (scribus-1.1.1.tar.gz) = 2053257 bytes
-SHA1 (patch-aa) = 74c57344608436ab449f042016495d6895c80f76
-SHA1 (patch-ab) = d2430e5b81c2ff00390f8135a753ce6a40653af7
-SHA1 (patch-ac) = c874f71ca7d93ece073a11e73cb6ef54c62f968d
-SHA1 (patch-ad) = 5c8e0cdacd63ce38a15bcb94c3473d531bb4b836
-SHA1 (patch-ae) = fa4f8e30c2492686ab4fb631910a07bf5e1dae3f
+SHA1 (scribus-1.1.7.tar.gz) = 144a8d1c29c173b83023e9bb8f83db1924a1cf96
+Size (scribus-1.1.7.tar.gz) = 2555298 bytes
+SHA1 (patch-aa) = 5cac75797519761bfbea3ebfb563125a51c32b05
+SHA1 (patch-ab) = 34bf150818f1fa9a53d23691a4f577f211750c02
+SHA1 (patch-ac) = 3478bbc02a41c955fb820048beb6935567d19a54
+SHA1 (patch-ad) = 9203829ecfb4d8da4ebf185fcd446f1ecbb044c1
+SHA1 (patch-ae) = 9b79846bd5ceb93ed04bf9ec86e3c1fc89a086ee

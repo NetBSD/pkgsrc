@@ -1,10 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/11/19 11:54:48 agc Exp $
+$NetBSD: patch-ac,v 1.2 2004/08/14 21:36:22 hubertf Exp $
 
-Allow the configure script to find the buildlink'ed freetype-config script
-
---- configure	2003/11/19 11:35:05	1.1
-+++ configure	2003/11/19 11:36:42
-@@ -1935,7 +1935,7 @@
+--- configure.orig	2004-06-05 09:55:44.000000000 +0200
++++ configure
+@@ -3132,7 +3132,7 @@ else
    ;;
    *)
    as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
