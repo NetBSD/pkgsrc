@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2002/11/26 10:25:05 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2002/11/26 21:56:07 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -10,6 +10,7 @@ BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 
 .if defined(USE_GNU_GETTEXT)
 _NEED_GNU_GETTEXT=	YES
+_BLNK_LIBINTL_FOUND=	NO
 .else
 _BLNK_LIBINTL_LIST!=	${ECHO} /usr/lib/libintl.*
 .  if ${_BLNK_LIBINTL_LIST} != "/usr/lib/libintl.*"
