@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/03/09 19:28:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/09 12:32:45 tron Exp $
 
 PKGNAME=	qt2-libs-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	C++ X GUI toolkit
 
 USE_BUILDLINK2=	yes
@@ -9,6 +9,8 @@ USE_BUILDLINK2=	yes
 .include "../qt2-libs/Makefile.common"
 
 CONFIGURE_ARGS+=	-I${LOCALBASE}/include -I${X11BASE}/include
+CONFIGURE_ARGS+=	-I${LOCALBASE}/include/freetype2
+CONFIGURE_ARGS+=	-I${X11BASE}/include/freetype2
 CONFIGURE_ARGS+=	-L${LOCALBASE}/lib -L${X11BASE}/lib
 
 CONFIGURE_ENV+=		QTDIR="${WRKSRC}"
@@ -27,6 +29,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
 
 .include "../../devel/zlib/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
