@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/08/13 03:29:55 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/08/26 21:02:53 jschauma Exp $
 .systemPrefs/.system.lock
 .systemPrefs/.systemRootModFile
 CHANGES
@@ -66,6 +66,12 @@ lib/ext/localedata.jar
 lib/ext/sunjce_provider.jar
 lib/flavormap.properties.default
 lib/font.properties.default
+lib/font.properties.ja.Sun
+lib/font.properties.ja_JP_UTF8.Sun
+lib/font.properties.zh_CN.Sun
+lib/font.properties.zh_CN_UTF8.Sun
+lib/font.properties.zh_TW.Sun
+lib/font.properties.zh_TW_UTF8.Sun
 lib/font.properties.Redhat6.1.default
 lib/font.properties.ja.default
 lib/font.properties.ja.Redhat6.1.default
