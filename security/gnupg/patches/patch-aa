@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 1999/04/07 23:01:27 mellon Exp $
+$NetBSD: patch-aa,v 1.2 1999/04/08 15:17:27 mellon Exp $
 
-diff -rc2 gnupg-0.9.5/aclocal.m4 gnupg-0.9.5-hacked/aclocal.m4
-*** gnupg-0.9.5/aclocal.m4	Sat Mar 20 04:33:43 1999
---- gnupg-0.9.5-hacked/aclocal.m4	Wed Apr  7 18:39:04 1999
+diff -rc2 aclocal.m4 aclocal.m4
+*** aclocal.m4	Sat Mar 20 04:33:43 1999
+--- aclocal.m4	Wed Apr  7 18:39:04 1999
 ***************
 *** 213,217 ****
               ;;

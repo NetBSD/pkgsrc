@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 1999/04/07 23:01:27 mellon Exp $
+$NetBSD: patch-ac,v 1.2 1999/04/08 15:17:28 mellon Exp $
 
-diff -rc2 gnupg-0.9.5/mpi/config.links gnupg-0.9.5-hacked/mpi/config.links
-*** gnupg-0.9.5/mpi/config.links	Mon Mar  8 12:51:20 1999
---- gnupg-0.9.5-hacked/mpi/config.links	Wed Apr  7 16:43:18 1999
+diff -rc2 config.links mpi/config.links
+*** mpi/config.links	Mon Mar  8 12:51:20 1999
+--- mpi/config.links	Wed Apr  7 16:43:18 1999
 ***************
 *** 35,38 ****
 --- 35,48 ----
