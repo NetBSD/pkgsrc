@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/23 22:13:01 is Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.27
@@ -39,24 +39,23 @@ pre-configure:
 			${RM} -f $$i.bak ; \
 		done
 
-do-${INSTALL}:
-		${INSTALL} -c -m 755 ${WRKSRC}/src/finger ${PREFIX}/bin/gfinger
-		${INSTALL} -c -m 755 ${WRKSRC}/src/fingerd ${PREFIX}/sbin/gfingerd
-		${INSTALL} -c -m 755 ${WRKSRC}/src/vifinger ${PREFIX}/sbin
-		${INSTALL} -c -m 755 ${WRKSRC}/src/packet2ascii ${PREFIX}/sbin
-		${LN} -sf ${PREFIX}/sbin/packet2ascii \
-			${PREFIX}/sbin/ascii2packet
-		${INSTALL} -c -m 755 ${WRKSRC}/src/in.fingerd ${PREFIX}/libexec
-		${INSTALL} -c -m 755 ${WRKSRC}/src/in.cfingerd ${PREFIX}/libexec
-		${INSTALL} -c -m 755 ${WRKSRC}/src/in.cfingerd ${PREFIX}/libexec
-		-${MKDIR} ${PREFIX}/etc/fingerdir/targets
-		-${MKDIR} ${XMPLDT}
-		${INSTALL} -c -m 644 ${WRKSRC}/support/ttylocs ${XMPLD}
-		${INSTALL} -c -m 644 ${WRKSRC}/support/hostconfig ${XMPLD}
-		${INSTALL} -c -m 644 ${WRKSRC}/support/rc.local-add ${XMPLD}
-		${INSTALL} -c -m 644 ${WRKSRC}/support/services-add ${XMPLD}
-		${INSTALL} -c -m 644 ${WRKSRC}/support/inetd.conf-add ${XMPLD}
-		(cd ${WRKSRC}/src; ${MAKE} ${INSTALL}.man)
-		(cd ${WRKSRC}/src; ${MAKE} TARGETD=${XMPLDT} ${INSTALL}.targets )
+do-install:
+		${INSTALL_PROGRAM} ${WRKSRC}/src/finger ${PREFIX}/bin/gfinger
+		${INSTALL_PROGRAM} ${WRKSRC}/src/fingerd ${PREFIX}/sbin/gfingerd
+		${INSTALL_SCRIPT} ${WRKSRC}/src/vifinger ${PREFIX}/sbin
+		${INSTALL_PROGRAM} ${WRKSRC}/src/packet2ascii ${PREFIX}/sbin
+		${LN} -sf packet2ascii ${PREFIX}/sbin/ascii2packet
+		${INSTALL_PROGRAM} ${WRKSRC}/src/in.fingerd ${PREFIX}/libexec
+		${INSTALL_PROGRAM} ${WRKSRC}/src/in.cfingerd ${PREFIX}/libexec
+		${INSTALL_PROGRAM} ${WRKSRC}/src/in.cfingerd ${PREFIX}/libexec
+		${INSTALL_SCRIPT_DIR} ${PREFIX}/etc/fingerdir/targets
+		${INSTALL_DATA_DIR} ${XMPLDT}
+		${INSTALL_DATA} ${WRKSRC}/support/ttylocs ${XMPLD}
+		${INSTALL_DATA} ${WRKSRC}/support/hostconfig ${XMPLD}
+		${INSTALL_DATA} ${WRKSRC}/support/rc.local-add ${XMPLD}
+		${INSTALL_DATA} ${WRKSRC}/support/services-add ${XMPLD}
+		${INSTALL_DATA} ${WRKSRC}/support/inetd.conf-add ${XMPLD}
+		(cd ${WRKSRC}/src; ${MAKE} install.man)
+		(cd ${WRKSRC}/src; ${MAKE} TARGETD=${XMPLDT} install.targets)
 
 .include "../../mk/bsd.pkg.mk"
