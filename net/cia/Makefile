@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/16 17:14:38 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/13 08:44:30 tron Exp $
 
 DISTNAME=	cia-20000716
 CATEGORIES=	net
-MASTER_SITES=	http://www.pader.net/~mscheler/
+MASTER_SITES=	http://core.de/~tron/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
