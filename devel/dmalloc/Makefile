@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/27 03:09:58 snj Exp $
+# $NetBSD: Makefile,v 1.13 2005/04/01 03:49:01 reed Exp $
 
 DISTNAME=		dmalloc-5.3.0
 CATEGORIES=		devel
@@ -15,11 +15,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shlib
 CFLAGS+=		-fPIC -DPIC
 CONFIGURE_ARGS+=	--enable-threads
+INSTALLATION_DIRS=	${INFO_DIR}
 
 # XXX the "installinfo" target is broken
 #INSTALL_TARGET=	install installinfo
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/dmalloc.info ${PREFIX}/info
+	${INSTALL_DATA} ${WRKSRC}/docs/dmalloc.info ${PREFIX}/${INFO_DIR}/
 
 INFO_FILES=		dmalloc.info
 
