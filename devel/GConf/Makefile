@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/11/30 18:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2004/12/08 21:53:34 rh Exp $
 #
 
 DISTNAME=		GConf-1.0.9
@@ -7,12 +7,12 @@ CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/1.0/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://advogato.org/proj/GConf/
 COMMENT=		Configuration database system used by GNOME
 
+BUILD_DEPENDS=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 BUILD_USES_MSGFMT=	yes
-#DEPENDS+=		guile>=1.3.4:../../lang/guile
 
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
