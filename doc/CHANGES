@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4019 2003/12/08 16:29:55 sketch Exp $
+$NetBSD: CHANGES,v 1.4020 2003/12/08 16:34:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5023,3 +5023,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnbcompat to 20031208 [grant 2003-12-08]
 	Added p5-Mail-ClamAV-0.04 [grant 2003-12-08]
 	Added apachetop-0.8.2 [sketch 2003-12-08]
+	Updated ekg to 1.4 [adam 2003-12-08]
