@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2001/08/13 11:14:31 rh Exp $
+$NetBSD: patch-ab,v 1.5 2002/03/19 16:16:08 wiz Exp $
 
---- Imlib/load.c.orig	Wed Aug  1 00:15:16 2001
+--- Imlib/load.c.orig	Wed Mar 13 19:06:29 2002
 +++ Imlib/load.c
-@@ -241,7 +241,8 @@
+@@ -254,7 +254,8 @@
    png_read_image(png_ptr, lines);
    png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
    ptr = data;
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/13 11:14:31 rh Exp $
      {
        for (y = 0; y < *h; y++)
  	{
-@@ -266,6 +267,7 @@
+@@ -279,6 +280,7 @@
  	    }
  	}
      }
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/13 11:14:31 rh Exp $
    else if (color_type == PNG_COLOR_TYPE_GRAY)
      {
        for (y = 0; y < *h; y++)
-@@ -281,6 +283,7 @@
+@@ -294,6 +296,7 @@
  	    }
  	}
      }

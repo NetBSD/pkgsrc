@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
+$NetBSD: patch-ag,v 1.2 2002/03/19 16:16:08 wiz Exp $
 
---- configure.orig	Tue Jul 31 16:34:51 2001
+--- configure.orig	Wed Mar 13 18:58:16 2002
 +++ configure
-@@ -5571,6 +5571,43 @@
+@@ -5596,6 +5596,43 @@
  fi
  
  
@@ -46,7 +46,7 @@ $NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
  dynworks=false
  if test x$with_modules = xno; then
  	echo "$ac_t""no" 1>&6
-@@ -5580,8 +5617,8 @@
+@@ -5605,8 +5642,8 @@
  if test "x$GDK_IMLIB" != x; then
    oLIBS="$LIBS"
    oCFLAGS="$CFLAGS"
@@ -57,7 +57,7 @@ $NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
    if test "$cross_compiling" = yes; then
      { echo "configure: error: can not run test program while cross compiling" 1>&2; exit 1; }
  else
-@@ -5631,8 +5668,8 @@
+@@ -5656,8 +5693,8 @@
  #define USE_GMODULE 1
  EOF
  
@@ -68,7 +68,7 @@ $NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
     
     
  fi
-@@ -7490,7 +7527,9 @@
+@@ -7515,7 +7552,9 @@
    GX_LIBS="$GTK_LIBS"
  fi
  
@@ -79,7 +79,7 @@ $NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
  
  SUPPORT_LIBS=""
  
-@@ -7795,8 +7834,8 @@
+@@ -7820,8 +7859,8 @@
  fi
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -90,7 +90,7 @@ $NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
  #define HAVE_LIBTIFF 1
  EOF
  
-@@ -8272,6 +8311,7 @@
+@@ -8297,6 +8336,7 @@
  
  
  
@@ -98,7 +98,7 @@ $NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
  trap '' 1 2 15
  cat > confcache <<\EOF
  # This file is a shell script that caches the results of configure
-@@ -8463,6 +8503,7 @@
+@@ -8477,6 +8517,7 @@
  s%@GTK_CONFIG@%$GTK_CONFIG%g
  s%@GTK_CFLAGS@%$GTK_CFLAGS%g
  s%@GTK_LIBS@%$GTK_LIBS%g
@@ -106,7 +106,7 @@ $NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
  s%@GMODULE_LIBS@%$GMODULE_LIBS%g
  s%@GMODULE_FLAGS@%$GMODULE_FLAGS%g
  s%@TIFFLIBS@%$TIFFLIBS%g
-@@ -8493,6 +8534,7 @@
+@@ -8507,6 +8548,7 @@
  s%@HAVE_JPEG_FALSE@%$HAVE_JPEG_FALSE%g
  s%@SUPPORT_LIBS@%$SUPPORT_LIBS%g
  s%@GDK_SUPPORT_LIBS@%$GDK_SUPPORT_LIBS%g
