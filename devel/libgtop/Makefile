@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2004/01/22 08:48:49 grant Exp $
+# $NetBSD: Makefile,v 1.78 2004/02/14 17:21:38 jlam Exp $
 
 DISTNAME=		libgtop-1.0.13
 PKGREVISION=		4
@@ -36,7 +36,6 @@ USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_MAKEINFO=		YES
 INFO_FILES=		libgtop.info
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2003/12/28 10:30:07 tron Exp $
+# $NetBSD: Makefile,v 1.55 2004/02/14 17:21:46 jlam Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -21,8 +21,6 @@ BUILD_DEFS+=	USE_INET6
 
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/lib/bind/libtool
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-libtool=yes \

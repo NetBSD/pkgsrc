@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/12 03:56:19 kim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	libshout-2.0
@@ -12,7 +12,6 @@ COMMENT=	Connects and sends data to icecast servers
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PTHREAD_OPTS+=		require
 
 .include "../../audio/libvorbis/buildlink2.mk"

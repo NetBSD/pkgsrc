@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=	rpc2-1.19
@@ -18,7 +18,6 @@ CONFIGURE_ENV+=		PERL=${PERL5}
 
 USE_PERL5=		build
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/lwp/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"

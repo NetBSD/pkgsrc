@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/31 14:58:50 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=	ucl-1.02
@@ -11,8 +11,6 @@ COMMENT=	Portable lossless data compression library
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-shared=yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.8 2004/02/06 00:28:09 xtraeme Exp $
+# $NetBSD: Makefile.kde3,v 1.9 2004/02/14 17:21:44 jlam Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -31,4 +31,4 @@ HOMEPAGE?=	http://www.kde.org/
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	libtool
