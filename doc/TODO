@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.201 2003/01/19 08:47:27 salo Exp $
+$NetBSD: TODO,v 1.202 2003/01/19 13:45:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -96,6 +96,7 @@ Suggested package updates
 	o dante-1.1.13
 	o db4-4.1.25
 	o dctc-0.84.0
+	o docbook-xsl-1.59.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elinks-0.4.0
@@ -105,7 +106,7 @@ Suggested package updates
 	o fltk-1.1.1
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.30
-	o freeciv-1.13.0
+	o freeciv-1.14.0
 	o fsviewer-0.2.5
 	o g-wrap-1.3.4
 	o gcvs-1.0b4
@@ -132,8 +133,10 @@ Suggested package updates
 	o gsed-4.0.5
 	o gtetrinet-0.5.2
 	o gtk---2.2.0
+	o gtk2-pan-0.13.3.90
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
+	o horde-2.2
 	o hpijs-1.3 [pkg/19213]
 	o icewm-1.2.5
 	o icu-2.2 [heinz]
@@ -148,6 +151,7 @@ Suggested package updates
 	o jed-0.99.16 [pkg/18937]
 	o jikes-1.18
 	o joe-2.9 [pkg/18022]
+	o jove-4.16.0.58 [pkg/19924]
 	o jpilot-0.99.4
 	o kdevelop-2.1.4
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
@@ -176,11 +180,13 @@ Suggested package updates
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
+	o mowitz-0.2.2
 	o mrproject-0.7
 	o mysql-3.23.54
 	o naim-0.11.5.2
 	o napshare-1.2
 	o ncurses-5.3
+	o neon-0.23.6
 	o net-snmp-5.0.7
 	o netpbm-10.8
 	o netscape-7.01
@@ -223,6 +229,8 @@ Suggested package updates
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o sodipodi-0.28
+	o source-highlight-1.6.2
+	o speex-1.0rc1
 	o squeak-3.2 [fredb|pkg/17950]
 	o sqlite-2.7.5 [pkg/19719]
 	o srp_client-1.7.5 [jlam]
@@ -230,6 +238,7 @@ Suggested package updates
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
 	o swig-1.3.17
+	o sylpheed-0.8.9
 	o tcl/tk-8.4.1 [bjoern]
 	o tcpreplay-1.3.2
 	o ted-2.12
