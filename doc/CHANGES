@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8436 2004/12/25 15:24:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.8437 2004/12/25 15:41:20 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6535,3 +6535,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated html to 4.01 [uebayasi 2004-12-25]
 	Updated bmp to 0.9.7 [jmmv 2004-12-25]
 	Updated bmp-esound to 0.9.7 [jmmv 2004-12-25]
+	Updated mozilla to 1.7.5 [taya 2004-12-25]
+	Updated mozilla-gtk2 to 1.7.5 [taya 2004-12-25]
+	Updated mozilla-stable to 1.7.5 [taya 2004-12-25]
