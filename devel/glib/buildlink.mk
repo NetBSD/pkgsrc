@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.15 2002/03/19 00:37:38 dmcmahill Exp $
+# $NetBSD: buildlink.mk,v 1.16 2002/06/12 00:48:20 wiz Exp $
 #
 # This Makefile fragment is included by packages that use glib.
 #
@@ -57,9 +57,9 @@ glib-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
 glib-fix-glib-h:
 .if exists(/usr/include/sys/null.h)
 	@cd ${BUILDLINK_DIR}/include/glib/glib-1.2;			\
-	if grep "^\#define.NULL" glib.h > /dev/null; then		\
+	if ${GREP} "^\#define.NULL" glib.h > /dev/null; then		\
 		${ECHO} WARNING\!;					\
-		${ECHO} The installed glib package is broken, please rebuild it from source.;\
+		${ECHO} The installed glib package is broken, please update it to the latest version.;\
 		${ECHO} For more information, see PR 14150.;		\
 		${SED}  -e "s|^#define.NULL.*|#include <sys/null.h>|"	\
 			glib.h > glib.h.fixed;				\
