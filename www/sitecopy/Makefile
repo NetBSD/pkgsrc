@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 02:05:15 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/19 04:55:49 jlam Exp $
 
 DISTNAME=		sitecopy-0.10.15
 CATEGORIES=		www
@@ -8,20 +8,21 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.lyra.org/sitecopy/
 COMMENT=		utility for synchronizing remote and local web sites
 
-DEPENDS+=		libxml>=1.8.11:../../textproc/libxml
-
-USE_SSL=		# defined
-USE_LIBINTL=		# defined
+#USE_SSL=		# defined
+#USE_LIBINTL=		# defined
 USE_GMAKE=		# defined
+USE_BUILDLINK_ONLY=	# defined
+USE_CONFIG_WRAPPER=	# defined
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--enable-libxml
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/libgetopt/buildlink.mk"
-
-CFLAGS+=		${CPPFLAGS}
+.include "../../security/openssl/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
 
 # The build process doesn't correctly find the header for GNU fnmatch, which
 # is provided in ${WRKSRC}/lib.  Help the compiler by linking the header
