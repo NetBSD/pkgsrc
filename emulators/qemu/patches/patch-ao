@@ -1,0 +1,60 @@
+$NetBSD: patch-ao,v 1.1 2004/11/15 11:35:30 xtraeme Exp $
+
+--- audio/mixeng.c	7 Nov 2004 18:04:02 -0000	1.1
++++ audio/mixeng.c	15 Nov 2004 09:09:27 -0000
+@@ -27,6 +27,8 @@
+ #include "audio/mixeng.h"
+ 
+ #define IN_T int8_t
++#define CONV_IN_T conv_int8_t
++#define CLIP_IN_T clip_int8_t
+ #define IN_MIN CHAR_MIN
+ #define IN_MAX CHAR_MAX
+ #define SIGNED
+@@ -34,17 +36,25 @@
+ #undef SIGNED
+ #undef IN_MAX
+ #undef IN_MIN
++#undef CLIP_IN_T
++#undef CONV_IN_T
+ #undef IN_T
+ 
+ #define IN_T uint8_t
++#define CONV_IN_T conv_uint8_t
++#define CLIP_IN_T clip_uint8_t
+ #define IN_MIN 0
+ #define IN_MAX UCHAR_MAX
+ #include "mixeng_template.h"
+ #undef IN_MAX
+ #undef IN_MIN
++#undef CLIP_IN_T
++#undef CONV_IN_T
+ #undef IN_T
+ 
+ #define IN_T int16_t
++#define CONV_IN_T conv_int16_t
++#define CLIP_IN_T clip_int16_t
+ #define IN_MIN SHRT_MIN
+ #define IN_MAX SHRT_MAX
+ #define SIGNED
+@@ -52,14 +62,20 @@
+ #undef SIGNED
+ #undef IN_MAX
+ #undef IN_MIN
++#undef CLIP_IN_T
++#undef CONV_IN_T
+ #undef IN_T
+ 
+ #define IN_T uint16_t
++#define CONV_IN_T conv_uint16_t
++#define CLIP_IN_T clip_uint16_t
+ #define IN_MIN 0
+ #define IN_MAX USHRT_MAX
+ #include "mixeng_template.h"
+ #undef IN_MAX
+ #undef IN_MIN
++#undef CLIP_IN_T
++#undef CONV_IN_T
+ #undef IN_T
+ 
+ t_sample *mixeng_conv[2][2][2] = {

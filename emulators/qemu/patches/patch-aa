@@ -1,40 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/09 13:05:33 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/15 11:35:30 xtraeme Exp $
 
---- bswap.h.orig	2004-07-10 21:20:09.000000000 +0300
-+++ bswap.h
-@@ -4,11 +4,13 @@
- #include "config-host.h"
+--- bswap.h.orig	2004-11-15 12:19:31.000000000 +0100
++++ bswap.h	2004-11-15 12:20:25.000000000 +0100
+@@ -5,6 +5,12 @@
  
  #include <inttypes.h>
+ 
++#ifdef _BSD
++#include <sys/endian.h>
 +#include <sys/types.h>
 +#include <machine/bswap.h>
- 
++#else
++
  #ifdef HAVE_BYTESWAP_H
  #include <byteswap.h>
  #else
--
-+/*
- #define bswap_16(x) \
- ({ \
- 	uint16_t __x = (x); \
-@@ -40,9 +42,9 @@
- 		(uint64_t)(((uint64_t)(__x) & (uint64_t)0x00ff000000000000ULL) >> 40) | \
- 		(uint64_t)(((uint64_t)(__x) & (uint64_t)0xff00000000000000ULL) >> 56) )); \
- })
--
-+*/
- #endif /* !HAVE_BYTESWAP_H */
--
-+/*
- static inline uint16_t bswap16(uint16_t x)
- {
-     return bswap_16(x);
-@@ -57,7 +59,7 @@ static inline uint64_t bswap64(uint64_t 
- {
+@@ -58,6 +64,8 @@
      return bswap_64(x);
  }
--
-+*/
+ 
++#endif /* ! _BSD */
++
  static inline void bswap16s(uint16_t *s)
  {
      *s = bswap16(*s);

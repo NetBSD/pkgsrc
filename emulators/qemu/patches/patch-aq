@@ -1,0 +1,11 @@
+$NetBSD: patch-aq,v 1.1 2004/11/15 11:35:30 xtraeme Exp $
+
+--- target-sparc/exec.h	12 Oct 2004 22:01:28 -0000	1.6
++++ target-sparc/exec.h	15 Nov 2004 09:09:31 -0000
+@@ -1,5 +1,6 @@
+ #ifndef EXEC_SPARC_H
+ #define EXEC_SPARC_H 1
++#include "config.h"
+ #include "dyngen-exec.h"
+ 
+ register struct CPUSPARCState *env asm(AREG0);
