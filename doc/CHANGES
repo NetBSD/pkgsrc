@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1565 2003/03/05 13:19:38 wiz Exp $
+$NetBSD: CHANGES,v 1.1566 2003/03/05 13:52:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -942,7 +942,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libmcrypt to 2.5.6 [wiz 2003-03-05]
 	Updated mcrypt to 2.6.4 [wiz 2003-03-05]
 	Updated proftpd to 1.2.8 [martti 2003-03-05]
-	Updated php-mcrypt to 4.2.3nb1 [wiz 2003-03-05]
+	Updated php4-mcrypt to 4.2.3nb1 [wiz 2003-03-05]
 	Removed libmcrypt22 [wiz 2003-03-05]
 	Updated hypermail to 2.1.7 [wiz 2003-03-05]
 	Updated popa3d to 0.6.1 [wiz 2003-03-05]
