@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/13 09:10:10 abs Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/17 23:26:08 hubertf Exp $
 #
 
 DISTNAME=	cult3d-5.2-b1-linux-x86
@@ -18,6 +18,7 @@ CHECK_SHLIBS=		no
 CRYPTO=			yes
 
 do-install:
+	${MKDIR} ${PREFIX}/lib/netscape
 	cd ${WRKSRC} ; ${ECHO} ${PREFIX}/lib/netscape | ./install.sh
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ns-cult3d.txt
 
