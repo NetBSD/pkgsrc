@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/10 13:31:36 markd Exp $
 share/doc/kde/HTML/sk/amor/common
 share/doc/kde/HTML/sk/amor/index.cache.bz2
 share/doc/kde/HTML/sk/amor/index.docbook
@@ -898,6 +898,7 @@ share/kde/locale/sk/LC_MESSAGES/kghostview.mo
 share/kde/locale/sk/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/sk/LC_MESSAGES/kgpg.mo
 share/kde/locale/sk/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/sk/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/sk/LC_MESSAGES/khangman.mo
 share/kde/locale/sk/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/sk/LC_MESSAGES/khexedit.mo
@@ -953,6 +954,10 @@ share/kde/locale/sk/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/sk/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/sk/LC_MESSAGES/kmid.mo
 share/kde/locale/sk/LC_MESSAGES/kmidi.mo
+share/kde/locale/sk/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/sk/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/sk/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/sk/LC_MESSAGES/kmilod.mo
 share/kde/locale/sk/LC_MESSAGES/kmines.mo
 share/kde/locale/sk/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/sk/LC_MESSAGES/kmix.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/20 14:38:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/06/10 13:31:35 markd Exp $
 share/kde/locale/ca/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/ca/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/ca/LC_MESSAGES/amor.mo
@@ -292,11 +292,15 @@ share/kde/locale/ca/LC_MESSAGES/kmag.mo
 share/kde/locale/ca/LC_MESSAGES/kmahjongg.mo
 share/kde/locale/ca/LC_MESSAGES/kmail.mo
 share/kde/locale/ca/LC_MESSAGES/kmailcvt.mo
+share/kde/locale/ca/LC_MESSAGES/kmathtool.mo
 share/kde/locale/ca/LC_MESSAGES/kmcop.mo
 share/kde/locale/ca/LC_MESSAGES/kmenuapplet.mo
 share/kde/locale/ca/LC_MESSAGES/kmenuedit.mo
+share/kde/locale/ca/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/ca/LC_MESSAGES/kmid.mo
 share/kde/locale/ca/LC_MESSAGES/kmidi.mo
+share/kde/locale/ca/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/ca/LC_MESSAGES/kmilod.mo
 share/kde/locale/ca/LC_MESSAGES/kmines.mo
 share/kde/locale/ca/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/ca/LC_MESSAGES/kmix.mo
@@ -406,6 +410,7 @@ share/kde/locale/ca/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/ca/LC_MESSAGES/kviewshell.mo
 share/kde/locale/ca/LC_MESSAGES/kviewtemplateplugin.mo
 share/kde/locale/ca/LC_MESSAGES/kviewviewer.mo
+share/kde/locale/ca/LC_MESSAGES/kvoctrain.mo
 share/kde/locale/ca/LC_MESSAGES/kwalletmanager.mo
 share/kde/locale/ca/LC_MESSAGES/kweather.mo
 share/kde/locale/ca/LC_MESSAGES/kwifimanager.mo
