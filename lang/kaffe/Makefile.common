@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/04/06 16:59:37 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/05/22 21:46:57 jmmv Exp $
 
 DISTNAME=		kaffe-${KAFFE_VERSION}
 CATEGORIES=		lang java
@@ -7,6 +7,11 @@ MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.kaffe.org/
 
+GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
+JAVA_HOME=		${PREFIX}/java/kaffe
+JAVA_NAME=		kaffe
+JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
+NO_MTREE=		yes
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
@@ -37,18 +42,10 @@ CONFIGURE_ARGS+=	--without-esd
 
 KAFFE_VERSION=		1.1.4
 
-BUILDLINK_PASSTHRU_DIRS+=   ${JVM_HOME}/jre/lib/${MACHINE_ARCH}
+BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}/jre/lib/${MACHINE_ARCH}
 
-JVM_HOME=		${LOCALBASE}/java/kaffe
-NO_MTREE=		yes	# since we change PREFIX below
-
-OWN_DIRS=	${PREFIX}
-OWN_DIRS+=	${PREFIX}/etc
-OWN_DIRS+=	${PREFIX}/jre
-OWN_DIRS+=	${PREFIX}/jre/lib
-OWN_DIRS+=	${PREFIX}/jre/lib/security
-SUPPORT_FILES=	${PREFIX}/jre/lib/security/java.security.default \
-		${PREFIX}/jre/lib/security/java.security
+SUPPORT_FILES=	${JAVA_HOME}/jre/lib/security/java.security.default \
+		${JAVA_HOME}/jre/lib/security/java.security
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,8 +62,12 @@ CONFIGURE_ENV+=		VM_LIBS="-lc"
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
 
+PRINT_PLIST_AWK+=	/^java\/kaffe\/jre\/lib\/security\/java.security$$/ \
+				{ next; }
+PRINT_PLIST_AWK+=	/libawt/ { print "$${WITH_X11}" $$0; next; }
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/license.terms ${PREFIX}
+	${INSTALL_DATA} ${WRKSRC}/license.terms ${JAVA_HOME}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
@@ -74,3 +75,4 @@ post-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/java-env.mk"
