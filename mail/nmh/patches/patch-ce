@@ -1,0 +1,17 @@
+$NetBSD: patch-ce,v 1.1 1999/03/07 19:39:19 kim Exp $
+
+--- uip/mhshowsbr.c.orig	Wed Sep  9 16:59:17 1998
++++ uip/mhshowsbr.c	Sun Mar  7 14:14:59 1999
+@@ -509,10 +509,11 @@
+ 		read (fileno (stdout), prompt, sizeof(prompt));
+ 	    }
+ 	    SIGNAL (SIGINT, istat);
+-	    if (intr != OK) {
++	    if (intr != OK || prompt[0] == 'n') {
+ 		(*ct->c_ceclosefnx) (ct);
+ 		return (alternate ? DONE : NOTOK);
+ 	    }
++	    if (prompt[0] == 'q') done(OK);
+ 	}
+     }
+ 
