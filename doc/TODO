@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2297 2004/11/03 13:44:24 adam Exp $
+$NetBSD: TODO,v 1.2298 2004/11/03 14:22:23 adam Exp $
 
 Suggested new packages
 ======================
@@ -340,7 +340,6 @@ Suggested package updates
 	o foomatic-3.0.1 [jlam]
 	o fop-0.20.5
 	o fox-1.2.11
-	o freeciv-1.14.2
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o fugu-1.2.3
