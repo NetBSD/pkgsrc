@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6948 2004/08/19 14:16:50 wennmach Exp $
+$NetBSD: CHANGES,v 1.6949 2004/08/19 15:28:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rioutil to 1.4.6 [schmonz 2004-08-19]
 	Updated getmail to 4.0.12 [schmonz 2004-08-19]
 	Added p5-CGI-Session-3.95 [wennmach 2004-08-19]
+	Updated ImageMagick to 6.0.5-2 [adam 2004-08-19]
