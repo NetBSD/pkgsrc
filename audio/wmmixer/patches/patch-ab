@@ -1,0 +1,11 @@
+--- Imakefile.orig	1998-09-05 17:11:33.000000000 +0200
++++ Imakefile	2003-09-28 16:50:51.000000000 +0200
+@@ -7,7 +7,4 @@
+ DEPLIBS = $(DEPXLIB) 
+ LOCAL_LIBRARIES = $(XPMLIB) $(XLIB) $(OSSAUDIO)
+ 
+-SRCS = wmmixer.cc
+-OBJS = wmmixer.o
+-
+-ComplexProgramTarget(wmmixer)
++SimpleCplusplusProgramTarget(wmmixer)

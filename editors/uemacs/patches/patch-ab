@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2000/03/23 22:08:52 tron Exp $
+$NetBSD: patch-ab,v 1.3 2003/09/28 14:56:03 tron Exp $
 
 --- netbsd/estruct.h.orig	Wed Mar 25 14:21:05 1998
 +++ netbsd/estruct.h	Wed Mar 25 14:25:34 1998
@@ -169,7 +169,7 @@ $NetBSD: patch-ab,v 1.2 2000/03/23 22:08:52 tron Exp $
 +#define NOISY	1	/* Use a fancy BELL if it exists		*/
 +#define CTAGS	1	/* include vi-like tagging?			*/
 +#define SPEECH	0	/* spoken EMACS, for the sight impared [not ready] */
-+#define VARARG	1	/* use varargs.h for mlwrite()			*/
++#define VARARG	0	/* use varargs.h for mlwrite()			*/
 +
 +#if	XVT
 +#undef	COLOR
