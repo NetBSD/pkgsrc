@@ -1,30 +1,24 @@
-$NetBSD: patch-ad,v 1.5 2000/09/03 13:43:49 wiz Exp $
---- Makefile.in.orig	Mon Jun 28 22:12:40 1999
-+++ Makefile.in	Tue Apr 25 21:16:37 2000
-@@ -23,7 +23,7 @@
+$NetBSD: patch-ad,v 1.6 2000/10/18 16:41:26 mjl Exp $
+
+--- Makefile.in.orig	Wed Oct 18 18:15:54 2000
++++ Makefile.in	Wed Oct 18 18:18:05 2000
+@@ -23,8 +23,8 @@
  MANDIR = @mandir@/man1
+ ETCDIR = @ETCDIR@
  CC     = @CC@
- CFLAGS = @CFLAGS@
+-CFLAGS = @CFLAGS@
 -LIBS   = @LIBS@
++CFLAGS = @CFLAGS@ -DPREFIX=\"${PREFIX}\"
 +LIBS   = @LIBS@ -lpng -ljpeg -lz -lttf -lintl -lXpm -lX11
- DEFS   = @DEFS@
+ DEFS   = -DETCDIR=\"@ETCDIR@\" @DEFS@ @OPTS@
  LDFLAGS= @LDFLAGS@
  INSTALL= @INSTALL@
-@@ -41,7 +41,7 @@
- 	$(CC) ${LDFLAGS} -o webalizer webalizer.o graphs.o ${LIBS}
- 
- webalizer.o: webalizer.c webalizer.h webalizer_lang.h ctry.h
--	$(CC) ${CFLAGS} ${DEFS} -c webalizer.c
-+	$(CC) -DPREFIX=\"@prefix@\" ${CFLAGS} ${DEFS} -c webalizer.c
- 
- graphs.o: graphs.c graphs.h webalizer_lang.h
- 	$(CC) ${CFLAGS} ${DEFS} -I${GDLIB} -c graphs.c
-@@ -58,7 +58,7 @@
+@@ -86,7 +86,7 @@
  install: all
  	$(INSTALL_PROGRAM) webalizer ${BINDIR}/webalizer
  	$(INSTALL_DATA) webalizer.1 ${MANDIR}/webalizer.1
--	$(INSTALL_DATA) sample.conf /etc/webalizer.conf.sample
-+	$(INSTALL_DATA) sample.conf @prefix@/etc/webalizer.conf.sample
+-	$(INSTALL_DATA) sample.conf ${ETCDIR}/webalizer.conf.sample
++	$(INSTALL_DATA) sample.conf ${PREFIX}/etc/webalizer.conf.sample
+ 	rm -f ${BINDIR}/webazolver
+ 	@LN_S@ ${BINDIR}/webalizer ${BINDIR}/webazolver
  
- uninstall:
- 	rm -f ${MANDIR}/webalizer.1
