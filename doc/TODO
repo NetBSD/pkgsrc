@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3095 2005/02/22 12:41:03 adam Exp $
+$NetBSD: TODO,v 1.3096 2005/02/22 15:36:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,6 @@ Suggested package updates
 	o clisp-2.33.2
 	o cmp3-2.0pre6 [pkg/29036]
 	o cocoon-2.1.6
-	o codeville-0.1.10
 	o columba-1.0RC1
 	o common-mml-1.2.16
 	o conglomerate-0.7.16
