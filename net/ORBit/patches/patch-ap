@@ -1,14 +1,13 @@
-$NetBSD: patch-ap,v 1.1 2003/12/16 11:22:31 sketch Exp $
+$NetBSD: patch-ap,v 1.2 2005/01/13 09:58:57 adam Exp $
 
---- config.h.in.orig	2002-03-20 14:14:02.000000000 +0000
-+++ config.h.in	2003-12-15 17:58:49.132485462 +0000
-@@ -33,6 +33,9 @@
- #undef HAVE_HOSTS_ACCESS
- #undef HAVE_TCPD_H
+--- config.h.in.orig	2002-06-06 11:25:14.000000000 +0000
++++ config.h.in
+@@ -35,7 +35,7 @@
  
-+/* Define if you have the <alloca.h> header file. */
-+#undef HAVE_ALLOCA_H
-+
- #ifdef HAVE_ALLOCA_H
+ #undef ORBIT_HAVE_ALLOCA_H
+ 
+-#ifdef ORBIT_HAVE_ALLOCA_H
++#if ORBIT_HAVE_ALLOCA_H
  #include <alloca.h>
  #endif
+ 
