@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/04/30 00:14:00 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/11 22:16:10 jmc Exp $
 
 DISTNAME=		ntl-5.3.1
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
@@ -12,6 +12,7 @@ COMMENT=		C++ library for doing number theory
 NO_CONFIGURE=		# defined
 USE_LIBTOOL=		yes
 MAKEFILE=		makefile
+USE_BUILDLINK2=		yes
 
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
