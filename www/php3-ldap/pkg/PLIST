@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/04 00:09:39 tv Exp $
+lib/php3/ldap.so
