@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/31 10:09:04 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:37 wiz Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
@@ -25,7 +25,7 @@ benchmark:
 	-@${WRKSRC}/heapsort | tee ${WRKSRC}/heapsort.out
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/heapsort.out /tmp/benches/`domainname`/heapsort.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/31 10:09:04 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/09 11:45:38 wiz Exp $
 
 DISTNAME=		linpackc
 PKGNAME=		linpack-940225
@@ -28,7 +28,7 @@ benchmark:
 	-@${WRKSRC}/linpackd | tee ${WRKSRC}/linpackd.out
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/linpacks.out /tmp/benches/`domainname`/linpacks.`uname`-`uname -m`-`uname -r`.`hostname`
 	-@${CP} ${WRKSRC}/linpackd.out /tmp/benches/`domainname`/linpackd.`uname`-`uname -m`-`uname -r`.`hostname`
 

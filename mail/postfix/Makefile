@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/04/08 10:53:25 itojun Exp $
+# $NetBSD: Makefile,v 1.34 2001/04/09 11:45:34 wiz Exp $
 
 DISTNAME=	postfix-20010228-pl01
 PKGNAME=	postfix-20010228-pl1
@@ -67,7 +67,7 @@ pre-install:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
 	${LN} -sf ${PREFIX}/share/postfix/postfix-script /etc/postfix
-	-${INSTALL_DATA_DIR} ${POSTFIX_SPOOL}
+	${INSTALL_DATA_DIR} ${POSTFIX_SPOOL}
 	${CHMOD} 755 ${POSTFIX_SPOOL}
 	${TEST} -f /etc/postfix/main.cf || \
 		${INSTALL_DATA} ${PREFIX}/share/postfix/main.cf /etc/postfix

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/18 22:57:08 jwise Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:39 wiz Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  The previous version
@@ -28,7 +28,7 @@ post-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/ant ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${FILESDIR}/antRun ${PREFIX}/bin
-	-${INSTALL_DATA_DIR} ${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/jaxp.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/parser.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/build/lib/ant.jar ${PREFIX}/lib/java

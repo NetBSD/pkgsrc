@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/09 11:45:39 wiz Exp $
 
 DISTNAME=	txt2html-1.28
 CATEGORIES=	converters www
@@ -17,7 +17,7 @@ do-configure:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/txt2html ${PREFIX}/bin
-	-${INSTALL_DATA_DIR} ${PREFIX}/share/txt2html
+	${INSTALL_DATA_DIR} ${PREFIX}/share/txt2html
 	${INSTALL_DATA} ${WRKSRC}/txt2html.dict ${PREFIX}/share/txt2html
 	${INSTALL_DATA} ${WRKSRC}/sample.foot ${PREFIX}/share/txt2html
 	${INSTALL_DATA} ${WRKSRC}/sample.html ${PREFIX}/share/txt2html

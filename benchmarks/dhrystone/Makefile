@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:36 wiz Exp $
 
 DISTNAME=		dhry2.1
 PKGNAME=		dhrystone-2.1
@@ -23,7 +23,7 @@ benchmark:
 	-@${ECHO} 5000000 | ${WRKSRC}/dry2reg | tee -a ${WRKSRC}/dry.out
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/dry.out /tmp/benches/`domainname`/dhrystone.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

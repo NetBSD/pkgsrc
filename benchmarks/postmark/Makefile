@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/09 11:45:39 wiz Exp $
 # FreeBSD ID: ports/benchmarks/postmark/Makefile,v 1.2 1999/09/19 05:13:20 obrien Exp
 #
 
@@ -29,7 +29,7 @@ benchmark:
 	@(cd ${WRKSRC}; ${ECHO} run | ./postmark | tee postmark.out)
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/postmark.out /tmp/benches/`domainname`/postmark.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 13:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/04/09 11:45:37 wiz Exp $
 # FreeBSD: Makefile,v 1.1.1.1 1998/06/15 18:09:43 ghelmer Exp
 #
 
@@ -25,7 +25,7 @@ benchmark:
 	cd ${WRKSRC} ; ${MKDIR} data ; ./DOUBLE | tee hint.out
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/hint.out /tmp/benches/`domainname`/hint.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

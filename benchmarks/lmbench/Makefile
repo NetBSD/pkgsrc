@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/16 13:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/04/09 11:45:38 wiz Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -49,7 +49,7 @@ benchmark:
 .endif
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@cd ${PREFIX}/share/lmbench ; \
 	tar -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
 

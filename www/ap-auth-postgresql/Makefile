@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/09 11:45:34 wiz Exp $
 
 DISTNAME=	AuthPG-1.2b2
 PKGNAME=	ap-auth-postgresql-1.2b2
@@ -23,7 +23,7 @@ do-build:
 
 do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_auth_pg.so
-	-${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_pg
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/mod_auth_pg.html ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/mod_auth_pg.ko.html ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mod_auth_pg
