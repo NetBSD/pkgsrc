@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1563 2005/01/15 10:50:17 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1564 2005/01/22 09:46:55 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2583,7 +2583,7 @@ real-su-install: ${MESSAGE}
 	fi
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` -ne ${DEF_UMASK} ]; then \
-		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
