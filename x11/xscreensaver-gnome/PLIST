@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/03/01 07:36:07 fredb Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/03/19 15:34:33 wiz Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -29,6 +29,7 @@ libexec/xscreensaver/compass
 libexec/xscreensaver/coral
 libexec/xscreensaver/critical
 libexec/xscreensaver/crystal
+libexec/xscreensaver/cubenetic
 libexec/xscreensaver/cynosure
 libexec/xscreensaver/dangerball
 libexec/xscreensaver/decayscreen
@@ -47,6 +48,7 @@ libexec/xscreensaver/flag
 libexec/xscreensaver/flame
 libexec/xscreensaver/flipscreen3d
 libexec/xscreensaver/flow
+libexec/xscreensaver/fluidballs
 libexec/xscreensaver/forest
 libexec/xscreensaver/galaxy
 libexec/xscreensaver/gears
@@ -264,6 +266,7 @@ share/control-center/screensavers/coral.xml
 share/control-center/screensavers/cosmos.xml
 share/control-center/screensavers/critical.xml
 share/control-center/screensavers/crystal.xml
+share/control-center/screensavers/cubenetic.xml
 share/control-center/screensavers/cynosure.xml
 share/control-center/screensavers/dangerball.xml
 share/control-center/screensavers/decayscreen.xml
