@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/03/14 19:52:48 dmcmahill Exp $
+
+don't override CFLAGS
+
+--- configure.in.orig	Fri Jan 21 15:39:29 2000
++++ configure.in	Tue Mar  7 20:52:54 2000
+@@ -22,6 +22,4 @@
+ 
+ dnl Checks for programs.
+-CFLAGS="-O2 -g -Wall -DDEBUG"
+-CFLAGS="-O3"
+ AC_PROG_CC
+ AC_PROG_INSTALL
