@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/21 10:53:52 jmmv Exp $
+lib/xmms/Input/libavixmms.a
+lib/xmms/Input/libavixmms.la
+lib/xmms/Input/libavixmms.so
