@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/03/15 19:10:21 minskim Exp $
 
 DISTNAME=	libao-0.8.4
 CATEGORIES=	audio devel
@@ -24,6 +24,9 @@ PLIST_SUBST+=		LIBSUN="@comment "
 .elif ${OPSYS} == "SunOS"
 PLIST_SUBST+=		LIBOSS="@comment "
 PLIST_SUBST+=		LIBSUN=""
+.elif ${OPSYS} == "Linux" && empty(MACHINE_PLATFORM:MLinux-*-sparc*)
+PLIST_SUBST+=		LIBOSS=""
+PLIST_SUBST+=		LIBSUN="@comment "
 .else
 PLIST_SUBST+=		LIBOSS=""
 PLIST_SUBST+=		LIBSUN=""
