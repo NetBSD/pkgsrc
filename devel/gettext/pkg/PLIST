@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2001/02/26 20:19:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 2001/06/16 03:36:03 jlam Exp $
 bin/gettext
 bin/gettextize
 bin/msgcmp
@@ -15,9 +15,6 @@ info/gettext.info-3
 info/gettext.info-4
 info/gettext.info-5
 @exec install-info %D/info/gettext.info %D/info/dir
-share/aclocal/gettext.m4
-share/aclocal/lcmessage.m4
-share/aclocal/progtest.m4
 share/gettext/ABOUT-NLS
 share/gettext/intl/ChangeLog
 share/gettext/intl/Makefile.in
