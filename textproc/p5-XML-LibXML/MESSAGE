@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/01/30 22:38:36 mjl Exp $
+$NetBSD: MESSAGE,v 1.2 2004/12/01 15:49:34 wiz Exp $
 
-You also need to config the XML parser yourself, here is a example
+You also need to config the XML parser yourself, here is an example
 of ${PREFIX}/libdata/perl5/site_perl/XML/SAX/ParserDetails.ini :
 
 [XML::LibXML::SAX::Parser]
