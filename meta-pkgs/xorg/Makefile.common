@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/01/31 20:14:11 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/02/09 18:42:22 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -74,9 +74,9 @@ FILEMAN_DIR=		${MANSOURCEPATH}5
 MISCMAN_DIR=		${MANSOURCEPATH}7
 MAN_SUFFIX=		1x
 LIBMAN_SUFFIX=		3x
-KERNMAN_SUFFIX=		4x
-FILEMAN_SUFFIX=		5x
-MISCMAN_SUFFIX=		7x
+KERNMAN_SUFFIX=		4
+FILEMAN_SUFFIX=		5
+MISCMAN_SUFFIX=		7
 
 .elif ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 
@@ -139,14 +139,17 @@ MESSAGE_SUBST+=		X11ROOT=${X11ROOT}
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-*	\
 			OpenBSD-*-* SunOS-*-* DragonFly-*-*
 
-MASTER_SITE_XORG+=						\
-	http://freedesktop.org/~xorg/X11R${XORG_VER}/src/	\
-	ftp://ftp.x.org/pub/				\
-	ftp://ftp.gwdg.de/pub/x11/x.org/pub/		\
-	ftp://ftp.cica.es/pub/X/pub/			\
-	ftp://ftp.cs.cuhk.edu.hk/pub/X11/		\
-	ftp://sunsite.sut.ac.jp/pub/archives/X11/	\
-	ftp://ftp.unicamp.br/pub/X11/releases/
+MASTER_SITE_XORG+=	\
+	http://www.mirrormonster.com/ftp.x.org/pub/X11R${XORG_VER}/src/	\
+	http://xorg.freedesktop.org/X11R${XORG_VER}/src/		\
+	ftp://ftp.opengroup.org/pub/x.org/pub/X11R${XORG_VER}/src/	\
+	ftp://x.mirrors.skynet.be/pub/ftp.x.org/pub/X11R${XORG_VER}/src/ \
+	http://x.mirrors.skynet.be/pub/ftp.x.org/pub/X11R${XORG_VER}/src/ \
+	ftp://mirror.cict.fr/x.org/pub/X11R${XORG_VER}/src/	\
+	http://mirror.cict.fr/x.org/pub/X11R${XORG_VER}/src/	\
+	ftp://ftp.gwdg.de/pub/x11/x.org/pub/X11R${XORG_VER}/src/	\
+	http://ftp.gwdg.de/pub/x11/x.org/pub/X11R${XORG_VER}/src/	\
+	http://www.mirror.ac.uk/mirror/ftp.x.org/pub/X11R${XORG_VER}/src/
 
 XORG_VER=	6.8.1
 
