@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/03/05 23:46:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/10/09 20:12:11 jlam Exp $
 bin/imlib_config
 bin/imlib-config
 etc/imrc
@@ -14,3 +14,13 @@ lib/libImlib.a
 lib/libgdk_imlib.a
 lib/libgdk_imlib.so.10.4
 share/aclocal/imlib.m4
+share/doc/imlib/bg.gif
+share/doc/imlib/border_diag.gif
+share/doc/imlib/border_eg1.gif
+share/doc/imlib/border_eg2.gif
+share/doc/imlib/border_eg3.gif
+share/doc/imlib/curve1.gif
+share/doc/imlib/curve2.gif
+share/doc/imlib/imlib.gif
+share/doc/imlib/index.html
+@dirrm share/doc/imlib
