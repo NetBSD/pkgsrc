@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.925 2002/02/13 22:59:53 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.926 2002/02/13 23:02:14 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2877,7 +2877,7 @@ bin-install:
 		${PKG_ADD} ${PKGFILE} ; 				\
 	else 				 				\
 		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; 	\
-		arch=`uname -p`; 					\
+		arch=${MACHINE_ARCH}; 					\
 		for site in ${BINPKG_SITE} ; do 			\
 			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
 			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
