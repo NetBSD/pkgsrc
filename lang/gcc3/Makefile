@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2003/08/09 10:59:11 seb Exp $
+# $NetBSD: Makefile,v 1.45 2003/10/11 06:24:52 wiz Exp $
 #
 
 DISTNAME=		gcc-3.3
 PKGREVISION=		5
-PKGNAME=		${DISTNAME:C|gcc|gcc3|}
+PKGNAME=		${DISTNAME:S/gcc/gcc3/}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.3/}
 EXTRACT_SUFX=		.tar.bz2
