@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9019 2005/02/03 21:51:34 jlam Exp $
+$NetBSD: CHANGES,v 1.9020 2005/02/03 23:47:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -734,3 +734,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nspr to 4.4.1nb1 [jschauma 2004-02-03]
 	Updated nss to 3.9.2nb1 [jschauma 2004-02-03]
 	Updated p5-PostScript-MailLabels to 2.10 [jlam 2004-02-03]
+	Updated firefox-bin-java to 1.1nb2 [tron 2005-02-03]
+	Updated firefox-gtk2-bin-java to 1.1nb2 [tron 2005-02-03]
