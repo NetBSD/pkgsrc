@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/26 18:03:56 manu Exp $
+bin/htc
+bin/hts
+man/man1/hts.1
+man/man1/htc.1
