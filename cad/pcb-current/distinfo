@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/05/31 12:42:43 dmcmahill Exp $
+$NetBSD: distinfo,v 1.4 2004/09/04 20:12:14 dmcmahill Exp $
 
-SHA1 (pcb-20040530.tar.gz) = a233e6e8efbb4832d00f6f191089db100c0b584d
-Size (pcb-20040530.tar.gz) = 2282263 bytes
+SHA1 (pcb-20040903.tar.gz) = c24040349b86f86faf75145ded3f9c19242279bf
+Size (pcb-20040903.tar.gz) = 2317381 bytes
