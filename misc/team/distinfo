@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:39:47 agc Exp $
+
+MD5 (team-3.1.tar.gz) = e2095ee087a61d784bd2e296724d4316
+SHA1 (patch-aa) = 0fe574aad7892eba608d6d0422e514577f109338
+SHA1 (patch-ab) = d3e24809ce7f969d1d8ce74e0205c7ae5dbf45b7

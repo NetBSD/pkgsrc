@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:47 agc Exp $
+
+MD5 (rlab-2.1.05.tar.gz) = 1ca3469c4d054ca2a30b5d1da76ef7e2
+SHA1 (patch-aa) = d9225f401879e9eee9b11856c9cdef0dbf9a469e
+SHA1 (patch-ab) = e1270ade1b430b67f8264eba76ef9bd220db7d9f
+SHA1 (patch-ac) = 44004dd04c217494dc556fe678c087b4a5a15cc2
+SHA1 (patch-ad) = 595ef1b4f1ebc21fbdf6b3fec61a9380f61936ca
+SHA1 (patch-ae) = 3f16b832cc4ec6f82cb42bab0362e1d7fc941148
+SHA1 (patch-af) = 92cc77745527f0eda597671c6fadfb369b893135
+SHA1 (patch-ag) = bde812eea080e3e958810e57e873ad1e7bf5210b
+SHA1 (patch-ah) = 1d4c39de7b924063578c35a61d8ad94981cdce6a
+SHA1 (patch-ai) = f17edcd7a63861a23d415c73340095730168eae9
+SHA1 (patch-aj) = 8dace2aae69a7618203bc3860e9d2a1a3db5b5a0
+SHA1 (patch-ak) = cd9e96103f90f80b92c26dd053032cfbec0dc512
+SHA1 (patch-al) = 824c825d0ab47328ed43127a0680067c666a7ac0
+SHA1 (patch-am) = efa48be1acecfee52d091d01eb68b07c72a8d0e2
+SHA1 (patch-an) = b489b9b02bd1a717f1312e88c827dbdbbca5b487
+SHA1 (patch-ao) = 203a9ba6e25a7e7d7e2aff60979f66e619c2160c

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:39:37 agc Exp $
+
+MD5 (setiathome/setiathome-3.03.alpha-unknown-netbsd1.4.tar) = c7e8bcf85fde849f10a9c9317db5aca7
+MD5 (setiathome/setiathome-3.03.i386-unknown-netbsd1.3.tar) = 93af0abddce335a3e5cc154b438b9a60
+MD5 (setiathome/setiathome-3.03.powerpc-unknown-netbsd1.4.tar) = b38aaeef31f70c21e53bbfb9f4af27ce
+MD5 (setiathome/setiathome-3.03.sparc-sun-solaris2.6.tar) = 8dc42f20ce4a33c63a573468b398257a

@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:39:38 agc Exp $
+
+MD5 (siag-3.1.20.tar.gz) = 061d35cbdb718542a6fd6ba3279dafef
+SHA1 (patch-aa) = 5e622c2bf11f437d7406858e938ff4c3583598e7
+SHA1 (patch-ab) = 2f4d4b859ec3640a4f3400ee91a106e3c97ab143
+SHA1 (patch-ac) = e992b49ee27fd8b7baed479287d1b37bd98ad73d
+SHA1 (patch-ad) = 990df25f5a988318ee2d32fe0ff4ec51171eb63e
+SHA1 (patch-ae) = 179e1e76347b3191c7378dd8018cbeef227d4c39
+SHA1 (patch-af) = 4042d65d92ceb36ce984ece9338484971df19fd8
+SHA1 (patch-ag) = 107fde05207928fdf3eeb61c0df63ae68c21924b
+SHA1 (patch-ah) = 18f113e7c0ef4fbe7b829acf5f6c52e8a5af964c
+SHA1 (patch-ai) = f52a42f6c9e2155e681c6446c03152bc6cb95de6
+SHA1 (patch-aj) = 0e851a155cd55761da561d39a6ff7b1cc277b83d
+SHA1 (patch-ak) = c75a33b69a620c40f95e7c994a6c263d9f460713
+SHA1 (patch-al) = 54b9a2552c09e835b4f586bea2d5998a8e5e9fab
+SHA1 (patch-am) = 560ceb340c47e013c7f20442acd566695db36540
+SHA1 (patch-an) = 37c064cae28f08d23fbe6daae822e9c236a88db7
+SHA1 (patch-ao) = 2d1397b8b1cada006dac5a3354cd4d575ddc7d4e
+SHA1 (patch-ap) = 77bfab1edc37254a90a5f4da35acfa7b885e2588
+SHA1 (patch-aq) = 4ffeec6fb338f45ad7d8e570a3c2ddc09e741ecd
+SHA1 (patch-ar) = 33ede67b1388f8db2cee7019e18056b953916718
+SHA1 (patch-as) = 3f0810ee8eaa129dcd60d55ca0d7190087b31c31
+SHA1 (patch-at) = bff4f949e5ba263def786ddafa61d6fe738c0b51
+SHA1 (patch-au) = e8baaad4589a20d46a3778562ea988ecab6f1e69

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:34:32 agc Exp $
+
+MD5 (calc-2.11.4t2.tar.gz) = fb6f6945319080b6f999c44c0b61301d
+SHA1 (patch-aa) = 822a44d62c6ea6f8fc8aeef2f371da24cbd8f38b

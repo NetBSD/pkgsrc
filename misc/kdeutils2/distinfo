@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:24 agc Exp $
+
+SHA1 (kdeutils-2.1.tar.bz2) = 99b9fec70c619c41a3878391ca277ab2a9e88275
+SHA1 (patch-aa) = 7fa3b66189e92496b5f54ff0464569039becc436
+SHA1 (patch-ab) = 4a021a96abd230bc391cd097fd8cafa26a89023b
+SHA1 (patch-ac) = 79bd1891001bf6bab438a3a28e6beb6cc36a28ea
+SHA1 (patch-ad) = 2f44bcb04de116789b2f380388a09deb5560720b
+SHA1 (patch-ae) = 0176cdb16b8933e5c3ca713242c4c432d636e38d
+SHA1 (patch-af) = 99d187f91a773aa85a99ff9b0778ff701626a45e
+SHA1 (patch-ag) = af3aa6f6e0eed4dc321d1ac4de3a868209ce1336
+SHA1 (patch-ah) = 148525fad0faee112a925f0bb5b2b1c812acc473
