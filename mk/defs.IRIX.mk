@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.43 2004/04/09 23:00:34 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.44 2004/04/09 23:18:18 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -14,11 +14,11 @@ CUT?=		/usr/bin/cut
 DATE?=		/sbin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
-ECHO?=		/sbin/echo
+ECHO?=		echo			# Shell builtin
 ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
-FALSE?=		/usr/bin/false
+FALSE?=		false			# Shell builtin
 FGREP?=		/usr/bin/fgrep
 FILE_CMD?=	/usr/bin/file
 FIND?=		/sbin/find
@@ -31,12 +31,10 @@ GTAR?=		${LOCALBASE}/bin/tar
 .else
 GTAR?=		/sbin/tar
 .endif
-.if exists(${LOCALBASE}/bin/gzip)
-GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
-GZCAT?=		${LOCALBASE}/bin/zcat
+GUNZIP_CMD?=	/usr/sbin/gunzip -f
+GZCAT?=		/usr/bsd/zcat
 GZIP?=		-9
-GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
-.endif
+GZIP_CMD?=	/usr/sbin/gzip -nf ${GZIP}
 HEAD?=		/usr/bsd/head
 HOSTNAME_CMD?=	/usr/bsd/hostname
 ID?=		/usr/bin/id
@@ -46,13 +44,10 @@ IMAKEOPTS+=	-DManUsr=${PREFIX}
 LDCONFIG?=	/usr/bin/true
 LN?=		/sbin/ln
 LS?=		/sbin/ls
-M4?=		/usr/bin/m4
+M4?=		/sbin/m4
 MAIL_CMD?=	/usr/sbin/mailx
 MKDIR?=		/sbin/mkdir -p
-.if exists(${LOCALBASE}/sbin/mtree)
 MTREE?=		${LOCALBASE}/sbin/mtree
-.endif
-MTREE?=		${LOCALBASE}/bin/mtree
 MV?=		/sbin/mv
 NICE?=		/sbin/nice
 .if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch)
@@ -70,7 +65,7 @@ PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
 PS?=		/sbin/ps
-PWD_CMD?=	/bin/pwd	# needs to print physical path
+PWD_CMD?=	/sbin/pwd		# needs to print physical path
 RM?=		/sbin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/sbin/sed
@@ -82,19 +77,19 @@ SU?=		/sbin/su
 TAIL?=		/usr/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
-TEST?=		/sbin/test
+TEST?=		test			# Shell builtin
 TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
-TRUE?=		/usr/bin/true
+TRUE?=		true			# Shell builtin
 TSORT?=		/usr/bin/tsort
 TYPE?=		/sbin/type
-WC?=		/usr/bin/wc
+WC?=		/sbin/wc
 XARGS?=		/sbin/xargs
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
-EXPORT_SYMBOLS_LDFLAGS?=		# Don't add symbols to the dynamic symbol table
+EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		${FALSE}
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	dt		# default 1.2 compatible libs type
