@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2004/10/31 21:46:41 jdolecek Exp $
+# $NetBSD: Makefile,v 1.262 2004/11/03 09:52:35 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -161,6 +161,7 @@ SUBDIR+=	p5-Text-WikiFormat
 SUBDIR+=	p5-Text-Wrapper
 SUBDIR+=	p5-XML-Checker
 SUBDIR+=	p5-XML-DOM
+SUBDIR+=	p5-XML-Filer-BufferText
 SUBDIR+=	p5-XML-Grove
 SUBDIR+=	p5-XML-LibXML
 SUBDIR+=	p5-XML-LibXML-Common
