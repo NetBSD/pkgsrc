@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.5 2003/09/05 11:39:04 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.6 2003/09/08 07:30:07 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -96,7 +96,7 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 
 # Generate default values for:
 #
-# BUILDLINK_PKG_DBDIR.<pkg>	contains all of the package metadata
+# _BLNK_PKG_DBDIR.<pkg>		contains all of the package metadata
 #				files for <pkg>
 #
 # BUILDLINK_PKGNAME.<pkg>	the name of the package
@@ -132,23 +132,23 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 #				paths.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
-.  if !defined(BUILDLINK_PKG_DBDIR.${_pkg_})
-BUILDLINK_PKG_DBDIR.${_pkg_}!=						\
+.  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
+_BLNK_PKG_DBDIR.${_pkg_}!=						\
 	dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
 	case "$$dir" in							\
 	"")	dir="not_found" ;;					\
 	esac;								\
 	${ECHO} $$dir
-.    if empty(BUILDLINK_PKG_DBDIR.${_pkg_}:Mnot_found)
-MAKEFLAGS+=	BUILDLINK_PKG_DBDIR.${_pkg_}=${BUILDLINK_PKG_DBDIR.${_pkg_}}
+.    if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
+MAKEFLAGS+=	_BLNK_PKG_DBDIR.${_pkg_}=${_BLNK_PKG_DBDIR.${_pkg_}}
 .    endif
 .  endif
-BUILDLINK_PKGNAME.${_pkg_}?=	${BUILDLINK_PKG_DBDIR.${_pkg_}:T}
+BUILDLINK_PKGNAME.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}:T}
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
 .    if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-BUILDLINK_PREFIX.${_pkg_}?=	${BUILDLINK_PKG_DBDIR.${_pkg_}}
+BUILDLINK_PREFIX.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}}
 .    elif ${PKG_INSTALLATION_TYPE} == "overwrite"
-.      if empty(BUILDLINK_PKG_DBDIR.${_pkg_}:Mnot_found)
+.      if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
 BUILDLINK_PREFIX.${_pkg_}!=	\
 	${PKG_INFO} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,"
 .      else
@@ -159,7 +159,7 @@ BUILDLINK_PREFIX.${_pkg_}?=	not_found
 MAKEFLAGS+=	BUILDLINK_PREFIX.${_pkg_}=${BUILDLINK_PREFIX.${_pkg_}}
 .    endif
 .  endif
-.  if exists(${BUILDLINK_PKG_DBDIR.${_pkg_}}/+VIEWS)
+.  if exists(${_BLNK_PKG_DBDIR.${_pkg_}}/+VIEWS)
 BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
 .  else
 BUILDLINK_IS_DEPOT.${_pkg_}?=	no
