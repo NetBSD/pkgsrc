@@ -31,4 +31,3 @@ chmod 0755 ${PREFIX}/bin/run-hbench
 cp -R Results $PREFIX/share/hbench
 rm $PREFIX/share/hbench/Results/Makefile.orig
 cp -R conf $PREFIX/share/hbench
-
