@@ -1,12 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: wwwoffled,v 1.2 2001/10/25 10:20:59 wiz Exp $
+# $NetBSD: wwwoffled,v 1.3 2002/08/07 09:15:44 jlam Exp $
 #
-
 # PROVIDE: wwwoffled
 # REQUIRE: DAEMON network
 
-. /etc/rc.subr
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
+fi
 
 name="wwwoffled"
 command="@PREFIX@/sbin/${name}"
@@ -26,5 +27,10 @@ wwwoffled_start() {
 	eval "${control_prog} -fetch ${command_args}"
 }
 
-load_rc_config $name
-run_rc_command "$1"
+if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	echo -n ' ${name}'
+	${start_cmd}
+fi
