@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2004/11/09 05:49:11 minskim Exp $
+# $NetBSD: Makefile,v 1.120 2004/11/09 13:08:24 xtraeme Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -59,6 +59,7 @@ SUBDIR+=	palmosemulator
 SUBDIR+=	pcemu
 SUBDIR+=	peace
 SUBDIR+=	pearpc
+SUBDIR+=	qemu
 SUBDIR+=	raine
 SUBDIR+=	rewind
 SUBDIR+=	simh
