@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: spread.sh,v 1.1 2003/02/22 23:37:14 mjl Exp $
+# $NetBSD: spread.sh,v 1.2 2003/08/09 13:07:42 recht Exp $
 #
 # PROVIDE: spread
 # REQUIRE: DAEMON
@@ -27,6 +27,17 @@ fi
 required_files="@PKG_SYSCONFDIR@/spread.conf"
 
 command_args="${log} </dev/null &"
+start_precmd="spread_precmd"
+
+spread_precmd()
+{
+        if [ ! -d @RUNTIME_DIR@ ]
+        then
+                @MKDIR@ @RUNTIME_DIR@
+                @CHMOD@ 0750 @RUNTIME_DIR@
+                @CHOWN@ @PKG_USERS@ @RUNTIME_DIR@
+        fi
+}
 
 load_rc_config $name
 run_rc_command "$1"
