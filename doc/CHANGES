@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3953 2003/12/04 04:55:59 gson Exp $
+$NetBSD: CHANGES,v 1.3954 2003/12/04 05:27:08 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4823,3 +4823,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Net-DNS-SEC-0.11 [heinz 2003-12-04]
 	Added exim3-3.36 [grant 2003-12-04]
 	Added libstree-0.3.0 [gson 2003-12-04]
+	Added thunderbird-bin-0.3 [grant 2003-12-04]
+	Added thunderbird-bin-nightly [grant 2003-12-04]
