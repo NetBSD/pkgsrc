@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/02/21 19:07:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/27 21:36:00 wiz Exp $
 #
 
-DISTNAME=	gnapster-1.3.5
+DISTNAME=	gnapster-1.3.6
 CATEGORIES=	net
 MASTER_SITES=	http://www.gotlinux.org/~jasta/files/
 
