@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/01 06:18:18 jtb Exp $
+
+--- Makefile.in.orig	Fri Nov  3 04:25:15 2000
++++ Makefile.in
+@@ -8,7 +8,7 @@
+ DOTEMACS=@DOTEMACS@
+ SUBDIRS =lisp texi etc
+ 
+-INSTALL   = @INSTALL@
++INSTALL   = ${INSTALL_DATA}
+ RM        = rm -f
+ 
+ .PHONY: $(SUBDIRS) dotemacs
