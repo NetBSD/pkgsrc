@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.231 2004/04/20 14:21:19 uebayasi Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.232 2004/04/21 17:08:06 tv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -74,7 +74,7 @@ PKGSRC_SLEEPSECS?= 5
 #ABI=	
 # The ABI to be used, if supported by the Operating System and/or compiler.
 # Currently only used under IRIX and explicitly set during bootstrapping
-# Onlye change this if you really know what you're doing -- libraries of
+# Only change this if you really know what you're doing -- libraries of
 # one ABI can not be linked with libraries of another!
 # Possible: 64 (64 bit ABI), 32 (SGI's N32 ABI), undefined (SGI's old o32 ABI)
 # Default: determined during bootstrapping
