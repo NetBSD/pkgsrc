@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/07/02 14:03:51 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2002/08/08 13:10:11 wiz Exp $
 
 --- stop.c.orig	Thu Dec  7 06:42:20 2000
 +++ stop.c
