@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6716 2004/07/28 15:20:55 wiz Exp $
+$NetBSD: CHANGES,v 1.6717 2004/07/28 17:07:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3620,3 +3620,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kphotobook-0.0.6 [markd 2004-07-28]
 	Added kphotools-0.2.1 [markd 2004-07-28]
 	Updated gnupg to 1.2.5 [wiz 2004-07-28]
+	Updated cpuflags to 0.74 [abs 2004-07-28]
+
