@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/11/27 06:44:00 adrianp Exp $
+# $NetBSD: Makefile,v 1.34 2005/03/24 23:43:44 wiz Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.bitchx.org/files/source/ \
 		ftp://ftp.bitchx.org/pub/BitchX/source/ \
 		ftp://ftp.bitchx.org/pub/BitchX/source/old/
 
-MAINTAINER=	jmcneill@invisible.yi.org
+MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://www.bitchx.org/
 COMMENT=	IRC client based on ircII
 
