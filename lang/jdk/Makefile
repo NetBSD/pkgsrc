@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/01/11 12:35:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2000/01/13 20:13:38 jwise Exp $
 #
 
 VERSION=1.1.8
@@ -19,6 +19,8 @@ JDK_HOME:=	${LOCALBASE}/java
 
 WRKSRC=		${WRKDIR}/jdk${VERSION}
 NO_BUILD=	yes
+# since we change PREFIX:
+NO_MTREE=	yes
 MESSAGE_FILE=	${WRKDIR}/.MESSAGE
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
@@ -33,6 +35,9 @@ do-install:
 		<${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"
+
+show-shlib-type:
+	echo a.out
 
 # This needs to be after bsd.pkg.mk 
 PREFIX:=	${JDK_HOME}
