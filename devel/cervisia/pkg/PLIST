@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/05 04:32:07 hubertf Exp $
+bin/cervisia
+man/man1/cervisia.1
+share/doc/HTML/en/cervisia/index.html
+share/doc/HTML/en/cervisia/index-1.html
+share/doc/HTML/en/cervisia/index-2.html
+share/doc/HTML/en/cervisia/index-3.html
+share/kde/applnk/Development/Cervisia.kdelnk
+@dirrm share/doc/HTML/en/cervisia

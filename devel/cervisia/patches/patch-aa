@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/05 04:32:07 hubertf Exp $
+
+--- configure.orig	Sat Aug  7 23:54:57 1999
++++ configure	Fri Nov  5 04:57:42 1999
+@@ -4138,43 +4138,43 @@
+     kde_htmldir='\$(prefix)/share/doc/HTML'
+   fi
+   if test -z "$kde_appsdir"; then
+-    kde_appsdir='\$(prefix)/share/applnk'
++    kde_appsdir='\$(prefix)/share/kde/applnk'
+   fi
+   if test -z "$kde_icondir"; then
+-    kde_icondir='\$(prefix)/share/icons'
++    kde_icondir='\$(prefix)/share/kde/icons'
+   fi
+   if test -z "$kde_sounddir"; then
+-    kde_sounddir='\$(prefix)/share/sounds'
++    kde_sounddir='\$(prefix)/share/kde/sounds'
+   fi
+   if test -z "$kde_datadir"; then
+-    kde_datadir='\$(prefix)/share/apps'
++    kde_datadir='\$(prefix)/share/kde/apps'
+   fi
+   if test -z "$kde_locale"; then
+-    kde_locale='\$(prefix)/share/locale'
++    kde_locale='\$(prefix)/share/kde/locale'
+   fi
+   if test -z "$kde_cgidir"; then
+     kde_cgidir='\$(exec_prefix)/cgi-bin'
+   fi
+   if test -z "$kde_confdir"; then
+-    kde_confdir='\$(prefix)/share/config'
++    kde_confdir='\$(prefix)/share/kde/config'
+   fi
+   if test -z "$kde_mimedir"; then
+-    kde_mimedir='\$(prefix)/share/mimelnk'
++    kde_mimedir='\$(prefix)/share/kde/mimelnk'
+   fi
+   if test -z "$kde_toolbardir"; then
+-    kde_toolbardir='\$(prefix)/share/toolbar'
++    kde_toolbardir='\$(prefix)/share/kde/toolbar'
+   fi
+   if test -z "$kde_wallpaperdir"; then
+-    kde_wallpaperdir='\$(prefix)/share/wallpapers'
++    kde_wallpaperdir='\$(prefix)/share/kde/wallpapers'
+   fi
+   if test -z "$kde_bindir"; then
+     kde_bindir='\$(exec_prefix)/bin'
+   fi
+   if test -z "$kde_servicesdir"; then
+-    kde_servicesdir='\$(prefix)/share/services'
++    kde_servicesdir='\$(prefix)/share/kde/services'
+   fi
+   if test -z "$kde_servicetypesdir"; then
+-    kde_servicetypesdir='\$(prefix)/share/servicetypes'
++    kde_servicetypesdir='\$(prefix)/share/kde/servicetypes'
+   fi
+ 
+   kde_cv_all_paths="kde_have_all_paths=\"yes\" \
+@@ -4288,7 +4288,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="$all_libraries -lgif -lX11 $LIBSOCKET"
++LIBS="$all_libraries -lungif -lX11 $LIBSOCKET"
+ cat > conftest.$ac_ext <<EOF
+ #line 4294 "configure"
+ #include "confdefs.h"
