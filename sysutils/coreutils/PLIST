@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/10 13:18:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/05 13:59:58 seb Exp $
 bin/${GNU_PROGRAM_PREFIX}basename
 bin/${GNU_PROGRAM_PREFIX}cat
 bin/${GNU_PROGRAM_PREFIX}chgrp
@@ -88,9 +88,7 @@ bin/${GNU_PROGRAM_PREFIX}wc
 bin/${GNU_PROGRAM_PREFIX}who
 bin/${GNU_PROGRAM_PREFIX}whoami
 bin/${GNU_PROGRAM_PREFIX}yes
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/coreutils.info
 info/coreutils.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/coreutils.info
 @comment belongs to libiconv: lib/charset.alias
 man/man1/${GNU_PROGRAM_PREFIX}basename.1
 man/man1/${GNU_PROGRAM_PREFIX}cat.1
