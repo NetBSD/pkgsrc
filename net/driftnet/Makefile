@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/04 22:21:05 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/10 18:56:29 wiz Exp $
 #
 
 DISTNAME=	driftnet-0.1.6
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ex-parrot.com/~chris/driftnet/
 COMMENT=	Real-time image sniffer
 
-DEPENDS=	mpg123:../../audio/mpg123
+DEPENDS=	mpg123-[0-9]*:../../audio/mpg123
 
 USE_BUILDLINK2=	YES
 
