@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 1999/10/21 15:15:03 agc Exp $
+
+Use the correct doc directory.
+
+--- xed/Makefile.in	1999/10/21 15:09:36	1.1
++++ xed/Makefile.in	1999/10/21 15:09:49
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/xedplus
++docdir = $(prefix)/share/doc/siag/xedplus
+ 
+ doc_DATA = xedplus.html CHANGES README TODO
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 1999/10/21 15:15:02 agc Exp $
+
+Use the correct doc directory
+
+--- gvu/Makefile.in	1999/10/21 15:04:19	1.1
++++ gvu/Makefile.in	1999/10/21 15:04:40
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/gvu
++docdir = $(prefix)/share/doc/siag/gvu
+ 
+ doc_DATA = README COPYING CHANGES TODO gs.interface comments.doc gvu.html \
+ 	copyright.html

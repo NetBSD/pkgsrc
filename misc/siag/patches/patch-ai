@@ -1,0 +1,21 @@
+$NetBSD: patch-ai,v 1.1 1999/10/21 15:15:03 agc Exp $
+
+Use the correct doc directory
+
+--- xcommon/Makefile.in	1999/10/21 15:08:23	1.1
++++ xcommon/Makefile.in	1999/10/21 15:08:41
+@@ -439,11 +439,11 @@
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/siag/xcommon
+-	cp $(srcdir)/form.scm $(DESTDIR)$(prefix)/doc/siag/xcommon
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/siag/xcommon
++	cp $(srcdir)/form.scm $(DESTDIR)$(prefix)/share/doc/siag/xcommon
+ 
+ uninstall-local:
+-	rm -rf $(DESTDIR)@prefix@/doc/siag/xcommon
++	rm -rf $(DESTDIR)@prefix@/share/doc/siag/xcommon
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
