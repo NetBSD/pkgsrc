@@ -1,9 +1,8 @@
-$NetBSD: patch-ao,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+$NetBSD: patch-ao,v 1.2 1999/12/07 21:01:47 rh Exp $
 
---- fonts/Makefile.orig	Mon May 10 17:33:34 1999
-+++ fonts/Makefile	Sun Nov 28 21:06:28 1999
-@@ -60,8 +60,8 @@
- #
+--- fonts/Makefile.orig	Mon May 10 23:33:34 1999
++++ fonts/Makefile	Tue Dec  7 21:59:46 1999
+@@ -61,6 +61,6 @@
  
  install:
 -	-$(MKDIR) $(DATADIR)/fonts
@@ -12,4 +11,3 @@ $NetBSD: patch-ao,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
 +	$(BSD_INSTALL_DATA) $(FONTS) $(DATADIR)/fonts
  
  #
- # End of "$Id: patch-ao,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $".
