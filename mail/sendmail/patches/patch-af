@@ -1,0 +1,27 @@
+$NetBSD: patch-af,v 1.1 2000/08/18 12:06:12 itojun Exp $
+a bugfix for WIDE patch, in email address simplifier
+
+*** sendmail/recipient.c-	Sun Jul 30 03:27:17 2000
+--- sendmail/recipient.c	Fri Aug 18 20:54:17 2000
+***************
+*** 47,52 ****
+--- 47,54 ----
+  		{
+  			int c = *p++;
+  
++ 			if (isspace(c) || c == '<' || c == '>')
++ 				continue;
+  			if (isascii(c) && isupper(c))
+  				c = tolower(c);
+  			hfunc = ((hfunc << 1) ^ c) % HASH_SIZE;
+***************
+*** 568,573 ****
+--- 570,577 ----
+  		{
+  			int c = *p++;
+  
++ 			if (isspace(c) || c == '<' || c == '>')
++ 				continue;
+  			if (isascii(c) && isupper(c))
+  				c = tolower(c);
+  			hfunc = ((hfunc << 1) ^ c) % HASH_SIZE;
