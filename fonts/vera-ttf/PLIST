@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/17 14:26:06 salo Exp $
-@exec ${MKDIR} %D/lib/X11/fonts/TrueType
+@comment $NetBSD: PLIST,v 1.3 2003/04/17 14:30:27 salo Exp $
 lib/X11/fonts/TrueType/Vera.ttf
 lib/X11/fonts/TrueType/VeraBI.ttf
 lib/X11/fonts/TrueType/VeraBd.ttf
