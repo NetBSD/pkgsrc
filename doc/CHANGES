@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5024 2004/02/28 12:22:59 grant Exp $
+$NetBSD: CHANGES,v 1.5025 2004/02/28 16:22:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1077,3 +1077,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gcalctool to 4.3.48 [jmmv 2004-02-27]
 	Added ike-scan-1.6 [itojun 2004-02-27]
 	Updated ytalk to 3.1.1nb2 [grant 2004-02-28]
+	Updated kdeutils to 3.2.0nb1 [jmmv 2004-02-28]
