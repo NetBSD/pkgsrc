@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1 1999/01/06 16:46:18 tv Exp $
+
+--- libiberty/strerror.c.orig	Fri May 15 19:42:41 1998
++++ libiberty/strerror.c	Wed Jan  6 11:45:53 1999
+@@ -7,22 +7,9 @@
+ 
+ #include "config.h"
+ 
+-#ifdef HAVE_SYS_ERRLIST
+-/* Note that errno.h (not sure what OS) or stdio.h (BSD 4.4, at least)
+-   might declare sys_errlist in a way that the compiler might consider
+-   incompatible with our later declaration, perhaps by using const
+-   attributes.  So we hide the declaration in errno.h (if any) using a
+-   macro. */
+-#define sys_errlist sys_errlist__
+-#endif
+-
+ #include <stdio.h>
+ #include <errno.h>
+ 
+-#ifdef HAVE_SYS_ERRLIST
+-#undef sys_errlist
+-#endif
+-
+ /*  Routines imported from standard C runtime libraries. */
+ 
+ #ifdef __STDC__
+@@ -459,11 +446,6 @@
+ 
+ static int sys_nerr;
+ static const char **sys_errlist;
+-
+-#else
+-
+-extern int sys_nerr;
+-extern char *sys_errlist[];
+ 
+ #endif
+ 
