@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/15 09:26:17 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/06 17:43:43 dmcmahill Exp $
 
 DISTNAME=	festvox_us1
 PKGNAME=	festvox-us1-1.4.0
@@ -21,6 +21,8 @@ NO_BUILD=	yes
 
 FHOME=		${PREFIX}/share/festival
 MBROLA=		${FHOME}/lib/voices/english/us1_mbrola
+
+ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}

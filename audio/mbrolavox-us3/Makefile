@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/28 04:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/06 17:43:46 dmcmahill Exp $
 
 DISTNAME=	us3-990208
 PKGNAME=	mbrolavox-${DISTNAME}
@@ -20,6 +20,8 @@ EXTRACT_CMD=	unzip -Loq ${DOWNLOADED_DISTFILE}
 NO_BUILD=	yes
 
 MHOME=		${PREFIX}/share/mbrola/voices
+
+ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}
