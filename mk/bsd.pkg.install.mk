@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.21 2002/06/27 00:54:30 lukem Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.22 2002/06/27 01:55:21 grant Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -212,10 +212,10 @@ FILES_SUBST+=		USERADD=${USERADD:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-install-script: generate-install-scripts
-	PKG_PREFIX=${PREFIX} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+	PKG_PREFIX=${PREFIX} PKG_SYSCONFDIR=${PKG_SYSCONFDIR} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install-script:
-	PKG_PREFIX=${PREFIX} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	PKG_PREFIX=${PREFIX} PKG_SYSCONFDIR=${PKG_SYSCONFDIR} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 generate-install-scripts:
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${DEINSTALL_SRC} |		\
