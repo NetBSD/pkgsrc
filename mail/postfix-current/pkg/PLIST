@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/14 05:28:26 itojun Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/10/15 14:10:20 itojun Exp $
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
 libexec/postfix/error
+libexec/postfix/flush
 libexec/postfix/lmtp
 libexec/postfix/local
 libexec/postfix/master
@@ -14,6 +15,7 @@ libexec/postfix/sendmail
 libexec/postfix/showq
 libexec/postfix/smtp
 libexec/postfix/smtpd
+libexec/postfix/spawn
 libexec/postfix/trivial-rewrite
 sbin/postalias
 sbin/postcat
@@ -45,6 +47,7 @@ share/postfix/sample-auth.cf
 share/postfix/sample-canonical.cf
 share/postfix/sample-debug.cf
 share/postfix/sample-filter.cf
+share/postfix/sample-flush.cf
 share/postfix/sample-ldap.cf
 share/postfix/sample-local.cf
 share/postfix/sample-misc.cf
@@ -85,15 +88,18 @@ man/man8/bounce.8
 man/man8/cleanup.8
 man/man8/defer.8
 man/man8/error.8
+man/man8/flush.8
 man/man8/lmtp.8
 man/man8/local.8
 man/man8/master.8
+man/man8/nqmgr.8
 man/man8/pickup.8
 man/man8/pipe.8
 man/man8/qmgr.8
 man/man8/showq.8
 man/man8/smtp.8
 man/man8/smtpd.8
+man/man8/spawn.8
 man/man8/trivial-rewrite.8
 @dirrm share/postfix
 @dirrm share/doc/postfix

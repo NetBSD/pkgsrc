@@ -1,8 +1,9 @@
-$NetBSD: patch-af,v 1.4 2000/08/14 05:10:53 itojun Exp $
---- conf/main.cf.orig	Mon Aug 14 13:51:15 2000
-+++ conf/main.cf	Mon Aug 14 14:07:32 2000
+$NetBSD: patch-af,v 1.5 2000/10/15 14:10:20 itojun Exp $
+
+--- conf/main.cf.orig	Fri Oct  6 00:01:00 2000
++++ conf/main.cf	Wed Oct 11 11:40:57 2000
 @@ -1 +1,3 @@
-+#	$NetBSD: patch-af,v 1.4 2000/08/14 05:10:53 itojun Exp $
++#	$NetBSD: patch-af,v 1.5 2000/10/15 14:10:20 itojun Exp $
 +#
  # Global Postfix configuration file. This file lists only a subset
 @@ -19,3 +21,3 @@
@@ -30,7 +31,7 @@ $NetBSD: patch-af,v 1.4 2000/08/14 05:10:53 itojun Exp $
 +# listen to IPv4 and IPv6 smtp socket
 +inet_interfaces = 0.0.0.0, ::
  
-@@ -376,5 +385,4 @@
+@@ -417,5 +426,4 @@
  #
 -debugger_command =
 -	 PATH=/usr/bin:/usr/X11R6/bin
