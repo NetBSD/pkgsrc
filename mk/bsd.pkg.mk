@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1512 2004/10/11 23:27:18 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1513 2004/10/11 23:38:53 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -385,7 +385,6 @@ CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 CONFIGURE_ENV+=		LIBS=${LIBS:Q}
 CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
-CONFIGURE_ENV+=		SED=${SED:Q}
 .endif
 
 .if defined(_OPSYS_LIBTOOL_REQD)
