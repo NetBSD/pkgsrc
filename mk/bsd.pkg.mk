@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.608 2000/11/18 01:03:33 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.609 2000/11/18 21:53:31 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2949,9 +2949,10 @@ print-pkg-size-this:
 # Sizes of required pkgs (only)
 # 
 # XXX This is intended to be run before pkg_create is called, so the
-# dependencies are all installed
+# dependencies are all installed. 
 print-pkg-size-depends:
-	@${MAKE} ${MAKEFLAGS} PACKAGE_DEPENDS_WITH_PATTERNS=false run-depends-list \
+	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true \
+	| xargs -n 1 ${SETENV} ${PKG_INFO} -e				\
 	| sort -u							\
 	| xargs ${SETENV} ${PKG_INFO} -qs				\
 	| ${AWK} -- 'BEGIN { print("0 "); }				\
