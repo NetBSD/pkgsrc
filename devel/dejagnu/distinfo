@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/05/31 16:37:55 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/09/27 23:43:42 kristerw Exp $
 
-SHA1 (dejagnu-1.4.1.tar.gz) = 7b56a47d8426d4395f489ae55b5859c9fb9d214e
-Size (dejagnu-1.4.1.tar.gz) = 1330595 bytes
-SHA1 (patch-aa) = a33fb48ab41220ca8284414ea7d89cc856b11e3e
+SHA1 (dejagnu-1.4.3.tar.gz) = 4699f4281801109bafeb6245ee75db12e0769dfb
+Size (dejagnu-1.4.3.tar.gz) = 1817399 bytes
