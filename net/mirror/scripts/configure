@@ -1,9 +1,15 @@
 #!/bin/sh
 #
-# $NetBSD: configure,v 1.2 1998/08/07 11:10:46 agc Exp $
+# $NetBSD: configure,v 1.3 1998/08/29 18:05:57 kim Exp $
 #
 # Id: configure,v 1.1.1.1 1997/10/27 05:01:31 hubertf Exp
 #
-
-mv ${WRKSRC}/mirror.pl ${WRKSRC}/mirror.pl.bak
-sed <${WRKSRC}/mirror.pl.bak >${WRKSRC}/mirror.pl s+!!PREFIX!!+$PREFIX+g
+cd ${WRKSRC}
+for i in do_unlinks mirror.pl mm pkgs_to_mmin
+do
+    sed \
+	-e s:!!PREFIX!!:$PREFIX:g \
+	-e s:/usr/bin/perl:${PREFIX}/bin/perl: \
+	<$i >$i.BAK
+    mv -f $i.BAK $i
+done
