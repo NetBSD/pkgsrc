@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/12/25 15:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/09 13:19:25 recht Exp $
 #
 
 DISTNAME=	doclifter-2.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://catb.org/~esr/doclifter/
 
@@ -15,12 +16,16 @@ USE_BUILDLINK3=	yes
 PYTHON_PATCH_SCRIPTS=		doclifter manlifter
 PYTHON_VERSIONS_ACCEPTED=	24pth 24 23pth 23 22pth 22
 
+SUBST_CLASSES+=		bin-path
+SUBST_STAGE.bin-path=	pre-configure
+SUBST_FILES.bin-path=	manlifter
+SUBST_SED.bin-path=	-e 's,@@BIN_PATH@@,${PREFIX}/bin,g'
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/doclifter ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doclifter.1 ${PREFIX}/man/man1
-# Not yet (only works when run as "./manlifter"
-#	${INSTALL_SCRIPT} ${WRKSRC}/manlifter ${PREFIX}/bin
-#	${INSTALL_MAN} ${WRKSRC}/manlifter.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/manlifter ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/manlifter.1 ${PREFIX}/man/man1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
