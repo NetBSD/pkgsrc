@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:10:18 agc Exp $
+$NetBSD: patch-aa,v 1.4 2000/02/07 03:18:08 christos Exp $
 
---- Makefile.orig	Thu Jun 10 04:51:22 1993
-+++ Makefile	Thu Oct 23 22:50:09 1997
-@@ -15,17 +15,17 @@
+--- Makefile.orig	Wed Jun  9 22:51:22 1993
++++ Makefile	Sun Feb  6 21:48:47 2000
+@@ -15,17 +15,21 @@
  DISTRIBUTION\
  	= Makefile fep.1 $(HEADER) $(SRC) feprc.sample README
  
@@ -12,20 +12,23 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:10:18 agc Exp $
  #STAT	= -DSTAT#		Delete # for statistic info
  #KANJI	= -DKANJI#		Delete # for KANJI handling
 -CONFIG	= $(STAT) $(KANJI)
-+CONFIG	= $(STAT) $(KANJI) -D_cnt=_r
++CONFIG	= $(STAT) $(KANJI) -DTERMIOS
  
  #DEBUG	= -g
 -DEBUG	= -O
 +#DEBUG	= -O
  
 -CFLAGS	= $(DEBUG) $(CONFIG)
--LDFLAGS = -ltermcap
 +CFLAGS	+= $(DEBUG) $(CONFIG)
++.if exists(/usr/lib/libcompat.a)
 +LDFLAGS = -ltermcap -lcompat
++.else
+ LDFLAGS = -ltermcap
++.endif
  
  all: $(TARGET)
  
-@@ -37,7 +37,7 @@
+@@ -37,7 +41,7 @@
  
  install: $(TARGET)
  	install -s $(TARGET) $(INSTDIR)
