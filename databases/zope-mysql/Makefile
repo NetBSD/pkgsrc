@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1998/12/23 06:49:44 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/09 23:16:55 tsarna Exp $
 #
 
-DISTNAME=	ZMySQLDA-1.1.0-nonbin
-PKGNAME=	zope-mysql-1.1.0
+DISTNAME=	ZMySQLDA-1.1.2-nonbin
+PKGNAME=	zope-mysql-1.1.2
 CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Download/ZMySQLDA/
 
