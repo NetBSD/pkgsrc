@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5268 2004/03/16 16:05:40 minskim Exp $
+$NetBSD: CHANGES,v 1.5269 2004/03/16 23:56:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1476,3 +1476,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pilot-link to 0.11.7nb2 [tron 2004-03-16]
 	Removed mew-xemacs [uebayasi 2004-03-16]
 	Updated tk-Tix-8.2.0b1nb1 [minskim 2004-03-16]
+	Updated ruby-tcltklib to 1.6.8nb3 [minskim 2004-03-16]
