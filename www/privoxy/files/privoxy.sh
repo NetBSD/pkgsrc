@@ -1,6 +1,6 @@
-#@SH@
+#!@SH@
 #
-# $NetBSD: privoxy.sh,v 1.1.1.1 2003/06/16 03:02:04 kim Exp $
+# $NetBSD: privoxy.sh,v 1.2 2003/07/12 15:07:49 zuntum Exp $
 #
 
 # PROVIDE: privoxy
