@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.10 2000/09/11 18:58:42 tron Exp $
+$NetBSD: md5,v 1.11 2000/09/11 18:59:28 tron Exp $
 
-MD5 (mpg123-0.59r.tar.gz) = 95df59ad1651dd2346d49fafc83747e7
-MD5 (mpg123-059r-v6-20000713b.diff.gz) = b830cefc8805c8ad827f73985c03d27f
-MD5 (l3.diff.gz) = b8749f4709ed1a9df8a00d51c4a02dd5
+MD5 (mpg123/mpg123-0.59r.tar.gz) = 95df59ad1651dd2346d49fafc83747e7
+MD5 (mpg123/mpg123-059r-v6-20000713b.diff.gz) = b830cefc8805c8ad827f73985c03d27f
+MD5 (mpg123/l3.diff.gz) = b8749f4709ed1a9df8a00d51c4a02dd5
