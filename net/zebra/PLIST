@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:37 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/09 23:48:17 itojun Exp $
 @unexec ${INSTALL_INFO} --delete %D/info/zebra.info %D/info/dir
 info/zebra.info
 @exec   ${INSTALL_INFO}          %D/info/zebra.info %D/info/dir
@@ -16,4 +16,8 @@ share/examples/zebra/bgpd.conf.sample2
 share/examples/zebra/ospfd.conf.sample
 share/examples/zebra/ripd.conf.sample
 share/examples/zebra/zebra.conf.sample
+info/zebra.info-1
+info/zebra.info-2
+info/zebra.info-3
+info/zebra.info-4
 @dirrm share/examples/zebra
