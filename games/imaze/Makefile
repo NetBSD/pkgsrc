@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 15:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/04 02:23:26 jlam Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
@@ -13,10 +13,12 @@ COMMENT=		Multiplayer, networked, action,x 3D maze game
 EXTRACT_ONLY=		imaze1.3.tar.Z
 WRKSRC=			${WRKDIR}/imaze
 
-USE_MOTIF=		yes
+USE_BUILDLINK_ONLY=	yes
 USE_X11BASE=		yes
+CFLAGS+=		-I${X11BASE}/include
 
 post-build:
 	cd ${WRKSRC} && ${PAX} -rf ${DISTDIR}/imaze-sounds.tar
 
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
