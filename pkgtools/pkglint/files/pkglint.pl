@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.115 2004/08/08 22:57:04 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.116 2004/08/10 10:07:20 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -43,7 +43,102 @@ use constant {
 };
 #== End of PkgLint::Utils =================================================
 
+package PkgLint::Logging;
+#==========================================================================
+# This package provides the subroutines log_error, log_warning and log_info
+# for printing messages to the user in a common format. The three subrou-
+# tines have the parameters $file, $lineno and $message. In case there's no
+# file appropriate for the message, NO_FILE may be passed, likewise for
+# $lineno and NO_LINE_NUMBER. At the end of the program, the subroutine
+# print_summary_and_exit should be called.
+#
+# Examples:
+#   log_error(NO_FILE, NO_LINE_NUMBER, "invalid command line.");
+#   log_warning($file, NO_LINE_NUMBER, "not found.");
+#   log_info($file, $lineno, sprintf("invalid character (0x%02x).", $c));
+#==========================================================================
+
 use strict;
+use warnings;
+BEGIN {
+	use Exporter;
+	use vars qw(@ISA @EXPORT_OK);
+	@ISA = qw(Exporter);
+	@EXPORT_OK = qw(
+		NO_FILE NO_LINE_NUMBER
+		log_error log_warning log_info
+		print_summary_and_exit set_verbose is_verbose
+	);
+	import PkgLint::Utils qw(false true);
+}
+
+use constant {
+	NO_FILE		=> "",
+	NO_LINE_NUMBER	=> 0,
+};
+
+my $errors		= 0;
+my $warnings		= 0;
+my $verbose_flag	= false;
+
+sub log_message($$$$)
+{
+	my ($file, $lineno, $type, $message) = @_;
+	if ($file eq NO_FILE) {
+		printf("%s: %s\n", $type, $message);
+	} elsif ($lineno == NO_LINE_NUMBER) {
+		printf("%s: %s: %s\n", $type, $file, $message);
+	} else {
+		printf("%s: %s:%d: %s\n", $type, $file, $lineno, $message);
+	}
+}
+
+sub log_error($$$)
+{
+	my ($file, $lineno, $msg) = @_;
+	log_message($file, $lineno, "FATAL", $msg);
+	$errors++;
+}
+
+sub log_warning($$$)
+{
+	my ($file, $lineno, $msg) = @_;
+	log_message($file, $lineno, "WARN", $msg);
+	$warnings++;
+}
+
+sub log_info($$$)
+{
+	my ($file, $lineno, $msg) = @_;
+	if ($verbose_flag) {
+		log_message($file, $lineno, "OK", $msg);
+	}
+}
+
+sub print_summary_and_exit()
+{
+	if ($errors != 0 || $warnings != 0) {
+		print("$errors errors and $warnings warnings found.\n");
+	} else {
+		print "looks fine.\n";
+	}
+	exit($errors != 0);
+}
+
+sub set_verbose($)
+{
+	my ($verbose) = @_;
+	$verbose_flag = $verbose;
+}
+
+sub is_verbose()
+{
+	return $verbose_flag;
+}
+#== End of PkgLint::Logging ===============================================
+
+use strict;
+use warnings;
 
 use Getopt::Std;
 use File::Basename;
@@ -52,6 +147,11 @@ use Cwd;
 
 BEGIN {
 	import PkgLint::Utils qw(false true);
+	import PkgLint::Logging qw(
+		NO_FILE NO_LINE_NUMBER
+		log_error log_warning log_info
+		print_summary_and_exit
+	);
 }
 
 # Start of configuration area
@@ -70,7 +170,6 @@ my $opt_newpackage	= false; # consider this package new (uncommitted)
 my $opt_dumpmakefile	= false; # dump the Makefile after parsing
 my $opt_contblank	= 1; # number of allowed contiguous blank lines
 my $opt_packagedir	= "."; # directory to check
-my $opt_verbose		= false; # print status messages while processing
 
 # Constants
 my $regex_rcsidstr	= qr"\$($conf_rcsidstr)(?::[^\$]*|)\$";
@@ -79,8 +178,6 @@ my $regex_validchars	= qr"[\011\040-\176]";
 
 # Global variables that should be eliminated by the next refactoring.
 my %definesfound	= ();
-my $errors		= 0; # number of errors
-my $warnings		= 0; # number of warnings
 my $pkgdir		= ".";
 my $filesdir		= "files";
 my $patchdir		= "patches";
@@ -96,19 +193,6 @@ my $seen_USE_PKGLOCALEDIR = false;
 my $seen_USE_BUILDLINK3 = false;
 my %predefined;
 my $pkgname		= "";
-
-
-# == Output of messages to the user ==
-# The log_* routines take the parameters ($file, $lineno, $msg).
-# $file is the file where the message originated or NO_FILE.
-# $lineno is the line number if applicable or NO_LINE_NUMBER.
-# $msg is the text of the message.
-sub NO_FILE();
-sub NO_LINE_NUMBER();
-sub log_error($$$);
-sub log_warning($$$);
-sub log_info($$$);
-sub print_summary_and_exit();
 
 sub checkfile_DESCR($);
 sub checkfile_distinfo($);
@@ -145,7 +229,7 @@ usage: $prog [-qvIN] [-B#] [package_directory]
 EOF
 		exit 0;
 	}
-	if ($opts{"v"}) { $opt_verbose = true; }
+	if ($opts{"v"}) { PkgLint::Logging::set_verbose(true); }
 	if ($opts{"N"}) { $opt_newpackage = true; }
 	if ($opts{"I"}) { $opt_dumpmakefile = true; }
 	if ($opts{"B"}) { $opt_contblank = $opts{"B"}; }
@@ -1111,7 +1195,7 @@ EOF
 				"right before \$$conf_rcsidstr\$ tag.");
 		}
 		if ($2 ne '') {
-			if ($opt_verbose || $opt_newpackage) {	# XXX
+			if (PkgLint::Logging::is_verbose || $opt_newpackage) {	# XXX
 				log_warning(NO_FILE, NO_LINE_NUMBER, "".
 				    ($opt_newpackage ? 'for new package, '
 					      : 'is it a new package? if so, ').
@@ -1813,58 +1897,6 @@ sub category_check() {
 		log_error($file, NO_LINE_NUMBER, "no COMMENT line found.");
 	}
 	return true;
-}
-
-#
-# Output of various log messages
-#
-
-
-sub log_message($$$$)
-{
-	my ($file, $lineno, $type, $message) = @_;
-	if ($file eq NO_FILE) {
-		printf("%s: %s\n", $type, $message);
-	} elsif ($lineno == NO_LINE_NUMBER) {
-		printf("%s: %s: %s\n", $type, $file, $message);
-	} else {
-		printf("%s: %s:%d: %s\n", $type, $file, $lineno, $message);
-	}
-}
-
-sub NO_FILE() { return ""; }
-sub NO_LINE_NUMBER() { return 0; }
-
-sub log_error($$$)
-{
-	my ($file, $lineno, $msg) = @_;
-	log_message($file, $lineno, "FATAL", $msg);
-	$errors++;
-}
-
-sub log_warning($$$)
-{
-	my ($file, $lineno, $msg) = @_;
-	log_message($file, $lineno, "WARN", $msg);
-	$warnings++;
-}
-
-sub log_info($$$)
-{
-	my ($file, $lineno, $msg) = @_;
-	if ($opt_verbose) {
-		log_message($file, $lineno, "OK", $msg);
-	}
-}
-
-sub print_summary_and_exit()
-{
-	if ($errors != 0 || $warnings != 0) {
-		print("$errors fatal errors and $warnings warnings found.\n");
-	} else {
-		print "looks fine.\n";
-	}
-	exit($errors != 0);
 }
 
 #
