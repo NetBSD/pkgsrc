@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/04/04 16:12:01 magick Exp $
+# $NetBSD: Makefile,v 1.38 2004/04/12 15:14:55 xtraeme Exp $
 
 DISTNAME=	xemacs-21.5.17
 CATEGORIES=	editors
@@ -8,7 +8,7 @@ MAINTAINER=	magick@NetBSD.org
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	*BETA* XEmacs text editor version 21.5.17
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 BUILD_DEFS+=	XEMACS_WIDGETS XEMACS_ESD USE_LDAP USE_XFACE XEMACS_USE_CANNA
@@ -23,49 +23,49 @@ GCC_REQD+=		2.95.3
 
 XEMACS_WIDGETS?=	lucid
 .if ${XEMACS_WIDGETS} == "gtk"
-.  include "../../x11/gtk/buildlink2.mk"
+.  include "../../x11/gtk/buildlink3.mk"
 WITH_WIDGETS=	--with-gtk
 .elif ${XEMACS_WIDGETS} == "gnome"
-.  include "../../x11/gnome-libs/buildlink2.mk"
+.  include "../../x11/gnome-libs/buildlink3.mk"
 WITH_WIDGETS=	--with-gnome
 .elif ${XEMACS_WIDGETS} == "motif"
-.  include "../../mk/motif.buildlink2.mk"
+.  include "../../mk/motif.buildlink3.mk"
 .else
-.  include "../../mk/xaw.buildlink2.mk"
+.  include "../../mk/xaw.buildlink3.mk"
 WITH_WIDGETS=	--with-widgets=lucid
 .endif
 
 .if defined(XEMACS_ESD) && (${XEMACS_ESD} == "YES")
-.  include "../../audio/esound/buildlink2.mk"
+.  include "../../audio/esound/buildlink3.mk"
 .else
 CONFIGURE_ARGS += --with-sound=none
 .endif
 
 .if defined(USE_LDAP) && (${USE_LDAP} == "YES")
 WITH_LDAP=	--with-ldap
-.  include "../../databases/openldap/buildlink2.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 .else
 WITH_LDAP=	--without-ldap
 .endif
 
 .if defined(USE_XFACE) && (${USE_XFACE} == "YES")
-.  include "../../mail/faces/buildlink2.mk"
+.  include "../../mail/faces/buildlink3.mk"
 WITH_XFACE=	--with-xface
 .else
 WITH_XFACE=	--without-xface
 .endif
 
 .if defined(XEMACS_USE_CANNA) && (${XEMACS_USE_CANNA} == "YES")
-.  include "../../inputmethod/canna-lib/buildlink2.mk"
+.  include "../../inputmethod/canna-lib/buildlink3.mk"
 WITH_CANNA=	--with-canna
 .else
 WITH_CANNA=	--without-canna
 .endif
 
-.include "../../databases/gdbm/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../databases/gdbm/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 
 INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
 
