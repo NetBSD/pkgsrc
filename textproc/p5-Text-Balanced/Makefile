@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2001/06/10 06:22:18 explorer Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:42 veego Exp $
 #
 
 DISTNAME=	Text-Balanced-1.85
 PKGNAME=	p5-Text-Balanced-1.85
+SVR4_PKGNAME=	p5tba
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

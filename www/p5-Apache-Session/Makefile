@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/09/19 03:44:39 mjl Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:47 veego Exp $
 #
 
 DISTNAME=		Apache-Session-1.53
 PKGNAME=		p5-${DISTNAME}
+SVR4_PKGNAME=		p5ase
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/}
 

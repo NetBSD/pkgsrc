@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/25 06:07:50 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:43 veego Exp $
 #
 
 DISTNAME=       Text-Wrapper-1.000
 PKGNAME=        p5-Text-Wrapper-1.0
+SVR4_PKGNAME=	p5twr
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
