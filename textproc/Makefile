@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/03/13 13:59:20 rh Exp $
+# $NetBSD: Makefile,v 1.14 1999/03/14 15:35:04 rh Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -11,7 +11,7 @@
 #    SUBDIR += info2html
 #    SUBDIR += isearch
 #    SUBDIR += iso12083
-#    SUBDIR += iso8879
+    SUBDIR += iso8879
     SUBDIR += ispell
 #    SUBDIR += jade
 #    SUBDIR += linuxdoc
