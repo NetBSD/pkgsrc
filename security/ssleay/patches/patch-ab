@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 1998/09/17 00:48:02 garbled Exp $
+$NetBSD: patch-ab,v 1.4 1998/09/30 20:08:22 cjs Exp $
 --- Makefile.ssl.orig	Fri Jun 26 01:25:25 1998
 +++ Makefile.ssl	Wed Sep 16 14:33:49 1998
 @@ -62,7 +62,7 @@
@@ -10,15 +10,6 @@ $NetBSD: patch-ab,v 1.3 1998/09/17 00:48:02 garbled Exp $
  EX_LIBS= 
  AR=ar r
  
-@@ -175,7 +175,7 @@
- 	VERSION PROBLEMS MINFO makefile.one e_os.h \
- 	MICROSOFT makevms.com config PATENTS
- WDIRS=  windows
--LIBS=   libcrypto.a libssl.a 
-+LIBS=	libcrypto.a libssl.a libRSAglue.a
- 
- GENERAL=        Makefile
- BASENAME=       SSLeay
 @@ -327,5 +327,6 @@
  		sh util/ranlib.sh $(INSTALLTOP)/lib/$$i; \
  		chmod 644 $(INSTALLTOP)/lib/$$i ); \
