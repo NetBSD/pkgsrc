@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/25 04:17:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/20 08:33:52 jlam Exp $
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
@@ -12,40 +12,37 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.win.tue.nl/games/roguelike/omega
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
-USE_CURSES=	yes
-REPLACE_NCURSES=	Makefile
+USE_BUILDLINK_ONLY=	# defined
+ALL_TARGET=		# empty
 
-ALL_TARGET=
+# Change references to <curses.h> to <ncurses.h> in the source files.
+post-extract:
+	cd ${WRKSRC}; for file in *.[ch]; do				\
+		${SED} -e "s|<curses\.h>|<ncurses.h>|g"			\
+			$${file} > $${file}.presubst;			\
+		${MV} -f $${file}.presubst $${file};			\
+	done
 
 do-install:
-	@ ${INSTALL_PROGRAM} -o games -g games -m 4711 ${WRKSRC}/omega \
+	${INSTALL_PROGRAM} -o games -g games -m 4711 ${WRKSRC}/omega	\
 		 ${PREFIX}/bin/Omega
-	@ ${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/man/man6
-	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/omega
-	@ ${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/omega
-	@ ${RM} ${PREFIX}/share/omega/license.old
-	@ ${CHMOD} 0600 ${PREFIX}/share/omega/omega.hi
-	@ ${CHMOD} 0600 ${PREFIX}/share/omega/omega.log
-	@ ${CP} ${PREFIX}/share/omega/omega.hi ${PREFIX}/share/omega/omegahi.bak
-	@ ${CHOWN} -R games:games ${PREFIX}/share/omega
+	${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/man/man6
+	${INSTALL_DATA_DIR} ${PREFIX}/share/omega
+	${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/omega
+	${RM} ${PREFIX}/share/omega/license.old
+	${CHMOD} 0600 ${PREFIX}/share/omega/omega.hi
+	${CHMOD} 0600 ${PREFIX}/share/omega/omega.log
+	${CP} ${PREFIX}/share/omega/omega.hi ${PREFIX}/share/omega/omegahi.bak
+	${CHOWN} -R games:games ${PREFIX}/share/omega
 
 post-install:
-	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/omega
-.for file in buglist.txt docs/compile.all docs/readme.1st docs/omega.txt docs/readme3 docs/readme4
-	@ ${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/omega
-.endfor
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${NEED_NCURSES} == "YES"
-CFLAGS+=	-I${LOCALBASE}/include		# for ncurses.h
-
-post-extract:
-	cd ${WRKSRC} &&							\
-	for fn in defs.h file.c fixstr.c genclr.c inv.c scr.c; do	\
-		${SED} "s/curses.h/ncurses.h/" $$fn > $$fn.new;	\
-		${MV} $$fn.new $$fn;				\
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/omega
+	cd ${WRKSRC}; for file in					\
+		buglist.txt docs/compile.all docs/readme.1st		\
+		docs/omega.txt docs/readme3 docs/readme4;		\
+	do								\
+		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/omega;	\
 	done
-.endif
 
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
