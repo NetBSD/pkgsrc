@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 1998/08/23 06:22:17 garbled Exp $
+--- config/Makefile.in	1997/10/13 10:47:39	1.1
++++ config/Makefile.in	1997/10/13 10:47:51
+@@ -29,7 +29,7 @@
+ # pathname for srcdir here, and live with it.
+ srcdir = $(srctop)
+ 
+-beforeinstall:: install-dirs
++beforeinstall: install-dirs
+ 
+ .include "${srcdir}/pthreads/Makefile.inc"
+ .include "${srcdir}/stdlib/Makefile.inc"
+Note that the context for this next patch is set to 2, to avoid the Id line
+- agc
