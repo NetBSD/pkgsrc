@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1850 2003/04/06 11:07:22 rh Exp $
+$NetBSD: CHANGES,v 1.1851 2003/04/06 11:07:56 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1470,3 +1470,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xjed to 0.99.16 [wiz 2003-04-05]
 	Added xvidcore-0.9.1 [rh 2003-04-06]
 	Added xine-lib-1.0rc9 [rh 2003-04-06]
+	Added iplog-2.2.3 [hubertf 2003-04-06]
