@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/03/10 23:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/10 23:28:24 wiz Exp $
 #
 
 DISTNAME=	naim-0.11.5.6
 CATEGORIES=	chat
 MASTER_SITES=	http://www.acm.rpi.edu/~n/naim/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://site.rpi-acm.org/info/naim/
 COMMENT=	ncurses-based AIM/IRC client
 
