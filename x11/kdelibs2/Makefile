@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/11/15 11:33:13 tron Exp $
+# $NetBSD: Makefile,v 1.22 2001/11/15 21:00:27 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.1
 CATEGORIES=	x11
@@ -69,7 +69,6 @@ post-install:
 
 .include "../../archivers/bzip2/buildlink.mk"
 .include "../../audio/libaudiofile/buildlink.mk"
-.include "../../databases/openldap/buildlink.mk"
 .include "../../devel/pcre/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../print/cups/buildlink.mk"
