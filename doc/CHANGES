@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1871 2003/04/08 14:02:40 jschauma Exp $
+$NetBSD: CHANGES,v 1.1872 2003/04/08 23:18:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1493,3 +1493,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ja-samba to 2.2.7.1.1.1nb2 [taca 2003-04-08]
 	Updated mrtg to 2.9.28 [martti 2003-04-08]
 	Updated bins to 1.1.21 [martti 2003-04-08]
+	Updated imapfilter to 0.8.7 [seb 2003-04-08]
