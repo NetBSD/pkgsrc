@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:13:00 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/30 03:41:54 minskim Exp $
 
-DISTNAME=	molden4.0
+DISTNAME=	molden4.2
 PKGNAME=	${DISTNAME:S/molden/&-/}
-PKGREVISION=	1
 CATEGORIES=	misc # chemistry
 MASTER_SITES=	ftp://ftp.cmbi.kun.nl/pub/molgraph/molden/
 EXTRACT_SUFX=	.tar.Z
@@ -10,6 +9,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.cmbi.kun.nl/~schaft/molden/molden.html
 COMMENT=	Displaying MOLecular DENsity
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKEFILE=	makefile
 ALL_TARGET=	molden
@@ -35,6 +36,8 @@ _FETCH_MESSAGE=	\
 	${ECHO} ; \
 	${ECHO} " Then put the file ${DISTNAME}${EXTRACT_SUFX} into ${DISTDIR}."; \
 	${ECHO} "======================================================================"
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/molden ${PREFIX}/bin/
