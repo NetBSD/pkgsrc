@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2002/09/01 09:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2002/09/11 09:48:46 wiz Exp $
 #
 
-DISTNAME=		gqmpeg-0.18.0
+DISTNAME=		gqmpeg-0.19.0
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg/}
 
@@ -10,13 +10,12 @@ HOMEPAGE=		http://gqmpeg.sourceforge.net/
 COMMENT=		GTK+ front end to mpg123
 
 BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=		mpg123>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
-USE_BUILDLINK_ONLY=	YES
-USE_X11BASE=		YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext \
 			--datadir=${PREFIX}/${PKGLOCALEDIR}
@@ -36,8 +35,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gnome/apps/Multimedia
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
