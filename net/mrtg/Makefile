@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/27 07:11:16 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2000/09/03 12:50:42 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -33,6 +33,8 @@ CONFIGURE_ARGS+=	--with-png-lib=${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-png-inc=${LOCALBASE}/include
 .endif
 
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
 	    >${WRKDIR}/mrtg.conf.example
@@ -40,6 +42,8 @@ post-build:
 	    >${WRKDIR}/netstat2mrtg
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/sys2mrtg \
 	    >${WRKDIR}/sys2mrtg
+	${SED} s#@PREFIX@#${PREFIX}#g <${PKGDIR}/MESSAGE \
+	    >${MESSAGE_FILE}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/mrtg
