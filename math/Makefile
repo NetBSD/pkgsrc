@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.73 2002/01/28 14:42:39 agc Exp $
+# $NetBSD: Makefile,v 1.74 2002/02/02 03:32:42 wiz Exp $
 #
 
 COMMENT=	Mathematics
 
 SUBDIR+=	R
-SUBDIR+=	abacus
 SUBDIR+=	abs
 SUBDIR+=	admesh
 SUBDIR+=	aribas
