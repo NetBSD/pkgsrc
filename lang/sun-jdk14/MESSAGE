@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2003/08/10 23:23:26 jschauma Exp $
+$NetBSD: MESSAGE,v 1.8 2003/08/10 23:59:55 christos Exp $
 
 In order to be able to run the JVM, you will need to compile your kernel
 with the following options:
@@ -7,6 +7,10 @@ with the following options:
 makeoptions     TEXTADDR=d0100000
 options         KERNBASE_LOCORE=0xd0000000
 options         COMPAT_LINUX
+
+Your kernel needs to be build from current sources later than 2003-08-09.
+Otherwise, jdk will fail to run properly on programs that can throw
+NullPointerExceptions.
 
 Furthermore, the data segment size set by your shell's 'ulimit' builtin must
 be at least 131204 -- please refer to your shell's manual page for details.
