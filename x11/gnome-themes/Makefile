@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2004/12/24 10:10:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2005/03/22 16:20:22 jmmv Exp $
 #
 
-DISTNAME=		gnome-themes-2.8.2
+DISTNAME=		gnome-themes-2.10.0
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-themes/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-themes/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -25,6 +25,7 @@ GNU_CONFIGURE=		yes
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../wm/metacity/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2-engines/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
