@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.4 2000/08/30 09:50:46 abs Exp $
+$NetBSD: patch-ap,v 1.5 2001/04/23 15:06:19 abs Exp $
 
 --- util/TypeRules.h.orig	Sun Jun 13 08:41:26 1999
 +++ util/TypeRules.h

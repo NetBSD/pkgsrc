@@ -1,24 +1,24 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:04:19 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/04/23 15:06:11 abs Exp $
 
-SHA1 (hylafax/hylafax-4.1beta2.tar.gz) = 850908ce35392c0aa7265fd1c6bed44b176eeda9
-Size (hylafax/hylafax-4.1beta2.tar.gz) = 1369356 bytes
-SHA1 (hylafax/tiff-3.5-interfaces.patch) = 54d885f213e6b8130a62c0d22487a21e712132b6
-Size (hylafax/tiff-3.5-interfaces.patch) = 8229 bytes
-SHA1 (patch-aa) = a75c65ac39cda121b3fabb96f9103b1322d9d90a
-SHA1 (patch-ab) = b521e363f0098827bb9341467f272d109e08a2eb
-SHA1 (patch-ac) = 49dd31a6c86d1854c32aa5f997232b1ef8e53d2e
-SHA1 (patch-ad) = f17e299c24b0fc519646f6d709dcebfc724ad82c
-SHA1 (patch-ae) = a484221b5b7991289d34a8359d9e9546a2379bdb
-SHA1 (patch-af) = 9f9e34540b9c8d55df6bd88ade7a424a393cb5cd
-SHA1 (patch-ag) = 31e968a0136b2f264981029755c62cf199792ed4
-SHA1 (patch-ah) = 235a59f71b29da1dc1e09e649909766015cd070e
-SHA1 (patch-ai) = 8da1b6179213f367deeef4b83f0a077395fb5bfe
-SHA1 (patch-aj) = 0bb5f670dcd2ddebbdaf9ad8d2c7ea4adc0f7a77
-SHA1 (patch-ak) = d5f302424fe919021a1ce33a099c5e049c064b58
+SHA1 (hylafax/hylafax-4.1beta3.tar.gz) = a54eab5a92b59a82699d08185433ea83b7647bd1
+Size (hylafax/hylafax-4.1beta3.tar.gz) = 1233050 bytes
+SHA1 (hylafax/hfaxd-vulnerability.patch) = b5f1cecc19b529342815607c3f9d3da195313a58
+Size (hylafax/hfaxd-vulnerability.patch) = 813 bytes
+SHA1 (patch-aa) = 74271a248f82daa1d340b83e70eaf679387b4eb0
+SHA1 (patch-ab) = d4cd3bdebfdd9cb13bd9a4feb5115bb918cb2a12
+SHA1 (patch-ac) = 8085488a52793e653b70f32026ce8061573b6557
+SHA1 (patch-ad) = f7a05f020bc6e97a8908b1fc938460ac333a029a
+SHA1 (patch-ae) = 5ebc7e58f51d67dc6555292f635e3274b67e25dd
+SHA1 (patch-af) = 7271d4c6f2c521da14f4f8d041ec93723a0c1a7a
+SHA1 (patch-ag) = 75c7c633587a952d7f62e7f450a816b8e6ad298b
+SHA1 (patch-ah) = fbd4d348186e866099d2abb0fd001ec1e9b5a1e0
+SHA1 (patch-ai) = 1a2c68a52f703a54b293b977fd923e2373941b40
+SHA1 (patch-aj) = 86520589dc1be4517e0c0f0b349b04a04bed41d9
+SHA1 (patch-ak) = f72d797419ce1c9d50d03f2c5e5db16a0b30e5cb
 SHA1 (patch-al) = e8a7576143b51781fc2aa985e761a19c0e756d13
-SHA1 (patch-am) = 7d50f78d38e114e3e4e8e32dc8db4fc8195aabfd
-SHA1 (patch-an) = 12498e08136b0dd75e3941a831d5ac8ed4f1cd64
+SHA1 (patch-am) = 0eb61a129610c59f01282926fa4b3448fa2567ec
+SHA1 (patch-an) = 40abb2e767a65a7d54e8773118700e20a32d90d8
 SHA1 (patch-ao) = f1c084ca1b4e5fbba29d723bdeaac9d34b2f5289
 SHA1 (patch-ap) = 64a54dd34080fd734bac291ec91785ec36c6f747
-SHA1 (patch-aq) = e1258d83583bfa416b1d59e18ef58918e34f8e05
-SHA1 (patch-ar) = 93434ba83ea22a7b3609c6c39d7eb105733684d6
+SHA1 (patch-aq) = 04add689446223f5b3541f1100d063b38f6ede0e
+SHA1 (patch-ar) = 63b47f7f5197dea10b8c542b04eff61b2cd03ed4

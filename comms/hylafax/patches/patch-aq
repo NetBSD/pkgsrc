@@ -1,10 +1,10 @@
-$NetBSD: patch-aq,v 1.3 2000/08/30 09:50:46 abs Exp $
+$NetBSD: patch-aq,v 1.4 2001/04/23 15:06:20 abs Exp $
 
---- util/faxcron.sh.in.orig	Tue Jun 29 12:55:07 1999
+--- util/faxcron.sh.in.orig	Mon Sep  4 04:18:27 2000
 +++ util/faxcron.sh.in
 @@ -41,7 +41,7 @@
  AGELOG=30			# keep log info for last 30 days
- AGERCV=7			# purge received facsimile after 2 days
+ AGERCV=7			# purge received facsimile after 7 days
  AGETMP=1			# purge orphaned temp files after 1 day
 -FAXUSER=fax			# owner of log files
 +FAXUSER=@FAXUID@		# owner of log files

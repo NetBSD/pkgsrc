@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.3 2000/08/30 09:50:46 abs Exp $
+$NetBSD: patch-ao,v 1.4 2001/04/23 15:06:19 abs Exp $
 
 --- util/TypeRules.c++.orig	Sun Jun 13 08:41:26 1999
 +++ util/TypeRules.c++

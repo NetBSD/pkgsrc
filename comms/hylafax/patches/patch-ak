@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.3 2000/08/30 09:50:46 abs Exp $
+$NetBSD: patch-ak,v 1.4 2001/04/23 15:06:17 abs Exp $
 
---- faxd/UUCPLock.c++.orig	Sun Jun 13 08:41:05 1999
+--- faxd/UUCPLock.c++.orig	Thu Sep 21 10:24:54 2000
 +++ faxd/UUCPLock.c++
 @@ -37,6 +37,7 @@
  }

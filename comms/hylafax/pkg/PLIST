@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/09/20 05:14:11 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/04/23 15:06:21 abs Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -7,9 +7,7 @@ bin/faxstat
 bin/sendfax
 bin/sendpage
 etc/rc.d/hylafax
-libdata/hylafax/faxcover.ps
 libdata/hylafax/faxmail.ps
-libdata/hylafax/hfaxd.conf
 libdata/hylafax/pagesizes
 libdata/hylafax/typerules
 libexec/faxgetty
@@ -30,12 +28,12 @@ libexec/lockname
 libexec/ondelay
 libexec/pagesend
 libexec/textfmt
-man/cat1/faxalter.0.gz
-man/cat1/faxcover.0.gz
-man/cat1/faxmail.0.gz
-man/cat1/faxrm.0.gz
-man/cat1/faxstat.0.gz
-man/cat1/hylafax.0.gz
+man/cat1/faxalter.0
+man/cat1/faxcover.0
+man/cat1/faxmail.0
+man/cat1/faxrm.0
+man/cat1/faxstat.0
+man/cat1/hylafax-client.0.gz
 man/cat1/sendfax.0.gz
 man/cat1/sendpage.0.gz
 man/cat1/sgi2fax.0.gz
@@ -44,8 +42,9 @@ man/cat5/cid.0.gz
 man/cat5/config.0.gz
 man/cat5/destctrls.0.gz
 man/cat5/dialrules.0.gz
+man/cat5/doneq.0.gz
 man/cat5/hosts.hfaxd.0.gz
-man/cat5/hylafax.0.gz
+man/cat5/hylafax-server.0.gz
 man/cat5/info.0.gz
 man/cat5/log.0.gz
 man/cat5/pagermap.0.gz
@@ -113,7 +112,6 @@ sbin/faxsetup.irix
 sbin/faxsetup.linux
 sbin/faxstate
 sbin/faxwatch
-sbin/hylafax
 sbin/probemodem
 sbin/recvstats
 sbin/tagtest
@@ -125,12 +123,14 @@ share/doc/hylafax/COPYRIGHT
 share/hylafax/config_template/att-dataport
 share/hylafax/config_template/att-dataport-2
 share/hylafax/config_template/att-dataport-2.0
+share/hylafax/config_template/att-dpexpress-2
 share/hylafax/config_template/cirrus
 share/hylafax/config_template/class1
 share/hylafax/config_template/class2
 share/hylafax/config_template/class2.0
 share/hylafax/config_template/dsi-scout+
 share/hylafax/config_template/e-tech
+share/hylafax/config_template/elsa-microlink-56k-basic-2.0
 share/hylafax/config_template/everex-2496d
 share/hylafax/config_template/exar
 share/hylafax/config_template/gvc-288
@@ -139,6 +139,7 @@ share/hylafax/config_template/intel-400e
 share/hylafax/config_template/moto-288
 share/hylafax/config_template/mt-1432
 share/hylafax/config_template/nuvo-voyager
+share/hylafax/config_template/performance-rts
 share/hylafax/config_template/ppi-pm14400fxmt
 share/hylafax/config_template/ppi-pm14400fxsa
 share/hylafax/config_template/rc144ac
@@ -147,7 +148,8 @@ share/hylafax/config_template/rc288dpi
 share/hylafax/config_template/rc288dpi-1
 share/hylafax/config_template/rc32acl
 share/hylafax/config_template/rc32acl-1
-share/hylafax/config_template/rockwell
+share/hylafax/config_template/rockwell-k56
+share/hylafax/config_template/rockwell-rc
 share/hylafax/config_template/sierra
 share/hylafax/config_template/skel
 share/hylafax/config_template/telebit-qblazer
@@ -155,6 +157,7 @@ share/hylafax/config_template/telebit-t3000
 share/hylafax/config_template/telebit-wb
 share/hylafax/config_template/tricom2842
 share/hylafax/config_template/uds-fastalk
+share/hylafax/config_template/umc92144
 share/hylafax/config_template/usr-2.0
 share/hylafax/config_template/usr-rts
 share/hylafax/config_template/usr-xon
@@ -162,14 +165,10 @@ share/hylafax/config_template/zyxel-1496e
 share/hylafax/config_template/zyxel-1496e-1
 share/hylafax/config_template/zyxel-1496e-2.0
 share/hylafax/config_template/zyxel-2864
-share/hylafax/etc_template/cover.templ
 share/hylafax/etc_template/dialrules
 share/hylafax/etc_template/dialrules.europe
 share/hylafax/etc_template/dialrules.sf-ba
 share/hylafax/etc_template/dpsprinter.ps
-share/hylafax/etc_template/hosts.hfaxd
-share/hylafax/etc_template/lutRS18.pcf
-share/hylafax/etc_template/xferfaxlog
 @dirrm share/hylafax/config_template
 @dirrm share/hylafax/etc_template
 @dirrm share/hylafax
