@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2004/05/13 11:40:14 taca Exp $
+# $NetBSD: Makefile,v 1.80 2004/05/30 10:29:00 grant Exp $
 
-DISTNAME=		mod_ssl-2.8.17-1.3.31
-PKGNAME=		ap-ssl-2.8.17
+DISTNAME=		mod_ssl-2.8.18-1.3.31
+PKGNAME=		ap-ssl-2.8.18
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
@@ -42,7 +42,7 @@ OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/ssl.key			\
 SUPPORT_FILES=		# empty
 SUPPS=			ssl.crl/Makefile.crl ssl.crl/README.CRL		\
 			ssl.crt/Makefile.crt ssl.crt/README.CRT		\
-			ssl.crt/ca-bundle.crt ssl.crt/README.CSR	\
+			ssl.csr/README.CSR ssl.csr/README.CSR		\
 			ssl.key/README.KEY ssl.prm/README.PRM
 .for FILE in ${SUPPS}
 SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
