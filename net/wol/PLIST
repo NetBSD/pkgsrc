@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/14 17:57:25 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/17 15:10:25 zuntum Exp $
 bin/wol
-bin/wol-boottab
+bin/wol-bootptab
 bin/wol-dhcpdconf
 info/wol.info
 man/man1/wol.1
