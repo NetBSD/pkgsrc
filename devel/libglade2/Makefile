@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/01/03 15:26:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/05 11:54:44 jmmv Exp $
 #
 
 DISTNAME=		libglade-2.0.1
-PKGNAME=		libglade2-2.0.1
-PKGREVISION=		2
+PKGNAME=		${DISTNAME:S/libglade/libglade2/}
+PKGREVISION=		3
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.0/}
 
@@ -19,6 +19,10 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+CONFIGURE_ENV+=		jh_cv_path_python="${PYTHONBIN}"
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
+
+.include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
