@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2002/06/10 05:51:05 martti Exp $
+# $NetBSD: Makefile,v 1.49 2002/07/03 22:43:39 abs Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -43,6 +43,16 @@ MAKEFLAGS+=	NETBSD_COMPATIBLE=YES
 MANINSTALL=
 MAKE_ENV+=	MANINSTALL= MKMAN=no NOMAN=YES
 MAKE_ENV+=	ZOULARISBASE=${ZOULARISBASE}
+.endif
+
+.if ${OPSYS} == "Linux"
+MAKE_ENV+=		DIGESTDIR=${.CURDIR}/../digest/files
+CPPFLAGS+=		-I${DIGESTDIR} -I${DIGESTDIR}
+CPPFLAGS+=		-D__COPYRIGHT\(x\)=\; -D__RCSID\(x\)=\;
+MAKE_ENV+=		LORDER=echo TSORT=tsort
+MAKE_ENV+=		BINGRP=${BINGRP} BINOWN=${BINOWN}
+MAKE_ENV+=		BINDIR=${PKG_TOOLS_BIN}
+MAKE_ENV+=		MANDIR=${PKG_TOOLS_BIN}/../man
 .endif
 
 .if ${OPSYS} == "Darwin"

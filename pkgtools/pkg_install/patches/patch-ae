@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2002/07/03 22:43:40 abs Exp $
+
+--- lib/lib.h.orig	Fri May 10 14:17:57 2002
++++ lib/lib.h
+@@ -257,6 +257,10 @@
+ /* For all */
+ int     pkg_perform(lpkg_head_t *);
+ 
++#ifdef FGETLN_MISSING
++char   *fgetln(FILE *, size_t *);
++#endif
++
+ /* Externs */
+ extern Boolean Verbose;
+ extern Boolean Fake;

@@ -1,13 +1,42 @@
-$NetBSD: patch-aa,v 1.5 2002/03/04 13:48:31 seb Exp $
+$NetBSD: patch-aa,v 1.6 2002/07/03 22:43:40 abs Exp $
 
---- Makefile.orig	Fri Feb  8 19:18:50 2002
-+++ Makefile
-@@ -2,5 +2,7 @@
- # Original from FreeBSD, no rcs id.
+--- Makefile.inc.orig	Sun Apr  8 15:11:48 2001
++++ Makefile.inc
+@@ -3,6 +3,9 @@
  
--SUBDIR=lib .WAIT add admin create delete info
-+SUBDIR=lib add admin create delete info
-+
-+all-add all-admin all-create all-delete all-info: all-lib
+ .include <bsd.own.mk>
  
- .include <bsd.subdir.mk>
++.if !defined(PRINTOBJDIR)
++PRINTOBJDIR=   printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -B -s -f-
++.endif
+ LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
+ CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
+ 
+@@ -32,9 +35,27 @@
+ CHGRP?= /usr/bin/chgrp
+ WARNS=0
+ .elif ${OPSYS} == "Linux"
++LOCALBASE?= /usr/pkg
+ CHMOD?= /bin/chmod
+ CHOWN?= /bin/chown
+ CHGRP?= /bin/chgrp
++LDADD+= -ldb1
++.PATH: ${DIGESTDIR}
++CPPFLAGS+= -I${DIGESTDIR}
++MKCATPAGES=     no
++TAR_CMD?= tar
++TAR_FULLPATHNAME?= /bin/${TAR_CMD}
++CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
++CPPFLAGS+=-DTAR_MISSING_FAST_READ -DFGETLN_MISSING
++.elif ${OPSYS} == "Darwin"
++CHMOD?= /bin/chmod
++CHOWN?= /usr/sbin/chown
++CHGRP?= /usr/bin/chgrp
++TAR_CMD?= gnutar
++TAR_FULLPATHNAME?= /usr/bin/${TAR_CMD}
++CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
++.PATH: ${DIGESTDIR}
++CPPFLAGS+= -I${DIGESTDIR}
+ .endif
+ 
+ CPPFLAGS+= -DCHMOD='"${CHMOD}"' -DCHOWN='"${CHOWN}"' -DCHGRP='"${CHGRP}"'

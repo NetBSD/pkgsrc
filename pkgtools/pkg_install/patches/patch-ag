@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2002/07/03 22:43:41 abs Exp $
+
+--- lib/pkgdb.c.orig	Sun Sep 16 17:34:45 2001
++++ lib/pkgdb.c
+@@ -35,7 +35,11 @@
+  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
++#ifdef __linux__
++#include <db1/db.h>
++#else
+ #include <db.h>
++#endif
+ #include <err.h>
+ #include <errno.h>
+ #include <fcntl.h>
