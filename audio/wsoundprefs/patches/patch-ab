@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/04/06 17:39:40 tron Exp $
+$NetBSD: patch-ab,v 1.2 1999/04/26 23:34:08 tron Exp $
 
 --- src/Imakefile.orig	Tue Mar  2 08:06:36 1999
 +++ src/Imakefile	Sun Mar 21 03:19:46 1999
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/04/06 17:39:40 tron Exp $
  WRASTERLFLAGS = `get-wraster-flags --lflags`
  WRASTERLIBS = `get-wraster-flags --libs`
 -WINGSLIBS = -lWINGs -lPropList
-+WINGSLIBS = -lWINGs -L${LOCALBASE}/lib -lPropList
++WINGSLIBS = -lWINGs -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lPropList
  
  STD_INCLUDES = $(WRASTERCFLAGS)
  DEPLIBS = $(DEPXLIB) 
