@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.4 2001/07/07 12:17:35 abs Exp $
+# $Id: pkgchk.sh,v 1.5 2001/07/08 23:15:53 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Order updates based on DEPENDENCIES.
@@ -13,7 +13,7 @@ extract_variables()
 
     if [ -z "$PKGSRCDIR" ];then
 	if [ -f /etc/mk.conf ] ;then
-	    eval `printf 'all:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | make -f - -f /etc/mk.conf`
+	    eval `printf 'BSD_PKG_MK=1\nall:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | make -f - -f /etc/mk.conf`
 	fi
 	if [ -z "$PKGSRCDIR" ];then
 	    PKGSRCDIR=/usr/pkgsrc
@@ -47,10 +47,11 @@ pkg_install()
     INSTALL=$3
     if [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
 	if [ $INSTALL = U ];then
-	    echo "pkg_delete $PKGNAME"
+	    PKG=`echo $PKGNAME | sed 's/-[0-9].*//'`
+	    echo "pkg_delete $PKG"
 	    if [ -z "$opt_n" ];then
-		if pkg_delete $PKGNAME ; then
-		    echo "Deleted $PKGNAME"
+		if pkg_delete $PKG ; then
+		    echo "Deleted $PKG"
 		else
 		    echo "Can only update packages with dependencies via -s"
 		    exit 1
@@ -211,12 +212,12 @@ for pkgdir in $PKGDIRLIST ; do
 	if [ -n "$pkginstalled" ];then
 	    echo -n "version mismatch - $pkginstalled"
 	    if [ -n "$opt_u" ]; then
-		DO_UPDATE="$DO_UPDATE $pkgname $pkgdir"
+		UPDATE_TODO="$UPDATE_TODO $pkgname $pkgdir"
 	    fi
 	else
 	    echo -n "missing"
 	    if [ -n "$opt_a" ] ; then
-		DO_INSTALL="$DO_INSTALL $pkgname $pkgdir"
+		INSTALL_TODO="$INSTALL_TODO $pkgname $pkgdir"
 	    fi
 	fi
 	if [ -f $PACKAGES/All/$pkgname.tgz ] ;then
@@ -228,12 +229,12 @@ for pkgdir in $PKGDIRLIST ; do
     fi
 done
 
-if [ -n "$DO_UPDATE" ];then
+if [ -n "$UPDATE_TODO" ];then
     echo "Updating..."
 
     # Generate list including packages which depend on updates
     #
-    set -- $DO_UPDATE
+    set -- $UPDATE_TODO
     while [ $# != 0 ]; do
 	PKGNAME=`echo $1 | sed 's/-[0-9].*//'`
 	if [ -f /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
@@ -246,7 +247,7 @@ if [ -n "$DO_UPDATE" ];then
 
     # drop any packages whose 'parents' are also to be updated
     #
-    DO_UPDATE=`printf "$LIST" | awk -F '|' '
+    UPDATE_TODO=`printf "$LIST" | awk -F '|' '
     {
     pkg2dir[$1] = $2
     split($3, deplist, " ")
@@ -268,18 +269,27 @@ if [ -n "$DO_UPDATE" ];then
     }
     '`
 
-    set -- $DO_UPDATE
+    set -- $UPDATE_TODO
     while [ $# != 0 ]; do
 	pkg_install $1 $2 U
+	UPDATE_DONE=$UPDATE_DONE" "$1
 	shift ; shift;
     done
 fi
 
-if [ -n "$DO_INSTALL" ];then
+if [ -n "$INSTALL_TODO" ];then
     echo "Installing..."
-    set -- $DO_INSTALL
+    set -- $INSTALL_TODO
     while [ $# != 0 ]; do
 	pkg_install $1 $2 I
+	INSTALL_DONE=$INSTALL_DONE" "$1
 	shift ; shift;
     done
+fi
+
+if [ -n "$UPDATE_DONE" ];then
+    echo "Updated:$UPDATE_DONE"
+fi
+if [ -n "$INSTALL_DONE" ];then
+    echo "Installed:$INSTALL_DONE"
 fi
