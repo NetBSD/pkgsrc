@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/01/03 15:56:32 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2004/01/23 22:02:52 jmmv Exp $
 
-SHA1 (kopete-0.7.4.tar.bz2) = ca9ba3b8b6e001e33a73ff26b516ee7cd1725edc
-Size (kopete-0.7.4.tar.bz2) = 3149715 bytes
-SHA1 (patch-aa) = 459df3d849d436f875e9e0ea8d44594794e22a6e
+SHA1 (kopete-0.8beta2.tar.bz2) = cdedaf1e6c6c63466c2ced3ee753a87395d4a8e6
+Size (kopete-0.8beta2.tar.bz2) = 3671477 bytes
