@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2002/10/21 14:52:27 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2002/12/22 14:59:25 agc Exp $
 #
 
-DISTNAME=	tkcvs-7_03
-PKGNAME=	tkcvs-7.0.3
+DISTNAME=	tkcvs_7_1_2
+PKGNAME=	tkcvs-7.1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.twobarleycorns.net/ \
 		${MASTER_SITE_SOURCEFORGE:=tkcvs/}
