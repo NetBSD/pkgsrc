@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.20 2002/12/23 00:05:32 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2002/12/25 03:24:49 wiz Exp $
 
-MPLAYER_DIST_VERSION=	0.90rc1
+MPLAYER_DIST_VERSION=	0.90rc2
 #PKGREVISION=		1
 
 # There is no need to change anything below here.
 
 # This variable is used in all packages which depend on this package
-MPLAYER_PKG_VERSION=	0.90rc11
+MPLAYER_PKG_VERSION=	0.90rc12
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
 CATEGORIES?=		graphics
