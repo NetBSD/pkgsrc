@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2798 2004/12/29 11:45:37 adrianp Exp $
+$NetBSD: TODO,v 1.2799 2004/12/29 11:52:43 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1054,7 +1054,6 @@ Suggested package updates
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpdump-3.8.3
-	o tcpflow-0.21
 	o tcpick-0.2.0
 	o tcpreplay-2.3.2
 	o tcptrace-6.6.7
