@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2002/07/26 17:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2002/08/19 19:59:36 tron Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--disable-gnome
 CONFIGURE_ARGS+=	--disable-zvt
