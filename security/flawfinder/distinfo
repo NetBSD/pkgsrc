@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/02/14 14:21:17 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/06/23 16:19:41 snj Exp $
 
-SHA1 (flawfinder-1.24.tar.gz) = 600e59a113327ad54875ed8a657146613bd59013
-Size (flawfinder-1.24.tar.gz) = 97222 bytes
+SHA1 (flawfinder-1.26.tar.gz) = 18e773dc5b200b3189185fda6e723665f8e4348c
+Size (flawfinder-1.26.tar.gz) = 130412 bytes
