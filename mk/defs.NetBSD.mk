@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.62 2004/04/07 14:26:51 tv Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.63 2004/04/09 22:43:31 jmmv Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -199,4 +199,11 @@ FFLAGS+=	-mieee
 # check for kqueue(2) support, added in NetBSD-1.6J
 .if exists(/usr/include/sys/event.h)
 PKG_HAVE_KQUEUE=	# defined
+.endif
+
+# check for maximum command line length and set it in configure's environment,
+# to avoid a test required by the libtool script that takes forever.
+.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
+CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 .endif
