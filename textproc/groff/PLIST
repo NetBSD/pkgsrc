@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/01 10:12:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/10 01:54:13 seb Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn
@@ -29,18 +29,6 @@ bin/soelim
 bin/tbl
 bin/tfmtodit
 bin/troff
-info/groff
-info/groff-1
-info/groff-10
-info/groff-11
-info/groff-2
-info/groff-3
-info/groff-4
-info/groff-5
-info/groff-6
-info/groff-7
-info/groff-8
-info/groff-9
 man/man1/addftinfo.1
 man/man1/afmtodit.1
 man/man1/eqn.1
