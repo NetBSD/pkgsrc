@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4384 2004/01/08 06:13:47 grant Exp $
+$NetBSD: CHANGES,v 1.4385 2004/01/08 08:11:47 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -90,3 +90,23 @@ Changes to the packages collection and infrastructure in 2004:
 	Added fprot-workstation-bin-4.3.1 [ben 2004-01-07]
 	Updated wxGTK to 2.4.1nb3 [jmmv 2004-01-07]
 	Updated p5-BSD-Resource to 1.23 [grant 2004-01-08]
+	Updated libxfce4util to 4.0.3 [martti 2004-01-08]
+	Updated libxfce4gui to 4.0.3 [martti 2004-01-08]
+	Updated libxfce4mcs to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-panel to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-mcs-manager to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-mcs-plugins to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-themes to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-toys to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-utils to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-mixer to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-iconbox to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-print to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-fm to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-fm-icons to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-systray to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-wm to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-wm-themes to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-desktop to 4.0.3 [martti 2004-01-08]
+	Updated xfce4-trigger-launcher to 4.0.3 [martti 2004-01-08]
+	Updated xfce4 to 4.0.3 [martti 2004-01-08]
