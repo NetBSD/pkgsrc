@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.29 2003/07/02 16:07:02 grant Exp $
+# $NetBSD: defs.IRIX.mk,v 1.30 2003/07/11 15:40:19 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -117,6 +117,7 @@ _OPSYS_HAS_JAVA=	no		# Java is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _OPSYS_LIBTOOL_REQD=    1.4.20010614nb14 # base version of libtool required
+_OPSYS_NEEDS_XPKGWEDGE=	yes		# xpkgwedge is required for X11
 _OPSYS_PERL_REQD=			# no base version of perl required
 _OPSYS_RPATH_NAME=	-rpath,		# name of symbol in rpath directive to linker 
 _PATCH_CAN_BACKUP=	no		# native patch(1) can make backups
