@@ -1,5 +1,5 @@
---- pico/makefile.neb.orig	Fri Nov 21 17:53:07 1997
-+++ pico/makefile.neb	Fri Nov 21 17:54:36 1997
+--- pico/makefile.neb.orig	Fri Apr  5 10:07:56 1996
++++ pico/makefile.neb	Thu Dec  4 14:17:13 1997
 @@ -28,12 +28,12 @@
  #
  
@@ -37,17 +37,15 @@
  		$(LIBCMD) $(LIBARGS) libpico.a $(OFILES)
  		$(RANLIB) libpico.a
  
--pico:		main.c libpico.a
--		$(CC) $(CFLAGS) main.c libpico.a $(LIBS) -o pico
 +libpico.so.1.3:	osdep.c osdep.h $(SOFILES)
 +		ld -Bshareable -x -o libpico.so.1.3 $(SOFILES)
 + 
-+pico:		main.c libpico.so.1.3
+ pico:		main.c libpico.a
+-		$(CC) $(CFLAGS) main.c libpico.a $(LIBS) -o pico
 +		$(CC) $(CFLAGS) main.c -L. -lpico $(LIBS) -o pico
  
--pilot:		pilot.c libpico.a
+ pilot:		pilot.c libpico.a
 -		$(CC) $(CFLAGS) pilot.c libpico.a $(LIBS) -o pilot
-+pilot:		pilot.c libpico.so.1.3
 +		$(CC) $(CFLAGS) pilot.c -L. -lpico $(LIBS) -o pilot
 + 
 +.c.so:		; $(CC) -fPIC -DPIC -c $(CFLAGS) ${@:.so=.c} -o $@
