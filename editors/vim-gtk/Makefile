@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/01/15 18:46:26 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/25 17:13:16 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -35,8 +35,6 @@ post-install:
 	${LN} -fs vim ${PREFIX}/bin/gview
 	${LN} -fs vim ${PREFIX}/bin/rgvim
 	${LN} -fs vim ${PREFIX}/bin/rgview
-	${LN} -fs vim ${PREFIX}/bin/ex
-	${LN} -fs vim ${PREFIX}/bin/view
 	${LN} -fs vim ${PREFIX}/bin/rvim
 	${LN} -fs vim ${PREFIX}/bin/rview
 

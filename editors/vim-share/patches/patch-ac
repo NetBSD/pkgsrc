@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2000/01/17 17:36:33 pooka Exp $
+$NetBSD: patch-ac,v 1.3 2000/01/25 17:13:18 pooka Exp $
 
 --- Makefile.orig	Sun Jan 16 16:03:04 2000
-+++ Makefile	Mon Jan 17 13:35:17 2000
++++ Makefile	Tue Jan 25 18:56:02 2000
 @@ -737,7 +737,7 @@
  ### might not work when they are changed!)
  VIMDIR = /vim
@@ -19,3 +19,18 @@ $NetBSD: patch-ac,v 1.2 2000/01/17 17:36:33 pooka Exp $
  	@echo generating $(MANSUBDIR)/$(VIMNAME).1
  	@sed -e s+/usr/local/lib/vim+$(VIMLOC)+ \
  		-e s+$(VIMLOC)/doc+$(HELPENDLOC)+ \
+@@ -1469,13 +1470,7 @@
+ 
+ # create links for the manual pages with various names to vim.	This is only
+ # done when the links (or manpages with the same name) don't exist yet.
+-installhelplinks: $(GUI_MAN_TARGETS) $(MANSUBDIR)/$(EXNAME).1 $(MANSUBDIR)/$(VIEWNAME).1 $(MANSUBDIR)/$(RVIMNAME).1 $(MANSUBDIR)/$(RVIEWNAME).1
+-
+-$(MANSUBDIR)/$(EXNAME).1:
+-	cd $(MANSUBDIR); ln -s $(VIMNAME).1 $(EXNAME).1
+-
+-$(MANSUBDIR)/$(VIEWNAME).1:
+-	cd $(MANSUBDIR); ln -s $(VIMNAME).1 $(VIEWNAME).1
++installhelplinks: $(GUI_MAN_TARGETS) $(MANSUBDIR)/$(RVIMNAME).1 $(MANSUBDIR)/$(RVIEWNAME).1
+ 
+ $(MANSUBDIR)/$(GVIMNAME).1:
+ 	cd $(MANSUBDIR); ln -s $(VIMNAME).1 $(GVIMNAME).1
