@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/05/31 13:00:27 seb Exp $
+$NetBSD: patch-ag,v 1.2 2002/06/10 10:21:26 sakamoto Exp $
 
 --- server/setup.c.orig	Mon May  7 12:15:08 2001
 +++ server/setup.c	Mon May  7 12:50:19 2001

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/05/31 13:00:27 seb Exp $
+$NetBSD: patch-ad,v 1.2 2002/06/10 10:21:26 sakamoto Exp $
 
 --- sj3.tmpl.orig	Thu Jan 23 20:20:58 1997
 +++ sj3.tmpl	Fri Jul 30 20:27:08 1999
@@ -14,7 +14,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/31 13:00:27 seb Exp $
 -SJ3CONFDIR	= $(SJ3TOP)/lib/sj3
 -SJ3DICTDIR	= $(SJ3CONFDIR)/dict
 +SJ3CONFDIR	= $(SJ3TOP)/share/sj3
-+SJ3DICTDIR	= $(DICT_DIR)/sj3
++SJ3DICTDIR	= $(IMDICTDIR)/sj3
  
  /*
   * Change for FreeBSD.
