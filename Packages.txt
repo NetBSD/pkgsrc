@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.337 2004/05/02 10:37:48 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.338 2004/06/06 12:46:37 grant Exp $
 ###########################################################################
 
 			==========================
@@ -2477,7 +2477,7 @@ makeinfo command.
 To achieve this goal the pkgsrc infrastructure creates overriding scripts
 for the install-info and makeinfo command in a directory listed early in PATH.
 
-The script overriding install-info has no effect expect the logging of a
+The script overriding install-info has no effect except the logging of a
 message. The script overriding makeinfo logs a message and according to the
 value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
 command or exit on error.
