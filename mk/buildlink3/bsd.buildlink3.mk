@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.34 2004/01/05 05:59:29 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.35 2004/01/05 07:01:43 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -67,7 +67,7 @@ BUILDLINK_DEPENDS?=	# empty
 X11_LINKS_SUBDIR=		share/x11-links
 .if defined(USE_X11)
 USE_X11_LINKS?=			YES
-.  if empty(USE_X11_LINKS:M[nN][oO])
+.  if !empty(USE_X11_LINKS:M[yY][eE][sS])
 BUILDLINK_DEPENDS+=		x11-links
 _BLNK_X11_LINKS_PACKAGE=	x11-links
 .  else
@@ -353,7 +353,7 @@ buildlink-directories:
 .if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
-.  if empty(USE_X11_LINKS:M[nN][oO])
+.  if !empty(USE_X11_LINKS:M[yY][eE][sS])
 .    if exists(${_BLNK_X11_LINKS_DIR})
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_BLNK_X11_LINKS_DIR} && ${PAX} -rw . ${BUILDLINK_X11_DIR}
 .    else
@@ -502,7 +502,7 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^dependency_libs=/s,-L${X11BASE}/[^/ 	]*[ 	]*,,g"	\
 	-e "/^dependency_libs=/s,-L${LOCALBASE}/[^/ 	]*[ 	]*,,g"
 .  if (${PKG_INSTALLATION_TYPE} == "overwrite") ||			\
-      empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
+      !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[nN][oO])
 #
 #     -	Modify the libdir line to point to within ${BUILDLINK_DIR}.
 #	This prevents libtool from looking into the original directory
@@ -725,10 +725,10 @@ _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 #
 _BLNK_TRANSFORM+=       r:
 #
-# Remove -Wl,-R* and *-rpath* if _USE_RPATH != "yes"
+# Remove -Wl,-R* and *-rpath* if _USE_RPATH == "no".
 # Transform -Wl,-R* and *-rpath* if Sun compilers are used.
 #
-.if defined(_USE_RPATH) && empty(_USE_RPATH:M[yY][eE][sS])
+.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[nN][oO])
 _BLNK_TRANSFORM+=       no-rpath
 .endif
 #
