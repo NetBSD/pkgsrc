@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 11:18:27 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/09 15:52:39 agc Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -45,8 +45,10 @@ info/ebzip.info
 @exec install-info %D/info/ebzip-ja.info %D/info/dir
 @exec install-info %D/info/ebzip.info %D/info/dir
 lib/libeb.a
+lib/libeb.la
 lib/libeb.so
 lib/libeb.so.3
+lib/libeb.so.3.5
 share/eb/appendix/LIST
 share/eb/appendix/LIST-ja
 share/eb/appendix/cencro-1.0/catalog
