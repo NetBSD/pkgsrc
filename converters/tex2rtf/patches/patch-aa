@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/25 23:23:01 rh Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/30 18:23:46 ben Exp $
 
---- make.env.orig	Thu Sep 12 11:58:42 1996
-+++ make.env
-@@ -56,7 +56,7 @@
- # Sun with GCC: nothing
- # Solaris: -lgen -ldl -lsocket -lnsl
- # SGI:     -lPW
--COMPLIBS=-lg++
-+COMPLIBS=-lstdc++
+--- tex2rtf.cpp.orig	Wed Aug  7 16:04:05 2002
++++ tex2rtf.cpp
+@@ -330,7 +330,7 @@ bool MyApp::OnInit()
  
- # HP-specific compiler library: an AIAI convenience
- HPCOMPLIBS=
+     if (InputFile)
+     {
+-      sprintf(buf, "Tex2RTF [%s]", FileNameFromPath(InputFile));
++      sprintf(buf, "Tex2RTF [%s]", wxFileNameFromPath(InputFile));
+       frame->SetTitle(buf);
+     }
+ 
+@@ -967,7 +967,7 @@ bool Go(void)
+ 
+   if (InputFile && OutputFile)
+   {
+-    if (!FileExists(InputFile))
++    if (!wxFileExists(InputFile))
+     {
+       OnError("Cannot open input file!");
+       TexCleanUp();
