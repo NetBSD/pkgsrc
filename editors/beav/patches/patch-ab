@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 1998/12/20 21:12:58 bad Exp $
+
+*** beav-140.orig/termio.c	Wed Nov 30 18:43:35 1994
+--- termio.c	Sat Jul  1 17:56:09 1995
+***************
+*** 12,17 ****
+--- 12,20 ----
+  #include    <signal.h>
+  #ifdef BSD
+  #include    <sys/ioctl.h>
++ #if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++ #include <sys/ioctl_compat.h>
++ #endif
+  #else
+  #ifdef OS2
+  #ifndef __EMX__

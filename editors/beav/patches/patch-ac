@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 1998/12/20 21:12:58 bad Exp $
+
+*** beav-140.orig/tcap.c	Sat Jul  1 18:32:02 1995
+--- tcap.c	Sat Jul  1 18:24:29 1995
+***************
+*** 38,44 ****
+  
+  #ifdef BSD
+  #include <sys/ioctl.h>
+! struct winsize ttysize;
+  #endif /* BSD */
+  #ifdef ULTRIX
+  struct winsize ttysize;
+--- 38,44 ----
+  
+  #ifdef BSD
+  #include <sys/ioctl.h>
+! struct ttysize ttysize;
+  #endif /* BSD */
+  #ifdef ULTRIX
+  struct winsize ttysize;
