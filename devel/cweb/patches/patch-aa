@@ -1,0 +1,64 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 17:23:28 jtb Exp $
+
+--- Makefile.orig	Mon Jul 24 07:15:41 2000
++++ Makefile
+@@ -18,23 +18,23 @@
+ #
+ 
+ # directory for TeX inputs (cwebmac.tex goes here)
+-MACROSDIR= /usr/local/texmf/tex/generic
++MACROSDIR= ${PREFIX}/share/texmf/tex/plain/base
+ 
+ # directory for CWEB inputs in @i files
+-CWEBINPUTS= /usr/local/lib/cweb
++CWEBINPUTS= ${PREFIX}/share/cweb
+ 
+ # extension for manual pages ("l" distinguishes local from system stuff)
+-MANEXT= l
+-#MANEXT= 1
++#MANEXT= l
++MANEXT= 1
+ 
+ # directory for manual pages (cweb.1 goes here)
+-MANDIR= /usr/man/man$(MANEXT)
++MANDIR= ${PREFIX}/man/man$(MANEXT)
+ 
+ # destination directory for executables; must end in /
+-DESTDIR= /usr/local/bin/
++DESTDIR= ${PREFIX}/bin/
+ 
+ # directory for GNU EMACS Lisp code (cweb.el goes here)
+-EMACSDIR= /usr/local/emacs/lisp
++EMACSDIR= ${LOCALBASE}/share/emacs/site-lisp
+ 
+ # Set DESTPREF to null if you want to call the executables "tangle" and "weave"
+ # (probably NOT a good idea; we recommend leaving DESTPREF=c)
+@@ -50,21 +50,21 @@
+ WCHANGES=
+ 
+ # We keep debugging info around, for fun, but most users don't need it
+-CFLAGS = -g
+-#CFLAGS = -O
+-LINKFLAGS = -g
+-#LINKFLAGS = -s # for smaller (stripped) executables on many UNIX systems
++#CFLAGS = -g
++CFLAGS = -O
++#LINKFLAGS = -g
++LINKFLAGS = -s # for smaller (stripped) executables on many UNIX systems
+ 
+ # What C compiler are you using?
+-CC = cc
++#CC = cc
+ 
+ # RM and CP are used below in case rm and cp are aliased
+ RM= /bin/rm
+ CP= /bin/cp
+ 
+ # uncomment the second line if you use pdftex to bypass .dvi files
+-PDFTEX = dvipdfm
+-#PDFTEX = pdftex
++#PDFTEX = dvipdfm
++PDFTEX = pdftex
+ 
+ ##########  You shouldn't have to change anything after this point #######
+ 
