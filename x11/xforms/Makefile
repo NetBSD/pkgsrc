@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/11/13 18:26:56 wrstuden Exp $
+# $NetBSD: Makefile,v 1.22 1999/12/16 21:23:02 wrstuden Exp $
 #
 
 DISTNAME=       bxform-088
@@ -23,7 +23,7 @@ ARCH_SUBDIR=    netBSD-${MACHINE_ARCH}
 
 DIST_SUBDIR=		xforms-${MACHINE_ARCH}
 
-ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
 .include "../../mk/bsd.prefs.mk"
@@ -32,8 +32,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 DISTNAME=	bxform-088-ELF
 .endif
 .if ${MACHINE_ARCH} == "sparc" && ${OBJECT_FMT} == "ELF"
-# XXX no ELF objects for sparc on NetBSD
-IGNORE="is not available for ${MACHINE_PLATFORM} using the ELF object format."
+DISTNAME=	bxform-088-ELF
 .endif
 
 ## Define OBJMACHINE so WRKDIR is defined to be ${MACHINE_ARCH}-specific.
