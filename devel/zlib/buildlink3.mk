@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/02/12 02:35:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
@@ -69,33 +69,35 @@ BUILDLINK_IS_BUILTIN.zlib!=	\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.zlib=${BUILDLINK_IS_BUILTIN.zlib}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.zlib:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.zlib=	YES
-.else
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.zlib:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.zlib=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mzlib) && \
-    !empty(BUILDLINK_IS_BUILTIN.zlib:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.zlib=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mzlib)
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.endif
-
-.if defined(USE_ZLIB)
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.zlib:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.zlib=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.zlib)
+.  if !empty(BUILDLINK_IS_BUILTIN.zlib:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.zlib=	YES
+.  else
+BUILDLINK_USE_BUILTIN.zlib=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.zlib:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.zlib=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.zlib=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mzlib) && \
+      !empty(BUILDLINK_IS_BUILTIN.zlib:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.zlib=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mzlib)
+BUILDLINK_USE_BUILTIN.zlib=	NO
+.  endif
+
+.  if defined(USE_ZLIB)
+BUILDLINK_USE_BUILTIN.zlib=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.zlib:M[nN][oO])
