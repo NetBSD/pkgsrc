@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.9 2000/07/10 21:22:08 tron Exp $
+
+--- src/unexelf.c.orig	Mon May 15 18:14:02 2000
++++ src/unexelf.c	Mon Jul 10 00:53:42 2000
+@@ -479,6 +479,7 @@
+ 
+ # ifndef PT_LOAD
+ #  define PT_LOAD	Elf_pt_load
++#  define SHT_PROGBITS	Elf_sht_progbits
+ #  define SHT_SYMTAB	Elf_sht_symtab
+ #  define SHT_DYNSYM	Elf_sht_dynsym
+ #  define SHT_NULL	Elf_sht_null
