@@ -3,7 +3,7 @@ MS Windows.
 
 Features include:
      * Color syntax highlighting on color terminals.
-     * Folding support (New for 0.98!)  
+     * Folding support
      * Extensible in a language resembling C. Completely customizable.
      * Capable of read GNU info files from within JED's info browser
      * A variety of programming modes (with syntax highlighting) are
