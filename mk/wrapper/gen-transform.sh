@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.2 2004/09/22 23:00:26 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -165,8 +165,9 @@ EOF
 		;;
 	##############################################################
 	# mangle:src:dst
-	#	Change "src" into "dst" and "src/*" into "dst/*", and the
-	#	same in -I, -L, and rpath options.
+	#	Change "src" into "dst" and "src/*" into "dst/*" in -I,
+	#	-L, and rpath options, and also in full paths to
+	#	libraries.
 	##############################################################
 	mangle)
 		case $_action in
@@ -406,14 +407,15 @@ EOF
 		;;
 	##############################################################
 	# sub-mangle:src:dst
-	#	Change "src/*" into "dst/*", and the same in -I, -L, and
-	#	rpath options.
+	#	Change "src/*" into "dst/*" in -I, -L, and rpath
+	#	options, and also in full paths to libraries.
 	##############################################################
 	sub-mangle)
 		case $_action in
 		transform|untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			#gen $_action "opt-sub:$1:$2"
+			gen $_action "libpath:$1:$2"
 			gen $_action "opt-sub:-I$1:-I$2"
 			gen $_action "opt-sub:-L$1:-L$2"
 			gen $_action "sub-rpath:$1:$2"
