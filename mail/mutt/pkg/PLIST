@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 1998/02/02 10:48:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/10 18:46:00 tron Exp $
 bin/mutt
 man/man1/mutt.1
 share/misc/Muttrc
 share/misc/mime.types
 share/doc/mutt/manual.txt
-share/doc/mutt/pgp-Notes.txt
+share/doc/mutt/PGP-Notes.txt
 @dirrm share/doc/mutt

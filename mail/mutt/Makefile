@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 1998/06/18 15:25:24 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/10 18:45:59 tron Exp $
 
-DISTNAME=	mutt-0.91.1i
+DISTNAME=	mutt-0.93i
 CATEGORIES=	mail
 MASTER_SITES=	ftp://riemann.iam.uni-bonn.de/pub/mutt/ \
 		ftp://ftp.gbnet.net/pub/mutt-international/ \
@@ -12,15 +12,14 @@ MAINTAINER=	tron@netbsd.org
 
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
+CONFLICTS=	mutt-0.89.1i mutt-0.91i mutt-0.91.1i
+
 RESTRICTED=	"Uses PGP"
 MIRROR_DISTFILE= no
+NO_PATCH=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-curses=${PREFIX} --with-exec-shell=/bin/ksh
+CONFIGURE_ARGS+= --with-curses=${PREFIX} --with-exec-shell=/bin/ksh \
+		 --with-docdir=${PREFIX}/share/doc/mutt
 CONFIGURE_ENV+=	LDFLAGS=-s
-
-post-install:
-	${MKDIR} ${PREFIX}/share/doc/mutt
-	${CP} ${WRKSRC}/doc/manual.txt ${PREFIX}/share/doc/mutt
-	${CP} ${WRKSRC}/doc/pgp-Notes.txt ${PREFIX}/share/doc/mutt
 
 .include "../../mk/bsd.pkg.mk"
