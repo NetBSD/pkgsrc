@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/03/11 13:02:07 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/03/12 22:07:30 jschauma Exp $
 
 .if !defined(QT3_LIBS_BUILDLINK2_MK)
 QT3_LIBS_BUILDLINK2_MK=	# defined
@@ -21,7 +21,8 @@ BUILDLINK_LDFLAGS.qt3-libs=	-L${QTDIR}/lib -Wl,-R${QTDIR}/lib
 PTHREAD_OPTS+=	require
 
 .include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
