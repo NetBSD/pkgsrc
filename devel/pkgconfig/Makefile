@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/29 21:50:26 rh Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/29 22:35:21 dmcmahill Exp $
 #
 
 DISTNAME=	pkgconfig-0.13.0
@@ -13,6 +13,7 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/glib-1.2.8/libtool
+CONFIGURE_ARGS+=	--disable-threads
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
