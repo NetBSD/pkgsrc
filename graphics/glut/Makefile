@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/09/18 16:25:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2003/11/09 02:23:18 jschauma Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
+PKGREVISION=		1
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
