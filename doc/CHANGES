@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6201 2004/06/11 18:52:10 epg Exp $
+$NetBSD: CHANGES,v 1.6202 2004/06/11 23:13:37 jdarrow Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2933,3 +2933,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated blender to 2.32nb2 [jmmv 2004-06-10]
 	Updated peace to 0.0.20040611 [kent 2004-06-11]
 	Updated subversion to 1.0.5 [epg 2004-06-11]
+	Updated milter-regex to 1.5 [jdarrow 2004-06-11]
