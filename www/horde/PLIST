@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/17 17:58:13 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/16 21:08:40 bouyer Exp $
+
+
 share/horde/config/horde.php.dist
 share/horde/config/html.php.dist
 share/horde/config/lang.php.dist
@@ -77,6 +79,8 @@ share/horde/lib/Auth/imap.php
 share/horde/lib/Auth/krb5.php
 share/horde/lib/Auth/ldap.php
 share/horde/lib/Auth/mcal.php
+share/horde/lib/Auth/radius.php
+share/horde/lib/Auth/smb.php
 share/horde/lib/Auth/sql.php
 share/horde/lib/Browser.php
 share/horde/lib/Cache.php
@@ -98,6 +102,7 @@ share/horde/lib/Group.php
 share/horde/lib/Help.php
 share/horde/lib/Horde.php
 share/horde/lib/Identity.php
+share/horde/lib/Image.php
 share/horde/lib/Lang.php
 share/horde/lib/MIME.php
 share/horde/lib/MIME/Magic.php
@@ -155,6 +160,7 @@ share/horde/lib/VFS/sql_file.php
 share/horde/lib/base.php
 share/horde/lib/version.php
 share/horde/locale/bg_BG/LC_MESSAGES/horde.mo
+share/horde/locale/ca_ES/LC_MESSAGES/horde.mo
 share/horde/locale/cs_CZ/LC_MESSAGES/horde.mo
 share/horde/locale/da_DK/LC_MESSAGES/horde.mo
 share/horde/locale/de_DE/LC_MESSAGES/horde.mo
@@ -171,10 +177,12 @@ share/horde/locale/ja_JP/LC_MESSAGES/horde.mo
 share/horde/locale/ko_KR/LC_MESSAGES/horde.mo
 share/horde/locale/lt_LT/LC_MESSAGES/horde.mo
 share/horde/locale/lv_LV/LC_MESSAGES/horde.mo
+share/horde/locale/mk_MK/LC_MESSAGES/horde.mo
 share/horde/locale/nb_NO/LC_MESSAGES/horde.mo
 share/horde/locale/nl_NL/LC_MESSAGES/horde.mo
 share/horde/locale/nn_NO/LC_MESSAGES/horde.mo
 share/horde/locale/pl_PL/LC_MESSAGES/horde.mo
+share/horde/locale/pl_PL/help.xml
 share/horde/locale/pt_BR/LC_MESSAGES/horde.mo
 share/horde/locale/pt_PT/LC_MESSAGES/horde.mo
 share/horde/locale/ro_RO/LC_MESSAGES/horde.mo
@@ -189,9 +197,11 @@ share/horde/locale/zh_TW/LC_MESSAGES/horde.mo
 share/horde/login.php
 share/horde/maintenance.php
 share/horde/menu.php
+share/horde/navbar.php
 share/horde/po/Makefile
 share/horde/po/README
 share/horde/po/bg_BG.po
+share/horde/po/ca_ES.po
 share/horde/po/cs_CZ.po
 share/horde/po/da_DK.po
 share/horde/po/de_DE.po
@@ -208,6 +218,7 @@ share/horde/po/ja_JP.po
 share/horde/po/ko_KR.po
 share/horde/po/lt_LT.po
 share/horde/po/lv_LV.po
+share/horde/po/mk_MK.po
 share/horde/po/nb_NO.po
 share/horde/po/nl_NL.po
 share/horde/po/nn_NO.po
@@ -241,11 +252,13 @@ share/horde/scripts/db/pgsql_drop.sql
 share/horde/scripts/db/prefs.sql
 share/horde/scripts/db/sessionhandler_sapdb.sql
 share/horde/scripts/db/sessionhandler.sql
+share/horde/scripts/db/vfs.sql
 share/horde/scripts/horde-rsync.sh
 share/horde/scripts/ldap/horde.schema
 share/horde/scripts/mime_mapping/Makefile
 share/horde/scripts/mime_mapping/convert.pl
 share/horde/scripts/mime_mapping/mime.types
+share/horde/scripts/mime_mapping/mime.types.horde
 share/horde/scripts/set_perms.sh
 share/horde/status.php
 share/horde/templates/categorytree/rowend.inc
@@ -273,6 +286,7 @@ share/horde/templates/maintenance/confirm_bottom.inc
 share/horde/templates/maintenance/confirm_middle.inc
 share/horde/templates/maintenance/confirm_top.inc
 share/horde/templates/maintenance/javascript.inc
+share/horde/templates/navbar/menu.inc
 share/horde/templates/prefs/begin.inc
 share/horde/templates/prefs/checkbox.inc
 share/horde/templates/prefs/end.inc
@@ -302,6 +316,7 @@ share/doc/horde/CREDITS
 share/doc/horde/HACKING
 share/doc/horde/INSTALL
 share/doc/horde/TRANSLATIONS
+share/doc/horde/SECURITY
 share/examples/horde/horde.conf
 
 @dirrm share/horde/util
@@ -309,6 +324,7 @@ share/examples/horde/horde.conf
 @dirrm share/horde/templates/wml
 @dirrm share/horde/templates/problem
 @dirrm share/horde/templates/prefs
+@dirrm share/horde/templates/navbar
 @dirrm share/horde/templates/maintenance
 @dirrm share/horde/templates/login
 @dirrm share/horde/templates/javascript
@@ -353,6 +369,8 @@ share/examples/horde/horde.conf
 @dirrm share/horde/locale/nl_NL
 @dirrm share/horde/locale/nb_NO/LC_MESSAGES
 @dirrm share/horde/locale/nb_NO
+@dirrm share/horde/locale/mk_MK/LC_MESSAGES
+@dirrm share/horde/locale/mk_MK
 @dirrm share/horde/locale/lv_LV/LC_MESSAGES
 @dirrm share/horde/locale/lv_LV
 @dirrm share/horde/locale/lt_LT/LC_MESSAGES
@@ -382,6 +400,8 @@ share/examples/horde/horde.conf
 @dirrm share/horde/locale/da_DK
 @dirrm share/horde/locale/cs_CZ/LC_MESSAGES
 @dirrm share/horde/locale/cs_CZ
+@dirrm share/horde/locale/ca_ES/LC_MESSAGES
+@dirrm share/horde/locale/ca_ES
 @dirrm share/horde/locale/bg_BG/LC_MESSAGES
 @dirrm share/horde/locale/bg_BG
 @dirrm share/horde/locale
