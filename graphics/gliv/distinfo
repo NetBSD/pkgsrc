@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/25 19:17:52 drochner Exp $
+$NetBSD: distinfo,v 1.6 2005/03/14 14:52:40 rillig Exp $
 
 SHA1 (gliv-1.9.1.tar.bz2) = 2517f57d0a1e99411f389a689e96457864743398
 RMD160 (gliv-1.9.1.tar.bz2) = b54e63ab022347af319f085e4c06137090d0c357
 Size (gliv-1.9.1.tar.bz2) = 446120 bytes
+SHA1 (patch-aa) = 23de2dc54f14d4909d47a1d6808beae6969443f6
+SHA1 (patch-ab) = 496ae5268e6c343b239415ba5f6ee782c8131dc4
