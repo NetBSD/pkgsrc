@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/10 00:08:43 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/11 02:05:09 jlam Exp $
 
 DISTNAME=	sqsh-1.7-src
 PKGNAME=	sqsh-1.7
@@ -24,8 +24,7 @@ LDFLAGS+=		-Wl,-R${SYBASE}/lib
 
 .include "../../devel/readline/buildlink.mk"
 
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
-CONFIGURE_ENV+=		INCDIRS="${BUILDLINK_INCDIR}"
-CONFIGURE_ENV+=		LIBDIRS="${BUILDLINK_LIBDIR}"
+CONFIGURE_ENV+=		INCDIRS="${BUILDLINK_DIR}/include"
+CONFIGURE_ENV+=		LIBDIRS="${BUILDLINK_DIR}/lib"
 
 .include "../../mk/bsd.pkg.mk"

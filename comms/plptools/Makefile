@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/06/10 00:08:42 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/11 02:05:08 jlam Exp $
 #
 
 DISTNAME=	plptools-0.6
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--with-serial=${DEFAULT_SERIAL_DEVICE}
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 
-CPPFLAGS+=		-I${BUILDLINK_INCDIR}
 LIBS+=			-ltermcap
 
 .include "../../mk/bsd.pkg.mk"

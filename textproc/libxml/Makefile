@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/05/26 21:51:51 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/06/11 02:05:15 jlam Exp $
 #
 
 DISTNAME=		libxml-1.8.13
@@ -10,15 +10,11 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://xmlsoft.org/
 COMMENT=		XML parser, mainly used by the GNOME project
 
-.include "../../devel/zlib/buildlink.mk"
-
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-CPPFLAGS+=		-I${BUILDLINK_INCDIR}
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
-
+.include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

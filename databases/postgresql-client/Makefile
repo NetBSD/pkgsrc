@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/10 00:08:42 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 02:05:08 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -15,6 +15,13 @@ MAKE_ENV+=		INSTALLED_LIBPQ=1
 CONFIGURE_ARGS+=	--enable-readline
 
 DIRS_TO_BUILD=		src/bin
+
+# The following is a hack to force ${BUILDLINK_DIR}/lib to the front of the
+# linker's library search path without having to patch a lot of Makefile.
+# It works because the PostgreSQL Makefiles invoke the linker with $(CFLAGS)
+# as well.
+#
+CFLAGS+=		-L${BUILDLINK_DIR}/lib
 
 pre-build:
 	cd ${WRKSRC}/src/bin/psql &&					\

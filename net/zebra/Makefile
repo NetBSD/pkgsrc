@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/06/10 00:08:47 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/06/11 02:05:14 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -23,8 +23,6 @@ PLIST_SRC=		# empty
 USE_GNU_READLINE=	uses rl_pending_input
 .include "../../devel/readline/buildlink.mk"
 CONFIGURE_ARGS+=	--enable-vtysh
-CPPFLAGS+=		-I${BUILDLINK_INCDIR}
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 PLIST_SRC+=		${PKGDIR}/PLIST.vtysh
 .else
 CONFIGURE_ARGS+=	--disable-vtysh

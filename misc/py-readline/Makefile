@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/06/10 00:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/06/11 02:05:12 jlam Exp $
 #
 
 DISTNAME=	${PY_DISTNAME}
@@ -17,8 +17,8 @@ USE_GNU_READLINE=	# defined
 
 .include "../../devel/readline/buildlink.mk"
 
-PY_SETUP_SUBST+=	BUILDLINK_INCDIR=${BUILDLINK_INCDIR}
-PY_SETUP_SUBST+=	BUILDLINK_LIBDIR=${BUILDLINK_LIBDIR}
+PY_SETUP_SUBST+=	BUILDLINK_CPPFLAGS=${BUILDLINK_CPPFLAGS}
+PY_SETUP_SUBST+=	BUILDLINK_LDFLAGS=${BUILDLINK_LDFLAGS}
 
 do-configure:	python-std-do-configure
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/10 00:08:45 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/06/11 02:05:11 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
@@ -21,8 +21,4 @@ USE_GNU_READLINE=	# defined
 INFO_FILES=		data-rep.info
 
 .include "../../devel/readline/buildlink.mk"
-
-CFLAGS+=		-I${BUILDLINK_INCDIR}
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
-
 .include "../../mk/bsd.pkg.mk"
