@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7636 2004/10/31 22:22:57 seb Exp $
+$NetBSD: CHANGES,v 1.7637 2004/10/31 22:42:58 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5000,3 +5000,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ap-php5-5.0.2 [jdolecek 2004-10-31]
 	Added php5-sqlite-5.0.2 [jdolecek 2004-10-31]
 	Updated p5-Pod-Simple to 3.02nb1 [seb 2004-10-31]
+	Updated p5-Test-Pod to 1.20nb1 [seb 2004-10-31]
