@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/02/28 15:07:41 atatat Exp $
+# $NetBSD: Makefile,v 1.38 2001/02/28 16:50:58 jlam Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -20,6 +20,7 @@ COMMENT=		Lists information about open files
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS=		-n ${LOWER_OPSYS}
+CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS}"
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}
 
