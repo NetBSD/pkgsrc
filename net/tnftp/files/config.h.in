@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/* $Id: config.h.in,v 1.2 2004/03/11 13:45:55 grant Exp $ */
+/* $Id: config.h.in,v 1.3 2004/04/25 02:48:12 grant Exp $ */
 
 
 /* Define if on AIX 3.
@@ -83,9 +83,6 @@
 
 /* Define if you have the mkstemp function.  */
 #undef HAVE_MKSTEMP
-
-/* Define if you have the poll function.  */
-#undef HAVE_POLL
 
 /* Define if you have the select function.  */
 #undef HAVE_SELECT
@@ -254,6 +251,9 @@
 
 /* Define if strptime() is declared in <time.h> */
 #undef HAVE_STRPTIME_D
+
+/* Define if we have poll() and it is not emulated */
+#undef HAVE_POLL
 
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).

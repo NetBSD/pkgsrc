@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# From configure.in Revision: 1.1.1.1 
+# From configure.in Revision: 1.2 
 
 
 
@@ -2386,7 +2386,7 @@ EOF
 
 fi
 
-for ac_hdr in arpa/nameser.h err.h regex.h paths.h poll.h sys/poll.h \
+for ac_hdr in arpa/nameser.h err.h regex.h paths.h \
 		sys/syslimits.h termcap.h util.h libutil.h vis.h
 do
 ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
@@ -3293,7 +3293,7 @@ fi
 done
 
 
-for ac_func in gethostbyname2 getpassphrase getpgrp memmove poll select
+for ac_func in gethostbyname2 getpassphrase getpgrp memmove select
 do
 echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
 echo "configure:3300: checking for $ac_func" >&5
@@ -3688,18 +3688,160 @@ done
 
 fi
 
+# handle Darwin 7 having a poll() compatibility function. be
+# conservative, if we don't find one of poll.h or sys/poll.h, don't
+# attempt to use poll().
+for ac_hdr in poll.h sys/poll.h
+do
+ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+echo "configure:3699: checking for $ac_hdr" >&5
+if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+  echo $ac_n "(cached) $ac_c" 1>&6
+else
+  cat > conftest.$ac_ext <<EOF
+#line 3704 "configure"
+#include "confdefs.h"
+#include <$ac_hdr>
+EOF
+ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+{ (eval echo configure:3709: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+if test -z "$ac_err"; then
+  rm -rf conftest*
+  eval "ac_cv_header_$ac_safe=yes"
+else
+  echo "$ac_err" >&5
+  echo "configure: failed program was:" >&5
+  cat conftest.$ac_ext >&5
+  rm -rf conftest*
+  eval "ac_cv_header_$ac_safe=no"
+fi
+rm -f conftest*
+fi
+if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+  echo "$ac_t""yes" 1>&6
+    ac_tr_hdr=HAVE_`echo $ac_hdr | sed 'y%abcdefghijklmnopqrstuvwxyz./-%ABCDEFGHIJKLMNOPQRSTUVWXYZ___%'`
+  cat >> confdefs.h <<EOF
+#define $ac_tr_hdr 1
+EOF
+ 
+else
+  echo "$ac_t""no" 1>&6
+fi
+done
+
+
+if test $ac_cv_header_poll_h = yes || test $ac_cv_header_sys_poll_h = yes; then
+	echo $ac_n "checking for poll""... $ac_c" 1>&6
+echo "configure:3738: checking for poll" >&5
+if eval "test \"`echo '$''{'ac_cv_func_poll'+set}'`\" = set"; then
+  echo $ac_n "(cached) $ac_c" 1>&6
+else
+  cat > conftest.$ac_ext <<EOF
+#line 3743 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char poll(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char poll();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_poll) || defined (__stub___poll)
+choke me
+#else
+poll();
+#endif
+
+; return 0; }
+EOF
+if { (eval echo configure:3766: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+  rm -rf conftest*
+  eval "ac_cv_func_poll=yes"
+else
+  echo "configure: failed program was:" >&5
+  cat conftest.$ac_ext >&5
+  rm -rf conftest*
+  eval "ac_cv_func_poll=no"
+fi
+rm -f conftest*
+fi
+
+if eval "test \"`echo '$ac_cv_func_'poll`\" = yes"; then
+  echo "$ac_t""yes" 1>&6
+  
+	echo $ac_n "checking if poll() is implemented natively""... $ac_c" 1>&6
+echo "configure:3782: checking if poll() is implemented natively" >&5
+if eval "test \"`echo '$''{'pkg_cv_POLL_COMPAT'+set}'`\" = set"; then
+  echo $ac_n "(cached) $ac_c" 1>&6
+else
+  
+		cat > conftest.$ac_ext <<EOF
+#line 3788 "configure"
+#include "confdefs.h"
+  #if HAVE_POLL_H
+		  #include <poll.h>
+		  #endif
+		  #if HAVE_SYS_POLL_H
+		  #include <sys/poll.h>
+		  #endif
+		 
+int main() {
+  #ifdef _POLL_EMUL_H_
+		  #error "poll() is emulated"
+		  #endif
+		; 
+; return 0; }
+EOF
+if { (eval echo configure:3804: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+  rm -rf conftest*
+   pkg_cv_POLL_COMPAT=yes 
+else
+  echo "configure: failed program was:" >&5
+  cat conftest.$ac_ext >&5
+  rm -rf conftest*
+   pkg_cv_POLL_COMPAT=no 
+fi
+rm -f conftest*
+	
+fi
+
+echo "$ac_t""$pkg_cv_POLL_COMPAT" 1>&6
+	if test "x$pkg_cv_POLL_COMPAT" = "xyes"; then
+		cat >> confdefs.h <<\EOF
+#define HAVE_POLL 1
+EOF
+
+	else
+		:
+		:
+	fi
+
+	
+else
+  echo "$ac_t""no" 1>&6
+fi
+
+fi
 
 if test $opt_editcomplete = yes; then
 	if test $have_libedit = yes; then
 		
 	echo $ac_n "checking for EL_RPROMPT in libedit""... $ac_c" 1>&6
-echo "configure:3697: checking for EL_RPROMPT in libedit" >&5
+echo "configure:3839: checking for EL_RPROMPT in libedit" >&5
 if eval "test \"`echo '$''{'ftp_cv_have_libedit'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
   
 		cat > conftest.$ac_ext <<EOF
-#line 3703 "configure"
+#line 3845 "configure"
 #include "confdefs.h"
  
 		#include <histedit.h>  
@@ -3707,7 +3849,7 @@ int main() {
   int X = EL_RPROMPT ; 
 ; return 0; }
 EOF
-if { (eval echo configure:3711: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+if { (eval echo configure:3853: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
   rm -rf conftest*
    ftp_cv_have_libedit=yes 
 else
@@ -3731,7 +3873,7 @@ echo "$ac_t""$ftp_cv_have_libedit" 1>&6
 	fi
 
 	echo $ac_n "checking for working libedit""... $ac_c" 1>&6
-echo "configure:3735: checking for working libedit" >&5
+echo "configure:3877: checking for working libedit" >&5
 	if test $have_libedit = no; then
 		echo "$ac_t""no - using my own" 1>&6
 		INCLUDES="-I\${srcdir}/../libedit $INCLUDES"
@@ -3749,13 +3891,13 @@ fi
 if test $ac_cv_func_sl_init = yes; then
 	
 	echo $ac_n "checking if sl_add() returns int""... $ac_c" 1>&6
-echo "configure:3753: checking if sl_add() returns int" >&5
+echo "configure:3895: checking if sl_add() returns int" >&5
 if eval "test \"`echo '$''{'ftp_cv_INT_SL_ADD'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
   
 		cat > conftest.$ac_ext <<EOF
-#line 3759 "configure"
+#line 3901 "configure"
 #include "confdefs.h"
  
 	#include <stringlist.h>  
@@ -3763,7 +3905,7 @@ int main() {
   int f = sl_add((StringList *)0, "foo") ; 
 ; return 0; }
 EOF
-if { (eval echo configure:3767: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+if { (eval echo configure:3909: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
   rm -rf conftest*
    ftp_cv_INT_SL_ADD=yes 
 else
@@ -3791,13 +3933,13 @@ have_rfc2553_netdb=no
 if test $ac_cv_func_getaddrinfo = yes -a ! -n "$socks"; then
 	
 	echo $ac_n "checking for AI_NUMERICHOST""... $ac_c" 1>&6
-echo "configure:3795: checking for AI_NUMERICHOST" >&5
+echo "configure:3937: checking for AI_NUMERICHOST" >&5
 if eval "test \"`echo '$''{'ftp_cv_have_ai_numerichost'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
   
 		cat > conftest.$ac_ext <<EOF
-#line 3801 "configure"
+#line 3943 "configure"
 #include "confdefs.h"
  
 	#include <sys/types.h>
@@ -3807,7 +3949,7 @@ int main() {
   int X = AI_NUMERICHOST ; 
 ; return 0; }
 EOF
-if { (eval echo configure:3811: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+if { (eval echo configure:3953: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
   rm -rf conftest*
    ftp_cv_have_ai_numerichost=yes 
 else
@@ -3830,7 +3972,7 @@ echo "$ac_t""$ftp_cv_have_ai_numerichost" 1>&6
 
 fi
 echo $ac_n "checking for working getaddrinfo()""... $ac_c" 1>&6
-echo "configure:3834: checking for working getaddrinfo()" >&5
+echo "configure:3976: checking for working getaddrinfo()" >&5
 if test $have_rfc2553_netdb = yes; then
 	cat >> confdefs.h <<\EOF
 #define HAVE_RFC2553_NETDB 1
@@ -3850,13 +3992,13 @@ fi
 if test $ac_cv_header_vis_h = yes; then
 	
 	echo $ac_n "checking for VIS_WHITE in vis.h""... $ac_c" 1>&6
-echo "configure:3854: checking for VIS_WHITE in vis.h" >&5
+echo "configure:3996: checking for VIS_WHITE in vis.h" >&5
 if eval "test \"`echo '$''{'ftp_cv_have_vis_white'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
   
 		cat > conftest.$ac_ext <<EOF
-#line 3860 "configure"
+#line 4002 "configure"
 #include "confdefs.h"
  
 	#include <sys/types.h>
@@ -3865,7 +4007,7 @@ int main() {
   int X = VIS_WHITE ; 
 ; return 0; }
 EOF
-if { (eval echo configure:3869: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+if { (eval echo configure:4011: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
   rm -rf conftest*
    ftp_cv_have_vis_white=yes 
 else
@@ -3887,7 +4029,6 @@ echo "$ac_t""$ftp_cv_have_vis_white" 1>&6
 	fi
 
 fi
-
 
 if test -n "$LIBOBJS"; then
 	INCLUDES="$INCLUDES -I\${srcdir}/../libnetbsd"

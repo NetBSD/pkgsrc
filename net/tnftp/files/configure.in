@@ -1,10 +1,10 @@
-dnl $Id: configure.in,v 1.2 2004/03/11 13:45:55 grant Exp $
+dnl $Id: configure.in,v 1.3 2004/04/25 02:48:12 grant Exp $
 dnl
 dnl configure.in --
 dnl	process this file with autoconf to produce a configure script.
 dnl
 
-AC_REVISION($Revision: 1.2 $)dnl
+AC_REVISION($Revision: 1.3 $)dnl
 
 AC_INIT(tnftp.h)
 
@@ -60,7 +60,7 @@ dnl
 AC_CONFIG_HEADER(config.h)
 AC_HEADER_DIRENT
 AC_HEADER_STDC
-AC_CHECK_HEADERS(arpa/nameser.h err.h regex.h paths.h poll.h sys/poll.h \
+AC_CHECK_HEADERS(arpa/nameser.h err.h regex.h paths.h \
 		sys/syslimits.h termcap.h util.h libutil.h vis.h)
 
 
@@ -169,7 +169,7 @@ dnl
 AC_REPLACE_FUNCS(err fgetln fseeko getaddrinfo getnameinfo inet_ntop inet_pton \
 		mkstemp setprogname sl_init snprintf strdup strerror strlcat \
 		strlcpy strptime strsep strunvis strvis timegm usleep utimes)
-AC_CHECK_FUNCS(gethostbyname2 getpassphrase getpgrp memmove poll select)
+AC_CHECK_FUNCS(gethostbyname2 getpassphrase getpgrp memmove select)
 if test $ac_cv_func_getpgrp = yes; then
 	AC_FUNC_GETPGRP
 fi
@@ -232,6 +232,29 @@ dnl		support because we don't know how to display it.
 
 fi
 
+# handle Darwin 7 having a poll() compatibility function. be
+# conservative, if we don't find one of poll.h or sys/poll.h, don't
+# attempt to use poll().
+AC_CHECK_HEADERS([poll.h sys/poll.h])
+
+if test $ac_cv_header_poll_h = yes || test $ac_cv_header_sys_poll_h = yes; then
+	AC_CHECK_FUNC(poll,
+		AC_MSG_TRY_COMPILE([if poll() is implemented natively],
+		ftp_cv_POLL_NATIVE,
+		[ #if HAVE_POLL_H
+		  #include <poll.h>
+		  #endif
+		  #if HAVE_SYS_POLL_H
+		  #include <sys/poll.h>
+		  #endif
+		],
+		[ #ifdef _POLL_EMUL_H_
+		  #error "poll() is emulated"
+		  #endif
+		],
+		[AC_DEFINE(HAVE_POLL, 1)], [:])
+	)
+fi
 
 if test $opt_editcomplete = yes; then
 	if test $have_libedit = yes; then
