@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/30 17:05:21 tv Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/01 00:42:29 tv Exp $
 #
 
 DISTNAME=       	mod_perl-1.19
@@ -12,6 +12,8 @@ HOMEPAGE=		http://perl.apache.org/
 DEPENDS=		libperl-5.00404:../../lang/libperl \
 			apache-1.3.6p0:../../www/apache
 USE_PERL5=		yes
+
+MAKE_ENV=		DYNALOADER_OBJ_PIC="${PREFIX}/lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/DynaLoader_pic.o"
 
 do-configure:
 	@cd ${WRKSRC} && ${PREFIX}/bin/perl Makefile.PL USE_APXS=1 \

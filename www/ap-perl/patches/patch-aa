@@ -1,5 +1,16 @@
---- apaci/Makefile.tmpl.orig	Mon Apr 26 18:22:37 1999
-+++ apaci/Makefile.tmpl	Mon Apr 26 18:32:27 1999
+$NetBSD: patch-aa,v 1.3 1999/05/01 00:42:30 tv Exp $
+
+--- apaci/Makefile.tmpl.orig	Tue Nov 24 11:38:52 1998
++++ apaci/Makefile.tmpl	Fri Apr 30 20:36:05 1999
+@@ -45,7 +45,7 @@
+    $(MP_STATIC_OBJS)
+ MP_OBJS_PIC=\
+    mod_perl.lo perlxsi.lo perl_config.lo perl_util.lo perlio.lo mod_perl_opmask.lo \
+-   $(MP_STATIC_OBJS_PIC)
++   $(MP_STATIC_OBJS_PIC) $(DYNALOADER_OBJ_PIC)
+ 
+ all: lib
+ 
 @@ -58,7 +58,7 @@
  
  libperl.so: $(MP_OBJS_PIC)
