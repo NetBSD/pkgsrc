@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2001/05/14 14:12:30 jlam Exp $
+
+--- main/php_open_temporary_file.c.orig	Mon Feb 26 01:07:31 2001
++++ main/php_open_temporary_file.c
+@@ -110,7 +110,7 @@
+ 		trailing_slash = "/";
+ 	}
+ 
+-	(void)snprintf(opened_path, MAXPATHLEN, "%s%s%sXXXXXX", path, trailing_slash, pfx);
++	(void)snprintf(opened_path, MAXPATHLEN, "%s%s%sXXXXXXXXXX", path, trailing_slash, pfx);
+ 
+ #ifdef PHP_WIN32
+ 	if (GetTempFileName(path, pfx, 0, opened_path)) {
