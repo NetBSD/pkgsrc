@@ -1,0 +1,55 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/23 21:08:02 tron Exp $
+
+--- Makefile.orig	Wed Dec  9 09:41:59 1998
++++ Makefile	Tue Mar 23 21:45:32 1999
+@@ -1,9 +1,9 @@
+ VERSION=1.6
+ 
+-LDFLAGS=-L/usr/X11/lib -L$(QTDIR)/lib
++LDFLAGS=-L$(PREFIX)/lib -L$(QTDIR)/lib
+ LDLIBS=$(LIBRARY) -lqt -lX11
+-CXXFLAGS=-Wall -g -I$(QTDIR)/include -I.
+-#CXXFLAGS=-Wall -O2 -I$(QTDIR)/include -I.
++#CXXFLAGS=-Wall -g -I$(PREFIX)/include/qt -I.
++CXXFLAGS=-Wall -O2 -I$(PREFIX)/include/qt -I.
+ MOCS=moc_QwSpriteField.cpp
+ SRC=QwSpriteField.cpp QwSpriteField-double.cpp QwSpriteField-int.cpp \
+ 	QwSpriteField-mobdouble.cpp QwSpriteField-mobint.cpp QwCluster.cpp \
+@@ -11,12 +11,12 @@
+ OBJ=QwSpriteField.o QwSpriteField-double.o QwSpriteField-int.o \
+ 	QwSpriteField-mobdouble.o QwSpriteField-mobint.o QwCluster.o \
+ 	moc_QwSpriteField.o
+-LIBRARY=libQwSpriteField.a
++LIBRARY=libQwSpriteField.la
+ 
+-all: $(LIBRARY) example
++all: $(LIBRARY)
+ 
+ $(LIBRARY): $(OBJ)
+-	ar rs $(LIBRARY) $?
++	$(LIBTOOL) --mode=link $(CXX) -rpath $(PREFIX)/lib -version-info 6:0 -o $(LIBRARY) $(OBJ:.o=.lo)
+ 
+ example: example.o moc_example.o $(LIBRARY)
+ 
+@@ -95,11 +95,8 @@
+ moc_%.cpp: %.h
+ 	moc $*.h -o moc_$*.cpp
+ 
+-QwSpriteField-%.o: QwSpriteField-%.cpp
+-	$(COMPILE.cc) QwSpriteField-$*.cpp $(OUTPUT_OPTION)
+-
+ %.o: %.cpp
+-	$(COMPILE.cc) $< $(OUTPUT_OPTION)
++	$(LIBTOOL) --mode=compile $(CXX) $(CXXFLAGS) -c $<
+ 
+ clean:
+ 	-rm doc/html/*~ *~ *.o *.moc core
+@@ -112,7 +109,7 @@
+ Dependencies:
+ 	@echo "Making file $@ automatically."
+ 	touch Dependencies
+-	make depend
++	${MAKE} depend
+ 
+ include Dependencies
+ 
