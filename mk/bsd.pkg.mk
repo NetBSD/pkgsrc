@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.672 2001/02/26 19:39:17 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.673 2001/02/26 19:40:19 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -489,6 +489,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		MACHINE_ARCH=${MACHINE_ARCH}				\
 		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}			\
 		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
+		PKGLOCALEDIR=${PKGLOCALEDIR}				\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
 		PKGNAME=${PKGNAME}					\
