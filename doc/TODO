@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2470 2004/11/25 20:16:51 minskim Exp $
+$NetBSD: TODO,v 1.2471 2004/11/25 23:28:30 snj Exp $
 
 Suggested new packages
 ======================
@@ -1383,7 +1383,6 @@ Suggested package updates
 	o xnap-2.5r3
 	o xpad-2.0
 	o xpat2-1.0.7
-	o xpdf-3.00pl1
 	o xpenguins-2.2
 	o xpuyopuyo-0.9.5
 	o xskat-4.0
