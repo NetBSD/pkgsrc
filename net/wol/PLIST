@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/04 18:16:47 zuntum Exp $
+bin/wol
+bin/wol-dhcpdconf
+info/wol.info
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wol.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/wol.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wol.mo
