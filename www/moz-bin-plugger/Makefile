@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/11 04:48:12 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/04 20:28:47 kristerw Exp $
 #
 
 DISTNAME=	${PLUGGER}-linux-x86-glibc
@@ -25,6 +25,7 @@ LDD=		${PREFIX}/emul/linux/usr/bin/ldd
 
 do-install:
 	cd ${WRKSRC} &&							\
+	${INSTALL_DATA_DIR} ${MOZILLA_HOME}/plugins			\
 	${INSTALL_DATA} plugger.so ${MOZILLA_HOME}/plugins &&		\
 	${INSTALL_DATA} pluggerrc ${PREFIX}/emul/linux/etc &&		\
 	${INSTALL_PROGRAM} plugger-4.0 ${PREFIX}/emul/linux/usr/bin
