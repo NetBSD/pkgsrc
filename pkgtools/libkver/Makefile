@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/23 19:48:31 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/19 13:38:28 jmmv Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -9,7 +9,9 @@ MAINTAINER=	seb@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Shared library and sysctl(1) replacement to override system version
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
@@ -19,6 +21,8 @@ NO_MTREE=		# defined
 VERSION=		0.4
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
+
+BUILDLINK_PASSTHRU_DIRS=	${BSDSRCDIR}/sys
 
 .include "../../mk/bsd.prefs.mk"
 
