@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.24 2004/03/14 20:07:06 jlam Exp $
+# $NetBSD: Makefile.module,v 1.25 2004/04/24 23:03:25 xtraeme Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -12,8 +12,6 @@
 PKGNAME?=		php-${MODNAME}-${PHP_BASE_VERS}
 PKGREVISION?=		# empty
 
-DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
-
 AUTOMAKE_REQD?=		1.7
 .include "../../mk/automake.mk"
 
@@ -25,15 +23,14 @@ EXTRACT_ELEMENTS?=	${DISTNAME}/ext/${PKGMODNAME}
 WRKSRC?=		${WRKDIR}/${EXTRACT_ELEMENTS}
 DISTINFO_FILE?=		${PKGDIR}/../../www/php4/distinfo
 
-PHPIZE?=		${BUILDLINK_PREFIX.php4}/bin/phpize
-PHP_CONFIG?=		${BUILDLINK_PREFIX.php4}/bin/php-config
+PHPIZE?=		${BUILDLINK_PREFIX.php}/bin/phpize
+PHP_CONFIG?=		${BUILDLINK_PREFIX.php}/bin/php-config
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-php-config=${PHP_CONFIG}
 
 USE_CONFIG_WRAPPER=	YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
@@ -64,4 +61,4 @@ do-module-install:
 	${INSTALL_DATA} ${MODULESDIR}/${PKGMODNAME}.so \
 		${PREFIX}/${PHP_EXTENSION_DIR}
 
-.include "../../www/php4/buildlink2.mk"
+.include "../../www/php4/buildlink3.mk"
