@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2001/12/31 04:21:30 fredb Exp $
+# $NetBSD: Makefile,v 1.37 2001/12/31 19:50:21 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.5dev.5
 PKGNAME=		lynx-2.8.5.0.5
 CATEGORIES=		www
-MASTER_SITES=		http://lynx.isc.org/current/
+MASTER_SITES=		http://lynx.isc.org/current/ \
+			ftp://ftp.nl.uu.net/pub/unix/www/lynx/current/ \
+			ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/current/ \
+			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/current/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		fredb@netbsd.org
