@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2004/10/03 00:13:06 tv Exp $
+# $NetBSD: Makefile,v 1.44 2005/02/03 17:54:50 reed Exp $
 #
 
 DISTNAME=	lame-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/} \
 		http://hive.me.gu.edu.au/not_lame/
@@ -13,7 +13,7 @@ COMMENT=	Fast, high quality MP3 encoder
 
 VERS=		3.96.1
 
-LICENSE=	fee-based-commercial-use
+LICENSE=	lame-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
