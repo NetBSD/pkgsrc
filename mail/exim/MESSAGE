@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/02/13 23:46:25 snj Exp $
+$NetBSD: MESSAGE,v 1.6 2004/04/23 22:43:20 reed Exp $
 
 To use exim, you will need to perform the following steps manually; it is
 inappropriate for this package to make the changes for you.
@@ -11,7 +11,7 @@ inappropriate for this package to make the changes for you.
    Copy ${EXAMPLESDIR}/mailer.conf to /etc/mailer.conf.
 4. Set 'sendmail=NO', 'exim=YES' and exim_flags to some sane value in
    /etc/rc.conf (previously it was "-bd -q15m").
-   Copy ${PREFIX}/etc/rc.d/exim to /etc/rc.d.
+   Copy ${RCD_SCRIPTS_EXAMPLEDIR}/exim to /etc/rc.d.
 5. Configuring log rotation is dependent on personal taste and the version
    of NetBSD in use.  See weekly.conf(5), newsyslog(8), exicyclog and
    eximstats.
