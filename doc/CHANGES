@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6685 2004/07/26 19:09:10 dillo Exp $
+$NetBSD: CHANGES,v 1.6686 2004/07/26 21:57:45 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3580,3 +3580,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.84.1nb1 [dillo 2004-07-26]
 	Updated xmess to 0.84.1nb1 [dillo 2004-07-26]
 	Added gens-2.12rc3 [dillo 2004-07-26]
+	Updated gcc34 to 3.4.1nb1 [shannonjr 2004-07-26]
