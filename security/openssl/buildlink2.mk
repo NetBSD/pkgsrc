@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/24 20:18:24 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/29 19:25:50 grant Exp $
 #
 # Optionally define USE_OPENSSL_VERSION to the mininum OpenSSL version
 # number in <openssl/opensslv.h>, i.e. 0x0090600fL, etc.
@@ -17,6 +17,7 @@ OPENSSL_VERSION_096D=		0x0090604fL
 OPENSSL_VERSION_096E=		0x0090605fL
 OPENSSL_VERSION_096F=		0x0090606fL
 OPENSSL_VERSION_096G=		0x0090607fL
+OPENSSL_VERSION_097A=		0x0090701fL
 OPENSSL_VERSION_097B=		0x0090702fL
 
 # Check for a usable installed version of OpenSSL. Version must be greater
@@ -52,6 +53,13 @@ _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096G}
 BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6g
 .  else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096G}
+.  endif
+
+.  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_097A}	# OpenSSL 0.9.7a
+_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_097A}
+BUILDLINK_DEPENDS.openssl=	openssl>=0.9.7a
+.  else
+_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_097A}
 .  endif
 
 .  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_097B}	# OpenSSL 0.9.7b
