@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9550 2005/03/22 10:56:25 jmmv Exp $
+$NetBSD: CHANGES,v 1.9551 2005/03/22 14:06:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1459,3 +1459,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox-gtk2-bin to 1.0.1 [tron 2005-03-22]
 	Updated dbus to 0.23.4 [jmmv 2005-03-22]
 	Updated dbus-glib to 0.23.4 [jmmv 2005-03-22]
+	Updated fontconfig to 2.3.1 [wiz 2005-03-22]
