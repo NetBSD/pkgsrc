@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/12/05 16:29:15 he Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 14:45:25 agc Exp $
 
 SHA1 (Compress-Bzip2-1.02.tar.gz) = f1e0a59dfbc9f6684a522a685531f10cbd56180a
+RMD160 (Compress-Bzip2-1.02.tar.gz) = 44651f075050bf26ac88024885eeb151e9158feb
 Size (Compress-Bzip2-1.02.tar.gz) = 11501 bytes
 SHA1 (patch-aa) = 0f8d4311b11c95af7e17437c4f9b180bfecef613
