@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgdepgraph.1,v 1.10 2004/06/06 04:08:18 wiz Exp $
+.\"	$NetBSD: pkgdepgraph.1,v 1.11 2004/07/28 01:42:43 atatat Exp $
 .\"
 .\" Copyright (c) 2002, 2003, 2004 by Andrew Brown <atatat@netbsd.org>
 .\" Absolutely no warranty.
@@ -41,6 +41,8 @@ is not connected to a tty), in search of output that resembles that
 of either
 .Xr lintpkgsrc 1
 .Fl i ,
+.Xr lintpkgsrc 1
+.Fl g ,
 .Xr audit-packages 8 ,
 or the output from a previous incantation of this program.
 .Pp
@@ -529,5 +531,12 @@ and
 .Fl m
 options) do not deal very well with packages that have moved within
 the pkgsrc tree.
-It is necessary that you edit the rebuild script by hand to work
-around this.
+Feeding the output of
+.Xr lintpkgsrc 1
+.Fl g
+to
+.Nm
+can offset this (it contains the current paths to all packages under
+.Pa PKGSRCDIR )
+but sometimes is necessary that you edit the generated scripts by hand
+to work around this.

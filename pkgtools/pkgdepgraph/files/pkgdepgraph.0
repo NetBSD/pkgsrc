@@ -16,8 +16,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      ppkkggddeeppggrraapphh will also read any files passed to it as arguments (or stdin
      if it is not connected to a tty), in search of output that resembles that
-     of either lintpkgsrc(1) --ii, audit-packages(8), or the output from a pre-
-     vious incantation of this program.
+     of either lintpkgsrc(1) --ii, lintpkgsrc(1) --gg, audit-packages(8), or the
+     output from a previous incantation of this program.
 
      In the latter case, ppkkggddeeppggrraapphh will recolor the graph passed as input
      based, as usual, on information about currently installed pkgs.  Packages
@@ -337,7 +337,9 @@ BBUUGGSS
 
      The ``rebuild'' output, ``fetch'' output, and the generic ``make target''
      output (see the --RR, --FF, and --mm options) do not deal very well with pack-
-     ages that have moved within the pkgsrc tree.  It is necessary that you
-     edit the rebuild script by hand to work around this.
+     ages that have moved within the pkgsrc tree.  Feeding the output of
+     lintpkgsrc(1) --gg to ppkkggddeeppggrraapphh can offset this (it contains the current
+     paths to all packages under _P_K_G_S_R_C_D_I_R) but sometimes is necessary that
+     you edit the generated scripts by hand to work around this.
 
-NetBSD 2.0_BETA                  June 5, 2004                  NetBSD 2.0_BETA
+NetBSD 2.0                       June 5, 2004                       NetBSD 2.0
