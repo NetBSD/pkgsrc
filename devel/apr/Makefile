@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/11/10 18:09:07 epg Exp $
+# $NetBSD: Makefile,v 1.28 2004/11/17 19:30:12 xtraeme Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -23,13 +23,6 @@ CONFIGURE_ENV+=		CFLAGS="${CFLAGS}" LIBS="${LDFLAGS}"
 
 LDFLAGS.SunOS+=		-lnsl
 
-pre-configure:
-.for f in apr/config.layout apr-util/config.layout
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/$f > ${WRKSRC}/$f.new
-	${MV} ${WRKSRC}/$f.new ${WRKSRC}/$f
-.endfor
-.undef f
-
 APR_CONFIGURE_ARGS= \
 		--prefix=${PREFIX} \
 		--with-devrandom=/dev/urandom \
@@ -42,15 +35,7 @@ APU_CONFIGURE_ARGS= \
 		--without-gdbm
 
 .include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		APR_USE_OPENLDAP APR_USE_DB4
-
-.if !empty(APR_USE_DB4:M[Yy][Ee][Ss])
-APU_CONFIGURE_ARGS+=\
-	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include:${LOCALBASE}
-.else
-APU_CONFIGURE_ARGS+=	--with-dbm=sdbm
-.endif
+.include "options.mk"
 
 do-configure:
 	@cd ${WRKSRC}/apr && ${SETENV} ${CONFIGURE_ENV} ./configure \
@@ -65,18 +50,12 @@ post-install:
 	@${CHMOD} ${PKGDIRMODE} ${PREFIX}/include/apr-0
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/include/apr-0/
 
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	apr/config.layout apr-util/config.layout
+SUBST_SED.conf=		-e "s,@PREFIX@,${PREFIX},g"
+SUBST_MESSAGE.conf=	"Fixing harcoded paths."
+
 .include "../../www/apache2/Makefile.common"
-
-.if !empty(APR_USE_DB4:M[Yy][Ee][Ss])
-.include "../../databases/db4/buildlink3.mk"
-.endif
-
-# Enable OpenLDAP support
-.if !empty(APR_USE_OPENLDAP:M[Yy][Ee][Ss])
-APU_CONFIGURE_ARGS+=	--with-ldap
-APR_CONFIGURE_ARGS+=	--with-ldap
-.include "../../databases/openldap/buildlink3.mk"
-.endif
-
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
