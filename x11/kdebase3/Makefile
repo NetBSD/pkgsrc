@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2005/03/06 12:21:21 markd Exp $
+# $NetBSD: Makefile,v 1.68 2005/03/06 12:57:38 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -41,6 +41,17 @@ REPLACE_PERL= \
 
 CONF_FILES=		${PREFIX}/share/kde/config/kdm/kdmrc \
 			${PKG_SYSCONFDIR}/kdm/kdmrc
+CONF_FILES+=		${PREFIX}/share/examples/kdebase3/ksysguarddrc \
+			${PKG_SYSCONFDIR}/ksysguarddrc
+CONF_FILES+=		${PREFIX}/share/examples/kdebase3/kde-information.menu \
+			${PKG_SYSCONFDIR}/xdg/menus/kde-information.menu
+CONF_FILES+=		${PREFIX}/share/examples/kdebase3/kde-screensavers.menu \
+			${PKG_SYSCONFDIR}/xdg/menus/kde-screensavers.menu
+CONF_FILES+=		${PREFIX}/share/examples/kdebase3/kde-settings.menu \
+			${PKG_SYSCONFDIR}/xdg/menus/kde-settings.menu
+CONF_FILES+=		${PREFIX}/share/examples/kdebase3/applications-merged/kde-essential.menu \
+			${PKG_SYSCONFDIR}/xdg/menus/applications-merged/kde-essential.menu
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/menus/applications-merged
 OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 RCD_SCRIPTS=		kdm
 
