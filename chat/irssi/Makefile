@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2002/06/08 23:49:39 veego Exp $
+# $NetBSD: Makefile,v 1.13 2002/06/20 03:29:28 hubertf Exp $
 
-DISTNAME=		irssi-0.8.4a
-PKGNAME=		irssi-0.8.4.1
-WRKSRC=			${WRKDIR}/irssi-0.8.4
+DISTNAME=		irssi-0.8.5
+WRKSRC=			${WRKDIR}/irssi-0.8.5
 CATEGORIES=		chat
 MASTER_SITES=		http://real.irssi.org/files/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		mutru@cc.hut.fi
+MAINTAINER=		mutru@iki.fi
 HOMEPAGE=		http://www.irssi.org/
 COMMENT=                Secure and modular IRC client with text mode user interface
 
