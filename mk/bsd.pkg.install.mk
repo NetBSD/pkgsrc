@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.40 2002/12/02 17:07:27 jschauma Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.41 2003/07/30 10:27:05 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -25,6 +25,7 @@ INSTALL_FILE=		${WRKDIR}/.INSTALL
 # install/deinstall logic.
 #
 _HEADER_TMPL?=		${.CURDIR}/../../mk/install/header
+HEADER_EXTRA_TMPL?=	# empty
 .if !defined(DEINSTALL_EXTRA_TMPL) && exists(${.CURDIR}/DEINSTALL)
 DEINSTALL_EXTRA_TMPL?=	${.CURDIR}/DEINSTALL
 .else
@@ -43,10 +44,12 @@ _FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
 #	files that are concatenated to form the DEINSTALL/INSTALL scripts.
 #
 DEINSTALL_TEMPLATES=	${_HEADER_TMPL}
+DEINSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
 DEINSTALL_TEMPLATES+=	${DEINSTALL_EXTRA_TMPL}
 DEINSTALL_TEMPLATES+=	${DEINSTALL_TMPL}
 DEINSTALL_TEMPLATES+=	${_FOOTER_TMPL}
 INSTALL_TEMPLATES=	${_HEADER_TMPL}
+INSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_EXTRA_TMPL}
 INSTALL_TEMPLATES+=	${_FOOTER_TMPL}
