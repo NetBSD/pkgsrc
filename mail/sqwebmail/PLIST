@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2004/07/14 20:07:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/18 22:12:56 jlam Exp $
+bin/mimegpg
 libexec/cgi-bin/sqwebmail
-libexec/courier/sqwebmail/makemime
-libexec/courier/sqwebmail/pcpd
-libexec/courier/sqwebmail/reformime
-libexec/courier/sqwebmail/sqwebmaild
-libexec/courier/sqwebmaild.rc
+libexec/courier/pcpd
+libexec/courier/sqwebmaild
+libexec/courier/sqwebpasswd
+man/man1/mimegpg.1
+sbin/sqwebmaild
 sbin/webgpg
 share/courier/sqwebmail/cleancache.pl
 share/courier/sqwebmail/html/en
@@ -104,19 +105,16 @@ share/courier/sqwebmail/images/trash2.png
 share/courier/sqwebmail/images/uncancel.png
 share/courier/sqwebmail/ldapsearch
 share/courier/sqwebmail/sendit.sh
-share/courier/sqwebmail/webgpg
 share/doc/courier/sqwebmail/BUGS.html
-share/doc/courier/sqwebmail/COPYING
 share/doc/courier/sqwebmail/INSTALL.html
 share/doc/courier/sqwebmail/README.gpg.html
 share/doc/courier/sqwebmail/README.logindomainlist.html
-share/doc/courier/sqwebmail/README.maildirfilter.html
 share/doc/courier/sqwebmail/README.pcp.html
 share/doc/courier/sqwebmail/SECURITY.html
 share/examples/courier/calendarmode
 share/examples/courier/ldapaddressbook.dist
 share/examples/courier/sqwebmaild.dist
-share/examples/courier/webmail.authpam
+share/examples/courier/webmail.pam
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
 @dirrm share/doc/courier/sqwebmail
 @unexec ${RMDIR} -p %D/share/doc/html/courier 2>/dev/null || ${TRUE}
@@ -125,5 +123,4 @@ share/examples/courier/webmail.authpam
 @dirrm share/courier/sqwebmail/html
 @dirrm share/courier/sqwebmail
 @unexec ${RMDIR} -p %D/share/courier 2>/dev/null || ${TRUE}
-@dirrm libexec/courier/sqwebmail
 @unexec ${RMDIR} -p %D/libexec/courier 2>/dev/null || ${TRUE}
