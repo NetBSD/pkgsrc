@@ -1,19 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/23 16:19:49 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/23 21:49:17 jtb Exp $
 
-Correct a small typo in the generic Makefile rules file
-Install scripts using BSD_INSTALL_SCRIPT, not INSTALL_PROGRAM
-
---- Makefile.rules	2000/08/21 17:39:40	1.1
-+++ Makefile.rules	2000/08/21 17:39:53
-@@ -44,7 +44,7 @@
- 
- $(srcdir)/lib/libgst.a: $(LIBRARY_FILES) $(srcdir)/gstconf.h
- 	cd lib && $(MAKE) CFLAGS="$(CFLAGS)" GCC_CFLAGS="$(GCC_CFLAGS)" \
--			 CDEBUG="$(CDEBUG)" SCHEDULER="$(SCHEDULER)")
-+			 CDEBUG="$(CDEBUG)" SCHEDULER="$(SCHEDULER)"
- 
- # You can also use this rule with `make attempt TARGET=optimize'
- attempt:
+--- Makefile.rules.orig	Tue Jan 23 21:34:55 2001
++++ Makefile.rules
 @@ -114,8 +114,8 @@
  
  install:: installdirs optimize
