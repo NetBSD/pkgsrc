@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/28 23:59:19 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/01 22:40:43 jtb Exp $
 
 DISTNAME=		yplot-1.0.3
 CATEGORIES=		graphics math
@@ -11,6 +11,7 @@ COMMENT=		Yorick interface to PLplot
 DEPENDS+=		yorick>=1.4:../../math/yorick
 DEPENDS+=		plplot>=5.0.3:../../graphics/plplot
 
+PLPLOT_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
 
 MAKEFILE=		Makefile.build
