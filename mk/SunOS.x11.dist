@@ -1,4 +1,4 @@
-#     $NetBSD: SunOS.x11.dist,v 1.8 2001/12/25 15:01:41 wiz Exp $
+#     $NetBSD: SunOS.x11.dist,v 1.9 2002/01/15 09:26:47 wiz Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -385,6 +385,10 @@
                 ..
             ..
             zh_CN.GB2312
+                LC_MESSAGES
+                ..
+            ..
+            zh_TW
                 LC_MESSAGES
                 ..
             ..
