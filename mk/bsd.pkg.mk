@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1049 2002/09/17 23:53:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1050 2002/09/18 11:08:25 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -69,7 +69,7 @@ INTERACTIVE_STAGE?=	none
 BUILD_DEFS+=		PKG_JVM JAVA_HOME
 .  if !defined(PKG_JVM)
 .    if ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
-       ${MACHINE_PLATFORM:MLinux-*-i386} != ""
+       ${MACHINE_PLATFORM:MLinux-*-i[3456]86} != ""
 PKG_JVM?=		jdk
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
 PKG_JVM?=		blackdown-jdk13
@@ -109,7 +109,7 @@ DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .  elif ${PKG_JVM} == "sun-jdk"
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
 	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
-	${MACHINE_PLATFORM:MLinux-*-i386} != ""
+	${MACHINE_PLATFORM:MLinux-*-i[3456]86} != ""
 _JAVA_PKGBASE=		sun-jdk1[34]*
 _JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
 _JAVA_HOME=		${_JAVA_PREFIX}
@@ -117,7 +117,7 @@ ${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
 	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
-	${MACHINE_PLATFORM:MLinux-*-i386} != ""
+	${MACHINE_PLATFORM:MLinux-*-i[3456]86} != ""
 _JAVA_PKGBASE=		sun-jdk1[34]*
 .    if ${OPSYS} == "Darwin"
 _JAVA_PREFIX_DEFAULT=	/usr
