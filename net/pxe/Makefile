@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/28 02:47:47 reed Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/29 15:42:38 minskim Exp $
 #
 
 DISTNAME=	pxe-1.4
@@ -15,7 +15,7 @@ USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=	--with-log=/var/log/pxe.log
+CONFIGURE_ARGS+=	--with-log=${VARBASE}/log/pxe.log
 CONFIGURE_ARGS+=	--with-config="${PKG_SYSCONFDIR}/pxe.conf"
 
 EGDIR=		${PREFIX}/share/examples/pxe
