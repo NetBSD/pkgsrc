@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1999/07/15 18:09:26 chopps Exp $
+
 --- applets/battery/read-battery.h.orig	Thu Jul 15 13:59:25 1999
 +++ applets/battery/read-battery.h	Thu Jul 15 14:41:22 1999
 @@ -18,6 +18,11 @@
