@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8737 2005/01/13 16:20:02 taca Exp $
+$NetBSD: CHANGES,v 1.8738 2005/01/13 19:52:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -286,3 +286,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gsl to 1.6 [adam 2005-01-13]
 	Updated octave-current to 2.1.64nb1 [adam 2005-01-13]
 	Updated squid to 2.5.7nb5 [taca 2005-01-13]
+	Updated gtk2-engines to 2.6.0nb1 [jmmv 2005-01-13]
