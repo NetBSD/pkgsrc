@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2004/11/30 18:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2004/12/28 23:18:16 reed Exp $
 
 DISTNAME=	gnapster-1.5.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnapster/}
 
