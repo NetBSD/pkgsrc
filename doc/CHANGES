@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1697 2003/03/20 19:06:58 kristerw Exp $
+$NetBSD: CHANGES,v 1.1698 2003/03/20 19:35:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1208,3 +1208,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cups to 1.1.18nb2 [jmmv 2003-03-20]
 	Updated xmame to 0.66.2 [kristerw 2003-03-20]
 	Updated xmess to 0.66.2 [kristerw 2003-03-20]
+	Added z80-asm-0.1 [jmmv 2003-03-20]
