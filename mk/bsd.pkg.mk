@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.852 2001/11/21 12:42:23 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.853 2001/11/21 12:53:04 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -158,8 +158,8 @@ BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
 MAKE_PROGRAM=		${GMAKE}
 GMAKE?=			gmake
 .else
-.  if (${OPSYS} == "SunOS") && defined(USE_IMAKE)
-MAKE_PROGRAM=		/usr/ccs/bin/make
+.  if defined(USE_IMAKE)
+MAKE_PROGRAM=		${_IMAKE_MAKE}
 .  else
 MAKE_PROGRAM=		${MAKE}
 .  endif
