@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/03/27 03:20:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/05/02 15:51:21 jlam Exp $
 #
 
 DISTNAME=		giflib-4.1.0
@@ -10,8 +10,6 @@ HOMEPAGE=		http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
 COMMENT=		Tools and library routines for working with GIF images
 
 CONFLICTS=		libungif-*
-
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -31,8 +29,12 @@ MAKE_ENV+=		CC="${CC} -I${LOCALBASE}/include"
 post-patch:
 	${RM} ${WRKSRC}/doc/gif2x11.html
 
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
+# We patch configure.in, so touch the Makefile.in files to prevent automake
+# from regenerating them.
+#
+pre-build:
+	${TOUCH} ${WRKSRC}/aclocal.m4
+	${FIND} ${WRKSRC} -name "Makefile.in" -exec ${TOUCH} {} \;
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
