@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2001/12/14 23:18:16 jlam Exp $
+$NetBSD: patch-ab,v 1.13 2002/01/31 17:51:27 jlam Exp $
 
---- Makefile.orig	Tue Oct 30 15:37:13 2001
-+++ Makefile	Fri Dec 14 17:33:21 2001
-@@ -60,8 +60,6 @@
+--- Makefile.orig	Thu Jan 24 13:51:04 2002
++++ Makefile
+@@ -61,8 +61,6 @@
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
  	done
@@ -11,10 +11,10 @@ $NetBSD: patch-ab,v 1.12 2001/12/14 23:18:16 jlam Exp $
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
  	echo Installing in doc...
-@@ -77,30 +75,6 @@
+@@ -78,30 +76,6 @@
  	echo Installing cups-config script...
- 	$(INSTALL_DIR) $(bindir)
- 	$(INSTALL_SCRIPT) cups-config $(bindir)/cups-config
+ 	$(INSTALL_DIR) $(BINDIR)
+ 	$(INSTALL_SCRIPT) cups-config $(BINDIR)/cups-config
 -	echo Installing startup script...
 -	if test "x$(INITDIR)" != "x"; then \
 -		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/init.d; \
