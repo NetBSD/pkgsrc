@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3678 2003/10/11 15:01:30 cube Exp $
+$NetBSD: CHANGES,v 1.3679 2003/10/11 16:43:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3057,7 +3057,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated i2cbd to 2.0_BETA0nb1 [jmmv 2003-07-29]
 	Updated ircd-hybrid to 6.2nb1 [jmmv 2003-07-29]
 	Updated zephyr-current to 20010518nb1 [jmmv 2003-07-29]
-	Updated canna-server-bin to 3.6pl3nb1 [jmmv 2003-07-29]
+	Updated Canna-server-bin to 3.6pl3nb1 [jmmv 2003-07-29]
 	Updated ja-freewnn-server-bin to 1.10nb2 [jmmv 2003-07-29]
 	Updated sj3-server-bin to 2.0.1.20nb2 [jmmv 2003-07-29]
 	Updated skkserv to 3.9.4nb2 [jmmv 2003-07-29]
@@ -3903,7 +3903,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort-mysql to 2.0.2 [salo 2003-09-23]
 	Updated snort-pgsql to 2.0.2 [salo 2003-09-23]
 	Updated openssh to 3.7.1.2 [jschauma 2003-09-23]
-	Added udfclient-ro1 [reinoud 2003-09-23]
+	Added udfclient-0.1 [reinoud 2003-09-23]
 	Updated hylafax to 4.1.7 [abs 2003-09-23]
 	Updated xchat2 to 2.0.5 [xtraeme 2003-09-23]
 	Updated libsndfile to 1.0.5nb1 [recht 2003-09-23]
@@ -4043,7 +4043,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.63 [abs 2003-10-01]
 	Updated level9 to 3.0nb1 [dillo 2003-10-01]
 	Updated abcde to 2.1.4nb5 [abs 2003-10-01]
-	Added riptime 1.3.0.4 [reed 2003-10-01]
 	Updated cue to 20030922 [itojun 2003-10-01]
 	Added py-psyco-1.1.1 [recht 2003-10-01]
 	Updated p0f to 2.0.2 [recht 2003-10-01]
