@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
+include/portaudio.h
+lib/libportaudio.a
+lib/libportaudio.so.0.0.18
+lib/libportaudio.so

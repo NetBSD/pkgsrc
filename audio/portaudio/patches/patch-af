@@ -1,0 +1,27 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/04/20 17:52:49 ben Exp $
+
+--- pa_unix_oss/pa_unix_oss.c~	Mon Jun 30 11:05:50 2003
++++ pa_unix_oss/pa_unix_oss.c	Wed Nov 26 02:40:25 2003
+@@ -47,6 +47,9 @@
+ #include <machine/soundcard.h> /* JH20010905 */
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/audioio.h>
++#endif
+ 
+ #ifndef AFMT_S16_NE
+ #define AFMT_S16_NE  Get_AFMT_S16_NE()
+@@ -236,7 +239,11 @@
+         ERR_RPT(("Pa_SetupDeviceFormat: HW does not support AFMT_S16_NE\n" ));
+         return paHostError;
+     }
+-
++#ifdef __NetBSD__
++   tmp = 1;
++   ioctl(devHandle, AUDIO_SETFD, &tmp); /* set full-duplex operations, 
++					 * ignore the output on non-fd cards */
++#endif
+ 
+     /* Set number of channels. */
+     tmp = numChannels;
