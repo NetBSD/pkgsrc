@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2003/04/14 00:28:17 grant Exp $
+# $NetBSD: Makefile,v 1.56 2003/05/02 08:22:12 jmmv Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 #
@@ -48,12 +49,12 @@ ALL_TARGET=		bootstrap
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-GCC_PREFIX=		${PREFIX}/${PKGNAME}
+GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 .else
 # try to use some sane defaults if we have no idea about the platform.
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-GCC_PREFIX=		${PREFIX}/${PKGNAME}
+GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 # play it safe, force a bootstrap build if we don't know for sure it
 # is gcc.
@@ -95,11 +96,13 @@ post-build:
 #	make install; make deinstall; make install
 #
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gcc
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/gcc/mk.conf
 	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .else
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gcc
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/gcc/mk.conf
 .  if exists(/usr/include/g++/FlexLexer.h)
 	${LN} -fs /usr/include/g++/FlexLexer.h				\
 		${GCC_PREFIX}/include/g++-3/FlexLexer.h
