@@ -1,0 +1,10 @@
+Cardboard Schedule is a project management package implemented in
+Java using the Swing UI toolkit.  It allows for tracking of tasks
+and resources related to a number of projects.
+
+Although originally distributed for Windows, Cardboard Schedule is
+implemented in Java and runs fine under Unix.
+
+This package installs a 30-day demo version of Cardboard Schedule.
+You can contact Cardboard Nu at their website. http://cardboard.nu
+to purchase a full license.

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:15 wiz Exp $
+
+--- ./Imakefile.orig	Sun Mar 14 01:04:31 1999
++++ ./Imakefile	Thu Oct  7 03:38:21 1999
+@@ -1,13 +1,14 @@
+ 
+-XPMLIB = -L/usr/lib/X11 -lXpm   
++XPMLIB = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXpm
+ DEPLIBS = $(DEPXLIB) 
+ 
+ LOCAL_LIBRARIES = $(XPMLIB) $(XLIB)  
+ 
+ LINTLIBS = $(LINTXLIB)
+-CC = gcc -g
+ 
+ SRCS = asclock.c parser.c symbols.c config.c
+ OBJS = asclock.o parser.o symbols.o config.o
+ 
+-ComplexProgramTarget(asclock)
++CPPFLAGS += -DPREFIX=\"${PREFIX}\"
++
++ComplexProgramTargetNoMan(asclock-xlib)

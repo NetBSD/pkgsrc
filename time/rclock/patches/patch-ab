@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:19 wiz Exp $
+--- rclock/feature.h.orig	Mon Jun 14 03:32:41 1999
++++ rclock/feature.h	Mon Jun 14 03:33:08 1999
+@@ -53,7 +53,7 @@
+ #define MAIL
+ /* #define MAIL_BELL */
+ /* #define MAIL_SPAWN	"xmh\ -font\ 7x14\&" */
+-/* #define MAIL_SPOOL	"/var/spool/mail/" */
++#define MAIL_SPOOL	"/var/mail/"
+ 
+ /*----------------------------------------------------------------------*
+  * #define CLOCKUPDATE	30

@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:19 wiz Exp $
+
+--- makefile.orig	Thu Feb  4 07:13:25 1999
++++ makefile	Tue May 30 09:10:18 2000
+@@ -5,17 +5,16 @@
+ 
+              CC = g++
+              LN = g++
+-            OPT = -O2
++            OPT = 
+ 
+-   INCLUDE_PATH = -I/usr/local/X11R6/include
+-       LIB_PATH = -L/usr/local/X11R6/lib
++   INCLUDE_PATH = -I${X11BASE}/include
++       LIB_PATH = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
+ 
+-           LIBS = -lglut -lGLU -lGL -lXext -lXmu -lX11 -lm
++           LIBS = -lglut -lGLU -lGL -lXext -lXmu -lXt -lSM -lICE -lXi -lX11 -lm
+ 
+ #                 for Mesa
+ #          LIBS = -lglut -lMesatk -lMesaGLU -lMesaGL -lXi -lXext -lXmu -lX11 -lm
+ 
+-         CFLAGS = -c
+          LFLAGS =
+ 
+ COMPILE = $(CC) $(CFLAGS) $(OPT) $(INCLUDE_PATH)

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:17 wiz Exp $
+bin/dclock
+man/man1/dclock.1.gz

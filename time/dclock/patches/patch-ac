@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/17 23:32:17 wiz Exp $
+
+As pointed out by Robert Elz, the resource name is wrong, and despite
+the concerns expressed by Robert that "military time" is an
+incorrectly-used term, it's outwith the scope of pkgsrc to modify
+arguments to the program such as -m to comply.  Modify the
+documentation to show the correct resource name.
+
+--- dclock.man	1999/10/20 10:52:06	1.1
++++ dclock.man	1999/10/20 10:52:33
+@@ -168,7 +168,7 @@
+ .B font (\fPclass\fB Font)
+ Specifies the font to be used for the date.
+ .TP 8
+-.B miltime (\fPclass\fB Boolean)
++.B militaryTime (\fPclass\fB Boolean)
+ Specifies whether the military (24hr) time format should be used.
+ .TP 8
+ .B reverseVideo (\fPclass\fB ReverseVideo)
