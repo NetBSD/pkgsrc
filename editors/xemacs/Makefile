@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/03/29 14:48:23 magick Exp $
+# $NetBSD: Makefile,v 1.47 2002/04/05 18:39:18 magick Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	2
@@ -57,10 +57,18 @@ DEPENDS+=	faces>=1.6.1:../../mail/faces
 WITH_XFACE=	--with-xface=no
 .endif
 
+.if defined(EMACS_CANNA) && ${EMACS_CANNA} == YES
+WITH_CANNA=	--with-canna=yes
+DEPENDS+=	Canna-lib-3*:../../japanese/canna-lib
+.else
+WITH_CANNA=	--with-canna=no
+.endif
+
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM} --prefix=${PREFIX} \
 			--with-clash-detection --with-mule=yes \
 			--with-ncurses=no --with-session=yes \
 			${WITH_DIALOGS} ${WITH_LDAP} ${WITH_XFACE} \
+			${WITH_CANNA} \
 			--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
 			--lockdir=/var/tmp/xemacs.lock \
 			--site-includes=${PREFIX}/include:${WRKDIR} \
