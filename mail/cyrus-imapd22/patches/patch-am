@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.1 2004/05/27 04:42:46 jlam Exp $
+
+--- configure.in.orig	Tue Mar  9 13:08:38 2004
++++ configure.in
+@@ -924,6 +924,11 @@
+ dnl and compile perl/cyradm
+     PERL_SUBDIRS="imap"
+     PERL="${with_perl}"
++dnl add perl cccdlflags when building libraries -- this ensures that the
++dnl libraries will be compiled as PIC if perl requires PIC objects
++    eval `${PERL} -V:cccdlflags`
++    PERL_CCCDLFLAGS="$cccdlflags"
++    AC_SUBST(PERL_CCCDLFLAGS)
+ fi
+ 
+ dnl for timsieved
