@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.14 2005/02/16 10:38:02 tron Exp $
+# $NetBSD: srcdist.mk,v 1.15 2005/02/16 10:41:50 tron Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -18,9 +18,9 @@ DISTNAME=	Python-2.3.5
 EXTRACT_SUFX=	.tgz
 DISTINFO_FILE=	${.CURDIR}/../../lang/python23/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/python23/patches
-PYSUBDIR=	Python-2.3.4
+PYSUBDIR=	Python-2.3.5
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.3.4/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.3.5/
 
 .elif ${_PYTHON_VERSION} == "22"
 
