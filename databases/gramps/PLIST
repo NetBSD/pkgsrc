@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/15 15:06:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/12/21 18:51:47 drochner Exp $
 bin/gramps
 lib/gramps/grampslib.so
 man/man1/gramps.1
-share/gnome/apps/Applications/gramps.desktop
+share/applications/gramps.desktop
 share/gramps/AddMedia.py
 share/gramps/AddMedia.pyo
 share/gramps/AddSpouse.py
@@ -577,6 +577,8 @@ share/gramps/plugins/ReorderIds.py
 share/gramps/plugins/ReorderIds.pyo
 share/gramps/plugins/SimpleBookTitle.py
 share/gramps/plugins/SimpleBookTitle.pyo
+share/gramps/plugins/StatisticsChart.py
+share/gramps/plugins/StatisticsChart.pyo
 share/gramps/plugins/Summary.py
 share/gramps/plugins/Summary.pyo
 share/gramps/plugins/TimeLine.py
@@ -616,6 +618,8 @@ share/gramps/plugins/rel_da.py
 share/gramps/plugins/rel_da.pyo
 share/gramps/plugins/rel_de.py
 share/gramps/plugins/rel_de.pyo
+share/gramps/plugins/rel_es.py
+share/gramps/plugins/rel_es.pyo
 share/gramps/plugins/rel_fi.py
 share/gramps/plugins/rel_fi.pyo
 share/gramps/plugins/rel_fr.py
