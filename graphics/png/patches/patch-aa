@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.18 2002/03/13 17:43:38 fredb Exp $
+$NetBSD: patch-aa,v 1.19 2002/07/19 14:33:09 fredb Exp $
 
---- scripts/makefile.std.orig	Fri Jan  5 19:25:50 2001
-+++ scripts/makefile.std	Sun May 27 22:36:02 2001
-@@ -3,7 +3,7 @@
+--- scripts/makefile.std.orig	Thu May 23 08:29:59 2002
++++ scripts/makefile.std
+@@ -4,7 +4,7 @@
  # For conditions of distribution and use, see copyright notice in png.h
  
  # where make install puts libpng.a and png.h
 -prefix=/usr/local
 +prefix=${PREFIX}
+ INCPATH=$(prefix)/include
+ LIBPATH=$(prefix)/lib
  
- # Where the zlib library and include files are located
- #ZLIBLIB=/usr/local/lib
-@@ -11,9 +11,9 @@
+@@ -24,9 +24,9 @@
  ZLIBLIB=../zlib
  ZLIBINC=../zlib
  
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.18 2002/03/13 17:43:38 fredb Exp $
  
  #RANLIB=echo
  RANLIB=ranlib
-@@ -22,27 +22,20 @@
+@@ -35,31 +35,20 @@
  	pngread.o pngrio.o pngwio.o pngwrite.o pngrtran.o \
  	pngwtran.o pngmem.o pngerror.o pngpread.o
  
@@ -35,28 +35,32 @@ $NetBSD: patch-aa,v 1.18 2002/03/13 17:43:38 fredb Exp $
 -	ar rc $@  $(OBJS)
 -	$(RANLIB) $@
 +libpng.la: $(OBJS)
-+	${LIBTOOL} --mode=link $(REALCC) -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib ${LDFLAGS} -lz -lm -version-info 3:0
++	${LIBTOOL} --mode=link $(REALCC) -o $@ ${OBJS:.o=.lo} -rpath $(LIBPATH) ${LDFLAGS} -lz -lm -version-info ${LIBPNG_SO_MAJOR}:${LIBPNG_SO_MINOR}
  
 -pngtest: pngtest.o libpng.a
 -	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
 +pngtest: pngtest.o libpng.la
-+	${LIBTOOL} --mode=link $(REALCC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS) libpng.la -lz -lm
++	${LIBTOOL} --mode=link $(REALCC) -o pngtest $(CFLAGS) pngtest.o ${LDFLAGS} libpng.la -lz -lm
  
  test: pngtest
  	./pngtest
  
 -install: libpng.a
--	-@mkdir $(prefix)/include
--	-@mkdir $(prefix)/lib
--	cp png.h $(prefix)/include
--	cp pngconf.h $(prefix)/include
--	chmod 644 $(prefix)/include/png.h
--	chmod 644 $(prefix)/include/pngconf.h
--	cp libpng.a $(prefix)/lib
--	chmod 644 $(prefix)/lib/libpng.a
+-	-@mkdir $(DESTDIR)$(INCPATH)
+-	-@mkdir $(DESTDIR)$(INCPATH)/libpng
+-	-@mkdir $(DESTDIR)$(LIBPATH)
+-	-@rm -f $(DESTDIR)$(INCPATH)/png.h
+-	-@rm -f $(DESTDIR)$(INCPATH)/pngconf.h
+-	cp png.h $(DESTDIR)$(INCPATH)/libpng
+-	cp pngconf.h $(DESTDIR)$(INCPATH)/libpng
+-	chmod 644 $(DESTDIR)$(INCPATH)/libpng/png.h
+-	chmod 644 $(DESTDIR)$(INCPATH)/libpng/pngconf.h
+-	(cd $(DESTDIR)$(INCPATH); ln -f -s libpng/* .)
+-	cp libpng.a $(DESTDIR)$(LIBPATH)
+-	chmod 644 $(DESTDIR)$(LIBPATH)/libpng.a
 +install: libpng.la
-+	${BSD_INSTALL_DATA} png.h pngconf.h $(prefix)/include
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libpng.la $(prefix)/lib
++	${BSD_INSTALL_DATA} png.h pngconf.h $(INCPATH)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libpng.la $(LIBPATH)
  
  clean:
  	rm -f *.o libpng.a pngtest pngout.png
