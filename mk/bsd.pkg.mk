@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.237 1999/03/31 09:57:29 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.238 1999/03/31 10:59:44 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -513,6 +513,7 @@ TAIL?=		/usr/xpg4/bin/tail
 TEST?=		/usr/bin/test
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
+TYPE?=		/usr/bin/type
 .else
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
@@ -548,6 +549,7 @@ TAIL?=		/usr/bin/tail
 TEST?=		/bin/test
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
+TYPE?=		type
 .endif # !SunOS
 
 # Used to print all the '===>' style prompts - override this to turn them off.
@@ -1098,7 +1100,7 @@ do-configure:
 .if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
 	    CFLAGS="${CFLAGS}" \
-	    INSTALL="`type ${INSTALL} | ${AWK} '{print($$3)}'` -c -o ${BINOWN} -g ${BINGRP}" \
+	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 .endif
@@ -1471,22 +1473,22 @@ pkg-su-install:
 	if [ `${ID} -u` = 0 ]; then					\
 		${MAKE} ${.MAKEFLAGS} root-install;			\
 	else								\
-		if [ "X${BATCH}" != X"" ]; then                         \
+		if [ "X${BATCH}" != X"" ]; then				\
 			${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
 			${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
-		else                                                    \
-			make=`type ${MAKE} | ${AWK} '{ print $$3 }'`;   \
-			force="";                                       \
-			if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then    \
-				force="FORCE_PKG_REGISTER=1";           \
-			fi;                                             \
+		else							\
+			make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`; \
+			force="";					\
+			if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then	\
+				force="FORCE_PKG_REGISTER=1";		\
+			fi;						\
 			if [ "X${PRE_ROOT_CMD}" != "X" ]; then		\
 				${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
-				${PRE_ROOT_CMD};                        \
+				${PRE_ROOT_CMD};			\
 			fi;                                             \
 			${ECHO_MSG} "Becoming root to install ${PKGNAME}.";\
 			${SU_CMD} "cd ${.CURDIR}; $$make $$force ${.MAKEFLAGS} root-install"; \
-                fi;               					\
+                fi;							\
 	fi
 
 # Empty pre-* and post-* targets, note we can't use .if !target()
