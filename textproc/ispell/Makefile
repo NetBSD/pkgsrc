@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/05/18 02:18:18 jwise Exp $
+# $NetBSD: Makefile,v 1.20 1999/08/18 08:34:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -21,6 +21,8 @@ INFO_FILES=	ispell.info
 .if exists(/usr/include/inttypes.h)
 CFLAGS+=	-DHAVE_INTTYPES_H
 .endif
+
+BUILD_DEFS+=	EXTRA_DICT ISPELL_FR ISPELL_LANG
 
 .include "../../mk/bsd.prefs.mk"
 

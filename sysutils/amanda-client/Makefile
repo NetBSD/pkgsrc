@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/08/10 17:03:01 bouyer Exp $
+# $NetBSD: Makefile,v 1.9 1999/08/18 08:28:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -38,6 +38,8 @@ CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 			--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists \
 			--with-dump-honor-nodump \
 			--without-server --without-restore
+
+BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
 .if defined(AMANDA_SMB)
 CONFIGURE_ARGS+=	--with-smbclient
