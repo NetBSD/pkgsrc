@@ -1,11 +1,22 @@
-# $NetBSD: Makefile,v 1.94 2003/03/29 12:41:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.95 2003/04/15 11:11:50 mjl Exp $
 
+IM_MAJOR_VER=		5.5.6
+IM_MINOR_VER=		NONE
+IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}-Q16
+
+.if (${IM_MINOR_VER} != NONE)
 DISTNAME=		ImageMagick-${IM_MAJOR_VER}-${IM_MINOR_VER}
 PKGNAME=		ImageMagick-${IM_MAJOR_VER}.${IM_MINOR_VER}
+.else
+DISTNAME=		ImageMagick-${IM_MAJOR_VER}
+PKGNAME=		ImageMagick-${IM_MAJOR_VER}
+.endif
 WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
 			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
+			ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/ \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
 			http://imagemagick.sourceforge.net/http/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,9 +29,6 @@ DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
 
 CONFLICTS=		geomview-[0-9]*    # both have a program named 'animate'
 
-IM_MAJOR_VER=		5.5.3
-IM_MINOR_VER=		2
-
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
@@ -28,6 +36,7 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=		IM_MAJOR_VER=${IM_MAJOR_VER}
+PLIST_SUBST+=		IM_MAJOR_LIB_VER=${IM_MAJOR_LIB_VER}
 
 .include "../../mk/bsd.prefs.mk"
 

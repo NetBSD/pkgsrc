@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/01/03 23:04:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/04/15 11:11:50 mjl Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/animate
@@ -45,7 +45,6 @@ include/magick/module.h
 include/magick/monitor.h
 include/magick/paint.h
 include/magick/quantize.h
-include/magick/random.h
 include/magick/registry.h
 include/magick/render.h
 include/magick/resource.h
@@ -56,26 +55,26 @@ include/magick/utility.h
 include/magick/version.h
 include/magick/widget.h
 include/magick/xwindow.h
-lib/ImageMagick-${IM_MAJOR_VER}/colors.mgk
-lib/ImageMagick-${IM_MAJOR_VER}/delegates.mgk
-lib/ImageMagick-${IM_MAJOR_VER}/log.mgk
-lib/ImageMagick-${IM_MAJOR_VER}/magic.mgk
-lib/ImageMagick-${IM_MAJOR_VER}/type-ghostscript.mgk
-lib/ImageMagick-${IM_MAJOR_VER}/type-solaris.mgk
-lib/ImageMagick-${IM_MAJOR_VER}/type-windows.mgk
-lib/ImageMagick-${IM_MAJOR_VER}/type.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/colors.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/delegates.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/log.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/magic.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/type-ghostscript.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/type-solaris.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/type-windows.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/type.mgk
 @exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_VER}/modules/coders
 lib/libMagick++.a
 lib/libMagick++.la
-lib/libMagick++-${IM_MAJOR_VER}.so
-lib/libMagick++-${IM_MAJOR_VER}.so.0
-lib/libMagick++-${IM_MAJOR_VER}.so.0.0
+lib/libMagick++-${IM_MAJOR_LIB_VER}.so
+lib/libMagick++-${IM_MAJOR_LIB_VER}.so.0
+lib/libMagick++-${IM_MAJOR_LIB_VER}.so.0.0
 lib/libMagick++.so
 lib/libMagick.a
 lib/libMagick.la
-lib/libMagick-${IM_MAJOR_VER}.so
-lib/libMagick-${IM_MAJOR_VER}.so.0
-lib/libMagick-${IM_MAJOR_VER}.so.0.0
+lib/libMagick-${IM_MAJOR_LIB_VER}.so
+lib/libMagick-${IM_MAJOR_LIB_VER}.so.0
+lib/libMagick-${IM_MAJOR_LIB_VER}.so.0.0
 lib/libMagick.so
 man/man1/ImageMagick.1
 man/man1/Magick++-config.1
@@ -94,28 +93,24 @@ man/man5/quantize.5
 share/ImageMagick/Copyright.txt
 share/ImageMagick/ImageMagick.html
 share/ImageMagick/QuickStart.txt
-share/ImageMagick/images/authentica.jpg
-share/ImageMagick/images/ball.png
+share/ImageMagick/images/background.gif
 share/ImageMagick/images/examples.jpg
-share/ImageMagick/images/home.png
 share/ImageMagick/images/logo.png
 share/ImageMagick/images/magick.png
-share/ImageMagick/images/magick_button_120x60.png
-share/ImageMagick/images/magick_button_88x31.png
-share/ImageMagick/images/magick_icon_16x16.png
-share/ImageMagick/images/magick_icon_32x32.png
-share/ImageMagick/images/magick_icons.ico
-share/ImageMagick/images/magick_small.png
-share/ImageMagick/images/mail.png
+share/ImageMagick/images/networkeleven.png
 share/ImageMagick/images/pair.png
 share/ImageMagick/images/promote.png
 share/ImageMagick/images/right_triangle.png
 share/ImageMagick/images/right_triangle_option.png
 share/ImageMagick/images/screen.png
+share/ImageMagick/images/script.gif
+share/ImageMagick/images/sprite.png
+share/ImageMagick/images/star.png
+share/ImageMagick/images/top.jpg
+share/ImageMagick/images/twi.png
 share/ImageMagick/www/Changelog.html
 share/ImageMagick/www/Copyright.html
 share/ImageMagick/www/FAQ.html
-share/ImageMagick/www/ImageMagick.html
 share/ImageMagick/www/Magick++/Blob.html
 share/ImageMagick/www/Magick++/Cache.fig
 share/ImageMagick/www/Magick++/Cache.png
@@ -229,6 +224,7 @@ share/ImageMagick/www/quantize.html
 share/ImageMagick/www/smile.c
 share/ImageMagick/www/sponsor.html
 share/ImageMagick/www/tools.html
+share/ImageMagick/www/utilities.html
 share/ImageMagick/www/windows.html
 @dirrm share/ImageMagick/www/api/types
 @dirrm share/ImageMagick/www/api
@@ -236,8 +232,8 @@ share/ImageMagick/www/windows.html
 @dirrm share/ImageMagick/www
 @dirrm share/ImageMagick/images
 @dirrm share/ImageMagick
-@dirrm lib/ImageMagick-${IM_MAJOR_VER}/modules/coders
-@dirrm lib/ImageMagick-${IM_MAJOR_VER}/modules
-@dirrm lib/ImageMagick-${IM_MAJOR_VER}
+@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules/coders
+@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules
+@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}
 @dirrm include/magick
 @dirrm include/Magick++
