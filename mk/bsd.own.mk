@@ -1,4 +1,5 @@
-#	$NetBSD: bsd.own.mk,v 1.8 1998/10/04 02:29:35 hubertf Exp $
+#	$NetBSD: bsd.own.mk,v 1.9 1999/02/08 20:55:47 hubertf Exp $
+# From:  NetBSD: bsd.own.mk,v 1.113 1999/02/07 17:21:09 hubertf Exp 
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -59,6 +60,12 @@ KMODOWN?=	root
 KMODMODE?=	${NONBINMODE}
 
 COPY?=		-c
+.if defined(UPDATE)
+PRESERVE?=	-p
+.else
+PRESERVE?=
+.endif
+RENAME?=
 STRIPFLAG?=	-s
 
 # Define SYS_INCLUDE to indicate whether you want symbolic links to the system
@@ -77,26 +84,15 @@ NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|'
 
 .if (${NETBSD_CURRENT} == "yes")
 # Systems on which UVM is the standard VM system.
-.if	(${MACHINE} == "alpha") || \
-	(${MACHINE} == "arm32") || \
-	(${MACHINE} == "atari") || \
-	(${MACHINE} == "bebox") || \
-	(${MACHINE} == "hp300") || \
-	(${MACHINE} == "i386") || \
-	(${MACHINE} == "mac68k") || \
-	(${MACHINE} == "macppc") || \
-	(${MACHINE} == "ofppc") || \
-	(${MACHINE} == "mvme68k") || \
-	(${MACHINE} == "pc532") || \
-	(${MACHINE} == "sparc") || \
-	(${MACHINE} == "sparc64")
+.if	(${MACHINE} != "pica")
 UVM?=		yes
 .endif
 
 # Systems that use UVM's new pmap interface.
 .if	(${MACHINE} == "alpha") || \
 	(${MACHINE} == "i386") || \
-	(${MACHINE} == "pc532")
+	(${MACHINE} == "pc532") || \
+	(${MACHINE} == "vax")
 PMAP_NEW?=	yes
 .endif
 
@@ -104,13 +100,16 @@ PMAP_NEW?=	yes
 
 .endif # !UVM
 
+# The sparc64 port is incomplete.
+.if (${MACHINE_ARCH} == "sparc64")
+NOPROFILE=1
+NOPIC=1
+NOLINT=1
+.endif
 
-# don't try to generate PIC versions of libraries on machines
-# which don't support PIC.
-.if  (${MACHINE_ARCH} == "vax") || \
-    ((${MACHINE_ARCH} == "mips") && defined(STATIC_TOOLCHAIN)) || \
-    (${MACHINE_ARCH} == "powerpc")
-NOPIC=
+# The PowerPC port is incomplete.
+.if (${MACHINE_ARCH} == "powerpc")
+NOPROFILE=
 .endif
 
 # Data-driven table using make variables to control how 
@@ -121,37 +120,15 @@ NOPIC=
 #
 .if (${MACHINE_ARCH} == "alpha") || \
     (${MACHINE_ARCH} == "mips") || \
-    (${MACHINE_ARCH} == "powerpc")
+    (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc64")
 OBJECT_FMT?=ELF
 .else
 OBJECT_FMT?=a.out
 .endif
 
-.if (${MACHINE_ARCH} == "vax") || \
-    (${MACHINE_ARCH} == "powerpc")
-SHLIB_TYPE?=	""
-.else
 SHLIB_TYPE?=	${OBJECT_FMT}
-.endif
 
-# No lint, for now.
-
-# all machines on which we are okay should be added here until we can
-# get rid of the whole "NOLINT by default" thing.
-.if (${MACHINE} == "i386") || \
-    (${MACHINE} == "sparc")
-NONOLINT=1
-.endif
-
-.if !defined(NONOLINT)
-NOLINT=
-.endif
-
-# Profiling and shared libraries don't work on PowerPC yet.
-.if (${MACHINE_ARCH} == "powerpc")
-NOPROFILE=
-NOSHLIB=
-.endif
 
 # GNU sources and packages sometimes see architecture names differently.
 # This table maps an architecture name to its GNU counterpart.
@@ -160,20 +137,28 @@ GNU_ARCH.alpha=alpha
 GNU_ARCH.arm32=arm
 GNU_ARCH.i386=i386
 GNU_ARCH.m68k=m68k
-GNU_ARCH.mips=mips
-GNU_ARCH.mipseb=mips
-GNU_ARCH.mipsel=mips
+GNU_ARCH.mipseb=mipseb
+GNU_ARCH.mipsel=mipsel
 GNU_ARCH.ns32k=ns32k
 GNU_ARCH.powerpc=powerpc
 GNU_ARCH.sparc=sparc
+GNU_ARCH.sparc64=sparc
 GNU_ARCH.vax=vax
-MACHINE_GNU_ARCH=${GNU_ARCH.${MACHINE_ARCH}}
+# XXX temporary compatibility
+GNU_ARCH.mips=mipsel
 
-TARGETS+=	all clean cleandir depend includes install lint obj regress \
-		tags
-.PHONY:		all clean cleandir depend includes install lint obj regress \
-		tags beforedepend afterdepend beforeinstall afterinstall \
-		realinstall
+# 
+.if (${MACHINE_ARCH} == "sparc64")
+MACHINE_GNU_ARCH=${MACHINE_ARCH}
+.else
+MACHINE_GNU_ARCH=${GNU_ARCH.${MACHINE_ARCH}}
+.endif
+
+TARGETS+=	all clean cleandir depend distclean includes install lint obj \
+		regress tags
+.PHONY:		all clean cleandir depend distclean includes install lint obj \
+		regress tags beforedepend afterdepend beforeinstall \
+		afterinstall realinstall
 
 # set NEED_OWN_INSTALL_TARGET, if it's not already set, to yes
 # this is used by bsd.pkg.mk to stop "install" being defined
