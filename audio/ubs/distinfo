@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/05 11:46:11 xtraeme Exp $
+
+SHA1 (ubs-0.17.tar.gz) = f0f67d437e4c5c7026b2f05d1aaff53688eb3253
+Size (ubs-0.17.tar.gz) = 372222 bytes
+SHA1 (patch-aa) = 4a5690fa3e7a8dc1dc50329bf844199575a09319
+SHA1 (patch-ab) = 88d06fca850e7bf2d38ad587021e4352c96cc89b
