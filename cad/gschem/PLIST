@@ -1,24 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2003/07/15 09:23:35 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/09/10 23:43:36 dmcmahill Exp $
 bin/gschem
 info/gschemdoc.info
 info/gschemdoc.info-1
-info/gschemdoc.info-10
-info/gschemdoc.info-11
-info/gschemdoc.info-12
-info/gschemdoc.info-13
-info/gschemdoc.info-14
-info/gschemdoc.info-15
-info/gschemdoc.info-16
-info/gschemdoc.info-17
-info/gschemdoc.info-18
 info/gschemdoc.info-2
 info/gschemdoc.info-3
 info/gschemdoc.info-4
 info/gschemdoc.info-5
-info/gschemdoc.info-6
-info/gschemdoc.info-7
-info/gschemdoc.info-8
-info/gschemdoc.info-9
 man/man1/gschem.1
 share/gEDA/bitmap/gschem-bus.xpm
 share/gEDA/bitmap/gschem-comp.xpm
@@ -39,12 +26,12 @@ share/gEDA/bitmap/gschem-undo.xpm
 share/gEDA/gschem-darkbg
 share/gEDA/gschem-gtkrc
 share/gEDA/gschem-lightbg
-share/gEDA/system-gschemrc
 share/gEDA/scheme/auto-uref.scm
 share/gEDA/scheme/generate_netlist.scm
 share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/list-keys.scm
 share/gEDA/scheme/print-NB-attribs.scm
+share/gEDA/system-gschemrc
 ${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/geda-gschem.mo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/09 10:32:14 seb Exp $
+# $NetBSD: Makefile,v 1.23 2003/09/10 23:43:36 dmcmahill Exp $
 #
 
 DISTNAME=		geda-gschem-${PKGVERSION}
@@ -18,10 +18,9 @@ DEPENDS+=		geda-symbols-${PKGVERSION}:../../cad/geda-symbols
 CONFLICTS+=		gEDA<19991011
 
 DIST_SUBDIR=		geda
-PKGVERSION=		20030525
+PKGVERSION=		20030901
 
 GNU_CONFIGURE=		YES
-USE_X11BASE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 INFO_FILES=		gschemdoc.info
