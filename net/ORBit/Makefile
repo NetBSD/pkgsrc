@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2002/10/30 03:09:34 rh Exp $
+# $NetBSD: Makefile,v 1.82 2002/11/25 21:20:05 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -10,19 +10,27 @@ MAINTAINER=		wiz@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		high-performance CORBA ORB with support for the C language
 
-DEPENDS+=		gindent-[0-9]*:../../devel/gindent
+USE_BUILDLINK2=		YES
 
-AUTOMAKE_OVERRIDE=	NO	# Otherwise breaks 1.5 arm32
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} != "NetBSD") && (${OPSYS} != "Linux")
+DEPENDS+=		gindent-[0-9]*:../../devel/gindent
+.endif
+
 USE_GMAKE=		YES
+
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/popt/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libIDL/libtool
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/ORBit.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libIDL/libIDL.pc.in
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+CONFIGURE_ENV+=	LIBWRAP_PATH=${BUILDLINK_PREFIX.tcp_wrappers}/lib/libwrap.a
+CONFIGURE_ENV+=	LIB_WRAP="-lwrap"
+
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/ORBit.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/libIDL/libIDL.pc.in
 
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 
