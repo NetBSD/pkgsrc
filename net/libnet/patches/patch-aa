@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2000/08/11 08:06:00 itojun Exp $
 --- configure.orig	Wed Oct 27 11:47:27 1999
 +++ configure	Sat Apr 22 04:01:09 2000
 @@ -903,7 +903,7 @@
