@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.3 2003/06/23 19:48:22 jtb Exp $
+$NetBSD: patch-af,v 1.4 2003/07/07 21:31:53 jtb Exp $
 
 --- EnginePl/engine1.c.orig
 +++ EnginePl/engine1.c
-@@ -78,7 +78,7 @@
-   register WamWord *rb asm("$9") = reg_bank;
-   ensure_reserved = (WamWord *) rb; /* to avoid gcc warning */
+@@ -97,7 +97,7 @@
  
--#elif defined(M_powerpc_linux)
-+#elif defined(M_powerpc_linux) || defined(M_powerpc_bsd)
+ #endif
  
-   register WamWord *rb asm("15") = reg_bank;
-   ensure_reserved = (WamWord *) rb; /* to avoid gcc warning */
+-#ifdef M_sparc
++#if defined(M_sparc) && !defined(M_sparc_bsd)
+   register long *rfl asm("%l2") = base_fl;
+   register double *rfd asm("%l3") = base_fd;
+ #endif
