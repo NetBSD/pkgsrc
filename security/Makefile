@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/03/20 02:25:29 itojun Exp $
+# $NetBSD: Makefile,v 1.29 2000/03/27 16:04:12 itojun Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -8,6 +8,7 @@
     SUBDIR += fortify
     SUBDIR += fsh
     SUBDIR += gnupg
+    SUBDIR += isakmpd
     SUBDIR += libident
     SUBDIR += nessus
     SUBDIR += nfsbug

@@ -1,0 +1,10 @@
+sbin/certpatch
+sbin/isakmpd
+man/cat5/isakmpd.conf.0
+man/cat5/isakmpd.policy.0
+man/cat8/certpatch.0
+man/cat8/isakmpd.0
+man/man5/isakmpd.conf.5
+man/man5/isakmpd.policy.5
+man/man8/certpatch.8
+man/man8/isakmpd.8
