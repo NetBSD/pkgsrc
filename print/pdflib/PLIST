@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/30 03:58:17 jschauma Exp $
 bin/pdflib-config
 include/pdflib.h
 lib/libpdf.a
 lib/libpdf.la
 lib/libpdf.so
 lib/libpdf.so.2
-lib/libpdf.so.2.1
+lib/libpdf.so.2.3
 share/doc/pdflib/PDFlib-license.pdf
 share/doc/pdflib/PDFlib-manual.pdf
 share/doc/pdflib/aladdin-license.pdf
