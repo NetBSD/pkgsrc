@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/09/18 05:37:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/01/09 22:48:16 jlam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -206,6 +206,7 @@ sbin/slapcat
 sbin/slapindex
 sbin/slappasswd
 share/examples/openldap/ldap.conf
+share/examples/openldap/schema/README
 share/examples/openldap/schema/corba.schema
 share/examples/openldap/schema/core.schema
 share/examples/openldap/schema/cosine.schema
