@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/07 17:37:24 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/09 23:19:27 minskim Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -52,6 +52,7 @@ pre-install:
 
 post-install:
 	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
+	${RM} -rf ${WRKDIR}/man
 	${RM} -f ${PREFIX}/bin/wish
 	cd ${PREFIX}/bin && ${LN} -s wish8.3 wish
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tk
