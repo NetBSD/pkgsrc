@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 1999/12/01 12:43:02 frueauf Exp $
+# $NetBSD: Makefile,v 1.60 2000/01/09 01:28:34 wiz Exp $
 #
 
 DISTNAME=       fetchmail-5.2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 		http://sunsite.unc.edu/pub/Linux/system/mail/pop/
 
 MAINTAINER=	mycroft@netbsd.org
-HOMEPAGE=	http://www.tuxedo.org/~esr/fetchmail/ 
+HOMEPAGE=	http://www.tuxedo.org/~esr/fetchmail/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
@@ -43,7 +43,7 @@ pre-configure:
 
 post-build:
 	tbl ${WRKSRC}/fetchmail.tbl >${WRKSRC}/fetchmail.man
-	
+
 post-install:
 	${INSTALL} -d -m 555 -o ${DOCOWN} -g ${DOCGRP} ${FDOC}
 	cd ${WRKSRC} && ${INSTALL_DATA} \
