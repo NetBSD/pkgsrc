@@ -1,0 +1,9 @@
+
+You may want to customize
+
+	${PREFIX}/etc/nntpcache/access
+	${PREFIX}/etc/nntpcache/config
+	${PREFIX}/etc/nntpcache/servers
+	${PREFIX}/etc/nntpcache/spam.filter
+
+to fit your personal needs.
