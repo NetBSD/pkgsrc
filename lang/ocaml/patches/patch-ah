@@ -1,8 +1,10 @@
-$NetBSD: patch-ah,v 1.6 2004/04/23 03:06:02 danw Exp $
+$NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
 
---- asmrun/power-bsd.S.orig	Thu Apr 22 21:34:41 2004
-+++ asmrun/power-bsd.S
-@@ -15,2 +15,31 @@
+--- asmrun/power-bsd.S.orig	2004-10-14 15:48:54.000000000 +0100
++++ asmrun/power-bsd.S	2004-10-14 15:55:11.000000000 +0100
+@@ -13,6 +13,35 @@
+ 
+ /* $Id: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $ */
  
 +#if defined(PROFILING)
 +#define PROFILE_CAML \
@@ -34,34 +36,61 @@ $NetBSD: patch-ah,v 1.6 2004/04/23 03:06:02 danw Exp $
 +#endif
 +
  #define Addrglobal(reg,glob) \
-@@ -32,2 +61,3 @@
+         addis   reg, 0, glob@ha; \
+         addi    reg, reg, glob@l
+@@ -30,6 +59,7 @@
+         .globl  caml_call_gc
+         .type   caml_call_gc, @function
  caml_call_gc:
-+        PROFILE_CAML
++	PROFILE_CAML
      /* Set up stack frame */
-@@ -184,2 +214,3 @@ caml_call_gc:
+         stwu    1, -0x1A0(1)
+     /* 0x1A0 = 4*32 (int regs) + 8*32 (float regs) + 32 (space for C call) */
+@@ -182,6 +212,7 @@
+         .globl  caml_c_call
+         .type   caml_c_call, @function
  caml_c_call:
-+        PROFILE_CAML
++	PROFILE_CAML
      /* Save return address */
-@@ -212,2 +243,3 @@ caml_c_call:
- raise_caml_exception:
-+        PROFILE_C
+         mflr    25
+     /* Get ready to call C function (address in 11) */
+@@ -210,6 +241,7 @@
+         .globl  caml_raise_exception
+         .type   caml_raise_exception, @function
+ caml_raise_exception:
++	PROFILE_CAML
      /* Reload Caml global registers */
-@@ -232,2 +264,3 @@ raise_caml_exception:
+         Loadglobal(1, caml_exception_pointer, 11)
+         Loadglobal(31, caml_young_ptr, 11)
+@@ -230,6 +262,7 @@
+         .globl  caml_start_program
+         .type   caml_start_program, @function
  caml_start_program:
-+        PROFILE_C
++	PROFILE_CAML
          Addrglobal(12, caml_program)
-@@ -382,2 +415,3 @@ caml_start_program:
- callback_exn:
-+        PROFILE_C
+ 
+ /* Code shared between caml_start_program and caml_callback */
+@@ -380,6 +413,7 @@
+         .globl  caml_callback_exn
+         .type   caml_callback_exn, @function
+ caml_callback_exn:
++	PROFILE_CAML
      /* Initial shuffling of arguments */
-@@ -392,2 +426,3 @@ callback_exn:
- callback2_exn:
-+        PROFILE_C
          mr      0, 3            /* Closure */
-@@ -402,2 +437,3 @@ callback2_exn:
- callback3_exn:
-+        PROFILE_C
+         mr      3, 4            /* Argument */
+@@ -390,6 +424,7 @@
+         .globl  caml_callback2_exn
+         .type   caml_callback2_exn, @function
+ caml_callback2_exn:
++	PROFILE_CAML
          mr      0, 3            /* Closure */
-@@ -420,2 +456 @@ system__frametable:
-         .short  0               /* no roots here */
--
+         mr      3, 4            /* First argument */
+         mr      4, 5            /* Second argument */
+@@ -400,6 +435,7 @@
+         .globl  caml_callback3_exn
+         .type   caml_callback3_exn, @function
+ caml_callback3_exn:
++	PROFILE_CAML
+         mr      0, 3            /* Closure */
+         mr      3, 4            /* First argument */
+         mr      4, 5            /* Second argument */
