@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/12 00:00:36 hubertf Exp $
+
+--- Makefile.orig	2004-10-01 19:09:37.000000000 +0200
++++ Makefile
+@@ -23,7 +23,7 @@ CFLAGS += -O2
+ LDFLAGS =
+ 
+ DESTDIR =
+-prefix  = /usr/local
++prefix  = ${PREFIX}
+ sbindir = $(prefix)/sbin
+ mandir  = $(prefix)/man
+ man8dir = $(mandir)/man8
