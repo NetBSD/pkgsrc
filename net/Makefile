@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2003/03/05 03:44:33 grant Exp $
+# $NetBSD: Makefile,v 1.359 2003/03/17 08:49:50 seb Exp $
 #
 
 COMMENT=	Networking tools
@@ -273,6 +273,7 @@ SUBDIR+=	udptunnel
 SUBDIR+=	unison
 SUBDIR+=	upclient
 SUBDIR+=	userppp
+SUBDIR+=	vcheck
 SUBDIR+=	vnc
 SUBDIR+=	vncviewer
 SUBDIR+=	vsftpd
