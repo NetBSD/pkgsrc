@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/06 17:38:30 tron Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/06 23:58:01 tron Exp $
 
 DISTNAME=	configurator
 PKGNAME=	${BINNAME}-1.2.2
@@ -20,15 +20,19 @@ BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
 LIBDIR=		${PREFIX}/lib/${BINNAME}
 
+.include "../../mk/bsd.prefs.mk"
+
 # "jdk" and "kaffe" packages don't work.
 .if ${MACHINE_ARCH} == i386
 PKG_JVM=	sun-jdk
 .elif ${MACHINE_ARCH} == powerpc
-PKG_JVM=	blackdown-jdk
-JVM_OPTS=	-green
+PKG_JVM=	blackdown-jdk13
 .endif
 
-.include "../../mk/bsd.prefs.mk"
+JVM_OPTS=	-jar
+.if ${PKG_JVM} == blackdown-jdk13
+JVM_OPTS+=	-green
+.endif
 
 post-extract:
 	${CHMOD} -R g-w,o-w ${WRKSRC}/*
@@ -39,11 +43,7 @@ do-build:
 .if defined(CLASSPATH)
 	${ECHO} "CLASSPATH=${CLASSPATH}:\$${CLASSPATH}; export CLASSPATH" >>${WRKSRC}/${BINNAME}
 .endif
-.ifdef JVM_OPTS
-	${ECHO} "exec java ${JVM_OPTS} -jar ${LIBDIR}/${BINNAME}.jar" >>${WRKSRC}/${BINNAME}
-.else
-	${ECHO} "exec java -jar ${LIBDIR}/${BINNAME}.jar" >>${WRKSRC}/${BINNAME}
-.endif
+	${ECHO} "exec java ${JVM_OPTS} ${LIBDIR}/${BINNAME}.jar" >>${WRKSRC}/${BINNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
