@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/04/15 21:24:28 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/05/06 12:12:59 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.1
@@ -123,11 +123,6 @@ CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GST_PLUGINS_FLAG}/--enable-${GST
 
 BUILD_DIRS=		${WRKSRC}/${GST_PLUGINS_DIR}
 INSTALL_DIRS=		${WRKSRC}/${GST_PLUGINS_DIR}
-
-# Generate a description automatically.
-DESCR_SRC=		${.CURDIR}/../../multimedia/gst-plugins/DESCR
-DESCR_SRC+=		${.CURDIR}/../../multimedia/gst-plugins/DESCR.blank
-DESCR_SRC+=		${.CURDIR}/DESCR
 
 # Fix paths to already installed libraries (by the gst-plugins package).
 SUBST_CLASSES+=		libs
