@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8095 2004/11/28 08:02:52 taca Exp $
+$NetBSD: CHANGES,v 1.8096 2004/11/28 08:07:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5570,3 +5570,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed ruby-base [taca 2004-11-28]
 	Removed ruby-mutexm [taca 2004-11-28]
 	Removed ruby-acl [taca 2004-11-28]
+	Removed ruby-ri [taca 2004-11-28]
