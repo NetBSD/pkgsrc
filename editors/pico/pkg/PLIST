@@ -1,7 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 1998/07/22 02:45:46 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/11/13 15:56:25 tv Exp $
 bin/pico
 bin/pilot
+include/pico/ebind.h
+include/pico/edef.h
+include/pico/efunc.h
+include/pico/estruct.h
+include/pico/headers.h
+include/pico/msmenu.h
+include/pico/os.h
+include/pico/pico.h
+include/pico/resource.h
+@dirrm include/pico
 lib/libpico.a
-lib/libpico.so.0.2
+lib/libpico.so.1.0
 man/man1/pico.1
 man/man1/pilot.1
