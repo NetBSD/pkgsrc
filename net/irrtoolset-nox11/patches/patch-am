@@ -1,0 +1,74 @@
+$NetBSD: patch-am,v 1.1.1.1 2005/02/28 12:37:30 spz Exp $
+
+--- src/normalform/IPv6RadixSet.hh.orig	2004-07-30 12:58:12.000000000 +0200
++++ src/normalform/IPv6RadixSet.hh
+@@ -74,7 +74,8 @@ extern ip_v6word_t ipv6bits[];
+ 
+ class IPv6RadixTree {
+ public:
+-   friend class Iterator {
++   friend class Iterator;
++   class Iterator {
+    private:
+       const IPv6RadixTree* last;
+       const IPv6RadixTree* root;
+@@ -152,7 +153,8 @@ class IPv6RadixSet {
+ public:
+    static bool compressedPrint;
+ 
+-   friend class Iterator {
++   friend class Iterator;
++   class Iterator {
+    private:
+       IPv6RadixTree::Iterator itr;
+       const IPv6RadixTree *now;     // points to current node during iteration
+@@ -163,7 +165,8 @@ public:
+       bool next(ipv6_addr_t &_addr, u_int &_leng, ipv6_addr_t &rngs);
+    };
+ 
+-   friend class SortedIterator {
++   friend class SortedIterator;
++   class SortedIterator {
+    private:
+       class PrefixLNode : public ListNode {
+       public:
+@@ -187,7 +190,8 @@ public:
+       bool next(ipv6_addr_t &_addr, u_int &_leng, ipv6_addr_t &_rngs);
+    };
+ 
+-   friend class PrefixIterator {
++   friend class PrefixIterator;
++   class PrefixIterator {
+    private:
+       IPv6RadixTree::Iterator itr;
+       const IPv6RadixTree *current;
+@@ -204,7 +208,8 @@ public:
+       bool next(ipv6_addr_t &_addr, u_int &_leng);
+    };
+ 
+-   friend class SortedPrefixIterator {
++   friend class SortedPrefixIterator;
++   class SortedPrefixIterator {
+    private:
+       class PrefixLNode : public ListNode {
+       public:
+@@ -227,7 +232,8 @@ public:
+       bool next(ipv6_addr_t &_addr, u_int &_leng);
+    };
+ 
+-   friend class PrefixRangeIterator {
++   friend class PrefixRangeIterator;
++   class PrefixRangeIterator {
+    private:
+       IPv6RadixTree::Iterator itr;
+       const IPv6RadixTree *current;
+@@ -260,7 +266,8 @@ public:
+ */
+    };
+ 
+-   friend class SortedPrefixRangeIterator {
++   friend class SortedPrefixRangeIterator;
++   class SortedPrefixRangeIterator {
+    private:
+       class PrefixLNode : public ListNode {
+       public:

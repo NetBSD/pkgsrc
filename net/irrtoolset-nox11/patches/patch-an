@@ -1,0 +1,74 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/02/28 12:37:30 spz Exp $
+
+--- src/normalform/RadixSet.hh.orig	2004-07-30 12:58:13.000000000 +0200
++++ src/normalform/RadixSet.hh
+@@ -76,7 +76,8 @@ extern FixedSizeAllocator RadixTreeAlloc
+ 
+ class RadixTree {
+ public:
+-   friend class Iterator {
++   friend class Iterator;
++   class Iterator {
+    private:
+       const RadixTree* last;
+       const RadixTree* root;
+@@ -155,7 +156,8 @@ class RadixSet {
+ public:
+    static bool compressedPrint;
+ 
+-   friend class Iterator {
++   friend class Iterator;
++   class Iterator {
+    private:
+       RadixTree::Iterator itr;
+       const RadixTree *now;     // points to current node during iteration
+@@ -166,7 +168,8 @@ public:
+       bool next(u_int &_addr, u_int &_leng, u_int64_t &rngs);
+    };
+ 
+-   friend class SortedIterator {
++   friend class SortedIterator;
++   class SortedIterator {
+    private:
+       class PrefixLNode : public ListNode {
+       public:
+@@ -189,7 +192,8 @@ public:
+       bool next(u_int &_addr, u_int &_leng, u_int64_t &_rngs);
+    };
+ 
+-   friend class PrefixIterator {
++   friend class PrefixIterator;
++   class PrefixIterator {
+    private:
+       RadixTree::Iterator itr;
+       const RadixTree *current;
+@@ -206,7 +210,8 @@ public:
+       bool next(u_int &_addr, u_int &_leng);
+    };
+ 
+-   friend class SortedPrefixIterator {
++   friend class SortedPrefixIterator;
++   class SortedPrefixIterator {
+    private:
+       class PrefixLNode : public ListNode {
+       public:
+@@ -228,7 +233,8 @@ public:
+       bool next(u_int &_addr, u_int &_leng);
+    };
+ 
+-   friend class PrefixRangeIterator {
++   friend class PrefixRangeIterator;
++   class PrefixRangeIterator {
+    private:
+       RadixTree::Iterator itr;
+       const RadixTree *current;
+@@ -259,7 +265,8 @@ public:
+       }
+    };
+ 
+-   friend class SortedPrefixRangeIterator {
++   friend class SortedPrefixRangeIterator;
++   class SortedPrefixRangeIterator {
+    private:
+       class PrefixLNode : public ListNode {
+       public:
