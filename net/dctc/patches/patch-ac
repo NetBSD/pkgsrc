@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/09/11 20:47:15 wiz Exp $
+
+--- src/bdb.c.orig	Sat May 18 12:09:04 2002
++++ src/bdb.c
+@@ -28,7 +28,7 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include <string.h>
+-#include <db.h>
++#include <db4/db.h>
+ #include <glib.h>
+ 
+ #include "var.h"

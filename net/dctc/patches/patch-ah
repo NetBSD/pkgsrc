@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- src/mydb.h.orig	Sat Apr 13 11:45:19 2002
++++ src/mydb.h
+@@ -97,7 +97,7 @@ typedef enum
+ /*                (if dest_nick==NULL, dest_addr is the destination)           */
+ /*                (if dest_addr==NULL, dest_nick is the destination)           */
+ /*******************************************************************************/
+-void search_in_db(int sck, char *dest_nick, int file_type, SIZE_ATTRIB size_matter, unsigned long size, char *pattern, unsigned char *md5sum, struct sockaddr_in *dest_addr);
++void search_in_db(int sck, char *dest_nick, int file_type, SIZE_ATTRIB size_matter, unsigned long size, char *pattern, unsigned char *md5sum, struct sockaddr *dest_addr);
+ 
+ /*************************************************************/
+ /* check if the given filename exists in the shared database */

@@ -1,0 +1,36 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- src/do_connect.c.orig	Wed Aug 14 16:05:09 2002
++++ src/do_connect.c
+@@ -200,11 +200,11 @@ void update_dl_clist_size(GtkCList *clst
+ 
+ 			if(spd<1024.0)
+ 			{
+-				sprintf(buf+strlen(buf)," %.2lfB/s",spd);
++				sprintf(buf+strlen(buf)," %.2fB/s",spd);
+ 			}
+ 			else if(spd<(1024.0*1024.0))
+ 			{
+-				sprintf(buf+strlen(buf)," %.2lfKB/s",spd/1024.0);
++				sprintf(buf+strlen(buf)," %.2fKB/s",spd/1024.0);
+ 			}
+ 		}
+ 	
+@@ -722,7 +722,7 @@ void start_a_new_dctc(char *hub_address,
+ 
+ 							g_ptr_array_add(cmd_line,g_string_chunk_insert(sc,"-o"));
+ 	
+-							sprintf(bf,"%.0lf",value);
++							sprintf(bf,"%.0f",value);
+ 							g_ptr_array_add(cmd_line,g_string_chunk_insert(sc,bf));
+ 						}
+ 					}
+@@ -1160,7 +1160,7 @@ void start_a_new_dctc(char *hub_address,
+ 
+ 							g_ptr_array_add(cmd_line,g_string_chunk_insert(sc,"-o"));
+ 	
+-							sprintf(bf,"%.0lf",value);
++							sprintf(bf,"%.0f",value);
+ 							g_ptr_array_add(cmd_line,g_string_chunk_insert(sc,bf));
+ 						}
+ 					}
