@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+$NetBSD: patch-ae,v 1.2 2001/12/01 00:28:09 hubertf Exp $
 
---- Plugin/Makefile.orig	Fri Aug 25 17:12:47 2000
-+++ Plugin/Makefile	Fri Aug 25 17:15:15 2000
+--- Plugin/Makefile.orig	Tue Sep 28 14:13:38 1999
++++ Plugin/Makefile	Fri Nov 30 17:40:12 2001
+@@ -21,7 +21,7 @@
+ 
+ PLUGIN_DEFINES= -DXP_UNIX
+ OPTIMIZER=
+-FLASH=../Lib
++FLASH=${LOCALBASE}/include/flash
+ 
+ # Solaris
+ #LIBCXX=/usr/lib/libC.so
 @@ -31,12 +31,12 @@
  # Solaris (Sun compiler/linker)
  #SHARED=-G
@@ -15,7 +24,16 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
 -CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include
 -LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) ../Jpeg/libjpeg.a ../Zlib/libz.a
 +CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I${X11BASE}/include
-+LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) -L${LOCALBASE}/lib -R${LOCALBASE}/lib  -ljpeg -lz
++LDFLAGS= -lflash $(LIBCXX) -L${LOCALBASE}/lib -R${LOCALBASE}/lib  -ljpeg -lz
  
  SRC= plugin.c npunix.c
  OBJ= plugin.o npunix.o
+@@ -48,7 +48,7 @@
+ $(SHAREDTARGET): $(OBJ) $(FLASH)/libflash.a
+ 	$(LD) $(SHARED) -o $(SHAREDTARGET) $(OBJ) $(LDFLAGS)
+ 
+-plugin.o: $(FLASH)/flash.h
++plugin.o: ${LOCALBASE}/include/flash/flash.h
+ 
+ clean:
+ 	$(RM) $(OBJ) $(SHAREDTARGET)
