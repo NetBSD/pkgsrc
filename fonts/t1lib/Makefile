@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/02/12 21:40:02 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/03 11:28:11 adam Exp $
+#
 
-DISTNAME=	t1lib-1.3.1
+DISTNAME=	t1lib-5.0.1
 CATEGORIES=	fonts devel graphics
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/} \
 		ftp://ftp.foolabs.com/pub/xpdf/
