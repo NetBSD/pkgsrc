@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/28 05:59:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:46 taca Exp $
 bin/racc-${RUBY_VER}
 bin/racc2y-${RUBY_VER}
 bin/y2racc-${RUBY_VER}
-${RUBY_SITEARCHLIBDIR}/racc/cparse.so
+${RUBY_SITEARCHLIBDIR}/racc/cparse.${RUBY_DLEXT}
 @dirrm ${RUBY_SITEARCHLIBDIR}/racc
 ${RUBY_SITELIBDIR}/racc/compiler.rb
 ${RUBY_SITELIBDIR}/racc/grammar.rb

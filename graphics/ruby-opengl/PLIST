@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/28 14:55:00 taca Exp $
-${RUBY_SITEARCHLIBDIR}/glut.so
-${RUBY_SITEARCHLIBDIR}/opengl.so
+@comment $NetBSD: PLIST,v 1.4 2004/12/04 17:20:46 taca Exp $
+${RUBY_SITEARCHLIBDIR}/glut.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/opengl.${RUBY_DLEXT}
 ${RUBY_EXAMPLESDIR}/opengl/aaindex.rb
 ${RUBY_EXAMPLESDIR}/opengl/aapoly.rb
 ${RUBY_EXAMPLESDIR}/opengl/aargb.rb
