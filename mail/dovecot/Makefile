@@ -1,14 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2005/01/08 19:58:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2005/01/23 10:00:12 jdolecek Exp $
 
 DISTNAME=		dovecot-0.99.13
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
-
-.if 0
-PATCH_SITES=		http://www.roughtrade.net/dovecot/
-PATCHFILES=		dovecot-crammd5-0.99.11.diff
-PATCH_DIST_STRIP=	-p1
-.endif
 
 MAINTAINER=		tom@replic8.net
 HOMEPAGE=		http://www.dovecot.org/
