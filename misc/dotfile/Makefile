@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/22 12:52:31 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/14 10:56:16 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/20 13:19:30 wosch Exp
 #
 
@@ -19,8 +19,5 @@ GNU_CONFIGURE=	yes
 
 do-build:
 	@${DO_NADA}
-
-post-install:
-	@${CAT} ${PKGDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"

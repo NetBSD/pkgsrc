@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/13 16:45:25 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/14 10:56:16 frueauf Exp $
 #
 # There are a few more mod_auth_cookie's out there doing slightly
 # different things.  This one pkg would be a good place to dump them all in
@@ -27,6 +27,5 @@ do-build:
 
 do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_auth_cookie.so
-	@${CAT} ${PKGDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"
