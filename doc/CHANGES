@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3999 2003/12/06 18:30:02 wiz Exp $
+$NetBSD: CHANGES,v 1.4000 2003/12/06 18:50:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4996,3 +4996,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gtkhtml3-3.0.9 [recht 2003-12-06]
 	Updated autoconf to 2.59 [wiz 2003-12-06]
 	Updated automake to 1.7.9 [wiz 2003-12-06]
+	Updated bkedit to 0.6.22 [wiz 2003-12-06]
