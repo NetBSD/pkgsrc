@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2000/08/14 13:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/29 11:37:15 rh Exp $
 #
 
-DISTNAME=	balsa-0.9.0
+DISTNAME=	balsa-0.9.3
 CATEGORIES=	mail gnome
-MASTER_SITES=	ftp://ftp.newton.cx/pub/balsa/ \
-		http://www.theochem.kth.se/~pawsa/balsa/
+MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/ \
+		ftp://ftp.newton.cx/pub/balsa/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.balsa.net/
@@ -17,5 +17,7 @@ GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
+CONFIGURE_ARGS+=--disable-more-warnings
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
 
 .include "../../mk/bsd.pkg.mk"
