@@ -1,0 +1,5 @@
+XBomb is a minesweeper clone, with square, hexagonal, and triangular grid.
+The game has three levels, based on the size of the grid:
+* Small 8x8 grid with 10 bombs
+* Medium 16x16 grid with 40 bombs
+* Large 30x16 grid with 99 bombs
