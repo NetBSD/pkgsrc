@@ -1,0 +1,65 @@
+--- main.c.orig	Fri Sep 13 22:32:10 1991
++++ main.c	Mon Aug 17 00:20:12 1998
+@@ -138,9 +138,7 @@
+   {"do_nothing",(XtActionProc)do_nothing_action},
+ };
+ 
+-Pixel fg, bg;
+-
+-XtTranslations translations;
++AppData app_data;
+ 
+ static XrmOptionDescRec options[] = {
+ 	{"-scorefile","scorefile",XrmoptionSepArg, NULL },
+@@ -148,13 +146,13 @@
+ 
+ static XtResource application_resources[] = {
+   {"foreground", "Foreground", XtRPixel, sizeof(Pixel),
+-                (Cardinal)&fg, XtRString, (caddr_t) "Black"},
++                XtOffsetOf(AppData,fg), XtRString, (caddr_t) "Black"},
+   {"background", "Background", XtRPixel, sizeof(Pixel),
+-                (Cardinal)&bg, XtRString, (caddr_t) "White"},
++                XtOffsetOf(AppData,bg), XtRString, (caddr_t) "White"},
+   {"translations","Translations", XtRTranslationTable, sizeof(XtTranslations),
+-                (Cardinal)&translations, XtRString, (caddr_t)translations_str},
++                XtOffsetOf(AppData,translations), XtRString,(caddr_t)translations_str},
+   {"scorefile","Scorefile", XtRString, sizeof(String),
+-                (Cardinal)&score_filename, XtRString, (caddr_t)SCORE_FILE},
++                XtOffsetOf(AppData,score_filename), XtRString,(caddr_t)SCORE_FILE},
+ };
+ 
+ /*----------------------------------------------------------------------*/
+@@ -177,7 +175,7 @@
+ 
+   XtAddActions(actions,XtNumber(actions));
+ 
+-  XtGetApplicationResources(top_shell, 0, application_resources, 
++  XtGetApplicationResources(top_shell, &app_data, application_resources, 
+ 			XtNumber(application_resources), NULL, 0 );
+ 
+   top_widget = XtCreateManagedWidget(
+@@ -193,7 +191,7 @@
+                                     arglistplayfield,
+                                     XtNumber(arglistplayfield));
+ 
+-  XtAugmentTranslations(playfield_widget,translations);
++  XtAugmentTranslations(playfield_widget,app_data.translations);
+ 
+   quit_command = XtCreateManagedWidget(
+                                     "quit_button",
+@@ -263,12 +261,12 @@
+ 
+   display   = XtDisplay(playfield_widget);
+   playfield = XtWindow(playfield_widget);
+-  gcv.foreground = fg;
+-  gcv.background = bg;
++  gcv.foreground = app_data.fg;
++  gcv.background = app_data.bg;
+   gcv.function = GXcopy;
+   gc = XCreateGC(display, playfield, 
+  		GCForeground | GCBackground | GCFunction, &gcv);
+-  gcv.foreground = bg;
++  gcv.foreground = app_data.bg;
+   cleargc = XCreateGC(display, playfield,
+  		 GCForeground | GCBackground | GCFunction, &gcv);
+ 

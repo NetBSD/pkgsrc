@@ -1,0 +1,23 @@
+--- xpipeman.h.orig	Sun Aug  9 03:40:53 1998
++++ xpipeman.h	Sun Aug  9 03:48:12 1998
+@@ -36,2 +36,10 @@
+  */
++
++typedef struct {
++	Pixel fg;
++	Pixel bg;
++	XtTranslations translations;
++	char *score_filename;
++} AppData;
++
+ extern Display 	*display;
+@@ -41,4 +49,2 @@
+ 		cleargc;
+-extern Pixel 	fg, 
+-		bg;
+ 
+@@ -119,4 +125,2 @@
+ extern void	show_scores_callback();
+-
+-extern char *score_filename;
+ 
