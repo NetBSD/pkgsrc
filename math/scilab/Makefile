@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2005/03/17 22:41:09 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -52,9 +52,8 @@ BUILDLINK_DEPMETHOD.sablotron=	build
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "alpha")
-pre-fetch:
+pre-fetch: ${WRKDIR}
 	@${ECHO} "===> Checking if you have working FPC"
-	@${MKDIR} ${WRKDIR}
 	${CC} ${CFLAGS} -o ${WRKDIR}/chk_ieee ${FILESDIR}/chk_ieee.c
 	@cd ${WRKDIR} && if ./chk_ieee ; then ${ECHO} "yes" ; else \
 		${ECHO} "no" ; \
