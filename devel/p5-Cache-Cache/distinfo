@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/30 18:47:51 he Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 15:54:15 he Exp $
 
-SHA1 (Cache-Cache-1.02.tar.gz) = ac62e1b706dd141d813378b27e0f140f133f98ee
-Size (Cache-Cache-1.02.tar.gz) = 33202 bytes
+SHA1 (Cache-Cache-1.03.tar.gz) = 83c83a6cc52b8c293d865517072e48cf854d9d70
+Size (Cache-Cache-1.03.tar.gz) = 33947 bytes
