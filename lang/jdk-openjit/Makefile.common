@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/07/01 19:02:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/07/02 10:27:06 jlam Exp $
 
 OPENJIT_VERSION=1.1.16
 
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=--with-jdk=${PKG_JAVA_HOME}
 
 PLIST_SUBST+=	CLASSDIR=${CLASSDIR} JRELIB=${JRELIB} JAVADIR=${PKG_JAVA_HOME:C|^${PREFIX}/||}
 
-PKGDIR=		${.CURDIR}/../jdk-openjit
+PKGDIR=		${.CURDIR}/../../lang/jdk-openjit
 DISTINFO_FILE=	${PKGDIR}/distinfo
 PATCHDIR=	${PKGDIR}/patches
 
