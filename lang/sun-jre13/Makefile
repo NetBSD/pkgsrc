@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/11 21:58:03 abs Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/12 11:18:49 abs Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -26,6 +26,11 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
+
+# Needs to be after bsd.prefs.mk
+.if ${OPSYS} != "Linux"
+DEPENDS+=	suse_x11-*:../../emulators/suse_x11
+.endif
 
 .if !defined(JDK_HOME)
 JDK_HOME:=	${LOCALBASE}/java
@@ -60,10 +65,6 @@ do-install:
 PATCHDIR=	${WRKDIR}/.patches
 pre-patch:
 	${MKDIR} ${PATCHDIR}
-
-.else
-DEPENDS=	suse_x11-*:../../emulators/suse_x11
-
 .endif
 
 PREFIX:=	${JDK_HOME}
