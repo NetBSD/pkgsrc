@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2001/06/25 23:58:32 zuntum Exp $
+# $NetBSD: Makefile,v 1.21 2001/08/03 09:43:18 wiz Exp $
 #
 
 DISTNAME=       xart19980415
 PKGNAME=	xart-19980415
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://www.cqi.com/~humbubba/linux/
+MASTER_SITES=	http://linux01.gwdg.de/~rhohen/linux/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.cqi.com/~humbubba/linux.html
+HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 
 USE_BUILDLINK_ONLY=YES
