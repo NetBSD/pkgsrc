@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/04/11 09:19:36 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/26 01:33:59 wiz Exp $
 #
 
-DISTNAME=       less-381
-PKGREVISION=	1
+DISTNAME=       less-382
 CATEGORIES=     misc
 MASTER_SITES=   http://www.greenwoodsoftware.com/less/ \
 		${MASTER_SITE_GNU:=less/}
