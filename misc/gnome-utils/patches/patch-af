@@ -1,0 +1,39 @@
+$NetBSD: patch-af,v 1.1 2000/11/30 05:16:16 mycroft Exp $
+
+--- logview/logrtns.c.orig	Thu Apr 27 03:32:02 2000
++++ logview/logrtns.c	Thu Nov 30 05:14:16 2000
+@@ -294,8 +294,8 @@
+ {
+    LogLine *line;
+    FILE *fp;
+-   char *c, ch, buffer[R_BUF_SIZE + 1];
+-   int ln;
++   char *c, buffer[R_BUF_SIZE + 1];
++   int ch, ln;
+    long int old_pos;
+ 
+    fp = lg->fp;
+@@ -308,9 +308,10 @@
+    pg->ll = LINES_P_PAGE - 1;
+ 
+    /* Tell if we are reading the last page */
+-   if (fgetc (fp) == EOF)
++   ch = fgetc (fp);
++   ungetc (ch, fp);
++   if (ch == EOF)
+      pg->islastpage = TRUE;
+-   ungetc (ch,fp);
+ 
+    while (ln >= pg->fl)
+    {
+@@ -364,8 +365,8 @@
+ {
+    FILE *fp;
+    LogLine *line;
+-   char *c, ch, buffer[R_BUF_SIZE + 1];
+-   int ln, len;
++   char *c, buffer[R_BUF_SIZE + 1];
++   int ch, ln, len;
+ 
+    fp = lg->fp;
+    ln = 0;
