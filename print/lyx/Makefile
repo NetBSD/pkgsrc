@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 1999/05/24 20:39:47 tv Exp $
+# $NetBSD: Makefile,v 1.19 1999/06/04 06:00:10 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
-DISTNAME=		lyx-1.0.2
+DISTNAME=		lyx-1.0.3
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.via.ecp.fr/pub/lyx/stable/ \
 			ftp://la1ad.uio.no/pub/lyx/
