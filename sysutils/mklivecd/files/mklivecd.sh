@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.13 2004/05/01 10:46:11 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.14 2004/05/20 02:11:41 uebayasi Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -40,8 +40,8 @@ pers_conffile="personal_config"
 tmp_file="/tmp/${progname}.$$"
 mntstat="$config_dir/mount.stat"
 
-MKISOFS="@PREFIX@/bin/mkisofs"
-CDRECORD="@PREFIX@/bin/cdrecord"
+MKISOFS="@LOCALBASE@/bin/mkisofs"
+CDRECORD="@LOCALBASE@/bin/cdrecord"
 #
 # Don't modify it! they are needed for booting grub
 MKISOFS_FIXED_ARGS="-no-emul-boot -boot-load-size 30 -boot-info-table"
@@ -349,7 +349,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.13 2004/05/01 10:46:11 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.14 2004/05/20 02:11:41 uebayasi Exp $
 # 
 
 # PROVIDE: root
