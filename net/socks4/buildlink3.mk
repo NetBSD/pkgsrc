@@ -1,19 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:07 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SOCKS4_BUILDLINK3_MK:=	${SOCKS4_BUILDLINK3_MK}+
 
-.if !empty(SOCKS4_BUILDLINK3_MK:M\+)
-BUILDLINK_DEPENDS.socks4?=	socks4>=2.2
-BUILDLINK_PKGSRCDIR.socks4?=	../../net/socks4
-.endif	# SOCKS4_BUILDLINK3_MK
-
-.if !empty(BUILDLINK_DEPTH:M\+)
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	socks4
 .endif
 
-.if !empty(SOCKS4_BUILDLINK3_MK:M\+)
-BUILDLINK_PACKAGES+=	socks4
+.if !empty(SOCKS4_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		socks4
+BUILDLINK_DEPENDS.socks4?=	socks4>=2.2
+BUILDLINK_PKGSRCDIR.socks4?=	../../net/socks4
+
 BUILDLINK_TRANSFORM+=	l:socks:socks4
 .endif	# SOCKS4_BUILDLINK3_MK
 

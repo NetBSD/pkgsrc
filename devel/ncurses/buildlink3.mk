@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 #
 # Optionally define:
 #
@@ -9,7 +9,7 @@
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
 
-.if !empty(NCURSES_BUILDLINK3_MK:M\+)
+.if !empty(NCURSES_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.3nb1
@@ -69,12 +69,12 @@ MAKEFLAGS+=	_NEED_NCURSES="${_NEED_NCURSES}"
 .endif
 
 .if ${_NEED_NCURSES} == "YES"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	ncurses
 .  endif
 .endif
 
-.if !empty(NCURSES_BUILDLINK3_MK:M\+)
+.if !empty(NCURSES_BUILDLINK3_MK:M+)
 .  if ${_NEED_NCURSES} == "YES"
 BUILDLINK_PACKAGES+=	ncurses
 .  else

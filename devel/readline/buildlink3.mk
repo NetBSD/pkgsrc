@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 #
 # Optionally define USE_GNU_READLINE to force use of GNU readline.
 #
@@ -8,7 +8,7 @@
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 READLINE_BUILDLINK3_MK:=	${READLINE_BUILDLINK3_MK}+
 
-.if !empty(READLINE_BUILDLINK3_MK:M\+)
+.if !empty(READLINE_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 BUILDLINK_PACKAGES+=		readline
 BUILDLINK_DEPENDS.readline?=	readline>=2.2
@@ -55,12 +55,12 @@ MAKEFLAGS+=	\
 .endif
 
 .if ${BUILDLINK_USE_BUILTIN.readline} == "NO"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	readline
 .  endif
 .endif
 
-.if !empty(READLINE_BUILDLINK3_MK:M\+)
+.if !empty(READLINE_BUILDLINK3_MK:M+)
 .  if ${BUILDLINK_USE_BUILTIN.readline} == "YES"
 BUILDLINK_PREFIX.readline=	/usr
 .    if !defined(_BLNK_LIBEDIT_FOUND)
