@@ -1,0 +1,11 @@
+$NetBSD: patch-as,v 1.1 2004/01/02 15:30:04 cjep Exp $
+--- ld/io.c.orig	1994-04-17 22:59:53.000000000 +0100
++++ ld/io.c	2004-01-02 15:21:25.000000000 +0000
+@@ -13,6 +13,7 @@
+ #else
+ #undef NULL
+ #include <stdlib.h>
++#include <string.h>
+ #endif
+ 
+ #ifdef POSIX_HEADERS_MISSING
