@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2004/06/10 09:16:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2004/12/12 01:04:27 grant Exp $
 
-DISTNAME=	pkg_comp-1.19
+DISTNAME=	pkg_comp-1.20
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
