@@ -1,6 +1,21 @@
 --- ncurs_c.c.orig	Mon May 20 17:27:35 1996
-+++ ncurs_c.c	Sat Mar  7 14:51:09 1998
-@@ -422,7 +422,7 @@
++++ ncurs_c.c	Sat Mar  7 15:03:37 1998
+@@ -354,7 +354,13 @@
+   if (ctl.trace_playing)
+     dftwin=stdscr;
+   else
+-    dftwin=newwin(6,COLS,0,0);
++    {
++      dftwin=newwin(6,COLS,0,0);
++      nodelay(dftwin, 1);
++      scrollok(dftwin, 0);
++      idlok(dftwin, 1);
++      keypad(dftwin, TRUE);
++    }
+ 
+   werase(dftwin);
+   wmove(dftwin, 0,0);
+@@ -422,7 +428,7 @@
  static int ctl_read(int32 *valp)
  {
    int c;
