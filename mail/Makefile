@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2004/07/21 22:58:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.223 2004/07/26 23:27:30 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -90,6 +90,7 @@ SUBDIR+=	mailsync
 SUBDIR+=	mailwrapper
 SUBDIR+=	majordomo
 SUBDIR+=	mdfrm
+SUBDIR+=	mess822
 SUBDIR+=	metamail
 SUBDIR+=	mew
 SUBDIR+=	mew3
