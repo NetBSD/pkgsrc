@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2004/01/21 04:04:55 atatat Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/21 04:15:09 lukem Exp $
 #
 
-DISTNAME=	gpg2dot-1.0
+DISTNAME=	gpg2dot-1.2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	security
 MASTER_SITES=	# empty
