@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/26 05:12:56 zuntum Exp $
+
+--- p0f.c.orig	Tue Jun 13 20:45:06 2000
++++ p0f.c
+@@ -260,7 +260,7 @@
+ 
+   /* set a reasonable default fingerprint file */
+   if (!filename || !*filename)
+-    filename = "/etc/p0f.fp";
++    filename = PREFIX "/etc/p0f.fp";
+ 
+   /* anything left after getopt'ing is a rule */
+   if (argv[optind] && *(argv[optind]))
