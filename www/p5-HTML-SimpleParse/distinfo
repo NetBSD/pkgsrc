@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/01 01:58:26 jlam Exp $
+$NetBSD: distinfo,v 1.2 2004/04/25 06:03:51 minskim Exp $
 
-SHA1 (HTML-SimpleParse-0.10.tar.gz) = 2b12b7a45b8bd01f952ca78e08b2364cb986b681
-Size (HTML-SimpleParse-0.10.tar.gz) = 8162 bytes
+SHA1 (HTML-SimpleParse-0.12.tar.gz) = 46823e4344ab6ca91078a21e16434a26aafe5f9d
+Size (HTML-SimpleParse-0.12.tar.gz) = 8486 bytes

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5732 2004/04/25 04:15:43 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5733 2004/04/25 06:03:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2236,3 +2236,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ices-mp3-0.3 [kim 2004-04-24]
 	Added mstream-0.2 [kim 2004-04-24]
 	Updated gdk-pixbuf to 0.22.0nb2 [xtraeme 2004-04-25]
+	Updated p5-HTML-SimpleParse to 0.12 [minskim 2004-04-25]
