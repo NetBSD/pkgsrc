@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.983 2002/05/26 15:00:25 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.984 2002/05/29 14:52:14 yyamano Exp $
 #
 # This file is in the public domain.
 #
@@ -465,7 +465,7 @@ WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 # A few aliases for *-install targets
 INSTALL_PROGRAM?= \
-	${INSTALL} ${COPY} ${STRIPFLAG} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_SCRIPT?= \
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_DATA?= \
