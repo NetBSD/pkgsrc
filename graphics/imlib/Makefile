@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/02/20 22:48:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/04 09:30:45 tron Exp $
 #
 
 DISTNAME=	imlib-1.9.0
@@ -11,7 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PNG_DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.labs.redhat.com/imlib/
 
-DEPENDS+=	gtk+-1.1.12:../../x11/gtk
+DEPENDS+=	gtk+-1.2.0:../../x11/gtk
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	giflib-3.0:../../graphics/giflib
