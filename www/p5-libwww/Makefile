@@ -3,7 +3,8 @@
 # Date created:				September 30th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-#   $Id: Makefile,v 1.1.1.1 1997/11/22 05:10:36 hubertf Exp $
+#   $NetBSD: Makefile,v 1.2 1997/11/22 05:12:44 hubertf Exp $
+#   FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
 DISTNAME=       libwww-perl-5.12
