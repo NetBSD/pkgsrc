@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/08 20:27:13 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/27 21:02:42 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -20,7 +20,7 @@ CONFLICTS+=	pcb-[0-9]*
 
 SNAPDATE=	20040215
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	make
+USE_GNU_TOOLS+=	lex make
 USE_X11=	yes
 USE_BUILDLINK3=	yes
 
