@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/20 11:33:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/06 11:11:33 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.4
@@ -57,11 +57,11 @@ pre-install:
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hermes/buildlink3.mk"
-.include "../../graphics/openquicktime/buildlink3.mk"
 .include "../../graphics/swfdec/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
+.include "../../multimedia/openquicktime/buildlink3.mk"
 .include "../../www/libghttp/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
