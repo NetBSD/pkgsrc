@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/11 09:11:33 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/09/11 09:13:08 wiz Exp $
 
 .if !defined(GCONF2_BUILDLINK2_MK)
 GCONF2_BUILDLINK2_MK=	# defined
@@ -8,7 +8,7 @@ BUILDLINK_DEPENDS.gconf2?=	GConf2>=1.2.1nb1
 BUILDLINK_PKGSRCDIR.gconf2?=	../../devel/GConf2
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.gconf2=GConf2
-BUILDLINK_PREFIX.gconf2_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.gconf2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.gconf2=			include/gconf/2/gconf/*
 BUILDLINK_FILES.gconf2+=		lib/libgconf-2*
 
