@@ -1,22 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/25 19:22:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/09/02 14:55:42 wiz Exp $
 include/gdk-pixbuf-1.0/gdk-pixbuf/gnome-canvas-pixbuf.h
 lib/gnomecanvaspixbufConf.sh
-lib/libgnomecanvaspixbuf.so.1.0
-lib/libgnomecanvaspixbuf.so.1
-lib/libgnomecanvaspixbuf.so
-lib/libgnomecanvaspixbuf.la
 lib/libgnomecanvaspixbuf.a
+lib/libgnomecanvaspixbuf.la
+lib/libgnomecanvaspixbuf.so
+lib/libgnomecanvaspixbuf.so.1
+lib/libgnomecanvaspixbuf.so.1.0
 share/gnome/html/gdk-pixbuf/a2605.html
+share/gnome/html/gdk-pixbuf/a3401.html
 share/gnome/html/gdk-pixbuf/a3640.html
 share/gnome/html/gdk-pixbuf/a3652.html
 share/gnome/html/gdk-pixbuf/a3657.html
 share/gnome/html/gdk-pixbuf/a3694.html
 share/gnome/html/gdk-pixbuf/a3696.html
 share/gnome/html/gdk-pixbuf/a3716.html
-share/gnome/html/gdk-pixbuf/x3676.html
-share/gnome/html/gdk-pixbuf/x3715.html
-share/gnome/html/gdk-pixbuf/x3728.html
-share/gnome/html/gdk-pixbuf/x3767.html
 share/gnome/html/gdk-pixbuf/book1.html
 share/gnome/html/gdk-pixbuf/compiling.html
 share/gnome/html/gdk-pixbuf/extra-configuration-options.html
@@ -26,8 +23,8 @@ share/gnome/html/gdk-pixbuf/gdk-pixbuf-file-loading.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-from-drawables.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-from-drawables.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-init.html
-share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-rgb.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-rendering.html
+share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-rgb.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-refcounting.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-rendering.html
@@ -41,12 +38,18 @@ share/gnome/html/gdk-pixbuf/r15.html
 share/gnome/html/gdk-pixbuf/r27.html
 share/gnome/html/gdk-pixbuf/x2624.html
 share/gnome/html/gdk-pixbuf/x2676.html
+share/gnome/html/gdk-pixbuf/x3420.html
+share/gnome/html/gdk-pixbuf/x3472.html
 share/gnome/html/gdk-pixbuf/x3659.html
 share/gnome/html/gdk-pixbuf/x3671.html
+share/gnome/html/gdk-pixbuf/x3676.html
 share/gnome/html/gdk-pixbuf/x3711.html
 share/gnome/html/gdk-pixbuf/x3713.html
+share/gnome/html/gdk-pixbuf/x3715.html
 share/gnome/html/gdk-pixbuf/x3723.html
+share/gnome/html/gdk-pixbuf/x3728.html
 share/gnome/html/gdk-pixbuf/x3735.html
 share/gnome/html/gdk-pixbuf/x3765.html
+share/gnome/html/gdk-pixbuf/x3767.html
 share/gnome/html/gdk-pixbuf/x3787.html
 @dirrm share/gnome/html/gdk-pixbuf
