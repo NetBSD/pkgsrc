@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8570 2005/01/02 20:15:10 minskim Exp $
+$NetBSD: CHANGES,v 1.8571 2005/01/02 20:19:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added bugzilla-2.18rc3 [adrianp 2005-01-02]
 	Updated icecast to 2.2.0 [wiz 2005-01-02]
 	Updated tcl-tclX to 8.3.5nb2 [minskim 2005-01-02]
+	Updated tk-tclX to 8.3.5nb2 [minskim 2005-01-02]
