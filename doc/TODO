@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.938 2003/10/11 16:43:15 dillo Exp $
+$NetBSD: TODO,v 1.939 2003/10/12 04:51:19 grant Exp $
 
 Suggested new packages
 ======================
@@ -80,7 +80,7 @@ Suggested new packages
 	Digital video recorder
 	http://www.mythtv.org/
 
-	Asterisk [grant]
+	Asterisk [grant, itojun/PR22585 (0.4 release)]
 	PBX-in-a-box for Linux
 	http://www.asterisk.org/
 
