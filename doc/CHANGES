@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4961 2004/02/22 23:10:30 heinz Exp $
+$NetBSD: CHANGES,v 1.4962 2004/02/22 23:27:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -983,3 +983,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Crypt-Random to 1.13 [heinz 2004-02-22]
 	Updated p5-Crypt-Primes to 0.50 [heinz 2004-02-22]
 	Updated xnc to 5.0.4 [jschauma 2004-02-22]
+	Updated bitlbee to 0.84 [xtraeme 2004-02-22]
