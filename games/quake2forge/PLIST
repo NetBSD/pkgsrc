@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/16 15:03:20 xtraeme Exp $
+bin/quake2forge
+lib/quake2/baseq2/game.a
+lib/quake2/baseq2/game.la
+lib/quake2/baseq2/game.so
+lib/quake2/ctf/game.a
+lib/quake2/ctf/game.la
+lib/quake2/ctf/game.so
+lib/quake2/ref_glx.a
+lib/quake2/ref_glx.la
+lib/quake2/ref_glx.so
+lib/quake2/ref_sdlgl.a
+lib/quake2/ref_sdlgl.la
+lib/quake2/ref_sdlgl.so
+lib/quake2/ref_softsdl.a
+lib/quake2/ref_softsdl.la
+lib/quake2/ref_softsdl.so
+lib/quake2/ref_softx.a
+lib/quake2/ref_softx.la
+lib/quake2/ref_softx.so
+share/doc/quake2forge/README.Solaris
+share/doc/quake2forge/README.axp
+share/doc/quake2forge/README.install
+share/doc/quake2forge/README.joystick
+share/doc/quake2forge/README.linux
+share/doc/quake2forge/README.sdl
+share/doc/quake2forge/README.solaris
+share/doc/quake2forge/TODO-ctf.txt
+share/doc/quake2forge/changes-ctf.txt
+share/doc/quake2forge/changes.txt
+share/doc/quake2forge/joystick.txt
+share/doc/quake2forge/readme.txt
+share/quake2/baseq2/config.cfg
+@dirrm share/quake2/baseq2
+@dirrm share/doc/quake2forge
+@exec ${MKDIR} %D/lib/quake2/xatrix
+@dirrm lib/quake2/xatrix
+@exec ${MKDIR} %D/lib/quake2/rogue
+@dirrm lib/quake2/rogue
+@dirrm lib/quake2/ctf
+@dirrm lib/quake2/baseq2
+@dirrm lib/quake2

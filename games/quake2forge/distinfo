@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/16 15:03:20 xtraeme Exp $
+
+SHA1 (quake2-0.2.1.tar.bz2) = 258a391f54dd58e59924f78c074e614b228ff773
+Size (quake2-0.2.1.tar.bz2) = 1286703 bytes
+SHA1 (patch-aa) = 380078cc177fcc8b7d7c5bf2fd59620d67349d55
