@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/02 03:20:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/16 12:57:13 wiz Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.math.lsa.umich.edu/~grabiner/moria.html
 WRKSRC=			${WRKDIR}/umoria
 
 do-configure:
-	@rm -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
+	@${RM} -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
 	@cd ${WRKSRC}; ${LN} -s source/* unix/* .
 
 post-install:
