@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/15 20:53:06 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/08 10:05:30 lukem Exp $
 
---- ../vorbis-tools-1.0beta4.orig/configure	Sun Feb 25 21:51:05 2001
-+++ configure	Thu Mar 15 09:52:40 2001
-@@ -1822,7 +1822,7 @@
-     AO_LIBS="-L$ao_prefix/lib"
-   fi
+--- ogginfo/Makefile.in.orig	Wed Aug  8 16:09:49 2001
++++ ogginfo/Makefile.in	Wed Aug  8 16:09:55 2001
+@@ -83,7 +83,7 @@
+ AUTOMAKE_OPTIONS = foreign
  
--  AO_LIBS="$AO_LIBS -lao -ldl"
-+  AO_LIBS="$AO_LIBS -lao -lossaudio"
+ bin_PROGRAMS = ogginfo
+-mandir = $(datadir)/man
++mandir = $(prefix)/man
+ man_MANS = ogginfo.1
  
-   echo $ac_n "checking for ao""... $ac_c" 1>&6
- echo "configure:1829: checking for ao" >&5
+ INCLUDES = @OGG_CFLAGS@ @VORBIS_CFLAGS@
