@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/01/12 21:23:05 adam Exp $
+
+--- pngcrush.c.orig	2004-01-12 21:40:44.000000000 +0000
++++ pngcrush.c
+@@ -416,7 +416,7 @@
+  */
+ 
+ #define PNG_INTERNAL
+-#include "png.h"
++#include <png.h>
+ 
+ /* we don't need the some of the extra libpng transformations
+  * so they are ifdef'ed out in a special version of pngconf.h, which
