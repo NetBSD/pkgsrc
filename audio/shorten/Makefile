@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/16 22:23:34 zuntum Exp $
-# FreeBSD: ports/audio/shorten/Makefile,v 1.6 2000/11/02 22:40:59 fenner Exp 
+# $NetBSD: Makefile,v 1.2 2002/12/23 21:20:47 wiz Exp $
 #
 
-DISTNAME=	shorten-3.1
+DISTNAME=	shorten-3.5.0
 CATEGORIES=	audio archivers
-MASTER_SITES=	http://www.etree.org/software/
+MASTER_SITES=	http://www.etree.org/shnutils/shorten/source/
 
 MAINTAINER=	collver@linuxfreemail.com
-HOMEPAGE=	http://www.softsound.com/Shorten.html
+HOMEPAGE=	http://www.etree.org/shnutils/shorten/
 COMMENT=	lossless audio compressor
 
 LICENSE=	no-commercial-use
 
-MAKE_ENV+=	MKDIR="${MKDIR}"
+GNU_CONFIGURE=	YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/shorten
-	${INSTALL_DATA} ${WRKSRC}/tr156.tex ${PREFIX}/share/doc/shorten
-	${INSTALL_DATA} ${WRKSRC}/tr156.ps ${PREFIX}/share/doc/shorten
+	${INSTALL_DATA} ${WRKSRC}/doc/tr156.tex ${PREFIX}/share/doc/shorten
+	${INSTALL_DATA} ${WRKSRC}/doc/tr156.ps ${PREFIX}/share/doc/shorten
 
 .include "../../mk/bsd.pkg.mk"
