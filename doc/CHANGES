@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8310 2004/12/05 20:06:01 he Exp $
+$NetBSD: CHANGES,v 1.8311 2004/12/05 20:44:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5814,3 +5814,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-File-Temp to 0.14 [he 2004-12-05]
 	Added p5-Business-ISBN-Data-1.08 [he 2004-12-05]
 	Updated p5-Business-ISBN to 1.78 [he 2004-12-05]
+	Updated tileworld to 1.2.1 [wiz 2004-12-05]
