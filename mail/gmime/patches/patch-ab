@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2005/03/16 12:34:49 rillig Exp $
+
+Needed for NetBSD-1.6.2 and NetBSD-2.0. ECANCELED is used when the user
+cancels the password query, so EAUTH seemed to be the most appropriate
+to me.
+
+--- gmime/gmime-gpg-context.c.orig	Tue Jul  6 15:09:18 2004
++++ gmime/gmime-gpg-context.c	Wed Mar 16 01:33:23 2005
+@@ -56,6 +56,10 @@
+ 
+ #define _(x) x
+ 
++#if !defined(ECANCELED) && defined(EAUTH)
++# define ECANCELED EAUTH
++#endif
++
+ static void g_mime_gpg_context_class_init (GMimeGpgContextClass *klass);
+ static void g_mime_gpg_context_init (GMimeGpgContext *ctx, GMimeGpgContextClass *klass);
+ static void g_mime_gpg_context_finalize (GObject *object);
