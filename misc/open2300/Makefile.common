@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/11/10 08:19:46 martin Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/11/11 10:19:29 martin Exp $
 #
 
-DISTNAME=		open2300-1.6
+DISTNAME=		open2300-1.7
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open2300/}
 
