@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2004/02/09 20:20:43 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
 
 .if !empty(FREETYPE2_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		freetype2
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.0.1
+BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
 BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 BUILDLINK_INCDIRS.freetype2?=	include/freetype2
 .endif	# FREETYPE2_BUILDLINK3_MK
