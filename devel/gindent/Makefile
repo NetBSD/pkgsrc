@@ -1,23 +1,17 @@
-# $NetBSD: Makefile,v 1.15 1999/04/14 21:39:02 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/08/20 06:12:57 kim Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/29 09:20:00 obrien Exp
 #
 
-DISTNAME=	indent-1.9.1
-PKGNAME=	gindent-1.9.1
+DISTNAME=	indent-2.2.0
+PKGNAME=	gindent-2.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=indent/}
 
-MAINTAINER=	kchowksey@hss.hns.com
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/indent/indent.html
 
 GNU_CONFIGURE=	yes
-
-INFO_FILES=	gindent.info
-
-MAKEFILE=	makefile
-
-# agc - force makeinfo to create a new info file with the Dir info.
-pre-install:
-	@rm -f indent.info
+CONFIGURE_ARGS=	--program-prefix=g
+INFO_FILES=	indent.info
 
 .include "../../mk/bsd.pkg.mk"
