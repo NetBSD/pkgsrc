@@ -1,13 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/10/11 11:42:26 martti Exp $
+$NetBSD: patch-ac,v 1.2 2004/01/20 17:37:58 seb Exp $
 
---- libiberty/strerror.c.orig	Thu Jun 28 10:32:06 2001
-+++ libiberty/strerror.c	Thu Jun 28 10:34:12 2001
-@@ -7,6 +7,8 @@
+--- libiberty/strerror.c.orig	1998-11-05 19:54:16.000000000 +0000
++++ libiberty/strerror.c
+@@ -462,8 +464,11 @@ static const char **sys_errlist;
  
- #include "config.h"
+ #else
  
-+#undef NEED_sys_errlist
-+
- #ifndef NEED_sys_errlist
- /* Note that errno.h (not sure what OS) or stdio.h (BSD 4.4, at least)
-    might declare sys_errlist in a way that the compiler might consider
++#include <sys/param.h>
++#ifndef __NetBSD__
+ extern int sys_nerr;
+ extern char *sys_errlist[];
++#endif
+ 
+ #endif
+ 
