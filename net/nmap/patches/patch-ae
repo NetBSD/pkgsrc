@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2003/09/20 14:15:28 salo Exp $
+$NetBSD: patch-ae,v 1.6 2004/11/26 09:24:21 adam Exp $
 
---- nsock/src/configure.orig	2003-09-11 05:44:08.000000000 +0200
-+++ nsock/src/configure	2003-09-20 14:50:34.000000000 +0200
-@@ -10,6 +10,8 @@
+--- nsock/src/configure.orig	2004-01-12 03:23:15.000000000 +0000
++++ nsock/src/configure
+@@ -9,6 +9,8 @@
  ## M4sh Initialization.  ##
  ## --------------------- ##
  

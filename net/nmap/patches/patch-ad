@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.8 2004/01/22 11:20:04 salo Exp $
+$NetBSD: patch-ad,v 1.9 2004/11/26 09:24:21 adam Exp $
 
---- nbase/configure.orig	2004-01-12 04:23:12.000000000 +0100
-+++ nbase/configure	2004-01-22 10:19:15.000000000 +0100
+--- nbase/configure.orig	2004-10-16 05:03:55.000000000 +0000
++++ nbase/configure
 @@ -9,6 +9,8 @@
  ## M4sh Initialization.  ##
  ## --------------------- ##
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.8 2004/01/22 11:20:04 salo Exp $
  # Be Bourne compatible
  if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
    emulate sh
-@@ -7068,7 +7070,7 @@
+@@ -7074,7 +7076,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.8 2004/01/22 11:20:04 salo Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -7131,7 +7133,7 @@
+@@ -7137,7 +7139,7 @@ if test $ac_cv_lib_ssl_SSL_new = yes; th
  #define HAVE_LIBSSL 1
  _ACEOF
  
