@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2001/03/06 03:43:47 itojun Exp $
+# $NetBSD: Makefile,v 1.202 2001/03/09 16:12:39 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -112,11 +112,11 @@ SUBDIR+=	radius
 SUBDIR+=	rdist6
 SUBDIR+=	rp-pppoe
 SUBDIR+=	rsync
-SUBDIR+=	rumba
 SUBDIR+=	samba
 SUBDIR+=	sdist
 SUBDIR+=	sendfile
 SUBDIR+=	sftp
+SUBDIR+=	sharity-light
 SUBDIR+=	sitescooper
 SUBDIR+=	smb2www
 SUBDIR+=	sniffit
