@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1573 2003/03/06 06:25:21 martti Exp $
+$NetBSD: CHANGES,v 1.1574 2003/03/06 08:47:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -971,3 +971,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mrproject to 0.5.1nb3 [wiz 2003-03-05]
 	Updated fsh to 1.2 [jschauma 2003-03-05]
 	Updated postfix to 2.0.6 [martti 2003-03-06]
+	Updated lftp to 2.6.5 [wiz 2003-03-06]
