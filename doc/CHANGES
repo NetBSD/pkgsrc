@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9422 2005/03/04 22:36:51 adrianp Exp $
+$NetBSD: CHANGES,v 1.9423 2005/03/05 03:02:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1275,3 +1275,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated blender to 2.63nb1 [reinoud 2005-03-04]
 	Added p5-Class-MakeMethods-1.010 [tv 2005-03-04]
 	Updated horde to 3.0.3 [adrianp 2005-03-04]
+	Updated mathomatic to 12.1d [minskim 2005-03-05]
