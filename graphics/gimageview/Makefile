@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2004/11/10 20:01:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2005/01/14 09:32:31 adam Exp $
 
-DISTNAME=	gimageview-0.2.26
-PKGREVISION=	1
+DISTNAME=	gimageview-0.2.27
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmmviewer/}
 
@@ -28,7 +27,6 @@ LDFLAGS.NetBSD+=	${PTHREAD_LDFLAGS}
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
