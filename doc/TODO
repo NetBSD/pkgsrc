@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3071 2005/02/19 21:20:33 wiz Exp $
+$NetBSD: TODO,v 1.3072 2005/02/19 21:21:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -525,7 +525,6 @@ Suggested package updates
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.2.2
 	o howl-0.9.10 [pkg/29259]
-	o html-4.23
 	o html2wml-0.4.11
 	o httperf-0.8
 	o httptunnel-3.3
