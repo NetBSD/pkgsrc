@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2001/02/26 17:01:59 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2001/02/26 20:19:49 tron Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -16,8 +16,6 @@ CONFLICTS+=		mc-* gmc-*
 
 FILESDIR=		${.CURDIR}/../../sysutils/mc/files
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches
-
-PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 USE_GMAKE=		yes
 USE_LIBINTL=		yes

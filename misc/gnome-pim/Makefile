@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/17 18:09:03 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/26 20:19:46 tron Exp $
 #
 
 DISTNAME=		gnome-pim-1.2.0
@@ -21,8 +21,6 @@ USE_X11BASE=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include" \
 			LOCALEDIR=${LOCALEDIR}
-
-PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}

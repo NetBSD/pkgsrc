@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/02/13 11:47:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/02/26 20:19:49 tron Exp $
 bin/gcat
 bin/gcksum
 bin/gcomm
@@ -29,16 +29,16 @@ bin/gwc
 info/textutils.info
 @exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec install-info %D/info/textutils.info %D/info/dir
-${LOCALEDIR}/locale/cs/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/de/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/el/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/es/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/fr/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/ko/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/nl/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/no/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/pl/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/ru/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/sk/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/sv/LC_MESSAGES/textutils.mo
-${LOCALEDIR}/locale/zh/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/textutils.mo
+${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/textutils.mo

@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.30 2001/02/17 18:09:04 wiz Exp $
+## $NetBSD: Makefile,v 1.31 2001/02/26 20:19:47 tron Exp $
 
 DISTNAME=		gnome-utils-1.2.0
 CATEGORIES=		misc x11 gnome
@@ -22,8 +22,6 @@ USE_X11BASE=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
-
-PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}
