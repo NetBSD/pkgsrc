@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 1998/12/03 17:23:53 tv Exp $
+
+--- src/modules/standard/mod_so.c.orig	Sat Sep 19 08:27:24 1998
++++ src/modules/standard/mod_so.c	Thu Dec  3 07:59:19 1998
+@@ -289,6 +296,9 @@
+     void *handle;
+     char *file;
+ 
++/* XXX Hack: ask dlopen() without translating for ServerRoot. */
++    if (filename[0] == '!') file = filename + 1;
++    else
+     file = ap_server_root_relative(cmd->pool, filename);
+     
+     if (!(handle = ap_os_dso_load(file))) {

@@ -1,0 +1,105 @@
+$NetBSD: patch-af,v 1.1 1998/12/03 17:23:53 tv Exp $
+
+--- src/modules/standard/mod_include.c.orig	Thu Sep 24 10:06:42 1998
++++ src/modules/standard/mod_include.c	Wed Dec  2 10:36:06 1998
+@@ -92,7 +92,9 @@
+ #include "http_log.h"
+ #include "http_main.h"
+ #include "util_script.h"
++#include "ap_include_extern.h"
+ #endif
++#define get_tag ap_include_get_tag
+ 
+ #define STARTING_SEQUENCE "<!--#"
+ #define ENDING_SEQUENCE "-->"
+@@ -111,6 +113,12 @@
+ /* just need some arbitrary non-NULL pointer which can't also be a request_rec */
+ #define NESTED_INCLUDE_MAGIC	(&includes_module)
+ 
++static struct extern_handler {
++    struct extern_handler *next;
++    char cmd[20];
++    ap_include_extern_func func;
++} *extern_handlers;
++
+ /* ------------------------ Environment function -------------------------- */
+ 
+ /* XXX: could use ap_table_overlap here */
+@@ -354,7 +362,8 @@
+  * the tag value is html decoded if dodecode is non-zero
+  */
+ 
+-static char *get_tag(pool *p, FILE *in, char *tag, int tagbuf_len, int dodecode)
++API_EXPORT(char *)
++ap_include_get_tag(pool *p, FILE *in, char *tag, int tagbuf_len, int dodecode)
+ {
+     char *t = tag, *tag_val, c, term;
+ 
+@@ -2090,6 +2099,50 @@
+     }
+ }
+ 
++API_EXPORT(int)
++ap_register_include_extern(const char *cmd, ap_include_extern_func func) {
++    struct extern_handler *h;
++
++    for (h = extern_handlers; h; h = h->next)
++	if (!strncmp(h->cmd, cmd, 20))
++	    return -1;
++    if (!(h = calloc(1, sizeof(*h))))
++	return -1;
++
++    h->next = extern_handlers;
++    strncpy(h->cmd, cmd, 20);
++    h->func = func;
++    extern_handlers = h;
++    return 0;
++}
++
++/*
++ * Since we should be compiled in, dynamic modules will all initialize
++ * _after_ us.  This assumption breaks if mod_includes is made dynamic,
++ * or if modules using ap_register_include_extern() are compiled in.
++ */
++static void includes_init(server_rec *s, pool *p) {
++    struct extern_handler *h, *n;
++
++    for (h = extern_handlers; h; h = n) {
++	n = h->next;
++	free(h);
++    }
++    extern_handlers = NULL;
++}
++
++static int do_externs(FILE *in, request_rec *r, const char *error,
++		      const char *cmd, int *ret) {
++    struct extern_handler *h;
++
++    for (h = extern_handlers; h; h = h->next)
++	if (!strncmp(h->cmd, cmd, 20)) {
++	    *ret = (*h->func)(in, r, error);
++	    return 0;
++	}
++    return -1;
++}
++
+ 
+ 
+ /* -------------------------- The main function --------------------------- */
+@@ -2213,6 +2266,7 @@
+                 ret = handle_perl(f, r, error);
+             }
+ #endif
++	    else if (!do_externs(f, r, error, directive, &ret)) {}
+             else {
+                 ap_log_rerror(APLOG_MARK, APLOG_NOERRNO|APLOG_ERR, r,
+                             "httpd: unknown directive \"%s\" "
+@@ -2420,7 +2474,7 @@
+ module MODULE_VAR_EXPORT includes_module =
+ {
+     STANDARD_MODULE_STUFF,
+-    NULL,                       /* initializer */
++    includes_init,              /* initializer */
+     create_includes_dir_config, /* dir config creater */
+     NULL,                       /* dir merger --- default is to override */
+     NULL,                       /* server config */
