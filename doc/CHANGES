@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4733 2004/02/08 13:13:27 markd Exp $
+$NetBSD: CHANGES,v 1.4734 2004/02/08 21:53:11 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -703,3 +703,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnupg to 1.2.4nb1 [kleink 2004-02-08]
 	Updated kodos to 2.4.0 [recht 2004-02-08]
 	Updated kmplayer to 0.8.2 [markd 2004-02-08]
+	Updated p5-IO-String to 1.04 [kim 2004-02-08]
+	Updated p5-Image-Info to 1.16 [kim 2004-02-08]
+	Updated p5-Apache-Gallery to 0.7nb3 [kim 2004-02-08]
