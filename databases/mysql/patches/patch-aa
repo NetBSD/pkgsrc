@@ -1,53 +1,81 @@
---- client/Makefile.in.orig	Sun May 10 17:25:18 1998
-+++ client/Makefile.in	Sun Jun 14 20:15:50 1998
-@@ -149,16 +149,18 @@
- libmysqlclient_a_LIBADD = $(mysysobjects) $(mystringsobjects) $(dbugobjects)
+--- client/Makefile.in.orig	Tue Jun 30 08:14:37 1998
++++ client/Makefile.in	Fri Jul 17 12:20:34 1998
+@@ -42,8 +42,8 @@
+ AUTOHEADER = @AUTOHEADER@
  
- #  Dirty hack to generate names for shared objects (requires GNUmake)
--SHLIBOBJS = ${libmysqlclient_a_SOURCES:.c=.o} ${libmysqlclient_a_LIBADD}
-+SHLIBOBJS = ${libmysqlclient_a_SOURCES:.c=.so} ${libmysqlclient_a_LIBADD:.o=.so}
-+
-+SHVERSION = 321.30
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@
+-INSTALL_DATA = @INSTALL_DATA@
++INSTALL_PROGRAM = $(LIBTOOL) --mode=install @INSTALL_PROGRAM@
++INSTALL_DATA = $(LIBTOOL) --mode=install @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ transform = @program_transform_name@
  
- CLEANFILES =		$(libmysqlclient_a_LIBADD) $(SHLIBOBJS) \
--			libmysqlclient.so libmysqlclient.so.@VERSION@
-+			libmysqlclient.so libmysqlclient.so.${SHVERSION}
+@@ -115,21 +115,21 @@
+ mystrings_charset = @mystrings_charset@
+ perl_dirs = @perl_dirs@
+ readline_dir = @readline_dir@
+-readline_link = @readline_link@
++readline_link = ../readline/libreadline.a
+ server_scripts = @server_scripts@
+ sql_server_dirs = @sql_server_dirs@
  
- DEFS =			-DUNDEF_THREADS_HACK
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../config.h
- CONFIG_CLEAN_FILES = 
--LIBRARIES =  $(pkglib_LIBRARIES)
-+LIBRARIES =  $(pkglib_LIBRARIES) libmysqlclient.so
+ INCLUDES =		-I$(srcdir)/../include -I../include \
+ 			-I$(srcdir)/.. -I$(top_srcdir) -I..
+ LIBS =			@CLIENT_LIBS@
+-LDADD =			-L. -lmysqlclient
+-pkglib_LIBRARIES =	libmysqlclient.a
+-LIBFILES =		libmysqlclient.a @shlib@
++LDADD =			libmysqlclient.la
++pkglib_LIBRARIES =	libmysqlclient.la
++LIBFILES =		libmysqlclient.la
+ bin_PROGRAMS =		mysql mysqladmin mysqlshow mysqldump mysqlimport
+ noinst_PROGRAMS =	insert_test select_test
+ noinst_HEADERS =	sql_string.h completion_hash.h
+ mysql_SOURCES =		mysql.cc readline.cc sql_string.cc completion_hash.cc
+-mysql_LDADD =		@readline_link@ @TERMCAP_LIB@ $(LDADD)
++mysql_LDADD =		$(readline_link) @TERMCAP_LIB@ $(LDADD)
+ mysql_DEPENDENCIES=		$(LIBRARIES)
+ mysqladmin_DEPENDENCIES=	$(LIBRARIES)
+ mysqlshow_DEPENDENCIES=		$(LIBRARIES)
+@@ -218,10 +218,10 @@
+ select_test_LDFLAGS = 
+ CXXFLAGS = @CXXFLAGS@
+ CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
+-CXXLINK = $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
++CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
+-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-LINK = $(CC) $(CFLAGS) $(LDFLAGS) -o $@
++COMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
++LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ HEADERS =  $(noinst_HEADERS)
  
- CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
-@@ -540,18 +542,22 @@
+ DIST_COMMON =  Makefile.am Makefile.in
+@@ -265,12 +265,6 @@
+ 	  else :; fi; \
+ 	done
+ 	@$(POST_INSTALL)
+-	@list='$(pkglib_LIBRARIES)'; for p in $$list; do \
+-	  if test -f $$p; then \
+-	    echo " $(RANLIB) $(pkglibdir)/$$p"; \
+-	    $(RANLIB) $(pkglibdir)/$$p; \
+-	  else :; fi; \
+-	done
  
- shlib: libmysqlclient.so
+ uninstall-pkglibLIBRARIES:
+ 	$(NORMAL_UNINSTALL)
+@@ -291,10 +285,9 @@
  
--libmysqlclient.so: libmysqlclient.so.@VERSION@
-+libmysqlclient.so: libmysqlclient.so.${SHVERSION}
- 	-rm -f $@
- 	ln -s $< $@
+ maintainer-clean-compile:
  
--libmysqlclient.so.@VERSION@: $(SHLIBOBJS)
--	$(CC) -shared -Wl,-h,libmysqlclient.so.@SHARED_LIB_VERSION@ -o $@ \
--	  $(SHLIBOBJS) $(LIBS)
-+libmysqlclient.so.${SHVERSION}: libmysqlclient_pic.a
-+	$(LD) -x -Bshareable -Bforcearchive libmysqlclient_pic.a -o $@ $(LIBS)
-+
-+libmysqlclient_pic.a: $(SHLIBOBJS)
-+	${AR} cru $@ $(SHLIBOBJS)
-+	${RANLIB} $@
+-libmysqlclient.a: $(libmysqlclient_a_OBJECTS) $(libmysqlclient_a_DEPENDENCIES)
+-	rm -f libmysqlclient.a
+-	$(AR) cru libmysqlclient.a $(libmysqlclient_a_OBJECTS) $(libmysqlclient_a_LIBADD)
+-	$(RANLIB) libmysqlclient.a
++libmysqlclient.la: $(libmysqlclient_a_OBJECTS) $(libmysqlclient_a_DEPENDENCIES)
++	$(LIBTOOL) --mode=link $(CC) -o libmysqlclient.la $(libmysqlclient_a_OBJECTS:.o=.lo) $(libmysqlclient_a_LIBADD:.o=.lo) \
++		-rpath $(prefix)/lib -version-info 321:33
  
- install_shlib: libmysqlclient.so
--	$(INSTALL) libmysqlclient.so.@VERSION@ $(libdir)
-+	$(INSTALL) libmysqlclient_pic.a $(libdir)
-+	$(INSTALL) libmysqlclient.so.${SHVERSION} $(libdir)
- 	-rm -f $(libdir)/libmysqlclient.so
--	ln -s libmysqlclient.so.@VERSION@ $(libdir)/libmysqlclient.so
-+	ln -s libmysqlclient.so.${SHVERSION} $(libdir)/libmysqlclient.so
- 	@echo "ensure $(libdir) is in your LD_LIBRARY_PATH"
- 	@echo "and run ldconfig"
+ mostlyclean-binPROGRAMS:
  
