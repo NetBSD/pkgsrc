@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8286 2004/12/05 15:58:56 he Exp $
+$NetBSD: CHANGES,v 1.8287 2004/12/05 16:09:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-CGI-Minimal to 1.16 [he 2004-12-05]
 	Updated p5-Cache-Cache to 1.03 [he 2004-12-05]
 	Updated p5-Class-Container to 0.11 [he 2004-12-05]
+	Updated p5-Class-ObjectTemplate to 0.7 [he 2004-12-05]
