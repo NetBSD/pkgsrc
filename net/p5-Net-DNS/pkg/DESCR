@@ -1,0 +1,11 @@
+Net::DNS is a Perl interface to the DNS resolver.  It allows the
+programmer to perform any type of DNS query from a Perl script.
+For details and examples, please read the Net::DNS manual page.
+
+As of version 0.02, Net::DNS is written entirely in Perl.  Version
+0.01 was written mostly in C and used the system's resolver.  The
+Perl version runs quite a bit slower, but considering that the
+network can be a serious bottleneck when making DNS queries, the
+speed difference may not really matter in most cases.  However,
+future versions may contain some C to increase speed or for those
+who wish to link against libresolv or libbind.
