@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/03 08:17:22 wiz Exp $
+
+--- timidity/config.h.orig	Mon Mar 24 00:04:57 2003
++++ timidity/config.h	Mon Mar 24 00:06:06 2003
+@@ -206,7 +206,7 @@
+ 
+ /* You could specify a complete path, e.g. "/etc/timidity.cfg", and
+    then specify the library directory in the configuration file. */
+-#define CONFIG_FILE	"timidity.cfg"
++#define CONFIG_FILE	"@PREFIX@/share/timidity/timidity.cfg"
+ #ifdef __WIN32__
+ #define DEFAULT_PATH	"\\TIMIDITY"
+ #else
