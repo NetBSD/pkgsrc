@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/02/18 22:12:56 jlam Exp $
+
+--- INSTALL.html.orig	2004-11-09 20:01:39.000000000 -0500
++++ INSTALL.html
+@@ -681,7 +681,7 @@ is not Qmail, and it implements DSNs.</p
+ installation. The following presumes that SqWebMail's configuration files are
+ installed in <code>/usr/lib/sqwebmail</code> (the default).</p>
+ 
+-<p><code>/usr/lib/sqwebmail/etc/hostname</code> - when SqWebMail is installed
++<p><code>/usr/lib/sqwebmail/etc/defaultdomain</code> - when SqWebMail is installed
+ with a basic configuration for a single domain, SqWebMail sets the domain in
+ the return address for outgoing messages to the defined system hostname. If
+ this file exists it will be used instead of the defined system hostname.</p>
