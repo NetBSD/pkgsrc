@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2005/01/14 18:20:33 jlam Exp $
+
+--- src/datastore_db.c.orig	2004-09-28 23:28:04.000000000 -0400
++++ src/datastore_db.c
+@@ -237,7 +237,11 @@ static uint32_t get_psize(DB *dbp)
+     uint32_t ret, pagesize;
+     DB_BTREE_STAT *dbstat = NULL;
+ 
++#if (DB_VERSION_MAJOR == 4) && (DB_VERSION_MINOR >= 3)
++    ret = dbp->stat(dbp, &dbstat, NULL, DB_FAST_STAT);
++#else
+     ret = dbp->stat(dbp, &dbstat, DB_FAST_STAT);
++#endif
+     if (ret) {
+ 	dbp->err (dbp, ret, "%s (db) DB->stat", progname);
+ 	return 0xffffffff;
