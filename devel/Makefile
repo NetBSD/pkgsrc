@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2002/03/19 07:25:02 cjs Exp $
+# $NetBSD: Makefile,v 1.273 2002/03/19 14:57:58 mjl Exp $
 #
 
 COMMENT=	Development utilities
@@ -185,6 +185,7 @@ SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
+SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
 SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-SortVersions
