@@ -1,12 +1,18 @@
-$NetBSD: patch-ad,v 1.4 2000/10/15 14:30:23 itojun Exp $
+$NetBSD: patch-ad,v 1.5 2001/04/13 05:07:52 itojun Exp $
 
---- devtools/OS/SunOS.5.8.orig	Tue Oct 10 19:21:59 2000
-+++ devtools/OS/SunOS.5.8	Tue Oct 10 19:23:59 2000
-@@ -4,4 +4,6 @@
- define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX -DLDAPMAP')
+--- devtools/OS/SunOS.5.8.orig	Mon Dec 18 01:17:51 2000
++++ devtools/OS/SunOS.5.8	Fri Mar 16 09:23:29 2001
+@@ -2,10 +2,11 @@
+ define(`confCC', `gcc')
+ define(`confLDOPTS_SO', `-G')
+ define(`confBEFORE', `sysexits.h')
+-define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX -DLDAPMAP')
 +define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX')
  define(`confENVDEF', `-DSOLARIS=20800 -DNETINET6')
+ define(`confSM_OS_HEADER', `sm_os_sunos')
 -define(`confLIBS', `-lsocket -lnsl -lldap')
 +define(`confLIBS', `-lsocket -lnsl')
 +define(`confLDOPTS', `${LDFLAGS}')
  define(`confMTLDOPTS', `-lpthread')
+ define(`confMBINDIR', `/usr/lib')
+ define(`confEBINDIR', `/usr/lib')
