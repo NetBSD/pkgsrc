@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2001/10/13 08:30:25 rh Exp $
+$NetBSD: distinfo,v 1.6 2001/12/12 16:20:48 wiz Exp $
 
 SHA1 (gnome-utils-1.4.1.tar.gz) = a266e22838231ea7e6df5487d2787f33abe59961
 Size (gnome-utils-1.4.1.tar.gz) = 4342060 bytes
 SHA1 (patch-aa) = 27b24e4d80033c285cebde37e263583c4a9905af
 SHA1 (patch-ab) = cf12496463e31f48c75caab18ffe4a93db8d5781
-SHA1 (patch-ac) = bc777253f3b87eecd7e10381bb8ad42d756f5230
-SHA1 (patch-ad) = 4a5732215858eab2c7ed1a0e14df2a6e4b3c8af7
+SHA1 (patch-ac) = 005b8705db1c6831728dafe48bfdf57bae608629
+SHA1 (patch-ad) = 80278c67121f6537c3cc9c5fe122b91c56ff1477
 SHA1 (patch-af) = 60d22abb2c4c1813d51d90116901b543cf1be99a
 SHA1 (patch-ag) = 96d31d113f8aa5ca3e881768e2395052d8c01fe6
 SHA1 (patch-ah) = 9d4ceb307deb5123ac77330c5e9f94771ad88300
