@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/06/29 23:13:37 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/29 23:15:49 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.3
@@ -12,6 +12,8 @@ DISTFILES=	xemacs-21.1.3.tar.gz xemacs-21.1.3-info.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
+
+IGNORE=		is still broken
 
 DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
