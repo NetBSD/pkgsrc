@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2001/08/28 18:37:55 skrll Exp $
+$NetBSD: patch-aa,v 1.10 2002/01/15 23:52:11 rh Exp $
 
---- popt/configure.orig	Tue Aug 28 19:21:53 2001
+--- popt/configure.orig	Mon Jan  7 19:10:01 2002
 +++ popt/configure
 @@ -2277,13 +2277,6 @@
  	echo "$ac_t""no" 1>&6
