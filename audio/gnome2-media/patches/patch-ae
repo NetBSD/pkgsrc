@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/04/25 04:49:42 rh Exp $
+$NetBSD: patch-ae,v 1.2 2003/12/31 02:30:22 xtraeme Exp $
 
---- gmix/Makefile.in.orig	2003-04-25 14:09:24.000000000 +1000
-+++ gmix/Makefile.in
-@@ -183,7 +183,7 @@ Audio_DATA = $(Audio_in_files:.desktop.i
+--- gmix/Makefile.in.orig	2003-12-09 09:27:39.000000000 +0000
++++ gmix/Makefile.in	2003-12-09 09:28:06.000000000 +0000
+@@ -183,7 +183,7 @@
  
  pixmap_DATA = gnome-mixer.png
  

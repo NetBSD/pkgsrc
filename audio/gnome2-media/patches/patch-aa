@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/25 04:49:42 rh Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/31 02:30:22 xtraeme Exp $
 
---- cddb-slave2/Makefile.in.orig	2003-04-25 14:09:24.000000000 +1000
-+++ cddb-slave2/Makefile.in
-@@ -243,7 +243,7 @@ libcddb_slave2include_HEADERS = \
+--- cddb-slave2/Makefile.in.orig	2003-12-09 09:24:28.000000000 +0000
++++ cddb-slave2/Makefile.in	2003-12-09 09:24:55.000000000 +0000
+@@ -243,7 +243,7 @@
  	cddb-slave-client.h
  
  
