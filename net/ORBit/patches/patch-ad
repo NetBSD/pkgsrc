@@ -1,13 +1,17 @@
-$NetBSD: patch-ad,v 1.5 2000/10/17 23:48:01 jlam Exp $
+$NetBSD: patch-ad,v 1.6 2001/02/07 03:23:08 fredb Exp $
 
---- popt/Makefile.in.orig	Thu Oct 12 12:06:51 2000
-+++ popt/Makefile.in
-@@ -152,7 +152,7 @@
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- CCLD = $(CC)
--LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
-+LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@ -all-static
- HEADERS =  $(noinst_HEADERS)
+--- popt/Makefile.am.orig	Mon Feb 21 12:39:52 2000
++++ popt/Makefile.am	Tue Feb  6 18:20:34 2001
+@@ -12,10 +12,10 @@
  
- DIST_COMMON =  README ./stamp-h.in COPYING Makefile.am Makefile.in \
+ noinst_PROGRAMS = test1 test2
+ test1_SOURCES = test1.c
+-test1_LDFLAGS = -all-static
++test1_LDFLAGS = --disable-shared
+ test1_LDADD = $(noinst_LTLIBRARIES)
+ test2_SOURCES = test2.c
+-test2_LDFLAGS = -all-static
++test2_LDFLAGS = --disable-shared
+ test2_LDADD = $(noinst_LTLIBRARIES)
+ 
+ noinst_SCRIPTS = testit.sh
