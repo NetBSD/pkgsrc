@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 1999/01/30 14:19:00 tron Exp $
+
+--- wmutil.c.orig	Sat Jan 16 05:50:25 1999
++++ wmutil.c	Sat Jan 30 14:37:40 1999
+@@ -319,15 +319,12 @@
+     if (path = check_file(prefix, folders, resource))
+       return path;
+ 
+-  if (path = check_file("/usr/local/GNUstep", folders, resource))
++  if (path = check_file(PREFIX "/GNUstep", folders, resource))
+     return path;
+ 
+   if (prefix = getenv("GNUSTEP_SYSTEM_ROOT"))
+     if (path = check_file(prefix, folders, resource))
+       return path;
+-
+-  if (path = check_file("/usr/GNUstep", folders, resource))
+-    return path;
+ 
+   return (char *) NULL;
+ }
