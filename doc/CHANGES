@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1463 2003/02/22 01:41:35 jtb Exp $
+$NetBSD: CHANGES,v 1.1464 2003/02/22 04:33:14 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -802,3 +802,4 @@ Changes to the packages collection and infrastructure in 2003:
         Updated lua to 4.0.1 [jtb 2003-02-21]
 	Added libsieve-2.1.12 [rh 2003-02-22]
         Updated imapfilter to 0.8.5 [jtb 2003-02-22]
+	Updated scilab to 2.7 [dmcmahill 2003-02-21]
