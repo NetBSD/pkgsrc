@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.951 2003/10/17 12:07:44 salo Exp $
+$NetBSD: TODO,v 1.952 2003/10/17 15:01:00 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -108,6 +108,7 @@ Suggested package updates
 	o Amaya-8.1a
 	o ImageViewer-0.6.3
 	o Lesstif-0.93.91
+	o MozillaFirebird-0.7
 	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.8.0
 	o TeXmacs-1.0.2.3
