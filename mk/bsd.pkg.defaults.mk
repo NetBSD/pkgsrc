@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.183 2003/09/13 18:32:08 kim Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.184 2003/09/14 18:01:11 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1768,6 +1768,12 @@ USE_DB2?= NO
 # Used in sendmail to build with database library 2.x from the db package.
 # Possible: YES, or NO.
 # Default: NO
+
+USE_ESOUND?= YES
+# Whether to compile support for the Enlightened Sound Daemon or not in the
+# following packages: libmikmod.
+# Possible: YES, or NO.
+# Default: YES
 
 #USE_GIF=
 # Enable GIF support in qt1.  (disabled per default due to licensing
