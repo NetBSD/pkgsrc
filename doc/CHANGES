@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7885 2004/11/16 20:25:01 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7886 2004/11/17 02:41:04 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5309,3 +5309,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mailsync to 5.2.1 [adrianp 2004-11-16]
 	Updated checkbot to 1.75 [abs 2004-11-16]
 	Added skype-0.92.0.12 [xtraeme 2004-11-16]
+	Removed moz-mplayer [xtraeme 2004-11-17]
+	Added mplayer-plugin-firefox-2.70 [xtraeme 2004-11-17]
+	Added mplayer-plugin-firefox-gtk2-2.70 [xtraeme 2004-11-17]
+	Added mplayer-plugin-mozilla-2.70 [xtraeme 2004-11-17]
+	Added mplayer-plugin-mozilla-gtk2-2.70 [xtraeme 2004-11-17]
