@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4644 2004/01/29 22:12:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.4645 2004/01/30 14:37:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -529,3 +529,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated grub to 0.94 [jmmv 2004-01-29]
 	Updated kopete to 0.8rc1 [jmmv 2004-01-29]
 	Updated kmplayer to 0.8.2rc5nb3 [jmmv 2004-01-29]
+	Updated ngrep to 1.41 [adam 2004-01-30]
