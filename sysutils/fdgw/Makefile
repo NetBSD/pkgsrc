@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/12 20:51:26 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/19 10:34:21 wennmach Exp $
 #
 
 DISTNAME=	fdgw-20020130
@@ -9,24 +9,13 @@ MAINTAINER= 	fukachan@fml.org
 HOMEPAGE=	http://www.fml.org/software/fdgw/
 COMMENT= 	toolkit to build a one-floppy NetBSD system
 
-BSDSRCDIR?=	/usr/src
 _IMG_SRC_DIR =	${WRKSRC}/image.${MACHINE_ARCH}
 _IMG_DST_DIR =	${PREFIX}/fdgw/${MACHINE_ARCH}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5.*-i386
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !exists(${X11BASE}/bin/lndir)
-IGNORE=                 "${PKGNAME} requires the 'lndir' command, and hence X11"
-.endif
-
-# we need the NetBSD source tree.
-.if !exists(${BSDSRCDIR})
-IGNORE= "${PKGNAME} requires the NetBSD source tree in BSDSRCDIR (${BSDSRCDIR})"
-.endif
-
 ALL_TARGET=	dist-build
+MAKE_ENV+=	BSDSRCDIR="${BSDSRCDIR}"
 
 pre-fetch:
 	@ ${ECHO} "";
@@ -57,5 +46,17 @@ post-install:
 	@ ${ECHO} "";
 	@ ${ECHO} "*****************************************************";
 	@ ${ECHO} "";
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/bin/lndir)
+IGNORE=                 "${PKGNAME} requires the 'lndir' command, and hence X11"
+.endif
+
+# we need the NetBSD source tree.
+BSDSRCDIR?=	/usr/src
+.if !exists(${BSDSRCDIR})
+IGNORE= "${PKGNAME} requires the NetBSD source tree in BSDSRCDIR (${BSDSRCDIR})"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
