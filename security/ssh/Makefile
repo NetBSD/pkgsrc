@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2003/01/04 11:51:29 cjep Exp $
+# $NetBSD: Makefile,v 1.104 2003/03/14 19:37:55 jlam Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -57,8 +57,10 @@ CONFIGURE_ENV+=		X_CFLAGS="-I${LOCALBASE}/include"
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 DEPENDS+=		rsaref-2.0p3:../../security/rsaref
 CONFIGURE_ARGS+=	--with-rsaref="${LOCALBASE}/lib"
-CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${LOCALBASE}/lib"
+CONFIGURE_ENV+=		LDFLAGS="${SSH_LDFLAGS}"
 CFLAGS+=		-I${LOCALBASE}/include
+SSH_LDFLAGS=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
+FIX_RPATH+=		SSH_LDFLAGS
 .endif
 
 # Include support for the SecureID card

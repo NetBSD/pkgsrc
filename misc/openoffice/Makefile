@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/01/22 22:46:34 rh Exp $
+# $NetBSD: Makefile,v 1.34 2003/03/14 19:37:51 jlam Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -36,7 +36,7 @@ CXX=			${GCCPREFIX}/bin/c++
 CPP=			${GCCPREFIX}/bin/cpp
 F77=			${GCCPREFIX}/bin/g77
 PKG_FC=			${GCCPREFIX}/bin/g77
-LDFLAGS+=		-R${GCCPREFIX}/lib
+LDFLAGS+=		${RPATH_FLAG}${GCCPREFIX}/lib
 .endif
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison

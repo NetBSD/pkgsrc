@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/11/01 16:34:40 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/14 19:37:52 jlam Exp $
 #
 
 DISTNAME=		coda-4.6.6
@@ -27,10 +27,13 @@ USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
+FIX_RPATH+=		GDBM_LDADD
+GDBM_LDADD=		-Wl,${RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib -lgdbm
+
 pre-configure:
-	cd ${WRKSRC} &&							\
+	cd ${WRKSRC} &&						\
 	for F in coda-src/advice/Makefile.in; do 		\
-		${SED} -e "s_-lgdbm_-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lgdbm_"\
+		${SED} -e "s_-lgdbm_${GDBM_LDADD}_"		\
 			< $$F > $$F.patched &&			\
 		${MV} $$F.patched $$F;				\
 	done

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1150 2003/03/04 14:50:09 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1151 2003/03/14 19:37:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -269,23 +269,16 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 DISTINFO_FILE?=		${.CURDIR}/distinfo
 
+FIX_RPATH+=		LIBS
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
-.  if ${_USE_RPATH} == "yes"
-X11_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${X11BASE}/lib	
-.  endif
+X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib	
 X11_LDFLAGS+=		-L${X11BASE}/lib
 LDFLAGS+=		${X11_LDFLAGS}
 .endif
-.if ${_USE_RPATH} == "yes"
-LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${LOCALBASE}/lib
-.else
-.  if !empty(USE_BUILDLINK2:M[nN][oO])
-LDFLAGS:=		${LDFLAGS:N*-Wl,-R*:N*-rpath*}
-.  endif
-.endif
-
+LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
 LDFLAGS+=		-L${LOCALBASE}/lib
+FIX_RPATH+=		X11_LDFLAGS LDFLAGS
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
@@ -531,7 +524,7 @@ MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
 
 PKGCONFIG_OVERRIDE_SED=	\
-		'-e s|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,${_OPSYS_RPATH_NAME}\2 -L\2\3|'
+		'-e s|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1-Wl,${RPATH_FLAG}\2 -L\2\3|'
 
 # Latest version of digest(1) required for pkgsrc
 DIGEST_REQD=		20010302
@@ -659,6 +652,19 @@ DEPENDS+=		rman-3.0.9:../../textproc/rman
 RMAN?=			${LOCALBASE}/bin/rman
 .  else
 RMAN?=			${X11BASE}/bin/rman
+.  endif
+.endif
+
+# FIX_RPATH will remove compiler or linker settings related to run-time
+# library search path settings if _USE_RPATH is "no".
+#
+.if !empty(_USE_RPATH:M[nN][oO])
+.  if defined(FIX_RPATH) && !empty(FIX_RPATH)
+.    for var in ${FIX_RPATH}
+.      for _rpath_flag in ${RPATH_FLAG} -R -rpath -rpath-link
+${var}:=	${${var}:N-Wl,${_rpath_flag}*:N${_rpath_flag}*}
+.      endfor
+.    endfor
 .  endif
 .endif
 
