@@ -1,0 +1,39 @@
+$NetBSD: patch-at,v 1.1 2000/12/16 05:44:10 hubertf Exp $
+
+--- sdr/src/www_fns.c.orig	Tue May 25 23:28:19 1999
++++ sdr/src/www_fns.c	Wed Dec 13 01:44:31 2000
+@@ -194,7 +194,7 @@
+ 	free(uri);
+ 
+       Tcl_SetVar2(interp, "webstatus", NULL, "Connecting...", TCL_GLOBAL_ONLY);
+-      Tcl_Eval(interp, "webstatus");
++      sdr_Tcl_Eval(interp, "webstatus");
+       while (Tk_DoOneEvent(TK_DONT_WAIT)) ;
+ #ifdef MSG_EOF
+ try_again:
+@@ -335,7 +335,7 @@
+ 		sendmsg(fd, &msg, 0);
+ #endif
+ 		Tcl_SetVar2(interp, "webstatus", NULL, "Receiving...", TCL_GLOBAL_ONLY);
+-		Tcl_Eval(interp, "webstatus");
++		sdr_Tcl_Eval(interp, "webstatus");
+ 		webstate = READING;
+ 		continue;
+ 	      }
+@@ -353,13 +353,13 @@
+ /*  	      sprintf(msg, "Read %d bytes", webdatalen);  */
+ /*	      printf("%s", msg); */
+ /*	      Tcl_SetVar2(interp, "webstatus", NULL, msg, TCL_GLOBAL_ONLY); */
+-/*	      if(Tcl_Eval(interp, "webstatus")!=0) {printf("%s\n", interp->result);} */
++/*	      if(sdr_Tcl_Eval(interp, "webstatus")!=0) {printf("%s\n", interp->result);} */
+ #endif
+-	      Tcl_Eval(interp, "update");
++	      sdr_Tcl_Eval(interp, "update");
+ 	    }
+ 	  else 
+ 	    {
+-	      Tcl_Eval(interp, "show_active");
++	      sdr_Tcl_Eval(interp, "show_active");
+ 	      while (Tk_DoOneEvent(TK_DONT_WAIT)) ;
+ 	    }
+ 	}

@@ -1,12 +1,13 @@
-$NetBSD: patch-aq,v 1.2 2000/10/21 22:47:25 wiz Exp $
---- sdr/src/Makefile.template.orig	Fri Sep  8 14:19:35 2000
-+++ sdr/src/Makefile.template	Fri Sep  8 14:20:04 2000
-@@ -88,7 +88,7 @@
- $(SDR_UI_FILES): tcl2c
+$NetBSD: patch-aq,v 1.3 2000/12/16 05:44:09 hubertf Exp $
+
+--- sdr/src/pgp_crypt.c.orig	Tue May 25 16:52:35 1999
++++ sdr/src/pgp_crypt.c	Wed Dec 13 01:43:09 2000
+@@ -328,7 +328,7 @@
  
- parsed_plugins.tcl: ../src/plugin2tcl.tcl
--	tclsh8.0 ../src/plugin2tcl.tcl
-+	tclsh ../src/plugin2tcl.tcl
+ /* Extract the signature and store in files */
  
- uweb: $(WWWOBJS)
- 	$(CC) -ggdb -o uweb $(WWWOBJS) $(LIBS)
+-  Tcl_Eval(interp, "pgpstate");
++  sdr_Tcl_Eval(interp, "pgpstate");
+   if (strcmp(interp->result,"1") == 0) {
+ 
+ /* signature file - irand.sig */
