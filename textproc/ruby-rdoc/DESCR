@@ -1,0 +1,6 @@
+RDoc - Documentation from Ruby Source Files
+
+Generates structured HTML documentation from Ruby source.
+Authomatically extracts class, module, method, and attribute definitions.
+These can be annonated using inline comments. Analyzes method visibility.
+Handles aliasing. Uses non-intrusive and implicit markup in the comments.
