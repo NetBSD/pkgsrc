@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2001/06/14 13:30:17 zuntum Exp $
+$NetBSD: distinfo,v 1.5 2001/11/13 23:12:16 zuntum Exp $
 
 SHA1 (djbdns-1.05.tar.gz) = 2efdb3a039d0c548f40936aa9cb30829e0ce8c3d
 Size (djbdns-1.05.tar.gz) = 85648 bytes
-SHA1 (djbdns-1.05-man.tar.gz) = a1009b98081b68d41bc48b530f7a4d936e8a4571
-Size (djbdns-1.05-man.tar.gz) = 15733 bytes
+SHA1 (djbdns-1.05-man-20010212.tar.gz) = de52276ebc0766cd446682af1daeb3cd44c5a964
+Size (djbdns-1.05-man-20010212.tar.gz) = 14574 bytes
 SHA1 (dnscache-log.pl.txt) = d9f4b4ac3da96f38a2814d0f84c0196b24644cf3
 Size (dnscache-log.pl.txt) = 2920 bytes
 SHA1 (tinydns-log.pl.txt) = 9715a514f5aed0ef71eabd54182837c0caa1f622
