@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.970 2003/10/26 02:39:39 lukem Exp $
+$NetBSD: TODO,v 1.971 2003/10/26 08:27:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -197,7 +197,6 @@ Suggested package updates
 	o gnumeric-1.2.0
 	o gnustep-0.9.0
 	o gpa-0.6.1
-	o gqview-devel-1.3.3 [wiz]
 	o grace-5.1.12
 	o grepmail-5.21
 	o gstreamer-0.6.3
