@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:05 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:54:11 wiz Exp $
 
 .if !defined(EDB_BUILDLINK2_MK)
 EDB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		edb
-BUILDLINK_DEPENDS.edb?=		edb>=1.0.2
+BUILDLINK_DEPENDS.edb?=		edb>=1.0.3nb2
 BUILDLINK_PKGSRCDIR.edb?=	../../databases/edb
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.edb=edb

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/04/03 08:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/02 11:54:40 wiz Exp $
 
 DISTNAME=	SDL_perl-1.19.2
 PKGNAME=	p5-SDL-1.19.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	ftp://sdlperl.org/SDL_perl/
 
@@ -11,9 +11,6 @@ COMMENT=	Perl module for SDL
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SDL_perl/.packlist
-
-BUILDLINK_DEPENDS.SDL=		SDL>=1.2.5
-BUILDLINK_DEPENDS.SDL_mixer=	SDL_mixer>=1.2.4
 
 .include "../../audio/SDL_mixer/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"

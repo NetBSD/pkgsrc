@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2003/03/28 21:14:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/02 11:56:18 wiz Exp $
 #
 
 DISTNAME=	nessus-${VERS}
+PKGREVISION=	1
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 .include	"../nessus/Makefile.common"
 
 COMMENT=	The Nessus Network Security Scanner
 
-DEPENDS+=	nessus-core-${VERS}:../nessus-core
-DEPENDS+=	nessus-plugins-${VERS}:../nessus-plugins
+DEPENDS+=	nessus-core-${VERS}nb1:../nessus-core
+DEPENDS+=	nessus-plugins-${VERS}nb1:../nessus-plugins
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/04/05 19:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/02 11:55:10 wiz Exp $
 #
 
 DISTNAME=		SDL_image-1.2.2
+PKGREVISION=	1
 CATEGORIES=		graphics devel
 MASTER_SITES=		http://www.libsdl.org/projects/SDL_image/release/
 

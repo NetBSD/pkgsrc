@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/03/04 14:41:17 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:53:45 wiz Exp $
 #
 # This Makefile fragment is included by packages that use streamtuner.
 #
@@ -9,7 +9,7 @@
 STREAMTUNER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			streamtuner
-BUILDLINK_DEPENDS.streamtuner?=		streamtuner>=0.9.1
+BUILDLINK_DEPENDS.streamtuner?=		streamtuner>=0.9.1nb1
 BUILDLINK_PKGSRCDIR.streamtuner?=	../../audio/streamtuner
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.streamtuner=streamtuner

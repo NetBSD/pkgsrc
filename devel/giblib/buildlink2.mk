@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/20 10:55:40 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:54:26 wiz Exp $
 #
 # This Makefile fragment is included by packages that use giblib.
 #
@@ -9,7 +9,7 @@
 GIBLIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			giblib
-BUILDLINK_DEPENDS.giblib?=		giblib>=1.2.2
+BUILDLINK_DEPENDS.giblib?=		giblib>=1.2.2nb1
 BUILDLINK_PKGSRCDIR.giblib?=		../../devel/giblib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.giblib=giblib

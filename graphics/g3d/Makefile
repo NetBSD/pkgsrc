@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/02 11:55:15 wiz Exp $
 #
 
 DISTNAME=	g3d-0.0.2
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/g3d
 CATEGORIES=	graphics
 MASTER_SITES=	http://condor.stcloudstate.edu/~hebl9901/g3d/

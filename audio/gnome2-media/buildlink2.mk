@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/04/25 04:49:42 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:53:42 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gnome-media.
 #
@@ -9,7 +9,7 @@
 GNOME_MEDIA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-media
-BUILDLINK_DEPENDS.gnome-media?=		gnome-media>=2.2.1.1
+BUILDLINK_DEPENDS.gnome-media?=		gnome-media>=2.2.1.1nb1
 BUILDLINK_PKGSRCDIR.gnome-media?=		../../audio/gnome2-media
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-media=gnome-media

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/01 17:55:43 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:56:50 wiz Exp $
 #
 
 DISTNAME=	Fortune-0.5.2
+PKGREVISION=	1
 PKGNAME=	zope25-Fortune-0.5.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/lalo/Fortune/

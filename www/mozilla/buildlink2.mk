@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/03/18 03:24:01 taya Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/05/02 11:56:43 wiz Exp $
 #
 
 .if !defined(MOZILLA_BUILDLINK2_MK)
 MOZILLA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mozilla
-BUILDLINK_DEPENDS.mozilla?=		mozilla>=1.3
+BUILDLINK_DEPENDS.mozilla?=		mozilla>=1.3nb1
 BUILDLINK_PKGSRCDIR.mozilla?=		../../www/mozilla
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mozilla=mozilla

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/03 15:36:40 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/02 11:53:54 wiz Exp $
 #
 
 DISTNAME=	xmms-sid-0.7.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.tnsp.org/xs-files/
 
