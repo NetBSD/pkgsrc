@@ -1,0 +1,125 @@
+$NetBSD: patch-aa,v 1.1 2003/10/05 13:39:24 drochner Exp $
+
+--- lrmi.c.orig	2003-05-14 05:18:12.000000000 +0200
++++ lrmi.c
+@@ -211,12 +211,26 @@ LRMI_free_real(void *m)
+ #define DEFAULT_STACK_SIZE 	0x1000
+ #define RETURN_TO_32_INT 	255
+ 
++#if defined(__NetBSD__) && defined(SA_SIGINFO)
++struct gregset_overlay {
++	int gs, fs, es, ds;
++	int edi, esi, ebp, esp, ebx, edx, ecx, eax;
++	int _trapno, _err;
++	int eip, cs, eflags, uesp, ss;
++};
++#endif
++
+ #if defined(__linux__)
+ #define CONTEXT_REGS	context.vm.regs
+ #define REG(x)			x
+ #elif defined(__NetBSD__)
++#if defined(SA_SIGINFO)
++#define CONTEXT_REGS	(*(struct gregset_overlay *)&context.vm.substr.regs)
++#define REG(x)		x
++#else
+ #define CONTEXT_REGS	context.vm.substr.regs
+ #define REG(x)			vmsc.sc_ ## x
++#endif /* SA_SIGINFO */
+ #elif defined(__FreeBSD__)
+ #define CONTEXT_REGS	context.vm.uc
+ #define REG(x)			uc_mcontext.mc_ ## x
+@@ -237,7 +251,7 @@ static struct {
+ #if defined(__NetBSD__) || defined(__FreeBSD__)
+ 	int success;
+ 	jmp_buf env;
+-	void *old_sighandler;
++	struct sigaction old_sighandler;
+ 	int vret;
+ #endif
+ } context = { 0 };
+@@ -808,10 +822,22 @@ run_vm86(void)
+ #elif defined(__NetBSD__) || defined(__FreeBSD__)
+ #if defined(__NetBSD__)
+ static void
+-vm86_callback(int sig, int code, struct sigcontext *sc)
++vm86_callback(int sig,
++#if defined(SA_SIGINFO)
++	      siginfo_t *info, void *vctx
++#else
++	      int code, struct sigcontext *sc
++#endif
++	      )
+ {
+ 	/* Sync our context with what the kernel develivered to us. */
++#if defined(SA_SIGINFO)
++	int code = info->si_trap;
++	ucontext_t *ctx = vctx;
++	memcpy(&CONTEXT_REGS, &ctx->uc_mcontext.__gregs, sizeof(CONTEXT_REGS));
++#else
+ 	memcpy(&CONTEXT_REGS, sc, sizeof(*sc));
++#endif
+ 
+ 	switch (VM86_TYPE(code)) {
+ 		case VM86_INTx:
+@@ -850,7 +876,11 @@ vm86_callback(int sig, int code, struct 
+ 	}
+ 
+ 	/* ...and sync our context back to the kernel. */
++#if defined(SA_SIGINFO)
++	memcpy(&ctx->uc_mcontext.__gregs, &CONTEXT_REGS, sizeof(CONTEXT_REGS));
++#else
+ 	memcpy(sc, &CONTEXT_REGS, sizeof(*sc));
++#endif
+ }
+ #elif defined(__FreeBSD__)
+ static void
+@@ -899,21 +929,28 @@ vm86_callback(int sig, int code, struct 
+ static int
+ run_vm86(void)
+ {
+-	if (context.old_sighandler) {
++	struct sigaction sa;
++	int res;
++
++	if (context.old_sighandler.sa_sigaction) {
+ #ifdef LRMI_DEBUG
+ 		fprintf(stderr, "run_vm86: callback already installed\n");
+ #endif
+ 		return (0);
+ 	}
+ 
++	memset(&sa, 0, sizeof(sa));
++	sa.sa_sigaction = vm86_callback;
+ #if defined(__NetBSD__)
+-	context.old_sighandler = signal(SIGURG, (void (*)(int))vm86_callback);
++#if defined(SA_SIGINFO)
++	sa.sa_flags = SA_SIGINFO;
++#endif
++	res = sigaction(SIGURG, &sa, &context.old_sighandler);
+ #elif defined(__FreeBSD__)
+-	context.old_sighandler = signal(SIGBUS, (void (*)(int))vm86_callback);
++	res = sigaction(SIGBUS, &sa, &context.old_sighandler);
+ #endif
+ 
+-	if (context.old_sighandler == (void *)-1) {
+-		context.old_sighandler = NULL;
++	if (res < 0) {
+ #ifdef LRMI_DEBUG
+ 		fprintf(stderr, "run_vm86: cannot install callback\n");
+ #endif
+@@ -922,11 +959,11 @@ run_vm86(void)
+ 
+ 	if (setjmp(context.env)) {
+ #if defined(__NetBSD__)
+-		(void) signal(SIGURG, context.old_sighandler);
++		sigaction(SIGURG, &context.old_sighandler, 0);
+ #elif defined(__FreeBSD__)
+-		(void) signal(SIGBUS, context.old_sighandler);
++		sigaction(SIGBUS, &context.old_sighandler, 0);
+ #endif
+-		context.old_sighandler = NULL;
++		context.old_sighandler.sa_sigaction = NULL;
+ 
+ 		if (context.success)
+ 			return (1);
