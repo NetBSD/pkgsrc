@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2002/03/01 06:46:49 fredb Exp $
+# $NetBSD: Makefile.common,v 1.25 2002/03/01 13:27:35 fredb Exp $
 #
 
 DISTNAME=		xscreensaver-4.01
@@ -13,7 +13,7 @@ DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		gle-[0-9]*:../../graphics/gle
 DEPENDS+=		gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		libxml-1.8.16:../../texproc/libxml
+DEPENDS+=		libxml-1.8.16:../../textproc/libxml
 
 USE_MESA=		yes
 USE_X11BASE=		yes
