@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/08/07 04:10:03 gson Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/23 20:38:44 minskim Exp $
 
---- check_optional_modules.orig	2003-06-06 10:22:46.000000000 -0700
+--- check_optional_modules.orig	2003-09-24 08:35:07.000000000 -0500
 +++ check_optional_modules
-@@ -17,16 +17,16 @@ if( $] >=  5.0060)
+@@ -17,17 +17,17 @@ if( $] >=  5.0060)
        { warn "weaken is available\n"; }
    }
  
@@ -32,3 +32,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/08/07 04:10:03 gson Exp $
 +#  }
 +#else
 +#  { warn "Text::Iconv is installed\n"; }
+ 
