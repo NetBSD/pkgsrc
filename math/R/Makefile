@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/06/09 00:45:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/07/13 01:20:12 jlam Exp $
 #
 
 DISTNAME=	R-0.64.1
@@ -21,7 +21,7 @@ HOMEPAGE=	http://lib.stat.cmu.edu/R/CRAN/
 .if !exists(/usr/bin/f77)
 DEPENDS+=	f2c-19980913:../../lang/f2c
 .endif
-DEPENDS+=	readline-2.2:../../devel/readline
+DEPENDS+=	readline-4.0:../../devel/readline
 
 USE_X11=	yes
 USE_PERL5=	yes
