@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/03/28 22:06:15 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/28 23:35:57 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use XFree86-libs.
 #
@@ -8,7 +8,7 @@
 .if !defined(XFREE86_LIBS_BUILDLINK2_MK)
 XFREE86_LIBS_BUILDLINK2_MK=	# defined
 
-.include "../../XFree86/XFree86/Makefile.common"
+.include "../../meta-pkgs/XFree86/Makefile.common"
 
 BUILDLINK_PACKAGES+=			XFree86-libs
 BUILDLINK_DEPENDS.XFree86-libs?=	XFree86-libs>=4.4.0
