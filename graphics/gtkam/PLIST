@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/04 14:36:55 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/03/21 03:39:27 fredb Exp $
 bin/gtkam
 share/doc/gtkam/AUTHORS
 share/doc/gtkam/COPYING
@@ -19,4 +19,3 @@ share/images/gtkam/gtkam-new.png
 @dirrm share/gtkam/pixmaps
 @dirrm share/gtkam
 @dirrm share/images/gtkam
-@dirrm share/images
