@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/08/01 05:48:09 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/08 16:17:07 jlam Exp $
 #
 
 DISTNAME=	libmpeg3-1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel audio graphics
 MASTER_SITES=	http://heroines.sourceforge.net/
 

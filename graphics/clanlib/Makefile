@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2002/08/01 06:40:54 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2002/08/08 16:17:07 jlam Exp $
 
 DISTNAME=		ClanLib-0.4.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics games devel x11
 MASTER_SITES=		http://dark.x.dtu.dk/~mbn/clanlib/download/
 
