@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2002/09/23 11:48:29 wiz Exp $
 
---- src/dctc_process.c.orig	Tue Jul 30 17:54:39 2002
+--- src/dctc_process.c.orig	Sat Sep 21 17:27:49 2002
 +++ src/dctc_process.c
-@@ -535,9 +535,9 @@ static void update_users_info(void)
+@@ -539,9 +539,9 @@ static void update_users_info(void)
  	}
  
  	if( (amount/(1024.0*1024.0*1024.0)) > 1024.0)
@@ -14,7 +14,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
  	w=get_widget_by_widget_name("users_info_label");
  	if(w==NULL)
  		return;
-@@ -697,7 +697,7 @@ static void uinfo_fnc(const GString *s)
+@@ -701,7 +701,7 @@ static void uinfo_fnc(const GString *s)
  	fsize=g_string_new("");
  	
  	if(vsize>(1024.0*1024.0*1024.0))
@@ -23,17 +23,26 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
  	else if(vsize>(1024.0*1024.0))
  		g_string_sprintf(fsize,"%.2fMB",vsize/(1024.0*1024.0));
  	else if(vsize>(1024.0))
-@@ -4140,11 +4140,11 @@ static void first_level_glst_end_fnc(Gtk
- #endif
- 					if(spd<1024.0)
- 					{
--						g_string_sprintfa(spd_str,"[%.2lfB/s]",spd);
-+						g_string_sprintfa(spd_str,"[%.2fB/s]",spd);
- 					}
- 					else if(spd<(1024.0*1024.0))
- 					{
--						g_string_sprintfa(spd_str,"[%.2lfKB/s]",spd/1024.0);
-+						g_string_sprintfa(spd_str,"[%.2fKB/s]",spd/1024.0);
- 					}
+@@ -4168,7 +4168,7 @@ static void first_level_glst_end_fnc(Gtk
+ 				missing_bytes=gce_root->c.root.gdl_size-gce_root->c.root.received_bytes;
  
- 					/* Estimated Time to Arrival computation: now (in second) + missing_bytes/spd */
+ 				spd_str=g_string_new("");
+-				g_string_sprintf(spd_str,"%'15lu (%.2f%%) ",gce_root->c.root.received_bytes,100.0*(double)gce_root->c.root.received_bytes/(double)gce_root->c.root.gdl_size);
++				g_string_sprintf(spd_str,"%15lu (%.2f%%) ",gce_root->c.root.received_bytes,100.0*(double)gce_root->c.root.received_bytes/(double)gce_root->c.root.gdl_size);
+ 
+ 				cur_size=gce_root->c.root.received_bytes-gce_root->c.root.byte_offset;		/* number of bytes downloaded */
+ 				duration=time(NULL)-gce_root->c.root.start_time;
+@@ -4176,11 +4176,11 @@ static void first_level_glst_end_fnc(Gtk
+ 				spd=(double)(gce_root->c.root.last_10sec_speed)/10.0;		/* compute the speed of the last 10 seconds */
+ 				if(spd<1024.0)
+ 				{
+-					g_string_sprintfa(spd_str,"[%.2lfB/s]",spd);
++					g_string_sprintfa(spd_str,"[%.2fB/s]",spd);
+ 				}
+ 				else if(spd<(1024.0*1024.0))
+ 				{
+-					g_string_sprintfa(spd_str,"[%.2lfKB/s]",spd/1024.0);
++					g_string_sprintfa(spd_str,"[%.2fKB/s]",spd/1024.0);
+ 				}
+ 
+ 				/* Estimated Time to Arrival computation: now (in second) + missing_bytes/spd */
