@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/01 12:27:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/04/03 13:48:10 markd Exp $
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPArg.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPClient.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPConnection.html
@@ -1599,7 +1599,6 @@ share/doc/kde/HTML/en/kdelibs/khtml/KHTMLRun.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLSettings.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLView.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLZoomFactorAction.html
-share/doc/kde/HTML/en/kdelibs/khtml/PageMonitor.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegTestFunction.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegTestObject.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegressionTest.html
@@ -1776,7 +1775,6 @@ share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLRun.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLSettings.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLView.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLZoomFactorAction.html
-share/doc/kde/HTML/en/kdelibs/khtml/full-list-PageMonitor.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegTestFunction.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegTestObject.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegressionTest.html
