@@ -1,0 +1,7 @@
+GNOME stands for GNU Network Object Model Environment.  The GNOME
+project intends to build a complete, user-friendly desktop based
+entirely on free software.  GNOME is part of the GNU project, and
+GNOME is part of the OpenSource(tm) movement.  The desktop will
+consist of small utilities and larger applications which share a
+consistent look and feel.  GNOME uses GTK+ as the GUI toolkit for all
+GNOME-compliant applications.
