@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1435 2004/04/02 19:09:18 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1436 2004/04/03 06:22:39 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -1469,7 +1469,7 @@ _ACCEPTABLE=	yes
 PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
 	 "    To build this package, add this line to your /etc/mk.conf:" \
 	 "    ACCEPTABLE_LICENSES+=${LICENSE}" \
-	 "    To view the license, enter \"make show-license\"."
+	 "    To view the license, enter \"${MAKE} show-license\"."
 .    endif	# _ACCEPTABLE
 .  endif	# LICENSE
 
