@@ -1,37 +1,46 @@
-$NetBSD: patch-ab,v 1.5 2000/10/13 17:55:36 kim Exp $
+$NetBSD: patch-ab,v 1.6 2000/12/15 18:46:50 hubertf Exp $
 
---- snmplib/Makefile.in.orig	Sat Feb  5 06:15:42 2000
-+++ snmplib/Makefile.in	Wed Oct 11 19:02:56 2000
-@@ -36,3 +36,4 @@
+--- snmplib/Makefile.in.orig	Fri Feb  4 22:15:42 2000
++++ snmplib/Makefile.in
+@@ -34,30 +34,34 @@
+ 	system.c vacm.c int64.c read_config.c 			\
+ 	snmp_debug.c tools.c  snmp_logging.c			\
  	snmpv3.c snmpusm.c lcd_time.c keytools.c		\
 -	scapi.c callback.c default_store.c snmp_alarm.c	mt_support.c
 +	scapi.c callback.c default_store.c snmp_alarm.c	mt_support.c \
 +	libwrap.c
  
-@@ -43,3 +44,4 @@
+ OBJS=	snmp_client.o mib.o parse.o snmp_api.o snmp.o 		\
+ 	snmp_auth.o asn1.o md5.o 				\
+ 	system.o vacm.o int64.o read_config.o 			\
+ 	snmp_debug.o tools.o  snmp_logging.o			\
  	snmpv3.o snmpusm.o lcd_time.o keytools.o		\
 -	scapi.o callback.o default_store.o snmp_alarm.o	mt_support.o
 +	scapi.o callback.o default_store.o snmp_alarm.o	mt_support.o \
 +	libwrap.o
  
-@@ -47,3 +49,3 @@
+ CFLAGS	 = @CFLAGS@ @SHLIB_CFLAGS@
  CPPFLAGS = -I. -I.. -I$(srcdir) -I$(srcdir)/.. @CPPFLAGS@
 -CC	 = @CC@ $(CPPFLAGS)
 +CC	 = $(LIBTOOL) @CC@ $(CPPFLAGS)
  
-@@ -51,5 +53,7 @@
+ all: $(TARG)
  
 -libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${OBJS}
 -	$(SHLIB_LD_CMD) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${OBJS}
 -	$(RANLIB) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
 +$(TARG): $(OBJS)
-+	$(CC) -o $@ $(OBJS:.o=.lo) -version-info 0:0 -rpath $(PREFIX)/lib
++	$(CC) -o $@ $(OBJS:.o=.lo) -version-info 0:0 -rpath $(PREFIX)/lib -lcrypto
 +#libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${OBJS}
 +#	$(SHLIB_LD_CMD) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${OBJS}
 +#	$(RANLIB) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
  
-@@ -59,3 +63,3 @@
+ installdirs:
+ 	@$(SHELL) $(srcdir)/../mkinstalldirs $(libdir) $(includedir)
+ 
  install:	$(TARG) installdirs
 -	@for i in $(TARG) ; do $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
 +	@for i in $(TARG) ; do $(LIBTOOL) $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
  	@for i in $(INSTALLHEADERS) ; do $(INSTALL) $(srcdir)/$$i $(includedir) ; echo "install:  installed $$i in $(includedir)" ; done
+ 	$(SHLIB_LDCONFIG_CMD)
+ 
