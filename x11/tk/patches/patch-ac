@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2001/05/24 02:58:30 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/07/29 07:54:57 tron Exp $
 
---- aclocal.m4.orig	Tue Aug  8 15:19:32 2000
-+++ aclocal.m4
+--- aclocal.m4.orig	Tue Aug  8 21:19:32 2000
++++ aclocal.m4	Sun Jul 29 09:43:02 2001
 @@ -580,6 +580,7 @@
  
      do64bit_ok=no
@@ -40,7 +40,27 @@ $NetBSD: patch-ac,v 1.1 2001/05/24 02:58:30 jlam Exp $
  		)
  	    ], [
  		SHLIB_CFLAGS=""
-@@ -1383,7 +1391,11 @@
+@@ -933,6 +941,9 @@
+ 	    DL_LIBS="-ldl"
+ 	    LDFLAGS=""
+ 	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	SunOS-5*)
+ 	    SHLIB_CFLAGS="-KPIC"
+@@ -972,6 +983,9 @@
+ 	    else
+ 		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
+ 	    fi
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	ULTRIX-4.*)
+ 	    SHLIB_CFLAGS="-G 0"
+@@ -1383,7 +1397,11 @@
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		AC_MSG_RESULT($i)
@@ -53,7 +73,7 @@ $NetBSD: patch-ac,v 1.1 2001/05/24 02:58:30 jlam Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -1392,7 +1404,11 @@
+@@ -1392,7 +1410,11 @@
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
