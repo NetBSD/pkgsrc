@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2287 2004/10/30 15:07:01 minskim Exp $
+$NetBSD: TODO,v 1.2288 2004/10/30 16:54:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -267,7 +267,6 @@ Suggested package updates
 	o bioperl-1.4
 	o bitchx-1.1
 	o blender-2.34
-	o bogofilter-0.92.8
 	o boson-0.10
 	o capc-calc-2.11.10.1
 	o cdrtools-2.01
