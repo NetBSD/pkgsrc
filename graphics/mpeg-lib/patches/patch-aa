@@ -1,8 +1,6 @@
---- wrapper.c.orig	Tue Oct 10 22:08:39 1995
-+++ wrapper.c	Sat Jun 27 00:58:27 1998
-@@ -52,6 +52,11 @@
- #include "dither.h"
- #include "globals.h"
+--- wrapper.c.orig	Tue Oct 10 14:08:39 1995
++++ wrapper.c	Sat Jun 20 00:48:55 1998
+@@ -54,2 +54,7 @@
  
 +#ifdef __NetBSD__
 +#include <stdlib.h>
@@ -10,5 +8,8 @@
 +#endif
 +
  #define BUF_LENGTH 80000
- 
- 
+@@ -327,3 +332,3 @@
+ ---------------------------------------------------------------------------- */
+-void SetMPEGOption (MPEGOptionEnum Option, int Value)
++void SetMPEGOption (MPEGOptionEnum Option, long Value)
+ {
