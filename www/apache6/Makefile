@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/10/17 07:47:52 martti Exp $
+# $NetBSD: Makefile,v 1.40 2001/10/17 19:27:27 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -27,7 +27,8 @@ COMMENT=		HTTP (Web) server with IPv6 support
 CONFLICTS=		apache-[0-9]* apache-*modssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
-HAS_CONFIGURE=		# defined
+USE_BUILDLINK_ONLY=	YES
+HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	${WRKSRC}/configure.v6
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most				\
@@ -87,11 +88,11 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
 .if (${OPSYS} == "SunOS")
-DEPENDS+=		db-2.7.7:../../databases/db
-LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib			\
-			-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
-CONFIGURE_ENV+=		INCLUDES="-I${LOCALBASE}/include/db2"
+LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
+CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_DIR}/include/db2"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
+BUILDLINK_DEPENDS.db=	db>=2.7.7
+.include "../../databases/db/buildlink.mk"
 .endif
 
 BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
@@ -158,4 +159,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../textproc/expat/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
