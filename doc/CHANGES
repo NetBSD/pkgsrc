@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3946 2003/12/03 23:25:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3947 2003/12/03 23:36:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4810,3 +4810,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added crack-attack-1.1.10 [xtraeme 2003-12-03]
 	Added fisg-0.2.0 [xtraeme 2003-12-03]
 	Added gpdf-0.111 [xtraeme 2003-12-03]
+	Added vba-1.6a [xtraeme 2003-12-03]
