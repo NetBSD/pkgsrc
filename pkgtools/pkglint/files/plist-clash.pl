@@ -1,6 +1,6 @@
-#!@PREFIX@/bin/perl
+#!@PERL@
 #
-# $NetBSD: plist-clash.pl,v 1.1 1998/08/07 22:13:44 tsarna Exp $
+# $NetBSD: plist-clash.pl,v 1.2 2004/01/10 22:31:51 wiz Exp $
 #
 # Scan all ports and look for filenames used by more than one port.
 #
