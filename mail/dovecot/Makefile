@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2005/01/23 10:00:12 jdolecek Exp $
+# $NetBSD: Makefile,v 1.33 2005/01/23 10:05:02 jdolecek Exp $
 
 DISTNAME=		dovecot-0.99.13
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
 
-MAINTAINER=		tom@replic8.net
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 
