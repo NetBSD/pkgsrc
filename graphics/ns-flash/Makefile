@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/31 02:35:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/09 19:40:18 fredb Exp $
 #
 
 PKGNAME=		ns-flash-4.0r12
@@ -25,7 +25,7 @@ MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.flash.com/
 
-RESTRICTED=             "Export-controlled, redistribution not permitted"
+RESTRICTED=             "Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -34,6 +34,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 CHECK_SHLIBS=		no
+CRYPTO=			yes
 
 WRKSRC=			${WRKDIR}/${WRKNAME}
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/09 19:40:23 fredb Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -11,12 +11,10 @@ HOMEPAGE=		http://rc5.distributed.net/
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386
 
-RESTRICTED=		"Crypto; export-controlled"
-NO_SRC_ON_FTP=	${RESTRICTED}
+CRYPTO=			yes
+NO_CONFIGURE=		yes
 
 WRKSRC=			${WRKDIR}/RC5
-
-NO_CONFIGURE=		yes
 
 # agc - this is commented out until I can test that it works.
 #post-patch:

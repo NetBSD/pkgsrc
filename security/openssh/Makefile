@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/09/05 09:43:02 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2000/09/09 19:40:21 fredb Exp $
 #
 
 DISTNAME=		openssh-2.2.0p1
@@ -18,6 +18,8 @@ HOMEPAGE=		http://www.openssh.com/
 
 BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+
+CRYPTO=			yes
 
 # Check for a usable installed version of OpenSSL.  Version must be greater
 # than 0.9.5a.  If a usable version isn't present, then use the pkgsrc
@@ -44,9 +46,6 @@ CONFLICTS=		ssh-[0-9]* ssh6-[0-9]*
 # retain the following line, for IPv6-ready pkgsrc webpage 
 BUILD_DEFS+=		USE_INET6
 BUILD_DEFS+=		SSH_CONF_DIR
-
-RESTRICTED=		"Crypto; export-controlled"
-NO_SRC_ON_FTP=	${RESTRICTED}
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL

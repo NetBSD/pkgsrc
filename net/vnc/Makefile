@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/08/28 09:14:50 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2000/09/09 19:40:20 fredb Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -12,16 +12,12 @@ DISTFILES=		vnc-3.3.3r1_unixsrc.tgz \
 MAINTAINER=	 	packages@netbsd.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 
-USE_PERL5=		# defined
-
-# Is this for real? The code was developed in the UK,
-# but the DES parts came from the USA in the first place.
-RESTRICTED=		Contains cryptographic software
+CRYPTO=			yes
+NO_INSTALL_MANPAGES=	yes
+USE_IMAKE=		yes
+USE_PERL5=		yes
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
-
-USE_IMAKE=		# defined
-NO_INSTALL_MANPAGES=	# defined
 
 ALL_TARGET=    		World
 
