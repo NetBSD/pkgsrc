@@ -1,0 +1,10 @@
+--- machdep/netbsd-1.1/__string.h.sma	Sun Mar 14 22:59:37 1999
++++ machdep/netbsd-1.1/__string.h	Sun Mar 14 23:00:12 1999
+@@ -14,7 +14,6 @@
+ char	*index __P((const char *, int));
+ char	*rindex __P((const char *, int));
+ char	*strdup __P((const char *));
+-void	 strmode __P((int, char *));
+ char	*strsep __P((char **, const char *));
+ __END_DECLS
+ #endif 
