@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4680 2004/02/04 22:20:59 abs Exp $
+$NetBSD: CHANGES,v 1.4681 2004/02/04 22:25:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -570,4 +570,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated buildtool-doc to 0.15 [jmmv 2004-02-04]
 	Updated rt-mysql to 2.0.15 [abs 2004-02-04]
 	Updated rt-pgsql to 2.0.15 [abs 2004-02-04]
-
+	Updated menu2wm to 0.2 [jmmv 2004-02-04]
