@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.4 2003/05/10 10:02:34 seb Exp $
+$NetBSD: distinfo,v 1.5 2003/08/12 19:08:55 seb Exp $
 
-SHA1 (ssh-3.2.2.tar.gz) = 19e8c9857d0fc14771c31223249eb56adb5ddf6b
-Size (ssh-3.2.2.tar.gz) = 2256690 bytes
-SHA1 (patch-aa) = 7781e4c7a567f6465829cdf9026920e45241bca5
-SHA1 (patch-ab) = 450267a0f18684f0b8f8ff611e290a8f478068ad
-SHA1 (patch-ac) = b87e967252b1eaafc6e6b7ee95d8e09550957bff
-SHA1 (patch-ad) = b6944222c0b84d5f906ad019b5260fb19ee299d9
-SHA1 (patch-ae) = 79288d501031c56fd155f966c905de2e4f5ffc35
-SHA1 (patch-af) = 640bb5f92dc6db36e6ac4337e085e3a9a525c755
-SHA1 (patch-ag) = 5990115dc53a9278f171158df1dcdd4754080e90
-SHA1 (patch-ah) = 5a4314cf70463638d18599dcb3fddbbc19d52b2a
+SHA1 (ssh-3.2.5.tar.gz) = 390023a395a6b4cfd42bf0e37b472f0ca44791ce
+Size (ssh-3.2.5.tar.gz) = 2258425 bytes
+SHA1 (patch-aa) = 34353e23d81916202216dc401e99f17b08f3d6fb
+SHA1 (patch-ab) = 314e2e4165fb1d429297f235c9712ddc0d924865
+SHA1 (patch-ac) = d5b564f88105cc2ac58577d37a1b336ce78c1393
+SHA1 (patch-ad) = dcaaf5f545bd4650784dc6fd0dbcaae48cf3f9d3
+SHA1 (patch-ae) = 0d1f358bd97290118002cc0fc489cbf7e334e681
+SHA1 (patch-af) = e7c956b858d02dfaf20e1fe1bfc36322d9eb6d67
+SHA1 (patch-ag) = 0f7a448875262e2536255ace27cf1a8f0c2a0517

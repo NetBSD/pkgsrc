@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2003/05/10 10:02:35 seb Exp $
+$NetBSD: patch-ab,v 1.3 2003/08/12 19:08:56 seb Exp $
 
---- apps/ssh/Makefile.in.orig	2002-10-29 09:27:59.000000000 +0000
-+++ apps/ssh/Makefile.in
-@@ -124,7 +124,8 @@ WINCONF_OPTIONS = maintainer=sjl@ssh.com
+--- apps/ssh/Makefile.am.orig	2003-06-30 12:22:11.000000000 +0000
++++ apps/ssh/Makefile.am
+@@ -18,7 +18,8 @@ WINCONF_OPTIONS = maintainer=sjl@ssh.com
  etcdir = @ETCDIR@
  known_hosts_dir = $(etcdir)/knownhosts
  host_keys_dir = $(etcdir)/hostkeys
@@ -12,25 +12,12 @@ $NetBSD: patch-ab,v 1.2 2003/05/10 10:02:35 seb Exp $
  STATIC_FLAG = @STATIC_FLAG@
  
  #
-@@ -455,6 +456,8 @@ SSH_DEFS = -DETCDIR=\"$(etcdir)\" -DSSH_
- COMPILE = $(CC) $(KERBEROS_INCS) $(INCLUDES) $(SSH_DEFS) $(DEFS) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
+@@ -569,13 +570,13 @@ COMPILE = $(CC) $(KERBEROS_INCS) $(INCLU
  #
  LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS)
+ #
++INSTALL_DATA_DIR=	$(BSD_INSTALL_DATA_DIR)
 +#
-+INSTALL_DATA_DIR = $(BSD_INSTALL_DATA_DIR)
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../../sshconf.h
- CONFIG_CLEAN_FILES = 
-@@ -892,7 +895,7 @@ TAGS: tags-recursive $(HEADERS) $(SOURCE
- 	  awk '    { files[$$0] = 1; } \
- 	       END { for (i in files) print i; }'`; \
- 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
--	  || (cd $(srcdir) && etags -o $$here/TAGS $(ETAGS_ARGS) $$tags  $$unique $(LISP))
-+	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
- 
- mostlyclean-tags:
- 
-@@ -1026,10 +1029,8 @@ maintainer-clean-generic clean mostlycle
  includes:
  
  make-install-dirs:
@@ -43,7 +30,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/10 10:02:35 seb Exp $
  
  generate-host-key:
  	-@if test -f $(DESTDIR)$(etcdir)/hostkey; \
-@@ -1040,36 +1041,20 @@ generate-host-key:
+@@ -586,36 +587,20 @@ generate-host-key:
  	  fi
  
  install-symlinks:
@@ -84,7 +71,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/10 10:02:35 seb Exp $
  	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh2.1 ssh.1)
  	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-add2.1 ssh-add.1)
  	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-agent2.1 ssh-agent.1)
-@@ -1077,7 +1062,6 @@ install-symlinks:
+@@ -623,7 +608,6 @@ install-symlinks:
  	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) scp2.1 scp.1)
  	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) sftp2.1 sftp.1)
  	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) ssh-probe2.1 ssh-probe.1)
@@ -92,7 +79,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/10 10:02:35 seb Exp $
  	(cd $(DESTDIR)$(mandir)/man8 && $(LN_S) sshd2.8 sshd.8)
  
  clean-up-old:
-@@ -1096,23 +1080,13 @@ install-exec-hook:
+@@ -642,23 +626,13 @@ install-exec-hook:
  	-chown root $(DESTDIR)$(bindir)/ssh-signer2
  	-chmod $(SSH_SIGNER_INSTALL_MODE) $(DESTDIR)$(bindir)/ssh-signer2
  
@@ -121,7 +108,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/10 10:02:35 seb Exp $
  	 echo Updating $(DESTDIR)$(subconfig_dir)/host_ext.example ;
  	 $(INSTALL_DATA) $(srcdir)/subconfig/host_ext.example \
                           $(DESTDIR)$(subconfig_dir)/host_ext.example ;
-@@ -1125,11 +1099,9 @@ install-data-hook: make-install-dirs gen
+@@ -671,8 +645,6 @@ install-data-hook: make-install-dirs gen
  	 echo Updating $(DESTDIR)$(subconfig_dir)/user.example ;
  	 $(INSTALL_DATA) $(srcdir)/subconfig/user.example \
                           $(DESTDIR)$(subconfig_dir)/user.example ;
@@ -132,6 +119,3 @@ $NetBSD: patch-ab,v 1.2 2003/05/10 10:02:35 seb Exp $
 -                         $(DESTDIR)$(etcdir)/ssh_dummy_shell.out ; \
 -	fi
 +                         $(DESTDIR)$(egdir)/ssh_dummy_shell.out ;
- 
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.

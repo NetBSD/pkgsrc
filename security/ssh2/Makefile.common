@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2003/07/24 20:59:04 jwise Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/08/12 19:08:55 seb Exp $
 #
 
-DISTNAME=	ssh-3.2.2
+DISTNAME=	ssh-3.2.5
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.ssh.com/pub/ssh/
 
@@ -37,8 +37,16 @@ PLIST_SUBST=	X11_SUPPORT='@comment '
 LICENSE=		no-commercial-use
 .endif
 
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc64"
+# Later we may want to put an upper version bound on OS_VERSION or on
+# gcc version for this.
+CONFIGURE_ARGS+=	--disable-compiler-optimizations
+.endif
+
 SSH_PID_DIR=		/var/run	# default directory for PID files
-SSH_PID_DIR.SunOS=      /etc		# Solaris doesn't have a /var/run
+.if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.[012345678])
+SSH_PID_DIR.SunOS=      /etc		# Older Solaris doesn't have a /var/run
+.endif
 
 .if defined(SSH_PID_DIR.${OPSYS})
 SSH_PID_DIR=		${SSH_PID_DIR.${OPSYS}}
