@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.3 2000/03/17 15:54:53 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2000/03/19 03:11:13 jlam Exp $
 
 --- pstree.c.orig	Sat May  1 15:40:56 1999
-+++ pstree.c	Thu Mar 16 23:22:45 2000
++++ pstree.c	Sat Mar 18 22:06:19 2000
 @@ -2,6 +2,9 @@
  
  /* Copyright 1993-1999 Werner Almesberger. See file COPYING for details. */
@@ -102,16 +102,16 @@ $NetBSD: patch-ad,v 1.3 2000/03/17 15:54:53 jlam Exp $
  		  &ppid) == 4) {
 +#endif
 +#if defined(BSD_44_PROC) && !defined(BSD_PROC_CMDLINE)
-+		    add_proc(comm,pid,ppid,st,st_uid,NULL,0);
++		    add_proc(comm,pid,ppid,st.st_uid,NULL,0);
 +#else
  		    if (!print_args) add_proc(comm,pid,ppid,st.st_uid,NULL,0);
  		    else {
  			sprintf(path,"%s/%d/cmdline",PROC_BASE,pid);
-@@ -426,6 +455,7 @@
- 			(void) close(fd);
+@@ -427,6 +456,7 @@
  			if (size) buffer[size++] = 0;
  			add_proc(comm,pid,ppid,st.st_uid,buffer,size);
-+#endif
  		    }
++#endif
  		}
  		(void) fclose(file);
+ 	    }
