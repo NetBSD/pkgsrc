@@ -2,7 +2,7 @@ The delta generator portion of this program is a delta algorithm which
 searches for substring matches between the files and then outputs
 instructions to reconstruct the new file from the old file.  It produces a
 set of copy/insert instructions that tell how to reconstruct the file as a
-sequence of copies from the FROM file and inserts from the delta itself. 
+sequence of copies from the FROM file and inserts from the delta itself.
 In this regard, the program is much closer to a compression program than
 to a diff program.  However, the delta is not "compressed", in that the
 delta's entropy H(P) will be very similar to the entropy of the portions

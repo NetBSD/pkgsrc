@@ -7,4 +7,4 @@ system.
   Distributed operation is supported, allowing activation of objects on a
 network of computers being used in a GNOME desktop.  The flexibility of OAF
 enables it to be used outside of GNOME programs, allowing non-GNOME CORBA
-applications to be utilized alongside GNOME applications. 
+applications to be utilized alongside GNOME applications.

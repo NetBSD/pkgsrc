@@ -1,4 +1,4 @@
-This package for GAP 4 provides routines for 
+This package for GAP 4 provides routines for
 integer factorization, in particular:
 
  - Pollard's p-1

@@ -5,4 +5,4 @@ User's IP addresses are added to the map immediately after they have
 authenticated to the POP or IMAP server. By default, map entries expire after
 30 minutes, but can be renewed by additional authentication. Periodically
 checking mail on a POP server is sufficient to do this. The POP and SMTP
-servers can be on different hosts. 
+servers can be on different hosts.

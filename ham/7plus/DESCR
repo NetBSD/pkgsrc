@@ -1,4 +1,4 @@
-7plus is an uuencoder-like file coder for use in Amateur Packet Radio 
+7plus is an uuencoder-like file coder for use in Amateur Packet Radio
 BBS S&F of binary data files. The Packet Radio protocol (AX.25) utilizes
 8 bits for data transfer whereas most standard terminal programs only
 use a 7 bits alogarithm. The result is that only 87.5% of the available

@@ -7,7 +7,7 @@ perl and designed for flexibility, it should run on any OS with a
 TCP/IP stack and a version of perl that includes Socket.pm and
 IO::Socket.pm. It also should be able to talk to any IMAP server,
 even those that have, um, proprietary features (assuming that the
-programmer knows what those features are). 
+programmer knows what those features are).
 
   To date, the test suite runs successfully with the following IMAP
 servers:

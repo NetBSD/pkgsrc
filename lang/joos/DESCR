@@ -1,4 +1,4 @@
-Joos is an acronym for Java's Object-Oriented Subset. JOOS is a 
+Joos is an acronym for Java's Object-Oriented Subset. JOOS is a
 proper subset of Java, defined as follows:
   * its context-free syntax is restricted to the following grammar;
   * subclassing must not change the signature of a method;
@@ -8,12 +8,12 @@ proper subset of Java, defined as follows:
     subclasses; and
   * every path through a non-void method must return a value.
 
-In addition, JOOS defines a concept of extern classes, which provide 
-a convenient interface to the Java libraries without requiring the 
+In addition, JOOS defines a concept of extern classes, which provide
+a convenient interface to the Java libraries without requiring the
 compiler to parse Java class files.
 
-It defines a class name and some method signatures, along with a file 
-name that is guaranteed to provide the implementation. The JOOS compiler 
+It defines a class name and some method signatures, along with a file
+name that is guaranteed to provide the implementation. The JOOS compiler
 will implicitly trust this specification. If it is incorrect,
 then the compiled JOOS class file may fail at class loading time.
 

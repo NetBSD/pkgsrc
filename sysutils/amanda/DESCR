@@ -1,5 +1,5 @@
 Amanda is a backup system designed to archive many computers on a network to a
-single large-capacity tape drive.  
+single large-capacity tape drive. 
 
 This package does not contain anything by itself -- it is a
 "meta-package" that depends on the amanda-client, amanda-server,

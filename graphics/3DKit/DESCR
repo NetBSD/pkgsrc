@@ -7,7 +7,7 @@ the Cocoa API.  It is truly a multiplatform graphics API!
 
   The GNU 3DKit's main purpose is to provide an elegant foundation commonly
 required to write 3D applications. The 3DKit uses OpenGL as backend.  The
-kit consists of multiple libraries, all written in Objective-C: the 
+kit consists of multiple libraries, all written in Objective-C: the
 GeometryKit, the RenderKit, the SDLKit, the GlutKit, and the GLXKit.
 
 The GNU 3DKit currently provides the following features:
@@ -21,4 +21,4 @@ The GNU 3DKit currently provides the following features:
     * support for vertex arrays, display lists etc.
     * transparent bounding volume handling (spheres and AABB)
     * direct support for GLX, SDL and glut
-    * optimised linear algebra and some physics code 
+    * optimised linear algebra and some physics code

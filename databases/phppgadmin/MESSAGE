@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/09/18 16:11:18 grant Exp $
+$NetBSD: MESSAGE,v 1.4 2003/05/06 17:40:46 jmmv Exp $
 
-Copy required files from ${PREFIX}/share/phppgadmin to your web 
-space. Do not edit "config.inc.php-dist", copy it to "config.inc.php" and 
-configure it for your needs. Remember that PHP should be configured to 
+Copy required files from ${PREFIX}/share/phppgadmin to your web
+space. Do not edit "config.inc.php-dist", copy it to "config.inc.php" and
+configure it for your needs. Remember that PHP should be configured to
 have "magic_quotes=on".
 
 You may want to set the following variables in config.inc.php:

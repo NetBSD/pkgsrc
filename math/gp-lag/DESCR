@@ -1,6 +1,6 @@
 This GAP package contains a variety of functions for working with Lie
 algebras obtained from associative algebras by using the "bracket"
-operation ab-ba. 
+operation ab-ba.
 
 In case the associative algebra has been constructed using the
 GroupRing function, the package uses fast methods that take advantage

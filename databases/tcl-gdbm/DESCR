@@ -1,6 +1,6 @@
 This directory contains the source of tclgdbm, a dynamically loaded
 extension for accessing GNU gdbm files from tcl/tk. GNU gdbm files
-provide persistent mappings from arbitrary keys to values. tclgdbm 
+provide persistent mappings from arbitrary keys to values. tclgdbm
 uses these features to provide mappings from (short) key
 strings to (larger) data strings.
 
