@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/01/22 10:53:49 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/22 12:35:26 jdolecek Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
 PKGREVISION=		3
@@ -29,6 +29,11 @@ RPMFILES=		atk-1.4.1-124.${SUSE_ARCH}.rpm \
 			glib2-2.2.3-117.${SUSE_ARCH}.rpm \
 			gtk2-2.2.4-125.4.${SUSE_ARCH}.rpm \
 			pango-1.2.5-170.${SUSE_ARCH}.rpm
+
+# Initialize gtk/pango modules.
+FILES_SUBST+=		EMULDIR=${EMULDIR}
+PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR}
+INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
