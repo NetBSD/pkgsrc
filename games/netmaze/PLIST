@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:54:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/26 04:07:48 jschauma Exp $
 bin/betterbot
 bin/dummy
 bin/follower
 bin/netmaze
 bin/netserv
-man/cat6/betterbot.0
-man/cat6/dummy.0
-man/cat6/follower.0
-man/cat6/netmaze.0
-man/cat6/netserv.0
+${IMAKE_MAN_SOURCE_PATH}6/betterbot.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_SOURCE_PATH}6/dummy.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_SOURCE_PATH}6/follower.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_SOURCE_PATH}6/netmaze.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_SOURCE_PATH}6/netserv.${IMAKE_MANNEWSUFFIX}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/12/07 02:38:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/26 04:01:10 jschauma Exp $
 
 DISTNAME=	mkfontscale-20020524
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.pps.jussieu.fr/~jch/software/files/
 
