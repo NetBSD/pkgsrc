@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/08/16 07:03:21 agc Exp $
+$NetBSD: distinfo,v 1.4 2001/10/12 10:51:51 simonb Exp $
 
-SHA1 (dictd-1.4.9.tar.gz) = 87a268b5725d70073cf02032a9d96f21cb405f5c
-Size (dictd-1.4.9.tar.gz) = 517459 bytes
+SHA1 (dictd-1.5.5.tar.gz) = 542514feaf9a8e0c1050a2faba1ffee3b4150ee0
+Size (dictd-1.5.5.tar.gz) = 531110 bytes
 SHA1 (dict-gazetteer-1.2-pre.tar.gz) = bca7f242a0fac591fd8e271faf0b90e1fe59d106
 Size (dict-gazetteer-1.2-pre.tar.gz) = 2209944 bytes
 SHA1 (dict-misc-1.5-pre.tar.gz) = 169a860058bb6c262f70ca107c77eda5a6001daa
@@ -10,14 +10,14 @@ SHA1 (dict-web1913-1.4-pre.tar.gz) = 2f2a0103d03b91d1df5893339daf86cf3f881709
 Size (dict-web1913-1.4-pre.tar.gz) = 13147422 bytes
 SHA1 (dict-wn-1.5-pre.tar.gz) = 9f8ee64792e4a6a3700f3093ef98f8467c89539d
 Size (dict-wn-1.5-pre.tar.gz) = 8464107 bytes
-SHA1 (patch-aa) = 53ec142b9151b19e2820d5e1bf5093bb53be0b48
-SHA1 (patch-ab) = 2f7cbc15c62a8925d2e662a756372c935a6680a7
-SHA1 (patch-ac) = c3dcc9878875f28764db118460e2fd5fa9273f2f
+SHA1 (patch-aa) = 79bb027b5e0c72dd30e885245c4d9c5a7c11d794
+SHA1 (patch-ab) = eaf3a1899a5ad68461ac32ae4ce0deea494b04c4
+SHA1 (patch-ac) = 997e44984a0e7aa55cc757ae0f9b8a89993b1f1d
 SHA1 (patch-ad) = 75d08ce1778898edcd52b4b94c974aba54f769a7
-SHA1 (patch-ae) = 666be1195f6c11b620f14c9e91be5db377be6022
+SHA1 (patch-ae) = 1b161f8c52a6029f0af2ddb824fc23ee5f867cff
 SHA1 (patch-af) = 9858bfc0cbed9c32d6b4e15ddc468a584e4916e9
 SHA1 (patch-ag) = 4473d472bddc34c5d5be2d6be6a0cee015717a79
-SHA1 (patch-ah) = 7952316967e8612d340a6a2b73e88d2a9035d6d7
+SHA1 (patch-ah) = d3453553e15858054bce4943a0316d485938806a
 SHA1 (patch-ai) = 21b2c9ace814e005139c64c4b6890e8b7e249f29
 SHA1 (patch-aj) = 76527be1d4ff89aeec72606d9575a99e6a8e2d3b
 SHA1 (patch-ak) = 4167c9007ed7b31ff9a29b368d82154bc95893cf
