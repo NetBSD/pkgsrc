@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2002/02/28 17:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2002/04/02 11:52:22 uebayasi Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -57,6 +57,7 @@ SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-jadetex
 SUBDIR+=	transfig
+SUBDIR+=	ttftot42
 SUBDIR+=	xpdf
 SUBDIR+=	xpp
 
