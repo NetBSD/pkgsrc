@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/27 18:26:54 nra Exp $
+bin/xmailwatcher
+share/xmailwatcher/xmailwatcher.1.html
+@dirrm share/xmailwatcher
