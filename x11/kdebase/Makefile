@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 1999/12/06 20:44:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.60 2000/02/01 16:12:36 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -15,6 +15,7 @@ HOMEPAGE=       http://www.kde.org/
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
