@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/15 12:32:33 veego Exp $
+# $NetBSD: Makefile,v 1.17 2000/06/15 12:55:07 kleink Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -52,7 +52,7 @@ MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
-DEPENDS+=	openldap-1.2.7p1:../../databases/openldap
+DEPENDS+=	openldap-1.2.*:../../databases/openldap
 
 MAKE_ENV+=	LDAP_CONF="-DLDAPMAP"			\
 		LDAP_ENVDEF="-I${LOCALBASE}/include"	\
