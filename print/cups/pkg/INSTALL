@@ -1,13 +1,24 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2000/12/07 20:33:06 jlam Exp $
+# $NetBSD: INSTALL,v 1.4 2000/12/09 22:18:25 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
-USER=@CUPS_USER@
-GROUP=@CUPS_GROUP@
-USERDIR=@USERDIR@
+USER="@CUPS_USER@"
+GROUP="@CUPS_GROUP@"
+
+ADDUSER="@ADDUSER@"
+ADDGROUP="@ADDGROUP@"
+CAT="@CAT@"
+CHGRP="@CHGRP@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+CP="@CP@"
+GREP="@GREP@"
+MKDIR="@MKDIR@"
+RM="@RM@"
+TOUCH="@TOUCH@"
 
 LOGDIR=/var/log/cups
 REQUESTDIR=/var/spool/cups
@@ -17,25 +28,29 @@ CONFFILES="classes.conf client.conf cupsd.conf mime.convs mime.types printers.co
 
 case ${STAGE} in
 PRE-INSTALL)
+	# Group... the default's shipped with NetBSD
 	# We need to check that ${GROUP} exists before adding the user.
-        #
-	if ${USERDIR}/group info -e ${GROUP}
+	# Do it with chgrp to be able to use NIS.
+	#
+	${TOUCH} "/tmp/grouptest.$$"
+	${CHGRP} ${GROUP} "/tmp/grouptest.$$" >/dev/null 2>&1
+	if [ $? -eq 0 ]
 	then
 		echo "Group '${GROUP}' already exists...proceeding."
 	else
 		echo "Creating '${GROUP}' group..."
-		${USERDIR}/group add ${GROUP}
+		${ADDGROUP} ${GROUP}
 		echo "Done."
 	fi
+	${RM} -f "/tmp/grouptest.$$"
 
-	# use finger to be able to use NIS, ...
+	# Use `finger' to be able to use NIS.
 	#
-	if finger ${USER} 2>&1 | grep >/dev/null "no such user"
+	finger ${USER} 2>&1 | ${GREP} -q "no such user"
+	if [ $? -eq 0 ]
 	then
 		echo "Creating '${USER}' user..."
-		${USERDIR}/user add \
-			-c "CUPS pseudo-user" \
-			-g ${GROUP} -s /sbin/nologin ${USER}
+		${ADDUSER} -c "Cyrus User" -g ${GROUP} -s /bin/sh ${USER}
 		echo "Done."
 	else
 		echo "User '${USER}' already exists...proceeding."
@@ -43,16 +58,16 @@ PRE-INSTALL)
 	;;
 
 POST-INSTALL)
-	mkdir -p ${CONFDIR}
-	mkdir -p ${CONFDIR}/certs
-	mkdir -p ${CONFDIR}/interfaces
-	mkdir -p ${CONFDIR}/ppd
-        mkdir -p ${LOGDIR}
-        mkdir -p ${REQUESTDIR}
-	chown ${USER}:${GROUP} ${REQUESTDIR}/tmp
-	mkdir -p ${REQUESTDIR}/tmp
-	chmod u+rwx,go-rwx,+t ${REQUESTDIR}/tmp
-	chown ${USER}:${GROUP} ${REQUESTDIR}/tmp
+	${MKDIR} ${CONFDIR}
+	${MKDIR} ${CONFDIR}/certs
+	${MKDIR} ${CONFDIR}/interfaces
+	${MKDIR} ${CONFDIR}/ppd
+        ${MKDIR} ${LOGDIR}
+        ${MKDIR} ${REQUESTDIR}
+	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}/tmp
+	${MKDIR} ${REQUESTDIR}/tmp
+	${CHMOD} u+rwx,go-rwx,+t ${REQUESTDIR}/tmp
+	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}/tmp
 
 	echo "Installing configuration files:"
 	for file in ${CONFFILES}
@@ -64,11 +79,11 @@ POST-INSTALL)
 			echo "    ${FILE} already exists"
 		else
 			echo "    ${FILE}"
-			cp ${SAMPLEFILE} ${FILE}
-			chmod 644 ${FILE}
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHMOD} 644 ${FILE}
 		fi
 	done
-	cat << EOF
+	${CAT} << EOF
 ===========================================================================
 Some files you might need to customize include the following:
 
@@ -78,7 +93,7 @@ EOF
 		FILE=${CONFDIR}/${file}
 		echo "	${FILE}"
 	done
-	cat << EOF
+	${CAT} << EOF
 ===========================================================================
 EOF
 	;;
