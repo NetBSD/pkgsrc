@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.19 1998/07/21 22:12:24 tv Exp $
+# $NetBSD: Makefile,v 1.20 1998/07/22 02:45:46 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
-DISTNAME=       pine4.00
-PKGNAME=        pine-4.00
+DISTNAME=       pine4.02
+PKGNAME=        pine-4.02
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
 MAINTAINER=	packages@netbsd.org
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
-DEPENDS=	pico-3.0:../../editors/pico
+DEPENDS=	pico-3.2:../../editors/pico
 
-CONFLICTS=	pine-3.96
+CONFLICTS=	pine-3.96 pine-4.00
 
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
