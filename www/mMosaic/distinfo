@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:33 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/03/06 16:56:17 fredb Exp $
 
 SHA1 (mMosaic-3.7.2.tar.gz) = f26d4fd115a0fb7fc09947506b59e1a3790b6ac7
 RMD160 (mMosaic-3.7.2.tar.gz) = 9c7f2e2f00beaef474e53e25a91aeb604584dd06
 Size (mMosaic-3.7.2.tar.gz) = 507612 bytes
-SHA1 (patch-aa) = 028e9836c6994ab58e9d9e425d74022dd0c1adec
+SHA1 (patch-aa) = c18e1cc90ea3a3843c514944c8c597d660555387
 SHA1 (patch-ab) = 64cb25fda5e4100251072184dec9f50e8de4be97
 SHA1 (patch-ac) = 98479482a48a19b3f64ce4ed7a33cec04c90d070
 SHA1 (patch-ad) = d0da529ed866a9295010419882a004997bba17a7
