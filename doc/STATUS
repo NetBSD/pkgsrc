@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.9 2003/04/25 13:54:57 jschauma Exp $
+# $NetBSD: STATUS,v 1.10 2003/05/19 19:47:10 jschauma Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -63,7 +63,7 @@ net/wget                   Y        Y               Y
 news/slrn                  Y        Y        Y      Y        Y
 print/gv                                            Y
 print/teTeX                                         Y
-print/xpdf                                         *[19860]
+print/xpdf                                          Y
 security/openssh                             Y      Y                  Y
 security/openssl           Y                 Y      Y        N         Y
 shells/tcsh                N        Y        Y      Y        Y         Y
@@ -72,12 +72,11 @@ www/apache                 Y        Y        Y      Y        Y         Y
 www/links                  Y        Y        Y      Y                  Y
 www/lynx                   Y        Y               Y                  Y
 ---------------------------------------------------------------------------
-'supported'
+'supported'                                         Y
 ---------------------------------------------------------------------------
 notes:
 
 OpenBSD/ncurses: does not install a shared libncurses++ library.
-Linux/xpdf: depends on openmotif, see PR
 
 
 
