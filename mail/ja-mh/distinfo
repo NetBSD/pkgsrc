@@ -1,24 +1,18 @@
-$NetBSD: distinfo,v 1.3 2004/11/21 18:52:36 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2004/11/29 05:09:42 taca Exp $
 
-SHA1 (mh-6.8.4-JP-3.03.tar.gz) = e533b22c23e79e8cba50ed2fe391f0f3b3ca332a
-Size (mh-6.8.4-JP-3.03.tar.gz) = 1567712 bytes
-SHA1 (patch-aa) = d38c2340f53ddfafb63857a7c6cbf95f8ba91cbf
-SHA1 (patch-ab) = 6ba17b9bb6844bbf5fc3d4edf268b7d671427438
-SHA1 (patch-ac) = aea3d9bdfb5faa42ec55af92c5b1d5cd74f3d42d
-SHA1 (patch-ad) = 5d1e3f54abbb114bf5d3c367de1b186b8dd39317
-SHA1 (patch-ae) = 183afc6c35c04912986bb3826d9d443b0aaacb7f
-SHA1 (patch-af) = 0f9dd68449f56039555253a8e1ba9a2923c5ef4e
-SHA1 (patch-ag) = 5e68e06be4ff523335900b2dd01defbe84cd725c
-SHA1 (patch-ah) = 3cabf8ae640fbce889dda69521453dc0a9e621f5
-SHA1 (patch-ai) = c9da909f7783f6600a21ac6f035b8df732275539
-SHA1 (patch-aj) = 418b6e60541558f2702393b89df76ad9edf1774f
-SHA1 (patch-ak) = 7f8442f265111a4b87393b3a64fd8692c23b379d
-SHA1 (patch-al) = 6f37a26a389689ca3b82900cf15ceea5b0f291ce
-SHA1 (patch-am) = 3cea349883c6e73d95844a44586d32c0046eb94c
-SHA1 (patch-an) = c879444e422531fc2c3d2a6bd4c52c9680239a5f
-SHA1 (patch-ao) = 4ad1798a6d4cdc2c977dd5186e9a111a4585df94
-SHA1 (patch-ap) = bde44e5f75ee1e124b5fff9679823e1ee2c313f0
-SHA1 (patch-aq) = e9399fe4a26005be428960666ac7ac437789aaa5
-SHA1 (patch-ar) = 3f9a0e510c9649ac07f07ef86f4a139bba1a5055
-SHA1 (patch-as) = 287118b416c42d4ec340c4548242d4e15afa6748
+SHA1 (mh-6.8.4-JP-3.05.tar.gz) = cb531f80be4326cd56d33d6fa9efba4d2d63d0ce
+Size (mh-6.8.4-JP-3.05.tar.gz) = 1574689 bytes
+SHA1 (mh-6.8.4-JP-3.05-20030114.patch.gz) = 6d4e6535465e5ffd5b9b5eef8d96cfcb1f947470
+Size (mh-6.8.4-JP-3.05-20030114.patch.gz) = 313 bytes
+SHA1 (mh-6.8.4-JP-3.05-20030326.patch.gz) = b360d5baf5831c21bb1748395df04fa88fc25523
+Size (mh-6.8.4-JP-3.05-20030326.patch.gz) = 273 bytes
+SHA1 (mh-6.8.4-JP-3.05-20031023.patch.gz) = ae59493092d33ae294994017b913aa064dcb66f2
+Size (mh-6.8.4-JP-3.05-20031023.patch.gz) = 307 bytes
+SHA1 (mh-6.8.4-JP-3.05-20031106.patch.gz) = daaf41afb5e83143dceb5ae6444e26f1f9ca5bf8
+Size (mh-6.8.4-JP-3.05-20031106.patch.gz) = 311 bytes
+SHA1 (patch-al) = 59bd51d6b67beb0492b3a3d3acc05242474bac7b
+SHA1 (patch-as) = 786c7bf7988806023d9fd5a2ced5a9d31550ff54
 SHA1 (patch-at) = 5594d3beac4e911cfa3ff277d4ae034a6dccdccb
+SHA1 (patch-au) = 3788f6ca9362a97323cc6bf0f942f2ba949e1c46
+SHA1 (patch-av) = e3e33d7e2ab065028244d60734e3dba4fd950b12
+SHA1 (patch-aw) = 8cfee271b0549e6886e29ae74e4e547dccc20230
