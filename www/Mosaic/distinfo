@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:30 skrll Exp $
 
-MD5 (Mosaic-src-2.7b5.tar.gz) = 3060c79a063948bcc2fa867c334702d2
+SHA1 (Mosaic-src-2.7b5.tar.gz) = 69705268cf8139ac51f394747e681c1bd8296fee
+Size (Mosaic-src-2.7b5.tar.gz) = 980929 bytes
 SHA1 (patch-aa) = 487e79e9756942d9ca67738c1676753e6d92b202
 SHA1 (patch-ab) = 3d5f8094fa381ac1bbe935add527a6257e2ee5bb
 SHA1 (patch-ac) = 4de6abbea35325b6a179f0633e2ddee25a9726e4

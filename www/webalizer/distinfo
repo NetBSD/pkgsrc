@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:47 skrll Exp $
 
-MD5 (webalizer-2.01-06-src.tar.bz2) = 9e52cd91de25c87e29b105e5b23dcdfc
+SHA1 (webalizer-2.01-06-src.tar.bz2) = a616cd98b3f073a1d8d759fa9146de052eb41c2f
+Size (webalizer-2.01-06-src.tar.bz2) = 211840 bytes
 SHA1 (patch-ab) = 0b631eb754163e5fb6a74a619c0272e111959003
 SHA1 (patch-ac) = 8ee220c220237d20f947bc45d052f1ca3403dc2d
 SHA1 (patch-ad) = 1ba45e09ee6058429105b0886f84cdeb47777fa7

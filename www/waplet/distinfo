@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:47 skrll Exp $
 
-MD5 (waplet.tgz) = 1a62bd4fddcb21519d63828c392c64f7
+SHA1 (waplet.tgz) = d022fbb18b47044c30f0c244a61203d403a0fb15
+Size (waplet.tgz) = 30905 bytes
