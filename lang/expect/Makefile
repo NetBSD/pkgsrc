@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/06/22 12:44:30 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/15 11:46:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -25,8 +25,5 @@ post-extract:
 
 test:
 	@(cd ${WRKSRC}; make test)
-
-post-install:
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
