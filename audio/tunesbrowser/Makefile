@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:10 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/20 11:09:47 jmmv Exp $
 #
 
-DISTNAME=		tunesbrowser-0.1.5
-PKGREVISION=	1
+DISTNAME=		tunesbrowser-0.2.0
 CATEGORIES=		audio
 MASTER_SITES=		http://crazney.net/programs/itunes/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -16,14 +15,17 @@ USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-DEPENDS+=		mad>=0.15.0b:../../audio/mad
+BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.3.0
 
-.include "../../audio/gst-plugins-artsd/buildlink3.mk"
-.include "../../audio/gst-plugins-esound/buildlink3.mk"
 .include "../../audio/gst-plugins-mad/buildlink3.mk"
+# XXX Enable this dependency after the package is created (couldn't be done at
+# XXX the moment because we were preparing the pkgsrc-2005Q1 branch).
+#.include "../../audio/gst-plugins-spider/buildlink3.mk"
 .include "../../audio/libopendaap/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gst-plugins-gnomevfs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
