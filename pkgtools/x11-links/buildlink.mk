@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2002/04/14 19:05:56 veego Exp $
+# $NetBSD: buildlink.mk,v 1.10 2002/06/26 05:46:23 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -1544,6 +1544,18 @@ BUILDLINK_FILES.X11+=	lib/libxview.so.3
 
 BUILDLINK_TARGETS.X11=	X11-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.X11}
+
+_REQUIRE_BUILTIN_MESALIB=	YES
+.include "../../graphics/MesaLib/buildlink.mk"
+
+_REQUIRE_BUILTIN_GLU=		YES
+.include "../../graphics/glu/buildlink.mk"
+
+_REQUIRE_BUILTIN_FREETYPE2=	YES
+.include "../../graphics/freetype2/buildlink.mk"
+
+_REQUIRE_BUILTIN_XPM=		YES
+.include "../../graphics/xpm/buildlink.mk"
 
 pre-configure: ${BUILDLINK_TARGETS.X11}
 X11-buildlink: _BUILDLINK_USE
