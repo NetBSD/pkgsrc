@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/05/24 19:01:19 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:31 tsarna Exp $
 # $FreeBSD Id: Makefile,v 1.36 1998/03/20 13:58:54 peter Exp
 #
 
@@ -12,6 +12,7 @@ MASTER_SITES=  \
 EXTRACT_SUFX=	-src.tar.gz
 
 MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://squid.nlanr.net/Squid/
 
 GNU_CONFIGURE=	yes
 # Follow the apache port's lead...

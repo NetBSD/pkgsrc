@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/08/15 01:37:19 kim Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:07 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
 			ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://language.perl.com/index.html
 
 OPSYS!=			uname -s
 LOPSYS!= 		echo ${OPSYS}|tr [A-Z] [a-z]

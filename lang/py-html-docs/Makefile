@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/07 19:31:56 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:17:08 tsarna Exp $
 #
 
 DISTNAME=	html-1.5.1
@@ -7,7 +7,8 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/doc/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tsarna@endicor.com
+MAINTAINER=	tsarna@netbsd.org
+HOMEPAGE=	http://www.python.org/doc/
 
 EXTRACT_ONLY=
 NO_CONFIGURE=	yes

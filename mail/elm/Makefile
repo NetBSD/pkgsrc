@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/18 15:25:24 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:09 tsarna Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.ozone.fmi.fi/KEH/ \
 			ftp://ftp.ibp.fr/pub/unix/mail/elm-me/
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.myxa.com/elm/
 
 WRKSRC=			${WRKDIR}/elm2.4.ME+.32
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/07/30 22:48:20 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:16:55 tsarna Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
@@ -8,6 +8,7 @@ MASTER_SITE_SUBDIR=	games
 DISTFILES=		imaze-sounds.tar imaze1.3.tar.Z
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://home.tu-clausthal.de/student/iMaze/
 
 EXTRACT_ONLY=		imaze1.3.tar.Z
 WRKSRC=			${WRKDIR}/imaze

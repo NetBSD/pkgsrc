@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/07/04 09:19:09 mycroft Exp $
+# $NetBSD: Makefile,v 1.13 1998/08/20 15:17:33 tsarna Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://mitac11.uia.ac.be/pub/fvwm95/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	ftp://mitac11.uia.ac.be/html-test/fvwm95.html
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 BUILD_DEPENDS=	${LOCALBASE}/lib/librplay.a:../../audio/rplay

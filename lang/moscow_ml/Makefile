@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/06/03 13:07:09 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/08/20 15:17:05 tsarna Exp $
 #
 
 DISTNAME=       mos14src
@@ -7,6 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.dina.kvl.dk/pub/mosml/
 
 MAINTAINER=	lamj@stat.cmu.edu
+HOMEPAGE=	http://www.dina.kvl.dk/~sestoft/mosml.html
 
 USE_PERL5=	yes
 WRKSRC=		${WRKDIR}/mosml/src

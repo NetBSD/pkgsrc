@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/10 22:27:46 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:59 tsarna Exp $
 
 DISTNAME=		xzip180
 PKGNAME=		xzip-1.8
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.edoc.com/zarf/ftp/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.edoc.com/zarf/xzip.html
 
 WRKSRC=			${WRKDIR}/xzip
 

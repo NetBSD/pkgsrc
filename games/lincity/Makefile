@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/15 13:45:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:55 tsarna Exp $
 #
 
 DISTNAME=		lincity109-src
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	games/strategy
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.floot.demon.co.uk/lincity.html
 
 WRKSRC=			${WRKDIR}/lincity109
 

@@ -1,4 +1,4 @@
-$NetBSD: Makefile,v 1.11 1998/08/05 10:47:20 frueauf Exp $
+$NetBSD: Makefile,v 1.12 1998/08/20 15:17:25 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -16,6 +16,7 @@ DISTFILES=      bash-${V}.tar.gz bash-doc-${DV}.tar.gz
 .endif
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 
 CONFLICTS=	bash-2.02
 

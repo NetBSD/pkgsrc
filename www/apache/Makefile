@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/08/07 23:46:09 cjs Exp $
+# $NetBSD: Makefile,v 1.16 1998/08/20 15:17:30 tsarna Exp $
 #
 
 DISTNAME=       apache_1.3.1
@@ -7,6 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=   http://www.apache.org/dist/
 
 MAINTAINER=	cjs@netbsd.org
+HOMEPAGE=	http://www.apache.org/
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \

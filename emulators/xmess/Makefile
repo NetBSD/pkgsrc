@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/09 12:34:56 mycroft Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:53 tsarna Exp $
 #
 
 DISTNAME=		unix01
@@ -8,6 +8,7 @@ MASTER_SITES=		http://internetter.com/titan/mess/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mycroft@NetBSD.ORG
+HOMEPAGE=		http://internetter.com/titan/mess/
 
 RUN_DEPENDS=		unzip:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm

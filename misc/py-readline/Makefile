@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/05/14 21:54:02 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:17:15 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dolecek@ics.muni.cz
+HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
 
 DEPENDS+=	python-1.5.1:../../lang/python
 DEPENDS+=	readline-2.2:../../devel/readline

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/07/15 11:45:53 tv Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:29 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=     www
 MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
 
 MAINTAINER=	tv@netbsd.org
+HOMEPAGE=	http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
 
 DEPENDS=	jpeg-6b:../../graphics/jpeg \
 		png-1.0.2:../../graphics/png \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/07/13 16:55:59 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:16:49 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/04 13:58:26 vanilla Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	Curses
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Curses/Curses.html
 
 DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
 

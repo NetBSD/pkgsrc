@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/06/22 11:27:48 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/08/20 15:16:46 tsarna Exp $
 #
 
 DISTNAME=       cvs-1.9
@@ -6,6 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU}
 
 MAINTAINER=	lamj@stat.cmu.edu
+HOMEPAGE=	http://www.cyclic.com/cvs/info.html
 
 GNU_CONFIGURE=	yes
 
