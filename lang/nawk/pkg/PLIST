@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/15 13:19:21 agc Exp $
+bin/nawk
+man/man1/nawk.1
