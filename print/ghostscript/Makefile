@@ -1,26 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/07 02:02:23 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/10 15:28:31 jlam Exp $
 
-# This package is an alias for ghostscript-x11 to facilitate correct
-# dependencies involving older versions of ghostscript for binary packages.
+PKGNAME=	ghostscript-${GS_VERS}
+CATEGORIES+=	x11
 
-DISTNAME=	ghostscript-${GS_VERS}
-GS_VERS=	6.01
-CATEGORIES=	print x11
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-
-MAINTAINER=	jlam@netbsd.org
-
-DEPENDS+=	ghostscript-x11-${GS_VERS}:../../print/ghostscript-x11
+CONFLICTS=	ghostscript{,-nox11}-[0-9]*
 
 USE_X11=	# defined
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	# defined
-NO_PATCH=	# defined
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+# Build with the X11 display device drivers.
+#
+MAKE_ENV+=	USE_X11=1
 
-do-install:	# empty
-
-.include "../../mk/bsd.pkg.mk"
+.include "../../print/ghostscript-nox11/Makefile.common"
