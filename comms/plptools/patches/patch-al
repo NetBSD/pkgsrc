@@ -1,22 +1,13 @@
-$NetBSD: patch-al,v 1.1 2004/05/24 16:09:35 kristerw Exp $
+$NetBSD: patch-al,v 1.2 2004/09/08 12:14:59 wiz Exp $
 
---- lib/rfsv32.cc.orig	2004-05-24 17:46:31.000000000 +0200
-+++ lib/rfsv32.cc	2004-05-24 17:46:59.000000000 +0200
-@@ -577,7 +577,7 @@
- 	unsigned char *buff = new unsigned char[RFSV_SENDLEN];
- 	do {
- 		if ((len = fread(handle, buff, RFSV_SENDLEN)) > 0)
--			op.write(buff, len);
-+			op.write((char*)buff, len);
- 		if (cb) {
- 			if (!cb(len)) {
- 				len = E_PSI_FILE_CANCEL;
-@@ -609,7 +609,7 @@
- 	unsigned char *buff = new unsigned char[RFSV_SENDLEN];
- 	int total = 0;
- 	while (ip && !ip.eof()) {
--		ip.read(buff, RFSV_SENDLEN);
-+		ip.read((char*)buff, RFSV_SENDLEN);
- 		bufferStore tmp(buff, ip.gcount());
- 		int len = tmp.getLen();
- 		total += len;
+--- plpbackup/Makefile.in.orig	2003-02-04 11:27:22.000000000 +0100
++++ plpbackup/Makefile.in
+@@ -209,7 +209,7 @@ x_libraries = @x_libraries@
+ INCLUDES = -I$(top_srcdir)/lib
+ 
+ bin_PROGRAMS = plpbackup
+-plpbackup_LDADD = $(LIB_PLP)
++plpbackup_LDADD = $(LIB_PLP) $(INTLLIBS)
+ plpbackup_SOURCES = plpbackup.cc
+ mkinstalldirs = $(SHELL) $(top_srcdir)/conf/mkinstalldirs
+ CONFIG_HEADER = ../include/config.h
