@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.591 2000/10/22 14:05:24 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.592 2000/10/23 17:32:06 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -89,11 +89,18 @@ CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 .endif
 
-# set X11PREFIX to reflect installed dir of X11 packages
-.if exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
+# Set X11PREFIX to reflect the install directory of X11 packages.
+#
+# The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
+# is to catch users of xpkgwedge<1.0.
+#
+.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
+    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 X11PREFIX=		${LOCALBASE}
+XMKMF?=			pkgxmkmf -a
 .else
 X11PREFIX=		${X11BASE}
+XMKMF?=			xmkmf -a
 .endif
 
 .if defined(USE_MOTIF12)
@@ -117,6 +124,14 @@ MOTIFBASE?=		${X11PREFIX}
 .endif  # USE_MOTIF
 
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
+.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
+    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
+# XXX: actually, here we would need something like
+# BUILD_DEPENDS+=xpkgwedge>=1.0:../../pkgtools/xpkgwedge
+.if make(install-run-depends)
+DEPENDS+=		xpkgwedge>=1.0:../../pkgtools/xpkgwedge
+.endif
+.endif
 PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
@@ -246,7 +261,6 @@ PACKAGE_COOKIE=		${WRKDIR}/.package_done
 
 # Miscellaneous overridable commands:
 SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
-XMKMF?=			xmkmf -a
 .if exists(/sbin/md5)
 MD5?=			/sbin/md5
 .elif exists(/bin/md5)

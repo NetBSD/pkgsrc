@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.5 2000/10/23 17:32:08 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	X11BASE=@X11BASE@
+	X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
+	HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+
+	echo -n "Updating ${HOSTDEF}..."
+	cp -f ${HOSTDEF} ${HOSTDEF}.bak
+	( grep -v xpkgwedge ${HOSTDEF}.bak || true ) \
+		> ${HOSTDEF}
+	rm -f ${HOSTDEF}.bak
+	if [ ${PKG_PREFIX} != ${X11BASE} ] && \
+	   diff -q ${X11_HOSTDEF} ${HOSTDEF} >/dev/null
+	then
+		rm -f ${HOSTDEF}
+	fi
+	echo "done."
+	rmdir -p ${PKG_PREFIX}/lib/X11/config 2>/dev/null || true
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
