@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/06/28 00:35:33 thorpej Exp $
+# $NetBSD: Makefile,v 1.14 1999/07/05 21:56:03 hubertf Exp $
 #
 
 # for OBJECT_FMT
@@ -27,5 +27,9 @@ MAKE_FLAGS+=	PREFIX="${PREFIX}"
 
 post-patch:
 	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/
+	cd ${WRKSRC} ; ${MV} decode_i586.s decode_i586.s.orig ;\
+	${SED} \
+		-e 's@^/@#/@g' \
+		<decode_i586.s.orig >decode_i586.s
 
 .include "../../mk/bsd.pkg.mk"
