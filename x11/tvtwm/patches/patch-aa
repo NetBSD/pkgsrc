@@ -1,8 +1,41 @@
-$NetBSD: patch-aa,v 1.2 1999/07/21 04:17:50 mrg Exp $
+$NetBSD: patch-aa,v 1.3 2000/10/02 08:01:13 jlam Exp $
 
---- Imakefile.orig	Fri Feb  3 11:25:44 1995
-+++ Imakefile	Sun Jun 20 00:19:00 1999
-@@ -93,9 +93,9 @@
+--- Imakefile.orig	Thu Feb  2 19:25:44 1995
++++ Imakefile
+@@ -51,12 +51,12 @@
+ XCOMM                                 <cross@eng.umd.edu>
+ XCOMM
+ XCOMM   Also note, if you install your libXpm.a in a strange place, you'll
+-XCOMM have to adjust $(XPMLIB) below.  You may also have to change the
++XCOMM have to adjust $(XPM_LIB) below.  You may also have to change the
+ XCOMM include path of the compile, so that the code can include from
+ XCOMM <X11/xpm.h>.
+ XCOMM
+ 
+-         XPMLIB = -lXpm
++        XPM_LIB = -lXpm
+         XPM_DEF = -DXPM
+     XLOADIM_DEF = -DXLOADIMAGE=\"$(BINDIR)/xloadimage\"
+ 
+@@ -71,7 +71,7 @@
+ 
+ XCOMM   Various defines to pass into twm.c
+ 
+-#if DefaultToM4
++#ifdef DefaultToM4
+          M4_DEF = -DM4_DEFAULT
+ #endif
+ #ifdef No_waitpid
+@@ -79,7 +79,7 @@
+ #endif
+        TWM_DEFS = $(XLOADIM_DEF) $(M4_DEF) $(WAITPID_DEF)
+ 
+-LOCAL_LIBRARIES = $(XMULIB) $(EXTENSIONLIB) $(XPMLIB) $(XLIB)
++LOCAL_LIBRARIES = $(XMULIB) $(EXTENSIONLIB) $(XPM_LIB) $(XLIB)
+        LINTLIBS = $(LINTXMU) $(LINTEXTENSIONLIB) $(LINTXLIB)
+         DEFINES = -DSHAPE $(RELEASE_DEFINES) $(LOCAL_DEFINES) $(SIGNAL_DEFINES)
+ 
+@@ -93,11 +93,11 @@
                    iconmgr.o cursor.o icons.o vdt.o move.o LocPixmap.o \
                    regexp.o
  
@@ -12,9 +45,12 @@ $NetBSD: patch-aa,v 1.2 1999/07/21 04:17:50 mrg Exp $
 -SpecialObjectRule(parse.o,NullParameter,'-DSYSTEM_INIT_FILE="'$(TWMDIR)'/system.twmrc"')
 +SpecialObjectRule(parse.o,NullParameter,'-DSYSTEM_INIT_FILE="'$(TWMDIR)'/system.tvtwmrc"')
  SpecialObjectRule(vdt.o,NullParameter,$(XLOADIM_DEF))
- SpecialObjectRule(LocPixmap.o,NullParameter,'-DBITMAPDIR="$(INCDIR)/bitmaps"')
+-SpecialObjectRule(LocPixmap.o,NullParameter,'-DBITMAPDIR="$(INCDIR)/bitmaps"')
++SpecialObjectRule(LocPixmap.o,NullParameter,'-DBITMAPDIR="$(INCDIR)/X11/bitmaps"')
  SpecialObjectRule(twm.o,NullParameter,$(TWM_DEFS))
-@@ -120,11 +120,11 @@
+ 
+ #if defined(UltrixArchitecture) || defined(AlphaArchitecture)
+@@ -120,11 +120,12 @@
  XCOMM	ln $(BINDIR)/tvtwm $(BINDIR)/twm
  
  #if (ProjectX < 5)
@@ -25,11 +61,12 @@ $NetBSD: patch-aa,v 1.2 1999/07/21 04:17:50 mrg Exp $
 -InstallNonExecFile(system.twmrc,$(TWMDIR))
 -/* InstallNamedProg(ssetroot,xsetroot,$(BINDIR)) */
 +InstallNonExecFile(system.tvtwmrc,$(TWMDIR))
++/* Install ssetroot as ssetroot so we don't overwrite the real xsetroot */
 +InstallNamedProg(ssetroot,ssetroot,$(BINDIR))
  #endif
  
  gram.h gram.c: gram.y
-@@ -135,7 +135,10 @@
+@@ -135,7 +136,10 @@
  clean::
  	$(RM) y.tab.h y.tab.c lex.yy.c gram.h gram.c lex.c deftwmrc.c 
  
