@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/22 16:53:16 wiz Exp $
+bin/ick
+include/intercal/abcess.h
+include/intercal/fiddle.h
+include/intercal/ick-wrap.c
+include/intercal/lose.h
+lib/intercal/libick.a
+share/doc/intercal/NEWS
+share/doc/intercal/READ.ME
+share/examples/intercal/beer.i
+share/examples/intercal/blinkers
+share/examples/intercal/bubble.i
+share/examples/intercal/change.i
+share/examples/intercal/count.3i
+share/examples/intercal/delta.fft
+share/examples/intercal/fft.i
+share/examples/intercal/flonck.i
+share/examples/intercal/glider
+share/examples/intercal/gun
+share/examples/intercal/hail_mary.3i
+share/examples/intercal/hello.i
+share/examples/intercal/icat.i
+share/examples/intercal/iching1.i
+share/examples/intercal/iching2.i
+share/examples/intercal/ins.i
+share/examples/intercal/iogerunds.i
+share/examples/intercal/life.i
+share/examples/intercal/life2.i
+share/examples/intercal/pi.i
+share/examples/intercal/pow.i
+share/examples/intercal/primes.i
+share/examples/intercal/quine.i
+share/examples/intercal/random.i
+share/examples/intercal/random2.i
+share/examples/intercal/rot13.i
+share/examples/intercal/rot13b.i
+share/examples/intercal/sample.i
+share/examples/intercal/sink.i
+share/examples/intercal/t_tet
+share/examples/intercal/tophat.fft
+share/examples/intercal/yapp.i
+lib/intercal/floatlib.i
+lib/intercal/lib2.i
+lib/intercal/numio.i
+lib/intercal/plus.i
+lib/intercal/syslib-orig.i
+lib/intercal/syslib.3i
+lib/intercal/syslib.4i
+lib/intercal/syslib.5i
+lib/intercal/syslib.6i
+lib/intercal/syslib.7i
+lib/intercal/syslib.i
+@dirrm lib/intercal
+@dirrm share/examples/intercal
+@dirrm share/doc/intercal
+@dirrm include/intercal
