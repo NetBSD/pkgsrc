@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/12/14 07:16:06 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/04/18 10:46:17 sakamoto Exp $
 bin/ruby
 lib/libruby.so.${RUBY_VERSION}
 lib/ruby/${RUBY_VERSION}/English.rb
@@ -71,9 +71,12 @@ lib/ruby/${RUBY_VERSION}/matrix.rb
 lib/ruby/${RUBY_VERSION}/mkmf.rb
 lib/ruby/${RUBY_VERSION}/monitor.rb
 lib/ruby/${RUBY_VERSION}/mutex_m.rb
+lib/ruby/${RUBY_VERSION}/net/ftp.rb
+lib/ruby/${RUBY_VERSION}/net/http.rb
 lib/ruby/${RUBY_VERSION}/net/pop.rb
-lib/ruby/${RUBY_VERSION}/net/session.rb
+lib/ruby/${RUBY_VERSION}/net/protocol.rb
 lib/ruby/${RUBY_VERSION}/net/smtp.rb
+lib/ruby/${RUBY_VERSION}/net/telnet.rb
 lib/ruby/${RUBY_VERSION}/observer.rb
 lib/ruby/${RUBY_VERSION}/open3.rb
 lib/ruby/${RUBY_VERSION}/ostruct.rb
@@ -150,11 +153,12 @@ share/examples/ruby/time.rb
 share/examples/ruby/trojan.rb
 share/examples/ruby/tsvr.rb
 share/examples/ruby/uumerge.rb
-@exec mkdir -p %D/lib/ruby/${RUBY_VERSION}/site_ruby/${MACHINE_ARCH}-${LOWER_OPSYS}
+@exec mkdir -p %D/lib/ruby/site_ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
 @dirrm share/examples/ruby/misc
 @dirrm share/examples/ruby
-@dirrm lib/ruby/${RUBY_VERSION}/site_ruby/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/ruby/${RUBY_VERSION}/site_ruby
+@dirrm lib/ruby/site_ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/site_ruby/${RUBY_VERSION}
+@dirrm lib/ruby/site_ruby
 @dirrm lib/ruby/${RUBY_VERSION}/net
 @dirrm lib/ruby/${RUBY_VERSION}/irb
 @dirrm lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
