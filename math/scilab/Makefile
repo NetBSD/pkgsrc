@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2003/02/22 04:31:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.34 2003/02/24 03:35:29 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
+PKGREVISION=	1
 SCIBASE=	scilab-2.7
 WRKSRC=		${WRKDIR}/${DISTNAME:.src=}
 CATEGORIES=	math
