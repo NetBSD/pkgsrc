@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/01/22 12:58:07 adam Exp $
-#
+# $NetBSD: Makefile,v 1.57 2004/02/10 23:31:38 jlam Exp $
 
 PKGNAME=	Mesa-${MESA_VERSION}
 MASTER_SITES= 	# empty
@@ -10,8 +9,8 @@ COMMENT=	Graphics library meta package, similar to SGI's OpenGL
 
 CONFLICTS=	Mesa-glx-[0-9]*
 
-USE_BUILDLINK2=		yes
-USE_X11=		yes
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		# empty
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
@@ -24,8 +23,10 @@ do-install:	# empty
 
 .include "Makefile.common"
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/glut/buildlink2.mk"
+_MESA_REQD=	${MESA_VERSION}
+
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/glut/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
