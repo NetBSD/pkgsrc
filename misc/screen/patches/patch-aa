@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.9 2002/09/15 06:51:37 kim Exp $
+$NetBSD: patch-aa,v 1.10 2004/06/16 21:35:00 christos Exp $
 
---- pty.c.orig	Mon Feb 11 07:44:18 2002
-+++ pty.c	Mon Aug  5 19:58:48 2002
-@@ -318,6 +318,45 @@
+--- pty.c.orig	2003-09-08 10:26:18.000000000 -0400
++++ pty.c	2004-06-16 17:28:12.000000000 -0400
+@@ -34,7 +34,7 @@
+ #endif
+ 
+ /* for solaris 2.1, Unixware (SVR4.2) and possibly others */
+-#ifdef HAVE_SVR4_PTYS
++#ifdef HAVE_SYS_STROPTS_H
+ # include <sys/stropts.h>
+ #endif
+ 
+@@ -332,6 +332,45 @@
  
  /***************************************************************/
  
