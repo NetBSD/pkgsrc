@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/27 14:27:50 taca Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/29 11:13:40 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -17,12 +17,19 @@ WRKSRC=			${RUBY_WRKSRC}/ext/dbm
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/dbm \
 			${RUBY_DISTNAME}/sample/dbmtest.rb
 
-BDB_ACCEPTED?=		db1
-
 post-install:
 	${INSTALL_DATA} ${RUBY_WRKSRC}/sample/dbmtest.rb ${RUBY_EXAMPLESDIR}
 
+.include "../../mk/bsd.prefs.mk"
+#
+# XXX:	Ruby extconf shuld select native ndbm(3) or Berkley DB's
+#	ndbm(3) compatible support.
+#
+.if ${OPSYS} != "SunOS"
+BDB_ACCEPTED?=		db1
+
+.include "../../mk/bdb.buildlink3.mk"
+.endif
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
