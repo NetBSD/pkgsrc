@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.12 2002/08/29 15:11:14 taya Exp $
+$NetBSD: patch-ae,v 1.13 2002/10/03 15:54:00 taya Exp $
 
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	Sat Sep 29 05:12:52 2001
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	Wed Aug 28 11:21:52 2002
-@@ -123,17 +123,22 @@
++++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	Sun Sep  8 00:46:37 2002
+@@ -123,17 +123,27 @@
      }
  }
  
@@ -11,6 +11,11 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k
 + * Beware: use % instead of %% for register identifiers in a preprocessor macro
 + * SYMBOL PREFIX must be "_" for aout and "" for ELF 
 + */
++#ifndef	__ELF__
++#define	SYMBOLPREFIX	"_"
++#else
++#define	SYMBOLPREFIX
++#endif
 +
  #define STUB_ENTRY(n)							\
  __asm__(								\
