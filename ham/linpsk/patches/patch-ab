@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2005/03/16 15:32:12 rillig Exp $
+
+Needed for g++-2.95.3.
+
+--- src/cpskdemodulator.cpp.orig	Sun Jul  4 17:50:45 2004
++++ src/cpskdemodulator.cpp	Wed Mar 16 03:02:48 2005
+@@ -559,7 +559,7 @@ if ( UseAfc )
+          {
+           Phase_Vector=m_BitSignal*conj(Prev_Sample);
+           Prev_Sample = m_BitSignal;
+-          Phase[j++]=Phase_Vector;
++          Phase[j++]=complex<float>(Phase_Vector);
+           double angle =  atan2(Phase_Vector.imag(),Phase_Vector.real());
+ 					DecodeSymbol( angle);
+           if ( (unsigned int) m_DevAve  > Threshold)
