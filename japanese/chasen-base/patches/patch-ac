@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/10 14:45:03 taca Exp $
+
+--- mkchadic/convdic.c.orig	Wed Dec  6 14:13:44 2000
++++ mkchadic/convdic.c
+@@ -6,6 +6,7 @@
+  */
+ 
+ #include "chadic.h"
++#include <unistd.h>
+ #include <dirent.h>
+ 
+ #define LINEMAX 8192
+@@ -296,7 +297,7 @@
+ 
+     if ((fp = fopen(file, "r")) == NULL)
+       return 0;
+-    close(fp);
++    fclose(fp);
+     return 1;
+ }
+ 

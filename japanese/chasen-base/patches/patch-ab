@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/10 14:45:03 taca Exp $
+
+--- lib/print.c.orig	Tue Dec 19 05:08:31 2000
++++ lib/print.c
+@@ -166,14 +166,6 @@
+ void cha_set_fput(server_mode)
+     int server_mode;
+ {
+-    /* 
+-     * For system having no prototype declarations for the following
+-     * functions such as SunOS 4.1.4. 
+-     */
+-    extern int fputc();
+-    extern int fputs();
+-    extern int fprintf();
+-
+     if (server_mode) {
+ 	cha_fputc = (void (*))cha_clputc;
+ 	cha_fputs = (void (*))cha_clputs;
