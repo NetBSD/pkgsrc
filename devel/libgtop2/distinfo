@@ -1,19 +1,21 @@
-$NetBSD: distinfo,v 1.6 2003/09/27 20:22:33 danw Exp $
+$NetBSD: distinfo,v 1.7 2003/12/13 20:27:42 xtraeme Exp $
 
-SHA1 (libgtop-2.0.0.tar.bz2) = 9178e5cede22ae5a8928677b195fe585b84b3b86
-Size (libgtop-2.0.0.tar.bz2) = 690581 bytes
-SHA1 (patch-aa) = 20cc13d5965815271f85f2dec086460176b2d1cd
-SHA1 (patch-ab) = 3ce99bf4d72cf4e4203364d78361c8a2df081d8d
+SHA1 (libgtop-2.0.7.tar.bz2) = e2e31b08a1609f3ba9f9a12e6d8f82ebe9e138fa
+Size (libgtop-2.0.7.tar.bz2) = 944207 bytes
+SHA1 (patch-aa) = b01ba86612ed2613034bfbfdc878ce5178eede6b
+SHA1 (patch-ab) = 83d16a720eaaa113bf714fa8d60fcb9acf11c988
 SHA1 (patch-ac) = 644bfe717bdcc993a668a3d075acda8ef39571d8
 SHA1 (patch-ad) = 9522d20b1467b73678003d5c0f98dcac7d312893
 SHA1 (patch-ae) = cf277165382c17d938593934b59d8035175fd8d0
 SHA1 (patch-af) = 0374fc36c418871e929fbb3c53ab4979e780e8d5
-SHA1 (patch-ag) = 470e29d999b079a5f75993978b3cdcdec2fd7d9c
-SHA1 (patch-ah) = 93ebb47710f1c4cc70406a92503bdc4a5bfa50d2
+SHA1 (patch-ag) = 7d46fc3b996e39e8532d2e20a47587a54e37b654
+SHA1 (patch-ah) = 29cfc8b7f98610efb2b6013367c06f0e09a32312
 SHA1 (patch-ai) = 07a83340eb9d6a36a3f5b2db33eb50c74fbc4777
-SHA1 (patch-aj) = e262a47aca7871420321d6fa5259a127b69d2095
-SHA1 (patch-al) = 6f3613fab44bbf27e5a60fdab35d26b93a04de47
-SHA1 (patch-am) = a1fd84155a76246276e952f5288636d2f086b3e7
-SHA1 (patch-an) = 2db9a77b2b021ecd6e0f8c82cebf0455ae6ce501
-SHA1 (patch-ao) = 8a3d4b50c00363527a00e3dba9ff4292ae777907
+SHA1 (patch-aj) = 0a0ca01be2a33a1a3b9f17e1d52db1a1b7502177
+SHA1 (patch-ak) = 95170aa2786c5313f859b2381031be9bc7f7cd76
+SHA1 (patch-al) = 93dbdb01e268005f231c00ce7e640dc68b7d6ca2
+SHA1 (patch-am) = cc12e383f36e7f3c0f25fd3a3ea2e0ceff04d43c
+SHA1 (patch-an) = 5ea04c27db91067733ab75d4ce4959446031cb91
+SHA1 (patch-ao) = f54754a2bdcce99a0d953186aee6d2bcbc5d7bae
 SHA1 (patch-ap) = c47c57d77424d18a3184a0625e0d953745d929fe
+SHA1 (patch-aq) = 8efdb60a0bf66b6d0614620a0523238b41e72b8b
