@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/09/18 09:01:03 grant Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/09/19 01:55:34 grant Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -31,25 +31,10 @@ BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 USE_BUILDLINK2=	YES
+USE_GNU_TOOLS+=	m4
+MAKE_ENV+=	M4="${M4}"
 
 .include "../../mk/bsd.prefs.mk"
-
-_NEED_GNU_M4=	NO
-_NEED_GNU_M4_PLATFORM=	NetBSD-0.*-* NetBSD-1.[01234]*-*
-_NEED_GNU_M4_PLATFORM=	NetBSD-1.5.*-* NetBSD-1.5[A-Y]-*
-.for __tmp__ in ${_NEED_GNU_M4_PLATFORM}
-.   if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-_NEED_GNU_M4=	YES
-.   endif
-.endfor
-
-.if ${_NEED_GNU_M4} == "YES"
-BUILD_DEPENDS+=	m4-*:../../devel/m4
-EVAL_PREFIX+=	M4_PREFIX=m4
-MAKE_ENV+=	M4=${M4_PREFIX}/bin/${GNU_PROGRAM_PREFIX}m4
-.else
-MAKE_ENV+=	M4=${M4}
-.endif
 
 make-sendmail-siteconfig:
 	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
