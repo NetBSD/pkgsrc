@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2002/01/04 20:45:43 fredb Exp $
+# $NetBSD: Makefile,v 1.115 2002/01/04 21:04:21 fredb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -71,6 +71,7 @@ SUBDIR+=	p5-ControlX10-CM17
 SUBDIR+=	p5-File-MMagic
 SUBDIR+=	p5-Locale-Codes
 SUBDIR+=	p5-Search
+SUBDIR+=	parchive
 SUBDIR+=	pdmenu
 SUBDIR+=	php4-calendar
 SUBDIR+=	php4-mbstring
