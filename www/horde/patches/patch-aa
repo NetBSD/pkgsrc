@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/08/16 21:07:17 bouyer Exp $
+$NetBSD: patch-aa,v 1.5 2004/11/09 16:23:02 adam Exp $
 
---- config/horde.php.dist.orig	Mon May 19 17:56:12 2003
-+++ config/horde.php.dist	Fri Aug 15 23:36:57 2003
-@@ -94,7 +94,7 @@
+--- config/horde.php.dist.orig	2003-10-14 16:52:31.000000000 +0000
++++ config/horde.php.dist
+@@ -94,7 +94,7 @@ $conf['tmpdir'] = null;
  // What backend should we use for authenticating users to Horde? Valid
  // options are currently 'imap', 'ldap', 'mcal', 'sql', 'ftp', 'smb',
  // 'krb5' and 'radius'.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2003/08/16 21:07:17 bouyer Exp $
  
  // An array holding any parameters that the Auth object will need to
  // function correctly.
-@@ -105,7 +105,7 @@
+@@ -105,7 +105,7 @@ $conf['auth']['params'] = array();
  // c-client version 2000c or older), 'imap/ssl', or imap/ssl/novalidate-cert
  // (for a self-signed certificate).  Default ports are 143 for imap and
  // 993 for imap over ssl.
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2003/08/16 21:07:17 bouyer Exp $
  
  // See $conf['prefs']['params'] further down for an example how to
  // setup a SQL backend. But you must use the horde_users SQL table for
-@@ -127,14 +127,14 @@
+@@ -127,14 +127,14 @@ $conf['log']['enabled'] = true;
  
  // What log driver should we use? Valid values are 'file', 'mcal',
  // 'sql', and 'syslog'.
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.4 2003/08/16 21:07:17 bouyer Exp $
  
  // What level of messages should we log? The values are LOG_EMERG,
  // LOG_ALERT, LOG_CRIT, LOG_ERR, LOG_WARNING, LOG_NOTICE, LOG_INFO,
-@@ -159,7 +159,7 @@
+@@ -159,7 +159,7 @@ $conf['log']['params'] = array();
  // (meaning use system defaults and don't save any user preferences),
  // 'session' (preferences only persist during the login), 'ldap',
  // and 'sql'.
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.4 2003/08/16 21:07:17 bouyer Exp $
  
  // Any parameters that the preferences driver needs. This includes
  // database or ldap server, username/password to connect with, etc.
-@@ -168,12 +168,12 @@
+@@ -168,12 +168,12 @@ $conf['prefs']['params'] = array();
  // This is an example configuration for a MySQL preference backend.
  // The SQL script to setup the preference database is placed in
  // horde/scripts/db/prefs.sql.
@@ -65,18 +65,28 @@ $NetBSD: patch-aa,v 1.4 2003/08/16 21:07:17 bouyer Exp $
  
  // This is an example configuration for an LDAP preference backend.
  // The schemas needed for ldap are in horde/scripts/ldap.  For more
-@@ -222,8 +222,8 @@
- // option; SMTP requires at least a server and a port (if nonstandard).
- // SMTP authentication can be enabled by setting the 'auth' parameter
- // to true.
+@@ -219,15 +219,15 @@ $conf['mailer']['type'] = 'sendmail';
+ 
+ // An array holding any parameters that the Mail object will need to
+ // function correctly.
 -$conf['mailer']['params'] = array();
--// $conf['mailer']['params'] = array('sendmail_path' => '/usr/lib/sendmail');
 +//$conf['mailer']['params'] = array();
-+$conf['mailer']['params'] = array('sendmail_path' => '/usr/sbin/sendmail');
- // $conf['mailer']['params'] = array('host' => 'smtp.example.com');
  
+ // For sendmail, this is mainly the 'sendmail_path option. Additionally, we
+ // want to use the '-oi' argument so that sendmail does not interpret a
+ // single '.' in the body of a message as the end of input.
+-// $conf['mailer']['params'] = array(
+-//     'sendmail_path' => '/usr/lib/sendmail',
+-//     'sendmail_args' => '-oi'
+-// );
++$conf['mailer']['params'] = array(
++     'sendmail_path' => '/usr/sbin/sendmail',
++     'sendmail_args' => '-oi'
++);
  
-@@ -298,10 +298,10 @@
+ // The 'smtp' driver normally will require a server name. Additional
+ // parameters can also be defined - see below for more details.
+@@ -318,10 +318,10 @@ $conf['sessionhandler']['type'] = 'none'
  
  // Should we display a problem reporting link in Horde application
  // menus?

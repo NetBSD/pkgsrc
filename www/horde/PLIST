@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/14 21:26:41 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/11/09 16:23:02 adam Exp $
 
 
 share/horde/config/horde.php.dist
@@ -130,6 +130,7 @@ share/horde/lib/Notification.php
 share/horde/lib/Notification/status.php
 share/horde/lib/Perms.php
 share/horde/lib/Prefs.php
+share/horde/lib/Prefs/UI.php
 share/horde/lib/Prefs/ldap.php
 share/horde/lib/Prefs/session.php
 share/horde/lib/Prefs/sql.php
@@ -172,7 +173,9 @@ share/horde/locale/et_EE/LC_MESSAGES/horde.mo
 share/horde/locale/fi_FI/LC_MESSAGES/horde.mo
 share/horde/locale/fi_FI/help.xml
 share/horde/locale/fr_FR/LC_MESSAGES/horde.mo
+share/horde/locale/gl_ES/LC_MESSAGES/horde.mo
 share/horde/locale/hu_HU/LC_MESSAGES/horde.mo
+share/horde/locale/id_ID/LC_MESSAGES/horde.mo
 share/horde/locale/it_IT/LC_MESSAGES/horde.mo
 share/horde/locale/ja_JP/LC_MESSAGES/horde.mo
 share/horde/locale/ko_KR/LC_MESSAGES/horde.mo
@@ -213,8 +216,10 @@ share/horde/po/et_EE.po
 share/horde/po/extract.pl
 share/horde/po/fi_FI.po
 share/horde/po/fr_FR.po
+share/horde/po/gl_ES.po
 share/horde/po/horde.pot
 share/horde/po/hu_HU.po
+share/horde/po/id_ID.po
 share/horde/po/it_IT.po
 share/horde/po/ja_JP.po
 share/horde/po/ko_KR.po
@@ -252,6 +257,8 @@ share/horde/scripts/db/mysql_drop.sql
 share/horde/scripts/db/pgsql_create.sql
 share/horde/scripts/db/pgsql_drop.sql
 share/horde/scripts/db/prefs.sql
+share/horde/scripts/db/sessionhandler_oracle.sql
+share/horde/scripts/db/sessionhandler_pgsql.sql
 share/horde/scripts/db/sessionhandler_sapdb.sql
 share/horde/scripts/db/sessionhandler.sql
 share/horde/scripts/db/vfs.sql
@@ -318,10 +325,10 @@ share/doc/horde/CONTRIBUTING
 share/doc/horde/CREDITS
 share/doc/horde/HACKING
 share/doc/horde/INSTALL
-share/doc/horde/TRANSLATIONS
+share/doc/horde/RELEASE_NOTES
 share/doc/horde/SECURITY
+share/doc/horde/TRANSLATIONS
 share/examples/horde/horde.conf
-
 @dirrm share/horde/util
 @dirrm share/horde/templates/wml/login
 @dirrm share/horde/templates/wml
@@ -384,8 +391,12 @@ share/examples/horde/horde.conf
 @dirrm share/horde/locale/ja_JP
 @dirrm share/horde/locale/it_IT/LC_MESSAGES
 @dirrm share/horde/locale/it_IT
+@dirrm share/horde/locale/id_ID/LC_MESSAGES
+@dirrm share/horde/locale/id_ID
 @dirrm share/horde/locale/hu_HU/LC_MESSAGES
 @dirrm share/horde/locale/hu_HU
+@dirrm share/horde/locale/gl_ES/LC_MESSAGES
+@dirrm share/horde/locale/gl_ES
 @dirrm share/horde/locale/fr_FR/LC_MESSAGES
 @dirrm share/horde/locale/fr_FR
 @dirrm share/horde/locale/fi_FI/LC_MESSAGES
