@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.23 2000/09/03 10:31:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2000/10/15 14:30:21 itojun Exp $
 
-DISTNAME=	sendmail.8.11.0
-PKGNAME=	sendmail-8.11.0
+DISTNAME=	sendmail.8.11.1
+PKGNAME=	sendmail-8.11.1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
 
-PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
-PATCHFILES=	sendmail8.11.0+3.3W.patch.gz
-PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
-.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
-PATCH_DIST_ARGS+=--forward --quiet
-.endif
+#PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
+#PATCHFILES=	sendmail8.11.0+3.3W.patch.gz
+#PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
+#.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
+#PATCH_DIST_ARGS+=--forward --quiet
+#.endif
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -47,10 +47,7 @@ DEPENDS+=	openldap-1.2.*:../../databases/openldap
 DEPENDS+=	db-2.7.7:../../databases/db
 .endif
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-DEPENDS+=	sfio-1999:../../devel/sfio
-.if !defined(PATENTEDOPENSSLSRC) && !exists(/usr/include/openssl/rsa.h)
-DEPENDS+=	openssl-0.9.5a:../../security/openssl
-.endif
+USE_SSL=	yes
 .endif
 
 post-patch:

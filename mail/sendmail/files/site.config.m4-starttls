@@ -1,6 +1,5 @@
 # enable STARTTLS
-define(`confSTDIO_TYPE', `portable')
-APPENDDEF(`confENVDEF', `-I${LOCALBASE}/include/sfio -I${LOCALBASE}/include -DSFIO')
-APPENDDEF(`confLIBS', `-L${LOCALBASE}/lib -lsfio')
-APPENDDEF(`conf_sendmail_ENVDEF', `-DSTARTTLS')
+APPENDDEF(`confENVDEF', `-I${LOCALBASE}/include')
+APPENDDEF(`confLIBS', `-L${LOCALBASE}/lib')
+APPENDDEF(`conf_sendmail_ENVDEF', `-DSTARTTLS -D_FFR_TLS_TOREK')
 APPENDDEF(`conf_sendmail_LIBS', `-lssl -lcrypto')
