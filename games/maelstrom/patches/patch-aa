@@ -1,13 +1,13 @@
---- Makeflags.orig	Mon Jul 14 11:32:13 1997
-+++ Makeflags	Thu Jul 30 04:46:45 1998
-@@ -1,8 +1,13 @@
+--- Makeflags.orig	Mon Jul 14 20:32:13 1997
++++ Makeflags	Mon Aug  3 00:50:27 1998
+@@ -1,12 +1,42 @@
 +# This file contains the template for Makeflags
  
 -# Some sensible defaults
 -BINDIR = /usr/local/bin
 -LIBDIR = /usr/local/lib/Maelstrom
 +SYSTEM =
-+FEATURES =
++FEATURES = -DAUDIO_16BIT -DASYNCHRONOUS_IO -DUSE_POSIX_SIGNALS
  
 -INSTALL = install
 +LOGIC = netlogic
@@ -18,7 +18,7 @@
 +BINDIR = $(PREFIX)/bin
 +LIBDIR = $(PREFIX)/share/maelstrom
  DATAFILES = Images/*.icon Images/*.cicn "Maelstrom Fonts" \
-@@ -10,3 +15,28 @@
+             "Maelstrom Sounds" "Maelstrom Sprites"
  
 -all: config
 +OBJS = main.o framebuf.o v_framebuf.o x11_framebuf.o vga_framebuf.o \
@@ -39,7 +39,7 @@
 +X11LIBS = -lX11 -lXext -lXpm
 +CSUMLIB =
 +LIBS = $(EXTRALIBS) $(XPMLINKDIR) $(X11LINKDIR) $(X11LIBS) $(CSUMLIB)
-+SOUNDLIBS =
++SOUNDLIBS = -lossaudio
 +
 +INSTALL = /usr/bin/install
 +
