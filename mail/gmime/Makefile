@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/11/04 12:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/14 16:48:55 jmmv Exp $
 #
 
-DISTNAME=	gmime-2.1.7
-PKGREVISION=	1
+DISTNAME=	gmime-2.1.9
 CATEGORIES=	mail
 MASTER_SITES=	http://spruce.sourceforge.net/gmime/sources/v2.1/
 
@@ -20,11 +19,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 PKGCONFIG_OVERRIDE+=	gmime-2.0.pc.in
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-BUILD_DEFS+=		USE_INET6
+.include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"

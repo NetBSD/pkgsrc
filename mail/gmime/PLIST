@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/14 16:48:55 jmmv Exp $
 bin/gmime-config
 bin/uudecode
 bin/uuencode
@@ -125,7 +125,6 @@ share/doc/gmime/gmime-resources.html
 share/doc/gmime/gmime-streams.html
 share/doc/gmime/gmime.devhelp
 share/doc/gmime/gmime.html
-share/doc/gmime/gmon.out
 share/doc/gmime/home.png
 share/doc/gmime/index.html
 share/doc/gmime/index.sgml
