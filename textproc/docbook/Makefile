@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2003/01/11 22:11:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/29 21:15:08 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
 DISTNAME=	docbook-4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	\
 		http://www.oasis-open.org/docbook/sgml/4.2/ \
@@ -27,9 +27,16 @@ USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
 WRKSRC=		${WRKDIR}
+USE_BUILDLINK2=	yes
 
 INSTDIR=	${PREFIX}/share/sgml/docbook
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
+
+SGML_CATALOGS=
+.for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2	
+SGML_CATALOGS+=	${INSTDIR}/${ver}/catalog
+.endfor
+.undef ver
 
 pre-install:
 	${INSTALL_DATA_DIR} ${INSTDIR}/2.4.1
@@ -87,13 +94,6 @@ do-install:
 	# General cleanup
 	#
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTDIR}
-	#
-	# Register SGML catalogs
-	#
-.for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2	
-	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/sgml/catalog add \
-		CATALOG ${INSTDIR}/${ver}/catalog
-.endfor
 
-.include "../../textproc/xmlcatmgr/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
