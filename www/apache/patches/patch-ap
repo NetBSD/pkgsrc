@@ -1,0 +1,30 @@
+$NetBSD: patch-ap,v 1.3 2004/04/07 19:53:27 reed Exp $
+SECURITY [CAN-2003-0020]: escape arbitrary data before writing into the errorlog
+
+--- src/main/http_log.c.orig	2003-02-03 09:13:21.000000000 -0800
++++ src/main/http_log.c
+@@ -314,6 +314,9 @@ static void log_error_core(const char *f
+ 			   const char *fmt, va_list args)
+ {
+     char errstr[MAX_STRING_LEN];
++#ifndef AP_UNSAFE_ERROR_LOG_UNESCAPED
++    char scratch[MAX_STRING_LEN];
++#endif
+     size_t len;
+     int save_errno = errno;
+     FILE *logf;
+@@ -445,7 +448,14 @@ static void log_error_core(const char *f
+     }
+ #endif
+ 
++#ifndef AP_UNSAFE_ERROR_LOG_UNESCAPED
++   if (ap_vsnprintf(scratch, sizeof(scratch) - len, fmt, args)) {
++       len += ap_escape_errorlog_item(errstr + len, scratch,
++                                      sizeof(errstr) - len);
++   }
++#else
+     len += ap_vsnprintf(errstr + len, sizeof(errstr) - len, fmt, args);
++#endif
+ 
+     /* NULL if we are logging to syslog */
+     if (logf) {
