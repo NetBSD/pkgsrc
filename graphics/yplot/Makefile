@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/26 02:27:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/09 00:45:45 snj Exp $
 
 DISTNAME=		yplot-1.1.2
 PKGREVISION=		1
@@ -9,18 +9,19 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://yplot.sourceforge.net/
 COMMENT=		Yorick interface to PLplot
 
-DEPENDS+=		yorick-1.5*:../../math/yorick
-DEPENDS+=		plplot>=5.0.3:../../graphics/plplot
 BUILD_DEPENDS+=		teTeX>=1.0:../../print/teTeX
 
 .if (${MACHINE_ARCH} == "sparc64")
 BROKEN=			Compiling hangs, needs attention.
 .endif
 
+USE_BUILDLINK3=		yes
 CONFIGURE_ENV+=		PLPLOT_PREFIX=${BUILDLINK_PREFIX.plplot}
 EVAL_PREFIX+=		YORICK_PREFIX=yorick
 CONFIGURE_ENV+=		YORICK_HOME=${YORICK_PREFIX}
 CONFIGURE_ENV+=		YORICK_SITE=${YORICK_PREFIX}/share/yorick
+
+BUILDLINK_DEPMETHOD.yorick=	full
 
 GNU_CONFIGURE=		yes
 MAKEFILE=		Makefile.build
@@ -28,6 +29,7 @@ MAKEFILE=		Makefile.build
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_PATCH_SCRIPTS=	parse_documentation.py
 
-.include "../../graphics/plplot/buildlink2.mk"
+.include "../../graphics/plplot/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../math/yorick/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

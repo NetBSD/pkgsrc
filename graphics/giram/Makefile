@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/02/14 17:21:41 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2004/05/09 00:45:45 snj Exp $
 #
 
 DISTNAME=	giram-0.3.5
@@ -13,7 +13,7 @@ COMMENT=	Giram Is Really A Modeller
 DEPENDS+=	povray-[0-9]*:../../graphics/povray
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
@@ -39,7 +39,7 @@ CONF_FILES+=	${PREFIX}/share/examples/giram/gtkrc_user	\
 CONF_FILES+=	${PREFIX}/share/examples/giram/ps-menurc	\
 		${PKG_SYSCONFDIR}/0.3/ps-menurc
 
-.include "../../graphics/lib3ds/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../graphics/lib3ds/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
