@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/29 05:14:27 ben Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/10 19:05:36 ben Exp $
 
 DISTNAME=		xmill-0.9.1
 CATEGORIES=		archivers
@@ -10,6 +10,7 @@ COMMENT=		Specialized compressor for XML
 
 USE_GNU_TOOLS+=		make
 MAKEFILE=		makefile
+USE_BUILDLINK3=		yes
 
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -33,4 +34,6 @@ do-install:
 		${WRKSRC}/unix/xmilltest \
 		${PREFIX}/bin
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
