@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.162 2004/07/06 22:49:16 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.163 2004/07/30 07:38:01 xtraeme Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -309,11 +309,11 @@ USE_INET6=		NO
 LOCALBASE?=		${DESTDIR}/usr/pkg
 .if ${OPSYS} == "SunOS"
 # On Solaris, we default to using OpenWindows for X11.
-X11BASE?=               ${DESTDIR}/usr/openwin
-.else
-X11BASE?=		${DESTDIR}/usr/X11R6
+X11BASE?=	${DESTDIR}/usr/openwin
+.elif !defined(X11_TYPE) || defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
+X11BASE?=	${DESTDIR}/usr/X11R6
 .endif
-CROSSBASE?=		${LOCALBASE}/cross
+CROSSBASE?=	${LOCALBASE}/cross
 
 # If xpkgwedge.def is found, then clearly we're using xpkgwedge.
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
