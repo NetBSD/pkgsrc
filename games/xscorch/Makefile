@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:40 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.10 2004/03/07 23:26:15 snj Exp $
 
-DISTNAME=	xscorch-0.1.15
-PKGREVISION=	2
+DISTNAME=	xscorch-0.1.16
 CATEGORIES=	games
-MASTER_SITES=	http://chaos2.org/xscorch/
+MASTER_SITES=	http://www.xscorch.org/releases/
 
 MAINTAINER=	zuntum@NetBSD.org
-HOMEPAGE=	http://chaos2.org/xscorch/
+HOMEPAGE=	http://www.xscorch.org/
 COMMENT=	Multiplayer tank shoot-em-up
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--without-gnome
 
-.include "../../audio/libmikmod/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../audio/libmikmod/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
