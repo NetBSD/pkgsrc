@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5041 2004/02/29 16:42:33 jmmv Exp $
+$NetBSD: CHANGES,v 1.5042 2004/02/29 17:49:30 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1094,3 +1094,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ccgo to 0.3.4 [jmmv 2004-02-29]
 	Updated bins to 1.1.25 [martti 2004-02-29]
 	Updated rhythmbox to 0.6.7 [jmmv 2004-02-29]
+	Added firefox-0.8 [xtraeme 2004-02-29]
+	Added firefox-gtk2-0.8 [xtraeme 2004-02-29]
