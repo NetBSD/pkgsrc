@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2000/07/31 17:36:02 abs Exp $
+
+--- man/man3/Makefile.orig	Tue May 20 18:35:43 1997
++++ man/man3/Makefile	Mon Jul 31 14:07:25 2000
+@@ -18,6 +18,8 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		< $$i > ${MANDIR}/man3/$$i; \
+ 	done
+ 

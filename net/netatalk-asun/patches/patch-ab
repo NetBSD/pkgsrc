@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/31 17:36:01 abs Exp $
+
+--- etc/afpd/Makefile.orig	Sat Feb  6 20:02:31 1999
++++ etc/afpd/Makefile	Mon Jul 31 14:07:25 2000
+@@ -72,6 +72,7 @@
+ 	fi; \
+ 	${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
+ 	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" DESDIR="${DESDIR}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    PAMDIR="${PAMDIR}" TCPWRAPDIR="${TCPWRAPDIR}" \
+@@ -92,6 +93,7 @@
+ ${SUBDIRS}: FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" DEFS="${DEFS}" \
+ 	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" DESDIR="${DESDIR}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}"
+ 
+@@ -119,17 +121,19 @@
+ 	for i in ${SUBDIRS}; \
+ 	do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		DESTDIR="${DESTDIR}" INSTALL="${INSTALL}" \
+ 		install); \
+ 	done
+-	${INSTALL} -c afpd ${SBINDIR}
++	${INSTALL} -c afpd ${LIBEXECDIR}
+ 
+ clean :
+ 	for i in ${SUBDIRS}; \
+ 	do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		DESTDIR="${DESTDIR}" INSTALL="${INSTALL}" \

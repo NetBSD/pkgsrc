@@ -1,0 +1,33 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/07/31 17:36:02 abs Exp $
+
+--- sys/freebsd/Makefile.orig	Thu Feb  4 07:38:12 1999
++++ sys/freebsd/Makefile	Mon Jul 31 14:07:25 2000
+@@ -20,6 +20,7 @@
+ ${ALL}:	FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+@@ -29,9 +30,11 @@
+ 
+ install :
+ 	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR} ${LIBDIR}
++	-mkdir ${LIBEXECDIR} ${EXAMPLEDIR}
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" AFPLIBS="${AFPLIBS}" \
+@@ -42,6 +45,8 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 	    < ../../rc.atalk.bsd > ${ETCDIR}/rc.atalk
+ 	@echo
+ 	@echo "Install is done.  Don't forget to add lines from"

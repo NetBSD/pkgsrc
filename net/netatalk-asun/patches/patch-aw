@@ -1,0 +1,44 @@
+$NetBSD: patch-aw,v 1.1.1.1 2000/07/31 17:36:02 abs Exp $
+
+--- rc.atalk.bsd.orig	Mon Aug 25 23:00:54 1997
++++ rc.atalk.bsd	Mon Jul 31 14:10:24 2000
+@@ -1,3 +1,4 @@
++#!/bin/sh
+ #
+ # AppleTalk daemons. Make sure not to start atalkd in the background:
+ # its data structures must have time to stablize before running the
+@@ -14,26 +15,22 @@
+ ##fi
+ 
+ echo -n 'starting appletalk daemons:'
+-if [ -x :SBINDIR:/atalkd ]; then
+-	:SBINDIR:/atalkd;		echo -n ' atalkd'
++if [ -x :LIBEXECDIR:/atalkd ]; then
++	:LIBEXECDIR:/atalkd;		echo -n ' atalkd'
+ fi
+ 
+ if [ -x :BINDIR:/nbprgstr ]; then
+-	:BINDIR:/nbprgstr -p 4 `hostname|sed 's/\..*$//'`:Workstation
+-	:BINDIR:/nbprgstr -p 4 `hostname|sed 's/\..*$//'`:netatalk
++	:BINDIR:/nbprgstr -p 4 `hostname -s |sed 's/\..*$//'`:Workstation
++	:BINDIR:/nbprgstr -p 4 `hostname -s |sed 's/\..*$//'`:netatalk
+ 					echo -n ' nbprgstr'
+ fi
+ 
+-if [ -x :SBINDIR:/papd ]; then
+-	:SBINDIR:/papd;		echo -n ' papd'
++if [ -x :LIBEXECDIR:/papd -a :ETCDIR:/papd.conf ]; then
++	:LIBEXECDIR:/papd;		echo -n ' papd'
+ fi
+ 
+-if [ -x :SBINDIR:/afpd ]; then
+-	:SBINDIR:/afpd;		echo -n ' afpd'
+-fi
+-
+-if [ -x :SBINDIR:/timelord ]; then
+-	:SBINDIR:/timelord;		echo -n ' timelord'
++if [ -x :LIBEXECDIR:/afpd -a :ETCDIR:/AppleVolumes.system ]; then
++	:LIBEXECDIR:/afpd;		echo -n ' afpd'
+ fi
+ 
+ 					echo '.'

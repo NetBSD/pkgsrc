@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/31 17:36:01 abs Exp $
+
+--- etc/afpd/status.c.orig	Wed Dec 16 18:38:38 1998
++++ etc/afpd/status.c	Mon Jul 31 14:07:25 2000
+@@ -52,7 +52,8 @@
+ static int status_server(char *data, const char *server)
+ {
+     struct afp_status	*status;
+-    char                *Obj, *Type, *Zone;
++    const char          *Obj;
++    char                *Type, *Zone;
+     int			len;
+ 
+     status = (struct afp_status *) data;

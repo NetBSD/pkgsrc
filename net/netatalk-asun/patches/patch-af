@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/07/31 17:36:01 abs Exp $
+
+--- etc/papd/Makefile.orig	Tue May 20 18:35:42 1997
++++ etc/papd/Makefile	Mon Jul 31 14:07:25 2000
+@@ -20,6 +20,7 @@
+ 	fi; \
+         ${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
+ 	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    KRBLIBS="$${KRBLIBS}" KRBLIBDIRS="$${KRBLIBDIRS}" \
+@@ -56,7 +57,7 @@
+ 	    ${CPPFLAGS} -c main.c
+ 
+ install : all
+-	${INSTALL} -c papd ${SBINDIR}
++	${INSTALL} -c papd ${LIBEXECDIR}
+ 
+ clean :
+ 	rm -f a.out core* *.o *.bak *[Ee]rrs tags

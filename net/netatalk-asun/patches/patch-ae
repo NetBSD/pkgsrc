@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/07/31 17:36:01 abs Exp $
+
+--- etc/atalkd/Makefile.orig	Wed Jul  9 20:51:55 1997
++++ etc/atalkd/Makefile	Mon Jul 31 14:07:25 2000
+@@ -23,7 +23,7 @@
+ 	    ${CPPFLAGS} -c config.c
+ 
+ install : all
+-	${INSTALL} -c atalkd ${SBINDIR}
++	${INSTALL} -c atalkd ${LIBEXECDIR}
+ 
+ clean :
+ 	rm -f a.out core* *.o *.bak *[Ee]rrs tags

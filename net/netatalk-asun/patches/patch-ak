@@ -1,0 +1,43 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/07/31 17:36:02 abs Exp $
+
+--- sys/solaris/Makefile.orig	Wed Feb  3 19:52:10 1999
++++ sys/solaris/Makefile	Mon Jul 31 14:07:25 2000
+@@ -48,6 +48,7 @@
+ 	esac; \
+ 	echo "Making $@ for $$PROCESSOR..."; \
+ 	${MAKE} ${MFLAGS} \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    MANDIR="${MANDIR}" DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" \
+@@ -67,6 +68,7 @@
+ ${ALL}:	FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+@@ -91,6 +93,8 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 	    < ../../rc.atalk.sysv > /etc/init.d/atalk
+ 	chmod 744 /etc/init.d/atalk
+ 	-ln -s ../init.d/atalk /etc/rc2.d/S79atalk
+@@ -98,11 +102,13 @@
+ 
+ install :
+ 	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR} ${LIBDIR}
++	-mkdir ${LIBEXECDIR} ${EXAMPLEDIR}
+ 	sed -e s@:BINDIR:@${BINDIR}@ < ../../lp2pap.sh > ${RESDIR}/lp2pap.sh
+ 	chmod 744 ${RESDIR}/lp2pap.sh
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
