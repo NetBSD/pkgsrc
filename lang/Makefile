@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/04/12 18:38:18 jlam Exp $
+# $NetBSD: Makefile,v 1.28 1999/07/09 05:46:45 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -54,7 +54,7 @@
     SUBDIR += py-html-docs
     SUBDIR += python
 #    SUBDIR += rexx-imc
-#    SUBDIR += ruby
+    SUBDIR += ruby
     SUBDIR += scheme48
 #    SUBDIR += schemetoc
 #    SUBDIR += scm
