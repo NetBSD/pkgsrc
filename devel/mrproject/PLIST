@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/11/30 14:25:58 grant Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2003/03/07 00:12:36 grant Exp $
 bin/mrproject
 bin/mrproject-engine
 bin/run-mrproject
@@ -17,9 +17,6 @@ lib/mrproject/components/libnetwork-component.so
 lib/mrproject/components/libresource-component.a
 lib/mrproject/components/libresource-component.la
 lib/mrproject/components/libresource-component.so
-lib/mrproject/components/libsend-component.a
-lib/mrproject/components/libsend-component.la
-lib/mrproject/components/libsend-component.so
 lib/mrproject/components/libtask-dialog-component.a
 lib/mrproject/components/libtask-dialog-component.la
 lib/mrproject/components/libtask-dialog-component.so
@@ -34,7 +31,6 @@ share/gnome/ui/GNOME_MrProject_CalendarComponent.ui
 share/gnome/ui/GNOME_MrProject_Client.ui
 share/gnome/ui/GNOME_MrProject_GanttComponent.ui
 share/gnome/ui/GNOME_MrProject_ResourceComponent.ui
-share/gnome/ui/GNOME_MrProject_SendComponent.ui
 share/idl/GNOME_MrProject.idl
 share/idl/GNOME_MrProject_AllocationManager.idl
 share/idl/GNOME_MrProject_Common.idl
@@ -118,7 +114,6 @@ share/oaf/GNOME_MrProject_MpxFileFilter.oaf
 share/oaf/GNOME_MrProject_NetworkComponent.oaf
 share/oaf/GNOME_MrProject_ProjectEngine.oaf
 share/oaf/GNOME_MrProject_ResourceComponent.oaf
-share/oaf/GNOME_MrProject_SendComponent.oaf
 share/oaf/GNOME_MrProject_TaskDialog.oaf
 share/oaf/GNOME_MrProject_XmlFileFilter.oaf
 share/pixmaps/gnome-application-x-mrproject.png
