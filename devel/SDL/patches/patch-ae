@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2000/10/15 07:39:44 wulf Exp $
 
---- src/audio/SDL_sysaudio.h.orig	Thu Mar 16 16:20:37 2000
-+++ src/audio/SDL_sysaudio.h	Fri Jun 23 03:53:51 2000
-@@ -102,6 +102,9 @@
+--- src/audio/SDL_sysaudio.h.orig	Tue Sep 12 03:52:41 2000
++++ src/audio/SDL_sysaudio.h	Mon Oct  2 13:23:29 2000
+@@ -103,6 +103,9 @@
  #ifdef unix
  extern AudioBootStrap AUDIO_bootstrap;
  #endif
