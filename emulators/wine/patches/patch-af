@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.6 2004/04/09 12:44:22 adam Exp $
+
+--- programs/winetest/util.c.orig	2004-04-09 14:30:40.000000000 +0000
++++ programs/winetest/util.c
+@@ -19,7 +19,6 @@
+  *
+  */
+ #include <windows.h>
+-#include <unistd.h>
+ #include <errno.h>
+ 
+ #include "winetest.h"
