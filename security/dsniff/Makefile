@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2002/09/05 00:13:40 itojun Exp $
+# $NetBSD: Makefile,v 1.12 2003/06/02 01:17:19 jschauma Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.3
 CATEGORIES=	security
 MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
 COMMENT=	password sniffer
 

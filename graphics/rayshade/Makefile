@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/22 15:53:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/02 01:19:14 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/05/26 04:04:11 mph Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://graphics.stanford.edu/pub/rayshade/	\
 		ftp://ftp.princeton.edu/pub/Graphics/rayshade.4.0/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     tech-pkg@netbsd.org
 COMMENT=	Extensible system for creating ray-traced images
 
 DEPENDS+=	urt>=3.1b1nb1:../../graphics/urt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/05/31 16:10:52 thorpej Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 01:19:56 jschauma Exp $
 #
 
 DISTNAME=	simhv210-4
@@ -10,7 +10,7 @@ MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supnik's historical computer simulator
 

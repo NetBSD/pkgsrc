@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/01/05 20:14:24 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:21:02 jschauma Exp $
 
 DISTNAME=	pgsql_perl5-1.9.0
 PKGNAME=	p5-postgresql-1.9.0
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5pgs
 CATEGORIES=	databases devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pg/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.pobox.com/~gbarr/perl-ldap/
 COMMENT=	Perl interface class for PostgreSQL
 

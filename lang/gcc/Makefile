@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2003/05/28 08:59:19 grant Exp $
+# $NetBSD: Makefile,v 1.60 2003/06/02 01:19:04 jschauma Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		2
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 #
 # Synced from patches against main source tree as of 2002-03-28
 #
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
 

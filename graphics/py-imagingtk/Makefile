@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/08 03:57:17 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:19:16 jschauma Exp $
 #
 
 DISTNAME=	Imaging-1.1.3
@@ -6,7 +6,7 @@ PKGNAME=	py20-imagingtk-1.1.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.pythonware.com/downloads/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
 COMMENT=	Tk support for the Python Imaging Library (PIL)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/05 16:47:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:17:04 jschauma Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.obtuse.com/pub/smtpd/
 
 PATCHFILES=	patch-smtpd-2.0-RBL.gz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.obtuse.com/smtpd.html
 COMMENT=	Store and forward SMTP proxy
 

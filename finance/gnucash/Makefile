@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/05/30 16:19:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2003/06/02 01:19:50 jschauma Exp $
 
 DISTNAME=		gnucash-1.8.1
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 

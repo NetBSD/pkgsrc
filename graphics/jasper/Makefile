@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/11/13 14:24:21 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:19:24 jschauma Exp $
 #
 
 DISTNAME=		jasper-1.600.0
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://www.ece.uvic.ca/~mdadams/jasper/software/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.ece.uvic.ca/~mdadams/jasper/
 COMMENT=		software-based reference implementation of the JPEG-2000 codec
 

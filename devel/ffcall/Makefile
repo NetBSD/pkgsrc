@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/05/11 07:12:49 jmc Exp $
+# $NetBSD: Makefile,v 1.12 2003/06/02 01:20:51 jschauma Exp $
 
 DISTNAME=	ffcall-1.8d
 PKGNAME=	ffcall-1.8.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=libs/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.haible.de/bruno/packages-ffcall.html
 COMMENT=	foreign function call libraries
 

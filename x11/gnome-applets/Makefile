@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/05/05 14:41:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2003/06/02 01:15:44 jschauma Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
@@ -7,7 +7,7 @@ CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/1.4/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Applets for GNOME
 

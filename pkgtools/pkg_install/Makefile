@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2003/04/11 14:33:49 grant Exp $
+# $NetBSD: Makefile,v 1.72 2003/06/02 01:17:33 jschauma Exp $
 
 # Notes to package maintainers:
 #
@@ -13,7 +13,7 @@ CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
 COMMENT=		NetBSD-current's pkg_* tools
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:04 jschauma Exp $
 #
 
 DISTNAME=	LaBrea2_3
@@ -8,7 +8,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://www.hackbusters.net/LaBrea/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.hackbusters.net/LaBrea/
 COMMENT=	builds tarpits/honeypots for scanners
 

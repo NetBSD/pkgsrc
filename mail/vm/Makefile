@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/05/17 18:28:13 jtb Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/02 01:18:36 jschauma Exp $
 
 DISTNAME=	vm-7.15
 CATEGORIES=	mail
@@ -15,7 +15,7 @@ MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
 		ftp://ftp.surfnet.nl/pub/mail/vm/ \
 		http://ftp.algx.net/pub/packages/mail/vm/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.wonderworks.com/vm/
 COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/27 09:35:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:16 jschauma Exp $
 #
 
 DISTNAME=	gnome-dirs-${GNOME_DIRS_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	# empty
 COMMENT=	Shared GTK/GNOME (v1 and v2) directories
 

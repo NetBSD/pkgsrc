@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:33 jschauma Exp $
 
 DISTNAME=	xvier
 PKGNAME_MASTER=	xvier-1.0
@@ -9,7 +9,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/strategy/}
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 #HOMEPAGE=
 COMMENT=	four-in-a-row game
 

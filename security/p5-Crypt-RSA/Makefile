@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/27 21:20:40 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:17:10 jschauma Exp $
 #
 
 DISTNAME=		Crypt-RSA-1.47
@@ -8,7 +8,7 @@ SVR4_PKGNAME=		p5rsa
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module of the RSA public key algorithm
 

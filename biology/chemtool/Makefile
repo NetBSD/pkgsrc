@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2003/05/02 11:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:21:29 jschauma Exp $
 
 DISTNAME=		chemtool-1.4.1
 PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		http://www.uni-ulm.de/~s_tvolk/chemtool/src/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.uni-ulm.de/~s_tvolk/chemtool.html
 COMMENT=		Program for drawing organic molecules
 

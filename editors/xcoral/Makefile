@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/05 17:30:54 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:20:02 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/26 02:16:00 steve Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=		xcoral-3.2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=editors/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Multiwindow mouse-based text editor for X
 
 USE_X11BASE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/05 13:09:28 salo Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/02 01:20:11 jschauma Exp $
 
 DISTNAME=	zlib-1.1.4
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		ftp://swrinde.nde.swri.edu/pub/png/src/ \
 		http://www.gzip.org/zlib/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gzip.org/zlib/
 COMMENT=	General purpose data compression library
 
