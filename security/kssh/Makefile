@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/05/07 01:14:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/28 13:18:11 markd Exp $
 #
 
 DISTNAME=	kssh-0.7
 PKGREVISION=	7
-CATEGORIES=	security
+CATEGORIES=	security kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kssh/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -11,9 +11,10 @@ HOMEPAGE=	http://kssh.sourceforge.net/
 COMMENT=	KDE Front-end to SSH
 
 USE_BUILDLINK3=	YES
-GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	YES
+GNU_CONFIGURE=	YES
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../net/kdenetwork3/buildlink3.mk"
