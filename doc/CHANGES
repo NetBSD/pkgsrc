@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.740 2002/12/09 19:46:24 wiz Exp $
+$NetBSD: CHANGES,v 1.741 2002/12/09 21:39:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2354,6 +2354,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Added bbappconf-0.0.1.0.3 [jschauma 2002-08-04]
 	Added psi-0.8.6 [jdolecek 2002-08-04]
 	Updated jhead to 1.8 [jdolecek 2002-08-04]
+	Updated suse64_base to 6.4nb6 [grant 2002-08-05]
 	Updated bozohttpd to 5.13 [wiz 2002-08-05]
 	Updated citrix_ica to 6.30.1050 [dmcmahill 2002-08-04]
 	Added pscan-1.3 [cjs 2002-08-05]
@@ -3882,3 +3883,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-Text-CSV-Hash to 0.16 [abs 2002-12-09]
 	Added grhino-0.7.0 [wiz 2002-12-09]
 	Updated automake to 1.7.2 [wiz 2002-12-09]
+	Updated suse64_base to 6.4nb7 [tron 2002-12-09]
+	Updated suse_base to 7.3nb2 [tron 2002-12-09]
