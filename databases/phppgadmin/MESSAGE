@@ -1,8 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/07/23 12:13:35 agc Exp $
+$NetBSD: MESSAGE,v 1.2 2002/08/22 22:23:51 hubertf Exp $
 
 Copy requiered files from ${PKG_PREFIX}/share/phppgadmin to your web 
 space. Do not edit "config.inc.php-dist", copy it to "config.inc.php" and 
 configure it for your needs. Remember that PHP should be configured to 
 have "magic_quotes=on".
+
+You may want to set the following variables in config.inc.php:
+
+	$cfgDefaultDB                       = "mydb";
+	$cfgSuperUser                       = "pgsql";
+	$cfgServers[1]['host']              = 'localhost';
+	$cfgServers[1]['user']              = 'pgsql'
+
 ===========================================================================
