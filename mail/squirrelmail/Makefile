@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2001/03/14 15:33:47 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/30 05:03:24 jlam Exp $
 
-DISTNAME=	squirrelmail-1.0.3
+DISTNAME=	squirrelmail-1.0.6
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/} \
 		http://nerf-herder.net/squirrel/ \
@@ -17,12 +17,18 @@ USE_PERL5=	# defined
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
+.include "../../mk/bsd.prefs.mk"
 
-CONFDIR=	${PREFIX}/etc/httpd
-SMDIR=		${PREFIX}/share/squirrelmail
-MESSAGE_SUBST+=	SMDIR=${SMDIR}
+APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+BUILD_DEFS+=		APACHE_SYSCONFDIR
+MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+
+EGDIR=			${PREFIX}/share/examples/squirrelmail
+SMDIR=			${PREFIX}/share/squirrelmail
+MESSAGE_SUBST+=		SMDIR=${SMDIR}
+
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
 
 post-extract:
 	cd ${WRKSRC};							\
@@ -39,13 +45,15 @@ pre-install:
 	${SED}	-e "s|@SMDIR@|${SMDIR}|g"				\
 		${FILESDIR}/squirrelmail.conf.dist			\
 		> ${WRKDIR}/squirrelmail.conf.dist
-	${SED}	-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
+	${SED}	-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+		-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
 		-e "s|@TRUE@|${TRUE}|g"					\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
+	${SED}	-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+		-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@CHGRP@|${CHGRP}|g"				\
 		-e "s|@CHMOD@|${CHMOD}|g"				\
@@ -56,8 +64,8 @@ pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
-	${INSTALL_DATA_DIR} ${CONFDIR} ${SMDIR}
-	cd ${WRKDIR}; ${INSTALL_DATA} squirrelmail.conf.dist ${CONFDIR}
+	${INSTALL_DATA_DIR} ${EGDIR} ${SMDIR}
+	cd ${WRKDIR}; ${INSTALL_DATA} squirrelmail.conf.dist ${EGDIR}
 	${CP} -R ${WRKSRC}/* ${SMDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${CHMOD} -R a-w ${SMDIR}

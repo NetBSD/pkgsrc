@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2001/02/12 15:15:44 jlam Exp $
+# $NetBSD: INSTALL,v 1.3 2001/04/30 05:03:26 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -15,7 +15,9 @@ MKDIR="@MKDIR@"
 USER=nobody
 GROUP=nobody
 
-CONFDIR=${PKG_PREFIX}/etc/httpd
+APACHE_SYSCONFDIR=@APACHE_SYSCONFDIR@
+SAMPLECONFDIR=${PKG_PREFIX}/share/examples/squirrelmail
+CONFDIR=${APACHE_SYSCONFDIR}
 SMDIR=${PKG_PREFIX}/@SMDIR@
 DATADIR=/var/spool/squirrelmail
 
@@ -43,7 +45,7 @@ POST-INSTALL)
 		${CHMOD} 644 ${FILE}
 	fi
 	FILE=${CONFDIR}/squirrelmail.conf
-	SAMPLEFILE=${FILE}.dist
+	SAMPLEFILE=${SAMPLECONFDIR}/squirrelmail.conf.dist
 	if [ -f ${FILE} ]
 	then
 		echo "    ${FILE} already exists"

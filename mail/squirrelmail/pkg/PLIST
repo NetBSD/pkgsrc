@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2001/03/14 15:33:48 jlam Exp $
-etc/httpd/squirrelmail.conf.dist
+@comment $NetBSD: PLIST,v 1.7 2001/04/30 05:03:26 jlam Exp $
+share/examples/squirrelmail/squirrelmail.conf.dist
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
 share/squirrelmail/ChangeLog
@@ -92,6 +92,15 @@ share/squirrelmail/help/fr/options.hlp
 share/squirrelmail/help/fr/read_mail.hlp
 share/squirrelmail/help/fr/search.hlp
 share/squirrelmail/help/index.php
+share/squirrelmail/help/it/FAQ.hlp
+share/squirrelmail/help/it/addresses.hlp
+share/squirrelmail/help/it/basic.hlp
+share/squirrelmail/help/it/compose.hlp
+share/squirrelmail/help/it/folders.hlp
+share/squirrelmail/help/it/main_folder.hlp
+share/squirrelmail/help/it/options.hlp
+share/squirrelmail/help/it/read_mail.hlp
+share/squirrelmail/help/it/search.hlp
 share/squirrelmail/help/ko/FAQ.hlp
 share/squirrelmail/help/ko/addresses.hlp
 share/squirrelmail/help/ko/basic.hlp
@@ -119,6 +128,15 @@ share/squirrelmail/help/ru/main_folder.hlp
 share/squirrelmail/help/ru/options.hlp
 share/squirrelmail/help/ru/read_mail.hlp
 share/squirrelmail/help/ru/search.hlp
+share/squirrelmail/help/sv/FAQ.hlp
+share/squirrelmail/help/sv/addresses.hlp
+share/squirrelmail/help/sv/basic.hlp
+share/squirrelmail/help/sv/compose.hlp
+share/squirrelmail/help/sv/folders.hlp
+share/squirrelmail/help/sv/main_folder.hlp
+share/squirrelmail/help/sv/options.hlp
+share/squirrelmail/help/sv/read_mail.hlp
+share/squirrelmail/help/sv/search.hlp
 share/squirrelmail/images/down_pointer.gif
 share/squirrelmail/images/index.php
 share/squirrelmail/images/sm_logo.jpg
@@ -204,6 +222,7 @@ share/squirrelmail/src/redirect.php
 share/squirrelmail/src/right_main.php
 share/squirrelmail/src/search.php
 share/squirrelmail/src/signout.php
+share/squirrelmail/src/validate.php
 share/squirrelmail/src/webmail.php
 share/squirrelmail/themes/README.themes
 share/squirrelmail/themes/black_bean_burrito_theme.php
@@ -271,9 +290,11 @@ share/squirrelmail/themes/slashdot_theme.php
 @dirrm share/squirrelmail/locale/ca
 @dirrm share/squirrelmail/locale
 @dirrm share/squirrelmail/images
+@dirrm share/squirrelmail/help/sv
 @dirrm share/squirrelmail/help/ru
 @dirrm share/squirrelmail/help/pl
 @dirrm share/squirrelmail/help/ko
+@dirrm share/squirrelmail/help/it
 @dirrm share/squirrelmail/help/fr
 @dirrm share/squirrelmail/help/fi
 @dirrm share/squirrelmail/help/en
@@ -283,3 +304,4 @@ share/squirrelmail/themes/slashdot_theme.php
 @dirrm share/squirrelmail/functions
 @dirrm share/squirrelmail/doc
 @dirrm share/squirrelmail/data
+@dirrm share/examples/squirrelmail
