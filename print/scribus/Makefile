@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:50 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/18 00:14:48 snj Exp $
 
 DISTNAME=	scribus-1.1.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://web2.altmuehlnet.de/fschmid/
 COMMENT=	Publishing layout with graphical interface
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_GNU_TOOLS+=		make
 PTHREAD_OPTS+=		require
@@ -26,11 +26,11 @@ CONFIGURE_ARGS+=        --with-qt-dir=${QTDIR} \
 			--with-extra-libs=${LOCALBASE}/lib \
 			--with-extra-includes=${LOCALBASE}/include
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../x11/qt3-tools/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
