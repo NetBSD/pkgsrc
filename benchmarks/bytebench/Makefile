@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/28 22:03:05 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/27 00:53:12 heinz Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		bytebench-4.1.0
@@ -27,7 +27,7 @@ post-patch:
 	${CHMOD} +x ${WRKSRC}/run-byte
 
 pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/bytebench

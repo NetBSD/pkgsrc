@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/22 08:24:31 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/27 00:53:12 heinz Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -28,7 +28,7 @@ HTMLDIR=	${PREFIX}/share/doc/html/stlport
 
 pre-install:
 	cd ${WRKSRC}/stlport && ${RM} -rf BC50 config/new_compiler old_hp
-	${FIND} ${WRKSRC}/stlport -name "*.orig" | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC}/stlport -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw stlport ${PREFIX}/include

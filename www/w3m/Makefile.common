@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/01/20 12:28:00 agc Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/01/27 00:53:10 heinz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -143,7 +143,7 @@ post-extract:
 #	@${LN} ${LIBWC_WRKSRC} ${WRKSRC}/libwc
 
 post-patch:
-	@${FIND} ${WRKSRC} -type f -name '*.orig' | ${XARGS} ${RM}
+	@${FIND} ${WRKSRC} -type f -name '*.orig' -print | ${XARGS} ${RM}
 
 # do not look at previous configuration
 do-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/01/24 01:33:49 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/01/27 00:53:10 heinz Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 CATEGORIES+=	graphics
@@ -26,7 +26,7 @@ GCC_REQD=		2.95.3
 
 .if !target(post-patch)
 post-patch:
-	@for f in `${FIND} ${WRKSRC} -name '*.[ch]'`; do		\
+	@for f in `${FIND} ${WRKSRC} -name '*.[ch]' -print`; do		\
 		${SED} -e "s|<malloc.h>|<stdlib.h>|g" $$f > $$f.patch	\
 		&& ${MV} $$f.patch $$f;					\
 	done

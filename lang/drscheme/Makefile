@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/27 00:53:11 heinz Exp $
 #
 
 DISTNAME=		plt.src.x
@@ -46,7 +46,7 @@ post-patch:
 	@${MV} -f ${WRKSRC}/mred/Makefile.in ${WRKSRC}/foo
 	@${SED} -e 's|@X11PREFIX@|${X11PREFIX}|' < ${WRKSRC}/foo > ${WRKSRC}/mred/Makefile.in
 	@${RM} -f ${WRKSRC}/foo
-	@${FIND} ${WRKDIR} -name '*.orig' | ${XARGS} ${RM} -f
+	@${FIND} ${WRKDIR} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/plt/collects

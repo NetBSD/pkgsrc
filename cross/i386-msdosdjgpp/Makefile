@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 12:10:55 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/27 00:53:12 heinz Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -35,7 +35,7 @@ post-extract:
 		for file in ${DJGPP_FILES}; do \
 			unzip -Loq ${_DISTDIR}/$$file; \
 		done; \
-		for file in `${FIND} include -type f`; do \
+		for file in `${FIND} include -type f -print`; do \
 			${CAT} $$file | col >$$file.new; \
 			${MV} -f $$file.new $$file; \
 		done

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/23 15:06:59 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/27 00:53:11 heinz Exp $
 #
 .include "../canna/Makefile.common"
 
@@ -18,7 +18,7 @@ post-patch:
 	@${MV} ${WRKSRC}/Canna.conf ${WRKSRC}/Canna.conf.orig
 	@${SED} -e 's|\(DicDir.*=\).*|\1${IMDICTDIR}/canna|' \
 		${WRKSRC}/Canna.conf.orig > ${WRKSRC}/Canna.conf
-	@for file in `${FIND} ${WRKSRC}/dic/ideo -name Imakefile`; do \
+	@for file in `${FIND} ${WRKSRC}/dic/ideo -name Imakefile -print`; do \
 		${MV} $$file $$file.orig;	\
 		${SED} ${CANNA_CMD_SED_SCRIPT} $$file.orig > $$file;	\
 	 done

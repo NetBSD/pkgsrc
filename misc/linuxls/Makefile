@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/05/31 09:14:50 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/27 00:53:11 heinz Exp $
 #
 
 DISTNAME=	fileutils-3.12
@@ -20,7 +20,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 GNU_CONFIGURE=	yes
 
 post-patch:
-	@${FIND} ${WRKSRC} -name Makefile.in | \
+	@${FIND} ${WRKSRC} -name Makefile.in -print | \
 	while read f; do \
 		${CP} $$f $${f}.orig; \
 		${SED} -e 's|^\(etcdir = \).*$$|\1${PKG_SYSCONFDIR}|g' $${f}.orig >$$f; \

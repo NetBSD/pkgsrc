@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 15:13:19 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/27 00:53:10 heinz Exp $
 
 DISTNAME=       #
 PKGNAME=	dict-data-1.8.0
@@ -54,7 +54,7 @@ do-build:
 		(cd ${WRKDIR}/$$d; \
 		    ${MAKE_PROGRAM} db); \
 	done
-	${FIND} ${WRKDIR} -name '*.dict' | \
+	${FIND} ${WRKDIR} -name '*.dict' -print | \
 	while read f; do \
 		if [ ! -f $${f}.dz ]; then \
 			${LOCALBASE}/bin/dictzip $$f; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/11/21 09:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/27 00:53:10 heinz Exp $
 
 DISTNAME=	ethemes-0.1
 PKGREVISION=	2
@@ -45,8 +45,8 @@ do-install:
 .endfor
 .for DIR in Absolute_E ApplePlatinum FinalE
 	cd ${PREFIX}/${E_DATADIR}/${DIR} \
-		&& ${CHMOD} go+rx `${FIND} . -type d` \
-		&& ${CHMOD} go+r `${FIND} . -type f`
+		&& ${CHMOD} go+rx `${FIND} . -type d -print` \
+		&& ${CHMOD} go+r `${FIND} . -type f -print`
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
