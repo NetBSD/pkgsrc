@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/01/10 17:47:38 cjep Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/01/19 10:34:26 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -101,9 +101,11 @@ buildlink-ncurses-extra-includes:
 .PHONY: buildlink-ncurses-curses-h
 buildlink-ncurses-curses-h:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${BUILDLINK_DIR}/include/curses.h ]; then		\
-		${ECHO_BUILDLINK_MSG} "Linking curses.h to ncurses.h in ${BUILDLINK_DIR}."; \
-		${LN} -s ncurses.h ${BUILDLINK_DIR}/include/curses.h;	\
+	if [ ! -f ${BUILDLINK_DIR}/include/curses.h -a			\
+	     -f ${BUILDLINK_PREFIX.ncurses}/include/ncurses.h ]; then	\
+		${ECHO_BUILDLINK_MSG} "Linking curses.h to ncurses.h.";	\
+		${LN} -s ${BUILDLINK_PREFIX.ncurses}/include/ncurses.h	\
+			${BUILDLINK_DIR}/include/curses.h;		\
 	fi
 .endif	# NCURSES_BUILDLINK3_MK
 
