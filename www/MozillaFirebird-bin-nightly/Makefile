@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/17 03:10:42 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/23 03:50:51 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -56,7 +56,7 @@ do-install:
 		${PREFIX}/bin/MozillaFirebird-${PLATFORM}
 	@${FIND} ${MOZILLA_LIB} -type f -print \
 		| ${XARGS} ${CHMOD} a+r
-	@${FIND} ${MOZILLA_LIB} \( -type f -o -perm +x \) -print \
+	@${FIND} ${MOZILLA_LIB} \( -type f -o -perm -u+x \) -print \
 		| ${XARGS} ${CHMOD} a+rx
 	@${FIND} ${MOZILLA_LIB} -type d -print \
 		| ${XARGS} ${CHMOD} a+rx
