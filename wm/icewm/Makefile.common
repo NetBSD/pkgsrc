@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2003/01/09 20:12:01 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.18 2003/04/27 12:44:29 cjep Exp $
 
 DISTNAME=		icewm-1.2.0
 CATEGORIES=		x11 wm
@@ -10,6 +10,7 @@ HOMEPAGE=		http://icewm.sourceforge.net/
 GNU_CONFIGURE=		# defined
 USE_X11BASE=		# defined
 USE_GMAKE=		# defined
+USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined
 
 DISTINFO_FILE=		${.CURDIR}/../../wm/icewm/distinfo
