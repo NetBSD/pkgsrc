@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1023 2002/07/31 14:48:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1024 2002/08/01 13:25:26 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -97,7 +97,11 @@ ${_JDK_DEPMETHOD}+=	sun-jdk14-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
 .  elif ${PKG_JVM} == "sun-jdk13"
 _JAVA_PKGBASE=		sun-jdk13
+.    if ${OPSYS} == "Darwin"
+_JAVA_PREFIX_DEFAULT=	/usr
+.    else
 _JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
+.    endif
 _JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk13-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
@@ -114,7 +118,11 @@ DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
 _JAVA_PKGBASE=		sun-jdk1[34]
+.    if ${OPSYS} == "Darwin"
+_JAVA_PREFIX_DEFAULT=	/usr
+.    else
 _JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
+.    endif
 _JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre13
