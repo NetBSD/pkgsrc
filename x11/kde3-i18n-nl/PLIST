@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/21 16:02:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/12/10 06:34:56 markd Exp $
 share/doc/kde/HTML/nl/amor/common
 share/doc/kde/HTML/nl/amor/index.cache.bz2
 share/doc/kde/HTML/nl/amor/index.docbook
+share/doc/kde/HTML/nl/ark/common
+share/doc/kde/HTML/nl/ark/index.cache.bz2
+share/doc/kde/HTML/nl/ark/index.docbook
 share/doc/kde/HTML/nl/artsbuilder/digitalaudio.docbook
 share/doc/kde/HTML/nl/artsbuilder/gui.docbook
+share/doc/kde/HTML/nl/atlantik/common
+share/doc/kde/HTML/nl/atlantik/index.cache.bz2
+share/doc/kde/HTML/nl/atlantik/index.docbook
 share/doc/kde/HTML/nl/common/1.png
 share/doc/kde/HTML/nl/common/10.png
 share/doc/kde/HTML/nl/common/2.png
@@ -55,6 +61,12 @@ share/doc/kde/HTML/nl/common/web-docbottom.png
 share/doc/kde/HTML/nl/common/web-doctop.png
 share/doc/kde/HTML/nl/common/x11-license.html
 share/doc/kde/HTML/nl/common/xml.dcl
+share/doc/kde/HTML/nl/juk/common
+share/doc/kde/HTML/nl/juk/index.cache.bz2
+share/doc/kde/HTML/nl/juk/index.docbook
+share/doc/kde/HTML/nl/kaboodle/common
+share/doc/kde/HTML/nl/kaboodle/index.cache.bz2
+share/doc/kde/HTML/nl/kaboodle/index.docbook
 share/doc/kde/HTML/nl/kaddressbook/common
 share/doc/kde/HTML/nl/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/nl/kaddressbook/index.docbook
@@ -65,6 +77,9 @@ share/doc/kde/HTML/nl/kalzium/screenshot1.png
 share/doc/kde/HTML/nl/kalzium/screenshot2.png
 share/doc/kde/HTML/nl/kalzium/screenshot3.png
 share/doc/kde/HTML/nl/kalzium/settings.png
+share/doc/kde/HTML/nl/kamera/common
+share/doc/kde/HTML/nl/kamera/index.cache.bz2
+share/doc/kde/HTML/nl/kamera/index.docbook
 share/doc/kde/HTML/nl/kandy/common
 share/doc/kde/HTML/nl/kandy/index.cache.bz2
 share/doc/kde/HTML/nl/kandy/index.docbook
@@ -72,6 +87,9 @@ share/doc/kde/HTML/nl/karm/common
 share/doc/kde/HTML/nl/karm/index.cache.bz2
 share/doc/kde/HTML/nl/karm/index.docbook
 share/doc/kde/HTML/nl/karm/screenshot.png
+share/doc/kde/HTML/nl/kasteroids/common
+share/doc/kde/HTML/nl/kasteroids/index.cache.bz2
+share/doc/kde/HTML/nl/kasteroids/index.docbook
 share/doc/kde/HTML/nl/kate-plugins/common
 share/doc/kde/HTML/nl/kate-plugins/filetemplates.docbook
 share/doc/kde/HTML/nl/kate-plugins/htmltools.docbook
@@ -95,18 +113,42 @@ share/doc/kde/HTML/nl/kate/menus.docbook
 share/doc/kde/HTML/nl/kate/part.docbook
 share/doc/kde/HTML/nl/kate/plugins.docbook
 share/doc/kde/HTML/nl/kate/regular-expressions.docbook
+share/doc/kde/HTML/nl/katomic/common
+share/doc/kde/HTML/nl/katomic/index.cache.bz2
+share/doc/kde/HTML/nl/katomic/index.docbook
 share/doc/kde/HTML/nl/kbabel/catman.docbook
 share/doc/kde/HTML/nl/kbabel/faq.docbook
 share/doc/kde/HTML/nl/kbabel/kbabeldict.docbook
+share/doc/kde/HTML/nl/kbackgammon/common
+share/doc/kde/HTML/nl/kbackgammon/index.cache.bz2
+share/doc/kde/HTML/nl/kbackgammon/index.docbook
+share/doc/kde/HTML/nl/kbattleship/common
+share/doc/kde/HTML/nl/kbattleship/index.cache.bz2
+share/doc/kde/HTML/nl/kbattleship/index.docbook
+share/doc/kde/HTML/nl/kblackbox/common
+share/doc/kde/HTML/nl/kblackbox/index.cache.bz2
+share/doc/kde/HTML/nl/kblackbox/index.docbook
+share/doc/kde/HTML/nl/kbounce/common
+share/doc/kde/HTML/nl/kbounce/index.cache.bz2
+share/doc/kde/HTML/nl/kbounce/index.docbook
+share/doc/kde/HTML/nl/kbounce/jezball_corridor1.png
+share/doc/kde/HTML/nl/kbounce/jezball_corridor2.png
+share/doc/kde/HTML/nl/kbounce/jezball_newWall.png
 share/doc/kde/HTML/nl/kbruch/common
 share/doc/kde/HTML/nl/kbruch/index.cache.bz2
 share/doc/kde/HTML/nl/kbruch/index.docbook
 share/doc/kde/HTML/nl/kbugbuster/common
 share/doc/kde/HTML/nl/kbugbuster/index.cache.bz2
 share/doc/kde/HTML/nl/kbugbuster/index.docbook
+share/doc/kde/HTML/nl/kcalc/common
+share/doc/kde/HTML/nl/kcalc/index.cache.bz2
+share/doc/kde/HTML/nl/kcalc/index.docbook
 share/doc/kde/HTML/nl/kcharselect/common
 share/doc/kde/HTML/nl/kcharselect/index.cache.bz2
 share/doc/kde/HTML/nl/kcharselect/index.docbook
+share/doc/kde/HTML/nl/kcoloredit/common
+share/doc/kde/HTML/nl/kcoloredit/index.cache.bz2
+share/doc/kde/HTML/nl/kcoloredit/index.docbook
 share/doc/kde/HTML/nl/kcontrol/arts/common
 share/doc/kde/HTML/nl/kcontrol/arts/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/arts/index.docbook
@@ -190,6 +232,9 @@ share/doc/kde/HTML/nl/kcontrol/kthememgr/index.docbook
 share/doc/kde/HTML/nl/kcontrol/kwindecoration/common
 share/doc/kde/HTML/nl/kcontrol/kwindecoration/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kwindecoration/index.docbook
+share/doc/kde/HTML/nl/kcontrol/lanbrowser/common
+share/doc/kde/HTML/nl/kcontrol/lanbrowser/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/lanbrowser/index.docbook
 share/doc/kde/HTML/nl/kcontrol/laptop/common
 share/doc/kde/HTML/nl/kcontrol/laptop/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/laptop/index.docbook
@@ -222,9 +267,18 @@ share/doc/kde/HTML/nl/kcontrol/windowmanagement/index.docbook
 share/doc/kde/HTML/nl/kcron/common
 share/doc/kde/HTML/nl/kcron/index.cache.bz2
 share/doc/kde/HTML/nl/kcron/index.docbook
+share/doc/kde/HTML/nl/kdat/common
+share/doc/kde/HTML/nl/kdat/index.cache.bz2
+share/doc/kde/HTML/nl/kdat/index.docbook
 share/doc/kde/HTML/nl/kdebugdialog/common
 share/doc/kde/HTML/nl/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/nl/kdebugdialog/index.docbook
+share/doc/kde/HTML/nl/kdelirc/irkick/common
+share/doc/kde/HTML/nl/kdelirc/irkick/index.cache.bz2
+share/doc/kde/HTML/nl/kdelirc/irkick/index.docbook
+share/doc/kde/HTML/nl/kdelirc/kcmlirc/common
+share/doc/kde/HTML/nl/kdelirc/kcmlirc/index.cache.bz2
+share/doc/kde/HTML/nl/kdelirc/kcmlirc/index.docbook
 share/doc/kde/HTML/nl/kdeprint/add-printer-wiz.docbook
 share/doc/kde/HTML/nl/kdeprint/common
 share/doc/kde/HTML/nl/kdeprint/cups-config.docbook
@@ -253,12 +307,30 @@ share/doc/kde/HTML/nl/kdf/kdf_config.png
 share/doc/kde/HTML/nl/keduca/common
 share/doc/kde/HTML/nl/keduca/index.cache.bz2
 share/doc/kde/HTML/nl/keduca/index.docbook
+share/doc/kde/HTML/nl/kenolaba/common
+share/doc/kde/HTML/nl/kenolaba/index.cache.bz2
+share/doc/kde/HTML/nl/kenolaba/index.docbook
+share/doc/kde/HTML/nl/kfind/common
+share/doc/kde/HTML/nl/kfind/index.cache.bz2
+share/doc/kde/HTML/nl/kfind/index.docbook
+share/doc/kde/HTML/nl/kfloppy/common
+share/doc/kde/HTML/nl/kfloppy/index.cache.bz2
+share/doc/kde/HTML/nl/kfloppy/index.docbook
 share/doc/kde/HTML/nl/kfouleggs/common
+share/doc/kde/HTML/nl/kfouleggs/gamescreen.png
 share/doc/kde/HTML/nl/kfouleggs/index.cache.bz2
 share/doc/kde/HTML/nl/kfouleggs/index.docbook
 share/doc/kde/HTML/nl/kgamma/common
 share/doc/kde/HTML/nl/kgamma/index.cache.bz2
 share/doc/kde/HTML/nl/kgamma/index.docbook
+share/doc/kde/HTML/nl/kget/common
+share/doc/kde/HTML/nl/kget/index.cache.bz2
+share/doc/kde/HTML/nl/kget/index.docbook
+share/doc/kde/HTML/nl/kget/kget1.png
+share/doc/kde/HTML/nl/kget/kget2.png
+share/doc/kde/HTML/nl/kget/kget3.png
+share/doc/kde/HTML/nl/kget/kget4.png
+share/doc/kde/HTML/nl/kget/kget5.png
 share/doc/kde/HTML/nl/khangman/common
 share/doc/kde/HTML/nl/khangman/index.cache.bz2
 share/doc/kde/HTML/nl/khangman/index.docbook
@@ -388,6 +460,9 @@ share/doc/kde/HTML/nl/kinfocenter/memory/index.docbook
 share/doc/kde/HTML/nl/kinfocenter/nics/common
 share/doc/kde/HTML/nl/kinfocenter/nics/index.cache.bz2
 share/doc/kde/HTML/nl/kinfocenter/nics/index.docbook
+share/doc/kde/HTML/nl/kinfocenter/opengl/common
+share/doc/kde/HTML/nl/kinfocenter/opengl/index.cache.bz2
+share/doc/kde/HTML/nl/kinfocenter/opengl/index.docbook
 share/doc/kde/HTML/nl/kinfocenter/partitions/common
 share/doc/kde/HTML/nl/kinfocenter/partitions/index.cache.bz2
 share/doc/kde/HTML/nl/kinfocenter/partitions/index.docbook
@@ -462,6 +537,29 @@ share/doc/kde/HTML/nl/kioslave/telnet.docbook
 share/doc/kde/HTML/nl/kioslave/thumbnail.docbook
 share/doc/kde/HTML/nl/kioslave/webdav.docbook
 share/doc/kde/HTML/nl/kioslave/webdavs.docbook
+share/doc/kde/HTML/nl/kiten/common
+share/doc/kde/HTML/nl/kiten/index.cache.bz2
+share/doc/kde/HTML/nl/kiten/index.docbook
+share/doc/kde/HTML/nl/kjots/common
+share/doc/kde/HTML/nl/kjots/index.cache.bz2
+share/doc/kde/HTML/nl/kjots/index.docbook
+share/doc/kde/HTML/nl/kjumpingcube/common
+share/doc/kde/HTML/nl/kjumpingcube/index.cache.bz2
+share/doc/kde/HTML/nl/kjumpingcube/index.docbook
+share/doc/kde/HTML/nl/klatin/adjectives.docbook
+share/doc/kde/HTML/nl/klatin/common
+share/doc/kde/HTML/nl/klatin/index.cache.bz2
+share/doc/kde/HTML/nl/klatin/index.docbook
+share/doc/kde/HTML/nl/klatin/nouns.docbook
+share/doc/kde/HTML/nl/klatin/numbers.docbook
+share/doc/kde/HTML/nl/klatin/pronouns.docbook
+share/doc/kde/HTML/nl/klatin/verbs.docbook
+share/doc/kde/HTML/nl/klettres/common
+share/doc/kde/HTML/nl/klettres/index.cache.bz2
+share/doc/kde/HTML/nl/klettres/index.docbook
+share/doc/kde/HTML/nl/klines/common
+share/doc/kde/HTML/nl/klines/index.cache.bz2
+share/doc/kde/HTML/nl/klines/index.docbook
 share/doc/kde/HTML/nl/klipper/common
 share/doc/kde/HTML/nl/klipper/index.cache.bz2
 share/doc/kde/HTML/nl/klipper/index.docbook
@@ -480,9 +578,28 @@ share/doc/kde/HTML/nl/kmail/index.docbook
 share/doc/kde/HTML/nl/kmail/intro.docbook
 share/doc/kde/HTML/nl/kmail/menus.docbook
 share/doc/kde/HTML/nl/kmail/using-kmail.docbook
+share/doc/kde/HTML/nl/kmathtool/common
+share/doc/kde/HTML/nl/kmathtool/index.cache.bz2
+share/doc/kde/HTML/nl/kmathtool/index.docbook
 share/doc/kde/HTML/nl/kmenuedit/common
 share/doc/kde/HTML/nl/kmenuedit/index.cache.bz2
 share/doc/kde/HTML/nl/kmenuedit/index.docbook
+share/doc/kde/HTML/nl/kmessedwords/common
+share/doc/kde/HTML/nl/kmessedwords/index.cache.bz2
+share/doc/kde/HTML/nl/kmessedwords/index.docbook
+share/doc/kde/HTML/nl/kmessedwords/kmw1.png
+share/doc/kde/HTML/nl/kmessedwords/kmw1bis.png
+share/doc/kde/HTML/nl/kmessedwords/kmw2.png
+share/doc/kde/HTML/nl/kmessedwords/kmw3.png
+share/doc/kde/HTML/nl/kmessedwords/kmw4.png
+share/doc/kde/HTML/nl/kmines/common
+share/doc/kde/HTML/nl/kmines/index.cache.bz2
+share/doc/kde/HTML/nl/kmines/index.docbook
+share/doc/kde/HTML/nl/kmines/kmines1.png
+share/doc/kde/HTML/nl/kmines/kmines2.png
+share/doc/kde/HTML/nl/kmix/common
+share/doc/kde/HTML/nl/kmix/index.cache.bz2
+share/doc/kde/HTML/nl/kmix/index.docbook
 share/doc/kde/HTML/nl/kmoon/common
 share/doc/kde/HTML/nl/kmoon/index.cache.bz2
 share/doc/kde/HTML/nl/kmoon/index.docbook
@@ -503,6 +620,7 @@ share/doc/kde/HTML/nl/kmplot/configuration.docbook
 share/doc/kde/HTML/nl/kmplot/credits.docbook
 share/doc/kde/HTML/nl/kmplot/developer.docbook
 share/doc/kde/HTML/nl/kmplot/edu-logo.png
+share/doc/kde/HTML/nl/kmplot/firststeps.docbook
 share/doc/kde/HTML/nl/kmplot/index.cache.bz2
 share/doc/kde/HTML/nl/kmplot/index.docbook
 share/doc/kde/HTML/nl/kmplot/install.docbook
@@ -599,6 +717,9 @@ share/doc/kde/HTML/nl/konqueror/save-settings.docbook
 share/doc/kde/HTML/nl/konqueror/shortcut1.png
 share/doc/kde/HTML/nl/konqueror/shortcut2.png
 share/doc/kde/HTML/nl/konqueror/sidebar.docbook
+share/doc/kde/HTML/nl/konquest/common
+share/doc/kde/HTML/nl/konquest/index.cache.bz2
+share/doc/kde/HTML/nl/konquest/index.docbook
 share/doc/kde/HTML/nl/konsole/common
 share/doc/kde/HTML/nl/konsole/index.cache.bz2
 share/doc/kde/HTML/nl/konsole/index.docbook
@@ -609,6 +730,10 @@ share/doc/kde/HTML/nl/konsolekalendar/index.docbook
 share/doc/kde/HTML/nl/kontact/common
 share/doc/kde/HTML/nl/kontact/index.cache.bz2
 share/doc/kde/HTML/nl/kontact/index.docbook
+share/doc/kde/HTML/nl/kopete/common
+share/doc/kde/HTML/nl/kopete/index.cache.bz2
+share/doc/kde/HTML/nl/kopete/index.docbook
+share/doc/kde/HTML/nl/kopete/menus.docbook
 share/doc/kde/HTML/nl/korganizer/common
 share/doc/kde/HTML/nl/korganizer/exchange-plugin.docbook
 share/doc/kde/HTML/nl/korganizer/group-scheduling.docbook
@@ -618,9 +743,30 @@ share/doc/kde/HTML/nl/korganizer/outlook-to-vcalendar.docbook
 share/doc/kde/HTML/nl/korn/common
 share/doc/kde/HTML/nl/korn/index.cache.bz2
 share/doc/kde/HTML/nl/korn/index.docbook
+share/doc/kde/HTML/nl/kpackage/bsdloc.png
+share/doc/kde/HTML/nl/kpackage/common
+share/doc/kde/HTML/nl/kpackage/debaptloc.png
+share/doc/kde/HTML/nl/kpackage/debloc.png
+share/doc/kde/HTML/nl/kpackage/handle.png
+share/doc/kde/HTML/nl/kpackage/index.cache.bz2
+share/doc/kde/HTML/nl/kpackage/index.docbook
+share/doc/kde/HTML/nl/kpackage/install.png
+share/doc/kde/HTML/nl/kpackage/left.png
+share/doc/kde/HTML/nl/kpackage/right-change.png
+share/doc/kde/HTML/nl/kpackage/right-files.png
+share/doc/kde/HTML/nl/kpackage/right-prop.png
+share/doc/kde/HTML/nl/kpackage/rpmloc.png
+share/doc/kde/HTML/nl/kpackage/slackloc.png
+share/doc/kde/HTML/nl/kpackage/uninstall.png
 share/doc/kde/HTML/nl/kpager/common
 share/doc/kde/HTML/nl/kpager/index.cache.bz2
 share/doc/kde/HTML/nl/kpager/index.docbook
+share/doc/kde/HTML/nl/kpat/common
+share/doc/kde/HTML/nl/kpat/index.cache.bz2
+share/doc/kde/HTML/nl/kpat/index.docbook
+share/doc/kde/HTML/nl/kpdf/common
+share/doc/kde/HTML/nl/kpdf/index.cache.bz2
+share/doc/kde/HTML/nl/kpdf/index.docbook
 share/doc/kde/HTML/nl/kpercentage/answer.png
 share/doc/kde/HTML/nl/kpercentage/commands.docbook
 share/doc/kde/HTML/nl/kpercentage/common
@@ -641,6 +787,9 @@ share/doc/kde/HTML/nl/kpilot/faq.docbook
 share/doc/kde/HTML/nl/kpilot/index.cache.bz2
 share/doc/kde/HTML/nl/kpilot/index.docbook
 share/doc/kde/HTML/nl/kpilot/sync.docbook
+share/doc/kde/HTML/nl/ksame/common
+share/doc/kde/HTML/nl/ksame/index.cache.bz2
+share/doc/kde/HTML/nl/ksame/index.docbook
 share/doc/kde/HTML/nl/ksnake/common
 share/doc/kde/HTML/nl/ksnake/index.cache.bz2
 share/doc/kde/HTML/nl/ksnake/index.docbook
@@ -749,6 +898,9 @@ share/doc/kde/HTML/nl/kstars/zenith.docbook
 share/doc/kde/HTML/nl/ksysguard/common
 share/doc/kde/HTML/nl/ksysguard/index.cache.bz2
 share/doc/kde/HTML/nl/ksysguard/index.docbook
+share/doc/kde/HTML/nl/ksysv/common
+share/doc/kde/HTML/nl/ksysv/index.cache.bz2
+share/doc/kde/HTML/nl/ksysv/index.docbook
 share/doc/kde/HTML/nl/kteatime/common
 share/doc/kde/HTML/nl/kteatime/index.cache.bz2
 share/doc/kde/HTML/nl/kteatime/index.docbook
@@ -761,12 +913,29 @@ share/doc/kde/HTML/nl/ktouch/index.docbook
 share/doc/kde/HTML/nl/ktouch/screenshot1.png
 share/doc/kde/HTML/nl/ktouch/screenshot2.png
 share/doc/kde/HTML/nl/ktouch/screenshot3.png
+share/doc/kde/HTML/nl/kturtle/common
+share/doc/kde/HTML/nl/kturtle/getting-started.docbook
+share/doc/kde/HTML/nl/kturtle/glossary.docbook
+share/doc/kde/HTML/nl/kturtle/index.cache.bz2
+share/doc/kde/HTML/nl/kturtle/index.docbook
+share/doc/kde/HTML/nl/kturtle/mainwindow.png
+share/doc/kde/HTML/nl/kturtle/mainwindow_flower_nrs.png
+share/doc/kde/HTML/nl/kturtle/programming-reference.docbook
+share/doc/kde/HTML/nl/kturtle/translator-guide.docbook
+share/doc/kde/HTML/nl/kturtle/using-kturtle.docbook
+share/doc/kde/HTML/nl/kturtle/wrapping.png
+share/doc/kde/HTML/nl/kuickshow/common
+share/doc/kde/HTML/nl/kuickshow/index.cache.bz2
+share/doc/kde/HTML/nl/kuickshow/index.docbook
 share/doc/kde/HTML/nl/kuser/common
 share/doc/kde/HTML/nl/kuser/index.cache.bz2
 share/doc/kde/HTML/nl/kuser/index.docbook
 share/doc/kde/HTML/nl/kverbos/common
 share/doc/kde/HTML/nl/kverbos/index.cache.bz2
 share/doc/kde/HTML/nl/kverbos/index.docbook
+share/doc/kde/HTML/nl/kwallet/common
+share/doc/kde/HTML/nl/kwallet/index.cache.bz2
+share/doc/kde/HTML/nl/kwallet/index.docbook
 share/doc/kde/HTML/nl/kwatchgnupg/common
 share/doc/kde/HTML/nl/kwatchgnupg/index.cache.bz2
 share/doc/kde/HTML/nl/kwatchgnupg/index.docbook
@@ -797,6 +966,9 @@ share/doc/kde/HTML/nl/kworldclock/index.docbook
 share/doc/kde/HTML/nl/kxkb/common
 share/doc/kde/HTML/nl/kxkb/index.cache.bz2
 share/doc/kde/HTML/nl/kxkb/index.docbook
+share/doc/kde/HTML/nl/noatun/common
+share/doc/kde/HTML/nl/noatun/index.cache.bz2
+share/doc/kde/HTML/nl/noatun/index.docbook
 share/kde/apps/khangman/data/nl/animals.txt
 share/kde/apps/khangman/data/nl/easy.txt
 share/kde/apps/khangman/data/nl/hard.txt
@@ -870,587 +1042,599 @@ share/kde/apps/ktuberling/sounds/nl/strik.wav
 share/kde/apps/ktuberling/sounds/nl/stropdas.wav
 share/kde/apps/ktuberling/sounds/nl/wenkbrauw.wav
 share/kde/apps/ktuberling/sounds/nl/zonnebril.wav
-share/kde/locale/nl/LC_MESSAGES/alarmdaemonctrl.mo
-share/kde/locale/nl/LC_MESSAGES/alsaplayerui.mo
-share/kde/locale/nl/LC_MESSAGES/amor.mo
-share/kde/locale/nl/LC_MESSAGES/appletproxy.mo
-share/kde/locale/nl/LC_MESSAGES/ark.mo
-share/kde/locale/nl/LC_MESSAGES/ark_plugin.mo
-share/kde/locale/nl/LC_MESSAGES/artsbuilder.mo
-share/kde/locale/nl/LC_MESSAGES/artscontrol.mo
-share/kde/locale/nl/LC_MESSAGES/artsmodules.mo
-share/kde/locale/nl/LC_MESSAGES/atlantik.mo
-share/kde/locale/nl/LC_MESSAGES/atlantikdesigner.mo
-share/kde/locale/nl/LC_MESSAGES/audiorename_plugin.mo
-share/kde/locale/nl/LC_MESSAGES/autorefresh.mo
-share/kde/locale/nl/LC_MESSAGES/babelfish.mo
-share/kde/locale/nl/LC_MESSAGES/cervisia.mo
-share/kde/locale/nl/LC_MESSAGES/charlatanui.mo
-share/kde/locale/nl/LC_MESSAGES/childpanelextension.mo
-share/kde/locale/nl/LC_MESSAGES/clockapplet.mo
-share/kde/locale/nl/LC_MESSAGES/crashesplugin.mo
-share/kde/locale/nl/LC_MESSAGES/cupsdconf.mo
-share/kde/locale/nl/LC_MESSAGES/cvsservice.mo
-share/kde/locale/nl/LC_MESSAGES/dcopservice.mo
-share/kde/locale/nl/LC_MESSAGES/devicesapplet.mo
-share/kde/locale/nl/LC_MESSAGES/dirfilterplugin.mo
-share/kde/locale/nl/LC_MESSAGES/display.mo
-share/kde/locale/nl/LC_MESSAGES/dockbarextension.mo
-share/kde/locale/nl/LC_MESSAGES/domtreeviewer.mo
-share/kde/locale/nl/LC_MESSAGES/drkonqi.mo
-share/kde/locale/nl/LC_MESSAGES/dub.mo
-share/kde/locale/nl/LC_MESSAGES/extensionproxy.mo
-share/kde/locale/nl/LC_MESSAGES/ffrs.mo
-share/kde/locale/nl/LC_MESSAGES/filetypes.mo
-share/kde/locale/nl/LC_MESSAGES/fontinst.mo
-share/kde/locale/nl/LC_MESSAGES/fsview.mo
-share/kde/locale/nl/LC_MESSAGES/htmlsearch.mo
-share/kde/locale/nl/LC_MESSAGES/imagerename_plugin.mo
-share/kde/locale/nl/LC_MESSAGES/imgalleryplugin.mo
-share/kde/locale/nl/LC_MESSAGES/irkick.mo
-share/kde/locale/nl/LC_MESSAGES/jefferson.mo
-share/kde/locale/nl/LC_MESSAGES/joystick.mo
-share/kde/locale/nl/LC_MESSAGES/juk.mo
-share/kde/locale/nl/LC_MESSAGES/kabc2mutt.mo
-share/kde/locale/nl/LC_MESSAGES/kabc_dir.mo
-share/kde/locale/nl/LC_MESSAGES/kabc_file.mo
-share/kde/locale/nl/LC_MESSAGES/kabc_ldap.mo
-share/kde/locale/nl/LC_MESSAGES/kabc_ldapkio.mo
-share/kde/locale/nl/LC_MESSAGES/kabc_net.mo
-share/kde/locale/nl/LC_MESSAGES/kabc_slox.mo
-share/kde/locale/nl/LC_MESSAGES/kabc_sql.mo
-share/kde/locale/nl/LC_MESSAGES/kabcformat_binary.mo
-share/kde/locale/nl/LC_MESSAGES/kaboodle.mo
-share/kde/locale/nl/LC_MESSAGES/kaccess.mo
-share/kde/locale/nl/LC_MESSAGES/kaddressbook.mo
-share/kde/locale/nl/LC_MESSAGES/kalarm.mo
-share/kde/locale/nl/LC_MESSAGES/kalarmdgui.mo
-share/kde/locale/nl/LC_MESSAGES/kalzium.mo
-share/kde/locale/nl/LC_MESSAGES/kandy.mo
-share/kde/locale/nl/LC_MESSAGES/kappfinder.mo
-share/kde/locale/nl/LC_MESSAGES/karm.mo
-share/kde/locale/nl/LC_MESSAGES/kasbarextension.mo
-share/kde/locale/nl/LC_MESSAGES/kasteroids.mo
-share/kde/locale/nl/LC_MESSAGES/kate.mo
-share/kde/locale/nl/LC_MESSAGES/katecppsymbolviewer.mo
-share/kde/locale/nl/LC_MESSAGES/katedefaultproject.mo
-share/kde/locale/nl/LC_MESSAGES/katefiletemplates.mo
-share/kde/locale/nl/LC_MESSAGES/katefll_initplugin.mo
-share/kde/locale/nl/LC_MESSAGES/katefll_plugin.mo
-share/kde/locale/nl/LC_MESSAGES/katehelloworld.mo
-share/kde/locale/nl/LC_MESSAGES/katehtmltools.mo
-share/kde/locale/nl/LC_MESSAGES/kateinsertcommand.mo
-share/kde/locale/nl/LC_MESSAGES/katekjswrapper.mo
-share/kde/locale/nl/LC_MESSAGES/katemake.mo
-share/kde/locale/nl/LC_MESSAGES/katemodeline.mo
-share/kde/locale/nl/LC_MESSAGES/kateopenheader.mo
-share/kde/locale/nl/LC_MESSAGES/katepart.mo
-share/kde/locale/nl/LC_MESSAGES/kateprojectmanager.mo
-share/kde/locale/nl/LC_MESSAGES/katepybrowse.mo
-share/kde/locale/nl/LC_MESSAGES/katespell.mo
-share/kde/locale/nl/LC_MESSAGES/katetabbarextension.mo
-share/kde/locale/nl/LC_MESSAGES/katetextfilter.mo
-share/kde/locale/nl/LC_MESSAGES/katexmlcheck.mo
-share/kde/locale/nl/LC_MESSAGES/katexmltools.mo
-share/kde/locale/nl/LC_MESSAGES/katomic.mo
-share/kde/locale/nl/LC_MESSAGES/kaudiocreator.mo
-share/kde/locale/nl/LC_MESSAGES/kbabel.mo
-share/kde/locale/nl/LC_MESSAGES/kbackgammon.mo
-share/kde/locale/nl/LC_MESSAGES/kbattleship.mo
-share/kde/locale/nl/LC_MESSAGES/kbinaryclock.mo
-share/kde/locale/nl/LC_MESSAGES/kblackbox.mo
-share/kde/locale/nl/LC_MESSAGES/kbounce.mo
-share/kde/locale/nl/LC_MESSAGES/kbruch.mo
-share/kde/locale/nl/LC_MESSAGES/kbugbuster.mo
-share/kde/locale/nl/LC_MESSAGES/kcachegrind.mo
-share/kde/locale/nl/LC_MESSAGES/kcalc.mo
-share/kde/locale/nl/LC_MESSAGES/kcardchooser.mo
-share/kde/locale/nl/LC_MESSAGES/kcharselect.mo
-share/kde/locale/nl/LC_MESSAGES/kcharselectapplet.mo
-share/kde/locale/nl/LC_MESSAGES/kcm_krfb.mo
-share/kde/locale/nl/LC_MESSAGES/kcm_kviewcanvasconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kcm_kviewgeneralconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kcm_kviewpluginsconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kcm_kviewviewerpluginsconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kcm_sambaconf.mo
-share/kde/locale/nl/LC_MESSAGES/kcmaccess.mo
-share/kde/locale/nl/LC_MESSAGES/kcmaccessibility.mo
-share/kde/locale/nl/LC_MESSAGES/kcmarts.mo
-share/kde/locale/nl/LC_MESSAGES/kcmaudiocd.mo
-share/kde/locale/nl/LC_MESSAGES/kcmbackground.mo
-share/kde/locale/nl/LC_MESSAGES/kcmbell.mo
-share/kde/locale/nl/LC_MESSAGES/kcmcddb.mo
-share/kde/locale/nl/LC_MESSAGES/kcmcgi.mo
-share/kde/locale/nl/LC_MESSAGES/kcmcolors.mo
-share/kde/locale/nl/LC_MESSAGES/kcmcomponentchooser.mo
-share/kde/locale/nl/LC_MESSAGES/kcmcrypto.mo
-share/kde/locale/nl/LC_MESSAGES/kcmcss.mo
-share/kde/locale/nl/LC_MESSAGES/kcmemail.mo
-share/kde/locale/nl/LC_MESSAGES/kcmenergy.mo
-share/kde/locale/nl/LC_MESSAGES/kcmfileshare.mo
-share/kde/locale/nl/LC_MESSAGES/kcmfonts.mo
-share/kde/locale/nl/LC_MESSAGES/kcmhtmlsearch.mo
-share/kde/locale/nl/LC_MESSAGES/kcmicons.mo
-share/kde/locale/nl/LC_MESSAGES/kcminfo.mo
-share/kde/locale/nl/LC_MESSAGES/kcminput.mo
-share/kde/locale/nl/LC_MESSAGES/kcmioslaveinfo.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkabconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkamera.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkclock.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkded.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkeys.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkicker.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkio.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkmix.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkonq.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkonqhtml.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkonsole.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkontactnt.mo
-share/kde/locale/nl/LC_MESSAGES/kcmktalkd.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkuick.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkurifilt.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkvaio.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkwallet.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkwindecoration.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkwinrules.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkwintheme.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkwm.mo
-share/kde/locale/nl/LC_MESSAGES/kcmkxmlrpcd.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlanbrowser.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlaptop.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlaunch.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlayout.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlilo.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlinuz.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlirc.mo
-share/kde/locale/nl/LC_MESSAGES/kcmlocale.mo
-share/kde/locale/nl/LC_MESSAGES/kcmmediacontrol.mo
-share/kde/locale/nl/LC_MESSAGES/kcmmidi.mo
-share/kde/locale/nl/LC_MESSAGES/kcmnic.mo
-share/kde/locale/nl/LC_MESSAGES/kcmnotify.mo
-share/kde/locale/nl/LC_MESSAGES/kcmperformance.mo
-share/kde/locale/nl/LC_MESSAGES/kcmprintmgr.mo
-share/kde/locale/nl/LC_MESSAGES/kcmsamba.mo
-share/kde/locale/nl/LC_MESSAGES/kcmscreensaver.mo
-share/kde/locale/nl/LC_MESSAGES/kcmsmartcard.mo
-share/kde/locale/nl/LC_MESSAGES/kcmsmserver.mo
-share/kde/locale/nl/LC_MESSAGES/kcmsocks.mo
-share/kde/locale/nl/LC_MESSAGES/kcmspellchecking.mo
-share/kde/locale/nl/LC_MESSAGES/kcmstyle.mo
-share/kde/locale/nl/LC_MESSAGES/kcmtaskbar.mo
-share/kde/locale/nl/LC_MESSAGES/kcmthinkpad.mo
-share/kde/locale/nl/LC_MESSAGES/kcmusb.mo
-share/kde/locale/nl/LC_MESSAGES/kcmview1394.mo
-share/kde/locale/nl/LC_MESSAGES/kcmvim.mo
-share/kde/locale/nl/LC_MESSAGES/kcmwifi.mo
-share/kde/locale/nl/LC_MESSAGES/kcmxinerama.mo
-share/kde/locale/nl/LC_MESSAGES/kcoloredit.mo
-share/kde/locale/nl/LC_MESSAGES/kcontrol.mo
-share/kde/locale/nl/LC_MESSAGES/kcron.mo
-share/kde/locale/nl/LC_MESSAGES/kdat.mo
-share/kde/locale/nl/LC_MESSAGES/kdcop.mo
-share/kde/locale/nl/LC_MESSAGES/kdebugdialog.mo
-share/kde/locale/nl/LC_MESSAGES/kdelibs.mo
-share/kde/locale/nl/LC_MESSAGES/kdelibs_colors.mo
-share/kde/locale/nl/LC_MESSAGES/kdelirc.mo
-share/kde/locale/nl/LC_MESSAGES/kdepasswd.mo
-share/kde/locale/nl/LC_MESSAGES/kdepimwizards.mo
-share/kde/locale/nl/LC_MESSAGES/kdeprint.mo
-share/kde/locale/nl/LC_MESSAGES/kdeprint_part.mo
-share/kde/locale/nl/LC_MESSAGES/kdeprintfax.mo
-share/kde/locale/nl/LC_MESSAGES/kdesktop.mo
-share/kde/locale/nl/LC_MESSAGES/kdessh.mo
-share/kde/locale/nl/LC_MESSAGES/kdesu.mo
-share/kde/locale/nl/LC_MESSAGES/kdesud.mo
-share/kde/locale/nl/LC_MESSAGES/kdevdesigner.mo
-share/kde/locale/nl/LC_MESSAGES/kdevelop.mo
-share/kde/locale/nl/LC_MESSAGES/kdevtipofday.mo
-share/kde/locale/nl/LC_MESSAGES/kdf.mo
-share/kde/locale/nl/LC_MESSAGES/kdgantt.mo
-share/kde/locale/nl/LC_MESSAGES/kdialog.mo
-share/kde/locale/nl/LC_MESSAGES/kdict.mo
-share/kde/locale/nl/LC_MESSAGES/kdictapplet.mo
-share/kde/locale/nl/LC_MESSAGES/kdmchooser.mo
-share/kde/locale/nl/LC_MESSAGES/kdmconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kdmgreet.mo
-share/kde/locale/nl/LC_MESSAGES/kdvi.mo
-share/kde/locale/nl/LC_MESSAGES/kedit.mo
-share/kde/locale/nl/LC_MESSAGES/keduca.mo
-share/kde/locale/nl/LC_MESSAGES/kenolaba.mo
-share/kde/locale/nl/LC_MESSAGES/kfax.mo
-share/kde/locale/nl/LC_MESSAGES/kfifteenapplet.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_au.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_avi.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_bmp.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_cpp.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_deb.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_desktop.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_diff.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_drgeo.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_dvi.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_exr.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_flac.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_folder.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_font.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_gif.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_html.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_ico.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_jpeg.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_kig.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_lnk.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_m3u.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_mp3.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_mpc.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_ogg.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_palm.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_pcx.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_pdf.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_png.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_pnm.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_po.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_ps.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_rfc822.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_rgb.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_rpm.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_sid.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_tga.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_tiff.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_ts.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_txt.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_vcf.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_wav.mo
-share/kde/locale/nl/LC_MESSAGES/kfile_xbm.mo
-share/kde/locale/nl/LC_MESSAGES/kfileaudiopreview.mo
-share/kde/locale/nl/LC_MESSAGES/kfilereplace.mo
-share/kde/locale/nl/LC_MESSAGES/kfileshare.mo
-share/kde/locale/nl/LC_MESSAGES/kfindpart.mo
-share/kde/locale/nl/LC_MESSAGES/kfloppy.mo
-share/kde/locale/nl/LC_MESSAGES/kfmclient.mo
-share/kde/locale/nl/LC_MESSAGES/kfontinst.mo
-share/kde/locale/nl/LC_MESSAGES/kfouleggs.mo
-share/kde/locale/nl/LC_MESSAGES/kgamma.mo
-share/kde/locale/nl/LC_MESSAGES/kgantt.mo
-share/kde/locale/nl/LC_MESSAGES/kget.mo
-share/kde/locale/nl/LC_MESSAGES/kghostview.mo
-share/kde/locale/nl/LC_MESSAGES/kgoldrunner.mo
-share/kde/locale/nl/LC_MESSAGES/kgpg.mo
-share/kde/locale/nl/LC_MESSAGES/kgreet_classic.mo
-share/kde/locale/nl/LC_MESSAGES/khangman.mo
-share/kde/locale/nl/LC_MESSAGES/khelpcenter.mo
-share/kde/locale/nl/LC_MESSAGES/khexedit.mo
-share/kde/locale/nl/LC_MESSAGES/khotkeys.mo
-share/kde/locale/nl/LC_MESSAGES/khtmlsettingsplugin.mo
-share/kde/locale/nl/LC_MESSAGES/kicker.mo
-share/kde/locale/nl/LC_MESSAGES/kiconedit.mo
-share/kde/locale/nl/LC_MESSAGES/kig.mo
-share/kde/locale/nl/LC_MESSAGES/kimagemapeditor.mo
-share/kde/locale/nl/LC_MESSAGES/kinetd.mo
-share/kde/locale/nl/LC_MESSAGES/kio.mo
-share/kde/locale/nl/LC_MESSAGES/kio_audiocd.mo
-share/kde/locale/nl/LC_MESSAGES/kio_devices.mo
-share/kde/locale/nl/LC_MESSAGES/kio_finger.mo
-share/kde/locale/nl/LC_MESSAGES/kio_fish.mo
-share/kde/locale/nl/LC_MESSAGES/kio_floppy.mo
-share/kde/locale/nl/LC_MESSAGES/kio_help.mo
-share/kde/locale/nl/LC_MESSAGES/kio_imap4.mo
-share/kde/locale/nl/LC_MESSAGES/kio_lan.mo
-share/kde/locale/nl/LC_MESSAGES/kio_ldap.mo
-share/kde/locale/nl/LC_MESSAGES/kio_mac.mo
-share/kde/locale/nl/LC_MESSAGES/kio_man.mo
-share/kde/locale/nl/LC_MESSAGES/kio_mobile.mo
-share/kde/locale/nl/LC_MESSAGES/kio_newimap4.mo
-share/kde/locale/nl/LC_MESSAGES/kio_nfs.mo
-share/kde/locale/nl/LC_MESSAGES/kio_nntp.mo
-share/kde/locale/nl/LC_MESSAGES/kio_pop3.mo
-share/kde/locale/nl/LC_MESSAGES/kio_print.mo
-share/kde/locale/nl/LC_MESSAGES/kio_settings.mo
-share/kde/locale/nl/LC_MESSAGES/kio_sftp.mo
-share/kde/locale/nl/LC_MESSAGES/kio_sieve.mo
-share/kde/locale/nl/LC_MESSAGES/kio_smb.mo
-share/kde/locale/nl/LC_MESSAGES/kio_smbro.mo
-share/kde/locale/nl/LC_MESSAGES/kio_smtp.mo
-share/kde/locale/nl/LC_MESSAGES/kioexec.mo
-share/kde/locale/nl/LC_MESSAGES/kit.mo
-share/kde/locale/nl/LC_MESSAGES/kiten.mo
-share/kde/locale/nl/LC_MESSAGES/kjobviewer.mo
-share/kde/locale/nl/LC_MESSAGES/kjots.mo
-share/kde/locale/nl/LC_MESSAGES/kjumpingcube.mo
-share/kde/locale/nl/LC_MESSAGES/klaptopdaemon.mo
-share/kde/locale/nl/LC_MESSAGES/klatin.mo
-share/kde/locale/nl/LC_MESSAGES/klegacyimport.mo
-share/kde/locale/nl/LC_MESSAGES/kleopatra.mo
-share/kde/locale/nl/LC_MESSAGES/klettres.mo
-share/kde/locale/nl/LC_MESSAGES/klickety.mo
-share/kde/locale/nl/LC_MESSAGES/klines.mo
-share/kde/locale/nl/LC_MESSAGES/klinkstatus.mo
-share/kde/locale/nl/LC_MESSAGES/klipper.mo
-share/kde/locale/nl/LC_MESSAGES/klock.mo
-share/kde/locale/nl/LC_MESSAGES/kmag.mo
-share/kde/locale/nl/LC_MESSAGES/kmahjongg.mo
-share/kde/locale/nl/LC_MESSAGES/kmail.mo
-share/kde/locale/nl/LC_MESSAGES/kmail_text_calendar_plugin.mo
-share/kde/locale/nl/LC_MESSAGES/kmail_text_vcard_plugin.mo
-share/kde/locale/nl/LC_MESSAGES/kmailcvt.mo
-share/kde/locale/nl/LC_MESSAGES/kmathapplet.mo
-share/kde/locale/nl/LC_MESSAGES/kmathtool.mo
-share/kde/locale/nl/LC_MESSAGES/kmcop.mo
-share/kde/locale/nl/LC_MESSAGES/kmenuapplet.mo
-share/kde/locale/nl/LC_MESSAGES/kmenuedit.mo
-share/kde/locale/nl/LC_MESSAGES/kmessedwords.mo
-share/kde/locale/nl/LC_MESSAGES/kmid.mo
-share/kde/locale/nl/LC_MESSAGES/kmilo_generic.mo
-share/kde/locale/nl/LC_MESSAGES/kmilo_kvaio.mo
-share/kde/locale/nl/LC_MESSAGES/kmilo_powerbook.mo
-share/kde/locale/nl/LC_MESSAGES/kmilo_thinkpad.mo
-share/kde/locale/nl/LC_MESSAGES/kmilod.mo
-share/kde/locale/nl/LC_MESSAGES/kmines.mo
-share/kde/locale/nl/LC_MESSAGES/kminipagerapplet.mo
-share/kde/locale/nl/LC_MESSAGES/kmix.mo
-share/kde/locale/nl/LC_MESSAGES/kmobile.mo
-share/kde/locale/nl/LC_MESSAGES/kmoon.mo
-share/kde/locale/nl/LC_MESSAGES/kmousetool.mo
-share/kde/locale/nl/LC_MESSAGES/kmouth.mo
-share/kde/locale/nl/LC_MESSAGES/kmplot.mo
-share/kde/locale/nl/LC_MESSAGES/kmrml.mo
-share/kde/locale/nl/LC_MESSAGES/knewsticker.mo
-share/kde/locale/nl/LC_MESSAGES/knode.mo
-share/kde/locale/nl/LC_MESSAGES/knotes.mo
-share/kde/locale/nl/LC_MESSAGES/knotify.mo
-share/kde/locale/nl/LC_MESSAGES/kodo.mo
-share/kde/locale/nl/LC_MESSAGES/kolf.mo
-share/kde/locale/nl/LC_MESSAGES/kolourpaint.mo
-share/kde/locale/nl/LC_MESSAGES/kolourpicker.mo
-share/kde/locale/nl/LC_MESSAGES/kommander.mo
-share/kde/locale/nl/LC_MESSAGES/kompare.mo
-share/kde/locale/nl/LC_MESSAGES/konq_smbmounterplugin.mo
-share/kde/locale/nl/LC_MESSAGES/konqsidebar_mediaplayer.mo
-share/kde/locale/nl/LC_MESSAGES/konqsidebar_news.mo
-share/kde/locale/nl/LC_MESSAGES/konqueror.mo
-share/kde/locale/nl/LC_MESSAGES/konquest.mo
-share/kde/locale/nl/LC_MESSAGES/konsole.mo
-share/kde/locale/nl/LC_MESSAGES/konsolekalendar.mo
-share/kde/locale/nl/LC_MESSAGES/kontact.mo
-share/kde/locale/nl/LC_MESSAGES/kooka.mo
-share/kde/locale/nl/LC_MESSAGES/kopete.mo
-share/kde/locale/nl/LC_MESSAGES/korganizer.mo
-share/kde/locale/nl/LC_MESSAGES/korn.mo
-share/kde/locale/nl/LC_MESSAGES/kpackage.mo
-share/kde/locale/nl/LC_MESSAGES/kpager.mo
-share/kde/locale/nl/LC_MESSAGES/kpartapp.mo
-share/kde/locale/nl/LC_MESSAGES/kpartsaver.mo
-share/kde/locale/nl/LC_MESSAGES/kpat.mo
-share/kde/locale/nl/LC_MESSAGES/kpdf.mo
-share/kde/locale/nl/LC_MESSAGES/kpercentage.mo
-share/kde/locale/nl/LC_MESSAGES/kpersonalizer.mo
-share/kde/locale/nl/LC_MESSAGES/kpf.mo
-share/kde/locale/nl/LC_MESSAGES/kpilot.mo
-share/kde/locale/nl/LC_MESSAGES/kpoker.mo
-share/kde/locale/nl/LC_MESSAGES/kpovmodeler.mo
-share/kde/locale/nl/LC_MESSAGES/kppp.mo
-share/kde/locale/nl/LC_MESSAGES/kppplogview.mo
-share/kde/locale/nl/LC_MESSAGES/kprinter.mo
-share/kde/locale/nl/LC_MESSAGES/krandr.mo
-share/kde/locale/nl/LC_MESSAGES/krdb.mo
-share/kde/locale/nl/LC_MESSAGES/krdc.mo
-share/kde/locale/nl/LC_MESSAGES/kreadconfig.mo
-share/kde/locale/nl/LC_MESSAGES/krec.mo
-share/kde/locale/nl/LC_MESSAGES/kregexpeditor.mo
-share/kde/locale/nl/LC_MESSAGES/kres_exchange.mo
-share/kde/locale/nl/LC_MESSAGES/kres_imap.mo
-share/kde/locale/nl/LC_MESSAGES/kres_remote.mo
-share/kde/locale/nl/LC_MESSAGES/kres_xmlrpc.mo
-share/kde/locale/nl/LC_MESSAGES/kreversi.mo
-share/kde/locale/nl/LC_MESSAGES/krfb.mo
-share/kde/locale/nl/LC_MESSAGES/kruler.mo
-share/kde/locale/nl/LC_MESSAGES/krunapplet.mo
-share/kde/locale/nl/LC_MESSAGES/ksame.mo
-share/kde/locale/nl/LC_MESSAGES/kscd.mo
-share/kde/locale/nl/LC_MESSAGES/kscreensaver.mo
-share/kde/locale/nl/LC_MESSAGES/kshisen.mo
-share/kde/locale/nl/LC_MESSAGES/ksig.mo
-share/kde/locale/nl/LC_MESSAGES/ksim.mo
-share/kde/locale/nl/LC_MESSAGES/ksirc.mo
-share/kde/locale/nl/LC_MESSAGES/ksirtet.mo
-share/kde/locale/nl/LC_MESSAGES/ksmiletris.mo
-share/kde/locale/nl/LC_MESSAGES/ksmserver.mo
-share/kde/locale/nl/LC_MESSAGES/ksnake.mo
-share/kde/locale/nl/LC_MESSAGES/ksnapshot.mo
-share/kde/locale/nl/LC_MESSAGES/ksokoban.mo
-share/kde/locale/nl/LC_MESSAGES/kspaceduel.mo
-share/kde/locale/nl/LC_MESSAGES/ksplash.mo
-share/kde/locale/nl/LC_MESSAGES/ksplashthemes.mo
-share/kde/locale/nl/LC_MESSAGES/kstars.mo
-share/kde/locale/nl/LC_MESSAGES/kstart.mo
-share/kde/locale/nl/LC_MESSAGES/kstartperf.mo
-share/kde/locale/nl/LC_MESSAGES/kstyle_keramik_config.mo
-share/kde/locale/nl/LC_MESSAGES/kstyle_plastik_config.mo
-share/kde/locale/nl/LC_MESSAGES/ksvgplugin.mo
-share/kde/locale/nl/LC_MESSAGES/ksync.mo
-share/kde/locale/nl/LC_MESSAGES/ksysguard.mo
-share/kde/locale/nl/LC_MESSAGES/ksystemtrayapplet.mo
-share/kde/locale/nl/LC_MESSAGES/ksystraycmd.mo
-share/kde/locale/nl/LC_MESSAGES/ksysv.mo
-share/kde/locale/nl/LC_MESSAGES/ktalkd.mo
-share/kde/locale/nl/LC_MESSAGES/ktaskbarapplet.mo
-share/kde/locale/nl/LC_MESSAGES/kteatime.mo
-share/kde/locale/nl/LC_MESSAGES/ktexteditor_autobookmarker.mo
-share/kde/locale/nl/LC_MESSAGES/ktexteditor_docwordcompletion.mo
-share/kde/locale/nl/LC_MESSAGES/ktexteditor_insertfile.mo
-share/kde/locale/nl/LC_MESSAGES/ktexteditor_isearch.mo
-share/kde/locale/nl/LC_MESSAGES/ktexteditor_kdatatool.mo
-share/kde/locale/nl/LC_MESSAGES/kthememanager.mo
-share/kde/locale/nl/LC_MESSAGES/ktimemon.mo
-share/kde/locale/nl/LC_MESSAGES/ktimer.mo
-share/kde/locale/nl/LC_MESSAGES/ktip.mo
-share/kde/locale/nl/LC_MESSAGES/ktnef.mo
-share/kde/locale/nl/LC_MESSAGES/ktouch.mo
-share/kde/locale/nl/LC_MESSAGES/ktron.mo
-share/kde/locale/nl/LC_MESSAGES/ktuberling.mo
-share/kde/locale/nl/LC_MESSAGES/kturtle.mo
-share/kde/locale/nl/LC_MESSAGES/ktux.mo
-share/kde/locale/nl/LC_MESSAGES/kuick_plugin.mo
-share/kde/locale/nl/LC_MESSAGES/kuickshow.mo
-share/kde/locale/nl/LC_MESSAGES/kuiviewer.mo
-share/kde/locale/nl/LC_MESSAGES/kuser.mo
-share/kde/locale/nl/LC_MESSAGES/kverbos.mo
-share/kde/locale/nl/LC_MESSAGES/kview.mo
-share/kde/locale/nl/LC_MESSAGES/kview_scale.mo
-share/kde/locale/nl/LC_MESSAGES/kviewbrowserplugin.mo
-share/kde/locale/nl/LC_MESSAGES/kviewcanvas.mo
-share/kde/locale/nl/LC_MESSAGES/kvieweffectsplugin.mo
-share/kde/locale/nl/LC_MESSAGES/kviewpresenterplugin.mo
-share/kde/locale/nl/LC_MESSAGES/kviewscannerplugin.mo
-share/kde/locale/nl/LC_MESSAGES/kviewshell.mo
-share/kde/locale/nl/LC_MESSAGES/kviewtemplateplugin.mo
-share/kde/locale/nl/LC_MESSAGES/kviewviewer.mo
-share/kde/locale/nl/LC_MESSAGES/kvoctrain.mo
-share/kde/locale/nl/LC_MESSAGES/kwalletmanager.mo
-share/kde/locale/nl/LC_MESSAGES/kwatchgnupg.mo
-share/kde/locale/nl/LC_MESSAGES/kweather.mo
-share/kde/locale/nl/LC_MESSAGES/kwifimanager.mo
-share/kde/locale/nl/LC_MESSAGES/kwin.mo
-share/kde/locale/nl/LC_MESSAGES/kwin4.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_b2_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_cde.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_cde_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_clients.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_default_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_glow.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_glow_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_icewm.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_icewm_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_kde1.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_keramik_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_kstep.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_modernsys_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_openlook.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_plastik.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_plastik_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_quartz_config.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_riscos.mo
-share/kde/locale/nl/LC_MESSAGES/kwin_system.mo
-share/kde/locale/nl/LC_MESSAGES/kwireless.mo
-share/kde/locale/nl/LC_MESSAGES/kwordquiz.mo
-share/kde/locale/nl/LC_MESSAGES/kworldclock.mo
-share/kde/locale/nl/LC_MESSAGES/kwriteconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kxkb.mo
-share/kde/locale/nl/LC_MESSAGES/kxmlrpcd.mo
-share/kde/locale/nl/LC_MESSAGES/kxsconfig.mo
-share/kde/locale/nl/LC_MESSAGES/kxsldbg.mo
-share/kde/locale/nl/LC_MESSAGES/libcalendarresources.mo
-share/kde/locale/nl/LC_MESSAGES/libkaddrbk_geo_xxport.mo
-share/kde/locale/nl/LC_MESSAGES/libkcal.mo
-share/kde/locale/nl/LC_MESSAGES/libkcalsystem.mo
-share/kde/locale/nl/LC_MESSAGES/libkcddb.mo
-share/kde/locale/nl/LC_MESSAGES/libkdegames.mo
-share/kde/locale/nl/LC_MESSAGES/libkdehighscores.mo
-share/kde/locale/nl/LC_MESSAGES/libkdenetwork.mo
-share/kde/locale/nl/LC_MESSAGES/libkdepim.mo
-share/kde/locale/nl/LC_MESSAGES/libkicker.mo
-share/kde/locale/nl/LC_MESSAGES/libkickermenu_kdeprint.mo
-share/kde/locale/nl/LC_MESSAGES/libkickermenu_konsole.mo
-share/kde/locale/nl/LC_MESSAGES/libkickermenu_prefmenu.mo
-share/kde/locale/nl/LC_MESSAGES/libkickermenu_recentdocs.mo
-share/kde/locale/nl/LC_MESSAGES/libkickermenu_tom.mo
-share/kde/locale/nl/LC_MESSAGES/libkleopatra.mo
-share/kde/locale/nl/LC_MESSAGES/libkonq.mo
-share/kde/locale/nl/LC_MESSAGES/libkpimexchange.mo
-share/kde/locale/nl/LC_MESSAGES/libkscan.mo
-share/kde/locale/nl/LC_MESSAGES/libkscreensaver.mo
-share/kde/locale/nl/LC_MESSAGES/libksieve.mo
-share/kde/locale/nl/LC_MESSAGES/libksirtet.mo
-share/kde/locale/nl/LC_MESSAGES/libksync.mo
-share/kde/locale/nl/LC_MESSAGES/libtaskbar.mo
-share/kde/locale/nl/LC_MESSAGES/libtaskmanager.mo
-share/kde/locale/nl/LC_MESSAGES/lockout.mo
-share/kde/locale/nl/LC_MESSAGES/lskat.mo
-share/kde/locale/nl/LC_MESSAGES/lyrics.mo
-share/kde/locale/nl/LC_MESSAGES/mediacontrol.mo
-share/kde/locale/nl/LC_MESSAGES/minitoolsplugin.mo
-share/kde/locale/nl/LC_MESSAGES/naughtyapplet.mo
-share/kde/locale/nl/LC_MESSAGES/nexscope.mo
-share/kde/locale/nl/LC_MESSAGES/noatun.mo
-share/kde/locale/nl/LC_MESSAGES/nsplugin.mo
-share/kde/locale/nl/LC_MESSAGES/passwords.mo
-share/kde/locale/nl/LC_MESSAGES/pitchablespeed.mo
-share/kde/locale/nl/LC_MESSAGES/ppdtranslations.mo
-share/kde/locale/nl/LC_MESSAGES/privacy.mo
-share/kde/locale/nl/LC_MESSAGES/qeditor.mo
-share/kde/locale/nl/LC_MESSAGES/quanta.mo
-share/kde/locale/nl/LC_MESSAGES/quicklauncher.mo
-share/kde/locale/nl/LC_MESSAGES/rellinks.mo
-share/kde/locale/nl/LC_MESSAGES/searchbarplugin.mo
-share/kde/locale/nl/LC_MESSAGES/secpolicy.mo
-share/kde/locale/nl/LC_MESSAGES/spy.mo
-share/kde/locale/nl/LC_MESSAGES/synaescope.mo
-share/kde/locale/nl/LC_MESSAGES/taskbarextension.mo
-share/kde/locale/nl/LC_MESSAGES/timezones.mo
-share/kde/locale/nl/LC_MESSAGES/tippecanoe.mo
-share/kde/locale/nl/LC_MESSAGES/tyler.mo
-share/kde/locale/nl/LC_MESSAGES/uachangerplugin.mo
-share/kde/locale/nl/LC_MESSAGES/umbrello.mo
-share/kde/locale/nl/LC_MESSAGES/useraccount.mo
-share/kde/locale/nl/LC_MESSAGES/validatorsplugin.mo
-share/kde/locale/nl/LC_MESSAGES/vimpart.mo
-share/kde/locale/nl/LC_MESSAGES/wakeup.mo
-share/kde/locale/nl/LC_MESSAGES/wavecapture.mo
-share/kde/locale/nl/LC_MESSAGES/webarchiver.mo
-share/kde/locale/nl/charset
-share/kde/locale/nl/entry.desktop
-share/kde/locale/nl/flag.png
-@comment dirrm share/kde/locale/nl/LC_MESSAGES
-@comment dirrm share/kde/locale/nl
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/alarmdaemonctrl.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/alsaplayerui.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/amor.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/appletproxy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ark.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ark_plugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/artsbuilder.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/artscontrol.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/artsmodules.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/atlantik.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/atlantikdesigner.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/audiocd_encoder_lame.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/audiocd_encoder_vorbis.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/audiorename_plugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/autorefresh.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/babelfish.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/cervisia.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/charlatanui.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/childpanelextension.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/clockapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/crashesplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/cupsdconf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/cvsservice.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/dcopservice.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/devicesapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/dirfilterplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/display.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/dockbarextension.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/domtreeviewer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/drkonqi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/dub.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/extensionproxy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ffrs.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/filetypes.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/fontinst.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/fsview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/htmlsearch.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/imagerename_plugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/imgalleryplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/irkick.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/jefferson.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/joystick.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/juk.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc2mutt.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc_dir.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc_file.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc_ldap.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc_ldapkio.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc_net.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc_slox.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabc_sql.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kabcformat_binary.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kaboodle.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kaccess.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kaddressbook.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kalarm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kalarmdgui.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kalzium.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kandy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kappfinder.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/karm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kasbarextension.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kasteroids.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kate.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katecppsymbolviewer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katedefaultproject.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katefiletemplates.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katefll_initplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katefll_plugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katehelloworld.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katehtmltools.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kateinsertcommand.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katekjswrapper.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katemake.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katemodeline.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kateopenheader.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katepart.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kateprojectmanager.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katepybrowse.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katespell.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katetabbarextension.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katetextfilter.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katexmlcheck.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katexmltools.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/katomic.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kaudiocreator.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbabel.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbackgammon.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbattleship.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbinaryclock.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kblackbox.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbounce.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbruch.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbugbuster.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcachegrind.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcalc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcardchooser.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcharselect.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcharselectapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcm_krfb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcm_kviewcanvasconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcm_kviewgeneralconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcm_kviewpluginsconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcm_kviewviewerpluginsconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcm_sambaconf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmaccess.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmaccessibility.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmarts.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmaudiocd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmbackground.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmbell.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmcddb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmcgi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmcolors.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmcomponentchooser.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmcrypto.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmcss.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmemail.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmenergy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmfileshare.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmfonts.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmhtmlsearch.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmicons.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcminfo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcminput.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmioslaveinfo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkabconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkamera.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkclock.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkded.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkeys.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkicker.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkio.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkmix.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkonq.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkonqhtml.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkonsole.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkontactnt.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmktalkd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkuick.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkurifilt.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkvaio.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkwallet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkwindecoration.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkwinrules.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkwintheme.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkwm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmkxmlrpcd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlanbrowser.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlaptop.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlaunch.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlayout.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlilo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlinuz.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlirc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmlocale.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmmediacontrol.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmmidi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmnic.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmnotify.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmperformance.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmprintmgr.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmsamba.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmscreensaver.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmsmartcard.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmsmserver.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmsocks.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmspellchecking.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmstyle.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmtaskbar.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmthinkpad.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmusb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmview1394.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmvim.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmwifi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcmxinerama.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcoloredit.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcontrol.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kcron.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdat.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdcop.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdebugdialog.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdelibs.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdelibs_colors.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdelirc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdepasswd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdepimwizards.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdeprint.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdeprint_part.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdeprintfax.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdesktop.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdessh.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdesu.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdesud.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdevdesigner.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdevelop.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdevtipofday.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdgantt.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdialog.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdict.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdictapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdmchooser.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdmconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdmgreet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdvi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kedit.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/keduca.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kenolaba.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfax.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfifteenapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_au.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_avi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_bmp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_cpp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_deb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_desktop.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_diff.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_drgeo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_dvi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_exr.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_flac.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_folder.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_font.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_gif.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_html.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_ico.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_jpeg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_kig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_lnk.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_m3u.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_mp3.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_mpc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_ogg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_palm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_pcx.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_pdf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_png.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_pnm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_po.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_ps.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_rfc822.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_rgb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_rpm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_sid.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_tga.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_tiff.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_ts.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_txt.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_vcf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_wav.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfile_xbm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfileaudiopreview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfilereplace.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfileshare.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfindpart.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfloppy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfmclient.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfontinst.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kfouleggs.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kgamma.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kgantt.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kget.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kghostview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kgoldrunner.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kgpg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kgreet_classic.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/khangman.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/khelpcenter.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/khexedit.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/khotkeys.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/khtmlsettingsplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kicker.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kiconedit.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kimagemapeditor.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kinetd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_audiocd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_devices.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_finger.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_fish.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_floppy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_help.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_imap4.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_lan.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_ldap.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_mac.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_man.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_mobile.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_newimap4.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_nfs.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_nntp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_pop3.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_print.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_settings.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_sftp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_sieve.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_smb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_smbro.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kio_smtp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kioexec.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kit.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kiten.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kjobviewer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kjots.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kjumpingcube.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klaptopdaemon.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klatin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klegacyimport.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kleopatra.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klettres.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klickety.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klines.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klinkstatus.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klipper.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/klock.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmag.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmahjongg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmail.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmail_text_calendar_plugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmail_text_vcard_plugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmailcvt.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmathapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmathtool.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmcop.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmenuapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmenuedit.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmessedwords.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmid.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmilo_generic.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmilo_kvaio.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmilo_powerbook.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmilo_thinkpad.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmilod.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmines.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kminipagerapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmix.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmobile.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmoon.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmousetool.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmouth.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmplot.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmrml.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/knewsticker.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/knode.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/knotes.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/knotify.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kodo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kolf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kolourpaint.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kolourpicker.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kommander.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kompare.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/konq_smbmounterplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/konqsidebar_news.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/konqueror.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/konquest.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/konsole.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/konsolekalendar.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kontact.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kooka.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/korganizer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/korn.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpackage.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpager.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpartapp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpartsaver.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpat.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpdf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpercentage.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpersonalizer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpilot.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpoker.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kpovmodeler.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kppp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kppplogview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kprinter.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krandr.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krdb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krdc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kreadconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krec.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kregexpeditor.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kres_bugzilla.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kres_exchange.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kres_imap.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kres_remote.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kres_xmlrpc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kreversi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krfb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kruler.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krunapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksame.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kscd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kscreensaver.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kshisen.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksim.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksirc.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksirtet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksmiletris.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksmserver.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksnake.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksnapshot.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksokoban.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kspaceduel.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksplash.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksplashthemes.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kstars.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kstart.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kstartperf.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kstyle_keramik_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kstyle_plastik_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksvgplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksync.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksysguard.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksystemtrayapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksystraycmd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ksysv.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktalkd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktaskbarapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kteatime.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktexteditor_autobookmarker.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktexteditor_docwordcompletion.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktexteditor_insertfile.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktexteditor_isearch.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktexteditor_kdatatool.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kthememanager.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktimemon.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktimer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktip.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktnef.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktouch.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktron.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktuberling.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kturtle.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ktux.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kuick_plugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kuickshow.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kuiviewer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kuser.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kverbos.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kview_scale.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kviewbrowserplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kviewcanvas.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kvieweffectsplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kviewpresenterplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kviewscannerplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kviewshell.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kviewtemplateplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kviewviewer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kvoctrain.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwalletmanager.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwatchgnupg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kweather.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwifimanager.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin4.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_b2_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_cde.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_cde_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_clients.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_default_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_glow.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_glow_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_icewm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_icewm_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_kde1.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_keramik_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_kstep.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_modernsys_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_openlook.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_plastik.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_plastik_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_quartz_config.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_riscos.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwin_system.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwireless.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwordquiz.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kworldclock.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kwriteconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kxkb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kxmlrpcd.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kxsconfig.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kxsldbg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libcalendarresources.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkaddrbk_geo_xxport.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkcal.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkcalsystem.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkcddb.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkdegames.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkdehighscores.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkdenetwork.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkdepim.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkicker.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkickermenu_kdeprint.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkickermenu_konsole.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkickermenu_prefmenu.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkickermenu_recentdocs.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkickermenu_tom.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkleopatra.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkonq.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkpimexchange.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkscan.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkscreensaver.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libksieve.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libksirtet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libksync.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libtaskbar.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libtaskmanager.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/lockout.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/lskat.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/lyrics.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/mediacontrol.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/minitoolsplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/naughtyapplet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/nexscope.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/noatun.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/nsplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/passwords.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/pitchablespeed.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ppdtranslations.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/privacy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/qeditor.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/quanta.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/quicklauncher.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/rellinks.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/searchbarplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/secpolicy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/spy.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/synaescope.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/taskbarextension.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/timezones.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/tippecanoe.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/tyler.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/uachangerplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/umbrello.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/useraccount.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/validatorsplugin.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/vimpart.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/wakeup.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/wavecapture.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/webarchiver.mo
+${PKGLOCALEDIR}/locale/nl/charset
+${PKGLOCALEDIR}/locale/nl/entry.desktop
+${PKGLOCALEDIR}/locale/nl/flag.png
 @dirrm share/kde/apps/ktuberling/sounds/nl
-@comment dirrm share/kde/apps/ktuberling/sounds
+@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/kde/apps/klettres/nl/syllab
 @dirrm share/kde/apps/klettres/nl/alpha
 @dirrm share/kde/apps/klettres/nl
-@comment dirrm share/kde/apps/klettres
+@comment in kde: @dirrm share/kde/apps/klettres
 @dirrm share/kde/apps/khangman/data/nl
-@comment dirrm share/kde/apps/khangman/data
+@comment in kde: @dirrm share/kde/apps/khangman/data
+@dirrm share/doc/kde/HTML/nl/noatun
 @dirrm share/doc/kde/HTML/nl/kxkb
 @dirrm share/doc/kde/HTML/nl/kworldclock
 @dirrm share/doc/kde/HTML/nl/kwordquiz
 @dirrm share/doc/kde/HTML/nl/kweather
 @dirrm share/doc/kde/HTML/nl/kwatchgnupg
+@dirrm share/doc/kde/HTML/nl/kwallet
 @dirrm share/doc/kde/HTML/nl/kverbos
 @dirrm share/doc/kde/HTML/nl/kuser
+@dirrm share/doc/kde/HTML/nl/kuickshow
+@dirrm share/doc/kde/HTML/nl/kturtle
 @dirrm share/doc/kde/HTML/nl/ktouch
 @dirrm share/doc/kde/HTML/nl/ktnef
 @dirrm share/doc/kde/HTML/nl/kteatime
+@dirrm share/doc/kde/HTML/nl/ksysv
 @dirrm share/doc/kde/HTML/nl/ksysguard
 @dirrm share/doc/kde/HTML/nl/kstars
 @dirrm share/doc/kde/HTML/nl/ksplashml
 @dirrm share/doc/kde/HTML/nl/kspell
 @dirrm share/doc/kde/HTML/nl/ksnake
+@dirrm share/doc/kde/HTML/nl/ksame
 @dirrm share/doc/kde/HTML/nl/kpilot
 @dirrm share/doc/kde/HTML/nl/kpercentage
+@dirrm share/doc/kde/HTML/nl/kpdf
+@dirrm share/doc/kde/HTML/nl/kpat
 @dirrm share/doc/kde/HTML/nl/kpager
+@dirrm share/doc/kde/HTML/nl/kpackage
 @dirrm share/doc/kde/HTML/nl/korn
 @dirrm share/doc/kde/HTML/nl/korganizer
+@dirrm share/doc/kde/HTML/nl/kopete
 @dirrm share/doc/kde/HTML/nl/kontact
 @dirrm share/doc/kde/HTML/nl/konsolekalendar
 @dirrm share/doc/kde/HTML/nl/konsole
+@dirrm share/doc/kde/HTML/nl/konquest
 @dirrm share/doc/kde/HTML/nl/konqueror
 @dirrm share/doc/kde/HTML/nl/konq-plugins/webarchiver
 @dirrm share/doc/kde/HTML/nl/konq-plugins/validators
@@ -1474,10 +1658,20 @@ share/kde/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kmouth
 @dirrm share/doc/kde/HTML/nl/kmousetool
 @dirrm share/doc/kde/HTML/nl/kmoon
+@dirrm share/doc/kde/HTML/nl/kmix
+@dirrm share/doc/kde/HTML/nl/kmines
+@dirrm share/doc/kde/HTML/nl/kmessedwords
 @dirrm share/doc/kde/HTML/nl/kmenuedit
+@dirrm share/doc/kde/HTML/nl/kmathtool
 @dirrm share/doc/kde/HTML/nl/kmail
 @dirrm share/doc/kde/HTML/nl/kmag
 @dirrm share/doc/kde/HTML/nl/klipper
+@dirrm share/doc/kde/HTML/nl/klines
+@dirrm share/doc/kde/HTML/nl/klettres
+@dirrm share/doc/kde/HTML/nl/klatin
+@dirrm share/doc/kde/HTML/nl/kjumpingcube
+@dirrm share/doc/kde/HTML/nl/kjots
+@dirrm share/doc/kde/HTML/nl/kiten
 @dirrm share/doc/kde/HTML/nl/kioslave
 @dirrm share/doc/kde/HTML/nl/kinfocenter/xserver
 @dirrm share/doc/kde/HTML/nl/kinfocenter/usb
@@ -1489,6 +1683,7 @@ share/kde/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kinfocenter/pcmcia
 @dirrm share/doc/kde/HTML/nl/kinfocenter/pci
 @dirrm share/doc/kde/HTML/nl/kinfocenter/partitions
+@dirrm share/doc/kde/HTML/nl/kinfocenter/opengl
 @dirrm share/doc/kde/HTML/nl/kinfocenter/nics
 @dirrm share/doc/kde/HTML/nl/kinfocenter/memory
 @dirrm share/doc/kde/HTML/nl/kinfocenter/ioports
@@ -1506,13 +1701,20 @@ share/kde/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/khelpcenter/faq
 @dirrm share/doc/kde/HTML/nl/khelpcenter
 @dirrm share/doc/kde/HTML/nl/khangman
+@dirrm share/doc/kde/HTML/nl/kget
 @dirrm share/doc/kde/HTML/nl/kgamma
 @dirrm share/doc/kde/HTML/nl/kfouleggs
+@dirrm share/doc/kde/HTML/nl/kfloppy
+@dirrm share/doc/kde/HTML/nl/kfind
+@dirrm share/doc/kde/HTML/nl/kenolaba
 @dirrm share/doc/kde/HTML/nl/keduca
 @dirrm share/doc/kde/HTML/nl/kdf
 @dirrm share/doc/kde/HTML/nl/kdesu
 @dirrm share/doc/kde/HTML/nl/kdeprint
+@dirrm share/doc/kde/HTML/nl/kdelirc/kcmlirc
+@dirrm share/doc/kde/HTML/nl/kdelirc/irkick
 @dirrm share/doc/kde/HTML/nl/kdebugdialog
+@dirrm share/doc/kde/HTML/nl/kdat
 @dirrm share/doc/kde/HTML/nl/kcron
 @dirrm share/doc/kde/HTML/nl/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/nl/kcontrol/useragent
@@ -1523,6 +1725,7 @@ share/kde/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kcontrol/netpref
 @dirrm share/doc/kde/HTML/nl/kcontrol/mouse
 @dirrm share/doc/kde/HTML/nl/kcontrol/laptop
+@dirrm share/doc/kde/HTML/nl/kcontrol/lanbrowser
 @dirrm share/doc/kde/HTML/nl/kcontrol/kwindecoration
 @dirrm share/doc/kde/HTML/nl/kcontrol/kthememgr
 @dirrm share/doc/kde/HTML/nl/kcontrol/kmixcfg
@@ -1550,17 +1753,30 @@ share/kde/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kcontrol/bell
 @dirrm share/doc/kde/HTML/nl/kcontrol/arts
 @dirrm share/doc/kde/HTML/nl/kcontrol
+@dirrm share/doc/kde/HTML/nl/kcoloredit
 @dirrm share/doc/kde/HTML/nl/kcharselect
+@dirrm share/doc/kde/HTML/nl/kcalc
 @dirrm share/doc/kde/HTML/nl/kbugbuster
 @dirrm share/doc/kde/HTML/nl/kbruch
+@dirrm share/doc/kde/HTML/nl/kbounce
+@dirrm share/doc/kde/HTML/nl/kblackbox
+@dirrm share/doc/kde/HTML/nl/kbattleship
+@dirrm share/doc/kde/HTML/nl/kbackgammon
 @dirrm share/doc/kde/HTML/nl/kbabel
+@dirrm share/doc/kde/HTML/nl/katomic
 @dirrm share/doc/kde/HTML/nl/kate-plugins
 @dirrm share/doc/kde/HTML/nl/kate
+@dirrm share/doc/kde/HTML/nl/kasteroids
 @dirrm share/doc/kde/HTML/nl/karm
 @dirrm share/doc/kde/HTML/nl/kandy
+@dirrm share/doc/kde/HTML/nl/kamera
 @dirrm share/doc/kde/HTML/nl/kalzium
 @dirrm share/doc/kde/HTML/nl/kaddressbook
-@comment dirrm share/doc/kde/HTML/nl/common
+@dirrm share/doc/kde/HTML/nl/kaboodle
+@dirrm share/doc/kde/HTML/nl/juk
+@dirrm share/doc/kde/HTML/nl/common
+@dirrm share/doc/kde/HTML/nl/atlantik
 @dirrm share/doc/kde/HTML/nl/artsbuilder
+@dirrm share/doc/kde/HTML/nl/ark
 @dirrm share/doc/kde/HTML/nl/amor
-@comment dirrm share/doc/kde/HTML/nl
+@comment in kde: @dirrm share/doc/kde/HTML/nl
