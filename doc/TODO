@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.846 2003/09/10 20:06:07 jmmv Exp $
+$NetBSD: TODO,v 1.847 2003/09/11 06:46:13 martti Exp $
 
 Suggested new packages
 ======================
@@ -97,8 +97,6 @@ Suggested package updates
 	o cyrus-imapd21-2.1.15
 	o dante-1.1.14
 	o dctc-0.85.5
-	o ddd-3.3.7
-	o distcc-2.10
 	o dnetc-2.9004-482 [pkg/22390]
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
