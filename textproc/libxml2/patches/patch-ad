@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2002/10/03 14:06:15 martti Exp $
+$NetBSD: patch-ad,v 1.8 2003/02/24 20:40:17 jmmv Exp $
 
---- doc/Makefile.in.orig	Thu Sep 26 20:18:03 2002
-+++ doc/Makefile.in	Thu Oct  3 12:51:30 2002
-@@ -136,7 +136,7 @@
+--- doc/Makefile.in.orig	2003-02-10 17:28:02.000000000 +0100
++++ doc/Makefile.in
+@@ -137,7 +137,7 @@ XPTR_OBJ = @XPTR_OBJ@
  Z_CFLAGS = @Z_CFLAGS@
  Z_LIBS = @Z_LIBS@
  
@@ -11,3 +11,21 @@ $NetBSD: patch-ad,v 1.7 2002/10/03 14:06:15 martti Exp $
  
  # The top-level SGML file.
  DOC_MAIN_SGML_FILE = gnome-xml.sgml
+@@ -147,7 +147,7 @@ DOC_SOURCE_DIR = ..
+ 
+ HTML_DIR = $(datadir)/doc
+ 
+-TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
++TARGET_DIR = $(HTML_DIR)/html/$(DOC_MODULE)
+ PAGES = architecture.html bugs.html contribs.html docs.html DOM.html \
+     downloads.html entities.html example.html help.html index.html \
+     interface.html intro.html library.html namespaces.html news.html \
+@@ -370,7 +370,7 @@ install-data-local: 
+ 	-@INSTALL@ -m 0644 $(srcdir)/html/*.html $(DESTDIR)$(TARGET_DIR)
+ 	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)
+ 	-(cd $(DESTDIR); gtkdoc-fixxref --module=libxml --html-dir=$(HTML_DIR))
+-	-@(tar cf - tutorial | (cd $(DESTDIR)$(TARGET_DIR) && tar xvf -))
++	-@(tar cf - tutorial | (cd $(DESTDIR)$(TARGET_DIR) && tar xmvf -))
+ 
+ .PHONY : html sgml templates scan
+ 
