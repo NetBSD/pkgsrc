@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/03/25 12:30:09 grant Exp $
+$NetBSD: distinfo,v 1.5 2003/03/04 22:30:45 mjl Exp $
 
-SHA1 (slang-1.4.5.tar.bz2) = cf579babfed4eec44d8f137cb82d5c1386d5ce7a
-Size (slang-1.4.5.tar.bz2) = 593781 bytes
+SHA1 (slang-1.4.8.tar.bz2) = 6533e1312401cc2cacb72fdc2aed5762b353139c
+Size (slang-1.4.8.tar.bz2) = 620252 bytes
 SHA1 (patch-aa) = c8be618270de81bc109ab1deb0f501857c0ca0fc
 SHA1 (patch-ac) = 6b7c1a1aa90899af42e8df9c72c88e5bdb2111a9
