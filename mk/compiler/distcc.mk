@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.21 2004/11/17 17:18:33 tv Exp $
+# $NetBSD: distcc.mk,v 1.22 2004/11/30 14:50:37 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -37,18 +37,20 @@ _DISTCCBASE_DEFAULT=	${LOCALBASE}
 _DISTCCBASE?=		${LOCALBASE}
 
 _DISTCC_DIR=	${WRKDIR}/.distcc
-_DISTCC_LINKS=	# empty
+_DISTCC_VARS=	# empty
 .  if !empty(_LANGUAGES.distcc:Mc)
+PKG_CC?=	${CC}
+_DISTCC_VARS+=	CC
 _DISTCC_CC:=	${_DISTCC_DIR}/bin/${PKG_CC:T}
-_DISTCC_LINKS+=	_DISTCC_CC
+_ALIASES.CC?=	cc
 PKG_CC:=	${_DISTCC_CC}
-CC=		${PKG_CC:T}
 .  endif
 .  if !empty(_LANGUAGES.distcc:Mc++)
+PKG_CXX?=	${CXX}
+_DISTCC_VARS+=	CXX
 _DISTCC_CXX:=	${_DISTCC_DIR}/bin/${PKG_CXX:T}
-_DISTCC_LINKS+=	_DISTCC_CXX
+_ALIASES.CXX?=	c++
 PKG_CXX:=	${_DISTCC_CXX}
-CXX=		${PKG_CXX:T}
 .  endif
 
 # Prepend the path to the compiler to the PATH.
@@ -70,13 +72,19 @@ BUILD_ENV+=	DISTCC_VERBOSE=${DISTCC_VERBOSE:Q}
 .endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
-.  for _target_ in ${_DISTCC_LINKS}
-.    if !target(${${_target_}})
-override-tools: ${${_target_}}
-${${_target_}}:
+.  for _var_ in ${_DISTCC_VARS}
+.    if !target(${_DISTCC_${_var_}})
+override-tools: ${_DISTCC_${_var_}}
+${_DISTCC_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${LN} -fs ${_DISTCCBASE}/bin/distcc ${.TARGET}
+.      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x "${_alias_}" ]; then					\
+		${LN} -fs ${_DISTCCBASE}/bin/distcc ${_alias_};		\
+	fi
+.      endfor
 .    endif
 .  endfor
 .endif	# _USE_DISTCC == "yes"

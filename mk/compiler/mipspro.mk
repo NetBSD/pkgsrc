@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.28 2004/11/23 05:32:22 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.29 2004/11/30 14:50:37 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -18,21 +18,28 @@ _LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
 .endfor
 
 _MIPSPRO_DIR=		${WRKDIR}/.mipspro
-_MIPSPRO_LINKS=		# empty
+_MIPSPRO_VARS=		# empty
 .if exists(${MIPSPROBASE}/bin/cc)
+_MIPSPRO_VARS+=		CC
 _MIPSPRO_CC=		${_MIPSPRO_DIR}/bin/cc
-_MIPSPRO_LINKS+=	_MIPSPRO_CC
-PKG_CC=			${_MIPSPRO_CC}
-CC=			${PKG_CC:T}
+_ALIASES.CC=		cc
 CCPATH=			${MIPSPROBASE}/bin/cc
+PKG_CC:=		${_MIPSPRO_CC}
+.  if !empty(CC:M*gcc)
+CC:=			${PKG_CC:T}	# ${CC} should be named "cc".
+.  endif
 .endif
 .if exists(${MIPSPROBASE}/bin/CC)
+_MIPSPRO_VARS+=		CXX
 _MIPSPRO_CXX=		${_MIPSPRO_DIR}/bin/CC
-_MIPSPRO_LINKS+=	_MIPSPRO_CXX
-PKG_CXX=		${_MIPSPRO_CXX}
-CXX=			${PKG_CXX:T}
+_ALIASES.CXX=		CC c++
 CXXPATH=		${MIPSPROBASE}/bin/CC
+PKG_CXX:=		${_MIPSPRO_CXX}
+.  if !empty(CXX:M*g++)
+CXX:=			${PKG_CXX:T}	 # ${CXX} should be named "CC"
+.  endif
 .endif
+_COMPILER_STRIP_VARS+=	${_MIPSPRO_VARS}
 
 .if exists(${CCPATH})
 # MIPSpro Compilers: Version 7.3.1.2m
@@ -63,16 +70,22 @@ PREPEND_PATH+=	${_MIPSPRO_DIR}/bin
 .endif
 
 # Create compiler driver scripts in ${WRKDIR}.
-.for _target_ in ${_MIPSPRO_LINKS}
-.  if !target(${${_target_}})
-override-tools: ${${_target_}}
-${${_target_}}:
+.for _var_ in ${_MIPSPRO_VARS}
+.  if !target(${_MIPSPRO_${_var_}})
+override-tools: ${_MIPSPRO_${_var_}}        
+${_MIPSPRO_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
-	 ${ECHO} 'exec ${MIPSPROBASE}/bin/${${_target_}:T} "$$@"';	\
+	 ${ECHO} 'exec ${MIPSPROBASE}/bin/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x "${_alias_}" ]; then					\
+		${LN} -f ${.TARGET} ${_alias_};				\
+	fi
+.    endfor
 .  endif
 .endfor
 

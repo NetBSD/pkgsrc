@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.5 2004/11/23 05:32:22 jlam Exp $
+# $NetBSD: ccc.mk,v 1.6 2004/11/30 14:50:37 jlam Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -20,22 +20,28 @@ _LANGUAGES.ccc+=	${LANGUAGES.ccc:M${_lang_}}
 .endfor
 
 _CCC_DIR=	${WRKDIR}/.ccc
-_CCC_LINKS=	# empty
+_CCC_VARS=	# empty
 .if exists(/usr/bin/cc)
+_CCC_VARS+=	CC
 _CCC_CC=	${_CCC_DIR}/cc
-_CCC_LINKS+=	_CCC_CC
-PKG_CC=		${_CCC_CC}
-CC=		${PKG_CC:T}
+_ALIASES.CC=	cc
 CCPATH=		/usr/bin/cc
+PKG_CC:=	${_CCC_CC}
+.  if !empty(CC:M*gcc)
+CC:=		${PKG_CC:T}	# ${CC} should be named "cc".
+.  endif
 .endif
-
 .if exists(/usr/bin/cxx)
+_CCC_VARS+=	CXX
 _CCC_CXX=	${_CCC_DIR}/cxx
-_CCC_LINKS+=	_CCC_CXX
-PKG_CXX=	${_CCC_CXX}
-CXX=		${PKG_CXX:T}
+_ALIASES.CXX=	c++ cxx
 CXXPATH=	/usr/bin/cxx
+PKG_CXX:=	${_CCC_CXX}
+.  if !empty(CXX:M*g++)
+CXX:=		${PKG_CXX:T}	 # ${CXX} should be named "cxx"
+.  endif
 .endif
+_COMPILER_STRIP_VARS+=	${_CCC_VARS}
 
 .if exists(${CCPATH}) && !defined(CC_VERSION_STRING)
 CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | awk '{print; exit(0);}'
@@ -59,16 +65,22 @@ CFLAGS+=-ieee
 CXXFLAGS+=-ieee
 
 # Create compiler driver scripts in ${WRKDIR}.
-.for _target_ in ${_CCC_LINKS}
-.  if !target(${${_target_}})
-override-tools: ${${_target_}}
-${${_target_}}:
+.for _var_ in ${_CCC_VARS}
+.  if !target(${_CCC_${_var_}})
+override-tools: ${_CCC_${_var_}}        
+${_CCC_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
-	 ${ECHO} 'exec /usr/bin/${${_target_}:T} "$$@"';	\
+	 ${ECHO} 'exec /usr/bin/${.TARGET:T} "$$@"';			\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x "${_alias_}" ]; then					\
+		${LN} -f ${.TARGET} ${_alias_};				\
+	fi
+.    endfor
 .  endif
 .endfor
 
