@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/10/29 20:31:54 jdolecek Exp $
+
+You must edit your "${PKG_SYSCONFDIR}/etc/php.ini" if you want
+to use PEAR packages:
+
+  register_argc_argv = On
+  register_globals = On
+
+===========================================================================
