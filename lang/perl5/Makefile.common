@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/12/03 07:55:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/12/03 17:51:14 wiz Exp $
 
 DISTNAME=	perl-${PERL5_DIST_VERS}
 CATEGORIES+=	perl5
@@ -7,4 +7,5 @@ MASTER_SITES+=	ftp://gatekeeper.dec.com/pub/plan/perl/CPAN/src/5.0/maint/ \
 		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/ \
 		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/
 
-PERL5_DIST_VERS=	5.6.1		# version number on the distfile
+# version number on the distfile
+PERL5_DIST_VERS=	5.6.1
