@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST.dynamic,v 1.1.1.1 2001/05/18 20:31:22 jtb Exp $
+lib/zsh/libzsh-3.1.9.so
+lib/zsh/3.1.9/cap.so
+lib/zsh/3.1.9/clone.so
+lib/zsh/3.1.9/compctl.so
+lib/zsh/3.1.9/complete.so
+lib/zsh/3.1.9/complist.so
+lib/zsh/3.1.9/computil.so
+lib/zsh/3.1.9/deltochar.so
+lib/zsh/3.1.9/example.so
+lib/zsh/3.1.9/files.so
+lib/zsh/3.1.9/mapfile.so
+lib/zsh/3.1.9/mathfunc.so
+lib/zsh/3.1.9/parameter.so
+lib/zsh/3.1.9/rlimits.so
+lib/zsh/3.1.9/sched.so
+lib/zsh/3.1.9/stat.so
+lib/zsh/3.1.9/zftp.so
+lib/zsh/3.1.9/zle.so
+lib/zsh/3.1.9/zleparameter.so
+lib/zsh/3.1.9/zutil.so
+lib/zsh/3.1.9/zsh/rlimits.so
+lib/zsh/3.1.9/zsh/sched.so
+lib/zsh/3.1.9/zsh/cap.so
+lib/zsh/3.1.9/zsh/clone.so
+lib/zsh/3.1.9/zsh/example.so
+lib/zsh/3.1.9/zsh/files.so
+lib/zsh/3.1.9/zsh/mapfile.so
+lib/zsh/3.1.9/zsh/mathfunc.so
+lib/zsh/3.1.9/zsh/parameter.so
+lib/zsh/3.1.9/zsh/stat.so
+lib/zsh/3.1.9/zsh/zftp.so
+lib/zsh/3.1.9/zsh/zprof.so
+lib/zsh/3.1.9/zsh/zpty.so
+lib/zsh/3.1.9/zsh/zutil.so
+lib/zsh/3.1.9/zsh/compctl.so
+lib/zsh/3.1.9/zsh/complete.so
+lib/zsh/3.1.9/zsh/complist.so
+lib/zsh/3.1.9/zsh/computil.so
+lib/zsh/3.1.9/zsh/deltochar.so
+lib/zsh/3.1.9/zsh/zle.so
+lib/zsh/3.1.9/zsh/zleparameter.so
+@dirrm lib/zsh/3.1.9/zsh
+@dirrm lib/zsh/3.1.9
+@dirrm lib/zsh
