@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2002/01/06 19:33:34 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2002/01/14 22:21:03 kleink Exp $
 
-DISTNAME=	openldap-2.0.19
+DISTNAME=	openldap-2.0.20
 SVR4_PKGNAME=	oldap
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
@@ -61,8 +60,8 @@ CNFS_PERMS=	slapd.conf
 SUPPS=		schema/corba.schema schema/core.schema			\
 		schema/cosine.schema schema/inetorgperson.schema	\
 		schema/java.schema schema/krb5-kdc.schema		\
-		schema/misc.schema schema/nadf.schema			\
-		schema/nis.schema schema/openldap.schema
+		schema/misc.schema schema/nis.schema			\
+		schema/openldap.schema
 
 CONF_FILES=		# empty
 CONF_FILES_PERMS=	# empty
