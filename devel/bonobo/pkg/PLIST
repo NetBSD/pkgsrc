@@ -1,0 +1,92 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/02 15:15:16 rh Exp $
+bin/efstool
+bin/bonobo-image-x-png
+bin/bonobo-application-x-mines
+bin/bonobo-image-generic
+bin/bonobo-text-plain
+bin/bonobo-audio-ulaw
+bin/paint-component-simple
+bin/sample-container
+etc/CORBA/servers/sample.gnorba
+etc/CORBA/servers/item.gnorba
+etc/CORBA/servers/application-x-mines.gnorba
+etc/CORBA/servers/image-generic.gnorba
+etc/CORBA/servers/image-x-png.gnorba
+etc/CORBA/servers/text-plain.gnorba
+etc/CORBA/servers/audio-ulaw.gnorba
+etc/CORBA/servers/paint-component-simple.gnorba
+include/efs.h
+include/bonobo/bonobo.h
+include/bonobo/gnome-bonobo.h
+include/bonobo/gnome-bonobo-item.h
+include/bonobo/gnome-bonobo-selector.h
+include/bonobo/gnome-bonobo-widget.h
+include/bonobo/gnome-canvas-component.h
+include/bonobo/gnome-client-site.h
+include/bonobo/gnome-component-io.h
+include/bonobo/gnome-container.h
+include/bonobo/gnome-embeddable.h
+include/bonobo/gnome-embeddable-factory.h
+include/bonobo/gnome-main.h
+include/bonobo/gnome-moniker.h
+include/bonobo/gnome-moniker-client.h
+include/bonobo/gnome-object.h
+include/bonobo/gnome-object-client.h
+include/bonobo/gnome-object-io.h
+include/bonobo/gnome-persist-file.h
+include/bonobo/gnome-persist-stream.h
+include/bonobo/gnome-persist.h
+include/bonobo/gnome-progressive.h
+include/bonobo/gnome-storage.h
+include/bonobo/gnome-stream.h
+include/bonobo/gnome-stream-client.h
+include/bonobo/gnome-stream-fs.h
+include/bonobo/gnome-stream-memory.h
+include/bonobo/gnome-ui-handler.h
+include/bonobo/gnome-view.h
+include/bonobo/gnome-view-frame.h
+include/bonobo/gnome-wrapper.h
+lib/locale/no/LC_MESSAGES/bonobo.mo
+lib/locale/fr/LC_MESSAGES/bonobo.mo
+lib/locale/es/LC_MESSAGES/bonobo.mo
+lib/locale/de/LC_MESSAGES/bonobo.mo
+lib/locale/pl/LC_MESSAGES/bonobo.mo
+lib/locale/ru/LC_MESSAGES/bonobo.mo
+lib/locale/it/LC_MESSAGES/bonobo.mo
+lib/locale/da/LC_MESSAGES/bonobo.mo
+lib/locale/el/LC_MESSAGES/bonobo.mo
+lib/locale/sv/LC_MESSAGES/bonobo.mo
+lib/locale/wa/LC_MESSAGES/bonobo.mo
+lib/libefs.a
+lib/libbonobo.so.0.0
+lib/libbonobo.a
+lib/libstorage_fs.so.0.0
+lib/libstorage_fs.a
+lib/libstorage_efs.so.0.0
+lib/libstorage_efs.a
+lib/bonoboConf.sh
+share/idl/bonobo.idl
+share/idl/gnome-advise.idl
+share/idl/gnome-canvas.idl
+share/idl/gnome-container.idl
+share/idl/gnome-client-site.idl
+share/idl/gnome-embeddable.idl
+share/idl/gnome-persist.idl
+share/idl/gnome-storage.idl
+share/idl/gnome-progressive.idl
+share/idl/gnome-ui-handler.idl
+share/gnome/apps/Games/bonobo-gnomine.desktop
+share/gnome/bonobo/docs/image_x_png/C/docbook.css
+share/mime-info/bonobo.keys
+@dirrm include/bonobo
+@dirrm share/gnome/bonobo/docs/image_x_png/C/images
+@dirrm share/gnome/bonobo/docs/image_x_png/C
+@dirrm share/gnome/bonobo/docs/image_x_png
+@dirrm share/gnome/bonobo/docs/audio_ulaw/C/images
+@dirrm share/gnome/bonobo/docs/audio_ulaw/C
+@dirrm share/gnome/bonobo/docs/audio_ulaw
+@dirrm share/gnome/bonobo/docs
+@dirrm share/gnome/bonobo
+@dirrm share/gtk-doc/html/libefs
+@dirrm share/gtk-doc/html
+@dirrm share/gtk-doc

@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/02 15:15:16 rh Exp $
+
+--- components/application-x-gnomine/Makefile.in.orig	Mon Sep 27 23:22:05 1999
++++ components/application-x-gnomine/Makefile.in	Sun Jan  2 15:41:43 2000
+@@ -146,7 +146,7 @@
+ bonobo_application_x_mines_SOURCES =  	minefield.h				minefield.c				bonobo-application-x-mines.c
+ 
+ 
+-bonobo_application_x_mines_LDADD =  	$(GNOME_LIBDIR)				-lbonobo				$(GNOMEGNORBA_LIBS)
++bonobo_application_x_mines_LDADD =  	$(GNOME_LIBDIR)				../../bonobo/.libs/libbonobo.a				$(GNOMEGNORBA_LIBS)
+ 
+ 
+ gnorbadir = $(sysconfdir)/CORBA/servers
+@@ -268,10 +268,10 @@
+ 	@list='$(Games_DATA)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+ 	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(Gamesdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(Gamesdir)/$$p; \
++	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(Gamesdir)/bonobo-$$p; \
+ 	  else if test -f $$p; then \
+ 	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(Gamesdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(Gamesdir)/$$p; \
++	    $(INSTALL_DATA) $$p $(DESTDIR)$(Gamesdir)/bonobo-$$p; \
+ 	  fi; fi; \
+ 	done
+ 
