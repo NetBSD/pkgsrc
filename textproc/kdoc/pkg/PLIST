@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/16 14:00:24 wulf Exp $
+
+bin/kdoc
+bin/qt2kdoc
+bin/makekdedoc
+man/man1/kdoc.1
+man/man1/qt2kdoc.1
+man/man1/makekdedoc.1
+share/kdoc/kdocUtil.pm
+share/kdoc/kdocAstUtil.pm
+share/kdoc/kdocParseDoc.pm
+share/kdoc/kdocCxxHTML.pm
+share/kdoc/kdocLib.pm
+share/kdoc/Ast.pm
+share/kdoc/kdocIDLhtml.pm
+share/kdoc/kdocHTMLutil.pm
+share/kdoc/kdoctexi.pm
+share/kdoc/kdocCxxLaTeX.pm
+share/kdoc/kdocDocHelper.pm
+share/kdoc/kdocCxxDocbook.pm
+share/kdoc/Iter.pm
+@dirrm share/kdoc
