@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.12 2004/12/23 18:53:52 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.13 2004/12/24 01:08:41 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -27,3 +27,5 @@ Pullup ticket 183 - requested by Mark Davies
 build fix for kde3
 Pullup ticket 184 - requested by Mark Davies
 security fix for kdegraphics3
+Pullup ticket 185 - requested by Thomas Klausner
+remove pan-gnome package
