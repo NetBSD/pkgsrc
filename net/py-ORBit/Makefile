@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/08/25 19:33:43 recht Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/08 21:14:08 recht Exp $
 #
 
-DISTNAME=	pyorbit-1.99.7
+DISTNAME=	pyorbit-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyorbit/ORBit/}
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyorbit/1.99/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyorbit/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
