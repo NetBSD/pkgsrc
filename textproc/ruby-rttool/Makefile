@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/04 00:13:06 taca Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/16 03:38:10 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.ruby-lang.org/~rubikitch/computer/rt.html
 COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}optparse>=0.7:../../devel/ruby-optparse
-DEPENDS+=	w3m>=0.2.1:../../www/w3m
 
 DIST_SUBDIR=	ruby
 VERSION=	0.1.7
@@ -21,7 +20,6 @@ REPLACE_RUBY=	bin/rt/rt2 lib/rt/rt2html-lib.rb lib/rt/rt2txt-lib.rb \
 		lib/rt/rtparser-test.rb lib/rt/rtparser.rb \
 		lib/rt/rtvisitor.rb lib/rt/w3m.rb
 
-#DOCS=		rt.html rt.rd
 EXAMPLES=	rttest.rd test1.rt test2.rt
 
 pre-configure:
