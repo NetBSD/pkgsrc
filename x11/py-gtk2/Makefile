@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2004/02/18 16:58:36 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/12 10:48:23 recht Exp $
 #
 
-DISTNAME=	pygtk-2.0.0
+DISTNAME=	pygtk-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
-PKGREVISION=	3
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
@@ -30,7 +29,6 @@ BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 .include "../../lang/python/application.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtkglarea2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/12 10:48:23 recht Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_GTK2_BUILDLINK3_MK:=	${PY_GTK2_BUILDLINK3_MK}+
@@ -19,7 +19,6 @@ BUILDLINK_PKGSRCDIR.pygtk2?=	../../x11/py-gtk2
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtkglarea2/buildlink3.mk"
 
 .endif	# PY_GTK2_BUILDLINK3_MK
 
