@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.in,v 1.3 2003/01/11 07:52:17 schmonz Exp $
+# $NetBSD: Makefile.in,v 1.4 2003/04/20 20:34:05 grant Exp $
 # Original from FreeBSD, no rcs id.
 
-PREFIX=		@prefix@
+prefix=		@prefix@
 INSTALL=	@INSTALL@
 
 mandir=		@mandir@
@@ -35,6 +35,6 @@ clean:
 	rm -f ${OBJS} ${PROG}
 
 install:
-	${INSTALL} ${PROG} ${PREFIX}/sbin
+	${INSTALL} ${PROG} ${prefix}/sbin
 	${INSTALL} -m 755 -d ${mandircat1}
 	${INSTALL} -m 444 ${PROG}.cat1 ${mandircat1}/${PROG}.0
