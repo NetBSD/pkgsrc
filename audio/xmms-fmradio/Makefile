@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 02:00:12 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/18 04:28:18 jlam Exp $
 #
 
 DISTNAME=		xmms-FMRadio-1.4
@@ -15,8 +15,8 @@ ONLY_FOR_PLATFORM=      NetBSD-1.5Z[A-Z]-*-* NetBSD-1.[6-9]*-*
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
-BINOWN?=		root
-BINGRP?=		wheel
+BINOWN?=		${ROOT_USER}
+BINGRP?=		${ROOT_GROUP}
 
 .include "../../audio/xmms/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
