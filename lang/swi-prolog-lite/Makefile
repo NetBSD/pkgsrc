@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/07 12:16:52 markd Exp $
 
 .include "Makefile.common"
 
@@ -28,7 +28,7 @@ PLIST_SUBST+=		BITS=32
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/shlib.pl \
-		${PREFIX}/lib/swi-prolog-${PKGVERSION}/library/shlib.pl
+		${PREFIX}/lib/swi-prolog-${SWIPLVERS}/library/shlib.pl
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
