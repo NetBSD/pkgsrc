@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:33 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/16 00:03:22 rh Exp $
 bin/bonobo-application-x-mines
 bin/bonobo-audio-ulaw
 bin/bonobo-echo
@@ -17,9 +17,9 @@ bin/libefs-config
 bin/moniker-test
 bin/sample-container
 bin/sample-control-container
-include/bonobo.h
 include/efs.h
 include/efs_error.h
+include/gnome-1.0/bonobo.h
 include/gnome-1.0/bonobo/Bonobo.h
 include/gnome-1.0/bonobo/bonobo-arg.h
 include/gnome-1.0/bonobo/bonobo-async.h
@@ -158,6 +158,7 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bonobo.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/bonobo.mo
@@ -166,6 +167,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/bonobo.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bonobo.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/bonobo.mo
@@ -193,13 +195,15 @@ share/oaf/Bonobo_Sample_Mines.oaf
 share/oaf/Bonobo_Sample_Paint.oaf
 share/oaf/Bonobo_Sample_Text.oaf
 share/oaf/Bonobo_Selector.oaf
-@exec /bin/mkdir -p /usr/X11R6/share/gnome/bonobo/docs/audio_ulaw/C/images
+@exec /bin/mkdir -p %D/share/gnome/ui
+@dirrm share/gnome/ui
+@exec /bin/mkdir -p %D/share/gnome/bonobo/docs/audio_ulaw/C/images
 @dirrm share/gnome/bonobo/docs/audio_ulaw/C/images
 @dirrm share/gnome/bonobo/docs/audio_ulaw/C
 @dirrm share/gnome/bonobo/docs/audio_ulaw
 @dirrm share/gnome/bonobo/docs
 @dirrm share/gnome/bonobo
-@exec /bin/mkdir -p /usr/X11R6/share/bonobo/html/bonobo
+@exec /bin/mkdir -p %D/share/bonobo/html/bonobo
 @dirrm share/bonobo/html/bonobo
 @dirrm share/bonobo/html
 @dirrm share/bonobo
