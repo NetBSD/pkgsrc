@@ -1,10 +1,18 @@
-# $NetBSD: Makefile,v 1.272 2003/09/27 14:13:07 grant Exp $
+# $NetBSD: Makefile,v 1.273 2003/10/02 09:22:06 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
 
 SUBDIR+=	Mosaic
 SUBDIR+=	MozillaFirebird
+SUBDIR+=	MozillaFirebird-bin
+SUBDIR+=	MozillaFirebird-bin-acroread
+SUBDIR+=	MozillaFirebird-bin-acroread3
+SUBDIR+=	MozillaFirebird-bin-acroread5
+SUBDIR+=	MozillaFirebird-bin-flash
+SUBDIR+=	MozillaFirebird-bin-java
+SUBDIR+=	MozillaFirebird-bin-nightly
+SUBDIR+=	MozillaFirebird-bin-realplayer
 SUBDIR+=	adzap
 SUBDIR+=	amaya
 SUBDIR+=	analog
@@ -97,14 +105,6 @@ SUBDIR+=	links
 SUBDIR+=	links-gui
 SUBDIR+=	lynx
 SUBDIR+=	lynx-current
-SUBDIR+=	MozillaFirebird-bin
-SUBDIR+=	MozillaFirebird-bin-acroread
-SUBDIR+=	MozillaFirebird-bin-acroread3
-SUBDIR+=	MozillaFirebird-bin-acroread5
-SUBDIR+=	MozillaFirebird-bin-flash
-SUBDIR+=	MozillaFirebird-bin-java
-SUBDIR+=	MozillaFirebird-bin-nightly
-SUBDIR+=	MozillaFirebird-bin-realplayer
 SUBDIR+=	mMosaic
 SUBDIR+=	make_album
 SUBDIR+=	mknmz-wwwoffle
