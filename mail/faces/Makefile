@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/11/30 16:29:28 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/07/07 14:14:14 tron Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	visual mail, user and print face server
+
+DEPENDS+=	netpbm>=9.25:../../graphics/netpbm
 
 LICENSE=	limited-redistribution
 RESTRICTED=	"Distribution not allowed if money exchanged"
@@ -38,13 +40,13 @@ do-configure:
 		scripts/facesall					\
 		scripts/mkfacesindex					\
 	";								\
-	for file in $${files}; do					\
+	for FILE in $${files}; do					\
 		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
-			$${file} > $${file}.fixed;			\
-		if [ -x $${file} ]; then				\
-			${CHMOD} +x $${file}.fixed;			\
+			$${FILE} > $${FILE}.fixed;			\
+		if [ -x $${FILE} ]; then				\
+			${CHMOD} +x $${FILE}.fixed;			\
 		fi;							\
-		${MV} -f $${file}.fixed $${file};			\
+		${MV} -f $${FILE}.fixed $${FILE};			\
 	done
 
 .include "../../mk/x11.buildlink.mk"
