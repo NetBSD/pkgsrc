@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7064 2004/09/01 09:44:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.7065 2004/09/01 11:11:11 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4136,3 +4136,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nmap to 3.70 [salo 2004-09-01]
 	Updated xorg-fontsTruetype to 6.7.0nb1 [recht 2004-09-01]
 	Updated xmlcatmgr to 2.2 [jmmv 2004-09-01]
+	Updated icewm to 1.2.16 [jmmv 2004-09-01]
+	Updated icewm-gnome to 1.2.16 [jmmv 2004-09-01]
+	Updated icewm-imlib to 1.2.16 [jmmv 2004-09-01]
