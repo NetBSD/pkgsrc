@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3833 2003/11/18 14:15:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3834 2003/11/18 14:22:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4609,3 +4609,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Text-DelimMatch to 1.06a [xtraeme 2003-11-18]
 	Updated john to 1.6nb1 [xtraeme 2003-11-18]
 	Updated quake to 2.30nb2 [xtraeme 2003-11-18]
+	Updated xgalaga to 2.0.34nb2 [xtraeme 2003-11-18]
