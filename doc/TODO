@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1889 2004/07/02 22:32:19 wiz Exp $
+$NetBSD: TODO,v 1.1890 2004/07/03 04:02:20 taya Exp $
 
 Suggested new packages
 ======================
@@ -221,7 +221,6 @@ Suggested package updates
 	o exim-4.34
 	o festival-1.4.3
 	o findutils-4.1.20
-	o firefox-0.9.1
 	o firefox-bin-0.9.1 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
