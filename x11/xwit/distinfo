@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:30 agc Exp $
+
+MD5 (xwit-3.4.tar.gz) = 627a2ff424ae5593be929f3def62dd1e
+SHA1 (patch-aa) = cd63c5ad56acd9ce0c2ff8c3e278f33871a67b24

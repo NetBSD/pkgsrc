@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:51 agc Exp $
+
+MD5 (xfce-3.6.3.tar.gz) = e42e017604edf8daa24417a28a218333
+SHA1 (patch-ab) = 9e197b94a9f1a4a528d5d997705e12567d46be1b
+SHA1 (patch-ac) = 9d6cb8b360e960467719ef0b85b758e6fe5dbe07

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:13:20 agc Exp $
+
+MD5 (spfc-0.2.0.tar.gz) = fa8d9e98545526afdb64d6d1c4b10c46
+SHA1 (patch-aa) = c33eaa0ca572e4ca16077b189cde6771ef0abf5a

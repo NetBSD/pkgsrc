@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:55 agc Exp $
+
+MD5 (xfstt-1.1.tar.gz) = e6588126aa49a5a50458591948424209
+SHA1 (patch-aa) = 1d4deffc912664589501326ec1aef80d65d1f7b9
+SHA1 (patch-ab) = d37d9659e3a792413fef05a661cd6709535cd406
+SHA1 (patch-ac) = 41f637e882ad91eda30c926b2e54a0f8b4edfaf4
+SHA1 (patch-ad) = d9551ac593f81390cf3b5c664132af7deeb69656
+SHA1 (patch-ae) = 4152ce0947392480d56d9ff2b191e0b2d59f83d2
