@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.336 2004/10/02 04:05:54 simonb Exp $
+# $NetBSD: Makefile,v 1.337 2004/10/07 15:24:17 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -241,6 +241,7 @@ SUBDIR+=	tgif
 SUBDIR+=	tiff
 SUBDIR+=	tkpiechart
 SUBDIR+=	tuxpaint
+SUBDIR+=	tuxpaint-config
 SUBDIR+=	tuxpaint-stamps
 SUBDIR+=	urt
 SUBDIR+=	vcg
