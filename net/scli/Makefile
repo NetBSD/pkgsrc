@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/23 14:44:27 seb Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/25 19:55:55 seb Exp $
 #
 
 DISTNAME=		scli-0.2.12
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ibr.cs.tu-bs.de/pub/local/scli/
 
@@ -11,7 +12,6 @@ COMMENT=		SNMP command line interface
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-TEXINFO_REQD=		4.2 # XXX I'll revisit this
 AUTOMAKE_POST_PATTERNS+=	*.info *.info-*
 
 CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib}
