@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2004/07/29 07:41:02 agc Exp $
+# $NetBSD: Makefile,v 1.187 2004/07/29 14:43:16 tv Exp $
 #
 
 COMMENT=	Programming languages
@@ -70,7 +70,6 @@ SUBDIR+=	java-wrapper
 SUBDIR+=	jbuilder-jit
 SUBDIR+=	jdk
 SUBDIR+=	jdk-openjit
-SUBDIR+=	jdk12-openjit
 SUBDIR+=	jikes
 SUBDIR+=	jini
 SUBDIR+=	joos
