@@ -1,0 +1,11 @@
+--- Library/src/HTMemLog.c.orig	Wed Feb 19 06:04:55 1997
++++ Library/src/HTMemLog.c	Mon Jun  9 16:29:21 1997
+@@ -17,7 +17,7 @@
+ #ifdef WWW_MSWINDOWS
+ #define OPEN_FLAGS	O_WRONLY|O_CREAT|O_TRUNC
+ #else /* WWW_MSWINDOWS */
+-#define OPEN_FLAGS	O_WRONLY|O_CREAT|O_TRUNC|O_SYNC
++#define OPEN_FLAGS	O_WRONLY|O_CREAT|O_TRUNC
+ #endif /* !WWW_MSWINDOWS */
+ 
+ PRIVATE size_t		LogBuffSize = 1024; /* default size is 1k */
