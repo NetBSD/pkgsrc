@@ -1,0 +1,15 @@
+# $NetBSD: immodules.tmpl,v 1.1 2004/01/22 12:38:47 jmmv Exp $
+#
+# Rebuild the GTK2 immodules database.
+#
+
+GTK_IMMODULES_DB="@GTK_IMMODULES_DB@"
+GTK_QUERY_IMMODULES="@GTK_QUERY_IMMODULES@"
+
+case ${STAGE} in
+POST-INSTALL|POST-DEINSTALL)
+	${GTK_QUERY_IMMODULES} > ${GTK_IMMODULES_DB}
+	;;
+*)
+	;;
+esac
