@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2000/03/26 14:28:12 itojun Exp $
+# $NetBSD: Makefile,v 1.78 2000/07/17 11:57:32 veego Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -27,7 +27,16 @@ GNU_CONFIGURE=		YES
 # Use SSH_CONF_DIR from /etc/mk.conf, if defined; otherwise default to /etc
 SSH_CONF_DIR?=		/etc
 
-CONFIGURE_ARGS+=	--with-etcdir=${SSH_CONF_DIR} --with-libwrap
+CONFIGURE_ARGS+=	--with-etcdir=${SSH_CONF_DIR}
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-libwrap
+.endif
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=		zlib-*:../../devel/zlib
+CONFIGURE_ENV+=		X_CFLAGS="-I${LOCALBASE}/include"
+.endif
 
 #Uncomment if all your users are in their own group and their homedir
 #is writeable by that group.  Beware the security implications!
@@ -126,9 +135,16 @@ CONFIGURE_ARGS+=	--disable-asm
 CFLAGS+=		-m68060
 .endif
 
+.if ${OPSYS} == "SunOS"
+ROOT_GROUP?=	root
+.else
+ROOT_GROUP?=	wheel
+.endif
+
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 PLIST_SRC=	${WRKDIR}/PLIST
+PLIST_SUBST+=	INSTALL="${INSTALL}" ROOT_GROUP="${ROOT_GROUP}"
 
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
