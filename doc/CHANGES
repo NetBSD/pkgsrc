@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5209 2004/03/11 14:03:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.5210 2004/03/11 14:12:01 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mjpegtools to 1.6.2 [recht 2004-03-11]
 	Updated libgda to 1.0.3 [jmmv 2004-03-11]
 	Updated libgnomedb to 1.0.3 [jmmv 2004-03-11]
+	Updated libnbcompat to 20040311 [grant 2004-03-11]
