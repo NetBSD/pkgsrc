@@ -1,6 +1,6 @@
 The Ada compiler front-end of gcc is itself written
 in Ada. Consequently, an Ada compiler must be used
-to build this pkg. In pkgsrc, lang/gcc33-ada is version
+to build this pkg. In pkgsrc, lang/gcc3-ada is version
 3.3 of the gcc Ada compiler; it also requires an Ada
 compiler to build. This pkg may also be built using
 lang/gcc3 (which contains Ada).
