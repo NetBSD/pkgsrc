@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/04 03:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/28 13:38:56 wiz Exp $
 #
 
 DISTNAME=	fltk-1.0.9-source
@@ -26,6 +26,8 @@ USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=	-I${X11PREFIX}/include		# GL/GL.h
+MAKE_ENV+=	INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"
+MAKE_ENV+=	INSTALL_DATA="${INSTALL_DATA}"
 
 # When the API changes and breaks binary-compatibility with the previous
 # version, increment the MAJOR by 1 and reset the MINOR to 0.  Otherwise,
@@ -34,11 +36,5 @@ CPPFLAGS+=	-I${X11PREFIX}/include		# GL/GL.h
 FLTK_MAJOR=	1
 FLTK_MINOR=	3
 MAKE_ENV+=	FLTK_MAJOR="${FLTK_MAJOR}" FLTK_MINOR="${FLTK_MINOR}"
-
-DOCDIR=		${PREFIX}/share/doc/html/fltk
-
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/documentation; ${INSTALL_DATA} *.html *.gif *.jpg ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.1 2000/08/28 13:38:57 wiz Exp $
+
+--- documentation/Makefile.orig	Mon Jun  5 23:20:35 2000
++++ documentation/Makefile
+@@ -128,10 +128,9 @@
+ depend:
+ 
+ install:
+-	-mkdir -p $(prefix)/share/doc/fltk
+-	cp -f $(HTMLFILES) index.html $(prefix)/share/doc/fltk
+-	cp -f *.gif *.jpg $(prefix)/share/doc/fltk
+-	chmod 644 $(prefix)/share/doc/fltk/*
++	-${INSTALL_DATA_DIR} $(prefix)/share/doc/html/fltk
++	${INSTALL_DATA} $(HTMLFILES) index.html $(prefix)/share/doc/html/fltk
++	${INSTALL_DATA} *.gif *.jpg $(prefix)/share/doc/html/fltk
+ 
+ fltk.d/index.html: $(HTMLFILES)
+ 	echo "Generating HTML documentation..."
