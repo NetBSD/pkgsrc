@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2004/05/16 20:01:59 minskim Exp $
 
---- setup.py.orig	2003-05-22 19:36:54.000000000 +0200
-+++ setup.py	2003-06-02 18:58:56.000000000 +0200
-@@ -210,11 +210,15 @@
+--- setup.py.orig	2003-05-22 12:36:54.000000000 -0500
++++ setup.py
+@@ -210,11 +210,15 @@ class PyBuildExt(build_ext):
          return platform
  
      def detect_modules(self):
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
  
          try:
              have_unicode = unicode
-@@ -274,7 +278,7 @@
+@@ -274,7 +278,7 @@ class PyBuildExt(build_ext):
          if have_unicode:
              exts.append( Extension('unicodedata', ['unicodedata.c']) )
          # access to ISO C locale support
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
  
          # Modules with some UNIX dependencies -- on by default:
          # (If you have a really backward UNIX, select and socket may not be
-@@ -330,16 +334,16 @@
+@@ -330,16 +334,16 @@ class PyBuildExt(build_ext):
          # These represent audio samples or images as strings:
  
          # Disabled on 64-bit platforms
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
              readline_libs = ['readline']
              if self.compiler.find_library_file(lib_dirs,
                                                   'ncurses'):
-@@ -363,14 +367,10 @@
+@@ -363,14 +367,10 @@ class PyBuildExt(build_ext):
          # socket(2)
          # Detect SSL support for the socket module
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
  
          if ssl_incs is not None:
              krb5_h = find_file('krb5.h', inc_dirs,
-@@ -413,9 +413,9 @@
+@@ -413,9 +413,9 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c']) )
  
          # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
@@ -84,7 +84,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
  
          # Berkeley DB interface.
          #
-@@ -469,9 +469,9 @@
+@@ -469,9 +469,9 @@ class PyBuildExt(build_ext):
          # FTP archive sites. One URL for it is:
          # ftp://gatekeeper.dec.com/.b/usenet/comp.sources.misc/volume40/fgmp/part01.Z
  
@@ -97,7 +97,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
  
  
          # Unix-only modules
-@@ -498,8 +498,8 @@
+@@ -498,8 +498,8 @@ class PyBuildExt(build_ext):
  
          if (self.compiler.find_library_file(lib_dirs, 'ncurses')):
              curses_libs = ['ncurses']
@@ -108,7 +108,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
          elif (self.compiler.find_library_file(lib_dirs, 'curses')
                and platform != 'darwin'):
                  # OSX has an old Berkeley curses, not good enough for
-@@ -509,8 +509,8 @@
+@@ -509,8 +509,8 @@ class PyBuildExt(build_ext):
              else:
                  curses_libs = ['curses', 'termcap']
  
@@ -119,7 +119,32 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
  
          # If the curses module is enabled, check for the panel module
          if (module_enabled(exts, '_curses') and
-@@ -581,11 +581,11 @@
+@@ -544,23 +544,7 @@ class PyBuildExt(build_ext):
+         # Andrew Kuchling's zlib module.
+         # This require zlib 1.1.3 (or later).
+         # See http://www.cdrom.com/pub/infozip/zlib/
+-        zlib_inc = find_file('zlib.h', [], inc_dirs)
+-        if zlib_inc is not None:
+-            zlib_h = zlib_inc[0] + '/zlib.h'
+-            version = '"0.0.0"'
+-            version_req = '"1.1.3"'
+-            fp = open(zlib_h)
+-            while 1:
+-                line = fp.readline()
+-                if not line:
+-                    break
+-                if line.find('#define ZLIB_VERSION', 0) == 0:
+-                    version = line.split()[2]
+-                    break
+-            if version >= version_req:
+-                if (self.compiler.find_library_file(lib_dirs, 'z')):
+-                    exts.append( Extension('zlib', ['zlibmodule.c'],
+-                                           libraries = ['z']) )
++        exts.append(Extension('zlib', ['zlibmodule.c'], libraries = ['z']))
+ 
+         # Interface to the Expat XML parser
+         #
+@@ -581,11 +565,11 @@ class PyBuildExt(build_ext):
          else:
              expat_incs = find_file('xmlparse.h', inc_dirs, [])
  
@@ -136,7 +161,7 @@ $NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
  
          # Platform-specific libraries
          if platform == 'linux2':
-@@ -808,7 +808,7 @@
+@@ -808,7 +792,7 @@ def main():
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
