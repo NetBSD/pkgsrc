@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/12 21:10:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/24 10:25:37 jlam Exp $
 bin/get-wsound-flags
 bin/getsoundset
 bin/setsoundset
 bin/wsoundplay
 bin/wsoundserver
+etc/WindowMaker/WMSound
 include/wsound.h
 lib/libwsound.a
 lib/libwsound.la
@@ -15,4 +16,3 @@ man/man1/getsoundset.1
 man/man1/setsoundset.1
 man/man1/wsoundplay.1
 man/man1/wsoundserver.1
-etc/WindowMaker/WMSound
