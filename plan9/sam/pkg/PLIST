@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/03/29 17:08:49 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/04/04 16:58:24 hubertf Exp $
 bin/sam
 bin/samterm
 bin/samsave
@@ -18,4 +18,3 @@ man/man4/keyboard.4.gz
 man/man4/utf.4.gz
 man/man6/bitmap.6.gz
 man/man6/regexp.6.gz
-lib/X11/app-defaults/Sam
