@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2001/06/06 23:01:09 wiz Exp $
+$NetBSD: distinfo,v 1.6 2001/06/07 04:25:33 jlam Exp $
 
-SHA1 (perl-5.6.0.tar.gz) = a2e9da9c82116a9094cc0f92c248c4339fda89fa
-Size (perl-5.6.0.tar.gz) = 5443601 bytes
+SHA1 (perl-5.6.1.tar.gz) = c718b38685f90d51a9a6b1b008de0d7d198c0744
+Size (perl-5.6.1.tar.gz) = 5983695 bytes
