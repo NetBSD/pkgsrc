@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1099 2002/12/03 20:53:39 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1100 2002/12/03 21:13:37 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -204,12 +204,8 @@ PERL5_PKGSRCDIR?=	../../lang/perl5
 # _PERL58_PATTERNS contains perl versions >=5.8.0 but before 6.0.
 _PERL58_PATTERNS=	5.8.* 5.9* 5.[1-9][0-9]*
 
-# Darwin support was added to perl beginning with release 5.8.0.  Tweak the
-# value of PERL5_REQD (possible user-supplied) so that it is always at least
-# 5.8.0.
-#
-.if ${OPSYS} == "Darwin"
-_PERL58_REQD?=		5.8.0
+.if ${_OPSYS_PERL_REQD} != ""
+_PERL58_REQD?=		${_OPSYS_PERL_REQD}
 .  for _pattern_ in ${_PERL58_PATTERNS}
 .    if !empty(PERL5_REQD:M${_pattern_})
 _PERL58_REQD:=		${PERL5_REQD}
