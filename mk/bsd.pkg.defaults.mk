@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.9 2001/10/26 16:08:53 jwise Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.10 2001/10/26 16:18:46 jwise Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -963,8 +963,9 @@ PILRC_USE_GTK?=	YES
 
 #PKG_JVM=
 # Used to choose a java virtual machine for packages which use Java.
-# Possible: jdk, sun-jdk, kaffe (kaffe currently has some problems)
-# Default: jdk on NetBSD/i386, kaffe elsewhere
+# ${JAVA_HOME} will be set based on this choice, if unset
+# Possible: jdk, sun-jdk, blackdown-jdk13, kaffe (kaffe currently has some problems)
+# Default: jdk on NetBSD/i386, blackdown-jdk13 on powerpc, kaffe elsewhere
 
 #POPTOP_USE_MPPE=
 # Used in poptop package to specify the use of the mppe-ppp package
