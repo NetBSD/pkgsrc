@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/08/02 09:59:12 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/10/29 14:57:03 minskim Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -32,7 +32,7 @@ BUILDLINK_INCDIRS.gcc34+=	include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\//
 
 BUILDLINK_FILES_CMD.gcc34=	\
 	(cd  ${BUILDLINK_PREFIX.gcc34} &&	\
-	${FIND} bin libexec lib \( -type file -o -type link \) -print)
+	${FIND} bin libexec lib \( -type f -o -type l \) -print)
 BUILDLINK_TRANSFORM.gcc34=	-e s:\buildlink:buildlink/gcc34:
 
 # Packages that link against shared libraries need a full dependency.
