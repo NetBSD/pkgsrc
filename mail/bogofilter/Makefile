@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 12:06:07 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/03 12:18:18 wiz Exp $
 #
 
 DISTNAME=	bogofilter-0.11.1.3
@@ -9,12 +9,10 @@ MAINTAINER=	manu@netbsd.org
 HOMEPAGE=	http://bogofilter.sourceforge.net
 COMMENT=	Bayesian spam filter written in C
 
-DEPENDS+=	db4:../../databases/db4
+USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	YES
 
-HAS_CONFIGURE=	YES
-
-CONFIGURE_ARGS+= --with-db=${BUILDLINK_PREFIX.db4}/include/db4
-CONFIGURE_ARGS+= --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-db=${BUILDLINK_PREFIX.db4}/include/db4
 
 .include "../../databases/db4/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
