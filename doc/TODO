@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1847 2004/06/20 22:09:27 xtraeme Exp $
+$NetBSD: TODO,v 1.1848 2004/06/21 02:25:39 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -176,7 +176,6 @@ Suggested package updates
 	o boehm-gc-6.3alpha6 [recht]
 	o boson-0.10
 	o capc-calc-2.11.9.3
-	o cdrdao-1.1.9
 	o centericq-4.9.12
 	o cervisia-2.1.2
 	o checkbot-1.74
@@ -331,7 +330,6 @@ Suggested package updates
 	o p5-Exception-Class-1.17
 	o p5-Socket6-0.16
 	o p5-Term-Readline-1.14 [pkg/25163]
-	o pax [NetBSD's bin/pax has several fixes: ticket #1021, PR#24481, PR/25934, PR/25299, PR/25310, PR#25200, PR#25207, PR#25131, ticket #155]
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o physfs-1.0.0
