@@ -1,0 +1,9 @@
+This package provides a shared library and a replacement for
+sysctl(1) (when needed i.e. when the original one is statically linked)
+so that the real version numbers and strings of the running NetBSD
+kernel as returned by sysctl(3) and uname(3) are overridden by
+those fixed during compilation.
+
+This is useful for -among other things- building packages in
+sandboxed/chrooted environment for a different NetBSD release than the
+system hosting the sandbox/chroot.
