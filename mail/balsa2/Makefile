@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2004/10/15 12:03:53 tv Exp $
+# $NetBSD: Makefile,v 1.33 2004/11/14 17:02:03 jmmv Exp $
 
-DISTNAME=		balsa-2.2.3
-PKGREVISION=		2
+DISTNAME=		balsa-2.2.5
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://balsa.gnome.org/				\
 			ftp://ftp.newton.cx/pub/balsa/
@@ -27,7 +26,6 @@ CONFIGURE_ARGS=		--with-gpgme=${BUILDLINK_PREFIX.gpgme}/bin/gpgme-config
 CONFIGURE_ARGS+=	--disable-more-warnings
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--enable-pcre
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv_open=yes
 
@@ -37,30 +35,30 @@ CONF_FILES+=	${EGDIR}/${cnf} ${PKG_SYSCONFDIR}/sound/events/${cnf}
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-CONFIGURE_ARGS+=        --with-ldap
-.include "../../databases/openldap/buildlink3.mk"
-.endif
-BUILD_DEFS+=	USE_OPENLDAP
+BUILDLINK_DEPENDS.gmime+=	gmime>=2.1.9
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../mail/libesmtp/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml3/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
