@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.108 2004/06/26 18:53:17 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.109 2004/06/28 14:33:47 hubertf Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -41,6 +41,10 @@ my $opt_newpackage	= 0; #
 my $opt_dumpmakefile	= 0; #
 my $opt_contblank	= 1; # number of allowed contigoous blank lines
 my $opt_packagedir	= "."; #
+
+# Constants
+my $regex_rcsidstr	= qr"\$($conf_rcsidstr)(?::[^\$]*|)\$";
+my $regex_known_rcs_tag	= qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$conf_rcsidstr)(?::[^\$]*?|)\$";
 
 # Global variables that should be eliminated by the next refactoring.
 my %definesfound	= ();
@@ -293,6 +297,30 @@ if ($opt_committer) {
 	}
 }
 print_summary_and_exit();
+
+#
+# Subroutines common to all checking routines
+#
+
+# Loads a text file completely into memory. Returns undef on error
+# or a reference to an array of lines. A line itself is an array of
+# three components: the originating file, the line number and the
+# contents of the line.
+sub load_file($) {
+	my ($fname) = @_;
+	my ($result, $line, $lineno);
+
+	$result = [];
+	open(F, "< $fname") or return undef;
+	$lineno = 0;
+	while (defined($line = <F>)) {
+		$lineno++;
+		$line =~ s/\r*\n*\z//;
+		push(@$result, [$fname, $lineno, $line]);
+	}
+	close(F) or return undef;
+	return $result;
+}
 
 sub checkfile_DESCR($) {
 	local($file) = @_;
@@ -608,75 +636,81 @@ sub checklastline($) {
 	return 1;
 }
 
-sub checkfile_patches_patch($) {
-	my ($file) = @_;
-	my ($rcsidseen, $whole, @lines, $line);
-	$rcsidseen = 0;
-
-	if ($file =~ /.*~$/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "is $file a backup file? If so, please remove it \n"
-		       ."      and rerun '$conf_make makepatchsum'");
-	}
-
-	&checkperms("$opt_packagedir/$file");
-
-	open(IN, "< $opt_packagedir/$file") || return 0;
-	$whole = '';
-	while (defined($line = <IN>)) {
-		$rcsidseen++ if ($line =~ /\$$conf_rcsidstr[:\$]/);
-		$whole .= $line;
-		push(@lines, $line);
-	}
-	if ($opt_committer && $whole =~ /.\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|NetBSD)(:.*\$|\$)/) { # XXX
-	        # RCS ID in very first line is ok, to identify version
-	        # of patch (-> only warn if there's something before the
-	        # actual $RCS_ID$, not on BOF - '.' won't match there)
-		log_warning(NO_FILE, NO_LINE_NUMBER, "$file includes possible RCS tag \"\$$1\$\". ".
-			"use binary mode (-ko) on commit/import.");
-	}
-	if (!$rcsidseen) {
-		log_error(NO_FILE, NO_LINE_NUMBER, "RCS tag \"\$$conf_rcsidstr\$\" must be present ".
-			"in patch $file.")
-	}
-	close(IN);
+# $lines => an array of lines as returned by load_file().
+sub check_for_multiple_patches($) {
+	my ($lines) = @_;
+	my ($files_in_patch, $patch_state);
 
 	$files_in_patch = 0;
 	$patch_state = "";
-	foreach my $patch_line (@lines) {
-	    chomp($patch_line);
-	    if (index($patch_line, "--- ") == 0 && $patch_line !~ qr"^--- \d+,\d+ ----$") {
-	        $line_type = "-";
-	    } elsif (index($patch_line, "*** ") == 0 && $patch_line !~ qr"^\*\*\* \d+,\d+ \*\*\*\*$") {
-	        $line_type = "*";
-	    } elsif (index($patch_line, "+++ ") == 0) {
-	        $line_type = "+";
-	    } else {
-	        $line_type = "";
-	    }
-	    if ($patch_state eq "*") {
-	        if ($line_type eq "-") {
-		    $files_in_patch++;
-		    $patch_state = "";
+	foreach my $line (@$lines) {
+		if (index($line->[2], "--- ") == 0 && $line->[2] !~ qr"^--- \d+(?:,\d+|) ----$") {
+			$line_type = "-";
+		} elsif (index($line->[2], "*** ") == 0 && $line->[2] !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
+			$line_type = "*";
+		} elsif (index($line->[2], "+++ ") == 0) {
+			$line_type = "+";
 		} else {
-	            log_warning(NO_FILE, NO_LINE_NUMBER, "$i:$.: unknown patch format (might be an internal error)");
+			$line_type = "";
 		}
-	    } elsif ($patch_state eq "-") {
-	        if ($line_type eq "+") {
-		    $files_in_patch++;
-		    $patch_state = "";
-		} else {
-		    log_warning(NO_FILE, NO_LINE_NUMBER, "$i:$.: unknown patch format (might be an internal error)");
+
+		if ($patch_state eq "*") {
+			if ($line_type eq "-") {
+				$files_in_patch++;
+				$patch_state = "";
+			} else {
+				log_warning($line->[0], $line->[1], "unknown patch format (might be an internal error)");
+			}
+		} elsif ($patch_state eq "-") {
+			if ($line_type eq "+") {
+				$files_in_patch++;
+				$patch_state = "";
+			} else {
+				log_warning($line->[0], $line->[1], "unknown patch format (might be an internal error)");
+			}
+		} elsif ($patch_state eq "") {
+			$patch_state = $line_type;
 		}
-	    } elsif ($patch_state eq "") {
-	        $patch_state = $line_type;
-	    }
-	    #printf("%s:%d: state=(%s), line=(%s)\n", $i, $., $patch_state, $line_type);
 	}
+
 	if ($files_in_patch > 1) {
-	    log_warning(NO_FILE, NO_LINE_NUMBER, "patch `$i' contains patches for more than one file, namely $files_in_patch");
+		log_warning($lines->[0]->[0], NO_LINE_NUMBER, "contains patches for $files_in_patch files, should be only one");
 	} elsif ($files_in_patch == 0) {
-	    log_warning(NO_FILE, NO_LINE_NUMBER, "patch `$i' contains no patch");
+		log_warning($lines->[0]->[0], NO_LINE_NUMBER, "contains no patch");
 	}
+	return 1;
+}
+
+sub checkfile_patches_patch($) {
+	my ($file) = @_;
+	my ($fname) = "$opt_packagedir/$file";
+	my ($lines);
+
+	if ($file =~ /.*~$/) {
+		log_warning($fname, NO_LINE_NUMBER, "In case this is a backup file: please remove it and rerun '$conf_make makepatchsum'");
+	}
+
+	checkperms($fname);
+	if (!defined($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Could not load file.");
+		return 0;
+	}
+
+	# The first line should contain the RCS Id string
+	if (scalar(@$lines) == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Empty patch file.");
+		return 0;
+	} elsif ($lines->[0]->[2] !~ /^$regex_rcsidstr$/) {
+		log_error($lines->[0]->[0], $lines->[0]->[1], "Expected RCS tag \"\$$conf_rcsidstr\$\" (and nothing more) here.");
+	}
+
+	foreach my $line (@$lines[1..scalar(@$lines)-1]) {
+		if ($opt_committer && $line->[2] =~ /$regex_known_rcs_tag/) {
+			log_warning($line->[0], $line->[1], "Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on commit/import.");
+		}
+	}
+
+	check_for_multiple_patches($lines);
 	return 1;
 }
 
@@ -706,7 +740,7 @@ sub readmakefile($) {
 		if ($line =~ /^\.\s*if\s+!defined\s*\((\w+)\)/) {
 			if ($definesfound{$1}) {
 				$level = 1;
-				log_info($file, $., "omitting contents of !defined($1)\n");
+				log_info($file, $., "omitting contents of !defined($1)");
 				$contents .= "# omitted inclusion for !defined($1) here\n";
 				while (defined($line = <$handle>)) {
 					if ($line =~ /^\.\s*if\s+/) {
@@ -767,7 +801,7 @@ sub readmakefile($) {
 sub checkfile_Makefile($) {
 	local($file) = @_;
 	local($rawwhole, $whole, $idx, @sections);
-	local($tmp, $tmp2);
+	local($tmp);
 	local($i, $j, $k, $l);
 	local(@varnames) = ();
 	local($distfiles, $pkgname, $svrpkgname, $distname,
@@ -1136,7 +1170,7 @@ EOF
 					log_info(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" ok.");
 				}
 			} else {
-				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.\n");
+				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.");
 			}
 		if ($tmp =~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "MASTER_SITES and DYNAMIC_MASTER_SITES ".
@@ -1340,20 +1374,21 @@ EOF
 	# warnings for missing COMMENT
 	if ($tmp !~ /\nCOMMENT=\s*(.*)$/) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "please add a short COMMENT describing the package.");
-	}
-	# and its properties:
-	$tmp2 = $1;
-	if ($tmp2 =~ /\.$/i) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not end with a '.' (period).");
-	}
-	if ($tmp2 =~ /^(a|an) /i) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not begin with '$1 '.");
-	}
-	if ($tmp2 =~ /^[a-z]/) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should start with a capital letter.");
-	}
-	if (length($tmp2) > 70) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not be longer than 70 characters.");
+	} else {
+		# and its properties:
+		my $tmp2 = $1;
+		if ($tmp2 =~ /\.$/i) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not end with a '.' (period).");
+		}
+		if ($tmp2 =~ /^(a|an) /i) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not begin with '$1 '.");
+		}
+		if ($tmp2 =~ /^[a-z]/) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should start with a capital letter.");
+		}
+		if (length($tmp2) > 70) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not be longer than 70 characters.");
+		}
 	}
 
 	&checkearlier($tmp, @varnames);
@@ -1426,14 +1461,16 @@ EOF
 				}
 
 				# check pkg dir existence
-				$k = (split(':', $k))[1];
-				$k =~ s/\${PKGSRCDIR}/$ENV{'PKGSRCDIR'}/;
-				if (! -d "$opt_packagedir/$k") {
-					log_warning(NO_FILE, NO_LINE_NUMBER, "no package directory $k ".
-						"found, even though it is ".
-						"listed in $j.");
+				my @m = split(/:/, $k);
+				if ($#m >= 1) {
+					$m[1] =~ s/\${PKGSRCDIR}/$ENV{'PKGSRCDIR'}/;
+					if (! -d "$opt_packagedir/$m[1]") {
+						log_warning(NO_FILE, NO_LINE_NUMBER, "no package directory $m[1] found, even though it is listed in $j.");
+					} else {
+						log_info(NO_FILE, NO_LINE_NUMBER, "package directory $m[1] found.");
+					}
 				} else {
-					log_info(NO_FILE, NO_LINE_NUMBER, "package directory $k found.");
+					log_error(NO_FILE, NO_LINE_NUMBER, "invalid package dependency specification \"$k\".");
 				}
 			}
 		}
@@ -1577,7 +1614,7 @@ sub checkorder($$@) {
 		while ($k < scalar(@order) && $order[$k] ne $i) {
 			$k++;
 		}
-		if ($order[$k] eq $i) {
+		if ($k <= $#order) {
 			if ($k < $j) {
 				log_error(NO_FILE, NO_LINE_NUMBER, "$i appears out-of-order.");
 				$invalidorder++;
@@ -1633,9 +1670,7 @@ sub abspathname($$) {
 		if ($i ne '') {
 			$i =~ s/\s.*$//;
 			$i =~ s/['"].*$//;
-			$i = substr($i, 0, 20) . '...' if (20 < length($i));
-			log_warning(NO_FILE, NO_LINE_NUMBER, "possible use of absolute pathname ".
-				"\"$i\", in $file.");
+			log_warning($file, NO_LINE_NUMBER, "possible use of absolute pathname \"$i\".");
 		}
 	}
 
