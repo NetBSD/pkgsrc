@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2003/03/22 01:45:15 salo Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/22 05:23:32 salo Exp $
 #
 
 DISTNAME=	sylpheed-0.8.11claws
 PKGNAME=	sylpheed-claws-0.8.11
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +29,7 @@ CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-compface
+CONFIGURE_ARGS+=	--enable-aspell
 
 PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -65,6 +67,7 @@ post-install:
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../security/gpgme/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
+.include "../../textproc/aspell/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
