@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.5 2004/02/20 14:02:04 wiz Exp $
 --- init.h.orig	Wed Jul 24 10:41:29 2002
 +++ init.h	Mon Feb  2 08:17:26 2004
 @@ -278,6 +278,13 @@
