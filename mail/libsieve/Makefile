@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 01:15:12 wiz Exp $
 #
 
 DISTNAME=	cyrus-imapd-2.1.12
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.cyrusoft.com/sieve/
 COMMENT=	RFC3028 sieve library
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/sieve
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 CPPFLAGS+=	-I.
 CPPFLAGS+=	-I${PREFIX}/include/cyrus
@@ -29,5 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${hdr} ${PREFIX}/include/sieve
 .endfor
 
-.include "../../mail/cyrus-imapd/buildlink2.mk"
+.include "../../mail/cyrus-imapd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
