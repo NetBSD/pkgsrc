@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2003/06/23 08:48:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.58 2003/06/23 09:55:01 seb Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -25,7 +25,6 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread.pc.in
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
 INFO_FILES=		glib.info
-TEXINFO_OVERRIDE=	YES
 USE_NEW_TEXINFO=	YES
 
 PTHREAD_OPTS+=		require
