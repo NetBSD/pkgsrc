@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 16:27:03 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/04/17 04:45:08 fredb Exp $
 
 SHA1 (xchiplogo.tar.gz) = 2884f2375a389aa5427efecef7d8cf3e74974d98
 Size (xchiplogo.tar.gz) = 46652 bytes
-SHA1 (patch-aa) = 4b001740468c1559c8c88812ea252b42c136193f
+SHA1 (patch-aa) = 1235622f36c63bdeb5e453ac4fa1bce9bb6ec9c1
