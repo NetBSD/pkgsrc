@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 18:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/12 20:33:07 jlam Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -18,8 +18,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CFLAGS="`${LIBNET_CONFIG} --cflags` `${LIBNET_CONFIG} --defines`" \
-		LIBS="`${LIBNET_CONFIG} --libs`"
+CFLAGS+=	`${LIBNET_CONFIG} --cflags` `${LIBNET_CONFIG} --defines`
+LIBS=		`${LIBNET_CONFIG} --libs`
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}

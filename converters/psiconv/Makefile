@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/11 06:34:22 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/12 20:33:02 jlam Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -21,8 +21,8 @@ USE_X11=	YES
 USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	LIBS="${LIBS} `${MAGICK_CONFIG} --libs`"
-CPPFLAGS+=	`${MAGICK_CONFIG} --cppflags` -DIMAGEMAGICK"
+CPPFLAGS+=	`${MAGICK_CONFIG} --cppflags` -DIMAGEMAGICK
+LIBS+=		`${MAGICK_CONFIG} --libs`
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/psiconv
