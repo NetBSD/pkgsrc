@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2701 2004/12/07 09:51:38 xtraeme Exp $
+$NetBSD: TODO,v 1.2702 2004/12/07 09:55:09 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -232,10 +232,6 @@ Suggested new packages
 	memtest86+
 	http://www.memtest.org/
 	Updated version of memtest86 memory tester
-
-	lablgtk2
-	GTK2 interface for ocaml
-	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
 
 	coda6
 	Version 6 of coda
