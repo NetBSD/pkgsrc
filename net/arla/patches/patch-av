@@ -1,0 +1,19 @@
+$NetBSD: patch-av,v 1.1 2000/11/06 15:24:58 wennmach Exp $
+
+Do not send SIGABRT to arlad if a deadlock could be avoided. This psignal
+is cruft left over from debugging. Also, avoid "interesting" error reports,
+like: 
+"xfs_message_rpc: deadlock avoided pid = 8006 != 8006"
+
+--- xfs/bsd/xfs_dev-common.c.old	Wed Sep 13 08:34:10 2000
++++ xfs/bsd/xfs_dev-common.c	Mon Nov  6 15:50:15 2000
+@@ -399,8 +399,7 @@
+ 
+     if (chan->proc != NULL && proc->p_pid == chan->proc->p_pid) {
+ 	printf("xfs_message_rpc: deadlock avoided"
+-	       "pid = %u != %u\n", proc->p_pid, chan->proc->p_pid);
+-	psignal (proc, SIGABRT);
++	       ", pid = %u == %u\n", proc->p_pid, chan->proc->p_pid);
+ 	return EDEADLK;
+     }
+ 
