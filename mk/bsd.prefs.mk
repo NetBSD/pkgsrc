@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.152 2004/02/14 03:26:09 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.153 2004/02/14 03:33:39 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -440,6 +440,8 @@ USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
 PKG_FAIL_REASON+=	'You appear to have a deprecated Zoularis installation.'
 PKG_FAIL_REASON+=	'Please update your system to bootstrap-pkgsrc and remove the'
 PKG_FAIL_REASON+=	'${LOCALBASE}/bsd directory.'
+PKG_FAIL_REASON+=	'See http://mail-index.NetBSD.org/tech-pkg/2004/02/14/0004.html'
+PKG_FAIL_REASON+=	'for more details.'
 .endif
 
 _PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
