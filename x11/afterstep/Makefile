@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/10/28 10:07:42 agc Exp $
+# $NetBSD: Makefile,v 1.13 2000/02/05 15:34:03 wiz Exp $
 
 DISTNAME=	AfterStep-1.6.10
 PKGNAME=	afterstep-1.6.10
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-png-includes=${LOCALBASE}/include \
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 
 post-patch:
-	for i in ` find ${WRKSRC} -name "*.man" -print `; do \
+	for i in ` ${FIND} ${WRKSRC} -name "*.man" -print `; do \
 	  ${MV} $$i $$i.orig ;\
 	  ${SED} -e 's@/usr/local/@${PREFIX}/@g' < $$i.orig > $$i ; \
 	  ${RM} $$i.orig ;\
