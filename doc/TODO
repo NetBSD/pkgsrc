@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2343 2004/11/09 14:48:16 salo Exp $
+$NetBSD: TODO,v 1.2344 2004/11/09 15:18:24 adam Exp $
 
 Suggested new packages
 ======================
@@ -297,7 +297,6 @@ Suggested package updates
 	o dact-0.8.37
 	o dbench-2.1
 	o dctc-0.85.9
-	o delegate-8.9.2
 	o dict-client-1.9.11
 	o dict-server-1.9.11
 	o dmalloc-5.3.0
