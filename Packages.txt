@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.293 2003/05/31 19:35:16 wiz Exp $
+# $NetBSD: Packages.txt,v 1.294 2003/06/05 17:32:13 jmmv Exp $
 ###########################################################################
 
 			==========================
@@ -652,13 +652,20 @@ taken by the guy who maintains the port can complain vigorously.
 
 The MASTER_SITES may be set to one of the predefined sites:
 
-	${MASTER_SITE_XCONTRIB}
-	${MASTER_SITE_GNU}
-	${MASTER_SITE_PERL_CPAN}
-	${MASTER_SITE_TEX_CTAN}
-	${MASTER_SITE_SUNSITE}
+	${MASTER_SITE_APACHE}
+	${MASTER_SITE_DEBIAN}
 	${MASTER_SITE_GNOME}
+	${MASTER_SITE_GNU}
+	${MASTER_SITE_GNUSTEP}
+	${MASTER_SITE_MOZILLA}
+	${MASTER_SITE_PERL_CPAN}
 	${MASTER_SITE_SOURCEFORGE}
+	${MASTER_SITE_SUNSITE}
+	${MASTER_SITE_R_CRAN}
+	${MASTER_SITE_SUSE}
+	${MASTER_SITE_TEX_CTAN}
+	${MASTER_SITE_XCONTRIB}
+	${MASTER_SITE_XEMACS}
 
 If one of these predefined sites is chosen, you may require the ability to
 specify a subdirectory of that site.  Since these macros may expand to
