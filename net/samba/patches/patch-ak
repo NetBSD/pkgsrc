@@ -1,0 +1,37 @@
+$NetBSD: patch-ak,v 1.1 2002/02/05 00:36:27 taca Exp $
+
+--- Makefile.in.orig	Sun Feb  3 09:46:05 2002
++++ Makefile.in
+@@ -46,11 +46,11 @@
+ # set these to where to find various files
+ # These can be overridden by command line switches (see smbd(8))
+ # or in smb.conf (see smb.conf(5))
+-LOGFILEBASE = @logfilebase@
++LOGFILEBASE = $(VARDIR)/log
+ CONFIGFILE = $(CONFIGDIR)/smb.conf
+ LMHOSTSFILE = $(CONFIGDIR)/lmhosts
+ DRIVERFILE = $(CONFIGDIR)/printers.def
+-PASSWD_PROGRAM = /bin/passwd
++PASSWD_PROGRAM = /usr/bin/passwd
+ # This is where smbpasswd et al go
+ PRIVATEDIR = @privatedir@
+ 
+@@ -63,6 +63,9 @@
+ # the directory where lock files go
+ LOCKDIR = @lockdir@
+ 
++# the directory where pid files go
++PIDFILEDIR = /var/run
++
+ # libsmbclient support here
+ BLDSHARED = @BLDSHARED@
+ LIBSMBCLIENT_MAJOR=0
+@@ -78,7 +81,7 @@
+ PASSWD_FLAGS = -DPASSWD_PROGRAM=\"$(PASSWD_PROGRAM)\" -DSMB_PASSWD_FILE=\"$(SMB_PASSWD_FILE)\" -DTDB_PASSWD_FILE=\"$(TDB_PASSWD_FILE)\"
+ FLAGS1 = $(CFLAGS) -Iinclude -I$(srcdir)/include -I$(srcdir)/ubiqx -I$(srcdir)/smbwrapper $(CPPFLAGS) -DLOGFILEBASE=\"$(LOGFILEBASE)\"
+ FLAGS2 = -DCONFIGFILE=\"$(CONFIGFILE)\" -DLMHOSTSFILE=\"$(LMHOSTSFILE)\"  
+-FLAGS3 = -DSWATDIR=\"$(SWATDIR)\" -DSBINDIR=\"$(SBINDIR)\" -DLOCKDIR=\"$(LOCKDIR)\" -DCODEPAGEDIR=\"$(CODEPAGEDIR)\"
++FLAGS3 = -DSWATDIR=\"$(SWATDIR)\" -DSBINDIR=\"$(SBINDIR)\" -DLOCKDIR=\"$(LOCKDIR)\" -DPIDFILEDIR=\"$(PIDFILEDIR)\" -DSMBRUN=\"$(SMBRUN)\" -DCODEPAGEDIR=\"$(CODEPAGEDIR)\"
+ FLAGS4 = -DDRIVERFILE=\"$(DRIVERFILE)\" -DBINDIR=\"$(BINDIR)\" 
+ FLAGS5 = $(FLAGS1) $(FLAGS2) $(FLAGS3) $(FLAGS4) -DHAVE_INCLUDES_H
+ FLAGS  = $(ISA) $(FLAGS5) $(PASSWD_FLAGS)

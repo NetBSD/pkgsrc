@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/04 10:31:49 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/02/05 00:36:26 taca Exp $
 bin/make_printerdef
 bin/make_smbcodepage
 bin/make_unicodemap
@@ -152,9 +152,9 @@ share/examples/samba/printer-accounting/hp5-redir
 share/examples/samba/printer-accounting/lp-acct
 share/examples/samba/printer-accounting/printcap
 share/examples/samba/printing/smbprint
+share/examples/samba/printing/smbprint-new.sh
 share/examples/samba/printing/smbprint.newer
 share/examples/samba/printing/smbprint.sysv
-share/examples/samba/printing/smbprint-new.sh
 share/examples/samba/simple/README
 share/examples/samba/simple/smb.conf
 share/examples/samba/smb.conf.default
