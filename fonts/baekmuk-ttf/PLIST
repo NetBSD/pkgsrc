@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/16 15:16:25 wiz Exp $
+lib/X11/fonts/TrueType/batang.ttf
+lib/X11/fonts/TrueType/dotum.ttf
+lib/X11/fonts/TrueType/gulim.ttf
+lib/X11/fonts/TrueType/hline.ttf
+share/doc/baekmuk-ttf/COPYRIGHT
+@dirrm share/doc/baekmuk-ttf
+@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || true
