@@ -1,0 +1,43 @@
+$NetBSD: patch-aq,v 1.1 2001/04/17 16:03:20 skrll Exp $
+
+--- kscd/config.h.std.orig	Wed Aug 23 06:31:58 2000
++++ kscd/config.h.std
+@@ -120,18 +120,24 @@
+ 
+ /*************************************************************************
+  *
+- *	FreeBSD/NetBSD
++ *	NetBSD
+  *
+  *************************************************************************/
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__)
+-
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__)
+ 
+ /* Is this the most commonly used cd device on FreeBSD ? */
+ #define DEFAULT_CD_DEVICE       "/dev/rmatcd0c"
+ 
+-#else /* __NetBSD__ */
++#endif
++
++/*************************************************************************
++ *
++ *	NetBSD
++ *
++ *************************************************************************/
++
++#if defined(__NetBSD__)
+ 
+ /* The raw partition on disk device is *d on i386, *c on everything else */
+ #ifdef __i386__
+@@ -140,7 +146,7 @@
+ #define DEFAULT_CD_DEVICE       "/dev/rcd0c"
+ #endif
+ 
+-#endif /* __FreeBSD__ */
++#endif /* __NetBSD__ */
+ 
+ /* Please have a look at void KSCD::playClicked() in kscd.cpp. You will find
+    there the following code:
