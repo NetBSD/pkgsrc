@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 1999/03/14 23:48:08 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/03/16 22:10:32 tron Exp $
 #
 
-DISTNAME=	gnome-libs-1.0.1
+DISTNAME=	gnome-libs-1.0.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \

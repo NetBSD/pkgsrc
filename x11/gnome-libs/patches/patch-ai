@@ -1,0 +1,37 @@
+$NetBSD: patch-ai,v 1.1 1999/03/16 22:10:32 tron Exp $
+
+--- devel-docs/gnomeui/Makefile.in.orig	Sat Mar 13 02:17:49 1999
++++ devel-docs/gnomeui/Makefile.in	Mon Mar 15 23:55:05 1999
+@@ -159,7 +159,7 @@
+ CFLAGS = `gnome-config --cflags gnomeui`
+ LDFLAGS = `gnome-config --libs gnomeui`
+ 
+-HTML_DIR = $(datadir)/gnome/html
++HTML_DIR = $(datadir)/doc/gnome-libs/html
+ 
+ TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ 
+@@ -300,10 +300,10 @@
+ 	cp $(srcdir)/html/book1.html gnomeui.html
+ 
+ html/book1.html: sgml/gnomeui-doc.bottom
+-	make html
++	${MAKE} html
+ 
+ sgml/gnomeui-doc.bottom: $(tmpl_sources)
+-	make sgml
++	${MAKE} sgml
+ 
+ scan:
+ 	-CFLAGS=$(CFLAGS) LDFLAGS=$(LDFLAGS) gtkdoc-scanobj --module=$(DOC_MODULE)
+@@ -327,8 +327,8 @@
+ 
+ install-data-local: 
+ 	install -d -m 0755 $(TARGET_DIR)
+-	-install -m 0644 html/*.html $(TARGET_DIR)
+-	-install -m 0644 html/index.sgml $(TARGET_DIR)
++	-${INSTALL_DATA} html/*.html $(TARGET_DIR)
++	-${INSTALL_DATA} html/index.sgml $(TARGET_DIR)
+ 	-gtkdoc-fixxref --module=$(DOC_MODULE) --html-dir=$(HTML_DIR)
+ 
+ dist-hook:

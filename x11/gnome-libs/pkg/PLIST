@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1999/03/14 20:41:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 1999/03/16 22:10:32 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -168,7 +168,7 @@ lib/libgnome.a
 lib/libgnomesupport.a
 lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
-lib/libgnomeui.so.39.0
+lib/libgnomeui.so.39.1
 lib/libgnorba.a
 lib/libgnorba.so.28.4
 lib/libgnorbagtk.a
@@ -176,7 +176,7 @@ lib/libgnorbagtk.so.0.0
 lib/libgtkxmhtml.a
 lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
-lib/libzvt.so.3.2
+lib/libzvt.so.3.3
 share/locale/de/LC_MESSAGES/gnome-libs.mo
 share/locale/fr/LC_MESSAGES/gnome-libs.mo
 share/locale/nl/LC_MESSAGES/gnome-libs.mo
@@ -197,10 +197,10 @@ share/locale/ru/LC_MESSAGES/gnome-libs.mo
 share/locale/hu/LC_MESSAGES/gnome-libs.mo
 sbin/gnome-pty-helper
 share/aclocal/libart.m4
-share/doc/gnome-libs/adding-file-manager-new-items.txt
-share/doc/gnome-libs/session-management.txt
 share/doc/gnome-libs/README.gtkcauldron
 share/doc/gnome-libs/README.gtkcauldron_for_python
+share/doc/gnome-libs/adding-file-manager-new-items.txt
+share/doc/gnome-libs/session-management.txt
 share/doc/gnome-libs/adding-sounds.txt
 share/doc/gnome-libs/api-comment-style.txt
 share/doc/gnome-libs/gnome-doc.el
@@ -209,9 +209,119 @@ share/doc/gnome-libs/gtk_dialog_cauldron.3
 share/doc/gnome-libs/mime-type-handling.txt
 share/doc/gnome-libs/mkstub
 share/doc/gnome-libs/suggestions.txt
-@exec mkdir -p %D/share/doc/gnome-libs/html
+share/doc/gnome-libs/html/gnome.html
+share/doc/gnome-libs/html/gnome-decl.txt
+share/doc/gnome-libs/html/gnome-sections.txt
+share/doc/gnome-libs/html/gnome-dev-info.html
+share/doc/gnome-libs/html/gnome/book1.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-config.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-defs.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-dentry.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-exec.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-fileconvert.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-help.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-history.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-i18n.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-metadata.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-mime-info.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-mime.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-paper.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-popt.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-regex.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-remote.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-score.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-sound.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-triggers.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-url.html
+share/doc/gnome-libs/html/gnome/gnome-gnome-util.html
+share/doc/gnome-libs/html/gnome/gnome-libgnome.html
+share/doc/gnome-libs/html/gnome/libgnome.html
+share/doc/gnome-libs/html/gnomeui.html
+share/doc/gnome-libs/html/gnomeui.hierarchy
+share/doc/gnome-libs/html/gnomeui.types
+share/doc/gnome-libs/html/gnomeui-scan.c
+share/doc/gnome-libs/html/gnomeui-decl.txt
+share/doc/gnome-libs/html/gnomeui-sections.txt
+share/doc/gnome-libs/html/gnomeui/book1.html
+share/doc/gnome-libs/html/gnomeui/gnome-objects.html
+share/doc/gnome-libs/html/gnomeui/gnomeabout.html
+share/doc/gnome-libs/html/gnomeui/gnomeanimator.html
+share/doc/gnome-libs/html/gnomeui/gnomeapp.html
+share/doc/gnome-libs/html/gnomeui/gnomeappbar.html
+share/doc/gnome-libs/html/gnomeui/gnomecalculator.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvas.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvasellipse.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvasgroup.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvasimage.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvasitem.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvasline.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvaspolygon.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvasre.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvasrect.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvastext.html
+share/doc/gnome-libs/html/gnomeui/gnomecanvaswidget.html
+share/doc/gnome-libs/html/gnomeui/gnomeclient.html
+share/doc/gnome-libs/html/gnomeui/gnomecolorpicker.html
+share/doc/gnome-libs/html/gnomeui/gnomedateedit.html
+share/doc/gnome-libs/html/gnomeui/gnomedentryedit.html
+share/doc/gnome-libs/html/gnomeui/gnomedialog.html
+share/doc/gnome-libs/html/gnomeui/gnomedock.html
+share/doc/gnome-libs/html/gnomeui/gnomedockband.html
+share/doc/gnome-libs/html/gnomeui/gnomedockitem.html
+share/doc/gnome-libs/html/gnomeui/gnomedocklayout.html
+share/doc/gnome-libs/html/gnomeui/gnomeentry.html
+share/doc/gnome-libs/html/gnomeui/gnomefileentry.html
+share/doc/gnome-libs/html/gnomeui/gnomefontpicker.html
+share/doc/gnome-libs/html/gnomeui/gnomefontselector.html
+share/doc/gnome-libs/html/gnomeui/gnomeguru.html
+share/doc/gnome-libs/html/gnomeui/gnomehref.html
+share/doc/gnome-libs/html/gnomeui/gnomeiconentry.html
+share/doc/gnome-libs/html/gnomeui/gnomeiconlist.html
+share/doc/gnome-libs/html/gnomeui/gnomeiconselection.html
+share/doc/gnome-libs/html/gnomeui/gnomeicontextitem.html
+share/doc/gnome-libs/html/gnomeui/gnomeless.html
+share/doc/gnome-libs/html/gnomeui/gnomemdi.html
+share/doc/gnome-libs/html/gnomeui/gnomemdichild.html
+share/doc/gnome-libs/html/gnomeui/gnomemdigenericchild.html
+share/doc/gnome-libs/html/gnomeui/gnomemessagebox.html
+share/doc/gnome-libs/html/gnomeui/gnomenumberentry.html
+share/doc/gnome-libs/html/gnomeui/gnomepaperselector.html
+share/doc/gnome-libs/html/gnomeui/gnomepixmap.html
+share/doc/gnome-libs/html/gnomeui/gnomepixmapentry.html
+share/doc/gnome-libs/html/gnomeui/gnomeprocbar.html
+share/doc/gnome-libs/html/gnomeui/gnomepropertybox.html
+share/doc/gnome-libs/html/gnomeui/gnomescores.html
+share/doc/gnome-libs/html/gnomeui/gnomespell.html
+share/doc/gnome-libs/html/gnomeui/gnomestock.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-app-helper.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-app-util.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-canvas-util.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-dialog-util.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-dns.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-geometry.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-ice.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-icon-text.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-init.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-mdi-session.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-popup-help.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-popup-menu.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-preferences.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-properties.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-property-entries.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-startup.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-types.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-uidefs.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-winhints.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gtkcauldron.html
+share/doc/gnome-libs/html/gnomeui/gtkclock.html
+share/doc/gnome-libs/html/gnomeui/gtkdial.html
+share/doc/gnome-libs/html/gnomeui/gtkpixmapmenuitem.html
+share/doc/gnome-libs/html/gnomeui/gtkted.html
+share/doc/gnome-libs/html/gnomeui/libgnomeui.html
+share/idl/GnomeObject.idl
 share/idl/Table.idl
 share/idl/base.idl
+share/idl/gnome-editor.idl
 share/idl/gnome-factory.idl
 share/idl/name-service.idl
 share/mime-info/gnome.mime
@@ -240,6 +350,8 @@ share/type-convert/postscript.convert
 @dirrm include/zvt
 @dirrm lib/gnome-libs/include
 @dirrm lib/gnome-libs
+@dirrm share/doc/gnome-libs/html/gnomeui
+@dirrm share/doc/gnome-libs/html/gnome
 @dirrm share/doc/gnome-libs/html
 @dirrm share/doc/gnome-libs
 @dirrm share/idl

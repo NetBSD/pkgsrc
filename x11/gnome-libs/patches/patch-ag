@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.3 1999/03/16 22:10:32 tron Exp $
+
+--- devel-docs/gnome/Makefile.in.orig	Sat Mar 13 02:17:47 1999
++++ devel-docs/gnome/Makefile.in	Tue Mar 16 00:38:16 1999
+@@ -156,7 +156,7 @@
+ # The directory containing the source code (if it contains documentation).
+ DOC_SOURCE_DIR = $(GNOME_LIBS_DIR)/libgnome
+ 
+-HTML_DIR = $(datadir)/gnome/html
++HTML_DIR = $(datadir)/doc/gnome-libs/html
+ 
+ TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ 
+@@ -323,8 +323,8 @@
+ 
+ install-data-local: 
+ 	install -d -m 0755 $(TARGET_DIR)
+-	-install -m 0644 html/*.html $(TARGET_DIR)
+-	-install -m 0644 html/index.sgml $(TARGET_DIR)
++	-${INSTALL_DATA} html/*.html $(TARGET_DIR)
++	-${INSTALL_DATA} html/index.sgml $(TARGET_DIR)
+ 	-gtkdoc-fixxref --module=$(DOC_MODULE) --html-dir=$(HTML_DIR)
+ 
+ dist-hook:
