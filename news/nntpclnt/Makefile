@@ -4,7 +4,7 @@
 # Date created:         25 March 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1 1998/03/25 19:31:35 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/26 23:06:21 frueauf Exp $
 #
 
 DISTNAME=	nntpclnt-1.6.1
@@ -12,6 +12,7 @@ CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITES_LOCAL}
 
 MAINTAINER=	tv@netbsd.org
+
 ALL_TARGET=	inews
 
 MAN3=	nntpclnt.3
