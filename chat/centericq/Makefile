@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2004/05/07 23:18:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.39 2004/07/24 00:16:50 hubertf Exp $
 #
 
-DISTNAME=	centericq-4.9.9
-PKGREVISION=	2
+DISTNAME=	centericq-4.10.0
 CATEGORIES=	chat
 MASTER_SITES=	http://konst.org.ua/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -43,6 +42,7 @@ CPPFLAGS+=		-DAUDIO_PLAYER=\"\\\"${SOX_PREFIX}/bin/play\\\"\"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 .if defined(BUILDLINK_LIBICONV_LDADD) && !empty(BUILDLINK_LIBICONV_LDADD)
 #

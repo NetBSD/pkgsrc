@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/05/07 23:18:50 hubertf Exp $
+$NetBSD: distinfo,v 1.9 2004/07/24 00:16:50 hubertf Exp $
 
-SHA1 (centericq-4.9.9.tar.bz2) = 4c458aacff21bd8046688516a5b484734373a7c6
-Size (centericq-4.9.9.tar.bz2) = 990786 bytes
+SHA1 (centericq-4.10.0.tar.bz2) = 08e5baf14a0c418d6e838de3baf8348d3336f9c2
+Size (centericq-4.10.0.tar.bz2) = 1237063 bytes
 SHA1 (patch-aa) = b3e610a1a3b30a716215889b9f51c6de7e78fb22
