@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/02 23:28:34 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/22 08:38:52 rh Exp $
 #
 
 DISTNAME=		docs-${PKGVERSION}
@@ -16,7 +16,7 @@ HOMEPAGE=		http://www.geda.seul.org/
 CONFLICTS+=		gEDA<19991011
 
 DIST_SUBDIR=		geda
-PKGVERSION=		19991011
+PKGVERSION=		20000220
 
 NO_PATCH=		YES
 NO_CONFIGURE=		YES

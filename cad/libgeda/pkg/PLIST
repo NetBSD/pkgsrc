@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/02 21:59:48 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/22 08:38:57 rh Exp $
 bin/libgeda-config
 include/libgeda/colors.h
 include/libgeda/defines.h
@@ -8,6 +8,7 @@ include/libgeda/o_types.h
 include/libgeda/pcb_struct.h
 include/libgeda/prototype.h
 include/libgeda/struct.h
-lib/libgeda.so.5.0
+include/libgeda/libgeda.h
+lib/libgeda.so.6.0
 lib/libgeda.a
 @dirrm include/libgeda
