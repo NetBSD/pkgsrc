@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/16 15:29:37 rh Exp $
+$NetBSD: patch-aa,v 1.2 1999/12/22 19:46:24 rh Exp $
 
---- configure.orig	Sun Mar 15 16:26:21 1998
-+++ configure	Mon Aug 16 15:31:55 1999
-@@ -1760,6 +1760,7 @@
-   echo "$ac_t""no" 1>&6
- fi
+--- configure.orig	Mon Nov 29 18:37:24 1999
++++ configure	Wed Dec 22 20:33:48 1999
+@@ -2099,6 +2099,7 @@
+ rm -f confcache
+ 
  
 +if false; then
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+@@ -2123,6 +2124,7 @@
+ 
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -1805,6 +1806,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
- 
- if test "$USE_MAINTAINER_MODE" = yes; then
-@@ -3707,10 +3709,12 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -4050,10 +4052,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
