@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.380 2003/03/01 21:59:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.381 2003/03/02 19:34:09 mjl Exp $
 #
 
 COMMENT=	Development utilities
@@ -263,6 +263,7 @@ SUBDIR+=	p5-Log-Dispatch-Config
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Module-Dependency
+SUBDIR+=	p5-OLE-Storage_Lite
 SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-RecDescent
