@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.12 1999/10/24 16:44:30 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/12/18 18:26:37 jonb Exp $
 #
 
-DISTNAME=	freeciv-1.8.1
+DISTNAME=	freeciv-1.9.0
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.freeciv.org/freeciv/stable_version/
+MASTER_SITES=	http://www.freeciv.org/ftp/stable_version/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	jonb@netbsd.org
 HOMEPAGE=	http://www.freeciv.org/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
+DEPENDS+=	xpm-*:../../graphics/xpm
 DEPENDS+=	imlib-*:../../graphics/imlib
+DEPENDS+=	png-*:../../graphics/png
+DEPENDS+=	jpeg-*:../../graphics/jpeg
+DEPENDS+=	gettext-*:../../devel/gettext
 
 GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
 
 .include "../../mk/bsd.pkg.mk"
