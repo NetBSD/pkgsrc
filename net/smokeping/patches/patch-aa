@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/24 15:24:39 bouyer Exp $
+
+--- bin/smokeping.dist.orig	Wed Mar 19 22:35:02 2003
++++ bin/smokeping.dist	Wed Mar 19 22:37:00 2003
+@@ -1,12 +1,11 @@
+-#!/usr/sepp/bin/perl -w
++#!@PREFIX@/bin/perl -w
+ # -*-perl-*-
+ 
+-use lib qw(/usr/pack/rrdtool-1.0.40-ds/lib/perl);
+-use lib qw(/home/oetiker/data/projects/AADJ-smokeping/dist/lib);
++use lib qw(@PREFIX@/lib/smokeping);
+ 
+ use Smokeping 1.19;
+ 
+-Smokeping::main("/home/oetiker/.smokeping/config");
++Smokeping::main("@PKG_SYSCONFDIR@/config");
+ 
+ =head1 NAME
+ 
