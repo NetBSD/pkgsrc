@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2001/04/27 11:55:50 agc Exp $
+# $NetBSD: Makefile,v 1.204 2001/04/27 12:03:47 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -83,6 +83,7 @@ SUBDIR+=	ldapsdk
 SUBDIR+=	libavl
 SUBDIR+=	libctl
 SUBDIR+=	libdockapp
+SUBDIR+=	libetm
 SUBDIR+=	libg++
 SUBDIR+=	libgetopt
 SUBDIR+=	libglade
