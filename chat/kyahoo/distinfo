@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/01 07:33:42 skrll Exp $
+$NetBSD: distinfo,v 1.2 2001/11/13 21:12:44 jlam Exp $
 
 SHA1 (kyahoo-0.7.tgz) = 1532583531e5d4bc12a868d3fa7411be22ead5d3
 Size (kyahoo-0.7.tgz) = 409401 bytes
-SHA1 (patch-aa) = 8a6221c0e7e11a00b18f5c81b4c0b3bd58c3152f
+SHA1 (patch-aa) = c08c84981fedd956c82069014a37e82f610b9b36
 SHA1 (patch-ab) = 4c4cbdeb8353053fa21e478da6d48da239fb8a45
+SHA1 (patch-ac) = 9e241402b1ef74781ed205b8546dff26d04ec081

@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 2001/11/13 21:12:44 jlam Exp $
+
+--- kyahoo/Makefile.in.orig	Tue May  8 23:10:49 2001
++++ kyahoo/Makefile.in
+@@ -221,12 +221,12 @@
+ # kde_wallpaperdir  Where general wallpapers should go to.
+ 
+ # set the include path for X, qt and KDE
+-INCLUDES = $(all_includes) $(PATH_LIBYAHOO_INC)
++INCLUDES = $(all_includes) -I$(PATH_LIBYAHOO_INC)
+ 
+ #>- kyahoo_METASOURCES = AUTO 
+ 
+ # the library search path. 
+-kyahoo_LDFLAGS = $(all_libraries) $(KDE_RPATH) $(PATH_LIBYAHOO_LIB)
++kyahoo_LDFLAGS = $(all_libraries) $(KDE_RPATH) -L$(PATH_LIBYAHOO_LIB)
+ 
+ # them while "make clean", use CLEANFILES
+ DISTCLEANFILES = $(kyahoo_METASOURCES)
