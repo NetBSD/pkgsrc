@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/27 04:12:22 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/27 21:50:49 tron Exp $
 
 DISTNAME=	opera-4.0-b2-static.i386
 PKGNAME=	opera-4.0b2
@@ -16,7 +16,10 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 LICENSE=	opera-license
 
 CHECK_SHLIBS=	NO
+EMULSUBDIR=	emul/linux
+EMULDIR=	${PREFIX}/${EMULSUBDIR}
 NO_BUILD=	YES
+PLIST_SUBST=	EMULSUBDIR=${EMULSUBDIR}
 
 do-install:
 	${MKDIR} ${PREFIX}/share/doc/opera ${PREFIX}/share/opera/styles
@@ -25,5 +28,6 @@ do-install:
 	${INSTALL_DATA} LICENSE README ${PREFIX}/share/doc/opera && \
 	${INSTALL_DATA} opera.adr ${PREFIX}/share/opera && \
 	${INSTALL_DATA} *.css ${PREFIX}/share/opera/styles
+	${LN} -fs ${PREFIX}/share/opera ${EMULDIR}/usr/share
 
 .include "../../mk/bsd.pkg.mk"
