@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/12/12 00:06:39 mjl Exp $
+$NetBSD: md5,v 1.4 2000/03/01 00:02:56 simonb Exp $
 
-MD5 (bladeenc-0.90-src-stable.tar.gz) = af1ac606f13c04f96eb5103c9f657925
+MD5 (bladeenc-0.92.0-src-stable.tar.gz) = 85581842b916c17b055996d74a664f3c
