@@ -1,6 +1,7 @@
-$NetBSD: md5,v 1.3 1999/08/04 11:28:35 fredb Exp $
+$NetBSD: md5,v 1.4 1999/08/07 22:33:56 fredb Exp $
 
 MD5 (AfterStep/AfterStep-1.7.126.tar.bz2) = 1a91e9fde98b2d249ab8ea6fba34c610
 MD5 (AfterStep/1.7.126-01-sasha-endian_deps.patch.gz) = 36fd29327d2d05382d031c64bdc71fbe
 MD5 (AfterStep/1.7.126-02-allanon-security_and_avoidcover.patch.gz) = 8c469aaad3c0579d58f0dca43989e717
 MD5 (AfterStep/1.7.126-03-allanon-depend.patch.gz) = 2471ccfe5ee63d6eb8481a541f767607
+MD5 (AfterStep/1.7.126-04-allanon-shade.patch.gz) = 366673f0b86fa79af9c2f08b9d19e21f
