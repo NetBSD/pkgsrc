@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2002/08/25 21:51:00 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2003/02/15 09:33:03 salo Exp $
 
 --- Makefile.top_enable_nls.orig	Wed Dec  5 08:41:15 2001
 +++ Makefile.top_enable_nls
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.8 2002/08/25 21:51:00 jlam Exp $
 +GTOP_LIBS =
 +PTHREAD_INC ?= -I/usr/pkg/include
 +EXTRAOBJS =
-+LINK_FLAGS = -Wl,-E
++LINK_FLAGS = $(EXPORT_SYMBOLS_LDFLAGS)
 +LOCALEDIR = ${PREFIX}/share/locale
 +MANDIR = ${PREFIX}/man/man1
 +BINMODE = 2755
