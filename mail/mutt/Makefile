@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2004/02/11 15:21:57 tron Exp $
+# $NetBSD: Makefile,v 1.113 2004/02/15 13:13:52 tron Exp $
 
 DISTNAME=		mutt-1.4.2i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -15,7 +15,7 @@ COMMENT=		Text-based MIME mail client with PGP support
 BUILD_USES_MSGFMT=	yes
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
@@ -30,13 +30,13 @@ PLIST_SRC=		${WRKDIR}/PLIST
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MUTT_USE_SLANG} == YES
-. include "../../devel/libslang/buildlink2.mk"
+. include "../../devel/libslang/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .else
 . if ${MUTT_USE_NCURSES} == YES
 USE_NCURSES=		yes
 . endif
-. include "../../devel/ncurses/buildlink2.mk"
+. include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 .endif
 
@@ -46,14 +46,14 @@ CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 .endif
 
 .if ${MUTT_USE_SSL} == YES
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
-.include "../../security/cyrus-sasl/buildlink2.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 .endif
 
@@ -79,7 +79,6 @@ post-install:
 		${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}; \
 	fi
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
