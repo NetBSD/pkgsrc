@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/15 00:33:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/07 09:05:43 xtraeme Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -27,6 +27,8 @@ EXTRACT_CMD=	${SED} '1,178d' ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
 .if ${OPSYS} != "Linux"
 DEPENDS+=       suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .include "../../emulators/suse_linux/Makefile.application"
+.else
+USE_X11=	yes
 .endif
 
 pre-extract:
