@@ -1,4 +1,0 @@
-libxml-enno contains the modules XML::DOM, XML::XQL, XML::Checker and
-several other packages.  The XML::DOM code is fairly stable and has
-been used quite a bit.  The other code should be considered alpha
-code.
