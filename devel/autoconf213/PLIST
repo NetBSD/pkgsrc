@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/19 23:38:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/13 08:26:03 seb Exp $
 bin/autoconf-2.13
 bin/autoheader-2.13
 bin/autoreconf-2.13
 bin/autoscan-2.13
 bin/autoupdate-2.13
 bin/ifnames-2.13
-info/autoconf213.info
 share/autoconf/acconfig.h
 share/autoconf/acfunctions
 share/autoconf/acgeneral.m4

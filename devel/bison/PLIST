@@ -1,13 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2003/06/19 21:49:50 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/02/13 08:26:03 seb Exp $
 bin/bison
-info/bison.info
-info/bison.info-1
-info/bison.info-2
-info/bison.info-3
-info/bison.info-4
-info/bison.info-5
-info/bison.info-6
-info/bison.info-7
 lib/liby.a
 man/man1/bison.1
 share/bison/README

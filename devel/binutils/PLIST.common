@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2003/07/14 19:01:35 fredb Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2004/02/13 08:26:03 seb Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -62,23 +62,6 @@ include/bfd.h
 include/bfdlink.h
 include/dis-asm.h
 include/symcat.h
-info/as.info
-info/bfd.info
-info/bfd.info-1
-info/bfd.info-2
-info/bfd.info-3
-info/bfd.info-4
-info/bfd.info-5
-info/bfd.info-6
-info/bfd.info-7
-info/bfd.info-8
-info/bfd.info-9
-info/binutils.info
-info/gprof.info
-info/gprof.info-1
-info/gprof.info-2
-info/gprof.info-3
-info/ld.info
 lib/libbfd.a
 lib/libbfd.la
 lib/libiberty.a
