@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2004/03/31 05:50:17 snj Exp $
+$NetBSD: distinfo,v 1.16 2004/07/22 17:43:23 drochner Exp $
 
-SHA1 (sqlite-2.8.13.tar.gz) = 42e426dab768a908f4e622ac65006732da4c615c
-Size (sqlite-2.8.13.tar.gz) = 956008 bytes
+SHA1 (sqlite-2.8.14.tar.gz) = fffb48b97b2d397d3df61fde321a713ca544fff7
+Size (sqlite-2.8.14.tar.gz) = 955231 bytes
 SHA1 (patch-aa) = 21d2122f84de65cb29ae1b2d5b92984ac0868f98
