@@ -1,26 +1,28 @@
-# $NetBSD: Makefile,v 1.57 2000/06/01 11:23:26 rh Exp $
+# $NetBSD: Makefile,v 1.58 2000/06/21 02:45:15 jlam Exp $
 
-DISTNAME=	ImageMagick-5.1.1
-CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		ImageMagick-5.1.1
+CATEGORIES=		graphics
+MASTER_SITES=		${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.wizards.dupont.com/cristy/ImageMagick.html
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.wizards.dupont.com/cristy/ImageMagick.html
 
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
-DEPENDS+=	png>=1.0.6:../../graphics/png
-DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=		jpeg-6b:../../graphics/jpeg
+DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
+DEPENDS+=		png>=1.0.6:../../graphics/png
+DEPENDS+=		tiff-*:../../graphics/tiff
 
-MIRROR_DISTFILE= no
-USE_PKGLIBTOOL=	yes
-USE_X11=	yes
-GNU_CONFIGURE=	yes
+MIRROR_DISTFILE=	no
+
+GNU_CONFIGURE=		# defined
+USE_X11=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 # Avoid compiler bug on "arm32"
 .if (${MACHINE_ARCH} == arm32)
-CFLAGS=		-O
+CFLAGS=			-O
 .endif
 
 # For things for which we do not specify an explicit dependency above, disable
