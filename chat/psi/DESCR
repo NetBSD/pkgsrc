@@ -11,7 +11,7 @@ Features:
 * Message (ICQ-style) and Chat (AIM-style) modes
 * Drag and drop to send to multiple contacts
 * Full Unicode support
-* Secure connections
+* Secure connections (with psi-ssl plugin)
 * Saving contact list locally, and server sync on login
 * Icon Themes
 * Agent registration and searching
