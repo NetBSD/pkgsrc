@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1268 2004/01/03 10:31:24 jmmv Exp $
+$NetBSD: TODO,v 1.1269 2004/01/03 17:28:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -180,7 +180,7 @@ Suggested package updates
 	o gnome-core-2.4
 	o gnomeicu-0.99
 	o gnuchess-5.06
-	o gnumeric-1.2.2
+	o gnumeric-1.2.4
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
 	o gstreamer-0.6.4
@@ -204,6 +204,7 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
+	o libcdaudio-0.99.9 [pkg/23930]
 	o libcroco-0.4.0 [pkg/23793]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
