@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2002/09/25 12:04:06 jlam Exp $
+$NetBSD: distinfo,v 1.9 2002/10/30 10:49:38 markd Exp $
 
 SHA1 (xanim2801.tar.gz) = 1966880880c3779d02199fbcd1acb771bc57f754
 Size (xanim2801.tar.gz) = 441250 bytes
@@ -26,6 +26,12 @@ SHA1 (xa2.0_iv32_sparcCOFF.o.Z) = 0307f18f02763b2b3229ed4b3a00eeec7bc2c56d
 Size (xa2.0_iv32_sparcCOFF.o.Z) = 48525 bytes
 SHA1 (xa1.0_cyuv_sparcAOUT.o.Z) = c31c60ac3a519bbdce9e4d9652f274b1194e880a
 Size (xa1.0_cyuv_sparcAOUT.o.Z) = 1048 bytes
+SHA1 (xa2.0_cvid_sparcELF.o.Z) = 7c256a74a389a7ef4b455a9f6d9e9a3d084cfe3c
+Size (xa2.0_cvid_sparcELF.o.Z) = 4730 bytes
+SHA1 (xa2.0_iv32_sparcELF.o.Z) = 3837819a50d3d430149ac0f498db30cdec6245f3
+Size (xa2.0_iv32_sparcELF.o.Z) = 48813 bytes
+SHA1 (xa1.0_cyuv_sparcELF.o.Z) = 6ad551439086a5c884d9a88971261cc7e60aad60
+Size (xa1.0_cyuv_sparcELF.o.Z) = 1277 bytes
 SHA1 (xa2.0_cvid_linuxPPC.o.Z) = d6736d7fe65008293863c31b8f4c28e13152afda
 Size (xa2.0_cvid_linuxPPC.o.Z) = 5192 bytes
 SHA1 (xa1.0_cyuv_linuxPPC.o.Z) = b9af24646b46d94ccfb5e042ca20f32006a8b0af
