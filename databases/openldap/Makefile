@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/05/04 00:08:43 tv Exp $
+# $NetBSD: Makefile,v 1.9 1999/05/18 21:27:01 hwr Exp $
 #
 
 DISTNAME=	openldap-1.2.1
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.OpenLDAP.org/
 
 # for the moment without threads and thus without slurpd and ldapd
 #DEPENDS+=	../../devel/mit-pthreads
+
+CONFLICTS+=	ldapsdk*
 
 USE_LIBTOOL=	yes
 
