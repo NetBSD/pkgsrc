@@ -1,0 +1,12 @@
+$NetBSD: patch-aq,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
+
+--- lib/videocodec/Makefile.am.orig	Wed Jan 10 19:00:05 2001
++++ lib/videocodec/Makefile.am
+@@ -4,7 +4,5 @@
+     ldt_keeper.cpp image.cpp
+ libvideocodec_la_LIBADD=codeckeeper.lo
+ CXXFLAGS=-I../../include
+-codeckeeper.lo: codeckeeper.cpp
+-	$(CXX) $(CXXFLAGS) $(DEFINES) -O0 -fPIC -c codeckeeper.cpp -o codeckeeper.lo
+ 
+ LIBS=
