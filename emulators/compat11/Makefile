@@ -3,13 +3,13 @@
 # Date created:         17 Mar 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1.1.1 1998/03/17 21:31:39 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/19 11:07:32 frueauf Exp $
 #
 
 DISTNAME=	compat11
-EXTRACT_SUFX=	_${ARCH}.tgz
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	_${ARCH}.tgz
 ONLY_FOR_ARCHS=	amiga atari hp300 i386 mac68k mvme68k pc532 sparc sun3
 
 MAINTAINER=	tv@netbsd.org
@@ -17,6 +17,7 @@ MAINTAINER=	tv@netbsd.org
 LIB_DEPENDS=	edit.0.:${PORTSDIR}/emulators/compat12 \
 		g++.3.:${PORTSDIR}/emulators/compat12 \
 		util.3.:${PORTSDIR}/emulators/compat12
+
 HAS_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/usr/lib
