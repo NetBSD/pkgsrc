@@ -1,15 +1,12 @@
-$NetBSD: patch-ae,v 1.9 2004/02/16 14:07:35 adam Exp $
+$NetBSD: patch-ae,v 1.10 2005/01/14 13:00:05 adam Exp $
 
---- programs/winedbg/elf.c.orig	2004-02-16 14:40:16.000000000 +0000
-+++ programs/winedbg/elf.c
-@@ -69,6 +69,10 @@
+--- programs/winetest/winetest.rc.orig	2004-06-18 15:12:26.000000000 +0000
++++ programs/winetest/winetest.rc
+@@ -21,7 +21,6 @@
+ #include <windows.h>
+ #include <winres.h>
+ #include "resource.h"
+-#include "tests.rc"
  
- WINE_DEFAULT_DEBUG_CHANNEL(winedbg);
- 
-+#ifndef STN_UNDEF
-+# define STN_UNDEF	0
-+#endif
-+
- typedef struct tagELF_DBG_INFO
- {
-     void *elf_addr;
+ IDD_STATUS DIALOG 0, 0, 160, 140
+ STYLE WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
