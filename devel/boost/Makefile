@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/06/04 15:07:17 tv Exp $
 #
 
 DISTNAME=		boost-1.30.2
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boost/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,9 +11,11 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.boost.org/
 COMMENT=		Free, portable libraries that integrate with the ISO C++ Stdlib
 
-# Need working <limits> and <memory> not present in NetBSD yet.
-DEPENDS+=		sgi-stl>=3.2:../../devel/sgi-stl
+# Need working <limits> and <memory> not present in older gcc.
+# Other compilers are left alone to use their own STL.
+GCC_REQD+=		3.0
 
+USE_LANGUAGES+=		c++
 USE_LIBTOOL=		# defined
 BOOST_VERS=		0:0
 MAKE_ENV+=		BOOST_VERS="${BOOST_VERS}"
