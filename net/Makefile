@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 1999/11/15 02:30:33 sakamoto Exp $
+# $NetBSD: Makefile,v 1.96 1999/11/18 22:28:29 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -131,6 +131,7 @@
     SUBDIR += ucd-snmp-current
     SUBDIR += upclient
     SUBDIR += vnc
+    SUBDIR += wakeup
 #    SUBDIR += wais
 #    SUBDIR += wide-dhcp
     SUBDIR += wget
