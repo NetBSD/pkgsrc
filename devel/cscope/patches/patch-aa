@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2000/04/20 07:06:30 itojun Exp $
+$NetBSD: patch-aa,v 1.3 2000/04/21 08:52:49 bouyer Exp $
 Index: common/constants.h
 ===================================================================
 RCS file: /cvsroot/cscope/cscope/common/constants.h,v
@@ -6,7 +6,17 @@ retrieving revision 1.1.1.1
 diff -u -r1.1.1.1 constants.h
 --- common/constants.h	2000/04/18 13:16:41	1.1.1.1
 +++ common/constants.h	2000/04/20 06:59:58
-@@ -135,11 +135,13 @@
+@@ -127,19 +127,22 @@
+ #endif
+ 
+ #if !TERMINFO
++#ifndef __NetBSD__
+ #define	KEY_BREAK	0400	/* easier to define than to add #if around the use */
+ #define	KEY_ENTER	0401
+ #define	KEY_BACKSPACE	0402
+-
++#endif
+ #if !sun
  #define cbreak()	crmode()			/* name change */
  #endif
  
