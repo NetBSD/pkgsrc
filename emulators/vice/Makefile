@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2004/08/22 19:32:51 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2004/08/31 15:53:09 dillo Exp $
 #
 
-DISTNAME=		vice-1.14
-PKGREVISION=		3
+DISTNAME=		vice-1.15
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.nic.funet.fi/pub/cbm/crossplatform/emulators/VICE/
@@ -41,6 +40,10 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=	esound ffmpeg gnome
 
 .include "../../mk/bsd.options.mk"
+
+.if (${OPSYS} == NetBSD)
+CONFIGURE_ENV+=		ac_cv_header_sys_soundcard_h=no
+.endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-gnomeui
