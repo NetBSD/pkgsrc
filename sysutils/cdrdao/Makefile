@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/18 15:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/07 16:25:02 dmcmahill Exp $
 #
 
 DISTNAME=	cdrdao-1.1.3.src
@@ -21,6 +21,16 @@ CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
 CONFIGURE_ARGS+=	--without-posix-threads
 
 WRKSRC=		${WRKDIR}/cdrdao-1.1.3
+
+#override ARCH to avoid picking up a bad ${ARCH} during the build
+MAKE_ENV+=      ARCH=""
+
+post-configure:
+	cd ${WRKSRC}/scsilib/RULES ; \
+	${TEST} -f netbsd-cc.rul || ${MV} i386-netbsd-cc.rul netbsd-cc.rul; \
+	${TEST} -f netbsd-gcc.rul || ${MV} i386-netbsd-gcc.rul netbsd-gcc.rul; \
+	${LN} -sf netbsd-gcc.rul ${MACHINE}-netbsd-gcc.rul; \
+	${LN} -sf netbsd-cc.rul ${MACHINE}-netbsd-cc.rul;
 
 post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cdrdao
