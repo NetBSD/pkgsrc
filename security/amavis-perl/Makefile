@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/08/22 11:27:16 martti Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/17 16:17:53 manu Exp $
 #
 
-DISTNAME=	amavisd-snapshot-${VERSION}
-PKGNAME=	amavis-perl-${VERSION}
+DISTNAME=	amavisd-${VERSION}
+PKGNAME=	amavis-perl-v${VERSION}
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 		${MASTER_SITE_SOURCEFORGE:=amavis/}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.amavis.org/
 COMMENT=	Mail virus scanner
 
 CONFLICTS+=	amavis-[0-9]*
+CONFLICTS+=	amavis-perl-[0-9]*
 
 DEPENDS+=	uvscan-[0-9]*:../../security/uvscan
 DEPENDS+=	maildrop-[0-9]*:../../mail/maildrop
@@ -33,7 +34,12 @@ DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
-VERSION=	20020531
+.include "../../mk/bsd.prefs.mk"
+.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+DEPENDS+=	sendmail>=8.12.9nb1:../../mail/sendmail
+.endif
+
+VERSION=	0.1
 
 SMTPPORT?=	10025			# target port for scanned mails
 VIRUSDIR?=	/var/log/virusmails	# where to put contaminated mails
@@ -42,17 +48,39 @@ VIRUSMAILTO?=	security		# whom to notify about viruses
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
+# XXX Milter needs pthreads, and configure fails looking for it 
+# because ${PREFIX}/include is not available in the include path.
+.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+CONFIGURE_ENV+=	CFLAGS="-I${PREFIX}/include"
+.endif
 
 CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/amavis
 CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
 CONFIGURE_ARGS+=--enable-all
-CONFIGURE_ARGS+=--enable-smtp --with-smtp-port=${SMTPPORT}
+CONFIGURE6ARGS+=--with-amavisuser=amavis
 
+.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+CONFIGURE_ARGS+=--enable-milter 
+CONFIGURE_ARGS+=--with-milter-libs=${PREFIX}/lib
+CONFIGURE_ARGS+=--with-milter-includes=${PREFIX}/include
+.else
+CONFIGURE_ARGS+=--enable-smtp --with-smtp-port=${SMTPPORT}
+.endif
+
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+post-build:
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${SED} -e "s|/etc/amavisd.conf|${PREFIX}/etc/amavis/amavisd.conf|" \
+		${WRKSRC}/amavis/amavisd > ${WRKDIR}/amavisd
 do-install:
 	# Program files
+.if !defined(USE_MILTER) || ${USE_MILTER} != YES
 	${INSTALL_PROGRAM} ${WRKSRC}/amavis/amavis ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/amavis/amavisd ${PREFIX}/sbin
+	${ECHO} "sbin/amavis" >> ${PLIST_SRC}
+.endif
+	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${PREFIX}/sbin
 	# Documents
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amavis
 	${INSTALL_DATA} ${WRKSRC}/doc/amavis.html ${PREFIX}/share/doc/amavis
@@ -72,5 +100,16 @@ do-install:
 	${SED} "s+@PREFIX@+${PREFIX}+g" < ${FILESDIR}/amavis.m4 \
 		> ${WRKDIR}/amavis.m4
 	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${PREFIX}/share/doc/amavis
+	# Man pages
+.if !defined(USE_MILTER) || ${USE_MILTER} != YES
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/man/man1 
+	${ECHO} "man/man1/amavis.1" >> ${PLIST_SRC}
+.endif
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.conf.5 ${PREFIX}/man/man5
+	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
+.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
+.include "../../mk/pthread.buildlink2.mk"
+.endif
