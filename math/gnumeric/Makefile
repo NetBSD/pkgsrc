@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2004/06/07 08:57:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.87 2004/06/07 09:23:19 jmmv Exp $
 #
 
 DISTNAME=		gnumeric-1.2.12
+PKGREVISION=		1
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -46,6 +47,6 @@ GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
-.include "../../textproc/scrollkeeper/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 
 .include "../../mk/bsd.pkg.mk"
