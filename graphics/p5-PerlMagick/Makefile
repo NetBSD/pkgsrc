@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:31 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/14 01:37:38 kim Exp $
 
-DISTNAME=		ImageMagick-5.1.1
-PKGNAME=		p5-PerlMagick-5.1.1
+DISTNAME=		ImageMagick-5.2.2
+PKGNAME=		p5-PerlMagick-5.2.2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.wizards.dupont.com/cristy/ImageMagick.html
 
-DEPENDS+=		ImageMagick-5.1.1:../../${MAGICK}
+DEPENDS+=		ImageMagick-5.2.2:../../${MAGICK}
 
 MAGICK=			graphics/ImageMagick
 MAGICKDIR=		${PKGSRCDIR}/${MAGICK}
@@ -35,7 +35,8 @@ PERL5_BIN=		${LOCALBASE}/bin/perl
 
 CONFIGURE_ARGS+=	--with-perl=${PERL5_BIN} \
 			--without-dps --without-fpx \
-			--without-hdf --without-jbig --without-ttf
+			--without-hdf --without-jbig --without-threads \
+			--without-ttf --without-xml
 
 post-configure:
 	cd ${WRKSRC} && ${PERL5_BIN} Makefile.PL
