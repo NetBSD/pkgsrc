@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.10 2002/11/08 10:26:51 seb Exp $
+# $NetBSD: mksandbox,v 1.11 2002/11/20 16:23:09 agc Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -134,6 +134,17 @@ $mkdirprog $sandbox
 cat > $sandbox_script <<EOS
 #! /bin/sh -
 sandbox=$sandbox
+
+r3() {
+	local _R=
+	while [ \$# -ge 3 ]
+	do
+		_R="\$1 \$2 \$3 \$_R"
+		shift; shift; shift
+	done
+	echo "\$_R"
+}
+
 fses="\\
 EOS
 
@@ -157,15 +168,11 @@ esac
 rm -f $sandbox/etc/localtime
 $cpprog /usr/share/zoneinfo/GMT $sandbox/etc/localtime
 
-if [ -d /lib -a -d /libexec ]; then
-	extra_null_mounts="/lib /libexec"
-else
-	extra_null_mounts=
-fi
-
 echo "Make empty dirs upon which to mount the null mounts"
 for d in	/bin							\
 		/sbin							\
+		/lib							\
+		/libexec						\
 		/usr/X11R6						\
 		/usr/bin						\
 		/usr/games						\
@@ -176,7 +183,8 @@ for d in	/bin							\
 		/usr/lkm						\
 		/usr/share						\
 		/usr/sbin						\
-		/var/mail $extra_null_mounts; do			\
+		/var/mail; do						\
+	test -d $d || continue;						\
 	$mkdirprog $sandbox$d;						\
 	$mountprog -r -t null $d $sandbox$d;				\
 	echo "$d $d ro \\" >> $sandbox_script
@@ -226,7 +234,7 @@ case x\$1 in
 	done
 	;;
 	xumount)
-	set dummy \$fses
+	set dummy \`r3 \$fses\`
 	shift
 	while [ \$# -ge 3 ]; do
 		fs=\$1; shift
