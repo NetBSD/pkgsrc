@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/02/17 17:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/25 18:18:32 kim Exp $
 #
 
 DISTNAME=		lynx2.8.4dev.16
@@ -66,6 +66,8 @@ CONFIGURE_ENV+=		LIBS="-lm -ltermcap"
 .elif (${LYNX_SCREEN_LIB} == ncurses)
 DEPENDS+=		ncurses-*:../../devel/ncurses
 CONFIGURE_ARGS+=	--enable-color-style
+CPPFLAGS+=		-I/usr/include -I${LOCALBASE}/include
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 .elif (${LYNX_SCREEN_LIB} == curses)
 CONFIGURE_ENV+=		cf_cv_ncurses_version=no
 .else
