@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/20 23:11:53 wiz Exp $
+
+--- Makefile.orig	Tue Jul 18 09:08:33 2000
++++ Makefile	Fri Jul 21 00:37:49 2000
+@@ -11,16 +11,13 @@
+ 
+ 
+ # Installation prefix dirctory:
+-PREFIX	= /usr
+ BINDIR	= $(PREFIX)/bin
+ 
+ 
+-CC	= gcc
+-GLIBS	= `gtk-config --libs`
++GLIBS	= `gtk-config --libs` -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lintl
+ GFLAGS	= `gtk-config --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
+-OPT	= -g -Wall -O2
++OPT	= -g -Wall -I${LOCALBASE}/include
+ #########ID3_LIB = -lid3
+-MAKE	= make
+ LOCALEDIR = $(PREFIX)/share/locale
+ 
+ # The dir where are located pixmaps, logo
