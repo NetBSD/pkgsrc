@@ -1,0 +1,136 @@
+$NetBSD: patch-ae,v 1.7 2002/01/22 20:40:16 jdolecek Exp $
+
+--- po/cs.po.orig	Wed Oct  3 13:53:41 2001
++++ po/cs.po	Tue Jan 22 21:35:57 2002
+@@ -70,7 +70,7 @@ msgstr "v hlavièce 'Received' byla nalez
+ 
+ #: driver.c:863
+ msgid "message delimiter found while scanning headers\n"
+-msgstr "pøi prohledávání hlavièek byl nalezen oddìlovaè zprávy\n"
++msgstr "pøi prohledávání hlavièek byl nalezen oddìlovaè zpráv\n"
+ 
+ #: driver.c:999
+ #, c-format
+@@ -131,7 +131,7 @@ msgstr ""
+ #: driver.c:1528
+ #, c-format
+ msgid "\t%d msg %d octets long skipped by fetchmail.\r\n"
+-msgstr "\t%d. zpráva o délce %d v bajtech byla fetchmailem pøeskoèena.\r\n"
++msgstr "\t%d. zpráva o délce %d bajtù byla fetchmailem pøeskoèena.\r\n"
+ 
+ #: driver.c:1595
+ msgid "SIGPIPE thrown from an MDA or a stream socket error\n"
+@@ -359,7 +359,7 @@ msgstr "Stahuji z %s\n"
+ #: driver.c:1975
+ #, c-format
+ msgid "%d %s (%d seen) for %s"
+-msgstr "poèet %2$s pro u¾ivatele %4$s: %1$d (%3$d pøeètených)"
++msgstr "%d %s (%d pøeètených) pro %s"
+ 
+ #: driver.c:1976 driver.c:1981
+ msgid "messages"
+@@ -372,12 +372,12 @@ msgstr "zpráv"
+ #: driver.c:1980
+ #, c-format
+ msgid "%d %s for %s"
+-msgstr "poèet %2$s pro u¾ivatele %3$s: %1$d"
++msgstr "%d %s pro %s"
+ 
+ #: driver.c:1986
+ #, c-format
+ msgid " (%d octets).\n"
+-msgstr " (poèet bajtù: %d).\n"
++msgstr " (%d bajtù).\n"
+ 
+ #: driver.c:1992
+ #, c-format
+@@ -392,22 +392,22 @@ msgstr "Zprávu %d vynechávám, délka -1\n
+ #: driver.c:2115
+ #, c-format
+ msgid "skipping message %d (%d octets)"
+-msgstr "zprávu %d (poèet oktetù: %d) vynechávám"
++msgstr "vynechána zpráva %d (%d bajtù)"
+ 
+ #: driver.c:2161
+ #, c-format
+ msgid " (oversized, %d octets)"
+-msgstr " (nadmìrná velikost, poèet bajtù: %d)"
++msgstr " (nadmìrná velikost, %d bajtù)"
+ 
+-#: driver.c:2184
++#: driver.c:473
+ #, c-format
+-msgid "reading message %d of %d"
+-msgstr "ètu %d. zprávu z %d"
++msgid "reading message %s@%s:%d of %d"
++msgstr "ètu zprávu %s@%s:%d z %d"
+ 
+ #: driver.c:2188
+ #, c-format
+ msgid " (%d %soctets)"
+-msgstr " (poèet bajtù: %d %s)"
++msgstr " (%d bajtù%s)"
+ 
+ #: driver.c:2189
+ msgid "header "
+@@ -416,30 +416,30 @@ msgstr "v hlavièce "
+ #: driver.c:2247
+ #, c-format
+ msgid " (%d body octets) "
+-msgstr " (poèet bajtù v tìle: %d)"
++msgstr " (%d bajtù tìla) "
+ 
+ #: driver.c:2319
+ #, c-format
+ msgid "message %d was not the expected length (%d actual != %d expected)\n"
+-msgstr "zpráva %d má neoèekávanou velikost (velikost je %d, oèekáváno %d)\n"
++msgstr "zpráva %d nemá oèekávanou velikost (%d skuteèných != %d oèekávaných)\n"
+ 
+ #: driver.c:2358
+ msgid " retained\n"
+-msgstr "zachována(y)\n"
++msgstr "zachováno\n"
+ 
+ #: driver.c:2366
+ msgid " flushed\n"
+-msgstr "smazána(y)\n"
++msgstr " smazáno\n"
+ 
+ #: driver.c:2375
+ msgid " not flushed\n"
+-msgstr " nesmazána(y)\n"
++msgstr " nesmazáno\n"
+ 
+ #: driver.c:2380
+ #, c-format
+ msgid "fetchlimit %d reached; %d messages left on server\n"
+ msgstr ""
+-"hranice pro sta¾ení (%d) dosa¾ena; poèet zpráv ponechaných na serveru: %d\n"
++"hranice pro sta¾ení (%d) dosa¾ena; %d zpráv ponechaných na serveru\n"
+ 
+ #: driver.c:2429
+ msgid "socket"
+@@ -480,12 +480,12 @@ msgstr "nedefinovaná\n"
+ #: driver.c:2464
+ #, c-format
+ msgid "%s error while delivering to SMTP host %s\n"
+-msgstr "pøi odesílání SMTP protokolem na %2$s nastala chyba %1$s\n"
++msgstr "chyba %s pøi doruèování na SMTP server %s\n"
+ 
+ #: driver.c:2466
+ #, c-format
+ msgid "%s error while fetching from %s\n"
+-msgstr "pøi stahování z %2$s nastala chyba %1$s\n"
++msgstr "chyba %s pøi stahování z %s\n"
+ 
+ #: driver.c:2474
+ #, c-format
+@@ -890,7 +890,7 @@ msgstr "ukonèen signálem %d\n"
+ #: fetchmail.c:1380
+ #, c-format
+ msgid "%s querying %s (protocol %s) at %s\n"
+-msgstr "v %4$s %1$s stahuje protokolem %3$s z %2$s\n"
++msgstr "v %s %s stahuje protokolem %s z %s\n"
+ 
+ #: fetchmail.c:1400
+ msgid "POP2 support is not configured.\n"
