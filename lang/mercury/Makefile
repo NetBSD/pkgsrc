@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/14 03:04:31 kristerw Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -23,6 +23,14 @@ INFO_FILES+=		mercury_ref.info mercury_trans_guide.info
 CONFIGURE_ENV+=		CC=gcc
 
 MAKE_ENV+=		READLINE_PREFIX=${BUILDLINK_PREFIX.readline}
+
+post-patch:
+	${TOUCH} \
+		${WRKSRC}/library/table_builtin.date3		\
+		${WRKSRC}/library/table_builtin.date		\
+		${WRKSRC}/library/table_builtin.optdate		\
+		${WRKSRC}/library/table_builtin.trans_opt_date	\
+		${WRKSRC}/library/table_builtin.c_date
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
