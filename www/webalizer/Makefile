@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.5 1999/05/03 20:25:37 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/26 20:25:43 mjl Exp $
 #
 
-DISTNAME=	webalizer-1.22-03-src
-PKGNAME=	webalizer-1.22.03
+DISTNAME=	webalizer-1.30-04-src
+PKGNAME=	webalizer-1.30.04
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/ \
-		ftp://samhain.unix.cslab.tuwien.ac.at/pub/webalizer/
+MASTER_SITES=	ftp://www.mrunix.net/webalizer/ \
+		ftp://webalizer.dexa.org/pub/webalizer/ \
+		http://gd.tuwien.ac.at/infosys/logeval/webalizer/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mjl@emsi.priv.at
@@ -13,10 +14,14 @@ HOMEPAGE=	http://www.mrunix.net/webalizer/
 
 DEPENDS=	gd-1.3p1:../../graphics/gd
 
-WRKSRC=		${WRKDIR}/webalizer-1.22-03
+WRKSRC=		${WRKDIR}/webalizer-1.30-04
+
+GNU_CONFIGURE=  yes
+CONFIGURE_ARGS= --with-gdlib=${PREFIX}/lib \
+		--with-gd=${PREFIX}/include/gd
 
 post-patch:
-	@for f in webalizer.c webalizer.1; do \
+	@for f in webalizer.1; do \
 	${SED} 's:@@prefix@@:'${PREFIX}':g' ${WRKSRC}/$$f >${WRKSRC}/$$f.new && \
 		 ${MV} ${WRKSRC}/$$f.new ${WRKSRC}/$$f; \
 	done

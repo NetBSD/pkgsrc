@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 1999/03/23 21:16:06 mjl Exp $
+$NetBSD: patch-ac,v 1.3 1999/08/26 20:25:44 mjl Exp $
 
---- webalizer.1.orig	Tue Mar 23 21:52:56 1999
-+++ webalizer.1	Tue Mar 23 21:53:35 1999
+--- webalizer.1.orig	Thu Aug 26 21:34:42 1999
++++ webalizer.1	Thu Aug 26 21:35:04 1999
 @@ -27,7 +27,7 @@
  A default configuration file is scanned for.  A file named
  \fIwebalizer.conf\fP is searched for in the current directory, and if
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.2 1999/03/23 21:16:06 mjl Exp $
  is searched for and, if found, is used instead.
  .TP 8
  .B o
-@@ -431,7 +431,7 @@
+@@ -515,7 +515,7 @@
  .TP 20
  .I webalizer.conf
  Default configuration file.  Is searched for in the current directory
