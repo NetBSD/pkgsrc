@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 1998/05/14 21:54:04 tron Exp $
+lib/python1.5/lib-dynload/readline.so
