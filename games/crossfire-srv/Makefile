@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/13 17:36:59 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2002/06/23 03:49:47 jlam Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -26,7 +26,6 @@ USE_X11=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
-CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
 
 MAKE_ENV+=	EXTRA_INCLUDES=-I${LOCALBASE}/include

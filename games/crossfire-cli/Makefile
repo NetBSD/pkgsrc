@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/03/13 17:36:59 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2002/06/23 03:49:46 jlam Exp $
 #
 
 DISTNAME=	crossfire-client-1.0.0
@@ -26,7 +26,6 @@ USE_X11=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 SCRIPTS_ENV+=	${SCRIPTSDIR}
-CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-sound-dir=${LOCALBASE}/share/cfclient/sounds
 
