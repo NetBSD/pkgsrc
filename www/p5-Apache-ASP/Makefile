@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/15 09:26:25 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/27 16:32:01 hubertf Exp $
 #
 
 DISTNAME=		Apache-ASP-0.05
@@ -9,11 +9,9 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/CHAMAS/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Apache-ASP/ASP.html
 
-# all other needs are already pulled in by p5-libwww
-BUILD_DEPENDS=		${PREFIX}/lib/perl5/site_perl/URI/URL.pm:../../www/p5-libwww
-BUILD_DEPENDS+=		${PREFIX}/lib/perl5/site_perl/MLDBM.pm:../../devel/p5-MLDBM
-BUILD_DEPENDS+=		${PREFIX}/lib/httpd/mod_perl.so:../../www/ap-perl
-RUN_DEPENDS:=		${BUILD_DEPENDS}
+DEPENDS+=		libwww-perl-5.*:../../www/p5-libwww
+DEPENDS+=		MLDBM-2.*:devel/p5-MLDBM
+DEPENDS+=		mod_perl-1.*:../../www/ap-perl
 
 USE_PERL5=		YES
 
