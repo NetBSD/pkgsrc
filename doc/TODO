@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.66 2002/12/15 22:07:41 wiz Exp $
+$NetBSD: TODO,v 1.67 2002/12/16 09:29:57 tron Exp $
 
 Suggested new packages
 ======================
@@ -236,7 +236,6 @@ Suggested package updates
 	o xerces-c-2.1.0 [heinz]
 	o xforms-1.0RC4
 	o xfstt-1.4
-	o xpaint-2.6.7
 	o xpuyopuyo-0.9.5
 	o xsane-0.87 [rh|pkg/17952]
 	o xsidplay-1.6.5pre15
