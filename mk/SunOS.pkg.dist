@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: SunOS.pkg.dist,v 1.17 2002/07/24 17:40:33 kim Exp $
+#	$NetBSD: SunOS.pkg.dist,v 1.18 2002/07/25 07:09:48 cjep Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -403,6 +403,8 @@
 	    en_US.ISO_8859-1
             ..
 	    es_ES.ISO_8859-1
+	    ..
+	    et_EE.ISO_8859-15
             ..
 	    fi_FI.ISO_8859-1
             ..
@@ -442,6 +444,8 @@
 	    ..
 	    pt_PT.ISO_8859-1
             ..
+	    ru_RU.KOI8-R
+	    ..
 	    ru_SU.CP866
             ..
             ru_SU.KOI8-R
@@ -449,6 +453,8 @@
 	    sv_SE.ISO_8859-1
             ..
 	    uk_UA.ISO_8859-1
+	    ..
+	    uk_UA.KOI8-U
 	    ..
         ..
         skel
