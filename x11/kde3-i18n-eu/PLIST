@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/20 14:38:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/08/21 16:02:41 markd Exp $
 share/doc/kde/HTML/eu/common/1.png
 share/doc/kde/HTML/eu/common/10.png
 share/doc/kde/HTML/eu/common/2.png
@@ -204,7 +204,6 @@ share/kde/locale/eu/LC_MESSAGES/kcmlinuz.mo
 share/kde/locale/eu/LC_MESSAGES/kcmlocale.mo
 share/kde/locale/eu/LC_MESSAGES/kcmmediacontrol.mo
 share/kde/locale/eu/LC_MESSAGES/kcmmidi.mo
-share/kde/locale/eu/LC_MESSAGES/kcmnic.mo
 share/kde/locale/eu/LC_MESSAGES/kcmnotify.mo
 share/kde/locale/eu/LC_MESSAGES/kcmperformance.mo
 share/kde/locale/eu/LC_MESSAGES/kcmprintmgr.mo

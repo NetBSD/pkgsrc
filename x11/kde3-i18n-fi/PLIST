@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/08/21 16:02:41 markd Exp $
 share/doc/kde/HTML/fi/common/1.png
 share/doc/kde/HTML/fi/common/10.png
 share/doc/kde/HTML/fi/common/2.png
@@ -50,11 +50,16 @@ share/doc/kde/HTML/fi/common/web-docbottom.png
 share/doc/kde/HTML/fi/common/web-doctop.png
 share/doc/kde/HTML/fi/common/x11-license.html
 share/doc/kde/HTML/fi/common/xml.dcl
+share/kde/apps/khangman/data/fi/animals.txt
+share/kde/apps/khangman/data/fi/easy.txt
+share/kde/apps/khangman/data/fi/hard.txt
+share/kde/apps/khangman/data/fi/medium.txt
 share/kde/locale/fi/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/fi/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/fi/LC_MESSAGES/amor.mo
 share/kde/locale/fi/LC_MESSAGES/appletproxy.mo
 share/kde/locale/fi/LC_MESSAGES/ark.mo
+share/kde/locale/fi/LC_MESSAGES/ark_plugin.mo
 share/kde/locale/fi/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/fi/LC_MESSAGES/artscontrol.mo
 share/kde/locale/fi/LC_MESSAGES/artsmodules.mo
@@ -87,6 +92,7 @@ share/kde/locale/fi/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/fi/LC_MESSAGES/imagerename_plugin.mo
 share/kde/locale/fi/LC_MESSAGES/imgalleryplugin.mo
 share/kde/locale/fi/LC_MESSAGES/jefferson.mo
+share/kde/locale/fi/LC_MESSAGES/joystick.mo
 share/kde/locale/fi/LC_MESSAGES/juk.mo
 share/kde/locale/fi/LC_MESSAGES/kabc2mutt.mo
 share/kde/locale/fi/LC_MESSAGES/kabc_dir.mo
@@ -110,6 +116,7 @@ share/kde/locale/fi/LC_MESSAGES/kasteroids.mo
 share/kde/locale/fi/LC_MESSAGES/kate.mo
 share/kde/locale/fi/LC_MESSAGES/katecppsymbolviewer.mo
 share/kde/locale/fi/LC_MESSAGES/katedefaultproject.mo
+share/kde/locale/fi/LC_MESSAGES/katefiletemplates.mo
 share/kde/locale/fi/LC_MESSAGES/katefll_initplugin.mo
 share/kde/locale/fi/LC_MESSAGES/katefll_plugin.mo
 share/kde/locale/fi/LC_MESSAGES/katehelloworld.mo
@@ -150,6 +157,7 @@ share/kde/locale/fi/LC_MESSAGES/kcmarts.mo
 share/kde/locale/fi/LC_MESSAGES/kcmaudiocd.mo
 share/kde/locale/fi/LC_MESSAGES/kcmbackground.mo
 share/kde/locale/fi/LC_MESSAGES/kcmbell.mo
+share/kde/locale/fi/LC_MESSAGES/kcmcddb.mo
 share/kde/locale/fi/LC_MESSAGES/kcmcgi.mo
 share/kde/locale/fi/LC_MESSAGES/kcmcolors.mo
 share/kde/locale/fi/LC_MESSAGES/kcmcomponentchooser.mo
@@ -256,6 +264,7 @@ share/kde/locale/fi/LC_MESSAGES/kfile_gif.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_html.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_ico.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_jpeg.mo
+share/kde/locale/fi/LC_MESSAGES/kfile_lnk.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_m3u.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_mp3.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_ogg.mo
@@ -267,6 +276,7 @@ share/kde/locale/fi/LC_MESSAGES/kfile_po.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_ps.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_rfc822.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_rpm.mo
+share/kde/locale/fi/LC_MESSAGES/kfile_sid.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_tga.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_tiff.mo
 share/kde/locale/fi/LC_MESSAGES/kfile_txt.mo
@@ -355,6 +365,7 @@ share/kde/locale/fi/LC_MESSAGES/kolf.mo
 share/kde/locale/fi/LC_MESSAGES/kolourpicker.mo
 share/kde/locale/fi/LC_MESSAGES/kompare.mo
 share/kde/locale/fi/LC_MESSAGES/konqsidebar_mediaplayer.mo
+share/kde/locale/fi/LC_MESSAGES/konqsidebar_news.mo
 share/kde/locale/fi/LC_MESSAGES/konqueror.mo
 share/kde/locale/fi/LC_MESSAGES/konquest.mo
 share/kde/locale/fi/LC_MESSAGES/konsole.mo
@@ -423,6 +434,7 @@ share/kde/locale/fi/LC_MESSAGES/kteatime.mo
 share/kde/locale/fi/LC_MESSAGES/ktexteditor_insertfile.mo
 share/kde/locale/fi/LC_MESSAGES/ktexteditor_isearch.mo
 share/kde/locale/fi/LC_MESSAGES/ktexteditor_kdatatool.mo
+share/kde/locale/fi/LC_MESSAGES/kthememanager.mo
 share/kde/locale/fi/LC_MESSAGES/ktimemon.mo
 share/kde/locale/fi/LC_MESSAGES/ktimer.mo
 share/kde/locale/fi/LC_MESSAGES/ktip.mo
@@ -434,6 +446,7 @@ share/kde/locale/fi/LC_MESSAGES/ktux.mo
 share/kde/locale/fi/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/fi/LC_MESSAGES/kuickshow.mo
 share/kde/locale/fi/LC_MESSAGES/kuser.mo
+share/kde/locale/fi/LC_MESSAGES/kverbos.mo
 share/kde/locale/fi/LC_MESSAGES/kview.mo
 share/kde/locale/fi/LC_MESSAGES/kview_scale.mo
 share/kde/locale/fi/LC_MESSAGES/kviewbrowserplugin.mo
@@ -466,6 +479,7 @@ share/kde/locale/fi/LC_MESSAGES/libcalendarresources.mo
 share/kde/locale/fi/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/kde/locale/fi/LC_MESSAGES/libkcal.mo
 share/kde/locale/fi/LC_MESSAGES/libkcalsystem.mo
+share/kde/locale/fi/LC_MESSAGES/libkcddb.mo
 share/kde/locale/fi/LC_MESSAGES/libkdegames.mo
 share/kde/locale/fi/LC_MESSAGES/libkdehighscores.mo
 share/kde/locale/fi/LC_MESSAGES/libkdenetwork.mo
@@ -475,6 +489,7 @@ share/kde/locale/fi/LC_MESSAGES/libkickermenu_kdeprint.mo
 share/kde/locale/fi/LC_MESSAGES/libkickermenu_konsole.mo
 share/kde/locale/fi/LC_MESSAGES/libkickermenu_prefmenu.mo
 share/kde/locale/fi/LC_MESSAGES/libkickermenu_recentdocs.mo
+share/kde/locale/fi/LC_MESSAGES/libkickermenu_tom.mo
 share/kde/locale/fi/LC_MESSAGES/libkonq.mo
 share/kde/locale/fi/LC_MESSAGES/libkpimexchange.mo
 share/kde/locale/fi/LC_MESSAGES/libkscan.mo
@@ -499,6 +514,7 @@ share/kde/locale/fi/LC_MESSAGES/privacy.mo
 share/kde/locale/fi/LC_MESSAGES/qeditor.mo
 share/kde/locale/fi/LC_MESSAGES/quanta.mo
 share/kde/locale/fi/LC_MESSAGES/quicklauncher.mo
+share/kde/locale/fi/LC_MESSAGES/searchbarplugin.mo
 share/kde/locale/fi/LC_MESSAGES/secpolicy.mo
 share/kde/locale/fi/LC_MESSAGES/spy.mo
 share/kde/locale/fi/LC_MESSAGES/synaescope.mo
@@ -507,6 +523,7 @@ share/kde/locale/fi/LC_MESSAGES/timezones.mo
 share/kde/locale/fi/LC_MESSAGES/tippecanoe.mo
 share/kde/locale/fi/LC_MESSAGES/tyler.mo
 share/kde/locale/fi/LC_MESSAGES/uachangerplugin.mo
+share/kde/locale/fi/LC_MESSAGES/useraccount.mo
 share/kde/locale/fi/LC_MESSAGES/userinfo.mo
 share/kde/locale/fi/LC_MESSAGES/validatorsplugin.mo
 share/kde/locale/fi/LC_MESSAGES/vimpart.mo
@@ -518,4 +535,6 @@ share/kde/locale/fi/entry.desktop
 share/kde/locale/fi/flag.png
 @comment dirrm share/kde/locale/fi/LC_MESSAGES
 @comment dirrm share/kde/locale/fi
+@dirrm share/kde/apps/khangman/data/fi
+@comment dirrm share/kde/apps/khangman/data
 @comment dirrm share/doc/kde/HTML/fi/common

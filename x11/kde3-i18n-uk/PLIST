@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/06/10 13:31:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/08/21 16:02:46 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -273,6 +273,7 @@ share/kde/locale/uk/LC_MESSAGES/kdesktop.mo
 share/kde/locale/uk/LC_MESSAGES/kdessh.mo
 share/kde/locale/uk/LC_MESSAGES/kdesu.mo
 share/kde/locale/uk/LC_MESSAGES/kdesud.mo
+share/kde/locale/uk/LC_MESSAGES/kdevelop.mo
 share/kde/locale/uk/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/uk/LC_MESSAGES/kdf.mo
 share/kde/locale/uk/LC_MESSAGES/kdialog.mo
@@ -417,6 +418,8 @@ share/kde/locale/uk/LC_MESSAGES/kpat.mo
 share/kde/locale/uk/LC_MESSAGES/kpdf.mo
 share/kde/locale/uk/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/uk/LC_MESSAGES/kpf.mo
+share/kde/locale/uk/LC_MESSAGES/kpilot.mo
+share/kde/locale/uk/LC_MESSAGES/kpovmodeler.mo
 share/kde/locale/uk/LC_MESSAGES/kppp.mo
 share/kde/locale/uk/LC_MESSAGES/kppplogview.mo
 share/kde/locale/uk/LC_MESSAGES/kprinter.mo
@@ -500,6 +503,7 @@ share/kde/locale/uk/LC_MESSAGES/kworldclock.mo
 share/kde/locale/uk/LC_MESSAGES/kwriteconfig.mo
 share/kde/locale/uk/LC_MESSAGES/kxkb.mo
 share/kde/locale/uk/LC_MESSAGES/kxmlrpcd.mo
+share/kde/locale/uk/LC_MESSAGES/kxsconfig.mo
 share/kde/locale/uk/LC_MESSAGES/libcalendarresources.mo
 share/kde/locale/uk/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/kde/locale/uk/LC_MESSAGES/libkcal.mo
