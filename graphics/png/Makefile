@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2004/03/30 15:52:09 minskim Exp $
+# $NetBSD: Makefile,v 1.60 2004/04/27 19:36:27 tv Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
 DISTNAME=	libpng-1.2.5
 PKGNAME=	${DISTNAME:S/lib//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.libpng.org/pub/png/src/ \
