@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/16 09:51:47 xtraeme Exp $
 #
 
-DISTNAME=	darkice-0.13.2
+DISTNAME=	darkice-0.14
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
 
@@ -9,13 +9,14 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://darkice.sourceforge.net/
 COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}
 CONFIGURE_ARGS+=	--with-lame-prefix=${BUILDLINK_PREFIX.lame}
+LIBS+=			${LIBOSSAUDIO}
 
 EGDIR=		${PREFIX}/share/examples/darkice
 HTMLDIR=	${PREFIX}/share/doc/html/darkice
@@ -33,9 +34,9 @@ do-install:
 		${INSTALL_DATA} $$f ${HTMLDIR}; \
 	done
 
-.include "../../audio/lame/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../audio/lame/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
