@@ -1,22 +1,27 @@
-$NetBSD: patch-ag,v 1.1 1999/09/24 16:42:06 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2000/06/20 21:47:23 jlam Exp $
 
---- mach_dep.c.orig	Sun Jun 27 06:26:50 1999
-+++ mach_dep.c	Wed Sep 22 17:39:42 1999
-@@ -197,6 +197,8 @@
+--- mach_dep.c.orig	Sat Apr 15 05:57:14 2000
++++ mach_dep.c	Sat May  6 04:59:30 2000
+@@ -220,8 +220,10 @@
+ #       if defined(I386) &&!defined(OS2) &&!defined(SVR4) \
+ 	&& (defined(__MINGW32__) || !defined(MSWIN32)) \
  	&& !defined(SCO) && !defined(SCO_ELF) \
-  	&& !(defined(LINUX)       && defined(__ELF__)) \
- 	&& !(defined(__FreeBSD__) && defined(__ELF__)) \
-+	&& !(defined(__NetBSD__) && defined(__ELF__)) \
-+	&& !(defined(__OpenBSD__) && defined(__ELF__)) \
+- 	&& !(defined(LINUX)       && defined(__ELF__)) \
++ 	&& !(defined(LINUX) && defined(__ELF__)) \
+ 	&& !(defined(FREEBSD) && defined(__ELF__)) \
++	&& !(defined(NETBSD) && defined(__ELF__)) \
++	&& !(defined(OPENBSD) && defined(__ELF__)) \
  	&& !defined(DOS4GW)
  	/* I386 code, generic code does not appear to work */
  	/* It does appear to work under OS2, and asms dont */
-@@ -212,6 +214,8 @@
+@@ -236,7 +238,9 @@
+ #       endif
  
  #	if ( defined(I386) && defined(LINUX) && defined(__ELF__) ) \
- 	|| ( defined(I386) && defined(__FreeBSD__) && defined(__ELF__) )
-+	|| ( defined(I386) && defined(__NetBSD__) && defined(__ELF__) )
-+	|| ( defined(I386) && defined(__OpenBSD__) && defined(__ELF__) )
+-	|| ( defined(I386) && defined(FREEBSD) && defined(__ELF__) )
++	|| ( defined(I386) && defined(FREEBSD) && defined(__ELF__) ) \
++	|| ( defined(I386) && defined(NETBSD) && defined(__ELF__) ) \
++	|| ( defined(I386) && defined(OPENBSD) && defined(__ELF__) )
  
  	/* This is modified for Linux with ELF (Note: _ELF_ only) */
  	/* This section handles FreeBSD with ELF. */

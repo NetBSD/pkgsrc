@@ -1,18 +1,18 @@
-$NetBSD: patch-ad,v 1.1 1999/09/24 16:42:06 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2000/06/20 21:47:22 jlam Exp $
 
---- dyn_load.c.orig	1999/06/02 19:29:13	1.1.1.2
-+++ dyn_load.c	1999/06/03 12:44:49	1.2
-@@ -48,7 +48,8 @@
+--- dyn_load.c.orig	Wed Apr 26 09:01:16 2000
++++ dyn_load.c	Sat May  6 04:48:00 2000
+@@ -50,7 +50,8 @@
  #if !defined(SUNOS4) && !defined(SUNOS5DL) && !defined(IRIX5) && \
      !defined(MSWIN32) && !(defined(ALPHA) && defined(OSF1)) && \
-     !defined(HP_PA) && !(defined(LINUX) && defined(__ELF__)) && \
+     !defined(HPUX) && !(defined(LINUX) && defined(__ELF__)) && \
 -    !defined(RS6000) && !defined(SCO_ELF)
 +    !defined(RS6000) && !defined(SCO_ELF) && \
 +    !(defined(NETBSD) && defined(__ELF__))
   --> We only know how to find data segments of dynamic libraries for the
   --> above.  Additional SVR4 variants might not be too
   --> hard to add.
-@@ -260,14 +261,22 @@
+@@ -297,14 +298,19 @@
  # endif /* !USE_PROC ... */
  # endif /* SUNOS */
  
@@ -27,9 +27,6 @@ $NetBSD: patch-ad,v 1.1 1999/09/24 16:42:06 jlam Exp $
  
 +#if defined(NETBSD)
 +#include <sys/exec_elf.h>
-+#define DT_DEBUG	21
-+#define PT_LOAD		1
-+#define PF_W		0x2
 +#else
  #include <elf.h>
 +#endif
