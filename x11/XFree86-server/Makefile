@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 08:48:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/31 16:13:24 grant Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
@@ -25,13 +25,10 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 USE_PERL5=		yes # Still we need perl (at least for now)
-.include "../../lang/perl5/buildlink2.mk"
-
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "alpha"
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "alpha"
 XBUILD_DIRS+=		lib/XThrStub lib/X11 lib/Xext lib/GL
 XINSTALL_DIRS+=		lib/GL/mesa/src/drv
-.endif
-
+.  endif
 .endif
 
 pre-install:
