@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/01 13:42:25 junyoung Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/18 23:18:34 wiz Exp $
 #
 
 DISTNAME=	ami-1.0.11
@@ -10,10 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kr.freebsd.org/~hwang/ami/
 COMMENT=	Korean input method
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
