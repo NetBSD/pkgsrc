@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2001/11/21 22:42:04 tron Exp $
+
+--- netstuff.cpp.orig	Mon Apr  2 06:38:09 2001
++++ netstuff.cpp	Wed Nov 21 23:34:18 2001
+@@ -5,6 +5,7 @@
+ // Tom McNair  (tmcnair@cyberhighway.net)
+ // Wayne Schlitt (wayne@midwestcs.com)
+ // Ben Byer (bushing@users.sourceforge.net)
++// Kevin Dwyer (kevin@pheared.net)
+ // 
+ // use of this code is restricted to the terms
+ // of the GNU GPL, which should have been included in this
