@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1668 2004/04/24 18:26:09 danw Exp $
+$NetBSD: TODO,v 1.1669 2004/04/25 12:12:39 dillo Exp $
 
 Suggested new packages
 ======================
@@ -228,6 +228,7 @@ Suggested package updates
 	o imp-3.2.3
 	o inform-6.30 [pkg/24631]
 	o inn-2.4.1
+	o intercal-0.24 [dillo]
 	o ivtools-1.1.3
 	o jakarta-tomcat-3.3.1a
 	o jam-2.5
