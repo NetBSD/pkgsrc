@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2001/12/30 14:29:07 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2002/01/03 10:59:55 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -103,6 +103,7 @@ SUBDIR+=	sslwrap
 SUBDIR+=	stunnel
 SUBDIR+=	sudo
 SUBDIR+=	tcp_wrappers
+SUBDIR+=	tct
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
 SUBDIR+=	uvscan-dat
