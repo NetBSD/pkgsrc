@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.364 1999/11/10 10:36:05 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.365 1999/11/10 10:50:30 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -480,7 +480,7 @@ LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/bin/mv
-PATCH?=		/usr/bin/patch
+PATCH?=		/usr/bin/patch -F0
 PAX?=		/usr/local/bsd/bin/pax
 PKG_ADD?=	${LOCALBASE}/bsd/bin/pkg_add
 PKG_CREATE?=	${LOCALBASE}/bsd/bin/pkg_create
@@ -524,7 +524,7 @@ LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
-PATCH?=		/usr/bin/patch
+PATCH?=		/usr/bin/patch -F0
 PAX?=		/bin/pax
 PKG_ADD?=	/usr/sbin/pkg_add
 PKG_CREATE?=	/usr/sbin/pkg_create
