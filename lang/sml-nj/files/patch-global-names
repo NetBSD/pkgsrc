@@ -1,14 +1,5 @@
 --- src/runtime/include/asm-base.h.orig	Fri Dec  3 20:59:31 1999
 +++ src/runtime/include/asm-base.h	Fri Mar  9 14:53:40 2001
-@@ -16,7 +16,7 @@
- #define FALSE	0
- #define TRUE	1
- 
--#if (!defined(GLOBALS_HAVE_UNDERSCORE)) && (defined(OPSYS_SUNOS) || defined(OPSYS_FREEBSD) || defined(OPSYS_NETBSD) || defined(OPSYS_NEXTSTEP) || defined(OPSYS_WIN32))
-+#if (!defined(GLOBALS_HAVE_UNDERSCORE)) && (defined(OPSYS_SUNOS) || (defined(OPSYS_FREEBSD) && !defined(__ELF__)) || (defined(OPSYS_NETBSD) && !defined(__ELF__))|| defined(OPSYS_NEXTSTEP) || defined(OPSYS_WIN32))
- #  define GLOBALS_HAVE_UNDERSCORE
- #endif
- 
 @@ -36,6 +36,11 @@
  #    define _ASM
  #    include <sys/stack.h>
