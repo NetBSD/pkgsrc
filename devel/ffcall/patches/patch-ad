@@ -1,47 +1,21 @@
-$NetBSD: patch-ad,v 1.1 2003/03/06 23:50:53 jmc Exp $
+$NetBSD: patch-ad,v 1.2 2004/03/02 16:05:01 adam Exp $
 
---- ./callback/trampoline_r/trampoline.c.orig	Thu Mar  6 23:19:30 2003
-+++ ./callback/trampoline_r/trampoline.c	Thu Mar  6 23:35:53 2003
-@@ -21,12 +21,16 @@
- #endif
- #endif
- #if defined(__rs6000__)
-+#if defined(__NetBSD__)
-+#define __powerpcnetbsd__
-+#else
- #if !defined(_AIX)
- #define __rs6000sysv4__  /* SysV.4 ABI, real machine code. */
- #else
- #define __rs6000aix__  /* AIX ABI, just a closure. */
- #endif
- #endif
-+#endif
- #if defined(__hppanew__)
- /*
-  * A function pointer is a biased pointer to a data area whose first word
-@@ -259,7 +263,7 @@
- #include <sys/syslocal.h>
- #endif
- /* Inline assembly function for instruction cache flush. */
--#if defined(__sparc__) || defined(__sparc64__) || defined(__alpha__) || defined(__hppaold__) || defined(__rs6000sysv4__) || defined(__convex__)
-+#if defined(__sparc__) || defined(__sparc64__) || defined(__alpha__) || defined(__hppaold__) || defined(__rs6000sysv4__) || defined(__convex__) || defined(__powerpcnetbsd__)
- #ifdef __GNUC__
- extern inline
- #if defined(__sparc__) || defined(__sparc64__)
-@@ -336,7 +340,7 @@
+--- callback/trampoline_r/trampoline.c.orig	2004-01-26 15:00:05.000000000 +0000
++++ callback/trampoline_r/trampoline.c
+@@ -283,7 +283,7 @@ extern void __TR_clear_cache();
  #define TRAMP_LENGTH 32
  #define TRAMP_ALIGN 4
  #endif
 -#ifdef __rs6000sysv4__
-+#if defined(__rs6000sysv4__) || defined(__powerpcnetbsd__)
++#if defined(__rs6000sysv4__) || defined(__rs6000netbsd__)
  #define TRAMP_LENGTH 24
  #define TRAMP_ALIGN 4
  #endif
-@@ -876,6 +880,39 @@
+@@ -878,6 +878,39 @@ __TR_function alloc_trampoline_r (addres
  #define tramp_data(function)  \
    hilo(*(unsigned short *) (function + 2), *(unsigned short *) (function + 6))
  #endif
-+#ifdef __powerpcnetbsd__
++#ifdef __rs6000netbsd__
 +  /* function:
 +   *    {liu|lis} 13,hi16(<data>)              3D A0 hi16(<data>)
 +   *    {oril|ori} 13,13,lo16(<data>)          61 AD lo16(<data>)
