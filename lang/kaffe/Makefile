@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/08/07 10:23:52 drochner Exp $
+# $NetBSD: Makefile,v 1.21 1999/08/17 18:09:43 drochner Exp $
 #
 
 DISTNAME=		kaffe-1.0.b4
@@ -24,5 +24,15 @@ CONFIGURE_ENV=		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms \
 		${PREFIX}/kaffe/share
+	if [ -f ${PREFIX}/kaffe/lib/libkaffevm.so ]; then \
+		mv ${PREFIX}/kaffe/lib/libkaffevm.so \
+			${PREFIX}/kaffe/lib/libkaffevm.so.0.0; \
+		mv ${PREFIX}/kaffe/lib/kaffe/libio.so \
+			${PREFIX}/kaffe/lib/kaffe/libio.so.0.0; \
+		mv ${PREFIX}/kaffe/lib/kaffe/libmanagement.so \
+			${PREFIX}/kaffe/lib/kaffe/libmanagement.so.0.0; \
+		mv ${PREFIX}/kaffe/lib/kaffe/libnet.so \
+			${PREFIX}/kaffe/lib/kaffe/libnet.so.0.0; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"
