@@ -1,8 +1,7 @@
-$NetBSD: patch-aj,v 1.6 1999/12/12 19:04:00 jdolecek Exp $
+$NetBSD: patch-aj,v 1.7 2001/09/10 08:23:19 skrll Exp $
 
-A bit different patch pulled into KDE2	jdolecek	1999/12/12
---- ./kdm/kdmconfig.cpp	Fri Apr 23 15:12:54 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdm/kdmconfig.cpp	Fri Nov 12 05:10:32 1999
+--- kdm/kdmconfig.cpp.orig	Fri Apr 23 14:12:54 1999
++++ kdm/kdmconfig.cpp
 @@ -134,10 +134,26 @@
                 _shutdownButton = KNone;
            _shutdown         = new QString( kc->readEntry(  "Shutdown"));
@@ -18,14 +17,13 @@ A bit different patch pulled into KDE2	jdolecek	1999/12/12
 +#endif /* __NetBSD__ */
            _restart          = new QString( kc->readEntry(   "Restart"));
            if( _restart->isNull())
--               *_restart = "/sbin/reboot";
 +#ifdef    __NetBSD__
 +               *_restart = "/sbin/shutdown -r now";
 +#else /* !__NetBSD__ */
 +#ifdef    __SVR4
 +               *_restart = "/usr/sbin/reboot";
 +#else /* !__SVR4 */
-+               *_restart = "/sbin/reboot";
+                *_restart = "/sbin/reboot";
 +#endif /* __SVR4 */
 +#endif /* __NetBSD__ */
       } else
