@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3256 2003/09/05 18:53:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.3257 2003/09/05 19:15:29 kim Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3550,3 +3550,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pax to 20030905 [jlam 2003-09-05]
 	Updated buildtool to 0.14 [jmmv 2003-09-05]
 	Updated buildtool-doc to 0.14 [jmmv 2003-09-05]
+	Updated samba to 2.2.8anb3 [kim 2003-09-05]
