@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/13 23:33:02 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/14 18:53:38 salo Exp $
 bin/Xdialog
 man/man1/Xdialog.1
 share/doc/html/xdialog/2ranges.png
@@ -10,6 +10,7 @@ share/doc/html/xdialog/center.png
 share/doc/html/xdialog/changelog.html
 share/doc/html/xdialog/check.png
 share/doc/html/xdialog/checklist.png
+share/doc/html/xdialog/colorsel.png
 share/doc/html/xdialog/combobox.png
 share/doc/html/xdialog/common.html
 share/doc/html/xdialog/compatibility.html
@@ -18,6 +19,7 @@ share/doc/html/xdialog/editbox.png
 share/doc/html/xdialog/faq.html
 share/doc/html/xdialog/fill.png
 share/doc/html/xdialog/fixedfont.png
+share/doc/html/xdialog/fontsel.png
 share/doc/html/xdialog/fselect.png
 share/doc/html/xdialog/gauge.png
 share/doc/html/xdialog/gtk.html
