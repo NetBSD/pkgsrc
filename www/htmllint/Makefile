@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/01/29 02:05:19 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2003/02/03 16:00:02 jschauma Exp $
 #
 
 DISTNAME=	htmllint
-PKGNAME=	htmllint-20021103
+PKGNAME=	htmllint-20030203
 CATEGORIES=	www japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/k16/htmllint/archives/
 EXTRACT_SUFX=	.zip
@@ -15,9 +15,9 @@ DEPENDS+=	p5-Jcode>=0.68:../../converters/p5-Jcode
 
 DIST_SUBDIR=	${PKGNAME}
 
+REPLACE_PERL=	htmllint.cgi htmllint parsedtd.pl tagslist.cgi
 USE_PERL5=	# defined
 WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
 CGIDIR=		${LOCALBASE}/libexec/cgi-bin
@@ -25,25 +25,25 @@ HTMLDIR=	${LOCALBASE}/share/httpd/htdocs/htmllint
 IMGDIR=		${HTMLDIR}/images
 
 post-patch:
-.for f in faq.html htmllint.cgi htmllint htmllintenv parsedtd.pl tagslist.cgi
-	@${MV} ${WRKSRC}/${f} ${WRKSRC}/${f}.orig; \
-	${SED} -e 's!@PREFIX@!${PREFIX}!g' < ${WRKSRC}/${f}.orig \
-	    > ${WRKSRC}/${f}
+.for f in faq.html htmllintenv
+	@${MV} ${WRKSRC}/${f} ${WRKSRC}/${f}.orig; 			\
+	${SED} -e 's!@PREFIX@!${PREFIX}!g' < ${WRKSRC}/${f}.orig 	\
+		> ${WRKSRC}/${f}
 .endfor
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/htmllint ${PREFIX}/bin; \
-	${INSTALL_SCRIPT_DIR} ${CGIDIR}; \
-	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${CGIDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/htmllintrc ${CGIDIR}; \
+	@${INSTALL_SCRIPT} ${WRKSRC}/htmllint ${PREFIX}/bin; 		\
+	${INSTALL_SCRIPT_DIR} ${CGIDIR}; 				\
+	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${CGIDIR}; 			\
+	${INSTALL_DATA} ${WRKSRC}/htmllintrc ${CGIDIR}; 		\
 	${INSTALL_DATA} ${WRKSRC}/htmllintenv ${CGIDIR}/htmllint.env.default; \
-	${TEST} -f ${CGIDIR}/htmllint.env || \
+	${TEST} -f ${CGIDIR}/htmllint.env || 				\
 	    ${CP} ${CGIDIR}/htmllint.env.default  ${CGIDIR}/htmllint.env; \
-	${INSTALL_SCRIPT_DIR} ${HTMLDIR}; \
-	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${WRKSRC}/*.pm ${HTMLDIR}; \
+	${INSTALL_SCRIPT_DIR} ${HTMLDIR}; 				\
+	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${WRKSRC}/*.pm ${HTMLDIR}; 	\
 	${INSTALL_DATA} ${WRKSRC}/*.css ${WRKSRC}/*.dtd ${WRKSRC}/*.ent \
 	    ${WRKSRC}/*.html ${WRKSRC}/*.rul ${WRKSRC}/*.txt ${HTMLDIR}; \
-	${INSTALL_DATA_DIR} ${IMGDIR}; \
+	${INSTALL_DATA_DIR} ${IMGDIR}; 					\
 	${INSTALL_DATA} ${WRKSRC}/*.gif ${IMGDIR}
 
 .include "../../mk/bsd.pkg.mk"
