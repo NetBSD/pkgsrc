@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.4 2001/02/28 10:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/19 05:58:51 garbled Exp $
 #
 
-DISTNAME=	crossfire-0.95.8
-PKGNAME=	crossfire-server-0.95.8
+DISTNAME=	crossfire-1.0.0
+PKGNAME=	crossfire-server-1.0.0
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/crossfire/
+MASTER_SITES=	ftp://ftp.scruz.net/users/mwedel/public/
 DISTFILES=	${CF_SRC} ${CF_MAPS}
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	X11 multi/single player game similar to gauntlet and nethack
 
+DEPENDS+=	png>=1.0.11:../../graphics/png
+
 EXTRACT_ONLY=	${CF_SRC}
 
-CF_SRC=		crossfire-0.95.8.tar.bz2
-CF_MAPS=	crossfire-0.95.8.maps.tar.bz2
+CF_SRC=		crossfire-1.0.0.tar.bz2
+CF_MAPS=	crossfire-1.0.0-maps.tar.bz2
 
 USE_XPM=	yes
 USE_X11=	yes
@@ -23,6 +25,7 @@ GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 SCRIPTS_ENV+=	${SCRIPTSDIR}
 CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
 
 post-install:
 	cd ${LOCALBASE}/share/crossfire && \
