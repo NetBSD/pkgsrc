@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2000/01/16 21:41:09 jwise Exp $
+--- src/etc/tomcat.conf.orig	Sun Jan 16 15:21:00 2000
++++ src/etc/tomcat.conf	Sun Jan 16 16:12:03 2000
+@@ -10,7 +10,7 @@
+ # Tell Apache on Unix to load the Apache JServ communication module
+ # For shared object builds only!!!
+ # @LOAD_OR_NOT@LoadModule jserv_module @LIBEXECDIR@/mod_jserv.so
+-LoadModule jserv_module libexec/mod_jserv.so
++LoadModule jserv_module @LOCALBASE@/lib/httpd/mod_jserv.so
+ 
+ <IfModule mod_jserv.c>
+ # Do not edit! 
+@@ -18,6 +18,7 @@
+ ApJServDefaultProtocol ajpv12
+ ApJServSecretKey DISABLED
+ ApJServMountCopy on
++ApJServLogFile /var/log/httpd/mod_jserv.log
+ ApJServLogLevel notice
+ 
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/13 22:14:53 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/16 21:41:08 jwise Exp $
 
 DISTNAME=	jakarta-tomcat.src
 PKGNAME=	jakarta-tomcat-3.0
@@ -21,6 +21,8 @@ NO_MTREE=
 JAKARTA_HOME?=	${JAVA_HOME}/jakarta
 MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
 
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+
 post-extract:
 .for x in ${DISTFILES}
 	cd ${WRKDIR} && ${EXTRACTOR} ${DISTDIR}/$x
@@ -28,11 +30,18 @@ post-extract:
 
 post-patch:
 	${SED} -e s,@TOMCAT_HOME@,${JAKARTA_HOME}/tomcat,g \
-		< ${WRKSRC}/build.xml > ${WRKSRC}/build.xml.tmp
-	${MV} ${WRKSRC}/build.xml.tmp ${WRKSRC}/build.xml
+		< ${WRKSRC}/build.xml > ${WRKSRC}/build.tmp
+	${MV} ${WRKSRC}/build.tmp ${WRKSRC}/build.xml
+	${SED} -e s,@LOCALBASE@,${LOCALBASE},g \
+		< ${WRKSRC}/src/etc/tomcat.conf > ${WRKSRC}/src/etc/tomcat.tmp
+	${MV} ${WRKSRC}/src/etc/tomcat.tmp ${WRKSRC}/src/etc/tomcat.conf
 
 do-build:
 	cd ${WRKSRC} && ${SH} ./build.sh
+
+post-build:
+	${SED} 's,@TOMCAT_HOME@,${JAKARTA_HOME}/tomcat,g' \
+		< ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 do-install:
 	${MKDIR} ${JAKARTA_HOME}/tomcat
