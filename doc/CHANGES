@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3840 2003/11/18 16:32:39 cube Exp $
+$NetBSD: CHANGES,v 1.3841 2003/11/18 16:36:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4621,3 +4621,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added emacs20-elib-1.0 [cube 2003-11-18]
 	Updated elib to 1.0nb2 [cube 2003-11-18]
 	Updated pcl-cvs to 2.9.9nb1 [cube 2003-11-18]
+	Updated zebra to 0.93bnb1 [wiz 2003-11-18]
+	Updated quagga to 0.96.3nb1 [wiz 2003-11-18]
