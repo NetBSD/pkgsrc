@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/16 06:58:34 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/29 05:43:47 jmc Exp $
 
 .include "../../www/php4/Makefile.module"
 
@@ -7,8 +7,8 @@ CATEGORIES+=		textproc
 PHP_PKG_VERS=		# empty
 COMMENT=		PHP4 extension for WDDX support
 
-DEPENDS+=		php-session>=${PHP_BASE_VERS}:../../www/php4-session
-DEPENDS+=		php-xml>=${PHP_BASE_VERS}:../../www/php4-xml
+DEPENDS+=		php-session>=${PHP_BASE_VERS}:../../devel/php4-session
+DEPENDS+=		php-xml>=${PHP_BASE_VERS}:../../textproc/php4-xml
 
 USE_BUILDLINK_ONLY=	YES
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
