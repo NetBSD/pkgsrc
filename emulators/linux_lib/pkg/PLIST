@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/05/08 23:17:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/05/09 00:11:52 hubertf Exp $
 bin/bash
 @exec mkdir %D/dev && ln -sf /dev/sound %D/dev/dsp
 @unexec rm %D/dev/dsp
@@ -240,6 +240,7 @@ usr/openwin/lib/libolgx.so.3
 @dirrm usr/X11R6
 @dirrm usr/bin
 @dirrm usr/lib/zoneinfo
+@dirrm usr/local/lib
 @dirrm usr/lib
 @dirrm usr/i486-linuxaout/lib
 @dirrm usr/i486-linuxaout

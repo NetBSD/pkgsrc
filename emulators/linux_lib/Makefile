@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/05/08 23:17:58 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/05/08 23:57:02 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
@@ -35,5 +35,6 @@ post-install:
 	${LN} -sf /etc/localtime ${PREFIX}/usr/lib/zoneinfo/localtime
 	${MKDIR} ${PREFIX}/dev
 	${LN} -sf /dev/sound ${PREFIX}/dev/dsp
+	${MKDIR} ${PREFIX}/usr/local/lib
 
 .include "../../mk/bsd.pkg.mk"
