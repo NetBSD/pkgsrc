@@ -1,0 +1,12 @@
+$NetBSD: soffice.test.patch,v 1.1.1.1 2003/01/22 21:57:53 mrauch Exp $
+
+--- soffice.old	Tue Jan 21 23:24:27 2003
++++ soffice.new	Tue Jan 21 23:24:21 2003
+@@ -82,6 +82,7 @@
+ case $sd_platform in
+ 	SCO_SV) test=/bin/test     ;;
+ 	FreeBSD) test=/bin/test     ;;
++	NetBSD) test=/bin/test     ;;
+   	*)      test=/usr/bin/test ;;
+ esac
+ 
