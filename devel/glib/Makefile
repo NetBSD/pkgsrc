@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/19 09:41:38 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/19 15:25:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -14,6 +14,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-CONFIGURE_ENV+=		LIBTOOL="${LOCALBASE}/bin/libtool --install-la"
+LIBTOOL_FLAGS=	 --install-la
 
 .include "../../mk/bsd.pkg.mk"
