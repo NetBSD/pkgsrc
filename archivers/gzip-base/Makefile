@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:49:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/28 20:37:09 salo Exp $
+#
 
 DISTNAME=	gzip-1.2.4a
-PKGNAME=	gzip-base-1.2.4a
+PKGNAME=	${DISTNAME:S/gzip-/gzip-base-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	gzipb
 CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GNU:=gzip/}
@@ -11,21 +13,22 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
 
-USE_BUILDLINK2=	yes
-GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	YES
+
 BUILD_TARGET=	all manlinks=so
 INSTALL_TARGET=	install manlinks=so
-
-# We avoid using a patch for disabling the install of the info
-# file.  The easu part is that "install-info" is not called so
-# we can simply remove the single installed info file.
 
 do-patch:
 	f=${WRKSRC}/Makefile.in ; \
 	[ -f $$f.orig ] || ${CP} $$f $$f.orig ; \
 	${SED} \
-		'/scriptdir/s/INSTALL_PROGRAM/INSTALL_DATA/' \
+		'/scriptdir/s/INSTALL_PROGRAM/BSD_INSTALL_SCRIPT/' \
 		< $$f.orig >$$f
+
+# We avoid using a patch for disabling the install of the info
+# file.  The easy part is that "install-info" is not called so
+# we can simply remove the single installed info file.
 
 post-install:
 	-${RM} -f ${PREFIX}/info/gzip.info
