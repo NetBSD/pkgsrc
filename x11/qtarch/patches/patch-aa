@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/28 20:31:44 drochner Exp $
+
+--- bmp/Makefile.orig	Fri Apr 28 20:52:20 2000
++++ bmp/Makefile	Fri Apr 28 20:56:08 2000
+@@ -93,7 +93,9 @@
+ include ../Makefile.common
+ 
+ qembed: qembed.o
+-	$(CC) qembed.o -o qembed -Wall -L$(QTDIR)/lib -lqt 
++	$(CC) qembed.o -o qembed -Wall -L$(QTDIR)/lib -Wl,-R$(QTDIR)/lib -lqt \
++		-L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lX11 -lXext -lSM \
++		-L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -lpng -lz
+ 
+ $(BMPSOURCE): $(BMPS) qembed
+ 	./qembed $(BMPHEADER) $(BMPSOURCE) $(BMPS)
