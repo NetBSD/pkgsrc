@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/04/02 10:13:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/06/28 08:14:03 adam Exp $
 bin/sndfile-convert
 bin/sndfile-info
 bin/sndfile-play
@@ -7,14 +7,31 @@ lib/libsndfile.a
 lib/libsndfile.la
 lib/libsndfile.so
 lib/libsndfile.so.1
-lib/libsndfile.so.1.9
+lib/libsndfile.so.1.10
 lib/pkgconfig/sndfile.pc
 man/man1/sndfile-convert.1
 man/man1/sndfile-info.1
 man/man1/sndfile-play.1
+share/doc/libsndfile1-dev/html/FAQ.html
+share/doc/libsndfile1-dev/html/api.html
+share/doc/libsndfile1-dev/html/bugs.html
+share/doc/libsndfile1-dev/html/command.html
+share/doc/libsndfile1-dev/html/dither.html
+share/doc/libsndfile1-dev/html/embedded_files.html
+share/doc/libsndfile1-dev/html/index.html
+share/doc/libsndfile1-dev/html/libsndfile.css
+share/doc/libsndfile1-dev/html/libsndfile.jpg
+share/doc/libsndfile1-dev/html/lists.html
+share/doc/libsndfile1-dev/html/new_file_type.HOWTO
+share/doc/libsndfile1-dev/html/octave.html
+share/doc/libsndfile1-dev/html/pkgconfig.html
+share/doc/libsndfile1-dev/html/sndfile_info.html
+share/doc/libsndfile1-dev/html/win32.html
 share/octave/site/m/sndfile_load.m
 share/octave/site/m/sndfile_play.m
 share/octave/site/m/sndfile_save.m
+@dirrm share/doc/libsndfile1-dev/html
+@dirrm share/doc/libsndfile1-dev
 @dirrm share/octave/site/m
 @dirrm share/octave/site
 @dirrm share/octave
