@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/28 01:02:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/28 01:17:33 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL 3, a free SQL database (server)
 
-.include "../../databases/mysql-client/Makefile.common"
+.include "../../databases/mysql3-client/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-berkeley-db
 USE_BUILDLINK3=		YES
@@ -53,7 +53,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/safe_mysqld.1 ${PREFIX}/man/man1
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../databases/mysql3-client/buildlink3.mk"
 
 .if ${PTHREAD_TYPE} == "pth"
 CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
