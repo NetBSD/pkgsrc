@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.773 2001/06/30 03:36:48 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.774 2001/07/01 21:13:20 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -132,7 +132,7 @@ MOTIFBASE?=		${X11PREFIX}
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-BUILD_DEPENDS+=		xpkgwedge>=1.3:../../pkgtools/xpkgwedge
+BUILD_DEPENDS+=		xpkgwedge>=1.4:../../pkgtools/xpkgwedge
 MAKE_ENV+=		PKGSRC_CPPFLAGS="${CPPFLAGS}"
 MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
 MAKE_ENV+=		PKGSRC_CXXFLAGS="${CXXFLAGS}"
