@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/21 11:07:35 markd Exp $
 
-DISTNAME=	libmusicbrainz-2.0.2
+DISTNAME=	libmusicbrainz-2.1.1
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libmusicbrainz.pc.in
 
