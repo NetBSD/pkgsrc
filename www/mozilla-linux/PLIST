@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/10 12:41:55 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/03 08:59:48 grant Exp $
 bin/mozilla-linux
+lib/mozilla-linux/LICENSE
+lib/mozilla-linux/README.txt
 lib/mozilla-linux/TestGtkEmbed
 lib/mozilla-linux/TestGtkEmbedChild
 lib/mozilla-linux/TestGtkEmbedNotebook
@@ -522,16 +524,10 @@ lib/mozilla-linux/res/viewsource.css
 lib/mozilla-linux/run-mozilla.sh
 lib/mozilla-linux/searchplugins/NetscapeSearch.gif
 lib/mozilla-linux/searchplugins/NetscapeSearch.src
-lib/mozilla-linux/searchplugins/bugzilla.gif
-lib/mozilla-linux/searchplugins/bugzilla.src
 lib/mozilla-linux/searchplugins/dmoz.gif
 lib/mozilla-linux/searchplugins/dmoz.src
 lib/mozilla-linux/searchplugins/google.gif
 lib/mozilla-linux/searchplugins/google.src
-lib/mozilla-linux/searchplugins/lxrmozilla.gif
-lib/mozilla-linux/searchplugins/lxrmozilla.src
-lib/mozilla-linux/searchplugins/mozilla.gif
-lib/mozilla-linux/searchplugins/mozilla.src
 lib/mozilla-linux/timebombgen
 lib/mozilla-linux/xpcshell
 lib/mozilla-linux/xpicleanup
