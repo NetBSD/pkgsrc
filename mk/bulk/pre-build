@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.16 2001/05/09 03:05:24 hubertf Exp $
+# $NetBSD: pre-build,v 1.17 2001/07/21 19:58:32 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -41,7 +41,6 @@ fi
 # Clean out everything and it's mother
 #
 echo Removing all installed packages 
-mount -o async -u /usr
 
 if [ -d /var/db/pkg ]; then
 	cd /var/db/pkg
@@ -92,7 +91,6 @@ rm -f $BROKENF */*/$BROKENF
 rm -f $BLDLOG */*/$BLDLOG
 rm -f .start.${arch}
 
-mount -o noasync -u /usr
 
 
 
