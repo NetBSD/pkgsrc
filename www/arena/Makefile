@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 1998/09/22 06:11:41 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/13 01:50:22 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
 DISTNAME=	arena-0.3.61
+WRKSRC=		${WRKDIR}/Arena-0.3.61
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.yggdrasil.com/pub/dist/web/arena/
-
-NOT_FOR_ARCHS=	alpha	#Runs, displays black screen
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/
@@ -15,6 +14,8 @@ DEPENDS=	libwww-5.1m1:../../www/libwww \
 		jpeg-6b:../../graphics/jpeg \
 		png-1.0.2:../../graphics/png \
 		xpm-3.4k:../../graphics/xpm
+
+NOT_FOR_ARCHS=	alpha	#Runs, displays black screen
 
 LDFLAGS+=	-L${PREFIX}/lib -L${X11BASE}/lib
 USE_GMAKE=	yes
@@ -26,8 +27,6 @@ CONFIGURE_ARGS+=	--with-libwww-include=${PREFIX}/include/w3c-libwww
 CONFIGURE_ARGS+=	--with-libwww-libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${PREFIX}/include/w3c-libwww
 CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include -I${X11BASE}/include -I${WRKDIR}"
-
-WRKSRC=		${WRKDIR}/Arena-0.3.61
 
 # Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
 # so make a symlink in ${WRKDIR} and add it to the -I list.
