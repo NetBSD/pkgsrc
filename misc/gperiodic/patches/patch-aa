@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/15 03:22:33 jlam Exp $
+
+--- configure.orig	Wed Sep  8 09:27:05 1999
++++ configure	Tue Sep 14 19:31:05 1999
+@@ -710,7 +710,7 @@
+ 
+ PACKAGE=gperiodic
+ 
+-VERSION=1.2.5
++VERSION=1.2.6
+ 
+ if test "`cd $srcdir && pwd`" != "`pwd`" && test -f $srcdir/config.status; then
+   { echo "configure: error: source directory already configured; run "make distclean" there first" 1>&2; exit 1; }
