@@ -1,7 +1,7 @@
 FTP(1)                  NetBSD General Commands Manual                  FTP(1)
 
 NNAAMMEE
-     ffttpp - Internet file transfer program
+     ffttpp -- Internet file transfer program
 
 SSYYNNOOPPSSIISS
      ffttpp [--4466AAaaddeeffggiinnppRRttvvVV] [--NN _n_e_t_r_c] [--oo _o_u_t_p_u_t] [--PP _p_o_r_t] [--qq _q_u_i_t_t_i_m_e]
@@ -28,9 +28,9 @@ DDEESSCCRRIIPPTTIIOONN
      --66       Forces ffttpp to only use IPv6 addresses.
 
      --AA       Force active mode ftp.  By default, ffttpp will try to use passive
-              mode ftp and fall back to active mode if passive is not support-
-              ed by the server.  This option causes ffttpp to always use an ac-
-              tive connection.  It is only useful for connecting to very old
+              mode ftp and fall back to active mode if passive is not sup-
+              ported by the server.  This option causes ffttpp to always use an
+              active connection.  It is only useful for connecting to very old
               servers that do not implement passive mode properly.
 
      --aa       Causes ffttpp to bypass normal login procedure, and use an anony-
@@ -49,12 +49,15 @@ DDEESSCCRRIIPPTTIIOONN
      --ii       Turns off interactive prompting during multiple file transfers.
 
      --nn       Restrains ffttpp from attempting ``auto-login'' upon initial con-
-              nection.  If auto-login is enabled, ffttpp will check the _._n_e_t_r_c
-              (see below) file in the user's home directory for an entry de-
-              scribing an account on the remote machine.  If no entry exists,
-              ffttpp will prompt for the remote machine login name (default is
-              the user identity on the local machine), and, if necessary,
-              prompt for a password and an account with which to login.
+              nection for non auto-fetch transfers.  If auto-login is enabled,
+              ffttpp will check the _._n_e_t_r_c (see below) file in the user's home
+              directory for an entry describing an account on the remote
+              machine.  If no entry exists, ffttpp will prompt for the remote
+              machine login name (default is the user identity on the local
+              machine), and, if necessary, prompt for a password and an
+              account with which to login.  To override the auto-login for
+              auto-fetch transfers, specify the username (and optionally,
+              password) as appropriate.
 
      --NN _n_e_t_r_c
               Use _n_e_t_r_c instead of _~_/_._n_e_t_r_c.  Refer to _T_H_E _._n_e_t_r_c _F_I_L_E for
@@ -97,8 +100,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      --vv       Enable vveerrbboossee and pprrooggrreessss.  This is the default if output is
               to a terminal (and in the case of pprrooggrreessss, ffttpp is the fore-
-              ground process).  Forces ffttpp to show all responses from the re-
-              mote server, as well as report on data transfer statistics.
+              ground process).  Forces ffttpp to show all responses from the
+              remote server, as well as report on data transfer statistics.
 
      --VV       Disable vveerrbboossee and pprrooggrreessss, overriding the default of enabled
               when output is to a terminal.
@@ -107,8 +110,8 @@ DDEESSCCRRIIPPTTIIOONN
      command line.  If this is done, ffttpp will immediately attempt to establish
      a connection to an FTP server on that host; otherwise, ffttpp will enter its
      command interpreter and await instructions from the user.  When ffttpp is
-     awaiting commands from the user the prompt `ftp>' is provided to the us-
-     er.  The following commands are recognized by ffttpp:
+     awaiting commands from the user the prompt `ftp>' is provided to the
+     user.  The following commands are recognized by ffttpp:
 
      !! [_c_o_m_m_a_n_d [_a_r_g_s]]
                  Invoke an interactive shell on the local machine.  If there
@@ -132,8 +135,8 @@ DDEESSCCRRIIPPTTIIOONN
                  or nnmmaapp setting.  File transfer uses the current settings for
                  ttyyppee, ffoorrmmaatt, mmooddee, and ssttrruuccttuurree.
 
-     aasscciiii       Set the file transfer ttyyppee to network ASCII.  This is the de-
-                 fault type.
+     aasscciiii       Set the file transfer ttyyppee to network ASCII.  This is the
+                 default type.
 
      bbeellll        Arrange that a bell be sounded after each file transfer com-
                  mand is completed.
@@ -141,8 +144,8 @@ DDEESSCCRRIIPPTTIIOONN
      bbiinnaarryy      Set the file transfer ttyyppee to support binary image transfer.
 
      bbyyee         Terminate the FTP session with the remote server and exit
-                 ffttpp.  An end of file will also terminate the session and ex-
-                 it.
+                 ffttpp.  An end of file will also terminate the session and
+                 exit.
 
      ccaassee        Toggle remote computer file name case mapping during ggeett,
                  mmggeett and mmppuutt commands.  When ccaassee is on (default is off),
@@ -164,8 +167,8 @@ DDEESSCCRRIIPPTTIIOONN
      cclloossee       Terminate the FTP session with the remote server, and return
                  to the command interpreter.  Any defined macros are erased.
 
-     ccrr          Toggle carriage return stripping during ascii type file re-
-                 trieval.  Records are denoted by a carriage return/linefeed
+     ccrr          Toggle carriage return stripping during ascii type file
+                 retrieval.  Records are denoted by a carriage return/linefeed
                  sequence during ascii type file transfer.  When ccrr is on (the
                  default), carriage returns are stripped from this sequence to
                  conform with the UNIX single linefeed record delimiter.
@@ -188,8 +191,8 @@ DDEESSCCRRIIPPTTIIOONN
                  machine.  The listing includes any system-dependent informa-
                  tion that the server chooses to include; for example, most
                  UNIX systems will produce output from the command `ls -l'.
-                 If _r_e_m_o_t_e_-_p_a_t_h is left unspecified, the current working di-
-                 rectory is used.  If interactive prompting is on, ffttpp will
+                 If _r_e_m_o_t_e_-_p_a_t_h is left unspecified, the current working
+                 directory is used.  If interactive prompting is on, ffttpp will
                  prompt the user to verify that the last argument is indeed
                  the target local file for receiving ddiirr output.  If no local
                  file is specified, or if _l_o_c_a_l_-_f_i_l_e is `--', the output is
@@ -231,8 +234,8 @@ DDEESSCCRRIIPPTTIIOONN
                  user, or from the FTPSERVER environment variable).  If _h_o_s_t
                  is given, then gate-ftp mode will be enabled, and the gate-
                  ftp server will be set to _h_o_s_t.  If _p_o_r_t is also given, that
-                 will be used as the port to connect to on the gate-ftp serv-
-                 er.
+                 will be used as the port to connect to on the gate-ftp
+                 server.
 
      ggeett _r_e_m_o_t_e_-_f_i_l_e [_l_o_c_a_l_-_f_i_l_e]
                  Retrieve the _r_e_m_o_t_e_-_f_i_l_e and store it on the local machine.
@@ -294,17 +297,18 @@ DDEESSCCRRIIPPTTIIOONN
                  _m_a_c_r_o_-_n_a_m_e; a null line (consecutive newline characters in a
                  file or carriage returns from the terminal) terminates macro
                  input mode.  There is a limit of 16 macros and 4096 total
-                 characters in all defined macros.  Macros remain defined un-
-                 til a cclloossee command is executed.  The macro processor inter-
-                 prets `$' and `\' as special characters.  A `$' followed by a
-                 number (or numbers) is replaced by the corresponding argument
-                 on the macro invocation command line.  A `$' followed by an
-                 `i' signals that macro processor that the executing macro is
-                 to be looped.  On the first pass `$i' is replaced by the
-                 first argument on the macro invocation command line, on the
-                 second pass it is replaced by the second argument, and so on.
-                 A `\' followed by any character is replaced by that charac-
-                 ter.  Use the `\' to prevent special treatment of the `$'.
+                 characters in all defined macros.  Macros remain defined
+                 until a cclloossee command is executed.  The macro processor
+                 interprets `$' and `\' as special characters.  A `$' followed
+                 by a number (or numbers) is replaced by the corresponding
+                 argument on the macro invocation command line.  A `$' fol-
+                 lowed by an `i' signals that macro processor that the execut-
+                 ing macro is to be looped.  On the first pass `$i' is
+                 replaced by the first argument on the macro invocation com-
+                 mand line, on the second pass it is replaced by the second
+                 argument, and so on.  A `\' followed by any character is
+                 replaced by that character.  Use the `\' to prevent special
+                 treatment of the `$'.
 
      mmddeelleettee [_r_e_m_o_t_e_-_f_i_l_e_s]
                  Delete the _r_e_m_o_t_e_-_f_i_l_e_s on the remote machine.
@@ -351,8 +355,8 @@ DDEESSCCRRIIPPTTIIOONN
                  only supported) mode is ``stream''.
 
      mmooddttiimmee _r_e_m_o_t_e_-_f_i_l_e
-                 Show the last modification time of the file on the remote ma-
-                 chine.
+                 Show the last modification time of the file on the remote
+                 machine.
 
      mmoorree _f_i_l_e   A synonym for ppaaggee.
 
@@ -382,8 +386,8 @@ DDEESSCCRRIIPPTTIIOONN
                  Set or unset the filename mapping mechanism.  If no arguments
                  are specified, the filename mapping mechanism is unset.  If
                  arguments are specified, remote filenames are mapped during
-                 mmppuutt commands and ppuutt commands issued without a specified re-
-                 mote target filename.  If arguments are specified, local
+                 mmppuutt commands and ppuutt commands issued without a specified
+                 remote target filename.  If arguments are specified, local
                  filenames are mapped during mmggeett commands and ggeett commands
                  issued without a specified local target filename.  This com-
                  mand is useful when connecting to a non-UNIX remote computer
@@ -394,24 +398,24 @@ DDEESSCCRRIIPPTTIIOONN
                  settings).  Variable templating is accomplished by including
                  the sequences `$1', `$2', ..., `$9' in _i_n_p_a_t_t_e_r_n.  Use `\' to
                  prevent this special treatment of the `$' character.  All
-                 other characters are treated literally, and are used to de-
-                 termine the nnmmaapp [_i_n_p_a_t_t_e_r_n] variable values.  For example,
+                 other characters are treated literally, and are used to
+                 determine the nnmmaapp [_i_n_p_a_t_t_e_r_n] variable values.  For example,
                  given _i_n_p_a_t_t_e_r_n $1.$2 and the remote file name "mydata.data",
                  $1 would have the value "mydata", and $2 would have the value
                  "data".  The _o_u_t_p_a_t_t_e_r_n determines the resulting mapped file-
                  name.  The sequences `$1', `$2', ...., `$9' are replaced by
-                 any value resulting from the _i_n_p_a_t_t_e_r_n template.  The se-
-                 quence `$0' is replace by the original filename.  Additional-
-                 ly, the sequence `[_s_e_q_1, _s_e_q_2]' is replaced by [_s_e_q_1] if _s_e_q_1
-                 is not a null string; otherwise it is replaced by _s_e_q_2.  For
-                 example, the command
+                 any value resulting from the _i_n_p_a_t_t_e_r_n template.  The
+                 sequence `$0' is replace by the original filename.  Addition-
+                 ally, the sequence `[_s_e_q_1, _s_e_q_2]' is replaced by [_s_e_q_1] if
+                 _s_e_q_1 is not a null string; otherwise it is replaced by _s_e_q_2.
+                 For example, the command
 
                        nmap $1.$2.$3 [$1,$2].[$2,file]
 
                  would yield the output filename "myfile.data" for input file-
                  names "myfile.data" and "myfile.data.old", "myfile.file" for
-                 the input filename "myfile", and "myfile.myfile" for the in-
-                 put filename ".myfile".  Spaces may be included in
+                 the input filename "myfile", and "myfile.myfile" for the
+                 input filename ".myfile".  Spaces may be included in
                  _o_u_t_p_a_t_t_e_r_n, as in the example: `nmap $1 sed "s/  *$//" > $1'
                  .  Use the `\' character to prevent special treatment of the
                  `$','[',']', and `,' characters.
@@ -422,8 +426,8 @@ DDEESSCCRRIIPPTTIIOONN
                  lation mechanism is unset.  If arguments are specified, char-
                  acters in remote filenames are translated during mmppuutt com-
                  mands and ppuutt commands issued without a specified remote tar-
-                 get filename.  If arguments are specified, characters in lo-
-                 cal filenames are translated during mmggeett commands and ggeett
+                 get filename.  If arguments are specified, characters in
+                 local filenames are translated during mmggeett commands and ggeett
                  commands issued without a specified local target filename.
                  This command is useful when connecting to a non-UNIX remote
                  computer with different file naming conventions or practices.
@@ -454,8 +458,9 @@ DDEESSCCRRIIPPTTIIOONN
                  tens on a port and sends that address to the remote server,
                  who connects back to it.  Passive mode is useful when using
                  ffttpp through a gateway router or host that controls the direc-
-                 tionality of traffic.  (Note that though FTP servers are re-
-                 quired to support the PASV command by RFC 1123, some do not.)
+                 tionality of traffic.  (Note that though FTP servers are
+                 required to support the PASV command by RFC 1123, some do
+                 not.)
 
      ppddiirr [_r_e_m_o_t_e_-_p_a_t_h]
                  Perform ddiirr [_r_e_m_o_t_e_-_p_a_t_h], and display the result with the
@@ -511,15 +516,15 @@ DDEESSCCRRIIPPTTIIOONN
                  ondary control connection.  Enter the command "proxy ?" to
                  see other FTP commands executable on the secondary connec-
                  tion.  The following commands behave differently when pref-
-                 aced by pprrooxxyy: ooppeenn will not define new macros during the au-
-                 to-login process, cclloossee will not erase existing macro defini-
-                 tions, ggeett and mmggeett transfer files from the host on the pri-
-                 mary control connection to the host on the secondary control
-                 connection, and ppuutt, mmppuutt, and aappppeenndd transfer files from the
-                 host on the secondary control connection to the host on the
-                 primary control connection.  Third party file transfers de-
-                 pend upon support of the FTP protocol PASV command by the
-                 server on the secondary control connection.
+                 aced by pprrooxxyy: ooppeenn will not define new macros during the
+                 auto-login process, cclloossee will not erase existing macro defi-
+                 nitions, ggeett and mmggeett transfer files from the host on the
+                 primary control connection to the host on the secondary con-
+                 trol connection, and ppuutt, mmppuutt, and aappppeenndd transfer files
+                 from the host on the secondary control connection to the host
+                 on the primary control connection.  Third party file trans-
+                 fers depend upon support of the FTP protocol PASV command by
+                 the server on the secondary control connection.
 
      ppuutt _l_o_c_a_l_-_f_i_l_e [_r_e_m_o_t_e_-_f_i_l_e]
                  Store a local file on the remote machine.  If _r_e_m_o_t_e_-_f_i_l_e is
@@ -546,13 +551,13 @@ DDEESSCCRRIIPPTTIIOONN
                        ggeett  Incoming transfers.
                        ppuutt  Outgoing transfers.
 
-                 _m_a_x_i_m_u_m can by modified on the fly by _i_n_c_r_e_m_e_n_t bytes (de-
-                 fault: 1024) each time a given signal is received:
+                 _m_a_x_i_m_u_m can be modified on the fly by _i_n_c_r_e_m_e_n_t bytes
+                 (default: 1024) each time a given signal is received:
 
                        SIGUSR1  Increment _m_a_x_i_m_u_m by _i_n_c_r_e_m_e_n_t bytes.
 
-                       SIGUSR2  Decrement _m_a_x_i_m_u_m by _i_n_c_r_e_m_e_n_t bytes.  The re-
-                                sult must be a positive number.
+                       SIGUSR2  Decrement _m_a_x_i_m_u_m by _i_n_c_r_e_m_e_n_t bytes.  The
+                                result must be a positive number.
 
                  If _m_a_x_i_m_u_m is not supplied, the current throttle rates are
                  displayed.
@@ -582,15 +587,15 @@ DDEESSCCRRIIPPTTIIOONN
      rreennaammee [_f_r_o_m [_t_o]]
                  Rename the file _f_r_o_m on the remote machine, to the file _t_o.
 
-     rreesseett       Clear reply queue.  This command re-synchronizes command/re-
-                 ply sequencing with the remote FTP server.  Resynchronization
-                 may be necessary following a violation of the FTP protocol by
-                 the remote server.
+     rreesseett       Clear reply queue.  This command re-synchronizes com-
+                 mand/reply sequencing with the remote FTP server.  Resynchro-
+                 nization may be necessary following a violation of the FTP
+                 protocol by the remote server.
 
      rreessttaarrtt _m_a_r_k_e_r
                  Restart the immediately following ggeett or ppuutt at the indicated
-                 _m_a_r_k_e_r.  On UNIX systems, marker is usually a byte offset in-
-                 to the file.
+                 _m_a_r_k_e_r.  On UNIX systems, marker is usually a byte offset
+                 into the file.
 
      rrhheellpp [_c_o_m_m_a_n_d_-_n_a_m_e]
                  Request help from the remote FTP server.  If a _c_o_m_m_a_n_d_-_n_a_m_e
@@ -601,8 +606,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      rrssttaattuuss [_r_e_m_o_t_e_-_f_i_l_e]
                  With no arguments, show status of remote machine.  If
-                 _r_e_m_o_t_e_-_f_i_l_e is specified, show status of _r_e_m_o_t_e_-_f_i_l_e on re-
-                 mote machine.
+                 _r_e_m_o_t_e_-_f_i_l_e is specified, show status of _r_e_m_o_t_e_-_f_i_l_e on
+                 remote machine.
 
      rruunniiqquuee     Toggle storing of files on the local system with unique file-
                  names.  If a file already exists with a name equal to the
@@ -612,14 +617,14 @@ DDEESSCCRRIIPPTTIIOONN
                  this process continues up to ".99", an error message is
                  printed, and the transfer does not take place.  The generated
                  unique filename will be reported.  Note that rruunniiqquuee will not
-                 affect local files generated from a shell command (see be-
-                 low).  The default value is off.
+                 affect local files generated from a shell command (see
+                 below).  The default value is off.
 
      sseenndd _l_o_c_a_l_-_f_i_l_e [_r_e_m_o_t_e_-_f_i_l_e]
                  A synonym for ppuutt.
 
-     sseennddppoorrtt    Toggle the use of PORT commands.  By default, ffttpp will at-
-                 tempt to use a PORT command when establishing a connection
+     sseennddppoorrtt    Toggle the use of PORT commands.  By default, ffttpp will
+                 attempt to use a PORT command when establishing a connection
                  for each data transfer.  The use of PORT commands can prevent
                  delays when performing multiple file transfers.  If the PORT
                  command fails, ffttpp will use the default data port.  When the
@@ -668,8 +673,8 @@ DDEESSCCRRIIPPTTIIOONN
                  command for successful completion.  The remote server will
                  report unique name.  Default value is off.
 
-     ssyysstteemm      Show the type of operating system running on the remote ma-
-                 chine.
+     ssyysstteemm      Show the type of operating system running on the remote
+                 machine.
 
      tteenneexx       Set the file transfer type to that needed to talk to TENEX
                  machines.
@@ -707,9 +712,9 @@ DDEESSCCRRIIPPTTIIOONN
 
      vveerrbboossee     Toggle verbose mode.  In verbose mode, all responses from the
                  FTP server are displayed to the user.  In addition, if ver-
-                 bose is on, when a file transfer completes, statistics re-
-                 garding the efficiency of the transfer are reported.  By de-
-                 fault, verbose is on.
+                 bose is on, when a file transfer completes, statistics
+                 regarding the efficiency of the transfer are reported.  By
+                 default, verbose is on.
 
      xxffeerrbbuuff _s_i_z_e
                  Set the size of the socket send and receive buffers to _s_i_z_e.
@@ -724,8 +729,8 @@ DDEESSCCRRIIPPTTIIOONN
      force the setting appropriately.
 
      Commands which take a byte count as an argument (e.g., hhaasshh, rraattee, and
-     xxffeerrbbuuff) support an optional suffix on the argument which changes the in-
-     terpretation of the argument.  Supported suffixes are:
+     xxffeerrbbuuff) support an optional suffix on the argument which changes the
+     interpretation of the argument.  Supported suffixes are:
            b    Causes no modification.  (Optional)
            k    Kilo; multiply the argument by 1024
            m    Mega; multiply the argument by 1048576
@@ -756,10 +761,10 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
 
      ftp://[_u_s_e_r[:_p_a_s_s_w_o_r_d]@]_h_o_s_t[:_p_o_r_t]/_p_a_t_h[/][;type=_X]
            An FTP URL, retrieved using the FTP protocol if sseett ffttpp__pprrooxxyy isn't
-           defined.  Otherwise, transfer the URL using HTTP via the proxy de-
-           fined in sseett ffttpp__pprrooxxyy.  If sseett ffttpp__pprrooxxyy isn't defined and _u_s_e_r is
-           given, login as _u_s_e_r.  In this case, use _p_a_s_s_w_o_r_d if supplied, oth-
-           erwise prompt the user for one.
+           defined.  Otherwise, transfer the URL using HTTP via the proxy
+           defined in sseett ffttpp__pprrooxxyy.  If sseett ffttpp__pprrooxxyy isn't defined and _u_s_e_r
+           is given, login as _u_s_e_r.  In this case, use _p_a_s_s_w_o_r_d if supplied,
+           otherwise prompt the user for one.
 
            If a suffix of `;type=A' or `;type=I' is supplied, then the trans-
            fer type will take place as ascii or binary (respectively).  The
@@ -791,12 +796,12 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
            The above interpretation has the following consequences:
 
            ++oo   The path is interpreted relative to the default login directory
-               of the specified user or of the `anonymous' user.  If the _/ di-
-               rectory is required, use a leading path of ``%2F''.  If a us-
-               er's home directory is required (and the remote server supports
-               the syntax), use a leading path of ``%7Euser/''.  For example,
-               to retrieve _/_e_t_c_/_m_o_t_d from `localhost' as the user `myname'
-               with the password `mypass', use
+               of the specified user or of the `anonymous' user.  If the _/
+               directory is required, use a leading path of ``%2F''.  If a
+               user's home directory is required (and the remote server sup-
+               ports the syntax), use a leading path of ``%7Euser/''.  For
+               example, to retrieve _/_e_t_c_/_m_o_t_d from `localhost' as the user
+               `myname' with the password `mypass', use
                ``ftp://myname:mypass@localhost/%2fetc/motd''
 
            ++oo   The exact ccdd and ggeett commands can be controlled by careful
@@ -820,8 +825,8 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
 
                ftp://host/%2Fdir1%2Fdir2%2Ffile  ``get /dir1/dir2/file''.
 
-           ++oo   You must have appropriate access permission for each of the in-
-               termediate directories that is used in the equivalent of a ccdd
+           ++oo   You must have appropriate access permission for each of the
+               intermediate directories that is used in the equivalent of a ccdd
                command.
 
      http://[_u_s_e_r[:_p_a_s_s_w_o_r_d]@]_h_o_s_t[:_p_o_r_t]/_p_a_t_h
@@ -835,7 +840,11 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
            A local URL, copied from _/_p_a_t_h on the local host.
 
      Unless noted otherwise above, and --oo _o_u_t_p_u_t is not given, the file is
-     stored in the current directory as the basename(1) of _p_a_t_h.
+     stored in the current directory as the basename(1) of _p_a_t_h.  Note that if
+     a HTTP redirect is received, the fetch is retried using the new target
+     URL supplied by the server, with a corresponding new _p_a_t_h.  Using an
+     explicit --oo _o_u_t_p_u_t is recommended, to avoid writing to unexpected file
+     names.
 
      If a classic format or an FTP URL format has a trailing `/' or an empty
      _p_a_t_h component, then ffttpp will connect to the site and ccdd to the directory
@@ -846,9 +855,9 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
      HTTP 1.0.
 
      If --RR is given, all auto-fetches that don't go via the FTP or HTTP prox-
-     ies will be restarted.  For FTP, this is implemented by using rreeggeett in-
-     stead of ggeett.  For HTTP, this is implemented by using the `Range: bytes='
-     HTTP/1.1 directive.
+     ies will be restarted.  For FTP, this is implemented by using rreeggeett
+     instead of ggeett.  For HTTP, this is implemented by using the `Range:
+     bytes=' HTTP/1.1 directive.
 
      If WWW or proxy WWW authentication is required, you will be prompted to
      enter a username and password to authenticate with.
@@ -891,18 +900,18 @@ FFIILLEE NNAAMMIINNGG CCOONNVVEENNTTIIOONNSS
      3.   Failing the above checks, if ``globbing'' is enabled, local file
           names are expanded according to the rules used in the csh(1); c.f.
           the gglloobb command.  If the ffttpp command expects a single local file
-          (e.g.  ppuutt), only the first filename generated by the "globbing" op-
-          eration is used.
+          (e.g.  ppuutt), only the first filename generated by the "globbing"
+          operation is used.
 
      4.   For mmggeett commands and ggeett commands with unspecified local file
-          names, the local filename is the remote filename, which may be al-
-          tered by a ccaassee, nnttrraannss, or nnmmaapp setting.  The resulting filename
+          names, the local filename is the remote filename, which may be
+          altered by a ccaassee, nnttrraannss, or nnmmaapp setting.  The resulting filename
           may then be altered if rruunniiqquuee is on.
 
      5.   For mmppuutt commands and ppuutt commands with unspecified remote file
-          names, the remote filename is the local filename, which may be al-
-          tered by a nnttrraannss or nnmmaapp setting.  The resulting filename may then
-          be altered by the remote server if ssuunniiqquuee is on.
+          names, the remote filename is the local filename, which may be
+          altered by a nnttrraannss or nnmmaapp setting.  The resulting filename may
+          then be altered by the remote server if ssuunniiqquuee is on.
 
 FFIILLEE TTRRAANNSSFFEERR PPAARRAAMMEETTEERRSS
      The FTP specification specifies many parameters which may affect a file
@@ -911,23 +920,23 @@ FFIILLEE TTRRAANNSSFFEERR PPAARRAAMMEETTEERRSS
      ffttpp supports the ascii and image types of file transfer, plus local byte
      size 8 for tteenneexx mode transfers.
 
-     ffttpp supports only the default values for the remaining file transfer pa-
-     rameters: mmooddee, ffoorrmm, and ssttrruucctt.
+     ffttpp supports only the default values for the remaining file transfer
+     parameters: mmooddee, ffoorrmm, and ssttrruucctt.
 
 TTHHEE ..nneettrrcc FFIILLEE
      The _._n_e_t_r_c file contains login and initialization information used by the
      auto-login process.  It resides in the user's home directory, unless
      overridden with the --NN _n_e_t_r_c option, or specified in the NETRC environ-
-     ment variable.  The following tokens are recognized; they may be separat-
-     ed by spaces, tabs, or new-lines:
+     ment variable.  The following tokens are recognized; they may be sepa-
+     rated by spaces, tabs, or new-lines:
 
      mmaacchhiinnee _n_a_m_e
-               Identify a remote machine _n_a_m_e.  The auto-login process search-
-               es the _._n_e_t_r_c file for a mmaacchhiinnee token that matches the remote
-               machine specified on the ffttpp command line or as an ooppeenn command
-               argument.  Once a match is made, the subsequent _._n_e_t_r_c tokens
-               are processed, stopping when the end of file is reached or an-
-               other mmaacchhiinnee or a ddeeffaauulltt token is encountered.
+               Identify a remote machine _n_a_m_e.  The auto-login process
+               searches the _._n_e_t_r_c file for a mmaacchhiinnee token that matches the
+               remote machine specified on the ffttpp command line or as an ooppeenn
+               command argument.  Once a match is made, the subsequent _._n_e_t_r_c
+               tokens are processed, stopping when the end of file is reached
+               or another mmaacchhiinnee or a ddeeffaauulltt token is encountered.
 
      ddeeffaauulltt   This is the same as mmaacchhiinnee _n_a_m_e except that ddeeffaauulltt matches
                any name.  There can be only one ddeeffaauulltt token, and it must be
@@ -935,9 +944,9 @@ TTHHEE ..nneettrrcc FFIILLEE
 
                      default login anonymous password user@site
 
-               thereby giving the user an automatic anonymous FTP login to ma-
-               chines not specified in _._n_e_t_r_c.  This can be overridden by us-
-               ing the --nn flag to disable auto-login.
+               thereby giving the user an automatic anonymous FTP login to
+               machines not specified in _._n_e_t_r_c.  This can be overridden by
+               using the --nn flag to disable auto-login.
 
      llooggiinn _n_a_m_e
                Identify a user on the remote machine.  If this token is
@@ -974,18 +983,19 @@ TTHHEE ..nneettrrcc FFIILLEE
                followed by a blank line.
 
 CCOOMMMMAANNDD LLIINNEE EEDDIITTIINNGG
-     ffttpp supports interactive command line editing, via the editline(3) li-
-     brary.  It is enabled with the eeddiitt command, and is enabled by default if
-     input is from a tty.  Previous lines can be recalled and edited with the
-     arrow keys, and other GNU Emacs-style editing keys may be used as well.
+     ffttpp supports interactive command line editing, via the editline(3)
+     library.  It is enabled with the eeddiitt command, and is enabled by default
+     if input is from a tty.  Previous lines can be recalled and edited with
+     the arrow keys, and other GNU Emacs-style editing keys may be used as
+     well.
 
      The editline(3) library is configured with a _._e_d_i_t_r_c file - refer to
      editrc(5) for more information.
 
      An extra key binding is available to ffttpp to provide context sensitive
      command and filename completion (including remote file completion).  To
-     use this, bind a key to the editline(3) command ffttpp--ccoommpplleettee.  By de-
-     fault, this is bound to the TAB key.
+     use this, bind a key to the editline(3) command ffttpp--ccoommpplleettee.  By
+     default, this is bound to the TAB key.
 
 CCOOMMMMAANNDD LLIINNEE PPRROOMMPPTT
      By default, ffttpp displays a command line prompt of ``ftp> '' to the user.
@@ -999,9 +1009,9 @@ CCOOMMMMAANNDD LLIINNEE PPRROOMMPPTT
            %/   The current remote working directory.
 
            %c[[0]_n],%.[[0]_n]
-                The trailing component of the current remote working directo-
-                ry, or _n trailing components if a digit _n is given.  If _n be-
-                gins with `0', the number of skipped components precede the
+                The trailing component of the current remote working direc-
+                tory, or _n trailing components if a digit _n is given.  If _n
+                begins with `0', the number of skipped components precede the
                 trailing component(s) in the format ``/<_n_u_m_b_e_r>_t_r_a_i_l_i_n_g'' (for
                 `%c') or ``..._t_r_a_i_l_i_n_g'' (for `%.').
 
@@ -1084,8 +1094,8 @@ EEXXTTEENNDDEEDD PPAASSSSIIVVEE MMOODDEE AANNDD FFIIRRE
            229 Entering Extended Passive Mode (|||58551|)
 
      then you will need to disable extended passive mode with eeppssvv44 ooffff.  See
-     the above section _T_h_e _._n_e_t_r_c _F_i_l_e for an example of how to make this au-
-     tomatic.
+     the above section _T_h_e _._n_e_t_r_c _F_i_l_e for an example of how to make this
+     automatic.
 
 SSEEEE AALLSSOO
      getservbyname(3), editrc(5), services(5), ftpd(8)
@@ -1125,4 +1135,4 @@ BBUUGGSS
      uses a SIIT translator for IPv6-to-IPv4 translation, ffttpp is unable to
      support your configuration.
 
-NetBSD 1.6                       July 31, 2003                      NetBSD 1.6
+NetBSD 2.0                      October 7, 2004                     NetBSD 2.0

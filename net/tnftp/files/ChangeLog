@@ -1,4 +1,81 @@
-$Id: ChangeLog,v 1.1 2004/03/11 13:01:01 grant Exp $
+$Id: ChangeLog,v 1.1.1.2 2005/01/03 10:23:21 lukem Exp $
+
+Mon Jan  3 10:21:57 UTC 2005	lukem
+
+	* Release "tnftp 20050103"
+
+	* Merge NetBSD-ftp 20050103:
+		- Forbid filenames returned from mget that aren't in (or below)
+		  the current directory.  The previous behaviour (of trusting
+		  the remote server's response when retrieving the list of
+		  files to mget with prompting disabled) has been in ftp
+		  ~forever, and has been a "known issue" for a long time.
+		  Recently an advisory was published by D.J. Bernstein on
+		  behalf of Yosef Klein warning of the problems with the
+		  previous behaviour, so to alleviate concern I've fixed
+		  this with a sledgehammer.
+		- Remember the local cwd after any operation which may
+		  change it.
+		- Use "remotecwd" instead of "remotepwd".
+		- Add (unsigned char) cast to ctype functions
+		- Ensure that "mname" is set in ls() and mls() so that an
+		  aborted confirm() prints the correct name.
+		  Problem highlighted & suggested fix from PR [bin/17766]
+		  by Steve McClellan.
+		- If an ftp auto-fetch transfer is interrupted by SIGINT
+		  (usually ^C), exit with 130 instead of 1 (or rarely, 0).
+		  This allows an ftp auto-fetch in a shell loop to correctly
+		  terminate the loop.
+		  Should fix PR [pkg/26351], and possibly others.
+		- Save approximately 8K by not including http authentication,
+		  extended status messages and help strings when the
+		  appropriate options are set.
+		- Move UCB-licensed code from 4-clause to 3-clause licence.
+		  Patches provided by Joel Baker in PR 22365, verified by
+		  Alistair Crooks.
+		- Always decode %xx in a url's user & pass components.
+		- Only remember {WWW,Proxy}-Authenticate "Basic" challenges; no
+		  point in tracking any others since ftp doesn't support them.
+		- Improve the parsing of HTTP responses.
+		- Don't base64 encode the trailing NUL in the HTTP basic auth
+		  response.  Problem noted by Eric Haszlakiewicz.
+		- Improve parsing of HTTP response headers to be more RFC2616
+		  compliant, and skip LWS (linear white space; CR, LF, space,
+		  tab) and the end of lines and between the field name and
+		  the field value.  This still isn't 100% compliant, since we
+		  don't support "multi line" responses at this time.
+		  This should fix PR [bin/22611] from TAMURA Kent (although I
+		  can't easily find a http server to reproduce the problem
+		  against.)
+		- Fix a minor memory leak when parsing HTTP response headers.
+		- Don't unnecessarily display a 401/407 error when running
+		  with -V.  Fix from PR [bin/18535] by Jeremy Reed.
+		- Don't warn about "ignored setsockopt" failures unless
+		  debugging is enabled.  Suggested by Todd Vierling.
+		- Allow empty passwords in ftp://user:@host/file auto-fetch
+		  URLs, per RFC 1738.  Requested by Simon Poole.
+		- correct URL syntax in comment
+		- Note potentially surprising file-saving behaviour in case
+		  of HTTP redirects
+		- -n is ignored for auto-fetch transfers
+		- If connect(2) in xconnect() fails with EINTR, call select(2)
+		  on the socket until it's writable or it fails with something
+		  other than EINTR.  This matches the behaviour in SUSv3, and
+		  prevents the problem when pressing ^T (SIGINFO, which is
+		  marked as restartable) during connection setup would cause
+		  ftp to fail with EADDRINUSE or EALREADY when the second
+		  connect(2) was attempted on the same socket.  Problem found
+		  and solution provided by Maxime Henrion <mux@freebsd.org>.
+		- Add -q to usage. From Kouichirou Hiratsuka in PR 26199.
+		- PR/25566: Anders Magnusson: ftp(1) do not like large TCP
+		  windows.  Limit it to 8M.
+
+Mon Oct  6 01:23:03 UTC 2003	lukem
+
+	* configure.in improvements:
+		- When testing for IN6ADDRSZ in <arpa/nameser.h>, pull in
+		  <sys/types.h> first.  From Stoned Elipot <seb @ NetBSD>
+		- Whitespace cleanup
 
 Mon Aug 25 11:45:45 UTC 2003	lukem
 

@@ -1,4 +1,4 @@
-.\" 	$NetBSD: ftp.1,v 1.1 2004/03/11 13:01:01 grant Exp $
+.\" 	$NetBSD: ftp.1,v 1.1.1.2 2005/01/03 10:08:40 lukem Exp $
 .\"
 .\" Copyright (c) 1996-2003 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -46,11 +46,7 @@
 .\" 2. Redistributions in binary form must reproduce the above copyright
 .\"    notice, this list of conditions and the following disclaimer in the
 .\"    documentation and/or other materials provided with the distribution.
-.\" 3. All advertising materials mentioning features or use of this software
-.\"    must display the following acknowledgement:
-.\"	This product includes software developed by the University of
-.\"	California, Berkeley and its contributors.
-.\" 4. Neither the name of the University nor the names of its contributors
+.\" 3. Neither the name of the University nor the names of its contributors
 .\"    may be used to endorse or promote products derived from this software
 .\"    without specific prior written permission.
 .\"
@@ -68,7 +64,7 @@
 .\"
 .\"	@(#)ftp.1	8.3 (Berkeley) 10/9/94
 .\"
-.Dd July 31, 2003
+.Dd October 7, 2004
 .Dt FTP 1
 .Os
 .Sh NAME
@@ -228,7 +224,7 @@ Restrains
 .Nm
 from attempting
 .Dq auto-login
-upon initial connection.
+upon initial connection for non auto-fetch transfers.
 If auto-login is enabled,
 .Nm
 will check the
@@ -240,6 +236,8 @@ If no entry exists,
 will prompt for the remote machine login name (default is the user
 identity on the local machine), and, if necessary, prompt for a password
 and an account with which to login.
+To override the auto-login for auto-fetch transfers, specify the
+username (and optionally, password) as appropriate.
 .It Fl N Ar netrc
 Use
 .Ar netrc
@@ -1123,7 +1121,7 @@ Outgoing transfers.
 .El
 .Pp
 .Ar maximum
-can by modified on the fly by
+can be modified on the fly by
 .Ar increment
 bytes (default: 1024) each time a given signal is received:
 .B
@@ -1748,6 +1746,14 @@ is not given, the file is stored in the current directory as the
 .Xr basename 1
 of
 .Ar path .
+Note that if a
+.Tn HTTP
+redirect is received, the fetch is retried using the new target URL
+supplied by the server, with a corresponding new
+.Ar path .
+Using an explicit
+.Fl o Ar output
+is recommended, to avoid writing to unexpected file names.
 .Pp
 If a classic format or an
 .Tn FTP

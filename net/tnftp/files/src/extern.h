@@ -1,7 +1,7 @@
-/*	$NetBSD: extern.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: extern.h,v 1.1.1.2 2005/01/03 10:08:40 lukem Exp $	*/
 
 /*-
- * Copyright (c) 1996-2003 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -48,11 +48,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -140,6 +136,7 @@ void	doproxy(int, char **);
 char   *dotrans(char *);
 void	feat(int, char **);
 void	fget(int, char **);
+int	fileindir(const char *, const char *);
 int	foregroundproc(void);
 void	formatbuf(char *, size_t, const char *);
 void	ftpvis(char *, size_t, const char *, size_t);
@@ -250,7 +247,8 @@ int	strsuftoi(const char *);
 void	syst(int, char **);
 int	togglevar(int, char **, int *, const char *);
 void	unsetoption(int, char **);
-void	updateremotepwd(void);
+void	updatelocalcwd(void);
+void	updateremotecwd(void);
 void	usage(void);
 void	user(int, char **);
 int	xconnect(int, const struct sockaddr *, int);
