@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/26 12:44:06 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/26 12:45:44 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use mjpegtools.
 #
@@ -10,7 +10,7 @@ MJPEGTOOLS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mjpegtools
 BUILDLINK_DEPENDS.mjpegtools?=		mjpegtools>=1.6.1.90nb3
-BUILDLINK_PKGSRCDIR.mjpegtools?=		../../graphics/mjpegtools
+BUILDLINK_PKGSRCDIR.mjpegtools?=	../../multimedia/mjpegtools
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mjpegtools=mjpegtools
 BUILDLINK_PREFIX.mjpegtools_DEFAULT=	${LOCALBASE}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 12:44:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/26 12:45:44 jmmv Exp $
 
 DISTNAME=	mjpegtools-1.6.1.93
-CATEGORIES=	graphics
+CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
