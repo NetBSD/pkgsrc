@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/06/12 22:19:20 taca Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/19 12:54:57 taca Exp $
 #
 
-DISTNAME=	Jcode-0.73
+DISTNAME=	Jcode-0.75
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	converters japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/Jcode/
