@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.339 1999/09/15 05:39:38 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.340 1999/09/18 04:24:22 jwise Exp $
 #
 # This file is in the public domain.
 #
@@ -1258,7 +1258,8 @@ root-install:
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "===>  $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "      If so, you may wish to \`\`pkg_delete $$found'' and install"; \
-		${ECHO_MSG} "      this package again by \`\`${MAKE} reinstall'' to upgrade it properly."; \
+		${ECHO_MSG} "      this package again by \`\`${MAKE} reinstall'' to upgrade it properly,"; \
+		${ECHO_MSG} "      or use \`\`${MAKE} update'' to upgrade it and all of its dependencies."; \
 		${ECHO_MSG} "      If you really wish to overwrite the old package of $$found"; \
 		${ECHO_MSG} "      without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
 		${ECHO_MSG} "      in your environment or the \"${MAKE} install\" command line."; \
