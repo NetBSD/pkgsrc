@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/02/26 10:17:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/02/09 07:54:58 minskim Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -493,7 +493,7 @@ lib/${DISTNAME}/etc/idd/drop
 lib/${DISTNAME}/etc/idd/dropmsk
 lib/${DISTNAME}/etc/ms-kermit
 lib/${DISTNAME}/etc/ms-kermit-7bit
-lib/${DISTNAME}/etc/package-index.LATEST.pgp
+lib/${DISTNAME}/etc/package-index.LATEST.gpg
 lib/${DISTNAME}/etc/photos/adrian.png
 lib/${DISTNAME}/etc/photos/adrianm.png
 lib/${DISTNAME}/etc/photos/ajc.png
@@ -753,12 +753,6 @@ lib/${DISTNAME}/etc/xemacs.1
 lib/${DISTNAME}/etc/xemacs.xbm
 lib/${DISTNAME}/etc/xemacs.xpm
 lib/${DISTNAME}/info/cl.info
-lib/${DISTNAME}/info/cl.info-1
-lib/${DISTNAME}/info/cl.info-2
-lib/${DISTNAME}/info/cl.info-3
-lib/${DISTNAME}/info/cl.info-4
-lib/${DISTNAME}/info/cl.info-5
-lib/${DISTNAME}/info/cl.info-6
 lib/${DISTNAME}/info/custom.info
 lib/${DISTNAME}/info/dir
 lib/${DISTNAME}/info/emodules.info
@@ -767,123 +761,30 @@ lib/${DISTNAME}/info/info.info
 lib/${DISTNAME}/info/internals.info
 lib/${DISTNAME}/info/internals.info-1
 lib/${DISTNAME}/info/internals.info-2
-lib/${DISTNAME}/info/internals.info-3
-lib/${DISTNAME}/info/internals.info-4
-lib/${DISTNAME}/info/internals.info-5
-lib/${DISTNAME}/info/internals.info-6
-lib/${DISTNAME}/info/internals.info-7
-lib/${DISTNAME}/info/internals.info-8
-lib/${DISTNAME}/info/internals.info-9
 lib/${DISTNAME}/info/lispref.info
 lib/${DISTNAME}/info/lispref.info-1
-lib/${DISTNAME}/info/lispref.info-10
-lib/${DISTNAME}/info/lispref.info-11
-lib/${DISTNAME}/info/lispref.info-12
-lib/${DISTNAME}/info/lispref.info-13
-lib/${DISTNAME}/info/lispref.info-14
-lib/${DISTNAME}/info/lispref.info-15
-lib/${DISTNAME}/info/lispref.info-16
-lib/${DISTNAME}/info/lispref.info-17
-lib/${DISTNAME}/info/lispref.info-18
-lib/${DISTNAME}/info/lispref.info-19
 lib/${DISTNAME}/info/lispref.info-2
-lib/${DISTNAME}/info/lispref.info-20
-lib/${DISTNAME}/info/lispref.info-21
-lib/${DISTNAME}/info/lispref.info-22
-lib/${DISTNAME}/info/lispref.info-23
-lib/${DISTNAME}/info/lispref.info-24
-lib/${DISTNAME}/info/lispref.info-25
-lib/${DISTNAME}/info/lispref.info-26
-lib/${DISTNAME}/info/lispref.info-27
-lib/${DISTNAME}/info/lispref.info-28
-lib/${DISTNAME}/info/lispref.info-29
 lib/${DISTNAME}/info/lispref.info-3
-lib/${DISTNAME}/info/lispref.info-30
-lib/${DISTNAME}/info/lispref.info-31
-lib/${DISTNAME}/info/lispref.info-32
-lib/${DISTNAME}/info/lispref.info-33
-lib/${DISTNAME}/info/lispref.info-34
-lib/${DISTNAME}/info/lispref.info-35
-lib/${DISTNAME}/info/lispref.info-36
-lib/${DISTNAME}/info/lispref.info-37
-lib/${DISTNAME}/info/lispref.info-38
-lib/${DISTNAME}/info/lispref.info-39
 lib/${DISTNAME}/info/lispref.info-4
-lib/${DISTNAME}/info/lispref.info-40
-lib/${DISTNAME}/info/lispref.info-41
-lib/${DISTNAME}/info/lispref.info-42
-lib/${DISTNAME}/info/lispref.info-43
-lib/${DISTNAME}/info/lispref.info-44
-lib/${DISTNAME}/info/lispref.info-45
-lib/${DISTNAME}/info/lispref.info-46
-lib/${DISTNAME}/info/lispref.info-47
-lib/${DISTNAME}/info/lispref.info-48
-lib/${DISTNAME}/info/lispref.info-49
 lib/${DISTNAME}/info/lispref.info-5
-lib/${DISTNAME}/info/lispref.info-50
 lib/${DISTNAME}/info/lispref.info-6
 lib/${DISTNAME}/info/lispref.info-7
 lib/${DISTNAME}/info/lispref.info-8
 lib/${DISTNAME}/info/lispref.info-9
 lib/${DISTNAME}/info/new-users-guide.info
-lib/${DISTNAME}/info/new-users-guide.info-1
-lib/${DISTNAME}/info/new-users-guide.info-2
-lib/${DISTNAME}/info/new-users-guide.info-3
 lib/${DISTNAME}/info/standards.info
-lib/${DISTNAME}/info/standards.info-1
-lib/${DISTNAME}/info/standards.info-2
-lib/${DISTNAME}/info/standards.info-3
-lib/${DISTNAME}/info/standards.info-4
 lib/${DISTNAME}/info/term.info
 lib/${DISTNAME}/info/termcap.info
-lib/${DISTNAME}/info/termcap.info-1
-lib/${DISTNAME}/info/termcap.info-2
-lib/${DISTNAME}/info/termcap.info-3
 lib/${DISTNAME}/info/texinfo.info
 lib/${DISTNAME}/info/texinfo.info-1
-lib/${DISTNAME}/info/texinfo.info-10
-lib/${DISTNAME}/info/texinfo.info-11
-lib/${DISTNAME}/info/texinfo.info-12
 lib/${DISTNAME}/info/texinfo.info-2
-lib/${DISTNAME}/info/texinfo.info-3
-lib/${DISTNAME}/info/texinfo.info-4
-lib/${DISTNAME}/info/texinfo.info-5
-lib/${DISTNAME}/info/texinfo.info-6
-lib/${DISTNAME}/info/texinfo.info-7
-lib/${DISTNAME}/info/texinfo.info-8
-lib/${DISTNAME}/info/texinfo.info-9
 lib/${DISTNAME}/info/widget.info
 lib/${DISTNAME}/info/xemacs-faq.info
-lib/${DISTNAME}/info/xemacs-faq.info-1
-lib/${DISTNAME}/info/xemacs-faq.info-2
-lib/${DISTNAME}/info/xemacs-faq.info-3
-lib/${DISTNAME}/info/xemacs-faq.info-4
-lib/${DISTNAME}/info/xemacs-faq.info-5
-lib/${DISTNAME}/info/xemacs-faq.info-6
 lib/${DISTNAME}/info/xemacs.info
 lib/${DISTNAME}/info/xemacs.info-1
-lib/${DISTNAME}/info/xemacs.info-10
-lib/${DISTNAME}/info/xemacs.info-11
-lib/${DISTNAME}/info/xemacs.info-12
-lib/${DISTNAME}/info/xemacs.info-13
-lib/${DISTNAME}/info/xemacs.info-14
-lib/${DISTNAME}/info/xemacs.info-15
-lib/${DISTNAME}/info/xemacs.info-16
-lib/${DISTNAME}/info/xemacs.info-17
-lib/${DISTNAME}/info/xemacs.info-18
-lib/${DISTNAME}/info/xemacs.info-19
 lib/${DISTNAME}/info/xemacs.info-2
-lib/${DISTNAME}/info/xemacs.info-20
-lib/${DISTNAME}/info/xemacs.info-21
-lib/${DISTNAME}/info/xemacs.info-22
-lib/${DISTNAME}/info/xemacs.info-23
 lib/${DISTNAME}/info/xemacs.info-3
 lib/${DISTNAME}/info/xemacs.info-4
-lib/${DISTNAME}/info/xemacs.info-5
-lib/${DISTNAME}/info/xemacs.info-6
-lib/${DISTNAME}/info/xemacs.info-7
-lib/${DISTNAME}/info/xemacs.info-8
-lib/${DISTNAME}/info/xemacs.info-9
 lib/${DISTNAME}/lisp/ChangeLog
 lib/${DISTNAME}/lisp/ChangeLog.1
 lib/${DISTNAME}/lisp/ChangeLog.GTK
@@ -1159,6 +1060,7 @@ lib/${DISTNAME}/lisp/mule/canna-leim.elc
 lib/${DISTNAME}/lisp/mule/chinese.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/chinese.elc
 lib/${DISTNAME}/lisp/mule/custom-load.el${ELSUFX}
+lib/${DISTNAME}/lisp/mule/custom-load.elc
 lib/${DISTNAME}/lisp/mule/cyrillic.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/cyrillic.elc
 lib/${DISTNAME}/lisp/mule/english.el${ELSUFX}
@@ -1234,6 +1136,7 @@ lib/${DISTNAME}/lisp/page.elc
 lib/${DISTNAME}/lisp/paragraphs.el${ELSUFX}
 lib/${DISTNAME}/lisp/paragraphs.elc
 lib/${DISTNAME}/lisp/paths.el${ELSUFX}
+lib/${DISTNAME}/lisp/paths.elc
 lib/${DISTNAME}/lisp/picture.el${ELSUFX}
 lib/${DISTNAME}/lisp/picture.elc
 lib/${DISTNAME}/lisp/printer.el${ELSUFX}
@@ -1320,6 +1223,7 @@ lib/${DISTNAME}/lisp/update-elc.el${ELSUFX}
 lib/${DISTNAME}/lisp/userlock.el${ELSUFX}
 lib/${DISTNAME}/lisp/userlock.elc
 lib/${DISTNAME}/lisp/version.el${ELSUFX}
+lib/${DISTNAME}/lisp/version.elc
 lib/${DISTNAME}/lisp/very-early-lisp.el${ELSUFX}
 lib/${DISTNAME}/lisp/view-less.el${ELSUFX}
 lib/${DISTNAME}/lisp/view-less.elc
@@ -1380,14 +1284,15 @@ man/man1/xemacs.1
 @dirrm lib/${DISTNAME}/etc/custom/example-themes
 @dirrm lib/${DISTNAME}/etc/custom
 @dirrm lib/${DISTNAME}/etc
+@exec ${MKDIR} %D/lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/m
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}
 @dirrm lib/${DISTNAME}
-@exec ${MKDIR} %D/lib/xemacs/site-lisp
 @exec ${MKDIR} %D/lib/xemacs/site-modules
 @dirrm lib/xemacs/site-modules
+@exec ${MKDIR} %D/lib/xemacs/site-lisp
 @dirrm lib/xemacs/site-lisp
 @dirrm lib/xemacs
