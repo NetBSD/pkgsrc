@@ -1,27 +1,33 @@
-$NetBSD: patch-ah,v 1.5 2005/02/15 12:25:07 drochner Exp $
+$NetBSD: patch-ah,v 1.6 2005/03/07 12:11:49 dmcmahill Exp $
 
---- Makefile.pre.in.orig	2005-01-11 14:48:52.000000000 +0100
-+++ Makefile.pre.in
-@@ -56,7 +56,7 @@ MAKESETUP=      $(srcdir)/Modules/makese
- OPT=		@OPT@
+--- Makefile.pre.in.orig	2005-01-11 08:48:52.000000000 -0500
++++ Makefile.pre.in	2005-03-07 06:41:33.425152000 -0500
+@@ -57,5 +57,5 @@
  BASECFLAGS=	@BASECFLAGS@
  CFLAGS=		$(BASECFLAGS) $(OPT)
 -CPPFLAGS=	-I. -I$(srcdir)/Include
 +CPPFLAGS+=	@CPPFLAGS@ -I. -I$(srcdir)/Include
  LDFLAGS=	@LDFLAGS@
  LDLAST=		@LDLAST@
- SGI_ABI=	@SGI_ABI@
-@@ -308,7 +308,7 @@ all:		$(BUILDPYTHON) oldsharedmods share
- $(BUILDPYTHON):	Modules/$(MAINOBJ) $(LIBRARY) $(LDLIBRARY)
+@@ -309,5 +309,5 @@
  		$(LINKCC) $(LDFLAGS) $(LINKFORSHARED) -o $@ \
  			Modules/$(MAINOBJ) \
 -			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST)
 +			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST) ${LINK_ALL_LIBGCC_HACK}
  
  platform: $(BUILDPYTHON)
- 	$(RUNSHARED) ./$(BUILDPYTHON) -E -c 'import sys ; from distutils.util import get_platform ; print get_platform()+"-"+sys.version[0:3]' >platform
-@@ -357,6 +357,9 @@ libpython$(VERSION).so: $(LIBRARY_OBJS)
- libpython$(VERSION).sl: $(LIBRARY_OBJS)
+@@ -349,8 +349,8 @@
+ libpython$(VERSION).so: $(LIBRARY_OBJS)
+ 	if test $(INSTSONAME) != $(LDLIBRARY); then \
+-		$(LDSHARED) -Wl,-h$(INSTSONAME) -o $(INSTSONAME) $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM); \
++		$(LDSHARED) -Wl,-h$(INSTSONAME) -o $(INSTSONAME) $(LIBRARY_OBJS) $(LDFLAGS) $(SHLIBS) $(LIBC) $(LIBM); \
+ 		$(LN) -f $(INSTSONAME) $@; \
+ 	else\
+-		$(LDSHARED) -o $@ $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM); \
++		$(LDSHARED) -o $@ $(LIBRARY_OBJS) $(LDFLAGS) $(SHLIBS) $(LIBC) $(LIBM); \
+ 	fi
+ 
+@@ -358,4 +358,7 @@
  	$(LDSHARED) -o $@ $(LIBRARY_OBJS) $(LIBC) $(LIBM)
  
 +libpython$(VERSION).dylib: $(LIBRARY_OBJS)
@@ -29,9 +35,7 @@ $NetBSD: patch-ah,v 1.5 2005/02/15 12:25:07 drochner Exp $
 +
  # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
  # minimal framework (not including the Lib directory and such) in the current
- # directory.
-@@ -616,7 +619,12 @@ altbininstall:	$(BUILDPYTHON)
- 				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) libpython$(VERSION)$(SO)); \
+@@ -617,5 +620,10 @@
  			fi \
  		fi; \
 -	else	true; \
@@ -43,4 +47,3 @@ $NetBSD: patch-ah,v 1.5 2005/02/15 12:25:07 drochner Exp $
 +		fi \
  	fi
  
- # Install the manual page
