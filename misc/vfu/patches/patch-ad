@@ -1,0 +1,10 @@
+--- vfu/see.cpp.BAK	Fri Mar  5 01:18:41 1999
++++ vfu/see.cpp	Fri Mar  5 01:18:53 1999
+@@ -8,6 +8,7 @@
+ 
+   #include <vslib.h>
+   #include <ctype.h>
++  #include <errno.h>
+ 
+   #include "grep.h"
+ 
