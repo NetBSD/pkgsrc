@@ -1,0 +1,45 @@
+$NetBSD: patch-ab,v 1.1 2002/01/22 16:47:00 taca Exp $
+
+--- readline.c.orig	Fri Aug 13 14:37:50 1999
++++ readline.c
+@@ -15,11 +15,18 @@
+ #define COMPLETION_PROC "completion_proc"
+ #define COMPLETION_CASE_FOLD "completion_case_fold"
+ 
++#ifndef READLINE_42_OR_LATER
++# define rl_filename_completion_function filename_completion_function
++# define rl_username_completion_function username_completion_function
++# define rl_completion_matches completion_matches
++#endif
++
+ static int
+ readline_event()
+ {
+     CHECK_INTS;
+     rb_thread_schedule();
++    return 0;
+ }
+ 
+ static VALUE
+@@ -321,8 +328,8 @@
+     char **matches;
+     int i;
+ 
+-    matches = completion_matches(STR2CSTR(str),
+-				 filename_completion_function);
++    matches = rl_completion_matches(STR2CSTR(str),
++				    rl_filename_completion_function);
+     if (matches) {
+ 	result = rb_ary_new();
+ 	for (i = 0; matches[i]; i++) {
+@@ -348,8 +355,8 @@
+     char **matches;
+     int i;
+ 
+-    matches = completion_matches(STR2CSTR(str),
+-				 username_completion_function);
++    matches = rl_completion_matches(STR2CSTR(str),
++				    rl_username_completion_function);
+     if (matches) {
+ 	result = rb_ary_new();
+ 	for (i = 0; matches[i]; i++) {
