@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/11/19 21:50:54 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2003/04/03 18:05:33 jschauma Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -39,6 +39,9 @@ pre-configure:
 CONFIGURE_ARGS+= --without-md5
 PLIST_SUBST+=	MD5LIB="@comment "
 .else
+.  if !exists(/usr/include/md5.h)
+CONFIGURE_ARGS+=	--with-md5="${SSLBASE}"
+.  endif
 PLIST_SUBST+=	MD5LIB=""
 .endif
 
