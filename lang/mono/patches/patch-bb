@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2004/06/26 20:19:16 recht Exp $
+
+--- mono/metadata/Makefile.in.orig	2004-06-26 14:05:44.000000000 +0200
++++ mono/metadata/Makefile.in	2004-06-26 14:05:51.000000000 +0200
+@@ -682,7 +682,7 @@
+ @WITH_BUNDLE_TRUE@	@if test -f $@; then :; else rm -f mono-bundle.stamp; $(MAKE) mono-bundle.stamp; fi
+ @WITH_BUNDLE_TRUE@mono-bundle.stamp: $(BUNDLE_FILE) $(srcdir)/make-bundle.pl
+ @WITH_BUNDLE_TRUE@	echo stamp > $@t
+-@WITH_BUNDLE_TRUE@	perl $(srcdir)/make-bundle.pl $(BUNDLE_FILE) mono-bundle.h mono-bundle.s
++@WITH_BUNDLE_TRUE@	$(PERL) $(srcdir)/make-bundle.pl $(BUNDLE_FILE) mono-bundle.h mono-bundle.s
+ @WITH_BUNDLE_TRUE@	mv $@t $@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
