@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/07/04 09:56:26 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.10 1998/01/03 10:14:21 obrien Exp
+# $NetBSD: Makefile,v 1.9 1998/07/04 09:58:43 mycroft Exp $
 #
 
 DISTNAME=	rsync-2.0.18
