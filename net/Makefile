@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2004/10/11 22:01:06 salo Exp $
+# $NetBSD: Makefile,v 1.500 2004/10/11 23:45:46 abs Exp $
 #
 
 COMMENT=	Networking tools
@@ -287,8 +287,8 @@ SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-xmlrpclib
 SUBDIR+=	py-zsi
-SUBDIR+= 	pygopherd
-SUBDIR+= 	pyslsk
+SUBDIR+=	pygopherd
+SUBDIR+=	pyslsk
 SUBDIR+=	qadsl
 SUBDIR+=	quagga
 SUBDIR+=	ra-pna-proxy
