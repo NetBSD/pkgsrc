@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 13:05:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/06 20:38:36 danw Exp $
 include/cfg+.h
 include/cfg.h
 include/platon/cfg+.h
 include/platon/cfg.h
 lib/libcfg+.a
+lib/libcfg+.la
 lib/libcfg+.so
-lib/libcfg+.so.${PKGVERSION}
+lib/libcfg+.so.62
+lib/libcfg+.so.62.0
 man/man3/cfg+.h.3
 man/man3/cfg_add_property.3
 man/man3/cfg_clear_context_flag.3
