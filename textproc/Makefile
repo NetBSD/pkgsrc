@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.20 1999/07/01 11:36:16 drochner Exp $
+# $NetBSD: Makefile,v 1.21 1999/07/27 22:03:20 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
 #    SUBDIR += agrep
     SUBDIR += catdoc
+    SUBDIR += dict-client
     SUBDIR += docbook
     SUBDIR += dsssl-docbook-modular
     SUBDIR += eperl
