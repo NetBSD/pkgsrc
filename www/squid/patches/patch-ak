@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.3 2000/11/02 10:31:39 jdolecek Exp $
+$NetBSD: patch-ak,v 1.4 2000/11/02 10:41:45 jdolecek Exp $
 
---- cf.data.pre.orig	Thu Nov  2 09:56:18 2000
-+++ cf.data.pre	Thu Nov  2 10:48:58 2000
+--- src/cf.data.pre.orig	Thu Nov  2 09:56:18 2000
++++ src/cf.data.pre	Thu Nov  2 10:48:58 2000
 @@ -773,6 +773,21 @@ DOC_START
  log_mime_hdrs off
  DOC_END
