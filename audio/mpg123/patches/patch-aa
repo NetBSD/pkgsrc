@@ -1,24 +1,26 @@
-$NetBSD: patch-aa,v 1.20 2002/06/22 19:03:11 kent Exp $
+$NetBSD: patch-aa,v 1.21 2002/06/23 08:45:09 kent Exp $
 
---- Makefile.orig	Sun Jun 23 03:50:48 2002
+--- Makefile.orig	Sun Jun 23 16:56:17 2002
 +++ Makefile
-@@ -54,6 +54,15 @@
+@@ -54,6 +54,17 @@
  	@echo "make aix-tk3play    IBM AIX"
  	@echo "make os2            IBM OS/2"
  	@echo "make netbsd         NetBSD"
-+	@echo "make netbsd-arm     NetBSD for strongarm"
++	@echo "make netbsd-arm     NetBSD for strongarm (32bit fixedpoint)"
++	@echo "make netbsd-arm-64  NetBSD for strongarm (64bit fixedpoint)"
 +	@echo "make netbsd-i386    NetBSD optimized for i386"
 +	@echo "make netbsd-i386-elf NetBSD optimized for i386, ELF format"
 +	@echo "make netbsd-m68k    NetBSD optimized for m68k"
 +	@echo "make netbsd-esd     NetBSD with EsounD"
-+	@echo "make netbsd-arm-esd NetBSD for strongarm with EsounD"
++	@echo "make netbsd-arm-esd NetBSD for strongarm (32bit fixedpoint) with EsounD"
++	@echo "make netbsd-arm-64-esd NetBSD for strongarm (64bit fixedpoint) with EsounD"
 +	@echo "make netbsd-i386-esd NetBSD optimized for i386 with EsounD"
 +	@echo "make netbsd-i386-elf-esd NetBSD optimized for i386, ELF format with EsounD"
-+	@echo "make netbsd-m68k-esd    NetBSD optimized for m68k with EsounD"
++	@echo "make netbsd-m68k-esd NetBSD optimized for m68k with EsounD"
  	@echo "make bsdos          BSDI BSD/OS"
  	@echo "make bsdos4         BSDI BSD/OS 4.0"
  	@echo "make bsdos-nas      BSDI BSD/OS with NAS support"
-@@ -496,18 +505,100 @@
+@@ -496,18 +507,120 @@
  
  netbsd:
  	$(MAKE) CC=cc LDFLAGS= \
@@ -46,8 +48,7 @@ $NetBSD: patch-aa,v 1.20 2002/06/22 19:03:11 kent Exp $
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_sun.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
- 			-funroll-all-loops -ffast-math -DROT_I386 \
--			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-funroll-all-loops -ffast-math -DROT_I386 \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL' \
 +		mpg123-make
@@ -68,6 +69,16 @@ $NetBSD: patch-aa,v 1.20 2002/06/22 19:03:11 kent Exp $
 +			-march=armv4 -mtune=strongarm -mcpu=strongarm \
 +			-DREAL_IS_FIXED -DUSE_MMAP -DREAD_MMAP -DTERM_CONTROL \
 +			-DNETBSD' \
++		mpg123-make
++
++netbsd-arm-64:
++	$(MAKE) CC=cc LDFLAGS= \
++		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
++		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
++			-funroll-all-loops -finline-functions -ffast-math \
++			-march=armv4 -mtune=strongarm110 -mcpu=strongarm110 \
++			-DREAL_IS_FIXED_ARMV4 -DUSE_MMAP -DREAD_MMAP \
++			-DTERM_CONTROL -DNETBSD' \
 +		mpg123-make
 +
 +netbsd-esd:
@@ -91,13 +102,13 @@ $NetBSD: patch-aa,v 1.20 2002/06/22 19:03:11 kent Exp $
 +		mpg123-make
 +
 +netbsd-i386-elf-esd:
-+	echo GETBITS: $(GETBITS)
 +	$(MAKE) CC=cc LDFLAGS= \
 +		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
-+			-funroll-all-loops -ffast-math -DROT_I386 \
+ 			-funroll-all-loops -ffast-math -DROT_I386 \
+-			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL \
 +			`$(ESD_CONFIG) --cflags`' \
@@ -122,6 +133,17 @@ $NetBSD: patch-aa,v 1.20 2002/06/22 19:03:11 kent Exp $
 +			-march=armv4 -mtune=strongarm -mcpu=strongarm \
 +			-DREAL_IS_FIXED -DUSE_MMAP -DREAD_MMAP -DTERM_CONTROL \
 +			-DNETBSD `$(ESD_CONFIG) --cflags`' \
++		mpg123-make
++
++netbsd-arm-64-esd:
++	$(MAKE) CC=cc LDFLAGS= \
++		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
++		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
++			-funroll-all-loops -finline-functions -ffast-math \
++			-march=armv4 -mtune=strongarm110 -mcpu=strongarm110 \
++			-DREAL_IS_FIXED_ARMV4 -DUSE_MMAP -DREAD_MMAP \
++			-DTERM_CONTROL -DNETBSD `$(ESD_CONFIG) --cflags`' \
  		mpg123-make
  
  bsdos:
