@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2003/08/18 16:03:01 taca Exp $
+# $NetBSD: Makefile,v 1.90 2003/08/18 17:00:24 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE3
 PKGNAME=	squid-2.5.3
-PKGREVISION=	3
+PKGREVISION=	4
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -42,15 +42,13 @@ PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch \
 		squid-2.5.STABLE3-syscalls.disk-counters.patch \
 		squid-2.5.STABLE3-coss-improvements.patch \
 		squid-2.5.STABLE3-blank-username-log.patch \
+		squid-2.5.STABLE3-coss-improvements-2.patch \
 		squid-2.5.STABLE3-mem_cfd.patch \
 		squid-2.5.STABLE3-aufs_open_fail.patch \
 		squid-2.5.STABLE3-aufs_threads.patch \
 		squid-2.5.STABLE3-digest_compile.patch \
 		squid-2.5.STABLE3-407_user_name.patch \
 		squid-2.5.STABLE3-multicast-ICP-timeout.patch
-# This patch is broken now.  It should be applied after
-# squid-2.5.STABLE3-coss-improvements.patch
-#		squid-2.5.STABLE3-coss-improvements-2.patch \
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
