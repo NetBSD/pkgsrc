@@ -1,0 +1,19 @@
+--- Makefile.orig	Thu Jul 16 14:23:29 1998
++++ Makefile	Thu Jul 16 14:25:55 1998
+@@ -14,9 +14,15 @@
+ 
+ STRIPZEROS_OBJECTS = stripzeros.o
+ 
+-all: cdd pcmplay stripzeros
++all: scsilib stlib cdd pcmplay stripzeros
+ 
+ $(CDD_OBJECTS): cdd.h
++
++scsilib:
++	cd libscsi; make
++
++stlib:
++	cd st; make
+ 
+ pcmplay: $(PCMPLAY_OBJECTS)
+ 	$(CC) $(CFLAGS) -o $@ $(PCMPLAY_OBJECTS) $(LDFLAGS) -lossaudio
