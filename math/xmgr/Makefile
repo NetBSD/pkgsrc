@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/10 12:54:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/05 04:19:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/12/12 22:27:21 jseger Exp
 #
 
@@ -14,10 +14,14 @@ MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/ \
 MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Xmgr/
 
-BUILD_DEPENDS=	bison:../../devel/bison
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
+# This isn't a good solution as any binary packages built from this
+# will have the one or other dependencies compiled in. 
+.if ! exists(/usr/bin/fort77)
 DEPENDS+=	fort77-1.14a:../../lang/fort77
+.endif
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	netcdf-3.4:../../devel/netcdf
+BUILD_DEPENDS=	bison:../../devel/bison
 
 USE_X11=	YES
 USE_MOTIF=	YES
