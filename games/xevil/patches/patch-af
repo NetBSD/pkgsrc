@@ -1,22 +1,14 @@
-$NetBSD: patch-af,v 1.1 2004/03/26 01:34:08 kristerw Exp $
+$NetBSD: patch-af,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
 
---- ui.C.orig	Fri Mar 26 02:21:44 2004
-+++ ui.C	Fri Mar 26 02:22:21 2004
-@@ -23,6 +23,7 @@
-     hardts@alum.mit.edu
-     http://graphics.lcs.mit.edu/~hardts/xevil.html
- */
-+using namespace std;
+--- cmn/game_style.h.orig	2003-11-22 10:56:44.000000000 -0800
++++ cmn/game_style.h	2003-11-22 10:56:59.000000000 -0800
+@@ -31,7 +31,8 @@
+ #endif 
  
- #ifndef NO_PRAGMAS
- #pragma implementation "ui.h"
-@@ -42,7 +43,8 @@
- }
- 
- #include <iostream.h>
+ #if X11
 -#include <strstream.h>
 +#include <strstream>
-+using std::ostrstream;
- 
- #include "coord.h"
- #include "ui.h"
++using namespace std;
+ #endif
+ #if WIN32
+ #include <strstrea.h>

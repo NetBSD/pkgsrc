@@ -1,21 +1,14 @@
-$NetBSD: patch-ad,v 1.1 2004/03/26 01:34:08 kristerw Exp $
+$NetBSD: patch-ad,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
 
---- locator.C.orig	Fri Mar 26 02:20:24 2004
-+++ locator.C	Fri Mar 26 02:21:09 2004
-@@ -22,6 +22,7 @@
-     hardts@alum.mit.edu
-     http://graphics.lcs.mit.edu/~hardts/xevil.html
- */
+--- cmn/area.cpp.orig	2003-11-22 10:53:19.000000000 -0800
++++ cmn/area.cpp	2003-11-22 10:53:47.000000000 -0800
+@@ -34,7 +34,8 @@
+ extern "C" {
+ #include <limits.h> // For INT_MAX
+ }
+-#include <iostream.h>
++#include <iostream>
 +using namespace std;
- 
- #ifndef NO_PRAGMAS
- #pragma implementation "locator.h"
-@@ -210,7 +211,7 @@
- void Locator::get_nearby(PhysicalP nearby[OL_NEARBY_MAX],int &nitems,
- 			 PhysicalP p,int radius)
- {
--  int glocRadius = (int)ceil(radius / OL_GRID_SIZE_MAX);
-+  int glocRadius = (int)ceil((float)(radius / OL_GRID_SIZE_MAX));
-   int radius_2 = radius * radius;
-   nitems = 0;
- 
+ #include "utils.h"
+ #include "coord.h"
+ #include "area.h"
