@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/10 04:30:48 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/29 16:17:51 jtb Exp $
 
 --- makefile.orig	Sun Jan 28 09:45:23 2001
 +++ makefile
@@ -33,9 +33,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/10 04:30:48 jtb Exp $
 +	"VCPP=" \
 +	"COMPILER_C=$(CC)" \
 +	"COMPILER_CPP=$(CXX)" \
-+	"COMPILER_FLAGS=$(CFLAGS) -ansi -c $(PROFILE) $(ALL_INCLUDE)" \
++	"COMPILER_FLAGS=$(CFLAGS) -ansi -c $(ALL_INCLUDE)" \
 +	"LINK_FLAGS_BEFORE=" \
-+	"LINK_FLAGS_AFTER= $(PROFILE) $(ALL_LIB) -lm -o tochnog"
++	"LINK_FLAGS_AFTER= $(ALL_LIB) -lm -o tochnog"
  
  tochnog: adjust.$(OBJ) area.$(OBJ) \
  	beam.$(OBJ) bounda.$(OBJ) calcul.$(OBJ) \
