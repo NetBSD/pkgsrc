@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.131 2005/02/16 00:21:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.132 2005/02/16 07:12:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -211,7 +211,6 @@ use warnings;
 
 use Getopt::Long qw(:config no_ignore_case bundling require_order);
 use File::Basename;
-use FileHandle;
 use Cwd;
 
 BEGIN {
@@ -293,7 +292,6 @@ my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 
 # Global variables that should be eliminated by the next refactoring.
-my %definesfound	= ();
 my $pkgdir		= ".";
 my $filesdir		= "files";
 my $patchdir		= "patches";
@@ -1057,50 +1055,21 @@ sub checkfile_patches_patch($) {
 sub readmakefile($) {
 	my ($file) = @_;
 	my $contents = "";
-	my ($includefile, $dirname, $savedln, $level);
-	my $handle = new FileHandle;
+	my ($includefile, $dirname, $savedln, $level, $lines);
 
-	$savedln = $.;
-	$. = 0;
-	open($handle, "< $file") || return false;
+	$lines = load_file($file);
+	if (!defined ($lines)) {
+		return false;
+	}
+
 	log_info($file, NO_LINE_NUMBER, "called readmakefile");
-	while (defined(my $line = <$handle>)) {
-		if ($line =~ /[ \t]+\n?$/ && $line !~ /^#/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "$file $.: whitespace before ".
-				"end of line.");
-		}
-		if ($line =~ /^\040{8}/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "$file $.: use tab (not spaces) to".
-				" make indentation.");
-		}
-		if ($line =~ /^\.\s*if\s+!defined\s*\((\w+)\)/) {
-			if ($definesfound{$1}) {
-				$level = 1;
-				log_info($file, $., "omitting contents of !defined($1)");
-				$contents .= "# omitted inclusion for !defined($1) here\n";
-				while (defined($line = <$handle>)) {
-					if ($line =~ /^\.\s*if\s+/) {
-						$level++;
-					}
-					elsif ($line =~ /^\.\s*endif\s+/) {
-						$level--;
-					}
-					if ($level eq 0) {
-						last;
-					}
-				}
-				if ($level > 0) {
-					log_warning(NO_FILE, NO_LINE_NUMBER, "missing .endif.");
-				}
-				next;
-			}
-			else {
-				log_info($file, $., "defining $1");
-				$definesfound{$1} = true;
-			}
+	foreach my $line (@$lines) {
+		checkline_trailing_whitespace($line);
+		if ($line->text =~ /^\040{8}/) {
+			log_warning($line->file, $line->lineno, "use tab (not spaces) to make indentation.");
 		}
 		# try to get any included file
-		if ($line =~ /^.include\s+([^\n]+)\n/) {
+		if ($line->text =~ /^.include\s+([^\n]+)$/) {
 			$includefile = $1;
 			if ($includefile =~ /\"([^\"]+)\"/) {
 				$includefile = $1;
@@ -1116,26 +1085,28 @@ sub readmakefile($) {
 			if ($includefile =~ /\/mk\/bsd/) {
 				# we don't want to include the whole
 				# bsd.pkg.mk or bsd.prefs.mk files
-				$contents .= $line;
+				$contents .= $line->text . "\n";
 			} else {
 				$dirname = dirname($file);
-                                if (-e "$dirname/$includefile") {
-                                    log_info($file, $., "including $dirname/$includefile");
-                                    $contents .= readmakefile("$dirname/$includefile");
-                                }
-                                else {
-                                    log_error(NO_FILE, NO_LINE_NUMBER, "can't read $dirname/$includefile");
-                                }
+				# Only look in the directory relative to the
+				# current file and in the current working directory.
+				# We don't have an include dir list, like make(1) does.
+				if (!-e "$dirname/$includefile") {
+					$dirname = $opt_packagedir;
+				}
+				if (!-e "$dirname/$includefile") {
+					log_error($line->file, $line->lineno, "can't read $includefile");
+				} else {
+					log_info($line->file, $line->lineno, "including $dirname/$includefile");
+					$contents .= readmakefile("$dirname/$includefile");
+				}
 			}
 		} else {
 			# we don't want the include Makefile.common lines
 			# to be pkglinted
-			$contents .= $line;
+			$contents .= $line->text . "\n";
 		}
 	}
-	close($handle);
-
-	$. = $savedln;
 	return $contents;
 }
 
