@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/07 01:37:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/27 06:34:44 tron Exp $
 #
 
 DISTNAME=	vtun-2.0
@@ -8,12 +8,12 @@ MASTER_SITES=	http://vtun.netpedia.net/
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://vtun.netpedia.net/
 
-DEPENDS+=	openssl-0.9.*:../../security/openssl
 DEPENDS+=	liblzo-1.*:../../archivers/liblzo
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-crypto-headers=${LOCALBASE}/include/openssl \
-		--with-crypto-lib=${LOCALBASE}/lib \
+USE_SSL=	YES
+CONFIGURE_ARGS+=--with-crypto-headers=${SSLBASE}/include/openssl \
+		--with-crypto-lib=${SSLBASE}/lib \
 		--with-lzo-headers=${LOCALBASE}/include \
 		--with-lzo-lib=${LOCALBASE}/lib
 PLIST_SUBST+=	PREFIX=${PREFIX}
