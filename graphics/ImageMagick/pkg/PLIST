@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 1999/07/22 16:44:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.22 1999/09/11 00:52:33 tron Exp $
 bin/Magick-config
 bin/animate
 bin/combine
@@ -9,7 +9,6 @@ bin/import
 bin/mogrify
 bin/montage
 bin/xtp
-include/magick/PreRvIcccm.h
 include/magick/api.h
 include/magick/blob.h
 include/magick/classify.h
@@ -26,10 +25,8 @@ include/magick/monitor.h
 include/magick/quantize.h
 include/magick/utility.h
 include/magick/version.h
-include/magick/widget.h
-include/magick/xwindows.h
 lib/libMagick.a
-lib/libMagick.so.4.28
+lib/libMagick.so.4.29
 man/man1/ImageMagick.1
 man/man1/animate.1
 man/man1/combine.1
