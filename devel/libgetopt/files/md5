@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/08/06 16:37:22 hubertf Exp $
+$NetBSD: md5,v 1.2 1999/10/20 12:02:21 hubertf Exp $
 
-MD5 (getopt_long.c) = d1db4c1164da0cb0059028fb25dd287b
-MD5 (getopt_long.3) = 2292a66016b0206768aebad1e1e4bd25
+MD5 (getopt_long.c-1.1) = d1db4c1164da0cb0059028fb25dd287b
+MD5 (getopt_long.3-1.1) = 2292a66016b0206768aebad1e1e4bd25
