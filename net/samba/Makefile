@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/05/02 15:24:08 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2000/05/17 09:22:28 veego Exp $
 
 DISTNAME=		samba-2.0.7
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -26,6 +26,12 @@ SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
 SAMBA_ETCDIR?=		/etc/samba
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
+
+.if ${OPSYS} == "SunOS"
+ROOT_GROUP?=		root
+.else
+ROOT_GROUP?=		wheel
+.endif
 
 MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
 MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
@@ -84,6 +90,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh ${PREFIX}/bin
 
 	${SED}	-e "s,@SAMBA_PRIVATE@,${SAMBA_PRIVATE},g" \
+		-e "s,@ROOT_GROUP@,${ROOT_GROUP},g" \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	${SED}	-e "s,@SAMBA_PRIVATE@,${SAMBA_PRIVATE},g" \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
