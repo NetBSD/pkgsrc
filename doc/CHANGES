@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7224 2004/09/24 01:40:09 kim Exp $
+$NetBSD: CHANGES,v 1.7225 2004/09/24 01:59:38 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4402,3 +4402,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wml to 2.0.9 [kim 2004-09-24]
 	Updated gnustep-make to 1.10.0 [rh 2004-09-24]
 	Updated ices-mp3 to 0.4 [kim 2004-09-24]
+	Updated gnustep-base to 1.10.0 [rh 2004-09-24]
