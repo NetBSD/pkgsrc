@@ -1,13 +1,49 @@
-$NetBSD: patch-aa,v 1.8 1999/03/14 23:07:55 tron Exp $
+$NetBSD: patch-aa,v 1.9 2000/10/19 23:31:18 jlam Exp $
 
---- configure.orig	Mon May 25 06:16:04 1998
-+++ configure	Sun Oct  4 13:10:51 1998
-@@ -3073,7 +3073,7 @@
- 		 USE_INCLUDED_LIBINTL=yes
- 		 CATOBJEXT=.cat
- 		 INSTOBJEXT=.cat
--		 DATADIRNAME=lib
-+		 DATADIRNAME=share
- 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
- 		 INTLLIBS=$INTLDEPS
- 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+--- configure.orig	Mon Jul  3 10:31:57 2000
++++ configure
+@@ -3543,6 +3543,11 @@
+ 
+ 
+ 
++# Set DATADIRNAME to "${LOCALEBASE}"
++DATADIRNAME="${LOCALEBASE}"
++INTLDEPS=
++INTLLIBS="-lintl"
++
+ cc_uses_g=yes
+ if test x$GCC = xyes; then
+     if test x$ac_cv_prog_gcc_g = xyes; then
+@@ -9409,11 +9414,15 @@
+ 
+ 
+ 	# Check whether --with-gnome or --without-gnome was given.
++gnomecodedirs=
++gnomeunixdirs=
+ if test "${with_gnome+set}" = set; then
+   withval="$with_gnome"
+   if test x$withval = xyes; then
+ 	    		want_gnome=yes
+ 	    						    		
++	gnomecodedirs='gnome idl'
++	gnomeunixdirs='doc-gnome'
+ 	mx=mx
+  	gmcdep=gmcdep
+ 	libgtkedit="libgtkedit.a"
+@@ -11891,6 +11900,7 @@
+  s/@@/%@/; s/@@/@%/; s/@g\$/%g/' > conftest.subs <<\\CEOF
+ $ac_vpsub
+ $extrasub
++s%@LOCALBASE@%$LOCALBASE%g
+ s%@SHELL@%$SHELL%g
+ s%@CFLAGS@%$CFLAGS%g
+ s%@CPPFLAGS@%$CPPFLAGS%g
+@@ -12019,6 +12029,8 @@
+ s%@GNOME_DOCKLETS_LIBS@%$GNOME_DOCKLETS_LIBS%g
+ s%@GNOME_CAPPLET_LIBS@%$GNOME_CAPPLET_LIBS%g
+ s%@gnomeicondir@%$gnomeicondir%g
++s%@gnomecodedirs@%$gnomecodedirs%g
++s%@gnomeunixdirs@%$gnomeunixdirs%g
+ s%@mx@%$mx%g
+ s%@gmcdep@%$gmcdep%g
+ s%@libgtkedit@%$libgtkedit%g

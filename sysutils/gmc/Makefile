@@ -1,27 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2000/06/01 17:46:15 rh Exp $
+# $NetBSD: Makefile,v 1.23 2000/10/19 23:31:15 jlam Exp $
 
-DISTNAME=	mc-4.5.50
-PKGNAME=	g${DISTNAME}
-CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/mc/}
+PKGNAME=		g${DISTNAME}
+CATEGORIES+=		gnome
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.gnome.org/mc/
+DEPENDS+=		gnome-core-*:../../x11/gnome-core
 
-DEPENDS+=	gnome-core-*:../../x11/gnome-core
-DEPENDS+=	libslang-*:../../devel/libslang
+USE_X11BASE=		# defined
+CONFIGURE_ARGS+=	--with-tm-x-support
+CONFIGURE_ARGS+=	--with-gnome
 
-CONFLICTS+=	mc-*
+post-install:
+	${RMDIR} ${PREFIX}/share/gnome/help/gmc/C/figs
 
-GNU_CONFIGURE=		YES
-USE_GMAKE=		yes
-USE_X11BASE=		yes
-CONFIGURE_ARGS+=	--with-netrc --with-slang --without-x --with-gnome \
-			--without-tk
-
-# Funny stuff to get this to use the system libslang.
-CONFIGURE_ENV+=		LIBS="-lm -ltermcap" CPPFLAGS="-I${LOCALBASE}/include"
-CFLAGS+=		-Dunix -I${LOCALBASE}/include -DxBSD
-LDFLAGS+=		-L${LOCALBASE}/lib
-
-.include "../../mk/bsd.pkg.mk"
+.include "../../sysutils/mc/Makefile.common"
