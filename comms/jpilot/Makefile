@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/12/15 16:00:23 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2004/12/15 16:01:48 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99.5
@@ -33,6 +33,12 @@ HTMLDIR=		${PREFIX}/share/doc/html/jpilot
 MAN1DIR=		${PREFIX}/man/man1
 PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 
+.include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+
 post-extract:
 	${RM} -f ${WRKSRC}/po/Makefile.in
 
@@ -53,11 +59,5 @@ post-install:
 	cd ${WRKSRC}/docs; ${INSTALL_DATA} *.html ${HTMLDIR}
 	cd ${WRKSRC}/docs; ${INSTALL_MAN} *.1 ${MAN1DIR}
 	${TOUCH} ${PLUGINSDIR}/.directory
-
-.include "../../comms/pilot-link-libs/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
