@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/27 23:07:40 tron Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/28 01:28:15 wiz Exp $
 
 .include "../../multimedia/mplayer-share/Makefile.common"
 
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MAINTAINER=	tron@NetBSD.org
 COMMENT=	Script for converting movie files into (S)VCD format
 
-DEPENDS+=	bash-*:../../shells/bash
+DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	mjpegtools>=1.6.2:../../multimedia/mjpegtools
 DEPENDS+=	mplayer>=${MPLAYER_PKG_VERSION}:../../multimedia/mplayer
 DEPENDS+=	sox>=12.16:../../audio/sox
