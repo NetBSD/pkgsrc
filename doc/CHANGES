@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6100 2004/06/02 15:14:07 adam Exp $
+$NetBSD: CHANGES,v 1.6101 2004/06/02 18:53:26 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2711,6 +2711,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pcb-current to 20040530 [dmcmahill 2004-05-31]
 	Updated gail to 1.6.5 [recht 2004-05-31]
 	Updated spamassassin to 2.63nb2 [heinz 2004-05-31]
+	Updated squirrelmail to 1.4.3nb1 [bouyer 2004-05-31]
 	Updated unzip to 5.51 [minskim 2004-06-01]
 	Updated mozilla to 1.6nb3 [taya 2004-06-01]
 	Updated mozilla-gtk2 to 1.6nb4 [taya 2004-06-01]
@@ -2757,3 +2758,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox to 0.8nb3 [taya 2004-06-02]
 	Updated firefox-gtk2 to 0.8nb3 [taya 2004-06-02]
 	Updated Gorm to 0.7.6 [adam 2004-06-02]
+	Updated squirrelmail to 1.4.3nb1 [bouyer 2004-06-02]
