@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/configure.in ./configure.in
+--- ../Orig/mozilla/configure.in	2003-12-12 08:30:36.000000000 +0900
++++ ./configure.in	2004-01-16 23:17:19.000000000 +0900
+@@ -959,6 +959,9 @@
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -1248,6 +1251,13 @@
+     if test "$LIBRUNPATH"; then
+ 	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
+     fi
++
++    case "${target_cpu}" in
++    alpha*)
++    	CFLAGS="$CFLAGS -mieee"
++    	CXXFLAGS="$CXXFLAGS -mieee"
++    ;;
++    esac
+     ;;
+ 
+ *-nto*) 
+@@ -2192,9 +2202,6 @@
+ 				CXXFLAGS="$CXXFLAGS -mt" 
+ 			fi
+ 			;;
+-	*-*-netbsd*)
+-		USE_PTHREADS=
+-		_PTHREAD_LDFLAGS=
+ 	esac
+ fi
+ 

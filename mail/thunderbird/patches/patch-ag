@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/extensions/transformiix/source/base/ErrorObserver.h ./extensions/transformiix/source/base/ErrorObserver.h
+--- ../Orig/mozilla/extensions/transformiix/source/base/ErrorObserver.h	2003-01-17 21:39:36.000000000 +0900
++++ ./extensions/transformiix/source/base/ErrorObserver.h	2004-01-16 23:17:34.000000000 +0900
+@@ -28,7 +28,8 @@
+ 
+ #include "baseutils.h"
+ #include "txError.h"
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ class nsAString;
+ 
+ /**

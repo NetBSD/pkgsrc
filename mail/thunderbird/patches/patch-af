@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c ./security/nss/lib/freebl/unix_rand.c
+--- ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c	2003-05-31 08:31:19.000000000 +0900
++++ ./security/nss/lib/freebl/unix_rand.c	2004-01-16 23:17:26.000000000 +0900
+@@ -32,6 +32,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <fcntl.h>
+ #include <string.h>
+ #include <signal.h>
+ #include <unistd.h>
+@@ -691,7 +692,11 @@
+ 	/* dup write-side of pipe to stderr and stdout */
+ 	if (p[1] != 1) dup2(p[1], 1);
+ 	if (p[1] != 2) dup2(p[1], 2);
+-	close(0);
++	fd = open("/dev/null", O_RDONLY);
++	if (fd != 0) {
++	    dup2(fd, 0);
++	    close(fd);
++	}
+ 	for (fd = getdtablesize(); --fd > 2; close(fd))
+ 	    ;
+ 
