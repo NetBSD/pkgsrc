@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/25 22:04:48 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/10/03 09:43:57 jmmv Exp $
 
-SHA1 (mlview-0.6.2.tar.bz2) = 700a27c44a9b37b40bdea11000f7459cac0c98b2
-Size (mlview-0.6.2.tar.bz2) = 451900 bytes
+SHA1 (mlview-0.7.0.tar.bz2) = 9c6333a726f7998f3dc8cc258c781e4568c5151e
+Size (mlview-0.7.0.tar.bz2) = 632125 bytes
 SHA1 (patch-aa) = 34823f38e99948dfd16ff00e0091791ce8005203
