@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1399 2004/02/14 03:26:09 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1400 2004/02/14 13:54:28 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1290,6 +1290,14 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib
 #
 CONFIG_GUESS_OVERRIDE?=	${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE?=	${WRKSRC}/config.sub
+#
+# By default, override config.status for GNU configure packages.  We
+# never want it to execute after the configure phase has ended as it
+# might overwrite any post-configure changes we might have made to the
+# generated files.
+#
+CONFIG_STATUS_OVERRIDE?=	\
+	config.status */config.status */*/config.status
 .endif
 
 #
@@ -2442,13 +2450,18 @@ do-libtool-override:
 _CONFIGURE_POSTREQ+=	do-config-status-override
 .PHONY: do-config-status-override
 do-config-status-override:
-.  for file in ${CONFIG_STATUS_OVERRIDE}
+.  for _pattern_ in ${CONFIG_STATUS_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${WRKSRC}/${file} ]; then				\
-		${RM} -f ${WRKSRC}/${file};				\
-		( ${ECHO} '#!${SH}'; ${ECHO} 'exit 0' ) > ${WRKSRC}/${file}; \
-		${CHMOD} +x ${WRKSRC}/${file};				\
-	fi
+	for file in ${_pattern_}; do					\
+		if [ -f "${WRKSRC}/$$file" ]; then			\
+			${RM} -f ${WRKSRC}/$$file;			\
+			(${ECHO} '#!${SH}';				\
+			 ${ECHO} '${ECHO} "$$0 $$@" >> ${WRKLOG}';	\
+			 ${ECHO} 'exit 0';				\
+			) > ${WRKSRC}/$$file;				\
+			${CHMOD} +x ${WRKSRC}/$$file;			\
+		fi;							\
+	done
 .  endfor
 .endif
 
