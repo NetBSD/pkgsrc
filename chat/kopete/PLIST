@@ -1,14 +1,55 @@
-@comment $NetBSD: PLIST,v 1.4 2003/10/18 08:58:19 jmmv Exp $
-bin/kconf_update_bin/kopete-account-kconf_update
+@comment $NetBSD: PLIST,v 1.5 2004/01/23 22:02:52 jmmv Exp $
 bin/kopete
-bin/winpopup-install.sh
-bin/winpopup-send.sh
+include/ksettings/dialog.h
+include/ksettings/dispatcher.h
+include/ksettings/pluginpage.h
+lib/kconf_update_bin/kopete-account-kconf_update
+lib/kconf_update_bin/kopete-pluginloader2-kconf_update
+lib/kde3/kcm_kopete_accountconfig.a
+lib/kde3/kcm_kopete_accountconfig.la
+lib/kde3/kcm_kopete_accountconfig.so
+lib/kde3/kcm_kopete_appearanceconfig.a
+lib/kde3/kcm_kopete_appearanceconfig.la
+lib/kde3/kcm_kopete_appearanceconfig.so
+lib/kde3/kcm_kopete_autoreplace.a
+lib/kde3/kcm_kopete_autoreplace.la
+lib/kde3/kcm_kopete_autoreplace.so
+lib/kde3/kcm_kopete_behaviorconfig.a
+lib/kde3/kcm_kopete_behaviorconfig.la
+lib/kde3/kcm_kopete_behaviorconfig.so
+lib/kde3/kcm_kopete_cryptography.a
+lib/kde3/kcm_kopete_cryptography.la
+lib/kde3/kcm_kopete_cryptography.so
+lib/kde3/kcm_kopete_highlight.a
+lib/kde3/kcm_kopete_highlight.la
+lib/kde3/kcm_kopete_highlight.so
+lib/kde3/kcm_kopete_history.a
+lib/kde3/kcm_kopete_history.la
+lib/kde3/kcm_kopete_history.so
+lib/kde3/kcm_kopete_msn.a
+lib/kde3/kcm_kopete_msn.la
+lib/kde3/kcm_kopete_msn.so
+lib/kde3/kcm_kopete_nowlistening.a
+lib/kde3/kcm_kopete_nowlistening.la
+lib/kde3/kcm_kopete_nowlistening.so
+lib/kde3/kcm_kopete_texteffect.a
+lib/kde3/kcm_kopete_texteffect.la
+lib/kde3/kcm_kopete_texteffect.so
+lib/kde3/kcm_kopete_translator.a
+lib/kde3/kcm_kopete_translator.la
+lib/kde3/kcm_kopete_translator.so
+lib/kde3/kcm_kopete_webpresence.a
+lib/kde3/kcm_kopete_webpresence.la
+lib/kde3/kcm_kopete_webpresence.so
 lib/kde3/kopete_aim.a
 lib/kde3/kopete_aim.la
 lib/kde3/kopete_aim.so
 lib/kde3/kopete_autoreplace.a
 lib/kde3/kopete_autoreplace.la
 lib/kde3/kopete_autoreplace.so
+lib/kde3/kopete_chatwindow.a
+lib/kde3/kopete_chatwindow.la
+lib/kde3/kopete_chatwindow.so
 lib/kde3/kopete_connectionstatus.a
 lib/kde3/kopete_connectionstatus.la
 lib/kde3/kopete_connectionstatus.so
@@ -42,9 +83,6 @@ lib/kde3/kopete_nowlistening.so
 lib/kde3/kopete_sms.a
 lib/kde3/kopete_sms.la
 lib/kde3/kopete_sms.so
-lib/kde3/kopete_spellcheck.a
-lib/kde3/kopete_spellcheck.la
-lib/kde3/kopete_spellcheck.so
 lib/kde3/kopete_texteffect.a
 lib/kde3/kopete_texteffect.la
 lib/kde3/kopete_texteffect.so
@@ -54,9 +92,6 @@ lib/kde3/kopete_translator.so
 lib/kde3/kopete_webpresence.a
 lib/kde3/kopete_webpresence.la
 lib/kde3/kopete_webpresence.so
-lib/kde3/kopete_wp.a
-lib/kde3/kopete_wp.la
-lib/kde3/kopete_wp.so
 lib/kde3/kopete_yahoo.a
 lib/kde3/kopete_yahoo.la
 lib/kde3/kopete_yahoo.so
@@ -68,6 +103,11 @@ lib/libkopete.la
 lib/libkopete.so
 lib/libkopete.so.1
 lib/libkopete.so.1.0
+lib/libkopete_msn_shared.a
+lib/libkopete_msn_shared.la
+lib/libkopete_msn_shared.so
+lib/libkopete_msn_shared.so.0
+lib/libkopete_msn_shared.so.0.0
 lib/libkopete_oscar.a
 lib/libkopete_oscar.la
 lib/libkopete_oscar.so
@@ -78,126 +118,171 @@ share/kde/apps/kconf_update/kopete-account-kconf_update.sh
 share/kde/apps/kconf_update/kopete-account-kconf_update.upd
 share/kde/apps/kconf_update/kopete-pluginloader.pl
 share/kde/apps/kconf_update/kopete-pluginloader.upd
-share/kde/apps/kopete/contactnotesui.rc
-share/kde/apps/kopete/cryptographyui.rc
+share/kde/apps/kconf_update/kopete-pluginloader2.sh
+share/kde/apps/kconf_update/kopete-pluginloader2.upd
 share/kde/apps/kopete/eventsrc
 share/kde/apps/kopete/historychatui.rc
-share/kde/apps/kopete/historyui.rc
-share/kde/apps/kopete/icons/hicolor/16x16/actions/admin_icon.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/aim_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/aim_offline.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/aim_online.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/aol_icon.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/dt_icon.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/emoticon.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/free_icon.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_dnd.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_ffc.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_invisible.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_na.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_occupied.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_offline.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/icq_online.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/irc_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/irc_channel.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/irc_normal.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/irc_online.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/irc_op.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/irc_server.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/irc_voice.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_chatty.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_group.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_invisible.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_na.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_offline.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_online.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_original.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_raw.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_serv_off.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_serv_on.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/jabber_xa.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/kopeteavailable.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/kopeteaway.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/metacontact_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/metacontact_offline.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/metacontact_online.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/metacontact_unknown.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_blocked.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_brb.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_busy.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_invisible.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_lunch.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_na.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_offline.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_online.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/msn_phone.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/newmsg.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/status_unknown.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/wp_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/yahoo_away.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/yahoo_busy.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/yahoo_idle.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/yahoo_invisible.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/yahoo_mobile.png
-share/kde/apps/kopete/icons/hicolor/16x16/actions/yahoo_tea.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/aim_protocol.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/icq_protocol.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/irc_protocol.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/jabber_protocol.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/msn_protocol.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/sms_protocol.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/wp_protocol.png
-share/kde/apps/kopete/icons/hicolor/16x16/apps/yahoo_protocol.png
-share/kde/apps/kopete/icons/hicolor/22x22/actions/kopeteavailable.png
-share/kde/apps/kopete/icons/hicolor/22x22/actions/kopeteaway.png
-share/kde/apps/kopete/icons/hicolor/32x32/actions/kopeteavailable.png
-share/kde/apps/kopete/icons/hicolor/32x32/actions/kopeteaway.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/aim_protocol.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/autoreplace.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/highlight.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/icq_protocol.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/irc_protocol.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/jabber_protocol.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/msn_protocol.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/sms_protocol.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/texteffect.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/wp_protocol.png
-share/kde/apps/kopete/icons/hicolor/32x32/apps/yahoo_protocol.png
-share/kde/apps/kopete/icons/hicolor/48x48/actions/kopeteavailable.png
-share/kde/apps/kopete/icons/hicolor/48x48/actions/kopeteaway.png
-share/kde/apps/kopete/icons/hicolor/48x48/apps/jabber_protocol.png
-share/kde/apps/kopete/icons/hicolor/48x48/apps/sms_protocol.png
-share/kde/apps/kopete/icons/hicolor/48x48/apps/wp_protocol.png
-share/kde/apps/kopete/icons/hicolor/48x48/apps/yahoo_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/128x128/apps/aim_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/128x128/apps/icq_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/128x128/apps/msn_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/128x128/apps/sms_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/128x128/apps/yahoo_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/admin_icon.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/aim_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/aim_connecting.mng
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/aim_offline.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/aim_online.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/aol_icon.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/dt_icon.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/emoticon.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/free_icon.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_connecting.mng
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_dnd.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_ffc.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_invisible.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_na.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_occupied.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_offline.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_online.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_channel.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_connecting.mng
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_normal.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_online.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_op.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_server.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/irc_voice.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_chatty.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_connecting.mng
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_group.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_invisible.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_na.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_offline.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_online.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_original.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_raw.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_serv_off.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_serv_on.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/jabber_xa.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/kopeteavailable.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/kopeteaway.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/metacontact_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/metacontact_offline.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/metacontact_online.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/metacontact_unknown.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_blocked.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_brb.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_busy.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_connecting.mng
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_invisible.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_lunch.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_na.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_newmsg.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_offline.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_online.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/msn_phone.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/newmsg.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/status_unknown.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_busy.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_idle.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_invisible.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_mobile.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_tea.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/aim_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/icq_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/irc_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/jabber_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/msn_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/sms_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/yahoo_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/22x22/actions/kopeteavailable.png
+share/kde/apps/kopete/icons/crystalsvg/22x22/actions/kopeteaway.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/actions/aol_icon.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/actions/kopeteavailable.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/actions/kopeteaway.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/actions/newmessage.mng
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/aim_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/autoreplace.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/highlight.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/icq_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/irc_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/jabber_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/msn_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/sms_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/texteffect.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/yahoo_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/actions/kopeteavailable.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/actions/kopeteaway.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/apps/aim_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/apps/icq_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/apps/jabber_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/apps/msn_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/apps/sms_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/48x48/apps/yahoo_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/64x64/apps/aim_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/64x64/apps/icq_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/64x64/apps/msn_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/64x64/apps/sms_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/64x64/apps/yahoo_protocol.png
 share/kde/apps/kopete/kopetechatwindow.rc
 share/kde/apps/kopete/kopeteemailwindow.rc
 share/kde/apps/kopete/kopeteui.rc
 share/kde/apps/kopete/msnchatui.rc
 share/kde/apps/kopete/nowlisteningchatui.rc
 share/kde/apps/kopete/nowlisteningui.rc
-share/kde/apps/kopete/pics/aim_connecting.mng
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/angry.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/bigsmile.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/confused.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/cry.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/emoticons.xml
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/oh.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/sad.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/shade.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/smile.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/tongue.png
-share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet/wink.png
+share/kde/apps/kopete/pics/emoticons/Boxed/angry.png
+share/kde/apps/kopete/pics/emoticons/Boxed/bigsmile.png
+share/kde/apps/kopete/pics/emoticons/Boxed/confused.png
+share/kde/apps/kopete/pics/emoticons/Boxed/cry.png
+share/kde/apps/kopete/pics/emoticons/Boxed/emoticons.xml
+share/kde/apps/kopete/pics/emoticons/Boxed/oh.png
+share/kde/apps/kopete/pics/emoticons/Boxed/sad.png
+share/kde/apps/kopete/pics/emoticons/Boxed/shade.png
+share/kde/apps/kopete/pics/emoticons/Boxed/smile.png
+share/kde/apps/kopete/pics/emoticons/Boxed/tongue.png
+share/kde/apps/kopete/pics/emoticons/Boxed/wink.png
+share/kde/apps/kopete/pics/emoticons/Default/angry.png
+share/kde/apps/kopete/pics/emoticons/Default/bat.png
+share/kde/apps/kopete/pics/emoticons/Default/beer.png
 share/kde/apps/kopete/pics/emoticons/Default/biggrin.png
+share/kde/apps/kopete/pics/emoticons/Default/cake.png
+share/kde/apps/kopete/pics/emoticons/Default/camera.png
+share/kde/apps/kopete/pics/emoticons/Default/cat.png
+share/kde/apps/kopete/pics/emoticons/Default/clock.png
+share/kde/apps/kopete/pics/emoticons/Default/cocktail.png
+share/kde/apps/kopete/pics/emoticons/Default/confused.png
 share/kde/apps/kopete/pics/emoticons/Default/cry.png
+share/kde/apps/kopete/pics/emoticons/Default/cup.png
+share/kde/apps/kopete/pics/emoticons/Default/dog.png
+share/kde/apps/kopete/pics/emoticons/Default/email.png
+share/kde/apps/kopete/pics/emoticons/Default/embarassed.png
 share/kde/apps/kopete/pics/emoticons/Default/emoticons.xml
+share/kde/apps/kopete/pics/emoticons/Default/film.png
+share/kde/apps/kopete/pics/emoticons/Default/kiss.png
+share/kde/apps/kopete/pics/emoticons/Default/lightbulb.png
+share/kde/apps/kopete/pics/emoticons/Default/love.png
+share/kde/apps/kopete/pics/emoticons/Default/note.png
 share/kde/apps/kopete/pics/emoticons/Default/oh.png
+share/kde/apps/kopete/pics/emoticons/Default/omg.png
+share/kde/apps/kopete/pics/emoticons/Default/phone.png
+share/kde/apps/kopete/pics/emoticons/Default/present.png
+share/kde/apps/kopete/pics/emoticons/Default/rose.png
+share/kde/apps/kopete/pics/emoticons/Default/sad.png
+share/kde/apps/kopete/pics/emoticons/Default/shade.png
 share/kde/apps/kopete/pics/emoticons/Default/sleep.png
 share/kde/apps/kopete/pics/emoticons/Default/smile.png
+share/kde/apps/kopete/pics/emoticons/Default/star.png
+share/kde/apps/kopete/pics/emoticons/Default/teeth.png
+share/kde/apps/kopete/pics/emoticons/Default/thumbs_down.png
+share/kde/apps/kopete/pics/emoticons/Default/thumbs_up.png
 share/kde/apps/kopete/pics/emoticons/Default/tongue.png
 share/kde/apps/kopete/pics/emoticons/Default/unhappy.png
+share/kde/apps/kopete/pics/emoticons/Default/unlove.png
+share/kde/apps/kopete/pics/emoticons/Default/wilted_rose.png
 share/kde/apps/kopete/pics/emoticons/Default/wink.png
 share/kde/apps/kopete/pics/emoticons/KMess-Blue/angry.png
 share/kde/apps/kopete/pics/emoticons/KMess-Blue/confused.png
@@ -280,6 +365,17 @@ share/kde/apps/kopete/pics/emoticons/KMess/tongue.png
 share/kde/apps/kopete/pics/emoticons/KMess/unlove.png
 share/kde/apps/kopete/pics/emoticons/KMess/wilted_rose.png
 share/kde/apps/kopete/pics/emoticons/KMess/wink.png
+share/kde/apps/kopete/pics/emoticons/Plain/biggrin.png
+share/kde/apps/kopete/pics/emoticons/Plain/confused.png
+share/kde/apps/kopete/pics/emoticons/Plain/cry.png
+share/kde/apps/kopete/pics/emoticons/Plain/emoticons.xml
+share/kde/apps/kopete/pics/emoticons/Plain/oh.png
+share/kde/apps/kopete/pics/emoticons/Plain/pig.png
+share/kde/apps/kopete/pics/emoticons/Plain/smile.png
+share/kde/apps/kopete/pics/emoticons/Plain/sunglasses.png
+share/kde/apps/kopete/pics/emoticons/Plain/tongue.png
+share/kde/apps/kopete/pics/emoticons/Plain/unhappy.png
+share/kde/apps/kopete/pics/emoticons/Plain/wink.png
 share/kde/apps/kopete/pics/emoticons/RedOnes/angel.png
 share/kde/apps/kopete/pics/emoticons/RedOnes/biggrin.png
 share/kde/apps/kopete/pics/emoticons/RedOnes/confused.png
@@ -346,72 +442,79 @@ share/kde/apps/kopete/pics/emoticons/phpBB/sunglasses.png
 share/kde/apps/kopete/pics/emoticons/phpBB/tongue.png
 share/kde/apps/kopete/pics/emoticons/phpBB/unhappy.png
 share/kde/apps/kopete/pics/emoticons/phpBB/wink.png
-share/kde/apps/kopete/pics/emoticons/plain/biggrin.png
-share/kde/apps/kopete/pics/emoticons/plain/confused.png
-share/kde/apps/kopete/pics/emoticons/plain/cry.png
-share/kde/apps/kopete/pics/emoticons/plain/emoticons.xml
-share/kde/apps/kopete/pics/emoticons/plain/oh.png
-share/kde/apps/kopete/pics/emoticons/plain/pig.png
-share/kde/apps/kopete/pics/emoticons/plain/smile.png
-share/kde/apps/kopete/pics/emoticons/plain/sunglasses.png
-share/kde/apps/kopete/pics/emoticons/plain/tongue.png
-share/kde/apps/kopete/pics/emoticons/plain/unhappy.png
-share/kde/apps/kopete/pics/emoticons/plain/wink.png
-share/kde/apps/kopete/pics/emoticons/set1/biggrin.png
-share/kde/apps/kopete/pics/emoticons/set1/cry.png
-share/kde/apps/kopete/pics/emoticons/set1/emoticons.xml
-share/kde/apps/kopete/pics/emoticons/set1/oh.png
-share/kde/apps/kopete/pics/emoticons/set1/sleep.png
-share/kde/apps/kopete/pics/emoticons/set1/smile.png
-share/kde/apps/kopete/pics/emoticons/set1/tongue.png
-share/kde/apps/kopete/pics/emoticons/set1/unhappy.png
-share/kde/apps/kopete/pics/emoticons/set1/wink.png
-share/kde/apps/kopete/pics/icq_connecting.mng
-share/kde/apps/kopete/pics/irc_connecting.mng
-share/kde/apps/kopete/pics/jabber_connecting.mng
-share/kde/apps/kopete/pics/msn_connecting.mng
-share/kde/apps/kopete/pics/msn_newmsg.png
-share/kde/apps/kopete/pics/newmessage.mng
+share/kde/apps/kopete/pics/emoticons/tweakers.net/biggrin.png
+share/kde/apps/kopete/pics/emoticons/tweakers.net/cry.png
+share/kde/apps/kopete/pics/emoticons/tweakers.net/emoticons.xml
+share/kde/apps/kopete/pics/emoticons/tweakers.net/oh.png
+share/kde/apps/kopete/pics/emoticons/tweakers.net/sleep.png
+share/kde/apps/kopete/pics/emoticons/tweakers.net/smile.png
+share/kde/apps/kopete/pics/emoticons/tweakers.net/tongue.png
+share/kde/apps/kopete/pics/emoticons/tweakers.net/unhappy.png
+share/kde/apps/kopete/pics/emoticons/tweakers.net/wink.png
+share/kde/apps/kopete/styles/Enclosed.xsl
+share/kde/apps/kopete/styles/Keramik.xsl
 share/kde/apps/kopete/styles/Kopete.xsl
 share/kde/apps/kopete/styles/MSN.xsl
+share/kde/apps/kopete/styles/Minimal.xsl
 share/kde/apps/kopete/styles/XChat.xsl
 share/kde/apps/kopete/translatorchatui.rc
-share/kde/apps/kopete/translatorui.rc
 share/kde/apps/kopete/webpresence/webpresencedefault.xsl
 share/kde/apps/kopete/webpresence/wpimages.xsl
-share/kde/apps/krichtexteditpart/krichtexteditpartui.rc
-share/kde/icons/hicolor/128x128/apps/kopete.png
-share/kde/icons/hicolor/16x16/apps/kopete.png
-share/kde/icons/hicolor/22x22/apps/kopete.png
-share/kde/icons/hicolor/32x32/apps/kopete.png
-share/kde/icons/hicolor/48x48/apps/kopete.png
-share/kde/icons/hicolor/64x64/apps/kopete.png
-share/kde/services/aim.desktop
-share/kde/services/autoreplace.desktop
-share/kde/services/connectionstatus.desktop
-share/kde/services/contactnotes.desktop
-share/kde/services/cryptography.desktop
-share/kde/services/highlight.desktop
-share/kde/services/history.desktop
-share/kde/services/icq.desktop
-share/kde/services/irc.desktop
-share/kde/services/jabber.desktop
-share/kde/services/msn.desktop
-share/kde/services/nowlistening.desktop
-share/kde/services/sms.desktop
-share/kde/services/spellcheck.desktop
-share/kde/services/texteffect.desktop
-share/kde/services/translator.desktop
-share/kde/services/webpresence.desktop
-share/kde/services/wp.desktop
-share/kde/services/yahoo.desktop
+share/kde/apps/kopete_contactnotes/contactnotesui.rc
+share/kde/apps/kopete_cryptography/cryptographyui.rc
+share/kde/apps/kopete_history/historychatui.rc
+share/kde/apps/kopete_history/historyui.rc
+share/kde/apps/kopete_translator/translatorui.rc
+share/kde/apps/kopeterichtexteditpart/kopeterichtexteditpartfull.rc
+share/kde/apps/kopeterichtexteditpart/kopeterichtexteditpartsimple.rc
+share/kde/icons/crystalsvg/128x128/apps/kopete.png
+share/kde/icons/crystalsvg/16x16/apps/kopete.png
+share/kde/icons/crystalsvg/22x22/apps/kopete.png
+share/kde/icons/crystalsvg/32x32/apps/kopete.png
+share/kde/icons/crystalsvg/48x48/apps/kopete.png
+share/kde/icons/crystalsvg/64x64/apps/kopete.png
+share/kde/services/chatwindow.desktop
+share/kde/services/kconfiguredialog/kopete_autoreplace_config.desktop
+share/kde/services/kconfiguredialog/kopete_cryptography_config.desktop
+share/kde/services/kconfiguredialog/kopete_highlight_config.desktop
+share/kde/services/kconfiguredialog/kopete_history_config.desktop
+share/kde/services/kconfiguredialog/kopete_msn_config.desktop
+share/kde/services/kconfiguredialog/kopete_nowlistening_config.desktop
+share/kde/services/kconfiguredialog/kopete_texteffect_config.desktop
+share/kde/services/kconfiguredialog/kopete_translator_config.desktop
+share/kde/services/kconfiguredialog/kopete_webpresence_config.desktop
+share/kde/services/kopete_accountconfig.desktop
+share/kde/services/kopete_aim.desktop
+share/kde/services/kopete_appearanceconfig.desktop
+share/kde/services/kopete_autoreplace.desktop
+share/kde/services/kopete_behaviorconfig.desktop
+share/kde/services/kopete_connectionstatus.desktop
+share/kde/services/kopete_contactnotes.desktop
+share/kde/services/kopete_cryptography.desktop
+share/kde/services/kopete_highlight.desktop
+share/kde/services/kopete_history.desktop
+share/kde/services/kopete_icq.desktop
+share/kde/services/kopete_irc.desktop
+share/kde/services/kopete_jabber.desktop
+share/kde/services/kopete_msn.desktop
+share/kde/services/kopete_nowlistening.desktop
+share/kde/services/kopete_sms.desktop
+share/kde/services/kopete_texteffect.desktop
+share/kde/services/kopete_translator.desktop
+share/kde/services/kopete_webpresence.desktop
+share/kde/services/kopete_yahoo.desktop
+share/kde/servicetypes/kcmodule.desktop
 share/kde/servicetypes/kopeteplugin.desktop
 share/kde/servicetypes/kopeteprotocol.desktop
+share/kde/servicetypes/kopeteui.desktop
+share/kde/servicetypes/kplugininfo.desktop
 share/kde/sounds/Kopete_Event.ogg
 share/kde/sounds/Kopete_Received.ogg
 share/kde/sounds/Kopete_Sent.ogg
 share/kde/sounds/Kopete_User_is_Online.ogg
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kopete.mo
@@ -419,17 +522,24 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/fo/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/nso/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kopete.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/ven/LC_MESSAGES/kopete.mo
@@ -437,52 +547,60 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/xx/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kopete.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/kopete.mo
-@comment in kdelibs3: @dirrm share/kde/sounds
-@comment in kdelibs3: @dirrm share/kde/servicetypes
-@comment in kdelibs3: @dirrm share/kde/services
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor/16x16/apps
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor/128x128
-@comment in kdelibs3: @dirrm share/kde/icons/hicolor
-@dirrm share/kde/apps/krichtexteditpart
+@comment in kdebase3: @dirrm share/kde/sounds
+@comment in kdebase3: @dirrm share/kde/servicetypes
+@dirrm share/kde/services/kconfiguredialog
+@comment in kdebase3: @dirrm share/kde/services
+@comment in kdebase3: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kdebase3: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kdebase3: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kdebase3: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kdebase3: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kdebase3: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@dirrm share/kde/apps/kopeterichtexteditpart
+@dirrm share/kde/apps/kopete_translator
+@dirrm share/kde/apps/kopete_history
+@dirrm share/kde/apps/kopete_cryptography
+@dirrm share/kde/apps/kopete_contactnotes
 @dirrm share/kde/apps/kopete/webpresence
 @dirrm share/kde/apps/kopete/styles
-@dirrm share/kde/apps/kopete/pics/emoticons/set1
-@dirrm share/kde/apps/kopete/pics/emoticons/plain
+@dirrm share/kde/apps/kopete/pics/emoticons/tweakers.net
 @dirrm share/kde/apps/kopete/pics/emoticons/phpBB
 @dirrm share/kde/apps/kopete/pics/emoticons/greggman.com
 @dirrm share/kde/apps/kopete/pics/emoticons/ccmathteam.com
 @dirrm share/kde/apps/kopete/pics/emoticons/Yazoo-Smileys-22
 @dirrm share/kde/apps/kopete/pics/emoticons/Yazoo-Smileys-16
 @dirrm share/kde/apps/kopete/pics/emoticons/RedOnes
+@dirrm share/kde/apps/kopete/pics/emoticons/Plain
 @dirrm share/kde/apps/kopete/pics/emoticons/KMess-Violet
 @dirrm share/kde/apps/kopete/pics/emoticons/KMess-Cartoon
 @dirrm share/kde/apps/kopete/pics/emoticons/KMess-Blue
 @dirrm share/kde/apps/kopete/pics/emoticons/KMess
 @dirrm share/kde/apps/kopete/pics/emoticons/Default
-@dirrm share/kde/apps/kopete/pics/emoticons/BoxedEmoticonSet
+@dirrm share/kde/apps/kopete/pics/emoticons/Boxed
 @dirrm share/kde/apps/kopete/pics/emoticons
 @dirrm share/kde/apps/kopete/pics
-@dirrm share/kde/apps/kopete/icons/hicolor/48x48/apps
-@dirrm share/kde/apps/kopete/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/kopete/icons/hicolor/48x48
-@dirrm share/kde/apps/kopete/icons/hicolor/32x32/apps
-@dirrm share/kde/apps/kopete/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kopete/icons/hicolor/32x32
-@dirrm share/kde/apps/kopete/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kopete/icons/hicolor/22x22
-@dirrm share/kde/apps/kopete/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/kopete/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kopete/icons/hicolor/16x16
-@dirrm share/kde/apps/kopete/icons/hicolor
+@dirrm share/kde/apps/kopete/icons/crystalsvg/64x64/apps
+@dirrm share/kde/apps/kopete/icons/crystalsvg/64x64
+@dirrm share/kde/apps/kopete/icons/crystalsvg/48x48/apps
+@dirrm share/kde/apps/kopete/icons/crystalsvg/48x48/actions
+@dirrm share/kde/apps/kopete/icons/crystalsvg/48x48
+@dirrm share/kde/apps/kopete/icons/crystalsvg/32x32/apps
+@dirrm share/kde/apps/kopete/icons/crystalsvg/32x32/actions
+@dirrm share/kde/apps/kopete/icons/crystalsvg/32x32
+@dirrm share/kde/apps/kopete/icons/crystalsvg/22x22/actions
+@dirrm share/kde/apps/kopete/icons/crystalsvg/22x22
+@dirrm share/kde/apps/kopete/icons/crystalsvg/16x16/apps
+@dirrm share/kde/apps/kopete/icons/crystalsvg/16x16/actions
+@dirrm share/kde/apps/kopete/icons/crystalsvg/16x16
+@dirrm share/kde/apps/kopete/icons/crystalsvg/128x128/apps
+@dirrm share/kde/apps/kopete/icons/crystalsvg/128x128
+@dirrm share/kde/apps/kopete/icons/crystalsvg
 @dirrm share/kde/apps/kopete/icons
 @dirrm share/kde/apps/kopete
-@comment in kdelibs3: @dirrm share/kde/apps/kconf_update
-@comment in kdelibs3: @dirrm share/kde/apps
-@comment in kdelibs3: @dirrm share/kde/applnk/Internet
-@comment in kdelibs3: @dirrm lib/kde3
-@dirrm bin/kconf_update_bin
+@comment in kdebase3: @dirrm share/kde/apps/kconf_update
+@comment in kdebase3: @dirrm share/kde/apps
+@comment in kdebase3: @dirrm share/kde/applnk/Internet
+@comment in kdebase3: @dirrm lib/kde3
+@dirrm lib/kconf_update_bin
+@dirrm include/ksettings
