@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2005/01/08 13:25:03 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/27 20:58:17 wiz Exp $
 #
 
-DISTNAME=		Text-Shellwords-1.02
+DISTNAME=		Text-Shellwords-1.07
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.cpan.org/authors/id/L/LD/LDS/
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://www.cpan.org/authors/id/L/LD/LDS/
+HOMEPAGE=		http://search.cpan.org/dist/Text-Shellwords/
 COMMENT=		Wrapper around shellwords.pl package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
