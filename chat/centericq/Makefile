@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2004/03/29 07:45:27 xtraeme Exp $
 #
 
 DISTNAME=	centericq-4.9.9
@@ -11,11 +11,12 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://konst.org.ua/eng/software/centericq/info.html
 COMMENT=	Instant Messenger interface for ICQ2000, Yahoo!, MSN and Jabber
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GCC_SHLIB=		yes
 USE_GNU_TOOLS+=		make
 USE_NCURSES=		yes
+USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE}
@@ -38,11 +39,11 @@ EVAL_PREFIX+=		SOX_PREFIX=sox
 CPPFLAGS+=		-DAUDIO_PLAYER=\"\\\"${SOX_PREFIX}/bin/play\\\"\"
 .endif
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .if defined(BUILDLINK_LIBICONV_LDADD) && !empty(BUILDLINK_LIBICONV_LDADD)
 #
