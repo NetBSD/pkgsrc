@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3180 2005/03/02 22:17:32 magick Exp $
+$NetBSD: TODO,v 1.3181 2005/03/02 22:23:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -779,7 +779,6 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
-	o p5-I18N-LangTags-0.35
 	o p5-IO-Util-1.43
 	o p5-IO-Zlib-1.04
 	o p5-Lchown-1.00
