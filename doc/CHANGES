@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6127 2004/06/04 15:43:25 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6128 2004/06/04 16:37:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2778,3 +2778,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-scotty to 2.1.11nb2 [minskim 2004-06-04]
 	Updated squid to 2.5.5nb3 [taca 2004-06-04]
 	Updated clamav to 0.72 [xtraeme 2004-06-04]
+	Added java-wrapper-1.0 [jmmv 2004-06-04]
