@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2000/11/02 04:53:22 itojun Exp $
+# $NetBSD: Makefile,v 1.72 2000/11/02 11:02:33 itojun Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -65,5 +65,6 @@
     SUBDIR += tk-expect
     SUBDIR += tk-tclX
     SUBDIR += ucblogo
+    SUBDIR += vscm
 
 .include "../mk/bsd.pkg.subdir.mk"
