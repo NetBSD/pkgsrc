@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/29 14:34:38 bouyer Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/31 12:50:12 bouyer Exp $
 
 DISTNAME=	imp-2.2.6
 CATEGORIES=	mail www
@@ -45,8 +45,7 @@ post-extract:
 	for file in							\
 		config/MOTD.html config/header.txt config/html.php3  \
 		config/imp_module_config.php3	config/lang.php3  \
-		config/mailbox.php3 config/menu.txt config/trailer.txt  \
-		prefs.php3 ;	\
+		config/mailbox.php3 config/menu.txt config/trailer.txt ; \
 	do								\
 		${MV} $${file} $${file}.dist;				\
 	done
