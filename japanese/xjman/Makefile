@@ -1,66 +1,72 @@
-# New ports collection makefile for: X Japanese man documents
-# Version required:	0.4
-# Date created:		24 Dec 1998
-# Based on:		Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>'s
-#			japanese/man-doc
-# Whom:			SADA Kenji <sada@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/11/02 11:19:12 sakamoto Exp $
+# FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
 DISTNAME=	xjman-0.4
-PKGNAME=	ja-${DISTNAME}
-CATEGORIES=	japanese
-MASTER_SITES=	${MASTER_SITE_PORTS_JP} \
-		http://xjman.dsl.gr.jp/
+CATEGORIES=	japanese x11
+MASTER_SITES=	http://xjman.dsl.gr.jp/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	sada@FreeBSD.org
+MAINTAINER=	sakamoto@netbsd.org
+HOMEPAGE=	http://xjman.dsl.gr.jp/
 
-NO_MTREE=	yes
-PLIST=		${WRKDIR}/PLIST
-USE_BZIP2=	yes
+DEPENDS+=	ja-man-19990531:../../japanese/man
+
+USE_X11BASE=	yes
+PLIST_SRC=	${WRKDIR}/PLIST
 WRKSRC=		${WRKDIR}/man/ja_JP.ujis
-SCRIPTS_ENV+=	MANSECS="${MANSECS}"
+XJMANDIR=	man/ja_JP.EUC
+MAKE_ENV+=	XJMANDIR=${XJMANDIR}
 
-MANSECS=	1 3 5
+NO_CONFIGURE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+.ifdef MANZ
+MANCOMPRESSED=	yes
+.endif
 
 post-extract:
-.for i in Makefile Makefile.inc
-	@${CP} ${FILESDIR}/$i ${WRKSRC}
+.for f in Makefile Makefile.inc
+	@${CP} ${FILESDIR}/${f} ${WRKSRC}
+.endfor
+
+pre-build:
+.for dir in man1 man3 man5
+	@(cd ${WRKSRC}/${dir};					\
+	  for file in *; do					\
+		f=`${ECHO} $$file|${SED} -e 's|x$$||'`;		\
+		mlink=`head -1 $$file|grep '^\.so man./'|	\
+			${SED} -e 's|.*man./\(.*\)x|\1|'`; 	\
+		if [ "$$mlink" = "" ]; then			\
+			${ECHO} "MAN+= $$f" >> Makefile;	\
+			${MV} $$file $$f;			\
+		else						\
+			${ECHO} "MLINKS+= $$mlink $$f" >> Makefile;	\
+			${SED} -e 's|x$$||' $$file > $$f;	\
+			${RM} $$file;				\
+		fi;						\
+	  done;							\
+	  ${ECHO} ".include <bsd.prog.mk>" >> Makefile;		\
+	  )
 .endfor
 
 post-build:
-	@${RM} -f ${PLIST}
-	@for sec in ${MANSECS}; do \
-	if [ -d ${WRKSRC}/man$${sec} ]; then \
-		cd ${WRKSRC}/man$${sec}; \
-		list=`${MAKE} pages-list`; \
-		set `${ECHO} $$list " "|${SED} 's/\.\([0-9]\)x /.\1x \1 /g'`; \
-		while : ; do \
-			case $$# in \
-				0) break;; \
-				[1]) ${ECHO} "can not happen"; break;; \
-			esac; \
-			${ECHO} man/ja/man$$2/$$1.gz; shift 2; \
-		done; \
-	fi; \
-	done|sort|uniq >>${PLIST}
-	@${ECHO} "@exec ${LN} -sf %D/man/ja %D/man/ja_JP.EUC" >>${PLIST}
-	@${ECHO} "@unexec ${RM} -f %D/man/ja_JP.EUC" >>${PLIST}
-	@${ECHO} "share/doc/xjman/COPYRIGHT" >>${PLIST}
-	@${ECHO} "share/doc/xjman/COPYRIGHT.XJDP" >>${PLIST}
-	@${ECHO} "@dirrm share/doc/xjman" >>${PLIST}
-
-pre-install:
-.for sec in ${MANSECS}
-	@${MKDIR} ${PREFIX}/man/ja/man${sec}
-.endfor
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@(cd ${WRKSRC};						\
+	  find man1/*.1 man3/*.3 man5/*.5 -type f |		\
+		${SED} -e 's|^|${XJMANDIR}/|' | sort >> ${PLIST_SRC})
+.if ${MKCATPAGES} != no
+	@(cd ${WRKSRC};						\
+	  find man1/*.1 man3/*.3 man5/*.5 -type f |		\
+		${SED} -e 's|^|${XJMANDIR}/|'			\
+		       -e 's|man[135]\(/.*\)\.\([135]\)$$|cat\2\1.0|' | \
+		sort >> ${PLIST_SRC})
+.endif
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/doc/xjman
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xjman
 .for i in COPYRIGHT COPYRIGHT.XJDP
-	@${INSTALL_DATA} ${FILESDIR}/$i ${PREFIX}/share/doc/xjman/
+	@${INSTALL_DATA} ${FILESDIR}/$i ${PREFIX}/share/doc/xjman
 .endfor
-	@${CAT} ${PKGDIR}/MESSAGE
+	@${INSTALL_DATA} ${WRKDIR}/man/README ${PREFIX}/share/doc/xjman
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
