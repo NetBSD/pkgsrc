@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2002/03/15 08:20:43 itojun Exp $
+# $NetBSD: Makefile,v 1.17 2002/03/15 12:05:09 seb Exp $
 
 DISTNAME=	curl-7.9.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
@@ -15,9 +16,8 @@ BUILD_DEFS+=	USE_INET6
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 
 # This causes curl-config not to be regenerated during build-time as it was
@@ -25,5 +25,18 @@ CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 #
 AUTOMAKE_POST_PATTERNS+=	curl-config
 
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/curl
+	for _f in MANUAL TheArtOfHttpScripting FAQ; do		\
+		${INSTALL_DATA} ${WRKSRC}/docs/$${_f}		\
+			 ${PREFIX}/share/doc/curl/${_f};	\
+	done
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/curl
+	for _f in ${WRKSRC}/docs/examples/*.c ; do			\
+		${INSTALL_DATA} $${_f} ${PREFIX}/share/examples/curl;	\
+	done
+	${SED} '/php/d' ${WRKSRC}/docs/examples/README >		\
+		${PREFIX}/share/examples/curl/README
+	
 .include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
