@@ -1,7 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2002/03/25 18:23:37 wiz Exp $
-
+$NetBSD: patch-aa,v 1.6 2002/06/29 01:48:53 kristerw Exp $
 --- Makefile.orig	Sun Mar 10 01:24:16 2002
-+++ Makefile
++++ Makefile	Sat Jun 29 03:32:34 2002
 @@ -1,7 +1,7 @@
  # Define your C compiler.  I recommend gcc if you have it.
  # MacOS users should use "cc" even though it's really "gcc".
@@ -29,7 +28,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 18:23:37 wiz Exp $
  #CONFIG_DIR = /etc
  #CONFIG_DIR = /usr/pkg/etc
  #CONFIG_DIR =
-@@ -36,16 +36,16 @@
+@@ -36,16 +36,23 @@
  # Uncomment this if you have an OSS soundcard driver and want classical
  # Infocom sound support.  Currently this works only for Linux.
  #
@@ -40,6 +39,13 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 18:23:37 wiz Exp $
  #
 -#SOUND_LIB = -lossaudio
 +SOUND_LIB = -lossaudio
++
++# Define your sound device
++# This should probably be a command-line/config-file option.
++#
++SOUND_DEV = /dev/sound
++#SOUND_DEV = /dev/dsp
++#SOUND_DEV = /dev/audio
  
  # This should point to the location of your curses.h or ncurses.h include
  # file if your compiler doesn't know about it.
@@ -49,7 +55,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 18:23:37 wiz Exp $
  #INCL = -I/usr/pkg/include
  #INCL = -I/usr/freeware/include
  #INCL = -I/5usr/include
-@@ -55,7 +55,7 @@
+@@ -55,7 +62,7 @@
  # linking with.  Usually, this isn't necessary if /etc/ld.so.conf is set
  # up correctly.
  #
@@ -58,7 +64,23 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 18:23:37 wiz Exp $
  #LIB = -L/usr/pkg/lib
  #LIB = -L/usr/freeware/lib
  #LIB = -L/5usr/lib
-@@ -109,11 +109,12 @@
+@@ -86,7 +93,7 @@
+ # Nothing under this line should need to be changed.
+ #####################################################
+ 
+-VERSION = 2.42
++VERSION = 2.42nb1
+ 
+ BINNAME = frotz
+ 
+@@ -103,17 +110,18 @@
+ 	ux_audio_none.o ux_audio_oss.o
+ 
+ OPT_DEFS = -DCONFIG_DIR="\"$(CONFIG_DIR)\"" $(CURSES_DEF) \
+-	-DVERSION="\"$(VERSION)\""
++	-DVERSION="\"$(VERSION)\"" -DSOUND_DEV="\"$(SOUND_DEV)\""
+ 
+ 
  COMP_DEFS = $(OPT_DEFS) $(COLOR_DEFS) $(SOUND_DEFS) $(SOUNDCARD) \
  	$(MEMMOVE_DEF)
  
@@ -73,12 +95,3 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 18:23:37 wiz Exp $
  
  all: $(BINNAME)
  
-@@ -161,7 +162,7 @@
- 	rm -f $(BINNAME)$(EXTENSION)
- 	-rm -rf $(distdir)
- 	-rm -f $(distdir).tar $(distdir).tar.gz
--	
-+
- realclean: distclean
- 
- clobber: distclean

@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1 2002/06/29 01:48:53 kristerw Exp $
+--- ux_init.c.orig	Wed Feb 20 05:26:21 2002
++++ ux_init.c	Sat Jun 29 03:25:37 2002
+@@ -51,6 +51,7 @@
+ #define INFORMATION "\
+  - An interpreter for all Infocom and other Z-Machine games.\n\
+ Complies with standard 1.0 of Graham Nelson's specification.\n\
++Special NetBSD version.  Patched so that sound works with the OSS driver.\n\
+ \n\
+ Syntax: frotz [options] story-file\n\
+ \n\
