@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/11 05:57:37 hubertf Exp $
+
+	The dlint package needs a working "dig" binary to do it's work.
+	If your operating system doesn't come which one (e.g. on Solaris
+	7 and 8), then please install one of the "bind" packages!
+
+===========================================================================
