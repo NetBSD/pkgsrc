@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.201 2002/10/08 04:50:43 cjep Exp $
+$NetBSD: CHANGES,v 1.202 2002/10/08 05:30:52 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3150,3 +3150,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated spamassassin to 2.42 [heinz 2002-10-08]
 	Updated matchbox to 0.3.5 [wiz 2002-10-08]
 	Updated gap to 4.3nb1 [cjep 2002-10-08]
+	Added p5-String-CRC32-1.2 [cjep 2002-10-08]
