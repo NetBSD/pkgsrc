@@ -1,45 +1,42 @@
-# $NetBSD: Makefile,v 1.12 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/11 04:20:16 minskim Exp $
 #
 
-DISTNAME=	Xalan-C_1_0-linux
-PKGNAME=	xalan-c-1.0
+DISTNAME=	Xalan-C_1_6-src
+PKGNAME=	xalan-c-1.6
 CATEGORIES=	textproc
-MASTER_SITES=	http://xml.apache.org/dist/xalan-c/
+MASTER_SITES=	http://archive.apache.org/dist/xml/xalan-c/source/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/xalan-c/
-COMMENT=	The Apache Project's XSLT implementation
+COMMENT=	XSLT processor of the Apache Project
 
-DEPENDS+=	icu>=1.7:../../textproc/icu
-DEPENDS+=	xerces-c>=1.3.0:../../textproc/xerces-c
-
-WRKSRC=		${WRKDIR}/xml-xalan/c/src
-GNU_CONFIGURE=	YES
+WRKSRC=		${WRKDIR}/xml-xalan/c/src/xalanc
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
-#MAN1=		testXSLT.1
+.include "../../mk/bsd.prefs.mk"
+.if ${LOWER_OPSYS} == "SunOS"
+XALAN_PLATFORM=	solaris
+.elif ${LOWER_OPSYS} == "Darwin"
+XALAN_PLATFORM=	macosx
+.else
+XALAN_PLATFORM=	${LOWER_OPSYS}
+.endif
+XALAN_ENV=	XALANCROOT="${WRKDIR}/xml-xalan/c" ICUROOT="${LOCALBASE}"
 
-MAKE_ENV+=	XALANCROOT="${WRKDIR}/xml-xalan" \
-		XERCESCROOT="${PREFIX}" \
-		XALAN_USE_ICU="yes"
+HAS_CONFIGURE=		YES
+CONFIGURE_SCRIPT=	./runConfigure
+CONFIGURE_ARGS+=	-C --prefix=${PREFIX}
+CONFIGURE_ARGS+=	-p ${XALAN_PLATFORM}
+CONFIGURE_ARGS+=	-t icu
+CONFIGURE_ARGS+=	-r pthread
+# 1.7.0 needs the following argument.
+#CONFIGURE_ARGS+=	-m inmem
 
-pre-configure:
-	${CHMOD} a+rx ${WRKSRC}/configure
+CONFIGURE_ENV+=	${XALAN_ENV}
+MAKE_ENV+=	${XALAN_ENV}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/xml-xalan/lib/libxalan-c1_0.so ${PREFIX}/lib
-	${INSTALL_PROGRAM} ${WRKDIR}/xml-xalan/bin/testXPath ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/xml-xalan/bin/testXSLT ${PREFIX}/bin
-	cd ${WRKSRC}; \
-	XMLDIRS="DOMSupport ICUBridge Include XercesParserLiaison PlatformSupport TestXPath XMLSupport XPath XSLT XalanDOM"; \
-	for i in $${XMLDIRS}; do \
-	    ${ECHO} creating ${PREFIX}/include/$${i}; \
-	    ${INSTALL_DATA_DIR} ${PREFIX}/include/$${i}; \
-	done; \
-	for i in `find $${XMLDIRS} -type f -name "*.hpp" -print`; do \
-	    ${ECHO} installing ${PREFIX}/include/$${i}; \
-	    ${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/include/$${i}; \
-	done
-	${INSTALL_MAN} ${FILESDIR}/testXSLT.1 ${PREFIX}/man/man1
-
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
