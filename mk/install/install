@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.12 2002/08/22 08:21:32 jlam Exp $
+# $NetBSD: install,v 1.13 2002/09/19 10:20:51 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -181,7 +181,8 @@ EOF
 		if [ -n "${CONF_FILES}" -o				\
 		     -n "${CONF_FILES_PERMS}" -o			\
 		     -n "${SUPPORT_FILES}" -o				\
-		     -n "${SUPPORT_FILES_PERMS}" -o			\
+		     -n "${SUPPORT_FILES_PERMS}" ] ||			\
+		   [ "${_PKG_RCD_SCRIPTS}" = "YES" -a			\
 		     -n "${RCD_SCRIPTS}" ]; then
 			${CAT} << EOF
 Installing configuration files for ${PKGNAME}:
@@ -299,7 +300,8 @@ EOF
 		samplefile="${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
 		file="${RCD_SCRIPTS_DIR}/${script}"
 
-		if [ "${_PKG_CONFIG}" = "NO" ]; then
+		if [ "${_PKG_CONFIG}" = "NO" -o				\
+		     "${_PKG_RCD_SCRIPTS}" = "NO" ]; then
 			if [ ${_print_line} -gt 0 ]; then
 				_print_line=0
 				${CAT} << EOF
