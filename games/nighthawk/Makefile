@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:26 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/18 15:25:36 wiz Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -23,6 +23,7 @@ post-build:
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} nighthawk_sound
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nighthawk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk/data
 	( cd ${WRKSRC}/data ; tar plcf - . ) | ( cd ${PREFIX}/share/nighthawk/data ; tar plvxf - )
@@ -33,6 +34,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src_sound/nighthawk_sound ${PREFIX}/bin
 	${CHGRP} games ${PREFIX}/bin/nighthawk
 	${CHMOD} g+s ${PREFIX}/bin/nighthawk
+	${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/nighthawk/README
 	${INSTALL} -o root -g games -m 664 /dev/null /var/games/nighthawk.scores
 
 .include "../../mk/bsd.pkg.mk"
