@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/10/24 22:10:50 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/09/21 08:10:55 jlam Exp $
 #
 
 DISTNAME=		gtksql-0.3
@@ -12,11 +12,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.multimania.com/bbrox/GtkSQL/
 COMMENT=		Query tool for PostgreSQL written with GTK
 
+USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
-USE_BUILDLINK_ONLY=	# defined
 MAKE_ENV+=		MCFLAGS="${CFLAGS}"
 
-.include "../../databases/postgresql-lib/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

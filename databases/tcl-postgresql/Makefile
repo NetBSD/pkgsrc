@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.11 2002/04/04 07:41:05 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/21 08:05:06 jlam Exp $
 
 PKGNAME=		tcl-postgresql-${BASE_VERS}
 COMMENT=		Tcl interface to PostgreSQL
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../databases/postgresql/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcl
-CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_DIR}/lib"
+CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_PREFIX.tcl}/lib"
 CONFIGURE_ENV+=		TCLSH="${TCLSH}"
-TCLSH=			${LOCALBASE}/bin/tclsh
+TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
 DIRS_TO_BUILD=		src/interfaces/libpgtcl src/bin/pgtclsh
@@ -32,6 +32,7 @@ post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|#.*||" ${FILESDIR}/man.tcl`
 
-.include "../../databases/postgresql-lib/buildlink.mk"
-.include "../../lang/tcl/buildlink.mk"
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../lang/tcl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
