@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2093 2003/04/30 00:01:22 hubertf Exp $
+$NetBSD: CHANGES,v 1.2094 2003/04/30 00:08:48 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1797,3 +1797,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added erlang-9.1 [jtb 2003-04-29]
 	Added mtl-2.1.2-21 [jtb 2003-04-29]
 	Added ickle-0.3.2 [hubertf 2003-04-30]
+	Added blitz++-0.6 [jtb 2003-04-30]
