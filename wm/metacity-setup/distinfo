@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/01 11:38:15 jmmv Exp $
-
-SHA1 (metacity-setup-0.7.1.tar.gz) = 1b196a65321869c66d8d0e30ebee53b2e36ec376
-Size (metacity-setup-0.7.1.tar.gz) = 210390 bytes
-SHA1 (patch-aa) = 59bf99a1652c73ee8f932ce300efdfd523726c13
