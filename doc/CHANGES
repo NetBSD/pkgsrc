@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8996 2005/02/01 18:40:46 martti Exp $
+$NetBSD: CHANGES,v 1.8997 2005/02/01 19:14:19 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -701,3 +701,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated amavisd-new to 2.2.1 [wiz 2005-02-01]
 	Updated arping to 2.05 [adrianp 2005-02-01]
 	Updated keychain to 2.5.1 [martti 2005-02-01]
+	Added wide-0.1 [jschauma 2005-02-01]
