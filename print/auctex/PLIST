@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2002/09/16 03:31:26 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/11 10:02:03 uebayasi Exp $
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/${INFODIR} %D/${INFODIR}/auctex
 ${INFODIR}/auctex
 ${INFODIR}/auctex-1
 ${INFODIR}/auctex-2
 ${INFODIR}/auctex-3
 @exec ${INSTALL_INFO} --info-dir=%D/${INFODIR} %D/${INFODIR}/auctex
+share/examples/auctex/tex-site.el
 ${EMACS_LISPPREFIX}/auctex/auc-old.el
 ${EMACS_LISPPREFIX}/auctex/auc-old.elc
 ${EMACS_LISPPREFIX}/auctex/bib-cite.el
@@ -98,6 +99,16 @@ ${EMACS_LISPPREFIX}/auctex/style/psfig.el
 ${EMACS_LISPPREFIX}/auctex/style/psfig.elc
 ${EMACS_LISPPREFIX}/auctex/style/report.el
 ${EMACS_LISPPREFIX}/auctex/style/report.elc
+${EMACS_LISPPREFIX}/auctex/style/scrartcl.el
+${EMACS_LISPPREFIX}/auctex/style/scrartcl.elc
+${EMACS_LISPPREFIX}/auctex/style/scrbase.el
+${EMACS_LISPPREFIX}/auctex/style/scrbase.elc
+${EMACS_LISPPREFIX}/auctex/style/scrbook.el
+${EMACS_LISPPREFIX}/auctex/style/scrbook.elc
+${EMACS_LISPPREFIX}/auctex/style/scrlttr2.el
+${EMACS_LISPPREFIX}/auctex/style/scrlttr2.elc
+${EMACS_LISPPREFIX}/auctex/style/scrreprt.el
+${EMACS_LISPPREFIX}/auctex/style/scrreprt.elc
 ${EMACS_LISPPREFIX}/auctex/style/slides.el
 ${EMACS_LISPPREFIX}/auctex/style/slides.elc
 ${EMACS_LISPPREFIX}/auctex/style/slovak.el
@@ -115,10 +126,10 @@ ${EMACS_LISPPREFIX}/auctex/tex-buf.elc
 ${EMACS_LISPPREFIX}/auctex/tex-info.el
 ${EMACS_LISPPREFIX}/auctex/tex-info.elc
 ${EMACS_LISPPREFIX}/auctex/tex-jp.el
-${EMACS_LISPPREFIX}/auctex/tex-site.el.dist
 ${EMACS_LISPPREFIX}/auctex/tex.el
 ${EMACS_LISPPREFIX}/auctex/tex.elc
 ${EMACS_LISPPREFIX}/auctex/texmathp.el
 ${EMACS_LISPPREFIX}/auctex/texmathp.elc
 @dirrm ${EMACS_LISPPREFIX}/auctex/style
-@exec ${RMDIR} %D/${EMACS_LISPPREFIX}/auctex || ${TRUE}
+@dirrm ${EMACS_LISPPREFIX}/auctex
+@dirrm share/examples/auctex
