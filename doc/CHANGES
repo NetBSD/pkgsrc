@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3917 2003/12/03 10:55:59 chris Exp $
+$NetBSD: CHANGES,v 1.3918 2003/12/03 12:08:02 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4760,3 +4760,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lftp to 2.6.9 [salo 2003-12-03]
 	Updated ispell-slovak to 0.2.1 [salo 2003-12-03]
 	Updated p5-Time-HiRes to 1.52 [chris 2003-12-03]
+	Updated R to 1.8.1 [markd 2003-12-03]

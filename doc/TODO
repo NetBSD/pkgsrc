@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1109 2003/12/03 09:33:17 salo Exp $
+$NetBSD: TODO,v 1.1110 2003/12/03 12:08:02 markd Exp $
 
 Suggested new packages
 ======================
@@ -128,7 +128,6 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o Lesstif-0.93.91
-	o R-1.8.1 [markd]
 	o SDL_gfx-2.0.9
 	o TeXmacs-1.0.2.9
 	o Xaw3d-1.5E
