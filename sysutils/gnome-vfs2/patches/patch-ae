@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2004/05/03 15:39:47 jmmv Exp $
+$NetBSD: patch-ae,v 1.5 2004/05/04 16:35:57 minskim Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=141736
 
---- configure.orig	2004-04-20 11:54:46.000000000 +0200
+--- configure.orig	2004-04-20 04:54:46.000000000 -0500
 +++ configure
 @@ -20202,7 +20202,7 @@ if test -z "`$INTLTOOL_PERL -v | fgrep '
  echo "$as_me: error: perl 5.x required for intltool" >&2;}
@@ -73,3 +73,15 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141736
  #ifdef HAVE_SYS_VFS_H
  #include <sys/vfs.h>
  #endif
+@@ -25792,9 +25810,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
++#ifndef HAVE_STATVFS
+ struct statfs st;
+ statfs(NULL, &st, sizeof (st), 0);
+   ;
++#endif
+   return 0;
+ }
+ _ACEOF
