@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2001/08/09 14:34:57 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2003/01/07 06:30:35 rh Exp $
 
---- Fig.ad.orig	Thu May 17 12:59:29 2001
+--- Fig.ad.orig	Wed Dec 18 17:05:41 2002
 +++ Fig.ad
-@@ -16,7 +16,7 @@
+@@ -24,7 +24,7 @@
  
  ! pdfviewer - put your favorite pdf viewer here.  
  !		This is for viewing the xfig how-to guide and man pages
