@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
+$NetBSD: patch-ab,v 1.8 2003/12/30 12:25:44 gavan Exp $
 
 --- glib/trio/trio.c.orig	2003-08-26 02:17:43.000000000 +0200
 +++ glib/trio/trio.c
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    assert(VALID(format));
  
 -  return TrioFormat(stdout, 0, TrioOutStreamFile, format, &args, NULL);
-+  va_copy(args2, args);
++  G_VA_COPY(args2, args);
 +  return TrioFormat(stdout, 0, TrioOutStreamFile, format, &args2, NULL);
  }
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
 -  
 -  return TrioFormat(file, 0, TrioOutStreamFile, format, &args, NULL);
 +
-+  va_copy(args2, args);  
++  G_VA_COPY(args2, args);  
 +  return TrioFormat(file, 0, TrioOutStreamFile, format, &args2, NULL);
  }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
 -  
 -  return TrioFormat(&fd, 0, TrioOutStreamFileDescriptor, format, &args, NULL);
 +
-+  va_copy(args2, args);  
++  G_VA_COPY(args2, args);  
 +  return TrioFormat(&fd, 0, TrioOutStreamFileDescriptor, format, &args2, NULL);
  }
  
@@ -60,7 +60,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    data.stream.out = stream;
    data.closure = closure;
 -  return TrioFormat(&data, 0, TrioOutStreamCustom, format, &args, NULL);
-+  va_copy(args2, args);
++  G_VA_COPY(args2, args);
 +  return TrioFormat(&data, 0, TrioOutStreamCustom, format, &args2, NULL);
  }
  
@@ -76,7 +76,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    assert(VALID(format));
  
 -  status = TrioFormat(&buffer, 0, TrioOutStreamString, format, &args, NULL);
-+  va_copy(args2, args);
++  G_VA_COPY(args2, args);
 +  status = TrioFormat(&buffer, 0, TrioOutStreamString, format, &args2, NULL);
    *buffer = NIL;
    return status;
@@ -91,7 +91,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    assert(max == 0 || VALID(buffer));
    assert(VALID(format));
  
-+  va_copy(args2, args);
++  G_VA_COPY(args2, args);
    status = TrioFormat(&buffer, max > 0 ? max - 1 : 0,
 -		      TrioOutStreamStringMax, format, &args, NULL);
 +		      TrioOutStreamStringMax, format, &args2, NULL);
@@ -110,7 +110,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
  
    buf_len = trio_length(buffer);
    buffer = &buffer[buf_len];
-+  va_copy(args2, args);
++  G_VA_COPY(args2, args);
    status = TrioFormat(&buffer, max - 1 - buf_len,
 -		      TrioOutStreamStringMax, format, &args, NULL);
 +		      TrioOutStreamStringMax, format, &args2, NULL);
@@ -129,7 +129,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    info = trio_xstring_duplicate("");
    if (info)
      {
-+      va_copy(args2, args);
++      G_VA_COPY(args2, args);
        (void)TrioFormat(info, 0, TrioOutStreamStringDynamic,
 -		       format, &args, NULL);
 +		       format, &args2, NULL);
@@ -148,7 +148,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
      }
    else
      {
-+      va_copy(args2, args);
++      G_VA_COPY(args2, args);
        status = TrioFormat(info, 0, TrioOutStreamStringDynamic,
 -			  format, &args, NULL);
 +			  format, &args2, NULL);
@@ -164,7 +164,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
 -  
 -  return TrioFormatRef((trio_reference_t *)ref, format, &arglist, NULL);
 +
-+  va_copy(args2, arglist); 
++  G_VA_COPY(args2, arglist); 
 +  return TrioFormatRef((trio_reference_t *)ref, format, &args2, NULL);
  }
  
@@ -177,7 +177,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    assert(VALID(format));
 -  
 +
-+  va_copy(args2, args);
++  G_VA_COPY(args2, args);
    return TrioScan((trio_pointer_t)stdin, 0,
  		  TrioInStreamFile,
 -		  format, &args, NULL);
@@ -195,7 +195,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    assert(VALID(format));
 -  
 +
-+  va_copy(args2, args);  
++  G_VA_COPY(args2, args);  
    return TrioScan((trio_pointer_t)file, 0,
  		  TrioInStreamFile,
 -		  format, &args, NULL);
@@ -211,7 +211,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    assert(VALID(format));
 -  
 +
-+  va_copy(args2, args); 
++  G_VA_COPY(args2, args); 
    return TrioScan((trio_pointer_t)&fd, 0,
  		  TrioInStreamFileDescriptor,
 -		  format, &args, NULL);
@@ -233,7 +233,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    data.closure = closure;
 -  return TrioScan(&data, 0, TrioInStreamCustom, format, &args, NULL);
 +
-+  va_copy(args2, args);
++  G_VA_COPY(args2, args);
 +  return TrioScan(&data, 0, TrioInStreamCustom, format, &args2, NULL);
  }
  
@@ -248,7 +248,7 @@ $NetBSD: patch-ab,v 1.7 2003/11/11 13:39:09 fvdl Exp $
    assert(VALID(format));
 -  
 +
-+  va_copy(args2, args);  
++  G_VA_COPY(args2, args);  
    return TrioScan((trio_pointer_t)&buffer, 0,
  		  TrioInStreamString,
 -		  format, &args, NULL);
