@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/10/10 11:06:06 tron Exp $
+# $NetBSD: Makefile,v 1.28 1999/12/02 20:26:39 bouyer Exp $
 #
 
 DISTNAME=       MesaLib-3.0
@@ -45,8 +45,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/${file}.so.${GLUT_VERSION} ${PREFIX}/lib
 .endfor
 .for file in GL GLU
-	@ln -fs ${PREFIX}/lib/libMesa${file}.a ${PREFIX}/lib/lib${file}.a
-	@ln -fs ${PREFIX}/lib/libMesa${file}.so.${MESA_VERSION} ${PREFIX}/lib/lib${file}.so.${MESA_VERSION}
+	@ln -f -s ${PREFIX}/lib/libMesa${file}.a ${PREFIX}/lib/lib${file}.a
+	@ln -f -s ${PREFIX}/lib/libMesa${file}.so.${MESA_VERSION} ${PREFIX}/lib/lib${file}.so.${MESA_VERSION}
 .endfor
 	@${MKDIR} ${PREFIX}/include/GL
 	${INSTALL_DATA} ${WRKSRC}/include/GL/* ${PREFIX}/include/GL
