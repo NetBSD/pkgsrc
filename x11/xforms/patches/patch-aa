@@ -1,30 +1,46 @@
-$NetBSD: patch-aa,v 1.7 2002/08/25 19:24:01 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2002/12/28 19:49:08 jschauma Exp $
 
---- Imakefile.orig	Tue Apr  2 19:05:09 2002
-+++ Imakefile
-@@ -4,12 +4,12 @@
- #define Optimize YES
- #define UseSystemXpm YES
- #define HaveStrerror YES
--#define StaticLink YES
--#define BuildGL YES
-+#define StaticLink NO
-+#define BuildGL NO
+--- Imakefile.orig	2002-12-25 09:50:16.000000000 -0800
++++ Imakefile	2002-12-25 09:59:05.000000000 -0800
+@@ -6,9 +6,9 @@
+ #define DoWall NO
+
  #define BuildShared YES
--#define Solaris64Bit YES
-+#define Solaris64Bit NO
+-#define StaticLink YES
++#define StaticLink NO
  
--#define XFormsInstallDir /usr/local
-+#define XFormsInstallDir $(PREFIX)
- #define XFormsLibRev 0.9999
+-#define BuildGL YES
++#define BuildGL NO
  
- #define OptimizationLevel -O4
-@@ -37,7 +37,7 @@ OPTIMIZER	= OptimizationLevel
- OPTIMIZER	=
- #endif
  
--CDEBUGFLAGS	= -g $(OPTIMZER)
-+CDEBUGFLAGS	= -g $(OPTIMIZER)
+ /* Less Important or System Specific */
+@@ -33,22 +33,22 @@
+ /* Out in the Tall Weeds */
  
- IMAKE_DEFINES	= \
- 		  -DUseSystemXpm=UseSystemXpm \
+ #define InstallNonstandard NO
+-#define XFormsNonstandardInstallDir /usr/local
++#define XFormsNonstandardInstallDir $(PREFIX)
+ 
+ #define NonstandardXpm NO
+ 
+-#define XpmIncLoc /usr/local/include
+-#define XpmLibLoc /usr/local/lib
++#define XpmIncLoc ${LOCALBASE}/include
++#define XpmLibLoc ${LOCALBASE}/lib
+ 
+ #define NonstandardTiff NO
+ 
+-#define TiffIncLoc /usr/local/include
+-#define TiffLibLoc /usr/local/lib
++#define TiffIncLoc ${LOCALBASE}/include
++#define TiffLibLoc ${LOCALBASE}/lib
+ 
+ #define NonstandardJpeg NO
+ 
+-#define JpegIncLoc /usr/local/include
+-#define JpegLibLoc /usr/local/lib
++#define JpegIncLoc ${LOCALBASE}/include
++#define JpegLibLoc ${LOCALBASE}/lib
+ 
+ ######################################################################
+ #                                                                    #

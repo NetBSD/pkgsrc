@@ -1,42 +1,22 @@
-$NetBSD: patch-ab,v 1.5 2002/09/21 00:24:04 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2002/12/28 19:49:09 jschauma Exp $
 
---- demos/Imakefile.orig	Mon Apr  1 10:56:26 2002
-+++ demos/Imakefile
-@@ -106,7 +106,9 @@
- DEPOBJS		= $(DEPSRCS:.c=.o)
- PROGRAMS	= $(DEMOSRCS:.c=)
- 
--JPEGLIBLOC	= /usr/local/lib
-+LDPRELIBS	=
-+JPEGLIBLOC	= ${LOCALBASE}/lib
-+JPEGLIB		= -L${JPEGLIBLOC} -ljpeg
- 
- #if Solaris64Bit
- LDPRELIB	= -L/usr/openwin/lib/sparcv9
-@@ -120,7 +122,7 @@
- 
+--- demos/Imakefile.orig	2002-11-19 12:50:52.000000000 -0800
++++ demos/Imakefile	2002-12-25 10:38:30.000000000 -0800
+@@ -109,7 +109,7 @@
+
  FORMSLIBDIR     = $(TOP)/lib
  FORMSINCDIR     = $(FORMSLIBDIR)       
 -FORMSLIB        = -L$(FORMSLIBDIR) -lforms
 +FORMSLIB        = -L$(FORMSLIBDIR) -lforms $(JPEGLIB) $(XPMLIB) $(LDFLAGS)
  DEPFORMSLIB     = $(FORMSLIBDIR)/libforms.a
  
- #if !UseSystemXpm
-@@ -130,7 +132,7 @@
- DEPXPMLIB	= $(XPMLIBDIR)/libXpm.a
- XPMINCLUDE	= -I$(XPMINCDIR)
- #else	
--XPMLIB		= -lXpm
-+XPMLIB		= -L$(USRLIBDIR) -lXpm
- #endif
+ IMAGELIBDIR     = $(TOP)/image
+@@ -154,7 +154,7 @@
+ 		  -I.
  
- EXTRA_INCLUDES  = \
-@@ -138,7 +140,7 @@
- 		  -I$(FORMSINCDIR) \
- 		  -Ifd \
- 		  -I. \
--		  -I/usr/local/include \
-+		  -I${LOCALBASE}/include \
- 		  /* Don't remove this line */
+ DEPEND_DEFINES	= \
+-		  -I/usr/local/include
++		  -I${LOCALBASE}/include
  
  EXTRA_LIBRARIES	= \
+ 		  $(STATIC) \
