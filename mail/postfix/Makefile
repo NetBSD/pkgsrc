@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2004/03/06 06:28:22 grant Exp $
+# $NetBSD: Makefile,v 1.120 2004/03/06 06:52:43 grant Exp $
 
 DISTNAME=	postfix-2.0.18
 PKGREVISION=	1
@@ -32,18 +32,25 @@ CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 
 FIX_RPATH+=	AUXLIBS
 
+BUILD_DEFS+=	POSTFIX_USE_INET6
+BUILD_DEFS+=	POSTFIX_USE_TLS
+BUILD_DEFS+=	POSTFIX_USE_PCRE
+BUILD_DEFS+=	POSTFIX_USE_LDAP
+BUILD_DEFS+=	POSTFIX_USE_MYSQL
+BUILD_DEFS+=	POSTFIX_USE_PGSQL
+BUILD_DEFS+=	USE_SASL
+BUILD_DEFS+=	USE_SASL2
+
 .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
 .  include "../../security/openssl/buildlink3.mk"
 PATCHFILES+=		tls+ipv6-1.21-pf-2.0.18.patch.gz
 PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.21/
 PATCH_DIST_STRIP=	-p1
-BUILD_DEFS+=		POSTFIX_USE_INET6
 
 CCARGS+=	-DHAS_SSL
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
 		-lssl -lcrypto
-BUILD_DEFS+=	POSTFIX_USE_TLS
 
 PLIST_SRC+=	${PKGDIR}/PLIST.tls
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
@@ -55,7 +62,6 @@ CCARGS+=	-DHAS_PCRE
 AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib				\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib		\
 		-lpcre
-BUILD_DEFS+=	POSTFIX_USE_PCRE
 .else
 CCARGS+=	-DNO_PCRE
 .endif
@@ -66,7 +72,6 @@ CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
-BUILD_DEFS+=	POSTFIX_USE_LDAP
 .endif
 
 .if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
@@ -75,7 +80,6 @@ CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
 		-lmysqlclient -lz -lm
-BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
 
 .if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
@@ -88,7 +92,6 @@ PATCH_DIST_STRIP=	-p1
 CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
 AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
 		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
-BUILD_DEFS+=	POSTFIX_USE_PGSQL
 .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
@@ -98,7 +101,6 @@ CCARGS+=	-DUSE_SASL2_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl2
-BUILD_DEFS+=	USE_SASL2
 .elif defined(USE_SASL) && ${USE_SASL} == "YES"
 USING_SASL=YES
 .  include "../../security/cyrus-sasl/buildlink3.mk"
@@ -106,7 +108,6 @@ CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl
-BUILD_DEFS+=	USE_SASL
 .endif
 
 .if defined(USING_SASL)
