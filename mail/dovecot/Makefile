@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/19 16:11:11 salo Exp $
 #
 
-DISTNAME=	dovecot-0.99.9.1
+DISTNAME=	dovecot-0.99.10-test14
+PKGNAME=	${DISTNAME:S/-test/beta/}
 CATEGORIES=	mail
-MASTER_SITES=	http://dovecot.procontrol.fi/
+MASTER_SITES=	http://dovecot.procontrol.fi/	\
+		http://dovecot.procontrol.fi/test/
 
-PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	freebsd.patch fetch.patch
-
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tom@replic8.net
 HOMEPAGE=	http://dovecot.procontrol.fi/
 COMMENT=	Secure IMAP and POP3 server
 

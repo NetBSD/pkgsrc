@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/05/14 04:17:31 salo Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/19 16:11:12 salo Exp $
 
---- Makefile.in.orig	2003-05-06 18:33:40.000000000 +0200
-+++ Makefile.in	2003-05-06 18:44:13.000000000 +0200
-@@ -90,7 +90,7 @@
+--- Makefile.in.orig	Thu Jun 19 00:21:59 2003
++++ Makefile.in	Thu Jun 19 16:06:04 2003
+@@ -91,7 +91,7 @@
  SUBDIRS = src doc
  
  confdir = $(sysconfdir)
 -conf_DATA = dovecot-example.conf
-+conf_DATA = 
++conf_DATA =
  
- EXTRA_DIST =  	config.rpath 	dovecot.spec.in 	COPYING.LGPL 	$(conf_DATA)
+ EXTRA_DIST =  	config.rpath 	dovecot.spec 	dovecot.spec.in 	COPYING.LGPL 	$(conf_DATA)
  
