@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2001/02/26 20:19:48 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/04/24 18:33:30 rh Exp $
 bin/gtop
 share/gnome/apps/System/gtop.desktop
 share/gtoprc
-share/gnome/help/gtop/C/index.html
 share/gnome/help/gtop/C/topic.dat
 share/gnome/help/gtop/C/figs/gtop-fs-1.png
 share/gnome/help/gtop/C/figs/gtop-fs-2.png
@@ -13,14 +12,7 @@ share/gnome/help/gtop/C/figs/gtop-pic-middle.png
 share/gnome/help/gtop/C/figs/gtop-pic-top.png
 share/gnome/help/gtop/C/figs/gtop-prefs.png
 share/gnome/help/gtop/C/figs/gtop-proc.png
-share/gnome/help/gtop/C/credits.html
-share/gnome/help/gtop/C/errata.html
-share/gnome/help/gtop/C/filesystems.html
-share/gnome/help/gtop/C/gtop.html
-share/gnome/help/gtop/C/memory.html
-share/gnome/help/gtop/C/more-info.html
-share/gnome/help/gtop/C/preferences.html
-share/gnome/help/gtop/C/processes.html
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtop.mo
@@ -37,9 +29,14 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gtop.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtop.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtop.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtop.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtop.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/gtop.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/gtop.mo
