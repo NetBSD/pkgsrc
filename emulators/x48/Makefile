@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/04/27 14:59:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:40:52 jmmv Exp $
 #
 
 DISTNAME=	x48_041
 PKGNAME=	x48-0.4.1
+WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	emulators
 MASTER_SITES=	http://home.earthlink.net/~rmmlgetz/
 
@@ -11,8 +12,6 @@ HOMEPAGE=	http://home.earthlink.net/~rmmlgetz/
 COMMENT=	HP48 emulator
 
 USE_IMAKE=	YES
-
-WRKSRC=		${WRKDIR}/${PKGNAME}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/x48 \

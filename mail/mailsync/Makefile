@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/12/09 00:19:46 rh Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:35 jmmv Exp $
 #
 
 DISTNAME=	mailsync_4.3-2
 PKGNAME=	mailsync-4.3.2
+WRKSRC=		${WRKDIR}/mailsync-4.3
 CATEGORIES=	mail
 MASTER_SITES=	http://unc.dl.sourceforge.net/mailsync/
 
@@ -14,8 +15,6 @@ DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
 
 USE_GMAKE=	yes
 ALL_TARGET=	default
-
-WRKSRC=		${WRKDIR}/mailsync-4.3
 
 .include "../../mk/bsd.prefs.mk"
 

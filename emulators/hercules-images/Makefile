@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/03/28 21:14:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:49 jmmv Exp $
 
 DISTNAME=		mftr33
 PKGNAME=		hercules-images-20010222
+WRKSRC=			${WRKDIR}
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.conmicro.cx/hercules/
 
@@ -12,7 +13,6 @@ COMMENT=		Images to IPL the Hercules emulator
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 EXTRACT_ONLY=
-WRKSRC=			${WRKDIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/data/hercules

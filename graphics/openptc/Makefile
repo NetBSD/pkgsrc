@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2002/10/09 18:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:41:19 jmmv Exp $
 
 DISTNAME=		OpenPTC-x11-1.0.0-2
 PKGNAME=		OpenPTC-X11-1.0.02
+WRKSRC=			${WRKDIR}/OpenPTC-x11-1.0.0
 CATEGORIES=		graphics
 MASTER_SITES=		# only on NetBSD mirrors anymore
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gaffer.org/ptc/
 COMMENT=		Prometheus Truecolour for X11
-
-WRKSRC=			${WRKDIR}/OpenPTC-x11-1.0.0
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes

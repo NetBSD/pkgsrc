@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/03/12 23:17:19 jmc Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:36 jmmv Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://cse.ogi.edu/pub/mush/
 EXTRACT_SUFX=	.tar.Z
@@ -24,8 +25,6 @@ RESTRICTED=		"Can't sell the code as part of anything"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
 DIST_SUBDIR=	mush
-
-WRKSRC=		${WRKDIR}
 
 pre-configure:
 	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/config.h-dist > ${WRKSRC}/config.h

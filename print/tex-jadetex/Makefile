@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/03/14 00:49:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:18 jmmv Exp $
 #
 
 DISTNAME=	jadetex-2.20
 PKGNAME=	tex-${DISTNAME}
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	http://www.tug.org/applications/jadetex/
 EXTRACT_SUFX=	.zip
@@ -13,7 +14,6 @@ COMMENT=	Process tex files produced by the TeX backend of Jade
 
 DEPENDS+=	tex-hugelatex-1.0nb1:../tex-hugelatex
 
-WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2003/01/28 22:04:01 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/29 12:42:17 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/psutils
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/
 
@@ -14,7 +15,6 @@ COMMENT=	Utilities for manipulating PostScript documents
 
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
-WRKSRC=		${WRKDIR}/psutils
 USE_PERL5=	yes
 USE_PKGINSTALL=	yes
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:32 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:00 jmmv Exp $
 #
 
 DISTNAME=	check_cluster
 PKGNAME=	netsaint-plugin-cluster-20001207
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://netsaint.sourceforge.net/download/alpha/
 EXTRACT_SUFX=	.c
@@ -15,7 +16,6 @@ COMMENT=	host and service cluster plugin for NetSaint
 DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
 
 EXTRACT_CMD=	${CP} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKSRC}
-WRKSRC=		${WRKDIR}
 
 do-build:
 	cd ${WRKSRC} &&							\

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/04 18:48:09 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:27 jmmv Exp $
 #
 
 DISTNAME=	metakit-2.4.8-38
 PKGNAME=	${PYPKGPREFIX}-metakit-2.4.8
+WRKSRC=		${WRKDIR}/metakit-2.4.8/builds
 CATEGORIES=	databases
 MASTER_SITES=	http://www.equi4.com/pub/mk/
 
@@ -10,7 +11,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.equi4.com/metakit/
 COMMENT=	embedded database library
 
-WRKSRC=		${WRKDIR}/metakit-2.4.8/builds
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ../unix/configure
 CONFIGURE_ARGS+=	--with-tcl= --enable-python

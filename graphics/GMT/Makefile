@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2001/11/14 14:47:54 agc Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/29 12:41:13 jmmv Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
+WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://gmt.soest.hawaii.edu/pub/gmt/ \
 		ftp://falcon.grdl.noaa.gov/pub/gmt/ \
@@ -21,7 +22,6 @@ DEPENDS+=	netcdf>=3.4:../../devel/netcdf
 
 EXTRACT_SUFFIX= .tar.bz2
 DIST_SUBDIR=	${DISTNAME}
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

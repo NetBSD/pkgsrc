@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2002/02/25 04:47:21 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:11 jmmv Exp $
 # FreeBSD: Makefile,v 1.1.1.1 1998/06/15 18:09:43 ghelmer Exp
 #
 
 DISTNAME=	hint_unix_serial
 PKGNAME=	hint.serial-98.06.12
+WRKSRC=		${WRKDIR}/unix
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.scl.ameslab.gov/pub/HINT/source/tar/
 EXTRACT_SUFX=	.tar
@@ -12,7 +13,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.scl.ameslab.gov/Projects/HINT/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
 
-WRKSRC=		${WRKDIR}/unix
 ALL_TARGET=	DOUBLE INT
 
 do-install:

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/11/14 13:25:23 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:30 jmmv Exp $
 #
 
 DISTNAME=	Memo-1.0.0
 PKGNAME=	rox-memo-1.0.0
+WRKSRC=		${WRKDIR}/Memo
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -18,8 +19,6 @@ DIST_SUBDIR=	rox
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_BUILDLINK2=	yes
-
-WRKSRC=		${WRKDIR}/Memo
 
 PYTHON_PATCH_SCRIPTS=	AppRun
 

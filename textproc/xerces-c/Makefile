@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2003/03/22 00:40:49 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:42:42 jmmv Exp $
 #
 
 DISTNAME=	xerces-c-src1_3_0
 PKGNAME=	xerces-c-1.3.0
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/xerces-c-src1_3_0/src/
 CATEGORIES=	textproc
 MASTER_SITES=	http://xml.apache.org/dist/xerces-c/stable/
 
@@ -11,7 +12,6 @@ MAINTAINER=	skrll@netbsd.org
 HOMEPAGE=	http://xml.apache.org/xerces-c/
 COMMENT=	The Apache Project's validating XML parser with DOM and SAX support
 
-WRKSRC=		${WRKDIR}/xerces-c-src1_3_0/src/
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_BUILDLINK2=	YES

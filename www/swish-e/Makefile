@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2001/03/13 15:36:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:42:55 jmmv Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=       swish-efiles.1.3.2
 PKGNAME=        swish-e-1.3.2
+WRKSRC=		${WRKDIR}/src
 CATEGORIES=     www textproc
 MASTER_SITES=   ftp://sunsite.berkeley.edu/pub/swish-e/
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE= 	http://sunsite.berkeley.edu/SWISH-E/
 COMMENT= 	Simple web indexing for humans - enhanced
-
-WRKSRC=		${WRKDIR}/src
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/swish-e ${PREFIX}/bin

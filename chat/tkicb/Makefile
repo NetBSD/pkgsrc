@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2002/10/21 14:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:18 jmmv Exp $
 #
 
 DISTNAME=	icb.2.1.4
 PKGNAME=	tkicb-2.1.4
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	chat x11
 MASTER_SITES=	ftp://shoshin.armory.com/pub/
 EXTRACT_SUFX=	.tar.Z
@@ -20,8 +21,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES
-
-WRKSRC=		${WRKDIR}
 
 do-build:
 	${SED} -e 's,/usr/local/lib/icb,${PREFIX}/libdata/tkicb,g' \

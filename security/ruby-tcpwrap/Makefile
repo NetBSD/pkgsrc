@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 13:44:18 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:24 jmmv Exp $
 # FreeBSD: ports/security/ruby-tcpwrap/Makefile,v 1.6 2000/09/26 08:02:10 knu Exp
 
 DISTNAME=	ruby-tcpwrap-0.3
 PKGNAME=	${RUBY_PKGNAMEPREFIX}tcpwrap-0.3
+WRKSRC=		${WRKDIR}/ruby-tcpwrap
 CATEGORIES=	security
 MASTER_SITES=	http://www.shugo.net/archive/ruby-tcpwrap/
 
@@ -19,7 +20,6 @@ DEPENDS+=	tcp_wrappers>=7.6:../../security/tcp_wrapper
 
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
-WRKSRC=		${WRKDIR}/ruby-tcpwrap
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+= --with-libwrap-dir="/usr"

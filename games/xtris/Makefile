@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/23 10:31:25 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:12 jmmv Exp $
 #
 
 DISTNAME=	xtris-1.15
+WRKSRC=		${WRKDIR}/xtris
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.iagora.com/~espel/xtris/
 
@@ -9,7 +10,6 @@ MAINTAINER=	opp@MuFFiN.Org
 HOMEPAGE=	http://www.iagora.com/~espel/xtris/
 COMMENT=	Multi-player version of a popular game for the X Window system
 
-WRKSRC=		${WRKDIR}/xtris
 USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
 

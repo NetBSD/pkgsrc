@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/12/28 21:16:05 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:29 jmmv Exp $
 #
 
 DISTNAME=	acunia-jam-1.0
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/jam
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -16,8 +17,6 @@ USE_BUILDLINK2=	# defined
 
 DOCDIR=		share/doc/${PKGBASE}
 HTMLDIR=	share/doc/html/${PKGBASE}
-
-WRKSRC=		${WRKDIR}/jam
 
 do-install:
 	for file in jam mkjambase; do \

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:52:26 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:42:57 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
 DISTNAME=		9term.1.6.3
 PKGNAME=		9term-1.6.3
+WRKSRC=			${WRKDIR}
 CATEGORIES=		plan9 x11
 MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 
@@ -19,7 +20,6 @@ USE_BUILDLINK2=		yes
 USE_X11=		yes
 
 MANCOMPRESSED=		yes
-WRKSRC=			${WRKDIR}
 MAKE_ENV+=		SAM_DIR=${BUILDLINK_PREFIX.sam}
 
 .include "../../editors/sam/buildlink2.mk"

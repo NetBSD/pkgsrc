@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2002/05/31 15:19:57 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:52 jmmv Exp $
 #
 
 DISTNAME=		xm71010s
 PKGNAME=		xm7-1010s
+WRKSRC=			${WRKDIR}/vm
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.ipc-tokai.or.jp/~ytanaka/fm7/
 EXTRACT_SUFX=		.lzh
@@ -13,7 +14,6 @@ COMMENT=		X11-based FM-7 emulator
 
 BUILD_DEPENDS+=		nkf-1.7:../../converters/nkf
 
-WRKSRC=			${WRKDIR}/vm
 RESTRICTED=		source archive is not redistributable
 RESTRICTED+=		no-commercial-use
 NO_SRC_ON_CDROM=	${RESTRICTED}
