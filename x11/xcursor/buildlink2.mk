@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/16 08:51:42 recht Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/14 20:51:46 kristerw Exp $
 
 .if !defined(XCURSOR_BUILDLINK2_MK)
 XCURSOR_BUILDLINK2_MK=	# defined
@@ -13,6 +13,8 @@ BUILDLINK_FILES.xcursor+=	include/X11/Xcursor/Xcursor.h
 BUILDLINK_FILES.xcursor+=	lib/libXcursor.*
 
 USE_X11=	yes
+
+BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8
 
 .include "../../x11/Xfixes/buildlink2.mk"
 .include "../../x11/Xrender/buildlink2.mk"
