@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2003/12/16 11:10:47 adam Exp $
+# $NetBSD: Makefile,v 1.57 2003/12/25 16:46:00 fredb Exp $
 #
 
 DISTNAME=	Wine-20031212
@@ -19,7 +19,8 @@ YACC=		${PREFIX}/bin/bison -y
 
 CONFLICTS=	rewind-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386 NetBSD-2*
+ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 Solaris*-i386
 
 BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
 
