@@ -1,5 +1,15 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.1 2004/05/22 12:42:15 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.2 2004/09/28 23:39:59 rh Exp $
 
-DISTNAME=	${MOZILLA}-i386-unknown-netbsdelf2.0-gtk2
-EXTRACT_SUFX=	.tar.bz2
-MOZ_PLATFORM=	netbsd
+BUILD_DEFS+=	MOZILLA_USE_LINUX
+
+.if defined(MOZILLA_USE_LINUX)
+DISTNAME=		${MOZILLA}-i686-linux-gtk2+xft
+MOZ_PLATFORM=		linux
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386
+MOZILLA_SCRIPT=		${.CURDIR}/../firefox-gtk2-bin/files/mozilla.sh
+.else
+DISTNAME=		${MOZILLA}-i386-unknown-netbsdelf2.0-gtk2
+EXTRACT_SUFX=		.tar.bz2
+MOZ_PLATFORM=		netbsd
+ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
+.endif
