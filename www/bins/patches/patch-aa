@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2002/07/07 13:21:53 simonb Exp $
+
+--- bins.orig	Mon Jun 10 05:54:12 2002
++++ bins
+@@ -237,13 +237,14 @@
+ 
+ );
+ 
+-# normally, you don't have to touch that...
+-my $localEncoding = `locale charmap`;
+-# ANSI is unspeakably primitive, keep LATIN1 instead
+-if ($localEncoding && ($localEncoding ne "ANSI_X3.4-1968")) {
+-  $defaultConfig{defaultEncoding} = $localEncoding;
+-  beVerboseN("Forcing encoding to $localEncoding", 2);
+-}
++# XXX no "locale" command in NetBSD
++# # normally, you don't have to touch that...
++# my $localEncoding = `locale charmap`;
++# # ANSI is unspeakably primitive, keep LATIN1 instead
++# if ($localEncoding && ($localEncoding ne "ANSI_X3.4-1968")) {
++#   $defaultConfig{defaultEncoding} = $localEncoding;
++#   beVerboseN("Forcing encoding to $localEncoding", 2);
++# }
+ my $local2htmlConverter;
+ if ($defaultConfig{defaultEncoding} ne $defaultConfig{htmlEncoding}){
+   $local2htmlConverter = Text::Iconv->new($defaultConfig{defaultEncoding},
