@@ -1,45 +1,42 @@
-# $NetBSD: Makefile,v 1.14 2001/02/25 04:18:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/03/28 02:46:07 jwise Exp $
 
-DISTNAME=	jakarta-tomcat.src
-PKGNAME=	jakarta-tomcat-3.1.1
+DISTNAME=	${PKGNAME}-src
+PKGNAME=	jakarta-tomcat-3.2.1
 CATEGORIES=	www
-MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v3.1.1/src/
-DISTFILES=	jakarta-tomcat-3.1.1-src.tar.gz jakarta-tools.tar.gz jakarta-ant.tar.gz
+MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v3.2.1/src/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	the Apache Project's Java Servlet 2.2 and JSP 1.1 server
 
-DIST_SUBDIR=	jakarta-3.1.1
+DEPENDS+=	jakarta-servletapi:../../www/jakarta-servletapi
 
 USE_JAVA=	yes
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
-WRKSRC=		${WRKDIR}/jakarta-tomcat-3.1.1-src
+CLASSPATH:=	${LOCALBASE}/lib/java/servlet.jar:${LOCALBASE}/lib/jaxp.jar:${LOCALBASE}/lib/parser.jar:${CLASSPATH}
+MAKEFILE=	build.xml
+MAKE_FLAGS+=	-Dpkgsrc.prefix=${PREFIX}
+MAKE_ENV+=	JAVA_HOME=${JAVA_HOME} CLASSPATH=${CLASSPATH}
+ALL_TARGET=	main
+INSTALL_TARGET=	dist
 
-JAKARTA_HOME=	${PREFIX}/jakarta
-MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
+DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
 
-MESSAGE_SUBST+=	TOMCAT_HOME=${JAKARTA_HOME}
+post-build:
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		${FILESDIR}/tomcat.sh > ${WRKDIR}/tomcat.sh
 
-post-patch:
-	${SED} -e s,@JAKARTA_HOME@,${JAKARTA_HOME},g \
-		< ${WRKSRC}/build.xml > ${WRKSRC}/build.tmp
-	${MV} ${WRKSRC}/build.tmp ${WRKSRC}/build.xml
-	${SED} -e s,@LOCALBASE@,${LOCALBASE},g \
-		< ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java \
-		> ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java.tmp
-	${MV} ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java.tmp \
-		${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java
+pre-install:
+	${SED}	-e "s|@CAT@|${CAT}|g"					\
+		-e "s|@CHMOD@|${CHMOD}|g"				\
+		-e "s|@CP@|${CP}|g"					\
+		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
-do-build:
-	cd ${WRKSRC}/../jakarta-ant && ${SH} bootstrap.sh
-	cd ${WRKSRC} && ${SH} ./build.sh
-
-do-install:
-	${INSTALL_DATA_DIR} ${JAKARTA_HOME}/tomcat
-	cd ${WRKSRC} && ${SH} ./build.sh dist
-	${CHMOD} +x ${JAKARTA_HOME}/tomcat/bin/*.sh
-	${RM} ${JAKARTA_HOME}/tomcat/bin/*.bat
-	${RM} ${JAKARTA_HOME}/tomcat/bin/tomcat.sh.orig
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/tomcat.sh ${PREFIX}/etc/rc.d/tomcat
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
+MAKE_PROGRAM=	${LOCALBASE}/bin/ant
