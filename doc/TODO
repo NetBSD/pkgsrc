@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.332 2003/03/04 17:52:37 wiz Exp $
+$NetBSD: TODO,v 1.333 2003/03/04 18:07:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -81,7 +81,6 @@ Suggested package updates
 	o apcupsd-3.8.6
 	o asp2php-0.76.15 [pkg/20506]
 	o atari800-1.3
-	o aumix-2.8
 	o balsa-1.4.2
 	o bind9-9.2.2
 	o binutils-2.13.2.1
