@@ -1,0 +1,12 @@
+*** fo_nfs.c.orig	Wed Feb  5 16:50:46 1997
+--- fo_nfs.c	Mon Jul  7 17:42:22 1997
+***************
+*** 142,147 ****
+--- 142,148 ----
+  	smbattr->atime = attr->atime;
+  	smbattr->mtime = attr->mtime;
+  	smbattr->ctime = attr->ctime;
++ 	smbattr->size  = attr->size;
+  }
+  
+  /* ------------------------------------------------------------------------- */
