@@ -1,12 +1,12 @@
-$NetBSD: patch-av,v 1.1 2000/09/06 12:31:50 tron Exp $
+$NetBSD: patch-av,v 1.2 2005/03/15 03:59:38 tv Exp $
 
---- compface/cmain.c.orig	Thu Oct 24 03:28:07 1991
-+++ compface/cmain.c	Wed Sep  6 14:26:33 2000
-@@ -33,8 +33,12 @@
+--- compface/cmain.c.orig	Wed Oct 23 22:28:07 1991
++++ compface/cmain.c
+@@ -33,12 +33,20 @@ char *cmdname;
  
  /* error handling definitions follow */
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__INTERIX)
 +#include <errno.h>
 +#else
  extern int errno, sys_nerr;
@@ -15,3 +15,11 @@ $NetBSD: patch-av,v 1.1 2000/09/06 12:31:50 tron Exp $
  
  extern void exit P((int)) ;
  
++#ifdef __INTERIX
++#define ERR strerror(errno)
++#else
+ #define ERR ((errno < sys_nerr) ? sys_errlist[errno] : "")
++#endif
+ #define INITERR(s) {(void)strcpy(fbuf, cmdname); (void)strcat(fbuf, ": ");\
+ 					(void)strcat(fbuf, (s));}
+ #define ADDERR(s) (void)strcat(fbuf, (s));
