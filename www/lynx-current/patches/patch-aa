@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2000/05/08 01:46:57 fredb Exp $
+$NetBSD: patch-aa,v 1.2 2000/05/09 00:55:00 fredb Exp $
 
 --- configure.orig	Sat Apr 22 20:16:38 2000
-+++ configure	Sun May  7 19:57:45 2000
++++ configure	Mon May  8 19:27:11 2000
+@@ -5666,7 +5666,7 @@
+   LIBS="$LIBS -L$cf_cv_use_libsocks"
+   ;;
+ esac
+-LIBS="$LIBS -lsocks"
++LIBS="$LIBS -lsocks4"
+ cat >> confdefs.h <<\EOF
+ #define SOCKS 1
+ EOF
 @@ -6597,7 +6597,10 @@
  echo "$ac_t""$cf_cv_screen" 1>&6
  
