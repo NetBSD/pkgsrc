@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1422 2004/03/13 20:54:16 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1423 2004/03/13 20:58:06 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -767,7 +767,7 @@ USE_DIGEST?=	yes
 
 .PHONY: uptodate-digest
 uptodate-digest:
-.if !empty(USE_DIGEST:M[nN][oO])
+.if !empty(USE_DIGEST:M[yY][eE][sS])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
 		{ cd ${_PKGSRCDIR}/pkgtools/digest;			\
