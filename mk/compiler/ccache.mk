@@ -1,11 +1,11 @@
-# $NetBSD: ccache.mk,v 1.17 2004/02/22 12:31:10 jlam Exp $
+# $NetBSD: ccache.mk,v 1.18 2004/10/09 03:48:31 tv Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKGPATH:Mdevel/ccache)
+.if !empty(PKGPATH:Mdevel/ccache) || !empty(PKGPATH:Mdevel/patch)
 IGNORE_CCACHE=	yes
 MAKEFLAGS+=	IGNORE_CCACHE=yes
 .endif
