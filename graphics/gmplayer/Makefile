@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2003/09/11 15:39:52 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.27 2003/09/25 11:23:00 tron Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
 		${MASTER_SITE_LOCAL:=mplayer}
@@ -48,7 +47,6 @@ CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin/gmplayer
-	${LN} -s ${PREFIX}/man/man1/mplayer.1   ${PREFIX}/man/man1/gmplayer.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/Skin
 .for SKIN in ${SKINS}
 	@${ECHO_MSG} "Installing skin ${SKIN}..."
