@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.8 2005/03/27 17:23:02 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.9 2005/03/27 17:43:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1684,7 +1684,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libwnck to 2.6.0 [jmmv 2004-04-01]
 	Updated libsoup to 2.1.8 [jmmv 2004-04-01]
 	Updated libgtkhtml to 2.6.0 [jmmv 2004-04-01]
-	Updated libgtop to 2.5.2 [jmmv 2004-04-01]
+	Updated libgtop2 to 2.5.2 [jmmv 2004-04-01]
 	Updated gtksourceview to 1.0.0 [jmmv 2004-04-01]
 	Updated metacity to 2.8.0 [jmmv 2004-04-01]
 	Updated gnome2-pixmaps to 2.6.0 [jmmv 2004-04-01]
