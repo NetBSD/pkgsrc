@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.2 1998/08/07 11:09:24 agc Exp $
+$NetBSD: patch-ag,v 1.3 1999/09/06 03:54:34 kim Exp $
 
 --- doio.c.orig	Mon Jul 28 21:08:11 1997
-+++ doio.c	Thu Apr 23 08:09:19 1998
++++ doio.c	Sun Sep  5 23:27:54 1999
 @@ -1333,7 +1333,7 @@
      char *a;
      I32 id, n, cmd, infosize, getinfo;
      I32 ret = -1;
 -#ifdef __linux__	/* XXX Need metaconfig test */
-+#if defined(__linux__) || defined(__NetBSD__)	/* XXX Need metaconfig test */
++#if defined(__linux__) || (defined(__NetBSD__) && (__NetBSD_Version__ < 104110000))	/* XXX Need metaconfig test */
      union semun unsemds;
  #endif
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ag,v 1.2 1998/08/07 11:09:24 agc Exp $
  	{
  	    struct semid_ds semds;
 -#ifdef __linux__	/* XXX Need metaconfig test */
-+#if defined(__linux__) || defined(__NetBSD__)	/* XXX Need metaconfig test */
++#if defined(__linux__) || (defined(__NetBSD__) && (__NetBSD_Version__ < 104110000))	/* XXX Need metaconfig test */
  /* linux (and Solaris2?) uses :
     int semctl (int semid, int semnum, int cmd, union semun arg)
         union semun {
@@ -25,7 +25,7 @@ $NetBSD: patch-ag,v 1.2 1998/08/07 11:09:24 agc Exp $
  #ifdef HAS_SEM
      case OP_SEMCTL:
 -#ifdef __linux__	/* XXX Need metaconfig test */
-+#if defined(__linux__) || defined(__NetBSD__)	/* XXX Need metaconfig test */
++#if defined(__linux__) || (defined(__NetBSD__) && (__NetBSD_Version__ < 104110000))	/* XXX Need metaconfig test */
          unsemds.buf = (struct semid_ds *)a;
  	ret = semctl(id, n, cmd, unsemds);
  #else
