@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3991 2003/12/05 23:26:19 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3992 2003/12/06 00:31:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4986,4 +4986,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libsoup-1.99.26 [xtraeme 2003-12-05]
 	Updated bitlbee to 0.82 [xtraeme 2003-12-05]
 	Updated libtasn1 to 0.2.6 [xtraeme 2003-12-05]
-	Added libgpg-error-0.6 [xtraeme 2003-12-05] 
+	Added libgpg-error-0.6 [xtraeme 2003-12-05]
+	Updated libgcrypt to 1.1.90 [xtraeme 2003-12-05]
+	Updated opencdk to 0.5.3 [xtraeme 2003-12-05] 
