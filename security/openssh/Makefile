@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2002/05/20 12:58:01 itojun Exp $
+# $NetBSD: Makefile,v 1.70 2002/05/23 09:35:10 itojun Exp $
 
 DISTNAME=		openssh-3.2.2p1
 PKGNAME=		openssh-3.2.2.1
@@ -48,6 +48,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
+# necessary until openssh distribution fixes ordering of "-lcrypt -lcrypto"
 CONFIGURE_ARGS+=	--with-md5-passwords
 
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
