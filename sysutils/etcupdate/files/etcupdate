@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.9 2001/12/04 12:34:38 martti Exp $
+# $NetBSD: etcupdate,v 1.10 2001/12/12 10:08:43 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -403,7 +403,7 @@ for i in `find ${TEMPROOT} -type f`; do
 done
 
 # Do we have files which were not processed?
-REMAINING=`find "${TEMPROOT}" -type f`
+REMAINING=`find "${TEMPROOT}" -type f -a ! -name \*.etcupdate.\*`
 if [ ! -z "${REMAINING}" ]; then
 	echo ""
 	echo "*** The following files need your attention:"
