@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/25 17:20:47 wiz Exp $
+
+--- configure.orig	2004-02-01 07:15:43.000000000 +0100
++++ configure
+@@ -2888,13 +2888,13 @@ _ACEOF
+ 
+ else
+ 
+-echo "$as_me:$LINENO: checking for SHA1_Init in -lcrypt" >&5
+-echo $ECHO_N "checking for SHA1_Init in -lcrypt... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for SHA1_Init in -lcrypto" >&5
++echo $ECHO_N "checking for SHA1_Init in -lcrypto... $ECHO_C" >&6
+ if test "${ac_cv_lib_crypt_SHA1_Init+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcrypt  $LIBS"
++LIBS="-lcrypto  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ #include "confdefs.h"
+@@ -2948,7 +2948,7 @@ if test $ac_cv_lib_crypt_SHA1_Init = yes
+ #define HAVE_LIBCRYPT 1
+ _ACEOF
+ 
+-  LIBS="-lcrypt $LIBS"
++  LIBS="-lcrypto $LIBS"
+ 
+ else
+ 
