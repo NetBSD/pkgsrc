@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/22 05:51:26 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:01:18 martti Exp $
 
 DISTNAME=	molden3.8
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.cmbi.kun.nl/~schaft/molden/molden.html
-COMMENT=	displaying MOLecular DENsity
+COMMENT=	Displaying MOLecular DENsity
 
 MAKEFILE=	makefile
 ALL_TARGET=	molden

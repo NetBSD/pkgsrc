@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:49:53 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:01:27 martti Exp $
 
 DISTNAME=	sch-20010224
 WRKSRC=		${WRKDIR}/sch/build
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.itojun.org/pub/misc/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	curses-based schedule management tool
+COMMENT=	Curses-based schedule management tool
 
 LICENSE=	no-commercial-use
 

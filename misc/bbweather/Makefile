@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:48:43 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:01:11 martti Exp $
 #
 
 DISTNAME=	bbweather-0.6
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.netmeister.org/apps/bbweather/
-COMMENT=	show current weather conditions
+COMMENT=	Show current weather conditions
 
 DEPENDS+=	wget>=1.7:../../net/wget
 
