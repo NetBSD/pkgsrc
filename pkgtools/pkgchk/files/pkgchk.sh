@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.37 2002/10/08 15:44:14 abs Exp $
+# $Id: pkgchk.sh,v 1.38 2003/05/06 13:14:37 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -309,7 +309,11 @@ unset PKG_PATH || true
 test -n "$MAKE" || MAKE="@MAKE@"
 test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
 if [ ! -f $MAKECONF ] ; then
-    MAKECONF=/etc/mk.conf
+    if [ -f /etc/mk.conf ] ; then
+	MAKECONF=/etc/mk.conf
+    else
+	MAKECONF=/dev/null
+    fi
 fi
 
 # grabbed from GNU configure
