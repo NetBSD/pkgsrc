@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7467 2004/10/19 01:06:51 grant Exp $
+$NetBSD: CHANGES,v 1.7468 2004/10/19 01:48:55 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4757,3 +4757,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cssc to 1.00 [seb 2004-10-18]
 	Updated clamav to 0.80 [grant 2004-10-19]
 	Updated p5-Mail-ClamAV to 0.11 [grant 2004-10-19]
+	Added rlpr-2.06 [sekiya 2004-10-19]
