@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/21 21:00:12 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/21 23:03:24 taca Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www2.pos.to/~tosh/ruby/rdtool/archive/
 
 MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
-COMMENT=	Editing mode for RD (Ruby Document Format).
+COMMENT=	Editing mode for RD (Ruby Document Format)
 
 .if defined(USE_XEMACS)
 DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
@@ -22,7 +22,6 @@ SITE_LISP=	share/emacs/site-lisp
 
 EXTRACT_ELEMENTS= ${DISTNAME}/utils/rd-mode.el
 DIST_SUBDIR=	ruby
-DISTINFO_FILE=	${.CURDIR}/../../textproc/ruby-rdtool/distinfo
 WRKSRC=		${WRKDIR}/${DISTNAME}/utils
 NO_PATCH=	# defined
 NO_CONFIGURE=	# defined
