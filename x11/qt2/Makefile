@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/09 17:21:49 skrll Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/13 12:41:38 skrll Exp $
 #
 
 DISTNAME=	qt2-${QTVERSION}
@@ -10,6 +10,7 @@ DISTFILES=	# empty
 
 DEPENDS+=	qt2-libs-${QTVERSION}:../../x11/qt2-libs
 DEPENDS+=	qt2-docs-${QTVERSION}:../../x11/qt2-docs
+DEPENDS+=	qt2-examples-${QTVERSION}:../../x11/qt2-examples
 DEPENDS+=	qt2-designer-${QTVERSION}:../../x11/qt2-designer
 
 USE_X11BASE=	yes
