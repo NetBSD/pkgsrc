@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1130 2003/12/05 22:29:23 xtraeme Exp $
+$NetBSD: TODO,v 1.1131 2003/12/05 23:07:01 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -119,7 +119,6 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o awstats-5.9
 	o balsa-1.4.4
-	o bitlbee-0.82 [xtraeme]
 	o bkedit-0.6.22
 	o blender-2.30
 	o bzflag-1.7g2
