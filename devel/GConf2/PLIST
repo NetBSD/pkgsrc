@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/12/14 19:44:38 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/01/23 17:51:24 jmmv Exp $
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
@@ -78,7 +78,6 @@ share/sgml/gconf/gconf-1.0.dtd
 @dirrm share/gconf/schemas
 @unexec ${RMDIR} -p %D/share/gconf 2>/dev/null || ${TRUE}
 @dirrm share/examples/GConf2
-@dirrm share/doc/html/gconf
 @dirrm lib/GConf/2
 @unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || ${TRUE}
 @dirrm include/gconf/2/gconf
