@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/08 14:05:06 markd Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/13 11:19:28 wulf Exp $
 
 DISTNAME=	kdebase-3.1.2
 CATEGORIES=	x11
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--without-cdparanoia
 CONFIGURE_ARGS+=	--without-lame
 CONFIGURE_ARGS+=	--without-vorbis
 CONFIGURE_ARGS+=	--without-java
+
+REPLACE_PERL=		kcontrol/fileshare/fileshareset
 
 .include "../../mk/bsd.prefs.mk"
 
