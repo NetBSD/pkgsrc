@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.734 2003/07/21 12:41:37 martti Exp $
+$NetBSD: TODO,v 1.735 2003/07/22 08:21:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -72,6 +72,7 @@ Suggested package updates
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o apache-1.3.28
+	o apel-10.6 [pkg/22212]
 	o autogen-5.5.5
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
@@ -82,6 +83,7 @@ Suggested package updates
 	o bzflag-1.7g0
 	o centericq-4.9.5
 	o cervisia-2.0
+	o citrix_ica-7.00.7757 [pkg/22209]
 	o courier-0.42.2
 	o courier-imap-2.0
 	o crafty-19.1
@@ -144,7 +146,7 @@ Suggested package updates
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0
-	o ipa-1.3.5
+	o ipa-1.3.5 [pkg/22208]
 	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
@@ -240,6 +242,7 @@ Suggested package updates
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
 	o tcpreplay-1.4.4
+	o teapop-0.3.6
 	o tightvnc-1.2.8
 	o tinyproxy-1.6.0 [pkg/22161]
 	o tkman-2.2
