@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/27 20:15:02 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/29 21:19:39 wennmach Exp $
 
 DISTNAME=	octave-2.1.33
 CATEGORIES=	math
@@ -13,10 +13,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
 COMMENT=	High-level language, primarily intended for numerical computations
 
+BUILD_DEPENDS+= teTeX>=1.0.7:../../print/teTeX
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	readline>=4.0:../../devel/readline
 
-CONFLICTS=	octave-2.0.*
+CONFLICTS+=	octave-2.0.*
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
@@ -37,7 +38,7 @@ OCTAVE_DOC=	faq/Octave-FAQ.ps interpreter/octave.ps \
 		liboctave/liboctave.ps refcard/refcard-a4.ps \
 		refcard/refcard-legal.ps  refcard/refcard-letter.ps
 OCTAVE_HTML=	faq/Octave-FAQ_toc.html interpreter/octave_*.html \
-		liboctave/liboctave_*.html 
+		liboctave/liboctave_*.html
 
 post-install:
 .for file in ${LIBOCTAVE_INFO}
