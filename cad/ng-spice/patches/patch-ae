@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/11/14 14:28:14 dmcmahill Exp $
+
+--- configure.orig	Sun Nov  5 12:25:24 2000
++++ configure	Sat Nov 11 18:27:40 2000
+@@ -4288,5 +4288,5 @@
+ 
+ cat >> confdefs.h <<EOF
+-#define NGSPICEDATADIR "`echo $dprefix/share/ng-spice`" 
++#define NGSPICEDATADIR "`echo $dprefix/share/ng-spice-rework`" 
+ EOF
+ 
