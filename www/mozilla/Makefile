@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/02/01 11:39:45 frueauf Exp $
+# $NetBSD: Makefile,v 1.22 1999/02/20 22:48:45 hubertf Exp $
 #
 
 DISTNAME=	mozilla-19981008
@@ -15,8 +15,6 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_MOTIF=	yes
-
-CONFLICTS=	mozilla-*
 
 MOZ_OBJDIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla

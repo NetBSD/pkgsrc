@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:51 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/02/20 22:48:32 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -11,8 +11,6 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 
 DEPENDS=	xpm-3.4k:../../graphics/xpm
-
-CONFLICTS=	xpdf-0.7a
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${X11BASE}/include"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/01/30 23:18:52 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/02/20 22:48:35 hubertf Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -9,8 +9,6 @@ MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
-
-CONFLICTS=	rat-3.0.24
 
 RESTRICTED=	"Contains DES encryption"
 MIRROR_DISTFILE=no

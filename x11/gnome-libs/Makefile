@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/01/30 23:18:56 agc Exp $
+# $NetBSD: Makefile,v 1.15 1999/02/20 22:48:47 hubertf Exp $
 #
 
 DISTNAME=	gnome-libs-0.99.3
@@ -14,8 +14,6 @@ DEPENDS+=	imlib-1.9.0:../../graphics/imlib
 DEPENDS+=	ORBit-0.3.90:../../corba/ORBit
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
-
-CONFLICTS=	gnome-libs-*
 
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes

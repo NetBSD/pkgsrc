@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/01/30 23:18:46 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/02/20 22:48:29 hubertf Exp $
 #
 
 DISTNAME=		unix02b4
@@ -12,8 +12,6 @@ HOMEPAGE=		http://internetter.com/titan/mess/
 
 DEPENDS=		unzip-5.40:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-CONFLICTS=		xmess-0.1
 
 NOT_FOR_ARCHS=		alpha	#gcc lossage
 

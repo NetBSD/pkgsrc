@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/08/20 15:16:47 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1999/02/20 22:48:27 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
@@ -9,8 +9,6 @@ MASTER_SITES=   ${MASTER_SITE_GNU}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/make/make.html
-
-CONFLICTS=	gmake-3.75 gmake-3.76.1
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes

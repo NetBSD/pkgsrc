@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/01/30 23:18:58 agc Exp $
+# $NetBSD: Makefile,v 1.23 1999/02/20 22:48:48 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -11,9 +11,6 @@ HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	Mesa-3.0:../../graphics/Mesa
-
-CONFLICTS=	xlockmore-4.07 xlockmore-4.08 xlockmore-4.09 xlockmore-4.10 \
-		xlockmore-4.11
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-mesagl --without-motif --without-sx \

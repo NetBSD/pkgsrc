@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/02/04 14:54:25 frueauf Exp $
+# $NetBSD: Makefile,v 1.25 1999/02/20 22:48:27 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
-
-CONFLICTS=	emacs-20.2
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
