@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/20 10:09:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/20 10:09:38 xtraeme Exp $
 #
 
 DISTNAME=	acid-0.9.6b23
@@ -16,7 +16,6 @@ DEPENDS+=	php-jpgraph>=1.8:../../graphics/php-jpgraph
 DEPENDS+=	php-gd>=4.0.4:../../graphics/php4-gd
 DEPENDS+=	php-sockets>=4.0.4:../../net/php4-sockets
 
-USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 NO_BUILDLINK=	yes
 WRKSRC=		${WRKDIR}/acid
