@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/29 10:01:33 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/08 05:25:12 snj Exp $
 #
 
 DISTNAME=	sybperl-2.16
@@ -10,7 +10,7 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://www.mbay.net/~mpeppler/
 COMMENT=	Perl modules for using Sybase/MS-SQL databases
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Sybase/.packlist
 
 BUILD_DEFS+=		USE_SYBASE_OPENCLIENT
@@ -31,7 +31,7 @@ PERL5_LDFLAGS+=		-Wl,${RPATH_FLAG}${_SYBASE}/lib
 MAKE_ENV+=		SYBASE=${_SYBASE}
 
 .if !defined(USE_SYBASE_OPENCLIENT)
-.  include "../../databases/freetds/buildlink2.mk"
+.  include "../../databases/freetds/buildlink3.mk"
 .endif
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/09 12:28:14 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/08 05:25:12 snj Exp $
 #
 
 DISTNAME=		DBD-Google-0.11
@@ -9,13 +9,13 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Perl DBI/DBD driver for using Google as a datasource
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/Google/.packlist
 
 BUILDLINK_DEPENDS.p5-DBI?=	p5-DBI>=1.39
 
-.include "../../databases/p5-DBI/buildlink2.mk"
-.include "../../net/p5-Net-Google/buildlink2.mk"
+.include "../../databases/p5-DBI/buildlink3.mk"
+.include "../../net/p5-Net-Google/buildlink3.mk"
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
