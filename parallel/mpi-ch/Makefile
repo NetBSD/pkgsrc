@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/04/09 12:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/04/10 19:31:27 wennmach Exp $
 
 DISTNAME=		mpich-1.2.1
 CATEGORIES=		parallel
@@ -26,9 +26,6 @@ CONFIGURE_ARGS+=	--disable-f90 --disable-f90modules
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(${WRKDIR}/with-java)
-PLIST_SRC+=		${PKGDIR}/PLIST.java
-.endif
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 post-build:
@@ -51,3 +48,7 @@ post-install:
 	@${CHMOD} 755 ${PREFIX}/sbin/mpiuninstall
 
 .include "../../mk/bsd.pkg.mk"
+
+.if exists(${WRKDIR}/with-java)
+PLIST_SRC+=		${PKGDIR}/PLIST.java
+.endif
