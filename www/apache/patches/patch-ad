@@ -1,0 +1,15 @@
+$Id: patch-ad,v 1.1 1998/10/05 19:55:27 cjs Exp $
+
+This patch is necessary for listening on multiple ports safely. It has
+been submitted to the apache group, the gnats ID is os-netbsd/3120.
+
+--- src/include/ap_config.h~	Thu Sep 17 23:49:12 1998
++++ src/include/ap_config.h	Mon Oct  5 09:41:28 1998
+@@ -592,6 +592,7 @@
+ #define HAVE_MMAP 1
+ #define USE_MMAP_SCOREBOARD
+ #define USE_MMAP_FILES
++#define USE_FLOCK_SERIALIZED_ACCEPT
+ #endif
+ 
+ #elif defined(UTS21)
