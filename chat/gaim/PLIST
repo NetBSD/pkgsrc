@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2003/07/17 16:13:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/07/19 10:58:32 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -65,6 +65,7 @@ lib/libgaim-remote.la
 lib/libgaim-remote.so
 lib/libgaim-remote.so.0
 lib/libgaim-remote.so.0.0
+man/man1/gaim-remote.1
 man/man1/gaim.1
 share/applications/gaim.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gaim.mo
@@ -73,6 +74,7 @@ ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gaim.mo
