@@ -1,0 +1,12 @@
+--- gdbm.texinfo.BAK	Sun Oct 26 03:45:23 1997
++++ gdbm.texinfo	Sun Oct 26 03:46:09 1997
+@@ -2,6 +2,9 @@
+ @comment %**start of header (This is for running Texinfo on a region.)
+ @setfilename gdbm.info
+ @settitle gdbm
++@direntry
++* gdbm: (gdbm).			GNU database management routines.
++@end direntry
+ @c @setchapternewpage odd
+ @comment %**end of header (This is for running Texinfo on a region.)
+ 
