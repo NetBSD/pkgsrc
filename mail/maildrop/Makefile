@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/26 16:35:30 wiz Exp $
 #
 
 DISTNAME=	maildrop-1.2.2
@@ -9,9 +9,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.flounder.net/~mrsam/maildrop/
 COMMENT=	mail delivery agent with filtering abilities
 
-.if make(install-run-depends)	# only needed for building
-USE_PERL5=	YES
-.endif
+BUILD_DEPENDS+=	perl>=5.6.0:../../lang/perl5
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-db=db
