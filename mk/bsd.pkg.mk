@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1439 2004/04/11 20:17:37 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1440 2004/04/12 20:48:07 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -4630,6 +4630,7 @@ print-PLIST:
 			if ('$$genlinks') print $$0;			\
 			next;						\
 		}							\
+		${PRINT_PLIST_AWK}					\
 		{ print $$0; }'
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	for i in `${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print\
@@ -4643,7 +4644,9 @@ print-PLIST:
 		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
 			${ECHO} @exec \$${MKDIR} %D/$$i ;		\
 		fi ;							\
-		${ECHO} @dirrm $$i ;					\
+		${ECHO} @dirrm $$i | ${AWK} '				\
+			${PRINT_PLIST_AWK}				\
+			{ print $$0; }' ;				\
 	done								\
 	| ${AWK} '${_PRINT_PLIST_AWK_SUBST} { print $$0; }'
 .endif # target(print-PLIST)
