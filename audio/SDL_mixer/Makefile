@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/05 22:44:04 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/08 03:00:29 jlam Exp $
 #
 
 DISTNAME=		SDL_mixer-1.2.5
@@ -27,8 +27,8 @@ CFLAGS=			-DPREFIX=\"\\\"${PREFIX}\\\"\"
 INSTALLATION_DIRS=	bin
 
 post-install:
-	${PKGLIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playmus ${PREFIX}/bin
-	${PKGLIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playwave ${PREFIX}/bin
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playmus ${PREFIX}/bin
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playwave ${PREFIX}/bin
 
 .include "../../audio/libogg/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

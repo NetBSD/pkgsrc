@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/05 12:04:20 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/08 03:00:29 jlam Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -34,11 +34,11 @@ MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .endif
 
 do-install:
-	cd ${WRKSRC}; ${PKGLIBTOOL} ${INSTALL_DATA} libwrap.la ${PREFIX}/lib
-	cd ${WRKSRC}; ${PKGLIBTOOL} ${INSTALL_PROGRAM} \
+	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_DATA} libwrap.la ${PREFIX}/lib
+	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_PROGRAM} \
 		tcpdmatch try-from safe_finger tcpdchk ${PREFIX}/bin
 	cd ${WRKSRC}; ${INSTALL_DATA} tcpd.h ${PREFIX}/include
-	cd ${WRKSRC}; ${PKGLIBTOOL} ${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec
+	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec
 	cd ${WRKSRC}; ${INSTALL_DATA} *.3 ${PREFIX}/man/man3
 	cd ${WRKSRC}; ${INSTALL_DATA} *.5 ${PREFIX}/man/man5
 	cd ${WRKSRC}; ${INSTALL_DATA} *.8 ${PREFIX}/man/man8
