@@ -1,9 +1,13 @@
-$NetBSD: patch-bv,v 1.2 1998/08/07 11:09:17 agc Exp $
+$NetBSD: patch-bv,v 1.3 2000/04/05 14:32:53 pooka Exp $
 
---- config/unix/Config/rtt.make.orig	Fri Jun 19 04:54:16 1998
-+++ config/unix/Config/rtt.make	Fri Jun 19 04:54:24 1998
-@@ -29,3 +29,3 @@
+--- config/unix/Config/rtt.make.orig	Thu Jul  1 20:36:41 1999
++++ config/unix/Config/rtt.make	Wed Apr  5 16:26:31 2000
+@@ -27,7 +27,7 @@
+ rtt:	$(OBJ)
+ 	$(CC) $(LDFLAGS) -o rtt $(OBJ)
  	cp rtt ../../bin
 -	strip ../../bin/rtt
 +#	strip ../../bin/rtt
  
+ library:	$(OBJ)
+ 		rm -rf rtt.a
