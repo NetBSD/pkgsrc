@@ -1,0 +1,11 @@
+$NetBSD: patch-af,v 1.3 2003/12/31 03:10:39 xtraeme Exp $
+
+--- src/bzadmin/StdBothUI.cxx.orig  Tue Dec  9 08:38:14 2003
++++ src/bzadmin/StdBothUI.cxx   Wed Dec 31 02:55:48 2003
+@@ -20,6 +20,7 @@
+ #include <ws2tcpip.h>
+ #include <wincon.h>
+ #else
++#include <sys/types.h>
+ #include <sys/select.h>
+ #endif
