@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4175 2003/12/18 11:06:27 adam Exp $
+$NetBSD: CHANGES,v 1.4176 2003/12/18 11:25:21 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5227,3 +5227,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ggv2 to 2.4.0.2 [xtraeme 2003-12-18]
 	Updated libgnomeprint to 2.4.2 [adam 2003-12-18]
 	Updated libgnomeprintui to 2.4.2 [adam 2003-12-18]
+	Updated cgoban-java to 2.5.5 [rh 2003-12-18]
