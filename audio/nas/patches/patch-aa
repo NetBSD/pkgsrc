@@ -16,19 +16,6 @@
  
  #endif						/* SYSV else not */
  #endif						/* VMS else not */
---- ./clients/audio/auedit/auedit.c.orig	Sun May 17 17:15:34 1998
-+++ ./clients/audio/auedit/auedit.c	Sun May 17 17:16:15 1998
-@@ -77,8 +77,10 @@
- #include "pause.xbm"
- 
- #define	APP_CLASS		"Auedit"
-+#ifndef __NetBSD__
- #define LITTLE_ENDIAN 		(*(char *) &g->endian == 1)
- #define BIG_ENDIAN 		(!LITTLE_ENDIAN)
-+#endif /* !__NetBSD__ */
- #define SELECTION_HEADER_SIZE	4
- #define DEFAULT_FREQUENCY	8000
- #define ZOOM_SCALE		2
 --- ./clients/audio/auedit/Graph.c.orig	Sun May 17 17:22:27 1998
 +++ ./clients/audio/auedit/Graph.c	Sun May 17 19:40:41 1998
 @@ -28,7 +28,12 @@
@@ -153,20 +140,6 @@
  InstallMultiple($(HEADERS),$(INCDIR))
  #if ProjectX >= 5
  InstallNonExecFile(AuErrorDB,$(LIBDIR))
---- ./lib/audio/fileutil.h.orig	Sun May 17 17:12:26 1998
-+++ ./lib/audio/fileutil.h	Sun May 17 17:13:50 1998
-@@ -58,9 +58,11 @@
- #endif
- #endif /* _FUNCPROTOBEGIN */
- 
-+#ifndef __NetBSD__
- #define LITTLE_ENDIAN 		(*(char *) &endian)
- #define BIG_ENDIAN 		(!LITTLE_ENDIAN)
- static int      endian = 1;
-+#endif /* !__NetBSD__ */
- 
- /* byte swap a AuInt32 */
- #define swapl(x, n) { n = ((char *) (x))[0];\
 --- ./lib/audio/Astreams.c.orig	Sun May 17 19:34:53 1998
 +++ ./lib/audio/Astreams.c	Sun May 17 19:36:13 1998
 @@ -51,8 +51,11 @@
