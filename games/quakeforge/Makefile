@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/17 03:04:03 snj Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/18 03:03:59 snj Exp $
 
 DISTNAME=		quakeforge-0.5.4
 CATEGORIES=		games
@@ -11,6 +11,7 @@ COMMENT=		Improved Quake engine
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 CONFIGURE_ARGS+=	--with-cpp="${CPP} %d %i %o"
+CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
