@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1357 2004/01/25 07:47:00 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1358 2004/01/25 10:36:15 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2348,7 +2348,8 @@ do-configure:
 	    INSTALL_DATA="${INSTALL_DATA}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+	    ${CONFIGURE_ENV} ${CONFIG_SHELL} \
+	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .    endfor
 .  endif
 .  if defined(USE_IMAKE)
