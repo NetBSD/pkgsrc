@@ -1,0 +1,4 @@
+PAG is a ncurses based game that allows you to create your own
+maps and play with them, it have few features like moving-platforms,
+enemies, and few rules to open/close doors, items like air, life
+points, jump, etc.

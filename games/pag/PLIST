@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/11 22:53:24 zuntum Exp $
+bin/pag
+bin/pag_intro
+share/doc/pag/README.cat
+share/doc/pag/TODO
+share/pag/levels/001.pag
+share/pag/levels/001_2.pag
+share/pag/levels/002.pag
+share/pag/levels/003.pag
+share/pag/levels/004.pag
+share/pag/levels/jump.pag
+share/pag/levels/jump_blocks.pag
+share/pag/levels/loop.pag
+share/pag/levels/map.pag
+share/pag/levels/map2.pag
+share/pag/levels/trip/001.pag
+share/pag/levels/trip/002.pag
+share/pag/levels/trip/003.pag
+share/pag/levels/trip/004.pag
+share/pag/levels/trip/005.pag
+share/pag/levels/trip/006.pag
+share/pag/levels/trip/007.pag
+share/pag/levels/trip/008.pag
+@dirrm share/pag/levels/trip
+@dirrm share/pag/levels
+@dirrm share/pag
+@dirrm share/doc/pag
