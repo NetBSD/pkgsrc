@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/10/07 13:58:30 kei Exp $
+# $NetBSD: Makefile,v 1.39 2000/11/20 02:45:18 kim Exp $
 
 DISTNAME=		samba-2.0.7-ja-1.3
 PKGNAME=		samba-2.0.7.1.3
@@ -10,6 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 .if !exists(/usr/include/readline.h)
 DEPENDS+=		readline>=4.0:../../devel/readline
@@ -17,6 +18,7 @@ DEPENDS+=		readline>=4.0:../../devel/readline
 
 CONFLICTS+=		samba-2.0.7-ja-*
 
+USE_LIBINTL=		# defined
 GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.prefs.mk"
