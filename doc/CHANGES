@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4550 2004/01/22 12:53:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.4551 2004/01/22 13:40:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -397,3 +397,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added librsvg2-gtk2-2.5.0 [jmmv 2004-01-22]
 	Updated swfdec to 0.2.1nb7 [jmmv 2004-01-22]
 	Added swfdec-gtk2-0.2.1 [jmmv 2004-01-22]
+	Updated pango to 1.2.5nb1 [jmmv 2004-01-22]
