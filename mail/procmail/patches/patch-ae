@@ -1,0 +1,29 @@
+--- man/procmail.man-orig	Fri Apr 11 12:28:59 1997
++++ man/procmail.man	Thu Jul  9 13:04:00 1998
+@@ -215,11 +215,11 @@
+ to continue the rule, and the tab to separate the comments):
+ .Sx 4
+ R$*<@some.where>$*
+-        $#procmail $@/etc/procmailrcs/some.rc $:$1@some.where.procmail$2
++        $#procmail $@@LOCALBASE@/etc/procmailrcs/some.rc $:$1@some.where.procmail$2
+ R$*<@$*.procmail>$*
+         $1<@$2>$3       Already filtered, map back
+ .Ex
+-And /etc/procmailrcs/some.rc could be as simple as:
++And @LOCALBASE@/etc/procmailrcs/some.rc could be as simple as:
+ .Sx 6
+ :0                              # sink all junk mail
+ * ^Subject:.*junk
+@@ -228,9 +228,9 @@
+ :0                              # pass along all other mail
+ ! \-oi \-f "$@"
+ .Ex
+-Do watch out when sending mail from within the /etc/procmailrcs/some.rc file,
+-if you send mail to addresses which match the first rule again, you could
+-be creating an endless mail loop.
++Do watch out when sending mail from within the
++@LOCALBASE@/etc/procmailrcs/some.rc file, if you send mail to addresses which
++match the first rule again, you could be creating an endless mail loop.
+ .SH FILES
+ .TP 2.3i
+ .B /etc/passwd
