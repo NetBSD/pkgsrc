@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2002/07/23 12:08:43 agc Exp $
+# $NetBSD: Makefile,v 1.157 2002/08/20 15:45:56 grant Exp $
 
 COMMENT=	System utilities
 
@@ -96,6 +96,7 @@ SUBDIR+=	rtty
 SUBDIR+=	ruby-quota
 SUBDIR+=	safetynet
 SUBDIR+=	sarah
+SUBDIR+=	scsiinfo
 SUBDIR+=	service-config
 SUBDIR+=	setquota
 SUBDIR+=	sh-utils
