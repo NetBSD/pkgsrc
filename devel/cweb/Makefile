@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2000/12/13 22:27:11 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/28 04:27:42 jtb Exp $
 
-DISTNAME=	cweb-3.62
+DISTNAME=	cweb-3.63
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=web/cweb/}
 
@@ -16,7 +16,7 @@ EVAL_PREFIX+=	PREFIX=teTeX
 
 post-patch:
 	@for f in ${WRKSRC}/cweb.1 ; do \
-	${SED} -e 's:%%PREFIX%%:'${PREFIX}':g' < $$f > $$f.tmp \
+	${SED} -e 's:@PREFIX@:'${PREFIX}':g' < $$f > $$f.tmp \
 	&& ${MV} $$f.tmp $$f ; done
 
 do-install:
@@ -28,13 +28,19 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/cweb
 	${INSTALL_DATA} ${WRKSRC}/c++lib.w ${PREFIX}/share/cweb
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cweb
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/cweb
+	@for f in ${WRKSRC}/examples/*; do				\
+		i="${INSTALL_DATA} $$f ${PREFIX}/share/examples/cweb/";	\
+		${ECHO} $$i; $$i;					\
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cweb
-	${INSTALL_DATA} ${WRKSRC}/cwebman.tex ${PREFIX}/share/doc/cweb
+	@for f in cwebman.tex cwebman.dvi cweave.dvi ctangle.dvi; do	     \
+		j="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/cweb/"; \
+		${ECHO} $$j; $$j;					     \
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/cweb.el ${PREFIX}/share/emacs/site-lisp
 
 post-install:
-	@mktexlsr
+	mktexlsr
 
 .include "../../mk/bsd.pkg.mk"

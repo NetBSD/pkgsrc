@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/11/25 17:23:27 jtb Exp $
+$NetBSD: md5,v 1.2 2001/01/28 04:27:43 jtb Exp $
 
-MD5 (cweb-3.62.tar.gz) = 0678c29c6c2c5328fe4e17c32a33a178
+MD5 (cweb-3.63.tar.gz) = 3f49917d40f5c1152bd3498509563fdb
