@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1598 2005/03/13 09:30:31 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1599 2005/03/16 02:09:54 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -297,7 +297,7 @@ ALL_ENV+=	CPPFLAGS=${CPPFLAGS:Q}
 ALL_ENV+=	CXX=${CXX:Q}
 ALL_ENV+=	CXXFLAGS=${CXXFLAGS:Q}
 ALL_ENV+=	COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG:Q}
-ALL_ENV+=	F77=${F77:Q}
+ALL_ENV+=	F77=${FC:Q}
 ALL_ENV+=	FC=${FC:Q}
 ALL_ENV+=	FFLAGS=${FFLAGS:Q}
 ALL_ENV+=	LDFLAGS=${LDFLAGS:Q}
