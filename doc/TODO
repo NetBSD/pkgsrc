@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.605 2003/05/30 15:28:43 jmmv Exp $
+$NetBSD: TODO,v 1.606 2003/06/02 10:32:22 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -284,7 +284,7 @@ Suggested package updates
 	o zenicb 1.31 (needs merge with lots of local changes)
 
 Infrastructure problems which need addressing
-========================================
+=============================================
 
 	o fix lang/gcc to not look in ${PREFIX}/include (and lib) for
 	  header files and libraries, as this defeats the purpose of
