@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/12/03 01:27:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/12/26 15:59:56 garbled Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -31,12 +31,24 @@ do-install:
 .include "../../mk/bsd.prefs.mk"
 
 benchmark:
+.if exists(${PREFIX}/bin/lmbench/hello)
 .if defined(BATCH)
-	@${ECHO} "*** This benchmark may only be run in non-batch mode" ; \
-	exit 1
+	@${ECHO} "*** This benchmark should only be run in non-batch mode" ; \
+	if [ `id -u` != 0 ]; then echo "This benchmark must be run as root!" ; exit 1 ; fi ; \
+	@${SED} -e 's|@wrksrc@|${WRKSRC}|' < ${FILESDIR}/setup.answers | \
+	(cd ${WRKSRC}/src; ${GMAKE} results)
 .else
 	@if [ `id -u` != 0 ]; then echo "This benchmark must be run as root!" ; exit 1 ; fi
 	@cd ${WRKSRC}/src; ${GMAKE} results
 .endif
+.else
+	@${ECHO} "*** This benchmark must be installed to run" ; \
+	exit 1
+.endif
+
+results:
+	-@${MKDIR} /tmp/benches/`domainname`
+	-@cd ${PREFIX}/share/lmbench ; \
+	tar -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
 
 .include "../../mk/bsd.pkg.mk"

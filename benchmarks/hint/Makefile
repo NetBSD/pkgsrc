@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/12/03 01:27:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/12/26 15:59:56 garbled Exp $
 #
 # New ports collection makefile for:	hint
 # Version required:	12 June 1998 (no version stamp)
@@ -26,6 +26,10 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/hint.1 ${PREFIX}/man/man1
 
 benchmark:
-	cd ${WRKSRC} ; mkdir -p data ; ./DOUBLE
+	cd ${WRKSRC} ; mkdir -p data ; ./DOUBLE | tee hint.out
+
+results:
+	-@${MKDIR} /tmp/benches/`domainname`
+	-@cp ${WRKSRC}/hint.out /tmp/benches/`domainname`/hint.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

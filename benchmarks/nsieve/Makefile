@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/22 06:23:09 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/26 15:59:56 garbled Exp $
 
 DISTNAME=		nsieve.c
 PKGNAME=		nsieve-1.2b
@@ -21,6 +21,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nsieve ${PREFIX}/bin
 
 benchmark:
-	-@${WRKSRC}/nsieve
+	-@${WRKSRC}/nsieve | tee ${WRKSRC}/nsieve.out
+
+results:
+	-@${MKDIR} /tmp/benches/`domainname`
+	-@cp ${WRKSRC}/nsieve.out /tmp/benches/`domainname`/nsieve.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/22 05:26:33 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/26 15:59:55 garbled Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
@@ -25,6 +25,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/flops.doc ${PREFIX}/share/doc/flops
 
 benchmark:
-	-@${WRKSRC}/flops
+	-@${WRKSRC}/flops | tee ${WRKSRC}/flops.out
+
+results:
+	-@${MKDIR} /tmp/benches/`domainname`
+	-@cp ${WRKSRC}/flops.out /tmp/benches/`domainname`/flops.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"
