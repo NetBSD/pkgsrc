@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/10/29 10:24:16 seb Exp $
+# $NetBSD: Makefile,v 1.19 2001/12/04 06:14:59 jlam Exp $
 #
 
 DISTNAME=	cscope-15.3
@@ -14,7 +14,6 @@ USE_BUILDLINK_ONLY=	YES
 
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-flex
-AUTOMAKE_OVERRIDE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
