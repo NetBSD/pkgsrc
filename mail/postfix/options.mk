@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2004/11/30 20:54:38 jlam Exp $
+# $NetBSD: options.mk,v 1.13 2004/12/02 14:39:56 jlam Exp $
 
 # Global and legacy options
 
@@ -13,7 +13,6 @@ PKG_SUPPORTED_OPTIONS=	bdb inet6 ldap mysql mysql4 pcre pgsql sasl tls
 PKG_OPTIONS+=	bdb		# "hash" map type is mandatory
 .endif
 .if !empty(PKG_OPTIONS:Mbdb)
-USE_DB185=	no
 .  include "../../mk/bdb.buildlink3.mk"
 CCARGS+=	-DHAS_DB
 AUXLIBS+=	${BUILDLINK_LDFLAGS.${BDB_TYPE}} ${BDB_LIBS}
