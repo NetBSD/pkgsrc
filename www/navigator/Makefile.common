@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2001/10/01 15:50:08 abs Exp $
+# $NetBSD: Makefile.common,v 1.44 2001/11/27 14:11:51 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -6,7 +6,7 @@
 
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
-NS_VERS=	4.78
+NS_VERS=	4.79
 NS_ENCRYPTION=	us
 LDAP_VERS=	40
 
@@ -27,7 +27,7 @@ PLIST_ARCH=	solaris-sparc
 .if (${OS_VERSION} == 5.5.1) || (${OS_VERSION} == 5.6) || \
     (${OS_VERSION} == 5.7)
 DISTUNAME=	sparc-sun-solaris2.5.1
-DIST_DIR_NAME=	unsupported/sunos551
+DIST_DIR_NAME=	supported/sunos551
 WRKNAME=	sparc-sun-solaris2.5.1
 VENDOR_NAME=	Solaris 2.5.1
 .else
@@ -44,6 +44,7 @@ DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
 .endif
+NS_VERS=	4.78
 PLIST_ARCH=	osf-alpha
 DISTUNAME=	alpha-dec-osf4.0
 DIST_DIR_NAME=	supported/dec_unix40
