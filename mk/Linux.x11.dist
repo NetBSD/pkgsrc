@@ -1,4 +1,4 @@
-#     $NetBSD: Linux.x11.dist,v 1.16 2003/02/28 10:25:18 jmmv Exp $
+#     $NetBSD: Linux.x11.dist,v 1.17 2003/03/05 08:24:27 wiz Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -351,6 +351,10 @@
                 ..
             ..
             es
+                LC_MESSAGES
+                ..
+            ..
+            es_AR
                 LC_MESSAGES
                 ..
             ..
