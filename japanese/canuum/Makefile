@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/27 04:09:27 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/27 04:11:35 sakamoto Exp $
 #
 
 DISTNAME=	canuum-1.0
@@ -31,7 +31,7 @@ do-configure:
 	${MAKE} ${MAKE_ARGS} cannaconf.h; ${MAKE} ${MAKE_ARGS} depend)
 
 do-build:
-	@(cd ${WRKSRC}; make ${MAKE_ARGS} all)
+	@(cd ${WRKSRC}; ${MAKE} ${MAKE_ARGS} all)
 
 post-install:
 	@${INSTALL_MAN} ${WRKSRC}/canuum.jmn ${PREFIX}/man/ja_JP.EUC/man1/canuum.1
