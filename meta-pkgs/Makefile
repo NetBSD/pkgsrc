@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1999/04/01 16:08:40 garbled Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/09 19:31:07 hubertf Exp $
 #
 
 SUBDIR += web-server
 SUBDIR += edesktop
+SUBDIR += netbsd-doc
+SUBDIR += netbsd-doc-print
 
 .include "../mk/bsd.pkg.subdir.mk"
