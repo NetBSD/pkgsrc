@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/02/27 18:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/19 00:05:25 nra Exp $
 #
 
-DISTNAME=	base64
-PKGNAME=	base64-1.0
+DISTNAME=	base64-1.3
+PKGNAME=	${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fourmilab.ch/webtools/base64/
 
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.fourmilab.ch/webtools/base64/
 COMMENT=	encode and decode base64 files
 
 CONFLICTS=	openssl-*
+GNU_CONFIGURE=	yes
+ALL_TARGET=	prog
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/base64 ${PREFIX}/bin
