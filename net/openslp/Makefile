@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/19 09:04:16 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/11/26 09:27:14 jlam Exp $
 
 DISTNAME=	openslp-1.0.9a
 CATEGORIES=	net
@@ -37,8 +37,8 @@ post-install:
 	cd ${WRKSRC}/etc; for file in ${CONFS}; do			\
 		${INSTALL_DATA} $${file} ${EGDIR}/$${file};		\
 	done
-	cd ${WRKSRC}/doc; ${CP} -r rfc/* ${DOCDIR}
-	cd ${WRKSRC}/doc; ${CP} -r html/* ${HTMLDIR}
+	cd ${WRKSRC}/doc; ${CP} -R rfc/* ${DOCDIR}
+	cd ${WRKSRC}/doc; ${CP} -R html/* ${HTMLDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR} ${HTMLDIR}
 	${CHMOD} -R a-w ${DOCDIR} ${HTMLDIR}
 
