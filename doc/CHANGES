@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3626 2003/10/03 13:13:49 abs Exp $
+$NetBSD: CHANGES,v 1.3627 2003/10/03 13:54:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4060,4 +4060,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xpad to 1.12 [xtraeme 2003-10-03]
 	Updated loudmouth to 0.14 [xtraeme 2003-10-03]
 	Updated rconfig to 0.22 [abs 2003-10-03]
-
+	Updated p5-Template-Toolkit to 2.10 [wiz 2003-10-03]
