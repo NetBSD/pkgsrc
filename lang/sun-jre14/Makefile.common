@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2003/12/12 15:38:16 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.16 2003/12/12 17:17:20 jschauma Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -34,6 +34,24 @@ LDD=		${TRUE}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6[U-Z]*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
+
+_FETCH_MESSAGE= 							\
+	${ECHO} "======================================================================"; \
+	${ECHO} ; 							\
+	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing"; 	\
+	${ECHO} " ${COMMENT} must be fetched";				\
+	${ECHO} " into:"; 						\
+	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
+	${ECHO} " from:"; 						\
+	${ECHO} "	${DOWNLOAD} or"; 				\
+	${ECHO} "	${ARCHIVE}"; 					\
+	${ECHO} ; \
+	${ECHO} " Choose '32-bit/64-bit for Windows/Linux/Solaris SPARC' from"; \
+	${ECHO} " the '${SHORT}' column, accept the license, then choose 'Linux ";\
+	${ECHO} " self-extracting file'."; 				\
+	${ECHO} ; 							\
+	${ECHO} "======================================================================"
+
 
 post-fetch:
 	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
