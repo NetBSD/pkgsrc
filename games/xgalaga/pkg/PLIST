@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/01 13:25:29 frueauf Exp $
+bin/xgalaga
+share/xgalaga/README
+share/xgalaga/sounds/ddloo.raw
+share/xgalaga/sounds/explode.raw
+share/xgalaga/sounds/explode_big.raw
+share/xgalaga/sounds/firetorp.raw
+share/xgalaga/sounds/shield.raw
+share/xgalaga/sounds/smart.raw
+share/xgalaga/sounds/torphit.raw
+share/xgalaga/sounds/warp.raw
+share/xgalaga/levels/level1.xgl
+share/xgalaga/levels/level10.xgl
+share/xgalaga/levels/level11.xgl
+share/xgalaga/levels/level12.xgl
+share/xgalaga/levels/level13.xgl
+share/xgalaga/levels/level14.xgl
+share/xgalaga/levels/level15.xgl
+share/xgalaga/levels/level2.xgl
+share/xgalaga/levels/level3.xgl
+share/xgalaga/levels/level4.xgl
+share/xgalaga/levels/level5.xgl
+share/xgalaga/levels/level6.xgl
+share/xgalaga/levels/level7.xgl
+share/xgalaga/levels/level8.xgl
+share/xgalaga/levels/level9.xgl
+share/xgalaga/scores
+@unexec rm -f %D/share/xgalaga/scores
+@dirrm share/xgalaga/sounds
+@dirrm share/xgalaga/levels
+@dirrm share/xgalaga
