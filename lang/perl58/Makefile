@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/23 16:21:20 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2003/02/17 15:28:00 dillo Exp $
 
 .include "Makefile.common"
 
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 CONFIGURE_ARGS+=	-Dcc="${CC:T}"
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
+TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -191,10 +192,6 @@ post-install:
 	eval `${PERL5} -V:installarchlib 2>/dev/null` && \
 		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
-
-test:
-	-@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
 .if ${MACHINE_ARCH} == "alpha"
 .  include "../../lang/gcc/buildlink2.mk"
