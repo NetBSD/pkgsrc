@@ -1,18 +1,13 @@
---- Makefile.orig	Sun Mar  8 21:35:00 1998
-+++ Makefile	Sun Mar  8 21:35:26 1998
-@@ -2,11 +2,11 @@
- # It has been tested under NetBSD 1.2.
- 
+--- Makefile.orig	Tue Mar 24 11:24:06 1998
++++ Makefile	Tue Mar 24 11:25:50 1998
+@@ -1,7 +1,7 @@
  # Change this if you have this stuff somewhere else.
--TCLINC = /usr/local/include
--TKINC  = /usr/local/include
--X11INC = /usr/X11R6/include
+-TCLINC = /usr/local/lib/tcl8.0
+-TKINC  = /usr/local/lib/tk8.0
+-X11INC = /usr/X11/include
 +TCLINC = ${LOCALBASE}/include/tcl8.0
 +TKINC  = ${LOCALBASE}/include/tk8.0
 +X11INC = ${X11BASE}/include
  
--CFLAGS = -D__FreeBSD__ -Wall -fPIC -O3 -I$(TCLINC) -I$(TKINC) -I$(X11INC)
-+CFLAGS = -D__FreeBSD__ -Wall -fPIC -O2 -I${TCLINC} -I${TKINC} -I${X11INC}
- 
- CC = gcc
+ CFLAGS = -D__FreeBSD__ -Wall -fPIC -O3 -I$(TCLINC) -I$(TKINC) -I$(X11INC)
  
