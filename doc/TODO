@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2534 2004/11/27 18:00:31 jschauma Exp $
+$NetBSD: TODO,v 1.2535 2004/11/27 18:01:27 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -1243,7 +1243,6 @@ Suggested package updates
 	o tmake-1.13
 	o tob-0.26
 	o top-3.6alpha8
-	o tor-0.0.8.1
 	o tpasm-1.2
 	o tpb-0.6.3
 	o transcalc-0.14
