@@ -92,6 +92,29 @@ user_exists()
 	return 1
 }
 
+listwrap()
+{
+	length=$1
+	buffer=
+	while read line; do
+		set -- $line
+		for word; do
+			case $buffer in
+			"")	buffer="$word" ;;
+			*)	buffer="$buffer  $word" ;;
+			esac
+			if ${TEST} ${#buffer} -gt $length; then
+				${ECHO} "	$buffer"
+				buffer=
+			fi
+		done
+	done
+	case $buffer in
+	"")	;;
+	*)	${ECHO} "	$buffer" ;;
+	esac
+}
+
 exitcode=0
 case $ACTION in
 ADD)
@@ -301,19 +324,16 @@ CHECK-REMOVE)
 		esac
 		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
 		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
-		case "$printed_header" in
-		yes)	;;
-		*)	printed_header=yes
-			${ECHO} "==========================================================================="
-			${ECHO} "The following users are no longer being used by ${PKGNAME},"
-			${ECHO} "and they can be removed if no other packages are using them:"
-			${ECHO} ""
-			;;
-		esac
-		${ECHO} "	${user}"
+		existing_users="$existing_users $user"
 	done
-	case "$printed_header" in
-	yes)	${ECHO} ""
+	case $existing_users in
+	"")	;;
+	*)	${ECHO} "==========================================================================="
+		${ECHO} "The following users are no longer being used by ${PKGNAME},"
+		${ECHO} "and they can be removed if no other packages are using them:"
+		${ECHO} ""
+		${ECHO} "$existing_users" | listwrap 40
+		${ECHO} ""
 		${ECHO} "==========================================================================="
 		exit 1
 		;;
@@ -331,19 +351,16 @@ CHECK-REMOVE)
 		esac
 		shadow_dir="${PKG_REFCOUNT_GROUPS_DBDIR}/$group"
 		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
-		case "$printed_header" in
-		yes)	;;
-		*)	printed_header=yes
-			${ECHO} "==========================================================================="
-			${ECHO} "The following groups are no longer being used by ${PKGNAME},"
-			${ECHO} "and they can be removed if no other packages are using them:"
-			${ECHO} ""
-			;;
-		esac
-		${ECHO} "	$group"
+		existing_groups="$existing_groups $group"
 	done
-	case "$printed_header" in
-	yes)	${ECHO} ""
+	case $existing_groups in
+	"")	;;
+	*)	${ECHO} "==========================================================================="
+		${ECHO} "The following groups are no longer being used by ${PKGNAME},"
+		${ECHO} "and they can be removed if no other packages are using them:"
+		${ECHO} ""
+		${ECHO} "$existing_groups" | listwrap 40
+		${ECHO} ""
 		${ECHO} "==========================================================================="
 		exit 1
 		;;
