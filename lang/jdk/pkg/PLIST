@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/01/11 12:35:09 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/02/01 02:21:56 jwise Exp $
 bin/i386/green_threads/javah_g
 bin/i386/green_threads/javah
 bin/i386/green_threads/java_g
@@ -103,32 +103,6 @@ include/java_lang_ClassLoader.h
 include/dlwrap.h
 include/java_lang_Thread.h
 include/java_lang_ThreadGroup.h
-lib/i386/green_threads/libXm.so.1.2
-lib/i386/green_threads/libXm.so
-lib/i386/green_threads/libjava_g.so
-lib/i386/green_threads/libjava_g.so.1.1.8
-lib/i386/green_threads/libjava.so
-lib/i386/green_threads/libjava.so.1.1.8
-lib/i386/green_threads/libmath_g.so
-lib/i386/green_threads/libmath.so
-lib/i386/green_threads/libzip_g.so
-lib/i386/green_threads/libzip.so
-lib/i386/green_threads/libnet_g.so
-lib/i386/green_threads/libnet.so
-lib/i386/green_threads/libagent_g.so
-lib/i386/green_threads/libagent.so
-lib/i386/green_threads/libmmedia_g.so
-lib/i386/green_threads/libmmedia.so
-lib/i386/green_threads/libawt_g.so
-lib/i386/green_threads/libawt_g.so.1.1.8
-lib/i386/green_threads/libawt.so
-lib/i386/green_threads/libawt.so.1.1.8
-lib/i386/green_threads/libtawt_g.so
-lib/i386/green_threads/libtawt.so
-lib/i386/green_threads/libjpeg_g.so
-lib/i386/green_threads/libjpeg.so
-lib/i386/green_threads/libsysresource_g.so
-lib/i386/green_threads/libsysresource.so
 lib/awt.properties
 lib/security/java.security
 lib/content-types.properties
@@ -525,9 +499,11 @@ index.html
 @dirrm lib/locale
 @dirrm lib/i386/green_threads
 @dirrm lib/i386
+@dirrm lib
 @dirrm include/netbsd
 @dirrm include/green_threads/include
 @dirrm include/green_threads
+@dirrm include
 @dirrm demo/i18n/code
 @dirrm demo/i18n/TextBound
 @dirrm demo/i18n/NumberFormat
@@ -597,3 +573,4 @@ index.html
 @dirrm demo
 @dirrm bin/i386/green_threads
 @dirrm bin/i386
+@dirrm bin
