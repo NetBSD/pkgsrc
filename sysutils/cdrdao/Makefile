@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/07 16:25:02 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/19 09:37:49 agc Exp $
 #
 
 DISTNAME=	cdrdao-1.1.3.src
@@ -9,10 +9,10 @@ MASTER_SITES=	http://www.ping.de/sites/daneb/
 MAINTAINER=	David Maxwell <david@maxwell.net>
 HOMEPAGE=	http://www.ping.de/sites/daneb/cdrdao.html
 
-BUILD_DEPENDS=  antlr:../../devel/pccts \
-		dlg:../../devel/pccts \
-		genmk:../../devel/pccts \
-		sor:../../devel/pccts
+BUILD_DEPENDS=  antlr:../../devel/pccts
+BUILD_DEPENDS+=	dlg:../../devel/pccts
+BUILD_DEPENDS+=	genmk:../../devel/pccts
+BUILD_DEPENDS+=	sor:../../devel/pccts
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
