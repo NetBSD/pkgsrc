@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/09 14:04:07 agc Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/03/08 19:52:52 minskim Exp $
 
 .if !defined(TK_BUILDLINK2_MK)
 TK_BUILDLINK2_MK=	# defined
@@ -20,7 +20,7 @@ BUILDLINK_FILES.tk+=		lib/libtkstub83.*
 
 USE_X11=	YES
 
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 
 # Make "-ltk" resolve into "-ltk83", so that we don't need to patch so
 # many Makefiles.

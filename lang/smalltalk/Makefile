@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/14 17:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/08 19:52:51 minskim Exp $
 
 DISTNAME=		smalltalk-2.1.4
 CATEGORIES=		lang
@@ -34,7 +34,7 @@ TEST_TARGET=		check
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 .include "../../databases/gdbm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
