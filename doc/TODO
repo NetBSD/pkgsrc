@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2706 2004/12/09 18:06:54 wiz Exp $
+$NetBSD: TODO,v 1.2707 2004/12/09 18:21:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -824,7 +824,6 @@ Suggested package updates
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.10
-	o p5-Regexp-Common-2.117
 	o p5-SQL-Statement-1.09
 	o p5-SVN-Web-0.38
 	o p5-SWF-File-0.37
