@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.192 2001/09/24 08:59:09 agc Exp $
+# $NetBSD: Packages.txt,v 1.193 2001/09/26 04:47:39 jmc Exp $
 ###########################################################################
 
 			==========================
@@ -2218,7 +2218,7 @@ Use of the audit-packages package is strongly recommended.
 The following message is displayed as part of the audit-packages
 installation procedure:
 
-	======================================================================
+        ======================================================================
 	You may wish to have the vulnerabilities file downloaded daily so that
 	it remains current.  This may be done by adding an appropriate entry
 	to the root users crontab(5) entry.  For example the entry
@@ -2235,7 +2235,7 @@ installation procedure:
 	if [ -x ${PREFIX}/sbin/audit-packages ]; then
 	        ${PREFIX}/sbin/audit-packages
 	fi
-	======================================================================
+        ======================================================================
 
 
 Note to package developers: When a vulnerability is found, this should be
