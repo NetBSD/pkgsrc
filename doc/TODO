@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1142 2003/12/07 19:04:30 wiz Exp $
+$NetBSD: TODO,v 1.1143 2003/12/07 19:18:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -286,7 +286,6 @@ Suggested package updates
 	o php-4.3.4
 	o plib-1.7.0
 	o ploticus-2.20
-	o popa3d-0.6.4
 	o postfix-2.0.16
 	o postgresql-7.4
 	o pureftpd-1.0.17
