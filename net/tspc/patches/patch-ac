@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/08/22 18:14:52 grant Exp $
+
+--- man/man8/tspc.8.orig	Wed May 30 06:01:50 2001
++++ man/man8/tspc.8
+@@ -85,7 +85,7 @@ for more information.
+ .Pp
+ .It Fl f Ar configuration_file
+ Specifies a different configuration file to be used in placed of
+-the default file /usr/local/tsp/etc/tspc.conf. The file format is
++the default file @PREFIX@/etc/tspc.conf. The file format is
+ detailed in 
+ .Xr tspc.conf 5
+  and lists the options available to customize the client.
