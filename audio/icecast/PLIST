@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/01/08 20:49:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/02/19 11:51:32 wiz Exp $
 bin/icecast
 etc/rc.d/icecast
 share/doc/icecast/AUTHORS
@@ -26,7 +26,6 @@ share/icecast/admin/stats.xsl
 share/icecast/web/status.xsl
 share/icecast/web/status2.xsl
 @dirrm share/icecast/web
-@dirrm share/icecast/doc
 @dirrm share/icecast/admin
 @dirrm share/icecast
 @dirrm share/doc/icecast
