@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8977 2005/01/30 11:21:49 agc Exp $
+$NetBSD: CHANGES,v 1.8978 2005/01/30 12:35:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -660,3 +660,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated qpopper to 4.0.5nb7 [xtraeme 2005-01-30]
 	Updated gawk to 3.1.4nb2 [minskim 2005-01-30]
 	Added mtscan-20050129 [agc 2005-01-30]
+	Updated pkg_alternatives to 1.2 [jmmv 2005-01-30]
