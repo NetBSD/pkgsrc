@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/01 10:17:35 cjep Exp $
-qt3/lib/libqssl.so
+@comment $NetBSD: PLIST,v 1.3 2004/04/17 21:24:58 snj Exp $
 qt3/lib/libqssl.a
 qt3/lib/libqssl.la
+qt3/lib/libqssl.so
