@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.661 2002/12/02 00:17:30 kristerw Exp $
+$NetBSD: CHANGES,v 1.662 2002/12/02 03:41:17 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3788,3 +3788,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated apcupsd to 3.8.5 [bouyer 2002-12-01]
 	Updated exctags to 5.4 [seb 2002-12-01]
 	Updated xmame to 0.62.1 [kristerw 2002-12-02]
+	Updated Canna-server to 3.5.2nb3 [itojun 2002-12-02]
