@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/11 10:47:16 agc Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/14 16:23:31 agc Exp $
 #
 
 DISTNAME=	ddos_scan
@@ -12,14 +12,6 @@ HOMEPAGE=	http://staff.washington.edu/dittrich/
 
 DECOMPRESS_CMD=	${CAT}
 ALL_TARGET=	default dds
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CPPFLAGS=""
-.elif ${OPSYS} == "NetBSD"
-MAKE_ENV+=	LIBS=""
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dds ${PREFIX}/sbin/dds
