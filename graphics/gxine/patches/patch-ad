@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/04/06 11:08:15 rh Exp $
+
+--- src/gtkxine.h.orig	Sun Mar  9 09:27:27 2003
++++ src/gtkxine.h
+@@ -26,6 +26,7 @@
+ #include <X11/X.h>
+ #include <X11/Xlib.h>
+ #include <X11/extensions/XShm.h>
++#include <pthread.h>
+ #include <xine.h>
+ 
+ #ifdef __cplusplus
