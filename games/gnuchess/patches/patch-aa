@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2000/03/26 08:29:25 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/10/15 01:53:40 jlam Exp $
 
 --- Makefile.in.orig	Sat Oct 23 11:43:36 1999
-+++ Makefile.in	Thu Feb 17 23:11:58 2000
++++ Makefile.in
 @@ -43,7 +43,7 @@
  
  prefix = @prefix@
  exec_prefix = @exec_prefix@
 -LIBDIR = $(prefix)/lib
-+LIBDIR = $(prefix)/share/gnuchess
++LIBDIR = $(prefix)/lib/gnuchess
  BINDIR = $(exec_prefix)/bin
  MANDIR = $(prefix)/man/man6
  MANEXT = .6

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2000/03/26 08:29:26 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/10/15 01:53:41 jlam Exp $
 bin/gnuchess
 bin/gnuchessx
-share/gnuchess/book.dat
-share/gnuchess/book.pgn
+lib/gnuchess/.directory
 share/doc/gnuchess/README
 @dirrm share/doc/gnuchess
-@dirrm share/gnuchess
+@dirrm lib/gnuchess
