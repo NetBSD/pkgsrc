@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1629 2004/04/17 15:47:21 wiz Exp $
+$NetBSD: TODO,v 1.1630 2004/04/17 16:49:09 snj Exp $
 
 Suggested new packages
 ======================
@@ -276,6 +276,7 @@ Suggested package updates
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
+	o openbox-3.2 [snj]
 	o openal-20040215
 	o openh323-1.12.2
 	o openoffice-1.1.1
