@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/01/06 04:03:16 abs Exp $
+$NetBSD: patch-ab,v 1.2 2000/04/06 15:42:42 wiz Exp $
 
---- output_linux.c.orig	Wed Jan  5 20:07:35 2000
-+++ output_linux.c	Wed Jan  5 20:08:30 2000
+--- output_linux.c.orig	Thu Mar 30 02:51:24 2000
++++ output_linux.c	Thu Apr  6 17:28:05 2000
 @@ -33,7 +33,7 @@
  #include <unistd.h>
  #include <fcntl.h>
@@ -9,5 +9,5 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/01/06 04:03:16 abs Exp $
 -#if defined(__OpenBSD__)
 +#if defined(__NetBSD__) || defined (__OpenBSD__)
  #include <soundcard.h>
- #else
- #include <sys/soundcard.h>
+ #elif defined(__FreeBSD__)
+ #include <machine/soundcard.h>
