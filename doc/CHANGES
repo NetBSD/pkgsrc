@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5319 2004/03/28 21:06:34 martin Exp $
+$NetBSD: CHANGES,v 1.5320 2004/03/28 21:12:13 mycroft Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1547,3 +1547,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated curl to 7.11.1 [xtraeme 2004-03-28]
 	Updated sodipodi to 0.34 [xtraeme 2004-03-28]
 	Added pulsar-0.1.1 [martin 2004-03-28]
+	Updated xine-ui to 0.9.23 [mycroft 2004-03-28]
