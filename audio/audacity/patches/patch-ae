@@ -1,22 +1,20 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
-
---- Makefile.in.orig	Mon Apr 30 01:07:29 2001
-+++ Makefile.in	Fri Jun 15 14:44:55 2001
+--- Makefile.in.orig	Sun Jul 29 03:17:54 2001
++++ Makefile.in	Tue Jul 31 19:28:20 2001
 @@ -8,7 +8,7 @@
  # from Makefile.in
  #
  
 -LIBS = @LIBS@
-+LIBS = @LIBS@ -lossaudio
++LIBS = @LIBS@ -lmpeg3 -lossaudio
  CFLAGS = @CFLAGS@ @CPPFLAGS@ -Iallegro
  CCC = @CXX@
  CC = @CC@
-@@ -101,7 +101,7 @@
- # rule for building libmpeg3 -- however, it's only built if selected in
- # the configure script
- mpeg3/libmpeg3.a:
--	make -C mpeg3
-+	$(MAKE) -C mpeg3
+@@ -82,7 +82,7 @@
+ 	$(OBJDIR)/prefs/SampleRatePrefs.cpp.o \
+ 	$(OBJDIR)/prefs/FileFormatPrefs.cpp.o \
+ 	$(OBJDIR)/prefs/DirectoriesPrefs.cpp.o \
+-	$(OBJDIR)/prefs/SpectrumPrefs.cpp.o @EXTRAOBJS@
++	$(OBJDIR)/prefs/SpectrumPrefs.cpp.o
  
- #
- # You can optionally "make dep" to make dependencies.
+ ########################################
+ # DEPENDENCIES
