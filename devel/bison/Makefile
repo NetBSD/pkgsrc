@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/04/10 13:51:23 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2002/08/22 09:31:59 wiz Exp $
 
 DISTNAME=		bison-1.35
 CATEGORIES=		devel
@@ -11,9 +11,10 @@ COMMENT=		GNU yacc(1) replacement
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK_ONLY=	# defined, though not really true
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext
+CONFIGURE_ARGS+=	--without-libiconv-prefix
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_DIR}
 
 # We set the timezone to "GMT" below to avoid rebuilds of the info files
