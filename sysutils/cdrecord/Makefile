@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/06/20 21:37:14 martin Exp $
+# $NetBSD: Makefile,v 1.58 2004/07/07 19:08:01 drochner Exp $
 
 DISTNAME=	cdrtools-2.00.3
 PKGNAME=	cdrecord-2.00.3
@@ -89,5 +89,6 @@ do-install:
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
 
+.include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
