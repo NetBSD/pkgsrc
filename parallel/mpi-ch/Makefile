@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/08 10:48:29 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/08 11:05:22 agc Exp $
 
 DISTNAME=		mpich
 PKGNAME=		mpich-1.1.1
@@ -16,7 +16,7 @@ USE_PERL5=		yes
 HAS_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
-CONFIGURE_ARGS=		-prefix=${PREFIX} -arch=${LOWER_OPSYS} -comm=ch_p4
+CONFIGURE_ARGS=		-prefix=${PREFIX} -arch=netbsd -comm=ch_p4
 CONFIGURE_ARGS+=	-nof77 -make=${GMAKE} -mpe -rsh=ssh -opt=-O -nodevdebug
 
 post-install:
