@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2000/04/15 23:50:33 mycroft Exp $
+$NetBSD: patch-aa,v 1.6 2000/04/27 16:45:13 mycroft Exp $
 
 --- sounds.c.orig	Mon Oct 21 14:33:55 1996
 +++ sounds.c	Sat Apr 15 19:33:31 2000
@@ -20,11 +20,3 @@ $NetBSD: patch-aa,v 1.5 2000/04/15 23:50:33 mycroft Exp $
            draw_handle( Y+1, X+14+dev_vol[dev_count].vol_left, FALSE, 4);
            if (STEREO(dev_nr))
               draw_handle( Y+2, X+14+dev_vol[dev_count].vol_right, FALSE, 4);          
-@@ -331,6 +331,7 @@
-     do { 
-        
-        status( ((locked  == TRUE) ? "  LOCKED  " : " UNLOCKED ")); 
-+       refresh();
-        ch = getch(); 
-        fflush(stdin); 
-        message("");

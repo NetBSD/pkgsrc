@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.3 2000/04/15 23:50:33 mycroft Exp $
+$NetBSD: patch-ad,v 1.4 2000/04/27 16:45:13 mycroft Exp $
 
 --- screens.c.orig	Mon Oct 21 14:18:25 1996
 +++ screens.c	Sat Apr 15 19:39:10 2000
-@@ -33,6 +33,7 @@
+@@ -25,6 +25,7 @@
+ #include "cam.h" 
+ 
+ #include <strings.h>
++#include <stdlib.h>
+ 
+ void finish(int sig)
+ {
+@@ -33,6 +34,7 @@
      endwin();
      clear();
      refresh();
@@ -10,12 +18,12 @@ $NetBSD: patch-ad,v 1.3 2000/04/15 23:50:33 mycroft Exp $
      if (sig != 0)
         exit(1);
  }
-@@ -40,15 +41,15 @@
+@@ -40,41 +42,46 @@
     
  void set_screen(void)
  {
 -   char dummy[COLS];
-+   char dummy[COLS + 1];
++   char *dummy;
     int left, right;
  
 -   left = ( COLS - 15 - strlen(VERSION_HIGH) - strlen(VERSION_LOW) ) / 2;
@@ -26,11 +34,19 @@ $NetBSD: patch-ad,v 1.3 2000/04/15 23:50:33 mycroft Exp $
     leaveok(stdscr ,TRUE);
     attrset(COLOR_PAIR( COLOR_SCREEN ) | A_BOLD);
 -   sprintf(dummy,"%*cCAM %s.%s for Linux%*c",left,' ',VERSION_HIGH,VERSION_LOW,right,' ');
-+   sprintf(dummy,"%*cCAM %s.%s for NetBSD%*c",left,' ',VERSION_HIGH,VERSION_LOW,right,' ');
++   asprintf(&dummy, "%*cCAM %s.%s for NetBSD%*c",left,' ',VERSION_HIGH,VERSION_LOW,right,' ');
     mvaddstr(0,0,dummy);
-    sprintf(dummy," Cpu's Audio Mixer %s.%s%*cauthor : Jan 'TWP' VANDENBERGHE (c)1994-1996 ",VERSION_HIGH,VERSION_LOW,COLS-20-45-strlen(VERSION_HIGH)-strlen(VERSION_LOW),' ');
-    mvaddstr(LINES-1,0,dummy );
-@@ -59,22 +60,25 @@
+-   sprintf(dummy," Cpu's Audio Mixer %s.%s%*cauthor : Jan 'TWP' VANDENBERGHE (c)1994-1996 ",VERSION_HIGH,VERSION_LOW,COLS-20-45-strlen(VERSION_HIGH)-strlen(VERSION_LOW),' ');
+-   mvaddstr(LINES-1,0,dummy );
+-   attrset(A_NORMAL | A_BOLD );
++   free(dummy);
++   asprintf(&dummy, " Cpu's Audio Mixer %s.%s%*cauthor : Jan 'TWP' VANDENBERGHE (c)1994-1996 ",VERSION_HIGH,VERSION_LOW,COLS-20-45-strlen(VERSION_HIGH)-strlen(VERSION_LOW),' ');
++   mvaddstr(LINES-1,0,dummy);
++   free(dummy);
++   attrset(A_NORMAL | A_BOLD);
+    mvaddstr(LINES-2,4,"Press 'h' for help");
+ }
+ 
  /* Draws the sliders */ 
  void draw_slider(int Y, int X, char *device) 
  { 
@@ -64,7 +80,7 @@ $NetBSD: patch-ad,v 1.3 2000/04/15 23:50:33 mycroft Exp $
  }
  
  /*
-@@ -87,26 +91,27 @@
+@@ -87,26 +94,27 @@
  {
     if ((level == 1 ) || ( level == 2 )) { 
        attrset(A_NORMAL  | A_ALTCHARSET); 
@@ -98,7 +114,7 @@ $NetBSD: patch-ad,v 1.3 2000/04/15 23:50:33 mycroft Exp $
       stdscr = initscr();
       if ( (COLS < 80) || (LINES < 25) ) {
          finish(0);
-@@ -181,9 +186,9 @@
+@@ -181,9 +189,9 @@
     char ch; 
     touchwin(stdscr); 
     help_win = newwin(15,50,(LINES - 15) / 2,(COLS - 50) / 2);
@@ -110,11 +126,3 @@ $NetBSD: patch-ad,v 1.3 2000/04/15 23:50:33 mycroft Exp $
     wattrset(help_win, A_NORMAL | A_BOLD);
     mvwaddstr(help_win,2,2," Left/Right : Lower/Higher "); 
     mvwaddstr(help_win,3,2," Up/Down    : Previous/Next "); 
-@@ -193,6 +198,7 @@
-    mvwaddstr(help_win,9,2," h : help "); 
-    mvwaddstr(help_win,11,2," ESC/q : exit "); 
-    mvwaddstr(help_win,13,8," Press key to leave help screen "); 
-+   wrefresh(help_win);
-    ch = wgetch(help_win); 
-    delwin(help_win); 
- } 
