@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/11/05 08:28:48 garbled Exp $
+$NetBSD: patch-ab,v 1.2 1998/11/13 15:44:46 tv Exp $
 --- xglyph/Makefile.in.orig	Sat Aug 15 10:02:40 1998
 +++ xglyph/Makefile.in	Wed Nov  4 19:37:15 1998
 @@ -15,7 +15,7 @@
@@ -15,9 +15,8 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/11/05 08:28:48 garbled Exp $
  	xglyph.c \
  
 -T1LIB  = ../lib/libt1.la
--T1LIBX = ../lib/libt1x.la
 +T1LIB  = -L${LOCALBASE}/lib -lt1
-+T1LIBX = ../lib/.libs/libt1x.a
+ T1LIBX = ../lib/libt1x.la
  XAWLIB = -lXaw -lXt -lXmu
  
  
