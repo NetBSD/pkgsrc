@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/07 05:16:40 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:21:49 wiz Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
+COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=		gettextize:../../devel/gettext

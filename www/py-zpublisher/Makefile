@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/22 20:01:54 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:22:36 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://classic.zope.org:8080/Documentation/Reference/ORB
+COMMENT=	The Zope ORB. Publishes a collection of Python objects as Web resources.
 
 DEPENDS+=	py-extclass>=2.2.2:../../lang/python
 

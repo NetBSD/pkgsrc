@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/13 19:36:26 tron Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/17 17:21:41 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
 DISTNAME=       analog-4.16
@@ -10,6 +10,7 @@ MASTER_SITES=   ${HOMEPAGE} \
 
 MAINTAINER=     tron@netbsd.org
 HOMEPAGE=	http://www.analog.cx/
+COMMENT=	Extremely fast program for analysing WWW logfiles
 
 ALL_TARGET=	analog
 MAKE_ENV+=	PREFIX=${PREFIX}

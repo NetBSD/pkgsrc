@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:40 wiz Exp $
 #
+
+COMMENT=		small, fast and light-weight window manager
 
 USE_XPM=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/02/09 03:00:00 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2001/02/17 17:22:14 wiz Exp $
 #
 
 DISTNAME=		lynx2.8.4dev.16
@@ -11,6 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		fredb@netbsd.org
 HOMEPAGE=		http://lynx.browser.org/
+COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
