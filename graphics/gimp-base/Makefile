@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/04 14:47:36 agc Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/24 09:34:37 jlam Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
@@ -15,11 +15,13 @@ COMMENT=		Image manipulation program similar to Photoshop[tm]
 
 CONFLICTS+=		gimp<=1.2.3
 
-USE_BUILDLINK_ONLY=	yes
+BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
+
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
@@ -37,56 +39,19 @@ CONFIGURE_ENV+=		GAP_DECODE_MPEG="gap_decode_mpeg"
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 MAKE_ENV+=		X11BASE=${X11BASE}
-
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
-CONFIG_EXISTS!=		/bin/sh -c "type gtk-config glib-config > /dev/null"; \
-			if [ $$? = 0 ]; then echo yes; else echo no; fi
-.if (${CONFIG_EXISTS} == "yes") 
-# make sure the installed "gimptool" doesn't refer to .buildlink
-ORIG_GTK_CFLAGS!=	gtk-config --cflags
-GIMPTOOL_SUBST=		-e "s|@ORIG_GTK_CFLAGS@|${ORIG_GTK_CFLAGS}|g"
-ORIG_GTK_LIBS!=		gtk-config --libs
-GIMPTOOL_SUBST+=	-e "s|@ORIG_GTK_LIBS@|${ORIG_GTK_LIBS}|g"
-ORIG_GLIB_CFLAGS!=	glib-config --cflags
-GIMPTOOL_SUBST+=	-e "s|@ORIG_GLIB_CFLAGS@|${ORIG_GLIB_CFLAGS}|g"
-ORIG_GLIB_LIBS!=	glib-config --libs
-GIMPTOOL_SUBST+=	-e "s|@ORIG_GLIB_LIBS@|${ORIG_GLIB_LIBS}|g"
-ORIG_CFLAGS=		-I${PREFIX}/include -I${X11BASE}/include
-GIMPTOOL_SUBST+=	-e "s|@ORIG_CFLAGS@|${ORIG_CFLAGS}|g"
-ORIG_LDFLAGS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib
-ORIG_LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
-GIMPTOOL_SUBST+=	-e "s|@ORIG_LDFLAGS@|${ORIG_LDFLAGS}|g"
-.endif
-
-# Remove -I$(includedir) from the INCLUDES passed to the compiler as this
-# defeats buildlink.
-#
-post-patch:
-	cd ${WRKSRC};							\
-	files=`${FIND} . -name "Makefile.in" -print`;			\
-	for file in $${files}; do					\
-		${MV} -f $${file} $${file}.fixme;			\
-		${SED} -e "/^INCLUDES.*=.*/s|[ 	]*-I\$$(includedir)||"	\
-			$${file}.fixme > $${file};			\
-		${RM} $${file}.fixme;					\
-	done
-
-post-configure:
-	${SED} ${GIMPTOOL_SUBST} <${WRKSRC}/gimptool-1.2 \
-	 >${WRKSRC}/gimptool-1.2.tmp && \
-	${MV} ${WRKSRC}/gimptool-1.2.tmp ${WRKSRC}/gimptool-1.2
-
 pre-build:
-	${LINK.c} -o ${WRKSRC}/docs/pdb_self_doc ${FILESDIR}/pdb_self_doc.c
+	${BUILDLINK_CC} -o ${WRKSRC}/docs/pdb_self_doc			\
+		${FILESDIR}/pdb_self_doc.c
 
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} ||				\
 		${LN} -fs ${PREFIX}/share/aclocal/gimp.m4		\
 			${LOCALBASE}/share/aclocal/gimp.m4
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/mpeg-lib/buildlink.mk"
-.include "../../x11/gnome-libs/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/mpeg-lib/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
