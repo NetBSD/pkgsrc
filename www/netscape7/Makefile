@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/30 13:45:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/01 03:55:43 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -26,16 +26,22 @@ INTERACTIVE_STAGE=	build
 
 VERS_MAJ=		7
 VERS_MIN=		0
-PKG_LANG?=		english
 SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
 DIST_SUBDIR=		netscape7/${PKG_LANG}
 WRKSRC=			${WRKDIR}/netscape-installer
+
+PKG_LANG?=		english
+NS_INST?=		recommended
 
 .if ${PKG_LANG} != english
 DISTINFO_FILE=		distinfo.${PKG_LANG}
 .endif
 
-PLIST_SRC=		PLIST.${PKG_LANG} PLIST
+.if ${NS_INST} == "complete"
+PLIST_SRC+=		PLIST.extra
+.endif
+
+PLIST_SRC+=		PLIST.${PKG_LANG} PLIST
 
 pre-fetch:
 	@${CAT} ${FILESDIR}/fetch-message
@@ -44,7 +50,8 @@ pre-build:
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/netscape.sh > 	\
 		${WRKDIR}/netscape7
 	@delay=10;							\
-	${SED}  -e "s|@WRKSRC@|${WRKSRC}|g" -e "s|@delay@|$${delay}|g"	\
+	${SED} -e "s|@NS_INST@|${NS_INST}|g" -e "s|@WRKSRC@|${WRKSRC}|g"\
+		 -e "s|@delay@|$${delay}|g"				\
 		${FILESDIR}/extract_instructions;			\
 	sleep $${delay};						\
 	${MKDIR} ${WRKSRC}/dest

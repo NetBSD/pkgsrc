@@ -1,0 +1,205 @@
+@comment $NetBSD: PLIST.extra,v 1.1 2002/10/01 03:55:44 jschauma Exp $
+lib/netscape/netscape7/plugins/java2/CHANGES
+lib/netscape/netscape7/plugins/java2/COPYRIGHT
+lib/netscape/netscape7/plugins/java2/ControlPanel.html
+lib/netscape/netscape7/plugins/java2/LICENSE
+lib/netscape/netscape7/plugins/java2/README
+lib/netscape/netscape7/plugins/java2/Welcome.html
+lib/netscape/netscape7/plugins/java2/bin/.java_wrapper
+lib/netscape/netscape7/plugins/java2/bin/ControlPanel
+lib/netscape/netscape7/plugins/java2/bin/awt_robot
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/appletviewer
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/extcheck
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/idlj
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/jar
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/jarsigner
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/java
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/javac
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/javadoc
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/javah
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/javap
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/jdb
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/keytool
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/native2ascii
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/oldjava
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/oldjavac
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/oldjdb
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/policytool
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/rmic
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/rmid
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/rmiregistry
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/serialver
+lib/netscape/netscape7/plugins/java2/bin/i386/green_threads/tnameserv
+lib/netscape/netscape7/plugins/java2/bin/i386/native_threads/java
+lib/netscape/netscape7/plugins/java2/bin/i386/native_threads/java_vm
+lib/netscape/netscape7/plugins/java2/bin/i386/native_threads/keytool
+lib/netscape/netscape7/plugins/java2/bin/i386/native_threads/policytool
+lib/netscape/netscape7/plugins/java2/bin/i386/native_threads/rmid
+lib/netscape/netscape7/plugins/java2/bin/i386/native_threads/rmiregistry
+lib/netscape/netscape7/plugins/java2/bin/i386/native_threads/tnameserv
+lib/netscape/netscape7/plugins/java2/bin/i386/realpath
+lib/netscape/netscape7/plugins/java2/bin/java
+lib/netscape/netscape7/plugins/java2/bin/keytool
+lib/netscape/netscape7/plugins/java2/bin/policytool
+lib/netscape/netscape7/plugins/java2/bin/realpath
+lib/netscape/netscape7/plugins/java2/bin/rmid
+lib/netscape/netscape7/plugins/java2/bin/rmiregistry
+lib/netscape/netscape7/plugins/java2/bin/tnameserv
+lib/netscape/netscape7/plugins/java2/lib/audio/soundbank.gm
+lib/netscape/netscape7/plugins/java2/lib/cmm/CIEXYZ.pf
+lib/netscape/netscape7/plugins/java2/lib/cmm/GRAY.pf
+lib/netscape/netscape7/plugins/java2/lib/cmm/LINEAR_RGB.pf
+lib/netscape/netscape7/plugins/java2/lib/cmm/PYCC.pf
+lib/netscape/netscape7/plugins/java2/lib/cmm/sRGB.pf
+lib/netscape/netscape7/plugins/java2/lib/content-types.properties
+lib/netscape/netscape7/plugins/java2/lib/flavormap.properties
+lib/netscape/netscape7/plugins/java2/lib/font.properties
+lib/netscape/netscape7/plugins/java2/lib/font.properties.ja
+lib/netscape/netscape7/plugins/java2/lib/font.properties.zh
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaBrightDemiBold.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaBrightDemiItalic.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaBrightItalic.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaBrightRegular.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaSansDemiBold.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaSansDemiOblique.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaSansOblique.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaSansRegular.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaTypewriterBold.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaTypewriterBoldOblique.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaTypewriterOblique.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/LucidaTypewriterRegular.ttf
+lib/netscape/netscape7/plugins/java2/lib/fonts/fonts.dir
+lib/netscape/netscape7/plugins/java2/lib/i18n.jar
+lib/netscape/netscape7/plugins/java2/lib/i386/classic/Xusage.txt
+lib/netscape/netscape7/plugins/java2/lib/i386/classic/libjvm.so
+lib/netscape/netscape7/plugins/java2/lib/i386/client/Xusage.txt
+lib/netscape/netscape7/plugins/java2/lib/i386/client/libjvm.so
+lib/netscape/netscape7/plugins/java2/lib/i386/green_threads/libhpi.so
+lib/netscape/netscape7/plugins/java2/lib/i386/hotspot/Xusage.txt
+lib/netscape/netscape7/plugins/java2/lib/i386/hotspot/libjvm.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libJdbcOdbc.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libagent.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libawt.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libcmm.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libdcpr.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libfontmanager.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libhprof.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libioser12.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libjava.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libjavaplugin_jni.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libjawt.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libjcov.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libjpeg.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libjsound.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libmlib_image.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libnet.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libpreemptive_close.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libverify.so
+lib/netscape/netscape7/plugins/java2/lib/i386/libzip.so
+lib/netscape/netscape7/plugins/java2/lib/i386/native_threads/libhpi.so
+lib/netscape/netscape7/plugins/java2/lib/i386/server/Xusage.txt
+lib/netscape/netscape7/plugins/java2/lib/i386/server/libjvm.so
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/cursors.properties
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/invalid32x32.gif
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/motif_CopyDrop32x32.gif
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/motif_CopyNoDrop32x32.gif
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/motif_LinkDrop32x32.gif
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/motif_LinkNoDrop32x32.gif
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/motif_MoveDrop32x32.gif
+lib/netscape/netscape7/plugins/java2/lib/images/cursors/motif_MoveNoDrop32x32.gif
+lib/netscape/netscape7/plugins/java2/lib/javaplugin.jar
+lib/netscape/netscape7/plugins/java2/lib/jvm.cfg
+lib/netscape/netscape7/plugins/java2/lib/jvm.hprof.txt
+lib/netscape/netscape7/plugins/java2/lib/jvm.jcov.txt
+lib/netscape/netscape7/plugins/java2/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
+lib/netscape/netscape7/plugins/java2/lib/psfont.properties.ja
+lib/netscape/netscape7/plugins/java2/lib/psfontj2d.properties
+lib/netscape/netscape7/plugins/java2/lib/rt.jar
+lib/netscape/netscape7/plugins/java2/lib/security/cacerts
+lib/netscape/netscape7/plugins/java2/lib/security/java.policy
+lib/netscape/netscape7/plugins/java2/lib/security/java.security
+lib/netscape/netscape7/plugins/java2/lib/sunrsasign.jar
+lib/netscape/netscape7/plugins/java2/lib/tzmappings
+lib/netscape/netscape7/plugins/java2/man/ja/man1/java.1
+lib/netscape/netscape7/plugins/java2/man/ja/man1/keytool.1
+lib/netscape/netscape7/plugins/java2/man/ja/man1/rmid.1
+lib/netscape/netscape7/plugins/java2/man/ja/man1/rmiregistry.1
+lib/netscape/netscape7/plugins/java2/man/ja/man1/tnameserv.1
+lib/netscape/netscape7/plugins/java2/man/ja_JP.eucJP/man1/java.1
+lib/netscape/netscape7/plugins/java2/man/ja_JP.eucJP/man1/keytool.1
+lib/netscape/netscape7/plugins/java2/man/ja_JP.eucJP/man1/rmid.1
+lib/netscape/netscape7/plugins/java2/man/ja_JP.eucJP/man1/rmiregistry.1
+lib/netscape/netscape7/plugins/java2/man/ja_JP.eucJP/man1/tnameserv.1
+lib/netscape/netscape7/plugins/java2/man/man1/java.1
+lib/netscape/netscape7/plugins/java2/man/man1/keytool.1
+lib/netscape/netscape7/plugins/java2/man/man1/rmid.1
+lib/netscape/netscape7/plugins/java2/man/man1/rmiregistry.1
+lib/netscape/netscape7/plugins/java2/man/man1/tnameserv.1
+lib/netscape/netscape7/plugins/java2/plugin/i386/ns4/javaplugin.so
+lib/netscape/netscape7/plugins/java2/plugin/i386/ns600/libjavaplugin_oji.so
+lib/netscape/netscape7/plugins/libjavaplugin_oji.so
+@dirrm lib/netscape/netscape7/plugins/java2/plugin/i386/ns600
+@dirrm lib/netscape/netscape7/plugins/java2/plugin/i386/ns4
+@dirrm lib/netscape/netscape7/plugins/java2/plugin/i386
+@dirrm lib/netscape/netscape7/plugins/java2/plugin
+@dirrm lib/netscape/netscape7/plugins/java2/man/man1
+@dirrm lib/netscape/netscape7/plugins/java2/man/ja_JP.eucJP/man1
+@dirrm lib/netscape/netscape7/plugins/java2/man/ja_JP.eucJP
+@dirrm lib/netscape/netscape7/plugins/java2/man/ja/man1
+@dirrm lib/netscape/netscape7/plugins/java2/man/ja
+@dirrm lib/netscape/netscape7/plugins/java2/man
+@dirrm lib/netscape/netscape7/plugins/java2/lib/security
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh_TW/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh_TW.BIG5/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh_TW.BIG5
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh_TW
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh.GBK/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh.GBK
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/zh
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/sv/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/sv
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/ko/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/ko.UTF-8/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/ko.UTF-8
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/ko
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/ja/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/ja
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/it/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/it
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/fr/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/fr
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/es/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/es
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/de/LC_MESSAGES
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale/de
+@dirrm lib/netscape/netscape7/plugins/java2/lib/locale
+@dirrm lib/netscape/netscape7/plugins/java2/lib/images/cursors
+@dirrm lib/netscape/netscape7/plugins/java2/lib/images
+@dirrm lib/netscape/netscape7/plugins/java2/lib/i386/server
+@dirrm lib/netscape/netscape7/plugins/java2/lib/i386/native_threads
+@dirrm lib/netscape/netscape7/plugins/java2/lib/i386/hotspot
+@dirrm lib/netscape/netscape7/plugins/java2/lib/i386/green_threads
+@dirrm lib/netscape/netscape7/plugins/java2/lib/i386/client
+@dirrm lib/netscape/netscape7/plugins/java2/lib/i386/classic
+@dirrm lib/netscape/netscape7/plugins/java2/lib/i386
+@dirrm lib/netscape/netscape7/plugins/java2/lib/fonts
+@dirrm lib/netscape/netscape7/plugins/java2/lib/cmm
+@dirrm lib/netscape/netscape7/plugins/java2/lib/audio
+@dirrm lib/netscape/netscape7/plugins/java2/lib
+@dirrm lib/netscape/netscape7/plugins/java2/bin/i386/native_threads
+@dirrm lib/netscape/netscape7/plugins/java2/bin/i386/green_threads
+@dirrm lib/netscape/netscape7/plugins/java2/bin/i386
+@dirrm lib/netscape/netscape7/plugins/java2/bin
+@dirrm lib/netscape/netscape7/plugins/java2
