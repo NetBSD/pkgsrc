@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2231 2004/10/20 02:07:56 minskim Exp $
+$NetBSD: TODO,v 1.2232 2004/10/20 11:13:05 cube Exp $
 
 Suggested new packages
 ======================
@@ -389,7 +389,6 @@ Suggested package updates
 	o prc-tools-2.3
 	o psi-0.9.2
 	o pth-2.0.2
-	o pureftpd-1.0.20 [pkg/27083]
 	o puzzle-5.2
 	o py-psycopg-1.1.10
 	o py-wxWindows-2.5.2.8
