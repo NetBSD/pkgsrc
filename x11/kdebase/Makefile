@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2000/02/01 16:12:36 tron Exp $
+# $NetBSD: Makefile,v 1.61 2000/02/05 15:51:04 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -17,7 +17,6 @@ DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
 # often do, so put the dependency here.
 #
@@ -52,8 +51,8 @@ post-extract:
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/klock
 	@${CP} ${PLIST_INIT} ${PLIST_SRC}
-	@(cd ${PREFIX}; find ${PLIST_DIRS} -type f >>${PLIST_SRC})
-	@(cd ${PREFIX}; find ${PLIST_DIRS} -type d | sort -r | \
+	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} -type f >>${PLIST_SRC})
+	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} -type d | sort -r | \
 	    ${SED} "s/^/\@dirrm /" >>${PLIST_SRC})
 .for DIR in ${KDE_DIRS}
 	@${MKDIR} ${PREFIX}/${DIR}
