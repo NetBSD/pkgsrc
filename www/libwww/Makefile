@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2003/07/17 22:55:40 grant Exp $
+# $NetBSD: Makefile,v 1.45 2003/09/15 00:51:48 jschauma Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -28,7 +28,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 pre-configure:
 	cd ${WRKSRC}; \
 	    ${ACLOCAL} && \
-	    ${AUTOMAKE} && \
+	    ${AUTOMAKE} -i && \
 	    ${AUTOCONF}
 
 .include "../../mk/bsd.prefs.mk"
