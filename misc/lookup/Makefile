@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/18 01:31:21 minoura Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/18 14:56:03 minoura Exp $
 #
 
 DISTNAME=	lookup-1.3
@@ -11,6 +11,7 @@ COMMENT=	electric dictionary agent for Emacs
 
 DEPENDS+=	apel>=10:../../devel/apel
 DEPENDS+=	eblook>=1.3:../../textproc/eblook
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
 
 GNU_CONFIGURE=	YES
 MAKEFLAGS+=	lispdir=${EMACS_LISPPREFIX}/lookup
