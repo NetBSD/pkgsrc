@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/01/05 12:05:19 adam Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/03/07 09:48:36 uebayasi Exp $
 
 DISTNAME=	SDL-1.2.8
 CATEGORIES=	devel games
@@ -57,7 +57,7 @@ BUILDLINK_PASSTHRU_DIRS+=	${_dir_}
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .  if defined(HAVE_OSS) && ${HAVE_OSS} == "YES"
-AM_CFLAGS=		-D_PATH_DEV_DSP=\\\"${DEVOSSAUDIO}\\\"
+AM_CFLAGS=		-D_PATH_DEV_DSP="\"${DEVOSSAUDIO}\""
 MAKE_ENV+=		AM_CFLAGS="${AM_CFLAGS}"
 .endif
 
