@@ -1,0 +1,25 @@
+--- data/Makefile.in.orig	Fri Dec 20 11:33:30 2002
++++ data/Makefile.in	Fri Dec 20 11:33:49 2002
+@@ -84,9 +84,9 @@
+ 
+ SUBDIRS = img
+ kbdconfigdir = $(pkgdatadir)
+-kbdconfig_DATA = kbdconfig kbdconfig.tiny kbdconfig.fitaly kbdconfig.us kbdconfig.numsonly
++kbdconfig_DATA = kbdconfig kbdconfig.tiny kbdconfig.fitaly kbdconfig.us
+ 
+-CLEANFILES = kbdconfig kbdconfig.tiny kbdconfig.fitaly kbdconfig.us kbdconfig.numsonly
++CLEANFILES = kbdconfig kbdconfig.tiny kbdconfig.fitaly kbdconfig.us
+ 
+ EXTRA_DIST = kbdconfig.fitaly.in kbdconfig.tiny.in \
+              kbdconfig.in kbdconfig.us.in 
+@@ -368,10 +368,6 @@
+ kbdconfig.tiny: kbdconfig.tiny.in
+ 	sed -e "s,@pkgdatadir@,$(pkgdatadir)," \
+ 	kbdconfig.tiny.in >  kbdconfig.tiny 
+-
+-kbdconfig.numsonly: kbdconfig.numsonly.in
+-	sed -e "s,@pkgdatadir@,$(pkgdatadir)," \
+-	kbdconfig.numsonly.in >  kbdconfig.numsonly 
+ 
+ kbdconfig: kbdconfig.in
+ 	sed -e "s,@pkgdatadir@,$(pkgdatadir)," \

@@ -1,0 +1,6 @@
+Xkbd is a small highly configurable 'virtual' on-screen keyboard for
+X11.  It is designed primarily for use on a PDA, but will hopefully be
+of use on other devices where a physical keyboard is not present. 
+
+Xkbd uses no widget set and is based purely on xlib. It also
+optionally uses the xft library for anti aliased fonts.
