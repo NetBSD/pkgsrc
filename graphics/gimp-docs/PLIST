@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/27 11:20:48 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/07 12:36:52 adam Exp $
 share/gimp/2.0/help/cs/apa.html
 share/gimp/2.0/help/cs/bi01.html
 share/gimp/2.0/help/cs/ch01.html
@@ -8,6 +8,29 @@ share/gimp/2.0/help/cs/ch01s03s02.html
 share/gimp/2.0/help/cs/ch01s03s03.html
 share/gimp/2.0/help/cs/ch02.html
 share/gimp/2.0/help/cs/ch02s02.html
+share/gimp/2.0/help/cs/ch02s02s02.html
+share/gimp/2.0/help/cs/ch02s02s03.html
+share/gimp/2.0/help/cs/ch02s03.html
+share/gimp/2.0/help/cs/ch02s04.html
+share/gimp/2.0/help/cs/ch02s04s02.html
+share/gimp/2.0/help/cs/ch02s04s03.html
+share/gimp/2.0/help/cs/ch02s04s04.html
+share/gimp/2.0/help/cs/ch02s04s05.html
+share/gimp/2.0/help/cs/ch02s04s06.html
+share/gimp/2.0/help/cs/ch03.html
+share/gimp/2.0/help/cs/ch03s02.html
+share/gimp/2.0/help/cs/ch03s02s02.html
+share/gimp/2.0/help/cs/ch03s02s03.html
+share/gimp/2.0/help/cs/ch03s02s04.html
+share/gimp/2.0/help/cs/ch03s03.html
+share/gimp/2.0/help/cs/ch03s04.html
+share/gimp/2.0/help/cs/ch03s05.html
+share/gimp/2.0/help/cs/ch03s06.html
+share/gimp/2.0/help/cs/ch03s07.html
+share/gimp/2.0/help/cs/ch03s08.html
+share/gimp/2.0/help/cs/ch03s09.html
+share/gimp/2.0/help/cs/ch04.html
+share/gimp/2.0/help/cs/ch05.html
 share/gimp/2.0/help/cs/gimp-help-plain.css
 share/gimp/2.0/help/cs/gimp-help-screen.css
 share/gimp/2.0/help/cs/gimp-help.xml
@@ -133,6 +156,7 @@ share/gimp/2.0/help/en/apb.html
 share/gimp/2.0/help/en/bi01.html
 share/gimp/2.0/help/en/ch01.html
 share/gimp/2.0/help/en/ch01s02.html
+share/gimp/2.0/help/en/ch01s02s02.html
 share/gimp/2.0/help/en/ch01s03.html
 share/gimp/2.0/help/en/ch01s04.html
 share/gimp/2.0/help/en/ch01s04s02.html
@@ -929,6 +953,7 @@ share/gimp/2.0/help/images/dialogs/fr/dialogs-view-infowindow.png
 share/gimp/2.0/help/images/dialogs/layers_example.png
 share/gimp/2.0/help/images/dialogs/layers_overview.png
 share/gimp/2.0/help/images/dialogs/stock-menu-left-12.png
+share/gimp/2.0/help/images/dialogs/zh_CN/dialogs-tool-options-rect-select.png
 share/gimp/2.0/help/images/example.png
 share/gimp/2.0/help/images/filters/de/blur-gauss.png
 share/gimp/2.0/help/images/filters/de/blur-select-gauss.png
@@ -1164,6 +1189,7 @@ share/gimp/2.0/help/images/filters/fr/filters-render-plasma.png
 share/gimp/2.0/help/images/filters/fr/filters-render-qbist.png
 share/gimp/2.0/help/images/filters/fr/filters-render-sinus.png
 share/gimp/2.0/help/images/filters/fr/filters-render-solidnoise.png
+share/gimp/2.0/help/images/gimp-splash.png
 share/gimp/2.0/help/images/glossary/alias.png
 share/gimp/2.0/help/images/glossary/antialias.png
 share/gimp/2.0/help/images/glossary/color-model-additive.png
@@ -1531,6 +1557,65 @@ share/gimp/2.0/help/images/toolbox/tools-levels.png
 share/gimp/2.0/help/images/toolbox/tools-posterize.png
 share/gimp/2.0/help/images/toolbox/tools-threshold.png
 share/gimp/2.0/help/images/toolbox/wand.png
+share/gimp/2.0/help/images/toolbox/zh_CN/brush-tools.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-airbrush.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-brushcommon.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-clone.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-convolve.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-dodge.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-ellipsel.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-eraser.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-lasso.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-paint-gradient.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-pencil.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-rectsel-size.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-rectsel.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-scissor.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-selbycolor.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-smudge.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tool-options-wand.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-airbrush.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-blur.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-bpg.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-brush.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-clone.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-crop.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-dodge.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-ellipsel.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-eraser.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-eyedropper.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-fill.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-flip.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-gradient.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-lasso.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-measure.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-menu.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-move.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-palette.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-path.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-pen.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-pencil.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-perspective.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-rectsel.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-rotate.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-scale.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-scissor.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-selbycolor.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-shear.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-smudge.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-text.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-wand.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox-zoom.png
+share/gimp/2.0/help/images/toolbox/zh_CN/toolbox.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-brightness.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-color-balance.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-colorize.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-curves.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-histogram.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-hue-sat.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-levels.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-posterize.png
+share/gimp/2.0/help/images/toolbox/zh_CN/tools-threshold.png
 share/gimp/2.0/help/images/toolbox/zoom.png
 share/gimp/2.0/help/images/up.png
 share/gimp/2.0/help/images/using/1234angl.png
@@ -1549,6 +1634,10 @@ share/gimp/2.0/help/images/using/dialog-highlight-handle.png
 share/gimp/2.0/help/images/using/dialog-highlight-imagemenu.png
 share/gimp/2.0/help/images/using/dialog-highlight-tabmenu.png
 share/gimp/2.0/help/images/using/export-dialog-en.png
+share/gimp/2.0/help/images/using/file-open-dialog-location.png
+share/gimp/2.0/help/images/using/file-open-dialog.png
+share/gimp/2.0/help/images/using/file-save-dialog-basic.png
+share/gimp/2.0/help/images/using/file-save-dialog-browse.png
 share/gimp/2.0/help/images/using/fog-tree-example.png
 share/gimp/2.0/help/images/using/fr/dialog-highlight-closetab.png
 share/gimp/2.0/help/images/using/fr/dialog-highlight-dockbar.png
@@ -1580,6 +1669,7 @@ share/gimp/2.0/help/images/using/fr/wilber-simple-nogrid.png
 share/gimp/2.0/help/images/using/fr/wilber-simple-othergrid.png
 share/gimp/2.0/help/images/using/gradient-examples.png
 share/gimp/2.0/help/images/using/gradient-usage.png
+share/gimp/2.0/help/images/using/hands_stroke.png
 share/gimp/2.0/help/images/using/imagewindow-description.png
 share/gimp/2.0/help/images/using/imagewindow-quickmask.png
 share/gimp/2.0/help/images/using/jpeg-save-dialog-en.png
@@ -1627,6 +1717,8 @@ share/gimp/2.0/help/sv/ch02s02s02.html
 share/gimp/2.0/help/sv/ch02s02s03.html
 share/gimp/2.0/help/sv/ch02s02s04.html
 share/gimp/2.0/help/sv/ch02s03.html
+share/gimp/2.0/help/sv/ch03.html
+share/gimp/2.0/help/sv/ch04.html
 share/gimp/2.0/help/sv/gimp-help-plain.css
 share/gimp/2.0/help/sv/gimp-help-screen.css
 share/gimp/2.0/help/sv/gimp-help.xml
@@ -1640,8 +1732,9 @@ share/gimp/2.0/help/zh_CN/bi01.html
 share/gimp/2.0/help/zh_CN/ch01.html
 share/gimp/2.0/help/zh_CN/ch01s02.html
 share/gimp/2.0/help/zh_CN/ch01s03.html
-share/gimp/2.0/help/zh_CN/ch01s03s02.html
-share/gimp/2.0/help/zh_CN/ch01s03s03.html
+share/gimp/2.0/help/zh_CN/ch01s04.html
+share/gimp/2.0/help/zh_CN/ch01s04s02.html
+share/gimp/2.0/help/zh_CN/ch01s04s03.html
 share/gimp/2.0/help/zh_CN/ch02.html
 share/gimp/2.0/help/zh_CN/ch02s02.html
 share/gimp/2.0/help/zh_CN/ch02s03.html
@@ -1865,33 +1958,34 @@ share/gimp/2.0/help/zh_CN/gimp-help.xml
 share/gimp/2.0/help/zh_CN/gimp-xrefs.xml
 share/gimp/2.0/help/zh_CN/go01.html
 share/gimp/2.0/help/zh_CN/index.html
-share/gimp/2.0/help/zh_CN/ix01.html
-@dirrm share/gimp/2.0/help/images/callouts
-@dirrm share/gimp/2.0/help/images/dialogs/de
-@dirrm share/gimp/2.0/help/images/dialogs/examples
-@dirrm share/gimp/2.0/help/images/dialogs/fr
-@dirrm share/gimp/2.0/help/images/dialogs
-@dirrm share/gimp/2.0/help/images/filters/de
-@dirrm share/gimp/2.0/help/images/filters/examples
-@dirrm share/gimp/2.0/help/images/filters/fr
-@dirrm share/gimp/2.0/help/images/filters
-@dirrm share/gimp/2.0/help/images/glossary
-@dirrm share/gimp/2.0/help/images/menus/fr
-@dirrm share/gimp/2.0/help/images/menus
-@dirrm share/gimp/2.0/help/images/preferences/de
-@dirrm share/gimp/2.0/help/images/preferences/fr
-@dirrm share/gimp/2.0/help/images/preferences
-@dirrm share/gimp/2.0/help/images/tool-options
-@dirrm share/gimp/2.0/help/images/toolbox/de
-@dirrm share/gimp/2.0/help/images/toolbox/fr
-@dirrm share/gimp/2.0/help/images/toolbox
+@dirrm share/gimp/2.0/help/zh_CN
+@dirrm share/gimp/2.0/help/sv
 @dirrm share/gimp/2.0/help/images/using/fr
 @dirrm share/gimp/2.0/help/images/using
+@dirrm share/gimp/2.0/help/images/toolbox/zh_CN
+@dirrm share/gimp/2.0/help/images/toolbox/fr
+@dirrm share/gimp/2.0/help/images/toolbox/de
+@dirrm share/gimp/2.0/help/images/toolbox
+@dirrm share/gimp/2.0/help/images/tool-options
+@dirrm share/gimp/2.0/help/images/preferences/fr
+@dirrm share/gimp/2.0/help/images/preferences/de
+@dirrm share/gimp/2.0/help/images/preferences
+@dirrm share/gimp/2.0/help/images/menus/fr
+@dirrm share/gimp/2.0/help/images/menus
+@dirrm share/gimp/2.0/help/images/glossary
+@dirrm share/gimp/2.0/help/images/filters/fr
+@dirrm share/gimp/2.0/help/images/filters/examples
+@dirrm share/gimp/2.0/help/images/filters/de
+@dirrm share/gimp/2.0/help/images/filters
+@dirrm share/gimp/2.0/help/images/dialogs/zh_CN
+@dirrm share/gimp/2.0/help/images/dialogs/fr
+@dirrm share/gimp/2.0/help/images/dialogs/examples
+@dirrm share/gimp/2.0/help/images/dialogs/de
+@dirrm share/gimp/2.0/help/images/dialogs
+@dirrm share/gimp/2.0/help/images/callouts
 @dirrm share/gimp/2.0/help/images
-@dirrm share/gimp/2.0/help/cs
-@dirrm share/gimp/2.0/help/de
-@dirrm share/gimp/2.0/help/en
 @dirrm share/gimp/2.0/help/fr
-@dirrm share/gimp/2.0/help/sv
-@dirrm share/gimp/2.0/help/zh_CN
+@dirrm share/gimp/2.0/help/en
+@dirrm share/gimp/2.0/help/de
+@dirrm share/gimp/2.0/help/cs
 @dirrm share/gimp/2.0/help
