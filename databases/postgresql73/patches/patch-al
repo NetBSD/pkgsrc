@@ -1,0 +1,60 @@
+$NetBSD: patch-al,v 1.1 2005/03/17 21:38:32 jschauma Exp $
+
+--- src/pl/plpgsql/src/gram.y.orig	2005-01-26 20:44:42.000000000 -0500
++++ src/pl/plpgsql/src/gram.y	2005-03-17 16:34:50.000000000 -0500
+@@ -1626,6 +1626,13 @@
+ 		}
+ 	}
+ 
++	/* Check for array overflow */
++	if (nparams >= 1024)
++	{
++		plpgsql_error_lineno = lno;
++		elog(ERROR, "too many variables specified in SQL statement");
++	}
++
+ 	expr = malloc(sizeof(PLpgSQL_expr) + sizeof(int) * nparams - sizeof(int));
+ 	expr->dtype			= PLPGSQL_DTYPE_EXPR;
+ 	expr->query			= strdup(plpgsql_dstring_get(&ds));
+@@ -1761,6 +1768,13 @@
+ 
+ 					while ((tok = yylex()) == ',')
+ 					{
++						/* Check for array overflow */
++						if (nfields >= 1024)
++						{
++							plpgsql_error_lineno = plpgsql_scanner_lineno();
++							elog(ERROR, "too many variables specified in SQL statement");
++						}
++
+ 						tok = yylex();
+ 						switch(tok)
+ 						{
+@@ -1821,6 +1835,13 @@
+ 				plpgsql_dstring_append(&ds, yytext);
+ 				break;
+ 		}
++
++		/* Check for array overflow */
++		if (nparams >= 1024)
++		{
++			plpgsql_error_lineno = plpgsql_scanner_lineno();
++			elog(ERROR, "too many variables specified in SQL statement");
++		}
+ 	}
+ 
+ 	expr = malloc(sizeof(PLpgSQL_expr) + sizeof(int) * nparams - sizeof(int));
+@@ -1892,6 +1913,13 @@
+ 
+ 				while ((tok = yylex()) == ',')
+ 				{
++					/* Check for array overflow */
++					if (nfields >= 1024)
++					{
++						plpgsql_error_lineno = plpgsql_scanner_lineno();
++						elog(ERROR, "too many variables specified in SQL statement");
++					}
++
+ 					tok = yylex();
+ 					switch(tok)
+ 					{
