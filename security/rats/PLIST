@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/29 00:37:05 taca Exp $
 bin/rats
-lib/rats-c.xml
-lib/rats-perl.xml
-lib/rats-python.xml
-
+libdata/rats/rats-c.xml
+libdata/rats/rats-perl.xml
+libdata/rats/rats-python.xml
+libdata/rats/rats-php.xml
