@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 02:16:15 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/11/05 07:44:49 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -29,7 +29,6 @@ DEINSTALL)
 	#
 	${ECHO} ${CONFFILES} | ${TR} ":" "\012" | while read SAMPLEFILE FILE
 	do
-		${ECHO} "|${SAMPLEFILE}|${FILE}|"
 		if ${CMP} -s ${FILE} ${SAMPLEFILE}
 		then
 			${RM} -f ${FILE}
