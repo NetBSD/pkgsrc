@@ -1,0 +1,2 @@
+mod_access_referer is an Apache module that provides access control
+based on the "Referer" HTTP header content.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/18 00:53:58 grant Exp $
+lib/httpd/mod_access_referer.so
+share/doc/html/mod_access_referer/mod_access_referer.html
+@dirrm share/doc/html/mod_access_referer
