@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2004/12/22 21:24:44 adrianp Exp $
+# $NetBSD: Makefile,v 1.35 2005/01/19 10:01:03 drochner Exp $
 
 DISTNAME=	xpdf-3.00
-PKGNAME=	${DISTNAME}pl2
+PKGNAME=	${DISTNAME}pl3
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/} \
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 
 PATCHFILES=	xpdf-3.00pl1.patch
 PATCHFILES+=	xpdf-3.00pl2.patch
+PATCHFILES+=	xpdf-3.00pl3.patch
 PATCH_SITES=	${MASTER_SITES}
 PATCH_DIST_ARGS=-d ${WRKSRC}/xpdf --quiet
 
