@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6650 2004/07/23 14:15:27 wiz Exp $
+$NetBSD: CHANGES,v 1.6651 2004/07/23 15:12:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3519,3 +3519,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wimon to 0.3 [xtraeme 2004-07-23]
 	Updated teapop to 0.3.8 [zuntum 2004-07-23]
 	Updated popa3d to 0.6.4.1 [wiz 2004-07-23]
+	Updated samba to 3.0.5 [tron 2004-07-23]
