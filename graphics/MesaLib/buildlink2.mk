@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/11/19 09:19:36 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/11/20 22:13:22 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
@@ -34,14 +34,8 @@ _NEED_MESALIB=		YES
 # BUILDLINK_DEPENDS.MesaLib to see if we need to install the pkgsrc
 # Mesa or if the built-in one is sufficient.
 #
-.    if exists(${X11BASE}/bin/glxinfo) && defined(DISPLAY)
-_MESALIB_VERSION!= \
-	${X11BASE}/bin/glxinfo |					\
-	${SED} -n "/OpenGL version string/s/.*Mesa *//p"
-.    else
-_MESALIB_VERSION?=	3.4
-.    endif
-_MESALIB_PKG=		MesaLib-${_MESALIB_VERSION}
+.    include "../../graphics/Mesa/version.mk"
+_MESALIB_PKG=		MesaLib-${_MESA_VERSION}
 _MESALIB_DEPENDS=	${BUILDLINK_DEPENDS.MesaLib}
 _NEED_MESALIB!= \
 	if ${PKG_ADMIN} pmatch '${_MESALIB_DEPENDS}' ${_MESALIB_PKG}; then \
