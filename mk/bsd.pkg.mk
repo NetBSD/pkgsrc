@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.367 1999/11/12 11:58:45 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.368 1999/11/20 21:15:49 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -613,20 +613,21 @@ MASTER_SITES?=
 PATCH_SITES?=
 
 # The primary backup site.
-.if defined(DIST_SUBDIR)
-MASTER_SITE_BACKUP?=	\
-	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
-	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/
-.else
 MASTER_SITE_BACKUP?=	\
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
+.if defined(DIST_SUBDIR)
+MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}/}
 .endif
 
 # Where to put distfiles that don't have any other master site
+.if defined(DIST_SUBDIR)
 MASTER_SITE_LOCAL?= \
-	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
-	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/LOCAL_PORTS/
+	${MASTER_SITE_BACKUP:S,${DIST_SUBDIR},LOCAL_PORTS,}
+.else	# DIST_SUBDIR
+MASTER_SITE_LOCAL?= \
+	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
+.endif	# DIST_SUBDIR
 
 # I guess we're in the master distribution business! :)  As we gain mirror
 # sites for distfiles, add them to this list.

@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.103 1999/11/17 09:13:43 agc Exp $
+# $NetBSD: mk.conf.example,v 1.104 1999/11/20 21:15:50 hubertf Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -561,11 +561,8 @@ PAPERSIZE=	A4
 #MASTER_SITE_TEX_CTAN=	ftp://mirror.aarnet.edu.au/tex-archive/
 #MASTER_SITE_SUNSITE=	ftp://mirror.aarnet.edu.au/sunsite.unc.edu/
 #MASTER_SITE_BACKUP=	\
-#	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
-#	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
-#MASTER_SITE_LOCAL=	\
-#	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
-#	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+#	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
+#	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/
 
 # Finland
 #
@@ -577,9 +574,7 @@ PAPERSIZE=	A4
 #MASTER_SITE_SUNSITE=	\
 #	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_BACKUP=	\
-#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
-#MASTER_SITE_LOCAL=	\
-#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/
 
 # Austria
 #
@@ -588,8 +583,7 @@ PAPERSIZE=	A4
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.at.netbsd.org/languages/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.at.netbsd.org/publishing/tex/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://ftp.univie.ac.at/systems/linux/sunsite/
-#MASTER_SITE_BACKUP=	ftp://ftp.at.netbsd.org/opsys/NetBSD/packages/distfiles/${DIST_SUBDIR}/
-#MASTER_SITE_LOCAL=	ftp://ftp.at.netbsd.org/opsys/NetBSD/packages/distfiles/LOCAL_PORTS/
+#MASTER_SITE_BACKUP=	ftp://ftp.at.netbsd.org/opsys/NetBSD/packages/distfiles/
 
 # Denmark
 #
@@ -607,8 +601,5 @@ PAPERSIZE=	A4
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/sunsite-unc/
 #MASTER_SITE_BACKUP=	\
-#	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
-#	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
-#MASTER_SITE_LOCAL=	\
-#	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
-#	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+#	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/ \
+#	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/
