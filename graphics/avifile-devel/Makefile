@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/18 21:01:46 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/24 02:16:39 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010618
@@ -30,7 +30,6 @@ PLIST_SUBST+=	QT='@comment '
 WRKSRC=		${WRKDIR}/avifile-0.6
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
-USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_AUTOCONF=	yes
 USE_LIBTOOL=	yes
