@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1767 2003/03/25 11:04:03 wiz Exp $
+$NetBSD: CHANGES,v 1.1768 2003/03/25 14:13:54 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1298,3 +1298,15 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xscreensaver-gnome to 4.09 [wiz 2003-03-25]
 	Updated libpcap to 0.7.2 [wiz 2003-03-25]
 	Updated tcpdump to 3.7.2 [wiz 2003-03-25]
+	Updated xpdf to 2.02 [salo 2003-03-25]
+	Added xpdf-arabic-20030216 [salo 2003-03-25]
+	Updated xpdf-chinese-simplified to 20020617nb1 [salo 2003-03-25]
+	Updated xpdf-chinese-traditional to 20020414 [salo 2003-03-25]
+	Updated xpdf-cyrillic to 20020116 [salo 2003-03-25]
+	Updated xpdf-greek to 20020213 [salo 2003-03-25]
+	Updated xpdf-hebrew to 20030216 [salo 2003-03-25]
+	Updated xpdf-japanese to 20020401 [salo 2003-03-25]
+	Updated xpdf-korean to 20020401 [salo 2003-03-25]
+	Updated xpdf-latin2 to 20021022nb1 [salo 2003-03-25]
+	Updated xpdf-thai to 20020116 [salo 2003-03-25]
+	Updated xpdf-turkish to 20020410 [salo 2003-03-25]
