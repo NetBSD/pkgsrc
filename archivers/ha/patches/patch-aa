@@ -1,26 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:35:49 agc Exp $
+$NetBSD: patch-aa,v 1.4 2001/07/15 11:49:42 jlam Exp $
 
-*** nix/machine.c.bak	Thu Jan 12 09:53:00 1995
---- nix/machine.c	Tue Jan 24 19:38:07 1995
-***************
-*** 417,423 ****
-      if (plainname!=NULL) free(plainname),plainname=NULL;
-      if ((plainname=malloc(strlen(mdfullpath)+1))==NULL) 
-        error(1,ERR_MEM,"md_stripname()");
-!     for (i=strlen(mdfullpath)-1;i>0;i--) {
-  	if (mdfullpath[i]=='/') {
-  	    i++;
-  	    break;
---- 417,423 ----
-      if (plainname!=NULL) free(plainname),plainname=NULL;
-      if ((plainname=malloc(strlen(mdfullpath)+1))==NULL) 
-        error(1,ERR_MEM,"md_stripname()");
-!     for (i=strlen(mdfullpath)-1;i>=0;i--) {
-  	if (mdfullpath[i]=='/') {
-  	    i++;
-  	    break;
---- c/hsc.c	1997/11/18 12:32:02	1.1
-+++ c/hsc.c	1997/11/18 12:33:06
+--- c/hsc.c.orig	Thu Jan 12 01:51:16 1995
++++ c/hsc.c
 @@ -491,6 +491,7 @@
  
      esc=adj_escape_prob(fe[cp],cp);
