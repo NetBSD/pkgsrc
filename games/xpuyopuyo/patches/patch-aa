@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2000/08/11 20:01:21 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/08/25 06:22:28 jlam Exp $
 
---- pgame/Makefile.in.orig	Sun Aug  6 18:41:02 2000
-+++ pgame/Makefile.in	Fri Aug 11 15:02:10 2000
-@@ -139,7 +139,7 @@
- libxpp_game_a_OBJECTS =  pconfig.o pfield.o pgame.o phighscore.o pinfo.o \
- pmanip.o ppiece.o pplayer.o ptournament.o
- AR = ar
--CFLAGS = @CFLAGS@
-+CFLAGS = @CFLAGS@ $(LIBMIKMOD_CFLAGS)
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- CCLD = $(CC)
+--- configure.in.orig	Tue Aug  1 13:19:42 2000
++++ configure.in
+@@ -7,7 +7,7 @@
+ 
+ 
+ dnl Watch out for problems with prefix, datadir
+-if test "x$prefix" = "xNONE"; then 
++if test "x$prefix" != "xNONE"; then 
+    myprefix="$prefix"
+ else 
+    myprefix="$ac_default_prefix"
