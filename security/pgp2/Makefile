@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/02/05 04:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2000/04/28 02:20:21 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -69,7 +69,8 @@ post-extract:
 	cd ${WRKDIR} && ${GTAR} xf pgp263ii.tar && ${RM} -f pgp263ii.tar
 
 do-build:
-	cd ${WRKSRC} && ${MAKE} all CC=${CC} LD=${CC} OBJS_EXT="${OBJS_EXT}" \
+	cd ${WRKSRC} && ${MAKE} all CC="${CC}" LD="${CC}" \
+		OBJS_EXT="${OBJS_EXT}" \
 		CFLAGS="${CFLAGS} ${RSAINC} ${ASMFLAG} -O2 -DUNIX -DIDEA32 \
 		-DMAX_NAMELEN=255" RSALIBS="${RSALIBS}" RSAOBJS="${RSAOBJS}"
 
