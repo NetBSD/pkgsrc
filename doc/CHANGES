@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8579 2005/01/03 12:49:00 wiz Exp $
+$NetBSD: CHANGES,v 1.8580 2005/01/03 14:29:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -42,3 +42,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated curl to 7.12.3 [wiz 2005-01-03]
 	Updated stunnel to 4.07 [martti 2005-01-03]
 	Updated libdv to 0.104 [wiz 2005-01-03]
+	Added xsc-1.5 [wiz 2005-01-03]
