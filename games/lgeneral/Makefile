@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/26 21:41:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/08 14:41:39 wiz Exp $
 #
 
 DISTNAME=	lgeneral-1.1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgeneral/}
 

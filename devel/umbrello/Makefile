@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/08/05 13:36:59 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/08 14:41:39 wiz Exp $
 
 DISTNAME=	umbrello-1.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=uml/}
 EXTRACT_SUFX=	.tar.bz2
