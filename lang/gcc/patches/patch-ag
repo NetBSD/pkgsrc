@@ -1,16 +1,106 @@
-$NetBSD: patch-ag,v 1.1 2000/09/15 23:58:48 tron Exp $
+$NetBSD: patch-ag,v 1.2 2002/01/03 20:40:42 tron Exp $
 
---- ../gcc-2.95.2/gcc/config/sparc/sparc.md.orig	Thu Oct 21 07:35:40 1999
-+++ ../gcc-2.95.2/gcc/config/sparc/sparc.md	Sat Sep 16 00:17:42 2000
-@@ -3472,10 +3472,7 @@
- (define_split
-   [(set (match_operand:TF 0 "register_operand" "")
-         (match_operand:TF 1 "register_operand" ""))]
--  "reload_completed
--   && (! TARGET_ARCH64
--       || (TARGET_FPU
--           && ! TARGET_HARD_QUAD))"
-+  "reload_completed"
-   [(clobber (const_int 0))]
-   "
- {
+--- ../gcc-2.95.3/gcc/config/arm/arm.h.orig	Thu Jan 25 15:03:26 2001
++++ ../gcc-2.95.3/gcc/config/arm/arm.h	Thu Jan  3 20:37:53 2002
+@@ -199,7 +199,9 @@
+ "
+ 
+ /* Default is hard float, which doesn't define anything */
++#ifndef CPP_FLOAT_DEFAULT_SPEC
+ #define CPP_FLOAT_DEFAULT_SPEC ""
++#endif
+ 
+ #define CPP_ENDIAN_SPEC "\
+ %{mbig-endian: \
+@@ -210,7 +212,9 @@
+ "
+ 
+ /* Default is little endian, which doesn't define anything. */
++#ifndef CPP_ENDIAN_DEFAULT_SPEC
+ #define CPP_ENDIAN_DEFAULT_SPEC ""
++#endif
+ 
+ #define CC1_SPEC ""
+ 
+@@ -310,6 +314,10 @@
+ function tries to return. */
+ #define ARM_FLAG_ABORT_NORETURN (0x8000)
+ 
++/* Nonzero if the stack should be 64-bit aligned at function boundaries,
++   as mandated by the ATPCS.  */
++#define ARM_FLAG_ATPCS_STACK_ALIGN (0x10000)
++
+ #define TARGET_APCS			(target_flags & ARM_FLAG_APCS_FRAME)
+ #define TARGET_POKE_FUNCTION_NAME	(target_flags & ARM_FLAG_POKE)
+ #define TARGET_FPE			(target_flags & ARM_FLAG_FPE)
+@@ -332,6 +340,7 @@
+ #define TARGET_LITTLE_WORDS		(target_flags & ARM_FLAG_LITTLE_WORDS)
+ #define TARGET_NO_SCHED_PRO		(target_flags & ARM_FLAG_NO_SCHED_PRO)
+ #define TARGET_ABORT_NORETURN           (target_flags & ARM_FLAG_ABORT_NORETURN)
++#define TARGET_ATPCS_STACK_ALIGN	(target_flags & ARM_FLAG_ATPCS_STACK_ALIGN)
+ 
+ /* SUBTARGET_SWITCHES is used to add flags on a per-config basis.
+    Bit 31 is reserved.  See riscix.h.  */
+@@ -590,6 +599,8 @@
+ 
+ #define STACK_BOUNDARY  32
+ 
++#define PREFERRED_STACK_BOUNDARY (TARGET_ATPCS_STACK_ALIGN ? 64 : 32)
++
+ #define FUNCTION_BOUNDARY  32
+ 
+ #define EMPTY_FIELD_BOUNDARY  32
+@@ -1252,7 +1263,7 @@
+   else if ((FROM) == FRAME_POINTER_REGNUM				\
+ 	   && (TO) == STACK_POINTER_REGNUM)				\
+     (OFFSET) = (current_function_outgoing_args_size			\
+-		+ ((get_frame_size () + 3) & ~3));			\
++		+ arm_get_frame_size ());				\
+   else									\
+     {									\
+       int regno;							\
+@@ -1281,7 +1292,7 @@
+ 	       && (regs_ever_live[14] || saved_hard_reg)) 		\
+ 	     offset += 4;						\
+ 	   offset += current_function_outgoing_args_size;		\
+-	   (OFFSET) = ((get_frame_size () + 3) & ~3) + offset;		\
++	   (OFFSET) = arm_get_frame_size () + offset;			\
+          }								\
+     }									\
+ }
+@@ -2113,12 +2124,16 @@
+ 
+ /* Used to mask out junk bits from the return address, such as
+    processor state, interrupt status, condition codes and the like.  */
+-#define MASK_RETURN_ADDR \
++#define MASK_RETURN_ADDR						\
+   /* If we are generating code for an ARM2/ARM3 machine or for an ARM6	\
+      in 26 bit mode, the condition codes must be masked out of the	\
+      return address.  This does not apply to ARM6 and later processors	\
+-     when running in 32 bit mode.  */					\
+-  ((!TARGET_APCS_32) ? (GEN_INT (0x03fffffc)) : (GEN_INT (0xffffffff)))
++     when running in 32 bit mode, but if we are not targeting archv4 	\
++     or later, assume this may be ARM2/3 running in 32-bit compatible	\
++     code mode.  */							\
++  ((!TARGET_APCS_32) ? (GEN_INT (0x03fffffc))				\
++   : arm_arch4 ? (GEN_INT (0xffffffff))					\
++   : arm_gen_return_addr_mask ())
+ 
+ /* The remainder of this file is only needed for building the compiler 
+    itself, not for the collateral.  */
+@@ -2217,6 +2232,7 @@
+ Rtx    gen_rotated_half_load PROTO ((Rtx));
+ Mmode  arm_select_cc_mode RTX_CODE_PROTO ((Rcode, Rtx, Rtx));
+ Rtx    gen_compare_reg RTX_CODE_PROTO ((Rcode, Rtx, Rtx, int));
++Rtx    arm_gen_return_addr_mask PROTO ((void));
+ void   arm_reload_in_hi PROTO ((Rtx *));
+ void   arm_reload_out_hi PROTO ((Rtx *));
+ void   arm_reorg PROTO ((Rtx));
+@@ -2239,6 +2255,7 @@
+ void   arm_poke_function_name STDIO_PROTO ((FILE *, char *));
+ void   output_func_prologue STDIO_PROTO ((FILE *, int));
+ void   output_func_epilogue STDIO_PROTO ((FILE *, int));
++int    arm_get_frame_size PROTO ((void));
+ void   arm_expand_prologue PROTO ((void));
+ void   arm_print_operand STDIO_PROTO ((FILE *, Rtx, int));
+ void   arm_final_prescan_insn PROTO ((Rtx));

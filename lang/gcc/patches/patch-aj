@@ -1,9 +1,86 @@
-$NetBSD: patch-aj,v 1.1 2000/09/15 23:58:48 tron Exp $
+$NetBSD: patch-aj,v 1.2 2002/01/03 20:40:42 tron Exp $
 
---- ../gcc-2.95.2/gcc/config/sparc/xm-netbsd64.h.orig	Sat Sep 16 00:17:42 2000
-+++ ../gcc-2.95.2/gcc/config/sparc/xm-netbsd64.h	Sat Sep 16 00:17:42 2000
-@@ -0,0 +1,4 @@
-+/* Configuration for GCC for Sun SPARC V9 running NetBSD as host.  */
+--- ../gcc-2.95.3/gcc/config/arm/netbsd.h.orig	Mon Jan 11 14:33:58 1999
++++ ../gcc-2.95.3/gcc/config/arm/netbsd.h	Thu Jan  3 20:37:53 2002
+@@ -1,4 +1,4 @@
+-/* NetBSD/arm (RiscBSD) version.
++/* NetBSD/arm32 version.
+    Copyright (C) 1993, 1994, 1997, 1998 Free Software Foundation, Inc.
+    Contributed by Mark Brinicombe (amb@physig.ph.kcl.ac.uk)
+ 
+@@ -46,24 +46,28 @@
+ 
+ #include <netbsd.h>
+ 
++/* NetBSD uses gas so we want to use .ident */
++#undef ASM_OUTPUT_IDENT
++#define ASM_OUTPUT_IDENT(STREAM,STRING) \
++  fprintf (STREAM,"\t.ident \"%s\"\n",STRING)
 +
-+#include <xm-netbsd.h>
-+#include <sparc/xm-sp64.h>
++/* On the ARM `@' introduces a comment, so we must use something else
++   for .type directives.  Most NetBSD platforms use %, but we use #
++   because of some legacy assemblers.  */
++#undef TYPE_OPERAND_FMT
++#define TYPE_OPERAND_FMT "#%s"
++
+ /* Until they use ELF or something that handles dwarf2 unwinds
+    and initialization stuff better.  */
+ #undef DWARF2_UNWIND_INFO
+ 
+-/* Some defines for CPP.
+-   arm32 is the NetBSD port name, so we always define arm32 and __arm32__.  */
++/* Some defines for CPP.  arm32 is the NetBSD port name, so we always (only)
++   define __arm32__ and __NetBSD__, and add __KPRINTF_ATTRIBUTE__ since
++   this compiler is hacked with the NetBSD kprintf attribute mods. */
+ #undef CPP_PREDEFINES
+-#define CPP_PREDEFINES "\
+--Dunix -Driscbsd -Darm32 -D__arm32__ -D__arm__ -D__NetBSD__ \
++#define CPP_PREDEFINES "-D__arm32__ -D__arm__ -D__NetBSD__ -D__KPRINTF_ATTRIBUTE__ \
+ -Asystem(unix) -Asystem(NetBSD) -Acpu(arm) -Amachine(arm)"
+ 
+-/* Define _POSIX_SOURCE if necessary.  */
+-#undef CPP_SPEC
+-#define CPP_SPEC "\
+-%(cpp_cpu_arch) %(cpp_apcs_pc) %(cpp_float) %(cpp_endian) \
+-%{posix:-D_POSIX_SOURCE} \
+-"
+-
+ /* Because TARGET_DEFAULT sets ARM_FLAG_APCS_32 */
+ #undef CPP_APCS_PC_DEFAULT_SPEC
+ #define CPP_APCS_PC_DEFAULT_SPEC "-D__APCS_32__"
+@@ -72,13 +76,6 @@
+ #undef CPP_FLOAT_DEFAULT_SPEC
+ #define CPP_FLOAT_DEFAULT_SPEC "-D__SOFTFP__"
+ 
+-/* Pass -X to the linker so that it will strip symbols starting with 'L' */
+-#undef LINK_SPEC
+-#define LINK_SPEC "\
+--X %{!nostdlib:%{!r*:%{!e*:-e start}}} -dc -dp %{R*} \
+-%{static:-Bstatic} %{assert*} \
+-"
+-
+ #undef SIZE_TYPE
+ #define SIZE_TYPE "unsigned int"
+ 
+@@ -94,6 +91,9 @@
+ #undef WCHAR_TYPE_SIZE
+ #define WCHAR_TYPE_SIZE 32
+ 
++#undef MAX_WCHAR_TYPE_SIZE
++#define MAX_WCHAR_TYPE_SIZE 16
++
+ #define HANDLE_SYSV_PRAGMA
+ 
+ /* We don't have any limit on the length as out debugger is GDB.  */
+@@ -111,11 +111,6 @@
+   fprintf(STREAM, "\tmov\t%sip, %slr\n", REGISTER_PREFIX, REGISTER_PREFIX); \
+   fprintf(STREAM, "\tbl\tmcount\n");					    \
+ }
+-
+-/* On the ARM `@' introduces a comment, so we must use something else
+-   for .type directives.  */
+-#undef TYPE_OPERAND_FMT
+-#define TYPE_OPERAND_FMT "%%%s"
+ 
+ /* NetBSD uses the old PCC style aggregate returning conventions. */
+ #undef DEFAULT_PCC_STRUCT_RETURN

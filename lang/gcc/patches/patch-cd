@@ -1,0 +1,14 @@
+$NetBSD: patch-cd,v 1.1 2002/01/03 20:40:50 tron Exp $
+
+--- ../gcc-2.95.3/gcc/varasm.c.orig	Mon Feb 19 15:02:02 2001
++++ ../gcc-2.95.3/gcc/varasm.c	Thu Jan  3 20:37:55 2002
+@@ -706,6 +706,9 @@
+ 	    {
+ 	      /* Make this register global, so not usable for anything
+ 		 else.  */
++#ifdef ASM_DECLARE_REGISTER_GLOBAL
++	      ASM_DECLARE_REGISTER_GLOBAL (asm_out_file, decl, reg_number, name);
++#endif
+ 	      nregs = HARD_REGNO_NREGS (reg_number, DECL_MODE (decl));
+ 	      while (nregs > 0)
+ 		globalize_reg (reg_number + --nregs);

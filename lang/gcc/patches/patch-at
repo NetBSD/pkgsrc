@@ -1,43 +1,24 @@
-$NetBSD: patch-at,v 1.1 2000/10/16 08:56:02 jlam Exp $
+$NetBSD: patch-at,v 1.2 2002/01/03 20:40:43 tron Exp $
 
---- ../gcc-2.95.2/gcc/ginclude/stddef.h.orig	Wed Dec 16 16:19:25 1998
-+++ ../gcc-2.95.2/gcc/ginclude/stddef.h
-@@ -45,6 +45,12 @@
- #define _WCHAR_T
- #endif
- #endif
-+/* On NetBSD, machine/ansi.h defines _BSD_WINT_T_ instead of _WINT_T. */
-+#if !defined(_WINT_T_) && !defined(_BSD_WINT_T_)
-+#ifndef _BSD_WINT_T_
-+#define _WINT_T
-+#endif
-+#endif
- /* Undef _FOO_T_ if we are supposed to define foo_t.  */
- #if defined (__need_ptrdiff_t) || defined (_STDDEF_H_)
- #undef _PTRDIFF_T_
-@@ -58,6 +64,10 @@
- #undef _WCHAR_T_
- #undef _BSD_WCHAR_T_
- #endif
-+#if defined (__need_wint_t) || defined (_STDDEF_H_)
-+#undef _WINT_T_
-+#undef _BSD_WINT_T_
-+#endif
- #endif /* defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_) */
+--- ../gcc-2.95.3/gcc/config/sh/sh.c.orig	Mon Aug  2 07:02:55 1999
++++ ../gcc-2.95.3/gcc/config/sh/sh.c	Thu Jan  3 20:37:53 2002
+@@ -515,6 +515,7 @@
+   if ((code != EQ && code != NE
+        && (sh_compare_op1 != const0_rtx
+ 	   || code == GTU  || code == GEU || code == LTU || code == LEU))
++      || (mode == DImode && sh_compare_op1 != const0_rtx)
+       || TARGET_SH3E && GET_MODE_CLASS (mode) == MODE_FLOAT)
+     sh_compare_op1 = force_reg (mode, sh_compare_op1);
  
- /* Sequent's header files use _PTRDIFF_T_ in some conflicting way.
-@@ -272,12 +282,14 @@
+@@ -823,9 +824,9 @@
  
- #if defined (_STDDEF_H) || defined (__need_wint_t)
- #ifndef _WINT_T
-+#ifndef _BSD_WINT_T_
- #define _WINT_T
- 
- #ifndef __WINT_TYPE__
- #define __WINT_TYPE__ unsigned int
- #endif
- typedef __WINT_TYPE__ wint_t;
-+#endif
- #endif
- #undef __need_wint_t
- #endif
+ char *
+ output_ieee_ccmpeq (insn, operands)
+-     rtx insn, operands;
++     rtx insn, *operands;
+ {
+-  output_branchy_insn (NE, "bt\t%l9\\;fcmp/eq\t%1,%0", insn, operands);
++  return output_branchy_insn (NE, "bt\t%l9\\;fcmp/eq\t%1,%0", insn, operands);
+ }
+ 
+ /* Output to FILE the start of the assembler file.  */

@@ -1,12 +1,42 @@
-$NetBSD: patch-ap,v 1.1 2000/09/15 23:58:49 tron Exp $
+$NetBSD: patch-ap,v 1.2 2002/01/03 20:40:43 tron Exp $
 
---- ../gcc-2.95.2/gcc/collect2.c.orig	Tue Oct 12 23:16:52 1999
-+++ ../gcc-2.95.2/gcc/collect2.c	Sat Sep 16 00:17:41 2000
-@@ -53,7 +53,6 @@
- #define obstack_chunk_alloc xmalloc
- #define obstack_chunk_free free
+--- ../gcc-2.95.3/gcc/config/mips/mips.c.orig	Fri May  7 14:42:03 1999
++++ ../gcc-2.95.3/gcc/config/mips/mips.c	Thu Jan  3 20:37:53 2002
+@@ -93,7 +93,7 @@
+ static void block_move_loop			PROTO ((rtx, rtx, int, int,
+ 							rtx, rtx));
+ static void block_move_call			PROTO ((rtx, rtx, rtx));
+-static FILE *make_temp_file			PROTO ((void));
++static FILE *xmake_temp_file			PROTO ((void));
+ static void save_restore_insns			PROTO ((int, rtx,
+ 							long, FILE *));
+ static void mips16_output_gp_offset		PROTO ((FILE *, rtx));
+@@ -5076,7 +5076,7 @@
+ #endif
  
--extern char *make_temp_file PROTO ((char *));
+ static FILE *
+-make_temp_file ()
++xmake_temp_file ()
+ {
+   FILE *stream;
+   const char *base = getenv ("TMPDIR");
+@@ -5295,7 +5295,7 @@
+   if (TARGET_FILE_SWITCHING && ! TARGET_MIPS16)
+     {
+       asm_out_data_file = stream;
+-      asm_out_text_file = make_temp_file ();
++      asm_out_text_file = xmake_temp_file ();
+     }
+ 
+   else
+@@ -6278,8 +6278,10 @@
+ 	  fprintf (file, "\t.cprestore %ld\n", current_frame_info.args_size);
+ 	}
+ 
++#ifdef DWARF2_UNWIND_INFO
+       if (dwarf2out_do_frame ())
+ 	dwarf2out_def_cfa ("", STACK_POINTER_REGNUM, tsize);
++#endif
+     }
+ }
  
- /* On certain systems, we have code that works by scanning the object file
-    directly.  But this code uses system-specific header files and library

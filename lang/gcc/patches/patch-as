@@ -1,20 +1,15 @@
-$NetBSD: patch-as,v 1.1 2000/09/15 23:58:49 tron Exp $
+$NetBSD: patch-as,v 1.2 2002/01/03 20:40:43 tron Exp $
 
---- ../gcc-2.95.2/gcc/emit-rtl.c.orig	Wed Aug 11 09:28:52 1999
-+++ ../gcc-2.95.2/gcc/emit-rtl.c	Sat Sep 16 00:17:42 2000
-@@ -1378,6 +1378,15 @@
- 	val = ((val & 0xffffffff) ^ 0x80000000) - 0x80000000;
- 	return GEN_INT (val);
-       }
-+#if HOST_BITS_PER_WIDE_INT >= 64
-+    else if (BITS_PER_WORD >= 64 && i <= 1)
-+      {
-+        val = k[i*2 + ! WORDS_BIG_ENDIAN];
-+        val = (((val & 0xffffffff) ^ 0x80000000) - 0x80000000) << 32;
-+        val |= (HOST_WIDE_INT) k[i*2 + WORDS_BIG_ENDIAN] & 0xffffffff;
-+        return GEN_INT (val);
-+      }
-+#endif
-     else
-       abort ();
-   }
+--- ../gcc-2.95.3/gcc/config/rs6000/rs6000.c.orig	Thu Jan 25 15:03:34 2001
++++ ../gcc-2.95.3/gcc/config/rs6000/rs6000.c	Thu Jan  3 20:37:53 2002
+@@ -1004,8 +1004,9 @@
+ 	      && CONST_DOUBLE_HIGH (op) == 0
+ 	      && (CONST_DOUBLE_LOW (op) & (~ (HOST_WIDE_INT) 0xffff)) != 0
+ 	      && (CONST_DOUBLE_LOW (op)
+-		  & (~ (unsigned HOST_WIDE_INT) 0xffff0000u)) != 0));
++		  & (~ (unsigned HOST_WIDE_INT) 0xffff0000u)) != 0)
+ #endif
++	  );
+ }
+ 
+ /* Return 1 if C is a constant that can be encoded in a 32-bit mask on the
