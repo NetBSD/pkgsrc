@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/12/27 23:04:23 wiz Exp $
-
---- ../snownews-1.4.2.orig/conversions.c	2003-12-23 04:10:35.000000000 -0700
-+++ conversions.c	2003-12-23 15:19:48.000000000 -0700
-@@ -55,7 +55,7 @@
- 		return NULL;
- 	}
+$NetBSD: patch-ab,v 1.2 2004/02/15 23:52:29 wiz Exp $
+--- conversions.c.orig	2003-12-07 07:14:40.000000000 -0600
++++ conversions.c	2003-12-16 01:01:13.000000000 -0600
+@@ -38,7 +38,7 @@
+ #	include "os-support.h"
+ #endif
  
--	if (iconv (cd, &inbuf, &inbytesleft, &outbuf, &outbytesleft) == -1) {
-+	if (iconv (cd, (const char **)&inbuf, &inbytesleft, &outbuf, &outbytesleft) == -1) {
- 		return NULL;
- 	}
- 
+-char * iconvert (char * inbuf, char * from, char * to) {
++char * iconvert (const char * inbuf, char * from, char * to) {
+ 	iconv_t cd;							/* Iconvs conversion descriptor. */
+ 	char *outbuf, *outbuf_first;		/* We need two pointers so we do not lose
+ 	                                       the strings starting position. */

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:23:47 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/15 23:52:29 wiz Exp $
 
-DISTNAME=	snownews-1.4.2
-PKGREVISION=	1
+DISTNAME=	snownews-1.4.4
 CATEGORIES=	www
 MASTER_SITES=	http://home.kcore.de/~kiza/software/snownews/download/
 
@@ -16,12 +15,22 @@ USE_GNU_TOOLS+=		make
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
 
-MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR} GMAKE=${GMAKE}
-MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}"
+MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}" GMAKE="${GMAKE}"
+MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}" LOCALBASE="${LOCALBASE}"
 
 # XXX -lintl hack suggested by Jeremy C. Reed: blocking on PR #23369
 .include "../../devel/gettext-lib/buildlink2.mk"
 MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${_BLNK_INTL_LDFLAGS}"
+
+post-patch:
+	for FILE in ${WRKSRC}/doc/man/Makefile ${WRKSRC}/doc/man/*/Makefile;do \
+		${MV} $${FILE} $${FILE}.orig; \
+		${SED} -e 's/$$(INSTALL) -m 0644/$$(BSD_INSTALL_MAN)/' $${FILE}.orig > $${FILE}; \
+	done
+	for FILE in ${WRKSRC}/po/Makefile;do \
+		${MV} $${FILE} $${FILE}.orig; \
+		${SED} -e 's/$$(INSTALL) -m 0644/$$(BSD_INSTALL_DATA)/' $${FILE}.orig > $${FILE}; \
+	done
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
