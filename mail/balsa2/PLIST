@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/27 00:42:58 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/25 18:25:45 drochner Exp $
 bin/balsa
 bin/balsa-ab
 man/man1/balsa.1
@@ -63,6 +63,8 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/balsa.mo
