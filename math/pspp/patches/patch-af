@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 1999/07/13 01:31:09 jlam Exp $
+
+--- src/filename.c.orig	Mon Jan 18 13:00:08 1999
++++ src/filename.c	Thu Jul  8 14:44:06 1999
+@@ -209,6 +209,7 @@
+     }
+ }
+ 
++#if !HAVE_TILDE_EXPAND
+ #if unix
+ /* Expands csh tilde notation from the path INPUT into a malloc()'d
+    returned string. */
+@@ -293,6 +294,7 @@
+   return xstrdup (input);
+ }
+ #endif /* !unix */
++#endif
+ 
+ /* normalize_filename(): This very OS-dependent routine canonicalizes
+    filename FN1.  The filename should not need to be the name of an

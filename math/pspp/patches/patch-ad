@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.1 1999/07/13 01:31:09 jlam Exp $
+
+--- configure.in.orig	Tue Mar  9 14:02:08 1999
++++ configure.in	Thu Jul  8 14:40:47 1999
+@@ -49,14 +49,19 @@
+   AC_DEFINE(HAVE_LIBTERMCAP)
+ fi
+ 
+-AC_CHECK_LIB(readline, readline)
+-if test "$ac_cv_lib_readline_readline" = yes; then
+-  AC_CHECK_HEADERS(readline/readline.h)
+-  AC_CHECK_LIB(readline, add_history, history=yes,
++AC_CHECK_LIB(edit, readline, readlinelib=edit have_readline=yes,
++  AC_CHECK_LIB(readline, readline, readlinelib=readline have_readline=yes,
++    readline=no))
++if test "$have_readline" = yes; then
++  LIBS="-l$readlinelib $LIBS"
++  AC_CHECK_HEADERS(readline.h readline/readline.h)
++  AC_DEFINE(HAVE_LIBREADLINE)
++  AC_CHECK_LIB($readlinelib, tilde_expand, AC_DEFINE(HAVE_TILDE_EXPAND))
++  AC_CHECK_LIB($readlinelib, add_history, history=yes,
+     AC_CHECK_LIB(history, add_history, LIBS="-lhistory" history=yes,
+                  history=no))
+   if test "$history" = yes; then
+-    AC_CHECK_HEADERS(readline/history.h)
++    AC_CHECK_HEADERS(history.h readline/history.h)
+     AC_DEFINE(HAVE_LIBHISTORY)
+   fi
+ fi
