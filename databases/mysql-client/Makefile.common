@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2002/09/20 10:39:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2003/01/20 23:16:38 lukem Exp $
 
 DISTNAME=		mysql-3.23.49
 CATEGORIES=		databases
@@ -13,6 +13,12 @@ EXTRACT_USING_PAX=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+# MYSQL_USER		username of the database administrator
+# MYSQL_GROUP		group of the database administrator
+# MYSQL_DATADIR		home directory of the database administrator and
+#			location of the databases
+MYSQL_USER?=		mysql
+MYSQL_GROUP?=		mysql
 MYSQL_DATADIR?=		/var/mysql
 
 USE_BUILDLINK2=		# defined
