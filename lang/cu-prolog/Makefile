@@ -1,10 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2001/02/24 15:45:52 jtb Exp $
-# New ports collection makefile for:	cu-Prolog
-# Date created:		7 July 1999
-# Whom:			Issei Suzuki <issei@jp.FreeBSD.ORG>
-#
-# FreeBSD: ports/lang/cu-prolog/Makefile,v 1.2 2000/04/12 06:18:03 obrien Exp
-#
+# $NetBSD: Makefile,v 1.3 2001/03/01 19:06:04 jtb Exp $
+# FreeBSD Id: Makefile,v 1.2 2000/04/12 06:18:03 obrien Exp
 
 DISTNAME=	cu-prolog-3.94
 CATEGORIES=	lang
