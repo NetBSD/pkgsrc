@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2004/05/03 04:48:12 snj Exp $
 
 DISTNAME=	quanta-2.0-pr2
 PKGNAME=	quanta-1.9.9.2
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 WRKSRC=			${WRKDIR}/quanta
 AUTOMAKE_REQD=		1.4
 BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 USE_PERL5=		build
 USE_GNU_TOOLS+=		make
@@ -32,8 +32,8 @@ pre-configure:
 	${AUTOMAKE} -a --gnu -i;					\
 	${PERL5} admin/am_edit
 
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdebase2/buildlink2.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdebase2/buildlink3.mk"
 
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"

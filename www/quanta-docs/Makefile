@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/03 04:48:12 snj Exp $
 
 DISTNAME=	quanta-docs-1.0
 PKGREVISION=	6
@@ -20,7 +20,7 @@ DEPENDS+=	quanta>=1.9.9.2:../../www/quanta
 
 WRKSRC=			${WRKDIR}
 BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 DIST_SUBDIR=	${PKGBASE}
 NO_BUILD=	YES
@@ -35,7 +35,7 @@ do-install:
 		${CHMOD} -R a-w ${DOCDIR}/$${dir};			\
 	done
 
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdebase2/buildlink2.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdebase2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
