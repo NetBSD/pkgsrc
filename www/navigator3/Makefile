@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:53 agc Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/14 04:00:25 jlam Exp $
 
 DISTNAME=		netscape-v304-export.x86-unknown-bsd
 PKGNAME=		navigator3-3.04
@@ -18,21 +18,21 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
-USE_X11BASE=		yes
+USE_X11BASE=		YES
 SCRIPTS_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
-NO_BUILD=		yes
+NO_BUILD=		YES
 
 do-install:
-	${INSTALL_DATA_DIR} ${X11BASE}/share/netscape
-	${INSTALL_DATA_DIR} ${X11BASE}/share/netscape/nls
-	${INSTALL_DATA_DIR} ${X11BASE}/share/netscape/java
-	${INSTALL_SCRIPT} ${WRKSRC}/netscape ${X11BASE}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/netscape.bin ${X11BASE}/bin # XXX
-	${INSTALL_SCRIPT} ${WRKSRC}/movemail ${X11BASE}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/movemail.bin ${X11BASE}/bin # XXX
-	${INSTALL_DATA} ${WRKSRC}/nls/C ${X11BASE}/share/netscape/nls
-	${INSTALL_DATA} ${WRKSRC}/nls/nls.dir ${X11BASE}/share/netscape/nls
-	${INSTALL_DATA} ${WRKSRC}/java_301 ${X11BASE}/share/netscape/java
-	${INSTALL_DATA} ${WRKSRC}/mailcap ${X11BASE}/share/netscape
+	${INSTALL_DATA_DIR} ${PREFIX}/share/netscape
+	${INSTALL_DATA_DIR} ${PREFIX}/share/netscape/nls
+	${INSTALL_DATA_DIR} ${PREFIX}/share/netscape/java
+	${INSTALL_SCRIPT} ${WRKSRC}/netscape3 ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/netscape3.bin ${PREFIX}/bin # XXX
+	${INSTALL_SCRIPT} ${WRKSRC}/movemail ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/movemail.bin ${PREFIX}/bin # XXX
+	${INSTALL_DATA} ${WRKSRC}/nls/C ${PREFIX}/share/netscape/nls
+	${INSTALL_DATA} ${WRKSRC}/nls/nls.dir ${PREFIX}/share/netscape/nls
+	${INSTALL_DATA} ${WRKSRC}/java_301 ${PREFIX}/share/netscape/java
+	${INSTALL_DATA} ${WRKSRC}/mailcap ${PREFIX}/share/netscape
 
 .include "../../mk/bsd.pkg.mk"
