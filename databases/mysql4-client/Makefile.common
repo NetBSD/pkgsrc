@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/03/07 19:42:50 martti Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/03/10 14:54:05 tv Exp $
 
 DISTNAME=		mysql-4.0.18
 CATEGORIES=		databases
@@ -39,6 +39,10 @@ CONFIGURE_ARGS+=	--without-readline
 
 # This forces mysql.info _not_ to be rebuilt.
 CONFIGURE_ARGS+=	--without-docs
+
+# Speed up production one-time builds; see "./configure --help" for
+# more information on using or disabling this option.
+CONFIGURE_ARGS+=	--disable-dependency-tracking
 
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
