@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/02/21 12:37:21 rh Exp $
+
+--- src/pathnames.h.orig	Sat Oct 31 16:58:16 1998
++++ src/pathnames.h	Sat Feb 20 21:23:53 1999
+@@ -45,10 +45,10 @@
+ #define _PATH_EXECPATH  "/bin/ftp-exec"
+ 
+ #ifdef USE_ETC
+-#define _PATH_FTPUSERS  "/etc/ftpusers"
+-#define _PATH_FTPACCESS "/etc/ftpaccess"
+-#define _PATH_CVT       "/etc/ftpconversions"
+-#define _PATH_PRIVATE   "/etc/ftpgroups"
++#define _PATH_FTPUSERS  PREFIX "/etc/ftpusers"
++#define _PATH_FTPACCESS PREFIX "/etc/ftpaccess"
++#define _PATH_CVT       PREFIX "/etc/ftpconversions"
++#define _PATH_PRIVATE   PREFIX "/etc/ftpgroups"
+ #else
+ #ifdef USE_ETC_FTPD
+ #define _PATH_FTPUSERS  "/etc/ftpd/ftpusers"

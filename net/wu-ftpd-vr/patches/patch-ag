@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/02/21 12:37:21 rh Exp $
+
+--- src/makefiles/Makefile.nbs.orig	Sat Oct 31 16:58:15 1998
++++ src/makefiles/Makefile.nbs	Sat Feb 20 21:27:50 1999
+@@ -5,7 +5,7 @@
+ CC       = cc -g
+ IFLAGS   = -I.. -I../support
+ LFLAGS   = -L../support
+-CFLAGS   = -O ${IFLAGS} ${LFLAGS}
++CFLAGS  += ${IFLAGS} ${LFLAGS} -DPREFIX=\"${PREFIX}\"
+ XOBJS    = 
+ LIBES    = ${LSKEY} -lsupport -lcrypt
+ LIBC     = /usr/lib/libc.a
