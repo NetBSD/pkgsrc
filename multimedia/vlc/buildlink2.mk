@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/03/29 10:30:29 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/04/07 13:04:41 salo Exp $
 #
 # This Makefile fragment is included by packages that use vlc.
 #
@@ -10,7 +10,7 @@ VLC_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			vlc
 BUILDLINK_DEPENDS.vlc?=		vlc>=0.7.1
-BUILDLINK_PKGSRCDIR.vlc?=		../../wip/videolanclient
+BUILDLINK_PKGSRCDIR.vlc?=		../../multimedia/vlc
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.vlc=vlc
 BUILDLINK_PREFIX.vlc_DEFAULT=	${LOCALBASE}
