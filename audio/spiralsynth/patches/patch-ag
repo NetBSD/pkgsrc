@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2003/12/19 16:48:06 ben Exp $
+$NetBSD: patch-ag,v 1.2 2004/11/25 17:24:27 ben Exp $
 
---- GUI/OutputGUI.C.orig	2000-11-26 07:52:39.000000000 -0800
+--- GUI/OutputGUI.C.orig	Sun Jun  2 14:36:16 2002
 +++ GUI/OutputGUI.C
-@@ -26,7 +26,7 @@ OutputGUI::OutputGUI(Output *o)
+@@ -26,7 +26,7 @@ OutputGUI::OutputGUI(OSSOutput *o)
  	if (!m_out) cerr<<"WARNING: Output not correctly set up"<<endl;
  }
  		
