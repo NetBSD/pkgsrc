@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:46 agc Exp $
+
+MD5 (htmldoc-1.7-source.tar.gz) = 95b8d6ed48b6b49f2c8828fa7e0ad7bc
+SHA1 (patch-aa) = e593fea22e12b62d1fd402c4d65dd8fb510204ac

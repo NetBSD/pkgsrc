@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:14 agc Exp $
+
+MD5 (xpenguins-1.2.tar.gz) = d87aabddc455d12d9ccffbe491fa3b5d
+SHA1 (patch-aa) = dac1dd56c09b4b744335ca4c4e2217a443b6feb7
+SHA1 (patch-ab) = 753bc8721efa246c4b82dd622f2738641a30c1ad

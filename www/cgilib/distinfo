@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:36 agc Exp $
+
+MD5 (cgilib-0.5.tar.gz) = 5187ba11b2ec165b6c5b6629087733b0
+SHA1 (patch-aa) = 697abdf17ee09793360d216097cfb46b3630ae8b
+SHA1 (patch-ab) = 11c101c15567d0afd5e6538bcfac92f8817cf629

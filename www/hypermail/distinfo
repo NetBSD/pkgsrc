@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:47 agc Exp $
+
+MD5 (hypermail-20b3.tar.gz) = 81c7e1eb1e7d483bb2dadfd348e9dcb6
+SHA1 (patch-ac) = 1207f0583a9ba8ae3c5b3e8128ca315e8786570c
+SHA1 (patch-ad) = 6dd609a1b5fa9159a689ab24584f0b62c3d82460
+SHA1 (patch-ae) = b9c3d6da3367e8d0e2f37478f0f2b6c44fd5f25c
+SHA1 (patch-af) = 6af5579e814ca5bc1e3b932345c84b810b34285e

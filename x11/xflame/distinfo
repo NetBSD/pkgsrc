@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:54 agc Exp $
+
+MD5 (xflame-1.1.1.tar.gz) = 6aa56927ae0181048d2ddfd15b017cb7
+SHA1 (patch-aa) = 44aa8318dfd12c94a9498839cb669a699666eb5c

@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:29 agc Exp $
+
+MD5 (xview3.2p1-X11R6.tar.gz) = 9d3049c6e83114148a9f51d361272816
+SHA1 (patch-aa) = 4cf1c3f9956ba134f6fa9cc200a6ff3ca909dd1a
+SHA1 (patch-ab) = 6be2df532fd7c45295a63d541e7c2ea7b4e05ef9
+SHA1 (patch-ac) = 743122cc518d3fb0bde26fe15115e09a51972811
+SHA1 (patch-ad) = afbe600772cfb79cdf792313c94a512949875bcb
+SHA1 (patch-ae) = 487e031de5a7fd5a87b77906baf52958029618c2
+SHA1 (patch-af) = 566fbcd79befbd4e76e55a2ba9a314e0694b8ce6
+SHA1 (patch-ag) = 35c93445b7d4b6026ce10499e2618ab90a4893ad
+SHA1 (patch-ah) = 0c04a31a0b02aedf89dc2ecbeac8b4fe3044a6da
+SHA1 (patch-ai) = 47ad1ab1078f10793f2f992a3c9082e0aaf12eca
+SHA1 (patch-aj) = 2da859bde6f6454d6e9636f63153d1b1e9516be5
+SHA1 (patch-ak) = d4af300bd981d01b3c67ca21bf7da4633e04313d
+SHA1 (patch-al) = 33bd9cfe652469db787c2dbf7dd767fc1a7d2c93
+SHA1 (patch-an) = 782bca64801400eedf5f02f507332d1bab621059
+SHA1 (patch-ao) = 47c291b7cb6dbbd59185e317742405e521c0a077
+SHA1 (patch-ap) = 1fffed3db2dd87d0cc8ab37ce27f1bd4c9e688e6
+SHA1 (patch-aq) = 83f956c1ddb8247974e50b3e25de6c9dbdc8920b
+SHA1 (patch-ar) = 14ba128cb87204c7a598f072c05efedd8222abc0
+SHA1 (patch-as) = 921246ec18295d302153699c93236a7248cbbd6b

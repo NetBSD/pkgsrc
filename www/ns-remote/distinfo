@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:13:00 agc Exp $
+
+MD5 (netscape/remote.c) = 1dfd396d83169cd1f286675698899feb
+MD5 (netscape/vroot.h) = cc8e398b414b212c684d774ab87fdf2a
+SHA1 (patch-aa) = d524df2b83bdd29bad1ed4a312eb46247321b7c0

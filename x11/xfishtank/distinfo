@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:52 agc Exp $
+
+MD5 (xfishtank-2.2.tar.gz) = 9d2d1a004992295d7c9d49f535bae42e
+SHA1 (patch-aa) = 72495a728ef93895b5eea85f27332f7167a1f5ac
+SHA1 (patch-ab) = 49a66f0ed29e6dc246a80cc6903c13963aa1c787

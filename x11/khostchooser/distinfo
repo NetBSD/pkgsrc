@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:12 agc Exp $
+
+MD5 (khostchooser-0.3.tgz) = b7b88b6f60aa5db2f7f1ea9acd5a48c2
+SHA1 (patch-aa) = 3954a6deea2258f4782711ed19bc770af3feb129

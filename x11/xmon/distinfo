@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:08 agc Exp $
+
+MD5 (xmon.1.5.4.tar.gz) = f6c84472241ce5b52af457dcece75c5a
+SHA1 (patch-aa) = 6f927e32fc7097f5a16355e3312b470d979be985
+SHA1 (patch-ab) = 2b23ab7d8f9fcc2d627320a2aa23e425365a59ec
+SHA1 (patch-ac) = f532bb53d4c08b507595116e09e2f7a2de5c6b9e

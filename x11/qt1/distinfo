@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:20 agc Exp $
+
+MD5 (qt-1.44.tar.gz) = 143a6b7001c04843c304c96cfe608ed8
+SHA1 (patch-aa) = 5481b8c096ef6ddf2d48ace2c34642e8440a4fcb
+SHA1 (patch-ab) = 76d0ac60cd386518b5d8a48d15552abc5c8737ef
+SHA1 (patch-ac) = e277ab0aaf539cd620678562f6721072ab6276a6

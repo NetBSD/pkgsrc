@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:39 agc Exp $
+
+MD5 (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 26d2944a58d6fa8c73ff5a4a2f3d7258
+MD5 (netscape/communicator-v477-us.alpha-dec-osf4.0.tar.gz) = 69184d20cf0ef5c6655c12ce16ccdeab
+MD5 (netscape/communicator-v477-us.sparc-sun-solaris2.5.1.tar.gz) = ebfb901d66801be1f2f76327089adca6
+MD5 (netscape/communicator-v475-us.x86-bsdi-bsd2.tar.gz) = 30280590f4e75bea070ec6e4f902cff0
+MD5 (netscape/communicator-v477-us.x86-unknown-linux2.2.tar.gz) = d38bbc5593c07b1328d542f1f1141ff0
+MD5 (netscape-4.7-3.ppc.rpm) = 7dda2ce0712b1f55c359b52d3bbf8c8c

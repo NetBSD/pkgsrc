@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:37 agc Exp $
+
+MD5 (chimera-2.0a19.tar.gz) = da728eb8ad7689232d104bfee21c8ca7
+SHA1 (patch-aa) = 96030ed758edf1e32c3994b32bc7a2730c36a681
+SHA1 (patch-ab) = 1fc2f5f97f46403359a00e42cc25f4cbf9bc5331
+SHA1 (patch-ac) = 5f18afd9a1452bfba010fe3eb4e773f5395789c6
+SHA1 (patch-ad) = 0ae7473d2d382b2b7f298a943d2569510066ceb7
+SHA1 (patch-ae) = 8b8e1bc50791b635e5e87860302d0e758d159ed9
+SHA1 (patch-af) = 76256ccb4b5183a8d30a46a89a0cd75b113122fc

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:37 agc Exp $
+
+MD5 (wmWeather-1.31.tar.gz) = f04693aa86d22099162cff3d0b5c9275
+SHA1 (patch-aa) = 2fddb64c4044b9a76b4a41c0794dc640266c8bbe
+SHA1 (patch-ab) = ffe2f8bf5618470d8c03a50d04df206e475a54c4

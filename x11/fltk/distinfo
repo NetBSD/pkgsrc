@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:14:52 agc Exp $
+
+MD5 (fltk-1.0.10-source.tar.bz2) = e76cc38b6c0bdb046a8ac5cd31a7e65e
+SHA1 (patch-aa) = c96194b4312b8e601ac8c5954386cef5bc9be8b3
+SHA1 (patch-ab) = fb925a3e4c81fe6d54e59791feff074a6a30f963
+SHA1 (patch-ac) = afcfc0f42fec2a6c6135692a80ebcf278864ab01
+SHA1 (patch-ad) = 163d8d823e0f59d1612f6f4d348b667e98f66176
+SHA1 (patch-ae) = 12d067e91beb1f9179f0e1cfa7582d51a86b2a52
+SHA1 (patch-af) = 29bb32cb91a29d632a3b6ff796e8a8cffb458b17

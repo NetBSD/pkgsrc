@@ -1,5 +1,0 @@
-$NetBSD: patch-sum,v 1.8 2001/04/03 11:05:24 wennmach Exp $
-
-SHA1 (patch-aa) = 7d2810e5306c68e416f04b26e505504924488f98
-SHA1 (patch-ab) = 6bbd0e0655dbac92dfaff25274d6c68b2deadf0d
-SHA1 (patch-ac) = 9d5927d7cf660cc0e8d9b8aa27543436dd503aec

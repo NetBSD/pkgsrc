@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:21 agc Exp $
+
+MD5 (HTML-Embperl-1.2.0.tar.gz) = 77aecf6dcd021031975c02b3a3d6bad0
+SHA1 (patch-aa) = 84f571837cb69c556539195fd740b698856a73f9
+SHA1 (patch-ab) = 30ad449b639ebae16e7c45f1c7c6bc41a3554fc7

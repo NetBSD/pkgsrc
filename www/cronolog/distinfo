@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:39 agc Exp $
+
+SHA1 (cronolog-1.6.1.tar.gz) = 5f819c7f680534277d9abe9d8d687e4588c99ed6
+SHA1 (patch-aa) = 8249c02397863dd4d3de4e6cf9a6f88661caf606

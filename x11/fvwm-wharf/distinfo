@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:14:54 agc Exp $
+
+MD5 (AfterStep-1.0.tar.gz) = 2c56247e1914e25a455df3c8d03b0663
+SHA1 (patch-aa) = c353ae6a4916128f39b9d69c85588f4a3050c68f
+SHA1 (patch-ab) = e644b57d966eadee04775f7344b80e0be144d570

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:34 agc Exp $
+
+MD5 (bozohttpd-5.06.tar.bz2) = 485232daba1661eaa194dab05ef38988
+SHA1 (patch-aa) = 3831938ead3fd2792d61878c10aa7ada431e8cd7
+SHA1 (patch-ab) = e821cefe6515ef626e727c90c21cda3284e611fe

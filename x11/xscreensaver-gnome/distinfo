@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:20 agc Exp $
+
+MD5 (xscreensaver-3.28.tar.gz) = 184bcb5a8a15454faa8fb0f0c5ab641e
+SHA1 (patch-aa) = 397e55a520f1e10e5a1bb1595b6b42e4b70674f1
+SHA1 (patch-ae) = c3e7ddffb2caab5c545b0834c93238455852dea6

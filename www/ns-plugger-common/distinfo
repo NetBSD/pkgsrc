@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:59 agc Exp $
+
+MD5 (plugger-3.2-linux-x86-glibc.tar.gz) = 6a1457df52172af0b4a614ca9b6a9edf
+SHA1 (patch-aa) = 74204a7279b68a930c6631b882383e71cc72fc5f
