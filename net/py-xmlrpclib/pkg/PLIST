@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/19 12:50:56 drochner Exp $
+PYSITELIB/xmlrpclib.py
+PYSITELIB/xmlrpcserver.py
+PYSITELIB/xmlrpc_handler.py
