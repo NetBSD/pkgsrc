@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.46 2004/01/11 04:02:52 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.47 2004/01/11 06:50:58 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -455,7 +455,7 @@ BUILDLINK_FILES_CMD.${_pkg_}?=						\
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
-	${GREP} '\(include.*/\|lib.*/lib[^/]*$$\)'
+	${EGREP} '(include.*/|lib.*/lib[^/]*$$)'
 .  endif
 
 # _BLNK_FILES_CMD.<pkg> combines BUILDLINK_FILES_CMD.<pkg> and
