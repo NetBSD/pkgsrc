@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/25 09:40:08 zuntum Exp $
+bin/keylaunch
+share/examples/keylaunch/keylaunch.rc
+@dirrm share/examples/keylaunch
