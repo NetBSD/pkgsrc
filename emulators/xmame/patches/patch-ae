@@ -1,8 +1,9 @@
-$NetBSD: patch-ae,v 1.20 2003/02/13 20:53:48 kristerw Exp $
---- src/unix/doc/xmamerc.dist.orig	Thu Feb 13 19:32:31 2003
-+++ src/unix/doc/xmamerc.dist	Thu Feb 13 19:33:47 2003
-@@ -69,12 +69,12 @@
- mouse                   1
+$NetBSD: patch-ae,v 1.21 2004/11/06 21:41:52 kristerw Exp $
+
+--- src/unix/doc/xmamerc.dist.orig	Sat Nov  6 21:40:52 2004
++++ src/unix/doc/xmamerc.dist	Sat Nov  6 21:42:31 2004
+@@ -66,12 +66,12 @@
+ analogstick             0
  
  ### Fileio Related ###
 -rompath                 /usr/local/share/xmame/roms

@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/16 00:27:30 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/06 21:41:52 kristerw Exp $
 bin/chdman
 bin/romcmp
 bin/xmame
+bin/xml2info
 man/man6/xmame.6
 share/doc/html/xmame/xmame-doc-2.html
 share/doc/html/xmame/xmame-doc-3.html
