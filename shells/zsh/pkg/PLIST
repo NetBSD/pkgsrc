@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/06/05 16:28:09 jtb Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/06/05 21:55:38 jtb Exp $
 bin/zsh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak) >/etc/shells
@@ -20,6 +20,10 @@ man/man1/zshoptions.1
 man/man1/zshparam.1
 man/man1/zshzftpsys.1
 man/man1/zshzle.1
+share/doc/zsh/BUGS
+share/doc/zsh/FAQ
+share/doc/zsh/FEATURES
+share/doc/zsh/NEWS
 share/zsh/4.0.1/functions/_a2ps
 share/zsh/4.0.1/functions/_alias
 share/zsh/4.0.1/functions/_aliases
@@ -362,3 +366,4 @@ share/zsh/4.0.1/functions/zstyle+
 @unexec rmdir %D/share/zsh/4.0.1/functions 2>/dev/null || true
 @unexec rmdir %D/share/zsh/4.0.1 2>/dev/null || true
 @unexec rmdir %D/share/zsh 2>/dev/null || true
+@dirrm share/doc/zsh
