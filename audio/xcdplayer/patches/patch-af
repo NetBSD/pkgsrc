@@ -1,17 +1,29 @@
-$NetBSD: patch-af,v 1.1 1998/08/23 06:49:29 garbled Exp $
-*** Imakefile	Tue Jan 12 10:59:29 1993
---- /users/swallace/work/xcdplayer/Imakefile	Fri Sep 30 17:09:19 1994
-***************
-*** 15,20 ****
---- 15,25 ----
-  
-  LOCAL_LIBRARIES = XawClientLibs
-  LINTLIBS = -lXaw -lXt -lX11
-+            SRCS = main.c top_setup.c logo_setup.c button_setup.c cdrom_callb.c\
-+                   cdrom_freebsd.c internals.c shuffle.c program.c leds.c debug.c 
-+ 
-+            OBJS = main.o top_setup.o logo_setup.o button_setup.o cdrom_callb.o\
-+                   cdrom_freebsd.o internals.o shuffle.o program.o leds.o debug.o
-  #ifdef SunArchitecture
-             SRCS = main.c top_setup.c logo_setup.c button_setup.c cdrom_callb.c\
-                    cdrom_sun.c internals.c shuffle.c program.c leds.c debug.c 
+$NetBSD
+
+--- cdrom_globs.h.orig	Tue Jan 12 19:59:31 1993
++++ cdrom_globs.h	Mon Sep  6 18:22:06 1999
+@@ -99,22 +99,10 @@
+ extern int		cdrom_open();
+ extern int		cdrom_init();
+ 
+-
+-extern Boolean		display_timer;
+-
+ extern XtAppContext	appc;
+ 
+-extern char		*file;
+-extern char		*device;
++#include "app.h"
++
+ extern char             info_filename[];
+ extern char     	*disc_title;
+ extern unsigned int     timer_fsecs;
+-
+-
+-extern float		volbase;
+-extern float		volpcent;
+-extern int		replayThreshold;
+-extern float    	scanPauseInterval;
+-extern int      	scanSkipInterval;
+-extern float      	pausePauseInterval;
+-extern int      	pauseSkipInterval;

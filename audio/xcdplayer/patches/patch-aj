@@ -1,70 +1,22 @@
-$NetBSD: patch-aj,v 1.1 1998/08/23 06:49:29 garbled Exp $
---- logo_setup.c.orig	Tue Jan 12 11:59:46 1993
-+++ logo_setup.c	Thu Jul 23 00:08:28 1998
-@@ -30,2 +30,5 @@
- # include "cdrom_globs.h"
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
-+# include "cdrom_freebsd.h"
-+#endif
- #ifdef sun
-@@ -45,2 +48,4 @@
+$NetBSD
+
+--- main.c.orig	Tue Jan 12 19:59:36 1993
++++ main.c	Mon Sep  6 18:22:06 1999
+@@ -23,6 +23,8 @@
+ 
+ Widget		top_form;
  
 +extern AppData app_data;
 +
- static Widget	track_button_widget;
-@@ -57,2 +62,10 @@
- static int	vol;
-+extern void     leds_label_setup();
-+static void     cb_track_button();
-+static void     cb_timer_button();
-+static void     volume_jump_proc();
-+static void     volume_scroll_proc();
-+static void     popup_title_dialog();
-+static void     popdown_title_dialog();
-+
- 
-@@ -62,10 +75,2 @@
- {
--	extern void	leds_label_setup();
--	extern void	cb_track_button();
--	extern void	cb_timer_button();
--	extern void	volume_jump_proc();
--	extern void	volume_scroll_proc();
--	extern void	popup_title_dialog();
--	extern void	popdown_title_dialog();
--
- 	Widget		version_label_widget;
-@@ -128,3 +133,3 @@
- 
--	if (display_timer == True)
-+	if (app_data.display_timer == True) {
- 		timer_button_widget = XtCreateManagedWidget("timerButton",
-@@ -134,5 +139,6 @@
- 
--	XtAddCallback(timer_button_widget, XtNcallback, cb_timer_button, 0);
--
--	timer_button_update();
-+		XtAddCallback(timer_button_widget, XtNcallback, 
-+			     cb_timer_button, 0);
-+		timer_button_update();
-+	}
- 	thumb_pixmap = XCreateBitmapFromData(XtDisplay(logo_form_widget),
-@@ -173,6 +179,6 @@
- 	if ((vol = cdrom_get_volume()) == 0) {
--		vol = (int) ((MAXVOL - volbase) * 0.75) + volbase;
-+		vol = (int) ((MAXVOL - app_data.volbase) * 0.75) + app_data.volbase;
+ void
+ main(argc, argv)
+ 	int		argc;
+@@ -66,7 +68,7 @@
+ 	/* ugly hack */
+ 	for (i = 1; i < argc; i++) {
+ 		if (strcmp(argv[i], "-debug") == 0) {
+-			debug = True;
++			app_data.debug = True;
+ 			break;
+ 		}
  	}
- #else
--	vol = (int) ((MAXVOL - volbase) * 0.75) + volbase;
-+	vol = (int) ((MAXVOL - app_data.volbase) * 0.75) + app_data.volbase;
- #endif
-@@ -358,3 +364,3 @@
- 
--	if (display_timer == False)
-+	if (app_data.display_timer == False)
- 		return;
-@@ -415,3 +421,3 @@
- 	vol = (*(float *) percent) * MAXVOL;
--	vol = (vol * volpcent) + volbase;
-+	vol = (vol * app_data.volpcent) + app_data.volbase;
- #endif
