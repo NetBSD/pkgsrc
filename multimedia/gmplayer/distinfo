@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2004/11/04 11:19:17 wiz Exp $
+$NetBSD: distinfo,v 1.18 2004/11/06 15:46:40 tron Exp $
 
 SHA1 (gmplayer-1.0rc5-20041104/MPlayer-1.0pre5.tar.bz2) = cf64892871b8673e452b5d390be25144d85fe307
 Size (gmplayer-1.0rc5-20041104/MPlayer-1.0pre5.tar.bz2) = 5072836 bytes
@@ -44,4 +44,5 @@ SHA1 (gmplayer-1.0rc5-20041104/xine-lcd-1.2.tar.bz2) = 1ff19272764348d99846497f0
 Size (gmplayer-1.0rc5-20041104/xine-lcd-1.2.tar.bz2) = 172357 bytes
 SHA1 (patch-aa) = 9a90cadba608c518e998024f8dbde39cbfab70da
 SHA1 (patch-ab) = 68e81c67cd3902499f912d3ca8c6d6bc208a2433
+SHA1 (patch-ac) = 696183adc3777cb4d9bc4b6d96d5cb7c88ec489d
 SHA1 (patch-ad) = 95c8741263b822e20eea3da00ca64923ed91c53b
