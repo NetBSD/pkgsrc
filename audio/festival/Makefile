@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/12/28 02:27:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 1999/12/28 03:42:56 wiz Exp $
 
 DISTNAME=	festival-1.4.0
 WRKSRC=		${WRKDIR}
@@ -25,12 +25,6 @@ FESTIVAL=	${WRKSRC}/festival
 FHOME=		${PREFIX}/share/festival
 
 .include "../../mk/bsd.prefs.mk"
-
-PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) echo gcc26;;\
-                                          *2.7.*) echo gcc27;;\
-                                          *2.8.*) echo gcc28;;\
-                                          *egcs*) echo egcs;;\
-                                       esac
 
 MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS} \
 		EST_HOME=${SPEECHTOOLS} \
@@ -81,3 +75,10 @@ do-install:
 	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1 ${PREFIX}/man/man1/festival_client.1
 
 .include "../../mk/bsd.pkg.mk"
+
+# has to be below bsd.pkg.mk, else ${ECHO} isn't expanded correctly
+PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) ${ECHO} gcc26;;\
+                                          *2.7.*) ${ECHO} gcc27;;\
+                                          *2.8.*) ${ECHO} gcc28;;\
+                                          *egcs*) ${ECHO} egcs;;\
+                                       esac
