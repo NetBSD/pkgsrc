@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/03/18 06:16:37 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2002/04/01 15:09:44 dmcmahill Exp $
 
 DISTNAME=		pl-lite-4.0.9
 PKGNAME=		swi-prolog-4.0.9
@@ -23,6 +23,13 @@ CPPFLAGS+=		-D__unix__=1
 PLIST_SUBST+=		SWIPL=${SWIPL}
 PLIST_SUBST+=		SWILIBDIR=${DISTNAME:S,pl-lite,'${SWIPL}',}
 PLIST_SUBST+=		APPEND_ELF=${APPEND_ELF}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64
+PLIST_SUBST+=		BITS=64
+.else
+PLIST_SUBST+=		BITS=32
+.endif
 
 .include "../../devel/ncurses/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"

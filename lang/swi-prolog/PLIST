@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/18 06:16:37 fredb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/04/01 15:09:44 dmcmahill Exp $
 bin/${SWIPL}
 bin/plld
 bin/plrc
@@ -27,7 +27,7 @@ lib/${SWILIBDIR}/boot/syspred.pl
 lib/${SWILIBDIR}/boot/toplevel.pl
 lib/${SWILIBDIR}/boot/topvars.pl
 lib/${SWILIBDIR}/boot/writef.pl
-lib/${SWILIBDIR}/boot32.prc
+lib/${SWILIBDIR}/boot${BITS}.prc
 lib/${SWILIBDIR}/include/SWI-Prolog.h
 lib/${SWILIBDIR}/include/SWI-Stream.h
 lib/${SWILIBDIR}/include/stub.c
