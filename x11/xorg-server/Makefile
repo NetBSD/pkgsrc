@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/15 11:15:55 hira Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/02 22:53:58 hira Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-server-${XORG_VER}
@@ -50,9 +50,9 @@ USE_PERL5=	build # Yeah, we need this :-)
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
-PLIST_SUBST+=		NOT_X86_64=""
-.else
 PLIST_SUBST+=		NOT_X86_64="@comment "
+.else
+PLIST_SUBST+=		NOT_X86_64=""
 .endif
 
 post-install:
