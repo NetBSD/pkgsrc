@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2003/08/28 09:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.200 2003/08/29 18:51:56 hubertf Exp $
 
 COMMENT=	System utilities
 
@@ -52,6 +52,7 @@ SUBDIR+=	fdgw
 SUBDIR+=	file
 SUBDIR+=	findutils
 SUBDIR+=	fix4SA110rev2
+SUBDIR+=	free
 SUBDIR+=	fsviewer
 SUBDIR+=	gcdmaster
 SUBDIR+=	gcombust
