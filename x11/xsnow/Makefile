@@ -3,7 +3,7 @@
 # Date created:         12 November 1994
 # Whom:                 jmz
 #
-# $Id: Makefile,v 1.1.1.1 1997/12/02 14:27:47 is Exp $
+# Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp 
 #
 
 DISTNAME=	xsnow-1.40
