@@ -1,0 +1,12 @@
+$NetBSD: patch-au,v 1.1 2004/03/28 20:14:22 mycroft Exp $
+
+--- src/xine-engine/xine.c.orig	2004-03-16 21:40:16.000000000 +0000
++++ src/xine-engine/xine.c	2004-03-28 03:36:37.000000000 +0000
+@@ -1321,6 +1321,7 @@
+   pthread_mutex_init(&this->port_ticket->lock, NULL);
+   pthread_mutex_init(&this->port_ticket->revoke_lock, NULL);
+   pthread_cond_init(&this->port_ticket->issued, NULL);
++  pthread_cond_init(&this->port_ticket->revoked, NULL);
+ 
+   return this;
+ }
