@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.362 1999/10/31 19:43:02 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.363 1999/11/01 11:15:20 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1351,10 +1351,9 @@ root-install:
 	fi)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} ${PLIST}
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-	${_PKG_SILENT}(${_PKG_DEBUG}sos=`${EGREP} -h 			\
-		'.*/lib[^/]+\.so\.[0-9]+\.[0-9]+$$'			\
-		${PLIST} || ${TRUE}`;					\
-	if [ X"$$sos" != X"" ]; then					\
+	${_PKG_SILENT}(${_PKG_DEBUG}					\
+	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
+	if [ "X$$sos" != "X" ]; then					\
 		shlib_type=`${MAKE} ${.MAKEFLAGS} show-shlib-type`;	\
 		case "$$shlib_type" in					\
 		"ELF")							\
