@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.18 2001/12/17 09:36:31 tron Exp $
+# $NetBSD: defs.SunOS.mk,v 1.19 2001/12/19 10:29:11 agc Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -18,6 +18,7 @@ EGREP?=		/usr/xpg4/bin/egrep
 FALSE?=		/usr/bin/false
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
+GMAKE?=		${LOCALBASE}/bin/gmake
 GREP?=		/usr/bin/grep
 GTAR?=		${ZOULARISBASE}/bin/tar
 .if exists(/usr/bin/gzip)
@@ -76,6 +77,7 @@ USERADD?=		/usr/sbin/useradd
 _DO_LIBINTL_CHECKS=	yes		# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
+_OPSYS_HAS_GMAKE=	no		# GNU make is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _PATCH_BACKUP_ARG= 	-z		# switch to patch(1) for backup file

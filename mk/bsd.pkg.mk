@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.881 2001/12/15 20:25:38 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.882 2001/12/19 10:29:11 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -144,9 +144,10 @@ IGNORE+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
 .endif	# USE_IMAKE && !USE_BUILDLINK_X11
 
 .if defined(USE_GMAKE)
+.  if ${_OPSYS_HAS_GMAKE} == "no"
 BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
+.  endif
 MAKE_PROGRAM=		${GMAKE}
-GMAKE?=			gmake
 .else
 .  if defined(USE_IMAKE)
 MAKE_PROGRAM=		${_IMAKE_MAKE}
