@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2003/01/28 22:03:58 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2003/03/23 11:07:15 tron Exp $
 
-DISTNAME=		inn-2.3.3
+DISTNAME=		inn-2.3.4
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
@@ -13,7 +13,7 @@ COMMENT=		the public release of InterNet News (INN)
 CONFLICTS+=		nntpclnt-[0-9]*
 
 PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
-PATCHFILES=		inn-2.3.3-v6-20020618.diff.gz
+PATCHFILES=		inn-2.3.4-v6-20030201.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 INN_DATA_DIR?=		/var/news
@@ -86,6 +86,9 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .if (${MACHINE_ARCH} == arm32)
 .  include "../../lang/gcc/buildlink2.mk"
 .endif
+
+post-patch:
+	${RM} -f ${WRKSRC}/samples/inn.conf.in.orig_dist
 
 post-build:
 	for DIR in backends expire frontends innd innfeed lib nnrpd	\
