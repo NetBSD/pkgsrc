@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/21 23:14:36 zuntum Exp $
+
+--- Makefile.orig	Sat Jun  2 17:30:39 2001
++++ Makefile	Mon Dec  3 11:06:26 2001
+@@ -1,15 +1,15 @@
+-prefix = $(DESTDIR)/usr/X11R6
++prefix = ${PREFIX}
+ version = 0
+ revision = 3
+ subrev = 11
+ 
+ XROOT    = /usr/X11R6
+ INCLPATH = -I$(XROOT)/include
+-LDPATH   = -L$(XROOT)/lib
++LDPATH   = -L$(XROOT)/lib -Wl,-R${X11BASE}/lib
+ LIBS     = -lX11 #-lXext
+ 
+ CC       = gcc
+-CFLAGS   = -Os -Wall $(DEBIAN)
++CFLAGS   += -O -Wall
+ 
+ #
+ # See the file INSTALL for descriptions of these
+@@ -42,9 +42,8 @@
+ 	$(CC) -c $(CFLAGS) $(DEFINES) $(INCLPATH) $<
+ 
+ install:
+-	install -s evilwm $(prefix)/bin
+-	install evilwm.1 $(prefix)/man/man1
+-	#gzip -9 $(prefix)/man/man1/evilwm.1
++	install -c -o root -g wheel -m 555 -s evilwm $(prefix)/bin
++	install -c -o root -g wheel -m 444 evilwm.1 $(prefix)/man/man1
+ 
+ clean:
+ 	rm -f evilwm $(OBJS)
