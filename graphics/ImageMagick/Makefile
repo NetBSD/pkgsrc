@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2002/08/25 19:22:44 jlam Exp $
+# $NetBSD: Makefile,v 1.85 2002/09/09 22:07:21 markd Exp $
 
 DISTNAME=		ImageMagick-5.4.8-2
 PKGNAME=		${DISTNAME:S/-2/.2/}
@@ -28,7 +28,7 @@ NOT_FOR_PLATFORM=	NetBSD-*-sparc64
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == NetBSD)
+.if (${OPSYS} == NetBSD ||  ${OPSYS} == SunOS)
 BUILD_DEPENDS+=		bash>=2.0:../../shells/bash2
 
 CONFIGURE_SCRIPT=	${LOCALBASE}/bin/bash ./configure
@@ -45,7 +45,8 @@ CFLAGS=			-O
 # pkg, however).
 CONFIGURE_ARGS+=	--without-perl --without-dps --without-fpx \
 			--without-hdf --without-jbig --without-threads \
-			--without-ttf --without-wmf --without-xml
+			--without-ttf --without-wmf --without-xml \
+			--without-lcms
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
