@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.73 2002/11/14 04:01:56 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.74 2002/12/10 12:42:40 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1511,6 +1511,9 @@ sub category_check {
 	local($lastsub) = "";
 	local($sub) = "";
 	local($contents);
+	local(@dirlist);
+	local(%alldirs);
+	local($i);
 
 	$contents = readmakefile("$portdir/$file") or
 		&perror("FATAL: can't read $portdir/$file") and return 0;
@@ -1520,9 +1523,19 @@ sub category_check {
 	if ($contents !~ /COMMENT=\s+\w/) {
 		&perror("FATAL: no COMMENT line in $file");
 	}
+
+	# get list of dirs to compare against
+	@dirlist=glob("*/");
+	foreach $i (@dirlist) {
+	    # drop trailing slash and enter into hash
+	    $i =~ s/\/$//;
+	    $hash{$i} = 1;
+	}
+	# we expect the CVS dir to be here
+	$hash{CVS} = 0;
 	# remove comments
 	foreach $n (split "\n", $contents) {
-		if ($n =~ /SUBDIR(\+*)=\s*(\S+)(\s*#.*|\s*)$/) {
+		if ($n =~ /^SUBDIR(\+*)=\s*(\S+)(\s*#.*|\s*)$/) {
 			$sub = $2;
 			if ($first == 0) {
 				if ($1 ne "+") {
@@ -1536,7 +1549,22 @@ sub category_check {
 				$first = 0;
 			}
 			$lastsub = $sub;
+			if ($hash{$sub} == 1) {
+			    $hash{$sub} = 0;
+			}
+			else {
+			    $hash{$sub} = -1;
+			}
 		}
+	}
+
+	foreach $i (sort(keys(%hash))) {
+	    if ($hash{$i} gt 0) {
+		&perror("FATAL: directory $i not in Makefile");
+	    }
+	    elsif ($hash{$i} lt 0) {
+		&perror("FATAL: non-existing directory $i listed in Makefile");
+	    }
 	}
 }
 
