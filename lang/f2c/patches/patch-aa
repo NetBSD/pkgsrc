@@ -1,33 +1,30 @@
-$NetBSD: patch-aa,v 1.6 1999/12/16 00:58:27 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.7 2001/04/07 12:43:48 dmcmahill Exp $
 
 Add a top level Makefile
 
---- /dev/null	Mon Aug 24 13:53:09 1998
-+++ Makefile	Mon Aug 24 14:03:31 1998
-@@ -0,0 +1,51 @@
+--- /dev/null	Thu Apr  5 17:09:09 2001
++++ Makefile	Thu Apr  5 18:31:35 2001
+@@ -0,0 +1,48 @@
 +# Top level Makefile for f2c, libF77, and libI77
 +
 +all: f2c libf2c.a f2c-f77 man
 +
 +
 +f2c:
-+	#Making all in 'src'
-+	cd src; make all
++	@echo Making all in 'src'
++	cd src; ${MAKE} all
 +	cp src/f2c f2c
 +
-+libF77.a:
-+	#Making all in 'libF77'
-+	cd libF77;  make all
-+	cp libF77/libF77.a libF77.a
++libF77/libF77.a:
++	@echo Making all in 'libF77'
++	cd libF77 &&  ${MAKE} all
 +
-+libI77.a:
-+	#Making all in 'libI77'
-+	cd libI77; make libI77.a
-+	cp libI77/libI77.a libI77.a
++libI77/libI77.a:
++	@echo Making all in 'libI77'
++	cd libI77 &&  ${MAKE} all
 +
-+libf2c.a: libI77.a libF77.a
-+	cp libF77.a libf2c.a
-+	ar ruv libf2c.a libI77/*.o
++libf2c.a: libI77/libI77.a libF77/libF77.a
++	ar ruv libf2c.a libF77/libF77.a libI77/libI77.a
 +	ranlib libf2c.a
 +
 +man: f2c.0
@@ -38,14 +35,14 @@ Add a top level Makefile
 +	nroff -man f2c.1 > f2c.0
 +
 +
-+install:
++install::
 +	-@mkdir -p ${PREFIX}/bin
 +	${BSD_INSTALL_PROGRAM} ./src/f2c ${PREFIX}/bin
 +	${BSD_INSTALL_SCRIPT} ./f2c-f77 ${PREFIX}/bin
 +	-@mkdir -p ${PREFIX}/lib
++	@cd libI77 && ${MAKE} -f Makefile install LIBDIR=${PREFIX}/lib
++	@cd libF77 && ${MAKE} -f Makefile install LIBDIR=${PREFIX}/lib
 +	${BSD_INSTALL_DATA} ./libf2c.a ${PREFIX}/lib
-+	${BSD_INSTALL_DATA} ./libF77.a ${PREFIX}/lib
-+	${BSD_INSTALL_DATA} ./libI77.a ${PREFIX}/lib
 +	-@mkdir -p ${PREFIX}/include
 +	${BSD_INSTALL_DATA} ./f2c.h ${PREFIX}/include
 +	-@mkdir -p ${PREFIX}/share/doc/f2c
@@ -56,3 +53,4 @@ Add a top level Makefile
 +
 +f2c-f77: fc
 +	sed 's!@PREFIX@!${PREFIX}!g' fc > f2c-f77
++

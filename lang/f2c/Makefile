@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2001/03/05 16:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/04/07 12:43:47 dmcmahill Exp $
 
 DISTNAME=	f2c-20001205
+PKGNAME=	f2c-20001205nb1
 WRKSRC=		${WRKDIR}/f2c
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
@@ -24,6 +25,11 @@ COMMENT=	Fortran to C compiler including a script to emulate f77
 
 CONFLICTS=	egcs-current-19980608
 
+F2CMAJOR=	0
+F2CMINOR=	0
+MAKE_ENV+=	F2CMAJOR=${F2CMAJOR} F2CMINOR=${F2CMINOR}
+PLIST_SUBST+=	F2CMAJOR=${F2CMAJOR} F2CMINOR=${F2CMINOR}
+
 post-extract:
 	@${RM} ${WRKSRC}/index.html
 	@${GUNZIP_CMD} ${WRKSRC}/*.gz
@@ -35,7 +41,12 @@ post-extract:
 post-patch:
 	@cd ${WRKSRC} && ${CC} -o chktypes chktypes.c
 	${WRKSRC}/chktypes -v
-	@${CP} ${WRKSRC}/f2c.h ${WRKSRC}/libF77/f2c.h
-	@${CP} ${WRKSRC}/f2c.h ${WRKSRC}/libI77/f2c.h
+	@${CP} -f ${WRKSRC}/libF77/signal1.h0 ${WRKSRC}/libF77/signal1.h
+	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libF77/f2c.h
+	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libI77/f2c.h
+	@${ECHO} "major=${F2CMAJOR}" > ${WRKSRC}/libF77/shlib_version
+	@${ECHO} "minor=${F2CMINOR}" >> ${WRKSRC}/libF77/shlib_version
+	@${ECHO} "major=${F2CMAJOR}" > ${WRKSRC}/libI77/shlib_version
+	@${ECHO} "minor=${F2CMINOR}" >> ${WRKSRC}/libI77/shlib_version
 
 .include "../../mk/bsd.pkg.mk"

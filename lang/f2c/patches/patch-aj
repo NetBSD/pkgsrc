@@ -1,4 +1,8 @@
-$NetBSD: patch-aj,v 1.1 1999/01/14 13:56:04 frueauf Exp $
+$NetBSD: patch-aj,v 1.2 2001/04/07 12:43:49 dmcmahill Exp $
+
+does a sanity check of the settings in f2c.h  If these settings
+are wrong, a message is printed asking that the package maintainer
+be contacted.
 
 --- /dev/null	Wed Jan 13 02:06:04 1999
 +++ chktypes.c	Wed Jan 13 18:12:34 1999
