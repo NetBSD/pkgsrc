@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:16:27 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:46 wiz Exp $
 
 Please note that this package has installed two CGI programs to
 ${PREFIX}/libexec/cgi-bin/
@@ -12,4 +12,4 @@ doing:
   chmod a-x ${PREFIX}/libexec/cgi-bin/cgitest
   chmod a-x ${PREFIX}/libexec/cgi-bin/jumpto
 
-======================================================================
+===========================================================================

@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:55:11 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:22 wiz Exp $
 
 Now copy the sample script in ${PREFIX}/etc/rc.d/delegated.sh.sample
 to ${PREFIX}/etc/rc.d/delegated.sh and edit it according to your
@@ -13,4 +13,4 @@ delegated with no argument.
 For more configuration information, consult
 ${PREFIX}/share/doc/delegate/manual.html
 
-======================================================================
+===========================================================================
