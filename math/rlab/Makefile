@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:18:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/02 20:39:17 jtb Exp $
 
 DISTNAME=		rlab-2.1.05
 PKGREVISION=		1
@@ -9,15 +9,10 @@ MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://rlab.sourceforge.net/
 COMMENT=		Matrix oriented, interactive programming environment
 
-DEPENDS+=		boehm-gc>=5.3:../../devel/boehm-gc
-DEPENDS+=		readline>=4.0:../../devel/readline
-
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_FORTRAN=		yes
-
-GC_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		GC_PREFIX=boehm-gc
-CONFIGURE_ARGS+=	--with-GC=${GC_PREFIX}
+CONFIGURE_ARGS+=	--enable-SUPERLU
 
 PLIST_SRC=		${PKGDIR}/PLIST
 
@@ -46,17 +41,8 @@ CONFIGURE_ARGS+=	--with-gnuplot=yes
 PLIST_SRC+=		${PKGDIR}/PLIST.gnuplot
 .endif
 
-RLAB_USE_SUPERLU?=	YES
-.if (${RLAB_USE_SUPERLU} == YES)
-DEPENDS+=		superlu-[0-9]*:../../math/superlu
-CONFIGURE_ARGS+=	--enable-SUPERLU
-CPPFLAGS+=		${BUILDLINK_CPPFLAGS.superlu}
-.include "../../math/superlu/buildlink2.mk"
-.endif
-
-.if defined(RLAB_PAGER)
-CONFIGURE_ENV+=		PAGER=${RLAB_PAGER}
-.endif
+post-extract:
+	${RM} -r ${WRKSRC}/gc
 
 post-install:
 .if (${RLAB_PLOT_PKG} == "pgraf")
@@ -66,4 +52,7 @@ post-install:
 	${PREFIX}/share/rlab/examples
 .endif
 
+.include "../../devel/boehm-gc/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../math/superlu/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
