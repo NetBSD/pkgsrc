@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.332 2004/02/05 11:35:10 markd Exp $
+# $NetBSD: Makefile,v 1.333 2004/02/05 22:33:16 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -82,10 +82,12 @@ SUBDIR+=	imake
 SUBDIR+=	imwheel
 SUBDIR+=	ion-dock
 SUBDIR+=	kde2
+SUBDIR+=	kde3-i18n-az
 SUBDIR+=	kde3-i18n-bg
 SUBDIR+=	kde3-i18n-bs
 SUBDIR+=	kde3-i18n-ca
 SUBDIR+=	kde3-i18n-cs
+SUBDIR+=	kde3-i18n-cy
 SUBDIR+=	kde3-i18n-da
 SUBDIR+=	kde3-i18n-de
 SUBDIR+=	kde3-i18n-el
