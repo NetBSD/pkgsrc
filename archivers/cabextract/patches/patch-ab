@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.2.2 2004/11/02 10:33:50 agc Exp $
+
+--- configure.orig	Fri Oct 29 09:40:19 2004
++++ configure
+@@ -6608,7 +6608,7 @@ fi
+ 
+ 
+ 
+-
++if false; then
+ for ac_func in mempcpy
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+@@ -6717,7 +6717,7 @@ esac
+ 
+ fi
+ done
+-
++fi
+ 
+ 
+                     ac_config_files="$ac_config_files Makefile cabextract.spec"
