@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST.japanese,v 1.1 2002/09/29 22:58:45 jschauma Exp $
+lib/netscape/netscape7/chrome/JP.jar
+lib/netscape/netscape7/chrome/ja-JP.jar
+lib/netscape/netscape7/chrome/ja-mac.jar
+lib/netscape/netscape7/chrome/ja-unix.jar
+lib/netscape/netscape7/chrome/ja-win.jar
+lib/netscape/netscape7/component.reg
+lib/netscape/netscape7/defaults/isp/JP/aol.rdf
+lib/netscape/netscape7/defaults/isp/JP/nswebmail.rdf
+lib/netscape/netscape7/defaults/messenger/JP/webMailSignature.html
+lib/netscape/netscape7/defaults/profile/JP/bookmarks.html
+lib/netscape/netscape7/defaults/profile/JP/chrome/userChrome-example.css
+lib/netscape/netscape7/defaults/profile/JP/chrome/userContent-example.css
+lib/netscape/netscape7/defaults/profile/JP/default-connections.rdf
+lib/netscape/netscape7/defaults/profile/JP/default-invite.rdf
+lib/netscape/netscape7/defaults/profile/JP/default-messages-icq.rdf
+lib/netscape/netscape7/defaults/profile/JP/default-messages.rdf
+lib/netscape/netscape7/defaults/profile/JP/localstore.rdf
+lib/netscape/netscape7/defaults/profile/JP/mimeTypes.rdf
+lib/netscape/netscape7/defaults/profile/JP/panels.rdf
+lib/netscape/netscape7/defaults/profile/JP/search.rdf
+lib/netscape/netscape7/searchplugins/Netscape_Japan.gif
+lib/netscape/netscape7/searchplugins/Netscape_Japan.src
+@dirrm lib/netscape/netscape7/defaults/profile/JP/chrome
+@dirrm lib/netscape/netscape7/defaults/profile/JP
+@dirrm lib/netscape/netscape7/defaults/messenger/JP
+@dirrm lib/netscape/netscape7/defaults/isp/JP
