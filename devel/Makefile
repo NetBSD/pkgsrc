@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.541 2004/10/10 10:12:48 minskim Exp $
+# $NetBSD: Makefile,v 1.542 2004/10/11 21:58:44 salo Exp $
 #
 
 COMMENT=	Development utilities
@@ -306,6 +306,7 @@ SUBDIR+=	p5-Data-Buffer
 SUBDIR+=	p5-Data-Hierarchy
 SUBDIR+=	p5-Data-ShowTable
 SUBDIR+=	p5-Data-TemporaryBag
+SUBDIR+=	p5-Data-UUID
 SUBDIR+=	p5-Date-Business
 SUBDIR+=	p5-Date-Calc
 SUBDIR+=	p5-Date-Manip
@@ -367,12 +368,14 @@ SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
+SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
-SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-Regexp-Shellish
 SUBDIR+=	p5-SDL
+SUBDIR+=	p5-SVN-Mirror
+SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-Scalar-List-Utils
 SUBDIR+=	p5-Schedule-RateLimiter
@@ -380,8 +383,6 @@ SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Scalar
 SUBDIR+=	p5-SortVersions
 SUBDIR+=	p5-Storable
-SUBDIR+=	p5-SVN-Mirror
-SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Term-ReadKey
 SUBDIR+=	p5-Term-ReadLine
 SUBDIR+=	p5-Test-Cmd
