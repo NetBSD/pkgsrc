@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2002/09/01 16:34:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/19 18:34:37 wiz Exp $
 bin/epic
 bin/epic-EPIC4-${PKGVERSION}
 libexec/wserv4
 man/man1/epic.1
-@exec ${MKDIR} %D/share/epic/help
 share/epic/script/2.8script
 share/epic/script/alias
 share/epic/script/altchan
@@ -15,6 +14,8 @@ share/epic/script/basical
 share/epic/script/columns
 share/epic/script/commandqueues
 share/epic/script/country
+share/epic/script/data_array
+share/epic/script/data_struct
 share/epic/script/dcc_timeout
 share/epic/script/deban
 share/epic/script/debug.irc
@@ -30,6 +31,7 @@ share/epic/script/events
 share/epic/script/events.hop
 share/epic/script/fake-dcc
 share/epic/script/fe
+share/epic/script/fe.pf
 share/epic/script/files
 share/epic/script/functions
 share/epic/script/genalias
@@ -37,8 +39,8 @@ share/epic/script/global
 share/epic/script/grep
 share/epic/script/guh
 share/epic/script/hybrid6
-share/epic/script/ip-to-int
 share/epic/script/imap
+share/epic/script/ip-to-int
 share/epic/script/ircprimer
 share/epic/script/keybinds
 share/epic/script/killpath
@@ -79,6 +81,7 @@ share/epic/script/sound
 share/epic/script/starutils
 share/epic/script/stat
 share/epic/script/status_lag
+share/epic/script/suppressmotd
 share/epic/script/tabkey
 share/epic/script/tabkey.ce
 share/epic/script/tabkey.th
@@ -90,5 +93,6 @@ share/epic/script/vi-binds
 share/epic/script/webster
 share/epic/script/window
 @dirrm share/epic/script
+@exec ${MKDIR} %D/share/epic/help
 @dirrm share/epic/help
 @dirrm share/epic
