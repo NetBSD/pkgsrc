@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.4 1999/12/25 23:45:22 wiz Exp $
---- tosha.c.XXX	Fri Mar 12 17:41:08 1999
-+++ tosha.c	Fri Mar 12 17:41:14 1999
+$NetBSD: patch-ab,v 1.5 2000/09/10 22:50:34 wiz Exp $
+
+--- tosha.c.orig	Wed May 21 02:11:49 1997
++++ tosha.c
 @@ -49,7 +49,8 @@
  #include <sys/uio.h>
  #include <sys/scsiio.h>
@@ -34,7 +35,7 @@ $NetBSD: patch-ab,v 1.4 1999/12/25 23:45:22 wiz Exp $
  	int singlefile = FALSE;
  	int modechange = TRUE, denschange = 0;
  
-+	(void) snprintf(device, sizeof(device), "/dev/cd0%c", getrawpartition() + 'a');
++	(void) snprintf(device, 256, "/dev/rcd0%c", getrawpartition() + 'a');
 +
  	utils_init (argv[0]);
  #ifdef DEBUG
