@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2397 2004/11/19 18:28:51 wiz Exp $
+$NetBSD: TODO,v 1.2398 2004/11/19 19:01:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ Suggested package updates
 	o festival-1.4.3
 	o fhist-1.14
 	o file-4.10
-	o file-roller-2.8.3
 	o file-roller-2.9.0
 	o fillets-ng-0.6.0
 	o fillets-ng-data-0.6.0
