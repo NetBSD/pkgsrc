@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2005/02/21 15:37:55 taca Exp $
+# $NetBSD: Makefile,v 1.614 2005/02/22 00:35:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -306,6 +306,7 @@ SUBDIR+=	p5-Algorithm-Annotate
 SUBDIR+=	p5-Algorithm-Diff
 SUBDIR+=	p5-Algorithm-Merge
 SUBDIR+=	p5-AppConfig
+SUBDIR+=	p5-Array-Compare
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-BSD-Resource
@@ -440,10 +441,13 @@ SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Exception
 SUBDIR+=	p5-Test-Harness
 SUBDIR+=	p5-Test-Inline
+SUBDIR+=	p5-Test-Memory-Cycle
 SUBDIR+=	p5-Test-Pod
+SUBDIR+=	p5-Test-Pod-Coverage
 SUBDIR+=	p5-Test-Simple
 SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-Unit
+SUBDIR+=	p5-Test-Warn
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Tree-DAG_Node
 SUBDIR+=	p5-Tree-Simple
