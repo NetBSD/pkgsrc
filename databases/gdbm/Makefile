@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/02/12 08:40:22 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2004/02/14 00:54:44 grant Exp $
 #
 
 DISTNAME=	gdbm-1.8.3
@@ -14,7 +14,5 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 INFO_FILES=		gdbm.info
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/14 00:54:45 grant Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -19,8 +19,6 @@ GNU_CONFIGURE=		# defined
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var/run/zebra
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 # you might need debugging, it's a developer release !
 #CFLAGS+=	-g
 

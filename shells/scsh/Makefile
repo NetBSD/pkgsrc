@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/25 21:10:24 kristerw Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/14 00:54:45 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp
 #
 
@@ -13,8 +13,6 @@ COMMENT=		Unix shell embedded into Scheme, with access to all Posix calls
 NOT_FOR_PLATFORM=	*-*-alpha	# Needs scheme
 
 GNU_CONFIGURE=		yes
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 ALL_TARGET=		enough
 TEST_TARGET=		check
