@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.333 2003/03/04 18:07:42 wiz Exp $
+$NetBSD: TODO,v 1.334 2003/03/05 07:06:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -173,7 +173,6 @@ Suggested package updates
 	o libole2-2.2.8
 	o libmcrypt-2.5.5
 	o librsvg-2.2.2.1
-	o libslang-1.4.8 [pkg/20575]
 	o lilypond-1.6.6
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
