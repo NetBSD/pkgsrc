@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2138 2004/09/20 11:39:15 wiz Exp $
+$NetBSD: TODO,v 1.2139 2004/09/20 21:13:25 snj Exp $
 
 Suggested new packages
 ======================
@@ -228,7 +228,6 @@ Suggested package updates
 	o dar-2.1.2
 	o dctc-0.85.9
 	o delegate-8.9.2
-	o devilspie-0.5.1 [snj]
 	o dict-client-1.9.11
 	o dict-server-1.9.11
 	o distcc-2.17
@@ -284,7 +283,6 @@ Suggested package updates
 	o gossip-0.7.7
 	o gpsdrive-2.09
 	o gqmpeg-0.91.1
-	o gqview-1.4.4 [snj]
 	o grace-5.1.17
 	o gtar-1.14
 	o gtkglext-1.0.6
