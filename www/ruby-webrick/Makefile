@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/01 17:26:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/18 12:57:10 cjep Exp $
 #
 
 DISTNAME=	webrick-1.2.3
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.webrick.org/src/
 
 MAINTAINER=	rasputin@idoru.mine.nu
-HOMEPAGE=	http://www.webrick.org
+HOMEPAGE=	http://www.webrick.org/
 COMMENT=	Ruby library to build HTTP servers
 
 DEPENDS+=	ruby-openssl>=0.1.3:../../security/ruby-openssl
