@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/10/10 15:35:04 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/11/17 10:54:07 rh Exp $
 bin/gnumeric
 etc/CORBA/servers/gnumeric.gnorba
 lib/gnumeric/plugins/libsample.so.0.0
@@ -25,6 +25,8 @@ share/locale/es/LC_MESSAGES/gnumeric.mo
 share/locale/ru/LC_MESSAGES/gnumeric.mo
 share/locale/hu/LC_MESSAGES/gnumeric.mo
 share/locale/it/LC_MESSAGES/gnumeric.mo
+share/locale/nl/LC_MESSAGES/gnumeric.mo
+share/locale/et/LC_MESSAGES/gnumeric.mo
 share/locale/pt/LC_MESSAGES/gnumeric.mo
 share/locale/no/LC_MESSAGES/gnumeric.mo
 share/locale/pl/LC_MESSAGES/gnumeric.mo
@@ -45,6 +47,7 @@ share/locale/es_PE/LC_MESSAGES/gnumeric.mo
 share/locale/es_SV/LC_MESSAGES/gnumeric.mo
 share/locale/en_GB/LC_MESSAGES/gnumeric.mo
 share/idl/Gnumeric.idl
+share/idl/Gnumeric-value.idl
 share/pixmaps/gnumeric/orient-horizontal.png
 share/pixmaps/gnumeric/orient-vertical.png
 share/pixmaps/gnumeric/right-down.png
@@ -521,6 +524,8 @@ share/gnumeric/glade/row-height.glade
 share/gnumeric/glade/sheet-rename.glade
 share/gnumeric/glade/summary.glade
 share/gnumeric/glade/dialog-zoom.glade
+share/gnumeric/glade/insert-cells.glade
+share/gnumeric/glade/delete-cells.glade
 @dirrm lib/gnumeric/plugins
 @dirrm lib/gnumeric
 @dirrm share/pixmaps/gnumeric
