@@ -1,6 +1,6 @@
 /*
 
-	$NetBSD: rpm2pkg.c,v 1.1.1.1 2001/01/25 08:57:53 tron Exp $
+	$NetBSD: rpm2pkg.c,v 1.2 2001/03/20 20:18:07 manu Exp $
 
 */
 
@@ -176,7 +176,7 @@ void Usage(void)
 {
  (void)fprintf(stderr,
                "Usage: %s [-d directory] [-f packlist] [[-i ignorepath] ...]\n"
-               "               [-p prefix] rpmfile [...]\n",
+               "               [-p prefix] [-s strippath] rpmfile [...]\n",
                __progname);
  exit(EXIT_FAILURE);
 }
@@ -434,7 +434,7 @@ int main(int argc,char **argv)
 {
  FILE *PList;
  char **Ignore,*Prefix;
- int Opt,Index,FD,IsSource;
+ int Opt,Index,FD,IsSource,PathIndex,StripPath;
  PListEntry *Files,*Links,*Dirs;
  Header Hdr;
  gzFile In;
@@ -442,9 +442,16 @@ int main(int argc,char **argv)
  PList=NULL;
  Ignore=NULL;
  Prefix=NULL;
- while ((Opt=getopt(argc,argv,"d:f:i:p:"))!=-1)
+ StripPath = 0;
+ while ((Opt=getopt(argc,argv,"s:d:f:i:p:"))!=-1)
   switch (Opt)
    {
+    case 's':
+     StripPath=atoi(optarg);
+     if (StripPath == 0) {
+      fprintf(stderr,"Warning: -s argument to %s should be a positive integer, ignoring supplied argument\n",argv[Index]);
+     }
+     break;
     case 'f':
      if (PList!=NULL) (void)fclose(PList);
      if ((PList=fopen(optarg,"a"))==NULL)
@@ -525,6 +532,8 @@ int main(int argc,char **argv)
     {
      long Fields[CPIO_NUM_HEADERS];
      char *Name;
+     char *NewName;
+     char *TmpName;
      mode_t Mode;
      long Length;
 
@@ -556,6 +565,28 @@ int main(int argc,char **argv)
         }
        if (*Ptr!=NULL) Fields[CPIO_HDR_MODE]=0;
       }
+
+     for (PathIndex=1; PathIndex<=StripPath; PathIndex++) {
+      NewName=Name;
+      do {
+       NewName++;
+       if (NewName[0]=='\0') {
+        fprintf(stderr,"%s: Leading path to strip too big (-s %d)\n",
+            argv[Index], StripPath);
+        return EXIT_FAILURE;
+       }
+      } while (NewName[0]!='/'); 
+      NewName++; /* We ended up with a leading /, and this must disapear */
+      TmpName=malloc(strlen(NewName));
+      if (TmpName==NULL)
+       {
+        perror(__progname);
+        exit(EXIT_FAILURE);
+       }
+      strcpy(TmpName, NewName); 
+      free(Name);
+      Name=TmpName;
+     }
 
      if (Prefix!=NULL)
       {

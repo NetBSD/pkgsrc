@@ -1,4 +1,4 @@
-.\"	$NetBSD: rpm2pkg.8,v 1.3 2001/02/06 17:38:52 wiz Exp $
+.\"	$NetBSD: rpm2pkg.8,v 1.4 2001/03/20 20:18:07 manu Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -46,6 +46,7 @@
 .Op Fl f Ar package_list
 .Op Fl i Ar ignored_dir
 .Op Fl p Ar prefix
+.Op Fl s Ar strip_path_count
 .Ar rpm_file ...
 .Sh DESCRIPTION
 .Nm
@@ -83,6 +84,10 @@ directory of the RPM file's archives.
 Use 
 .Ar prefix 
 when extracting files.
+.It Fl s Ar strip_path_count
+Strip 
+.Ar strip_path_count
+leading directories in file names.
 .El
 .Sh EXAMPLES
 .Nm
@@ -118,6 +123,22 @@ will not extract files contained in the
 or
 .Pa usr/tmp
 directories of the RPM file's archives.
+.Pp
+.Nm
+.Fl s Ar 1
+.Fl d Ar /usr/pkg
+.Ar /usr/pkgsrc/distfiles/pack/bar.rpm
+.Pp
+This will extract the 
+.Ar bar.rpm
+file in 
+.Pa /usr/pkg
+while striping the leading directory of files path in
+.Ar bar.rpm .
+This is useful for dealing with RPM archives that contains files like
+.Pa usr/bin/foo ,
+which you would like to go in
+.Pa /usr/pkg/bin .
 .Sh COMPATIBILITY
 .Nm 
 should work with any regular RPM file.
