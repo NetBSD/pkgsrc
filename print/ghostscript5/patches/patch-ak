@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2000/04/15 18:36:22 mycroft Exp $
+
+--- pdf2dsc.ps.orig	Sat Jul 19 12:59:16 1997
++++ pdf2dsc.ps	Sat Apr 15 13:54:00 2000
+@@ -92,9 +92,15 @@
+ %BEGIN ##jp##
+ dup pdfgetpage /CropBox knownoget { % file maxpage pageno cropbox
+   DSCfile (%%PageBoundingBox: ) writestring
+-  {DSCfile exch write=only DSCfile ( ) writestring} forall
++  {DSCfile exch round cvi write=only DSCfile ( ) writestring} forall
+   DSCfile (\n) writestring
+-} if
++} {
++  dup pdfgetpage /MediaBox knownoget { % file maxpage pageno cropbox
++    DSCfile (%%PageBoundingBox: ) writestring
++    {DSCfile exch round cvi write=only DSCfile ( ) writestring} forall
++    DSCfile (\n) writestring
++  } if
++} ifelse
+ dup pdfgetpage /Rotate knownoget { % file maxpage pageno angle
+   DSCfile (%%PageOrientation: ) writestring
+   90 div cvi 4 mod dup 0 lt {4 add} if
