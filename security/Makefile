@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 1999/04/30 15:28:08 tv Exp $
+# $NetBSD: Makefile,v 1.20 1999/10/04 17:38:11 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
 #    SUBDIR += cfs
 #    SUBDIR += cops
-#    SUBDIR += crack
+    SUBDIR += crack
 #    SUBDIR += donkey
 #    SUBDIR += fwtk
 #    SUBDIR += john
