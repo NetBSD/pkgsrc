@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/03 15:14:56 wiz Exp $
 
 STELLA_VERSION=	1.4.1
 DISTNAME=	stella-${STELLA_VERSION}-src
@@ -22,7 +22,7 @@ USE_INSTALL=	YES
 UNLIMIT_RESOURCES=datasize
 
 MAKEFILE=	makefile
-ALL_TARGET=	linux
+BUILD_TARGET=	linux
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0

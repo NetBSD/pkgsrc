@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/25 16:31:05 ben Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/03 15:14:59 wiz Exp $
 #
 
 DISTNAME=		gfract-0.30
@@ -13,7 +13,7 @@ COMMENT=		Gtk-based fractal program
 USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
-ALL_TARGET=		gfract
+BUILD_TARGET=		gfract
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

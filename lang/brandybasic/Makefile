@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/26 23:24:07 abs Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:00 wiz Exp $
 #
 
 DISTNAME=	b116
@@ -14,7 +14,7 @@ COMMENT=	Brandy Basic V interpreter - Acorn ARM Computers BASIC dialect
 WRKSRC=		${WRKDIR}/brandy-1.0.16
 DOCDIR=		${PREFIX}/share/doc/brandy
 EXAMPLEDIR=	${PREFIX}/share/examples/brandy
-ALL_TARGET=	nodebug
+BUILD_TARGET=	nodebug
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

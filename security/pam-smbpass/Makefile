@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/08/07 08:18:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:15:08 wiz Exp $
 
 .include "../../net/samba2/Makefile.common"
 
@@ -16,7 +16,7 @@ DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba2
 USE_BUILDLINK3=		yes
 CONFIGURE_ARGS+=	--with-pam
 
-ALL_TARGET=		pam_smbpass
+BUILD_TARGET=		pam_smbpass
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}

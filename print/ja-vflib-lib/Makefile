@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:18:05 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:07 wiz Exp $
 
 .include "Makefile.common"
 
@@ -8,7 +8,7 @@ PKGREVISION=	1
 COMMENT=	Japanese Vector font library
 
 CONFIGURE_ARGS+=	--without-x
-ALL_TARGET=		build-src
+BUILD_TARGET=		build-src
 INSTALL_TARGET=		install-src
 
 post-build:

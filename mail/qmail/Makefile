@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/08/25 04:24:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2004/12/03 15:15:02 wiz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -32,7 +32,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 
-ALL_TARGET= 		it man
+BUILD_TARGET= 		it man
 INSTALL_TARGET=		setup check
 
 RESTRICTED=		"modified source and binaries may not be distributed"

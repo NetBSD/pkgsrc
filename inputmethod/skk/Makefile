@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/02 00:41:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:00 wiz Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
@@ -27,7 +27,7 @@ BUILD_DEPENDS+= xemacs-packages>=1.10:../../editors/xemacs-packages
 .endif
 
 MAKEFLAGS=	EMACS=${EMACS_BIN}
-ALL_TARGET=	elc
+BUILD_TARGET=	elc
 
 INFO_FILES=	skk.info
 

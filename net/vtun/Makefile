@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/10/03 00:18:01 tv Exp $
+# $NetBSD: Makefile,v 1.30 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=	vtun-2.6
 PKGREVISION=	6
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-ssl-headers=${SSLBASE}/include/openssl
 CONFIGURE_ARGS+=	--with-ssl-lib=${SSLBASE}/lib
 CONFIGURE_ARGS+=	--with-lzo-headers=${BUILDLINK_PREFIX.liblzo}/include
 CONFIGURE_ARGS+=	--with-lzo-lib=${BUILDLINK_PREFIX.liblzo}/lib
-ALL_TARGET=		vtund
+BUILD_TARGET=		vtund
 
 DOCDIR=			${PREFIX}/share/doc/vtun
 EGDIR=			${PREFIX}/share/examples/vtun

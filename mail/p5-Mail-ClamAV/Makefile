@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/06 19:16:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:02 wiz Exp $
 
 DISTNAME=	Mail-ClamAV-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,7 @@ PTHREAD_OPTS+=		require
 # XXX other than 'install'?
 do-build:
 	@cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${ALL_TARGET}
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_TARGET}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mail/clamav/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2004/06/27 13:31:14 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/12/03 15:15:07 wiz Exp $
 
 TETEX_BIN_VERS=		2.0.2
 DIST_SUBDIR=		teTeX
-ALL_TARGET=		all
+BUILD_TARGET=		all
 INSTALL_TARGET=		install strip
 
 USE_BUILDLINK3=		yes

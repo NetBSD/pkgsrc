@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/26 21:58:30 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:03 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Simple menu patterned after the plan9 user interface
 
 MAKEFILE=		Makefile.noimake
-ALL_TARGET=		9menu
+BUILD_TARGET=		9menu
 USE_X11=		yes
 
 WRKSRC=			${WRKDIR}

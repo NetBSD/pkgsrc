@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:40 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/03 15:14:56 wiz Exp $
 #
 
 DISTNAME=	xwpe-1.5.29a
@@ -16,7 +16,7 @@ USE_GNU_TOOLS+=		make
 USE_NCURSES=		# tigetstr()
 USE_X11=		yes
 
-ALL_TARGET=		# defined
+BUILD_TARGET=		# defined
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

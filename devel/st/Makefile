@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/27 12:12:16 gson Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:55 wiz Exp $
 #
 
 DISTNAME=	st-1.5.1
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=     NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-vax
 
 USE_LIBTOOL=	yes
 USE_GNU_TOOLS+=	make
-ALL_TARGET=	netbsd-debug
+BUILD_TARGET=	netbsd-debug
 
 HTMLDIR=	${PREFIX}/share/doc/html/st
 

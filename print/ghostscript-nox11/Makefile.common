@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2004/08/27 06:29:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.56 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -131,7 +131,7 @@ PLIST_SRC=		${.CURDIR}/../../print/ghostscript-nox11/PLIST
 
 DIST_SUBDIR=		ghostscript
 MAKEFILE=		src/unix-gcc.mak
-ALL_TARGET=		std
+BUILD_TARGET=		std
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/20 01:16:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/03 15:15:07 wiz Exp $
 # FreeBSD Id: ports/print/poster/Makefile,v 1.6 2004/02/06 13:12:14 trevor Exp
 
 DISTNAME=	poster
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://printing.kde.org/downloads/
 COMMENT=	Resize a ps image to print on larger media and/or multiple sheets
 
-ALL_TARGET=	poster
+BUILD_TARGET=	poster
 WRKSRC=		${WRKDIR}
 
 do-install:
