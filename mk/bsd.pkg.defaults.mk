@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.107 2002/11/17 08:58:49 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.108 2002/11/26 07:20:21 martti Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1224,6 +1224,11 @@ PKG_LANG?=english
 
 #POSTFIX_USE_INET6=YES
 # Add support for IPv6.
+# Possible: YES, not defined
+# Default: not defined
+
+#POSTFIX_USE_LDAP=YES
+# Add support for LDAP.
 # Possible: YES, not defined
 # Default: not defined
 
