@@ -19,5 +19,5 @@ otherwise, and as such may or may not be correct (the TZ variable
 definitions or the city->timezone mappings).
 
 The -local <localName> option causes a clock labeled with <localName>
-using the value of TZ at startup as it's timezone.  In addition, a GMT
+using the value of TZ at startup as its timezone.  In addition, a GMT
 clock always appears.
