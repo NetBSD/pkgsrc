@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.10 2003/08/30 22:17:31 tron Exp $
+
+--- helpers.cpp	17 Jul 2003 04:41:59 -0000	1.90
++++ helpers.cpp	4 Aug 2003 04:22:05 -0000
+@@ -513,7 +513,8 @@
+ 	  return PB_OUTBID;
+ 	else if (strstr(Buff, "You have been outbid"))
+ 	  return PB_OUTBID;
+-	else if (strstr(Buff, "Problem with bid amount"))
++	else if (strstr(Buff, "Problem with bid amount") ||
++		 strstr(Buff, "Your bid must be at least"))
+ 	  return PB_BIDTOOLOW;
+ 	else if (strstr(Buff, "Problem with quantity"))
+ 	  return PB_BADQUANTITY;
