@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/08/26 02:42:02 kim Exp $
+# $NetBSD: Makefile,v 1.15 1999/01/19 17:51:24 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -17,7 +17,7 @@ HOMEPAGE=	http://www.pgpi.com/
 PKGNAME=	pgp-2.6.3a
 DEPENDS+=	rsaref-2.0:../../security/rsaref
 RSAINC=		-I${PREFIX}/include
-RSALIBS=	-L${PREFIX}/lib -lrsaref
+RSALIBS=	-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lrsaref
 RSAOBJS=	rsaglue2.o
 CFLAGS=		-DUSA
 .else
