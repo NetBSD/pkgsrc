@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1627 2003/03/12 13:04:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.1628 2003/03/12 15:13:08 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1111,3 +1111,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added kde-i18n-zu-3.1 [markd 2003-03-12]
 	Updated libgnomeprint to 2.2.1.2 [jmmv 2003-03-12]
 	Updated libgnomeprintui to 2.2.1.2 [jmmv 2003-03-12]
+	Updated ethereal to 0.9.11 [salo 2003-03-12]
