@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.249 2002/10/14 09:48:27 rh Exp $
+$NetBSD: CHANGES,v 1.250 2002/10/14 09:53:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated links to 2.1.0.4 [wiz 2002-10-14]
 	Updated links-gui to 2.1.0.4 [wiz 2002-10-14]
 	Updated xmms to 1.2.7nb2 [rh 2002-10-14]
+	Updated ORBit2 to 2.4.3 [wiz 2002-10-14]
