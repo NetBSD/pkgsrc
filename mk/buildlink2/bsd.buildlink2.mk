@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.59 2002/11/30 14:10:06 salo Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.60 2002/12/01 13:24:14 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -412,6 +412,24 @@ _REPLACE_BUILDLINK= \
 	${REPLACE_BUILDLINK}						\
 	`${FIND} . ${_REPLACE_BUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT} -u`
 
+# When "unbuildlinkifying" a file, we must remove references to the
+# buildlink directories and change any -llib to the proper replacement
+# libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
+# options are removed to optimize the resulting file.
+#
+REPLACE_BUILDLINK_SED?=		# empty
+_REPLACE_BUILDLINK_SED=		${REPLACE_BUILDLINK_SED}
+_REPLACE_BUILDLINK_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
+
+BUILDLINK_SUBST_MESSAGE.unbuildlink= \
+	"Fixing buildlink references in files-to-be-installed."
+BUILDLINK_SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
+BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
+BUILDLINK_SUBST_SED.unbuildlink+=	${_BLNK_UNTRANSFORM_SED}
+
+post-build: unbuildlink-buildlink-subst
+unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
+
 # Fix locale directory references.
 #
 USE_PKGLOCALEDIR?=		no
@@ -430,29 +448,10 @@ BUILDLINK_SUBST_SED.pkglocaledir= \
 	-e 's|^\(gnulocaledir[  ]*=\).*|\1 ${_PKGLOCALEDIR}|' \
 	-e 's|\(-DLOCALEDIR[    ]*=\)[^ 	]*\(.*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
 
-pkglocaledir-buildlink-subst: _BUILDLINK_SUBST_USE
-
 .if (${PKGLOCALEDIR} != "share") && empty(USE_PKGLOCALEDIR:M[nN][oO])
 pre-configure: pkglocaledir-buildlink-subst
 .endif
-
-# When "unbuildlinkifying" a file, we must remove references to the
-# buildlink directories and change any -llib to the proper replacement
-# libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
-# options are removed to optimize the resulting file.
-#
-REPLACE_BUILDLINK_SED?=		# empty
-_REPLACE_BUILDLINK_SED=		${REPLACE_BUILDLINK_SED}
-_REPLACE_BUILDLINK_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
-
-BUILDLINK_SUBST_MESSAGE.unbuildlink= \
-	"Fixing buildlink references in files-to-be-installed."
-BUILDLINK_SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
-BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
-BUILDLINK_SUBST_SED.unbuildlink+=	${_BLNK_UNTRANSFORM_SED}
-
-post-build: unbuildlink-buildlink-subst
-unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
+pkglocaledir-buildlink-subst: _BUILDLINK_SUBST_USE
 
 .if !defined(USE_LIBTOOL)
 BUILDLINK_FAKE_LA=	${TRUE}
