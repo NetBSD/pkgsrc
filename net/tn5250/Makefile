@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:47 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/20 04:44:59 jlam Exp $
 #
 
 DISTNAME=	tn5250-0.12.51
@@ -10,13 +10,7 @@ HOMEPAGE=	http://www.linux-sna.org/software/5250/
 COMMENT=	Implementation of the IBM 5250 telnet protocol
 
 GNU_CONFIGURE=		YES
-USE_CURSES=		YES
-REPLACE_NCURSES=	${WRKSRC}/cursesterm.cc ${WRKSRC}/configure
+USE_BUILDLINK_ONLY=	YES
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${NEED_NCURSES} == "YES"
-CPPFLAGS+=		-I${LOCALBASE}/include
-.endif
-
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
