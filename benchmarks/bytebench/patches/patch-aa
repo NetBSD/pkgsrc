@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2000/08/04 06:13:28 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2000/08/04 08:50:17 jlam Exp $
 
 --- Run.orig	Sat May 13 15:32:15 1995
-+++ Run	Fri Aug  4 01:56:34 2000
++++ Run	Fri Aug  4 02:24:27 2000
 @@ -1,6 +1,6 @@
  #! /bin/sh
  #################### set your defaults here ##############
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.4 2000/08/04 06:13:28 jlam Exp $
  cd $PWD
  
 -BINDIR=${BINDIR-${HOMEDIR}/pgms}
-+BINDIR=${BINDIR-${HOMEDIR}/bin}
++BINDIR=${BINDIR-${HOMEDIR}/libexec/bytebench}
  cd $BINDIR
  BINDIR=`pwd`
  cd $PWD
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.4 2000/08/04 06:13:28 jlam Exp $
  PATH="${PATH}:${BINDIR}"
  
 -SCRPDIR=${SCRPDIR-${HOMEDIR}/pgms}
-+SCRPDIR=${SCRPDIR-${HOMEDIR}/bin}
++SCRPDIR=${SCRPDIR-${HOMEDIR}/libexec/bytebench}
  cd $SCRPDIR
  SCRPDIR=`pwd`
  cd $PWD
