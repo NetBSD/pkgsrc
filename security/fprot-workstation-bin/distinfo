@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2004/11/16 14:52:57 ben Exp $
+$NetBSD: distinfo,v 1.11 2004/11/23 00:33:47 ben Exp $
 
-SHA1 (fp-netbsd-ws-4.4.7-20041116/fp-netbsd-ws-4.4.7.tar.gz) = b27e01f22c74a5b46834b67655f4102cc52bb73c
-Size (fp-netbsd-ws-4.4.7-20041116/fp-netbsd-ws-4.4.7.tar.gz) = 2637133 bytes
-SHA1 (fp-linux-ws-4.4.7-20041116/fp-linux-ws-4.4.7.tar.gz) = 0baca67f3b19e7f46344645e957757dd3a5ae506
-Size (fp-linux-ws-4.4.7-20041116/fp-linux-ws-4.4.7.tar.gz) = 2744938 bytes
-SHA1 (fp-solaris-sparc-ws-4.4.7-20041116/fp-solaris-sparc-ws-4.4.7.tar.gz) = 1ea0aaced293f3b754e3ab6cbb62c67eb9c399bf
-Size (fp-solaris-sparc-ws-4.4.7-20041116/fp-solaris-sparc-ws-4.4.7.tar.gz) = 2821740 bytes
+SHA1 (fp-linux-ws-4.4.8-20041116/fp-linux-ws-4.4.8.tar.gz) = ecce7b814bae851034e5a73c178077bb4a048c2f
+Size (fp-linux-ws-4.4.8-20041116/fp-linux-ws-4.4.8.tar.gz) = 2768709 bytes
+SHA1 (fp-netbsd-ws-4.4.8-20041116/fp-netbsd-ws-4.4.8.tar.gz) = 6a7ce706cdb9773e1f7a74cc9c0705a8c17ad794
+Size (fp-netbsd-ws-4.4.8-20041116/fp-netbsd-ws-4.4.8.tar.gz) = 2658257 bytes
+SHA1 (fp-solaris-sparc-ws-4.4.8-20041116/fp-solaris-sparc-ws-4.4.8.tar.gz) = ff1d1e3662426f79ff0374777c93cfb0d73258f5
+Size (fp-solaris-sparc-ws-4.4.8-20041116/fp-solaris-sparc-ws-4.4.8.tar.gz) = 2844139 bytes
 SHA1 (patch-aa) = 4786dcb8c1d30a87d80841412fbf5328564a4f3b
