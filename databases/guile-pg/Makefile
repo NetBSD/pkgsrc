@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/07 11:43:48 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/07 12:52:44 uebayasi Exp $
 #
 
 DISTNAME=	guile-pg-0.07
@@ -17,7 +17,7 @@ USE_LIBTOOL=	YES
 USE_GMAKE=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--with-libpq-includes=${BUILDLINK_DIR}/include/postgresql
+CONFIGURE_ARGS+=	--with-libpq-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 
 #INFO_FILES=	guile-pg.info
 
