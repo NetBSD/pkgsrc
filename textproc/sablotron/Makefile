@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/18 11:14:43 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/18 12:39:17 grant Exp $
 
 DISTNAME=		Sablot-0.96
 PKGNAME=		sablotron-0.96
@@ -17,14 +17,17 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LDFLAGS+=		-liconv
+LIBS+=			-liconv
 
 .include "../../mk/bsd.prefs.mk"
 
-# this is required for gcc 2.95.x, where libstdc++ doesn't include the
-# math functions. only libstdc++ is required for gcc 3.3.
-.if !defined(USE_SUNPRO) && !defined(USE_MIPSPRO)
-LDFLAGS+=               -lstdc++ -lm
+# both libstdc++ and libm are required for gcc 2.95.x, as libstdc++
+# does not include the math functions. gcc3 only needs libstdc++.
+# SunPro needs libCrun and libm.
+.if defined(USE_SUNPRO)
+LIBS+=			-lCrun -lm
+.elif !defined(USE_MIPSPRO)
+LIBS+=			-lstdc++ -lm
 .endif
 
 .include "../../converters/libiconv/buildlink2.mk"
