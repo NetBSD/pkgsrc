@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8092 2004/11/27 23:01:35 wiz Exp $
+$NetBSD: CHANGES,v 1.8093 2004/11/28 06:26:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5554,3 +5554,16 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed psi-ssl [jdolecek 2004-11-27]
 	Updated php-jpgraph to 2.16 [jdolecek 2004-11-27]
 	Updated scmxx to 0.7.4 [wiz 2004-11-27]
+	Updated ruby-icmp to 0.2.2 [taca 2004-11-28]
+	Updated ruby-xmlrpc4r to 1.7.16 [taca 2004-11-28]
+	Updated ruby-erb to 2.0.4 [taca 2004-11-28]
+	Updated ruby-rexml to 3.1.2 [taca 2004-11-28]
+	Updated ruby-rttool to 0.1.8 [taca 2004-11-28]
+	Added ruby-xmlparser-0.6.8 [taca 2004-11-28]
+	Updated ruby-borges to 1.1.0 [taca 2004-11-28]
+	Updated ruby-fcgi to 0.8.5 [taca 2004-11-28]
+	Updated ruby-webunit to 20040429++ [taca 2004-11-28]
+	Updated ruby-fox to 1.0.29 [taca 2004-11-28]
+	Added ruby16-racc-1.4.3 [taca 2004-11-28]
+	Updated ruby-drb to 2.0.4 [taca 2004-11-28]
+	Added ruby16-borges-0.2.0 [taca 2004-11-28]
