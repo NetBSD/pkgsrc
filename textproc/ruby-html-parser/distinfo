@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/01 14:03:24 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:48:49 agc Exp $
 
 SHA1 (ruby/html-parser-19990912p1.tar.gz) = 7a99d322bf10ace62ab2ec6f85da928b64f98284
+RMD160 (ruby/html-parser-19990912p1.tar.gz) = 2db40ed03ee75f1c07044c3fe2568e6034714825
 Size (ruby/html-parser-19990912p1.tar.gz) = 7103 bytes

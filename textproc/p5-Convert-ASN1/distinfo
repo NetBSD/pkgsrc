@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/02/24 23:21:35 heinz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 14:48:44 agc Exp $
 
 SHA1 (Convert-ASN1-0.18.tar.gz) = 1aec8a3185c03f19870543bb94624160a716e53e
+RMD160 (Convert-ASN1-0.18.tar.gz) = 7b11936db32949df9b96f28a0c6a6d510a94d7eb
 Size (Convert-ASN1-0.18.tar.gz) = 59936 bytes

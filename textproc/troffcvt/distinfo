@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/03/21 20:04:24 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:48:50 agc Exp $
 
 SHA1 (troffcvt-1.04.tar.gz) = c471e01844f65403f1cc2ba393f1113006748b87
+RMD160 (troffcvt-1.04.tar.gz) = fccf7150cc72f1d7cc69d7e60fc99185dc752d89
 Size (troffcvt-1.04.tar.gz) = 298755 bytes
 SHA1 (patch-aa) = 66b78d40e3d6207f83fe97b2bc123d6a2f9dd07b
 SHA1 (patch-ab) = 278fa622a8887b4019f2b8feb6aae7f88972bee4

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/09/21 16:50:21 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 14:48:43 agc Exp $
 
 SHA1 (libcroco-0.6.0.tar.bz2) = d4732f044d4a309e909b36a5e306a7440e8498ca
+RMD160 (libcroco-0.6.0.tar.bz2) = 26e6bf38f267fcddffb59b02b42a35402d32998e
 Size (libcroco-0.6.0.tar.bz2) = 358346 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/08/03 14:04:09 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:48:50 agc Exp $
 
 SHA1 (tei-4nb2/dtd.zip) = 412f52ef6c3a352442f41870a73bd19846df2f2c
+RMD160 (tei-4nb2/dtd.zip) = 54f44b49b26405725dc95b65d53d8b644e595317
 Size (tei-4nb2/dtd.zip) = 73194 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/03/21 12:30:33 uebayasi Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 14:48:44 agc Exp $
 
 SHA1 (ndtpd-3.1.5.tar.gz) = 0445cf4c9be4373f0ed06a545a0665f5e6fad7aa
+RMD160 (ndtpd-3.1.5.tar.gz) = 6b54e2e3d4ca30f4c78363696d9127edf72deece
 Size (ndtpd-3.1.5.tar.gz) = 558367 bytes
 SHA1 (patch-ac) = e45fe692355d6dae0b5a56f4e32201cbd606f125

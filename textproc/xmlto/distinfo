@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/26 15:57:18 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:48:50 agc Exp $
 
 SHA1 (xmlto-0.0.18.tar.bz2) = abee8925a80bfefcdf1543956a804b1facff7bec
+RMD160 (xmlto-0.0.18.tar.bz2) = 4b7232ad673c6b3a0ad015d0061cf5b77165478c
 Size (xmlto-0.0.18.tar.bz2) = 91275 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/11/28 04:38:37 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:48:49 agc Exp $
 
 SHA1 (ruby/rdoc-beta-2.tgz) = 6ca2a03d9d71e681d283d02239871ddb46df7d6b
+RMD160 (ruby/rdoc-beta-2.tgz) = 1843400f54eeede9fda6439f17893a2a12cd6589
 Size (ruby/rdoc-beta-2.tgz) = 130997 bytes
 SHA1 (patch-aa) = 6e0195bd48320ab1a4dc8d809a7a2d333a833b1b

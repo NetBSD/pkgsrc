@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/08 12:52:35 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:48:45 agc Exp $
 
 SHA1 (Text-Shellwords-1.02.tar.gz) = afedaff985555260e2736cb28906840d3cb15d3d
+RMD160 (Text-Shellwords-1.02.tar.gz) = 71fee8022604cf287cf27e0969092e68f7182f8d
 Size (Text-Shellwords-1.02.tar.gz) = 2162 bytes

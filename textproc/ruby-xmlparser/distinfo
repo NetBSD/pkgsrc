@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/28 04:51:38 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:48:49 agc Exp $
 
 SHA1 (ruby/xmlparser-0.6.8.tar.gz) = 9a53a7c576347ac8bccbc56fb55afef3fb32268d
+RMD160 (ruby/xmlparser-0.6.8.tar.gz) = 8f7531490dcc06eb99deb76bfbbe983d6a154046
 Size (ruby/xmlparser-0.6.8.tar.gz) = 140589 bytes
 SHA1 (patch-aa) = caf2667257f38503b6ac5094b570d19f0d16eb69
 SHA1 (patch-ab) = 6f0f9ba927bc0ad1c2ece2c3a10875056b91cbfd

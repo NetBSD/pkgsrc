@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/19 18:46:39 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 14:48:47 agc Exp $
 
 SHA1 (XML-Simple-2.14.tar.gz) = 6d5134129ffea0721f0ae6633e22c9a6205cffa1
+RMD160 (XML-Simple-2.14.tar.gz) = e4ec77bd7be9b6f77ec8fe13a3b3e34ed12e560a
 Size (XML-Simple-2.14.tar.gz) = 66338 bytes
