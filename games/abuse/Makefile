@@ -1,6 +1,4 @@
-#
-# $NetBSD: Makefile,v 1.1 1998/08/27 12:54:56 garbled Exp $
-#
+# $NetBSD: Makefile,v 1.2 1998/08/28 12:55:42 garbled Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
