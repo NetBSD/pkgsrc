@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6861 2004/08/13 07:21:14 salo Exp $
+$NetBSD: CHANGES,v 1.6862 2004/08/13 08:16:00 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3809,3 +3809,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libnbcompat to 20040813 [jlam 2004-08-13]
 	Updated libelf to 0.8.5nb1 [cube 2004-08-13]
 	Updated lftp to 3.0.7 [salo 2004-08-13]
+	Updated ion to 20040729 [cube 2004-08-13]
