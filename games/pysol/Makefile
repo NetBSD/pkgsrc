@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/04/13 03:08:44 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/19 03:08:19 sakamoto Exp $
 # FreeBSD Id: ports/games/pysol/Makefile,v 1.20 1999/12/08 11:01:01 tg Exp
 
-DISTNAME=       pysol-4.00
+DISTNAME=       pysol-4.10
 CATEGORIES=	games
 MASTER_SITES=	http://wildsau.idv.uni-linz.ac.at/mfx/download/pysol/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}
