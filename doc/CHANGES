@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8783 2005/01/17 09:49:45 seb Exp $
+$NetBSD: CHANGES,v 1.8784 2005/01/17 11:59:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -289,6 +289,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gtk2-engines to 2.6.0nb1 [jmmv 2005-01-13]
 	Updated pkg_notify to 0.4.1nb1 [jmmv 2005-01-13]
 	Added openpam-20040210 [jlam 2005-01-13]
+	Added py-kenosis-0.92 [drochner 2005-01-13]
 	Updated ike-scan to 1.7 [adrianp 2005-01-14]
 	Updated lbreakout2 to 2.5.2 [adam 2005-01-14]
 	Updated gg2 to 2.2.4 [adam 2005-01-14]
