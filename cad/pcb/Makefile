@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/09/01 15:05:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:46:27 wiz Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
@@ -12,6 +12,7 @@ DISTFILES=	pcb-1.6.3.tgz \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://bach.ece.jhu.edu/~haceaton/pcb/
+COMMENT=	X11 interactive printed circuit board layout system
 
 DEPENDS+=	m4-1.4:../../devel/m4
 

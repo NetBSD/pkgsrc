@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/11 02:56:33 garbled Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:41:30 wiz Exp $
 
 DISTNAME=	nut4
 PKGNAME=	nut-4.0
@@ -7,6 +7,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://www.kachinatech.com/~hjjou/archives/
 
 MAINTAINER=	root@garbled.net
+COMMENT=	record what you eat and analyze your meals
 
 ALL_TARGET=	nut
 USE_GMAKE=	yes
