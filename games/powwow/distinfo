@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2002/02/13 18:44:18 jdolecek Exp $
+
+SHA1 (powwow-1.2.4.tar.gz) = cf0477ca95144711ad351e9e1b9aa64df28727c8
+Size (powwow-1.2.4.tar.gz) = 169825 bytes
+SHA1 (patch-aa) = c8359ddb3770aa6520dd50638f4dc6b183943566
+SHA1 (patch-ab) = 4dc0bc5f356ed267fec98716d9e58392876df5bd
+SHA1 (patch-ac) = ded89b8da6b31d7c3fb0c5b477b45d4a3d0ba53b
