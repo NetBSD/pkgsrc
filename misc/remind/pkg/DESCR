@@ -1,0 +1,4 @@
+REMIND is a calendar/alarm program that lets you specify reminders
+and alarms with a versatile interpreted input language.  REMIND
+also produces PostScript calendars, and can handle both the
+common and Hebrew calendars.
