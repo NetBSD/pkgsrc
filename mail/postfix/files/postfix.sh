@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: postfix.sh,v 1.2 2004/07/18 23:42:48 jlam Exp $
+# $NetBSD: postfix.sh,v 1.3 2004/07/19 04:51:07 jlam Exp $
 #
 
 # PROVIDE: mail
@@ -18,7 +18,7 @@ start_cmd="${name} "'${rc_arg}'
 stop_cmd=$start_cmd
 reload_cmd=$start_cmd
 extra_commands="reload"
-spooletcdir="@POSTFIX_SPOOL@/etc"
+: ${spooletcdir=`@PREFIX@/sbin/postconf -h queue_directory`/etc}
 required_dirs=$spooletcdir
 
 postfix_precmd()
