@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2004/04/01 05:31:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.244 2004/04/05 13:59:35 xtraeme Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -117,6 +117,7 @@ SUBDIR+=	libxml2
 SUBDIR+=	libxslt
 SUBDIR+=	lout
 SUBDIR+=	lq-sp
+SUBDIR+=	lua-expat
 SUBDIR+=	makeztxt
 SUBDIR+=	namazu1
 SUBDIR+=	namazu2
