@@ -1,30 +1,23 @@
-# $NetBSD: Makefile,v 1.11 2003/11/14 19:55:13 jdolecek Exp $
+# $NetBSD: Makefile,v 1.12 2003/11/14 23:59:06 heinz Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
 CATEGORIES=	www
-MASTER_SITES=	http://www.panix.com/opera/files/linux/${OPERA_DIR}/ \
-		ftp://ftp.hu-berlin.de/pub/www/opera/linux/${OPERA_DIR}/ \
-		http://ftp.sunet.se/pub/www/clients/Opera/linux/${OPERA_DIR}/ \
-		http://ftp.opera.com/pub/opera/linux/${OPERA_DIR}/ \
-		http://opera.online.no/linux/${OPERA_DIR}/ \
-		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/linux/${OPERA_DIR}/ \
-		ftp://ftp.opera.com/pub/opera/linux/
-EXTRACT_SUFX=	.rpm
-DISTFILES=	opera-${OPERA_DIST_VERSION}.${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
+MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
+		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
+		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/ \
+		http://opera.online.no/${OPERA_DIR}/ \
+		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/ \
+		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
+DISTFILES=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.opera.com/
 COMMENT=	Small, fast and customizable WWW client
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc
 
 LICENSE=	opera-license
-
-# we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
-DIST_SUBDIR=	.
-EXTRACT_ONLY=	# empty
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 USE_BUILDLINK2=	# defined
 
@@ -41,18 +34,54 @@ DEPENDS+=	suse_libpng>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libpng
 DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_openmotif>=7.3:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 
-OPERA_ARCH=		i386
-OPERA_PKG_VERSION=	7.22
+# we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
+DIST_SUBDIR=	.
+EXTRACT_ONLY=	# empty
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+
+EXTRACT_SUFX=		.rpm
+OPERA_ARCH=		.i386
 OPERA_LANG=		en
-OPERA_DIR=		${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${OPERA_ARCH}/static
+OPERA_PKG_VERSION=	7.22
+OPERA_DIR=		linux/${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-20031103.1-static-qt
-.endif
 
 RPMFILES=	${DISTFILES}
 
+.elif (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
+EXTRACT_SUFX=		.tar.bz2
+OPERA_ARCH=		-sol8-sparc-local
+OPERA_LANG=		en
+OPERA_VER_DATE=		20031103
+OPERA_PKG_VERSION=	7.22
+OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION:S/.//g}/final/${OPERA_LANG}/static
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1-static-qt
+
+WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
+
+SOLARIS_INSTALL_ETC_OPERARC?=	no
+BUILD_DEFS+=		SOLARIS_INSTALL_ETC_OPERARC
+OWN_DIRS=		${PREFIX}/lib/opera/plugins
+
+.  if !empty(SOLARIS_INSTALL_ETC_OPERARC:M[yY][eE][sS])
+CONF_FILES+=		${PREFIX}/share/opera/config/opera6rc \
+			/etc/opera6rc
+CONF_FILES+=		${PREFIX}/share/opera/config/opera6rc.fixed \
+			/etc/opera6rc.fixed
+.  endif
+
+PLIST_SUBST+=		OPERA_VER_DATE=${OPERA_VER_DATE}
+
+SUBST_CLASSES+=		opera7
+SUBST_STAGE.opera7=	post-build
+SUBST_FILES.opera7=	${WRKSRC}/man/opera.1
+SUBST_SED.opera7=	-e 's,/usr/,${PREFIX}/,g'
+.endif
+
 do-build:
+.if (${MACHINE_ARCH} == i386)
 	${SED} -e 's#@EMULDIR@#${EMULDIR}#g' ${FILESDIR}/opera.sh > \
-	  ${WRKDIR}/opera
+		${WRKDIR}/opera
 
 post-install: post-install-manpage
 	${INSTALL_SCRIPT} ${WRKDIR}/opera ${PREFIX}/bin
@@ -60,14 +89,27 @@ post-install: post-install-manpage
 .include "../../emulators/suse_linux/Makefile.application"
 
 post-install-manpage:
-# The SuSE common makefile defines "MANCOMPRESSED".
-.if defined(MANCOMPRESSED)
+  # The SuSE common makefile defines "MANCOMPRESSED".
+.  if defined(MANCOMPRESSED)
 	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
-	  ${PREFIX}/man/man1
-.else
+		${PREFIX}/man/man1
+.  else
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera \
-	  ${PREFIX}/man/man1
+		${PREFIX}/man/man1
+.  endif
+.endif
+
+.if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
+do-install:
+	@cd ${WRKSRC} && ${ECHO} "n" | ./install.sh --prefix=${PREFIX}
+	@${ECHO} "=> You can ignore the previous lines about '... cannot be prefixed'"
+	@${ECHO}
+
+post-install:
+	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/man/man1
+
+.include "../../mk/bsd.pkg.install.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
