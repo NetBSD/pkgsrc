@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2003/05/09 05:07:13 taca Exp $
+# $NetBSD: Makefile,v 1.84 2003/05/24 12:31:34 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE2
 PKGNAME=	squid-2.5.2
-PKGREVISION=	3
+PKGREVISION=	4
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -29,7 +29,19 @@ PATCHFILES=	squid-2.5.STABLE2-concurrent_external_acl.patch \
 		squid-2.5.STABLE2-ident_REQUIRED.patch \
 		squid-2.5.STABLE2-reply_body_max_size.patch \
 		squid-2.5.STABLE2-acl_lookup_loop.patch \
-		squid-2.5.STABLE2-squid_ldap_auth.patch
+		squid-2.5.STABLE2-squid_ldap_auth.patch \
+		squid-2.5.STABLE2-external_lookup.patch \
+		wb_group-1.2.patch \
+		squid-2.5.STABLE2-comm-select.patch \
+		squid-2.5.STABLE2-unreachcode.patch \
+		squid-2.5.STABLE2-authdebug.patch \
+		squid-2.5.STABLE2-aclregression.patch \
+		squid-2.5.STABLE2-smb_auth.patch \
+		squid-2.5.STABLE2-smb_auth_pl.patch \
+		squid-2.5.STABLE2-external_acl_ttl0.patch \
+		squid-2.5.STABLE2-digest_nonce_count.patch \
+		squid-2.5.STABLE2-digestcomma.patch \
+		squid-2.5.STABLE2-deny_info_reset.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@netbsd.org
