@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1999/05/04 20:24:23 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/29 21:12:39 tron Exp $
 #
 
 PKGNAME=	php-gd-${PHP_VERSION}
 
-DEPENDS+=	gd-1.3p1:../../graphics/gd
+DEPENDS+=	gd-*:../../graphics/gd
 
 USE_PERL5=	yes
 
