@@ -1,0 +1,17 @@
+$NetBSD: patch-an,v 1.1 2000/08/14 13:55:07 wiz Exp $
+
+--- doc/fidogate.info.orig	Mon Aug 14 15:40:07 2000
++++ doc/fidogate.info	Mon Aug 14 15:49:54 2000
+@@ -1,6 +1,12 @@
+ This is Info file fidogate.info, produced by Makeinfo version 1.68 from
+ the input file fidogate.texi.
+ 
++INFO-DIR-SECTION Fido
++START-INFO-DIR-ENTRY
++* FIDOGATE: (fidogate).              Fido-Internet gateway and a Fido tosser.
++END-INFO-DIR-ENTRY
++
++
+    This file documents the usage of FIDOGATE version 4
+ 
+    Copyright (C) 1994-1996, Martin Junius
