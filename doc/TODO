@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3206 2005/03/07 12:38:00 adam Exp $
+$NetBSD: TODO,v 1.3207 2005/03/07 12:56:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -494,6 +494,7 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
+	o gnats-4.1.0
 	o gnet-2.0.7
 	o gnet1-1.1.9
 	o gnocatan-0.8.1.30
@@ -645,7 +646,7 @@ Suggested package updates
 	o mc-4.6.1-pre3
 	o memcached-1.2
 	o memtest86-3.2
-	o mftrace-1.1.2
+	o mftrace-1.1.5
 	o mhash-1.3
 	o micq-0.4.12 [pkg/29063]
 	o micq-0.5
@@ -869,7 +870,7 @@ Suggested package updates
 	o poedit-1.3.2
 	o poppy-4.01
 	o posh-0.3.14
-	o potrace-1.6
+	o potrace-1.7
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o pptpd-1.2.3
 	o prc-tools-2.3
@@ -899,6 +900,7 @@ Suggested package updates
 	o py-bdb-xml-2.0.9
 	o py-curl-7.13.1
 	o py-gnuplot-1.7
+	o py-kenosis-0.95
 	o py-ldap-2.0.6
 	o py-libxml2-2.6.17
 	o py-logging-0.4.9.5
@@ -907,6 +909,10 @@ Suggested package updates
 	o py-matplotlib-0.71
 	o py-mysqldb-1.1.7
 	o py-psycopg-1.1.18
+	o py-qt3-base-3.14.1
+	o py-qt3-modules-3.14.1
+	o py-qt3-qscintilla-3.14.1
+	o py-qt3-sip-4.2.1
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.6
@@ -924,6 +930,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt3-qscintilla-1.5.1
 	o quake2forge-0.3
 	o qvplay-0.95
 	o qwspritefield-1.7
@@ -938,11 +945,13 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
+	o rdesktop-1.4.0
 	o rdp-1.6
 	o realplayer-10.0.2
 	o realplayer-codecs-20050115
 	o rep-gtk-0.18
 	o resize_image-0.7
+	o riece-1.0.8
 	o rio500-0.8.1
 	o ripmime-1.4.0.3
 	o rman-3.2
@@ -990,7 +999,7 @@ Suggested package updates
 	o shmux-1.0b6
 	o siag-3.6.0
 	o sign-1.0.7
-	o sitecopy-0.14.3
+	o sitecopy-0.15.0
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-4.1
@@ -1007,10 +1016,11 @@ Suggested package updates
 	o snes9x-1.43
 	o snownews-1.5.6.1
 	o sox-12.17.7
-	o spamass-milter-0.3.0
+	o spamass-milter-0.3.0 [pkg/29320]
 	o spim-7.1
 	o splint-3.1.1
 	o spruce-0.6.5
+	o sqlitemanager-1.0.5
 	o sqlrelay-0.35
 	o sqwebmail-5.0.1
 	o srp_client-1.7.5 [jlam]
@@ -1131,6 +1141,7 @@ Suggested package updates
 	o xfce4-netload-plugin-0.2.4
 	o xfce4-notes-plugin-0.10.0
 	o xfce4-systemload-plugin-0.3.6
+	o xfce4-weather-plugin-0.4.9 [pkg/29601]
 	o xfe-0.72
 	o xfmail-1.5.4
 	o xkbset-0.5
