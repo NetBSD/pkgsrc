@@ -1,4 +1,3 @@
--L/usr/X11R6/lib diff -c -N ../faces/filters/Makefile ./filters/Makefile
 *** ../faces/filters/Makefile	Thu Oct 24 03:26:14 1991
 --- ./filters/Makefile	Tue Dec 10 17:17:50 1996
 ***************
