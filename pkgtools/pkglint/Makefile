@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2004/04/24 00:17:20 reed Exp $
+# $NetBSD: Makefile,v 1.186 2004/05/09 05:13:24 jschauma Exp $
 #
 
 DISTNAME=	pkglint-3.73
@@ -33,15 +33,20 @@ SUBST_FILES+=	pkglint.pl plist-clash.pl
 
 .include "../../mk/bsd.prefs.mk"
 
-do-build:
+do-extract:
 	@${MKDIR} ${WRKSRC}/src
+.for FILE in ${SUBST_FILES}
+	${CP} ${FILESDIR}/${FILE} ${WRKSRC}/src/${FILE}
+.endfor
+
+do-build:
 .for FILE in ${SUBST_FILES}
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		-e 's|@MAKE@|${MAKE}|g'			\
 		-e 's|@PERL@|${PERL5}|g'		\
-		${FILESDIR}/${FILE} > ${WRKSRC}/${FILE}
+		${WRKSRC}/src/${FILE} > ${WRKSRC}/${FILE}
 .endfor
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
    # the pre-generated man-pages are 'mandoc';  these OS need 'man'
