@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: substplistbasedirs,v 1.1 2004/09/26 23:48:09 rh Exp $
+#	$NetBSD: substplistbasedirs,v 1.2 2004/09/27 00:31:30 rh Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # in a base package
 #
 
-REV=`echo '$Revision: 1.1 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.2 $' | sed 's/\\$//g'`
 CURDIR=`pwd | sed 's|^.*/\([^/]*/[^/]*\)$|\1|'`
 PLIST=PLIST
 MDFLAG=true
@@ -86,5 +86,5 @@ grep '^@dirrm' $PLIST | sort | sed					\
 [ "$MDFLAG" != "true" ] || grep '^@dirrm' $PLIST | sort | sed		\
 	-e 's|/|\\/|g'							\
 	-e 's|^|PRINT_PLIST_AWK+=	/\^|'				\
-	-e 's|@dirrm |@exec $${MKDIR} %D\\/|'				\
+	-e 's|@dirrm |@exec \\$${MKDIR} %D\\/|'				\
 	-e "s|$|\$\$/ { next; }|"
