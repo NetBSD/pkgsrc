@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/09/11 14:07:38 joda Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/18 12:52:23 yyamano Exp $
 bin/mzscheme
 include/mzscheme/escheme.h
 include/mzscheme/scheme.h
@@ -318,18 +318,27 @@ lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/monit
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/plt-logo.gif
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/servlet-examples.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/servlet.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/password-refresh-message.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-access-message.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-host-root.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-htdocs.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-log.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-message-root.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-not-found-message.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-password.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-protocol-message.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-servlet-message.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/path-servlet.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/port.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/realm-name.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/realm-pattern.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/servlet-refresh-message.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/time-default-servlet.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/time-file-base.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/time-file-per-byte.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/time-initial.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/time-password.html
+lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/time-servlet-connection.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/terms/waiting.html
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/documentation/web-server.gif
 lib/plt/collects/web-server/default-web-root/htdocs/Defaults/index.html
