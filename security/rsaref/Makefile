@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 1999/05/26 15:33:16 tv Exp $
+# $NetBSD: Makefile,v 1.16 1999/12/14 22:36:47 abs Exp $
 #
 
 DISTNAME=		rsaref
-PKGNAME=		rsaref-2.0p2
+PKGNAME=		rsaref-2.0p3
 WRKSRC=			${WRKDIR}/install
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.spinnaker.com/pub/crypt/rsaref/
