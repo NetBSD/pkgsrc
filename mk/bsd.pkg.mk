@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1124 2003/01/05 00:40:46 lukem Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1125 2003/01/09 13:16:38 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -362,10 +362,8 @@ _PKG_DEBUG_SCRIPT=	${SH} -x
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 .if defined(NO_WRKSUBDIR)
-.BEGIN:
-	@${ECHO_MSG} 'NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
-	@${ECHO_MSG} 'assignment of WRKSRC= $${WRKDIR}'
-	@${FALSE}
+PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
+PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
 .endif # NO_WRKSUBDIR
 
 # A few aliases for *-install targets
@@ -551,18 +549,13 @@ uptodate-pkgtools: uptodate-zoularis
 .else
 uptodate-pkgtools:
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ${PKGTOOLS_VERSION} -lt ${PKGTOOLS_REQD} ]; then		\
-		case ${PKGNAME} in					\
-		digest-*|pkg_install-*)					\
-			;;						\
-		*)							\
-			${ECHO} "Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions."; \
-			${ECHO} "The installed package tools were last updated on ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|}."; \
-			${ECHO} "Please \"make install\" in ../../pkgtools/pkg_install."; \
-			${FALSE} ;;					\
-		esac							\
-	fi
+.	if !defined(NO_PKGTOOLS_REQD_CHECK)
+.		if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
+PKG_FAIL_REASON+='Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions.'
+PKG_FAIL_REASON+='The installed package tools were last updated on ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|}.'
+PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/pkg_install.'
+.		endif
+.	endif
 
 # Latest version of Zoularis required for this file.
 ZOULARIS_REQD=		20010323
@@ -570,12 +563,10 @@ ZOULARIS_REQD=		20010323
 # Check that we are using up-to-date Zoularis.
 .if defined(ZOULARIS_VERSION)
 uptodate-zoularis:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ${ZOULARIS_VERSION} -lt ${ZOULARIS_REQD} ]; then		\
-		${ECHO} "Your Zoularis needs to be updated to the ${ZOULARIS_REQD:C|(....)(..)(..)|\1/\2/\3|} version."; \
-		${ECHO} "The installed Zoularis was last updated on ${ZOULARIS_VERSION:C|(....)(..)(..)|\1/\2/\3|}."; \
-		${FALSE};					\
-	fi
+.	if ${ZOULARIS_VERSION} < ${ZOULARIS_REQD}
+PKG_FAIL_REASON+='Your Zoularis needs to be updated to the ${ZOULARIS_REQD:C|(....)(..)(..)|\1/\2/\3|} version.'
+PKG_FAIL_REASON+='The installed Zoularis was last updated on ${ZOULARIS_VERSION:C|(....)(..)(..)|\1/\2/\3|}.'
+.	endif
 .endif
 
 # Files to create for versioning and build information
@@ -841,54 +832,37 @@ _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 EXTRACT_ONLY?=	${DISTFILES}
 
 .if !defined(CATEGORIES) || !defined(DISTNAME)
-.BEGIN:
-	@${ECHO_MSG} "CATEGORIES and DISTNAME are mandatory."
-	@${FALSE}
+PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
 .endif
 
 .if defined(LIB_DEPENDS)
-.BEGIN:
-	@${ECHO_MSG} "LIB_DEPENDS is deprecated and must be replaced with DEPENDS."
-	@${FALSE}
+PKG_FAIL_REASON+='LIB_DEPENDS is deprecated and must be replaced with DEPENDS.'
 .endif
 
 .if defined(PKG_PATH)
-.BEGIN:
-	@${ECHO_MSG} "Please unset PKG_PATH before doing pkgsrc works!"
-	@${FALSE}
+PKG_FAIL_REASON+='Please unset PKG_PATH before doing pkgsrc work!'
 .endif
 
 .if defined(MASTER_SITE_SUBDIR)
-.BEGIN:
-	@${ECHO_MSG} 'MASTER_SITE_SUBDIR is deprecated and must be replaced with MASTER_SITES.'
-	@${FALSE}
+PKG_FAIL_REASON+='MASTER_SITE_SUBDIR is deprecated and must be replaced with MASTER_SITES.'
 .endif
 
 .if defined(PATCH_SITE_SUBDIR)
-.BEGIN:
-	@${ECHO_MSG} 'PATCH_SITE_SUBDIR is deprecated and must be replaced with PATCH_SITES.'
-	@${FALSE}
+PKG_FAIL_REASON+='PATCH_SITE_SUBDIR is deprecated and must be replaced with PATCH_SITES.'
 .endif
 
 .if defined(ONLY_FOR_ARCHS) || defined(NOT_FOR_ARCHS) \
 	|| defined(ONLY_FOR_OPSYS) || defined(NOT_FOR_OPSYS)
-.BEGIN:
-	@${ECHO_MSG} 'ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced with ONLY/NOT_FOR_PLATFORM.'
-	@${FALSE}
+PKG_FAIL_REASON+='ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced with ONLY/NOT_FOR_PLATFORM.'
 .endif
 
-.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once") && !defined(OBJHOSTNAME) 
-.BEGIN:
-	@${ECHO_MSG} 'PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
-	@${FALSE}
-.endif
-
-.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once") && !exists(${SHLOCK}) 
-.BEGIN:
-	@${ECHO_MSG} 'The ${SHLOCK} utility does not exist, and is necessary for locking.'
-	@${ECHO_MSG} 'Please go to the ${.CURDIR}/../../pkgtools/shlock directory, and type'
-	@${ECHO_MSG} 'make install'
-	@${FALSE}
+.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once")
+. if !defined(OBJHOSTNAME) 
+PKG_FAIL_REASON+='PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
+. elif !exists(${SHLOCK})
+PKG_FAIL_REASON+='The ${SHLOCK} utility does not exist, and is necessary for locking.'
+PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
+. endif
 .endif
 
 PKGREPOSITORYSUBDIR?=	All
@@ -3046,7 +3020,7 @@ fetch-list:
 	@${ECHO} '#!/bin/sh'
 	@${ECHO} '#'
 	@${ECHO} '# This is an auto-generated script, the result of running'
-	@${ECHO} '# `make fetch-list'"'"' in directory "'"`pwd`"'"'
+	@${ECHO} '# `${MAKE} fetch-list'"'"' in directory "'"`pwd`"'"'
 	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
 	@${ECHO} '#'
 	@${MAKE} ${MAKEFLAGS} fetch-list-recursive
