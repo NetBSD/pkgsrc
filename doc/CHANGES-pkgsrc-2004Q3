@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.22 2004/11/10 21:04:18 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.23 2004/11/15 08:03:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -47,3 +47,5 @@ Pullup ticket 136 - requested by Thomas Klausner
 PLIST fix for jakarta-tomcat
 Pullup ticket 138 - requested by Thomas Klausner
 remove gaim1 packages
+Pullup ticket 140 - requested by Quentin Garnier
+security fix for sudo
