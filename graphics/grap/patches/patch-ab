@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2004/01/14 15:57:09 agc Exp $
+
+--- grap.h	2004/01/14 15:42:50	1.1
++++ grap.h	2004/01/14 15:43:09
+@@ -8,6 +8,10 @@
+ #endif
+ 
+ #ifndef STDC_HEADERS
++
++// keep up with gcc3.3
++using namespace std;
++
+ extern "C" {
+ #ifndef __GNUC__
+     size_t strlen(const char*);
