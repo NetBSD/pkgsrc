@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2004/04/06 19:02:49 reinoud Exp $
+
+--- src/Edit/Editor/edit_main.cpp.orig	2004-04-03 21:20:48.000000000 +0200
++++ src/Edit/Editor/edit_main.cpp
+@@ -250,7 +250,7 @@ edit_main_rep::print (url name, bool con
+     string col_name= env->get_string (BG_COLOR);
+     dev->set_background (dis->get_color (col_name));
+     if (col_name != "white")
+-      dev->clear (0, -h, w, 0);
++      dev->clear (0, (int) -h, (int) w, 0);
+ 
+     rectangles rs;
+     the_box[0]->sx(i)= 0;

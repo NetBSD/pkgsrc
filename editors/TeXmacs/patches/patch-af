@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 2004/04/06 19:02:49 reinoud Exp $
+
+--- src/Window/display.hpp.orig	2004-04-03 21:20:49.000000000 +0200
++++ src/Window/display.hpp
+@@ -15,10 +15,7 @@
+ #include "tree.hpp"
+ #include "bitmap_font.hpp"
+ 
+-#ifndef _TIME_T
+-#define _TIME_T
+-typedef long time_t;
+-#endif
++#include <time.h>
+ 
+ struct font;
+ class widget;
