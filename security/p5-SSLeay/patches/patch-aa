@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/10 14:16:52 wiz Exp $
+
+--- Makefile.PL.orig	Sat Nov 25 18:22:32 2000
++++ Makefile.PL
+@@ -8,7 +8,7 @@
+ chdir($currdir) || die("can't change to $currdir: $!");
+ 
+ # FIND POSSIBLE SSL INSTALLATIONS
+-my @POSSIBLE_SSL_DIRS = qw(/usr/local/openssl /usr/local/ssl /local/ssl /opt/ssl /usr/local /local /usr);
++my @POSSIBLE_SSL_DIRS = qw(@SSLBASE@);
+ my @CANDIDATE;
+ my $open_ssl = 0;
+ my $dir;
+@@ -38,7 +38,7 @@
+     unless($CANDIDATE[0][0]) {
+ 	print "No OpenSSL installation found, usually in $POSSIBLE_SSL_DIRS[0]\n";
+     }
+-    $SSL_DIR = prompt "Which OpenSSL build path do you want to link against?", $CANDIDATE[0][0];
++    $SSL_DIR = $CANDIDATE[0][0];
+ }
+ my $candidate = &Candidate($SSL_DIR);
+ unless($candidate) {
