@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2003/05/02 08:22:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.57 2003/05/26 20:50:36 jschauma Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -16,8 +16,6 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
-
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
@@ -84,8 +82,7 @@ post-extract:
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
-	${TOUCH} ${TOUCH_FLAGS}	${WRKSRC}/gcc/c-gperf.h
-	${ECHO} "bogus" > ${WRKSRC}/gcc/cstamp-h.in
+	cd ${WRKSRC} && contrib/egcs_update --touch
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc.mk > ${WRKDIR}/gcc.mk
