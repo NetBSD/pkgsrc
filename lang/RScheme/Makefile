@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/08/06 18:28:58 jmc Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/17 11:21:53 agc Exp $
 
 DISTNAME=		rs-0.7.3.2
 PKGNAME=		RScheme-0.7.3.2
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.rscheme.org/pub/rscheme/
 
@@ -61,10 +62,15 @@ do-install:
 		${MAKE} packages
 
 post-install:
-	${LN} -fs ${PREFIX}/lib/rscheme/bin/rs ${PREFIX}/bin/rscheme
+	${RM} -f ${PREFIX}/bin/rscheme
+	${LN} -s ${PREFIX}/lib/rscheme/bin/rs ${PREFIX}/bin/rscheme
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rscheme
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${WRKSRC}/README \
 		${PREFIX}/share/doc/rscheme
+	${RM} -rf ${BUILDLINK_DIR}/include/rscheme			\
+		${BUILDLINK_DIR}/include/rscheme.h			\
+		${BUILDLINK_DIR}/lib/librs.a
+	${CHMOD} -R g+w ${WRKSRC}
 
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/autoconf.mk"
