@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2002/06/09 11:29:53 taca Exp $
+# $NetBSD: Makefile.common,v 1.9 2002/10/20 00:39:52 wiz Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -162,7 +162,7 @@ do-build:	ruby-extconf-build
 ruby-extconf-build:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Building ${d}"
-	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE} ${ALL_TARGET}
+	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${ALL_TARGET}
 .endfor
 .endif
 
@@ -172,7 +172,7 @@ do-install:	ruby-extconf-install
 ruby-extconf-install:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Installing ${d}"
-	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE} ${INSTALL_TARGET}
+	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET}
 .endfor
 .endif
 
@@ -242,7 +242,7 @@ _RUBY_PROVIDED!= case `expr ${_RUBY_VERMAJOR} ">" ${_RUBY_REQMAJOR}` in \
 		esac ;; \
 	esac; ${ECHO} "no"
 .if ${_RUBY_PROVIDED} == "no"
-IGNORE+=		"This package require ruby ${RUBY_REQD} or later."
+IGNORE+=		"This package requires ruby ${RUBY_REQD} or later."
 .endif
 .else
 RUBY_REQD?=		${RUBY_VERSION}
