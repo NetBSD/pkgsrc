@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/05 11:12:46 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/07 21:18:12 jlam Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -29,7 +29,7 @@ CONFIGURE_ARGS=		--enable-ltdl-install
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-*)
-.  include "../../devel/dlcompat/buildlink2.mk"
+.  include "../../devel/dlcompat/buildlink3.mk"
 .endif
 
 BUILD_SHLIBTOOL?=	YES
