@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/13 12:55:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/04 17:24:16 drochner Exp $
 ${PYSITELIB}/bt/BitTorrent/Choker.py
 ${PYSITELIB}/bt/BitTorrent/Choker.pyc
 ${PYSITELIB}/bt/BitTorrent/Choker.pyo
@@ -212,9 +212,6 @@ ${PYSITELIB}/ds/testall.pyo
 ${PYSITELIB}/ds/ui.py
 ${PYSITELIB}/ds/ui.pyc
 ${PYSITELIB}/ds/ui.pyo
-${PYSITELIB}/ds/weakmethod.py
-${PYSITELIB}/ds/weakmethod.pyc
-${PYSITELIB}/ds/weakmethod.pyo
 ${PYSITELIB}/kenosis/__init__.py
 ${PYSITELIB}/kenosis/__init__.pyc
 ${PYSITELIB}/kenosis/__init__.pyo
@@ -236,9 +233,9 @@ ${PYSITELIB}/kenosis/dns/kenosisdns.tac.pyo
 ${PYSITELIB}/kenosis/dnstest.py
 ${PYSITELIB}/kenosis/dnstest.pyc
 ${PYSITELIB}/kenosis/dnstest.pyo
-${PYSITELIB}/kenosis/kim.py
-${PYSITELIB}/kenosis/kim.pyc
-${PYSITELIB}/kenosis/kim.pyo
+${PYSITELIB}/kenosis/kwebd.py
+${PYSITELIB}/kenosis/kwebd.pyc
+${PYSITELIB}/kenosis/kwebd.pyo
 ${PYSITELIB}/kenosis/node.py
 ${PYSITELIB}/kenosis/node.pyc
 ${PYSITELIB}/kenosis/node.pyo
