@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2002/05/06 13:16:06 rh Exp $
+# $NetBSD: Makefile,v 1.147 2002/05/31 15:02:43 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -10,6 +10,8 @@ SUBDIR+=	biblook
 SUBDIR+=	bibparse
 SUBDIR+=	catdoc
 SUBDIR+=	cdif
+SUBDIR+=	chasen
+SUBDIR+=	chasen-base
 SUBDIR+=	crimson
 SUBDIR+=	detex
 SUBDIR+=	dict-client
@@ -34,6 +36,7 @@ SUBDIR+=	html2text
 SUBDIR+=	html2wml
 SUBDIR+=	icu
 SUBDIR+=	intltool
+SUBDIR+=	ipadic
 SUBDIR+=	isearch
 SUBDIR+=	iso12083
 SUBDIR+=	iso8879
@@ -43,7 +46,12 @@ SUBDIR+=	ispell-francais
 SUBDIR+=	ispell-gaeilge
 SUBDIR+=	ispell-german
 SUBDIR+=	ispell-svenska
+SUBDIR+=	ja-grep
+SUBDIR+=	ja-groff
+SUBDIR+=	ja-sed
 SUBDIR+=	jade
+SUBDIR+=	kakasi
+SUBDIR+=	kbanner
 SUBDIR+=	kdoc
 SUBDIR+=	latex2html
 SUBDIR+=	libpspell
@@ -55,6 +63,8 @@ SUBDIR+=	lout
 SUBDIR+=	lq-sp
 SUBDIR+=	makeztxt
 SUBDIR+=	mminstance
+SUBDIR+=	namazu1
+SUBDIR+=	namazu2
 SUBDIR+=	ndtpd
 SUBDIR+=	openjade
 SUBDIR+=	opensp
@@ -73,7 +83,9 @@ SUBDIR+=	p5-Text-Balanced
 SUBDIR+=	p5-Text-BibTeX
 SUBDIR+=	p5-Text-CSV-Hash
 SUBDIR+=	p5-Text-CSV_XS
+SUBDIR+=	p5-Text-ChaSen
 SUBDIR+=	p5-Text-DelimMatch
+SUBDIR+=	p5-Text-Kakasi
 SUBDIR+=	p5-Text-Substitute
 SUBDIR+=	p5-Text-Template
 SUBDIR+=	p5-Text-Wrapper
