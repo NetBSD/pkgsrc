@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.27 2003/09/13 03:50:13 jlam Exp $
+dnl $NetBSD: configure.ac,v 1.28 2003/09/13 16:17:41 jschauma Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -172,7 +172,7 @@ dnl
 pkg_use_nbcompat_statfs=yes
 AC_CHECK_FUNC(statfs, [
 	case $host_os in
-	sunos*|solaris*)
+	irix*|sunos*|solaris*)
 		AC_CHECK_FUNC(statvfs, [:], [
 			AC_MSG_ERROR(statfs can't be implemented correctly)
 		])
