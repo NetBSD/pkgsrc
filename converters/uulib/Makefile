@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 13:59:30 wiz Exp $
-# FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
+# $NetBSD: Makefile,v 1.18 2001/06/10 16:37:57 wiz Exp $
 #
 
-DISTNAME=       uudeview-0.5.13
-PKGNAME=        uulib-0.5.13
+DISTNAME=       uudeview-0.5.15
+PKGNAME=        uulib-0.5.15
 CATEGORIES=	converters
-MASTER_SITES=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/Apps/frank/
+MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
+HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
 
 # "kdesupport-2.1b" included "uu" library.
