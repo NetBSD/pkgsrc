@@ -1,22 +1,18 @@
-$NetBSD: patch-ab,v 1.3 2002/04/04 16:03:18 uebayasi Exp $
+$NetBSD: patch-ab,v 1.4 2002/04/13 03:02:26 jwise Exp $
 
---- Imakefile.orig	Wed Apr  3 01:19:05 2002
-+++ Imakefile
-@@ -4,7 +4,7 @@
- #define IHaveSubdirs
- #define PassCDebugFlags
-       WORLDOPTS = -k
--        SUBDIRS = lib canna server cmd dic misc doc
-+        SUBDIRS = lib canna cmd/forcpp cmd/kpdic dic/phono misc doc
-         INCLUDE = ./include/canna
- AllTarget(cannaconf.h)
- MakeSubdirs($(SUBDIRS))
-@@ -22,7 +22,7 @@
- CANNAROOT = .
- SERVERDIR = server dic/phono dic/ideo
- CLIENTDIR = cmd dic/phono misc
--SGSDIR = canna lib
-+SGSDIR =  lib canna dic/phono misc doc
+--- ./Imakefile.orig	Wed Nov 27 16:01:34 1996
++++ ./Imakefile	Fri Jul 30 19:17:44 1999
+@@ -61,5 +61,5 @@
+ 	do \
+ 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
+-		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
++		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
+ 	done
  
- install:: mkbindir mklibdir mkdicdir mkerrdir
- instserver:: mkdicdir mkerrdir
+@@ -69,5 +69,5 @@
+ 	do \
+ 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
+-		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
++		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
+ 	done
+ 
