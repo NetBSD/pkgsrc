@@ -3,7 +3,7 @@
 # Date created:         17 October 1994
 # Whom:                 jmz
 #
-# $Id: Makefile,v 1.2 1997/10/27 02:46:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/10/27 03:22:25 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 

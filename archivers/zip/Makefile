@@ -5,7 +5,8 @@
 # Date created:         22 Dec 1994
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/27 02:19:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:29 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
 DISTNAME=       zip21
