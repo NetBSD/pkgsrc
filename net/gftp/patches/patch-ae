@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2005/03/14 14:50:48 rillig Exp $
+
+NetBSD-1.6.2 does not know about ENOTSUP.
+
+--- lib/fsplib/fsplib.c.orig	Wed Jan 19 03:03:45 2005
++++ lib/fsplib/fsplib.c	Sat Mar 12 11:04:49 2005
+@@ -27,6 +27,10 @@ use of this software.
+ #include "fsplib.h"
+ #include "lock.h"
+ 
++#ifndef ENOTSUP
++# define ENOTSUP EINVAL
++#endif
++
+ /* ************ Internal functions **************** */ 
+ 
+ /* builds filename in packet output buffer, appends password if needed */
