@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.853 2001/11/21 12:53:04 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.854 2001/11/21 12:58:15 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -243,7 +243,7 @@ DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 # -lintl in CONFIGURE_ENV is to workaround broken gettext.m4
 # (gettext.m4 does not add -lintl where it should, and fails to detect
 # if libintl.a is genuine GNU gettext or not).
-.if ${OPSYS} != "Linux"
+.if ${_DO_LIBINTL_CHECKS} == "yes"
 .  if defined(USE_LIBINTL)
 .    if exists(/usr/include/libintl.h)
 .      if defined(GNU_CONFIGURE)
