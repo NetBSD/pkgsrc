@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/05/30 02:19:16 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/06/12 08:58:50 grant Exp $
 #
 
 DISTNAME=	Pmw.0.8.5
@@ -19,7 +19,7 @@ do-build:
 
 do-install:
 	(cd ${WRKDIR}; ${FIND} Pmw -type d -print | \
-	    ${SED} -e 's,^,${PREFIX}/${PYSITELIB}/,' | ${XARGS} ${INSTALL_DATA_DIR})
+	    ${SED} -e 's,^,${PREFIX}/${PYSITELIB}/,' | ${XARGS} -n 1 ${INSTALL_DATA_DIR})
 	(cd ${WRKDIR}; for f in `${FIND} Pmw -type f -print`; do \
 	    ${INSTALL_DATA} $$f ${PREFIX}/${PYSITELIB}/$$f; done)
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
