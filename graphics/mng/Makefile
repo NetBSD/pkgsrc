@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/02 17:42:18 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/02 17:51:19 reed Exp $
 
 DISTNAME=	libmng-1.0.8
 PKGNAME=	${DISTNAME:S/lib//}
@@ -30,9 +30,9 @@ pre-configure:
 	cd ${WRKSRC};				\
 	${RM} -f configure.in && ${LN} -sf makefiles/configure.in .;	\
 	${RM} -f Makefile.am && ${LN} -sf makefiles/Makefile.am .;	\
-	${ACLOCAL};				\
+	${SETENV} AUTOM4TE=${LOCALBASE}/bin/autom4te ${ACLOCAL};	\
 	${LOCALBASE}/bin/libtoolize --automake;	\
-	${AUTOMAKE} -a --foreign -i;		\
+	${SETENV} AUTOCONF=${AUTOCONF} ${AUTOMAKE} -a --foreign -i;	\
 	${AUTOCONF}
 
 post-install:
