@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8109 2004/11/28 16:04:47 martti Exp $
+$NetBSD: CHANGES,v 1.8110 2004/11/28 16:30:06 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated doclifter to 1.15 [recht 2004-11-28]
 	Updated LPRng-core to 3.8.28 [martti 2004-11-28]
 	Updated LPRng to 3.8.28 [martti 2004-11-28]
+	Updated roundup to 0.7.9 [recht 2004-11-28]
