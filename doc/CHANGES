@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4150 2003/12/16 22:47:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.4151 2003/12/16 22:54:01 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5201,3 +5201,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mrtg to 2.10.11nb1 [martti 2003-12-16]
 	Updated p5-Digest to 1.05nb1 [heinz 2003-12-16]
 	Updated xmlcatmgr to 1.2 [jmmv 2003-12-16]
+	Updated docsis to 0.9.0 [grant 2003-12-16]
