@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2002/08/21 02:43:45 grant Exp $
+# $NetBSD: Makefile,v 1.44 2002/09/05 16:56:54 fredb Exp $
 
-DISTNAME=	wwwoffle-2.7d
+DISTNAME=	wwwoffle-2.7e
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.demon.co.uk/pub/unix/httpd/ \
-		http://www.gedanken.freeserve.co.uk/download-wwwoffle/ \
-		${MASTER_SITE_SUNSITE:=apps/www/servers/}
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/www/servers/} \
+		ftp://ftp.demon.co.uk/pub/unix/httpd/ \
+		http://www.gedanken.freeserve.co.uk/download-wwwoffle/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	fredb@netbsd.org
@@ -34,6 +34,13 @@ post-build:
 		${FILESDIR}/wwwoffled > ${WRKDIR}/wwwoffled
 	${SED} -e 's#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g' \
 	  	INSTALL > ${WRKDIR}/INSTALL
+
+# For bulk-build machines: a one-time install/deinstall, if wwwoffle
+# is never run, leaves an incomplete cache directory, which the install
+# target incorrectly calculates to be a pre-2.2 cache. This tricks it
+# into setting up the cache directory properly.
+pre-install:
+	${MKDIR} /var/wwwoffle/prevtime1
 
 post-install:
 	if [ -f ${PKG_SYSCONFDIR}/wwwoffle.conf.install ]; then \
