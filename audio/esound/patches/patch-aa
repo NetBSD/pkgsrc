@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2002/02/17 21:55:45 jlam Exp $
+
+--- Makefile.in.orig	Sun Feb 17 16:45:44 2002
++++ Makefile.in
+@@ -178,7 +178,7 @@
+ m4datadir = $(datadir)/aclocal
+ m4data_DATA = esd.m4
+ 
+-esdconfdir = $(sysconfdir)
++esdconfdir = $(datadir)/examples/@PACKAGE@
+ esdconf_DATA = esd.conf
+ 
+ CLEANFILES = esound.spec esound.pc
