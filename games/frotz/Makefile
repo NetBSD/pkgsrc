@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2001/11/16 21:19:58 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/08 22:08:51 kristerw Exp $
 #
 
 DISTNAME=	frotz-2.41
 CATEGORIES=	games
-MASTER_SITES=	http://www.cs.csubak.edu/~dgriffi/frotz/files/
+# The maintainer has asked us to use the mirrors instead of www.cs.csubak.edu.
+#MASTER_SITES=	http://www.cs.csubak.edu/~dgriffi/frotz/files/
 MASTER_SITES=	ftp://ftp.ifarchive.org/if-archive/infocom/interpreters/frotz/ \
 		ftp://ftp.nodomainname.net/pub/mirrors/if-archive/infocom/interpreters/frotz/ \
 		ftp://wuarchive.wustl.edu/doc/misc/if-archive/infocom/interpreters/frotz/ \
 		ftp://ftp.ifarchive.org/if-archive/unprocessed/
-# 2.41 isn't on if-archive yet.
 
 MAINTAINER=	seebs@plethora.net
 HOMEPAGE=	http://www.cs.csubak.edu/~dgriffi/proj/frotz/
