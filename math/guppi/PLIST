@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2002/10/07 23:00:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2003/06/27 19:53:32 wiz Exp $
 ${GNUMERIC}bin/guppi-gnumeric
 include/gnome-1.0/libguppi/gnan.h
 include/gnome-1.0/libguppi/guppi-2d.h
@@ -199,11 +199,13 @@ lib/guppi/plug-ins/${PKGVERSION}/plot/xybox/guppi_xybox.a
 lib/guppi/plug-ins/${PKGVERSION}/plot/xybox/guppi_xybox.la
 lib/guppi/plug-ins/${PKGVERSION}/plot/xybox/guppi_xybox.so
 lib/guppi/plug-ins/${PKGVERSION}/plot/xybox/xybox.plugin
+lib/libguppi.a
 lib/libguppi.la
 lib/libguppi.so
 lib/libguppi.so.16
 lib/libguppi.so.16.0
 lib/libguppiConf.sh
+lib/libguppitank.a
 lib/libguppitank.la
 lib/libguppitank.so
 lib/libguppitank.so.16
