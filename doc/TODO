@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2136 2004/09/19 17:38:34 snj Exp $
+$NetBSD: TODO,v 1.2137 2004/09/19 20:20:23 kim Exp $
 
 Suggested new packages
 ======================
@@ -402,6 +402,7 @@ Suggested package updates
 	o povray-3.6.1
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
+	o privoxy-3.0.3 [kim]
 	o proftpd-1.2.10
 	o psi-0.9.2
 	o pth-2.0.2
