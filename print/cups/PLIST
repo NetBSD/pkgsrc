@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/14 23:18:15 jlam Exp $
 bin/cancel
+bin/cups-config
 bin/disable
 bin/enable
 bin/lp
@@ -21,7 +22,7 @@ lib/libcups.a
 lib/libcups.la
 lib/libcups.so
 lib/libcups.so.2
-lib/libcups.so.2.3
+lib/libcups.so.2.4
 lib/libcupsimage.a
 lib/libcupsimage.la
 lib/libcupsimage.so
@@ -60,6 +61,7 @@ man/cat1/lpq.0
 man/cat1/lpr.0
 man/cat1/lprm.0
 man/cat1/lpstat.0
+man/cat3/cups-config.0
 man/cat5/classes.conf.0
 man/cat5/cupsd.conf.0
 man/cat5/mime.convs.0
@@ -68,6 +70,7 @@ man/cat5/printers.conf.0
 man/cat8/accept.0
 man/cat8/cups-lpd.0
 man/cat8/cups-polld.0
+man/cat8/cupsaddsmb.0
 man/cat8/cupsd.0
 man/cat8/disable.0
 man/cat8/enable.0
@@ -86,6 +89,7 @@ man/man1/lpq.1
 man/man1/lpr.1
 man/man1/lprm.1
 man/man1/lpstat.1
+man/man3/cups-config.3
 man/man5/classes.conf.5
 man/man5/cupsd.conf.5
 man/man5/mime.convs.5
@@ -94,6 +98,7 @@ man/man5/printers.conf.5
 man/man8/accept.8
 man/man8/cups-lpd.8
 man/man8/cups-polld.8
+man/man8/cupsaddsmb.8
 man/man8/cupsd.8
 man/man8/disable.8
 man/man8/enable.8
@@ -103,6 +108,7 @@ man/man8/lpinfo.8
 man/man8/lpmove.8
 man/man8/reject.8
 sbin/accept
+sbin/cupsaddsmb
 sbin/cupsd
 sbin/lpadmin
 sbin/lpc
@@ -257,6 +263,7 @@ share/cups/templates/header.tmpl
 share/cups/templates/job-cancel.tmpl
 share/cups/templates/job-hold.tmpl
 share/cups/templates/job-release.tmpl
+share/cups/templates/job-restart.tmpl
 share/cups/templates/jobs.tmpl
 share/cups/templates/modify-class.tmpl
 share/cups/templates/modify-printer.tmpl
@@ -354,6 +361,7 @@ share/examples/cups/mime.convs
 share/examples/cups/mime.types
 share/examples/cups/printers.conf
 share/locale/C/cups_C
+share/locale/cs/cups_cs
 share/locale/de/cups_de
 share/locale/en/cups_en
 share/locale/es/cups_es
