@@ -1,5 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/07/15 22:57:29 heinz Exp $
+
 Sample config files can be found here:
 
 	${PREFIX}/share/examples/chrony
 
 Copy them to ${PREFIX}/etc and edit to suit your needs.
+
+===========================================================================

@@ -1,4 +1,6 @@
 ===========================================================================
+$NetBSD: MESSAGE,v 1.3 2002/07/15 22:57:28 heinz Exp $
+
 The default directory for site-wide config files for SpamAssassin on
 NetBSD has changed from
 
@@ -9,4 +11,5 @@ to
 	${PKG_SYSCONFBASE}/spamassassin
 
 If you have old config files, please move them to the new location.
+
 ===========================================================================
