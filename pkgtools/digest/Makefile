@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/11 22:29:16 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/12 06:21:58 fredb Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -46,10 +46,10 @@ pre-install:
 	@for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
 	  case $$OPT in \
 	    catinstall) \
-		${ECHO} man/cat1/digest.0${MANZ:D.gz} >> ${PLIST_SRC}; \
+		${ECHO} man/cat1/digest.0${MCOMPRESSSUFFIX} >> ${PLIST_SRC}; \
 		;; \
 	    maninstall) \
-		${ECHO} man/man1/digest.1${MANZ:D.gz} >> ${PLIST_SRC}; \
+		${ECHO} man/man1/digest.1${MCOMPRESSSUFFIX} >> ${PLIST_SRC}; \
 		;; \
 	  esac; \
 	done
