@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.199 2002/10/08 02:17:45 wiz Exp $
+$NetBSD: CHANGES,v 1.200 2002/10/08 03:30:38 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3110,7 +3110,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gv to 3.5.8nb2 [itojun 2002-10-04]
 	Updated libao to 0.8.3nb1 [jlam 2002-10-04]
 	Updated audacity to 1.0.0.2 [jlam 2002-10-04]
-	Added dictd-1.8.0 [uebayasi 2002-10-04]
 	Updated x2vnc to 1.4 [hubertf 2002-10-04]
 	Added otpCalc-0.96 [hubertf 2002-10-04]
 	Updated Mule-UCS to 0.84nb1 [kei 2002-10-04]
