@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/09/27 22:24:44 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/12/18 00:42:40 tsarna Exp $
 
 DISTNAME=	pycrypt100
 PKGNAME=	py-crypto-1.0.0
@@ -10,8 +10,6 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.skyport.net/crew/amk/writing/pct/
 
 DEPENDS+=	python-1.5.1:../../lang/python
-
-NOT_FOR_ARCHS=  alpha # possibly broken
 
 RESTRICTED=	"Cryptographic software"
 MIRROR_DISTFILE=no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/11/13 00:47:51 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/12/18 00:42:39 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.python.org/doc/lib/module-gdbm.html
 
 DEPENDS+=	python-1.5.1:../../lang/python	\
 		gdbm-1.7.3:../../databases/gdbm
-
-NOT_FOR_ARCHS=	alpha # possibly broken
 
 DIST_SUBDIR=	python
 

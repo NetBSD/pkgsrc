@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/11/13 01:34:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/12/18 00:42:40 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
 
 DEPENDS+=	python-1.5.1:../../lang/python
 DEPENDS+=	readline-2.2:../../devel/readline
-
-NOT_FOR_ARCHS=  alpha # possibly broken
 
 DIST_SUBDIR=	python
 ALL_TARGET=	default
