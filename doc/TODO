@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1024 2003/11/13 20:06:51 grant Exp $
+$NetBSD: TODO,v 1.1025 2003/11/13 20:29:50 grant Exp $
 
 Suggested new packages
 ======================
@@ -85,7 +85,7 @@ Suggested new packages
 	PBX-in-a-box for Linux
 	http://www.asterisk.org/
 
-	sqlrelay [grant]
+	sqlrelay [wip/sqlrelay]
 	SQL connection pooling and sharing library, supports various
 	different backends and provides APIs for many popular languages
 	http://sqlrelay.sourceforge.net/
@@ -114,6 +114,10 @@ Suggested new packages
 	http://vmips.sourceforge.net/
 	vmips is a virtual machine simulator based around a MIPS
 	R3000 RISC CPU core.
+
+	thunderbird-bin{,-nightly} [wip/thunderbird-bin{,-nightly}]
+	Redesign of the Mozilla mail client
+	http://www.mozilla.org/projects/thunderbird/
 
 Suggested package updates
 =========================
@@ -281,7 +285,6 @@ Suggested package updates
 	o mowitz-0.3.0
 	o mozilla-1.5
 	o mozilla-bin-1.5 [grant]
-	o mozilla-thunderbird-0.3
 	o mpich-1.2.5.2 [jschauma]
 	o mplayer-1.0pre2
 	o mrproject-0.9.1
