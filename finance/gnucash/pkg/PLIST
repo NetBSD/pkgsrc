@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/03/23 15:46:43 mjl Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/05/26 01:35:56 mjl Exp $
 bin/gnc-prices
 bin/gnucash
 etc/gnucash/config
@@ -262,6 +262,7 @@ ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnucash.mo
 @dirrm share/gnucash/scm/srfi
 @dirrm share/gnucash/scm/report
