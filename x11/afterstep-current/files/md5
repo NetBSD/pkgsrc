@@ -1,17 +1,5 @@
-$NetBSD: md5,v 1.1.1.1 1999/07/31 10:36:45 fredb Exp $
+$NetBSD: md5,v 1.2 1999/08/04 05:53:25 fredb Exp $
 
-MD5 (AfterStep/AfterStep-1.7.111.tar.bz2) = 458d96740b8471cef6dc0aeb1c2d6774
-MD5 (AfterStep/1.7.111-01-allanon-frames_and_vert_text.patch.gz) = 854d23f15ecd6dc184e6075247f73df4
-MD5 (AfterStep/1.7.111-02-allanon-stuff.patch.gz) = 595af48395a7a29c0feea0f41c5133dc
-MD5 (AfterStep/1.7.111-03-tildouf-frames.patch.gz) = 907be605f60d23c540755928473dad70
-MD5 (AfterStep/1.7.111-04-sasha-parser_pager.patch.gz) = 74072ccd9b0b557d3a71724ae91af23e
-MD5 (AfterStep/1.7.111-05-allanon-sockets_and_stuff.patch.gz) = 61a9608f17869cf1cb7787674aeffc15
-MD5 (AfterStep/1.7.111-06-various-sockets_and_audio.patch.gz) = c8dd65e0931232a1ed59644a7c6bdc3a
-MD5 (AfterStep/1.7.111-07-sasha-new-asetroot_module.patch.gz) = dec049a719659c9b398abe50d2de7e51
-MD5 (AfterStep/1.7.111-08-allanon-resize_and_smartplacement.patch.gz) = 5cb884ee8aa5406907afddb52e1c4225
-MD5 (AfterStep/1.7.111-09-allanon-startsondesk.patch.gz) = 5504c38b2ac7fc3a2ac724507f912f91
-MD5 (AfterStep/1.7.111-10-sasha-asetroot_tmpheap_module.patch.gz) = be3cbc6c0e41e0bdfef7ff46804a2a36
-MD5 (AfterStep/1.7.111-11-sasha_pager_asetroot_more.patch.gz) = f45d6e333c8b8dc59a1d9ad48df51cba
-MD5 (AfterStep/1.7.111-12-allanon-autoreverse_and_configurenotify.patch.gz) = 217823874093dc72f556e0a91fd48a10
-MD5 (AfterStep/1.7.111-13-sasha-gradients_winlist.patch.gz) = 1afecce17649dcef8adecf57600161e4
-MD5 (AfterStep/1.7.111-14-sasha-asetroot.patch.gz) = 1950d185d3f7f9d65465cac281817d8a
+MD5 (AfterStep/AfterStep-1.7.126.tar.bz2) = 1a91e9fde98b2d249ab8ea6fba34c610
+MD5 (AfterStep/1.7.126-01-sasha-endian_deps.patch.gz) = 36fd29327d2d05382d031c64bdc71fbe
+MD5 (AfterStep/1.7.126-02-allanon-security_and_avoidcover.patch.gz) = 8c469aaad3c0579d58f0dca43989e717
