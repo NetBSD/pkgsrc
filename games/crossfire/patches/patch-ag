@@ -1,0 +1,12 @@
+--- server/player.c.orig	Fri Feb 20 03:46:30 1998
++++ server/player.c	Fri Feb 20 03:46:30 1998
+@@ -259,3 +259,3 @@
+      */
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+     p->rplay_fd = 0;
+@@ -270,3 +270,3 @@
+       p->ob->run_away = atoi(cp);
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+     if ((cp = XGetDefault(p->gdisp, name, "sounds")) != NULL)

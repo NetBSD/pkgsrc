@@ -1,0 +1,1266 @@
+@comment $NetBSD: PLIST,v 1.1 1998/07/25 17:40:43 frueauf Exp $
+bin/crossfire
+bin/crossloop.pl
+bin/crossrem.pl
+bin/gensym.pl
+bin/tcpsockets.pl
+bin/crossloop
+bin/mktable
+bin/mapconv
+bin/crossedit
+lib/X11/fonts/misc/crossfire.pcf
+lib/crossfire/adm/flushlocks
+lib/crossfire/README
+lib/crossfire/forbid
+lib/crossfire/animations
+lib/crossfire/artifacts
+lib/crossfire/ban_file
+lib/crossfire/def_help
+lib/crossfire/def_keys
+lib/crossfire/dm_file
+lib/crossfire/formulae
+lib/crossfire/fsconfig
+lib/crossfire/messages
+lib/crossfire/motd
+lib/crossfire/races
+lib/crossfire/skill_params
+lib/crossfire/sound_list
+lib/crossfire/spell_params
+lib/crossfire/treasures
+lib/crossfire/xpmtopix.pl
+lib/crossfire/archetypes
+lib/crossfire/bmaps
+lib/crossfire/crossfire.cfb
+lib/crossfire/esrv_xpm.eric
+lib/crossfire/faces
+lib/crossfire/crossfire.pix.1
+lib/crossfire/crossfire.pix.2
+lib/crossfire/crossfire.pix.3
+lib/crossfire/crossfire.pix.4
+lib/crossfire/crossfire.pix.5
+lib/crossfire/crossfire.pix.6
+lib/crossfire/crossfire.pix.7
+lib/crossfire/help/apply
+lib/crossfire/help/bind
+lib/crossfire/help/cast
+lib/crossfire/help/golem
+lib/crossfire/help/invoke
+lib/crossfire/help/keys
+lib/crossfire/help/mark
+lib/crossfire/help/melee
+lib/crossfire/help/mouse
+lib/crossfire/help/move
+lib/crossfire/help/name
+lib/crossfire/help/output
+lib/crossfire/help/output-count
+lib/crossfire/help/output-sync
+lib/crossfire/help/party
+lib/crossfire/help/pickup
+lib/crossfire/help/quit
+lib/crossfire/help/range
+lib/crossfire/help/save
+lib/crossfire/help/sort_inventory
+lib/crossfire/help/spells
+lib/crossfire/help/statistics
+lib/crossfire/help/take
+lib/crossfire/help/traps
+lib/crossfire/help/unbind
+lib/crossfire/highscore
+lib/crossfire/maps/editor/picks/special
+lib/crossfire/maps/editor/picks/items.orig
+lib/crossfire/maps/editor/picks/exits
+lib/crossfire/maps/editor/picks/background
+lib/crossfire/maps/editor/picks/special.orig
+lib/crossfire/maps/editor/picks/shops
+lib/crossfire/maps/editor/picks/other
+lib/crossfire/maps/editor/picks/TownStaff
+lib/crossfire/maps/editor/picks/lakes
+lib/crossfire/maps/editor/picks/indoors
+lib/crossfire/maps/editor/picks/outdoors
+lib/crossfire/maps/editor/picks/town
+lib/crossfire/maps/editor/picks/rivers
+lib/crossfire/maps/editor/picks/artifacts
+lib/crossfire/maps/editor/picks/monsters2.orig
+lib/crossfire/maps/editor/picks/runes.orig
+lib/crossfire/maps/editor/picks/equipment
+lib/crossfire/maps/editor/picks/alchemy
+lib/crossfire/maps/editor/picks/food-bparts
+lib/crossfire/maps/editor/picks/readables
+lib/crossfire/maps/editor/picks/items
+lib/crossfire/maps/editor/picks/monsters2
+lib/crossfire/maps/editor/picks/runes
+lib/crossfire/maps/editor/picks/monsters
+lib/crossfire/maps/editor/picks/alltown
+lib/crossfire/maps/editor/picks/exits.orig
+lib/crossfire/maps/editor/walls/wall
+lib/crossfire/maps/editor/walls/caves
+lib/crossfire/maps/editor/walls/caves2
+lib/crossfire/maps/editor/walls/misc
+lib/crossfire/maps/skud/court
+lib/crossfire/maps/skud/east_1
+lib/crossfire/maps/skud/entrance
+lib/crossfire/maps/skud/maze
+lib/crossfire/maps/skud/north_1
+lib/crossfire/maps/skud/west_1
+lib/crossfire/maps/world/world_a2
+lib/crossfire/maps/world/world_a3
+lib/crossfire/maps/world/world_b3
+lib/crossfire/maps/world/world_c3
+lib/crossfire/maps/world/world_b4
+lib/crossfire/maps/world/world_b2
+lib/crossfire/maps/world/README
+lib/crossfire/maps/world/world_a1
+lib/crossfire/maps/world/world_b1
+lib/crossfire/maps/world/world_c1
+lib/crossfire/maps/world/world_c2
+lib/crossfire/maps/world/world_e1
+lib/crossfire/maps/world/world_e2
+lib/crossfire/maps/world/world_c4
+lib/crossfire/maps/world/world_a4
+lib/crossfire/maps/world/connect.pl
+lib/crossfire/maps/dtabb/town/town
+lib/crossfire/maps/dtabb/town/shop_g
+lib/crossfire/maps/dtabb/town/shop_m
+lib/crossfire/maps/dtabb/town/shop_a
+lib/crossfire/maps/dtabb/town/shop_w
+lib/crossfire/maps/dtabb/town/inn
+lib/crossfire/maps/dtabb/town/tavern
+lib/crossfire/maps/dtabb/town/church
+lib/crossfire/maps/dtabb/town/quest
+lib/crossfire/maps/dtabb/quest/town2
+lib/crossfire/maps/dtabb/quest/towers
+lib/crossfire/maps/dtabb/quest/shop_f
+lib/crossfire/maps/dtabb/quest/shop_b
+lib/crossfire/maps/dtabb/quest/tower1
+lib/crossfire/maps/dtabb/quest/tower2
+lib/crossfire/maps/dtabb/quest/water
+lib/crossfire/maps/dtabb/quest/fire
+lib/crossfire/maps/dtabb/cave
+lib/crossfire/maps/dtabb/cave2
+lib/crossfire/maps/ender/pisland/underworld
+lib/crossfire/maps/ender/pisland/vol_vill_shops
+lib/crossfire/maps/ender/pisland/vol_village
+lib/crossfire/maps/ender/pisland/volcano
+lib/crossfire/maps/ender/pisland/vvhuts
+lib/crossfire/maps/ender/pisland/hut
+lib/crossfire/maps/ender/pisland/vvmansion
+lib/crossfire/maps/ender/pisland/pirateisland
+lib/crossfire/maps/ender/pisland/ship
+lib/crossfire/maps/ender/pisland/ship_deck2
+lib/crossfire/maps/ender/temple/temp_dung1
+lib/crossfire/maps/ender/temple/temple
+lib/crossfire/maps/ender/temple/enterance
+lib/crossfire/maps/ender/island/strong_island
+lib/crossfire/maps/ender/island/stronghold
+lib/crossfire/maps/ender/island/treas_room
+lib/crossfire/maps/ender/island/treasureisland
+lib/crossfire/maps/ender/island/isl_yel
+lib/crossfire/maps/ender/island/island1
+lib/crossfire/maps/ender/island/jungle
+lib/crossfire/maps/ender/island/middleisland
+lib/crossfire/maps/ender/piratedung
+lib/crossfire/maps/ender/pirateenter
+lib/crossfire/maps/kar/undead
+lib/crossfire/maps/kar/wiz1
+lib/crossfire/maps/kar/devil.church1
+lib/crossfire/maps/kar/wiz2
+lib/crossfire/maps/kar/devil.church2
+lib/crossfire/maps/kar/hallofbones
+lib/crossfire/maps/kar/map.fr.0
+lib/crossfire/maps/kar/map.fr.1
+lib/crossfire/maps/kar/wiz3
+lib/crossfire/maps/kar/wiz4
+lib/crossfire/maps/kar/wiz5
+lib/crossfire/maps/kar/wiz7
+lib/crossfire/maps/kar/wiz6
+lib/crossfire/maps/kar/devil.church3
+lib/crossfire/maps/kar/map.fr.2
+lib/crossfire/maps/kar/map.fr.3
+lib/crossfire/maps/kar/magic.shop
+lib/crossfire/maps/kar/devil.church4
+lib/crossfire/maps/kar/devil.church5
+lib/crossfire/maps/kar/boulder_inferno
+lib/crossfire/maps/city/oldcity/oldcity3
+lib/crossfire/maps/city/oldcity/oldcity6
+lib/crossfire/maps/city/oldcity/oldcity7
+lib/crossfire/maps/city/oldcity/oldcity9
+lib/crossfire/maps/city/oldcity/oldcity8
+lib/crossfire/maps/city/oldcity/end
+lib/crossfire/maps/city/oldcity/oldcity1
+lib/crossfire/maps/city/oldcity/oldcity14
+lib/crossfire/maps/city/oldcity/oldcity2
+lib/crossfire/maps/city/oldcity/oldcity4
+lib/crossfire/maps/city/oldcity/oldcity5
+lib/crossfire/maps/city/oldcity/oldcity10
+lib/crossfire/maps/city/oldcity/oldcity11
+lib/crossfire/maps/city/oldcity/oldcity12
+lib/crossfire/maps/city/oldcity/oldcity13
+lib/crossfire/maps/city/oldcity/oldcity15
+lib/crossfire/maps/city/taverns/inn2
+lib/crossfire/maps/city/taverns/goths0
+lib/crossfire/maps/city/taverns/goths2
+lib/crossfire/maps/city/taverns/goths
+lib/crossfire/maps/city/taverns/apartments
+lib/crossfire/maps/city/taverns/inn
+lib/crossfire/maps/city/houses/house2
+lib/crossfire/maps/city/houses/jones
+lib/crossfire/maps/city/houses/newhouse1
+lib/crossfire/maps/city/houses/maze1
+lib/crossfire/maps/city/houses/house1
+lib/crossfire/maps/city/houses/house.haunted2
+lib/crossfire/maps/city/houses/map.fr.ruin
+lib/crossfire/maps/city/houses/house.haunted
+lib/crossfire/maps/city/houses/wizz.entry
+lib/crossfire/maps/city/houses/wizz.lev1
+lib/crossfire/maps/city/houses/wizz.lev1.pass1
+lib/crossfire/maps/city/misc/zoo
+lib/crossfire/maps/city/misc/church
+lib/crossfire/maps/city/misc/cityhall
+lib/crossfire/maps/city/misc/gatehouse
+lib/crossfire/maps/city/misc/arena
+lib/crossfire/maps/city/misc/beginners
+lib/crossfire/maps/city/misc/prison
+lib/crossfire/maps/city/misc/library
+lib/crossfire/maps/city/misc/devourlower
+lib/crossfire/maps/city/misc/castle
+lib/crossfire/maps/city/misc/castle2
+lib/crossfire/maps/city/misc/templelyth
+lib/crossfire/maps/city/misc/templedevour
+lib/crossfire/maps/city/misc/mercenaries
+lib/crossfire/maps/city/towers/tower.mad2
+lib/crossfire/maps/city/towers/tower.mad3
+lib/crossfire/maps/city/towers/tower.mad1
+lib/crossfire/maps/city/towers/tower
+lib/crossfire/maps/city/towers/tower.mad
+lib/crossfire/maps/city/cannery/ware1
+lib/crossfire/maps/city/shops/gemshop
+lib/crossfire/maps/city/shops/weaponshop
+lib/crossfire/maps/city/shops/bank
+lib/crossfire/maps/city/shops/generalshop
+lib/crossfire/maps/city/shops/magicshop
+lib/crossfire/maps/city/shops/armourshop
+lib/crossfire/maps/city/shops/bowshop
+lib/crossfire/maps/city/shops/potionshop
+lib/crossfire/maps/city/kar/drink
+lib/crossfire/maps/city/kar/creepy.house
+lib/crossfire/maps/city/kar/creepy.house2
+lib/crossfire/maps/city/kar/gorks1
+lib/crossfire/maps/city/kar/gorks2
+lib/crossfire/maps/city/kar/gorks3
+lib/crossfire/maps/city/kar/somehouse
+lib/crossfire/maps/city/kar/somehouse2
+lib/crossfire/maps/city/kar/somehouse3
+lib/crossfire/maps/city/magara/porter_house
+lib/crossfire/maps/city/mansion/garden
+lib/crossfire/maps/city/mansion/entrance
+lib/crossfire/maps/city/mansion/muriskunes
+lib/crossfire/maps/city/mansion/stronghold
+lib/crossfire/maps/city/mansion/str-tunnel
+lib/crossfire/maps/city/city
+lib/crossfire/maps/cd/cd.tower1.754
+lib/crossfire/maps/cd/cd.castle.750
+lib/crossfire/maps/cd/cd.inn.752
+lib/crossfire/maps/cd/cd.store.753
+lib/crossfire/maps/cd/cd.tower2.755
+lib/crossfire/maps/cd/cd.tunnel.751
+lib/crossfire/maps/cd/cd.cellar1.757
+lib/crossfire/maps/eeur/hut.1
+lib/crossfire/maps/eeur/hut.2
+lib/crossfire/maps/eeur/barad_dur
+lib/crossfire/maps/eeur/tower1.1
+lib/crossfire/maps/eeur/tower1.2
+lib/crossfire/maps/eeur/tower1.3
+lib/crossfire/maps/eeur/tower1.4
+lib/crossfire/maps/mcz/castle_water
+lib/crossfire/maps/mcz/castle_low1
+lib/crossfire/maps/mcz/castle_low2
+lib/crossfire/maps/mcz/castle_air
+lib/crossfire/maps/mcz/castle_earth
+lib/crossfire/maps/mcz/castle_fire
+lib/crossfire/maps/mcz/forest
+lib/crossfire/maps/mcz/castle1
+lib/crossfire/maps/esben/map.esben.2
+lib/crossfire/maps/esben/grukks.1
+lib/crossfire/maps/esben/grukks.2
+lib/crossfire/maps/esben/grukks.3
+lib/crossfire/maps/esben/grukks.4
+lib/crossfire/maps/esben/castle_aaaarg
+lib/crossfire/maps/esben/puddings.place
+lib/crossfire/maps/esben/hole
+lib/crossfire/maps/esben/kjerring
+lib/crossfire/maps/esben/watertunnel
+lib/crossfire/maps/esben/ancient_hut
+lib/crossfire/maps/esben/ruins
+lib/crossfire/maps/esben/sokoban1
+lib/crossfire/maps/esben/sokoban2
+lib/crossfire/maps/esben/sokoban3
+lib/crossfire/maps/esben/sokoban4
+lib/crossfire/maps/esben/sokoban5
+lib/crossfire/maps/santo_dominion/houses/house1
+lib/crossfire/maps/santo_dominion/magara/well/top
+lib/crossfire/maps/santo_dominion/magara/well/bottom
+lib/crossfire/maps/santo_dominion/magara/north_lighthouse/floor_2
+lib/crossfire/maps/santo_dominion/magara/north_lighthouse/floor_3
+lib/crossfire/maps/santo_dominion/magara/north_lighthouse/floor_4
+lib/crossfire/maps/santo_dominion/magara/north_lighthouse/floor_1
+lib/crossfire/maps/santo_dominion/magara/south_lighthouse/floor_2
+lib/crossfire/maps/santo_dominion/magara/south_lighthouse/floor_3
+lib/crossfire/maps/santo_dominion/magara/south_lighthouse/floor_4
+lib/crossfire/maps/santo_dominion/magara/south_lighthouse/floor_1
+lib/crossfire/maps/santo_dominion/magara/hut/floor_1
+lib/crossfire/maps/santo_dominion/magara/hut/floor_2
+lib/crossfire/maps/santo_dominion/magara/hut/floor_3
+lib/crossfire/maps/santo_dominion/magara/opera
+lib/crossfire/maps/santo_dominion/lord_byron/dungeon
+lib/crossfire/maps/santo_dominion/lord_byron/main
+lib/crossfire/maps/santo_dominion/lord_byron/2nd_floor
+lib/crossfire/maps/santo_dominion/lord_byron/1st_floor
+lib/crossfire/maps/santo_dominion/shops/armour
+lib/crossfire/maps/santo_dominion/shops/eliks
+lib/crossfire/maps/santo_dominion/shops/erash
+lib/crossfire/maps/santo_dominion/shops/nosferatu
+lib/crossfire/maps/santo_dominion/shops/rings
+lib/crossfire/maps/santo_dominion/peacock
+lib/crossfire/maps/santo_dominion/tavern
+lib/crossfire/maps/santo_dominion/town
+lib/crossfire/maps/santo_dominion/tobias
+lib/crossfire/maps/santo_dominion/crossfire
+lib/crossfire/maps/santo_dominion/tollpost
+lib/crossfire/maps/santo_dominion/den
+lib/crossfire/maps/santo_dominion/south_barn
+lib/crossfire/maps/santo_dominion/basement
+lib/crossfire/maps/santo_dominion/north_barn
+lib/crossfire/maps/santo_dominion/noble_rest
+lib/crossfire/maps/santo_dominion/north_farm
+lib/crossfire/maps/santo_dominion/tavern.2ndfloor
+lib/crossfire/maps/santo_dominion/tavern.downstairs
+lib/crossfire/maps/santo_dominion/tobias.top
+lib/crossfire/maps/santo_dominion/map.stigkr.1
+lib/crossfire/maps/santo_dominion/appartment
+lib/crossfire/maps/santo_dominion/map.and.sale
+lib/crossfire/maps/santo_dominion/map.stigkr.2
+lib/crossfire/maps/santo_dominion/just_preliminary
+lib/crossfire/maps/santo_dominion/house_of_hell
+lib/crossfire/maps/hendel/pre_acid
+lib/crossfire/maps/hendel/acid_room
+lib/crossfire/maps/hendel/mountain_pass
+lib/crossfire/maps/terrain/hills_2
+lib/crossfire/maps/terrain/swamp_2
+lib/crossfire/maps/terrain/forest_1
+lib/crossfire/maps/terrain/mountain_1
+lib/crossfire/maps/terrain/empty
+lib/crossfire/maps/terrain/jungle_2
+lib/crossfire/maps/terrain/plains_1
+lib/crossfire/maps/terrain/desert_1
+lib/crossfire/maps/terrain/swamp_1
+lib/crossfire/maps/terrain/plains_2
+lib/crossfire/maps/terrain/mountain_2
+lib/crossfire/maps/terrain/jungle_1
+lib/crossfire/maps/terrain/desert_2
+lib/crossfire/maps/terrain/hills_1
+lib/crossfire/maps/terrain/forest_2
+lib/crossfire/maps/peterm/CTower/CTower
+lib/crossfire/maps/peterm/CTower/Servants
+lib/crossfire/maps/peterm/CTower/GroundLevel
+lib/crossfire/maps/peterm/CTower/Dungeon
+lib/crossfire/maps/peterm/CTower/Barracks
+lib/crossfire/maps/peterm/CTower/Officers
+lib/crossfire/maps/peterm/CTower/Library
+lib/crossfire/maps/peterm/CTower/Laboratory
+lib/crossfire/maps/peterm/CTower/Chamber
+lib/crossfire/maps/peterm/CTower/Study
+lib/crossfire/maps/peterm/CTower/TowerTop
+lib/crossfire/maps/peterm/temple/AnteChamber
+lib/crossfire/maps/peterm/temple/GemTunnel
+lib/crossfire/maps/peterm/temple/InnerTemple
+lib/crossfire/maps/peterm/temple/OuterTemple
+lib/crossfire/maps/peterm/temple/Temple
+lib/crossfire/maps/peterm/Demonology/Entrance
+lib/crossfire/maps/peterm/Demonology/GroundLevel
+lib/crossfire/maps/peterm/Demonology/ApprenticeLevel
+lib/crossfire/maps/peterm/Demonology/JourneymanLevel
+lib/crossfire/maps/peterm/Demonology/MasterLevel
+lib/crossfire/maps/peterm/Demonology/AirTower1
+lib/crossfire/maps/peterm/Demonology/AirTower2
+lib/crossfire/maps/peterm/Demonology/WaterTower1
+lib/crossfire/maps/peterm/Demonology/FireTower1
+lib/crossfire/maps/peterm/Demonology/EarthTower1
+lib/crossfire/maps/peterm/Demonology/EarthTower2
+lib/crossfire/maps/peterm/Demonology/WaterTower2
+lib/crossfire/maps/peterm/Demonology/FireTower2
+lib/crossfire/maps/peterm/Demonology/EarthMaster
+lib/crossfire/maps/peterm/Demonology/AirMaster
+lib/crossfire/maps/peterm/Demonology/WaterMaster
+lib/crossfire/maps/peterm/Demonology/FireMaster
+lib/crossfire/maps/peterm/Demonology/FireStudy
+lib/crossfire/maps/peterm/Demonology/EarthStudy
+lib/crossfire/maps/peterm/Demonology/AirStudy
+lib/crossfire/maps/peterm/Demonology/WaterStudy
+lib/crossfire/maps/peterm/Demonology/Demon1
+lib/crossfire/maps/peterm/Demonology/Demon2
+lib/crossfire/maps/peterm/Demonology/Demon3
+lib/crossfire/maps/peterm/Demonology/HighTower1
+lib/crossfire/maps/peterm/Demonology/HighTower2
+lib/crossfire/maps/peterm/Demonology/HighTowerTop
+lib/crossfire/maps/peterm/Demonology/Entrance.orig
+lib/crossfire/maps/peterm/DragonQuest/Entrance
+lib/crossfire/maps/peterm/DragonQuest/WyvernNest
+lib/crossfire/maps/peterm/DragonQuest/IceHatchery
+lib/crossfire/maps/peterm/DragonQuest/ElectricHatchery
+lib/crossfire/maps/peterm/DragonQuest/FireHatchery
+lib/crossfire/maps/peterm/DragonQuest/IceAnte
+lib/crossfire/maps/peterm/DragonQuest/IceLord
+lib/crossfire/maps/peterm/DragonQuest/FireAnte
+lib/crossfire/maps/peterm/DragonQuest/FireLord
+lib/crossfire/maps/peterm/DragonQuest/ElectricAnte
+lib/crossfire/maps/peterm/DragonQuest/ElectricLord
+lib/crossfire/maps/peterm/FireTemple/Entrance
+lib/crossfire/maps/peterm/FireTemple/LavaChamber
+lib/crossfire/maps/peterm/FireTemple/HotMines
+lib/crossfire/maps/peterm/FireTemple/FirstFloor
+lib/crossfire/maps/peterm/FireTemple/Mezannine1
+lib/crossfire/maps/peterm/FireTemple/SecondFloor
+lib/crossfire/maps/peterm/FireTemple/ThirdFloor
+lib/crossfire/maps/peterm/FireTemple/FourthFloor
+lib/crossfire/maps/peterm/FireTemple/FifthFloor
+lib/crossfire/maps/peterm/FireTemple/Passageway
+lib/crossfire/maps/peterm/FireTemple/Fire1
+lib/crossfire/maps/peterm/FireTemple/Fire2
+lib/crossfire/maps/peterm/FireTemple/Fire3
+lib/crossfire/maps/peterm/FireTemple/Fire4
+lib/crossfire/maps/langley/pirates/madvillage
+lib/crossfire/maps/langley/pirates/mbgrave
+lib/crossfire/maps/langley/pirates/mbgrave2
+lib/crossfire/maps/langley/pirates/mooglyprize
+lib/crossfire/maps/langley/pirates/mooglypuzzle
+lib/crossfire/maps/langley/pirates/fortvsship
+lib/crossfire/maps/langley/pirates/tortcave
+lib/crossfire/maps/langley/pirates/torthole
+lib/crossfire/maps/langley/pirates/tortola
+lib/crossfire/maps/langley/pirates/tortship
+lib/crossfire/maps/langley/pirates/tortship2
+lib/crossfire/maps/langley/pirates/tortship3
+lib/crossfire/maps/langley/pirates/torttemple
+lib/crossfire/maps/langley/town/church
+lib/crossfire/maps/langley/town/churchcrypt
+lib/crossfire/maps/langley/town/churchtower
+lib/crossfire/maps/langley/town/dshark
+lib/crossfire/maps/langley/town/generalstore
+lib/crossfire/maps/langley/town/inn
+lib/crossfire/maps/langley/town/portia
+lib/crossfire/maps/langley/town/portia2
+lib/crossfire/maps/langley/town/percy
+lib/crossfire/maps/langley/town/portjoseph
+lib/crossfire/maps/langley/goblin/goblinisle
+lib/crossfire/maps/langley/goblin/hut
+lib/crossfire/maps/langley/goblin/hole
+lib/crossfire/maps/langley/goblin/fortress
+lib/crossfire/maps/langley/goblin/fort2
+lib/crossfire/maps/langley/goblin/netower
+lib/crossfire/maps/langley/goblin/nwtower
+lib/crossfire/maps/langley/goblin/setower
+lib/crossfire/maps/langley/goblin/swtower
+lib/crossfire/maps/langley/goblin/dungeon1
+lib/crossfire/maps/langley/goblin/dungeon2
+lib/crossfire/maps/langley/goblin/dungeon3
+lib/crossfire/maps/langley/goblin/caves
+lib/crossfire/maps/langley/readme
+lib/crossfire/maps/asyvan/gate1
+lib/crossfire/maps/asyvan/gate2
+lib/crossfire/maps/asyvan/gate3
+lib/crossfire/maps/asyvan/gate4
+lib/crossfire/maps/asyvan/gate5
+lib/crossfire/maps/asyvan/gate6
+lib/crossfire/maps/asyvan/gate7
+lib/crossfire/maps/asyvan/gate8
+lib/crossfire/maps/asyvan/gate9
+lib/crossfire/maps/asyvan/palace1
+lib/crossfire/maps/asyvan/palace2
+lib/crossfire/maps/asyvan/palace3
+lib/crossfire/maps/generic/volcano/level3
+lib/crossfire/maps/generic/volcano/level4
+lib/crossfire/maps/generic/volcano/level2
+lib/crossfire/maps/generic/volcano/level1
+lib/crossfire/maps/generic/castle2.1
+lib/crossfire/maps/generic/castle2.0
+lib/crossfire/maps/generic/castle2.2
+lib/crossfire/maps/generic/castle2.3
+lib/crossfire/maps/generic/cave2
+lib/crossfire/maps/generic/village1
+lib/crossfire/maps/generic/house1
+lib/crossfire/maps/generic/castle1.1
+lib/crossfire/maps/generic/castle1.0
+lib/crossfire/maps/generic/castle1.2
+lib/crossfire/maps/generic/castle1.3
+lib/crossfire/maps/generic/undead.1
+lib/crossfire/maps/generic/undead.2
+lib/crossfire/maps/generic/undead.3
+lib/crossfire/maps/generic/xyzzy-mines
+lib/crossfire/maps/brittany/Brest/Castle/castle
+lib/crossfire/maps/brittany/Brest/Castle/DragonRoom
+lib/crossfire/maps/brittany/Brest/Castle/AcidChamber
+lib/crossfire/maps/brittany/Brest/Castle/LargeRoom
+lib/crossfire/maps/brittany/Brest/Castle/Finale
+lib/crossfire/maps/brittany/Brest/brest
+lib/crossfire/maps/brittany/Brest/ludo1
+lib/crossfire/maps/brittany/Brest/ludo2
+lib/crossfire/maps/brittany/Brest/brest.cvt
+lib/crossfire/maps/brittany/Brest/brest.armour
+lib/crossfire/maps/brittany/Brest/brest.food
+lib/crossfire/maps/brittany/Brest/brest.inn
+lib/crossfire/maps/brittany/Brest/brest.weapon
+lib/crossfire/maps/brittany/Brest/sport.jess
+lib/crossfire/maps/brittany/Brest/underground
+lib/crossfire/maps/brittany/Brest/underground2
+lib/crossfire/maps/brittany/Brest/amphis
+lib/crossfire/maps/brittany/Brest/jes.admini
+lib/crossfire/maps/brittany/Brest/jes.admini.1
+lib/crossfire/maps/brittany/Brest/elec.jes
+lib/crossfire/maps/brittany/Brest/info.2.zoon
+lib/crossfire/maps/brittany/Brest/info_first
+lib/crossfire/maps/brittany/Brest/brest.magic
+lib/crossfire/maps/brittany/Brest/nasty_house
+lib/crossfire/maps/brittany/Brest/brest.orig
+lib/crossfire/maps/brittany/khazad.1
+lib/crossfire/maps/brittany/khazad.2
+lib/crossfire/maps/brittany/hole
+lib/crossfire/maps/brittany/enigme.1
+lib/crossfire/maps/brittany/enigme.2
+lib/crossfire/maps/brittany/enigme.3
+lib/crossfire/maps/brittany/enigme.4
+lib/crossfire/maps/brittany/enigme.5
+lib/crossfire/maps/brittany/enigme.6
+lib/crossfire/maps/brittany/dol-guldur.1
+lib/crossfire/maps/brittany/dol-guldur.2
+lib/crossfire/maps/brittany/dol-guldur.3
+lib/crossfire/maps/brittany/dol-guldur.4
+lib/crossfire/maps/brittany/jessy.1
+lib/crossfire/maps/brittany/jessy.2
+lib/crossfire/maps/brittany/jessy.3
+lib/crossfire/maps/brittany/tower_of__zoon
+lib/crossfire/maps/brittany/dol-guldur.5
+lib/crossfire/maps/brittany/dol-guldur.6
+lib/crossfire/maps/brittany/khazad.3
+lib/crossfire/maps/brittany/khazad.4
+lib/crossfire/maps/brittany/khazad.5
+lib/crossfire/maps/navar_city/illusion/illtow4
+lib/crossfire/maps/navar_city/illusion/illtow5
+lib/crossfire/maps/navar_city/illusion/illtow6
+lib/crossfire/maps/navar_city/illusion/illtow7
+lib/crossfire/maps/navar_city/illusion/illtow2
+lib/crossfire/maps/navar_city/illusion/illexit
+lib/crossfire/maps/navar_city/illusion/illtow1
+lib/crossfire/maps/navar_city/illusion/illtow3
+lib/crossfire/maps/navar_city/tower/magetower4
+lib/crossfire/maps/navar_city/tower/magetower5
+lib/crossfire/maps/navar_city/tower/magetower_low
+lib/crossfire/maps/navar_city/tower/magetowfinal
+lib/crossfire/maps/navar_city/tower/magetower1
+lib/crossfire/maps/navar_city/tower/magetower2
+lib/crossfire/maps/navar_city/tower/magetower3
+lib/crossfire/maps/navar_city/light/light4
+lib/crossfire/maps/navar_city/light/smugship
+lib/crossfire/maps/navar_city/light/smugship1
+lib/crossfire/maps/navar_city/light/light0
+lib/crossfire/maps/navar_city/light/light1
+lib/crossfire/maps/navar_city/light/light2
+lib/crossfire/maps/navar_city/light/light3
+lib/crossfire/maps/navar_city/magara/houses/earth_house
+lib/crossfire/maps/navar_city/magara/houses/family_house
+lib/crossfire/maps/navar_city/magara/houses/kaisas_place
+lib/crossfire/maps/navar_city/magara/houses/large_house
+lib/crossfire/maps/navar_city/magara/houses/museum
+lib/crossfire/maps/navar_city/city1court
+lib/crossfire/maps/navar_city/city1houses
+lib/crossfire/maps/navar_city/city1prison
+lib/crossfire/maps/navar_city/city1smith
+lib/crossfire/maps/navar_city/city1weapon
+lib/crossfire/maps/navar_city/warehouse1
+lib/crossfire/maps/navar_city/warehouse2
+lib/crossfire/maps/navar_city/warehouse3
+lib/crossfire/maps/navar_city/warehouse4
+lib/crossfire/maps/navar_city/city1
+lib/crossfire/maps/navar_city/warehouse5
+lib/crossfire/maps/navar_city/warehouse6
+lib/crossfire/maps/navar_city/city1armour
+lib/crossfire/maps/navar_city/city1enter
+lib/crossfire/maps/navar_city/warehouse7
+lib/crossfire/maps/navar_city/warehouse8
+lib/crossfire/maps/navar_city/city1bank
+lib/crossfire/maps/navar_city/city1church1
+lib/crossfire/maps/navar_city/city1mermaid
+lib/crossfire/maps/navar_city/city1gen
+lib/crossfire/maps/navar_city/city1houses2
+lib/crossfire/maps/navar_city/city1magic
+lib/crossfire/maps/wolfsburg/magara/tower1/entrance
+lib/crossfire/maps/wolfsburg/magara/tower1/floor_1
+lib/crossfire/maps/wolfsburg/magara/tower1/floor_3
+lib/crossfire/maps/wolfsburg/magara/cellar1/hole
+lib/crossfire/maps/wolfsburg/magara/cellar1/hcellar_1
+lib/crossfire/maps/wolfsburg/magara/cellar1/hcellar_2
+lib/crossfire/maps/wolfsburg/magara/tower2/floor_1
+lib/crossfire/maps/wolfsburg/magara/tower2/floor_2
+lib/crossfire/maps/wolfsburg/magara/castle/floor_2
+lib/crossfire/maps/wolfsburg/magara/castle/floor_3
+lib/crossfire/maps/wolfsburg/magara/castle/cellar
+lib/crossfire/maps/wolfsburg/magara/castle/floor_1
+lib/crossfire/maps/wolfsburg/magara/cellar_1
+lib/crossfire/maps/wolfsburg/tt/ttb1
+lib/crossfire/maps/wolfsburg/tt/ttb2
+lib/crossfire/maps/wolfsburg/tt/tta1
+lib/crossfire/maps/wolfsburg/tt/tta2
+lib/crossfire/maps/wolfsburg/ware1
+lib/crossfire/maps/wolfsburg/prison
+lib/crossfire/maps/wolfsburg/dept_store
+lib/crossfire/maps/wolfsburg/inns
+lib/crossfire/maps/wolfsburg/etern_rew
+lib/crossfire/maps/wolfsburg/piratetown
+lib/crossfire/maps/wolfsburg/slave_pit1
+lib/crossfire/maps/wolfsburg/piratechurch
+lib/crossfire/maps/wolfsburg/slave_pit2
+lib/crossfire/maps/wolfsburg/slave_pit3
+lib/crossfire/maps/wolfsburg/snakepit
+lib/crossfire/maps/wolfsburg/whorehouse
+lib/crossfire/maps/espen/espen1
+lib/crossfire/maps/espen/espen2
+lib/crossfire/maps/espen/church.4a
+lib/crossfire/maps/espen/church.4b
+lib/crossfire/maps/espen/church.4c
+lib/crossfire/maps/espen/church.4d
+lib/crossfire/maps/espen/palace
+lib/crossfire/maps/espen/church.3
+lib/crossfire/maps/espen/church.2
+lib/crossfire/maps/thomas/sisters/valley
+lib/crossfire/maps/thomas/sisters/entrance
+lib/crossfire/maps/thomas/sisters/tower1
+lib/crossfire/maps/thomas/sisters/tower0
+lib/crossfire/maps/thomas/sisters/tower2
+lib/crossfire/maps/thomas/sisters/tower3
+lib/crossfire/maps/thomas/sisters/shrine1
+lib/crossfire/maps/thomas/sisters/shrine0
+lib/crossfire/maps/thomas/sisters/compound1
+lib/crossfire/maps/thomas/sisters/compound2
+lib/crossfire/maps/thomas/sisters/compound3
+lib/crossfire/maps/thomas/sisters/necro_entrance
+lib/crossfire/maps/thomas/sisters/small_village
+lib/crossfire/maps/thomas/sisters/granary
+lib/crossfire/maps/thomas/sisters/small_manor1
+lib/crossfire/maps/thomas/sisters/small_manor2
+lib/crossfire/maps/thomas/sisters/small_manor0
+lib/crossfire/maps/thomas/sisters/necro_hole1
+lib/crossfire/maps/thomas/sisters/necro_ruin1
+lib/crossfire/maps/thomas/sisters/necro_ruin1a
+lib/crossfire/maps/thomas/sisters/shrine_entrance
+lib/crossfire/maps/thomas/sisters/shrine0_east
+lib/crossfire/maps/thomas/sisters/shrine0_west
+lib/crossfire/maps/Lake_Country/Mwizard/Mwizard0
+lib/crossfire/maps/Lake_Country/Mwizard/Mwizard1
+lib/crossfire/maps/Lake_Country/Mwizard/MwizardD
+lib/crossfire/maps/Lake_Country/Mwizard/Mwizard2
+lib/crossfire/maps/Lake_Country/Mwizard/Mwizard3
+lib/crossfire/maps/Lake_Country/Mwizard/Mwizard4
+lib/crossfire/maps/Lake_Country/Mwizard/Mwizard5
+lib/crossfire/maps/Lake_Country/Mwizard/Mwizard6
+lib/crossfire/maps/Lake_Country/Mwizard/MwizardG
+lib/crossfire/maps/Lake_Country/Mwizard/MwizardT
+lib/crossfire/maps/Lake_Country/marsh/marsh1_1
+lib/crossfire/maps/Lake_Country/marsh/marsh1_2
+lib/crossfire/maps/Lake_Country/marsh/marsh2_1
+lib/crossfire/maps/Lake_Country/marsh/marsh2_2
+lib/crossfire/maps/Lake_Country/small_buildings/hut_Galmorus
+lib/crossfire/maps/Lake_Country/small_buildings/portal
+lib/crossfire/maps/Lake_Country/small_buildings/LC_inn1
+lib/crossfire/maps/Lake_Country/small_buildings/oak_twak1
+lib/crossfire/maps/Lake_Country/small_buildings/burial_ground
+lib/crossfire/maps/Lake_Country/Butakis/houses/Sams_house
+lib/crossfire/maps/Lake_Country/Butakis/houses/James_house
+lib/crossfire/maps/Lake_Country/Butakis/houses/Bobs_house
+lib/crossfire/maps/Lake_Country/Butakis/houses/Jacobs_house
+lib/crossfire/maps/Lake_Country/Butakis/houses/Jacks_house
+lib/crossfire/maps/Lake_Country/Butakis/houses/Seans_house
+lib/crossfire/maps/Lake_Country/Butakis/Butakis0
+lib/crossfire/maps/Lake_Country/Butakis/B_gshop
+lib/crossfire/maps/Lake_Country/Butakis/B_wshop
+lib/crossfire/maps/Lake_Country/Butakis/Rlib1
+lib/crossfire/maps/Lake_Country/Butakis/Rlib2
+lib/crossfire/maps/Lake_Country/Butakis/gate_outer
+lib/crossfire/maps/Lake_Country/Butakis/gate_inner
+lib/crossfire/maps/Lake_Country/Butakis/inn
+lib/crossfire/maps/Lake_Country/Butakis/prison0
+lib/crossfire/maps/Lake_Country/Butakis/prison-1
+lib/crossfire/maps/Lake_Country/Butakis/prison1
+lib/crossfire/maps/Lake_Country/Butakis/prison_w
+lib/crossfire/maps/Lake_Country/Butakis/prison_n
+lib/crossfire/maps/Lake_Country/Butakis/prison_e
+lib/crossfire/maps/Lake_Country/Butakis/prison_s
+lib/crossfire/maps/Lake_Country/Butakis/p_ghouse_w
+lib/crossfire/maps/Lake_Country/Butakis/church0
+lib/crossfire/maps/Lake_Country/Butakis/church1
+lib/crossfire/maps/Lake_Country/Butakis/church-1
+lib/crossfire/maps/Lake_Country/Butakis/luck3
+lib/crossfire/maps/Lake_Country/Butakis/Wist_study
+lib/crossfire/maps/Lake_Country/Butakis/p_ghouse_s
+lib/crossfire/maps/Lake_Country/Butakis/Wist_portal
+lib/crossfire/maps/Lake_Country/Butakis/luck2
+lib/crossfire/maps/Lake_Country/Butakis/luck1
+lib/crossfire/maps/Lake_Country/Butakis/arena
+lib/crossfire/maps/Lake_Country/Butakis/blacksmith
+lib/crossfire/maps/Lake_Country/Butakis/alchemist
+lib/crossfire/maps/Lake_Country/RETower/tower0
+lib/crossfire/maps/Lake_Country/RETower/tower1
+lib/crossfire/maps/Lake_Country/RETower/tower2
+lib/crossfire/maps/Lake_Country/RETower/tower3
+lib/crossfire/maps/Lake_Country/RETower/tower4
+lib/crossfire/maps/Lake_Country/RETower/tower5
+lib/crossfire/maps/Lake_Country/ebony/entrance1
+lib/crossfire/maps/Lake_Country/ebony/masterlev
+lib/crossfire/maps/Lake_Country/ebony/entrance2
+lib/crossfire/maps/Lake_Country/snake_pit/snakepit_5
+lib/crossfire/maps/Lake_Country/snake_pit/pit
+lib/crossfire/maps/Lake_Country/snake_pit/Takuse_lair
+lib/crossfire/maps/Lake_Country/snake_pit/Chaos_lair3
+lib/crossfire/maps/Lake_Country/snake_pit/snakepit_1
+lib/crossfire/maps/Lake_Country/snake_pit/snakepit_2
+lib/crossfire/maps/Lake_Country/snake_pit/snakepit_4
+lib/crossfire/maps/Lake_Country/snake_pit/snakepit_3
+lib/crossfire/maps/Lake_Country/snake_pit/Chaos_lair1
+lib/crossfire/maps/Lake_Country/snake_pit/Chaos_lair2
+lib/crossfire/maps/Lake_Country/snake_pit/Chaos_lair4
+lib/crossfire/maps/Lake_Country/Sunset_Lake/fortress
+lib/crossfire/maps/Lake_Country/Sunset_Lake/inn
+lib/crossfire/maps/Lake_Country/Sunset_Lake/gatehouse
+lib/crossfire/maps/Lake_Country/shops/klondors_wands
+lib/crossfire/maps/Lake_Country/shops/clems_archery
+lib/crossfire/maps/Lake_Country/shops/Olds_jewel
+lib/crossfire/maps/Lake_Country/shops/Mopoon_wshop
+lib/crossfire/maps/Lake_Country/quest/lefttower2
+lib/crossfire/maps/Lake_Country/kundi_area
+lib/crossfire/maps/Lake_Country/DA
+lib/crossfire/maps/test/multisquare
+lib/crossfire/maps/test/insert_bug
+lib/crossfire/maps/test/diagonal
+lib/crossfire/maps/test/connected_bug
+lib/crossfire/maps/good/pantheon
+lib/crossfire/maps/README
+lib/crossfire/maps/pup_land/ancient/world
+lib/crossfire/maps/pup_land/ancient/to_future
+lib/crossfire/maps/pup_land/ancient/ruin/village
+lib/crossfire/maps/pup_land/ancient/ruin/shop
+lib/crossfire/maps/pup_land/ancient/ruin/house1
+lib/crossfire/maps/pup_land/ancient/ruin/house2
+lib/crossfire/maps/pup_land/ancient/ruin/house3
+lib/crossfire/maps/pup_land/ancient/ruin/house4
+lib/crossfire/maps/pup_land/ancient/ruin/house5
+lib/crossfire/maps/pup_land/ancient/ruin/underground
+lib/crossfire/maps/pup_land/ancient/ruin/path
+lib/crossfire/maps/pup_land/ancient/ruin/tower
+lib/crossfire/maps/pup_land/ancient/village/village
+lib/crossfire/maps/pup_land/ancient/village/inn
+lib/crossfire/maps/pup_land/ancient/village/hut1
+lib/crossfire/maps/pup_land/ancient/village/hut2
+lib/crossfire/maps/pup_land/ancient/village/hut3
+lib/crossfire/maps/pup_land/ancient/village/hut4
+lib/crossfire/maps/pup_land/ancient/village/graveyard
+lib/crossfire/maps/pup_land/ancient/village/hut5
+lib/crossfire/maps/pup_land/ancient/village/shop
+lib/crossfire/maps/pup_land/ancient/village/tavern
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.1
+lib/crossfire/maps/pup_land/ancient/village/siegfried/lever
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B5
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B4
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B3
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B2
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B1
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.2
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.3
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B5a
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B5b
+lib/crossfire/maps/pup_land/ancient/village/siegfried/siegfried.B5c
+lib/crossfire/maps/pup_land/ancient/village/tavern1
+lib/crossfire/maps/pup_land/ancient/village/hole/hole.B1
+lib/crossfire/maps/pup_land/ancient/village/hole/hole.B2
+lib/crossfire/maps/pup_land/ancient/village/hole/hole.B3
+lib/crossfire/maps/pup_land/ancient/village/hole/hole.B4
+lib/crossfire/maps/pup_land/ancient/village/hole/hole.B5
+lib/crossfire/maps/pup_land/ancient/village/hole/hole.B6
+lib/crossfire/maps/pup_land/ancient/village/hut6
+lib/crossfire/maps/pup_land/ancient/company
+lib/crossfire/maps/pup_land/ancient/kurte/kurte
+lib/crossfire/maps/pup_land/ancient/kurte/shop
+lib/crossfire/maps/pup_land/ancient/kurte/house
+lib/crossfire/maps/pup_land/ancient/mountain/mountain.a1
+lib/crossfire/maps/pup_land/ancient/mountain/mountain.a2
+lib/crossfire/maps/pup_land/ancient/mountain/mountain.a3
+lib/crossfire/maps/pup_land/ancient/mountain/mountain.b2
+lib/crossfire/maps/pup_land/ancient/mountain/mountain.b1
+lib/crossfire/maps/pup_land/ancient/mountain/mountain.b3
+lib/crossfire/maps/pup_land/ancient/mountain/cave.b1
+lib/crossfire/maps/pup_land/ancient/mountain/cave.b2
+lib/crossfire/maps/pup_land/ancient/mountain/cave.b3
+lib/crossfire/maps/pup_land/ancient/mountain/tower.1
+lib/crossfire/maps/pup_land/ancient/mountain/Tower.1
+lib/crossfire/maps/pup_land/ancient/mountain/Tower.2
+lib/crossfire/maps/pup_land/ancient/mountain/Tower.3
+lib/crossfire/maps/pup_land/ancient/mountain/Tower.4
+lib/crossfire/maps/pup_land/ancient/mountain/Tower.B1
+lib/crossfire/maps/pup_land/ancient/mountain/atelir1
+lib/crossfire/maps/pup_land/ancient/mountain/atelir2
+lib/crossfire/maps/pup_land/ancient/castle/castle.1
+lib/crossfire/maps/pup_land/ancient/castle/castle.ud1
+lib/crossfire/maps/pup_land/ancient/castle/castle.2
+lib/crossfire/maps/pup_land/ancient/castle/castle.3
+lib/crossfire/maps/pup_land/ancient/castle/castle.4
+lib/crossfire/maps/pup_land/ancient/castle/castle.5
+lib/crossfire/maps/pup_land/ancient/castle/ghoswolte
+lib/crossfire/maps/pup_land/barrier
+lib/crossfire/maps/pup_land/begin/p1
+lib/crossfire/maps/pup_land/begin/p2
+lib/crossfire/maps/pup_land/begin/p3
+lib/crossfire/maps/pup_land/begin/adv
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca2
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca3
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca4
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca5
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca6
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca7
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca8
+lib/crossfire/maps/pup_land/castle_eureca/cave_pass
+lib/crossfire/maps/pup_land/castle_eureca/cave_pass2
+lib/crossfire/maps/pup_land/castle_eureca/cave_pass3
+lib/crossfire/maps/pup_land/castle_eureca/cave_pass4
+lib/crossfire/maps/pup_land/castle_eureca/castle_eurecaB1
+lib/crossfire/maps/pup_land/castle_eureca/castle_eurecaB2
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca1
+lib/crossfire/maps/pup_land/castle_eureca/castle_eureca9
+lib/crossfire/maps/pup_land/cave_weapon/cave1
+lib/crossfire/maps/pup_land/cave_weapon/cave2
+lib/crossfire/maps/pup_land/cave_weapon/cave3
+lib/crossfire/maps/pup_land/cave_weapon/cave4
+lib/crossfire/maps/pup_land/cave_weapon/cave5
+lib/crossfire/maps/pup_land/cave_weapon/cave51
+lib/crossfire/maps/pup_land/cave_weapon/cave5.bak
+lib/crossfire/maps/pup_land/hall2
+lib/crossfire/maps/pup_land/hall_of_fame
+lib/crossfire/maps/pup_land/hq
+lib/crossfire/maps/pup_land/hq_ud
+lib/crossfire/maps/pup_land/jk/gs_house
+lib/crossfire/maps/pup_land/jk/heads
+lib/crossfire/maps/pup_land/jk/Fogs
+lib/crossfire/maps/pup_land/kurte/hut1
+lib/crossfire/maps/pup_land/kurte/hut2
+lib/crossfire/maps/pup_land/kurte/jungle
+lib/crossfire/maps/pup_land/kurte/penta
+lib/crossfire/maps/pup_land/kurte/house
+lib/crossfire/maps/pup_land/kurte/eureca_road1
+lib/crossfire/maps/pup_land/kurte/eureca_road2
+lib/crossfire/maps/pup_land/kurte/eureca_road3
+lib/crossfire/maps/pup_land/kurte/eureca_road31
+lib/crossfire/maps/pup_land/kurte/kurte
+lib/crossfire/maps/pup_land/kurte/to_past
+lib/crossfire/maps/pup_land/lone_town/town
+lib/crossfire/maps/pup_land/lone_town/bank
+lib/crossfire/maps/pup_land/lone_town/church
+lib/crossfire/maps/pup_land/lone_town/church_ud
+lib/crossfire/maps/pup_land/lone_town/dress1
+lib/crossfire/maps/pup_land/lone_town/dress2
+lib/crossfire/maps/pup_land/lone_town/dress3
+lib/crossfire/maps/pup_land/lone_town/gshop
+lib/crossfire/maps/pup_land/lone_town/gshop_ud
+lib/crossfire/maps/pup_land/lone_town/inn
+lib/crossfire/maps/pup_land/lone_town/heinrich
+lib/crossfire/maps/pup_land/lone_town/mshop
+lib/crossfire/maps/pup_land/lone_town/mshop_ud
+lib/crossfire/maps/pup_land/lone_town/tavern
+lib/crossfire/maps/pup_land/lone_town/tavern_ud
+lib/crossfire/maps/pup_land/lone_town/training
+lib/crossfire/maps/pup_land/lone_town/training2
+lib/crossfire/maps/pup_land/lone_town/town_ud1
+lib/crossfire/maps/pup_land/lone_town/town_ud2
+lib/crossfire/maps/pup_land/lone_town/cordish
+lib/crossfire/maps/pup_land/lone_town/cordish2
+lib/crossfire/maps/pup_land/lone_town/nf_bar
+lib/crossfire/maps/pup_land/lone_town/magic
+lib/crossfire/maps/pup_land/lone_town/pupuly
+lib/crossfire/maps/pup_land/lone_town/gemshop
+lib/crossfire/maps/pup_land/lone_town/cave/B1
+lib/crossfire/maps/pup_land/lone_town/cave/B2
+lib/crossfire/maps/pup_land/lone_town/cave/B3
+lib/crossfire/maps/pup_land/lone_town/gemshop_ud
+lib/crossfire/maps/pup_land/lone_town/thief_market
+lib/crossfire/maps/pup_land/lone_town/guild_freedom
+lib/crossfire/maps/pup_land/lone_town/guild_freedom_ud
+lib/crossfire/maps/pup_land/lone_town/guild_law
+lib/crossfire/maps/pup_land/lone_town/guild_law_ud
+lib/crossfire/maps/pup_land/lone_town/magic.old
+lib/crossfire/maps/pup_land/nurnberg/dick/house
+lib/crossfire/maps/pup_land/nurnberg/dick/house2
+lib/crossfire/maps/pup_land/nurnberg/dick/bomb
+lib/crossfire/maps/pup_land/nurnberg/dick/click
+lib/crossfire/maps/pup_land/nurnberg/dick/maze
+lib/crossfire/maps/pup_land/nurnberg/dick/bomb1
+lib/crossfire/maps/pup_land/nurnberg/dick/showinv
+lib/crossfire/maps/pup_land/nurnberg/dick/hell
+lib/crossfire/maps/pup_land/nurnberg/dick/heaven
+lib/crossfire/maps/pup_land/nurnberg/reception/reception
+lib/crossfire/maps/pup_land/nurnberg/reception/fire3
+lib/crossfire/maps/pup_land/nurnberg/reception/fire2
+lib/crossfire/maps/pup_land/nurnberg/reception/fire4
+lib/crossfire/maps/pup_land/nurnberg/reception/water4
+lib/crossfire/maps/pup_land/nurnberg/reception/electricity4
+lib/crossfire/maps/pup_land/nurnberg/reception/wind4
+lib/crossfire/maps/pup_land/nurnberg/reception/fire5
+lib/crossfire/maps/pup_land/nurnberg/reception/fire6
+lib/crossfire/maps/pup_land/nurnberg/reception/fire7
+lib/crossfire/maps/pup_land/nurnberg/reception/electricity2
+lib/crossfire/maps/pup_land/nurnberg/reception/electricity3
+lib/crossfire/maps/pup_land/nurnberg/reception/electricity5
+lib/crossfire/maps/pup_land/nurnberg/reception/electricity6
+lib/crossfire/maps/pup_land/nurnberg/reception/electricity7
+lib/crossfire/maps/pup_land/nurnberg/reception/water2
+lib/crossfire/maps/pup_land/nurnberg/reception/water3
+lib/crossfire/maps/pup_land/nurnberg/reception/water5
+lib/crossfire/maps/pup_land/nurnberg/reception/water6
+lib/crossfire/maps/pup_land/nurnberg/reception/water7
+lib/crossfire/maps/pup_land/nurnberg/reception/wind2
+lib/crossfire/maps/pup_land/nurnberg/reception/wind3
+lib/crossfire/maps/pup_land/nurnberg/reception/wind5
+lib/crossfire/maps/pup_land/nurnberg/reception/wind6
+lib/crossfire/maps/pup_land/nurnberg/reception/wind7
+lib/crossfire/maps/pup_land/nurnberg/castle_bauer/castle2
+lib/crossfire/maps/pup_land/nurnberg/castle_bauer/castle3
+lib/crossfire/maps/pup_land/nurnberg/castle_bauer/castle4
+lib/crossfire/maps/pup_land/nurnberg/washop
+lib/crossfire/maps/pup_land/nurnberg/guild
+lib/crossfire/maps/pup_land/nurnberg/hq
+lib/crossfire/maps/pup_land/nurnberg/aqueduct
+lib/crossfire/maps/pup_land/nurnberg/city
+lib/crossfire/maps/pup_land/nurnberg/hotel
+lib/crossfire/maps/pup_land/nurnberg/agito
+lib/crossfire/maps/pup_land/nurnberg/bank
+lib/crossfire/maps/pup_land/nurnberg/wshop
+lib/crossfire/maps/pup_land/nurnberg/ashop
+lib/crossfire/maps/pup_land/nurnberg/fshop
+lib/crossfire/maps/pup_land/nurnberg/bshop
+lib/crossfire/maps/pup_land/nurnberg/nf_bar
+lib/crossfire/maps/pup_land/nurnberg/jshop
+lib/crossfire/maps/pup_land/nurnberg/church
+lib/crossfire/maps/pup_land/nurnberg/pshop
+lib/crossfire/maps/pup_land/nurnberg/castle
+lib/crossfire/maps/pup_land/nurnberg/castle_ud
+lib/crossfire/maps/pup_land/nurnberg/guild_ud
+lib/crossfire/maps/pup_land/nurnberg/hotel.old
+lib/crossfire/maps/pup_land/nurnberg/alshop
+lib/crossfire/maps/pup_land/nurnberg/paslab
+lib/crossfire/maps/pup_land/ordeal/tower_ordeal1
+lib/crossfire/maps/pup_land/ordeal/tower_ordealB1
+lib/crossfire/maps/pup_land/ordeal/tower_ordealB3
+lib/crossfire/maps/pup_land/ordeal/tower_ordealB2
+lib/crossfire/maps/pup_land/ordeal/tower_ordeal2
+lib/crossfire/maps/pup_land/ordeal/tower_ordeal3
+lib/crossfire/maps/pup_land/ordeal/tower_ordeal4
+lib/crossfire/maps/pup_land/ordeal/tower_ordeal5
+lib/crossfire/maps/pup_land/ordeal/tower_ordeal6
+lib/crossfire/maps/pup_land/ordeal/tower_ordeal1.old
+lib/crossfire/maps/pup_land/port_e
+lib/crossfire/maps/pup_land/port_e_house
+lib/crossfire/maps/pup_land/port_w
+lib/crossfire/maps/pup_land/pplant/pplant_ud1
+lib/crossfire/maps/pup_land/pplant/pplant_ud2
+lib/crossfire/maps/pup_land/pplant/pplant3
+lib/crossfire/maps/pup_land/pplant/pplant2
+lib/crossfire/maps/pup_land/pplant/pplant1
+lib/crossfire/maps/pup_land/pplant/pup_land-1.0-README
+lib/crossfire/maps/pup_land/raffle/raffle1
+lib/crossfire/maps/pup_land/raffle/raffle1_u2
+lib/crossfire/maps/pup_land/raffle/raffle1_u3
+lib/crossfire/maps/pup_land/raffle/raffle2
+lib/crossfire/maps/pup_land/raffle/raffle1_u1
+lib/crossfire/maps/pup_land/raffle/raffle2_u1
+lib/crossfire/maps/pup_land/raffle/raffle3_u2a
+lib/crossfire/maps/pup_land/raffle/raffle3_u1
+lib/crossfire/maps/pup_land/raffle/raffle3_u2
+lib/crossfire/maps/pup_land/raffle/raffle3
+lib/crossfire/maps/pup_land/raffle/raffle2_u2_a
+lib/crossfire/maps/pup_land/raffle/raffle2_u2_b
+lib/crossfire/maps/pup_land/raffle/raffle2_u3a
+lib/crossfire/maps/pup_land/raffle/raffle2_u3
+lib/crossfire/maps/pup_land/raffle/raffle2_u4
+lib/crossfire/maps/pup_land/rainbow/station
+lib/crossfire/maps/pup_land/rainbow/islands
+lib/crossfire/maps/pup_land/rainbow/bed_room
+lib/crossfire/maps/pup_land/rainbow/w-tower
+lib/crossfire/maps/pup_land/rainbow/roof
+lib/crossfire/maps/pup_land/rainbow/shore
+lib/crossfire/maps/pup_land/rainbow/entrance1
+lib/crossfire/maps/pup_land/rainbow/Lv1/e_hall
+lib/crossfire/maps/pup_land/rainbow/Lv1/g_road
+lib/crossfire/maps/pup_land/rainbow/Lv1/cage
+lib/crossfire/maps/pup_land/rainbow/Lv1/g_boss
+lib/crossfire/maps/pup_land/rainbow/Lv1/cd_room
+lib/crossfire/maps/pup_land/rainbow/Lv1/prison
+lib/crossfire/maps/pup_land/rainbow/Lv1/hut1
+lib/crossfire/maps/pup_land/rainbow/Lv1/hut2
+lib/crossfire/maps/pup_land/rainbow/Lv1/f_a
+lib/crossfire/maps/pup_land/rainbow/Lv1/hut3
+lib/crossfire/maps/pup_land/rainbow/Lv1/orc_f
+lib/crossfire/maps/pup_land/rainbow/Lv1/b_pass
+lib/crossfire/maps/pup_land/rainbow/Lv1/t_room
+lib/crossfire/maps/pup_land/rainbow/Lv1/d_pass
+lib/crossfire/maps/pup_land/rainbow/Lv1/n_gate
+lib/crossfire/maps/pup_land/rainbow/Lv1/hut4
+lib/crossfire/maps/pup_land/rainbow/Lv1/Bizuzu
+lib/crossfire/maps/pup_land/rainbow/Keira
+lib/crossfire/maps/pup_land/rainbow/exit
+lib/crossfire/maps/pup_land/rainbow/river
+lib/crossfire/maps/pup_land/rainbow/l_hB
+lib/crossfire/maps/pup_land/rainbow/l_h1
+lib/crossfire/maps/pup_land/rainbow/l_h2
+lib/crossfire/maps/pup_land/rainbow/woods
+lib/crossfire/maps/pup_land/rainbow/Lv2/e_hall
+lib/crossfire/maps/pup_land/rainbow/Lv2/Kum
+lib/crossfire/maps/pup_land/rainbow/Lv2/maze
+lib/crossfire/maps/pup_land/rainbow/Lv2/tray
+lib/crossfire/maps/pup_land/rainbow/Lv2/holes
+lib/crossfire/maps/pup_land/rainbow/Lv2/d_cage
+lib/crossfire/maps/pup_land/rainbow/Lv2/h_pass
+lib/crossfire/maps/pup_land/rainbow/Lv2/b_m
+lib/crossfire/maps/pup_land/rainbow/Lv2/b_inner
+lib/crossfire/maps/pup_land/rainbow/Lv2/b_m2
+lib/crossfire/maps/pup_land/rainbow/Lv2/sticky
+lib/crossfire/maps/pup_land/rainbow/Lv2/n_gate
+lib/crossfire/maps/pup_land/rainbow/Lv3/e_hall
+lib/crossfire/maps/pup_land/rainbow/Lv3/w-path
+lib/crossfire/maps/pup_land/rainbow/Lv3/prison
+lib/crossfire/maps/pup_land/rainbow/Lv3/e-path
+lib/crossfire/maps/pup_land/rainbow/Lv3/c-road
+lib/crossfire/maps/pup_land/rainbow/Lv3/Wips
+lib/crossfire/maps/pup_land/rainbow/Lv3/Ring
+lib/crossfire/maps/pup_land/rainbow/Lv3/Goraon
+lib/crossfire/maps/pup_land/rainbow/Lv3/Garan
+lib/crossfire/maps/pup_land/rainbow/Lv3/name
+lib/crossfire/maps/pup_land/rainbow/Lv3/maze
+lib/crossfire/maps/pup_land/rainbow/Lv3/Rufto
+lib/crossfire/maps/pup_land/rainbow/Lv3/n-gate
+lib/crossfire/maps/pup_land/rainbow/Lv3/hidden
+lib/crossfire/maps/pup_land/rainbow/Lv3/sec-p
+lib/crossfire/maps/pup_land/rainbow/Lv4/e-hall
+lib/crossfire/maps/pup_land/rainbow/Lv4/path8
+lib/crossfire/maps/pup_land/rainbow/Lv4/bot
+lib/crossfire/maps/pup_land/rainbow/Lv4/path4
+lib/crossfire/maps/pup_land/rainbow/Lv4/path7
+lib/crossfire/maps/pup_land/rainbow/Lv4/junk
+lib/crossfire/maps/pup_land/rainbow/Lv4/mf
+lib/crossfire/maps/pup_land/rainbow/Lv4/path9
+lib/crossfire/maps/pup_land/rainbow/Lv4/statue
+lib/crossfire/maps/pup_land/rainbow/Lv4/alter
+lib/crossfire/maps/pup_land/rainbow/Lv4/curve
+lib/crossfire/maps/pup_land/rainbow/Lv4/alter2
+lib/crossfire/maps/pup_land/rainbow/Lv4/demi
+lib/crossfire/maps/pup_land/rainbow/Lv4/key
+lib/crossfire/maps/pup_land/rainbow/Lv4/n-gate
+lib/crossfire/maps/pup_land/rainbow/Lv4/hidden
+lib/crossfire/maps/pup_land/rainbow/Lv5/e-hall
+lib/crossfire/maps/pup_land/rainbow/Lv5/room6
+lib/crossfire/maps/pup_land/rainbow/Lv5/room4
+lib/crossfire/maps/pup_land/rainbow/Lv5/room8
+lib/crossfire/maps/pup_land/rainbow/Lv5/room2
+lib/crossfire/maps/pup_land/rainbow/Lv5/room44
+lib/crossfire/maps/pup_land/rainbow/Lv5/room66
+lib/crossfire/maps/pup_land/rainbow/Lv5/room22
+lib/crossfire/maps/pup_land/rainbow/Lv5/romm88
+lib/crossfire/maps/pup_land/rainbow/Lv5/cross
+lib/crossfire/maps/pup_land/rainbow/Lv5/room88
+lib/crossfire/maps/pup_land/rainbow/Lv5/n-gate
+lib/crossfire/maps/pup_land/rainbow/Lv6/e-hall
+lib/crossfire/maps/pup_land/rainbow/Lv6/big-hall
+lib/crossfire/maps/pup_land/rainbow/Lv6/order
+lib/crossfire/maps/pup_land/rainbow/Lv6/n-gate
+lib/crossfire/maps/pup_land/rainbow/Lv7/e-hall
+lib/crossfire/maps/pup_land/rainbow/Lv7/grave
+lib/crossfire/maps/pup_land/rainbow/Lv7/back
+lib/crossfire/maps/pup_land/rainbow/well
+lib/crossfire/maps/pup_land/rainbow/red_town/town
+lib/crossfire/maps/pup_land/rainbow/T.K
+lib/crossfire/maps/pup_land/ruin_barbarian/jungle
+lib/crossfire/maps/pup_land/ruin_barbarian/hole1
+lib/crossfire/maps/pup_land/ruin_barbarian/hole2
+lib/crossfire/maps/pup_land/s_f/ruin
+lib/crossfire/maps/pup_land/s_f/floor1
+lib/crossfire/maps/pup_land/s_f/floor2
+lib/crossfire/maps/pup_land/s_f/ruin_ug
+lib/crossfire/maps/pup_land/s_f/KI
+lib/crossfire/maps/pup_land/s_f/KI2
+lib/crossfire/maps/pup_land/s_f/to-jyo
+lib/crossfire/maps/pup_land/s_f/cave1
+lib/crossfire/maps/pup_land/s_f/cave2
+lib/crossfire/maps/pup_land/s_f/Kira
+lib/crossfire/maps/pup_land/s_f/st1
+lib/crossfire/maps/pup_land/s_f/st2
+lib/crossfire/maps/pup_land/s_f/st3
+lib/crossfire/maps/pup_land/s_f/st5
+lib/crossfire/maps/pup_land/s_f/st6
+lib/crossfire/maps/pup_land/s_f/st7
+lib/crossfire/maps/pup_land/s_f/secret
+lib/crossfire/maps/pup_land/s_f/special
+lib/crossfire/maps/pup_land/terminal
+lib/crossfire/maps/pup_land/terminal_u1
+lib/crossfire/maps/pup_land/world
+lib/crossfire/sounds/su-fanf.au
+lib/crossfire/sounds/Teeswing.au
+lib/crossfire/sounds/chord.au
+lib/crossfire/sounds/Missed.au
+lib/crossfire/sounds/Creaky-1.au
+lib/crossfire/sounds/blip.au
+lib/crossfire/sounds/click1.au
+lib/crossfire/sounds/click2.au
+lib/crossfire/sounds/FloorTom.au
+lib/crossfire/sounds/ouch1.au
+lib/crossfire/sounds/thru.au
+lib/crossfire/sounds/drip.au
+lib/crossfire/sounds/squish.au
+lib/crossfire/sounds/gong.au
+lib/crossfire/sounds/Whoosh.au
+lib/crossfire/sounds/Explosion.au
+lib/crossfire/sounds/TowerClock.au
+lib/crossfire/sounds/boink2.au
+lib/crossfire/sounds/MetalCrash.au
+lib/crossfire/sounds/Puke.au
+lib/crossfire/sounds/swish.au
+lib/crossfire/sounds/magic.au
+lib/crossfire/sounds/lightning1.au
+lib/crossfire/sounds/first_try.au
+lib/crossfire/sounds/Tear.au
+lib/crossfire/sounds/Missle1.au
+lib/crossfire/sounds/sci_fi_gun.au
+lib/crossfire/sounds/Gun-5.au
+lib/crossfire/sounds/Evil_Laugh.au
+lib/crossfire/sounds/bugle_charge.au
+lib/crossfire/sounds/README
+@dirrm lib/crossfire/maps/world
+@dirrm lib/crossfire/maps/wolfsburg/tt
+@dirrm lib/crossfire/maps/wolfsburg/magara/tower2
+@dirrm lib/crossfire/maps/wolfsburg/magara/tower1
+@dirrm lib/crossfire/maps/wolfsburg/magara/cellar1
+@dirrm lib/crossfire/maps/wolfsburg/magara/castle
+@dirrm lib/crossfire/maps/wolfsburg/magara
+@dirrm lib/crossfire/maps/wolfsburg
+@dirrm lib/crossfire/maps/thomas/sisters
+@dirrm lib/crossfire/maps/thomas
+@dirrm lib/crossfire/maps/test
+@dirrm lib/crossfire/maps/terrain
+@dirrm lib/crossfire/maps/skud
+@dirrm lib/crossfire/maps/santo_dominion/shops
+@dirrm lib/crossfire/maps/santo_dominion/magara/well
+@dirrm lib/crossfire/maps/santo_dominion/magara/south_lighthouse
+@dirrm lib/crossfire/maps/santo_dominion/magara/north_lighthouse
+@dirrm lib/crossfire/maps/santo_dominion/magara/hut
+@dirrm lib/crossfire/maps/santo_dominion/magara
+@dirrm lib/crossfire/maps/santo_dominion/lord_byron
+@dirrm lib/crossfire/maps/santo_dominion/houses
+@dirrm lib/crossfire/maps/santo_dominion
+@dirrm lib/crossfire/maps/pup_land/s_f
+@dirrm lib/crossfire/maps/pup_land/ruin_barbarian
+@dirrm lib/crossfire/maps/pup_land/rainbow/red_town
+@dirrm lib/crossfire/maps/pup_land/rainbow/Lv7
+@dirrm lib/crossfire/maps/pup_land/rainbow/Lv6
+@dirrm lib/crossfire/maps/pup_land/rainbow/Lv5
+@dirrm lib/crossfire/maps/pup_land/rainbow/Lv4
+@dirrm lib/crossfire/maps/pup_land/rainbow/Lv3
+@dirrm lib/crossfire/maps/pup_land/rainbow/Lv2
+@dirrm lib/crossfire/maps/pup_land/rainbow/Lv1
+@dirrm lib/crossfire/maps/pup_land/rainbow
+@dirrm lib/crossfire/maps/pup_land/raffle
+@dirrm lib/crossfire/maps/pup_land/pplant
+@dirrm lib/crossfire/maps/pup_land/ordeal
+@dirrm lib/crossfire/maps/pup_land/nurnberg/reception
+@dirrm lib/crossfire/maps/pup_land/nurnberg/dick
+@dirrm lib/crossfire/maps/pup_land/nurnberg/castle_bauer
+@dirrm lib/crossfire/maps/pup_land/nurnberg
+@dirrm lib/crossfire/maps/pup_land/lone_town/cave
+@dirrm lib/crossfire/maps/pup_land/lone_town
+@dirrm lib/crossfire/maps/pup_land/kurte
+@dirrm lib/crossfire/maps/pup_land/jk
+@dirrm lib/crossfire/maps/pup_land/cave_weapon
+@dirrm lib/crossfire/maps/pup_land/castle_eureca
+@dirrm lib/crossfire/maps/pup_land/begin
+@dirrm lib/crossfire/maps/pup_land/ancient/village/siegfried
+@dirrm lib/crossfire/maps/pup_land/ancient/village/hole
+@dirrm lib/crossfire/maps/pup_land/ancient/village
+@dirrm lib/crossfire/maps/pup_land/ancient/ruin
+@dirrm lib/crossfire/maps/pup_land/ancient/mountain
+@dirrm lib/crossfire/maps/pup_land/ancient/kurte
+@dirrm lib/crossfire/maps/pup_land/ancient/castle
+@dirrm lib/crossfire/maps/pup_land/ancient
+@dirrm lib/crossfire/maps/pup_land
+@dirrm lib/crossfire/maps/peterm/temple
+@dirrm lib/crossfire/maps/peterm/FireTemple
+@dirrm lib/crossfire/maps/peterm/DragonQuest
+@dirrm lib/crossfire/maps/peterm/Demonology
+@dirrm lib/crossfire/maps/peterm/CTower
+@dirrm lib/crossfire/maps/peterm
+@dirrm lib/crossfire/maps/navar_city/tower
+@dirrm lib/crossfire/maps/navar_city/magara/houses
+@dirrm lib/crossfire/maps/navar_city/magara
+@dirrm lib/crossfire/maps/navar_city/light
+@dirrm lib/crossfire/maps/navar_city/illusion
+@dirrm lib/crossfire/maps/navar_city
+@dirrm lib/crossfire/maps/mcz
+@dirrm lib/crossfire/maps/langley/town
+@dirrm lib/crossfire/maps/langley/pirates
+@dirrm lib/crossfire/maps/langley/goblin
+@dirrm lib/crossfire/maps/langley
+@dirrm lib/crossfire/maps/kar
+@dirrm lib/crossfire/maps/hendel
+@dirrm lib/crossfire/maps/good
+@dirrm lib/crossfire/maps/generic/volcano
+@dirrm lib/crossfire/maps/generic
+@dirrm lib/crossfire/maps/espen
+@dirrm lib/crossfire/maps/esben
+@dirrm lib/crossfire/maps/ender/temple
+@dirrm lib/crossfire/maps/ender/pisland
+@dirrm lib/crossfire/maps/ender/island
+@dirrm lib/crossfire/maps/ender
+@dirrm lib/crossfire/maps/eeur
+@dirrm lib/crossfire/maps/editor/walls
+@dirrm lib/crossfire/maps/editor/picks
+@dirrm lib/crossfire/maps/editor
+@dirrm lib/crossfire/maps/dtabb/town
+@dirrm lib/crossfire/maps/dtabb/quest
+@dirrm lib/crossfire/maps/dtabb
+@dirrm lib/crossfire/maps/city/towers
+@dirrm lib/crossfire/maps/city/taverns
+@dirrm lib/crossfire/maps/city/shops
+@dirrm lib/crossfire/maps/city/oldcity
+@dirrm lib/crossfire/maps/city/misc
+@dirrm lib/crossfire/maps/city/mansion
+@dirrm lib/crossfire/maps/city/magara
+@dirrm lib/crossfire/maps/city/kar
+@dirrm lib/crossfire/maps/city/houses
+@dirrm lib/crossfire/maps/city/cannery
+@dirrm lib/crossfire/maps/city
+@dirrm lib/crossfire/maps/cd
+@dirrm lib/crossfire/maps/brittany/Brest/Castle
+@dirrm lib/crossfire/maps/brittany/Brest
+@dirrm lib/crossfire/maps/brittany
+@dirrm lib/crossfire/maps/asyvan
+@dirrm lib/crossfire/maps/Lake_Country/flight
+@dirrm lib/crossfire/maps/Lake_Country/snake_pit
+@dirrm lib/crossfire/maps/Lake_Country/small_buildings
+@dirrm lib/crossfire/maps/Lake_Country/shops
+@dirrm lib/crossfire/maps/Lake_Country/quest
+@dirrm lib/crossfire/maps/Lake_Country/marsh
+@dirrm lib/crossfire/maps/Lake_Country/ebony
+@dirrm lib/crossfire/maps/Lake_Country/Sunset_Lake
+@dirrm lib/crossfire/maps/Lake_Country/RETower
+@dirrm lib/crossfire/maps/Lake_Country/Mwizard
+@dirrm lib/crossfire/maps/Lake_Country/Butakis/houses
+@dirrm lib/crossfire/maps/Lake_Country/Butakis
+@dirrm lib/crossfire/maps/Lake_Country
+@dirrm lib/crossfire/maps
+@dirrm lib/crossfire/sounds
+@dirrm lib/crossfire/help
+@dirrm lib/crossfire/adm
+@unexec /bin/rm -rf %D/lib/crossfire/*
+@dirrm lib/crossfire
+@unexec %D/bin/mkfontdir %D/lib/X11/fonts/misc
+@exec %D/bin/mkfontdir %D/lib/X11/fonts/misc

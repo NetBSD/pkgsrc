@@ -1,0 +1,7 @@
+--- common/time.c.orig	Fri Jun 19 05:29:45 1998
++++ common/time.c	Fri Jun 19 05:30:31 1998
+@@ -59,3 +59,3 @@
+ 
+-#if (defined(__sun__) && defined(SVR4)) || defined(linux) || defined(NetBSD) \
++#if (defined(__sun__) && defined(SVR4)) || defined(linux) || defined(__NetBSD__) \
+    || defined(__FreeBSD__)
