@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3079 2003/08/23 13:34:29 hubertf Exp $
+$NetBSD: CHANGES,v 1.3080 2003/08/23 15:06:24 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3310,3 +3310,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added fastdep-0.15 [jmmv 2003-08-22]
 	Removed 6to4 (renamed to hf6to4) [hubertf 2003-03-23]
 	Added hf6to4-1.0 [hubertf 2003-03-23]
+	Updated qt3-qscintilla to 1.2 [drochner 2003-03-23]
+	Updated py-qt3 to 3.8 [drochner 2003-03-23]
