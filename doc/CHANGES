@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5213 2004/03/11 16:42:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.5214 2004/03/11 16:56:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1414,3 +1414,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-eruby to 1.0.5 [taca 2004-03-11]
 	Updated ap-ruby-1.0.7 [taca 2004-03-11]
 	Updated gcalctool to 4.3.50 [jmmv 2004-03-11]
+	Updated fbdesk to 1.1.5 [xtraeme 2004-03-11]
