@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 1999/03/07 00:31:44 kim Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/07 00:41:51 kim Exp $
 
 DISTNAME=	cyrus-imapd-v1.5.14
-PKGNAME!=	${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/
 
@@ -23,6 +22,8 @@ CONFIGURE_ARGS+=	--with-statedir=/var/run
 CONFIGURE_ARGS+=	--with-tcl=/usr/local/tcl
 
 .include "../../mk/bsd.pkg.mk"
+
+PKGNAME!=	${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'
 
 .if exists(/usr/lib/libkrb.a) && \
     (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
