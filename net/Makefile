@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2001/06/09 10:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.228 2001/06/14 14:45:49 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -80,6 +80,7 @@ SUBDIR+=	mrt
 SUBDIR+=	mrtg
 SUBDIR+=	mtr
 SUBDIR+=	nap
+SUBDIR+=	napshare
 SUBDIR+=	ncftp2
 SUBDIR+=	ncftp3
 SUBDIR+=	neat
