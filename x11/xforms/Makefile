@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/06/11 03:05:10 jlam Exp $
+# $NetBSD: Makefile,v 1.14 1999/06/20 21:06:22 tron Exp $
 #
 
 DISTNAME=	bxform-088
@@ -20,7 +20,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	lamj@stat.cmu.edu
 HOMEPAGE=	http://bragg.phys.uwm.edu/xforms/
 
-ONLY_FOR_PLATFORM=	*-*-{arm32,i386,m68k,sparc,ns32k}
+ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-ns32k *-*-sparc
 
 DIST_SUBDIR=	xforms-${MACHINE_ARCH}
 

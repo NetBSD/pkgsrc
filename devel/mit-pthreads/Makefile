@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.19 1999/05/24 20:39:37 tv Exp $
+# $NetBSD: Makefile,v 1.20 1999/06/20 21:06:18 tron Exp $
 #
 
 DISTNAME=		pthreads-1_60_beta6
 PKGNAME=		mit-pthreads-1.60b6
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sipb.mit.edu/pub/pthreads/
-ONLY_FOR_PLATFORM=	NetBSD-*-{alpha,arm32,i386,sparc}
 
 MAINTAINER=		agc@netbsd.org
 HOMEPAGE=		http://www.mit.edu:8001/people/proven/pthreads.html
+
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-sparc
 
 HAS_CONFIGURE=		yes
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}

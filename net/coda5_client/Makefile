@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/06/04 23:46:56 rvb Exp $
+# $NetBSD: Makefile,v 1.16 1999/06/20 21:06:21 tron Exp $
 #
 
 DISTNAME=		coda-5.2.4
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.coda.cs.cmu.edu/
 DEPENDS=		gdbm-1.7.3:../../databases/gdbm \
 			readline-2.2:../../devel/readline
 
-ONLY_FOR_PLATFORM=	NetBSD-*-{arm32,i386,ns32k}
+ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-ns32k
 
 #LICENSE=		GPL
 
