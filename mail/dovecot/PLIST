@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/14 04:17:31 salo Exp $
+etc/rc.d/dovecot
+libexec/dovecot/dovecot-auth
+libexec/dovecot/imap-login
+libexec/dovecot/imap
+libexec/dovecot/pop3-login
+libexec/dovecot/pop3
+sbin/dovecot
+share/doc/dovecot/auth.txt
+share/doc/dovecot/configuration.txt
+share/doc/dovecot/design.txt
+share/doc/dovecot/index.txt
+share/doc/dovecot/mail-storages.txt
+share/doc/dovecot/multiaccess.txt
+share/doc/dovecot/nfs.txt
+share/examples/dovecot/dovecot.conf.default
+share/examples/dovecot/dovecot-ldap.conf
+share/examples/dovecot/dovecot-openssl.cnf
+share/examples/dovecot/dovecot-pgsql.conf
+share/examples/dovecot/mkcert.sh
+@dirrm share/examples/dovecot
+@dirrm share/doc/dovecot
+@dirrm libexec/dovecot
