@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2003/04/15 00:02:26 heinz Exp $
+$NetBSD: patch-ac,v 1.4 2003/05/22 11:41:03 abs Exp $
 
---- configure.in.orig	Fri Mar 28 22:25:56 2003
+--- configure.in.orig	2003-03-28 21:25:56.000000000 +0000
 +++ configure.in
 @@ -1,4 +1,9 @@
  AC_INIT
@@ -12,7 +12,7 @@ $NetBSD: patch-an,v 1.1 2003/04/15 00:02:26 heinz Exp $
  AC_CONFIG_SRCDIR([Makefile.PL])
  AC_CONFIG_HEADER(config.h)
  
-@@ -41,8 +46,12 @@
+@@ -41,8 +46,12 @@ fi
  dnl ----------------------------------------------------------------------
  
  AC_CHECK_LIB(socket, socket)
@@ -27,7 +27,7 @@ $NetBSD: patch-an,v 1.1 2003/04/15 00:02:26 heinz Exp $
  AC_CHECK_LIB(inet, connect)
  AC_CHECK_LIB(nsl, t_accept)
  AC_CHECK_LIB(dl, dlopen)
-@@ -125,6 +134,7 @@
+@@ -125,6 +134,7 @@ dnl ------------------------------------
  # we cheat, since we *know* we have Perl installed ;)
  CCDLFLAGS=`perl -e 'use Config; print $Config::Config{ccdlflags}'`
  LDDLFLAGS=`perl -e 'use Config; print $Config::Config{lddlflags}'`

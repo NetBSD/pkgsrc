@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/04/15 00:02:24 heinz Exp $
+$NetBSD: MESSAGE,v 1.5 2003/05/22 11:41:02 abs Exp $
 
 ***IMPORTANT***
 
-  Version 2.53 changes the default tagging behavior. SpamAssassin will now
+  Version 2.53 changed the default tagging behavior. SpamAssassin will now
   create a new report message and attach the original spam message as a
   MIME part (use the "report_safe" option to change this).
 

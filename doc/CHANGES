@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2277 2003/05/22 09:38:27 wiz Exp $
+$NetBSD: CHANGES,v 1.2278 2003/05/22 11:41:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2072,3 +2072,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated conserver to 7.2.7 [wiz 2003-05-22]
 	Updated p5-Time-HiRes to 1.47 [wiz 2003-05-22]
 	Updated gcc to 3.2.2nb2 [wiz 2003-05-22]
+	Updated spamassassin to 2.55 [abs 2003-05-22]
