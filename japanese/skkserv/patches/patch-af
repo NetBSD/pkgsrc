@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+$NetBSD: patch-af,v 1.2 2000/07/26 03:40:54 itohy Exp $
 
 --- skkserv/skkserv.c.orig	Tue Jan 21 04:16:36 1997
-+++ skkserv/skkserv.c	Tue Dec 21 15:50:59 1999
++++ skkserv/skkserv.c	Wed Jul 26 12:15:44 2000
 @@ -132,6 +132,16 @@
    int	ctlterm;	/* fildes for control terminal */
    void	reread();
@@ -31,11 +31,29 @@ $NetBSD: patch-af,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
      if ((ctlterm = open("/dev/tty", 2)) >= 0) { 
        ioctl(ctlterm, TIOCNOTTY, 0);
        close(ctlterm);
-@@ -214,6 +227,7 @@
-     setpgrp();
+@@ -215,6 +228,7 @@
      signal(SIGHUP, SIG_IGN);
      if (fork() != 0) exit(0);
-+#endif
  #endif
++#endif
    } else { /* debug mode */
      fprintf(errout, "SKK-JISYO is %s\n", jname);
+     fflush(errout);
+@@ -724,6 +738,9 @@
+     exit(1);
+   }
+   hentry = gethostbyname(hname);
++  if (hentry == NULL) {
++    fprintf(errout, "%s: WARNING: gethostbyname(%s) failed\n", pgmnm, hname);
++  } else {
+ #ifdef NO_ADDR_LIST
+   strcat(hname, ":");
+   strcat(hname, hentry->h_addr);
+@@ -736,6 +753,7 @@
+     strcat(hname, inet_ntoa(*(struct in_addr *)*p++));
+   }
+ #endif
++  }
+   strcat(hname, ": ");
+ }
+ 
