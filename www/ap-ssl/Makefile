@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2003/01/28 22:04:26 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2003/03/14 19:37:59 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.12-1.3.27
 PKGNAME=		ap-ssl-2.8.12
@@ -25,9 +25,9 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${_USE_RPATH} == "yes"
-MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
-.endif
+SSL_RPATH_LDFLAGS=	${RPATH_FLAG}${SSLBASE}/lib
+FIX_RPATH+=		SSL_RPATH_LDFLAGS
+MAKE_ENV+=		SSL_RPATH_LDFLAGS="${SSL_RPATH_LDFLAGS}"
 
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
