@@ -1,0 +1,18 @@
+$NetBSD: patch-ci,v 1.1 2004/12/11 16:19:29 jlam Exp $
+
+--- pp_sys.c.orig	2004-03-22 14:54:11.000000000 -0500
++++ pp_sys.c	2004-12-11 10:47:42.000000000 -0500
+@@ -4438,9 +4438,11 @@
+ 	when = (Time_t)SvIVx(POPs);
+ #endif
+ 
+-    if (PL_op->op_type == OP_LOCALTIME)
++    if (PL_op->op_type == OP_LOCALTIME) {
++	/* Explicitly invoke tzset() as localtime_r may not. */
++	tzset();
+ 	tmbuf = localtime(&when);
+-    else
++    } else
+ 	tmbuf = gmtime(&when);
+ 
+     if (GIMME != G_ARRAY) {
