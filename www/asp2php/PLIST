@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/22 12:06:45 agc Exp $
 bin/asp2php
-bin/unipiss
