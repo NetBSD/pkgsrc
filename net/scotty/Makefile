@@ -3,7 +3,7 @@
 # Date created:		18 Februar 1995
 # Whom:			Gennady Sorokopud <gena@netvision.net.il>
 #
-# $NetBSD: Makefile,v 1.3 1997/12/22 07:45:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/24 21:40:27 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/27 23:01:53 cwt Exp
 #
 
@@ -34,6 +34,6 @@ pre-install:
 PLIST_SRC=${PLIST}.tmp
 
 pre-clean:
-	@${RM} -f pkg/PLIST.tmp
+	@${RM} -f ${PKGDIR}/PLIST.tmp
 
 .include <bsd.port.mk>
