@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.2 2004/07/24 10:40:15 recht Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.3 2004/10/26 21:39:33 xtraeme Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -64,7 +64,7 @@ PGPKGSRCDIR=	../../databases/postgresql74-lib
 PGPKGSRCDIR=	../../databases/postgresql73-lib
 .else
 # force an error
-	error: no valid PostgreSQL version
+PKG_SKIP_REASON+=	"${_PGSQL_VERSION} is not a valid package"
 .endif
 
 .if (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
