@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.21 2003/09/16 01:47:47 itojun Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.22 2003/09/16 03:10:32 itojun Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -45,7 +45,7 @@ MV?=		/bin/mv
 NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
-PERL5?=		/usr/bin/perl
+PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
