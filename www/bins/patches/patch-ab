@@ -1,16 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2002/09/24 02:01:30 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.5 2002/09/25 00:28:27 wiz Exp $
 
 no 'locale' command on netbsd so deal with `locale charmap` not returning
 correctly.
 
 --- bins_edit.orig	Sat Sep 21 09:50:14 2002
 +++ bins_edit
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl -w
-+#!/usr/pkg/bin/perl -w
- 
- #    bins_edit for BINS Photo Album version 1.1.17
- #    Copyright (C) 2001,2002 Jérôme Sautret (Jerome@Sautret.org)
 @@ -42,12 +42,18 @@ use HTML::Entities;
  my $verbose = 1;
  my $html=0;
