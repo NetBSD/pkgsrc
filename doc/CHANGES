@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8611 2005/01/05 09:16:52 adam Exp $
+$NetBSD: CHANGES,v 1.8612 2005/01/05 09:26:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -104,3 +104,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated db4 to 4.3.27 [martti 2005-01-05]
 	Updated tcl to 8.4.9 [adam 2005-01-05]
 	Updated tk to 8.4.9 [adam 2005-01-05]
+	Updated ImageMagick to 6.1.7-5 [adam 2005-01-05]

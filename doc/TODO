@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2837 2005/01/05 09:16:52 adam Exp $
+$NetBSD: TODO,v 1.2838 2005/01/05 09:26:55 adam Exp $
 
 Suggested new packages
 ======================
@@ -265,7 +265,6 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GridSim-3.1
 	o GutenMark-20040320
-	o ImageMagick-6.1.7-5
 	o MyPasswordSafe-20041210
 	o ORBit-0.5.17
 	o PAM-0.78
