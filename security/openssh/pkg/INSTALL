@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.5 2001/04/04 23:40:53 hubertf Exp $
+# $NetBSD: INSTALL,v 1.6 2001/10/19 09:42:29 veego Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -30,7 +30,7 @@ POST-INSTALL)
 	if [ ! -d ${SSH_CONF_DIR} ]
 	then
 		echo "Creating directory ${SSH_CONF_DIR} for ssh config files.."
-		mkdir -p ${SSH_CONF_DIR}
+		@MKDIR@ ${SSH_CONF_DIR}
 	fi
 	for file in ssh_config sshd_config
 	do
@@ -43,14 +43,20 @@ POST-INSTALL)
 	done
 	if [ ! -f ${SSH_CONF_DIR}/ssh_host_key ]
 	then
-		echo "Generating an RSA secret host key in ${SSH_CONF_DIR}.."
-		${PKG_PREFIX}/bin/ssh-keygen -b 1024 -N "" \
+		echo "Generating an RSA1 secret host key in ${SSH_CONF_DIR}.."
+		${PKG_PREFIX}/bin/ssh-keygen -t rsa1 -N "" \
 			-f ${SSH_CONF_DIR}/ssh_host_key
+	fi
+	if [ ! -f ${SSH_CONF_DIR}/ssh_host_rsa_key ]
+	then
+		echo "Generating an RSA secret host key in ${SSH_CONF_DIR}.."
+		${PKG_PREFIX}/bin/ssh-keygen -t rsa -N "" \
+			-f ${SSH_CONF_DIR}/ssh_host_rsa_key
 	fi
 	if [ ! -f ${SSH_CONF_DIR}/ssh_host_dsa_key ]
 	then
 		echo "Generating a DSA secret host key in ${SSH_CONF_DIR}.."
-		${PKG_PREFIX}/bin/ssh-keygen -d -N "" \
+		${PKG_PREFIX}/bin/ssh-keygen -t dsa -N "" \
 			-f ${SSH_CONF_DIR}/ssh_host_dsa_key
 	fi
 	;;
