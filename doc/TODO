@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2872 2005/01/10 13:41:25 adam Exp $
+$NetBSD: TODO,v 1.2873 2005/01/10 16:15:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -1189,7 +1189,6 @@ Suggested package updates
 	o wmbiff-0.4.26
 	o wmweather-2.4.3
 	o wol-0.7.1
-	o wv-1.0.3
 	o wwwoffle-2.8d
 	o wxhugo-31
 	o x2vnc-1.6.1
