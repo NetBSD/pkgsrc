@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 1999/04/06 20:10:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.62 1999/04/06 20:24:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -23,6 +23,7 @@
 #    SUBDIR += dgd-lpmud
 #    SUBDIR += dgd-net
     SUBDIR += dip
+    SUBDIR += dlint
 #    SUBDIR += echoping
     SUBDIR += eggdrop
     SUBDIR += ethereal
