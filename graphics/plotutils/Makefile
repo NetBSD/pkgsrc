@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/04 21:22:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/06/06 14:39:06 jschauma Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -24,7 +24,11 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/libxmi/ltconfig
 # this package works with and without X11, but if X11 is present, we need the
 # necessary compile and ld flags
 .if exists(${X11BASE})
+PKGNAME=		${DISTNAME:C/-/-x11-/}
+CONFLICTS+=		${DISTNAME:C/-[0-9].*//}
 USE_X11=                YES
+.else
+CONFLICTS+=		${DISTNAME:C/-[0-9].*/-x11/}
 .endif
 
 .include "../../graphics/png/buildlink2.mk"
