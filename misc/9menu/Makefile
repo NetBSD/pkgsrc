@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/06/04 09:02:28 agc Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/17 14:31:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
-DISTNAME=		9menu-1.6
+DISTNAME=		9menu-1.7
 CATEGORIES=		misc plan9
 MASTER_SITES=		ftp://ftp.freefriends.org/arnold/Source/
-PATCH_SITES=		http://www1.informatik.uni-erlangen.de/tree/Persons/bauer/new/
-PATCHFILES=		9menu-1.6.key.patch
 EXTRACT_SUFX=		.shar.gz
 
 MAINTAINER=		tech-pkg@netbsd.org
@@ -16,7 +14,7 @@ MAKEFILE=		Makefile.noimake
 ALL_TARGET=		9menu
 USE_X11=		yes
 
-PATCH_DIST_STRIP=	-p1
+WRKSRC=			${WRKDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/9menu ${PREFIX}/bin
