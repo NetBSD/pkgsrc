@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.27 1999/08/10 16:38:08 bouyer Exp $
+# $NetBSD: Makefile,v 1.28 1999/10/06 17:05:23 dmcmahill Exp $
 
 DISTNAME=	samba-2.0.5a
+WRKSRC=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.samba.org/pub/samba/
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.samba.org/
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/source
+DEPENDS+=	readline-4.0:../../devel/readline
+
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
