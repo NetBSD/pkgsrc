@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/28 02:35:41 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/28 06:26:41 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -19,6 +19,12 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_PACKAGE=	yes
+
+# Remove GCC optimization options.
+BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
+
+# Convert "-lreadline" into "-ledit -ltermcap -lm".
+BUILDLINK_TRANSFORM+=	l:readline:edit:termcap:m
 
 REGRESS_ENV=		PATH=${PATH}
 #REGRESS_ENV+=		WRAPPER_DEBUG=yes
@@ -46,8 +52,13 @@ TEST_RESULT=	runtest=`${SETENV} ${REGRESS_ENV} regress $$test`;	\
 		${ECHO} "(${.TARGET}) got:      $$runtest";		\
 		${ECHO} "(${.TARGET}) expected: $$expected";		\
 		case $$runtest in					\
-		$$expected)	;;					\
-		*)		exit 1 ;;				\
+		$$expected)						\
+			${ECHO} "(${.TARGET}) result:   PASS";		\
+			;;						\
+		*)							\
+			${ECHO} "(${.TARGET}) result:   FAIL";		\
+			exit 1;						\
+			;;						\
 		esac
 
 TEST_DIR=	${.CURDIR}/tests
