@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2002/02/18 15:14:39 seb Exp $
+# $NetBSD: Makefile,v 1.31 2002/05/07 18:48:46 wiz Exp $
 #
 
-DISTNAME=	gnupg-1.0.6
+DISTNAME=	gnupg-1.0.7
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/gnupg/
 # don't remove this -- we may add idea.c to it below
@@ -20,7 +20,7 @@ USE_GMAKE=	yes
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-INFO_FILES=	gpg.info gpgv.info
+INFO_FILES=	gpgv.info
 
 .include "../../mk/bsd.prefs.mk"
 
