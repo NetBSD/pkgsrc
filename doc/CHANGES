@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3708 2003/10/18 18:25:23 tron Exp $
+$NetBSD: CHANGES,v 1.3709 2003/10/18 20:42:17 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4221,3 +4221,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.25 [agc 2003-10-18]
 	Updated xmule to 1.6.1 [jmmv 2003-10-18]
 	Updated x11-links to 0.17 [tron 2003-10-18]
+	Updated jwhois to 3.2.2nb1 [kleink 2003-10-18]
