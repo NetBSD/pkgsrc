@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7061 2004/08/31 23:26:48 reed Exp $
+$NetBSD: CHANGES,v 1.7062 2004/09/01 01:22:10 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4133,3 +4133,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glade2 to 2.6.0nb1 [jmmv 2004-08-31]
 	Updated metacity to 2.8.4 [jmmv 2004-08-31]
 	Updated zlib to 1.2.1nb2 [reed 2004-08-31]
+	Updated nmap to 3.70 [salo 2004-09-01]
