@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/05/25 21:49:26 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/05 13:32:10 grant Exp $
 
---- configure.orig	2003-09-28 17:26:39.000000000 +0200
+--- configure.orig	2003-09-29 01:26:39.000000000 +1000
 +++ configure
 @@ -148,11 +148,10 @@ FFSLDFLAGS=""
  need_inet_aton="yes"
@@ -15,3 +15,13 @@ $NetBSD: patch-aa,v 1.2 2004/05/25 21:49:26 wiz Exp $
  LDFLAGS="$LDFLAGS -export-dynamic"
  ;;
  BSD/OS)
+@@ -959,6 +958,9 @@ if test "$vhook" = "yes" ; then
+   echo "#define HAVE_VHOOK 1" >> $TMPH
+   extralibs="$extralibs $ldl"
+ fi
++if test "$ffserver" = "yes" ; then
++  extralibs="$extralibs $ldl"
++fi
+ if test "$lshared" = "yes" ; then
+   echo "BUILD_SHARED=yes" >> config.mak
+   echo "PIC=-fPIC" >> config.mak
