@@ -1,69 +1,22 @@
-$NetBSD: patch-ac,v 1.4 2000/03/17 15:54:53 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2001/04/24 16:59:35 jlam Exp $
 
---- killall.c.orig	Wed May  6 09:56:48 1998
-+++ killall.c	Thu Mar 16 22:57:03 2000
-@@ -10,12 +10,19 @@
- #include <dirent.h>
- #include <signal.h>
- #include <errno.h>
+--- src/comm.h.orig	Wed Dec 13 18:43:10 2000
++++ src/comm.h
+@@ -6,6 +6,10 @@
+ #ifndef COMM_H
+ #define COMM_H
+ 
 +#include <sys/param.h>
- #include <sys/types.h>
- #include <sys/stat.h>
++#ifdef MAXCOMLEN
++#define COMM_LEN MAXCOMLEN
++#else
+ #if 0				/* broken in 1.3.xx */
+ #include <linux/sched.h>
+ #define COMM_LEN sizeof(dummy.comm)
+@@ -14,5 +18,6 @@
+ #define COMM_LEN 16		/* synchronize with size of comm in struct task_struct in
+ 				   /usr/include/linux/sched.h */
+ #endif
++#endif /* MAXCOMLEN */
  
- #include "comm.h"
- #include "signals.h"
- 
-+#if (defined(BSD) && BSD >= 199306)
-+#define BSD_44_PROC
-+#if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104180000)
-+#define BSD_PROC_CMDLINE
-+#endif
-+#endif
- 
- #define PROC_BASE "/proc"
- #define MAX_NAMES (sizeof(unsigned long)*8)
-@@ -112,20 +119,32 @@
- 	}
-     }
-     for (i = 0; i < pids; i++) {
-+#ifdef BSD_44_PROC
-+	sprintf(path,PROC_BASE "/%d/status",pid_table[i]);
-+#else
- 	sprintf(path,PROC_BASE "/%d/stat",pid_table[i]);
-+#endif
- 	if (!(file = fopen(path,"r"))) continue;
- 	empty = 0;
-+#ifdef BSD_44_PROC
-+	okay = fscanf(file,"%s",comm) == 1;
-+#else
- 	okay = fscanf(file,"%*d (%[^)]",comm) == 1;
-+#endif
- 	(void) fclose(file);
- 	if (!okay) continue;
- 	got_long = 0;
- 	command = NULL; /* make gcc happy */
- 	length = strlen(comm);
- 	if (length == COMM_LEN-1) {
-+#if defined(BSD_44_PROC) && !defined(BSD_PROC_CMDLINE)
-+	    okay = 0;
-+#else
- 	    sprintf(path,PROC_BASE "/%d/cmdline",pid_table[i]);
- 	    if (!(file = fopen(path,"r"))) continue;
- 	    okay = fscanf(file,"%s",command_buf) == 1;
- 	    (void) fclose(file);
-+#endif
- 	    if (exact && !okay) {
- 		if (verbose)
- 		    fprintf(stderr,"skipping partial match %s(%d)\n",comm,
-@@ -150,7 +169,11 @@
- 		      strncmp(namelist[j],comm,COMM_LEN-1)) continue;
- 	    }
- 	    else {
-+#ifdef BSD_44_PROC
-+		sprintf(path,PROC_BASE "/%d/file",pid_table[i]);
-+#else
- 		sprintf(path,PROC_BASE "/%d/exe",pid_table[i]);
-+#endif
- 		if (stat(path,&st) < 0) continue;
- 		if (sts[j].st_dev != st.st_dev || sts[j].st_ino != st.st_ino)
- 		    continue;
+ #endif

@@ -1,22 +1,16 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:14:07 agc Exp $
+$NetBSD: patch-ab,v 1.3 2001/04/24 16:59:35 jlam Exp $
 
---- comm.h.orig	Tue Sep 19 15:02:20 1995
-+++ comm.h	Sat Jul 18 22:40:04 1998
-@@ -6,6 +6,10 @@
- #ifndef COMM_H
- #define COMM_H
+--- src/Makefile.in.orig	Sat Mar 31 05:40:12 2001
++++ src/Makefile.in
+@@ -64,9 +64,9 @@
+ TERMCAP_LIB = @TERMCAP_LIB@
+ VERSION = @VERSION@
  
-+#include <sys/param.h>
-+#ifdef MAXCOMLEN
-+#define COMM_LEN MAXCOMLEN
-+#else
- #if 0 /* broken in 1.3.xx */
- #include <linux/sched.h>
- #define COMM_LEN sizeof(dummy.comm)
-@@ -14,5 +18,6 @@
- #define COMM_LEN 16 /* synchronize with size of comm in struct task_struct in
- 		       /usr/include/linux/sched.h */
- #endif
-+#endif /* MAXCOMLEN */
+-CFLAGS = -Wall
++#CFLAGS = -Wall
  
- #endif
+-bin_PROGRAMS = fuser killall pstree
++bin_PROGRAMS = killall pstree
+ 
+ fuser_SOURCES = fuser.c comm.h signals.c signals.h signames.h loop.h
+ 
