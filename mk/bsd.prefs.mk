@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.110 2003/04/15 05:29:46 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.111 2003/04/21 01:35:10 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -70,6 +70,9 @@ LOWER_VENDOR?=		unknown
 .  endif
 
 .elif ${OPSYS} == "SunOS"
+LOWER_OPSYS?=		solaris
+LOWER_ARCH!=		${UNAME} -p
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  if ${MACHINE_ARCH} == "sparc"
 SPARC_TARGET_ARCH?=	sparcv7
 .  elif ${MACHINE_ARCH} == "sun4"
@@ -77,14 +80,8 @@ MACHINE_ARCH=		sparc
 SPARC_TARGET_ARCH?=	sparcv7
 .  elif ${MACHINE_ARCH} == "i86pc"
 MACHINE_ARCH=		i386
-.  elif ${MACHINE_ARCH} == "unknown"
-.    if !defined(LOWER_ARCH)
-LOWER_ARCH!=		${UNAME} -p
-.    endif	# !defined(LOWER_ARCH)
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  endif
 LOWER_VENDOR?=		sun
-LOWER_OPSYS?=		solaris
 
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
