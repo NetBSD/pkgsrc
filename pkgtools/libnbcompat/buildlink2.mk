@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/09/02 22:14:51 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/09/02 22:19:03 jlam Exp $
 
 .if !defined(LIBNBCOMPAT_BUILDLINK2_MK)
 LIBNBCOMPAT_BUILDLINK2_MK=     # defined
@@ -21,5 +21,11 @@ BUILDLINK_LDADD.libnbcompat=	-lnbcompat
 BUILDLINK_TARGETS+=	libnbcompat-buildlink
 
 libnbcompat-buildlink: _BUILDLINK_USE
+
+.if defined(GNU_CONFIGURE)
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.libnbcompat}
+CFLAGS+=	${BUILDLINK_CPPFLAGS.libnbcompat}
+LIBS+=		${BUILDLINK_LDADD.libnbcompat}
+.endif
 
 .endif  # LIBNBCOMPAT_BUILDLINK2_MK
