@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:21:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/09 14:05:36 wiz Exp $
 
 DISTNAME=	gnats-3.113.1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.freesoftware.com/pub/sourceware/gnats/snapshots/ \
-		ftp://mirrors.rcn.net/pub/sourceware/gnats/snapshots/ \
-		ftp://sunsite.org.uk/Mirrors/sourceware.cygnus.com/pub/gnats/snapshots/
+MASTER_SITES=	${MASTER_SITE_GNU=gnats/}
 
 MAINTAINER=	tech-pkg@netbsd.org
-HOMEPAGE=	http://sourceware.cygnus.com/gnats/
+HOMEPAGE=	http://www.gnu.org/software/gnats/
 COMMENT=	Cygnus GNATS bug tracking system
 
 BUILD_DEPENDS+=	m4-*:../../devel/m4
