@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1265 2004/01/01 20:07:00 salo Exp $
+$NetBSD: TODO,v 1.1266 2004/01/03 01:10:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -116,9 +116,12 @@ Suggested package updates
 	o awstats-5.9
 	o balsa-1.4.4
 	o blender-2.31a
+	o blib-1.1.4
+	o blinkensim-2.5
+	o blinkentools-2.5
 	o boehm-gc-6.3alpha2
 	o cervisia-2.0
-	o clisp-2.31
+	o clisp-2.32
 	o clusterit-2.2
 	o conserver-8.0.9
 	o courier-0.42.2 [pkg/22373]
@@ -147,7 +150,7 @@ Suggested package updates
 	o efax-gtk-2.2.3
 	o elinks-0.9.0
 	o elk-3.99.6
-	o elm-me-2.4pl110
+	o elm-me-2.4pl110a
 	o evolution-1.5
 	o exim-4.24
 	o festival-1.4.3
@@ -163,7 +166,7 @@ Suggested package updates
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdb-6.0
-	o gdm-2.4.4.4
+	o gdm-2.4.4.6
 	o generator-0.35
 	o gettext-0.13
 	o gforth-0.6.2
@@ -242,6 +245,7 @@ Suggested package updates
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8c
+	o overnet-0.51.2 [pkg/23945]
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
@@ -260,6 +264,7 @@ Suggested package updates
 	o rox-1.2.2
 	o rox-session-0.1.20
 	o rrdtool-1.0.45
+	o rsync-2.6.0
 	o rt-3.0.2
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
