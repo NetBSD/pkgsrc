@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.10 2003/05/31 16:14:47 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/11 17:27:55 wiz Exp $
 #
 .include "Makefile.common"
 
-.include "Makefile.include"
+.include "../../mk/bsd.pkg.mk"
