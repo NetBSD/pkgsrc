@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/31 18:48:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/06 19:58:55 salo Exp $
 #
 
 DISTNAME=		wxGTK-2.4.0
@@ -9,18 +9,17 @@ MAINTAINER=		tsarna@netbsd.org
 HOMEPAGE=		http://www.wxwindows.org
 COMMENT=		GTK-based implementation of the wxWindows GUI library
 
-USE_BUILDLINK2=		# defined
-USE_PKGLOCALEDIR=	# defined
-USE_X11=		# defined
-USE_LIBTOOL=		# defined
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk
 CONFIGURE_ARGS+=	--with-libjpeg=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libtiff=sys
 
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wx/gtk
@@ -33,5 +32,6 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
