@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2004/01/14 07:27:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.48 2004/01/20 23:54:48 rh Exp $
 
 DISTNAME=		evolution-1.4.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
 			${MASTER_SITE_GNOME:=sources/evolution/1.4/}
@@ -74,6 +74,10 @@ pre-configure:
 		${MV} $$i.fixed $$i ;					\
 	done
 
+.if !exists(/usr/include/semaphore.h)
+LDFLAGS+=	-lsemaphore
+.include "../../devel/pthread-sem/buildlink2.mk"
+.endif
 .include "../../databases/db3/buildlink2.mk"
 .include "../../databases/openldap/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
