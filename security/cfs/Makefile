@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/06 12:29:52 simonb Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/07 15:35:14 jlam Exp $
 
 DISTNAME=		cfs-1.4.1
 CATEGORIES=		security
@@ -8,23 +8,94 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.crypto.com/software/
 COMMENT=		encrypting file system, using NFS as its interface
 
-CRYPTO=			yes
+CRYPTO=			# defined
 
+ALL_TARGET=		cfs
 INSTALL_TARGET=		install_cfs
 
+# Avoid conflicts with coda-client's cpasswd by consistently renaming
+# all references to c* to cfs_*.
+#
+CFS_SUBST=		cattach->cfs_attach	CATTACH->CFS_ATTACH
+CFS_SUBST+=		ccat->cfs_cat		CCAT->CFS_CAT
+CFS_SUBST+=		cdetach->cfs_detach	CDETACH->CFS_DETACH
+CFS_SUBST+=		cmkdir->cfs_mkdir	CMKDIR->CFS_MKDIR
+CFS_SUBST+=		cmkkey->cfs_mkkey	CMKKEY->CFS_MKKEY
+CFS_SUBST+=		cname->cfs_name		CNAME->CFS_NAME
+CFS_SUBST+=		cpasswd->cfs_passwd	CPASSWD->CFS_PASSWD
+
+.include "../../mk/bsd.prefs.mk"
+
+# Required settings necessary to build CFS on various platforms.  This is
+# copied from ${WRKSRC}/Makefile and from browsing the various README files.
+#
+.if ${OPSYS} == "NetBSD"
+CFLAGS+=		-traditional    # uses strange preprocessor behaviour   
+CFLAGS+=		-DPROTOTYPES=1                                          
+CFLAGS+=		-DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS          
+MAKE_ENV+=		MAKE=${MAKE_PROGRAM}                                    
+MAKE_ENV+=		COMPAT="-lcompat"                                       
+MAKE_ENV+=		RPCOPTS="-b"                                            
+#
+# Use getpass() instead of own getpassword() function, which doesn't seem to
+# hide the password when the user is typing it.
+#
+CFS_SUBST+=		getpassword->getpass                                    
+CFLAGS+=		-DHAVE_GETPASS                                          
+CFS_BUILD_SCRIPT=	${WRKSRC}/netbsd_make_with_bad_rpcgen
+.elif ${OPSYS} == "SunOS"
+CFLAGS+=		-traditional
+CFLAGS+=		-DPROTOTYPES=1                                          
+CFLAGS+=		-DSOLARIS2X -DPORTMAP -DPTMX
+MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
+MAKE_ENV+=		LIBS="-lsocket -lnsl"
+MAKE_ENV+=		COMPAT=
+MAKE_ENV+=		RPCOPTS=
+CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
+.elif ${OPSYS} == "Linux"
+CFLAGS+=		-traditional
+CFLAGS+=		-DPROTOTYPES=1                                          
+CFLAGS+=		-U__OPTIMIZE__ -U__STDC__ -Dd_fileno=d_ino
+MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
+MAKE_ENV+=		LIBS=
+MAKE_ENV+=		COMPAT=
+MAKE_ENV+=		RPCOPTS="-k -b"
+CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
+.endif
+
+CFS_SUBST_SED=		${CFS_SUBST:S/->/!/:S/$/!g/:S/^/ -e s!/}                
+
+DOCDIR=			${PREFIX}/share/doc/cfs
+
+post-extract:
+	@${RM} -f ${WRKSRC}/esm.1                                               
+	@cd ${WRKSRC}; for file in *; do				\
+		${MV} -f $${file} $${file}.orig;			\
+		dest=`${ECHO} $${file} | ${SED} ${CFS_SUBST_SED}`;	\
+		${SED} ${CFS_SUBST_SED} $${file}.orig > $${dest};	\
+		${RM} -f $${file}.orig;					\
+	done                                                                    
+
+post-patch:
+	@${CHMOD} +x ${CFS_BUILD_SCRIPT}
+
 do-build:
-	@cd ${WRKSRC} && 						\
-	${SETENV} ${MAKE_ENV} $$fix ./netbsd_make_with_bad_rpcgen cfs
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+		${SH} ${CFS_BUILD_SCRIPT} ${ALL_TARGET}
+
+pre-install:                                                                    
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		${FILESDIR}/cfsd.sh > ${WRKDIR}/cfsd.sh                         
 
 post-install:
-	${BSD_INSTALL_MAN} ${WRKSRC}/cattach.1 ${PREFIX}/man/man1/
-	${BSD_INSTALL_MAN} ${WRKSRC}/cdetach.1 ${PREFIX}/man/man1/
-	${BSD_INSTALL_MAN} ${WRKSRC}/cfssh.1 ${PREFIX}/man/man1/
-	${BSD_INSTALL_MAN} ${WRKSRC}/cmkdir.1 ${PREFIX}/man/man1/
-	${BSD_INSTALL_MAN} ${WRKSRC}/cmkkey.1 ${PREFIX}/man/man1/
-	${BSD_INSTALL_MAN} ${WRKSRC}/cpasswd.1 ${PREFIX}/man/man1/
-	${BSD_INSTALL_MAN} ${WRKSRC}/ccat.8 ${PREFIX}/man/man8/
-	${BSD_INSTALL_MAN} ${WRKSRC}/cfsd.8 ${PREFIX}/man/man8/
-	${BSD_INSTALL_MAN} ${WRKSRC}/cname.8 ${PREFIX}/man/man8/
+	${INSTALL_SCRIPT} ${WRKDIR}/cfsd.sh ${PREFIX}/etc/rc.d/cfsd             
+	cd ${WRKSRC}; for file in *.1; do				\
+		${INSTALL_MAN} $${file} ${PREFIX}/man/man1/$${file};	\
+	done
+	cd ${WRKSRC}; for file in *.8; do				\
+		${INSTALL_MAN} $${file} ${PREFIX}/man/man8/$${file};	\
+	done
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/notes.ms ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
