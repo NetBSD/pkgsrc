@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2000/02/16 22:02:34 dmcmahill Exp $
+
+don't use __alpha__ as an operating system check....
+This may take some more work if there is an issue with unaligned access
+on NetBSD, but at least this should compile (the unpatched one won't)
+
+--- ./src/sqXWindow.c.orig	Mon Oct 18 13:32:08 1999
++++ ./src/sqXWindow.c	Wed Feb 16 11:25:57 2000
+@@ -2830,5 +2830,5 @@
+ }
+ 
+-#ifdef __alpha__
++#if defined(__alpha__) && !defined(__NetBSD__)
+ /* headers for setsysinfo (see below) */
+ # include <sys/sysinfo.h>
+@@ -2842,5 +2842,5 @@
+   /* initialisation */
+ 
+-#ifdef __alpha__
++#if defined(__alpha__) && !defined(__NetBSD__)
+   /* disable printing of unaligned access exceptions */
+   {
