@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/01 00:41:48 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/09 17:56:45 recht Exp $
 bin/roundup-admin
 bin/roundup-mailgw
 bin/roundup-server
@@ -26,12 +26,21 @@ ${PYSITELIB}/roundup/backends/back_metakit.pyo
 ${PYSITELIB}/roundup/backends/back_mysql.py
 ${PYSITELIB}/roundup/backends/back_mysql.pyc
 ${PYSITELIB}/roundup/backends/back_mysql.pyo
+${PYSITELIB}/roundup/backends/back_postgresql.py
+${PYSITELIB}/roundup/backends/back_postgresql.pyc
+${PYSITELIB}/roundup/backends/back_postgresql.pyo
 ${PYSITELIB}/roundup/backends/back_sqlite.py
 ${PYSITELIB}/roundup/backends/back_sqlite.pyc
 ${PYSITELIB}/roundup/backends/back_sqlite.pyo
 ${PYSITELIB}/roundup/backends/blobfiles.py
 ${PYSITELIB}/roundup/backends/blobfiles.pyc
 ${PYSITELIB}/roundup/backends/blobfiles.pyo
+${PYSITELIB}/roundup/backends/indexer_dbm.py
+${PYSITELIB}/roundup/backends/indexer_dbm.pyc
+${PYSITELIB}/roundup/backends/indexer_dbm.pyo
+${PYSITELIB}/roundup/backends/indexer_rdbms.py
+${PYSITELIB}/roundup/backends/indexer_rdbms.pyc
+${PYSITELIB}/roundup/backends/indexer_rdbms.pyo
 ${PYSITELIB}/roundup/backends/locking.py
 ${PYSITELIB}/roundup/backends/locking.pyc
 ${PYSITELIB}/roundup/backends/locking.pyo
@@ -41,9 +50,12 @@ ${PYSITELIB}/roundup/backends/portalocker.pyo
 ${PYSITELIB}/roundup/backends/rdbms_common.py
 ${PYSITELIB}/roundup/backends/rdbms_common.pyc
 ${PYSITELIB}/roundup/backends/rdbms_common.pyo
-${PYSITELIB}/roundup/backends/sessions.py
-${PYSITELIB}/roundup/backends/sessions.pyc
-${PYSITELIB}/roundup/backends/sessions.pyo
+${PYSITELIB}/roundup/backends/sessions_dbm.py
+${PYSITELIB}/roundup/backends/sessions_dbm.pyc
+${PYSITELIB}/roundup/backends/sessions_dbm.pyo
+${PYSITELIB}/roundup/backends/sessions_rdbms.py
+${PYSITELIB}/roundup/backends/sessions_rdbms.pyc
+${PYSITELIB}/roundup/backends/sessions_rdbms.pyo
 ${PYSITELIB}/roundup/cgi/MultiMapping.py
 ${PYSITELIB}/roundup/cgi/MultiMapping.pyc
 ${PYSITELIB}/roundup/cgi/MultiMapping.pyo
@@ -110,12 +122,21 @@ ${PYSITELIB}/roundup/cgi/ZTUtils/__init__.pyo
 ${PYSITELIB}/roundup/cgi/__init__.py
 ${PYSITELIB}/roundup/cgi/__init__.pyc
 ${PYSITELIB}/roundup/cgi/__init__.pyo
+${PYSITELIB}/roundup/cgi/actions.py
+${PYSITELIB}/roundup/cgi/actions.pyc
+${PYSITELIB}/roundup/cgi/actions.pyo
 ${PYSITELIB}/roundup/cgi/cgitb.py
 ${PYSITELIB}/roundup/cgi/cgitb.pyc
 ${PYSITELIB}/roundup/cgi/cgitb.pyo
 ${PYSITELIB}/roundup/cgi/client.py
 ${PYSITELIB}/roundup/cgi/client.pyc
 ${PYSITELIB}/roundup/cgi/client.pyo
+${PYSITELIB}/roundup/cgi/exceptions.py
+${PYSITELIB}/roundup/cgi/exceptions.pyc
+${PYSITELIB}/roundup/cgi/exceptions.pyo
+${PYSITELIB}/roundup/cgi/form_parser.py
+${PYSITELIB}/roundup/cgi/form_parser.pyc
+${PYSITELIB}/roundup/cgi/form_parser.pyo
 ${PYSITELIB}/roundup/cgi/templating.py
 ${PYSITELIB}/roundup/cgi/templating.pyc
 ${PYSITELIB}/roundup/cgi/templating.pyo
@@ -125,15 +146,15 @@ ${PYSITELIB}/roundup/cgi/zLOG.pyo
 ${PYSITELIB}/roundup/date.py
 ${PYSITELIB}/roundup/date.pyc
 ${PYSITELIB}/roundup/date.pyo
+${PYSITELIB}/roundup/exceptions.py
+${PYSITELIB}/roundup/exceptions.pyc
+${PYSITELIB}/roundup/exceptions.pyo
 ${PYSITELIB}/roundup/hyperdb.py
 ${PYSITELIB}/roundup/hyperdb.pyc
 ${PYSITELIB}/roundup/hyperdb.pyo
 ${PYSITELIB}/roundup/i18n.py
 ${PYSITELIB}/roundup/i18n.pyc
 ${PYSITELIB}/roundup/i18n.pyo
-${PYSITELIB}/roundup/indexer.py
-${PYSITELIB}/roundup/indexer.pyc
-${PYSITELIB}/roundup/indexer.pyo
 ${PYSITELIB}/roundup/init.py
 ${PYSITELIB}/roundup/init.pyc
 ${PYSITELIB}/roundup/init.pyo
@@ -143,6 +164,9 @@ ${PYSITELIB}/roundup/install_util.pyo
 ${PYSITELIB}/roundup/instance.py
 ${PYSITELIB}/roundup/instance.pyc
 ${PYSITELIB}/roundup/instance.pyo
+${PYSITELIB}/roundup/mailer.py
+${PYSITELIB}/roundup/mailer.pyc
+${PYSITELIB}/roundup/mailer.pyo
 ${PYSITELIB}/roundup/mailgw.py
 ${PYSITELIB}/roundup/mailgw.pyc
 ${PYSITELIB}/roundup/mailgw.pyo
@@ -182,16 +206,20 @@ ${PYSITELIB}/roundup/version_check.pyo
 man/man1/roundup-admin.1
 man/man1/roundup-mailgw.1
 man/man1/roundup-server.1
+share/doc/roundup/.xvpics/roundup-favicon_1_16x16x8.png
 share/doc/roundup/CHANGES.txt
 share/doc/roundup/COPYING.txt
 share/doc/roundup/FAQ.html
 share/doc/roundup/FAQ.txt
 share/doc/roundup/README.txt
 share/doc/roundup/ZPL.txt
+share/doc/roundup/admin_guide.html
+share/doc/roundup/admin_guide.txt
 share/doc/roundup/announcement.html
 share/doc/roundup/announcement.txt
 share/doc/roundup/customizing.html
 share/doc/roundup/customizing.txt
+share/doc/roundup/debugging.txt
 share/doc/roundup/default.css
 share/doc/roundup/design.html
 share/doc/roundup/design.txt
@@ -214,16 +242,21 @@ share/doc/roundup/index.html
 share/doc/roundup/index.txt
 share/doc/roundup/installation.html
 share/doc/roundup/installation.txt
-share/doc/roundup/maintenance.html
-share/doc/roundup/maintenance.txt
+share/doc/roundup/mysql.html
 share/doc/roundup/mysql.txt
 share/doc/roundup/original_overview.html
 share/doc/roundup/overview.txt
+share/doc/roundup/postgresql.html
+share/doc/roundup/postgresql.txt
 share/doc/roundup/spec.html
+share/doc/roundup/tracker_templates.html
+share/doc/roundup/tracker_templates.txt
 share/doc/roundup/upgrading.html
 share/doc/roundup/upgrading.txt
 share/doc/roundup/user_guide.html
 share/doc/roundup/user_guide.txt
+share/doc/roundup/whatsnew-0.7.html
+share/doc/roundup/whatsnew-0.7.txt
 share/roundup/cgi-bin/roundup.cgi
 share/roundup/templates/classic/TEMPLATE-INFO.txt
 share/roundup/templates/classic/__init__.py
@@ -234,6 +267,7 @@ share/roundup/templates/classic/detectors/messagesummary.py
 share/roundup/templates/classic/detectors/nosyreaction.py
 share/roundup/templates/classic/detectors/statusauditor.py
 share/roundup/templates/classic/detectors/userauditor.py
+share/roundup/templates/classic/html/_generic.collision.html
 share/roundup/templates/classic/html/_generic.help.html
 share/roundup/templates/classic/html/_generic.index.html
 share/roundup/templates/classic/html/_generic.item.html
@@ -249,6 +283,7 @@ share/roundup/templates/classic/html/keyword.item.html
 share/roundup/templates/classic/html/msg.index.html
 share/roundup/templates/classic/html/msg.item.html
 share/roundup/templates/classic/html/page.html
+share/roundup/templates/classic/html/query.edit.html
 share/roundup/templates/classic/html/query.item.html
 share/roundup/templates/classic/html/style.css
 share/roundup/templates/classic/html/user.forgotten.html
@@ -256,7 +291,6 @@ share/roundup/templates/classic/html/user.index.html
 share/roundup/templates/classic/html/user.item.html
 share/roundup/templates/classic/html/user.register.html
 share/roundup/templates/classic/html/user.rego_progress.html
-share/roundup/templates/classic/htmlbase.py
 share/roundup/templates/classic/interfaces.py
 share/roundup/templates/minimal/TEMPLATE-INFO.txt
 share/roundup/templates/minimal/__init__.py
@@ -264,6 +298,7 @@ share/roundup/templates/minimal/config.py
 share/roundup/templates/minimal/dbinit.py
 share/roundup/templates/minimal/detectors/__init__.py
 share/roundup/templates/minimal/detectors/userauditor.py
+share/roundup/templates/minimal/html/_generic.collision.html
 share/roundup/templates/minimal/html/_generic.help.html
 share/roundup/templates/minimal/html/_generic.index.html
 share/roundup/templates/minimal/html/_generic.item.html
@@ -285,6 +320,7 @@ share/roundup/templates/minimal/interfaces.py
 @dirrm share/roundup/cgi-bin
 @dirrm share/roundup
 @dirrm share/doc/roundup/images
+@dirrm share/doc/roundup/.xvpics
 @dirrm share/doc/roundup
 @dirrm ${PYSITELIB}/roundup/scripts
 @dirrm ${PYSITELIB}/roundup/cgi/ZTUtils
