@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15.2.1 2003/04/06 20:56:07 grant Exp $
+# $NetBSD: Makefile,v 1.15.2.2 2003/06/19 00:37:58 grant Exp $
 #
 
 DISTNAME=	ircii-pana-1.0c19
 PKGNAME=	bitchx-1.0.3.19
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/BitchX
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.bitchx.org/pub/BitchX/source/ \
