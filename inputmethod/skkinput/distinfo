@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/05/31 13:00:02 seb Exp $
+
+SHA1 (skkinput-2.03.tar.gz) = d36af4f0c28ce86baee658560e36566885fbe2da
+Size (skkinput-2.03.tar.gz) = 398821 bytes
+SHA1 (patch-aa) = 662b5d54615745fa2bad9d662f9db88009df5d4e
+SHA1 (patch-ab) = 205a6fed61467f188abecfa559d3405832fe07a8
+SHA1 (patch-ac) = 77a06d8827e048c735543cae75ce6116b1318264
+SHA1 (patch-ad) = 1c5597d2fa41a00ce662eec5b8944dd823b4b8fd
+SHA1 (patch-ae) = 1cf9ea8cb4bf29ffcdb8d5ad5b2b6d74b6e0eca5
