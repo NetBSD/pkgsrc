@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.5 2003/06/27 10:18:55 seb Exp $
+$NetBSD: distinfo,v 1.6 2004/12/02 00:06:40 dmcmahill Exp $
 
-SHA1 (ng-spice-rework-14.tar.gz) = 4610d694dc0bacf4828ec480a88b7f89ba1140a0
-Size (ng-spice-rework-14.tar.gz) = 2762582 bytes
-SHA1 (patch-aa) = c17bac29ddd4e1a682afc34a1216e795bb77eb74
-SHA1 (patch-ab) = 2537cf3f4afb96c2e79a4a2e4a7053e1def02a01
-SHA1 (patch-ac) = 54d879f5d82b535d4553705d5610e8694353e4cc
-SHA1 (patch-ad) = 5061e4e3366a230600fba9a3f1d44c29bae6b78c
-SHA1 (patch-ae) = 5d800d68b5d90e80193080201ffb8f64b7e69322
+SHA1 (ngspice-rework15.tgz) = 4b6674c3342b69c573fce16e727c6f498286c2ad
+Size (ngspice-rework15.tgz) = 4813438 bytes
+SHA1 (patch-ab) = 1bbe7b422c130aee4c3cb601afdf3d7b70b42012
+SHA1 (patch-ac) = e03f74c08f801094dab5a2c82ca3726c2623b312
+SHA1 (patch-ad) = 385430708a5cd73d1d709121613058e2d4189ea8
+SHA1 (patch-ae) = cacf17a97fa8edcb70a6f8b89ddb97657643afcc
+SHA1 (patch-af) = 06bc6f9bbf08c28304e4c2eb786f3c7039c83a94
+SHA1 (patch-ag) = 524b9ae6ab3c8980f4649dd65d83db89360a2aa8

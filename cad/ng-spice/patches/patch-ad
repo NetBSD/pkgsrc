@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.3 2002/04/04 01:24:58 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.4 2004/12/02 00:06:40 dmcmahill Exp $
 
-only remove -g not all CFLAGS!!
-
---- configure.orig	Wed Apr  3 03:26:44 2002
-+++ configure	Wed Apr  3 09:29:20 2002
-@@ -1311,5 +1311,5 @@
+--- configure.in.orig	Wed Jan 28 00:07:29 2004
++++ configure.in
+@@ -160,7 +160,7 @@ fi
+ 
  if test "$enable_debug" = "no"; then
- 	echo "configure: warning: Removing debugging option!" 1>&2
+ 	AC_MSG_WARN(Removing debugging option!)
 -	CFLAGS=" "
 +	CFLAGS="`echo $CFLAGS | sed 's;-g;;g'`"
  fi
+ 
  
