@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk,v 1.4 1998/05/29 13:57:09 agc Exp $
+#	$NetBSD: bsd.own.mk,v 1.5 1998/07/14 15:53:54 agc Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -115,6 +115,13 @@ NOPIC=
 OBJECT_FMT?=ELF
 .else
 OBJECT_FMT?=a.out
+.endif
+
+.if (${MACHINE_ARCH} == "vax") || \
+    (${MACHINE_ARCH} == "powerpc")
+SHLIB_TYPE?=	""
+.else
+SHLIB_TYPE?=	${OBJECT_FMT}
 .endif
 
 # No lint, for now.
