@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/05/05 06:24:58 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/08 09:13:30 martti Exp $
 
-DISTNAME=		dbh_1.0-18
-PKGNAME=		dbh-1.0.18
+DISTNAME=		dbh-1.0.20
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dbh/}
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
 HOMEPAGE=		http://dbh.sourceforge.net/
