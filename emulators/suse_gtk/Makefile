@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/19 00:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/23 12:06:07 tron Exp $
 
 DISTNAME=		suse_gtk-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/} \
 			${MASTER_SITE_SUSE:=xdev1/}
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		tron@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for GTK binaries
 

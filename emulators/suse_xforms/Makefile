@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/19 00:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/01/23 12:06:08 tron Exp $
 
 DISTNAME=		xforms
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=pay3/}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tron@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for xforms binaries
 
