@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.18 2004/02/02 12:19:10 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.19 2004/02/24 10:02:23 jlam Exp $
 
 # Do not directly include this file in package Makefiles. It is
 # automatically included when required based on USE_GCC2.
@@ -39,7 +39,7 @@ BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${MACHINE_GNU_PLATFORM}/include/*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libiberty.*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libstdc++.*
 
-BUILDLINK_TARGETS+=	gcc-buildlink
+BUILDLINK_PRE_TARGETS+=	gcc-buildlink
 BUILDLINK_TARGETS+=	libstdc++-buildlink-la
 
 gcc-buildlink: _BUILDLINK_USE
