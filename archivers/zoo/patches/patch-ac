@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1999/11/12 05:17:21 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2003/01/19 06:46:24 salo Exp $
 
 --- ./makefile	Tue Jul 16 17:52:08 1991
 +++ /usr/pkgsrc/archivers/zoo/work.i386.unpatched/makefile	Fri Nov 12 06:19:40 1999
@@ -36,8 +36,8 @@ $NetBSD: patch-ac,v 1.1 1999/11/12 05:17:21 hubertf Exp $
 -inst_prod:
 -	mv zoo $(DESTDIR)/zoo
 +install:
-+	$(INSTALL_PROGRAM) $(TARGETS) $(DESTDIR)
-+	$(INSTALL_DATA) zoo.1 fiz.1 $(PREFIX)/man/man1
++	$(BSD_INSTALL_PROGRAM) $(TARGETS) $(DESTDIR)
++	$(BSD_INSTALL_DATA) zoo.1 fiz.1 $(PREFIX)/man/man1
  
  # executable targets
  TARGETS = zoo fiz
