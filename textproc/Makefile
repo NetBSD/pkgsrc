@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2002/01/31 08:13:50 martti Exp $
+# $NetBSD: Makefile,v 1.138 2002/01/31 08:40:41 martti Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -28,6 +28,7 @@ SUBDIR+=	helpdeco
 SUBDIR+=	hevea
 SUBDIR+=	html
 SUBDIR+=	html2text
+SUBDIR+=	html2wml
 SUBDIR+=	icu
 SUBDIR+=	isearch
 SUBDIR+=	iso12083
