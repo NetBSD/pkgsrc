@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/24 14:45:15 danw Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/27 01:34:09 dmcmahill Exp $
 bin/camlp4
 bin/camlp4o
 bin/camlp4r
@@ -406,7 +406,6 @@ lib/ocaml/libmldbm.a
 lib/ocaml/libnums.a
 lib/ocaml/libstr.a
 lib/ocaml/libthreads.a
-lib/ocaml/libthreadsnat.a
 lib/ocaml/libunix.a
 lib/ocaml/list.cmi
 lib/ocaml/list.ml
@@ -551,7 +550,6 @@ lib/ocaml/threads/event.cmi
 lib/ocaml/threads/mutex.cmi
 lib/ocaml/threads/thread.cmi
 lib/ocaml/threads/threadUnix.cmi
-lib/ocaml/threads/threads.a
 lib/ocaml/threads/threads.cma
 lib/ocaml/topdirs.cmi
 lib/ocaml/toplevellib.cma
