@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.100 2004/04/12 08:52:14 jmmv Exp $
+# $NetBSD: pkglint.pl,v 1.101 2004/04/15 09:41:22 jmmv Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1327,6 +1327,13 @@ EOF
 					&perror("WARN: dependency to $1 ".
 						"listed in $j. Consider using".
 						" USE_GMAKE.");
+				}
+
+				# check direct dependencies on -dirs packages
+				if ($l =~ /^([-a-zA-Z0-9]+)-dirs[-><=]+(.*)/) {
+					&perror("WARN: dependency to $1-dirs ".
+						"listed in $j. Consider using".
+						" USE_DIRS+=$1-$2.");
 				}
 
 				# check pkg dir existence
