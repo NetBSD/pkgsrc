@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/19 16:05:21 agc Exp $
 bin/bing
 man/man8/bing.8.gz
 share/doc/bing/README

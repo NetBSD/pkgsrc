@@ -3,6 +3,7 @@
 # Date created:		28 December 1996
 # Whom:			jseger@scds.com
 #
+# $NetBSD: Makefile,v 1.2 1997/11/19 16:02:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/10/13 09:14:49 tg Exp
 #
 
