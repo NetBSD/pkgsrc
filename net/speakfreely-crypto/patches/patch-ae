@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/10/11 05:49:03 jlam Exp $
+
+--- speaker.c.orig	Tue Sep 14 05:53:42 1999
++++ speaker.c	Mon Oct 11 00:15:13 1999
+@@ -10,6 +10,10 @@
+ #include "speakfree.h"
+ #include "version.h"
+ 
++#ifndef SOUNDDIR
++#define SOUNDDIR
++#endif
++
+ static int audiok = FALSE;	      /* Audio initialised flag */
+ static int audiotime = 0;	      /* Audio timeout counter */
+ static int debugging = FALSE;	      /* Debugging enabled */
+@@ -53,7 +57,7 @@
+ static char *replyfile = NULL;	      /* Reply file pathname */
+ static char *replycmdexe = NULL;
+ static char *replycmd = "sfmike -t";  /* Default reply command */
+-static char *busysignal = "sleep 10; sfmike %s busy.au"; /* Default busy signal command */
++static char *busysignal = "sleep 10; sfmike %s " SOUNDDIR "busy.au"; /* Default busy signal command */
+ static int busytimeout = 60 * 1000000L; /* Busy signal timeout interval */
+ static int dobusy = FALSE;	      /* Reject calls when busy ? */
+ #ifdef HALF_DUPLEX
