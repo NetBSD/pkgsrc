@@ -1,11 +1,14 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2001/07/02 19:58:30 jlam Exp $
+# $NetBSD: INSTALL,v 1.4 2001/08/08 07:37:51 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 LOCALBASE="@LOCALBASE@"
+
+CP="@CP@"
+GREP="@GREP@"
 LN="@LN@"
 
 case ${STAGE} in
@@ -13,6 +16,15 @@ PRE-INSTALL)
 	;;
 
 POST-INSTALL)
+	X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+
+	echo -n "Updating ${X11_HOSTDEF}..."
+	${CP} -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
+	( ${GREP} -v LessTif ${X11_HOSTDEF}.bak; \
+	  echo '#include <LessTif.def>' ) \
+		> ${X11_HOSTDEF}
+	echo "done."
+
 	if [ ${PKG_PREFIX} != ${LOCALBASE} ]
 	then
 		${LN} -fs ${PKG_PREFIX}/share/aclocal/ac_find_motif.m4 \
