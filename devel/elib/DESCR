@@ -7,4 +7,4 @@ Elib contains code for:
  - container data structures (queues, stacks, AVL trees, etc)
  - string handling functions missing in standard emacs
  - minibuffer handling functions missing in standard emacs
- - routines for handling lists of so called cookies in a buffer. 
+ - routines for handling lists of so called cookies in a buffer.

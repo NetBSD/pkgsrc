@@ -1,4 +1,4 @@
-Xpdf is a viewer for Portable Document Format (PDF) files. 
+Xpdf is a viewer for Portable Document Format (PDF) files.
 
 Xpdf is designed to be small and efficient.  It runs under X, using
 the Motif libraries.  It can use Type 1, TrueType, or standard X

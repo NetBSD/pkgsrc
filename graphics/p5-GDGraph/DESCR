@@ -1,5 +1,5 @@
 GD::Graph is a perl5 module to create charts using the GD
-module. 
+module.
 
 `GD::Graph::lines'
    Create a line chart.

@@ -8,15 +8,15 @@ animations.  The package includes:
   drawing editor), in Tektronix format, or in GNU Metafile format. Output in
   Postscript format may be edited with the idraw drawing editor.
 * GNU plot, which translates GNU Metafile format to any of the other formats.
-* GNU tek2plot, for translating legacy Tektronix data to any of the above 
+* GNU tek2plot, for translating legacy Tektronix data to any of the above
   formats.
-* GNU plotfont, for displaying character maps of the fonts that are available 
+* GNU plotfont, for displaying character maps of the fonts that are available
   in the above formats.
-* GNU spline, which does spline interpolation of data. 
+* GNU spline, which does spline interpolation of data.
 * GNU ode, which numerically integrates a system consisting of one or more
   ordinary differential equations.
 
 The programs graph, plot, tek2plot, and plotfont are based on GNU libplot, a C
-function library for device-independent two-dimensional vector graphics. GNU 
-libplot is compatible with the traditional Unix libplot library, but is much 
+function library for device-independent two-dimensional vector graphics. GNU
+libplot is compatible with the traditional Unix libplot library, but is much
 more powerful. It is installed as part of the package.

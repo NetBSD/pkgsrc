@@ -10,5 +10,5 @@ Intellimouse compatible and can be used with this as well.  For more
 information on setting up your wheeled mouse to work with X, see either the
 imwheel man page or the FAQ.
 
-Don't forget to add "ZAxisMapping 4 5" to the Pointer Section 
+Don't forget to add "ZAxisMapping 4 5" to the Pointer Section
 of your XF86Config file!

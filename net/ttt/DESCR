@@ -6,10 +6,10 @@ it helps you find out what to look into with tcpdump. ttt monitors the
 network and automatically picks up the main contributors of the traffic
 within the time window. The graphs are updated every second by default.
 
-Features: 
-	Automatic Ranking of Protocols and Hosts 
-	Real-Time Monitoring 
-	Remote Monitoring with IP-Multicast support 
-	Accepts tcpdump output 
-	IPv6 Aware (experimental) 
-	Portable and easy to customize 
+Features:
+	Automatic Ranking of Protocols and Hosts
+	Real-Time Monitoring
+	Remote Monitoring with IP-Multicast support
+	Accepts tcpdump output
+	IPv6 Aware (experimental)
+	Portable and easy to customize

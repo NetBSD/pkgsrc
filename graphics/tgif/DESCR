@@ -1,6 +1,6 @@
 Tgif is a X11 based 2-D drawing program based on Xlib.
 
-Tgif is a full featured program including the ability to 
+Tgif is a full featured program including the ability to
 export (from the menu or command line) PS and EPSF files.
 In addition libraries of symbols can be created for reuse.
 

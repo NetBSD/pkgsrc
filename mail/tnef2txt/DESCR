@@ -10,10 +10,10 @@ separate MIME attachments, they are included in the TNEF attachment. To handle
 this, I wrote a program tnef2txt which will dump the information in the TNEF
 bitstream, and also dump files to disk which are contained in the bitstream.
 Just run the program without arguments for usage information. You can call this
-program from a mailcap file with the following line: 
+program from a mailcap file with the following line:
 
 application/ms-tnef; tnef2txt %s; copiousoutput
 
-or, if you wish to save attachments to disk which are in the bitstream: 
+or, if you wish to save attachments to disk which are in the bitstream:
 
 application/ms-tnef; tnef2txt -s %s; copiousoutput

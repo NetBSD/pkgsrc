@@ -1,7 +1,7 @@
 IRC Proxy Daemon that supports virtual hosting.
 
    BNC sports many important advances, including the following:
-   
+  
    RFC 1459 compatible.
    Vhost support.
    Vhost lists in configuration file, to be displayed on call.

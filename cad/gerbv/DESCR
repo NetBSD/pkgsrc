@@ -2,4 +2,4 @@ Gerber Viewer (gerbv) is a viewer for Gerber files. Gerber files are
 generated from PCB CAD system and sent to PCB manufacturers as basis
 for the manufacturing process.
 
-Additionally, gerbv can read and display NC drill files.  
+Additionally, gerbv can read and display NC drill files. 

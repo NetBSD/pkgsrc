@@ -8,5 +8,5 @@ f2c is distributed by netlib.
 There do not appear to be released versions of f2c with an assigned
 version number.  When updates are made, the "changes" file is updated,
 but there is no associated version number.  I don't have any suggestions
-for keeping track of the version except to consult the "changes" file 
+for keeping track of the version except to consult the "changes" file
 which will be installed as ${PREFIX}/share/doc/f2c/changes for reference.

@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: tflat,v 1.7 2002/10/06 20:15:05 dmcmahill Exp $
+# $NetBSD: tflat,v 1.8 2003/05/06 17:42:04 jmmv Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,12 +43,12 @@ BEGIN {
 		exit(1);
 	}
 
-	if ( ARGV[1] == "-u" ) { 
+	if ( ARGV[1] == "-u" ) {
 		up=1;
 	}
 	else{
 		if ( ARGV[1] == "-d" ) { up=0; }
-		else{ 
+		else{
 			printf("tflat: unknown option  \"%s\"\n",ARGV[1]);
 			usage();
 			exit(1);
@@ -59,7 +59,7 @@ BEGIN {
 
 	#
 	# Read in the entire depends tree
-	# 
+	#
 	if (up){
         	while(getline < InFile > 0){
 			if ($1 in topdepends)
@@ -104,7 +104,7 @@ BEGIN {
 
 	printf("\n");
         exit 0
-} 
+}
 
 function find_all_depends(pkg,pkgreg,i,deps){
 	# if we find the package already has been fully depended

@@ -1,5 +1,5 @@
 This copy of Wharf is taken from Afterstep-1.0.  It is mostly compatible
-with FVWM2 because back then the API didn't differ all that much. 
+with FVWM2 because back then the API didn't differ all that much.
 
 The Wharf module is a free-floating application loader that can execute
 programs, "Swallow" running programs, and contain "Folders"  of more

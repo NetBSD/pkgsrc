@@ -1,4 +1,4 @@
-tnftpd is the a server for the Internet File Transfer Protocol (ftp). 
+tnftpd is the a server for the Internet File Transfer Protocol (ftp).
 The server uses the TCP protocol and listens at the port specified in
 the ``ftp'' service specification; see services(5).
 

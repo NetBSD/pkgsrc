@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/04/14 18:34:07 cjep Exp $
+$NetBSD: MESSAGE,v 1.2 2003/05/06 17:42:15 jmmv Exp $
 
 Example of the configfile can be found at:
 	${PREFIX}/share/examples/qadsl.conf.sample
 
-Copy this file to ${PKG_SYSCONFDIR}/qadsl.conf and enter your 
+Copy this file to ${PKG_SYSCONFDIR}/qadsl.conf and enter your
 username and password.
 
 ===========================================================================

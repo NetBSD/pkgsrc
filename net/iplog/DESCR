@@ -1,10 +1,10 @@
-iplog is a TCP/IP traffic logger.  Currently, it is capable of logging 
+iplog is a TCP/IP traffic logger.  Currently, it is capable of logging
 TCP, UDP and ICMP traffic.  Adding support for other protocols
 should be relatively easy.
 
 iplog's capabilities include the ability to detect TCP port
 scans, TCP null scans, FIN scans, UDP and ICMP "smurf" attacks,
-bogus TCP flags (used by scanners to detect the operating system in use), 
+bogus TCP flags (used by scanners to detect the operating system in use),
 TCP SYN scans, TCP "Xmas" scans, ICMP ping floods, UDP scans, and IP
 fragment attacks.
 

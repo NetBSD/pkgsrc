@@ -6,4 +6,4 @@ this one around.  Plus, it compiles easily on PCs with djgpp.
 I've renamed all the installed files to be libdes, libdes.h,
 etc., to avoid conflicts with other packages.
 
-NetBSD package by: John Refling <refling@comet.lbl.gov>          
+NetBSD package by: John Refling <refling@comet.lbl.gov>         

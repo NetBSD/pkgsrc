@@ -7,9 +7,9 @@ provides a set of pre-built, user-interface objects such as canvases,
 scrollbars, menus, and control panels.  The appearance and functionality
 of these objects follow the OPEN LOOK Graphical User Interface (GUI)
 specification.  XView features an object-oriented style Application
-Programmer's Interface (API) that is straightforward and easy to learn. 
+Programmer's Interface (API) that is straightforward and easy to learn.
 
 This package does not contain anything by itself -- it is a "meta-package"
 that depends on other XView packages.  Its sole purpose is to require
 dependencies so users can install this package only and have all the XView
-stuff pulled in by the port/package dependency mechanism. 
+stuff pulled in by the port/package dependency mechanism.

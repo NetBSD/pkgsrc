@@ -1,7 +1,7 @@
-PostgreSQL is a robust, next-generation, Object-Relational DBMS (ORDBMS), 
-derived from the Berkeley Postgres database management system.  While 
-PostgreSQL retains the powerful object-relational data model, rich data types 
-and easy extensibility of Postgres, it replaces the PostQuel query language 
+PostgreSQL is a robust, next-generation, Object-Relational DBMS (ORDBMS),
+derived from the Berkeley Postgres database management system.  While
+PostgreSQL retains the powerful object-relational data model, rich data types
+and easy extensibility of Postgres, it replaces the PostQuel query language
 with an extended subset of SQL.
 
 PostgreSQL is free and the complete source is available.

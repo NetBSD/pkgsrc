@@ -4,4 +4,4 @@ electronic data, such as graphic information. With the multidimensional binary
 tree it is possible to mathematically prove that access time to any
 particular record is minimized (using the concept of critical points from
 calculus), which provides the means to construct optimized databases for
-particular applications.  
+particular applications. 

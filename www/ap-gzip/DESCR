@@ -5,7 +5,7 @@ content 'on the fly' to any browser or user-agent that is capable of
 receiving it. It is a software based solution that runs perfectly in
 conjunction with any Apache Web Server on both UNIX and Win32 platforms.
 
-No additional client side software is required to use this product. 
+No additional client side software is required to use this product.
 
 mod_gzip does not require ANY software to be installed on the client
 side. There is no accompanying 'Plug-in' or 'Client Proxy' of any kind.

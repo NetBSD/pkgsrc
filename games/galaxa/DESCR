@@ -132,7 +132,7 @@ THE GAME SCREEN
 ---------------
 The game screen looks similar to this text representation:
 
-   _________________________________________ 
+   _________________________________________
   | Score: 00000    Level: 01     Lives: 03 |  <-- Game status
   |                                         |
   |                   X     X               |

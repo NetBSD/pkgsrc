@@ -4,4 +4,4 @@ simple to use and can be run in scripts. Big datasets are handled
 reasonably well on small machines.
 
   In spite of its low overhead, statist can do quite a bunch of regression
-functions and tests in a comprehensible way. It is quite powerful. 
+functions and tests in a comprehensible way. It is quite powerful.

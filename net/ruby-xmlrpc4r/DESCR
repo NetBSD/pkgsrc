@@ -1,4 +1,4 @@
-Michael Neumann's xmlrpc4r module is an implementation of the 
+Michael Neumann's xmlrpc4r module is an implementation of the
 XML-RPC protocol for Ruby.
 
 It supports:

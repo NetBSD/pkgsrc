@@ -14,11 +14,11 @@ Internet Draft and it will seamlessly support Windows PPTP clients with the
 full range of encryption and authentication features.
 
 Features for version 1.0.0:
-  . Works with Windows 2000 clients 
+  . Works with Windows 2000 clients
   . Available PPPD patch allows Windows compatible encryption and
-     authentication. (MSCHAPv2 and MPPE 40-128 bit RC4 encryption) 
-  . Support for multiple clients 
-  . Works with Windows 95/98/NT PPTP clients 
-  . Works with C. S. Ananian's PPTP Linux clients 
+     authentication. (MSCHAPv2 and MPPE 40-128 bit RC4 encryption)
+  . Support for multiple clients
+  . Works with Windows 95/98/NT PPTP clients
+  . Works with C. S. Ananian's PPTP Linux clients
   . PoPToP is, and will remain, totally free under the GNU General Public
      License

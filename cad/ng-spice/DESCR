@@ -1,6 +1,6 @@
-NG-SPICE is the program being developed as the replacement for Berkeley 
+NG-SPICE is the program being developed as the replacement for Berkeley
 SPICE.  Using the Berkeley code as a starting point, the NG-SPICE team
-is working on improving the build system, adding to the models, and 
+is working on improving the build system, adding to the models, and
 improving the analysis capability.
 
 SPICE is a general-purpose circuit simulation program for nonlinear dc,

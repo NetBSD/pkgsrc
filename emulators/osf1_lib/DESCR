@@ -5,5 +5,5 @@ Linux/Alpha.
 This package supports running Tru64/OSF1 binaries that do not make use
 of MACH system calls.
 
-Note that this is not a complete set of Tru64/OSF1 shared libraries, 
+Note that this is not a complete set of Tru64/OSF1 shared libraries,
 but rather the minimal set required to run netscape.

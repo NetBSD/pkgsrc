@@ -2,4 +2,4 @@ irchat is the IRC client based on Emacs lisp.
 
  irchat-PJ Project modify the irchat client.
    - Support Emacs-20
-   - Some bugfix for DreamCastIRC client 
+   - Some bugfix for DreamCastIRC client

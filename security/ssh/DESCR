@@ -24,7 +24,7 @@ FEATURES
     secure channel.  Fake Xauthority information is automatically
     generated and forwarded to the remote machine; the local client
     automatically examines incoming X11 connections and replaces the
-    fake authorization data with the real data (never telling the 
+    fake authorization data with the real data (never telling the
     remote machine the real information).
 
  o  Arbitrary TCP/IP ports can be redirected through the encrypted channel

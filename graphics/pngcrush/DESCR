@@ -5,6 +5,6 @@ an PNG filter methods.  It also can be used to remove unwanted
 ancillary chunks, or to add certain chunks including gAMA, tRNS, and
 textual chunks.
 
-Pngcrush is open source and may be used by anyone without fee. 
+Pngcrush is open source and may be used by anyone without fee.
 
 The author of pngcrush is Glenn Randers-Pehrson, randeg@alum.rpi.edu

@@ -1,4 +1,4 @@
-qmailanalog is a collection of tools to help you analyze qmail's activity 
+qmailanalog is a collection of tools to help you analyze qmail's activity
 record. It supplies statistics to answer a wide variety of questions:
 
   overall: how many messages? recipients? attempts? etc.
@@ -8,5 +8,5 @@ record. It supplies statistics to answer a wide variety of questions:
   successes, failures, deferrals: why? how often? how much delay?
   senders, suids: messages? bytes? load? recipients? attempts? delay?
 
-qmailanalog also includes several tools to focus attention on particular 
+qmailanalog also includes several tools to focus attention on particular
 senders, recipients, or messages.

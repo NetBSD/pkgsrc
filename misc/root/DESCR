@@ -5,7 +5,7 @@ used to get direct access to the separate attributes of the selected objects,
 without having to touch the bulk of the data. Included are histograming methods
 in 1, 2 and 3 dimensions, curve fitting, function evaluation, minimisation,
 graphics and visualization classes to allow the easy setup of an analysis
-system that can query and process the data interactively or in batch mode. 
+system that can query and process the data interactively or in batch mode.
 
 Thanks to the builtin CINT C++ interpreter the command language, the scripting,
 or macro, language and the programming language are all C++. The interpreter

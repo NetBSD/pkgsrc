@@ -11,7 +11,7 @@
     HEVEA understands LaTeX macro definitions. Simple user style
     files are understood with little or no modifications.
     Furthermore, HEVEA customization is done by writing LaTeX code.
-    
+   
     HEVEA is written in Objective Caml, as many lexers. It is quite fast
     and flexible. Using HEVEA it is possible to translate large documents
     such as manuals, books, etc. very quickly. All documents are

@@ -12,6 +12,6 @@ or been removed.  Other files in the doc directory contain manual pages
 for the library packages used by sam.
 
 Sam is composed of two programs: sam itself, which does the command processing
-and file manipulation; and samterm, which controls the display and 
+and file manipulation; and samterm, which controls the display and
 interacts with the user.  You can run sam on one machine and samterm on another
 connected via remote execution.

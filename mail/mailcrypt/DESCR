@@ -8,9 +8,9 @@ Features :
 
  *  An interface to the usual PGP functions, including encryption,
     decryption, signature creation, signature verification, key
-    addition, and key extraction 
- *  A passphrase cache with configurable timeout 
- *  Support for multiple secret keys 
+    addition, and key extraction
+ *  A passphrase cache with configurable timeout
+ *  Support for multiple secret keys
  *  A flexible interface to anonymous remailers, including Mixmaster
-    support 
- *  An automagic interface to the PGP public key servers through HTTP 
+    support
+ *  An automagic interface to the PGP public key servers through HTTP

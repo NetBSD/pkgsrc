@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2003/04/22 09:50:01 grant Exp $
+# $NetBSD: Makefile,v 1.99 2003/05/06 17:42:32 jmmv Exp $
 
 DISTNAME=		openssh-3.6.1p1
 PKGNAME=		openssh-3.6.1.1
@@ -27,7 +27,7 @@ USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CRYPTO=			yes
 
-# retain the following line, for IPv6-ready pkgsrc webpage 
+# retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		USE_INET6
 #BUILD_DEFS+=		KERBEROS
 

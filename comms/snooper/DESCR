@@ -5,7 +5,7 @@ For example, say you would like to snoop the following configuration
 		partyA ---cableAB--- partyB
 where partyA is a computer and partyB is a computer/modem/digi-cam/whatever.
 
-A third machine called "console" running snooper can be used to snoop 
+A third machine called "console" running snooper can be used to snoop
 the connection between partyA and cableAB, as follows:
 	partyA ---cableX--- <dev0>console<dev1>---cableAB--- party B
 

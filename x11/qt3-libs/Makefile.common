@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/05/02 12:16:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/05/06 17:43:12 jmmv Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	-no-xinerama
 # and 3.0.5 for older toolchains. Removing inline for newer toolchains
 # produces smaller code. Removing inline for older toolchains prod-
 # uces buggy code.
-# 
+#
 
 GCC_VERSION!=           ${CXX} --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs)

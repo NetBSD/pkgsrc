@@ -8,7 +8,7 @@ labelling CD compilations, and copies of CDs.
   Note that cdlabelgen does not actually print anything -- it just
 spits out postscript, which you can then do with as you please.
 
-  cdlabelgen's purpose in life is twofold: 
+  cdlabelgen's purpose in life is twofold:
 
   1.) To be run automatically and swiftly from a shell script
       and automatically generate a frontcard and a traycard for
@@ -17,4 +17,4 @@ spits out postscript, which you can then do with as you please.
       case bear the label of what the CD is.
 
   2.) To have a minimum of dependencies -- cdlabelgen only
-      requires perl. 
+      requires perl.

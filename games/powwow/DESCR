@@ -1,5 +1,5 @@
 powwow is a client program, which replaces telnet for the lazy
-mudder who wants some (only some?) extra features. 
+mudder who wants some (only some?) extra features.
 It is primarily designed for DikuMUDs, but nothing prevents its use
 for other types of muds.  powwow is based on another client, cancan,
 and cancan was originally inspired by tintin (yet another client)

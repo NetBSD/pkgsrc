@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/03/25 17:27:49 grant Exp $
+$NetBSD: MESSAGE,v 1.5 2003/05/06 17:42:36 jmmv Exp $
 
 If you are upgrading from a version of sudo prior to 1.6, please read
- 
+
 	${PREFIX}/share/doc/sudo/UPGRADE
 
 on how to modify your sudoers file appropriately.

@@ -1,4 +1,4 @@
-The AiCA is the CA (Certification Authority) Package. 
+The AiCA is the CA (Certification Authority) Package.
 
 This package contains several applications, such as:
   * aica     -- The CA program to issue, update, and revoke certificates.

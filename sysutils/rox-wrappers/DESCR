@@ -9,5 +9,5 @@ files to them.
 
 Some of these wrappers can run various different commands - for example,
 Lock can either use xlock or xscreensaver.  To change the command used,
-load the AppRun script in the Lock directory into Edit and move the hash 
+load the AppRun script in the Lock directory into Edit and move the hash
 (#) mark to the other line (lines beginning with # are ignored).

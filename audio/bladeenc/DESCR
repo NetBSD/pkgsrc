@@ -1,5 +1,5 @@
 BladeEnc is a program to generate MP3 files from WAV or AIFF sound files.
-   
+  
 Any number of WAV/AIFF-files can be specified on the commandline and you
 can even use wildcards to specify more than one file at the same time. For
 example will the command "BladeEnc *.wav" compress all WAV-files in the

@@ -6,7 +6,7 @@ database file called
 
 	${PREFIX}/etc/priv/<username>
 
-Each line of the database file is a colon-seperated list of fields. 
+Each line of the database file is a colon-seperated list of fields.
 The first two fields must be specified.  Blank lines or lines
 beginning with a ``#'' character are ignored.  The fields, in order,
 are:

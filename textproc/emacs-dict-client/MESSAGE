@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/11/20 08:39:22 tron Exp $
+$NetBSD: MESSAGE,v 1.2 2003/05/06 17:42:48 jmmv Exp $
 
 You may want to add
 
-(setq load-path 
+(setq load-path
       (cons (expand-file-name "${PREFIX}/share/emacs/site-lisp/dictionary")
 	    load-path))
 (load "dictionary-init")

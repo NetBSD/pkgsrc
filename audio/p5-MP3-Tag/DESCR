@@ -3,7 +3,7 @@ tags of mp3-files. (Other tags hopefully to follow).
 
 In the directory examples, you find 2 examples, how to use
 the module. You can also read the documentation of this
-module with 
+module with
 
 man MP3::Tag
 man MP3::Tag::ID3v1
@@ -11,6 +11,6 @@ man MP3::Tag::ID3v2
 man MP3::Tag::ID3v2-Data
 
 More information about this project, new releases and so on, can
-be found at:         
+be found at:        
 
 http://tagged.sourceforge.net

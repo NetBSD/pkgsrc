@@ -1,8 +1,8 @@
-# $Id: parallel.txt,v 1.2 2003/04/16 09:55:53 wiz Exp $
+# $Id: parallel.txt,v 1.3 2003/05/06 17:42:03 jmmv Exp $
 #
 
 These are my thoughts on how one would want a parallel bulk build to
-work. 
+work.
 
 
 ====================================================================
@@ -72,7 +72,7 @@ Single Machine Build Comments
 ====================================================================
 
 There are several features of this approach that are worth mentioning
-explicitly.  
+explicitly. 
 
 1)  Packages are built in the correct order.  We don't want to rebuild
     the gnome meta-pkg and then rebuild gnome-libs for example.
@@ -100,7 +100,7 @@ explicitly.
     not needed before each build, we reduce the amount of installing
     and deinstalling needed during the build.  For example, it is
     quite common to build several packages in a row which all need GNU
-    make or perl.  
+    make or perl. 
 
 4)  Using the 'supportsfile' to mark all packages which depend upon a
     package which has just failed to build can greatly reduce the time
@@ -123,14 +123,14 @@ master   == master machine.  This machine is in charge of directing
 slave#x  == slave machine #x.  All slave machines are of the same
             MACHINE_ARCH and have the same operating system and access
             the same pkgsrc tree via NFS and access the same binary
-            packages directory.  
+            packages directory. 
 
             If the master machine is also to be used as a build
-            machine, then it is also considered a slave. 
+            machine, then it is also considered a slave.
 
 Prior to starting the build, the master directs one of the slaves to
 extract the dependency information per steps 1-3 in the single machine
-case. 
+case.
 
 The actually build should progress as follows:
 
@@ -182,7 +182,7 @@ network.
 
 -  maybe a hook could be put in place which rsync's the binary package
    tree between the binary package repository machine and the slave
-   machine before and after each package is built? 
+   machine before and after each package is built?
 
 -  security
 

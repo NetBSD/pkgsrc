@@ -6,7 +6,7 @@ order.
 
 CyclicSplitExtensionMethod constructs all (necessarily soluble) groups
 whose given orders are of the form pn .q for different primes p and q
-and which have at least one normal Sylow subgroup. 
+and which have at least one normal Sylow subgroup.
 
 UpwardsExtensions takes as its input a permutation group G and
 positive integer s and returns a list of permutation groups, one for

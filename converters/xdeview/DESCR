@@ -1,4 +1,4 @@
-This is a powerful and easy-to-use tcl/tk-based program 
+This is a powerful and easy-to-use tcl/tk-based program
 which can decode BinHex, uuencoded, xxencoded, and Base64
 formats, and encode in all of those except for BinHex.
 
