@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2000/12/17 18:25:44 jlam Exp $
+$NetBSD: MESSAGE,v 1.7 2001/01/29 11:34:31 wiz Exp $
 
 Add the following to /etc/services:
 
@@ -12,12 +12,13 @@ Add the following to /etc/services:
 
 Add the following to /etc/inetd.conf:
 
- imap   stream  tcp     nowait  root    @PREFIX@/libexec/imapd    imapd
- imaps  stream  tcp     nowait  root    @PREFIX@/libexec/imapd    imapd
- pop2   stream  tcp     nowait  root    @PREFIX@/libexec/ipop2d   ipop2d
- pop3   stream  tcp     nowait  root    @PREFIX@/libexec/ipop3d   ipop3d
- pop3s  stream  tcp     nowait  root    @PREFIX@/libexec/ipop3d   ipop3d
+ imap   stream  tcp     nowait  root    ${PREFIX}/libexec/imapd    imapd
+ imaps  stream  tcp     nowait  root    ${PREFIX}/libexec/imapd    imapd
+ pop2   stream  tcp     nowait  root    ${PREFIX}/libexec/ipop2d   ipop2d
+ pop3   stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
+ pop3s  stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
 
 To put the changes into effect, reboot the machine or "kill -HUP"
 your inetd.
+
 ===========================================================================

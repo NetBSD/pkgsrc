@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/01/21 05:58:50 itojun Exp $
+# $NetBSD: Makefile,v 1.28 2001/01/29 11:34:31 wiz Exp $
 
 DISTNAME=	sendmail.8.11.2
 PKGNAME=	sendmail-8.11.2
@@ -24,7 +24,6 @@ NO_CONFIGURE=	yes
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}/${PKGNAME}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
@@ -38,6 +37,7 @@ USE_DB2?=	YES
 USE_DB2?=	NO
 .endif
 
+MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
@@ -86,14 +86,13 @@ do-build:
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
 	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
-	${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' \
-	  -e 's#@@PREFIX@@#${PREFIX}#g' \
-	  <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
+test-build:
+	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 .if ${USE_DB2} == YES
-	${ECHO} >>${MESSAGE_FILE} ""
-	${ECHO} >>${MESSAGE_FILE} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all"
-	${ECHO} >>${MESSAGE_FILE} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"."
+	${ECHO} "" >> ${MESSAGE_SRC}
+	${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >> ${MESSAGE_SRC}
+	${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >> ${MESSAGE_SRC}
 	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
 	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
 .endif

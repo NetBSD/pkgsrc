@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/02/29 23:31:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/29 11:34:45 wiz Exp $
 #
 
 DISTNAME=	htdig-3.1.5
@@ -16,11 +16,6 @@ CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-image-dir=${PREFIX}/share/examples/htdig \
 		--with-search-dir=${PREFIX}/share/examples/htdig
 CONFIGURE_ENV=	CPPFLAGS=-I${PREFIX}/include/db2
-
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
-post-build:
-	${SED} 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 post-install:
 	if [ ! -f ${PREFIX}/etc/htdig/htdig.conf ]; then \

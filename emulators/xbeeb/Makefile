@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/09/03 10:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/29 11:34:26 wiz Exp $
 #
 
 DISTNAME=	xbeeb-0.3.6
@@ -11,11 +11,11 @@ HOMEPAGE=	http://www.netcomuk.co.uk/~james/BBCMicro/Xbeeb/index.html
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xbeeb
-PLIST_SRC=	${WRKDIR}/PLIST
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 MAN_PAGE=	${WRKDIR}/xbeeb.1
 
 XBEEBROOT=	share/xbeeb
+MESSAGE_SUBST+=	XBEEBROOT=${XBEEBROOT}
+PLIST_SUBST+=	XBEEBROOT=${XBEEBROOT}
 
 # xbeeb build starts in the source directory
 do-configure:
@@ -25,10 +25,10 @@ post-patch:
 	(cd ${WRKSRC}/src && \
 	${MV} Config.h Config.h.dist && \
 	${SED} 's+^\(#define[	 ]*XBEEBROOT[	 ]*\)[^	 ].*$$+\1"${PREFIX}/${XBEEBROOT}/"+' Config.h.dist > Config.h)
-	${SED} 's+#XBEEBROOT#+${XBEEBROOT}+g' ${PKGDIR}/PLIST > ${PLIST_SRC}
+testt:
 	${SED} -e 's+@XBEEBROOT@+${XBEEBROOT}+g' \
 		-e 's+@PREFIX@+${PREFIX}+g' \
-		${PKGDIR}/xbeeb.1 > ${MAN_PAGE}
+		${FILESDIR}/xbeeb.1 > ${MAN_PAGE}
 
 do-build:
 	(cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xbeeb)
@@ -37,15 +37,6 @@ do-build:
 	do \
 		bdftopcf $$i -o `basename $$i .bdf`.pcf ; \
 	done)
-	${ECHO} > ${MESSAGE_FILE} "You must copy the BBC \"BASIC2\" ROM image to"
-	${ECHO} >> ${MESSAGE_FILE} ""
-	${ECHO} >> ${MESSAGE_FILE} "	${PREFIX}/${XBEEBROOT}/roms/BASIC2.rom"
-	${ECHO} >> ${MESSAGE_FILE} ""
-	${ECHO} >> ${MESSAGE_FILE} "and the BBC \"OS1.2\" ROM image to"
-	${ECHO} >> ${MESSAGE_FILE} ""
-	${ECHO} >> ${MESSAGE_FILE} "	${PREFIX}/${XBEEBROOT}/roms/OS1.2.rom"
-	${ECHO} >> ${MESSAGE_FILE} ""
-	${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE.post >>${MESSAGE_FILE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xbeeb ${PREFIX}/bin/xbeeb

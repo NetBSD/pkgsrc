@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/17 14:40:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/29 11:34:49 wiz Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
@@ -11,11 +11,6 @@ HOMEPAGE=	http://www.handhelds.org/projects/xscribble.html
 
 USE_IMAKE=	YES
 NO_INSTALL_MANPAGES=	YES
-
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
-post-patch:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
 post-install:
 	${MKDIR} ${PREFIX}/share/examples/xscribble

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/21 06:02:27 itojun Exp $
+# $NetBSD: Makefile,v 1.11 2001/01/29 11:34:32 wiz Exp $
 # Based on FreeBSD Id: Makefile,v 1.27 1999/04/03 08:25:18 itojun Exp
 #
 
@@ -21,8 +21,6 @@ CONFIGURE_ARGS=	--libexecdir=${PREFIX}/libexec
 # use bind8?
 #CONFIGURE_ARGS+=	--with-bind8
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
 DOCS=	COPYRIGHT FEATURES FEATURES.j FYI FYI.j INSTALL INSTALL.j \
 	ML-ADMIN ML-ADMIN.j OPTIONS OPTIONS.j README README.j \
 	RELEASE.NOTE SIGNAL SIGNAL.j TODO
@@ -35,11 +33,6 @@ BUILD_DEFS+=    USE_INET6
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=--enable-ipv6
 .endif
-
-post-build:
-	${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' \
-		-e 's#@@PREFIX@@#${PREFIX}#g' \
-		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 post-install:
 .if !defined(NOPORTDOCS)

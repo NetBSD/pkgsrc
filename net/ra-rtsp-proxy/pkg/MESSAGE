@@ -1,1 +1,6 @@
-Please add "@PREFIX@/etc/rc.d/rtspd.sh" to "/etc/rc.local".
+======================================================================
+$NetBSD
+
+Please add "${PREFIX}/etc/rc.d/rtspd" to "/etc/rc.local".
+
+======================================================================
