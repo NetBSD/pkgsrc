@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/08/17 02:26:31 wiz Exp $
+# $NetBSD: INSTALL,v 1.2 2000/08/17 02:40:45 hubertf Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -15,7 +15,7 @@ PRE-INSTALL)
 	# Group... the default's shipped with NetBSD
 	# We need to check that ${AMGROUP} exists before adding the user.
 	#
-	if grep "^${AMGROUP}:" /etc/group
+	if grep -q "^${AMGROUP}:" /etc/group
 	then
 		echo "Group '${AMGROUP}' already exists...proceeding."
 	else
