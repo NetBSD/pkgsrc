@@ -1,18 +1,17 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/10/07 19:45:26 agc Exp $
+$NetBSD: patch-ac,v 1.2 1999/01/04 21:58:12 tron Exp $
 
-Make this compile on NetBSD as well as FreeBSD.  (June 1995 was the
-release of 4.4BSD-lite).
+Make this compile on NetBSD, as well as FreeBSD.
 
---- applets/modemlights/modemlights.c	1998/10/05 14:51:41	1.1
-+++ applets/modemlights/modemlights.c	1998/10/05 15:03:55
-@@ -222,17 +222,17 @@
+--- applets/modemlights/modemlights.c.orig	Mon Dec 14 20:34:38 1998
++++ applets/modemlights/modemlights.c	Mon Jan  4 22:39:43 1999
+@@ -226,17 +226,21 @@
  	struct 	ppp_stats stats;
  
  	memset(&ifreq, 0, sizeof(ifreq));
 -#ifndef __FreeBSD__
 -	strncpy(ifreq.ifr_ifrn.ifrn_name, device_name, IFNAMSIZ);
 -#else
-+#if (defined(BSD) && BSD >= 199506)
++#if (defined(BSD) && BSD >= 199506) || defined(__NetBSD__)
  	strncpy(ifreq.ifr_name, device_name, IFNAMSIZ);
 -#endif /* __FreeBSD__ */
 +#else
@@ -23,10 +22,14 @@ release of 4.4BSD-lite).
 -	if ((ioctl(ip_socket,SIOCDEVPRIVATE,(caddr_t)&ifreq) < 0))
 +#if (defined(BSD) && BSD >= 199506)
 +	if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
++#else
++#if defined(__NetBSD__)
++	if ((ioctl(ip_socket,SIOCGIFFLAGS,(caddr_t)&ifreq) < 0))
  #else
 -		if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
 -#endif /* __FreeBSD__ */
 +	if ((ioctl(ip_socket,SIOCDEVPRIVATE,(caddr_t)&ifreq) < 0))
++#endif /* NetBSD */
 +#endif /* 4.4-BSD derived */
  			{
  				/* failure means ppp is not up */
