@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/03/17 20:12:18 salo Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/04/27 22:28:29 salo Exp $
 bin/silc
 lib/silc/libsilc-1.0.so
 lib/silc/libsilc-1.0.so.1
@@ -35,6 +35,7 @@ share/doc/silc/manual.txt
 share/doc/silc/signals.txt
 share/doc/silc/special_vars.txt
 share/doc/silc/startup-HOWTO.html
+share/silc/config.h
 share/silc/help/action
 share/silc/help/admin
 share/silc/help/alias
@@ -120,6 +121,7 @@ share/silc/help/watch
 share/silc/help/whois
 share/silc/help/whowas
 share/silc/help/window
+share/silc/irssi-config
 share/silc/scripts/autoop.pl
 share/silc/scripts/beep.pl
 share/silc/scripts/clones.pl
