@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/05 22:54:11 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/02/13 18:18:23 jmmv Exp $
 
 .if !defined(LIBSOUP_BUILDLINK2_MK)
 LIBSOUP_BUILDLINK2_MK=	# defined
@@ -9,19 +9,7 @@ BUILDLINK_PKGSRCDIR.libsoup?=		../../net/libsoup
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libsoup=libsoup
 BUILDLINK_PREFIX.libsoup_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-address.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-context.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-error.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-headers.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-message.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-method.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-misc.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-ntlm.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-server-auth.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-server.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-socket.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup-uri.h
-BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/soup.h
+BUILDLINK_FILES.libsoup+=	include/soup-2.0/libsoup/*
 BUILDLINK_FILES.libsoup+=	lib/libsoup-2.0.*
 
 .include "../../devel/glib2/buildlink2.mk"
