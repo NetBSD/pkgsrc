@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 14:04:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/10 21:15:27 wiz Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -23,7 +23,7 @@ USE_CROSS_EGCS=		yes
 DJGPP_FILES=		djcrx202.zip wmemu2b.zip
 
 TARGET_ARCH=		i386-msdosdjgpp
-SYS_INCLUDE=		${WRKSRC}/include
+CROSS_SYS_INCLUDE=	${WRKSRC}/include
 SYS_LIB=		${WRKSRC}/lib
 
 post-extract:
@@ -40,7 +40,7 @@ post-extract:
 	@${RM} -f ${SYS_LIB}/djgpp.djl ${SYS_LIB}/specs
 
 post-patch:
-	@${RM} -f ${SYS_INCLUDE}/sys/*.orig
+	@${RM} -f ${CROSS_SYS_INCLUDE}/sys/*.orig
 
 do-build:
 	cd ${WRKSRC}/src/stub && ${LINK.c} -o stubedit stubedit.c
