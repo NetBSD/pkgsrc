@@ -1,8 +1,9 @@
-$NetBSD: md5,v 1.15 2000/05/12 12:08:00 tron Exp $
+$NetBSD: md5,v 1.16 2000/05/28 09:25:50 fredb Exp $
 
 MD5 (netscape/navigator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = a1bc10d5dfce9f36ddae55930d683b6d
 MD5 (netscape/navigator-v473-export.alpha-dec-osf4.0.tar.gz) = 06f248469991b8110fc367799d160de1
 MD5 (netscape/navigator-v473-export.sparc-sun-solaris2.5.1.tar.gz) = b2df6cf1c044008bee8490e07663b25c
 MD5 (netscape/navigator-v473-export.x86-bsdi-bsd2.tar.gz) = af6995971ae513e25ac760c9c8d3565b
 MD5 (netscape/navigator-v473-export.x86-unknown-linux2.2.tar.gz) = e3894b44860e225258bb9749172956bb
+MD5 (netscape/navigator-v473-us.x86-bsdi-bsd2.tar.gz) = 2c611a53c5a9b9e9cf5e4ff8b44d6551
 MD5 (netscape/navigator-v473-us.x86-unknown-linux2.2.tar.gz) = ca7ae294b00ef8f4c19c5dede5a0861e
