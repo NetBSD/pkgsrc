@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.232 1999/03/29 11:22:29 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.233 1999/03/29 14:55:43 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2112,7 +2112,7 @@ fake-pkg: ${PLIST} ${DESCR}
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
 .if defined(FORCE_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG};					\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkgtools_version=`${MAKE} show-pkgtools-version`;		\
 	if [ $$pkgtools_version -gt ${PKGTOOLS_PKGDB_VERSION} ]; then	\
 		${PKG_DELETE} -O ${PKGNAME};				\
