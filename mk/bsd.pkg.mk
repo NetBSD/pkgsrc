@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.624 2000/11/29 13:18:22 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.625 2000/11/29 14:44:12 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1706,6 +1706,10 @@ real-su-install:
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
 	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
+	# PLIST must be generated at this late point (instead of
+	# depending on it somewhere earlier), as the
+	# pre/do/post-install aren't run then yet:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
@@ -2009,7 +2013,7 @@ real-package: _PORT_USE
 SU_CMD?=	${SU} - root -c
 PRE_ROOT_CMD?=	${TRUE}
 
-do-su-install: ${PLIST}
+do-su-install: 
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
