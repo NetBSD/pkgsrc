@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.52 2001/07/10 15:07:35 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.53 2001/07/10 16:37:13 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -158,12 +158,14 @@ XAW_TYPE?=		standard
 # XFree86 starting with 4.1.0 contains now a libGLU, so also check for it.
 .if (defined(CHECK_MESA) || defined(USE_MESA))
 X11BASE?=		/usr/X11R6
-.if exists(${X11BASE}/include/GL/glx.h)
+.if exists(${X11BASE}/include/GL/glx.h) && \
+    exists(${X11BASE}/lib/X11/config/X11.tmpl)
 __BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 __BUILTIN_MESA=		0
 .endif
-.if exists(${X11BASE}/include/GL/glu.h)
+.if exists(${X11BASE}/include/GL/glu.h) && \
+    exists(${X11BASE}/lib/X11/config/X11.tmpl)
 __BUILTIN_GLU!=		egrep -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || true
 .else
 __BUILTIN_GLU=		0
