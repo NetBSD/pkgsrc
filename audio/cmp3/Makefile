@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/11 18:19:09 xtraeme Exp $
 #
 
 DISTNAME=	cmp3-2.0pre5
@@ -13,8 +13,8 @@ COMMENT=	Curses based frontend to mpg123
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 
-WRKSRC=		${WRKDIR}/cmp3
-USE_BUILDLINK2=		YES
+WRKSRC=			${WRKDIR}/cmp3
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_NCURSES=		# MAX_FORM_COMMAND
 
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/cmp3
 	${INSTALL_DATA} ${WRKSRC}/cmp3rc ${PREFIX}/share/doc/cmp3/sample.cmp3rc
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
