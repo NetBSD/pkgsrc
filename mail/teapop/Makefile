@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/29 05:59:24 jdolecek Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/25 20:49:30 xtraeme Exp $
 
 DISTNAME=	teapop-0.3.8
 PKGREVISION=	1
@@ -16,33 +16,14 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-flock
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-piddir=${VARBASE}/run
 
 EGDIR=		${PREFIX}/share/examples/teapop
 CONF_FILES=	${EGDIR}/teapop.passwd ${PKG_SYSCONFDIR}/teapop.passwd
 
 RCD_SCRIPTS=	teapop
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(POP_WITH_DRAC)
-.include "../../mail/drac/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-drac=${BUILDLINK_PREFIX.drac}/lib
-CONFIGURE_ARGS+=	--with-dracinc=${BUILDLINK_PREFIX.drac}/include
-.endif
-
-.if defined(TEAPOP_WITHOUT_APOP)
-CONFIGURE_ARGS+=--disable-apop
-.endif
-
-.if defined(TEAPOP_WITHOUT_VPOP)
-CONFIGURE_ARGS+=--disable-vpop
-.endif
-
-.if defined(TEAPOP_WITH_MYSQL)
-.include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
-LDFLAGS+=	${BUILDLINK_LDFLAGS.mysql-client}
-.endif
+.include "options.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
