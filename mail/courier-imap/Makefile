@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/22 03:29:50 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/22 16:43:27 jlam Exp $
 
 DISTNAME=	courier-imap-2.2.1
 COMMENT=	IMAP server for access to Maildir-style mailboxes
@@ -70,6 +70,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
 	${INSTALL_DATA} ${WRKSRC}/imap/BUGS ${DOCDIR}/BUGS.imap
 	${INSTALL_DATA} ${WRKSRC}/imap/README ${DOCDIR}/README.imap
-	cd ${WRKSRC}/imap; ${INSTALL_DATA} imapd.authpam pop3d.authpam ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
