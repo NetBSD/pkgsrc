@@ -1,0 +1,54 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/02 13:59:54 dmcmahill Exp $
+bin/xcircuit
+lib/X11/app-defaults/XCircuit
+lib/xcircuit-2.1/analog.lps
+lib/xcircuit-2.1/avlsi.lps
+lib/xcircuit-2.1/builtins.lps
+lib/xcircuit-2.1/digital.lps
+lib/xcircuit-2.1/fonts/courier.lps
+lib/xcircuit-2.1/fonts/courier.xfe
+lib/xcircuit-2.1/fonts/courieriso.xfe
+lib/xcircuit-2.1/fonts/courieriso2.lps
+lib/xcircuit-2.1/fonts/courieriso2.xfe
+lib/xcircuit-2.1/fonts/courieriso5.lps
+lib/xcircuit-2.1/fonts/courieriso5.xfe
+lib/xcircuit-2.1/fonts/helvetica.lps
+lib/xcircuit-2.1/fonts/helvetica.xfe
+lib/xcircuit-2.1/fonts/helveticaiso.xfe
+lib/xcircuit-2.1/fonts/helveticaiso2.lps
+lib/xcircuit-2.1/fonts/helveticaiso2.xfe
+lib/xcircuit-2.1/fonts/helveticaiso5.lps
+lib/xcircuit-2.1/fonts/helveticaiso5.xfe
+lib/xcircuit-2.1/fonts/myfont.lps
+lib/xcircuit-2.1/fonts/myfont.xfe
+lib/xcircuit-2.1/fonts/symbol.lps
+lib/xcircuit-2.1/fonts/symbol.xfe
+lib/xcircuit-2.1/fonts/times_roman.lps
+lib/xcircuit-2.1/fonts/times_roman.xfe
+lib/xcircuit-2.1/fonts/times_romaniso.xfe
+lib/xcircuit-2.1/fonts/times_romaniso2.lps
+lib/xcircuit-2.1/fonts/times_romaniso2.xfe
+lib/xcircuit-2.1/fonts/times_romaniso5.lps
+lib/xcircuit-2.1/fonts/times_romaniso5.xfe
+lib/xcircuit-2.1/generic.lps
+lib/xcircuit-2.1/lgf.lps
+lib/xcircuit-2.1/musiclib.lps
+lib/xcircuit-2.1/signal.lps
+lib/xcircuit-2.1/xcircps2.pro
+man/man1/xcircuit.0
+share/examples/xcircuit/USAflag.ps
+share/examples/xcircuit/analog1.ps
+share/examples/xcircuit/analog2.ps
+share/examples/xcircuit/analoglib1.lps
+share/examples/xcircuit/analoglib2.lps
+share/examples/xcircuit/border.ps
+share/examples/xcircuit/diffamp_test.ps
+share/examples/xcircuit/logic8.ps
+share/examples/xcircuit/prelude.ps
+share/examples/xcircuit/systemd1.lgf
+share/examples/xcircuit/threestage.ps
+share/examples/xcircuit/vcoblock.ps
+share/examples/xcircuit/xcircuitrc
+@dirrm share/examples/xcircuit
+@dirrm lib/xcircuit-2.1/fonts
+@dirrm lib/xcircuit-2.1
