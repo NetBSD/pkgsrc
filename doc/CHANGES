@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6539 2004/07/13 11:01:44 jmmv Exp $
+$NetBSD: CHANGES,v 1.6540 2004/07/13 11:35:39 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3373,3 +3373,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added suse_gtk-9.1 as suse91_gtk [tron 2004-07-13]
 	Added suse_x11-9.1 as suse91_x11 [tron 2004-07-13]
 	Added xdkcal-0.9d [jmmv 2004-07-13]
+	Updated ifp-line to 0.2.4.3 [sekiya 2004-07-13]
