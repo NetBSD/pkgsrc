@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/05/19 14:11:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/06/23 00:59:20 xtraeme Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -109,17 +109,17 @@ lib/libMagick++.a
 lib/libMagick++.la
 lib/libMagick++.so
 lib/libMagick++.so.6
-lib/libMagick++.so.6.1
+lib/libMagick++.so.6.2
 lib/libMagick.a
 lib/libMagick.la
 lib/libMagick.so
 lib/libMagick.so.6
-lib/libMagick.so.6.1
+lib/libMagick.so.6.2
 lib/libWand.a
 lib/libWand.la
 lib/libWand.so
 lib/libWand.so.6
-lib/libWand.so.6.1
+lib/libWand.so.6.2
 lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc
@@ -161,12 +161,12 @@ share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/colorspace.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/draw.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/pixel_iterator.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/profile.html
-share/ImageMagick-${IM_MAJOR_LIB_VER}/www/archives.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/compare.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/download.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/index.html
 share/ImageMagick-${IM_MAJOR_VER}/QuickStart.txt
 share/ImageMagick-${IM_MAJOR_VER}/images/background.gif
+share/ImageMagick-${IM_MAJOR_VER}/images/devlib.gif
 share/ImageMagick-${IM_MAJOR_VER}/images/examples.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/granite.png
 share/ImageMagick-${IM_MAJOR_VER}/images/logo.png
