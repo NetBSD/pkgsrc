@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2003/12/08 18:33:53 drochner Exp $
+$NetBSD: patch-ak,v 1.1 2004/04/10 15:47:08 seb Exp $
 
 --- gcc/ada/Makefile.in.orig	2003-07-04 13:53:53.000000000 -0600
 +++ gcc/ada/Makefile.in

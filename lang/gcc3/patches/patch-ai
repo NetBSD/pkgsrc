@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2003/07/06 12:15:08 drochner Exp $
+$NetBSD: patch-ai,v 1.1 2004/04/10 15:47:08 seb Exp $
 
 --- gcc/configure.orig	2003-07-04 12:51:47.000000000 +0200
 +++ gcc/configure	2003-07-04 12:52:44.000000000 +0200

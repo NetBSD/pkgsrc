@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2003/07/06 12:15:05 drochner Exp $
+$NetBSD: patch-aj,v 1.1 2004/04/10 15:47:08 seb Exp $
 
 --- gcc/ada/Make-lang.in.orig	2003-07-06 11:48:22.000000000 +0200
 +++ gcc/ada/Make-lang.in	2003-07-06 11:48:44.000000000 +0200

@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2003/12/08 18:42:23 drochner Exp $
+$NetBSD: patch-am,v 1.1 2004/04/10 15:47:08 seb Exp $
 
 --- gcc/ada/adaint.c.orig	2002-11-18 07:39:46.000000000 -0700
 +++ gcc/ada/adaint.c

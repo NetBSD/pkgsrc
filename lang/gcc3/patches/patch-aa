@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/07/08 15:05:02 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2004/04/10 15:47:08 seb Exp $
 
---- Makefile.in.orig	2003-05-14 02:18:14.000000000 +0200
-+++ Makefile.in	2003-07-03 19:41:59.000000000 +0200
-@@ -1642,9 +1642,9 @@
+--- Makefile.in.orig	2003-07-05 02:37:08.000000000 +0000
++++ Makefile.in
+@@ -1644,9 +1644,9 @@ install-dosrel: installdirs info
  
  install-dosrel-fake:
  
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/08 15:05:02 drochner Exp $
  
  # This is a list of inter-dependencies among modules.
  all-ash:
-@@ -1694,8 +1694,8 @@
+@@ -1696,8 +1696,8 @@ all-libiberty:
  all-build-libiberty: configure-build-libiberty
  
  configure-target-libffi: $(ALL_GCC_C) 
