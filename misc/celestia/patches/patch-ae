@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/05/08 23:47:03 salo Exp $
+$NetBSD: patch-ae,v 1.2 2003/05/09 00:23:56 salo Exp $
 
 --- Makefile.in.orig	2003-04-16 09:04:31.000000000 +0200
 +++ Makefile.in	2003-05-08 23:54:18.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/05/08 23:47:03 salo Exp $
  dosstuff = celestia.mak $(wildcard *.bat)
  noinst_DATA = devguide.txt $(dosstuff)
 -pkgdata_DATA = celestia.cfg $(wildcard *.cel) controls.txt COPYING
-+pkgdata_DATA = $(wildcard *.cel)
++pkgdata_DATA = $(wildcard *.cel) controls.txt COPYING
  
  EXTRA_DIST = $(pkgdata_DATA) $(noinst_DATA) admin
  
