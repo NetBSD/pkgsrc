@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23 2002/12/02 22:25:41 jmmv Exp $
+$NetBSD: TODO,v 1.24 2002/12/03 10:59:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -63,9 +63,11 @@ Suggested package updates
 =========================
 
 	o Mesa-5.0 [jschauma]
+	o SDL-image-1.2.2
 	o acroread-5.1
 	o anjuta-1.0.0
 	o aspell-0.50.3
+	o atari800-1.2.5
 	o aumix-2.8
 	o autotrace-0.31.1
 	o balsa-1.4.1
@@ -77,7 +79,7 @@ Suggested package updates
 	o cdlabelgen-2.5.0
 	o cdrecord-1.11a39 [pkg/19073]
 	o cdrecord-1.11a40
-	o centericq-4.8.8
+	o centericq-4.8.9
 	o citrix-ica [pkg/19210]
 	o clisp-2.30
 	o courier-0.40 [jlam]
@@ -115,6 +117,7 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.1
 	o glade2-1.1.3 [pkg/19154]
+	o gmp-4.1.1
 	o gnome-applets-2.0.0
 	o gnome-file-manager-2.0.1
 	o gnome-python-1.4.4
@@ -124,6 +127,7 @@ Suggested package updates
 	o gnumeric-1.1.11 [devel]
 	o gnustep-1.5.1
 	o gnustep-gui-0.8.3
+	o gphoto-2.1.1
 	o gtkmm-2.0.1
 	o guile-1.6.0
 	o htmldoc-1.8.23
@@ -146,6 +150,7 @@ Suggested package updates
 	o leafnode-1.9.29
 	o lesstif-0.93.36 [drochner]
 	o lftp-2.6.2
+	o libexif-0.5.7
 	o libole2-2.2.8
 	o libmng-1.0.5rc1
 	o librep-0.16.1
@@ -163,7 +168,7 @@ Suggested package updates
 	o mgp-1.09a
 	o mixer.app-1.8.0
 	o mkfontscale-20020618 (needs freetype-2.1.1)
-	o mozilla-1.2
+	o mozilla-1.2.1
 	o mrproject-0.7
 	o multi-gnome-terminal-1.6.1
 	o mysql-4.0.3
@@ -171,6 +176,7 @@ Suggested package updates
 	o nasm-0.98.35
 	o ncurses-5.3
 	o netpbm-10.8
+	o nxtvepg-2.4.1
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
@@ -182,9 +188,11 @@ Suggested package updates
 	o pilot-link-0.11.4 [dillo]
 	o pine-4.50
 	o plib-1.6.0
+	o polsms-1.9.0 [pkg/19235]
 	o postgresql-7.3
 	o povray-3.5
 	o psi-0.8.7
+	o pureftpd-0.13a [pkg/19233]
 	o pygtk-0.6.11
 	o pygtk-1.9.13
 	o r-1.6.1 [markd]
@@ -204,6 +212,7 @@ Suggested package updates
 	o sendfile-20010424
 	o shorten-3.5.0
 	o siag-office-3.5.3
+	o silc-{client,server}-0.9.9.1
 	o smalltalk-2.0.8
 	o snes9x-1.39a
 	o sodipodi-0.28
@@ -228,7 +237,7 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xsane-0.87 [rh|pkg/17952]
 	o xsidplay-1.6.5pre15
-	o ysm-2.8.1
+	o ysm-2.8.1 [pkg/19251]
 	o yudit-2.7
 
 
