@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.34 2004/05/05 08:29:44 recht Exp $
+# $NetBSD: module.mk,v 1.35 2004/06/09 17:53:04 xtraeme Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -124,7 +124,7 @@ PERL5_PLIST_DIRS= \
 	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 		-e "s,^,@unexec \${RMDIR} -p %D/," \
-		-e "s,/[^/]*$$, 2>/dev/null || \${TRUE}," \
+		-e "s,/[^/]*$$, 2>/dev/null || ${TRUE}," \
 	| ${SORT} -ur
 PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT}; \
 			${PERL5_PLIST_FILES}; \
