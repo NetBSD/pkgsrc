@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2000/01/25 10:33:30 abs Exp $
+$NetBSD: patch-aa,v 1.2 2002/01/29 13:46:17 wiz Exp $
 
---- ioctl_stat.c	Thu Mar  4 07:33:03 1999
-+++ /usr/home/abs/ioctl_stat.c	Tue Jan 25 02:05:44 2000
+--- ioctl_stat.c.orig	Thu Mar  4 08:33:03 1999
++++ ioctl_stat.c
 @@ -68,6 +68,9 @@
  
  void ioctl_stat(if_data *ifd)
