@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2001/06/18 21:48:52 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/11/15 10:57:32 wiz Exp $
 
---- src/Makefile.in.orig	Mon Feb 26 15:44:02 2001
+--- src/Makefile.in.orig	Thu Nov 15 08:38:34 2001
 +++ src/Makefile.in
-@@ -100,7 +100,7 @@
- SUBDIRS = icons
- DIST_SUBDIRS = icons
+@@ -103,7 +103,7 @@
+ INCLUDES = -I$(srcdir) -I$(builddir)    \
+ 	-I$(top_srcdir) -I$(top_builddir)       \
+ 	-DLOCALEDIR=\""$(localedir)"\"		\
+-	-I$(includedir) $(GTK_CFLAGS)	\
++	$(GTK_CFLAGS)	\
+ 	$(GDK_PIXBUF_CFLAGS)
  
--INCLUDES = -I$(srcdir) -I$(builddir)    	-I$(top_srcdir) -I$(top_builddir)       	-DLOCALEDIR=\""$(localedir)"\"			-I$(includedir) $(GTK_CFLAGS)		$(GDK_PIXBUF_CFLAGS)
-+INCLUDES = -I$(srcdir) -I$(builddir)    	-I$(top_srcdir) -I$(top_builddir)       	-DLOCALEDIR=\""$(localedir)"\"			$(GTK_CFLAGS)		$(GDK_PIXBUF_CFLAGS)
  
- 
- module_SLIK =  	ui_clist_edit.c		ui_clist_edit.h		ui_fileops.c		ui_fileops.h		ui_menu.c		ui_menu.h		ui_pathsel.c		ui_pathsel.h		ui_tabcomp.c		ui_tabcomp.h		ui_utildlg.c		ui_utildlg.h
