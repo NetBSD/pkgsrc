@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:38 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/15 21:01:57 kim Exp $
 #
 
-DISTNAME=		urlget-1.3
+DISTNAME=		urlget-1.4
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 
