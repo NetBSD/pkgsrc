@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/12 23:43:05 recht Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/17 19:27:42 jmmv Exp $
 #
 
 .include "Makefile.common"
@@ -11,6 +11,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bittorrent
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/bittorrent
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/py-cursespanel/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
