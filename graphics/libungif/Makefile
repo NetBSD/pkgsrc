@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/29 12:06:19 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/04 22:23:47 abs Exp $
 #
 
 DISTNAME=	libungif-4.1.0b1
@@ -22,6 +22,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--without-x
 CONFIGURE_ENV+=		ac_cv_lib_X11_main=no
 
+USE_LANGUAGES=		c c++
 USE_BUILDLINK3=		yes
 
 DOCDIR=			${PREFIX}/share/doc/libungif
