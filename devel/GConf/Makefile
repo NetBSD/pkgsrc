@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2001/06/11 06:34:25 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/08/11 18:28:58 rh Exp $
 #
 
-DISTNAME=	GConf-1.0.0
+DISTNAME=	GConf-1.0.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/GConf/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://advogato.org/proj/GConf/
@@ -19,7 +20,7 @@ USE_LIBINTL=	YES
 USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-CPPFLAGS+=	-I${X11PREFIX}/include
+CPPFLAGS+=	-I${LOCALBASE}/include/db3 -I${X11PREFIX}/include
 PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
 
 post-install:
@@ -27,4 +28,5 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/gconf-1.m4 \
 	  ${LOCALBASE}/share/aclocal/gconf-1.m4
 
+.include "../../databases/db3/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
