@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/04/17 18:51:59 jschauma Exp $
+$NetBSD: distinfo,v 1.3 2004/02/28 18:31:27 jschauma Exp $
 
-SHA1 (eclipse-2.1.tar.gz) = 36e5bb8a35fe4983d079e4b2c02b1aab60cdc85e
-Size (eclipse-2.1.tar.gz) = 64580817 bytes
-SHA1 (eclipse-sourceBuild-srcIncluded-2.1.zip) = ac06dd3af76ebba25fda0cc718e2c39f0ecf10e9
-Size (eclipse-sourceBuild-srcIncluded-2.1.zip) = 44063648 bytes
+SHA1 (eclipse-2.1.2.tar.gz) = cccd98c483a5bb105e520f64afca0233a029f56d
+Size (eclipse-2.1.2.tar.gz) = 65631660 bytes
+SHA1 (eclipse-sourceBuild-srcIncluded-2.1.2.zip) = b036caa9b88926fa49d91c40eae9f82279036b6f
+Size (eclipse-sourceBuild-srcIncluded-2.1.2.zip) = 45014406 bytes
