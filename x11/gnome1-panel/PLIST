@@ -1,0 +1,348 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/20 09:10:11 rh Exp $
+bin/gnome-panel-add-launcher
+bin/gnome-panel-properties-capplet
+bin/gnome-panel-screenshot
+bin/panel
+etc/CORBA/servers/panel.gnorba
+etc/gnome/panel-config/panel
+etc/gnome/panel-config/panel.d/default/Applet_Config
+etc/gnome/panel-config/panel.d/default/panel
+etc/sound/events/panel.soundlist
+include/applet-widget.h
+include/gnome-panel.h
+include/status-docklet.h
+lib/appletsConf.sh
+lib/dockletsConf.sh
+lib/libpanel_applet.a
+lib/libpanel_applet.la
+lib/libpanel_applet.so
+lib/libpanel_applet.so.0
+lib/libpanel_applet.so.0.1
+lib/libpanel_status.a
+lib/libpanel_status.la
+lib/libpanel_status.so
+lib/libpanel_status.so.0
+lib/libpanel_status.so.0.0
+man/man1/gnome-panel-add-launcher.1
+man/man1/gnome-panel-properties-capplet.1
+man/man1/panel.1
+share/control-center/Desktop/gnome-panel-properties.desktop
+share/gnome/apps/Settings/Desktop/gnome-panel-properties.desktop
+share/gnome/help/panel/C/LEGALNOTICE.html
+share/gnome/help/panel/C/appletadd.html
+share/gnome/help/panel/C/applets.html
+share/gnome/help/panel/C/authors.html
+share/gnome/help/panel/C/drawers.html
+share/gnome/help/panel/C/figures/create_launcher.png
+share/gnome/help/panel/C/figures/drawer_open.png
+share/gnome/help/panel/C/figures/drawer_properties.png
+share/gnome/help/panel/C/figures/example_menu.png
+share/gnome/help/panel/C/figures/example_panel.png
+share/gnome/help/panel/C/figures/glob_pref_anim.png
+share/gnome/help/panel/C/figures/hide-button.png
+share/gnome/help/panel/C/figures/launcher_advprops.png
+share/gnome/help/panel/C/figures/launcher_props.png
+share/gnome/help/panel/C/figures/logout-screen.png
+share/gnome/help/panel/C/figures/menu_properties.png
+share/gnome/help/panel/C/figures/mm-button.png
+share/gnome/help/panel/C/figures/panel_applets.png
+share/gnome/help/panel/C/figures/panel_lockbut.png
+share/gnome/help/panel/C/figures/panel_logoutbut.png
+share/gnome/help/panel/C/figures/panel_props_back.png
+share/gnome/help/panel/C/figures/panel_props_edge.png
+share/gnome/help/panel/C/figures/panel_swallow.png
+share/gnome/help/panel/C/figures/status_dock.png
+share/gnome/help/panel/C/globalpanelprefs.html
+share/gnome/help/panel/C/index.html
+share/gnome/help/panel/C/launchers.html
+share/gnome/help/panel/C/license.html
+share/gnome/help/panel/C/ln9.html
+share/gnome/help/panel/C/mainmenu.html
+share/gnome/help/panel/C/menus.html
+share/gnome/help/panel/C/panel.sgml
+share/gnome/help/panel/C/panelbasics.html
+share/gnome/help/panel/C/panelbugs.html
+share/gnome/help/panel/C/panelmove.html
+share/gnome/help/panel/C/panelproperties.html
+share/gnome/help/panel/C/specialobjects.html
+share/gnome/help/panel/C/topic.dat
+share/gnome/help/panel/de/LEGALNOTICE.html
+share/gnome/help/panel/de/appletadd.html
+share/gnome/help/panel/de/applets.html
+share/gnome/help/panel/de/authors.html
+share/gnome/help/panel/de/drawers.html
+share/gnome/help/panel/de/figures/create_launcher.png
+share/gnome/help/panel/de/figures/drawer_open.png
+share/gnome/help/panel/de/figures/drawer_properties.png
+share/gnome/help/panel/de/figures/example_menu.png
+share/gnome/help/panel/de/figures/example_panel.png
+share/gnome/help/panel/de/figures/glob_pref_anim.png
+share/gnome/help/panel/de/figures/hide-button.png
+share/gnome/help/panel/de/figures/launcher_advprops.png
+share/gnome/help/panel/de/figures/launcher_props.png
+share/gnome/help/panel/de/figures/logout-screen.png
+share/gnome/help/panel/de/figures/menu_properties.png
+share/gnome/help/panel/de/figures/mm-button.png
+share/gnome/help/panel/de/figures/panel_applets.png
+share/gnome/help/panel/de/figures/panel_lockbut.png
+share/gnome/help/panel/de/figures/panel_logoutbut.png
+share/gnome/help/panel/de/figures/panel_props_back.png
+share/gnome/help/panel/de/figures/panel_props_edge.png
+share/gnome/help/panel/de/figures/panel_swallow.png
+share/gnome/help/panel/de/figures/status_dock.png
+share/gnome/help/panel/de/globalpanelprefs.html
+share/gnome/help/panel/de/index.html
+share/gnome/help/panel/de/launchers.html
+share/gnome/help/panel/de/ln7.html
+share/gnome/help/panel/de/mainmenu.html
+share/gnome/help/panel/de/menus.html
+share/gnome/help/panel/de/panel.sgml
+share/gnome/help/panel/de/panelbasics.html
+share/gnome/help/panel/de/panelbugs.html
+share/gnome/help/panel/de/panelmove.html
+share/gnome/help/panel/de/panelproperties.html
+share/gnome/help/panel/de/specialobjects.html
+share/gnome/help/panel/de/topic.dat
+share/gnome/help/panel/es/appletadd.html
+share/gnome/help/panel/es/applets.html
+share/gnome/help/panel/es/authors.sgml
+share/gnome/help/panel/es/drawers.html
+share/gnome/help/panel/es/figures/create_launcher.png
+share/gnome/help/panel/es/figures/drawer_open.png
+share/gnome/help/panel/es/figures/drawer_properties.png
+share/gnome/help/panel/es/figures/example_menu.png
+share/gnome/help/panel/es/figures/example_panel.png
+share/gnome/help/panel/es/figures/glob_pref_anim.png
+share/gnome/help/panel/es/figures/hide-button.png
+share/gnome/help/panel/es/figures/launcher_advprops.png
+share/gnome/help/panel/es/figures/launcher_props.png
+share/gnome/help/panel/es/figures/logout-screen.png
+share/gnome/help/panel/es/figures/menu_properties.png
+share/gnome/help/panel/es/figures/mm-button.png
+share/gnome/help/panel/es/figures/panel_applets.png
+share/gnome/help/panel/es/figures/panel_lockbut.png
+share/gnome/help/panel/es/figures/panel_logoutbut.png
+share/gnome/help/panel/es/figures/panel_props_back.png
+share/gnome/help/panel/es/figures/panel_props_edge.png
+share/gnome/help/panel/es/figures/panel_swallow.png
+share/gnome/help/panel/es/figures/status_dock.png
+share/gnome/help/panel/es/globalpanelprefs.html
+share/gnome/help/panel/es/index.html
+share/gnome/help/panel/es/launchers.html
+share/gnome/help/panel/es/licencia-es.sgml
+share/gnome/help/panel/es/licencia-nota-es.sgml
+share/gnome/help/panel/es/license.sgml
+share/gnome/help/panel/es/ln12.html
+share/gnome/help/panel/es/mainmenu.html
+share/gnome/help/panel/es/menus.html
+share/gnome/help/panel/es/panel.sgml
+share/gnome/help/panel/es/panelbasics.html
+share/gnome/help/panel/es/panelbugs.html
+share/gnome/help/panel/es/panelmove.html
+share/gnome/help/panel/es/panelproperties.html
+share/gnome/help/panel/es/specialobjects.html
+share/gnome/help/panel/es/topic.dat
+share/gnome/help/panel/es/x1234.html
+share/gnome/help/panel/eu/LEGALNOTICE.html
+share/gnome/help/panel/eu/appletadd.html
+share/gnome/help/panel/eu/applets.html
+share/gnome/help/panel/eu/authors.html
+share/gnome/help/panel/eu/drawers.html
+share/gnome/help/panel/eu/figures/create_launcher.png
+share/gnome/help/panel/eu/figures/drawer_open.png
+share/gnome/help/panel/eu/figures/drawer_properties.png
+share/gnome/help/panel/eu/figures/example_menu.png
+share/gnome/help/panel/eu/figures/example_panel.png
+share/gnome/help/panel/eu/figures/glob_pref_anim.png
+share/gnome/help/panel/eu/figures/hide-button.png
+share/gnome/help/panel/eu/figures/launcher_advprops.png
+share/gnome/help/panel/eu/figures/launcher_props.png
+share/gnome/help/panel/eu/figures/logout-screen.png
+share/gnome/help/panel/eu/figures/menu_properties.png
+share/gnome/help/panel/eu/figures/mm-button.png
+share/gnome/help/panel/eu/figures/panel_applets.png
+share/gnome/help/panel/eu/figures/panel_lockbut.png
+share/gnome/help/panel/eu/figures/panel_logoutbut.png
+share/gnome/help/panel/eu/figures/panel_props_back.png
+share/gnome/help/panel/eu/figures/panel_props_edge.png
+share/gnome/help/panel/eu/figures/panel_swallow.png
+share/gnome/help/panel/eu/figures/status_dock.png
+share/gnome/help/panel/eu/globalpanelprefs.html
+share/gnome/help/panel/eu/index.html
+share/gnome/help/panel/eu/launchers.html
+share/gnome/help/panel/eu/license.html
+share/gnome/help/panel/eu/mainmenu.html
+share/gnome/help/panel/eu/menus.html
+share/gnome/help/panel/eu/panel.sgml
+share/gnome/help/panel/eu/panelbasics.html
+share/gnome/help/panel/eu/panelbugs.html
+share/gnome/help/panel/eu/panelmove.html
+share/gnome/help/panel/eu/panelproperties.html
+share/gnome/help/panel/eu/specialobjects.html
+share/gnome/help/panel/eu/topic.dat
+share/gnome/help/panel/it/figures/create_launcher.png
+share/gnome/help/panel/it/figures/drawer_open.png
+share/gnome/help/panel/it/figures/drawer_properties.png
+share/gnome/help/panel/it/figures/example_menu.png
+share/gnome/help/panel/it/figures/example_panel.png
+share/gnome/help/panel/it/figures/glob_pref_anim.png
+share/gnome/help/panel/it/figures/hide-button.png
+share/gnome/help/panel/it/figures/launcher_advprops.png
+share/gnome/help/panel/it/figures/launcher_properties_advanced.png
+share/gnome/help/panel/it/figures/launcher_properties_basic.png
+share/gnome/help/panel/it/figures/launcher_props.png
+share/gnome/help/panel/it/figures/mainmenu_properties.png
+share/gnome/help/panel/it/figures/menu_properties.png
+share/gnome/help/panel/it/figures/mm-button.png
+share/gnome/help/panel/it/figures/panel_applets.png
+share/gnome/help/panel/it/figures/panel_lockbut.png
+share/gnome/help/panel/it/figures/panel_logoutbut.png
+share/gnome/help/panel/it/figures/panel_props_back.png
+share/gnome/help/panel/it/figures/panel_props_edge.png
+share/gnome/help/panel/it/figures/panel_runbutton.png
+share/gnome/help/panel/it/figures/panel_runprogram.png
+share/gnome/help/panel/it/figures/panel_swallow.png
+share/gnome/help/panel/it/figures/status_dock.png
+share/gnome/help/panel/it/index.html
+share/gnome/help/panel/it/ln9.html
+share/gnome/help/panel/it/panel.sgml
+share/gnome/help/panel/it/panelbasics.html
+share/gnome/help/panel/it/topic.dat
+share/gnome/help/panel/ja/appletadd.html
+share/gnome/help/panel/ja/applets.html
+share/gnome/help/panel/ja/authors.html
+share/gnome/help/panel/ja/drawers.html
+share/gnome/help/panel/ja/figures/create_launcher.png
+share/gnome/help/panel/ja/figures/drawer_open.png
+share/gnome/help/panel/ja/figures/drawer_properties.png
+share/gnome/help/panel/ja/figures/example_menu.png
+share/gnome/help/panel/ja/figures/example_panel.png
+share/gnome/help/panel/ja/figures/glob_pref_anim.png
+share/gnome/help/panel/ja/figures/hide-button.png
+share/gnome/help/panel/ja/figures/launcher_advprops.png
+share/gnome/help/panel/ja/figures/launcher_props.png
+share/gnome/help/panel/ja/figures/logout-screen.png
+share/gnome/help/panel/ja/figures/menu_properties.png
+share/gnome/help/panel/ja/figures/mm-button.png
+share/gnome/help/panel/ja/figures/panel_applets.png
+share/gnome/help/panel/ja/figures/panel_lockbut.png
+share/gnome/help/panel/ja/figures/panel_logoutbut.png
+share/gnome/help/panel/ja/figures/panel_props_back.png
+share/gnome/help/panel/ja/figures/panel_props_edge.png
+share/gnome/help/panel/ja/figures/panel_swallow.png
+share/gnome/help/panel/ja/figures/status_dock.png
+share/gnome/help/panel/ja/globalpanelprefs.html
+share/gnome/help/panel/ja/index.html
+share/gnome/help/panel/ja/launchers.html
+share/gnome/help/panel/ja/license.html
+share/gnome/help/panel/ja/ln10.html
+share/gnome/help/panel/ja/mainmenu.html
+share/gnome/help/panel/ja/menus.html
+share/gnome/help/panel/ja/panel.sgml
+share/gnome/help/panel/ja/panelbasics.html
+share/gnome/help/panel/ja/panelbugs.html
+share/gnome/help/panel/ja/panelmove.html
+share/gnome/help/panel/ja/panelproperties.html
+share/gnome/help/panel/ja/specialobjects.html
+share/gnome/help/panel/ja/topic.dat
+share/gnome/help/panel/no/appletadd.html
+share/gnome/help/panel/no/applets.html
+share/gnome/help/panel/no/authors.html
+share/gnome/help/panel/no/drawers.html
+share/gnome/help/panel/no/figures/create_launcher.png
+share/gnome/help/panel/no/figures/drawer_open.png
+share/gnome/help/panel/no/figures/drawer_properties.png
+share/gnome/help/panel/no/figures/example_menu.png
+share/gnome/help/panel/no/figures/example_panel.png
+share/gnome/help/panel/no/figures/glob_pref_anim.png
+share/gnome/help/panel/no/figures/hide-button.png
+share/gnome/help/panel/no/figures/launcher_advprops.png
+share/gnome/help/panel/no/figures/launcher_props.png
+share/gnome/help/panel/no/figures/logout-screen.png
+share/gnome/help/panel/no/figures/menu_properties.png
+share/gnome/help/panel/no/figures/mm-button.png
+share/gnome/help/panel/no/figures/panel_applets.png
+share/gnome/help/panel/no/figures/panel_lockbut.png
+share/gnome/help/panel/no/figures/panel_logoutbut.png
+share/gnome/help/panel/no/figures/panel_props_back.png
+share/gnome/help/panel/no/figures/panel_props_edge.png
+share/gnome/help/panel/no/figures/panel_swallow.png
+share/gnome/help/panel/no/figures/status_dock.png
+share/gnome/help/panel/no/globalpanelprefs.html
+share/gnome/help/panel/no/index.html
+share/gnome/help/panel/no/launchers.html
+share/gnome/help/panel/no/ln9.html
+share/gnome/help/panel/no/mainmenu.html
+share/gnome/help/panel/no/menus.html
+share/gnome/help/panel/no/panel.sgml
+share/gnome/help/panel/no/panelbasics.html
+share/gnome/help/panel/no/panelbugs.html
+share/gnome/help/panel/no/panelmove.html
+share/gnome/help/panel/no/panelproperties.html
+share/gnome/help/panel/no/specialobjects.html
+share/gnome/help/panel/no/topic.dat
+share/gnome/hints/panel.hints
+share/gnome/html/panel-decl.txt
+share/gnome/html/panel-sections.txt
+share/gnome/html/panel.hierarchy
+share/gnome/html/panel.html
+share/gnome/html/panel.sgml
+share/gnome/html/panel.signals
+share/gnome/html/panel.types
+share/gnome/html/panel/appletwidget.html
+share/gnome/html/panel/index.html
+share/gnome/html/panel/panel-context-menu.html
+share/gnome/html/panel/panel-miscellaneous.html
+share/gnome/html/panel/panel-panel-interaction.html
+share/gnome/html/panel/r1373.html
+share/gnome/html/panel/r160.html
+share/gnome/html/panel/statusdocklet.html
+share/gnome/html/panel/unnamed1.html
+share/gnome/html/panel/unnamed10.html
+share/gnome/html/panel/unnamed11.html
+share/gnome/html/panel/unnamed12.html
+share/gnome/html/panel/unnamed13.html
+share/gnome/html/panel/unnamed14.html
+share/gnome/html/panel/unnamed15.html
+share/gnome/html/panel/unnamed16.html
+share/gnome/html/panel/unnamed3.html
+share/gnome/html/panel/unnamed4.html
+share/gnome/html/panel/unnamed5.html
+share/gnome/html/panel/unnamed6.html
+share/gnome/panel/gnome-panel-screenshot.glade
+@dirrm share/gnome/panel
+@dirrm share/gnome/html/panel
+@unexec ${RMDIR} %D/share/gnome/hints 2>/dev/null || ${TRUE}
+@exec ${MKDIR} %D/share/gnome/help/panel/no/stylesheet-images
+@dirrm share/gnome/help/panel/no/stylesheet-images
+@dirrm share/gnome/help/panel/no/figures
+@dirrm share/gnome/help/panel/no
+@exec ${MKDIR} %D/share/gnome/help/panel/ja/stylesheet-images
+@dirrm share/gnome/help/panel/ja/stylesheet-images
+@dirrm share/gnome/help/panel/ja/figures
+@dirrm share/gnome/help/panel/ja
+@exec ${MKDIR} %D/share/gnome/help/panel/it/stylesheet-images
+@dirrm share/gnome/help/panel/it/stylesheet-images
+@dirrm share/gnome/help/panel/it/figures
+@dirrm share/gnome/help/panel/it
+@exec ${MKDIR} %D/share/gnome/help/panel/eu/stylesheet-images
+@dirrm share/gnome/help/panel/eu/stylesheet-images
+@dirrm share/gnome/help/panel/eu/figures
+@dirrm share/gnome/help/panel/eu
+@exec ${MKDIR} %D/share/gnome/help/panel/es/stylesheet-images
+@dirrm share/gnome/help/panel/es/stylesheet-images
+@dirrm share/gnome/help/panel/es/figures
+@dirrm share/gnome/help/panel/es
+@exec ${MKDIR} %D/share/gnome/help/panel/de/stylesheet-images
+@dirrm share/gnome/help/panel/de/stylesheet-images
+@dirrm share/gnome/help/panel/de/figures
+@dirrm share/gnome/help/panel/de
+@exec ${MKDIR} %D/share/gnome/help/panel/C/stylesheet-images
+@dirrm share/gnome/help/panel/C/stylesheet-images
+@dirrm share/gnome/help/panel/C/figures
+@dirrm share/gnome/help/panel/C
+@dirrm share/gnome/help/panel
+@exec ${MKDIR} %D/etc/gnome/panel-config/panel.d/default
+@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d/default 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gnome/panel-config 2>/dev/null || ${TRUE}
