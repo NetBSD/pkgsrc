@@ -1,20 +1,32 @@
-$NetBSD: patch-aa,v 1.3 2004/06/05 11:56:31 dillo Exp $
+$NetBSD: patch-aa,v 1.4 2004/08/13 16:12:25 dillo Exp $
 
---- ../ui/sound/SoundOSS.cxx.orig	2003-02-18 02:19:44.000000000 +0100
-+++ ../ui/sound/SoundOSS.cxx
-@@ -22,13 +22,9 @@
- #include <sys/ioctl.h>
- #include <sys/types.h>
+--- makefile.orig	2004-07-14 18:49:45.000000000 +0200
++++ makefile
+@@ -48,13 +48,13 @@ OPTIMIZATIONS  = 
+ ## No configurable options below this line ...
+ ##============================================================================
  
--#ifdef __FreeBSD__
--  #include <machine/soundcard.h>
--#else
--  #include <sys/soundcard.h>
--#endif
-+#include <soundcard.h>
+-CXX	= g++
+-LD	= g++
++#CXX	= g++
++#LD	= g++
  
--#define DSP_DEVICE "/dev/dsp"
-+/* #define DSP_DEVICE "/dev/dsp" */
- #define MIXER_DEVICE "/dev/mixer"
+-LDFLAGS  = `sdl-config --cflags`
++LDFLAGS  += `sdl-config --cflags`
+ LDLIBS   = `sdl-config --libs`
+ OBJECTS  =  mainSDL.o SoundSDL.o FrameBufferSDL.o FrameBufferSoft.o
+-OPTIONS  =
++OPTIONS  = -DPKG_SYSCONFDIR=\\\"${PKG_SYSCONFDIR}\\\" -DDATADIR=\\\"${PREFIX}/share/stella\\\"
+ EXE_NAME =
+ SMP      =
  
- #include "SoundOSS.hxx"
+@@ -155,8 +155,7 @@ CORE_OBJS = Booster.o Cart.o Cart2K.o Ca
+             $(M6502_OBJS)
+ 
+ stella: $(CORE_OBJS) $(OBJS)
+-	$(LD) -o $(EXE_NAME) $(CORE_OBJS) $(OBJS) $(LDFLAGS) $(LDLIBS)
+-	strip $(EXE_NAME)
++	$(CXX) -o $(EXE_NAME) $(CORE_OBJS) $(OBJS) $(LDLIBS)
+ 
+ M6502Low.ins: $(CORE)/m6502/src/M6502Low.m4 $(CORE)/m6502/src/M6502.m4
+ 	m4 $(CORE)/m6502/src/M6502Low.m4 $(CORE)/m6502/src/M6502.m4 > $(CORE)/m6502/src/M6502Low.ins
