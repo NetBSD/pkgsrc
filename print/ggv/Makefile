@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/06/01 15:02:12 rh Exp $
+# $NetBSD: Makefile,v 1.18 2000/09/29 06:21:34 rh Exp $
 #
 
 DISTNAME=	ggv-0.95
@@ -14,5 +14,6 @@ DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_X11BASE=	YES
+CONFIGURE_ARGS+=--disable-bonobotest
 
 .include "../../mk/bsd.pkg.mk"
