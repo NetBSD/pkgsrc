@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/09 21:48:11 fredb Exp $
 bin/htfuzzy
 bin/htdig
+bin/htdump
+bin/htload
 bin/htmerge
 bin/htnotify
 bin/rundig
+libexec/cgi-bin/htsearch
 share/examples/htdig/htdig.conf
 share/examples/htdig/search.html
 share/examples/htdig/button1.gif
@@ -50,9 +53,11 @@ share/htdig/common/synonyms
 share/htdig/common/synonyms.db
 share/htdig/common/root2word.db
 share/htdig/common/word2root.db
-etc/htdig/htdig.conf
-libexec/cgi-bin/htsearch
+@exec mkdir -p ${PKG_SYSCONFDIR}/htdig
+@exec if [ ! -f ${PKG_SYSCONFDIR}/htdig/htdig.conf ]; then cp %D/share/examples/htdig/htdig.conf ${PKG_SYSCONFDIR}/htdig/htdig.conf; fi
+@exec mkdir -p /var/db/htdig
+@unexec rmdir ${PKG_SYSCONFDIR}/htdig 2>/dev/null || true
+@unexec rmdir /var/db/htdig 2>/dev/null || true
 @dirrm share/htdig/common
 @dirrm share/htdig
 @dirrm share/examples/htdig
-@dirrm etc/htdig
