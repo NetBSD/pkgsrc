@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/09/09 17:13:32 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/09/09 17:18:20 jlam Exp $
 #
 
 DISTNAME=	bozohttpd-5.14
@@ -22,7 +22,7 @@ MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
 CPPFLAGS+=	-DINET6
 .endif
 
-post-build:
+pre-build:
 	cd ${WRKSRC}; for file in bozohttpd.8; do			\
 		${SED}	-e "s|/usr/pkg/|${PREFIX}/|g"			\
 			$${file} >> $${file}.fixed;			\
