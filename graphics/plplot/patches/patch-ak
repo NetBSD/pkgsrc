@@ -1,13 +1,9 @@
-$NetBSD: patch-ak,v 1.1 2001/01/29 01:15:35 jtb Exp $
+$NetBSD: patch-ak,v 1.2 2001/03/30 20:26:23 jtb Exp $
 
---- cf/pkg_tcl.in.orig	Fri Jan 12 04:00:01 2001
+--- cf/pkg_tcl.in.orig	Wed Mar  7 16:18:11 2001
 +++ cf/pkg_tcl.in
-@@ -53,35 +53,33 @@
- 	perl pltclgen
- 
- tclIndex:
--	@$(MAKEINDEX)
-+	$(MAKEINDEX)
+@@ -54,32 +54,31 @@
+ 	@$(MAKEINDEX)
  
  install_pltcl:
 -	@-if test $(SHARED) = 1; then \
@@ -34,6 +30,7 @@ $NetBSD: patch-ak,v 1.1 2001/01/29 01:15:35 jtb Exp $
 -	  cd $(top_srcdir)/examples/tcl; $(CP) $(TCL_DEMOS) $(DEMOS_DIR)/tcl
 +	-$(BSD_INSTALL_DATA_DIR) $(DEMOS_DIR)/tcl; \
 +	  cd $(top_srcdir)/examples/tcl; $(BSD_INSTALL_DATA) $(TCL_DEMOS) $(DEMOS_DIR)/tcl
++ 
  
  install_tcl: install_pltcl install_tcl_index install_tcl_includes install_tcl_demos
  
@@ -45,6 +42,6 @@ $NetBSD: patch-ak,v 1.1 2001/01/29 01:15:35 jtb Exp $
  install_matlib:
 -	@-$(CP) $(MATLIB_BASE)* $(LIB_DIR); \
 +	-$(BSD_INSTALL_DATA) $(MATLIB_BASE)* $(LIB_DIR); \
- 	  if test -r $(MATLIB_BASE)$A; then \
- 	      $(RANLIB) $(LIB_DIR)/$(MATLIB_BASE)$A; \
+ 	  if test -r $(MATLIB_BASE)$(LIB_TAG)$A; then \
+ 	      $(RANLIB) $(LIB_DIR)/$(MATLIB_BASE)$(LIB_TAG)$A; \
  	  fi
