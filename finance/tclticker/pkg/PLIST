@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
+bin/tclticker
+bin/mailquote
+share/tclticker/finance.uk.yahoo.com.tcl
+share/tclticker/finance.yahoo.com.tcl
+share/tclticker/rebuild_tclIndex.sh
+share/tclticker/tclIndex
+share/tclticker/ticker.lib
+share/tclticker/www.quote.com.tcl

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
+--- tclticker.orig	Mon Dec 20 15:27:02 1999
++++ tclticker	Wed Aug 30 21:00:36 2000
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ # restart using wish \
+-  exec wish8.0 "$0" ${1+"$@"}
++  exec wish "$0" ${1+"$@"}
+ 
+ # stock ticker 
+ # copyright 1999 tom poindexter <tpoindex@nyx.net>
+@@ -43,7 +43,9 @@
+ # authors grant the U.S. Government and others acting in its behalf
+ # permission to use and distribute the software in accordance with the
+ # terms specified in this license. 
+- 
++
++# set this explicitly
++set env(TCLTICKER_LIB) "/usr/pkg/share/tclticker"
+ 
+ if {! [info exists env(TCLTICKER_LIB)]} {
+     lappend auto_path [file join [file dirname $argv0] lib]

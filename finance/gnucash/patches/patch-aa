@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/11 13:53:26 wiz Exp $
+
+--- configure.orig	Mon Jun 26 09:54:12 2000
++++ configure	Mon Jun 26 18:33:29 2000
+@@ -3625,7 +3625,7 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
+@@ -3892,7 +3892,7 @@
+ 		 INTLLIBS=$INTLDEPS
+ 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+ 		 nls_cv_header_intl=intl/libintl.h
+-		 nls_cv_header_libgt=intl/libgettext.h
++		 nls_cv_header_libgt=${LOCALBASE}/share/gettext/intl/libgettext.h
+ 	       fi
+ else
+   echo "$ac_t""no" 1>&6
+@@ -4021,7 +4021,7 @@
+ 	INTLLIBS=$INTLDEPS
+ 	LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+         nls_cv_header_intl=intl/libintl.h
+-        nls_cv_header_libgt=intl/libgettext.h
++        nls_cv_header_libgt=${LOCALBASE}/share/gettext/intl/libgettext.h
+       fi
+ 
+             if test "$XGETTEXT" != ":"; then
+@@ -4038,7 +4038,7 @@
+     else
+       DATADIRNAME=share
+       nls_cv_header_intl=intl/libintl.h
+-      nls_cv_header_libgt=intl/libgettext.h
++      nls_cv_header_libgt=${LOCALBASE}/share/gettext/intl/libgettext.h
+     fi
+     
+     
+@@ -6397,10 +6397,10 @@
+   set $ac_dests; ac_dest=$1; shift; ac_dests=$*
+   set $ac_sources; ac_source=$1; shift; ac_sources=$*
+ 
+-  echo "linking $srcdir/$ac_source to $ac_dest"
++  echo "linking $ac_source to $ac_dest"
+ 
+-  if test ! -r $srcdir/$ac_source; then
+-    { echo "configure: error: $srcdir/$ac_source: File not found" 1>&2; exit 1; }
++  if test ! -r $ac_source; then
++    { echo "configure: error: $ac_source: File not found" 1>&2; exit 1; }
+   fi
+   rm -f $ac_dest
+ 
+@@ -6418,15 +6418,15 @@
+   fi
+ 
+   case "$srcdir" in
+-  [/$]*) ac_rel_source="$srcdir/$ac_source" ;;
+-  *) ac_rel_source="$ac_dots$srcdir/$ac_source" ;;
++  [/$]*) ac_rel_source="$ac_source" ;;
++  *) ac_rel_source="$ac_source" ;;
+   esac
+ 
+   # Make a symlink if possible; otherwise try a hard link.
+   if ln -s $ac_rel_source $ac_dest 2>/dev/null ||
+-    ln $srcdir/$ac_source $ac_dest; then :
++    ln $ac_source $ac_dest; then :
+   else
+-    { echo "configure: error: can not link $ac_dest to $srcdir/$ac_source" 1>&2; exit 1; }
++    { echo "configure: error: can not link $ac_dest to $ac_source" 1>&2; exit 1; }
+   fi
+ done
+ EOF

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/11 13:53:26 wiz Exp $
+
+--- src/engine/Makefile.in.orig	Mon Jun 26 10:12:50 2000
++++ src/engine/Makefile.in	Mon Jun 26 17:07:28 2000
+@@ -124,7 +124,7 @@
+ lib_LTLIBRARIES = libgncengine.la
+ 
+ # Build hell from main.c and libhello.la
+-libgncengine_la_SOURCES =    AccInfo.c   Account.c   Backend.c   DateUtils.c   FileIO.c   Group.c   LedgerUtils.c   Query.c   Queue.c   Scrub.c   Session.c   Transaction.c   TransLog.c   date.c   util.c   GNCId.c   guid.c   md5.c
++libgncengine_la_SOURCES =    AccInfo.c   Account.c   Backend.c   DateUtils.c   FileIO.c   Group.c   LedgerUtils.c   Query.c   Queue.c   Scrub.c   Session.c   Transaction.c   TransLog.c   date.c   util.c   GNCId.c   guid.c   md5.c asprintf.c
+ 
+ 
+ libgncengine_la_LDFLAGS = -version-info 1:1:1
