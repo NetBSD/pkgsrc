@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7325 2004/10/02 22:16:08 adrianp Exp $
+$NetBSD: CHANGES,v 1.7326 2004/10/03 00:49:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4525,3 +4525,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated apache2 to 2.0.52 [reed 2004-10-02]
 	Updated lua to 5.0.2nb1 [cube 2004-10-02]
 	Updated ircservices to 5.0.40 [adrianp 2004-10-02]
+	Updated guile to 1.6.4nb2 [wiz 2004-10-03]
