@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:03 skrll Exp $
 share/examples/ploticus/doc/Changelog.html
 share/examples/ploticus/doc/Contents.html
 share/examples/ploticus/doc/Contents.html-
@@ -767,7 +767,7 @@ share/examples/ploticus/thumbpng/volunteers.png
 @dirrm share/examples/ploticus/gallery/gif
 @dirrm share/examples/ploticus/gallery/btn
 @dirrm share/examples/ploticus/gallery/Util
-@exec /bin/mkdir -p /usr/pkg/share/examples/ploticus/gallery/Old
+@exec ${MKDIR} -p /usr/pkg/share/examples/ploticus/gallery/Old
 @dirrm share/examples/ploticus/gallery/Old
 @dirrm share/examples/ploticus/gallery
 @dirrm share/examples/ploticus/doc

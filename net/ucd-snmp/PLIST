@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:06 skrll Exp $
 bin/encode_keychange
 bin/snmpbulkget
 bin/snmpbulkwalk
@@ -160,7 +160,7 @@ share/snmp/mibs/UDP-MIB.txt
 @dirrm share/snmp/mibs
 @dirrm share/snmp
 @dirrm share/examples/ucd-snmp
-@exec /bin/mkdir -p %D/lib/snmp/dlmod
+@exec ${MKDIR} -p %D/lib/snmp/dlmod
 @dirrm lib/snmp/dlmod
 @dirrm lib/snmp
 @dirrm include/ucd-snmp

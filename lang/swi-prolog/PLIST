@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:05 skrll Exp $
 bin/${SWIPL}
 bin/plld
 bin/plrc
@@ -76,7 +76,7 @@ man/man1/plrc.1
 @dirrm lib/${SWILIBDIR}/runtime
 @dirrm lib/${SWILIBDIR}/man
 @dirrm lib/${SWILIBDIR}/library
-@exec /bin/mkdir -p /usr/pkg/lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
+@exec ${MKDIR} -p /usr/pkg/lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
 @dirrm lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
 @dirrm lib/${SWILIBDIR}/lib
 @dirrm lib/${SWILIBDIR}/include

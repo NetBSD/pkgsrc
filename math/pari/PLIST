@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:33:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:05 skrll Exp $
 bin/gp
 bin/gp-2.1
 bin/gphelp
@@ -77,7 +77,7 @@ share/pari/misc/new.dic
 share/pari/misc/pari.xpm
 share/pari/misc/xgp
 @dirrm share/pari/misc
-@exec /bin/mkdir -p /usr/pkg/share/pari/galdata
+@exec ${MKDIR} -p /usr/pkg/share/pari/galdata
 @dirrm share/pari/galdata
 @dirrm share/pari/examples
 @dirrm share/pari/emacs

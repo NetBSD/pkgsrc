@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/27 14:46:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/05 22:39:03 skrll Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -12,7 +12,7 @@ bin/nmzgrep
 bin/nmzmerge
 bin/rfnmz
 bin/vfnmz
-@exec /bin/mkdir %D/etc/namazu 2>/dev/null|| /usr/bin/true
+@exec ${MKDIR} %D/etc/namazu 2>/dev/null|| /usr/bin/true
 @dirrm etc/namazu
 include/namazu/codeconv.h
 include/namazu/field.h
@@ -36,8 +36,8 @@ lib/libnmz.la
 lib/libnmz.so
 lib/libnmz.so.5
 lib/libnmz.so.5.0
-@exec /bin/mkdir %D/libdata/namazu 2>/dev/null|| /usr/bin/true
-@exec /bin/mkdir %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
+@exec ${MKDIR} %D/libdata/namazu 2>/dev/null|| /usr/bin/true
+@exec ${MKDIR} %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
 @dirrm libdata/namazu/index
 @dirrm libdata/namazu
 libexec/cgi-bin/namazu.cgi

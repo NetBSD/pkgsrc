@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:06 skrll Exp $
 share/texmf/ChangeLog
 share/texmf/aliases
 share/texmf/bibtex/bib/README
@@ -8799,7 +8799,7 @@ share/texmf/xdvi/XDvi
 @dirrm share/texmf/fonts/source/public/euxm
 @dirrm share/texmf/fonts/source/public/ecc
 @dirrm share/texmf/fonts/source/public/dstroke
-@exec /bin/mkdir -p /usr/pkg/share/texmf/fonts/source/public/cs
+@exec ${MKDIR} -p /usr/pkg/share/texmf/fonts/source/public/cs
 @dirrm share/texmf/fonts/source/public/cs
 @dirrm share/texmf/fonts/source/public/concrete
 @dirrm share/texmf/fonts/source/public/concmath
