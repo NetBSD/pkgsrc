@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.162 2000/10/21 19:03:22 rh Exp $
+# $NetBSD: Makefile,v 1.163 2000/10/24 10:20:00 wiz Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
-
-.include "../mk/bsd.prefs.mk"
 
     SUBDIR += archie
     SUBDIR += arla
