@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2002/08/02 19:00:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.158 2002/08/06 03:50:24 jschauma Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -6,6 +6,7 @@ COMMENT=	Text processing utilities (does not include desktop publishing)
 SUBDIR+=	antiword
 SUBDIR+=	aspell
 SUBDIR+=	aspell-gaeilge
+SUBDIR+=	aspell-slovak
 SUBDIR+=	bibclean
 SUBDIR+=	biblook
 SUBDIR+=	bibparse
