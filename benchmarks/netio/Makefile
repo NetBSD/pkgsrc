@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/28 14:40:06 tron Exp $
 
 DISTNAME=	netio114
 PKGNAME=	netio-1.14
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	benchmarks net
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/os2/leo/systools/
@@ -12,12 +13,13 @@ COMMENT=	Network benchmark for DOS, OS/2 2.x, Windows NT/2000 and Unix
 
 LICENSE=	no-commercial-use
 
-ALL_TARGET=	pkgsrc
+MAKE_FLAGS+=	CC="${CC}" CFLAGS="-DUNIX ${CFLAGS}" LFLAGS="${LDFLAGS}" \
+		LIBS="${LIBS}" O=.o OUT=-o X=
 
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == SunOS)
-MAKE_ENV+=	LIBS="-lsocket -lnsl"
+LIBS+=		-lsocket -lnsl
 .endif
 
 do-install:
