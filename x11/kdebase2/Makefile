@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/11/15 21:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/11/15 21:31:42 jlam Exp $
 
 DISTNAME=	kdebase-2.2.1
 CATEGORIES=	x11
@@ -20,7 +20,6 @@ CONFIGURE_ARGS+=	--without-pam
 CONFIGURE_ARGS+=	--without-cdparanoia
 CONFIGURE_ARGS+=	--without-lame
 CONFIGURE_ARGS+=	--without-vorbis
-CONFIGURE_ARGS+=	--without-ldap
 
 .include "../../mk/bsd.prefs.mk"
 
