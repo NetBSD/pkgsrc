@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/02/13 14:37:57 agc Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2003/03/07 00:12:13 grant Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.codefactory.se/pub/software/mrproject/source/
 
@@ -17,13 +17,12 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${LOCALBASE}/etc/mrproject
 CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-evolution-idldir
 
 CFLAGS+=		-I${BUILDLINK_DIR}/include/gconf/1
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 DEPENDS+=		skill-[0-9]*:../../sysutils/skill
-
-BROKEN=			needs to be updated for gnome2
 
 post-extract:
 	# This is an ugly hack to fix the missing file error in 0.5.1
@@ -42,7 +41,7 @@ post-patch:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/oaf/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../mail/evolution/buildlink2.mk"
+#.include "../../mail/evolution/buildlink2.mk"
 .include "../../sysutils/gnome-vfs/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
