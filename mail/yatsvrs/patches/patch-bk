@@ -1,17 +1,17 @@
-$NetBSD: patch-bk,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-bk,v 1.2 2001/12/21 03:55:13 taca Exp $
 
---- yatd/v2conv.c.orig	Fri Jun 22 12:27:20 2001
-+++ yatd/v2conv.c
-@@ -133,7 +133,7 @@
- 	  goto LBL_CONTINUE;
- 	V2Fldr.nMailUnseen = atoi(p);
+--- yatd/v2conv.c.orig	Wed Dec 19 22:56:15 2001
++++ yatd/v2conv.c	Fri Dec 21 00:39:21 2001
+@@ -148,7 +148,7 @@
+ 	}
+ 
  #ifdef DEBUG_LOCAL
 -	LogDEBUG("<<<V2 Summary: %.256s %u %u %u",
-+	LogDEBUG("<<<V2 Summary: %.256s %ld %u %u",
++ 	LogDEBUG("<<<V2 Summary: %.256s %ld %u %u",
  		 V2Fldr.szName, V2Fldr.mtime,
  		 V2Fldr.nMail, V2Fldr.nMailUnseen);
  #endif
-@@ -549,7 +549,7 @@
+@@ -564,7 +564,7 @@
  
    if (Cnv2(SysData.argv[1]))
      return FAILURE;
