@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/23 15:09:06 heinz Exp $
 
 DISTNAME=		xdm3d-1.0
 CATEGORIES=		x11
@@ -22,10 +22,10 @@ do-install:
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xaccess ${PREFIX}/share/xdm3d
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xservers ${PREFIX}/share/xdm3d
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsession ${PREFIX}/share/xdm3d
-	@if [ -e ${X11BASE}/lib/X11/xdm/Xsetup ]; then			\
+	@if [ -r ${X11BASE}/lib/X11/xdm/Xsetup ]; then			\
 		${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup ${PREFIX}/share/xdm3d; \
 		sedexpr='-e s|^share/xdm3d/Xsetup_0$$|@comment\ &|';	\
-	elif [ -e ${X11BASE}/lib/X11/xdm/Xsetup_0 ]; then		\
+	elif [ -r ${X11BASE}/lib/X11/xdm/Xsetup_0 ]; then		\
 		${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup_0 ${PREFIX}/share/xdm3d; \
 		sedexpr='-e s|^share/xdm3d/Xsetup$$|@comment\ &|';	\
 	fi;								\
