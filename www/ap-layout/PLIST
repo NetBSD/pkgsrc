@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/25 02:55:22 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/28 09:06:00 grant Exp $
 lib/httpd/mod_layout.so
 share/httpd/htdocs/manual/mod/mod_layout/faq.html
+share/httpd/htdocs/manual/mod/mod_layout/directives/Layout.html
 share/httpd/htdocs/manual/mod/mod_layout/directives/LayoutCache.html
 share/httpd/htdocs/manual/mod/mod_layout/directives/LayoutCacheNeeded.html
 share/httpd/htdocs/manual/mod/mod_layout/directives/LayoutComment.html
