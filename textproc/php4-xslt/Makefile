@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/08/31 19:56:04 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/25 00:52:39 xtraeme Exp $
 
 MODNAME=		xslt
 PKGREVISION=		# empty
 CATEGORIES+=		textproc
 COMMENT=		PHP4 extension for XSLT functions (Sablotron backend)
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 .include "../../www/php4/Makefile.module"
 
@@ -25,5 +25,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} README.XSLT-BACKENDS ${DOCDIR}
 
-.include "../../textproc/sablotron/buildlink2.mk"
+.include "../../textproc/sablotron/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
