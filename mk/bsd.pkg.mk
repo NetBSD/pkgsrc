@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.369 1999/11/22 02:42:30 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.370 1999/11/22 12:02:46 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2116,7 +2116,7 @@ misc-depends: uptodate-pkgtools
 	dir="`${ECHO} \"${dep}\" | ${SED} -e s/.\*://`";		\
 	found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`";		\
 	if [ X"$$found" != X"" ]; then					\
-		${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'` found"; \
+		${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'`found"; \
 	else								\
 		${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package"; \
 		target=${DEPENDS_TARGET};				\
