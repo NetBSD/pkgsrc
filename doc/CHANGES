@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6158 2004/06/06 08:04:31 agc Exp $
+$NetBSD: CHANGES,v 1.6159 2004/06/06 08:09:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2814,3 +2814,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tmda to 1.0.3 [schmonz 2004-06-06]
 	Added applerecords-0.4 [agc 2004-06-06]
 	Added libopendaap-0.2.1 [agc 2004-06-06]
+	Updated gnome-media to 2.6.2nb1 [jmmv 2004-06-06]
