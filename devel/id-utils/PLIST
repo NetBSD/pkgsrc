@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/23 11:14:40 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/16 10:18:28 seb Exp $
 bin/aid
 bin/defid
 bin/eid
@@ -8,7 +8,6 @@ bin/gid
 bin/lid
 bin/mkid
 bin/xtokid
-info/id-utils.info
 share/id-lang.map
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/id-utils.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/id-utils.mo
