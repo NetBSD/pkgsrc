@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2003/05/29 23:14:12 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2003/06/05 02:20:03 grant Exp $
 
 .if !defined(GCC2_BUILDLINK2_MK)
 GCC2_BUILDLINK2_MK=	# defined
@@ -28,7 +28,7 @@ _GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
 _GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3
 _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 
-BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,-R${_GCC_ARCHDIR}
+BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 
 _GCC_VERSION!=		( gcc -dumpversion ) 2>/dev/null || ${ECHO} 0
 #
