@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1536 2004/11/12 20:25:41 sketch Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1537 2004/11/14 07:23:07 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -78,6 +78,9 @@ build-defs-message: ${WRKDIR}
 .if defined(OBJECT_FMT)
 MAKE_ENV+=	OBJECT_FMT="${OBJECT_FMT}"
 .endif
+
+# Include any hacks necessary for the package to build properly.
+.include "../../mk/bsd.hacks.mk"
 
 # Allow variables to be set on a per-OS basis
 OPSYSVARS+=	CFLAGS CXXFLAGS CPPFLAGS LDFLAGS LIBS
