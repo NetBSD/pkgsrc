@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.9 2004/04/21 18:45:09 perry Exp $
+
+--- bsd/intratemeter.cc.orig	2003-10-09 00:20:06.000000000 -0400
++++ bsd/intratemeter.cc		2004-04-21 14:32:07.000000000 -0400
+@@ -48,7 +48,7 @@
+   dodecay_ = parent_->isResourceTrue("irqrateDecay");
+   useGraph_ = parent_->isResourceTrue("irqrateGraph");
+   SetUsedFormat (parent_->getResource("irqrateUsedFormat"));
+-  total_ = 100;
++  total_ = 2000;
+ 
+   //  Now, grab a sample.  I don't know if this is needed here.  BCG
+   BSDGetIntrStats (lastirqs_);
