@@ -1,5 +1,7 @@
 #!@SH@
 #
+# $NetBSD: dirs,v 1.3 2005/01/31 17:42:20 jlam Exp $
+#
 # +DIRS - reference-counted directory management script
 #
 # Usage: ./+DIRS ADD|REMOVE [metadatadir]

@@ -1,5 +1,7 @@
 #!@SH@
 #
+# $NetBSD: usergroup,v 1.4 2005/01/31 17:42:20 jlam Exp $
+#
 # +USERGROUP - users and groups management script
 #
 # Usage: ./+USERGROUP ADD|REMOVE [metadatadir]
