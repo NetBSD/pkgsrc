@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2003/09/05 11:39:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2003/09/13 23:21:21 jlam Exp $
 
 .if !defined(XPM_BUILDLINK3_MK)
 XPM_BUILDLINK3_MK=	# defined
@@ -75,5 +75,5 @@ BUILDLINK_DEPENDS+=	xpm
 BUILDLINK_PACKAGES+=	xpm
 .endif
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
 .endif	# XPM_BUILDLINK3_MK
