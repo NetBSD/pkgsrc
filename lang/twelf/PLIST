@@ -1,0 +1,414 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/22 22:41:23 kristerw Exp $
+bin/twelf-server
+bin/twelf-sml
+lib/twelf/bin/.dbase/README
+lib/twelf/bin/.heap/README
+lib/twelf/bin/.heap/twelf-server.${BOX}-${OS}
+lib/twelf/bin/.heap/twelf-sml.${BOX}-${OS}
+lib/twelf/bin/.mkexec
+lib/twelf/bin/.twelf-server
+lib/twelf/bin/.twelf-server.bat
+lib/twelf/bin/.twelf-sml
+lib/twelf/bin/.twelf-sml.bat
+lib/twelf/bin/twelf-server
+lib/twelf/bin/twelf-sml
+lib/twelf/doc
+lib/twelf/emacs
+lib/twelf/examples
+share/doc/twelf/dvi/twelf.dvi
+share/doc/twelf/html/index.html
+share/doc/twelf/html/twelf_1.html
+share/doc/twelf/html/twelf_10.html
+share/doc/twelf/html/twelf_11.html
+share/doc/twelf/html/twelf_12.html
+share/doc/twelf/html/twelf_13.html
+share/doc/twelf/html/twelf_14.html
+share/doc/twelf/html/twelf_15.html
+share/doc/twelf/html/twelf_16.html
+share/doc/twelf/html/twelf_17.html
+share/doc/twelf/html/twelf_2.html
+share/doc/twelf/html/twelf_3.html
+share/doc/twelf/html/twelf_4.html
+share/doc/twelf/html/twelf_5.html
+share/doc/twelf/html/twelf_6.html
+share/doc/twelf/html/twelf_7.html
+share/doc/twelf/html/twelf_8.html
+share/doc/twelf/html/twelf_9.html
+share/doc/twelf/html/twelf_toc.html
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/share/doc/twelf/info/twelf.info
+share/doc/twelf/info/twelf.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/share/doc/twelf/info/twelf.info
+share/doc/twelf/info/twelf.info-1
+share/doc/twelf/info/twelf.info-2
+share/doc/twelf/info/twelf.info-3
+share/doc/twelf/info/twelf.info-4
+share/doc/twelf/info/twelf.info-5
+share/doc/twelf/pdf/twelf.pdf
+share/doc/twelf/ps/twelf.ps
+share/emacs/site-lisp/twelf/README
+share/emacs/site-lisp/twelf/auc-menu.el
+share/emacs/site-lisp/twelf/twelf-font.el
+share/emacs/site-lisp/twelf/twelf-hilit.el
+share/emacs/site-lisp/twelf/twelf-init.el
+share/emacs/site-lisp/twelf/twelf-init.el.orig
+share/emacs/site-lisp/twelf/twelf.el
+share/examples/twelf/README
+share/examples/twelf/arith/README
+share/examples/twelf/arith/arith.elf
+share/examples/twelf/arith/arith.thm
+share/examples/twelf/arith/sources.cfg
+share/examples/twelf/arith/test.cfg
+share/examples/twelf/ccc/README
+share/examples/twelf/ccc/abs-env.elf
+share/examples/twelf/ccc/catlem.elf
+share/examples/twelf/ccc/ccc.elf
+share/examples/twelf/ccc/conc.elf
+share/examples/twelf/ccc/conc.thm
+share/examples/twelf/ccc/cong.elf
+share/examples/twelf/ccc/eqpres1.elf
+share/examples/twelf/ccc/eqpres2.elf
+share/examples/twelf/ccc/examples.quy
+share/examples/twelf/ccc/inv1.elf
+share/examples/twelf/ccc/inv2.elf
+share/examples/twelf/ccc/lambda.elf
+share/examples/twelf/ccc/pf.dvi
+share/examples/twelf/ccc/refl.elf
+share/examples/twelf/ccc/sources.cfg
+share/examples/twelf/ccc/spass.cfg
+share/examples/twelf/ccc/spass.elf
+share/examples/twelf/ccc/spass.sml
+share/examples/twelf/ccc/subext.elf
+share/examples/twelf/ccc/test.cfg
+share/examples/twelf/church-rosser/README
+share/examples/twelf/church-rosser/church-rosser.thm
+share/examples/twelf/church-rosser/cr.thm
+share/examples/twelf/church-rosser/equiv.elf
+share/examples/twelf/church-rosser/examples.quy
+share/examples/twelf/church-rosser/lam.elf
+share/examples/twelf/church-rosser/ord-cr.elf
+share/examples/twelf/church-rosser/ord-lemmas.elf
+share/examples/twelf/church-rosser/ord-red.elf
+share/examples/twelf/church-rosser/par-cr.elf
+share/examples/twelf/church-rosser/par-lemmas.elf
+share/examples/twelf/church-rosser/par-red.elf
+share/examples/twelf/church-rosser/sources.cfg
+share/examples/twelf/church-rosser/test-unsafe.cfg
+share/examples/twelf/church-rosser/test.cfg
+share/examples/twelf/church-rosser/test.tag
+share/examples/twelf/compile/README
+share/examples/twelf/compile/cls/cls-complete.elf
+share/examples/twelf/compile/cls/cls-sound.elf
+share/examples/twelf/compile/cls/cls.elf
+share/examples/twelf/compile/cls/compute.elf
+share/examples/twelf/compile/cls/debruijn.elf
+share/examples/twelf/compile/cls/examples.quy
+share/examples/twelf/compile/cls/feval.elf
+share/examples/twelf/compile/cls/mini-ml.elf
+share/examples/twelf/compile/cls/slow.quy
+share/examples/twelf/compile/cls/sources.cfg
+share/examples/twelf/compile/cls/test.cfg
+share/examples/twelf/compile/cls/trans.elf
+share/examples/twelf/compile/cls/trans2.elf
+share/examples/twelf/compile/cpm/ceval-complete.elf
+share/examples/twelf/compile/cpm/ceval-complete.thm
+share/examples/twelf/compile/cpm/ceval-sound.elf
+share/examples/twelf/compile/cpm/ceval.elf
+share/examples/twelf/compile/cpm/cpm.elf
+share/examples/twelf/compile/cpm/evalv.elf
+share/examples/twelf/compile/cpm/examples.quy
+share/examples/twelf/compile/cpm/mini-mlv.elf
+share/examples/twelf/compile/cpm/proof-equiv.elf
+share/examples/twelf/compile/cpm/proof-equiv.thm
+share/examples/twelf/compile/cpm/slow.quy
+share/examples/twelf/compile/cpm/sources.cfg
+share/examples/twelf/compile/cpm/test.cfg
+share/examples/twelf/compile/cpm/theorems.elf
+share/examples/twelf/compile/cpm/theorems.thm
+share/examples/twelf/compile/cps/cps-eval.elf
+share/examples/twelf/compile/cps/cps.elf
+share/examples/twelf/compile/cps/examples.quy
+share/examples/twelf/compile/cps/mini-ml.elf
+share/examples/twelf/compile/cps/ml-cps.elf
+share/examples/twelf/compile/cps/sources.cfg
+share/examples/twelf/compile/cps/test.cfg
+share/examples/twelf/compile/cxm/evalv.elf
+share/examples/twelf/compile/cxm/examples.quy
+share/examples/twelf/compile/cxm/mini-mlv.elf
+share/examples/twelf/compile/cxm/sources.cfg
+share/examples/twelf/compile/cxm/test.cfg
+share/examples/twelf/compile/cxm/xeval.elf
+share/examples/twelf/compile/debruijn/debruijn.elf
+share/examples/twelf/compile/debruijn/eval.elf
+share/examples/twelf/compile/debruijn/examples.quy
+share/examples/twelf/compile/debruijn/feval.elf
+share/examples/twelf/compile/debruijn/map-eval.elf
+share/examples/twelf/compile/debruijn/mini-ml.elf
+share/examples/twelf/compile/debruijn/sources.cfg
+share/examples/twelf/compile/debruijn/test.cfg
+share/examples/twelf/compile/debruijn/trans.elf
+share/examples/twelf/compile/debruijn/val-lemmas.elf
+share/examples/twelf/compile/debruijn/value.elf
+share/examples/twelf/compile/debruijn1/debruijn.elf
+share/examples/twelf/compile/debruijn1/eval.elf
+share/examples/twelf/compile/debruijn1/examples.quy
+share/examples/twelf/compile/debruijn1/feval.elf
+share/examples/twelf/compile/debruijn1/map-eval.elf
+share/examples/twelf/compile/debruijn1/mini-ml.elf
+share/examples/twelf/compile/debruijn1/sources.cfg
+share/examples/twelf/compile/debruijn1/test.cfg
+share/examples/twelf/compile/debruijn1/trans.elf
+share/examples/twelf/cpsocc/NOTES
+share/examples/twelf/cpsocc/READ.ME
+share/examples/twelf/cpsocc/corr.elf
+share/examples/twelf/cpsocc/cpsBNF.elf
+share/examples/twelf/cpsocc/def1+5+fig4.elf
+share/examples/twelf/cpsocc/def13.elf
+share/examples/twelf/cpsocc/def16.elf
+share/examples/twelf/cpsocc/def3+6+fig5.elf
+share/examples/twelf/cpsocc/dsBNF.elf
+share/examples/twelf/cpsocc/examples.quy
+share/examples/twelf/cpsocc/examples.quy.orig
+share/examples/twelf/cpsocc/fig1.elf
+share/examples/twelf/cpsocc/fig10.elf
+share/examples/twelf/cpsocc/fig11.elf
+share/examples/twelf/cpsocc/fig12.elf
+share/examples/twelf/cpsocc/fig13.elf
+share/examples/twelf/cpsocc/fig7.elf
+share/examples/twelf/cpsocc/fig8.elf
+share/examples/twelf/cpsocc/fig9.elf
+share/examples/twelf/cpsocc/lemma14.elf
+share/examples/twelf/cpsocc/lemma17.elf
+share/examples/twelf/cpsocc/lemma7.elf
+share/examples/twelf/cpsocc/lemma9.elf
+share/examples/twelf/cpsocc/load.sml
+share/examples/twelf/cpsocc/sources.cfg
+share/examples/twelf/cpsocc/test.cfg
+share/examples/twelf/cpsocc/test.quy
+share/examples/twelf/cpsocc/test.quy.orig
+share/examples/twelf/cpsocc/th10.elf
+share/examples/twelf/cpsocc/th15.elf
+share/examples/twelf/cpsocc/th18.elf
+share/examples/twelf/cpsocc/th2.elf
+share/examples/twelf/cpsocc/th4.elf
+share/examples/twelf/cpsocc/th8.elf
+share/examples/twelf/cut-elim/README
+share/examples/twelf/cut-elim/cl-admit.elf
+share/examples/twelf/cut-elim/cl-cut.elf
+share/examples/twelf/cut-elim/cl-elim.elf
+share/examples/twelf/cut-elim/cl.elf
+share/examples/twelf/cut-elim/cl.thm
+share/examples/twelf/cut-elim/examples.quy
+share/examples/twelf/cut-elim/formulas.elf
+share/examples/twelf/cut-elim/int-admit.elf
+share/examples/twelf/cut-elim/int-cut.elf
+share/examples/twelf/cut-elim/int-elim.elf
+share/examples/twelf/cut-elim/int.elf
+share/examples/twelf/cut-elim/int.thm
+share/examples/twelf/cut-elim/sources.cfg
+share/examples/twelf/cut-elim/test.cfg
+share/examples/twelf/fol/README
+share/examples/twelf/fol/fol.elf
+share/examples/twelf/fol/fol.thm
+share/examples/twelf/fol/sources.cfg
+share/examples/twelf/fol/test.cfg
+share/examples/twelf/guide/arith.elf
+share/examples/twelf/guide/lam.elf
+share/examples/twelf/guide/lists.elf
+share/examples/twelf/guide/nd.elf
+share/examples/twelf/guide/sources.cfg
+share/examples/twelf/guide/test.cfg
+share/examples/twelf/handbook/README
+share/examples/twelf/handbook/fol.elf
+share/examples/twelf/handbook/sources.cfg
+share/examples/twelf/handbook/test.cfg
+share/examples/twelf/incll/README
+share/examples/twelf/incll/bff-incll.elf
+share/examples/twelf/incll/bff-incll.quy
+share/examples/twelf/incll/cpm-incll.elf
+share/examples/twelf/incll/cpm-incll.quy
+share/examples/twelf/incll/incll.elf
+share/examples/twelf/incll/iosequents.elf
+share/examples/twelf/incll/lists-incll.elf
+share/examples/twelf/incll/lists-incll.quy
+share/examples/twelf/incll/lists.elf
+share/examples/twelf/incll/parse-incll.elf
+share/examples/twelf/incll/parse-incll.quy
+share/examples/twelf/incll/parse-lolli.elf
+share/examples/twelf/incll/parse-lolli.quy
+share/examples/twelf/incll/pre-incll.elf
+share/examples/twelf/incll/pre-incll.quy
+share/examples/twelf/incll/search-incll.elf
+share/examples/twelf/incll/search-incll.quy
+share/examples/twelf/incll/sort-incll.elf
+share/examples/twelf/incll/sort-incll.quy
+share/examples/twelf/incll/sources.cfg
+share/examples/twelf/incll/test.cfg
+share/examples/twelf/kolm/README
+share/examples/twelf/kolm/complete.elf
+share/examples/twelf/kolm/examples.quy
+share/examples/twelf/kolm/fol.elf
+share/examples/twelf/kolm/kolmtrans.elf
+share/examples/twelf/kolm/nj.elf
+share/examples/twelf/kolm/nk.elf
+share/examples/twelf/kolm/report.ps
+share/examples/twelf/kolm/sound.elf
+share/examples/twelf/kolm/sources.cfg
+share/examples/twelf/kolm/test.cfg
+share/examples/twelf/lp-horn/canon.elf
+share/examples/twelf/lp-horn/conv.elf
+share/examples/twelf/lp-horn/examples.quy
+share/examples/twelf/lp-horn/iscan.elf
+share/examples/twelf/lp-horn/natded.elf
+share/examples/twelf/lp-horn/sources.cfg
+share/examples/twelf/lp-horn/test.cfg
+share/examples/twelf/lp-horn/uni-can.elf
+share/examples/twelf/lp-horn/uni-can.thm
+share/examples/twelf/lp-horn/uni-complete.elf
+share/examples/twelf/lp-horn/uni-complete.thm
+share/examples/twelf/lp-horn/uni-sound.elf
+share/examples/twelf/lp-horn/uni-sound.thm
+share/examples/twelf/lp-horn/uniform.elf
+share/examples/twelf/lp/canon.elf
+share/examples/twelf/lp/cont.elf
+share/examples/twelf/lp/conv.elf
+share/examples/twelf/lp/examples.elf
+share/examples/twelf/lp/examples.quy
+share/examples/twelf/lp/fohh-formulas.elf
+share/examples/twelf/lp/fohh.elf
+share/examples/twelf/lp/iscan.elf
+share/examples/twelf/lp/natded.elf
+share/examples/twelf/lp/res-complete.elf
+share/examples/twelf/lp/res-sound.elf
+share/examples/twelf/lp/resolution.elf
+share/examples/twelf/lp/sources.cfg
+share/examples/twelf/lp/test.cfg
+share/examples/twelf/lp/uni-complete.elf
+share/examples/twelf/lp/uni-sound.elf
+share/examples/twelf/lp/uniform.elf
+share/examples/twelf/mini-ml/README
+share/examples/twelf/mini-ml/closed.elf
+share/examples/twelf/mini-ml/eval.elf
+share/examples/twelf/mini-ml/eval1.elf
+share/examples/twelf/mini-ml/eval2.elf
+share/examples/twelf/mini-ml/examples.quy
+share/examples/twelf/mini-ml/examples1.quy
+share/examples/twelf/mini-ml/mini-ml.elf
+share/examples/twelf/mini-ml/reduce.elf
+share/examples/twelf/mini-ml/reduce.thm
+share/examples/twelf/mini-ml/sources.cfg
+share/examples/twelf/mini-ml/sources1.cfg
+share/examples/twelf/mini-ml/test.cfg
+share/examples/twelf/mini-ml/tp-preserve.elf
+share/examples/twelf/mini-ml/tp-preserve.thm
+share/examples/twelf/mini-ml/tp.elf
+share/examples/twelf/mini-ml/tpinf.elf
+share/examples/twelf/mini-ml/val-sound.elf
+share/examples/twelf/mini-ml/val-sound.thm
+share/examples/twelf/mini-ml/value.elf
+share/examples/twelf/polylam/examples.quy
+share/examples/twelf/polylam/polylam.elf
+share/examples/twelf/polylam/sources.cfg
+share/examples/twelf/polylam/test.cfg
+share/examples/twelf/prop-calc/README
+share/examples/twelf/prop-calc/equiv.elf
+share/examples/twelf/prop-calc/equiv.thm
+share/examples/twelf/prop-calc/examples.quy
+share/examples/twelf/prop-calc/prop-calc.elf
+share/examples/twelf/prop-calc/sources.cfg
+share/examples/twelf/prop-calc/test.cfg
+share/examples/twelf/tabled/README
+share/examples/twelf/tabled/all.sml
+share/examples/twelf/tabled/ccc/README
+share/examples/twelf/tabled/ccc/ccc.elf
+share/examples/twelf/tabled/ccc/tab-examples.quy
+share/examples/twelf/tabled/ccc/tab.cfg
+share/examples/twelf/tabled/cr/lam.elf
+share/examples/twelf/tabled/cr/ord-red.elf
+share/examples/twelf/tabled/cr/par-red.elf
+share/examples/twelf/tabled/cr/tab-examples.quy
+share/examples/twelf/tabled/cr/tab.cfg
+share/examples/twelf/tabled/mini-ml/examples.quy
+share/examples/twelf/tabled/mini-ml/mini-ml.elf
+share/examples/twelf/tabled/mini-ml/programs.elf
+share/examples/twelf/tabled/mini-ml/reduce.elf
+share/examples/twelf/tabled/mini-ml/tab.cfg
+share/examples/twelf/tabled/mini-ml/value.elf
+share/examples/twelf/tabled/parsing/arithml.cfg
+share/examples/twelf/tabled/parsing/arithml.elf
+share/examples/twelf/tabled/parsing/arithml.quy
+share/examples/twelf/tabled/parsing/foll.cfg
+share/examples/twelf/tabled/parsing/foll.elf
+share/examples/twelf/tabled/parsing/foll.quy
+share/examples/twelf/tabled/parsing/tab.cfg
+share/examples/twelf/tabled/parsing/warren.elf
+share/examples/twelf/tabled/poly/mini-ml.elf
+share/examples/twelf/tabled/poly/tab-examples.quy
+share/examples/twelf/tabled/poly/tab.cfg
+share/examples/twelf/tabled/poly/tp.elf
+share/examples/twelf/tabled/poly/tpinf.elf
+share/examples/twelf/tabled/refine/norefex.quy
+share/examples/twelf/tabled/refine/notab.quy
+share/examples/twelf/tabled/refine/programs.elf
+share/examples/twelf/tabled/refine/refex.elf
+share/examples/twelf/tabled/refine/refex.quy
+share/examples/twelf/tabled/refine/tab.cfg
+share/examples/twelf/tabled/subtype/mini-ml.elf
+share/examples/twelf/tabled/subtype/subtype.elf
+share/examples/twelf/tabled/subtype/tab-examples.quy
+share/examples/twelf/tabled/subtype/tab.cfg
+share/examples/twelf/tabled/subtype1/basic.elf
+share/examples/twelf/tabled/subtype1/mini-ml.elf
+share/examples/twelf/tabled/subtype1/tab-examples.quy
+share/examples/twelf/tabled/subtype1/tab.cfg
+share/examples/twelf/tabled/tests/tab.cfg
+share/examples/twelf/tabled/tests/test1.elf
+share/examples/twelf/tabled/tests/test2.elf
+share/examples/twelf/tabled/tests/test3.elf
+share/examples/twelf/tabled/tests/test4.elf
+share/examples/twelf/tabled/tests/test5.elf
+share/examples/twelf/tabled/tests/test6.elf
+share/examples/twelf/tabled/tests/test7.elf
+@dirrm share/examples/twelf/tabled/tests
+@dirrm share/examples/twelf/tabled/subtype1
+@dirrm share/examples/twelf/tabled/subtype
+@dirrm share/examples/twelf/tabled/refine
+@dirrm share/examples/twelf/tabled/poly
+@dirrm share/examples/twelf/tabled/parsing
+@dirrm share/examples/twelf/tabled/mini-ml
+@dirrm share/examples/twelf/tabled/cr
+@dirrm share/examples/twelf/tabled/ccc
+@dirrm share/examples/twelf/tabled
+@dirrm share/examples/twelf/prop-calc
+@dirrm share/examples/twelf/polylam
+@dirrm share/examples/twelf/mini-ml
+@dirrm share/examples/twelf/lp-horn
+@dirrm share/examples/twelf/lp
+@dirrm share/examples/twelf/kolm
+@dirrm share/examples/twelf/incll
+@dirrm share/examples/twelf/handbook
+@dirrm share/examples/twelf/guide
+@dirrm share/examples/twelf/fol
+@dirrm share/examples/twelf/cut-elim
+@dirrm share/examples/twelf/cpsocc
+@dirrm share/examples/twelf/compile/debruijn1
+@dirrm share/examples/twelf/compile/debruijn
+@dirrm share/examples/twelf/compile/cxm
+@dirrm share/examples/twelf/compile/cps
+@dirrm share/examples/twelf/compile/cpm
+@dirrm share/examples/twelf/compile/cls
+@dirrm share/examples/twelf/compile
+@dirrm share/examples/twelf/church-rosser
+@dirrm share/examples/twelf/ccc
+@dirrm share/examples/twelf/arith
+@dirrm share/examples/twelf
+@dirrm share/emacs/site-lisp/twelf
+@dirrm share/doc/twelf/ps
+@dirrm share/doc/twelf/pdf
+@dirrm share/doc/twelf/info
+@dirrm share/doc/twelf/html
+@dirrm share/doc/twelf/dvi
+@dirrm share/doc/twelf
+@dirrm lib/twelf/bin/.heap
+@dirrm lib/twelf/bin/.dbase
+@dirrm lib/twelf/bin
+@dirrm lib/twelf

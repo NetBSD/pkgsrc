@@ -1,0 +1,16 @@
+From http://www.twelf.org, heavily edited:
+
+    Twelf is a research project concerned with the design,
+    implementation, and application of logical frameworks.  It
+    provides a uniform meta-language for specifying, implementing, and
+    proving properties of programming languages and logics.
+
+    Example suites include Cartesian Closed Categories and
+    lambda-calculus, the Church-Rosser theorem for the untyped
+    lambda-calculus, Mini-ML including type preservation and
+    compilation, cut elimination, theory of logic programming, and
+    Hilbert's deduction theorem.
+
+    The principal authors of Twelf are Frank Pfenning and Carsten
+    Schuermann, with major contrubtions by Brigitte Pientka, Roberto
+    Virga, and Kevin Watkins.
