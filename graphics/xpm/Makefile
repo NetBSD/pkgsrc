@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2004/09/16 15:09:01 minskim Exp $
+# $NetBSD: Makefile,v 1.39 2005/03/10 15:23:10 wiz Exp $
 
 DISTNAME=       xpm-3.4k
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://koala.ilog.fr/ftp/pub/xpm/ \
 		${MASTER_SITE_XCONTRIB:=libraries/}
