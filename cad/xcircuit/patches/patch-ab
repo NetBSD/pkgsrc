@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.5 2004/11/19 13:24:11 adam Exp $
+$NetBSD: patch-ab,v 1.6 2004/12/06 16:20:12 minskim Exp $
 
---- configure.orig	2004-10-01 04:25:07.000000000 +0000
+--- configure.orig	2004-09-30 23:25:07.000000000 -0500
 +++ configure
-@@ -7704,7 +7704,7 @@ fi
+@@ -7629,6 +7629,7 @@ fi
+ if test "x$xc_with_tcl" != "x" ; then
+   . $tcl_config_sh
+   . $tk_config_sh
++  LIBS="${LIBS} ${TCL_LIBS}"
+ 
+   if test "$TCL_VERSION" = "7.6" -a "$TK_VERSION" = "4.2" ; then
+     :
+@@ -7704,7 +7705,7 @@ fi
  
  if test "x$xc_with_tcl" != "x" ; then
    case $target in
@@ -11,7 +19,7 @@ $NetBSD: patch-ab,v 1.5 2004/11/19 13:24:11 adam Exp $
        TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
        TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
        ;;
-@@ -8244,9 +8244,9 @@ fi
+@@ -8244,9 +8245,9 @@ fi
  
  
        if test "$test_ok" = yes; then
