@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/18 17:57:27 dmcmahill Exp $
+
+--- ../src/bool/valuesvc.h.orig	Mon Apr  3 21:23:56 2000
++++ ../src/bool/valuesvc.h	Thu Aug 31 17:28:22 2000
+@@ -37,6 +37,24 @@
+ #define MAXLONG     0x7fffffff
+ 
+-#else
+-#include <values.h>
++
++#else
++
++#if defined(__NetBSD__)
++
++#include <math.h>
++
++#include <float.h>
++
++#ifndef MAXDOUBLE
++#define MAXDOUBLE DBL_MAX
++#endif
++#ifndef MAXLONG
++#define MAXLONG     0x7fffffff
++#endif
++#else
++
++#include <values.h>
++
++#endif
+ #endif
+ 
+@@ -45,2 +63,4 @@
+ 
+ 
++
++

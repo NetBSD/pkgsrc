@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/18 17:57:27 dmcmahill Exp $
+
+--- ../src/bool/node.cpp.orig	Mon Apr  3 21:23:56 2000
++++ ../src/bool/node.cpp	Thu Aug 31 17:29:18 2000
+@@ -15,5 +15,9 @@
+ #include "valuesvc.h"
+ #else
++#if defined(__NetBSD__)
++#include "valuesvc.h"
++#else
+ #include <values.h>
++#endif
+ #endif
+ //this here is to initialize the static iterator of node
