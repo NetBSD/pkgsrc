@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/24 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/01 16:41:55 snj Exp $
 
 DISTNAME=	adobe-cmaps-20030924
 CATEGORIES=	fonts print
@@ -27,7 +27,6 @@ COMMENT=	Adobe CMap files for CJK
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
-USE_BUILDLINK2=		# defined
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined
 
