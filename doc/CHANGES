@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5216 2004/03/11 17:44:56 minskim Exp $
+$NetBSD: CHANGES,v 1.5217 2004/03/11 18:08:43 kent Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1419,3 +1419,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xine-arts to 1rc3a [jmmv 2004-03-11]
 	Updated xine-esound to 1rc3a [jmmv 2004-03-11]
 	Updated py-expect to 1.9b1nb1 [minskim 2004-03-11]
+	Updated cross-i386-mingw32 to 3.2 [kent 2004-03-11]
