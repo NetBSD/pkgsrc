@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/31 14:32:58 tv Exp $
+# $NetBSD: Makefile,v 1.6.4.1 2002/07/22 18:16:43 agc Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -38,6 +38,7 @@ post-extract:
 	@cd ${WRKDIR} && ${GTAR} -xzf ${EXTRACT_ELEMENTS}
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/jre/lib/i386
 	${INSTALL_PROGRAM} ${WRKSRC}/libjavacomp.so ${WRKSRC}/libjavacomp_g.so \
 		${PREFIX}/jre/lib/i386/
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/jre/README.javacomp
