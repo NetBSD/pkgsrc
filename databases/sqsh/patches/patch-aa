@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/16 01:07:05 tsarna Exp $
+
+--- configure.orig	Tue Jan  5 21:33:39 1999
++++ configure	Fri May 12 22:48:38 2000
+@@ -1088,14 +1088,14 @@
+ 	then
+ 		SYBASE_LIBDIR='-L$(SYBASE)/devlib'
+ 	else
+-		SYBASE_LIBDIR='-L$(SYBASE)/lib'
++		SYBASE_LIBDIR='-L$(SYBASE)/lib -R$(SYBASE)/lib'
+ 	fi
+ 
+ 	#
+ 	# The basic client libraries that are always needed
+ 	# on all platforms.
+ 	#
+-	SYBASE_LIBS="-lblk -lcs -lct -lcomn -ltcl -lintl"
++	SYBASE_LIBS="-lct"
+ 
+ 	MAJOR_VERSION=`echo $SYBASE_VERSION | cut -d '.' -f 1`
+ 
+@@ -1146,6 +1146,8 @@
+ 			SYBASE_OS="-lm -ldl -ldgc";;
+ 		aix*)
+ 			SYBASE_OS="-lm";;
++		netbsd*)
++			SYBASE_OS="-lm";;
+ 		*)
+ 			SYBASE_OS="-lm -ldl";;
+ 	esac
+@@ -1298,7 +1300,7 @@
+ 		fi
+ 
+ 		if test "${READLINE_LIBDIR}" != ""; then
+-			CPPFLAGS="${CPPFLAGS} -L${READLINE_LIBDIR}"
++			CPPFLAGS="${CPPFLAGS} -L${READLINE_LIBDIR} -R${READLINE_LIBDIR}"
+ 		fi
+ 
+ 		for lib in "-lHcurses" "-lcurses" "-lncurses" "-ltermcap" \
+@@ -1373,7 +1375,7 @@
+ 		then
+ 			READLINE_LIBDIR="# -L${READLINE_LIBDIR}"
+ 		else
+-			READLINE_LIBDIR="-L${READLINE_LIBDIR}"
++			READLINE_LIBDIR="-L${READLINE_LIBDIR} -R${READLINE_LIBDIR}"
+ 		fi
+ 	fi
+ fi
