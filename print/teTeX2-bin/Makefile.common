@@ -1,0 +1,63 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/02/23 04:59:25 kei Exp $
+
+TETEX_BIN_VERS=		2.0.1
+DIST_SUBDIR=		teTeX
+ALL_TARGET=		all
+INSTALL_TARGET=		install strip
+
+USE_BUILDLINK2=		yes
+USE_GMAKE=		yes
+USE_X11=		yes
+CFLAGS+=		-Dunix
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-texinfo
+CONFIGURE_ARGS+=	--without-dialog
+CONFIGURE_ARGS+=	--disable-multiplatform
+CONFIGURE_ARGS+=	--enable-ipc
+CONFIGURE_ARGS+=	--with-epsfwin
+CONFIGURE_ARGS+=	--with-hp2627win
+CONFIGURE_ARGS+=	--with-mftalkwin
+CONFIGURE_ARGS+=	--with-x11
+CONFIGURE_ARGS+=	--with-system-wwwlib
+CONFIGURE_ARGS+=	--with-libwww-config=${LOCALBASE}/bin/libwww-config
+CONFIGURE_ARGS+=	--with-system-ncurses
+CONFIGURE_ARGS+=	--with-ncurses-include=${BUILDLINK_PREFIX.ncurses}/include
+CONFIGURE_ARGS+=	--with-ncurses-libdir=${BUILDLINK_PREFIX.ncurses}/lib
+CONFIGURE_ARGS+=	--with-system-pnglib
+CONFIGURE_ARGS+=	--with-pnglib-include=${BUILDLINK_PREFIX.png}/include
+CONFIGURE_ARGS+=	--with-pnglib-libdir=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+=	--with-system-t1lib
+CONFIGURE_ARGS+=	--with-t1lib-include=${BUILDLINK_PREFIX.t1lib}/include
+CONFIGURE_ARGS+=	--with-t1lib-libdir=${BUILDLINK_PREFIX.t1lib}/lib
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PAPERSIZE) && ${PAPERSIZE} != "A4"
+CONFIGURE_ARGS+=	--disable-a4
+.endif
+
+.if ${OPSYS} != "SunOS"
+CONFIGURE_ARGS+=	--enable-auto-core
+.endif
+
+CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+		INSTALL_DATA="${INSTALL_DATA}"
+
+TEXFONTSDIR=		/var/spool/texfonts
+OWN_DIRS=		${TEXFONTSDIR}
+OWN_DIRS_PERMS=		${TEXFONTSDIR}/pk ${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=	${TEXFONTSDIR}/source ${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
+
+.include "../../www/libwww/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../fonts/t1lib/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+
+.include "../../mk/bsd.pkg.install.mk"
