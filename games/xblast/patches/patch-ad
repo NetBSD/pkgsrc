@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
+--- sounds/Imakefile.orig	Mon Nov  9 23:45:14 1998
++++ sounds/Imakefile	Mon Nov  9 23:45:29 1998
+@@ -11,7 +11,7 @@
+  * common part 
+  */
+ 
+-XBLASTDIR=$(LIBDIR)/xblast
++XBLASTDIR=$(PREFIX)/share/xblast
+ SOUNDDIR=$(XBLASTDIR)/sounds
+ 
+ /*

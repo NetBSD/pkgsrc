@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
+--- tkXBlast/setup.orig	Tue Nov 10 00:37:39 1998
++++ tkXBlast/setup	Tue Nov 10 00:39:36 1998
+@@ -1,4 +1,4 @@
+ #!/bin/sh
+ 
+-tclsh setup.tcl $*
+-exit 0
++tclsh8.0 setup.tcl $*
++exit 0

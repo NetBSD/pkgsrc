@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
+--- xbsndsrv.c.orig	Mon Nov  9 23:01:52 1998
++++ xbsndsrv.c	Mon Nov  9 23:02:26 1998
+@@ -100,7 +100,7 @@
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
+ #include <sys/time.h>
+-#include <linux/soundcard.h>
++#include <soundcard.h>
+ #include <signal.h>
+ #include "sound.h"
+ 
