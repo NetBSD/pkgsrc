@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/04/05 11:32:19 wennmach Exp $
+# $NetBSD: Makefile,v 1.18 2002/07/02 11:41:15 agc Exp $
 #
 
 DISTNAME=		krb4-1.1.1
@@ -30,7 +30,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 # this hangs while compiling one of the files, at least with the
 # toolchain as of 1.5ZC (20020329)
 .if ${MACHINE_ARCH} == "sparc64"
-IS_INTERACTIVE=		yes
+BROKEN=			toolchain problems on sparc64 (1.5ZC, 20020329)
 .endif
 
 post-patch:
