@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/07/23 15:00:12 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/08/05 03:04:33 jlam Exp $
 
 DISTNAME=		mutt-1.5.6i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--without-wc-funcs
 CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 .endif
 
-.include "Makefile.options"
+.include "options.mk"
 
 LDFLAGS+=		${_STRIPFLAG_CC}
 
