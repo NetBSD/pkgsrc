@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/14 03:04:31 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/07 00:19:29 seb Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -18,6 +18,7 @@ USE_GNU_READLINE=	yes	# rl_prep_term_function
 
 INFO_FILES=		mercury.info mercury_faq.info mercury_library.info
 INFO_FILES+=		mercury_ref.info mercury_trans_guide.info
+INFO_FILES+=		mercury_user_guide.info
 
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
