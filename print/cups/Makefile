@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2002/10/20 18:57:37 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2002/10/20 23:33:42 jlam Exp $
+#
+# The CUPS author is very good about taking back changes into the main
+# CUPS distribution.  The correct place to send patches or bug-fixes is:
+# cups-bugs@cups.org.
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
