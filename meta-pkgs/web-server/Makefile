@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1998/12/03 12:41:57 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1999/03/07 22:42:06 tron Exp $
 #
 
 DISTNAME=	web-server-1.0
-CATEGORIES=	www meta-pkgs
+CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
