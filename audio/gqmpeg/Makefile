@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/03/27 03:19:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.34 2001/06/11 06:34:18 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
 DISTNAME=		gqmpeg-0.8.3
@@ -22,7 +22,7 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-japanese
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" PKGLOCALEDIR="${PKGLOCALEDIR}"
+CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 CPPFLAGS+=		-I${LOCALBASE}/include
 

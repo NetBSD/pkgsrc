@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/05/22 09:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/06/11 06:34:36 jlam Exp $
 
 DISTNAME=	gif2png-2.4.2
 CATEGORIES=	graphics converters
@@ -12,7 +12,6 @@ COMMENT=	convert GIF files to PNG
 DEPENDS+=	png>=1.0.11:../../graphics/png
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 

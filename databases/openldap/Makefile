@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/05/14 16:15:52 kleink Exp $
+# $NetBSD: Makefile,v 1.23 2001/06/11 06:34:24 jlam Exp $
 #
 
 DISTNAME=	openldap-1.2.12
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+= --enable-wrappers
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	db-2.7.7:../../databases/db
-CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include/db2"
+CPPFLAGS+=	-I${LOCALBASE}/include/db2
 CONFIGURE_ENV+=	LIBS="-ldb2 -lpthread -lrt"
 .endif
 

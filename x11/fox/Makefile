@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/27 07:57:38 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:57 jlam Exp $
 # FreeBSD Id: ports/x11-toolkits/fox/Makefile,v 1.14 2001/02/23 19:00:05 knu Exp
 
 DISTNAME=	fox-0.99.172
@@ -24,7 +24,7 @@ PATCH_DIST_STRIP=-p1
 
 CPPFLAGS+=	-I..
 X_CFLAGS=	-DUSE_XUNICODE
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" X_CFLAGS="${X_CFLAGS}"
+CONFIGURE_ENV+=	X_CFLAGS="${X_CFLAGS}"
 
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/06/11 02:05:15 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/11 06:34:49 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -21,7 +21,6 @@ GNU_CONFIGURE=		yes
 .include "../../devel/readline/buildlink.mk"
 
 CONFIGURE_ARGS+=	--without-server --without-restore
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 # Prevent configure script from finding unnecessary libraries.  We'll patch
 # the amrecover Makefile to add the readline libraries as it's the only

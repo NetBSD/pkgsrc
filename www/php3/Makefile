@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/05/05 16:33:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/06/11 06:34:56 jlam Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=--with-system-regex --without-gd \
 CONFIGURE_ENV+=	PERL_PATH=${PERL5}
 
 .if !defined(BUILDING_EXTENSION_MODULE)
-CONFIGURE_ENV+=	CPPFLAGS="-DPHP_INTERNAL_FUNCS"
+CPPFLAGS+=	-DPHP_INTERNAL_FUNCS
 
 post-extract:
 	@${CP} ${FILESDIR}/abstractions.c ${WRKSRC}

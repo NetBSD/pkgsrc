@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/24 16:59:34 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:51 jlam Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -21,7 +21,6 @@ DEPENDS+=		libgetopt>=1.3:../../devel/libgetopt
 EVAL_PREFIX+=		GETOPTDIR=libgetopt
 CPPFLAGS+=		-I${GETOPTDIR}/include
 LDFLAGS+=		-Wl,-R${GETOPTDIR} -L${GETOPTDIR} -lgetopt
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 .endif
 
 # "make install" doesn't install the link from killall -> pidof.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 18:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/11 06:34:44 jlam Exp $
 #
 
 DISTNAME=	dt-1.1.7
@@ -16,7 +16,6 @@ IGNORE=		"${PKGNAME} is only useful for mac68k!"
 
 ALL_TARGET=	depend all
 CPPFLAGS+=	-D${DT_LAYOUT}_LAYOUT
-MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 DTDOCSDIR=	${PREFIX}/share/doc/dt
 WRKSRC=		${WRKDIR}/dt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 18:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/11 06:34:46 jlam Exp $
 # $FreeBSD: ports/net/mtr/Makefile,v 1.16 1999/10/28 08:06:00 mharo Exp $
 
 DISTNAME=	mtr-0.42
@@ -17,7 +17,7 @@ USE_GMAKE=	yes
 USE_CURSES=	yes
 # next line only needed if ncurses are also installed
 REPLACE_NCURSES=	configure configure.in
-CONFIGURE_ENV+= CPPFLAGS=-I${PREFIX}/include
+CPPFLAGS+=	-I${PREFIX}/include
 
 do-install:
 	${INSTALL} -c -s -m 4755 -o root -g wheel ${WRKSRC}/mtr ${PREFIX}/sbin

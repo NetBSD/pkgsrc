@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2001/05/22 09:33:32 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2001/06/11 06:34:35 jlam Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.10.1
@@ -21,7 +21,6 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 M4=			${LOCALBASE}/bin/gm4

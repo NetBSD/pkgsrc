@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:22:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:56 jlam Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -19,7 +19,6 @@ DEPENDS+=	p5-Term-ReadKey>=2.11:../../devel/p5-Term-ReadKey
 USE_PERL5=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-perl=${PERL5} \
 		--with-incdir=${LOCALBASE}/include \

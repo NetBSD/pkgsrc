@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:53 jlam Exp $
 #
 
 DISTNAME=	wmakerconf-2.7
@@ -19,7 +19,6 @@ USE_PERL5=	yes
 USE_LIBINTL=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 # for libProplist
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/06/06 21:43:56 jtb Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/11 06:34:49 jlam Exp $
 #
 
 DISTNAME=		srp-1.4.4
@@ -25,7 +25,6 @@ CPPFLAGS+=		-I${LOCALBASE}/include	# gmp.h
 LDFLAGS+=		-L${LOCALBASE}/lib	# libgmp.a
 
 CONFIGURE_ARGS+=	--with-srp --with-cast --enable-loginf
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 .if exists(/usr/lib/libkrb.a)
 CONFIGURE_ARGS+=	--with-krb4

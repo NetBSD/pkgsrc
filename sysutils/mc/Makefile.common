@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2001/03/27 03:20:17 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.9 2001/06/11 06:34:50 jlam Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -35,7 +35,6 @@ CONFIGURE_ENV+=		ac_cv_header_readline_readline_h=no
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		LOCALEDIR="${LOCALEDIR}"
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 
 LIBS+=			-lm -ltermcap		# -lslang

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:59 jlam Exp $
 
 DISTNAME=	xteddy-2.0.1
 CATEGORIES=	x11 games
@@ -15,7 +15,7 @@ CONFLICT+=	xteddy-1.*
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 
-CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS} -I${X11BASE}/include"
+CPPFLAGS+=	-I${X11BASE}/include
 LDFLAGS+=	-L${X11BASE}/lib -R${X11BASE}/lib 	# for libImlib
 
 pre-configure:

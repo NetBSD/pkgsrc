@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/11 06:34:55 jlam Exp $
 #
 
 DISTNAME=	htdig-3.1.5
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-image-dir=${PREFIX}/share/examples/htdig \
 		--with-search-dir=${PREFIX}/share/examples/htdig
-CONFIGURE_ENV=	CPPFLAGS=-I${PREFIX}/include/db2
+CPPFLAGS+=	-I${PREFIX}/include/db2
 
 post-install:
 	if [ ! -f ${PREFIX}/etc/htdig/htdig.conf ]; then \

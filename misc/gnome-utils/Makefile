@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.34 2001/04/08 06:23:57 rh Exp $
+## $NetBSD: Makefile,v 1.35 2001/06/11 06:34:45 jlam Exp $
 
 DISTNAME=		gnome-utils-1.4.0
 CATEGORIES=		misc x11 gnome
@@ -32,7 +32,7 @@ pre-configure:
 
 .if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=	--with-ncurses=${LOCALBASE}
-CONFIGURE_ENV+=		CPPFLAGS=-I${LOCALBASE}/include
+CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/27 03:20:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:47 jlam Exp $
 # $FreeBSD: ports/net/trafshow/Makefile,v 1.14 2000/06/28 12:53:15 alex Exp $
 #
 
@@ -25,7 +25,7 @@ ALL_TARGET=	trafshow
 BUILD_DEFS+=	USE_INET6
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
-CONFIGURE_ENV+=	CPPFLAGS=-DINET6
+CPPFLAGS+=	-DINET6
 .endif
 
 pre-configure:

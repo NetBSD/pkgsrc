@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/03/27 03:19:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 2001/06/11 06:34:25 jlam Exp $
 
 DISTNAME=		bison-1.28
 CATEGORIES=		devel
@@ -13,7 +13,6 @@ BUILD_USES_MSGFMT=	yes
 USE_LIBINTL=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 CPPFLAGS+=		-Dunix		# for $TMPDIR parsing

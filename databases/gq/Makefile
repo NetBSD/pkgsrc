@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:17:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:23 jlam Exp $
 #
 
 DISTNAME=	gq-0.3.0
@@ -15,6 +15,6 @@ DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"

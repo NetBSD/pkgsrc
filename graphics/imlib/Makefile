@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/05/22 09:32:21 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2001/06/11 06:34:37 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.8.1
@@ -22,7 +22,6 @@ USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 USE_GMAKE=		yes
 

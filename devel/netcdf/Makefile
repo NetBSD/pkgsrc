@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:29 jlam Exp $
 #
 
 DISTNAME=	netcdf-3.4
@@ -15,6 +15,6 @@ COMMENT=	Library for array-oriented data access
 USE_FORTRAN=	# defined
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
-CONFIGURE_ENV+=	CPPFLAGS="-Df2cFortran -Dunix"
+CPPFLAGS+=	-Df2cFortran -Dunix
 
 .include "../../mk/bsd.pkg.mk"

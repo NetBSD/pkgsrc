@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/04/30 04:16:12 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2001/06/11 06:34:58 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -23,7 +23,7 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" X_LDFLAGS="${X_LDFLAGS}"
+CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 
 INFO_FILES=		gdk.info gtk.info
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/05/21 22:25:19 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/11 06:34:20 jlam Exp $
 #
 
 DISTNAME=	verilog-20010520
@@ -19,6 +19,5 @@ CONFLICTS+=	verilog-[0-9]*
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
 CPPFLAGS+=      -I${LOCALBASE}/include
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"

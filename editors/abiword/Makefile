@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/06/11 02:05:10 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/06/11 06:34:30 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -35,7 +35,6 @@ ALL_TARGET=	compile canonical
 .include "../../graphics/png/buildlink.mk"
 
 OS_CFLAGS=	${CFLAGS}
-OS_CFLAGS+=	${BUILDLINK_CPPFLAGS}
 
 .if exists(/usr/include/inttypes.h)
 OS_CFLAGS+=	-DHAVE_INTTYPE_H=1

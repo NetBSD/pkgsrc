@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/10 13:19:27 agc Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:58 jlam Exp $
 #
 
 DISTNAME=	wmfire-0.0.3.8
@@ -11,7 +11,7 @@ COMMENT=	Displays generated fire according to system load
 USE_X11=	YES
 USE_XPM=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CPPFLAGS=-I${X11BASE}/include
+CPPFLAGS+=	-I${X11BASE}/include
 MAKE_ENV+=	XPMDIR=${XPMDIR}
 EVAL_PREFIX=	XPMDIR=xpm
 

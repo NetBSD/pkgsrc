@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/05/22 09:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/11 06:34:55 jlam Exp $
 #
 
 DISTNAME=		${PKGNAME}-source
@@ -18,8 +18,8 @@ NOT_FOR_PLATFORM=	NetBSD-1.[3-4]*-alpha	#ps-pdf.cpp:3229: Internal compiler erro
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-x
-MAKE_ENV+=		CPPFLAGS=-L${LOCALBASE}/lib \
-			BINDIR=${PREFIX}/bin \
+CPPFLAGS+=		-L${LOCALBASE}/lib
+MAKE_ENV+=		BINDIR=${PREFIX}/bin \
 			MANDIR=${PREFIX}/man
 
 do-install:

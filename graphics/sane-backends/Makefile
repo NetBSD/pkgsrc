@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/28 11:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:38 jlam Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 #USE_X11BASE=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include"
+CPPFLAGS+=	-I${PREFIX}/include
 
 # -O to work around a bug with -O2 and egcs.
 CFLAGS=		-O -I${LOCALBASE}/include

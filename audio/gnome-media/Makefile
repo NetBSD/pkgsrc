@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 13:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/11 06:34:18 jlam Exp $
 
 DISTNAME=	gnome-media-1.2.0
 CATEGORIES=	audio gnome
@@ -15,6 +15,6 @@ USE_LIBTOOL=	YES
 USE_X11BASE=	YES
 
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
-CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include"
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"

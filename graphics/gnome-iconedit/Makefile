@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/02 20:06:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:36 jlam Exp $
 #
 
 DISTNAME=		gnome-iconedit-1.2.0
@@ -20,7 +20,6 @@ USE_X11BASE=		YES
 
 # for finding libpng
 CPPFLAGS+=		-I${LOCALBASE}/include
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 post-configure:
 	cd ${WRKSRC}/src && ${GMAKE} clean

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/05/21 19:59:03 rh Exp $
+# $NetBSD: Makefile,v 1.54 2001/06/11 06:34:45 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -23,9 +23,6 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/popt/ltconfig
 LTCONFIG_OVERRIDE+=	${WRKSRC}/libIDL/ltconfig
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}"		# the build system runs
-#							# configure again...
 CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 
 # for DISTNAME, PKGNAME, and PLIST

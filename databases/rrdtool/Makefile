@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/06 01:09:34 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/11 06:34:24 jlam Exp $
 #
 
 DISTNAME=	rrdtool-1.0.28
@@ -24,7 +24,6 @@ GNU_CONFIGURE=	# defined
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ARGS= --enable-shared
 
 MAKE_ENV+=	X11BASE=${X11BASE} X11PREFIX=${X11PREFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/24 23:27:19 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:45 jlam Exp $
 
 DISTNAME=	gnubile-0.20
 CATEGORIES=	net
@@ -13,6 +13,6 @@ DEPENDS+=	gnome-core-*:../../x11/gnome-core
 USE_GMAKE=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CPPFLAGS="`xml-config --cflags`"
+CPPFLAGS+=	`xml-config --cflags`
 
 .include "../../mk/bsd.pkg.mk"

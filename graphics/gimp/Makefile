@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2001/05/22 09:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2001/06/11 06:34:36 jlam Exp $
 
 DISTNAME=		gimp-1.2.1
 CATEGORIES=		graphics
@@ -35,8 +35,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
 			--disable-perl \
 			--disable-python
-CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}" \
-			GNOME_CONFIG=no \
+CONFIGURE_ENV=		GNOME_CONFIG=no \
 			INTLDEPS="-I${LOCALBASE}/include"
 
 CPPFLAGS=		-I${LOCALBASE}/include

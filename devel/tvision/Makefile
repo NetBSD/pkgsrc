@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/05/17 08:38:44 abs Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:30 jlam Exp $
 #
 
 DISTNAME=		tvision-0.7
@@ -14,6 +14,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ENV+= 	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
+CPPFLAGS+=		-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/28 23:59:20 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:42 jlam Exp $
 
 DISTNAME=	aribas-1.20
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Multi-precision floating point and big integer arithmetic calculator
 
 WRKSRC=		${WRKDIR}/aribas/src
 
-MAKE_ENV+=	CPPFLAGS="-DUNiX -DPROTO"
+CPPFLAGS+=	-DUNiX -DPROTO
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/aribas ${PREFIX}/bin

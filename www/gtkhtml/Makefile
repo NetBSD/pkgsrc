@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/12 19:45:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:54 jlam Exp $
 #
 
 DISTNAME=	gtkhtml-0.8.3
@@ -21,6 +21,6 @@ USE_X11BASE=	YES
 USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"

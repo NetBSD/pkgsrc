@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/22 09:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/06/11 06:34:38 jlam Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -15,7 +15,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libplotter
 # make sure configure finds png
 CPPFLAGS+=		-I${LOCALBASE}/include
-CONFIGURE_ENV+=		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
 
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes

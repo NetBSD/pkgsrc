@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/05 19:51:19 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/11 06:34:51 jlam Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -18,6 +18,6 @@ USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-tcl=${LOCALBASE}/lib \
 		--with-tk=${LOCALBASE}/lib --disable-cli
-CONFIGURE_ENV=	CPPFLAGS=-I${LOCALBASE}/include/libhfs
+CPPFLAGS+=	-I${LOCALBASE}/include/libhfs
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/15 21:21:45 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:39 jlam Exp $
 
 DISTNAME=	a60-0.20a
 CATEGORIES=	lang
@@ -10,7 +10,6 @@ COMMENT=	Algol 60 interpreter
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+= 	-Dunix
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 INFO_FILES=	RRA60.info a60.info
 

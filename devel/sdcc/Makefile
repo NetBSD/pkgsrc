@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/05/12 06:36:42 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:29 jlam Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.2.1-src
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=--datadir=${LOCALBASE}/share/sdcc
 # by default on some, not on others
 CPPFLAGS+=	-fdollars-in-identifiers
 CONFIGURE_ENV+= MACHINE_ARCH=${MACHINE_ARCH}
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 

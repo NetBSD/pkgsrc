@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/05/22 09:32:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/06/11 06:34:41 jlam Exp $
 #
 
 DISTNAME=		R-1.1.1
@@ -44,7 +44,6 @@ CONFIGURE_ARGS+=	--without-blas_risc
 CONFIGURE_ARGS+=	--without-dxml
 CONFIGURE_ARGS+=	--without-libmoto
 
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
 

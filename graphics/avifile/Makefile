@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/14 23:09:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:34 jlam Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -27,8 +27,8 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	SDL_CONFIG="${SDL_CONFIG}" \
 		MOC="${MOC}" \
 		UIC="${UIC}" \
-#		CPPFLAGS="-I${LOCALBASE}/include"
 #		LIBS="-Wl,-R${X11BASE}/qt2/lib -L${X11BASE}/qt2/lib"
+#CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS+= --prefix=${PREFIX} --with-win32-path=${LOCALBASE}/lib/win32	\
 		--enable-sdl --without-qt
 

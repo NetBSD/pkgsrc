@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:42 jlam Exp $
 #
 
 DISTNAME=	geg-1.0.1
@@ -12,7 +12,5 @@ COMMENT=	Program for drawing 2D math functions within a nice GUI
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes
-
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
