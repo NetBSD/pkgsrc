@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/12/14 00:36:51 sakamoto Exp $
 bin/xbat
 lib/X11/Xbat/Domo/domoX0201.dat
 lib/X11/Xbat/Domo/domoX0202.dat
