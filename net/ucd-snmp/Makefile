@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/08/15 09:44:00 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/08/15 11:07:13 tron Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -28,5 +28,11 @@ post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "NetBSD")
+CFLAGS+=	-Dnetbsd1
+.endif
 
 .include "../../mk/bsd.pkg.mk"
