@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2003/06/11 20:51:00 abs Exp $
+# $NetBSD: Makefile.common,v 1.50 2003/06/23 14:23:13 jschauma Exp $
 #
 
 DISTNAME=		xscreensaver-4.10
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE} \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 USE_BUILDLINK2=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2002/10/20 03:20:35 grant Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/06/23 14:23:15 jschauma Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -8,7 +8,7 @@ DISTNAME?=		amanda-${VERS}
 CATEGORIES=		sysutils
 MASTER_SITES?=		http://download.sourceforge.net/amanda/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
 .if ${OPSYS} == "SunOS"
