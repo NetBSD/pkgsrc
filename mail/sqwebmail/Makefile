@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.23 2004/05/12 23:48:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/07/14 20:07:22 jlam Exp $
 
-DISTNAME=	sqwebmail-3.6.2
+DISTNAME=	sqwebmail-4.0.5
 CATEGORIES=	www
-COMMENT=	webmail CGI for access to local Maildir-style mailboxes
+COMMENT=	webmail CGI for access to local maildir-style mailboxes
 HOMEPAGE=	http://www.inter7.com/sqwebmail/
 
 DEPENDS+=	courier-auth>=${BASE_VERS}:../../mail/courier-auth
-DEPENDS+=	courier-maildirmake>=${BASE_VERS}:../../mail/courier-maildirmake
+DEPENDS+=	courier-maildir>=${BASE_VERS}:../../mail/courier-maildir
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_PERL5=		yes
-REPLACE_PERL=		sysconftool
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../courier-auth/INSTALL
 
 .include "../courier-auth/Makefile.common"
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
-SQWEBMAIL_STATEDIR=	/var/sqwebmail
+SQWEBMAIL_STATEDIR=	${VARBASE}/sqwebmail
 SQWEBMAIL_CACHEDIR=	${SQWEBMAIL_STATEDIR}/cache
 SQWEBMAIL_CALENDARDIR=	${SQWEBMAIL_STATEDIR}/calendar
 SQWEBMAIL_HTMLDIR=	${DATADIR}/sqwebmail/html
@@ -33,7 +32,7 @@ FILES_SUBST+=		SQWEBMAIL_STATEDIR=${SQWEBMAIL_STATEDIR:Q}
 SENDMAIL?=		/usr/sbin/sendmail
 
 # This is used by the sqwebmail configure script to set the location of
-# the sqwebmaild socket file, lockfile, and pidfile.
+# the sqwebmaild socket file, lockfile and pidfile.
 #
 CONFIGURE_ARGS+=	--localstatedir=${SQWEBMAIL_STATEDIR}
 
@@ -63,14 +62,13 @@ OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/public ${ROOT_USER} ${MAIL_GROUP} 0755
 OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/private ${ROOT_USER} ${MAIL_GROUP} 0750
 OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/localcache ${ROOT_USER} ${MAIL_GROUP} 0700
 
-SYSCONFTOOL=		${PREFIX}/sbin/sqwebmail.sysconftool
 GEN_FILES=		ldapaddressbook
-FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
+GEN_FILES+=		sqwebmaild
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 MESSAGE_SUBST+=		IMAGEDIR=${SQWEBMAIL_IMAGEDIR}
 MESSAGE_SUBST+=		IMAGEURL=${SQWEBMAIL_IMAGEURL}
 
-SUPPORT_FILES=		${EGDIR}/authmodulelist ${PKG_SYSCONFDIR}/authmodulelist
+SUPPORT_FILES=		${EGDIR}/calendarmode ${PKG_SYSCONFDIR}/calendarmode
 SUPPORT_FILES+=		/dev/null ${PKG_SYSCONFDIR}/nodsn
 .for FILE in ${GEN_FILES}
 CONF_FILES+=		${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}
@@ -81,7 +79,7 @@ CONF_FILES_PERMS+=	${DATADIR}/sqwebmail/${FILE}			\
 			${PKG_SYSCONFDIR}/${FILE}			\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
-RCD_SCRIPTS=		pcpd sqwebmail sqwebmaild
+RCD_SCRIPTS=		sqwebmail
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
@@ -94,20 +92,27 @@ pre-configure:
 			$$file.bak > $$file;				\
 	done
 
+# Default to non-groupware calendar-mode.
+post-build:
+	${ECHO} "local" > ${WRKDIR}/calendarmode
+
 post-install:
+	${LN} -sf ${DATADIR}/sqwebmail/webgpg ${PREFIX}/sbin/webgpg
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}/pcp
-	${INSTALL_DATA_DIR} ${HTMLDIR}/sqwebmail
-	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${HTMLDIR}/sqwebmail
-	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${HTMLDIR}/sqwebmail
-	${INSTALL_DATA} ${WRKSRC}/gpglib/README.html			\
-		${HTMLDIR}/sqwebmail/README.gpg.html
-	${INSTALL_DATA} ${WRKSRC}/pcp/README.html			\
-		${HTMLDIR}/sqwebmail/README.pcp.html
-	${INSTALL_DATA} ${WRKSRC}/sqwebmail/BUGS.html ${HTMLDIR}/sqwebmail
-	${INSTALL_DATA} ${WRKSRC}/sqwebmail/SECURITY.html ${HTMLDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKDIR}/calendarmode ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/sqwebmail/webmail.authpam ${EGDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/README.logindomainlist.html		\
+		${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/gpglib/README.html			\
+		${DOCDIR}/sqwebmail/README.gpg.html
+	${INSTALL_DATA} ${WRKSRC}/maildir/README.maildirfilter.html	\
+		${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/pcp/README.html			\
+		${DOCDIR}/sqwebmail/README.pcp.html
+	${INSTALL_DATA} ${WRKSRC}/sqwebmail/BUGS.html ${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/sqwebmail/SECURITY.html ${DOCDIR}/sqwebmail
 
 .include "../../mk/bsd.pkg.mk"
