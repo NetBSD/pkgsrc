@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/02 23:32:45 jtb Exp $
+
+--- lib/src/__config.h.in.orig
++++ lib/src/__config.h.in
+@@ -9,8 +9,8 @@
+ /* Define to 1 if you have the `ftruncate' function. */
+ #undef HAVE_FTRUNCATE
+ 
+-/* Define to 1 if you have the <gc/gc.h> header file. */
+-#undef HAVE_GC_GC_H
++/* Define to 1 if you have the <gc.h> header file. */
++#undef HAVE_GC_H
+ 
+ /* Define to 1 if you have the `gettimeofday' function. */
+ #undef HAVE_GETTIMEOFDAY
