@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2004/10/27 20:14:20 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2004/11/10 20:01:14 jmmv Exp $
 
 DISTNAME=	gimageview-0.2.26
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmmviewer/}
 
@@ -18,6 +19,11 @@ USE_X11=		YES
 
 CONFIGURE_ARGS+=	--disable-xinetest
 CONFIGURE_ARGS+=	--with-gtk2
+
+# The 'gimv' binary is not linked against libpthread directly, but the
+# librsvg library is.  So, when the program tries to dlopen(3) it, it
+# causes a segfault due to NetBSD "limitations".
+LDFLAGS.NetBSD+=	${PTHREAD_LDFLAGS}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
