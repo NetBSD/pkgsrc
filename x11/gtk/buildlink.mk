@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/07/20 01:54:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/07/27 13:33:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gtk.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.gtk?=	gtk+>=1.2.8
 DEPENDS+=		${BUILDLINK_DEPENDS.gtk}:../../x11/gtk
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gtk=gtk
+BUILDLINK_PREFIX.gtk_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.gtk=	include/gdk/*
 BUILDLINK_FILES.gtk+=	include/gtk/*
 BUILDLINK_FILES.gtk+=	include/gtk-*/*/*

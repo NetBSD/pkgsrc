@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/20 01:54:41 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/27 13:33:26 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rvm.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.rvm?=	rvm>=1.3
 DEPENDS+=		${BUILDLINK_DEPENDS.rvm}:../../devel/rvm
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.rvm=rvm
+BUILDLINK_PREFIX.rvm_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.rvm=	include/rvm/*
 BUILDLINK_FILES.rvm+=	lib/librds.*
 BUILDLINK_FILES.rvm+=	lib/librdslwp.*

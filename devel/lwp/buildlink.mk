@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/20 01:54:39 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/27 13:33:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lwp.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.lwp?=	lwp>=1.6
 DEPENDS+=		${BUILDLINK_DEPENDS.lwp}:../../devel/lwp
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.lwp=lwp
+BUILDLINK_PREFIX.lwp_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.lwp=	include/lwp/*
 BUILDLINK_FILES.lwp+=	lib/liblwp.*
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/25 23:51:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:32 jlam Exp $
 #
 # This Makefile fragment is included by packages that use f2c.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.f2c?=	f2c>=20001205nb3
 DEPENDS+=		${BUILDLINK_DEPENDS.f2c}:../../lang/f2c
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.f2c=f2c
+BUILDLINK_PREFIX.f2c_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.f2c=	include/f2c.h
 BUILDLINK_FILES.f2c+=	lib/libf2c.*
 BUILDLINK_FILES.f2c+=	lib/libf2c_p.a

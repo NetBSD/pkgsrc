@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:39 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ltdl.
 #
@@ -19,6 +19,7 @@ BUILDLINK_DEPENDS.ltdl?=	libtool>=${LIBTOOL_REQD}
 DEPENDS+=	${BUILDLINK_DEPENDS.ltdl}:../../devel/libtool
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.ltdl=libtool
+BUILDLINK_PREFIX.ltdl_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.ltdl=	include/ltdl.h
 BUILDLINK_FILES.ltdl+=	lib/libltdl.*
 
