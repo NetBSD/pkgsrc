@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.28 2003/08/29 11:13:04 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.29 2003/08/30 07:53:07 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -485,11 +485,14 @@ _BLNK_MANGLE_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_MANGLE_DIRS+=	${WRKDIR}
 _BLNK_MANGLE_DIRS+=	${_BLNK_ALLOWED_RPATHDIRS}
 
-_BLNK_MANGLE=			_bUiLdLiNk_
+_BLNK_MANGLE_START=		_bUiLdLiNk_
+_BLNK_MANGLE_END=		\#
 .for _dir_ in ${_BLNK_MANGLE_DIRS}
-_BLNK_MANGLE_DIR.${_dir_}=	${_BLNK_MANGLE}${_dir_:S/\//_/g}${_BLNK_MANGLE}
+_BLNK_MANGLE_DIR.${_dir_}=	\
+	${_BLNK_MANGLE_START}${_dir_:S/\//_/g}${_BLNK_MANGLE_END}
 .endfor
-_BLNK_MANGLE_SED_PATTERN=	${_BLNK_MANGLE}[^/ 	]*${_BLNK_MANGLE}
+_BLNK_MANGLE_SED_PATTERN=	\
+	${_BLNK_MANGLE_START}[^/ 	${_BLNK_MANGLE_END}]*${_BLNK_MANGLE_END}
 
 _BLNK_PROTECT_DIRS=	# empty
 _BLNK_UNPROTECT_DIRS=	# empty
@@ -515,6 +518,14 @@ _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 .for _dir_ in ${_BLNK_PROTECT_DIRS}
 _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
+#
+# Change references to ${DEPOTBASE}/<pkg> into ${LOCALBASE} so that
+# "overwrite" packages think headers and libraries for "pkgviews" packages
+# are just found in the default view.
+#
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_BLNK_TRANSFORM+=       depot:${DEPOTBASE}:${LOCALBASE}
+.endif
 #
 # Change any buildlink directories in runtime library search paths into
 # the canonical actual installed paths.
@@ -618,9 +629,6 @@ _UNBUILDLINK_FILES=		\
 #
 UNBUILDLINK_SED?=		# empty
 _UNBUILDLINK_SED=		${UNBUILDLINK_SED}
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_UNBUILDLINK_SED+=		-e "s|${DEPOTBASE}/[^/]*/|${LOCALBASE}/|g"
-.endif
 _UNBUILDLINK_SED+=		${_BLNK_UNTRANSFORM_SED}
 
 SUBST_CLASSES+=			unbuildlink
