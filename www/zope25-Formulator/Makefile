@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/12 16:40:01 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/12 16:54:25 drochner Exp $
 
 DISTNAME=	Formulator-1.4.1
 PKGNAME=	zope25-Formulator-1.4.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.infrae.com/products/formulator
 COMMENT=	Zope framework for web forms
-
-ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 
 .include "../../www/zope25/product.mk"
 .include "../../mk/bsd.pkg.mk"
