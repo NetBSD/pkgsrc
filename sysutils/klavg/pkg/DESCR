@@ -1,10 +1,10 @@
-This is a small KDE applet showing load everage graph on the
-panel. You could customise colours, refresh rate.  It also allows to
-execute some command on click.
+This is a small KDE applet showing the load average graph on the
+panel. You can customize colors and the refresh rate.  It also allows one
+to execute a command on receiving a mouse click.
 
-After start it puts itself in the docking area on the panel. If
-session support is enabled, it will restart itself next time user logs
-in.
+After starting, it puts itself in the docking area on the panel. If
+session support is enabled, it will restart itself the next time the user9
+logs in.
 
-Pressing righ mouse button shows menu.  Pressing left mouse button
-executes configured command.
+Pressing the right mouse button shows the menu.  Pressing the left mouse
+button executes the configured command.
