@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/17 21:51:52 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/24 19:06:39 reed Exp $
 bin/fbdesk
+share/doc/fbdesk/README
+@dirrm share/doc/fbdesk
