@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.22 2003/08/13 13:24:16 atatat Exp $
+$NetBSD: patch-ab,v 1.23 2003/10/04 20:22:35 atatat Exp $
 
 Patch for vnode/DNLC interface change courtesy of lsof maintainer.
 
 --- Configure.orig	2003-06-11 20:55:38.000000000 -0400
 +++ Configure
-@@ -819,10 +819,13 @@
+@@ -819,10 +819,13 @@ case $LSOF_TGT in	# {
  	LSOF_CFGF="$LSOF_CFGF -DHASFDLINK"
        fi	# }
      fi	# }
@@ -21,7 +21,7 @@ Patch for vnode/DNLC interface change courtesy of lsof maintainer.
      fi	# }
      if test $LSOF_VERS -ge 40000	# {
      then
-@@ -938,6 +941,14 @@
+@@ -938,6 +941,14 @@ case $LSOF_TGT in	# {
  	exit 1
        fi	# }
      fi	# }
@@ -36,7 +36,7 @@ Patch for vnode/DNLC interface change courtesy of lsof maintainer.
      LSOF_DINC="$LSOF_DINC -I`pwd`/dialects/darwin/xnu/bsd"
      LSOF_DINC="$LSOF_DINC -I/usr/include"
      LSOF_DINC="$LSOF_DINC -I${DARWIN_SYSDIR}/System.framework/PrivateHeaders"
-@@ -1175,6 +1186,14 @@
+@@ -1175,6 +1186,14 @@ kernel generation process.
  
        LSOF_CFGF="$LSOF_CFGF -DHASIPv6"
      fi	# }
@@ -51,7 +51,7 @@ Patch for vnode/DNLC interface change courtesy of lsof maintainer.
      LSOF_DIALECT_DIR=du
      ;;
  
-@@ -1526,10 +1545,13 @@
+@@ -1526,10 +1545,13 @@ kernel generation process.
        fi	# }
        LSOF_CFGF="$LSOF_CFGF -DHAS9660FS"
      fi	# }
@@ -68,7 +68,30 @@ Patch for vnode/DNLC interface change courtesy of lsof maintainer.
      fi	# }
      if test $LSOF_DINC_ADD -eq 1	# {
      then
-@@ -2241,10 +2263,13 @@
+@@ -2217,6 +2239,11 @@ kernel generation process.
+     then
+       LSOF_CFGF="$LSOF_CFGF -DHASPROCFS"
+       LSOF_TMP1=1
++      grep -q PFSroot ${NETBSD_SYS}/miscfs/procfs/procfs.h
++      if test $? -eq 0	# {
++      then
++	LSOF_CFGF="$LSOF_CFGF -DHASPROCFS_PFSROOT"
++      fi	# }
+     fi	# }
+     if test -d ${NETBSD_SYS}/isofs/cd9660	# {
+     then
+@@ -2235,16 +2262,24 @@ kernel generation process.
+ 	then
+  	  LSOF_CFGF="$LSOF_CFGF -DHASKERNFS"
+ 	  LSOF_TMP1=1
++	  grep -q "*kfs_kt;" ${NETBSD_SYS}/miscfs/kernfs/kernfs.h
++	  if test $? -eq 0	# {
++	  then
++	    LSOF_CFGF="$LSOF_CFGF -DHASKERNFS_KFS_KT"
++	  fi	# }
+       fi	# }
+     fi	# }
+     if test $LSOF_TMP1 -eq 1	# {
      then
        LSOF_DINC="-I$LSOF_INCLUDE -I$NETBSD_SYS"
      fi	# }
@@ -85,7 +108,7 @@ Patch for vnode/DNLC interface change courtesy of lsof maintainer.
      fi	# }
      grep -q i_ffs_size ${LSOF_INCLUDE}/ufs/ufs/inode.h
      if test $? -eq 0	# {
-@@ -2645,10 +2670,13 @@
+@@ -2645,10 +2680,13 @@ kernel generation process.
  	LSOF_CFGF="$LSOF_CFGF -DHASI_E2FS_PTR"
        fi	# }
      fi	# }
