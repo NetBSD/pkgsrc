@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7835 2004/11/12 10:47:35 adam Exp $
+$NetBSD: CHANGES,v 1.7836 2004/11/12 11:34:33 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5248,3 +5248,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Template-Toolkit to 2.14nb1 [erh 2004-11-12]
 	Removed p5-libxml-enno [erh 2004-11-12]
 	Updated pvm to 3.4.5 [adam 2004-11-12]
+	Added py-crack-0.01 [darcy 2004-11-12]
