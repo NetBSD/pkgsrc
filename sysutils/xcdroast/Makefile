@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2003/08/30 22:51:38 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/12/28 19:29:21 jmmv Exp $
 
-DISTNAME=	xcdroast-0.98alpha14
-PKGNAME=	xcdroast-0.98a14
+DISTNAME=	xcdroast-0.98alpha15
+PKGNAME=	xcdroast-0.98a15
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcdroast/}
 
@@ -9,17 +9,21 @@ MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://www.xcdroast.org/
 COMMENT=	Graphical user interface for the command-line cdrecord-tools
 
-DEPENDS+=	cdrecord-xcdroast-0.98a13.*:../cdrecord-xcdroast
+BUILD_USES_MSGFMT=	YES
 
-.include "../../mk/bsd.prefs.mk"
+DEPENDS+=		cdrecord-xcdroast-0.98a15.*:../cdrecord-xcdroast
 
 USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
+
+CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-USE_GMAKE=	yes
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${_OPSYS_HAS_OSSAUDIO} == "yes"
 CFLAGS+=	-DHAVE_OSS
@@ -28,7 +32,7 @@ CONFIGURE_ENV+=	AUDIO_LIBS=${AUDIO_LIBS}
 .endif
 
 DOCDIR=		${PREFIX}/share/doc/xcdroast
-DOCFILES=	DOCUMENTATION FAQ README.nonroot
+DOCFILES=	DOCUMENTATION FAQ README.nonroot manual/xcdroast-manual.pdf
 HTMLDIR=	${PREFIX}/share/doc/html/xcdroast
 SUPPORT_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
 
@@ -47,11 +51,10 @@ post-install:
 	for file in ${DOCFILES}; do	\
 		${INSTALL_DATA} $${file} ${DOCDIR};			\
 	done)
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${CP} -r ${WRKSRC}/doc/manual/* ${HTMLDIR}
 
-# gdk-pixbuf implies gtk, glib, gettext-lib
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/pcre/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
