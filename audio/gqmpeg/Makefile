@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2002/02/14 01:38:08 wiz Exp $
-# FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
+# $NetBSD: Makefile,v 1.53 2002/02/27 12:15:37 wiz Exp $
+#
 
-DISTNAME=		gqmpeg-0.12.1
+DISTNAME=		gqmpeg-0.13.0
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg/}
 
@@ -13,7 +13,7 @@ BUILD_USES_MSGFMT=	yes
 
 DEPENDS+=		mpg123>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
-DEPENDS+=              xmp>=2.0.2:../../audio/xmp
+DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
 USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
