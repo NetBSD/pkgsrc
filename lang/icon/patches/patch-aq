@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.6 2003/06/06 08:58:43 jtb Exp $
+$NetBSD: patch-aq,v 1.7 2003/06/23 20:48:24 jtb Exp $
 
 --- /dev/null
 +++ config/netbsd/vax.c
@@ -26,8 +26,8 @@ $NetBSD: patch-aq,v 1.6 2003/06/06 08:58:43 jtb Exp $
 +		asm ("movl 0(%r1),%sp");
 +		asm ("clrl %fp");
 +		asm ("clrl %ap");
-+		interp (0,0);
-+		syserr ("interp() returned in coswitch");
++		new_context (0,0);
++		syserr ("new_context() returned in coswitch");
 +	}
 +	else {
 +		asm ("movl 0(%r1),%sp");
