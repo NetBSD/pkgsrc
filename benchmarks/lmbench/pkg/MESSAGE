@@ -1,3 +1,8 @@
-execute "run-lmbench" to run the benchmark.
-There is a Makefile in your share/lmbench/results directory
+======================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:04 wiz Exp $
+
+Execute "run-lmbench" to run the benchmark.
+There is a Makefile in the ${PREFIX}/share/lmbench/results directory
 that can be used to format your results as well.
+
+======================================================================

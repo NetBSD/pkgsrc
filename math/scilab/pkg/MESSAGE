@@ -1,7 +1,11 @@
-******************************************************************************
-0 - COPYRIGHT NOTICE
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2001/02/06 14:24:11 wiz Exp $
 
-To use Scilab, you need to fill and return the end of the file notice.tex
-or notice.ps (postscript file). You may email to Scilab@inria.fr.
-These files are in ${PREFIX}/share/scilab-2.5/
-******************************************************************************
+COPYRIGHT NOTICE
+
+To use Scilab, you need to fill out and return the end of the file
+notice.tex or notice.ps (postscript file). You may email it to
+	Scilab@inria.fr
+These files are in ${PREFIX}/share/scilab-2.5.
+
+===========================================================================
