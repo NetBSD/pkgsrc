@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/03/05 18:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2001/03/07 00:17:29 hubertf Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -20,7 +20,6 @@ WRKSRC=			${WRKDIR}/pkg_install
 MAKE_ENV+=		BINDIR=/usr/sbin MANDIR=/usr/share/man NOLINT=1
 NO_CONFIGURE=		yes
 NO_MTREE=		yes
-NO_PATCH=		yes
 NO_PKG_REGISTER=	yes
 NO_PACKAGE=		No package registration is done
 MANCOMPRESSED_IF_MANZ=	yes
