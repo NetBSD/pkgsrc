@@ -1,0 +1,44 @@
+$NetBSD: patch-an,v 1.1 2002/03/22 11:26:05 agc Exp $
+
+Also handle EINVAL error to writev(2)
+
+--- src/IIOP/giop-msg-buffer.c	2002/03/22 10:43:32	1.1
++++ src/IIOP/giop-msg-buffer.c	2002/03/22 10:44:27
+@@ -169,6 +169,37 @@
+   return msgbuf;
+ }
+ 
++#ifdef __NetBSD__
++/* NetBSD returns EINVAL if we try to send > IOV_MAX iovecs */
++/* wrap writev so that we only ever try to send IOV_MAX at most */
++
++#include <limits.h>
++
++static int
++wrap_writev(int fd, const struct iovec *vector, size_t count)
++{
++	size_t	n;
++	int	ret;
++	int	wc;
++
++	ret = 0;
++	while (count > 0) {
++		n = MIN(IOV_MAX, count);
++		if ((wc = writev(fd, vector, n)) < 0) {
++			break;
++		}
++		ret += wc;
++		vector += n;
++		count -= n;
++	}
++	return ret;
++}
++
++#define writev wrap_writev
++
++#endif /* __NetBSD__ */
++
++
+ gint
+ giop_send_buffer_write(GIOPSendBuffer *send_buffer)
+ {
