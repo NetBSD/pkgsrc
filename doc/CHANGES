@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9050 2005/02/05 16:59:38 adrianp Exp $
+$NetBSD: CHANGES,v 1.9051 2005/02/05 17:06:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -767,3 +767,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkglint to 4.00 [wiz 2005-02-05]
 	Removed firewalk-gtk [adrianp 2005-02-05]
 	Updated firewalk to 5.0 [adrianp 2005-02-05]
+	Added libgda-sqlite-1.0.4 [jmmv 2005-02-05]
