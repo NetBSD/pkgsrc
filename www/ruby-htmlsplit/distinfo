@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/09/30 12:23:45 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:08:38 wiz Exp $
 
 SHA1 (ruby/htmlsplit102.zip) = e7703e9d4e662cf42b896dace872039f18d498ac
+RMD160 (ruby/htmlsplit102.zip) = 349362a6d51388d3f0ae4d500a22f049633cc52a
 Size (ruby/htmlsplit102.zip) = 4063 bytes

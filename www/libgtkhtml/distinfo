@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/06/28 18:35:25 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 14:08:33 wiz Exp $
 
 SHA1 (libgtkhtml-2.6.2.tar.bz2) = cf0fab87afcc90c960166ba00733bfb1c402d736
+RMD160 (libgtkhtml-2.6.2.tar.bz2) = 233076dd9d092c016b6b7215f7e33cb4f9bd3ea2
 Size (libgtkhtml-2.6.2.tar.bz2) = 427891 bytes

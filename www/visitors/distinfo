@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/05 17:55:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:39 wiz Exp $
 
 SHA1 (visitors-0.4a.tar.gz) = 5b160f8467c3da82f8a6f26b8270aded0663a7b3
+RMD160 (visitors-0.4a.tar.gz) = 5079192e646b7640c647d5a76356584299b48969
 Size (visitors-0.4a.tar.gz) = 59755 bytes

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.8 2004/09/14 08:32:16 wiz Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 14:08:39 wiz Exp $
 
 SHA1 (thttpd-2.25b.tar.gz) = 51bc25ef035d7557c869a02ce353580a1cadfa2c
+RMD160 (thttpd-2.25b.tar.gz) = 15020e8d04d27b30c4da3104387a281e35d58025
 Size (thttpd-2.25b.tar.gz) = 132363 bytes
 SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
+RMD160 (sitedrivenby.gif) = 2e350e6531a800da8796207509c12fb590d0affa
 Size (sitedrivenby.gif) = 8519 bytes
 SHA1 (patch-aa) = 0f739bebf1ade45a9b9819fc92d48eeb1004eb66
 SHA1 (patch-ab) = 3766ae48fabc1980483e482157d1267971e621df

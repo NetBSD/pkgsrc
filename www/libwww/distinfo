@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.18 2004/02/29 11:49:55 markd Exp $
+$NetBSD: distinfo,v 1.19 2005/02/24 14:08:33 wiz Exp $
 
 SHA1 (w3c-libwww-5.4.0.tgz) = 2394cb4e0dc4e2313a9a0ddbf508e4b726e9af63
+RMD160 (w3c-libwww-5.4.0.tgz) = 12e55ecb2435f9048d627e56f8ae60d4c246648b
 Size (w3c-libwww-5.4.0.tgz) = 1129121 bytes
 SHA1 (libwww-configure-5.4.0nb1.gz) = c11e03ddfc03a114e0d802ef9e07e8be0738969d
+RMD160 (libwww-configure-5.4.0nb1.gz) = 2380912d01514fe64674016d5e1e3ab081caca93
 Size (libwww-configure-5.4.0nb1.gz) = 155713 bytes
 SHA1 (patch-aa) = fc0124c8995992536782e60ce67332c2dc505b10
 SHA1 (patch-ab) = 24db9ca337bd6768fa5b208186f7b55e555beb8f

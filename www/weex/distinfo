@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/11/29 08:36:06 martti Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:40 wiz Exp $
 
 SHA1 (weex-2.6.1.tar.gz) = 8613e7c1a1621bbe042d076883f10b330934de5e
+RMD160 (weex-2.6.1.tar.gz) = d286d24d3d87ce78fb5032d50f0d6a0ac2876a04
 Size (weex-2.6.1.tar.gz) = 200858 bytes
 SHA1 (patch-aa) = 2b2ee9a565e996c99b3bcc6c0ba76d3a4c65ba55
 SHA1 (patch-ab) = b04948d733ee48742810d69015b25b00b916d37f

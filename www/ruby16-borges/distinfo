@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/28 06:13:22 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:38 wiz Exp $
 
 SHA1 (ruby/borges-0.2.0.tar.gz) = 6f4586dfdf3250402ef3f7c547053b31094c1e25
+RMD160 (ruby/borges-0.2.0.tar.gz) = 2f747a3ac2fb858be103882c68a3fdb248f51c5b
 Size (ruby/borges-0.2.0.tar.gz) = 12822 bytes

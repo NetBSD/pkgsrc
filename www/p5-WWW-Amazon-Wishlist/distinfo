@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/04 19:01:43 cjep Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:37 wiz Exp $
 
 SHA1 (WWW-Amazon-Wishlist-0.65.tar.gz) = d3c752cdd202c50d097efb459dc2d5c6a7ff13f3
+RMD160 (WWW-Amazon-Wishlist-0.65.tar.gz) = dcbd2dfe3d7e7b75b7a5353ab2352b639cded50a
 Size (WWW-Amazon-Wishlist-0.65.tar.gz) = 6591 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/27 23:49:49 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:28 wiz Exp $
 
 SHA1 (rivet_0.4.0-1.tar.gz) = 3d542afcc203c6d3d20ab3456c63c7c549ef0008
+RMD160 (rivet_0.4.0-1.tar.gz) = d72dc6afed2972d6527b3746771388e7375423d0
 Size (rivet_0.4.0-1.tar.gz) = 547851 bytes

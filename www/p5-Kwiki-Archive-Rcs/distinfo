@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/02 17:28:50 jlam Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:08:36 wiz Exp $
 
 SHA1 (Kwiki-Archive-Rcs-0.14.tar.gz) = 6bf678864da4a89822f9099af4fa11432ccaee38
+RMD160 (Kwiki-Archive-Rcs-0.14.tar.gz) = 2c8f8ec4233b9fb0e9986d6520a056650c9ade8d
 Size (Kwiki-Archive-Rcs-0.14.tar.gz) = 8862 bytes

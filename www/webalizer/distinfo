@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2003/07/01 14:32:59 jwise Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 14:08:40 wiz Exp $
 
 SHA1 (webalizer-2.01-10-src.tar.bz2) = fbf6ad78fc2b0189d065e661dc02a781e858b31a
+RMD160 (webalizer-2.01-10-src.tar.bz2) = 4605ff9bd8ec1c74680b8fbfe703f2e81ae68e20
 Size (webalizer-2.01-10-src.tar.bz2) = 252664 bytes
 SHA1 (patch-ac) = f4885b334b3adb3f8523f959a89e6fe5f7f3b52f
 SHA1 (patch-ad) = 4ff72d4b620f64cec68bff826b84d183858c0da9
