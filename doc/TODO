@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.58 2002/12/12 19:53:52 jmmv Exp $
+$NetBSD: TODO,v 1.59 2002/12/13 00:33:50 cjep Exp $
 
 Suggested new packages
 ======================
@@ -208,6 +208,7 @@ Suggested package updates
 	o rox-session-0.1.17
 	o rrdtool-1.0.39
 	o rt-2.1.15
+	o samba-2.2.7a
 	o sane-1.0.9
 	o sane-frontends-1.0.9
 	o sawfish-1.2
