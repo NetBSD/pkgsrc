@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/04/09 21:51:30 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/10 01:43:03 wiz Exp $
 
 DISTNAME=		ettercap-0.6.4
 CATEGORIES=		security net
@@ -10,6 +10,7 @@ COMMENT=		Multipurpose sniffer/interceptor/logger for switched LAN
 
 GNU_CONFIGURE=		yes
 
+# missing newpad()
 USE_NCURSES=		yes
 USE_PTHREAD=		native pth
 
