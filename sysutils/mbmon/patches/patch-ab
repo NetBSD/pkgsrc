@@ -1,18 +1,14 @@
-$NetBSD: patch-ab,v 1.1 2004/03/07 01:06:45 fvdl Exp $
-
---- configure.orig	2003-04-11 18:47:14.000000000 +0200
-+++ configure	2004-03-07 01:45:11.000000000 +0100
-@@ -875,8 +875,13 @@
-   		CC=cc
+--- configure.orig	2004-07-18 02:20:24.000000000 +0100
++++ configure	2004-07-18 02:21:41.000000000 +0100
+@@ -876,6 +876,11 @@
  		HOSTDEF="-DNETBSD"
  		ADDLIBS="-li386"
  		;;
 +	amd64-*-netbsd* | x86_64-*-netbsd*)
-+  		CC=cc
++		CC=cc
 +		HOSTDEF="-DNETBSD"
 +		ADDLIBS="-lx86_64"
 +		;;
  	*)
    		CC=gcc
  		;;
- esac

@@ -1,9 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2004/03/07 01:23:13 snj Exp $
-
---- io_static.c.orig	2003-03-14 06:04:51.000000000 +0100
-+++ io_static.c	2004-03-07 01:53:17.000000000 +0100
-@@ -2,8 +2,11 @@
- 
+--- io_static.c.orig	2004-07-18 02:25:12.000000000 +0100
++++ io_static.c	2004-07-18 02:25:21.000000000 +0100
+@@ -3,6 +3,9 @@
  #include "io_cpu.h"
  #ifdef NETBSD
  #include "machine/sysarch.h"
@@ -13,4 +10,3 @@ $NetBSD: patch-ad,v 1.2 2004/03/07 01:23:13 snj Exp $
  #endif
  
  static int OpenIO()
- {
