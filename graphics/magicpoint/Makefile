@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/01/12 15:19:28 wennmach Exp $
+# $NetBSD: Makefile,v 1.38 2004/05/09 20:19:44 snj Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		2
@@ -11,8 +11,8 @@ COMMENT=		X11 based presentation tool
 
 CONFLICTS=		mgp-[0-9]*
 
-USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
 USE_IMAKE=		yes
 USE_PERL5=		build
 
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--enable-freetype-charset16
 CONFIGURE_ARGS+=	--disable-vflib
 CONFIGURE_ARGS+=	--enable-locale
 CONFIGURE_ARGS+=	--enable-gif
+CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
 # We need to perform the steps normally done by ``xmkmf -a'' since some
 # files need to be created before ``make depend''.
@@ -46,11 +47,11 @@ post-install:
 	${INSTALL_DATA} README* *.jpg *.eps *.mgp *.xbm mgprc-sample \
 		${PREFIX}/share/examples/mgp
 
-.include "../../fonts/Xft2/buildlink2.mk"
-.include "../../fonts/fontconfig/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/mng/buildlink2.mk"
-.include "../../graphics/netpbm/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/mng/buildlink3.mk"
+.include "../../graphics/netpbm/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
