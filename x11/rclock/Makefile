@@ -1,15 +1,15 @@
 # ex:ts=8
-# $NetBSD: Makefile,v 1.2 1997/10/09 11:46:31 agc Exp $
 # Ports collection Makefile for:  rclock
 # Version required:		  2.19
 # Date created:			  24th Feburary 1997
 # Whom:				  obrien@NUXI.com
 #
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:11:13 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
 #
 
-PKGNAME=	rclock-2.20
 DISTNAME=	rxvt-2.20
+PKGNAME=	rclock-2.20
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE}  \
 		ftp://ftp.nuclecu.unam.mx/linux/local/rxvt/  \
