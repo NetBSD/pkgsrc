@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/17 18:09:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/30 05:02:51 jlam Exp $
 #
 
 DISTNAME=	${PY_DISTNAME}
@@ -11,9 +11,16 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
 COMMENT=	line editing support for Python
 
-DEPENDS+=	readline>=4.0:../../devel/readline
-
 EXTRACT_ELEMENTS=	${PY_MODULES}/readline.c
+
+USE_GNU_READLINE=	# defined
+
+.include "../../devel/readline/buildlink.mk"
+
+PY_SETUP_SUBST+=	BUILDLINK_INCDIR=${BUILDLINK_INCDIR}
+PY_SETUP_SUBST+=	BUILDLINK_LIBDIR=${BUILDLINK_LIBDIR}
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 do-configure:	python-std-do-configure
 
