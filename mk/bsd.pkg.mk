@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1089 2002/11/24 20:13:16 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1090 2002/11/26 08:59:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1879,6 +1879,8 @@ do-pkgconfig-override:
 .  endfor
 .endif
 
+.if empty(USE_BUILDLINK2:M[nN][oO])
+#
 # By default, prevent invocation of GNU "auto*" driven by the generated
 # Makefiles during the build process by touching various auto{conf,make}
 # source files to make them up-to-date.  Packages that require regenerating
@@ -1910,7 +1912,7 @@ do-pkgconfig-override:
 #		sysutils/fileutils, www/curl, x11/lesstif, x11/kdelibs2
 #
 AUTOMAKE_OVERRIDE?=	YES
-.if defined(AUTOMAKE_OVERRIDE) && (${AUTOMAKE_OVERRIDE} == "YES")
+.  if (${AUTOMAKE_OVERRIDE} == "YES")
 AUTOMAKE_PATTERNS+=     aclocal.m4 
 AUTOMAKE_PATTERNS+=     configure.in
 AUTOMAKE_PATTERNS+=     Makefile.in
@@ -1920,13 +1922,13 @@ AUTOMAKE_PATTERNS+=     ${CONFIGURE_SCRIPT:T}
 
 _CONFIGURE_PREREQ+=	automake-pre-override
 automake-pre-override:
-.  if defined(HAS_CONFIGURE)
+.    if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
 	 done; echo ${NULL_COOKIE} ) |					\
 	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
-.  endif
+.    endif
 
 AUTOMAKE_POST_PATTERNS+=     config.status
 AUTOMAKE_POST_PATTERNS+=     Makefile
@@ -1935,14 +1937,15 @@ AUTOMAKE_POST_PATTERNS+=     config.h
 
 _CONFIGURE_POSTREQ+=	automake-post-override
 automake-post-override:
-.  if defined(HAS_CONFIGURE)
+.    if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_POST_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
 	 done; echo ${NULL_COOKIE} ) |					\
 	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
-.  endif
-.endif	# AUTOMAKE_OVERRIDE
+.    endif
+.  endif	# AUTOMAKE_OVERRIDE
+.endif		# USE_BUILDLINK != "no"
 
 .if !target(do-configure)
 do-configure: ${_CONFIGURE_PREREQ}

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.55 2002/11/25 19:32:47 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.56 2002/11/26 08:59:06 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -858,7 +858,7 @@ buildlink-check:
 # status for each of the GNU auto* tools, which should cause GNU configure
 # scripts to think that they can't be found.
 #
-AUTOMAKE_OVERRIDE?=	NO
+AUTOMAKE_OVERRIDE?=	yes
 _GNU_MISSING=		${.CURDIR}/../../mk/gnu-config/missing
 _HIDE_PROGS.autoconf=	bin/autoconf	bin/autoconf-2.13		\
 			bin/autoheader	bin/autoheader-2.13		\
@@ -876,7 +876,10 @@ _HIDE_PROGS.automake=	bin/aclocal	bin/aclocal-1.4			\
 					bin/automake-1.6		\
 					bin/automake-1.7
 
+.if empty(AUTOMAKE_OVERRIDE:M[nN][oO])
 do-buildlink: hide-autotools
+.endif
+
 hide-autotools:	# empty
 
 .for _autotool_ in autoconf automake
