@@ -1,21 +1,22 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/13 13:54:01 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/12/05 10:06:39 adam Exp $
 #
 
 .if !defined(GNUSTEP_GUI_BUILDLINK2_MK)
 GNUSTEP_GUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnustep-gui
-BUILDLINK_DEPENDS.gnustep-gui?=		gnustep-gui>=0.8.5nb2
+BUILDLINK_DEPENDS.gnustep-gui?=		gnustep-gui>=0.9.0
 BUILDLINK_PKGSRCDIR.gnustep-gui?=	../../x11/gnustep-gui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-gui=gnustep-gui
 BUILDLINK_PREFIX.gnustep-gui_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gnustep-gui=	share/GNUstep/System/Headers/AppKit/*
-BUILDLINK_FILES.gnustep-gui+=	share/GNUstep/System/Headers/gnustep/AppKit/*
-BUILDLINK_FILES.gnustep-gui+=	share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/gnu-gnu-gnu/libgnustep-gui.*
+BUILDLINK_FILES.gnustep-gui+=	share/GNUstep/System/Library/Headers/AppKit/*
+BUILDLINK_FILES.gnustep-gui+=	share/GNUstep/System/Library/Headers/GNUstepGUI/*
+BUILDLINK_FILES.gnustep-gui+=	share/GNUstep/System/Library/Headers/gnustep/AppKit/*
+BUILDLINK_FILES.gnustep-gui+=	share/GNUstep/System/Library/Libraries/libgnustep-gui.*
 
-.include "../../devel/gnustep-base/buildlink2.mk"
 .include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../devel/gnustep-base/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 

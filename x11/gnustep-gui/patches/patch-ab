@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/09/27 15:24:36 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/05 10:06:39 adam Exp $
 
---- Tools/gsnd/gsnd.m.orig	Wed Jul 31 07:19:05 2002
+--- Tools/gsnd/gsnd.m.orig	2003-09-08 04:07:53.000000000 +0200
 +++ Tools/gsnd/gsnd.m
-@@ -29,6 +29,10 @@
- #include "process.h"
+@@ -34,6 +34,10 @@
+ #include <syslog.h>
  #endif
  
 +#ifdef _X
