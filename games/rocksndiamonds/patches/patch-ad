@@ -1,16 +1,43 @@
-$NetBSD: patch-ad,v 1.1 2000/12/20 01:23:05 wiz Exp $
-
---- src/network.c.orig	Mon Oct  4 01:12:04 1999
-+++ src/network.c	Tue Dec 19 13:26:26 2000
-@@ -237,9 +237,9 @@
-   buffer[8] = (unsigned char)((new_random_seed >>  8) & 0xff);
-   buffer[9] = (unsigned char)((new_random_seed >>  0) & 0xff);
+$NetBSD: patch-ad,v 1.2 2001/07/05 22:07:59 kristerw Exp $
+--- src/libgame/sound.c.orig	Sun Dec 31 11:47:19 2000
++++ src/libgame/sound.c	Thu Jul  5 23:37:59 2001
+@@ -291,7 +291,30 @@
+ 	     - 2 buffers / 512 bytes (giving 1/16 second resolution for 8 kHz)
+ 	     - (with stereo the effective buffer size will shrink to 256)
+ 	     => fragment_size = 0x00020009 */
++#if defined(PLATFORM_NETBSD)
++	  {
++	    audio_info_t a_info;
  
--  strcpy((char *)&buffer[10], leveldir_current->name);
-+  strcpy((char *)&buffer[10], leveldir_current->filename);
++	    AUDIO_INITINFO(&a_info);
++	    a_info.play.encoding = AUDIO_ENCODING_LINEAR8;
++	    a_info.play.precision = 8;
++	    a_info.play.channels = 2;
++	    a_info.play.sample_rate = sample_rate;
++	    a_info.blocksize = fragment_size;
++	    if (ioctl(audio.device_fd, AUDIO_SETINFO, &a_info) < 0)
++	    {
++	      /* Try to disable stereo. */
++	      a_info.play.channels = 1;
++	      stereo = FALSE;
++	      if (ioctl(audio.device_fd, AUDIO_SETINFO, &a_info) < 0)
++	      {
++	        Error(ERR_EXIT_SOUND_SERVER,
++                      "cannot set sample rate of /dev/audio - no sounds");
++                playing_sounds = 0;
++	      }
++            }
++          }
++#else
+ 	  if (ioctl(audio.device_fd,SNDCTL_DSP_SETFRAGMENT,&fragment_spec) < 0)
+ 	    Error(ERR_EXIT_SOUND_SERVER,
+ 		  "cannot set fragment size of /dev/dsp - no sounds");
+@@ -319,7 +342,7 @@
+ 	  if (ioctl(audio.device_fd, SNDCTL_DSP_GETBLKSIZE,&fragment_size) < 0)
+ 	    Error(ERR_EXIT_SOUND_SERVER,
+ 		  "cannot get fragment size of /dev/dsp - no sounds");
+-
++#endif
+ 	  max_sample_size = fragment_size / (stereo ? 2 : 1);
+ 	}
  
--  SendBufferToServer(10 + strlen(leveldir_current->name) + 1);
-+  SendBufferToServer(10 + strlen(leveldir_current->filename) + 1);
- }
- 
- void SendToServer_PausePlaying()
