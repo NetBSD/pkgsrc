@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/24 22:46:34 cube Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/07 03:28:49 minskim Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.14
@@ -11,7 +11,7 @@ HOMEPAGE=	http://gkrellm.luon.net/gkrellmms.phtml
 COMMENT=	GKrellM2 plugin to remotely control XMMS
 
 WRKSRC=			${WRKDIR}/gkrellmms
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 BUILD_USES_MSGFMT=	YES
@@ -19,6 +19,7 @@ BUILD_USES_MSGFMT=	YES
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 		enable_nls=1
 
-.include "../../sysutils/gkrellm/buildlink2.mk"
-.include "../../audio/xmms/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../sysutils/gkrellm/buildlink3.mk"
+.include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
