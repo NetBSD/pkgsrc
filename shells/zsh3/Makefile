@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/08/09 11:23:00 seb Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/18 04:36:42 snj Exp $
 
 DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
@@ -15,7 +15,7 @@ COMMENT=	The Z shell
 GNU_CONFIGURE=	yes
 USE_MAKEINFO=	YES
 INFO_FILES=	zsh.info
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
