@@ -1,2 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/02/17 23:47:49 tron Exp $
 bin/xneko
 man/man6/xneko.6.gz
+man/cat6/xneko.0
