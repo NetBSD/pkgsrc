@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.50 2004/01/19 12:34:54 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.51 2004/01/21 07:37:32 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -678,6 +678,7 @@ _BLNK_MANGLE_DIRS+=	${WRKDIR}
 _BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 _BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_RPATHDIRS}
 _BLNK_MANGLE_DIRS+=	/usr/include
+_BLNK_MANGLE_DIRS+=	/usr/lib
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _BLNK_MANGLE_DIRS+=	${PREFIX}
 .endif
@@ -704,6 +705,7 @@ _BLNK_PROTECT_DIRS+=	${WRKDIR}
 _BLNK_PROTECT_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 
 _BLNK_UNPROTECT_DIRS+=	/usr/include
+_BLNK_UNPROTECT_DIRS+=	/usr/lib
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _BLNK_UNPROTECT_DIRS+=	${PREFIX}
 .endif
@@ -723,10 +725,11 @@ _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
-# Protect -I/usr/include/* from transformations (these aren't part of the
-# normal header search paths).
+# Protect -I/usr/include/* and -L/usr/lib/* from transformations (these
+# aren't part of the normal header or library search paths).
 #
 _BLNK_TRANSFORM+=	submangle:-I/usr/include:-I${_BLNK_MANGLE_DIR./usr/include}
+_BLNK_TRANSFORM+=	submangle:-L/usr/lib:-L${_BLNK_MANGLE_DIR./usr/lib}
 #
 # Change any buildlink directories in runtime library search paths into
 # the canonical actual installed paths.
