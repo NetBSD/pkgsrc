@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/23 14:24:05 tron Exp $
+
+--- WMMail.defaults.orig	Sat Jan 16 05:41:46 1999
++++ WMMail.defaults	Sat Jan 23 15:02:26 1999
+@@ -6,24 +6,24 @@
+   DisplayFont = "-*-helvetica-medium-r-*-*-10-*-*-*-*-*-*-*";
+   DisplayLocation = (0, 10);
+   ExecuteOnClick = "xterm -geom 80x25 -name pine -T PINE -e pine -i";
+-  ExecuteOnNew = "play /usr/local/GNUstep/Apps/WMMail.app/Sounds/doorbell.au";
++  ExecuteOnNew = "play @@X11BASE@@/GNUstep/Apps/WMMail.app/Sounds/doorbell.au";
+   ExecuteOnNewOnce = No;
+   Animations = {
+     Empty = {
+       Delay = 10;
+-      Frames = ("/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
++      Frames = ("@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
+     };
+     Old = {
+       Delay = 10;
+-      Frames = ("/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
++      Frames = ("@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
+     };
+     New = {
+       Delay = 2;
+       Frames = (
+-        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm",
+-        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm",
+-        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail3.xpm",
+-        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm"
++        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm",
++        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm",
++        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail3.xpm",
++        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm"
+       );
+     };
+   };
+@@ -32,7 +32,7 @@
+       Name = "Home";
+       Type = mbox;
+       UpdateInterval = 15;
+-      ExecuteOnUpdate = "/usr/local/bin/fetchmail";
++      ExecuteOnUpdate = "@@LOCALBASE@@/bin/fetchmail";
+       Options = {
+         CheckTimeStampOnly = No;
+         Path = "/var/spool/mail/bryan";
