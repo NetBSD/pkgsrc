@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.48 2001/05/22 11:49:13 agc Exp $
+$NetBSD: TODO,v 1.49 2001/05/22 12:24:30 wiz Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -52,7 +52,6 @@ packages TODO (Suggested new packages)
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
 	o update devel/Mesa to 3.4.2 (basically just a bug-fix release)
-	o update editors/joe because of security problems
 	o update editors/manedit to recent version
 		(zuntum will do that)
 	o update editors/vim because of security problems
