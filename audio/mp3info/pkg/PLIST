@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/14 03:34:13 simonb Exp $
-bin/mp3info
-man/man1/mp3info.1

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:34 zuntum Exp $
+lib/libffm.a
+include/libffm.h
+share/doc/libffm/README
+@dirrm share/doc/libffm

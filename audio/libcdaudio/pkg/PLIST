@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:19 agc Exp $
-bin/libcdaudio-config
-include/cdaudio.h
-lib/libcdaudio.so
-lib/libcdaudio.so.1
-lib/libcdaudio.so.1.0
-lib/libcdaudio.a
-lib/libcdaudio.la
-share/aclocal/libcdaudio.m4

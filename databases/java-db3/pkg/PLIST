@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/28 17:49:00 jlam Exp $
-lib/db3.jar
-lib/libdb3_java.a
-lib/libdb3_java.la
-lib/libdb3_java.so
-lib/libdb3_java.so.2
-lib/libdb3_java.so.2.9
