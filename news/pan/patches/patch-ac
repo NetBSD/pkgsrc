@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2001/10/15 07:24:39 rh Exp $
+$NetBSD: patch-ac,v 1.3 2002/03/01 02:25:37 fredb Exp $
 
---- pan/pan.c.orig	Thu Oct  4 23:39:24 2001
+--- pan/pan.c.orig	Fri Nov  9 10:53:07 2001
 +++ pan/pan.c
 @@ -42,6 +42,24 @@
  #include <pan/thread-watch.h>
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.2 2001/10/15 07:24:39 rh Exp $
  static gint save_session (GnomeClient        * client,
  			  gint                 phase,
  			  GnomeSaveStyle       save_style,
-@@ -198,6 +216,10 @@
+@@ -196,6 +214,10 @@
  				newsrc_import (s, newsrc_filename, newsrc_port_subscribed_only);
  		}
  	}
