@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/04 17:11:17 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/05 10:48:34 wiz Exp $
 #
 
 DISTNAME=	TclExpat-1.1
@@ -10,9 +10,6 @@ MASTER_SITES=	http://www.zveno.com/in-tclxml/
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/
 COMMENT=	XML parser implemented entirely in Tcl
-
-DEPENDS+=       tcl>=8.4.0:../../lang/tcl
-DEPENDS+=	expat-[0-9]*:../../textproc/expat
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl
