@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.82 2003/09/21 20:32:36 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.83 2003/09/30 16:09:50 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -18,7 +18,7 @@ use locale;
 use strict;
 use Getopt::Std;
 use File::Find;
-use Cwd;
+use Cwd 'realpath', 'getcwd';
 my(	$pkglist,		# list of Pkg packages
 	$pkg_installver,	# installed version of pkg_install pseudo-pkg
 	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
@@ -873,31 +873,28 @@ sub parse_makefile_vars
 	    {
 	    $_ = $1;
 	    debug("$file: .include \"$_\"\n");
-	    if (m#/mk/bsd#)
+	    if (m#/mk/bsd# || (!$opt{d} && m#/(buildlink[^/]*\.mk)#))
 		{ debug("$file: .include skipped\n"); }
 	    else
 		{
-		my($incfile) = ($_);
+		my($incfile) = $_;
 
 		# Expand any simple vars in $incfile
 		#
 		$incfile = parse_expand_vars($incfile, \%vars);
 
-		# Handle relative path incfile
-		#
 		if (substr($incfile, 0, 1) ne '/')
-		    {
-		    $incfile = "$CURDIR/$incfile";
-		    $NEWCURDIR = $incfile;
-		    $NEWCURDIR =~ s#/[^/]*$##;
-		    }
-		else
-		    {
-		    $NEWCURDIR = $CURDIR;
-		    }
+		    { $incfile = "$CURDIR/$incfile"; }
+
+		$incfile = realpath($incfile);
+
 		if (!$incfiles{$incfile})
 		    {
+		    if ($opt{L})
+			{ print "inc $incfile\n"; }
 		    $incfiles{$incfile} = 1;
+		    $NEWCURDIR = $incfile;
+		    $NEWCURDIR =~ s#/[^/]*$##;
 		    if (!open(FILE, $incfile))
 			{ verbose("Cannot open '$incfile' (from $file): $!\n");}
 		    else
