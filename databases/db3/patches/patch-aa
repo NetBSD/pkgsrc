@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 2001/03/28 21:49:40 wennmach Exp $
+
 --- ../dist/Makefile.in.orig	Thu Nov 30 23:07:33 2000
 +++ ../dist/Makefile.in	Thu Mar 22 18:34:56 2001
 @@ -17,7 +17,7 @@
