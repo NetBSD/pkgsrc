@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3251 2005/03/22 09:48:29 jmmv Exp $
+$NetBSD: TODO,v 1.3252 2005/03/22 10:56:25 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -389,8 +389,6 @@ Suggested package updates
 	o dante-1.1.15
 	o dar-2.2.0
 	o dbench-3.03
-	o dbus-0.23.2
-	o dbus-glib-0.23.2
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o denemo-0.7.2a
