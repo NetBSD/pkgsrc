@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
+$NetBSD: patch-aa,v 1.19 2002/06/22 18:47:30 kent Exp $
 
 --- Makefile.orig	Sun Jun 23 02:08:27 2002
 +++ Makefile
@@ -10,11 +10,11 @@ $NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
 +	@echo "make netbsd-i386    NetBSD optimized for i386"
 +	@echo "make netbsd-i386-elf NetBSD optimized for i386, ELF format"
 +	@echo "make netbsd-m68k    NetBSD optimized for m68k"
-+	@echo "make netbsd-esd     NetBSD"
-+	@echo "make netbsd-arm-esd NetBSD for strongarm"
-+	@echo "make netbsd-i386-esd NetBSD optimized for i386"
-+	@echo "make netbsd-i386-elf-esd NetBSD optimized for i386, ELF format"
-+	@echo "make netbsd-m68k-esd    NetBSD optimized for m68k"
++	@echo "make netbsd-esd     NetBSD with EsounD"
++	@echo "make netbsd-arm-esd NetBSD for strongarm with EsounD"
++	@echo "make netbsd-i386-esd NetBSD optimized for i386 with EsounD"
++	@echo "make netbsd-i386-elf-esd NetBSD optimized for i386, ELF format with EsounD"
++	@echo "make netbsd-m68k-esd    NetBSD optimized for m68k with EsounD"
  	@echo "make bsdos          BSDI BSD/OS"
  	@echo "make bsdos4         BSDI BSD/OS 4.0"
  	@echo "make bsdos-nas      BSDI BSD/OS with NAS support"
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
 -		OBJECTS='decode_i386.o dct64_i386.o audio_sun.o' \
 -		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
 +		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
-+		OBJECTS='decode.o dct64.o $(GETBITS) audio_esd.o term.o' \
++		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DREAD_MMAP \
 +			-DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD \
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
 +netbsd-i386-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
-+		OBJECTS='decode_i386.o dct64_i386.o $(GETBITS) audio_esd.o term.o' \
++		OBJECTS='decode_i386.o dct64_i386.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DROT_I386 -DREAD_MMAP \
 +			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD \
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
 +	$(MAKE) CC=cc LDFLAGS= \
 +		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
-+			$(GETBITS) audio_esd.o term.o' \
++			audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
  			-funroll-all-loops -ffast-math -DROT_I386 \
 -			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
 +netbsd-m68k-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
-+		OBJECTS='decode.o dct64.o $(GETBITS) audio_esd.o term.o' \
++		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
 +			-ffast-math -DREAL_IS_FLOAT -DREAD_MMAP \
 +			-DUSE_MMAP -DNETBSD -DM68K_ASSEM -DTERM_CONTROL \
@@ -81,7 +81,7 @@ $NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
 +netbsd-arm-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
-+		OBJECTS='decode.o dct64.o $(GETBITS) audio_esd.o term.o' \
++		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
 +			-funroll-all-loops -finline-functions -ffast-math \
 +			-march=armv4 -mtune=strongarm -mcpu=strongarm \
