@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2002/06/26 21:03:00 abs Exp $
+$NetBSD: patch-ab,v 1.3 2002/06/26 22:51:48 abs Exp $
 
 --- ircmd.c.orig	Wed Jun 26 21:55:30 2002
 +++ ircmd.c
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.2 2002/06/26 21:03:00 abs Exp $
      
        rc = fopen(rcname, "r");
        if (!rc) {			/* system, eg /etc/irmanrc.conf */
-+        freefile = 1;
++        freefile = 0;
          rcname = IR_SYSTEM_IRMANRC;
          rc = fopen(rcname, "r");
        }
