@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.129 2000/12/15 14:03:31 abs Exp $
+# $NetBSD: Packages.txt,v 1.130 2000/12/17 23:32:39 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -338,16 +338,18 @@ which user to su(8) to to do a 'cvs update'.
  ========================================
 
 Drop your favourite login shell in /usr/local, or install it from
-/etc/rc.local. Also, be sure to install ssh before starting it from
-rc.local:
+/etc/rc.local. Also, if you use a OS version below 1.5 or stil want
+to use the pkgsrc version of ssh for some reason, be sure to install 
+ssh before starting it from rc.local:
 
     ( cd /usr/pkgsrc/security/ssh ; make bulk-install )
-    if [ -f /usr/pkg/etc/rc.d/sshd.sh ]; then
-            /usr/pkg/etc/rc.d/sshd.sh
+    if [ -f /usr/pkg/etc/rc.d/sshd ]; then
+            /usr/pkg/etc/rc.d/sshd
     fi
 
 Not doing so will result in you being not able to log in via ssh
-after the bulk build is finished. You have been warned! :)
+after the bulk build is finished or if the machine gets rebooted
+or crashes. You have been warned! :)
 
 
  3.2.3 Operation
