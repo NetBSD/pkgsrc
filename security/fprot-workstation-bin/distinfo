@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/05/11 04:03:26 simonb Exp $
+$NetBSD: distinfo,v 1.8 2004/05/13 18:48:32 ben Exp $
 
-SHA1 (fp-netbsd-ws-4.4.2.tar.gz) = 8f839982ebacbfb007af3b04c9c0d5bd787b3a48
-Size (fp-netbsd-ws-4.4.2.tar.gz) = 2367428 bytes
-SHA1 (fp-linux-ws-4.4.2.tar.gz) = f8bf9b53c4bcc0a3594a854821b15f6d0274acae
-Size (fp-linux-ws-4.4.2.tar.gz) = 2478335 bytes
+SHA1 (fp-netbsd-ws-4.4.2/fp-netbsd-ws-4.4.2.tar.gz) = 6b75c2ae6692cacaa30d6ec08832011fa516cfd0
+Size (fp-netbsd-ws-4.4.2/fp-netbsd-ws-4.4.2.tar.gz) = 2370225 bytes
+SHA1 (fp-linux-ws-4.4.2/fp-linux-ws-4.4.2.tar.gz) = 421bc1732aee0d994c2101767105e9f650e3d81c
+Size (fp-linux-ws-4.4.2/fp-linux-ws-4.4.2.tar.gz) = 2481246 bytes
+SHA1 (patch-aa) = 4786dcb8c1d30a87d80841412fbf5328564a4f3b
