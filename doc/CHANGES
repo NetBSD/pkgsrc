@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2149 2003/05/05 13:19:03 tron Exp $
+$NetBSD: CHANGES,v 1.2150 2003/05/05 16:18:14 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1856,3 +1856,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated leafnode to 1.9.39 [cjep 2003-05-05]
 	Updated kdegraphics to 3.1.1nb6 [markd 2003-05-05]
 	Added kmymoney2-0.5.1 [markd 2003-05-05]
+	Updated wmx to 6.0nb1 [fredb 2003-05-05]
+	Updated wmx-gnome to 6.0nb1 [fredb 2003-05-05]
