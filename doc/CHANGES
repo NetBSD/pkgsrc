@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5254 2004/03/14 00:49:10 markd Exp $
+$NetBSD: CHANGES,v 1.5255 2004/03/14 01:26:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1466,3 +1466,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated swi-prolog to 5.0.10nb2 [kristerw 2004-03-13]
 	Updated kdegraphics3 to 3.2.1nb1 [markd 2004-03-14]
 	Updated kde3 to 3.2.1nb2 [markd 2004-03-14]
+	Updated dillo to 0.8.0 [xtraeme 2004-03-14]
