@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/05 22:09:58 dillo Exp $
+
+--- tads2/makefile.orig	Wed Sep 25 18:43:09 2002
++++ tads2/makefile
+@@ -50,7 +50,7 @@
+ #
+ 
+ # Install point for the tadsc, tadsr, and tdb executables
+-BINDIR=/usr/local/bin
++BINDIR=${PREFIX}/bin
+ 
+ #
+ # Places to look for include files.
+@@ -270,16 +270,18 @@ MATT=Matt Herberg <meherberg@earthlink.n
+ # No testing has been done on pre 1.5 or a.out systems
+ # HAVE_TPARM is set in osunixt.h
+ #
+-#CC=gcc
+-#OPTIMIZE=
+-#UNIXFLAGS=-g -DOSANSI -DUNIX -DHAVE_STRCASECMP
+-#SYSFLAGS= -DOS_SYSTEM_NAME=\""NETBSD"\" -DSYSNAME=\""NetBSD"\" -DSYSPL=\"1\" -DPORTER=\""$(DOUGLAS)"\" -DSYSMAINTAINER=\""NetBSD port maintained by $(DOUGLAS)\n"\"
+-#CFLAGS= $(UNIXFLAGS) $(SYSFLAGS) -DNETBSD
+-#AFLAGS=
+-#OVLFLG=
+-#MACHDEP=
+-#LIBS=-L/usr/pkg/lib -Wl,-R/usr/pkg/lib -lncurses
+-#MAKEXEC=touch
++.if ${OPSYS} == "NetBSD"
++CC=gcc
++OPTIMIZE=
++UNIXFLAGS=-g -DOSANSI -DUNIX -DHAVE_STRCASECMP
++SYSFLAGS=-DOS_SYSTEM_NAME=\""NETBSD"\" -DSYSNAME=\""NetBSD"\" -DSYSPL=\"1\" -DPORTER=\""$(DOUGLAS)"\" -DSYSMAINTAINER=\""NetBSD port maintained by $(DOUGLAS)\n"\"
++CFLAGS+=$(UNIXFLAGS) $(SYSFLAGS) -DNETBSD
++AFLAGS=
++OVLFLG=
++MACHDEP=
++LIBS=$(LDFLAGS) -lncurses
++MAKEXEC=touch
++.endif
+ 
+ #
+ # i386+ running DOS/Windows, using DJGPP 2.X
+@@ -374,8 +376,8 @@ TDBOBJS= $(DBGOBJS) osgen.o osunixt.o tp
+ all: tadsr tadsc tdb
+ 
+ install: all
+-	install -d $(BINDIR)
+-	install -s -m755 tadsc tadsr tdb $(BINDIR)
++	#install -d $(BINDIR)
++	${BSD_INSTALL_PROGRAM} tadsc tadsr tdb $(BINDIR)
+ 
+ tadsr: $(TROBJS)
+ 	$(CC) $(CFLAGS) $(TROBJS) -o tadsr $(LIBS)
