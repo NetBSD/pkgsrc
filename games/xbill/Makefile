@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/03/10 00:09:13 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/30 20:29:40 tv Exp $
 #
 
 DISTNAME=		xbill-2.0
+PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 EXTRACT_SUFX=		.tgz
@@ -14,10 +15,16 @@ CONFLICT=		gnome-games-[0-9]*
 
 USE_BUILDLINK3=		YES
 USE_IMAKE=		YES
+USE_PKGINSTALL=		YES
 NO_INSTALL_MANPAGES=	YES
+
+PKG_GROUPS=		games
+MAKE_DIRS_PERMS+=	/var/games 0775 ${BINOWN} games
+SUPPORT_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores /var/games/xbill.scores ${BINOWN} games 0664
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/xbill.man ${PREFIX}/man/man6/xbill.6
+	${INSTALL_DATA} ${WRKSRC}/scores ${PREFIX}/share/examples/xbill.scores
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
