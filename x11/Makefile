@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 1998/09/03 13:19:27 tv Exp $
+# $NetBSD: Makefile,v 1.56 1998/09/04 08:12:30 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -51,9 +51,10 @@
 #    SUBDIR += olvwm
 #    SUBDIR += p5-Tcl-Tk
     SUBDIR += p5-Tk
-    SUBDIR += py-Tk
 #    SUBDIR += piewm
+    SUBDIR += plan
 #    SUBDIR += pythonqt
+    SUBDIR += py-Tk
     SUBDIR += qt
 #    SUBDIR += qvwm
     SUBDIR += rclock
@@ -112,7 +113,7 @@
 #    SUBDIR += xmold
     SUBDIR += xmove
     SUBDIR += xneko
-#    SUBDIR += xpkgwedge - not for general consumption yet
+#    SUBDIR += xpkgwedge # not for general consumption yet
     SUBDIR += xplot
     SUBDIR += xpmroot
     SUBDIR += xpns
