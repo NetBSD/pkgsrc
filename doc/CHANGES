@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5915 2004/05/12 23:39:30 minskim Exp $
+$NetBSD: CHANGES,v 1.5916 2004/05/12 23:51:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2498,3 +2498,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xine-ui to 0.99.1 [drochner 2004-05-12]
 	Updated libnbcompat to 20040512 [grant 2004-05-12]
 	Updated tcl-itcl to 3.2nb1 [minskim 2004-05-13]
+	Updated tcl to 8.4.6nb4 [minskim 2004-05-13]
