@@ -1,23 +1,22 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:37 agc Exp $
-
---- Makefile	1997/11/19 15:48:32	1.1
-+++ Makefile	1997/11/19 15:50:33
-@@ -1,8 +1,8 @@
+--- Makefile.orig	Thu Jul 20 20:03:30 1995
++++ Makefile	Sun Aug  9 16:44:41 1998
+@@ -1,9 +1,8 @@
  #
  # Makefile,v 1.4 1995/07/21 00:03:30 pb Exp
  #
 -MANDIR=/usr/local/man
 -BINDIR=/usr/local/bin
+-INSTALL=install -c
 +MANDIR=${PREFIX}/man
 +BINDIR=${PREFIX}/bin
- INSTALL=install -c
  GROFF=groff
  NROFF=nroff
-@@ -28,5 +28,5 @@
+ RM=/bin/rm
+@@ -28,5 +27,5 @@
  	$(RM) -f bing bing.ps bing.0
  
  install: bing bing.8
 -	$(INSTALL) -m 644 -o man -g man bing.8 $(MANDIR)/man8
 -	$(INSTALL) -m 4555 -o root -g staff bing $(BINDIR)
-+	$(INSTALL) -m 644 -o bin -g bin bing.8 $(MANDIR)/man8
-+	$(INSTALL) -m 4555 -o root -g bin bing $(BINDIR)
++	$(INSTALL_MAN) bing.8 $(MANDIR)/man8
++	$(INSTALL_PROGRAM) bing $(BINDIR)
