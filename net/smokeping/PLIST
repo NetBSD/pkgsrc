@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/01/22 21:50:54 adrianp Exp $
 bin/smokeping
 lib/smokeping/BER.pm
 lib/smokeping/ISG/ParseConfig.pm
@@ -6,6 +6,11 @@ lib/smokeping/SNMP_Session.pm
 lib/smokeping/SNMP_util.pm
 lib/smokeping/Smokeping.pm
 lib/smokeping/ciscoRttMonMIB.pm
+lib/smokeping/matchers/avgratio.pm
+lib/smokeping/matchers/base.pm
+lib/smokeping/matchers/median.pm
+lib/smokeping/probes/AnotherDNS.pm
+lib/smokeping/probes/AnotherSSH.pm
 lib/smokeping/probes/CiscoRTTMonDNS.pm
 lib/smokeping/probes/CiscoRTTMonEchoICMP.pm
 lib/smokeping/probes/CiscoRTTMonTcpConnect.pm
@@ -24,6 +29,7 @@ lib/smokeping/probes/IOSPing.pm
 lib/smokeping/probes/LDAP.pm
 lib/smokeping/probes/Radius.pm
 lib/smokeping/probes/RemoteFPing.pm
+lib/smokeping/probes/SSH.pm
 lib/smokeping/probes/base.pm
 lib/smokeping/probes/basefork.pm
 lib/smokeping/probes/basevars.pm
@@ -34,43 +40,52 @@ share/doc/smokeping/CHANGES
 share/doc/smokeping/CONTRIBUTORS
 share/doc/smokeping/COPYING
 share/doc/smokeping/COPYRIGHT
-share/doc/smokeping/CiscoRTTMonDNS.pm.txt
-share/doc/smokeping/CiscoRTTMonEchoICMP.pm.txt
-share/doc/smokeping/CiscoRTTMonTcpConnect.pm.txt
-share/doc/smokeping/Curl.pm.txt
-share/doc/smokeping/DNS.pm.txt
-share/doc/smokeping/EchoPing.pm.txt
-share/doc/smokeping/EchoPingChargen.pm.txt
-share/doc/smokeping/EchoPingDiscard.pm.txt
-share/doc/smokeping/EchoPingHttp.pm.txt
-share/doc/smokeping/EchoPingHttps.pm.txt
-share/doc/smokeping/EchoPingIcp.pm.txt
-share/doc/smokeping/EchoPingSmtp.pm.txt
-share/doc/smokeping/FPing.pm.txt
-share/doc/smokeping/FPing6.pm.txt
-share/doc/smokeping/IOSPing.pm.txt
-share/doc/smokeping/LDAP.pm.txt
 share/doc/smokeping/ParseConfig.pm.txt
 share/doc/smokeping/README
-share/doc/smokeping/Radius.pm.txt
-share/doc/smokeping/RemoteFPing.pm.txt
 share/doc/smokeping/Smokeping.pm.txt
 share/doc/smokeping/TODO
-share/doc/smokeping/base.pm.txt
-share/doc/smokeping/basefork.pm.txt
-share/doc/smokeping/basevars.pm.txt
-share/doc/smokeping/passwordchecker.pm.txt
 share/doc/smokeping/smokeping.cgi.txt
 share/doc/smokeping/smokeping.txt
 share/doc/smokeping/smokeping_config.txt
 share/doc/smokeping/smokeping_install.txt
-share/doc/smokeping/telnetIOSPing.pm.txt
+share/doc/smokeping/matchers/avgratio.pm.txt
+share/doc/smokeping/matchers/base.pm.txt
+share/doc/smokeping/matchers/median.pm.txt
+share/doc/smokeping/probes/AnotherDNS.pm.txt
+share/doc/smokeping/probes/AnotherSSH.pm.txt
+share/doc/smokeping/probes/CiscoRTTMonDNS.pm.txt
+share/doc/smokeping/probes/CiscoRTTMonEchoICMP.pm.txt
+share/doc/smokeping/probes/CiscoRTTMonTcpConnect.pm.txt
+share/doc/smokeping/probes/Curl.pm.txt
+share/doc/smokeping/probes/DNS.pm.txt
+share/doc/smokeping/probes/EchoPing.pm.txt
+share/doc/smokeping/probes/EchoPingChargen.pm.txt
+share/doc/smokeping/probes/EchoPingDiscard.pm.txt
+share/doc/smokeping/probes/EchoPingHttp.pm.txt
+share/doc/smokeping/probes/EchoPingHttps.pm.txt
+share/doc/smokeping/probes/EchoPingIcp.pm.txt
+share/doc/smokeping/probes/EchoPingSmtp.pm.txt
+share/doc/smokeping/probes/FPing.pm.txt
+share/doc/smokeping/probes/FPing6.pm.txt
+share/doc/smokeping/probes/IOSPing.pm.txt
+share/doc/smokeping/probes/LDAP.pm.txt
+share/doc/smokeping/probes/Radius.pm.txt
+share/doc/smokeping/probes/RemoteFPing.pm.txt
+share/doc/smokeping/probes/SSH.pm.txt
+share/doc/smokeping/probes/base.pm.txt
+share/doc/smokeping/probes/basefork.pm.txt
+share/doc/smokeping/probes/basevars.pm.txt
+share/doc/smokeping/probes/passwordchecker.pm.txt
+share/doc/smokeping/probes/telnetIOSPing.pm.txt
 share/examples/smokeping/basepage.html.dist
 share/examples/smokeping/config-echoping.dist
 share/examples/smokeping/config.dist
 share/examples/smokeping/smokemail.dist
-@dirrm share/doc/smokeping
 @dirrm share/examples/smokeping
-@dirrm lib/smokeping/ISG
+@dirrm share/doc/smokeping/matchers
+@dirrm share/doc/smokeping/probes
+@dirrm share/doc/smokeping
 @dirrm lib/smokeping/probes
+@dirrm lib/smokeping/matchers
+@dirrm lib/smokeping/ISG
 @dirrm lib/smokeping
