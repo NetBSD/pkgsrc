@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2001/10/25 18:44:46 kleink Exp $
+# $NetBSD: Makefile,v 1.69 2001/11/06 04:11:02 jlam Exp $
 #
 
 COMMENT=	Databases
@@ -71,6 +71,9 @@ SUBDIR+=	sqsh
 SUBDIR+=	tcl-gdbm
 SUBDIR+=	tcl-postgresql
 SUBDIR+=	tk-postgresql
+SUBDIR+=	unixodbc
+SUBDIR+=	unixodbc-DataManager
+SUBDIR+=	unixodbc-ODBCConfig
 SUBDIR+=	xmysql
 SUBDIR+=	xmysqladmin
 SUBDIR+=	xsqlmenu
