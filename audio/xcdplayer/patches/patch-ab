@@ -1,7 +1,7 @@
-$NetBSD
+$NetBSD: patch-ab,v 1.5 1999/09/06 16:37:42 tron Exp $
 
 --- XCdplayer.ad.orig	Tue Jan 12 19:59:41 1993
-+++ XCdplayer.ad	Mon Sep  6 18:22:06 1999
++++ XCdplayer.ad	Mon Sep  6 18:37:04 1999
 @@ -19,11 +19,10 @@
  
  XCdplayer*logoLabel.foreground:		Gold

@@ -1,7 +1,7 @@
-$NetBSD
+$NetBSD: patch-aa,v 1.5 1999/09/06 16:37:42 tron Exp $
 
 --- Imakefile.orig	Tue Jan 12 19:59:29 1993
-+++ Imakefile	Mon Sep  6 18:22:06 1999
++++ Imakefile	Mon Sep  6 18:37:04 1999
 @@ -15,6 +15,11 @@
  
  LOCAL_LIBRARIES = XawClientLibs
