@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: LPRng.sh,v 1.2 2001/01/11 00:31:50 jlam Exp $
+# $NetBSD: LPRng.sh,v 1.3 2004/09/06 10:44:44 martti Exp $
 #
 # PROVIDE: lpd
 # REQUIRE: DAEMON
@@ -23,6 +23,7 @@ start)
 	if [ "$pid" = "" -a -x ${command} ]
 	then
 		echo "Starting LPRng."
+		@PREFIX@/sbin/checkpc -f
 		${command}
 	fi
 	;;
