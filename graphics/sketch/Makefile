@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/22 13:31:56 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/05/19 09:41:06 tg Exp $
 
 DISTNAME=	sketch-0.6.3
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
 
-DEPENDS+=	py-imaging-1.0b1:../../graphics/py-imaging
+DEPENDS+=	py-imaging>=1.0:../../graphics/py-imaging
 DEPENDS+=	py-Tk>=1.5.2:../../x11/py-Tk
 
 USE_X11=	YES
