@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1139 2003/02/14 19:46:43 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1140 2003/02/15 00:26:58 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2868,7 +2868,7 @@ list: uptodate-pkgtools
 
 # Run pkglint:
 lint:
-	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint
+	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint | ${GREP} -v ^OK
 
 # Create a binary package from an install package using "pkg_tarup"
 tarup:
