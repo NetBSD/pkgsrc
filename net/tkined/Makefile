@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:11:25 martti Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/18 09:52:32 wiz Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -12,7 +12,7 @@ HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 COMMENT=	Graphical network discovery and monitoring tool based on scotty
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
-DEPENDS+=	tcl-scotty-2.1.11:../../net/tcl-scotty
+DEPENDS+=	tcl-scotty>=2.1.11:../../net/tcl-scotty
 
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS+= --with-tcl-config=${PREFIX}/lib --enable-multicast \
