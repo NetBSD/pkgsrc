@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.50 2002/11/17 17:39:40 seb Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.51 2002/11/20 08:05:04 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -851,3 +851,31 @@ buildlink-check:
 	@if [ -f ${_BLNK_WRAP_LOG} ]; then				\
 		${GREP} ${_BLNK_CHECK_PATTERNS} ${_BLNK_WRAP_LOG} || ${TRUE}; \
 	fi
+
+AUTOMAKE_OVERRIDE?=	NO
+_HIDE_PROGS.autoconf=	bin/autoconf	bin/autoconf-2.13		\
+			bin/autoheader	bin/autoheader-2.13		\
+			bin/autom4te					\
+			bin/autoreconf	bin/autoreconf-2.13		\
+			bin/autoscan	bin/autoscan-2.13		\
+			bin/autoupdate	bin/autoupdate-2.13		\
+			bin/ifnames	bin/ifnames-2.13
+_HIDE_PROGS.automake=	bin/aclocal	bin/aclocal-1.4			\
+			bin/automake	bin/automake-1.4
+
+do-buildlink: hide-autotools
+hide-autotools:	# empty
+
+.for _autotool_ in autoconf automake
+hide-autotools: hide-${_autotool_}
+hide-${_autotool_}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
+.  for _prog_ in ${_HIDE_PROGS.${_autotool_}}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/${_prog_:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	( ${ECHO} "#!${SH}";						\
+	  ${ECHO} "exit 1";						\
+	) > ${BUILDLINK_DIR}/${_prog_}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${BUILDLINK_DIR}/${_prog_}
+.  endfor
+.endfor
