@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/12/21 18:56:44 drochner Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/12/23 03:05:53 xtraeme Exp $
 #
 
 DISTNAME=		xine-lib-1-rc8
@@ -48,5 +48,6 @@ pre-configure:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/autoconf.mk"

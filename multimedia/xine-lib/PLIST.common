@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2004/12/21 18:56:44 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2004/12/23 03:05:53 xtraeme Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -52,6 +52,8 @@ lib/xine/plugins/1.0.0/xineplug_ao_out_file.a
 lib/xine/plugins/1.0.0/xineplug_ao_out_file.so
 lib/xine/plugins/1.0.0/xineplug_ao_out_none.a
 lib/xine/plugins/1.0.0/xineplug_ao_out_none.so
+lib/xine/plugins/1.0.0/xineplug_ao_out_oss.a
+lib/xine/plugins/1.0.0/xineplug_ao_out_oss.so
 lib/xine/plugins/1.0.0/xineplug_decode_a52.a
 lib/xine/plugins/1.0.0/xineplug_decode_a52.so
 lib/xine/plugins/1.0.0/xineplug_decode_bitplane.a
@@ -182,6 +184,8 @@ lib/xine/plugins/1.0.0/xineplug_vo_out_aa.a
 lib/xine/plugins/1.0.0/xineplug_vo_out_aa.so
 lib/xine/plugins/1.0.0/xineplug_vo_out_none.a
 lib/xine/plugins/1.0.0/xineplug_vo_out_none.so
+${OPENGL_PLUGIN}lib/xine/plugins/1.0.0/xineplug_vo_out_opengl.a
+${OPENGL_PLUGIN}lib/xine/plugins/1.0.0/xineplug_vo_out_opengl.so
 lib/xine/plugins/1.0.0/xineplug_vo_out_sdl.a
 lib/xine/plugins/1.0.0/xineplug_vo_out_sdl.so
 lib/xine/plugins/1.0.0/xineplug_vo_out_xshm.a
@@ -249,16 +253,3 @@ share/xine/libxine1/fonts/serif-24.xinefont.gz
 share/xine/libxine1/fonts/serif-32.xinefont.gz
 share/xine/libxine1/fonts/serif-48.xinefont.gz
 share/xine/libxine1/fonts/serif-64.xinefont.gz
-@dirrm share/xine/libxine1/fonts
-@dirrm share/xine/libxine1
-@dirrm share/xine
-@dirrm share/doc/xine/hackersguide
-@dirrm share/doc/xine/faq
-@dirrm share/doc/xine
-@exec ${MKDIR} %D/lib/xine/plugins/1.0.0/vidix
-@dirrm lib/xine/plugins/1.0.0/vidix
-@dirrm lib/xine/plugins/1.0.0/post
-@dirrm lib/xine/plugins/1.0.0
-@dirrm lib/xine/plugins
-@dirrm lib/xine
-@dirrm include/xine

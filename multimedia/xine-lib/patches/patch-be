@@ -1,0 +1,21 @@
+$NetBSD: patch-be,v 1.1 2004/12/23 03:05:53 xtraeme Exp $
+
+--- src/audio_out/Makefile.in.orig	2004-12-15 14:02:27.000000000 +0100
++++ src/audio_out/Makefile.in	2004-12-23 02:16:38.000000000 +0100
+@@ -310,6 +310,7 @@
+ OGG_LIBS = @OGG_LIBS@
+ OPENGL_CFLAGS = @OPENGL_CFLAGS@
+ OPENGL_LIBS = @OPENGL_LIBS@
++OSS_LIBS = @OSS_LIBS@
+ PACKAGE = @PACKAGE@
+ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
+ PACKAGE_NAME = @PACKAGE_NAME@
+@@ -508,7 +509,7 @@
+ xineplug_ao_out_file_la_LDFLAGS = -avoid-version -module @XINE_PLUGIN_MIN_SYMS@
+ 
+ xineplug_ao_out_oss_la_SOURCES = audio_oss_out.c
+-xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB)
++xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB) $(OSS_LIBS)
+ xineplug_ao_out_oss_la_LDFLAGS = -avoid-version -module @XINE_PLUGIN_MIN_SYMS@
+ 
+ xineplug_ao_out_alsa_la_SOURCES = audio_alsa_out.c
