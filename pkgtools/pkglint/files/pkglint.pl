@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.11 1999/09/09 20:21:18 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.12 1999/09/13 02:44:47 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -797,7 +797,7 @@ EOF
 				(($pkgname eq '') ? "DISTNAME." : "PKGNAME."));
 		}
 		if ($k =~ /^pl[0-9]*$/
-		 || $k =~ /^[0-9]*[A-Za-z]?[0-9]*(\.[0-9]*[A-Za-z]?[0-9]*)*$/) {
+		 || $k =~ /^[0-9]*[A-Za-z]*[0-9]*(\.[0-9]*[A-Za-z]*[0-9]*)*$/) {
 			print "OK: trailing part of PKGNAME\"-$k\" ".
 				"looks fine.\n" if ($verbose);
 		} else {
