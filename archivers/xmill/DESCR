@@ -1,0 +1,2 @@
+XMill is a special-purpose compressor for XML data that typically achieves
+twice the compression rate over existing compressors, such as gzip.
