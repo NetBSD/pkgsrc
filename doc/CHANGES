@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6246 2004/06/20 20:39:10 jmmv Exp $
+$NetBSD: CHANGES,v 1.6247 2004/06/20 20:44:36 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2979,3 +2979,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated liferea to 0.5.0 [minskim 2004-06-20]
 	Added gst-plugins-artsd-0.8.1 [agc 2004-06-20]
 	Updated libbonobo to 2.6.2 [jmmv 2004-06-20]
+	Added tunesbrowser-0.1.5 [agc 2004-06-20]
