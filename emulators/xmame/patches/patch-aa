@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.27 2001/05/21 07:12:50 mrg Exp $
---- makefile.unix.orig	Sat Mar 17 03:11:28 2001
-+++ makefile.unix	Fri Mar 23 19:25:28 2001
-@@ -168,7 +168,7 @@
+$NetBSD: patch-aa,v 1.28 2001/11/23 23:51:24 kristerw Exp $
+--- makefile.unix.orig	Wed Nov 14 05:13:38 2001
++++ makefile.unix	Fri Nov 23 23:19:45 2001
+@@ -201,7 +201,7 @@
  # *** xmameroot, this is the default rompath, place where the highscores are
  # stored, global rc location etc. Since most of these are configurable through
  # the rc-file anyway, there are no longer seperate defines for each.
@@ -10,16 +10,16 @@ $NetBSD: patch-aa,v 1.27 2001/05/21 07:12:50 mrg Exp $
  
  
  ##############################################################################
-@@ -176,7 +176,7 @@
+@@ -209,7 +209,7 @@
  ##############################################################################
  
  ### i386 + gnu-asm
 -MY_CPU = i386
 +MY_CPU = ${MAME_CPU}
- ### i386 no asm
- # MY_CPU = i386_noasm
- ### ia64
-@@ -197,11 +197,11 @@
+ ### i386 no asm -- needed for the Intel C++ Compiler which does not fully
+ # understand gcc's inline assembly syntax (you may still enable X86_ASM_68000
+ # etc. which are assembled by NASM).  You may also need to use this for BeOS.
+@@ -232,11 +232,11 @@
  ##############################################################################
  
  ### Linux 
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.27 2001/05/21 07:12:50 mrg Exp $
  ### OpenBSD
  # ARCH = openbsd
  ### Solaris / SunOS
-@@ -234,11 +234,13 @@
+@@ -271,11 +271,13 @@
  # X Input Extensions based joystick, this is known to not work right now ;|
  # JOY_X11 = 1
  # On iX86 based OS's, if supported, you can use standard joystick driver.
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.27 2001/05/21 07:12:50 mrg Exp $
  
  
  ##############################################################################
-@@ -284,7 +286,9 @@
+@@ -324,7 +326,9 @@
  # MIT-Shared Memory X Extensions, comment the
  X11_MITSHM = 1
  # XFree86 DGA
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.27 2001/05/21 07:12:50 mrg Exp $
  # The XIL library (Solaris 2.5.1 and higher), uncomment
  # X11_XIL = 1
  
-@@ -293,8 +297,8 @@
+@@ -333,8 +337,8 @@
  # X11INC		= -I/usr/include/X11
  # X11LIB		= -L/usr/lib/X11
  # standard location for XFree86
