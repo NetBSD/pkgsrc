@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/18 23:55:11 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/22 10:40:01 agc Exp $
 bin/cpp2html
 bin/java2html
 share/doc/source-highlight/COPYING
@@ -28,5 +28,6 @@ share/doc/source-highlight/mono.css
 share/doc/source-highlight/source-highlight.html
 share/doc/source-highlight/startapp.cc.html
 share/source-highlight/tags.j2h
+share/source-highlight/tags2.j2h
 @dirrm share/source-highlight
 @dirrm share/doc/source-highlight
