@@ -1,0 +1,535 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/19 16:38:22 adrianp Exp $
+share/msf/docs/7f8d5320.0
+share/msf/docs/BUGS
+share/msf/docs/COPYING
+share/msf/docs/COPYING.Artistic
+share/msf/docs/COPYING.GNU
+share/msf/docs/COPYING.InlineEgg
+share/msf/docs/CrashCourse.doc
+share/msf/docs/CrashCourse.html
+share/msf/docs/CrashCourse.pdf
+share/msf/docs/CrashCourse.sxw
+share/msf/docs/Environment.txt
+share/msf/docs/QUICKSTART.cygwin
+share/msf/docs/QUICKSTART.impurity
+share/msf/docs/QUICKSTART.msfcli
+share/msf/docs/QUICKSTART.msfconsole
+share/msf/docs/QUICKSTART.msfweb
+share/msf/docs/QUICKSTART.ssl
+share/msf/docs/QUICKSTART.tabcompletion
+share/msf/docs/SECURITY
+share/msf/docs/VERSION
+share/msf/docs/cacert.pem
+share/doc/msf
+share/msf/data/shelldemo
+share/msf/data/vncdll.dll
+share/msf/encoders/None.pm
+share/msf/encoders/Pex.pm
+share/msf/encoders/PexAlphaNum.pm
+share/msf/encoders/PexFnstenvMov.pm
+share/msf/encoders/PexFnstenvSub.pm
+share/msf/encoders/QuackQuack.pm
+share/msf/encoders/ShikataGaNai.pm
+share/msf/encoders/Sparc.pm
+share/msf/exploits/Credits.pm
+share/msf/exploits/Tester.pm
+share/msf/exploits/Win32Tester.pm
+share/msf/exploits/afp_loginext.pm
+share/msf/exploits/apache_chunked_win32.pm
+share/msf/exploits/blackice_pam_icq.pm
+share/msf/exploits/distcc_exec.pm
+share/msf/exploits/exchange2000_xexch50.pm
+share/msf/exploits/frontpage_fp30reg_chunked.pm
+share/msf/exploits/ia_webmail.pm
+share/msf/exploits/iis50_nsiislog_post.pm
+share/msf/exploits/iis50_printer_overflow.pm
+share/msf/exploits/iis50_webdav_ntdll.pm
+share/msf/exploits/imail_ldap.pm
+share/msf/exploits/lsass_ms04_011.pm
+share/msf/exploits/mercantec_softcart.pm
+share/msf/exploits/msrpc_dcom_ms03_026.pm
+share/msf/exploits/mssql2000_resolution.pm
+share/msf/exploits/poptop_negative_read.pm
+share/msf/exploits/realserver_describe_linux.pm
+share/msf/exploits/samba_nttrans.pm
+share/msf/exploits/samba_trans2open.pm
+share/msf/exploits/sambar6_search_results.pm
+share/msf/exploits/servu_mdtm_overflow.pm
+share/msf/exploits/smb_sniffer.pm
+share/msf/exploits/solaris_sadmind_exec.pm
+share/msf/exploits/squid_ntlm_authenticate.pm
+share/msf/exploits/svnserve_date.pm
+share/msf/exploits/ut2004_secure_linux.pm
+share/msf/exploits/ut2004_secure_win32.pm
+share/msf/exploits/warftpd_165_pass.pm
+share/msf/exploits/windows_ssl_pct.pm
+share/msf/extras/Net_SSLeay.pm-1.23.tar.gz
+share/msf/extras/Term-ReadLine-Gnu-1.14.tar.gz
+share/msf/lib/Msf/PayloadComponent/InlineEggPayload.pm
+share/msf/lib/Msf/PayloadComponent/CommandPayload.pm
+share/msf/lib/Msf/PayloadComponent/Win32Execute.pm
+share/msf/lib/Msf/PayloadComponent/Win32StagePayload.pm
+share/msf/lib/Msf/PayloadComponent/SolarisShellStage.pm
+share/msf/lib/Msf/PayloadComponent/ReverseConnection.pm
+share/msf/lib/Msf/PayloadComponent/SolarisStagePayload.pm
+share/msf/lib/Msf/PayloadComponent/DoubleReverseConnection.pm
+share/msf/lib/Msf/PayloadComponent/Console.pm
+share/msf/lib/Msf/PayloadComponent/Win32ShellStage.pm
+share/msf/lib/Msf/PayloadComponent/ConnectionHandler.pm
+share/msf/lib/Msf/PayloadComponent/SolarisPayload.pm
+share/msf/lib/Msf/PayloadComponent/NoConnection.pm
+share/msf/lib/Msf/PayloadComponent/TextConsole.pm
+share/msf/lib/Msf/PayloadComponent/Win32StagePayloadIE.pm
+share/msf/lib/Msf/PayloadComponent/ExternalPayload.pm
+share/msf/lib/Msf/PayloadComponent/BindConnection.pm
+share/msf/lib/Msf/PayloadComponent/FindRecvConnection.pm
+share/msf/lib/Msf/PayloadComponent/Win32UploadExecStage.pm
+share/msf/lib/Msf/PayloadComponent/Win32ReverseStagerIE.pm
+share/msf/lib/Msf/PayloadComponent/SolarisFindStager.pm
+share/msf/lib/Msf/PayloadComponent/SolarisBindStager.pm
+share/msf/lib/Msf/PayloadComponent/Win32BindStagerIE.pm
+share/msf/lib/Msf/PayloadComponent/FindConnection.pm
+share/msf/lib/Msf/PayloadComponent/Win32BindStager.pm
+share/msf/lib/Msf/PayloadComponent/SolarisReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Win32InjectLibStage.pm
+share/msf/lib/Msf/PayloadComponent/Win32ReverseStager.pm
+share/msf/lib/Msf/PayloadComponent/Win32Payload.pm
+share/msf/lib/Msf/PayloadComponent/WebConsole.pm
+share/msf/lib/Msf/Base.pm
+share/msf/lib/Msf/UI.pm
+share/msf/lib/Msf/Nop.pm
+share/msf/lib/Msf/Socket/SSLTcp.pm
+share/msf/lib/Msf/Socket/SSLTcpBase.pm
+share/msf/lib/Msf/Socket/RawUdp.pm
+share/msf/lib/Msf/Socket/Tcp.pm
+share/msf/lib/Msf/Socket/Udp.pm
+share/msf/lib/Msf/Socket/Socket.pm
+share/msf/lib/Msf/Socket/UdpBase.pm
+share/msf/lib/Msf/Socket/SocketBase.pm
+share/msf/lib/Msf/Socket/TcpBase.pm
+share/msf/lib/Msf/Socket/RawUdpBase.pm
+share/msf/lib/Msf/TextUI.pm
+share/msf/lib/Msf/Exploit.pm
+share/msf/lib/Msf/Payload.pm
+share/msf/lib/Msf/Module.pm
+share/msf/lib/Msf/ColPrint.pm
+share/msf/lib/Msf/EncodedPayload.pm
+share/msf/lib/Msf/Logging.pm
+share/msf/lib/Msf/WebUI.pm
+share/msf/lib/Msf/Config.pm
+share/msf/lib/Msf/Encoder.pm
+share/msf/lib/Pex/Nasm/Instruction.pm
+share/msf/lib/Pex/Nasm/Ndisasm.pm
+share/msf/lib/Pex/Nasm/Nasm.pm
+share/msf/lib/Pex/Poly/BlockMaster.pm
+share/msf/lib/Pex/Poly/DeltaKing.pm
+share/msf/lib/Pex/Poly/RegAssassin.pm
+share/msf/lib/Pex/Poly/BlockMaster/Block.pm
+share/msf/lib/Pex/Poly/WannaCracker.pm
+share/msf/lib/Pex/RawPackets.pm
+share/msf/lib/Pex/SMB.pm
+share/msf/lib/Pex/Socket/SSLTcp.pm
+share/msf/lib/Pex/Socket/RawUdp.pm
+share/msf/lib/Pex/Socket/Tcp.pm
+share/msf/lib/Pex/Socket/Udp.pm
+share/msf/lib/Pex/Socket/Socket.pm
+share/msf/lib/Pex/Searcher.pm
+share/msf/lib/Pex/x86.pm
+share/msf/lib/Pex/DCERPC.pm
+share/msf/lib/Pex/MSSQL.pm
+share/msf/lib/Pex/Utils.pm
+share/msf/lib/Pex/Text.pm
+share/msf/lib/Pex/PEInfo.pm
+share/msf/lib/Pex/RawSocket.pm
+share/msf/lib/Pex/Struct.pm
+share/msf/lib/Pex/Encoder.pm
+share/msf/lib/Pex/PsuedoShell.pm
+share/msf/lib/Digest/Perl/MD5.pm
+share/msf/lib/NetPacket.pm
+share/msf/lib/Pex.pm
+share/msf/lib/NetPacket/IP.pm
+share/msf/lib/NetPacket/TCP.pm
+share/msf/lib/NetPacket/UDP.pm
+share/msf/lib/NetPacket/Ethernet.pm
+share/msf/lib/NetPacket/ICMP.pm
+share/msf/lib/NetPacket/IGMP.pm
+share/msf/lib/NetPacket/ARP.pm
+share/msf/nops/PPC.pm
+share/msf/nops/Pex.pm
+share/msf/nops/SPARC.pm
+share/msf/payloads/external/WindowsSyscall.py
+share/msf/payloads/external/bsdx86bind_ie.py
+share/msf/payloads/external/bsdx86reverse_ie.py
+share/msf/payloads/external/inlineegg.py
+share/msf/payloads/external/linx86bind_ie.py
+share/msf/payloads/external/linx86reverse_ie.py
+share/msf/payloads/external/linx86reverse_xor.py
+share/msf/payloads/external/win32_stg_winexec.py
+share/msf/payloads/Empty.pm
+share/msf/payloads/bsdix86_bind.pm
+share/msf/payloads/bsdix86_findsock.pm
+share/msf/payloads/bsdix86_reverse.pm
+share/msf/payloads/bsdx86_bind.pm
+share/msf/payloads/bsdx86_bind_ie.pm
+share/msf/payloads/bsdx86_findsock.pm
+share/msf/payloads/bsdx86_reverse.pm
+share/msf/payloads/bsdx86_reverse_ie.pm
+share/msf/payloads/cmd_generic.pm
+share/msf/payloads/cmd_sol_bind.pm
+share/msf/payloads/cmd_unix_reverse.pm
+share/msf/payloads/cmd_unix_reverse_nss.pm
+share/msf/payloads/linx86_bind.pm
+share/msf/payloads/linx86_bind_ie.pm
+share/msf/payloads/linx86_findrecv.pm
+share/msf/payloads/linx86_findsock.pm
+share/msf/payloads/linx86_reverse.pm
+share/msf/payloads/linx86_reverse_ie.pm
+share/msf/payloads/linx86_reverse_impurity.pm
+share/msf/payloads/linx86_reverse_xor.pm
+share/msf/payloads/osx_bind.pm
+share/msf/payloads/osx_reverse.pm
+share/msf/payloads/solsparc_bind.pm
+share/msf/payloads/solsparc_findsock.pm
+share/msf/payloads/solsparc_reverse.pm
+share/msf/payloads/solx86_bind.pm
+share/msf/payloads/solx86_findsock.pm
+share/msf/payloads/solx86_reverse.pm
+share/msf/payloads/win32_adduser.pm
+share/msf/payloads/win32_bind.pm
+share/msf/payloads/win32_bind_dllinject.pm
+share/msf/payloads/win32_bind_stg.pm
+share/msf/payloads/win32_bind_stg_upexec.pm
+share/msf/payloads/win32_exec.pm
+share/msf/payloads/win32_bind_vncinject.pm
+share/msf/payloads/win32_reverse.pm
+share/msf/payloads/win32_reverse_dllinject.pm
+share/msf/payloads/win32_reverse_stg.pm
+share/msf/payloads/win32_reverse_stg_ie.pm
+share/msf/payloads/win32_reverse_stg_upexec.pm
+share/msf/payloads/win32_reverse_vncinject.pm
+share/msf/tools/README.socketNinja
+share/msf/tools/README.memdump
+share/msf/tools/memdump.exe
+share/msf/tools/memdump.c
+share/msf/tools/socketNinja.pl
+share/msf/sdk/docs/exploitTutorial.txt
+share/msf/sdk/docs/svnserve_date.pm
+share/msf/sdk/docs/vuln1_osx.pm
+share/msf/sdk/docs/exploitReference.txt
+share/msf/sdk/docs/vuln1.c
+share/msf/sdk/docs/vuln1_1.pm
+share/msf/sdk/docs/vuln1_2.pm
+share/msf/sdk/docs/vuln1_3.pm
+share/msf/sdk/formatGen.pl
+share/msf/sdk/patternOffset.pl
+share/msf/sdk/spitCode.pl
+share/msf/msfcli
+share/msf/msfconsole
+share/msf/msfdldebug
+share/msf/msfencode
+share/msf/msflogdump
+share/msf/msfpayload
+share/msf/msfpayload.cgi
+share/msf/msfpescan
+share/msf/msfweb
+share/msf/msfupdate
+share/msf/src/shellcode/osx/syscall.h
+share/msf/src/shellcode/osx/osx_reverse.s
+share/msf/src/shellcode/bsdi/ia32/connectback.s
+share/msf/src/shellcode/bsdi/ia32/bind.s
+share/msf/src/shellcode/bsdi/ia32/setuid-execve.s
+share/msf/src/shellcode/bsdi/ia32/findsock.s
+share/msf/src/shellcode/linux/ia32/linux_2.6.7_unistd_ia32.h
+share/msf/src/shellcode/linux/ia32/msfind.asm
+share/msf/src/shellcode/linux/impurity/linux_reverse_impurity.asm
+share/msf/src/shellcode/linux/impurity/Makefile
+share/msf/src/shellcode/linux/impurity/README.metasploit
+share/msf/src/shellcode/linux/impurity/tracepath.c
+share/msf/src/shellcode/linux/impurity/script-ld-impurity
+share/msf/src/shellcode/linux/impurity/shelldemo.c
+share/msf/src/shellcode/linux/impurity/README.original
+share/msf/src/shellcode/win32/standard/win32_stage_boot_reverse_shell_revert.asm
+share/msf/src/shellcode/win32/standard/build
+share/msf/src/shellcode/win32/standard/win32_stage_inlineegg.asm
+share/msf/src/shellcode/win32/standard/win32_stage_revert.asm
+share/msf/src/shellcode/win32/standard/README
+share/msf/src/shellcode/win32/standard/win32_stage_boot_winsock_bind.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_bind_shell.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_reverse.asm
+share/msf/src/shellcode/win32/standard/win32_stage_winexec.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_reverse_inlineegg.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_bind_inlineegg.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_winsock_conn_udp.asm
+share/msf/src/shellcode/win32/standard/win32_stage_uploadexec.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_winsock_conn.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_reverse_udp.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_bind_read.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_bind.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_reverse_shell.asm
+share/msf/src/shellcode/win32/standard/win32_stage_shell.asm
+share/msf/src/shellcode/win32/standard/win32_stage_api.asm
+share/msf/src/shellcode/win32/standard/win32_stage_boot_reverse_read.asm
+share/msf/src/shellcode/win32/standard/templates/inc/nasm.inc
+share/msf/src/shellcode/win32/standard/templates/inc/function.inc
+share/msf/src/shellcode/win32/standard/templates/inc/README
+share/msf/src/shellcode/win32/standard/templates/inc/win32.inc
+share/msf/src/shellcode/win32/standard/templates/inc/byte.inc
+share/msf/src/shellcode/win32/standard/templates/inc/pe.asm
+share/msf/src/shellcode/win32/standard/templates/inc/pe.inc
+share/msf/src/shellcode/win32/standard/templates/inc/win32dll.inc
+share/msf/src/shellcode/win32/standard/templates/inc/language.inc
+share/msf/src/shellcode/win32/standard/templates/inc/win32n.inc
+share/msf/src/shellcode/win32/standard/templates/win32_template.asm
+share/msf/src/shellcode/win32/standard/templates/linux_template.asm
+share/msf/src/shellcode/win32/dllinject/srv.c
+share/msf/src/shellcode/win32/dllinject/README
+share/msf/src/shellcode/win32/dllinject/shell.c
+share/msf/src/shellcode/win32/dllinject/libloader.c
+share/msf/src/shellcode/win32/dllinject/tester.c
+share/msf/src/shellcode/win32/dllinject/generic.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/rdr.dsp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/InStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/ZlibInStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/FdInStream.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/NullOutStream.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/MemOutStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/rdr.vcproj
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/Exception.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/Makefile.in
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/OutStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/FdOutStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/NullOutStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/MemInStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/types.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/FdInStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/FixedMemOutStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/InStream.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/ZlibInStream.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/ZlibOutStream.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/FdOutStream.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr/ZlibOutStream.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/d3des.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/d3des.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/zrleEncode.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/Makefile.in
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/rfbproto.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/zrleDecode.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/vncauth.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb/vncauth.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/FAQ
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/infblock.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/infblock.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/example.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/crc32.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/Makefile
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/infutil.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/infutil.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zlib.vcproj
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/INDEX
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/README
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/maketree.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/infcodes.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/infcodes.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/adler32.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/configure
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zconf.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/Make_vms.com
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/descrip.mms
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/Makefile.riscos
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/compress.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/uncompr.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zutil.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zutil.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/Makefile.in
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/gzio.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/trees.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/trees.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/inffixed.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/deflate.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/deflate.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/inftrees.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/inftrees.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zlib.html
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zlib.3
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zlib.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/zlib.dsp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/algorithm.txt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/inffast.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/inffast.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/ChangeLog
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/minigzip.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib/inflate.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/REALVNC.README_BINARY.txt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/BUILDING.txt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/REALVNC.README.txt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/LICENCE.txt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/Xregion/Xregion.vcproj
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/Xregion/Xregion.dsp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/Xregion/Xregion.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/Xregion/Region.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/Xregion/region.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/README.txt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/history.txt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc.dsw
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc.opt
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/VNC DLL Injection.sln
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/VNC DLL Injection.suo
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks/VNCHooks.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks/resource.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks/vnchooks.dsp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks/vnchooks.rc
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks/vnchooks.vcproj
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks/VNCHooks.def
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks/VNCHooks.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vncdll/vncdll.vcproj
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vncdll/vncdll.dsp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vncdll/vncdll.plg
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/clipboardframe.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/animatedmemoryimagesource.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/optionsframe.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/winvnc.ico
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/icon1.ico
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/vnccanvas.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/rfbproto.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/vnc.bmp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/vncviewer.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/authenticationpanel.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/vncviewer.jar
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res/descipher.class
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncmenu.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnctimedmsgbox.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencoder.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencodemgr.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnclog.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencoderre.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/stdhdrs.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbUpdateTracker.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncproperties.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncsk.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncpasswd.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/resource.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncacceptdialog.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncservice.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfb.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencodecorre.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencoder.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbUpdateTracker.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncacceptdialog.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencodehext.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnctimedmsgbox.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencodezrle.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencodecorre.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncabout.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncinsthandler.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnckeymap.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncdesktop.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/winvnc.rc
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/buildtime.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncbuffer.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/d3des.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/d3des.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbMisc.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbRegion_win32.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncconndialog.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbRect.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/winvnc.def
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/winvnc.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/winvnc.dsp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/winvnc.plg
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncserver.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencoderre.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnccorbaconnect.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/tableinittctemplate.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencodezrle.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbRegion_X11.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncdesktop.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncserver.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncservice.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/stdhdrs.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncabout.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/minmax.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncinsthandler.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/tableinitcmtemplate.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbRegion_X11.cxx
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnclog.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncclient.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vsocket.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/translate.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/winvnc.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnckeymap.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/keysymdef.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncclient.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vsocket.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncencodehext.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncmenu.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncsockconnect.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncsockconnect.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/translate.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vtypes.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncbuffer.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncproperties.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnchttpconnect.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncauth.c
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncauth.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/winvnc.vcproj
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbRegion.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vnchttpconnect.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/tabletranstemplate.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/rfbRegion_win32.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/vncconndialog.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread.dsp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread/nt.h
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread/nt.cpp
+share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
+share/msf/src/shellcode/hexify.sh
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread/omnithread
+@dirrm  share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/omnithread
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc/res
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/winvnc
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vncdll
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc/vnchooks
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/winvnc
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rdr
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/rfb
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/zlib
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll/Xregion
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject/vncdll
+@dirrm share/msf/src/shellcode/win32/dllinject/vncinject
+@dirrm share/msf/src/shellcode/win32/dllinject
+@dirrm share/msf/src/shellcode/win32/standard/templates/inc
+@dirrm share/msf/src/shellcode/win32/standard/templates
+@dirrm share/msf/src/shellcode/win32/standard
+@dirrm share/msf/src/shellcode/win32
+@dirrm share/msf/src/shellcode/linux/impurity
+@dirrm share/msf/src/shellcode/linux/ia32
+@dirrm share/msf/src/shellcode/linux
+@dirrm share/msf/src/shellcode/bsdi/ia32
+@dirrm share/msf/src/shellcode/osx
+@dirrm share/msf/src/shellcode/bsdi
+@dirrm share/msf/src/shellcode
+@dirrm share/msf/src
+@dirrm share/msf/encoders
+@dirrm share/msf/exploits
+@dirrm share/msf/extras
+@dirrm share/msf/lib/Msf/PayloadComponent  
+@dirrm share/msf/lib/Msf/Socket       
+@dirrm share/msf/lib/Msf              
+@dirrm share/msf/lib/Pex/Nasm         
+@dirrm share/msf/lib/Pex/Poly/BlockMaster  
+@dirrm share/msf/lib/Pex/Poly         
+@dirrm share/msf/lib/Pex/Socket       
+@dirrm share/msf/lib/Pex
+@dirrm share/msf/lib/Digest/Perl
+@dirrm share/msf/lib/Digest           
+@dirrm share/msf/lib/NetPacket        
+@dirrm share/msf/lib                  
+@dirrm share/msf/nops                 
+@dirrm share/msf/payloads/external    
+@dirrm share/msf/payloads             
+@dirrm share/msf/tools                
+@dirrm share/msf/sdk/docs             
+@dirrm share/msf/sdk                  
+@dirrm share/msf/data                 
+@dirrm share/msf/docs
+@dirrm share/msf
