@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/19 16:49:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/03/22 16:23:03 jmmv Exp $
 bin/gtkdoc-fixxref
 bin/gtkdoc-mkdb
 bin/gtkdoc-mkhtml
@@ -19,7 +19,10 @@ share/gtk-doc/data/gtkdoc-common.pl
 share/gtk-doc/data/home.png
 share/gtk-doc/data/left.png
 share/gtk-doc/data/right.png
+share/gtk-doc/data/style.css
 share/gtk-doc/data/up.png
+share/gtk-doc/data/version-greater-or-equal.xsl
+@comment in xmlcatmgr: share/sgml/catalog
 share/sgml/gtk-doc/gtk-doc.cat
 @dirrm share/sgml/gtk-doc
 @comment in xmlcatmgr: @dirrm share/sgml
