@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/19 08:54:25 wiz Exp $
 #
 
 DISTNAME=		Csound4.23
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.cs.bath.ac.uk/pub/dream/newest/
 
-MAINTAINER=		collver1@attbi.com
+MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.csound.org
 COMMENT=		software synthesizer and sequencer
 
