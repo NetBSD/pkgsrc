@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2004/06/23 18:40:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2005/01/19 13:17:15 salo Exp $
 awstats/bin/awstats_buildstaticpages.pl
+awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
 awstats/bin/awstats_updateall.pl
-awstats/bin/configure.pl
 awstats/bin/logresolvemerge.pl
 awstats/bin/maillogconvert.pl
 awstats/bin/urlaliasbuilder.pl
@@ -15,6 +15,7 @@ awstats/cgi-bin/lang/awstats-bg.txt
 awstats/cgi-bin/lang/awstats-br.txt
 awstats/cgi-bin/lang/awstats-ca.txt
 awstats/cgi-bin/lang/awstats-cn.txt
+awstats/cgi-bin/lang/awstats-cy.txt
 awstats/cgi-bin/lang/awstats-cz.txt
 awstats/cgi-bin/lang/awstats-de.txt
 awstats/cgi-bin/lang/awstats-dk.txt
@@ -42,18 +43,26 @@ awstats/cgi-bin/lang/awstats-pt.txt
 awstats/cgi-bin/lang/awstats-ro.txt
 awstats/cgi-bin/lang/awstats-ru.txt
 awstats/cgi-bin/lang/awstats-se.txt
+awstats/cgi-bin/lang/awstats-si.txt
 awstats/cgi-bin/lang/awstats-sk.txt
 awstats/cgi-bin/lang/awstats-sr.txt
+awstats/cgi-bin/lang/awstats-th.txt
 awstats/cgi-bin/lang/awstats-tr.txt
+awstats/cgi-bin/lang/awstats-tt-br.txt
 awstats/cgi-bin/lang/awstats-tw.txt
 awstats/cgi-bin/lang/awstats-ua.txt
-awstats/cgi-bin/lang/awstats-wlk.txt
+awstats/cgi-bin/lang/tooltips_f/awstats-tt-br.txt
+awstats/cgi-bin/lang/tooltips_f/awstats-tt-cz.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-en.txt
+awstats/cgi-bin/lang/tooltips_f/awstats-tt-is.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-br.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-en.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-fr.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-al.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-ba.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-bg.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-br.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-ca.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-cn.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-cz.txt
@@ -81,9 +90,6 @@ awstats/cgi-bin/lang/tooltips_w/awstats-tt-sr.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-tr.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-tw.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-ua.txt
-awstats/cgi-bin/lang/tooltips_w/awstats-tw.txt
-awstats/cgi-bin/lang/tooltips_w/awstats-ua.txt
-awstats/cgi-bin/lang/tooltips_w/awstats-wlk.txt
 awstats/cgi-bin/lib/browsers.pm
 awstats/cgi-bin/lib/domains.pm
 awstats/cgi-bin/lib/mime.pm
@@ -94,8 +100,13 @@ awstats/cgi-bin/lib/search_engines.pm
 awstats/cgi-bin/lib/status_http.pm
 awstats/cgi-bin/lib/status_smtp.pm
 awstats/cgi-bin/lib/worms.pm
+awstats/cgi-bin/plugins/clusterinfo.pm
 awstats/cgi-bin/plugins/decodeutfkeys.pm
 awstats/cgi-bin/plugins/geoip.pm
+awstats/cgi-bin/plugins/geoip_city_maxmind.pm
+awstats/cgi-bin/plugins/geoip_isp_maxmind.pm
+awstats/cgi-bin/plugins/geoip_org_maxmind.pm
+awstats/cgi-bin/plugins/geoip_region_maxmind.pm
 awstats/cgi-bin/plugins/geoipfree.pm
 awstats/cgi-bin/plugins/graphapplet.pm
 awstats/cgi-bin/plugins/hashfiles.pm
@@ -276,6 +287,7 @@ awstats/icon/flags/gf.png
 awstats/icon/flags/gh.png
 awstats/icon/flags/gi.png
 awstats/icon/flags/gl.png
+awstats/icon/flags/glg.png
 awstats/icon/flags/gm.png
 awstats/icon/flags/gn.png
 awstats/icon/flags/gov.png
@@ -535,6 +547,7 @@ share/doc/html/awstats/awstats_benchmark.html
 share/doc/html/awstats/awstats_changelog.txt
 share/doc/html/awstats/awstats_compare.html
 share/doc/html/awstats/awstats_config.html
+share/doc/html/awstats/awstats_contrib.html
 share/doc/html/awstats/awstats_extra.html
 share/doc/html/awstats/awstats_faq.html
 share/doc/html/awstats/awstats_glossary.html
@@ -558,12 +571,18 @@ share/doc/html/awstats/images/awstats_logo5.gif
 share/doc/html/awstats/images/awstats_logo5.png
 share/doc/html/awstats/images/awstats_logo6.png
 share/doc/html/awstats/images/license_chart.png
+share/doc/html/awstats/images/screen_shot_1.gif
 share/doc/html/awstats/images/screen_shot_1.jpg
 share/doc/html/awstats/images/screen_shot_1.png
 share/doc/html/awstats/images/screen_shot_2.png
-share/doc/html/awstats/images/screen_shot_3.gif
 share/doc/html/awstats/images/screen_shot_3.png
 share/doc/html/awstats/images/screen_shot_4.png
+share/doc/html/awstats/images/screen_shot_5.png
+share/doc/html/awstats/images/screen_shot_large_1.jpg
+share/doc/html/awstats/images/screen_shot_large_2.jpg
+share/doc/html/awstats/images/screen_shot_large_3.jpg
+share/doc/html/awstats/images/screen_shot_large_4.jpg
+share/doc/html/awstats/images/screen_shot_large_5.jpg
 share/doc/html/awstats/images/star.png
 share/doc/html/awstats/index.html
 share/doc/html/awstats/pad_awstats.htm
