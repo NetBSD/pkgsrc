@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/10 23:48:12 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/11 10:47:25 tron Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -9,8 +9,6 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
-
-BROKEN=		user privileges are not initialized correctly
 
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
@@ -68,7 +66,7 @@ post-build:
 
 post-install:
 .for FILE in ${GDMCFGFILES}
-	cd ${WRKSRC}/config; \
+	@cd ${WRKSRC}/config; \
 	SOURCE=${FILE:C/:.*//}; \
 	TARGET=${GDMCFGDIR}/${FILE:C/.*://:S/.default//}; \
 	if [ ! -f $$TARGET ]; then \
