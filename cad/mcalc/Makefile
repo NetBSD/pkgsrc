@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/17 02:52:35 dmcmahill Exp $
 #
 
 DISTNAME=	mcalc-1.5
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcalc/}
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://mcalc.sourceforge.net/
 COMMENT=	JavaScript based microstrip analysis/synthesis calculator
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 NO_BUILD=	yes
 
