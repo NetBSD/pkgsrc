@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.793 2001/07/27 12:19:15 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.794 2001/07/30 05:04:32 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -106,8 +106,8 @@ SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
 # The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
 # is to catch users of xpkgwedge<1.0.
 #
-XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS}
-XMKMF_FLAGS?=		-a
+XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS} -a
+XMKMF_FLAGS?=		# empty
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 X11PREFIX=		${LOCALBASE}
