@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 1999/12/23 14:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2000/05/08 03:25:20 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
-DISTNAME=		rxvt-2.6.1
+DISTNAME=		rxvt-2.7.3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.rxvt.org/pub/rxvt/ \
 			ftp://mason.primenet.com.au/pub/rxvt/
@@ -17,6 +17,7 @@ USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-wtmp \
+			--enable-lastlog \
 			--enable-xpm-background \
 			--enable-transparency \
 			--enable-menubar \
@@ -26,8 +27,11 @@ CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-big5 \
 			--enable-gb \
 			--enable-greek \
+			--enable-ttygid \
 			--enable-xgetdefault \
-			--disable-memset \
+			--enable-frills \
+			--enable-keepscrolling \
+			--enable-mousewheel \
 			--with-xpm-includes=${X11BASE}/include/X11 \
 			--with-xpm-library=${X11BASE}/lib
 
