@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2000/10/20 16:06:17 bouyer Exp $
+$NetBSD: patch-aa,v 1.10 2002/09/30 09:12:14 martti Exp $
 
---- configure.orig	Fri Oct 13 16:07:49 2000
-+++ configure	Thu Oct 19 14:16:18 2000
-@@ -1113,7 +1113,7 @@
- fi
+--- configure.orig	Wed Jul 31 07:49:25 2002
++++ configure	Tue Sep 24 15:50:26 2002
+@@ -2610,7 +2610,7 @@
+   CPPFLAGS="${CPPFLAGS} -I${withval}"
+ fi;
  
+-LDFLAGS="${LDFLAGS} ${MATHLIBS}"
++LDFLAGS="${LDFLAGS} ${MATHLIBS} -lgd -lttf -lintl -lXpm -lX11 -ljpeg"
  
--LDFLAGS="${LDFLAGS} -lgd"
-+LDFLAGS="${LDFLAGS} -lgd -lttf -lintl -lXpm -lX11 -ljpeg"
- 
- # Check whether --with-z or --without-z was given.
- if test "${with_z+set}" = set; then
+ GDEXTRALIB=""
+ echo "$as_me:2616: checking for gdImageGif in -lgd" >&5
