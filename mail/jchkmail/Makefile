@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/06 13:50:57 tv Exp $
 #
 
 DISTNAME=		jchkmail-1.3.1a
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://j-chkmail.ensmp.fr/download/
 
