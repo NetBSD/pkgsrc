@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:24:41 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/08/30 21:10:11 jtb Exp $
 
-DISTNAME=		chemtool-1.4.1
-PKGREVISION=		2
+DISTNAME=		chemtool-1.6
 CATEGORIES=		biology
-MASTER_SITES=		http://www.uni-ulm.de/~s_tvolk/chemtool/src/
+MASTER_SITES=		http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.uni-ulm.de/~s_tvolk/chemtool.html
+HOMEPAGE=		http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 COMMENT=		Program for drawing organic molecules
 
-USE_BUILDLINK2=		# defined
-USE_PKGLOCALEDIR=	# defined
-USE_X11=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/chemtool
