@@ -1,0 +1,445 @@
+#!/bin/sh
+# $NetBSD: mkreadme,v 1.1 2002/11/11 21:51:04 dmcmahill Exp $
+#
+# Script for README.html generation
+#
+# Copyright (c) 2002 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Dan McMahill.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+
+
+TMPDIR=${TMPDIR:-/tmp/mkreadme}
+PKGSRCDIR=${PKGSRCDIR:-/usr/pkgsrc}
+BMAKE=${BMAKE:-make}
+AWK=${AWK:-/usr/bin/awk}
+
+usage(){
+    echo "$prog - Generates README.html files for a pkgsrc tree"
+    echo "Usage:      $prog [-c|--cdrom] [-C|--prune] [-d|--debug] [-f|--ftp] "
+    echo "                  [-m|--multi-arch] [-p|--pkgsrc directory] "
+    echo "                  [-P|--packages directory] [-r|--restart] "
+    echo "                  [-s|--single-arch]"
+    echo " "
+    echo "            $prog -h|--help"
+    echo " "
+    echo "            $prog -v|--version"
+    echo " "
+    echo "The options supported by $prog are: "
+    echo " "
+    echo "  -C|--prune          Prune unused README.html files which may exist in"
+    echo "                      pkg directories which have been removed from CVS."
+    echo " "
+    echo "  -c|--cdrom          Generates CD-ROM README.html files"
+    echo " "
+    echo "  -d|--debug          Enables (extremely verbose) debug output"
+    echo " "
+    echo "  -f|--ftp            Generates FTP README.html files"
+    echo " "
+    echo "  -h|--help           Displays this help message"
+    echo " "
+    echo "  -m|--multi-arch     Assumes a packages directory layout like:"
+    echo "                      OS_VERSION/MACHINE_ARCH/     for example:"
+    echo "                      1.{5,6}/{alpha,i386,sparc,vax}"
+    echo " "
+    echo "  -p|--pkgsrc dir     Specifies the pkgsrc directory.  Defaults to"
+    echo "                      The value of the PKGSRCDIR environment variable"
+    echo "                      if set or /usr/pkgsrc otherwise."
+    echo " "
+    echo "  -P|--packages dir   Specifies the packages directory."
+    echo " "
+    echo "  -r|--restart        Restart.  This option assumes that the database file"
+    echo "                      from a previous run still exists and that the script"
+    echo "                      should use that instead of recreating the database."
+    echo " "
+    echo "  -s|--single-arch    Assumes a single OS release and MACHINE_ARCH binary"
+    echo "                      packages directory structure."
+    echo " "
+    echo "  -v|--version        Displays the version of this script and exits."
+    echo " "
+    echo "Example:    $prog -p /pub/NetBSD/packages/pkgsrc -P /pub/NetBSD/packages -m -f"
+    echo " "
+}
+
+clean_and_exit(){
+    if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" ]; then
+	rm -fr $TMPDIR
+    else
+	echo "Debugging output left in $TMP"
+    fi
+    exit 1
+}
+
+prog=$0
+
+
+######################################################################
+#
+#  Handle command line options
+#
+######################################################################
+
+ftp_readme=no
+restart=no
+prune=no
+
+while
+    test -n "$1"
+do
+    case "$1"
+    in
+
+    # We're generating README.html's for a CD-ROM 
+    -c|--cdrom)
+	ftp_readme=no
+	shift
+	;;
+
+    # Prune old README.html files from pkgs which no longer exist
+    -C|--prune)
+	prune=yes
+	shift
+	;;
+
+    # Turn on debugging
+    -d|--debug)
+	DEBUG=yes
+	shift
+	;;
+
+    # We're generating README.html's for a CD-ROM 
+    -f|--ftp)
+	ftp_readme=yes
+	shift
+	;;
+
+	
+    # Help
+    -h|--help)
+	usage
+	exit 0
+	;;
+
+    # assume a OS_RELEASE/MACHINE_ARCH/ layout for the binary pkgs
+    -m|--multi-arch)
+	multiarch=yes
+	shift
+	;;
+
+    # Specify pkgsrc directory
+    -p|--pkgsrc)
+	PKGSRCDIR=$2
+	shift 2
+	;;
+
+    # Specify PACKAGES directory
+    -P|--packages)
+	PKGDIR=$2
+	shift 2
+	;;
+
+    # Restart (ie, don't re-generate the database file)
+    -r|--restart)
+	restart=yes
+	shift
+	;;
+
+    # assume a single directory structure layout for the binary pkgs
+    -s|--single-arch)
+	multiarch=no
+	shift
+	;;
+
+    # Version
+    -v|--version) 
+	${AWK} '/^#[ \t]*\$NetBSD/ {gsub(/,v/,"",$3);printf("%s:  Version %s, %s\n",$3,$4,$5); exit 0;}' $prog
+	exit 0
+        ;;
+
+    -*) echo "$prog:  ERROR:  $1 is not a valid option"
+	usage
+	clean_and_exit
+	;;
+
+    *)  
+	break
+	;;
+
+    esac
+done
+
+if [ "x$DEBUG" = "xyes" ]; then
+    set -v
+fi
+
+if [ ! -d ${PKGSRCDIR} ]; then
+    echo "ERROR:  package source directory ${PKGSRCDIR} does not exist"
+    echo ""
+    clean_and_exit
+fi
+
+if [ ! -d $TMPDIR ]; then
+	mkdir -p $TMPDIR
+fi
+
+DEPENDSTREEFILE=$TMPDIR/dependstree
+export DEPENDSTREEFILE
+DEPENDSFILE=$TMPDIR/depends
+export DEPENDSFILE
+SUPPORTSFILE=$TMPDIR/supports
+export SUPPORTSFILE
+INDEXFILE=$TMPDIR/index
+export SUPPORTSFILE
+ORDERFILE=$TMPDIR/order
+export ORDERFILE
+DATABASEFILE=$TMPDIR/database
+export DATABASEFILE
+BINPKGFILE=$TMPDIR/binpkglist
+
+
+######################################################################
+#
+#  Extract key pkgsrc configuration variables
+#
+######################################################################
+
+echo " "
+echo "Extracting configuration variables:"
+echo " "
+if [ -d ${PKGSRCDIR}/pkgtools/pkglint ]; then
+    cd ${PKGSRCDIR}/pkgtools/pkglint 
+
+    for v in DISTDIR PACKAGES PKGREPOSITORYSUBDIR PKG_SUFX MACHINE_ARCH PKG_URL OPSYS OS_VERSION FTP_PKG_URL_HOST FTP_PKG_URL_DIR CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR
+    do
+	val=`make show-var VARNAME=${v}`
+	if [ $? != 0 ]; then
+	    echo "Error:  make show-var VARNAME=${v} in `pwd` "
+	    echo "Failed.  This is a fatal error"
+	    clean_and_exit
+	fi
+	echo "$v=$val"
+	eval ${v}=${val}
+    done
+else
+    echo "Error:   ${PKGSRCDIR}/pkgtools/pkglint does not seem to exist"
+    exit 1
+fi
+
+
+######################################################################
+#
+#  Decide on FTP vs CDROM README.html files
+#
+######################################################################
+
+if [ "$ftp_readme" = "yes" ]; then
+    PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
+    echo "Will generate FTP readme files with PKG_URL=$PKG_URL"
+else
+    PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
+    echo "Will generate CD-ROM readme files with PKG_URL=$PKG_URL"
+fi
+
+######################################################################
+#
+#  Check for command line switch for packages directory
+#
+######################################################################
+
+# we've been given the directory as a command line switch
+if [ ! -z "$PKGDIR" ]; then
+    PACKAGES=$PKGDIR
+    echo "PACKAGES specified on command line to be $PKGDIR"
+fi
+
+######################################################################
+#
+#  Decide in binary package directory layout
+#
+######################################################################
+
+
+# If PACKAGES is set to the default (../../pkgsrc/packages), the current
+# ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
+# structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
+#
+# This is the logic from bsd.pkg.mk, but I think I'd like to change it to
+# come from a command line switch
+
+if [ -z "$multiarch" -a -e ${PACKAGES} ]; then
+    cd ${PACKAGES}
+    case `pwd` in
+	*/pkgsrc/packages)
+	    multiarch=no
+	    ;;
+
+	*)
+	    multiarch=yes
+	    ;;
+    esac
+fi
+
+if [ "x$multiarch" = "xyes" ]; then
+    echo "Will generate multi-release, multi-arch readme files"
+else
+    echo "Will generate single-release, single-arch readme files"
+fi
+
+
+######################################################################
+#
+#  Extract Database for All Packages (longest step)
+#
+######################################################################
+
+if [ "x$restart" = "xno" ] ; then
+    echo " "
+    echo "Extracting data.  This could take a while"
+    echo " "
+    cd ${PKGSRCDIR} 
+    list=`grep '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'`
+    for pkgdir in $list
+    do
+	    if [ ! -d $pkgdir ]; then
+		    echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr
+		    echo $pkgdir | sed 's;/.*;/Makefile;g' > /dev/stderr
+		    echo "but the directory does not exist.  Please fix this!" > /dev/stderr
+	    else
+		    cd $pkgdir
+		    l=`${BMAKE} print-summary-data`
+		    if [ $? != 0 ]; then
+			    echo "WARNING (printdepends):  the package in $pkgdir had problem with" \
+				> /dev/stderr
+			    echo "    ${BMAKE} print-summary-data" > /dev/stderr
+			    echo "    database information for this package" > /dev/stderr
+			    echo "    will be dropped." > /dev/stderr
+			    ${BMAKE} print-summary-data  2>&1 > /dev/stderr
+		    else
+			    echo "$l" >> $DATABASEFILE
+		    fi
+	    fi
+	    cd $PKGSRCDIR
+    done
+else
+    echo " "
+    echo "Using existing database (are you sure you wanted the -r/--restart flag?)"
+    echo " "
+fi
+
+######################################################################
+#
+#  Prune README.html files which are no longer needed
+#
+######################################################################
+if [ "x$prune" = "xyes" ]; then
+    echo " "
+    echo "Pruning unused README.html files"
+    echo " "
+    cd ${PKGSRCDIR}
+    for d in `ls -d */*` ; do
+	if [ -d $d -a ! -f ${d}/Makefile -a -f ${d}/README.html ]; then
+	    echo "Pruning ${d}/README.html which is no longer used"
+	    rm -f ${d}/README.html
+	fi
+    done
+fi
+
+######################################################################
+#
+#  Generate the package and category README.html files
+#
+######################################################################
+
+echo " "
+echo "Generating package README.html files"
+echo " "
+if [ "x$DEBUG" = "xyes" ]; then
+    debug=1;
+else
+    debug=0;
+fi
+
+${AWK} -f ${PKGSRCDIR}/mk/bulk/genreadme.awk  \
+    builddependsfile=${TMPDIR}/pkgsrc.builddepends.debug \
+    debug=$debug \
+    dependsfile=${TMPDIR}/pkgsrc.depends.debug \
+    DISTDIR=$DISTDIR \
+    MACHINE_ARCH=$MACHINE_ARCH \
+    MULTIARCH=$multiarch \
+    OPSYS=$OPSYS \
+    OS_VERSION=$OS_VERSION \
+    PACKAGES=$PACKAGES \
+    PKG_SUFX=$PKG_SUFX \
+    PKG_URL=$PKG_URL \
+    PKGREPOSITORYSUBDIR=$PKGREPOSITORYSUBDIR \
+    PKGSRCDIR=$PKGSRCDIR \
+    TMPDIR=$TMPDIR \
+	${DATABASEFILE}
+
+if [ $? != 0 ]; then
+    echo "Error:  genreadme.awk failed to create README.html files"
+    clean_and_exit
+fi
+
+######################################################################
+#
+#  Generate the README-IPv6.html file
+#
+######################################################################
+
+echo " "
+echo "Generating the README-IPv6.html file"
+echo " "
+cd ${PKGSRCDIR}
+ipv6=${TMPDIR}/ipv6pkgs
+ipv6_entries=${TMPDIR}/ipv6_entries
+grep -l '^BUILD_DEFS.*=.*USE_INET6' */*/Makefile  | sed 's;Makefile;;g' > $ipv6
+fgrep -f $ipv6 README-all.html | sort -t/ +1 > $ipv6_entries
+sed \
+    -e "/%%TRS%%/r${ipv6_entries}" \
+    -e '/%%TRS%%/d' \
+    templates/README.ipv6 > README-IPv6.html
+if [ $? != 0 ]; then
+    echo "Error:  README-IPv6.html generation failed (on sed script)"
+    clean_and_exit
+fi
+
+echo " "
+echo "README.html generation finished"
+echo " "
+if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" ]; then
+    rm -fr $TMPDIR
+else
+    echo "Debugging output left in $TMPDIR"
+fi
+
