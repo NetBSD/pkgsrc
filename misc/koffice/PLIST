@@ -1,63 +1,89 @@
-@comment $NetBSD: PLIST,v 1.4 2001/12/23 21:04:34 tron Exp $
-bin/filter_wrapper
+@comment $NetBSD: PLIST,v 1.5 2002/10/08 14:15:53 martti Exp $
 bin/kchart
 bin/kformula
 bin/kivio
-bin/kontour
+bin/koconverter
 bin/koscript
 bin/koshell
 bin/kprconverter.pl
 bin/kpresenter
 bin/kspread
+bin/kthesaurus
+bin/kudesigner
 bin/kugar
 bin/kword
 include/KDChartData.h
+include/KDChartListTable.h
 include/KDChartTable.h
+include/KDChartTableBase.h
+include/KDChartVectorTable.h
 include/KoApplicationIface.h
 include/KoDocumentIface.h
 include/KoMainWindowIface.h
 include/KoViewIface.h
 include/handler.h
 include/kcoloractions.h
+include/kformulaconfigpage.h
 include/kformulacontainer.h
+include/kformuladefs.h
 include/kformuladocument.h
 include/kformulaview.h
 include/koApplication.h
+include/koCharSelectDia.h
 include/koChart.h
 include/koChild.h
-include/koClipart.h
-include/koClipartCollection.h
-include/koDataTool.h
 include/koDocument.h
 include/koDocumentChild.h
 include/koDocumentInfo.h
 include/koDocumentInfoDlg.h
 include/koFactory.h
 include/koFilter.h
+include/koFilterChain.h
 include/koFilterManager.h
 include/koFind.h
 include/koFrame.h
 include/koGlobal.h
-include/koImage.h
-include/koImageCollection.h
+include/koInsertLink.h
 include/koKoolBar.h
 include/koMainWindow.h
 include/koPageLayoutDia.h
 include/koPartSelectAction.h
 include/koPartSelectDia.h
-include/koPrintPreview.h
+include/koPicture.h
+include/koPictureCollection.h
+include/koPictureFilePreview.h
+include/koPictureKey.h
+include/koPoint.h
 include/koQueryTrader.h
+include/koRect.h
 include/koReplace.h
 include/koRuler.h
+include/koSize.h
 include/koStore.h
 include/koStoreDevice.h
 include/koTabChooser.h
 include/koTemplateChooseDia.h
 include/koTemplateCreateDia.h
-include/koTemplates.h
 include/koToolBox.h
+include/koUnit.h
 include/koView.h
-include/koprinter.h
+include/kotoolbutton.h
+include/kreportviewer.h
+include/kugar.h
+include/kugarqt.h
+include/mcalcobject.h
+include/mfieldobject.h
+include/mlabelobject.h
+include/mlineobject.h
+include/mpagecollection.h
+include/mpagedisplay.h
+include/mreportdetail.h
+include/mreportengine.h
+include/mreportobject.h
+include/mreportsection.h
+include/mreportviewer.h
+include/mspecialobject.h
+include/mutil.h
 include/tkaction.h
 include/tkcoloractions.h
 include/tkcombobox.h
@@ -65,120 +91,172 @@ include/tktoolbarbutton.h
 lib/kchart.a
 lib/kchart.la
 lib/kchart.so
-lib/kde2/libabiwordexport.a
-lib/kde2/libabiwordexport.la
-lib/kde2/libabiwordexport.so
-lib/kde2/libabiwordimport.a
-lib/kde2/libabiwordimport.la
-lib/kde2/libabiwordimport.so
-lib/kde2/libapplixgraphicimport.a
-lib/kde2/libapplixgraphicimport.la
-lib/kde2/libapplixgraphicimport.so
-lib/kde2/libapplixspreadimport.a
-lib/kde2/libapplixspreadimport.la
-lib/kde2/libapplixspreadimport.so
-lib/kde2/libapplixwordimport.a
-lib/kde2/libapplixwordimport.la
-lib/kde2/libapplixwordimport.so
-lib/kde2/libasciiexport.a
-lib/kde2/libasciiexport.la
-lib/kde2/libasciiexport.so
-lib/kde2/libasciiimport.a
-lib/kde2/libasciiimport.la
-lib/kde2/libasciiimport.so
-lib/kde2/libcsvexport.a
-lib/kde2/libcsvexport.la
-lib/kde2/libcsvexport.so
-lib/kde2/libcsvimport.a
-lib/kde2/libcsvimport.la
-lib/kde2/libcsvimport.so
-lib/kde2/libdocbookexport.a
-lib/kde2/libdocbookexport.la
-lib/kde2/libdocbookexport.so
-lib/kde2/libgnumericexport.a
-lib/kde2/libgnumericexport.la
-lib/kde2/libgnumericexport.so
-lib/kde2/libgnumericimport.a
-lib/kde2/libgnumericimport.la
-lib/kde2/libgnumericimport.so
-lib/kde2/libhtmlexport.a
-lib/kde2/libhtmlexport.la
-lib/kde2/libhtmlexport.so
-lib/kde2/libhtmlimport.a
-lib/kde2/libhtmlimport.la
-lib/kde2/libhtmlimport.so
-lib/kde2/libkchartpart.a
-lib/kde2/libkchartpart.la
-lib/kde2/libkchartpart.so
-lib/kde2/libkformulapart.a
-lib/kde2/libkformulapart.la
-lib/kde2/libkformulapart.so
-lib/kde2/libkiviopart.a
-lib/kde2/libkiviopart.la
-lib/kde2/libkiviopart.so
-lib/kde2/libkofficescan.a
-lib/kde2/libkofficescan.la
-lib/kde2/libkofficescan.so
-lib/kde2/libkontourpart.a
-lib/kde2/libkontourpart.la
-lib/kde2/libkontourpart.so
-lib/kde2/libkpresenterpart.a
-lib/kde2/libkpresenterpart.la
-lib/kde2/libkpresenterpart.so
-lib/kde2/libkprkword.a
-lib/kde2/libkprkword.la
-lib/kde2/libkprkword.so
-lib/kde2/libkspelltool.a
-lib/kde2/libkspelltool.la
-lib/kde2/libkspelltool.so
-lib/kde2/libkspreadcalc.a
-lib/kde2/libkspreadcalc.la
-lib/kde2/libkspreadcalc.so
-lib/kde2/libkspreadhtmlexport.a
-lib/kde2/libkspreadhtmlexport.la
-lib/kde2/libkspreadhtmlexport.so
-lib/kde2/libkspreadpart.a
-lib/kde2/libkspreadpart.la
-lib/kde2/libkspreadpart.so
-lib/kde2/libkwordpart.a
-lib/kde2/libkwordpart.la
-lib/kde2/libkwordpart.so
-lib/kde2/liblatexexport.a
-lib/kde2/liblatexexport.la
-lib/kde2/liblatexexport.so
-lib/kde2/libmsodimport.a
-lib/kde2/libmsodimport.la
-lib/kde2/libmsodimport.so
-lib/kde2/libolefilter.a
-lib/kde2/libolefilter.la
-lib/kde2/libolefilter.so
-lib/kde2/libqproimport.a
-lib/kde2/libqproimport.la
-lib/kde2/libqproimport.so
-lib/kde2/librtfexport.a
-lib/kde2/librtfexport.la
-lib/kde2/librtfexport.so
-lib/kde2/libsvgexport.a
-lib/kde2/libsvgexport.la
-lib/kde2/libsvgexport.so
-lib/kde2/libsvgimport.a
-lib/kde2/libsvgimport.la
-lib/kde2/libsvgimport.so
-lib/kde2/libwmfimport.a
-lib/kde2/libwmfimport.la
-lib/kde2/libwmfimport.so
-lib/kde2/libxfigimport.a
-lib/kde2/libxfigimport.la
-lib/kde2/libxfigimport.so
+lib/kde3/clipartthumbnail.a
+lib/kde3/clipartthumbnail.la
+lib/kde3/clipartthumbnail.so
+lib/kde3/kfile_koffice.a
+lib/kde3/kfile_koffice.la
+lib/kde3/kfile_koffice.so
+lib/kde3/kodocinfopropspage.a
+lib/kde3/kodocinfopropspage.la
+lib/kde3/kodocinfopropspage.so
+lib/kde3/kofficescan.a
+lib/kde3/kofficescan.la
+lib/kde3/kofficescan.so
+lib/kde3/kofficethumbnail.a
+lib/kde3/kofficethumbnail.la
+lib/kde3/kofficethumbnail.so
+lib/kde3/kwmailmerge_classic.a
+lib/kde3/kwmailmerge_classic.la
+lib/kde3/kwmailmerge_classic.so
+lib/kde3/kwmailmerge_qtsqldb.a
+lib/kde3/kwmailmerge_qtsqldb.la
+lib/kde3/kwmailmerge_qtsqldb.so
+lib/kde3/kwmailmerge_qtsqldb_power.a
+lib/kde3/kwmailmerge_qtsqldb_power.la
+lib/kde3/kwmailmerge_qtsqldb_power.so
+lib/kde3/libabiwordexport.a
+lib/kde3/libabiwordexport.la
+lib/kde3/libabiwordexport.so
+lib/kde3/libabiwordimport.a
+lib/kde3/libabiwordimport.la
+lib/kde3/libabiwordimport.so
+lib/kde3/libamiproexport.a
+lib/kde3/libamiproexport.la
+lib/kde3/libamiproexport.so
+lib/kde3/libamiproimport.a
+lib/kde3/libamiproimport.la
+lib/kde3/libamiproimport.so
+lib/kde3/libapplixspreadimport.a
+lib/kde3/libapplixspreadimport.la
+lib/kde3/libapplixspreadimport.so
+lib/kde3/libapplixwordimport.a
+lib/kde3/libapplixwordimport.la
+lib/kde3/libapplixwordimport.so
+lib/kde3/libasciiexport.a
+lib/kde3/libasciiexport.la
+lib/kde3/libasciiexport.so
+lib/kde3/libasciiimport.a
+lib/kde3/libasciiimport.la
+lib/kde3/libasciiimport.so
+lib/kde3/libcsvexport.a
+lib/kde3/libcsvexport.la
+lib/kde3/libcsvexport.so
+lib/kde3/libcsvimport.a
+lib/kde3/libcsvimport.la
+lib/kde3/libcsvimport.so
+lib/kde3/libdbaseimport.a
+lib/kde3/libdbaseimport.la
+lib/kde3/libdbaseimport.so
+lib/kde3/libdocbookexport.a
+lib/kde3/libdocbookexport.la
+lib/kde3/libdocbookexport.so
+lib/kde3/libgnumericexport.a
+lib/kde3/libgnumericexport.la
+lib/kde3/libgnumericexport.so
+lib/kde3/libgnumericimport.a
+lib/kde3/libgnumericimport.la
+lib/kde3/libgnumericimport.so
+lib/kde3/libhtmlexport.a
+lib/kde3/libhtmlexport.la
+lib/kde3/libhtmlexport.so
+lib/kde3/libhtmlimport.a
+lib/kde3/libhtmlimport.la
+lib/kde3/libhtmlimport.so
+lib/kde3/libkchartpart.a
+lib/kde3/libkchartpart.la
+lib/kde3/libkchartpart.so
+lib/kde3/libkfolatexexport.a
+lib/kde3/libkfolatexexport.la
+lib/kde3/libkfolatexexport.so
+lib/kde3/libkfopngexport.a
+lib/kde3/libkfopngexport.la
+lib/kde3/libkfopngexport.so
+lib/kde3/libkformulapart.a
+lib/kde3/libkformulapart.la
+lib/kde3/libkformulapart.so
+lib/kde3/libkiviopart.a
+lib/kde3/libkiviopart.la
+lib/kde3/libkiviopart.so
+lib/kde3/libkounavailpart.a
+lib/kde3/libkounavailpart.la
+lib/kde3/libkounavailpart.so
+lib/kde3/libkpresenterpart.a
+lib/kde3/libkpresenterpart.la
+lib/kde3/libkpresenterpart.so
+lib/kde3/libkprkword.a
+lib/kde3/libkprkword.la
+lib/kde3/libkprkword.so
+lib/kde3/libkspelltool.a
+lib/kde3/libkspelltool.la
+lib/kde3/libkspelltool.so
+lib/kde3/libkspreadcalc.a
+lib/kde3/libkspreadcalc.la
+lib/kde3/libkspreadcalc.so
+lib/kde3/libkspreadhtmlexport.a
+lib/kde3/libkspreadhtmlexport.la
+lib/kde3/libkspreadhtmlexport.so
+lib/kde3/libkspreadpart.a
+lib/kde3/libkspreadpart.la
+lib/kde3/libkspreadpart.so
+lib/kde3/libkwordpart.a
+lib/kde3/libkwordpart.la
+lib/kde3/libkwordpart.so
+lib/kde3/liblatexexport.a
+lib/kde3/liblatexexport.la
+lib/kde3/liblatexexport.so
+lib/kde3/liblateximport.a
+lib/kde3/liblateximport.la
+lib/kde3/liblatexparser.a
+lib/kde3/liblatexparser.la
+lib/kde3/libmswriteimport.a
+lib/kde3/libmswriteimport.la
+lib/kde3/libmswriteimport.so
+lib/kde3/libolefilter.a
+lib/kde3/libolefilter.la
+lib/kde3/libolefilter.so
+lib/kde3/libpalmdocexport.a
+lib/kde3/libpalmdocexport.la
+lib/kde3/libpalmdocexport.so
+lib/kde3/libpalmdocimport.a
+lib/kde3/libpalmdocimport.la
+lib/kde3/libpalmdocimport.so
+lib/kde3/libqproimport.a
+lib/kde3/libqproimport.la
+lib/kde3/libqproimport.so
+lib/kde3/librtfexport.a
+lib/kde3/librtfexport.la
+lib/kde3/librtfexport.so
+lib/kde3/librtfimport.a
+lib/kde3/librtfimport.la
+lib/kde3/librtfimport.so
+lib/kde3/libthesaurustool.a
+lib/kde3/libthesaurustool.la
+lib/kde3/libthesaurustool.so
+lib/kde3/libwmlexport.a
+lib/kde3/libwmlexport.la
+lib/kde3/libwmlexport.so
+lib/kde3/libwmlimport.a
+lib/kde3/libwmlimport.la
+lib/kde3/libwmlimport.so
+lib/kde3/libwpexport.a
+lib/kde3/libwpexport.la
+lib/kde3/libwpexport.so
+lib/kde3/libwpimport.a
+lib/kde3/libwpimport.la
+lib/kde3/libwpimport.so
+lib/kde3/libxsltexport.a
+lib/kde3/libxsltexport.la
+lib/kde3/libxsltexport.so
+lib/kde3/libxsltimport.a
+lib/kde3/libxsltimport.la
+lib/kde3/libxsltimport.so
 lib/kformulamain.a
 lib/kformulamain.la
 lib/kformulamain.so
 lib/kivio.a
 lib/kivio.la
 lib/kivio.so
-lib/kontour.a
-lib/kontour.la
-lib/kontour.so
 lib/koshell.a
 lib/koshell.la
 lib/koshell.so
@@ -218,70 +296,113 @@ lib/libkochart.la
 lib/libkochart.so
 lib/libkochart.so.1
 lib/libkochart.so.1.0
-lib/libkodocinfopropspage.a
-lib/libkodocinfopropspage.la
-lib/libkodocinfopropspage.so
-lib/libkodocinfopropspage.so.0
-lib/libkodocinfopropspage.so.0.0
 lib/libkofficecore.a
 lib/libkofficecore.la
 lib/libkofficecore.so
-lib/libkofficecore.so.1
-lib/libkofficecore.so.1.0
+lib/libkofficecore.so.2
+lib/libkofficecore.so.2.0
 lib/libkofficeui.a
 lib/libkofficeui.la
 lib/libkofficeui.so
-lib/libkofficeui.so.1
-lib/libkofficeui.so.1.0
+lib/libkofficeui.so.2
+lib/libkofficeui.so.2.0
 lib/libkoscript.a
 lib/libkoscript.la
 lib/libkoscript.so
-lib/libkoscript.so.1
-lib/libkoscript.so.1.0
+lib/libkoscript.so.2
+lib/libkoscript.so.2.0
+lib/libkotext.a
+lib/libkotext.la
+lib/libkotext.so
+lib/libkotext.so.2
+lib/libkotext.so.2.0
 lib/libkstore.a
 lib/libkstore.la
 lib/libkstore.so
-lib/libkstore.so.1
-lib/libkstore.so.1.0
+lib/libkstore.so.2
+lib/libkstore.so.2.0
+lib/libkugar.a
+lib/libkugar.la
+lib/libkugar.so
+lib/libkugar.so.1
+lib/libkugar.so.1.2
 lib/libkugarpart.a
 lib/libkugarpart.la
 lib/libkugarpart.so
+lib/libkwmailmerge_interface.a
+lib/libkwmailmerge_interface.la
+lib/libkwmailmerge_interface.so
+lib/libkwmailmerge_interface.so.4
+lib/libkwmailmerge_interface.so.4.0
 lib/libkwmf.a
 lib/libkwmf.la
 lib/libkwmf.so
-lib/libkwmf.so.1
-lib/libkwmf.so.1.0
+lib/libkwmf.so.2
+lib/libkwmf.so.2.0
+lib/libkwordexportfilters.a
+lib/libkwordexportfilters.la
+lib/libkwordexportfilters.so
+lib/libkwordexportfilters.so.1
+lib/libkwordexportfilters.so.1.0
+lib/straight_connector.ksp
+share/doc/kde/HTML/en/kchart/commands.html
+share/doc/kde/HTML/en/kchart/common
+share/doc/kde/HTML/en/kchart/compilation.html
+share/doc/kde/HTML/en/kchart/credits.html
+share/doc/kde/HTML/en/kchart/faq.html
+share/doc/kde/HTML/en/kchart/file-toolbar.png
+share/doc/kde/HTML/en/kchart/file-toolbar2.png
+share/doc/kde/HTML/en/kchart/frame_chart.png
+share/doc/kde/HTML/en/kchart/index.cache.bz2
+share/doc/kde/HTML/en/kchart/index.docbook
+share/doc/kde/HTML/en/kchart/index.html
+share/doc/kde/HTML/en/kchart/installation.html
+share/doc/kde/HTML/en/kchart/introduction.html
+share/doc/kde/HTML/en/kchart/kchart-kspread-bar.png
+share/doc/kde/HTML/en/kchart/kchart-kspread.png
+share/doc/kde/HTML/en/kchart/kchart.tar.gz
+share/doc/kde/HTML/en/kchart/requirements.html
+share/doc/kde/HTML/en/kchart/shortcut.png
+share/doc/kde/HTML/en/kchart/toolbars.png
+share/doc/kde/HTML/en/kformula/additional_fonts1.png
+share/doc/kde/HTML/en/kformula/ambiguous-string.png
+share/doc/kde/HTML/en/kformula/common
+share/doc/kde/HTML/en/kformula/correct_index_location.png
+share/doc/kde/HTML/en/kformula/definite_integral.png
+share/doc/kde/HTML/en/kformula/file-toolbar.png
+share/doc/kde/HTML/en/kformula/file-toolbar2.png
+share/doc/kde/HTML/en/kformula/green1.png
+share/doc/kde/HTML/en/kformula/green2.png
+share/doc/kde/HTML/en/kformula/greens.png
+share/doc/kde/HTML/en/kformula/incorrect_index_location.png
+share/doc/kde/HTML/en/kformula/index.cache.bz2
+share/doc/kde/HTML/en/kformula/index.docbook
+share/doc/kde/HTML/en/kformula/index_smear.png
+share/doc/kde/HTML/en/kformula/kfontinst-right.png
+share/doc/kde/HTML/en/kformula/kfontinst1.png
+share/doc/kde/HTML/en/kformula/kfontinst2.png
+share/doc/kde/HTML/en/kformula/kfontinst3.png
+share/doc/kde/HTML/en/kformula/kfontinst4.png
+share/doc/kde/HTML/en/kformula/kfontinst5.png
+share/doc/kde/HTML/en/kformula/lower-index.png
+share/doc/kde/HTML/en/kformula/matrix-view.png
+share/doc/kde/HTML/en/kformula/matrix.png
+share/doc/kde/HTML/en/kformula/path-integral.png
+share/doc/kde/HTML/en/kformula/rk-edit0.png
+share/doc/kde/HTML/en/kformula/rk-edit1.png
+share/doc/kde/HTML/en/kformula/rk-edit2.png
+share/doc/kde/HTML/en/kformula/scilab-edit.png
+share/doc/kde/HTML/en/kformula/scilab.png
+share/doc/kde/HTML/en/kformula/shortcut0.png
+share/doc/kde/HTML/en/kformula/shortcut1.png
+share/doc/kde/HTML/en/kformula/sin.png
+share/doc/kde/HTML/en/kformula/toolbars.png
+share/doc/kde/HTML/en/kformula/upper-index.png
+share/doc/kde/HTML/en/koffice-apidocs/common
 share/doc/kde/HTML/en/koffice/README.documentation
 share/doc/kde/HTML/en/koffice/common
 share/doc/kde/HTML/en/koffice/index.cache.bz2
 share/doc/kde/HTML/en/koffice/index.docbook
-share/doc/kde/HTML/en/kontour/align.png
-share/doc/kde/HTML/en/kontour/align2.png
-share/doc/kde/HTML/en/kontour/bezier.png
-share/doc/kde/HTML/en/kontour/blend_dialog.png
-share/doc/kde/HTML/en/kontour/colour.png
-share/doc/kde/HTML/en/kontour/common
-share/doc/kde/HTML/en/kontour/ellipse.png
-share/doc/kde/HTML/en/kontour/export.png
-share/doc/kde/HTML/en/kontour/freehand.png
-share/doc/kde/HTML/en/kontour/index.cache.bz2
-share/doc/kde/HTML/en/kontour/index.docbook
-share/doc/kde/HTML/en/kontour/line.png
-share/doc/kde/HTML/en/kontour/logo.png
-share/doc/kde/HTML/en/kontour/movepoint.png
-share/doc/kde/HTML/en/kontour/newpoint.png
-share/doc/kde/HTML/en/kontour/open_dialog.png
-share/doc/kde/HTML/en/kontour/pfeil.png
-share/doc/kde/HTML/en/kontour/point.png
-share/doc/kde/HTML/en/kontour/polygon-setup.png
-share/doc/kde/HTML/en/kontour/polygon.png
-share/doc/kde/HTML/en/kontour/rect.png
-share/doc/kde/HTML/en/kontour/rmpoint.png
-share/doc/kde/HTML/en/kontour/save_dialog.png
-share/doc/kde/HTML/en/kontour/schichten.png
-share/doc/kde/HTML/en/kontour/text.png
-share/doc/kde/HTML/en/kontour/verteilen.png
-share/doc/kde/HTML/en/kontour/zoom.png
 share/doc/kde/HTML/en/koshell/common
 share/doc/kde/HTML/en/koshell/index.cache.bz2
 share/doc/kde/HTML/en/koshell/index.docbook
@@ -295,7 +416,15 @@ share/doc/kde/HTML/en/kpresenter/barstyle6.png
 share/doc/kde/HTML/en/kpresenter/barstyle7.png
 share/doc/kde/HTML/en/kpresenter/common
 share/doc/kde/HTML/en/kpresenter/faq.docbook
+share/doc/kde/HTML/en/kpresenter/great-presentations.docbook
 share/doc/kde/HTML/en/kpresenter/guides.docbook
+share/doc/kde/HTML/en/kpresenter/htmlshow00.png
+share/doc/kde/HTML/en/kpresenter/htmlshow01.png
+share/doc/kde/HTML/en/kpresenter/htmlshow02.png
+share/doc/kde/HTML/en/kpresenter/htmlshow03.png
+share/doc/kde/HTML/en/kpresenter/htmlshow04.png
+share/doc/kde/HTML/en/kpresenter/htmlshow05.png
+share/doc/kde/HTML/en/kpresenter/htmlshow07.png
 share/doc/kde/HTML/en/kpresenter/index.cache.bz2
 share/doc/kde/HTML/en/kpresenter/index.docbook
 share/doc/kde/HTML/en/kpresenter/menuedit.png
@@ -310,6 +439,23 @@ share/doc/kde/HTML/en/kpresenter/menutools.png
 share/doc/kde/HTML/en/kpresenter/menuview.png
 share/doc/kde/HTML/en/kpresenter/options.docbook
 share/doc/kde/HTML/en/kpresenter/screen.docbook
+share/doc/kde/HTML/en/kpresenter/settings01.png
+share/doc/kde/HTML/en/kpresenter/settings03.png
+share/doc/kde/HTML/en/kpresenter/settings04.png
+share/doc/kde/HTML/en/kpresenter/settings05.png
+share/doc/kde/HTML/en/kpresenter/settings06.png
+share/doc/kde/HTML/en/kpresenter/template02.png
+share/doc/kde/HTML/en/kpresenter/template03.png
+share/doc/kde/HTML/en/kpresenter/template04.png
+share/doc/kde/HTML/en/kpresenter/template05.png
+share/doc/kde/HTML/en/kpresenter/template06.png
+share/doc/kde/HTML/en/kpresenter/template07.png
+share/doc/kde/HTML/en/kpresenter/textmenu01.png
+share/doc/kde/HTML/en/kpresenter/textmenu02.png
+share/doc/kde/HTML/en/kpresenter/textmenu03.png
+share/doc/kde/HTML/en/kpresenter/textmenu03a.png
+share/doc/kde/HTML/en/kpresenter/textmenu04.png
+share/doc/kde/HTML/en/kpresenter/toolsmenu01.png
 share/doc/kde/HTML/en/kpresenter/tut01.png
 share/doc/kde/HTML/en/kpresenter/tut02.png
 share/doc/kde/HTML/en/kpresenter/tut03.png
@@ -334,77 +480,63 @@ share/doc/kde/HTML/en/kpresenter/tut21.png
 share/doc/kde/HTML/en/kpresenter/tut22.png
 share/doc/kde/HTML/en/kpresenter/tut23.png
 share/doc/kde/HTML/en/kpresenter/tutorial.docbook
-share/doc/kde/HTML/en/krayon/airbrush.png
-share/doc/kde/HTML/en/krayon/colorpicker.png
-share/doc/kde/HTML/en/krayon/common
-share/doc/kde/HTML/en/krayon/documentinfo.png
-share/doc/kde/HTML/en/krayon/editcopy.png
-share/doc/kde/HTML/en/krayon/editcut.png
-share/doc/kde/HTML/en/krayon/editpaste.png
-share/doc/kde/HTML/en/krayon/eraser.png
-share/doc/kde/HTML/en/krayon/exit.png
-share/doc/kde/HTML/en/krayon/fileclose.png
-share/doc/kde/HTML/en/krayon/filenew.png
-share/doc/kde/HTML/en/krayon/fileopen.png
-share/doc/kde/HTML/en/krayon/fileprint.png
-share/doc/kde/HTML/en/krayon/filesave.png
-share/doc/kde/HTML/en/krayon/fill.png
-share/doc/kde/HTML/en/krayon/generictool.png
-share/doc/kde/HTML/en/krayon/gradient.png
-share/doc/kde/HTML/en/krayon/index.cache.bz2
-share/doc/kde/HTML/en/krayon/index.docbook
-share/doc/kde/HTML/en/krayon/krayon-commands.docbook
-share/doc/kde/HTML/en/krayon/krayon-faq.docbook
-share/doc/kde/HTML/en/krayon/krayon-using.docbook
-share/doc/kde/HTML/en/krayon/move.png
-share/doc/kde/HTML/en/krayon/paintbrush.png
-share/doc/kde/HTML/en/krayon/pencil.png
-share/doc/kde/HTML/en/krayon/redo.png
-share/doc/kde/HTML/en/krayon/undo.png
-share/doc/kde/HTML/en/krayon/unfinished.png
-share/doc/kde/HTML/en/krayon/viewmag+.png
-share/doc/kde/HTML/en/krayon/viewmag-.png
-share/doc/kde/HTML/en/krayon/viewmag.png
-share/doc/kde/HTML/en/krayon/wizard.png
+share/doc/kde/HTML/en/kspread/chart1.png
 share/doc/kde/HTML/en/kspread/common
+share/doc/kde/HTML/en/kspread/copy1.png
 share/doc/kde/HTML/en/kspread/index.cache.bz2
 share/doc/kde/HTML/en/kspread/index.docbook
+share/doc/kde/HTML/en/kspread/shortcut1.png
+share/doc/kde/HTML/en/kspread/shortcut2.png
+share/doc/kde/HTML/en/kspread/sort1.png
+share/doc/kde/HTML/en/kspread/starting1.png
+share/doc/kde/HTML/en/kugar/add_detail.png
+share/doc/kde/HTML/en/kugar/add_detail_footer.png
+share/doc/kde/HTML/en/kugar/add_detail_header.png
 share/doc/kde/HTML/en/kugar/common
 share/doc/kde/HTML/en/kugar/datadtd.docbook
-share/doc/kde/HTML/en/kugar/dataref.docbok
 share/doc/kde/HTML/en/kugar/dataref.docbook
+share/doc/kde/HTML/en/kugar/designer.docbook
+share/doc/kde/HTML/en/kugar/file_new.png
 share/doc/kde/HTML/en/kugar/index.cache.bz2
 share/doc/kde/HTML/en/kugar/index.docbook
-share/doc/kde/HTML/en/kugar/index.html
 share/doc/kde/HTML/en/kugar/kugar.png
+share/doc/kde/HTML/en/kugar/progguide.docbook
+share/doc/kde/HTML/en/kugar/props.png
+share/doc/kde/HTML/en/kugar/starting.docbook
 share/doc/kde/HTML/en/kugar/template-elements.docbook
 share/doc/kde/HTML/en/kugar/template.docbook
 share/doc/kde/HTML/en/kugar/templatedtd.docbook
+share/doc/kde/HTML/en/kugar/tut_edit_height.png
+share/doc/kde/HTML/en/kugar/tut_empty_report.png
+share/doc/kde/HTML/en/kugar/tut_file_new.png
+share/doc/kde/HTML/en/kugar/tut_rep_complete.png
+share/doc/kde/HTML/en/kugar/tut_rep_generated.png
+share/doc/kde/HTML/en/kugar/tut_rep_look1.png
+share/doc/kde/HTML/en/kugar/tut_rep_look2.png
+share/doc/kde/HTML/en/kugar/tut_set_level.png
+share/doc/kde/HTML/en/kugar/tutorial.docbook
 share/doc/kde/HTML/en/kword/ChooseTempDia.png
 share/doc/kde/HTML/en/kword/Tut1.png
-share/doc/kde/HTML/en/kword/Tut10.png
 share/doc/kde/HTML/en/kword/Tut11a.png
 share/doc/kde/HTML/en/kword/Tut11b.png
-share/doc/kde/HTML/en/kword/Tut12.png
 share/doc/kde/HTML/en/kword/Tut13.png
 share/doc/kde/HTML/en/kword/Tut14.png
 share/doc/kde/HTML/en/kword/Tut14a.png
+share/doc/kde/HTML/en/kword/Tut14b.png
 share/doc/kde/HTML/en/kword/Tut15.png
-share/doc/kde/HTML/en/kword/Tut15a.png
+share/doc/kde/HTML/en/kword/Tut15b.png
 share/doc/kde/HTML/en/kword/Tut16.png
-share/doc/kde/HTML/en/kword/Tut17.png
 share/doc/kde/HTML/en/kword/Tut18.png
 share/doc/kde/HTML/en/kword/Tut19.png
 share/doc/kde/HTML/en/kword/Tut2.png
-share/doc/kde/HTML/en/kword/Tut20.png
 share/doc/kde/HTML/en/kword/Tut21.png
 share/doc/kde/HTML/en/kword/Tut22.png
 share/doc/kde/HTML/en/kword/Tut3.png
 share/doc/kde/HTML/en/kword/Tut4.png
-share/doc/kde/HTML/en/kword/Tut6.png
 share/doc/kde/HTML/en/kword/Tut7.png
 share/doc/kde/HTML/en/kword/Tut8.png
-share/doc/kde/HTML/en/kword/Tut9.png
+share/doc/kde/HTML/en/kword/addentry.png
+share/doc/kde/HTML/en/kword/addrecord.png
 share/doc/kde/HTML/en/kword/alignBlock.png
 share/doc/kde/HTML/en/kword/alignCenter.png
 share/doc/kde/HTML/en/kword/alignLeft.png
@@ -412,66 +544,79 @@ share/doc/kde/HTML/en/kword/alignRight.png
 share/doc/kde/HTML/en/kword/auto1.png
 share/doc/kde/HTML/en/kword/auto2.png
 share/doc/kde/HTML/en/kword/auto3.png
+share/doc/kde/HTML/en/kword/auto4.png
+share/doc/kde/HTML/en/kword/autocompdlg.png
+share/doc/kde/HTML/en/kword/back.png
 share/doc/kde/HTML/en/kword/basic.png
+share/doc/kde/HTML/en/kword/basics.docbook
 share/doc/kde/HTML/en/kword/bbord.png
 share/doc/kde/HTML/en/kword/bdcolorbut.png
 share/doc/kde/HTML/en/kword/bdselbut.png
 share/doc/kde/HTML/en/kword/bdsizebut.png
+share/doc/kde/HTML/en/kword/beginning.png
 share/doc/kde/HTML/en/kword/bkgdcolorbut.png
 share/doc/kde/HTML/en/kword/bold.png
+share/doc/kde/HTML/en/kword/bookmarks.docbook
 share/doc/kde/HTML/en/kword/borbutB.png
 share/doc/kde/HTML/en/kword/borbutL.png
 share/doc/kde/HTML/en/kword/borbutR.png
 share/doc/kde/HTML/en/kword/borbutT.png
 share/doc/kde/HTML/en/kword/bord.png
 share/doc/kde/HTML/en/kword/bordtb.png
-share/doc/kde/HTML/en/kword/bultxtbut.png
-share/doc/kde/HTML/en/kword/cancel.png
+share/doc/kde/HTML/en/kword/bullist.png
 share/doc/kde/HTML/en/kword/cftb.png
 share/doc/kde/HTML/en/kword/chcolorbut.png
 share/doc/kde/HTML/en/kword/chfontbut.png
 share/doc/kde/HTML/en/kword/chsizebut.png
 share/doc/kde/HTML/en/kword/chstylebut.png
-share/doc/kde/HTML/en/kword/clipart-from-file.png
-share/doc/kde/HTML/en/kword/clipart.png
-share/doc/kde/HTML/en/kword/close.png
+share/doc/kde/HTML/en/kword/clearright.png
 share/doc/kde/HTML/en/kword/colin.png
+share/doc/kde/HTML/en/kword/colorseldlg.png
 share/doc/kde/HTML/en/kword/colout.png
+share/doc/kde/HTML/en/kword/columns.docbook
 share/doc/kde/HTML/en/kword/common
 share/doc/kde/HTML/en/kword/ctab.png
 share/doc/kde/HTML/en/kword/ctab2.png
 share/doc/kde/HTML/en/kword/decindbut.png
-share/doc/kde/HTML/en/kword/delcoldlg.png
-share/doc/kde/HTML/en/kword/delete-table-col.png
-share/doc/kde/HTML/en/kword/delete-table-row.png
-share/doc/kde/HTML/en/kword/delrowdlg.png
-share/doc/kde/HTML/en/kword/details.png
+share/doc/kde/HTML/en/kword/delentry.png
+share/doc/kde/HTML/en/kword/delrecord.png
+share/doc/kde/HTML/en/kword/doccomments.docbook
+share/doc/kde/HTML/en/kword/doclinks.docbook
+share/doc/kde/HTML/en/kword/docstruct.docbook
+share/doc/kde/HTML/en/kword/docstruct.png
+share/doc/kde/HTML/en/kword/docvariables.docbook
 share/doc/kde/HTML/en/kword/dtab.png
 share/doc/kde/HTML/en/kword/dtab2.png
 share/doc/kde/HTML/en/kword/dtpfmtpg1.png
-share/doc/kde/HTML/en/kword/dtpfmtpg2.png
-share/doc/kde/HTML/en/kword/edit.png
 share/doc/kde/HTML/en/kword/editcopy.png
 share/doc/kde/HTML/en/kword/editcut.png
+share/doc/kde/HTML/en/kword/editing.docbook
 share/doc/kde/HTML/en/kword/editpaste.png
-share/doc/kde/HTML/en/kword/editspace.png
 share/doc/kde/HTML/en/kword/edittb.png
-share/doc/kde/HTML/en/kword/exit.png
-share/doc/kde/HTML/en/kword/extra.png
+share/doc/kde/HTML/en/kword/end.png
+share/doc/kde/HTML/en/kword/enumlist.png
+share/doc/kde/HTML/en/kword/expression.png
+share/doc/kde/HTML/en/kword/expressions.docbook
+share/doc/kde/HTML/en/kword/exst.png
+share/doc/kde/HTML/en/kword/exul.png
 share/doc/kde/HTML/en/kword/fchardlg.png
-share/doc/kde/HTML/en/kword/fcrtb.png
-share/doc/kde/HTML/en/kword/file.png
+share/doc/kde/HTML/en/kword/fchardlg2.png
 share/doc/kde/HTML/en/kword/filefloppy.png
 share/doc/kde/HTML/en/kword/filenew2.png
 share/doc/kde/HTML/en/kword/fileopen.png
 share/doc/kde/HTML/en/kword/fileprint.png
 share/doc/kde/HTML/en/kword/fileprint2.png
-share/doc/kde/HTML/en/kword/filequickprint.png
 share/doc/kde/HTML/en/kword/filetb.png
 share/doc/kde/HTML/en/kword/find.png
 share/doc/kde/HTML/en/kword/finddlg.png
+share/doc/kde/HTML/en/kword/finddlg2.png
+share/doc/kde/HTML/en/kword/footcfg1.png
+share/doc/kde/HTML/en/kword/footcfg3.png
+share/doc/kde/HTML/en/kword/footendnotes.docbook
 share/doc/kde/HTML/en/kword/formabs.png
-share/doc/kde/HTML/en/kword/format.png
+share/doc/kde/HTML/en/kword/formatchar.docbook
+share/doc/kde/HTML/en/kword/formatframes.docbook
+share/doc/kde/HTML/en/kword/formatpara.docbook
 share/doc/kde/HTML/en/kword/formbrac.png
 share/doc/kde/HTML/en/kword/formcbrac.png
 share/doc/kde/HTML/en/kword/formfrac.png
@@ -479,84 +624,88 @@ share/doc/kde/HTML/en/kword/formframe1.png
 share/doc/kde/HTML/en/kword/formframe2.png
 share/doc/kde/HTML/en/kword/formframe3.png
 share/doc/kde/HTML/en/kword/formframe4.png
+share/doc/kde/HTML/en/kword/formframe5.png
 share/doc/kde/HTML/en/kword/forminteg.png
 share/doc/kde/HTML/en/kword/formllind.png
 share/doc/kde/HTML/en/kword/formlrind.png
 share/doc/kde/HTML/en/kword/formmat.png
 share/doc/kde/HTML/en/kword/formprod.png
 share/doc/kde/HTML/en/kword/formsbrac.png
+share/doc/kde/HTML/en/kword/formspecchar.png
 share/doc/kde/HTML/en/kword/formsqrt.png
 share/doc/kde/HTML/en/kword/formsum.png
+share/doc/kde/HTML/en/kword/formtb.png
+share/doc/kde/HTML/en/kword/formulas.docbook
 share/doc/kde/HTML/en/kword/formulind.png
 share/doc/kde/HTML/en/kword/formurind.png
+share/doc/kde/HTML/en/kword/forward.png
 share/doc/kde/HTML/en/kword/fpara1.png
 share/doc/kde/HTML/en/kword/fpara2.png
 share/doc/kde/HTML/en/kword/fpara3.png
 share/doc/kde/HTML/en/kword/fpara4.png
 share/doc/kde/HTML/en/kword/fpara5.png
+share/doc/kde/HTML/en/kword/fpara6.png
 share/doc/kde/HTML/en/kword/fpicture.png
-share/doc/kde/HTML/en/kword/framemode.png
 share/doc/kde/HTML/en/kword/framers.png
+share/doc/kde/HTML/en/kword/frames.docbook
+share/doc/kde/HTML/en/kword/framestylist.png
+share/doc/kde/HTML/en/kword/fundimentals.docbook
+share/doc/kde/HTML/en/kword/graphics.docbook
+share/doc/kde/HTML/en/kword/headerfooter.docbook
 share/doc/kde/HTML/en/kword/incindbut.png
 share/doc/kde/HTML/en/kword/index.cache.bz2
 share/doc/kde/HTML/en/kword/index.docbook
 share/doc/kde/HTML/en/kword/inscoldlg.png
-share/doc/kde/HTML/en/kword/insert-table-col.png
-share/doc/kde/HTML/en/kword/insert-table-row.png
-share/doc/kde/HTML/en/kword/insert.png
+share/doc/kde/HTML/en/kword/insdate.png
+share/doc/kde/HTML/en/kword/insertfile.docbook
+share/doc/kde/HTML/en/kword/insgrph1.png
+share/doc/kde/HTML/en/kword/insgrph2.png
 share/doc/kde/HTML/en/kword/insrowdlg.png
-share/doc/kde/HTML/en/kword/inssc.png
 share/doc/kde/HTML/en/kword/instab1.png
-share/doc/kde/HTML/en/kword/instab2.png
 share/doc/kde/HTML/en/kword/instb.png
+share/doc/kde/HTML/en/kword/instime.png
 share/doc/kde/HTML/en/kword/intro1.png
 share/doc/kde/HTML/en/kword/intro2.png
 share/doc/kde/HTML/en/kword/intro3.png
 share/doc/kde/HTML/en/kword/ital.png
-share/doc/kde/HTML/en/kword/italic.png
 share/doc/kde/HTML/en/kword/joincell.png
 share/doc/kde/HTML/en/kword/kpart.png
-share/doc/kde/HTML/en/kword/kwordbasics.docbook
-share/doc/kde/HTML/en/kword/kwordfundimentals.docbook
-share/doc/kde/HTML/en/kword/kwordguides1.docbook
-share/doc/kde/HTML/en/kword/kwordguides2.docbook
-share/doc/kde/HTML/en/kword/kwordguides3.docbook
-share/doc/kde/HTML/en/kword/kwordguides3b.docbook
-share/doc/kde/HTML/en/kword/kwordguides3c.docbook
-share/doc/kde/HTML/en/kword/kwordguides4.docbook
-share/doc/kde/HTML/en/kword/kwordmbtb.docbook
-share/doc/kde/HTML/en/kword/kwordopt.docbook
-share/doc/kde/HTML/en/kword/kwordtutorial.docbook
+share/doc/kde/HTML/en/kword/kparts.docbook
 share/doc/kde/HTML/en/kword/landscape.png
 share/doc/kde/HTML/en/kword/larrow.png
 share/doc/kde/HTML/en/kword/lbord.png
-share/doc/kde/HTML/en/kword/lspcbut.png
+share/doc/kde/HTML/en/kword/linkdlg.png
+share/doc/kde/HTML/en/kword/listdepth1.png
+share/doc/kde/HTML/en/kword/listdepth2.png
+share/doc/kde/HTML/en/kword/listdepth3.png
+share/doc/kde/HTML/en/kword/lists.docbook
 share/doc/kde/HTML/en/kword/ltab.png
 share/doc/kde/HTML/en/kword/ltab2.png
-share/doc/kde/HTML/en/kword/neonpen.png
-share/doc/kde/HTML/en/kword/newfolder.png
-share/doc/kde/HTML/en/kword/nodet.png
+share/doc/kde/HTML/en/kword/mailmerge.docbook
+share/doc/kde/HTML/en/kword/mbtb.docbook
+share/doc/kde/HTML/en/kword/mmerge1.png
+share/doc/kde/HTML/en/kword/mmerge2.png
+share/doc/kde/HTML/en/kword/mmergesql1.png
+share/doc/kde/HTML/en/kword/mmergesql2.png
 share/doc/kde/HTML/en/kword/numtxtbut.png
-share/doc/kde/HTML/en/kword/ok.png
 share/doc/kde/HTML/en/kword/opendlg.png
+share/doc/kde/HTML/en/kword/opt.docbook
 share/doc/kde/HTML/en/kword/opt1.png
 share/doc/kde/HTML/en/kword/opt2.png
+share/doc/kde/HTML/en/kword/opt3.png
+share/doc/kde/HTML/en/kword/opt4.png
+share/doc/kde/HTML/en/kword/opt5.png
 share/doc/kde/HTML/en/kword/optkb.png
+share/doc/kde/HTML/en/kword/optkb2.png
 share/doc/kde/HTML/en/kword/opttb.png
+share/doc/kde/HTML/en/kword/pageformat.docbook
 share/doc/kde/HTML/en/kword/paratb.png
-share/doc/kde/HTML/en/kword/part-kchart.png
 share/doc/kde/HTML/en/kword/part-kformula.png
-share/doc/kde/HTML/en/kword/part-killustrator.png
-share/doc/kde/HTML/en/kword/part-kimage.png
-share/doc/kde/HTML/en/kword/part-kimageshop.png
 share/doc/kde/HTML/en/kword/part-kspread.png
-share/doc/kde/HTML/en/kword/part-kword.png
-share/doc/kde/HTML/en/kword/part-unspecif.png
-share/doc/kde/HTML/en/kword/parts.png
 share/doc/kde/HTML/en/kword/picture.png
 share/doc/kde/HTML/en/kword/pntdlg.png
+share/doc/kde/HTML/en/kword/pntdlg1.png
 share/doc/kde/HTML/en/kword/portrait.png
-share/doc/kde/HTML/en/kword/product.png
 share/doc/kde/HTML/en/kword/rarrow.png
 share/doc/kde/HTML/en/kword/rbord.png
 share/doc/kde/HTML/en/kword/redo.png
@@ -566,61 +715,62 @@ share/doc/kde/HTML/en/kword/rowout.png
 share/doc/kde/HTML/en/kword/rtab.png
 share/doc/kde/HTML/en/kword/rtab2.png
 share/doc/kde/HTML/en/kword/ruler.png
+share/doc/kde/HTML/en/kword/saturation.png
 share/doc/kde/HTML/en/kword/saved1.png
 share/doc/kde/HTML/en/kword/saved2.png
 share/doc/kde/HTML/en/kword/savedlg.png
 share/doc/kde/HTML/en/kword/savetmpl1.png
-share/doc/kde/HTML/en/kword/savetmpl2.png
-share/doc/kde/HTML/en/kword/savetmpl3.png
-share/doc/kde/HTML/en/kword/savetmpl4.png
 share/doc/kde/HTML/en/kword/screen.png
 share/doc/kde/HTML/en/kword/select1.png
 share/doc/kde/HTML/en/kword/spell.png
 share/doc/kde/HTML/en/kword/spelldlg.png
 share/doc/kde/HTML/en/kword/stkout.png
+share/doc/kde/HTML/en/kword/storeprint.docbook
 share/doc/kde/HTML/en/kword/styldlg1.png
 share/doc/kde/HTML/en/kword/styldlg2.png
-share/doc/kde/HTML/en/kword/styldlg3.png
-share/doc/kde/HTML/en/kword/styldlg4.png
-share/doc/kde/HTML/en/kword/styldlg5.png
-share/doc/kde/HTML/en/kword/styldlg6.png
-share/doc/kde/HTML/en/kword/styldlg7.png
-share/doc/kde/HTML/en/kword/styldlg8.png
+share/doc/kde/HTML/en/kword/styles.docbook
 share/doc/kde/HTML/en/kword/subscbut.png
 share/doc/kde/HTML/en/kword/sum.png
 share/doc/kde/HTML/en/kword/supscbut.png
-share/doc/kde/HTML/en/kword/table.png
+share/doc/kde/HTML/en/kword/table.docbook
+share/doc/kde/HTML/en/kword/tableprop1.png
+share/doc/kde/HTML/en/kword/tableprop2.png
+share/doc/kde/HTML/en/kword/tablestylist.png
+share/doc/kde/HTML/en/kword/tabstops.docbook
 share/doc/kde/HTML/en/kword/tb1.png
 share/doc/kde/HTML/en/kword/tb2.png
 share/doc/kde/HTML/en/kword/tb3.png
 share/doc/kde/HTML/en/kword/tb4.png
+share/doc/kde/HTML/en/kword/tblsty.png
 share/doc/kde/HTML/en/kword/tbmax.png
 share/doc/kde/HTML/en/kword/tbmin.png
 share/doc/kde/HTML/en/kword/tbord.png
+share/doc/kde/HTML/en/kword/techinfo.docbook
 share/doc/kde/HTML/en/kword/tedittb.png
-share/doc/kde/HTML/en/kword/text-bold.png
-share/doc/kde/HTML/en/kword/text-italic.png
-share/doc/kde/HTML/en/kword/text-underlined.png
-share/doc/kde/HTML/en/kword/textmode.png
+share/doc/kde/HTML/en/kword/templatecreation.docbook
+share/doc/kde/HTML/en/kword/textstyex.png
 share/doc/kde/HTML/en/kword/tfcreatebut.png
-share/doc/kde/HTML/en/kword/tools.png
-share/doc/kde/HTML/en/kword/underl.png
+share/doc/kde/HTML/en/kword/thesaurus.png
+share/doc/kde/HTML/en/kword/toc.docbook
+share/doc/kde/HTML/en/kword/tutorial.docbook
 share/doc/kde/HTML/en/kword/undl.png
 share/doc/kde/HTML/en/kword/undo.png
-share/doc/kde/HTML/en/kword/uplevel.png
-share/doc/kde/HTML/en/kword/view.png
+share/doc/kde/HTML/en/kword/value.png
 share/doc/kde/HTML/en/kword/wpfmtpg1.png
 share/doc/kde/HTML/en/kword/wpfmtpg2.png
 share/doc/kde/HTML/en/kword/wpfmtpg3.png
 share/doc/kde/HTML/en/kword/zoom.png
+share/doc/kde/HTML/en/thesaurus/common
+share/doc/kde/HTML/en/thesaurus/index.cache.bz2
+share/doc/kde/HTML/en/thesaurus/index.docbook
+share/kde/applnk/Office/KThesaurus.desktop
 share/kde/applnk/Office/kchart.desktop
 share/kde/applnk/Office/kformula.desktop
-share/kde/applnk/Office/killustrator.desktop
 share/kde/applnk/Office/kivio.desktop
-share/kde/applnk/Office/kontour.desktop
 share/kde/applnk/Office/koshell.desktop
 share/kde/applnk/Office/kpresenter.desktop
 share/kde/applnk/Office/kspread.desktop
+share/kde/applnk/Office/kudesigner.desktop
 share/kde/applnk/Office/kugar.desktop
 share/kde/applnk/Office/kword.desktop
 share/kde/apps/kchart/icons/hicolor/22x22/actions/areas.png
@@ -651,6 +801,7 @@ share/kde/apps/kchart/icons/locolor/16x16/actions/options.png
 share/kde/apps/kchart/icons/locolor/16x16/actions/ring.png
 share/kde/apps/kchart/icons/locolor/16x16/actions/wizard.png
 share/kde/apps/kchart/kchart.rc
+share/kde/apps/kchart/kchart_readonly.rc
 share/kde/apps/kchart/pics/3DAREA.png
 share/kde/apps/kchart/pics/3DBAR.png
 share/kde/apps/kchart/pics/3DCOMBO_HLC_AREA.png
@@ -675,74 +826,36 @@ share/kde/apps/kchart/pics/chart_hiloclose.png
 share/kde/apps/kchart/pics/chart_lines.png
 share/kde/apps/kchart/pics/chart_pie2D.png
 share/kde/apps/kchart/pics/chart_pie3D.png
+share/kde/apps/kformula/esstixeight.font
+share/kde/apps/kformula/esstixeleven.font
+share/kde/apps/kformula/esstixfifteen.font
+share/kde/apps/kformula/esstixfive.font
+share/kde/apps/kformula/esstixfour.font
+share/kde/apps/kformula/esstixfourteen.font
+share/kde/apps/kformula/esstixnine.font
+share/kde/apps/kformula/esstixone.font
+share/kde/apps/kformula/esstixseven.font
+share/kde/apps/kformula/esstixseventeen.font
+share/kde/apps/kformula/esstixsix.font
+share/kde/apps/kformula/esstixsixteen.font
+share/kde/apps/kformula/esstixten.font
+share/kde/apps/kformula/esstixthirteen.font
+share/kde/apps/kformula/esstixthree.font
+share/kde/apps/kformula/esstixtwelve.font
+share/kde/apps/kformula/esstixtwo.font
+share/kde/apps/kformula/euclid%20math%20one.font
+share/kde/apps/kformula/euclid%20math%20two.font
+share/kde/apps/kformula/euclid%20symbol.font
 share/kde/apps/kformula/kformula.rc
-share/kde/apps/kformula/pics/Ihigher.png
-share/kde/apps/kformula/pics/Ilower.png
-share/kde/apps/kformula/pics/Shigher.png
-share/kde/apps/kformula/pics/Slower.png
-share/kde/apps/kformula/pics/bold.png
-share/kde/apps/kformula/pics/centralign.png
-share/kde/apps/kformula/pics/childrensw.png
-share/kde/apps/kformula/pics/delimiter.png
-share/kde/apps/kformula/pics/downalign.png
-share/kde/apps/kformula/pics/elementsw.png
-share/kde/apps/kformula/pics/enlarge.png
-share/kde/apps/kformula/pics/enlargeall.png
-share/kde/apps/kformula/pics/enlargenext.png
-share/kde/apps/kformula/pics/far.png
-share/kde/apps/kformula/pics/frac-vline.png
-share/kde/apps/kformula/pics/greek.png
-share/kde/apps/kformula/pics/index.png
-share/kde/apps/kformula/pics/index0.png
-share/kde/apps/kformula/pics/index1.png
-share/kde/apps/kformula/pics/index2.png
-share/kde/apps/kformula/pics/index3.png
-share/kde/apps/kformula/pics/indexsw.png
-share/kde/apps/kformula/pics/inscol.png
-share/kde/apps/kformula/pics/insrow.png
-share/kde/apps/kformula/pics/italic.png
-share/kde/apps/kformula/pics/kformula1-0.png
-share/kde/apps/kformula/pics/kformula2-0.png
-share/kde/apps/kformula/pics/kformula2-1.png
-share/kde/apps/kformula/pics/kformula2-2.png
-share/kde/apps/kformula/pics/kformula2-3.png
-share/kde/apps/kformula/pics/kformula3-2.png
-share/kde/apps/kformula/pics/leftalign.png
-share/kde/apps/kformula/pics/matrix.png
-share/kde/apps/kformula/pics/midalign.png
-share/kde/apps/kformula/pics/midline.png
-share/kde/apps/kformula/pics/mini-bra.png
-share/kde/apps/kformula/pics/mini-frac.png
-share/kde/apps/kformula/pics/mini-integral.png
-share/kde/apps/kformula/pics/mini-root.png
-share/kde/apps/kformula/pics/mini-rootindex.png
-share/kde/apps/kformula/pics/mini-symbols.png
-share/kde/apps/kformula/pics/mini-vspace.png
-share/kde/apps/kformula/pics/mini-xy.png
-share/kde/apps/kformula/pics/near.png
-share/kde/apps/kformula/pics/nextsw.png
-share/kde/apps/kformula/pics/par1.xbm
-share/kde/apps/kformula/pics/par2.xbm
-share/kde/apps/kformula/pics/par3.xbm
-share/kde/apps/kformula/pics/pixmap.png
-share/kde/apps/kformula/pics/reduce.png
-share/kde/apps/kformula/pics/reduceall.png
-share/kde/apps/kformula/pics/remcol.png
-share/kde/apps/kformula/pics/remrow.png
-share/kde/apps/kformula/pics/rightalign.png
-share/kde/apps/kformula/pics/rootindex.png
-share/kde/apps/kformula/pics/split.png
-share/kde/apps/kformula/pics/underl.png
-share/kde/apps/kformula/pics/upalign.png
+share/kde/apps/kformula/kformula_readonly.rc
+share/kde/apps/kformula/mt%20extra.font
+share/kde/apps/kformula/mt%20symbol.font
+share/kde/apps/kformula/symbol.font
+share/kde/apps/kformula/unicode.tbl
 share/kde/apps/kivio/autoloadStencils/Text.sml
 share/kde/apps/kivio/autoloadStencils/Text.xpm
-share/kde/apps/kivio/autoloadStencils/straight_connector.ksp
 share/kde/apps/kivio/autoloadStencils/straight_connector.xpm
 share/kde/apps/kivio/icons/hicolor/16x16/actions/add_stencil.xpm
-share/kde/apps/kivio/icons/hicolor/16x16/actions/arrow_back.xpm
-share/kde/apps/kivio/icons/hicolor/16x16/actions/arrow_first.xpm
-share/kde/apps/kivio/icons/hicolor/16x16/actions/arrow_forward.xpm
-share/kde/apps/kivio/icons/hicolor/16x16/actions/arrow_last.xpm
 share/kde/apps/kivio/icons/hicolor/16x16/actions/bring_stencil_to_front.xpm
 share/kde/apps/kivio/icons/hicolor/16x16/actions/color_fill.png
 share/kde/apps/kivio/icons/hicolor/16x16/actions/color_line.png
@@ -822,6 +935,7 @@ share/kde/apps/kivio/icons/hicolor/32x32/actions/view_margins.xpm
 share/kde/apps/kivio/icons/hicolor/32x32/actions/view_pageborder.xpm
 share/kde/apps/kivio/icons/hicolor/32x32/actions/view_ruler.xpm
 share/kde/apps/kivio/kivio.rc
+share/kde/apps/kivio/kivio_readonly.rc
 share/kde/apps/kivio/kivio_tool.rc
 share/kde/apps/kivio/kpartplugins/kivioconnectortool.rc
 share/kde/apps/kivio/kpartplugins/kivioselecttool.rc
@@ -886,12 +1000,43 @@ share/kde/apps/kivio/stencils/Flowcharting/BasicFlowcharting/Terminator.sml
 share/kde/apps/kivio/stencils/Flowcharting/BasicFlowcharting/Terminator.xpm
 share/kde/apps/kivio/stencils/Flowcharting/BasicFlowcharting/desc
 share/kde/apps/kivio/stencils/Flowcharting/BasicFlowcharting/icon.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/and.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/and.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/buffer.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/buffer.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/connector.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/connector.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/icon.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/inverter.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/inverter.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/nand.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/nand.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/nor.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/nor.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/not.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/not.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/or.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/or.xpm
+share/kde/apps/kivio/stencils/Flowcharting/Logic/xor.sml
+share/kde/apps/kivio/stencils/Flowcharting/Logic/xor.xpm
 share/kde/apps/kivio/stencils/Flowcharting/desc
 share/kde/apps/kivio/stencils/Flowcharting/icon.xpm
+share/kde/apps/koffice/autocorrect/autocorrect.xml
+share/kde/apps/koffice/autocorrect/cs.xml
+share/kde/apps/koffice/autocorrect/de.xml
+share/kde/apps/koffice/autocorrect/en_US.xml
+share/kde/apps/koffice/autocorrect/es.xml
+share/kde/apps/koffice/autocorrect/fr.xml
+share/kde/apps/koffice/autocorrect/hu.xml
+share/kde/apps/koffice/autocorrect/it.xml
+share/kde/apps/koffice/autocorrect/nn.xml
+share/kde/apps/koffice/autocorrect/sk.xml
 share/kde/apps/koffice/icons/hicolor/16x16/actions/delete_table_col.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/delete_table_row.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/documentinfo.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/enum_list.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/fontsizedown.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/fontsizeup.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/format_decreaseindent.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/format_increaseindent.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/frame_edit.png
@@ -904,6 +1049,13 @@ share/kde/apps/koffice/icons/hicolor/16x16/actions/inline_image.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/inline_table.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/insert_table_col.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/insert_table_row.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/kdb_form.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/kdb_table.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/linewidth.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/tab_first.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/tab_last.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/tab_left.png
+share/kde/apps/koffice/icons/hicolor/16x16/actions/tab_right.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/text_strike.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/text_sub.png
 share/kde/apps/koffice/icons/hicolor/16x16/actions/text_super.png
@@ -915,11 +1067,19 @@ share/kde/apps/koffice/icons/hicolor/16x16/actions/view_split.png
 share/kde/apps/koffice/icons/hicolor/16x16/apps/go.png
 share/kde/apps/koffice/icons/hicolor/16x16/apps/key_bindings.png
 share/kde/apps/koffice/icons/hicolor/16x16/apps/style.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/borderbottom.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/borderleft.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/borderright.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/bordertop.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/bring_forward.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/cancel.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/char.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/clipart.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/clipart_from_file.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/delete_table_col.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/delete_table_row.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/fontsizedown.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/fontsizeup.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/format_decreaseindent.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/format_increaseindent.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/frame_chart.png
@@ -937,11 +1097,20 @@ share/kde/apps/koffice/icons/hicolor/22x22/actions/neonpen.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/ok.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/part/killustrator.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/part/kword.png
-share/kde/apps/koffice/icons/hicolor/22x22/actions/tab_first.png
-share/kde/apps/koffice/icons/hicolor/22x22/actions/tab_last.png
-share/kde/apps/koffice/icons/hicolor/22x22/actions/tab_left.png
-share/kde/apps/koffice/icons/hicolor/22x22/actions/tab_right.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/send_backward.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadow.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowB.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowL.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowLB.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowLU.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowR.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowRB.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowRU.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/shadowU.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/sub.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/super.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/text_strike.png
+share/kde/apps/koffice/icons/hicolor/22x22/actions/toggle_docbrowser.png
 share/kde/apps/koffice/icons/hicolor/22x22/actions/view_remove.png
 share/kde/apps/koffice/icons/hicolor/32x32/actions/delete_table_col.png
 share/kde/apps/koffice/icons/hicolor/32x32/actions/delete_table_row.png
@@ -957,63 +1126,7 @@ share/kde/apps/koffice/pics/koKoolBarUp.png
 share/kde/apps/koffice/pics/koRulerFirst.png
 share/kde/apps/koffice/pics/koRulerLeft.png
 share/kde/apps/koffice/pics/koffice-logo.png
-share/kde/apps/kontour/KIllustrator.rc
-share/kde/apps/kontour/icons/hicolor/16x16/actions/abottom.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/ahcenter.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/aleft.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/aright.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/atop.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/avcenter.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/beziertool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dbottom.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/deleteNode.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/deletelayer.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dhcenter.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dhdist.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dleft.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dright.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dtop.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dvcenter.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/dvdist.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/ellipse1.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/ellipse2.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/ellipse3.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/ellipsetool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/eye.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/freehandtool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/group.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/hmirror.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/insertclipart.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/item_add.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/item_remove.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/item_rename.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/joinNodes.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/linetool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/lowerlayer.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/moveNode.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/newNode.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/newlayer.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/pointtool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/polygontool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/raiselayer.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/recttool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/selecttool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/snap_to_grid.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/split.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/tcenteralign.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/texttool.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/tleftalign.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/trightalign.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/ungroup.png
-share/kde/apps/kontour/icons/hicolor/16x16/actions/vmirror.png
-share/kde/apps/kontour/icons/hicolor/16x16/apps/kontour.png
-share/kde/apps/kontour/icons/hicolor/32x32/apps/kontour.png
-share/kde/apps/kontour/icons/hicolor/48x48/apps/kontour.png
 share/kde/apps/kontour/kpartplugins/scan-kontour.rc
-share/kde/apps/kontour/templates/Simple/.directory
-share/kde/apps/kontour/templates/Simple/.icon/Plain.png
-share/kde/apps/kontour/templates/Simple/.source/Plain.kil
-share/kde/apps/kontour/templates/Simple/Plain.desktop
 share/kde/apps/kpresenter/autoforms/.autoforms
 share/kde/apps/kpresenter/autoforms/Arrows/.directory
 share/kde/apps/kpresenter/autoforms/Arrows/.icon/ArrowDown.png
@@ -1085,15 +1198,21 @@ share/kde/apps/kpresenter/icons/hicolor/22x22/actions/aocenterv.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/aoleft.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/aoright.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/aotop.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/arrange.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/autoform.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/circle.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/delete.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/closed_cubicbeziercurve.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/closed_freehand.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/closed_polyline.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/closed_quadricbeziercurve.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/cubicbeziercurve.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/delslide.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/depth+.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/depth-.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/edit_picture.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/edit_pie.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/edit_polygon.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/effect.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/enumList.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/freehand.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/group.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_arrow_begin.png
@@ -1101,7 +1220,15 @@ share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_arrow_end.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_begin.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_circle_begin.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_circle_end.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_dimension_line_begin.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_dimension_line_end.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_double_arrow_begin.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_double_arrow_end.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_double_line_arrow_begin.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_double_line_arrow_end.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_end.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_line_arrow_begin.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_line_arrow_end.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_normal_begin.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_normal_end.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/line_rect_begin.png
@@ -1116,46 +1243,45 @@ share/kde/apps/kpresenter/icons/hicolor/22x22/actions/mini_circle.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/mini_clipart.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/mini_line.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/mini_pie.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/mini_polygon.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/mini_rect.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/newPoint.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/newslide.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/normalText.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style_dash.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style_dashdot.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style_dashdotdot.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style_dot.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style_dotdot.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style_nopen.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_style_solid.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width1.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width10.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width2.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width3.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width4.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width5.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width6.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width7.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width8.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pen_width9.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/penbrush.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pgnum.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/pie.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/polygon.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/polyline.png
+share/kde/apps/kpresenter/icons/hicolor/22x22/actions/quadricbeziercurve.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/raise.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/rectangle.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/rectangle2.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/rectangleRound.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/screen.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadow.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowB.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowL.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowLB.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowLU.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowR.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowRB.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowRU.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/shadowU.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/spacing.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/style.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/text.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/ungroup.png
-share/kde/apps/kpresenter/icons/hicolor/22x22/actions/unsortedList.png
 share/kde/apps/kpresenter/icons/hicolor/22x22/actions/webpres.png
 share/kde/apps/kpresenter/kpartplugins/scan-kpresenter.rc
 share/kde/apps/kpresenter/kpresenter.rc
+share/kde/apps/kpresenter/kpresenter_readonly.rc
 share/kde/apps/kpresenter/pics/OneColumnLandscape.png
 share/kde/apps/kpresenter/pics/OneColumnPortrait.png
 share/kde/apps/kpresenter/pics/TitleLandscape.png
@@ -1210,6 +1336,7 @@ share/kde/apps/kpresenter/templates/Screenpresentations/.directory
 share/kde/apps/kpresenter/templates/Screenpresentations/.icon/BlueBreezeDouble.png
 share/kde/apps/kpresenter/templates/Screenpresentations/.icon/BlueBreezePicture.png
 share/kde/apps/kpresenter/templates/Screenpresentations/.icon/BlueBreezeSingle.png
+share/kde/apps/kpresenter/templates/Screenpresentations/.icon/CopperPlain.png
 share/kde/apps/kpresenter/templates/Screenpresentations/.icon/Gradient-Blue-Red.png
 share/kde/apps/kpresenter/templates/Screenpresentations/.icon/Plain.png
 share/kde/apps/kpresenter/templates/Screenpresentations/.icon/SnowyMountains.png
@@ -1219,6 +1346,7 @@ share/kde/apps/kpresenter/templates/Screenpresentations/.icon/kde2.png
 share/kde/apps/kpresenter/templates/Screenpresentations/.source/BlueBreezeDouble.kpt
 share/kde/apps/kpresenter/templates/Screenpresentations/.source/BlueBreezePicture.kpt
 share/kde/apps/kpresenter/templates/Screenpresentations/.source/BlueBreezeSingle.kpt
+share/kde/apps/kpresenter/templates/Screenpresentations/.source/CopperPlain.kpt
 share/kde/apps/kpresenter/templates/Screenpresentations/.source/Gradient-Blue-Red.kpt
 share/kde/apps/kpresenter/templates/Screenpresentations/.source/Plain.kpt
 share/kde/apps/kpresenter/templates/Screenpresentations/.source/SnowyMountains.kpt
@@ -1228,6 +1356,7 @@ share/kde/apps/kpresenter/templates/Screenpresentations/.source/kde2.kpt
 share/kde/apps/kpresenter/templates/Screenpresentations/BlueBreezeDouble.desktop
 share/kde/apps/kpresenter/templates/Screenpresentations/BlueBreezePicture.desktop
 share/kde/apps/kpresenter/templates/Screenpresentations/BlueBreezeSingle.desktop
+share/kde/apps/kpresenter/templates/Screenpresentations/CopperPlain.desktop
 share/kde/apps/kpresenter/templates/Screenpresentations/Gradient-Blue-Red.desktop
 share/kde/apps/kpresenter/templates/Screenpresentations/Plain.desktop
 share/kde/apps/kpresenter/templates/Screenpresentations/SnowyMountains.desktop
@@ -1268,10 +1397,20 @@ share/kde/apps/kpresenter/templates/letter/TwoColumnLandscape.desktop
 share/kde/apps/kpresenter/templates/letter/TwoColumnPortrait.desktop
 share/kde/apps/kpresenter/templates/letter/emptyLandscape.desktop
 share/kde/apps/kpresenter/templates/letter/emptyPortrait.desktop
-share/kde/apps/krayon/kpartplugins/scan-krayon.rc
+share/kde/apps/krita/kpartplugins/scan-krita.rc
 share/kde/apps/kspread/dtd/kspread.dtd
 share/kde/apps/kspread/extensions/builtin.xml
+share/kde/apps/kspread/extensions/conversion.xml
+share/kde/apps/kspread/extensions/datetime.xml
+share/kde/apps/kspread/extensions/engineering.xml
+share/kde/apps/kspread/extensions/financial.xml
+share/kde/apps/kspread/extensions/information.xml
+share/kde/apps/kspread/extensions/logic.xml
 share/kde/apps/kspread/extensions/math.ks
+share/kde/apps/kspread/extensions/math.xml
+share/kde/apps/kspread/extensions/statistical.xml
+share/kde/apps/kspread/extensions/text.xml
+share/kde/apps/kspread/extensions/trig.xml
 share/kde/apps/kspread/icons/hicolor/16x16/actions/adjustcol.png
 share/kde/apps/kspread/icons/hicolor/16x16/actions/adjustrow.png
 share/kde/apps/kspread/icons/hicolor/16x16/actions/black_sum.png
@@ -1404,32 +1543,59 @@ share/kde/apps/kspread/icons/hicolor/32x32/actions/prec_minus.png
 share/kde/apps/kspread/icons/hicolor/32x32/actions/prec_plus.png
 share/kde/apps/kspread/kpartplugins/kspreadcalc.rc
 share/kde/apps/kspread/kspread.rc
+share/kde/apps/kspread/kspread_readonly.rc
 share/kde/apps/kspread/tablestyles/standard1.ksts
 share/kde/apps/kspread/tablestyles/standard1.png
 share/kde/apps/kspread/tablestyles/standard1.xml
 share/kde/apps/kspread/tablestyles/standard2.ksts
 share/kde/apps/kspread/tablestyles/standard2.png
 share/kde/apps/kspread/tablestyles/standard2.xml
+share/kde/apps/kspread/templates/General/.directory
+share/kde/apps/kspread/templates/General/.icon/Worksheet.png
+share/kde/apps/kspread/templates/General/.source/Worksheet.kst
+share/kde/apps/kspread/templates/General/Worksheet.desktop
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/frame_field.png
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/id.png
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/idf.png
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/idh.png
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/ipf.png
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/iph.png
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/irf.png
+share/kde/apps/kudesigner/icons/hicolor/22x22/actions/irh.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/frame_field.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/id.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/idf.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/idh.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/ipf.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/iph.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/irf.png
+share/kde/apps/kudesigner/icons/locolor/22x22/actions/irh.png
+share/kde/apps/kudesigner/kudesignerui.rc
 share/kde/apps/kugar/dtd/kugartemplate.dtd
 share/kde/apps/kugar/kugarpart.rc
 share/kde/apps/kugar/kugarui.rc
+share/kde/apps/kugar/templates/sample1.kud
 share/kde/apps/kugar/templates/sample1.kut
+share/kde/apps/kugar/templates/sample2.kud
 share/kde/apps/kugar/templates/sample2.kut
+share/kde/apps/kugar/templates/sample3.kud
+share/kde/apps/kugar/templates/sample3.kut
+share/kde/apps/kword/dtd/framestyles.dtd
 share/kde/apps/kword/dtd/kword.dtd
+share/kde/apps/kword/dtd/tablestyles.dtd
+share/kde/apps/kword/dtd/tabletemplates.dtd
 share/kde/apps/kword/expression/expression.xml
+share/kde/apps/kword/framestyles.xml
 share/kde/apps/kword/icons/hicolor/16x16/actions/color_fill.png
 share/kde/apps/kword/icons/hicolor/16x16/actions/color_line.png
-share/kde/apps/kword/icons/hicolor/22x22/actions/borderbottom.png
-share/kde/apps/kword/icons/hicolor/22x22/actions/borderleft.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/borderoutline.png
-share/kde/apps/kword/icons/hicolor/22x22/actions/borderright.png
-share/kde/apps/kword/icons/hicolor/22x22/actions/bordertop.png
-share/kde/apps/kword/icons/hicolor/22x22/actions/char.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/color_fill.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/color_line.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/edittool.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/enumList.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/kwsearch.png
+share/kde/apps/kword/icons/hicolor/22x22/actions/lower.png
+share/kde/apps/kword/icons/hicolor/22x22/actions/raise.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/return.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/run_bounding.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/run_not.png
@@ -1438,29 +1604,39 @@ share/kde/apps/kword/icons/hicolor/22x22/actions/sl_addentry.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/sl_addrecord.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/sl_delentry.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/sl_delrecord.png
-share/kde/apps/kword/icons/hicolor/22x22/actions/sub.png
-share/kde/apps/kword/icons/hicolor/22x22/actions/super.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/tree_arrange.png
 share/kde/apps/kword/icons/hicolor/22x22/actions/unsortedList.png
 share/kde/apps/kword/kpartplugins/scan-kword.rc
 share/kde/apps/kword/kword.rc
+share/kde/apps/kword/kword_readonly.rc
+share/kde/apps/kword/tablestyles.xml
+share/kde/apps/kword/tabletemplates.xml
 share/kde/apps/kword/templates/Normal/.directory
 share/kde/apps/kword/templates/Normal/.icon/A4.png
 share/kde/apps/kword/templates/Normal/.icon/Letter.png
+share/kde/apps/kword/templates/Normal/.icon/Memo.png
 share/kde/apps/kword/templates/Normal/.icon/PlainText.png
 share/kde/apps/kword/templates/Normal/.icon/TwoColumns.png
 share/kde/apps/kword/templates/Normal/.source/A4.kwt
 share/kde/apps/kword/templates/Normal/.source/Letter.kwt
+share/kde/apps/kword/templates/Normal/.source/Memo.kwt
 share/kde/apps/kword/templates/Normal/.source/PlainText.kwt
 share/kde/apps/kword/templates/Normal/.source/TwoColumns.kwt
 share/kde/apps/kword/templates/Normal/A4.desktop
 share/kde/apps/kword/templates/Normal/Letter.desktop
+share/kde/apps/kword/templates/Normal/Memo.desktop
 share/kde/apps/kword/templates/Normal/PlainText.desktop
 share/kde/apps/kword/templates/Normal/TwoColumns.desktop
 share/kde/apps/kword/templates/Publishing/.directory
 share/kde/apps/kword/templates/Publishing/.icon/SimpleLayout.png
+share/kde/apps/kword/templates/Publishing/.icon/fax.png
 share/kde/apps/kword/templates/Publishing/.source/SimpleLayout.kwt
+share/kde/apps/kword/templates/Publishing/.source/fax.kwt
 share/kde/apps/kword/templates/Publishing/SimpleLayout.desktop
+share/kde/apps/kword/templates/Publishing/fax.desktop
+share/kde/apps/thesaurus/thesaurus.txt
+share/kde/apps/xsltfilter/export/kword/xslfo/kword2xslfo-table.xsl
+share/kde/apps/xsltfilter/export/kword/xslfo/main.xsl
 share/kde/icons/hicolor/16x16/actions/abs.png
 share/kde/icons/hicolor/16x16/actions/brace.png
 share/kde/icons/hicolor/16x16/actions/brackets.png
@@ -1477,10 +1653,11 @@ share/kde/icons/hicolor/16x16/actions/rsup.png
 share/kde/icons/hicolor/16x16/actions/sqrt.png
 share/kde/icons/hicolor/16x16/actions/sum.png
 share/kde/icons/hicolor/16x16/apps/kchart.png
+share/kde/icons/hicolor/16x16/apps/kformula.png
 share/kde/icons/hicolor/16x16/apps/kivio.png
-share/kde/icons/hicolor/16x16/apps/kontour.png
 share/kde/icons/hicolor/16x16/apps/kpresenter.png
 share/kde/icons/hicolor/16x16/apps/kspread.png
+share/kde/icons/hicolor/16x16/apps/kudesigner.png
 share/kde/icons/hicolor/16x16/apps/kugar.png
 share/kde/icons/hicolor/16x16/apps/kword.png
 share/kde/icons/hicolor/16x16/mimetypes/kugardata.png
@@ -1488,6 +1665,8 @@ share/kde/icons/hicolor/22x22/actions/abs.png
 share/kde/icons/hicolor/22x22/actions/brace.png
 share/kde/icons/hicolor/22x22/actions/brackets.png
 share/kde/icons/hicolor/22x22/actions/frac.png
+share/kde/icons/hicolor/22x22/actions/inscol.png
+share/kde/icons/hicolor/22x22/actions/insrow.png
 share/kde/icons/hicolor/22x22/actions/int.png
 share/kde/icons/hicolor/22x22/actions/lsub.png
 share/kde/icons/hicolor/22x22/actions/lsup.png
@@ -1495,6 +1674,8 @@ share/kde/icons/hicolor/22x22/actions/matrix.png
 share/kde/icons/hicolor/22x22/actions/onetwomatrix.png
 share/kde/icons/hicolor/22x22/actions/paren.png
 share/kde/icons/hicolor/22x22/actions/prod.png
+share/kde/icons/hicolor/22x22/actions/remcol.png
+share/kde/icons/hicolor/22x22/actions/remrow.png
 share/kde/icons/hicolor/22x22/actions/rsub.png
 share/kde/icons/hicolor/22x22/actions/rsup.png
 share/kde/icons/hicolor/22x22/actions/sqrt.png
@@ -1518,59 +1699,51 @@ share/kde/icons/hicolor/32x32/actions/rsup.png
 share/kde/icons/hicolor/32x32/actions/sqrt.png
 share/kde/icons/hicolor/32x32/actions/sum.png
 share/kde/icons/hicolor/32x32/apps/kchart.png
+share/kde/icons/hicolor/32x32/apps/kformula.png
 share/kde/icons/hicolor/32x32/apps/kivio.png
-share/kde/icons/hicolor/32x32/apps/kontour.png
 share/kde/icons/hicolor/32x32/apps/kpresenter.png
 share/kde/icons/hicolor/32x32/apps/kspread.png
+share/kde/icons/hicolor/32x32/apps/kudesigner.png
 share/kde/icons/hicolor/32x32/apps/kugar.png
 share/kde/icons/hicolor/32x32/apps/kword.png
 share/kde/icons/hicolor/32x32/mimetypes/kugardata.png
 share/kde/icons/hicolor/48x48/apps/kchart.png
+share/kde/icons/hicolor/48x48/apps/kformula.png
 share/kde/icons/hicolor/48x48/apps/kivio.png
-share/kde/icons/hicolor/48x48/apps/kontour.png
 share/kde/icons/hicolor/48x48/apps/kpresenter.png
 share/kde/icons/hicolor/48x48/apps/kspread.png
 share/kde/icons/hicolor/48x48/apps/kugar.png
 share/kde/icons/hicolor/48x48/apps/kword.png
 share/kde/icons/hicolor/48x48/mimetypes/kugardata.png
 share/kde/icons/locolor/16x16/apps/kspreadcalc.png
+share/kde/icons/locolor/16x16/apps/kudesigner.png
+share/kde/icons/locolor/16x16/apps/kugar.png
+share/kde/icons/locolor/16x16/mimetypes/kugardata.png
 share/kde/icons/locolor/22x22/apps/kspreadcalc.png
+share/kde/icons/locolor/22x22/apps/kugar.png
+share/kde/icons/locolor/22x22/mimetypes/kugardata.png
 share/kde/icons/locolor/32x32/apps/kspreadcalc.png
-share/kde/mimelnk/application/x-abiword.desktop
-share/kde/mimelnk/application/x-kchart.desktop
-share/kde/mimelnk/application/x-kformula.desktop
-share/kde/mimelnk/application/x-killustrator.desktop
-share/kde/mimelnk/application/x-kivio.desktop
-share/kde/mimelnk/application/x-kontour.desktop
-share/kde/mimelnk/application/x-kpresenter.desktop
-share/kde/mimelnk/application/x-kspread.desktop
-share/kde/mimelnk/application/x-kugar.desktop
-share/kde/mimelnk/application/x-kword.desktop
-share/kde/mimelnk/application/x-quattropro.desktop
-share/kde/mimelnk/image/x-msod.desktop
-share/kde/mimelnk/image/x-svg.desktop
-share/kde/mimelnk/image/x-wmf.desktop
-share/kde/mimelnk/image/x-xfig.desktop
-share/kde/mimelnk/text/x-csv.desktop
-share/kde/mimelnk/text/x-gnumeric.desktop
-share/kde/services/ki_rtf_export.desktop
-share/kde/services/killustrator_applixgraphic_import.desktop
-share/kde/services/killustrator_msod_import.desktop
-share/kde/services/killustrator_svg_export.desktop
-share/kde/services/killustrator_svg_import.desktop
-share/kde/services/killustrator_wmf_import.desktop
-share/kde/services/killustrator_xfig_import.desktop
+share/kde/icons/locolor/32x32/apps/kudesigner.png
+share/kde/icons/locolor/32x32/apps/kugar.png
+share/kde/icons/locolor/32x32/mimetypes/kugardata.png
+share/kde/mimelnk/application/x-kudesigner.desktop
+share/kde/services/clipartthumbnail.desktop
+share/kde/services/kfile_koffice.desktop
+share/kde/services/kformula_latex_export.desktop
+share/kde/services/kformula_png_export.desktop
 share/kde/services/kivioconnectortool.desktop
 share/kde/services/kivioselecttool.desktop
 share/kde/services/kiviotexttool.desktop
 share/kde/services/kiviozoomtool.desktop
 share/kde/services/kodocinfopropspage.desktop
+share/kde/services/kofficethumbnail.desktop
+share/kde/services/kounavail.desktop
 share/kde/services/kprkword.desktop
 share/kde/services/kspelltool.desktop
-share/kde/services/kspelltool_kword.desktop
 share/kde/services/kspread_applixspread_import.desktop
 share/kde/services/kspread_csv_export.desktop
 share/kde/services/kspread_csv_import.desktop
+share/kde/services/kspread_dbase_import.desktop
 share/kde/services/kspread_gnumeric_export.desktop
 share/kde/services/kspread_gnumeric_import.desktop
 share/kde/services/kspread_html_export.desktop
@@ -1578,6 +1751,8 @@ share/kde/services/kspread_qpro_import.desktop
 share/kde/services/kspreadcalc.desktop
 share/kde/services/kword_abiword_export.desktop
 share/kde/services/kword_abiword_import.desktop
+share/kde/services/kword_amipro_export.desktop
+share/kde/services/kword_amipro_import.desktop
 share/kde/services/kword_applixword_import.desktop
 share/kde/services/kword_ascii_export.desktop
 share/kde/services/kword_ascii_import.desktop
@@ -1585,15 +1760,31 @@ share/kde/services/kword_docbook_export.desktop
 share/kde/services/kword_html_export.desktop
 share/kde/services/kword_html_import.desktop
 share/kde/services/kword_latex_export.desktop
+share/kde/services/kword_latex_import.desktop
+share/kde/services/kword_mswrite_import.desktop
+share/kde/services/kword_palmdoc_export.desktop
+share/kde/services/kword_palmdoc_import.desktop
 share/kde/services/kword_rtf_export.desktop
+share/kde/services/kword_rtf_import.desktop
+share/kde/services/kword_wml_export.desktop
+share/kde/services/kword_wml_import.desktop
+share/kde/services/kword_wp_export.desktop
+share/kde/services/kword_wp_import.desktop
+share/kde/services/kwserialletter_classic.desktop
+share/kde/services/kwserialletter_qtsqldb_power.desktop
 share/kde/services/ole_excel97_import.desktop
+share/kde/services/ole_hancomword_import.desktop
 share/kde/services/ole_powerpoint97_import.desktop
 share/kde/services/ole_winword97_import.desktop
+share/kde/services/otherofficethumbnail.desktop
+share/kde/services/thesaurustool.desktop
+share/kde/services/xslt_export.desktop
+share/kde/services/xslt_import.desktop
 share/kde/servicetypes/kochart.desktop
 share/kde/servicetypes/kofficepart.desktop
 share/kde/servicetypes/kofilter.desktop
 share/kde/servicetypes/koplugin.desktop
-share/kde/servicetypes/kotool.desktop
+share/kde/servicetypes/kwmailmerge.desktop
 share/kde/templates/.source/Illustration.kil
 share/kde/templates/.source/Presentation.kpt
 share/kde/templates/.source/SpreadSheet.ksp
@@ -1602,89 +1793,22 @@ share/kde/templates/Illustration.desktop
 share/kde/templates/Presentation.desktop
 share/kde/templates/SpreadSheet.desktop
 share/kde/templates/TextDocument.desktop
-@dirrm share/kde/apps/kword/templates/Publishing/.source
-@dirrm share/kde/apps/kword/templates/Publishing/.icon
-@dirrm share/kde/apps/kword/templates/Publishing
-@dirrm share/kde/apps/kword/templates/Normal/.source
-@dirrm share/kde/apps/kword/templates/Normal/.icon
-@dirrm share/kde/apps/kword/templates/Normal
-@dirrm share/kde/apps/kword/templates
-@dirrm share/kde/apps/kword/kpartplugins
-@dirrm share/kde/apps/kword/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kword/icons/hicolor/22x22
-@dirrm share/kde/apps/kword/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kword/icons/hicolor/16x16
-@dirrm share/kde/apps/kword/icons/hicolor
-@dirrm share/kde/apps/kword/icons
-@dirrm share/kde/apps/kword/expression
-@dirrm share/kde/apps/kword/dtd
-@dirrm share/kde/apps/kword
-@dirrm share/kde/apps/kugar/templates
-@dirrm share/kde/apps/kugar/dtd
-@dirrm share/kde/apps/kugar
-@dirrm share/kde/apps/kspread/tablestyles
-@dirrm share/kde/apps/kspread/kpartplugins
-@dirrm share/kde/apps/kspread/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kspread/icons/hicolor/32x32
-@dirrm share/kde/apps/kspread/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kspread/icons/hicolor/22x22
-@dirrm share/kde/apps/kspread/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kspread/icons/hicolor/16x16
-@dirrm share/kde/apps/kspread/icons/hicolor
-@dirrm share/kde/apps/kspread/icons
-@dirrm share/kde/apps/kspread/extensions
-@dirrm share/kde/apps/kspread/dtd
-@dirrm share/kde/apps/kspread
-@dirrm share/kde/apps/krayon/kpartplugins
-@dirrm share/kde/apps/krayon
-@dirrm share/kde/apps/kpresenter/templates/letter/.source
-@dirrm share/kde/apps/kpresenter/templates/letter
-@dirrm share/kde/apps/kpresenter/templates/legal/.source
-@dirrm share/kde/apps/kpresenter/templates/legal
-@dirrm share/kde/apps/kpresenter/templates/Screenpresentations/.source
-@dirrm share/kde/apps/kpresenter/templates/Screenpresentations/.icon
-@dirrm share/kde/apps/kpresenter/templates/Screenpresentations
-@dirrm share/kde/apps/kpresenter/templates/Screen/.source
-@dirrm share/kde/apps/kpresenter/templates/Screen
-@dirrm share/kde/apps/kpresenter/templates/A4/.source
-@dirrm share/kde/apps/kpresenter/templates/A4
-@dirrm share/kde/apps/kpresenter/templates
-@dirrm share/kde/apps/kpresenter/slideshow
-@dirrm share/kde/apps/kpresenter/pics
-@dirrm share/kde/apps/kpresenter/kpartplugins
-@dirrm share/kde/apps/kpresenter/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kpresenter/icons/hicolor/22x22
-@dirrm share/kde/apps/kpresenter/icons/hicolor
-@dirrm share/kde/apps/kpresenter/icons
-@dirrm share/kde/apps/kpresenter/dtd
-@dirrm share/kde/apps/kpresenter/autoforms/Connections/.source
-@dirrm share/kde/apps/kpresenter/autoforms/Connections/.icon
-@dirrm share/kde/apps/kpresenter/autoforms/Connections
-@dirrm share/kde/apps/kpresenter/autoforms/Arrows/.source
-@dirrm share/kde/apps/kpresenter/autoforms/Arrows/.icon
-@dirrm share/kde/apps/kpresenter/autoforms/Arrows
-@dirrm share/kde/apps/kpresenter/autoforms
-@dirrm share/kde/apps/kpresenter
-@dirrm share/kde/apps/kontour/templates/Simple/.source
-@dirrm share/kde/apps/kontour/templates/Simple/.icon
-@dirrm share/kde/apps/kontour/templates/Simple
-@dirrm share/kde/apps/kontour/templates
-@dirrm share/kde/apps/kontour/kpartplugins
-@dirrm share/kde/apps/kontour/icons/hicolor/48x48/apps
-@dirrm share/kde/apps/kontour/icons/hicolor/48x48
-@dirrm share/kde/apps/kontour/icons/hicolor/32x32/apps
-@dirrm share/kde/apps/kontour/icons/hicolor/32x32
-@dirrm share/kde/apps/kontour/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/kontour/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kontour/icons/hicolor/16x16
-@dirrm share/kde/apps/kontour/icons/hicolor
-@dirrm share/kde/apps/kontour/icons
-@dirrm share/kde/apps/kontour
+@dirrm share/doc/kde/HTML/en/koffice-apidocs/lib/html
+@dirrm share/doc/kde/HTML/en/koffice-apidocs/lib
+@dirrm share/doc/kde/HTML/en/koffice-apidocs
+@dirrm share/doc/kde/HTML/en/koffice
+@dirrm share/doc/kde/HTML/en/kugar
+@dirrm share/doc/kde/HTML/en/kword
+@dirrm share/doc/kde/HTML/en/koshell
+@dirrm share/doc/kde/HTML/en/kspread
+@dirrm share/doc/kde/HTML/en/kchart
+@dirrm share/doc/kde/HTML/en/kpresenter
+@dirrm share/doc/kde/HTML/en/thesaurus
+@dirrm share/doc/kde/HTML/en/kformula
 @dirrm share/kde/apps/koffice/pics
-@dirrm share/kde/apps/koffice/icons/hicolor/48x48/apps
-@dirrm share/kde/apps/koffice/icons/hicolor/48x48
-@dirrm share/kde/apps/koffice/icons/hicolor/32x32/apps
+@dirrm share/kde/apps/koffice/autocorrect
 @dirrm share/kde/apps/koffice/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/koffice/icons/hicolor/32x32/apps
 @dirrm share/kde/apps/koffice/icons/hicolor/32x32
 @dirrm share/kde/apps/koffice/icons/hicolor/22x22/actions/part
 @dirrm share/kde/apps/koffice/icons/hicolor/22x22/actions
@@ -1692,27 +1816,12 @@ share/kde/templates/TextDocument.desktop
 @dirrm share/kde/apps/koffice/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/koffice/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/koffice/icons/hicolor/16x16
+@dirrm share/kde/apps/koffice/icons/hicolor/48x48/apps
+@dirrm share/kde/apps/koffice/icons/hicolor/48x48
 @dirrm share/kde/apps/koffice/icons/hicolor
 @dirrm share/kde/apps/koffice/icons
 @dirrm share/kde/apps/koffice
-@dirrm share/kde/apps/kivio/stencils/Flowcharting/BasicFlowcharting
-@dirrm share/kde/apps/kivio/stencils/Flowcharting
-@dirrm share/kde/apps/kivio/stencils
-@dirrm share/kde/apps/kivio/pics
-@dirrm share/kde/apps/kivio/kpartplugins
-@dirrm share/kde/apps/kivio/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kivio/icons/hicolor/32x32
-@dirrm share/kde/apps/kivio/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kivio/icons/hicolor/22x22
-@dirrm share/kde/apps/kivio/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kivio/icons/hicolor/16x16
-@dirrm share/kde/apps/kivio/icons/hicolor
-@dirrm share/kde/apps/kivio/icons
-@dirrm share/kde/apps/kivio/autoloadStencils
-@dirrm share/kde/apps/kivio
-@dirrm share/kde/apps/kformula/pics
 @dirrm share/kde/apps/kformula
-@dirrm share/kde/apps/kchart/pics
 @dirrm share/kde/apps/kchart/icons/locolor/16x16/actions
 @dirrm share/kde/apps/kchart/icons/locolor/16x16
 @dirrm share/kde/apps/kchart/icons/locolor
@@ -1720,12 +1829,104 @@ share/kde/templates/TextDocument.desktop
 @dirrm share/kde/apps/kchart/icons/hicolor/22x22
 @dirrm share/kde/apps/kchart/icons/hicolor
 @dirrm share/kde/apps/kchart/icons
+@dirrm share/kde/apps/kchart/pics
 @dirrm share/kde/apps/kchart
-@dirrm share/doc/kde/HTML/en/kword
-@dirrm share/doc/kde/HTML/en/kugar
-@dirrm share/doc/kde/HTML/en/kspread
-@dirrm share/doc/kde/HTML/en/krayon
-@dirrm share/doc/kde/HTML/en/kpresenter
-@dirrm share/doc/kde/HTML/en/koshell
-@dirrm share/doc/kde/HTML/en/kontour
-@dirrm share/doc/kde/HTML/en/koffice
+@dirrm share/kde/apps/kivio/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kivio/icons/hicolor/16x16
+@dirrm share/kde/apps/kivio/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kivio/icons/hicolor/22x22
+@dirrm share/kde/apps/kivio/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kivio/icons/hicolor/32x32
+@dirrm share/kde/apps/kivio/icons/hicolor
+@dirrm share/kde/apps/kivio/icons
+@dirrm share/kde/apps/kivio/pics
+@dirrm share/kde/apps/kivio/stencils/Flowcharting/BasicFlowcharting
+@dirrm share/kde/apps/kivio/stencils/Flowcharting/Logic
+@dirrm share/kde/apps/kivio/stencils/Flowcharting
+@dirrm share/kde/apps/kivio/stencils
+@dirrm share/kde/apps/kivio/autoloadStencils
+@dirrm share/kde/apps/kivio/kpartplugins
+@dirrm share/kde/apps/kivio
+@dirrm share/kde/apps/kpresenter/autoforms/Arrows/.icon
+@dirrm share/kde/apps/kpresenter/autoforms/Arrows/.source
+@dirrm share/kde/apps/kpresenter/autoforms/Arrows
+@dirrm share/kde/apps/kpresenter/autoforms/Connections/.icon
+@dirrm share/kde/apps/kpresenter/autoforms/Connections/.source
+@dirrm share/kde/apps/kpresenter/autoforms/Connections
+@dirrm share/kde/apps/kpresenter/autoforms
+@dirrm share/kde/apps/kpresenter/pics
+@dirrm share/kde/apps/kpresenter/templates/Screenpresentations/.icon
+@dirrm share/kde/apps/kpresenter/templates/Screenpresentations/.source
+@dirrm share/kde/apps/kpresenter/templates/Screenpresentations
+@dirrm share/kde/apps/kpresenter/templates/Screen/.source
+@dirrm share/kde/apps/kpresenter/templates/Screen
+@dirrm share/kde/apps/kpresenter/templates/A4/.source
+@dirrm share/kde/apps/kpresenter/templates/A4
+@dirrm share/kde/apps/kpresenter/templates/legal/.source
+@dirrm share/kde/apps/kpresenter/templates/legal
+@dirrm share/kde/apps/kpresenter/templates/letter/.source
+@dirrm share/kde/apps/kpresenter/templates/letter
+@dirrm share/kde/apps/kpresenter/templates
+@dirrm share/kde/apps/kpresenter/dtd
+@dirrm share/kde/apps/kpresenter/slideshow
+@dirrm share/kde/apps/kpresenter/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kpresenter/icons/hicolor/22x22
+@dirrm share/kde/apps/kpresenter/icons/hicolor
+@dirrm share/kde/apps/kpresenter/icons
+@dirrm share/kde/apps/kpresenter/kpartplugins
+@dirrm share/kde/apps/kpresenter
+@dirrm share/kde/apps/kspread/kpartplugins
+@dirrm share/kde/apps/kspread/dtd
+@dirrm share/kde/apps/kspread/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kspread/icons/hicolor/32x32
+@dirrm share/kde/apps/kspread/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kspread/icons/hicolor/16x16
+@dirrm share/kde/apps/kspread/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kspread/icons/hicolor/22x22
+@dirrm share/kde/apps/kspread/icons/hicolor
+@dirrm share/kde/apps/kspread/icons
+@dirrm share/kde/apps/kspread/extensions
+@dirrm share/kde/apps/kspread/tablestyles
+@dirrm share/kde/apps/kspread/templates/General/.icon
+@dirrm share/kde/apps/kspread/templates/General/.source
+@dirrm share/kde/apps/kspread/templates/General
+@dirrm share/kde/apps/kspread/templates
+@dirrm share/kde/apps/kspread
+@dirrm share/kde/apps/kugar/dtd
+@dirrm share/kde/apps/kugar/templates
+@dirrm share/kde/apps/kugar
+@dirrm share/kde/apps/kudesigner/icons/locolor/22x22/actions
+@dirrm share/kde/apps/kudesigner/icons/locolor/22x22
+@dirrm share/kde/apps/kudesigner/icons/locolor
+@dirrm share/kde/apps/kudesigner/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kudesigner/icons/hicolor/22x22
+@dirrm share/kde/apps/kudesigner/icons/hicolor
+@dirrm share/kde/apps/kudesigner/icons
+@dirrm share/kde/apps/kudesigner
+@dirrm share/kde/apps/kword/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kword/icons/hicolor/22x22
+@dirrm share/kde/apps/kword/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kword/icons/hicolor/16x16
+@dirrm share/kde/apps/kword/icons/hicolor
+@dirrm share/kde/apps/kword/icons
+@dirrm share/kde/apps/kword/templates/Normal/.icon
+@dirrm share/kde/apps/kword/templates/Normal/.source
+@dirrm share/kde/apps/kword/templates/Normal
+@dirrm share/kde/apps/kword/templates/Publishing/.icon
+@dirrm share/kde/apps/kword/templates/Publishing/.source
+@dirrm share/kde/apps/kword/templates/Publishing
+@dirrm share/kde/apps/kword/templates
+@dirrm share/kde/apps/kword/dtd
+@dirrm share/kde/apps/kword/expression
+@dirrm share/kde/apps/kword/kpartplugins
+@dirrm share/kde/apps/kword
+@dirrm share/kde/apps/kontour/kpartplugins
+@dirrm share/kde/apps/kontour
+@dirrm share/kde/apps/krita/kpartplugins
+@dirrm share/kde/apps/krita
+@dirrm share/kde/apps/thesaurus
+@dirrm share/kde/apps/xsltfilter/export/kword/xslfo
+@dirrm share/kde/apps/xsltfilter/export/kword
+@dirrm share/kde/apps/xsltfilter/export
+@dirrm share/kde/apps/xsltfilter
+@dirrm share/kde/applnk/Office
