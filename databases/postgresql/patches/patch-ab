@@ -1,6 +1,6 @@
---- bin/initdb/initdb.sh.orig	Wed Apr  2 07:09:13 1997
-+++ bin/initdb/initdb.sh	Wed Apr  2 07:09:33 1997
-@@ -289,7 +289,7 @@
+--- bin/initdb/initdb.orig	Mon Apr  6 02:05:52 1998
++++ bin/initdb/initdb	Wed Jun 10 13:13:18 1998
+@@ -286,7 +286,7 @@
  #----------------------------------------------------------------------------
  
  if [ $template_only -eq 0 ]; then
@@ -9,11 +9,3 @@
      echo "Running: postgres $BACKENDARGS template1"
  
      cat $GLOBAL \
-@@ -346,6 +346,5 @@
- 
- if [ $debug -eq 0 ]; then
-     echo "vacuuming template1"
--    echo "vacuum" | postgres -F -Q -D$PGDATA template1 2>&1 > /dev/null |\
--	 grep -v "^DEBUG:"
-+    echo "vacuum" | postgres -o /dev/null -F -Q -D$PGDATA template1 > /dev/null 
- fi
