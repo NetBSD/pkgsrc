@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.26 2001/03/13 09:53:37 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.27 2001/03/19 14:46:04 dmcmahill Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -142,6 +142,43 @@ NEED_NCURSES=   	YES
 # will start to require ncurses, which is not true (and raises some
 # recursive dependency problems!)
 .endif # USE_CURSES
+
+
+#
+# list of serial port devices commonly found on various machines and
+# which is the common default one.  This is used for semi-reasonable
+# defaults on different machines.  These can and should be overridden
+# on your machine in /etc/mk.conf.
+# Please help fill in the list.
+.if (${OPSYS} == "NetBSD")
+.if (${MACHINE_ARCH} == alpha)
+DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
+SERIAL_DEVICES?=	/dev/ttyC0 \
+			/dev/ttyC1
+.elif (${MACHINE_ARCH} == "i386")
+DEFAULT_SERIAL_DEVICE?=	/dev/tty00
+SERIAL_DEVICES?=	/dev/tty00 \
+			/dev/tty01
+.elif (${MACHINE_ARCH} == m68k)
+DEFAULT_SERIAL_DEVICE?=	/dev/tty00
+SERIAL_DEVICES?=	/dev/tty00 \
+			/dev/tty01
+.elif (${MACHINE_ARCH} == mipsel)
+DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
+SERIAL_DEVICES?=	/dev/ttyC0 \
+			/dev/ttyC1
+.elif (${MACHINE_ARCH} == "sparc")
+DEFAULT_SERIAL_DEVICE?=	/dev/ttya
+SERIAL_DEVICES?=	/dev/ttya \
+			/dev/ttyb
+.else
+DEFAULT_SERIAL_DEVICE?=	/dev/null
+SERIAL_DEVICES?=	/dev/null
+.endif  # ${MACHINE_ARCH}
+.else   # ${OPSYS} != "NetBSD"
+DEFAULT_SERIAL_DEVICE?=	/dev/null
+SERIAL_DEVICES?=	/dev/null
+.endif  # ${OPSYS} == "NetBSD"
 
 ##### Some overrides of defaults below on a per-OS basis.
 .if (${OPSYS} == "NetBSD")
