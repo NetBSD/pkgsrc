@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/22 21:12:20 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/13 07:09:17 jlam Exp $
 
 DISTNAME=	imp-2.2.5
 CATEGORIES=	mail www
@@ -29,6 +29,17 @@ APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
 MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
+FILES_SUBST=		IMPDIR=${IMPDIR:S/^${PREFIX}\///}
+FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 post-extract:
 	cd ${WRKSRC}/config;						\
 	for file in							\
@@ -58,26 +69,15 @@ post-patch:
 	done
 
 do-build:
-	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
-	${FIND} ${WRKSRC} -name "*.pl" -exec ${CHMOD} +x {} \;
-	${FIND} ${WRKSRC} -name "*.sh" -exec ${CHMOD} +x {} \;
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name "*.pl" -print | ${XARGS} ${CHMOD} +x
+	${FIND} ${WRKSRC} -name "*.sh" -print | ${XARGS} ${CHMOD} +x
 
 pre-install:
 	${SED}	-e "s|@IMPDIR@|${IMPDIR}|g"				\
 		${FILESDIR}/imp.conf.dist > ${WRKDIR}/imp.conf.dist
-	${SED}	-e "s|@IMPDIR@|${IMPDIR:S/^${PREFIX}\///}|g"		\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@IMPDIR@|${IMPDIR:S/^${PREFIX}\///}|g"		\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:

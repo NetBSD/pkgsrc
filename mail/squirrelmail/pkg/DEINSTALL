@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.4 2001/04/30 05:35:45 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.5 2001/07/13 07:09:20 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CAT="@CAT@"
+CMP="@CMP@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
@@ -24,13 +25,13 @@ DEINSTALL)
 	#
 	FILE=${DATADIR}/data/default_pref
 	SAMPLEFILE=${SMDIR}/data/default_pref
-	if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+	if ${CMP} -s ${FILE} ${SAMPLEFILE}
 	then
 		${RM} -f ${FILE}
 	fi
 	FILE=${CONFDIR}/squirrelmail.conf
 	SAMPLEFILE=${SAMPLECONFDIR}/squirrelmail.conf
-	if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+	if ${CMP} -s ${FILE} ${SAMPLEFILE}
 	then
 		${RM} -f ${FILE}
 	fi
