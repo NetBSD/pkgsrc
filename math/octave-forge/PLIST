@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/10/30 06:56:04 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/12/05 09:03:42 adam Exp $
 bin/mex
 man/man1/mex.1
 share/octave/${OCT_VERSION}/site/octave-forge-alternatives/m/graceplot/PKG_ADD
@@ -166,7 +166,6 @@ ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gammainv_gsl.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gammastar.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gdet.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gdiag.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/getfields.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gexp.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gf.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gfilter.oct
@@ -239,13 +238,13 @@ ${OCT_LOCALVEROCTFILEDIR}/octave-forge/psi_n.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rand.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rande.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/randn.oct
+${OCT_LOCALVEROCTFILEDIR}/octave-forge/randp.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/regexp.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/remez.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rotate_scale.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rsdec.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rsenc.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/samin.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/setfields.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/sinc_gsl.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/spabs.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/sparse.oct
@@ -291,6 +290,8 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/audio/clip.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/audio/sample.wav
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/audio/sound.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/audio/soundsc.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/audio/wavread.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/audio/wavwrite.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/civil/__nlnewmark_fcn__.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/civil/newmark.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/civil/nlnewmark.m
@@ -339,6 +340,24 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm/symerr.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm/vec2mat.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm/wgn.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/control/feedback.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/average_moments.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/delta_method.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/gmm_estimate.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/gmm_example.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/gmm_obj.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/gmm_results.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/gmm_variance.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/gmm_variance_inefficient.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/mle_estimate.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/mle_example.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/mle_obj.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/mle_results.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/mle_variance.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/parameterize.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/prettyprint.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/prettyprint_c.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/scale_data.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics/unscale_parameters.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/blkdiag.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/char.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/complex.m
@@ -356,6 +375,7 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/interp1.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/interp2.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/interpft.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/isa.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/isdir.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/isequal.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/isunix.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/lookup.m
@@ -507,8 +527,10 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mapping/azimuth.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mapping/deg2rad.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mapping/distance.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mapping/rad2deg.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/mex/myfeval.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous/OCTAVE_FORGE_VERSION.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous/PKG_ADD
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous/dispatch.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous/edit.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous/grep.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous/inputname.m
@@ -578,11 +600,9 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/path/addpath.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/path/rmpath.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb/elements.mat
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb/elements_struct.mat
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb/plotpdb.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb/read_pdb.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb/strtoz.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb/write_pdb.m
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb/write_pdb_quick.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/plot/__plt3__.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/plot/clf.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/plot/contourf.m
@@ -656,6 +676,7 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/freqs_plot.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/gaussian.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/gausswin.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/grpdelay.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/hann.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/hilbert.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/idct.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal/idct2.m
@@ -766,6 +787,7 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/cellstr.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/mat2str.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/str2double.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/strcmpi.m
+${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/strfind.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/strmatch.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/strncmp.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings/strncmpi.m
@@ -914,6 +936,7 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_transfo.m
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/optim
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/ode
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous
+@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mex
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mapping
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/linear-algebra
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/irsa
@@ -924,6 +947,7 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_transfo.m
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/graceplot
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/geometry
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general
+@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/control
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/civil

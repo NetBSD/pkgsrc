@@ -1,17 +1,18 @@
-$NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.3 2004/12/05 09:03:42 adam Exp $
 
---- configure.orig	Thu Sep  9 16:04:09 2004
+--- configure.orig	2004-11-17 01:02:36.000000000 +0000
 +++ configure
-@@ -309,7 +309,7 @@ ac_includes_default="\
+@@ -309,7 +309,8 @@ ac_includes_default="\
  # include <unistd.h>
  #endif"
  
--ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS PACKAGE VERSION TOPDIR CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT MKOCTFILE ver subver mpath opath xpath altpath altmpath altopath CPICFLAG F77 FFLAGS FPICFLAG CXX CXXFLAGS CXXPICFLAG OCTAVE OCTAVE_VERSION canonical_host_type SHLEXT LN_S INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA RANLIB ac_ct_RANLIB COPY_FLAGS STRIP DEFHAVE_X X_LIBS X_CFLAGS CPP X_PRE_LIBS X_EXTRA_LIBS HAVE_DO_FORTRAN_INDEXING HAVE_PROPAGATE_EMPTY_MATRICES HAVE_OK_TO_LOSE_IMAGINARY_PART HAVE_ND_ARRAYS TYPEID_HAS_CLASS CLASS_HAS_LOAD_SAVE HAVE_OCTAVE_MAP_INDEX HAVE_OCTAVE_CONCAT HAVE_SWAP_BYTES MAKEINFO TEXI2DVI TEXI2HTML DVIPDF DVIPS MKDOC MKTEXI HAVE_IEEE754_COMPLIANCE OCTAVE_FORGE_RELEASE EGREP DEFHAVE_LINUX_SOUNDCARD HAVE_RESIZE_AND_FILL HAVE_6ARG_MX_ND_RED OCTAVEFIXEDVERSION have_qhull need_qhull_version DEFHAVE_LIBGSL DEFHAVE_JPEG DEFHAVE_PNG MISCDEFS HAVE_LIB_TERMCAP HAVE_BUILTIN_STRUCT have_ginac DEFHAVE_GINAC LIBOBJS LTLIBOBJS'
-+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS PACKAGE VERSION TOPDIR CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT MKOCTFILE ver subver mpath opath xpath altpath altmpath altopath CPICFLAG F77 FFLAGS FPICFLAG CXX CXXFLAGS CXXPICFLAG OCTAVE OCTAVE_VERSION canonical_host_type SHLEXT LN_S INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA RANLIB ac_ct_RANLIB COPY_FLAGS STRIP DEFHAVE_X X_LIBS X_CFLAGS CPP X_PRE_LIBS X_EXTRA_LIBS HAVE_DO_FORTRAN_INDEXING HAVE_PROPAGATE_EMPTY_MATRICES HAVE_OK_TO_LOSE_IMAGINARY_PART HAVE_ND_ARRAYS TYPEID_HAS_CLASS CLASS_HAS_LOAD_SAVE HAVE_OCTAVE_MAP_INDEX HAVE_OCTAVE_CONCAT HAVE_SWAP_BYTES MAKEINFO TEXI2DVI TEXI2HTML DVIPDF DVIPS MKDOC MKTEXI HAVE_IEEE754_COMPLIANCE OCTAVE_FORGE_RELEASE AWK EGREP DEFHAVE_LINUX_SOUNDCARD HAVE_RESIZE_AND_FILL HAVE_6ARG_MX_ND_RED OCTAVEFIXEDVERSION have_qhull need_qhull_version DEFHAVE_LIBGSL DEFHAVE_JPEG DEFHAVE_PNG MISCDEFS HAVE_LIB_TERMCAP HAVE_BUILTIN_STRUCT have_ginac DEFHAVE_GINAC LIBOBJS LTLIBOBJS'
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS PACKAGE VERSION TOPDIR CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT MKOCTFILE ver subver mpath opath xpath altpath altmpath altopath CPICFLAG F77 FFLAGS FPICFLAG CXX CXXFLAGS CXXPICFLAG OCTAVE OCTAVE_VERSION canonical_host_type SHLEXT LN_S INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA RANLIB ac_ct_RANLIB COPY_FLAGS STRIP DEFHAVE_X X_LIBS X_CFLAGS CPP X_PRE_LIBS X_EXTRA_LIBS HAVE_DO_FORTRAN_INDEXING HAVE_PROPAGATE_EMPTY_MATRICES HAVE_OK_TO_LOSE_IMAGINARY_PART HAVE_ND_ARRAYS TYPEID_HAS_CLASS CLASS_HAS_LOAD_SAVE HAVE_OCTAVE_MAP_INDEX HAVE_OCTAVE_CONCAT HAVE_SWAP_BYTES HAVE_OCTAVE_UPLUS MAKEINFO TEXI2DVI TEXI2HTML DVIPDF DVIPS MKDOC MKTEXI HAVE_IEEE754_COMPLIANCE OCTAVE_FORGE_RELEASE EGREP DEFHAVE_LINUX_SOUNDCARD HAVE_RESIZE_AND_FILL HAVE_6ARG_MX_ND_RED OCTAVEFIXEDVERSION have_qhull need_qhull_version DEFHAVE_LIBGSL DEFHAVE_JPEG DEFHAVE_PNG MISCDEFS HAVE_LIB_TERMCAP HAVE_BUILTIN_STRUCT have_ginac DEFHAVE_GINAC LIBOBJS LTLIBOBJS'
++# added AWK
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS PACKAGE VERSION TOPDIR CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT MKOCTFILE ver subver mpath opath xpath altpath altmpath altopath CPICFLAG F77 FFLAGS FPICFLAG CXX CXXFLAGS CXXPICFLAG OCTAVE OCTAVE_VERSION canonical_host_type SHLEXT LN_S INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA RANLIB ac_ct_RANLIB COPY_FLAGS STRIP DEFHAVE_X X_LIBS X_CFLAGS CPP X_PRE_LIBS X_EXTRA_LIBS HAVE_DO_FORTRAN_INDEXING HAVE_PROPAGATE_EMPTY_MATRICES HAVE_OK_TO_LOSE_IMAGINARY_PART HAVE_ND_ARRAYS TYPEID_HAS_CLASS CLASS_HAS_LOAD_SAVE HAVE_OCTAVE_MAP_INDEX HAVE_OCTAVE_CONCAT HAVE_SWAP_BYTES HAVE_OCTAVE_UPLUS MAKEINFO TEXI2DVI TEXI2HTML DVIPDF DVIPS MKDOC MKTEXI HAVE_IEEE754_COMPLIANCE OCTAVE_FORGE_RELEASE AWK EGREP DEFHAVE_LINUX_SOUNDCARD HAVE_RESIZE_AND_FILL HAVE_6ARG_MX_ND_RED OCTAVEFIXEDVERSION have_qhull need_qhull_version DEFHAVE_LIBGSL DEFHAVE_JPEG DEFHAVE_PNG MISCDEFS HAVE_LIB_TERMCAP HAVE_BUILTIN_STRUCT have_ginac DEFHAVE_GINAC LIBOBJS LTLIBOBJS'
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -954,7 +954,7 @@ esac
+@@ -954,7 +955,7 @@ esac
      else
        echo "$as_me: WARNING: no configuration information is in $ac_dir" >&2
      fi
@@ -20,7 +21,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    done
  fi
  
-@@ -1885,7 +1885,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -1885,7 +1886,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -30,7 +31,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -1943,7 +1944,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -1943,7 +1945,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -40,7 +41,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2059,7 +2061,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2059,7 +2062,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -50,7 +51,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2113,7 +2116,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2113,7 +2117,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -60,7 +61,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2158,7 +2162,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2158,7 +2163,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -70,7 +71,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2202,7 +2207,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2202,7 +2208,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -80,7 +81,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3077,12 +3083,9 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+@@ -3077,12 +3084,9 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
  ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  
@@ -94,7 +95,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
  
  # Check whether --with-x or --without-x was given.
  if test "${with_x+set}" = set; then
-@@ -3175,7 +3178,7 @@ ac_x_header_dirs='
+@@ -3175,7 +3179,7 @@ ac_x_header_dirs='
  /usr/openwin/share/include'
  
  if test "$ac_x_includes" = no; then
@@ -103,7 +104,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    # First, try using that file with no special directory specified.
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -3249,7 +3252,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3249,7 +3253,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -113,7 +114,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3309,15 +3313,10 @@ else
+@@ -3309,15 +3314,10 @@ else
    # Update the cache value to reflect the command line values.
    ac_cv_have_x="have_x=yes \
  		ac_x_includes=$x_includes ac_x_libraries=$x_libraries"
@@ -131,7 +132,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
  if test "$no_x" = yes; then
    # Not all programs may use this symbol, but it does not hurt to define it.
  
-@@ -3365,7 +3364,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3365,7 +3365,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -141,7 +142,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3416,7 +3416,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3416,7 +3417,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -151,7 +152,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3492,7 +3493,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3492,7 +3494,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -161,7 +162,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3547,7 +3549,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3547,7 +3550,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -171,7 +172,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3615,7 +3618,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3615,7 +3619,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -181,7 +182,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3723,7 +3727,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3723,7 +3728,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -191,7 +192,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3787,7 +3792,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3787,7 +3793,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -201,7 +202,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3855,7 +3861,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3855,7 +3862,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -211,7 +212,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3959,7 +3966,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3959,7 +3967,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -221,7 +222,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4023,7 +4031,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4023,7 +4032,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -231,7 +232,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4120,7 +4129,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4120,7 +4130,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -241,7 +242,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4184,7 +4194,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4184,7 +4195,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -251,7 +252,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4281,7 +4292,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4281,7 +4293,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -261,7 +262,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4345,7 +4357,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4345,7 +4358,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -271,7 +272,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4424,7 +4437,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4424,7 +4438,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -281,7 +282,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4996,6 +5010,48 @@ OCTAVE_FORGE_RELEASE=`date +%Y.%m.%d`
+@@ -5044,6 +5059,48 @@ OCTAVE_FORGE_RELEASE=`date +%Y.%m.%d`
  
  CONFIGURE_OUTPUTS="$CONFIGURE_OUTPUTS admin/RPM/octave-forge.spec"
  
@@ -330,7 +331,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
  if test -e main/audio/NOINSTALL ; then
  
  		STATUS=noinstall
-@@ -5054,7 +5110,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5102,7 +5159,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -340,7 +341,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5224,7 +5281,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5272,7 +5330,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -350,7 +351,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5287,7 +5345,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5335,7 +5394,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -360,7 +361,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5537,7 +5596,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5585,7 +5645,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -370,7 +371,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5689,7 +5749,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5737,7 +5798,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -380,7 +381,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5818,7 +5879,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5866,7 +5928,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -390,7 +391,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5902,7 +5964,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5950,7 +6013,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -400,7 +401,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6054,7 +6117,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6102,7 +6166,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -410,7 +411,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6130,7 +6194,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6178,7 +6243,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -420,7 +421,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6282,7 +6347,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6330,7 +6396,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -430,7 +431,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6371,7 +6437,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6419,7 +6486,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -440,7 +441,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6459,7 +6526,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6507,7 +6575,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -450,7 +451,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6602,7 +6670,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6650,7 +6719,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -460,7 +461,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6757,7 +6826,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6805,7 +6875,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -470,7 +471,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6828,7 +6898,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6876,7 +6947,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -480,7 +481,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7582,6 +7653,7 @@ s,@MKDOC@,$MKDOC,;t t
+@@ -7631,6 +7703,7 @@ s,@MKDOC@,$MKDOC,;t t
  s,@MKTEXI@,$MKTEXI,;t t
  s,@HAVE_IEEE754_COMPLIANCE@,$HAVE_IEEE754_COMPLIANCE,;t t
  s,@OCTAVE_FORGE_RELEASE@,$OCTAVE_FORGE_RELEASE,;t t
@@ -488,7 +489,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
  s,@EGREP@,$EGREP,;t t
  s,@DEFHAVE_LINUX_SOUNDCARD@,$DEFHAVE_LINUX_SOUNDCARD,;t t
  s,@HAVE_RESIZE_AND_FILL@,$HAVE_RESIZE_AND_FILL,;t t
-@@ -7765,6 +7837,11 @@ esac
+@@ -7814,6 +7887,11 @@ esac
    *) ac_INSTALL=$ac_top_builddir$INSTALL ;;
    esac
  
@@ -500,7 +501,7 @@ $NetBSD: patch-ag,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
    # Let's still pretend it is `configure' which instantiates (i.e., don't
    # use $as_me), people would be surprised to read:
    #    /* config.h.  Generated by config.status.  */
-@@ -7803,12 +7880,6 @@ echo "$as_me: error: cannot find input f
+@@ -7852,12 +7930,6 @@ echo "$as_me: error: cannot find input f
  	 fi;;
        esac
      done` || { (exit 1); exit 1; }
