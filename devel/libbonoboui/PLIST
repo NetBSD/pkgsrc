@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/03/05 12:10:01 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/04/27 09:59:13 jmmv Exp $
 bin/test-moniker
 include/libbonoboui-2.0/bonobo.h
 include/libbonoboui-2.0/bonobo/bonobo-canvas-component.h
@@ -88,8 +88,8 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libbonoboui-2.0.mo
-@dirrm share/gnome-2.0/ui
-@dirrm share/gnome-2.0
+@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
+@comment in gnome2-dirs: @dirrm share/gnome-2.0
 @exec ${MKDIR} %D/share/doc/html/libbonoboui
 @dirrm share/doc/html/libbonoboui
 @comment in libglade2: @dirrm lib/libglade/2.0
