@@ -1,0 +1,57 @@
+$NetBSD: patch-ai,v 1.1 2002/11/14 22:21:15 seb Exp $
+
+--- configure.orig	Wed Nov 13 12:57:20 2002
++++ configure
+@@ -1949,6 +1949,13 @@ fi
+ 
+ target=$save_target
+ 
++
++_build_libtool_libs=`${CONFIG_SHELL-/bin/sh} $srcdir/libtool --config | grep '^build_libtool_libs='`
++case "x$_build_libtool_libs" in
++       x*=yes) ac_cv_can_build_shared=yes;;
++       x*) ac_cv_can_build_shared=no;;
++esac
++
+ if test "$ac_cv_can_build_shared" = no; then
+ 	enable_shared=no
+ 	enable_static=yes
+@@ -6676,8 +6683,37 @@ LTLIBOBJS=`echo "$LIBOBJS" | sed 's/\.o/
+ 
+ 
+ 
++
++ac_safe=`echo "/dev/urandom" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for /dev/urandom""... $ac_c" 1>&6
++echo "configure:6690: checking for /dev/urandom" >&5
++if eval "test \"`echo '$''{'ac_cv_file_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  if test "$cross_compiling" = yes; then
++    { echo "configure: error: Cannot check for file existence when cross compiling" 1>&2; exit 1; }
++else
++  if test -r /dev/urandom; then
++    eval "ac_cv_file_$ac_safe=yes"
++  else
++    eval "ac_cv_file_$ac_safe=no"
++  fi
++fi
++fi
++if eval "test \"`echo '$ac_cv_file_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  cat >> confdefs.h <<EOF
++#define SASL_DEV_RANDOM "/dev/urandom"
++EOF
++
++else
++  echo "$ac_t""no" 1>&6
++
++fi
++
++
+ echo $ac_n "checking for working const""... $ac_c" 1>&6
+-echo "configure:6681: checking for working const" >&5
++echo "configure:6717: checking for working const" >&5
+ if eval "test \"`echo '$''{'ac_cv_c_const'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
