@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:33 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/24 16:12:57 jlam Exp $
 
 .if !defined(XPM_BUILDLINK2_MK)
 XPM_BUILDLINK2_MK=	# defined
@@ -11,13 +11,14 @@ BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
 # Check if we got Xpm distributed with XFree86 4.x or if we need to
 # depend on the Xpm package.
 #
+_REQUIRE_BUILTIN_XPM?=	NO
 .if exists(${X11BASE}/include/X11/xpm.h) && \
     exists(${X11BASE}/lib/X11/config/X11.tmpl)
 _IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_XPM=	0
 .endif
-.if ${_IS_BUILTIN_XPM} == "0"
+.if (${_IS_BUILTIN_XPM} == "0") && (${_REQUIRE_BUILTIN_XPM} == "NO")
 _NEED_XPM=		YES
 .else
 _NEED_XPM=		NO

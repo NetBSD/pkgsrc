@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:30 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/24 16:12:55 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
@@ -11,12 +11,13 @@ BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
 # depend on the Mesa package.
 #
+_REQUIRE_BUILTIN_MESALIB?=	NO
 .if exists(${X11BASE}/include/GL/glx.h)
 _IS_BUILTIN_MESALIB!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_MESALIB=	0
 .endif
-.if ${_IS_BUILTIN_MESALIB} == "0"
+.if (${_IS_BUILTIN_MESALIB} == "0") && (${_REQUIRE_BUILTIN_MESALIB} == "NO")
 _NEED_MESALIB=		YES
 .else
 _NEED_MESALIB=		NO

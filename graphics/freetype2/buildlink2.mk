@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:30 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/24 16:12:56 jlam Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -11,12 +11,13 @@ BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 # Check if we got FreeType2 distributed with XFree86 4.x or if we need to
 # depend on the freetype2 package.
 #
+_REQUIRE_BUILTIN_FREETYPE2?=	NO
 .if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
 _IS_BUILTIN_FREETYPE2!=	${EGREP} -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_FREETYPE2=	0
 .endif
-.if ${_IS_BUILTIN_FREETYPE2} == "0"
+.if (${_IS_BUILTIN_FREETYPE2} == "0") && (${_REQUIRE_BUILTIN_FREETYPE2} == "NO")
 _NEED_FREETYPE2=	YES
 .else
 _NEED_FREETYPE2=	NO
