@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2003/01/10 19:45:33 wiz Exp $
+$NetBSD: distinfo,v 1.6 2003/02/24 16:10:07 salo Exp $
 
-SHA1 (feh-1.2.4.tar.gz) = 6c813e709cc2c10a9bb5f9a099233d78eecba67b
-Size (feh-1.2.4.tar.gz) = 347470 bytes
+SHA1 (feh-1.2.5.tar.gz) = 78a34ecfbf5da6077562618d9ef7e0bdb98043c2
+Size (feh-1.2.5.tar.gz) = 351541 bytes
 SHA1 (patch-aa) = 745c9ca77355a0beaacbe32bc33174e8dc057cbd
 SHA1 (patch-ab) = 4935ca2171f02d59df7e294b1b520881e21e0d6d
