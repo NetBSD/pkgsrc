@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
+
+--- Makefile.am.orig	Mon Jul 23 05:45:05 2001
++++ Makefile.am
+@@ -66,10 +66,11 @@
+ # Special install rule for the game
+ install:
+ 	make install_gamedata target=@GAME_INSTALLDIR@
++	make install_gamedocs target=$(prefix)/share/doc/Maelstrom
+ 
+ install_gamedata:
+ 	sh mkinstalldirs $(target)/
+-	cp -rv Images			\
++	cp -R Images			\
+ 	       Maelstrom_Fonts		\
+ 	       Maelstrom_Sounds		\
+ 	       Maelstrom_Sprites	\
+@@ -79,7 +80,7 @@
+ 
+ install_gamedocs:
+ 	sh mkinstalldirs $(target)/
+-	cp -rv README* COPYING* Docs*	$(target)/
++	cp -R README* COPYING* Docs*	$(target)/
+ 
+ # Rule to build tar-gzipped distribution package
+ $(PACKAGE)-$(VERSION).tar.gz: dist
