@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/03/05 23:24:07 jlam Exp $
+
+--- srclib/apr-util/build/apu-conf.m4.orig	Tue Aug 21 20:44:26 2001
++++ srclib/apr-util/build/apu-conf.m4	Thu Dec  6 17:50:19 2001
+@@ -328,6 +328,11 @@
+     expat_include_dir="$1/include/xml"
+     expat_libs="-L$1/lib -lexpat"
+     expat_old=yes
++  elif test -r "$1/include/expat.h"; then
++    dnl previously installed expat
++    expat_include_dir="$1/include"
++    expat_libs="-Wl,-R${LOCALBASE}/lib -lexpat"
++    expat_old=yes
+   elif test -r "$1/include/xmltok/xmlparse.h"; then
+     dnl Debian distribution
+     expat_include_dir="$1/include/xmltok"

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/03/05 23:24:07 jlam Exp $
+
+--- srclib/apr-util/configure.orig	Thu Dec  6 17:51:26 2001
++++ srclib/apr-util/configure	Thu Dec  6 17:53:26 2001
+@@ -2909,6 +2909,10 @@
+         expat_include_dir="$abs_expatdir/include/xml"
+     expat_libs="-L$abs_expatdir/lib -lexpat"
+     expat_old=yes
++  elif test -r "$abs_expatdir/include/expat.h"; then
++   expat_include_dir="$abs_expatdir/include"
++   expat_libs="-Wl,-R${LOCALBASE}/lib -lexpat"
++   expat_old=yes
+   elif test -r "$abs_expatdir/include/xmltok/xmlparse.h"; then
+         expat_include_dir="$abs_expatdir/include/xmltok"
+     expat_libs="-L$abs_expatdir/lib -lxmlparse -lxmltok"
