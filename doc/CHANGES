@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8736 2005/01/13 15:43:18 adam Exp $
+$NetBSD: CHANGES,v 1.8737 2005/01/13 16:20:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -285,3 +285,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wget to 1.9.1nb3 [bouyer 2005-01-13]
 	Updated gsl to 1.6 [adam 2005-01-13]
 	Updated octave-current to 2.1.64nb1 [adam 2005-01-13]
+	Updated squid to 2.5.7nb5 [taca 2005-01-13]
