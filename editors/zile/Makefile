@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:01 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/29 22:19:13 jtb Exp $
 
-DISTNAME=		zile-1.6.1
+DISTNAME=		zile-1.6.2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zile/}
 
