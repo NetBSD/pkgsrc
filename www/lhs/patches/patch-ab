@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/06/18 12:09:25 agc Exp $
+
+--- lhs.h	2002/06/18 11:49:31	1.1
++++ lhs.h	2002/06/18 11:50:29
+@@ -7,7 +7,10 @@
+ 
+ #define VERSION "lhs/0.1"
+ 
++#ifndef DEFAULT_ROOT_DIR
+ #define DEFAULT_ROOT_DIR "/home/httpd/html"
++#endif
++
+ #define DEFAULT_HTTP_PORT 8000
+ #define DEFAULT_HTTPS_PORT 8001
+ #define DEFAULT_MAX_SOCKS 50
