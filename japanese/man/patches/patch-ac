@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/06/08 10:01:21 sakamoto Exp $
+$NetBSD: patch-ac,v 1.2 1999/11/02 11:11:43 sakamoto Exp $
 --- ./man/Makefile.inc.orig	Tue Jul 28 01:25:43 1998
 +++ ./man/Makefile.inc	Mon May 31 16:18:47 1999
 @@ -1,9 +1,9 @@
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/06/08 10:01:21 sakamoto Exp $
 -		${TMACDIR}/mdoc/doc-nroff \
 -		${TMACDIR}/mdoc/doc-syms
 +NROFF=		jgnroff -Tnippon
-+MANDIR=		${PREFIX}/man/ja_JP.EUC
++MANDIR=		${PREFIX}/man/${JAMANDIR}
 +TMACDIR=	${PREFIX}/share/groff/tmac
 +CATDEPS=	${TMACDIR}/tmac.andocj \
 +		${TMACDIR}/tmac.docj \
