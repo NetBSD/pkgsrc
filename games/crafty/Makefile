@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2001/10/07 09:32:02 veego Exp $
+# $NetBSD: Makefile,v 1.18 2001/10/23 05:53:52 jlam Exp $
 
-DISTNAME=		crafty-18.10
+DISTNAME=		crafty-18.12
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/v18/ \
 			ftp://ftp.cis.uab.edu/pub/hyatt/ \
@@ -10,6 +10,8 @@ DISTFILES+=		${CRAFTY_STARTPGN} ${CRAFTY_DOCFILES}
 
 MAINTAINER=		jlam@netbsd.org
 COMMENT=		chess engine
+
+USE_BUILDLINK_ONLY=	YES
 
 DIST_SUBDIR=		${DISTNAME}
 WRKSRC=			${WRKDIR}
