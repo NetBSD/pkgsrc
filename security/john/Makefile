@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:25:34 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/26 19:06:04 grant Exp $
 #
 
 DISTNAME=	john-1.6
@@ -12,6 +12,8 @@ COMMENT=	Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 ALL_TARGET=	generic
+
+USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/../run/john ${PREFIX}/bin
