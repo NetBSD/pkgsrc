@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2004/07/19 22:10:52 jlam Exp $
+# $NetBSD: Makefile,v 1.143 2004/07/21 23:30:17 schmonz Exp $
 
 DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
@@ -13,7 +13,7 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
 
-CONFLICTS+=	sendmail-[0-9]*
+CONFLICTS+=	sendmail-[0-9]* fastforward>=0.51nb2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
