@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2004/04/20 16:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/14 16:08:48 erh Exp $
 
-DISTNAME=	pkg_tarup-1.5.2
+DISTNAME=	pkg_tarup-1.6
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,14 +15,16 @@ NO_BUILD=	yes
 NO_MTREE=	yes
 
 # Set SCRIPT_SUBST to substitute "@VARIABLE@" with "value"
-SCRIPT_SUBST+=	AWK=${AWK:Q}				\
+SCRIPT_SUBST+=	\
 		ECHO=${ECHO:Q}				\
+		GREP=${GREP:Q}				\
 		HEAD=${HEAD:Q}				\
 		ID=${ID:Q}				\
 		PKG_DBDIR=${PKG_DBDIR:Q}		\
 		PKG_SUFX=${PKG_SUFX:Q}			\
 		PREFIX=${PREFIX:Q}			\
 		PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}	\
+		SED=${SED:Q}			\
 		SH=${SH:Q}				\
 		SU=${SU:Q}
 
@@ -37,9 +39,13 @@ do-configure:
 	${SED} ${SCRIPT_SUBST_SED}			\
 			< ${FILESDIR}/pkg_tarup_all	\
 			> ${WRKSRC}/pkg_tarup_all
+	${SED} ${SCRIPT_SUBST_SED}			\
+			< ${FILESDIR}/pkg_tarup.1   \
+			> ${WRKSRC}/pkg_tarup.1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup_all ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/pkg_tarup.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
