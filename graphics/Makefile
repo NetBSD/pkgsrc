@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2003/12/21 21:27:15 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2003/12/21 21:31:12 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -124,6 +124,7 @@ SUBDIR+=	jasper
 SUBDIR+=	jhead
 SUBDIR+=	jpeg
 SUBDIR+=	jpeg2ps
+SUBDIR+=	jpeg_ls
 SUBDIR+=	kdegraphics
 SUBDIR+=	kdegraphics2
 SUBDIR+=	kdegraphics3
@@ -147,6 +148,7 @@ SUBDIR+=	librsvg2
 SUBDIR+=	libungif
 SUBDIR+=	libvideogfx
 SUBDIR+=	libwmf
+SUBDIR+=	ljpeg
 SUBDIR+=	magicpoint
 SUBDIR+=	mencoder
 SUBDIR+=	mgl
