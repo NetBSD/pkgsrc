@@ -1,29 +1,17 @@
-$NetBSD: patch-ab,v 1.4 2000/02/05 04:41:15 wiz Exp $
---- Configure.orig	Wed Oct 20 18:41:27 1999
-+++ Configure	Thu Oct 21 00:05:25 1999
-@@ -82,8 +82,9 @@
- # -DB_ENDIAN slows things down on a sparc for md5, but helps sha1.
- # So the md5_locl.h file has an undef B_ENDIAN if sun is defined
- 
--#config-string	CC : CFLAGS : LDFLAGS : special header file mods:bn_asm \
--# des_asm:bf_asm
-+#config-string	CC : CFLAGS : unistd : thread cflag : LDFLAGS : \
-+# bn_ops : bn_obj : des_obj : bf_obj : md5_obj : sha1_obj : cast_obj : \
-+# rc4_obj : rmd160_obj : rc5_obj
- my %table=(
- #"b",		"$tcc:$tflags::$tlib:$bits1:$tbn_mul::",
- #"bl-4c-2c",	"$tcc:$tflags::$tlib:${bits1}BN_LLONG RC4_CHAR MD2_CHAR:$tbn_mul::",
-@@ -208,9 +209,6 @@
- "linux-aout",	"gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
+diff -ur openssl-0.9.5a/Configure work/openssl-0.9.5a/Configure
+--- Configure.sma	Mon Mar 27 13:28:10 2000
++++ Configure	Wed Apr 19 19:21:36 2000
+@@ -274,9 +274,6 @@
  "linux-mips",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::(unknown)::BN_LLONG:::",
- "linux-ppc",    "gcc:-DB_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::(unknown)::::",
+ "linux-ppc",    "gcc:-DB_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::BN_LLONG::",
+ "linux-ia64",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::(unknown)::SIXTY_FOUR_BIT_LONG::",
 -"NetBSD-sparc",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
 -"NetBSD-m68",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
--"NetBSD-x86",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
- "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm",
- "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
- "bsdi-gcc",     "gcc:-O3 -ffast-math -DL_ENDIAN -DPERL5 -m486::(unknown)::RSA_LLONG $x86_gcc_des $x86_gcc_opts:$x86_bsdi_asm",
-@@ -228,6 +226,20 @@
+-"NetBSD-x86",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:",
+ "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}",
+ "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}",
+ "bsdi-gcc",     "gcc:-O3 -ffast-math -DL_ENDIAN -DPERL5 -m486::(unknown)::RSA_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_bsdi_asm}",
+@@ -297,6 +294,20 @@
  "aix-cc",   "cc:-O -DAIX -DB_ENDIAN::(unknown)::BN_LLONG RC4_CHAR:::",
  "aix-gcc",  "gcc:-O3 -DAIX -DB_ENDIAN::(unknown)::BN_LLONG RC4_CHAR:::",
  
@@ -44,19 +32,20 @@ $NetBSD: patch-ab,v 1.4 2000/02/05 04:41:15 wiz Exp $
  #
  # Cray T90 (SDSC)
  # It's Big-endian, but the algorithms work properly when B_ENDIAN is NOT
-@@ -345,6 +357,7 @@
- my $depflags="";
+@@ -421,6 +432,7 @@
+ my $openssl_other_defines="";
  my $libs="";
  my $target="";
 +my $xmakelib="";
  my $options="";
  foreach (@ARGV)
  	{
-@@ -377,10 +390,11 @@
+@@ -458,11 +470,12 @@
  		{
  		$libs.= "-lRSAglue -lrsaref ";
  		$flags.= "-DRSAref ";
 +		$xmakelib=" libRSAglue.a";
+ 		$openssl_other_defines .= "#define RSAref\n";
  		}
  	elsif (/^[-+]/)
  		{
@@ -65,7 +54,7 @@ $NetBSD: patch-ab,v 1.4 2000/02/05 04:41:15 wiz Exp $
  			{
  			$libs.=$_." ";
  			}
-@@ -524,13 +538,19 @@
+@@ -626,14 +639,19 @@
  
  if ($version =~ /(^[0-9]*)\.([0-9\.]*)/)
  	{
@@ -78,16 +67,16 @@ $NetBSD: patch-ab,v 1.4 2000/02/05 04:41:15 wiz Exp $
  
  open(IN,'<Makefile.org') || die "unable to read Makefile.org:$!\n";
  open(OUT,">$Makefile") || die "unable to create $Makefile:$!\n";
+ print OUT "### Generated automatically from Makefile.org by Configure.\n\n";
  my $sdirs=0;
 +my $is_elf="0";
-+if ($target =~ /.*elf.*/)
-+	{
++if ($target =~ /.*elf.*/) {
 +	$is_elf="1";
-+	}
++}
  while (<IN>)
  	{
  	chop;
-@@ -542,6 +562,7 @@
+@@ -645,6 +663,7 @@
  			}
  		}
  	$sdirs = 0 unless /\\$/;
@@ -95,10 +84,15 @@ $NetBSD: patch-ab,v 1.4 2000/02/05 04:41:15 wiz Exp $
  	s/^VERSION=.*/VERSION=$version/;
  	s/^MAJOR=.*/MAJOR=$major/;
  	s/^MINOR=.*/MINOR=$minor/;
-@@ -571,6 +592,19 @@
- close(IN);
- close(OUT);
- 
+@@ -669,6 +688,19 @@
+ 	s/^PROCESSOR=.*/PROCESSOR= $processor/;
+ 	s/^RANLIB=.*/RANLIB= $ranlib/;
+ 	s/^PERL=.*/PERL= $perl/;
++	print OUT $_."\n";
++	}
++close(IN);
++close(OUT);
++
 +rename("crypto/Makefile.ssl", "crypto/Makefile.org") unless -e "crypto/Makefile.org";
 +open(IN, '<crypto/Makefile.org') || die "unable to read crypto/Makefile.org:$!\n";
 +open(OUT,">crypto/Makefile.ssl") || die "unable to create crypto/Makefile.ssl:$!\n";
@@ -107,42 +101,6 @@ $NetBSD: patch-ab,v 1.4 2000/02/05 04:41:15 wiz Exp $
 +	{
 +	chop;
 +	s/^(.*)\${MAKELIB}(.*)$/$&$xmakelib/;
-+	print OUT $_."\n";
-+	}
-+close(IN);
-+close(OUT);
-+
- print "CC            =$cc\n";
- print "CFLAG         =$cflags\n";
- print "EX_LIBS       =$lflags\n";
-@@ -747,30 +781,6 @@
- 	$pwd =`pwd`;
- 	chop($pwd);
- }
--print <<EOF;
--
--NOTE: The OpenSSL header files have been moved from include/*.h
--to include/openssl/*.h.  To include OpenSSL header files, now
--directives of the form
--     #include <openssl/foo.h>
--should be used instead of #include <foo.h>.
--These new file locations allow installing the OpenSSL header
--files in /usr/local/include/openssl/ and should help avoid
--conflicts with other libraries.
--
--To compile programs that use the old form <foo.h>,
--usually an additional compiler option will suffice: E.g., add
--     -I$prefix/include/openssl
--or
--     -I$pwd/include/openssl
--to the CFLAGS in the Makefile of the program that you want to compile
--(and leave all the original -I...'s in place!).
--
--Please make sure that no old OpenSSL header files are around:
--The include directory should now be empty except for the openssl
--subdirectory.
--
--EOF
- 
- print <<\EOF if (!$no_threads && !$threads);
- 
+ 	print OUT $_."\n";
+ 	}
+ close(IN);
