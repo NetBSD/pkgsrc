@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/07/23 19:47:21 jlam Exp $
+$NetBSD: patch-aa,v 1.2.4.1 2005/01/23 18:06:15 salo Exp $
 
---- setup.sh.orig	Wed Jun  2 01:33:09 2004
+--- setup.sh.orig	2004-11-12 23:26:56.000000000 -0500
 +++ setup.sh
-@@ -419,6 +419,7 @@ else
+@@ -425,6 +425,7 @@ else
  	fi
  
  	# Ask whether to run at boot time
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.2 2004/07/23 19:47:21 jlam Exp $
  	if [ "$atboot" = "" ]; then
  		initsupp=`grep "^os_support=" "$srcdir/init/module.info" | sed -e 's/os_support=//g' | grep $os_type`
  		atboot=0
-@@ -535,6 +536,7 @@ EOF
+@@ -550,6 +551,7 @@ EOF
  	fi
  fi
  
@@ -18,7 +18,21 @@ $NetBSD: patch-aa,v 1.2 2004/07/23 19:47:21 jlam Exp $
  if [ "$noperlpath" = "" ]; then
  	echo "Inserting path to perl into scripts.."
  	(find "$wadir" -name '*.cgi' -print ; find "$wadir" -name '*.pl' -print) | $perl "$wadir/perlpath.pl" $perl -
-@@ -661,8 +663,6 @@ if [ "\$answer" = "y" ]; then
+@@ -641,6 +643,13 @@ if [ "$?" != "0" ]; then
+ 	echo passwd_mode=0 >> $config_dir/miniserv.conf
+ fi
+ 
++# Default to having delays on successive incorrect passwords for the same
++# username.
++grep passdelay= $config_dir/miniserv.conf >/dev/null
++if [ "$?" != "0" ]; then
++	echo passdelay=1 >> $config_dir/miniserv.conf
++fi
++
+ # If Perl crypt supports MD5, then make it the default
+ if [ "$md5pass" = "1" ]; then
+ 	echo md5pass=1 >> $config_dir/config
+@@ -681,8 +690,6 @@ if [ "\$answer" = "y" ]; then
  	$config_dir/stop
  	echo "Running uninstall scripts .."
  	(cd "$wadir" ; WEBMIN_CONFIG=$config_dir WEBMIN_VAR=$var_dir LANG= "$wadir/run-uninstalls.pl")

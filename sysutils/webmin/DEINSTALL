@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.2 2004/07/23 19:47:21 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2.4.1 2005/01/23 18:06:15 salo Exp $
 
 WEBMIN_DIR="@WEBMIN_DIR@"
 WEBMIN_ETCDIR="@WEBMIN_ETCDIR@"
@@ -6,7 +6,7 @@ WEBMIN_ETCDIR="@WEBMIN_ETCDIR@"
 case ${STAGE} in
 DEINSTALL)
 	uninstall="${WEBMIN_ETCDIR}/uninstall.sh"
-	if [ -x ${uninstall} ]; then
+	if [ -x "${uninstall}" ]; then
 		${ECHO} "y" | ${uninstall}
 	fi
 	;;
