@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $NetBSD: xwp,v 1.1.1.1 2000/08/25 01:07:29 jlam Exp $
+#
+# Wrapper script for Corel(R) WordPerfect(R)
+
+exec @PREFIX@/@WPDIR@/wpbin/xwp "$@"
