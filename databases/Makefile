@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2004/11/06 01:37:07 he Exp $
+# $NetBSD: Makefile,v 1.151 2004/11/06 20:21:53 he Exp $
 #
 
 COMMENT=	Databases
@@ -54,6 +54,7 @@ SUBDIR+=	oraedit
 SUBDIR+=	p5-AddressBook
 SUBDIR+=	p5-Apache-DBI
 SUBDIR+=	p5-BerkeleyDB
+SUBDIR+=	p5-Class-DBI
 SUBDIR+=	p5-DBD-CSV
 SUBDIR+=	p5-DBD-Google
 SUBDIR+=	p5-DBD-Oracle
