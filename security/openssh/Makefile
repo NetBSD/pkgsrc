@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2003/09/18 02:11:38 jschauma Exp $
+# $NetBSD: Makefile,v 1.114 2003/09/22 01:18:38 grant Exp $
 
 DISTNAME=		openssh-3.7.1p1
 PKGNAME=		openssh-3.7.1.1
@@ -68,6 +68,10 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 #.endif
 
+.if ${OPSYS} == "SunOS"
+LIBS+=			-lc
+.endif
+
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 .  include "../../security/skey/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
@@ -90,8 +94,6 @@ CPPFLAGS+=		-I/usr/include/kerberosIV
 # kerberos 5 dependencies are detected correctly.
 LDFLAGS+=		-lkrb -lcom_err -lroken -ldes
 .endif
-
-LD=	${CC}
 
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
