@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.42 2005/04/06 03:56:31 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.43 2005/04/06 09:24:59 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -85,3 +85,7 @@ Pullup ticket 427 - requested by Lubomir Sedlacik
 security fix for gaim
 Pullup ticket 426 - requested by Min Sik Kim
 portability fix for arpwatch
+Pullup ticket 428 - requested by Dan McMahill
+portability fix for tcl-itcl-current
+Pullup ticket 429 - requested by Juan Romero Pardines
+portability fix for tightvnc
