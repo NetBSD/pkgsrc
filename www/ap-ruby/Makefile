@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/02/28 18:32:19 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/20 15:09:40 taca Exp $
 # $FreeBSD: ports/www/mod_ruby/Makefile,v 1.10 2000/12/31 10:14:53 knu Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -17,8 +17,6 @@ DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 RUBY_REQD=	1.6
 VERSION=	0.9.7
-
-APXS=		${LOCALBASE}/sbin/apxs
 
 HAS_CONFIGURE=  yes
 CONFIGURE_SCRIPT= ./configure.rb
