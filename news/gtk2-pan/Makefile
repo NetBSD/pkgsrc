@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/02/05 05:06:36 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/04 14:36:17 wiz Exp $
 #
 
-DISTNAME=		pan-0.13.3
-PKGREVISION=		1
+DISTNAME=		pan-0.13.4
 CATEGORIES=		news
 MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
 EXTRACT_SUFX=		.tar.bz2
@@ -21,10 +20,11 @@ GNU_CONFIGURE=		YES
 LIBS=			-lcompat
 
 .include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../net/gnet/buildlink2.mk"
 .include "../../textproc/gtkspell/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
