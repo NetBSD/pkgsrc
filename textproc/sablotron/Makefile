@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/27 05:09:11 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/27 08:30:24 grant Exp $
 
 DISTNAME=		Sablot-0.96
 PKGNAME=		sablotron-0.96
@@ -24,7 +24,7 @@ LDFLAGS+=		-liconv
 LDFLAGS+=               -lstdc++ -lm
 
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 
+.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
