@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.5 2004/08/21 12:16:45 markd Exp $
+$NetBSD: patch-an,v 1.6 2004/12/11 01:19:29 markd Exp $
 
 --- kdecore/kstandarddirs.cpp.orig	2004-01-26 06:24:42.000000000 +1300
 +++ kdecore/kstandarddirs.cpp
@@ -28,7 +28,7 @@ $NetBSD: patch-an,v 1.5 2004/08/21 12:16:45 markd Exp $
 +	return "share/kde/sounds/";
      if (!strcmp(type, "locale"))
 -	return "share/locale/";
-+	return "share/kde/locale/";
++	return "@PKGLOCALEDIR@/locale/";
      if (!strcmp(type, "services"))
 -	return "share/services/";
 +	return "share/kde/services/";
