@@ -1,0 +1,74 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/09/01 19:44:03 tron Exp $
+
+--- raproxy.man.orig	Fri Dec 20 00:03:25 1996
++++ raproxy.man	Wed Sep  1 21:33:53 1999
+@@ -182,37 +182,10 @@
+ RealAudio firewall proxies, but it may also be used in conjunction
+ with security software such as the TIS Firewall Toolkit (fwtk) to
+ allow access to RealAudio servers through a firewall.
+-.SH "Setting Up Proxy with TIS Firewall Tookit"
+-.IX Header "Setting Up Proxy with TIS Firewall Tookit"
++.SH "Setting Up the RealAudio Proxy"
++.IX Header "Setting Up the RealAudio Proxy"
+ The RealAudio proxy is only a proxy.  It does not do any
+-authentication at all.  So, in order to implement IP\-level
+-authentication, you must use tools such as \fInetacl\fR\|(1), a tool that
+-comes with Trusted Information Systems Firewall Toolkit, available
+-from:
+-.PP
+-.Vb 1
+-\&      ftp://ftp.tis.com/pub/firewalls/toolkit
+-.Ve
+-Install the toolkit as per the instructions in the accompanying README
+-file and in the documentation archive found at:
+-.PP
+-.Vb 1
+-\&      ftp://ftp.tis.com/pub/firewalls/toolkit
+-.Ve
+-Once you have installed the toolkit, you will need to compile the RealAudio
+-proxy.  You may wish to edit the Makefile to customize the proxy for your
+-system.  After you have done this, you can type the following command at
+-the shell prompt:
+-.PP
+-.Vb 1
+-\&      # make raproxy
+-.Ve
+-This will compile the RealAudio proxy, creating a file called \*(L"raproxy\*(R".
+-You then need to copy this file into /usr/local/libexec (or another
+-appropriate directory):
+-.PP
+-.Vb 1
+-\&      # cp raproxy /usr/local/libexec
++authentication at all.
+ .Ve
+ The RealAudio proxy will need a name in your /etc/services file for inetd
+ to reference it.  To name the service, you need to add the RealAudio proxy
+@@ -221,25 +194,13 @@
+ .Vb 1
+ \&      pn-raproxy         1090/tcp   #Progressive Networks' RealAudio Proxy
+ .Ve
+-The RealAudio proxy will depend on netacl to screen connection requests.
+-In order to have netacl listen for the \*(L"pn-raproxy\*(R" service, you will also
++The RealAudio proxy will depend on inetd to handle connection requests.
++In order to have inetd listen for the \*(L"pn-raproxy\*(R" service, you will also
+ need to add it in your /etc/inetd.conf
+ .PP
+ .Vb 2
+ \&      # RealAudio Proxy
+-\&      pn-raproxy stream  tcp     nowait  root    /usr/local/etc/netacl   pn-raproxy
+-.Ve
+-netacl needs to know how to handle requests made for the \*(L"pn-raproxy\*(R"
+-service, and who should be allowed to use the proxy.  For example, to
+-configure netacl to permit all users coming from 10.0.154.* to use raproxy,
+-you need to add the following lines to your /usr/local/etc/netperm-table:
+-.PP
+-.Vb 2
+-\&      # RealAudio Proxy
+-\&      netacl-pn-raproxy: permit-hosts 10.0.154.* -exec /usr/local/libexec/raproxy
+-.Ve
+-At this point, you should be able to send a HUP signal to your inetd
+-daemon.  From a shell prompt:
++\&      pn-raproxy stream  tcp     nowait  root    /usr/local/libexec/pn-raproxy   pn-raproxy
+ .PP
+ .Vb 4
+ \&      # ps -auxw | grep inetd

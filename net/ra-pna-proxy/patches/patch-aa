@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/01 19:44:03 tron Exp $
+
+--- Makefile.orig	Fri Dec 20 01:12:26 1996
++++ Makefile	Wed Sep  1 20:36:38 1999
+@@ -6,7 +6,7 @@
+ #  All rights reserved.  See raproxy.c for full copyright details.
+ #
+ CC=	cc
+-CFLAGS= #-DDEBUG -g
++#CFLAGS= #-DDEBUG -g
+ DISTNAME=raproxy3.0b1
+ 
+ DOCNAMES=about.html advanced.html contents.html generic.html index.html \
