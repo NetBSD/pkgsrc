@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/05 03:10:59 hubertf Exp $
+
+--- e2fsck/journal.c.orig	Sat Aug  5 04:28:05 2000
++++ e2fsck/journal.c	Sat Aug  5 04:29:09 2000
+@@ -59,7 +59,11 @@
+ 	 * Now that it mounted cleanly, the filesystem will have been
+ 	 * recovered, so we can now unmount it.
+ 	 */
++#ifdef __NetBSD__
++	ret = unmount(device, 0);
++#else
+ 	ret = umount(device);
++#endif
+ 	if (ret)
+ 		return errno;
+ 	/*
