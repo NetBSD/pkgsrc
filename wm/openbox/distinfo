@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/11/20 18:16:19 jschauma Exp $
+
+SHA1 (openbox-2.2.0.tar.gz) = f024a72ad803471c54763f5b6b22ef7885a48233
+Size (openbox-2.2.0.tar.gz) = 386430 bytes
+SHA1 (patch-aa) = e33f48c2ca639494a74e473067b2c75ae45f89cd
+SHA1 (patch-ab) = c3a2d3015bc2fb3346cf0dc3aead859cc9a9b05f
