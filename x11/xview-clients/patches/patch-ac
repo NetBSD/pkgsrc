@@ -1,0 +1,10 @@
+--- cmdtool/Imakefile.orig	Tue Jun 29 07:12:08 1993
++++ cmdtool/Imakefile	Sat Jul  4 15:25:02 1998
+@@ -4,6 +4,7 @@
+ /**/# @(#)Imakefile	1.16 28 Jun 1993 SMI
+ /**/# Imakefile for cmdtool and shelltool.
+ 
++TOP = ../..
+ DEFINES = -DSTANDALONE  $(XVCLIENTDEFINES)
+ INCLUDES = -I$(HEADER_DEST) -I$(TOP) $(XVCLIENTINCLUDES)
+ SYS_LIBRARIES = $(SYSV_CLIENT_LIB)

@@ -82,22 +82,6 @@ diff -rc ../old/xview3.2p1-X11R6/clients/olwm/gettext.h olwm/gettext.h
   struct domain_binding {
       char    *domain_name;
       char    *binding;
-diff -rc ../old/xview3.2p1-X11R6/clients/olwm/i18n.h olwm/i18n.h
-*** ../old/xview3.2p1-X11R6/clients/olwm/i18n.h	Tue Jun 29 01:11:48 1993
---- olwm/i18n.h	Sun Nov 20 13:38:57 1994
-***************
-*** 35,40 ****
---- 35,44 ----
-  
-  #endif /* OW_I18N_L4 */
-  
-+ #ifndef LC_MESSAGES
-+ #define LC_MESSAGES 0
-+ #endif
-+ 
-  /*
-   *	String/Text - To better handle non-i18n, Level3 and Level4
-   *	we introduce two 'types'; string and text.
 diff -rc ../old/xview3.2p1-X11R6/clients/olwm/mem.c olwm/mem.c
 *** ../old/xview3.2p1-X11R6/clients/olwm/mem.c	Tue Jun 29 01:11:45 1993
 --- olwm/mem.c	Sun Nov 20 13:38:57 1994
