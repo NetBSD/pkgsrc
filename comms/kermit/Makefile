@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/12/20 12:33:45 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2000/01/02 21:05:01 fredb Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -23,7 +23,7 @@ MAKEFILE=	makefile
 NO_WRKSUBDIR=	yes
 
 KFLAGS+=	-DCK_PCT_BAR -DNODEBUG -DNOOLDMODEMS
-KFLAGS+=	-DDYNAMIC -DSUNX25
+KFLAGS+=	-DDYNAMIC
 
 # XXX This needs to be tested. XXX
 #
@@ -40,19 +40,25 @@ LIBS+=		-lsocks
 .endif
 .endif
 
-# XXX The man page currently doesn't build for NetBSD XXX
-#MANCOMPRESSED_IF_MANZ=	yes
-#PLIST_SRC=		${WRKDIR}/PLIST
+MANCOMPRESSED_IF_MANZ=	yes
+PLIST_SRC=		${WRKDIR}/PLIST
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
-#	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-#	@for OPT in ${MANINSTALL} x; do \
-#	  case $$OPT in \
-#	    catinstall) ${ECHO} man/cat1/kermit.0 >>${PLIST_SRC};; \
-#	    maninstall) ${ECHO} man/man1/kermit.1 >>${PLIST_SRC};; \
-#	  esac; \
-#	done
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	for OPT in ${MANINSTALL} x; do \
+	  case $$OPT in \
+	    catinstall) \
+		nroff -man ${WRKSRC}/ckuker.nr > ${WRKSRC}/kermit.0; \
+		${INSTALL_MAN} ${WRKSRC}/kermit.0 ${PREFIX}/man/cat1/kermit.0; \
+		${ECHO} man/cat1/kermit.0 >>${PLIST_SRC}; \
+		;; \
+	    maninstall) \
+		${INSTALL_MAN} ${WRKSRC}/ckuker.nr ${PREFIX}/man/man1/kermit.1; \
+		${ECHO} man/man1/kermit.1 >>${PLIST_SRC}; \
+		;; \
+	  esac; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
 
