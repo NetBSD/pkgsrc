@@ -1,20 +1,18 @@
-$NetBSD: patch-aa,v 1.3 1999/08/08 01:26:52 mjl Exp $
+$NetBSD: patch-aa,v 1.4 2003/03/23 02:02:34 rh Exp $
 
---- cdlabelgen.orig	Sun Aug  8 02:31:39 1999
-+++ cdlabelgen	Sun Aug  8 02:33:28 1999
+--- cdlabelgen.orig	2002-10-28 01:07:06.000000000 +1000
++++ cdlabelgen
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl -w
 +#!@PREFIX@/bin/perl -w
  #
  # cdlabelgen - a program for making cd jewel box covers and traycards
  #
-@@ -35,7 +35,8 @@
- 
- # Modify this if you want to store your template somewhere else
- # Perhaps we can make this part of a conf file in the future?
--my @where_is_the_template = ('/usr/share/cdlabelgen/',
-+my @where_is_the_template = ('@PREFIX@/share/cdlabelgen/',
-+                             '/usr/share/cdlabelgen/',
- 									  '/usr/local/share/cdlabelgen/',
- 									  '/usr/local/lib/cdlabelgen/',
- 									  '/etc/cdlabelgen/',
+@@ -71,6 +71,7 @@ my @where_is_the_template;
+ if ($^O !~ /^MSWin32/) { # not windows...
+   # Unix section -----------------------------------------------------
+   @where_is_the_template = (
++    '@PREFIX@/share/cdlabelgen/',
+     '/usr/local/lib/cdlabelgen/',
+     '/usr/share/cdlabelgen/',
+     '/opt/lib/cdlabelgen/',
