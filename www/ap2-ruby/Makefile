@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/04 23:46:37 snj Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	ap2-${RUBY_PKGNAMEPREFIX}${VERSION}
@@ -12,7 +12,7 @@ COMMENT=	Embedded Ruby for Apache2 (development version)
 
 CONFLICTS+=	ap-ruby
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 APACHE_MODULE=	YES
 DIST_SUBDIR=	ruby
@@ -47,9 +47,9 @@ post-install:
 		${RUBY_EXAMPLESDIR}/mod_ruby
 
 .include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink2.mk"
-.include "../../textproc/ruby-eruby/buildlink2.mk"
-.include "../../devel/apr/buildlink2.mk"
-.include "../../www/apache2/buildlink2.mk"
+.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../textproc/ruby-eruby/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../www/apache2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
