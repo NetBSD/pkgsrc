@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2194 2004/10/04 00:20:48 wiz Exp $
+$NetBSD: TODO,v 1.2195 2004/10/04 09:22:22 minskim Exp $
 
 Suggested new packages
 ======================
@@ -467,7 +467,6 @@ Suggested package updates
 	o xbeeb-0.4.1
 	o xblast-2.9.22
 	o xboard-4.2.7
-	o xchm-0.9.5
 	o xdaliclock-2.20
 	o xdx-1.2
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
