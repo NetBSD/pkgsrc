@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/05 23:39:27 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/11 14:49:19 cjep Exp $
 
---- Makefile.orig	Sun Apr  1 16:05:44 2001
+--- Makefile.orig	2001-04-01 15:05:44.000000000 +0100
 +++ Makefile
 @@ -26,11 +26,11 @@
  #      DHIS(c)  Dynamic Host Information System Release 5.0

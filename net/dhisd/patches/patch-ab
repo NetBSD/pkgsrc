@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/05 23:39:27 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/11 14:49:19 cjep Exp $
 
---- dhisd.h.orig	Sun Apr  1 01:24:33 2001
+--- dhisd.h.orig	2001-04-01 00:24:33.000000000 +0100
 +++ dhisd.h
-@@ -64,9 +64,9 @@
+@@ -47,7 +47,6 @@
+ #include<sys/signal.h>
+ #include<sys/wait.h>
+ #include<syslog.h>
+-#include<varargs.h>
+ #include<gmp.h>
+ 
+ #define	BOURNE_SHELL		"/bin/sh"
+@@ -64,9 +63,9 @@
  #define	CHECK_FAILS	3		/* maximum check fails */
  
  #define	DHISD_PORT	58800
