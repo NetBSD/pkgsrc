@@ -1,111 +1,109 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/03 20:56:35 mrauch Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2004/06/03 18:48:17 mrauch Exp $
 OpenOffice.org1.1.1/LICENSE
 OpenOffice.org1.1.1/LICENSE.html
 OpenOffice.org1.1.1/README
 OpenOffice.org1.1.1/README.html
 OpenOffice.org1.1.1/THIRDPARTYLICENSEREADME.html
-OpenOffice.org1.1.1/help/en/common.jar
-OpenOffice.org1.1.1/help/en/common.tree
-OpenOffice.org1.1.1/help/en/custom.css
-OpenOffice.org1.1.1/help/en/default.css
-OpenOffice.org1.1.1/help/en/err.html
-OpenOffice.org1.1.1/help/en/highcontrast1.css
-OpenOffice.org1.1.1/help/en/highcontrast2.css
-OpenOffice.org1.1.1/help/en/highcontrastblack.css
-OpenOffice.org1.1.1/help/en/highcontrastwhite.css
-OpenOffice.org1.1.1/help/en/picture.db
-OpenOffice.org1.1.1/help/en/picture.jar
-OpenOffice.org1.1.1/help/en/sbasic.cfg
-OpenOffice.org1.1.1/help/en/sbasic.db
-OpenOffice.org1.1.1/help/en/sbasic.ht
-OpenOffice.org1.1.1/help/en/sbasic.idx/CONTEXTS
-OpenOffice.org1.1.1/help/en/sbasic.idx/DICTIONARY
-OpenOffice.org1.1.1/help/en/sbasic.idx/DOCS
-OpenOffice.org1.1.1/help/en/sbasic.idx/DOCS.TAB
-OpenOffice.org1.1.1/help/en/sbasic.idx/EDGE
-OpenOffice.org1.1.1/help/en/sbasic.idx/LINKNAMES
-OpenOffice.org1.1.1/help/en/sbasic.idx/OFFSETS
-OpenOffice.org1.1.1/help/en/sbasic.idx/POSITIONS
-OpenOffice.org1.1.1/help/en/sbasic.idx/SCHEMA
-OpenOffice.org1.1.1/help/en/sbasic.jar
-OpenOffice.org1.1.1/help/en/sbasic.key
-OpenOffice.org1.1.1/help/en/sbasic.tree
-OpenOffice.org1.1.1/help/en/scalc.cfg
-OpenOffice.org1.1.1/help/en/scalc.db
-OpenOffice.org1.1.1/help/en/scalc.ht
-OpenOffice.org1.1.1/help/en/scalc.idx/CONTEXTS
-OpenOffice.org1.1.1/help/en/scalc.idx/DICTIONARY
-OpenOffice.org1.1.1/help/en/scalc.idx/DOCS
-OpenOffice.org1.1.1/help/en/scalc.idx/DOCS.TAB
-OpenOffice.org1.1.1/help/en/scalc.idx/EDGE
-OpenOffice.org1.1.1/help/en/scalc.idx/LINKNAMES
-OpenOffice.org1.1.1/help/en/scalc.idx/OFFSETS
-OpenOffice.org1.1.1/help/en/scalc.idx/POSITIONS
-OpenOffice.org1.1.1/help/en/scalc.idx/SCHEMA
-OpenOffice.org1.1.1/help/en/scalc.jar
-OpenOffice.org1.1.1/help/en/scalc.key
-OpenOffice.org1.1.1/help/en/scalc.tree
-OpenOffice.org1.1.1/help/en/schart.jar
-OpenOffice.org1.1.1/help/en/schart.tree
-OpenOffice.org1.1.1/help/en/sdraw.cfg
-OpenOffice.org1.1.1/help/en/sdraw.db
-OpenOffice.org1.1.1/help/en/sdraw.ht
-OpenOffice.org1.1.1/help/en/sdraw.idx/CONTEXTS
-OpenOffice.org1.1.1/help/en/sdraw.idx/DICTIONARY
-OpenOffice.org1.1.1/help/en/sdraw.idx/DOCS
-OpenOffice.org1.1.1/help/en/sdraw.idx/DOCS.TAB
-OpenOffice.org1.1.1/help/en/sdraw.idx/EDGE
-OpenOffice.org1.1.1/help/en/sdraw.idx/LINKNAMES
-OpenOffice.org1.1.1/help/en/sdraw.idx/OFFSETS
-OpenOffice.org1.1.1/help/en/sdraw.idx/POSITIONS
-OpenOffice.org1.1.1/help/en/sdraw.idx/SCHEMA
-OpenOffice.org1.1.1/help/en/sdraw.jar
-OpenOffice.org1.1.1/help/en/sdraw.key
-OpenOffice.org1.1.1/help/en/simpress.cfg
-OpenOffice.org1.1.1/help/en/simpress.db
-OpenOffice.org1.1.1/help/en/simpress.ht
-OpenOffice.org1.1.1/help/en/simpress.idx/CONTEXTS
-OpenOffice.org1.1.1/help/en/simpress.idx/DICTIONARY
-OpenOffice.org1.1.1/help/en/simpress.idx/DOCS
-OpenOffice.org1.1.1/help/en/simpress.idx/DOCS.TAB
-OpenOffice.org1.1.1/help/en/simpress.idx/EDGE
-OpenOffice.org1.1.1/help/en/simpress.idx/LINKNAMES
-OpenOffice.org1.1.1/help/en/simpress.idx/OFFSETS
-OpenOffice.org1.1.1/help/en/simpress.idx/POSITIONS
-OpenOffice.org1.1.1/help/en/simpress.idx/SCHEMA
-OpenOffice.org1.1.1/help/en/simpress.jar
-OpenOffice.org1.1.1/help/en/simpress.key
-OpenOffice.org1.1.1/help/en/simpress.tree
-OpenOffice.org1.1.1/help/en/smath.cfg
-OpenOffice.org1.1.1/help/en/smath.db
-OpenOffice.org1.1.1/help/en/smath.ht
-OpenOffice.org1.1.1/help/en/smath.idx/CONTEXTS
-OpenOffice.org1.1.1/help/en/smath.idx/DICTIONARY
-OpenOffice.org1.1.1/help/en/smath.idx/DOCS
-OpenOffice.org1.1.1/help/en/smath.idx/DOCS.TAB
-OpenOffice.org1.1.1/help/en/smath.idx/EDGE
-OpenOffice.org1.1.1/help/en/smath.idx/LINKNAMES
-OpenOffice.org1.1.1/help/en/smath.idx/OFFSETS
-OpenOffice.org1.1.1/help/en/smath.idx/POSITIONS
-OpenOffice.org1.1.1/help/en/smath.idx/SCHEMA
-OpenOffice.org1.1.1/help/en/smath.jar
-OpenOffice.org1.1.1/help/en/smath.key
-OpenOffice.org1.1.1/help/en/smath.tree
-OpenOffice.org1.1.1/help/en/swriter.cfg
-OpenOffice.org1.1.1/help/en/swriter.db
-OpenOffice.org1.1.1/help/en/swriter.ht
-OpenOffice.org1.1.1/help/en/swriter.idx/CONTEXTS
-OpenOffice.org1.1.1/help/en/swriter.idx/DICTIONARY
-OpenOffice.org1.1.1/help/en/swriter.idx/DOCS
-OpenOffice.org1.1.1/help/en/swriter.idx/DOCS.TAB
-OpenOffice.org1.1.1/help/en/swriter.idx/EDGE
-OpenOffice.org1.1.1/help/en/swriter.idx/LINKNAMES
-OpenOffice.org1.1.1/help/en/swriter.idx/OFFSETS
-OpenOffice.org1.1.1/help/en/swriter.idx/POSITIONS
-OpenOffice.org1.1.1/help/en/swriter.idx/SCHEMA
-OpenOffice.org1.1.1/help/en/swriter.jar
-OpenOffice.org1.1.1/help/en/swriter.key
-OpenOffice.org1.1.1/help/en/swriter.tree
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/common.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/custom.css
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/default.css
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/err.html
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/highcontrast1.css
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/highcontrast2.css
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/highcontrastblack.css
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/highcontrastwhite.css
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/picture.db
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/picture.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.cfg
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.db
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.ht
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/CONTEXTS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/DICTIONARY
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/DOCS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/DOCS.TAB
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/EDGE
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/LINKNAMES
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/OFFSETS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/POSITIONS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.idx/SCHEMA
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.key
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sbasic.tree
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.cfg
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.db
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.ht
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/CONTEXTS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/DICTIONARY
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/DOCS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/DOCS.TAB
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/EDGE
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/LINKNAMES
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/OFFSETS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/POSITIONS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.idx/SCHEMA
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.key
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/scalc.tree
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/schart.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.cfg
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.db
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.ht
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/CONTEXTS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/DICTIONARY
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/DOCS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/DOCS.TAB
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/EDGE
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/LINKNAMES
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/OFFSETS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/POSITIONS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.idx/SCHEMA
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/sdraw.key
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.cfg
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.db
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.ht
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/CONTEXTS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/DICTIONARY
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/DOCS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/DOCS.TAB
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/EDGE
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/LINKNAMES
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/OFFSETS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/POSITIONS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.idx/SCHEMA
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.key
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/simpress.tree
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.cfg
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.db
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.ht
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/CONTEXTS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/DICTIONARY
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/DOCS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/DOCS.TAB
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/EDGE
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/LINKNAMES
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/OFFSETS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/POSITIONS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.idx/SCHEMA
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.key
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/smath.tree
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.cfg
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.db
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.ht
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/CONTEXTS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/DICTIONARY
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/DOCS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/DOCS.TAB
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/EDGE
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/LINKNAMES
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/OFFSETS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/POSITIONS
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.idx/SCHEMA
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.jar
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.key
+OpenOffice.org1.1.1/help/${OPENOFFICE_HELPCODE}/swriter.tree
 OpenOffice.org1.1.1/help/main_transform.xsl
 OpenOffice.org1.1.1/program/acceptor.uno.so
 OpenOffice.org1.1.1/program/bootstraprc
@@ -158,30 +156,30 @@ OpenOffice.org1.1.1/program/defaults/pref/security-prefs.js
 OpenOffice.org1.1.1/program/defaults/pref/smime.js
 OpenOffice.org1.1.1/program/defaults/pref/unix.js
 OpenOffice.org1.1.1/program/defaults/pref/xpinstall.js
-OpenOffice.org1.1.1/program/filter/libegi645bi.so
-OpenOffice.org1.1.1/program/filter/libeme645bi.so
-OpenOffice.org1.1.1/program/filter/libemp645bi.so
-OpenOffice.org1.1.1/program/filter/libepb645bi.so
-OpenOffice.org1.1.1/program/filter/libepg645bi.so
-OpenOffice.org1.1.1/program/filter/libepn645bi.so
-OpenOffice.org1.1.1/program/filter/libepp645bi.so
-OpenOffice.org1.1.1/program/filter/libeps645bi.so
-OpenOffice.org1.1.1/program/filter/libept645bi.so
-OpenOffice.org1.1.1/program/filter/libera645bi.so
-OpenOffice.org1.1.1/program/filter/libeti645bi.so
-OpenOffice.org1.1.1/program/filter/libexp645bi.so
-OpenOffice.org1.1.1/program/filter/libicd645bi.so
-OpenOffice.org1.1.1/program/filter/libicg645bi.so
-OpenOffice.org1.1.1/program/filter/libidx645bi.so
-OpenOffice.org1.1.1/program/filter/libime645bi.so
-OpenOffice.org1.1.1/program/filter/libipb645bi.so
-OpenOffice.org1.1.1/program/filter/libipd645bi.so
-OpenOffice.org1.1.1/program/filter/libips645bi.so
-OpenOffice.org1.1.1/program/filter/libipt645bi.so
-OpenOffice.org1.1.1/program/filter/libipx645bi.so
-OpenOffice.org1.1.1/program/filter/libira645bi.so
-OpenOffice.org1.1.1/program/filter/libitg645bi.so
-OpenOffice.org1.1.1/program/filter/libiti645bi.so
+OpenOffice.org1.1.1/program/filter/libegi645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libeme645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libemp645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libepb645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libepg645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libepn645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libepp645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libeps645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libept645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libera645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libeti645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libexp645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libicd645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libicg645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libidx645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libime645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libipb645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libipd645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libips645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libipt645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libipx645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libira645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libitg645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/filter/libiti645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/fromtemplate
 OpenOffice.org1.1.1/program/getstyle-gnome
 OpenOffice.org1.1.1/program/gnomeint
@@ -190,16 +188,16 @@ OpenOffice.org1.1.1/program/instdb.ins
 OpenOffice.org1.1.1/program/introspection.uno.so
 OpenOffice.org1.1.1/program/invocadapt.uno.so
 OpenOffice.org1.1.1/program/invocation.uno.so
-OpenOffice.org1.1.1/program/libabp645bi.so
+OpenOffice.org1.1.1/program/libabp645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libadabas2.so
-OpenOffice.org1.1.1/program/libanalysis645bi.so
-OpenOffice.org1.1.1/program/libbasctl645bi.so
-OpenOffice.org1.1.1/program/libbib645bi.so
+OpenOffice.org1.1.1/program/libanalysis645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libbasctl645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libbib645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libcached1.so
-OpenOffice.org1.1.1/program/libcalc645bi.so
+OpenOffice.org1.1.1/program/libcalc645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libcfgmgr2.so
 OpenOffice.org1.1.1/program/libcmdmail.so
-OpenOffice.org1.1.1/program/libcnt645bi.so
+OpenOffice.org1.1.1/program/libcnt645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libcomphelp3gcc3.so
 OpenOffice.org1.1.1/program/libcppu.so
 OpenOffice.org1.1.1/program/libcppu.so.3
@@ -208,39 +206,39 @@ OpenOffice.org1.1.1/program/libcppuhelper3gcc3.so
 OpenOffice.org1.1.1/program/libcppuhelpergcc3.so
 OpenOffice.org1.1.1/program/libcppuhelpergcc3.so.3
 OpenOffice.org1.1.1/program/libcppuhelpergcc3.so.3.1.0
-OpenOffice.org1.1.1/program/libctl645bi.so
+OpenOffice.org1.1.1/program/libctl645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libcurl.so
-OpenOffice.org1.1.1/program/libdate645bi.so
+OpenOffice.org1.1.1/program/libdate645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libdb-3.2.so
 OpenOffice.org1.1.1/program/libdb_cxx-3.2.so
-OpenOffice.org1.1.1/program/libdba645bi.so
-OpenOffice.org1.1.1/program/libdbase645bi.so
-OpenOffice.org1.1.1/program/libdbi645bi.so
-OpenOffice.org1.1.1/program/libdbp645bi.so
+OpenOffice.org1.1.1/program/libdba645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libdbase645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libdbi645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libdbp645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libdbpool2.so
 OpenOffice.org1.1.1/program/libdbtools2.so
-OpenOffice.org1.1.1/program/libdbu645bi.so
+OpenOffice.org1.1.1/program/libdbu645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libdict_ja.so
 OpenOffice.org1.1.1/program/libdict_zh.so
-OpenOffice.org1.1.1/program/libdtransX11645bi.so
+OpenOffice.org1.1.1/program/libdtransX11645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libevoab1.so
 OpenOffice.org1.1.1/program/libevtatt.so
-OpenOffice.org1.1.1/program/libfile645bi.so
+OpenOffice.org1.1.1/program/libfile645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libfileacc.so
-OpenOffice.org1.1.1/program/libflash645bi.so
-OpenOffice.org1.1.1/program/libflat645bi.so
+OpenOffice.org1.1.1/program/libflash645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libflat645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libfreetype.so.9
-OpenOffice.org1.1.1/program/libfrm645bi.so
-OpenOffice.org1.1.1/program/libfwe645bi.so
-OpenOffice.org1.1.1/program/libfwi645bi.so
-OpenOffice.org1.1.1/program/libfwk645bi.so
-OpenOffice.org1.1.1/program/libfwl645bi.so
+OpenOffice.org1.1.1/program/libfrm645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libfwe645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libfwi645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libfwk645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libfwl645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libgcc3_uno.so
 OpenOffice.org1.1.1/program/libgkgfx.so
-OpenOffice.org1.1.1/program/libgo645bi.so
-OpenOffice.org1.1.1/program/libhyphen645bi.so
-OpenOffice.org1.1.1/program/libi18n645bi.so
-OpenOffice.org1.1.1/program/libi18npool645bi.so
+OpenOffice.org1.1.1/program/libgo645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libhyphen645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libi18n645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libi18npool645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libi18nregexpgcc3.so
 OpenOffice.org1.1.1/program/libi18nsearch.so
 OpenOffice.org1.1.1/program/libi18nutilgcc3.so
@@ -256,14 +254,14 @@ OpenOffice.org1.1.1/program/libicule.so.22.0
 OpenOffice.org1.1.1/program/libicuuc.so
 OpenOffice.org1.1.1/program/libicuuc.so.22
 OpenOffice.org1.1.1/program/libicuuc.so.22.0
-OpenOffice.org1.1.1/program/libj645bi_g.so
+OpenOffice.org1.1.1/program/libj645${OPENOFFICE_DLLSUFFIX}_g.so
 OpenOffice.org1.1.1/program/libldap50.so
-OpenOffice.org1.1.1/program/liblng645bi.so
+OpenOffice.org1.1.1/program/liblng645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/liblocaledata_en.so
 OpenOffice.org1.1.1/program/liblocaledata_es.so
 OpenOffice.org1.1.1/program/liblocaledata_euro.so
 OpenOffice.org1.1.1/program/liblocaledata_others.so
-OpenOffice.org1.1.1/program/liblth645bi.so
+OpenOffice.org1.1.1/program/liblth645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libmcnttype.so
 OpenOffice.org1.1.1/program/libmozab2.so
 OpenOffice.org1.1.1/program/libmozabdrv2.so
@@ -274,21 +272,21 @@ OpenOffice.org1.1.1/program/libmysql2.so
 OpenOffice.org1.1.1/program/libnspr4.so
 OpenOffice.org1.1.1/program/libodbc2.so
 OpenOffice.org1.1.1/program/libodbcbase2.so
-OpenOffice.org1.1.1/program/libofa645bi.so
-OpenOffice.org1.1.1/program/liboffacc645bi.so
+OpenOffice.org1.1.1/program/libofa645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/liboffacc645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libpackage2.so
-OpenOffice.org1.1.1/program/libpcr645bi.so
-OpenOffice.org1.1.1/program/libpdffilter645bi.so
-OpenOffice.org1.1.1/program/libpk645bi.so
-OpenOffice.org1.1.1/program/libpkgchk645bi.so
-OpenOffice.org1.1.1/program/libpl645bi.so
-OpenOffice.org1.1.1/program/libplacewarebi.so
+OpenOffice.org1.1.1/program/libpcr645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libpdffilter645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libpk645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libpkgchk645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libpl645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libplaceware${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libplc4.so
 OpenOffice.org1.1.1/program/libplds4.so
-OpenOffice.org1.1.1/program/libpreload645bi.so
+OpenOffice.org1.1.1/program/libpreload645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libprldap50.so
 OpenOffice.org1.1.1/program/libproxyset.so
-OpenOffice.org1.1.1/program/libpsp645bi.so
+OpenOffice.org1.1.1/program/libpsp645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libpython.so
 OpenOffice.org1.1.1/program/libpython.so.2
 OpenOffice.org1.1.1/program/libpython.so.2.2.2
@@ -296,8 +294,8 @@ OpenOffice.org1.1.1/program/libpyuno.so
 OpenOffice.org1.1.1/program/libreg.so
 OpenOffice.org1.1.1/program/libreg.so.3
 OpenOffice.org1.1.1/program/libreg.so.3.1.0
-OpenOffice.org1.1.1/program/libregmimetypes645bi.so
-OpenOffice.org1.1.1/program/libres645bi.so
+OpenOffice.org1.1.1/program/libregmimetypes645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libres645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/librmcxt.so
 OpenOffice.org1.1.1/program/librmcxt.so.3
 OpenOffice.org1.1.1/program/librmcxt.so.3.1.0
@@ -308,35 +306,35 @@ OpenOffice.org1.1.1/program/libsalhelper3gcc3.so
 OpenOffice.org1.1.1/program/libsalhelpergcc3.so
 OpenOffice.org1.1.1/program/libsalhelpergcc3.so.3
 OpenOffice.org1.1.1/program/libsalhelpergcc3.so.3.1.0
-OpenOffice.org1.1.1/program/libsb645bi.so
-OpenOffice.org1.1.1/program/libsc645bi.so
-OpenOffice.org1.1.1/program/libsch645bi.so
-OpenOffice.org1.1.1/program/libscn645bi.so
-OpenOffice.org1.1.1/program/libsd645bi.so
+OpenOffice.org1.1.1/program/libsb645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsc645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsch645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libscn645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsd645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libsdbc2.so
-OpenOffice.org1.1.1/program/libset645bi.so
-OpenOffice.org1.1.1/program/libsfx645bi.so
-OpenOffice.org1.1.1/program/libsm645bi.so
-OpenOffice.org1.1.1/program/libso645bi.so
-OpenOffice.org1.1.1/program/libsot645bi.so
-OpenOffice.org1.1.1/program/libspa645bi.so
-OpenOffice.org1.1.1/program/libspell645bi.so
-OpenOffice.org1.1.1/program/libspl645bi.so
+OpenOffice.org1.1.1/program/libset645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsfx645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsm645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libso645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsot645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libspa645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libspell645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libspl645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libsrtrs1.so
 OpenOffice.org1.1.1/program/libstlport_gcc.so
 OpenOffice.org1.1.1/program/libstore.so
 OpenOffice.org1.1.1/program/libstore.so.3
 OpenOffice.org1.1.1/program/libstore.so.3.1.0
-OpenOffice.org1.1.1/program/libsts645bi.so
-OpenOffice.org1.1.1/program/libsvg645bi.so
-OpenOffice.org1.1.1/program/libsvl645bi.so
-OpenOffice.org1.1.1/program/libsvt645bi.so
-OpenOffice.org1.1.1/program/libsvx645bi.so
-OpenOffice.org1.1.1/program/libsw645bi.so
+OpenOffice.org1.1.1/program/libsts645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsvg645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsvl645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsvt645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsvx645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libsw645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libsyssh.so
-OpenOffice.org1.1.1/program/libtk645bi.so
-OpenOffice.org1.1.1/program/libtl645bi.so
-OpenOffice.org1.1.1/program/libtplx645bi.so
+OpenOffice.org1.1.1/program/libtk645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libtl645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libtplx645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libtvhlp1.so
 OpenOffice.org1.1.1/program/libucb1.so
 OpenOffice.org1.1.1/program/libucbhelper2gcc3.so
@@ -346,21 +344,21 @@ OpenOffice.org1.1.1/program/libucpfile1.so
 OpenOffice.org1.1.1/program/libucpftp1.so
 OpenOffice.org1.1.1/program/libucphier1.so
 OpenOffice.org1.1.1/program/libucppkg1.so
-OpenOffice.org1.1.1/program/libulingu645bi.so
+OpenOffice.org1.1.1/program/libulingu645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/liburp_uno.so
-OpenOffice.org1.1.1/program/libusp645bi.so
-OpenOffice.org1.1.1/program/libutl645bi.so
-OpenOffice.org1.1.1/program/libuui645bi.so
-OpenOffice.org1.1.1/program/libvcl645bi.so
+OpenOffice.org1.1.1/program/libusp645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libutl645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libuui645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libvcl645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libvos3gcc3.so
-OpenOffice.org1.1.1/program/libwrp645bi.so
-OpenOffice.org1.1.1/program/libxcr645bi.so
-OpenOffice.org1.1.1/program/libxmx645bi.so
-OpenOffice.org1.1.1/program/libxo645bi.so
+OpenOffice.org1.1.1/program/libwrp645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libxcr645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libxmx645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libxo645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/libxpcom.so
-OpenOffice.org1.1.1/program/libxsltdlg645bi.so
-OpenOffice.org1.1.1/program/libxsltfilter645bi.so
-OpenOffice.org1.1.1/program/libzip645bi.so
+OpenOffice.org1.1.1/program/libxsltdlg645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libxsltfilter645${OPENOFFICE_DLLSUFFIX}.so
+OpenOffice.org1.1.1/program/libzip645${OPENOFFICE_DLLSUFFIX}.so
 OpenOffice.org1.1.1/program/msgbox-gnome
 OpenOffice.org1.1.1/program/namingservice.uno.so
 OpenOffice.org1.1.1/program/nestedreg.uno.so
@@ -1126,59 +1124,59 @@ OpenOffice.org1.1.1/program/pyuno.so
 OpenOffice.org1.1.1/program/pyunorc
 OpenOffice.org1.1.1/program/regtypeprov.uno.so
 OpenOffice.org1.1.1/program/remotebridge.uno.so
-OpenOffice.org1.1.1/program/resource/abp64501.res
-OpenOffice.org1.1.1/program/resource/analysis64501.res
-OpenOffice.org1.1.1/program/resource/basctl64501.res
-OpenOffice.org1.1.1/program/resource/bib64501.res
-OpenOffice.org1.1.1/program/resource/cal64501.res
-OpenOffice.org1.1.1/program/resource/com64501.res
-OpenOffice.org1.1.1/program/resource/date64501.res
-OpenOffice.org1.1.1/program/resource/dba64501.res
-OpenOffice.org1.1.1/program/resource/dbi64501.res
-OpenOffice.org1.1.1/program/resource/dbp64501.res
-OpenOffice.org1.1.1/program/resource/dbu64501.res
-OpenOffice.org1.1.1/program/resource/dbw64501.res
-OpenOffice.org1.1.1/program/resource/dkt64501.res
-OpenOffice.org1.1.1/program/resource/egi64501.res
-OpenOffice.org1.1.1/program/resource/eme64501.res
-OpenOffice.org1.1.1/program/resource/epb64501.res
-OpenOffice.org1.1.1/program/resource/epg64501.res
-OpenOffice.org1.1.1/program/resource/epn64501.res
-OpenOffice.org1.1.1/program/resource/epp64501.res
-OpenOffice.org1.1.1/program/resource/eps64501.res
-OpenOffice.org1.1.1/program/resource/ept64501.res
-OpenOffice.org1.1.1/program/resource/eur64501.res
-OpenOffice.org1.1.1/program/resource/frm64501.res
-OpenOffice.org1.1.1/program/resource/fwe64501.res
-OpenOffice.org1.1.1/program/resource/gal64501.res
-OpenOffice.org1.1.1/program/resource/imp64501.res
-OpenOffice.org1.1.1/program/resource/iso64501.res
-OpenOffice.org1.1.1/program/resource/lgd64501.res
-OpenOffice.org1.1.1/program/resource/ofa64501.res
-OpenOffice.org1.1.1/program/resource/ooo64501.res
-OpenOffice.org1.1.1/program/resource/pcr64501.res
-OpenOffice.org1.1.1/program/resource/pdffilter64501.res
-OpenOffice.org1.1.1/program/resource/preload64501.res
-OpenOffice.org1.1.1/program/resource/san64501.res
-OpenOffice.org1.1.1/program/resource/sc64501.res
-OpenOffice.org1.1.1/program/resource/sch64501.res
-OpenOffice.org1.1.1/program/resource/sd64501.res
-OpenOffice.org1.1.1/program/resource/set64501.res
-OpenOffice.org1.1.1/program/resource/sfx64501.res
-OpenOffice.org1.1.1/program/resource/sm64501.res
-OpenOffice.org1.1.1/program/resource/spa64501.res
-OpenOffice.org1.1.1/program/resource/svp64501.res
-OpenOffice.org1.1.1/program/resource/svs64501.res
-OpenOffice.org1.1.1/program/resource/svt64501.res
-OpenOffice.org1.1.1/program/resource/svx64501.res
-OpenOffice.org1.1.1/program/resource/sw64501.res
-OpenOffice.org1.1.1/program/resource/tk64501.res
-OpenOffice.org1.1.1/program/resource/tpl64501.res
-OpenOffice.org1.1.1/program/resource/tplx64501.res
-OpenOffice.org1.1.1/program/resource/uui64501.res
-OpenOffice.org1.1.1/program/resource/vcl64501.res
-OpenOffice.org1.1.1/program/resource/wwz64501.res
-OpenOffice.org1.1.1/program/resource/xsltdlg64501.res
+OpenOffice.org1.1.1/program/resource/abp645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/analysis645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/basctl645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/bib645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/cal645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/com645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/date645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/dba645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/dbi645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/dbp645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/dbu645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/dbw645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/dkt645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/egi645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/eme645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/epb645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/epg645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/epn645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/epp645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/eps645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/ept645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/eur645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/frm645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/fwe645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/gal645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/imp645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/iso645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/lgd645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/ofa645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/ooo645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/pcr645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/pdffilter645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/preload645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/san645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/sc645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/sch645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/sd645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/set645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/sfx645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/sm645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/spa645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/svp645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/svs645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/svt645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/svx645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/sw645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/tk645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/tpl645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/tplx645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/uui645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/vcl645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/wwz645${OPENOFFICE_LANGCODE}.res
+OpenOffice.org1.1.1/program/resource/xsltdlg645${OPENOFFICE_LANGCODE}.res
 OpenOffice.org1.1.1/program/sagenda
 OpenOffice.org1.1.1/program/sax.uno.so
 OpenOffice.org1.1.1/program/scalc
@@ -1222,12 +1220,6 @@ OpenOffice.org1.1.1/program/unorc
 OpenOffice.org1.1.1/program/user_registry.xsl
 OpenOffice.org1.1.1/program/uuresolver.uno.so
 OpenOffice.org1.1.1/setup
-OpenOffice.org1.1.1/share/autocorr/acor1033.dat
-OpenOffice.org1.1.1/share/autocorr/acor2057.dat
-OpenOffice.org1.1.1/share/autotext/english/crdbus50.bau
-OpenOffice.org1.1.1/share/autotext/english/crdbus54.bau
-OpenOffice.org1.1.1/share/autotext/english/standard.bau
-OpenOffice.org1.1.1/share/autotext/english/template.bau
 OpenOffice.org1.1.1/share/basic/Depot/CommonLang.xba
 OpenOffice.org1.1.1/share/basic/Depot/Currency.xba
 OpenOffice.org1.1.1/share/basic/Depot/Depot.xba
@@ -3786,10 +3778,10 @@ OpenOffice.org1.1.1/share/psprint/fontmetric/ZapfChancery-MediumItalic.afm
 OpenOffice.org1.1.1/share/psprint/fontmetric/ZapfDingbats.afm
 OpenOffice.org1.1.1/share/psprint/fontmetric/pspfontcache
 OpenOffice.org1.1.1/share/psprint/psprint.conf
-OpenOffice.org1.1.1/share/readme/LICENSE01
-OpenOffice.org1.1.1/share/readme/LICENSE01.html
-OpenOffice.org1.1.1/share/readme/README01
-OpenOffice.org1.1.1/share/readme/README01.html
+OpenOffice.org1.1.1/share/readme/LICENSE${OPENOFFICE_LANGCODE}
+OpenOffice.org1.1.1/share/readme/LICENSE${OPENOFFICE_LANGCODE}.html
+OpenOffice.org1.1.1/share/readme/README${OPENOFFICE_LANGCODE}
+OpenOffice.org1.1.1/share/readme/README${OPENOFFICE_LANGCODE}.html
 OpenOffice.org1.1.1/share/registry/data/org/openoffice/Inet.xcu
 OpenOffice.org1.1.1/share/registry/data/org/openoffice/Office/Calc.xcu
 OpenOffice.org1.1.1/share/registry/data/org/openoffice/Office/Common.xcu
@@ -3807,41 +3799,41 @@ OpenOffice.org1.1.1/share/registry/data/org/openoffice/Office/Writer.xcu
 OpenOffice.org1.1.1/share/registry/data/org/openoffice/Setup.xcu
 OpenOffice.org1.1.1/share/registry/data/org/openoffice/VCL.xcu
 OpenOffice.org1.1.1/share/registry/data/org/openoffice/ucb/Configuration.xcu
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Inet.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Addons.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Calc.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Chart.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Commands.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Common.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Common.xcu
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/DataAccess.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/DataAccess.xcu
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Draw.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Impress.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Java.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Jobs.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Labels.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Linguistic.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Math.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/ProtocolHandler.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/SFX.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/SFX.xcu
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Security.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Substitution.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/TypeDetection.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/TypeDetection.xcu
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/UI.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/UI.xcu
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Views.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Writer.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/Writer.xcu
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office/WriterWeb.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Setup.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/UserProfile.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/VCL.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/ucb/Configuration.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/ucb/Hierarchy.properties
-OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/ucb/Store.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Inet.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Addons.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Calc.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Chart.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Commands.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Common.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Common.xcu
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/DataAccess.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/DataAccess.xcu
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Draw.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Impress.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Java.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Jobs.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Labels.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Linguistic.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Math.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/ProtocolHandler.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/SFX.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/SFX.xcu
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Security.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Substitution.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/TypeDetection.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/TypeDetection.xcu
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/UI.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/UI.xcu
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Views.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Writer.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/Writer.xcu
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Office/WriterWeb.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/Setup.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/UserProfile.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/VCL.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/ucb/Configuration.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/ucb/Hierarchy.properties
+OpenOffice.org1.1.1/share/registry/res/${OPENOFFICE_ISOCODE}/org/openoffice/ucb/Store.properties
 OpenOffice.org1.1.1/share/registry/schema/org/openoffice/Inet.xcs
 OpenOffice.org1.1.1/share/registry/schema/org/openoffice/Office/Addons.xcs
 OpenOffice.org1.1.1/share/registry/schema/org/openoffice/Office/Calc.xcs
@@ -3871,186 +3863,22 @@ OpenOffice.org1.1.1/share/registry/schema/org/openoffice/VCL.xcs
 OpenOffice.org1.1.1/share/registry/schema/org/openoffice/ucb/Configuration.xcs
 OpenOffice.org1.1.1/share/registry/schema/org/openoffice/ucb/Hierarchy.xcs
 OpenOffice.org1.1.1/share/registry/schema/org/openoffice/ucb/Store.xcs
-OpenOffice.org1.1.1/share/template/english/internal/html.stw
-OpenOffice.org1.1.1/share/template/english/internal/idxexample.sxw
-OpenOffice.org1.1.1/share/template/english/internal/url_transfer.htm
-OpenOffice.org1.1.1/share/template/english/layout/lyt-cool.sti
-OpenOffice.org1.1.1/share/template/english/layout/lyt-darkblue.sti
-OpenOffice.org1.1.1/share/template/english/presnt/prs-novelty.sti
-OpenOffice.org1.1.1/share/template/english/presnt/prs-strategy.sti
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_1.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_1_hc.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_2.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_2_hc.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_3.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_3_hc.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_4.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_4_hc.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_5.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Arrange_5_hc.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/FormWizard_1.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/FormWizard_2.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Import_1.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Import_3.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/Import_4.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/MS-Import_2-1.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/MS-Import_2-2.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/MS-Import_2-3.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/XML-Import_2-1.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/XML-Import_2-2.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/XML-Import_2-3.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/XML-Import_2-4.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/brasil.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/cancel_down.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/cancel_up.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/china.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/denmark.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/down.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/end.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/euro_1.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/euro_2.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/euro_3.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/finland.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/france.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/germany.wmf
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/greece.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/italia.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/japan.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/landscape.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/nedland.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/okay_down.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/okay_up.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/polska.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/portrait.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/portugal.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/report.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/russia.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/spain.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/sweden.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/taiwan.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/turkey.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/up.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/usa.gif
-OpenOffice.org1.1.1/share/template/english/wizard/bitmap/webwizard.bmp
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-01.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-011.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-012.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-02.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-021.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-022.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-03.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-031.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-032.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-04.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-041.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-042.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-05.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-051.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-052.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-06.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-061.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-062.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/cnt-default.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-01.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-02.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-03.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-04.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-05.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-06.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-07.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-08.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-09.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-10.stw
-OpenOffice.org1.1.1/share/template/english/wizard/report/stl-default.stw
-OpenOffice.org1.1.1/share/template/english/wizard/styles/black_white.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/blackberry.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/default.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/diner.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/fall.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/glacier.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/green_grapes.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/jeans.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/marine.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/millennium.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/nature.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/neon.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/night.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/nostalgic.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/pastell.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/pool.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/pumpkin.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/sunstyle.stc
-OpenOffice.org1.1.1/share/template/english/wizard/styles/xos.stc
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-album.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-bilingual.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-chapters.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-empty.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-fixonecol.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-fixtwocol.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-formcontact.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-formcustomer.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-formfix.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-formvar.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-list.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-onepic.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-standard.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/cnt-twotitles.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-banana.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-blkjeans.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-blue.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-blueblock.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-bluejeans.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-fieryred.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-hightech.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-mint.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-music.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-nostalg.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-orange.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-petrol.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-seventies.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-standard.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-strwbryice.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-sun.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-tracks.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-turquoise.stw
-OpenOffice.org1.1.1/share/template/english/wizard/web/stl-wetblue.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizagn1.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizagn2.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizagn3.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizbrf1.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizbrf2.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizbrf3.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizfax1.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizfax2.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizfax3.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizmem1.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizmem2.stw
-OpenOffice.org1.1.1/share/template/english/wizard/wizmem3.stw
-OpenOffice.org1.1.1/share/wordbook/english/soffice.dic
-OpenOffice.org1.1.1/share/wordbook/english/sun.dic
 OpenOffice.org1.1.1/spadmin
-OpenOffice.org1.1.1/user/autotext/english/mytexts.bau
 OpenOffice.org1.1.1/user/basic/Standard/Module1.xba
 OpenOffice.org1.1.1/user/basic/Standard/dialog.xlb
 OpenOffice.org1.1.1/user/basic/Standard/script.xlb
 OpenOffice.org1.1.1/user/basic/dialog.xlc
 OpenOffice.org1.1.1/user/basic/script.xlc
-OpenOffice.org1.1.1/user/config/arrowhd.soe
 OpenOffice.org1.1.1/user/config/autotbl.fmt
-OpenOffice.org1.1.1/user/config/classic.sog
 OpenOffice.org1.1.1/user/config/cmyk.soc
 OpenOffice.org1.1.1/user/config/gallery.soc
-OpenOffice.org1.1.1/user/config/hatching.soh
 OpenOffice.org1.1.1/user/config/html.soc
-OpenOffice.org1.1.1/user/config/modern.sog
-OpenOffice.org1.1.1/user/config/palette.soc
 OpenOffice.org1.1.1/user/config/standard.sob
 OpenOffice.org1.1.1/user/config/standard.soc
 OpenOffice.org1.1.1/user/config/standard.sod
 OpenOffice.org1.1.1/user/config/standard.soe
 OpenOffice.org1.1.1/user/config/standard.sog
 OpenOffice.org1.1.1/user/config/standard.soh
-OpenOffice.org1.1.1/user/config/styles.sod
 OpenOffice.org1.1.1/user/config/sun-color.soc
 OpenOffice.org1.1.1/user/config/web.soc
 OpenOffice.org1.1.1/user/database/biblio/biblio.dbf
@@ -4063,215 +3891,3 @@ bin/sdraw
 bin/simpress
 bin/soffice
 bin/swriter
-@dirrm OpenOffice.org1.1.1/user/wordbook
-@dirrm OpenOffice.org1.1.1/user/uno_packages
-@dirrm OpenOffice.org1.1.1/user/template
-@dirrm OpenOffice.org1.1.1/user/temp
-@dirrm OpenOffice.org1.1.1/user/store
-@dirrm OpenOffice.org1.1.1/user/psprint/fontmetric
-@dirrm OpenOffice.org1.1.1/user/psprint/driver
-@dirrm OpenOffice.org1.1.1/user/psprint
-@dirrm OpenOffice.org1.1.1/user/plugin
-@dirrm OpenOffice.org1.1.1/user/gallery
-@dirrm OpenOffice.org1.1.1/user/database/biblio
-@dirrm OpenOffice.org1.1.1/user/database
-@dirrm OpenOffice.org1.1.1/user/config
-@dirrm OpenOffice.org1.1.1/user/basic/Standard
-@dirrm OpenOffice.org1.1.1/user/basic
-@dirrm OpenOffice.org1.1.1/user/backup
-@dirrm OpenOffice.org1.1.1/user/autotext/english
-@dirrm OpenOffice.org1.1.1/user/autotext
-@dirrm OpenOffice.org1.1.1/user/autocorr
-@dirrm OpenOffice.org1.1.1/user
-@dirrm OpenOffice.org1.1.1/share/wordbook/english
-@dirrm OpenOffice.org1.1.1/share/wordbook
-@dirrm OpenOffice.org1.1.1/share/uno_packages
-@dirrm OpenOffice.org1.1.1/share/template/english/wizard/web
-@dirrm OpenOffice.org1.1.1/share/template/english/wizard/styles
-@dirrm OpenOffice.org1.1.1/share/template/english/wizard/report
-@dirrm OpenOffice.org1.1.1/share/template/english/wizard/bitmap
-@dirrm OpenOffice.org1.1.1/share/template/english/wizard
-@dirrm OpenOffice.org1.1.1/share/template/english/presnt
-@dirrm OpenOffice.org1.1.1/share/template/english/layout
-@dirrm OpenOffice.org1.1.1/share/template/english/internal
-@dirrm OpenOffice.org1.1.1/share/template/english
-@dirrm OpenOffice.org1.1.1/share/template
-@dirrm OpenOffice.org1.1.1/share/samples/english
-@dirrm OpenOffice.org1.1.1/share/samples
-@dirrm OpenOffice.org1.1.1/share/registry/schema/org/openoffice/ucb
-@dirrm OpenOffice.org1.1.1/share/registry/schema/org/openoffice/Office
-@dirrm OpenOffice.org1.1.1/share/registry/schema/org/openoffice
-@dirrm OpenOffice.org1.1.1/share/registry/schema/org
-@dirrm OpenOffice.org1.1.1/share/registry/schema
-@dirrm OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/ucb
-@dirrm OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice/Office
-@dirrm OpenOffice.org1.1.1/share/registry/res/en-US/org/openoffice
-@dirrm OpenOffice.org1.1.1/share/registry/res/en-US/org
-@dirrm OpenOffice.org1.1.1/share/registry/res/en-US
-@dirrm OpenOffice.org1.1.1/share/registry/res
-@dirrm OpenOffice.org1.1.1/share/registry/data/org/openoffice/ucb
-@dirrm OpenOffice.org1.1.1/share/registry/data/org/openoffice/Office
-@dirrm OpenOffice.org1.1.1/share/registry/data/org/openoffice
-@dirrm OpenOffice.org1.1.1/share/registry/data/org
-@dirrm OpenOffice.org1.1.1/share/registry/data
-@dirrm OpenOffice.org1.1.1/share/registry
-@dirrm OpenOffice.org1.1.1/share/readme
-@dirrm OpenOffice.org1.1.1/share/psprint/fontmetric
-@dirrm OpenOffice.org1.1.1/share/psprint/driver
-@dirrm OpenOffice.org1.1.1/share/psprint
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/mimelnk/application
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/mimelnk
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/locolor/32x32/apps
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/locolor/32x32
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/locolor/22x22/apps
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/locolor/22x22
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/locolor/16x16/apps
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/locolor/16x16
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/locolor
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/48x48/apps
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/48x48
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/32x32/apps
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/32x32
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/22x22/apps
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/22x22
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/16x16/apps
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor/16x16
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons/hicolor
-@dirrm OpenOffice.org1.1.1/share/kde/net/share/icons
-@dirrm OpenOffice.org1.1.1/share/kde/net/share
-@dirrm OpenOffice.org1.1.1/share/kde/net
-@dirrm OpenOffice.org1.1.1/share/kde
-@dirrm OpenOffice.org1.1.1/share/icons/document-icons
-@dirrm OpenOffice.org1.1.1/share/icons
-@dirrm OpenOffice.org1.1.1/share/gnome/net
-@dirrm OpenOffice.org1.1.1/share/gnome
-@dirrm OpenOffice.org1.1.1/share/gallery/www-graf
-@dirrm OpenOffice.org1.1.1/share/gallery/www-back
-@dirrm OpenOffice.org1.1.1/share/gallery/sounds
-@dirrm OpenOffice.org1.1.1/share/gallery/rulers
-@dirrm OpenOffice.org1.1.1/share/gallery/htmlexpo
-@dirrm OpenOffice.org1.1.1/share/gallery/bullets
-@dirrm OpenOffice.org1.1.1/share/gallery
-@dirrm OpenOffice.org1.1.1/share/fonts/truetype
-@dirrm OpenOffice.org1.1.1/share/fonts
-@dirrm OpenOffice.org1.1.1/share/dtd/officedocument/1_0
-@dirrm OpenOffice.org1.1.1/share/dtd/officedocument
-@dirrm OpenOffice.org1.1.1/share/dtd/math/1_01
-@dirrm OpenOffice.org1.1.1/share/dtd/math
-@dirrm OpenOffice.org1.1.1/share/dtd
-@dirrm OpenOffice.org1.1.1/share/dict/ooo
-@dirrm OpenOffice.org1.1.1/share/dict
-@dirrm OpenOffice.org1.1.1/share/config/webcast
-@dirrm OpenOffice.org1.1.1/share/config/symbol
-@dirrm OpenOffice.org1.1.1/share/config
-@dirrm OpenOffice.org1.1.1/share/cde/types/zh_TW.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/zh_TW.EUC
-@dirrm OpenOffice.org1.1.1/share/cde/types/zh_TW.BIG5
-@dirrm OpenOffice.org1.1.1/share/cde/types/zh_CN.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/zh_CN.GBK
-@dirrm OpenOffice.org1.1.1/share/cde/types/zh_CN.EUC
-@dirrm OpenOffice.org1.1.1/share/cde/types/tr.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/tr
-@dirrm OpenOffice.org1.1.1/share/cde/types/sv.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/sv
-@dirrm OpenOffice.org1.1.1/share/cde/types/sl.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/sl
-@dirrm OpenOffice.org1.1.1/share/cde/types/sk.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/sk
-@dirrm OpenOffice.org1.1.1/share/cde/types/ru.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/ru.KOI8-R
-@dirrm OpenOffice.org1.1.1/share/cde/types/ru.ISO8859-5
-@dirrm OpenOffice.org1.1.1/share/cde/types/ru.ANSI-1251
-@dirrm OpenOffice.org1.1.1/share/cde/types/ru
-@dirrm OpenOffice.org1.1.1/share/cde/types/pt.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/pt
-@dirrm OpenOffice.org1.1.1/share/cde/types/pl.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/pl
-@dirrm OpenOffice.org1.1.1/share/cde/types/nl.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/nl
-@dirrm OpenOffice.org1.1.1/share/cde/types/ko_KR.EUC
-@dirrm OpenOffice.org1.1.1/share/cde/types/ko.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/ko
-@dirrm OpenOffice.org1.1.1/share/cde/types/ja_JP.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/ja_JP.PCK
-@dirrm OpenOffice.org1.1.1/share/cde/types/ja_JP.EUCJP
-@dirrm OpenOffice.org1.1.1/share/cde/types/ja
-@dirrm OpenOffice.org1.1.1/share/cde/types/it.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/it
-@dirrm OpenOffice.org1.1.1/share/cde/types/hu.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/hu
-@dirrm OpenOffice.org1.1.1/share/cde/types/gr
-@dirrm OpenOffice.org1.1.1/share/cde/types/fr.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/fr
-@dirrm OpenOffice.org1.1.1/share/cde/types/fi.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/fi
-@dirrm OpenOffice.org1.1.1/share/cde/types/et.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/et
-@dirrm OpenOffice.org1.1.1/share/cde/types/es.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/es
-@dirrm OpenOffice.org1.1.1/share/cde/types/en.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/en
-@dirrm OpenOffice.org1.1.1/share/cde/types/de.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/de
-@dirrm OpenOffice.org1.1.1/share/cde/types/da.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/da
-@dirrm OpenOffice.org1.1.1/share/cde/types/cs.UTF-8
-@dirrm OpenOffice.org1.1.1/share/cde/types/cs
-@dirrm OpenOffice.org1.1.1/share/cde/types/ca
-@dirrm OpenOffice.org1.1.1/share/cde/types/ar
-@dirrm OpenOffice.org1.1.1/share/cde/types
-@dirrm OpenOffice.org1.1.1/share/cde/icons
-@dirrm OpenOffice.org1.1.1/share/cde
-@dirrm OpenOffice.org1.1.1/share/basic/WebWizard
-@dirrm OpenOffice.org1.1.1/share/basic/Tools
-@dirrm OpenOffice.org1.1.1/share/basic/Template
-@dirrm OpenOffice.org1.1.1/share/basic/Schedule
-@dirrm OpenOffice.org1.1.1/share/basic/Launcher
-@dirrm OpenOffice.org1.1.1/share/basic/ImportWizard
-@dirrm OpenOffice.org1.1.1/share/basic/Gimmicks
-@dirrm OpenOffice.org1.1.1/share/basic/FormWizard
-@dirrm OpenOffice.org1.1.1/share/basic/Euro
-@dirrm OpenOffice.org1.1.1/share/basic/Depot
-@dirrm OpenOffice.org1.1.1/share/basic
-@dirrm OpenOffice.org1.1.1/share/autotext/english
-@dirrm OpenOffice.org1.1.1/share/autotext
-@dirrm OpenOffice.org1.1.1/share/autocorr
-@dirrm OpenOffice.org1.1.1/share
-@dirrm OpenOffice.org1.1.1/program/resource
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/xml/sax
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/xml/parsers
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/xml/dom
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/xml
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/test/output
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/test/data
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/test
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/site-packages
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/plat-linux2
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/lib-tk
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/lib-old
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/lib-dynload
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/hotshot
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/encodings
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/email
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/distutils/command
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/distutils
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/curses
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib/compiler
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/lib
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2/bin
-@dirrm OpenOffice.org1.1.1/program/python-core-2.2.2
-@dirrm OpenOffice.org1.1.1/program/filter
-@dirrm OpenOffice.org1.1.1/program/defaults/pref
-@dirrm OpenOffice.org1.1.1/program/defaults
-@dirrm OpenOffice.org1.1.1/program/components
-@dirrm OpenOffice.org1.1.1/program/addin
-@dirrm OpenOffice.org1.1.1/program
-@dirrm OpenOffice.org1.1.1/help/en/swriter.idx
-@dirrm OpenOffice.org1.1.1/help/en/smath.idx
-@dirrm OpenOffice.org1.1.1/help/en/simpress.idx
-@dirrm OpenOffice.org1.1.1/help/en/sdraw.idx
-@dirrm OpenOffice.org1.1.1/help/en/scalc.idx
-@dirrm OpenOffice.org1.1.1/help/en/sbasic.idx
-@dirrm OpenOffice.org1.1.1/help/en
-@dirrm OpenOffice.org1.1.1/help
-@dirrm OpenOffice.org1.1.1
