@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2004/08/31 16:04:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/09/21 17:07:58 jmmv Exp $
 #
 
-DISTNAME=	epiphany-1.2.8
+DISTNAME=	epiphany-1.4.0
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.4/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -21,6 +21,9 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/find
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
+
 GCONF2_SCHEMAS=		epiphany.schemas
 GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
 
@@ -31,6 +34,7 @@ GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
