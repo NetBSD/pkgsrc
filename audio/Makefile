@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2002/08/25 18:36:39 gson Exp $
+# $NetBSD: Makefile,v 1.150 2002/08/25 18:53:14 gson Exp $
 #
 
 COMMENT=	Audio tools
@@ -141,6 +141,7 @@ SUBDIR+=	timidity
 SUBDIR+=	tosha
 SUBDIR+=	tracker
 SUBDIR+=	vorbis-tools
+SUBDIR+=	wavesurfer
 SUBDIR+=	wmmixer
 SUBDIR+=	wmmp3
 SUBDIR+=	wmsmixer
