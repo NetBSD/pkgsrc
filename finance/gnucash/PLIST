@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/12/26 21:34:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/02/09 20:20:50 wiz Exp $
 bin/dump-finance-quote
 bin/gnc-prices
 bin/gnc-test-env
@@ -504,6 +504,7 @@ share/gnucash/guile-modules/gnucash/report/fancy-invoice.scm
 share/gnucash/guile-modules/gnucash/report/hello-world.scm
 share/gnucash/guile-modules/gnucash/report/iframe-url.scm
 share/gnucash/guile-modules/gnucash/report/invoice.scm
+share/gnucash/guile-modules/gnucash/report/locale-specific/de_DE.scm
 share/gnucash/guile-modules/gnucash/report/locale-specific/us.scm
 share/gnucash/guile-modules/gnucash/report/net-barchart.scm
 share/gnucash/guile-modules/gnucash/report/owner-report.scm
@@ -519,11 +520,13 @@ share/gnucash/guile-modules/gnucash/report/standard-reports.scm
 share/gnucash/guile-modules/gnucash/report/stylesheet-fancy.scm
 share/gnucash/guile-modules/gnucash/report/stylesheet-plain.scm
 share/gnucash/guile-modules/gnucash/report/stylesheets.scm
+share/gnucash/guile-modules/gnucash/report/taxtxf-de_DE.scm
 share/gnucash/guile-modules/gnucash/report/taxtxf.scm
 share/gnucash/guile-modules/gnucash/report/transaction.scm
 share/gnucash/guile-modules/gnucash/report/utility-reports.scm
 share/gnucash/guile-modules/gnucash/report/view-column.scm
 share/gnucash/guile-modules/gnucash/report/welcome-to-gnucash.scm
+share/gnucash/guile-modules/gnucash/tax/de_DE.scm
 share/gnucash/guile-modules/gnucash/tax/us.scm
 share/gnucash/guile-modules/www/cgi.scm
 share/gnucash/guile-modules/www/http.scm
@@ -582,6 +585,8 @@ share/gnucash/scm/simple-obj.scm
 share/gnucash/scm/substring-search.scm
 share/gnucash/scm/tip-list.scm
 share/gnucash/scm/tip-of-the-day.scm
+share/gnucash/scm/txf-de_DE.scm
+share/gnucash/scm/txf-help-de_DE.scm
 share/gnucash/scm/txf-help.scm
 share/gnucash/scm/txf.scm
 share/gnucash/scm/xml-generator.scm
