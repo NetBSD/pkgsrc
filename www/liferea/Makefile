@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:26 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/23 14:02:34 jmmv Exp $
 
 DISTNAME=		liferea-0.5.3
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -11,16 +11,21 @@ COMMENT=		Simple FeedReader clone for reading RSS/RDF feeds
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
-USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	libtool
-USE_GNU_TOOLS+=		make
-USE_X11=		yes
 USE_DIRS+=		xdg-1.1
+USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
 
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+SHLIBTOOL_OVERRIDE=	libtool
+
+GCONF2_SCHEMAS=		liferea.schemas
+
+.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
