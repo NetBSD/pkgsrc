@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/06 14:47:35 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/06 15:53:26 rh Exp $
 #
 # This Makefile fragment is included by packages that use gnome-core.
 #
@@ -17,43 +17,49 @@ GNOME_CORE_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gnome-core?=	gnome-core>=0.2
-DEPENDS+=			${BUILDLINK_DEPENDS.gnome-core}:../../x11/gnome-core
+BUILDLINK_DEPENDS.gnome-core?=	gnome-core>=1.0.53
+DEPENDS+=	${BUILDLINK_DEPENDS.gnome-core}:../../x11/gnome-core
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-core=gnome-core
-BUILDLINK_PREFIX.gnome-core_DEFAULTS=	${X11PREFIX}
-BUILDLINK_FILES.gnome-core=	include/gnome-core/*
-BUILDLINK_FILES.gnome-core+=	lib/libgnome-core.*
+BUILDLINK_PREFIX.gnome-core_DEFAULT=	${X11PREFIX}
+BUILDLINK_FILES.gnome-core=	include/applet-widget.h
+BUILDLINK_FILES.gnome-core+=	include/gnome-panel.h
+BUILDLINK_FILES.gnome-core+=	include/status-docklet.h
+BUILDLINK_FILES.gnome-core+=	lib/libfish_applet.*
+BUILDLINK_FILES.gnome-core+=	lib/libgen_util_applet.*
+BUILDLINK_FILES.gnome-core+=	lib/libpanel_applet.*
+BUILDLINK_FILES.gnome-core+=	lib/libpanel_status.*
 
-.include "../../devel/bonobo/buildlink.mk"
-.include "../../devel/gal/buildlink.mk"
-.include "../../print/gnome-print/buildlink.mk"
-.include "../../www/glibwww/buildlink.mk"
-.include "../../www/libghttp/buildlink.mk"
-.include "../../x11/controlcenter/buildlink.mk"
+#.include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
+#.include "../../www/libghttp/buildlink.mk"
+#.include "../../textproc/libxml/buildlink.mk"
+#.include "../../devel/libglade/buildlink.mk"
+#.include "../../www/gtkhtml/buildlink.mk"
+#.include "../../devel/gettext-lib/buildlink.mk"
 
 BUILDLINK_TARGETS.gnome-core=	gnome-core-buildlink
-BUILDLINK_TARGETS.gnome-core+=	gnome-core-buildlink-config-wrapper
+BUILDLINK_TARGETS.gnome-core+=	docklets-buildlink-config-wrapper
+BUILDLINK_TARGETS.gnome-core+=	applets-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gnome-core}
 
-BUILDLINK_CONFIG.applets=	${BUILDLINK_PREFIX.gnome-core}/lib/appletsConf.sh
-BUILDLINK_CONFIG.docklets=	${BUILDLINK_PREFIX.gnome-core}/lib/dockletsConf.sh
-BUILDLINK_CONFIG_WRAPPER.applets=	${BUILDLINK_DIR}/lib/appletsConf.sh
+BUILDLINK_CONFIG.docklets=		${BUILDLINK_PREFIX.gnome-core}/lib/dockletsConf.sh
 BUILDLINK_CONFIG_WRAPPER.docklets=	${BUILDLINK_DIR}/lib/dockletsConf.sh
 
+BUILDLINK_CONFIG.applets=		${BUILDLINK_PREFIX.gnome-core}/lib/appletsConf.sh
+BUILDLINK_CONFIG_WRAPPER.applets=	${BUILDLINK_DIR}/lib/appletsConf.sh
+
 .if defined(USE_CONFIG_WRAPPER)
-APPLETS_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.applets}
-DOCKLETS_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.docklets}
-CONFIGURE_ENV+=			APPLETS_CONFIG="${APPLETS_CONFIG}"
-CONFIGURE_ENV+=			DOCKLETS_CONFIG="${DOCKLETS_CONFIG}"
-MAKE_ENV+=			APPLETS_CONFIG="${APPLETS_CONFIG}"
-MAKE_ENV+=			DOCKLETS_CONFIG="${DOCKLETS_CONFIG}"
+DOCKLETS_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.gnome-core}
+APPLETS_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.applets}
+CONFIGURE_ENV+=		DOCKLETS_CONFIG="${DOCKLETS_CONFIG}"
+CONFIGURE_ENV+=		APPLETS_CONFIG="${APPLETS_CONFIG}"
+MAKE_ENV+=		DOCKLETS_CONFIG="${DOCKLETS_CONFIG}"
+MAKE_ENV+=		APPLETS_CONFIG="${APPLETS_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.gnome-core}
 gnome-core-buildlink: _BUILDLINK_USE
-gnome-core-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
+docklets-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
+applets-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
 
 .endif	# GNOME_CORE_BUILDLINK_MK
-
-appletsConf.sh dockletsConf.sh
