@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.88 2004/12/15 14:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2005/01/03 03:37:08 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
 PKGREVISION=		10
 CATEGORIES+=		lang devel
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.perl.com/
 COMMENT=		Practical Extraction and Report Language
 
