@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/12/29 16:53:34 abs Exp $
+# $NetBSD: Makefile,v 1.13 2001/12/30 08:00:46 lukem Exp $
 
 DISTNAME=	libvorbis-1.0rc2
 PKGNAME=	libvorbis-1.0.0.6
@@ -20,12 +20,9 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
-.if (${MACHINE_ARCH} == "arm32")
-ARM32_COMPILER_WORKAROUND!=gcc -v 2>&1 | awk '/egcs-2.91.66/{print $$3}'
-.ifdef ${ARM32_COMPILER_WORKAROUND}
-post-configure:
-	printf '\nfloor1.lo:\n\t$$(LIBTOOL) --mode=compile $$(COMPILE) -O0 -c $$<\n\n' >> ${WRKSRC}/lib/Makefile
-.endif
+GCC_VERSION!=gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs)
+IGNORE=		"gcc ${GCC_VERSION} cannot be used, as it generates bad ogg files"
 .endif
 
 .include "../../audio/libogg/buildlink.mk"
