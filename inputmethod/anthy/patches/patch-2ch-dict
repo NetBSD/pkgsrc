@@ -1,0 +1,13 @@
+$NetBSD: patch-2ch-dict,v 1.1.1.1 2004/12/04 03:57:44 taya Exp $
+
+--- mkanthydic/Makefile.in.orig	2004-04-02 18:19:46.000000000 +0900
++++ mkanthydic/Makefile.in	2004-04-02 18:17:47.000000000 +0900
+@@ -99,7 +99,7 @@
+ 
+ # Files
+ noinst_SCRIPTS = 
+-EXTRA_DICS = base.t extra.t
++EXTRA_DICS = base.t extra.t 2ch.t
+ CANNADIC_DIST = gcanna.ctd gcannaf.ctd
+ INCLUDES = -I$(top_srcdir)/include
+ # HOKUTODIC_DIST = hokuto.t
