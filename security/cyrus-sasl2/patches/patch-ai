@@ -1,93 +1,17 @@
-$NetBSD: patch-ai,v 1.5 2004/01/05 12:10:29 markd Exp $
+$NetBSD: patch-ai,v 1.6 2004/02/14 03:16:59 jlam Exp $
 
---- configure.orig	2003-07-16 03:42:27.000000000 +1200
+--- configure.orig	Mon Dec  1 08:35:06 2003
 +++ configure
-@@ -675,6 +675,7 @@ host_os=`echo $host | sed 's/^\([^-]*\)-
- echo "$ac_t""$host" 1>&6
- 
- 
-+am__api_version="1.4"
- # Find a good install program.  We prefer a C program (faster),
- # so one script is as good as another.  But avoid the broken or
- # incompatible versions:
-@@ -842,29 +843,29 @@ EOF
- 
- 
- missing_dir=`cd $ac_aux_dir && pwd`
--echo $ac_n "checking for working aclocal""... $ac_c" 1>&6
--echo "configure:847: checking for working aclocal" >&5
-+echo $ac_n "checking for working aclocal-${am__api_version}""... $ac_c" 1>&6
-+echo "configure:846: checking for working aclocal-${am__api_version}" >&5
- # Run test in a subshell; some versions of sh will print an error if
- # an executable is not found, even if stderr is redirected.
- # Redirect stdin to placate older versions of autoconf.  Sigh.
--if (aclocal --version) < /dev/null > /dev/null 2>&1; then
--   ACLOCAL=aclocal
-+if (aclocal-${am__api_version} --version) < /dev/null > /dev/null 2>&1; then
-+   ACLOCAL=aclocal-${am__api_version}
-    echo "$ac_t""found" 1>&6
- else
--   ACLOCAL="$missing_dir/missing aclocal"
-+   ACLOCAL="$missing_dir/missing aclocal-${am__api_version}"
-    echo "$ac_t""missing" 1>&6
- fi
- 
--echo $ac_n "checking for working autoconf""... $ac_c" 1>&6
--echo "configure:860: checking for working autoconf" >&5
-+echo $ac_n "checking for working automake-${am__api_version}""... $ac_c" 1>&6
-+echo "configure:872: checking for working automake-${am__api_version}" >&5
- # Run test in a subshell; some versions of sh will print an error if
- # an executable is not found, even if stderr is redirected.
- # Redirect stdin to placate older versions of autoconf.  Sigh.
--if (autoconf --version) < /dev/null > /dev/null 2>&1; then
--   AUTOCONF=autoconf
-+if (automake-${am__api_version} --version) < /dev/null > /dev/null 2>&1; then
-+   AUTOMAKE=automake-${am__api_version}
-    echo "$ac_t""found" 1>&6
- else
--   AUTOCONF="$missing_dir/missing autoconf"
-+   AUTOMAKE="$missing_dir/missing automake-${am__api_version}"
-    echo "$ac_t""missing" 1>&6
- fi
- 
-@@ -1951,6 +1952,13 @@ fi
+@@ -3915,6 +3915,12 @@ exec 5>>./config.log
  
  target=$save_target
  
-+
 +_build_libtool_libs=`${CONFIG_SHELL-/bin/sh} $srcdir/libtool --config | grep '^build_libtool_libs='`
 +case "x$_build_libtool_libs" in
-+       x*=yes) ac_cv_can_build_shared=yes;;
-+       x*) ac_cv_can_build_shared=no;;
++	x*=yes) ac_cv_can_build_shared=yes;;
++	x*) ac_cv_can_build_shared=no;;
 +esac
 +
  if test "$ac_cv_can_build_shared" = no; then
  	enable_shared=no
  	enable_static=yes
-@@ -5696,7 +5704,7 @@ else
- fi
- 
-   SASL_MECHS="$SASL_MECHS libgssapiv2.la"
--  SASL_STATIC_OBJS="$SASL_STATIC_OBJS ../plugins/gssapi.o"
-+#  SASL_STATIC_OBJS="$SASL_STATIC_OBJS ../plugins/gssapi.o"
- 
-   cmu_save_LIBS="$LIBS"
-   LIBS="$LIBS $GSSAPIBASE_LIBS"
-@@ -5799,12 +5807,12 @@ EOF
-  fi
- 
- 
--if test "$gssapi" != "no"; then
--  cat >> confdefs.h <<\EOF
--#define STATIC_GSSAPIV2 1
--EOF
-+#if test "$gssapi" != "no"; then
-+#  cat >> confdefs.h <<\EOF
-+##define STATIC_GSSAPIV2 1
-+#EOF
- 
--fi
-+#fi
- 
- # Check whether --enable-anon or --disable-anon was given.
- if test "${enable_anon+set}" = set; then
