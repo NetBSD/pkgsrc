@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2003/12/22 08:14:27 uebayasi Exp $
+$NetBSD: distinfo,v 1.14 2003/12/23 05:36:49 uebayasi Exp $
 
 SHA1 (xemacs-packages/Sun-1.15-pkg.tar.gz) = fb227f01bee8ce85fdb64c999393a1c9b936b8a0
 Size (xemacs-packages/Sun-1.15-pkg.tar.gz) = 64660 bytes
@@ -148,7 +148,7 @@ SHA1 (xemacs-packages/perl-modes-1.05-pkg.tar.gz) = 8597f74d48b10610c3d3fe76f416
 Size (xemacs-packages/perl-modes-1.05-pkg.tar.gz) = 161184 bytes
 SHA1 (xemacs-packages/pgg-1.04-pkg.tar.gz) = 8fd4e3eb009fee9f8b841c24d473356d1b21d7ba
 Size (xemacs-packages/pgg-1.04-pkg.tar.gz) = 31307 bytes
-SHA1 (xemacs-packages/prog-modes-1.91-pkg.tar.gz) = ef61e2d3e4ef094889c284f7d52416753246f943
+SHA1 (xemacs-packages/prog-modes-1.91-pkg.tar.gz) = 4dec380fcb888b53f01b14374945d5cc976015dc
 Size (xemacs-packages/prog-modes-1.91-pkg.tar.gz) = 715961 bytes
 SHA1 (xemacs-packages/ps-print-1.09-pkg.tar.gz) = c1a18ff657c89854a20f3288546a35cca82d7227
 Size (xemacs-packages/ps-print-1.09-pkg.tar.gz) = 155737 bytes
