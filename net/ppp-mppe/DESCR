@@ -3,9 +3,9 @@ network connection over a serial link.  At present, this package supports
 IP and the protocols layered above IP, such as TCP and UDP.
 
 This software consists of two parts:
-  - Loadable Kernel module, which establishes a network interface and
-  passes packets between the serial port, the kernel networking code and
-  the PPP daemon (pppd).
+  - A NetBSD Loadable Kernel module, which establishes a network interface
+  and passes packets between the serial port, the kernel networking code
+  and the PPP daemon (pppd).
   - The PPP daemon (pppd), which negotiates with the peer to establish the
   link and sets up the ppp network interface.  Pppd includes support for
   authentication, so you can control which other systems may make a PPP
