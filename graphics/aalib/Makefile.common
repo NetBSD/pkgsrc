@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/04/13 05:02:01 reed Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/02/23 04:09:51 minskim Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 CATEGORIES+=	graphics
@@ -12,6 +12,8 @@ HOMEPAGE=	http://aa-project.sourceforge.net/aalib/
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/aalib/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/aalib/patches
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/aalib-1.4.0
 GNU_CONFIGURE=		YES
