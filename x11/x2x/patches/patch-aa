@@ -1,4 +1,4 @@
-$NetBSD: patch-man,v 1.1.1.1 1999/05/28 21:08:05 mjl Exp $
+$NetBSD: patch-aa,v 1.1 2001/05/22 23:35:42 wiz Exp $
 
 --- x2x.1.orig	Fri May 28 22:37:57 1999
 +++ x2x.1	Fri May 28 22:38:09 1999
