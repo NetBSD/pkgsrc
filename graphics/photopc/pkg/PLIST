@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/23 04:19:33 hubertf Exp $
+bin/photopc
+bin/epinfo
+man/man1/photopc.1
+man/man1/epinfo.1
