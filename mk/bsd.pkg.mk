@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.383 2000/01/09 04:43:20 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.384 2000/01/10 12:33:58 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2446,7 +2446,7 @@ print-package-depends:
 # XXX This is intended to be run before pkg_create is called, so the
 # existance of ${PLIST} can be assumed as granted.
 print-pkg-size:
-	@(								\
+	${_PKG_SILENT}${_PKG_DEBUG}(					\
 	${SHCOMMENT} "This pkg's files" ;				\
 	${SED} -n							\
 		-e 's,^[^@],${PREFIX}/&,'				\
@@ -2454,12 +2454,14 @@ print-pkg-size:
 		<${PLIST} ;						\
 	${SHCOMMENT} "Any depending pkgs' files" ;			\
 	if [ "${SIZEDEPENDS}" != "" ]; then				\
-		for p in ${DEPENDS:C/:.*//} ; do			\
+		for p in ${DEPENDS:C/:.*//} "" ; do			\
+			if [ "X$$p" = "X" ]; then continue; fi;		\
 			${SHCOMMENT} direct depends ;			\
 			pkg_info -qL "$$p" ;				\
 			${SHCOMMENT} "depends of depends (XXX complete!)"; \
 			dps=`pkg_info -qf "$$p" | grep '@pkgdep' | awk '{ print $$2; }'` ; \
-			for dp in $$dps ; do				\
+			for dp in $$dps "" ; do				\
+				if [ "X$$dp" = "X" ]; then continue; fi;\
 				pkg_info -qL "$$dp" ;			\
 			done ;						\
 		done ;							\
