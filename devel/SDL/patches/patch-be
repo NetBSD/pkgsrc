@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2003/09/16 17:03:44 drochner Exp $
+
+--- src/cdrom/openbsd/SDL_syscdrom.c.orig	2003-09-16 18:36:59.000000000 +0200
++++ src/cdrom/openbsd/SDL_syscdrom.c
+@@ -143,6 +143,8 @@ int  SDL_SYS_CDInit(void)
+ 	static char *checklist[] = {
+ #ifdef __OpenBSD__
+ 		"?0 cd?c", "cdrom", NULL
++#elif defined(__NetBSD__)
++		"?0 cd?d", "?0 cd?c", "cdrom", NULL
+ #else
+ 		"?0 cd?c", "?0 acd?c", "cdrom", NULL
+ #endif
