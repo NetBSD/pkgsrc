@@ -3,7 +3,7 @@
 # Date created:		21 December 1997
 # Whom:			hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.3 1997/12/21 02:11:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/15 11:17:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/09/08 13:20:10 tg Exp 
 #
 
@@ -17,6 +17,9 @@ MAINTAINER=	hubertf@netbsd.org
 REQUIRES_MOTIF=	yes
 USE_IMAKE=	yes
 IS_INTERACTIVE=	yes	# asks a lot of questions
+
+CAT1=		xmcd.0 cda.0 wm2xmcd.0
+MAN1=		xmcd.1 cda.1 wm2xmcd.1
 
 post-install:
 	${CP} ${WRKSRC}/README ${PREFIX}/lib/X11/xmcd
