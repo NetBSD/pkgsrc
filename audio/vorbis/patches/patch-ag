@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2000/08/19 07:50:02 itojun Exp $
+--- vorbis-tools/mp3tovorbis.orig	Thu Jun 15 08:07:47 2000
++++ vorbis-tools/mp3tovorbis	Sat Aug 19 11:28:06 2000
+@@ -1,2 +1,2 @@
+-#!/bin/bash
++#! /bin/sh
+ 
+@@ -42,3 +42,3 @@
+ echo "Encoding Ogg Vorbis stream using Vorbize..."
+-$VORBIZE -w "$2" --artist "$ARTIST" --album "$ALBUM" --track "$TRACK" "$TEMPFILE"
++$VORBIZE -w "$2" --artist "$ARTIST" --album "$ALBUM" --title "$TRACK" "$TEMPFILE"
+ 
