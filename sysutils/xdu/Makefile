@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/08/21 08:07:36 assar Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/25 16:34:26 hubertf Exp $
 #
 
 DISTNAME=	xdu-3.0
-PKGNAME=	xdu-3.0nb1
+PKGNAME=	xdu-3.0nb2
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://sd.wareonearth.com/~phil/xdu/ ftp://ftp.arl.mil/pub/
 EXTRACT_SUFX=	.tar.Z
