@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/22 02:56:51 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/22 23:58:21 hubertf Exp $
 bin/camlp4
 bin/camlp4o
 bin/camlp4r
@@ -548,11 +548,11 @@ lib/ocaml/threadUnix.mli
 lib/ocaml/threads/condition.cmi
 lib/ocaml/threads/event.cmi
 lib/ocaml/threads/mutex.cmi
-lib/ocaml/threads/stdlib.cma
+${NATIVE_THREADS}lib/ocaml/threads/stdlib.cma
 lib/ocaml/threads/thread.cmi
 lib/ocaml/threads/threadUnix.cmi
 lib/ocaml/threads/threads.cma
-lib/ocaml/threads/unix.cma
+${NATIVE_THREADS}lib/ocaml/threads/unix.cma
 lib/ocaml/topdirs.cmi
 lib/ocaml/toplevellib.cma
 lib/ocaml/toploop.cmi
@@ -666,11 +666,9 @@ man/mano/Weak.Make.o
 man/mano/Weak.S.o
 man/mano/Weak.o
 @dirrm man/mano
-@dirrm lib/ocaml/threads
 @exec ${MKDIR} %D/lib/ocaml/stublibs
 @dirrm lib/ocaml/stublibs
 @dirrm lib/ocaml/ocamldoc
 @dirrm lib/ocaml/labltk
 @dirrm lib/ocaml/camlp4
 @dirrm lib/ocaml/caml
-@dirrm lib/ocaml
