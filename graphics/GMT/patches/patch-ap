@@ -1,0 +1,51 @@
+$NetBSD: patch-ap,v 1.1 2001/01/27 08:16:02 jtb Exp $
+
+--- src/meca/makefile.orig	Sat Jan 27 03:17:16 2001
++++ src/meca/makefile
+@@ -9,7 +9,7 @@
+ NETCDFINC	= $(NETCDF)/include
+ CDF		= -L$(NETCDFLIB) -lnetcdf
+ CFLAGS		= $(CC_OPT) -I.. -I$(NETCDFINC)
+-ALLLIB		= -L.. -lpsl -lgmt $(CDF) $(LIBS) $(LDFLAGS)
++ALLLIB		= ../libpsl.la ../libgmt.la $(CDF) $(LIBS) $(LDFLAGS)
+ #
+ #
+ 
+@@ -21,7 +21,7 @@
+ 
+ install:	all
+ 		for i in $(MECA); do \
+-			$(INSTALL) $$i$(EXE) $(bindir); \
++			$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
+ 		done
+ 
+ uninstall:
+@@ -32,22 +32,22 @@
+ spotless:	clean
+ 
+ psmeca: 	psmeca.o utilmeca.o nrutil.o
+-		$(CC) $(CFLAGS) psmeca.o utilmeca.o nrutil.o $(ALLLIB) -o ./$@
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) psmeca.lo utilmeca.lo nrutil.lo $(ALLLIB) -o ./$@
+ 
+ pscoupe:	pscoupe.o utilmeca.o submeca.o distaz.o nrutil.o
+-		$(CC) $(CFLAGS) pscoupe.o utilmeca.o submeca.o distaz.o nrutil.o $(ALLLIB) -o ./$@
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) pscoupe.lo utilmeca.lo submeca.lo distaz.lo nrutil.lo $(ALLLIB) -o ./$@
+ 
+ pspolar: 	pspolar.o
+-		$(CC) $(CFLAGS) pspolar.o $(ALLLIB) -o ./$@
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) pspolar.lo $(ALLLIB) -o ./$@
+ 
+ psvelo:		psvelo.o utilvelo.o utilstrain.o 
+-		$(CC) $(CFLAGS) psvelo.o utilvelo.o utilstrain.o $(ALLLIB) -o ./$@
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) psvelo.lo utilvelo.lo utilstrain.lo $(ALLLIB) -o ./$@
+ 
+ .c.o:
+-		$(CC) -c $(CFLAGS) $<
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
+ 
+ clean:
+-		rm -f *.o
++		rm -fr *.o *.lo .libs
+ 		for i in $(MECA); do \
+ 			rm -f $$i$(EXE); \
+ 		done

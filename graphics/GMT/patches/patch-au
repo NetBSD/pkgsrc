@@ -1,0 +1,43 @@
+$NetBSD: patch-au,v 1.1 2001/01/27 08:16:02 jtb Exp $
+
+--- src/x_system/makefile.orig	Wed Oct 18 03:01:25 2000
++++ src/x_system/makefile
+@@ -21,7 +21,7 @@
+ #
+ 
+ CFLAGS	= $(CC_OPT) $(WIN32) -I.. -I../mgg -I$(NETCDF)/include
+-ALLLIB  = -L.. -lgmt -L../mgg -lgmt_mgg -lpsl -L$(NETCDF)/lib -lnetcdf $(LIBS)
++ALLLIB  = ../libgmt.la -L../mgg -lgmt_mgg ../libpsl.la -L$(NETCDF)/lib -lnetcdf $(LIBS)
+ 
+ ALL_C	= x_edit.c x_init.c x_list.c x_over.c x_report.c x_remove.c x_setup.c x_solve_dc_drift.c x_update.c
+ 
+@@ -35,7 +35,7 @@
+ 
+ install:	all
+ 		for i in $(ALL); do \
+-			$(INSTALL) $$i$(EXE) $(bindir); \
++			$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
+ 		done
+ 
+ uninstall:
+@@ -44,7 +44,7 @@
+ 		done
+ 
+ clean:
+-		rm -f *.o
++		rm -fr *.o *.lo .libs
+ 		for i in $(ALL); do \
+ 			rm -f $$i$(EXE); \
+ 		done
+@@ -56,9 +56,9 @@
+ #-------------------------------------------------------------------------------
+ 
+ $(ALL):		$(ALL_O)
+-		$(CC) $(CFLAGS) $(LDFLAGS) $@.o $(ALLLIB) -o $@
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.lo $(ALLLIB) -o $@
+ 
+ .c.o:
+-		$(CC) -c $(CFLAGS) $<
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
+ 
+ $(ALL_O):	x_system.h
