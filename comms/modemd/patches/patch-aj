@@ -1,0 +1,11 @@
+--- common/mcap.c.orig  Thu Jun 18 06:00:48 1998
++++ common/mcap.c       Thu Jun 18 16:21:29 1998
+@@ -49,2 +49,6 @@
+
+
++#ifdef __NetBSD__
++#include "stdlib.h"
++#endif
++
+ static void enter_modemcap PROTO ((char *));
+
