@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/21 15:53:31 fredb Exp $
+bin/fetchmailconf
+@unexec rm %D/man/man1/fetchmailconf.1
+@exec ln %D/man/man1/fetchmail.1  %D/man/man1/fetchmailconf.1
