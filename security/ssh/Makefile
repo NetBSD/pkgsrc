@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 1999/12/16 08:18:04 jonb Exp $
+# $NetBSD: Makefile,v 1.67 1999/12/25 05:28:33 kim Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -72,17 +72,14 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
 
-# Include Kerberos v4 support
+# The original Kerberos v4 patches were fetched from
 # http://www.monkey.org/~dugsong/ssh-afs/
+# PATCH_SITES+=		ftp://ftp.monkey.org/pub/users/dugsong/
+# PATCHFILES+=		ssh-1.2.27-afs-kerberos.patch-1
+
 .if defined(KERBEROS) && ${KERBEROS} == 4
 USE_KERBEROS=		yes
-PATCH_SITES+=		ftp://ftp.monkey.org/pub/users/dugsong/
-PATCHFILES+=		ssh-1.2.27-afs-kerberos.patch-1
-PATCH_DIST_STRIP+=	-p1
 CONFIGURE_ARGS+=	--with-krb4=/usr
-.else
-MASTER_SITES+=		ftp://ftp.monkey.org/pub/users/dugsong/
-DISTFILES+=		ssh-1.2.27-afs-kerberos.patch-1
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 5
@@ -112,17 +109,14 @@ CONFIGURE_ARGS+=	--disable-suid-ssh
 CFLAGS+=		-DLIBWRAP_FWD
 .endif
 
-# IPv6 support
-# always fetch IPv6 related patch files.  simplify files/md5 generation.
+# The original IPv6 patches were fetched from
+# PATCH_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
+# PATCHFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
+
 .if defined(USE_INET6) && ${USE_INET6} == YES
-PATCH_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
-PATCHFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
-PATCH_DIST_STRIP+=	-p1
-PATCHDIR=		${WRKDIR}/.patches
-PATCH_SUM_FILE=		${FILESDIR}/patch-sum-v6
+CONFIGURE_ARGS+=	--enable-ipv6
 .else
-MASTER_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
-DISTFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 # be more effective on M68060 machines
@@ -138,11 +132,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
 	    ${WRKSRC}/make-ssh-known-hosts.pl.in
-.if defined(USE_INET6) && ${USE_INET6} == YES
-	${MKDIR} ${WRKDIR}/.patches
-	${CP} ${.CURDIR}/patches/patch-* ${WRKDIR}/.patches
-	${CP} ${.CURDIR}/patches.v6/patch-* ${WRKDIR}/.patches
-.endif
+	@# SSH DES and AFS/Kerberos DES conflict.
+	@${MV} -f ${WRKSRC}/des.h ${WRKSRC}/ssh-des.h
 
 fetch-depends:
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
@@ -159,17 +150,9 @@ fetch-depends:
 	@${FALSE}
 .endif
 
-# Make sure that "automake" is never run.
 post-patch:
+	@# Make sure that "automake" is never run.
 	@find ${WRKSRC} -name Makefile.in -print | xargs ${TOUCH} ${TOUCH_FLAGS}
-.if defined(KERBEROS) && ${KERBEROS} == 4
-	@${MV} ${WRKSRC}/configure ${WRKSRC}/configure.tmp
-	@${SED} \
-	    -e 's;KERBEROS_INCS="-I\$${KERBEROS_ROOT}/include";&/kerberosIV;' \
-	    ${WRKSRC}/configure.tmp > ${WRKSRC}/configure
-	@${CHMOD} a+rx ${WRKSRC}/configure
-	@${RM} -f ${WRKSRC}/configure.tmp
-.endif
 
 post-build:
 	@cd ${PKGDIR}; \
