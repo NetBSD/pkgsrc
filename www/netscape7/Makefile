@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/29 22:58:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/30 04:07:19 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -28,7 +28,7 @@ VERS_MAJ=		7
 VERS_MIN=		0
 PKG_LANG?=		english
 SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
-DIST_SUBDIR=		netscape7
+DIST_SUBDIR=		netscape7/${PKG_LANG}
 WRKSRC=			${WRKDIR}/netscape-installer
 
 .if ${PKG_LANG} != english
