@@ -28,7 +28,7 @@
 + .LP
 + .SH "PORT INFORMATION"
 + .LP
-+ In this (FreeBSD package) installation,
++ In this (BSD package) installation,
 + .I gc.h
 + and
 + .I gc_cpp.h
