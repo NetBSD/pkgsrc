@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/09/01 21:45:00 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/02 06:42:27 tron Exp $
 bin/xephem
 man/cat1/xephem.0
 lib/X11/app-defaults/XEphem

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 1998/09/01 21:44:59 tron Exp $
+$NetBSD: patch-ad,v 1.2 1998/09/02 06:42:13 tron Exp $
 
 --- tools/encke2edb.pl.orig	Fri Oct 11 08:47:17 1996
 +++ tools/encke2edb.pl	Sat Aug 29 11:03:36 1998
