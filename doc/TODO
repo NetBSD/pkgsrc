@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1676 2004/04/27 11:57:46 adam Exp $
+$NetBSD: TODO,v 1.1677 2004/04/27 15:44:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -194,7 +194,6 @@ Suggested package updates
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.51
 	o freetds-0.62.3
-	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
 	o gcc-3.4.0 [recent snapshot in pkgsrc-wip]
 	o gcpio-2.5 [pkg/20799]
@@ -347,7 +346,6 @@ Suggested package updates
 	o top-3.5b12.10
 	o treecc-0.2.8
 	o tripwire-2.3.1 [see also pkg/22362]
-	o ttf2pt1-3.4.3
 	o txt2html-2.20 [wennmach]
 	o txt2html-2.23
 	o uvscan-4.3.2 [jlam]
