@@ -1,8 +1,20 @@
-$NetBSD: patch-ad,v 1.5 2001/10/16 04:54:24 jlam Exp $
+$NetBSD: patch-ad,v 1.6 2001/12/31 23:54:26 jlam Exp $
 
---- configure.orig	Thu Jun 21 02:28:57 2001
+--- configure.orig	Sat Dec  8 14:40:35 2001
 +++ configure
-@@ -14903,10 +14903,6 @@
+@@ -5132,11 +5132,6 @@
+   fi
+ 
+ 
+-if test -d /usr/pkg/include -a -d /usr/pkg/lib ; then
+-       CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-       LDFLAGS="$LDFLAGS -L/usr/pkg/lib"
+-fi
+-
+ INCLUDES="$INCLUDES -I\$(top_builddir)/Zend"
+ 
+ 
+@@ -16142,10 +16137,6 @@
  
  else
    echo "$ac_t""no" 1>&6
@@ -13,7 +25,7 @@ $NetBSD: patch-ad,v 1.5 2001/10/16 04:54:24 jlam Exp $
  fi
  
  
-@@ -21394,19 +21390,10 @@
+@@ -23549,19 +23540,10 @@
  
  
    else
@@ -33,23 +45,12 @@ $NetBSD: patch-ad,v 1.5 2001/10/16 04:54:24 jlam Exp $
    echo "$ac_t""no" 1>&6
  
  fi
-@@ -55797,7 +55784,7 @@
+@@ -63204,7 +63186,7 @@
  
  if test "$enable_debug" != "yes"; then
    
 -  LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
 +  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- fi
- 
-@@ -55815,8 +55802,8 @@
-     $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
-     SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'
-   else
--    PHP_COMPILE='$(COMPILE) -c $< && touch $@'
--    CXX_PHP_COMPILE='$(CXX_COMPILE) -c $< && touch $@'
-+    PHP_COMPILE='$(LIBTOOL) --mode=compile $(COMPILE) -c $<'
-+    CXX_PHP_COMPILE='$(LIBTOOL) --mode=compile $(CXX_COMPILE) -c $<'
-   fi
  fi
  
