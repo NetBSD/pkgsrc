@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2001/12/15 18:43:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2002/01/16 19:33:18 dmcmahill Exp $
 #
 
-DISTNAME=	verilog-20011209
-PKGNAME=	verilog-current-20011209
+DISTNAME=	verilog-20020112
+PKGNAME=	verilog-current-20020112
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
 
@@ -24,5 +24,11 @@ USE_GMAKE=      yes
 #CPPFLAGS+=      -I${LOCALBASE}/include
 #CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
 CONFIGURE_ARGS+=	--without-ipal
+YACC=			${LOCALBASE}/bin/bison
+
+test: build
+	cd ${WRKSRC} && \
+		${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
+		tee ${WRKDIR}/tests.log
 
 .include "../../mk/bsd.pkg.mk"
