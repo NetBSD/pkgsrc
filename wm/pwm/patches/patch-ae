@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/08/21 08:17:40 abs Exp $
+
+--- libtu/tester2.c.orig	Mon Aug 20 22:07:00 2001
++++ libtu/tester2.c
+@@ -59,7 +59,7 @@
+ 			 
+ int main(int argc, char *argv[])
+ {
+-	libtu_init_argv0(argv[0], NULL);
++	libtu_init(argv[0]);
+ 	parse_config_file(stdin, opts, TOKZ_ERROR_TOLERANT);
+ 	
+ 	return EXIT_SUCCESS;
