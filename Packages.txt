@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.179 2001/08/22 17:59:11 jlam Exp $
+# $NetBSD: Packages.txt,v 1.180 2001/08/24 00:54:48 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -711,6 +711,16 @@ When you have finished a package, remember to generate the checksums
 for the patch files by using the "make makepatchsum" command, see
 section 4.2.
 
+If it is desired to store any patches that should not be committed into
+pkgsrc, they can be kept outside the pkgsrc tree in the $LOCALPATCHES
+directory. The directory tree there is expected to have the same
+"category/package" structure as pkgsrc, and patches are expected to be
+stored inside these dirs (also known as $LOCALPATCHES/$PKGPATH). For
+example if you want to keep a private patch for pkgsrc/graphics/png, keep
+it in $LOCALPATCHES/graphics/png/mypatch. All files in the named directory
+are expected to be patch files, and they are applied after the "normal"
+pkgsrc patches are applied. 
+
 
  4.4 pkg/*
  =========
@@ -1237,12 +1247,13 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    EXTRACT_AFTER_ARGS. 
 
  * patch:
-   After extraction, all the patches named by the PATCHFILES and those
-   present in the patches subdirectory of the package are applied. 
-   Patchfiles ending in .Z or .gz are uncompressed before they are
-   applied, files ending in .orig or .rej are ignored.  Any special
-   options to patch(1) can be handed in PATCH_DIST_ARGS.  See section
-   4.3 for more details.
+   After extraction, all the patches named by the PATCHFILES, those present
+   in the patches subdirectory of the package as well as in
+   $LOCALPATCHES/$PKGPATH (e.g. /usr/local/patches/graphics/png) are
+   applied. Patchfiles ending in .Z or .gz are uncompressed before they are
+   applied, files ending in .orig or .rej are ignored. Any special options
+   to patch(1) can be handed in PATCH_DIST_ARGS. See section 4.3 for more
+   details.
    
    By default patch is given special args to make it fail if the
    patches with some lines of fuzz. Please fix (regen) the patches
