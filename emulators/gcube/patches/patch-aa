@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/16 14:25:34 xtraeme Exp $
+
+--- Makefile.rules.orig	2004-07-16 14:47:19.000000000 +0200
++++ Makefile.rules	2004-07-16 14:48:09.000000000 +0200
+@@ -1,10 +1,10 @@
+ 
+ SDL_CONFIG=sdl-config
+-LIBS=-lSDL -lz -l$(OPENGL)
++LIBS=-lSDL -lz -l$(OPENGL) $(LDFLAGS)
+ 
+-CFLAGS=-g -Wall
+-PROFLAGS=-g -Wall -pg -fprofile-arcs -ftest-coverage
+-OPTFLAGS=-O3 -fno-strict-aliasing -fomit-frame-pointer -ffast-math -march=$(CPU) $(OPTIMIZE)
++#CFLAGS=-g -Wall
++#PROFLAGS=-g -Wall -pg -fprofile-arcs -ftest-coverage
++OPTFLAGS=-fno-strict-aliasing -fomit-frame-pointer -ffast-math
+ 
+ OBJECTS=\
+ 	 ppc_disasm.o\
