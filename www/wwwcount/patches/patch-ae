@@ -1,275 +1,206 @@
-$NetBSD: patch-ae,v 1.2 1999/05/14 22:05:23 tron Exp $
+$NetBSD: patch-ae,v 1.3 1999/05/14 23:23:58 tron Exp $
 
-*** Count-install.orig	Mon Mar  1 18:15:16 1999
---- Count-install	Wed May 12 00:50:02 1999
-***************
-*** 13,19 ****
-  # Nov 24, 1995
-  ##
-  ver=`cat ./VERSION`
-- Basedir="wwwcount$ver"
-  INSTALL_PROG="./install-sh"
-  Tmpl="./Config.tmpl"
-  Binary="./src/Count.cgi"
---- 13,18 ----
-***************
-*** 27,34 ****
-  Digit_cdd="./data/digits/cdd"
-  Rgbfile="./data/rgb.txt"
-  SAMPLE_DAT="./data/data/sample.dat"
-- mirror_file="mirror_count.sh"
-- mirror_script="./utils/mirror/$mirror_file"
-  
-  UserId="nobody"
-  userid_flag=0
---- 26,31 ----
-***************
-*** 114,133 ****
-  
-  . $Tmpl
-  
-- if [ ! -f ./$CONFIG_FILE ]
-- then
-- 
-- cat <<EOC
-- 
--     The configuration file $CONFIG_FILR is not created!
--     please create it first by running the script ./Gen-conf
-- 
--     Aborting installation!
-- EOC
-- 
--     exit 1
-- fi
-- 
-  tdir="./tmp"
-  
-  if [ ! -d $tdir ]; then
---- 111,116 ----
-***************
-*** 196,202 ****
-  
-  cgi-bin directory   = $CGIBIN_DIR
-  conf directory      = $CONFIG_DIR
-- conf file to install= $CONFIG_FILE
-  digit directory     = $DIGIT_DIR
-  data directory      = $DATA_DIR
-  log directory       = $LOG_DIR
---- 179,184 ----
-***************
-*** 211,217 ****
-  
-  if [ .$answer = . ]
-  then
-!     answer=x
-  fi
-      until [ $answer = "y" -o $answer = "Y" -o $answer = "n" -o $answer = "N" ]
-      do
---- 193,199 ----
-  
-  if [ .$answer = . ]
-  then
-!     answer=y
-  fi
-      until [ $answer = "y" -o $answer = "Y" -o $answer = "n" -o $answer = "N" ]
-      do
-***************
-*** 252,258 ****
-     read answer
-     if [ .$answer = . ]
-     then
-!         answer=x
-     fi   
+--- Count-install.orig	Tue Mar  2 00:15:16 1999
++++ Count-install	Sat May 15 01:19:09 1999
+@@ -13,7 +13,6 @@
+ # Nov 24, 1995
+ ##
+ ver=`cat ./VERSION`
+-Basedir="wwwcount$ver"
+ INSTALL_PROG="./install-sh"
+ Tmpl="./Config.tmpl"
+ Binary="./src/Count.cgi"
+@@ -27,8 +26,6 @@
+ Digit_cdd="./data/digits/cdd"
+ Rgbfile="./data/rgb.txt"
+ SAMPLE_DAT="./data/data/sample.dat"
+-mirror_file="mirror_count.sh"
+-mirror_script="./utils/mirror/$mirror_file"
+ 
+ UserId="nobody"
+ userid_flag=0
+@@ -114,20 +111,6 @@
+ 
+ . $Tmpl
+ 
+-if [ ! -f ./$CONFIG_FILE ]
+-then
+-
+-cat <<EOC
+-
+-    The configuration file $CONFIG_FILR is not created!
+-    please create it first by running the script ./Gen-conf
+-
+-    Aborting installation!
+-EOC
+-
+-    exit 1
+-fi
+-
+ tdir="./tmp"
+ 
+ if [ ! -d $tdir ]; then
+@@ -196,7 +179,6 @@
+ 
+ cgi-bin directory   = $CGIBIN_DIR
+ conf directory      = $CONFIG_DIR
+-conf file to install= $CONFIG_FILE
+ digit directory     = $DIGIT_DIR
+ data directory      = $DATA_DIR
+ log directory       = $LOG_DIR
+@@ -211,7 +193,7 @@
+ 
+ if [ .$answer = . ]
+ then
+-    answer=x
++    answer=y
+ fi
      until [ $answer = "y" -o $answer = "Y" -o $answer = "n" -o $answer = "N" ]
      do
---- 234,240 ----
-     read answer
-     if [ .$answer = . ]
-     then
-! 	answer=y
-     fi   
-     until [ $answer = "y" -o $answer = "Y" -o $answer = "n" -o $answer = "N" ]
-     do
-***************
-*** 271,281 ****
-  ###
-  # enter user id -starts
-  ###
-!    echo $n "*Enter user id of httpd's child process [no default]:$c? "
-     read answer
-     if [ .$answer = . ]
-     then 
-!         answer=x
-     fi
-     until [ $answer != "x" ]
-     do
---- 253,263 ----
-  ###
-  # enter user id -starts
-  ###
-!    echo $n "*Enter user id of httpd's child process [nobody]:$c? "
-     read answer
-     if [ .$answer = . ]
-     then 
-! 	answer=nobody
-     fi
-     until [ $answer != "x" ]
-     do
-***************
-*** 295,305 ****
-  ##
-  # enter groud id -starts
-  ##
-!    echo $n "*Enter group id of httpd's child process [no default]:$c? "
-     read answer
-     if [ .$answer = . ]
-     then 
-!         answer=x
-     fi
-     until [ $answer != "x" ]
-     do
---- 277,287 ----
-  ##
-  # enter groud id -starts
-  ##
-!    echo $n "*Enter group id of httpd's child process [nogroup]:$c? "
-     read answer
-     if [ .$answer = . ]
-     then 
-! 	answer=nogroup
-     fi
-     until [ $answer != "x" ]
-     do
-***************
-*** 317,340 ****
-  # enter groud id -ends
-  ##
-  echo "installing Count.cgi->$CGIBIN_DIR"
-! $INSTALL_PROG -c -o $UserId -g $GroupId -m 700 $Binary $CGIBIN_DIR/Count.cgi
-! echo "installing $CONFIG_FILE->$CONFIG_DIR"
-! 
-! #
-! # check if the file exist or not
-! #
-! 
-! if [ ! -f $CONFIG_DIR/$CONFIG_FILE ]; then
-! 
-!     $INSTALL_PROG -c -m 664 $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE
-! else
-!     echo "  ===> ****** File exists!"
-!     echo "  ===> skipping... Will not overwrite $CONFIG_DIR/$CONFIG_FILE"
-!     echo "  ===> install it manually if you want to overwrite"
-! 	echo "  ===> To install manually, at the shell prompt type: "
-!     echo " $INSTALL_PROG -c -m 664 $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE"
-! 	echo ""
-! fi
-  
-  echo "installing sample datafile $SAMPLE_DAT->$DATA_DIR"
-  
---- 299,305 ----
-  # enter groud id -ends
-  ##
-  echo "installing Count.cgi->$CGIBIN_DIR"
-! $INSTALL_PROG -c $Binary $CGIBIN_DIR/Count.cgi
-  
-  echo "installing sample datafile $SAMPLE_DAT->$DATA_DIR"
-  
-***************
-*** 350,363 ****
-  	echo ""
-  fi
-  
-! echo "installing rgb.txt->$BASE_DIR"
-! $INSTALL_PROG -c -m 644 $Rgbfile $BASE_DIR/rgb.txt
-  
-! echo "creating Log directory $LOG_DIR"
-! ./mkdirhier $LOG_DIR
-! chown $UserId $LOG_DIR
-! chgrp $GroupId $LOG_DIR
-! chmod 775 $LOG_DIR
-  
-  echo "installing image strip for digit style A->$DIGIT_DIR/A"
-  $INSTALL_PROG -c -m 644 $DigitA/strip.gif\
---- 315,327 ----
-  	echo ""
-  fi
-  
-! echo "installing rgb.txt->$RGB_DIR"
-! $INSTALL_PROG -c -m 644 $Rgbfile $RGB_DIR/rgb.txt
-  
-! echo "installing $LOG_FILE->$LOG_DIR"
-! touch $LOG_DIR/$LOG_FILE
-! chmod 644 $LOG_DIR/$LOG_FILE
-! chown $UserId.$GroupId $LOG_DIR/$LOG_FILE
-  
-  echo "installing image strip for digit style A->$DIGIT_DIR/A"
-  $INSTALL_PROG -c -m 644 $DigitA/strip.gif\
-***************
-*** 399,416 ****
-  $INSTALL_PROG -c -m 644 $Digit_cdd/strip.gif\
-      $DIGIT_DIR/cdd/strip.gif
-  
-- echo "installing the mirroring script"
-- $INSTALL_PROG -c $mirror_script -m 755 $BASE_DIR/$mirror_file
-- 
-- ##
-- # change ownership
-- # -R is not portable, reported by Geoff Scully <gws@dis.on.ca> and suggested
-- # the alternative (01/15/96)
-- #chown -R $UserId.$GroupId $BASE_DIR
-- #find $BASE_DIR -exec chown $UserId {} \;
-- #find $BASE_DIR -exec chgrp $GroupId {} \;
-- #            echo "UserId=$UserId"
-- #            echo "GroupId=$GroupId"
-          ;;
-          n|N)
-  cat <<EOM
---- 363,368 ----
-***************
-*** 423,439 ****
-  
-  EOM
-  echo "installing Count.cgi->$CGIBIN_DIR"
-! $INSTALL_PROG -c -m 755 $Binary $CGIBIN_DIR/Count.cgi
-! echo "installing $CONFIG_FILE->$CONFIG_DIR"
-! $INSTALL_PROG -c $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE
-  echo "installing sample datafile $SAMPLE_DAT->$DATA_DIR"
-  $INSTALL_PROG -c $SAMPLE_DAT $DATA_DIR/sample.dat
-  
-! echo "installing rgb.txt->$BASE_DIR"
-! $INSTALL_PROG -c $Rgbfile $BASE_DIR/rgb.txt
-  
-! echo "creating Log directory $LOG_DIR"
-! ./mkdirhier $LOG_DIR
-  
-  echo "installing image strip for digit style A->$DIGIT_DIR/A"
-  $INSTALL_PROG -c $DigitA/strip.gif $DIGIT_DIR/A/strip.gif
---- 375,390 ----
-  
-  EOM
-  echo "installing Count.cgi->$CGIBIN_DIR"
-! $INSTALL_PROG -s -c -m 755 $Binary $CGIBIN_DIR/Count.cgi
-  echo "installing sample datafile $SAMPLE_DAT->$DATA_DIR"
-  $INSTALL_PROG -c $SAMPLE_DAT $DATA_DIR/sample.dat
-  
-! echo "installing rgb.txt->$RGB_DIR"
-! $INSTALL_PROG -c $Rgbfile $RGB_DIR/rgb.txt
-  
-! echo "installing $LOG_FILE->$LOG_DIR"
-! touch $LOG_DIR/$LOG_FILE
-! chmod 644 $LOG_DIR/$LOG_FILE
-  
-  echo "installing image strip for digit style A->$DIGIT_DIR/A"
-  $INSTALL_PROG -c $DigitA/strip.gif $DIGIT_DIR/A/strip.gif
-***************
-*** 464,472 ****
-  
-  echo "installing image strip for digit style cdd->$DIGIT_DIR/cdd"
-  $INSTALL_PROG -c $Digit_cdd/strip.gif $DIGIT_DIR/cdd/strip.gif
-- 
-- echo "installing the mirroring script"
-- $INSTALL_PROG -c $mirror_script $BASE_DIR/$mirror_file
-  
-      ;;
-          *)
---- 415,420 ----
+@@ -252,7 +234,7 @@
+    read answer
+    if [ .$answer = . ]
+    then
+-        answer=x
++	answer=y
+    fi   
+    until [ $answer = "y" -o $answer = "Y" -o $answer = "n" -o $answer = "N" ]
+    do
+@@ -271,11 +253,11 @@
+ ###
+ # enter user id -starts
+ ###
+-   echo $n "*Enter user id of httpd's child process [no default]:$c? "
++   echo $n "*Enter user id of httpd's child process [nobody]:$c? "
+    read answer
+    if [ .$answer = . ]
+    then 
+-        answer=x
++	answer=nobody
+    fi
+    until [ $answer != "x" ]
+    do
+@@ -295,11 +277,11 @@
+ ##
+ # enter groud id -starts
+ ##
+-   echo $n "*Enter group id of httpd's child process [no default]:$c? "
++   echo $n "*Enter group id of httpd's child process [nogroup]:$c? "
+    read answer
+    if [ .$answer = . ]
+    then 
+-        answer=x
++	answer=nogroup
+    fi
+    until [ $answer != "x" ]
+    do
+@@ -317,47 +299,18 @@
+ # enter groud id -ends
+ ##
+ echo "installing Count.cgi->$CGIBIN_DIR"
+-$INSTALL_PROG -c -o $UserId -g $GroupId -m 700 $Binary $CGIBIN_DIR/Count.cgi
+-echo "installing $CONFIG_FILE->$CONFIG_DIR"
++$INSTALL_PROG -c $Binary $CGIBIN_DIR/Count.cgi
+ 
+-#
+-# check if the file exist or not
+-#
++echo "installing sample datafile $SAMPLE_DAT->$RGB_DIR"
++$INSTALL_PROG -c -o $UserId -g $GroupId -m 664 $SAMPLE_DAT $RGB_DIR/sample.dat
+ 
+-if [ ! -f $CONFIG_DIR/$CONFIG_FILE ]; then
++echo "installing rgb.txt->$RGB_DIR"
++$INSTALL_PROG -c -m 644 $Rgbfile $RGB_DIR/rgb.txt
+ 
+-    $INSTALL_PROG -c -m 664 $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE
+-else
+-    echo "  ===> ****** File exists!"
+-    echo "  ===> skipping... Will not overwrite $CONFIG_DIR/$CONFIG_FILE"
+-    echo "  ===> install it manually if you want to overwrite"
+-	echo "  ===> To install manually, at the shell prompt type: "
+-    echo " $INSTALL_PROG -c -m 664 $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE"
+-	echo ""
+-fi
+-
+-echo "installing sample datafile $SAMPLE_DAT->$DATA_DIR"
+-
+-if [ ! -f $DATA_DIR/sample.dat ]; then
+-    $INSTALL_PROG -c -o $UserId -g $GroupId -m 664 $SAMPLE_DAT $DATA_DIR/sample.dat
+-chmod 775 $DATA_DIR
+-else
+-    echo "  ===> File exists!"
+-    echo "  ===> skipping... Will not overwrite $DATA_DIR/sample.dat"
+-    echo "  ===> copy it manually if you want to overwrite"
+-    echo "  ===>  To install manually, at the shell prompt type: "
+-	echo " $INSTALL_PROG -c -o $UserId -g $GroupId -m 664 $SAMPLE_DAT $DATA_DIR/sample.dat"
+-	echo ""
+-fi
+-
+-echo "installing rgb.txt->$BASE_DIR"
+-$INSTALL_PROG -c -m 644 $Rgbfile $BASE_DIR/rgb.txt
+-
+-echo "creating Log directory $LOG_DIR"
+-./mkdirhier $LOG_DIR
+-chown $UserId $LOG_DIR
+-chgrp $GroupId $LOG_DIR
+-chmod 775 $LOG_DIR
++echo "installing $LOG_FILE->$LOG_DIR"
++touch $LOG_DIR/$LOG_FILE
++chmod 644 $LOG_DIR/$LOG_FILE
++chown $UserId.$GroupId $LOG_DIR/$LOG_FILE
+ 
+ echo "installing image strip for digit style A->$DIGIT_DIR/A"
+ $INSTALL_PROG -c -m 644 $DigitA/strip.gif\
+@@ -399,18 +352,6 @@
+ $INSTALL_PROG -c -m 644 $Digit_cdd/strip.gif\
+     $DIGIT_DIR/cdd/strip.gif
+ 
+-echo "installing the mirroring script"
+-$INSTALL_PROG -c $mirror_script -m 755 $BASE_DIR/$mirror_file
+-
+-##
+-# change ownership
+-# -R is not portable, reported by Geoff Scully <gws@dis.on.ca> and suggested
+-# the alternative (01/15/96)
+-#chown -R $UserId.$GroupId $BASE_DIR
+-#find $BASE_DIR -exec chown $UserId {} \;
+-#find $BASE_DIR -exec chgrp $GroupId {} \;
+-#            echo "UserId=$UserId"
+-#            echo "GroupId=$GroupId"
+         ;;
+         n|N)
+ cat <<EOM
+@@ -423,17 +364,16 @@
+ 
+ EOM
+ echo "installing Count.cgi->$CGIBIN_DIR"
+-$INSTALL_PROG -c -m 755 $Binary $CGIBIN_DIR/Count.cgi
+-echo "installing $CONFIG_FILE->$CONFIG_DIR"
+-$INSTALL_PROG -c $CONFIG_FILE $CONFIG_DIR/$CONFIG_FILE
++$INSTALL_PROG -s -c -m 755 $Binary $CGIBIN_DIR/Count.cgi
+ echo "installing sample datafile $SAMPLE_DAT->$DATA_DIR"
+ $INSTALL_PROG -c $SAMPLE_DAT $DATA_DIR/sample.dat
+ 
+-echo "installing rgb.txt->$BASE_DIR"
+-$INSTALL_PROG -c $Rgbfile $BASE_DIR/rgb.txt
++echo "installing rgb.txt->$RGB_DIR"
++$INSTALL_PROG -c $Rgbfile $RGB_DIR/rgb.txt
+ 
+-echo "creating Log directory $LOG_DIR"
+-./mkdirhier $LOG_DIR
++echo "installing $LOG_FILE->$LOG_DIR"
++touch $LOG_DIR/$LOG_FILE
++chmod 644 $LOG_DIR/$LOG_FILE
+ 
+ echo "installing image strip for digit style A->$DIGIT_DIR/A"
+ $INSTALL_PROG -c $DigitA/strip.gif $DIGIT_DIR/A/strip.gif
+@@ -464,9 +404,6 @@
+ 
+ echo "installing image strip for digit style cdd->$DIGIT_DIR/cdd"
+ $INSTALL_PROG -c $Digit_cdd/strip.gif $DIGIT_DIR/cdd/strip.gif
+-
+-echo "installing the mirroring script"
+-$INSTALL_PROG -c $mirror_script $BASE_DIR/$mirror_file
+ 
+     ;;
+         *)
