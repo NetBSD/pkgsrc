@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/01 07:33:43 skrll Exp $
+
+--- configure.orig	Thu Jul  5 10:12:12 2001
++++ configure	Thu Jul  5 10:12:59 2001
+@@ -4558,7 +4558,7 @@
+ if test $kde_qtver = 2; then
+ 
+   
+-  LIBQT="$LIBQT $LIBPNG"
++  LIBQT="$LIBQT $LIBPNG -lmng -ljpeg -llcms"
+ fi
+ echo $ac_n "checking for Qt""... $ac_c" 1>&6
+ echo "configure:4565: checking for Qt" >&5
