@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/02 23:16:45 jmc Exp $
+# $NetBSD: Makefile,v 1.14 2003/10/05 21:52:57 chris Exp $
 
 .include "Makefile.common"
 
@@ -17,6 +17,8 @@ CONFIGURE_ARGS+=	--enable-digest		# DIGEST-MD5
 CONFIGURE_ARGS+=	--with-rc4
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .include "../../security/openssl/buildlink2.mk"
+
+BUILD_DEFS+=		USE_PAM SASL_USE_GSSAPI
 
 .if exists(/dev/urandom)
 CONFIGURE_ARGS+=	--with-devrandom=/dev/urandom
