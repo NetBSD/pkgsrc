@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.403 2000/02/12 17:24:41 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.404 2000/02/12 22:00:04 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1348,7 +1348,7 @@ _PORT_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
 .endif
 
-root-install:
+root-install: ${PLIST}
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.CONFLICTS
@@ -1458,7 +1458,6 @@ root-install:
 			fi;						\
 		done;							\
 	fi)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} ${PLIST}
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 	${_PKG_SILENT}(${_PKG_DEBUG}					\
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
