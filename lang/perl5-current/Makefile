@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2000/03/27 08:54:58 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/05 19:25:50 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
-DISTNAME=		perl5.005_03
-PKGNAME=		perl-5.00503
+DISTNAME=		perl-5.6.0
 CATEGORIES=		lang devel perl5
 MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
 			ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/
@@ -21,15 +20,9 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_SOURCES=		${PKGDIR}/PLIST-mi
-.if defined(NOPIC)
-PLIST_SOURCES+=		${PKGDIR}/PLIST-md.static
-.else
-PLIST_SOURCES+=		${PKGDIR}/PLIST-md.shared \
-			${PKGDIR}/PLIST-md-${OBJECT_FMT}.shared
-.endif
-PLIST_SOURCES+=		${PKGDIR}/PLIST.dirrm
-PLIST_SRC=		${PLIST_SOURCES}
+PLIST_SOURCES=	${PKGDIR}/PLIST-md-${OBJECT_FMT}.shared \
+		${PKGDIR}/PLIST
+PLIST_SRC=	${PLIST_SOURCES}
 
 .if ${OPSYS} == "SunOS"
 PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
@@ -38,6 +31,9 @@ MAKE_ENV+=		CFLAGS=
 
 test:
 	@(cd ${WRKSRC}; ${MAKE} test)
+
+post-patch:
+	${CP} ${WRKSRC}/ext/DynaLoader/hints/openbsd.pl ${WRKSRC}/ext/DynaLoader/hints/netbsd.pl
 
 post-install:
 	@strip ${PREFIX}/bin/a2p
