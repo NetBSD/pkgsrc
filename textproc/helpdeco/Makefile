@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/17 04:49:07 ben Exp $
 #
 
 DISTNAME=		helpdc21
@@ -34,6 +34,14 @@ MASTER_SITE_SIMTEL+=	ftp://ftp.cdrom.com/pub/simtelnet/ \
 			ftp://ftp.telusplanet.net/pub/simtelnet/ \
 			ftp://ftp.crc.ca/pub/systems/ibmpc/simtelnet/ \
 			ftp://ftp.direct.ca/pub/simtelnet/
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+CFLAGS+=		-Dstrlcpy=strncpy
+.endif
+
+MAKE_ENV+=		CFLAGS="${CFLAGS}"
 
 post-extract:
 	${RM} -f ${WRKSRC}/*exe
