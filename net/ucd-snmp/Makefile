@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/05/30 14:41:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/06/22 12:58:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -15,12 +15,6 @@ MAINTAINER=	packages@netbsd.org
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-defaults
 
-MAN1=		snmpbulkwalk.1 snmpd.1 snmpdelta.1 snmpget.1 snmpgetnext.1 \
-		snmpnetstat.1 snmpset.1 snmpstatus.1 snmptable.1 snmptest.1 \
-		snmptranslate.1 snmptrap.1 snmpwalk.1
-MAN3=		mib_api.3 snmp_api.3
-MAN5=		snmpd.conf.5 variables.5
-MAN8=		snmptrapd.8
 BIN=		snmpbulkwalk snmpget snmpgetnext snmpnetstat snmpset \
 		snmpstatus snmptest snmptranslate snmptrap snmpwalk
 SBIN=		snmpd snmptrapd

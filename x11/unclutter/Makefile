@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:56 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 13:21:03 agc Exp $
 #
 
 DISTNAME=	unclutter-8
@@ -11,6 +11,5 @@ MAINTAINER=	mycroft@NetBSD.ORG
 
 WRKSRC=		${WRKDIR}/unclutter
 USE_IMAKE=	yes
-CAT1=		unclutter.0
 
 .include "../../mk/bsd.pkg.mk"

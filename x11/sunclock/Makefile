@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:55 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 13:21:02 agc Exp $
 #
 
 DISTNAME=	sunclock1.3
@@ -12,7 +12,5 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	agc@netbsd.org
 
 USE_IMAKE=	yes
-
-CAT1=		sunclock.0
 
 .include "../../mk/bsd.pkg.mk"

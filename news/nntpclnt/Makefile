@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:41 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 13:00:14 agc Exp $
 #
 
 DISTNAME=	nntpclnt-1.6.1
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.uu.net/networking/news/nntp/
 MAINTAINER=	tv@netbsd.org
 
 ALL_TARGET=	inews
-
-MAN3=	nntpclnt.3
 
 do-configure:
 	${SED} -e s,@PREFIX@,${PREFIX}, ${FILESDIR}/config.sh >${WRKSRC}/config.sh

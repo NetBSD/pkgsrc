@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/20 11:56:29 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 12:58:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/07/21 00:04:13 fenner Exp
 #
 
@@ -11,6 +11,5 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/archie-1.4.1-FIX
-MAN1=		archie.1
 
 .include <../../mk/bsd.pkg.mk>

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 13:12:13 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=	packages@netbsd.org
 
 NO_CDROM=	"Restrictive copyright (don't sell for profit)"
 GNU_CONFIGURE=	yes
-MAN1=		glimpse.1 glimpseindex.1 glimpseserver.1 agrep.1
 
 pre-configure:
 	chmod ugo+x ${WRKSRC}/configure

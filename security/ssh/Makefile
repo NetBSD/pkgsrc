@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1998/06/19 17:17:04 tron Exp $
+# $NetBSD: Makefile,v 1.28 1998/06/22 13:06:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -74,11 +74,6 @@ CONFIGURE_ARGS+=	--disable-suid-ssh
 .if defined(LIBWRAP_FWD) && ${LIBWRAP_FWD} == YES
 CFLAGS+=		-DLIBWRAP_FWD
 .endif
-
-MAN1=		scp.1 scp1.1 slogin.1 slogin1.1 ssh-add.1 ssh-add1.1 \
-		ssh-agent.1 ssh-agent1.1 ssh-keygen.1 ssh-keygen1.1 \
-		ssh.1 ssh1.1 make-ssh-known-hosts.1 make-ssh-known-hosts1.1
-MAN8=		sshd.8 sshd1.8
 
 PKGDIR=		${WRKDIR}/pkg
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/05/27 14:48:18 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 13:21:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp 
 #
 
@@ -11,7 +11,5 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	is@netbsd.org
 
 USE_IMAKE=	yes
-
-CAT6=		xsnow.0
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/05/09 15:24:45 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 13:07:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/09/26 08:23:14 torstenb Exp
 #
 
@@ -16,8 +16,6 @@ MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/zsh/ \
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
-MAN1=		zsh.1 zshbuiltins.1 zshcompctl.1 zshexpn.1 zshmisc.1 \
-		zshoptions.1 zshall.1 zshparam.1 zshzle.1
 INFO_FILES=	zsh.info
 
 # If you want to build a static binary, uncomment the following line
