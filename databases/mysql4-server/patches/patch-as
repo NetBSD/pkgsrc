@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
+$NetBSD: patch-as,v 1.2 2004/03/07 19:42:55 martti Exp $
 
---- support-files/Makefile.in.orig	Mon Oct 13 17:48:34 2003
-+++ support-files/Makefile.in	Mon Oct 13 17:50:44 2003
-@@ -219,15 +219,7 @@
+--- support-files/Makefile.in.orig	Tue Feb 10 20:16:54 2004
++++ support-files/Makefile.in	Sun Mar  7 20:22:01 2004
+@@ -286,15 +286,7 @@
  
  SUBDIRS = MacOSX
  

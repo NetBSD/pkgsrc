@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
+$NetBSD: patch-am,v 1.2 2004/03/07 19:42:55 martti Exp $
 
---- scripts/mysqld_safe.sh.orig	Tue Nov 25 10:11:07 2003
-+++ scripts/mysqld_safe.sh	Tue Nov 25 10:16:51 2003
-@@ -251,6 +251,14 @@
+--- scripts/mysqld_safe.sh.orig	Sun Mar  7 20:19:31 2004
++++ scripts/mysqld_safe.sh	Sun Mar  7 20:20:59 2004
+@@ -257,6 +257,14 @@
    fi
  fi
  
@@ -17,7 +17,7 @@ $NetBSD: patch-am,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
  #
  # If there exists an old pid file, check if the daemon is already running
  # Note: The switches to 'ps' may depend on your operating system
-@@ -261,18 +269,16 @@
+@@ -267,18 +275,16 @@
    then
      if @FIND_PROC@
      then    # The pid contains a mysqld process
@@ -40,7 +40,7 @@ $NetBSD: patch-am,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
      exit 1
    fi
  fi
-@@ -285,11 +291,11 @@
+@@ -291,11 +297,11 @@
  # Alternatively, you can start mysqld with the "myisam-recover" option. See
  # the manual for details.
  #
@@ -54,7 +54,7 @@ $NetBSD: patch-am,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
  
  # Does this work on all systems?
  #if type ulimit | grep "shell builtin" > /dev/null
-@@ -297,7 +303,7 @@
+@@ -303,7 +309,7 @@
  #  ulimit -n 256 > /dev/null 2>&1		# Fix for BSD and FreeBSD systems
  #fi
  
@@ -63,7 +63,7 @@ $NetBSD: patch-am,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
  while true
  do
    rm -f $safe_mysql_unix_port $pid_file	# Some extra safety
-@@ -320,7 +326,7 @@
+@@ -326,7 +332,7 @@
      # The only thing is ps x => redhat 5 gives warnings when using ps -x.
      # kill -9 is used or the process won't react on the kill.
      numofproces=`ps xa | grep -v "grep" | grep -c $ledir/$MYSQLD`
@@ -72,7 +72,7 @@ $NetBSD: patch-am,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
      I=1
      while test "$I" -le "$numofproces"
      do 
-@@ -332,15 +338,14 @@
+@@ -338,15 +344,14 @@
  	#    echo "TEST $I - $T **"
  	if kill -9 $T
  	then
