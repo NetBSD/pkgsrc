@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/11/21 15:50:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/01/03 14:42:43 lukem Exp $
 bin/upsc
 bin/upscmd
 bin/upsct
@@ -10,6 +10,9 @@ etc/rc.d/upsdriver
 etc/rc.d/upslog
 etc/rc.d/upsmon
 man/man5/ups.conf.5
+man/man5/upsd.conf.5
+man/man5/upsd.users.5
+man/man5/upsmon.conf.5
 man/man5/upssched.conf.5
 man/man8/apcsmart.8
 man/man8/belkin.8
@@ -22,6 +25,7 @@ man/man8/upscmd.8
 man/man8/upsct.8
 man/man8/upsct2.8
 man/man8/upsd.8
+man/man8/upsdrvctl.8
 man/man8/upslog.8
 man/man8/upsmon.8
 man/man8/upssched.8
@@ -31,6 +35,7 @@ sbin/ups-drivers/belkin
 sbin/ups-drivers/bestfort
 sbin/ups-drivers/bestuferrups
 sbin/ups-drivers/bestups
+sbin/ups-drivers/cyberpower
 sbin/ups-drivers/engetron
 sbin/ups-drivers/everups
 sbin/ups-drivers/fentonups
@@ -42,6 +47,7 @@ sbin/ups-drivers/mgeups
 sbin/ups-drivers/multilink
 sbin/ups-drivers/mustekups
 sbin/ups-drivers/newapc
+sbin/ups-drivers/newpowercom
 sbin/ups-drivers/optiups
 sbin/ups-drivers/powercom
 sbin/ups-drivers/sec
