@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/11 23:31:16 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/19 10:54:50 rh Exp $
 #
 
 DISTNAME=	libgnome-2.0.4
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=2.0.1/sources/libgnome/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@hispabsd.org
