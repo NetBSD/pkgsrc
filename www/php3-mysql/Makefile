@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/26 14:54:20 bad Exp $
 #
 
 PKGNAME=	php-mysql-${PHP_VERSION}
 
 COMMENT=	PHP3 extension for MySQL databases
 
-DEPENDS+=	mysql-client-3.22.32:../../databases/mysql-client
+DEPENDS+=	mysql-client>=3.23.35:../../databases/mysql-client
 
 CONFIGURE_ARGS+=--with-mysql=${LOCALBASE}
 
