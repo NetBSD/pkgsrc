@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/11/14 23:42:26 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/26 09:48:15 seb Exp $
 #
 
 DISTNAME=	latex2rtf-1.8aa
@@ -13,6 +13,7 @@ COMMENT=	LaTeX to RTF converter
 USE_BUILDLINK2=	# defined
 MAKE_FLAGS+=	XCFLAGS="${CFLAGS}"
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	latex2rtf.info
 
 INSTALL_TARGET=	simple_install simple_cfg_install
@@ -31,5 +32,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.html ${PREFIX}/share/doc/latex2rtf/latex2rtf.html
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.pdf ${PREFIX}/share/doc/latex2rtf/latex2rtf.pdf
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
