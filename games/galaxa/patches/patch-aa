@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.3 1998/08/23 07:18:30 garbled Exp $
-
+$NetBSD: patch-aa,v 1.4 1998/09/13 20:55:15 garbled Exp $
 --- makefile.orig	Wed Apr 22 22:41:21 1998
-+++ makefile	Fri Jul 24 04:39:58 1998
-@@ -16,6 +16,11 @@
++++ makefile	Sun Sep 13 13:39:27 1998
+@@ -14,16 +14,21 @@
+ OPTFLAG=
+ 
  POSTPROCESS=strip
 +INSTALLROOT=$(PREFIX)
 +SOUNDS=$(INSTALLROOT)/share/galaxa/sounds
@@ -16,19 +17,24 @@ $NetBSD: patch-aa,v 1.3 1998/08/23 07:18:30 garbled Exp $
 +#XLIB=-lX11
 +#CFLAGS=
  
-@@ -24,4 +29,4 @@
+ # XLIB=-L/usr/openwin/lib -lX11
+ # CFLAGS=-I/usr/openwin/include
  
 -# XLIB=-L /usr/X11R6/lib -lX11 -lcompat
 -# CFLAGS=-I/usr/X11/include
 +XLIB=	-Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11 #-lcompat
 +CFLAGS=	-I$(X11BASE)/include $(DIRS)
  
-@@ -41,3 +46,3 @@
+ 
+ OBJECTS=galaxa.o hints.o randnum.o setup.o text.o soundmgr.o
+@@ -39,30 +44,24 @@
+ 
+ 
  galaxa:	$(OBJECTS)
 -	$(CC)	$(OBJECTS) $(XLIB) $(MATHLIB) $(CFLAGS) $(OPTFLAG) -o galaxa
 +	$(CC) $(XLIB) $(MATHLIB) $(CFLAGS) $(OPTFLAG) -o $@ $(OBJECTS)
  	chmod 755 galaxa
-@@ -45,24 +50,18 @@
+ 	$(POSTPROCESS) galaxa
  
 +install: galaxa
 +	install -g games -o bin -m 2755 galaxa $(INSTALLROOT)/bin
@@ -37,7 +43,7 @@ $NetBSD: patch-aa,v 1.3 1998/08/23 07:18:30 garbled Exp $
 +	mkdir -p $(IMAGES)
 +	install -g bin -o bin -m 0644 sounds/* $(SOUNDS)
 +	install -g bin -o bin -m 0644 images/* $(IMAGES)
-+	install -g games -o bin -m 0664 galaxa-highs.dat $(DATA)
++	install -g games -o bin -m 0664 galaxa-highs.dat /var/games
  
 -#-- App object--#
 +#-- Dependencies --#
