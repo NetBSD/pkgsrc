@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2004/01/08 04:47:10 grant Exp $
+# $NetBSD: Makefile,v 1.1 2004/02/10 12:51:51 grant Exp $
 
 DISTNAME=		install_flash_player_6_${DISTUNAME}
-PKGNAME=		MozillaFirebird-bin-flash-${FLASH_VERS:S/r/./}
+PKGNAME=		firefox-bin-flash-${FLASH_VERS:S/r/./}
 CATEGORIES=		www graphics
 MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.flash.com/
-COMMENT=		Flash Player plugin for MozillaFirebird-bin
+COMMENT=		Flash Player plugin for firefox-bin
 
 ONLY_FOR_PLATFORM=      *-*-i386
 
@@ -18,7 +18,7 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
 FLASH_VERS=		6.0r79
-DEPENDS+=		MozillaFirebird-bin>=0.6.1:../../www/MozillaFirebird-bin
+DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
 DISTUNAME=		linux
 WRKNAME=		install_flash_player_6_${DISTUNAME}
 
@@ -35,7 +35,7 @@ NO_BUILD=		yes
 CHECK_SHLIBS=		no
 CRYPTO=			yes
 
-MOZ_NAME=		MozillaFirebird-linux
+MOZ_NAME=		firefox-linux
 WRKSRC=			${WRKDIR}/${WRKNAME}
 NS_PLUGINS_DIR=		${PREFIX}/lib/${MOZ_NAME}/plugins
 
