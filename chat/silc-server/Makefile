@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/03/03 19:05:52 salo Exp $
+# $NetBSD: Makefile,v 1.32 2004/03/20 05:15:45 snj Exp $
 #
 
 DISTNAME=		silc-server-0.9.18
@@ -62,6 +62,9 @@ CONFIGURE_ARGS+=	--with-logsdir=/var/log/silcd
 CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/run/silcd.pid
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-libtoolfix
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 BUILD_DEFS+=		USE_INET6
 
