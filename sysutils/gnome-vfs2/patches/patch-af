@@ -1,10 +1,12 @@
+$NetBSD: patch-af,v 1.6 2004/11/09 16:04:52 sketch Exp $
+
 --- libgnomevfs/gnome-vfs-cdrom.c.orig	Sun Oct 24 16:56:46 2004
 +++ libgnomevfs/gnome-vfs-cdrom.c	Sun Oct 24 16:56:17 2004
 @@ -37,6 +37,8 @@
  
  #ifdef __linux__
  #include <linux/cdrom.h>
-+#else
++#elif defined(__APPLE__)
 +#include <modules/cdda-cdrom-extensions.h>
  #endif
  
