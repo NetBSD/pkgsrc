@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1081 2003/01/10 19:26:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.1082 2003/01/10 19:37:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -198,3 +198,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated autotrace to 0.31.1 [jmmv 2003-01-10]
 	Updated id3ed to 1.10.4 [salo 2003-01-10]
 	Added xmlcatmgr-0.1 [jmmv 2003-01-10]
+	Updated docbook-xml to 4.2nb1 [jmmv 2003-01-10]
+	Updated libglade2 to 2.0.1nb4 [jmmv 2003-01-10]
