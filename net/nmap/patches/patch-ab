@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/01/10 01:24:41 wiz Exp $
 --- nmap-services.orig	Mon Aug 30 01:34:08 1999
 +++ nmap-services	Mon Aug 30 01:35:25 1999
 @@ -1706,7 +1706,7 @@
