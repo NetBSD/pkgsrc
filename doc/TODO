@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.137 2003/01/04 12:48:00 jmmv Exp $
+$NetBSD: TODO,v 1.138 2003/01/04 13:24:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -73,7 +73,6 @@ Suggested package updates
 =========================
 
 	o Xbae-4.50.0
-	o acroread-5.1
 	o adobe-cmaps-1.5 [pkg/19646]
 	o amaya-7.0
 	o anjuta-1.0.1
@@ -193,6 +192,7 @@ Suggested package updates
 	o openssh-3.5p1
 	o openssl-0.9.7
 	o opensp-1.5
+	o p5-Image-Size-2.991
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
 	o pilot-link-0.11.4 [dillo]
