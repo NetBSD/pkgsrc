@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/07/17 21:36:37 grant Exp $
+# $NetBSD: Makefile,v 1.49 2003/07/30 05:29:42 wiz Exp $
 
 DISTNAME=		gnucash-1.8.4
 PKGREVISION=		1
@@ -13,27 +13,7 @@ COMMENT=		Personal double-entry accounting program
 DEPENDS+= 		p5-finance-quote>=1.06:../../finance/p5-finance-quote
 DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 
-BUILDLINK_DEPENDS.guile14=	guile14>=1.4:../../lang/guile14
 BUILDLINK_DEPENDS.guile14+=	guile14<1.5.0:../../lang/guile14
-BUILDLINK_DEPENDS.gal=	gal-[0-9]*
-BUILDLINK_DEPENDS.bonobo=	bonobo-[0-9]*
-BUILDLINK_DEPENDS.glib=	glib>=0.99:../../devel/glib
-BUILDLINK_DEPENDS.gdk-pixbuf-gnome=	gdk-pixbuf-gnome-*
-BUILDLINK_DEPENDS.gtk=  gtk+-[0-9]*
-BUILDLINK_DEPENDS.imlib=        imlib-[0-9]*
-BUILDLINK_DEPENDS.ORBit=        ORBit-[0-9]*
-BUILDLINK_DEPENDS.gdk-pixbuf=   gdk-pixbuf>=0.2.5:../../graphics/gdk-pixbuf
-BUILDLINK_DEPENDS.gdk-pixbuf-gnome=     gdk-pixbuf-gnome-[0-9]*
-BUILDLINK_DEPENDS.gnome-libs=   gnome-libs-[0-9]*
-BUILDLINK_DEPENDS.gnome-print=  gnome-print>=0.21:../../print/gnome-print
-BUILDLINK_DEPENDS.libglade=     libglade-[0-9]*
-BUILDLINK_DEPENDS.gconf=        GConf-[0-9]*
-BUILDLINK_DEPENDS.g-wrap=        g-wrap>=1.3.3:../../devel/g-wrap
-BUILDLINK_DEPENDS.guile14=        guile>=1.3.4:../../lang/guile14
-BUILDLINK_DEPENDS.guppi=        guppi>=0.35:../../math/guppi
-BUILDLINK_DEPENDS.gtkhtml=        gtkhtml>=1.1:../../www/gtkhtml
-BUILDLINK_DEPENDS.glibwww=        glibwww-[0-9]*
-BUILDLINK_DEPENDS.gnome-core=        gnome-core-[0-9]*
 
 BUILD_DEPENDS+=			bison>=1.28:../../devel/bison
 
