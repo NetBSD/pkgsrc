@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/12 20:33:08 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/19 04:52:16 jlam Exp $
 
 DISTNAME=		cadaver-0.17.0
 CATEGORIES=		www
@@ -8,26 +8,27 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.webdav.org/cadaver/
 COMMENT=		command-line WebDAV client
 
-DEPENDS+=		libxml>=1.8.11:../../textproc/libxml
-
-USE_SSL=		# defined
-USE_LIBINTL=		# defined
+#USE_SSL=		# defined
+#USE_LIBINTL=		# defined
 USE_GMAKE=		# defined
+USE_BUILDLINK_ONLY=	# defined
+USE_CONFIG_WRAPPER=	# defined
 
 ALL_TARGET=		cadaver
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
-CONFIGURA_ARGS+=	--with-include-neon
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-include-neon
 CONFIGURE_ARGS+=	--enable-libxml
 CONFIGURE_ARGS+=	--enable-netrc
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/libgetopt/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
 
+# We don't need curses, just termcap.
 CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
-CONFIGURE_ENV+=		ac_cv_lib_ncurses_tputs=no
-
-CFLAGS+=		${CPPFLAGS}
 LIBS+=			-ltermcap
 
 # The build process doesn't correctly find some headers for utility functions
