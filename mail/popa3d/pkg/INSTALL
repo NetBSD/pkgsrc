@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2000/04/02 01:32:28 wiz Exp $
+# $NetBSD: INSTALL,v 1.2 2000/05/26 14:21:42 wiz Exp $
 #
 
 if [ "$2" != "PRE-INSTALL" ]; then
@@ -23,12 +23,12 @@ else
     fi
 fi
 
-if ${GROUP_CMD} info -e popa3d ; then \
+if `${GROUP_CMD} info -e popa3d` ; then \
 	${ECHO} Group \'popa3d\' already exists.; \
 else \
 	${GROUP_CMD} add popa3d; \
 fi
-if ${USER_CMD} info -e popa3d ; then \
+if `${USER_CMD} info -e popa3d` ; then \
 	${ECHO} User \'popa3d\' already exists.; \
 else \
 	${USER_CMD} add -g popa3d -d /nonexistent -s /sbin/nologin \
