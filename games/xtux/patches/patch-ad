@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/17 06:45:11 hubertf Exp $
+
+--- src/client/Makefile.orig	Thu Nov 16 07:40:42 2000
++++ src/client/Makefile
+@@ -23,7 +23,7 @@
+ COMMON_INC = -I$(COMMON_PATH)
+ 
+ # Libraries used in linking
+-X11LIB = -L$(X11_PATH)/lib -lX11
++X11LIB = -Wl,-R${X11_PATH}/lib -L$(X11_PATH)/lib -lX11
+ XPMLIB = -lXpm
+ MATHLIB = -lm
+ 
