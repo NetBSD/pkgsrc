@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/09/15 06:24:22 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/11 15:26:07 uebayasi Exp $
 bin/mewcat
 bin/mewdecode
 bin/mewencode
@@ -61,7 +61,6 @@ ${EMACS_LISPPREFIX}/mew/contrib/mew-gnus.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-nmz-fixer.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-nmz.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-refile-view.el
-${EMACS_LISPPREFIX}/mew/contrib/mew-smime-ja.texi
 ${EMACS_LISPPREFIX}/mew/contrib/mew-toolbar-frame.el
 ${EMACS_LISPPREFIX}/mew/mew-addrbook.el
 ${EMACS_LISPPREFIX}/mew/mew-addrbook.elc
