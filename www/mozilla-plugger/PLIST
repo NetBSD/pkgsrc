@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/10 10:48:02 reinoud Exp $
+@exec mkdir lib/mozilla/plugins
+bin/${PKGNAME}
+bin/plugger-controller
+bin/plugger-oohelper
+lib/mozilla/plugins/plugger.so
+man/man7/plugger.7
