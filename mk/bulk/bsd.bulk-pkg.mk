@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.44 2003/05/06 17:42:03 jmmv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.45 2003/07/11 23:54:32 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -126,8 +126,8 @@ bulk-cache:
 	@${ECHO_MSG} "BULK> Sorting build order."
 	tsort ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
-	${_PKGSRCDIR}/mk/bulk/tflat -u ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
-	${_PKGSRCDIR}/mk/bulk/tflat -d ${DEPENDSTREEFILE} > ${DEPENDSFILE}
+	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat -u ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
+	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat -d ${DEPENDSTREEFILE} > ${DEPENDSFILE}
 	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
 	@${ECHO_MSG} "      (this may take a while)."
 	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
@@ -167,7 +167,7 @@ bulk-check-uptodate:
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
 			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ;  \
-			if [ -z $$pkg ]; then \
+			if [ -z "$$pkg" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
 				uptodate=0 ; \
 			elif [ "$$pkg" -nt "${REF}" ]; then \
