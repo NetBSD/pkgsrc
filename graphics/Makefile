@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2000/11/26 22:53:04 jtb Exp $
+# $NetBSD: Makefile,v 1.104 2000/11/27 14:44:37 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -25,6 +25,7 @@
     SUBDIR += fly
     SUBDIR += fnlib
     SUBDIR += freetype
+    SUBDIR += freetype2
     SUBDIR += freetype-lib
     SUBDIR += freetype-utils
     SUBDIR += fujiplay
