@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2002/06/15 15:32:27 fredb Exp $
+# $NetBSD: Makefile,v 1.81 2002/06/15 15:42:08 fredb Exp $
 
 DISTNAME=		mutt-1.4i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -32,11 +32,11 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 . include "../../devel/libslang/buildlink.mk"
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_DIR}
 .else
-. include "../../devel/ncurses/buildlink.mk"
-CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
 . if ${MUTT_USE_NCURSES} == YES
 USE_NCURSES=		YES
 . endif
+. include "../../devel/ncurses/buildlink.mk"
+CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
 .endif
 
 # There seems to be a problem using NetBSD's /bin/sh, so use /bin/ksh instead.
