@@ -1,0 +1,97 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/03 06:14:16 sakamoto Exp $
+
+--- unix-gcc.mak.orig	Thu Sep 17 02:06:06 1998
++++ unix-gcc.mak	Wed Nov  4 19:33:28 1998
+@@ -141,7 +141,7 @@
+ # what its name is.
+ # See gs.mak and Make.htm for more information.
+ 
+-SHARE_LIBPNG=0
++SHARE_LIBPNG=1
+ LIBPNG_NAME=png
+ 
+ # Define the directory where the zlib sources are stored.
+@@ -153,7 +153,7 @@
+ # what its name is (usually libz, but sometimes libgz).
+ # See gs.mak and Make.htm for more information.
+ 
+-SHARE_ZLIB=0
++SHARE_ZLIB=1
+ #ZLIB_NAME=gz
+ ZLIB_NAME=z
+ 
+@@ -224,7 +224,7 @@
+ # SVR4 may need -lnsl.
+ # (Libraries required by individual drivers are handled automatically.)
+ 
+-EXTRALIBS=
++EXTRALIBS=-L${PREFIX}/lib
+ 
+ # Define the include switch(es) for the X11 header files.
+ # This can be null if handled in some other way (e.g., the files are
+@@ -234,7 +234,7 @@
+ # Note that x_.h expects to find the header files in $(XINCLUDE)/X11,
+ # not in $(XINCLUDE).
+ 
+-XINCLUDE=-I/usr/local/X/include
++XINCLUDE=-I${X11BASE}/include
+ 
+ # Define the directory/ies and library names for the X11 library files.
+ # XLIBDIRS is for ld and should include -L; XLIBDIR is for LD_RUN_PATH
+@@ -246,12 +246,12 @@
+ # Solaris and other SVR4 systems with dynamic linking probably want
+ #XLIBDIRS=-L/usr/openwin/lib -R/usr/openwin/lib
+ # X11R6 (on any platform) may need
+-#XLIBS=Xt SM ICE Xext X11
++XLIBS=Xt SM ICE Xext X11
+ 
+ #XLIBDIRS=-L/usr/local/X/lib
+-XLIBDIRS=-L/usr/X11/lib
++XLIBDIRS=-L${X11BASE}/lib
+ XLIBDIR=
+-XLIBS=Xt Xext X11
++#XLIBS=Xt Xext X11
+ 
+ # Define whether this platform has floating point hardware:
+ #	FPU_TYPE=2 means floating point is faster than fixed point.
+@@ -295,23 +295,23 @@
+ # Choose the device(s) to include.  See devs.mak for details,
+ # devs.mak and contrib.mak for the list of available devices.
+ 
+-DEVICE_DEVS=x11.dev x11alpha.dev x11cmyk.dev x11gray2.dev x11gray4.dev x11mono.dev
+-#DEVICE_DEVS1=bmpmono.dev bmpamono.dev posync.dev
+-DEVICE_DEVS1=
+-DEVICE_DEVS2=
+-DEVICE_DEVS3=deskjet.dev djet500.dev laserjet.dev ljetplus.dev ljet2p.dev ljet3.dev ljet4.dev
+-DEVICE_DEVS4=cdeskjet.dev cdjcolor.dev cdjmono.dev cdj550.dev pj.dev pjxl.dev pjxl300.dev
+-DEVICE_DEVS5=uniprint.dev
+-DEVICE_DEVS6=bj10e.dev bj200.dev bjc600.dev bjc800.dev
+-DEVICE_DEVS7=faxg3.dev faxg32d.dev faxg4.dev
+-DEVICE_DEVS8=pcxmono.dev pcxgray.dev pcx16.dev pcx256.dev pcx24b.dev pcxcmyk.dev
+-DEVICE_DEVS9=pbm.dev pbmraw.dev pgm.dev pgmraw.dev pgnm.dev pgnmraw.dev pnm.dev pnmraw.dev ppm.dev ppmraw.dev pkm.dev pkmraw.dev
+-DEVICE_DEVS10=tiffcrle.dev tiffg3.dev tiffg32d.dev tiffg4.dev tifflzw.dev tiffpack.dev
+-DEVICE_DEVS11=tiff12nc.dev tiff24nc.dev
+-DEVICE_DEVS12=psmono.dev psgray.dev psrgb.dev bit.dev bitrgb.dev bitcmyk.dev
+-DEVICE_DEVS13=pngmono.dev pnggray.dev png16.dev png256.dev png16m.dev
+-DEVICE_DEVS14=jpeg.dev jpeggray.dev
+-DEVICE_DEVS15=pdfwrite.dev pswrite.dev epswrite.dev pxlmono.dev pxlcolor.dev
++#DEVICE_DEVS=x11.dev x11alpha.dev x11cmyk.dev x11gray2.dev x11gray4.dev x11mono.dev
++##DEVICE_DEVS1=bmpmono.dev bmpamono.dev posync.dev
++#DEVICE_DEVS1=
++#DEVICE_DEVS2=
++#DEVICE_DEVS3=deskjet.dev djet500.dev laserjet.dev ljetplus.dev ljet2p.dev ljet3.dev ljet4.dev
++#DEVICE_DEVS4=cdeskjet.dev cdjcolor.dev cdjmono.dev cdj550.dev pj.dev pjxl.dev pjxl300.dev
++#DEVICE_DEVS5=uniprint.dev
++#DEVICE_DEVS6=bj10e.dev bj200.dev bjc600.dev bjc800.dev
++#DEVICE_DEVS7=faxg3.dev faxg32d.dev faxg4.dev
++#DEVICE_DEVS8=pcxmono.dev pcxgray.dev pcx16.dev pcx256.dev pcx24b.dev pcxcmyk.dev
++#DEVICE_DEVS9=pbm.dev pbmraw.dev pgm.dev pgmraw.dev pgnm.dev pgnmraw.dev pnm.dev pnmraw.dev ppm.dev ppmraw.dev pkm.dev pkmraw.dev
++#DEVICE_DEVS10=tiffcrle.dev tiffg3.dev tiffg32d.dev tiffg4.dev tifflzw.dev tiffpack.dev
++#DEVICE_DEVS11=tiff12nc.dev tiff24nc.dev
++#DEVICE_DEVS12=psmono.dev psgray.dev psrgb.dev bit.dev bitrgb.dev bitcmyk.dev
++#DEVICE_DEVS13=pngmono.dev pnggray.dev png16.dev png256.dev png16m.dev
++#DEVICE_DEVS14=jpeg.dev jpeggray.dev
++#DEVICE_DEVS15=pdfwrite.dev pswrite.dev epswrite.dev pxlmono.dev pxlcolor.dev
+ 
+ # ---------------------------- End of options --------------------------- #
+ 

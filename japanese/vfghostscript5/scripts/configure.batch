@@ -1,0 +1,23 @@
+#! /bin/sh
+#
+# $NetBSD: configure.batch,v 1.1.1.1 1999/09/03 06:14:16 sakamoto Exp $
+#
+
+# without that no way :)
+${TOUCH} ${WRKSRC}/makefile
+
+${CAT} - > ${WRKSRC}/unix-gcc.mak.new << !EOT
+DEVICE_DEVS=x11.dev x11alpha.dev x11cmyk.dev x11cmyk2.dev x11cmyk4.dev x11cmyk8.dev x11gray2.dev x11gray4.dev x11mono.dev cljet5.dev deskjet.dev djet500.dev laserjet.dev ljet2p.dev ljet3.dev ljet3d.dev ljet4.dev ljetplus.dev lj5mono.dev lj5gray.dev lp2563.dev oce9050.dev faxg3.dev faxg32d.dev faxg4.dev tiffcrle.dev tiffg3.dev tiffg32d.dev tiffg4.dev epswrite.dev pdfwrite.dev pswrite.dev pxlmono.dev pxlcolor.dev bit.dev bitrgb.dev bitcmyk.dev bmpmono.dev bmp16.dev bmp256.dev bmp16m.dev cgmmono.dev cgm8.dev cgm24.dev jpeg.dev jpeggray.dev miff24.dev pcxmono.dev pcxgray.dev pcx16.dev pcx256.dev pcx24b.dev pcxcmyk.dev pbm.dev pbmraw.dev pgm.dev pgmraw.dev pgnm.dev pgnmraw.dev pnm.dev pnmraw.dev ppm.dev ppmraw.dev pkm.dev pkmraw.dev plan9bm.dev pngmono.dev pnggray.dev png16.dev png256.dev png16m.dev psmono.dev psgray.dev psrgb.dev tiff12nc.dev tiff24nc.dev tifflzw.dev tiffpack.dev sxlcrt.dev ap3250.dev appledmp.dev bj10e.dev bj200.dev bjc600.dev bjc800.dev ccr.dev cdeskjet.dev cdjcolor.dev cdjmono.dev cdj500.dev cdj550.dev cdj850.dev cdj670.dev cdj890.dev cdj1600.dev cp50.dev declj250.dev djet500c.dev dnj650c.dev epson.dev eps9mid.dev eps9high.dev epsonc.dev hl7x0.dev ibmpro.dev imagen.dev iwhi.dev iwlo.dev iwlq.dev jetp3852.dev la50.dev la70.dev la75.dev la75plus.dev ln03.dev lj250.dev lj4dith.dev lp8000.dev lq850.dev m8510.dev necp6.dev oki182.dev okiibm.dev paintjet.dev pj.dev pjetxl.dev pjxl.dev pjxl300.dev r4081.dev sj48.dev st800.dev stcolor.dev t4693d2.dev t4693d4.dev t4693d8.dev tek4696.dev uniprint.dev xes.dev dfaxhigh.dev dfaxlow.dev cif.dev inferno.dev mgrmono.dev mgrgray2.dev mgrgray4.dev mgrgray8.dev mgr4.dev mgr8.dev sgirgb.dev lips2p.dev lips3.dev lips4.dev bjc880j.dev lp2000.dev escpage.dev npdl.dev lips4v.dev bj10v.dev bj10vh.dev mjc180.dev mjc360.dev mjc720.dev mj500c.dev rpdlA3.dev rpdlA4.dev rpdlB4.dev rpdlB5.dev dmprt.dev alps.dev
+!EOT
+
+#vflib patch
+${CAT} ${WRKSRC}/unix-gcc.mak | ${SED} 's/^VFINCLUDE=/VFINCLUDE=-I\${prefix}\/include/g' | sed 's/^VFLIBDIRS=/VFLIBDIRS=-L\${prefix}\/lib/g' > ${WRKSRC}/unix-gcc.mak.vf  
+${MV} ${WRKSRC}/unix-gcc.mak.vf ${WRKSRC}/unix-gcc.mak
+
+# create one new Makefile, where DEVICE_DEVS contains all wanted devices
+${CAT} ${WRKSRC}/unix-gcc.mak >> ${WRKSRC}/unix-gcc.mak.new
+${MV} ${WRKSRC}/unix-gcc.mak.new ${WRKSRC}/unix-gcc.mak
+
+# create one new contrib.mak
+${CAT} ${WRKSRC}/../gdevlips-2.3.3/gdevlips.mak ${WRKSRC}/../gdev10v/gdev10v.mak ${WRKSRC}/../gdevmjc-0.8/gdevmjc.mak ${WRKSRC}/../gdevrpdl/gdevrpdl.mak ${WRKSRC}/../gdevdmpr.mak ${WRKSRC}/../gdevalps/gdevalps.mk >> ${WRKSRC}/contrib.mak
+

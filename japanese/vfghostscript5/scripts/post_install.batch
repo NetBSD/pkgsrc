@@ -1,0 +1,21 @@
+#! /bin/sh
+
+${CP} ${WRKSRC}/../gs5.50-vflib-1.0/README ${DOC_DIR}/README.gs5.10-vflib ; \
+${CP} ${WRKSRC}/../gs5.50-vflib-1.0/OLD-DOC/gs261d13-doc/* ${DOC_DIR} ; \
+${CP} ${WRKSRC}/../gs5.50-vflib-1.0/OLD-DOC/gs261j11-doc/* ${DOC_DIR} ; \
+${CP} ${WRKSRC}/../gdevlips-2.3.3/Gdevlips.htm ${DOC_DIR} ; \
+${CP} ${WRKSRC}/../gdevlips-2.3.3/gs_statd.dif ${DOC_DIR} ; \
+${CP} ${WRKSRC}/../gdev10v/gdev10v.jis ${DOC_DIR} ; \
+${MKDIR} ${DOC_DIR}/gdevmjc-0.8 ; \
+${CP} ${WRKSRC}/../gdevmjc-0.8/README.mjc ${DOC_DIR}/gdevmjc-0.8/ ; \
+${CP} ${WRKSRC}/../gdevmjc-0.8/README.noz ${DOC_DIR}/gdevmjc-0.8/ ; \
+${CP} ${WRKSRC}/../gdevmjc-0.8/README.mje ${DOC_DIR}/gdevmjc-0.8/ ; \
+${CP} ${WRKSRC}/../gdevmjc-0.8/cpem.doc ${DOC_DIR}/gdevmjc-0.8/ ; \
+${CP} ${WRKSRC}/../gdevmjc-0.8/MJ700V2C.FAQ ${DOC_DIR}/gdevmjc-0.8/ ; \
+${CP} ${WRKSRC}/../gdevdmpr.sj ${DOC_DIR} ; \
+${CP} ${WRKSRC}/../dmp_init.ps ${GSINST_DIR} ; \
+${MV} ${WRKSRC}/../dmp_site.ps ${WRKSRC}/../dmp_site.bak 
+${CAT} ${WRKSRC}/../dmp_site.bak | sed -e "s#/usr/local#${PREFIX}#g" > ${WRKSRC}/../dmp_site.ps 
+${CP} ${WRKSRC}/../dmp_site.ps ${GSINST_DIR} ; \
+${CP} ${WRKSRC}/../escp_24.src ${GSINST_DIR} ; \
+${CP} ${WRKSRC}/../testpage.ps ${GSINST_DIR} ; \
