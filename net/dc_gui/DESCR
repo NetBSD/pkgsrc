@@ -1,5 +1,7 @@
-dc_gui is a GUI for DCTC. Currently, it is still a beta version,
-some features don't work but the most useful ones are available:
+dc_gui is a GUI for DCTC (Direct Connect Text Client), another file sharing
+protocol. Currently, it is still a beta version, some features don't work
+but the most useful ones are available:
+
     * Currently, dc_gui can start a new client and/or attach itself
       to already running DCTC. You can also start several connections
       at the same time. You can switch between several DCTC.
