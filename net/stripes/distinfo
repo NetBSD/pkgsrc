@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/29 20:04:59 kim Exp $
+$NetBSD: distinfo,v 1.2 2002/01/29 13:42:28 wiz Exp $
 
 SHA1 (stripes-2.1.tar.gz) = 1910d40e975b98b2e815cf7a1c228777c5a0b816
 Size (stripes-2.1.tar.gz) = 6227 bytes
+SHA1 (patch-aa) = 22961703e9bdc755ac698b08a5edb233ff995d69
