@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2004/12/24 10:03:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.64 2005/01/09 17:30:00 jmmv Exp $
 
-DISTNAME=		glib-2.6.0
+DISTNAME=		glib-2.6.1
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.6/ \
@@ -42,6 +42,10 @@ CONFIGURE_ENV+=		F77=${FALSE}
 
 CONFIGURE_ENV+=		PERL=${PERL5}
 CONFIGURE_ENV+=		PERL_PATH=${PERL5}
+
+CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
+CPPFLAGS+=		-DPKGLOCALEDIR=\"\\\"${PKGLOCALEDIR}\\\"\"
+CPPFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
 
 .include "../../mk/bsd.prefs.mk"
 
