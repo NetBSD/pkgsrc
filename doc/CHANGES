@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5429 2004/04/03 05:01:03 minskim Exp $
+$NetBSD: CHANGES,v 1.5430 2004/04/03 05:26:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1761,3 +1761,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pear-Log to 1.8.4 [jdolecek 2004-04-02]
 	Updated pear-HTML_Select to 1.2.1 [jdolecek 2004-04-02]
 	Updated GConf2 to 2.6.0nb1 [minskim 2004-04-03]
+	Updated gnome-themes to 2.6.0nb1 [minskim 2004-04-03]
+
