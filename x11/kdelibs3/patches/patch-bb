@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1.1.1 2002/05/31 13:16:47 skrll Exp $
+$NetBSD: patch-bb,v 1.2 2002/07/17 07:54:12 skrll Exp $
 
---- kinit/klauncher_main.cpp.orig	Wed Oct 10 18:40:41 2001
+--- kinit/klauncher_main.cpp.orig	Mon Jun 24 13:04:02 2002
 +++ kinit/klauncher_main.cpp
-@@ -86,8 +86,3 @@
+@@ -85,8 +85,3 @@
     launcher->exec();
     return 0;
  }

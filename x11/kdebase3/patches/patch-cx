@@ -1,8 +1,8 @@
-$NetBSD: patch-cx,v 1.1.1.1 2002/05/31 13:19:18 skrll Exp $
+$NetBSD: patch-cx,v 1.2 2002/07/17 07:54:08 skrll Exp $
 
---- konsole/konsole/main.cpp.orig	Wed May  8 19:22:40 2002
+--- konsole/konsole/main.cpp.orig	Mon Jun 24 12:57:09 2002
 +++ konsole/konsole/main.cpp
-@@ -110,7 +110,9 @@
+@@ -112,7 +112,9 @@
  
  
  /* --| main |------------------------------------------------------ */

@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 15:02:58 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2002/07/17 07:54:04 skrll Exp $
 
---- artsc/artsdsp.c.orig	Fri Jul 27 11:49:53 2001
+--- artsc/artsdsp.c.orig	Mon Jun 24 17:55:50 2002
 +++ artsc/artsdsp.c
 @@ -127,6 +127,9 @@
  
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 15:02:58 skrll Exp $
  }
  
  static void artsdspdebug(const char *fmt,...)
-@@ -230,13 +246,18 @@
+@@ -231,13 +247,18 @@
    return sndfd;
  }
  
@@ -58,7 +58,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 15:02:58 skrll Exp $
    /*
     * FreeBSD needs ioctl with varargs. However I have no idea how to "forward"
     * the variable args ioctl to the orig_ioctl routine. So I expect the ioctl
-@@ -248,6 +269,7 @@
+@@ -249,6 +270,7 @@
    va_start(args,request);
    argp = va_arg(args, void *);
    va_end(args);
