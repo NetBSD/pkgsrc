@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2002/04/19 14:55:30 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/19 15:17:15 zuntum Exp $
 #
 
 
 COMMENT=	Amateur packet radio tools
 
 SUBDIR+=	7plus
+SUBDIR+=	cwtext
 SUBDIR+=	dpbox
 SUBDIR+=	tfkiss
 SUBDIR+=	tnt
