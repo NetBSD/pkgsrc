@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5238 2004/03/12 19:25:26 wiz Exp $
+$NetBSD: CHANGES,v 1.5239 2004/03/12 19:46:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1446,3 +1446,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xconq to 7.4.1nb2 [minskim 2004-03-12]
 	Updated destroy to 20040310 [recht 2004-03-12]
 	Updated openssh to 3.8.1 [wiz 2004-03-12]
+	Updated paragui to 1.0.4nb4 [wiz 2004-03-12]
