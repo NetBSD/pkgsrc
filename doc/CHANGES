@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8235 2004/12/03 15:31:36 wiz Exp $
+$NetBSD: CHANGES,v 1.8236 2004/12/03 16:47:31 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5733,3 +5733,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated eawpatches to 12nb1 [ben 2004-12-03]
 	Updated arcem to 1.00 [skrll 2004-12-03]
 	Updated guile-gtk to 0.40.91 [wiz 2004-12-03]
+	Updated firefox to 1.0nb2 [taya 2004-12-03]
+	Updated firefox-gtk2 to 1.0nb2 [taya 2004-12-03]
