@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+--- configure.orig	Mon Sep 20 13:03:01 1999
++++ configure	Mon Sep 20 13:35:04 1999
+@@ -587,6 +587,7 @@
+ 			machine=hp9000s300 ;;
+       mips-*-netbsd*)	machine=pmax ;;
+       ns32k-*-netbsd*)	machine=ns32000 ;;
++      powerpc-*-netbsd*) machine=powerpc ;;
+       sparc-*-netbsd*)	machine=sparc ;;
+     esac
+   ;;
