@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.57 2004/04/27 03:30:04 tv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.58 2004/04/27 12:06:11 tv Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -102,6 +102,20 @@ FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL}
 FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
+
+# Interix is very Special in that users are groups cannot have the
+# same name.  defs.Interix.mk tries to work around this by overriding
+# some specific package defaults.  If we get here and there's still a
+# conflict, add a breakage indicator to make sure the package won't
+# compile without changing something.
+#
+.if !empty(OPSYS:MInterix)
+.for user in ${PKG_USERS}
+.if !defined(BROKEN) && !empty(PKG_GROUPS:M${user:C/:.*//})
+BROKEN:=		"User and group '${user:C/:.*//}' cannot have the same name on Interix"
+.endif
+.endfor
+.endif
 
 .if !empty(PKG_USERS)
 USE_USERADD=		YES
