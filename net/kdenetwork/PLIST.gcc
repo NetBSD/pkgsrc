@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gcc,v 1.1 2001/10/31 23:11:58 zuntum Exp $
+@comment $NetBSD: PLIST.gcc,v 1.2 2002/06/29 20:48:44 agc Exp $
 bin/karchie
 bin/kbiff
 bin/kcmktalkd
@@ -378,7 +378,6 @@ share/kde/locale/br/LC_MESSAGES/knu.mo
 share/kde/locale/br/LC_MESSAGES/korn.mo
 share/kde/locale/br/LC_MESSAGES/kppp.mo
 share/kde/locale/br/LC_MESSAGES/krn.mo
-share/kde/locale/br/LC_MESSAGES/ksirc.mo
 share/kde/locale/br/LC_MESSAGES/ktalkd.mo
 share/kde/locale/ca/LC_MESSAGES/kcmktalkd.mo
 share/kde/locale/ca/LC_MESSAGES/kfinger.mo
@@ -397,7 +396,6 @@ share/kde/locale/cs/LC_MESSAGES/knu.mo
 share/kde/locale/cs/LC_MESSAGES/korn.mo
 share/kde/locale/cs/LC_MESSAGES/kppp.mo
 share/kde/locale/cs/LC_MESSAGES/krn.mo
-share/kde/locale/cs/LC_MESSAGES/ksirc.mo
 share/kde/locale/cs/LC_MESSAGES/ktalkd.mo
 share/kde/locale/da/LC_MESSAGES/karchie.mo
 share/kde/locale/da/LC_MESSAGES/kbiff.mo
@@ -463,7 +461,6 @@ share/kde/locale/fr/LC_MESSAGES/korn.mo
 share/kde/locale/fr/LC_MESSAGES/kppp.mo
 share/kde/locale/fr/LC_MESSAGES/kppplogview.mo
 share/kde/locale/fr/LC_MESSAGES/krn.mo
-share/kde/locale/fr/LC_MESSAGES/ksirc.mo
 share/kde/locale/fr/LC_MESSAGES/ktalkd.mo
 share/kde/locale/he/LC_MESSAGES/kppp.mo
 share/kde/locale/hr/LC_MESSAGES/kbiff.mo
@@ -509,7 +506,6 @@ share/kde/locale/ja/LC_MESSAGES/korn.mo
 share/kde/locale/ja/LC_MESSAGES/kppp.mo
 share/kde/locale/ja/LC_MESSAGES/kppplogview.mo
 share/kde/locale/ja/LC_MESSAGES/krn.mo
-share/kde/locale/ja/LC_MESSAGES/ksirc.mo
 share/kde/locale/ja/LC_MESSAGES/ktalkd.mo
 share/kde/locale/ko/LC_MESSAGES/kmail.mo
 share/kde/locale/ko/LC_MESSAGES/knu.mo
@@ -594,7 +590,6 @@ share/kde/locale/sl/LC_MESSAGES/knu.mo
 share/kde/locale/sl/LC_MESSAGES/korn.mo
 share/kde/locale/sl/LC_MESSAGES/kppp.mo
 share/kde/locale/sl/LC_MESSAGES/krn.mo
-share/kde/locale/sl/LC_MESSAGES/ksirc.mo
 share/kde/locale/sl/LC_MESSAGES/ktalkd.mo
 share/kde/locale/sv/LC_MESSAGES/karchie.mo
 share/kde/locale/sv/LC_MESSAGES/kbiff.mo
