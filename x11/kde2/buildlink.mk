@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/12/07 07:21:30 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/02/25 13:03:31 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE2
 # configure-and-build process.
@@ -73,6 +73,9 @@ CONFIGURE_ARGS+=	--datadir="${KDEDIR}/share/kde"
 CONFIGURE_ARGS+=	--with-qt-dir="${BUILDLINK_QTDIR}"
 CONFIGURE_ARGS+=	--with-extra-includes="${_KDE2_EXTRA_INCLUDES}"
 CONFIGURE_ARGS+=	--disable-rpath
+.if exists(${X11BASE}/lib/libXinerama.so)
+CONFIGURE_ARGS+=	--with-xinerama
+.endif
 
 CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"
 CONFIGURE_ENV+=		USER_LDFLAGS="${LDFLAGS}"
