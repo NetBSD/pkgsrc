@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2002/09/27 00:31:01 dillo Exp $
+$NetBSD: patch-ac,v 1.2 2002/09/29 16:18:51 wiz Exp $
 
---- libmpcodecs/ad_faad.c.orig	Sun Aug  4 17:33:41 2002
+--- libmpcodecs/ad_faad.c.orig	Sat Aug 31 15:09:23 2002
 +++ libmpcodecs/ad_faad.c
-@@ -46,7 +46,8 @@ static int preinit(sh_audio_t *sh)
+@@ -45,7 +45,8 @@ static int preinit(sh_audio_t *sh)
  
  static int init(sh_audio_t *sh)
  {
