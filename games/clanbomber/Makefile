@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/30 11:41:57 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/23 20:28:57 jlam Exp $
 
 DISTNAME=		clanbomber-1.01
 PKGNAME=		${DISTNAME}nb1
@@ -22,8 +22,8 @@ IS_INTERACTIVE=		yes
 .endif
 
 pre-configure:
-	${ECHO} "#define BOMBERDATDIR \"${X11BASE}/share/clanbomber/clanbomber.dat\"" >> ${WRKSRC}/config.h.in
-	${ECHO} "#define BOMBERMAPS \"${X11BASE}/share/clanbomber/maps\"" >> ${WRKSRC}/config.h.in
+	${ECHO} "#define BOMBERDATDIR \"${X11PREFIX}/share/clanbomber/clanbomber.dat\"" >> ${WRKSRC}/config.h.in
+	${ECHO} "#define BOMBERMAPS \"${X11PREFIX}/share/clanbomber/maps\"" >> ${WRKSRC}/config.h.in
 
 pre-build:
 	@if [ "${DISPLAY}" = "" ]; then					    \
