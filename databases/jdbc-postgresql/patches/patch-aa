@@ -1,0 +1,12 @@
+--- Makefile.orig	Wed Jun  7 10:31:07 2000
++++ Makefile	Wed Jun  7 10:33:52 2000
+@@ -83,8 +83,7 @@
+ 
+ # This rule builds the javadoc documentation
+ doc:
+-	export CLASSPATH=.;\
+-		$(JAVADOC) -public \
++		-$(JAVADOC) -public \
+ 			org.postgresql \
+ 			org.postgresql.fastpath \
+ 			org.postgresql.largeobject
