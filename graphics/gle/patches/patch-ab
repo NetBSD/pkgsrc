@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:00:32 rh Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/22 14:13:09 adam Exp $
 
---- man/Makefile.in.orig	Wed May  9 17:11:27 2001
+--- man/Makefile.in.orig	2003-03-18 06:12:45.000000000 +0000
 +++ man/Makefile.in
-@@ -70,15 +70,15 @@
- RANLIB = @RANLIB@
+@@ -74,15 +74,15 @@ RANLIB = @RANLIB@
+ STRIP = @STRIP@
  VERSION = @VERSION@
  
 -man_MANS =    gle.3gle 		  gleExtrusion.3gle 	  gleHelicoid.3gle 	  gleLathe.3gle 	  glePolyCone.3gle 	  glePolyCylinder.3gle 	  gleScrew.3gle 	  gleSetJoinStyle.3gle 	  gleSetNumSides.3gle 	  gleSpiral.3gle 	  gleSuperExtrusion.3gle   gleTextureMode.3gle 	  gleToroid.3gle 	  gleTwistExtrusion.3gle         
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:00:32 rh Exp $
 -man_RAW = $(man_MANS:.3gle=.man)
 +man_RAW = $(man_MANS:.3=.man)
  
- EXTRA_DIST = $(man_RAW)   Makefile.sgi
+ EXTRA_DIST =    .cvsignore   $(man_RAW)   Makefile.sgi
  
  
 -SUFFIXES =  .man .3gle
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:00:32 rh Exp $
  
  CLEANFILES =  $(man_MANS)
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
-@@ -102,7 +102,7 @@
+@@ -106,7 +106,7 @@ TAR = tar
  GZIP_ENV = --best
  all: all-redirect
  .SUFFIXES:
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:00:32 rh Exp $
  $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
  	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps man/Makefile
  
-@@ -233,11 +233,11 @@
+@@ -237,11 +237,11 @@ maintainer-clean-generic clean mostlycle
  
  
  # for the ordinary install, just copy the raw files ....
