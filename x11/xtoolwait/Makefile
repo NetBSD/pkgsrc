@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:57:04 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/19 05:06:44 snj Exp $
 #
 
 DISTNAME=	xtoolwait-1.3
@@ -10,7 +10,7 @@ MAINTAINER=	minoura@NetBSD.org
 HOMEPAGE=	http://www.hacom.nl/~richard/software/xtoolwait.html
 COMMENT=	Free implementation of SunOS toolwait(1)
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
