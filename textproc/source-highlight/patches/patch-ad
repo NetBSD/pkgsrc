@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2003/02/16 20:53:48 seb Exp $
+$NetBSD: patch-ad,v 1.3 2003/06/12 01:17:32 seb Exp $
 
---- doc/Makefile.in.orig	2003-02-09 09:22:52.000000000 +0000
+--- doc/Makefile.in.orig	2003-06-12 00:36:17.000000000 +0000
 +++ doc/Makefile.in
 @@ -138,6 +138,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
@@ -39,7 +39,7 @@ $NetBSD: patch-ad,v 1.2 2003/02/16 20:53:48 seb Exp $
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
 -	  $(AUTOMAKE) --gnu  doc/Makefile
-+	  $(AUTOMAKE) --gnu  --ignore-deps doc/Makefile
++	  $(AUTOMAKE) --foreign  --ignore-deps doc/Makefile
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
  source-highlight.html: $(top_builddir)/config.status source-highlight.html.in
@@ -104,7 +104,7 @@ $NetBSD: patch-ad,v 1.2 2003/02/16 20:53:48 seb Exp $
  
  uninstall-man: uninstall-man1
  
-@@ -409,29 +412,30 @@ uninstall-man: uninstall-man1
+@@ -409,11 +412,12 @@ uninstall-man: uninstall-man1
  	distclean-generic distdir dvi dvi-am info info-am install \
  	install-am install-data install-data-am install-exec \
  	install-exec-am install-info install-info-am install-man \
@@ -119,26 +119,3 @@ $NetBSD: patch-ad,v 1.2 2003/02/16 20:53:48 seb Exp $
  
  
  # note that $(srcdir) actually points to doc dir
- 
- startapp.cc.html: $(top_srcdir)/src/startapp.cc
--	$(CPP2HTML) --doc $(OUTPUT_HERE) $<
-+	$(CPP2HTML) --doc $(OUTPUT_HERE) $(top_srcdir)/src/startapp.cc
- 
- ChangeLog.html: $(top_srcdir)/ChangeLog
--	$(CHANGELOG2HTML) --doc $(OUTPUT_HERE) $<
-+	$(CHANGELOG2HTML) --doc $(OUTPUT_HERE) $(top_srcdir)/ChangeLog
- 
- flex_scanner.ll.html: $(top_srcdir)/src/flex_scanner.ll
--	$(FLEX2HTML) --doc $(OUTPUT_HERE) $<
-+	$(FLEX2HTML) --doc $(OUTPUT_HERE) $(top_srcdir)/src/flex_scanner.ll
- 
- cmdline.c.html: $(top_srcdir)/src/lib/cmdline.c
--	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/cpp2html.css" --header="$(srcdir)/header.html" --footer="$(srcdir)/footer.html" $<
-+	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/cpp2html.css" --header="$(srcdir)/header.html" --footer="$(srcdir)/footer.html" $(top_srcdir)/src/lib/cmdline.c
- 
- cmdline.h.html: $(top_srcdir)/src/lib/cmdline.h
--	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/mono.css" $<
-+	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/mono.css" $(top_srcdir)/src/lib/cmdline.h
- 
- Hello1.html: $(srcdir)/Hello.java
- 	$(BUILD_HELLO1)
