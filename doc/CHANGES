@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1976 2003/04/19 04:46:25 rh Exp $
+$NetBSD: CHANGES,v 1.1977 2003/04/19 07:15:12 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1657,3 +1657,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added moz-bin-plugger-4.0 [rh 2003-04-19]
 	Deleted mozilla-flash-bin [rh 2003-04-19]
 	Added moz-bin-flash-6.0.69 [rh 2003-04-19]
+	Added suse_libtiff-7.3 [rh 2003-04-19]
