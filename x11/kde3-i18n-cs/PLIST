@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:54:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:15 markd Exp $
 share/doc/kde/HTML/cs/common/1.png
 share/doc/kde/HTML/cs/common/10.png
 share/doc/kde/HTML/cs/common/2.png
@@ -503,6 +503,7 @@ share/kde/locale/cs/LC_MESSAGES/kviewpresenterplugin.mo
 share/kde/locale/cs/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/cs/LC_MESSAGES/kviewshell.mo
 share/kde/locale/cs/LC_MESSAGES/kviewtemplateplugin.mo
+share/kde/locale/cs/LC_MESSAGES/kwifimanager.mo
 share/kde/locale/cs/LC_MESSAGES/kwin.mo
 share/kde/locale/cs/LC_MESSAGES/kwin4.mo
 share/kde/locale/cs/LC_MESSAGES/kwin_b2_config.mo

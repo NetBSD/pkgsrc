@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/03/11 13:10:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/04/01 12:27:13 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -627,6 +627,8 @@ lib/kde3/kio_http.la
 lib/kde3/kio_http.so
 lib/kde3/kio_metainfo.la
 lib/kde3/kio_metainfo.so
+lib/kde3/kjavaappletviewer.la
+lib/kde3/kjavaappletviewer.so
 lib/kde3/kjs_html.la
 lib/kde3/kjs_html.so
 lib/kde3/ktexteditor_insertfile.la
@@ -883,7 +885,9 @@ share/kde/apps/katepart/syntax/javascript.xml
 share/kde/apps/katepart/syntax/kbasic.xml
 share/kde/apps/katepart/syntax/language.dtd
 share/kde/apps/katepart/syntax/latex.xml
+share/kde/apps/katepart/syntax/ldif.xml
 share/kde/apps/katepart/syntax/literate-haskell.xml
+share/kde/apps/katepart/syntax/lpc.xml
 share/kde/apps/katepart/syntax/mab.xml
 share/kde/apps/katepart/syntax/makefile.xml
 share/kde/apps/katepart/syntax/mason.xml
@@ -892,6 +896,7 @@ share/kde/apps/katepart/syntax/objectivec.xml
 share/kde/apps/katepart/syntax/pascal.xml
 share/kde/apps/katepart/syntax/perl.xml
 share/kde/apps/katepart/syntax/php.xml
+share/kde/apps/katepart/syntax/picsrc.xml
 share/kde/apps/katepart/syntax/postscript.xml
 share/kde/apps/katepart/syntax/prolog.xml
 share/kde/apps/katepart/syntax/python.xml
@@ -901,6 +906,7 @@ share/kde/apps/katepart/syntax/rsiidl.xml
 share/kde/apps/katepart/syntax/ruby.xml
 share/kde/apps/katepart/syntax/sather.xml
 share/kde/apps/katepart/syntax/scheme.xml
+share/kde/apps/katepart/syntax/sci.xml
 share/kde/apps/katepart/syntax/sgml.xml
 share/kde/apps/katepart/syntax/sml.xml
 share/kde/apps/katepart/syntax/sql-mysql.xml
@@ -908,6 +914,8 @@ share/kde/apps/katepart/syntax/sql-postgresql.xml
 share/kde/apps/katepart/syntax/sql.xml
 share/kde/apps/katepart/syntax/syntax.template
 share/kde/apps/katepart/syntax/tcl.xml
+share/kde/apps/katepart/syntax/uscript.xml
+share/kde/apps/katepart/syntax/velocity.xml
 share/kde/apps/katepart/syntax/verilog.xml
 share/kde/apps/katepart/syntax/vhdl.xml
 share/kde/apps/katepart/syntax/winehq.xml
@@ -3718,6 +3726,7 @@ share/kde/mimelnk/application/x-graphite.desktop
 share/kde/mimelnk/application/x-gzip.desktop
 share/kde/mimelnk/application/x-hancomword.desktop
 share/kde/mimelnk/application/x-jar.desktop
+share/kde/mimelnk/application/x-java-applet.desktop
 share/kde/mimelnk/application/x-java.desktop
 share/kde/mimelnk/application/x-karbon.desktop
 share/kde/mimelnk/application/x-kchart.desktop
@@ -3876,6 +3885,7 @@ share/kde/services/kgzipfilter.desktop
 share/kde/services/khtml.desktop
 share/kde/services/khtmlimage.desktop
 share/kde/services/kio_uiserver.desktop
+share/kde/services/kjavaappletviewer.desktop
 share/kde/services/kmailservice.protocol
 share/kde/services/kmultipart.desktop
 share/kde/services/knotify.desktop
@@ -3933,128 +3943,6 @@ share/kde/servicetypes/scriptinterface.desktop
 @dirrm share/kde/mimelnk/all
 @dirrm share/kde/mimelnk
 @dirrm share/kde/locale
-@exec ${MKDIR} %D/share/kde/icons/locolor/64x64/mimetypes
-@dirrm share/kde/icons/locolor/64x64/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/locolor/64x64/filesystems
-@dirrm share/kde/icons/locolor/64x64/filesystems
-@exec ${MKDIR} %D/share/kde/icons/locolor/64x64/devices
-@dirrm share/kde/icons/locolor/64x64/devices
-@exec ${MKDIR} %D/share/kde/icons/locolor/64x64/apps
-@dirrm share/kde/icons/locolor/64x64/apps
-@exec ${MKDIR} %D/share/kde/icons/locolor/64x64/actions/kde
-@dirrm share/kde/icons/locolor/64x64/actions/kde
-@dirrm share/kde/icons/locolor/64x64/actions
-@dirrm share/kde/icons/locolor/64x64
-@exec ${MKDIR} %D/share/kde/icons/locolor/48x48/mimetypes
-@dirrm share/kde/icons/locolor/48x48/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/locolor/48x48/filesystems
-@dirrm share/kde/icons/locolor/48x48/filesystems
-@exec ${MKDIR} %D/share/kde/icons/locolor/48x48/devices
-@dirrm share/kde/icons/locolor/48x48/devices
-@exec ${MKDIR} %D/share/kde/icons/locolor/48x48/apps
-@dirrm share/kde/icons/locolor/48x48/apps
-@exec ${MKDIR} %D/share/kde/icons/locolor/48x48/actions/kde
-@dirrm share/kde/icons/locolor/48x48/actions/kde
-@dirrm share/kde/icons/locolor/48x48/actions
-@dirrm share/kde/icons/locolor/48x48
-@exec ${MKDIR} %D/share/kde/icons/locolor/32x32/mimetypes
-@dirrm share/kde/icons/locolor/32x32/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/locolor/32x32/filesystems
-@dirrm share/kde/icons/locolor/32x32/filesystems
-@exec ${MKDIR} %D/share/kde/icons/locolor/32x32/devices
-@dirrm share/kde/icons/locolor/32x32/devices
-@exec ${MKDIR} %D/share/kde/icons/locolor/32x32/apps
-@dirrm share/kde/icons/locolor/32x32/apps
-@exec ${MKDIR} %D/share/kde/icons/locolor/32x32/actions/kde
-@dirrm share/kde/icons/locolor/32x32/actions/kde
-@dirrm share/kde/icons/locolor/32x32/actions
-@dirrm share/kde/icons/locolor/32x32
-@exec ${MKDIR} %D/share/kde/icons/locolor/22x22/mimetypes
-@dirrm share/kde/icons/locolor/22x22/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/locolor/22x22/filesystems
-@dirrm share/kde/icons/locolor/22x22/filesystems
-@exec ${MKDIR} %D/share/kde/icons/locolor/22x22/devices
-@dirrm share/kde/icons/locolor/22x22/devices
-@exec ${MKDIR} %D/share/kde/icons/locolor/22x22/apps
-@dirrm share/kde/icons/locolor/22x22/apps
-@exec ${MKDIR} %D/share/kde/icons/locolor/22x22/actions/kde
-@dirrm share/kde/icons/locolor/22x22/actions/kde
-@dirrm share/kde/icons/locolor/22x22/actions
-@dirrm share/kde/icons/locolor/22x22
-@exec ${MKDIR} %D/share/kde/icons/locolor/16x16/mimetypes
-@dirrm share/kde/icons/locolor/16x16/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/locolor/16x16/filesystems
-@dirrm share/kde/icons/locolor/16x16/filesystems
-@exec ${MKDIR} %D/share/kde/icons/locolor/16x16/devices
-@dirrm share/kde/icons/locolor/16x16/devices
-@exec ${MKDIR} %D/share/kde/icons/locolor/16x16/apps
-@dirrm share/kde/icons/locolor/16x16/apps
-@exec ${MKDIR} %D/share/kde/icons/locolor/16x16/actions/kde
-@dirrm share/kde/icons/locolor/16x16/actions/kde
-@dirrm share/kde/icons/locolor/16x16/actions
-@dirrm share/kde/icons/locolor/16x16
-@dirrm share/kde/icons/locolor
-@exec ${MKDIR} %D/share/kde/icons/hicolor/64x64/mimetypes
-@dirrm share/kde/icons/hicolor/64x64/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/hicolor/64x64/filesystems
-@dirrm share/kde/icons/hicolor/64x64/filesystems
-@exec ${MKDIR} %D/share/kde/icons/hicolor/64x64/devices
-@dirrm share/kde/icons/hicolor/64x64/devices
-@exec ${MKDIR} %D/share/kde/icons/hicolor/64x64/apps
-@dirrm share/kde/icons/hicolor/64x64/apps
-@exec ${MKDIR} %D/share/kde/icons/hicolor/64x64/actions/kde
-@dirrm share/kde/icons/hicolor/64x64/actions/kde
-@dirrm share/kde/icons/hicolor/64x64/actions
-@dirrm share/kde/icons/hicolor/64x64
-@exec ${MKDIR} %D/share/kde/icons/hicolor/48x48/mimetypes
-@dirrm share/kde/icons/hicolor/48x48/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/hicolor/48x48/filesystems
-@dirrm share/kde/icons/hicolor/48x48/filesystems
-@exec ${MKDIR} %D/share/kde/icons/hicolor/48x48/devices
-@dirrm share/kde/icons/hicolor/48x48/devices
-@exec ${MKDIR} %D/share/kde/icons/hicolor/48x48/apps
-@dirrm share/kde/icons/hicolor/48x48/apps
-@exec ${MKDIR} %D/share/kde/icons/hicolor/48x48/actions/kde
-@dirrm share/kde/icons/hicolor/48x48/actions/kde
-@dirrm share/kde/icons/hicolor/48x48/actions
-@dirrm share/kde/icons/hicolor/48x48
-@exec ${MKDIR} %D/share/kde/icons/hicolor/32x32/mimetypes
-@dirrm share/kde/icons/hicolor/32x32/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/hicolor/32x32/filesystems
-@dirrm share/kde/icons/hicolor/32x32/filesystems
-@exec ${MKDIR} %D/share/kde/icons/hicolor/32x32/devices
-@dirrm share/kde/icons/hicolor/32x32/devices
-@exec ${MKDIR} %D/share/kde/icons/hicolor/32x32/apps
-@dirrm share/kde/icons/hicolor/32x32/apps
-@exec ${MKDIR} %D/share/kde/icons/hicolor/32x32/actions/kde
-@dirrm share/kde/icons/hicolor/32x32/actions/kde
-@dirrm share/kde/icons/hicolor/32x32/actions
-@dirrm share/kde/icons/hicolor/32x32
-@exec ${MKDIR} %D/share/kde/icons/hicolor/22x22/mimetypes
-@dirrm share/kde/icons/hicolor/22x22/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/hicolor/22x22/filesystems
-@dirrm share/kde/icons/hicolor/22x22/filesystems
-@exec ${MKDIR} %D/share/kde/icons/hicolor/22x22/devices
-@dirrm share/kde/icons/hicolor/22x22/devices
-@exec ${MKDIR} %D/share/kde/icons/hicolor/22x22/apps
-@dirrm share/kde/icons/hicolor/22x22/apps
-@exec ${MKDIR} %D/share/kde/icons/hicolor/22x22/actions/kde
-@dirrm share/kde/icons/hicolor/22x22/actions/kde
-@dirrm share/kde/icons/hicolor/22x22/actions
-@dirrm share/kde/icons/hicolor/22x22
-@exec ${MKDIR} %D/share/kde/icons/hicolor/16x16/mimetypes
-@dirrm share/kde/icons/hicolor/16x16/mimetypes
-@exec ${MKDIR} %D/share/kde/icons/hicolor/16x16/filesystems
-@dirrm share/kde/icons/hicolor/16x16/filesystems
-@exec ${MKDIR} %D/share/kde/icons/hicolor/16x16/devices
-@dirrm share/kde/icons/hicolor/16x16/devices
-@exec ${MKDIR} %D/share/kde/icons/hicolor/16x16/apps
-@dirrm share/kde/icons/hicolor/16x16/apps
-@exec ${MKDIR} %D/share/kde/icons/hicolor/16x16/actions/kde
-@dirrm share/kde/icons/hicolor/16x16/actions/kde
-@dirrm share/kde/icons/hicolor/16x16/actions
-@dirrm share/kde/icons/hicolor/16x16
-@dirrm share/kde/icons/hicolor
 @dirrm share/kde/icons/crystalsvg/scalable/filesystems
 @dirrm share/kde/icons/crystalsvg/scalable/devices
 @dirrm share/kde/icons/crystalsvg/scalable/apps
@@ -4090,7 +3978,6 @@ share/kde/servicetypes/scriptinterface.desktop
 @dirrm share/kde/icons/crystalsvg/128x128/mimetypes
 @dirrm share/kde/icons/crystalsvg/128x128
 @dirrm share/kde/icons/crystalsvg
-@dirrm share/kde/icons
 @dirrm share/kde/config/ui
 @dirrm share/kde/config/colors
 @dirrm share/kde/config
@@ -4236,7 +4123,7 @@ share/kde/servicetypes/scriptinterface.desktop
 @dirrm share/kde/applnk/Settings/Components
 @dirrm share/kde/applnk/Settings
 @dirrm share/kde/applnk
-@dirrm share/kde
+@comment dirrm share/kde
 @dirrm share/doc/kde/HTML/en/kspell
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html

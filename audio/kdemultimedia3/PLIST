@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/11 13:33:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/01 12:27:06 markd Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -659,14 +659,6 @@ share/kde/apps/kmid/maps/YamahaPSR500.map
 share/kde/apps/kmid/maps/YamahaPSS790.map
 share/kde/apps/kmid/maps/YamahaQY10.map
 share/kde/apps/kmid/maps/gm.map
-share/kde/apps/kmidi/Axel_Elf.mid
-share/kde/apps/kmidi/Cavatina.mid
-share/kde/apps/kmidi/Georgia.mid
-share/kde/apps/kmidi/Malaguena.mid
-share/kde/apps/kmidi/Mission_Impossible.mid
-share/kde/apps/kmidi/Mr_Postman.mid
-share/kde/apps/kmidi/Take_The_A_Train-Seq_by_Dianne_Lewandowski.mid
-share/kde/apps/kmidi/Vangelis-Chung_Kuo.mid
 share/kde/apps/kmidi/config/BITMAPS/arrow.xbm
 share/kde/apps/kmidi/config/BITMAPS/back.xbm
 share/kde/apps/kmidi/config/BITMAPS/check.xbm

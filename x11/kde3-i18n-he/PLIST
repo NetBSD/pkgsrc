@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:02:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:19 markd Exp $
 share/doc/kde/HTML/he/common/1.png
 share/doc/kde/HTML/he/common/10.png
 share/doc/kde/HTML/he/common/2.png
@@ -63,9 +63,11 @@ share/kde/locale/he/LC_MESSAGES/appletproxy.mo
 share/kde/locale/he/LC_MESSAGES/ark.mo
 share/kde/locale/he/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/he/LC_MESSAGES/artscontrol.mo
+share/kde/locale/he/LC_MESSAGES/artsmodules.mo
 share/kde/locale/he/LC_MESSAGES/atlantik.mo
 share/kde/locale/he/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/he/LC_MESSAGES/babelfish.mo
+share/kde/locale/he/LC_MESSAGES/cervisia.mo
 share/kde/locale/he/LC_MESSAGES/charlatanui.mo
 share/kde/locale/he/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/he/LC_MESSAGES/clockapplet.mo
@@ -131,6 +133,7 @@ share/kde/locale/he/LC_MESSAGES/katetextfilter.mo
 share/kde/locale/he/LC_MESSAGES/katexmlcheck.mo
 share/kde/locale/he/LC_MESSAGES/katexmltools.mo
 share/kde/locale/he/LC_MESSAGES/katomic.mo
+share/kde/locale/he/LC_MESSAGES/kaudiocreator.mo
 share/kde/locale/he/LC_MESSAGES/kbackgammon.mo
 share/kde/locale/he/LC_MESSAGES/kbattleship.mo
 share/kde/locale/he/LC_MESSAGES/kblackbox.mo
@@ -443,6 +446,7 @@ share/kde/locale/he/LC_MESSAGES/nsplugin.mo
 share/kde/locale/he/LC_MESSAGES/passwords.mo
 share/kde/locale/he/LC_MESSAGES/pitchablespeed.mo
 share/kde/locale/he/LC_MESSAGES/ppdtranslations.mo
+share/kde/locale/he/LC_MESSAGES/quanta.mo
 share/kde/locale/he/LC_MESSAGES/quicklauncher.mo
 share/kde/locale/he/LC_MESSAGES/secpolicy.mo
 share/kde/locale/he/LC_MESSAGES/synaescope.mo

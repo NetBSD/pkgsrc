@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:59:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:17 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/common
 share/doc/kde/HTML/es/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/es/KRegExpEditor/index.docbook
@@ -140,6 +140,17 @@ share/doc/kde/HTML/es/kate/regular-expressions.docbook
 share/doc/kde/HTML/es/katomic/common
 share/doc/kde/HTML/es/katomic/index.cache.bz2
 share/doc/kde/HTML/es/katomic/index.docbook
+share/doc/kde/HTML/es/kbabel/catman.docbook
+share/doc/kde/HTML/es/kbabel/common
+share/doc/kde/HTML/es/kbabel/dictionaries.docbook
+share/doc/kde/HTML/es/kbabel/faq.docbook
+share/doc/kde/HTML/es/kbabel/glossary.docbook
+share/doc/kde/HTML/es/kbabel/index.cache.bz2
+share/doc/kde/HTML/es/kbabel/index.docbook
+share/doc/kde/HTML/es/kbabel/kbabeldict.docbook
+share/doc/kde/HTML/es/kbabel/menu.docbook
+share/doc/kde/HTML/es/kbabel/preferences.docbook
+share/doc/kde/HTML/es/kbabel/using.docbook
 share/doc/kde/HTML/es/kbackgammon/common
 share/doc/kde/HTML/es/kbackgammon/index.cache.bz2
 share/doc/kde/HTML/es/kbackgammon/index.docbook
@@ -1546,6 +1557,7 @@ share/kde/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kblackbox
 @dirrm share/doc/kde/HTML/es/kbattleship
 @dirrm share/doc/kde/HTML/es/kbackgammon
+@dirrm share/doc/kde/HTML/es/kbabel
 @dirrm share/doc/kde/HTML/es/katomic
 @dirrm share/doc/kde/HTML/es/kate-plugins
 @dirrm share/doc/kde/HTML/es/kate

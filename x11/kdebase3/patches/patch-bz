@@ -1,4 +1,4 @@
-$NetBSD: patch-bz,v 1.5 2003/03/11 13:10:23 markd Exp $
+$NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
 
 --- klipper/Makefile.in.orig	Fri Jan 17 09:03:09 2003
 +++ klipper/Makefile.in
@@ -160,15 +160,6 @@ $NetBSD: patch-bz,v 1.5 2003/03/11 13:10:23 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/toplevel.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/urlgrabber.Plo@am__quote@
-@@ -669,7 +682,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
- #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
- #>+ 4
--KDE_DIST=toplevel.h cr64-app-klipper.png klipperrc.desktop klipperbindings.cpp cr48-app-klipper.png klipper.desktop cr32-app-klipper.png urlgrabber.h klipperrc.upd klipper-kde31.sh cr128-app-klipper.png configdialog.h cr16-app-klipper.png klipper-1-2.pl version.h klippershortcuts.upd applet.h 
-+KDE_DIST=applet.h cr128-app-klipper.png toplevel.h cr48-app-klipper.png cr64-app-klipper.png klipper-kde31.sh klipperbindings.cpp version.h configdialog.h cr32-app-klipper.png klipper-1-2.pl cr16-app-klipper.png klipper.desktop klipperrc.upd urlgrabber.h klipperrc.desktop klippershortcuts.upd 
- 
- DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
- 
 @@ -724,7 +737,6 @@ install-strip:
  mostlyclean-generic:
  

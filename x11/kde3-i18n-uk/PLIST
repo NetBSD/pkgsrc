@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:15:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:24 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -47,6 +47,7 @@ share/doc/kde/HTML/uk/common/xml.dcl
 share/doc/kde/HTML/uk/kaddressbook/common
 share/doc/kde/HTML/uk/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/uk/kaddressbook/index.docbook
+share/doc/kde/HTML/uk/kdebase/kate_plugins.po
 share/doc/kde/HTML/uk/khelpcenter/common
 share/doc/kde/HTML/uk/khelpcenter/contact.docbook
 share/doc/kde/HTML/uk/khelpcenter/help.docbook
@@ -115,6 +116,7 @@ share/kde/locale/uk/LC_MESSAGES/artscontrol.mo
 share/kde/locale/uk/LC_MESSAGES/artsmodules.mo
 share/kde/locale/uk/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/uk/LC_MESSAGES/babelfish.mo
+share/kde/locale/uk/LC_MESSAGES/cervisia.mo
 share/kde/locale/uk/LC_MESSAGES/charlatanui.mo
 share/kde/locale/uk/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/uk/LC_MESSAGES/clockapplet.mo
@@ -181,6 +183,7 @@ share/kde/locale/uk/LC_MESSAGES/kaudiocreator.mo
 share/kde/locale/uk/LC_MESSAGES/kbattleship.mo
 share/kde/locale/uk/LC_MESSAGES/kblackbox.mo
 share/kde/locale/uk/LC_MESSAGES/kbounce.mo
+share/kde/locale/uk/LC_MESSAGES/kbugbuster.mo
 share/kde/locale/uk/LC_MESSAGES/kcalc.mo
 share/kde/locale/uk/LC_MESSAGES/kcardchooser.mo
 share/kde/locale/uk/LC_MESSAGES/kcharselect.mo
@@ -305,6 +308,7 @@ share/kde/locale/uk/LC_MESSAGES/kfloppy.mo
 share/kde/locale/uk/LC_MESSAGES/kfmclient.mo
 share/kde/locale/uk/LC_MESSAGES/kfmexec.mo
 share/kde/locale/uk/LC_MESSAGES/kfontviewpart.mo
+share/kde/locale/uk/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/uk/LC_MESSAGES/kget.mo
 share/kde/locale/uk/LC_MESSAGES/kghostview.mo
 share/kde/locale/uk/LC_MESSAGES/kgpgcertmanager.mo
@@ -357,6 +361,7 @@ share/kde/locale/uk/LC_MESSAGES/knotes.mo
 share/kde/locale/uk/LC_MESSAGES/knotify.mo
 share/kde/locale/uk/LC_MESSAGES/kodo.mo
 share/kde/locale/uk/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/uk/LC_MESSAGES/kompare.mo
 share/kde/locale/uk/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/kde/locale/uk/LC_MESSAGES/konqueror.mo
 share/kde/locale/uk/LC_MESSAGES/konquest.mo
@@ -369,6 +374,7 @@ share/kde/locale/uk/LC_MESSAGES/kpager.mo
 share/kde/locale/uk/LC_MESSAGES/kpaint.mo
 share/kde/locale/uk/LC_MESSAGES/kpartapp.mo
 share/kde/locale/uk/LC_MESSAGES/kpartsaver.mo
+share/kde/locale/uk/LC_MESSAGES/kpat.mo
 share/kde/locale/uk/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/uk/LC_MESSAGES/kpf.mo
 share/kde/locale/uk/LC_MESSAGES/kpilot.mo
@@ -496,6 +502,7 @@ share/kde/locale/uk/flag.png
 @dirrm share/doc/kde/HTML/uk/kinfocenter/protocols
 @dirrm share/doc/kde/HTML/uk/kinfocenter
 @dirrm share/doc/kde/HTML/uk/khelpcenter
+@dirrm share/doc/kde/HTML/uk/kdebase
 @dirrm share/doc/kde/HTML/uk/kaddressbook
 @comment dirrm share/doc/kde/HTML/uk/common
 @comment dirrm share/doc/kde/HTML/uk

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:06:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:20 markd Exp $
 share/doc/kde/HTML/nl/artsbuilder/digitalaudio.docbook
 share/doc/kde/HTML/nl/artsbuilder/gui.docbook
 share/doc/kde/HTML/nl/common/1.png
@@ -348,9 +348,6 @@ share/doc/kde/HTML/nl/kmoon/index.docbook
 share/doc/kde/HTML/nl/kompare/common
 share/doc/kde/HTML/nl/kompare/index.cache.bz2
 share/doc/kde/HTML/nl/kompare/index.docbook
-share/doc/kde/HTML/nl/konsole/common
-share/doc/kde/HTML/nl/konsole/index.cache.bz2
-share/doc/kde/HTML/nl/konsole/index.docbook
 share/doc/kde/HTML/nl/konsole/konsole.png
 share/doc/kde/HTML/nl/kpager/common
 share/doc/kde/HTML/nl/kpager/index.cache.bz2
@@ -396,6 +393,7 @@ share/kde/locale/nl/LC_MESSAGES/appletproxy.mo
 share/kde/locale/nl/LC_MESSAGES/ark.mo
 share/kde/locale/nl/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/nl/LC_MESSAGES/artscontrol.mo
+share/kde/locale/nl/LC_MESSAGES/artsmodules.mo
 share/kde/locale/nl/LC_MESSAGES/atlantik.mo
 share/kde/locale/nl/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/nl/LC_MESSAGES/babelfish.mo

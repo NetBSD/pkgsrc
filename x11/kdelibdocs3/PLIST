@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/11 13:10:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/04/01 12:27:12 markd Exp $
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPArg.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPClient.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPConnection.html
@@ -701,9 +701,14 @@ share/doc/kde/HTML/en/kdelibs/kdefx/kpixmap_h.html
 share/doc/kde/HTML/en/kdelibs/kdefx/kpixmapeffect_h.html
 share/doc/kde/HTML/en/kdelibs/kdefx/kpixmapsplitter_h.html
 share/doc/kde/HTML/en/kdelibs/kdefx/kstyle_h.html
+share/doc/kde/HTML/en/kdelibs/kdejava/AppletParameterDialog.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaApplet.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletContext.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletServer.html
+share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletViewer.html
+share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletViewerBrowserExtension.html
+share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletViewerFactory.html
+share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletViewerWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaAppletWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaDownloader.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KJavaEmbed.html
@@ -712,9 +717,14 @@ share/doc/kde/HTML/en/kdelibs/kdejava/KJavaProcess.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KQEventUtil.html
 share/doc/kde/HTML/en/kdelibs/kdejava/KXEventUtil.html
 share/doc/kde/HTML/en/kdelibs/kdejava/all-globals.html
+share/doc/kde/HTML/en/kdelibs/kdejava/full-list-AppletParameterDialog.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaApplet.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletContext.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletServer.html
+share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletViewer.html
+share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletViewerBrowserExtension.html
+share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletViewerFactory.html
+share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletViewerWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaAppletWidget.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaDownloader.html
 share/doc/kde/HTML/en/kdelibs/kdejava/full-list-KJavaEmbed.html
@@ -730,6 +740,7 @@ share/doc/kde/HTML/en/kdelibs/kdejava/javaembed_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaapplet_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaappletcontext_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaappletserver_h.html
+share/doc/kde/HTML/en/kdelibs/kdejava/kjavaappletviewer_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaappletwidget_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavadownloader_h.html
 share/doc/kde/HTML/en/kdelibs/kdejava/kjavaprocess_h.html
@@ -1588,7 +1599,7 @@ share/doc/kde/HTML/en/kdelibs/khtml/KHTMLRun.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLSettings.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLView.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLZoomFactorAction.html
-share/doc/kde/HTML/en/kdelibs/khtml/PageLoader.html
+share/doc/kde/HTML/en/kdelibs/khtml/PageMonitor.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegTestFunction.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegTestObject.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegressionTest.html
@@ -1765,7 +1776,7 @@ share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLRun.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLSettings.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLView.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLZoomFactorAction.html
-share/doc/kde/HTML/en/kdelibs/khtml/full-list-PageLoader.html
+share/doc/kde/HTML/en/kdelibs/khtml/full-list-PageMonitor.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegTestFunction.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegTestObject.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegressionTest.html
