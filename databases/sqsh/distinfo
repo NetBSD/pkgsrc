@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:07:21 agc Exp $
+
+MD5 (sqsh-1.7-src.tar.gz) = dfdb8eda026ff1fedbbf64d8c173705a
+SHA1 (patch-aa) = 7e77466ff759f95676375b844dc850a08ee7de61
