@@ -1,0 +1,3 @@
+To configure this package, adjust ${PREFIX}/etc/6to4.conf from
+${PREFIX}/etc/6to4.conf-example, then start "6to4 -v start". 
+You should be able to "ping6 www.kame.net" after that.
