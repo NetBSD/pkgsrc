@@ -1,0 +1,5 @@
+-- $NetBSD: loadpath.UNIX.in,v 1.1 1999/10/13 19:03:39 jlam Exp $
+--
+@@SE_LIB@@/lib_std/
+@@SE_LIB@@/lib_rand/
+@@SE_LIB@@/lib_se/
