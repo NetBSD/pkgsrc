@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/01/27 11:05:42 jlam Exp $
+
+--- ubase/util.ml.orig	Mon Aug 19 17:15:04 2002
++++ ubase/util.ml	Tue Jan 27 06:03:12 2004
+@@ -217,7 +217,7 @@
+     close_in c;
+     match l with
+       "Darwin" -> true
+-    | "linux" | "FreeBSD" | "SunOS" -> false
++    | "linux" | "FreeBSD" | "NetBSD" | "SunOS" -> false
+     | _ ->
+         Printf.printf
+          "Warning: 'uname' returned unrecognized result (%s) in Util.isOSX.\n"
