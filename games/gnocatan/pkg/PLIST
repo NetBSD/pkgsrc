@@ -1,0 +1,68 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/23 05:29:47 veego Exp $
+bin/gnocatan
+bin/gnocatan-meta-server
+bin/gnocatan-server-console
+bin/gnocatan-server-gtk
+share/gnocatan/5-6-player.game
+share/gnocatan/default.game
+share/gnocatan/four-islands.game
+share/gnocatan/seafarers.game
+share/gnocatan/small.game
+share/gnome/apps/Games/gnocatan.desktop
+share/gnome/help/gnocatan/C/images/actions.gif
+share/gnome/help/gnocatan/C/images/chat.gif
+share/gnome/help/gnocatan/C/images/client.gif
+share/gnome/help/gnocatan/C/images/connect-dialog.gif
+share/gnome/help/gnocatan/C/images/desert.gif
+share/gnome/help/gnocatan/C/images/develop-cards.gif
+share/gnome/help/gnocatan/C/images/discard-dialog.gif
+share/gnome/help/gnocatan/C/images/discards.gif
+share/gnome/help/gnocatan/C/images/field.gif
+share/gnome/help/gnocatan/C/images/forest.gif
+share/gnome/help/gnocatan/C/images/gameover-dialog.gif
+share/gnome/help/gnocatan/C/images/hill.gif
+share/gnome/help/gnocatan/C/images/identity.gif
+share/gnome/help/gnocatan/C/images/legend-dialog.gif
+share/gnome/help/gnocatan/C/images/map.gif
+share/gnome/help/gnocatan/C/images/messages.gif
+share/gnome/help/gnocatan/C/images/monopoly-dialog.gif
+share/gnome/help/gnocatan/C/images/mountain.gif
+share/gnome/help/gnocatan/C/images/pasture.gif
+share/gnome/help/gnocatan/C/images/place-robber.gif
+share/gnome/help/gnocatan/C/images/player-summary.gif
+share/gnome/help/gnocatan/C/images/plenty-dialog.gif
+share/gnome/help/gnocatan/C/images/quote.gif
+share/gnome/help/gnocatan/C/images/resources.gif
+share/gnome/help/gnocatan/C/images/sea.gif
+share/gnome/help/gnocatan/C/images/servers-dialog.gif
+share/gnome/help/gnocatan/C/images/status.gif
+share/gnome/help/gnocatan/C/images/steal-from.gif
+share/gnome/help/gnocatan/C/images/trade.gif
+share/gnome/help/gnocatan/C/images/waiting.gif
+share/gnome/help/gnocatan/C/topic.dat
+share/pixmaps/gnocatan/board.png
+share/pixmaps/gnocatan/bridge.png
+share/pixmaps/gnocatan/city.png
+share/pixmaps/gnocatan/cross.png
+share/pixmaps/gnocatan/desert.png
+share/pixmaps/gnocatan/develop.png
+share/pixmaps/gnocatan/dice.png
+share/pixmaps/gnocatan/field.png
+share/pixmaps/gnocatan/finish.png
+share/pixmaps/gnocatan/forest.png
+share/pixmaps/gnocatan/hill.png
+share/pixmaps/gnocatan/mountain.png
+share/pixmaps/gnocatan/pasture.png
+share/pixmaps/gnocatan/plain.png
+share/pixmaps/gnocatan/road.png
+share/pixmaps/gnocatan/sea.png
+share/pixmaps/gnocatan/settlement.png
+share/pixmaps/gnocatan/ship.png
+share/pixmaps/gnocatan/tick.png
+share/pixmaps/gnocatan/trade.png
+share/pixmaps/gnome-gnocatan.png
+@dirrm share/pixmaps/gnocatan
+@dirrm share/gnome/help/gnocatan/C/images
+@dirrm share/gnome/help/gnocatan/C
+@dirrm share/gnome/help/gnocatan
+@dirrm share/gnocatan
