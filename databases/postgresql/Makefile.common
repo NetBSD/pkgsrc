@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2003/05/29 08:55:48 abs Exp $
+# $NetBSD: Makefile.common,v 1.36 2003/06/25 07:54:31 cjs Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -32,7 +32,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql/patches
 # DIST_VERS		version number on the postgresql distfile
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-DIST_VERS?=		7.3.2
+DIST_VERS?=		7.3.3
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
