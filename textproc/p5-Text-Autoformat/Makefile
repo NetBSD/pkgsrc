@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:27:40 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/04 23:46:36 snj Exp $
 
 DISTNAME=       Text-Autoformat-1.04
 PKGNAME=        p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.monash.edu.au/~damian/
 COMMENT=	Perl module for text wrapping and reformatting
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Autoformat/.packlist
 
 .include "../../lang/perl5/module.mk"
