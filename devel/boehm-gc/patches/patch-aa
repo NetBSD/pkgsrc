@@ -1,18 +1,19 @@
-$NetBSD: patch-aa,v 1.6 1999/12/28 04:57:49 wiz Exp $
---- Makefile.orig	Sat Sep 11 08:49:18 1999
-+++ Makefile	Tue Oct 26 10:48:45 1999
-@@ -9,8 +9,8 @@
- # cord/de - builds dumb editor based on cords.
- ABI_FLAG=
+$NetBSD: patch-aa,v 1.7 2000/06/20 21:47:22 jlam Exp $
+
+--- Makefile.orig	Thu Apr 13 15:00:20 2000
++++ Makefile	Tue Jun 20 04:02:12 2000
+@@ -10,8 +10,8 @@
+ ABI_FLAG= 
  CC=cc $(ABI_FLAG)
--CXX=CC $(ABI_FLAG)
+ HOSTCC=$(CC)
+-CXX=g++ $(ABI_FLAG)
 -AS=as $(ABI_FLAG)
 +CXX=c++ $(ABI_FLAG)
 +AS=gcc -c -x assembler-with-cpp $(ABI_FLAG)
  #  The above doesn't work with gas, which doesn't run cpp.
  #  Define AS as `gcc -c -x assembler-with-cpp' instead.
  #  Under Irix 6, you will have to specify the ABI (-o32, -n32, or -64)
-@@ -18,6 +18,25 @@
+@@ -19,6 +19,25 @@
  
  CFLAGS= -O -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DNO_EXECUTE_PERMISSION -DALL_INTERIOR_POINTERS -DSILENT
  
@@ -21,11 +22,11 @@ $NetBSD: patch-aa,v 1.6 1999/12/28 04:57:49 wiz Exp $
 +BSD-pkg-all: bsd-libgc.a bsd-libleak.a
 +
 +bsd-libgc.a:
-+	make CFLAGS="$(CFLAGS)" clean c++-t
++	$(MAKE) CFLAGS="$(CFLAGS)" clean c++-t
 +	mv gc.a bsd-libgc.a
 +
 +bsd-libleak.a:
-+	make CFLAGS="$(LEAKFLAGS)" clean c++-nt
++	$(MAKE) CFLAGS="$(LEAKFLAGS)" clean c++-nt
 +	mv gc.a bsd-libleak.a
 +
 +BSD-pkg-install: BSD-pkg-all
@@ -38,26 +39,31 @@ $NetBSD: patch-aa,v 1.6 1999/12/28 04:57:49 wiz Exp $
  # For dynamic library builds, it may be necessary to add flags to generate
  # PIC code, e.g. -fPIC on Linux.
  
-@@ -163,7 +182,7 @@
-     threadlibs.c if_mach.c if_not_there.c gc_cpp.cc gc_cpp.h weakpointer.h \
+@@ -181,7 +200,7 @@
      gcc_support.c mips_ultrix_mach_dep.s include/gc_alloc.h gc_alloc.h \
      include/new_gc_alloc.h include/javaxfc.h sparc_sunos4_mach_dep.s \
--    solaris_threads.h backptr.h $(CORD_SRCS)
-+    sparc_netbsd_mach_dep.s solaris_threads.h backptr.h $(CORD_SRCS)
+     solaris_threads.h backptr.h hpux_test_and_clear.s include/gc_gcj.h \
+-    dbg_mlc.h $(CORD_SRCS)
++    dbg_mlc.h sparc_netbsd_mach_dep.s $(CORD_SRCS)
  
  OTHER_FILES= Makefile PCR-Makefile OS2_MAKEFILE NT_MAKEFILE BCC_MAKEFILE \
             README test.c test_cpp.cc setjmp_t.c SMakefile.amiga \
-@@ -202,8 +221,6 @@
+@@ -220,11 +239,9 @@
  # not time-critical anyway.
  # Set SPECIALCFLAGS to -q nodirect_code on Encore.
  
 -all: gc.a gctest
 -
  pcr: PCR-Makefile gc_private.h gc_hdrs.h gc.h gcconfig.h mach_dep.o $(SRCS)
- 	make -f PCR-Makefile depend
- 	make -f PCR-Makefile
-@@ -245,6 +262,12 @@
- 	./if_mach HP_PA "" $(CXX) $(CXXFLAGS) -o test_cpp $(srcdir)/test_cpp.cc gc_cpp.o gc.a -ldld
+-	make -f PCR-Makefile depend
+-	make -f PCR-Makefile
++	$(MAKE) -f PCR-Makefile depend
++	$(MAKE) -f PCR-Makefile
+ 
+ $(OBJS) test.o dyn_load.o dyn_load_sunos53.o: $(srcdir)/gc_priv.h $(srcdir)/gc_hdrs.h $(srcdir)/gc.h \
+     $(srcdir)/gcconfig.h $(srcdir)/gc_typed.h Makefile
+@@ -263,6 +280,12 @@
+ 	./if_mach HP_PA HPUX $(CXX) $(CXXFLAGS) -o test_cpp $(srcdir)/test_cpp.cc gc_cpp.o gc.a -ldld `./threadlibs`
  	./if_not_there test_cpp $(CXX) $(CXXFLAGS) -o test_cpp $(srcdir)/test_cpp.cc gc_cpp.o gc.a `./threadlibs`
  
 +c++-t: c++
@@ -69,7 +75,7 @@ $NetBSD: patch-aa,v 1.6 1999/12/28 04:57:49 wiz Exp $
  c++: gc_cpp.o $(srcdir)/gc_cpp.h test_cpp
  	rm -f dont_ar_4
  	./if_mach SPARC SUNOS5 touch dont_ar_4
-@@ -253,7 +276,6 @@
+@@ -271,7 +294,6 @@
  	./if_mach M68K AMIGA $(AR) -vrus gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(AR) ru gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(RANLIB) gc.a || cat /dev/null
@@ -77,11 +83,11 @@ $NetBSD: patch-aa,v 1.6 1999/12/28 04:57:49 wiz Exp $
  	echo > c++
  
  dyn_load_sunos53.o: dyn_load.c
-@@ -302,6 +324,7 @@
+@@ -322,6 +344,7 @@
  	./if_mach SPARC SUNOS5 $(AS) -o mach_dep.o $(srcdir)/sparc_mach_dep.s
  	./if_mach SPARC SUNOS4 $(AS) -o mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
  	./if_mach SPARC OPENBSD $(AS) -o mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
 +	./if_mach SPARC NETBSD $(AS) -o mach_dep.o $(srcdir)/sparc_netbsd_mach_dep.s
- 	./if_not_there mach_dep.o $(CC) -c $(SPECIALCFLAGS) $(srcdir)/mach_dep.c
- 
- mark_rts.o: $(srcdir)/mark_rts.c if_mach if_not_there $(UTILS)
+ 	./if_mach HP_PA HPUX $(AS) -o hpux_test_and_clear.o $(srcdir)/hpux_test_and_clear.s
+ 	./if_mach HP_PA HPUX $(CC) -c -o md_tmp.o $(SPECIALCFLAGS) $(srcdir)/mach_dep.c
+ 	./if_mach HP_PA HPUX ld -r -o mach_dep.o md_tmp.o hpux_test_and_clear.o

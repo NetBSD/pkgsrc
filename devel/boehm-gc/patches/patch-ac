@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
+$NetBSD: patch-ac,v 1.5 2000/06/20 21:47:22 jlam Exp $
 
---- gcconfig.h.orig	Wed Sep 15 13:56:31 1999
-+++ gcconfig.h	Mon Dec 27 23:38:55 1999
+--- gcconfig.h.orig	Wed Apr 26 09:41:01 2000
++++ gcconfig.h	Sat May  6 04:39:48 2000
 @@ -27,6 +27,11 @@
  #    define LINUX
  # endif
@@ -25,8 +25,8 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
 +#    define POWERPC
  #    define mach_type_known
  # endif
- # if defined(vax)
-@@ -106,7 +114,7 @@
+ # if defined(__NetBSD__) && defined(arm32)
+@@ -114,7 +122,7 @@
  #   define mach_type_known
  # endif
  # if defined(sparc) && defined(unix) && !defined(sun) && !defined(linux) \
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
  #   define SPARC
  #   define DRSNX
  #   define mach_type_known
-@@ -115,6 +123,10 @@
+@@ -123,6 +131,10 @@
  #   define RS6000
  #   define mach_type_known
  # endif
@@ -46,7 +46,7 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
  # if defined(_M_XENIX) && defined(_M_SYSV) && defined(_M_I386)
  	/* The above test may need refinement	*/
  #   define I386
-@@ -153,7 +165,7 @@
+@@ -172,7 +184,7 @@
  # endif
  # if defined(__alpha) || defined(__alpha__)
  #   define ALPHA
@@ -55,7 +55,7 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
  #     define OSF1	/* a.k.a Digital Unix */
  #   endif
  #   define mach_type_known
-@@ -202,7 +214,6 @@
+@@ -221,7 +233,6 @@
  # endif
  # if defined(__NetBSD__) && defined(i386)
  #   define I386
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
  #   define mach_type_known
  # endif
  # if defined(bsdi) && defined(i386)
-@@ -527,6 +538,14 @@
+@@ -573,6 +584,14 @@
  #     define STACKBOTTOM ((ptr_t) 0xc0000000)
  #     define DATAEND	/* not needed */
  #   endif
@@ -78,7 +78,7 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
  # endif
  
  # ifdef VAX
-@@ -556,7 +575,6 @@
+@@ -602,7 +621,6 @@
  #   define MACH_TYPE "SPARC"
  #   define ALIGNMENT 4	/* Required by hardware	*/
  #   define ALIGN_DOUBLE
@@ -86,7 +86,7 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
  #   ifdef SUNOS5
  #	define OS_TYPE "SUNOS5"
  	extern int _etext;
-@@ -628,8 +646,20 @@
+@@ -674,8 +692,20 @@
  #   ifdef OPENBSD
  #     define OS_TYPE "OPENBSD"
  #     define STACKBOTTOM ((ptr_t) 0xf8000000)
@@ -107,10 +107,10 @@ $NetBSD: patch-ac,v 1.4 1999/12/28 14:07:43 minoura Exp $
  # endif
  
  # ifdef I386
-@@ -919,6 +949,16 @@
- # ifdef ALPHA
- #   define MACH_TYPE "ALPHA"
- #   define ALIGNMENT 8
+@@ -1019,6 +1049,16 @@
+ 	/* fp registers in some cases when the target is a 21264.  The assembly	*/
+ 	/* code doesn't handle that yet, and version dependencies make that a	*/
+ 	/* bit tricky.  Do the easy thing for now.				*/
 +#   ifdef NETBSD
 +#	define OS_TYPE "NETBSD"
 +#	define HEURISTIC2
