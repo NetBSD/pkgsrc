@@ -1,0 +1,37 @@
+$NetBSD: patch-ae,v 1.1 2002/11/06 00:59:31 grant Exp $
+
+--- doc/BitchX.1.orig	Mon Jan  8 17:24:22 2001
++++ doc/BitchX.1
+@@ -171,14 +171,14 @@ is not there, this file is loaded on sta
+ .I ~/.ircservers
+ contains a list of IRC servers to cycle through.
+ .TP
+-.I /usr/local/lib/bx/
++.I @PREFIX@/share/bx/
+ System-wide configuration dir.
+ .TP
+ .I ~/.BitchX/BitchX.sav
+ Personal configuration file.
+ .TP
+ .I ~/.BitchX/BitchX.ircnames
+-Default random real name.  NOTE: Must be copied from /usr/local/lib/bx/
++Default random real name.  NOTE: Must be copied from @PREFIX@/share/bx/
+ .TP
+ .I ~/.BitchX/BitchX.formats
+ Personal 
+@@ -186,12 +186,12 @@ Personal 
+ display formats.
+ .TP
+ .I ~/.BitchX/BitchX.reasons
+-Default random kick messages.  NOTE: Must be copied from /usr/local/lib/bx/
++Default random kick messages.  NOTE: Must be copied from @PREFIX@/share/bx/
+ .TP
+ .I ~/.BitchX/BitchX.quit
+-Default random quit messages.  NOTE: Must be copied from /usr/local/lib/bx/
++Default random quit messages.  NOTE: Must be copied from @PREFIX@/share/bx/
+ .TP
+-.I /usr/local/lib/bx/BitchX.help
++.I @PREFIX@/share/bx/BitchX.help
+ .B BitchX 
+ help file.
+ .TP
