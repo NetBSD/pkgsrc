@@ -1,0 +1,7 @@
+EISPACK is a collection of double-precision Fortran subroutines that
+compute the eigenvalues and eigenvectors of nine classes of matrices:
+complex general, complex Hermitian, real general, real symmetric, real
+symmetric banded, real symmetric tridiagonal, special real
+tridiagonal, generalized real, and generalized real symmetric matices.
+In addition, two routines are included that use singular value
+decomposition to solve certain least-squares problems.
