@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.3 2005/01/11 03:16:24 dmcmahill Exp $
+
+--- include/prototype.h.orig	2004-12-29 02:06:45.000000000 +0000
++++ include/prototype.h
+@@ -27,7 +27,7 @@ SCM g_set_attrib_value_x(SCM attrib_smob
+ /* g_key.c */
+ void set_window_current_key(TOPLEVEL *w_current);
+ void g_key_execute(int state, int keyval);
+-SCM g_key_file_new(void);
++SCM g_key_gedafile_new(void);
+ SCM g_key_file_new_window(void);
+ SCM g_key_file_open(void);
+ SCM g_key_file_script(void);
