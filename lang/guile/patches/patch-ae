@@ -1,38 +1,29 @@
-$NetBSD: patch-ae,v 1.10 2004/11/18 12:30:49 wiz Exp $
+$NetBSD: patch-ae,v 1.11 2004/12/26 00:29:42 wiz Exp $
 
---- libguile/gc_os_dep.c.orig	2004-06-16 00:55:31.000000000 +0200
+--- libguile/gc_os_dep.c.orig	2004-12-14 06:21:39.000000000 +0100
 +++ libguile/gc_os_dep.c
-@@ -112,12 +112,27 @@ typedef int GC_bool;
- #    define NETBSD
+@@ -107,6 +107,11 @@ typedef int GC_bool;
+ #    define OPENBSD
  #    define mach_type_known
  # endif
--# if defined(__NetBSD__) && defined(m68k)
-+# if defined(__NetBSD__) && defined(__powerpc__)
-+#    define POWERPC
-+#    define NETBSD
-+#    define mach_type_known
-+# endif
-+# if defined(__NetBSD__) && (defined(m68k) || defined(__m68k__))
- #    define M68K
- #    define NETBSD
- #    define mach_type_known
- # endif
--# if defined(__NetBSD__) && defined(arm32)
-+# if defined(__NetBSD__) && (defined(__sparc__) || defined(__sparc_v9__))
-+#    define SPARC
-+#    define NETBSD
-+#    define mach_type_known
-+# endif
 +# if defined(__NetBSD__) && defined(__alpha__)
 +#    define ALPHA
 +#    define NETBSD
 +#    define mach_type_known
 +# endif
-+# if defined(__NetBSD__) && (defined(arm32) || defined(__arm__))
- #    define ARM32
+ # if defined(__NetBSD__) && defined(__powerpc__)
+ #    define POWERPC
+ #    define NETBSD
+@@ -124,7 +129,7 @@ typedef int GC_bool;
  #    define NETBSD
  #    define mach_type_known
-@@ -241,7 +256,7 @@ typedef int GC_bool;
+ # endif
+-# if defined(__NetBSD__) && defined(__sparc__)
++# if defined(__NetBSD__) && (defined(__sparc__) || defined(__sparc_v9__))
+ #    define SPARC
+ #    define NETBSD
+ #    define mach_type_known
+@@ -243,7 +248,7 @@ typedef int GC_bool;
  # endif
  # if defined(__alpha) || defined(__alpha__)
  #   define ALPHA
@@ -41,7 +32,7 @@ $NetBSD: patch-ae,v 1.10 2004/11/18 12:30:49 wiz Exp $
  #     define OSF1	/* a.k.a Digital Unix */
  #   endif
  #   define mach_type_known
-@@ -294,6 +309,11 @@ typedef int GC_bool;
+@@ -296,6 +301,11 @@ typedef int GC_bool;
  #   define NETBSD
  #   define mach_type_known
  # endif
@@ -53,7 +44,7 @@ $NetBSD: patch-ae,v 1.10 2004/11/18 12:30:49 wiz Exp $
  # if defined(bsdi) && defined(i386)
  #    define I386
  #    define BSDI
-@@ -433,12 +453,12 @@ scm_get_stack_base ()
+@@ -435,12 +445,12 @@ scm_get_stack_base ()
  /*
   * For each architecture and OS, the following need to be defined:
   *
@@ -69,7 +60,7 @@ $NetBSD: patch-ae,v 1.10 2004/11/18 12:30:49 wiz Exp $
   *
   * MACH_TYPE is a string representation of the machine type.
   * OS_TYPE is analogous for the OS.
-@@ -983,6 +1003,21 @@ scm_get_stack_base ()
+@@ -985,6 +995,21 @@ scm_get_stack_base ()
  #    endif
  # endif
  
