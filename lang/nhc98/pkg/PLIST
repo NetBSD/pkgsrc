@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/07/15 12:40:21 jtb Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/07/15 12:57:19 jtb Exp $
 bin/greencard-nhc98
 bin/harch
 bin/hat-check
@@ -242,4 +242,3 @@ share/doc/nhc98/york-release.html
 @dirrm lib/hmake/${HARCH}
 @dirrm lib/hmake
 @dirrm include/nhc98
-
