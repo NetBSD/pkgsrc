@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/19 09:20:11 jlam Exp $
 
 --- Makefile.orig	Mon Nov 22 04:02:36 1999
 +++ Makefile
@@ -63,9 +63,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
 -INCLUDEDIR=-I$(shell pwd)/include
 -PAMLIB=-L$(shell pwd)/libpam
 -PAMMISCLIB=-L$(shell pwd)/libpam_misc
-+INCLUDEDIR=-I$(shell pwd)/include -I${PREFIX}/include/cracklib
-+PAMLIB=-L$(shell pwd)/libpam -Wl,-R${PREFIX}/lib -L${PREFIX}/lib
-+PAMMISCLIB=-L$(shell pwd)/libpam_misc -Wl,-R${PREFIX}/lib -L${PREFIX}/lib
++INCLUDEDIR=-I$(shell pwd)/include -I${BUILDLINK_DIR}/include/cracklib
++PAMLIB=-L$(shell pwd)/libpam -Wl,-R${PREFIX}/lib -L${BUILDLINK_DIR}/lib
++PAMMISCLIB=-L$(shell pwd)/libpam_misc -Wl,-R${PREFIX}/lib -L${BUILDLINK_DIR}/lib
  ifeq ($(DEBUG_REL),yes)
   PAMLIB += -lpamd
   PAMMISCLIB += -lpamd_misc
