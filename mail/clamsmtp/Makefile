@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2004/11/01 23:08:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/20 23:40:27 xtraeme Exp $
 
-DISTNAME=		clamsmtp-1.1
+DISTNAME=		clamsmtp-1.2
 CATEGORIES=		mail
 MASTER_SITES=		http://memberwebs.com/nielsen/software/clamsmtp/
 
@@ -29,6 +29,7 @@ INSTALLATION_DIRS=	share/examples/${PKGBASE}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/clamsmtpd.conf ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/virus_action.sh ${EGDIR}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
