@@ -1,0 +1,19 @@
+*** configure.bak	Sat Oct 25 08:47:50 1997
+--- configure	Thu Nov  6 00:59:05 1997
+***************
+*** 1587,1593 ****
+  s%@CFLAGS@%$CFLAGS%g
+  s%@CPPFLAGS@%$CPPFLAGS%g
+  s%@CXXFLAGS@%$CXXFLAGS%g
+! s%@DEFS@%$DEFS%g
+  s%@LDFLAGS@%$LDFLAGS%g
+  s%@LIBS@%$LIBS%g
+  s%@exec_prefix@%$exec_prefix%g
+--- 1587,1593 ----
+  s%@CFLAGS@%$CFLAGS%g
+  s%@CPPFLAGS@%$CPPFLAGS%g
+  s%@CXXFLAGS@%$CXXFLAGS%g
+! s%@DEFS@%$CFLAGS $DEFS%g
+  s%@LDFLAGS@%$LDFLAGS%g
+  s%@LIBS@%$LIBS%g
+  s%@exec_prefix@%$exec_prefix%g
