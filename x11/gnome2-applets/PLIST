@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/12/17 15:12:02 hira Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/12/28 21:49:02 jmmv Exp $
 bin/gkb_xmmap
 bin/gnome-keyboard-layout
 bin/gswitchit-plugins-capplet
@@ -1145,6 +1145,8 @@ share/gnome/help/wireless/zh_TW/wireless.xml
 share/gswitchit/gswitchit-plugins.glade
 share/gswitchit/gswitchit-properties.glade
 share/gweather/Locations.xml
+share/icons/hicolor/48x48/apps/gswitchit-applet.png
+share/icons/hicolor/48x48/apps/gswitchit-properties-capplet.png
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-applets-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1502,8 +1504,6 @@ share/pixmaps/gnome-cpu.png
 share/pixmaps/gnome-eyes.png
 share/pixmaps/gnome-mini-commander.png
 share/pixmaps/gnome-mixer-applet.png
-share/pixmaps/gswitchit-applet.png
-share/pixmaps/gswitchit-properties-capplet.png
 share/pixmaps/mailcheck/eclouds.png
 share/pixmaps/mailcheck/email-e.png
 share/pixmaps/mailcheck/email-eclouds.png
@@ -1631,6 +1631,7 @@ share/xmodmap/xmodmap.yu
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnome-applets
 @comment in scrollkeeper: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/gweather
 @dirrm share/gswitchit
 @dirrm share/gnome/help/wireless/zh_TW/figures
