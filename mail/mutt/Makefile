@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2003/03/29 12:41:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.95 2003/07/10 06:25:26 tron Exp $
 
 DISTNAME=		mutt-1.4.1i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--with-docdir=${PREFIX}/share/doc/mutt \
 			--without-included-gettext \
 			--enable-pop --enable-imap
+INCOMPAT_ICONV=		NetBSD-*-*
 
 LDFLAGS+=		${_STRIPFLAG_CC}
 
