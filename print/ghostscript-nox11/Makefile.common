@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2001/05/03 04:50:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2001/05/03 05:11:43 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -142,6 +142,7 @@ MAKEFRAGS+=		${FILESDIR}/devs.nox11
 
 GSINST_DIR=		${PREFIX}/share/ghostscript/${GS_VERS}vflib
 DOC_DIR=		${PREFIX}/share/doc/ghostscript
+HTML_DIR=		${PREFIX}/share/doc/html/ghostscript
 LIB_DIR=		${GSINST_DIR}/lib
 
 post-extract:
@@ -203,7 +204,8 @@ do-configure:
 
 post-install:
 	strip ${PREFIX}/bin/gs
-	${INSTALL_DATA} ${WRKDIR}/${LIPS_DRV}/Gdevlips.htm ${DOC_DIR}
+	${INSTALL_DATA_DIR} ${DOC_DIR}
+	${INSTALL_DATA} ${WRKDIR}/${LIPS_DRV}/Gdevlips.htm ${HTML_DIR}
 	${INSTALL_DATA} ${WRKDIR}/${BJ10V_DRV}/gdev10v.jis ${DOC_DIR}
 	${INSTALL_DATA} ${WRKDIR}/gdevdmpr.sj ${DOC_DIR}
 	${INSTALL_DATA} ${WRKDIR}/dmp_init.ps ${LIB_DIR}

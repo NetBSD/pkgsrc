@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/05/28 11:17:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/05/03 05:11:44 jlam Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -53,54 +53,54 @@ man/man1/ps2pdf13.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 man/man1/wftopfa.1
-share/doc/ghostscript/Bug-form.htm
-share/doc/ghostscript/C-style.htm
-share/doc/ghostscript/Commprod.htm
-share/doc/ghostscript/Copying.htm
-share/doc/ghostscript/Current.htm
-share/doc/ghostscript/DLL.htm
-share/doc/ghostscript/Devices.htm
-share/doc/ghostscript/Drivers.htm
-share/doc/ghostscript/Fonts.htm
-share/doc/ghostscript/Gdevlips.htm
-share/doc/ghostscript/Helpers.htm
-share/doc/ghostscript/Hershey.htm
-share/doc/ghostscript/History1.htm
-share/doc/ghostscript/History2.htm
-share/doc/ghostscript/History3.htm
-share/doc/ghostscript/History4.htm
-share/doc/ghostscript/History5.htm
-share/doc/ghostscript/History6.htm
-share/doc/ghostscript/Htmstyle.htm
-share/doc/ghostscript/Humor.htm
-share/doc/ghostscript/Install.htm
-share/doc/ghostscript/Language.htm
-share/doc/ghostscript/Lib.htm
-share/doc/ghostscript/Make.htm
-share/doc/ghostscript/New-user.htm
-share/doc/ghostscript/News.htm
-share/doc/ghostscript/PUBLIC
-share/doc/ghostscript/Ps2pdf.htm
-share/doc/ghostscript/Psfiles.htm
-share/doc/ghostscript/Public.htm
-share/doc/ghostscript/README
-share/doc/ghostscript/Readme.htm
-share/doc/ghostscript/Release.htm
-share/doc/ghostscript/Source.htm
-share/doc/ghostscript/Tester.htm
-share/doc/ghostscript/Unix-lpr.htm
-share/doc/ghostscript/Use.htm
-share/doc/ghostscript/Xfonts.htm
 share/doc/ghostscript/gdev10v.jis
 share/doc/ghostscript/gdevdmpr.sj
 share/doc/ghostscript/gdevmjc-0.8/MJ700V2C.FAQ
 share/doc/ghostscript/gdevmjc-0.8/README.mjc
 share/doc/ghostscript/gdevmjc-0.8/README.mje
 share/doc/ghostscript/gdevmjc-0.8/README.noz
-share/doc/ghostscript/gdevmjc-0.8/cpem.doc
+share/doc/ghostscript/gdevmjc-0.8/cpem.doc   
 share/doc/ghostscript/gdevprsc.en
 share/doc/ghostscript/gdevprsc.ja
-share/doc/ghostscript/ps2epsi.txt
+share/doc/html/ghostscript/Bug-form.htm
+share/doc/html/ghostscript/C-style.htm
+share/doc/html/ghostscript/Commprod.htm
+share/doc/html/ghostscript/Copying.htm
+share/doc/html/ghostscript/Current.htm
+share/doc/html/ghostscript/DLL.htm
+share/doc/html/ghostscript/Devices.htm
+share/doc/html/ghostscript/Drivers.htm
+share/doc/html/ghostscript/Fonts.htm
+share/doc/html/ghostscript/Gdevlips.htm
+share/doc/html/ghostscript/Helpers.htm
+share/doc/html/ghostscript/Hershey.htm
+share/doc/html/ghostscript/History1.htm
+share/doc/html/ghostscript/History2.htm
+share/doc/html/ghostscript/History3.htm
+share/doc/html/ghostscript/History4.htm
+share/doc/html/ghostscript/History5.htm
+share/doc/html/ghostscript/History6.htm
+share/doc/html/ghostscript/Htmstyle.htm
+share/doc/html/ghostscript/Humor.htm
+share/doc/html/ghostscript/Install.htm
+share/doc/html/ghostscript/Language.htm
+share/doc/html/ghostscript/Lib.htm
+share/doc/html/ghostscript/Make.htm
+share/doc/html/ghostscript/New-user.htm
+share/doc/html/ghostscript/News.htm
+share/doc/html/ghostscript/PUBLIC
+share/doc/html/ghostscript/Ps2pdf.htm
+share/doc/html/ghostscript/Psfiles.htm
+share/doc/html/ghostscript/Public.htm
+share/doc/html/ghostscript/README
+share/doc/html/ghostscript/Readme.htm
+share/doc/html/ghostscript/Release.htm
+share/doc/html/ghostscript/Source.htm
+share/doc/html/ghostscript/Tester.htm
+share/doc/html/ghostscript/Unix-lpr.htm
+share/doc/html/ghostscript/Use.htm
+share/doc/html/ghostscript/Xfonts.htm
+share/doc/html/ghostscript/ps2epsi.txt
 share/examples/ghostscript/alphabet.ps
 share/examples/ghostscript/cheq.ps
 share/examples/ghostscript/chess.ps
@@ -315,5 +315,6 @@ share/ghostscript/6.01vflib/vflib/vchars.ps
 @dirrm share/ghostscript/6.01vflib/lib
 @dirrm share/ghostscript/6.01vflib
 @dirrm share/examples/ghostscript
+@dirrm share/doc/html/ghostscript
 @dirrm share/doc/ghostscript/gdevmjc-0.8
 @dirrm share/doc/ghostscript
