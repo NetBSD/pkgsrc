@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/28 00:26:53 jtb Exp $
+lib/libslatec.a
+lib/libslatec.la
+lib/libslatec.so.0.0
