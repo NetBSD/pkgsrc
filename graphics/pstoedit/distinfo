@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 08:45:12 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/02/25 18:31:43 drochner Exp $
 
 SHA1 (pstoedit_3_31.zip) = 95e7a09385c3d9ce3dbe8ba5afcc9154021c83ce
 RMD160 (pstoedit_3_31.zip) = 1d8304c89647f0d8b4d425b1320d81755e0ee672
@@ -6,5 +6,5 @@ Size (pstoedit_3_31.zip) = 558546 bytes
 SHA1 (patch-aa) = 25513e3452eed6eb464df1c0dbeeafa4d0f446bf
 SHA1 (patch-ab) = c96f64f0bf26ebbd4b119bf1f6da426421b22537
 SHA1 (patch-ac) = 614ba9036e1484755955b765e829227e64f10879
-SHA1 (patch-ad) = 3b01b11422db35a95b1a55a20c7a28dc3a251fa9
-SHA1 (patch-ae) = 7c9f4b0f6bdeec1c96986f4e8a321f6a195385ce
+SHA1 (patch-ad) = 794556f6c5afd37bcc40c5c319450011a437c2ff
+SHA1 (patch-ae) = 26ef548a105d0a2ff8b093a4f51fb6f66f95521e
