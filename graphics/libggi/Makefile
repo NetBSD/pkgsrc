@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/06/27 03:18:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/03 10:14:39 wiz Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -16,14 +16,14 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--disable-debug \
 		--with-x \
 		--with-extra-includes=${LOCALBASE}/include \
-		--with-extra-libs=${X11BASE}/lib 
+		--with-extra-libs=${X11BASE}/lib
 
 pre-configure:
 	cd ${WRKSRC}; autoconf
 
 post-configure:
 	cd ${WRKSRC}; \
-	[ -f configure.BAK ] || cp configure configure.BAK; \
+	[ -f configure.BAK ] || ${CP} configure configure.BAK; \
 	${SED} \
 		-e '/lib/s@-L\([a-zA-Z$/_]*\)@-Wl,-R\1 -L\1@g' \
 		<configure.BAK >configure
