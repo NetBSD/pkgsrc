@@ -1,0 +1,23 @@
+This is sawfish, a highly configurable window manager for X11. It is
+known to compile on at least Solaris/sparc and Linux/ix86; it is
+released under the terms of the GNU GPL, copyright John Harper
+<jsh@users.sourceforge.net>
+
+
+Sawfish is an extensible window manager using an Emacs Lisp-like
+scripting language--all window decorations are configurable, the basic
+idea is to have as much user-interface policy as possible controlled
+through the Lisp language. This is no layer on top of twm, but a wholly
+new architecture.
+
+Despite this extensibility its policy is currently very minimal
+compared to most window managers. Its aim is simply to manage windows
+in the most flexible and attractive manner possible. As such it does
+not implement desktop backgrounds, applications docks, or other things
+that may be achieved through separate applications.
+
+All high-level wm functions are implemented in Lisp for future
+extensibility or redefinition. Currently this includes menus (using
+GTK+), interactive window moving and resizing, virtual workspaces,
+iconification, focus/transient window policies, frame theme definitions
+and much more.
