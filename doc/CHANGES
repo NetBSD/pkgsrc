@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4168 2003/12/18 03:03:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4169 2003/12/18 03:45:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5219,3 +5219,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pear-Log to 1.8.1 [jdolecek 2003-12-17]
 	Updated tnftpd to 20031217 [lukem 2003-12-18]
 	Updated ettercap to 0.6.b [xtraeme 2003-12-18]
+	Updated avidemux to 2.0.18 [xtraeme 2003-12-18]
