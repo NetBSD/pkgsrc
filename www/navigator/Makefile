@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/09/04 16:38:30 jlam Exp $
+# $NetBSD: Makefile,v 1.20 1999/09/07 15:21:39 jlam Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -16,6 +16,7 @@ BUILD_DEFS+=	NS_ENCRYPTION
 DISTUNAME=	sparc-sun-solaris2.5.1
 DIST_DIR_NAME=	supported/sunos551
 WRKNAME=	sparc-sun-solaris2.5.1
+VENDOR_NAME=	Solaris 2.5.1
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	requires Digital UNIX libraries - see compat_osf1(8)
@@ -23,6 +24,7 @@ IGNORE=	requires Digital UNIX libraries - see compat_osf1(8)
 DISTUNAME=	alpha-dec-osf4.0
 DIST_DIR_NAME=	supported/dec_unix40
 WRKNAME=	alpha-dec-osf4.0
+VENDOR_NAME=	Tru64 UNIX
 .elif (${MACHINE_ARCH} == "i386")
 .if !exists(/emul/linux/lib/ld-linux.so.2)
 IGNORE=	requires Linux glibc2 libraries - see compat_linux(8)
@@ -30,6 +32,7 @@ IGNORE=	requires Linux glibc2 libraries - see compat_linux(8)
 DISTUNAME=	x86-unknown-linuxglibc2.0
 DIST_DIR_NAME=	supported/linux20_glibc2
 WRKNAME=	x86-unknown-linux2.0
+VENDOR_NAME=	Linux 2.0 (glibc)
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
 IGNORE=	requires SunOS libraries - see compat_sunos(8)
@@ -37,6 +40,7 @@ IGNORE=	requires SunOS libraries - see compat_sunos(8)
 DISTUNAME=	sparc-sun-sunos4.1.3_U1
 DIST_DIR_NAME=	unsupported/sunos413
 WRKNAME=	${DISTUNAME}
+VENDOR_NAME=	SunOS 4.1.3
 .endif
 #
 DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
@@ -69,14 +73,14 @@ PLIST_SUBST+=	NS_VERS=${NS_VERS}
 MASTER_SITES=
 RESTRICTED=		"128-bit key strong encryption; export-controlled"
 MIRROR_DISTFILE=	no
-ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386
+ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 # *-*-sparc
 DOWNLOAD=		http://www.netscape.com/download/
 
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
 	    ${ECHO_MSG} "==============================================================="; \
 	    ${ECHO_MSG} "    The 128-bit key strong encryption version of"; \
-	    ${ECHO_MSG} "    Netscape for this platform must be fetched"; \
+	    ${ECHO_MSG} "    Netscape for ${VENDOR_NAME} must be fetched"; \
 	    ${ECHO_MSG} "    into \"${DISTDIR}\" from the following URL:"; \
 	    ${ECHO_MSG} "    ${DOWNLOAD}"; \
 	    ${ECHO_MSG} "==============================================================="; \
