@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/11/28 15:43:32 taca Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/17 01:53:00 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -20,8 +20,9 @@ HAS_CONFIGURE=  	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_SCRIPT=	${RUBY} configure.rb
 CONFIGURE_ARGS=		--with-apxs="${APXS}"
-MESSAGE_SUBST+=	RUBY_DOCDIR=${RUBY_DOCDIR}
-DOCS=		ChangeLog NOTICE README.en README.ja
+MESSAGE_SUBST+=		RUBY_DOCDIR=${RUBY_DOCDIR}
+DOCS=			ChangeLog NOTICE README.en README.ja
+REPLACE_RUBY+=		install-rb
 
 .include "../../mk/bsd.prefs.mk"
 

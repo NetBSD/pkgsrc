@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/28 15:34:06 taca Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/17 01:53:00 taca Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	ap2-${RUBY_PKGPREFIX}-${VERSION}
@@ -19,10 +19,11 @@ HAS_CONFIGURE=  	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_SCRIPT=	${RUBY} configure.rb
 CONFIGURE_ARGS+=	--with-apxs="${APXS}"
-MAKE_FLAGS+= APACHE_INCLUDES='-I${PREFIX}/include/httpd \
-		-I${PREFIX}/include/apr-0'
-MESSAGE_SUBST+=	RUBY_DOCDIR=${RUBY_DOCDIR}
-DOCS=		ChangeLog NOTICE README.en README.ja
+MAKE_FLAGS+= 		APACHE_INCLUDES='-I${PREFIX}/include/httpd \
+				-I${PREFIX}/include/apr-0'
+MESSAGE_SUBST+=		RUBY_DOCDIR=${RUBY_DOCDIR}
+DOCS=			ChangeLog NOTICE README.en README.ja
+REPLACE_RUBY+=		install-rb
 
 .include "../../mk/bsd.prefs.mk"
 
