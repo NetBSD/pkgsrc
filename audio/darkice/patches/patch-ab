@@ -1,0 +1,143 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/09 17:23:46 xtraeme Exp $
+
+--- src/aflibConverter.cc.orig	2003-05-09 10:56:06.000000000 +0200
++++ src/aflibConverter.cc	2003-05-09 10:56:19.000000000 +0200
+@@ -123,8 +123,8 @@
+    largeFilter = high_quality;
+    linearInterp = linear_interpolation;
+ 
+-   _X = NULL;
+-   _Y = NULL;
++   __X = NULL;
++   __Y = NULL;
+    _vol = 1.0;
+ }
+ 
+@@ -140,19 +140,19 @@
+    int i;
+ 
+    // Delete memory for the input and output arrays
+-   if (_X != NULL)
++   if (__X != NULL)
+    {
+       for (i = 0; i < _nChans; i++)
+       {
+-         delete [] _X[i];
+-         _X[i] = NULL;
+-         delete [] _Y[i];
+-         _Y[i] = NULL;
+-      }
+-      delete [] _X;
+-      _X = NULL;
+-      delete [] _Y;
+-      _Y = NULL;
++         delete [] __X[i];
++         __X[i] = NULL;
++         delete [] __Y[i];
++         __Y[i] = NULL;
++      }
++      delete [] __X;
++      __X = NULL;
++      delete [] __Y;
++      __Y = NULL;
+    }
+ }
+ 
+@@ -180,15 +180,15 @@
+    _vol = volume;
+ 
+    // Allocate all new memory
+-   _X = new short * [_nChans];
+-   _Y = new short * [_nChans];
++   __X = new short * [_nChans];
++   __Y = new short * [_nChans];
+ 
+    for (i = 0; i < _nChans; i++)
+    {
+       // Add extra to allow of offset of input data (Xoff in main routine)
+-      _X[i] = new short[IBUFFSIZE + 256];
+-      _Y[i] = new short[(int)(((double)IBUFFSIZE)*_factor)];
+-      memset(_X[i], 0, sizeof(short) * (IBUFFSIZE + 256));    
++      __X[i] = new short[IBUFFSIZE + 256];
++      __Y[i] = new short[(int)(((double)IBUFFSIZE)*_factor)];
++      memset(__X[i], 0, sizeof(short) * (IBUFFSIZE + 256));    
+    }
+ }
+ 
+@@ -467,7 +467,7 @@
+     do {
+ 		if (!last)		/* If haven't read last sample yet */
+ 		{
+-	   	 last = readData(inCount, inArray, _X, 
++	   	 last = readData(inCount, inArray, __X, 
+ 					 IBUFFSIZE, (int)Xread,first_pass);
+           first_pass = FALSE;
+ 	    	 if (last && (last-Xoff<Nx)) { /* If last sample has been read... */
+@@ -487,7 +487,7 @@
+ 			orig_Nx = Nx;
+ 	   	Time2 = _Time;
+ 	   /* Resample stuff in input buffer */
+-	   	Nout=SrcLinear(_X[c],_Y[c],_factor,&Time2,orig_Nx,maxOutput);
++	   	Nout=SrcLinear(__X[c],__Y[c],_factor,&Time2,orig_Nx,maxOutput);
+       }
+ 		Nx = orig_Nx;
+       _Time = Time2;
+@@ -504,7 +504,7 @@
+       for (c = 0; c < _nChans; c++)
+       {
+ 	   	for (i=0; i<IBUFFSIZE-Xp+Xoff; i++) { /* Copy part of input signal */
+-	       	_X[c][i] = _X[c][i+Xp-Xoff]; /* that must be re-used */
++	       	__X[c][i] = __X[c][i+Xp-Xoff]; /* that must be re-used */
+ 	   	}
+       }
+ 		if (last) {		/* If near end of sample... */
+@@ -526,7 +526,7 @@
+ 
+       for (c = 0; c < _nChans; c++)
+ 	   	for (i = 0; i < Nout; i++)
+-            outArray[c * outCount + i + Ycount - Nout] = _Y[c][i];
++            outArray[c * outCount + i + Ycount - Nout] = __Y[c][i];
+ 
+       total_inCount += Nx;
+ 
+@@ -583,7 +583,7 @@
+     do {
+ 		if (!last)		/* If haven't read last sample yet */
+ 		{
+-	    	last = readData(inCount, inArray, _X, 
++	    	last = readData(inCount, inArray, __X, 
+ 					IBUFFSIZE, (int)Xread,first_pass);
+          first_pass = FALSE;
+ 	    	if (last && (last-Xoff<Nx)) { /* If last sample has been read... */
+@@ -604,11 +604,11 @@
+ 	   	Time2 = _Time;
+            /* Resample stuff in input buffer */
+ 	   	if (_factor >= 1) {	/* SrcUp() is faster if we can use it */
+-	       	Nout=SrcUp(_X[c],_Y[c],_factor,
++	       	Nout=SrcUp(__X[c],__Y[c],_factor,
+ 						&Time2,Nx,maxOutput,Nwing,LpScl,Imp,ImpD,interpFilt);
+ 	   	}
+ 	   	else {
+-	       	Nout=SrcUD(_X[c],_Y[c],_factor,
++	       	Nout=SrcUD(__X[c],__Y[c],_factor,
+ 						&Time2,Nx,maxOutput,Nwing,LpScl,Imp,ImpD,interpFilt);
+ 	   	}
+       }
+@@ -642,7 +642,7 @@
+ 		{
+ 			for (i = 0; i < Nout; i++)
+ 			{
+-				outArray[c * outCount + i + Ycount - Nout] = _Y[c][i];
++				outArray[c * outCount + i + Ycount - Nout] = __Y[c][i];
+ 			}
+ 		}
+ 
+@@ -651,7 +651,7 @@
+ 		for (c = 0; c < _nChans; c++)
+ 		{
+ 			for (i=0; i<IBUFFSIZE-act_incount+Xoff; i++) { /* Copy part of input signal */
+-				 _X[c][i] = _X[c][i+act_incount]; /* that must be re-used */
++				 __X[c][i] = __X[c][i+act_incount]; /* that must be re-used */
+ 			}
+ 		}
+ 		Xread = IBUFFSIZE - Nx; /* Pos in input buff to read new data into */
