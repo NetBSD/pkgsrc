@@ -1,7 +1,18 @@
-$NetBSD: patch-an,v 1.2 1998/08/07 10:36:11 agc Exp $
+$NetBSD: patch-an,v 1.3 2004/07/28 08:05:32 agc Exp $
 
---- snd.orig/snd-xrec.c	Mon Feb  2 15:01:06 1998
-+++ snd-xrec.c	Sun Feb 22 02:23:01 1998
+--- snd-xrec.c.orig	1998-02-02 14:01:06.000000000 +0000
++++ snd-xrec.c	2004-07-28 09:01:33.000000000 +0100
+@@ -134,8 +134,8 @@
+ 		{
+ 		  for (j=0;j<by0;j++)
+ 		    {
+-		      inx = tx + round((x+(float)i/xscl)*matrix[0] + (y+(float)j/yscl)*matrix[2]);  if (inx<0) inx=0; if (inx>=nwidth) inx=nwidth-1;
+-		      iny = ty + round((x+(float)i/xscl)*matrix[1] + (y+(float)j/yscl)*matrix[3]);  if (iny<0) iny=0; if (iny>=nheight) iny=nheight-1;
++		      inx = tx + snd_round((x+(float)i/xscl)*matrix[0] + (y+(float)j/yscl)*matrix[2]);  if (inx<0) inx=0; if (inx>=nwidth) inx=nwidth-1;
++		      iny = ty + snd_round((x+(float)i/xscl)*matrix[1] + (y+(float)j/yscl)*matrix[3]);  if (iny<0) iny=0; if (iny>=nheight) iny=nheight-1;
+ 		      XPutPixel(after,inx,iny,px);
+ 		    }
+ 		}
 @@ -1314,7 +1314,11 @@
    #include <soundcard.h>
  #endif
