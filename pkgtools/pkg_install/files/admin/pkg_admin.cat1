@@ -1,4 +1,4 @@
-PKG_ADMIN(1)                NetBSD Reference Manual               PKG_ADMIN(1)
+PKG_ADMIN(1)            NetBSD General Commands Manual            PKG_ADMIN(1)
 
 NNAAMMEE
      ppkkgg__aaddmmiinn - perform various administrative tasks to the pkg system
@@ -25,6 +25,10 @@ OOPPTTIIOONNSS
              isn't specified, then the package database directory is taken
              from the value of the environment variable PKG_DBDIR if it's set,
              otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
+
+     --SS      Set the shell glob pattern for package suffices when matching
+             package names for llssaallll and llssbbeesstt to be the null suffix.  The
+             default pattern is ".t[bg]z".
 
      --ss _s_f_x___p_a_t_t_e_r_n
              Set the shell glob pattern for package suffices when matching
@@ -129,4 +133,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 1.6.1_STABLE            September 8, 2003                             2
+NetBSD 1.6                     September 8, 2003                    NetBSD 1.6

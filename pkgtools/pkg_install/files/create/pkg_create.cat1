@@ -1,4 +1,4 @@
-PKG_CREATE(1)               NetBSD Reference Manual              PKG_CREATE(1)
+PKG_CREATE(1)           NetBSD General Commands Manual           PKG_CREATE(1)
 
 NNAAMMEE
      ppkkgg__ccrreeaattee - a utility for creating software package distributions
@@ -9,8 +9,8 @@ SSYYNNOOPPSSIISS
                 [--KK _p_k_g___d_b_d_i_r] [--kk _d_s_c_r_i_p_t] [--LL _S_r_c_D_i_r] [--mm _m_t_r_e_e_f_i_l_e]
                 [--nn _p_r_e_s_e_r_v_e_-_f_i_l_e] [--PP _d_p_k_g_s] [--pp _p_r_e_f_i_x] [--rr _r_s_c_r_i_p_t]
                 [--SS _s_i_z_e_-_a_l_l_-_f_i_l_e] [--ss _s_i_z_e_-_p_k_g_-_f_i_l_e] [--tt _t_e_m_p_l_a_t_e]
-                [--XX _e_x_c_l_u_d_e_f_i_l_e] --cc _c_o_m_m_e_n_t --dd _d_e_s_c_r_i_p_t_i_o_n --ff _p_a_c_k_l_i_s_t _p_k_g_-
-                _n_a_m_e
+                [--XX _e_x_c_l_u_d_e_f_i_l_e] --cc _c_o_m_m_e_n_t --dd _d_e_s_c_r_i_p_t_i_o_n --ff _p_a_c_k_l_i_s_t
+                _p_k_g_-_n_a_m_e
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__ccrreeaattee command is used to create packages that will subsequently
@@ -310,4 +310,4 @@ BBUUGGSS
      cations due to exec argument-space limitations (this depends on the value
      returned by ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
 
-NetBSD 1.6.1_STABLE            September 2, 2003                             5
+NetBSD 1.6                     September 2, 2003                    NetBSD 1.6
