@@ -1,71 +1,20 @@
-$NetBSD: patch-aa,v 1.5 1998/11/12 23:36:24 frueauf Exp $
+$NetBSD: patch-aa,v 1.6 1999/10/09 20:31:34 jlam Exp $
 
---- lib/Makefile.orig	Thu Jun 26 14:07:56 1997
-+++ lib/Makefile	Mon Sep 14 20:23:58 1998
-@@ -13,7 +13,8 @@
- # Where all the include files are:
- INCS = -I.
+--- ./configure.orig	Wed Feb 10 01:35:28 1999
++++ ./configure	Wed Oct  6 00:07:40 1999
+@@ -1191,6 +1191,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
  
--LIBDIR = /usr/lib
-+INCDIR = ${PREFIX}/include/giflib
-+LIBDIR = ${PREFIX}/lib
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- #
- # What devices we should be able to grab into gif images. Note that if
-@@ -22,7 +23,7 @@
- # 1. EGA, VGA, SVGA (800x600), Hercules - all on IBM PC only.
- # 2. SGI 4D Irix using gl library (Add -D__SGI_GL__).
- # 3. X11 using libX.a (Add -D__X11__)
--DEVS = -D__X11__
-+#DEVS = -D__X11__
+@@ -1240,6 +1241,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
  
- #
- # These are the flags for gcc, in BSD4.3 or Sun O.S. 4.0.3
-@@ -63,28 +64,20 @@
- CC = gcc
- #
- #CFLAGS = -fno-builtin -O -c -W -Wreturn-type -Wcomment
--CFLAGS = -fno-builtin -g -c -W -Wreturn-type -Wcomment
-+#CFLAGS = -fno-builtin -g -c -W -Wreturn-type -Wcomment
- 
- 
- OBJS = dev2gif.o egif_lib.o dgif_lib.o gifalloc.o gif_font.o gif_hash.o \
- 	gif_err.o quantize.o qprintf.o getarg.o
- 
- .c.o:
--	$(CC) $(INCS) $(DEVS) $(CFLAGS) $<
-+	${LIBTOOL} --mode=compile $(CC) -c $(INCS) $(DEVS) $(CFLAGS) $<
- 
--all: static shared
-+all static shared: libgif.la
- 
--static: libgif.a
--shared: $(SHLIB)
--
--libgif.a: $(OBJS)
--	rm -f libgif.a
--	ar rcv libgif.a $(OBJS)
--	-ranlib libgif.a
--
--$(SHLIB): $(OBJS)
--	rm -f libgif.so.$(V)
--	gcc -shared -o $(SHLIB) $(OBJS)
-+libgif.la: $(OBJS)
-+	${LIBTOOL} --mode=link ${CC} -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib \
-+		-version-info 3:0
- 
- dev2gif.o: gif_lib.h
- egif_lib.o: gif_lib.h gif_hash.h
-@@ -97,8 +90,10 @@
- qprintf.o: gif_lib.h
- getarg.o: getarg.h
- 
--install-lib: libgif.a
--	cp libgif.a libgif.so.$(V) $(LIBDIR)
-+install-lib: libgif.la
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libgif.la ${PREFIX}/lib
-+	mkdir -p ${INCDIR}
-+	${BSD_INSTALL_DATA} *.h ${INCDIR}
- 
- uninstall-lib: shared static
- 	rm -f $(LIBDIR)/libgif.a $(LIBDIR)/$(SHLIB)
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2
