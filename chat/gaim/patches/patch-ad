@@ -1,0 +1,50 @@
+$NetBSD: patch-ad,v 1.3 2004/04/24 09:29:54 jmmv Exp $
+
+--- src/protocols/novell/nmuser.c.orig	Thu Apr 22 09:01:16 2004
++++ src/protocols/novell/nmuser.c	Sat Apr 24 05:11:42 2004
+@@ -50,10 +50,12 @@
+ nm_initialize_user(const char *name, const char *server_addr,
+ 				   int port, gpointer data, nm_event_cb event_callback)
+ {
++	NMUser *user;
++
+ 	if (name == NULL || server_addr == NULL || event_callback == NULL)
+ 		return NULL;
+ 
+-	NMUser *user = g_new0(NMUser, 1);
++	user = g_new0(NMUser, 1);
+ 
+ 	user->conn = g_new0(NMConn, 1);
+ 
+@@ -1647,11 +1649,12 @@
+ nm_typed_to_dotted(const char *typed)
+ {
+ 	unsigned i = 0, j = 0;
++	char *dotted;
+ 
+ 	if (typed == NULL)
+ 		return NULL;
+ 
+-	char *dotted = g_new0(char, strlen(typed));
++	dotted = g_new0(char, strlen(typed));
+ 
+ 	do {
+ 
+@@ -1692,6 +1695,7 @@
+ 	gint objid1;
+ 	NMContact *contact;
+ 	NMFolder *folder;
++	gpointer item;
+ 
+ 	if (user == NULL || fields == NULL)
+ 		return;
+@@ -1713,8 +1717,7 @@
+ 				nm_locate_field(NM_A_SZ_OBJECT_ID, (NMField *) cursor->value);
+ 			if (locate != NULL && locate->value != 0) {
+ 				objid1 = atoi((char *) locate->value);
+-				gpointer item =
+-					nm_folder_find_item_by_object_id(user->root_folder, objid1);
++				item = nm_folder_find_item_by_object_id(user->root_folder, objid1);
+ 				if (item != NULL) {
+ 					if (cursor->method == NMFIELD_METHOD_ADD) {
+ 						if (g_ascii_strcasecmp(cursor->tag, NM_A_FA_CONTACT) == 0) {
