@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/10/10 19:09:26 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.14 2000/10/10 19:25:09 dmcmahill Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -14,7 +14,7 @@ HOMEPAGE=	http://now.cs.berkeley.edu/Glunix/glunix.html
 SSH=		/usr/bin/ssh
 .else
 DEPENDS+=	{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
-SSH=		${LOCALBASE}/ssh
+SSH=		${LOCALBASE}/bin/ssh
 .endif
 
 USE_GMAKE=	yes
