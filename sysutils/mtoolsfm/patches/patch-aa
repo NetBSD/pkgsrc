@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/09 22:47:51 agc Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/02 17:42:12 jmmv Exp $
 
---- MToolsFM.1.orig	Sat Aug 11 18:26:43 2001
-+++ MToolsFM.1
+--- MToolsFM.1.in.orig	Sat Aug 11 18:26:43 2001
++++ MToolsFM.1.in
 @@ -20,7 +20,7 @@
  .TP
  .B \-\-nosysconf
  Do not attempt to read system-wide configuration in
 -.IR /etc/mtoolsfm.conf .
-+.IR /usr/pkg/etc/mtoolsfm.conf .
++.IR @PKG_SYSCONFDIR@/mtoolsfm.conf .
  .TP
  .B \-\-nouserconf
  Do not read user config file in
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/06/09 22:47:51 agc Exp $
  User-based initialization file
  .TP
 -/etc/mtoolsfm.conf
-+/usr/pkg/etc/mtoolsfm.conf
++@PKG_SYSCONFDIR@/mtoolsfm.conf
  System-wide initialization file
  .SH DIAGNOSTICS
  Diagnostics appear in a little textfield at the bottom of the main window.
