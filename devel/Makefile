@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.493 2004/05/07 13:33:36 wiz Exp $
+# $NetBSD: Makefile,v 1.494 2004/05/09 05:40:40 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -280,6 +280,7 @@ SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Data-Buffer
 SUBDIR+=	p5-Data-ShowTable
+SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-Date-Calc
 SUBDIR+=	p5-Date-Manip
 SUBDIR+=	p5-Devel-Profile
