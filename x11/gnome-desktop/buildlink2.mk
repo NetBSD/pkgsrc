@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 09:52:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/12/24 06:10:30 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gnome-desktop.
 #
@@ -9,7 +9,7 @@
 GNOME_DESKTOP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-desktop
-BUILDLINK_DEPENDS.gnome-desktop?=		gnome-desktop>=2.0.8nb1
+BUILDLINK_DEPENDS.gnome-desktop?=		gnome-desktop>=2.0.10nb1
 BUILDLINK_PKGSRCDIR.gnome-desktop?=		../../x11/gnome-desktop
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-desktop=gnome-desktop

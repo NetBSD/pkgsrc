@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/12/20 19:04:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:27 wiz Exp $
 #
 
 DISTNAME=	waimea-0.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=waimea/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/12/23 16:10:59 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/24 06:10:29 wiz Exp $
 
 MOZILLA=	phoenix
 MOZILLA_BIN=	phoenix-bin
+PKGREVISION=	1
 MOZ_VER=	0.5
 EXTRACT_SUFX=	.tar.bz2
 DISTNAME=       mozilla-phoenix-${MOZ_VER}
