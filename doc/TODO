@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3196 2005/03/05 04:34:40 wiz Exp $
+$NetBSD: TODO,v 1.3197 2005/03/05 12:38:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,6 +382,7 @@ Suggested package updates
 	o cscope-15.5
 	o cssc-1.0.1
 	o cstream-2.5
+	o curl-7.13.1
 	o cvsweb-3.0.5
 	o cwtext-0.94
 	o cxref-1.6
@@ -423,7 +424,6 @@ Suggested package updates
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.35
 	o eagle-4.13r1
-	o eb-4.1.3
 	o eblook-1.6.1
 	o ec-fonts-mftraced-1.0.9
 	o edb-1.0.5
@@ -466,7 +466,6 @@ Suggested package updates
 	o fox-1.4.6
 	o fprot-workstation-bin-4.5.4
 	o freeciv-sounds-3.0
-	o freepwing-1.4.4
 	o freetds-0.62.4
 	o ftpproxy-1.2.3
 	o fugu-1.2.3
@@ -917,7 +916,7 @@ Suggested package updates
 	o py-ZODB-3.2.3
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
-	o py-curl-7.12.3
+	o py-curl-7.13.1
 	o py-gnuplot-1.7
 	o py-ldap-2.0.6
 	o py-libxml2-2.6.17
@@ -1138,7 +1137,6 @@ Suggested package updates
 	o wmbiff-0.4.26
 	o wmctrl-1.07
 	o wmweather-2.4.3
-	o wol-0.7.1
 	o www6to4-1.6
 	o wwwoffle-2.8d
 	o x2vnc-1.6.1
