@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/05/26 06:46:31 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/10 00:09:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Mesa.
 #
@@ -7,10 +7,9 @@
 # (1) Optionally define MESA_REQD to the version of Mesa desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(MESA_BUILDLINK_MK)
@@ -34,8 +33,15 @@ MESA_LIBS+=		${LOCALBASE}/lib/libglut.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-Mesa-headers
-BUILDLINK_TARGETS+=	link-Mesa-libs
+MESA_BUILDLINK_COOKIE=		${WRKDIR}/.Mesa_buildlink_done
+MESA_BUILDLINK_TARGETS=		link-Mesa-headers
+MESA_BUILDLINK_TARGETS+=	link-Mesa-libs
+BUILDLINK_TARGETS+=		${MESA_BUILDLINK_COOKIE}
+
+pre-configure: ${MESA_BUILDLINK_COOKIE}
+
+${MESA_BUILDLINK_COOKIE}: ${MESA_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${MESA_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

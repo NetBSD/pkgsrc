@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/06/05 22:15:01 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/06/10 00:09:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -8,10 +8,9 @@
 # (2) Optionally define READLINE_REQD to the version of GNU readline desired.
 # (3) Include this Makefile fragment in the package Makefile,
 # (4) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (5) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (6) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (7) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 #
 # NOTE:	You may need to do some more work to get libedit recognized over
@@ -54,11 +53,18 @@ HISTORY_LIBS=		/usr/lib/libedit.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-readline-headers
+READLINE_BUILDLINK_COOKIE=	${WRKDIR}/.readline_buildlink_done
+READLINE_BUILDLINK_TARGETS=	link-readline-headers
 .if defined(HAVE_LIBEDIT_READLINE) && defined(USE_LIBTOOL)
-BUILDLINK_TARGETS+=	editline-libtool-archive
+READLINE_BUILDLINK_TARGETS+=	editline-libtool-archive
 .endif
-BUILDLINK_TARGETS+=	link-readline-libs
+READLINE_BUILDLINK_TARGETS+=	link-readline-libs
+BUILDLINK_TARGETS+=		${READLINE_BUILDLINK_COOKIE}
+
+pre-configure: ${READLINE_BUILDLINK_COOKIE}
+
+${READLINE_BUILDLINK_COOKIE}: ${READLINE_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${READLINE_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

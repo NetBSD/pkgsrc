@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/09 15:25:18 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/06/10 00:09:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
@@ -7,10 +7,9 @@
 # (1) Optionally define GETTEXT_REQD to the version of gettext desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(GETTEXT_BUILDLINK_MK)
@@ -53,8 +52,15 @@ LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 LIBS+=			-lintl
 .endif
 
-BUILDLINK_TARGETS+=	link-gettext-headers
-BUILDLINK_TARGETS+=	link-gettext-libs
+GETTEXT_BUILDLINK_COOKIE=	${WRKDIR}/.gettext_buildlink_done
+GETTEXT_BUILDLINK_TARGETS=	link-gettext-headers
+GETTEXT_BUILDLINK_TARGETS+=	link-gettext-libs
+BUILDLINK_TARGETS+=		${GETTEXT_BUILDLINK_COOKIE}
+
+pre-configure: ${GETTEXT_BUILDLINK_COOKIE}
+
+${GETTEXT_BUILDLINK_COOKIE}: ${GETTEXT_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${GETTEXT_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

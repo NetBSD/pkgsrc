@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/09 15:29:50 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/10 00:09:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rvm.
 #
@@ -16,8 +16,6 @@
 .if !defined(RVM_BUILDLINK_MK)
 RVM_BUILDLINK_MK=	# defined
 
-.include "../../devel/lwp/buildlink.mk"
-
 RVM_REQD?=		1.3
 DEPENDS+=		rvm>=${RVM_REQD}:../../devel/rvm
 
@@ -31,8 +29,17 @@ RVM_LIBS+=		${LOCALBASE}/lib/libseg.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-rvm-headers
-BUILDLINK_TARGETS+=	link-rvm-libs
+.include "../../devel/lwp/buildlink.mk"
+
+RVM_BUILDLINK_COOKIE=		${WRKDIR}/.rvm_buildlink_done
+RVM_BUILDLINK_TARGETS=		link-rvm-headers
+RVM_BUILDLINK_TARGETS+=		link-rvm-libs
+BUILDLINK_TARGETS+=		${RVM_BUILDLINK_COOKIE}
+
+pre-configure: ${RVM_BUILDLINK_COOKIE}
+
+${RVM_BUILDLINK_COOKIE}: ${RVM_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${RVM_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

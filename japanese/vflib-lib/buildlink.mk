@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/09 15:27:19 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/10 00:09:32 jlam Exp $
 #
 # This Makefile fragment is included by packages that use VFlib.
 #
@@ -7,16 +7,13 @@
 # (1) Optionally define VFLIB_REQD to the version of VFlib desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(VFLIB_BUILDLINK_MK)
 VFLIB_BUILDLINK_MK=	# defined
-
-.include "../../graphics/freetype-lib/buildlink.mk"
 
 VFLIB_REQD?=		2.24.2
 DEPENDS+=		ja-vflib-lib>=${VFLIB_REQD}:../../japanese/vflib-lib
@@ -27,8 +24,17 @@ VFLIB_LIBS=		${LOCALBASE}/lib/libVFlib2.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-vflib-headers
-BUILDLINK_TARGETS+=	link-vflib-libs
+.include "../../graphics/freetype-lib/buildlink.mk"
+
+VFLIB_BUILDLINK_COOKIE=		${WRKDIR}/.vflib_buildlink_done
+VFLIB_BUILDLINK_TARGETS=	link-vflib-headers
+VFLIB_BUILDLINK_TARGETS+=	link-vflib-libs
+BUILDLINK_TARGETS+=		${VFLIB_BUILDLINK_COOKIE}
+
+pre-configure: ${VFLIB_BUILDLINK_COOKIE}
+
+${VFLIB_BUILDLINK_COOKIE}: ${VFLIB_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${VFLIB_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/09 15:13:07 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/06/10 00:09:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use FLTK.
 #
@@ -18,8 +18,6 @@ FLTK_BUILDLINK_MK=	# defined
 
 FLTK_REQD?=		1.0.9
 
-.include "../../graphics/Mesa/buildlink.mk"
-
 FLTK_HEADERS=		${X11PREFIX}/include/FL/*
 FLTK_LIBS=		${X11PREFIX}/lib/libfltk.*
 DEPENDS+=		fltk>=${FLTK_REQD}:../../x11/fltk
@@ -27,8 +25,17 @@ DEPENDS+=		fltk>=${FLTK_REQD}:../../x11/fltk
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-fltk-headers
-BUILDLINK_TARGETS+=	link-fltk-libs
+.include "../../graphics/Mesa/buildlink.mk"
+
+FLTK_BUILDLINK_COOKIE=		${WRKDIR}/.fltk_buildlink_done
+FLTK_BUILDLINK_TARGETS+=	link-fltk-headers
+FLTK_BUILDLINK_TARGETS+=	link-fltk-libs
+BUILDLINK_TARGETS+=		${FLTK_BUILDLINK_COOKIE}
+
+pre-configure: ${FLTK_BUILDLINK_COOKIE}
+
+${FLTK_BUILDLINK_COOKIE}: ${FLTK_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${FLTK_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.
@@ -58,5 +65,7 @@ link-fltk-libs:
 			${LN} -sf $${lib} $${dest};			\
 		fi;							\
 	done
+
+jlam: ${FLTK_BUILDLINK_COOKIE}
 
 .endif	# FLTK_BUILDLINK_MK

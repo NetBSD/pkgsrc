@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/05/26 05:44:09 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/06/10 00:09:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use getopt_long().
 #
@@ -10,10 +10,9 @@
 #
 # (1) Include this Makefile fragment in the package Makefile,
 # (2) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (3) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (3) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path.
-# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (4) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(GETOPT_BUILDLINK_MK)
@@ -36,8 +35,15 @@ LIBS+=			-lgetopt
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-getopt-headers
-BUILDLINK_TARGETS+=	link-getopt-libs
+GETOPT_BUILDLINK_COOKIE=	${WRKDIR}/.getopt_buildlink_done
+GETOPT_BUILDLINK_TARGETS=	link-getopt-headers
+GETOPT_BUILDLINK_TARGETS+=	link-getopt-libs
+BUILDLINK_TARGETS+=		${GETOPT_BUILDLINK_COOKIE}
+
+pre-configure: ${GETOPT_BUILDLINK_COOKIE}
+
+${GETOPT_BUILDLINK_COOKIE}: ${GETOPT_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${GETOPT_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.
