@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/28 17:10:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 21:00:35 agc Exp $
 
 SHA1 (uim-0.4.5.tar.gz) = a7f11c914bb8a6e23190fa9781892d8b3d3267f8
+RMD160 (uim-0.4.5.tar.gz) = 79347829c20eacd618280423c255b2e21a276ff7
 Size (uim-0.4.5.tar.gz) = 1112696 bytes
