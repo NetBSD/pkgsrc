@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 1999/08/13 08:54:29 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/19 08:52:58 fredb Exp $
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
 bin/ntpq
+bin/ntptime
+bin/ntptimeset
 bin/ntptrace
 bin/tickadj
-bin/ntptime
 share/doc/ntp4/accopt.htm
 share/doc/ntp4/assoc.htm
 share/doc/ntp4/authopt.htm

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1999/08/13 08:54:28 fredb Exp $
+# $NetBSD: Makefile,v 1.8 1999/08/19 08:52:57 fredb Exp $
 #
 
 DISTNAME=	ntp-4.0.95
-PKGNAME=	ntp-4.0.96p1
+PKGNAME=	ntp-4.0.97
 CATEGORIES=	net
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/testing/ \
 		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ \
@@ -10,7 +10,9 @@ MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/testing/ \
 		ftp://ftp.udel.edu/pub/ntp/ntp4/
 
 PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	ntp-4.0.95-4.0.96.diff.gz ntp-4.0.96-4.0.96p1.diff.gz
+PATCHFILES=	ntp-4.0.95-4.0.96.diff.gz \
+		ntp-4.0.96-4.0.96p1.diff.gz \
+		ntp-4.0.96p1-4.0.97.diff.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	fb@enteract.com
