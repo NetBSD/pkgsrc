@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/09 18:45:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/11 00:56:01 xtraeme Exp $
 #
 
 DISTNAME=		gnome-vfs-2.4.2
@@ -15,7 +15,7 @@ COMMENT=		GNOME Virtual File System (v2)
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
@@ -54,18 +54,18 @@ CONF_FILES+=	${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 
 GCONF2_SCHEMAS=	system_http_proxy.schemas
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../audio/cdparanoia/buildlink2.mk"
-.include "../../databases/gnome-mime-data/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../audio/cdparanoia/buildlink3.mk"
+.include "../../databases/gnome-mime-data/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../net/ORBit2/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../sysutils/fam/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/fam/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

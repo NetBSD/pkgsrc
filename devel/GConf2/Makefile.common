@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/01/23 17:52:40 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/02/11 00:53:57 xtraeme Exp $
 #
 
 DISTNAME=		GConf-2.4.0.1
@@ -16,7 +16,7 @@ DISTINFO_FILE=		${.CURDIR}/../GConf2/distinfo
 FILESDIR=		${.CURDIR}/../GConf2/files
 PATCHDIR=		${.CURDIR}/../GConf2/patches
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
