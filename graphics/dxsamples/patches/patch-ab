@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2000/01/31 21:10:30 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2002/02/05 22:24:23 drochner Exp $
 
---- Makefile.in.orig	Thu Jan  6 21:32:15 2000
-+++ Makefile.in	Sat Jan 29 19:41:43 2000
-@@ -69,7 +69,7 @@
+--- Makefile.in.orig	Thu Jun  7 21:32:30 2001
++++ Makefile.in	Tue Feb  5 16:12:13 2002
+@@ -71,7 +71,7 @@
+ SHELL = @SHELL@
  VERSION = @VERSION@
- WRL_CLASSPATH = @WRL_CLASSPATH@
  
--SUBDIRS = callmodule data dxlink java macros \
-+SUBDIRS = callmodule data dxlink macros \
- 	  outboard program_guide programs scripts \
- 	  supervise tutorial user util 
+-SUBDIRS = callmodule data dxlink java macros 	  outboard program_guide programs scripts 	  supervise tutorial user util 
++SUBDIRS = callmodule data dxlink macros 	  outboard program_guide programs scripts 	  supervise tutorial user util 
+ 
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

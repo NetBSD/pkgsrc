@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:24:22 drochner Exp $
 dx/samples/callmodule/Makefile_alphax
 dx/samples/callmodule/Makefile_aviion
 dx/samples/callmodule/Makefile_hp700
@@ -10,6 +10,7 @@ dx/samples/callmodule/Makefile_sun4
 dx/samples/callmodule/Readme
 dx/samples/callmodule/Simple.c
 dx/samples/callmodule/ThunderStreamlines.c
+dx/samples/callmodule/callmodule_make
 dx/samples/callmodule/renderimage.c
 dx/samples/callmodule/xapp_supervise.c
 dx/samples/data/2D2ormorevarnotseries.data
@@ -30,7 +31,6 @@ dx/samples/data/MRI.data
 dx/samples/data/Polylines.dx
 dx/samples/data/ROM_ozone.dx
 dx/samples/data/Readme
-dx/samples/data/heat.cm
 dx/samples/data/background.tiff
 dx/samples/data/block_example.data
 dx/samples/data/block_example.general
@@ -50,11 +50,11 @@ dx/samples/data/cylinder.rgb
 dx/samples/data/cylinder.size
 dx/samples/data/cylinder.tiff
 dx/samples/data/datadepconnections.dx
-dx/samples/data/npp.dx
 dx/samples/data/datawithattribute.dx
 dx/samples/data/deformedregular.dx
 dx/samples/data/dx_logo.gif
 dx/samples/data/dx_logo.tiff
+dx/samples/data/dx_logo2.tif
 dx/samples/data/external.data
 dx/samples/data/externalfilter
 dx/samples/data/externalfilter.c
@@ -70,6 +70,7 @@ dx/samples/data/griddeddata.data
 dx/samples/data/grocery.txt
 dx/samples/data/group.dx
 dx/samples/data/head_slice.dx
+dx/samples/data/heat.cm
 dx/samples/data/homeown.txt
 dx/samples/data/hyper.dx
 dx/samples/data/image.dx
@@ -91,9 +92,10 @@ dx/samples/data/mri.general
 dx/samples/data/multigrid1.dx
 dx/samples/data/multigrid2.dx
 dx/samples/data/multigrid3.dx
-dx/samples/data/product1.dx
+dx/samples/data/npp.dx
 dx/samples/data/oriented_labels.dx
 dx/samples/data/pos_conn.data
+dx/samples/data/product1.dx
 dx/samples/data/product2.dx
 dx/samples/data/rain.cm
 dx/samples/data/rainwater.dx
@@ -142,7 +144,6 @@ dx/samples/data/spreadsheet_2var
 dx/samples/data/spreadsheet_2var.general
 dx/samples/data/spreadsheet_deformed
 dx/samples/data/spreadsheet_deformed.general
-dx/samples/data/test.hdf
 dx/samples/data/spreadsheet_layout.general
 dx/samples/data/spreadsheet_scattered.general
 dx/samples/data/spreadsheet_series.general
@@ -150,6 +151,7 @@ dx/samples/data/storm_data.dx
 dx/samples/data/temp_wind.general
 dx/samples/data/temp_wind.lis
 dx/samples/data/temperature.dx
+dx/samples/data/test.hdf
 dx/samples/data/topo_one_deg.dx
 dx/samples/data/topography_km-gray.cm
 dx/samples/data/topography_km.cm
@@ -180,10 +182,11 @@ dx/samples/dxlink/Sealevel150.size
 dx/samples/dxlink/cappediso150.rgb
 dx/samples/dxlink/cappediso150.size
 dx/samples/dxlink/demoapp.c
-dx/samples/dxlink/netlist
+dx/samples/dxlink/dxlink_make
 dx/samples/dxlink/maptoplane.c
 dx/samples/dxlink/maptoplane.cfg
 dx/samples/dxlink/maptoplane.net
+dx/samples/dxlink/netlist
 dx/samples/dxlink/sealevel.c
 dx/samples/dxlink/sealevel.cfg
 dx/samples/dxlink/sealevel.net
@@ -263,7 +266,6 @@ dx/samples/program_guide/add2.mb
 dx/samples/program_guide/add2.mdf
 dx/samples/program_guide/add2.net
 dx/samples/program_guide/add2_invalid.cfg
-dx/samples/program_guide/addpar.mdf
 dx/samples/program_guide/add2_invalid.net
 dx/samples/program_guide/add2invalid.c
 dx/samples/program_guide/add2invalid.mb
@@ -271,6 +273,7 @@ dx/samples/program_guide/add2invalid.mdf
 dx/samples/program_guide/add_parallel.c
 dx/samples/program_guide/add_parallel.cfg
 dx/samples/program_guide/add_parallel.net
+dx/samples/program_guide/addpar.mdf
 dx/samples/program_guide/all.mdf
 dx/samples/program_guide/averagecell.c
 dx/samples/program_guide/averagecell.cfg
@@ -309,6 +312,160 @@ dx/samples/program_guide/showpick.net
 dx/samples/program_guide/simpleimport.c
 dx/samples/program_guide/simpleimport.mdf
 dx/samples/program_guide/simpleimportfilter.c
+dx/samples/programs/2D_DATA/AlternateVisualizations.cfg
+dx/samples/programs/2D_DATA/AlternateVisualizations.net
+dx/samples/programs/2D_DATA/BandedColors.cfg
+dx/samples/programs/2D_DATA/BandedColors.net
+dx/samples/programs/2D_DATA/ConnectingScatteredPoints.cfg
+dx/samples/programs/2D_DATA/ConnectingScatteredPoints.net
+dx/samples/programs/2D_DATA/FFT.cfg
+dx/samples/programs/2D_DATA/FFT.net
+dx/samples/programs/2D_DATA/GeneralImport1.cfg
+dx/samples/programs/2D_DATA/GeneralImport1.net
+dx/samples/programs/2D_DATA/GeneralImport2.cfg
+dx/samples/programs/2D_DATA/GeneralImport2.net
+dx/samples/programs/2D_DATA/InvalidData.cfg
+dx/samples/programs/2D_DATA/InvalidData.net
+dx/samples/programs/2D_DATA/Sealevel.cfg
+dx/samples/programs/2D_DATA/Sealevel.net
+dx/samples/programs/2D_DATA/Sort.cfg
+dx/samples/programs/2D_DATA/Sort.net
+dx/samples/programs/2D_DATA/Topo.cfg
+dx/samples/programs/2D_DATA/Topo.net
+dx/samples/programs/2D_DATA/UsingDrape.cfg
+dx/samples/programs/2D_DATA/UsingDrape.net
+dx/samples/programs/2D_DATA/UsingFilter.cfg
+dx/samples/programs/2D_DATA/UsingFilter.net
+dx/samples/programs/2D_DATA/UsingIsosurface.cfg
+dx/samples/programs/2D_DATA/UsingIsosurface.net
+dx/samples/programs/2D_DATA/UsingMorph.cfg
+dx/samples/programs/2D_DATA/UsingMorph.net
+dx/samples/programs/2D_DATA/UsingOverlay.cfg
+dx/samples/programs/2D_DATA/UsingOverlay.net
+dx/samples/programs/3D_DATA/AnnotationGlyphs.cfg
+dx/samples/programs/3D_DATA/AnnotationGlyphs.net
+dx/samples/programs/3D_DATA/AutoColor.cfg
+dx/samples/programs/3D_DATA/AutoColor.net
+dx/samples/programs/3D_DATA/CappedIso.cfg
+dx/samples/programs/3D_DATA/CappedIso.net
+dx/samples/programs/3D_DATA/ComputeOnData.cfg
+dx/samples/programs/3D_DATA/ComputeOnData.net
+dx/samples/programs/3D_DATA/ContoursAndCaption.cfg
+dx/samples/programs/3D_DATA/ContoursAndCaption.net
+dx/samples/programs/3D_DATA/Distributed.cfg
+dx/samples/programs/3D_DATA/Distributed.net
+dx/samples/programs/3D_DATA/FlyThrough.cfg
+dx/samples/programs/3D_DATA/FlyThrough.net
+dx/samples/programs/3D_DATA/FlyThrough2.cfg
+dx/samples/programs/3D_DATA/FlyThrough2.net
+dx/samples/programs/3D_DATA/Imide_potential.cfg
+dx/samples/programs/3D_DATA/Imide_potential.net
+dx/samples/programs/3D_DATA/Isolate.cfg
+dx/samples/programs/3D_DATA/Isolate.net
+dx/samples/programs/3D_DATA/MRI_2.cfg
+dx/samples/programs/3D_DATA/MRI_2.net
+dx/samples/programs/3D_DATA/MappedIso.cfg
+dx/samples/programs/3D_DATA/MappedIso.net
+dx/samples/programs/3D_DATA/MovingCamera.cfg
+dx/samples/programs/3D_DATA/MovingCamera.net
+dx/samples/programs/3D_DATA/MovingSheet.cfg
+dx/samples/programs/3D_DATA/MovingSheet.net
+dx/samples/programs/3D_DATA/PickStreamline.cfg
+dx/samples/programs/3D_DATA/PickStreamline.net
+dx/samples/programs/3D_DATA/PlotLine.cfg
+dx/samples/programs/3D_DATA/PlotLine.net
+dx/samples/programs/3D_DATA/PlotLine2.cfg
+dx/samples/programs/3D_DATA/PlotLine2.net
+dx/samples/programs/3D_DATA/PlotTwoLines.cfg
+dx/samples/programs/3D_DATA/PlotTwoLines.net
+dx/samples/programs/3D_DATA/ProbeText.cfg
+dx/samples/programs/3D_DATA/ProbeText.net
+dx/samples/programs/3D_DATA/RubberTube.cfg
+dx/samples/programs/3D_DATA/RubberTube.net
+dx/samples/programs/3D_DATA/SharedCamera.cfg
+dx/samples/programs/3D_DATA/SharedCamera.net
+dx/samples/programs/3D_DATA/SimplifySurface.cfg
+dx/samples/programs/3D_DATA/SimplifySurface.net
+dx/samples/programs/3D_DATA/Streamline.cfg
+dx/samples/programs/3D_DATA/Streamline.net
+dx/samples/programs/3D_DATA/ThunderGlyphSheet.cfg
+dx/samples/programs/3D_DATA/ThunderGlyphSheet.net
+dx/samples/programs/3D_DATA/ThunderStreamlines.cfg
+dx/samples/programs/3D_DATA/ThunderStreamlines.net
+dx/samples/programs/3D_DATA/Thunder_cellcentered.cfg
+dx/samples/programs/3D_DATA/Thunder_cellcentered.net
+dx/samples/programs/3D_DATA/UsingClipPlane.cfg
+dx/samples/programs/3D_DATA/UsingClipPlane.net
+dx/samples/programs/3D_DATA/UsingGlyphs.cfg
+dx/samples/programs/3D_DATA/UsingGlyphs.net
+dx/samples/programs/3D_DATA/UsingIsosurface.cfg
+dx/samples/programs/3D_DATA/UsingIsosurface.net
+dx/samples/programs/3D_DATA/UsingMap.cfg
+dx/samples/programs/3D_DATA/UsingMap.net
+dx/samples/programs/3D_DATA/UsingStreakline.cfg
+dx/samples/programs/3D_DATA/UsingStreakline.net
+dx/samples/programs/3D_DATA/VolumeClip.cfg
+dx/samples/programs/3D_DATA/VolumeClip.net
+dx/samples/programs/3D_DATA/VolumeRendering.cfg
+dx/samples/programs/3D_DATA/VolumeRendering.net
+dx/samples/programs/3D_DATA/VolumeRenderingSimple.cfg
+dx/samples/programs/3D_DATA/VolumeRenderingSimple.net
+dx/samples/programs/3D_DATA/WindVorticity.cfg
+dx/samples/programs/3D_DATA/WindVorticity.net
+dx/samples/programs/ANNOTATION/AnnotationGlyphs.cfg
+dx/samples/programs/ANNOTATION/AnnotationGlyphs.net
+dx/samples/programs/ANNOTATION/AutoAxesSpecifyTicks.cfg
+dx/samples/programs/ANNOTATION/AutoAxesSpecifyTicks.net
+dx/samples/programs/ANNOTATION/BandedColors.cfg
+dx/samples/programs/ANNOTATION/BandedColors.net
+dx/samples/programs/ANNOTATION/Categorical.cfg
+dx/samples/programs/ANNOTATION/Categorical.net
+dx/samples/programs/ANNOTATION/ContoursAndCaption.cfg
+dx/samples/programs/ANNOTATION/ContoursAndCaption.net
+dx/samples/programs/ANNOTATION/Distributed.cfg
+dx/samples/programs/ANNOTATION/Distributed.net
+dx/samples/programs/ANNOTATION/ExpandedFonts.cfg
+dx/samples/programs/ANNOTATION/ExpandedFonts.net
+dx/samples/programs/ANNOTATION/FontLayouts.cfg
+dx/samples/programs/ANNOTATION/FontLayouts.net
+dx/samples/programs/ANNOTATION/FontPreview.cfg
+dx/samples/programs/ANNOTATION/FontPreview.net
+dx/samples/programs/ANNOTATION/GroceryList.cfg
+dx/samples/programs/ANNOTATION/GroceryList.net
+dx/samples/programs/ANNOTATION/Imide_potential.cfg
+dx/samples/programs/ANNOTATION/Imide_potential.net
+dx/samples/programs/ANNOTATION/Legend.cfg
+dx/samples/programs/ANNOTATION/Legend.net
+dx/samples/programs/ANNOTATION/PickPlot.cfg
+dx/samples/programs/ANNOTATION/PickPlot.net
+dx/samples/programs/ANNOTATION/PlotGroupOfLines.cfg
+dx/samples/programs/ANNOTATION/PlotGroupOfLines.net
+dx/samples/programs/ANNOTATION/PlotLine.cfg
+dx/samples/programs/ANNOTATION/PlotLine.net
+dx/samples/programs/ANNOTATION/PlotLine2.cfg
+dx/samples/programs/ANNOTATION/PlotLine2.net
+dx/samples/programs/ANNOTATION/PlotSpecifyTicks.cfg
+dx/samples/programs/ANNOTATION/PlotSpecifyTicks.net
+dx/samples/programs/ANNOTATION/PlotTwoLines.cfg
+dx/samples/programs/ANNOTATION/PlotTwoLines.net
+dx/samples/programs/ANNOTATION/ProbeText.cfg
+dx/samples/programs/ANNOTATION/ProbeText.net
+dx/samples/programs/ANNOTATION/SalesOnStates.cfg
+dx/samples/programs/ANNOTATION/SalesOnStates.net
+dx/samples/programs/ANNOTATION/ScalingAxes.cfg
+dx/samples/programs/ANNOTATION/ScalingAxes.net
+dx/samples/programs/ANNOTATION/ShowFonts.cfg
+dx/samples/programs/ANNOTATION/ShowFonts.net
+dx/samples/programs/ANNOTATION/Sort.cfg
+dx/samples/programs/ANNOTATION/Sort.net
+dx/samples/programs/ANNOTATION/SpecialCharacters.cfg
+dx/samples/programs/ANNOTATION/SpecialCharacters.net
+dx/samples/programs/ANNOTATION/ThunderGlyphSheet.cfg
+dx/samples/programs/ANNOTATION/ThunderGlyphSheet.net
+dx/samples/programs/ANNOTATION/UsingGlyphs.cfg
+dx/samples/programs/ANNOTATION/UsingGlyphs.net
+dx/samples/programs/ANNOTATION/UsingTextAndTextGlyphs.cfg
+dx/samples/programs/ANNOTATION/UsingTextAndTextGlyphs.net
 dx/samples/programs/Accumulate.cfg
 dx/samples/programs/Accumulate.net
 dx/samples/programs/AlternateVisualizations.cfg
@@ -333,6 +490,40 @@ dx/samples/programs/BandedColors.cfg
 dx/samples/programs/BandedColors.net
 dx/samples/programs/Bounce.cfg
 dx/samples/programs/Bounce.net
+dx/samples/programs/CATEGORICAL/Categorical.cfg
+dx/samples/programs/CATEGORICAL/Categorical.net
+dx/samples/programs/CATEGORICAL/Duplicates.cfg
+dx/samples/programs/CATEGORICAL/Duplicates.net
+dx/samples/programs/CATEGORICAL/ExamplePieChart.cfg
+dx/samples/programs/CATEGORICAL/ExamplePieChart.net
+dx/samples/programs/CATEGORICAL/GroceryList.cfg
+dx/samples/programs/CATEGORICAL/GroceryList.net
+dx/samples/programs/CATEGORICAL/Legend.cfg
+dx/samples/programs/CATEGORICAL/Legend.net
+dx/samples/programs/CATEGORICAL/SalesOnStates.cfg
+dx/samples/programs/CATEGORICAL/SalesOnStates.net
+dx/samples/programs/CATEGORICAL/ZipCodes.cfg
+dx/samples/programs/CATEGORICAL/ZipCodes.net
+dx/samples/programs/COLORMAP_EDITOR/DataDrivenInteractors.cfg
+dx/samples/programs/COLORMAP_EDITOR/DataDrivenInteractors.net
+dx/samples/programs/COLORMAP_EDITOR/Imide_potential.cfg
+dx/samples/programs/COLORMAP_EDITOR/Imide_potential.net
+dx/samples/programs/COLORMAP_EDITOR/StandardColormaps.cfg
+dx/samples/programs/COLORMAP_EDITOR/StandardColormaps.net
+dx/samples/programs/COLORMAP_EDITOR/UsingColormaps.cfg
+dx/samples/programs/COLORMAP_EDITOR/UsingColormaps.net
+dx/samples/programs/COLORMAP_EDITOR/VolumeRendering.cfg
+dx/samples/programs/COLORMAP_EDITOR/VolumeRendering.net
+dx/samples/programs/COMPUTE/Bounce.cfg
+dx/samples/programs/COMPUTE/Bounce.net
+dx/samples/programs/COMPUTE/Compute2.cfg
+dx/samples/programs/COMPUTE/Compute2.net
+dx/samples/programs/COMPUTE/ComputeMultiLine.cfg
+dx/samples/programs/COMPUTE/ComputeMultiLine.net
+dx/samples/programs/COMPUTE/ComputeOnData.cfg
+dx/samples/programs/COMPUTE/ComputeOnData.net
+dx/samples/programs/COMPUTE/WarpingPositions.cfg
+dx/samples/programs/COMPUTE/WarpingPositions.net
 dx/samples/programs/CappedIso.cfg
 dx/samples/programs/CappedIso.net
 dx/samples/programs/Caption.cfg
@@ -348,10 +539,10 @@ dx/samples/programs/ColorBar.net
 dx/samples/programs/Compute2.cfg
 dx/samples/programs/Compute2.net
 dx/samples/programs/ComputeMultiLine.cfg
-dx/samples/programs/Connect.cfg
 dx/samples/programs/ComputeMultiLine.net
 dx/samples/programs/ComputeOnData.cfg
 dx/samples/programs/ComputeOnData.net
+dx/samples/programs/Connect.cfg
 dx/samples/programs/Connect.net
 dx/samples/programs/ConnectingScatteredPoints.cfg
 dx/samples/programs/ConnectingScatteredPoints.net
@@ -359,6 +550,18 @@ dx/samples/programs/Construct.cfg
 dx/samples/programs/Construct.net
 dx/samples/programs/ContoursAndCaption.cfg
 dx/samples/programs/ContoursAndCaption.net
+dx/samples/programs/DATA_DRIVEN_INTERACTORS/DataDrivenInteractors.cfg
+dx/samples/programs/DATA_DRIVEN_INTERACTORS/DataDrivenInteractors.net
+dx/samples/programs/DATA_DRIVEN_INTERACTORS/DataDrivenSelector.cfg
+dx/samples/programs/DATA_DRIVEN_INTERACTORS/DataDrivenSelector.net
+dx/samples/programs/DATA_DRIVEN_INTERACTORS/Imide_potential.cfg
+dx/samples/programs/DATA_DRIVEN_INTERACTORS/Imide_potential.net
+dx/samples/programs/DEBUGGING/Verify.cfg
+dx/samples/programs/DEBUGGING/Verify.net
+dx/samples/programs/DEBUGGING/VisualObject.cfg
+dx/samples/programs/DEBUGGING/VisualObject.net
+dx/samples/programs/DISTRIBUTED_PROCESSING/Distributed.cfg
+dx/samples/programs/DISTRIBUTED_PROCESSING/Distributed.net
 dx/samples/programs/DataDrivenInteractors.cfg
 dx/samples/programs/DataDrivenInteractors.net
 dx/samples/programs/DataDrivenSelector.cfg
@@ -409,6 +612,40 @@ dx/samples/programs/Histogram.cfg
 dx/samples/programs/Histogram.net
 dx/samples/programs/HomeOwn.cfg
 dx/samples/programs/HomeOwn.net
+dx/samples/programs/IMAGE_PROCESSING/FFT.cfg
+dx/samples/programs/IMAGE_PROCESSING/FFT.net
+dx/samples/programs/IMAGE_PROCESSING/MRI_1.cfg
+dx/samples/programs/IMAGE_PROCESSING/MRI_1.net
+dx/samples/programs/IMAGE_PROCESSING/QuantizeImage.cfg
+dx/samples/programs/IMAGE_PROCESSING/QuantizeImage.net
+dx/samples/programs/IMAGE_PROCESSING/UsingEqualize.cfg
+dx/samples/programs/IMAGE_PROCESSING/UsingEqualize.net
+dx/samples/programs/IMAGE_PROCESSING/UsingFilter.cfg
+dx/samples/programs/IMAGE_PROCESSING/UsingFilter.net
+dx/samples/programs/IMAGE_PROCESSING/UsingMorph.cfg
+dx/samples/programs/IMAGE_PROCESSING/UsingMorph.net
+dx/samples/programs/IMAGE_PROCESSING/UsingOverlay.cfg
+dx/samples/programs/IMAGE_PROCESSING/UsingOverlay.net
+dx/samples/programs/IMPORTING/Categorical.cfg
+dx/samples/programs/IMPORTING/Categorical.net
+dx/samples/programs/IMPORTING/Duplicates.cfg
+dx/samples/programs/IMPORTING/Duplicates.net
+dx/samples/programs/IMPORTING/GeneralImport1.cfg
+dx/samples/programs/IMPORTING/GeneralImport1.net
+dx/samples/programs/IMPORTING/GeneralImport2.cfg
+dx/samples/programs/IMPORTING/GeneralImport2.net
+dx/samples/programs/IMPORTING/ImportExternalFilter.cfg
+dx/samples/programs/IMPORTING/ImportExternalFilter.net
+dx/samples/programs/IMPORTING/ZipCodes.cfg
+dx/samples/programs/IMPORTING/ZipCodes.net
+dx/samples/programs/INTERFACE_CONTROL/DialogStyle.cfg
+dx/samples/programs/INTERFACE_CONTROL/DialogStyle.net
+dx/samples/programs/INTERFACE_CONTROL/InterfaceControl1.cfg
+dx/samples/programs/INTERFACE_CONTROL/InterfaceControl1.net
+dx/samples/programs/INTERFACE_CONTROL/InterfaceControl2.cfg
+dx/samples/programs/INTERFACE_CONTROL/InterfaceControl2.net
+dx/samples/programs/INTERFACE_CONTROL/InterfaceControl3.cfg
+dx/samples/programs/INTERFACE_CONTROL/InterfaceControl3.net
 dx/samples/programs/ImageTool.cfg
 dx/samples/programs/ImageTool.net
 dx/samples/programs/Image_wo_UI.cfg
@@ -439,19 +676,77 @@ dx/samples/programs/Isolate.cfg
 dx/samples/programs/Isolate.net
 dx/samples/programs/Isosurface.cfg
 dx/samples/programs/Isosurface.net
+dx/samples/programs/LOOPING/Accumulate.cfg
+dx/samples/programs/LOOPING/Accumulate.net
+dx/samples/programs/LOOPING/Bounce.cfg
+dx/samples/programs/LOOPING/Bounce.net
+dx/samples/programs/LOOPING/SimpleGetSetLoop.cfg
+dx/samples/programs/LOOPING/SimpleGetSetLoop.net
 dx/samples/programs/Legend.cfg
 dx/samples/programs/Legend.net
 dx/samples/programs/Light.cfg
 dx/samples/programs/Light.net
+dx/samples/programs/MISC/CensusData.cfg
+dx/samples/programs/MISC/CensusData.net
+dx/samples/programs/MISC/ExampleSMP.cfg
+dx/samples/programs/MISC/ExampleSMP.net
+dx/samples/programs/MISC/Factorial.cfg
+dx/samples/programs/MISC/Factorial.net
+dx/samples/programs/MISC/HomeOwn.cfg
+dx/samples/programs/MISC/HomeOwn.net
+dx/samples/programs/MISC/ImageTool.cfg
+dx/samples/programs/MISC/ImageTool.net
+dx/samples/programs/MISC/Image_wo_UI.cfg
+dx/samples/programs/MISC/Image_wo_UI.net
+dx/samples/programs/MISC/IndependentlyArrange.cfg
+dx/samples/programs/MISC/IndependentlyArrange.net
+dx/samples/programs/MISC/InsetImage.cfg
+dx/samples/programs/MISC/InsetImage.net
+dx/samples/programs/MISC/Interop.cfg
+dx/samples/programs/MISC/Interop.net
+dx/samples/programs/MISC/InvalidData.cfg
+dx/samples/programs/MISC/InvalidData.net
+dx/samples/programs/MISC/MRI_1.cfg
+dx/samples/programs/MISC/MRI_1.net
+dx/samples/programs/MISC/MRI_2.cfg
+dx/samples/programs/MISC/MRI_2.net
+dx/samples/programs/MISC/Majority.cfg
+dx/samples/programs/MISC/Majority.net
+dx/samples/programs/MISC/ManipulateGroups.cfg
+dx/samples/programs/MISC/ManipulateGroups.net
+dx/samples/programs/MISC/MultipleDataSets.cfg
+dx/samples/programs/MISC/MultipleDataSets.net
+dx/samples/programs/MISC/PickStreamline.cfg
+dx/samples/programs/MISC/PickStreamline.net
+dx/samples/programs/MISC/ScatterData.cfg
+dx/samples/programs/MISC/ScatterData.net
+dx/samples/programs/MISC/Supervise.cfg
+dx/samples/programs/MISC/Supervise.net
+dx/samples/programs/MISC/Topo.cfg
+dx/samples/programs/MISC/Topo.net
+dx/samples/programs/MISC/UsingAttributes.cfg
+dx/samples/programs/MISC/UsingAttributes.net
+dx/samples/programs/MISC/UsingDrape.cfg
+dx/samples/programs/MISC/UsingDrape.net
+dx/samples/programs/MISC/UsingEqualize.cfg
+dx/samples/programs/MISC/UsingEqualize.net
+dx/samples/programs/MISC/UsingMessage.cfg
+dx/samples/programs/MISC/UsingMessage.net
+dx/samples/programs/MISC/UsingMultiGrids.cfg
+dx/samples/programs/MISC/UsingMultiGrids.net
+dx/samples/programs/MISC/UsingParse.cfg
+dx/samples/programs/MISC/UsingParse.net
+dx/samples/programs/MISC/UsingSwitchAndRoute.cfg
+dx/samples/programs/MISC/UsingSwitchAndRoute.net
 dx/samples/programs/MRI_1.cfg
 dx/samples/programs/MRI_1.net
 dx/samples/programs/MRI_2.cfg
 dx/samples/programs/MRI_2.net
-dx/samples/programs/Map.cfg
 dx/samples/programs/Majority.cfg
 dx/samples/programs/Majority.net
 dx/samples/programs/ManipulateGroups.cfg
 dx/samples/programs/ManipulateGroups.net
+dx/samples/programs/Map.cfg
 dx/samples/programs/Map.net
 dx/samples/programs/MapToPlane.cfg
 dx/samples/programs/MapToPlane.net
@@ -465,13 +760,47 @@ dx/samples/programs/MovingSheet.cfg
 dx/samples/programs/MovingSheet.net
 dx/samples/programs/MultipleDataSets.cfg
 dx/samples/programs/MultipleDataSets.net
+dx/samples/programs/PLOTTING/Categorical.cfg
+dx/samples/programs/PLOTTING/Categorical.net
+dx/samples/programs/PLOTTING/GroceryList.cfg
+dx/samples/programs/PLOTTING/GroceryList.net
+dx/samples/programs/PLOTTING/Histogram.cfg
+dx/samples/programs/PLOTTING/Histogram.net
+dx/samples/programs/PLOTTING/InterfaceControl2.cfg
+dx/samples/programs/PLOTTING/InterfaceControl2.net
+dx/samples/programs/PLOTTING/PickPlot.cfg
+dx/samples/programs/PLOTTING/PickPlot.net
+dx/samples/programs/PLOTTING/PlotGroupOfLines.cfg
+dx/samples/programs/PLOTTING/PlotGroupOfLines.net
+dx/samples/programs/PLOTTING/PlotLine.cfg
+dx/samples/programs/PLOTTING/PlotLine.net
+dx/samples/programs/PLOTTING/PlotLine2.cfg
+dx/samples/programs/PLOTTING/PlotLine2.net
+dx/samples/programs/PLOTTING/PlotSpecifyTicks.cfg
+dx/samples/programs/PLOTTING/PlotSpecifyTicks.net
+dx/samples/programs/PLOTTING/PlotTwoLines.cfg
+dx/samples/programs/PLOTTING/PlotTwoLines.net
+dx/samples/programs/PLOTTING/Sort.cfg
+dx/samples/programs/PLOTTING/Sort.net
+dx/samples/programs/PLOTTING/UsingBarChart.cfg
+dx/samples/programs/PLOTTING/UsingBarChart.net
+dx/samples/programs/PLOTTING/UsingEqualize.cfg
+dx/samples/programs/PLOTTING/UsingEqualize.net
+dx/samples/programs/PROBES/PlotLine2.cfg
+dx/samples/programs/PROBES/PlotLine2.net
+dx/samples/programs/PROBES/ProbeText.cfg
+dx/samples/programs/PROBES/ProbeText.net
+dx/samples/programs/PROBES/UsingProbes.cfg
+dx/samples/programs/PROBES/UsingProbes.net
+dx/samples/programs/PROBES/UsingStreakline.cfg
+dx/samples/programs/PROBES/UsingStreakline.net
 dx/samples/programs/PickPlot.cfg
 dx/samples/programs/PickPlot.net
-dx/samples/programs/PlotLine.cfg
 dx/samples/programs/PickStreamline.cfg
 dx/samples/programs/PickStreamline.net
 dx/samples/programs/PlotGroupOfLines.cfg
 dx/samples/programs/PlotGroupOfLines.net
+dx/samples/programs/PlotLine.cfg
 dx/samples/programs/PlotLine.net
 dx/samples/programs/PlotLine2.cfg
 dx/samples/programs/PlotLine2.net
@@ -485,6 +814,24 @@ dx/samples/programs/ProbeText.cfg
 dx/samples/programs/ProbeText.net
 dx/samples/programs/QuantizeImage.cfg
 dx/samples/programs/QuantizeImage.net
+dx/samples/programs/RENDERING/FatLines.cfg
+dx/samples/programs/RENDERING/FatLines.net
+dx/samples/programs/RENDERING/Isolate.cfg
+dx/samples/programs/RENDERING/Isolate.net
+dx/samples/programs/RENDERING/SharedCamera.cfg
+dx/samples/programs/RENDERING/SharedCamera.net
+dx/samples/programs/RENDERING/TextureMapOpenGL.cfg
+dx/samples/programs/RENDERING/TextureMapOpenGL.net
+dx/samples/programs/RENDERING/UsingClipPlane.cfg
+dx/samples/programs/RENDERING/UsingClipPlane.net
+dx/samples/programs/RENDERING/UsingLights.cfg
+dx/samples/programs/RENDERING/UsingLights.net
+dx/samples/programs/RENDERING/UsingShade.cfg
+dx/samples/programs/RENDERING/UsingShade.net
+dx/samples/programs/RENDERING/VolumeRendering.cfg
+dx/samples/programs/RENDERING/VolumeRendering.net
+dx/samples/programs/RENDERING/VolumeRenderingSimple.cfg
+dx/samples/programs/RENDERING/VolumeRenderingSimple.net
 dx/samples/programs/Readme
 dx/samples/programs/Reduce.cfg
 dx/samples/programs/Reduce.net
@@ -498,6 +845,126 @@ dx/samples/programs/RubberTube.cfg
 dx/samples/programs/RubberTube.net
 dx/samples/programs/Rubbersheet.cfg
 dx/samples/programs/Rubbersheet.net
+dx/samples/programs/SCATTERED/AnnotationGlyphs.cfg
+dx/samples/programs/SCATTERED/AnnotationGlyphs.net
+dx/samples/programs/SCATTERED/ConnectingScatteredPoints.cfg
+dx/samples/programs/SCATTERED/ConnectingScatteredPoints.net
+dx/samples/programs/SCATTERED/ScatterData.cfg
+dx/samples/programs/SCATTERED/ScatterData.net
+dx/samples/programs/SEQUENCER/ContoursAndCaption.cfg
+dx/samples/programs/SEQUENCER/ContoursAndCaption.net
+dx/samples/programs/SEQUENCER/FlyThrough.cfg
+dx/samples/programs/SEQUENCER/FlyThrough.net
+dx/samples/programs/SEQUENCER/FlyThrough2.cfg
+dx/samples/programs/SEQUENCER/FlyThrough2.net
+dx/samples/programs/SEQUENCER/Imide_potential.cfg
+dx/samples/programs/SEQUENCER/Imide_potential.net
+dx/samples/programs/SEQUENCER/MRI_1.cfg
+dx/samples/programs/SEQUENCER/MRI_1.net
+dx/samples/programs/SEQUENCER/MovingCamera.cfg
+dx/samples/programs/SEQUENCER/MovingCamera.net
+dx/samples/programs/SEQUENCER/MovingSheet.cfg
+dx/samples/programs/SEQUENCER/MovingSheet.net
+dx/samples/programs/SEQUENCER/Sort.cfg
+dx/samples/programs/SEQUENCER/Sort.net
+dx/samples/programs/SEQUENCER/SpecialCharacters.cfg
+dx/samples/programs/SEQUENCER/SpecialCharacters.net
+dx/samples/programs/SEQUENCER/Streamline.cfg
+dx/samples/programs/SEQUENCER/Streamline.net
+dx/samples/programs/SIMPLE/Arrange.cfg
+dx/samples/programs/SIMPLE/Arrange.net
+dx/samples/programs/SIMPLE/AutoAxes.cfg
+dx/samples/programs/SIMPLE/AutoAxes.net
+dx/samples/programs/SIMPLE/AutoColor.cfg
+dx/samples/programs/SIMPLE/AutoColor.net
+dx/samples/programs/SIMPLE/AutoGlyph.cfg
+dx/samples/programs/SIMPLE/AutoGlyph.net
+dx/samples/programs/SIMPLE/AutoGrid.cfg
+dx/samples/programs/SIMPLE/AutoGrid.net
+dx/samples/programs/SIMPLE/Band.cfg
+dx/samples/programs/SIMPLE/Band.net
+dx/samples/programs/SIMPLE/Caption.cfg
+dx/samples/programs/SIMPLE/Caption.net
+dx/samples/programs/SIMPLE/Color.cfg
+dx/samples/programs/SIMPLE/Color.net
+dx/samples/programs/SIMPLE/ColorBar.cfg
+dx/samples/programs/SIMPLE/ColorBar.net
+dx/samples/programs/SIMPLE/Compute2.cfg
+dx/samples/programs/SIMPLE/Compute2.net
+dx/samples/programs/SIMPLE/Connect.cfg
+dx/samples/programs/SIMPLE/Connect.net
+dx/samples/programs/SIMPLE/Construct.cfg
+dx/samples/programs/SIMPLE/Construct.net
+dx/samples/programs/SIMPLE/Describe.cfg
+dx/samples/programs/SIMPLE/Describe.net
+dx/samples/programs/SIMPLE/FaceNormals.cfg
+dx/samples/programs/SIMPLE/FaceNormals.net
+dx/samples/programs/SIMPLE/GetSet.cfg
+dx/samples/programs/SIMPLE/GetSet.net
+dx/samples/programs/SIMPLE/Gradient.cfg
+dx/samples/programs/SIMPLE/Gradient.net
+dx/samples/programs/SIMPLE/Grid.cfg
+dx/samples/programs/SIMPLE/Grid.net
+dx/samples/programs/SIMPLE/Histogram.cfg
+dx/samples/programs/SIMPLE/Histogram.net
+dx/samples/programs/SIMPLE/Include.cfg
+dx/samples/programs/SIMPLE/Include.net
+dx/samples/programs/SIMPLE/Isolate.cfg
+dx/samples/programs/SIMPLE/Isolate.net
+dx/samples/programs/SIMPLE/Isosurface.cfg
+dx/samples/programs/SIMPLE/Isosurface.net
+dx/samples/programs/SIMPLE/Light.cfg
+dx/samples/programs/SIMPLE/Light.net
+dx/samples/programs/SIMPLE/Map.cfg
+dx/samples/programs/SIMPLE/Map.net
+dx/samples/programs/SIMPLE/MapToPlane.cfg
+dx/samples/programs/SIMPLE/MapToPlane.net
+dx/samples/programs/SIMPLE/MarkUnmark.cfg
+dx/samples/programs/SIMPLE/MarkUnmark.net
+dx/samples/programs/SIMPLE/Post.cfg
+dx/samples/programs/SIMPLE/Post.net
+dx/samples/programs/SIMPLE/QuantizeImage.cfg
+dx/samples/programs/SIMPLE/QuantizeImage.net
+dx/samples/programs/SIMPLE/Reduce.cfg
+dx/samples/programs/SIMPLE/Reduce.net
+dx/samples/programs/SIMPLE/Refine.cfg
+dx/samples/programs/SIMPLE/Refine.net
+dx/samples/programs/SIMPLE/Regrid.cfg
+dx/samples/programs/SIMPLE/Regrid.net
+dx/samples/programs/SIMPLE/Route.cfg
+dx/samples/programs/SIMPLE/Route.net
+dx/samples/programs/SIMPLE/Rubbersheet.cfg
+dx/samples/programs/SIMPLE/Rubbersheet.net
+dx/samples/programs/SIMPLE/ScaleScreen.cfg
+dx/samples/programs/SIMPLE/ScaleScreen.net
+dx/samples/programs/SIMPLE/ShowBoundary.cfg
+dx/samples/programs/SIMPLE/ShowBoundary.net
+dx/samples/programs/SIMPLE/Slab.cfg
+dx/samples/programs/SIMPLE/Slab.net
+dx/samples/programs/SIMPLE/Sort.cfg
+dx/samples/programs/SIMPLE/Sort.net
+dx/samples/programs/SIMPLE/Streamline.cfg
+dx/samples/programs/SIMPLE/Streamline.net
+dx/samples/programs/SIMPLE/Supervise.cfg
+dx/samples/programs/SIMPLE/Supervise.net
+dx/samples/programs/SIMPLE/Switch.cfg
+dx/samples/programs/SIMPLE/Switch.net
+dx/samples/programs/SIMPLE/Verify.cfg
+dx/samples/programs/SIMPLE/Verify.net
+dx/samples/programs/SIMPLE/VisualObject.cfg
+dx/samples/programs/SIMPLE/VisualObject.net
+dx/samples/programs/SUPERVISE/Image_wo_UI.cfg
+dx/samples/programs/SUPERVISE/Image_wo_UI.net
+dx/samples/programs/SUPERVISE/IndependentlyArrange.cfg
+dx/samples/programs/SUPERVISE/IndependentlyArrange.net
+dx/samples/programs/SUPERVISE/InsetImage.cfg
+dx/samples/programs/SUPERVISE/InsetImage.net
+dx/samples/programs/SUPERVISE/InsetImageSimple.cfg
+dx/samples/programs/SUPERVISE/InsetImageSimple.net
+dx/samples/programs/SUPERVISE/Supervise.cfg
+dx/samples/programs/SUPERVISE/Supervise.net
+dx/samples/programs/SUPERVISE/SupervisePicking.cfg
+dx/samples/programs/SUPERVISE/SupervisePicking.net
 dx/samples/programs/SalesOnStates.cfg
 dx/samples/programs/SalesOnStates.net
 dx/samples/programs/ScaleScreen.cfg
@@ -509,7 +976,6 @@ dx/samples/programs/ScatterData.net
 dx/samples/programs/Sealevel.cfg
 dx/samples/programs/Sealevel.net
 dx/samples/programs/SharedCamera.cfg
-dx/samples/programs/Slab.cfg
 dx/samples/programs/SharedCamera.net
 dx/samples/programs/ShowBoundary.cfg
 dx/samples/programs/ShowBoundary.net
@@ -519,6 +985,7 @@ dx/samples/programs/SimpleGetSetLoop.cfg
 dx/samples/programs/SimpleGetSetLoop.net
 dx/samples/programs/SimplifySurface.cfg
 dx/samples/programs/SimplifySurface.net
+dx/samples/programs/Slab.cfg
 dx/samples/programs/Slab.net
 dx/samples/programs/Sort.cfg
 dx/samples/programs/Sort.net
@@ -546,13 +1013,13 @@ dx/samples/programs/Topo.cfg
 dx/samples/programs/Topo.net
 dx/samples/programs/UsingAttributes.cfg
 dx/samples/programs/UsingAttributes.net
-dx/samples/programs/UsingDrape.cfg
 dx/samples/programs/UsingBarChart.cfg
 dx/samples/programs/UsingBarChart.net
 dx/samples/programs/UsingClipPlane.cfg
 dx/samples/programs/UsingClipPlane.net
 dx/samples/programs/UsingColormaps.cfg
 dx/samples/programs/UsingColormaps.net
+dx/samples/programs/UsingDrape.cfg
 dx/samples/programs/UsingDrape.net
 dx/samples/programs/UsingEqualize.cfg
 dx/samples/programs/UsingEqualize.net
@@ -602,9 +1069,9 @@ dx/samples/programs/WarpingPositions.cfg
 dx/samples/programs/WarpingPositions.net
 dx/samples/programs/WindBarbs.cfg
 dx/samples/programs/WindBarbs.net
-dx/samples/programs/ZipCodes.cfg
 dx/samples/programs/WindVorticity.cfg
 dx/samples/programs/WindVorticity.net
+dx/samples/programs/ZipCodes.cfg
 dx/samples/programs/ZipCodes.net
 dx/samples/scripts/AmbientLight
 dx/samples/scripts/Append
@@ -708,19 +1175,21 @@ dx/samples/scripts/Verify
 dx/samples/scripts/WriteImage
 dx/samples/scripts/interop
 dx/samples/scripts/scriptexample
+dx/samples/supervise/complexdemo/ReadMe
 dx/samples/supervise/complexdemo/data/frags.dx
+dx/samples/supervise/complexdemo/demo
+dx/samples/supervise/complexdemo/interactors/Makefile
 dx/samples/supervise/complexdemo/interactors/Makefile_alphax
 dx/samples/supervise/complexdemo/interactors/Makefile_hp700
 dx/samples/supervise/complexdemo/interactors/Makefile_ibm6000
 dx/samples/supervise/complexdemo/interactors/Makefile_sgi
 dx/samples/supervise/complexdemo/interactors/Makefile_solaris
 dx/samples/supervise/complexdemo/interactors/interactors.c
+dx/samples/supervise/complexdemo/interactors/module_make
 dx/samples/supervise/complexdemo/nets/ShowSelected.net
 dx/samples/supervise/complexdemo/nets/hiliteObject.net
 dx/samples/supervise/complexdemo/nets/peruDX.cfg
 dx/samples/supervise/complexdemo/nets/peruDX.net
-dx/samples/supervise/complexdemo/ReadMe
-dx/samples/supervise/complexdemo/demo
 dx/samples/supervise/imagedemo/ReadMe
 dx/samples/supervise/imagedemo/demo
 dx/samples/supervise/imagedemo/demo.cfg
@@ -728,6 +1197,7 @@ dx/samples/supervise/imagedemo/demo.net
 dx/samples/supervise/imagedemo/demo1
 dx/samples/supervise/imagedemo/demo1.cfg
 dx/samples/supervise/imagedemo/demo1.net
+dx/samples/supervise/interactors/Makefile
 dx/samples/supervise/interactors/Makefile_alphax
 dx/samples/supervise/interactors/Makefile_aviion
 dx/samples/supervise/interactors/Makefile_hp700
@@ -736,25 +1206,30 @@ dx/samples/supervise/interactors/Makefile_sgi
 dx/samples/supervise/interactors/Makefile_solaris
 dx/samples/supervise/interactors/Makefile_sun4
 dx/samples/supervise/interactors/ReadMe
+dx/samples/supervise/interactors/module_make
 dx/samples/supervise/interactors/myinteractors.c
+dx/samples/supervise/mediumdemo/ReadMe
+dx/samples/supervise/mediumdemo/demo
+dx/samples/supervise/mediumdemo/interactors/Makefile
 dx/samples/supervise/mediumdemo/interactors/Makefile_alphax
 dx/samples/supervise/mediumdemo/interactors/Makefile_hp700
 dx/samples/supervise/mediumdemo/interactors/Makefile_ibm6000
 dx/samples/supervise/mediumdemo/interactors/Makefile_sgi
 dx/samples/supervise/mediumdemo/interactors/Makefile_solaris
 dx/samples/supervise/mediumdemo/interactors/interactors.c
-dx/samples/supervise/mediumdemo/ReadMe
-dx/samples/supervise/mediumdemo/demo
+dx/samples/supervise/mediumdemo/interactors/module_make
+dx/samples/supervise/simpledemo/ReadMe
+dx/samples/supervise/simpledemo/demo
+dx/samples/supervise/simpledemo/demo.cfg
+dx/samples/supervise/simpledemo/demo.net
+dx/samples/supervise/simpledemo/interactors/Makefile
 dx/samples/supervise/simpledemo/interactors/Makefile_alphax
 dx/samples/supervise/simpledemo/interactors/Makefile_hp700
 dx/samples/supervise/simpledemo/interactors/Makefile_ibm6000
 dx/samples/supervise/simpledemo/interactors/Makefile_sgi
 dx/samples/supervise/simpledemo/interactors/Makefile_solaris
 dx/samples/supervise/simpledemo/interactors/interactors.c
-dx/samples/supervise/simpledemo/ReadMe
-dx/samples/supervise/simpledemo/demo
-dx/samples/supervise/simpledemo/demo.cfg
-dx/samples/supervise/simpledemo/demo.net
+dx/samples/supervise/simpledemo/interactors/module_make
 dx/samples/tutorial/Animate.cfg
 dx/samples/tutorial/Animate.net
 dx/samples/tutorial/AutoColor.cfg
@@ -773,7 +1248,6 @@ dx/samples/tutorial/Caption.cfg
 dx/samples/tutorial/Caption.net
 dx/samples/tutorial/Color2D.cfg
 dx/samples/tutorial/Color2D.net
-dx/samples/tutorial/Map.cfg
 dx/samples/tutorial/Compute.cfg
 dx/samples/tutorial/Compute.net
 dx/samples/tutorial/Connect.cfg
@@ -792,6 +1266,7 @@ dx/samples/tutorial/Isosurface2D.cfg
 dx/samples/tutorial/Isosurface2D.net
 dx/samples/tutorial/Isosurface3D.cfg
 dx/samples/tutorial/Isosurface3D.net
+dx/samples/tutorial/Map.cfg
 dx/samples/tutorial/Map.net
 dx/samples/tutorial/MapToPlane.cfg
 dx/samples/tutorial/MapToPlane.net
@@ -838,7 +1313,6 @@ dx/samples/user/Makefile_loadable_alphax
 dx/samples/user/Makefile_loadable_hp700
 dx/samples/user/Makefile_loadable_ibm6000
 dx/samples/user/Makefile_loadable_intelnt
-dx/samples/user/Readme
 dx/samples/user/Makefile_loadable_sgi
 dx/samples/user/Makefile_loadable_solaris
 dx/samples/user/Makefile_os2
@@ -851,6 +1325,7 @@ dx/samples/user/Makefile_outboard_intelnt
 dx/samples/user/Makefile_outboard_sgi
 dx/samples/user/Makefile_outboard_solaris
 dx/samples/user/Makefile_outboard_sun4
+dx/samples/user/Readme
 dx/samples/user/add.c
 dx/samples/user/hello.c
 dx/samples/user/hello_loadable.mdf
@@ -858,6 +1333,7 @@ dx/samples/user/makex.c
 dx/samples/user/user_inboard.mdf
 dx/samples/user/user_loadable.mdf
 dx/samples/user/user_outboard.mdf
+dx/samples/util/Makefile.sample
 dx/samples/util/dxf/MANIFEST
 dx/samples/util/dxf/Makefile.sample
 dx/samples/util/dxf/README
@@ -886,31 +1362,51 @@ dx/samples/util/mpeg/write_yuv.cfg
 dx/samples/util/mpeg/write_yuv.net
 dx/samples/util/plot3d/Plot3DtoDX.c
 dx/samples/util/plot3d/README
-dx/samples/util/Makefile.sample
-@dirrm dx/samples/callmodule
-@dirrm dx/samples/data
-@dirrm dx/samples/dxlink
-@dirrm dx/samples/macros
-@dirrm dx/samples/outboard
-@dirrm dx/samples/program_guide
-@dirrm dx/samples/programs
-@dirrm dx/samples/scripts
-@dirrm dx/samples/supervise/complexdemo/data
-@dirrm dx/samples/supervise/complexdemo/interactors
-@dirrm dx/samples/supervise/complexdemo/nets
-@dirrm dx/samples/supervise/complexdemo
-@dirrm dx/samples/supervise/imagedemo
-@dirrm dx/samples/supervise/interactors
-@dirrm dx/samples/supervise/mediumdemo/interactors
-@dirrm dx/samples/supervise/mediumdemo
+@dirrm dx/samples/util/plot3d
+@dirrm dx/samples/util/mpeg
+@dirrm dx/samples/util/fluent
+@dirrm dx/samples/util/dxf
+@dirrm dx/samples/util
+@dirrm dx/samples/user
+@dirrm dx/samples/tutorial
 @dirrm dx/samples/supervise/simpledemo/interactors
 @dirrm dx/samples/supervise/simpledemo
+@dirrm dx/samples/supervise/mediumdemo/interactors
+@dirrm dx/samples/supervise/mediumdemo
+@dirrm dx/samples/supervise/interactors
+@dirrm dx/samples/supervise/imagedemo
+@dirrm dx/samples/supervise/complexdemo/nets
+@dirrm dx/samples/supervise/complexdemo/interactors
+@dirrm dx/samples/supervise/complexdemo/data
+@dirrm dx/samples/supervise/complexdemo
 @dirrm dx/samples/supervise
-@dirrm dx/samples/tutorial
-@dirrm dx/samples/user
-@dirrm dx/samples/util/dxf
-@dirrm dx/samples/util/fluent
-@dirrm dx/samples/util/mpeg
-@dirrm dx/samples/util/plot3d
-@dirrm dx/samples/util
+@dirrm dx/samples/scripts
+@dirrm dx/samples/programs/SUPERVISE
+@dirrm dx/samples/programs/SIMPLE
+@dirrm dx/samples/programs/SEQUENCER
+@dirrm dx/samples/programs/SCATTERED
+@dirrm dx/samples/programs/RENDERING
+@dirrm dx/samples/programs/PROBES
+@dirrm dx/samples/programs/PLOTTING
+@dirrm dx/samples/programs/MISC
+@dirrm dx/samples/programs/LOOPING
+@dirrm dx/samples/programs/INTERFACE_CONTROL
+@dirrm dx/samples/programs/IMPORTING
+@dirrm dx/samples/programs/IMAGE_PROCESSING
+@dirrm dx/samples/programs/DISTRIBUTED_PROCESSING
+@dirrm dx/samples/programs/DEBUGGING
+@dirrm dx/samples/programs/DATA_DRIVEN_INTERACTORS
+@dirrm dx/samples/programs/COMPUTE
+@dirrm dx/samples/programs/COLORMAP_EDITOR
+@dirrm dx/samples/programs/CATEGORICAL
+@dirrm dx/samples/programs/ANNOTATION
+@dirrm dx/samples/programs/3D_DATA
+@dirrm dx/samples/programs/2D_DATA
+@dirrm dx/samples/programs
+@dirrm dx/samples/program_guide
+@dirrm dx/samples/outboard
+@dirrm dx/samples/macros
+@dirrm dx/samples/dxlink
+@dirrm dx/samples/data
+@dirrm dx/samples/callmodule
 @dirrm dx/samples
