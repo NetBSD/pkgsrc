@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:01 agc Exp $
+
+MD5 (dog-1.7.tar.gz) = 9dd1e04efb7f8535a632bac2eef60a10
+SHA1 (patch-aa) = c0dc5315d16950f3cc927074ea7b7536adac880c

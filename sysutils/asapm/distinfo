@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:47 agc Exp $
+
+MD5 (asapm-2.9.tar.gz) = 81b39ff2827f1c60992b739c0352b24b
+SHA1 (patch-aa) = 570d2240f6afbf78d3cd72e1c1b963beb7ae074d
+SHA1 (patch-ab) = 8796f1f6220ecdbd23d360bb18f721e1ef83febf

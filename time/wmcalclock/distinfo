@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:26 agc Exp $
+
+MD5 (wmCalClock-1.25.tar.gz) = a401ded0e1fee4bcc4623076159bca41
+SHA1 (patch-aa) = bfdadc22854d18ed729ea85bf746618de2b371aa

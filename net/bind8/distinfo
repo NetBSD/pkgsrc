@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:41 agc Exp $
+
+MD5 (bind/8.2.3/bind-src.tar.gz) = e21e2854d72afd2ffbee17cfe8caa581
+MD5 (bind/8.2.3/bind-doc.tar.gz) = c26474bb791552cc0cbc5af72190a772
+SHA1 (patch-aa) = 765fec720b96cd31ff68f4c08b2e9b422cfb7c83
+SHA1 (patch-ab) = 1519393e4555e151cea1b0256362f76773157314

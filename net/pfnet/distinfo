@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:50 agc Exp $
+
+MD5 (fnet.pl-1.4.tar.gz) = e3a0b08b2e5be413349e7d1b5cde5ec0
+SHA1 (patch-aa) = 24310d7982662fb019ccbb7bf1371fe0f6fc7729

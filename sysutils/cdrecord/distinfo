@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:54 agc Exp $
+
+MD5 (cdrecord-1.9.tar.gz) = 0fa360d9280d16370d7738ec0b62affb
+SHA1 (patch-aa) = b0040675f8293558f3ec7b33f67a04878fe465dd
+SHA1 (patch-ab) = 206f1cd304a244e6ee207cea63d2d455a17d54f3
+SHA1 (patch-ac) = 654004620f2d3bfa3db68008e98304544887d509
+SHA1 (patch-ae) = 04692ac9cd7b9842e9a9453b199781b4c74990f9
+SHA1 (patch-af) = 76d2257bbbe3ba7ac0b0a5c9404c62edd81a6871
+SHA1 (patch-ag) = 268ccc956d957e8d45951c99e6793a4f08322391
+SHA1 (patch-ah) = a61c947877c8735c98fe4478736fab366e339040
+SHA1 (patch-ai) = 000633e0a7368d8c0824f2d7c965cd38d32f75f6

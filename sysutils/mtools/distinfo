@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:44 agc Exp $
+
+MD5 (mtools-3.9.7.tar.gz) = 6be028b20b5f94e74107442d972efe22
+SHA1 (patch-aa) = f8e023ba9a6e31f26815b93b73c4e9315b6bbc0e
+SHA1 (patch-ab) = 3cbc521521f4584ef3aeda8ae5bd913b393cb710
+SHA1 (patch-ac) = 3b807b102f832095cb0e7734393655f99a205897
+SHA1 (patch-af) = 0e2e1037be4da5f7c876cb5c9f54950e4726f6d0
