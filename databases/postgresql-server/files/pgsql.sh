@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.11 2002/08/25 21:49:37 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.12 2002/09/10 23:20:04 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -101,9 +101,10 @@ pgsql_doit()
 	@SU@ -m ${pgsql_user} -c "${ctl_command} ${action} ${command_args}"
 }
 
-if [ -f /etc/rc.subr ]
+if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
 then
 	load_rc_config $name
+	eval [ -z "\$${rcvar}" ] && eval ${rcvar}=NO
 	run_rc_command "$1"
 else
 	if [ -f /etc/rc.conf ]
