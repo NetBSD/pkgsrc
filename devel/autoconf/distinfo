@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2003/12/06 18:26:36 wiz Exp $
+$NetBSD: distinfo,v 1.12 2004/04/26 14:52:39 tv Exp $
 
 SHA1 (autoconf-2.59.tar.bz2) = d366a07b2d99c95b7f24395aa8a8e023d8b93b69
 Size (autoconf-2.59.tar.bz2) = 925073 bytes
 SHA1 (patch-aa) = 9e8d3d2dd52e145c70a25bdf45a46aea0eb28a63
 SHA1 (patch-ab) = c0510b4239bd5a69851690b0456b4a7109ee8928
 SHA1 (patch-ac) = d8bf5a8c12bdc5f4953f3299a32520c6fca97b81
+SHA1 (patch-ad) = ea9ec5e087c7b9099c347587a9bd545cc0634309
