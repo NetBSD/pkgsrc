@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
+$NetBSD: patch-ab,v 1.2 1999/11/15 00:07:02 tron Exp $
 
 --- config/gdm.conf.in.orig	Tue Sep  7 06:37:16 1999
-+++ config/gdm.conf.in	Tue Nov  9 23:30:28 1999
-@@ -1,9 +1,9 @@
++++ config/gdm.conf.in	Mon Nov 15 00:57:03 1999
+@@ -1,20 +1,20 @@
  [daemon]
  Chooser=@bindir@/gdmchooser --disable-sound --disable-crash-dialog
 -DefaultPath=/bin:/usr/bin:/usr/bin/X11:/usr/local/bin:@bindir@
@@ -14,7 +14,8 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
  HaltCommand=/sbin/shutdown -h now
  KillInitClients=1
  LogDir=@authdir@
-@@ -11,10 +11,10 @@
+-PidFile=/var/run/gdm.pid
++PidFile=/var/run/xdm.pid
  PostSessionScriptDir=@sysconfdir@/gdm/PostSession/
  PreSessionScriptDir=@sysconfdir@/gdm/PreSession/
  RebootCommand=/sbin/shutdown -r now
@@ -27,6 +28,15 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
  UserAuthDir=
  UserAuthFBDir=/tmp
  UserAuthFile=.Xauthority
+@@ -50,7 +50,7 @@
+ GlobalFaceDir=@datadir@/faces/
+ Icon=@pixmapdir@/gdm.xpm
+ LocaleFile=@localedir@/locale.alias
+-Logo=@pixmapdir@/gnome-logo-large.png
++Logo=@pixmapdir@/Daemon.png
+ Quiver=1
+ SystemMenu=0
+ Welcome=Welcome to %n
 @@ -64,7 +64,7 @@
  Enable=0
  
