@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/06/21 15:16:33 recht Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/04 02:26:11 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.6
 CATEGORIES=	mail
@@ -81,25 +81,21 @@ CONFIGURE_ENV+=		COMPILE_ET=${COMERRBASE}/bin/compile_et
 CONFIGURE_ARGS+=	--with-com-err=yes
 .endif
 
-# use METHOD for IMAP IDLE
-# METHOD is poll, idled or no
-# Default: not defined
-# (== poll)
-.if defined(CYRUS_IDLE)
-.  if ${CYRUS_IDLE} != "poll" && ${CYRUS_IDLE} != "idled"	\
-	&& ${CYRUS_IDLE} != "no"
+# CYRUS_IDLE selects the method used to implement IMAP IDLE.  Valid values
+# are "poll", "idled" or "no".  The default is "poll".
+#
+CYRUS_IDLE?=		poll
+BUILD_DEFS+=		CYRUS_IDLE
+.if (${CYRUS_IDLE} != "poll") && (${CYRUS_IDLE} != "idled") && \
+    (${CYRUS_IDLE} != "no")
 PKG_FAIL_REASON+=	"CYRUS_IDLE must be poll, idled or no"
-.  endif
-CONFIGURE_ARGS+=	--with-idle=${CYRUS_IDLE}
-.  if ${CYRUS_IDLE} == "idled"
-PLIST_SUBST+=	IDLED=
-.  else
-PLIST_SUBST+=	IDLED="@comment "
-.  endif
-.else
-PLIST_SUBST+=	IDLED="@comment "
 .endif
-BUILD_DEFS+=	CYRUS_IDLE
+CONFIGURE_ARGS+=	--with-idle=${CYRUS_IDLE}
+.if ${CYRUS_IDLE} == "idled"
+PLIST_SUBST+=		IDLED=
+.else
+PLIST_SUBST+=		IDLED="@comment "
+.endif
 
 MAKEFLAGS+=		PERL=${PERL5}
 
