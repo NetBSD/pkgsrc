@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7925 2004/11/20 04:20:45 minskim Exp $
+$NetBSD: CHANGES,v 1.7926 2004/11/20 05:08:22 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5354,3 +5354,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated trac to 0.8 [epg 2004-11-20]
 	Added p5-IO-LockedFile-0.23 [minskim 2004-11-20]
 	Added p5-Log-LogLite-0.82 [minskim 2004-11-20]
+	Updated cgoban-java to 2.6.7 [rh 2004-11-20]
