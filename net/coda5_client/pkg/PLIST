@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/10/02 14:19:21 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/10/09 20:45:15 rvb Exp $
 lib/coda/Advice.tcl
 lib/coda/CodaConsole
 lib/coda/Consider.tcl
@@ -44,6 +44,9 @@ bin/cunlog
 bin/filcon
 bin/filerepair
 bin/hoard
+bin/logbandwidth
+bin/logcmls
+bin/logreintegration
 bin/parser
 bin/removeinc
 bin/repair
