@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:31:29 zuntum Exp $
+sbin/pkg_add
+sbin/pkg_admin
+sbin/pkg_create
+sbin/pkg_delete
+sbin/pkg_info
+share/man/cat1/pkg_add.0
+share/man/cat1/pkg_admin.0
+share/man/cat1/pkg_create.0
+share/man/cat1/pkg_delete.0
+share/man/cat1/pkg_info.0
+share/man/man1/pkg_add.1
+share/man/man1/pkg_admin.1
+share/man/man1/pkg_create.1
+share/man/man1/pkg_delete.1
+share/man/man1/pkg_info.1
+@exec [ -f ${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ] || pkg_admin rebuild

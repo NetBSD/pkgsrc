@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/01/24 22:00:01 hubertf Exp $
-bin/knews
-lib/X11/app-defaults/Knews
-man/cat1/knews.0

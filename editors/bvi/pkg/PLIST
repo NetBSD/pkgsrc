@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/10/24 07:02:58 cjs Exp $
-bin/bmore
-bin/bvedit
-bin/bvi
-bin/bview
-man/man1/bmore.1
-man/man1/bvi.1
-share/bmore.help

@@ -1,7 +1,0 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.4 2001/02/06 14:24:06 wiz Exp $
-
-You might want to have a look at ${PREFIX}/share/jed/lib/* and
-install a file defaults.sl for site defaults there.
-
-======================================================================

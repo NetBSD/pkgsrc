@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/26 00:11:07 tron Exp $
-bin/mpack
-bin/munpack
-man/man1/mpack.1.gz
-man/man1/munpack.1.gz
