@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/02/09 15:22:33 tron Exp $
+# $NetBSD: Makefile,v 1.25 2000/02/09 20:20:56 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -18,7 +18,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.trilon.com/xv/
 
 DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
-DEPENDS+=	png-*:../png
+DEPENDS+=	png>=1.0.3:../png
 DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_IMAKE=	yes
