@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/12/10 15:12:00 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/23 15:49:25 drochner Exp $
 
-DISTNAME=	ZWiki-0.13.1
-PKGNAME=	zope25-ZWiki-0.13.1
+DISTNAME=	ZWiki-0.17.0
+PKGNAME=	zope25-ZWiki-0.17.0
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/simon/ZWiki/
 EXTRACT_SUFX=	.tgz
