@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.22 2003/09/30 10:17:30 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.23 2003/10/03 19:39:19 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -841,6 +841,8 @@ _BLNK_SANITIZED_PATH!=	${ECHO} ${PATH} | ${SED}			\
 _BLNK_WRAP_SANITIZE_PATH=	PATH="${_BLNK_SANITIZED_PATH}"
 _BLNK_EMPTY_FILE?=		${BUILDLINK_DIR}/bin/.empty
 _BLNK_WRAP_ENV?=		${BUILDLINK_WRAPPER_ENV}
+_BLNK_WRAP_BUILDCMD=		${BUILDLINK_DIR}/bin/.buildcmd
+_BLNK_WRAP_QUOTEARG=		${BUILDLINK_DIR}/bin/.quotearg
 _BLNK_WRAP_MARSHALL=		${BUILDLINK_DIR}/bin/.marshall
 _BLNK_WRAP_PRE_CACHE=		${BUILDLINK_DIR}/bin/.pre-cache
 _BLNK_WRAP_CACHE_ADD=		${BUILDLINK_DIR}/bin/.cache-add
@@ -851,7 +853,6 @@ _BLNK_WRAP_POST_CACHE=		${BUILDLINK_DIR}/bin/.post-cache
 _BLNK_WRAP_LOGIC=		${BUILDLINK_DIR}/bin/.logic
 _BLNK_WRAP_LOGIC_TRANSFORM=	${BUILDLINK_DIR}/bin/.logic-trans
 _BLNK_WRAP_LOG=			${WRKLOG}
-_BLNK_LIBTOOL_DO_INSTALL=	${BUILDLINK_DIR}/bin/.libtool-do-install
 _BLNK_LIBTOOL_FIX_LA=		${BUILDLINK_DIR}/bin/.libtool-fix-la
 _BLNK_FAKE_LA=			${BUILDLINK_DIR}/bin/.fake-la
 _BLNK_GEN_TRANSFORM=		${BUILDLINK_DIR}/bin/.gen-transform
@@ -868,6 +869,8 @@ _BLNK_WRAP_SETENV.${_wrappee_}=	${_wrappee_}="${BUILDLINK_${_wrappee_}:T}"
 _BLNK_WRAP_SANITIZE_PATH.${_wrappee_}=		${_BLNK_WRAP_SANITIZE_PATH}
 _BLNK_WRAP_EXTRA_FLAGS.${_wrappee_}=		# empty
 _BLNK_WRAP_ENV.${_wrappee_}=			${_BLNK_WRAP_ENV}
+_BLNK_WRAP_BUILDCMD.${_wrappee_}=		${_BLNK_WRAP_BUILDCMD}
+_BLNK_WRAP_QUOTEARG.${_wrappee_}=		${_BLNK_WRAP_QUOTEARG}
 _BLNK_WRAP_MARSHALL.${_wrappee_}=		${_BLNK_WRAP_MARSHALL}
 _BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}=	${_BLNK_EMPTY_FILE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}=	${_BLNK_EMPTY_FILE}
@@ -974,7 +977,6 @@ _BLNK_WRAP_EXTRA_FLAGS.SHLIBTOOL=	${_BLNK_WRAP_EXTRA_FLAGS.LIBTOOL}
 
 .PHONY: buildlink-wrappers
 
-buildlink-wrappers: ${_BLNK_LIBTOOL_DO_INSTALL}
 buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
@@ -996,13 +998,15 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@WRKSRC@|${WRKSRC}|g"					\
 	-e "s|@CAT@|${CAT:Q}|g"						\
 	-e "s|@ECHO@|${ECHO:Q}|g"					\
+	-e "s|@EXPR@|${EXPR:Q}|g"					\
 	-e "s|@SED@|${SED:Q}|g"						\
 	-e "s|@TEST@|${TEST:Q}|g"					\
 	-e "s|@TOUCH@|${TOUCH:Q}|g"					\
-	-e "s|@_BLNK_LIBTOOL_DO_INSTALL@|${_BLNK_LIBTOOL_DO_INSTALL:Q}|g" \
 	-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g"	\
 	-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"			\
 	-e "s|@_BLNK_WRAP_EXTRA_FLAGS@|${_BLNK_WRAP_EXTRA_FLAGS.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_BUILDCMD@|${_BLNK_WRAP_BUILDCMD.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_QUOTEARG@|${_BLNK_WRAP_QUOTEARG.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_MARSHALL@|${_BLNK_WRAP_MARSHALL.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_PRIVATE_PRE_CACHE@|${_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_PRIVATE_CACHE_ADD@|${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}:Q}|g" \
@@ -1021,6 +1025,8 @@ buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
 .if !target(${BUILDLINK_${_wrappee_}})
 ${BUILDLINK_${_wrappee_}}:						\
 		${_BLNK_WRAPPER_SH.${_wrappee_}}			\
+		${_BLNK_WRAP_BUILDCMD.${_wrappee_}}			\
+		${_BLNK_WRAP_QUOTEARG.${_wrappee_}}			\
 		${_BLNK_WRAP_MARSHALL.${_wrappee_}}			\
 		${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}}		\
 		${_BLNK_WRAP_CACHE.${_wrappee_}}			\
@@ -1120,6 +1126,20 @@ buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 ${_BLNK_EMPTY_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_BUILDCMD})
+${_BLNK_WRAP_BUILDCMD}: ${.CURDIR}/../../mk/buildlink3/buildcmd
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_QUOTEARG})
+${_BLNK_WRAP_QUOTEARG}: ${.CURDIR}/../../mk/buildlink3/quotearg
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 .endif
 
 .if !target(${_BLNK_WRAP_MARSHALL})
@@ -1267,12 +1287,6 @@ ${_BLNK_WRAP_PRIVATE_POST_LOGIC.${_wrappee_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 .  endif
 .endfor
-
-${BUILDLINK_DIR}/bin/.libtool-do-install:				\
-		${.CURDIR}/../../mk/buildlink3/libtool-do-install
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${BUILDLINK_DIR}/bin/.libtool-fix-la:					\
 		${.CURDIR}/../../mk/buildlink3/libtool-fix-la		\

@@ -1,10 +1,12 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.3 2003/09/08 21:10:26 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.4 2003/10/03 19:39:19 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
 
+buildcmd="@_BLNK_WRAP_BUILDCMD@"
+quotearg="@_BLNK_WRAP_QUOTEARG@"
 marshall="@_BLNK_WRAP_MARSHALL@"
 private_pre_cache="@_BLNK_WRAP_PRIVATE_PRE_CACHE@"
 private_cache_add="@_BLNK_WRAP_PRIVATE_CACHE_ADD@"
@@ -24,6 +26,7 @@ cacheall="${BUILDLINK_CACHE_ALL-no}"
 
 cat="@CAT@"
 echo="@ECHO@"
+expr="@EXPR@"
 test="@TEST@"
 
 BUILDLINK_DIR="@BUILDLINK_DIR@"
@@ -35,6 +38,7 @@ while $test $# -gt 0; do
 	arg="$1"; shift
 	cachehit=no
 	skipcache=no
+	skipargs=0
 	#
 	# Marshall any group of consecutive arguments into a single
 	# $arg to be checked in the cache and logic files.
@@ -58,34 +62,9 @@ while $test $# -gt 0; do
 	no)	. $logic ;;
 	esac
 	#
-	# Reduce command length by not appending options that we've
-	# already seen to the command.
+	# Build up the command-line.
 	#
-	case $arg in
-	-[DILR]*|-Wl,-R*|-Wl,-*,/*)
-		#
-		# These options are only ever useful the first time
-		# they're given.  All other instances are redundant.
-		#
-		case "$cmd" in
-		*" "$arg|*" "$arg" "*)	;;
-		*)	cmd="$cmd $arg" ;;
-		esac
-		;;
-	-l*)
-		#
-		# Extra libraries are suppressed only if they're
-		# repeated, e.g. "-lm -lm -lm -lm" -> "-lm".
-		#
-		case "$cmd" in
-		*" "$arg)	;;
-		*)	cmd="$cmd $arg" ;;
-		esac
-		;;
-	*)
-		cmd="$cmd $arg"
-		;;
-	esac
+	. $buildcmd
 done
 
 @_BLNK_WRAP_ENV@

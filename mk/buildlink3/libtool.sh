@@ -1,10 +1,12 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.4 2003/09/23 19:48:23 jlam Exp $
+# $NetBSD: libtool.sh,v 1.5 2003/10/03 19:39:19 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
 
+buildcmd="@_BLNK_WRAP_BUILDCMD@"
+quotearg="@_BLNK_WRAP_QUOTEARG@"
 marshall="@_BLNK_WRAP_MARSHALL@"
 private_pre_cache="@_BLNK_WRAP_PRIVATE_PRE_CACHE@"
 private_cache_add="@_BLNK_WRAP_PRIVATE_CACHE_ADD@"
@@ -20,7 +22,6 @@ post_logic="@_BLNK_WRAP_POST_LOGIC@"
 wrapperlog="${BUILDLINK_WRAPPER_LOG-@_BLNK_WRAP_LOG@}"
 
 libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
-libtool_do_install="@_BLNK_LIBTOOL_DO_INSTALL@"
 fixlibpath=${BUILDLINK_FIX_IMPROPER_LIBTOOL_LIBPATH-yes}
 
 updatecache=${BUILDLINK_UPDATE_CACHE-yes}
@@ -86,12 +87,23 @@ done
 cmd="@WRAPPEE@"
 case $mode in
 install)
-	arg="$1"; shift
-	. $libtool_do_install
+	#
+	# We're doing libtool installation, so just quote all of the
+	# command-line arguments and append them to $cmd.  We don't worry
+	# about caching or speed, since installation is not a bottleneck
+	# for package creation.
+	#
+	while $test $# -gt 0; do
+        	arg="$1"; shift
+        	. $quotearg
+        	arg="$qarg"
+        	cmd="$cmd $arg"
+	done    
 	;;
 *)
 	while $test $# -gt 0; do
 		arg="$1"; shift
+		skipargs=0
 		case $arg in
 		--fix-la)
 			. $libtool_fix_la
@@ -137,34 +149,9 @@ install)
 			;;
 		esac
 		#
-		# Reduce command length by not appending options that we've
-		# already seen to the command.
+		# Build up the command-line.
 		#
-		case "$arg" in
-		-[DILR]*|-Wl,-R*|-Wl,-*,/*)
-			#
-			# These options are only ever useful the first time
-			# they're given.  All other instances are redundant.
-			#
-			case "$cmd" in
-			*" "$arg|*" "$arg" "*)  ;;
-			*)      cmd="$cmd $arg" ;;
-			esac
-			;;
-		-l*)
-			#
-			# Extra libraries are suppressed only if they're
-			# repeated, e.g. "-lm -lm -lm -lm" -> "-lm".
-			#
-			case "$cmd" in
-			*" "$arg)       ;;
-			*)      cmd="$cmd $arg" ;;
-			esac
-			;;
-		*)
-			cmd="$cmd $arg"
-			;;
-		esac
+		. $buildcmd
 	done
 	;;
 esac
