@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2742 2004/12/24 03:21:05 wiz Exp $
+$NetBSD: TODO,v 1.2743 2004/12/24 10:14:10 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,6 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
-	o glib2-2.6.0
 	o gnet1-1.1.9
 	o gnetman-20041117
 	o gnocatan-0.8.1.30
@@ -556,7 +555,6 @@ Suggested package updates
 	o gst-plugins-0.8.6
 	o gtar-1.15
 	o gtk-systrace-2003.06.23
-	o gtk2-2.6.0
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -909,7 +907,6 @@ Suggested package updates
 	o p5-sybperl-2.17
 	o p5-xmltv-0.5.37
 	o p7zip-4.13
-	o pango-1.8.0
 	o pari-2.2.7
 	o pdmenu-1.2.85
 	o pen-0.15.0
