@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/02/21 11:58:59 salo Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/24 19:18:57 drochner Exp $
 
---- src/mergeant.c.orig	2003-01-10 04:18:38.000000000 +0100
-+++ src/mergeant.c	2003-02-21 10:44:18.000000000 +0100
-@@ -38,6 +38,9 @@
- /* main interface callbacks */
- #include <libgnomedb/libgnomedb.h>
+--- frontend/main.c.orig	2005-01-18 19:55:41.000000000 +0100
++++ frontend/main.c
+@@ -24,6 +24,9 @@
+  */
  
+ #include <libgnomedb/libgnomedb.h>
 +#ifdef HAVE_LOCALE_H
 +#include <locale.h>
 +#endif
- 
- static gint prepare_app (ConfManager * conf);
- 
+ #include "workspace-window.h"
+ #include "component-factory.h"
+ #include "session.h"
