@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/11 13:46:11 martin Exp $
 #
 
-DISTNAME=		nut-0.44.2
-PKGNAME=		ups-nut-0.44.2
+DISTNAME=		nut-0.44.3-pre5
+PKGNAME=		ups-nut-0.44.3pre5
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.exploits.org/nut/release/
+MASTER_SITES=		http://www.exploits.org/nut/testing/0.44.3-pre/
 
-MAINTAINER=		collver@softhome.net
+MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.exploits.org/nut/
 COMMENT=		Network UPS Tools
 
@@ -30,9 +30,10 @@ ADDGROUP=		groupadd
 USERDEL=		userdel
 GROUPDEL=		groupdel
 .endif
-WRKSRC=			${WRKDIR}/nut-0.44.2
+WRKSRC=			${WRKDIR}/nut-0.44.3
 DEINSTALL_FILE=         ${WRKDIR}/DEINSTALL
 INSTALL_FILE=           ${WRKDIR}/INSTALL
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
 GNU_CONFIGURE=		yes
 NUT_DOCDIR=		${LOCALBASE}/share/doc/nut
@@ -42,6 +43,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${LOCALBASE}/etc/nut \
 			--with-user=${NUT_USER} \
 			--with-group=${NUT_GROUP} \
 			--with-statepath=/var/db/nut
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf --force
 
 pre-install:
 	${SED}  -e 's|@NUT_USER@|${NUT_USER}|g' \
@@ -67,8 +71,8 @@ post-install:
 		>${LOCALBASE}/etc/rc.d/upsd
 	@${CHMOD} 0755 ${LOCALBASE}/etc/rc.d/upsd
 	@${INSTALL} -d -o ${NUT_USER} -g ${NUT_GROUP} -m 0770 /var/db/nut
-	${INSTALL_DATA_DIR} ${NUT_DOCDIR}
-	${INSTALL_DATA_DIR} ${NUT_DOCDIR}/cables
+	@if ! [ -d ${NUT_DOCDIR} ]; then ${MKDIR} ${NUT_DOCDIR}; fi
+	@if ! [ -d ${NUT_DOCDIR}/cables ]; then ${MKDIR} ${NUT_DOCDIR}/cables; fi
 	${INSTALL_DATA} ${WRKSRC}/docs/cables/*.txt ${NUT_DOCDIR}/cables
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
