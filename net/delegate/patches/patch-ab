@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 1999/02/23 18:28:35 rh Exp $
+
+--- /dev/null	Tue Feb 23 03:26:24 1999
++++ delegated.sh.template	Tue Feb 23 16:15:33 1999
+@@ -0,0 +1,11 @@
++#!/bin/sh
++
++if [ -x __PREFIX__/sbin/delegated ]; then
++	__PREFIX__/sbin/delegated -P8080 \
++	MANAGER=__MANAGER__ \
++	CHARCODE=JIS \
++	CACHEDIR=/var/spool/delegate/cache \
++	EXPIRE=7d \
++	RELIABLE=hostname \
++	> /dev/null 2>&1 && echo -n ' delegated'
++fi
