@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/07/21 22:37:10 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/07/23 15:00:12 jlam Exp $
 
 DISTNAME=		mutt-1.5.6i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -18,7 +18,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
-BUILD_DEFS+=		MUTT_OPTIONS
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes

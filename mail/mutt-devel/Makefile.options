@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.1 2004/07/21 22:37:10 jlam Exp $
+# $NetBSD: Makefile.options,v 1.2 2004/07/23 15:00:12 jlam Exp $
 #
 # MUTT_ALL_OPTIONS lists all of the currently-supported optional modules
 # that may be built into Mutt.
@@ -26,6 +26,7 @@ MUTT_OPTIONS+=		sasl
 .endif
 
 MUTT_OPTIONS?=		ssl
+BUILD_DEFS+=		MUTT_OPTIONS
 
 _MUTT_OPTIONS=		# empty
 .for _opt_ in ${MUTT_OPTIONS}
