@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/25 22:52:25 zuntum Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/23 13:18:03 jlam Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
@@ -12,20 +12,19 @@ USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-alternate-scoresdir=/var/games/xconq/scores	\
-			--with-tclconfig="${BUILDLINK_DIR}/lib"			\
-			--with-tkconfig="${BUILDLINK_DIR}/lib"
+CONFIGURE_ARGS+=	--enable-alternate-scoresdir=/var/games/xconq/scores
+CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_DIR}/lib"
+CONFIGURE_ARGS+=	--with-tkconfig="${BUILDLINK_DIR}/lib"
 
 MAKE_ENV+=		LOCALBASE="${LOCALBASE}"
 
 INFO_FILES=     	hacking.info xcdesign.info xconq.info
 
 post-build:
-	cd ${WRKSRC}/doc && ${GMAKE} info
+	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} info
 
 post-install:
-	cd ${WRKSRC}/doc && ${GMAKE} install-info
+	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} install-info
 
-.include "../../lang/tcl/buildlink.mk"
 .include "../../x11/tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
