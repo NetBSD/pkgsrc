@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cupsd.sh,v 1.11 2002/09/18 22:58:47 jlam Exp $
+# $NetBSD: cupsd.sh,v 1.12 2002/09/20 02:01:59 grant Exp $
 #
 # Common UNIX Printing System daemon
 #

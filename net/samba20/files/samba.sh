@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: samba.sh,v 1.8 2002/08/25 21:50:15 jlam Exp $
+# $NetBSD: samba.sh,v 1.9 2002/09/20 02:01:59 grant Exp $
 #
 # KEYWORD: nostart
 

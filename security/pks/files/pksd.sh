@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pksd.sh,v 1.6 2002/02/05 06:04:41 jlam Exp $
+# $NetBSD: pksd.sh,v 1.7 2002/09/20 02:02:00 grant Exp $
 #
 # PROVIDE: pksd
 # REQUIRE: DAEMON

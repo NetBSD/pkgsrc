@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: hylafax.sh,v 1.3 2002/03/20 12:28:55 abs Exp $
+# $NetBSD: hylafax.sh,v 1.4 2002/09/20 02:01:55 grant Exp $
 #
 # PROVIDE: hylafax
 # REQUIRE: DAEMON
