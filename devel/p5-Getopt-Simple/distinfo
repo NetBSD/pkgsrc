@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/24 03:01:45 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/11/27 00:28:53 wiz Exp $
 
-SHA1 (Getopt-Simple-1.46.tgz) = 3e5277ced390a3083a45763fa562bc2b761934af
-Size (Getopt-Simple-1.46.tgz) = 6896 bytes
+SHA1 (Getopt-Simple-1.48.tgz) = 9b3a74f6090c56f5e94bf3506e2710ae6920a3ca
+Size (Getopt-Simple-1.48.tgz) = 7695 bytes
