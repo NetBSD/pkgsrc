@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/09 05:19:27 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/09 13:43:48 wiz Exp $
 #
 .include "Makefile.common"
+
+COMMENT=		Objective-C interface to the GTK+ widget set
 
 BUILD_DIRS=		${WRKSRC}/GToolKit
 
