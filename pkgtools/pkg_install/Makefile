@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/10/30 14:12:37 agc Exp $
+# $NetBSD: Makefile,v 1.46 2002/03/04 12:39:37 seb Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -23,14 +23,26 @@ NO_MTREE=		yes
 NO_PKG_REGISTER=	yes
 NO_PACKAGE=		No package registration is done
 MANCOMPRESSED_IF_MANZ=	yes
+BUILD_DEFS+=		MANINSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
-LOCALBASE=		${PKG_TOOLS_BIN}/..
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+SHLOCK:=	${LOCALBASE}/bin/shlock
+.endif
+
+LOCALBASE:=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 PKG_DBDIR?=		/var/db/pkg
 
 .if ${OPSYS} == "NetBSD" && !exists(/usr/share/tmac/tmac.andoc)
 IGNORE+=		"You need to have the 'text' set installed to build this package!"
+.endif
+
+.if ${OPSYS} == "SunOS"
+MAKEFLAGS+=	NETBSD_COMPATIBLE=YES
+MANINSTALL=
+MAKE_ENV+=	MANINSTALL= MKMAN=no NOMAN=YES
+MAKE_ENV+=	ZOULARISBASE=${ZOULARISBASE}
 .endif
 
 .if ${OPSYS} == "Darwin"
