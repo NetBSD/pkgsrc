@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ns-open,v 1.4 2001/01/12 23:11:05 tron Exp $
+# $NetBSD: ns-open,v 1.5 2001/07/27 14:26:19 abs Exp $
 #
 # Simple script to open a URL in Netscape, starting a new process if necessary
 # If a netscape process is not running it will look for a valid netscape
@@ -8,7 +8,7 @@
 # overridden by the user in the environment.
 
 if [ -z "$NETSCAPE_PREFERRED" ]; then
-    NETSCAPE_PREFERRED=communicator:navigator
+    NETSCAPE_PREFERRED=communicator:navigator:mozilla
 fi
 
 # Locate appropriate netscape binary and set NETSCAPE_BIN
