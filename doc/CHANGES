@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7461 2004/10/18 09:28:42 tron Exp $
+$NetBSD: CHANGES,v 1.7462 2004/10/18 09:30:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4751,3 +4751,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wmi to 10 [ben 2004-10-17]
 	Added p5-CDDB_get-2.23 [ben 2004-10-17]
 	Updated ap-ssl to 2.8.20 [tron 2004-10-18]
+	Updated apache to 1.3.31nb7 [tron 2004-10-18]
