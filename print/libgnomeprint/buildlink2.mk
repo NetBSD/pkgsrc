@@ -1,14 +1,14 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/10/16 03:14:44 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/10/30 07:36:11 rh Exp $
 
 .if !defined(LIBGNOMEPRINT_BUILDLINK2_MK)
 LIBGNOMEPRINT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgnomeprint
-BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=1.116.0nb1
+BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=1.116.0nb2
 BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libgnomeprint=libgnomeprint
-BUILDLINK_PREFIX.libgnomeprint_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.libgnomeprint_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.0/libgnomeprint/*
 BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.0/libgnomeprint/private/*
 BUILDLINK_FILES.libgnomeprint+=	lib/gnome-print-2.0/drivers/*
