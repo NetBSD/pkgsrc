@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/08/23 23:14:29 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/09/07 00:36:21 dmcmahill Exp $
 #
 
 DISTNAME=		xfmail-1.3
@@ -11,7 +11,8 @@ HOMEPAGE=		http://Burka.NetVision.net.il/xfmail/xfmail.html
 DEPENDS+=		gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=		xforms-0.88:../../x11/xforms
 
-ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-sparc *-*-ns32k
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
+			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
 RESTRICTED=		"Selling this software requires permission of the authors."
 NO_SRC_ON_CDROM=	${RESTRICTED}
