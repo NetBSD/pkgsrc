@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/03/06 13:12:20 taca Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/06 17:14:18 taca Exp $
 
 DISTNAME=	instiki-0.9.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://rubyforge.org/frs/download.php/2515/
 EXTRACT_SUFX=	.tgz
@@ -9,6 +9,15 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://instiki.org/
 COMMENT=	Wiki clone that focuses on simple installation and running
+
+.include "../../lang/ruby/rubyversion.mk"
+.if ${RUBY_VER} == "16"
+DEPENDS+=	${RUBY_PKGPREFIX}-digest-[0-9]*:../../security/ruby${RUBY_VER}-digest
+DEPENDS+=	${RUBY_PKGPREFIX}-zlib-[0-9]*:../../devel/ruby${RUBY_VER}-zlib
+.else
+DEPENDS+=	${RUBY_PKGPREFIX}-digest-[0-9]*:../../security/ruby-digest
+DEPENDS+=	${RUBY_PKGPREFIX}-zlib-[0-9]*:../../devel/ruby-zlib
+.endif
 
 NO_BUILD=	# defined
 USE_BUILDLINK3= yes
