@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9.2.6 2002/07/21 02:15:45 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.7 2002/07/21 03:19:14 jlam Exp $
 
 .include "Makefile.common"
 
@@ -35,7 +35,7 @@ MKPIC?=			yes
 # The perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
-USE_GMAKE=		# defined
+USE_GMAKE=	# defined
 #
 # There seems to be a bug when using the buildlink2 wrapper scripts to
 # build perl on Darwin.  Disable it for now until the problem is fixed.
@@ -45,8 +45,14 @@ USE_GMAKE=		# defined
 # Perl is _always_ built using shared libraries on Darwin; there's no
 # way to build a statically-linked perl binary.
 #
-MKPIC=			yes
-STATIC_PERL=		NO
+MKPIC=		yes
+STATIC_PERL=	NO
+#
+# "installarchlib" and "installsitearch" have different forms between
+# Darwin and NetBSD.
+#
+PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${LOWER_OPSYS}
+PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${LOWER_OPSYS}
 .endif
 
 # Nail down the needed libraries for each platform here to avoid hidden
@@ -109,8 +115,8 @@ CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
 PERL5=			${PREFIX}/bin/perl${PERL5_DIST_VERS}
-PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
-PERL5_SITEARCH=		${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_ARCHLIB?=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_SITEARCH?=	${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 
 pre-buildlink:
