@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/04/12 23:22:59 salo Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/05 15:57:47 salo Exp $
 #
 
-DISTNAME=	mkvtoolnix-0.8.6
+DISTNAME=	mkvtoolnix-0.8.8
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-extra-includes=${PREFIX}
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libebml/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
