@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2004/07/02 19:25:16 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.36 2004/07/03 21:17:18 jmmv Exp $
 
 DISTNAME=		icewm-1.2.14
 CATEGORIES=		x11 wm
@@ -15,9 +15,9 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined
 
-DISTINFO_FILE=		${.CURDIR}/../icewm/distinfo
-FILESDIR=		${.CURDIR}/../icewm/files
-PATCHDIR=		${.CURDIR}/../icewm/patches
+DISTINFO_FILE=		${.CURDIR}/../../wm/icewm/distinfo
+FILESDIR=		${.CURDIR}/../../wm/icewm/files
+PATCHDIR=		${.CURDIR}/../../wm/icewm/patches
 
 CONFIGURE_ARGS+=	--enable-gradients
 CONFIGURE_ARGS+=	--enable-antialiasing
