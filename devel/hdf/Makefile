@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/31 11:14:30 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/31 18:23:00 jtb Exp $
 
 DISTNAME=	HDF4.1r4
 PKGNAME=	hdf-4.1r4
@@ -45,15 +45,16 @@ post-patch:
 	${MV} -f ${WRKSRC}/mfhdf/ncgen/ncgen.1			\
 	${WRKSRC}/mfhdf/ncgen/hdfncgen.1
 
+# XXX Don't compile this file with optimization.
 pre-configure:
-	${CC} ${CFLAGS} ${FILESDIR}/bytesex.c -o ${WRKSRC}/bytesex
+	${CC} ${FILESDIR}/bytesex.c -o ${WRKSRC}/bytesex
 
 SWAP=	`${WRKSRC}/bytesex`
 
 do-configure:
 	@for f in libsrc dumper ncgen ncdump; do		\
 		${SED} -e 's:@SWAP@:'${SWAP}':g'		\
-		< ${WRKSRC}/mfhdf/$$f/Makefile >		\
+		${WRKSRC}/mfhdf/$$f/Makefile >			\
 		${WRKSRC}/mfhdf/$$f/Makefile.tmp		\
 		&& ${MV} ${WRKSRC}/mfhdf/$$f/Makefile.tmp	\
 		${WRKSRC}/mfhdf/$$f/Makefile;			\
