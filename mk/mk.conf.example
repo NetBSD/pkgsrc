@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.64 1999/07/26 19:47:37 tron Exp $
+# $NetBSD: mk.conf.example,v 1.65 1999/07/28 10:14:57 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -63,6 +63,22 @@
                                 # files are stored.
                                 # Possible: any path you like
                                 # Default: /usr/pkgsrc/distfiles
+
+#DIST_PATH=	${PKGSRCDIR}/distfiles:${HOME}/distfiles
+                                # colon-delimited list of directories
+                                # in which to search for ${DISTFILES} and
+                                # ${PATCHFILES}. If the requested file is
+                                # not in any of the directories in
+                                # ${DIST_PATH}, it will be downloaded into
+                                # ${DISTDIR}. If the requested file is in
+                                # one of the directories in ${DIST_PATH},
+                                # a symbolic link will be made to it from
+                                # ${DISTDIR}. ${DIST_PATH} directories will
+                                # will be searched before ${DISTDIR}, letting
+                                # a CD hold the main distfiles archive, and
+                                # local ${DISTDIR} hold any updated distfiles.
+                                # Possible: any directories
+                                # Default: none
 
 #PACKAGES=       ${PKGSRCDIR}/packages/${MACHINE_ARCH}
                                 # Store generated packages on a per-
