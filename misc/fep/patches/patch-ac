@@ -1,13 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
+$NetBSD: patch-ac,v 1.3 2003/11/11 10:42:32 wiz Exp $
 
---- fep_com.c.orig	1991-05-29 01:31:09.000000000 -0400
-+++ fep_com.c	2003-11-07 11:22:46.000000000 -0500
-@@ -3,10 +3,20 @@
- #ifndef lint
- static char rcsid[]=
- "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $ (SRA)";
--#endif lint
-+#endif /* lint */
+--- fep_com.c.orig	Wed May 29 07:31:09 1991
++++ fep_com.c
+@@ -6,7 +6,17 @@ static char rcsid[]=
+ #endif lint
  
  #include <stdio.h>
 +#include <sys/ioctl.h>
@@ -24,7 +20,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  #include <ctype.h>
  #include <sys/param.h>
  #include <sys/file.h>
-@@ -31,7 +41,7 @@
+@@ -31,7 +41,7 @@ executeBuiltInFunction (comline, more)
      char *comline, **more;
  {
      register FunctionTableEnt *ftp;
@@ -33,7 +29,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
      char *search_string();
      int argc;
  
-@@ -93,7 +103,7 @@
+@@ -93,7 +103,7 @@ is_same_command (a, b)
  
      while (*a && *b && *a == *b)
  	++a, ++b;
@@ -42,7 +38,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  	return 1;
      else
  	return 0;
-@@ -295,7 +305,7 @@
+@@ -295,7 +305,7 @@ unalias (comline)
  set (comline)
      char *comline;
  {
@@ -51,7 +47,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
      char *cp, *index();
      char *argv[MAXARGS];
      int argc;
-@@ -352,8 +362,13 @@
+@@ -352,8 +362,13 @@ unset(comline)
  
  extern	int Transparency;
  extern	int Through;
@@ -67,7 +63,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  extern	int master, slave;
  extern	char slave_tty[];
  
-@@ -368,7 +383,11 @@
+@@ -368,7 +383,11 @@ toggle_through()
  {
      int r;
      int slave_fd;
@@ -79,7 +75,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  
      if (Through == OFF) {
  
-@@ -378,15 +397,26 @@
+@@ -378,15 +397,26 @@ toggle_through()
  	    return;
  	}
  
@@ -106,7 +102,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  	if (r < 0) {
  	    perror (slave_tty);
  	    (void) close (slave_fd);
-@@ -394,7 +424,11 @@
+@@ -394,7 +424,11 @@ toggle_through()
  	(void) close (slave_fd);
      }
      else
@@ -118,7 +114,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  
      if (r < 0) {
  	printf ("Can't change pty mode.\n");
-@@ -410,7 +444,11 @@
+@@ -410,7 +444,11 @@ toggle_through()
  fix_transparency()
  {
      int r;
@@ -130,7 +126,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  
      if (Through)
  	return;
-@@ -418,11 +456,17 @@
+@@ -418,11 +456,17 @@ fix_transparency()
      if (slave < 0)
  	return;
  
@@ -148,7 +144,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
      if (r < 0) {
  	perror (slave_tty);
  	return;
-@@ -432,9 +476,19 @@
+@@ -432,9 +476,19 @@ fix_transparency()
       * If find slave tty mode is cbreak or raw, fix tty mode of stdout to
       * same mode as slave and set Transparency ON.
       */
@@ -169,7 +165,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  	    if (r < 0) {
  		perror ("stdout");
  		return;
-@@ -445,7 +499,11 @@
+@@ -445,7 +499,11 @@ fix_transparency()
      }
      else {
  	if (Transparency == ON) {
@@ -182,7 +178,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  	    if (r < 0) {
  		perror ("stdout");
  		return;
-@@ -738,9 +796,9 @@
+@@ -738,9 +796,9 @@ char *line;
  fep_pwd (line)
      char *line;
  {
@@ -194,7 +190,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
      printf ("%s\n", cwd);
  }
  
-@@ -755,7 +813,7 @@
+@@ -755,7 +813,7 @@ fep_echo (comline)
      argc = mkargv (comline, argv, MAXARGS);
      
      argp = &argv[1];
@@ -203,7 +199,7 @@ $NetBSD: patch-ac,v 1.2 2003/11/07 16:35:51 christos Exp $
  	putnewline = 0;
  	++argp;
      }
-@@ -791,7 +849,7 @@
+@@ -791,7 +849,7 @@ fep_command (comline)
      int argc;
      int i;
      char **argp;
