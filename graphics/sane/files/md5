@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1998/11/28 20:59:58 frueauf Exp $
+$NetBSD: md5,v 1.5 1999/05/03 16:20:01 rh Exp $
 
-MD5 (sane-1.00.tar.gz) = 0723e78ab57c7340a0b8180a546c3871
+MD5 (sane-1.0.1.tar.gz) = d7989b2b18505c72b8568d11b56bb97a
