@@ -1,20 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2003/03/01 06:18:21 uebayasi Exp $
+# $NetBSD: Makefile,v 1.52 2003/04/11 00:39:35 uebayasi Exp $
+# FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
-DISTNAME=	emacs-20.7
-PKGREVISION=	2
+DISTNAME=	emacs-21.2
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GNU:=emacs/} \
-		${MASTER_SITE_LOCAL}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		${DISTNAME}-mule-4.1b-elc${EXTRACT_SUFX}
-
-# Mule enhancement (back port) patch by Satoshi Yatagawa
-PATCH_SITES=		http://www.teu.ac.jp/nsit/~yatagawa/comp/emacs/
-PATCHFILES=		emacs-20.7-mule-4.1b.patch
-# XIM fix patch by Seiichiro Inoue
-PATCH_SITES+=		http://home.catv.ne.jp/pp/ginoue/software/emacs-xim/
-PATCHFILES+=		emacs20-xim-20000713.diff
-PATCH_DIST_STRIP=	-p1
+MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
@@ -22,49 +11,39 @@ COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*
 
-USE_BUILDLINK2=	yes
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
-GNU_ARCH.mipsbe= mips
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
-BUILD_DEFS+=	USE_INET6 EMACS_USE_POP EMACS_USE_X EMACS_USE_X_TOOLKIT
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--with-x-toolkit=athena
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-xpm
+.include "../../graphics/jpeg/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-jpeg
+.include "../../graphics/tiff/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-tiff
+# need 4.1.0b1 or higher (a bug in 4.1.0 can crash Emacs)
+BUILDLINK_DEPENDS.libungif=	libungif>=4.1.0.1
+.include "../../graphics/libungif/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-gif
+.include "../../graphics/png/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-png
 
-EMACS_USE_POP?=	yes
-.if (defined(EMACS_USE_POP) && \
-    (${EMACS_USE_POP} == yes || ${EMACS_USE_POP} == YES))
-CONFIGURE_ARGS+=--with-pop
-.endif
-USE_X11=	yes
-CONFIGURE_ARGS+=--with-x=yes
-.if defined(EMACS_USE_X_TOOLKIT)
-CONFIGURE_ARGS+=--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
-.endif
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+=--with-ipv6
-.else
-CONFIGURE_ARGS+=--without-ipv6
-.endif
-MAKE_ENV+=	INSTALL_STRIP=${_STRIPFLAG_INSTALL}
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
 		    ccmode message widget reftex forms
 
-INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+post-extract:
+	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM} -f
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
-
-.if defined(EMACS_USE_X_TOOLKIT) && ${EMACS_USE_X_TOOLKIT} == "athena"
-.include "../../mk/xaw.buildlink2.mk"
-.endif
-.if defined(EMACS_USE_X_TOOLKIT) && ${EMACS_USE_X_TOOLKIT} == "motif"
-.include "../../mk/motif.buildlink2.mk"
-.endif
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
