@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/26 17:46:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/20 09:26:22 jlam Exp $
 
 .include "Makefile.common"
 
@@ -196,4 +196,7 @@ test:
 	-@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
+.if ${MACHINE_ARCH} == "alpha"
+.  include "../../lang/gcc/buildlink2.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
