@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2001/08/14 12:48:21 agc Exp $
+# $NetBSD: Makefile,v 1.28 2001/09/03 01:57:21 kim Exp $
 #
 
-DISTNAME=	tcsh-6.10
-PKGNAME=	tcsh-6.10.00
+DISTNAME=	tcsh-6.11
+PKGNAME=	tcsh-6.11.00
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.gw.com/pub/unix/tcsh/ \
@@ -27,18 +27,21 @@ OS_VERSION!=	echo ${OS_VERSION} | sed -e 's|5\.|2.|'
 LOWER_OPSYS=	solaris${OS_VERSION}
 .endif
 
-# XXX: For now we don't install the ukrainian, because there is no directory.
+# XXX broken: pl:ISO_8859-2:pl:PL
 post-install:
 	@${ECHO} "Installing message catalogues"
 	@${INSTALL_DATA} ${WRKSRC}/tcsh.C.cat ${PREFIX}/${NLSDIR}/C/tcsh.cat
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} ${NLSDIR}/C/tcsh.cat >> ${PLIST_SRC}
 	@for i in 						\
+	    et:ISO_8859-1:et:EE					\
+	    finnish:ISO_8859-1:fi:FI				\
 	    french:ISO_8859-1:fr:BE:CA:CH:FR			\
 	    german:ISO_8859-1:de:AT:CH:DE			\
 	    greek:ISO_8859-7:el:GR				\
 	    italian:ISO_8859-1:it:CH:IT				\
 	    ja:EUC:ja:JP					\
+	    russian:KOI8-R:ru:SU				\
 	    spanish:ISO_8859-1:es:ES				\
 	    ukrainian:ISO_8859-1:uk:UA				\
 	    ;							\
