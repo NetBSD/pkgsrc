@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/16 11:19:03 grant Exp $
+
+SHA1 (mod_throttle312.tgz) = a813beb97d4a23f467e07bcc24d9464d2ee91ef5
+Size (mod_throttle312.tgz) = 41397 bytes
+SHA1 (patch-aa) = 76b0cf5576f4c2235ec66baacc6e995d9e07cdd2

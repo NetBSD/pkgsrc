@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/02/16 11:19:03 grant Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule throttle_module lib/httpd/mod_throttle.so
+
+  # throttle htdocs to 100k/sec
+  <Directory ${PREFIX}/share/httpd/htdocs>
+    <IfModule mod_throttle.c>
+      ThrottlePolicy Speed 100k 1
+    </IfModule>
+  </Directory>
+
+===========================================================================

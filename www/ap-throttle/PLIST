@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 11:19:03 grant Exp $
+lib/httpd/mod_throttle.so
