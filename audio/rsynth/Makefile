@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/30 19:51:35 wiz Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	1
@@ -10,9 +10,6 @@ DISTFILES=	rsynth-2.0.tar.gz ${DICT_FILES}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/FAQ-complete
 COMMENT=	Public Domain Speech Synthesis System
-
-DEPENDS+=	gdbm>=1.8.3:../../databases/gdbm
-DEPENDS+=	nas>=1.4:../../audio/nas
 
 DICT_FILES+=	README cmudict.0.4.Z cmulex.0.4.Z phoneset.0.4
 EXTRACT_ONLY=	rsynth-2.0.tar.gz
@@ -33,4 +30,6 @@ post-install:
 	cd ${DISTDIR}/${DIST_SUBDIR} && \
 		${INSTALL_DATA} ${DICT_FILES} ${PREFIX}/share/rsynth/
 
+.include "../../audio/nas/buildlink3.mk"
+.include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
