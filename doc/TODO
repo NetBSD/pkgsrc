@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3308 2005/03/27 18:09:01 wiz Exp $
+$NetBSD: TODO,v 1.3309 2005/03/27 18:14:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -252,8 +252,6 @@ Suggested package updates
 	o ArX-2.2.1
 	o BasiliskII-1.0.20050322
 	o Chinput-3.0.1
-	o DatLib-2.4
-	o DatUtil-2.16
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
