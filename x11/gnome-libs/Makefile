@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2003/01/14 21:41:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.83 2003/01/30 11:14:42 jmmv Exp $
 
 DISTNAME=		gnome-libs-1.4.1.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-libs/1.4/}
 
@@ -65,6 +65,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../net/ORBit/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
