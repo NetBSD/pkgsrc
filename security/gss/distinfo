@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/09/19 12:32:27 wiz Exp $
+$NetBSD: distinfo,v 1.6 2004/12/26 22:21:52 wiz Exp $
 
-SHA1 (gss-0.0.13.tar.gz) = 0aabd88ae437412c497a07f91e076e1c2d4b9ad3
-Size (gss-0.0.13.tar.gz) = 1336436 bytes
+SHA1 (gss-0.0.15.tar.gz) = 7bdb4d92b58c9c5ec4f0a564e704bf3cdcb91e29
+Size (gss-0.0.15.tar.gz) = 1383440 bytes
