@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-ag,v 1.2 2002/03/21 08:47:07 seb Exp $
 
---- gdtclft/demo/Makefile.in.orig	Fri Mar  1 22:35:35 2002
+--- gdtclft/demo/Makefile.in.orig	Fri Mar  8 23:12:10 2002
 +++ gdtclft/demo/Makefile.in
-@@ -187,7 +187,7 @@
+@@ -195,7 +195,7 @@
  
  AUTOMAKE_OPTIONS = 1.4
  
@@ -11,12 +11,20 @@ $NetBSD: patch-ag,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
  demo_SCRIPTS = entities
  demo_DATA = entities.README entities.html
  EXTRA_DIST = $(demo_SCRIPTS) $(demo_DATA)
-@@ -203,7 +203,7 @@
+@@ -205,6 +205,7 @@
+ CONFIG_CLEAN_FILES =
+ SCRIPTS = $(demo_SCRIPTS)
  
- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++depcomp =
+ DIST_SOURCES =
+ DATA = $(demo_DATA)
  
--TAR = gtar
-+TAR = tar
- GZIP_ENV = --best
- all: all-redirect
- .SUFFIXES:
+@@ -223,7 +224,7 @@
+ 	-rm -f libtool
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  gdtclft/demo/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps gdtclft/demo/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && \
+ 	  CONFIG_HEADERS= CONFIG_LINKS= \

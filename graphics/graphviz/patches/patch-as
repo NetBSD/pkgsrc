@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-as,v 1.2 2002/03/21 08:47:07 seb Exp $
 
---- tcldot/demo/Makefile.in.orig	Fri Mar  1 22:35:36 2002
+--- tcldot/demo/Makefile.in.orig	Fri Mar  8 23:12:22 2002
 +++ tcldot/demo/Makefile.in
-@@ -187,7 +187,7 @@
+@@ -195,7 +195,7 @@
  
  AUTOMAKE_OPTIONS = 1.4
  
@@ -11,12 +11,20 @@ $NetBSD: patch-as,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
  demo_SCRIPTS = doted gcat
  demo_DATA = doted.README gcat.README
  EXTRA_DIST = $(demo_SCRIPTS) $(demo_DATA)
-@@ -203,7 +203,7 @@
+@@ -205,6 +205,7 @@
+ CONFIG_CLEAN_FILES =
+ SCRIPTS = $(demo_SCRIPTS)
  
- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++depcomp =
+ DIST_SOURCES =
+ DATA = $(demo_DATA)
  
--TAR = gtar
-+TAR = tar
- GZIP_ENV = --best
- all: all-redirect
- .SUFFIXES:
+@@ -223,7 +224,7 @@
+ 	-rm -f libtool
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  tcldot/demo/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps tcldot/demo/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && \
+ 	  CONFIG_HEADERS= CONFIG_LINKS= \
