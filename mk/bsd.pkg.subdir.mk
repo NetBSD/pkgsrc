@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.9 1998/04/15 10:45:05 agc Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.10 1998/04/24 09:15:57 agc Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -110,16 +110,10 @@ readme:
 	@make README.html
 .endif
 
-.if (${OPSYS} == "NetBSD")
-PORTSDIR ?= /usr/pkgsrc
-.else
-PORTSDIR ?= /usr/ports
-.endif
-TEMPLATES ?= ${PORTSDIR}/templates
 .if defined(PORTSTOP)
-README=	${TEMPLATES}/README.top
+README=	templates/README.top
 .else
-README=	${TEMPLATES}/README.category
+README=	../templates/README.category
 .endif
 
 HTMLIFY=	sed -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
