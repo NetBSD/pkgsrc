@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/26 11:32:28 jlam Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/06 06:07:24 jlam Exp $
 
---- Makefile.orig	Wed Aug 25 22:08:08 1999
-+++ Makefile	Thu Aug 26 07:21:46 1999
-@@ -1,7 +1,7 @@
+--- ./Makefile.orig	Sun Aug 29 20:38:35 1999
++++ ./Makefile	Thu Sep 30 06:27:09 1999
+@@ -1,19 +1,18 @@
 -PREFIX = /usr/local
 +#PREFIX = /usr/local
  
@@ -10,9 +10,11 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/08/26 11:32:28 jlam Exp $
 -LDFLAGS = `get-wraster-flags --ldflags`
 +LDFLAGS += `get-wraster-flags --ldflags`
  LIBS = `get-wraster-flags --libs`
- CC = gcc
+-CC = gcc
++#CC = gcc
  
-@@ -10,10 +10,9 @@
+ all: wmessage
+ 
  wmessage: wmessage.o panel.o
  	$(CC) -o wmessage wmessage.o panel.o \
  		$(CFLAGS) $(LDFLAGS) $(LIBS) -lWMaker -lWINGs -lPropList
