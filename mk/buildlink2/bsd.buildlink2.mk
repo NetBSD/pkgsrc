@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.31 2002/09/24 22:16:42 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.32 2002/09/27 00:22:06 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -118,6 +118,7 @@ do-buildlink: ${_target_}
 # symlinks in ${BUILDLINK_DIR}.
 #
 _LT_ARCHIVE_TRANSFORM_SED=						\
+	-e "s|$/usr\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"		\
 	-e "s|${LOCALBASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"	\
 	-e "s|${X11BASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"
 
