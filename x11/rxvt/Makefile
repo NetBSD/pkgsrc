@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/04/18 23:07:17 martin Exp $
+# $NetBSD: Makefile,v 1.40 2003/04/28 20:31:29 martin Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -35,20 +35,10 @@ CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-24bit \
 			--enable-keepscrolling \
 			--enable-mousewheel \
+			--enable-greek \
 			--enable-slipwheeling \
 			--enable-languages \
 			--with-encoding=noenc
-
-# Note: greek support could not be enabled, as the resource file handling
-# to disable it at runtime is documented but does not seem to work.
-# If you want to check if this works, try building with this config
-# option:
-#
-#			--enable-greek
-#
-# and then map greektoggle_key to "nothing" via app-resources.
-# Note: the "AltGR" (Mode shift) key *is* used on most keyboard types
-# outside the ASCII-only region for inputing normal characters!
 
 CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.xpm}/include/X11
 CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.xpm}/lib
