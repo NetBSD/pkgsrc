@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2005/01/19 09:05:44 adam Exp $
+$NetBSD: patch-ac,v 1.8 2005/03/11 08:51:58 adam Exp $
 
 --- Makefile.orig	2004-12-17 17:53:47.000000000 +0000
 +++ Makefile
@@ -29,8 +29,8 @@ $NetBSD: patch-ac,v 1.7 2005/01/19 09:05:44 adam Exp $
  # if it's not installed in a standard location edit these lines for your installation
 -GD_INCL=/usr/local/include/
 -GD_LD=/usr/local/lib/
-+GD_INCL=${BUILDLINK_PREFIX.gd}/include/
-+GD_LD=${BUILDLINK_PREFIX.gd}/lib/
++GD_INCL=${PREFIX}/include/
++GD_LD=${PREFIX}/lib/
  GD_LIB=libgd.so
  # a static libgd is also available
  # GD_LIB=libgd.a
