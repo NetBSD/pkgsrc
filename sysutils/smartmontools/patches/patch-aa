@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/15 20:17:46 xtraeme Exp $
+
+--- Makefile.in.orig	2004-07-05 10:10:33.000000000 +0200
++++ Makefile.in	2004-07-15 22:11:59.000000000 +0200
+@@ -148,6 +148,7 @@
+ smartd_suffix = @smartd_suffix@
+ smartmontools_release_date = @smartmontools_release_date@
+ smartmontools_release_time = @smartmontools_release_time@
++examplesdir = $(prefix)/share/examples/@PACKAGE@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ 
+@@ -251,8 +252,7 @@
+             NEWS      \
+             README    \
+             TODO      \
+-            WARNINGS  \
+-            smartd.conf
++            WARNINGS
+ 
+ 
+ sysconf_DATA = smartd.conf$(smartd_suffix)
+@@ -646,12 +646,12 @@
+ sysconfDATA_INSTALL = $(INSTALL_DATA)
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(examplesdir)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
+-	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
++	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(examplesdir)/$$f"; \
++	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(examplesdir)/$$f; \
+ 	done
+ 
+ uninstall-sysconfDATA:
+@@ -1079,16 +1079,7 @@
+ 	cat $(top_builddir)/tmp.tail >> $(srcdir)/smartd.conf.5.in
+ 	rm -f $(top_builddir)/tmp.head $(top_builddir)/tmp.tail $(top_builddir)/tmp.directives
+ 
+-install-initdDATA: $(initd_DATA)
+-	$(mkinstalldirs) $(DESTDIR)$(initddir)
+-	$(INSTALL_SCRIPT) $(top_builddir)/smartd.initd $(DESTDIR)$(initddir)/smartd$(smartd_suffix)
+-	@echo -e "\n\n####################################################################\n#"
+-	@echo -e "#                       PLEASE READ THIS BOX!\n#"
+-	@echo -e "#   To manually start the smartd daemon, run:\n#   ${initddir}/smartd start\n#"
+-	@echo -e "#   To automatically start smartd on bootup, run:\n#   /sbin/chkconfig --add smartd\n#"
+-	@echo -e "#   smartd can now use a configuration file ${sysconfdir}/smartd.conf. Do:\n#   man smartd"
+-	@echo -e "#   to learn about it. A sample configuration file can be found in:\n#   ${docdir}\n#"
+-	@echo -e "####################################################################\n\n"
++install-initdDATA:
+ 
+ uninstall-initdDATA:
+ 	rm -rf $(DESTDIR)$(initddir)/smartd$(smartd_suffix)

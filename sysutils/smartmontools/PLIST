@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/15 20:17:45 xtraeme Exp $
+man/man5/smartd.conf.5
+man/man8/smartctl.8
+man/man8/smartd.8
+sbin/smartctl
+sbin/smartd
+share/doc/smartmontools/AUTHORS
+share/doc/smartmontools/CHANGELOG
+share/doc/smartmontools/COPYING
+share/doc/smartmontools/INSTALL
+share/doc/smartmontools/NEWS
+share/doc/smartmontools/README
+share/doc/smartmontools/TODO
+share/doc/smartmontools/WARNINGS
+share/doc/smartmontools/examplescripts/Example1
+share/doc/smartmontools/examplescripts/Example2
+share/doc/smartmontools/examplescripts/Example3
+share/doc/smartmontools/examplescripts/README
+share/examples/smartmontools/smartd.conf
+@dirrm share/doc/smartmontools/examplescripts
+@dirrm share/doc/smartmontools
+@dirrm share/examples/smartmontools
