@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2347 2004/11/09 20:20:45 wiz Exp $
+$NetBSD: TODO,v 1.2348 2004/11/09 22:29:17 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,6 @@ Suggested package updates
 	o glitz-0.2.3 [pkg/28107|rh]
 	o glpk-4.6
 	o gmpc-0.11.2
-	o gnomeicu-0.99.5
 	o gnunet-0.6.4a
 	o gnustep-ssl-1.10.1 [pkg/28112|rh]
 	o gogo-3.11p1
