@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2001/12/19 10:51:19 tron Exp $
+$NetBSD: distinfo,v 1.5 2003/09/26 14:04:54 tron Exp $
 
 SHA1 (craftcc35.tar.Z) = 8862b9001aa7d752a597033ef45d38ebfcee533f
 Size (craftcc35.tar.Z) = 3123677 bytes
+SHA1 (patch-aa) = 4be0033e5b4fd72713215ef313e6c7b77f6c5d99
 SHA1 (patch-ab) = 32f77d3208af98a26b4a505f51011b33c106b21d
 SHA1 (patch-ac) = 93eeef71231abbb5f5210cb7a4d9dac8d476b719
 SHA1 (patch-ad) = 096eb8db33986f115efb810f9768661917661fd8
@@ -9,3 +10,4 @@ SHA1 (patch-ae) = a891a2a2d80ae37eb0dcc5c218fbc8d8f9e6d2b0
 SHA1 (patch-af) = 35c9cae9fc803b9e9d7fa4714bbe4fea6972654b
 SHA1 (patch-ag) = 970a96a63c86b16b3b588bc90257c5914e3c35d5
 SHA1 (patch-ah) = 56b09c1fb761e88586cc66de6f1b8079c0f7a785
+SHA1 (patch-ai) = 437500858d90fb24f8fa494269ac83e501630738
