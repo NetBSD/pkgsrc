@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/11 02:05:08 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/20 23:37:01 jlam Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -21,9 +21,15 @@ MAKE_ENV+=		CCOPTS="${CFLAGS}"
 MAKE_ENV+=		LDOPTS="${LDFLAGS}"
 MAKE_ENV+=		SH="${SH}"
 
+USE_BUILDLINK_ONLY=	# defined
 USE_GNU_READLINE=	# uses remove_history() and history_list()
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../devel/readline/buildlink.mk"
+
+.if ${XAW_TYPE} == "3d"
+.include "../../x11/Xaw3d/buildlink.mk"
+.endif
 
 post-extract:
 	@${GZCAT} ${DISTDIR}/felt-3.05.ps.gz > ${WRKSRC}/felt.ps
