@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:43 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/03 20:56:32 jtb Exp $
 
-DISTNAME=		g2-0.40
+DISTNAME=		g2-0.40nb1
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://g2.sourceforge.net/pub/g2/
 
@@ -10,6 +10,8 @@ COMMENT=		Powerful, easy to use 2D graphics library
 
 GNU_CONFIGURE=		yes
 USE_X11=		yes
+USE_LIBTOOL=		yes
+
 ALL_TARGET=		depend all
 
 USE_PERL5=		#defined
@@ -23,5 +25,11 @@ post-build:
 
 post-install:
 	cd ${WRKSRC}/g2_perl && ${MAKE} install
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/g2
+	cd ${WRKSRC} && ${INSTALL_DATA} doc/g2_ref.txt COPYING README	\
+		${PREFIX}/share/doc/g2
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/g2
+	cd ${WRKSRC}/demo && ${INSTALL_DATA} demo_f.f g2_test.c penguin.c \
+		simple_PS.c simple_X11.c ${PREFIX}/share/examples/g2
 
 .include "../../mk/bsd.pkg.mk"
