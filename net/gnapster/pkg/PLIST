@@ -1,24 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2000/12/02 02:52:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/07/22 16:42:45 rh Exp $
 bin/gnapster
 share/gnapster/themes/cyblue.theme
 share/gnapster/themes/cypress.theme
 share/gnapster/themes/default.theme
 share/gnapster/themes/faded.theme
-share/locale/ca/LC_MESSAGES/gnapster.mo
-share/locale/da/LC_MESSAGES/gnapster.mo
-share/locale/de/LC_MESSAGES/gnapster.mo
-share/locale/el/LC_MESSAGES/gnapster.mo
-share/locale/es/LC_MESSAGES/gnapster.mo
-share/locale/fr/LC_MESSAGES/gnapster.mo
-share/locale/gl/LC_MESSAGES/gnapster.mo
-share/locale/hu/LC_MESSAGES/gnapster.mo
-share/locale/it/LC_MESSAGES/gnapster.mo
-share/locale/no/LC_MESSAGES/gnapster.mo
-share/locale/pl/LC_MESSAGES/gnapster.mo
-share/locale/pt/LC_MESSAGES/gnapster.mo
-share/locale/ru/LC_MESSAGES/gnapster.mo
-share/locale/sv/LC_MESSAGES/gnapster.mo
-share/locale/tr/LC_MESSAGES/gnapster.mo
 share/pixmaps/gnapster.png
+share/pixmaps/speedgray.xpm
+share/pixmaps/speedgreen.xpm
+share/pixmaps/speedred.xpm
+share/pixmaps/speedyellow.xpm
 @dirrm share/gnapster/themes
 @dirrm share/gnapster
