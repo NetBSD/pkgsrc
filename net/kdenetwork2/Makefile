@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:30 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/13 06:59:37 skrll Exp $
 
 DISTNAME=	kdenetwork-2.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
 .include "../../x11/kde2/Makefile.kde2"
+
+PTHREAD_OPT+=	require
 
 BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
@@ -13,8 +15,8 @@ USE_BUILDLINK_ONLY=	YES
 
 .include "../../converters/uulib/buildlink.mk"
 .include "../../databases/gdbm/buildlink.mk"
-.include "../../devel/ptl2/buildlink.mk"
 .include "../../x11/kde2/buildlink.mk"
 .include "../../x11/kdebase2/buildlink.mk"
+.include "../../mk/pthread/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

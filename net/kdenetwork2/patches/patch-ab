@@ -1,33 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2001/12/03 15:37:17 skrll Exp $
+$NetBSD: patch-ab,v 1.5 2002/09/13 06:59:38 skrll Exp $
 
 --- configure.orig	Wed Nov 14 14:39:38 2001
 +++ configure	Mon Nov 26 12:56:30 2001
-@@ -10832,13 +10832,13 @@
- 
- fi
- 
--echo "$as_me:10835: checking for pthread_create in -lpthread" >&5
--echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
-+echo "$as_me:10835: checking for pthread_create in -lPTL" >&5
-+echo $ECHO_N "checking for pthread_create in -lPTL... $ECHO_C" >&6
- if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lpthread  $LIBS"
-+LIBS="-lPTL  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- #line 10843 "configure"
- #include "confdefs.h"
-@@ -10882,7 +10882,7 @@
- echo "$as_me:10882: result: $ac_cv_lib_pthread_pthread_create" >&5
- echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
- if test $ac_cv_lib_pthread_pthread_create = yes; then
--  LIBPTHREAD="-lpthread"
-+  LIBPTHREAD="-lPTL"
- fi
- 
-     # Check whether --enable-kernel-threads or --disable-kernel-threads was given.
 @@ -11086,6 +11086,11 @@
          freebsd*)
                  CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
@@ -35,7 +9,7 @@ $NetBSD: patch-ab,v 1.4 2001/12/03 15:37:17 skrll Exp $
 +                ;;
 +        netbsd*)
 +                CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
-+		USE_THREADS="-I${BUILDLINK_DIR}/PTL/include"
++		USE_THREADS="-I${BUILDLINK_DIR}/include"
 +                echo "Setting NetBSD pthread compilation options"
                  ;;
          aix*)
