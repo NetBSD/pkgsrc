@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.144 2001/03/19 11:28:47 dmcmahill Exp $
+# $NetBSD: Packages.txt,v 1.145 2001/03/19 17:36:52 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -788,7 +788,7 @@ to when dealing with the PLIST file (or files, see below!).
    information on this target.
 
 
- 5.2 $PLIST_SRC
+ 5.2 ${PLIST_SRC}
  ================
 
 To use one or more files as source for the PLIST used in generating the
@@ -796,8 +796,19 @@ binary package, set the variable PLIST_SRC to the names of that file(s).
 The files are later concatenated using cat(1), and order of things is
 important.
 
+ 5.3 ${PLIST_SUBST}
+ ==================
 
- 5.3 Perl5 modules
+Similar to MESSAGE_SUBST (see above), you can add variables and their
+expansions to this variable in the following way:
+
+	   PLIST_SUBST+=    SOMEVAR="somevalue"
+
+which replaces all occurances of ${SOMEVAR} in the PLIST with "somevalue".
+For the values which are replaced by default, please look in bsd.pkg.mk
+(and search for PLIST_SUBST).
+
+ 5.4 Perl5 modules
  =================
 
 Perl5 modules will install into different places depending on the version
