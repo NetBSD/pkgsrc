@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $NetBSD: print-la-libnames,v 1.1 2004/09/10 19:51:51 jlam Exp $
+# $NetBSD: print-la-libnames,v 1.2 2004/09/21 17:54:38 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -56,18 +56,18 @@ do
 	*)	lapath="./$la" ;;
 	esac
 
-	if [ -r "$lapath" ] && \
-	   ${GREP} -q "libtool library file" "$lapath"; then
-		. "$lapath"
-		if [ "$installed" = "no" ]; then
-			${ECHO} 1>&2 "$0: \`$lapath' was not properly installed"
-			exit 1
+	if [ -r "$lapath" ]; then
+		if ${GREP} -q "libtool library file" "$lapath"; then
+			. "$lapath"
+			if [ "$installed" = "no" ]; then
+				${ECHO} 1>&2 "$0: \`$lapath' was not properly installed"
+				exit 1
+			fi
+			for lib in $library_names $old_library; do
+				${ECHO} "$dir$lib"
+			done
 		fi
-		for lib in $library_names $old_library; do
-			${ECHO} "$dir$lib"
-		done
 	else
 		${ECHO} 1>&2 "$0: cannot read libtool archive \`$lapath'"
-		exit 1
 	fi
 done | ${SORT} -u
