@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/26 06:47:12 recht Exp $
 #
 
 DISTNAME=	pgaccess-0.98.8
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pgaccess.org/
 COMMENT=	Graphical database management tool for PostgreSQL
 
-DEPENDS+=	tk-postgresql>=7.2.1:../../databases/tk-postgresql
+DEPENDS+=	tk-postgresql73>=7.3.6:../../databases/tk-postgresql73
 
 NO_BUILD=	# defined
 
