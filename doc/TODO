@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.741 2003/07/25 09:16:14 jmmv Exp $
+$NetBSD: TODO,v 1.742 2003/07/25 12:49:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -99,7 +99,6 @@ Suggested package updates
 	o easytag-0.28.1
 	o echoping-5.0.1
 	o elm-me-2.4pl102
-	o ethereal-0.9.14
 	o ettercap-0.6.b
 	o evilwm-0.99.15 [pkg/22239]
 	o evolution-1.4
