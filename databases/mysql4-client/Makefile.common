@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/03/13 12:09:36 recht Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/03/23 04:34:17 snj Exp $
 
 DISTNAME=		mysql-4.0.18
 CATEGORIES=		databases
@@ -52,6 +52,9 @@ CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
 CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 CPPFLAGS+=		-Dunix
 
