@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/28 20:11:49 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/27 07:00:53 jlam Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
 DISTNAME=	eb-3.0
@@ -49,7 +49,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-zlib
 USE_GMAKE=		yes
-#USE_LIBINTL=		yes
 
 APPENDIXDIR=	${PREFIX}/share/eb/appendix
 

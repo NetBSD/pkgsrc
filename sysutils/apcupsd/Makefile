@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/09/27 23:18:42 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/10/27 07:00:53 jlam Exp $
 
 DISTNAME=		apcupsd-3.6.2
 CATEGORIES=		sysutils
@@ -12,7 +12,6 @@ BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
 USE_GMAKE=		# defined
-#USE_LIBINTL=		# defined
 
 GNU_CONFIGURE=		# defined
 
