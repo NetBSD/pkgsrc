@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39.2.3 2002/06/23 18:46:58 jlam Exp $
+# $NetBSD: Makefile,v 1.39.2.4 2002/08/22 11:11:36 jlam Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
-DISTNAME=	libpng-1.2.1
+DISTNAME=	libpng-1.2.4
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
@@ -18,14 +18,24 @@ COMMENT=	Library for manipulating PNG images
 
 USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
-MAKE_ENV+=	REALCC="${BUILDLINK_CC}"
+
+LIBPNG_SO_MAJOR=	3
+LIBPNG_SO_MINOR=	1
 
 MAKEFILE=	scripts/makefile.std
+MAKE_ENV+=	REALCC="${CC}"
+MAKE_ENV+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
+MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
+PLIST_SUBST+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
+PLIST_SUBST+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/man/man5
+
+test: build
+	@cd ${WRKSRC} && ${MAKE} -f ${MAKEFILE} test
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

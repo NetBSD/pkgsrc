@@ -6,4 +6,4 @@ the Ogg bitstream makes seeking, time stamping and error recovery
 possible, as well as mixing several separate, concurrent media
 streams into a single physical bitstream.
 
-This package is libogg 1.0 rc3
+This package is libogg 1.0

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/27 13:33:26 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7.2.1 2002/08/22 11:11:14 jlam Exp $
 #
 # This Makefile fragment is included by packages that use zlib. 
 #
@@ -19,10 +19,31 @@ ZLIB_BUILDLINK_MK=	# defined
 
 BUILDLINK_DEPENDS.zlib?=	zlib>=1.1.3
 
-.if exists(/usr/include/zlib.h)
-_NEED_ZLIB=		NO
-.else
+.if defined(USE_ZLIB)
 _NEED_ZLIB=		YES
+.else
+.  if exists(/usr/include/zlib.h)
+_NEED_ZLIB=		NO
+.  else
+_NEED_ZLIB=		YES
+.  endif
+#
+# Solaris has a broken (for the purposes of pkgsrc) version of zlib.
+#
+_INCOMPAT_ZLIB=		SunOS-*-*
+
+#
+# Some NetBSD versions shipped with versions lower than 1.1.3.
+#
+_INCOMPAT_ZLIB+=	NetBSD-0.*-* NetBSD-1.[012]*-*
+_INCOMPAT_ZLIB+=	NetBSD-1.3-* NetBSD-1.3.*-* NetBSD-1.3[A-H]-*
+
+INCOMPAT_ZLIB?=		# empty
+.  for _pattern_ in ${_INCOMPAT_ZLIB} ${INCOMPAT_ZLIB}
+.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+_NEED_ZLIB=		YES
+.    endif
+.  endfor
 .endif
 
 .if ${_NEED_ZLIB} == "YES"

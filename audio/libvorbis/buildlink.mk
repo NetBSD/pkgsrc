@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2002/01/02 12:39:36 lukem Exp $
+# $NetBSD: buildlink.mk,v 1.8.2.1 2002/08/22 11:09:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libvorbis.
 #
@@ -17,7 +17,7 @@ LIBVORBIS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libvorbis?=	libvorbis>=1.0.0.7
+BUILDLINK_DEPENDS.libvorbis?=	libvorbis>=1.0.0.8
 DEPENDS+=	${BUILDLINK_DEPENDS.libvorbis}:../../audio/libvorbis
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libvorbis=libvorbis

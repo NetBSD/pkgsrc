@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2001/05/14 12:14:48 rh Exp $
+$NetBSD: patch-ab,v 1.2.2.1 2002/08/22 11:10:02 jlam Exp $
 
---- Makefile.in.orig	Mon Apr 16 13:58:39 2001
+--- Makefile.in.orig	Tue Aug 20 13:38:33 2002
 +++ Makefile.in
-@@ -27,7 +27,9 @@
+@@ -27,7 +27,9 @@ INSTALL_DATA = @INSTALL_DATA@
  SHELL = /bin/sh
  
  all : force
@@ -12,4 +12,4 @@ $NetBSD: patch-ab,v 1.2 2001/05/14 12:14:48 rh Exp $
 +	cp -pR include/*.h "$$builddir/include"
  	cd lib && $(MAKE) all
  	cd src && $(MAKE) all
- 	cd man && $(MAKE) all
+ 	cd po && $(MAKE) all

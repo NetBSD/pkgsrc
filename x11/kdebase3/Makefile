@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1.2.2 2002/06/23 19:05:08 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.3 2002/08/22 11:13:22 jlam Exp $
 
-DISTNAME=	kdebase-3.0.1
+DISTNAME=	kdebase-3.0.2
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -41,6 +42,8 @@ CONFIGURE_ARGS+=	--with-motif-libraries="${BUILDLINK_DIR}/lib"
 .else
 CONFIGURE_ARGS+=	--without-motif
 .endif
+
+_KDE3_EXTRA_INCLUDES=	${BUILDLINK_DIR}/include:${BUILDLINK_X11_DIR}/include:${BUILDLINK_DIR}/include/freetype2
 
 # Don't execute kappfinder_install at install-time.  This causes random
 # applications to be found which causes random .desktop files to be created

@@ -1,4 +1,4 @@
-This is PTL2 -- Portable Thread Library 2 wrrtten by Kota Abe.
+This is PTL2 -- Portable Thread Library 2 written by Kota Abe.
 
 This library is based on the standard "POSIX 1003.1c" and works on BSD UNIX
-(architecture-independent!)  See INSTALL for detail.
+(architecture-independent!).

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.2.2 2002/08/22 11:11:49 jlam Exp $
+
+--- guile-readline/configure	2002/07/23 21:24:40	1.1
++++ guile-readline/configure	2002/07/23 21:25:00
+@@ -1723,7 +1723,7 @@
+   readline ("");
+ }
+ EOF
+-if { (eval echo configure:1727: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest; exit) 2>/dev/null
++if { (eval echo configure:1727: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest < /dev/null; exit) 2>/dev/null
+ then
+   guile_cv_sigwinch_sa_restart_cleared=yes
+ else

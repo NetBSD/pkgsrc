@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5.2.2 2002/06/23 18:46:22 jlam Exp $
+$NetBSD: distinfo,v 1.5.2.3 2002/08/22 11:11:23 jlam Exp $
 
 SHA1 (gdk-pixbuf-0.17.0.tar.gz) = afff9706b5ff81bb1eaf631507ed331e0a5b7313
 Size (gdk-pixbuf-0.17.0.tar.gz) = 547194 bytes
+SHA1 (patch-aa) = 7cdd7081875d670d24e97a1b77812703d129d73d
 SHA1 (patch-ac) = 16fc33898fc1cb10b3e11ee26e7ea046d1f68032
 SHA1 (patch-ad) = 4a16e30eda46b55f51f87785e5f76ea33d3bd8ed
 SHA1 (patch-ae) = 2edd8fdd72d5dfaecc92974c6930e5d175e3b69f

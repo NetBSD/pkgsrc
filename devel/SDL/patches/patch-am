@@ -1,0 +1,500 @@
+$NetBSD: patch-am,v 1.5.4.2 2002/08/22 11:10:17 jlam Exp $
+--- configure.orig	Thu Nov  8 08:28:08 2001
++++ configure	Mon Jul 15 23:31:06 2002
+@@ -3588,10 +3588,7 @@
+     if test x$enable_audio = xyes -a x$enable_nas = xyes; then
+         echo $ac_n "checking for NAS audio support""... $ac_c" 1>&6
+ echo "configure:3591: checking for NAS audio support" >&5
+-        have_nas=no
+-        if test -r /usr/X11R6/include/audio/audiolib.h; then
+             have_nas=yes
+-        fi
+         echo "$ac_t""$have_nas" 1>&6
+         if test x$have_nas = xyes; then
+             CFLAGS="$CFLAGS -DNAS_SUPPORT"
+@@ -3683,7 +3680,7 @@
+                   NASMFLAGS="-f win32"
+                   ;;
+               *)
+-                  NASMFLAGS="-f elf"
++                  test -n "$NASMFLAGS" || NASMFLAGS="-f elf"
+                   ;;
+             esac
+             
+@@ -5582,8 +5579,8 @@
+             pthread_lib="-pthread"
+             ;;
+         *-*-netbsd*)
+-            pthread_cflags="-I/usr/pkg/include -D_REENTRANT"
+-            pthread_lib="-L/usr/pkg/lib -lpthread -lsem"
++            pthread_cflags="-D_REENTRANT"
++            pthread_lib="-lpthread"
+             ;;
+         *-*-openbsd*)
+             pthread_cflags="-D_REENTRANT"
+@@ -6034,6 +6031,379 @@
+     VIDEO_DRIVERS="$VIDEO_DRIVERS quartz/libvideo_quartz.la"
+ }
+ 
++CheckUSBHID()
++{
++    if test x$enable_joystick = xyes; then
++        have_libusbhid=no
++        have_libusb=no
++        echo $ac_n "checking for hid_init in -lusbhid""... $ac_c" 1>&6
++echo "configure:6041: checking for hid_init in -lusbhid" >&5
++ac_lib_var=`echo usbhid'_'hid_init | sed 'y%./+-%__p_%'`
++if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  ac_save_LIBS="$LIBS"
++LIBS="-lusbhid  $LIBS"
++cat > conftest.$ac_ext <<EOF
++#line 6049 "configure"
++#include "confdefs.h"
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char hid_init();
++
++int main() {
++hid_init()
++; return 0; }
++EOF
++if { (eval echo configure:6060: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++LIBS="$ac_save_LIBS"
++
++fi
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  have_libusbhid=yes
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++        if test x$have_libusbhid = xyes; then
++            SYSTEM_LIBS="$SYSTEM_LIBS -lusbhid"
++
++            ac_safe=`echo "usbhid.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for usbhid.h""... $ac_c" 1>&6
++echo "configure:6085: checking for usbhid.h" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 6090 "configure"
++#include "confdefs.h"
++#include <usbhid.h>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:6095: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  have_usbhid_h=yes
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++            ac_safe=`echo "libusbhid.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for libusbhid.h""... $ac_c" 1>&6
++echo "configure:6118: checking for libusbhid.h" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 6123 "configure"
++#include "confdefs.h"
++#include <libusbhid.h>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:6128: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  have_libusbhid_h=yes
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++            if test x$have_usbhid_h = xyes; then
++                CFLAGS="$CFLAGS -DHAVE_USBHID_H"
++            fi
++            if test x$have_libusbhid_h = xyes; then
++                CFLAGS="$CFLAGS -DHAVE_LIBUSBHID_H"
++            fi
++	else
++            echo $ac_n "checking for hid_init in -lusb""... $ac_c" 1>&6
++echo "configure:6157: checking for hid_init in -lusb" >&5
++ac_lib_var=`echo usb'_'hid_init | sed 'y%./+-%__p_%'`
++if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  ac_save_LIBS="$LIBS"
++LIBS="-lusb  $LIBS"
++cat > conftest.$ac_ext <<EOF
++#line 6165 "configure"
++#include "confdefs.h"
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char hid_init();
++
++int main() {
++hid_init()
++; return 0; }
++EOF
++if { (eval echo configure:6176: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++LIBS="$ac_save_LIBS"
++
++fi
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  have_libusb=yes
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++            if test x$have_libusb = xyes; then
++                SYSTEM_LIBS="$SYSTEM_LIBS -lusb"
++
++                ac_safe=`echo "usb.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for usb.h""... $ac_c" 1>&6
++echo "configure:6201: checking for usb.h" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 6206 "configure"
++#include "confdefs.h"
++#include <usb.h>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:6211: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  have_usb_h=yes
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++                ac_safe=`echo "libusb.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for libusb.h""... $ac_c" 1>&6
++echo "configure:6234: checking for libusb.h" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 6239 "configure"
++#include "confdefs.h"
++#include <libusb.h>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:6244: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  have_libusb_h=yes
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++                if test x$have_usb_h = xyes; then
++                    CFLAGS="$CFLAGS -DHAVE_USB_H"
++                fi
++                if test x$have_libusb_h = xyes; then
++                    CFLAGS="$CFLAGS -DHAVE_LIBUSB_H"
++                fi
++            fi
++        fi
++
++        echo $ac_n "checking for usbhid""... $ac_c" 1>&6
++echo "configure:6275: checking for usbhid" >&5
++        have_usbhid=no
++        cat > conftest.$ac_ext <<EOF
++#line 6278 "configure"
++#include "confdefs.h"
++
++          #include <sys/types.h>
++          #if defined(HAVE_USB_H)
++          #include <usb.h>
++          #endif
++          #include <dev/usb/usb.h>
++          #include <dev/usb/usbhid.h>
++          #if defined(HAVE_USBHID_H)
++          #include <usbhid.h>
++          #elif defined(HAVE_LIBUSB_H)
++          #include <libusb.h>
++          #elif defined(HAVE_LIBUSBHID_H)
++          #include <libusbhid.h>
++          #endif
++        
++int main() {
++
++          struct report_desc *repdesc;
++          struct usb_ctl_report *repbuf;
++          hid_kind_t hidkind;
++        
++; return 0; }
++EOF
++if { (eval echo configure:6303: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
++  rm -rf conftest*
++  
++        have_usbhid=yes
++        
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++fi
++rm -f conftest*
++        echo "$ac_t""$have_usbhid" 1>&6
++
++        if test x$have_usbhid = xyes; then
++            echo $ac_n "checking for ucr_data member of usb_ctl_report""... $ac_c" 1>&6
++echo "configure:6317: checking for ucr_data member of usb_ctl_report" >&5
++            have_usbhid_ucr_data=no
++            cat > conftest.$ac_ext <<EOF
++#line 6320 "configure"
++#include "confdefs.h"
++
++              #include <sys/types.h>
++              #if defined(HAVE_USB_H)
++              #include <usb.h>
++              #endif
++              #include <dev/usb/usb.h>
++              #include <dev/usb/usbhid.h>
++              #if defined(HAVE_USBHID_H)
++              #include <usbhid.h>
++              #elif defined(HAVE_LIBUSB_H)
++              #include <libusb.h>
++              #elif defined(HAVE_LIBUSBHID_H)
++              #include <libusbhid.h>
++              #endif
++            
++int main() {
++
++              struct usb_ctl_report buf;
++              if (buf.ucr_data) { }
++            
++; return 0; }
++EOF
++if { (eval echo configure:6344: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
++  rm -rf conftest*
++  
++            have_usbhid_ucr_data=yes
++            
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++fi
++rm -f conftest*
++            if test x$have_usbhid_ucr_data = xyes; then
++                CFLAGS="$CFLAGS -DUSBHID_UCR_DATA"
++            fi
++            echo "$ac_t""$have_usbhid_ucr_data" 1>&6
++            
++	    echo $ac_n "checking for new usbhid API""... $ac_c" 1>&6
++echo "configure:6360: checking for new usbhid API" >&5
++            have_usbhid_new=no
++            cat > conftest.$ac_ext <<EOF
++#line 6363 "configure"
++#include "confdefs.h"
++
++              #include <sys/types.h>
++              #if defined(HAVE_USB_H)
++              #include <usb.h>
++              #endif
++              #include <dev/usb/usb.h>
++              #include <dev/usb/usbhid.h>
++              #if defined(HAVE_USBHID_H)
++              #include <usbhid.h>
++              #elif defined(HAVE_LIBUSB_H)
++              #include <libusb.h>
++              #elif defined(HAVE_LIBUSBHID_H)
++              #include <libusbhid.h>
++              #endif
++            
++int main() {
++
++              report_desc_t d;
++	      hid_start_parse(d, 1, 1);
++            
++; return 0; }
++EOF
++if { (eval echo configure:6387: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
++  rm -rf conftest*
++  
++            have_usbhid_new=yes
++            
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++fi
++rm -f conftest*
++            if test x$have_usbhid_new = xyes; then
++                CFLAGS="$CFLAGS -DUSBHID_NEW"
++            fi
++            echo "$ac_t""$have_usbhid_new" 1>&6
++
++            JOYSTICK_SUBDIRS="$JOYSTICK_SUBDIRS bsd"
++            JOYSTICK_DRIVERS="$JOYSTICK_DRIVERS bsd/libjoystick_bsd.la"
++        fi
++    fi
++}
++
+ case "$target" in
+     *-*-linux*)
+         ARCH=linux
+@@ -6588,14 +6958,17 @@
+         CheckDummyVideo
+         CheckDiskAudio
+         CheckNASM
++        CheckOPENBSDAUDIO
+         CheckOSS
+         CheckARTSC
+         CheckESD
+         CheckNAS
+         CheckX11
++        CheckDGA
+         CheckAAlib
+         CheckOpenGL
+         CheckPTHREAD
++        CheckUSBHID
+         # Set up files for the main() stub
+         
+   echo "Copying src/main/linux/SDL_main.c -> src/main/SDL_main.c"
+@@ -6614,12 +6987,6 @@
+             AUDIO_SUBDIRS="$AUDIO_SUBDIRS sun"
+             AUDIO_DRIVERS="$AUDIO_DRIVERS sun/libaudio_sun.la"
+         fi
+-        # Set up files for the joystick library
+-        # (No joystick support yet)
+-        if test x$enable_joystick = xyes; then
+-            JOYSTICK_SUBDIRS="$JOYSTICK_SUBDIRS dummy"
+-            JOYSTICK_DRIVERS="$JOYSTICK_DRIVERS dummy/libjoystick_dummy.la"
+-        fi
+         # Set up files for the cdrom library
+         if test x$enable_cdrom = xyes; then
+             CDROM_SUBDIRS="$CDROM_SUBDIRS openbsd"
+@@ -7553,6 +7920,19 @@
+ __EOF__
+   cat >>$new <$old
+ 
++	    if test x$use_pthreads = xyes -a x$enable_pthread_sem != xyes; then
++		
++  echo "Copying src/thread/generic/SDL_syssem.c -> src/thread/SDL_syssem.c"
++  old="$srcdir/src/thread/generic/SDL_syssem.c"
++  new="$srcdir/src/thread/SDL_syssem.c"
++  cat >$new <<__EOF__
++/* WARNING:  This file was automatically generated!
++ * Original: $old
++ */
++__EOF__
++  cat >>$new <$old
++
++	    else
+             
+   echo "Copying src/thread/linux/SDL_syssem.c -> src/thread/SDL_syssem.c"
+   old="$srcdir/src/thread/linux/SDL_syssem.c"
+@@ -7564,6 +7944,7 @@
+ __EOF__
+   cat >>$new <$old
+ 
++	    fi
+             
+   echo "Copying src/thread/generic/SDL_syssem_c.h -> src/thread/SDL_syssem_c.h"
+   old="$srcdir/src/thread/generic/SDL_syssem_c.h"
+@@ -8844,6 +9225,10 @@
+   SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
+ fi
+ 
++if test $ARCH = netbsd; then
++  SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib -Wl,-rpath,${X11BASE}/lib"
++fi
++
+ if test $ARCH = openbsd; then
+   SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib $SYSTEM_LIBS"
+ fi
+@@ -9068,6 +9453,7 @@
+ src/joystick/Makefile
+ src/joystick/amigaos/Makefile
+ src/joystick/beos/Makefile
++src/joystick/bsd/Makefile
+ src/joystick/darwin/Makefile
+ src/joystick/dummy/Makefile
+ src/joystick/linux/Makefile
+@@ -9328,6 +9714,7 @@
+ src/joystick/Makefile
+ src/joystick/amigaos/Makefile
+ src/joystick/beos/Makefile
++src/joystick/bsd/Makefile
+ src/joystick/darwin/Makefile
+ src/joystick/dummy/Makefile
+ src/joystick/linux/Makefile

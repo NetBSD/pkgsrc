@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2001/11/30 16:29:28 jlam Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2002/08/22 11:11:52 jlam Exp $
 
 DISTNAME=	faces-1.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/faces
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	visual mail, user and print face server
+
+DEPENDS+=	netpbm>=9.2:../../graphics/netpbm
 
 LICENSE=	limited-redistribution
 RESTRICTED=	"Distribution not allowed if money exchanged"
@@ -29,7 +31,13 @@ MAKE_ENV+=	CC=gcc
 MAKE_ENV+=	CPPFLAGS=
 .endif
 
-do-configure:
+REPLACE_PERL=	scripts/addxface scripts/deepen scripts/facesaddr \
+		scripts/facesall scripts/from.faces scripts/lpqall.faces \
+		scripts/mailq.faces scripts/mailqto scripts/mailqto.faces \
+		scripts/mkfacesindex scripts/newscheck.faces \
+		scripts/newsfrom.faces scripts/rotary.faces
+
+do-configure: replace-perl
 	${LN} -sf Makefile.dist ${WRKSRC}/${MAKEFILE}
 	cd ${WRKSRC};							\
 	files="								\
@@ -38,14 +46,15 @@ do-configure:
 		scripts/facesall					\
 		scripts/mkfacesindex					\
 	";								\
-	for file in $${files}; do					\
+	for FILE in $${files}; do					\
 		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
-			$${file} > $${file}.fixed;			\
-		if [ -x $${file} ]; then				\
-			${CHMOD} +x $${file}.fixed;			\
+			$${FILE} > $${FILE}.fixed;			\
+		if [ -x $${FILE} ]; then				\
+			${CHMOD} +x $${FILE}.fixed;			\
 		fi;							\
-		${MV} -f $${file}.fixed $${file};			\
+		${MV} -f $${FILE}.fixed $${FILE};			\
 	done
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

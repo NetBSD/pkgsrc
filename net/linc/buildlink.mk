@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/04/27 08:48:33 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2.2.1 2002/08/22 11:12:03 jlam Exp $
 #
 # This Makefile fragment is included by packages that use linc.
 #
@@ -17,7 +17,7 @@ LINC_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.linc?=	linc>=0.1.21nb1
+BUILDLINK_DEPENDS.linc?=	linc>=0.5.0
 DEPENDS+=	${BUILDLINK_DEPENDS.linc}:../../net/linc
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.linc=linc

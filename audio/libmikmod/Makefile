@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2002/02/18 15:14:02 seb Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2002/08/22 11:09:48 jlam Exp $
 
-DISTNAME=		libmikmod-3.1.9
+DISTNAME=		libmikmod-3.1.10
 CATEGORIES=		audio
 MASTER_SITES=		http://www.mikmod.org/files/libmikmod/
 

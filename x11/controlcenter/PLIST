@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/03/24 01:07:47 rh Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2002/08/22 11:13:02 jlam Exp $
 bin/background-properties-capplet
 bin/file-types-capplet
 bin/gnome-edit-properties-capplet
@@ -151,6 +151,7 @@ share/locale/zh_TW/LC_MESSAGES/control-center.mo
 share/omf/control-center/control-center-C.omf
 share/pixmaps/ccsplash.png
 share/pixmaps/control-center.png
+@exec ${MKDIR} -m 0755 %D/share/control-center/capplets
 @dirrm share/omf/control-center
 @dirrm share/gnome/wm-properties
 @dirrm share/gnome/help/control-center/C/stylesheet-images
@@ -165,6 +166,7 @@ share/pixmaps/control-center.png
 @dirrm share/gnome/apps/Settings/Desktop
 @dirrm share/gnome/apps/Settings
 @unexec ${RMDIR} -p %D/share/gnome/apps 2>/dev/null || true
+@dirrm share/control-center/capplets
 @dirrm share/control-center/UIOptions
 @dirrm share/control-center/Session
 @dirrm share/control-center/Peripherals

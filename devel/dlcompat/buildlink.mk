@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1.2.2 2002/06/23 18:44:04 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.1.1.1.2.3 2002/08/22 11:10:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use dlcompat (libdl).
 #
@@ -15,7 +15,7 @@ DLCOMPAT_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.dlcompat?=	dlcompat>=20020508
+BUILDLINK_DEPENDS.dlcompat?=	dlcompat>=20020606
 DEPENDS+=		${BUILDLINK_DEPENDS.dlcompat}:../../devel/dlcompat
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.dlcompat=dlcompat

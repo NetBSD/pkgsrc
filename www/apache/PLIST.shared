@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.shared,v 1.2 2002/02/01 16:04:39 jlam Exp $
+@comment $NetBSD: PLIST.shared,v 1.2.2.1 2002/08/22 11:12:55 jlam Exp $
 lib/httpd/httpd.exp
 lib/httpd/mod_define.so
 lib/httpd/mod_proxy.so
-@dirrm lib/httpd
+@unexec ${RMDIR} %D/lib/httpd 2>/dev/null || ${TRUE}

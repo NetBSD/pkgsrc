@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.17 2002/02/10 12:51:00 abs Exp $
+$NetBSD: patch-aa,v 1.17.2.1 2002/08/22 11:11:17 jlam Exp $
 
---- coders/fits.c.orig	Sun Feb 10 10:31:38 2002
-+++ coders/fits.c
-@@ -183,7 +183,9 @@
+--- coders/fits.c.orig	Sun Aug 18 03:20:46 2002
++++ coders/fits.c	Tue Aug 20 08:35:05 2002
+@@ -180,9 +180,11 @@
+     k,
+     l,
+     packet_size,
+-    quantum,
+     scene,
      y;
- 
-   long
--    count,
-+    count;
 +
 +  int32_t
-     quantum;
++    quantum;
  
    register IndexPacket
+     *indexes;

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 18:44:32 jlam Exp $
+# $NetBSD: Makefile,v 1.5.2.2 2002/08/22 11:10:46 jlam Exp $
 #
 
-DISTNAME=	libusb-0.1.5
-PKGREVISION=1
+DISTNAME=	libusb-0.1.6a
+PKGNAME=	${DISTNAME:S/a/.1/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 

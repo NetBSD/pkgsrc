@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.82 2002/03/13 17:37:02 fredb Exp $
+# $NetBSD: Makefile,v 1.82.2.1 2002/08/22 11:11:15 jlam Exp $
 
-DISTNAME=		ImageMagick-5.3.9
-PKGREVISION=		1
+DISTNAME=		ImageMagick-5.4.8-2
+PKGNAME=		${DISTNAME:S/-2/.2/}
 CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
+			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tron@netbsd.org
@@ -14,17 +16,23 @@ CONFLICTS=		geomview-[0-9]*    # both have a program named 'animate'
 
 DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
 
-NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-2//}
 
 # c++ broken as of 'gcc version 2.95.3 20010315 (release) (NetBSD nb1)'
 NOT_FOR_PLATFORM=	NetBSD-*-sparc64
 
 .include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == NetBSD)
+BUILD_DEPENDS+=		bash>=2.0:../../shells/bash2
+
+CONFIGURE_SCRIPT=	${LOCALBASE}/bin/bash ./configure
+.endif
 
 # Avoid compiler bug on "arm32"
 .if (${MACHINE_ARCH} == arm32)

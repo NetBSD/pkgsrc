@@ -7,7 +7,7 @@ larger GNOME applications that might want to use these widgets.
 Please notice that these widgets are currently licensed under the
 terms of the GNU GPL (with the exception of the gtk-combo-box which is
 under the LGPL).  If you want to contribute code to the official
-distirbution of this code you have to sign a copyright assignment to
+distribution of this code you have to sign a copyright assignment to
 Helix Code.  This would allow Helix Code in the future to redistribute
 the code it fully owns under a difference license.
 

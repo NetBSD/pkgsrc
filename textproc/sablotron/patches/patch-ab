@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.2.2 2002/08/22 11:12:49 jlam Exp $
+
+--- src/engine/Makefile.am	2002/07/24 12:13:41	1.1
++++ src/engine/Makefile.am	2002/07/24 12:14:28
+@@ -8,6 +8,8 @@
+ 
+ lib_LTLIBRARIES = libsablot.la
+ 
++libsablot_la_LIBADD = @ICONV_LIB@ @EXPAT_LIBS@
++
+ libsablot_la_SOURCES = \
+         arena.h \
+         base.h \

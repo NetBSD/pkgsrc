@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10.2.2 2002/06/21 23:04:59 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.3 2002/08/22 11:09:51 jlam Exp $
 
-DISTNAME=	libogg-1.0rc3
-PKGNAME=	libogg-1.0.0.7
+DISTNAME=	libogg-1.0
+PKGNAME=	libogg-1.0.0.8
 CATEGORIES=	devel audio
-MASTER_SITES=	http://www.vorbis.com/files/rc3/unix/
+MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.xiph.org/ogg/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10.2.2 2002/07/01 17:44:57 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.3 2002/08/22 11:11:08 jlam Exp $
 #
 
 DISTNAME=	rpc2-1.13
@@ -10,14 +10,13 @@ MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	CMU (Coda) remote procedure call package
 
-BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
-
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERL=${PERL5}
 
+USE_PERL5=		build
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

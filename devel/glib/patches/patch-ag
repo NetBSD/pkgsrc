@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1.4.2 2002/08/22 11:10:39 jlam Exp $
+
+--- gmodule.pc.in.orig	Thu Nov 30 11:15:33 2000
++++ gmodule.pc.in
+@@ -7,5 +7,5 @@ Name: GModule
+ Description: Dynamic module loader for GLib
+ Requires: glib
+ Version: @VERSION@
+-Libs: -L${libdir} @G_MODULE_LDFLAGS@ -lgmodule @G_MODULE_LIBS@
++Libs: -L${libdir} -Wl,-R${libdir} @G_MODULE_LDFLAGS@ -lgmodule @G_MODULE_LIBS@
+ Cflags:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61.2.3 2002/06/23 18:46:49 jlam Exp $
+# $NetBSD: Makefile,v 1.61.2.4 2002/08/22 11:11:35 jlam Exp $
 
 DISTNAME=	netpbm-9.25
 CATEGORIES=	graphics
@@ -27,6 +27,7 @@ CFLAGS=
 
 .if (${OPSYS} == SunOS)
 MAKE_ENV+=	NETWORKLD="-lsocket -lnsl"
+BUILD_DEPENDS+=	flex>=2.5.4:../../devel/flex
 .else
 MAKE_ENV+=	NETWORKLD=""
 .endif

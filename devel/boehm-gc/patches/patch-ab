@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.7.2.2 2002/08/22 11:10:24 jlam Exp $
+
+--- dyn_load.c.orig	Tue Jun 26 04:37:38 2001
++++ dyn_load.c	Wed Jul 31 15:57:28 2002
+@@ -426,9 +426,19 @@
+ 
+ #if defined(NETBSD)
+ #  include <sys/exec_elf.h>
++/* for compatibility with 1.4.x */
++#  ifndef DT_DEBUG
++#  define DT_DEBUG	21
++#  endif
++#  ifndef PT_LOAD
++#  define PT_LOAD	1
++#  endif
++#  ifndef PF_W
++#  define PF_W		2	
++#  endif
+ #else
+ #  include <elf.h>
+ #endif
+ #include <link.h>
+ 
+ /* Newer versions of Linux/Alpha and Linux/x86 define this macro.  We
