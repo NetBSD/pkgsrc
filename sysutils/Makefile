@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2003/10/20 00:31:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.205 2003/12/03 05:10:45 martti Exp $
 
 COMMENT=	System utilities
 
@@ -162,6 +162,7 @@ SUBDIR+=	xbatt
 SUBDIR+=	xbattbar
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
+SUBDIR+=	xfce4-diskperf-plugin
 SUBDIR+=	xfce4-fm
 SUBDIR+=	xfce4-fm-icons
 SUBDIR+=	xfce4-minicmd-plugin
