@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2001/10/21 22:51:31 mjl Exp $
+# $NetBSD: Makefile,v 1.259 2001/10/22 14:27:05 martti Exp $
 #
 
 COMMENT=	Networking tools
@@ -142,6 +142,7 @@ SUBDIR+=	poptop
 SUBDIR+=	ppp
 SUBDIR+=	ppp-mppe
 SUBDIR+=	pptp
+SUBDIR+=	proftpd
 SUBDIR+=	publicfile
 SUBDIR+=	pxe
 SUBDIR+=	py-soaplib
