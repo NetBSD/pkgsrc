@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.85 1998/05/23 15:42:59 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.86 1998/05/25 00:04:30 hubertf Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -1849,6 +1849,40 @@ depends-list:
 	done
 .endif
 
+# The following assumes that PACKAGES is set like the following:
+# PACKAGES= /usr/pkgsrc/packages/`uname -r`/${MACHINE_ARCH}
+# i.e. contain OS version and arch name as subdirs
+.if !target(binpkg-list)
+binpkg-list:
+	@cd ${PACKAGES}/../.. ; \
+	for i in */* ; \
+	do \
+		f=$$i/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ; \
+		if [ -f $$f ]; then \
+			echo $$i; \
+		fi ; \
+	done | awk ' 											\
+		BEGIN 												\
+		{ 													\
+			FS="/";											\
+		} 													\
+		{													\
+			rel=$$1 ; 										\
+			arch=$$2 ; 										\
+			if (arch in f) 									\
+				f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%, " f[arch];					\
+			else 											\
+				f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%";								\
+		} 													\
+		END 												\
+		{ 													\
+			for (rel in	f) {								\
+				print "%%BIN_PREARCH%%" rel "%%BIN_POSTARCH%% (NetBSD V" f[rel] ")";						\
+			}												\
+		} 													\
+	'
+.endif
+
 ################################################################
 # Everything after here are internal targets and really
 # shouldn't be touched by anybody but the release engineers.
@@ -1912,10 +1946,12 @@ README_NAME=	${TEMPLATES}/README.port
 README.html:
 	@${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}"
 	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES >> $@.tmp1
-	@[ -s $@.tmp1 ] || echo "(none)" >> $@.tmp1
+	@[ -s $@.tmp1 ] || echo "<I>(none)</I>" >> $@.tmp1
 	@${MAKE} package-depends PACKAGE_NAME_AS_LINK=YES >> $@.tmp2
-	@[ -s $@.tmp2 ] || echo "(none)" >> $@.tmp2
+	@[ -s $@.tmp2 ] || echo "<I>(none)</I>" >> $@.tmp2
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
+	@${MAKE} binpkg-list  >> $@.tmp4
+	@[ -s $@.tmp4 ] || echo "<I>(no precompiled binaries available)</I>" >> $@.tmp4
 	@${CAT} ${README_NAME} | \
 		${SED} -e 's|%%PORT%%|'"`${MAKE} package-path | ${HTMLIFY}`"'|g' \
 			-e '/%%PKG%%/r$@.tmp3' \
@@ -1926,8 +1962,16 @@ README.html:
 			-e '/%%BUILD_DEPENDS%%/d' \
 			-e '/%%RUN_DEPENDS%%/r$@.tmp2' \
 			-e '/%%RUN_DEPENDS%%/d' \
+			-e '/%%BIN_PKGS%%/r$@.tmp4' \
+			-e '/%%BIN_PKGS%%/d' \
+		| ${SED} \
+			-e 's@%%BIN_PREREL%%@<A HREF="ftp://ftp.netbsd.org/pub/NetBSD/packages/@g' \
+			-e 's@%%BIN_MEDREL%%@/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}">@g' \
+			-e 's@%%BIN_POSTREL%%@</A>@g' \
+			-e 's@%%BIN_PREARCH%%@<LI> @g' \
+			-e 's@%%BIN_POSTARCH%%@@g' \
 		>> $@
-	@rm -f $@.tmp1 $@.tmp2 $@.tmp3
+	@rm -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4
 
 .if !target(print-depends-list)
 print-depends-list:
