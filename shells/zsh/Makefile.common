@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/06/29 04:24:56 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/06/30 13:46:04 grant Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -14,11 +14,12 @@ MAINTAINER=	${ZSH_MAINTAINER}
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
-USE_BUILDLINK2=		yes
-USE_PKGINSTALL=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+GNU_CONFIGURE=		YES
+TEXINFO_OVERRIDE=	YES
+
 INFO_FILES=		zsh.info
-TEXINFO_OVERRIDE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,12 +27,12 @@ TEXINFO_OVERRIDE=	yes
 CONFIGURE_ARGS+=--disable-dynamic
 LDFLAGS+=	-static
 .else
-.if ${OPSYS} == "SunOS"
+.  if ${OPSYS} == "SunOS"
 PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
-.else
+.  else
 LDFLAGS+=	-Wl,${RPATH_FLAG}${PREFIX}/lib/zsh
 PLIST_SRC=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
-.endif
+.  endif
 .endif
 
 .undef MANZ
