@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/01 18:22:04 jmmv Exp $
 #
 
-DISTNAME=	libgnome-2.4.0
-PKGREVISION=	4
+DISTNAME=	libgnome-2.6.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -46,12 +45,12 @@ GCONF2_SCHEMAS+=	desktop_gnome_applications_window_manager.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_background.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_file_views.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_interface.schemas
+GCONF2_SCHEMAS+=	desktop_gnome_lockdown.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_peripherals_keyboard.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_peripherals_mouse.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_sound.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_typing_break.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_url_handlers.schemas
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
