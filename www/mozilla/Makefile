@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2001/06/09 04:13:25 taya Exp $
+# $NetBSD: Makefile,v 1.69 2001/07/01 13:05:07 taya Exp $
 
-MOZ_VER=	0.9.1
+MOZ_VER=	0.9.2
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}
 WRKSRC=		${WRKDIR}/mozilla
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.mozilla.org/
 COMMENT=	The open-source version of the Netscape browser
 
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
@@ -35,15 +34,7 @@ CONFIGURE_ARGS=	--disable-tests \
 		--with-png=${LOCALBASE} \
 		--enable-mathml \
 		--enable-svg \
-		--with-extensions=cookie,irc,wallet,xmlextras,xml-rpc \
-		--without-pthreads \
 		--enable-crypto
-
-.if  ${MACHINE_ARCH} == "m68k"
-DBG=
-.else
-CONFIGURE_ARGS+= --enable-optimize
-.endif
 
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
@@ -66,9 +57,15 @@ SHAREMODE?=	644
 
 .include "../../mk/bsd.prefs.mk"
 
-pre-configure:
-	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf)
-	(cd ${WRKSRC}/nsprpub && ${LOCALBASE}/bin/autoconf)
+.if (${OPSYS} == "NetBSD")
+CONFIGURE_ARGS+= --without-pthreads
+.endif
+
+.if  ${MACHINE_ARCH} == "m68k"
+DBG=
+.else
+CONFIGURE_ARGS+= --enable-optimize
+.endif
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
