@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/10/19 15:56:22 tsarna Exp $
+# $NetBSD: Makefile,v 1.19 1999/01/03 13:13:13 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
 DEPENDS+=		readline-2.2:../../devel/readline
-DEPENDS+=		addnerd-1.5:../../sysutils/addnerd
+DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
 DEPENDS+=		gnuplot-3.5:../../graphics/gnuplot
 DEPENDS+=		gtar-1.12:../../archivers/gtar
 
