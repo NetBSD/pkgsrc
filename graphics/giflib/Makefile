@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 1999/10/09 20:31:33 jlam Exp $
+# $NetBSD: Makefile,v 1.18 1999/10/25 14:37:32 drochner Exp $
 #
 
 DISTNAME=	giflib-4.1.0
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://prtr-13.ucsc.edu/pub/giflib/
+MASTER_SITES=	ftp://prtr-13.ucsc.edu/pub/libungif/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://prtr-13.ucsc.edu/~badger/software/giflib.shtml
