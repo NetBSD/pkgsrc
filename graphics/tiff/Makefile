@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2000/01/06 01:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2000/04/01 00:05:27 wiz Exp $
 
-DISTNAME=	tiff-v3.5.4
-PKGNAME=	tiff-3.5.4
+DISTNAME=	tiff-v3.5.5
+PKGNAME=	tiff-3.5.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libtiff.org/ \
 		ftp://ftp.onshore.com/pub/libtiff/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-# need DISTFILES above for adding lzw-files to it, if USE_GIF is defined
+# need DISTFILES above for adding lzw-files to it if USE_GIF is defined
 # in mk.conf
 
 MAINTAINER=	packages@netbsd.org
@@ -28,12 +28,14 @@ ZLIBDIR=	/usr/lib
 .endif
 
 .if defined(USE_GIF)
-DISTFILES+=	libtiff-lzw-compression-kit.tar.gz
+DISTFILES+=	libtiff-lzw-compression-kit-1.1.tar.gz
+LZWWRKDIR=	${WRKDIR}/libtiff-lzw-compression-kit
 
-pre-build:
-	cd ${WRKSRC} \
-		&& ${CP} ../libtiff-lzw-compression-kit/tif_dir.c libtiff \
-		&& ${CP} ../libtiff-lzw-compression-kit/tif_lzw.c libtiff
+post-patch:
+	${MV} ${LZWWRKDIR}/Makefile ${LZWWRKDIR}/Makefile.orig
+	${SED} "s@TIFF_SRC_DIR = /tmp/libtiff@TIFF_SRC_DIR = ../${DISTNAME}@" \
+		${LZWWRKDIR}/Makefile.orig > ${LZWWRKDIR}/Makefile
+	cd ${LZWWRKDIR} && make install
 .endif
 
 CPPFLAGS+=	-Dunix
