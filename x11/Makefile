@@ -82,6 +82,7 @@
     SUBDIR += xcolors
 #    SUBDIR += xdaliclock
 #    SUBDIR += xdtm
+    SUBDIR += xearth
 #    SUBDIR += xfce
 #    SUBDIR += xfed
 #    SUBDIR += xfedor
