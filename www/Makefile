@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1998/12/12 17:39:47 tsarna Exp $
+# $NetBSD: Makefile,v 1.26 1999/01/08 14:17:27 hwr Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -53,6 +53,7 @@
 #    SUBDIR += vrweb
 #    SUBDIR += w3
 #    SUBDIR += w3c-httpd
+    SUBDIR += web500gw
      SUBDIR += webalizer
 #    SUBDIR += webcopy
     SUBDIR += weblint
