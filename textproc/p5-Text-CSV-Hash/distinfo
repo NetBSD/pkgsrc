@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/01/16 22:06:06 abs Exp $
+$NetBSD: distinfo,v 1.3 2002/01/17 00:01:59 abs Exp $
 
-SHA1 (Text-CSV-Hash-0.04.tar.gz) = c32603c73de139ac394cc41cac0439493db8db8a
-Size (Text-CSV-Hash-0.04.tar.gz) = 5002 bytes
+SHA1 (Text-CSV-Hash-0.05.tar.gz) = f34896e6ca06ab06c9ea8528f5ac340ae74e02b6
+Size (Text-CSV-Hash-0.05.tar.gz) = 5024 bytes
