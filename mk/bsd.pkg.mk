@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.942 2002/03/06 11:37:28 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.943 2002/03/07 15:45:13 yyamano Exp $
 #
 # This file is in the public domain.
 #
@@ -1325,9 +1325,9 @@ show-depends-dirs:
 	do \
 		if [ "X$$reldir" = "X" ]; then continue; fi ;\
 		cd $$thisdir/$$reldir ;\
-		PWD=`pwd` ;\
-		d=`dirname $$PWD` ;\
-		absdir=`basename $$d`/`basename $$PWD` ;\
+		WD=`pwd` ;\
+		d=`dirname $$WD` ;\
+		absdir=`basename $$d`/`basename $$WD` ;\
 		dlist="$$dlist $$absdir";\
 	done ;\
 	cd $$thisdir ;\
@@ -1348,7 +1348,7 @@ show-depends-dirs:
 #
 _RECURSE_DEPENDS_DIRS=							\
 	function append_dirs(dir) {					\
-		command = "cd ../../" dir " && make show-depends-dirs";	\
+		command = "cd ../../" dir " && ${MAKE} show-depends-dirs";	\
 		command | getline tmp_dirs;				\
 		close(command);						\
 		if (tmp_dirs ~ /^$$/)					\
