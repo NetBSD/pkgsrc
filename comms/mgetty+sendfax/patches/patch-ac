@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/11/15 20:45:30 tron Exp $
+
 --- voice/Makefile.orig	Mon Dec 29 23:06:36 1997
 +++ voice/Makefile	Mon Dec 29 23:07:18 1997
 @@ -89,11 +89,11 @@

@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1998/11/15 20:45:30 tron Exp $
+
+--- doc/mgetty.texi-in.orig	Sun Jul  5 23:02:13 1998
++++ doc/mgetty.texi-in	Sun Nov 15 21:05:27 1998
+@@ -7,6 +7,10 @@
+ @finalout
+ 
+ @ifinfo
++@dircategory Miscellaneous
++@direntry
++     * mgetty: (mgetty).	Handle external logins, send and receive faxes.
++@end direntry
+ This is the online documentation for the mgetty + sendfax
+ package.
+ 

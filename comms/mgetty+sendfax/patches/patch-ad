@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/11/15 20:45:30 tron Exp $
+
 --- doc/Makefile.orig	Fri Nov 28 04:33:26 1997
 +++ doc/Makefile	Mon Dec 29 22:31:59 1997
 @@ -26,7 +26,7 @@
