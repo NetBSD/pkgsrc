@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.8 2004/02/16 22:47:23 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/02/18 14:58:37 jlam Exp $
 
 .if !defined(FONTCONFIG_BUILDLINK2_MK)
 FONTCONFIG_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.fontconfig?=		fontconfig>=2.1nb1
+BUILDLINK_DEPENDS.fontconfig?=		fontconfig>=1.0.1
 BUILDLINK_PKGSRCDIR.fontconfig?=	../../fonts/fontconfig
 
 # Check if we got fontconfig distributed with XFree86 4.x or if we need to
