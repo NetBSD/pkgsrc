@@ -1,14 +1,10 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:25 agc Exp $
+$NetBSD: patch-aa,v 1.3 2000/12/30 16:54:07 itojun Exp $
 
---- Makefile.in-orig	Wed May 27 00:28:42 1998
-+++ Makefile.in	Tue Jul 21 12:27:41 1998
-@@ -103,9 +103,6 @@
- # The developers are curious to know.  Don't be concerned if this fails.
- .notify: build/minor-version-number
+--- Makefile.in.orig	Thu Feb 25 06:28:29 1999
++++ Makefile.in	Sun Dec 31 01:48:26 2000
+@@ -140,5 +140,2 @@
  	touch .notify
 -	-echo Another 0.`cat $(srcdir)/build/minor-version-number` \
 -		installation. \
 -		| mail scheme-48-notifications@martigny.ai.mit.edu
  
- $(VM): c/main.o $(OBJS) $(UNIX_OBJS) $(LIBOBJS)
- 	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ c/main.o $(OBJS) $(UNIX_OBJS) \
