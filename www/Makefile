@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 1998/06/06 17:04:52 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/12 04:05:50 tv Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
-#    SUBDIR += Mosaic         # requires Motif
+    SUBDIR += Mosaic
 #    SUBDIR += analog
     SUBDIR += ap-auth-cookie
     SUBDIR += apache
