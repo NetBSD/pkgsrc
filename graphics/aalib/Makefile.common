@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/06/02 14:05:04 abs Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/06/11 20:50:54 abs Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 WRKSRC=		${WRKDIR}/aalib-1.4.0
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.if (${MACHINE_ARCH} == arm32)
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 .  include "../../mk/gcc.buildlink2.mk"
 .endif
 
