@@ -1,39 +1,72 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/10/27 17:58:12 bouyer Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/11/18 07:49:25 jlam Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.glu?=		glu>=3.4.2
+MESA_REQD?=			3.4.2
+BUILDLINK_DEPENDS.glu?=		glu>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 
 # Check if we got libGLU distributed with XFree86 4.x or if we need to
 # depend on the glu package.
 #
 _REQUIRE_BUILTIN_GLU?=	NO
-.if exists(${X11BASE}/include/GL/glu.h)
-_IS_BUILTIN_GLU!=	${EGREP} -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+
+_GL_GLU_H=		${X11BASE}/include/GL/glu.h
+_X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
+.if exists(${_GL_GLU_H}) && exists(${_X11_TMPL})
+_IS_BUILTIN_GLU!=	${EGREP} -c BuildGLULibrary ${_X11_TMPL} || ${TRUE}
 .else
 _IS_BUILTIN_GLU=	0
 .endif
-.if (${_IS_BUILTIN_GLU} == "0") && (${_REQUIRE_BUILTIN_GLU} == "NO")
-_NEED_GLU=		YES
-.else
+
+.if !empty(_REQUIRE_BUILTIN_GLU:M[yY][eE][sS])
 _NEED_GLU=		NO
+.else
+.  if ${_IS_BUILTIN_GLU} == "0"
+_NEED_GLU=		YES
+.  else
+#
+# Create an appropriate package name for the built-in Mesa/GLU distributed
+# with XFree86 4.x.  This package name can be used to check against
+# BUILDLINK_DEPENDS.glu to see if we need to install the pkgsrc Mesa/GLU
+# or if the built-in one is sufficient.
+#
+.    if exists(${X11BASE}/bin/glxinfo)
+_GLU_VERSION!= \
+	${X11BASE}/bin/glxinfo |					\
+	${SED} -n "/OpenGL version string/s/.*Mesa *//p"
+.    else
+_GLU_VERSION?=		3.4
+.    endif
+_GLU_PKG=		glu-${_GLU_VERSION}
+_GLU_DEPENDS=		${BUILDLINK_DEPENDS.glu}
+_NEED_GLU!= \
+	if ${PKG_ADMIN} pmatch '${_GLU_DEPENDS}' ${_GLU_PKG}; then	\
+		${ECHO} "NO";						\
+	else								\
+		${ECHO} "YES";						\
+	fi
+.  endif
 .endif
 
 .if ${_NEED_GLU} == "YES"
 BUILDLINK_PACKAGES+=		glu
-EVAL_PREFIX+=	BUILDLINK_PREFIX.glu=glu
+EVAL_PREFIX+=			BUILDLINK_PREFIX.glu=glu
 BUILDLINK_PREFIX.glu_DEFAULT=	${X11PREFIX}
 .else
-BUILDLINK_PREFIX.glu=	${X11BASE}
+BUILDLINK_PREFIX.glu=		${X11BASE}
 .endif
 
 BUILDLINK_FILES.glu=	include/GL/glu.h
 BUILDLINK_FILES.glu+=	include/GL/glu_mangle.h
 BUILDLINK_FILES.glu+=	lib/libGLU.*
+
+USE_X11=		# defined
+
+.include "../../graphics/MesaLib/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	glu-buildlink
 
