@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4737 2004/02/09 00:49:39 minskim Exp $
+$NetBSD: CHANGES,v 1.4738 2004/02/09 00:58:33 chris Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -711,3 +711,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added trm-0.2.1 [chris 2004-02-09] 
 	Added taglib-1.0 [chris 2004-02-09]
 	Updated metacity to 2.6.3nb3 [minskim 2004-02-09]
+	Updated kdemultimedia3 to 3.2.0nb1 [chris 2004-02-09]
+	Updated kdeaddons3 to 3.2.0nb1 [chris 2004-02-09]
+	Updated kde3 to 3.2.0nb2 [chris 2004-02-09]
