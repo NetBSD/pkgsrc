@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/11/09 15:18:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/25 20:09:50 wiz Exp $
 
-DISTNAME=	subversion-r2667
-PKGNAME=	subversion-0.2667
+DISTNAME=	subversion-r3687
+PKGNAME=	subversion-0.3687
 CATEGORIES=	devel
-MASTER_SITES=	http://subversion.tigris.org/files/documents/15/578/
+MASTER_SITES=	http://subversion.tigris.org/files/documents/15/1698/
 
 MAINTAINER=	joelw@unix.se
 HOMEPAGE=	http://subversion.tigris.org
@@ -11,7 +11,7 @@ COMMENT=	Version control system, meant to replace CVS
 
 DEPENDS+=	python22-[0-9]*:../../lang/python22
 
-AUTOCONF_REQD=	2.50
+AUTOCONF_REQD=	2.56
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ssl
 CONFIGURE_ARGS+= --with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4:${LOCALBASE}
@@ -24,10 +24,8 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=   INSTALL_INFO=${INSTALL_INFO}
 INFO_FILES+=	svn-design.info
-INFO_FILES+=	svn-handbook.info
 
 post-extract:
-	@${SED} 's/ldb/ldb4/g' < ${WRKSRC}/configure > ${WRKSRC}/configure
 	@${RM} -r ${WRKSRC}/neon
 	@${RM} -r ${WRKSRC}/apr
 	@${RM} -r ${WRKSRC}/apr-util
