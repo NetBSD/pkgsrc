@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.35 2001/05/17 15:00:26 abs Exp $
+# $NetBSD: bsd.prefs.mk,v 1.36 2001/05/17 15:08:17 abs Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -200,18 +200,18 @@ SERIAL_DEVICES?=	/dev/null
 
 ##### Some overrides of defaults below on a per-OS basis.
 .if (${OPSYS} == "NetBSD")
-LOCALBASE?=             ${DESTDIR}/usr/pkg
 PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
+LOCALBASE?=             ${DESTDIR}/usr/local
 X11BASE?=               ${DESTDIR}/usr/openwin
 ZOULARISBASE?=		${LOCALBASE}/bsd
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
 .elif (${OPSYS} == "Linux")
-ZOULARISBASE?=		${LOCALBASE}/bsd
+ZOULARISBASE?=		${DESTDIR}/usr/local/bsd
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
 .endif
 
-LOCALBASE?=		${DESTDIR}/usr/local
+LOCALBASE?=		${DESTDIR}/usr/pkg
 X11BASE?=		${DESTDIR}/usr/X11R6
 CROSSBASE?=		${LOCALBASE}/cross
 
