@@ -1,122 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2000/07/27 14:01:00 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2001/08/09 14:34:57 wiz Exp $
 
---- Imakefile.orig	Thu Jan 13 22:25:09 2000
-+++ Imakefile	Tue Jul 25 02:35:53 2000
-@@ -40,8 +40,8 @@
+--- Fig.ad.orig	Thu May 17 12:59:29 2001
++++ Fig.ad
+@@ -16,7 +16,7 @@
  
- #ifdef USEJPEG
- #ifdef USEINSTALLEDJPEG
--JPEGLIBDIR = /usr/local/lib
--JPEGINCDIR = /usr/include/X11
-+JPEGLIBDIR = $(LOCALBASE)/lib
-+JPEGINCDIR = $(LOCALBASE)/include
- #else
- JPEGLIBDIR = ../jpeg
- JPEGINCDIR = $(JPEGLIBDIR)
-@@ -59,12 +59,12 @@
- XCOMM Change XPMLIBDIR if necessary to point to the xpm library (libXpm)
- XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
+ ! pdfviewer - put your favorite pdf viewer here.  
+ !		This is for viewing the xfig how-to guide and man pages
+-Fig.pdfviewer:			acroread %f
++Fig.pdfviewer:			gv %f
  
--XCOMM #define USEXPM
--XCOMM #define USEXPM_ICON
-+#define USEXPM
-+#define USEXPM_ICON
- 
- #ifdef USEXPM
- XPMLIBDIR = $(USRLIBDIR)
--XPMINC = -I/usr/include/X11
-+XPMINC = -I$(INCDIR)/X11
- #endif
- 
- XCOMM Uncomment the following definiton if you want to use the small icons
-@@ -99,7 +99,7 @@
- XCOMM Uncomment the next line if you want use Japanese (i18n) on xfig.
- XCOMM If your setlocale() dosen't support the locale, you should
- XCOMM add -DSETLOCALE to I18N_DEFS.
--XCOMM #define I18N
-+#define I18N
- 
- XCOMM If using an input tablet uncomment the following
- 
-@@ -110,7 +110,7 @@
- XCOMM inline functions. With the "INLINE" keyword, you should notice that
- XCOMM the display will be a bit faster in complex figures
- 
--XCOMM USEINLINE = -DUSE_INLINE
-+USEINLINE = -DUSE_INLINE
- 
- XCOMM use (and change) the following if you want the multi-key data base file
- XCOMM somewhere other than the standard X11 library directory
-@@ -119,6 +119,8 @@
- XCOMM use this if you want the multi-key data base file in the standard X11 tree
- XFIGLIBDIR = $(LIBDIR)/xfig
- 
-+XFIGDOCDIR = $(PREFIX)/share/doc/xfig
-+
- XCOMM If your system doesn't have strstr undefine the following definition
- XCOMM HAVE_NO_NOSTRSTR = -DNOSTRSTR
- 
-@@ -179,7 +181,7 @@
- JPEGINC = -I$(JPEGINCDIR)
- 
- #ifdef USEINSTALLEDJPEG
--JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
-+JPEGLIB = -Wl,-R$(JPEGLIBDIR) -L$(JPEGLIBDIR) -ljpeg
- #else
- JPEGCONF = configure
- JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
-@@ -194,7 +196,7 @@
- I18N_OBJ = w_i18n.o
- #endif
- 
--DIR_DEFS=		-DXFIGLIBDIR=\"$(XFIGLIBDIR)\"
-+DIR_DEFS=		-DXFIGLIBDIR=\"$(XFIGLIBDIR)\" -DXFIGDOCDIR=\"$(XFIGDOCDIR)\"
- 
- XCOMM location of Fig object libraries
- OBJLIBDIR =		$(XFIGLIBDIR)/Libraries
-@@ -336,21 +338,22 @@
- 	@make install.jhtml
- #endif
- 	@(cd Doc ; \
--	echo Copying pdf and html files to $(XFIGLIBDIR) ; \
--	$(INSTALL) -c xfig.html $(XFIGLIBDIR) ; \
--	$(INSTALL) -c xfig-howto.pdf $(XFIGLIBDIR) ; \
--	if [ -d $(XFIGLIBDIR)/html ]; then set +x; \
--	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html ); fi ; \
-+	echo Copying pdf and html files to $(XFIGDOCDIR) ; \
-+	$(MKDIRHIER) $(XFIGDOCDIR) ; \
-+	$(INSTALL) -c xfig.html $(XFIGDOCDIR) ; \
-+	$(INSTALL) -c xfig-howto.pdf $(XFIGDOCDIR) ; \
-+	if [ -d $(XFIGDOCDIR)/html ]; then set +x; \
-+	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html ); fi ; \
- 	(cd html ; \
- 	   for f in *.* ; do \
--	      $(INSTALL) -c $$f $(XFIGLIBDIR)/html ; \
-+	      $(INSTALL) -c $$f $(XFIGDOCDIR)/html ; \
- 	   done) ; \
- 	echo "  Copying image files for html" ; \
--	if [ -d $(XFIGLIBDIR)/html/images ]; then set +x; \
--	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html/images ); fi ; \
-+	if [ -d $(XFIGDOCDIR)/html/images ]; then set +x; \
-+	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html/images ); fi ; \
- 	(cd html/images ; \
- 	   for f in * ; do \
--	       $(INSTALL) -c $$f $(XFIGLIBDIR)/html/images ; \
-+	       $(INSTALL) -c $$f $(XFIGDOCDIR)/html/images ; \
- 	   done) ; \
- 	) ;
- 
-@@ -358,10 +361,10 @@
- install.jhtml::
- 	@echo "Copying japanese html files"
- 	@(cd Doc/html/japanese ; \
--	if [ -d $(XFIGLIBDIR)/html/japanese ]; then set +x; \
--	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html/japanese ); fi ; \
-+	if [ -d $(XFIGDOCDIR)/html/japanese ]; then set +x; \
-+	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html/japanese ); fi ; \
- 	for f in * ; do \
--	      $(INSTALL) -c $$f $(XFIGLIBDIR)/html/japanese ; \
-+	      $(INSTALL) -c $$f $(XFIGDOCDIR)/html/japanese ; \
- 	done) ;
- #endif
- 
+ ! Spell check program - put your favorite spelling check program here.
+ !		It must write the misspelled words to standard output.

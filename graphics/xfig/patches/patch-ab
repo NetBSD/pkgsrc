@@ -1,40 +1,123 @@
-$NetBSD: patch-ab,v 1.2 2000/06/22 08:18:08 itohy Exp $
+$NetBSD: patch-ab,v 1.3 2001/08/09 14:34:57 wiz Exp $
 
---- w_help.c.orig	Wed Jan 19 10:36:32 2000
-+++ w_help.c	Thu Jun 22 00:49:54 2000
-@@ -44,13 +44,13 @@
- 	int pid;
+--- Imakefile.orig	Tue May 29 12:32:11 2001
++++ Imakefile
+@@ -47,8 +47,8 @@
  
- 	/* first check if at least the index file is installed */
--	sprintf(filename, "%s/html/index.html", XFIGLIBDIR);
-+	sprintf(filename, "%s/html/index.html", XFIGDOCDIR);
- #ifdef I18N
- 	if (appres.international && getenv("LANG")) {
--	  /* check localized file ($XFIGLIBDIR/html/$LANG/index.html) first */
--	  sprintf(filename, "%s/html/%s/index.html", XFIGLIBDIR, getenv("LANG"));
-+	  /* check localized file ($XFIGDOCDIR/html/$LANG/index.html) first */
-+	  sprintf(filename, "%s/html/%s/index.html", XFIGDOCDIR, getenv("LANG"));
- 	  if (!check_docfile(filename))
--	    sprintf(filename, "%s/html/index.html", XFIGLIBDIR);
-+	    sprintf(filename, "%s/html/index.html", XFIGDOCDIR);
- 	}
+ #ifdef USEJPEG
+ #ifdef USEINSTALLEDJPEG
+-JPEGLIBDIR = /usr/local/lib
+-JPEGINCDIR = /usr/include/X11
++JPEGLIBDIR = $(BUILDLINK_DIR)/lib
++JPEGINCDIR = $(BUILDLINK_DIR)/include
+ #else
+ JPEGLIBDIR = ../jpeg
+ JPEGINCDIR = $(JPEGLIBDIR)
+@@ -61,6 +61,11 @@
+ 
+ #define USEPNG
+ 
++#ifdef USEPNG
++PNGLIBDIR = $(BUILDLINK_DIR)/lib
++PNGINC = -I$(BUILDLINK_DIR)/include
++#endif
++
+ XCOMM Uncomment the #define for USEXPM if you want to use the XPM
+ XCOMM (color pixmap) package.
+ XCOMM
+@@ -72,12 +77,12 @@
+ XCOMM Change XPMLIBDIR if necessary to point to the xpm library (libXpm)
+ XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
+ 
+-XCOMM #define USEXPM
+-XCOMM #define USEXPM_ICON
++#define USEXPM
++#define USEXPM_ICON
+ 
+ #ifdef USEXPM
+ XPMLIBDIR = $(USRLIBDIR)
+-XPMINC = -I/usr/include/X11
++XPMINC = -I$(BUILDLINK_DIR)/include/X11
  #endif
- 	if (!check_docfile(filename))
-@@ -64,7 +64,7 @@
-     XtPointer closure;
-     XtPointer call_data;
- {
--	sprintf(filename,"%s/xfig-howto.pdf",XFIGLIBDIR);
-+	sprintf(filename,"%s/xfig-howto.pdf",XFIGDOCDIR);
- 	launch_viewer(filename,"Launching PDF viewer for How-to Tutorial", appres.pdf_viewer);
- }
  
-@@ -74,7 +74,7 @@
-     XtPointer closure;
-     XtPointer call_data;
- {
--	sprintf(filename,"%s/xfig.html",XFIGLIBDIR);
-+	sprintf(filename,"%s/xfig.html",XFIGDOCDIR);
- 	launch_viewer(filename,"Launching Web browser for man pages", appres.browser);
- }
+ XCOMM Uncomment the following definiton if you want to use the small icons
+@@ -93,7 +98,7 @@
+ #define XAW3D
  
+ #ifdef XAW3D
+-XAW3DINC = -I/usr/include/X11/Xaw3d
++XAW3DINC = -I$(INCDIR)/X11/Xaw3d
+ DUSEXAW3D = -DXAW3D
+ XAWLIB = -lXaw3d
+ #endif
+@@ -120,7 +125,7 @@
+ XCOMM If your setlocale() dosen't support the locale, you should
+ XCOMM add -DSETLOCALE to I18N_DEFS.
+ 
+-XCOMM #define I18N
++#define I18N
+ 
+ XCOMM If using an input tablet uncomment the following
+ 
+@@ -131,7 +136,7 @@
+ XCOMM inline functions. With the "INLINE" keyword, you should notice that
+ XCOMM the display will be a bit faster in complex figures
+ 
+-XCOMM USEINLINE = -DUSE_INLINE
++USEINLINE = -DUSE_INLINE
+ 
+ XCOMM use (and change) the following if you want the multi-key data base file
+ XCOMM somewhere other than the standard X11 library directory
+@@ -142,7 +147,7 @@
+ XFIGLIBDIR = $(LIBDIR)/xfig
+ 
+ XCOMM now you can configure where the documentation should be located
+-XFIGDOCDIR = $(LIBDIR)/xfig
++XFIGDOCDIR = $(PREFIX)/share/doc/xfig
+ XCOMM XFIGDOCDIR = /usr/share/doc/xfig-doc
+ 
+ XCOMM If your system doesn't have strstr undefine the following definition
+@@ -210,7 +215,7 @@
+ JPEGINC = -I$(JPEGINCDIR)
+ 
+ #ifdef USEINSTALLEDJPEG
+-JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
++JPEGLIB = -Wl,-R$(PREFIX)/lib -L$(JPEGLIBDIR) -ljpeg
+ #else
+ JPEGCONF = configure
+ JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
+@@ -255,14 +260,14 @@
+ 
+ #ifdef USEPNG
+ DUSEPNG = -DUSE_PNG
+-PNGLIBS = -lpng -lz
++PNGLIBS = -Wl,-R$(PREFIX)/lib -L$(PNGLIBDIR) -lpng -lz
+ READPNGS = f_readpng.c
+ READPNGO = f_readpng.o
+ #endif /* USEPNG */
+ 
+ #ifdef USEXPM
+ DUSEXPM = -DUSE_XPM
+-XPMLIBS = -L$(XPMLIBDIR) -lXpm
++XPMLIBS = -Wl,-R$(BUILDLINK_PREFIX.xpm) -L$(XPMLIBDIR) -lXpm
+ READXPMS = f_readxpm.c
+ READXPMO = f_readxpm.o
+ #ifdef USEXPM_ICON
+@@ -325,7 +330,7 @@
+ SRCS = $(XFIGSRC)
+ OBJS = $(XFIGOBJ)
+ 
+-EXTRA_INCLUDES = $(JPEGINC) $(XPMINC) $(XAW3DINC)
++EXTRA_INCLUDES = $(JPEGINC) $(PNGINC) $(XPMINC) $(XAW3DINC)
+ DEPLIBS = XawClientDepLibs
+ 
+ LOCAL_LIBRARIES = 	$(JPEGLIB)
+@@ -384,6 +389,8 @@
+ #endif
+ 	@(cd Doc ; \
+ 	echo Copying pdf and html files to $(DESTDIR)$(XFIGDOCDIR) ; \
++	if [ -d $(DESTDIR)$(XFIGDOCDIR) ]; then set +x; \
++	   else (set -x; $(MKDIRHIER) $(DESTDIR)$(XFIGDOCDIR) ); fi ; \
+ 	$(INSTALL) -m 644 -c xfig.html $(DESTDIR)$(XFIGDOCDIR) ; \
+ 	$(INSTALL) -m 644 -c xfig-howto.pdf $(DESTDIR)$(XFIGDOCDIR) ; \
+ 	if [ -d $(DESTDIR)$(XFIGDOCDIR)/html ]; then set +x; \
