@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2002/06/25 04:24:38 itojun Exp $
+# $NetBSD: Makefile,v 1.76 2002/06/25 06:43:50 jlam Exp $
 
 DISTNAME=		openssh-3.3p1
 PKGNAME=		openssh-3.3.0.1
@@ -41,9 +41,11 @@ SSH_PID_DIR.SunOS=	/etc		# Solaris doesn't have a /var/run
 SSH_PID_DIR=		${SSH_PID_DIR.${OPSYS}}
 .endif
 
+PKG_SYSCONFSUBDIR=	ssh
+
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/ssh
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
@@ -96,11 +98,11 @@ PLIST_SRC+=		${.CURDIR}/PLIST.prng
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		# empty
 .for FILE in ${CONFS}
-CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/ssh/${FILE}
+CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 SUPPORT_FILES=		# empty
 .for FILE in ${SUPPS}
-SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/ssh/${FILE}
+SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 RCD_SCRIPTS=		sshd
 
