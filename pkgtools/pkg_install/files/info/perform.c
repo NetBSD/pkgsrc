@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.6 2003/03/16 19:44:09 jschauma Exp $	*/
+/*	$NetBSD: perform.c,v 1.7 2003/03/29 18:41:56 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.6 2003/03/16 19:44:09 jschauma Exp $");
+__RCSID("$NetBSD: perform.c,v 1.7 2003/03/29 18:41:56 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -145,7 +145,7 @@ pkg_do(char *pkg)
 				char    try[FILENAME_MAX];
 				snprintf(try, FILENAME_MAX, "%s-[0-9]*", pkg);
 				if (findmatchingname(_pkgdb_getPKGDB_DIR(), try,
-					add_to_list_fn, &pkgs) != 0) {
+					add_to_list_fn, &pkgs) > 0) {
 					return 0;	/* we've just appended some names to the pkgs list,
 							 * they will be processed after this package. */
 				}
@@ -293,7 +293,11 @@ CheckForPkg(char *pkgspec, char *dbdir)
 
 	if (strpbrk(pkgspec, "<>[]?*{")) {
 		/* expensive (pattern) match */
-		return !findmatchingname(dbdir, pkgspec, foundpkg, dbdir);
+		error = findmatchingname(dbdir, pkgspec, foundpkg, dbdir);
+		if (error == -1)
+			return 1;
+		else
+			return !error;
 	}
 	/* simple match */
 	(void) snprintf(buf, sizeof(buf), "%s/%s", dbdir, pkgspec);
@@ -306,7 +310,7 @@ CheckForPkg(char *pkgspec, char *dbdir)
 		
 		char    try[FILENAME_MAX];
 		snprintf(try, FILENAME_MAX, "%s-[0-9]*", pkgspec);
-		if (findmatchingname(dbdir, try, foundpkg, dbdir) != 0) {
+		if (findmatchingname(dbdir, try, foundpkg, dbdir) > 0) {
 			error = 0;
 		}
 	}
