@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.784 2001/07/10 11:51:57 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.785 2001/07/10 12:04:43 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2256,11 +2256,13 @@ lint:
 
 # Create a binary package from an install package using "pkg_tarup"
 tarup:
+	${_PKG_SILENT}${_PKG_DEBUG} \
 	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX}; \
 	PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX:S/.//} \
 	  PKGREPOSITORY=${PACKAGES}/All \
 	  ${LOCALBASE}/bin/pkg_tarup ${PKGNAME}; \
 	for CATEGORY in ${CATEGORIES}; do \
+	  ${MKDIR} ${PACKAGES}/$$CATEGORY; \
 	  cd ${PACKAGES}/$$CATEGORY; \
 	  ${RM} -f ${PKGNAME}${PKG_SUFX}; \
 	  ${LN} -s ../All/${PKGNAME}${PKG_SUFX}; \
