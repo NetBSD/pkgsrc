@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:19:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/26 21:26:25 zuntum Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -15,15 +15,15 @@ MANCOMPRESSED_IF_MANZ=	YES
 WRKSRC=			${WRKDIR}/${DISTNAME:S/.src//}
 
 post-patch:
-		(cd ${WRKSRC}; \
-		for i in ppp/ppp.8 pppctl/pppctl.8; do \
-			${CP} $$i $$i.bak; \
-			${SED} s@/etc/ppp@${PREFIX}/etc/ppp@ < $$i.bak | \
-			    ${SED} s@/usr/share@${PREFIX}/share@ > $$i; \
-		done)
+	(cd ${WRKSRC};							\
+	for i in ppp/ppp.8 pppctl/pppctl.8; do \
+		${SED}	-e "s,/etc/ppp,${PREFIX}/etc/ppp,"		\
+			-e "s,/usr/share,${PREFIX}/share,"		\
+			$$i > $$i.done; ${MV} $$i.done $$i;		\
+	done)
 
 pre-install:
-		${GREP} "^network:" /etc/group >/dev/null || \
-		    /usr/sbin/groupadd -g 40 network
+	${GREP} "^network:" /etc/group >/dev/null || \
+	    /usr/sbin/groupadd -g 40 network
 
 .include "../../mk/bsd.pkg.mk"
