@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/22 13:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/11 02:03:41 jlam Exp $
 #
 
 PKGNAME=	MesaDemos-${MESA_VERSION}
@@ -9,7 +9,7 @@ DISTINFO_FILE=		${.CURDIR}/distinfo
 
 .include "../Mesa/Makefile.common"
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 MAKE_FLAGS+=		LIB_DEP=""
 
@@ -24,5 +24,5 @@ do-install:
 		-rw . ${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
 	${CHMOD} -R a+rX ${PREFIX}/share/examples/${PKGNAME_NOREV}
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

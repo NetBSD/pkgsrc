@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/10 23:25:19 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/11 02:03:41 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:S/MesaLib/glut/}
@@ -12,7 +12,7 @@ CONFLICTS+=	Mesa<3.2.1
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-_MESA_REQD=		${MESA_VERSION}
+MESA_REQD+=		${MESA_VERSION}
 
 INSTLIBS=	${WRKSRC}/src/glut/glx/libglut.la
 

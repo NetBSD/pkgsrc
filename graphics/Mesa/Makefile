@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/02/10 23:31:38 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2004/02/11 02:03:41 jlam Exp $
 
 PKGNAME=	Mesa-${MESA_VERSION}
 MASTER_SITES= 	# empty
@@ -23,10 +23,11 @@ do-install:	# empty
 
 .include "Makefile.common"
 
-_MESA_REQD=	${MESA_VERSION}
-
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
+# The ordering is important here as glut/buildlink3.mk sets the version
+# of Mesa required.
+#
 .include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
