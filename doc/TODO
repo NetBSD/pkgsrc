@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2629 2004/12/02 12:36:24 adam Exp $
+$NetBSD: TODO,v 1.2630 2004/12/02 13:24:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,7 +309,6 @@ Suggested package updates
 	o arping-2.04
 	o artist-1.2.6
 	o asapm-2.13
-	o asc-1.15.2
 	o aspell-0.60.1.1
 	o aspell-czech-0.51
 	o aspell-english-0.51.1
