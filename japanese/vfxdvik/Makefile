@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/10/30 22:46:27 kei Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/31 01:41:03 kei Exp $
 #
 
 DISTNAME=	xdvik-22.15
@@ -15,7 +15,7 @@ HOMEPAGE=	# no home page
 COMMENT=	xdvik with vflib
 
 DEPENDS+=	TeXfamily>=1.2.1:../../japanese/texfamily
-DEPENDS+=	ja-vflib-lib>=[0-9]*:../../japanese/vflib-lib
+DEPENDS+=	ja-vflib-lib-[0-9]*:../../japanese/vflib-lib
 
 XDVI_DIR=	${WRKDIR}/${DISTNAME}/texk/xdvik
 
