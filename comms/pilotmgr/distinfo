@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/13 20:36:11 tron Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 16:05:30 agc Exp $
 
 SHA1 (pilotmgr-1.107p2.tar.bz2) = 3eda213891fbddc1239c49b7f704bd1447dd9112
+RMD160 (pilotmgr-1.107p2.tar.bz2) = 6d69c565090f800bab922ba83ec23c33bef14c9e
 Size (pilotmgr-1.107p2.tar.bz2) = 161129 bytes
 SHA1 (patch-aa) = a61287599e52580e9e56acfadc60e98f16555b5c
 SHA1 (patch-ab) = 2c6bca3b173574830866d4fc5a2909345dff4109

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2004/06/04 05:34:13 ben Exp $
+$NetBSD: distinfo,v 1.12 2005/02/23 16:05:30 agc Exp $
 
 SHA1 (kermit-8.0.211/cku211.tar.gz) = cd5e0524d27fea0275a0938da2a5fc115e0978b8
+RMD160 (kermit-8.0.211/cku211.tar.gz) = c80de6eeec3b4d87a09946a4d440da3b4faaa3b2
 Size (kermit-8.0.211/cku211.tar.gz) = 2878523 bytes
 SHA1 (patch-aa) = 376dc03cc9f75322f2fda308b268c70a13ebba8a
 SHA1 (patch-ab) = 24032ad61815ce88e8638d0bbcdaf86175b9715b

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/02/12 12:57:10 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 16:05:31 agc Exp $
 
 SHA1 (xtel-3.3.0.tar.gz) = 7ee5a5afa20bea46e08c346605c53cdd32d69dc9
+RMD160 (xtel-3.3.0.tar.gz) = 0ba51e9129b24db33ac96cff23ffc88d3f13b653
 Size (xtel-3.3.0.tar.gz) = 309426 bytes
 SHA1 (patch-aa) = 648ff6a6a1bffd836a28abed1f0da5e781d61d53
 SHA1 (patch-ab) = 28e8c26a36de294e3982a4f4edac53e4780ec2fe
