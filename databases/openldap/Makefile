@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/10/26 09:04:49 kleink Exp $
+# $NetBSD: Makefile,v 1.30 2001/10/26 13:41:27 kleink Exp $
 
 DISTNAME=	openldap-2.0.18
 SVR4_PKGNAME=	oldap
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--enable-dns
 CONFIGURE_ARGS+=	--enable-cldap
 CONFIGURE_ARGS+=	--enable-passwd
 CONFIGURE_ARGS+=	--enable-shell
+CONFIGURE_ARGS+=	--with-tls=openssl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,4 +51,5 @@ CONFIGURE_ARGS+=--with-kerberos
 CONFIGURE_ARGS+=--without-kerberos
 .endif
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
