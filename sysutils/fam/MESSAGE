@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/02/09 18:14:45 jmmv Exp $
+
+FAM uses RPC and is usually started by the inetd(8) superserver.  You need
+to enable it manually, by issuing the following steps:
+
+1) Add FAM to the system's portmapper by appending the following line to
+   the /etc/rpc file:
+
+        sgi_fam    391002    fam    # File Alternation Monitor
+
+2) Add FAM to the system's superserver by appending the following line to
+   the /etc/inetd.conf file:
+
+        sgi_fam/1-2 stream rpc/tcp wait root ${PREFIX}/bin/fam fam
+
+===========================================================================

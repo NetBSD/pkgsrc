@@ -1,9 +1,9 @@
-$NetBSD: patch-ax,v 1.2 2002/12/17 19:43:43 jmmv Exp $
+$NetBSD: patch-ax,v 1.3 2004/02/09 18:14:45 jmmv Exp $
 
---- configure.orig	Tue Dec 17 00:22:04 2002
+--- configure.orig	2003-04-15 08:17:16.000000000 +0200
 +++ configure
-@@ -5561,6 +5510,43 @@ fi
- 
+@@ -9670,6 +9670,41 @@ _ACEOF
+ fi
  
  
 +ac_safe=`echo "mntent.h" | sed 'y%./+-%__p_%'`
@@ -41,139 +41,210 @@ $NetBSD: patch-ax,v 1.2 2002/12/17 19:43:43 jmmv Exp $
 +else
 +  echo "$ac_t""no" 1>&6
 +fi
-+
-+
- if test `uname` = 'IRIX' || test `uname` = 'IRIX64'; then
-     have_imon=yes
-     cat >> confdefs.h <<\EOF
-@@ -6117,129 +6106,8 @@ fi
+ echo "$as_me:$LINENO: checking for mountlist struct" >&5
+ echo $ECHO_N "checking for mountlist struct... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+@@ -9791,203 +9826,6 @@ fi
  
  
  
--    echo $ac_n "checking mntent.h for MNTTYPE_NFS""... $ac_c" 1>&6
--echo "configure:6122: checking mntent.h for MNTTYPE_NFS" >&5
--    cat > conftest.$ac_ext <<EOF
--#line 6124 "configure"
--#include "confdefs.h"
+-    echo "$as_me:$LINENO: checking mntent.h for MNTTYPE_NFS" >&5
+-echo $ECHO_N "checking mntent.h for MNTTYPE_NFS... $ECHO_C" >&6
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
 -#include <mntent.h>
--int main() {
+-int
+-main ()
+-{
 -const char *foo = MNTTYPE_NFS;
--; return 0; }
--EOF
--if { (eval echo configure:6131: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
--  rm -rf conftest*
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
 -  fam_have_decl_in_mntent=yes
 -else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  fam_have_decl_in_mntent=no
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-fam_have_decl_in_mntent=no
 -fi
--rm -f conftest*
--    echo "$ac_t""$fam_have_decl_in_mntent" 1>&6
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-    echo "$as_me:$LINENO: result: $fam_have_decl_in_mntent" >&5
+-echo "${ECHO_T}$fam_have_decl_in_mntent" >&6
 -    if test "$fam_have_decl_in_mntent" = "yes"; then
 -	:
--    else	
--	{ echo "configure: error: Didn't find MNTTYPE_NFS in mntent.h" 1>&2; exit 1; }
+-    else
+-	{ { echo "$as_me:$LINENO: error: Didn't find MNTTYPE_NFS in mntent.h" >&5
+-echo "$as_me: error: Didn't find MNTTYPE_NFS in mntent.h" >&2;}
+-   { (exit 1); exit 1; }; }
 -    fi
 -
 -
--    echo $ac_n "checking mntent.h for MNTTYPE_NFS2""... $ac_c" 1>&6
--echo "configure:6150: checking mntent.h for MNTTYPE_NFS2" >&5
--    cat > conftest.$ac_ext <<EOF
--#line 6152 "configure"
--#include "confdefs.h"
+-    echo "$as_me:$LINENO: checking mntent.h for MNTTYPE_NFS2" >&5
+-echo $ECHO_N "checking mntent.h for MNTTYPE_NFS2... $ECHO_C" >&6
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
 -#include <mntent.h>
--int main() {
+-int
+-main ()
+-{
 -const char *foo = MNTTYPE_NFS2;
--; return 0; }
--EOF
--if { (eval echo configure:6159: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
--  rm -rf conftest*
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
 -  fam_have_decl_in_mntent=yes
 -else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  fam_have_decl_in_mntent=no
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-fam_have_decl_in_mntent=no
 -fi
--rm -f conftest*
--    echo "$ac_t""$fam_have_decl_in_mntent" 1>&6
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-    echo "$as_me:$LINENO: result: $fam_have_decl_in_mntent" >&5
+-echo "${ECHO_T}$fam_have_decl_in_mntent" >&6
 -    if test "$fam_have_decl_in_mntent" = "yes"; then
--	cat >> confdefs.h <<\EOF
+-	cat >>confdefs.h <<\_ACEOF
 -#define HAVE_MNTTYPE_NFS2 1
--EOF
+-_ACEOF
 -
--    else	
+-    else
 -	:
 -    fi
 -
 -
--    echo $ac_n "checking mntent.h for MNTTYPE_NFS3""... $ac_c" 1>&6
--echo "configure:6181: checking mntent.h for MNTTYPE_NFS3" >&5
--    cat > conftest.$ac_ext <<EOF
--#line 6183 "configure"
--#include "confdefs.h"
+-    echo "$as_me:$LINENO: checking mntent.h for MNTTYPE_NFS3" >&5
+-echo $ECHO_N "checking mntent.h for MNTTYPE_NFS3... $ECHO_C" >&6
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
 -#include <mntent.h>
--int main() {
+-int
+-main ()
+-{
 -const char *foo = MNTTYPE_NFS3;
--; return 0; }
--EOF
--if { (eval echo configure:6190: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
--  rm -rf conftest*
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
 -  fam_have_decl_in_mntent=yes
 -else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  fam_have_decl_in_mntent=no
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-fam_have_decl_in_mntent=no
 -fi
--rm -f conftest*
--    echo "$ac_t""$fam_have_decl_in_mntent" 1>&6
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-    echo "$as_me:$LINENO: result: $fam_have_decl_in_mntent" >&5
+-echo "${ECHO_T}$fam_have_decl_in_mntent" >&6
 -    if test "$fam_have_decl_in_mntent" = "yes"; then
--	cat >> confdefs.h <<\EOF
+-	cat >>confdefs.h <<\_ACEOF
 -#define HAVE_MNTTYPE_NFS3 1
--EOF
+-_ACEOF
 -
--    else	
+-    else
 -	:
 -    fi
 -
 -
--    echo $ac_n "checking mntent.h for MNTTYPE_CACHEFS""... $ac_c" 1>&6
--echo "configure:6212: checking mntent.h for MNTTYPE_CACHEFS" >&5
--    cat > conftest.$ac_ext <<EOF
--#line 6214 "configure"
--#include "confdefs.h"
+-    echo "$as_me:$LINENO: checking mntent.h for MNTTYPE_CACHEFS" >&5
+-echo $ECHO_N "checking mntent.h for MNTTYPE_CACHEFS... $ECHO_C" >&6
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
 -#include <mntent.h>
--int main() {
+-int
+-main ()
+-{
 -const char *foo = MNTTYPE_CACHEFS;
--; return 0; }
--EOF
--if { (eval echo configure:6221: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
--  rm -rf conftest*
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
 -  fam_have_decl_in_mntent=yes
 -else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  fam_have_decl_in_mntent=no
--fi
--rm -f conftest*
--    echo "$ac_t""$fam_have_decl_in_mntent" 1>&6
--    if test "$fam_have_decl_in_mntent" = "yes"; then
--	cat >> confdefs.h <<\EOF
--#define HAVE_MNTTYPE_CACHEFS 1
--EOF
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
 -
--    else	
+-fam_have_decl_in_mntent=no
+-fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-    echo "$as_me:$LINENO: result: $fam_have_decl_in_mntent" >&5
+-echo "${ECHO_T}$fam_have_decl_in_mntent" >&6
+-    if test "$fam_have_decl_in_mntent" = "yes"; then
+-	cat >>confdefs.h <<\_ACEOF
+-#define HAVE_MNTTYPE_CACHEFS 1
+-_ACEOF
+-
+-    else
 -	:
 -    fi
--
--
- echo $ac_n "checking netinet/in.h for bindresvport()""... $ac_c" 1>&6
--echo "configure:6243: checking netinet/in.h for bindresvport()" >&5
-+echo "configure:6111: checking netinet/in.h for bindresvport()" >&5
- if eval "test \"`echo '$''{'fam_cv_bindresvport_in_in_h'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
+ 
+ 
+ echo "$as_me:$LINENO: checking netinet/in.h for bindresvport()" >&5

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/09 18:14:45 jmmv Exp $
 #
 
-DISTNAME=		fam-2.6.9
-PKGREVISION=		1
+DISTNAME=		fam-2.6.10
 CATEGORIES=		sysutils devel
 MASTER_SITES=		ftp://oss.sgi.com/projects/fam/download/stable/	\
 			ftp://ftp.tuwien.ac.at/opsys/linux/gentoo/distfiles/ \
@@ -15,8 +14,14 @@ COMMENT=		File Alteration Monitor
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
+
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+EGDIR=			${PREFIX}/share/examples/fam
+CONF_FILES=		${EGDIR}/fam.conf ${PKG_SYSCONFDIR}/fam.conf
 
 .include "../../mk/bsd.pkg.mk"
