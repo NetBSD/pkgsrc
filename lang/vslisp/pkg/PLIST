@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/04 23:47:35 jtb Exp $
+bin/VSLisp
+include/l_defs.h
+lib/libvslisp4.a
+lib/libvslisp4.la
+lib/libvslisp4.so.4.1
+share/doc/vslisp/Colors.txt
+share/doc/vslisp/ColorsDemo.txt
+share/doc/vslisp/html/lisp-1.html
+share/doc/vslisp/html/lisp-2.html
+share/doc/vslisp/html/lisp-3.html
+share/doc/vslisp/html/lisp-4.html
+share/doc/vslisp/html/lisp-5.html
+share/doc/vslisp/html/lisp.html
+share/doc/vslisp/lisp.sgml
+@dirrm share/doc/vslisp/html
+@dirrm share/doc/vslisp
