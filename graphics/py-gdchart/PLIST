@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:36 zuntum Exp $
-lib/python2.0/site-packages/chart.py
-lib/python2.0/site-packages/gdchart.so
-share/examples/py-gdchart/test.html
-share/examples/py-gdchart/test.py
-share/examples/py-gdchart/CHANGES
-@dirrm share/examples/py-gdchart
+@comment $NetBSD: PLIST,v 1.2 2002/01/17 12:34:17 drochner Exp $
+${PYSITELIB}/chart.py
+${PYSITELIB}/gdchart.so
+share/examples/${PYPKGPREFIX}-gdchart/test.html
+share/examples/${PYPKGPREFIX}-gdchart/test.py
+share/examples/${PYPKGPREFIX}-gdchart/CHANGES
+@dirrm share/examples/${PYPKGPREFIX}-gdchart
