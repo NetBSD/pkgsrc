@@ -1,17 +1,19 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/19 19:35:52 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2003/07/22 19:34:31 jmmv Exp $
 
---- common/devices.cpp.orig	Mon Sep 28 14:59:27 1998
-+++ common/devices.cpp	Sun Jan 28 14:22:54 2001
-@@ -14,7 +14,7 @@
+--- common/devices.cpp.orig	1998-09-28 23:59:27.000000000 +0200
++++ common/devices.cpp
+@@ -13,8 +13,9 @@
+ #include <unistd.h>
  #include <fcntl.h>
  #include <stdio.h>
++#include <stdlib.h>
  #include <sys/ioctl.h>
 -#include <sys/soundcard.h>
 +#include <soundcard.h>
  
  #include "modplay.h"
  
-@@ -24,13 +24,26 @@
+@@ -24,13 +25,26 @@ OpenDSP(DSPInfo * DSP)
  	int val;
  
  	//DSP->fd = open(AUDIO_DEV, O_WRONLY|O_NONBLOCK);
@@ -39,7 +41,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/03/19 19:35:52 wiz Exp $
  	if (ioctl(DSP->fd, SNDCTL_DSP_SETFMT, &val) == -1) {
  		perror("ioctl SNDCTL_DSP_SETFMT failed");
  		exit(-1);
-@@ -76,7 +89,7 @@
+@@ -76,7 +90,7 @@ OpenDSP(DSPInfo * DSP)
  	}
  	DSP->sample_rate = val;
  
