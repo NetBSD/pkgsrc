@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1411 2004/02/21 12:29:23 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1412 2004/02/25 09:24:52 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1155,10 +1155,10 @@ MASTER_SITE_DEBIAN+= \
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
-	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/ \
-	ftp://ftp.cz.netbsd.org/pub/NetBSD/packages/distfiles/ \
-	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/ \
-	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
+	ftp://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
+	ftp://ftp.cz.NetBSD.org/pub/NetBSD/packages/distfiles/ \
+	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
+	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/
 .if defined(DIST_SUBDIR)
 _MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}/}
 .  if defined(MASTER_SITE_OVERRIDE)
@@ -1191,7 +1191,7 @@ PKGNAME_NOREV=		${PKGNAME}
 .endif
 SVR4_PKGNAME?=		${PKGNAME}
 
-MAINTAINER?=		tech-pkg@netbsd.org
+MAINTAINER?=		tech-pkg@NetBSD.org
 
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
 CKSUMFILES?=	${ALLFILES}
@@ -3998,7 +3998,7 @@ checksum: fetch uptodate-digest
 # List of sites carrying binary pkgs. Variables "rel" and "arch" are
 # replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
 BINPKG_SITES?= \
-	ftp://ftp.netbsd.org/pub/NetBSD/packages/$${rel}/$${arch}
+	ftp://ftp.NetBSD.org/pub/NetBSD/packages/$${rel}/$${arch}
 
 # List of flags to pass to pkg_add(1) for bin-install:
 
@@ -4324,7 +4324,7 @@ readmes:	readme
 # This target is used to generate README.html files
 .PHONY: readme
 .if !target(readme)
-FTP_PKG_URL_HOST?=	ftp://ftp.netbsd.org
+FTP_PKG_URL_HOST?=	ftp://ftp.NetBSD.org
 FTP_PKG_URL_DIR?=	/pub/NetBSD/packages
 
 readme:
