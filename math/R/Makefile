@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/10/03 00:12:55 tv Exp $
+# $NetBSD: Makefile,v 1.58 2004/11/13 21:28:28 jlam Exp $
 
 DISTNAME=		R-1.9.1
 PKGREVISION=	1
@@ -17,7 +17,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 TEST_TARGET=		check
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_PERL5=		# defined
 USE_GNU_TOOLS+=		make

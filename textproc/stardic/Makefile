@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/05 13:16:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/13 21:28:29 jlam Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
@@ -11,7 +11,7 @@ COMMENT=	English-Chinese dictionary
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 USE_X11=	# defined
 MAKEFILE=	makefile
 USE_LANGUAGES=	c c++

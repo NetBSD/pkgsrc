@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/10/03 00:14:57 tv Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/13 21:28:28 jlam Exp $
 #
 
 DISTNAME=	pngcrush-1.5.10
@@ -10,7 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://pmt.sourceforge.net/pngcrush/index.html
 COMMENT=	Optimizer for PNG (Portable Network Graphics) files
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 NO_CONFIGURE=		YES
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/06/28 17:28:56 abs Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/13 21:28:28 jlam Exp $
 #
 
 DISTNAME=	jasmin-1.06
@@ -12,7 +12,7 @@ COMMENT=	Java "assembler" interface
 USE_JAVA=	run
 
 WRKSRC=		${WRKDIR}/jasmin
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 NO_BUILD=	# defined
 
 post-patch:

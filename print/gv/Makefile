@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/10/03 00:18:05 tv Exp $
+# $NetBSD: Makefile,v 1.44 2004/11/13 21:28:28 jlam Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~plass/gv/
 COMMENT=	PostScript and PDF previewer
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 USE_IMAKE=		# defined
 XAW_TYPE?=		3d
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2004/10/11 16:56:28 abs Exp $
+# $NetBSD: Makefile,v 1.85 2004/11/13 21:28:28 jlam Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -15,7 +15,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 USE_LIBTOOL=	# defined
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}

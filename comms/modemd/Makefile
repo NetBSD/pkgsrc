@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/11 06:51:20 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/13 21:28:27 jlam Exp $
 
 DISTNAME=	modemd-970221
 PKGNAME=	modemd-19970221
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.vix.com/pub/modemd/
 MAINTAINER=	tsarna@NetBSD.org
 COMMENT=	Replacement getty for dialup ttys and a modem server
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 MANCOMPRESSED_IF_MANZ=	# defined
 
 pre-install:
