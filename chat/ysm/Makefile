@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/12 19:45:20 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.5 2003/01/19 08:48:47 tron Exp $
 
 DISTNAME=	ysmv7_2_8_1
 PKGNAME=	ysm-2.8.1
@@ -14,5 +13,5 @@ COMMENT=	The 'You Sick Me' terminal based ICQ client
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 
-.include "../../devel/pth/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
