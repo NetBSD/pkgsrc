@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2004/01/09 17:17:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.196 2004/01/10 22:43:06 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -82,7 +82,6 @@ SUBDIR+=	id3ed
 SUBDIR+=	id3lib
 SUBDIR+=	id3v2
 SUBDIR+=	juke
-SUBDIR+=	kdemultimedia
 SUBDIR+=	kdemultimedia2
 SUBDIR+=	kdemultimedia3
 SUBDIR+=	krio

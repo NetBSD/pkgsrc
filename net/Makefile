@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.427 2004/01/08 15:04:02 tron Exp $
+# $NetBSD: Makefile,v 1.428 2004/01/10 22:43:06 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -114,7 +114,6 @@ SUBDIR+=	ispman
 SUBDIR+=	ja-samba
 SUBDIR+=	jumpgate
 SUBDIR+=	jwhois
-SUBDIR+=	kdenetwork
 SUBDIR+=	kdenetwork2
 SUBDIR+=	kdenetwork3
 SUBDIR+=	kmap
