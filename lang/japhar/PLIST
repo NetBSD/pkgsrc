@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/07 13:42:37 seb Exp $
 lib/libarch.a
 lib/libarch.la
 lib/libarch.so
@@ -144,8 +144,6 @@ include/japhar/jvmdiint.h
 include/fficonfig.h
 include/ffi.h
 include/ffi_mips.h
-@unexec ${INSTALL_INFO} --delete %D/info/japhar.info %D/info/dir
 info/japhar.info
-@exec ${INSTALL_INFO} %D/info/japhar.info %D/info/dir
 @dirrm include/japhar/private
 @dirrm include/japhar
