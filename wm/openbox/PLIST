@@ -1,11 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/20 18:16:19 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/26 01:48:32 wiz Exp $
 bin/epist
 bin/openbox
-bin/xftlsfonts
 man/man1/epist.1
 man/man1/openbox.1
-man/man1/xftlsfonts.1
 man/man5/epistrc.5
+share/openbox/buttons/close.xbm
+share/openbox/buttons/fieron-bullet.xbm
+share/openbox/buttons/fieron-bulletl.xbm
+share/openbox/buttons/fieron-close.xbm
+share/openbox/buttons/fieron-icon.xbm
+share/openbox/buttons/fieron-max.xbm
+share/openbox/buttons/fieron-stick.xbm
+share/openbox/buttons/icon.xbm
+share/openbox/buttons/max.xbm
+share/openbox/buttons/stick.xbm
 share/openbox/epistrc
 share/openbox/menu
 share/openbox/nls/C/openbox.cat
@@ -33,6 +41,8 @@ share/openbox/nls/nl
 share/openbox/nls/nl_NL/openbox.cat
 share/openbox/nls/no
 share/openbox/nls/no_NO/openbox.cat
+share/openbox/nls/pl
+share/openbox/nls/pl_PL/openbox.cat
 share/openbox/nls/pt
 share/openbox/nls/pt_BR/openbox.cat
 share/openbox/nls/ro
@@ -50,6 +60,7 @@ share/openbox/styles/bluebox
 share/openbox/styles/cthulhain
 share/openbox/styles/deep
 share/openbox/styles/fieron
+share/openbox/styles/fieron2
 share/openbox/styles/flux
 share/openbox/styles/frobozz
 share/openbox/styles/frobust
@@ -62,6 +73,14 @@ share/openbox/styles/operation
 share/openbox/styles/outcomes
 share/openbox/styles/paper
 share/openbox/styles/purplehaaze
+share/openbox/styles/shade
+share/openbox/styles/steelblue
+share/openbox/styles/steelblue2
+share/openbox/styles/steelblue3
+share/openbox/styles/the_orange
+share/openbox/styles/trisb
+share/openbox/styles/twice
+share/openbox/styles/warp-xp
 @dirrm share/openbox/styles
 @dirrm share/openbox/nls/zh_TW
 @dirrm share/openbox/nls/zh_CN
@@ -72,6 +91,7 @@ share/openbox/styles/purplehaaze
 @dirrm share/openbox/nls/ru_RU
 @dirrm share/openbox/nls/ro_RO
 @dirrm share/openbox/nls/pt_BR
+@dirrm share/openbox/nls/pl_PL
 @dirrm share/openbox/nls/no_NO
 @dirrm share/openbox/nls/nl_NL
 @dirrm share/openbox/nls/ko_KO
@@ -86,4 +106,5 @@ share/openbox/styles/purplehaaze
 @dirrm share/openbox/nls/da_DK
 @dirrm share/openbox/nls/C
 @dirrm share/openbox/nls
+@dirrm share/openbox/buttons
 @dirrm share/openbox
