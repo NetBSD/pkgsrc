@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2023 2004/08/13 11:08:07 adrianp Exp $
+$NetBSD: TODO,v 1.2024 2004/08/13 11:32:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -441,7 +441,6 @@ Suggested package updates
 	o xmms-iris-0.12
 	o xmmsctrl-0.8
 	o xpad-1.13.1
-	o xplanet-1.1.1
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5.1a [pkg/26465|pooka]
