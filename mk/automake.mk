@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.2 2002/10/03 19:36:36 wiz Exp $
+# $NetBSD: automake.mk,v 1.3 2002/10/07 21:47:49 wiz Exp $
 #
 # makefile fragment for packages that use automake
 # AUTOMAKE_REQD can be set to the minimum version required.
@@ -28,6 +28,10 @@ AUTOCONF_REQD?=		2.13
 
 AUTOMAKE=		${LOCALBASE}/bin/automake-${_AUTOMAKE_API_VERSION}
 ACLOCAL=		${LOCALBASE}/bin/aclocal-${_AUTOMAKE_API_VERSION}
+
+.if defined(BUILD_USES_GETTEXT_M4)
+BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
+.endif
 
 .include "../../mk/autoconf.mk"
 .endif # AUTOMAKE_MK
