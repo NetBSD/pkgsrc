@@ -1,12 +1,20 @@
-$NetBSD: patch-ae,v 1.5 2000/09/04 00:47:50 itojun Exp $
+$NetBSD: patch-ae,v 1.6 2000/11/09 09:18:24 itojun Exp $
 
---- ssh-add.1.orig	Tue Aug 29 09:33:51 2000
-+++ ssh-add.1	Mon Sep  4 09:39:21 2000
-@@ -68,2 +68,3 @@
- .Pp
+--- ssh-add.1.orig	Sat Sep 16 11:29:10 2000
++++ ssh-add.1	Thu Nov  9 18:03:59 2000
+@@ -66,6 +66,7 @@
+ .Bl -tag -width Ds
+ .It Fl l
+ Lists fingerprints of all identities currently represented by the agent.
 +.El
+ .It Fl L
+ Lists public key parameters of all identities currently represented by the agent.
+ .It Fl d
+@@ -91,6 +92,7 @@
+ Contains the DSA authentication identity of the user.
+ .El
  .Sh ENVIRONMENT
-@@ -93,2 +94,3 @@
- to make this work.)
 +.El
- .Sh AUTHOR
+ .Bl -tag -width Ds
+ .It Ev "DISPLAY" and "SSH_ASKPASS"
+ If
