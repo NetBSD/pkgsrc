@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9772 2005/04/06 14:15:29 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9773 2005/04/06 14:56:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1921,3 +1921,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated clearsilver to 0.9.14 [epg 2005-04-06]
 	Updated mysql4-client to 4.1.11 [xtraeme 2005-04-06]
 	Updated mysql4-server to 4.1.11 [xtraeme 2005-04-06]
+	Added ruby-RMagick-1.7.4 [minskim 2005-04-06]
