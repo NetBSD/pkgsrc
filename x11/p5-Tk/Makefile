@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.15 1999/05/02 23:07:12 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/28 08:28:22 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
-DISTNAME=		Tk402.002
-PKGNAME=		p5-Tk-402.002
+DISTNAME=		Tk800.022
+PKGNAME=		p5-Tk-800.022
 CATEGORIES=		x11 tk80 perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Tk/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Tk/pod/overview.html
 
-BUILD_DEPENDS= 		${PREFIX}/lib/perl5/site_perl/HTML/Parser.pm:../../www/p5-HTML-Parser
+BUILD_DEPENDS= 		${PERL5_SITEARCH}/auto/HTML/Parser/.packlist:../../www/p5-HTML-Parser
 DEPENDS+=		tk-8.0.5:../../x11/tk80
 
-USE_PERL5=		YES
-USE_X11=		yes
+USE_X11=		# defined
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Tk/.packlist
 
-post-extract:
-	@${RM} -f ${WRKSRC}/blib.pm
+MAKE_PARAMS=		X11=${X11BASE}
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 .include "../../mk/bsd.pkg.mk"
