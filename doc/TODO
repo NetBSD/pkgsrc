@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.458 2003/04/10 13:24:52 wiz Exp $
+$NetBSD: TODO,v 1.459 2003/04/11 08:18:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -92,6 +92,7 @@ Suggested package updates
 	o canna-3.6p3 [pkg/20208]
 	o cervisia-2.0
 	o cfengine-1.6.5 [pkg/19459|seb]
+	o cfengine-2.0.6
 	o clisp-2.30
 	o conserver-7.2.6 [pkg/20966]
 	o courier-0.42.0
@@ -144,7 +145,7 @@ Suggested package updates
 	o gpa-0.6.1
 	o gperiodic-2.0.3
 	o grace-5.1.12
-	o gsed-4.0.6
+	o gsed-4.0.7
 	o gtetrinet-0.7.0
 	o hatari-0.30
 	o icepref-2.2
@@ -222,7 +223,7 @@ Suggested package updates
 	o scsh-0.6.3
 	o sendfile-20010424
 	o sketch-0.6.15
-	o smalltalk-2.0.11
+	o smalltalk-2.1
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snd-6.7
 	o snes9x-1.39a
@@ -259,7 +260,9 @@ Suggested package updates
 	o xdialog-2.1.0
 	o xerces-c-2.1.0 [heinz]
 	o xisp-2.7 [pkg/19566]
+	o xmame-0.67.1
 	o xmcd-3.2.0
+	o xmess-0.67.1
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.6.9
 	o xplanet-1.0.0
