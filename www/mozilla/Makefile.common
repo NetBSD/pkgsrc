@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2004/12/25 15:39:42 taya Exp $
+# $NetBSD: Makefile.common,v 1.50 2005/04/02 09:46:41 abs Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -191,6 +191,6 @@ SUBST_FILES.pc=		build/unix/*.pc.in
 SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
 			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
 SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
-			
+
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
