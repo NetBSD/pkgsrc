@@ -1,0 +1,66 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- src/display.c.orig	Mon Jul 15 16:32:39 2002
++++ src/display.c
+@@ -36,7 +36,7 @@
+ #include "var.h"
+ 
+ /* this mutex provides a lock for stdout to avoid display conflict between thread */
+-G_LOCK_DEFINE_STATIC(stdout);
++G_LOCK_DEFINE_STATIC(std_out);
+ 
+ static FILE *log_fd=NULL;
+ static FILE *errlog_fd=NULL;
+@@ -135,7 +135,7 @@ void disp_msg_full(DISP_MSG_TYPE msg_typ
+ 	if((msg_type==DEBUG_MSG)&&(debug_mode==0))
+ 		return;
+ 
+-	G_LOCK(stdout);
++	G_LOCK(std_out);
+ 	o_str=g_string_new("");
+ 
+ 	va_start(ap,fnc_name);
+@@ -258,7 +258,7 @@ void disp_msg_full(DISP_MSG_TYPE msg_typ
+ 	va_end(ap);
+ 
+ 	fflush(stdout);			/* flush stdout before unlocking */
+-	G_UNLOCK(stdout);
++	G_UNLOCK(std_out);
+ }
+ 
+ /***********************************/
+@@ -269,7 +269,7 @@ void disp_msg_full(DISP_MSG_TYPE msg_typ
+ void change_logfile(char *filename)
+ {
+ 	/* to avoid potential access conflict, we lock the display */
+-	G_LOCK(stdout);
++	G_LOCK(std_out);
+ 
+ 	/* close the previously existing FILE */
+ 	if(log_fd!=NULL)
+@@ -287,7 +287,7 @@ void change_logfile(char *filename)
+ 			disp_msg(ERR_MSG,"change_logfile",strerror(errno),NULL);
+ 		}
+ 	}
+-	G_UNLOCK(stdout);
++	G_UNLOCK(std_out);
+ }
+ 
+ /***************************************/
+@@ -298,7 +298,7 @@ void change_logfile(char *filename)
+ void change_errlogfile(char *filename)
+ {
+ 	/* to avoid potential access conflict, we lock the display */
+-	G_LOCK(stdout);
++	G_LOCK(std_out);
+ 
+ 	/* close the previously existing FILE */
+ 	if(errlog_fd!=NULL)
+@@ -316,6 +316,6 @@ void change_errlogfile(char *filename)
+ 			disp_msg(ERR_MSG,"change_errlogfile",strerror(errno),NULL);
+ 		}
+ 	}
+-	G_UNLOCK(stdout);
++	G_UNLOCK(std_out);
+ }
+ 
