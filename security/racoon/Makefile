@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2000/10/04 00:31:48 itojun Exp $
+# $NetBSD: Makefile,v 1.24 2000/10/10 09:47:50 itojun Exp $
 #
 
-DISTNAME=	racoon-20001004a
+DISTNAME=	racoon-20001010a
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
@@ -18,18 +18,12 @@ IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=	USE_INET6
 
-# openssl is necessary for RSA libraries
-# if PATENTEDOPENSSLSRC is defined, then we assume that
-# RSA already exists in the OpenSSL built as part of the
-# base distribution.
-# XXX the check chokes with cross build
-.if !defined(PATENTEDOPENSSLSRC) && !exists(/usr/include/openssl/rsa.h)
-DEPENDS+=	openssl-0.9.*:../../security/openssl
+# we rely upon 1.5-based /usr/lib/libcrypto, or pkgsrc/security/openssl.
+# between 1.4 and 1.5, there were period where we had RSA-less
+# /usr/lib/libcrypto.  we do not support that configuration in the pkgsrc.
+USE_SSL=	yes
 CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include CFLAGS=-I${LOCALBASE}/include \
 		LIBS="-L${LOCALBASE}/lib -L${WRKSRC}/../libipsec"
-.else
-CONFIGURE_ENV+=	LIBS="-L${WRKSRC}/../libipsec"
-.endif
 
 CONFLICTS+=	racoon-*
 
