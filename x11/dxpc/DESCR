@@ -25,7 +25,7 @@ them and sends them to the client application.
 dxpc attempts to exploit patterns in X protocol messages to limit
 the amount of data sent between the Client Proxy and Server Proxy.
 For many X message types, each field has a high probability of having
-the same value as it had in some previous message of the the same type.
+the same value as it had in some previous message of the same type.
 For such fields, dxpc maintains caches of the last 'n' values, with a
 least-recently-used replacement policy.  If a field value in a new
 message is already present in the corresponding cache, dxpc transmits
