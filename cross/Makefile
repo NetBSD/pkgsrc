@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/08/05 15:30:22 kent Exp $
+# $NetBSD: Makefile,v 1.25 2002/01/22 12:17:44 kent Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -11,6 +11,7 @@ SUBDIR+=	binutils
 SUBDIR+=	i386-cygwin32
 SUBDIR+=	i386-linux
 SUBDIR+=	i386-linuxglibc1
+SUBDIR+=	i386-mingw32
 SUBDIR+=	i386-msdosdjgpp
 SUBDIR+=	i386-netbsd
 SUBDIR+=	i386-netbsdelf
