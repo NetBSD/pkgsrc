@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.8 2004/06/22 20:45:45 xtraeme Exp $
+$NetBSD: patch-af,v 1.9 2004/06/26 23:56:21 xtraeme Exp $
 
 Add some code for NetBSD to
    a) check if an interface is up, and
@@ -6,7 +6,7 @@ Add some code for NetBSD to
 
 --- src/apppstatus.cc.orig	Sat Sep 27 08:54:45 2003
 +++ src/apppstatus.cc	Sun Jun 20 20:45:26 2004
-@@ -363,6 +363,26 @@
+@@ -358,6 +358,26 @@
          return isUpIsdn();
  #endif
  
@@ -33,15 +33,15 @@ Add some code for NetBSD to
      char buffer[32 * sizeof(struct ifreq)];
      struct ifconf ifc;
      struct ifreq *ifr;
-@@ -395,6 +415,7 @@
+@@ -390,6 +410,7 @@
  
      close(s);
      return false;
-+#endif // __NetBSD__
- #endif // if 0
++#endif
  }
  
-@@ -522,6 +543,21 @@
+ void NetStatus::updateStatus() {
+@@ -510,6 +531,21 @@
          }
      }
  #endif //FreeBSD
