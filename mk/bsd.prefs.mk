@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.15 2000/02/13 10:33:22 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.16 2000/06/03 07:16:51 hubertf Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -23,9 +23,11 @@ UNAME=echo Unknown
 
 .ifndef OPSYS
 OPSYS!=			${UNAME} -s
+MAKEFLAGS+=		OPSYS=${OPSYS}
 .endif
 .ifndef OS_VERSION
 OS_VERSION!=		${UNAME} -r
+MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 .endif
 
 # Preload these for architectures not in all variations of bsd.own.mk.
@@ -45,24 +47,31 @@ MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 .if ${OPSYS} == "NetBSD"
 LOWER_OPSYS?=		netbsd
 .elif ${OPSYS} == "SunOS"
-.if ${MACHINE_ARCH} == "unknown"
+. if ${MACHINE_ARCH} == "unknown"
+.  if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -p
-.endif
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+.  endif	# !defined(LOWER_ARCH)
+. endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
-.if ${MACHINE_ARCH} == "unknown"
+. if ${MACHINE_ARCH} == "unknown"
+.  if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -m | sed -e 's/[456]86/386/'
-.if ${LOWER_ARCH} == "i386"
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+.  endif # !defined(LOWER_ARCH)
+.  if ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=		pc
-.else
+.  else
 LOWER_VENDOR?=		unknown
-.endif
-.endif
+.  endif
+. endif
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
+MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
 .endif
 
 LOWER_VENDOR?=
@@ -81,8 +90,6 @@ NEED_OWN_INSTALL_TARGET=no
 SHAREOWN?=		${DOCOWN}
 SHAREGRP?=		${DOCGRP}
 SHAREMODE?=		${DOCMODE}
-.elif (${OPSYS} == "OpenBSD")
-MAKE_ENV+=		EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
 .endif
 
 .if defined(PREFIX) && (${PREFIX} != ${__PREFIX_SET__})
