@@ -1,12 +1,35 @@
 #!/bin/sh
 
-# $NetBSD: pgsql.sh.tmpl,v 1.5 2000/03/18 17:43:16 jlam Exp $
+# $NetBSD: pgsql.sh.tmpl,v 1.6 2000/07/14 04:44:12 jlam Exp $
 # FreeBSD Id: pgsql.sh.tmpl,v 1.3 1997/10/05 21:00:49 andreas Exp
 
 # pgsql.sh - postgresql startup file for NetBSD
 
-if [ -x @PREFIX@/bin/postmaster ]; then
-	echo -n ' pgsql' 
-	su -l @PGUSER@ -c 'exec @PREFIX@/bin/postmaster \
-		-S -o -F > @PGHOME@/errlog'
+CMD=${1:-start}
+USER=@PGUSER@
+
+if [ -x /usr/pkg/bin/postmaster -a -x /usr/pkg/bin/pg_ctl ]
+then
+	case ${CMD} in
+	start)
+		echo -n ' pgsql' 
+		su -l ${USER} -c 'exec /usr/pkg/bin/pg_ctl \
+			-p /usr/pkg/bin/postmaster -o "-S -o -F" start \
+			> @PGHOME@/errlog'
+		;;
+	stop)
+		su -l ${USER} -c 'exec /usr/pkg/bin/pg_ctl stop \
+			>> @PGHOME@/errlog'
+		;;
+	restart)
+		su -l ${USER} -c 'exec /usr/pkg/bin/pg_ctl restart \
+			>> @PGHOME@/errlog'
+		;;
+	status)
+		su -l ${USER} -c 'exec /usr/pkg/bin/pg_ctl status'
+		;;
+	*)
+		echo "Unexpected argument: ${CMD}"
+		;;
+	esac
 fi
