@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.3 2003/03/13 02:56:50 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.4 2003/03/15 12:26:11 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -220,3 +220,34 @@ net/soup/distinfo				1.4
 fix bug with static initializers which prevented compilition on 64 bit
 platforms
 	[dmcmahill, ticket #1209]
+
+mail/evolution/Makefile				1.33
+
+add --disable-gtk-doc to CONFIGURE_ARGS to allow this to build without
+an active X display.
+	[dmcmahill, ticket #1211]
+
+cad/qcad/Makefile				1.10
+cad/qcad/distinfo				1.6
+cad/qcad/patches/patch-aa			1.5
+
+on alpha lower optimization level on a handful of key problem files that
+triggered a compiler error.   This package now builds and seems to run
+on NetBSD-1.6/alpha
+	[dmcmahill, ticket #1213]
+
+net/ethereal/Makefile				1.72
+net/ethereal/distinfo				1.18
+
+Updated to version 0.9.11.
+(0.9.10 was improperly packaged)
+	[salo, ticket #1214]
+
+audio/xsidplay/Makefile				1.23
+audio/xsidplay/distinfo				1.4
+audio/xsidplay/patches/patch-aa			1.8
+
+lower optimization on 8 problem files on alpha which trigger compiler
+bugs.  This package now builds on NetBSD-1.6/alpha and even seems to
+run the GUI.  Audio output not verified due to lack of hardware.
+	[dmcmahill, ticket #1215]
