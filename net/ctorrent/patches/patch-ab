@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/25 17:20:47 wiz Exp $
+
+--- peerlist.cpp.orig	2004-06-25 19:16:32.000000000 +0200
++++ peerlist.cpp
+@@ -3,6 +3,7 @@
+ #include "peerlist.h"
+ 
+ #include <stdlib.h>
++#include <errno.h>
+ 
+ #include <stdio.h>
+ 
+@@ -361,6 +362,7 @@ int PeerList::Initial_ListenPort()
+   struct sockaddr_in lis_addr;
+   memset(&lis_addr,0, sizeof(sockaddr_in));
+   lis_addr.sin_addr.s_addr = INADDR_ANY;
++  lis_addr.sin_family = AF_INET;
+ 
+   m_listen_sock = socket(AF_INET,SOCK_STREAM,0);
+ 
