@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7676 2004/11/03 15:35:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.7677 2004/11/03 15:55:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5050,3 +5050,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Chart-2.3 [adrianp 2004-11-03]
 	Updated gentoo to 0.11.52 [adam 2004-11-03]
 	Updated gpgme to 1.0.1nb1 [jmmv 2004-11-03]
+	Updated xpaint to 2.7.2 [adam 2004-11-03]
