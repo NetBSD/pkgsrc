@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/08/22 21:23:23 skrll Exp $
+# $NetBSD: Makefile,v 1.35 2000/08/25 08:26:07 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -15,13 +15,11 @@ USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
 GNU_CONFIGURE=	yes
 
-EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--without-gnu-ld" \
 		"--without-libjpeg" \
 		"--without-libgif" \
 		"--without-libgdbm" \
 		"--without-libuulib" \
-		"--without-sprite-field" \
-		"--with-qt-dir=${QT1DIR}/qt1" 
+		"--without-sprite-field"
 
 .include "../../mk/bsd.pkg.mk"
