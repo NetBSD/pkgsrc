@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2004/07/16 00:50:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.252 2004/07/23 19:29:50 jlam Exp $
 
 COMMENT=	System utilities
 
@@ -181,6 +181,7 @@ SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	vip
 SUBDIR+=	vobcopy
+SUBDIR+=	webmin
 SUBDIR+=	whowatch
 SUBDIR+=	wmcpuload
 SUBDIR+=	wmmemmon
