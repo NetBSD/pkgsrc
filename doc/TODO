@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.299 2003/02/21 13:47:11 wiz Exp $
+$NetBSD: TODO,v 1.300 2003/02/21 13:53:44 salo Exp $
 
 Suggested new packages
 ======================
@@ -99,7 +99,6 @@ Suggested package updates
 	o ctwm-3.6
 	o cyrus-imapd21-2.1.12
 	o cyrus-sasl2-2.1.12
-	o dante-1.1.13
 	o db4-4.1.25 [pkg/20289]
 	o dillo-0.7.0
 	o drac [pkg/20449]
@@ -143,7 +142,6 @@ Suggested package updates
 	o gtetrinet-0.6.2
 	o gtk---2.2.0
 	o gtk2-pan-0.13.3.93
-	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
 	o icewm-1.2.5
@@ -170,7 +168,6 @@ Suggested package updates
 	o lcms-1.0.9
 	o leafnode-1.9.35
 	o lesstif-0.93.40
-	o libbonobo-2.0.1
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
@@ -228,7 +225,6 @@ Suggested package updates
 	o rocksndiamonds-2.2.0rc3
 	o rox-1.2.2
 	o rox-session-0.1.17
-	o rrdtool-1.0.39
 	o rt-2.1.15
 	o ruby-1.6.8
 	o rxvt-2.7.9
