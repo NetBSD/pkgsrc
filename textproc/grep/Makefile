@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/25 19:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/09 17:23:10 cjep Exp $
 #
 
 DISTNAME=	grep-2.5
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/grep/grep.html
 COMMENT=	GNU grep
 
 USE_BUILDLINK2=         YES
+USE_PKGLOCALEDIR=	YES
 BUILD_USES_MSGFMT=	YES
 TEXINFO_REQD=		4.0
 
