@@ -1,18 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:32 tron Exp $
-bin/mailq
-@exec ${CHMOD} u+s %D/bin/mailq
-@exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/bin/mailq
-bin/nullmailer-inject
+@comment $NetBSD: PLIST,v 1.4 2003/02/17 01:45:31 jtb Exp $
+libexec/nullmailer/mailq
+@exec ${CHMOD} u+s %D/libexec/nullmailer/mailq
+@exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/libexec/nullmailer/mailq
+libexec/nullmailer/nullmailer-inject
+libexec/nullmailer/nullmailer-queue
+@exec ${CHMOD} u+s %D/libexec/nullmailer/nullmailer-queue
+@exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/libexec/nullmailer/nullmailer-queue
+libexec/nullmailer/nullmailer-send
 libexec/nullmailer/qmqp
+libexec/nullmailer/sendmail
 libexec/nullmailer/smtp
 man/man1/nullmailer-inject.1
 man/man1/sendmail.1
 man/man7/nullmailer.7
-sbin/nullmailer-queue
-@exec ${CHMOD} u+s %D/sbin/nullmailer-queue
-@exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/sbin/nullmailer-queue
-sbin/nullmailer-send
-sbin/sendmail
+man/man8/nullmailer-queue.8
+man/man8/nullmailer-send.8
 share/doc/nullmailer/AUTHORS
 share/doc/nullmailer/BUGS
 share/doc/nullmailer/COPYING
@@ -21,16 +23,16 @@ share/doc/nullmailer/HOWTO
 share/doc/nullmailer/NEWS
 share/doc/nullmailer/README
 share/doc/nullmailer/TODO
-@exec ${MKDIR} /var/nullmailer
-@exec ${MKDIR} /var/nullmailer/queue
-@exec ${MKDIR} /var/nullmailer/tmp
-@exec mkfifo /var/nullmailer/trigger
-@exec ${CHMOD} 600 /var/nullmailer/trigger
-@exec ${CHOWN} -R ${NULLMAILER_USER}:${NULLMAILER_GROUP} /var/nullmailer/*
+@exec ${MKDIR} /var/spool/nullmailer
+@exec ${MKDIR} /var/spool/nullmailer/queue
+@exec ${MKDIR} /var/spool/nullmailer/tmp
+@exec mkfifo /var/spool/nullmailer/trigger
+@exec ${CHMOD} 600 /var/spool/nullmailer/trigger
+@exec ${CHOWN} -R ${NULLMAILER_USER}:${NULLMAILER_GROUP} /var/spool/nullmailer/*
 @dirrm libexec/nullmailer
 @dirrm share/doc/nullmailer
 @unexec ${RMDIR} ${PKG_SYSCONFDIR}/nullmailer 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} /var/nullmailer/queue 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} /var/nullmailer/tmp 2>/dev/null || ${TRUE}
-@unexec ${RM} -f /var/nullmailer/trigger 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} /var/nullmailer 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} /var/spool/nullmailer/queue 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} /var/spool/nullmailer/tmp 2>/dev/null || ${TRUE}
+@unexec ${RM} -f /var/spool/nullmailer/trigger 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} /var/spool/nullmailer 2>/dev/null || ${TRUE}
