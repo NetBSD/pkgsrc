@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.3 1998/08/07 13:29:10 agc Exp $
+
 MD5 (xforms/netBSD-arm/bxform-088.tgz) = 709b4094b6cbcb718d66c979882de471
 MD5 (xforms/netBSD-m68k/bxform-088.tgz) = aac3b9873af7ed8c8daa6d79edf4d796
 MD5 (xforms/netBSD-pc532/bxform-088.tgz) = e84b3226eda1cce93bcd54e037d6a72f
