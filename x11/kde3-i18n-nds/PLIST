@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/10 06:34:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/01/19 13:25:29 markd Exp $
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/alarmdaemonctrl.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/appletproxy.mo
@@ -341,5 +341,3 @@ ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/wavecapture.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/webarchiver.mo
 ${PKGLOCALEDIR}/locale/nds/charset
 ${PKGLOCALEDIR}/locale/nds/entry.desktop
-@dirrm ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/nds
