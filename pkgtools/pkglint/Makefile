@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.154 2003/03/28 20:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2003/03/29 12:34:10 jmmv Exp $
 #
 
-DISTNAME=	pkglint-3.48
+DISTNAME=	pkglint-3.49
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,7 +15,6 @@ DEPENDS+=	digest>=20010101:../../pkgtools/digest
 
 USE_PERL5=	YES
 
-WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
