@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2004/05/07 13:49:56 adam Exp $
+$NetBSD: patch-ab,v 1.5 2004/11/08 10:39:14 adam Exp $
 
---- configure.orig	2004-04-17 14:34:22.000000000 +0000
+--- configure.orig	2004-11-01 23:08:15.000000000 +0000
 +++ configure
-@@ -2881,7 +2881,7 @@ _ACEOF
+@@ -2889,7 +2889,7 @@ _ACEOF
  
    GENTOO_CFLAGS="$GENTOO_CFLAGS -g -pg"
  else
