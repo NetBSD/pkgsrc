@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6192 2004/06/10 09:18:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.6193 2004/06/10 10:08:20 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2854,3 +2854,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cpuflags to 0.71 [cube 2004-06-09]
 	Updated cdraw to 1.175nb1 [xtraeme 2004-06-09]
 	Updated pkg_comp to 1.19 [jmmv 2004-06-10]
+	Updated cvs to 1.11.17 [grant 2004-06-10]
