@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2000/12/13 08:31:02 garbled Exp $
 --- crossedit/Makefile.in.orig	Tue Dec  5 23:30:11 2000
 +++ crossedit/Makefile.in	Tue Dec  5 23:31:40 2000
 @@ -67,7 +67,7 @@
