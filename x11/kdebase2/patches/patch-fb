@@ -1,0 +1,21 @@
+$NetBSD: patch-fb,v 1.1 2001/11/13 21:10:46 jlam Exp $
+
+--- kdesktop/kdeeject.orig	Sat May  5 16:05:58 2001
++++ kdesktop/kdeeject
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ # Script used by kdesktop to eject a removable media (CDROM/Tape/SCSI/Floppy)
+-# Relies on the 'eject' program, 'cdcontrol' on *BSD
++# Relies on the 'eject' program, 'cdcontrol' on FreeBSD
+ #
+ # Copyright GPL v2 by David Faure <david@mandrakesoft.com>
+ #
+@@ -13,7 +13,7 @@
+   # I guess this is the reason for making this a kde app...
+   OS=`uname -s`
+   case "$OS" in
+-    *BSD)
++    FreeBSD)
+       dev=`echo $1 | sed -E -e 's#/dev/##' -e 's/([0-9])./\1/'`
+       cdcontrol -f $dev eject >/dev/null 2>&1
+       ;;

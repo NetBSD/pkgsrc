@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2001/10/15 22:45:59 skrll Exp $
+$NetBSD: patch-aa,v 1.7 2001/11/13 21:10:46 jlam Exp $
 
---- configure.orig	Sat Sep  8 01:36:55 2001
+--- configure.orig	Fri Sep  7 20:36:55 2001
 +++ configure
 @@ -12536,7 +12536,7 @@
  
@@ -36,7 +36,31 @@ $NetBSD: patch-aa,v 1.6 2001/10/15 22:45:59 skrll Exp $
  for ac_hdr in GL/xmesa.h GL/glut.h memory.h
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-@@ -12919,6 +12919,7 @@
+@@ -12810,6 +12810,23 @@
+   
+                 ac_cv_have_dpms="-lXdpms"
+                 
++	lib=Xdpms
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "no" ]; then
++		eval "ac_cv_have_dpms=no"
++	fi
++
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+@@ -12919,6 +12936,7 @@
  case "$host" in 
    *-*-linux*) ksysguardd_compile=yes; UNAME='Linux' ;;
    *-*-freebsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;

@@ -1,0 +1,35 @@
+$NetBSD: patch-fc,v 1.1 2001/11/13 21:10:46 jlam Exp $
+
+--- kdesktop/init.cc.orig	Tue Sep  4 19:12:48 2001
++++ kdesktop/init.cc
+@@ -80,9 +80,13 @@
+ {
+   if (force || !QFile::exists(dir + "/.directory")) {
+     QCString cmd;
+-    cmd.sprintf( "cp %s %s/.directory",
++    QCString dest;
++    dest.sprintf( "%s/.directory", QFile::encodeName(dir).data() );
++    cmd.sprintf( "cp %s %s",
+      QFile::encodeName(locate("data", QString("kdesktop/") + fileName)).data(),
+-     QFile::encodeName(dir).data() );
++     dest.data() );
++    system( cmd );
++    cmd.sprintf( "chmod u+w %s", dest.data() );
+     system( cmd );
+   }
+ }
+@@ -106,10 +110,13 @@
+     for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++) {
+ 	QCString cmd = "cp '";
+ 	KDesktopFile desk( *it );
++	QCString dest = QFile::encodeName(desktopPath + desk.readName());
+ 	cmd += QFile::encodeName(*it);
+ 	cmd += "' '";
+-	cmd += QFile::encodeName(desktopPath + desk.readName());
++	cmd += dest;
+ 	cmd += "'";
++	system( cmd );
++	cmd = "chmod u+w '" + dest + "'";
+ 	system( cmd );
+     }
+ }
