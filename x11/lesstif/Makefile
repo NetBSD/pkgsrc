@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2004/04/24 22:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2004/09/28 12:52:13 adam Exp $
 
-DISTNAME=	lesstif-0.93.94
+DISTNAME=	lesstif-0.93.96
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,15 +16,11 @@ USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--disable-build-12
-CONFIGURE_ARGS+=	--disable-build-20
-CONFIGURE_ARGS+=	--enable-build-21
 CONFIGURE_ARGS+=	--enable-production --disable-debug --disable-verbose
 CONFIGURE_ARGS+=	--enable-editres --enable-xdnd
 
 # The following forces the build process to use sed as the HTML-to-text
 # converter.
-#
 CONFIGURE_ENV+=		LYNX_CMD=${WRKDIR}/nonexecutable
 CONFIGURE_ENV+=		LINKS_CMD=${WRKDIR}/nonexecutable
 
@@ -76,5 +72,6 @@ pre-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include "../../textproc/expat/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../x11/Xrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
