@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/28 20:07:01 rh Exp $
+
+--- clustalw.c.orig	Fri Jan 16 04:44:05 1998
++++ clustalw.c	Tue Feb 16 11:58:13 1999
+@@ -33,7 +33,7 @@
+ #ifdef MSDOS
+         char *help_file_name = "clustalw.hlp";
+ #else
+-        char *help_file_name = "clustalw_help";
++        char *help_file_name = "@PREFIX@/share/doc/clustalw/clustalw_help";
+ #endif
+ 
+ sint max_names; /* maximum length of names in current alignment file */

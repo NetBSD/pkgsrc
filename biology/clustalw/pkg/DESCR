@@ -1,0 +1,5 @@
+  Clustal W is a general purpose multiple alignment program for
+DNA or proteins.  Clustal W can write various output files in
+Phylip format.  Furthermore, Clustal W is capable of producing
+phylogenetic trees from multiple sequence alignments in the GCG
+MSF Format. 
