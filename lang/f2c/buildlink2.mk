@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/08/27 17:31:58 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/02/08 04:03:15 jlam Exp $
 
 .if !defined(F2C_BUILDLINK2_MK)
 F2C_BUILDLINK2_MK=	# defined
@@ -27,10 +27,10 @@ PKG_FC=			${BUILDLINK_PREFIX.f2c}/bin/f2c-f77
 # The f2c-f77 script takes some environment variables to override hardcoded
 # values for the compiler and C preprocessor.
 #
-CONFIGURE_ENV+=		CC_f2c="${BUILDLINK_CC}"
-CONFIGURE_ENV+=		CPP="${BUILDLINK_CPP}"
-MAKE_ENV+=		CC_f2c="${BUILDLINK_CC}"
-MAKE_ENV+=		CPP="${BUILDLINK_CPP}"
+CONFIGURE_ENV+=		CC_f2c="${CC}"
+CONFIGURE_ENV+=		CPP="${CPP}"
+MAKE_ENV+=		CC_f2c="${CC}"
+MAKE_ENV+=		CPP="${CPP}"
 
 f2c-buildlink: _BUILDLINK_USE
 

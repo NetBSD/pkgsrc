@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:07:07 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/08 04:03:15 jlam Exp $
 
 DISTNAME=	unlzx.c
 PKGNAME=	unlzx-1.1
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	# defined
 
 do-build:
-	cd ${WRKSRC} && ${BUILDLINK_CC} ${CFLAGS} -o unlzx unlzx.c
+	cd ${WRKSRC} && ${CC} ${CFLAGS} -o unlzx unlzx.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unlzx ${PREFIX}/bin
