@@ -1,34 +1,26 @@
---- Makefile.orig	Tue Apr 28 15:57:25 1998
-+++ Makefile	Tue Apr 28 16:25:55 1998
-@@ -4,19 +4,19 @@
+--- Makefile.orig	Wed May 20 05:45:57 1998
++++ Makefile	Wed Jul  1 18:40:42 1998
+@@ -4,13 +4,14 @@
  # If you already have gd installed, use the line below and comment out the
  # following line
  #       GD = /path/to/gd/directory
 -        GD = gd1.3
 -        CC = gcc
--    CFLAGS = -O -I$(GD)
 +#       GD = gd1.3
 +#        CC = gcc
-+#   CFLAGS = -O
- #   CFLAGS = -O -Olimit 2096 -pedantic -I$(GD)
+ #    CFLAGS = -O -I$(GD)
+-   CFLAGS = -O -pedantic -wall -I$(GD)
 -      LIBS = -L$(GD) -lgd -lm
++#   CFLAGS = -O -pedantic -wall -I$(GD)
++    CFLAGS = -O -I$(PREFIX)/include/gd
 +      LIBS = -L$(PREFIX)/lib -lgd -lm
  
 -all: gd fly
 +all: fly
  
--gd: $(GD)
--	cd $(GD); make
-+#gd: $(GD)
-+#	cd $(GD); make
- 
- fly.o: fly.c fly.h
--	$(CC) -c $(CFLAGS) fly.c
-+	$(CC) -c -I$(PREFIX)/include/gd $(CFLAGS) fly.c
- 
- fly: fly.o
- 	$(CC) -o fly fly.o $(LIBS)
-@@ -26,4 +26,3 @@
+ gd: $(GD)
+ 	cd $(GD); make
+@@ -26,4 +27,3 @@
  
  clean:
  	rm -f fly.o fly temp.gif core; cd $(GD); make clean;
