@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/16 04:40:48 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/16 05:55:33 jlam Exp $
 
 DISTNAME=		cadaver-0.17.0
 CATEGORIES=		www
@@ -18,6 +18,7 @@ ALL_TARGET=		cadaver
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--enable-libxml
+CONFIGURE_ARGS+=	--enable-netrc
 
 .include "../../devel/libgetopt/Makefile.getopt"
 .include "../../devel/readline/Makefile.readline"
@@ -26,11 +27,6 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tputs=no
-
-.if defined(HAVE_LIBEDIT_READLINE)
-CONFIGURE_ENV+=		ac_cv_lib_readline_readline=yes
-LIBS+=			-ledit
-.endif
 
 CPPFLAGS+=		-I${WRKINCDIR}
 CFLAGS+=		-I${WRKINCDIR}
