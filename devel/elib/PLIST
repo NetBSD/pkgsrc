@@ -1,26 +1,26 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:22 zuntum Exp $
-${LISPDIR}/stack-f.el
-${LISPDIR}/stack-f.elc
-${LISPDIR}/stack-m.el
-${LISPDIR}/stack-m.elc
-${LISPDIR}/queue-f.el
-${LISPDIR}/queue-f.elc
-${LISPDIR}/queue-m.el
-${LISPDIR}/queue-m.elc
-${LISPDIR}/elib-node.el
-${LISPDIR}/elib-node.elc
-${LISPDIR}/bintree.el
-${LISPDIR}/bintree.elc
-${LISPDIR}/avltree.el
-${LISPDIR}/avltree.elc
-${LISPDIR}/string.el
-${LISPDIR}/string.elc
-${LISPDIR}/read.el
-${LISPDIR}/read.elc
-${LISPDIR}/cookie.el
-${LISPDIR}/cookie.elc
-${LISPDIR}/dll.el
-${LISPDIR}/dll.elc
-${LISPDIR}/dll-debug.el
-${LISPDIR}/dll-debug.elc
-@dirrm ${LISPDIR}
+@comment $NetBSD: PLIST,v 1.2 2002/09/14 02:49:54 uebayasi Exp $
+${EMACS_LISPPREFIX}/elib/stack-f.el
+${EMACS_LISPPREFIX}/elib/stack-f.elc
+${EMACS_LISPPREFIX}/elib/stack-m.el
+${EMACS_LISPPREFIX}/elib/stack-m.elc
+${EMACS_LISPPREFIX}/elib/queue-f.el
+${EMACS_LISPPREFIX}/elib/queue-f.elc
+${EMACS_LISPPREFIX}/elib/queue-m.el
+${EMACS_LISPPREFIX}/elib/queue-m.elc
+${EMACS_LISPPREFIX}/elib/elib-node.el
+${EMACS_LISPPREFIX}/elib/elib-node.elc
+${EMACS_LISPPREFIX}/elib/bintree.el
+${EMACS_LISPPREFIX}/elib/bintree.elc
+${EMACS_LISPPREFIX}/elib/avltree.el
+${EMACS_LISPPREFIX}/elib/avltree.elc
+${EMACS_LISPPREFIX}/elib/string.el
+${EMACS_LISPPREFIX}/elib/string.elc
+${EMACS_LISPPREFIX}/elib/read.el
+${EMACS_LISPPREFIX}/elib/read.elc
+${EMACS_LISPPREFIX}/elib/cookie.el
+${EMACS_LISPPREFIX}/elib/cookie.elc
+${EMACS_LISPPREFIX}/elib/dll.el
+${EMACS_LISPPREFIX}/elib/dll.elc
+${EMACS_LISPPREFIX}/elib/dll-debug.el
+${EMACS_LISPPREFIX}/elib/dll-debug.elc
+@dirrm ${EMACS_LISPPREFIX}/elib
