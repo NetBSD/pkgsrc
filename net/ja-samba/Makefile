@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2004/05/05 03:54:59 snj Exp $
+# $NetBSD: Makefile,v 1.26 2004/06/05 13:16:35 taca Exp $
 
 .include "Makefile.common"
 
-PKGNAME=		ja-samba-${SAMBA_BASE_VERS:S/a/.1/}.${SAMBA_JA_VERS}
-PKGREVISION=	3
+PKGNAME=		ja-samba-${SAMBA_BASE_VERS}.${SAMBA_JA_VERS}
 CATEGORIES=		net
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
@@ -66,9 +65,26 @@ EXAMPLESDIR=		${PREFIX}/share/examples/samba
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
+SUPPORT_FILES_PERMS+=	${EXAMPLESDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser \
+			${ROOT_USER} ${ROOT_GROUP} 0555
+SUPPORT_FILES_PERMS+=	${EXAMPLESDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser \
+			${ROOT_USER} ${ROOT_GROUP} 0555
 RCD_SCRIPTS=		samba nmbd smbd
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
+
+.if !defined(MKTEMP)
+MKTEMP!=	${TYPE} mktemp 2>&1 | \
+		${AWK} '/not found/ { print "mktemp"; exit } { print $$3 }'
+MAKEFLAGS+=	MKTEMP=${MKTEMP:Q}
+.endif
+.if !defined(PWD_MKDB)
+PWD_MKDB!=	${TYPE} pwd_mkdb 2>&1 | \
+		${AWK} '/not found/ { print "pwd_mkdb"; exit } { print $$3 }'
+MAKEFLAGS+=	PWD_MKDB=${PWD_MKDB:Q}
+.endif
+FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
+FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
 REPLACE_PERL=		script/findsmb.in
 
@@ -85,6 +101,10 @@ post-extract:
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/smbchartool
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
 
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
+
 post-install:
 	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -95,6 +115,8 @@ post-install:
 
 	# Install Samba examples.
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EXAMPLESDIR}/adduser.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${EXAMPLESDIR}/deluser.sh
 	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${EXAMPLESDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
