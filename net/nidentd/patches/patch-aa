@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/27 22:25:18 hubertf Exp $
+
+--- nidentd.sh.orig	Tue Mar 26 13:20:06 2002
++++ nidentd.sh
+@@ -21,7 +21,7 @@
+ #
+ # Path to LSOF !
+ 
+-lsof="/usr/pkg/sbin/lsof"
++lsof="@LOCALBASE@/sbin/lsof -Di"
+ 
+ # Protocol independent
+ 
+@@ -38,7 +38,7 @@
+ masqip=`/usr/sbin/ipnat -l | grep MAP | egrep " $qlport " | egrep " $qrport" | awk '{ print $2 }' | tr -c -d '.1234567890'`
+ lport=`/usr/sbin/ipnat -l | grep MAP | egrep " $qlport " | egrep " $qrport" | awk '{ print $7 }'`
+ rport=`/usr/sbin/ipnat -l | grep MAP | egrep " $qlport " | egrep " $qrport" | awk '{ print $9 }' | tr -d ] `
+-hostn=`grep ^$masqip /usr/local/etc/identn.conf | awk -F: '{ print $2 }'`
++hostn=`grep ^$masqip /usr/local/etc/nidentd.conf | awk -F: '{ print $2 }'`
+ if [ -n $qlport ] && [ -n $qrport ] && [ -n $lport ] && [ $rport ]
+   then
+     if [ $qlport -eq $lport ] && [ $qrport -eq $rport ]
