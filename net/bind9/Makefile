@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/01/26 04:25:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2001/01/26 21:12:02 hubertf Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -8,7 +8,6 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
 
-DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
@@ -18,8 +17,8 @@ BUILD_DEFS+=	USE_INET6
 BIND_VERSION=	9.1.0
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-mit-pthreads \
-		--with-libtool=yes \
+CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
+CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
 		--localstatedir=/var
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
