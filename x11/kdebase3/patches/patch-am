@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.4 2003/03/11 13:10:19 markd Exp $
+$NetBSD: patch-am,v 1.5 2003/05/22 02:42:47 markd Exp $
 
---- kcontrol/ebrowsing/Makefile.in.orig	Fri Jan 17 09:03:04 2003
+--- kcontrol/ebrowsing/Makefile.in.orig	Tue May 13 23:07:53 2003
 +++ kcontrol/ebrowsing/Makefile.in
-@@ -294,7 +294,7 @@ INCLUDES = -I$(srcdir)/plugins/ikws $(al
+@@ -430,7 +430,7 @@ INCLUDES = -I$(srcdir)/plugins/ikws $(al
  kde_module_LTLIBRARIES = kcm_kurifilt.la
  kcm_kurifilt_la_SOURCES = filteropts.cpp main.cpp
  
@@ -11,8 +11,8 @@ $NetBSD: patch-am,v 1.4 2003/03/11 13:10:19 markd Exp $
  kcm_kurifilt_la_LIBADD = $(LIB_KSYCOCA)
  
  data_DATA = ebrowsing.desktop
-@@ -561,7 +561,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -736,7 +736,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=filteropts.h main.h ebrowsing.desktop 

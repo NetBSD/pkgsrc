@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
+$NetBSD: patch-bn,v 1.6 2003/05/22 02:42:42 markd Exp $
 
---- kioslave/http/Makefile.in.orig	Thu Jan 23 12:30:40 2003
+--- kioslave/http/Makefile.in.orig	Thu May  8 05:24:13 2003
 +++ kioslave/http/Makefile.in
-@@ -293,7 +293,7 @@
+@@ -383,7 +383,7 @@ INCLUDES = -I$(top_srcdir)/interfaces $(
  
  ####### Files
  bin_PROGRAMS = kio_http_cache_cleaner
@@ -11,7 +11,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  kde_module_LTLIBRARIES = kio_http.la
  
  kio_http_la_SOURCES = http.cc httpfilter.cc
-@@ -301,12 +301,15 @@
+@@ -391,12 +391,15 @@ kio_http_la_SOURCES = http.cc httpfilter
  kio_http_la_LIBADD = $(LIB_KIO) $(LIBZ)
  kio_http_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
  
@@ -19,7 +19,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
 -kio_http_cache_cleaner_LDADD = kio_http_cache_cleaner.la
 +kio_http_cache_cleaner_SOURCES = http_cache_cleaner_main.cpp
 +kio_http_cache_cleaner_LDADD = libkio_http_cache_cleaner_main.la
- kio_http_cache_cleaner_LDFLAGS = $(KDE_RPATH)
+ kio_http_cache_cleaner_LDFLAGS = $(KDE_RPATH) $(all_libraries)
  
 -kio_http_cache_cleaner_la_SOURCES = http_cache_cleaner.cpp
 -kio_http_cache_cleaner_la_LIBADD = $(LIB_KIO)
@@ -28,10 +28,10 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
 +
 +kio_http_cache_cleaner_la_SOURCES = http_cache_cleaner_main.cpp
 +kio_http_cache_cleaner_la_LIBADD = libkio_http_cache_cleaner_main.la
- kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version
+ kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version $(all_libraries)
  
  noinst_HEADERS = http.h
-@@ -329,20 +332,28 @@
+@@ -419,33 +422,47 @@ kio_http_la_final_OBJECTS = kio_http_la.
  kio_http_la_nofinal_OBJECTS = http.lo httpfilter.lo
  @KDE_USE_FINAL_FALSE@kio_http_la_OBJECTS = $(kio_http_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kio_http_la_OBJECTS = $(kio_http_la_final_OBJECTS)
@@ -64,10 +64,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
 +kio_http_cache_cleaner_OBJECTS = http_cache_cleaner_main.$(OBJEXT)
 +kio_http_cache_cleaner_DEPENDENCIES = libkio_http_cache_cleaner_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -350,15 +361,21 @@
- LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/http.Plo \
@@ -92,7 +89,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/httpfilter.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-@@ -390,6 +407,7 @@
+@@ -468,6 +485,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(kio_http_la_SOURCES) \
  	$(kio_http_cache_cleaner_la_SOURCES) \
@@ -100,8 +97,8 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  	$(kio_http_cache_cleaner_SOURCES)
  DATA = $(kdelnk_DATA)
  
-@@ -402,7 +420,7 @@
- 	uninstall-recursive check-recursive installcheck-recursive
+@@ -481,7 +499,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ 	check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(kio_http_la_SOURCES) $(kio_http_cache_cleaner_la_SOURCES) $(kio_http_cache_cleaner_SOURCES)
@@ -109,7 +106,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -482,6 +500,8 @@
+@@ -561,6 +579,8 @@ clean-libLTLIBRARIES:
  	$(CXXLINK) -rpath $(kde_moduledir) $(kio_http_la_LDFLAGS) $(kio_http_la_OBJECTS) $(kio_http_la_LIBADD) $(LIBS)
  kio_http_cache_cleaner.la: $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kio_http_cache_cleaner_la_LDFLAGS) $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_LIBADD) $(LIBS)
@@ -118,7 +115,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -521,9 +541,10 @@
+@@ -600,9 +620,10 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -130,8 +127,8 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/httpfilter.Plo@am__quote@
  
  distclean-depend:
-@@ -691,7 +712,7 @@
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -821,7 +842,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=webdav.protocol http_cache_cleaner.desktop README.webdav rfc2817.txt THOUGHTS README.http_cache_cleaner webdavs.protocol rfc2617.txt rfc2818.txt rfc2616.txt http.protocol https.protocol httpfilter.h rfc3253.txt rfc2518.txt 
@@ -139,7 +136,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -840,9 +861,6 @@
+@@ -985,9 +1006,6 @@ uninstall-info: uninstall-info-recursive
  	uninstall-kdelnkDATA uninstall-libLTLIBRARIES \
  	uninstall-recursive
  
@@ -149,7 +146,7 @@ $NetBSD: patch-bn,v 1.5 2003/03/11 13:10:38 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -919,7 +937,7 @@
+@@ -1064,7 +1082,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5

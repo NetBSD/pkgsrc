@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/03 13:48:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/22 02:42:44 markd Exp $
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPArg.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPClient.html
 share/doc/kde/HTML/en/kdelibs/dcop/DCOPConnection.html
@@ -912,6 +912,9 @@ share/doc/kde/HTML/en/kdelibs/kdeui/KSeparator.html
 share/doc/kde/HTML/en/kdelibs/kdeui/KSharedPixmap.html
 share/doc/kde/HTML/en/kdelibs/kdeui/KShortcutBox.html
 share/doc/kde/HTML/en/kdelibs/kdeui/KShortcutDialog.html
+share/doc/kde/HTML/en/kdelibs/kdeui/KSpell.html
+share/doc/kde/HTML/en/kdelibs/kdeui/KSpellConfig.html
+share/doc/kde/HTML/en/kdelibs/kdeui/KSpellDlg.html
 share/doc/kde/HTML/en/kdelibs/kdeui/KSqueezedTextLabel.html
 share/doc/kde/HTML/en/kdelibs/kdeui/KStatusBar.html
 share/doc/kde/HTML/en/kdelibs/kdeui/KStatusBarLabel.html
@@ -1107,6 +1110,9 @@ share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KSeparator.html
 share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KSharedPixmap.html
 share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KShortcutBox.html
 share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KShortcutDialog.html
+share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KSpell.html
+share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KSpellConfig.html
+share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KSpellDlg.html
 share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KSqueezedTextLabel.html
 share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KStatusBar.html
 share/doc/kde/HTML/en/kdelibs/kdeui/full-list-KStatusBarLabel.html
@@ -1234,10 +1240,13 @@ share/doc/kde/HTML/en/kdelibs/kdeui/kpushbutton_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/krestrictedline_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/krootpixmap_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/kruler_h.html
+share/doc/kde/HTML/en/kdelibs/kdeui/ksconfig_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/kselect_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/kseparator_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/ksharedpixmap_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/kshortcutdialog_h.html
+share/doc/kde/HTML/en/kdelibs/kdeui/kspell_h.html
+share/doc/kde/HTML/en/kdelibs/kdeui/kspelldlg_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/ksqueezedtextlabel_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/kstatusbar_h.html
 share/doc/kde/HTML/en/kdelibs/kdeui/kstdaction_h.html
@@ -1599,6 +1608,7 @@ share/doc/kde/HTML/en/kdelibs/khtml/KHTMLRun.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLSettings.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLView.html
 share/doc/kde/HTML/en/kdelibs/khtml/KHTMLZoomFactorAction.html
+share/doc/kde/HTML/en/kdelibs/khtml/PartMonitor.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegTestFunction.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegTestObject.html
 share/doc/kde/HTML/en/kdelibs/khtml/RegressionTest.html
@@ -1775,6 +1785,7 @@ share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLRun.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLSettings.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLView.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-KHTMLZoomFactorAction.html
+share/doc/kde/HTML/en/kdelibs/khtml/full-list-PartMonitor.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegTestFunction.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegTestObject.html
 share/doc/kde/HTML/en/kdelibs/khtml/full-list-RegressionTest.html
@@ -2333,13 +2344,7 @@ share/doc/kde/HTML/en/kdelibs/kparts/mainwindow_h.html
 share/doc/kde/HTML/en/kdelibs/kparts/part_h.html
 share/doc/kde/HTML/en/kdelibs/kparts/partmanager_h.html
 share/doc/kde/HTML/en/kdelibs/kparts/plugin_h.html
-share/doc/kde/HTML/en/kdelibs/kspell/KSpell.html
-share/doc/kde/HTML/en/kdelibs/kspell/KSpellConfig.html
-share/doc/kde/HTML/en/kdelibs/kspell/KSpellDlg.html
 share/doc/kde/HTML/en/kdelibs/kspell/all-globals.html
-share/doc/kde/HTML/en/kdelibs/kspell/full-list-KSpell.html
-share/doc/kde/HTML/en/kdelibs/kspell/full-list-KSpellConfig.html
-share/doc/kde/HTML/en/kdelibs/kspell/full-list-KSpellDlg.html
 share/doc/kde/HTML/en/kdelibs/kspell/header-list.html
 share/doc/kde/HTML/en/kdelibs/kspell/hier.html
 share/doc/kde/HTML/en/kdelibs/kspell/index-long.html
@@ -2515,4 +2520,3 @@ share/doc/kde/HTML/en/kdelibs/libkmid/voiceman_h.html
 @dirrm share/doc/kde/HTML/en/kdelibs/interfaces
 @dirrm share/doc/kde/HTML/en/kdelibs/dcop
 @dirrm share/doc/kde/HTML/en/kdelibs
-@comment dirrm share/doc/kde/HTML/en
