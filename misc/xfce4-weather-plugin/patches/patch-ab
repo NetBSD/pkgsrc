@@ -1,9 +1,0 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/06/21 05:59:30 martti Exp $
-
---- panel-plugin/search_dialog.c.orig	2004-06-11 22:03:32.000000000 +0000
-+++ panel-plugin/search_dialog.c	2004-06-11 22:03:47.000000000 +0000
-@@ -172,3 +172,3 @@
-         column = gtk_tree_view_column_new_with_attributes("Results", renderer, 
--                        "text", 0);
-+                        "text", 0, NULL);
-         gtk_tree_view_append_column(GTK_TREE_VIEW(dialog->result_list), column);
