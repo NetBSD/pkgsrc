@@ -1,5 +1,17 @@
 #!/bin/sh
-# $NetBSD: post-install,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
-echo "Installing lib files now"
+# $NetBSD: post-install,v 1.2 1998/11/01 14:55:37 hwr Exp $
+echo "Installing lib files"
 cd ${WRKSRC}
 tar cf - lib | (cd ${PREFIX}/share/jed ; tar xf - )
+echo "Installing info files"
+tar cf - info | (cd ${PREFIX}/share/jed ; tar xf - )
+echo "Installing doc files"
+tar cf - doc | (cd ${PREFIX}/share/jed ; tar xf - )
+if [ -f ${PREFIX}/share/jed/doc/jed.1 ] 
+then
+	rm ${PREFIX}/share/jed/doc/jed.1
+fi
+if [ -f ${PREFIX}/share/jed/doc/rgrep.1 ] 
+then
+	rm ${PREFIX}/share/jed/doc/rgrep.1
+fi

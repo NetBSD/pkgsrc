@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
+$NetBSD: patch-ab,v 1.2 1998/11/01 14:55:37 hwr Exp $
 --- src/Makefile.in.orig	Wed Feb 11 17:57:16 1998
-+++ src/Makefile.in	Sat Oct 31 22:43:41 1998
++++ src/Makefile.in	Sun Nov  1 14:06:42 1998
 @@ -13,8 +13,8 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
@@ -12,3 +12,18 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
  BIN_DIR = @bindir@
  MAN_DIR = @mandir@/man1
  INSTALL		= @INSTALL@
+@@ -136,14 +136,11 @@
+ 	/bin/cp $(OBJDIR)/jed $(BIN_DIR)/
+ 	- /bin/cp $(OBJDIR)/xjed $(BIN_DIR)/
+ 	/bin/cp $(OBJDIR)/rgrep $(BIN_DIR)/
+-	- /bin/cp $(OBJDIR)/getmail $(JED_ROOT)/bin/
+ 	- /bin/cp ../doc/rgrep.1 ../doc/jed.1 $(MAN_DIR)/
+-	@echo You will have to install the lib files manually.
+ $(BIN_DIR):
+ 	- $(MKINSDIR) $(BIN_DIR)
+ $(JED_ROOT):
+ 	$(MKINSDIR) $(JED_ROOT)/lib
+-	$(MKINSDIR) $(JED_ROOT)/bin
+ 	$(MKINSDIR) $(JED_ROOT)/info
+ 	$(MKINSDIR) $(JED_ROOT)/doc
+ # The symlinks target is for my own private use.  It simply creates the object
