@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.10 2004/12/09 18:45:32 minskim Exp $
+$NetBSD: patch-ax,v 1.11 2005/03/01 23:06:55 dmcmahill Exp $
 
 --- configure.orig	2003-11-26 13:47:26.000000000 -0600
 +++ configure
@@ -26,7 +26,7 @@ $NetBSD: patch-ax,v 1.10 2004/12/09 18:45:32 minskim Exp $
 -for ac_header in fcntl.h limits.h linux/imon.h netinet/in.h rpc/rpc.h rpcsvc/mount.h stddef.h stdlib.h string.h syslog.h sys/imon.h sys/param.h sys/select.h sys/statvfs.h sys/syssgi.h sys/time.h sys/types.h sys/un.h unistd.h
 +
 +
-+for ac_header in fcntl.h limits.h linux/imon.h netinet/in.h rpc/rpc.h rpc/rcpent.h rpcsvc/mount.h stddef.h stdlib.h string.h syslog.h sys/filio.h sys/imon.h sys/param.h sys/select.h sys/statvfs.h sys/syssgi.h sys/time.h sys/types.h sys/un.h unistd.h mntent.h sys/mnttab.h sys/sysmacros.h
++for ac_header in fcntl.h limits.h linux/imon.h netinet/in.h rpc/rpc.h rpc/rpcent.h rpcsvc/mount.h stddef.h stdlib.h string.h syslog.h sys/filio.h sys/imon.h sys/param.h sys/select.h sys/statvfs.h sys/syssgi.h sys/time.h sys/types.h sys/un.h unistd.h mntent.h sys/mnttab.h sys/sysmacros.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
