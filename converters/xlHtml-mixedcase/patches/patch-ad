@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2001/12/28 04:59:09 taca Exp $
+
+--- cole/cole.c.orig	Mon Nov  5 07:09:54 2001
++++ cole/cole.c
+@@ -192,10 +192,12 @@
+ 			if (colerrno != NULL) *colerrno = COLE_ECLOSEFILE;
+ 			ret = 1;
+ 		}
++#if defined( __WIN32__ ) || defined( __BORLANDC__ )
+ 		if (remove (colefilesystem->sbfilename) && !ret) {
+ 			if (colerrno != NULL) *colerrno = COLE_EREMOVE;
+ 			ret = 1;
+ 		}
++#endif
+ 		free (colefilesystem->sbfilename);
+ 	}
+ 	free (colefilesystem);
