@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/19 05:27:35 taca Exp $
 bin/byaccr
-${RUBY_EXAMPLESDIR}/byaccr/Makefile
-${RUBY_EXAMPLESDIR}/byaccr/cal.y
-${RUBY_EXAMPLESDIR}/byaccr/calfunc.rb
-${RUBY_EXAMPLESDIR}/byaccr/main.rb
-@dirrm ${RUBY_EXAMPLESDIR}/byaccr
+share/examples/byaccr/Makefile
+share/examples/byaccr/cal.y
+share/examples/byaccr/calfunc.rb
+share/examples/byaccr/main.rb
+@dirrm share/examples/byaccr
