@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2003/04/07 18:10:08 taca Exp $
+
+--- smbd/statcache.c.orig	2001-11-09 18:27:43.000000000 +0900
++++ smbd/statcache.c
+@@ -88,7 +88,7 @@ void stat_cache_add( char *full_orig_nam
+    * StrnCpy always null terminates.
+    */
+ 
+-  StrnCpy(orig_name, full_orig_name, namelen);
++  StrnCpy(orig_name, full_orig_name, MIN(namelen, sizeof(orig_name)-1));
+   if(!case_sensitive)
+     strupper( orig_name );
+ 
