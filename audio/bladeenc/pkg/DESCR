@@ -1,0 +1,8 @@
+BladeEnc is a program to generate MP3 files from WAV or AIFF sound files.
+   
+Any number of WAV/AIFF-files can be specified on the commandline and you
+can even use wildcards to specify more than one file at the same time. For
+example will the command "BladeEnc *.wav" compress all WAV-files in the
+current directory. Long filenames are supported when entering them on the
+commandline, but if they include space-characters you will have to enclose
+them with quotation-marks ( " ).
