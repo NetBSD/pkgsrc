@@ -1,10 +1,33 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/18 13:26:27 epg Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/08/15 23:42:59 epg Exp $
 bin/cvs2svn
 lib/libsvn_swig_py-1.a
 lib/libsvn_swig_py-1.la
 lib/libsvn_swig_py-1.so
 lib/libsvn_swig_py-1.so.0
 lib/libsvn_swig_py-1.so.0.0
+${PYSITELIB}/libsvn/__init__.py
+${PYSITELIB}/libsvn/__init__.pyc
+${PYSITELIB}/libsvn/_client.so
+${PYSITELIB}/libsvn/_core.so
+${PYSITELIB}/libsvn/_delta.so
+${PYSITELIB}/libsvn/_fs.so
+${PYSITELIB}/libsvn/_ra.so
+${PYSITELIB}/libsvn/_repos.so
+${PYSITELIB}/libsvn/_wc.so
+${PYSITELIB}/libsvn/client.py
+${PYSITELIB}/libsvn/client.pyc
+${PYSITELIB}/libsvn/core.py
+${PYSITELIB}/libsvn/core.pyc
+${PYSITELIB}/libsvn/delta.py
+${PYSITELIB}/libsvn/delta.pyc
+${PYSITELIB}/libsvn/fs.py
+${PYSITELIB}/libsvn/fs.pyc
+${PYSITELIB}/libsvn/ra.py
+${PYSITELIB}/libsvn/ra.pyc
+${PYSITELIB}/libsvn/repos.py
+${PYSITELIB}/libsvn/repos.pyc
+${PYSITELIB}/libsvn/wc.py
+${PYSITELIB}/libsvn/wc.pyc
 ${PYSITELIB}/rcsparse/__init__.py
 ${PYSITELIB}/rcsparse/common.py
 ${PYSITELIB}/rcsparse/compat.py
@@ -13,13 +36,6 @@ ${PYSITELIB}/rcsparse/default.py
 ${PYSITELIB}/rcsparse/texttools.py
 ${PYSITELIB}/svn/__init__.py
 ${PYSITELIB}/svn/__init__.pyc
-${PYSITELIB}/svn/_client.so
-${PYSITELIB}/svn/_core.so
-${PYSITELIB}/svn/_delta.so
-${PYSITELIB}/svn/_fs.so
-${PYSITELIB}/svn/_ra.so
-${PYSITELIB}/svn/_repos.so
-${PYSITELIB}/svn/_wc.so
 ${PYSITELIB}/svn/client.py
 ${PYSITELIB}/svn/client.pyc
 ${PYSITELIB}/svn/core.py
@@ -48,7 +64,8 @@ share/examples/subversion/python/putfile.py
 share/examples/subversion/python/revplist.py
 share/examples/subversion/python/svnlook.py
 share/examples/subversion/python/svnshell.py
-@dirrm share/doc/subversion/cvs2svn
 @dirrm share/examples/subversion/python
+@dirrm share/doc/subversion/cvs2svn
 @dirrm ${PYSITELIB}/svn
 @dirrm ${PYSITELIB}/rcsparse
+@dirrm ${PYSITELIB}/libsvn
