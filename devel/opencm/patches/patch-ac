@@ -1,19 +1,19 @@
-$NetBSD: patch-ac,v 1.2 2002/08/28 16:49:42 agc Exp $
+$NetBSD: patch-ac,v 1.3 2002/11/26 12:09:45 jmmv Exp $
 
---- src/Makefile.in	2002/08/27 17:42:12	1.1
-+++ src/Makefile.in	2002/08/27 17:45:06
-@@ -107,8 +107,8 @@
+--- src/Makefile.in.orig	Fri Oct 11 05:57:13 2002
++++ src/Makefile.in
+@@ -107,8 +107,8 @@ INCLUDE=-I$(TOPDIR)/ @CPPFLAGS@
  # COMREADLINE=-DUSE_READLINE -I/usr/include/readline
  SESSIONTIMEOUT=-DCLIENT_TIMEOUT=1800
  LIBDIFF=$(TOPDIR)/../libgdiff/libgdiff.a
 -LIBZ=$(TOPDIR)/../zlib/libz.a
--LIBGC=$(TOPDIR)/../gc6.0/.libs/libgc.a
+-LIBGC=$(TOPDIR)/../gc6.1/.libs/libgc.a
 +LIBZ=-lz
 +LIBGC=-lgc
  
  XCFLAGS = -Wmissing-prototypes -Wall -Wreturn-type -DDATADIR=\"$(datadir)\"
  # XCFLAGS += -Wno-unused -Werror
-@@ -235,7 +235,7 @@
+@@ -236,7 +236,7 @@ distclean: clean nodepend
  nodepend:
  	find $(TOPDIR) -name '*.m' -exec rm {} \;
  
