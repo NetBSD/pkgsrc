@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.843 2002/12/19 14:52:29 jlam Exp $
+$NetBSD: CHANGES,v 1.844 2002/12/19 18:32:10 frueauf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4014,3 +4014,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gimageview-0.2.10 [grant 2002-12-19]
 	Updated pkg_comp to 1.3 [jmmv 2002-12-19]
 	Updated oss to 3.9.7f [jlam 2002-12-19]
+	Updated nessus to 1.2.7 [frueauf 2002-12-19]
+	Updated nessus-core to 1.2.7 [frueauf 2002-12-19]
+	Updated nessus-libraries to 1.2.7 [frueauf 2002-12-19]
+	Updated nessus-plugins to 1.2.7 [frueauf 2002-12-19]
+	Updated libnasl to 1.2.7 [frueauf 2002-12-19]
