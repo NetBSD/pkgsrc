@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/07/14 00:12:40 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/07/17 22:21:38 rh Exp $
 bin/ctali
 bin/freecell
 bin/gataxx
@@ -1196,3 +1196,5 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm lib/gnome-stones/objects
 @dirrm lib/gnome-stones
 @dirrm include/gdkcardimage
+@unexec scrollkeeper-rebuilddb
+@exec scrollkeeper-rebuilddb
