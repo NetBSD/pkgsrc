@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.part1,v 1.1.1.1 2001/03/14 16:19:52 skrll Exp $
+# $NetBSD: Makefile.part1,v 1.2 2001/04/21 00:22:04 hubertf Exp $
 #
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src/ \
 		ftp://ftp.us.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src/ \
@@ -6,4 +6,4 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	skrll@netbsd.org
-HOMEPAGE=	http://www.kde.org/
+HOMEPAGE?=	http://www.kde.org/
