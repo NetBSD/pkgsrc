@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.886 2003/09/20 16:58:23 salo Exp $
+$NetBSD: TODO,v 1.887 2003/09/21 16:44:33 lukem Exp $
 
 Suggested new packages
 ======================
@@ -217,7 +217,6 @@ Suggested package updates
 	o pxe-1.4 [pkg/22323]
 	o pygtk-0.6.11
 	o pysol-4.82
-	o rdiff-backup-0.12.4
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
