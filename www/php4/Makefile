@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/11/27 14:00:08 jdolecek Exp $
+# $NetBSD: Makefile,v 1.40 2004/12/12 09:42:21 jdolecek Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 CATEGORIES+=		lang
@@ -52,7 +52,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/php.gif ${PREFIX}/share/php
 
 	for p in ${UPGRADE_PKG}; do \
-		${PEAR_CMD} upgrade $$p; \
+		${PEAR_CMD} upgrade $$p || exit 1; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
