@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2001/01/29 01:15:35 jtb Exp $
+$NetBSD: patch-ai,v 1.2 2001/02/14 11:19:17 jtb Exp $
 
---- cf/pkg_cxx.in.orig	Mon Jan 29 00:15:42 2001
+--- cf/pkg_cxx.in.orig	Wed Feb 14 07:45:57 2001
 +++ cf/pkg_cxx.in
 @@ -32,17 +32,17 @@
  # Targets
@@ -12,7 +12,7 @@ $NetBSD: patch-ai,v 1.1 2001/01/29 01:15:35 jtb Exp $
  install_cxx_demos:
 -	@-if test ! -d $(DEMOS_DIR)/c++; then mkdir -p $(DEMOS_DIR)/c++; fi; \
 +	-$(BSD_INSTALL_DATA_DIR) $(DEMOS_DIR)/c++; \
- 	  $(LN) $(DEMOS_DIR)/Makefile $(DEMOS_DIR)/c++; \
+ 	  $(LN) ../Makefile $(DEMOS_DIR)/c++; \
 -	  cd $(top_srcdir)/examples/c++; $(CP) *.cc $(DEMOS_DIR)/c++
 +	  $(BSD_INSTALL_DATA) $(top_srcdir)/examples/c++/*.cc $(DEMOS_DIR)/c++
  
