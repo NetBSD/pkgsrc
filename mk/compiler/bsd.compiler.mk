@@ -1,9 +1,10 @@
-# $NetBSD: bsd.compiler.mk,v 1.8 2004/02/05 04:12:28 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.9 2004/02/05 21:26:16 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
 #
-# The following variables are used:
+# The following variables are used and should all be defined either
+# in or before the first inclusion of bsd.prefs.mk:
 #
 # PKGSRC_COMPILER
 #	A list of values specifying the chain of compilers to be used by
