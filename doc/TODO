@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2090 2004/08/31 08:41:51 cjep Exp $
+$NetBSD: TODO,v 1.2091 2004/08/31 10:47:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -166,6 +166,8 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.3
+	o SDL_gfx-1.2.2
+	o TeXmacs-1.0.4.2
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.10 [pkg/26695]
@@ -181,7 +183,6 @@ Suggested package updates
 	o aspell-0.60
 	o atari800-1.3.3
 	o auctex-11.53
-	o audacity-1.2.2
 	o avidemux-2.0.28
 	o balsa-1.4.4
 	o bash3-3.0
@@ -375,6 +376,7 @@ Suggested package updates
 	o puzzle-5.2
 	o pwlib-1.5.2
 	o py-psycopg-1.1.10
+	o py-wxWindows-2.5.2.8
 	o pysol-4.82
 	o raine-0.40.5
 	o ratpoison-1.3.0
@@ -429,6 +431,7 @@ Suggested package updates
 	o vfu-4.03
 	o vice-1.15
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
+	o vsftpd-2.01 [pkg/26811]
 	o vttest-20030301
 	o wavesurfer-1.5.3
 	o wdm-1.27
