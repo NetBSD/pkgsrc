@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.28 2004/07/06 22:51:34 wiz Exp $
+#	$NetBSD: cross.mk,v 1.29 2004/07/09 20:48:15 kristerw Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -27,7 +27,7 @@ pre-install-dirs:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
 
 .if defined(USE_CROSS_BINUTILS)
-BINUTILS_DISTNAME=	binutils-2.9.1
+BINUTILS_DISTNAME=	binutils-2.15
 BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
 
 # Don't use optimizations taken from /etc/mk.conf for the native compiler
@@ -37,7 +37,7 @@ CXXFLAGS=		# empty
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
+DEPENDS+=		cross-binutils>=2.15.0.0:../../cross/binutils
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
 
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
@@ -63,11 +63,17 @@ binutils-configure:
 		CFLAGS="${CFLAGS}" ${CONFIGURE_ENV} ./configure \
 		--prefix=${PREFIX} --host=${MACHINE_GNU_ARCH}--netbsd \
 		--target=${TARGET_ARCH} ${BFD64ARG}
+	cd ${BINUTILS_WRKSRC} && ${MAKE_PROGRAM} configure-bfd
+	cd ${BINUTILS_WRKSRC} && ${MAKE_PROGRAM} configure-libiberty
+	cd ${BINUTILS_WRKSRC} && ${MAKE_PROGRAM} configure-intl
+	cd ${BINUTILS_WRKSRC} && ${MAKE_PROGRAM} configure-gas
 
 binutils-build:
 	@cd ${BINUTILS_WRKSRC}/bfd && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} bfd.h
 	@cd ${BINUTILS_WRKSRC}/libiberty && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} all
+	@cd ${BINUTILS_WRKSRC}/intl && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} all
 	@cd ${BINUTILS_WRKSRC}/gas && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} as-new
