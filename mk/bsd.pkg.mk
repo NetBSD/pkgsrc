@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.230 1999/03/17 12:05:40 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.231 1999/03/22 09:38:22 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -341,8 +341,10 @@ _PKG_DEBUG=		set -x;
 __canonical_PKGSRCDIR!=	cd ${PKGSRCDIR} && pwd -P
 __canonical_CURDIR!=	cd ${.CURDIR} && pwd -P
 PKGSRC_SUBDIR=		${__canonical_CURDIR:S,${__canonical_PKGSRCDIR}/,,}
+BUILD_ROOT=     	${WRKOBJDIR}
 BUILD_DIR?=		${WRKOBJDIR}/${PKGSRC_SUBDIR}
 .else
+BUILD_ROOT=     	${PKGSRCDIR}
 BUILD_DIR?=		${.CURDIR}
 .endif # WRKOBJDIR
 
