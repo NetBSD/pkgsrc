@@ -3,4 +3,4 @@ public chat, uses strong end-to-end cryptography for security, and supports
 a distributed server network with a range of clients (both console and GUI)
 available. Gale is currently in early alpha testing.
 
-WWW: http://www.gale.org/
+WWW: http://gale.org/
