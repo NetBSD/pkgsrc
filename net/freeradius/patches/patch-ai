@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2004/09/23 19:51:22 adrianp Exp $
+
+--- src/modules/rlm_counter/Makefile.in.orig	2004-09-23 19:27:35.000000000 +0100
++++ src/modules/rlm_counter/Makefile.in	2004-09-23 19:29:22.000000000 +0100
+@@ -2,7 +2,7 @@
+ SRCS        = rlm_counter.c
+ HEADERS     =
+ RLM_CFLAGS  = @counter_cflags@
+-RLM_LIBS    = @counter_ldflags@
++RLM_LIBS    = @counter_ldflags@ -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+ RLM_INSTALL =
+ 
+ include ../rules.mak
