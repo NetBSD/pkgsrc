@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/24 02:09:28 hubertf Exp $
 #
 
 DISTNAME=	freetype-2.0.1
@@ -31,7 +31,7 @@ do-configure:
 		cd ${WRKSRC}/builds/unix && ${SETENV}			\
 			CC="${CC}" CFLAGS="${CFLAGS}"			\
 			CXX="${CXX}" CXXFLAGS="${CXXFLAGS}"		\
-			INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}"		\
+			INSTALL="${INSTALL_PROGRAM}"			\
 			INSTALL_DATA="${INSTALL_DATA}"			\
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}"		\
 			INSTALL_SCRIPT="${INSTALL_SCRIPT}"		\

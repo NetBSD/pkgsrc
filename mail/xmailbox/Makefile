@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:25:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/24 02:09:28 hubertf Exp $
 #
 
 DISTNAME=       xmailbox-2.5
@@ -15,7 +15,7 @@ MAKE_ENV+=	INSTALL_PROGRAM='${INSTALL_PROGRAM}'
 MAKE_ENV+=	INSTALL_MAN='${INSTALL_MAN}'
 
 post-install:
-	${INSTALL} -d -m 555 -o ${BINOWN} -g ${BINGRP} ${PREFIX}/share/xmailbox
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xmailbox
 	cd ${WRKSRC}/icons && ${INSTALL_DATA} \
 	     0xmail1.xpm 1xmail1.xpm 2xmail1.xpm 3xmail1.xpm 4xmail1.xpm \
 	     5xmail1.xpm xmail1.xpm xnomail1.xpm \
