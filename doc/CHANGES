@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3565 2003/09/28 11:43:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3566 2003/09/28 12:31:02 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3968,6 +3968,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated conglomerate to 0.7.4nb1 [xtraeme 2003-09-27]
 	Updated trickle to 1.06nb1 [xtraeme 2003-09-27]
 	Updated xplot to 0.90.7.1nb1 [tron 2003-09-27]
+	Updated p5-razor-agents to 2.22nb1 [heinz 2003-09-27]
 	Renamed phoenix-bin to MozillaFirebird-bin [grant 2003-09-27]
 	Renamed phoenix-bin-acroread to MozillaFirebird-bin-acroread [grant 2003-09-27]
 	Renamed phoenix-bin-acroread3 to MozillaFirebird-bin-acroread3 [grant 2003-09-27]
