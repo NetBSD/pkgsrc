@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2001/01/14 02:28:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.201 2001/01/16 00:11:48 skrll Exp $
 #
 
     SUBDIR += 9term
@@ -50,6 +50,7 @@
     SUBDIR += qt2
     SUBDIR += qt2-designer
     SUBDIR += qt2-docs
+    SUBDIR += qt2-examples
     SUBDIR += qt2-libs
     SUBDIR += qtarch
     SUBDIR += qwspritefield
