@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1999/04/16 21:31:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 1999/05/02 15:51:29 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -109,6 +109,7 @@ include/libgnomeui/gnome-canvas-text.h
 include/libgnomeui/gnome-canvas-util.h
 include/libgnomeui/gnome-canvas-widget.h
 include/libgnomeui/gnome-client.h
+include/libgnomeui/gnome-compat.h
 include/libgnomeui/gnome-dateedit.h
 include/libgnomeui/gnome-dentry-edit.h
 include/libgnomeui/gnome-dialog.h
@@ -166,10 +167,11 @@ lib/libart_lgpl.a
 lib/libart_lgpl.so.2.0
 lib/libartConf.sh
 lib/libgnome.a
+lib/libgnome.so.35.3
 lib/libgnomesupport.a
 lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
-lib/libgnomeui.so.41.0
+lib/libgnomeui.so.41.1
 lib/libgnorba.a
 lib/libgnorba.so.28.5
 lib/libgnorbagtk.a
@@ -177,8 +179,10 @@ lib/libgnorbagtk.so.0.0
 lib/libgtkxmhtml.a
 lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
-lib/libzvt.so.4.2
+lib/libzvt.so.4.3
+man/man1/gnome.1
 share/locale/de/LC_MESSAGES/gnome-libs.mo
+share/locale/eu/LC_MESSAGES/gnome-libs.mo
 share/locale/fr/LC_MESSAGES/gnome-libs.mo
 share/locale/nl/LC_MESSAGES/gnome-libs.mo
 share/locale/pt/LC_MESSAGES/gnome-libs.mo
