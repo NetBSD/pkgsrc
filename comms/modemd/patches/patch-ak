@@ -1,0 +1,8 @@
+--- common/atparse.c.orig       Thu Jun 18 16:48:18 1998
++++ common/atparse.c    Thu Jun 18 16:48:50 1998
+@@ -47,2 +47,5 @@
+ #include <ctype.h>
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+
