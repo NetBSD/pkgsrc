@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:39 skrll Exp $
+$NetBSD: distinfo,v 1.3 2003/01/05 04:27:11 rh Exp $
 
-SHA1 (plugger-3.2-linux-x86-glibc.tar.gz) = f300d108b8b0757d10aef5453f1974f45423ed10
-Size (plugger-3.2-linux-x86-glibc.tar.gz) = 23406 bytes
+SHA1 (plugger-4.0-linux-x86-glibc.tar.gz) = 23a8d66da585ce98757f0071ac9d245a00f1b9b3
+Size (plugger-4.0-linux-x86-glibc.tar.gz) = 36409 bytes
