@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/24 02:58:29 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/21 18:55:02 jlam Exp $
 
 DISTNAME=	tk8.3.2
 PKGNAME=	tk-8.3.2nb1
@@ -10,15 +10,15 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.tcltk.com/
 COMMENT=	Graphical toolkit for TCL
 
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl
+.include "../../lang/tcl/buildlink.mk"
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/unix
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
+WRKSRC=			${WRKDIR}/${DISTNAME}/unix
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_DIR}/lib
 
-USE_X11=	yes
-
-USE_LIBTOOL=	yes
+USE_X11=		yes
+USE_BUILDLINK_ONLY=	yes
+USE_LIBTOOL=		yes
 
 post-install:
 	${RM} -f ${PREFIX}/bin/wish
