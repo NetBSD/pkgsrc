@@ -1,0 +1,77 @@
+$NetBSD: patch-ac,v 1.1 2001/03/10 10:31:33 drochner Exp $
+
+--- io.c~	Sun Nov 26 13:55:57 2000
++++ io.c	Fri Mar  9 21:43:07 2001
+@@ -20,7 +20,8 @@
+ #include <sys/soundcard.h>
+ #include <sys/ioctl.h>
+ #endif
+-#ifdef sun 
++#if defined(sun) || defined(__NetBSD__)
++#include <sys/ioctl.h>
+ #include <sys/audioio.h>
+ #endif
+ #ifdef hpux 
+@@ -782,7 +783,7 @@
+ GList *dsp;
+ GList *loop;
+ struct stat buf;
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ gchar *audiodev;
+ #endif
+ 	dsp = NULL;
+@@ -797,7 +798,7 @@
+ 		dsp = g_list_append(dsp,"/dev/dsp1");
+ 	}
+ #endif
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ 	/* check if the user has any special audio-hardware running,
+ 	   which set the AUDIODEV-environment-variable */
+ 	audiodev = getenv("AUDIODEV");
+@@ -863,7 +864,7 @@
+ 		}	
+ 	}	
+ #endif
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ 
+ 	g_snprintf(tmp,MAXLINE,"%s%s",dsp,"ctl");
+ 
+@@ -2130,7 +2131,7 @@
+ #if defined(linux) || defined(__FreeBSD__)
+ gint val;
+ #endif
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ audio_info_t ainfo;
+ #endif
+ #ifdef hpux
+@@ -2163,7 +2164,7 @@
+ 	return ((val & 0x7f) + ((val >> 8) & 0x7f))/2;
+ 
+ #endif
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ 
+ 	dodebug(10,"quering mixer %s\n", setupdata.mix_device);
+ 	mix = open(setupdata.mix_device, O_RDONLY);
+@@ -2211,7 +2212,7 @@
+ 
+ gint set_mixer(gint val) {
+ gint mix;
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ audio_info_t ainfo;
+ #endif
+ #ifdef hpux
+@@ -2241,7 +2242,7 @@
+ 	close(mix);
+ 
+ #endif 
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ 
+ 	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
+ 	mix = open(setupdata.mix_device, O_WRONLY);
