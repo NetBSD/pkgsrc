@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6604 2004/07/19 18:38:39 wiz Exp $
+$NetBSD: CHANGES,v 1.6605 2004/07/19 19:19:08 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3450,3 +3450,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated superlu to 3.0.1 [wiz 2004-07-19]
 	Updated pkg_tarup to 1.6.1 [erh 2004-07-19]
 	Added fceu-0.98.10 [wiz 2004-07-19]
+	Added openntpd-20040719p [xtraeme 2004-07-19]

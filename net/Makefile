@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.484 2004/07/13 09:20:49 martti Exp $
+# $NetBSD: Makefile,v 1.485 2004/07/19 19:19:08 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -207,6 +207,7 @@ SUBDIR+=	oidentd
 SUBDIR+=	oinkmaster
 SUBDIR+=	openag
 SUBDIR+=	openh323
+SUBDIR+=	openntpd
 SUBDIR+=	openslp
 SUBDIR+=	openvpn
 SUBDIR+=	overnet
