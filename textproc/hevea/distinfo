@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/06/17 14:36:40 jtb Exp $
+
+SHA1 (hevea-1.05.tar.gz) = 1e4236491717cbdbb9fa9c01ecf5d21e892513ba
+Size (hevea-1.05.tar.gz) = 148837 bytes
+SHA1 (patch-aa) = 5ed03d085c086153ec949cfad12fc56106ad2b9e
