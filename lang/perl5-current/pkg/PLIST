@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/08/27 20:56:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/08/28 23:01:47 jlam Exp $
 bin/a2p
 bin/c2ph
 bin/find2perl
@@ -285,14 +285,6 @@ lib/perl5/${PERL_VERSION}/B/cc_harness
 lib/perl5/${PERL_VERSION}/B/disassemble
 lib/perl5/${PERL_VERSION}/B/makeliblinks
 lib/perl5/${PERL_VERSION}/Benchmark.pm
-lib/perl5/${PERL_VERSION}/CGI.pm
-lib/perl5/${PERL_VERSION}/CGI/Apache.pm
-lib/perl5/${PERL_VERSION}/CGI/Carp.pm
-lib/perl5/${PERL_VERSION}/CGI/Cookie.pm
-lib/perl5/${PERL_VERSION}/CGI/Fast.pm
-lib/perl5/${PERL_VERSION}/CGI/Pretty.pm
-lib/perl5/${PERL_VERSION}/CGI/Push.pm
-lib/perl5/${PERL_VERSION}/CGI/Switch.pm
 lib/perl5/${PERL_VERSION}/CPAN.pm
 lib/perl5/${PERL_VERSION}/CPAN/FirstTime.pm
 lib/perl5/${PERL_VERSION}/CPAN/Nox.pm
@@ -873,14 +865,6 @@ man/man3/B::Terse.3
 man/man3/B::Xref.3
 man/man3/Benchmark.3
 man/man3/ByteLoader.3
-man/man3/CGI.3
-man/man3/CGI::Apache.3
-man/man3/CGI::Carp.3
-man/man3/CGI::Cookie.3
-man/man3/CGI::Fast.3
-man/man3/CGI::Pretty.3
-man/man3/CGI::Push.3
-man/man3/CGI::Switch.3
 man/man3/CPAN.3
 man/man3/CPAN::FirstTime.3
 man/man3/CPAN::Nox.3
@@ -1107,7 +1091,6 @@ man/man3/warnings::register.3
 @dirrm lib/perl5/${PERL_VERSION}/Class
 @dirrm lib/perl5/${PERL_VERSION}/Carp
 @dirrm lib/perl5/${PERL_VERSION}/CPAN
-@dirrm lib/perl5/${PERL_VERSION}/CGI
 @dirrm lib/perl5/${PERL_VERSION}/B
 @dirrm lib/perl5/${PERL_VERSION}
 @unexec rmdir -p %D/lib/perl5/site_perl/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS} 2>/dev/null || true

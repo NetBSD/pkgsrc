@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2000/08/27 20:55:57 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2000/08/28 23:01:47 jlam Exp $
 
 --- MANIFEST.orig	Wed Mar 22 14:33:23 2000
-+++ MANIFEST
++++ MANIFEST	Mon Aug 28 18:35:18 2000
 @@ -214,20 +214,6 @@
  ext/DB_File/hints/sco.pl	Hint for DB_File for named architecture
  ext/DB_File/typemap		Berkeley DB extension interface types
@@ -35,7 +35,22 @@ $NetBSD: patch-ab,v 1.3 2000/08/27 20:55:57 jlam Exp $
  ext/IO/ChangeLog		IO perl module change log
  ext/IO/IO.pm			Top-level interface to IO::* classes
  ext/IO/IO.xs			IO extension external subroutines
-@@ -1493,7 +1474,6 @@
+@@ -559,14 +540,6 @@
+ lib/AutoLoader.pm	Autoloader base class
+ lib/AutoSplit.pm	Split up autoload functions
+ lib/Benchmark.pm	Measure execution time
+-lib/CGI.pm		Web server interface ("Common Gateway Interface")
+-lib/CGI/Apache.pm	Support for Apache's Perl module
+-lib/CGI/Carp.pm		Log server errors with helpful context
+-lib/CGI/Cookie.pm	Interface to Netscape Cookies
+-lib/CGI/Fast.pm		Support for FastCGI (persistent server process)
+-lib/CGI/Pretty.pm	Output nicely formatted HTML
+-lib/CGI/Push.pm		Support for server push
+-lib/CGI/Switch.pm	Simple interface for multiple server types
+ lib/CPAN.pm		Interface to Comprehensive Perl Archive Network
+ lib/CPAN/FirstTime.pm	Utility for creating CPAN config files
+ lib/CPAN/Nox.pm		Runs CPAN while avoiding compiled extensions
+@@ -1493,7 +1466,6 @@
  util.h			Dummy header
  utils/Makefile		Extract the utility scripts
  utils/c2ph.PL		program to translate dbx stabs to perl
