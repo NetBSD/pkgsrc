@@ -1,26 +1,25 @@
-$NetBSD: patch-ag,v 1.3 2000/10/12 14:56:46 jlam Exp $
+$NetBSD: patch-ak,v 1.3 2000/10/12 14:56:47 jlam Exp $
 
---- menu/Makefile.in.orig	Thu Oct 12 04:52:55 2000
-+++ menu/Makefile.in
-@@ -53,6 +53,8 @@
- libdir		= @libdir@
+--- ncurses/Makefile.in.orig	Thu Oct 12 04:52:56 2000
++++ ncurses/Makefile.in
+@@ -62,6 +62,8 @@
  includedir	= @includedir@
+ datadir		= @datadir@
  
 +LIBTOOL		= @LIBTOOL@
 +
  INSTALL		= @INSTALL@
  INSTALL_LIB	= @INSTALL@ @INSTALL_LIB@
  INSTALL_DATA	= @INSTALL_DATA@
-@@ -72,15 +74,15 @@
- 
- CCFLAGS		= $(CPPFLAGS) $(CFLAGS)
+@@ -86,6 +88,7 @@
+ HOSTCCFLAGS	= @CFLAGS@ $(CPPFLAGS)
+ HOSTLDFLAGS	= @LDFLAGS@ @LIBS@
  
 +CFLAGS_LIBTOOL	= $(CCFLAGS)
  CFLAGS_NORMAL	= $(CCFLAGS)
  CFLAGS_DEBUG	= $(CCFLAGS) @CC_G_OPT@ -DTRACE
  CFLAGS_PROFILE	= $(CCFLAGS) -pg
--
- CFLAGS_SHARED	= $(CCFLAGS) @CC_SHARED_OPTS@
+@@ -93,7 +96,7 @@
  
  CFLAGS_DEFAULT	= $(CFLAGS_@DFT_UPR_MODEL@)
  
@@ -29,7 +28,7 @@ $NetBSD: patch-ag,v 1.3 2000/10/12 14:56:46 jlam Exp $
  LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@
  
  SHLIB_DIRS	= -L../lib -L$(libdir)
-@@ -88,6 +90,8 @@
+@@ -102,6 +105,8 @@
  
  MK_SHARED_LIB	= @MK_SHARED_LIB@
  
