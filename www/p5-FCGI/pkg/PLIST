@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 1998/10/04 18:24:37 tv Exp $
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/FCGI/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/FCGI/FCGI.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/FCGI/FCGI.so
+@comment $NetBSD: PLIST,v 1.2 1999/04/08 18:51:59 agc Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/FCGI/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/FCGI/FCGI.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/FCGI/FCGI.so
 lib/perl5/site_perl/FCGI.pm
 lib/perl5/man/man3/FCGI.3
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/FCGI
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/FCGI

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/03 00:06:53 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/04/08 18:51:49 agc Exp $
 lib/perl5/site_perl/GDBM_File.pm
 lib/perl5/site_perl/auto/GDBM_File/autosplit.ix
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/GDBM_File/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/GDBM_File/GDBM_File.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/GDBM_File/GDBM_File.so
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/GDBM_File
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GDBM_File/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GDBM_File/GDBM_File.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GDBM_File/GDBM_File.so
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GDBM_File
 @dirrm lib/perl5/site_perl/auto/GDBM_File
