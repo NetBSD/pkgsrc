@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/07/28 02:47:35 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/21 14:30:05 wiz Exp $
 
-DISTNAME=       unarj-2.43
+DISTNAME=       unarj-2.65
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.kiarchive.ru/pub/unix/arcers/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	#
 
 MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.arjsoftware.com/
@@ -15,15 +14,18 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
+NO_CONFIGURE=	# defined
 USE_BUILDLINK3=	yes
 
 INSTALLATION_DIRS=	bin
 
+post-extract:
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unarj
 	${INSTALL_PROGRAM} ${WRKSRC}/unarj ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/unarj.doc ${PREFIX}/share/doc/unarj
-	${INSTALL_MAN} ${WRKSRC}/technote.doc ${PREFIX}/share/doc/unarj
+	${INSTALL_MAN} ${WRKSRC}/unarj.txt ${PREFIX}/share/doc/unarj
+	${INSTALL_MAN} ${WRKSRC}/technote.txt ${PREFIX}/share/doc/unarj
 
 .include "../../mk/bsd.pkg.mk"
