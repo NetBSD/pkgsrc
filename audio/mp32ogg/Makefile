@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/31 20:09:07 minskim Exp $
 
 DISTNAME=	mp32ogg-0.11
 PKGREVISION=	1
@@ -21,13 +21,12 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
+REPLACE_PERL=	${WRKSRC}/${DISTNAME}
+
 do-extract:
 	${CP} ${_DISTDIR}/${DISTNAME} ${WRKSRC}
 
-post-patch:
-	${SED} -e 's:/usr/bin:'${PREFIX}/bin':g' < ${WRKSRC}/${DISTNAME} > ${WRKSRC}/mp32ogg
-
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mp32ogg ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/mp32ogg
 
 .include "../../mk/bsd.pkg.mk"
