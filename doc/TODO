@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.784 2003/08/14 09:44:43 wiz Exp $
+$NetBSD: TODO,v 1.785 2003/08/14 12:09:18 abs Exp $
 
 Suggested new packages
 ======================
@@ -225,8 +225,6 @@ Suggested package updates
 	o pure-ftpd-1.0.16
 	o pxe-1.4 [pkg/22323]
 	o pygtk-0.6.11
-	o rdiff-backup-0.12.0 [pkg/22095]
-	o rdiff-backup-0.12.3
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
