@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2004/03/08 19:40:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.46 2004/03/09 22:15:01 recht Exp $
 #
 
 DISTNAME=		gtk+-2.2.4
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -54,5 +54,6 @@ post-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/Xrandr/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
