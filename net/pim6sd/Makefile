@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:37 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/10/21 08:37:19 itojun Exp $
 
-DISTNAME=	pim6sd-20030606a
+DISTNAME=	pim6sd-20031021a
 WRKSRC=		${WRKDIR}/${DISTNAME}/pim6sd/
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
