@@ -1,7 +1,5 @@
-$NetBSD: patch-ac,v 1.5 2000/10/15 02:39:02 jlam Exp $
-
---- other/xfsoundrc.in.orig	Mon Sep  4 13:26:09 2000
-+++ other/xfsoundrc.in
+--- other/xfsoundrc.in.orig	Thu Jan 18 17:47:13 2001
++++ other/xfsoundrc.in	Thu Jan 18 17:47:37 2001
 @@ -1,5 +1,5 @@
  Play
 -xfplay

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2001/01/04 18:10:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/01/19 02:41:27 jwise Exp $
 
-DISTNAME=		xfce-3.5.2
+DISTNAME=		xfce-3.6.3
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 
@@ -15,7 +15,7 @@ USE_X11=		# defined
 USE_XPM=		# defined
 USE_X11BASE=		# defined
 
-USE_LIBINFO=		# defined
+USE_LIBINTL=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
