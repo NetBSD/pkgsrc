@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/05/08 06:41:33 snj Exp $
 #
 
 DISTNAME=		pwlib_1.4.4
@@ -18,7 +18,7 @@ COMMENT=		Portable Windows Libary
 BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
 WRKSRC=			${WRKDIR}/pwlib
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
@@ -56,5 +56,5 @@ do-install:
 		${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make;		\
 	done
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
