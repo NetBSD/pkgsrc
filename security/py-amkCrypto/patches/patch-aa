@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/07 00:56:48 wiz Exp $
+
+--- mxCrypto/Setup.orig	Fri Jan 21 02:01:19 2000
++++ mxCrypto/Setup
+@@ -18,10 +18,10 @@
+ mxCrypto \
+ #
+ # SSLeay Libs: 
+-	-L/usr/local/ssl/lib -lcrypto \
++	-Wl,-R${SSLBASE} -L${SSLBASE}/lib -lcrypto \
+ #
+ # SSLeay Include files: 
+-	-I/usr/local/ssl/include \
++	-I${SSLBASE}/include \
+ #
+ # Some C++ compiler setups "forget" to link to the c++ libs (noteably
+ # on Solaris), so you might succeed in linking them in by hand:

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/07 00:56:48 wiz Exp $
+
+SHA1 (amkCrypto-0.1.3.tgz) = aa50bc2df65dc21b50f7c2e801814a6f827738d1
+Size (amkCrypto-0.1.3.tgz) = 203870 bytes
+SHA1 (patch-aa) = 46fb8adcf355c0a001dce47720690245dafa4bf5
