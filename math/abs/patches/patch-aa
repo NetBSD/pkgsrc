@@ -1,27 +1,45 @@
-$NetBSD: patch-aa,v 1.3 1999/10/04 23:08:00 simonb Exp $
+$NetBSD: patch-aa,v 1.4 2000/11/17 07:36:34 rh Exp $
 
---- Makefile.orig	Mon Dec 21 04:56:29 1998
-+++ Makefile	Sun Oct  3 14:13:44 1999
-@@ -1,10 +1,11 @@
+--- Makefile.netBSD.orig	Wed Nov 15 20:59:20 2000
++++ Makefile.netBSD
+@@ -1,24 +1,24 @@
  CURRENT_DIR = 	.
  
--SUBDIRS =	Xpm TextField-1.0
-+SUBDIRS =	TextField-1.0
  
- MAKE =	make
+-SUBDIRS =	Xpm ABV X11 Kernel Plot Database Fig Interface X11/xedit SAMCEF 
++SUBDIRS =	ABV X11 Kernel Plot Database Fig Interface X11/xedit SAMCEF 
  
--LIBS = -L /lib/X11 -L /usr/X11R6/lib -lXaw -lX11 -lm -lXt -lXmu -lXext 
-+CFLAGS+= -I${X11BASE}/include -I ${LOCALBASE}/include
-+LIBS = -lXaw -lX11 -lm -lXt -lXmu -lXext -lXpm
+ SUBDIRS2 =	ABV X11 Kernel Plot Database Fig Interface
+-MAKE =	make
++#MAKE?=	make
  
- SRCS 	=	\
- 	applic.c \
-@@ -105,7 +106,7 @@
- 	$(MAKE) all); \
- 	fi \
+ #for linux and aix LIBS = -L /lib/X11 -L /usr/X11R6/lib -lXaw -lX11 -lm -lXt -lXmu -lXext
+ #for silicon: LIBS = -lXaw -lX11 -lm -lXt -lXmu -lXext
+ #for hp LIBS = -L /lib/X11 -L /usr/X11R6/lib -L /usr/contrib/X11R6/lib -lXaw -lX11 -lm -lXt -lXmu -lXext
+-LIBS = -L /usr/lib -L /usr/X11R6/lib -lXaw -lX11 -lm -lXt -lXmu -lXext
++LIBS = -lXaw -lXpm -lX11 -lm -lXt -lXmu -lXext
+ #LIBS = -L /lib/X11 -L /usr/X11R6/lib -L /usr/contrib/X11R6/lib -lXaw -lX11 -lm -lXt -lXmu -lXext
+ 
+ #for hp DEFINE = -D_HPUX_SOURCE
+ DEFINE = 
+ 
+-CFLAGS = 
++#CFLAGS = 
+ 
+ #for hp IncludeDir = /usr/contrib/X11R6/include
+-IncludeDir = /usr/X11R6/include
++IncludeDir = ${X11BASE}/include
+ 
+ #for hp Ccompiler = c89
+ Ccompiler = cc
+@@ -35,8 +35,8 @@
  	done
--	cc -o abs ./TextField-1.0/*.o $(OBJS) ./Xpm/libxpm.a $(LIBS) 
-+	cc -o abs ./TextField-1.0/*.o ${OBJS} ${LDFLAGS} ${LIBS} 
+ 	cc -o abs  ./Plot/*.o ./ABV/*.o \
+         Fig/*.o Interface/*.o X11/xedit/*.o \
+-        ./Kernel/*.o ./X11/*.o ./Database/*.o ./Xpm/libxpm.a\
+-        $(LIBS) $(DEFINE)
++        ./Kernel/*.o ./X11/*.o ./Database/*.o \
++        ${LDFLAGS} ${LIBS} ${DEFINE}
  
- clean::
- 	rm -f *.o */*.o */*.a
+ 
+ 
