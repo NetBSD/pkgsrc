@@ -1,0 +1,6 @@
+       The curses library routines give the user a terminal-inde-
+       pendent method of updating character screens with  reason-
+       able  optimization.  This implementation is ``new curses''
+       (ncurses) and is the approved replacement for 4.4BSD clas-
+       sic curses, which is being discontinued.
+

@@ -1,0 +1,27 @@
+--- progs/Makefile.in.orig	Sun Feb 11 00:08:16 1996
++++ progs/Makefile.in	Sat Oct 25 01:56:53 1997
+@@ -54,7 +54,7 @@
+ AUTO_SRC = \
+ 	termsort.c
+ 
+-PROGS = tic toe infocmp clear tput tset
++PROGS = tic toe infocmp
+ 
+ TESTPROGS = mvcur tctest hardscroll
+ 
+@@ -73,15 +73,9 @@
+ 	$(INSTALL_PROGRAM) tic $(bindir)/tic
+ 	$(INSTALL_PROGRAM) toe $(bindir)/toe
+ 	$(INSTALL_PROGRAM) infocmp $(bindir)/infocmp
+-	$(INSTALL_PROGRAM) clear $(bindir)/clear
+-	$(INSTALL_PROGRAM) tput $(bindir)/tput
+-	$(INSTALL_PROGRAM) tset $(bindir)/tset
+ 	@echo "linking captoinfo to tic"
+ 	-@rm -f $(bindir)/captoinfo
+ 	-@ln $(bindir)/tic $(bindir)/captoinfo
+-	@echo "linking reset to tset"
+-	-@rm -f $(bindir)/reset
+-	-@ln $(bindir)/tset $(bindir)/reset
+ 
+ $(bindir) :
+ 	$(srcdir)/../mkinstalldirs $@
