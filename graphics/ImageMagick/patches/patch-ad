@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.7 2002/11/13 13:44:44 wiz Exp $
+
+--- coders/jp2.c.orig	Sun Nov 10 15:33:57 2002
++++ coders/jp2.c
+@@ -604,7 +604,7 @@ static unsigned int WriteJP2Image(const 
+     component_info[i].prec=(unsigned int) image->depth <= 8 ? 8 : 16;
+   }
+   jp2_image=jas_image_create((short) number_components,component_info,
+-    number_components == 1 ? JAS_IMAGE_CM_GRAY : JAS_IMAGE_CM_RGB);
++    number_components == 1 ? JAS_IMAGE_CS_GRAY : JAS_IMAGE_CS_RGB);
+   if (jp2_image == (jas_image_t *) NULL)
+     ThrowWriterException(FileOpenError,"Unable to create image",image);
+   /*
