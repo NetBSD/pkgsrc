@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2002/01/17 01:13:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/02 23:54:55 jmmv Exp $
 bin/cube3d
 bin/monitest
-etc/ggi/libggi.conf
-etc/ggi/libggimisc.conf
 include/ggi/display/aa.h
 include/ggi/display/fbdev.h
 include/ggi/display/file.h
@@ -213,10 +211,12 @@ man/man3/ggiUnmapPixel.3
 man/man3/ggiUnpackPixels.3
 man/man6/cube3d.6
 man/man7/libggi.7
+share/examples/ggi/libggi.conf
+share/examples/ggi/libggimisc.conf
+@comment in libgii: @dirrm share/examples/ggi
 @dirrm lib/ggi/display
 @dirrm lib/ggi/default
 @comment in libgii: @dirrm lib/ggi
 @comment in libgii: @dirrm include/ggi/internal
 @dirrm include/ggi/display
 @comment in libgii: @dirrm include/ggi
-@comment in libgii: @dirrm etc/ggi

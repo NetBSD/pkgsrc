@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2003/01/02 23:54:56 jmmv Exp $
+
+--- configure.orig	Sun May 16 19:57:10 1999
++++ configure
+@@ -5613,7 +5613,7 @@ test "x$exec_prefix" = xNONE && exec_pre
+ 
+ eval foo="$libdir"
+ eval ggi_libdir="$foo"
+-eval ggi_confdir="$sysconfdir/ggi"
++eval ggi_confdir="$sysconfdir"
+ 
+ 
+ 
