@@ -1,18 +1,18 @@
-$NetBSD: patch-ae,v 1.4 2000/02/06 03:49:49 fredb Exp $
+$NetBSD: patch-ae,v 1.5 2000/02/10 12:05:28 fredb Exp $
 
 --- arena.h.in.orig	Sun Mar  8 11:35:06 1998
-+++ arena.h.in	Sat Oct 30 17:21:26 1999
-@@ -60,6 +60,9 @@
- #  define  ARENA_TRACE_MASK 0xffffffff
-           /* Default mask for libwww debug tracing */
++++ arena.h.in	Thu Feb 10 05:20:53 2000
+@@ -62,6 +64,9 @@
  #  define LIBWWW_TRACE_MASK SHOW_ALL_TRACE
-+#else
-+          /* Needed to unset HTDEBUG in HTUtils.h */
-+#  define NODEBUG   1
  #endif
  
++          /* Needed to unset HTDEBUG in HTUtils.h */
++#  define NODEBUG   1
++
  /* Persistent cache location.
-@@ -267,9 +270,9 @@
+  * If defined as "" (i.e. null), then NO Caching will be done...
+  * Then the defaults will be taken from Xdefaults or ARENA_DEFAULT_CACHE_ROOT
+@@ -267,9 +272,9 @@
  #  define ARENA_FLYBY_HINT 1
  #  define ARENA_FLYBY_TERSE 2
  #  define ARENA_FLYBY_VERBOSE 3
@@ -24,7 +24,7 @@ $NetBSD: patch-ae,v 1.4 2000/02/06 03:49:49 fredb Exp $
  #endif
  
  
-@@ -445,6 +448,20 @@
+@@ -445,6 +450,20 @@
   */
  #ifndef HAVE_STRSTR
  #  undef HAVE_STRSTR
