@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/12/03 01:37:57 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/12/08 19:33:46 reed Exp $
 
 .if !defined(GTK_BUILDLINK2_MK)
 GTK_BUILDLINK2_MK=	# defined
@@ -9,8 +9,7 @@ BUILDLINK_PKGSRCDIR.gtk?=	../../x11/gtk
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gtk=gtk
 BUILDLINK_PREFIX.gtk_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.gtk=	bin/gtk-config
-BUILDLINK_FILES.gtk+=	include/gdk/*
+BUILDLINK_FILES.gtk=	include/gdk/*
 BUILDLINK_FILES.gtk+=	include/gtk/*
 BUILDLINK_FILES.gtk+=	include/gtk-1*/*/*
 BUILDLINK_FILES.gtk+=	lib/libgdk.*
