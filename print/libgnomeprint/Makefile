@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/01/10 07:47:01 cjep Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/14 20:19:46 jmmv Exp $
 #
 
-DISTNAME=		libgnomeprint-1.116.0
-PKGREVISION=		3
+DISTNAME=		libgnomeprint-2.2.1.1
 CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprint/1.116/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprint/2.2/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@netbsd.org
 HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
@@ -16,14 +16,14 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GMAKE=		YES
-USE_GNU_GETTEXT=	YES
 USE_X11=		YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-pre-configure:
-	${MV} ${WRKSRC}/installer/README.installer ${WRKSRC}/installer/README.installer.2
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomeprint/libgnomeprint-2.2.pc.in
+
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
