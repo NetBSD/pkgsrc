@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/07/06 16:10:18 uebayasi Exp $
+# $NetBSD: Makefile,v 1.61 2003/07/08 13:34:46 markd Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 
 .include "../../graphics/xpm/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-xpm
