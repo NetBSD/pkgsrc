@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:27 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1998/09/28 10:57:38 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
-DISTNAME=		lsof_4.36_W
-PKGNAME=		lsof-4.36
+DISTNAME=		lsof_4.37_W
+PKGNAME=		lsof-4.37
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.cert.dfn.de/pub/tools/admin/lsof/  \
@@ -11,13 +11,10 @@ MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.web.ad.jp/pub/UNIX/tools/lsof/  \
 			ftp://ftp.sunet.se/pub/unix/admin/lsof/
 
-PATCH_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/patches/4.36/
-PATCHFILES=		fd_lookup_patch
-
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/abe/
 
-CONFLICTS=		lsof-4.29 lsof-4.31 lsof-4.33
+CONFLICTS=		lsof-4.29 lsof-4.31 lsof-4.33 lsof-4.36
 
 WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 DIST_SUBDIR=		lsof
