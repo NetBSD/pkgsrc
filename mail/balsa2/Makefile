@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:45:42 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/25 18:25:45 drochner Exp $
 #
 
-DISTNAME=		balsa-2.0.10
-PKGREVISION=		2
+DISTNAME=		balsa-2.0.12
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://balsa.gnome.org/				\
 			ftp://ftp.newton.cx/pub/balsa/
@@ -22,7 +21,7 @@ USE_PKGLOCALEDIR=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--enable-gpgme
+CONFIGURE_ARGS+=	--with-gpgme=${BUILDLINK_PREFIX.gpgme}
 CONFIGURE_ARGS+=	--disable-more-warnings
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--enable-pcre
@@ -54,9 +53,4 @@ CONFIGURE_ARGS+=        --enable-ldap
 .include "../../www/libgtkhtml/buildlink2.mk"
 .include "../../mail/libesmtp/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-
-.if defined(BUILDLINK_LIBICONV_LDADD) && !empty(BUILDLINK_LIBICONV_LDADD)
-CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv_open=yes
-.endif
-
 .include "../../mk/bsd.pkg.mk"

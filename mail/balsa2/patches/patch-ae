@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2003/07/25 18:25:46 drochner Exp $
+
+--- libbalsa/filter-file.c.orig	2003-07-25 19:39:19.000000000 +0200
++++ libbalsa/filter-file.c	2003-07-25 19:39:41.000000000 +0200
+@@ -34,7 +34,7 @@
+ #include "config.h"
+ 
+ /* define _XOPEN_SOURCE to make strptime visible */
+-#define _XOPEN_SOURCE
++#define _XOPEN_SOURCE 600
+ /* extensions  needed additonally on Solaris for strptime */
+ #define __EXTENSIONS__
+ #include <stdio.h>
