@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/30 19:47:13 jwise Exp $
+lib/tcl/TclDOM/pkgIndex.tcl
+lib/tcl/TclDOM/dom.tcl
+lib/tcl/TclDOM/dommap.tcl
+share/doc/tcl/TclDOM/reference.html
+share/doc/tcl/TclDOM/changes
+@dirrm lib/tcl/TclDOM
+@dirrm share/doc/tcl/TclDOM
