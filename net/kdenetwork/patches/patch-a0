@@ -1,0 +1,15 @@
+*** ltconfig~	Fri Oct 10 01:06:48 1997
+--- ltconfig	Sat Nov  1 23:02:29 1997
+***************
+*** 982,986 ****
+  freebsd2* | freebsd3*)
+    version_type=sunos
+!   library_names_spec='$libname.so.$versuffix $libname.so'
+    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+    shlibpath_var=LD_LIBRARY_PATH
+--- 982,986 ----
+  freebsd2* | freebsd3*)
+    version_type=sunos
+!   library_names_spec='$libname.so.$versuffix'
+    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+    shlibpath_var=LD_LIBRARY_PATH
