@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/09 14:05:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/29 12:54:57 seb Exp $
 
 DISTNAME=	gnats-3.113.1
 CATEGORIES=	devel
@@ -14,7 +14,10 @@ USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 USE_GMAKE=	yes
 USE_BISON=	yes
-TEXINFO_OVERRIDE=	YES
+
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
+INFO_FILES=	gnats.info send-pr.info
 
 CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/share/emacs/site-lisp \
 		--with-full-gnats \
@@ -46,8 +49,5 @@ post-build:
 post-install:
 	(cd ${WRKSRC}/gnats;   ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
 	(cd ${WRKSRC}/send-pr; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
-	${INSTALL_INFO} ${PREFIX}/info/gnats.info   ${PREFIX}/info/dir
-	${INSTALL_INFO} ${PREFIX}/info/send-pr.info ${PREFIX}/info/dir
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
