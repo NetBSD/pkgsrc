@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/13 13:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/15 14:08:13 wiz Exp $
 #
 
 DISTNAME=	cuecat-0.2.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://opensource.lineo.com/cuecat/cuecat_driver/
 NO_SOURCE_ON_FTP=	Hardware manufacturer claims intellectual property infringement.
 NO_SOURCE_ON_CDROM=	${NO_SOURCE_ON_FTP}
 NO_BIN_ON_FTP=		${NO_SOURCE_ON_FTP}
-NO_BIN_ON_FTP=		${NO_SOURCE_ON_FTP}
+NO_BIN_ON_CDROM=	${NO_SOURCE_ON_FTP}
 
 USE_GMAKE=	yes
 
