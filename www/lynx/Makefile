@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/08/11 07:09:23 tron Exp $
+# $NetBSD: Makefile,v 1.29 2000/08/11 08:11:23 tron Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -71,14 +71,22 @@ CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
 post-extract:
-	${CP} ${DISTDIR}/lynx-2.8.3.rel1.cs.po ${WRKSRC}/po/cs.po
-	${CP} ${DISTDIR}/lynx-2.8.4.da.po ${WRKSRC}/po/da.po
-	${CP} ${DISTDIR}/lynx-2.8.3.rel1.de.po ${WRKSRC}/po/de.po
-	${CP} ${DISTDIR}/lynx-2.8.3.rel1.ja.po ${WRKSRC}/po/ja.po
-	${CP} ${DISTDIR}/lynx-2.8.3.rel1.nl.po ${WRKSRC}/po/nl.po
-	${CP} ${DISTDIR}/lynx-2.8.3.rel1.pt_BR.po ${WRKSRC}/po/pt_BR.po
-	${CP} ${DISTDIR}/lynx-2.8.3.rel1.ru.po ${WRKSRC}/po/ru.po
-	${CP} ${DISTDIR}/lynx-2.8.3.rel1.sl.po ${WRKSRC}/po/sl.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.cs.po \
+	  ${WRKSRC}/po/cs.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.4.da.po \
+	  ${WRKSRC}/po/da.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.de.po \
+	  ${WRKSRC}/po/de.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.ja.po \
+	  ${WRKSRC}/po/ja.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.nl.po \
+	  ${WRKSRC}/po/nl.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.pt_BR.po \
+	  ${WRKSRC}/po/pt_BR.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.ru.po \
+	  ${WRKSRC}/po/ru.po
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.sl.po \
+	  ${WRKSRC}/po/sl.po
 
 post-configure:
 	(${ECHO}; \
