@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
+$NetBSD: patch-aa,v 1.22.2.1 2004/05/26 10:55:01 grant Exp $
 
---- Makefile.tmpl.orig	2004-02-28 14:06:16.000000000 -0800
-+++ Makefile.tmpl	2004-02-28 14:06:16.000000000 -0800
-@@ -100,6 +100,8 @@
+--- Makefile.tmpl.orig	Fri May 14 16:36:50 2004
++++ Makefile.tmpl
+@@ -56,6 +56,8 @@ INSTALL_DATA    = $(INSTALL) $(IFLAGS_DA
  PERL            = @PERL@
  TAR		= @TAR@
  TAROPT		= @TAROPT@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
  
  #   installation name of Apache webserver
  TARGET          = @TARGET@
-@@ -324,11 +326,6 @@
+@@ -280,11 +282,6 @@ install-mktree:
  	$(MKDIR) $(root)$(mandir)/man1
  	$(MKDIR) $(root)$(mandir)/man8
  	$(MKDIR) $(root)$(sysconfdir)
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
  	$(MKDIR) $(root)$(htdocsdir)
  	$(MKDIR) $(root)$(manualdir)
  	$(MKDIR) $(root)$(iconsdir)
-@@ -340,9 +337,9 @@
+@@ -296,9 +293,9 @@ install-mktree:
  	$(MKDIR) $(root)$(proxycachedir)
  	-@if [ "x`$(AUX)/getuid.sh`" = "x0" ]; then \
  		echo "chown $(conf_user) $(root)$(proxycachedir)"; \
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
  	fi
  	@echo "<=== [mktree]"
  
-@@ -387,34 +384,6 @@
+@@ -343,34 +340,6 @@ install-programs:
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
  			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
  			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
@@ -70,7 +70,7 @@ $NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
-@@ -464,9 +433,9 @@
+@@ -420,9 +389,9 @@ install-support:
  	    echo "$(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec"; \
  	    $(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec; \
  	    echo "chown root $(root)$(sbindir)/suexec"; \
@@ -82,7 +82,7 @@ $NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
  	    echo "$(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8"; \
  	    $(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8; \
  	fi
-@@ -508,9 +477,9 @@
+@@ -464,9 +433,9 @@ install-binsupport:
  	    echo "$(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec"; \
  	    $(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec; \
  	    echo "chown root $(root)$(sbindir)/suexec"; \
@@ -94,7 +94,7 @@ $NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
  	    echo "$(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8"; \
  	    $(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8; \
  	fi
-@@ -533,21 +502,25 @@
+@@ -489,21 +458,25 @@ install-include:
  #   icons and distributed CGI scripts.
  install-data:
  	@echo "===> [data: Installing initial data files]"
@@ -125,7 +125,7 @@ $NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
  	fi
  	-@if [ -f $(root)$(cgidir)/printenv ]; then \
  		echo "[PRESERVING EXISTING CGI SUBDIR: $(root)$(cgidir)/]"; \
-@@ -555,23 +528,25 @@
+@@ -511,23 +484,25 @@ install-data:
  		for script in printenv test-cgi; do \
  			cat $(TOP)/cgi-bin/$${script} |\
  			sed -e 's;^#!/.*perl;#!$(PERL);' \
