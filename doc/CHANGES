@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9740 2005/04/04 08:46:06 adam Exp $
+$NetBSD: CHANGES,v 1.9741 2005/04/04 08:57:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1886,3 +1886,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mono to 1.1.6 [recht 2005-04-04]
 	Updated gg2 to 2.2.5 [adam 2005-04-04]
 	Updated msmtp to 1.4.0 [adam 2005-04-04]
+	Updated mtools to 3.9.10 [adam 2005-04-04]
