@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1999/02/20 22:48:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.39 1999/03/29 16:26:46 tron Exp $
 #
 
 DISTNAME=       fetchmail-4.7.7
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://sagan.earthspace.net/~esr/fetchmail/
 
+BUILD_DEPENDS+=	autoconf:../../devel/autoconf
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
 
@@ -19,10 +21,13 @@ CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
 CONFIGURE_ARGS += --with-kerberos=yes
 .endif
 
-FDOC=   ${PREFIX}/share/doc/fetchmail
+FDOC=	${PREFIX}/share/doc/fetchmail
 
 post-extract:
 	${RM} -f ${WRKSRC}/md5.h
+
+pre-configure:
+	(cd ${WRKSRC}; autoreconf)
 
 post-install:
 	${INSTALL} -d -m 555 -o ${DOCOWN} -g ${DOCGRP} ${FDOC}
