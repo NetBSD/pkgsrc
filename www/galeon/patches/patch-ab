@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2004/07/20 17:37:23 abs Exp $
+$NetBSD: patch-ab,v 1.10 2004/10/05 16:54:29 abs Exp $
 
---- configure.orig	2004-07-03 18:07:57.000000000 +0100
+--- configure.orig	2004-08-08 21:12:00.000000000 +0100
 +++ configure
-@@ -22732,11 +22732,11 @@ fi;
+@@ -22744,11 +22744,11 @@ fi;
  echo "$as_me:$LINENO: result: $MOZILLA_VERSION$autodetect" >&5
  echo "${ECHO_T}$MOZILLA_VERSION$autodetect" >&6
  
