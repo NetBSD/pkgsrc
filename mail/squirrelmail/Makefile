@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/01/29 11:34:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/02 19:39:18 jlam Exp $
 
-DISTNAME=	squirrelmail-1.0pre3
-PKGNAME=	squirrelmail-0.9.3
+DISTNAME=	squirrelmail-1.0.1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/} \
-		http://nerf-herder.net/squirrel/
+		http://nerf-herder.net/squirrel/ \
+		ftp://nerf-herder.net/pub/squirrel/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.squirrelmail.org/
@@ -25,9 +26,10 @@ MESSAGE_SUBST+=	SMDIR=${SMDIR}
 post-extract:
 	cd ${WRKSRC};							\
 	${MV} config/conf.pl config/conf.pl.orig;			\
-	${SED}	-e "s|/usr/bin/perl|${PERL5}|g"				\
+	${SED}	-e "s|^#!/.*|#!${PERL5}|g"				\
 		config/conf.pl.orig > config/conf.pl;			\
-	${CHMOD} +x config/conf.pl					\
+	${CHMOD} +x config/conf.pl
+	${FIND} ${WRKSRC} -name ".cvsignore" -exec ${RM} -f {} \;
 
 post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
