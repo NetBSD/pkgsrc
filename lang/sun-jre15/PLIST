@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/01/17 16:17:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/02/02 13:32:34 wiz Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -8,7 +8,6 @@ bin/sun15-rmid
 bin/sun15-rmiregistry
 bin/sun15-servertool
 bin/sun15-tnameserv
-java/sun-1.5/.pkgsrc
 java/sun-1.5/.systemPrefs/.system.lock
 java/sun-1.5/.systemPrefs/.systemRootModFile
 java/sun-1.5/CHANGES
@@ -34,8 +33,6 @@ java/sun-1.5/bin/servertool
 java/sun-1.5/bin/tnameserv
 java/sun-1.5/bin/unpack200
 java/sun-1.5/javaws/javaws
-java/sun-1.5/lib/.pkgsrc
-java/sun-1.5/lib/applet/.pkgsrc
 java/sun-1.5/lib/audio/soundbank.gm
 java/sun-1.5/lib/charsets.jar
 java/sun-1.5/lib/classlist
@@ -127,8 +124,6 @@ java/sun-1.5/lib/${MACHINE_ARCH}/server/libjvm.so
 java/sun-1.5/lib/${MACHINE_ARCH}/xawt/libmawt.so
 java/sun-1.5/lib/im/indicim.jar
 java/sun-1.5/lib/im/thaiim.jar
-java/sun-1.5/lib/images/.pkgsrc
-java/sun-1.5/lib/images/cursors/.pkgsrc
 java/sun-1.5/lib/images/cursors/cursors.properties.default
 java/sun-1.5/lib/images/cursors/invalid32x32.gif
 java/sun-1.5/lib/images/cursors/motif_CopyDrop32x32.gif
@@ -186,7 +181,6 @@ java/sun-1.5/lib/plugin.jar
 java/sun-1.5/lib/psfont.properties.ja.default
 java/sun-1.5/lib/psfontj2d.properties.default
 java/sun-1.5/lib/rt.jar
-java/sun-1.5/lib/security/.pkgsrc
 @SUN_JRE15_USE_JCE@java/sun-1.5/lib/security/COPYRIGHT.html
 @SUN_JRE15_USE_JCE@java/sun-1.5/lib/security/README.txt
 java/sun-1.5/lib/security/US_export_policy.jar
