@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/04/01 13:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/26 19:30:28 garbled Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/12/16 09:26:12 tg Exp
 #
 
@@ -12,6 +12,7 @@ HOMEPAGE=	http://math-www.uni-paderborn.de/~axel/tkinfo/
 
 DEPENDS=	tk-8.0.5:../../x11/tk80
 
+USE_X11=	yes
 NO_BUILD=	yes
 
 do-install:
