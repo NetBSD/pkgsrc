@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:36:36 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/12/08 17:12:23 tv Exp $
 
 --- config.make.orig	Sat Oct 11 17:24:15 1997
-+++ config.make	Thu Jul 16 11:07:46 1998
++++ config.make	Tue Dec  8 10:54:14 1998
 @@ -14,35 +14,35 @@
  # OS2 = OS/2 with EMX GCC
  
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:36:36 agc Exp $
  # OS2
  # LFLAGS	= -Zexe $(DEBUG) -L$(TOPDIR)/src/common
 - LFLAGS		= $(DEBUG) -L$(TOPDIR)/src/common
-+ LFLAGS		= $(DEBUG) -L$(TOPDIR)/src/common/.libs
++ LFLAGS		= $(DEBUG) -L$(TOPDIR)/src/common/.libs $(LDFLAGS)
  
  # ISC 3.x
  # LIBS		= -lfidogate -linet -lPW -lcposix
