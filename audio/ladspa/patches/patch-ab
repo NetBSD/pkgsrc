@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/12 13:57:51 xtraeme Exp $
+
+--- applyplugin.c.orig	2004-02-28 17:11:28.000000000 +0100
++++ applyplugin.c	2004-02-28 17:12:19.000000000 +0100
+@@ -6,7 +6,11 @@
+ /*****************************************************************************/
+ 
+ #include <dlfcn.h>
+-#include <endian.h>
++#ifdef __Linux__
++# include <endian.h>
++#else
++# include <sys/endian.h>
++#endif
+ #include <errno.h>
+ #include <math.h>
+ #include <stdlib.h>
