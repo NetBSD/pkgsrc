@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1636 2004/04/18 23:09:47 wiz Exp $
+$NetBSD: TODO,v 1.1637 2004/04/19 00:14:54 recht Exp $
 
 Suggested new packages
 ======================
@@ -304,7 +304,6 @@ Suggested package updates
 	o physfs-1.0.0
 	o plib-1.7.0
 	o ploticus-2.20
-	o postgresql-7.4.2 [pkgsrc-wip]
 	o psi-0.9.1
 	o pwlib-1.5.2
 	o py-psycopg-1.1.10
