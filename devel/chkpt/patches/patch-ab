@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2000/07/28 07:20:05 itohy Exp $
+
 --- include/addresses.h.orig	Fri Jun 11 15:58:36 1999
 +++ include/addresses.h	Wed Jul 26 11:11:27 2000
 @@ -61,7 +61,7 @@
@@ -6,6 +8,6 @@
  #undef  STACK_BASE
 -#define STACK_BASE - sizeof(struct frame)
 +#define STACK_BASE (void *)(alloca(0) - sizeof(struct frame))
- endif
+ #endif
  #endif /* __NetBSD__ */
  
