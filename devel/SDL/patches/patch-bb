@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.2 2004/04/17 00:15:21 snj Exp $
+$NetBSD: patch-bb,v 1.3 2005/01/05 12:05:19 adam Exp $
 
---- src/audio/esd/Makefile.in.orig	2004-02-22 13:32:08.000000000 -0800
-+++ src/audio/esd/Makefile.in	2004-04-10 14:54:04.000000000 -0700
+--- src/audio/esd/Makefile.in.orig	2004-12-13 09:03:15.000000000 +0000
++++ src/audio/esd/Makefile.in
 @@ -49,6 +49,7 @@ am__configure_deps = $(am__aclocal_m4_de
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_CLEAN_FILES =
@@ -10,7 +10,7 @@ $NetBSD: patch-bb,v 1.2 2004/04/17 00:15:21 snj Exp $
  libaudio_esd_la_LIBADD =
  am__objects_1 = SDL_esdaudio.lo
  am_libaudio_esd_la_OBJECTS = $(am__objects_1)
-@@ -317,7 +318,7 @@ clean-noinstLTLIBRARIES:
+@@ -321,7 +322,7 @@ clean-noinstLTLIBRARIES:
  	  rm -f "$${dir}/so_locations"; \
  	done
  libaudio_esd.la: $(libaudio_esd_la_OBJECTS) $(libaudio_esd_la_DEPENDENCIES) 
