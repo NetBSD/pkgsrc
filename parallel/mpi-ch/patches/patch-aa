@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1998/10/14 10:55:07 agc Exp $
+$NetBSD: patch-aa,v 1.3 2001/03/21 15:28:58 wennmach Exp $
 
 --- configure.orig	Tue Jul  7 07:52:46 1998
 +++ configure	Thu Aug  6 03:18:27 1998
-@@ -6613,7 +6613,7 @@
- 	    -e 's/ksr/KSR/g'               -e 's/freebsd/FREEBSD/g'  \
- 	    -e 's/cm5/CM5/g'               -e 's/meiko/MEIKO_CS2/g'  \
-             -e 's/rs6000/RS6000/g'	   -e 's/symm_ptx/SYMMETRY_PTX/g' \
--            -e 's/sppux/HP/g'`
-+            -e 's/sppux/HP/g'		   -e 's/netbsd/NETBSD/g'`
-   fi
- echo "Finished setting p4arch..."
- #
 @@ -9791,14 +9791,9 @@
  cat > conftest.c <<EOF
  #include "confdefs.h"
@@ -29,74 +20,3 @@ $NetBSD: patch-aa,v 1.2 1998/10/14 10:55:07 agc Exp $
  }
  EOF
  eval $compile
-@@ -14280,14 +14275,15 @@
-     /usr/bin \
-     /Tools/tcl \
-     /usr/sgitcl \
-+    /usr/pkg \
-     /local/encap/tcl-7.1 ; do
--    if test -r $dir/include/tcl.h ; then 
-+    if test -r $dir/include/tcl8.0/tcl.h ; then 
- 	# Check for correct version
- 	
--	tclversion=`grep 'TCL_MAJOR_VERSION' $dir/include/tcl.h | \
-+	tclversion=`grep 'TCL_MAJOR_VERSION' $dir/include/tcl8.0/tcl.h | \
- 		sed -e 's/^.*TCL_MAJOR_VERSION[^0-9]*\([0-9]*\).*$/\1/'`
- 	
--	if test "$tclversion" != "7" ; then
-+	if test "$tclversion" != "8" ; then
- 	    # Skip if it is the wrong version
- 	    continue
- 	fi
-@@ -14305,9 +14301,9 @@
- fi
- if test -n "$TCL_DIR" ; then 
-   if test -z "$ac_echo_test" -a 1 = 1 ; then
--echo "$ac_t""found $TCL_DIR/include/tcl.h and $TCL_DIR/lib/libtcl"
-+echo "$ac_t""found $TCL_DIR/include/tcl8.0/tcl.h and $TCL_DIR/lib/libtcl"
- else
--echo "$ac_t""found $TCL_DIR/include/tcl.h and $TCL_DIR/lib/libtcl" 1>&1
-+echo "$ac_t""found $TCL_DIR/include/tcl8.0/tcl.h and $TCL_DIR/lib/libtcl" 1>&1
- fi
- else
-   if test -n "$TCL_DIR_W" ; then
-@@ -14396,14 +14392,15 @@
-     /usr/bin \
-     /Tools/tk \
-     /usr/sgitcl \
-+    /usr/pkg \
-     /local/encap/tk-3.4 $TCL_DIR ; do
--    if test -r $dir/include/tk.h ; then 
-+    if test -r $dir/include/tk8.0/tk.h ; then 
- 	# Check for correct version
- 	
--	tkversion=`grep 'TK_MAJOR_VERSION' $dir/include/tk.h | \
-+	tkversion=`grep 'TK_MAJOR_VERSION' $dir/include/tk8.0/tk.h | \
- 		sed -e 's/^.*TK_MAJOR_VERSION[^0-9]*\([0-9]*\).*$/\1/'`
- 	
--	if test "$tkversion" != "3" ; then
-+	if test "$tkversion" != "8" ; then
- 	    # Skip if it is the wrong version
- 	    continue
- 	fi
-@@ -14421,9 +14418,9 @@
- fi
- if test -n "$TK_DIR" ; then 
-   if test -z "$ac_echo_test" -a 1 = 1 ; then
--echo "$ac_t""found $TK_DIR/include/tk.h and $TK_DIR/lib/libtk"
-+echo "$ac_t""found $TK_DIR/include/tk8.0/tk.h and $TK_DIR/lib/libtk"
- else
--echo "$ac_t""found $TK_DIR/include/tk.h and $TK_DIR/lib/libtk" 1>&1
-+echo "$ac_t""found $TK_DIR/include/tk8.0/tk.h and $TK_DIR/lib/libtk" 1>&1
- fi
- else
-   if test -n "$TK_DIR_W" ; then
-@@ -14846,7 +14843,7 @@
- # Tk is going to load X11; if no X11, skip this step
- if test -z "$no_x" -a -n "$TK_DIR" -a -n "$TCL_DIR" ; then
-   CFLAGSsave="$CFLAGS"
--  CFLAGS="$CFLAGS -I$TK_DIR/include -I$TCL_DIR/include $XINCLUDES"
-+  CFLAGS="$CFLAGS -I$TK_DIR/include/tk8.0 -I$TCL_DIR/include/tcl8.0 $XINCLUDES"
-   
- 
- if test "$cross_compiling" = 1 -a -z "$TESTCC" ; then
