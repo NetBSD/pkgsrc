@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/06/30 15:04:25 taca Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -242,6 +242,7 @@ BUILD_DEPENDS+=		${RUBY_PKGNAMEPREFIX}base>=${RUBY_REQD}:../../lang/ruby${RUBY_S
 .endif
 
 MASTER_SITE_RUBY?= \
+	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_VER}/ \
 	ftp://ftp.zetabits.com/pub/lang/ruby/${RUBY_VER}/ \
 	ftp://ftp.fu-berlin.de/unix/languages/ruby/${RUBY_VER}/ \
 	ftp://ftp.chg.ru/pub/lang/ruby/${RUBY_VER}/ \
