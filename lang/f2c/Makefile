@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2004/04/09 21:07:48 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2004/09/14 22:09:40 dmcmahill Exp $
 
 DISTNAME=	f2c-20001205
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -17,7 +17,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 #read what the last change date was.
 #
 #   mv f2c.tar f2c-yyyymmdd.tar
-#   gzip f2c-yyyymmdd.tar
+#   gzip --best f2c-yyyymmdd.tar
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/f2c/index.html
 COMMENT=	Fortran to C compiler including a script to emulate f77
@@ -29,10 +29,10 @@ F2CMINOR=	0
 MAKE_ENV+=	F2CMAJOR=${F2CMAJOR} F2CMINOR=${F2CMINOR}
 MAKE_ENV+=	LIBOWN=${LIBOWN} LIBGRP=${LIBGRP}
 PLIST_SUBST+=	F2CMAJOR=${F2CMAJOR} F2CMINOR=${F2CMINOR}
-PLIST_SRC=	${WRKDIR}/PLIST
 
 WRKSRC=		${WRKDIR}/f2c
 USE_BUILDLINK3=	yes
+USE_LIBTOOL=	yes
 
 post-extract:
 	@${RM} ${WRKSRC}/index.html
@@ -48,27 +48,9 @@ do-configure:
 	@${CP} -f ${WRKSRC}/libF77/signal1.h0 ${WRKSRC}/libF77/signal1.h
 	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libF77/f2c.h
 	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libI77/f2c.h
-	@${ECHO} "major=${F2CMAJOR}" > ${WRKSRC}/libF77/shlib_version
-	@${ECHO} "minor=${F2CMINOR}" >> ${WRKSRC}/libF77/shlib_version
-	@${ECHO} "major=${F2CMAJOR}" > ${WRKSRC}/libI77/shlib_version
-	@${ECHO} "minor=${F2CMINOR}" >> ${WRKSRC}/libI77/shlib_version
 
-# for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
 MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH}
 
-pre-install:
-.if (${MACHINE_ARCH} == "mipsel")
-	${SED} '/lib.*_pic/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
-.else
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-.endif
-
-.if (${OBJECT_FMT} == "ELF")
-post-install:
-	cd ${PREFIX}/lib && ${LN} -fs libf2c.so.${F2CMAJOR}.${F2CMINOR}  libf2c.so.${F2CMAJOR}
-	cd ${PREFIX}/lib && ${LN} -fs libf2c.so.${F2CMAJOR}.${F2CMINOR}  libf2c.so
-
-.endif
 
 .include "../../mk/bsd.pkg.mk"
