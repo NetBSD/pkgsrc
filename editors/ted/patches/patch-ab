@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.5 2002/05/20 17:46:32 cjep Exp $
 --- Ted/configure.orig	Sun Mar  3 23:24:16 2002
 +++ Ted/configure	Tue Apr  9 12:13:32 2002
 @@ -1946,7 +1946,6 @@
