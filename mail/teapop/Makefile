@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/11/25 20:49:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/04 14:50:32 wiz Exp $
 
 DISTNAME=	teapop-0.3.8
 PKGREVISION=	1
@@ -29,4 +29,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/teapop.passwd ${EGDIR}
 
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
