@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 12:13:52 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/03/23 17:06:33 wiz Exp $
 
-SHA1 (libnids-1.18.tar.gz) = 3494e614e5e5d2f60f2ffe738307e60e77e04a81
-RMD160 (libnids-1.18.tar.gz) = b33ba8237ba0bb31d2515bd5b7552449cfcca8f3
-Size (libnids-1.18.tar.gz) = 114013 bytes
-SHA1 (patch-aa) = 39c8271928ba37584b875550493e447c1eff0109
+SHA1 (libnids-1.20.tar.gz) = bafbe6529430cce2496dbb086b17caa0076368e1
+RMD160 (libnids-1.20.tar.gz) = 896562288dd43cc7789974ee0fd54f9e68e09449
+Size (libnids-1.20.tar.gz) = 119226 bytes
