@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.3 2003/01/12 17:52:20 veego Exp $
+
+Index: src/irc/dcc/dcc-send.c
+===================================================================
+RCS file: /home/cvs/irssi/src/irc/dcc/dcc-send.c,v
+retrieving revision 1.17
+retrieving revision 1.18
+diff -c -r1.17 -r1.18
+*** dcc-send.c	17 Nov 2002 15:51:04 -0000	1.17
+--- dcc-send.c	19 Nov 2002 12:18:11 -0000	1.18
+***************
+*** 400,406 ****
+  	str = g_strdup_printf(dcc->file_quoted ?
+  			      "DCC SEND \"%s\" %s %d %lu" :
+  			      "DCC SEND %s %s %d %lu",
+! 			      fname, host, port, fsize);
+  	dcc_ctcp_message(server, target, chat, FALSE, str);
+  	g_free(str);
+  
+--- 400,406 ----
+  	str = g_strdup_printf(dcc->file_quoted ?
+  			      "DCC SEND \"%s\" %s %d %lu" :
+  			      "DCC SEND %s %s %d %lu",
+! 			      dcc->arg, host, port, fsize);
+  	dcc_ctcp_message(server, target, chat, FALSE, str);
+  	g_free(str);
+  
