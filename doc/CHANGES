@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7275 2004/09/27 11:54:57 adam Exp $
+$NetBSD: CHANGES,v 1.7276 2004/09/27 14:19:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4467,3 +4467,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gimp to 2.0.5 [adam 2004-09-27]
 	Updated gimp-print-lib to 4.2.7 [adam 2004-09-27]
 	Updated gimp-print to 4.2.7 [adam 2004-09-27]
+	Updated xscreensaver to 4.18 [wiz 2004-09-27]
+	Updated xscreensaver-demo to 4.18 [wiz 2004-09-27]
+	Updated xscreensaver-gnome to 4.18 [wiz 2004-09-27]
