@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/12/24 10:09:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/03/22 16:15:46 jmmv Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -12,6 +12,8 @@ include/metacity-1/metacity-private/util.h
 lib/libmetacity-private.la
 lib/pkgconfig/libmetacity-private.pc
 libexec/metacity-dialog
+man/man1/metacity-theme-viewer.1
+man/man1/metacity-window-demo.1
 share/gconf/schemas/metacity.schemas
 share/gnome/wm-properties/metacity.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/metacity.mo
@@ -79,9 +81,7 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/metacity.mo
-share/metacity/glade/metacity-properties.glade
 share/metacity/icons/metacity-window-demo.png
-share/pixmaps/metacity-properties.png
 share/themes/AgingGorilla/metacity-1/active-button.png
 share/themes/AgingGorilla/metacity-1/active-close-button.png
 share/themes/AgingGorilla/metacity-1/active-close-menu-icon.png
@@ -184,9 +184,7 @@ share/themes/Simple/metacity-1/minimize.png
 @comment in theme-dirs: @dirrm share/themes/Atlanta
 @dirrm share/themes/AgingGorilla/metacity-1
 @comment in theme-dirs: @dirrm share/themes/AgingGorilla
-@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/metacity/icons
-@dirrm share/metacity/glade
 @dirrm share/metacity
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
 @comment in GConf2: @dirrm share/gconf/schemas
