@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/13 10:24:27 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/18 19:39:27 reed Exp $
 
---- src/Makefile.in.orig	Fri Apr 11 19:37:59 2003
-+++ src/Makefile.in	Fri Apr 11 19:41:12 2003
-@@ -122,13 +122,13 @@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+--- src/Makefile.in.orig	2005-01-07 11:17:26.000000000 -0800
++++ src/Makefile.in
+@@ -84,14 +84,14 @@ am__include = @am__include@
+ am__quote = @am__quote@
+ fsect = @fsect@
+ install_sh = @install_sh@
 -MAGIC = $(pkgdatadir)/magic
 +MAGIC = @sysconfdir@/magic
  lib_LTLIBRARIES = libmagic.la
  include_HEADERS = magic.h
+ EXTRA_DIST = test.c
  
  bin_PROGRAMS = file
  
