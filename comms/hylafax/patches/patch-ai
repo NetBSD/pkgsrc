@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.6 2001/07/08 13:32:15 bad Exp $
+$NetBSD: patch-ai,v 1.7 2001/07/16 13:30:38 wiz Exp $
 
 --- etc/faxsetup.sh.in.orig	Thu Jun 14 07:36:16 2001
-+++ etc/faxsetup.sh.in	Sun Jul  8 01:25:48 2001
++++ etc/faxsetup.sh.in
 @@ -41,7 +41,9 @@
  # This script interactively prepares and verifies 
  # a HylaFAX client and/or server machine for use.
@@ -37,11 +37,10 @@ $NetBSD: patch-ai,v 1.6 2001/07/08 13:32:15 bad Exp $
  MKFIFO
  MV
  PATH
-@@ -747,6 +751,61 @@
-     bitch "Sorry, but you must run this script as the super-user!"
+@@ -748,6 +752,61 @@
      boom
  fi
-+
+ 
 +createspool()
 +{
 +    old_spool="`dirname ${DIR_SPOOL}`/fax"
@@ -96,6 +95,21 @@ $NetBSD: patch-ai,v 1.6 2001/07/08 13:32:15 bad Exp $
 +Note "Creating spool directory structure"
 +
 +createspool
- 
++
  onClient && Note "Checking system for proper client configuration."
  onServer && Note "Checking system for proper server configuration."
+ 
+@@ -2083,12 +2142,7 @@
+ 
+     findproc()
+     {
+-	# NB: ps ax should give an error on System V, so we try it first!
+-	pid="`ps ax 2>/dev/null | $AWK \"\
+-		/[\/ (]$1[ )]/	{print \\$1;}
+-		/[\/ ]$1\$/	{print \\$1;}\"`"
+-	test "$pid" ||
+-	    pid="`ps -e 2>/dev/null | $AWK \"/ $1[ ]*\$/ {print \\$1;}\"`"
++	pid="`ps -ax | grep -e "[/ (]$1[ )]" -e "[/ ]$1\$" | grep -v grep | head -1 | cut -c1-5`"
+ 	echo "$pid"
+     }
+ 
