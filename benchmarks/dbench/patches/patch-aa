@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/17 15:11:44 agc Exp $
+
+--- child.c	2003/07/17 14:48:57	1.1
++++ child.c	2003/07/17 14:51:22
+@@ -29,16 +29,18 @@
+ 
+ int line_count=0;
+ 
+-char *client_filename = "client.txt";
++char *client_filename = PREFIX "/share/dbench/" "client.txt";
+ 
+ 
+ static int sigsegv(int sig)
+ {
+ 	char line[200];
+ 	printf("segv at line %d\n", line_count);
++#ifdef __linux__
+ 	sprintf(line, "/usr/X11R6/bin/xterm -e gdb /proc/%d/exe %d", 
+ 		getpid(), getpid());
+ 	system(line);
++#endif
+ 	exit(1);
+ }
+ 
