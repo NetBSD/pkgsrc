@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/02/17 00:01:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/02/17 11:51:54 jlam Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -93,10 +93,11 @@ sbin/nmbd
 sbin/smbd
 sbin/swat
 sbin/winbindd
-share/doc/samba/FolderRedir.reg
 share/doc/samba/NT4-Locking.reg
 share/doc/samba/NT4_PlainPassword.reg
-share/doc/samba/Win-NT-2K-XP-DeleteRoamingProfile.reg
+share/doc/samba/Win-2Kx-XPP-DeleteCachedProfiles.reg
+share/doc/samba/Win-2Kx-XPP-ForceLocalProfile.reg
+share/doc/samba/Win-NT-DeleteRoamingProfile.reg
 share/doc/samba/Win2000_PlainPassword.reg
 share/doc/samba/Win95_PlainPassword.reg
 share/doc/samba/Win98_PlainPassword.reg
@@ -179,6 +180,7 @@ share/samba/swat/help/smbclient.1.html
 share/samba/swat/help/smbcontrol.1.html
 share/samba/swat/help/smbcquotas.1.html
 share/samba/swat/help/smbd.8.html
+share/samba/swat/help/smbget.1.html
 share/samba/swat/help/smbmnt.8.html
 share/samba/swat/help/smbmount.8.html
 share/samba/swat/help/smbpasswd.5.html
@@ -192,6 +194,7 @@ share/samba/swat/help/smbumount.8.html
 share/samba/swat/help/speed.html
 share/samba/swat/help/swat.8.html
 share/samba/swat/help/tdbbackup.8.html
+share/samba/swat/help/tdbdump.8.html
 share/samba/swat/help/testparm.1.html
 share/samba/swat/help/testprns.1.html
 share/samba/swat/help/troubleshooting.html

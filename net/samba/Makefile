@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2004/02/17 00:09:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.116 2004/02/17 11:51:54 jlam Exp $
 
-DISTNAME=		samba-3.0.1
-PKGREVISION=		2
+DISTNAME=		samba-3.0.2a
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
@@ -25,7 +24,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/source
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PERL="${PERL5}"
-PLIST_SRC=		${PKGDIR}/PLIST
+PLIST_SRC=		# empty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -105,6 +104,8 @@ CONFIGURE_ARGS+=	--without-ldap
 .endif
 BUILD_DEFS+=		SAMBA_USE_LDAP
 BUILD_DEFS+=		SAMBA_USE_LDAP_COMPAT
+
+PLIST_SRC+=		${PKGDIR}/PLIST
 
 .if !defined(MKTEMP)
 MKTEMP!=	${TYPE} mktemp 2>&1 | \
