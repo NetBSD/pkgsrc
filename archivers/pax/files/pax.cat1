@@ -1,20 +1,20 @@
-PAX(1)                      NetBSD Reference Manual                     PAX(1)
+PAX(1)                  NetBSD General Commands Manual                  PAX(1)
 
 NNAAMMEE
      ppaaxx - read and write file archives and copy directory hierarchies
 
 SSYYNNOOPPSSIISS
      ppaaxx [--ccddjjnnvvzzOO] [--EE _l_i_m_i_t] [--ff _a_r_c_h_i_v_e] [--NN _d_b_d_i_r] [--ss _r_e_p_l_s_t_r] _._._.
-         [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e]] _._._. [_p_a_t_t_e_r_n
-         _._._.]
+         [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e] [,_t_o___d_a_t_e]] _._._.
+         [_p_a_t_t_e_r_n _._._.]
      ppaaxx --rr [--ccddiijjkknnuuvvzzAADDOOYYZZ] [--EE _l_i_m_i_t] [--ff _a_r_c_h_i_v_e] [--NN _d_b_d_i_r] [--oo _o_p_t_i_o_n_s]
          _._._. [--pp _s_t_r_i_n_g] _._._. [--ss _r_e_p_l_s_t_r] _._._. [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT
-         [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e]] _._._. [_p_a_t_t_e_r_n _._._.]
+         [_f_r_o_m___d_a_t_e] [,_t_o___d_a_t_e]] _._._. [_p_a_t_t_e_r_n _._._.]
      ppaaxx --ww [--ddiijjttuuvvzzAAHHLLMMOOPPXX] [--bb _b_l_o_c_k_s_i_z_e] [[--aa] [--ff _a_r_c_h_i_v_e]] [--xx _f_o_r_m_a_t]
          [--BB _b_y_t_e_s] [--NN _d_b_d_i_r] [--oo _o_p_t_i_o_n_s] _._._. [--ss _r_e_p_l_s_t_r] _._._. [--UU _u_s_e_r] _._._.
-         [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e][/[cc][mm]]] _._._. [_f_i_l_e _._._.]
+         [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e] [,_t_o___d_a_t_e][/[cc][mm]]] _._._. [_f_i_l_e _._._.]
      ppaaxx --rr --ww [--ddiijjkkllnnttuuvvzzAADDHHLLMMOOPPXXYYZZ] [--NN _d_b_d_i_r] [--pp _s_t_r_i_n_g] _._._. [--ss _r_e_p_l_s_t_r]
-         _._._. [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e][/[cc][mm]]]
+         _._._. [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e] [,_t_o___d_a_t_e][/[cc][mm]]]
          _._._. [_f_i_l_e _._._.] _d_i_r_e_c_t_o_r_y
 
 DDEESSCCRRIIPPTTIIOONN
@@ -54,12 +54,12 @@ DDEESSCCRRIIPPTTIIOONN
 
      --rr --ww   _C_o_p_y.  ppaaxx copies the _f_i_l_e operands to the destination _d_i_r_e_c_t_o_r_y.
              When no _f_i_l_e operands are specified, a list of files to copy with
-             one per line is read from the standard input.  When a _f_i_l_e
-             operand is also a directory the entire file hierarchy rooted at
-             that directory will be included.  The effect of the _c_o_p_y is as if
-             the copied files were written to an archive file and then subse-
-             quently extracted, except that there may be hard links between
-             the original and the copied files (see the --ll option below).
+             one per line is read from the standard input.  When a _f_i_l_e oper-
+             and is also a directory the entire file hierarchy rooted at that
+             directory will be included.  The effect of the _c_o_p_y is as if the
+             copied files were written to an archive file and then subsequent-
+             ly extracted, except that there may be hard links between the
+             original and the copied files (see the --ll option below).
 
              _W_a_r_n_i_n_g: The destination _d_i_r_e_c_t_o_r_y must not be one of the _f_i_l_e
              operands or a member of a file hierarchy rooted at one of the
@@ -97,8 +97,8 @@ OOPPTTIIOONNSS
            _f_i_l_e_s.  If any intermediate directories are needed in order to ex-
            tract an archive member, these directories will be created as if
            mkdir(2) was called with the bitwise inclusive OR of S_IRWXU,
-           S_IRWXG, and S_IRWXO as the mode argument.  When the selected
-           archive format supports the specification of linked files and these
+           S_IRWXG, and S_IRWXO as the mode argument.  When the selected ar-
+           chive format supports the specification of linked files and these
            files cannot be linked while the archive is being extracted, ppaaxx
            will write a diagnostic message to standard error and exit with a
            non-zero exit status at the completion of operation.
@@ -153,9 +153,9 @@ OOPPTTIIOONNSS
            the archive.
 
      --ii    Interactively rename files or archive members.  For each archive
-           member matching a _p_a_t_t_e_r_n operand or each file matching a _f_i_l_e
-           operand, ppaaxx will prompt to _/_d_e_v_/_t_t_y giving the name of the file,
-           its file mode and its modification time.  ppaaxx will then read a line
+           member matching a _p_a_t_t_e_r_n operand or each file matching a _f_i_l_e op-
+           erand, ppaaxx will prompt to _/_d_e_v_/_t_t_y giving the name of the file, its
+           file mode and its modification time.  ppaaxx will then read a line
            from _/_d_e_v_/_t_t_y.  If this line is blank, the file or archive member
            is skipped.  If this line consists of a single period, the file or
            archive member is processed with no modification to its name.  Oth-
@@ -178,9 +178,9 @@ OOPPTTIIOONNSS
            that directory is also matched (unless --dd is also specified).
 
      --oo _o_p_t_i_o_n_s
-           Information to modify the algorithm for extracting or writing
-           archive files which is specific to the archive format specified by
-           --xx. In general, _o_p_t_i_o_n_s take the form: nnaammee==vvaalluuee
+           Information to modify the algorithm for extracting or writing ar-
+           chive files which is specific to the archive format specified by
+           --xx.  In general, _o_p_t_i_o_n_s take the form: nnaammee==vvaalluuee
 
      --pp _s_t_r_i_n_g
            Specify one or more file characteristic options (privileges).  The
@@ -294,12 +294,12 @@ OOPPTTIIOONNSS
                     tected by ppaaxx and is repaired.
 
            _b_c_p_i_o    The old binary cpio format.  The default blocksize for
-                    this format is 5120 bytes.  This format is not very
-                    portable and should not be used when other formats are
-                    available.  Inode and device information about a file
-                    (used for detecting file hard links by this format) which
-                    may be truncated by this format is detected by ppaaxx and is
-                    repaired.
+                    this format is 5120 bytes.  This format is not very porta-
+                    ble and should not be used when other formats are avail-
+                    able.  Inode and device information about a file (used for
+                    detecting file hard links by this format) which may be
+                    truncated by this format is detected by ppaaxx and is re-
+                    paired.
 
            _s_v_4_c_p_i_o  The AT&T System V.4 UNIX cpio.  The default blocksize for
                     this format is 5120 bytes.  Inode and device information
@@ -398,8 +398,8 @@ OOPPTTIIOONNSS
            specify at least the following parameters in the specfile: ttyyppee,
            mmooddee, ggnnaammee or ggiidd, and uunnaammee or uuiidd, ddeevviiccee (in the case of block
            or character devices), and lliinnkk (in the case of symbolic links).
-           If ttiimmee isn't provided, the current time will be used.  A `faked-
-           up' entry that is marked `ooppttiioonnaall' will not be copied.
+           If ttiimmee isn't provided, the current time will be used.  A
+           `faked-up' entry that is marked `ooppttiioonnaall' will not be copied.
 
      --NN _d_b_d_i_r
            Except for lookups for the --GG and --UU options, use the user database
@@ -412,8 +412,8 @@ OOPPTTIIOONNSS
            for automated tasks where error recovery cannot be performed by a
            human.
 
-     --PP    Do not follow symbolic links, perform a physical file system
-           traversal.  This is the default mode.
+     --PP    Do not follow symbolic links, perform a physical file system tra-
+           versal.  This is the default mode.
 
      --TT _[_f_r_o_m___d_a_t_e_]_[_,_t_o___d_a_t_e_]_[_/_[_c_]_[_m_]_]
            Allow files to be selected based on a file modification or inode
@@ -535,8 +535,8 @@ EEXXAAMMPPLLEESS
 
      The command:
            pax -r -s ',^//*usr//*,,' -f a.pax
-     reads the archive _a_._p_a_x, with all files rooted in ``/usr'' into the
-     archive extracted relative to the current directory.
+     reads the archive _a_._p_a_x, with all files rooted in ``/usr'' into the ar-
+     chive extracted relative to the current directory.
 
      The command:
            pax -rw -i . dest_dir
@@ -588,12 +588,12 @@ SSEEEE AALLSSOO
 SSTTAANNDDAARRDDSS
      The ppaaxx utility is a superset of the IEEE Std 1003.2 (``POSIX.2'') stan-
      dard.  The options --BB, --DD, --EE, --GG, --HH, --LL, --MM, --OO, --PP, --TT, --UU, --YY, --ZZ,
-     --zz, the archive formats _b_c_p_i_o, _s_v_4_c_p_i_o, _s_v_4_c_r_c, _t_a_r, and the flawed
-     archive handling during _l_i_s_t and _r_e_a_d operations are extensions to the
+     --zz, the archive formats _b_c_p_i_o, _s_v_4_c_p_i_o, _s_v_4_c_r_c, _t_a_r, and the flawed ar-
+     chive handling during _l_i_s_t and _r_e_a_d operations are extensions to the
      POSIX standard.
 
 AAUUTTHHOORRSS
      Keith Muller at the University of California, San Diego.  Luke Mewburn
      implemented --MM.
 
-NetBSD 1.6.1_STABLE             March 31, 2003                              10
+NetBSD 1.6                      March 31, 2003                      NetBSD 1.6

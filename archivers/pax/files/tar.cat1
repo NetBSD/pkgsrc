@@ -1,11 +1,11 @@
-TAR(1)                      NetBSD Reference Manual                     TAR(1)
+TAR(1)                  NetBSD General Commands Manual                  TAR(1)
 
 NNAAMMEE
      ttaarr - tape archiver
 
 SSYYNNOOPPSSIISS
-     ttaarr [-]{crtux}[--bbeeffhhjjkkllmmooppqqvvwwzzHHLLOOPPXXZZ001144557788] [_a_r_c_h_i_v_e] [_b_l_o_c_k_s_i_z_e] [--CC
-         _d_i_r_e_c_t_o_r_y] [--TT _f_i_l_e] [--ss _r_e_p_l_s_t_r] [_f_i_l_e _._._.]
+     ttaarr [-]{crtux}[--bbeeffhhjjkkllmmooppqqvvwwzzHHLLOOPPXXZZ001144557788] [_a_r_c_h_i_v_e] [_b_l_o_c_k_s_i_z_e]
+         [--CC _d_i_r_e_c_t_o_r_y] [--TT _f_i_l_e] [--ss _r_e_p_l_s_t_r] [_f_i_l_e _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
      The ttaarr command creates, adds files to, or extracts files from an archive
@@ -30,8 +30,8 @@ DDEESSCCRRIIPPTTIIOONN
      --xx, ----eexxttrraacctt, ----ggeett
                    Extract files from archive.  If any files are named on the
                    command line, only those files will be extracted from the
-                   archive.  If more than one copy of a file exists in the
-                   archive, later copies will overwrite earlier copies during
+                   archive.  If more than one copy of a file exists in the ar-
+                   chive, later copies will overwrite earlier copies during
                    extraction.  The file mode and modification time are pre-
                    served if possible.  The file mode is subject to modifica-
                    tion by the umask(2).
@@ -41,8 +41,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      --bb _b_l_o_c_k_i_n_g _f_a_c_t_o_r, ----bblloocckk--ssiizzee _b_l_o_c_k_i_n_g _f_a_c_t_o_r
                    Set blocking factor to use for the archive.  ttaarr uses 512
-                   byte blocks.  The default is 20, the maximum is 126.
-                   Archives with a blocking factor larger 63 violate the POSIX
+                   byte blocks.  The default is 20, the maximum is 126.  Ar-
+                   chives with a blocking factor larger 63 violate the POSIX
                    standard and will not be portable to all systems.
 
      --ee            Stop after first error.
@@ -70,7 +70,9 @@ DDEESSCCRRIIPPTTIIOONN
      --mm, ----mmooddiiffiiccaattiioonn--ttiimmee
                    Do not preserve modification time.
 
-     --OO            Write old-style (non-POSIX) archives.
+     --OO            When creating and appending to an archive, write old-style
+                   (non-POSIX) archives.  When extracting from an archive, ex-
+                   tract to standard output.
 
      --oo, ----ppoorrttaabbiilliittyy, ----oolldd--aarrcchhiivvee
                    Don't write directory information that the older (V7) style
@@ -96,7 +98,7 @@ DDEESSCCRRIIPPTTIIOONN
                    sions are:
                          /old/new/[gp]
                    As in ed(1), oolldd is a basic regular expression and nneeww can
-                   contain an ampersand (), \n (where n is a digit) back-ref-
+                   contain an ampersand (&), \n (where n is a digit) back-ref-
                    erences, or subexpression matching.  The oolldd string may al-
                    so contain <newline> characters.  Any non-null character
                    can be used as a delimiter (/ is shown here).  Multiple --ss
@@ -213,4 +215,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      Keith Muller at the University of California, San Diego.
 
-NetBSD 1.6                       April 4, 2003                               4
+NetBSD 1.6                       July 8, 2003                       NetBSD 1.6
