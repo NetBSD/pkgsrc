@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2003/01/17 16:41:38 mjl Exp $
+$NetBSD: distinfo,v 1.14 2003/04/20 19:47:20 mjl Exp $
 
-SHA1 (DBD-Pg-1.21.tar.gz) = d52b6005fc6e7de1c5f8274e3c80e5375e94c413
-Size (DBD-Pg-1.21.tar.gz) = 77446 bytes
+SHA1 (DBD-Pg-1.22.tar.gz) = 9050d14aacc3d66af9c8b51af835902f5d971d35
+Size (DBD-Pg-1.22.tar.gz) = 80896 bytes
 SHA1 (patch-aa) = c1e39f684ea515d09801a714ab4ba06c01b13f6f
-SHA1 (patch-ab) = 628bbc7bf3b4862b4c53ba4843dcc7161bff1ead
+SHA1 (patch-ab) = 08d771dc86d9cc9d1007383d2122003640f69fdb
