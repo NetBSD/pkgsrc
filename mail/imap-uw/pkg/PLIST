@@ -1,12 +1,29 @@
-@comment $NetBSD: PLIST,v 1.6 2000/05/19 03:58:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/09/19 13:13:30 hubertf Exp $
+include/c-client/env.h
+include/c-client/env_unix.h
+include/c-client/fs.h
+include/c-client/ftl.h
+include/c-client/imap4r1.h
+include/c-client/linkage.c
+include/c-client/linkage.h
+include/c-client/mail.h
+include/c-client/misc.h
+include/c-client/nl.h
+include/c-client/nntp.h
+include/c-client/osdep.h
+include/c-client/rfc822.h
+include/c-client/smtp.h
+include/c-client/tcp.h
+lib/libimapuw.a
+lib/libimapuw.la
 lib/libimapuw.so.4.0
 libexec/imapd
 libexec/ipop2d
 libexec/ipop3d
 man/man8/imapd.8
-man/man8/ipopd.8
 man/man8/ipop2d.8
 man/man8/ipop3d.8
+man/man8/ipopd.8
 sbin/mtest
 sbin/rimapd
 share/doc/imap-uw/FAQ
@@ -21,3 +38,4 @@ share/doc/imap-uw/locking.txt
 share/doc/imap-uw/md5.txt
 share/doc/imap-uw/naming.txt
 @dirrm share/doc/imap-uw
+@dirrm include/c-client

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2000/06/09 08:17:56 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/09/19 13:13:29 hubertf Exp $
 #
 
-DISTNAME=       imap-4.7c2
-PKGNAME=        imap-uw-4.7c2
+DISTNAME=       imap-2000.RELEASE-CANDIDATE.6
+PKGNAME=        imap-uw-4.7c6
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.washington.edu/imap/
 
 USE_LIBTOOL=	# defined
 
-WRKSRC=		${WRKDIR}/imap-4.7c
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
@@ -32,8 +31,6 @@ do-build:
 
 do-install:
 	${INST_LIB} ${WRKSRC}/c-client/libimapuw.la ${PREFIX}/lib
-	@${RM} -f ${PREFIX}/lib/libimapuw.a
-	@${RM} -f ${PREFIX}/lib/libimapuw.la
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
@@ -47,5 +44,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/RELNOTES ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DOC_DIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/include/c-client
+	for i in linkage.h mail.h rfc822.h misc.h imap4r1.h osdep.h smtp.h \
+		nntp.h env_unix.h fs.h ftl.h nl.h  tcp.h env.h linkage.c; \
+	do \
+		${INSTALL_DATA} ${WRKSRC}/c-client/$$i \
+			${PREFIX}/include/c-client ; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
