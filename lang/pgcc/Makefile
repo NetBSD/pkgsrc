@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/20 23:39:18 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/21 18:12:20 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -65,6 +65,7 @@ ALL_TARGET=		bootstrap
 GCC_PREFIX=		${LOCALBASE}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 MESSAGE=		${PKGDIR}/MESSAGE.SunOS
+CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 .endif
 
 post-extract:
