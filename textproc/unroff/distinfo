@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:12 skrll Exp $
 
-MD5 (unroff/unroff-1.0.tar.gz) = 918e9c065cb7486c4b885da7809f37e7
-MD5 (unroff/me-misc-patch) = e0cfe9a5012f573cf774115562f4462e
-MD5 (unroff/misc-patch-2) = ebedbf1a8dccfeb5ef3f996ba15374b2
+SHA1 (unroff/unroff-1.0.tar.gz) = bc8159ec7862de9f50666e79a538f46fdec4314c
+Size (unroff/unroff-1.0.tar.gz) = 83202 bytes
+SHA1 (unroff/me-misc-patch) = cd3c47c6b3fd45342b1f6cd56387c98f067dbeb9
+Size (unroff/me-misc-patch) = 39278 bytes
+SHA1 (unroff/misc-patch-2) = be14aea8569e30efdc25047f9c2497cb2c7ca96a
+Size (unroff/misc-patch-2) = 78714 bytes
 SHA1 (patch-aa) = ad1fc9788742fdc04b1994778734358415ee23ea
 SHA1 (patch-ab) = 319ede5443c5b3edb3d8ebed0a01f4b723a14494
