@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2002/08/25 21:49:40 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2002/10/16 00:21:21 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
-DISTNAME=       make-3.79.1
-PKGNAME=        gmake-3.79.1
-PKGREVISION=	1
+DISTNAME=       make-3.80
+PKGNAME=        gmake-3.80
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=make/}
 
@@ -18,6 +17,7 @@ CONFIGURE_ARGS+=	--program-prefix="g"
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEXINFO_OVERRIDE=	YES
+TEXINFO_REQD=		4.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,13 +28,21 @@ CONFIGURE_ARGS+=	--disable-nsec-timestamps
 BUILD_DEFS+=	GMAKE_NSEC_TIMESTAMPS
 
 post-extract:
-	${MV} ${WRKSRC}/make.texinfo ${WRKSRC}/make.texinfo.orig
+	${MV} ${WRKSRC}/doc/make.texi ${WRKSRC}/doc/make.texi.orig
 	${SED} '/@dircategory/s|.*|@dircategory Programming \& development tools|' \
-	    < ${WRKSRC}/make.texinfo.orig > ${WRKSRC}/make.texinfo
+	    < ${WRKSRC}/doc/make.texi.orig > ${WRKSRC}/doc/make.texi
 
 post-install:
 	${CHMOD} g-s ${PREFIX}/bin/gmake
 	${CHGRP} ${BINGRP} ${PREFIX}/bin/gmake
+
+# NOTE:  the 'test' target requires perl, but since gmake does
+# not otherwise require it, perl is not listed as an explicit
+# dependency
+test: build
+	cd ${WRKSRC} && \
+		${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
+		tee ${WRKDIR}/tests.log
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
