@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/14 20:05:50 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/15 06:49:33 jlam Exp $
 
 PKGNAME=	courier-maildir-${BASE_VERS}
 COMMENT=	Courier maildir utilities
@@ -13,6 +13,8 @@ PERL5_REQD+=		5.8.0
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 .include "../courier-auth/Makefile.common"
+
+FILES_SUBST+=		DATADIR=${DATADIR}
 
 # WRKSRC_FILES is copied from ../courier-auth/Makefile.authdaemond.
 WRKSRC_FILES=		config.guess config.sub configure		\
