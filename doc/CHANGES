@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8363 2004/12/18 17:18:19 jdolecek Exp $
+$NetBSD: CHANGES,v 1.8364 2004/12/18 17:45:27 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5947,3 +5947,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated apache to 2.0.52nb5 [adrianp 2004-12-18]
 	Updated pkgconfig to 0.15.0nb2 [grant 2004-12-18]
 	Update acroread5 to 5.10 [jdolecek 2004-12-18]
+	Updated libtool to 1.5.10nb8 [grant 2004-12-18]
