@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2002/04/14 11:34:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/25 17:37:48 wiz Exp $
 #
 
 .include "Makefile.common"
 
 COMMENT+=		, tty version
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 ALL_TARGET=		ce
 INSTALL_TARGET=		install man-install
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
