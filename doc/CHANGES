@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7712 2004/11/05 16:25:12 wiz Exp $
+$NetBSD: CHANGES,v 1.7713 2004/11/05 16:36:26 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5091,3 +5091,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pflkm-20041025 [peter 2004-11-05]
 	Added pfstat-1.7 [peter 2004-11-05]
 	Added pftop-0.4 [peter 2004-11-05]
+	Updated p5-Apache-Session to 1.60 [he 2004-11-05]
