@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/18 22:04:18 jmmv Exp $
+bin/novawm
+doc/novawm/AUTHORS
+doc/novawm/COPYING
+doc/novawm/ChangeLog
+doc/novawm/INSTALL
+doc/novawm/NEWS
+doc/novawm/README
+doc/novawm/TODO
+@dirrm doc/novawm
