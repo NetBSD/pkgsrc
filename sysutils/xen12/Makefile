@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/22 17:21:52 cl Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/22 18:12:40 cl Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -6,6 +6,8 @@ PKGNAME=		xen12-040418
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/misc/
 EXTRACT_SUFX=		.tgz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		xen12-addtl-ide-dma-040522.tar.gz
 
 MAINTAINER=		cl@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/Ports/xen/
@@ -22,6 +24,7 @@ USE_GNU_TOOLS+=		make
 
 post-extract:
 	@${CP} ${FILESDIR}/gcc333-stdarg.h ${WRKSRC}/include/stdarg.h
+	@${CP} ${WRKDIR}/xen12-addtl-ide-dma-040522/drivers/ide/* ${WRKSRC}/drivers/ide/
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/mdec
