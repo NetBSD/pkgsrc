@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2003/09/10 16:05:09 jlam Exp $
+# $NetBSD: Makefile,v 1.79 2003/09/10 16:23:27 jlam Exp $
 
 DISTNAME=		openssl-0.9.6g
 PKGREVISION=		2
@@ -20,11 +20,39 @@ CRYPTO=			YES
 # openssl supplies IDEA/RC5.  IDEA/RC5 need license for commercial use.
 LICENCE=		fee-based-commercial-use
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-CONFIGURE_SCRIPT=	config
-CONFIGURE_ARGS=		shared --openssldir=${PKG_SYSCONFDIR} --prefix=${PREFIX}
-CONFIGURE_ENV=		CC="${CC}" PERL="${PERL5}"
+HAS_CONFIGURE=		YES
+CONFIGURE_SCRIPT=	./config
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	shared
+
+.if defined(USE_RSAREF2) && ${USE_RSAREF2} == "YES"
+.  include "../../security/rsaref/buildlink2.mk"
+CONFIGURE_ARGS+=	rsaref
+PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
+.endif
+
+.if (${OPSYS} == "SunOS") && (${MACHINE_ARCH} == "sparc")
+CONFIGURE_SCRIPT=	./Configure
+.  if !empty(CC:M*gcc*)
+CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-gcc
+.  else
+CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-cc
+.  endif
+.elif ${OPSYS} == "IRIX"
+CONFIGURE_ARGS+=	no-asm
+.  if ${ABI} == "64"
+CONFIGURE_SCRIPT=	./Configure
+CONFIGURE_ARGS+=	irix64-mips4-cc
+.  endif
+.endif
+
+CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
+CONFIGURE_ENV+=		PERL="${PERL5}"
 
 PLIST_SRC=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
 PLIST_SRC+=		${PLIST_RSAREF}
@@ -35,58 +63,23 @@ CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
 OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 
-do-configure:
-	cd ${WRKSRC}							\
-		&& ${PERL5} util/perlpath.pl ${PERL5}			\
-		&& ${SETENV} ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT}	\
-			${CONFIGURE_ARGS}
-
-do-test:
-	@cd ${WRKSRC}/test 						\
-		&& ${SETENV} ${LD_PATH_VARNAME}=${WRKSRC}		\
-			${MAKE_PROGRAM} tests	\
-		&& ${ECHO} "*** Tests successful. ***"
-
-.include "../../mk/bsd.prefs.mk"
-
 .if ${OPSYS} == "NetBSD"
-PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCHFILES=		openssl-0.9.6g-20020810-netbsd.patch.gz
-
 PKG_SYSCONFDIR.${PKGBASE}?=	/etc/openssl
 
 .  if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
 PKG_FAIL_REASON=	${PKGNAME} requires shared object support
 .  endif
-.endif	# ${OPSYS} == "NetBSD"
+.endif
 
 .if ${OPSYS} == "Darwin"
 LD_PATH_VARNAME=	DYLD_LIBRARY_PATH
 .else
 LD_PATH_VARNAME=	LD_LIBRARY_PATH
 .endif
+TEST_ENV+=		${LD_PATH_VARNAME}=${WRKSRC}
+TEST_TARGET=		tests
 
-.if defined(USE_RSAREF2) && ${USE_RSAREF2} == "YES"
-.  include "../../security/rsaref/buildlink2.mk"
-CONFIGURE_ARGS+=	rsaref
-PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
-.endif
-
-.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
-CONFIGURE_SCRIPT=	Configure
-.  if !empty(CC:M*gcc*)
-CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-gcc
-.  else
-CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-cc
-.  endif
-.elif ${OPSYS} == "IRIX"
-CONFIGURE_ARGS+=	no-asm
-.  if ${ABI} == "64"
-CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS+=	irix64-mips4-cc
-.  endif
-.endif
-
-CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
+pre-configure:
+	cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${PERL5}
 
 .include  "../../mk/bsd.pkg.mk"
