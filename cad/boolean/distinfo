@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:06 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:26:56 agc Exp $
 
-MD5 (boolean-6.2/boolean.zip) = c0abed2c44a434bd62013193dcaa59a9
+SHA1 (boolean-6.2/boolean.zip) = 8b036bc2bc589b44429c7f8c1e185d9ad16f81ce
+Size (boolean-6.2/boolean.zip) = 3596513 bytes
 SHA1 (patch-aa) = db33cde650c0474e51b628264fae3d7adf511d1b
 SHA1 (patch-ab) = 47766ff336674283c01ff070add461459e3f7947
 SHA1 (patch-ac) = 0ff4a9dbe89560b8cb7db2d293e070ccb296011a

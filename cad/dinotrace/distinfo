@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:26:56 agc Exp $
 
-MD5 (dinotrace-9.1b.tar.gz) = fbb15da827d07f946ca5a1d40b14c235
+SHA1 (dinotrace-9.1b.tar.gz) = 9028042c35a2682cd09155d5c662af219ef73f73
+Size (dinotrace-9.1b.tar.gz) = 365778 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:26:58 agc Exp $
 
-MD5 (geda/gnetlist-20000220.tar.gz) = 335700b3a8fb22ab58f4cf9cd35ff0ec
+SHA1 (geda/gnetlist-20000220.tar.gz) = 5f1faa27f2f187a37aea03b4a1c23b29c6bdf9b6
+Size (geda/gnetlist-20000220.tar.gz) = 195151 bytes
