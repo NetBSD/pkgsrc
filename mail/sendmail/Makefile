@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/11/29 01:12:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.43 2002/06/17 13:07:01 wiz Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -53,7 +53,7 @@ DEPENDS+=	openldap-1.2.*:../../databases/openldap
 DEPENDS+=	db-2.7.7:../../databases/db
 .endif
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-USE_SSL=	yes
+.include "../../security/openssl/buildlink.mk"
 .endif
 
 post-patch:
