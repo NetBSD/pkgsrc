@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.prof,v 1.2 2004/12/24 17:16:04 jmmv Exp $
+@comment $NetBSD: PLIST.prof,v 1.3 2005/02/04 21:35:51 adrianp Exp $
 lib/ocaml/arg.p.cmx
 lib/ocaml/array.p.cmx
 lib/ocaml/arrayLabels.p.cmx
@@ -15,7 +15,6 @@ lib/ocaml/genlex.p.cmx
 lib/ocaml/hashtbl.p.cmx
 lib/ocaml/int32.p.cmx
 lib/ocaml/int64.p.cmx
-lib/ocaml/labelled.p.cmx
 lib/ocaml/lazy.p.cmx
 lib/ocaml/lexing.p.cmx
 lib/ocaml/list.p.cmx
@@ -37,12 +36,9 @@ lib/ocaml/set.p.cmx
 lib/ocaml/sort.p.cmx
 lib/ocaml/stack.p.cmx
 lib/ocaml/stdLabels.p.cmx
-lib/ocaml/std_exit.p.cmx
-lib/ocaml/std_exit.p.o
-lib/ocaml/stdlib.p.a
-lib/ocaml/stdlib.p.cmxa
 lib/ocaml/stream.p.cmx
 lib/ocaml/string.p.cmx
 lib/ocaml/stringLabels.p.cmx
 lib/ocaml/sys.p.cmx
 lib/ocaml/weak.p.cmx
+@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}

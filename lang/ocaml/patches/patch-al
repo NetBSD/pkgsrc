@@ -1,19 +1,15 @@
-$NetBSD: patch-al,v 1.3 2004/04/22 09:18:37 tron Exp $
+$NetBSD: patch-al,v 1.4 2005/02/04 21:35:51 adrianp Exp $
 
---- camlp4/camlp4/Makefile.orig	Mon Aug  5 15:50:25 2002
-+++ camlp4/camlp4/Makefile	Thu Apr 22 10:34:37 2004
-@@ -62,11 +62,19 @@
- 	done
- 
+--- camlp4/camlp4/Makefile.orig	2004-10-14 16:06:37.000000000 +0100
++++ camlp4/camlp4/Makefile	2004-10-14 16:10:46.000000000 +0100
+@@ -71,18 +71,26 @@
  install:
--	-$(MKDIR) $(BINDIR)
--	-$(MKDIR) $(LIBDIR)/camlp4
--	cp $(CAMLP4) $(BINDIR)/.
--	cp mLast.mli quotation.mli ast2pt.mli pcaml.mli spretty.mli $(LIBDIR)/camlp4/.
--	cp mLast.cmi quotation.cmi ast2pt.cmi pcaml.cmi spretty.cmi $(LIBDIR)/camlp4/.
+ 	-$(MKDIR) "$(BINDIR)"
+ 	-$(MKDIR) "$(LIBDIR)/camlp4"
+-	cp $(CAMLP4) "$(BINDIR)/."
+-	cp mLast.mli quotation.mli ast2pt.mli pcaml.mli spretty.mli "$(LIBDIR)/camlp4/."
+-	cp mLast.cmi quotation.cmi ast2pt.cmi pcaml.cmi spretty.cmi "$(LIBDIR)/camlp4/."
 -	cp camlp4.cma $(LIBDIR)/camlp4/.
-+	-${BSD_INSTALL_PROGRAM_DIR} $(BINDIR)
-+	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
 +	${BSD_INSTALL_SCRIPT} $(CAMLP4) $(BINDIR)/.
 +	${BSD_INSTALL_DATA} mLast.mli $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} quotation.mli $(LIBDIR)/camlp4/
@@ -26,5 +22,16 @@ $NetBSD: patch-al,v 1.3 2004/04/22 09:18:37 tron Exp $
 +	${BSD_INSTALL_DATA} pcaml.cmi $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} spretty.cmi $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} camlp4.cma $(LIBDIR)/camlp4/
+ 	for f in  camlp4.$(A)  camlp4.p.$(A) ; do \
+ 	  if test -f $$f ; then \
+-	     cp $$f "$(LIBDIR)/camlp4/." && ( cd  "$(LIBDIR)/camlp4/." && $(RANLIB) $$f ) ; \
++	     ${BSD_INSTALL_DATA} $$f "$(LIBDIR)/camlp4/." && ( cd  "$(LIBDIR)/camlp4/." && $(RANLIB) $$f ) ; \
+ 	  fi ; \
+ 	done
+ 	for f in camlp4.cmxa camlp4.p.cmxa ; do \
+ 	  if test -f $$f ; then \
+-	     cp $$f "$(LIBDIR)/camlp4/." ; \
++	     ${BSD_INSTALL_DATA} $$f "$(LIBDIR)/camlp4/." ; \
+ 	  fi ; \
+ 	done
  
- include .depend
