@@ -1,0 +1,3 @@
+Gnugo-beta is a free Go program which runs under Unix. It is descended
+from Gnugo 1.2 but is quite a bit stronger. It runs under Cgoban
+on the X Window System using the Go Modem Protocol.
