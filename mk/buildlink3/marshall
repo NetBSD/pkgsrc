@@ -1,0 +1,13 @@
+# $NetBSD: marshall,v 1.1.2.1 2003/08/28 19:12:56 jlam Exp $
+#
+# Merge "-Wl,--rpath -Wl,/path/to/dir" into a single argument
+# "-Wl,--rpath,/path/to/dir" so that we can look it up in the cache.
+#
+case $arg in
+-Wl,-rpath|-Wl,-rpath-link|\
+-Wl,--rpath|-Wl,--rpath-link)
+	nextarg=`$echo "X$1" | $Xsed -e "s|^-Wl,||g"`
+	arg="$arg,$nextarg"
+	shift
+	;;
+esac
