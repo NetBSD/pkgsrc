@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/13 16:09:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/11/27 08:47:41 uebayasi Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	1
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.m17n.org/mule/MulePage.en.html
 COMMENT=	Multilingual GNU editing macros (editor)
 
 CONFLICTS=	emacs-[0-9]*
+
+BROKEN=		Compilation has some problems
 
 .include "../../mk/bsd.prefs.mk"
 
