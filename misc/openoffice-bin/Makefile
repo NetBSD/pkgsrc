@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/16 18:33:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/02 15:46:39 mrauch Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 CATEGORIES=		misc
@@ -34,6 +34,9 @@ CHECK_SHLIBS=		no
 .include "../../mk/bsd.prefs.mk"
 
 do-build:
+# group together i386, i486, i586 and i686 (for Linux)
+#
+ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if ${OPSYS} == "NetBSD"
 USE_PKGINSTALL=         yes
@@ -48,6 +51,12 @@ WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Sparc_install
 DISTNAME=	OOo_${OO_VER}_LinuxIntel_install
 .  endif
 
+.endif
+
+.if ${OPSYS} == "Linux"
+.if ${ARCH} == "i386"
+DISTNAME=	OOo_${OO_VER}_LinuxIntel_install
+.endif
 .endif
 
 .if ${OPSYS} == "SunOS"
@@ -86,9 +95,6 @@ do-install:
 .endfor
 
 # everything specific to your OS/Arch goes into its own Makefile
-# group together i386, i486, i586 and i686 (for Linux)
-#
-ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if exists(Makefile.${OPSYS}.${ARCH})
 .  include "Makefile.${OPSYS}.${ARCH}"
