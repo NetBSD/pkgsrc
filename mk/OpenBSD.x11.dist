@@ -1,6 +1,6 @@
-#     $NetBSD: OpenBSD.x11.dist,v 1.1 2002/11/30 15:18:35 cjep Exp $
-#     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
-#
+#     $NetBSD: OpenBSD.x11.dist,v 1.2 2002/11/30 15:19:40 cjep Exp $
+#  	OpenBSD: BSD.x11.dist,v 1.4 2002/06/09 06:15:15 todd Exp 
+#	FreeBSD: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 
 /set type=dir uname=root gname=wheel mode=0755
 .
