@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/26 07:08:59 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/27 19:55:48 agc Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -9,7 +9,7 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www1.las.es/~amil/ssystem/
 COMMENT=	Solar System Flyby Simulator
 
-BUILD_DEPENDS+=	bison:../../devel/bison
+BUILD_DEPENDS+=	bison-*:../../devel/bison
 
 USE_MESA=	yes
 USE_X11BASE=	yes
