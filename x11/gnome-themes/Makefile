@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/11 07:11:28 xtraeme Exp $
 #
 
 DISTNAME=		gnome-themes-2.4.1
@@ -14,7 +14,7 @@ COMMENT=		Collection of themes and icons for GNOME 2
 DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -23,10 +23,10 @@ GNU_CONFIGURE=		yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../wm/metacity/buildlink2.mk"
-.include "../../x11/gtk2-engines/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../wm/metacity/buildlink3.mk"
+.include "../../x11/gtk2-engines/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
