@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7265 2004/09/27 01:08:54 rh Exp $
+$NetBSD: CHANGES,v 1.7266 2004/09/27 01:11:13 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4456,3 +4456,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated createbuildlink to 3.6 [rh 2004-09-27]
 	Updated createbuildlink to 3.7 [rh 2004-09-27]
 	Updated gnustep-gui to 0.9.4 [rh 2004-09-27]
+	Updated gnustep-back to 0.9.4 [rh 2004-09-27]
