@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.7 2003/01/08 01:52:43 jlam Exp $
+# $NetBSD: Makefile.php,v 1.8 2003/08/31 19:56:05 jdolecek Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -8,12 +8,12 @@ PATCHDIR=		${.CURDIR}/../../www/php4/patches
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
+CONFIGURE_ARGS+=	--disable-cli
+
 CONFIGURE_ARGS+=	--without-mysql
-CONFIGURE_ARGS+=	--without-pcre-regex
+CONFIGURE_ARGS+=	--without-iconv
 
 CONFIGURE_ARGS+=	--disable-posix
-CONFIGURE_ARGS+=	--disable-session
-CONFIGURE_ARGS+=	--disable-xml
 
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-exec-dir=${PREFIX}/libexec/php4

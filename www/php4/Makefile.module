@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.22 2003/02/03 23:53:24 jlam Exp $
+# $NetBSD: Makefile.module,v 1.23 2003/08/31 19:56:05 jdolecek Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -23,6 +23,7 @@ PLIST_SUBST+=		MODNAME=${PKGMODNAME}
 
 EXTRACT_ELEMENTS?=	${DISTNAME}/ext/${PKGMODNAME}
 WRKSRC?=		${WRKDIR}/${EXTRACT_ELEMENTS}
+DISTINFO_FILE?=		${PKGDIR}/../../www/php4/distinfo
 
 PHPIZE?=		${BUILDLINK_PREFIX.php4}/bin/phpize
 PHP_CONFIG?=		${BUILDLINK_PREFIX.php4}/bin/php-config
