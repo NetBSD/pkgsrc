@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/09/05 23:14:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 1998/09/17 18:18:54 cjs Exp $
 #
 
 DISTNAME=       apache_1.3.1
@@ -9,7 +9,7 @@ MASTER_SITES=   http://www.apache.org/dist/ \
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		sitedrivenby.gif
 
-MAINTAINE=	cjs@netbsd.org
+MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.apache.org/
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
