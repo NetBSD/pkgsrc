@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/05/13 01:16:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/22 09:32:27 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME}-source
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.easysw.com/~mike/htmldoc/
 COMMENT=		Converts HTML to indexed HTML, PDF and/or PostScript
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>1.0.9:../../graphics/png
+DEPENDS+=		png>=1.0.11:../../graphics/png
 
 NOT_FOR_PLATFORM=	NetBSD-1.[3-4]*-alpha	#ps-pdf.cpp:3229: Internal compiler error. on 1.4 - 1.7 unknown
 

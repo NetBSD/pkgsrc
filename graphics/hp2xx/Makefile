@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/04/23 19:25:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/22 09:32:20 wiz Exp $
 #
 
 DISTNAME=	hp2xx-3.4.0
@@ -9,7 +9,7 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/hp2xx/hp2xx.html
 COMMENT=	HPGL converter and previewer
 
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_X11=	yes

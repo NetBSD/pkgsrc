@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/05/15 17:43:20 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2001/05/22 09:32:24 wiz Exp $
 
 DISTNAME=		cups-${VERS}-source
 PKGNAME=		cups-${VERS}
@@ -20,7 +20,7 @@ COMMENT=		Common UNIX Printing System
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>1.0.9:../../graphics/png
+DEPENDS+=		png>=1.0.11:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
 USE_GMAKE=		# defined

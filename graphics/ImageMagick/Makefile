@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2001/05/14 16:34:38 drochner Exp $
+# $NetBSD: Makefile,v 1.68 2001/05/22 09:32:19 wiz Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -11,7 +11,7 @@ COMMENT=		Package for display and interactive manipulation of images
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
-DEPENDS+=		png>1.0.9:../../graphics/png
+DEPENDS+=		png>=1.0.11:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
 CONFLICTS=		geomview-*    # both have a program named 'animate'

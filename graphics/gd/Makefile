@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/03/04 09:32:43 tron Exp $
+# $NetBSD: Makefile,v 1.27 2001/05/22 09:32:20 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.boutell.com/gd/
 COMMENT=	graphics library for fast PNG creation
 
 DEPENDS+=	freetype-lib>=1.3.1:../../graphics/freetype-lib
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 DEPENDS+=	jpeg-*:../../graphics/jpeg
 
 USE_X11=	YES

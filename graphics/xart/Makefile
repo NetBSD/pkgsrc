@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/05/19 03:56:36 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/05/22 09:32:22 wiz Exp $
 #
 
 DISTNAME=       xart19980415
@@ -13,7 +13,7 @@ COMMENT=	Paint program (enhanced xpaint)
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	tiff-*:../../graphics/tiff
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 
 USE_IMAKE=      YES
 USE_XPM=	YES

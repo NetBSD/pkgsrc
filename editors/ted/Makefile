@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/05/19 17:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/22 09:32:18 wiz Exp $
 
 DISTNAME=	ted-2.10.src
 PKGNAME=	ted-2.10
@@ -11,9 +11,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
 
-DEPENDS+=       jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>1.0.9:../../graphics/png
-DEPENDS+=       tiff-*:../../graphics/tiff
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_MOTIF=	YES
 USE_X11=	YES
