@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:57 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/04/15 00:49:29 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gtkmm.
 #
@@ -37,11 +37,6 @@ BUILDLINK_FILES.gtkmm+=	lib/libglibmm-2.0.*
 BUILDLINK_FILES.gtkmm+=	lib/libgtkmm-2.0.*
 BUILDLINK_FILES.gtkmm+=	lib/libgtkmm_generate_extra_defs-2.0.*
 BUILDLINK_FILES.gtkmm+=	lib/libpangomm-1.0.*
-BUILDLINK_FILES.gtkmm+=	lib/pkgconfig/atkmm-1.0.pc
-BUILDLINK_FILES.gtkmm+=	lib/pkgconfig/gdkmm-2.0.pc
-BUILDLINK_FILES.gtkmm+=	lib/pkgconfig/glibmm-2.0.pc
-BUILDLINK_FILES.gtkmm+=	lib/pkgconfig/gtkmm-2.0.pc
-BUILDLINK_FILES.gtkmm+=	lib/pkgconfig/pangomm-1.0.pc
 
 .include "../../devel/libsigc++/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
