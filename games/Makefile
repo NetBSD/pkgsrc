@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1998/08/28 12:54:12 garbled Exp $
+# $NetBSD: Makefile,v 1.36 1998/08/29 12:59:34 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -39,10 +39,7 @@
     SUBDIR += lincity
     SUBDIR += maelstrom
     SUBDIR += mirrormagic
-    SUBDIR += nethack-lib
-    SUBDIR += nethack-tty
-    SUBDIR += nethack-qt
-    SUBDIR += nethack-x11
+    SUBDIR += nethack
 #    SUBDIR += netris
 #    SUBDIR += oneko
 #    SUBDIR += oonsoo
