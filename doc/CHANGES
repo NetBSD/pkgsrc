@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1666 2003/03/17 01:32:52 seb Exp $
+$NetBSD: CHANGES,v 1.1667 2003/03/17 08:52:05 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1168,3 +1168,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-HTML-Tree to 3.17 [kleink 2003-03-16]
 	Updated p5-libwww to 5.69nb1 [seb 2003-03-17]
 	Updated p5-Net to 1.13 [seb 2003-03-17]
+	Added vcheck-1.2.1 [seb 2003-03-17]
