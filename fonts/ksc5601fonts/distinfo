@@ -1,9 +1,16 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:14:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:24:36 agc Exp $
 
-MD5 (kaist-newmj18.bdf.gz) = 5f578dea996966b5bf77515c7d85cafb
-MD5 (ks_philgi16.bdf.gz) = f1bf468802d81e282165b83bfdf2adae
-MD5 (kaist-newmj16.bdf.gz) = 92776dce97df2a9fe1e083e094d3d9fa
-MD5 (ks_iyagi16.bdf.gz) = ee6ba370e17c8de90248c92b6a99a2b2
-MD5 (baekmuk-2.0.tar.gz) = d40c31eec54172bdc80d42827066d9db
-MD5 (xfntmizi-1.1-2.noarch.rpm) = b60cc28556b778bca2c0ac35e26fe728
-MD5 (hanyang-font-pcf.tar.gz) = d0415fd961a001a4cd096d91bf66636a
+SHA1 (kaist-newmj18.bdf.gz) = c311121c589283104f274b3bda66d7c5158280bd
+Size (kaist-newmj18.bdf.gz) = 283595 bytes
+SHA1 (ks_philgi16.bdf.gz) = 97840d0f545515ca5dac9b319b50499232969f8f
+Size (ks_philgi16.bdf.gz) = 221687 bytes
+SHA1 (kaist-newmj16.bdf.gz) = 2167aed3dbb16c84c2171e5833efc9a8f9c30cb4
+Size (kaist-newmj16.bdf.gz) = 221221 bytes
+SHA1 (ks_iyagi16.bdf.gz) = 9a956e334fb10c1062a39a6df1ecca777ccb68b8
+Size (ks_iyagi16.bdf.gz) = 217151 bytes
+SHA1 (baekmuk-2.0.tar.gz) = 1c8e74ba54651721491614849be8714974693a73
+Size (baekmuk-2.0.tar.gz) = 9834480 bytes
+SHA1 (xfntmizi-1.1-2.noarch.rpm) = 920a9485b5c5b1b22b0da9d2b4430388219f6bf2
+Size (xfntmizi-1.1-2.noarch.rpm) = 1484554 bytes
+SHA1 (hanyang-font-pcf.tar.gz) = 87cc3a2d7d2229b4c426a6457c5242bd180b6659
+Size (hanyang-font-pcf.tar.gz) = 2876501 bytes

@@ -1,15 +1,23 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:14:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:24:36 agc Exp $
 
-MD5 (intlfonts-1.2/Asian.tar.gz) = 23c1f72c82ef05ae9e131e56cc5c3fca
-MD5 (intlfonts-1.2/Chinese.tar.gz) = 8d04f7b36f4388a28497554f0f8c3972
-MD5 (intlfonts-1.2/Ethiopic.tar.gz) = 6661796b6c25116907408cf44168af10
-MD5 (intlfonts-1.2/European.tar.gz) = 6c25c4cfb7a148a61652aa323c295792
-MD5 (intlfonts-1.2/Japanese.tar.gz) = e03e7d04b1513c2daecfacde38302618
-MD5 (intlfonts-1.2/Misc.tar.gz) = cfd47b4712a599521b514d6e2292685b
-MD5 (intlfonts-1.2/Type1.tar.gz) = 31fa03ece8daed5ea4ce0b1dd6ee48a2
-MD5 (intlfonts-1.2/TrueType.tar.gz) = e9bcff050e340b80b14f812efbb39629
-MD5 (intlfonts-1.2/Chinese.BIG.tar.gz) = a3e3f39d6b4a33963b72f0f7ef7e29eb
-MD5 (intlfonts-1.2/European.BIG.tar.gz) = 34b430d5ecf051f3f0067b43d28f7b01
-MD5 (intlfonts-1.2/Japanese.BIG.tar.gz) = 9cfc02c7ab8d344bc893e61ad872eba1
-MD5 (intlfonts-1.2/README.split) = c916f6e3cf7a5bdd1c12f736bcf072d2
+SHA1 (intlfonts-1.2/Asian.tar.gz) = ec88765ef35d23657b0f523f2b08769ab1f2a2a5
+Size (intlfonts-1.2/Asian.tar.gz) = 193161 bytes
+SHA1 (intlfonts-1.2/Chinese.tar.gz) = 241e8ff99a1495b000d7908a1795aa2a8ac402fe
+Size (intlfonts-1.2/Chinese.tar.gz) = 7018641 bytes
+SHA1 (intlfonts-1.2/Ethiopic.tar.gz) = 9c6432197b5ba7dffa841d7747ab45134dd2b13c
+Size (intlfonts-1.2/Ethiopic.tar.gz) = 38447 bytes
+SHA1 (intlfonts-1.2/European.tar.gz) = c31ef2206838542ce4e3e0c8ecee62782c6e2bf4
+Size (intlfonts-1.2/European.tar.gz) = 134380 bytes
+SHA1 (intlfonts-1.2/Japanese.tar.gz) = bd4fcf381b5bdbc7f60a24907b52823c10864c14
+Size (intlfonts-1.2/Japanese.tar.gz) = 1893127 bytes
+SHA1 (intlfonts-1.2/Misc.tar.gz) = 450c59051e1c93a2fe2c91404804f3e4c0373dd8
+Size (intlfonts-1.2/Misc.tar.gz) = 78931 bytes
+SHA1 (intlfonts-1.2/Chinese.BIG.tar.gz) = 5b72a717caeae19ea7879a57ee11454b59803772
+Size (intlfonts-1.2/Chinese.BIG.tar.gz) = 8349588 bytes
+SHA1 (intlfonts-1.2/European.BIG.tar.gz) = 84631adfa5e430e62264fd4be14bf15c363b3b2d
+Size (intlfonts-1.2/European.BIG.tar.gz) = 25512 bytes
+SHA1 (intlfonts-1.2/Japanese.BIG.tar.gz) = 544257243e60396fc661934a9cd4b1509f9e7908
+Size (intlfonts-1.2/Japanese.BIG.tar.gz) = 2356953 bytes
+SHA1 (intlfonts-1.2/README.split) = 97f8fa7ce13ad302bf3d94d9fa9f4dedc41343da
+Size (intlfonts-1.2/README.split) = 2058 bytes
 SHA1 (patch-aa) = a0a788fd5f6c775565b2a2ed0e75b9512eddebc3
