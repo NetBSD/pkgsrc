@@ -1,35 +1,13 @@
-*** tgetpass.c.dist	Wed Feb 19 00:09:13 1997
---- tgetpass.c	Wed Feb 19 00:09:21 1997
-***************
-*** 206,223 ****
-  	tv.tv_sec = timeout;
-  	tv.tv_usec = 0;
-  
-- 	/* how many file descriptors may we have? */
-- #ifdef HAVE_SYSCONF
-- 	n = sysconf(_SC_OPEN_MAX);
-- #else
-- 	n = getdtablesize();
-- #endif /* HAVE_SYSCONF */
-- 
-  	/*
-  	 * get password or return empty string if nothing to read by timeout
-  	 */
-  	buf[0] = '\0';
-! 	if (select(n, &readfds, 0, 0, &tv) > 0 && fgets(buf, sizeof(buf), input)) {
-  	    n = strlen(buf);
-  	    if (buf[n - 1] == '\n')
-  		buf[n - 1] = '\0';
---- 206,216 ----
-  	tv.tv_sec = timeout;
-  	tv.tv_usec = 0;
-  
-  	/*
-  	 * get password or return empty string if nothing to read by timeout
-  	 */
-  	buf[0] = '\0';
-! 	if (select(fileno(input)+1, &readfds, 0, 0, &tv) > 0 && fgets(buf, sizeof(buf), input)) {
-  	    n = strlen(buf);
-  	    if (buf[n - 1] == '\n')
-  		buf[n - 1] = '\0';
-
+--- visudo.man.orig	Tue Jan 13 05:55:43 1998
++++ visudo.man	Wed Jul  1 20:11:52 1998
+@@ -223,8 +223,8 @@
+ .SH "FILES"
+ .PP
+ .Vb 2
+-\& /etc/sudoers           file of authorized users.
+-\& /etc/stmp              lock file for visudo.
++\& /usr/pkg/etc/sudoers     file of authorized users.
++\& /usr/pkg/etc/stmp        lock file for visudo.
+ .Ve
+ .SH "ENVIRONMENT VARIABLES"
+ The following are used only if \fBvisudo\fR was compiled with the
