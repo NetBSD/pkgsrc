@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2001/04/30 03:31:26 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/14 14:12:31 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
 MODNAME=		imap
 CATEGORIES+=		mail
-PHP_PKG_VERS=		nb2
+PHP_PKG_VERS=		# empty
 
 COMMENT=		PHP4 extension for IMAP (Internet Mailbox Access Protocol)
 

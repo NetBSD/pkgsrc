@@ -1,9 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2001/04/30 03:25:16 jlam Exp $
-
-Before using PHP, you must first create the configuration file:
-
-	${PHP_CONFDIR}/php.ini
+$NetBSD: MESSAGE,v 1.5 2001/05/14 14:12:31 jlam Exp $
 
 Example configuration files suitable as a basis for a custom php.ini may
 be found at:
