@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.2 2004/10/22 00:24:48 hubertf Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.3 2004/12/23 18:57:03 ben Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -311,7 +311,7 @@
 
       <para>The bootstrapping process should set all the right options for programs such
 	as imake(1), but you may want to set some options depending on your local
-	setup.  Please see <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename> and, of
+	setup.  Please see <filename>pkgsrc/mk/defaults/mk.conf</filename> and, of
 	course, your compilers man pages for details.</para>
     </sect2>
 
@@ -361,7 +361,7 @@
 	    of the file with:</para>
 
 	  <programlisting>.ifdef BSD_PKG_MK
-# pkgsrc stuff, e.g. insert bsd.pkg.defaults.mk or similar here
+# pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
 .else
 # OpenBSD stuff
 .endif</programlisting>
