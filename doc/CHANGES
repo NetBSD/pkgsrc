@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1744 2003/03/22 16:09:42 grant Exp $
+$NetBSD: CHANGES,v 1.1745 2003/03/22 17:35:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added airportmodemutility-2.0 [tron 2003-03-22]
 	Updated osf1_lib to 1.1 [wiz 2003-03-22]
 	Removed zoularis [grant 2003-03-22]
+	Added latex-ttf-fonts-0.1 [jmmv 2003-03-22]
