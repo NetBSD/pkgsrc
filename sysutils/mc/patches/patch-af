@@ -1,14 +1,15 @@
-$NetBSD: patch-af,v 1.8 1999/08/17 18:26:02 rh Exp $
+$NetBSD: patch-af,v 1.9 1999/09/03 19:44:36 tron Exp $
 
---- Makefile.in.orig	Tue Jul 13 05:57:18 1999
-+++ Makefile.in	Tue Aug 17 19:03:25 1999
+--- Makefile.in.orig	Thu Sep  2 18:49:35 1999
++++ Makefile.in	Fri Sep  3 18:48:19 1999
 @@ -5,7 +5,7 @@
  @MCFGR@@MCF@
  
  foreigndirs=pc
--codedirs=vfs lib doc doc-gnome doc-gnome/C doc-gnome/C/figs slang gtkedit edit src gnome new_icons icons idl syntax
-+codedirs=vfs lib doc slang gtkedit edit src gnome new_icons icons syntax
- unixdirs=intl $(codedirs) @POSUB@
+-codedirs=vfs lib doc slang gtkedit edit src gnome new_icons icons idl syntax
+-unixdirs=intl $(codedirs) doc-gnome @POSUB@
++codedirs=vfs lib doc slang edit src new_icons icons syntax
++unixdirs=intl $(codedirs) @POSUB@
  alldirs=$(unixdirs) $(foreigndirs) 
  subdirs=$(alldirs)
 @@ -45,7 +45,7 @@
