@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/12/28 20:24:47 tron Exp $
+# $NetBSD: Makefile,v 1.24 1998/12/28 20:49:55 tron Exp $
 
 DISTNAME=	gtk+-1.1.9
 CATEGORIES=	x11
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.gtk.org/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
 DEPENDS+=	glib-1.1.9:../../devel/glib
+BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 CONFLICTS=	gtk+-*
 
