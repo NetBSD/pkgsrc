@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+$NetBSD: patch-ae,v 1.2 2001/04/08 10:55:22 itojun Exp $
 
---- docs/conf/httpd-std.conf.orig	Fri Feb 23 03:54:49 2001
-+++ docs/conf/httpd-std.conf	Fri Mar 30 23:10:10 2001
+--- docs/conf/httpd-std.conf.orig	Mon Mar 26 01:54:48 2001
++++ docs/conf/httpd-std.conf	Sun Apr  8 12:05:13 2001
 @@ -58,13 +58,13 @@
  # DISK. The PID of the main server process is automatically appended to
  # the filename. 
@@ -89,7 +89,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
  
  #
  # Optionally add a line containing the server version and virtual host
-@@ -936,6 +939,6 @@
+@@ -944,6 +947,6 @@
  #    ServerAdmin webmaster@dummy-host.example.com
  #    DocumentRoot /www/docs/dummy-host.example.com
  #    ServerName dummy-host.example.com
