@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/09/07 00:34:04 jwise Exp $
+--- other/sample.xfce3rc.in.orig	Mon Sep  6 19:22:55 1999
++++ other/sample.xfce3rc.in	Mon Sep  6 19:24:24 1999
+@@ -63,7 +63,7 @@
+ 	xcalc
+ 	xterm
+ 	xfmouse -i
+-	netscape
++	communicator
+ 	xfprint
+ 	xfhelp
+ 	xftrash
+@@ -121,10 +121,10 @@
+ [Menu5]
+ 	Netscape Browser
+ 	XFCE_DIR/icons/Netscape3.xpm
+-	netscape
++	communicator
+ 	Netscape Mail
+ 	XFCE_DIR/icons/News.xpm
+-	netscape -mail
++	communicator -mail
+ [Menu6]
+ 	Printer
+ 	XFCE_DIR/icons/Printer.xpm
