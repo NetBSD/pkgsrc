@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/16 23:20:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/01 18:51:26 jmmv Exp $
 bin/gconf-editor
+man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gconf-editor.mo
@@ -13,6 +14,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gconf-editor.mo
@@ -22,6 +24,7 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gconf-editor.mo
@@ -34,9 +37,11 @@ ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gconf-editor.mo
@@ -49,6 +54,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gconf-editor.mo
@@ -65,4 +71,5 @@ share/pixmaps/gconf-editor/folder-closed.png
 share/pixmaps/gconf-editor/folder-open.png
 share/pixmaps/gconf-editor/stock-about-16.png
 @dirrm share/pixmaps/gconf-editor
+@comment in xdg-dirs: share/pixmaps
 @comment in xdg-dirs: share/applications
