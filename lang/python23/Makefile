@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2005/02/04 15:39:04 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2005/02/15 12:25:07 drochner Exp $
 #
 
-PKGNAME=	python23-2.3.4
-PKGREVISION=	7
+PKGNAME=	python23-2.3.5
 
 CONFLICTS+=	python-[0-9]*
 

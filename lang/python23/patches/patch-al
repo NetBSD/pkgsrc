@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
+$NetBSD: patch-al,v 1.11 2005/02/15 12:25:07 drochner Exp $
 
---- configure.orig	2004-05-07 15:13:40.000000000 -0400
+--- configure.orig	2005-01-11 14:48:52.000000000 +0100
 +++ configure
-@@ -1440,6 +1440,8 @@ case $ac_sys_system/$ac_sys_release in
+@@ -1481,6 +1481,8 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    OpenBSD/2.* | OpenBSD/3.[01234])
      define_xopen_source=no;;
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
    # On Solaris 2.6, sys/wait.h is inconsistent in the usage
    # of union __?sigval. Reported by Stuart Bishop.
    SunOS/5.6)
-@@ -3603,7 +3605,7 @@ _ACEOF
+@@ -3733,7 +3735,7 @@ _ACEOF
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -20,7 +20,7 @@ $NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
-@@ -3624,6 +3626,14 @@ _ACEOF
+@@ -3754,6 +3756,14 @@ _ACEOF
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=DLL_PATH=`pwd`:${DLL_PATH:-/atheos/sys/libs:/atheos/autolnk/lib}
  	  ;;
@@ -35,7 +35,7 @@ $NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
    esac
    # DG/UX requires some fancy ld contortions to produce a .so from an .a
    case $MACHDEP in
-@@ -4021,7 +4031,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
+@@ -4152,7 +4162,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
  	    ;;
  	# is there any other compiler on Darwin besides gcc?
  	Darwin*)
@@ -49,30 +49,32 @@ $NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
  	    ;;
      esac
      ;;
-@@ -10082,7 +10097,7 @@ then
- 			LDSHARED="$LDSHARED "'-framework $(PYTHONFRAMEWORK)'
+@@ -10979,7 +10994,7 @@ then
+ 			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework. Ignore undefined symbols, assuming they come from Python
 -			LDSHARED="$LDSHARED -undefined suppress"
 +			LDSHARED="$LDSHARED -flat_namespace -undefined suppress"
  		fi ;;
- 	Darwin/*)
+ 	Darwin/1.4*|Darwin/5.*|Darwin/6.*)
  		LDSHARED='$(CC) $(LDFLAGS) -bundle'
-@@ -10091,10 +10106,10 @@ then
- 			LDSHARED="$LDSHARED "'-framework $(PYTHONFRAMEWORK)'
- 		else
- 			# No framework, use the Python app as bundle-loader
--			BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
--			LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
-+			BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
-+			LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
- 		fi ;;
+@@ -11009,12 +11024,12 @@ then
+ 				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
+ 			else
+ 				# No framework, use the Python app as bundle-loader
+-				BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
+-				LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++				BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
++				LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+ 			fi
+ 		fi
+ 		;;
 -	Linux*|GNU*) LDSHARED='$(CC) -shared';;
 +	Linux*|GNU*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
  	dgux*) LDSHARED="ld -G";;
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
-@@ -10104,7 +10119,8 @@ then
+@@ -11024,7 +11039,8 @@ then
  		else
  			LDSHARED="ld -Bshareable ${LDFLAGS}"
  		fi;;
@@ -82,7 +84,7 @@ $NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -10137,6 +10153,7 @@ then
+@@ -11057,6 +11073,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
  	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
@@ -90,7 +92,7 @@ $NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -10196,6 +10213,7 @@ then
+@@ -11116,6 +11133,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
@@ -98,7 +100,7 @@ $NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -13855,6 +13873,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -15127,6 +15145,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  #include "confdefs.h"
