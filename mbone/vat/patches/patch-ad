@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:03 agc Exp $
+$NetBSD: patch-ad,v 1.3 2002/08/16 16:25:14 agc Exp $
 
 --- sitebox.cc.orig	Tue Sep  9 11:24:41 1997
 +++ sitebox.cc	Tue Sep  9 11:24:43 1997
@@ -70,3 +70,14 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 11:10:03 agc Exp $
  		fg_[0] = raw_gc(fid, fc_, bc_, pixmap_);
  		fg_[2] = raw_gc(fid, dc_, bc_, pixmap_);
  		bg_[0] = raw_gc(fid, bc_, bc_, pixmap_);
+@@ -636,8 +638,8 @@
+ 	need_sort_ = 0;
+ 
+ 	Tcl& tcl = Tcl::instance();
+-	Tk_Uid fg = mono()? "black" : (char*)tcl.attr("foreground");
+-	Tk_Uid bg = mono()? "white" : (char*)tcl.attr("background");
++	Tk_Uid fg = mono()? strdup("black") : (char*)tcl.attr("foreground");
++	Tk_Uid bg = mono()? strdup("white") : (char*)tcl.attr("background");
+ 	fg_ = lookup_gc(0, fg, bg);
+ 	bg_ = lookup_gc(0, bg, bg);
+ }
