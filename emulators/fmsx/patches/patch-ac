@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/07/28 15:54:29 martin Exp $
+$NetBSD: patch-ac,v 1.2 2000/08/06 14:45:05 wiz Exp $
 
---- Z80.h.orig	Sat Jun  3 01:23:31 2000
-+++ Z80.h	Sat Jun  3 01:29:01 2000
-@@ -40,6 +40,15 @@
- typedef unsigned short word;
+--- Z80.h.orig	Thu Aug  3 18:56:00 2000
++++ Z80.h	Sun Aug  6 15:25:54 2000
+@@ -46,6 +46,15 @@
+ #endif
  typedef signed char offset;
  
 +#include <sys/endian.h>
