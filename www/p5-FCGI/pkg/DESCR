@@ -1,0 +1,7 @@
+This is a Fast CGI module for perl. It's based on the FCGI module
+that comes with Open Market's FastCGI Developer's Kit, but does
+not require you to recompile perl.
+
+See http://www.fastcgi.com/ for more information about fastcgi.
+Lincoln D. Stein's perl CGI module also contains some information
+about fastcgi programming.
