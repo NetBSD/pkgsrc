@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/01/26 13:04:47 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2004/03/28 21:11:35 mycroft Exp $
 
---- src/xitk/panel.c.orig	Thu Mar 13 06:28:54 2003
-+++ src/xitk/panel.c
-@@ -1320,14 +1320,14 @@ void panel_init (void) {
+--- src/xitk/panel.c.orig	2003-11-18 16:48:22.000000000 +0000
++++ src/xitk/panel.c	2004-03-28 20:49:10.000000000 +0000
+@@ -1430,14 +1430,14 @@
    
    {
      pthread_attr_t       pth_attrs;
--#if ! defined (__OpenBSD__)
+-#if !defined (__OpenBSD__)
 +#ifdef _POSIX_THREAD_PRIORITY_SCHEDULING
      struct sched_param   pth_params;
  #endif
@@ -14,7 +14,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/01/26 13:04:47 jmmv Exp $
      pthread_attr_init(&pth_attrs);
  
      /* this won't work on linux, freebsd 5.0 */
--#if ! defined (__OpenBSD__)
+-#if !defined (__OpenBSD__)
 +#ifdef _POSIX_THREAD_PRIORITY_SCHEDULING
      pthread_attr_getschedparam(&pth_attrs, &pth_params);
      pth_params.sched_priority = sched_get_priority_min(SCHED_OTHER);
