@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/04/03 16:06:16 schmonz Exp $
 
 DISTNAME=		mysql-3.23.58
 CATEGORIES=		databases
@@ -28,7 +28,7 @@ MYSQL_DATADIR?=		/var/mysql
 MYSQL_CHARSET?=		latin1
 MYSQL_EXTRA_CHARSET?=	all
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 GNU_CONFIGURE=		# defined
 USE_GNU_TOOLS+=		make
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
@@ -77,4 +77,4 @@ post-extract:
 		${RM} $${file}.orig;					\
 	done
 
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
