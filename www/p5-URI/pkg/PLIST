@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/02 08:34:34 rh Exp $
+lib/perl5/site_perl/URI/_server.pm
+lib/perl5/site_perl/URI/WithBase.pm
+lib/perl5/site_perl/URI/_login.pm
+lib/perl5/site_perl/URI/data.pm
+lib/perl5/site_perl/URI/_generic.pm
+lib/perl5/site_perl/URI/news.pm
+lib/perl5/site_perl/URI/file.pm
+lib/perl5/site_perl/URI/file/Mac.pm
+lib/perl5/site_perl/URI/file/Win32.pm
+lib/perl5/site_perl/URI/file/OS2.pm
+lib/perl5/site_perl/URI/file/FAT.pm
+lib/perl5/site_perl/URI/file/Base.pm
+lib/perl5/site_perl/URI/file/Unix.pm
+lib/perl5/site_perl/URI/nntp.pm
+lib/perl5/site_perl/URI/http.pm
+lib/perl5/site_perl/URI/ldap.pm
+lib/perl5/site_perl/URI/gopher.pm
+lib/perl5/site_perl/URI/mailto.pm
+lib/perl5/site_perl/URI/_foreign.pm
+lib/perl5/site_perl/URI/ftp.pm
+lib/perl5/site_perl/URI/rlogin.pm
+lib/perl5/site_perl/URI/telnet.pm
+lib/perl5/site_perl/URI/pop.pm
+lib/perl5/site_perl/URI/snews.pm
+lib/perl5/site_perl/URI/Heuristic.pm
+lib/perl5/site_perl/URI/Escape.pm
+lib/perl5/site_perl/URI/_segment.pm
+lib/perl5/site_perl/URI/URL.pm
+lib/perl5/site_perl/URI/https.pm
+lib/perl5/site_perl/URI/_userpass.pm
+lib/perl5/site_perl/URI/_query.pm
+lib/perl5/site_perl/URI.pm
+lib/perl5/man/man3/URI::WithBase.3
+lib/perl5/man/man3/URI::data.3
+lib/perl5/man/man3/URI::file.3
+lib/perl5/man/man3/URI::Heuristic.3
+lib/perl5/man/man3/URI::ldap.3
+lib/perl5/man/man3/URI::Escape.3
+lib/perl5/man/man3/URI.3
+lib/perl5/man/man3/URI::URL.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/URI/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/URI
+@dirrm lib/perl5/site_perl/URI/file
+@dirrm lib/perl5/site_perl/URI
