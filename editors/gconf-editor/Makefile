@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/02/16 23:10:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/16 23:20:05 jmmv Exp $
 #
 
 DISTNAME=		gconf-editor-2.4.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		editors gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gconf-editor/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Editor for the GConf configuration system
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		xdg-dirs>=1.0:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/15 00:06:12 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/16 23:20:05 jmmv Exp $
 bin/gconf-editor
 share/applications/gconf-editor.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gconf-editor.mo
@@ -65,3 +65,4 @@ share/pixmaps/gconf-editor/folder-closed.png
 share/pixmaps/gconf-editor/folder-open.png
 share/pixmaps/gconf-editor/stock-about-16.png
 @dirrm share/pixmaps/gconf-editor
+@comment in xdg-dirs: share/applications
