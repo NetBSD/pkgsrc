@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/16 15:39:10 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/12 21:02:58 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/11 04:21:19 jseger Exp
 #
 
@@ -12,10 +12,10 @@ MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://tf.tcp.com/~hawkeye/tf/
 COMMENT=	Popular programmable MUD client, with macro support and more
 
+USE_BUILDLINK2=	YES
+
 MAKEFILE=	${WRKSRC}/unix/Makefile
-ALL_TARGET=	${MAKE_ARGS} all
-INSTALL_TARGET=	${MAKE_ARGS} install
+MAKE_ENV=	TFVER="${DISTNAME:S/^tf-//}"
 
-MAKE_ARGS=	TFVER=${DISTNAME:S/^tf-//}
-
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
