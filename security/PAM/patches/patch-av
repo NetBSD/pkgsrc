@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.4 2004/11/16 07:46:58 jlam Exp $
+$NetBSD: patch-av,v 1.5 2004/11/19 14:54:55 jlam Exp $
 
 --- modules/pam_tally/Makefile.orig	2001-06-27 02:20:43.000000000 -0400
 +++ modules/pam_tally/Makefile
@@ -15,7 +15,7 @@ $NetBSD: patch-av,v 1.4 2004/11/16 07:46:58 jlam Exp $
  	$(CC) $(CFLAGS) $(STATIC) $(CPPFLAGS) $(TARGET_ARCH) -c $< -o $@
  
 +%.lo : %.c
-+	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) -DPAM_DYNAMIC $(TARGET_ARCH) -c $<
++	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(LTCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
  
  ifdef DYNAMIC
  LIBSHARED = $(TITLE).so

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2004/11/16 07:46:57 jlam Exp $
+$NetBSD: patch-ad,v 1.6 2004/11/19 14:54:55 jlam Exp $
 
 --- libpam/Makefile.orig	2001-12-09 16:44:58.000000000 -0500
 +++ libpam/Makefile
@@ -11,6 +11,15 @@ $NetBSD: patch-ad,v 1.5 2004/11/16 07:46:57 jlam Exp $
  
  ifeq ($(WITH_LIBDEBUG),yes)
   LIBNAME=libpamd
+@@ -22,7 +22,7 @@ dummy: ../Make.Rules all
+ 
+ # ---------------------------------------------
+ 
+-CFLAGS += $(DYNAMIC) $(STATIC) $(MOREFLAGS) \
++CFLAGS += $(DYNAMIC) $(STATIC) $(LTCFLAGS) $(MOREFLAGS) \
+   -DLIBPAM_VERSION_MAJOR=$(MAJOR_REL) \
+   -DLIBPAM_VERSION_MINOR=$(MINOR_REL)
+ 
 @@ -36,6 +36,10 @@ LIBPAMFULL = $(LIBPAMNAME)$(MODIFICATION
  
  LIBPAMSTATIC = $(LIBNAME).a
