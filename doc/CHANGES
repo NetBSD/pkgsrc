@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6669 2004/07/24 23:00:04 recht Exp $
+$NetBSD: CHANGES,v 1.6670 2004/07/25 04:25:04 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2004:
         Removed py-postgresql [recht 2004-07-25]
         Removed tcl-postgresql [recht 2004-07-25]
         Removed tk-postgresql [recht 2004-07-25]
+	Updated p5-Image-Imlib2 to 1.03 [kim 2004-07-25]
