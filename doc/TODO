@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1177 2003/12/13 11:50:55 xtraeme Exp $
+$NetBSD: TODO,v 1.1178 2003/12/13 11:56:29 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -224,7 +224,7 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
-	o libgtop-2.0.6
+	o libgtop-2.0.7 [xtraeme]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtiff-3.6.0
@@ -319,7 +319,6 @@ Suggested package updates
 	o tcpreplay-1.4.6
 	o tct-1.12
 	o teapop-0.3.8
-	o thunderbird-bin-0.4
 	o tin-1.6.1 [dillo]
 	o tkman-2.2
 	o top-3.5b12.8
@@ -333,7 +332,7 @@ Suggested package updates
 	o w3m-0.4.2
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
-	o wistumbler2-2.00pre4
+	o wistumbler2-2.00pre4 [xtraeme]
 	o wmbiff-0.4.17
 	o wv2-0.2
 	o wwwoffle-2.8a
@@ -360,7 +359,7 @@ Suggested package updates
 	o xsidplay-1.6.5pre20
 	o xzgv-0.8
 	o yacas-1.0.55
-	o yelp-2.4.1
+	o yelp-2.4.1 [xtraeme]
 	o ysm-2.9.0
 	o zebra-0.94
 	o zenicb 1.31 (needs merge with lots of local changes)
