@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2001/08/26 10:32:24 skrll Exp $
+# $NetBSD: Makefile,v 1.24 2001/09/07 14:34:33 drochner Exp $
 
-DISTNAME=	kdebase-2.1
+DISTNAME=	kdebase-2.1.1
 CATEGORIES=	x11 kde
 .include "../../x11/kde2/Makefile.part1"
 COMMENT=	Base modules for the KDE 2 integrated X11 desktop
@@ -77,7 +77,6 @@ pre-install:
 
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/konsole_grantpty
-	@${CHMOD} u+s ${PREFIX}/bin/*.kss
 	@${CHMOD} u+s ${PREFIX}/bin/ksysguardd
 	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} \! -type d | ${SORT})	\
 		>> ${PLIST_SRC}
