@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 21:22:49 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/01 15:56:58 adam Exp $
 #
 
-DISTNAME=	madplay-0.15.0b
-PKGREVISION=	1
+DISTNAME=	madplay-0.15.2b
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/} \
 		ftp://ftp.mars.org/pub/mpeg/
@@ -13,7 +12,7 @@ COMMENT=	High-quality MPEG audio decoder
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -21,15 +20,15 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../audio/libid3tag/buildlink2.mk"
-.include "../../audio/libmad/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../audio/libid3tag/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 .if defined(USE_OSS)
-.  include "../../mk/ossaudio.buildlink2.mk"
+.  include "../../mk/ossaudio.buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
