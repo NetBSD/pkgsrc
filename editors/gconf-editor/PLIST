@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/21 17:10:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/12/11 06:53:21 minskim Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
@@ -90,10 +90,10 @@ share/pixmaps/gconf-editor/folder-open.png
 @dirrm share/pixmaps/gconf-editor
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gconf-editor
-@dirrm share/omf
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
 @dirrm share/gnome/help/gconf-editor
-@dirrm share/gnome/help
+@comment in gnome-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
