@@ -1,18 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/10/29 07:07:44 xtraeme Exp $
-
-# Legacy options
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q3 branch is released:
-# XXX
-# XXX	EZMLM_IDX_USE_MYSQL	EZMLM_IDX_USE_PGSQL
-#
-.if defined(EZMLM_IDX_USE_MYSQL) && !empty(EZMLM_IDX_USE_MYSQL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	mysql
-.endif
-.if defined(EZMLM_IDX_USE_PGSQL) && !empty(EZMLM_IDX_USE_PGSQL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	pgsql
-.endif
+# $NetBSD: options.mk,v 1.4 2004/11/17 19:56:49 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ezmlm-idx
 PKG_SUPPORTED_OPTIONS=	mysql pgsql
