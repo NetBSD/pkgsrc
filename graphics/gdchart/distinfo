@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/10/18 11:13:56 darcy Exp $
+
+SHA1 (gdchart0.10.1dev.tar.gz) = 52edc97cb45fc441afc4728c812cd33ddab9ef5c
+Size (gdchart0.10.1dev.tar.gz) = 40708 bytes
+SHA1 (patch-gdc.h) = 21876306acb359b4487cf35bf871b67e68778f0e
+SHA1 (patch-gdchart.c) = b64571899b38ef026af076c6876af20c74b98ab8
+SHA1 (patch-makefile) = 5988ea7896ac6cb6aad87c7a42626b9a0c68c400
