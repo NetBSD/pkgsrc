@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/11 20:08:11 tv Exp $
+bin/cygwin1.dll
+bin/cygwin-cygpath
+bin/cygwin-ipcrm
+bin/cygwin-ipcs
+bin/cygwin-kill
+bin/cygwin-mount
+bin/cygwin-ps
+bin/cygwin-regtool
+bin/cygwin-umount
+emul/cygwin/bin/cygpath.exe
+emul/cygwin/bin/dumper.exe
+emul/cygwin/bin/getfacl.exe
+emul/cygwin/bin/ipcrm.exe
+emul/cygwin/bin/ipcs.exe
+emul/cygwin/bin/kill.exe
+emul/cygwin/bin/mkgroup.exe
+emul/cygwin/bin/mkpasswd.exe
+emul/cygwin/bin/mount.exe
+emul/cygwin/bin/passwd.exe
+emul/cygwin/bin/ps.exe
+emul/cygwin/bin/regtool.exe
+emul/cygwin/bin/setfacl.exe
+emul/cygwin/bin/ssp.exe
+emul/cygwin/bin/strace.exe
+emul/cygwin/bin/umount.exe
+@dirrm emul/cygwin/bin
+@dirrm emul/cygwin
