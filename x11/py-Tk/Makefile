@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 1998/05/14 22:12:37 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/05/15 21:30:51 tron Exp $
 #
 
 DISTNAME=	pyth151
 PKGNAME=	py-Tk-1.5.1
-CATEGORIES=	misc
+CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
 
