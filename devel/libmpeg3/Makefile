@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/12 19:34:01 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/06/12 04:34:49 grant Exp $
 #
 
 DISTNAME=	libmpeg3-1.3
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+= --no-mmx --no-css
 USE_BUILDLINK3= yes
 HAS_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
+
+ONLY_FOR_COMPILER=	gcc
 
 PTHREAD_OPTS+=	require
 
