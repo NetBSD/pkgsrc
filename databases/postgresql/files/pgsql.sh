@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.2 2001/02/12 20:11:56 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.3 2001/03/25 11:29:37 wennmach Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -18,7 +18,7 @@ command_args="-S -o -F"			# start in silent mode and disable
 					#   connections
 
 USER="@PGUSER@"
-PGHOME="@PREFIX@/${USER}"
+PGHOME="@PGHOME@"
 SU="@SU@"
 
 cmd=${1:-start}
