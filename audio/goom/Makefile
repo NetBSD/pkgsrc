@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/20 14:59:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/26 02:07:19 wiz Exp $
 #
 
 DISTNAME=		goom-2k4-0-src
@@ -18,4 +18,5 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgoom2.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
