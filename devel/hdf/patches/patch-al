@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2001/03/22 23:19:17 jtb Exp $
+$NetBSD: patch-al,v 1.2 2001/03/25 01:09:51 jtb Exp $
 
---- /dev/null	Thu Mar 22 19:52:41 2001
+--- /dev/null	Sun Mar 25 00:38:11 2001
 +++ hdf/test/Makefile
-@@ -0,0 +1,58 @@
+@@ -0,0 +1,60 @@
 +CSRCS=	rig.c sdstr.c blocks.c an.c anfile.c extelt.c file.c file1.c	\
 +	vers.c sdmms.c sdnmms.c slab.c litend.c tvset.c comp.c bitio.c	\
 +	tree.c macros.c conv.c nbit.c man.c mgr.c testhdf.c tbv.c	\
@@ -20,11 +20,13 @@ $NetBSD: patch-al,v 1.1 2001/03/22 23:19:17 jtb Exp $
 +	tsdmmsf.o tsdnmmsf.o tsdnntf.o tsdntf.o tsdstrf.o tstubsf.o	\
 +        tvsetf.o tvattrf.o
 +
-+HDFLIB = -Wl,-R${.CURDIR}/../src -L${.CURDIR}/../src -ldf
-+JPEGLIB= -Wl,-R${JPEGBASE}/lib -L${JPEGBASE}/lib -ljpeg
-+ZLIB= -lz
++CPPFLAGS+= -Dunix
++CPPFLAGS+= -I${.CURDIR}/../src
 +
-+CPPFLAGS+= -Dunix -I${.CURDIR}/../src
++LDFLAGS+= -Wl,-R${.CURDIR}/../src -L${.CURDIR}/../src
++LDFLAGS+= -Wl,-R${JPEGBASE}/lib -L${JPEGBASE}/lib
++
++LDADD+= -ldf -ljpeg -lz -lm
 +
 +FTESTS = fortest fortestF
 +
@@ -42,17 +44,17 @@ $NetBSD: patch-al,v 1.1 2001/03/22 23:19:17 jtb Exp $
 +	-rm -f *.hdf
 +
 +testhdf: ${COBJS}
-+	${CC} ${CPPFLAGS} ${CFLAGS} -o $@ $? ${LDFLAGS} ${HDFLIB} ${JPEGLIB} ${ZLIB} -lm
++	${CC} ${CPPFLAGS} ${CFLAGS} -o $@ $? ${LDFLAGS} ${LDADD}
 +	test -d ${TESTDIR} || mkdir ${TESTDIR}
 +
 +fortestF: ${FOBJS}
-+	${FC} ${FFLAGS} -o $@ $? ${LDFLAGS} ${HDFLIB} ${JPEGLIB} ${ZLIB}
++	${FC} ${FFLAGS} -o $@ $? ${LDFLAGS} ${LDADD}
 +
 +fortest: fortest.o
-+	${CC} ${CPPFLAGS} ${CFLAGS} -o $@ $? ${LDFLAGS} ${HDFLIB} ${JPEGLIB} ${ZLIB} -lm
++	${CC} ${CPPFLAGS} ${CFLAGS} -o $@ $? ${LDFLAGS} ${LDADD}
 +
 +gentest: gentest.o
-+	${CC} ${CPPFLAGS} ${CFLAGS} -o $@ $? ${LDFLAGS} ${HDFLIB} ${JPEGLIB} ${ZLIB} -lm
++	${CC} ${CPPFLAGS} ${CFLAGS} -o $@ $? ${LDFLAGS} ${LDADD}
 +
 +clean:
 +	-rm -f testhdf ${COBJS} ${FOBJS} ${FTESTS}			  \
