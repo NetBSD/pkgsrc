@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/06/05 10:29:38 agc Exp $
+
+--- Makefile	2001/06/05 09:15:05	1.1
++++ Makefile	2001/06/05 10:08:08
+@@ -79,13 +79,13 @@
+ 
+ #1B: paths:
+ #some peple like /usr/local/sbin instead of /usr/local/etc
+-BINDIR=/usr/local/bin
+-ETCDIR=/usr/local/etc
++BINDIR=${PREFIX}/bin
++ETCDIR=${PREFIX}/libexec
+ PRINTCMD=enscript -Gr2
+ # you only need RSAREF for ESM
+ # these paths WILL have to be changed...
+-RSALIB=/usr/mab/rsaref/install/rsaref.a
+-RINCLUDES=/usr/mab/rsaref/source
++#RSALIB=/usr/mab/rsaref/install/rsaref.a
++#RINCLUDES=/usr/mab/rsaref/source
+ 
+ # if you're a paranoid fascist, you might want to configure
+ # default timeouts on the attach command.  If you do,
+@@ -104,6 +104,8 @@
+ # Uncomment the options for the your local platform.
+ # You'll need to figure out how to install man pages yourself.
+ 
++OS!= uname -s
++
+ ## Use these for vanilla SUNOS 4.x .
+ #CFLAGS=$(COPT) -I$(RINCLUDES) -DSUN
+ #LIBS=
+@@ -116,10 +118,12 @@
+ ## Linux dists).
+ ## See NOTE TO LINUX USERS above, and also README.linux,
+ ## if you can't make things work.
+-#CFLAGS=$(COPT) -U__STDC__ -Dd_fileno=d_ino -I$(RINCLUDES)
+-#LIBS=
+-#COMPAT=
+-#RPCOPTS= -k -b
++.if ${OS} == "Linux"
++CFLAGS=$(COPT) -U__STDC__ -Dd_fileno=d_ino -I$(RINCLUDES)
++LIBS=
++COMPAT=
++RPCOPTS= -k -b
++.endif
+ 
+ ## A few Linux users have reported success with these
+ ## options:
+@@ -211,15 +215,18 @@
+ #* Use these for NetBSD 1.5
+ ## For mounting, use
+ ##	mount -o intr,-2 127.0.0.1:/null /crypt
+-#CFLAGS=$(COPT) -DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS -I$(RINCLUDES) -traditional
+-#COMPAT=-lcompat
+-#RPCOPTS=-b
+-
+-## Solaris 2.3 / SUNOS 5.x
+-#CFLAGS=$(COPT) -DSOLARIS2X -DPORTMAP -I$(RINCLUDES) -DPTMX
+-#LIBS=-lsocket -lnsl
+-#COMPAT=
+-#RPCOPTS=
++.if ${OS} == "NetBSD"
++CFLAGS=$(COPT) -DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS -I$(RINCLUDES) -traditional
++COMPAT=-lcompat
++RPCOPTS=-b
++.endif
++
++.if ${OS} == "SunOS"
++CFLAGS=$(COPT) -DSOLARIS2X -DPORTMAP -I$(RINCLUDES) -DPTMX
++LIBS=-lsocket -lnsl
++COMPAT=
++RPCOPTS=
++.endif
+ 
+ ## not sure what to do for NeXT.  I think this works:
+ #CFLAGS=$(COPT) -posix -D_BSD -DANYPORT -I$(RINCLUDES)
+@@ -229,7 +236,7 @@
+ # (3/3) CONFIGURE: one last thing
+ #==========================================================================
+ # finally, comment out the next line:
+-CC=you_forgot_to_edit_the_makefile
++#CC=you_forgot_to_edit_the_makefile
+ 
+ # now you're done with local configuration.
+ 
