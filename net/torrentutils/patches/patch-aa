@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/04 15:47:34 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/29 19:46:45 wiz Exp $
 
---- Makefile.orig	Sun Oct 12 14:13:16 2003
+--- Makefile.orig	2003-10-12 14:13:16.000000000 +0200
 +++ Makefile
 @@ -1,9 +1,9 @@
  # Root of installation tree
@@ -14,8 +14,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/04 15:47:34 wiz Exp $
  # Path to Midnight Commander extfs
  MCEXTFSDIR = $(PREFIX)/share/mc/extfs
  
-@@ -44,19 +44,10 @@ torrentutils.spec: torrentutils.spec.in
- 	if [[ "$@" != *.spec ]]; then chmod a+x $@; fi
+@@ -41,22 +41,13 @@ torrentutils.spec: torrentutils.spec.in
+ 	cat $^ | sed "s,@VERSION@,$(VERSION),; \
+ 		      s,@PACKAGE@,$(PACKAGE),; \
+ 		      s,@AUTHORS@,$(AUTHORS)," > $@
+-	if [[ "$@" != *.spec ]]; then chmod a+x $@; fi
++	if [ "$@" != *.spec ]; then chmod a+x $@; fi
  
  install: all
 -	install -d $(BINDIR) $(MANDIR)/man1
