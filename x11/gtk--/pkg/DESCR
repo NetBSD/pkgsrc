@@ -1,2 +1,12 @@
-C++ wrapper for the gimp toolkit, a set of libraries for building complex
-X11 user interfaces. Used by e.g. Gimp and Gnome.
+  Gtk-- is a C++ interface for C++ wrapper for the gimp toolkit, a set
+of libraries for building complex X11 user interfaces, used by, e.g.,
+Gimp and Gnome.  Gtk-- provides a convenient interface for C++
+programmers to create graphical user interfaces with Gtk's flexible
+OO framework.
+
+  Highlights include type safe callbacks, widgets extensible using
+inheritance and over 110 classes that can be freely combined to quickly
+create complex user interfaces.
+
+  Gtk-- is free software distributed under the GNU Library General
+Public License (LGPL). 
