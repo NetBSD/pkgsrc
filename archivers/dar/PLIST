@@ -1,0 +1,50 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/15 17:51:43 agc Exp $
+bin/dar
+bin/dar_cp
+bin/dar_manager
+bin/dar_slave
+bin/dar_xform
+include/dar/compressor.hpp
+include/dar/config.h
+include/dar/deci.hpp
+include/dar/erreurs.hpp
+include/dar/generic_file.hpp
+include/dar/infinint.hpp
+include/dar/integers.hpp
+include/dar/libdar.hpp
+include/dar/limitint.hpp
+include/dar/mask.hpp
+include/dar/path.hpp
+include/dar/real_infinint.hpp
+include/dar/special_alloc.hpp
+include/dar/statistics.hpp
+include/dar/storage.hpp
+include/dar/tools.hpp
+include/dar/tuyau.hpp
+include/dar/user_interaction.hpp
+include/dar/wrapperlib.hpp
+lib/libdar.a
+lib/libdar.la
+lib/libdar.so
+lib/libdar.so.1
+lib/libdar.so.1.2
+man/man1/dar.1
+man/man1/dar_cp.1
+man/man1/dar_manager.1
+man/man1/dar_slave.1
+man/man1/dar_xform.1
+share/dar/dar_par.dcf
+share/dar/dar_par_create.duc
+share/dar/dar_par_test.duc
+share/doc/dar/DOC_API
+share/doc/dar/FEATURES
+share/doc/dar/GOOD_BACKUP_PRACTICE
+share/doc/dar/LIMITATIONS
+share/doc/dar/LINKS
+share/doc/dar/NOTES
+share/doc/dar/README
+share/doc/dar/TUTORIAL
+share/doc/dar/dar-differential-backup-mini-howto.en.html
+@dirrm share/doc/dar
+@dirrm share/dar
+@dirrm include/dar
