@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/19 23:01:41 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/08 14:23:45 rh Exp $
 #
 
 DISTNAME=	Confera-1.2.0-nonbin
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
-DEPENDS+=	zope-1.10.3:../../www/zope
+DEPENDS+=	zope-*:../../www/zope
 
 NO_BUILD=	yes
 
