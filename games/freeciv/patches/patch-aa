@@ -1,0 +1,7 @@
+--- client/climisc.c.orig	Thu Jun 11 22:16:11 1998
++++ client/climisc.c	Thu Jun 11 22:16:56 1998
+@@ -46,3 +46,3 @@
+     } else {
+-      datadir = "data";		/* correct if not 'data' is the default */
++      datadir = "@X11BASE@/share/freeciv/data"; /* correct if not 'data' is the default */
+     };
