@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/02/20 22:48:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/13 15:31:04 agc Exp $
 #
 
 DISTNAME=	mikmod-3.0.3
@@ -14,8 +14,6 @@ DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
 USE_GMAKE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
 post-patch:
 	chmod a+x ${WRKSRC}/build-mikmod.netbsd.sh
 
@@ -25,11 +23,9 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/usercode/mikmod ${PREFIX}/bin
 	#${INSTALL_MAN} ${WRKSRC}/docs/mikmod.1 ${PREFIX}/man/man1
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/mikmod
 .for f in bugs.txt changes.txt future.txt mikmod.doc mikmod.txt tips.txt
 	${INSTALL_DATA} ${WRKSRC}/docs/$f ${PREFIX}/share/doc/mikmod
 .endfor
-.endif
 
 .include "../../mk/bsd.pkg.mk"

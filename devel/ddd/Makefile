@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/03/27 23:08:45 frueauf Exp $
+# $NetBSD: Makefile,v 1.21 1999/04/13 15:31:05 agc Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -36,7 +36,6 @@ post-configure:
 	${ECHO} "LIBXM = ${MOTIFLIB}" >> ${WRKSRC}/ddd/Makefile
 
 post-install:
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/PROBLEMS ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/ddd
@@ -45,7 +44,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.dddinit ${PREFIX}/share/doc/ddd
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd-paper.ps
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.man.ps
-.endif
 
 check:
 	(cd ${WRKSRC} ; ${GMAKE} check)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:58 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/13 15:31:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -16,8 +16,6 @@ NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	pns
 
-.include "../../mk/bsd.prefs.mk"
-
 do-install:
 	${MKDIR} ${PREFIX}/lib/xpns
 	${INSTALL_PROGRAM} ${WRKSRC}/pns ${PREFIX}/lib/xpns/
@@ -26,9 +24,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xpns ${PREFIX}/bin/xpns
 
 post-install:
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/xpns
 	${CP} ${WRKSRC}/*.net ${PREFIX}/share/doc/xpns/
-.endif
 
 .include "../../mk/bsd.pkg.mk"

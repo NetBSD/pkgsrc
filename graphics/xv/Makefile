@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/04/07 09:49:33 agc Exp $
+# $NetBSD: Makefile,v 1.18 1999/04/13 15:31:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -37,9 +37,7 @@ post-patch:
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
-.if !defined(NOPORTDOCS)
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
-.endif
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	CPPFLAGS=
