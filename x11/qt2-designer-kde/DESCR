@@ -1,7 +1,0 @@
-Qt Designer accelerates GUI application development and maintenance by
-offering a WYSIWYG (What You See Is What You Get) drag and drop interface
-for UI creation and maintenance. Qt Designer employs a vendor neutral,
-XML-format for persistent storage, which simplifies the tasks involved
-with the creation and layout of dialogs.
-
-This packages includes support for KDE widgets.
