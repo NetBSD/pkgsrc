@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/04/05 15:58:53 wulf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/04/05 16:27:16 wulf Exp $
 bin/rrdcgi
 bin/rrdtool
 lib/librrd.a
@@ -82,14 +82,14 @@ share/rrdtool/lib/perl/auto/RRDs/RRDs.so
 lib/perl5/site_perl/RRDp.pm
 lib/perl5/site_perl/RRDs.pm
 lib/perl5/site_perl/ntmake.pl
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/RRDs/RRDs.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/RRDs/RRDs.so
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/RRDp/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/RRDs/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs/RRDs.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs/RRDs.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDp/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs/.packlist
 lib/perl5/man/man3/RRDp.3
 lib/perl5/man/man3/RRDs.3
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/RRDp
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/RRDs
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDp
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs
 @dirrm share/rrdtool/contrib/rrd-file-icon
 @dirrm share/rrdtool/contrib/trytime
 @dirrm share/rrdtool/contrib/log2rrd
