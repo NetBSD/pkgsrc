@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/23 16:07:15 wiz Exp $
+
+SHA1 (orbital_eunuchs_sniper-1.29.tar.gz) = c5c33de0645c717b35e6eff7c88946e9de65b866
+Size (orbital_eunuchs_sniper-1.29.tar.gz) = 4043177 bytes
+SHA1 (patch-aa) = 05ce263d290c8508c49d0902418ed56d9f129cb9
+SHA1 (patch-ab) = 23fc32880df6c5457fd2f303988e24d9de76b587
+SHA1 (patch-ac) = d2e2e7f5f96248c6327f3a29ae714c8aff55b3b8
