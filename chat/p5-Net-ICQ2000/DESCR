@@ -1,0 +1,6 @@
+This module is designed to give perl scripts access to the ICQ
+network and the functions provided by it, like SMS
+
+Functions included :  Connect(), Disconnect(), Set_Login_Details(),
+Set_Server_And_Port(), Execute_Once(), Send_Command(), Add_Hook(),
+Hook_All(), Check_Incoming(), Deal_With_FLAPs(), Send_Outgoing().
