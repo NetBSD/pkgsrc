@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8688 2005/01/11 02:10:37 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8689 2005/01/11 03:30:08 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -216,3 +216,13 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated getmail to 4.3.0 [schmonz 2005-01-10]
 	Updated dillo to 0.8.3nb2 [adrianp 2005-01-10]
 	Updated mklivecd to 0.9 [xtraeme 2005-01-11]
+	Updated geda to 20041228 [dmcmahill 2005-01-10]
+	Updated geda-docs to 20041228 [dmcmahill 2005-01-10]
+	Updated geda-examples to 20041228 [dmcmahill 2005-01-10]
+	Updated gattrib to 20041228 [dmcmahill 2005-01-10]
+	Updated geda-symbols to 20041228 [dmcmahill 2005-01-10]
+	Updated geda-utils to 20041228 [dmcmahill 2005-01-10]
+	Updated gnetlist to 20041228 [dmcmahill 2005-01-10]
+	Updated gschem to 20041228 [dmcmahill 2005-01-10]
+	Updated gsymcheck to 20041228 [dmcmahill 2005-01-10]
+	Updated libgeda to 20041228 [dmcmahill 2005-01-10]
