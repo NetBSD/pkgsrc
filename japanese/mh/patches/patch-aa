@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.1 1999/08/02 04:26:50 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/29 08:50:01 sakamoto Exp $
 
---- sbr/advertise.c-	Tue May 18 03:29:44 1999
-+++ sbr/advertise.c	Tue May 18 03:30:08 1999
-@@ -5,6 +5,7 @@
- 
- #include "../h/mh.h"
- #include <stdio.h>
-+#include <errno.h>
- #if defined(BSD42) || defined(SVR4)
- #include <sys/types.h>
- #include <sys/uio.h>
+--- ./configure.in.orig	Fri Oct  1 23:01:15 1999
++++ ./configure.in	Fri Oct 29 17:02:23 1999
+@@ -354,4 +354,9 @@
+ 	fi
+       fi
++      if test "$OBJECT_FMT" = ELF
++      then
++	sharedlib=gnuelf
++	make_mhconfig='CFLAGS="-O -DMHSLIB_NOMINVER"'
++      fi
+       slflags="-fpic"
+       slibdir=$libdir
