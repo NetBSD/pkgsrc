@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.xemacs,v 1.1 2001/11/01 02:27:01 zuntum Exp $
+@comment $NetBSD: PLIST.xemacs,v 1.2 2002/10/18 14:50:14 minoura Exp $
 lib/xemacs/xemacs-packages/etc/w3/default.css
 lib/xemacs/xemacs-packages/info/w3-faq.info
 lib/xemacs/xemacs-packages/info/w3.info
@@ -6,7 +6,6 @@ lib/xemacs/xemacs-packages/info/w3.info-1
 lib/xemacs/xemacs-packages/info/w3.info-2
 lib/xemacs/xemacs-packages/info/w3.info-3
 lib/xemacs/xemacs-packages/info/w3.info-4
-lib/xemacs/xemacs-packages/info/w3.info-5
 lib/xemacs/xemacs-packages/lisp/w3/auto-autoloads.el
 lib/xemacs/xemacs-packages/lisp/w3/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/w3/base64.el
@@ -85,6 +84,8 @@ lib/xemacs/xemacs-packages/lisp/w3/w3-e19.el
 lib/xemacs/xemacs-packages/lisp/w3/w3-e19.elc
 lib/xemacs/xemacs-packages/lisp/w3/w3-e20.el
 lib/xemacs/xemacs-packages/lisp/w3/w3-e20.elc
+lib/xemacs/xemacs-packages/lisp/w3/w3-e21.el
+lib/xemacs/xemacs-packages/lisp/w3/w3-e21.elc
 lib/xemacs/xemacs-packages/lisp/w3/w3-elisp.el
 lib/xemacs/xemacs-packages/lisp/w3/w3-elisp.elc
 lib/xemacs/xemacs-packages/lisp/w3/w3-emulate.el

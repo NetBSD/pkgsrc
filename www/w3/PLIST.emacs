@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.2 2002/02/18 15:14:45 seb Exp $
+@comment $NetBSD: PLIST.emacs,v 1.3 2002/10/18 14:50:14 minoura Exp $
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/w3-faq.info
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/w3.info
 info/w3-faq.info
@@ -7,7 +7,6 @@ info/w3.info-1
 info/w3.info-2
 info/w3.info-3
 info/w3.info-4
-info/w3.info-5
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/w3-faq.info
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/w3.info
 share/default.css
@@ -89,6 +88,8 @@ share/emacs/site-lisp/w3/w3-e19.el
 share/emacs/site-lisp/w3/w3-e19.elc
 share/emacs/site-lisp/w3/w3-e20.el
 share/emacs/site-lisp/w3/w3-e20.elc
+share/emacs/site-lisp/w3/w3-e21.el
+share/emacs/site-lisp/w3/w3-e21.elc
 share/emacs/site-lisp/w3/w3-elisp.el
 share/emacs/site-lisp/w3/w3-elisp.elc
 share/emacs/site-lisp/w3/w3-emulate.el
