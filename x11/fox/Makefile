@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/29 10:16:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/01 10:13:12 cjep Exp $
 #
 
 DISTNAME=	fox-1.0.43
@@ -14,7 +14,7 @@ USE_X11=	# defined
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 
-CONFIGURE_ARGS+=	--with-opengl=mesa 
+CONFIGURE_ARGS+=	--with-opengl=mesa
 CONFIGURE_ARGS+=	--with-x
 CONFIFURE_ARGS+=	--with-shm=yes
 CONFIGURE_ARGS+=	--enable-release
