@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/30 12:42:45 adrianp Exp $
 
-DISTNAME=	socat-1.3.2.2
-PKGREVISION=	1
+DISTNAME=	socat-1.4.0.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.dest-unreach.org/socat/
 COMMENT=	"netcat++" (extended design, new implementation)
 
-WRKSRC=			${WRKDIR}/socat-1.3
+WRKSRC=			${WRKDIR}/socat-1.4
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_GNU_READLINE=	YES
