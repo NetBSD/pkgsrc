@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/11/18 10:02:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/11/18 10:14:44 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -1060,7 +1060,7 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kpdf
 @dirrm share/kde/apps/kooka/pics
 @dirrm share/kde/apps/kooka
-@dirrm share/kde/apps/konqueror/servicemenus
+@comment dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/kolourpaint/pics
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48/apps
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48
