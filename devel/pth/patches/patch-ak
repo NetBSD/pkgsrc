@@ -1,0 +1,38 @@
+$NetBSD: patch-ak,v 1.1 2002/11/26 21:42:49 skrll Exp $
+
+--- pth_sched.c.orig	Sun Jan 27 11:03:41 2002
++++ pth_sched.c
+@@ -47,16 +47,15 @@ static pth_time_t   pth_loadticknext;
+ static pth_time_t   pth_loadtickgap = PTH_TIME(1,0);
+ 
+ /* initialize the scheduler ingredients */
+-intern void pth_scheduler_init(void)
++intern int pth_scheduler_init(void)
+ {
+     /* create the internal signal pipe */
+-    if (pipe(pth_sigpipe) == -1) {
+-        fprintf(stderr, "**Pth** INIT: Cannot create internal pipe: %s\n",
+-                strerror(errno));
+-        abort();
+-    }
+-    pth_fdmode(pth_sigpipe[0], PTH_FDMODE_NONBLOCK);
+-    pth_fdmode(pth_sigpipe[1], PTH_FDMODE_NONBLOCK);
++    if (pipe(pth_sigpipe) == -1)
++        return_errno(FALSE, errno);
++    if (pth_fdmode(pth_sigpipe[0], PTH_FDMODE_NONBLOCK) == PTH_FDMODE_ERROR)
++        return_errno(FALSE, errno);
++    if (pth_fdmode(pth_sigpipe[1], PTH_FDMODE_NONBLOCK) == PTH_FDMODE_ERROR)
++        return_errno(FALSE, errno);
+ 
+     /* initialize the essential threads */
+     pth_sched   = NULL;
+@@ -72,7 +71,8 @@ intern void pth_scheduler_init(void)
+     /* initialize load support */
+     pth_loadval = 1.0;
+     pth_time_set(&pth_loadticknext, PTH_TIME_NOW);
+-    return;
++
++    return TRUE;
+ }
+ 
+ /* drop all threads (except for the currently active one) */
