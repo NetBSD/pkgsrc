@@ -1,0 +1,58 @@
+$NetBSD: patch-au,v 1.1 1999/07/26 21:19:32 tron Exp $
+
+--- news.c.orig	Tue Aug 31 23:06:06 1993
++++ news.c	Mon Jul 26 23:11:38 1999
+@@ -23,7 +23,7 @@
+ {
+     register char *bp, *cp, **fptr;
+     int siz, all, date_only;
+-    off_t pos;
++    long pos;
+ 
+     pos = ftell(f);
+ 
+@@ -239,7 +239,7 @@
+     struct stat statb;
+ #ifdef NNTP
+     int lazy;
+-    off_t fpos;
++    long fpos;
+     FILE *nntp_get_article();
+ #endif /* NNTP */
+ 
+@@ -266,9 +266,9 @@
+ 	/* necessary because empty files wreak havoc */
+ 	if (fstat(fileno(f), &statb) < 0 ||
+ #ifdef NOV
+-	    (art->lpos = statb.st_size, statb.st_size <= (off_t)0)) {
++	    (art->lpos = (long)statb.st_size, statb.st_size <= (off_t)0)) {
+ #else
+-	    statb.st_size < art->lpos || statb.st_size <= (off_t)0) {
++	    (long)statb.st_size < art->lpos || statb.st_size <= (off_t)0) {
+ #endif /* NOV */
+ 	    fclose(f);
+ 	    return who_am_i == I_AM_MASTER ? (FILE *)1 : NULL;
+@@ -351,12 +351,12 @@
+ 	}
+ 
+ 	if (modes & FILL_OFFSETS) {
+-	    fseek(f, (off_t)0, 2);
++	    fseek(f, (long)0, 2);
+ 	    news.ng_lpos = ftell(f);
+ 	}
+ #ifdef NNTP
+ 	else if (use_nntp && (art->flag & (A_DIGEST | A_FOLDER)) == 0) {
+-	    fseek(f, (off_t)0, 2);
++	    fseek(f, (long)0, 2);
+ 	    art->lpos = ftell(f);
+ 	}
+ #endif
+@@ -378,7 +378,7 @@
+     }
+ #ifdef NNTP
+     else if (use_nntp && (art->flag & (A_DIGEST | A_FOLDER)) == 0) {
+-	fseek(f, (off_t)0, 2);
++	fseek(f, (long)0, 2);
+ 	art->lpos = ftell(f);
+     }
+ #endif

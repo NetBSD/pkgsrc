@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1 1999/07/26 21:19:31 tron Exp $
+
+--- master.c.orig	Sat Oct  2 12:33:50 1993
++++ master.c	Mon Jul 26 23:11:38 1999
+@@ -193,8 +193,8 @@
+     gh->first_db_article = 0;
+     gh->last_db_article = 0;
+ 
+-    gh->data_write_offset = (off_t)0;
+-    gh->index_write_offset = (off_t)0;
++    gh->data_write_offset = (long)0;
++    gh->index_write_offset = (long)0;
+ 
+     if (init_group(gh)) {
+ 	(void)open_data_file(gh, 'd', -1);

@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 1999/07/26 21:19:32 tron Exp $
+
+--- newsrc.c.orig	Thu Sep 23 04:11:10 1993
++++ newsrc.c	Mon Jul 26 23:11:38 1999
+@@ -379,7 +379,7 @@
+ 
+     rc = open_file(newsrc_file, OPEN_READ);
+     if (rc != NULL) {
+-	fseek(rc, (off_t)0, 2);
++	fseek(rc, (long)0, 2);
+ 	if (ftell(rc))
+ 	    rewind(rc);
+ 	else {

@@ -1,0 +1,26 @@
+$NetBSD: patch-al,v 1.1 1999/07/26 21:19:28 tron Exp $
+
+--- db.h.orig	Sun Aug 15 08:59:46 1993
++++ db.h	Mon Jul 26 23:11:38 1999
+@@ -71,8 +71,8 @@
+ 
+     time_stamp	dh_date; /* encoded Date: filed (not a time_t value!!) */
+ 
+-    off_t	dh_hpos; /* absolute offset for first byte of header */
+-    off_t	dh_lpos; /* absolute offset for last byte of article */
++    long        dh_hpos; /* absolute offset for first byte of header */
++    long        dh_lpos; /* absolute offset for last byte of article */
+     int16	dh_fpos; /* relative offset for first byte in article text */
+ 
+     int16	dh_lines;
+@@ -104,8 +104,8 @@
+ 
+ /* data access */
+ 
+-off_t db_read_art();
+-off_t get_index_offset(), get_data_offset();
++long db_read_art();
++long get_index_offset(), get_data_offset();
+ 
+ extern data_header db_hdr;
+ extern data_dynamic_data db_data;
