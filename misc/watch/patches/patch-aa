@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/16 01:32:51 simonb Exp $
+$NetBSD: patch-aa,v 1.2 1999/11/27 17:12:43 hubertf Exp $
 
---- watch.c.orig	Mon Mar 22 04:49:20 1999
-+++ watch.c	Wed Jun 16 10:41:38 1999
+--- watch.c.orig	Sun Mar 21 18:49:20 1999
++++ watch.c	Sat Nov 27 18:10:34 1999
 @@ -6,7 +6,7 @@
   * Slighty modified, and corrected, Francois Pinard, 91-04.
   */
@@ -11,3 +11,31 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/16 01:32:51 simonb Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
+@@ -17,10 +17,15 @@
+ int die_flag;
+ void die ();
+ 
++#ifdef __NetBSD__
++#include <sys/types.h>
++#include <time.h>
++#else
+ extern FILE *popen ();
+ extern int pclose ();
+ extern long time ();
+ extern char *ctime ();
++#endif
+ 
+ /*-----------------------------------------.
+  * Decode parameters and launch execution. |
+@@ -38,7 +43,11 @@
+   char buf[180];
+   char cmd[128];
+   int count = 1;
++#ifdef __NetBSD__
++  time_t timer;
++#else
+   long timer;
++#endif
+   int nsecs = 2;
+   int total_chars;
+ 
