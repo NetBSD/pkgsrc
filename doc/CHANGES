@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3191 2003/09/01 16:41:19 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3192 2003/09/01 16:59:38 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3449,3 +3449,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated grhino to 0.8.3 [wiz 2003-09-01]
 	Updated pkg_install to 20020823 [jlam 2003-09-01]
 	Added php4-openssl 4.3.3 [jdolecek 2003-09-01]
+	Added php4-exif 4.3.3 [jdolecek 2003-09-01]
