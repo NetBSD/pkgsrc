@@ -1,0 +1,6 @@
+From http://coq.inria.fr/doc/tutorial.html:
+
+    Coq is a Proof Assistant for a Logical Framework known as the
+    Calculus of Inductive Constructions. It allows the interactive
+    construction of formal proofs, and also the manipulation of
+    functional programs consistently with their specifications.
