@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/24 23:12:37 cube Exp $
+#
 
-DISTNAME=	gkrellmoon-0.3
-PKGNAME=	gkrellm-moon-0.3
-PKGREVISION=	4
-CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gkrellmoon/}
+DISTNAME=		gkrellmoon-0.6
+PKGNAME=		gkrellm-moon-0.6
+CATEGORIES=		misc
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gkrellmoon/}
 
-MAINTAINER=	damon@NetBSD.org
-HOMEPAGE=	http://gkrellmoon.sourceforge.net/
-COMMENT=	gkrellm moonclock plugin
+MAINTAINER=		cube@NetBSD.org
+HOMEPAGE=		http://gkrellmoon.sourceforge.net/
+COMMENT=		GKrellM2 moonclock plugin
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=		yes
+ALL_TARGET=		gkrellmoon.so
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
-
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
