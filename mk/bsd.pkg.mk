@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.280 1999/05/30 16:09:30 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.281 1999/06/04 17:05:26 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1714,7 +1714,9 @@ _DEPENDS_USE:
 .for i in ${DEPENDS_TMP}
 	${_PKG_SILENT}${_PKG_DEBUG}prog="`${ECHO} \"${i}\" | ${SED} -e 's/:.*//'`"; \
 	dir="`${ECHO} \"${i}\" | ${SED} -e 's/[^:]*://'`";		\
-	if expr "$$dir" : '.*:' > /dev/null; then			\
+	if [ ${_DEPENDS_TARGET_OVERRIDE}X != X ]; then			\
+		target=${DEPENDS_TARGET};				\
+	elif expr "$$dir" : '.*:' > /dev/null; then			\
 		target=`${ECHO} $$dir | ${SED} -e 's/.*://'`;		\
 		dir=`${ECHO} $$dir | ${SED} -e 's/:.*//'`;		\
 	else								\
@@ -1790,7 +1792,7 @@ check-depends:
 .if (defined(DEPENDS) || defined(BUILD_DEPENDS) || defined(RUN_DEPENDS)) && \
     !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS) && !exists(${EXTRACT_COOKIE})
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "===>  Validating dependencies for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 depends || \
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 depends || \
 		(${ECHO_MSG} "===>  ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
 .endif
 .endif
