@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/24 13:42:04 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/26 02:38:32 hubertf Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -42,6 +42,7 @@ post-configure:
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/konsole_grantpty
 	@${CHMOD} u+s ${PREFIX}/bin/*.kss
+	@${CHMOD} u+s ${PREFIX}/bin/ksysguardd
 	@${CP} ${PLIST_INIT} ${PLIST_SRC}
 	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} \! -type d | sort >>${PLIST_SRC})
 	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} -type d | sort -r | \
