@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/12/28 04:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2000/01/15 18:46:23 jlam Exp $
 #
 
 DISTNAME=	mikmod-3.0.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.freenet.tlh.fl.us/~amstpi/	\
 MAINTAINER=	mycroft@NetBSD.ORG
 HOMEPAGE=	http://www.freenet.tlh.fl.us/~amstpi/mikmod.html
 
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 USE_GMAKE=	yes
 

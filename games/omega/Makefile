@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/09 06:10:43 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/15 18:46:28 jlam Exp $
 # FreeBSD Id: ports/games/omega/Makefile,v 1.3 1999/08/25 06:04:09 obrien Exp
 
 DISTNAME=	omega-0.90-pa4
@@ -12,14 +12,13 @@ MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	http://dolphin.openprojects.net/Omega/
 HOMEPAGE=	http://www.win.tue.nl/games/roguelike/omega
 
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 CONFLICTS=	teTeX-bin-*
 
 ALL_TARGET=
 
-#ncurses
-CFLAGS+=	-I${PREFIX}/include
+CFLAGS+=	-I${LOCALBASE}/include		# for ncurses.h
 
 do-install:
 	@ ${INSTALL_PROGRAM} -o games -g games -m 4711 ${WRKSRC}/omega \

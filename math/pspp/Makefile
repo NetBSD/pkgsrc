@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/01/14 14:01:58 rh Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/15 18:46:29 jlam Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -16,7 +16,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
 
 DEPENDS+=	gettext-0.10.*:../../devel/gettext
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 .if !exists(/usr/include/readline.h)
 DEPENDS+=       readline-4.0:../../devel/readline

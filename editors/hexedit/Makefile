@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/11/12 16:07:01 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/01/15 18:46:26 jlam Exp $
 #
 
 DISTNAME=	hexedit-1.1.0
@@ -22,7 +22,7 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 .endif
 
 .include "../../mk/bsd.pkg.mk"
