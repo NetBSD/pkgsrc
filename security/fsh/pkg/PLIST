@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/14 15:37:49 fredb Exp $
+bin/fcp
+bin/fsh
+bin/fshd
+bin/in.fshd
+libexec/fcpwrap
+share/fsh/fsh.py
+share/fsh/fshd.py
+share/fsh/fshlib.py
+share/fsh/fshversion.py
+share/fsh/infshd.py
+@unexec install-info --delete %D/info/fsh.info %D/info/dir
+info/fsh.info
+@exec install-info %D/info/fsh.info %D/info/dir
+@dirrm share/fsh
