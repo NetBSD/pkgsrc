@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/11 17:45:27 jmmv Exp $
+
+--- bus/Makefile.in.orig	2004-08-13 00:58:01.000000000 +0200
++++ bus/Makefile.in
+@@ -243,12 +243,12 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ 
+-configdir = $(sysconfdir)/dbus-1
++configdir = $(datadir)/examples/@PACKAGE@
+ 
+ INCLUDES = -I$(top_srcdir) $(DBUS_BUS_CFLAGS)				\
+ 	-DDAEMON_NAME=\"dbus-daemon-1\"  -DDBUS_COMPILATION		\
+-	-DDBUS_SYSTEM_CONFIG_FILE=\""$(configdir)/system.conf"\"	\
+-	-DDBUS_SESSION_CONFIG_FILE=\""$(configdir)/session.conf"\"
++	-DDBUS_SYSTEM_CONFIG_FILE=\""$(sysconfdir)/system.conf"\"	\
++	-DDBUS_SESSION_CONFIG_FILE=\""$(sysconfdir)/session.conf"\"
+ 
+ 
+ EFENCE = 
+@@ -890,8 +890,6 @@ clean-local:
+ 	/bin/rm *.bb *.bbg *.da *.gcov || true
+ 
+ install-data-hook:
+-	$(mkinstalldirs) $(DESTDIR)/$(localstatedir)/run/dbus
+-	$(mkinstalldirs) $(DESTDIR)/$(configdir)/system.d
+ 	$(mkinstalldirs) $(DESTDIR)/$(libdir)/dbus-1.0/services
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

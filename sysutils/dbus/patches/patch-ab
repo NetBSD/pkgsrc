@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/10/11 17:45:27 jmmv Exp $
+
+--- tools/Makefile.in.orig	2004-08-13 00:58:07.000000000 +0200
++++ tools/Makefile.in
+@@ -283,7 +283,7 @@ dbus_monitor_LDADD = $(top_builddir)/gli
+ dbus_launch_LDADD = $(DBUS_X_LIBS)
+ dbus_viewer_LDADD = $(DBUS_GLIB_TOOL_LIBS) $(top_builddir)/glib/libdbus-gtool.la $(DBUS_GTK_LIBS)
+ 
+-man_MANS = dbus-send.1 dbus-monitor.1 dbus-launch.1 dbus-cleanup-sockets.1
++man_MANS = dbus-send.1 dbus-launch.1 dbus-cleanup-sockets.1
+ EXTRA_DIST = $(man_MANS)
+ subdir = tools
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
