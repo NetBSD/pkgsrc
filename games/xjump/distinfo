@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/12 00:01:18 snj Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 23:12:04 agc Exp $
 
 SHA1 (xjump_2.7.5.orig.tar.gz) = 7cf7f1269ef2cd0640575f924f6e7a39668939f2
+RMD160 (xjump_2.7.5.orig.tar.gz) = 4f801e6306aafff9b56da86cd3f7ecc7d1a5e0e7
 Size (xjump_2.7.5.orig.tar.gz) = 15940 bytes
 SHA1 (patch-aa) = c69b7c280b025fa45b3c0d12bb6bf3684891058c
 SHA1 (patch-ab) = e50d487dac355fb904287bc05f6621025332a4f5
