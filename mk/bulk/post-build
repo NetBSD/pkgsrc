@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.50 2005/01/14 13:08:28 jmmv Exp $
+# $NetBSD: post-build,v 1.51 2005/01/15 01:53:00 tv Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -217,9 +217,9 @@ sub pkgResult ($$) {
 	my $file = "";
 	my $ver = "";
 	foreach my $ident (@idents) {
-		$ident =~ /\$[N]etBSD: ([^ ]*),v ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) Exp \$/;
-		if ("$3 $4" gt $datetime) {
-			$datetime = "$3 $4";
+		$ident =~ /\$[N]etBSD: ([^ ]*),v [^ ]* ([^ ]*) ([^ ]*) [^ ]* Exp \$/;
+		if (defined($2) && defined($3) && ("$2 $3" gt $datetime)) {
+			$datetime = "$2 $3";
 			$file = $1;
 			$ver = $1;
 		}
