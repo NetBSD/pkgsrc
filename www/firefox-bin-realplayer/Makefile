@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/02/10 12:58:19 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/10 13:05:06 grant Exp $
 
 DISTNAME= 		firefox-bin-realplayer-1.0
 PKGREVISION=		1
@@ -12,7 +12,7 @@ COMMENT=		RealAudio and RealVideo player plugin for firefox-bin
 DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
 DEPENDS+=		realplayer-[0-9]*:../../multimedia/realplayer
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		YES
