@@ -1,0 +1,85 @@
+--- Makefile.in.orig	Wed Sep 24 01:57:18 1997
++++ Makefile.in	Wed Oct  1 13:23:24 1997
+@@ -29,7 +29,7 @@
+ # Directory in which to install the library of Tix scripts and demos
+ # (note: you can set the TIX_LIBRARY environment variable at run-time to
+ # override the compiled-in location):
+-TIX_LIBRARY =	$(prefix)/lib/tix$(TIX_VERSION)
++TIX_LIBRARY =	$(prefix)/share/tix$(TIX_VERSION)
+ 
+ # Directory in which to install the archive libtix.a:
+ LIB_DIR =	$(exec_prefix)/lib
+@@ -70,16 +70,16 @@
+ TK_GENERIC_DIR  = $(TK_SRC_DIR)/generic
+ 
+ # Libraries to use when linking:
+-LIBS = @ITK_BUILD_LIB_SPEC@ @ITCL_BUILD_LIB_SPEC@ \
+-    @TK_BUILD_LIB_SPEC@ @TCL_BUILD_LIB_SPEC@ @TK_LIBS@
++LIBS = @ITK_LIB_SPEC@ @ITCL_LIB_SPEC@ \
++    @TK_LIB_SPEC@ @TCL_LIB_SPEC@ @TK_LIBS@
+ 
+ # Libraries for building a stand-alone Tclsh.
+ #
+-LIBS_TCLONLY = @TCL_BUILD_LIB_SPEC@ @TCL_LIBS@
++LIBS_TCLONLY = @TCL_LIB_SPEC@ @TCL_LIBS@
+ 
+-RUN_TCLSH	= TCL_LIBRARY=$(TCL_SRC_DIR)/library \
+-		  TK_LIBRARY=$(TK_SRC_DIR)/library \
+-	          $(TCL_SRC_DIR)/unix/tclsh
++RUN_TCLSH	= TCL_LIBRARY=$(TCL_SRC_DIR)/../../lib/tcl8.0 \
++		  TK_LIBRARY=$(TK_SRC_DIR)/../../lib/tk8.0 \
++	          $(TCL_SRC_DIR)/../../bin/tclsh8.0
+ 
+ 
+ #----------------------------------------------------------------
+@@ -210,29 +212,29 @@
+ # scripts of TK must be included in the fixed order.
+ #----------------------------------------------------------------------
+ 
+-TCL_SCRIPTS = $(TCL_SRC_DIR)/library/*.tcl
++TCL_SCRIPTS = $(TCL_SRC_DIR)/../../lib/tcl8.0/*.tcl
+ 
+ TK_SCRIPTS = \
+-    $(TK_SRC_DIR)/library/bgerror.tcl \
+-    $(TK_SRC_DIR)/library/dialog.tcl \
+-    $(TK_SRC_DIR)/library/focus.tcl \
+-    $(TK_SRC_DIR)/library/obsolete.tcl \
+-    $(TK_SRC_DIR)/library/optMenu.tcl \
+-    $(TK_SRC_DIR)/library/palette.tcl \
+-    $(TK_SRC_DIR)/library/tearoff.tcl \
+-    $(TK_SRC_DIR)/library/clrpick.tcl \
+-    $(TK_SRC_DIR)/library/comdlg.tcl \
+-    $(TK_SRC_DIR)/library/msgbox.tcl \
+-    $(TK_SRC_DIR)/library/tkfbox.tcl \
+-    $(TK_SRC_DIR)/library/xmfbox.tcl \
+-    $(SRC_DIR)/generic/tk4.2/tk.tcl \
+-    $(TK_SRC_DIR)/library/button.tcl \
+-    $(TK_SRC_DIR)/library/entry.tcl \
+-    $(TK_SRC_DIR)/library/listbox.tcl \
+-    $(TK_SRC_DIR)/library/menu.tcl \
+-    $(TK_SRC_DIR)/library/scale.tcl \
+-    $(TK_SRC_DIR)/library/scrlbar.tcl \
+-    $(TK_SRC_DIR)/library/text.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/bgerror.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/dialog.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/focus.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/obsolete.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/optMenu.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/palette.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/tearoff.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/clrpick.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/comdlg.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/msgbox.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/tkfbox.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/xmfbox.tcl \
++    $(SRC_DIR)/generic/tk8.0/tk.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/button.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/entry.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/listbox.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/menu.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/scale.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/scrlbar.tcl \
++    $(TK_SRC_DIR)/../../lib/tk8.0/text.tcl \
+     $(SRC_DIR)/generic/tk8.0/console.tcl
+ 
+ TIX_SCRIPTS = \
