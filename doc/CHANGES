@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.877 2002/12/22 22:28:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.878 2002/12/23 01:27:40 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4063,3 +4063,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ion to 20010523nb1 [jmmv 2002-12-22]
 	Updated cdbkup to 1.0nb1 [jmmv 2002-12-22]
 	Updated qterm to 1.0nb1 [jmmv 2002-12-22]
+	Added gp-factint-1.3 [cjep 2002-12-23]
