@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3229 2005/03/17 13:56:26 wiz Exp $
+$NetBSD: TODO,v 1.3230 2005/03/17 15:50:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1039,6 +1039,7 @@ Suggested package updates
 	o sqwebmail-5.0.1
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
+	o ssh-askpass-1.2.4.1
 	o staroffice-7p1
 	o stella-1.4.2
 	o stellarium-0.6.1
