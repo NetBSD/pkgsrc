@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.155 2004/09/22 17:56:31 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.156 2004/09/24 16:15:18 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -533,12 +533,15 @@ LDFLAGS+=	${_flag_}
 
 # Create the buildlink include and lib directories so that the Darwin
 # compiler/linker won't complain verbosely (on stdout, even!) when
-# those directories are passed as sub-arguments of -I and -L.
+# those directories are passed as sub-arguments of -I and -L.  Also,
+# create the buildlink bin directory for use by packages that need to
+# drop off a buildlink wrapper for an installed binary or script.
 #
 .PHONY: buildlink-directories
 do-buildlink: buildlink-directories
 buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_BINDIR}
 .if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
