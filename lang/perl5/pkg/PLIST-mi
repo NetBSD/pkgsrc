@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.6 1999/04/08 18:51:53 agc Exp $
+@comment $NetBSD: PLIST-mi,v 1.7 1999/12/20 06:07:24 simonb Exp $
 bin/a2p
 bin/c2ph
 bin/find2perl
@@ -600,6 +600,7 @@ man/man1/xsubpp.1
 @exec	mkdir -p %D/lib/perl5/IO
 @exec	mkdir -p %D/lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/Text/ParseWords
 @exec	mkdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}
+@unexec rm %D/lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/perllocal.pod || true
 @unexec rmdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS} 2>/dev/null || true
 @unexec rmdir -p %D/lib/perl5/man/man3 2>/dev/null || true
 @dirrm lib/perl5/Bundle
