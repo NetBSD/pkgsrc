@@ -1,12 +1,25 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.53 2004/07/28 16:54:03 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.54 2004/08/04 11:39:44 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
+if [ "$1" = -v ] ; then
+    shift
+    opt_v=1
+fi
 if [ -n "$1" ]; then
     CC=$1
 else
     CC=gcc
 fi
+
+display_hw_details()
+    {
+    echo "  hw.model        : '$hw_model'"
+    echo "  hw.machine      : '$hw_machine'"
+    echo "  hw.machine_arch : '$hw_machine_arch'"
+    echo "  cpu details     :"
+    sed -n -e 's/^/    /' -e '/^    cpu/p' /var/run/dmesg.boot
+    }
 
 hw_model=$(sysctl -n hw.model)
 hw_machine=$(sysctl -n hw.machine)
@@ -63,8 +76,8 @@ case $hw_machine_arch in
 	*Intel\ Pentium\ III\ *)	FLAGS='-march=pentium3'		;;
 	*Intel\ Mobile\ Pentium\ III\ *) FLAGS='-march=pentium3'	;;
 	*Intel\ Celeron\ \(Mendocino\)\ *) FLAGS='-march=pentium3 -mno-sse' ;;
-	*Intel\ Pentium\ M\ *)		FLAGS='-march=pentium3'		;;
-	*Intel\ Mobile\ Pentium\ 4\ *)	FLAGS='-march=pentium4'		;;
+	*Intel\ Pentium\ M\ *)		FLAGS='-march=pentium3m'	;;
+	*Intel\ Mobile\ Pentium\ 4\ *)	FLAGS='-march=pentium4m'	;;
 	*Intel\ Pentium\ 4\ *)		FLAGS='-march=pentium4'		;;
 	*VIA\ C3*\ Samuel*)		FLAGS='-march=c3'		;;
 	*AMD\ K6-III*)			FLAGS='-march=k6-3'		;;
@@ -131,13 +144,14 @@ case $hw_machine_arch in
 
     sparc | sparc64) case " $hw_model" in			   # Examples
 	*[\ \(]MB86900/1A*)	FLAGS='-mcpu=cypress'		;; # ss1+
+	*[\ \(]L64811*)		FLAGS='-mcpu=cypress'		;; # sun4/sun4c
 	*[\ \(]CY7C601*)	FLAGS='-mcpu=cypress'		;; # ss2
 	*[\ \(]W8601/8701*)	FLAGS='-mcpu=cypress'		;; # elc
 	*[\ \(]MB86904*)	FLAGS='-mcpu=supersparc'	;; # ss5 usparc
 	*[\ \(]MB86907*)	FLAGS='-mcpu=supersparc'	;; # ss5 usparc
 	*[\ \(]TMS390S10*)	FLAGS='-mcpu=supersparc'	;; # classic  "
 	*[\ \(]TMS390Z50*)	FLAGS='-mcpu=supersparc'	;; # ss10/ss20
-	*[\ \(]RT620/625*)	FLAGS='-mcpu=supersparc'	;; # ss20 ross
+	*[\ \(]RT620/625*)	FLAGS='-mcpu=hypersparc'	;; # ss20 ross
 	*[\ \(]MB86930*)	FLAGS='-mcpu=sparclite'		;; # from gcc
 	*[\ \(]MB86934*)	FLAGS='-mcpu=sparclite'		;; # from gcc
 	# under 1.5.1 -mcpu=ultrasparc chokes egcs-2.91.66 compiling perl
@@ -154,13 +168,21 @@ case $hw_machine_arch in
 
 esac
 
+############
+# Everything from this point common between all cpuflags variants.
+
+if [ -n "$opt_v" ] ; then
+    if [ -z "$NONE" ] ; then
+	echo "CPUFLAGS=Unknown"
+    else
+	echo "CPUFLAGS=None"
+    fi
+    display_hw_details
+    exit
+fi
 if [ -z "$FLAGS" -a -z "$NONE" ] ; then
     echo 'Unknown machine - please send details to abs@netbsd.org'	>&2
-    echo "  hw.model        : '$hw_model'"				>&2
-    echo "  hw.machine      : '$hw_machine'"				>&2
-    echo "  hw.machine_arch : '$hw_machine_arch'"			>&2
-    echo "  cpu details     :"						>&2
-    egrep '^cpu' /var/run/dmesg.boot					>&2
+    display_hw_details							>&2
 fi
 
 # Fixup options for older gccs.
@@ -228,7 +250,7 @@ if [ -n "$FLAGS" ]; then
 3.3:-march=winchip-c6:-march=i586
 3.3:-march=winchip2:-march=i586
 3.4:-march=athlon64:-march=athlon-xp
-3.4:-march=athlong-fx:-march=athlon-xp
+3.4:-march=athlon-fx:-march=athlon-xp
 3.4:-march=c3-2:-march=c3
 3.4:-march=k8:-march=athlon-xp
 3.4:-march=nocona:-march=pentium4

@@ -1,39 +1,121 @@
 #!/bin/sh
-# $NetBSD: cpuflags.SunOS,v 1.2 2002/07/13 11:27:29 wiz Exp $
+# $NetBSD: cpuflags.SunOS,v 1.3 2004/08/04 11:39:44 abs Exp $
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
-arch=`/usr/bin/uname -m`
+if [ "$1" = -v ] ; then
+    shift
+    opt_v=1
+fi
+if [ -n "$1" ]; then
+    CC=$1
+else
+    CC=gcc
+fi
 
-case $arch in
+display_hw_details()
+    {
+    echo "  arch            : '$hw_arch'"
+    }
+
+hw_arch=`/usr/bin/uname -m`
+
+case $hw_arch in
     sun4c | sun4 )		FLAGS='-mcpu=cypress' ;;
     sun4m )			FLAGS='-mcpu=supersparc' ;;
     sun4u )			FLAGS='-mcpu=v9' ;;
 esac
 
+############
+# Everything from this point common between all cpuflags variants.
+
+if [ -n "$opt_v" ] ; then
+    if [ -z "$NONE" ] ; then
+	echo "CPUFLAGS=Unknown"
+    else
+	echo "CPUFLAGS=None"
+    fi
+    display_hw_details
+    exit
+fi
 if [ -z "$FLAGS" -a -z "$NONE" ] ; then
     echo 'Unknown machine - please send details to abs@netbsd.org'	>&2
-    echo "  arch            : '$arch'"				>&2
+    display_hw_details							>&2
 fi
 
-# Fixup flags for old gcc
+# Fixup options for older gccs.
+# Entries can be recursive - eg:
+#   -march=k6-3 -> -march=k6 -> -march=pentium -> -march=i486
+#
+# The format of table is
+#   gcc_version_in_which_option_was_introduced	new_option  old_option
+
 if [ -n "$FLAGS" ]; then
-    gcc_ver=`gcc -v 2>&1 | nawk '/gcc version/ {sub("egcs-","");print $3}'`
-    FLAGS=`nawk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
-	{if (gcc_ver < $1){map[$2] = ""$3}}
-	END{if (flags in map) {print map[flags]}else {print flags}}
+    gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
+    FLAGS=`awk -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+	{ if (gcc_ver < $1){map[$2] = ""$3} }
+	END { while (flags in map) {flags = map[flags]} print flags }
 	' <<EOD
-2.90	-mcpu=21164a	
-2.90	-march=i386		-mno-486
-2.90	-march=i486		-m486
-2.90	-march=pentium		-m486
-2.90	-march=pentiumpro	-m486
-2.90	-mcpu=supersparc	-msupersparc
-2.90	-mcpu=sparclite		-msparclite
-2.90	-mcpu=cypress		-mcypress
-2.90	-mcpu=v9		-mv8
-2.90	-mcpu=arm610		-m6
-2.90	-mcpu=strongarm110	-m6
-2.90	-mcpu=arm710		-m6
-2.95	-march=k6		-march=pentium
+2.90:-march=i386:-mno-486
+2.90:-march=i486:-m486
+2.90:-march=pentium:-m486
+2.90:-march=pentiumpro:-m486
+2.90:-mcpu=21164a:
+2.90:-mcpu=arm610:-m6
+2.90:-mcpu=arm710:-m6
+2.90:-mcpu=cypress:-mcypress
+2.90:-mcpu=sparclite:-msparclite
+2.90:-mcpu=strongarm110:-m6
+2.90:-mcpu=supersparc:-msupersparc
+2.90:-mcpu=v9:-mv8
+2.95:-march=k6:-march=pentium
+3.0:-march=athlon:-march=pentiumpro
+3.1:-march=athlon-4:-march=athlon
+3.1:-march=athlon-mp:-march=athlon
+3.1:-march=athlon-tbird:-march=athlon
+3.1:-march=athlon-xp:-march=athlon
+3.1:-march=k6-2:-march=k6
+3.1:-march=k6-3:-march=k6
+3.1:-march=pentium-mmx:-march=pentium
+3.1:-march=pentium2:-march=pentiumpro
+3.1:-march=pentium3 -mno-sse:-march=pentiumpro
+3.1:-march=pentium3:-march=pentiumpro
+3.1:-march=pentium4:-march=pentiumpro
+3.1:-march=r2000:-cpu=r2000
+3.1:-march=r3000:-cpu=r3000
+3.1:-march=r3900:-cpu=r3900
+3.1:-march=r4000:-cpu=r4000
+3.1:-march=r4100:-cpu=r4100
+3.1:-march=r4300:-cpu=r4300
+3.1:-march=r4400:-cpu=r4400
+3.1:-march=r4600:-cpu=r4600
+3.1:-march=r5000:-cpu=r5000
+3.1:-march=r6000:-cpu=r6000
+3.1:-march=r8000:-cpu=r8000
+3.1:-mcpu=21264a:-mcpu=21264
+3.1:-mtune=r2000:-cpu=r2000
+3.1:-mtune=r3000:-cpu=r3000
+3.1:-mtune=r3900:-cpu=r3900
+3.1:-mtune=r4000:-cpu=r4000
+3.1:-mtune=r4100:-cpu=r4100
+3.1:-mtune=r4300:-cpu=r4300
+3.1:-mtune=r4400:-cpu=r4400
+3.1:-mtune=r4600:-cpu=r4600
+3.1:-mtune=r5000:-cpu=r5000
+3.1:-mtune=r6000:-cpu=r6000
+3.1:-mtune=r8000:-cpu=r8000
+3.3:-march=c3:-march=i586
+3.3:-march=winchip-c6:-march=i586
+3.3:-march=winchip2:-march=i586
+3.4:-march=athlon64:-march=athlon-xp
+3.4:-march=athlon-fx:-march=athlon-xp
+3.4:-march=c3-2:-march=c3
+3.4:-march=k8:-march=athlon-xp
+3.4:-march=nocona:-march=pentium4
+3.4:-march=opteron:-march=athlon-xp
+3.4:-march=pentium-m:-march=pentium3
+3.4:-march=pentium3m:-march=pentium3
+3.4:-march=pentium4m:-march=pentium4
+3.4:-march=prescott:-march=pentium4
 EOD
 `
 fi
