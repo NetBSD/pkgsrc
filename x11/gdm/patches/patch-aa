@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2004/04/01 18:49:37 jmmv Exp $
+$NetBSD: patch-aa,v 1.7 2004/04/02 15:17:43 jmmv Exp $
 
 --- configure.orig	2004-03-15 19:38:10.000000000 +0100
 +++ configure
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.6 2004/04/01 18:49:37 jmmv Exp $
  fi
 +X_PATH="${X11BASE}/bin"
 +X_SERVER_PATH="${X11BASE}/bin"
-+X_SERVER="${X11BASE}/bin/X"
++X_SERVER="${X11BASE}/bin/X ${X_SERVER_ARGS}"
 +X_CONF_PATH="${X11BASE}/bin"
  
  
