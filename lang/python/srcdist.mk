@@ -1,26 +1,26 @@
-# $NetBSD: srcdist.mk,v 1.2 2002/01/29 19:21:58 drochner Exp $
+# $NetBSD: srcdist.mk,v 1.3 2002/04/15 12:29:14 drochner Exp $
 
 .include "../../lang/python/pyversion.mk"
 
 .if ${_PYTHON_VERSION} == "22"
 
-DISTNAME=	Python-2.2
+DISTNAME=	Python-2.2.1
 EXTRACT_SUFX=	.tgz
 DISTINFO_FILE=	${.CURDIR}/../../lang/python22/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/python22/patches
-PYSUBDIR=	Python-2.2
+PYSUBDIR=	Python-2.2.1
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.2/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.1/
 
 .elif ${_PYTHON_VERSION} == "21"
 
-DISTNAME=	Python-2.1.2
+DISTNAME=	Python-2.1.3
 EXTRACT_SUFX=	.tgz
 DISTINFO_FILE=	${.CURDIR}/../../lang/python21/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/python21/patches
-PYSUBDIR=	Python-2.1.2
+PYSUBDIR=	Python-2.1.3
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.2/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.3/
 
 .elif ${_PYTHON_VERSION} == "20"
 
