@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2003/06/23 11:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/25 08:47:30 mrg Exp $
 
-DISTNAME=	transcode-0.6.6
+DISTNAME=	transcode-0.6.7
 CATEGORIES=	graphics
-MASTER_SITES=	http://freshmeat.net/redir/transcode/15968/url_tgz/
+MASTER_SITES=	http://www.zebra.fh-weingarten.de/~transcode/pre/ \
+		http://freshmeat.net/redir/transcode/15968/url_tgz/
 
 MAINTAINER=	tech-pkg@netbsd.org
-HOMEPAGE=	http://freshmeat.net/projects/transcode/
+HOMEPAGE=	http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode/
 COMMENT=	command line video-stream processing tool
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
@@ -18,18 +19,15 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-qt
+# when libmpeg3 is a shlib.
 CONFIGURE_ARGS+=	--without-libmpeg3
-CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
-CONFIGURE_ARGS+=	--with-dvdread-includes=${BUILDLINK_PREFIX.libdvdread}
 
 # this used to operate on acinclude.m4 and run aclocal, but running
 # aclocal here breaks due to missing DLFCN checking
 post-patch:
-	cd ${WRKSRC} && \
-	sed "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s| -ldl||g" aclocal.m4 > aclocal.new && \
-	${MV} aclocal.new aclocal.m4 && \
-	${AUTOHEADER} && \
-	${AUTOCONF}
+	cd ${WRKSRC} && && \
+	sed "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s|-ldl -lm|-lm|g" configure > configure.new && \
+	${MV} configure.new configure && ${CHMOD} a+x configure
 	-cd ${WRKSRC} && ${AUTOMAKE}
 
 post-install:
@@ -42,6 +40,7 @@ post-install:
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../devel/libmpeg3/buildlink2.mk"
+# depends on a much later avifile that is in pkgsrc
 #.include "../../graphics/avifile/buildlink2.mk"
 .include "../../graphics/ImageMagick/buildlink2.mk"
 .include "../../graphics/mjpegtools/buildlink2.mk"
