@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:26:46 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 11:37:35 agc Exp $
 
-MD5 (sketch-0.6.3.tar.gz) = 1086eb6c6b403626fde0ec1308414448
+SHA1 (sketch-0.6.3.tar.gz) = 186ee6a924f4a4cd6e567a25696228fe9bd1b179
+Size (sketch-0.6.3.tar.gz) = 749685 bytes
 SHA1 (patch-aa) = d27d4612880e63426ff4038ef2c706486e195e47
