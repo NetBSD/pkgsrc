@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2003/06/02 01:18:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.70 2003/06/28 18:16:03 jschauma Exp $
 
 DISTNAME=       pine4.53
 PKGNAME=        pine-4.53
@@ -15,10 +15,26 @@ COMMENT=	Program for Internet News and E-mail
 LICENSE=	pine-license
 
 BUILD_DEFS+=	PINE_USE_LDAP
+USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
+
+CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=	YES
+.if ${OPSYS} == "SunOS"
+BUILDNAME= so5
+BUILDFILE= sol
+.elif ${OPSYS} == "Linux"
+BUILDNAME= lrh
+BUILDFILE= lnx
+.elif ${OPSYS} == "Darwin"
+BUILDNAME= osx
+BUILDFILE= osx
+.else
+BUILDNAME= neb
+BUILDFILE= neb
+.endif
 
 .if defined(PINE_USE_LDAP) && (${PINE_USE_LDAP} == "YES")
 .  include "../../databases/openldap/buildlink2.mk"
@@ -34,7 +50,7 @@ pre-patch:
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-${BUILDFILE}.h ${WRKSRC}/pine/osdep/os-${BUILDFILE}.h.orig
 	${SED} \
-		-e 's@/usr/local/lib/@${PREFIX}/etc/@' \
+		-e 's@/usr/local/lib/@${PKG_SYSCONFDIR}/etc/@' \
 		-e 's@DEFAULT_DEBUG.*2@DEFAULT_DEBUG 0@' \
 		<${WRKSRC}/pine/osdep/os-${BUILDFILE}.h.orig >${WRKSRC}/pine/osdep/os-${BUILDFILE}.h
 	@${RM} -rf ${WRKSRC}/pico
@@ -62,7 +78,6 @@ do-install:
 	    -e 's|^\(sort-key\)=.*$$|\1=Arrival/Reverse|g' \
 	    >${PREFIX}/share/examples/pine/pine.conf
 	${INSTALL_DATA}	${FILESDIR}/pine.conf.fixed ${PREFIX}/share/examples/pine/
-	@[ -f ${PREFIX}/etc/pine.conf ] || ${CP} ${PREFIX}/share/examples/pine/pine.conf ${PREFIX}/etc/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pine
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pine/contrib
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pine/contrib/utils
@@ -72,22 +87,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
 	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
 
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../editors/pico/buildlink2.mk"
 .include "../../mail/imap-uw/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDNAME= so5
-BUILDFILE= sol
-.elif ${OPSYS} == "Linux"
-BUILDNAME= lrh
-BUILDFILE= lnx
-.elif ${OPSYS} == "Darwin"
-BUILDNAME= osx
-BUILDFILE= osx
-.else
-BUILDNAME= neb
-BUILDFILE= neb
-.endif
