@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/15 13:33:22 uebayasi Exp $
-@unexec ${INSTALL_INFO} --delete %D/info/lookup.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2003/08/03 00:41:33 seb Exp $
 info/lookup.info
 info/lookup.info-1
 info/lookup.info-2
 info/lookup.info-3
 info/lookup-guide.info
-@exec ${INSTALL_INFO} --delete %D/info/lookup.info %D/info/dir
 ${EMACS_LISPPREFIX}/lookup/evi-mule.el
 ${EMACS_LISPPREFIX}/lookup/evi-mule.elc
 ${EMACS_LISPPREFIX}/lookup/evi.el
