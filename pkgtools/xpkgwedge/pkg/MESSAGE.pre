@@ -1,11 +1,10 @@
 ==============================================================================
-$NetBSD: MESSAGE.pre,v 1.2 1998/08/07 11:18:26 agc Exp $
+$NetBSD: MESSAGE.pre,v 1.3 1999/07/07 02:31:46 mrg Exp $
 
 NOTES:
 
-- Add the following line in /etc/mk.conf to enable building of X pkgs into
-  the regular pkg binary tree:
-	X11BASE=${LOCALBASE}
+- You MUST set the environment variable USE_LOCALBASE_FOR_X11 in /etc/mk.conf,
+  in order to allow pkgsrc to work with this special package.
 
 - You MUST set the environment variable XAPPLRESDIR in /etc/profile and
   /etc/csh.login by hand in order to make pkgs built with xpkgwedge run
