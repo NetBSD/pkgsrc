@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1053 2002/09/23 08:35:12 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1054 2002/09/24 13:01:02 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -879,7 +879,7 @@ MASTER_SITE_SUNSITE+=	\
 MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.sunet.se/pub/X11/GNOME/ \
-	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
+	ftp://ftp.tuwien.ac.at/hci/GNOME/gnome.org/
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://belnet.dl.sourceforge.net/sourceforge/ \
