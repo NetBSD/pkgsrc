@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/06/02 01:18:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.29 2003/06/24 19:38:25 wiz Exp $
 
 DISTNAME=		so51a_lnx_${LANGNO}
 PKGNAME=		staroffice-${LANGUAGE}-5.1a
@@ -15,6 +15,8 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=		suse_linux>=6.1:../../emulators/${SUSE_DIR_PREFIX}_linux
 
 CONFLICTS=		staroffice-[0-9]*
+CONFLICTS+=		openoffice-[0-9]*
+CONFLICTS+=		openoffice-linux-[0-9]*
 
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
