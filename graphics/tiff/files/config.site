@@ -1,10 +1,10 @@
-# $NetBSD: config.site,v 1.4 2000/01/06 01:25:24 wiz Exp $
+# $NetBSD: config.site,v 1.5 2000/12/06 16:59:32 jlam Exp $
 
 DIR_BIN=${PREFIX}/bin			# destination for applications
 DIR_LIB=${PREFIX}/lib			# destination for library
 DIR_INC=${PREFIX}/include		# destination for include files
 DIR_MAN=${PREFIX}/man			# destination for man pages
-DIR_HTML=${PREFIX}/share/doc/tiff	# destination for html documentation
+DIR_HTML=${PREFIX}/share/doc/html/tiff	# destination for html documentation
 DIRS_LIBINC=${LOCALBASE}/include	# dirs to search for ancillary includes
 
 # JPEG support
