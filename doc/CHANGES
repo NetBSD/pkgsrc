@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6062 2004/05/29 08:07:35 dillo Exp $
+$NetBSD: CHANGES,v 1.6063 2004/05/29 11:30:49 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2687,3 +2687,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-libapreq to 1.2nb1 [snj 2004-05-29]
 	Updated cgoban-java to 2.6.1 [rh 2004-05-29]
 	Updated cdrdao to 1.1.8 [dillo 2004-05-29]
+	Added openmsx-0.4.0 [xtraeme 2004-05-29]
