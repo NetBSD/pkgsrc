@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:33 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/01 12:33:20 wiz Exp $
 etc/portsentry.ignore
 etc/portsentry.conf
 sbin/portsentry
+share/doc/portsentry/README.install
+share/doc/portsentry/README.methods
+@dirrm share/doc/portsentry
