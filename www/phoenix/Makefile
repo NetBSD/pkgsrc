@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/10 16:02:38 taya Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/23 16:10:59 cjep Exp $
 
 MOZILLA=	phoenix
 MOZILLA_BIN=	phoenix-bin
@@ -10,8 +10,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 HOMEPAGE=	http://www.mozilla.org/projects/phoenix/
 COMMENT=	A redesign of the Mozilla browser component
 
-CONFIGURE_ENV+=	MOZ_PHOENIX=1	
-MAKE_ENV+=	MOZ_PHOENIX=1	
+CONFIGURE_ENV+=	MOZ_PHOENIX=1
+MAKE_ENV+=	MOZ_PHOENIX=1
 
 CONFIGURE_ARGS+=	--disable-mailnews
 CONFIGURE_ARGS+=	--disable-composer
