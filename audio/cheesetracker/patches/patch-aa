@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
+
+--- src/sound_driver_oss.h.orig	Wed May  9 06:43:05 2001
++++ src/sound_driver_oss.h	Thu Jun 14 23:33:41 2001
+@@ -22,7 +22,12 @@
+ 
+ #include <sound_driver.h>
+ #include <fcntl.h>
++#if defined(__NetBSD__)
++#include <sys/audioio.h>
++#include <soundcard.h>
++#else
+ #include <sys/soundcard.h>
++#endif
+ #include <sys/ioctl.h>
+ 
+ #include "mutex_lock_pthreads.h"
