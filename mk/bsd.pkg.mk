@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.625 2000/11/29 14:44:12 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.626 2000/11/29 14:52:57 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1706,10 +1706,10 @@ real-su-install:
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
 	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
-	# PLIST must be generated at this late point (instead of
-	# depending on it somewhere earlier), as the
-	# pre/do/post-install aren't run then yet:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
+	@# PLIST must be generated at this late point (instead of
+	@# depending on it somewhere earlier), as the
+	@# pre/do/post-install aren't run then yet:
+	@${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
