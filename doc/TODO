@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1815 2004/06/06 05:09:57 schmonz Exp $
+$NetBSD: TODO,v 1.1816 2004/06/06 09:41:50 recht Exp $
 
 Suggested new packages
 ======================
@@ -277,6 +277,8 @@ Suggested package updates
 	o lavaps-2.4
 	o leafnode-1.9.54
 	o libcaca-0.9
+	o libggi-2.0.5
+	o libgii-0.8.5
 	o libidn-0.4.7
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
