@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- ../../install.orig	Mon Aug  9 16:39:17 1999
++++ ../../install	Sun Jan  9 02:17:40 2000
+@@ -60,7 +60,7 @@
+   #   PLTHOME=<newpath>
+   # where <newpath> is provided to this script
+ 
+-  PROGRAM="/set PLTHOME=.*/ { print \"  set PLTHOME=$installplthome\"; next } /PLTHOME=.*/ { print \"  PLTHOME=$installplthome\"; next } /.*/ {print} "
++  PROGRAM="/PLTHOME=.*/ { print \"  PLTHOME=${PREFIX}/lib/plt\"; next } /.*/ {print} "
+ 
+   for f in bin/* ; do
+    if [ -f $f ] ; then
