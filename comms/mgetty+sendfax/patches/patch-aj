@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2002/03/06 19:19:02 fredb Exp $
+
+--- doc/sendfax.1in.orig	Sun Jan 12 08:52:30 1997
++++ doc/sendfax.1in
+@@ -1,7 +1,7 @@
+-.TH fax 1 "27 Oct 94" "greenie" "mgetty+sendfax manual"
++.TH sendfax 1 "27 Oct 94" "greenie" "mgetty+sendfax manual"
+ .IX fax
+ .SH NAME
+-fax \- fax sending and receiving with mgetty+sendfax
++sendfax \- fax sending and receiving with mgetty+sendfax
+ .SH SYNOPSIS
+ .B faxspool
+ .RB [options]

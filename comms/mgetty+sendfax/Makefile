@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/02/18 15:14:04 seb Exp $
+# $NetBSD: Makefile,v 1.20 2002/03/06 19:19:02 fredb Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -23,6 +23,9 @@ MGETTY_CONFDIR=	${PREFIX}/etc/mgetty+sendfax
 MAKE_ENV+=	MGETTY_CONFDIR=${MGETTY_CONFDIR}
 
 USE_BUILDLINK_ONLY=	# defined
+
+pre-patch:
+	${MV} ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
 
 do-configure:
 	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure

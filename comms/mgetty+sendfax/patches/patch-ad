@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.3 2002/02/18 15:14:04 seb Exp $
+$NetBSD: patch-ad,v 1.4 2002/03/06 19:19:02 fredb Exp $
 
---- doc/Makefile.orig	Thu Nov 27 21:33:26 1997
+--- doc/Makefile.orig	Thu Nov 27 14:33:26 1997
 +++ doc/Makefile
+@@ -6,7 +6,7 @@
+ NROFF=nroff
+ #
+ #
+-MAN1PAGES=g32pbm.1 g3cat.1 pbm2g3.1 fax.1 \
++MAN1PAGES=g32pbm.1 g3cat.1 pbm2g3.1 sendfax.1 \
+ 	  faxspool.1 faxrunq.1 faxq.1 faxrm.1 coverpg.1
+ MAN4PAGES=mgettydefs.4
+ MAN5PAGES=faxqueue.5
 @@ -26,7 +26,7 @@
  
  all:
@@ -20,3 +29,12 @@ $NetBSD: patch-ad,v 1.3 2002/02/18 15:14:04 seb Exp $
  
  mgetty.ps: mgetty.dvi
  	-dvips -o mgetty.ps mgetty.dvi
+@@ -98,7 +98,7 @@
+ 
+ # explicit man page dependencies
+ 
+-fax.1: fax.1in ../sedscript
++sendfax.1: sendfax.1in ../sedscript
+ faxq.1: faxq.1in ../sedscript
+ faxqueue.5: faxqueue.5in ../sedscript
+ faxrm.1: faxrm.1in ../sedscript
