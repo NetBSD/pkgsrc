@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2004/01/24 14:11:10 grant Exp $
+# $NetBSD: Makefile,v 1.34 2004/01/28 08:43:11 markd Exp $
 
-DISTNAME=	koffice-1.2.1
-PKGREVISION=	8
+DISTNAME=	koffice-1.3
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.2.1/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.2.1/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.2.1/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.3/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.3/src/
 EXTRACT_SUFX=	.tar.bz2
-
-PATCH_SITES=	http://www.koffice.org/bugfixes/
-PATCHFILES=	1.2.1_kword_crashes.diff
-PATCH_DIST_ARGS?=	-d ${WRKSRC}/kword -p0
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
@@ -28,7 +23,18 @@ GCC_REQD=		2.95.3
 
 PTHREAD_OPTS+=		require
 
-REPLACE_PERL=		kpresenter/kprconverter.pl
+PYTHON_VERSIONS_ACCEPTED=	23 23pth # needs shared library
+CONFIGURE_ENV+=			PYTHONDIR="${LOCALBASE}"
+
+REPLACE_PERL+=		lib/store/fix_storage.pl
+REPLACE_PERL+=		admin/config.pl
+REPLACE_PERL+=		admin/bcheck.pl
+REPLACE_PERL+=		admin/conf.change.pl
+REPLACE_PERL+=		admin/cvs-clean.pl
+REPLACE_PERL+=		kword/templates/make_template.pl
+REPLACE_PERL+=		tools/scripts/gdb_output_to_text.pl
+REPLACE_PERL+=		tools/thesaurus/extract.pl
+REPLACE_PERL+=		kpresenter/kprconverter.pl
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
@@ -39,9 +45,15 @@ post-install:
 	@# their local directories.
 	${CHMOD} u+w ${PREFIX}/share/kde/templates/.source/*
 
+.include "../../lang/python/pyversion.mk"
+.include "../../converters/wv2/buildlink2.mk"
+.include "../../textproc/aspell/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
+.include "../../graphics/ImageMagick/buildlink2.mk"
+.include "../../graphics/jasper/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
