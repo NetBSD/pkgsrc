@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.931 2002/12/28 14:51:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.932 2002/12/28 15:00:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4288,3 +4288,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mozilla-linux to 1.3rc1 [grant 2002-12-27]
 	Updated etcupdate to 20021227 [jmmv 2002-12-27]
 	Updated sylpheed to 0.8.7nb1 [jmmv 2002-12-28]
+	Updated sysbuild to 1.7 [jmmv 2002-12-28]
