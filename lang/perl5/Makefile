@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/04/27 16:44:15 tron Exp $
+# $NetBSD: Makefile,v 1.21 1999/05/04 22:39:57 abs Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -15,7 +15,8 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
-			-Darchname=${MACHINE_ARCH}-netbsd -Dusemymalloc=false
+			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS} \
+			-Dusemymalloc=false
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
 test:
