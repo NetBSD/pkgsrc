@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/26 18:44:20 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/26 18:45:14 seb Exp $
 #
 # This Makefile fragment is included by packages that use freewais-sf.
 #
@@ -16,7 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.freewais-sf=freewais-sf
 BUILDLINK_PREFIX.freewais-sf_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.freewais-sf+=	include/wais.h
 BUILDLINK_FILES.freewais-sf+=	lib/libwais.*
-
 
 BUILDLINK_TARGETS+=	freewais-sf-buildlink
 
