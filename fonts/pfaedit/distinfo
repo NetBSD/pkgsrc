@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/09/29 23:15:10 wiz Exp $
+
+SHA1 (pfaedit_full-020910.tgz) = 752328d07f7329b698d1db62af058c80089d17a3
+Size (pfaedit_full-020910.tgz) = 2762492 bytes
+SHA1 (patch-aa) = 7e8abdca9cfc5a346ab0fca09438348ed689fd8b
