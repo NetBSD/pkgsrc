@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.6 2001/02/17 16:45:10 wiz Exp $
+# $NetBSD: printdepends,v 1.7 2001/07/13 15:14:57 dmcmahill Exp $
 #
 # Print list of pkg dependencies suitable for tsort(1).
 # Start in /usr/pkgsrc.
@@ -19,17 +19,23 @@ cwd=$PWD
 
 for pkgdir in $list
 do
-	cd $pkgdir
-
-	l=`make show-depends-dirs`
-	if [ "$l" = "" ]; then
-		# No dependencies
-		echo "$pkgdir $pkgdir"
+	if [ ! -d $pkgdir ]; then
+		echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr
+		echo $pkgdir | sed 's;/.*;/Makefile;g' > /dev/stderr
+		echo "but the directory does not exist.  Please fix this!" > /dev/stderr
 	else
-		for depdir in $l
-		do
-			echo "$depdir $pkgdir"
-		done
+		cd $pkgdir
+
+		l=`make show-depends-dirs`
+		if [ "$l" = "" ]; then
+			# No dependencies
+			echo "$pkgdir $pkgdir"
+		else
+			for depdir in $l
+			do
+				echo "$depdir $pkgdir"
+			done
+		fi
 	fi
 	cd $cwd
 done
