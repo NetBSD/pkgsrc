@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/06/20 20:15:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/08/31 16:04:48 jmmv Exp $
 bin/epiphany
 bin/epiphany-bin
 include/epiphany-1.2/epiphany/ephy-bookmarks.h
@@ -29,22 +29,21 @@ lib/pkgconfig/epiphany-1.2.pc
 share/application-registry/epiphany.applications
 share/applications/bme.desktop
 share/applications/epiphany.desktop
-share/doc/html/epiphany/ch01.html
-share/doc/html/epiphany/epiphany-ephy-cookie-manager.html
-share/doc/html/epiphany/epiphany-ephy-embed-factory.html
-share/doc/html/epiphany/epiphany-ephy-embed-single.html
-share/doc/html/epiphany/epiphany-ephy-password-manager.html
-share/doc/html/epiphany/epiphany-ephy-permission-manager.html
-share/doc/html/epiphany/epiphany-ephy-session.html
-share/doc/html/epiphany/epiphany-ephy-shell.html
-share/doc/html/epiphany/epiphany.devhelp
-share/doc/html/epiphany/home.png
-share/doc/html/epiphany/index.html
-share/doc/html/epiphany/index.sgml
-share/doc/html/epiphany/left.png
-share/doc/html/epiphany/right.png
-share/doc/html/epiphany/style.css
-share/doc/html/epiphany/up.png
+share/doc/epiphany/ch01.html
+share/doc/epiphany/epiphany-ephy-cookie-manager.html
+share/doc/epiphany/epiphany-ephy-embed-factory.html
+share/doc/epiphany/epiphany-ephy-embed-single.html
+share/doc/epiphany/epiphany-ephy-password-manager.html
+share/doc/epiphany/epiphany-ephy-permission-manager.html
+share/doc/epiphany/epiphany-ephy-session.html
+share/doc/epiphany/epiphany-ephy-shell.html
+share/doc/epiphany/epiphany.devhelp
+share/doc/epiphany/home.png
+share/doc/epiphany/index.html
+share/doc/epiphany/index.sgml
+share/doc/epiphany/left.png
+share/doc/epiphany/right.png
+share/doc/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
 share/epiphany/art/epiphany-download.png
 share/epiphany/art/epiphany-entry.png
@@ -107,6 +106,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/epiphany.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/epiphany.mo
@@ -164,7 +164,7 @@ share/pixmaps/epiphany-bookmarks.png
 @dirrm share/epiphany/glade
 @dirrm share/epiphany/art
 @dirrm share/epiphany
-@dirrm share/doc/html/epiphany
+@dirrm share/doc/epiphany
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/application-registry
 @comment in libbonobo: @dirrm lib/bonobo/servers
