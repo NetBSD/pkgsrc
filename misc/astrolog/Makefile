@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2002/02/25 04:47:22 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/29 12:41:48 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
 DISTNAME=       ast54unx
 PKGNAME=        astrolog-5.40
+WRKSRC=		${WRKDIR}
 CATEGORIES=     misc
 MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
 		http://www.astrolog.org/ftp/ \
@@ -27,7 +28,6 @@ USE_X11BASE=	yes
 
 DIST_SUBDIR=    astrolog
 ALL_TARGET=     astrolog
-WRKSRC=		${WRKDIR}
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/astrolog

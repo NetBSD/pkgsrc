@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/03/24 00:13:37 jmc Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:38 jmmv Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
 PKGREVISION=	3
+WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
@@ -33,7 +34,6 @@ USE_BUILDLINK2=	# defined
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
 		BUILDLINK_DIR="${BUILDLINK_DIR}"
-WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \

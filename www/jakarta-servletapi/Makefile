@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/12/26 22:42:31 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:42:49 jmmv Exp $
 
 DISTNAME=	jakarta-servletapi-${TOMCAT_VERSION}-src
 PKGNAME=	${DISTNAME:S/-src$//}
 TOMCAT_VERSION=	3.2.4
+WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-tomcat/release/v${TOMCAT_VERSION}/src/
 
@@ -16,7 +17,6 @@ USE_BUILDLINK2=	# defined
 MAKEFILE=	build.xml
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.javadoc
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
 DOCDIR=		share/doc/java/jakarta-servletapi
 
 post-build:

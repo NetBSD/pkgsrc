@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:10 seb Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:22 jmmv Exp $
 # FreeBSD: ports/japanese/ruby-uconv/Makefile,v 1.8 2001/01/30 19:26:22 knu Exp
 
 DISTNAME=	uconv-0.4.9
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+WRKSRC=		${WRKDIR}/uconv
 CATEGORIES=	japanese converters
 MASTER_SITES=	http://www.yoshidam.net/
 
@@ -14,7 +15,6 @@ DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 USE_RUBY_EXTCONF= yes
 
-WRKSRC=		${WRKDIR}/uconv
 INSTALL_TARGET=	site-install
 
 REPLACE_RUBY=	samples/euc2unicode.rb samples/unicode2euc.rb \

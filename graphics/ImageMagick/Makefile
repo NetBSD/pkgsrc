@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2003/01/26 17:45:28 salo Exp $
+# $NetBSD: Makefile,v 1.94 2003/03/29 12:41:13 jmmv Exp $
 
 DISTNAME=		ImageMagick-${IM_MAJOR_VER}-${IM_MINOR_VER}
 PKGNAME=		ImageMagick-${IM_MAJOR_VER}.${IM_MINOR_VER}
+WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
 			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
@@ -25,8 +26,6 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
-WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 
 PLIST_SUBST+=		IM_MAJOR_VER=${IM_MAJOR_VER}
 

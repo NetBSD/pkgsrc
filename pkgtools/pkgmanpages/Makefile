@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/02/06 16:58:15 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:42:12 jmmv Exp $
 #
 
 DISTNAME=	pkgmanpages-19991222
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -10,7 +11,6 @@ HOMEPAGE=	http://www.netbsd.org/
 COMMENT=	manual page(s) for the packages collection
 
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:14 agc Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:11 jmmv Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
+WRKSRC=			${WRKDIR}
 CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.nosc.mil/pub/aburto/flops/
 DISTFILES=		${DISTNAME}.c ${DISTNAME}.doc
@@ -9,8 +10,6 @@ DISTFILES=		${DISTNAME}.c ${DISTNAME}.doc
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://performance.netlib.org/performance/html/flops.html
 COMMENT=		Floating point benchmark to give your MFLOPS rating
-
-WRKSRC=			${WRKDIR}
 
 do-extract:
 	${MKDIR} ${WRKSRC}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.3 2002/08/25 19:22:56 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/03/29 12:41:23 jmmv Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
+WRKSRC=		${WRKDIR}/Xsi
 MASTER_SITES=	ftp://ftp.freewnn.org/pub/FreeWnn/	\
 		ftp://etlport.etl.go.jp/pub/FreeWnn/	\
 		ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/	\
@@ -43,7 +44,6 @@ MAKE_ENV+=	"KWNNDIR=${KWNNDIR}"
 .endif
 
 GNU_CONFIGURE=	YES
-WRKSRC=		${WRKDIR}/Xsi
 
 post-patch:
 	@for file in `${FIND} ${WRKSRC} -name Makefile.in`; do	\

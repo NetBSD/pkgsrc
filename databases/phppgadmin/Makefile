@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/23 12:13:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:26 jmmv Exp $
 
 DISTNAME=	phpPgAdmin_2-4-2
 PKGNAME=	phppgadmin-2.4.2
+WRKSRC=		${WRKDIR}/${DISTNAME:S/_2-4-2//}
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +15,6 @@ DEPENDS+=	php-pgsql>=4.1.2:../../databases/php4-pgsql
 DEPENDS+=	php-pcre>=4.1.2:../../devel/php4-pcre
 
 NO_BUILD=	YES
-WRKSRC=		${WRKDIR}/${DISTNAME:S/_2-4-2//}
 
 DOC_FILES=	BUGS ChangeLog Documentation.html \
 		INSTALL README TODO

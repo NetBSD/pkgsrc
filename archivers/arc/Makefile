@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2002/08/25 21:48:57 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:00 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp 
 #
 
 DISTNAME=       arc521e.pl8
 PKGNAME=        arc-5.21e
+WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=   .tar.Z
@@ -15,7 +16,6 @@ RESTRICTED=	"Do not modify. Do not charge for redistribution"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	yes
 
 do-install:

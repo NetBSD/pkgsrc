@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/03/28 21:14:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:12 jmmv Exp $
 #
 
 DISTNAME=	pkgsurvey-0.0
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,7 +10,6 @@ DISTFILES=	# empty
 MAINTAINER=	agc@pkgsrc.org
 COMMENT=	utility to collate pkg information, and mail to central census site
 
-WRKSRC=		${WRKDIR}
 NO_CHECKSUM=    yes
 NO_CONFIGURE=   yes
 NO_BUILD=	yes

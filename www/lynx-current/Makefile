@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2003/03/22 00:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2003/03/29 12:42:50 jmmv Exp $
 #
 
 DISTNAME=		lynx2.8.5dev.7
 PKGNAME=		lynx-2.8.5.0.7
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}/lynx2-8-5
 CATEGORIES=		www
 MASTER_SITES=		http://lynx.isc.org/current/ \
 			ftp://ftp.nl.uu.net/pub/unix/www/lynx/current/ \
@@ -16,8 +17,6 @@ HOMEPAGE=		http://lynx.browser.org/
 COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
 BUILD_USES_MSGFMT=	yes
-
-WRKSRC=			${WRKDIR}/lynx2-8-5
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes

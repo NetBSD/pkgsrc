@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/05 14:54:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:41:22 jmmv Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p12
+WRKSRC=		${WRKDIR}/xdvipresent
 CATEGORIES=	graphics textproc print x11
 MASTER_SITES=	http://clip.dia.fi.upm.es/Software/
 
@@ -11,7 +12,6 @@ COMMENT=	Slide Presentations Using LaTeX/xdvi
 
 DEPENDS+=	latex2html>=2002.2:../../textproc/latex2html
 
-WRKSRC=		${WRKDIR}/xdvipresent
 USE_BUILDLINK2=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

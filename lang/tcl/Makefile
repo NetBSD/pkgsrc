@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2003/02/17 15:28:01 dillo Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/29 12:41:33 jmmv Exp $
 #
 
 DISTNAME=		tcl8.3.4
 PKGNAME=		tcl-8.3.4
+WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 			ftp://gd.tuwien.ac.at/languages/tcl/scriptics/tcl8_3/ \
@@ -15,7 +16,6 @@ COMMENT=		Ousterhout's Tool Command Language, a scripting language
 
 CONFLICTS+=		tclman80-[0-9]*
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"
 TEST_TARGET=		test

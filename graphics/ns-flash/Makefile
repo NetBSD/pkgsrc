@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/03/26 04:05:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/29 12:41:19 jmmv Exp $
 
 DISTNAME=		flash_${DISTUNAME}
+WRKSRC=			${WRKDIR}/${WRKNAME}
 CATEGORIES=		graphics www
 MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
 
@@ -48,7 +49,6 @@ NO_BUILD=		yes
 CHECK_SHLIBS=		no
 CRYPTO=			yes
 
-WRKSRC=			${WRKDIR}/${WRKNAME}
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
 do-install:

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2003/03/04 22:06:29 tron Exp $
+# $NetBSD: Makefile,v 1.34 2003/03/29 12:40:47 jmmv Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.11
+WRKSRC=		${WRKDIR}
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/packages/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/packages/ \
@@ -134,7 +135,6 @@ DEPENDS+=	xemacs>=21.1.14:../../editors/xemacs
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}
 
 .include "../../editors/xemacs/Makefile.pkg"
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2002/08/25 21:49:28 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/29 12:40:04 jmmv Exp $
 #
 
 DISTNAME=	zip1-1.1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/infozip/src/ \
 		ftp://ftp.icce.rug.nl/infozip/src/
@@ -20,7 +21,6 @@ MAKE_FLAGS=	CFLAGS="${CFLAGS} -DDIRENT" LFLAGS2="-lcompat"
 ALL_TARGET=	zip
 
 USE_BUILDLINK2=	yes
-WRKSRC=		${WRKDIR}
 PLIST_SRC=	${WRKSRC}/PLIST
 
 BUILD_DEFS+=	ZIP_ENCRYPTION

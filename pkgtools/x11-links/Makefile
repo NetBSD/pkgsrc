@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2003/01/16 21:37:58 heinz Exp $
+# $NetBSD: Makefile,v 1.30 2003/03/29 12:42:13 jmmv Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink2/bsd.buildlink2.mk to the
 #	correct version, usually the most recent.
 
 DISTNAME=	x11-links-0.12
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +17,6 @@ COMMENT=	shadow tree of links to X11R6 headers and libraries
 USE_BUILDLINK2=	# defined
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	# defined
-WRKSRC=		${WRKDIR}
 NO_BUILD=	# defined
 NO_MTREE=	# defined
 USE_X11=	# defined

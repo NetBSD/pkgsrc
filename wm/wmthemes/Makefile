@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/14 20:22:37 fredb Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/29 12:42:46 jmmv Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
@@ -7,6 +7,7 @@
 
 DISTNAME=	wmthemes-0.62
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
@@ -22,7 +23,6 @@ DIST_SUBDIR=	wmthemes
 USE_X11BASE=	yes
 NO_BUILD=	yes
 NO_CHECKSUM=	yes
-WRKSRC=		${WRKDIR}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 THEME_SUBDIRS=	Backgrounds IconSets Icons Pixmaps Sounds Styles Themes

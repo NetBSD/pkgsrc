@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/11/26 22:20:36 mjl Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:39 jmmv Exp $
 #
 
 VERS=		1.01
 DISTNAME=	postgresql_autodoc-${VERS}
+WRKSRC=         ${WRKDIR}
 CATEGORIES=	textproc database
 MASTER_SITES=	http://www.rbt.ca/autodoc/
 
@@ -16,8 +17,6 @@ DEPENDS+=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
 #NO_CONFIGURE=	YES	# Configure needed for REPLACE_PERL
 NO_BUILD=	YES
 REPLACE_PERL=	postgresql_autodoc.pl
-
-WRKSRC=         ${WRKDIR}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/postgresql_autodoc.pl ${PREFIX}/bin/postgresql_autodoc

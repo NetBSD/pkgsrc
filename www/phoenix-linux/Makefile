@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/03/26 04:05:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:53 jmmv Exp $
 #
 
 DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
 PKGNAME=		phoenix-linux-0.5
+WRKSRC=			${WRKDIR}/phoenix
 CATEGORIES=		www
 MASTER_SITES=		http://ftp.mozilla.org/pub/phoenix/releases/0.5/
 
@@ -12,7 +13,6 @@ COMMENT=		A redesign of the Mozilla browser component (binary pkg)
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
-WRKSRC=			${WRKDIR}/phoenix
 NO_CONFIGURE=		# defined
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC

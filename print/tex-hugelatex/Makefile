@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/03/28 21:14:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:18 jmmv Exp $
 #
 
 DISTNAME=	hugelatex-1.0
 PKGNAME=	tex-${DISTNAME}
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	# none
 DISTFILES=	# nada
@@ -16,7 +17,6 @@ DEPENDS+=	teTeX-1.0*:../teTeX
 EXTRACT_ONLY=	# nothing
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}
 
 TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 

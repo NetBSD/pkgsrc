@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2003/03/24 17:56:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/29 12:41:07 jmmv Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/source/ \
 		ftp://ftp.idsoftware.com/idstuff/source/
@@ -20,7 +21,6 @@ USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 MAKE_ENV+=	MAINDIR=${WRKSRC}
 
-WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 
 MAKE_ENV+=	MESA_DIR=${BUILDLINK_PREFIX.Mesa}

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/01/26 10:30:50 agc Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:00 jmmv Exp $
 #
 
 DISTNAME=		angband-283
 PKGNAME=		angband-tty-2.8.3
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		games
 MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/ \
 			ftp://ftp.greyhelm.com/pub/Games/Angband/Angband-2.7.x/Source/
@@ -16,7 +17,6 @@ CONFLICTS=		angband-x11-[0-9]*
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
 MAKEFILE=		Makefile.std
 ALL_TARGET=		angband
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/10/22 06:59:27 kent Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/29 12:41:25 jmmv Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -6,6 +6,7 @@ PKGNAME=		gcc-ssp-2.95.3.13
 PKGVERSION=		${GCC_VERSION}
 PKGREVISION=
 PKGBASENAME=		gcc-ssp
+WRKSRC=			${WRKDIR}/objdir
 CATEGORIES=		lang security
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
@@ -44,7 +45,6 @@ MESSAGE_SUBST+=		MAKE=${MAKE} \
 			PKGBASENAME=${PKGBASENAME}
 PLIST_SUBST+=		PKGBASENAME=${PKGBASENAME}
 SRCDIR=			${WRKDIR}/${DISTNAME}
-WRKSRC=			${WRKDIR}/objdir
 
 .include "../../mk/bsd.prefs.mk"
 

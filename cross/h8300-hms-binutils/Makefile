@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/30 11:17:55 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:24 jmmv Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
+WRKSRC=			${WRKDIR}/objdir
 CATEGORIES=		cross
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/binutils/
 EXTRACT_SUFX=		.tar.bz2
@@ -20,7 +21,6 @@ CONFIGURE_ARGS+=	--infodir=${H8300_PREFIX}/binutils
 CONFIGURE_ARGS+=	--target=h8300-hms
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 SRCDIR=			${WRKDIR}/${DISTNAME}
-WRKSRC=			${WRKDIR}/objdir
 ALL_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
 
 post-extract:

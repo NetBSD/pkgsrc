@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2002/10/03 16:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/29 12:40:24 jmmv Exp $
 #
 
+WRKSRC=			${WRKDIR}
 DISTVERSION=		2.0.7.1
 DISTFILES=		${LINUXDEVEL_FILES}
 EXTRACT_ONLY=		# none of the RPM files
@@ -12,7 +13,6 @@ COMMENT=		Cross-compile environment for iX86 Linux, libc v6
 BUILD_DEPENDS+=		rpm-[0-9]*:../../misc/rpm
 
 CHECK_SHLIBS=		no
-WRKSRC=			${WRKDIR}
 
 USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	elf32-i386

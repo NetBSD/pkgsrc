@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/15 20:36:57 kei Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:57 jmmv Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
+WRKSRC=			${WRKDIR}
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://www.wheel.gr.jp/~dai/software/ \
 			ftp://ftp.jp.netbsd.org/pub/NetBSD-jp/tut-jp/fonts/
@@ -20,7 +21,6 @@ SITES_clR5x8.bdf=	ftp://ftp.jp.netbsd.org/pub/NetBSD-jp/tut-jp/fonts/
 USE_X11BASE=		YES
 DOCDIR=			${PREFIX}/share/doc/elisau
 FONTDIR=		${X11PREFIX}/lib/X11/fonts/local
-WRKSRC=			${WRKDIR}
 DISTPATCH=		${WRKSRC}/clR5x8-s5x8.diff
 
 LICENSE=		no-commercial-use

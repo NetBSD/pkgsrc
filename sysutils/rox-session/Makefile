@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2002/12/24 06:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:30 jmmv Exp $
 #
 
 DISTNAME=	ROX-Session-0.1.14
 PKGNAME=	rox-session-0.1.14
 PKGREVISION=	3
+WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Session/src
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -19,8 +20,6 @@ DIST_SUBDIR=	rox
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Session/src
 
 post-build:
 	${MV} ${WRKSRC} ${WRKDIR}/${DISTNAME}/src

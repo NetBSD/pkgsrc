@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/01/28 22:03:54 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:01 jmmv Exp $
 #
 
 DISTNAME=	openh323_1.10.4
 PKGNAME=	openh323-1.10.4
+WRKSRC=		${WRKDIR}/openh323
 CATEGORIES=	net
 MASTER_SITES=	http://www.openh323.org/bin/ \
 		http://www.us1.openh323.org/bin/ \
@@ -14,8 +15,6 @@ MASTER_SITES=	http://www.openh323.org/bin/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.openh323.org/
 COMMENT=	Open H.323 library
-
-WRKSRC=		${WRKDIR}/openh323
 
 MAKE_ENV+=	PWLIBDIR=${PREFIX} OPENH323DIR=${WRKSRC}
 

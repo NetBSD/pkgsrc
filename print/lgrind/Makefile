@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2002/08/27 03:00:12 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:16 jmmv Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}/lgrind/source
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +15,6 @@ DEPENDS+=	teTeX-1.0.*:../../print/teTeX
 
 USE_X11=	yes
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
-WRKSRC=		${WRKDIR}/lgrind/source
 NO_CONFIGURE=	yes
 
 pre-patch:

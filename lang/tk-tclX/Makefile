@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/02/17 15:28:01 dillo Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:33 jmmv Exp $
 #
 
 DISTNAME=	tclX8.2.0
 PKGNAME=	tk-tclX-8.2.0
+WRKSRC=		${WRKDIR}/tclX8.2.0/unix
 CATEGORIES=	lang tcl tk
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
 
@@ -29,8 +30,6 @@ CONFIGURE_ENV+=		\
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
 			SHAREGRP=${SHAREGRP}
-
-WRKSRC=			${WRKDIR}/tclX8.2.0/unix
 
 FILESDIR=	${.CURDIR}/../../lang/tcl-tclX/files
 PATCHDIR=	${.CURDIR}/../../lang/tcl-tclX/patches

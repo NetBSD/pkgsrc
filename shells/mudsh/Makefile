@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/18 17:10:17 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:26 jmmv Exp $
 #
 
 DISTNAME=	mudsh
 PKGNAME=	mudsh-20010311
+WRKSRC=		${WRKDIR}
 CATEGORIES=	shells
 MASTER_SITES=	http://www.xirium.com/tech/mud-shell/download/
 EXTRACT_SUFX=	# empty
@@ -11,7 +12,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.xirium.com/tech/mud-shell/index.html
 COMMENT=	M.U.D. game-like shell
 
-WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=YES
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 

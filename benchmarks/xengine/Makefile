@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/02/25 03:34:57 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:14 jmmv Exp $
 # FreeBSD Id: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp
 
 DISTNAME=	xengine-1.0.1
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.lab.kdd.co.jp/Usenet/comp.sources.x/volume09/xengine/
 DISTFILES=	part01.z patch1.z
@@ -15,7 +16,6 @@ COMMENT=	Reciprocating engine for X
 BUILD_DEPENDS=	gsharutils-4.2.1:../../archivers/gsharutils
 
 DIST_SUBDIR=	xengine
-WRKSRC=		${WRKDIR}
 USE_IMAKE=	yes
 
 EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | gunshar

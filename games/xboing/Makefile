@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2002/09/23 10:21:19 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:10 jmmv Exp $
 #
 
 DISTNAME=		xboing2.4
 PKGNAME=		xboing-2.4
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}/xboing
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 
@@ -15,7 +16,6 @@ USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 
 NO_INSTALL_MANPAGES=	YES
-WRKSRC=			${WRKDIR}/xboing
 
 post-install:
 	${CHOWN} bin:games ${X11PREFIX}/bin/xboing

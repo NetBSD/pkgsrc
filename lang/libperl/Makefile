@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2002/12/07 02:38:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2003/03/29 12:41:27 jmmv Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
 PKGNAME=	libperl-${PERL5_DIST_VERS}
 SVR4_PKGNAME=	lperl
+WRKSRC=		${WRKDIR}/${EXTRACT_ELEMENTS}
 CATEGORIES+=	lang devel
 
 MAINTAINER=	jlam@netbsd.org
@@ -12,7 +13,6 @@ COMMENT=	Perl DynaLoader as a shared object
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/DynaLoader
-WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
 #BUILDLINK_DEPENDS.perl=	perl-${PERL5_DIST_VERS}*
 

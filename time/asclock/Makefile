@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/08/31 15:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:43 jmmv Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
+WRKSRC=		${WRKDIR}/asclock1.0
 CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 
@@ -16,7 +17,6 @@ USE_BUILDLINK2=	YES
 
 LANGUAGES=	en de pt nl no it sv es hu br fr cs ru uk sl id da
 
-WRKSRC=		${WRKDIR}/asclock1.0
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/22 11:51:50 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:29 jmmv Exp $
 #
 
 DISTNAME=	ald-0.0.19d
 PKGNAME=	ald-0.0.19
+WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://ellipse.mcs.drexel.edu/source/
 
@@ -13,8 +14,6 @@ COMMENT=	Very nice x86 assembly-level debugger ported to NetBSD
 ONLY_FOR_PLATFORM=	NetBSD-1.5*-i386 NetBSD-1.6*-i386
 
 GNU_CONFIGURE=	YES
-
-WRKSRC=		${WRKDIR}/${PKGNAME}
 
 #do-build:
 #	cd ${WRKSRC} && ${MAKE_PROGRAM} -f ${MAKEFILE} ${ALL_TARGET}

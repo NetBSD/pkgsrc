@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/30 06:03:39 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:21 jmmv Exp $
 
 DISTNAME=	cn2jp1.4b
 PKGNAME=	cn2jp-1.4b
+WRKSRC=		${WRKDIR}/cn2jp
 CATEGORIES=	converters
 MASTER_SITES=	http://w3.sys.es.osaka-u.ac.jp/~seke/software/cn2jp/
 
@@ -12,7 +13,6 @@ COMMENT=	library for code translation between Chinese and Japanese
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes
 
-WRKSRC=		${WRKDIR}/cn2jp
 NO_CONFIGURE=	yes
 
 post-install:

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/03/16 14:51:01 cjep Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:27 jmmv Exp $
 #
 
 DISTNAME=       awk
 PKGNAME=        nawk-20030314
+WRKSRC=		${WRKDIR}
 CATEGORIES=	lang
 MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
 
@@ -12,7 +13,6 @@ COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
 DIST_SUBDIR=	${PKGNAME}
 
-WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
 MAKEFLAGS+=	CC=${CC:Q} YACC=${YACC:Q} CFLAGS=${CFLAGS:Q}
 ALL_TARGET=	a.out

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2003/01/19 06:46:23 salo Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:40:05 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/08/10 22:31:36 fenner Exp 
 #
 
 DISTNAME=       zoo-2.10pl1
 PKGNAME=	zoo-2.10.1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
 
@@ -14,7 +15,6 @@ LICENSE=	zoo-license
 
 USE_BUILDLINK2=	yes
 
-WRKSRC=		${WRKDIR}
 ALL_TARGET=     bsdansi
 MAKEFILE=       makefile
 

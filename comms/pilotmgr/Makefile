@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2002/09/21 07:56:28 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/29 12:40:20 jmmv Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*$//}
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +24,6 @@ NO_BUILD=		YES
 
 CONFIGURE_ARGS=		</dev/null
 CONFIGURE_SCRIPT=	./Setup
-WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*$//}
 
 PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
 PM_DOC_DIR=	${PREFIX}/share/doc/${DISTNAME:C/-.*$//}

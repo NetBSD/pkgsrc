@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/11/10 00:35:07 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:40:37 jmmv Exp $
 #
 
 DISTNAME=	pccts133mr22
 PKGNAME=	pccts-1.33.22
+WRKSRC=		${WRKDIR}/pccts
 CATEGORIES=	devel
 MASTER_SITES=	http://www.polhode.com/
 EXTRACT_SUFX=	.zip
@@ -13,7 +14,6 @@ COMMENT=	Purdue Compiler Construction Tool Set
 
 DIST_SUBDIR=	${PKGNAME}
 
-WRKSRC=		${WRKDIR}/pccts
 MAKEFILE=	makefile
 ALL_TARGET=
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2002/12/09 15:16:26 tron Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/29 12:42:12 jmmv Exp $
 
 DISTNAME=	rpm2pkg-1.3
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +14,6 @@ CONFLICTS+=	suse-base<=6.4
 
 USE_BUILDLINK2=	YES
 NO_CHECKSUM=	YES
-WRKSRC=		${WRKDIR}
 
 CFLAGS+=	${BUILDLINK_CPPFLAGS.rpm}
 LIBS=		-lrpm -lintl -lz

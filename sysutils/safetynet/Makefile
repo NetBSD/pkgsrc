@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/27 19:14:44 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:32 jmmv Exp $
 #
 
 DISTNAME=	safetynet-1.15
+WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.unixpimps.org/safetynet/
 
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.unixpimps.org/safetynet/
 COMMENT=	safetynet is a perl script intended to monitor system services
-
-WRKSRC=		${WRKDIR}
 
 NO_BUILD=	YES
 USE_PERL5=	YES

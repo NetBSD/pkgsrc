@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/03/23 13:39:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/29 12:41:36 jmmv Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	mail
 MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
@@ -12,7 +13,6 @@ COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
 CONFLICTS+=	elm>=2.5.5 mm-2.7
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES

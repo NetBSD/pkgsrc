@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:26 agc Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:03 jmmv Exp $
 
 DISTNAME=		EXCH314S
 PKGNAME=		exchess-3.14
+WRKSRC=			${WRKDIR}
 CATEGORIES=		games
 MASTER_SITES=		http://pc.astro.brandeis.edu/BRAG/people/dch/
 EXTRACT_SUFX=		.zip
@@ -10,7 +11,6 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://pc.astro.brandeis.edu/BRAG/people/dch/chess.html
 COMMENT=		experimental chess engine
 
-WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		# defined
 
 LIBDIR=			${PREFIX}/lib/exchess

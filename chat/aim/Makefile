@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/03/26 04:05:52 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:16 jmmv Exp $
 
 DISTNAME=	aim-1.5.277
+WRKSRC=		${WRKDIR}
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.newaol.com/aimgen/73010/
 EXTRACT_SUFX=	-1.i386.rpm
@@ -22,7 +23,6 @@ NO_BUILD=	YES
 
 EXTRACT_ONLY=	# nothing
 PLIST_SRC=	${WRKDIR}/PLIST.rpm
-WRKSRC=		${WRKDIR}
 
 do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}

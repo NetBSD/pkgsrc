@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2002/09/21 06:44:35 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/29 12:40:15 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=   .tar.Z
@@ -25,8 +26,6 @@ USE_GNU_READLINE=	uses rl_* interface
 #		These are included as patch-ae
 #PATCH_SITES=	ftp://ilpsoft.eecs.berkeley.edu/pub/SPICE3F5/
 #PATCHFILES=	grid.patch newcoms.patch spsmp.patch
-
-WRKSRC=		${WRKDIR}
 
 post-extract:
 	${CP} ${FILESDIR}/NetBSD ${WRKSRC}/conf

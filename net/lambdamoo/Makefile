@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:58 jmmv Exp $
 
 DISTNAME=		LambdaMOO-1.8.1
 PKGNAME=		lambdamoo-1.8.1
+WRKSRC=			${WRKDIR}/MOO-1.8.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.place.org/pub/moo/ \
 			${MASTER_SITE_SOURCEFORGE:=lambdamoo/} \
@@ -27,7 +28,6 @@ DEINSTALL_EXTRA_TMPL=   ${WRKDIR}/DEINSTALL.out
 
 ALL_TARGET=
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/MOO-1.8.1
 
 pre-build:
 	${MV} ${WRKSRC}/restart.sh ${WRKSRC}/restart.sh.in

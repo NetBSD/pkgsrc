@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2002/12/07 02:39:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:54 jmmv Exp $
 #
 
 DISTNAME=	bind-4.9.11-REL
 PKGNAME=	bind-4.9.11
+WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/4.9.11/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.isc.org/
 COMMENT=	The BIND name server, version 4, as an alternative to BIND 8
-
-WRKSRC=		${WRKDIR}
 
 .if !exists(/usr/sbin/named-bootconf)
 PKG_FAIL_REASON= "${PKGNAME} is intended for NetBSD 1.4 or higher"

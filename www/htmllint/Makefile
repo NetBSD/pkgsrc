@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/03/05 10:03:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:48 jmmv Exp $
 #
 
 DISTNAME=	htmllint
 PKGNAME=	htmllint-20030225
+WRKSRC=		${WRKDIR}
 CATEGORIES=	www japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/k16/htmllint/archives/
 EXTRACT_SUFX=	.zip
@@ -17,7 +18,6 @@ DIST_SUBDIR=	${PKGNAME}
 
 REPLACE_PERL=	htmllint.cgi htmllint parsedtd.pl tagslist.cgi
 USE_PERL5=	# defined
-WRKSRC=		${WRKDIR}
 NO_BUILD=	# defined
 
 CGIDIR=		${LOCALBASE}/libexec/cgi-bin

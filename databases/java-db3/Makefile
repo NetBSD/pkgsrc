@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/12/26 20:52:10 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:25 jmmv Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
+WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
 
@@ -38,8 +39,6 @@ CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PKG_JVM}}
 
 ALL_TARGET=		libdb3_java.la java
 INSTALL_TARGET=		install_java
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 
 .include "../../databases/db3/buildlink2.mk"
 .include "../../mk/java-vm.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/01/04 18:16:22 cjep Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:40:26 jmmv Exp $
 
 DISTNAME=	python-ldap-1.10alpha3-src
 PKGNAME=	${PYPKGPREFIX}-ldap-1.10a3
+WRKSRC=		${WRKDIR}/python-ldap-1.10alpha3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-ldap/}
 
@@ -9,7 +10,6 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/python-ldap/
 COMMENT=	LDAP client API for Python
 
-WRKSRC=		${WRKDIR}/python-ldap-1.10alpha3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-ldap=${LOCALBASE}
 CONFIGURE_ARGS+=--with-python=${PYTHONBIN}

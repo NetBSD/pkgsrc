@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2002/01/29 17:02:32 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:53 jmmv Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-pcgi-2.2.2
+WRKSRC=		${WRKDIR}/${DISTNAME}/pcgi
 CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
@@ -15,8 +16,6 @@ HAS_CONFIGURE=	yes
 EXTRACT_ELEMENTS=	${DISTNAME}/pcgi
 
 ALL_TARGET=	all
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/pcgi
 
 post-build:
 	(cd ${WRKSRC}; ${PY_PROG} ${PY_LIBDIR}/compileall.py .)

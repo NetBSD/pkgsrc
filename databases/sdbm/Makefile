@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:18 agc Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:27 jmmv Exp $
 #
 
 DISTNAME=		sdbm
 # this is the Dec. 1990 release with some race condition fixes from an
 # unknown outside source:
 PKGNAME=		sdbm-90.12.1
+WRKSRC=			${WRKDIR}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://tsx-11.mit.edu/pub/linux/sources/libs/
 EXTRACT_SUFX=		.tar.Z
@@ -13,8 +14,6 @@ MAINTAINER=		packages@netbsd.org
 COMMENT=		Substitute DBM, an implementation of the `real' ndbm library
 
 MAKE_ENV+=		LIBDIR=${PREFIX}/lib NOLINT=1
-
-WRKSRC=			${WRKDIR}
 
 post-extract:
 	@cd ${WRKDIR} && ${SH} sdbm.shar >/dev/null

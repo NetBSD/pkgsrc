@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/03/03 03:32:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:46 jmmv Exp $
 
 DISTNAME=	X.V11R3uwm
 PKGNAME=	uwm-19881027
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/X.V11R3/clients/uwm
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -10,7 +11,6 @@ MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	http://www.x.org/
 COMMENT=	X11R3 window manager
 
-WRKSRC=		${WRKDIR}/X.V11R3/clients/uwm
 USE_IMAKE=	yes
 
 post-patch:

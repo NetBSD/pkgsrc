@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2002/08/23 05:23:00 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2003/03/29 12:42:13 jmmv Exp $
 
 DISTNAME=	xpkgwedge-1.7
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +14,6 @@ NOT_FOR_PLATFORM=	SunOS-*-*
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	# defined
-WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	# defined
 
 USE_BUILDLINK2=	# defined

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/12/09 20:23:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:29 jmmv Exp $
 
 DISTNAME=	apr_20021123173453
 PKGNAME=	apr-0.20021123173453
+WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=	# http://www.apache.org/dist/apr/not-released/
 DISTFILES=	apr_20021123173453.tar.gz apr-util_20021123173519.tar.gz
@@ -19,7 +20,6 @@ USE_BUILDLINK2=	yes
 # That's no reason to make it a dependency, though. -- wiz
 USE_LIBTOOL=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/apr/libtool
-WRKSRC=		${WRKDIR}
 
 BUILD_DIRS=	${WRKSRC}/apr ${WRKSRC}/apr-util
 

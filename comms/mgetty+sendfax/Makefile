@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2003/02/27 17:13:37 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2003/03/29 12:40:20 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
 DISTNAME=	mgetty1.1.28-Jan10
 PKGNAME=	mgetty-1.1.28
 PKGREVISION=	3
+WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]//}
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
@@ -19,7 +20,6 @@ USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 
 MAKE_ENV=		MGETTY_CONFDIR=${PKG_SYSCONFDIR}
-WRKSRC=			${WRKDIR}/${PKGNAME:C/nb[0-9]//}
 
 INFO_FILES=		mgetty.info
 PKG_SYSCONFSUBDIR=	mgetty+sendfax

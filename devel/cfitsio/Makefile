@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:31 jmmv Exp $
 
 DISTNAME=	cfitsio2037
 PKGNAME=	cfitsio-2.0.37
+WRKSRC=		${WRKDIR}/${PKGNAME:C/-.*//}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/
 
@@ -13,7 +14,6 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
 ALL_TARGET=	all testprog
-WRKSRC=		${WRKDIR}/${PKGNAME:C/-.*//}
 
 post-build:
 	cd ${WRKSRC}; \

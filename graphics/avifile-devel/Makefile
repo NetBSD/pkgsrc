@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2003/03/14 19:37:39 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2003/03/29 12:41:14 jmmv Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}/avifile-0.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,8 +13,6 @@ HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
-
-WRKSRC=		${WRKDIR}/avifile-0.6
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 

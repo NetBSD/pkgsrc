@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2002/09/23 22:39:22 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:58 jmmv Exp $
 #
 
 DISTNAME=	BLT2.4o
 PKGNAME=	blt-2.4o
+WRKSRC=		${WRKDIR}/blt2.4o
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tcltk.com/aa004735/pub/blt/
 
@@ -16,8 +17,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
-
-WRKSRC=		${WRKDIR}/blt2.4o
 
 .include "../../lang/tcl/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"

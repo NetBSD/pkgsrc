@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/10/13 11:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:41:40 jmmv Exp $
 
 DISTNAME=		euler-1.60.2
+WRKSRC=			${WRKDIR}/euler-1.60/source
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=euler/}
 
@@ -8,7 +9,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://euler.sourceforge.net/index.html
 COMMENT=		Interactive numerical analysis and graphics program
 
-WRKSRC=			${WRKDIR}/euler-1.60/source
 MAKEFILE=		makefile
 ALL_TARGET=		euler
 USE_BUILDLINK2=		# defined

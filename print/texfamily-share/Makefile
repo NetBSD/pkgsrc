@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:19 jmmv Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	4
+WRKSRC=		${WRKDIR}
 CATEGORIES=	japanese print
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \
@@ -22,7 +23,6 @@ COMMENT=	Machine-independent part of TeXfamily (pTeX, JTeX, MuLTeX)
 DEPENDS+=	teTeX>=1.0.7nb1:../../print/teTeX
 
 DIST_SUBDIR=	TeXfamily
-WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	jis${EXTRACT_SUFX} nmin-ngoth${EXTRACT_SUFX} \
 		standard${EXTRACT_SUFX} morisawa${EXTRACT_SUFX}
 NO_CONFIGURE=	yes

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/01/22 18:28:59 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:40 jmmv Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-dtml-2.2.2
+WRKSRC=		${WRKDIR}/${DISTNAME}/lib/python/DocumentTemplate
 CATEGORIES=	textproc
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
@@ -17,8 +18,6 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 EXTRACT_ELEMENTS=	${DISTNAME}/lib/python/DocumentTemplate \
 			${DISTNAME}/lib/python/StructuredText \
 			${DISTNAME}/lib/python/ts_regex.py
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/lib/python/DocumentTemplate
 
 do-configure:
 	( cd ${WRKSRC} ;\

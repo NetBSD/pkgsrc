@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/12/24 06:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:32 jmmv Exp $
 #
 
 DISTNAME=	rox-1.2.0
 PKGREVISION=	4
+WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -20,8 +21,6 @@ USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtk2
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libxml2}/include/libxml2/libxml
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 
 post-patch:
 	${SED} -e "s:@PREFIX@:"${PREFIX}":g" < ${FILESDIR}/rox > \

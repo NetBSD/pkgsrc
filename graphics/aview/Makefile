@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2003/01/28 22:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:41:14 jmmv Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
 PKGNAME=	aview-1.3.0.1
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}/aview-1.3.0
 CATEGORIES=	graphics converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 
@@ -13,7 +14,6 @@ COMMENT=	ASCII Art image viewer
 
 CONFLICTS+=	aview-x11-[0-9]*
 
-WRKSRC=		${WRKDIR}/aview-1.3.0
 PLIST_SRC=	${WRKDIR}/PLIST
 
 GNU_CONFIGURE=	yes

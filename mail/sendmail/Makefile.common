@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.4 2003/03/04 11:39:56 seb Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/03/29 12:41:38 jmmv Exp $
 #
 # Makefile fragment shared with libmilter
 #
 
 DISTNAME=	sendmail.${DIST_VERS}
+WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 CATEGORIES=	mail
 PKGREVISION=	1
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
@@ -24,7 +25,6 @@ DIST_VERS=	8.12.8
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
 		BUILDLINK_DIR="${BUILDLINK_DIR}"
-WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}/
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \

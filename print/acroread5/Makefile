@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/03/26 04:05:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:13 jmmv Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.06
+WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 
@@ -21,8 +22,6 @@ NO_BUILD=	YES
 SHLIB_HANDLING=	NO
 
 .include "../../mk/bsd.prefs.mk"
-
-WRKSRC=		${WRKDIR}
 
 ONLY_FOR_PLATFORM=	*-*-i386 SunOS-*-sparc
 

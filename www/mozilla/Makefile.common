@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.12 2003/03/17 16:07:32 taya Exp $
+# $NetBSD: Makefile.common,v 1.13 2003/03/29 12:42:51 jmmv Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
 PKGNAME=	${MOZILLA}-${MOZ_VER}
+WRKSRC=		${WRKDIR}/mozilla
 MASTER_SITES?=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/src/}
 CATEGORIES=	www
 
 MAINTAINER=	taya@netbsd.org
 HOMEPAGE?=	http://www.mozilla.org/
 
-WRKSRC=		${WRKDIR}/mozilla
 FILESDIR=	"../../www/mozilla/files"
 
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip

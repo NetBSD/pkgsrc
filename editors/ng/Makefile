@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/10/25 12:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:45 jmmv Exp $
 
 DISTNAME=	ng-1.4.3
+WRKSRC=         ${WRKDIR}/ng
 CATEGORIES=     editors japanese
 MASTER_SITES=   http://tt.sakura.ne.jp/~amura/archives/ng/
 
@@ -20,7 +21,6 @@ USE_CANNA=	YES
 .include "../../inputmethod/canna-lib/buildlink2.mk"
 .endif
 
-WRKSRC=         ${WRKDIR}/ng
 ALL_TARGET=	ng
 MAKEFLAGS+=	USE_CANNA=${USE_CANNA}
 

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2003/03/28 21:14:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/29 12:42:17 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
 DISTNAME=	teTeX-texmfsrc-1.0.1
 PKGNAME=	teTeX-sharesrc-1.0.1
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
@@ -15,7 +16,6 @@ COMMENT=	Sources for machine-independent part of teTeX
 DEPENDS+=	teTeX-share>=1.0.2nb1:../teTeX-share
 
 DIST_SUBDIR=	teTeX
-WRKSRC=		${WRKDIR}
 USE_BUILDINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes

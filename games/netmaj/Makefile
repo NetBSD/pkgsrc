@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/11/15 00:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:07 jmmv Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.sfc.wide.ad.jp/~kusune/netmaj/
 COMMENT=		mahjongg game with network and 1-4 player(s) support
 
 USE_BUILDLINK2=		# defined
-WRKSRC=			${WRKDIR}/netmaj
 
 INSTALL_TARGET=		install install-pf
 HTMLDIR=		${PREFIX}/share/doc/html/netmaj

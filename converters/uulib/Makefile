@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2002/08/31 16:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/29 12:40:23 jmmv Exp $
 #
 
 DISTNAME=       uudeview-0.5.18
 PKGNAME=        uulib-0.5.18
+WRKSRC=		${WRKDIR}/${DISTNAME}/uulib
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
@@ -18,8 +19,6 @@ GNU_CONFIGURE=	# defined
 USE_LIBTOOL=	# defined
 
 ALL_TARGET=	libuu.la
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/uulib
 
 DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 		doc/library.ltx doc/structure.fig doc/td-v1.c doc/td-v2.c \
