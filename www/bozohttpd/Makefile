@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2004/03/28 21:24:12 martin Exp $
+# $NetBSD: Makefile,v 1.43 2004/04/29 12:12:31 lukem Exp $
 #
 
 DISTNAME=	bozohttpd-20040218
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
