@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6703 2004/07/27 16:37:41 manu Exp $
+$NetBSD: CHANGES,v 1.6704 2004/07/27 16:43:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3602,3 +3602,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gift to 0.11.6nb1 [recht 2004-07-27]
 	Updated gift-openft to 0.2.1.3 [recht 2004-07-27]
 	Added miniSAPserver-0.2.4 [manu 2004-07-27]
+	Updated automake to 1.8.5 [wiz 2004-07-27]
