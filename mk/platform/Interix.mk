@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.25 2005/03/18 18:16:35 tv Exp $
+# $NetBSD: Interix.mk,v 1.26 2005/03/19 03:32:36 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -33,11 +33,18 @@
 #   (main lib)	0x48000000
 # zsh		*
 
+BULK_PREREQ+=	lang/gawk
+
 # "catinstall" not yet supported as there's no shipped [gn]roff
 MANINSTALL=	maninstall
 MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
 
+# Allow for pkgsrc gawk as a newer and less buggy drop-in replacement.
+.if exists(${LOCALBASE}/bin/gawk)
+AWK?=		${LOCALBASE}/bin/gawk
+.else
 AWK?=		/usr/contrib/bin/gawk
+.endif
 BASENAME?=	/bin/basename
 CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
