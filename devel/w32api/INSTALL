@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2002/08/21 12:59:17 kent Exp $
+# $NetBSD: INSTALL,v 1.2 2003/04/10 15:25:45 kent Exp $
 # $PEACE: INSTALL,v 1.1 2002/08/21 02:02:27 kent Exp $
 
 PKGNAME=$1
@@ -21,9 +21,9 @@ POST-INSTALL)
 	${SED} "s/^extern size_t __mb_cur_max/__declspec(dllimport) extern size_t __mb_cur_max/" /usr/include/stdlib.h > ${CROSSINC}/stdlib.h
 	${SED} "s/^extern __aconst char/__declspec(dllimport) extern __aconst char/" /usr/include/time.h > ${CROSSINC}/time.h
 	${SED} "s/^extern/__declspec(dllimport) extern/g" /usr/include/unistd.h > ${CROSSINC}/unistd.h
-	${MKDIR} ${CROSSINC}/i386
-	${SED} "s/_BSD_WCHAR_T_[	 ]*int/_BSD_WCHAR_T_ unsigned short/" /usr/include/i386/ansi.h > ${CROSSINC}/i386/ansi.h
-	cd ${CROSSINC} && ${LN} -sf i386 machine
+#	${MKDIR} ${CROSSINC}/i386
+#	${SED} "s/_BSD_WCHAR_T_[	 ]*int/_BSD_WCHAR_T_ unsigned short/" /usr/include/i386/ansi.h > ${CROSSINC}/i386/ansi.h
+#	cd ${CROSSINC} && ${LN} -sf i386 machine
 	${MKDIR} ${CROSSINC}/sys
 	${SED} "s/FSHIFT/SYS_PARAM_FSHIFT/g" /usr/include/sys/param.h > ${CROSSINC}/sys/param.h
 	;;
