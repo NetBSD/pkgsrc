@@ -1,0 +1,3 @@
+This test writes a X MEGABYTE sequential file in Y byte chunks, then
+rewinds it  and reads it back.  [The size of the file should be
+big enough to factor out the effect of any disk cache.]
