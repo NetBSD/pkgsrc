@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/03/26 14:44:41 jlam Exp $
+
+--- search.c.orig	Mon Sep 28 08:41:23 1998
++++ search.c	Thu Dec 10 23:39:26 1998
+@@ -174,7 +174,7 @@
+       while (true)
+ 	{
+ 	  printf ("debug?");
+-	  gets (b);
++	  fgets (b, 32, stdin); b[31] = '\0';
+ 	  if (b[0] == 'p')
+ 	    traceply = atoi (&b[1]);
+ 	  else if (b[0] == '\0')

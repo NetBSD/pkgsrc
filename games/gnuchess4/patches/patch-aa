@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/26 14:44:41 jlam Exp $
+
+--- dspcom.c.orig	Mon Sep 28 08:41:19 1998
++++ dspcom.c	Thu Dec 10 23:40:57 1998
+@@ -1099,14 +1099,14 @@
+ #ifdef NONDSP
+       s[0] = sx[0] = '\0';
+       while (!sx[0])
+-	(void) gets (sx);
++	(void) fgets (sx, 80, stdin); sx[79] = '\0';
+ #else
+       fflush (stdout);
+ #ifdef MSDOS
+       s[0] = '\0';
+       eof = ( gets (sx) == NULL );
+ #else
+       eof = ( getstr (sx) == ERR );
+ #endif
+ #endif
+       sscanf (sx, "%s", s);
