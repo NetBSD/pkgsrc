@@ -1,0 +1,11 @@
+The simple version: Tor provides a distributed network of servers ("onion
+routers"). Users bounce their TCP streams (web traffic, FTP, SSH, etc.) around
+the routers. This makes it hard for recipients, observers, and even the onion
+routers themselves to track the source of the stream.
+
+The complex version:  Onion Routing is a connection-oriented anonymizing
+communication service. Users choose a source-routed path through a set of
+nodes, and negotiate a "virtual circuit" through the network, in which each
+node knows its predecessor and successor, but no others. Traffic flowing down
+the circuit is unwrapped by a symmetric key at each node, which reveals the
+downstream node.
