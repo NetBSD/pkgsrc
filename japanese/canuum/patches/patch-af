@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/08/27 04:09:28 sakamoto Exp $
+
+--- sheader.h.orig	Tue Aug 17 17:47:04 1999
++++ sheader.h	Tue Aug 17 17:48:00 1999
+@@ -336,7 +336,7 @@
+ extern void set_keypad_on();
+ extern void set_keypad_off();
+ extern void set_scroll_region();
+-#if defined(linux) || defined(__FreeBSD__) || defined(__MACHTEN__)
++#if defined(linux) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__MACHTEN__)
+ #define HAVE_SETENV
+ #endif
+ #ifndef HAVE_SETENV
