@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: autoswc.sh,v 1.1.1.1 2004/02/21 23:28:36 jmmv Exp $
+# $NetBSD: autoswc.sh,v 1.2 2004/10/15 20:00:57 tv Exp $
 #
 # autoswc - Generates system wide cache files for GNU autoconf
 # Copyright (c) 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -141,7 +141,8 @@ info "running @AUTOCONF@..."
 
 # Run the configure script.
 [ ! -f configure ] && err "autoconf failed"
-CONFIG_SITE= ./configure --cache-file=config.cache || \
+CONFIG_SITE= ./configure --cache-file=config.cache \
+    --build=@MACHINE_GNU_PLATFORM@ --host=@MACHINE_GNU_PLATFORM@ || \
     err "configure failed"
 mv config.cache config.cache.in
 
