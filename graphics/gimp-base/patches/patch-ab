@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/02/15 20:52:36 drochner Exp $
+
+--- plug-ins/Makefile.in.orig	Fri Feb 15 14:01:45 2002
++++ plug-ins/Makefile.in	Fri Feb 15 14:03:20 2002
+@@ -187,7 +187,7 @@
+ @OS_WIN32_TRUE@TWAIN = twain
+ @OS_WIN32_TRUE@WINSNAP = winsnap
+ 
+-SUBDIRS =  	libgck				dbbrowser			script-fu			$(GIMP_PERL)			FractalExplorer			Lighting			MapObject			bmp				faxg3				fits				flame				fp				gap				gdyntext			gfig			        gflare				gfli				gimpressionist			$(HELPBROWSER)			ifscompose			imagemap			maze				mosaic				pagecurl			print				rcm				sgi				sel2path			$(TWAIN)			$(WEBBROWSER)			$(WINSNAP)			xjt				common
++SUBDIRS =  	libgck				dbbrowser			script-fu			$(GIMP_PERL)			FractalExplorer			Lighting			MapObject			bmp				faxg3				fits				flame				fp				gap				gdyntext			gfig			        gflare				gfli				gimpressionist			$(HELPBROWSER)			ifscompose			imagemap			maze				mosaic				pagecurl					rcm				sgi				sel2path			$(TWAIN)			$(WEBBROWSER)			$(WINSNAP)			xjt				common
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
