@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2002/08/11 02:34:26 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2002/08/23 09:08:09 martti Exp $
 
---- src/insets/Makefile.in.orig	Thu May 23 08:05:22 2002
-+++ src/insets/Makefile.in
-@@ -352,10 +352,17 @@ CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_IN
+--- src/insets/Makefile.in.orig	Tue Aug 20 12:10:28 2002
++++ src/insets/Makefile.in	Thu Aug 22 14:08:48 2002
+@@ -353,10 +353,17 @@
  LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
  	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
  	$(AM_CXXFLAGS) $(CXXFLAGS)
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.1 2002/08/11 02:34:26 dmcmahill Exp $
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -369,6 +376,18 @@ DIST_COMMON = ChangeLog Makefile.am Make
+@@ -370,6 +377,18 @@
  SOURCES = $(libinsets_la_SOURCES)
  
  all: all-am

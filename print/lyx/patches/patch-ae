@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2002/08/11 02:34:26 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.2 2002/08/23 09:08:09 martti Exp $
 
---- src/frontends/xforms/Makefile.in.orig	Sat Aug 10 00:22:18 2002
-+++ src/frontends/xforms/Makefile.in
-@@ -656,10 +656,17 @@ CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_IN
+--- src/frontends/xforms/Makefile.in.orig	Tue Aug 20 12:10:27 2002
++++ src/frontends/xforms/Makefile.in	Thu Aug 22 14:17:07 2002
+@@ -657,10 +657,17 @@
  LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
  	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
  	$(AM_CXXFLAGS) $(CXXFLAGS)
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.1 2002/08/11 02:34:26 dmcmahill Exp $
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
-@@ -678,10 +685,15 @@ DIST_COMMON = ChangeLog Makefile.am Make
+@@ -679,10 +686,15 @@
  DIST_SUBDIRS = $(SUBDIRS)
  SOURCES = $(libxforms_la_SOURCES)
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ae,v 1.1 2002/08/11 02:34:26 dmcmahill Exp $
  
  mostlyclean-libtool:
  	-rm -f *.lo
-@@ -813,6 +825,15 @@ distclean-compile:
+@@ -814,6 +826,15 @@
  distclean-depend:
  	-rm -rf $(DEPDIR)
  
@@ -53,7 +53,7 @@ $NetBSD: patch-ae,v 1.1 2002/08/11 02:34:26 dmcmahill Exp $
  .C.o:
  @AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
  @AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
-@@ -824,6 +845,12 @@ distclean-depend:
+@@ -825,6 +846,12 @@
  @AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
  @AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
  	$(CXXCOMPILE) -c -o $@ `cygpath -w $<`
