@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 15:59:49 skrll Exp $
+
+--- arts/artsc/Makefile.in.orig	Thu Feb 22 18:17:09 2001
++++ arts/artsc/Makefile.in
+@@ -243,7 +243,7 @@
+ lib_LTLIBRARIES = libartsc.la libartscbackend.la libartsdsp.la
+ FLOWLIBS = $(top_builddir)/arts/flow/libartsflow.la
+ 
+-INCLUDES = $(all_includes) -I$(top_srcdir)/arts/mcop -I$(top_srcdir)/arts/flow       -I$(top_builddir)/arts/flow -I$(top_builddir)/arts/soundserver       -I$(top_srcdir)/libltdl
++INCLUDES = $(all_includes) -I$(top_srcdir)/arts/mcop -I$(top_srcdir)/arts/flow       -I$(top_builddir)/arts/flow -I$(top_builddir)/arts/soundserver 
+ 
+ 
+ bin_SCRIPTS = artsc-config artsdsp
+@@ -254,7 +254,7 @@
+ 
+ libartsc_la_SOURCES = artsc.c
+ libartsc_la_LDFLAGS = -no-undefined
+-libartsc_la_LIBADD = $(top_builddir)/libltdl/libltdlc.la $(LIBPTHREAD) $(USE_THREADS)
++libartsc_la_LIBADD = -lltdl $(LIBPTHREAD) $(USE_THREADS)
+ 
+ libartscbackend_la_SOURCES = artscbackend.cc
+ libartscbackend_la_LDFLAGS = -no-undefined -module
+@@ -273,7 +273,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-libartsc_la_DEPENDENCIES =  $(top_builddir)/libltdl/libltdlc.la
++libartsc_la_DEPENDENCIES =  -lltdl
+ #>- libartsc_la_OBJECTS =  artsc.lo
+ #>+ 1
+ libartsc_la_OBJECTS = artsc.lo

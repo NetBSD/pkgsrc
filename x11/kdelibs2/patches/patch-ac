@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/14 15:59:49 skrll Exp $
+
+--- arts/mcop/Makefile.in.orig	Thu Feb 22 18:17:10 2001
++++ arts/mcop/Makefile.in
+@@ -244,11 +244,11 @@
+ #
+ # Programs to compile, Manpages to install and Versions
+ #
+-INCLUDES = -I$(top_srcdir)/libltdl $(all_includes)
++INCLUDES = $(all_includes)
+ libmcop_la_SOURCES = buffer.cc connection.cc core.cc dispatcher.cc      iomanager.cc object.cc socketconnection.cc tcpconnection.cc 	 unixconnection.cc tcpserver.cc unixserver.cc objectmanager.cc 	 factory.cc idlfilereg.cc ifacerepo_impl.cc mcoputils.cc 	 startupmanager.cc md5.c md5auth.cc referenceclean.cc datapacket.cc 	 asyncstream.cc notification.cc flowsystem.cc extensionloader.cc 	 tmpglobalcomm.cc mcopconfig.cc connect.cc reference.cc type.cc 	 trader_impl.cc dynamicrequest.cc anyref.cc loopback.cc debug.cc
+ 
+ 
+-libmcop_la_LIBADD = $(LIBSOCKET) $(LIBPTHREAD) $(USE_THREADS)      $(top_builddir)/libltdl/libltdlc.la
++libmcop_la_LIBADD = $(LIBSOCKET) $(LIBPTHREAD) $(USE_THREADS) -lltdl
+ 
+ libmcop_la_LDFLAGS = -no-undefined 
+ 
+@@ -265,7 +265,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-libmcop_la_DEPENDENCIES =  $(top_builddir)/libltdl/libltdlc.la
++libmcop_la_DEPENDENCIES =  -lltdl
+ #>- libmcop_la_OBJECTS =  buffer.lo connection.lo core.lo dispatcher.lo \
+ #>- iomanager.lo object.lo socketconnection.lo tcpconnection.lo \
+ #>- unixconnection.lo tcpserver.lo unixserver.lo objectmanager.lo \

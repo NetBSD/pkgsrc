@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+
+--- kinit/Makefile.in.orig	Thu Feb 22 18:17:32 2001
++++ kinit/Makefile.in
+@@ -256,7 +256,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-INCLUDES = -I$(srcdir)/../libltdl/ -I$(srcdir)/../kio/klauncher/ $(all_includes)
++INCLUDES = -I$(srcdir)/../kio/klauncher/ $(all_includes)
+ 
+ SUBDIRS = .
+ 

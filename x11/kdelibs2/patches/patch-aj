@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/03/14 15:59:46 skrll Exp $
+
+--- khtml/Makefile.in.orig	Thu Feb 22 18:17:28 2001
++++ khtml/Makefile.in
+@@ -293,7 +293,7 @@
+ libkhtmlimage_la_LDFLAGS = $(KDE_PLUGIN) $(all_libraries)
+ libkhtmlimage_la_LIBADD = libkhtml.la
+ 
+-INCLUDES = -I$(top_srcdir)/kjs -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio 	-I$(srcdir)/java -I$(top_srcdir)/dcop -I$(srcdir)/misc 	-I$(srcdir)/dom -I$(srcdir)/xml -I$(srcdir)/html -I$(srcdir)/css 	-I$(top_srcdir)/kfile -I$(top_srcdir)/libltdl 	-I$(top_srcdir)/kssl -I$(top_srcdir) $(all_includes)
++INCLUDES = -I$(top_srcdir)/kjs -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio 	-I$(srcdir)/java -I$(top_srcdir)/dcop -I$(srcdir)/misc 	-I$(srcdir)/dom -I$(srcdir)/xml -I$(srcdir)/html -I$(srcdir)/css 	-I$(top_srcdir)/kfile -I$(top_srcdir)/kssl -I$(top_srcdir) $(all_includes)
+ 
+ 
+ servicedir = $(kde_servicesdir)

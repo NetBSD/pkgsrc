@@ -1,0 +1,22 @@
+$NetBSD: patch-ap,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+
+--- kio/kimageio.cpp.orig	Wed Dec 13 18:24:15 2000
++++ kio/kimageio.cpp
+@@ -112,7 +112,7 @@
+       if (bRead)
+       {
+          funcName = "kimgio_"+mType.lower()+"_read";
+-         lt_ptr_t func = lt_dlsym(libhandle, funcName.ascii());
++         lt_ptr func = lt_dlsym(libhandle, funcName.ascii());
+ 
+          if (func == NULL) {
+             iio->setStatus(1); // error
+@@ -123,7 +123,7 @@
+       if (bWrite)
+       {
+          funcName = "kimgio_"+mType.lower()+"_write";
+-         lt_ptr_t func = lt_dlsym(libhandle, funcName.ascii());
++         lt_ptr func = lt_dlsym(libhandle, funcName.ascii());
+ 
+          if (func == NULL) {
+             iio->setStatus(1); // error

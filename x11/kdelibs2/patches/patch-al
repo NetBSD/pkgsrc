@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+
+--- khtml/rendering/Makefile.in.orig	Thu Feb 22 18:17:31 2001
++++ khtml/rendering/Makefile.in
+@@ -274,7 +274,7 @@
+ noinst_HEADERS =  	bidi.h break_lines.h 	render_style.h render_object.h render_box.h 	render_flow.h render_text.h render_box.h render_replaced.h 	render_form.h render_list.h render_root.h render_frames.h 	render_br.h render_applet.h
+ 
+ 
+-INCLUDES = -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio -I$(top_srcdir)/dcop  -I$(top_srcdir)/kfile  -I$(top_srcdir)/khtml/java  -I$(top_srcdir)/khtml -I$(top_srcdir)/khtml/misc  -I$(top_srcdir)/khtml/css  -I$(top_srcdir)/khtml/dom -I$(top_srcdir)/khtml/xml -I$(top_srcdir)/khtml/html  -I$(top_srcdir)/libltdl -I$(top_srcdir) $(all_includes)
++INCLUDES = -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio -I$(top_srcdir)/dcop  -I$(top_srcdir)/kfile  -I$(top_srcdir)/khtml/java  -I$(top_srcdir)/khtml -I$(top_srcdir)/khtml/misc  -I$(top_srcdir)/khtml/css  -I$(top_srcdir)/khtml/dom -I$(top_srcdir)/khtml/xml -I$(top_srcdir)/khtml/html  -I$(top_srcdir) $(all_includes)
+ 
+ 
+ SRCDOC_DEST = $(kde_htmldir)/en/kdelibs/khtml

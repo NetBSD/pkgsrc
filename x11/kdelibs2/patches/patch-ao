@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+
+--- kinit/kinit.cpp.orig	Sun Feb 18 15:27:05 2001
++++ kinit/kinit.cpp
+@@ -81,7 +81,7 @@
+   pid_t my_pid;
+   int n;
+   lt_dlhandle handle;
+-  lt_ptr_t sym;
++  lt_ptr sym;
+   char **argv;
+   int (*func)(int, char *[]);
+   int (*launcher_func)(int);
