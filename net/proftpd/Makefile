@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/03/05 09:05:33 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/22 10:15:27 jmmv Exp $
 
 DISTNAME=	proftpd-1.2.8
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,10 +12,16 @@ COMMENT=	FTP server with Apache like configuration
 
 GNU_CONFIGURE=	# defined
 USE_GMAKE=	# defined
+USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=--localstatedir=/var/run
 CONFIGURE_ARGS+=--disable-sendfile
+
+RCD_SCRIPTS=	proftpd
+
+CONF_FILES=	${PREFIX}/share/examples/proftpd/basic.conf \
+		${PKG_SYSCONFDIR}/proftpd.conf
 
 ## .if defined(PROFTPD_USE_LDAP) && ${PROFTPD_USE_LDAP} == "YES"
 ## MODULES:=	${MODULES}:mod_ldap
