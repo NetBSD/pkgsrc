@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/30 08:24:18 wiz Exp $
+
+SHA1 (rsltcsrc.tgz) = 8de5c1de5def8766b5df5d8d4a247f941c84a3d6
+Size (rsltcsrc.tgz) = 382133 bytes
+SHA1 (patch-aa) = de51a067a677c99838ccbb800e08c803c240e008
