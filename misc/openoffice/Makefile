@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/07/31 19:33:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2002/07/31 21:14:04 mrauch Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -60,11 +60,8 @@ post-extract:
 	    ${WRKSRC}/../sablot/Sablot-0.52.patch
 
 DISPLAY?=	#empty, if unset
-.if ${DISPLAY}!=""
-DISPLAY_OK!=${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO
-.endif
 checkforx:
-.if ${DISPLAY}=="" || ${DISPLAY_OK} == "NO"
+.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO!} == "NO"
 .if exists(${X11BASE}/bin/Xvfb)
 	-${X11BASE}/bin/Xvfb :2 &
 DISPLAY= ':2'
