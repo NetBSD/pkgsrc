@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/08/28 09:57:34 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/02 23:12:23 seb Exp $
 
 .if !defined(TCL_OTCL_BUILDLINK2_MK)
 TCL_OTCL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			tcl-otcl
-BUILDLINK_DEPENDS.tcl-otcl?=		tcl-otcl>=1.0rc8
+BUILDLINK_DEPENDS.tcl-otcl?=		tcl-otcl>=1.0rc8nb1
 BUILDLINK_PKGSRCDIR.tcl-otcl?=		../../lang/tcl-otcl
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.tcl-otcl=tcl-otcl
