@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/12/05 00:06:49 jtb Exp $
+
+--- itertort.c.orig	Mon Nov 20 20:39:11 2000
++++ itertort.c
+@@ -31,9 +31,9 @@
+ */
+ 
+ #include	<stdio.h>
+-#include	"matrix2.h"
+-#include	"sparse2.h"
+-#include	"iter.h"
++#include	<meschach/matrix2.h>
++#include	<meschach/sparse2.h>
++#include	<meschach/iter.h>
+ #include	<math.h>
+ 
+ #define	errmesg(mesg)	printf("Error: %s error: line %d\n",mesg,__LINE__)
