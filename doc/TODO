@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1606 2004/04/14 09:14:22 adam Exp $
+$NetBSD: TODO,v 1.1607 2004/04/14 14:42:36 adam Exp $
 
 Suggested new packages
 ======================
@@ -324,7 +324,6 @@ Suggested package updates
 	o teapop-0.3.8
 	o ted-2.15 [do not update per tech-pkg mail from Jonathan on 20040404]
 	o texinfo-4.7
-	o timidity-2.13.0
 	o tkman-2.2
 	o tmda-1.0.2
 	o top-3.5b12.10
