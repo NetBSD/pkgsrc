@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:42:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/04/26 09:49:38 jmmv Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
@@ -8,7 +8,7 @@
 DISTNAME=	wmthemes-0.62
 PKGREVISION=	2
 WRKSRC=		${WRKDIR}
-CATEGORIES=	x11 wm
+CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
 
