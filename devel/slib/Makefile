@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/08 17:22:59 reed Exp $
 
 DISTNAME=	slib2d6
 #
@@ -29,6 +29,6 @@ do-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} *.scm *.init ${SLIBDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} README FAQ ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/slib.info ${PREFIX}/info
+	${INSTALL_DATA} ${WRKSRC}/slib.info ${PREFIX}/${INFO_DIR}
 
 .include "../../mk/bsd.pkg.mk"

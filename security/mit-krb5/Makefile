@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/30 20:17:42 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/08 17:22:59 reed Exp $
 
 DISTNAME=	krb5-1.3.2
 PKGNAME=	mit-${DISTNAME}
@@ -101,10 +101,10 @@ pre-configure:
 
 post-install:
 	cd ${WRKSRC}/../doc; for info in ${INFO_FILES}; do		\
-		${INSTALL_MAN} $$info ${PREFIX}/info;			\
+		${INSTALL_MAN} $$info ${PREFIX}/${INFO_DIR} ;		\
 		for file in $$info-[0-9]*; do				\
 			if [ -f "$$file" ]; then			\
-				${INSTALL_MAN} $$file ${PREFIX}/info;	\
+				${INSTALL_MAN} $$file ${PREFIX}/${INFO_DIR} \
 			fi;						\
 		done;							\
 	done
