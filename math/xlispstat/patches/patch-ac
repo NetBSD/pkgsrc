@@ -1,13 +1,14 @@
-$NetBSD: patch-ac,v 1.4 1999/01/01 09:03:36 garbled Exp $
---- Makefile.in.orig	Wed Sep 16 12:19:33 1998
-+++ Makefile.in	Fri Jan  1 01:48:18 1999
+$NetBSD: patch-ac,v 1.5 2000/10/15 02:23:56 jlam Exp $
+
+--- Makefile.in.orig	Tue Feb  1 18:22:53 2000
++++ Makefile.in
 @@ -6,7 +6,8 @@
  ##############################################################################
  ##############################################################################
  #
 -# XLSLIB -- directory for xlisp executable, startup, example, and help files
-+# XLSLIB -- directory for xlisp example and help files
-+# XLSLIBEXEC -- directory for xlisp executable and startup
++# XLSLIB -- directory for xlisp example, and help files
++# XLSLIBEXEC -- directory for xlisp executable and startup files
  # BINDIR -- directory for xlispstat shell script
  #
  # For the remaining parameters, if your machine has a subdirectory in the 
@@ -26,12 +27,12 @@ $NetBSD: patch-ac,v 1.4 1999/01/01 09:03:36 garbled Exp $
  	echo "(compile-file \"$<\") (exit)" | ./xlisp
  
 -CFLAGS = -D${GRAPHSYS} ${UCFLAGS} ${X11INCDIR_FLAG}
-+CFLAGS = -D${GRAPHSYS} ${UCFLAGS} ${X11INCDIR_FLAG} -Dunix
++CFLAGS += -D${GRAPHSYS} ${UCFLAGS} ${X11INCDIR_FLAG} -Dunix=1
  
  LIBS = ${EXTRALIBS} -lm
  
 -LDFLAGS = ${ULDFLAGS}
-+LDFLAGS+= ${ULDFLAGS}
++LDFLAGS += ${ULDFLAGS}
  
  OSOBJS = xsdynload.o xssystem.o unixprim.o
  
