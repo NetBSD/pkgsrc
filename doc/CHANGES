@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2513 2003/06/16 08:29:26 martti Exp $
+$NetBSD: CHANGES,v 1.2514 2003/06/16 10:24:23 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added privoxy-3.0.2 [kim 2003-06-16]
 	Updated cue to 20030616 [itojun 2003-06-16]
 	Updated postfix to 2.0.12 [martti 2003-06-16]
+	Updated distcc to 2.7 [martti 2003-06-16]
