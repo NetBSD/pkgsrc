@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/30 07:16:34 rh Exp $
+
+--- configure.orig	Wed Aug 30 08:38:32 2000
++++ configure
+@@ -3522,7 +3522,7 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
