@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.18 2002/10/19 10:54:42 rh Exp $
+# $NetBSD: Makefile,v 1.19 2002/11/02 02:42:01 rh Exp $
 
-DISTNAME=	gnome-media-1.2.3
-PKGREVISION=	3
-CATEGORIES=	audio gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-media/1.2/}
+DISTNAME=		gnome-media-1.2.3
+PKGREVISION=		3
+CATEGORIES=		audio gnome
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/1.2/}
 
-MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.gnome.org/
-COMMENT=	Set of audio/multimedia applications for GNOME
+MAINTAINER=		rh@netbsd.org
+HOMEPAGE=		http://www.gnome.org/
+COMMENT=		Set of audio/multimedia applications for GNOME
 
-GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
-USE_LIBTOOL=	YES
-USE_X11BASE=	YES
-USE_GMAKE=	YES
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
+USE_X11BASE=		YES
+USE_GMAKE=		YES
 BUILD_USES_MSGFMT=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ARGS+=--localstatedir=${X11PREFIX}/var/lib
+CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
 
