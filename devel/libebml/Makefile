@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/05 15:56:45 salo Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/16 09:30:18 grant Exp $
 #
 
 DISTNAME=	libebml-0.7.0
@@ -16,5 +16,7 @@ USE_LANGUAGES=	c++
 NO_CONFIGURE=	yes
 MAKEFLAGS+=	prefix="${PREFIX}"
 BUILD_DIRS=	${WRKDIR}/${DISTNAME}/make/linux
+
+ONLY_FOR_COMPILER=	gcc
 
 .include "../../mk/bsd.pkg.mk"
