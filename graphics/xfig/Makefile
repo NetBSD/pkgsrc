@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/24 09:20:35 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/05/19 07:48:45 frueauf Exp $
 #
 
 DISTNAME=		xfig.3.2
@@ -16,6 +16,8 @@ DEPENDS+=		jpeg-6a:../../graphics/jpeg
 DEPENDS+=		Xaw3d-1.3:../../x11/Xaw3d
 
 USE_IMAKE=		yes
+
+CAT1=			xfig.0
 
 post-install:
 	${MKDIR} ${X11BASE}/share/examples/xfig
