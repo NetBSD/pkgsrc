@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2000/12/13 21:06:03 jdolecek Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/13 21:07:27 hubertf Exp $
 
 DISTNAME=	opera-4.0-b4-20001211.012-static.i386
 PKGNAME=	opera-4.0b4
 CATEGORIES=	www
-MASTER_SITES=	http://opera.online.no/linux/tgz/
+MASTER_SITES=	http://opera.online.no/linux/tgz/ \
+		ftp://ftp.fh-koblenz.de/pub/InternetClients/Opera/english/4.0b4/linux/intel-x86/static/ \
+		http://www.wireweb.net/users/quasar/tgz/ \
+		ftp://gd.tuwien.ac.at/infosys/browsers/opera/linux/tgz/tgz/ \
+		ftp://sunsite.cnlab-switch.ch/mirror/opera/linux/tgz/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.opera.com/
@@ -11,6 +15,7 @@ HOMEPAGE=	http://www.opera.com/
 DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
 DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
 DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
+DEPENDS+=	suse_libpng>=7.0:../../emulators/suse_libpng
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
