@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/03/29 23:21:17 garbled Exp $
+# $NetBSD: Makefile,v 1.8 1999/03/30 04:56:18 garbled Exp $
 
 DISTNAME=		enlightenment-0.15.4
 CATEGORIES=		x11
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.enlightenment.org/
 
 DEPENDS+=		ImageMagick-4.2.1:../../graphics/ImageMagick
 DEPENDS+=		imlib-1.9.4:../../graphics/imlib
-DEPENDS+=		freetype-1.1:../../textproc/freetype
+DEPENDS+=		freetype-1.1:../../graphics/freetype
 DEPENDS+=		fnlib-0.4:../../graphics/fnlib
 DEPENDS+=		esound-0.2.8:../../audio/esound
 DEPENDS+=		eterm-0.8.8:../../x11/eterm
