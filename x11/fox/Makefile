@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/03/23 04:41:02 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/09/06 22:29:57 wiz Exp $
 #
 
 DISTNAME=	fox-1.0.43
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://www.fox-toolkit.org/ftp/
 
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	# defined
 
 CONFIGURE_ARGS+=	--with-opengl=mesa
 CONFIGURE_ARGS+=	--with-x
-CONFIFURE_ARGS+=	--with-shm=yes
+CONFIGURE_ARGS+=	--with-shm=yes
 CONFIGURE_ARGS+=	--enable-release
 
 .include "../../graphics/jpeg/buildlink3.mk"
