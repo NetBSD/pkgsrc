@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/01/25 16:29:50 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2003/02/05 22:06:45 jmmv Exp $
 
 SHA1 (GConf-1.2.1.tar.bz2) = a0b585dbfbd598380bd4e40f275ff478b196eefc
 Size (GConf-1.2.1.tar.bz2) = 954798 bytes
-SHA1 (patch-aa) = 9a8f02de1d4b15a0d93387b78e29ad8b276363b9
+SHA1 (patch-aa) = 140463db01048861197fbaf4fe3940f23e11ae46
