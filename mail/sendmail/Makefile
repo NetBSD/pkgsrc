@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2003/12/02 05:45:12 ben Exp $
+# $NetBSD: Makefile,v 1.66 2003/12/03 22:11:02 reed Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -95,10 +95,10 @@ post-install:
 .if ${USE_DB2} == YES
 	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
-	${INSTALL_DATA} ${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${SED} s/sun4./sun4/`/libsm/libsm.a \
+	${INSTALL_DATA} ${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
 		${PREFIX}/lib
 	${INSTALL_DATA} \
-		${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
+		${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
 
 USE_PKGINSTALL=	yes
@@ -108,4 +108,4 @@ PKG_USERS=	smmsp:smmsp::Sendmail\\ Message\\ Submission\\ Program
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails
-OBJDIR!=	${ECHO} obj.`uname -srm | ${TR} \  .`
+OBJDIR!=	${ECHO} obj.`uname -srm | ${TR} \  . | ${TR} \/ -`
