@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/29 17:26:18 erh Exp $
+
+SHA1 (dpkg_1.10.24.tar.gz) = bba3fa47662b776fae15dd2d9e667c6b08c2bea8
+Size (dpkg_1.10.24.tar.gz) = 1936470 bytes
+SHA1 (patch-aa) = 62740602375270c50fd518bddfe9a713d85a148f
+SHA1 (patch-ab) = 545ade40a5b62161b31478eff12573c8418d06e4
+SHA1 (patch-ac) = 130359aeeafc5c8bc10f38eac7335c2781f3c503
+SHA1 (patch-ad) = 95c64b2d0c6872b75151f2e8ca4c3d0a3206b6a0
