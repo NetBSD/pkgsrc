@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.72 1999/09/03 22:00:52 tron Exp $
+# $NetBSD: mk.conf.example,v 1.73 1999/09/07 14:55:37 jlam Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -217,6 +217,11 @@
 #DONT_USE_IDEA=			# Used in ssh package to stop IDEA encryption
                                 # Possible: defined, not defined
                                 # Default: not defined
+
+#DT_LAYOUT=			# Used by dt package to specify the keyboard
+                                # layout.
+                                # Possible: US, FI, FR, GER, DV
+                                # Default: FI
 
 #EXTRA_DICT=			# Used by ispell package to specify an extra
                                 # national dictionary.
