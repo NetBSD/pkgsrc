@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2003/05/26 20:50:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.58 2003/05/27 08:40:19 grant Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 #
@@ -35,10 +35,12 @@ INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 .include "../../mk/bsd.prefs.mk"
 
+GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+
 .if ${OPSYS} == "SunOS"
 CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
-GCC_PREFIX=		${PREFIX}
-PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 .  if ${CC:M*gcc*} == ""
 ALL_TARGET=		bootstrap
 .  endif
@@ -46,14 +48,7 @@ ALL_TARGET=		bootstrap
 .elif ${OPSYS:M*BSD} != "" || ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 .else
-# try to use some sane defaults if we have no idea about the platform.
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 # play it safe, force a bootstrap build if we don't know for sure it
 # is gcc.
 .  if ${CC:M*gcc*} == ""
@@ -105,6 +100,7 @@ post-install:
 		${GCC_PREFIX}/include/g++-3/FlexLexer.h
 .  endif
 	${RM} -f ${GCC_ARCHDIR}/include/curses.h ${GCC_PREFIX}/bin/cc
+.endif
 	${LN} -s gcc ${GCC_PREFIX}/bin/cc
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
@@ -113,7 +109,6 @@ post-install:
 	${FIND} ${GCC_PREFIX} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
-.endif
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
