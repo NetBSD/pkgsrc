@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/22 07:19:25 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/11 03:42:21 snj Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.bitmover.com/lm/lmbench/
 COMMENT=		Complete benchmark that gives a large amount of information
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 ALL_TARGET=		build
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
@@ -36,8 +36,7 @@ do-install:
 	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
 		INSTALL_PROGRAM=${INSTALL} ${FILESDIR}/do-install
 
-.include "../../mk/bsd.prefs.mk"
-
+.include "../../mk/bsd.prefs.mk" 
 benchmark:
 	if [ ! -f ${PREFIX}/bin/lmbench/hello ]; then \
 		@${ECHO} "*** This benchmark must be installed to run" ; \
@@ -58,5 +57,5 @@ results:
 	-@cd ${PREFIX}/share/lmbench ; \
 	tar -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
