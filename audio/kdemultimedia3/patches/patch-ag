@@ -1,30 +1,13 @@
-$NetBSD: patch-ag,v 1.3 2003/05/22 03:05:40 markd Exp $
+$NetBSD: patch-ag,v 1.4 2003/09/17 23:04:33 markd Exp $
 
---- kmidi/TIMIDITY/Makefile.in.orig	Thu May  8 00:05:28 2003
+--- kmidi/TIMIDITY/Makefile.in.orig	2003-09-10 14:32:05.000000000 +1200
 +++ kmidi/TIMIDITY/Makefile.in
-@@ -149,7 +149,6 @@ KDE_XSL_STYLESHEET = @KDE_XSL_STYLESHEET
- LAME_INCS = @LAME_INCS@
- LAME_LIBS = @LAME_LIBS@
- LAME_RPATH = @LAME_RPATH@
--LDFLAGS = `$(ARTSCCONFIG) --libs`
- LIBALIB = @LIBALIB@
- LIBASOUND = @LIBASOUND@
- LIBAUDIO = @LIBAUDIO@
-@@ -388,7 +387,8 @@ xine_artsplugin_SUBDIR_included_TRUE = @
- 
+@@ -390,7 +390,7 @@ xine_artsplugin_SUBDIR_included_TRUE = @
  INCLUDES = $(X_INCLUDES) `$(ARTSCCONFIG) --cflags`
  AM_CFLAGS = -DDEFAULT_PATH=\"$(TIMID_DIR)\" $(EXTRATDEFS) $(EXTRATCFLAGS)
+ AM_LDFLAGS = `$(ARTSCCONFIG) --libs`
 -LDADD = $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lkdefakes -lm
-+timidity_LDFLAGS = `$(ARTSCCONFIG) --libs`
 +LDADD = $(LIBOSSAUDIO) $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lkdefakes -lm
  
  # Where to install the patches, config files, and MIDI files.
  # If you change this, it's a good idea to recompile the binary,
-@@ -470,7 +470,6 @@ timidity_nofinal_OBJECTS = timidity.$(OB
- @KDE_USE_FINAL_TRUE@timidity_OBJECTS = $(timidity_final_OBJECTS)
- timidity_LDADD = $(LDADD)
- timidity_DEPENDENCIES =
--timidity_LDFLAGS =
- 
- DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
- depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
