@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/09/06 16:44:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/09/24 16:53:19 garbled Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -26,11 +26,11 @@ post-extract:
 	(cd ${WRKDIR}; tar xzf sndserv.tgz)
 
 post-patch:
-	@${MV} ${WRKSRC}/${DISTNAME}/i_sound.c foo
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <foo> ${WRKSRC}/${DISTNAME}/i_sound.c
-	@${MV} ${WRKSRC}/${DISTNAME}/d_main.c foo
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <foo> ${WRKSRC}/${DISTNAME}/d_main.c
-	@${RM} -f foo
+	@${MV} ${WRKSRC}/${DISTNAME}/i_sound.c ${WRKSRC}/foo
+	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <${WRKSRC}/foo> ${WRKSRC}/${DISTNAME}/i_sound.c
+	@${MV} ${WRKSRC}/${DISTNAME}/d_main.c ${WRKSRC}/foo
+	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <${WRKSRC}/foo> ${WRKSRC}/${DISTNAME}/d_main.c
+	@${RM} -f ${WRKSRC}/foo
 
 do-build:
 	cd ${WRKSRC}/${DISTNAME} ; ${GMAKE} X11BASE=${X11BASE}
