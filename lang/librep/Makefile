@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/06/21 03:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/23 19:26:58 jlam Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -10,7 +10,7 @@ MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://librep.sourceforge.net/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
-GDBM_REQD=		1.8.0
+BUILDLINK_DEPENDS.gdbm=	gdbm>=1.8.0
 USE_GNU_READLINE=	# uses rl_basic_quote_characters
 
 USE_BUILDLINK_ONLY=	# defined
@@ -28,5 +28,4 @@ PLIST_SUBST+=		REP_VERS=${REP_VERS}
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/gmp/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
-
 .include "../../mk/bsd.pkg.mk"

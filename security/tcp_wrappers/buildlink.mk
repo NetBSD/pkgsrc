@@ -1,11 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:20 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:00 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tcp_wrappers.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define TCP_WRAPPERS_REQD to the version of tcp_wrappers
-#     desired.
+# (1) Optionally define BUILDLINK_DEPENDS.tcp_wrappers to the dependency
+#     pattern for the version of tcp_wrappers desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -15,9 +15,7 @@
 .if !defined(TCP_WRAPPERS_BUILDLINK_MK)
 TCP_WRAPPERS_BUILDLINK_MK=	# defined
 
-.include "../../mk/bsd.prefs.mk"
-
-TCP_WRAPPERS_REQD?=		7.6.1nb1
+BUILDLINK_DEPENDS.tcp_wrappers?=	tcp_wrappers>=7.6.1nb1
 
 .if exists(/usr/include/tcpd.h)
 _NEED_TCP_WRAPPERS=	NO
@@ -26,7 +24,7 @@ _NEED_TCP_WRAPPERS=	YES
 .endif
 
 .if ${_NEED_TCP_WRAPPERS} == "YES"
-DEPENDS+=	tcp_wrappers>=${TCP_WRAPPERS_REQD}:../../security/tcp_wrappers
+DEPENDS+=	${BUILDLINK_DEPENDS.tcp_wrappers}:../../security/tcp_wrappers
 BUILDLINK_PREFIX.tcp_wrappers=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.tcp_wrappers=	/usr

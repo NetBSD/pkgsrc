@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/21 22:36:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:48 jlam Exp $
 #
 # This Makefile fragment is included by packages that use bzip2.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define BZIP2_REQD to the version of bzip2 desired.
+# (1) Optionally define BUILDLINK_DEPENDS.bzip2 to the dependency pattern
+#     for the version of bzip2 desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,9 +15,9 @@
 .if !defined(BZIP2_BUILDLINK_MK)
 BZIP2_BUILDLINK_MK=	# defined
 
-.include "../../mk/bsd.prefs.mk"
+BUILDLINK_DEPENDS.bzip2?=	bzip2>=1.0.1
 
-BZIP2_REQD?=		1.0.1
+.include "../../mk/bsd.prefs.mk"
 
 .if exists(/usr/include/bzlib.h)
 #
@@ -34,7 +35,7 @@ _NEED_BZIP2=		NO
 .endif
 
 .if ${_NEED_BZIP2} == "YES"
-DEPENDS+=			bzip2>=${BZIP2_REQD}:../../archivers/bzip2
+DEPENDS+=	${BUILDLINK_DEPENDS.bzip2}:../../archivers/bzip2
 BUILDLINK_PREFIX.bzip2=		${LOCALBASE}
 .else
 BUILDLINK_PREFIX.bzip2=		/usr

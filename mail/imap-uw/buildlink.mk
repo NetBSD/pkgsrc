@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/22 05:46:26 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:58 jlam Exp $
 #
 # This Makefile fragment is included by packages that use imap-uw.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define IMAP_UW_REQD to the version of imap-uw desired.
+# (1) Optionally define BUILDLINK_DEPENDS.imap-uw to the dependency pattern
+#     for the version of imap-uw desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(IMAP_UW_BUILDLINK_MK)
 IMAP_UW_BUILDLINK_MK=	# defined
 
-IMAP_UW_REQD?=		2000.0.3nb1
-DEPENDS+=		imap-uw>=${IMAP_UW_REQD}:../../mail/imap-uw
+BUILDLINK_DEPENDS.imap-uw?=	imap-uw>=2000.0.3nb1
+DEPENDS+=	${BUILDLINK_DEPENDS.imap-uw}:../../mail/imap-uw
 
 BUILDLINK_PREFIX.imap-uw=	${LOCALBASE}
 BUILDLINK_FILES.imap-uw=	include/c-client/*

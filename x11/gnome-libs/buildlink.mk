@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:20 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:01 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define GNOME_LIBS_REQD to the version of gnome-libs desired.
+# (1) Optionally define BUILDLINK_DEPENDS.gnome-libs to the dependency pattern
+#     for the version of gnome-libs desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(GNOME_LIBS_BUILDLINK_MK)
 GNOME_LIBS_BUILDLINK_MK=	# defined
 
-GNOME_LIBS_REQD?=	1.0.53
-DEPENDS+=		gnome-libs>=${GNOME_LIBS_REQD}:../../x11/gnome-libs
+BUILDLINK_DEPENDS.gnome-libs?=	gnome-libs>=1.0.53
+DEPENDS+=	${BUILDLINK_DEPENDS.gnome-libs}:../../x11/gnome-libs
 
 BUILDLINK_PREFIX.gnome-libs=	${X11PREFIX}
 BUILDLINK_FILES.gnome-libs=	include/gnome.h
