@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2002/11/20 22:13:22 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/03/09 19:04:53 jschauma Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
@@ -8,6 +8,13 @@ MESALIB_BUILDLINK2_MK=	# defined
 MESA_REQD?=			3.4.2
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
+
+# XXX should be >= 3.4.2
+.if !empty(MESA_REQD:M5.[0-9]*)
+_NEED_MESALIB=		YES
+CPPFLAGS+=              -DGLX_GLXEXT_LEGACY
+CFLAGS+=		-DGLX_GLXEXT_LEGACY
+.else
 
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
 # depend on the Mesa package.
@@ -46,10 +53,12 @@ _NEED_MESALIB!= \
 .  endif
 .endif
 
+.endif  # MESA_REQD
+
 .if ${_NEED_MESALIB} == "YES"
 BUILDLINK_PACKAGES+=		MesaLib
 EVAL_PREFIX+=			BUILDLINK_PREFIX.MesaLib=MesaLib
-BUILDLINK_PREFIX.MesaLib_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.MesaLib_DEFAULT=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.MesaLib=	${X11BASE}
 .endif
