@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.12 2002/06/30 18:03:06 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.13 2002/06/30 18:16:43 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -514,7 +514,7 @@ ${_alias_}: ${BUILDLINK_${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
 		"Linking wrapper: ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} ${BUILDLINK_${_wrappee_}} ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${LN} -f ${BUILDLINK_${_wrappee_}} ${.TARGET}
 .    endif
 .  endfor # _alias_
 .endfor   # _wrappee_
