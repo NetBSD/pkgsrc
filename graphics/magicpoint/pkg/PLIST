@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/05/12 15:22:28 is Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/06/24 09:01:54 taca Exp $
 bin/mgp
 bin/mgp2ps
 bin/mgpembed
@@ -29,7 +29,6 @@ share/examples/mgp/cloud.jpg
 share/examples/mgp/dad.eps
 share/examples/mgp/dad.jpg
 share/examples/mgp/default.mgp
-share/examples/mgp/dns-jp.mgp
 share/examples/mgp/embed-jp.mgp
 share/examples/mgp/embed.mgp
 share/examples/mgp/gradation-jp.mgp
