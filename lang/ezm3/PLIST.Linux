@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2004/06/04 17:34:36 jschauma Exp $
+ezm3/lib/m3/pkg/m3core/src/runtime/LINUXLIBC6/socketcall.h
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uresource.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uexec.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Utime.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Unetdb.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Usignal.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uugid.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uprocess.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Udir.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Usocket.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Umsg.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Upaths.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Usem.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Ugrp.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Utypes.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uipc.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uuio.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Upwd.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uerror.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Usyslog.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Ushm.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uin.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Unix.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Ustat.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Umman.i3
+ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6/Uutmp.i3
+@dirrm ezm3/lib/m3/pkg/m3core/src/unix/${LOWER_OPSYS}-libc6

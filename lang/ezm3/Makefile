@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/04 17:34:36 jschauma Exp $
 
 DISTNAME=	ezm3-1.1
 CATEGORIES=	lang
@@ -11,7 +11,6 @@ COMMENT=	Easier, more portable Modula-3 distribution for building CVSup
 
 DIST_SUBDIR=		ezm3
 USE_GNU_TOOLS+=		make
-NO_BUILD=		yes
 INSTALL_TARGET=		all
 MAKE_ARGS+=		M3OPTIONS="-DBUILD_ALL -DSHIP_ALL"
 PLIST_SUBST+=		TARGET=${TARGET} TARGETDIR=${TARGETDIR}
@@ -23,7 +22,8 @@ PLIST_SUBST+=		TARGET=${TARGET} TARGETDIR=${TARGETDIR}
 CFLAGS:=
 EZM3ROOT=		${PREFIX}/ezm3
 
-ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386
+# XXX: This may well work for some others.
+ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386
 
 .if ${OPSYS} == "FreeBSD"
 BOOTSTRAP=	${DISTNAME}-FreeBSD4-boot.tar.bz2
@@ -33,6 +33,10 @@ TARGETDIR=	freebsd-1
 BOOTSTRAP=      ${DISTNAME}-NetBSDi386-boot.tar.bz2
 TARGET=         NetBSDi386
 TARGETDIR=      netbsd-1
+.elif ${OPSYS} == "Linux"
+BOOTSTRAP=	${DISTNAME}-LINUXLIBC6-boot.tar.bz2
+TARGET=		LINUXLIBC6
+TARGETDIR=	linux-libc6
 .endif
 
 do-configure:
@@ -44,5 +48,13 @@ do-configure:
 
 pre-build:
 	${RM} -rf ${WRKSRC}/${TARGET}
+
+do-build:
+	@${ECHO}
+	@${ECHO} "======================================================================";
+	@${ECHO} "As per the website, it is NOT possible to separate the build process"
+	@${ECHO} "from the installation process."
+	@${ECHO} "'${MAKE} install' will build AND install the package."
+	@${ECHO} "======================================================================";
 
 .include "../../mk/bsd.pkg.mk"
