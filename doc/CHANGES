@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8292 2004/12/05 17:24:38 he Exp $
+$NetBSD: CHANGES,v 1.8293 2004/12/05 17:27:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5795,3 +5795,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Config-IniFiles to 2.38 [he 2004-12-05]
 	Updated p5-DBI to 1.46 [he 2004-12-05]
 	Updated p5-DBI-Shell to 11.93 [he 2004-12-05]
+	Updated ruby18 to 1.8.1nb2 [taca 2004-12-05]
