@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/20 10:05:49 martti Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/04 13:01:33 martti Exp $
 
 DISTNAME=	radiusd-cistron-1.6.5
 CATEGORIES=	net
@@ -44,8 +44,8 @@ do-install:
 
 post-install:
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" ${FILESDIR}/radiusd.sh.tmpl \
-		> ${PREFIX}/etc/rc.d/radiusd.sh
-	@${CHMOD} 555 ${PREFIX}/etc/rc.d/radiusd.sh
-	@${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/etc/rc.d/radiusd.sh
+		> ${PREFIX}/etc/rc.d/radiusd
+	@${CHMOD} 555 ${PREFIX}/etc/rc.d/radiusd
+	@${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/etc/rc.d/radiusd
 
 .include "../../mk/bsd.pkg.mk"
