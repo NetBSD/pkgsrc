@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 11:18:27 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/20 06:27:19 jtb Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
-DISTNAME=	eb-2.3.8
+DISTNAME=	eb-3.0
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
 DISTFILES=	${EBFILES} \
 		${LISTFILES} \
 		${APPENDIXFILES}
-
-PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	${DISTNAME}+.diff
 
 MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/eb/
@@ -51,6 +48,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-zlib
 USE_GMAKE=		yes
+USE_LIBINTL=	yes
 
 APPENDIXDIR=	${PREFIX}/share/eb/appendix
 
