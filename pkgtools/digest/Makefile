@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/03/13 15:14:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2001/03/14 17:27:05 agc Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -31,7 +31,7 @@ MAKE_ENV+=	NETBSD_COMPATIBLE=YES
 .endif
 
 post-extract:
-	@for FILE in Makefile digest.c digest.1				\
+	@for FILE in Makefile regress.sh digest.c digest.1		\
 		md5c.c md5.h md5hl.c					\
 		rmd160.c rmd160.h rmd160hl.c				\
 		sha1.c sha1.h sha1hl.c					\
@@ -49,5 +49,10 @@ pre-install:
 	@if [ -n "${MANINSTALL:Mmaninstall}" ]; then			\
 		${ECHO} man/man1/digest.1 >> ${PLIST_SRC};		\
 	fi
+
+test:
+	@${ECHO} "No news is good news"
+	@cd ${WRKSRC} && ${SETENV} DIGESTDIR=${WRKSRC} ${SH} ./regress.sh
+	@${ECHO} "All tests completed"
 
 .include "../../mk/bsd.pkg.mk"
