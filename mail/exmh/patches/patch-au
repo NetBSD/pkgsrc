@@ -1,0 +1,477 @@
+diff -cr /nr/user/skr/lib/exmh2.0zeta/mime.tcl ./mime.tcl
+*** /nr/user/skr/lib/exmh2.0zeta/mime.tcl	Fri Oct  3 21:56:34 1997
+--- lib/mime.tcl	Wed Dec 10 12:57:57 1997
+***************
+*** 176,181 ****
+--- 176,191 ----
+  	{mime(mdnTo) dispositionNotificationTo {} {Disposition Notification To}
+  "The address where you want MDN receipts to end up.  This normally your
+  own email address."}
++ 	{mime(mdnSend) dispositionNotificationSend
++          {CHOICE never deny {ask user} auto/ask auto/ignore } 
++          {Send MDNs}
++ "This controls if and how to send MDNs.  The options are:
++   - Never generate MDN, always ignore requests.
++   - Automatically generate a \"denied\" MDN when a MDN is requested.
++   - Ask user whether to generate a MDN when displaying the message.
++   - Automatically when displaying the message, but ask user in 
++     certain cases where it may not be appropriate to generate MDNs.
++   - As above, but silently ignore potentially suspect MDN requests."}
+      }
+      set i 0
+      foreach char {A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \
+***************
+*** 1016,1029 ****
+  	}
+  	MimeShowHeaders $tkw $part=1 [MimeLabel $part part]
+  	MimeInsertSeparator $tkw $part 6
+!     	if {$part == 0 \
+! 	    && ![info exists mimeHdr(0=1,hdr,x-exmhmdn)] \
+! 	    && [info exists mimeHdr(0=1,hdr,disposition-notification-to)]} {
+! 	    if [info exists mime(mdnDone)] {
+! 		unset mime(mdnDone)
+! 	    } else {
+! 		MDNAsk $tkw $mimeHdr(0=1,hdr,disposition-notification-to)
+! 	    }
+          }
+  
+  	MimeShowPart $tkw $part=1 [MimeLabel $part part] 1
+--- 1026,1033 ----
+  	}
+  	MimeShowHeaders $tkw $part=1 [MimeLabel $part part]
+  	MimeInsertSeparator $tkw $part 6
+!     	if {$part == 0} {
+! 	    MDNCheck $tkw
+          }
+  
+  	MimeShowPart $tkw $part=1 [MimeLabel $part part] 1
+***************
+*** 1811,1824 ****
+  		MimeShowMinHeaders $tkw $part 1
+  	    }
+  	    MimeInsertSeparator $tkw $part 6
+! 	    if {![info exists mimeHdr(0=1,hdr,x-exmhmdn)] && \
+! 		   [info exists mimeHdr(0=1,hdr,disposition-notification-to)]} {
+! 		if [info exists mime(mdnDone)] {
+! 		    unset mime(mdnDone)
+! 		} else {
+! 		    MDNAsk $tkw $mimeHdr(0=1,hdr,disposition-notification-to)
+! 		}
+! 	    }
+  	    if [info exists mimeHdr($part,param,charset)] {
+  		set tag [MimeSetCharset $tkw $part]
+  		$tkw tag remove noteTag "insert -1line"  end
+--- 1815,1821 ----
+  		MimeShowMinHeaders $tkw $part 1
+  	    }
+  	    MimeInsertSeparator $tkw $part 6
+! 	    MDNCheck $tkw
+  	    if [info exists mimeHdr($part,param,charset)] {
+  		set tag [MimeSetCharset $tkw $part]
+  		$tkw tag remove noteTag "insert -1line"  end
+
+diff -cr /nr/user/skr/lib/exmh2.0zeta/receipt.tcl ./receipt.tcl
+*** /nr/user/skr/lib/exmh2.0zeta/receipt.tcl	Thu Oct  2 17:01:22 1997
+--- lib/receipt.tcl	Thu Dec 11 09:12:39 1997
+***************
+*** 46,57 ****
+      $t insert 1.0 "Disposition-Notification-To: $mdnTo\n"
+  }
+  
+! proc MDNGenerate { file address choice } {
+      global exwin mimeHdr
+  
+      if {$choice != "ignored"} {
+! 	set mdnfile [MDNBuildDraft $file $address $choice]
+! 	exec send $mdnfile
+      }
+      MDNAddHeaderToDraft $file "X-ExmhMDN: $choice"
+      MsgShowInText $exwin(mtext) $mimeHdr(0,rawfile)
+--- 46,61 ----
+      $t insert 1.0 "Disposition-Notification-To: $mdnTo\n"
+  }
+  
+! proc MDNGenerate { file address choice mode } {
+      global exwin mimeHdr
+  
+      if {$choice != "ignored"} {
+! 	set mdnfile [MDNBuildDraft $file $address $choice $mode]
+! 	if [catch {exec send $mdnfile} result] {
+! 	    Exmh_Debug "send result: $result"
+! 	    Exmh_Status "Could not send message disposition notification" error
+! 	    return
+! 	}
+      }
+      MDNAddHeaderToDraft $file "X-ExmhMDN: $choice"
+      MsgShowInText $exwin(mtext) $mimeHdr(0,rawfile)
+***************
+*** 82,109 ****
+      Mh_Rename $draft.new $draft
+  }
+  
+! proc MDNAsk {tkw address} {
+      global mimeHdr exmh
+  
+!     $tkw insert insert "  The sender wants you to acknowledge that you have \
+! 	seen this mail.  Do you want to send a receipt to $address?\n"
+!     $tkw insert insert "       "
+!     TextButton $tkw "Confirm now" \
+  	[list MDNGenerate $mimeHdr(0,rawfile) \
+! 	$mimeHdr(0=1,hdr,disposition-notification-to) "displayed"]
+      $tkw insert insert "    "
+      TextButton $tkw "Send denial" \
+  	[list MDNGenerate $mimeHdr(0,rawfile) \
+! 	$mimeHdr(0=1,hdr,disposition-notification-to) "denied"]
+      $tkw insert insert "    "
+      TextButton $tkw "Ignore silently" \
+  	[list MDNGenerate $mimeHdr(0,rawfile) \
+! 	$mimeHdr(0=1,hdr,disposition-notification-to) "ignored"]
+      $tkw insert insert "\n"
+      MimeInsertSeparator $tkw 0 6
+  }
+  
+  proc MDNReportDialog { tkw from date disp parts } {
+      if {$parts == 2} {
+  	$tkw insert insert "This mail contains a message disposition \
+  		notification, regarding the message to $from.\n\n"
+--- 86,238 ----
+      Mh_Rename $draft.new $draft
+  }
+  
+! proc MDNAsk {tkw address explain} {
+      global mimeHdr exmh
+  
+!     $tkw insert insert "  The sender wants you to acknowledge that you have\
+! 	seen this mail."
+!     if {[string compare $explain {}] != 0} {
+! 	$tkw insert insert "\n\n  NOTE! For the reason(s) listed below, it may\
+!             be unsafe to send the disposition notification.  Please check the\
+!             message carefully.  Unless you are sure that it is safe to send\
+!             the notification, press \"Ignore silently\""
+! 	$tkw insert insert $explain
+!     }
+! 
+!     $tkw insert insert "\n\n  Do you want to send a disposition notification\
+!         (receipt) to \n      $address?"
+!     $tkw insert insert "\n\n       "
+!     TextButton $tkw "Send confirmation" \
+  	[list MDNGenerate $mimeHdr(0,rawfile) \
+! 	     $mimeHdr(0=1,hdr,disposition-notification-to) \
+! 	     "displayed" "manual-action/MDN-sent-manually"]
+      $tkw insert insert "    "
+      TextButton $tkw "Send denial" \
+  	[list MDNGenerate $mimeHdr(0,rawfile) \
+! 	     $mimeHdr(0=1,hdr,disposition-notification-to) \
+! 	     "denied" "manual-action/MDN-sent-manually"]
+      $tkw insert insert "    "
+      TextButton $tkw "Ignore silently" \
+  	[list MDNGenerate $mimeHdr(0,rawfile) \
+! 	$mimeHdr(0=1,hdr,disposition-notification-to) \
+! 	     "ignored" {}]
+      $tkw insert insert "\n"
+      MimeInsertSeparator $tkw 0 6
+  }
+  
++ proc MDNCheck { tkw } {
++     global mimeHdr mime
++ 
++     if {![info exists mimeHdr(0=1,hdr,x-exmhmdn)] && \
++ 	    [info exists mimeHdr(0=1,hdr,disposition-notification-to)]} {
++ 	if [info exists mime(mdnDone)] {
++ 	    unset mime(mdnDone)
++ 	} else {
++ 	    set dnt $mimeHdr(0=1,hdr,disposition-notification-to)
++ 
++ 	    switch $mime(mdnSend) {
++ 		"never" {
++ 		    set mdnAction1 "ignored"
++ 		    set mdnAction2 "ignored"
++ 		}
++ 		"deny" {
++ 		    set mdnAction1 "denied"
++ 		    set mdnAction2 "ignored"
++ 		}
++ 		"ask user" {
++ 		    set mdnAction1 "ask"
++ 		    set mdnAction2 "ask"
++ 		}
++ 		"auto/ask" {
++ 		    set mdnAction1 "displayed"
++ 		    set mdnAction2 "ask"
++ 		}
++ 		"auto/ignore" {
++ 		    set mdnAction1 "displayed"
++ 		    set mdnAction2 "ignored"
++ 		}
++ 		default {
++ 		    set mdnAction1 "ask"
++ 		    set mdnAction2 "ask"
++ 		}
++ 	    }
++ 
++ 	    set mdnExplain {}
++ 	    
++ 	    set line [string trim $dnt]
++ 	    if [regsub {\(.*\)} $line {} newline] {
++ 		set line $newline
++ 	    }
++ 
++ 	    if {[string first "|" $line] != -1} {
++ 		set mdnAction1 "ignore"
++ 		set mdnExplain "$mdnExplain 
++ 
++  * The address(es) for the disposition notification contains a pipe symbol (|)
++    *** THIS MAY BE A SERIOUS SECURITY HOLE."
++ 	    }
++ 
++ 	    if {[string first "," $line] != -1} {
++ 		set mdnAction1 $mdnAction2
++ 		set mdnExplain "$mdnExplain 
++ 
++  * The sender appears to have requested a disposition notification to be
++    sent to more than one address.  If you are not sure that there is a valid
++    reason to send disposition notifications to each of these addresses,
++    the request should be ignored and no disposition notifications sent."
++ 	    }
++ 
++ 	    if [info exists mimeHdr(0=1,hdr,return-path)] {
++ 		if {[string compare \
++ 			 [MsgParseFrom $mimeHdr(0=1,hdr,return-path) {}] \
++ 			 [MsgParseFrom $line {}]] != 0} {
++ 		    set mdnAction1 $mdnAction2
++ 		    set mdnExplain "$mdnExplain
++ 
++  * The disposition notification appears to be directed somewhere else than
++    to the sender of the message.  If you are not sure that there is a valid
++    reason for this, the request should be ignored and no disposition
++    notifications sent."
++ 		}
++ 	    } else {
++ 		set mdnAction1 $mdnAction2
++ 		set mdnExplain "$mdnExplain
++ 
++  * The message does not have a Return-path header field, and therefore it
++    is not possible to verify that the disposition notification address(es)
++    is valid."
++ 	    }
++ 
++ 	    if [info exists mimeHdr(0=1,hdr,disposition-notification-options)]\
++ 	    {
++ 		set mdnAction1 $mdnAction2
++ 		set mdnExplain "$mdnExplain
++ 
++  * The message has a Disposition-notification-options header requesting
++    some special processing which exmh does not know about."
++ 		if [regexp -nocase {=[ ]*required[ ]*,} \
++ 			$mimeHdr(0=1,hdr,disposition-notification-options)] {
++ 		    set mdnAction1 "ignored"
++ 		    set mdnExplain "$mdnExplain
++ 
++    Since one or more of the unknown options are required to be taken into
++    account for generating a proper disposition notification, no disposition
++    notification at all should be generated."
++ 		}
++ 	    }
++ 
++ 	    if {[string compare $mdnAction1 "ask"] == 0} {
++ 		MDNAsk $tkw $dnt $mdnExplain
++ 	    } else {
++ 		MDNGenerate $mimeHdr(0,rawfile) $dnt $mdnAction1 \
++ 		    "manual-action/MDN-sent-automatically"
++ 	    }
++ 	}
++     }
++ }
++ 
+  proc MDNReportDialog { tkw from date disp parts } {
++ 
+      if {$parts == 2} {
+  	$tkw insert insert "This mail contains a message disposition \
+  		notification, regarding the message to $from.\n\n"
+***************
+*** 111,163 ****
+  	$tkw insert insert "This mail contains a message disposition \
+  		notification, regarding the message to $from on $date.\n\n"
+      }
+!     switch [string tolower $disp] {
+! 	"displayed" {
+! 	    set jtext \
+! "The mail was displayed by the user agent to someone reading the recipient's \
+! mailbox.  This does not guarantee that it is read or understood."
+! 	}
+! 	"denied" {
+! 	    set jtext \
+! "The recipient does not wish you to be informed of the message's disposition."
+! 	}
+! 	"processed" {
+! 	    set jtext \
+! "The message has been processed in some manner (e.g. printed, faxed, \
+! forwarded) in response to a user command, without being displayed to the \
+! user.  The user may or may not see the message later."
+! 	}
+! 	"autoprocessed" {
+! "The message has been processed automatically in some manner (e.g. printed, \
+! faxed, forwarded, gatewayed) in response to some user request made in \
+! advance, without being displayed to the user.  The user may or may not see the \
+! message later."
+! 	}
+! 	"deleted" {
+! "The message has manually been deleted.  The recipient may or may not have \
+! seen the message."
+! 	}
+! 	"autodeleded" {
+! "The message has been automatically deleted without being displayed to the \
+! recipient."
+! 	}
+! 	"obsoleted" {
+! "The message has been automatically rendered obsolete by another message \
+! received.  The recipient may still access and read the message later."
+! 	}
+! 	"terminated" {
+! "The recipient's mailbox has been terminated and all messagess in it \
+! automatically deleted."
+! 	}
+! 	"autodenied" {
+! "The recipient does not wish the sender to be informed of the message's \
+! disposition, and has requested that this MDN be sent automatically."
+  	}
+! 	default {
+! 	    set jtext "The reciept type is $disp."
+  	}
+      }
+!     $tkw insert insert $jtext\n\n
+      if {$parts != 2} {
+  	$tkw insert insert "       "
+  	TextButton $tkw "View requesting message" \
+--- 240,336 ----
+  	$tkw insert insert "This mail contains a message disposition \
+  		notification, regarding the message to $from on $date.\n\n"
+      }
+! 
+!     $tkw insert insert "The disposition of the message is: \n   $disp\n\n"
+! 
+!     if [regsub -all {(\(.*\))|([ 	]+)} $disp {} newline] {
+! 	set disp $newline
+!     }
+! 
+!     if [regexp -nocase {^([-a-z]+)/([-a-z]+);([-a-z]+)(/(.*))?$} $disp match \
+! 	    action_mode sending_mode disp_type match2 disp_modifiers] {
+! 
+! 	$tkw insert insert "This means:\n"
+! 
+! 	switch [string tolower $action_mode] {
+! 	    "manual-action" {
+! 		$tkw insert insert "
+!     A manual action happened to the message:\n"
+! 	    }
+! 	    "automatic-action" {
+! 		$tkw insert insert "
+!     An automatic action happened to the message:\n"
+! 	    }
+! 	    default {
+! 		$tkw insert insert "
+!     An action (described as $action_mode) happened to the message:\n"
+! 	    }
+  	}
+! 
+! 	switch [string tolower $disp_type] {
+! 	    "displayed" {
+! 		set jtext "
+!         The mail was displayed by the user agent to someone reading the
+!         recipient's mailbox.  (This does not guarantee that it is read
+!         or understood.)"
+! 	    }
+! 	    "denied" {
+! 		set jtext "
+!         The recipient does not wish you to be informed of the message's
+!         disposition."
+! 	    }
+! 	    "dispatched" {
+! 	        set jtext "
+!         The mail has been sent somewhere (e.g. printed, faxed, forwarded)
+!         without being displayed to the user.  (The user may or may not see
+!         the message later.)"
+!             }
+! 	    "processed" {
+! 	        set jtext "
+!         The message has been processed in some manner (i.e. by some sort of
+!         rules or server) without being displayed to the user.  (The user may
+!         or may not see the message later, or there may not even be a human
+!         user associated with the mailbox.)"
+!             }
+!             "failed" {
+! 	        set jtext "
+!         A failure occurred that prevented the proper generation of an MDN."
+!             }
+! 	    "deleted" {
+! 	        set jtext "
+!         The message has been deleted.  (The recipient may or may not have
+!         seen the message.  The recipient might \"undelete\" the message at a
+!         later time and read the message.)"
+!     	    }
+!             default {
+! 	        set jtext "
+!         Unknown disposition type $disp_type."
+!    	    }
+!         }
+!         $tkw insert insert $jtext\n
+! 
+! 	switch [string tolower $sending_mode] {
+! 	    "mdn-sent-manually" {
+! 		$tkw insert insert "
+!     The recipient manually caused this MDN to be sent."
+! 	    }
+! 	    "mdn-sent-automatically" {
+! 		$tkw insert insert "    \
+!     This MDN was generated automatically."
+! 	    }
+! 	    default {
+! 		$tkw insert insert "
+!     The way the MDN was sent is described as: $sending_mode
+!     (which is not a valid code)."
+! 	    }
+  	}
++     } else {
++ 	$tkw insert insert "
++ The format of the disposition string is not recognized, cannot
++ explain it further."
+      }
+! 
+!     $tkw insert insert "\n\n\n"
+      if {$parts != 2} {
+  	$tkw insert insert "       "
+  	TextButton $tkw "View requesting message" \
+***************
+*** 181,187 ****
+      }
+  }
+  
+! proc MDNBuildDraft { draft address doit } {
+      global env mimeHdr faces exmh
+      set host [exec hostname]
+  
+--- 354,360 ----
+      }
+  }
+  
+! proc MDNBuildDraft { draft address doit choice} {
+      global env mimeHdr faces exmh
+      set host [exec hostname]
+  
+***************
+*** 226,232 ****
+      if [info exists mimeHdr(0=1,hdr,message-id)] {
+  	puts $out "Original-Message-ID: $mimeHdr(0=1,hdr,message-id)"
+      }
+!     puts $out "Disposition: $doit"
+  
+      FvMimeAddPart $out $bdry "message/rfc822\n"
+  
+--- 399,405 ----
+      if [info exists mimeHdr(0=1,hdr,message-id)] {
+  	puts $out "Original-Message-ID: $mimeHdr(0=1,hdr,message-id)"
+      }
+!     puts $out "Disposition: $choice; $doit"
+  
+      FvMimeAddPart $out $bdry "message/rfc822\n"
+  

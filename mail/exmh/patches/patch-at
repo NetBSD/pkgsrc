@@ -1,0 +1,281 @@
+*** exmh.install.orig	Mon Dec 22 13:37:45 1997
+--- exmh.install	Tue Dec 23 12:32:48 1997
+***************
+*** 45,50 ****
+--- 45,51 ----
+  						{Search path for user faces}
+  install_var	faces(set,unknown)	{domains unknown} \
+  						{Search path for generic faces}
++ install_var	faces(set,news)	{news}	{Search path for newsgroups faces}
+  install_var	faces(defaultDomain) eng.sun.com	{Your default domain}
+  install_var	faces(suffix) {xpm gif xbm}	{Faces file suffixes}
+  install_dirVar	pgp(path)	/usr/local/bin    	{PGP bin directory}
+*** lib/faces.tcl.orig	Mon Mar 24 13:15:34 1997
+--- lib/faces.tcl	Mon Sep 29 13:20:26 1997
+***************
+*** 29,34 ****
+--- 29,35 ----
+  	    # backwards compatibility with old "exmh" script
+  	    set faces(set,user) $faces(set)
+  	    set faces(set,unknown) $faces(set)
++ 	    set faces(set,news) $faces(set)
+  	}
+  	set faces(sets) {user unknown}
+      }
+***************
+*** 36,41 ****
+--- 37,43 ----
+      # tail component for each set
+      set faces(name,user) {$user}
+      set faces(name,unknown) unknown
++     set faces(name,news) unknown
+  
+      set faces(defaultDomain) [string tolower \
+  	[string trim $faces(defaultDomain) ". "]]
+***************
+*** 43,48 ****
+--- 45,51 ----
+      foreach set $faces(sets) {
+  	set faces(path,$set) {}
+      }
++     set faces(path,news) {}
+      if [info exists env(FACEPATH)] {
+  	set faces(base) ""
+  	foreach dir [split $env(FACEPATH) :] {
+***************
+*** 53,58 ****
+--- 56,62 ----
+  		} else {
+  		    FaceAddPath user $dir
+  		    FaceAddPath unknown $dir
++ 		    FaceAddPath news $dir
+  		}
+  	    }
+  	}
+***************
+*** 64,69 ****
+--- 68,77 ----
+  		FaceAddPath $set $dir
+  	    }
+  	}
++ 	foreach dir $faces(set,news) {
++ 	    if ![file isdirectory $faces(base)$dir] continue
++ 	    FaceAddPath news $dir
++ 	}
+      }
+  }
+  proc FaceAddPath {set dir} {
+***************
+*** 79,85 ****
+  }
+  
+  
+! proc Face_Show { fromwho {xface {}} } {
+      global faces faceCache
+  
+      Face_Delete
+--- 87,93 ----
+  }
+  
+  
+! proc Face_Show { fromwho {newsgrps {}} {xface {}} } {
+      global faces faceCache
+  
+      Face_Delete
+***************
+*** 99,109 ****
+      }
+  
+      # Check for cached lookup result
+!     if [info exists faceCache($fromwho)] {
+! 	if [Face_ShowFace $faceCache($fromwho)] {
+  		return 1
+  	}
+! 	unset faceCache($fromwho)
+  	Face_Delete
+      }
+  
+--- 107,117 ----
+      }
+  
+      # Check for cached lookup result
+!     if [info exists faceCache($fromwho,$newsgrps)] {
+! 	if [Face_ShowFace $faceCache($fromwho,$newsgrps)] {
+  		return 1
+  	}
+! 	unset faceCache($fromwho,$newsgrps)
+  	Face_Delete
+      }
+  
+***************
+*** 117,123 ****
+  	set machine [string tolower $faces(defaultDomain)]
+      } elseif {[string first . $machine] == -1} {
+        append machine . $faces(defaultDomain)
+!    }
+  
+      set from [split $machine .]
+      set pathlist [FacePathlist $from]
+--- 125,131 ----
+  	set machine [string tolower $faces(defaultDomain)]
+      } elseif {[string first . $machine] == -1} {
+        append machine . $faces(defaultDomain)
+!     }
+  
+      set from [split $machine .]
+      set pathlist [FacePathlist $from]
+***************
+*** 124,129 ****
+--- 132,147 ----
+  
+  #Exmh_Debug \n$user ==> $pathlist
+  
++     set pathlistngfull {}
++     if {[string compare "" $newsgrps]} {
++ 	set newsgrplist [string tolower [split $newsgrps ,]]
++ 	foreach ng $newsgrplist {
++ 	    set ngparts [split $ng .]
++ 	    set pathlistng [FacePathNGlist $ngparts]
++ 	    set pathlistngfull [concat $pathlistng $pathlistngfull]
++ 	}
++     }
++ 
+      # Loop through Face path
+  #Tputs lookup: [time {
+      set matches {}
+***************
+*** 152,158 ****
+  		    break
+  		}
+  		set path $dir/$part/$name
+! #	Exmh_Debug $path
+  		# skip non-existent directories
+  		if ![file exists $faces(base)$path] continue
+  
+--- 170,176 ----
+  		    break
+  		}
+  		set path $dir/$part/$name
+! #		Exmh_Debug $path
+  		# skip non-existent directories
+  		if ![file exists $faces(base)$path] continue
+  
+***************
+*** 166,178 ****
+  	}
+      }
+  #   }]
+  
+  #    Exmh_Debug Faces matches $matches
+  
+      if !$faces(rowEnabled) {
+  	foreach face $matches {
+  	    if [Face_ShowFile $face] {
+! 		set faceCache($fromwho) $face
+  		Exmh_Status $msg
+  		return 1
+  	    }
+--- 184,218 ----
+  	}
+      }
+  #   }]
++     eval set tail $faces(name,news)
++     foreach dir $faces(path,news) {
++ 	set name $tail
++ 	set map {}
++ 	foreach part [concat $map $pathlistngfull] {
++ #	    if {([string match unknown* $dir] || [string match misc* $dir])
++ #		 && [llength $matches]} {
++ #		break
++ #	    }
++ 	    set path $dir/$part/$name
++ #	    Exmh_Debug $path
++ 	    # skip non-existent directories
++ 	    if ![file exists $faces(base)$path] continue
+  
++ 	    foreach suf $faces(suffix) {
++ 		if [file exists $faces(base)$path/face.$suf] {
++ 		    lappend matches $path/face.$suf
++ 		    break
++ 	        }
++ 	    }
++ 	}
++     }
++ 
+  #    Exmh_Debug Faces matches $matches
+  
+      if !$faces(rowEnabled) {
+  	foreach face $matches {
+  	    if [Face_ShowFile $face] {
+! 		set faceCache($fromwho,$newsgrps) $face
+  		Exmh_Status $msg
+  		return 1
+  	    }
+***************
+*** 179,185 ****
+  	}
+      # braces around cmdsubst NECESSARY!
+      } elseif {[Face_ShowFace $matches]} {
+! 	set faceCache($fromwho) $matches
+  	Exmh_Status $msg
+  	return 1
+      }
+--- 219,225 ----
+  	}
+      # braces around cmdsubst NECESSARY!
+      } elseif {[Face_ShowFace $matches]} {
+! 	set faceCache($fromwho,$newsgrps) $matches
+  	Exmh_Status $msg
+  	return 1
+      }
+***************
+*** 200,205 ****
+--- 240,258 ----
+  	append path $prefix [lindex $from $i]
+  	set prefix /
+  	set pathlist [concat $path $pathlist]
++     }
++     lappend pathlist {}
++     return $pathlist
++ }
++ 
++ proc FacePathNGlist { ng } {
++     set path {}
++     set prefix {}
++     set pathlist {}
++     for {set i 0} {$i <= [expr [llength $ng]-1]} {incr i 1} {
++ 	append path $prefix [lindex $ng $i]
++ 	set prefix /
++ 	set pathlist [concat $path $pathlist]
+      }
+      lappend pathlist {}
+      return $pathlist
+*** lib/msgShow.tcl.orig	Fri Jan 31 15:15:31 1997
+--- lib/msgShow.tcl	Sun Jun 29 22:42:57 1997
+***************
+*** 81,87 ****
+  	set msg(curclear) 0
+  	set mime(stop) 0
+  	update idletasks	;# Faces display can be slow
+! 	Face_Show [MsgParseFrom $mimeHdr(0=1,hdr,from)] $mimeHdr(0=1,hdr,x-face)
+  	foreach cmd [info commands Hook_MsgShow*] {
+  	    $cmd $mhProfile(path)/$exmh(folder)/$msgid mimeHdr
+  	}
+--- 81,87 ----
+  	set msg(curclear) 0
+  	set mime(stop) 0
+  	update idletasks	;# Faces display can be slow
+! 	Face_Show [MsgParseFrom $mimeHdr(0=1,hdr,from)] $mimeHdr(0=1,hdr,newsgroups) $mimeHdr(0=1,hdr,x-face)
+  	foreach cmd [info commands Hook_MsgShow*] {
+  	    $cmd $mhProfile(path)/$exmh(folder)/$msgid mimeHdr
+  	}
+***************
+*** 109,114 ****
+--- 109,115 ----
+      set mimeHdr($part=$subpart,hdr,date) {}
+      set mimeHdr($part=$subpart,hdr,subject) {}
+      set mimeHdr($part=$subpart,hdr,x-face) {}
++     set mimeHdr($part=$subpart,hdr,newsgroups) {}
+      set mimeHdr($part=$subpart,fullHeaders) $mime(fullHeaders)
+      set mimeHdr($part=$subpart,yview) 1.0
+  
