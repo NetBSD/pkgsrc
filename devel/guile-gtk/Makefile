@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2000/08/05 19:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/05 19:15:30 jlam Exp $
 #
 
 DISTNAME=		guile-gtk-0.19
-CATEGORIES=		devel x11 gnome
+CATEGORIES=		devel x11
 MASTER_SITES=		http://www.ping.de/sites/zagadka/guile-gtk/download/ \
 			http://erin.netpedia.net/download/ \
 			http://erin.linuxbox.com/guile-gtk/download/ \
