@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5582 2004/04/15 10:38:18 grant Exp $
+$NetBSD: CHANGES,v 1.5583 2004/04/15 10:41:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1957,3 +1957,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.71 [jmmv 2004-04-15]
 	Added rudiments-0.25.1 [grant 2004-04-15]
 	Added sqlrelay-0.33.1 [grant 2004-04-15]
+	Updated gtk2 to 2.4.0nb1 [jmmv 2004-04-15]
