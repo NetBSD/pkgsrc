@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2001/07/19 00:06:52 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2001/11/22 13:08:41 hubertf Exp $
 
---- setup.py.orig	Sat May 12 21:20:07 2001
+--- setup.py.orig	Thu Jul  5 15:00:50 2001
 +++ setup.py
 @@ -84,6 +84,8 @@
              config.macros.append(item)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2001/07/19 00:06:52 wiz Exp $
          elif head == '-l':
              config.libraries.append(item)
          else:
-@@ -346,6 +348,12 @@
+@@ -348,6 +350,12 @@
          print 'reading additional configuration from', setup_local, '...',
          configs = extract_config(setup_local, configs)
          print 'done'
