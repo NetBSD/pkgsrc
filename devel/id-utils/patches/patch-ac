@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2000/03/22 13:55:32 mrg Exp $
+$NetBSD: patch-ac,v 1.2 2000/05/27 01:23:05 sommerfeld Exp $
 
---- libidu/scanners.c.orig	Thu Jul 18 07:45:52 1996
-+++ libidu/scanners.c	Thu Mar 23 00:42:05 2000
+--- libidu/scanners.c.orig	Wed Jul 17 17:45:52 1996
++++ libidu/scanners.c	Fri May 26 21:07:43 2000
 @@ -65,8 +65,10 @@
  struct language languages_0[] =
  {
@@ -13,3 +13,12 @@ $NetBSD: patch-ac,v 1.1 2000/03/22 13:55:32 mrg Exp $
  };
  struct language const *languages_N = &languages_0[cardinalityof (languages_0)];
  
+@@ -906,7 +908,7 @@
+ 	  || strequ (id_0, "define")
+ 	  || strequ (id_0, "undef"))
+ 	goto next;
+-      while (c != '\n')
++      while ((c != '\n') && !ISEOF(c))
+ 	c = getc (in_FILE);
+       new_line = 1;
+       goto top;
