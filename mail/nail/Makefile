@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/04/19 10:17:01 cjep Exp $
+# $NetBSD: Makefile,v 1.11 2004/06/29 13:42:18 cjep Exp $
 
-DISTNAME=	nail-10.7
+DISTNAME=	nail-10.8
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,8 +11,21 @@ COMMENT=	BSD mail utility with MIME extensions
 
 USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-rcfile=${PKG_SYSCONFDIR}/nail.rc
+BUILD_DEFS+=	USE_INET6
+
+MAKE_ENV+=	"SYSCONFDIR=${PKG_SYSCONFDIR}"
+
+.include "../../mk/bsd.prefs.mk"
+
+# IPv6 support
+#
+.if ${USE_INET6} == "YES"
+MAKE_ENV+=	"IPv6=-DHAVE_IPv6_FUNCS"
+.endif
+
+.if (${OPSYS} == "SunOS")
+MAKE_ENV+=	"SENDMAIL=/usr/lib/sendmail"
+.endif
 
 EGDIR=		${PREFIX}/share/examples/nail
 
