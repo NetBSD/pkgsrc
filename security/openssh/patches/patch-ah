@@ -1,12 +1,27 @@
-$NetBSD: patch-ah,v 1.6 2000/07/02 22:07:56 itojun Exp $
+$NetBSD: patch-ah,v 1.7 2000/07/22 08:22:03 jlam Exp $
 
---- Makefile.in.orig	Tue Jun 27 15:24:49 2000
-+++ Makefile.in	Sun Jul  2 14:30:43 2000
-@@ -8,2 +8,3 @@
+--- Makefile.in.orig	Tue Jul 11 07:34:34 2000
++++ Makefile.in	Fri Jul 21 01:30:17 2000
+@@ -6,6 +6,7 @@
+ mandir=@mandir@
+ mansubdir=@mansubdir@
  sysconfdir=@sysconfdir@
 +examplesdir=@prefix@/share/examples/ssh
  piddir=@piddir@
-@@ -141,6 +142,6 @@
+ srcdir=@srcdir@
+ top_srcdir=@top_srcdir@
+@@ -115,7 +116,7 @@
+ distprep: catman-do
+ 	autoreconf
+ 
+-install: manpages $(TARGETS) install-files host-key
++install: manpages $(TARGETS) install-files
+ 
+ install-files:
+ 	./mkinstalldirs $(DESTDIR)$(bindir)
+@@ -139,14 +140,14 @@
+ 	ln -s ssh $(DESTDIR)$(bindir)/slogin
+ 	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)1/slogin.1
  	ln -s ssh.1 $(DESTDIR)$(mandir)/$(mansubdir)1/slogin.1
 -	if [ ! -f $(DESTDIR)$(sysconfdir)/ssh_config -a ! -f $(DESTDIR)$(sysconfdir)/sshd_config ]; then \
 -		./mkinstalldirs $(DESTDIR)$(sysconfdir); \
@@ -17,12 +32,16 @@ $NetBSD: patch-ah,v 1.6 2000/07/02 22:07:56 itojun Exp $
 +		$(INSTALL) -m 644 ssh_config.out $(DESTDIR)$(examplesdir)/ssh_config; \
 +		$(INSTALL) -m 644 sshd_config.out $(DESTDIR)$(examplesdir)/sshd_config; \
  	fi
-@@ -148,3 +149,3 @@
+ 	if [ -f ssh_prng_cmds -a ! -z "$(INSTALL_SSH_PRNG_CMDS)" ]; then \
  		$(PERL) fixprogs ssh_prng_cmds $(ENT); \
 -		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(sysconfdir)/ssh_prng_cmds; \
 +		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(examplesdir)/ssh_prng_cmds; \
  	fi
-@@ -168,6 +169,6 @@
+ 
+ host-key: ssh-keygen
+@@ -168,10 +169,10 @@
+ 	./ssh-keygen -d -f $(DESTDIR)$(sysconfdir)/ssh_host_dsa_key -N ""
+ 
  uninstallall:	uninstall
 -	-rm -f $(DESTDIR)$(sysconfdir)/ssh_config
 -	-rm -f $(DESTDIR)$(sysconfdir)/sshd_config
@@ -33,3 +52,5 @@ $NetBSD: patch-ah,v 1.6 2000/07/02 22:07:56 itojun Exp $
 +	-rm -f $(DESTDIR)$(examplesdir)/ssh_prng_cmds
 +	-rmdir $(DESTDIR)$(examplesdir)
  	-rmdir $(DESTDIR)$(bindir)
+ 	-rmdir $(DESTDIR)$(sbindir)
+ 	-rmdir $(DESTDIR)$(mandir)/$(mansubdir)1
