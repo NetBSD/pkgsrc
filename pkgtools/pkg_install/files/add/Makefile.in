@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.1.1.1 2002/12/20 18:13:54 schmonz Exp $
+# $NetBSD: Makefile.in,v 1.2 2002/12/22 13:10:12 grant Exp $
 # Original from FreeBSD, no rcs id.
 
 PREFIX=		@prefix@
@@ -9,7 +9,7 @@ mandircat1=	${mandir}/cat1
 
 CC=		@CC@
 CCLD=		$(CC)
-LIBS=		@LIBS@ -linstall
+LIBS=		-linstall @LIBS@
 CPPFLAGS=	@CPPFLAGS@
 DEFS=		@DEFS@ -I. -I@srcdir@ -I../lib
 CFLAGS=		@CFLAGS@
