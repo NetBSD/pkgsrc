@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 1998/10/05 12:43:47 agc Exp $
+
+Remember to create the Perl example dir.
+
+--- makefile.in	1998/10/05 12:07:06	1.1
++++ makefile.in	1998/10/05 12:07:54
+@@ -599,5 +599,8 @@
+ $(INSTALL_DIRS):
+ 	$(SHELL) ${srcdir}/mkdirs.sh $@
+ 
++${INSTALL_PERL_DIRS}:
++	${SHELL} ${srcdir}/mkdirs.sh $@
++
+ ALWAYS:
+ 
