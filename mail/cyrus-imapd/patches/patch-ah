@@ -1,45 +1,20 @@
-$NetBSD: patch-ah,v 1.1 2001/07/22 01:54:53 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2001/09/18 21:56:31 skrll Exp $
 
---- imap/quota.c.orig	Fri Aug 20 15:08:30 1999
-+++ imap/quota.c	Sat Jul 21 17:13:16 2001
-@@ -132,7 +132,7 @@
- int compare_quota(a, b)
- char *a, *b;
- {
--    return strcasecmp(((struct quotaentry *)a)->quota.root,
-+    return strcmp(((struct quotaentry *)a)->quota.root,
- 		      ((struct quotaentry *)b)->quota.root);
- }
+--- perl/sieve/Makefile.in.orig	Tue Dec 26 23:07:25 2000
++++ perl/sieve/Makefile.in
+@@ -63,6 +63,7 @@
  
-@@ -172,8 +172,8 @@
- 	    /* If restricting our list, see if this quota file matches */
- 	    if (nroots) {
- 		for (i = 0; i < nroots; i++) {
--		    if (!strcasecmp(dirent->d_name, roots[i]) ||
--			(!strncasecmp(dirent->d_name, roots[i], strlen(roots[i])) &&
-+		    if (!strcmp(dirent->d_name, roots[i]) ||
-+			(!strncmp(dirent->d_name, roots[i], strlen(roots[i])) &&
- 			 dirent->d_name[strlen(roots[i])] == '.')) break;
- 		}
- 		if (i == nroots) continue;
-@@ -231,7 +231,7 @@
-     int i, len, thisquota, thisquotalen;
+ SASL_LIB=@LIB_SASL@
+ SASL_INC=@SASLFLAGS@
++EXTRA_INC=@CPPFLAGS@ @COM_ERR_CPPFLAGS@
+ CC=@CC@
+ PERL=@PERL@
  
-     while (firstquota < quota_num &&
--	   strncasecmp(name, quota[firstquota].quota.root,
-+	   strncmp(name, quota[firstquota].quota.root,
- 		       strlen(quota[firstquota].quota.root)) > 0) {
- 	r = fixquota_finish(firstquota++);
- 	if (r) return r;
-@@ -240,9 +240,9 @@
-     thisquota = -1;
-     thisquotalen = 0;
-     for (i = firstquota;
--	 i < quota_num && strcasecmp(name, quota[i].quota.root) >= 0; i++) {
-+	 i < quota_num && strcmp(name, quota[i].quota.root) >= 0; i++) {
- 	len = strlen(quota[i].quota.root);
--	if (!strncasecmp(name, quota[i].quota.root, len) &&
-+	if (!strncmp(name, quota[i].quota.root, len) &&
- 	    (!name[len] || name[len] == '.')) {
- 	    quota[i].refcount++;
- 	    if (len > thisquotalen) {
+@@ -72,6 +73,7 @@
+ 		(cd $$d; echo "### Making" all "in" `pwd`;	\
+ 			if [ -f Makefile.PL ]; then \
+ 			   SASL_LIB="$(SASL_LIB)" SASL_INC="$(SASL_INC)" CC="$(CC)" \
++			     EXTRA_INC="$(EXTRA_INC)" \
+ 			     $(PERL) Makefile.PL PREFIX=$(prefix); \
+ 			fi; \
+ 			$(MAKE) $(MFLAGS) DESTDIR=$(DESTDIR) all) || exit 1; \
