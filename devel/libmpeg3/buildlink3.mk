@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1 2004/03/12 19:34:01 snj Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+LIBMPEG3_BUILDLINK3_MK:=	${LIBMPEG3_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	libmpeg3
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmpeg3}
+BUILDLINK_PACKAGES+=	libmpeg3
+
+.if !empty(LIBMPEG3_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.libmpeg3+=	libmpeg3>=1.3nb4
+BUILDLINK_PKGSRCDIR.libmpeg3?=	../../devel/libmpeg3
+.endif	# LIBMPEG3_BUILDLINK3_MK
+
+.include "../../mk/pthread.buildlink3.mk"
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
