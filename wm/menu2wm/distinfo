@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/05 19:47:19 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/02/04 22:24:54 jmmv Exp $
 
-SHA1 (menu2wm-0.1.tar.gz) = adfd313af46a2484c85dc19538b325a5d602b0d2
-Size (menu2wm-0.1.tar.gz) = 12913 bytes
+SHA1 (menu2wm-0.2.tar.gz) = 7acda45ee94f6506ee524a6adad94843f45024b7
+Size (menu2wm-0.2.tar.gz) = 16634 bytes
