@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/11/12 23:34:32 frueauf Exp $
+
 --- xpipeman.h.orig	Sun Aug  9 03:40:53 1998
 +++ xpipeman.h	Sun Aug  9 03:48:12 1998
 @@ -36,2 +36,10 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/11/12 23:34:32 frueauf Exp $
+
 --- score.c.orig	Sun Aug  9 03:56:41 1998
 +++ score.c	Sun Aug  9 03:57:23 1998
 @@ -72,3 +72,3 @@

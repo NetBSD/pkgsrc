@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.3 1998/11/12 23:34:31 frueauf Exp $
+
 --- initx.c.orig	Sun Mar 29 12:41:21 1992
 +++ initx.c	Thu Aug 27 10:32:51 1998
 @@ -44,14 +44,19 @@
