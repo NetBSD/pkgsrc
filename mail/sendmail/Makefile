@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2002/09/23 12:56:57 markd Exp $
+# $NetBSD: Makefile,v 1.54 2002/10/03 10:09:03 markd Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -90,7 +90,7 @@ post-install:
 .endif
 
 PKG_GROUPS=	smmsp
-PKG_USERS=	smmsp:smmsp:Sendmail\\ Message\\ Submission\\ Program
+PKG_USERS=	smmsp:smmsp::Sendmail\\ Message\\ Submission\\ Program
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
