@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1028 2003/01/05 18:13:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.1029 2003/01/05 20:01:22 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -100,3 +100,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gpsd-1.07 [tsarna 2003-01-05]
 	Updated gpsdrive to 1.31nb1 [tsarna 2003-01-05]
 	Updated gail to 1.1.6 [jmmv 2003-01-05]
+	Updated bsetroot to 0.1nb1 [jschauma 2003-01-05]
