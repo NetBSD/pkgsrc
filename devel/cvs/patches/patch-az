@@ -1,0 +1,14 @@
+$NetBSD: patch-az,v 1.1 2000/02/23 06:49:28 mycroft Exp $
+
+--- src/modules.c.orig	Wed Feb 23 01:29:50 2000
++++ src/modules.c	Wed Feb 23 01:27:57 2000
+@@ -720,7 +720,8 @@
+ 		    run_print (stdout);
+ 		    cvs_output ("'\n", 0);
+ 		}
+-		err += run_exec (RUN_TTY, RUN_TTY, RUN_TTY, RUN_NORMAL);
++		err += run_exec (RUN_TTY, RUN_TTY, RUN_TTY,
++				 RUN_NORMAL | RUN_UNSETXID);
+ 		free (expanded_path);
+ 	    }
+ 	    free (real_prog);
