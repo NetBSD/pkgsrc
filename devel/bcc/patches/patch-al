@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.2 1998/08/07 10:40:21 agc Exp $
+$NetBSD: patch-al,v 1.3 2002/02/18 09:42:10 jmc Exp $
 
---- as/pops.c.orig	Thu Jul 16 20:24:45 1998
-+++ as/pops.c	Thu Jul 16 20:25:42 1998
+--- pops.c.orig	Sun Jul 11 12:43:39 1993
++++ pops.c	Mon Feb 18 09:40:23 2002
 @@ -72,7 +72,7 @@
  register struct sym_s *symptr;
  {
@@ -11,3 +11,12 @@ $NetBSD: patch-al,v 1.2 1998/08/07 10:40:21 agc Exp $
  	((symptr->data ^ lcdata) & (RELBIT | SEGM)))
      {
  	error(SEGREL);
+@@ -263,7 +263,7 @@
+ PRIVATE void dofcc()
+ {
+     register char *bufptr;
+-    char byte;
++    signed char byte;
+     char delimiter;
+     register char *reglineptr;
+ 
