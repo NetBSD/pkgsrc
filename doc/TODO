@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1654 2004/04/21 01:10:37 wiz Exp $
+$NetBSD: TODO,v 1.1655 2004/04/21 01:22:18 dillo Exp $
 
 Suggested new packages
 ======================
@@ -203,7 +203,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
-	o glade-2.6.0
 	o global-4.6
 	o glpk-4.3
 	o gnomeicu-0.99.5
@@ -238,7 +237,6 @@ Suggested package updates
 	o lavaps-2.4
 	o leafnode-1.9.52
 	o libcaca-0.9
-	o libcroco-0.5.1
 	o libesmtp-1.0.2
 	o libevent-0.8
 	o libgcrypt-1.2.0
