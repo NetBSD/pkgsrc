@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.577 2003/05/23 09:40:48 wiz Exp $
+$NetBSD: TODO,v 1.578 2003/05/23 18:06:36 salo Exp $
 
 Suggested new packages
 ======================
@@ -134,7 +134,6 @@ Suggested package updates
 	o getmail-3.1.2
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
-	o gimp-1.2.4
 	o giram-0.3.5
 	o gkrellm-2.1.8 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
