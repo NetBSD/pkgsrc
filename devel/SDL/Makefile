@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/04/17 16:27:20 rh Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/05 13:47:12 rh Exp $
 #
 
 DISTNAME=	SDL-1.2.0
@@ -21,11 +21,22 @@ USE_GMAKE=	YES
 USE_MESA=	YES
 USE_X11=	YES
 USE_LIBTOOL=	YES
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OBJECT_FMT} == "ELF"
+NASMFLAGS=	-f elf
+.else
+NASMFLAGS=	-f aoutb
+.endif
+
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--disable-pthread-sem
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -D_POSIX_THREAD_SYSCALL_SOFT=1"
-LDFLAGS+=	-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
-#CC=		${LOCALBASE}/pthreads/bin/pgcc
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS} -D_POSIX_THREAD_SYSCALL_SOFT=1"
+CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS}"
+MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
+LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+#CC=			${LOCALBASE}/pthreads/bin/pgcc
 
 pre-patch:
 	cd ${WRKSRC} && ${MKDIR} src/audio/netbsd
