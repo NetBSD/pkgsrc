@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/02/10 04:18:37 jtb Exp $
+
+--- Programs/Makefile.orig	Wed Feb  7 21:15:22 2001
++++ Programs/Makefile
+@@ -3,7 +3,7 @@
+ BINDIR = ..
+ 
+ INCLUDES = -I../Lib 
+-CFLAGS = $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
++CFLAGS += $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
+ 
+ LIBS = -lmetis -lm
+ LD = $(CC) $(LDOPTIONS) -L. -L..
