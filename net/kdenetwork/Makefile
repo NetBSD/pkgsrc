@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2000/06/01 11:23:36 rh Exp $
+# $NetBSD: Makefile,v 1.43 2000/06/13 10:40:27 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.kde.org/
 
-DEPENDS=		gdbm-1.7.3:../../databases/gdbm
+DEPENDS=		gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=		uulib-0.5.13:../../converters/uulib
 DEPENDS+=		kdesupport-1.1.2:../../converters/kdesupport
 DEPENDS+=		kdebase-1.1.2:../../x11/kdebase
