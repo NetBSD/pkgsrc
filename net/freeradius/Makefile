@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/09/23 19:51:21 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/02 12:06:03 adrianp Exp $
 
 DISTNAME=	freeradius-1.0.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -8,6 +9,8 @@ MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/
 COMMENT=	Free RADIUS server implementation
+
+.include "../../mk/bsd.prefs.mk"
 
 CONFLICTS+=		radiusd-cistron*
 USE_GNU_TOOLS+=		make
@@ -17,6 +20,7 @@ USE_PKGINSTALL=		YES
 USE_PERL5=		YES
 PTHREAD_OPTS+=		native
 LIBTOOLIZE_PLIST=	NO
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
 # This package currently breaks using our libtool.  It does not appear to use
 # libtool properly/fully and as a result the daemon does not compile correctly.
@@ -41,6 +45,8 @@ CONFIGURE_ARGS+=	--without-rlm_sql_postgresql
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 CONFIGURE_ARGS+=	--without-snmp
+
+.include "options.mk"
 
 RCD_SCRIPTS=		radiusd
 
@@ -70,6 +76,9 @@ CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 pre-build:
 	cd ${WRKSRC} && ${LN} -s src/lib lib
+
+post-build:
+	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

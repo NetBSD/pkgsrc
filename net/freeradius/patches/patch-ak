@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2004/10/02 12:06:03 adrianp Exp $
+
+--- src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in.orig	2004-09-29 16:33:07.000000000 +0100
++++ src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in	2004-09-29 16:33:38.000000000 +0100
+@@ -3,6 +3,6 @@
+ TARGET		= @targetname@
+ SRCS		= sql_postgresql.c
+ RLM_SQL_CFLAGS	= @postgresql_cflags@ $(INCLTDL)
+-RLM_SQL_LIBS	= @postgresql_ldflags@
++RLM_SQL_LIBS	= @postgresql_ldflags@ -L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+ 
+ include ../rules.mak
