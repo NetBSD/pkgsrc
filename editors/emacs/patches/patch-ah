@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 1999/01/04 01:16:18 tron Exp $
+$NetBSD: patch-ah,v 1.2 1999/12/28 14:08:57 tron Exp $
 
---- src/fileio.c.orig	Mon Aug 10 08:12:32 1998
-+++ src/fileio.c	Mon Jan  4 02:03:29 1999
-@@ -3201,8 +3201,11 @@
+--- src/fileio.c.orig	Thu Jul  8 07:36:06 1999
++++ src/fileio.c	Fri Aug  6 08:56:39 1999
+@@ -3207,8 +3207,11 @@
    return value;
  }
  

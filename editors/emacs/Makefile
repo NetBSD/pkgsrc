@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 1999/12/05 23:02:36 bouyer Exp $
+# $NetBSD: Makefile,v 1.32 1999/12/28 14:08:53 tron Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
-#
 
-DISTNAME=	emacs-20.3
+DISTNAME=	emacs-20.5a
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -13,16 +12,13 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS+=--with-pop --with-x --with-x-toolkit=lucid
 MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG}
-INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode message widget reftex forms customize
+INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode message widget reftex forms
 
-INSTALL_PROGRAM= ${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+WRKSRC=		${WRKDIR}/emacs-20.5
 
 pre-install:
 	@find ${WRKSRC} -type f -name "*.orig" | xargs ${RM} -f
-
-post-build:
-	(cd ${WRKSRC}/lisp/mail; \
-	${WRKSRC}/src/emacs -batch -f batch-byte-compile mh-comp.el mh-utils.el)
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
