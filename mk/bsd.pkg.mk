@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.769 2001/06/27 11:24:15 zuntum Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.770 2001/06/27 11:40:25 zuntum Exp $
 #
 # This file is in the public domain.
 #
@@ -1435,6 +1435,21 @@ do-patch: uptodate-digest
 			fi;						\
 		fi;							\
 	fi
+
+.if defined(REPLACE_PERL)
+.for f in ${REPLACE_PERL}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
+		${SED}	-e "s,/usr/bin/perl,${PERL5},g"			\
+			-e "s,/usr/local/bin/perl,${PERL5},g"		\
+			-e "s,/usr/pkg/bin/perl,${PERL5},g"		\
+				${f} > ${f}.new;			\
+		if [ -x ${f} ]; then					\
+			${CHMOD} a+x ${f}.new;				\
+		fi;							\
+		${MV} ${f}.new ${f};					\
+	fi
+.endfor
+.endif
 .endif
 
 # Configure
@@ -1445,21 +1460,6 @@ do-configure:
 .for f in ${REPLACE_NCURSES}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
 		${SED}  -e "s/ncurses/curses/g" ${f} > ${f}.new;	\
-		if [ -x ${f} ]; then					\
-			${CHMOD} a+x ${f}.new;				\
-		fi;							\
-		${MV} ${f}.new ${f};					\
-	fi
-.endfor
-.endif
-
-.if defined(REPLACE_PERL)
-.for f in ${REPLACE_PERL}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
-		${SED}	-e "s,/usr/bin/perl,${PERL5},g"			\
-			-e "s,/usr/local/bin/perl,${PERL5},g"		\
-			-e "s,/usr/pkg/bin/perl,${PERL5},g"		\
-				${f} > ${f}.new;			\
 		if [ -x ${f} ]; then					\
 			${CHMOD} a+x ${f}.new;				\
 		fi;							\
