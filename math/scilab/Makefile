@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/03/05 11:22:34 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/16 22:53:51 hubertf Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -20,6 +20,8 @@ DEPENDS+=	pvm-3.4.7:../../parallel/pvm3
 NO_CDROM=	"no paid distribution of SCILAB"
 RESTRICTED=	"no paid distribution of SCILAB"
 
+PLIST_SRC=      ${WRKDIR}/.PLIST-src
+
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
@@ -36,8 +38,10 @@ pre-fetch:
 	fi
 
 post-patch:
+	@${SED} -e 's|@localbase@|'${LOCALBASE}'|g' \
+                -e 's|@x11base@|'${X11BASE}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 	@if [ ${MACHINE_ARCH} != "alpha" ]; then \
-	${MV} ${WRKSRC}/scilab.star.orig ${WRKSRC}/scilab.star ; \
+		${MV} ${WRKSRC}/scilab.star.orig ${WRKSRC}/scilab.star ; \
 	fi
 
 post-install:
