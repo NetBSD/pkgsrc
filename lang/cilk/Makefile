@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/17 08:36:10 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/01 05:48:15 jlam Exp $
 
 DISTNAME=		cilk-5.3.1
 CATEGORIES=		lang parallel
@@ -13,8 +13,8 @@ GNU_CONFIGURE=		# defined
 USE_BUILDLINK_ONLY= 	# defined
 USE_GMAKE=		# defined
 USE_PERL5=		yes
-USE_PTHREAD=		native pth
 USE_LIBTOOL=		yes
+PTHREAD_OPTS+=		require
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LTCONFIG_OVERRIDE= 	${WRKSRC}/ltconfig
