@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ja-freewnn,v 1.1 2001/03/16 18:32:47 wiz Exp $
+# $NetBSD: ja-freewnn,v 1.2 2001/04/11 22:48:48 kei Exp $
 #
 # PROVIDE: freewnn
 # REQUIRE: DAEMON
@@ -17,4 +17,18 @@ cmd=${1:-start}
 case ${cmd} in
 start)
     if [ -x ${command_start} ]; then
-	echo "Start
+	echo "Starting ${name}."
+        ${command_start} >/dev/null 2>&1
+    fi
+    ;;
+stop)
+    if [ -x ${command_stop} ]; then
+        echo "Stopping ${name}."
+        ${command_stop} >/dev/null 2>&1
+    fi
+    ;;
+*)
+    :
+    ;;
+esac
+exit 0
