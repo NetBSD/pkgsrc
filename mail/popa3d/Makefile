@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:41 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/12/07 20:30:59 jlam Exp $
 #
 
 DISTNAME=	popa3d-0.4.9.4
@@ -12,11 +12,17 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.openwall.com/popa3d/
 COMMENT=	secure, reliable, performant, and small pop3 server
 
-PKG_GROUPS=	popa3d
-PKG_USERS=	popa3d:popa3d
+POPA3D_USER?=	popa3d
+POPA3D_GROUP?=	popa3d
+
+PKG_GROUPS=	${POPA3D_GROUP}
+PKG_USERS=	${POPA3D_USER}:${POPA3D_GROUP}
 
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
+
+FILES_SUBST+=	POPA3D_USER=${POPA3D_USER}
+FILES_SUBST+=	POPA3D_GROUP=${POPA3D_GROUP}
 
 post-patch:
 	cd ${WRKSRC} && \
