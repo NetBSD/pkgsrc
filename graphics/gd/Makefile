@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/03/04 09:06:11 tron Exp $
+# $NetBSD: Makefile,v 1.26 2001/03/04 09:32:43 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -34,7 +34,7 @@ MAKE_ENV+=	EXTRA_LIBS="-lsocket -lnsl ${LOCALBASE}/lib/libz.a"
 #
 GD_MAJOR=	1
 GD_MINOR=	9
-MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}"
+MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}" COMPILER="${CC}"
 
 EVAL_PREFIX+=	XPMDIR=xpm
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
