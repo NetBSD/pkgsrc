@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2003/01/09 16:15:08 mycroft Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/01/10 13:32:05 jmmv Exp $
 #
 
 DISTNAME=	gaim-0.59.8
+PKGREVISION=	1
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/} \
 		ftp://ftp.marko.net/pub/gaim/
@@ -27,12 +28,17 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-artsc
 CONFIGURE_ARGS+=	--disable-nas
 CONFIGURE_ARGS+=	--disable-perl
-CONFIGURE_ARGS+=	--disable-screensaver
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
 
 CONFIGURE_ARGS+=	--enable-esd
 CONFIGURE_ARGS+=	--enable-perl
 CONFIGURE_ARGS+=	--enable-pixbuf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/include/X11/extensions/scrnsaver.h)
+CONFIGURE_ARGS+=	--disable-screensaver
+.endif
 
 # Newer versions of gaim use gettext checks that gettext-lib/buildlink2.mk
 # can't currently handle.
