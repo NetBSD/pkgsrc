@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
+
+--- configure.orig	2001-03-12 13:47:41.000000000 +0100
++++ configure
+@@ -536,7 +536,6 @@ fi
+ 
+ 
+ 
+-test "$libdir" = "\${exec_prefix}/lib" && libdir="/lib"
+ 
+ # Check whether --enable-socksdns or --disable-socksdns was given.
+ if test "${enable_socksdns+set}" = set; then
+@@ -1272,7 +1271,7 @@ fi
+ done
+ 
+ 
+-for ac_func in strcspn strdup strerror strspn strtol
++for ac_func in strcspn strdup strerror strspn strtol dlopen
+ do
+ echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
+ echo "configure:1279: checking for $ac_func" >&5
+@@ -1323,9 +1322,11 @@ if eval "test \"`echo '$ac_cv_func_'$ac_
+ EOF
+  
+ else
++if [ ${ac_func} != "dlopen" ]; then
+   echo "$ac_t""no" 1>&6
+ { echo "configure: error: "Required function not found"" 1>&2; exit 1; }
+ fi
++fi
+ done
+ 
+ 
+@@ -1733,6 +1734,7 @@ fi
+ SIMPLELIBS=${LIBS}
+ LIBS=
+ 
++if [ $ac_cv_func_dlopen != "yes" ]; then
+ echo $ac_n "checking for dlsym in -ldl""... $ac_c" 1>&6
+ echo "configure:1738: checking for dlsym in -ldl" >&5
+ ac_lib_var=`echo dl'_'dlsym | sed 'y%./+-%__p_%'`
+@@ -1780,6 +1782,7 @@ else
+   echo "$ac_t""no" 1>&6
+ { echo "configure: error: "libdl is required"" 1>&2; exit 1; }
+ fi
++fi
+ 
+ 
+ echo $ac_n "checking for RTLD_NEXT from dlfcn.h""... $ac_c" 1>&6
