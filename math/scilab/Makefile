@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/09/27 23:18:24 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/11/28 04:21:46 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -39,11 +39,10 @@ PLIST_SUBST+=	SCIBASE=${SCIBASE}
 # remove some stuff which is broken in the distfile.  The config's
 # are links to ../config (ie circular).
 post-extract:
-	${RM} ${WRKSRC}/config.cache
-	${RM} ${WRKSRC}/examples/callsci/callsciJava/config/config
-	${RM} ${WRKSRC}/examples/callsci/callsciFortran/config/config
-	${RM} ${WRKSRC}/examples/callsci/callsciC/config/config
-	${RM} ${WRKSRC}/examples/callsci/callsciC++/config/config
+	${RM} -f ${WRKSRC}/examples/callsci/callsciJava/config/config
+	${RM} -f ${WRKSRC}/examples/callsci/callsciFortran/config/config
+	${RM} -f ${WRKSRC}/examples/callsci/callsciC/config/config
+	${RM} -f ${WRKSRC}/examples/callsci/callsciC++/config/config
 
 # clean up any possible leftovers from 'make test' so that our PLIST
 # will still be right
