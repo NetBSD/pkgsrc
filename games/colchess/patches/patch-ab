@@ -1,0 +1,62 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/24 20:08:13 jlam Exp $
+
+--- chess.c.orig	Thu Aug 17 04:22:08 2000
++++ chess.c
+@@ -26,7 +26,7 @@
+ char sep[3] = "\\";
+ 
+ #else         /*  UNIX MODE **** */
+-char path[FILENAME_MAX] = "./"; /*  <--- PATH TO CHESS DIRECTORY FOR UNIX */
++char path[FILENAME_MAX]; /*  <--- PATH TO CHESS DIRECTORY FOR UNIX */
+ char dir_command[10] = "ls";
+ char sep[3] = "/";
+ #endif
+@@ -38,7 +38,8 @@
+ #endif
+ 
+ 
+-char gamepath[FILENAME_MAX];
++char gamepath[FILENAME_MAX] = "";
++char book_path[FILENAME_MAX];
+ /*  Position score weights */
+ int posdat[6][8][8];
+ int posdat_pawn[8][8];
+@@ -91,6 +92,8 @@
+     book_on=inidata.book;
+   }
+ #endif
++  strcpy(path,PREFIX);
++  strcat(path,"/share/colchess/");
+   if (a==0 || winloc==NULL) {
+     pathloc = getenv("COLCHESS_PATH");
+     if (pathloc != NULL) {
+@@ -100,9 +103,8 @@
+   }
+     
+   clock_left[0]=clock_left[1]=300;
+-  strcpy(gamepath,path);
+-  strcat(gamepath,"games");
+-  strcat(gamepath,sep);
++  strcpy(book_path,path);
++  strcat(book_path,"book.dat");
+   beg=time(NULL);
+ 
+    /* Output the current version number and type */
+@@ -111,7 +113,7 @@
+    /*  Help on command line options. */
+   if (argc>1 && (!strcmp(argv[1],"?") || !strcmp(argv[1],"HELP") || !strcmp(argv[1],"help"))) {
+     fprintf(stderr,"Command Line Options;\n---------------------\n");
+-    fprintf(stderr,"CHESS Q<quiescence depth> H<hash size> D<search depth> L<Time limit>\n");
++    fprintf(stderr,"COLCHESS Q<quiescence depth> H<hash size> D<search depth> L<Time limit>\n");
+     fprintf(stderr,"SW<White Player Skill> SB<Black Player Skill> DEATH WHITE BLACK BOTH\nLEARN NOLEARN BOOK NOBOOK\n\n");
+     exit(0);
+   }
+@@ -1299,7 +1301,7 @@
+   strcpy(filename,path);
+   strcat(filename,"chessdat.dat");
+   if ((f=fopen(filename,"r"))==NULL) { /*  Open file */
+-    fprintf(stderr,"ERROR LOADING DATA FILE!\n");
++    fprintf(stderr,"%s: ERROR LOADING DATA FILE!\n",filename);
+     exit(0);
+   }
+ 
