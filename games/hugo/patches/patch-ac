@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/05/28 14:24:04 dillo Exp $
+
+--- source/hdinter.h.orig	2004-01-05 20:22:00.000000000 +0100
++++ source/hdinter.h
+@@ -63,7 +63,7 @@ enum D_ACTION_TYPE
+ /* ...and (some) object types */
+ enum D_OBJECT_TYPE
+ {
+-	UP = 1, DOWN, LEFT, RIGHT, PAGEUP, PAGEDOWN,
++	EV_UP = 1, DOWN, LEFT, RIGHT, PAGEUP, PAGEDOWN,
+ 
+ 	/* START and FINISH are used to move to the very top or bottom,
+ 	   while HOME and END generally refer to the start and end of
