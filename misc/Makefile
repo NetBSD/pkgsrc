@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.68 2000/11/27 02:29:32 kei Exp $
+#	$NetBSD: Makefile,v 1.69 2000/12/11 14:15:32 wiz Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += ascii
@@ -18,7 +18,6 @@
     SUBDIR += dotfile
     SUBDIR += dt
     SUBDIR += dync
-    SUBDIR += emma
     SUBDIR += fd
     SUBDIR += fep
     SUBDIR += figlet
@@ -27,7 +26,6 @@
     SUBDIR += gnofin
     SUBDIR += gnome-pim
     SUBDIR += gnome-utils
-    SUBDIR += gnucash
     SUBDIR += gperiodic
     SUBDIR += heyu
     SUBDIR += ical
@@ -62,13 +60,10 @@
     SUBDIR += siag
     SUBDIR += splitvt
     SUBDIR += staroffice
-    SUBDIR += tclticker
     SUBDIR += team
     SUBDIR += vfu
     SUBDIR += vttest
     SUBDIR += watch
-    SUBDIR += xfinans
-    SUBDIR += xinvest
     SUBDIR += xrolodex
     SUBDIR += zorro
 

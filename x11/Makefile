@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2000/12/05 22:58:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.189 2000/12/11 14:15:32 wiz Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -159,7 +159,6 @@
     SUBDIR += xpmicons
     SUBDIR += xpmroot
     SUBDIR += xpns
-    SUBDIR += xquote
     SUBDIR += xscreensaver
     SUBDIR += xscreensaver-gnome
     SUBDIR += xscribble
