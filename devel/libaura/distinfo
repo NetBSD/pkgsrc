@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/09 05:40:28 xtraeme Exp $
+
+SHA1 (libaura-2.0.tar.gz) = 4f91d8efaca9ffb2b9ae244187bd49f7c1969d6a
+Size (libaura-2.0.tar.gz) = 10682 bytes
+SHA1 (patch-aa) = a3b7e2540c289f6eb4222464efd86c918e8cfa9d
