@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/07/31 01:56:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.27 2000/08/07 16:58:37 hubertf Exp $
 #
 
     SUBDIR += a2ps
@@ -31,7 +31,6 @@
     SUBDIR += skkfep
     SUBDIR += skkinput
     SUBDIR += skkserv
-    SUBDIR += vfghostscript5
     SUBDIR += vflib
     SUBDIR += vflib-lib
     SUBDIR += vflib-utils
