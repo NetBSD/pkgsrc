@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/10 04:30:48 jtb Exp $
+
+--- makefile.orig	Sun Jan 28 09:45:23 2001
++++ makefile
+@@ -21,7 +21,7 @@
+ PROFILE=
+ 
+ #  ***********  default environment *******************
+-SRC_CPP=cc
++SRC_CPP=$(CC)
+ SRC_C=c
+ SYS_FILE=sysother
+ BCPP=-P
+@@ -65,7 +65,7 @@
+ ALL_LIB= $(PETSC_LIB) $(SUPERLU_LIB) $(F2C)
+ 
+ #  ***********  default platform  *******************
+-default: linux_old
++default: netbsd
+ 
+ # single and multi-processor windows; borland c++ compiler
+ # set SYS_FILE above to syswin32 for multi-processor
+@@ -230,6 +230,18 @@
+ 	"COMPILER_CPP=gcc" \
+ 	"LINK_FLAGS_BEFORE=" \
+ 	"LINK_FLAGS_AFTER= $(PROFILE) $(ALL_LIB) -lstdcpp -lm -o tochnog"
++
++netbsd: 
++	make tochnog \
++	"SYS_FILE=sysother" \
++	"OBJ=o" \
++	"BCPP=" \
++	"VCPP=" \
++	"COMPILER_C=$(CC)" \
++	"COMPILER_CPP=$(CXX)" \
++	"COMPILER_FLAGS=$(CFLAGS) -ansi -c $(PROFILE) $(ALL_INCLUDE)" \
++	"LINK_FLAGS_BEFORE=" \
++	"LINK_FLAGS_AFTER= $(PROFILE) $(ALL_LIB) -lm -o tochnog"
+ 
+ tochnog: adjust.$(OBJ) area.$(OBJ) \
+ 	beam.$(OBJ) bounda.$(OBJ) calcul.$(OBJ) \
