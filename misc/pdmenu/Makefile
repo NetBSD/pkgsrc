@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/21 02:34:58 hubertf Exp $
 # FreeBSD Id: ports/misc/pdmenu/Makefile,v 1.11 2001/01/16 17:31:42 sobomax Exp
 
 DISTNAME=	${PKGNAME:S|-|_|}
@@ -17,27 +17,25 @@ USE_GMAKE=	YES
 USE_PERL5=	YES
 WRKSRC=		${WRKDIR}/pdmenu
 
-CONFIGURE_ENV=	SLANG_LIB_LOC='${LOCALBASE}/lib' \
+CONFIGURE_ENV=	SLANG_LIB_LOC='${LOCALBASE}/lib'						\
 		SLANG_H_LOC='${LOCALBASE}/include/slang.h'
 
-post-patch:
-		${SED} "s,@LOCALBASE@,${LOCALBASE},g" \
-		< ${WRKSRC}/autoconf/makeinfo.in > ${WRKSRC}/autoconf/makeinfo.in.done
-		${MV} ${WRKSRC}/autoconf/makeinfo.in.done ${WRKSRC}/autoconf/makeinfo.in
+MAKE_ENV+=	"LIBS=-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib"
 
 pre-install:
+		${SED} "s,.B /etc/pdmenurc,.B ${PREFIX}/etc/pdmenurc,g"				\
+			${WRKSRC}/doc/pdmenurc.man > ${WRKSRC}/doc/pdmenurc.man.done
+		${MV} ${WRKSRC}/doc/pdmenurc.man.done ${WRKSRC}/doc/pdmenurc.man
 		${INSTALL_DATA_DIR} ${PREFIX}/lib/pdmenu
 
 post-install:
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pdmenu ${PREFIX}/share/examples/pdmenu \
+		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pdmenu ${PREFIX}/share/examples/pdmenu	\
 			${PREFIX}/share/examples/pdmenu/newbie
-		cd ${WRKSRC}/doc && ${INSTALL} -c -o root -g wheel ANNOUNCE BUGS TODO \
-			pdmenu-1.2.65.lsm ${PREFIX}/share/doc/pdmenu
-		cd ${WRKSRC}/examples && ${INSTALL} -c -o root -g wheel README ba.lpd \
-			pdmenurc pdmenurc.complex pdmenurc.monitor showdir.pl \
-			${PREFIX}/share/examples/pdmenu
-		cd ${WRKSRC}/examples/newbie && ${INSTALL} -c -o root -g wheel \
-			modem-check pdmenurc.newbie rpm-info-on-command \
-				${PREFIX}/share/examples/pdmenu/newbie
+		cd ${WRKSRC}/doc && ${INSTALL_DATA} ANNOUNCE BUGS TODO pdmenu-1.2.65.lsm 	\
+			${PREFIX}/share/doc/pdmenu
+		cd ${WRKSRC}/examples && ${INSTALL_DATA} README ba.lpd pdmenurc pdmenurc.complex\
+			pdmenurc.monitor showdir.pl ${PREFIX}/share/examples/pdmenu
+		cd ${WRKSRC}/examples/newbie && ${INSTALL_DATA} modem-check pdmenurc.newbie	\
+			rpm-info-on-command ${PREFIX}/share/examples/pdmenu/newbie
 
 .include "../../mk/bsd.pkg.mk"
