@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/02/17 15:28:03 dillo Exp $
+# $NetBSD: Makefile,v 1.27 2003/02/28 11:57:06 jmmv Exp $
 #
 
 DISTNAME=	fltk-1.0.11-source
@@ -7,7 +7,7 @@ PKGREVISION=	1
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=FLTK/} \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fltk/} \
 		ftp://ftp.fltk.org/pub/fltk/${VERS}/ \
 		ftp://ftp2.easysw.com/pub/fltk/${VERS}/ \
 		ftp://ftp.northamerica.net/pub/ESP/fltk/${VERS}/ \
