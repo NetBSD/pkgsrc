@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:29:58 wiz Exp $
-
-This is only a subset of the available packages for xemacs.
-You can install additional packages yourself from within xemacs by
-running it as root and using the `Manage Packages' menu within
-the `Options' menu of the menubar.
-
-===========================================================================
