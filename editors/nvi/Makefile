@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/12 10:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/13 10:35:20 aymeric Exp $
 #
 
 DISTNAME=	nvi-1.81.5
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	http://www.kotnet.org/~skimo/nvi/devel/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	aymeric@netbsd.org
+MAINTAINER=	seb@netbsd.org
 HOMEPAGE=	http://www.kotnet.org/~skimo/nvi/devel/
 COMMENT=	Berkeley nvi with additional features
 
