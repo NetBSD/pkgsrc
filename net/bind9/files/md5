@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.10 2000/09/18 05:16:46 rh Exp $
+$NetBSD: md5,v 1.11 2000/11/13 04:43:24 itojun Exp $
 
-MD5 (bind/9.0.0/bind-9.0.0.tar.gz) = 04d09c518c154ce22a004d670b0fdaf4
+MD5 (bind/9.0.1/bind-9.0.1.tar.gz) = 3f1a238dc06dfda2f8426ef5d1ea539b
