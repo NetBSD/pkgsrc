@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/09/02 17:46:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2003/12/08 19:20:49 wiz Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/de/bugreports.html
 share/mplayer/DOCS/de/cd-dvd.html
@@ -14,7 +14,6 @@ share/mplayer/DOCS/de/video.html
 share/mplayer/DOCS/default.css
 share/mplayer/DOCS/en/bugreports.html
 share/mplayer/DOCS/en/cd-dvd.html
-share/mplayer/DOCS/en/codecs-in.html
 share/mplayer/DOCS/en/codecs.html
 share/mplayer/DOCS/en/documentation.html
 share/mplayer/DOCS/en/encoding.html
@@ -74,9 +73,11 @@ share/mplayer/DOCS/pl/skin.html
 share/mplayer/DOCS/pl/sound.html
 share/mplayer/DOCS/pl/users_against_developers.html
 share/mplayer/DOCS/pl/video.html
+share/mplayer/DOCS/ro/codecs.html
 share/mplayer/DOCS/tech/MAINTAINERS
 share/mplayer/DOCS/tech/TODO
 share/mplayer/DOCS/tech/codec-devel.txt
+share/mplayer/DOCS/tech/codecs-in.html
 share/mplayer/DOCS/tech/codecs.conf.txt
 share/mplayer/DOCS/tech/colorspaces.txt
 share/mplayer/DOCS/tech/cvs-howto.txt
@@ -205,6 +206,7 @@ share/mplayer/input.conf
 @dirrm share/mplayer/DOCS/tech
 @exec ${MKDIR} %D/share/mplayer/DOCS/ru
 @dirrm share/mplayer/DOCS/ru
+@dirrm share/mplayer/DOCS/ro
 @dirrm share/mplayer/DOCS/pl
 @dirrm share/mplayer/DOCS/it
 @dirrm share/mplayer/DOCS/hu
