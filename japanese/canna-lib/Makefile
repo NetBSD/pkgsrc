@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/04/04 16:03:16 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2002/04/05 09:57:34 uebayasi Exp $
 #
 
 DISTNAME=	Canna35b2
@@ -56,7 +56,7 @@ post-patch:
 	while read f; do \
 		${CP} $$f $${f}.orig; \
 		{ \
-			${ECHO} '/#include ".*\/Canna.conf"$$/a\';
+			${ECHO} '/#include ".*\/Canna.conf"$$/a\'; \
 			${ECHO} '#include "${FILESDIR}/LinkFileList.rules"'; \
 		} | ${SED} -f /dev/stdin $${f}.orig >$$f; \
 	done
