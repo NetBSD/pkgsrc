@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2001/02/12 02:16:03 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/04/26 21:07:02 jtb Exp $
 bin/chemtool
 bin/cht
+man/man1/chemtool.1
 share/doc/chemtool/README
 share/doc/chemtool/TODO
 share/examples/chemtool/AAMP
