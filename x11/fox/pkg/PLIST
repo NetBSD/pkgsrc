@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/02/24 16:56:56 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/13 19:27:06 sakamoto Exp $
 bin/reswrap
 include/fox/FX4Splitter.h
 include/fox/FXAccelTable.h
@@ -100,6 +100,7 @@ include/fox/FXOptionMenu.h
 include/fox/FXPNGIcon.h
 include/fox/FXPNGImage.h
 include/fox/FXPacker.h
+include/fox/FXPoint.h
 include/fox/FXPopup.h
 include/fox/FXPrintDialog.h
 include/fox/FXProfiler.h
@@ -108,6 +109,7 @@ include/fox/FXQuat.h
 include/fox/FXRadioButton.h
 include/fox/FXRange.h
 include/fox/FXRecentFiles.h
+include/fox/FXRectangle.h
 include/fox/FXRegion.h
 include/fox/FXRegistry.h
 include/fox/FXReplaceDialog.h
@@ -119,6 +121,7 @@ include/fox/FXSearchDialog.h
 include/fox/FXSeparator.h
 include/fox/FXShell.h
 include/fox/FXShutter.h
+include/fox/FXSize.h
 include/fox/FXSlider.h
 include/fox/FXSpinner.h
 include/fox/FXSplitter.h
@@ -156,7 +159,9 @@ include/fox/fxregex.h
 include/fox/fxver.h
 include/fox/xincs.h
 @dirrm include/fox
-lib/libFOX-0.99.so.157.0
+lib/libFOX.so.167.0
+lib/libFOX.so.167
+lib/libFOX.so
 lib/libFOX.a
 lib/libFOX.la
 man/man1/reswrap.1
