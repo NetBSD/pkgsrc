@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/05/18 11:30:24 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2002/05/30 14:21:23 zuntum Exp $
 #
 
 DISTNAME=	mailsync_4.3-2
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://mailsync.sourceforge.net/
 COMMENT=	Mailsync is a way of synchronizing a collection of mailboxes
 
-DEPENDS+=	imap-uw>=2001a:../../mail/imap-uw
+DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
 
 USE_GMAKE=	yes
 ALL_TARGET=	default
