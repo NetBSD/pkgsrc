@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.6 2003/07/25 12:04:39 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.7 2003/07/25 12:33:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4527,8 +4527,26 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			fi;						\
 		done ;;							\
 	esac
-.  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-.    if defined(PKGVIEWS) && (${BUILD_VIEWS} == "yes")
+.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && (${BUILD_VIEWS} == "yes")
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} _REAL_PKG_DBDIR=${_REAL_PKG_DBDIR} PKG_DBDIR=${PKG_DBDIR} build-views
+.  endif	# pkgviews
+.endif		# !fake-pkg
+
+.PHONY: build-views
+build-views: do-su-build-views
+
+.PHONY: do-su-build-views
+do-su-build-views:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Building views for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-build-views";				\
+	action="build-views";						\
+	${_SU_TARGET}
+
+.PHONY: real-su-build-views
+.if !target(real-su-build-views)
+real-su-build-views:
+.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MKDIR} ${LOCALBASE};						\
 	for v in ${PKGVIEWS}; do					\
@@ -4559,8 +4577,9 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${ECHO} "=> Linking package into $$viewname view";	\
 		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} ${PKG_VIEW_CMD} -p ${LOCALBASE} -d ${DEPOTBASE} --view=$$v add ${PKGNAME}; \
 	done
-.    endif	# PKGVIEWS
-.  endif	# pkgviews
+.  else
+	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.  endif
 .endif
 
 # Depend is generally meaningless for arbitrary packages, but if someone wants
