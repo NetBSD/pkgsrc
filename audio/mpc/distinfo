@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/30 10:49:25 grant Exp $
+$NetBSD: distinfo,v 1.2 2004/05/02 07:24:51 mrg Exp $
 
 SHA1 (mpc-0.10.3.tar.gz) = 377ea125332c27b2ba18cb22889a6a8809b2efcd
 Size (mpc-0.10.3.tar.gz) = 209661 bytes
+SHA1 (patch-aa) = 2df86841103b59e3c9c48750c895cc73ad05ae14
+SHA1 (patch-ab) = 5a8c0d963f35d1963a13d5c5354dffe4c6214e8e
+SHA1 (patch-ac) = d2492ba406a7202df2d0157f3ee728ca1bc2cc95

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/05/02 07:24:52 mrg Exp $
+
+diff -ru src/main.c mpc-0.10.3.orig/src/main.c
+--- src/main.c	2004-03-20 10:44:14.000000000 +1100
++++ src/main.c	2004-05-02 16:42:03.000000000 +1000
+@@ -51,6 +51,7 @@
+ 	{"next", 0, 0, 0, cmd_next, "","Play the next song in the current playlist"},
+ 	{"prev", 0, 0, 0, cmd_prev,"","Play the previous song in the current playlist"},
+ 	{"pause", 0, 0, 0, cmd_pause, "", "Pauses the currently playing song"},
++	{"playpause", 0, 0, 0, cmd_playpause, "", "Pauses if playing, play otherwise"},
+ 	{"stop", 0, 0, 0, cmd_stop,"", "Stop the currently playing playlists"},
+ 	{"seek", 1, 1, 0, cmd_seek,"<0-100>","Seeks to the position specified in percent"},
+ 	{"clear", 0, 0, 0, cmd_clear,"", "Clear the current playlist"},
