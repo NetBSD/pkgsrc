@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/01/30 14:36:09 adam Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/13 13:50:05 adam Exp $
 #
 
-DISTNAME=	ngrep-1.41
+DISTNAME=	ngrep-1.42
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngrep/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://ngrep.sourceforge.net/
 COMMENT=	Network grep
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pcre
 # ngrep's configure use --includedir/$includedir in a weird way!
@@ -24,5 +24,5 @@ do-configure:
 	cd ${WRKSRC}; ./configure --prefix=${PREFIX}
 .endif
 
-.include "../../net/libpcap/buildlink2.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
