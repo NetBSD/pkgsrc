@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:28:00 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 15:23:47 grant Exp $
 #
 
 DISTNAME=	tidy_src_031002
@@ -17,7 +17,7 @@ COMMENT=	Fixes and tidies up HTML files
 WRKSRC=		${WRKDIR}/tidy
 USE_BUILDLINK2=	yes
 NO_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 BUILD_DIRS=	${WRKSRC}/build/gmake
 
 HTML_DOCFILES=	Overview.html doxygen.cfg grid.gif quickref.html tidy.css	\
