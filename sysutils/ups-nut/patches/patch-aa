@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2002/05/22 18:02:34 fredb Exp $
+$NetBSD: patch-aa,v 1.5 2002/05/24 16:32:52 fredb Exp $
 
---- models/upscommon.c.orig	Fri May 17 00:27:55 2002
+--- models/upscommon.c.orig	Fri Mar 15 00:59:57 2002
 +++ models/upscommon.c
-@@ -588,6 +588,7 @@
+@@ -716,6 +716,10 @@
+ 		return;
  	}
  
- 	memcpy(shared_info, info, info_size);
++#ifdef HAVE_MMAP
++	/* sync external file representation before operating on the file */
 +	msync(shared_info, info_size, MS_INVALIDATE);
++#endif
+ 	ret = rename(initfn, statefn);
  
- 	if (shmid >= 0) {
- 		struct	shmid_ds shmbuf;
+ 	if (ret != 0)
