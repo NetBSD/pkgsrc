@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.454 2000/06/03 14:17:49 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.455 2000/06/03 14:24:13 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -2641,11 +2641,12 @@ print-pkg-size:
 # Find sizes of required pkgs
 print-pkg-depend-sizes:
 .for dep in ${DEPENDS}
-	@p="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`";		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	prog="${dep:C/:.*//}";						\
 	${SHCOMMENT} direct depends ;					\
-	${PKG_INFO} -qL "$$p" ;						\
+	${PKG_INFO} -qL "$$prog" ;					\
 	${SHCOMMENT} "depends of depends (XXX complete!)"; 		\
-	dps=`${PKG_INFO} -qf "$$p" | ${GREP} '@pkgdep' | ${AWK} '{ print $$2; }'` ; \
+	dps=`${PKG_INFO} -qf "$$prog" | ${AWK} '/^@pkgdep/ {print $$2}'`; \
 	for dp in $$dps ; do						\
 		${PKG_INFO} -qL "$$dp" ;				\
 	done
