@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/07/10 17:59:57 thorpej Exp $
+# $NetBSD: Makefile,v 1.23 2004/08/13 11:28:49 adam Exp $
 
-DISTNAME=	net-snmp-5.1.1
+DISTNAME=	net-snmp-5.1.2
 CATEGORIES=	net
-PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ftp.net-smnp.org/pub/sourceforge/net-snmp/
 
@@ -18,7 +17,7 @@ BUILD_DEFS+=	USE_INET6
 
 NET_SNMP_SYS_CONTACT?=		default_user@contact.domain
 NET_SNMP_SYS_LOCATION?=		defaultlocation
-NET_SNMP_PERSISTENTDIR?=	/var/net-snmp
+NET_SNMP_PERSISTENTDIR?=	${VARBASE}/net-snmp
 NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:/usr/local/share/snmp/mibs
 
 USE_BUILDLINK3=		yes

@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2004/05/14 13:32:11 adam Exp $
+$NetBSD: patch-ai,v 1.2 2004/08/13 11:28:50 adam Exp $
 
---- agent/mibgroup/mibII/tcpTable.c.orig	2004-03-15 23:27:45.000000000 +0000
+--- agent/mibgroup/mibII/tcpTable.c.orig	2004-06-08 20:53:17.000000000 +0000
 +++ agent/mibgroup/mibII/tcpTable.c
 @@ -88,6 +88,7 @@ struct netsnmp_inpcb_s {
      int             state;
@@ -10,7 +10,7 @@ $NetBSD: patch-ai,v 1.1 2004/05/14 13:32:11 adam Exp $
  #define	TCPTABLE_ENTRY_TYPE	netsnmp_inpcb 
  #define	TCPTABLE_STATE		state 
  #define	TCPTABLE_LOCALADDRESS	pcb.inp_laddr.s_addr 
-@@ -771,7 +772,7 @@ tcpTable_load(netsnmp_cache *cache, void
+@@ -792,7 +793,7 @@ tcpTable_load(netsnmp_cache *cache, void
              nnew->state == 8 /*  closeWait  */ )
              tcp_estab++;
  
