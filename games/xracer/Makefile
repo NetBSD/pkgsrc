@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/09/23 10:33:29 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2002/10/02 19:02:34 dillo Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -9,7 +9,6 @@ MAINTAINER=		bsieker@freenet.de
 HOMEPAGE=		http://xracer.annexia.org/
 COMMENT=		XRacer is a clone of the popular Psygnosis game Wipeout
 
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_USES_MSGFMT=	# defined
 
 USE_BUILDLINK2=		# defined
@@ -22,9 +21,10 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
+AUTOMAKE_REQD=		1.4
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/automake --gnu --no-force && ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC} && ${AUTOMAKE} --gnu --no-force && ${AUTOCONF}
 
 pre-patch:
 .for perlfile in blender2track/xracer-blender2track.pl \
@@ -42,5 +42,5 @@ pre-patch:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
-
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
