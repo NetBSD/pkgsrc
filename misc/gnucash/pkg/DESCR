@@ -1,0 +1,5 @@
+GNUcash: a personal double-entry accounting program
+
+GNUcash is intended to be a fully-featured accounting program that could
+easily replace something like Quicken or Microsoft Money.   It is extensible
+in guile (an embedded scheme interpreter), and also in Perl.
