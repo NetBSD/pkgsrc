@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/25 10:54:55 abs Exp $
+bin/wmpload
