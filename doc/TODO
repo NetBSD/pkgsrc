@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.818 2003/09/01 16:02:24 wiz Exp $
+$NetBSD: TODO,v 1.819 2003/09/01 21:46:30 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -126,7 +126,6 @@ Suggested package updates
 	o geda-20030525
 	o generator-0.35
 	o gettext-0.12.1
-	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.12 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
