@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:46 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/06/16 22:57:50 minskim Exp $
 bin/python1.5
 include/python1.5/Python.h
 include/python1.5/abstract.h
@@ -462,19 +462,19 @@ lib/python1.5/pickle.pyo
 lib/python1.5/pipes.py
 lib/python1.5/pipes.pyc
 lib/python1.5/pipes.pyo
-lib/python1.5/plat-${LOWER_OPSYS}1/FCNTL.py
-lib/python1.5/plat-${LOWER_OPSYS}1/FCNTL.pyc
-lib/python1.5/plat-${LOWER_OPSYS}1/FCNTL.pyo
-lib/python1.5/plat-${LOWER_OPSYS}1/IN.py
-lib/python1.5/plat-${LOWER_OPSYS}1/IN.pyc
-lib/python1.5/plat-${LOWER_OPSYS}1/IN.pyo
-lib/python1.5/plat-${LOWER_OPSYS}1/SOCKET.py
-lib/python1.5/plat-${LOWER_OPSYS}1/SOCKET.pyc
-lib/python1.5/plat-${LOWER_OPSYS}1/SOCKET.pyo
-lib/python1.5/plat-${LOWER_OPSYS}1/TERMIOS.py
-lib/python1.5/plat-${LOWER_OPSYS}1/TERMIOS.pyc
-lib/python1.5/plat-${LOWER_OPSYS}1/TERMIOS.pyo
-lib/python1.5/plat-${LOWER_OPSYS}1/regen
+lib/python1.5/plat-${LOWER_OPSYS}/FCNTL.py
+lib/python1.5/plat-${LOWER_OPSYS}/FCNTL.pyc
+lib/python1.5/plat-${LOWER_OPSYS}/FCNTL.pyo
+lib/python1.5/plat-${LOWER_OPSYS}/IN.py
+lib/python1.5/plat-${LOWER_OPSYS}/IN.pyc
+lib/python1.5/plat-${LOWER_OPSYS}/IN.pyo
+lib/python1.5/plat-${LOWER_OPSYS}/SOCKET.py
+lib/python1.5/plat-${LOWER_OPSYS}/SOCKET.pyc
+lib/python1.5/plat-${LOWER_OPSYS}/SOCKET.pyo
+lib/python1.5/plat-${LOWER_OPSYS}/TERMIOS.py
+lib/python1.5/plat-${LOWER_OPSYS}/TERMIOS.pyc
+lib/python1.5/plat-${LOWER_OPSYS}/TERMIOS.pyo
+lib/python1.5/plat-${LOWER_OPSYS}/regen
 lib/python1.5/popen2.py
 lib/python1.5/popen2.pyc
 lib/python1.5/popen2.pyo
@@ -934,7 +934,7 @@ lib/python1.5/xmllib.pyc
 lib/python1.5/xmllib.pyo
 @dirrm lib/python1.5/test/output
 @dirrm lib/python1.5/test
-@dirrm lib/python1.5/plat-${LOWER_OPSYS}1
+@dirrm lib/python1.5/plat-${LOWER_OPSYS}
 @dirrm lib/python1.5/lib-tk
 @dirrm lib/python1.5/lib-stdwin
 @exec ${MKDIR} %D/lib/python1.5/lib-dynload
