@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8514 2004/12/29 13:11:40 agc Exp $
+$NetBSD: CHANGES,v 1.8515 2004/12/29 13:19:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6692,3 +6692,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added glade2-gnome-2.6.5 [jmmv 2004-12-29]
 	bsd.pkg.mk: portability mods - abstract the path size in pkg_install
 		[agc 2004-12-29]
+	Updated p5-User-Identity to 0.90 [adrianp 2004-12-29]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2799 2004/12/29 11:52:43 adrianp Exp $
+$NetBSD: TODO,v 1.2800 2004/12/29 13:19:06 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -835,7 +835,6 @@ Suggested package updates
 	o p5-TimeDate-1.16 [pkg/28725]
 	o p5-Tree-Simple-1.14
 	o p5-URI-1.35
-	o p5-User-Identity-0.90
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-WWW-Mechanize-1.06
 	o p5-XML-LibXML-1.58
