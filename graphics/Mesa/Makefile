@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/03/09 19:04:52 jschauma Exp $
+# $NetBSD: Makefile,v 1.47 2003/03/24 18:23:25 jschauma Exp $
 #
 
 PKGNAME=	Mesa-${MESA_VERSION}
@@ -11,8 +11,6 @@ COMMENT=	Graphics library meta package, similar to SGI's OpenGL
 CONFLICTS=	Mesa-glx-[0-9]*
 
 .include "Makefile.common"
-
-MESA_REQD=	${MESA_VERSION}
 
 USE_BUILDLINK2=	yes
 
