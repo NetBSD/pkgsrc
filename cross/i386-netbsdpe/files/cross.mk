@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.17 2003/09/21 20:44:13 wiz Exp $
+#	$NetBSD: cross.mk,v 1.18 2004/01/25 02:36:11 grant Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -75,7 +75,7 @@ PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-cxx-runtime
 # the main PLIST needs to go last to get the @dirrm's right
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc
 DISTFILES+=		${GCC_DISTNAME}.tar.gz
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 CC_FOR_TARGET=		${WRKOBJ}/gcc/xgcc -B${WRKOBJ}/gcc/ ${CFLAGS_FOR_TARGET}
 CXX_FOR_TARGET=		${CC_FOR_TARGET}
