@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2002/11/06 00:13:16 wiz Exp $
+
+--- source/vmmon/include/x86.h.orig	Thu Nov 30 13:37:01 2000
++++ source/vmmon/include/x86.h
+@@ -176,7 +176,9 @@
+ #define CPUID_FAMILY_P5      5
+ #define CPUID_FAMILY_P6      6
+ 
++#ifndef MSR_TSC
+ #define MSR_TSC              0x00000010
++#endif /* MSR_TSC */
+ #define MSR_MTRR_CAP         0x000000fe
+ #define MSR_SYSENTER_CS      0x00000174
+ #define MSR_SYSENTER_ESP     0x00000175
