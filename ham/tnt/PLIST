@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:22 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/01 14:37:12 salo Exp $
 bin/tnt
 bin/tntc
 include/tntrun.h
@@ -81,7 +81,7 @@ share/doc/tnt/Readme5.fr
 share/doc/tnt/Readme6.de
 share/doc/tnt/Readme6.en
 share/doc/tnt/Readme6.fr
-share/locale/de/LC_MESSAGES/tnt.mo
-share/locale/fr/LC_MESSAGES/tnt.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tnt.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tnt.mo
 @dirrm share/doc/tnt
 @dirrm share/tnt/sounds
