@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7132 2004/09/10 16:33:57 uebayasi Exp $
+$NetBSD: CHANGES,v 1.7133 2004/09/10 17:10:24 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated udfclient to 0.3nb1 [reinoud 2004-09-10]
 	Removed libg++ [wiz 2004-09-10]
 	Updated flim to 1.14.6 [uebayasi 2004-09-10]
+	Updated semi to 1.14.6 [uebayasi 2004-09-10]
