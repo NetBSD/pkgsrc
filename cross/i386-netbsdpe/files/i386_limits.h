@@ -1,4 +1,5 @@
-/*	$NetBSD: i386_limits.h,v 1.1.1.1 2000/11/06 03:15:14 minoura Exp $	*/
+/*	$NetBSD: i386_limits.h,v 1.2 2000/11/06 05:30:06 minoura Exp $	*/
+/*	from: NetBSD: limits.h,v 1.15 2000/08/08 22:31:13 tshiozak Exp	*/
 
 /*
  * Copyright (c) 1988 The Regents of the University of California.

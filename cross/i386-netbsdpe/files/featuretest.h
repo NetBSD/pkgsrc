@@ -1,4 +1,5 @@
-/*	$NetBSD: featuretest.h,v 1.1.1.1 2000/11/06 03:15:14 minoura Exp $	*/
+/*	$NetBSD: featuretest.h,v 1.2 2000/11/06 05:30:05 minoura Exp $	/*
+/*	from: NetBSD: featuretest.h,v 1.2 1998/10/24 16:30:56 kleink Exp	*/
 
 /*
  * Written by Klaus Klein <kleink@NetBSD.ORG>, February 2, 1998.

@@ -1,4 +1,5 @@
-/*	$NetBSD: limits.h,v 1.1.1.1 2000/11/06 03:15:14 minoura Exp $	*/
+/*	$NetBSD: limits.h,v 1.2 2000/11/06 05:30:06 minoura Exp $	*/
+/*	from: NetBSD: limits.h,v 1.13 1999/09/27 16:24:39 kleink Exp	*/
 
 /*
  * Copyright (c) 1988, 1993
