@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2000/02/14 02:44:45 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2000/06/03 10:57:13 wiz Exp $
 
---- ./tool.c.orig	Sat Jan  1 05:12:05 2000
-+++ ./tool.c	Mon Feb 14 02:36:52 2000
+--- tool.c.orig	Sat May  6 23:50:17 2000
++++ tool.c	Thu Jun  1 02:43:09 2000
 @@ -19,6 +19,7 @@
  #include "video.h"
  #include "tool.h"
