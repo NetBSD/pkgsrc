@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.38 2001/06/08 21:21:05 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.39 2001/06/12 12:49:55 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -115,12 +115,20 @@ USE_INET6?=		NO
 # or a pkg Makefile modifies them.
 .include <sys.mk>
 
+# Load the OS-specific definitions for program variables.  Default to loading
+# the NetBSD ones if an OS-specific file doesn't exist.
+.if exists(../../mk/defs.${OPSYS}.mk)
+.include "../../mk/defs.${OPSYS}.mk"
+.else
+.include "../../mk/defs.NetBSD.mk"
+.endif
+
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
 # depend on the Mesa package.
 .if (defined(CHECK_MESA) || defined(USE_MESA))
 X11BASE?=		/usr/X11R6
 .if exists(${X11BASE}/include/GL/glx.h)
-__BUILTIN_MESA!=	egrep -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || true
+__BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 __BUILTIN_MESA=		0
 .endif
@@ -137,7 +145,7 @@ HAVE_BUILTIN_MESA=	YES
 .if (defined(CHECK_FREETYPE2) || defined(USE_FREETYPE2))
 X11BASE?=		/usr/X11R6
 .if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
-__BUILTIN_FREETYPE2!=	egrep -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || true
+__BUILTIN_FREETYPE2!=	${EGREP} -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 __BUILTIN_FREETYPE2=	0
 .endif
