@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/27 15:58:22 taca Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/28 16:01:30 wiz Exp $
 #
 
 DISTNAME=	newfile-1.0.14
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=newfile/}
 
-MAINTAINER=	flynn@energyhq.homeip.net
+MAINTAINER=	flynn@energyhq.es.eu.org
 HOMEPAGE=	http://newfile.sourceforge.net/
 COMMENT=	Tool for creating starter files in various languages
 
