@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.973 2003/10/29 11:57:59 xtraeme Exp $
+$NetBSD: TODO,v 1.974 2003/10/29 17:55:55 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -167,6 +167,7 @@ Suggested package updates
 	o evilwm-0.99.17
 	o evolution-1.4.4
 	o exim-4.24
+	o fastdep-0.16 [jmmv]
 	o festival-1.4.3
 	o fetchmail-6.2.5
 	o findutils-4.1.20
