@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2001/04/26 07:17:41 skrll Exp $
+$NetBSD: patch-ac,v 1.3 2001/04/27 09:16:19 skrll Exp $
 
 --- configure.orig	Mon Feb  7 00:54:02 2000
 +++ configure
@@ -6,11 +6,19 @@ $NetBSD: patch-ac,v 1.2 2001/04/26 07:17:41 skrll Exp $
          echo "$ac_t""file not found" 1>&6
      fi
  
-+TCL_SRC_DIR=@PKGSRC_TCL_SRC_DIR@
++TCL_SRC_DIR=${PKGSRC_TCL_SRC_DIR}
      #
      # The eval is required to do the TCL_DBGX substitution in the
      # TCL_LIB_FILE variable
-@@ -1984,7 +1985,7 @@
+@@ -939,6 +940,7 @@
+ 
+ 
+ 
++TK_SRC_DIR=${PKGSRC_TK_SRC_DIR}
+ 
+ 
+ # These are substituted into the run scripts
+@@ -1984,7 +1986,7 @@
  		DL_LIBS=""
  		LDFLAGS=""
  		LD_SEARCH_FLAGS=""
@@ -19,7 +27,7 @@ $NetBSD: patch-ac,v 1.2 2001/04/26 07:17:41 skrll Exp $
  	    
  else
    echo "$ac_t""no" 1>&6
-@@ -2509,11 +2510,7 @@
+@@ -2509,11 +2511,7 @@
  #
  # Determine suffix to use for the object files for the shared library.
  #
