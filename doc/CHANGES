@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8671 2005/01/09 11:21:40 seb Exp $
+$NetBSD: CHANGES,v 1.8672 2005/01/09 11:29:20 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -193,3 +193,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added kipi-plugins-0.1beta1 [seb 2005-01-09]
 	Updated digikam to 0.7.1 [seb 2005-01-09]
 	Added digikamimageplugins-0.7.1 [seb 2005-01-09]
+	Removed digikamplugins [seb 2005-01-09]
