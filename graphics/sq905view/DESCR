@@ -1,4 +1,0 @@
-USB SQcam Webcam based the SQ905 chip Utility Programs
-
-sq905shot ... simple image capture program ( output stdout PPM file )
-sq905view ... sequential image viewer program
