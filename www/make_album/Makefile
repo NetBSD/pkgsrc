@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/03 13:35:53 adam Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/01 08:22:48 simonb Exp $
 #
 
 DISTNAME=	make_album_1_6
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.burren.cx/david/files/
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.burren.cx/david/make_album.html
 COMMENT=	Generate HTML albums of images
+
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 MY_SCRIPTS=	index_albums ingest make_album newimagedir populate_master
 
@@ -28,7 +30,5 @@ do-install:
 	for f in CHANGES README TODO; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/make_album; \
 	done
-
-.include "../../graphics/ImageMagick/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
