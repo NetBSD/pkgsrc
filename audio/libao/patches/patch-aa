@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2002/10/04 08:12:47 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2003/12/08 14:33:47 wiz Exp $
 
---- src/plugins/oss/ao_oss.c.orig	Wed Apr 10 14:53:56 2002
+--- src/plugins/oss/ao_oss.c.orig	Sat Oct  4 17:16:05 2003
 +++ src/plugins/oss/ao_oss.c
-@@ -80,22 +80,22 @@ int _open_default_oss_device (char **dev
+@@ -81,22 +81,22 @@ int _open_default_oss_device (char **dev
  	char *err = NULL;
  	char *dev = NULL;
  
