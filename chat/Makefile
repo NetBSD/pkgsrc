@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/05/31 10:21:14 uebayasi Exp $
+# $NetBSD: Makefile,v 1.37 2002/06/06 14:27:53 manu Exp $
 #
 
 COMMENT=	communication programs
@@ -10,6 +10,7 @@ SUBDIR+=	bnc
 SUBDIR+=	centericq
 SUBDIR+=	dircproxy
 SUBDIR+=	ekg
+SUBDIR+=	emech
 SUBDIR+=	epic4
 SUBDIR+=	epic4-doc
 SUBDIR+=	everybuddy
