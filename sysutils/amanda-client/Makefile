@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/07/13 01:20:14 jlam Exp $
+# $NetBSD: Makefile,v 1.8 1999/08/10 17:03:01 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 
 .if defined(AMANDA_SMB)
 CONFIGURE_ARGS+=	--with-smbclient
-DEPENDS+=		samba-2.0.3:../../net/samba
+DEPENDS+=		samba-2.0.5a:../../net/samba
 .endif
 
 .include "../../mk/bsd.pkg.mk"
