@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 10:44:39 seb Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/18 16:29:50 cube Exp $
 #
 
 DISTNAME=	elib-1.0
-PKGREVISION=	1
+PKGREVISION?=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://jde.sunsite.dk/
 
 MAINTAINER=	cjones@NetBSD.org
 COMMENT=	Library of utility functions for Emacs
+
+CONFLICTS+=	emacs20-elib-[0-9]*
 
 .include "../../mk/emacs.mk"
 
