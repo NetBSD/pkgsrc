@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/10 02:12:00 kim Exp $
+
+--- Makefile.orig	Fri Jul  5 20:40:46 2002
++++ Makefile	Tue Jul  9 22:08:03 2002
+@@ -1,5 +1,5 @@
+-CC = gcc
+-CFLAGS = -g -Wall -ansi -pedantic
++#CC = gcc
++#CFLAGS = -g -Wall -ansi -pedantic
+ 
+ gethost: gethost.c
+ 	$(CC) $(CFLAGS) -o gethost gethost.c
