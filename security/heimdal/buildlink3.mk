@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/24 03:12:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/02/02 11:30:45 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -49,7 +49,7 @@ BUILDLINK_USE_BUILTIN.heimdal=	NO
 #
 .    if !defined(_HEIMDAL_VERSION)
 _HEIMDAL_VERSIONS=	0.6 0.5 0.4e 0.3f 0.3e
-_HEIMDAL_0.6=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
+_HEIMDAL_0.6=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-* NetBSD-[2-9]*-*
 _HEIMDAL_0.5=		NetBSD-1.6[I-T]-*
 _HEIMDAL_0.4e=		NetBSD-1.6[A-H]-*				\
 			NetBSD-1.6-* NetBSD-1.6_*-* NetBSD-1.6.*-*	\
