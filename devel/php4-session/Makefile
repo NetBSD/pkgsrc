@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/02/28 06:17:44 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/01 00:58:31 mycroft Exp $
 
 MODNAME=		session
 CATEGORIES+=		devel
-PKGREVISION=		# empty
+PKGREVISION=		1
 COMMENT=		PHP4 extension for session-handling
 
 USE_BUILDLINK_ONLY=	YES
