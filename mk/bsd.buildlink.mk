@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.38 2001/10/05 01:15:07 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.39 2001/10/05 02:31:18 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -282,6 +282,42 @@ replace-libnames-makefiles:
 	fi
 .endif	# REPLACE_LIBNAMES
 
+REPLACE_RPATH_PATTERNS+=	${MAKEFILE_PATTERNS}
+REPLACE_RPATH_PATTERNS_FIND=	\
+	${REPLACE_RPATH_PATTERNS:S/$/!/:S/^/-or -name !/:S/!/"/g:S/-or//1}
+
+REPLACE_RPATH+=	\
+	`cd ${WRKSRC}; ${FIND} . ${REPLACE_RPATH_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+
+REPLACE_RPATH_SED+=	\
+	-e "s|-R${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
+
+post-configure: replace-rpath
+
+replace-rpath:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.replace_rpath_done;			\
+	if [ ! -f $${cookie} ]; then					\
+		${MKDIR} ${BUILDLINK_DIR};				\
+		replace_files="${REPLACE_RPATH}";			\
+		if [ -n "$${replace_files}" ]; then			\
+			${ECHO_MSG} "Removing rpath references to buildlink directories:"; \
+			cd ${WRKSRC};					\
+			for file in $${replace_files}; do		\
+				if ${_CHECK_IS_TEXT_FILE}; then		\
+					${ECHO_MSG} "	$${file}";	\
+					${SED}	${REPLACE_RPATH_SED}	\
+						$${file} > $${file}.fixed; \
+					if [ -x $${file} ]; then	\
+						${CHMOD} +x $${file}.fixed; \
+					fi;				\
+					${MV} -f $${file}.fixed $${file}; \
+					${ECHO} $${file} >> $${cookie};	\
+				fi;					\
+			done;						\
+		fi;							\
+	fi
+
 REPLACE_BUILDLINK_PATTERNS+=	*.lai
 REPLACE_BUILDLINK_PATTERNS+=	*-config
 REPLACE_BUILDLINK_PATTERNS+=	*Conf.sh
@@ -290,8 +326,7 @@ REPLACE_BUILDLINK_PATTERNS_FIND=	\
 	${REPLACE_BUILDLINK_PATTERNS:S/$/!/:S/^/-or -name !/:S/!/"/g:S/-or//1}
 
 REPLACE_BUILDLINK+=	\
-        `cd ${WRKSRC}; ${FIND} . ${REPLACE_BUILDLINK_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
-
+	`cd ${WRKSRC}; ${FIND} . ${REPLACE_BUILDLINK_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 
 .if defined(REPLACE_BUILDLINK)
 post-build: replace-buildlink
@@ -299,8 +334,9 @@ post-build: replace-buildlink
 REPLACE_BUILDLINK_SED?=		# empty
 REPLACE_BUILDLINK_POST_SED+=						\
 	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"			\
-	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"			\
-	-e "s|-R${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
+	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
+
+REPLACE_BUILDLINK_POST_SED+=	${REPLACE_RPATH_SED}
 
 # Fix files by removing buildlink directory references and library names.
 replace-buildlink:
@@ -312,7 +348,7 @@ replace-buildlink:
 		if [ -n "$${replace_files}" ]; then			\
 			${ECHO_MSG} "Fixing directory references and library names:"; \
 			cd ${WRKSRC};					\
-			for file in ${replace_files}; do		\
+			for file in $${replace_files}; do		\
 				if ${_CHECK_IS_TEXT_FILE}; then		\
 					${ECHO_MSG} "	$${file}";	\
 					${SED}	${REPLACE_BUILDLINK_SED} \
