@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/10/09 03:53:48 tv Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/10/09 04:19:10 tv Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -23,7 +23,7 @@ JAVA_HOME=	${LOCALBASE}/java/sun-1.5
 JAVA_NAME=	sun15
 JAVA_UNLIMIT=	datasize
 
-MESSAGE_SUBST+=	JAVA_HOME="${JAVA_HOME}"
+MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat

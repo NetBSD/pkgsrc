@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/09 03:53:48 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/10/09 04:19:10 tv Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -81,7 +81,6 @@ java/sun-1.5/lib/fonts/LucidaTypewriterBold.ttf
 java/sun-1.5/lib/fonts/LucidaTypewriterRegular.ttf
 java/sun-1.5/lib/fonts/fonts.dir
 java/sun-1.5/lib/${MACHINE_ARCH}/awt_robot
-java/sun-1.5/lib/${MACHINE_ARCH}/client/classes.jsa
 java/sun-1.5/lib/${MACHINE_ARCH}/client/Xusage.txt
 java/sun-1.5/lib/${MACHINE_ARCH}/client/libjsig.so
 java/sun-1.5/lib/${MACHINE_ARCH}/client/libjvm.so
