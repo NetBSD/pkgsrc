@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 1999/07/18 23:57:01 tron Exp $
+
+--- syntax/scripts.vim.orig	Thu Jul 15 12:01:34 1999
++++ syntax/scripts.vim	Fri Jul  9 11:31:44 1999
+@@ -63,6 +63,10 @@ if !has("syntax_items")
+   elseif getline(1) =~ '^#!.*[/\\][^/\\]*perl[^/\\]*\>'
+     so <sfile>:p:h/perl.vim
+ 
++  " Python
++  elseif getline(1) =~ '^#!.*[/\\][^/\\]*python[^/\\]*\>'
++    so <sfile>:p:h/python.vim
++
+   " Vim scripts (must have '" vim' as the first line to trigger this)
+   elseif getline(1) =~ '^" *[vV]im$'
+     so <sfile>:p:h/vim.vim
