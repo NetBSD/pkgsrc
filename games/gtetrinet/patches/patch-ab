@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/05/27 15:44:13 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2004/08/02 02:08:28 minskim Exp $
 
---- Makefile.in.orig	2003-05-27 15:31:57.000000000 +0200
+--- Makefile.in.orig	2004-04-18 11:08:05.000000000 -0500
 +++ Makefile.in
-@@ -153,7 +153,7 @@ SUBDIRS = doc po src themes
+@@ -116,7 +116,7 @@ SUBDIRS = doc po src themes icons
  icon_DATA = gtetrinet.png
  icondir = $(datadir)/pixmaps
  
