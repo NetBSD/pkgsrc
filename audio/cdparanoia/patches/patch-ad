@@ -1,19 +1,25 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+$NetBSD: patch-ad,v 1.2 2000/01/28 07:18:38 rh Exp $
 
---- utils.h.orig	Sat Oct  9 04:18:21 1999
-+++ utils.h	Sun Jan 16 19:05:14 2000
-@@ -1,5 +1,10 @@
+--- utils.h.orig	Fri Oct  8 21:18:21 1999
++++ utils.h	Fri Jan 28 08:04:15 2000
+@@ -1,5 +1,16 @@
  #include <stdlib.h>
 +#ifdef __linux__
  #include <endian.h>
 +#endif
 +#ifdef __NetBSD__
++#include <sys/param.h>
++#if __NetBSD_Version__ >= 104010000
 +#include <sys/endian.h>
++#else
++#include <machine/endian.h>
++#include <machine/bswap.h>
++#endif
 +#endif
  #include <stdio.h>
  #include <errno.h>
  #include <string.h>
-@@ -19,15 +24,23 @@
+@@ -19,15 +30,23 @@
  }
  
  static inline size32 swap32(size32 x){
