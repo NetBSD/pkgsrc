@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.954 2002/03/26 16:31:27 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.955 2002/04/02 09:41:39 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2691,7 +2691,13 @@ _REPLACE=								\
 real-su-replace:
 	${_PKG_SILENT}${_PKG_DEBUG}                                     \
 	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
-	pkg_tarup ${PKGBASE} || (${ECHO} "Can't pkg_tarup ${PKGBASE}"; exit 1); \
+	if [ -x ${LOCALBASE}/bin/pkg_tarup ]; then			\
+		${SETENV} PKGREPOSITORY=${WRKDIR} ${LOCALBASE}/bin/pkg_tarup ${PKGBASE}; \
+	else								\
+		${ECHO} "No ${LOCALBASE}/bin/pkg_tarup binary - can't pkg_tarup ${PKGBASE}"; \
+		exit 1;							\
+	fi
+	${_PKG_SILENT}${_PKG_DEBUG}                                     \
 	oldpkgname=`${PKG_INFO} -e ${PKGBASE}`;				\
 	newpkgname=${PKGNAME};						\
 	${ECHO} "$$oldpkgname" > ${WRKDIR}/.replace;			\
@@ -2704,12 +2710,12 @@ real-su-undo-replace:
 	if [ ! -f ${WRKDIR}/.replace ]; then				\
 		${ECHO_MSG} "No replacement to undo";			\
 		exit 1;							\
-	fi;								\
+	fi
+	${_PKG_SILENT}${_PKG_DEBUG}                                     \
 	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
-	pkg_tarup ${PKGBASE} || (${ECHO} "Can't pkg_tarup ${PKGBASE}"; exit 1); \
 	oldpkgname=${PKGNAME};						\
 	newpkgname=`${CAT} ${WRKDIR}/.replace`;				\
-	replace_action="${SETENV} ${PKG_ADD} ${PKGREPOSITORY}/$$newpkgname${PKG_SUFX}"; \
+	replace_action="${SETENV} ${PKG_ADD} ${WRKDIR}/$$newpkgname${PKG_SUFX}"; \
 	${_REPLACE};							\
 	${RM} ${WRKDIR}/.replace
 
