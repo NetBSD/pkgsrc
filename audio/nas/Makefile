@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/04/11 16:17:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.45 2004/04/17 22:48:06 minskim Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -12,6 +12,8 @@ HOMEPAGE=	http://radscan.com/nas.html
 COMMENT=	Network Audio System
 
 DEPENDS+=	p5-perl-headers-${OS_VERSION}:../../devel/p5-perl-headers
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK3=		yes
