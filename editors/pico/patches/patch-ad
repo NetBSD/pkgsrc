@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1 1998/11/13 15:56:24 tv Exp $
+
+--- pico/osdep/os-neb.h.orig	Wed Jun 24 17:57:46 1998
++++ pico/osdep/os-neb.h	Sun Sep 27 17:36:40 1998
+@@ -41,8 +41,8 @@
+ 
+ 
+ /*----------------- locale.h -------------------------------------------*/
+-/* #include <locale.h>  /* To make matching and sorting work right */
+-#define collator strucmp
++#include <locale.h>  /* To make matching and sorting work right */
++#define collator strcasecmp
+ 
+ 
+ 
+@@ -68,8 +68,8 @@
+ 
+ 
+ /*-------------- A couple typedef's for integer sizes ------------------*/
+-typedef unsigned int usign32_t;
+-typedef unsigned short usign16_t;
++typedef u_int32_t usign32_t;
++typedef u_int16_t usign16_t;
+ 
+ 
+ 
+@@ -155,7 +155,7 @@
+ /*
+  * Place where mail gets delivered (for pico's new mail checking)
+  */
+-#define MAILDIR		"/usr/spool/mail"
++#define MAILDIR		"/var/mail"
+ 
+ /*
+  * What and where the tool that checks spelling is located.  If this is

@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 1998/11/13 15:56:24 tv Exp $
+
+--- pico/display.c.orig	Fri Jun 19 13:19:53 1998
++++ pico/display.c	Sun Sep 27 12:33:15 1998
+@@ -128,8 +128,7 @@
+ VIDEO   **vscreen;                      /* Virtual screen. */
+ VIDEO   **pscreen;                      /* Physical screen. */
+ 
+-#define	ISCONTROL(C)	((C) < 0x20 || (C) == 0x7F \
+-			 || ((gmode & P_HICTRL) && ((C) > 0x7F && (C) < 0xA0)))
++#define	ISCONTROL(C)	((C) < 0x20 || (C) == 0x7F || ((C) >= 0x80 && (C) < 0xA0))
+ 
+ 
+ /*
