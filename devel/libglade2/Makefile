@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/03/22 15:57:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2005/03/22 18:23:13 jmmv Exp $
 #
 
 DISTNAME=		libglade-2.5.1
@@ -29,7 +29,7 @@ XML_ENTRIES=	system http://glade.gnome.org/glade-2.0.dtd \
 
 BUILDLINK_DEPENDS.atk+=		atk>=1.9.0
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_DEPENDS.gtk2+=	gtk2>=2.6.0
+BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/libglade/2.0
