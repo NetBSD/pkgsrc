@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/10/03 00:18:32 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/11/06 10:41:08 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_PANEL_BUILDLINK3_MK:=	${GNOME_PANEL_BUILDLINK3_MK}+
@@ -28,9 +28,7 @@ BUILDLINK_PKGSRCDIR.gnome-panel?=	../../x11/gnome-panel
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
-.include "../../x11/gnome2-control-center/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
