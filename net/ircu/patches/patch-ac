@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/11/24 20:37:40 tv Exp $
+
+--- config/Makefile.in.orig	Tue Nov 24 13:41:41 1998
++++ config/Makefile.in	Tue Nov 24 13:42:08 1998
+@@ -47,7 +47,7 @@
+ 	autoconf
+ 
+ config: configure setup.h.in config.status Configure FORCE
+-	@CONFIG_BATCH=n ${SHELL} ./Configure || exit 1
++	@CONFIG_BATCH=y ${SHELL} ./Configure || exit 1
+ 	@# Allow the use of non-GNU make with 'make config':
+ 	@cd ../ircd; ${MAKE} Makefile
+ 	@cd ../doc; ${MAKE} Makefile

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/11/24 20:37:40 tv Exp $
+
+--- ircd/s_user.c.orig	Tue Nov 24 14:02:15 1998
++++ ircd/s_user.c	Tue Nov 24 14:04:17 1998
+@@ -326,7 +326,7 @@
+   time_t last;
+   struct abacklog *next;
+   char *connected;
+-  char count;
++  int count;
+ };
+ 
+ static struct abacklog *backlog[256];	/* hash table */
