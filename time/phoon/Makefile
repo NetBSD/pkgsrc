@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:55:04 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:28:44 martti Exp $
 #
 
 DISTNAME=	phoon_01apr1995
@@ -9,6 +9,6 @@ MASTER_SITES=	http://www.acme.com/software/phoon/
 
 MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.acme.com/software/phoon/
-COMMENT=	show phase of the moon on ASCII terminal
+COMMENT=	Show phase of the moon on ASCII terminal
 
 .include "../../mk/bsd.pkg.mk"

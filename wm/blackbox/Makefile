@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:55:10 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/21 17:34:00 martti Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://blackboxwm.sourceforge.net/
-COMMENT=	small and fast X11R6 window manager
+COMMENT=	Small and fast X11R6 window manager
 
 DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:55:14 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:34:04 martti Exp $
 #
 
 DISTNAME=	matchbox-0.3.6
@@ -7,7 +7,7 @@ MASTER_SITES=	http://handhelds.org/~mallum/downloadables/matchbox/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://handhelds.org/~mallum/matchbox/
-COMMENT=	window manager designed for computers with small displays
+COMMENT=	Window manager designed for computers with small displays
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES

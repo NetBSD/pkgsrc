@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:13 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 17:34:03 martti Exp $
 #
 
 DISTNAME=	ion-20020207
@@ -7,7 +7,7 @@ MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/dl/
 
 MAINTAINER=	daniel@codefactory.se,zuntum@NetBSD.org
 HOMEPAGE=	http://modeemi.cs.tut.fi/~tuomov/ion/
-COMMENT=	keyboard friendly tiling window manager
+COMMENT=	Keyboard friendly tiling window manager
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES

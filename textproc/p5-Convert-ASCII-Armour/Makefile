@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:32 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:27:35 martti Exp $
 #
 
 DISTNAME=		Convert-ASCII-Armour-1.4
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
-COMMENT=		perl5 module to convert binary octets into ASCII armour
+COMMENT=		Perl5 module to convert binary octets into ASCII armour
 
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:10 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:34:01 martti Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://blackboxwm.sourceforge.net/
-COMMENT=	tools to set the root windows background
+COMMENT=	Tools to set the root windows background
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES

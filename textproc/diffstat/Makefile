@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:12 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:27:30 martti Exp $
 #
 
 DISTNAME=	diffstat-1.33
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dickey.his.com/diffstat/diffstat.html
-COMMENT=	display a histogram of diff changes
+COMMENT=	Display a histogram of diff changes
 
 GNU_CONFIGURE=	YES
 
