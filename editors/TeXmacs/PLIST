@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/03/30 12:41:27 recht Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/04/04 23:19:45 recht Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -307,6 +307,12 @@ share/TeXmacs/doc/devel/source/source.en.tm
 share/TeXmacs/doc/devel/source/source.fr.tm
 share/TeXmacs/doc/devel/source/types.en.tm
 share/TeXmacs/doc/devel/source/types.fr.tm
+share/TeXmacs/doc/devel/style/customize/customize-disk.en.tm
+share/TeXmacs/doc/devel/style/customize/customize-general.en.tm
+share/TeXmacs/doc/devel/style/customize/customize-layout.en.tm
+share/TeXmacs/doc/devel/style/customize/customize-lists.en.tm
+share/TeXmacs/doc/devel/style/customize/customize-sections.en.tm
+share/TeXmacs/doc/devel/style/customize/customize-theorems.en.tm
 share/TeXmacs/doc/devel/style/customize/customize.en.tm
 share/TeXmacs/doc/devel/style/customize/customize.es.tm
 share/TeXmacs/doc/devel/style/customize/customize.fr.tm
@@ -323,7 +329,14 @@ share/TeXmacs/doc/devel/style/design/paths.en.tm
 share/TeXmacs/doc/devel/style/design/paths.es.tm
 share/TeXmacs/doc/devel/style/design/paths.fr.tm
 share/TeXmacs/doc/devel/style/design/paths.pt.tm
+share/TeXmacs/doc/devel/style/design/style-assign.en.tm
+share/TeXmacs/doc/devel/style/design/style-compute.en.tm
+share/TeXmacs/doc/devel/style/design/style-eval.en.tm
 share/TeXmacs/doc/devel/style/design/style-example.en.tm
+share/TeXmacs/doc/devel/style/design/style-flow.en.tm
+share/TeXmacs/doc/devel/style/design/style-format.en.tm
+share/TeXmacs/doc/devel/style/design/style-language.en.tm
+share/TeXmacs/doc/devel/style/design/style-macro.en.tm
 share/TeXmacs/doc/devel/style/keyboard/compute.en.tm
 share/TeXmacs/doc/devel/style/keyboard/compute.es.tm
 share/TeXmacs/doc/devel/style/keyboard/compute.fr.tm
@@ -336,7 +349,10 @@ share/TeXmacs/doc/devel/style/keyboard/style-kbd.en.tm
 share/TeXmacs/doc/devel/style/keyboard/style-kbd.es.tm
 share/TeXmacs/doc/devel/style/keyboard/style-kbd.fr.tm
 share/TeXmacs/doc/devel/style/keyboard/style-kbd.pt.tm
-share/TeXmacs/doc/devel/style/standard/standard.en.tm
+share/TeXmacs/doc/devel/style/presentation/src-present-global.en.tm
+share/TeXmacs/doc/devel/style/presentation/src-present-intro.en.tm
+share/TeXmacs/doc/devel/style/presentation/src-present-local.en.tm
+share/TeXmacs/doc/devel/style/presentation/src-present.en.tm
 share/TeXmacs/doc/devel/style/standard/standard.es.tm
 share/TeXmacs/doc/devel/style/standard/standard.fr.tm
 share/TeXmacs/doc/devel/style/standard/standard.pt.tm
@@ -649,12 +665,27 @@ share/TeXmacs/doc/main/start/man-setup.es.tm
 share/TeXmacs/doc/main/start/man-setup.fr.tm
 share/TeXmacs/doc/main/start/man-setup.it.tm
 share/TeXmacs/doc/main/start/man-setup.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/common-base-dtd.en.tm
+share/TeXmacs/doc/main/styles/env/env-base-dtd.en.tm
+share/TeXmacs/doc/main/styles/env/env-dtd.en.tm
+share/TeXmacs/doc/main/styles/env/env-float-customize.en.tm
+share/TeXmacs/doc/main/styles/env/env-float-dtd.en.tm
+share/TeXmacs/doc/main/styles/env/env-float-export.en.tm
+share/TeXmacs/doc/main/styles/env/env-math-dtd.en.tm
+share/TeXmacs/doc/main/styles/env/env-theorem-customize.en.tm
+share/TeXmacs/doc/main/styles/env/env-theorem-dtd.en.tm
+share/TeXmacs/doc/main/styles/env/env-theorem-export.en.tm
+share/TeXmacs/doc/main/styles/header/header-dtd.en.tm
+share/TeXmacs/doc/main/styles/header/header-header-dtd.en.tm
+share/TeXmacs/doc/main/styles/header/header-title-customize.en.tm
+share/TeXmacs/doc/main/styles/header/header-title-dtd.en.tm
+share/TeXmacs/doc/main/styles/header/header-title-export.en.tm
+share/TeXmacs/doc/main/styles/section/section-base-customize.en.tm
+share/TeXmacs/doc/main/styles/section/section-base-dtd.en.tm
+share/TeXmacs/doc/main/styles/section/section-base-export.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/common-base-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/common-base-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/common-base-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/common-base-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/dtds.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/dtds.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/dtds.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/dtds.it.tm
@@ -663,42 +694,34 @@ share/TeXmacs/doc/main/styles/std-dtds/env-default-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-default-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-default-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-default-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/env-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/env-float-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-float-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-float-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-float-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-float-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/env-manage-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-manage-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-manage-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-manage-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-manage-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/env-math-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-math-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-math-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-math-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-math-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/env-theorem-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-theorem-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-theorem-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-theorem-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/env-theorem-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/header-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/header-dtds.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtds.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtds.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtds.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-dtds.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/header-title-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-title-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-title-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/header-title-dtd.it.tm
@@ -714,45 +737,55 @@ share/TeXmacs/doc/main/styles/std-dtds/number-section-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/number-section-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/number-section-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/number-section-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/number.pt.-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/number.pt.-dtd.it.tm
-share/TeXmacs/doc/main/styles/std-dtds/program-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/program-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/program-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/program-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/program-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/section-latex-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/section-latex-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/section-latex-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/section-latex-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/section-latex-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/session-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/session-dtd.it.tm
-share/TeXmacs/doc/main/styles/std-dtds/std-automatic-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-automatic-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-automatic-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-automatic-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-automatic-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/std-list-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-list-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-list-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-list-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-list-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/std-markup-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-markup-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-markup-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-markup-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-markup-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/std-math-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-math-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-math-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-math-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-math-dtd.pt.tm
-share/TeXmacs/doc/main/styles/std-dtds/std-symbol-dtd.en.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-symbol-dtd.es.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-symbol-dtd.fr.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-symbol-dtd.it.tm
 share/TeXmacs/doc/main/styles/std-dtds/std-symbol-dtd.pt.tm
+share/TeXmacs/doc/main/styles/std-packages.en.tm
+share/TeXmacs/doc/main/styles/std-styles.en.tm
+share/TeXmacs/doc/main/styles/std/program-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/session-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/std-automatic-bib.en.tm
+share/TeXmacs/doc/main/styles/std/std-automatic-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/std-automatic-gly.en.tm
+share/TeXmacs/doc/main/styles/std/std-automatic-idx.en.tm
+share/TeXmacs/doc/main/styles/std/std-automatic-toc.en.tm
+share/TeXmacs/doc/main/styles/std/std-counter-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/std-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/std-list-customize.en.tm
+share/TeXmacs/doc/main/styles/std/std-list-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/std-list-export.en.tm
+share/TeXmacs/doc/main/styles/std/std-markup-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/std-math-dtd.en.tm
+share/TeXmacs/doc/main/styles/std/std-symbol-dtd.en.tm
+share/TeXmacs/doc/main/styles/style-organize.en.tm
+share/TeXmacs/doc/main/styles/styles.en.tm
 share/TeXmacs/doc/main/table/man-advanced-features.en.tm
 share/TeXmacs/doc/main/table/man-advanced-features.es.tm
 share/TeXmacs/doc/main/table/man-advanced-features.fr.tm
@@ -1151,6 +1184,7 @@ share/TeXmacs/misc/pixmaps/tm_color.xpm
 share/TeXmacs/misc/pixmaps/tm_compact.xpm
 share/TeXmacs/misc/pixmaps/tm_copy.xpm
 share/TeXmacs/misc/pixmaps/tm_cspline_mode.xpm
+share/TeXmacs/misc/pixmaps/tm_ctrl_flow.xpm
 share/TeXmacs/misc/pixmaps/tm_cut.xpm
 share/TeXmacs/misc/pixmaps/tm_ddot.xpm
 share/TeXmacs/misc/pixmaps/tm_dead.xpm
@@ -1843,6 +1877,10 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/main/text
 @dirrm share/TeXmacs/doc/main/table
 @dirrm share/TeXmacs/doc/main/styles/std-dtds
+@dirrm share/TeXmacs/doc/main/styles/std
+@dirrm share/TeXmacs/doc/main/styles/section
+@dirrm share/TeXmacs/doc/main/styles/header
+@dirrm share/TeXmacs/doc/main/styles/env
 @dirrm share/TeXmacs/doc/main/styles
 @dirrm share/TeXmacs/doc/main/start
 @dirrm share/TeXmacs/doc/main/scheme
@@ -1861,6 +1899,7 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/main/config
 @dirrm share/TeXmacs/doc/main
 @dirrm share/TeXmacs/doc/devel/style/standard
+@dirrm share/TeXmacs/doc/devel/style/presentation
 @dirrm share/TeXmacs/doc/devel/style/keyboard
 @dirrm share/TeXmacs/doc/devel/style/design
 @dirrm share/TeXmacs/doc/devel/style/customize
