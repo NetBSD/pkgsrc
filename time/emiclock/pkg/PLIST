@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
+bin/emiclock
+lib/X11/EmiClock/myu.au
+lib/X11/app-defaults/EmiClock
+lib/X11/ja_JP.eucJP/app-defaults/EmiClock
+man/cat1/emiclock.0
+@dirrm lib/X11/EmiClock

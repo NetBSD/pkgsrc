@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:11 wiz Exp $
+lib/python2.0/site-packages/DateTime/mxDateTime/mxDateTime.so
+lib/python2.0/site-packages/DateTime/mxDateTime/__init__.py
+lib/python2.0/site-packages/DateTime/mxDateTime/__init__.pyc
+lib/python2.0/site-packages/DateTime/mxDateTime/__init__.pyo
+lib/python2.0/site-packages/DateTime/ARPA.py
+lib/python2.0/site-packages/DateTime/ARPA.pyc
+lib/python2.0/site-packages/DateTime/ARPA.pyo
+lib/python2.0/site-packages/DateTime/DateTime.py
+lib/python2.0/site-packages/DateTime/DateTime.pyc
+lib/python2.0/site-packages/DateTime/DateTime.pyo
+lib/python2.0/site-packages/DateTime/Feasts.py
+lib/python2.0/site-packages/DateTime/Feasts.pyc
+lib/python2.0/site-packages/DateTime/Feasts.pyo
+lib/python2.0/site-packages/DateTime/ISO.py
+lib/python2.0/site-packages/DateTime/ISO.pyc
+lib/python2.0/site-packages/DateTime/ISO.pyo
+lib/python2.0/site-packages/DateTime/LazyModule.py
+lib/python2.0/site-packages/DateTime/LazyModule.pyc
+lib/python2.0/site-packages/DateTime/LazyModule.pyo
+lib/python2.0/site-packages/DateTime/Locale.py
+lib/python2.0/site-packages/DateTime/Locale.pyc
+lib/python2.0/site-packages/DateTime/Locale.pyo
+lib/python2.0/site-packages/DateTime/NIST.py
+lib/python2.0/site-packages/DateTime/NIST.pyc
+lib/python2.0/site-packages/DateTime/NIST.pyo
+lib/python2.0/site-packages/DateTime/ODMG.py
+lib/python2.0/site-packages/DateTime/ODMG.pyc
+lib/python2.0/site-packages/DateTime/ODMG.pyo
+lib/python2.0/site-packages/DateTime/Parser.py
+lib/python2.0/site-packages/DateTime/Parser.pyc
+lib/python2.0/site-packages/DateTime/Parser.pyo
+lib/python2.0/site-packages/DateTime/Timezone.py
+lib/python2.0/site-packages/DateTime/Timezone.pyc
+lib/python2.0/site-packages/DateTime/Timezone.pyo
+lib/python2.0/site-packages/DateTime/__init__.py
+lib/python2.0/site-packages/DateTime/__init__.pyc
+lib/python2.0/site-packages/DateTime/__init__.pyo
+lib/python2.0/site-packages/DateTime/timegm.py
+lib/python2.0/site-packages/DateTime/timegm.pyc
+lib/python2.0/site-packages/DateTime/timegm.pyo
+share/doc/html/py-mxDateTime/mxDateTime.html
+share/doc/html/py-mxDateTime/mxDateTime-History.html
+@dirrm lib/python2.0/site-packages/DateTime/mxDateTime
+@dirrm lib/python2.0/site-packages/DateTime
+@dirrm share/doc/html/py-mxDateTime
