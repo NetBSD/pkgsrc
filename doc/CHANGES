@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1921 2003/04/12 17:23:06 zuntum Exp $
+$NetBSD: CHANGES,v 1.1922 2003/04/13 01:33:44 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1574,3 +1574,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-HTML-Parser to 3.27 [martti 2003-04-12]
 	Updated p5-Storable to 2.06 [martti 2003-04-12]
 	Added criticalmass-0.97 [zuntum 2003-04-12]
+	Updated eb to 3.3.2 [salo 2003-04-13]
+	Updated eblook to 1.5.1nb1 [salo 2003-04-13]
+	Updated ndtpd tp 3.1.4nb1 [salo 2003-04-13]
