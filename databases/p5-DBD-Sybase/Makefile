@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/07/02 23:57:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/20 01:06:22 jlam Exp $
 #
 
 DISTNAME=		DBD-Sybase-0.94
@@ -13,11 +13,19 @@ COMMENT=		perl DBI/DBD driver for Sybase/MS-SQL databases
 
 DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/Sybase/.packlist
 
 LDFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.freetds}/freetds/lib
-MAKE_ENV+=		SYBASE=${BUILDLINK_DIR}/freetds
+MAKE_ENV+=		SYBASE=${BUILDLINK_PREFIX.freetds}/freetds
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OBJECT_FMT} == "a.out"
+MAKE_FLAGS+=		OTHERLDFLAGS="${LDFLAGS:S/-Wl,//g}"
+.else
+MAKE_FLAGS+=		OTHERLDFLAGS="${LDFLAGS}"
+.endif
 
 do-configure:
 	@cd ${WRKSRC}; \
@@ -27,6 +35,8 @@ do-configure:
 		${ECHO_MSG} "undef" ; \
 	) | ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
-.include "../../databases/freetds/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
+.include "../../databases/freetds/buildlink2.mk"
+.include "../../databases/p5-DBI/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
