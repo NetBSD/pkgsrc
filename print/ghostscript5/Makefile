@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1999/03/16 15:30:58 agc Exp $
+# $NetBSD: Makefile,v 1.35 1999/03/22 09:38:27 agc Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -46,12 +46,6 @@ HP850_DRV=	hp8xxs13.zip
 
 # PostScript source to decode encrypted PDF files
 PDF_SEC=	pdf_sec.ps
-
-.ifdef WRKOBJDIR
-BUILD_ROOT=	${WRKOBJDIR}
-.else
-BUILD_ROOT=	${PKGSRCDIR}
-.endif
 
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 PAPERSIZE_DEF=	-DA4
