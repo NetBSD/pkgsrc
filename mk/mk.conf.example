@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.216 2001/06/04 18:33:15 jtb Exp $
+# $NetBSD: mk.conf.example,v 1.217 2001/06/04 19:40:52 jtb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -185,6 +185,9 @@
 #ACCEPTABLE_LICENSES+=	emiclock-license
 # Enable it if you accept the license terms for emiclock
 # and would like to build it.  see pkgsrc/time/emiclock.
+#ACCEPTABLE_LICENSES+=	nntpclnt-license
+# Enable it if you accept the license terms for nntpclnt
+# and would like to build nntpclnt.  see pkgsrc/time/nntpclnt.
 
 #SPECIFIC_PKGS=
 # Don't use the default of all packages (from the top-level of the
