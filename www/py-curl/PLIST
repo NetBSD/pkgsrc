@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/14 18:03:53 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/08/21 11:31:41 recht Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
@@ -9,7 +9,6 @@ share/doc/pycurl${PYVERSSUFFIX}/INSTALL
 share/doc/pycurl${PYVERSSUFFIX}/README
 share/doc/pycurl${PYVERSSUFFIX}/TODO
 share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
-share/doc/pycurl${PYVERSSUFFIX}/examples/gtkhtml_demo.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/linksys.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/retriever-multi.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/retriever.py
@@ -35,6 +34,7 @@ share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi6.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi_vs_thread.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_post.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_post2.py
+share/doc/pycurl${PYVERSSUFFIX}/tests/test_post3.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_stringio.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_xmlrpc.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/util.py
