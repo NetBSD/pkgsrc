@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 1998/12/03 15:08:53 frueauf Exp $
+
+--- rcio.c.orig	Mon Oct 26 05:35:01 1998
++++ rcio.c	Mon Nov 30 16:25:37 1998
+@@ -155,13 +155,13 @@
+ {
+ 	char emsg[MSGLEN_ERR+1];
+ 
+-#ifndef SUNOS5x
++#ifdef HAVE_STRERROR
++	sprintf(emsg, "xISP: %s: %s\n", msg, strerror(errno));
++#else
+ 	if (errno < sys_nerr)
+ 		sprintf(emsg, "xISP: %s: %s\n", msg, sys_errlist[errno]);
+ 	else
+ 		sprintf(emsg, "xISP: %s: error #%d\n", msg, errno);
+-#else
+-	sprintf(emsg, "xISP: %s: %s\n", msg, strerror(errno));
+ #endif
+ 	fputs(emsg, stderr);
+ 	exit(1);
