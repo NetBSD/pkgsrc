@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/23 22:02:52 jmmv Exp $
 #
 
-DISTNAME=	kopete-0.7.4
+DISTNAME=	kopete-0.8beta2
 CATEGORIES=	chat kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kopete/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,9 @@ CONFIGURE_ENV+=		ac_cv_have_libpsi="no"
 .if !exists(${X11BASE}/lib/libXss.so)
 CONFIGURE_ENV+=		ac_cv_lib_Xss_XScreenSaverQueryInfo="no"
 .endif
+
+post-extract:
+	${RM} -rf ${WRKSRC}/doc
 
 .include "../../audio/arts/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
