@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2003/07/17 21:46:34 grant Exp $
+# $NetBSD: Makefile,v 1.99 2003/07/21 16:56:47 martti Exp $
 
 DISTNAME=		mutt-1.4.1i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -12,7 +12,7 @@ MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 
 MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.mutt.org/
-COMMENT=		text-based MIME mail client with PGP support
+COMMENT=		Text-based MIME mail client with PGP support
 
 BUILD_USES_MSGFMT=	yes
 
