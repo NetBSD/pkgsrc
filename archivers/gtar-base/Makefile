@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/04/05 18:38:43 reed Exp $
+# $NetBSD: Makefile,v 1.35 2004/05/18 11:58:04 recht Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -14,6 +14,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
 COMMENT=	The GNU tape archiver with remote magnetic tape support
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK3=		YES
@@ -50,6 +51,7 @@ post-patch:
 	@${TOUCH} ${WRKSRC}/po/fr.po
 
 post-install:
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
 		${PREFIX}/man/man1/${GTAR_PROGRAM_PREFIX}tar.1
 .if ${GTAR_PROGRAM_PREFIX} != "g"
