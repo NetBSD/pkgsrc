@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2003/12/17 16:48:27 taca Exp $
+$NetBSD: distinfo,v 1.45 2003/12/25 16:28:14 taca Exp $
 
 SHA1 (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 470a2697625cf6edb83ad6fe59af2e147f557e24
 Size (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 1036704 bytes
@@ -50,6 +50,22 @@ SHA1 (squid-2.5.4/squid-2.5.STABLE4-redirector_access.patch) = ffb18533c312f35b8
 Size (squid-2.5.4/squid-2.5.STABLE4-redirector_access.patch) = 3498 bytes
 SHA1 (squid-2.5.4/squid-2.5.STABLE4-pconn-lifo.patch) = 0cb1ea50d42a08c4e852367924ad8cb0f8ee6b6e
 Size (squid-2.5.4/squid-2.5.STABLE4-pconn-lifo.patch) = 1350 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-cache_peer_maxconn.patch) = 95d0c5d7f279a8afbbfd20706ba42ce1d22678a7
+Size (squid-2.5.4/squid-2.5.STABLE4-cache_peer_maxconn.patch) = 3603 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-pid_filename_none.patch) = b5cd27fb366d368e47d61cd626723aa6e8796484
+Size (squid-2.5.4/squid-2.5.STABLE4-pid_filename_none.patch) = 508 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-dns_namelength.patch) = 9935272c3ce447cd62e58d699623426a0872cc1e
+Size (squid-2.5.4/squid-2.5.STABLE4-dns_namelength.patch) = 603 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-urllogin_acl.patch) = 727f701c439a1c56520dbdbbde0efb047497a921
+Size (squid-2.5.4/squid-2.5.STABLE4-urllogin_acl.patch) = 3064 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-russian.patch) = c0f2803e535050dc7e0757761ac566c3c653f815
+Size (squid-2.5.4/squid-2.5.STABLE4-russian.patch) = 20731 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-redirlog.patch) = 6904429ce0bdb169dd0dbea58feefcf95323338a
+Size (squid-2.5.4/squid-2.5.STABLE4-redirlog.patch) = 762 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-pinger.patch) = a11373dc135f03c7b9a6f96400da10cb0d69c772
+Size (squid-2.5.4/squid-2.5.STABLE4-pinger.patch) = 738 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-partial_reload.patch) = 8d7d1bba09ba674e41f635e80c51bd7d78c105c7
+Size (squid-2.5.4/squid-2.5.STABLE4-partial_reload.patch) = 751 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
