@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2004/08/30 06:52:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/21 10:16:05 xtraeme Exp $
 
-DISTNAME=		clamsmtp-0.7
+DISTNAME=		clamsmtp-0.8
 CATEGORIES=		mail
 MASTER_SITES=		http://memberwebs.com/nielsen/software/clamsmtp/
 
@@ -20,6 +20,15 @@ FILES_SUBST+=		CLAMAV_USER=${CLAMAV_USER}
 
 # Doesn't work with GNU pth (missing required mutex features)
 PTHREAD_OPTS+=		require native
+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=		${EGDIR}/clamsmtpd.conf \
+			${PKG_SYSCONFDIR}/clamsmtpd.conf
+
+INSTALLATION_DIRS=	share/examples/${PKGBASE}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/clamsmtpd.conf ${EGDIR}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
