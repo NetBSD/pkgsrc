@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:07:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:10:58 agc Exp $
 
-MD5 (jdb-1.7.tar.gz) = d59f6f6c8d0d6e752ebf55f2f9422e65
+SHA1 (jdb-1.7.tar.gz) = 8c3e45ced221f0337f205cc5dec071ecf80ce176
+Size (jdb-1.7.tar.gz) = 109011 bytes
