@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1271 2004/01/04 03:11:22 reed Exp $
+$NetBSD: TODO,v 1.1272 2004/01/04 17:03:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -140,10 +140,11 @@ Suggested package updates
 	o cyrus-imapd21-2.1.16
 	o cyrus-sasl2-2.1.17
 	o dante-1.1.14
-	o dctc-0.85.7
+	o dctc-0.85.8
 	o ddd-3.3.8
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
+	o dvipdfmx-0.0.0.20031116 [pkg/23961]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
@@ -206,6 +207,7 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
+	o libcaca-0.6
 	o libcdaudio-0.99.9 [pkg/23930]
 	o libcroco-0.4.0 [pkg/23793]
 	o libmpeg3-1.5.3
@@ -251,6 +253,7 @@ Suggested package updates
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
+	o p5-HTML-FillInForm-1.03 [pkg/23976]
 	o p5-XML-Xerces-2.3.0-4 [pkg/23862]
 	o pdmenu-1.2.81
 	o plib-1.7.0
@@ -296,6 +299,7 @@ Suggested package updates
 	o tcpreplay-1.4.6
 	o tct-1.12
 	o teapop-0.3.8
+	o tkcvs-7.2
 	o tkman-2.2
 	o top-3.5b12.10
 	o ttf2pt1-3.4.3
