@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 04:16:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/03 21:50:41 snj Exp $
 
 DISTNAME=		advi-1.4.0
 PKGREVISION=		3
@@ -11,7 +11,7 @@ COMMENT=		Active-DVI Presenter
 
 DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
@@ -36,14 +36,14 @@ post-install:
 	cd ${PREFIX}/share/doc/html/advi && ${LN} -sf ../../advi/manual.* .
 	${INSTALL_MAN} ${WRKSRC}/doc/advi.1 ${PREFIX}/man/man1
 
-.include "../../lang/ocaml/buildlink2.mk"
-.include "../../graphics/camlimages/buildlink2.mk"
-.include "../../x11/lablgtk/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../lang/ocaml/buildlink3.mk"
+.include "../../graphics/camlimages/buildlink3.mk"
+.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
