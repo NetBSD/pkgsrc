@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/24 10:12:32 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/10/29 11:40:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -12,7 +12,7 @@
 #    SUBDIR += mei
 #    SUBDIR += mkisofs
 #    SUBDIR += pib
-#    SUBDIR += rtty
+    SUBDIR += rtty
 #    SUBDIR += setquota
 #    SUBDIR += skill
 #    SUBDIR += socket
