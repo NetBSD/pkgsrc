@@ -1,22 +1,28 @@
 #!/bin/sh
 #
 
-if [ x"$2" != xPOST-INSTALL ]
+if [ x"$2" = xPOST-INSTALL ]
 then
-	exit
+	if [ ! -d /var/spool/fax ]
+	then
+		echo "Creating fax spool directories..."
+		${MKDIR} /var/spool/fax
+		${CHMOD} 755 /var/spool/fax
+	fi
+	if [ ! -d /var/spool/fax/incoming ]
+	then
+		${MKDIR} /var/spool/fax/incoming
+		${CHMOD} 755 /var/spool/fax/incoming
+	fi
+	if [ ! -d /var/spool/fax/outgoing ]
+	then
+		${MKDIR} /var/spool/fax/outgoing
+		${CHMOD} 1777 /var/spool/fax/outgoing
+	fi
+	if [ ! -d /var/spool/fax/outgoing/locks ]
+	then
+		${MKDIR} /var/spool/fax/outgoing/locks
+		${CHMOD} 777 /var/spool/fax/outgoing/locks
+	fi
 fi
 
-${INSTALL_DATA_DIR} ${MGETTY_CONFDIR}
-(cd ${PREFIX}/share/examples/mgetty+sendfax;
-	${PAX} -r -w -pe -k * ${MGETTY_CONFDIR})
-
-test -d /var/spool ||  \
-	( mkdir /var/spool ; chmod 755 /var/spool )
-test -d /var/spool/fax ||  \
-	( mkdir /var/spool/fax ; chmod 755 /var/spool/fax )
-test -d /var/spool/fax/incoming ||  \
-	( mkdir /var/spool/fax/incoming ; chmod 755 /var/spool/fax/incoming )
-test -d /var/spool/fax/outgoing ||  \
-	( mkdir /var/spool/fax/outgoing ; chmod 1777 /var/spool/fax/outgoing )
-test -d /var/spool/fax/outgoing/locks ||  \
-	( mkdir /var/spool/fax/outgoing/locks ; chmod 777 /var/spool/fax/outgoing/locks )
