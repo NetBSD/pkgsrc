@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/26 16:29:56 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/26 16:42:19 jlam Exp $
 #
 
 DISTNAME=	gkrellm-1.2.4
@@ -10,11 +10,11 @@ MAINTAINER=	anthony.mallet@ficus.yi.org
 HOMEPAGE=	http://gkrellm.net/
 COMMENT=	GTK based system monitor
 
-USE_BUILDLINK_ONLY=	yes
-USE_GMAKE=	yes
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
 
-ALL_TARGET=	netbsd
-INSTALL_TARGET=	install_netbsd
+ALL_TARGET=		netbsd
+INSTALL_TARGET=		install_netbsd
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm
@@ -23,8 +23,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm/themes
 
-.include "../../devel/pth/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
