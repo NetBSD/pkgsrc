@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9101 2005/02/10 10:18:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.9102 2005/02/10 11:31:15 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -832,3 +832,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added courier-authlib-0.53 [jlam 2005-02-10]
 	Updated cue to 20050131 [itojun 2005-02-10]
 	Updated pkg_alternatives to 1.3 [jmmv 2005-02-10]
+	Updated docbook-xsl to 1.68.0 [jmmv 2005-02-10]
