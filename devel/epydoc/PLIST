@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/03/28 21:27:58 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/13 06:05:47 minskim Exp $
 bin/epydoc
 bin/epydocgui
 ${PYSITELIB}/epydoc/__init__.py
@@ -16,6 +16,9 @@ ${PYSITELIB}/epydoc/colorize.pyo
 ${PYSITELIB}/epydoc/css.py
 ${PYSITELIB}/epydoc/css.pyc
 ${PYSITELIB}/epydoc/css.pyo
+${PYSITELIB}/epydoc/foog.py
+${PYSITELIB}/epydoc/foog.pyc
+${PYSITELIB}/epydoc/foog.pyo
 ${PYSITELIB}/epydoc/gui.py
 ${PYSITELIB}/epydoc/gui.pyc
 ${PYSITELIB}/epydoc/gui.pyo
@@ -80,6 +83,8 @@ share/doc/epydoc/api/private/epydoc.cli._Progress-class.html
 share/doc/epydoc/api/private/epydoc.colorize-module.html
 share/doc/epydoc/api/private/epydoc.css
 share/doc/epydoc/api/private/epydoc.css-module.html
+share/doc/epydoc/api/private/epydoc.foog.Foo-class.html
+share/doc/epydoc/api/private/epydoc.foog-module.html
 share/doc/epydoc/api/private/epydoc.gui-module.html
 share/doc/epydoc/api/private/epydoc.gui.EpydocGUI-class.html
 share/doc/epydoc/api/private/epydoc.gui._PipeIO-class.html
@@ -152,6 +157,7 @@ share/doc/epydoc/api/private/toc-epydoc.checker-module.html
 share/doc/epydoc/api/private/toc-epydoc.cli-module.html
 share/doc/epydoc/api/private/toc-epydoc.colorize-module.html
 share/doc/epydoc/api/private/toc-epydoc.css-module.html
+share/doc/epydoc/api/private/toc-epydoc.foog-module.html
 share/doc/epydoc/api/private/toc-epydoc.gui-module.html
 share/doc/epydoc/api/private/toc-epydoc.help-module.html
 share/doc/epydoc/api/private/toc-epydoc.html-module.html
@@ -187,6 +193,8 @@ share/doc/epydoc/api/public/epydoc.cli-module.html
 share/doc/epydoc/api/public/epydoc.colorize-module.html
 share/doc/epydoc/api/public/epydoc.css
 share/doc/epydoc/api/public/epydoc.css-module.html
+share/doc/epydoc/api/public/epydoc.foog.Foo-class.html
+share/doc/epydoc/api/public/epydoc.foog-module.html
 share/doc/epydoc/api/public/epydoc.gui-module.html
 share/doc/epydoc/api/public/epydoc.gui.EpydocGUI-class.html
 share/doc/epydoc/api/public/epydoc.help-module.html
@@ -249,6 +257,7 @@ share/doc/epydoc/api/public/toc-epydoc.checker-module.html
 share/doc/epydoc/api/public/toc-epydoc.cli-module.html
 share/doc/epydoc/api/public/toc-epydoc.colorize-module.html
 share/doc/epydoc/api/public/toc-epydoc.css-module.html
+share/doc/epydoc/api/public/toc-epydoc.foog-module.html
 share/doc/epydoc/api/public/toc-epydoc.gui-module.html
 share/doc/epydoc/api/public/toc-epydoc.help-module.html
 share/doc/epydoc/api/public/toc-epydoc.html-module.html
