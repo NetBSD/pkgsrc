@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/02/18 17:51:01 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/05/09 18:32:57 hubertf Exp $
 etc/rc.d/pgsql.sh
 pgsql/.profile
 pgsql/bin/cleardbdir
@@ -75,7 +75,7 @@ pgsql/include/c.h
 pgsql/include/config.h
 pgsql/include/fmgr.h
 pgsql/include/lib/dllist.h
-@unexec rm -f pgsql/include/libpgtcl.h
+@unexec rm -f %D/pgsql/include/libpgtcl.h
 pgsql/include/libpq-fe.h
 pgsql/include/libpq/libpq-fs.h
 pgsql/include/libpq/pqcomm.h
@@ -86,9 +86,9 @@ pgsql/include/utils/elog.h
 pgsql/include/utils/geo_decls.h
 pgsql/include/utils/palloc.h
 pgsql/lib/global1.bki.source
-@unexec rm -f pgsql/lib/libpgtcl.a
-@unexec rm -f pgsql/lib/libpgtcl.so
-@unexec rm -f pgsql/lib/libpgtcl.so.1.0
+@unexec rm -f %D/pgsql/lib/libpgtcl.a
+@unexec rm -f %D/pgsql/lib/libpgtcl.so
+@unexec rm -f %D/pgsql/lib/libpgtcl.so.1.0
 pgsql/lib/libpq.a
 pgsql/lib/libpq.so
 pgsql/lib/libpq.so.1.0
