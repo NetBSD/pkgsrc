@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2001/12/11 15:43:15 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/24 01:18:26 wiz Exp $
 
 --- Imakefile.orig	Thu Aug  3 23:19:36 1995
 +++ Imakefile
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.2 2001/12/11 15:43:15 jlam Exp $
          DO_XPMS = -DDO_XPMS
 -        XPM_INC = -I/usr/include/X11
 -        XPM_LIB = -L$(LIBDIR)/xpm -lXpm
-+        XPM_INC = -I${BUILDLINK_DIR}/include/X11
++        XPM_INC = -I${X11BASE}/include/X11
 +        XPM_LIB = -lXpm
  
  
