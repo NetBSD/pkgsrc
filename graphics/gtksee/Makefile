@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:52 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/29 11:07:59 wiz Exp $
 #
 
 DISTNAME=		gtksee-0.5.2
@@ -6,12 +6,11 @@ PKGREVISION=		2
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://download.berlios.de/gtksee/
 
-MAINTAINER=		drue@users.sf.net
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://developer.berlios.de/projects/gtksee/
 COMMENT=		Gtk-based image viewing and cataloging program
 
 BUILD_USES_MSGFMT=	YES
-BUILDLINK_DEPENDS.gtk?=	gtk+>=1.2.10
 
 GNU_CONFIGURE=		YES
 USE_X11=		YES
