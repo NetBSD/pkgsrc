@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/25 17:02:29 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/25 17:12:51 wiz Exp $
 #
 
 .if !defined(NBITOOLS_BUILDLINK2_MK)
@@ -7,6 +7,7 @@ NBITOOLS_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=		nbitools
 BUILDLINK_DEPENDS.nbitools?=	nbitools>=6.3
 BUILDLINK_PKGSRCDIR.nbitools?=	../../devel/nbitools
+BUILDLINK_DEPMETHOD.nbitools?=	build
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.nbitools=nbitools
 BUILDLINK_PREFIX.nbitools_DEFAULT=	${LOCALBASE}
