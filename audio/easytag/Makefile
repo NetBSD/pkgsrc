@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2000/11/30 00:03:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/02 17:46:25 hubertf Exp $
 #
 
 DISTNAME=	easytag-0.11
 CATEGORIES=	audio
-MASTER_SITES=	ftp://easytag.sourceforge.net/pub/easytag/devel/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=easytag/}
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://easytag.sourceforge.net/
