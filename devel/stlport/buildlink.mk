@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/09/26 06:02:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/12/15 11:51:01 martti Exp $
 #
 # This Makefile fragment is included by packages that use stlport.
 #
@@ -24,7 +24,7 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.stlport=stlport
 BUILDLINK_PREFIX.stlport_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.stlport=	include/stlport/*
 BUILDLINK_FILES.stlport+=	include/stlport/*/*
-BUILDLINK_FILES.stlport+=	lib/stlport*
+BUILDLINK_FILES.stlport+=	lib/libstlport*
 
 BUILDLINK_TARGETS.stlport=	stlport-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.stlport}
