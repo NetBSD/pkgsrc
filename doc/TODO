@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1708 2004/05/05 14:37:24 wiz Exp $
+$NetBSD: TODO,v 1.1709 2004/05/05 15:16:35 cjep Exp $
 
 Suggested new packages
 ======================
@@ -57,9 +57,6 @@ Suggested new packages
 	SquirrelMail has a plugin feature and several plugins exist.
 	  (See mail/sq-squirrelspell for an example.)
 	http://www.squirrelmail.org/index.php3?page=15
-
-	tme, Matt Fredette's Sun 2 emulator.
-	http://theory.lcs.mit.edu/~fredette/tme/index.html
 
 	tutos [wip/tutos]
 	the ultimate team organization software
