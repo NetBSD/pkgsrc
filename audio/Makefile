@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2003/07/12 19:40:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.177 2003/07/13 08:40:28 mrg Exp $
 #
 
 COMMENT=	Audio tools
@@ -183,6 +183,7 @@ SUBDIR+=	xmmix
 SUBDIR+=	xmms
 SUBDIR+=	xmms-bezier
 SUBDIR+=	xmms-bump-scope
+SUBDIR+=	xmms-blursk
 SUBDIR+=	xmms-crossfade
 SUBDIR+=	xmms-dflowers
 SUBDIR+=	xmms-dscope
