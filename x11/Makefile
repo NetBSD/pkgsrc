@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2001/04/16 20:23:14 zuntum Exp $
+# $NetBSD: Makefile,v 1.219 2001/04/27 13:35:16 zuntum Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -35,6 +35,7 @@ SUBDIR+=	gtk10
 SUBDIR+=	gtkglarea
 SUBDIR+=	gtkstep
 SUBDIR+=	hanterm
+SUBDIR+=	imwheel
 SUBDIR+=	kde
 SUBDIR+=	kde2
 SUBDIR+=	kdebase
