@@ -1,7 +1,7 @@
 WMI is a new window manager for X11, which combines the best features of
 LarsWM, Ion, TrsWM, evilwm and ratpoison into one window manager.
 
-WMI is new: it is developed from scratch wit h C++ without any ancient code
+WMI is new: it is developed from scratch with C++ without any ancient code
 and design dependencies to antiquated window managers.
 
 WMI is minimalist: it has no build- or runtime dependencies except the C++
