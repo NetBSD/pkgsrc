@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.19 2003/03/10 09:19:07 jdolecek Exp $
+# $NetBSD: pyversion.mk,v 1.20 2003/05/07 20:08:18 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -102,7 +102,11 @@ PYPACKAGE=	python22-pth
 PYVERSSUFFIX=	2p2
 PYPKGPREFIX=	py22pth
 .  if defined(USE_BUILDLINK2)
-.    include "../../devel/pth/buildlink2.mk"
+PTHREAD_OPTS=	require
+.    include "../../mk/pthread.buildlink2.mk"
+.    if ${PTHREAD_TYPE} == "pth"
+.        include "../../devel/pth/buildlink2.mk"
+.    endif
 .  endif
 .elif ${_PYTHON_VERSION} == "21"
 PYPKGSRCDIR=	../../lang/python21
@@ -117,7 +121,11 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21-pth}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2p1
 PYPKGPREFIX=	py21pth
 .  if defined(USE_BUILDLINK2)
-.    include "../../devel/pth/buildlink2.mk"
+PTHREAD_OPTS=	require
+.    include "../../mk/pthread.buildlink2.mk"
+.    if ${PTHREAD_TYPE} == "pth"
+.        include "../../devel/pth/buildlink2.mk"
+.    endif
 .  endif
 .elif ${_PYTHON_VERSION} == "20"
 PYPKGSRCDIR=	../../lang/python20
