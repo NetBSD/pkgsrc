@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.345 1999/09/27 17:08:43 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.346 1999/09/28 10:03:16 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2254,6 +2254,11 @@ show-pkgtools-version:
 	@${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
 .endif
 .endif
+
+# convenience target, to display make variables from command line
+# i.e. "make show-var VARNAME=var", will print var's value
+show-var:
+	${ECHO} "${${VARNAME}}"
 
 .if !target(print-depends-list)
 print-depends-list:
