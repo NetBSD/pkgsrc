@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/17 11:10:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/19 21:53:06 xtraeme Exp $
 #
 
 DISTNAME=	XFree86-dirs-1.0
@@ -16,7 +16,6 @@ NO_CHECKSUM=		# defined
 NO_CONFIGURE=		# defined
 NO_EXTRACT=		# defined
 NO_XFREE86_TARGETS=	# defined
-USE_LANGUAGES=		# empty
 USE_PKGINSTALL=		yes
 WRKSRC=			${WRKDIR}
 
