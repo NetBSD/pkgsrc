@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2001/06/26 11:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2001/08/19 11:45:52 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
-DISTNAME=	zebra-0.91a
+DISTNAME=	zebra-0.92
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.zebra.org/pub/zebra/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} zebra-0.91a.info.tar.gz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.zebra.org/
