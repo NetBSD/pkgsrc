@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.dynamic,v 1.4 2001/09/23 21:20:35 tron Exp $
-lib/zsh/libzsh-${PKGVERSION}.so
+@comment $NetBSD: PLIST.dynamic,v 1.5 2001/09/23 21:24:00 tron Exp $
 lib/zsh/${PKGVERSION}/zsh/rlimits.so
 lib/zsh/${PKGVERSION}/zsh/sched.so
 lib/zsh/${PKGVERSION}/zsh/cap.so

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/09/23 21:20:35 tron Exp $
+# $NetBSD: Makefile,v 1.27 2001/09/23 21:23:59 tron Exp $
 
 DISTNAME=       zsh-4.0.2
 CATEGORIES=	shells
@@ -23,7 +23,11 @@ PLIST_SUBST+=	PKGVERSION="${PKGVERSION}"
 CONFIGURE_ARGS+=--disable-dynamic
 LDFLAGS+=	-static
 .else
+.if ${OPSYS} == "SunOS"
 PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
+.else
+PLIST_SRC=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
+.endif
 .endif
 
 post-install:
