@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/06/04 23:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/06/28 19:13:24 jlam Exp $
 #
 
 DISTNAME=	gnupg-1.0.6
@@ -12,11 +12,12 @@ HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	Privacy Guard, a public-Key encryption and digital signature utility
 
 BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK_ONLY=	yes
 
 CRYPTO=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_LIBINTL=	yes
+#USE_LIBINTL=	yes
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -47,9 +48,6 @@ post-install:
 PLIST_SUBST+=	IDEA="@comment "
 .endif
 
-.if ${OPSYS} == "SunOS"
-DEPENDS+=	zlib-1.1.3:../../devel/zlib
-LDFLAGS+=	-L${LOCALBASE}/lib
-.endif
-
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
