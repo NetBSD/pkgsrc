@@ -1,5 +1,5 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 1998/12/03 17:22:02 tv Exp $
+$NetBSD: MESSAGE,v 1.2 1999/04/30 17:05:21 tv Exp $
 
 In order to start Apache with mod_ssl support, you need to run Apache with
 "apachectl startssl" instead of "apachectl start".  The SSL-specific
@@ -8,7 +8,7 @@ configuration parts of the default httpd.conf are bracketed by:
   <IfDefine SSL>
   </IfDefine>
 
-If you are using RSAREF, you MUST uncomment the line near the top of
+If you are using RSAREF, you MUST uncomment the line in the SSL block of
 httpd.conf which reads:
 
   #LoadFile !librsaref.so.2

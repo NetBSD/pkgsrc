@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.6 1999/04/14 18:00:48 bad Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/30 17:05:21 tv Exp $
 #
 
-DISTNAME=	mod_ssl-2.1.3-1.3.3
-PKGNAME=	ap-ssl-2.1.3
+DISTNAME=	mod_ssl-2.2.8-1.3.6
+PKGNAME=	ap-ssl-2.2.8
 CATEGORIES=	www
-MASTER_SITES=	http://www.engelschall.com/sw/mod_ssl/distrib/
+MASTER_SITES=	ftp://ftp.engelschall.com/sw/mod_ssl/
 
 MAINTAINER=	tv@netbsd.org
-HOMEPAGE=	http://www.sngelschall.com/sw/mod_ssl/
+HOMEPAGE=	http://www.engelschall.com/sw/mod_ssl/
 
-DEPENDS=	ssleay-0.9.0b:../../security/ssleay \
-		apache-1.3.3.2:../../www/apache
+DEPENDS=	openssl-0.9.2b:../../security/openssl \
+		apache-1.3.6p0:../../www/apache
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
@@ -30,7 +30,7 @@ fetch-depends:
 .endif
 
 LDFLAGS+=	-L${PREFIX}/lib -lcrypto -lssl
-CPPFLAGS+=	-I${PREFIX}/include/ssleay
+CPPFLAGS+=	-I${PREFIX}/include/openssl
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 LDFLAGS+=	-lrsaref
 .endif
@@ -39,9 +39,9 @@ LDFLAGS+=	-lrsaref
 # to get all the appropriate config information and compile with apxs.
 do-build:
 	@cd ${WRKSRC}/pkg.sslmod && ${PREFIX}/sbin/apxs -c -o mod_ssl.so \
-		${CPPFLAGS} -DSSL_COMPAT -DMOD_SSL_VERSION=\\\"2.1.2\\\" \
+		${CPPFLAGS} -DSSL_COMPAT -DMOD_SSL_VERSION=\\\"2.2.8\\\" \
 		-DSSL_PRODUCT_NAME=\\\"mod_ssl\\\" \
-		-DSSL_PRODUCT_VERSION=\\\"2.1.2\\\" *.c
+		-DSSL_PRODUCT_VERSION=\\\"2.2.8\\\" *.c
 	cd ${WRKSRC}/pkg.sslsup && ${LINK.c} -o ca-fix ca-fix.c
 
 do-install:
@@ -49,7 +49,10 @@ do-install:
 	@cd ${WRKSRC}/pkg.sslmod && ${PREFIX}/sbin/apxs -i mod_ssl.so
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl
 	cd ${WRKSRC}/pkg.ssldoc && \
-		${INSTALL_DATA} *.html *.gif ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl/
+		${INSTALL_DATA} *.html *.gif *.jpg ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mod_ssl
+	cd ${WRKSRC}/pkg.contrib && \
+		${INSTALL_SCRIPT} *.sh *.cgi ${PREFIX}/share/mod_ssl/
 	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/Makefile ${WRKSRC}/pkg.sslcfg/README.CRT \
 		${WRKSRC}/pkg.sslcfg/*.crt ${PREFIX}/etc/httpd/ssl.crt/
 	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.CSR \

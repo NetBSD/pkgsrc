@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/02/20 22:48:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 1999/04/30 17:05:19 tv Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -8,11 +8,11 @@
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 #
 
-DISTNAME=		apache_1.3.3
-PKGNAME=		apache-1.3.3.2
+DISTNAME=		apache_1.3.6
+PKGNAME=		apache-1.3.6p0
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
-			http://www.engelschall.com/sw/mod_ssl/distrib/ \
+			ftp://ftp.engelschall.com/sw/mod_ssl/ \
 			http://www.netbsd.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${SSL_DISTNAME}${EXTRACT_SUFX} \
@@ -23,7 +23,7 @@ HOMEPAGE=		http://www.apache.org/
 
 CONFLICTS=		apache-*modssl-*
 
-SSL_DISTNAME=		mod_ssl-2.1.3-1.3.3
+SSL_DISTNAME=		mod_ssl-2.2.8-1.3.6
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		YES
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
 			--logfiledir=/var/log/httpd --sysconfdir=${PREFIX}/etc/httpd \
 			--proxycachedir=/var/spool/httpd/proxy \
 			--includedir=${PREFIX}/include/httpd \
+			--sbindir=${PREFIX}/sbin \
 			--enable-rule=EAPI --enable-module=most \
 			--disable-module=ssl --enable-module=auth_db \
 			--disable-module=auth_dbm \
@@ -40,7 +41,6 @@ CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
 .if defined(APACHE_SUEXEC)
 CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
-			--suexec-userdir=WWW \
 			--suexec-safepath='/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin'
 .endif
 
@@ -66,18 +66,21 @@ pre-patch:
 		../${SSL_DISTNAME}/pkg.sslmod/sslmod.patch \
 		../${SSL_DISTNAME}/pkg.sslsup/sslsup.patch \
 		| ${PATCH} ${PATCH_ARGS}
+	@cd ${WRKSRC} && tail +129 \
+		../${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch \
+		| ${PATCH} ${PATCH_ARGS}
+
 post-patch:
-	@cd ${WRKSRC}/src/include && \
-		${SED} -e s,@@PREFIX@@,${PREFIX}, ap_config.h >tmp && \
-		${MV} -f tmp ap_config.h
 	@find ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM}
 
 post-install:
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/httpd
+	@${MV} ${PREFIX}/lib/httpd/libproxy.so ${PREFIX}/lib/httpd/mod_proxy.so 2>/dev/null || ${MKDIR} ${PREFIX}/lib/httpd
 
 .include "../../mk/bsd.pkg.mk"
 
 .if !defined(NOPIC)
-CONFIGURE_ARGS+=	--enable-module=so
+CONFIGURE_ARGS+=	--enable-module=so --enable-shared=proxy
+.else
+CONFIGURE_ARGS+=	--disable-module=proxy
 .endif
