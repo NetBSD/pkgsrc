@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.13 2003/01/18 08:33:43 martti Exp $
+$NetBSD: patch-aa,v 1.14 2003/07/29 11:18:42 jmmv Exp $
 
---- tools/Makefile.in.orig	Sun Jan 12 15:48:39 2003
-+++ tools/Makefile.in	Sat Jan 18 08:08:05 2003
-@@ -83,7 +83,7 @@
+--- tools/Makefile.in.orig	2003-01-12 16:48:39.000000000 +0100
++++ tools/Makefile.in
+@@ -82,8 +82,8 @@ DISTCLEANFILES = stunnel.pem
+ EXTRA_DIST = ca.html ca.pl importCA.html importCA.sh 	stunnel.spec stunnel.mak stunnel.cnf
  
  
- confdir = $(sysconfdir)/stunnel
+-confdir = $(sysconfdir)/stunnel
 -conf_DATA = stunnel.conf-sample stunnel.pem
++confdir = $(datadir)/examples/stunnel
 +conf_DATA = stunnel.conf-sample
  
  docdir = $(datadir)/doc/stunnel
  examplesdir = $(docdir)/examples
-@@ -251,7 +251,7 @@
+@@ -251,7 +251,7 @@ stunnel.pem: stunnel.cnf
  		-in stunnel.pem
  
  install-data-hook:
