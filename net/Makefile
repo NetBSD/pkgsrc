@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2000/05/19 10:21:14 abs Exp $
+# $NetBSD: Makefile,v 1.125 2000/05/22 03:57:12 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -99,8 +99,9 @@
     SUBDIR += tkicb
     SUBDIR += tkirc
     SUBDIR += tn5250
-    SUBDIR+= totd
-    SUBDIR+= ttcp
+    SUBDIR += totd
+    SUBDIR += ttcp
+    SUBDIR += ttt
     SUBDIR += ucd-snmp
     SUBDIR += ucd-snmp-current
     SUBDIR += upclient
