@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/02 01:47:06 darcy Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/24 22:41:01 darcy Exp $
 
 DISTNAME=	PyGreSQL-2.4
 PKGNAME=	py-postgresql-2.4
@@ -24,8 +24,12 @@ PGUSER?=	pgsql
 PGPREFIX=	${LOCALBASE}/${PGUSER}	# PostgreSQL home directory
 
 do-configure:
-	${SED}	-e "s,@PGPREFIX@,${PGPREFIX},g" \
-		${FILESDIR}/Setup.in > ${WRKSRC}/Setup.in
+	if echo __ELF__ | ${CC} -E - | grep -q __ELF__; \
+	then ${SED}	-e "s+@PGPREFIX@+${PGPREFIX}+g;s+@WLFLAG@++g" \
+		${FILESDIR}/Setup.in > ${WRKSRC}/Setup.in; \
+	else ${SED}	-e "s+@PGPREFIX@+${PGPREFIX}+g;s+@WLFLAG@+-Wl,+" \
+		${FILESDIR}/Setup.in > ${WRKSRC}/Setup.in; \
+	fi
 	${CP} ${PYTHON_LIBDIR}/config/Makefile.pre.in ${WRKSRC}
 	cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot
 
