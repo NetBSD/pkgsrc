@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.443 2004/02/20 03:51:10 minskim Exp $
+# $NetBSD: Makefile,v 1.444 2004/02/22 12:28:48 grant Exp $
 #
 
 COMMENT=	Networking tools
@@ -256,7 +256,6 @@ SUBDIR+=	ra-pna-proxy
 SUBDIR+=	ra-rtsp-proxy
 SUBDIR+=	radiusd-cistron
 SUBDIR+=	rdesktop
-SUBDIR+=	rdesktop10
 SUBDIR+=	rdist6
 SUBDIR+=	rinetd
 SUBDIR+=	ripe-whois
