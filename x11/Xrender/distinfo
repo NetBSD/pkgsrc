@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/04/10 21:15:56 jmc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/19 17:22:15 wiz Exp $
 
-SHA1 (fcpackage.2_1.tar.gz) = b4d960ea1e2384f48aa9fed05e90ad4755da12be
-Size (fcpackage.2_1.tar.gz) = 544661 bytes
-SHA1 (patch-aa) = 72db2982e878c85f8d3a236a954bfd3de5e355e6
+SHA1 (xrender-0.8.3.tar.gz) = a99c1c395b86b2fc4a92bd6de750e1438a5f3461
+Size (xrender-0.8.3.tar.gz) = 217525 bytes
