@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/06 02:47:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
@@ -66,9 +66,19 @@ share/doc/kde/HTML/fr/artsbuilder/tools.docbook
 share/doc/kde/HTML/fr/atlantik/common
 share/doc/kde/HTML/fr/atlantik/index.cache.bz2
 share/doc/kde/HTML/fr/atlantik/index.docbook
+share/doc/kde/HTML/fr/cervisia/annotate.png
+share/doc/kde/HTML/fr/cervisia/checkout.png
+share/doc/kde/HTML/fr/cervisia/commit.png
 share/doc/kde/HTML/fr/cervisia/common
+share/doc/kde/HTML/fr/cervisia/diff.png
+share/doc/kde/HTML/fr/cervisia/history.png
+share/doc/kde/HTML/fr/cervisia/import.png
 share/doc/kde/HTML/fr/cervisia/index.cache.bz2
 share/doc/kde/HTML/fr/cervisia/index.docbook
+share/doc/kde/HTML/fr/cervisia/logtree.png
+share/doc/kde/HTML/fr/cervisia/mainview.png
+share/doc/kde/HTML/fr/cervisia/resolve.png
+share/doc/kde/HTML/fr/cervisia/updatetag.png
 share/doc/kde/HTML/fr/common/1.png
 share/doc/kde/HTML/fr/common/10.png
 share/doc/kde/HTML/fr/common/2.png
@@ -206,6 +216,12 @@ share/doc/kde/HTML/fr/kbounce/index.docbook
 share/doc/kde/HTML/fr/kbounce/jezball_corridor1.png
 share/doc/kde/HTML/fr/kbounce/jezball_corridor2.png
 share/doc/kde/HTML/fr/kbounce/jezball_newWall.png
+share/doc/kde/HTML/fr/kbruch/checked.png
+share/doc/kde/HTML/fr/kbruch/common
+share/doc/kde/HTML/fr/kbruch/gui_main.png
+share/doc/kde/HTML/fr/kbruch/index.cache.bz2
+share/doc/kde/HTML/fr/kbruch/index.docbook
+share/doc/kde/HTML/fr/kbruch/reduced.png
 share/doc/kde/HTML/fr/kbugbuster/common
 share/doc/kde/HTML/fr/kbugbuster/index.cache.bz2
 share/doc/kde/HTML/fr/kbugbuster/index.docbook
@@ -250,6 +266,9 @@ share/doc/kde/HTML/fr/kcontrol/crypto/index.docbook
 share/doc/kde/HTML/fr/kcontrol/desktop/common
 share/doc/kde/HTML/fr/kcontrol/desktop/index.cache.bz2
 share/doc/kde/HTML/fr/kcontrol/desktop/index.docbook
+share/doc/kde/HTML/fr/kcontrol/desktopbehavior/common
+share/doc/kde/HTML/fr/kcontrol/desktopbehavior/index.cache.bz2
+share/doc/kde/HTML/fr/kcontrol/desktopbehavior/index.docbook
 share/doc/kde/HTML/fr/kcontrol/ebrowsing/common
 share/doc/kde/HTML/fr/kcontrol/ebrowsing/index.cache.bz2
 share/doc/kde/HTML/fr/kcontrol/ebrowsing/index.docbook
@@ -480,6 +499,11 @@ share/doc/kde/HTML/fr/kgamma/index.docbook
 share/doc/kde/HTML/fr/kget/common
 share/doc/kde/HTML/fr/kget/index.cache.bz2
 share/doc/kde/HTML/fr/kget/index.docbook
+share/doc/kde/HTML/fr/kget/kget1.png
+share/doc/kde/HTML/fr/kget/kget2.png
+share/doc/kde/HTML/fr/kget/kget3.png
+share/doc/kde/HTML/fr/kget/kget4.png
+share/doc/kde/HTML/fr/kget/kget5.png
 share/doc/kde/HTML/fr/kghostview/common
 share/doc/kde/HTML/fr/kghostview/index.cache.bz2
 share/doc/kde/HTML/fr/kghostview/index.docbook
@@ -492,6 +516,9 @@ share/doc/kde/HTML/fr/kgoldrunner/tute008.png
 share/doc/kde/HTML/fr/kgpg/common
 share/doc/kde/HTML/fr/kgpg/index.cache.bz2
 share/doc/kde/HTML/fr/kgpg/index.docbook
+share/doc/kde/HTML/fr/kgpgcertmanager/common
+share/doc/kde/HTML/fr/kgpgcertmanager/index.cache.bz2
+share/doc/kde/HTML/fr/kgpgcertmanager/index.docbook
 share/doc/kde/HTML/fr/khangman/common
 share/doc/kde/HTML/fr/khangman/index.cache.bz2
 share/doc/kde/HTML/fr/khangman/index.docbook
@@ -1141,6 +1168,9 @@ share/doc/kde/HTML/fr/kspaceduel/kspaceduel3.png
 share/doc/kde/HTML/fr/kspell/common
 share/doc/kde/HTML/fr/kspell/index.cache.bz2
 share/doc/kde/HTML/fr/kspell/index.docbook
+share/doc/kde/HTML/fr/ksplashml/common
+share/doc/kde/HTML/fr/ksplashml/index.cache.bz2
+share/doc/kde/HTML/fr/ksplashml/index.docbook
 share/doc/kde/HTML/fr/kstars/aavso.png
 share/doc/kde/HTML/fr/kstars/ai-contents.docbook
 share/doc/kde/HTML/fr/kstars/altvstime.docbook
@@ -1866,6 +1896,7 @@ share/kde/locale/fr/LC_MESSAGES/libkonq.mo
 share/kde/locale/fr/LC_MESSAGES/libkpimexchange.mo
 share/kde/locale/fr/LC_MESSAGES/libkscan.mo
 share/kde/locale/fr/LC_MESSAGES/libkscreensaver.mo
+share/kde/locale/fr/LC_MESSAGES/libksieve.mo
 share/kde/locale/fr/LC_MESSAGES/libksirtet.mo
 share/kde/locale/fr/LC_MESSAGES/libksync.mo
 share/kde/locale/fr/LC_MESSAGES/libtaskbar.mo
@@ -1936,6 +1967,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/ksysv
 @dirrm share/doc/kde/HTML/fr/ksysguard
 @dirrm share/doc/kde/HTML/fr/kstars
+@dirrm share/doc/kde/HTML/fr/ksplashml
 @dirrm share/doc/kde/HTML/fr/kspell
 @dirrm share/doc/kde/HTML/fr/kspaceduel
 @dirrm share/doc/kde/HTML/fr/ksokoban
@@ -2040,6 +2072,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/khelpcenter/faq
 @dirrm share/doc/kde/HTML/fr/khelpcenter
 @dirrm share/doc/kde/HTML/fr/khangman
+@dirrm share/doc/kde/HTML/fr/kgpgcertmanager
 @dirrm share/doc/kde/HTML/fr/kgpg
 @dirrm share/doc/kde/HTML/fr/kgoldrunner
 @dirrm share/doc/kde/HTML/fr/kghostview
@@ -2102,6 +2135,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/kcontrol/energy
 @dirrm share/doc/kde/HTML/fr/kcontrol/email
 @dirrm share/doc/kde/HTML/fr/kcontrol/ebrowsing
+@dirrm share/doc/kde/HTML/fr/kcontrol/desktopbehavior
 @dirrm share/doc/kde/HTML/fr/kcontrol/desktop
 @dirrm share/doc/kde/HTML/fr/kcontrol/crypto
 @dirrm share/doc/kde/HTML/fr/kcontrol/cookies
@@ -2117,6 +2151,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/kcalc
 @dirrm share/doc/kde/HTML/fr/kcachegrind
 @dirrm share/doc/kde/HTML/fr/kbugbuster
+@dirrm share/doc/kde/HTML/fr/kbruch
 @dirrm share/doc/kde/HTML/fr/kbounce
 @dirrm share/doc/kde/HTML/fr/kblackbox
 @dirrm share/doc/kde/HTML/fr/kbattleship
@@ -2133,7 +2168,7 @@ share/kde/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/kaddressbook
 @dirrm share/doc/kde/HTML/fr/kaboodle
 @dirrm share/doc/kde/HTML/fr/flashkard
-@comment dirrm share/doc/kde/HTML/fr/common
+@dirrm share/doc/kde/HTML/fr/common
 @dirrm share/doc/kde/HTML/fr/cervisia
 @dirrm share/doc/kde/HTML/fr/atlantik
 @dirrm share/doc/kde/HTML/fr/artsbuilder/images
