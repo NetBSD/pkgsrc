@@ -1,5 +1,7 @@
 #!@SH@
 
+# $NetBSD: wrapper.sh,v 1.2 2005/02/04 21:35:51 adrianp Exp $
+
 BINDIR='@OCAML_PREFIX@'
 CFLAGS='@CFLAGS@'
 LDFLAGS='@LDFLAGS@'
