@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/15 21:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/16 00:05:12 jlam Exp $
 
 DISTNAME=		xpuyopuyo-0.3.1
 CATEGORIES=		games x11
@@ -14,5 +14,8 @@ DEPENDS+=		xpm-*:../../graphics/xpm
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-gnome
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/xpuyopuyo.xpm ${PREFIX}/include/X11/pixmaps
 
 .include "../../mk/bsd.pkg.mk"
