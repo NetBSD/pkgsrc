@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/03/30 16:09:56 minskim Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/04/18 04:41:12 snj Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 PKGREVISION=	1
@@ -15,7 +15,7 @@ MAINTAINER=	${ZSH_MAINTAINER}
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
