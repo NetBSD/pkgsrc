@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6043 2004/05/27 23:20:32 reed Exp $
+$NetBSD: CHANGES,v 1.6044 2004/05/28 01:11:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-icon-theme to 1.2.1nb2 [reed 2004-05-27]
 	Added gnutime-1.7 [reed 2004-05-27]
 	Updated Xft2 to 2.1.2nb2 [reed 2003-05-27]
+	Updated deliver to 2.1.14nb1 [wiz 2004-05-28]
