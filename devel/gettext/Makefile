@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/09/19 21:01:42 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/10/31 11:56:54 itojun Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -15,19 +15,5 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-included-gettext
 
 INFO_FILES=		gettext.info
-
-.include "../../mk/bsd.prefs.mk"
-
-# The install target in intl/Makefile has a comment whereby libintl.a
-# and libintl.h should not be installed on systems which have gettext()
-# function in their libc
-
-.if ${OPSYS} == "SunOS"
-PLIST_SRC=      	${WRKDIR}/PLIST-src
-
-pre-install:
-	@${SED} -e '/^include\/libintl\.h$$/d' -e '/^lib\/libintl\.a$$/d' \
-		${PKGDIR}/PLIST > ${PLIST_SRC}
-.endif # SunOS
 
 .include "../../mk/bsd.pkg.mk"
