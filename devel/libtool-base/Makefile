@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/16 20:24:25 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/18 19:13:30 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -49,8 +49,30 @@ CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 .  include "../../devel/dlcompat/buildlink3.mk"
 .endif
 
-BUILD_SHLIBTOOL?=	YES
-BUILDING_SHLIBTOOL?=	NO
+BUILD_SHLIBTOOL?=	yes
+BUILDING_SHLIBTOOL=	no
+
+.if !empty(BUILD_SHLIBTOOL:M[nN][oO])
+PLIST_SUBST+=		SHLIBTOOL="@comment"
+.else
+SHLIBTOOL_WRKDIR=	${WRKDIR}/shlibtool
+SHLIBTOOL_WRKSRC=	${WRKSRC:S/${WRKDIR}/${SHLIBTOOL_WRKDIR}/}
+SHLIBTOOL_MAKEFLAGS=	BUILDING_SHLIBTOOL=yes
+SHLIBTOOL_MAKEFLAGS+=	WRKDIR=${SHLIBTOOL_WRKDIR}
+PLIST_SUBST+=		SHLIBTOOL=
+.  if !empty(BUILDING_SHLIBTOOL:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--disable-static
+.  else
+post-configure:
+	cd ${.CURDIR} && ${MAKE} configure ${SHLIBTOOL_MAKEFLAGS}
+
+post-build:
+	cd ${.CURDIR} && ${MAKE} build ${SHLIBTOOL_MAKEFLAGS}
+.  endif
+
+post-install:
+	${INSTALL_SCRIPT} ${SHLIBTOOL_WRKSRC}/libtool ${PREFIX}/bin/shlibtool
+.endif
 
 .PHONY: fix-libtool
 fix-libtool:
@@ -61,27 +83,5 @@ fix-libtool:
 	done
 
 post-build: fix-libtool
-
-.if ${BUILDING_SHLIBTOOL} == "YES"
-CONFIGURE_ARGS+=	--disable-static
-.else
-SHLIBTOOL_WRKDIR=	${WRKDIR}/shlibtool
-SHLIBTOOL_WRKSRC=	${WRKSRC:S/${WRKDIR}/${SHLIBTOOL_WRKDIR}/}
-SHLIBTOOL_MAKEFLAGS=	BUILDING_SHLIBTOOL=YES
-SHLIBTOOL_MAKEFLAGS+=	WRKDIR=${SHLIBTOOL_WRKDIR}
-
-.  if ${BUILD_SHLIBTOOL} == "NO"
-PLIST_SUBST+=		SHLIBTOOL="@comment "
-.  else
-PLIST_SUBST+=		SHLIBTOOL=
-
-post-build:
-	cd ${.CURDIR} && ${MAKE} build ${SHLIBTOOL_MAKEFLAGS}
-
-post-install:
-	${INSTALL_SCRIPT} ${SHLIBTOOL_WRKSRC}/libtool			\
-		${PREFIX}/bin/shlibtool
-.  endif
-.endif
 
 .include "../../mk/bsd.pkg.mk"
