@@ -1,7 +1,5 @@
-$NetBSD: patch-am,v 1.5 2004/10/28 01:12:44 xtraeme Exp $
-
---- scripts/mysqld_safe.sh.orig	2004-10-27 23:23:41.000000000 +0200
-+++ scripts/mysqld_safe.sh	2004-10-27 23:27:02.000000000 +0200
+--- scripts/mysqld_safe.sh.orig	2005-01-17 15:16:35.000000000 +0100
++++ scripts/mysqld_safe.sh	2005-01-17 15:20:03.000000000 +0100
 @@ -253,6 +253,14 @@
    fi
  fi
@@ -23,7 +21,7 @@ $NetBSD: patch-am,v 1.5 2004/10/28 01:12:44 xtraeme Exp $
      then    # The pid contains a mysqld process
 -      echo "A mysqld process already exists"
 -      echo "A mysqld process already exists at " `date` >> $err_log
-+	datemsg "A mysqld process already exists"
++	    datemsg "A mysqld process already exists"
        exit 1
      fi
    fi
@@ -74,7 +72,7 @@ $NetBSD: patch-am,v 1.5 2004/10/28 01:12:44 xtraeme Exp $
  
 @@ -324,7 +330,7 @@
      # kill -9 is used or the process won't react on the kill.
-     numofproces=`ps xa | grep -v "grep" | grep "$ledir/$MYSQLD\>" | grep -c "pid-file=$pid_file"`
+     numofproces=`ps xaww | grep -v "grep" | grep "$ledir/$MYSQLD\>" | grep -c "pid-file=$pid_file"`
  
 -    echo -e "\nNumber of processes running now: $numofproces" | tee -a $err_log
 +    datemsg -e "\nNumber of processes running now: $numofproces"
