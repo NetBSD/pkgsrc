@@ -1,0 +1,851 @@
+$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
+
+*** Makefile.orig	Tue May 18 17:37:51 1999
+--- Makefile	Sat Mar 27 00:11:59 1999
+***************
+*** 0 ****
+--- 1,20 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ # NOTE THAT THE BELOW DOES NOT CONTAIN `etc'!
++ SUBDIR= util global dns master masterlib postfix sendmail \
++ 	pickup cleanup smtpd local trivial-rewrite qmgr smtp bounce pipe \
++ 	showq postalias postcat postconf postkick postlock postlog \
++ 	postmap postsuper postfix-script conf
++ 
++ SUBDIR+=man
++ 
++ # XXX
++ .include <bsd.own.mk>
++ .if !POSTFIX_NOSETGID
++ SUBDIR+=postdrop
++ .endif
++ 
++ # not yet included: html
++ # not needed: smtpstone fsstone
++ 
++ .include <bsd.subdir.mk>
+*** Makefile.inc.orig	Wed Dec 31 19:00:00 1969
+--- Makefile.inc	Sat Mar 27 00:10:39 1999
+***************
+*** 0 ****
+--- 1,32 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ WARNS?=	0
++ 
++ DOBJDIR!=cd $(.CURDIR)/../dns; \
++ 	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++ 
++ MOBJDIR!=cd $(.CURDIR)/../masterlib; \
++ 	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++ 
++ GOBJDIR!=cd $(.CURDIR)/../global; \
++ 	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++ 
++ UOBJDIR!=cd $(.CURDIR)/../util; \
++ 	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++ 
++ CPPFLAGS+= -Wno-comment -DNETBSD1 -I${.CURDIR}/ \
++ 	-I${.CURDIR}/../master -I${.CURDIR}/../global -I${.CURDIR}/../util \
++ 	-I${.CURDIR}/../dns
++ 
++ 
++ LIBPDNS=	${DOBJDIR}/libdns.a
++ LIBPMASTER=	${MOBJDIR}/libmaster.a
++ LIBPGLOBAL=	${GOBJDIR}/libglobal.a
++ LIBPUTIL=	${UOBJDIR}/libutil.a
++ 
++ #LDADD=    
++ #DPADD=  ${MOBJDIR}/libmaster.a ${GOBJDIR}/libglobal.a ${UOBJDIR}/libutil.a
++ 
++ .if exists(${.CURDIR}/../../Makefile.inc)
++ .include "${.CURDIR}/../../Makefile.inc"
++ .endif
+*** bounce/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- bounce/Makefile	Fri Mar 26 21:48:51 1999
+***************
+*** 0 ****
+--- 1,15 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	bounce
++ BINDIR=${daemon_directory}
++ 
++ SRCS	= bounce.c bounce_append_service.c bounce_notify_service.c \
++ 	bounce_cleanup.c
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** cleanup/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- cleanup/Makefile	Fri Mar 26 21:48:52 1999
+***************
+*** 0 ****
+--- 1,18 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ 
++ PROG=	cleanup
++ BINDIR=${daemon_directory}
++ 
++ SRCS	= cleanup.c cleanup_out.c cleanup_envelope.c cleanup_message.c \
++ 	cleanup_extracted.c cleanup_state.c cleanup_skip.c cleanup_rewrite.c \
++ 	cleanup_map11.c cleanup_map1n.c cleanup_masquerade.c \
++ 	cleanup_out_recipient.c
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** conf/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- conf/Makefile	Sat Mar 27 00:11:09 1999
+***************
+*** 0 ****
+--- 1,17 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ 
++ BINDIR=		${share_directory}
++ 
++ 
++ FILES=		LICENSE Makefile access aliases canonical main.cf master.cf \
++ 		relocated sample-aliases.cf sample-canonical.cf \
++ 		sample-debug.cf sample-ldap.cf sample-local.cf \
++ 		sample-misc.cf sample-pcre.cf sample-rate.cf \
++ 		sample-relocated.cf sample-resource.cf \
++ 		sample-rewrite.cf sample-smtp.cf sample-smtpd.cf \
++ 		sample-transport.cf sample-virtual.cf transport virtual 
++ SCRIPTS=	postfix-script-sgid postfix-script-nosgid
++ 
++ .include <bsd.prog.mk>
++ 
+*** conf/main.cf.orig	Wed Mar 17 17:35:48 1999
+--- conf/main.cf	Fri Mar 26 22:41:32 1999
+***************
+*** 1,3 ****
+--- 1,5 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ #
+  # Global Postfix configuration file. This file lists only a subset
+  # of all 100+ parameters. See the sample-xxx.cf files for a full list.
+  # 
+***************
+*** 18,36 ****
+  # Postfix support programs and daemons. This setting can be overruled
+  # with the command_directory and daemon_directory parameters.
+  #
+! program_directory = /some/where/postfix/bin
+  
+  # The command_directory parameter specifies the location of all
+  # postXXX commands.  The default value is $program_directory.
+  #
+! #command_directory = /usr/sbin
+  
+  # The daemon_directory parameter specifies the location of all Postfix
+  # daemon programs (i.e. programs listed in the master.cf file). The
+  # default value is $program_directory. This directory must be owned
+  # by root.
+  #
+! #daemon_directory = /usr/libexec/postfix
+  
+  # QUEUE AND PROCESS OWNERSHIP
+  #
+--- 20,43 ----
+  # Postfix support programs and daemons. This setting can be overruled
+  # with the command_directory and daemon_directory parameters.
+  #
+! #program_directory = /some/where/postfix/bin
+  
+  # The command_directory parameter specifies the location of all
+  # postXXX commands.  The default value is $program_directory.
+  #
+! command_directory = __PREFIX/sbin
+  
+  # The daemon_directory parameter specifies the location of all Postfix
+  # daemon programs (i.e. programs listed in the master.cf file). The
+  # default value is $program_directory. This directory must be owned
+  # by root.
+  #
+! daemon_directory = __PREFIX/libexec/postfix
+! 
+! # Shared files and etc directory
+! etc_directory = /etc/postfix
+! share_directory = __PREFIX/share/postfix
+! man_directory = __PREFIX/man
+  
+  # QUEUE AND PROCESS OWNERSHIP
+  #
+***************
+*** 40,53 ****
+  # OWNS NO OTHER FILES OR PROCESSES ON THE SYSTEM.  In particular,
+  # don't specify nobody or daemon. PLEASE USE A DEDICATED USER.
+  #
+! #mail_owner = postfix
+  
+  # The default_privs parameter specifies the default rights used by
+  # the local delivery agent for delivery to external file or command.
+  # These rights are used in the absence of a recipient user context.
+  # DO NOT SPECIFY A PRIVILEGED USER OR THE POSTFIX OWNER.
+  #
+! #default_privs = nobody
+  
+  # INTERNET HOST AND DOMAIN NAMES
+  # 
+--- 47,60 ----
+  # OWNS NO OTHER FILES OR PROCESSES ON THE SYSTEM.  In particular,
+  # don't specify nobody or daemon. PLEASE USE A DEDICATED USER.
+  #
+! mail_owner = postfix
+  
+  # The default_privs parameter specifies the default rights used by
+  # the local delivery agent for delivery to external file or command.
+  # These rights are used in the absence of a recipient user context.
+  # DO NOT SPECIFY A PRIVILEGED USER OR THE POSTFIX OWNER.
+  #
+! default_privs = nobody
+  
+  # INTERNET HOST AND DOMAIN NAMES
+  # 
+***************
+*** 347,354 ****
+  # the process marches on. If you use an X-based debugger, be sure to
+  # set up your XAUTHORITY environment variable before starting Postfix.
+  #
+! debugger_command =
+! 	 PATH=/usr/bin:/usr/X11R6/bin
+! 	 xxgdb $daemon_directory/$process_name $process_id & sleep 5
+  
+  # Other configurable parameters.
+--- 354,360 ----
+  # the process marches on. If you use an X-based debugger, be sure to
+  # set up your XAUTHORITY environment variable before starting Postfix.
+  #
+! debugger_command = PATH=/usr/bin:/usr/X11R6/bin; \
+! 	xxgdb $daemon_directory/$process_name $process_id & sleep 5
+  
+  # Other configurable parameters.
+*** dns/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- dns/Makefile	Fri Mar 26 21:48:52 1999
+***************
+*** 0 ****
+--- 1,13 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ LIB	= dns
++ SRCS	= dns_lookup.c dns_rr.c dns_strerror.c dns_strtype.c
++ 
++ MKLINT=		no
++ MKPIC=		no
++ MKPROFILE=	no
++ 
++ # only needed during build
++ libinstall::
++ 
++ .include <bsd.lib.mk>
+*** etc/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- etc/Makefile	Sat Mar 27 00:19:37 1999
+***************
+*** 0 ****
+--- 1,11 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ .PATH:		${.CURDIR}/../conf
++ .include "../conf/main.cf"
++ 
++ BINDIR=		${etc_directory}
++ FILES=		main.cf master.cf aliases
++ 
++ distribution: install
++ 
++ .include <bsd.prog.mk>
+diff --new-file -rc ./global/Makefile global/Makefile
+*** global/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- global/Makefile	Fri Mar 26 21:48:52 1999
+***************
+*** 0 ****
+--- 1,31 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ LIB	= global
++ 
++ SRCS	= been_here.c bounce.c canon_addr.c clean_env.c cleanup_strerror.c \
++ 	config.c config_bool.c config_int.c config_str.c debug_peer.c \
++ 	debug_process.c defer.c deliver_completed.c deliver_flock.c \
++ 	deliver_request.c domain_list.c dot_lockfile.c file_id.c \
++ 	header_opts.c is_header.c mail_addr.c mail_addr_crunch.c \
++ 	mail_addr_find.c mail_addr_map.c mail_command_read.c \
++ 	mail_command_write.c mail_connect.c mail_copy.c mail_date.c \
++ 	mail_error.c mail_flush.c mail_open_ok.c mail_params.c \
++ 	mail_pathname.c mail_print.c mail_queue.c mail_run.c mail_scan.c \
++ 	mail_scan_dir.c mail_stream.c mail_task.c mail_trigger.c maps.c \
++ 	mark_corrupt.c mkmap_db.c mkmap_dbm.c mkmap_open.c mynetworks.c \
++ 	mypwd.c namadr_list.c off_cvt.c opened.c own_inet_addr.c \
++ 	peer_name.c pipe_command.c post_mail.c quote_822_local.c \
++ 	rec_streamlf.c rec_type.c recipient_list.c record.c remove.c \
++ 	resolve_clnt.c resolve_local.c rewrite_clnt.c sent.c smtp_stream.c \
++ 	split_addr.c string_list.c sys_exits.c timed_ipc.c tok822_find.c \
++ 	tok822_node.c tok822_parse.c tok822_resolve.c tok822_rewrite.c \
++ 	tok822_tree.c clnt_stream.c deliver_pass.c
++ 
++ MKLINT=		no
++ MKPIC=		no
++ MKPROFILE=	no
++ 
++ # only needed during build
++ libinstall::
++ 
++ .include <bsd.lib.mk>
+*** local/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- local/Makefile	Fri Mar 26 21:48:53 1999
+***************
+*** 0 ****
+--- 1,17 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ .include "../conf/main.cf"
++ PROG=	local
++ BINDIR=${daemon_directory}
++ 
++ SRCS	= alias.c command.c delivered.c dotforward.c file.c forward.c \
++ 	include.c indirect.c local.c mailbox.c recipient.c resolve.c token.c \
++ 	deliver_attr.c feature.c maildir.c biff_notify.c unknown.c
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** man/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- man/Makefile	Fri Mar 26 21:48:53 1999
+***************
+*** 0 ****
+--- 1,5 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ SUBDIR+=man1 man5 man8
++ 
++ .include <bsd.subdir.mk>
+*** man/man1/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- man/man1/Makefile	Fri Mar 26 21:48:53 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../../conf/main.cf"
++ MANDIR= ${man_directory}
++ 
++ MAN=	postcat.1 postfix.1 postlog.1 \
++ 	postconf.1 postkick.1 postmap.1 \
++ 	postalias.1 postdrop.1 postlock.1 postsuper.1
++ 
++ # XXX notyet:
++ # mailq.1 sendmail.1 newaliases.1
++ 
++ .include <bsd.man.mk>
+*** man/man5/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- man/man5/Makefile	Fri Mar 26 21:48:55 1999
+***************
+*** 0 ****
+--- 1,10 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../../conf/main.cf"
++ MANDIR= ${man_directory}
++ 
++ MAN=	access.5 canonical.5 relocated.5 transport.5 virtual.5
++ 
++ # XXX notyet:
++ # aliases.5
++ 
++ .include <bsd.man.mk>
+*** man/man8/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- man/man8/Makefile	Fri Mar 26 21:48:56 1999
+***************
+*** 0 ****
+--- 1,11 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../../conf/main.cf"
++ MANDIR= ${man_directory}
++ 
++ MAN=	bounce.8 local.8 pipe.8 smtp.8 \
++ 	cleanup.8 master.8 qmgr.8 smtpd.8 \
++ 	pickup.8 showq.8 trivial-rewrite.8
++ 
++ MLINKS=	bounce.8 defer.8
++ 
++ .include <bsd.man.mk>
+*** master/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- master/Makefile	Fri Mar 26 21:48:56 1999
+***************
+*** 0 ****
+--- 1,16 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ .include "../conf/main.cf"
++ PROG=	master
++ BINDIR=${daemon_directory}
++ SRCS    = master.c master_conf.c master_ent.c master_sig.c master_avail.c \
++         master_spawn.c master_service.c master_status.c master_listen.c \
++         master_vars.c master_wakeup.c
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** masterlib/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- masterlib/Makefile	Fri Mar 26 21:48:56 1999
+***************
+*** 0 ****
+--- 1,14 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ .PATH: ${.CURDIR}/../master
++ LIB=	master
++ SRCS	= single_server.c multi_server.c trigger_server.c master_proto.c
++ 
++ MKLINT=		no
++ MKPIC=		no
++ MKPROFILE=	no
++ 
++ # only needed during build
++ libinstall::
++ 
++ .include <bsd.lib.mk>
+*** pickup/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- pickup/Makefile	Fri Mar 26 21:48:57 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	pickup
++ BINDIR=${daemon_directory}
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** pipe/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- pipe/Makefile	Fri Mar 26 21:48:57 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	pipe
++ BINDIR=${daemon_directory}
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+diff --new-file -rc ./postalias/Makefile postalias/Makefile
+*** postalias/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postalias/Makefile	Fri Mar 26 21:48:57 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postalias
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** postcat/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postcat/Makefile	Fri Mar 26 21:48:58 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postcat
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** postconf/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postconf/Makefile	Fri Mar 26 22:26:29 1999
+***************
+*** 0 ****
+--- 1,27 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postconf
++ BINDIR=${command_directory}
++ 
++ PSRCS=	postconf.c
++ GENSRCS=bool_table.h bool_vars.h int_table.h int_vars.h str_table.h \
++ 	str_vars.h
++ SRCS=	${PSRCS} ${GENSRCS}
++ 
++ CLEANFILES+= ${GENSRCS}
++ 
++ CPPFLAGS+= -I${.OBJDIR}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ ${GENSRCS}: ${.CURDIR}/../global/mail_params.h
++ 	sh ${.CURDIR}/extract.sh ${.CURDIR}/../*/*.c
++ 
++ # XXX
++ ${PSRCS}: ${GENSRCS}
++ 
++ .include <bsd.prog.mk>
+*** postdrop/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postdrop/Makefile	Fri Mar 26 21:48:59 1999
+***************
+*** 0 ****
+--- 1,15 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ 
++ PROG=	postdrop
++ BINDIR=	${command_directory}
++ BINGRP=	maildrop
++ BINMODE=2755
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+***Makefile	Wed Dec 31 19:00:00 1969
+--- postfix/Makefile	Fri Mar 26 21:48:59 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=postfix
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+***postfix-19990317-pl05-script/Makefile	Wed Dec 31 19:00:00 1969
+--- postfix-script/Makefile	Fri Mar 26 22:45:15 1999
+***************
+*** 0 ****
+--- 1,18 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ 
++ .PATH:		${.CURDIR}/../conf
++ 
++ BINDIR=		${etc_directory}
++ 
++ # XXX
++ .include <bsd.own.mk>
++ .if POSTFIX_NOSETGID
++ SCRIPTS=	postfix-script-nosgid
++ .else
++ SCRIPTS=	postfix-script-sgid
++ .endif
++ SCRIPTSNAME=	postfix-script
++ FILES=	LICENSE
++ 
++ .include <bsd.prog.mk>
+*** postkick/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postkick/Makefile	Fri Mar 26 21:49:00 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postkick
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** postlock/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postlock/Makefile	Fri Mar 26 21:49:00 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postlock
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** postlog/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postlog/Makefile	Fri Mar 26 21:49:00 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postlog
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** postmap/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postmap/Makefile	Fri Mar 26 21:49:01 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postmap
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** postsuper/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- postsuper/Makefile	Fri Mar 26 21:49:01 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	postsuper
++ BINDIR=${command_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+diff --new-file -rc ./postsuper/postsuper.c postsuper/postsuper.c
+*** qmgr/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- qmgr/Makefile	Fri Mar 26 21:49:02 1999
+***************
+*** 0 ****
+--- 1,16 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	qmgr
++ BINDIR=${daemon_directory}
++ 
++ SRCS	= qmgr.c qmgr_active.c qmgr_transport.c qmgr_queue.c qmgr_entry.c \
++ 	qmgr_message.c qmgr_deliver.c qmgr_move.c qmgr_rcpt_list.c \
++ 	qmgr_defer.c qmgr_enable.c qmgr_scan.c qmgr_bounce.c
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** sendmail/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- sendmail/Makefile	Fri Mar 26 21:49:02 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	sendmail
++ BINDIR=${daemon_directory}
++ 
++ DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** showq/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- showq/Makefile	Fri Mar 26 21:49:02 1999
+***************
+*** 0 ****
+--- 1,12 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	showq
++ BINDIR=${daemon_directory}
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** smtp/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- smtp/Makefile	Fri Mar 26 21:49:03 1999
+***************
+*** 0 ****
+--- 1,17 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	smtp
++ BINDIR=${daemon_directory}
++ 
++ SRCS	= smtp.c quote_821_local.c smtp_connect.c smtp_proto.c smtp_chat.c \
++ 	smtp_session.c smtp_addr.c smtp_trouble.c smtp_unalias.c smtp_state.c
++ 
++ LIBS	= ../lib/libmaster.a ../lib/libglobal.a ../lib/libdns.a ../lib/libutil.a
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** smtpd/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- smtpd/Makefile	Fri Mar 26 21:49:03 1999
+***************
+*** 0 ****
+--- 1,16 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ 
++ PROG=	smtpd
++ BINDIR=${daemon_directory}
++ 
++ SRCS	= smtpd.c smtpd_token.c smtpd_check.c smtpd_chat.c smtpd_state.c
++ 
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
+*** trivial-rewrite/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- trivial-rewrite/Makefile	Fri Mar 26 21:49:04 1999
+***************
+*** 0 ****
+--- 1,16 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ .include "../conf/main.cf"
++ PROG=	trivial-rewrite
++ BINDIR=${daemon_directory}
++ 
++ SRCS	= trivial-rewrite.c rewrite.c resolve.c transport.c
++ 
++ DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++ 
++ # XXX
++ NOMAN=1
++ 
++ .include <bsd.prog.mk>
++ 
++ 
+*** util/Makefile.orig	Wed Dec 31 19:00:00 1969
+--- util/Makefile	Fri Mar 26 21:49:04 1999
+***************
+*** 0 ****
+--- 1,32 ----
++ #	$NetBSD: patch-aa,v 1.1 1999/05/29 20:57:19 christos Exp $
++ 
++ LIB=	util
++ SRCS=	argv.c argv_split.c attr.c basename.c binhash.c chroot_uid.c \
++ 	close_on_exec.c concatenate.c dict.c dict_db.c dict_dbm.c \
++ 	dict_env.c dict_ht.c dict_ldap.c dict_ni.c dict_nis.c \
++ 	dict_nisplus.c dict_open.c dir_forest.c doze.c environ.c \
++ 	events.c exec_command.c fifo_listen.c fifo_trigger.c file_limit.c \
++ 	find_inet.c fsspace.c fullname.c get_domainname.c get_hostname.c \
++ 	htable.c inet_addr_host.c inet_addr_list.c inet_addr_local.c \
++ 	inet_connect.c inet_listen.c inet_trigger.c inet_util.c \
++ 	line_wrap.c lowercase.c lstat_as.c mac_parse.c make_dirs.c \
++ 	match_list.c match_ops.c msg.c msg_output.c msg_syslog.c \
++ 	msg_vstream.c mvect.c myflock.c mymalloc.c mystrtok.c name_mask.c \
++ 	non_blocking.c open_as.c open_limit.c open_lock.c peekfd.c \
++ 	percentm.c posix_signals.c printable.c read_wait.c readable.c \
++ 	readline.c ring.c safe_getenv.c safe_open.c sane_accept.c \
++ 	scan_dir.c set_eugid.c set_ugid.c sigdelay.c skipblanks.c \
++ 	split_at.c stat_as.c sys_compat.c timed_connect.c timed_wait.c \
++ 	translit.c trimblanks.c unix_connect.c unix_listen.c unix_trigger.c \
++ 	unsafe.c username.c valid_hostname.c vbuf.c vbuf_print.c \
++ 	vstream.c vstream_popen.c vstring.c vstring_vstream.c writable.c \
++ 	write_buf.c write_wait.c dict_unix.c dict_pcre.c
++ 
++ MKLINT=		no
++ MKPIC=		no
++ MKPROFILE=	no
++ 
++ # only needed during build
++ libinstall::
++ 
++ .include <bsd.lib.mk>
+*** util/sys_defs.h.orig	Wed Dec 31 19:00:00 1969
+--- util/sys_defs.h	Fri Mar 26 21:49:04 1999
+***************
+*** 31,39 ****
+  #define HAS_DB
+  #define HAS_SA_LEN
+  #define DEF_DB_TYPE	"hash"
+  #define ALIAS_DB_MAP	"hash:/etc/aliases"
+  #define GETTIMEOFDAY(t)	gettimeofday(t,(struct timezone *) 0)
+! #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
+  #define USE_STATFS
+  #define STATFS_IN_SYS_MOUNT_H
+  #endif
+--- 31,39 ----
+  #define HAS_DB
+  #define HAS_SA_LEN
+  #define DEF_DB_TYPE	"hash"
+  #define ALIAS_DB_MAP	"hash:/etc/aliases"
+  #define GETTIMEOFDAY(t)	gettimeofday(t,(struct timezone *) 0)
+! #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin:__PREFIX/sbin:__PREFIX/bin"
+  #define USE_STATFS
+  #define STATFS_IN_SYS_MOUNT_H
+  #endif
