@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:09:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/04/21 00:05:05 jtb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:51:12 jfitz Exp
 #
 
-DISTNAME=		Locale-Codes-0.003
-PKGNAME=		p5-Locale-Codes-0.003
+DISTNAME=		Locale-Codes-1.06
+PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Locale/}
 
