@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/03/20 15:16:10 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/04/21 01:05:06 dillo Exp $
 
-SHA1 (freesci-0.3.4a.tar.gz) = 65291ac18f668b245e7652023e754e19e6ccb0e8
-Size (freesci-0.3.4a.tar.gz) = 1178834 bytes
+SHA1 (freesci-0.3.4c.tar.gz) = 0d8f195cdbe51fb8f7d9c51b58c2dfd1dc8933fb
+Size (freesci-0.3.4c.tar.gz) = 1154816 bytes
 SHA1 (patch-aa) = ec90d23cb4830b4903c32118280766bfb3baf38e
 SHA1 (patch-ab) = 9e5e62d8d06c69d5f96cbe32c13140a4093ddb94
 SHA1 (patch-ac) = b1d01703301dffb233e1c300a8717785b224c3e9
