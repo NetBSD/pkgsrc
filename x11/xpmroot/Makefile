@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/10/11 06:16:43 martti Exp $
+# $NetBSD: Makefile,v 1.33 2002/10/30 10:34:54 tron Exp $
 #
 
 DISTNAME=       fvwm-${PKG_VERSION}
@@ -32,4 +32,5 @@ do-install:
 	${INSTALL_MAN}		${WRKSRC}/utils/xpmroot.1 ${PREFIX}/man/man1
 
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/x11.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
