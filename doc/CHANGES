@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1690 2003/03/19 18:53:17 kristerw Exp $
+$NetBSD: CHANGES,v 1.1691 2003/03/19 21:11:50 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1199,3 +1199,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added skampi-4.0 [jschauma 2003-03-19]
 	Updated edb to 1.0.3nb1 [jmmv 2003-03-19]
 	Updated autogen to 5.5.3 [kristerw 2003-03-19]
+	Added cy-login-1.5.27 [jlam 2003-03-19]
