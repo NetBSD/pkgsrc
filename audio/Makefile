@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/02/09 13:17:05 frueauf Exp $
+# $NetBSD: Makefile,v 1.26 1999/03/06 21:32:19 tron Exp $
 #
 
     SUBDIR += amp
@@ -8,6 +8,7 @@
     SUBDIR += cddbd
     SUBDIR += esound
     SUBDIR += gsm
+    SUBDIR += libaudiofile
     SUBDIR += maplay
     SUBDIR += mikmod
     SUBDIR += mpg123
