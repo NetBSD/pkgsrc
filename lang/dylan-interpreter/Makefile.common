@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/01/15 20:08:43 agc Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/01/16 10:42:49 agc Exp $
 #
 
-DISTNAME=		gwydion-dylan-2.3.6
+DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		ftp://berlin.ccc.de/pub/gd/src/	\
 			ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/ \
@@ -20,6 +20,8 @@ USE_GMAKE=		yes
 MAKEFILE=		GNUmakefile
 ALL_TARGET=		default
 
+DYLAN_VERSION=		2.3.6
+
 # other architecture changes will be gratefully received
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
@@ -27,6 +29,17 @@ USE_PERL5=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+ALT_ARCH=		x86
+.else
+ALT_ARCH=		${MACHINE_ARCH}
+.endif
+
+PLIST_SUBST+=		ALT_ARCH=${ALT_ARCH}
+PLIST_SUBST+=		DYLAN_VERSION=${DYLAN_VERSION}
 
 post-patch:
 	cd ${WRKSRC};							\

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/15 20:14:33 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/16 10:42:49 agc Exp $
 #
 
-PKGNAME=	dylan-compiler-2.3.6
+PKGNAME=	dylan-compiler-${DYLAN_VERSION}
 
 PATCHDIR=	${.CURDIR}/../dylan-interpreter/patches
 DISTINFO_FILE=	${.CURDIR}/../dylan-interpreter/distinfo
