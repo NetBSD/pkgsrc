@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2003/01/31 11:43:33 skrll Exp $
+$NetBSD: patch-aa,v 1.3.2.1 2003/03/02 10:33:09 agc Exp $
 
---- configure.orig	Tue Dec 17 10:46:51 2002
+--- configure.orig	Tue Dec 17 05:46:51 2002
 +++ configure
+@@ -24829,7 +24829,7 @@ main ()
+ 
+  char buf[20];
+   buf[0]='\0';
+-  strlat(buf, "KDE function test", sizeof(buf));
++  strlcat(buf, "KDE function test", sizeof(buf));
+ 
+   ;
+   return 0;
 @@ -25442,57 +25442,6 @@ cat >>confdefs.h <<EOF
  #define SIZEOF_UNSIGNED_INT $ac_cv_sizeof_unsigned_int
  EOF
