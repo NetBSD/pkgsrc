@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3894 2003/12/02 22:35:28 recht Exp $
+$NetBSD: CHANGES,v 1.3895 2003/12/02 23:26:38 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4711,4 +4711,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Deleted cheesetracker 0.5.5r4 [ben 2003-12-02]
 	Updated mserv_irman to 0.17 [abs 2003-12-02]
 	Updated dia to 0.92.2 [recht 2003-12-02]
-
+	Updated ogmtools to 1.2 [cube 2003-12-02]
