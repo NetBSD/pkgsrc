@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.9 2003/08/16 09:33:03 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.10 2003/08/16 17:17:11 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -448,8 +448,7 @@ _REPLACE_BUILDLINK= \
 #
 LIBTOOL_ARCHIVE_UNTRANSFORM_SED?=	# empty
 _LIBTOOL_ARCHIVE_UNTRANSFORM_SED=	\
-	-e "s|${LOCALBASE}/${DEPOT_SUBDIR}/[^/]*/|${LOCALBASE}/|g"	\
-	-e "s|${X11BASE}/${DEPOT_SUBDIR}/[^/]*/|${X11BASE}/|g"
+	-e "s|${LOCALBASE}/${DEPOT_SUBDIR}/[^/]*/|${LOCALBASE}/|g"
 _LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
 REPLACE_BUILDLINK_SED?=			# empty
 _REPLACE_BUILDLINK_SED=			${REPLACE_BUILDLINK_SED}
