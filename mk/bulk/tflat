@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: tflat,v 1.1 2001/01/28 20:58:50 dmcmahill Exp $
+# $NetBSD: tflat,v 1.2 2001/02/02 18:18:17 dmcmahill Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -88,8 +88,7 @@ BEGIN {
         exit 0
 } 
 
-function find_all_depends(pkg,i,deps){
-
+function find_all_depends(pkg,pkgreg,i,deps){
 	# if we find the package already has been fully depended
 	# then return the depends list
 	if (pkg in alldepends){
@@ -97,18 +96,26 @@ function find_all_depends(pkg,i,deps){
 	}
 
 	# if we find the package listed in its own depends list, then
-	# return an empty list
-	if (topdepends[pkg]~reg2str(pkg)){
+	# return an empty list if we're going down the depends tree.
+	# When a package lists its self in the depends tree file, it simply
+	# is a place holder and means the package has no depends.  However
+	# other pacakges may still depend upon it, so we need to keep looking.
+	if ( (!up) && (topdepends[pkg]~reg2str(pkg)) ){
 		alldepends[pkg] = " ";
 		return(alldepends[pkg]);	
 	}
 
 	# otherwise recursively gather depends that each of the depends
 	# has
+	pkgreg=reg2str(pkg);
 	split(topdepends[pkg],deps);
 	i=1;
+	alldepends[pkg] = " ";
 	while ( i in deps ){
-		alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(deps[i]);
+		# don't add ourselves to the list (a possibility when going up the tree)
+		if (" "deps[i]" "!~pkgreg){
+			alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(deps[i]);
+		}
 		i=i+1;
 	}
 	alldepends[pkg] = uniq(alldepends[pkg]);
