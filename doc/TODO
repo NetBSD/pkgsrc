@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2171 2004/09/27 11:54:58 adam Exp $
+$NetBSD: TODO,v 1.2172 2004/09/27 14:18:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,12 +422,12 @@ Suggested package updates
 	o staroffice-7p1
 	o streamtuner-0.12.5
 	o sweep-0.8.3
-	o sylpheed-claws-0.9.12a
+	o sylpheed-claws-0.9.12b
 	o tcl-8.4.7
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
 	o tcm-2.20
-	o tcpreplay-2.3.0
+	o tcpreplay-2.3.1
 	o tct-1.14
 	o teapop-0.3.8
 	o texi2html-1.70
@@ -478,7 +478,7 @@ Suggested package updates
 	o xpaint-2.7.1
 	o xps-4.2
 	o xpuyopuyo-0.9.5
-	o xscreensaver-4.17
+	o xscreensaver-4.18
 	o xskat-4.0
 	o xzgv-0.8
 	o yacas-1.0.55
