@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/09/07 14:49:43 bad Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/12/01 17:23:42 rh Exp $
 lib/perl5/site_perl/Mail/Field.pm
 lib/perl5/site_perl/Mail/Cap.pm
 lib/perl5/site_perl/Mail/Filter.pm
@@ -8,9 +8,15 @@ lib/perl5/site_perl/Mail/Header.pm
 lib/perl5/site_perl/Mail/Send.pm
 lib/perl5/site_perl/Mail/Field/AddrList.pm
 lib/perl5/site_perl/Mail/Field/Date.pm
+lib/perl5/site_perl/Mail/Mailer/test.pm
+lib/perl5/site_perl/Mail/Mailer/mail.pm
+lib/perl5/site_perl/Mail/Mailer/smtp.pm
+lib/perl5/site_perl/Mail/Mailer/sendmail.pm
+lib/perl5/site_perl/Mail/Mailer/rfc822.pm
 lib/perl5/site_perl/Mail/Alias.pm
 lib/perl5/site_perl/Mail/Mailer.pm
 lib/perl5/site_perl/Mail/Util.pm
+lib/perl5/site_perl/auto/Mail/Internet/_prephdr.al
 lib/perl5/site_perl/auto/Mail/Internet/reply.al
 lib/perl5/site_perl/auto/Mail/Internet/add_signature.al
 lib/perl5/site_perl/auto/Mail/Internet/sign.al
@@ -40,4 +46,5 @@ lib/perl5/man/man3/Mail::Send.3
 @dirrm lib/perl5/site_perl/auto/Mail
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Mail
 @dirrm lib/perl5/site_perl/Mail/Field
+@dirrm lib/perl5/site_perl/Mail/Mailer
 @dirrm lib/perl5/site_perl/Mail
