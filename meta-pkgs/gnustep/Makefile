@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/04/11 09:28:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/09/25 04:51:35 rh Exp $
 #
 
-DISTNAME=	gnustep-1.9.1
+DISTNAME=	gnustep-1.10.0
 CATEGORIES=	meta-pkgs x11 gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,12 +10,12 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Meta-package for GNUstep
 
-DEPENDS+=	gnustep-base>=1.9.1:../../devel/gnustep-base
-DEPENDS+=	gnustep-ssl>=1.9.1:../../security/gnustep-ssl
-DEPENDS+=	gnustep-back>=0.9.2:../../x11/gnustep-back
+DEPENDS+=	gnustep-base>=1.10.0:../../devel/gnustep-base
+DEPENDS+=	gnustep-ssl>=1.10.0:../../security/gnustep-ssl
+DEPENDS+=	gnustep-back>=0.9.3nb1:../../x11/gnustep-back
 DEPENDS+=	gnustep-examples>0.9.7:../../devel/gnustep-examples
 DEPENDS+=	ImageViewer>=0.6.2:../../graphics/ImageViewer
-DEPENDS+=	GNUMail>=1.1.2:../../mail/GNUMail
+DEPENDS+=	GNUMail>=1.1.2nb2:../../mail/GNUMail
 DEPENDS+=	Gorm>=0.6.0:../../devel/Gorm
 DEPENDS+=	ProjectCenter>=0.3.6:../../devel/ProjectCenter
 DEPENDS+=	Renaissance>=0.7.0:../../devel/Renaissance
