@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/28 02:47:49 reed Exp $
+# $NetBSD: Makefile,v 1.19 2005/01/14 05:15:40 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -74,7 +74,7 @@ CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/kerberosIV
 # XXX: why yet.  For the moment, disable PAM authentication.
 #
 #.if defined(USE_PAM)
-#.include "../../security/PAM/buildlink3.mk"
+#.include "../../mk/pam.buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-pam
 #PLIST_SRC+=		${.CURDIR}/PLIST.pam
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
