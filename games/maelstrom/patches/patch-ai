@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2001/12/14 09:23:06 martin Exp $
+
+--- fastrand.cpp.orig	Mon May 26 04:27:54 1997
++++ fastrand.cpp	Tue Dec 11 09:56:52 2001
+@@ -14,7 +14,7 @@
+ printf("SeedRandom(%lu)\n", Seed);
+ #endif
+ 	if ( ! Seed ) {
+-		gettimeofday(&tv, (void *)0);
++		gettimeofday(&tv, NULL);
+ 		randomSeed = ((tv.tv_usec<<16)|((tv.tv_sec^tv.tv_usec)&0xFFFF));
+ 		return;
+ 	}
