@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 21:54:14 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/12/10 15:39:46 tv Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -16,6 +16,7 @@
     SUBDIR += postgresql
     SUBDIR += py-gdbm
     SUBDIR += py-mysql
+    SUBDIR += sdbm
 #    SUBDIR += typhoon
 
 .include "../mk/bsd.pkg.subdir.mk"
