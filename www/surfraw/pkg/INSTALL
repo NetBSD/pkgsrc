@@ -1,10 +1,11 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/10/31 13:48:39 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2000/12/06 07:55:14 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
+SAMPLECONFDIR=${PKG_PREFIX}/etc
 CONFDIR=${PKG_PREFIX}/etc
 CONFFILES="surfraw.conf"
 
@@ -17,12 +18,13 @@ POST-INSTALL)
 	for file in ${CONFFILES}
 	do
 		FILE=${CONFDIR}/${file}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}.dist
 		if [ -f ${FILE} ]
 		then
 			echo "    ${FILE} already exists"
 		else
 			echo "    ${FILE}"
-			cp ${FILE}.dist ${FILE}
+			cp ${SAMPLEFILE} ${FILE}
 			chmod 644 ${FILE}
 		fi
 	done
