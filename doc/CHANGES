@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6839 2004/08/10 14:09:19 taya Exp $
+$NetBSD: CHANGES,v 1.6840 2004/08/10 14:23:19 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3779,3 +3779,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated molden to 4.0 [agc 2004-08-10]
 	Updated firefox to 0.9.3 [taya 2004-08-10]
 	Updated firefox-gtk2 to 0.9.3 [taya 2004-08-10]
+	Updated cfengine2 to 2.1.9 [ben 2004-08-10]
