@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6555 2004/07/14 16:10:02 erh Exp $
+$NetBSD: CHANGES,v 1.6556 2004/07/14 16:22:02 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3390,3 +3390,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added wesnoth-0.8 [manu 2004-07-14]
 	Removed jlib [wiz 2004-07-14]
 	Update pkg_tarup to 1.6 [erh 2004-07-14]
+	Updated neon to 0.24.7 [epg 2004-07-14]
