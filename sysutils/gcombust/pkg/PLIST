@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/15 08:04:51 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/07/01 02:15:30 hubertf Exp $
 bin/gcombust
+share/locale/sv/LC_MESSAGES/gcombust.mo
+share/locale/es/LC_MESSAGES/gcombust.mo
+share/locale/de/LC_MESSAGES/gcombust.mo
