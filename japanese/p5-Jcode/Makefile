@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/14 13:34:57 taca Exp $
 #
 
-DISTNAME=	Jcode-0.68
-PKGNAME=	p5-Jcode-0.68
+DISTNAME=	Jcode-0.69
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	converters japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/Jcode/
 
@@ -20,5 +20,8 @@ post-extract:
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+
+post-build:
+	@cd ${WRKSRC}; ${MAKE} test
 
 .include "../../mk/bsd.pkg.mk"
