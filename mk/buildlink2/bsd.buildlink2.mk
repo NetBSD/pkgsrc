@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.47 2002/10/30 14:07:53 seb Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.48 2002/10/31 22:14:08 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -51,11 +51,11 @@
 ECHO_BUILDLINK_MSG?=	${TRUE}
 
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
-BUILDLINK_X11PKG_DIR=	${BUILDLINK_DIR:H}/.buildlink-x11pkg
+BUILDLINK_X11_DIR=	${BUILDLINK_DIR:H}/.buildlink-x11
 CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
-CONFIGURE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
-MAKE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
+CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
+MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 _BLNK_CPPFLAGS=		-I${LOCALBASE}/include
 _BLNK_LDFLAGS=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 _BLNK_OPSYS=		${OPSYS}
@@ -69,13 +69,10 @@ CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 USE_X11_LINKS?=		YES
 .  if !empty(USE_X11_LINKS:M[nN][oO])
 .    include "../../mk/x11.buildlink2.mk"
-BUILDLINK_X11_DIR=	${BUILDLINK_X11PKG_DIR}
 .  else
 BUILD_DEPENDS+=		x11-links>=0.8:../../pkgtools/x11-links
-BUILDLINK_X11_DIR=	${LOCALBASE}/share/x11-links
+_BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
 .  endif
-CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
-MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
 _BLNK_LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 .endif
@@ -146,6 +143,14 @@ BUILDLINK_PLIST_CMD.${_pkg_}= \
 #
 do-buildlink: buildlink-directories
 buildlink-directories:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
+.if defined(USE_X11)
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
+.  if empty(USE_X11_LINKS:M[nN][oO])
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -R ${_BLNK_X11_DIR}/* ${BUILDLINK_X11_DIR}
+.  endif
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
 
@@ -218,9 +223,7 @@ _BUILDLINK_USE: .USE
 		${MKDIR} ${BUILDLINK_DIR};				\
 		case "${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}" in	\
 		${X11BASE})						\
-			${RM} -f ${BUILDLINK_X11PKG_DIR} 2>/dev/null;	\
-			${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11PKG_DIR}; \
-			buildlink_dir="${BUILDLINK_X11PKG_DIR}";	\
+			buildlink_dir="${BUILDLINK_X11_DIR}";		\
 			;;						\
 		*)							\
 			buildlink_dir="${BUILDLINK_DIR}";		\
@@ -278,12 +281,10 @@ _BLNK_UNPROTECT=	# empty
 _BLNK_PROTECT_DIRS=	# empty
 _BLNK_UNPROTECT_DIRS=	# empty
 
-_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR=	_bUiLdLiNk_x11pKg_dIr_
 _BLNK_MANGLE_DIR.BUILDLINK_X11_DIR=	_bUiLdLiNk_x11_dIr_
 _BLNK_MANGLE_DIR.BUILDLINK_DIR=		_bUiLdLiNk_dIr_
 _BLNK_MANGLE_DIR.ZOULARISBASE=		_zOuLaRiSbAsE_
 
-_BLNK_PROTECT_DIRS+=	BUILDLINK_X11PKG_DIR
 _BLNK_PROTECT_DIRS+=	BUILDLINK_X11_DIR
 _BLNK_PROTECT_DIRS+=	BUILDLINK_DIR
 .if defined(ZOULARISBASE) && (${ZOULARISBASE} != ${LOCALBASE})
@@ -292,7 +293,6 @@ _BLNK_UNPROTECT_DIRS+=	ZOULARISBASE
 .endif
 _BLNK_UNPROTECT_DIRS+=	BUILDLINK_DIR
 _BLNK_UNPROTECT_DIRS+=	BUILDLINK_X11_DIR
-_BLNK_UNPROTECT_DIRS+=	BUILDLINK_X11PKG_DIR
 
 .for _dir_ in ${_BLNK_PROTECT_DIRS}
 _BLNK_PROTECT+=		s:${${_dir_}}:${_BLNK_MANGLE_DIR.${_dir_}}
@@ -303,11 +303,17 @@ _BLNK_UNPROTECT+=	s:${_BLNK_MANGLE_DIR.${_dir_}}:${${_dir_}}
 
 _BLNK_TRANSFORM+=	${_BLNK_PROTECT}
 #
-# Convert direct paths to libraries into "-Ldir -llib" equivalents.
+# Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
 #
 _BLNK_TRANSFORM+=	p:${LOCALBASE}
 _BLNK_TRANSFORM+=	p:${X11BASE}
 _BLNK_TRANSFORM+=	p:/usr/lib
+#
+# Convert direct paths to static libraries in ${LOCALBASE} or ${X11BASE}
+# into references into ${BUILDLINK_DIR}.
+#
+_BLNK_TRANSFORM+=	static:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
+_BLNK_TRANSFORM+=	static:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11_DIR}
 #
 # Transform references into ${LOCALBASE} into ${BUILDLINK_DIR}.
 #
@@ -315,18 +321,12 @@ _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 _BLNK_TRANSFORM+=	I:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
 #
-# Transform references into ${X11BASE} into ${BUILDLINK_X11PKG_DIR} and
-# into ${BUILDLINK_X11_DIR}, but the package doesn't use X11, then just
-# remove these references altogether.
+# Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR} but if
+# the package doesn't use X11, then just remove these references altogether.
 #
 .if defined(USE_X11)
-.  if !empty(USE_X11_LINKS:M[nN][oO])
-_BLNK_TRANSFORM+=	I:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR}
-_BLNK_TRANSFORM+=	L:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR}
-.  else
-_BLNK_TRANSFORM+=	II:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR}:${BUILDLINK_X11_DIR}
-_BLNK_TRANSFORM+=	LL:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR}:${BUILDLINK_X11_DIR}
-.  endif
+_BLNK_TRANSFORM+=	I:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11_DIR}
+_BLNK_TRANSFORM+=	L:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11_DIR}
 .else
 _BLNK_TRANSFORM+=	r:${X11BASE}
 .endif
@@ -448,9 +448,9 @@ BUILDLINK_FAKE_LA=							\
 
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
-# into references to ${BUILDLINK_DIR}, ${BUILDLINK_X11PKG_DIR}, and
-# ${BUILDLINK_X11_DIR}.  These wrapper scripts are to be used instead of
-# the actual compiler tools when building software.
+# into references to ${BUILDLINK_DIR} and ${BUILDLINK_X11_DIR}. These
+# wrapper scripts are to be used instead of the actual compiler tools when
+# building software.
 #
 # BUILDLINK_CC, BUILDLINK_LD, etc. are the full paths to the wrapper
 #	scripts.
@@ -709,7 +709,6 @@ ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 		-e "s|@WRKDIR@|${WRKDIR}|g"				\
 		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"		\
 		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
-		-e "s|@BUILDLINK_X11PKG_DIR@|${BUILDLINK_X11PKG_DIR}|g"		\
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
