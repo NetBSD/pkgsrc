@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2000/08/10 17:50:06 pooka Exp $
+$NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
 
 --- sys/unix/Makefile.top.orig	Tue Jul  4 03:42:05 2000
-+++ sys/unix/Makefile.top	Thu Aug 10 18:12:00 2000
++++ sys/unix/Makefile.top	Mon Aug 21 22:48:26 2000
 @@ -14,18 +14,17 @@
  # MAKE = make
  
@@ -98,7 +98,7 @@ $NetBSD: patch-ab,v 1.4 2000/08/10 17:50:06 pooka Exp $
  	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
  	$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)
  	chmod $(EXEPERM) $(SHELLDIR)/$(GAME)
-@@ -210,11 +216,10 @@
+@@ -210,16 +216,16 @@
  # and a reminder
  	@echo You may also want to install the man pages via the doc Makefile.
  
@@ -111,7 +111,14 @@ $NetBSD: patch-ab,v 1.4 2000/08/10 17:50:06 pooka Exp $
  	-mkdir -p $(GAMEDIR) $(VARDIR) $(VARDIR)/save
  	-rmdir ./-p
  	-$(CHOWN) $(GAMEUID) $(GAMEDIR) $(VARDIR) $(VARDIR)/save
-@@ -227,6 +232,14 @@
+ 	$(CHGRP) $(GAMEGRP) $(GAMEDIR) $(VARDIR) $(VARDIR)/save
+-	chmod $(DIRPERM) $(GAMEDIR) $(VARDIR) $(VARDIR)/save
++	chmod $(DIRPERM) $(GAMEDIR) $(VARDIR)
++	chmod 770 $(VARDIR)/save
+ # set up the game files
+ 	( $(MAKE) dofiles )
+ # set up some additional files
+@@ -227,6 +233,14 @@
  	-( cd $(VARDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
  			$(CHGRP) $(GAMEGRP) perm record logfile ; \
  			chmod $(FILEPERM) perm record logfile )
