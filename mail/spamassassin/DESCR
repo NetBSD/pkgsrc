@@ -1,0 +1,22 @@
+SpamAssassin is a mail filter to identify spam.
+
+Using its rule base, it uses a wide range of heuristic tests on mail
+headers and body text to identify "spam", also known as unsolicited
+commercial email.
+
+The spam-identification tactics used include header analysis, text
+analysis, blacklists and Razor.
+
+Once identified, the mail can then be optionally tagged as spam for
+later filtering using the user's own mail user-agent application.
+
+SpamAssassin requires very little configuration; you do not need to
+continually update it with details of your mail accounts, mailing list
+memberships, etc. It accomplishes filtering without this knowledge, as
+much as possible.
+
+The distribution provides a command line tool to perform filtering,
+along with Mail::SpamAssassin, a set of perl modules which implement a
+Mail::Audit plugin, allowing SpamAssassin to be used in a Mail::Audit
+filter, or (possibly at some point) in a spam-protection proxy POP/IMAP
+server.
