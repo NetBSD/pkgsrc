@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.35 2003/06/19 01:12:01 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.36 2003/06/24 09:53:10 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -707,3 +707,10 @@ sysutils/mtools/patches/patch-ad		1.1 (new)
 	- don't hardcode -R, use RPATH_FLAG instead
 	- remove unused cruft, style nits
 	[salo, ticket #1294]
+
+print/acroread5/Makefile			1.14
+print/acroread5/distinfo			1.2
+
+	Update "acroread5" package to version 5.07. This version fixes a
+	remotely exploitable security whole in version 5.06 an older.
+	[tron, ticket #1335]
