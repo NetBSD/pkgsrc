@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3320 2005/03/29 12:29:29 wiz Exp $
+$NetBSD: TODO,v 1.3321 2005/03/29 13:48:40 markd Exp $
 
 Suggested new packages
 ======================
@@ -276,6 +276,7 @@ Suggested package updates
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
+	o amaroK-1.2.3
 	o amavis-0.3.12
 	o amaya-9.1
 	o anomy-sanitizer-1.70
