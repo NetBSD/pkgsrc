@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2309 2003/05/24 16:48:32 salo Exp $
+$NetBSD: CHANGES,v 1.2310 2003/05/24 17:30:20 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2127,3 +2127,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squid to 2.5.2nb4 [taca 2003-05-24]
 	Updated amaya to 8.0 [salo 2003-05-24]
 	Updated eggdrop to 1.6.15 [salo 2003-05-24]
+	Updated realplayer-codecs to 8nb2 [salo 2003-05-24]
+	Updated mplayer to 0.90nb2 [salo 2003-05-24]
+	Updated mplayer-share to 0.90nb2 [salo 2003-05-24]
+	Updated gmplayer to 0.90nb2 [salo 2003-05-24]
+	Updated mencoder to 0.90nb2 [salo 2003-05-24]
