@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/22 12:22:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/26 17:16:54 seb Exp $
 bin/tracker
 bin/randomize
-@unexec ${INSTALL_INFO} --delete %D/info/tracker.info %D/info/dir
 info/tracker.info
-@exec ${INSTALL_INFO} %D/info/tracker.info %D/info/dir
 share/doc/tracker/Html/Aix.html
 share/doc/tracker/Html/Introduction.html
 share/doc/tracker/Html/Availability.html
