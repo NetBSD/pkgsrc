@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2001/11/26 22:38:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.113 2001/11/29 19:30:35 zuntum Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -73,6 +73,7 @@ SUBDIR+=	qmail-lint
 SUBDIR+=	qmail-users
 SUBDIR+=	qmailanalog
 SUBDIR+=	qpopper
+SUBDIR+=	qtools
 SUBDIR+=	queue_repair
 SUBDIR+=	rblcheck
 SUBDIR+=	ruby-tmail
