@@ -1,4 +1,0 @@
-4Suite is a collection of Python tools for XML processing and object database
-management. An integrated packaging of several components: 4DOM, DbDom, 4XPath,
-4XSLT, 4XPointer, 4XLink, 4RDF and 4ODS. All the tools are designed for maximum
-extensibility through custom Python code.
