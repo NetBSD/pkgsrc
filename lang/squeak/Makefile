@@ -1,35 +1,55 @@
-# $NetBSD: Makefile,v 1.13 2001/05/02 04:02:05 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/16 02:27:52 fredb Exp $
 #
 
-DISTNAME=	Squeak2.7-src
-PKGNAME=	squeak-2.7
+DISTNAME=	Squeak-3.0pre2
+PKGNAME=	squeak-3.0pre2
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/SOR/users/piumarta/squeak/
-DISTFILES=	Squeak2.7-src.tar.gz Squeak2.7.image.gz Squeak2.7.changes.gz SqueakV2.sources.gz
+MASTER_SITES=	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.0/platform-independent/
+MASTER_SITES+=	ftp://ftp.inria.fr/INRIA/Projects/SOR/users/piumarta/squeak/
+DISTFILES=	ReadMe.txt.gz Squeak3.0-3545.zip SqueakV3.sources.gz
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
 
-DIST_SUBDIR=	squeak
-EXTRACT_ONLY=	Squeak2.7-src.tar.gz
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_X11=	yes
-USE_GMAKE=	yes
-NO_WRKSUBDIR=	yes
 
-ALL_TARGET=	squeak
+CPPFLAGS+=	-DNETBSD_OSS_HACK
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+DIST_SUBDIR=	squeak
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+WRKSRC=		${WRKDIR}/Squeak-3.0/build
+
+CONFIGURE_SCRIPT= ${WRKSRC}/../src/unix/configure
+LTCONFIG_OVERRIDE= ${WRKSRC}/../src/unix/ltconfig
+
+post-extract:
+.for f in ReadMe.txt.gz SqueakV3.sources.gz
+	${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/${f} > ${WRKDIR}/${f:C/.gz//}
+.endfor
+	cd ${WRKDIR} && \
+	    ${LOCALBASE}/bin/unzip ${DISTDIR}/${DIST_SUBDIR}/Squeak3.0-3545.zip
+	${MKDIR} ${WRKSRC}
 
 pre-configure:
-	cd ${WRKSRC}/conf; ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC}/../src/unix; \
+	    ${LOCALBASE}/bin/aclocal && ${LOCALBASE}/bin/autoconf
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/squeak
-	${INSTALL_PROGRAM} ${WRKSRC}/`${WRKSRC}/conf/config.guess`/squeak ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/ReadMe.txt ${PREFIX}/share/squeak
-	for f in Squeak2.7.changes Squeak2.7.image SqueakV2.sources ; do	\
-		${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/$$f.gz > ${PREFIX}/share/squeak/$$f; \
-	done
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/squeak/3.0
+.for f in ReadMe.txt SqueakV3.sources
+	${INSTALL_DATA} ${WRKDIR}/${f} ${PREFIX}/share/squeak/
+.endfor
+.for f in Squeak3.0final.changes Squeak3.0final.image
+	${INSTALL_DATA} ${WRKDIR}/${f} \
+		${PREFIX}/share/squeak/3.0/${f:C/final//}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
