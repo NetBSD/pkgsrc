@@ -1,5 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
-/* $Id: config.h.in,v 1.6 2003/06/23 11:33:08 grant Exp $ */
+/* $Id: config.h.in,v 1.7 2003/07/15 05:33:04 grant Exp $ */
 
 /* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
 #undef HAVE_PRINTF_QD
@@ -7,6 +7,11 @@
 /* Define if `long long' is supported and sizeof(off_t) >= 8 */
 #undef HAVE_QUAD_SUPPORT
 
+/* Define if optarg is declared in <stdlib.h> or <unistd.h> */
+#undef HAVE_OPTARG_D
+
+/* Define if optind is declared in <stdlib.h> or <unistd.h> */
+#undef HAVE_OPTIND_D
 
 /* Define to 1 if the `getpgrp' function requires zero arguments. */
 #undef GETPGRP_VOID
@@ -65,6 +70,9 @@
 
 /* Define to 1 if you have the `getmode' function. */
 #undef HAVE_GETMODE
+
+/* Define to 1 if you have the `getopt_long' function. */
+#undef HAVE_GETOPT_LONG
 
 /* Define to 1 if you have the `getpassphrase' function. */
 #undef HAVE_GETPASSPHRASE
