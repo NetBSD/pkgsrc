@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2004/08/06 15:08:20 jlam Exp $
+# $NetBSD: Makefile,v 1.192 2004/08/13 10:26:50 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -58,6 +58,7 @@ SUBDIR+=	hashcash
 SUBDIR+=	heimdal
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
+SUBDIR+=	hydan
 SUBDIR+=	ike-scan
 SUBDIR+=	isakmpd
 SUBDIR+=	jessie
