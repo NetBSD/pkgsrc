@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2004/07/26 18:23:25 dillo Exp $
+$NetBSD: patch-ai,v 1.2 2004/08/15 12:13:53 dillo Exp $
 
 --- src/gens/util/unzip.h.orig	2004-03-14 15:33:14.000000000 +0100
 +++ src/gens/util/unzip.h
