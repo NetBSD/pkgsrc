@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2004/02/02 15:49:17 soren Exp $
+bin/tpb
+share/doc/tpb/callback_example.sh
+share/doc/tpb/nvram.txt
+share/doc/tpb/tpbrc
+@dirrm share/doc/tpb
