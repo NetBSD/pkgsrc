@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.3 1998/09/22 06:11:39 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1998/10/11 20:27:03 kim Exp $
 
-DISTNAME=	ntop-0.4-src
-PKGNAME=	ntop-0.4
-WRKSRC=		${WRKDIR}/${PKGNAME}
+DISTNAME=	ntop-1.0
 CATEGORIES=	net
-MASTER_SITES=	http://jake.unipi.it/~deri/ntop/
-
-NOT_FOR_ARCHS=	alpha mips # elf problems WRT libcurses
+MASTER_SITES=	${HOMEPAGE}/download/source/
+EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://jake.unipi.it/~deri/ntop/
 
 DEPENDS+=	autoconf-2.12:../../devel/autoconf
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
+HOMEPAGE=	http://www-serra.unipi.it/~ntop/
+
+NOT_FOR_ARCHS=	alpha mips # elf problems WRT libcurses
+
 HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
+
+LDFLAGS+=	-L${PREFIX}/lib
 
 CONFIGURE_ENV+=	CPPFLAGS=-I${PREFIX}/include
 CONFIGURE_ENV+=	CFLAGS=-I${PREFIX}/include

@@ -1,12 +1,14 @@
-$NetBSD: patch-ac,v 1.1 1998/08/07 22:42:30 kim Exp $
+$NetBSD: patch-ac,v 1.2 1998/10/11 20:27:04 kim Exp $
 
---- interface.h.ORIG	Fri Jul 31 05:22:13 1998
-+++ interface.h	Fri Aug  7 16:52:22 1998
-@@ -26,7 +26,6 @@
+--- interface.h.orig	Sun Sep 13 05:00:58 1998
++++ interface.h	Sun Oct 11 15:16:33 1998
+@@ -42,7 +42,9 @@
   */
  
  
--#include <gnuc.h>
++#ifdef HAVE_GNUC_H
+ #include <gnuc.h>
++#endif
  #ifdef HAVE_OS_PROTO_H
  #include "os-proto.h"
  #endif
