@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/03/23 23:11:18 wiz Exp $
+
+--- src/devilspie-action-resize.c.orig	2005-01-23 19:47:37.000000000 +0100
++++ src/devilspie-action-resize.c
+@@ -342,7 +342,7 @@ ___1_devilspie_action_resize_run (Devils
+     if (a->minimized == TRI_TRUE)
+       wnck_window_minimize(window);
+     else if (a->minimized == TRI_FALSE)
+-      wnck_window_unminimize(window);
++      wnck_window_unminimize(window, 0);
+     /* Handle full screen */
+     if (a->fullscreen != TRI_UNSET) {
+         g_print("fullscreen\n");
