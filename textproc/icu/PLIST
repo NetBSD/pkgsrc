@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/04 16:58:16 recht Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/06 16:36:00 jmmv Exp $
 bin/derb
 bin/genbrk
 bin/gencnval
@@ -173,7 +173,7 @@ sbin/gensprep
 sbin/genuca
 sbin/icuswap
 share/examples/icu/convrtrs.txt
-share/icu/${PKGVERSION}/config/mh-bsd-gcc
+share/icu/${PKGVERSION}/config/${MH_NAME}
 share/icu/${PKGVERSION}/license.html
 share/icu/${PKGVERSION}/mkinstalldirs
 @dirrm share/icu/${PKGVERSION}/config
