@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.186 2003/09/20 16:56:10 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.187 2003/10/11 02:44:17 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -409,11 +409,11 @@ PATCH_FUZZ_FACTOR?= -F0
 # correct commands.
 # Possible: any valid flags
 # Default:
-#  for SunOS:
-#          -DHasGcc2=YES -DHasGcc2ForCplusplus=YES
+#  for Solaris with gcc:
+#	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 #  for IRIX:
-#          -DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE} \
-#          -DManUsr=${PREFIX}
+#	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE} \
+#	-DManUsr=${PREFIX}
 .if ${OPSYS} == "IRIX"
 #IMAKEOPTS?=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE} \
 #               -DManUsr=${PREFIX}
@@ -428,9 +428,10 @@ PATCH_FUZZ_FACTOR?= -F0
 # you may also wish to add ISA specific flags, such as "-DSgiISA32=4" if
 # you are compiling for mips4.
 .elif ${OPSYS} == "SunOS"
-#IMAKEOPTS?=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
-# To use Sun ONE Studio (formerly known as WorkShop and Forte) compliers
-# set IMAKEOPTS to the empty string.
+# The flags required by imake with gcc on Solaris are automatically
+# added if gcc is being used. Though it should not be needed, you can
+# override this using:
+#IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
 PRE_ROOT_CMD?=	${TRUE}
