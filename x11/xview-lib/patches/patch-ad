@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 1999/03/31 14:23:30 hubertf Exp $
+$NetBSD: patch-ad,v 1.5 1999/12/15 23:51:04 dmcmahill Exp $
 
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c ./lib/libxview/attr/attr_copy.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c	Tue Jun 29 01:14:35 1993
@@ -884,21 +884,6 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/misc/Imakefile ./lib/libxview/misc
   	bitmask.c\
   	hashfn.c\
   	db_conv.c\
-diff -rc ../old/xview3.2p1-X11R6/lib/libxview/misc/expandname.c ./lib/libxview/misc/expandname.c
-*** ../old/xview3.2p1-X11R6/lib/libxview/misc/expandname.c	Tue Jun 29 01:16:30 1993
---- ./lib/libxview/misc/expandname.c	Sun Nov 20 13:39:03 1994
-***************
-*** 120,126 ****
---- 120,128 ----
-      }
-      (void) close(pivec[0]);
-  #ifndef SVR4
-+ #if !(defined(BSD) && (BSD >= 199103))
-      while (wait((union wait *) & status) != pid);
-+ #endif
-  #else SVR4
-      while (wait( & status) != pid);
-  #endif SVR4
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/misc/getlogindr.c ./lib/libxview/misc/getlogindr.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/misc/getlogindr.c	Tue Jun 29 01:16:30 1993
 --- ./lib/libxview/misc/getlogindr.c	Sun Nov 20 13:39:03 1994
@@ -1934,21 +1919,6 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_file.c ./lib/libxview/t
   
   Pkg_private int textsw_change_directory();
   Pkg_private void textsw_display(), textsw_display_view_margins();
-diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_filter.c ./lib/libxview/textsw/txt_filter.c
-*** ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_filter.c	Tue Jun 29 01:17:39 1993
---- ./lib/libxview/textsw/txt_filter.c	Sun Nov 20 13:39:13 1994
-***************
-*** 55,60 ****
---- 55,63 ----
-  #define	REPLY_OKAY	 0
-  #define	REPLY_SEND	 1
-  
-+ static int	talk_to_filter();
-+ static int	start_filter();
-+ 
-  /* performance: global cache of getdtablesize() */
-  extern int      dtablesize_cache;
-  
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_input.c ./lib/libxview/textsw/txt_input.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_input.c	Tue Jun 29 01:17:42 1993
 --- ./lib/libxview/textsw/txt_input.c	Sun Nov 20 13:39:13 1994

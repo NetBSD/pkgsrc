@@ -1,0 +1,26 @@
+$NetBSD: patch-al,v 1.1 1999/12/15 23:51:04 dmcmahill Exp $
+
+--- ./lib/libxview/misc/expandname.c.orig	Tue Jun 29 01:16:30 1993
++++ ./lib/libxview/misc/expandname.c	Sun Dec 12 21:41:40 1999
+@@ -24,4 +24,7 @@
+ #include <sgtty.h>
+ 
++#if defined(BSD) && (BSD >= 199306)
++#include <unistd.h>
++#else
+ #ifdef sparc
+ #ifdef SVR4
+@@ -31,4 +34,5 @@
+ #endif SVR4
+ #endif
++#endif
+ 
+ #ifdef SVR4
+@@ -121,5 +125,7 @@
+     (void) close(pivec[0]);
+ #ifndef SVR4
++#if !(defined(BSD) && (BSD >= 199103))
+     while (wait((union wait *) & status) != pid);
++#endif
+ #else SVR4
+     while (wait( & status) != pid);
