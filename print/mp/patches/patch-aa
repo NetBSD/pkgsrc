@@ -1,0 +1,113 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/28 19:52:27 kim Exp $
+
+--- Makefile.orig	Thu Oct 21 18:06:01 1999
++++ Makefile	Thu Oct 21 18:07:08 1999
+@@ -65,14 +65,14 @@
+ #  set:
+ #          MAILPNAMES      =
+ #
+-MAILPNAMES = mailp newsp digestp filep filofaxp fileofaxpp franklinp \
++MAILPNAMES = mailp newsp digestp filep filofaxp filofaxpp franklinp \
+ 	     proplanp timemanp timesysip timesyspp
+ #---------------------------------------------------------------------
+ #  Mimep is capable of MIME support (by using LaTeX and metamail). It uses
+ #  some functions from the mp distrubution. To enable these functions then
+ #  uncomment the following definition.
+ #
+-#MIME_SUPPORT    = -DMIME_SUPPORT
++MIME_SUPPORT    = -DMIME_SUPPORT
+ #---------------------------------------------------------------------
+ #  Mptool uses Motif. If you are compiling mptool you will need to
+ #  uncomment the following two lines and set appropriately.
+@@ -121,28 +121,29 @@
+ #  appropriately. If it's not present, then a sensible default value
+ #  is used.
+ #
+-#PROLOGUE = -DPROLOGUE=\"$(MPLIBDIR)\"
++PROLOGUE = -DPROLOGUE=\"$(MPLIBDIR)\"
+ #---------------------------------------------------------------------
+ #  Mp and Mptool need X11 to compile and link properly. You will need to
+ #  set the following two lines appropriately.
+ #
++OPENWINHOME	= ${X11BASE}
+ X11INCDIR       = -I$(OPENWINHOME)/include
+-X11LIBDIR       = -L$(OPENWINHOME)/lib
++X11LIBDIR       = -L$(OPENWINHOME)/lib -R$(OPENWINHOME)/lib
+ #=====================================================================
+ #
+ #  Default locations where mp files will be installed.
+ #  You might wish to alter these values.
+ #
+-MPPATH      = /usr/local
++MPPATH      = ${PREFIX}
+ MPBINDIR    = $(MPPATH)/bin
+-MPLIBDIR    = $(MPPATH)/lib/mp
++MPLIBDIR    = $(MPPATH)/share/mp
+ MPMANDIR    = $(MPPATH)/man/man$(MPMANSECT)
+-MPMANSECT   = l
++MPMANSECT   = 1
+ #---------------------------------------------------------------------
+ #  Compilation flags and standard macro definitions.
+ #
+-CCOMP	 = -O
+-CC       = gcc
++CCOMP	 = ${CFLAGS}
++#CC       = gcc
+ #---------------------------------------------------------------------
+ #  Compilation flags used by all MP programs.
+ #
+@@ -155,11 +156,11 @@
+ MPCDEFS   = $(GENCDEFS) -I../common
+ MPCFLAGS  = $(CCOMP) $(MPCDEFS)
+ MPLDFLAGS = $(X11LIBDIR)
+-MPLIBS    = -lX11
++MPLIBS    = -lX11 $(EXTRALIBS)
+ #
+ #  Options for mp submake.
+ #
+-MPMAKEOPTS = $(MFLAGS) CC=$(CC) CFLAGS='$(MPCFLAGS)' \
++MPMAKEOPTS = $(MFLAGS) CC='$(CC)' CFLAGS='$(MPCFLAGS)' \
+ 		LDFLAGS='$(MPLDFLAGS)' LIBS='$(MPLIBS)' \
+ 		MPBINDIR='$(MPBINDIR)' MPLIBDIR='$(MPLIBDIR)' \
+ 		MPMANDIR='$(MPMANDIR)' MPMANSECT='$(MPMANSECT)' \
+@@ -174,7 +175,7 @@
+ #
+ #  Options for mptool submake.
+ #
+-MPTOOLMAKEOPTS = $(MFLAGS) CC=$(CC) CFLAGS='$(MPTOOLCFLAGS)' \
++MPTOOLMAKEOPTS = $(MFLAGS) CC='$(CC)' CFLAGS='$(MPTOOLCFLAGS)' \
+ 		LDFLAGS='$(MPTOOLLDFLAGS)' LIBS='$(MPTOOLLIBS)' \
+ 		MPBINDIR='$(MPBINDIR)' MPLIBDIR='$(MPLIBDIR)' \
+ 		MPMANDIR='$(MPMANDIR)' MPMANSECT='$(MPMANSECT)'
+@@ -189,13 +190,11 @@
+ #
+ #  Options for mimep submake.
+ #
+-MIMEPMAKEOPTS = $(MFLAGS) CC=$(CC) CFLAGS='$(MIMEPCFLAGS)' \
++MIMEPMAKEOPTS = $(MFLAGS) CC='$(CC)' CFLAGS='$(MIMEPCFLAGS)' \
+ 		LIBS='$(MIMEPLIBS)' MIMEPBINDIR='$(MPBINDIR)' \
+ 		MIMEPMANDIR='$(MPMANDIR)' MIMEPMANSECT='$(MPMANSECT)'
+ #=================================================================
+ 
+-.KEEP_STATE:
+-
+ BINARIES  = mp mptool mimep
+ MPDIR     = mp
+ MPTOOLDIR = mptool
+@@ -236,9 +235,15 @@
+ 
+ SHELL = /bin/sh
+ 
+-install:
++install: install-mptool install-mp install-mimep
++
++install-mptool:
+ 	(cd $(MPTOOLDIR); $(MAKE) $(MPTOOLMAKEOPTS) install)
++
++install-mp:
+ 	(cd $(MPDIR);     $(MAKE) $(MPMAKEOPTS)     install)
++
++install-mimep:
+ 	(cd $(MIMEPDIR);  $(MAKE) $(MIMEPMAKEOPTS)  install)
+ 
+ lint:
