@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9128 2005/02/13 16:20:13 taca Exp $
+$NetBSD: CHANGES,v 1.9129 2005/02/13 20:28:41 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bittorrent to 3.4.2nb2 [recht 2005-02-13]
 	Updated awstats to 6.3nb3 [minskim 2005-02-13]
 	Updated namazu to 2.0.14nb1 [taca 2005-02-13]
+	Updated tor to 0.0.9.4 [jschauma 2005-02-13]
