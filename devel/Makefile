@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.623 2005/03/26 23:09:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.624 2005/04/01 18:36:56 jschauma Exp $
 #
 
 COMMENT=	Development utilities
@@ -582,6 +582,7 @@ SUBDIR+=	syncdir
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
 SUBDIR+=	tcllib
+SUBDIR+=	teem
 SUBDIR+=	tet3
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
