@@ -1,15 +1,16 @@
-$NetBSD: patch-ac,v 1.1 1999/10/25 16:05:38 drochner Exp $
---- iodev/keyboard.cc.orig	Sun Oct 24 00:17:37 1999
-+++ iodev/keyboard.cc	Sun Oct 24 00:18:02 1999
-@@ -972,6 +972,11 @@
+$NetBSD: patch-ac,v 1.2 2001/05/25 23:01:31 kei Exp $
+
+--- iodev/keyboard.cc.orig	Wed May 16 15:54:39 2001
++++ iodev/keyboard.cc	Fri May 25 15:50:39 2001
+@@ -954,6 +954,11 @@
        return;
        break;
  
-+    case 0xf0: // set scancode - let OS time out
++    case 0xf0:  // set scancode - let OS time out
 +      bx_printf("KBD: set scancode command received\n");
 +      return;
 +      break;
 +
      case 0xf2:  // identify keyboard
-       bx_printf("KBD: indentify keyboard command received\n");
+       bx_printf("KBD: identify keyboard command received\n");
        kbd_enQ(0xFA); // AT sends ACK, MFII sends ACK+ABh+41h
