@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.504 2000/07/14 16:04:24 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.505 2000/07/14 18:37:05 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2754,7 +2754,7 @@ print-pkg-size-this:
 	| xargs ls -ld							\
 	| ${AWK} 'BEGIN { sum=0; }					\
 		  { sum+=$$5; }						\
-		  END { print sum; }'
+		  END { printf("%d\n", sum); }'
 
 # Sizes of required pkgs (only)
 # 
@@ -2764,7 +2764,7 @@ print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} print-pkg-size-depends-help 		\
 	| ${AWK} 'BEGIN { sum=0; }					\
 		  { sum+=$$1; }						\
-		  END { print sum; }'
+		  END { printf("%d\n", sum); }'
 # need this in a make look to prevent the shell clobbering the depends
 # also includes size of depends of depends (XXX)
 print-pkg-size-depends-help:
