@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2003/03/13 10:47:40 mjl Exp $
+# $NetBSD: Makefile,v 1.100 2003/03/15 20:15:28 kei Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -48,6 +48,10 @@ SUBDIR+=	ijs
 SUBDIR+=	img2eps
 SUBDIR+=	ja-a2ps
 SUBDIR+=	ja-dvipdfm
+SUBDIR+=	ja-jsclasses
+SUBDIR+=	ja-ptex
+SUBDIR+=	ja-ptex-bin
+SUBDIR+=	ja-ptex-share
 SUBDIR+=	ja-vflib
 SUBDIR+=	ja-vflib-lib
 SUBDIR+=	ja-vflib-utils
