@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1193 2003/12/14 15:14:48 wiz Exp $
+$NetBSD: TODO,v 1.1194 2003/12/14 16:33:30 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -185,6 +185,7 @@ Suggested package updates
 	o gnome-core-2.4
 	o gnome-mime-data-2.4.0 [pkg/23714]
 	o gnome-utils-2.4.1
+	o gnome-vfs2-2.4.1 [jmmv]
 	o gnomeicu-0.99
 	o gnuchess-5.06
 	o gnumeric-1.2.0
