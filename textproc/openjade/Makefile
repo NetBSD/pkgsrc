@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/19 05:44:39 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/19 06:50:46 minskim Exp $
 #
 
 DISTNAME=	openjade-1.3.2
@@ -13,6 +13,8 @@ COMMENT=	SGML/XML parser toolkit and DSSSL engine, successor to "jade"
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_PERL5=	build
+USE_LANGUAGES=	c c++
+USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
