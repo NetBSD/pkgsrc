@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:44 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/25 13:16:18 agc Exp $
 bin/ratpoison
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ratpoison.info
 info/ratpoison.info
@@ -9,4 +9,8 @@ share/doc/ratpoison/COPYING
 share/doc/ratpoison/ChangeLog
 share/doc/ratpoison/NEWS
 share/doc/ratpoison/README
+share/ratpoison/ratpoison.el
+share/ratpoison/split.sh
+share/ratpoison/genrpbindings
 @dirrm share/doc/ratpoison
+@dirrm share/ratpoison
