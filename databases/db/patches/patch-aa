@@ -1,0 +1,426 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/09 23:10:28 tron Exp $
+
+--- ../dist/Makefile.in.orig	Mon Dec  7 20:05:59 1998
++++ ../dist/Makefile.in	Sat Apr 10 00:52:52 1999
+@@ -43,49 +43,47 @@
+ LOBJS=	@LIBOBJS@
+ POBJS=	err.o getlong.o
+ 
+-libdb=	libdb.a
++libdb=	libdb2.la
+ all: $(libdb) $(PROGS)
+ 
+ $(libdb): db.h $(OBJS) $(LOBJS)
+-	$(rm) -f $@
+-	$(ar) $@ $(OBJS) $(LOBJS)
+-	test ! -f $(ranlib) || $(ranlib) $@
++	$(LIBTOOL) --mode=link @CC@ -rpath $(prefix)/lib -version-info 2:7 -o $@ $(OBJS:.o=.lo) $(LOBJS:.o=.lo)
+ 
+ DBA=	db_archive.o $(POBJS)
+ db_archive: $(DBA) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBA) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBA) $(libdb) $(LIBS)
+ 
+ DBB=	db_checkpoint.o $(POBJS)
+ db_checkpoint: $(DBB) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBB) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBB) $(libdb) $(LIBS)
+ 
+ DBC=	db_deadlock.o $(POBJS)
+ db_deadlock: $(DBC) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBC) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBC) $(libdb) $(LIBS)
+ 
+ DBD=	db_dump.o $(POBJS)
+ db_dump: $(DBD) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBD) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBD) $(libdb) $(LIBS)
+ 
+ DBE=	db_dump185.o $(POBJS)
+ db_dump185: $(DBE)
+-	$(CC) -o $@ $(LDFLAGS) $(DBE) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBE) $(LIBS)
+ 
+ DBF=	db_load.o $(POBJS)
+ db_load: $(DBF) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBF) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBF) $(libdb) $(LIBS)
+ 
+ DBG=	db_printlog.o $(POBJS)
+ db_printlog: $(DBG) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBG) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBG) $(libdb) $(LIBS)
+ 
+ DBH=	db_recover.o $(POBJS)
+ db_recover: $(DBH) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBH) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBH) $(libdb) $(LIBS)
+ 
+ DBI=	db_stat.o $(POBJS)
+ db_stat: $(DBI) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBI) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(DBI) $(libdb) $(LIBS)
+ 
+ EPROGS=	ex_access ex_appinit ex_btrec ex_lock ex_mpool ex_thread ex_tpcb
+ DBJ=	ex_access.o
+@@ -141,11 +139,11 @@
+ 	$(rm) -f confdefs.h db.h db_int.h db_185.h include.tcl
+ 
+ prefix=	@prefix@
+-bindir=	$(prefix)/BerkeleyDB/bin
+-datadir=$(prefix)/BerkeleyDB/share
+-includedir=$(prefix)/BerkeleyDB/include
+-libdir=	$(prefix)/BerkeleyDB/lib
+-mandir=	$(prefix)/BerkeleyDB/docs
++bindir=	$(prefix)/bin
++datadir=$(prefix)/share/db
++includedir=$(prefix)/include/db2
++libdir=	$(prefix)/lib
++mandir=	$(prefix)/docs/db
+ 
+ dmode=	755
+ emode=	555
+@@ -161,22 +159,12 @@
+ 	@echo "Installing DB include files: $(includedir) ..."
+ 	@test -d $(includedir) || \
+ 	    ($(mkdir) -p $(includedir) && $(chmod) $(dmode) $(includedir))
+-	@cd $(includedir) && $(rm) -f db.h db_185.h db_cxx.h
+-	@$(cp) -p db.h db_185.h $(srcdir)/include/db_cxx.h $(includedir)
++	@$(BSD_INSTALL_DATA) db.h db_185.h $(srcdir)/include/db_cxx.h $(includedir)
+ 	@cd $(includedir) && $(chmod) $(fmode) db.h db_185.h db_cxx.h
+ 	@echo "Installing DB library: $(libdir) ..."
+-	@test -d $(libdir) || \
+-	    ($(mkdir) -p $(libdir) && $(chmod) $(dmode) $(libdir))
+-	@cd $(libdir) && $(rm) -f $(libdb)
+-	@$(cp) -p $(libdb) $(libdir)
+-	@cd $(libdir) && $(chmod) $(fmode) $(libdb)
++	@$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(libdb) $(libdir)
+ 	@echo "Installing DB utilities: $(bindir) ..."
+-	@test -d $(bindir) || \
+-	    ($(mkdir) -p $(bindir) && $(chmod) $(dmode) $(bindir))
+-	@cd $(bindir) && $(rm) -f $(PROGS)
+-	@$(cp) -p $(PROGS) $(bindir)
+-	@cd $(bindir) && (test ! -f $(strip) || $(strip) $(PROGS))
+-	@cd $(bindir) && $(chmod) $(emode) $(PROGS)
++	@$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROGS) $(bindir)
+ 	@echo "Installing documentation: $(mandir) ..."
+ 	@test -d $(mandir) || \
+ 	    ($(mkdir) -p $(mandir) && $(chmod) $(dmode) $(mandir))
+@@ -226,63 +214,63 @@
+ 
+ # DB files.
+ db.o: $(srcdir)/db/db.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_am.o: $(srcdir)/db/db_am.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_auto.o: $(srcdir)/db/db_auto.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_conv.o: $(srcdir)/db/db_conv.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_dispatch.o: $(srcdir)/db/db_dispatch.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_dup.o: $(srcdir)/db/db_dup.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_iface.o: $(srcdir)/db/db_iface.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_join.o: $(srcdir)/db/db_join.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_overflow.o: $(srcdir)/db/db_overflow.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_pr.o: $(srcdir)/db/db_pr.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_rec.o: $(srcdir)/db/db_rec.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_ret.o: $(srcdir)/db/db_ret.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Btree source files.
+ bt_compare.o: $(srcdir)/btree/bt_compare.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_conv.o: $(srcdir)/btree/bt_conv.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_curadj.o: $(srcdir)/btree/bt_curadj.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_cursor.o: $(srcdir)/btree/bt_cursor.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_delete.o: $(srcdir)/btree/bt_delete.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_open.o: $(srcdir)/btree/bt_open.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_page.o: $(srcdir)/btree/bt_page.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_put.o: $(srcdir)/btree/bt_put.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_rec.o: $(srcdir)/btree/bt_rec.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_recno.o: $(srcdir)/btree/bt_recno.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_rsearch.o: $(srcdir)/btree/bt_rsearch.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_search.o: $(srcdir)/btree/bt_search.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_split.o: $(srcdir)/btree/bt_split.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_stack.o: $(srcdir)/btree/bt_stack.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ bt_stat.o: $(srcdir)/btree/bt_stat.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ btree_auto.o: $(srcdir)/btree/btree_auto.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # C++ interface files.
+ cxx_app.o: $(srcdir)/cxx/cxx_app.cpp
+@@ -302,77 +290,77 @@
+ 
+ # Hash source files.
+ hash_auto.o: $(srcdir)/hash/hash_auto.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ hash.o: $(srcdir)/hash/hash.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ hash_conv.o: $(srcdir)/hash/hash_conv.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ hash_dup.o: $(srcdir)/hash/hash_dup.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ hash_func.o: $(srcdir)/hash/hash_func.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ hash_page.o: $(srcdir)/hash/hash_page.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ hash_rec.o: $(srcdir)/hash/hash_rec.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ hash_stat.o: $(srcdir)/hash/hash_stat.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Lock source files.
+ lock.o: $(srcdir)/lock/lock.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ lock_conflict.o:$(srcdir)/lock/lock_conflict.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ lock_deadlock.o:$(srcdir)/lock/lock_deadlock.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ lock_region.o:$(srcdir)/lock/lock_region.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ lock_util.o:$(srcdir)/lock/lock_util.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Log source files.
+ log.o: $(srcdir)/log/log.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_archive.o: $(srcdir)/log/log_archive.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_auto.o: $(srcdir)/log/log_auto.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_compare.o: $(srcdir)/log/log_compare.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_findckp.o: $(srcdir)/log/log_findckp.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_get.o: $(srcdir)/log/log_get.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_put.o: $(srcdir)/log/log_put.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_rec.o: $(srcdir)/log/log_rec.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ log_register.o: $(srcdir)/log/log_register.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Mpool source files.
+ mp_bh.o: $(srcdir)/mp/mp_bh.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_fget.o: $(srcdir)/mp/mp_fget.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_fopen.o: $(srcdir)/mp/mp_fopen.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_fput.o: $(srcdir)/mp/mp_fput.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_fset.o: $(srcdir)/mp/mp_fset.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_open.o: $(srcdir)/mp/mp_open.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_pr.o: $(srcdir)/mp/mp_pr.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_region.o: $(srcdir)/mp/mp_region.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ mp_sync.o: $(srcdir)/mp/mp_sync.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Mutex source files.
+ mutex.o: $(srcdir)/mutex/mutex.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ # XXX
+ # UTS4 spinlocks
+ uts4_cc.o: $(srcdir)/mutex/uts4_cc.s
+@@ -380,81 +368,81 @@
+ 
+ # Transaction source files.
+ txn.o: $(srcdir)/txn/txn.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ txn_auto.o: $(srcdir)/txn/txn_auto.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ txn_rec.o: $(srcdir)/txn/txn_rec.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # XA source files.
+ xa.o: $(srcdir)/xa/xa.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ xa_db.o: $(srcdir)/xa/xa_db.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ xa_map.o: $(srcdir)/xa/xa_map.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Historic interfaces.
+ hsearch.o: $(srcdir)/hsearch/hsearch.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ dbm.o: $(srcdir)/dbm/dbm.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db185.o: $(srcdir)/db185/db185.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Common source files.
+ db_appinit.o: $(srcdir)/common/db_appinit.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_apprec.o: $(srcdir)/common/db_apprec.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_byteorder.o: $(srcdir)/common/db_byteorder.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_err.o: $(srcdir)/common/db_err.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_log2.o: $(srcdir)/common/db_log2.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_region.o: $(srcdir)/common/db_region.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_salloc.o: $(srcdir)/common/db_salloc.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ db_shash.o: $(srcdir)/common/db_shash.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # OS specific source files.
+ os_abs.o: $(srcdir)/os/os_abs.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_alloc.o: $(srcdir)/os/os_alloc.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_config.o: $(srcdir)/os/os_config.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_dir.o: $(srcdir)/os/os_dir.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_fid.o: $(srcdir)/os/os_fid.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_fsync.o: $(srcdir)/os/os_fsync.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_map.o: $(srcdir)/os/os_map.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_oflags.o: $(srcdir)/os/os_oflags.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_open.o: $(srcdir)/os/os_open.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_rpath.o: $(srcdir)/os/os_rpath.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_rw.o: $(srcdir)/os/os_rw.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_seek.o: $(srcdir)/os/os_seek.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_sleep.o: $(srcdir)/os/os_sleep.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_spin.o: $(srcdir)/os/os_spin.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_stat.o: $(srcdir)/os/os_stat.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_tmpdir.o: $(srcdir)/os/os_tmpdir.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ os_unlink.o: $(srcdir)/os/os_unlink.c
+-	$(CC) $(CFLAGS) $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $?
+ 
+ # Test programs.
+ .dbtestrc: db.h $(srcdir)/test/test.tcl
