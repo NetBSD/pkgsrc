@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/12/03 15:40:02 epg Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/12 10:23:25 taca Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	ap2-${RUBY_PKGNAMEPREFIX}${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -13,6 +13,8 @@ COMMENT=	Embedded Ruby for Apache2 (development version)
 CONFLICTS+=	ap-ruby
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
+APACHE_MODULE=	YES
 DIST_SUBDIR=	ruby
 USE_RUBY=	YES
 RUBY_REQD=	1.6
@@ -26,17 +28,23 @@ CONFIGURE_ARGS=	--with-apxs="${APXS}" \
 MAKE_FLAGS+= APACHE_INCLUDES='-I${PREFIX}/include/httpd \
 		-I${PREFIX}/include/apr-0'
 
+.include "../../mk/bsd.prefs.mk"
+
+PKG_SYSCONFVAR=		apache
+PKG_SYSCONFSUBDIR?=	httpd
+CONF_FILES+=		${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf \
+			${PKG_SYSCONFDIR}/mod_ruby.conf
+
 post-build:
 	${SED} -e 's|/usr/local/apache/libexec|${LOCALBASE}/lib/httpd|g' \
 		${WRKSRC}/examples/httpd.conf > ${WRKSRC}/examples/mod_ruby.conf
 
 post-install:
-	${APXS} -i -A -n ruby ${WRKSRC}/mod_ruby.so
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mod_ruby
+	${INSTALL_DATA} ${WRKSRC}/doc/*  ${RUBY_DOCDIR}/mod_ruby
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/mod_ruby
 	${INSTALL_DATA} ${WRKSRC}/examples/mod_ruby.conf  \
 		${RUBY_EXAMPLESDIR}/mod_ruby
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mod_ruby
-	${INSTALL_DATA} ${WRKSRC}/doc/*  ${RUBY_DOCDIR}/mod_ruby
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../lang/ruby-base/buildlink2.mk"
