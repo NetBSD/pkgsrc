@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/22 03:54:17 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/25 12:07:12 dillo Exp $
 #
 
 DISTNAME=	manual-1.8.1-2
@@ -6,7 +6,7 @@ PKGNAME=	freeciv-manual-1.8.1.2
 CATEGORIES=	games
 MASTER_SITES=	http://www.freeciv.org/ftp/contrib/manual/
 
-MAINTAINER=	dillo@giga.or.at
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.freeciv.org/
 COMMENT=	Manuals for freeciv (game, client, and server)
 
