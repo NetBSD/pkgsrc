@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/17 11:32:16 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/10/15 03:37:00 markd Exp $
 bin/kdbg
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
 share/doc/kde/HTML/de/kdbg/breakptlist.html
@@ -49,23 +49,30 @@ share/doc/kde/HTML/ru/kdbg/tips.html
 share/doc/kde/HTML/ru/kdbg/types.html
 share/doc/kde/HTML/ru/kdbg/watches.html
 share/kde/applnk/Development/kdbg.desktop
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/brkpt.png
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/execopen.png
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmfinish.png
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmnext.png
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmnexti.png
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmrun.png
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmstep.png
+share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmstepi.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/brkpt.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/execopen.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmfinish.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmnext.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmnexti.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmrun.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmstep.png
+share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmstepi.png
 share/kde/apps/kdbg/pics/brkcond.xpm
 share/kde/apps/kdbg/pics/brkdis.xpm
 share/kde/apps/kdbg/pics/brkena.xpm
-share/kde/apps/kdbg/pics/brkpt.xpm
 share/kde/apps/kdbg/pics/brktmp.xpm
-share/kde/apps/kdbg/pics/execopen.xpm
 share/kde/apps/kdbg/pics/pcinner.xpm
 share/kde/apps/kdbg/pics/pcup.xpm
-share/kde/apps/kdbg/pics/pgmfinish.xpm
-share/kde/apps/kdbg/pics/pgmnext.xpm
-share/kde/apps/kdbg/pics/pgmnexti.xpm
-share/kde/apps/kdbg/pics/pgmrun.xpm
-share/kde/apps/kdbg/pics/pgmstep.xpm
-share/kde/apps/kdbg/pics/pgmstepi.xpm
 share/kde/apps/kdbg/pics/pointer.xpm
 share/kde/apps/kdbg/pics/regs.xpm
-share/kde/apps/kdbg/pics/search.xpm
 share/kde/apps/kdbg/pics/watch.xpm
 share/kde/apps/kdbg/pics/watchcoded.xpm
 share/kde/apps/kdbg/pics/watchdis.xpm
@@ -81,6 +88,7 @@ share/kde/apps/kdbg/types/qt3.kdbgtt
 share/kde/apps/kdbg/types/stdc++.kdbgtt
 share/kde/icons/hicolor/16x16/apps/kdbg.png
 share/kde/icons/hicolor/32x32/apps/kdbg.png
+share/kde/icons/hicolor/48x48/apps/kdbg.png
 share/kde/icons/locolor/16x16/apps/kdbg.png
 share/kde/icons/locolor/32x32/apps/kdbg.png
 share/kde/locale/cs/LC_MESSAGES/kdbg.mo
@@ -129,6 +137,12 @@ share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
 @comment dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kdbg/types
 @dirrm share/kde/apps/kdbg/pics
+@dirrm share/kde/apps/kdbg/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kdbg/icons/hicolor/22x22
+@dirrm share/kde/apps/kdbg/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kdbg/icons/hicolor/16x16
+@dirrm share/kde/apps/kdbg/icons/hicolor
+@dirrm share/kde/apps/kdbg/icons
 @dirrm share/kde/apps/kdbg
 @comment dirrm share/kde/applnk/Development
 @dirrm share/doc/kde/HTML/ru/kdbg
