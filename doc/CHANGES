@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1486 2003/02/26 00:32:34 kristerw Exp $
+$NetBSD: CHANGES,v 1.1487 2003/02/26 09:46:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -287,6 +287,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated eggdrop to 1.6.13 [salo 2003-01-16]
 	Added aspell-german-0.50-2 [salo 2003-01-16]
 	Added fhist-1.12 [markd 2003-01-16]
+	Updated capc-calc to 2.11.6.2 [wiz 2003-01-16]
 	Updated siag to 3.5.4 [uebayasi 2003-01-17]
 	Updated cvs to 1.11.4nb1 [christos 2003-01-17]
 	Updated gnumeric to 1.0.12nb2 [rh 2003-01-17]
@@ -834,3 +835,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ifile to 1.3.0 [salo 2003-02-25]
 	Updated autogen to 5.5.2 [kristerw 2003-02-25]
 	Added pciutils-2.1.11 [kristerw 2003-02-26]
+	Updated capc-calc to 2.11.7 [wiz 2003-02-26]
