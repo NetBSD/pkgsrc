@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.21 2004/06/21 08:32:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2004/07/14 18:09:00 xtraeme Exp $
 
-DISTNAME=		dovecot-0.99.10.6
+DISTNAME=		dovecot-0.99.10.7
 CATEGORIES=		mail
-MASTER_SITES=		http://dovecot.fi/
+MASTER_SITES=		http://www.dovecot.org/releases/
 
+.if 0
 PATCH_SITES=		http://www.roughtrade.net/dovecot/
-PATCHFILES=		dovecot-crammd5-0.99.10.6.diff
+PATCHFILES=		dovecot-crammd5-0.99.10.7.diff
 PATCH_DIST_STRIP=	-p1
+.endif
 
 MAINTAINER=		tom@replic8.net
-HOMEPAGE=		http://dovecot.fi/
+HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 
 USE_BUILDLINK3=		YES
