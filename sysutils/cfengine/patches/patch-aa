@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/10 23:13:07 abs Exp $
+--- contrib/Makefile.in.orig	Thu Apr 10 09:19:55 1997
++++ contrib/Makefile.in	Sun Oct 10 23:43:34 1999
+@@ -12,7 +12,7 @@
+ datadir = @datadir@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ 
+ MKINSTALLDIR = @top_srcdir@/bin/mkinstalldirs
+ 
+@@ -28,7 +28,7 @@
+ 	${MKINSTALLDIR} ${sbindir}
+ 	for x in $?; \
+ 	do \
+-	${INSTALL_PROGRAM} $$x ${sbindir}; \
++	${INSTALL_SCRIPT} $$x ${sbindir}; \
+ 	done
+ 
+ clean:
