@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.32 1998/10/20 16:01:03 agc Exp $
+# $NetBSD: mk.conf.example,v 1.33 1998/10/27 10:35:26 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -173,13 +173,6 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # of the database admin
                                 # Possible: any user name
                                 # Default: pgsql
-
-#PKG_RELATIVE_SYMLINKS=yes	# Change any "absolute" symlinks (i.e. ones
-                                # containing the full pathname) into relative
-                                # ones (relative to $PREFIX) when building
-                                # a package.
-                                # Possible: defined, not defined
-                                # Default: not defined
 
 #RCS_LOCALID=			# Used in cvs-current package for an RCS Id
                                 # which is expanded.
