@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/19 00:04:23 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/13 22:09:28 kristerw Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -73,7 +73,7 @@ pre-install:
 
 post-install:
 	${EGREP} -v "^#" ${FILESDIR}/man.server > ${WRKDIR}/man_tar
-	${TAR} -zxm -C ${PREFIX}/man -T ${WRKDIR}/man_tar  		\
+	cd ${PREFIX}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
 		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../databases/postgresql74-lib/buildlink3.mk"
