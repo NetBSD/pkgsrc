@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/03/28 20:08:08 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/01/22 14:34:29 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/08/09 23:37:33 fenner Exp 
 #
 
@@ -16,7 +16,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://synergy.kaist.ac.kr/~jwj/
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--without-xsplay
+CONFIGURE_ARGS=		--without-xsplay --without-pthread
 CONFIGURE_ENV=		LIBS="${LIBS} -lossaudio"
 
 .include "../../mk/bsd.pkg.mk"
