@@ -284,52 +284,52 @@ void	 tputs(const char *, int, int (*)(int));
 # include "vis.h"
 #endif
 
-#ifndef HAVE_D_NAMLEN
+#if !HAVE_D_NAMLEN
 # define DIRENT_MISSING_D_NAMLEN
 #endif
 
-#ifndef HAVE_H_ERRNO_D
+#if !HAVE_H_ERRNO_D
 extern int	h_errno;
 #endif
 #define HAVE_H_ERRNO	1		/* XXX: an assumption for now... */
 
-#ifndef HAVE_FCLOSE_D
+#if !HAVE_FCLOSE_D
 int	fclose(FILE *);
 #endif
 
-#ifndef HAVE_ISBLANK
+#if !HAVE_ISBLANK
 int     isblank(int);
 #endif
 
-#ifndef HAVE_GETPASS_D
+#if !HAVE_GETPASS_D
 char	*getpass(const char *);
 #endif
 
-#ifndef HAVE_OPTARG_D
+#if !HAVE_OPTARG_D
 extern char    *optarg;
 #endif
 
-#ifndef HAVE_OPTIND_D
+#if !HAVE_OPTIND_D
 extern int	optind;
 #endif
 
-#ifndef HAVE_PCLOSE_D
+#if !HAVE_PCLOSE_D
 int	pclose(FILE *);
 #endif
 
-#ifndef HAVE_ERR
+#if !HAVE_ERR
 #include <err.h>
 #endif
 
-#ifndef HAVE_FGETLN
+#if !HAVE_FGETLN
 char   *fgetln(FILE *, size_t *);
 #endif
 
-#ifndef HAVE_FSEEKO
+#if !HAVE_FSEEKO
 int	fseeko(FILE *, off_t, int);
 #endif
 
-#ifndef HAVE_FPARSELN
+#if !HAVE_FPARSELN
 # define FPARSELN_UNESCESC	0x01
 # define FPARSELN_UNESCCONT	0x02
 # define FPARSELN_UNESCCOMM	0x04
@@ -338,52 +338,52 @@ int	fseeko(FILE *, off_t, int);
 char   *fparseln(FILE *, size_t *, size_t *, const char[3], int);
 #endif
 
-#ifndef HAVE_INET_NTOP
+#if !HAVE_INET_NTOP
 const char *inet_ntop(int, const void *, char *, size_t);
 #endif
 
-#ifndef HAVE_INET_PTON
+#if !HAVE_INET_PTON
 int inet_pton(int, const char *, void *);
 #endif
 
-#ifndef HAVE_MKSTEMP
+#if !HAVE_MKSTEMP
 int	mkstemp(char *);
 #endif
 
-#ifndef HAVE_MKDTEMP
+#if !HAVE_MKDTEMP
 char   *mkdtemp(char *);
 #endif
 
-#ifndef HAVE_LCHMOD
+#if !HAVE_LCHMOD
 int	lchmod(const char *, mode_t);
 #endif
 
-#ifndef HAVE_LCHOWN
+#if !HAVE_LCHOWN
 int	lchown(const char *, uid_t, gid_t);
 #endif
 
-#ifndef HAVE_SETPROGNAME
+#if !HAVE_SETPROGNAME
 const char *getprogname(void);
 void	setprogname(const char *);
 #endif
 
-#ifndef HAVE_SNPRINTF
+#if !HAVE_SNPRINTF
 int	snprintf(char *, size_t, const char *, ...);
 #endif
 
-#ifndef HAVE_STRDUP
+#if !HAVE_STRDUP
 char   *strdup(const char *);
 #endif
 
-#ifndef HAVE_STRERROR
+#if !HAVE_STRERROR
 char   *strerror(int);
 #endif
 
-#ifndef HAVE_STRMODE
+#if !HAVE_STRMODE
 void strmode(mode_t, char *);
 #endif
 
-#if !defined(HAVE_STRPTIME) || !defined(HAVE_STRPTIME_D)
+#if !HAVE_STRPTIME || !HAVE_STRPTIME_D
 char   *strptime(const char *, const char *, struct tm *);
 #endif
 
@@ -401,27 +401,27 @@ long long strtoll(const char *, char **, int);
 # define NO_LONG_LONG	1
 #endif	/* ! HAVE_QUAD_SUPPORT */
 
-#ifndef HAVE_TIMEGM
+#if !HAVE_TIMEGM
 time_t	timegm(struct tm *);
 #endif
 
-#ifndef HAVE_HSTRERROR
+#if !HAVE_HSTRERROR
 char   *strerror(int);
 #endif
 
-#ifndef HAVE_STRLCAT
+#if !HAVE_STRLCAT
 size_t	strlcat(char *, const char *, size_t);
 #endif
 
-#ifndef HAVE_STRLCPY
+#if !HAVE_STRLCPY
 size_t	strlcpy(char *, const char *, size_t);
 #endif
 
-#ifndef HAVE_STRSEP
+#if !HAVE_STRSEP
 char   *strsep(char **stringp, const char *delim);
 #endif
 
-#ifndef HAVE_MEMMOVE
+#if !HAVE_MEMMOVE
 # define memmove(a,b,c)	bcopy((b),(a),(c))
 	/* XXX: add others #defines for borken systems? */
 #endif
@@ -430,14 +430,14 @@ char   *strsep(char **stringp, const char *delim);
 # define getpass getpassphrase
 #endif
 
-#if ! defined(MIN)
+#if !defined(MIN)
 # define MIN(a, b)	((a) < (b) ? (a) : (b))
 #endif
-#if ! defined(MAX)
+#if !defined(MAX)
 # define MAX(a, b)	((a) < (b) ? (b) : (a))
 #endif
 
-#if ! defined(timersub)
+#if !defined(timersub)
 # define timersub(tvp, uvp, vvp)					\
 	do {								\
 		(vvp)->tv_sec = (tvp)->tv_sec - (uvp)->tv_sec;		\
@@ -449,11 +449,11 @@ char   *strsep(char **stringp, const char *delim);
 	} while (0)
 #endif
 
-#if ! defined(S_ISLNK)
+#if !defined(S_ISLNK)
 # define S_ISLNK(m)	((m & S_IFMT) == S_IFLNK)
 #endif
 
-#if ! defined(ALLPERMS)
+#if !defined(ALLPERMS)
 # define ALLPERMS (S_ISUID|S_ISGID|S_ISVTX|S_IRWXU|S_IRWXG|S_IRWXO)
 #endif
 
