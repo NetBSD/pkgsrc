@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2005/02/04 15:32:13 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2005/02/18 13:48:08 wiz Exp $
 #
 
-DISTNAME=	bins-1.1.26
+DISTNAME=	bins-1.1.27
 CATEGORIES=	www graphics
 MASTER_SITES=	http://zubro.chez.tiscali.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -107,7 +107,7 @@ do-install:
 		${WRKSRC}/templates.satyap/static/*.css			\
 		${PREFIX}/share/examples/bins/templates.satyap/static/
 	# Translations
-	for lang in de eo es fi fr it ja nl pl ru zh; do \
+	for lang in de eo es fi fr it ja nl pl ru zh_TW; do \
 		${INSTALL_DATA} ${WRKSRC}/intl/$$lang.mo \
 		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES/bins.mo; \
 	done
