@@ -1,8 +1,25 @@
-$NetBSD: patch-ac,v 1.2 2002/10/28 08:46:44 skrll Exp $
+$NetBSD: patch-ac,v 1.3 2003/03/11 13:02:08 markd Exp $
 
---- src/tools/qdir_unix.cpp.orig	Thu Oct 17 15:08:58 2002
+--- src/tools/qdir_unix.cpp.orig	Mon Dec  9 22:40:32 2002
 +++ src/tools/qdir_unix.cpp
-@@ -82,10 +82,19 @@ QString QDir::canonicalPath() const
+@@ -36,6 +36,16 @@
+ **********************************************************************/
+ 
+ #include "qplatformdefs.h"
++
++#ifdef Q_TRAILING_DIR_SEP  // Some OSes doesn't support trailing /'s
++
++// POSIX Large File Support redefines truncate -> truncate64
++#if defined(truncate)
++# undef truncate
++#endif
++
++#endif
++
+ #include "qdir.h"
+ 
+ #ifndef QT_NO_DIR
+@@ -86,10 +96,19 @@
  
  bool QDir::mkdir( const QString &dirName, bool acceptAbsPath ) const
  {
@@ -13,19 +30,19 @@ $NetBSD: patch-ac,v 1.2 2002/10/28 08:46:44 skrll Exp $
 -	name = dirName.left( dirName.length() - 1 );
 +    int pos = name.length();
 +    if (pos > 0) {
-+	while ( (pos - 1) >= 0 && name[pos - 1] == '/' ) {
-+	    --pos;
-+	};
-+	if ( pos == 0 ) {
-+	    name = QDir::rootDirPath();
-+	} else {
-+	    name.truncate( pos );
-+	}
++       while ( (pos - 1) >= 0 && name[pos - 1] == '/' ) {
++	   --pos;
++       };
++       if ( pos == 0 ) {
++	   name = QDir::rootDirPath();
++       } else {
++	   name.truncate( pos );
++       }
 +    }
-     return QT_MKDIR( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 )
+     return ::mkdir( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 )
  	== 0;
  #else
-@@ -96,7 +105,24 @@ bool QDir::mkdir( const QString &dirName
+@@ -100,7 +119,24 @@
  
  bool QDir::rmdir( const QString &dirName, bool acceptAbsPath ) const
  {
@@ -33,19 +50,19 @@ $NetBSD: patch-ac,v 1.2 2002/10/28 08:46:44 skrll Exp $
 +    QString name = dirName;
 +    int pos = name.length();
 +    if (pos > 0) {
-+	while ( (pos - 1) >= 0 && name[pos - 1] == '/' ) {
-+	    --pos;
-+	};
-+	if ( pos == 0 ) {
-+	    name = QDir::rootDirPath();
-+	} else {
-+	    name.truncate( pos );
-+	}
++       while ( (pos - 1) >= 0 && name[pos - 1] == '/' ) {
++	   --pos;
++       };
++       if ( pos == 0 ) {
++	   name = QDir::rootDirPath();
++       } else {
++	   name.truncate( pos );
++       }
 +    }
-+    return QT_RMDIR( QFile::encodeName(filePath(name,acceptAbsPath)) )
-+	== 0;
++    return ::rmdir( QFile::encodeName(filePath(name,acceptAbsPath)) )
++       == 0;
 +#else
-     return QT_RMDIR( QFile::encodeName(filePath(dirName,acceptAbsPath)) ) == 0;
+     return ::rmdir( QFile::encodeName(filePath(dirName,acceptAbsPath)) ) == 0;
 +#endif
  }
  

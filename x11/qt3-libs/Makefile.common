@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.12 2003/02/18 19:16:53 drochner Exp $
+# $NetBSD: Makefile.common,v 1.13 2003/03/11 13:02:07 markd Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.trolltech.com/qt/source/ \
 			ftp://ftp.bero.org/pub/qt/source/
+EXTRACT_SUFX=		.tar.bz2
 
 .include "../qt3/Makefile.common"
 
@@ -16,11 +17,15 @@ USE_X11BASE=		yes
 USE_GMAKE=		yes
 USE_CXX=		yes
 USE_LIBTOOL=		yes
-CONFIGURE_ARGS+=	-shared -sm -thread \
+
+QTPREFIX=		${PREFIX}/qt3
+
+CONFIGURE_ARGS+=	-prefix ${QTPREFIX}
+CONFIGURE_ARGS+=	-shared -sm -thread -no-stl \
 			-system-zlib -system-libpng \
 			-system-libmng -system-libjpeg
-CONFIGURE_ARGS+=	-no-xinerama
 CONFIGURE_ARGS+=	-qt-gif	# qt3 does not write compressed GIFs
+CONFIGURE_ARGS+=	-no-g++-exceptions
 
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
 
@@ -38,15 +43,14 @@ SCRIPTS_ENV+=		HOME="${WRKDIR}"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
+CONFIGURE_SCRIPT=	${SH} ./configure
 CONFIGURE_ARGS+=	-platform solaris-g++
 SYS_LIBS=		-lresolv -lsocket -lnsl
 .endif
 
-# 
-# A cheat so that we don't have to set QTDIR at run-time to find the
-# plugins.
-# 
-CXXFLAGS+=		-DQT_INSTALL_PLUGINS=\\"${QTPREFIX}/plugins\\"
+.if !exists(${X11BASE}/lib/libXinerama.so)
+CONFIGURE_ARGS+=	-no-xinerama
+.endif
 
 #
 # Reverse the change to how templates are handled made between 3.0.4

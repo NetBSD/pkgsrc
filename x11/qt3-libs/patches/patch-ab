@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2002/05/04 13:30:11 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2003/03/11 13:02:08 markd Exp $
 
---- configure.orig	Mon Apr 22 22:03:46 2002
-+++ configure	Fri May  3 17:40:27 2002
-@@ -775,7 +775,7 @@
- # we may write in the build tree, let's take advantage of this
- # to test that QTDIR is correctly set to be the build tree
- touch .test.qt.
--if [ '!' -f ${QTDIR}/.test.qt. ]; then
-+if [ '!' -f .test.qt. ]; then
-     rm -f .test.qt.
-     echo
-     echo
+--- tools/designer/editor/editor.pro.orig	Wed Nov 20 11:07:43 2002
++++ tools/designer/editor/editor.pro
+@@ -1,6 +1,5 @@
+ TEMPLATE	= lib
+-CONFIG		+= qt warn_on staticlib
+-CONFIG		-= dll
++CONFIG		+= qt warn_on dll
+ HEADERS		= editor.h  \
+ 		  parenmatcher.h  \
+ 		  completion.h \
