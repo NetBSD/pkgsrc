@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/04 14:40:40 recht Exp $
+
+--- configure.orig	2003-11-10 08:49:16.000000000 +0100
++++ configure
+@@ -19800,7 +19800,7 @@ fi
+ 
+ fi
+ 
+-	X_LIBS="$X_LIBS -lX11"
++	X_LIBS="$X_LIBS -lXrender -lXext -lX11"
+ 
+ 	if test "x$no_x" = "xyes"
+ 	then
+@@ -19928,23 +19928,23 @@ fi
+   else
+      PKG_CONFIG_MIN_VERSION=0.9.0
+      if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
+-        echo "$as_me:$LINENO: checking for randr >= $RANDR_VERSION xext xrender" >&5
+-echo $ECHO_N "checking for randr >= $RANDR_VERSION xext xrender... $ECHO_C" >&6
++        echo "$as_me:$LINENO: checking for randr >= $RANDR_VERSION xrender" >&5
++echo $ECHO_N "checking for randr >= $RANDR_VERSION xrender... $ECHO_C" >&6
+ 
+-        if $PKG_CONFIG --exists "randr >= $RANDR_VERSION xext xrender" ; then
++        if $PKG_CONFIG --exists "randr >= $RANDR_VERSION xrender" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+ 
+             echo "$as_me:$LINENO: checking RANDR_CFLAGS" >&5
+ echo $ECHO_N "checking RANDR_CFLAGS... $ECHO_C" >&6
+-            RANDR_CFLAGS=`$PKG_CONFIG --cflags "randr >= $RANDR_VERSION xext xrender"`
++            RANDR_CFLAGS=`$PKG_CONFIG --cflags "randr >= $RANDR_VERSION xrender"`
+             echo "$as_me:$LINENO: result: $RANDR_CFLAGS" >&5
+ echo "${ECHO_T}$RANDR_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking RANDR_LIBS" >&5
+ echo $ECHO_N "checking RANDR_LIBS... $ECHO_C" >&6
+-            RANDR_LIBS=`$PKG_CONFIG --libs "randr >= $RANDR_VERSION xext xrender"`
++            RANDR_LIBS=`$PKG_CONFIG --libs "randr >= $RANDR_VERSION xrender"`
+             echo "$as_me:$LINENO: result: $RANDR_LIBS" >&5
+ echo "${ECHO_T}$RANDR_LIBS" >&6
+         else
+@@ -19952,7 +19952,7 @@ echo "${ECHO_T}$RANDR_LIBS" >&6
+             RANDR_LIBS=""
+             ## If we have a custom action on failure, don't print errors, but
+             ## do set a variable so people can do so.
+-            RANDR_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "randr >= $RANDR_VERSION xext xrender"`
++            RANDR_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "randr >= $RANDR_VERSION xrender"`
+             echo $RANDR_PKG_ERRORS
+         fi
+ 
+@@ -19967,8 +19967,8 @@ echo "${ECHO_T}$RANDR_LIBS" >&6
+   if test $succeeded = yes; then
+      :
+   else
+-     { { echo "$as_me:$LINENO: error: Library requirements (randr >= $RANDR_VERSION xext xrender) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+-echo "$as_me: error: Library requirements (randr >= $RANDR_VERSION xext xrender) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
++     { { echo "$as_me:$LINENO: error: Library requirements (randr >= $RANDR_VERSION xrender) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
++echo "$as_me: error: Library requirements (randr >= $RANDR_VERSION xrender) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
+ 
