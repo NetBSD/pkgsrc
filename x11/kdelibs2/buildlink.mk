@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/05 17:31:27 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/09 13:37:08 skrll Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -33,7 +33,7 @@ BUILDLINK_FILES.kdelibs2!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdel
 .include "../../audio/libaudiofile/buildlink.mk"
 .include "../../devel/libtool/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
-.include "../../textproc/jade/buildlink.mk"
+#.include "../../textproc/jade/buildlink.mk"
 .include "../../x11/qt2-libs/buildlink.mk"
 
 BUILDLINK_TARGETS.kdelibs2=	kdelibs2-buildlink

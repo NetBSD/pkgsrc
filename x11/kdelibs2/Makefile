@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/07/08 11:28:44 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/09 13:37:08 skrll Exp $
 #
 
 DISTNAME=	kdelibs-2.1
@@ -59,6 +59,5 @@ post-install:
 .include "../../devel/libtool/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
-.include "../../textproc/jade/buildlink.mk"
-.include "../../x11/qt2-libs/buildlink.mk"
+
 .include "../../mk/bsd.pkg.mk"
