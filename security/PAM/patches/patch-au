@@ -1,19 +1,14 @@
-$NetBSD: patch-au,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+$NetBSD: patch-au,v 1.2 2002/01/29 17:10:12 jlam Exp $
 
---- conf/install_conf.orig	Sun Jul 12 07:17:14 1998
-+++ conf/install_conf
-@@ -14,11 +14,10 @@
- 		echo "\
- An older Linux-PAM configuration file already exists ($CONFILE)"
- 		WRITE=overwrite
-+		yes=n
-+	else
-+		yes=y
- 	fi
--	echo -n "\
--Do you wish to copy the $CONF file in this distribution
--to $CONFILE ? (y/n) [n] "
--	read yes
+--- modules/pam_userdb/Makefile.orig	Sat Feb 17 22:03:31 2001
++++ modules/pam_userdb/Makefile
+@@ -12,7 +12,9 @@
+ 
+ ifeq ($(HAVE_NDBM_H),yes)
+  WHICH_DB=ndbm
++ifeq ($(HAVE_LIBNDBM),yes)
+  MODULE_SIMPLE_EXTRALIBS = -lndbm
++endif
  else
- 	yes=n
- fi
+ ifeq ($(HAVE_LIBDB),yes)
+  WHICH_DB=db

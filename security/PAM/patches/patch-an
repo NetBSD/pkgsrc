@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+$NetBSD: patch-an,v 1.2 2002/01/29 17:10:11 jlam Exp $
 
---- modules/pam_unix/pam_unix_acct.c.orig	Sat Oct 21 12:49:02 2000
+--- modules/pam_unix/pam_unix_acct.c.orig	Wed Dec 20 00:15:05 2000
 +++ modules/pam_unix/pam_unix_acct.c
-@@ -46,9 +46,12 @@
+@@ -41,9 +41,12 @@
  #include <string.h>
  #include <unistd.h>
  #include <sys/types.h>
@@ -14,8 +14,8 @@ $NetBSD: patch-an,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
 +#endif
  #include <time.h>		/* for time() */
  
- 
-@@ -78,7 +81,7 @@
+ #include <security/_pam_macros.h>
+@@ -72,7 +75,7 @@
  	const char *uname;
  	int retval, daysleft;
  	time_t curdays;
@@ -24,7 +24,7 @@ $NetBSD: patch-an,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  	struct passwd *pwent;
  	char buf[80];
  
-@@ -119,6 +122,9 @@
+@@ -113,6 +116,9 @@
  					return PAM_CRED_INSUFFICIENT;
  			}
  		}
@@ -34,7 +34,7 @@ $NetBSD: patch-an,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  		spent = getspnam( uname );
  		if (save_uid == pwent->pw_uid)
  			setreuid( save_uid, save_euid );
-@@ -127,16 +133,42 @@
+@@ -121,16 +127,42 @@
  			setreuid( save_uid, -1 );
  			setreuid( -1, save_euid );
  		}
@@ -78,7 +78,7 @@ $NetBSD: patch-an,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  	curdays = time(NULL) / (60 * 60 * 24);
  	D(("today is %d, last change %d", curdays, spent->sp_lstchg));
  	if ((curdays > spent->sp_expire) && (spent->sp_expire != -1)
-@@ -189,7 +221,7 @@
+@@ -183,7 +215,7 @@
  			 daysleft, daysleft == 1 ? "" : "s");
  		_make_remark(pamh, ctrl, PAM_TEXT_INFO, buf);
  	}
