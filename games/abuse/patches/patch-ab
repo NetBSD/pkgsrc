@@ -1,14 +1,34 @@
-$NetBSD: patch-ab,v 1.1 1998/08/27 12:54:56 garbled Exp $
---- Makefile.in.orig	Fri Jul 24 07:58:56 1998
-+++ Makefile.in	Fri Jul 24 08:02:30 1998
-@@ -39,6 +39,6 @@
+$NetBSD: patch-ab,v 1.2 2001/07/02 15:30:59 abs Exp $
+
+--- abuse/Makefile.in.orig	Wed Jul  9 08:55:21 1997
++++ abuse/Makefile.in
+@@ -37,10 +37,10 @@
+ AUTOMAKE = @AUTOMAKE@
+ AUTOHEADER = @AUTOHEADER@
  
 -INSTALL = @INSTALL@
 -INSTALL_PROGRAM = @INSTALL_PROGRAM@
 -INSTALL_DATA = @INSTALL_DATA@
 -INSTALL_SCRIPT = @INSTALL_SCRIPT@
-+INSTALL = /usr/bin/install
-+INSTALL_PROGRAM = $(INSTALL) -c -s -o bin -g games -m 2755 
-+INSTALL_DATA = $(INSTALL) -c -o bin -g games -m 0664 
-+INSTALL_SCRIPT = $(INSTALL) -c -o bin -g games -m 0755
++INSTALL = /usr/bin/install -c
++INSTALL_PROGRAM = $(INSTALL) -s -o bin -g games -m 2755 
++INSTALL_DATA = $(INSTALL) -o bin -g games -m 0664
++INSTALL_SCRIPT = $(INSTALL) -o bin -g games -m 0755
  transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -239,11 +239,11 @@
+ 
+ install-pkglibPROGRAMS: $(pkglib_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(pkglibdir)
++	$(mkinstalldirs) $(bindir)
+ 	@list='$(pkglib_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "  $(INSTALL_PROGRAM) $$p $(pkglibdir)/`echo $$p|sed '$(transform)'`"; \
+-	     $(INSTALL_PROGRAM) $$p $(pkglibdir)/`echo $$p|sed '$(transform)'`; \
++	    echo "  $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`"; \
++	     $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
+ 	  else :; fi; \
+ 	done
+ 
