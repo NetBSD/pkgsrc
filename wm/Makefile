@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2004/08/28 23:19:36 rumble Exp $
+# $NetBSD: Makefile,v 1.65 2004/10/04 20:53:10 cube Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -33,6 +33,7 @@ SUBDIR+=	icewm-gnome
 SUBDIR+=	icewm-imlib
 SUBDIR+=	icewmconf
 SUBDIR+=	ion
+SUBDIR+=	ion3-devel
 SUBDIR+=	larswm
 SUBDIR+=	lwm
 SUBDIR+=	matchbox
