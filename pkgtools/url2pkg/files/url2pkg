@@ -1,6 +1,8 @@
 #!/bin/sh
 #
-# url2pkg $Id: url2pkg,v 1.5 2000/01/06 01:46:18 feyrer Exp $
+# $NetBSD: url2pkg,v 1.6 2000/01/06 02:01:28 hubertf Exp $
+#
+# url2pkg
 # (c) 1999 Hubert Feyrer
 #
 
@@ -45,7 +47,7 @@ if [ ! -f w*/.extract_done ]; then
 	fi
 	
 	(
-	echo '# $NetBSD: url2pkg,v 1.5 2000/01/06 01:46:18 feyrer Exp $'
+	echo '# $NetBSD: url2pkg,v 1.6 2000/01/06 02:01:28 hubertf Exp $'
 	echo '#'
 	echo ""
 	echo "DISTNAME=	$DISTNAME"
@@ -62,7 +64,7 @@ if [ ! -f w*/.extract_done ]; then
 	) >Makefile
 	
 	mkdir pkg
-	echo '@comment $NetBSD: url2pkg,v 1.5 2000/01/06 01:46:18 feyrer Exp $' >pkg/PLIST
+	echo '@comment $NetBSD: url2pkg,v 1.6 2000/01/06 02:01:28 hubertf Exp $' >pkg/PLIST
 	
 	vi +/FILLTHISINPLEASE Makefile
 	
