@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/01/19 09:35:26 skrll Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/20 10:04:02 skrll Exp $
 
 DISTNAME=	kdebase-3.0.5a
 PKGREVISION=	2
@@ -55,6 +55,31 @@ CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 ICONDIR=		share/kde/icons
+
+FOO_MAIN_FILES= \
+	kate/app/dummy_main.cpp \
+	kcontrol/access/kaccess_main.cpp \
+	kcontrol/kcontrol/kcminit_main.cpp \
+	kcontrol/kcontrol/kcmshell_main.cpp \
+	kcontrol/kcontrol/kcontrol_main.cpp \
+	kdeprint/kjobviewer/kjobviewer_main.cpp \
+	kdesktop/kdesktop_main.cc \
+	khotkeys/khotkeys/khotkeys_main.cpp \
+	kicker/kicker_main.cpp \
+	kicker/proxy/appletproxy_main.cpp \
+	kicker/proxy/extensionproxy_main.cpp \
+	klipper/klipper_main.cpp \
+	kmenuedit/kmenuedit_main.cpp \
+	konqueror/client/kfmclient_main.cc \
+	konqueror/keditbookmarks/keditbookmarks_main.cpp \
+	konqueror/konqueror_main.cc \
+	konsole/konsole/konsole_main.cpp \
+	konsole/konsole/kwrited_main.cpp \
+	ksmserver/ksmserver_main.cpp \
+	kxkb/kxkb_main.cpp \
+	legacyimport/klegacyimport_main.cpp
+
+.include "../../x11/kde3/Makefile.foo_main"
 
 # Several programs need to be setuid-root, but due to the way that KDE3
 # finds executables, the files must have their read bit set so that
