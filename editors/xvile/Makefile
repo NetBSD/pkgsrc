@@ -3,7 +3,7 @@
 # Date created:         		Wed Nov 26, 1996
 # Whom:                 		pgf
 #
-# $NetBSD: Makefile,v 1.3 1997/12/19 11:25:31 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:42 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -18,7 +18,7 @@ MAINTAINER=	gj@freebsd.org
 
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --with-screen=${SCREEN_TYPE}
+CONFIGURE_ARGS+= --with-screen=${SCREEN_TYPE}
 MAN1=		xvile.1
 
 pre-configure:
