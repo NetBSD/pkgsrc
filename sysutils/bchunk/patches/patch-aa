@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/21 16:45:32 pooka Exp $
+
+--- bchunk.c.orig	Sun Oct 11 01:51:30 1998
++++ bchunk.c	Mon Feb 21 18:09:52 2000
+@@ -138,13 +138,22 @@
+ 		
+ 	} else if (!strcasecmp(modes, "MODE2/2352")) {
+ 		track->bstart = 0;
+-		// If this would happen to be a playstation data track
+-		if (0)	// leave at 2352
+-			track->bsize = 2352;
++		if (1)
++			track->bsize = 2048;
+ 		else	// PSX
+ 			track->bsize = 2336;
+ 		track->extension = ext_iso;
+-		
++
++	} else if (!strcasecmp(modes, "MODE2/2352/2048")) {
++		track->bstart = 24;
++		track->bsize = 2048;
++		track->extension = ext_iso;
++
++	} else if (!strcasecmp(modes, "MODE2/2352/2324")) {
++		track->bstart = 24;
++		track->bsize = 2324;
++		track->extension = ext_iso;
++
+ 	} else if (!strcasecmp(modes, "MODE2/2336")) {
+ 		// WAS 2352 in V1.361B still work?
+ 		// what if MODE2/2336 single track bin, still 2352 sectors?
