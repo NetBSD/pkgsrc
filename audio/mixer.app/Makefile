@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2003/04/26 09:49:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/03 15:35:59 jschauma Exp $
 #
 
-DISTNAME=	Mixer.app-1.7.0
-PKGNAME=	mixer.app-1.7.0
+DISTNAME=	Mixer.app-1.8.0
+PKGNAME=	mixer.app-1.8.0
+CATEGORIES=	audio
 CATEGORIES=	audio windowmaker
 MASTER_SITES=	http://www.fukt.bth.se/~per/mixer/
 
 MAINTAINER=	ptiJo@noos.fr
-HOMEPAGE=	http://www.student.hk-r.se/~pt96pli/mixer/
+HOMEPAGE=	http://www.fukt.bth.se/~per/mixer/
 COMMENT=	Another mixer intended for the windowmaker dockapp
 
 USE_BUILDLINK2=	YES
