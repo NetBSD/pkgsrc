@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2001/06/16 11:48:34 zuntum Exp $
+# $NetBSD: Makefile,v 1.140 2001/06/30 15:15:31 taca Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -110,7 +110,7 @@ SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
 SUBDIR+=	qvplay
 SUBDIR+=	rayshade
-SUBDIR+=	ruby-gl
+SUBDIR+=	ruby-opengl
 SUBDIR+=	s10sh
 SUBDIR+=	sane-backends
 SUBDIR+=	sane-frontends
