@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nolinguas,v 1.4 1999/04/16 20:08:16 jlam Exp $
+@comment $NetBSD: PLIST.nolinguas,v 1.5 1999/05/02 17:59:21 rh Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -245,6 +245,8 @@ share/WindowMaker/Styles/GreyBlue.style
 share/WindowMaker/Styles/Gtk.style
 share/WindowMaker/Styles/LightBlue.style
 share/WindowMaker/Styles/Pastel.style
+share/WindowMaker/Styles/Pink.style
+share/WindowMaker/Styles/Pumpkin.style
 share/WindowMaker/Styles/Purple.style
 share/WindowMaker/Styles/Red.style
 share/WindowMaker/Styles/RednBlue.style
@@ -260,8 +262,8 @@ share/WindowMaker/exitscript.sh
 share/WindowMaker/menu
 share/WindowMaker/menu.ca
 share/WindowMaker/menu.cz
+share/WindowMaker/menu.da
 share/WindowMaker/menu.de
-share/WindowMaker/menu.dk
 share/WindowMaker/menu.el
 share/WindowMaker/menu.es
 share/WindowMaker/menu.fi
@@ -280,11 +282,13 @@ share/WindowMaker/menu.ru
 share/WindowMaker/menu.se
 share/WindowMaker/menu.sl
 share/WindowMaker/menu.tr
+share/WindowMaker/menu.zh_CN
 share/WindowMaker/menu.zh_TW.Big5
 share/WindowMaker/plmenu
 share/WindowMaker/plmenu.dk
 share/WindowMaker/plmenu.fr
 share/WindowMaker/plmenu.hr
+share/WindowMaker/plmenu.zh_CN
 share/WindowMaker/wmmacros
 share/WindowMaker/xtree.dat
 share/doc/WindowMaker/README
