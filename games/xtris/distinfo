@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/01/25 17:47:18 hubertf Exp $
+
+SHA1 (xtris-1.15.tar.gz) = 157eb642ada6d72290acf3d4d2638ec04f8de878
+Size (xtris-1.15.tar.gz) = 52130 bytes
+SHA1 (patch-aa) = 2e243e8df26d6c5403df385f031eb3873eed8d23
+SHA1 (patch-ab) = 80c184220576c61236a5b50facaf27693013d38f
+SHA1 (patch-ac) = 4f2e5c94b22032da6bee13ce451fe98a78982c61
+SHA1 (patch-ad) = 7047fe19e0e951624f258981015875e054aa14d3
+SHA1 (patch-ae) = 5de5c829f41efa85c866fa46615d84a2ba065c2a
