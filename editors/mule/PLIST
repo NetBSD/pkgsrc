@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/18 15:14:17 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/30 01:43:12 seb Exp $
 bin/any2ps
 bin/b2m
 bin/coco
@@ -10,28 +10,6 @@ bin/mule-19.28
 @exec ln %D/%F %B/mule
 @unexec ${RM} %B/mule
 bin/rcs-checkin
-@comment @unexec ${INSTALL_INFO} --delete %D/info/CCL %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/ISO2022 %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/R2L %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/XFONT %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/antenews-jp %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/canna-jp %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/cl %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/dired-x %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/egg %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/egg-jp %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/emacs %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/forms %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/gnus %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/kbd-trans %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/languages %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/m2ps %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/mule %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/mule-jp %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/quail %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/sc %D/info/dir
-@comment @unexec ${INSTALL_INFO} --delete %D/info/terminology %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/vip %D/info/dir
 info/CCL
 info/ISO2022
 info/R2L
@@ -97,28 +75,6 @@ info/terminology
 info/vip
 info/vip-1
 info/vip-2
-@comment @exec   ${INSTALL_INFO}          %D/info/CCL %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/ISO2022 %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/R2L %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/XFONT %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/antenews-jp %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/canna-jp %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/cl %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/dired-x %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/egg %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/egg-jp %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/emacs %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/forms %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/gnus %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/kbd-trans %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/languages %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/m2ps %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/mule %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/mule-jp %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/quail %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/sc %D/info/dir
-@comment @exec   ${INSTALL_INFO}          %D/info/terminology %D/info/dir
-@exec   ${INSTALL_INFO}          %D/info/vip %D/info/dir
 man/man1/coco.1
 man/man1/ctags.1
 man/man1/etags.1
@@ -1026,7 +982,7 @@ lib/mule/19.28/lisp/yow.elc
 @exec   f=%D/lib/mule/lock ; [ ! -d $f ] && ${MKDIR} $f
 @unexec f=%D/lib/mule/lock ; [ -d $f ] && ${RM} -rf $f
 @exec   f=%D/lib/mule/site-lisp ; [ ! -d $f ] && ${MKDIR} $f
-@unexec f=%D/lib/mule/site-lisp ; [ -d $f ] && ${MKDIR} $f
+@unexec ${RMDIR} %D/lib/mule/site-lisp 2>/dev/null || ${TRUE}
 @dirrm lib/mule/19.28/lisp/its
 @dirrm lib/mule/19.28/lisp/quail
 @dirrm lib/mule/19.28/lisp/term
