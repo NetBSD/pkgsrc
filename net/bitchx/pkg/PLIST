@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/09 14:50:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/29 19:13:37 wiz Exp $
 bin/BitchX
 bin/BitchX-1.0c17
 bin/scr-bx
@@ -956,6 +956,7 @@ lib/bx/BitchX.ircnames
 lib/bx/BitchX.quit
 lib/bx/BitchX.reasons
 lib/bx/wserv
+man/man1/BitchX.1
 @dirrm lib/bx/help/1_General/dcc
 @dirrm lib/bx/help/1_General/ctcp
 @dirrm lib/bx/help/1_General

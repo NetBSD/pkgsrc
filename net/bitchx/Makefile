@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/09 14:50:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/29 19:13:36 wiz Exp $
 
 DISTNAME=	ircii-pana-1.0c17
 PKGNAME=	bitchx-1.0.3.17
@@ -18,5 +18,8 @@ CONFIGURE_ARGS+=	--with-termcap	# forcibly refuse to use ncurses
 post-extract:
 	-${FIND} ${WRKDIR}/BitchX/bitchx-docs -type d -name CVS \
 		-exec ${RM} -r {} \; 2> /dev/null
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/BitchX.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
