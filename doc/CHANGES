@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.414 2002/10/30 09:16:32 rh Exp $
+$NetBSD: CHANGES,v 1.415 2002/10/30 09:29:35 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3452,3 +3452,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libgnomeprintui to 1.116.0nb1 [rh 2002-10-30]
 	Updated squirrelmail to 1.2.9 [martti 2002-10-30]
 	Added glade2-1.1.2 [rh 2002-10-30]
+	Updated ipa to 1.2.9 [martti 2002-10-30]
