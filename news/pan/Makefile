@@ -1,34 +1,26 @@
-# $NetBSD: Makefile,v 1.11 2002/09/25 05:58:45 rh Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/02 03:08:50 rh Exp $
 #
 
-DISTNAME=		pan-0.13.0
-CATEGORIES=		news
-MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	pan-0.11.2
+PKGREVISION=	2
+CATEGORIES=	news gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/pan/} \
+		http://pan.rebelbase.com/download/${DISTNAME:C/pan-//}/SOURCE/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://pan.rebelbase.com/
-COMMENT=		Newsreader for GTK2
+MAINTAINER=	rh@netbsd.org
+HOMEPAGE=	http://pan.rebelbase.com/
+COMMENT=	Newsreader for Gnome
 
 BUILD_USES_MSGFMT=	YES
 
-USE_PERL5=		build
-USE_X11=		YES
-USE_BUILDLINK2=		YES
+USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALEDIR="${PKGLOCALEDIR}"
+CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 LIBS=			-lcompat
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../textproc/gtkspell/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CC=			${PREFIX}/bin/ptlgcc
-.include "../../devel/ptl2/buildlink2.mk"
-.endif
-
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../x11/gnome-core/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
