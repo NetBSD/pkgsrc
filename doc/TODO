@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3315 2005/03/28 02:02:48 wiz Exp $
+$NetBSD: TODO,v 1.3316 2005/03/28 10:18:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,6 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cygwin-lib-1.5.13.1
 	o cyrus-imapd21-2.1.18
-	o cyrus-sasl-1.5.28
 	o dact-0.8.37
 	o dante-1.1.15
 	o dar-2.2.0
