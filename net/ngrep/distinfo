@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:13:55 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/02/25 09:23:40 adam Exp $
 
-SHA1 (ngrep-1.42.tar.bz2) = 03987bc4f6344ecd0d56313f42f2c254f37ac271
-RMD160 (ngrep-1.42.tar.bz2) = 54ad8e4794d57adb26e209dd381d47d1ed5e468e
-Size (ngrep-1.42.tar.bz2) = 527699 bytes
-SHA1 (patch-aa) = cf3076ba4a0c471d429ae76bafe7dab46d20fa30
-SHA1 (patch-ab) = 9522bd13976c850d109f91f6a5ec5a2aa7272d4e
-SHA1 (patch-ac) = 9624cedda7f30ead25dc82cc7bb254bf0da8cf6b
+SHA1 (ngrep-1.43.tar.bz2) = 879ff987839da8d155c3d529f8e4010c3a9f565e
+RMD160 (ngrep-1.43.tar.bz2) = 6fa4c6f5e55c5021d4c9565677ea77b8f375f7f4
+Size (ngrep-1.43.tar.bz2) = 447819 bytes
+SHA1 (patch-aa) = 094e184213a401a67c7c409e8f7245fa27f9dcd3
+SHA1 (patch-ab) = 08576e9080ba79abb9e9ad1a161cb51a2d768025
