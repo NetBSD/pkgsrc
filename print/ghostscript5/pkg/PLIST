@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.4 1998/01/24 22:37:53 hubertf Exp $
 bin/bdftops
 bin/font2c
 bin/gs
