@@ -1,22 +1,32 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/10 16:53:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/09/10 17:17:08 wiz Exp $
 bin/metacity
 bin/metacity-message
+bin/metacity-properties
 bin/metacity-theme-viewer
 bin/metacity-window-demo
 etc/gconf/gconf.xml.defaults/apps/metacity/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/metacity/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/metacity/global_keybindings/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/metacity/keybinding_commands/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/metacity/window_keybindings/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/global_keybindings/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/metacity/keybinding_commands/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/window_keybindings/%gconf.xml
 etc/gconf/schemas/metacity.schemas
 libexec/metacity-dialog
+share/control-center-2.0/capplets/metacity-properties.desktop
 share/gnome/wm-properties/metacity.desktop
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/metacity.mo
@@ -24,96 +34,128 @@ ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/metacity.mo
+share/metacity/glade/metacity-properties.glade
 share/metacity/icons/metacity-window-demo.png
-share/metacity/themes/Atlanta/metacity-theme-1.xml
-share/metacity/themes/Bright/metacity-theme-1.xml
-share/metacity/themes/Crux/active-bottom-left-border.png
-share/metacity/themes/Crux/active-bottom-left-corner.png
-share/metacity/themes/Crux/active-bottom-mid-left-border.png
-share/metacity/themes/Crux/active-bottom-mid-right-border.png
-share/metacity/themes/Crux/active-bottom-right-border.png
-share/metacity/themes/Crux/active-bottom-right-corner.png
-share/metacity/themes/Crux/active-button-prelight.png
-share/metacity/themes/Crux/active-button-pressed.png
-share/metacity/themes/Crux/active-button.png
-share/metacity/themes/Crux/active-close-button.png
-share/metacity/themes/Crux/active-left-border.png
-share/metacity/themes/Crux/active-left-top-border-shaded.png
-share/metacity/themes/Crux/active-left-top-border.png
-share/metacity/themes/Crux/active-maximize-button.png
-share/metacity/themes/Crux/active-menu-button-prelight.png
-share/metacity/themes/Crux/active-menu-button-pressed.png
-share/metacity/themes/Crux/active-menu-button.png
-share/metacity/themes/Crux/active-minimize-button.png
-share/metacity/themes/Crux/active-right-border.png
-share/metacity/themes/Crux/active-right-top-border-shaded.png
-share/metacity/themes/Crux/active-right-top-border.png
-share/metacity/themes/Crux/active-top-center-left.png
-share/metacity/themes/Crux/active-top-center-mid-left.png
-share/metacity/themes/Crux/active-top-center-mid-right.png
-share/metacity/themes/Crux/active-top-center-right.png
-share/metacity/themes/Crux/active-top-left-border.png
-share/metacity/themes/Crux/active-top-right-border.png
-share/metacity/themes/Crux/inactive-bottom-left-border.png
-share/metacity/themes/Crux/inactive-bottom-left-corner.png
-share/metacity/themes/Crux/inactive-bottom-mid-border.png
-share/metacity/themes/Crux/inactive-bottom-right-border.png
-share/metacity/themes/Crux/inactive-bottom-right-corner.png
-share/metacity/themes/Crux/inactive-button-prelight.png
-share/metacity/themes/Crux/inactive-button-pressed.png
-share/metacity/themes/Crux/inactive-button.png
-share/metacity/themes/Crux/inactive-close-button.png
-share/metacity/themes/Crux/inactive-left-border.png
-share/metacity/themes/Crux/inactive-left-top-border-shaded.png
-share/metacity/themes/Crux/inactive-left-top-border.png
-share/metacity/themes/Crux/inactive-maximize-button.png
-share/metacity/themes/Crux/inactive-menu-button-prelight.png
-share/metacity/themes/Crux/inactive-menu-button-pressed.png
-share/metacity/themes/Crux/inactive-menu-button.png
-share/metacity/themes/Crux/inactive-minimize-button.png
-share/metacity/themes/Crux/inactive-right-border.png
-share/metacity/themes/Crux/inactive-right-top-border-shaded.png
-share/metacity/themes/Crux/inactive-right-top-border.png
-share/metacity/themes/Crux/inactive-top-center-left.png
-share/metacity/themes/Crux/inactive-top-center-mid.png
-share/metacity/themes/Crux/inactive-top-center-right.png
-share/metacity/themes/Crux/inactive-top-left-border.png
-share/metacity/themes/Crux/inactive-top-right-border.png
-share/metacity/themes/Crux/metacity-theme-1.xml
-share/metacity/themes/Esco/metacity-theme-1.xml
-share/metacity/themes/Gorilla/active-button.png
-share/metacity/themes/Gorilla/active-close-button.png
-share/metacity/themes/Gorilla/active-maximize-button.png
-share/metacity/themes/Gorilla/active-menu-button.png
-share/metacity/themes/Gorilla/active-minimize-button.png
-share/metacity/themes/Gorilla/inactive-close-button.png
-share/metacity/themes/Gorilla/inactive-maximize-button.png
-share/metacity/themes/Gorilla/inactive-menu-button.png
-share/metacity/themes/Gorilla/inactive-minimize-button.png
-share/metacity/themes/Gorilla/metacity-theme-1.xml
-@dirrm share/metacity/themes/Gorilla
-@dirrm share/metacity/themes/Esco
-@dirrm share/metacity/themes/Crux
-@dirrm share/metacity/themes/Bright
-@dirrm share/metacity/themes/Atlanta
-@dirrm share/metacity/themes
+share/pixmaps/metacity-properties.png
+share/themes/Atlanta/metacity-1/metacity-theme-1.xml
+share/themes/Bright/metacity-1/metacity-theme-1.xml
+share/themes/Crux/metacity-1/active-border-top-left-border.png
+share/themes/Crux/metacity-1/active-border-top-right-border.png
+share/themes/Crux/metacity-1/active-bottom-left-border.png
+share/themes/Crux/metacity-1/active-bottom-left-corner.png
+share/themes/Crux/metacity-1/active-bottom-mid-left-border.png
+share/themes/Crux/metacity-1/active-bottom-mid-right-border.png
+share/themes/Crux/metacity-1/active-bottom-right-border.png
+share/themes/Crux/metacity-1/active-bottom-right-corner.png
+share/themes/Crux/metacity-1/active-button-prelight.png
+share/themes/Crux/metacity-1/active-button-pressed.png
+share/themes/Crux/metacity-1/active-button.png
+share/themes/Crux/metacity-1/active-close-button.png
+share/themes/Crux/metacity-1/active-left-border.png
+share/themes/Crux/metacity-1/active-left-top-border-shaded.png
+share/themes/Crux/metacity-1/active-left-top-border.png
+share/themes/Crux/metacity-1/active-maximize-button.png
+share/themes/Crux/metacity-1/active-menu-button-prelight.png
+share/themes/Crux/metacity-1/active-menu-button-pressed.png
+share/themes/Crux/metacity-1/active-menu-button.png
+share/themes/Crux/metacity-1/active-minimize-button.png
+share/themes/Crux/metacity-1/active-right-border.png
+share/themes/Crux/metacity-1/active-right-top-border-shaded.png
+share/themes/Crux/metacity-1/active-right-top-border.png
+share/themes/Crux/metacity-1/active-top-center-left.png
+share/themes/Crux/metacity-1/active-top-center-mid-left.png
+share/themes/Crux/metacity-1/active-top-center-mid-right.png
+share/themes/Crux/metacity-1/active-top-center-right.png
+share/themes/Crux/metacity-1/active-top-left-border.png
+share/themes/Crux/metacity-1/active-top-left-corner.png
+share/themes/Crux/metacity-1/active-top-mid-left-border.png
+share/themes/Crux/metacity-1/active-top-mid-right-border.png
+share/themes/Crux/metacity-1/active-top-right-border.png
+share/themes/Crux/metacity-1/active-top-right-corner.png
+share/themes/Crux/metacity-1/inactive-border-top-left-border.png
+share/themes/Crux/metacity-1/inactive-border-top-right-border.png
+share/themes/Crux/metacity-1/inactive-bottom-left-border.png
+share/themes/Crux/metacity-1/inactive-bottom-left-corner.png
+share/themes/Crux/metacity-1/inactive-bottom-mid-border.png
+share/themes/Crux/metacity-1/inactive-bottom-right-border.png
+share/themes/Crux/metacity-1/inactive-bottom-right-corner.png
+share/themes/Crux/metacity-1/inactive-button-prelight.png
+share/themes/Crux/metacity-1/inactive-button-pressed.png
+share/themes/Crux/metacity-1/inactive-button.png
+share/themes/Crux/metacity-1/inactive-close-button.png
+share/themes/Crux/metacity-1/inactive-left-border.png
+share/themes/Crux/metacity-1/inactive-left-top-border-shaded.png
+share/themes/Crux/metacity-1/inactive-left-top-border.png
+share/themes/Crux/metacity-1/inactive-maximize-button.png
+share/themes/Crux/metacity-1/inactive-menu-button-prelight.png
+share/themes/Crux/metacity-1/inactive-menu-button-pressed.png
+share/themes/Crux/metacity-1/inactive-menu-button.png
+share/themes/Crux/metacity-1/inactive-minimize-button.png
+share/themes/Crux/metacity-1/inactive-right-border.png
+share/themes/Crux/metacity-1/inactive-right-top-border-shaded.png
+share/themes/Crux/metacity-1/inactive-right-top-border.png
+share/themes/Crux/metacity-1/inactive-top-center-left.png
+share/themes/Crux/metacity-1/inactive-top-center-mid.png
+share/themes/Crux/metacity-1/inactive-top-center-right.png
+share/themes/Crux/metacity-1/inactive-top-left-border.png
+share/themes/Crux/metacity-1/inactive-top-left-corner.png
+share/themes/Crux/metacity-1/inactive-top-mid-border.png
+share/themes/Crux/metacity-1/inactive-top-right-border.png
+share/themes/Crux/metacity-1/inactive-top-right-corner.png
+share/themes/Crux/metacity-1/metacity-theme-1.xml
+share/themes/Esco/metacity-1/metacity-theme-1.xml
+share/themes/Gorilla/metacity-1/active-button.png
+share/themes/Gorilla/metacity-1/active-close-button.png
+share/themes/Gorilla/metacity-1/active-close-menu-icon.png
+share/themes/Gorilla/metacity-1/active-maximize-button.png
+share/themes/Gorilla/metacity-1/active-maximize-menu-icon.png
+share/themes/Gorilla/metacity-1/active-menu-button.png
+share/themes/Gorilla/metacity-1/active-minimize-button.png
+share/themes/Gorilla/metacity-1/active-minimize-menu-icon.png
+share/themes/Gorilla/metacity-1/inactive-close-button.png
+share/themes/Gorilla/metacity-1/inactive-maximize-button.png
+share/themes/Gorilla/metacity-1/inactive-menu-button.png
+share/themes/Gorilla/metacity-1/inactive-minimize-button.png
+share/themes/Gorilla/metacity-1/metacity-theme-1.xml
+share/themes/Metabox/metacity-1/metacity-theme-1.xml
+@dirrm share/themes/Metabox/metacity-1
+@dirrm share/themes/Metabox
+@dirrm share/themes/Gorilla/metacity-1
+@dirrm share/themes/Gorilla
+@dirrm share/themes/Esco/metacity-1
+@dirrm share/themes/Esco
+@dirrm share/themes/Crux/metacity-1
+@dirrm share/themes/Crux
+@dirrm share/themes/Bright/metacity-1
+@dirrm share/themes/Bright
+@dirrm share/themes/Atlanta/metacity-1
+@dirrm share/themes/Atlanta
 @dirrm share/metacity/icons
+@dirrm share/metacity/glade
 @dirrm share/metacity
 @dirrm share/gnome/wm-properties
 @dirrm etc/gconf/schemas
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/window_keybindings
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/keybinding_commands
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/global_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/general
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity
-@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/schemas/apps 2>/dev/null || ${TRUE}
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/window_keybindings
+@dirrm etc/gconf/gconf.xml.defaults/apps/metacity/keybinding_commands
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/global_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/general
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/schemas/apps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/apps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gconf 2>/dev/null || ${TRUE}
