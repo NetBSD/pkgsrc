@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:31 hubertf Exp $
+
 Memtest86 is a standalone program, it does not run within an operating
 system.  It has been designed to boot from a PC floppy disk.  To install
 Memtest86 on a floppy, insert a disk then type:
@@ -6,3 +9,5 @@ Memtest86 on a floppy, insert a disk then type:
 Please read the documentation at:
 	${PREFIX}/share/doc/memtest/README
 	http://www.memtest86.com
+
+===========================================================================
