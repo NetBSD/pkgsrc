@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 13:42:02 agc Exp $
 # New ports collection makefile for:    PNG images library
 # Version required:     0.96
 # Date created:         5 Dec 1995
