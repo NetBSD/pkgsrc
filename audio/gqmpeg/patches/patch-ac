@@ -1,0 +1,376 @@
+$NetBSD: patch-ac,v 1.8 2002/03/25 05:44:48 lukem Exp $
+
+--- src/io_ogg123.c.orig	Sat Feb 23 04:39:13 2002
++++ src/io_ogg123.c	Mon Mar 25 16:32:41 2002
+@@ -47,6 +47,62 @@ static gint ogg123_child_pid = -1;
+ static int ogg123_pipe[2];
+ 
+ /*
++ *-----------------------------------------------------------------------------
++ * pipe functions
++ *-----------------------------------------------------------------------------
++ */
++
++static gint ogg123_pipe_open(char *ogg_argv[], gint *ogg_child,
++    int ogg_pipe[2])
++{
++	pid_t frk_pid;
++
++	/* Create the pipe. */
++	if (pipe(ogg_pipe))
++                {
++                fprintf (stderr, _("Pipe failed.\n"));
++                return FALSE;
++                }
++
++        if (debug_mode) printf("ogg123_pipe_open: %s\n", ogg_argv[0]);
++
++	/* Create the child process. */
++	frk_pid = fork ();
++	if (frk_pid == (pid_t) 0)
++		{
++		/* This is the child process. */
++		dup2(ogg_pipe[1], 1);
++		dup2(ogg_pipe[1], 2);
++		close(ogg_pipe[0]);
++
++		execvp(ogg_argv[0], ogg_argv);
++		printf(_("unable to run %s (in the path?)\n"), ogg_argv);
++		_exit(1);
++		}
++	else if (frk_pid < (pid_t) 0)
++		{
++		/* The fork failed. */
++		fprintf (stderr, _("Fork failed.\n"));
++		close(ogg_pipe[0]);
++		close(ogg_pipe[1]);
++		*ogg_child = -1;
++		return FALSE;
++		}
++	else
++		{
++		/* This is the parent process. */
++		*ogg_child = (int) frk_pid;
++
++		close(ogg_pipe[1]);
++		ogg_pipe[1] = -1;
++		}
++
++	if (debug_mode) printf("ogg123_pipe_open pid = %d\n", *ogg_child);
++
++	return TRUE;
++}
++
++/*
+  *----------------------------------------------------------------------------
+  * title/description utils
+  *----------------------------------------------------------------------------
+@@ -100,21 +156,22 @@ OGGInfo *ogg123_info_get(const gchar *pa
+ {
+ 	OGGInfo *info = NULL;
+ 	FILE *f;
+-	gchar *command;
++	char *command[3];
++	gint child_pid;
++	int child_pipe[2];
+ 	char buf[128];
+ 
+ 	if (!ogg123_info_found) return NULL;
++	command[0] = OGG123_BINARY_INFO;
++	command[1] = (char *)path;
++	command[2] = NULL;
+ 
+-	command = g_strdup_printf("%s \"%s\"", OGG123_BINARY_INFO, path);
+-	f = popen(command, "r");
+-	if (!f)
++	if (ogg123_pipe_open(command, &child_pid, child_pipe) == FALSE
++	    || (f = fdopen(child_pipe[0], "r")) == NULL)
+ 		{
+-		printf("Failed to run \"%s\n\"", command);
+-		g_free(command);
++		printf("Failed to run \"%s\n\"", command[0]);
+ 		return NULL;
+ 		}
+-	g_free(command);
+-
+ 	info = g_new0(OGGInfo, 1);
+ 
+ 	while (fgets(buf, sizeof(buf), f) != NULL)
+@@ -163,7 +220,7 @@ OGGInfo *ogg123_info_get(const gchar *pa
+ 			}
+ 		}
+ 
+-	pclose(f);
++	close(child_pipe[0]);
+ 
+ 	info->bytes = filesize(path);
+ 
+@@ -178,20 +235,23 @@ GList *ogg123_comment_get(const gchar *p
+ {
+ 	GList *list = NULL;
+ 	FILE *f;
+-	gchar *command;
++	char *command[4];
++	gint child_pid;
++	int child_pipe[2];
+ 	char buf[128];
+ 
+ 	if (!ogg123_comment_found) return NULL;
++	command[0] = OGG123_BINARY_COMMENT;
++	command[1] = "-l";
++	command[2] = (char *)path;
++	command[3] = NULL;
+ 
+-	command = g_strdup_printf("%s -l \"%s\"", OGG123_BINARY_COMMENT, path);
+-	f = popen(command, "r");
+-	if (!f)
++	if (ogg123_pipe_open(command, &child_pid, child_pipe) == FALSE
++	    || (f = fdopen(child_pipe[0], "r")) == NULL)
+ 		{
+-		printf("Failed to run \"%s\n\"", command);
+-		g_free(command);
++		printf("Failed to run \"%s\n\"", command[0]);
+ 		return NULL;
+ 		}
+-	g_free(command);
+ 
+ 	while (fgets(buf, sizeof(buf), f) != NULL)
+ 		{
+@@ -214,7 +274,7 @@ GList *ogg123_comment_get(const gchar *p
+ 		g_free(key);
+ 		}
+ 
+-	pclose(f);
++	close(child_pipe[0]);
+ 
+ 	return g_list_reverse(list);
+ }
+@@ -250,16 +310,36 @@ const gchar *ogg123_comment_value(GList 
+ gint ogg123_comment_set(const gchar *path, GList *comments)
+ {
+ 	FILE *f;
+-	gchar *command;
+ 	GList *errlist;
+ 	GList *work;
+ 	char buf[128];
+-	gchar *tmp;
++	int argc;
++	char **argv;
++	gint child_pid;
++	int child_pipe[2];
+ 	
+ 	if (!ogg123_comment_found) return TRUE;
+ 	if (!path) return FALSE;
+ 
+-	command = g_strdup_printf("%s -w \"%s\"", OGG123_BINARY_COMMENT, path);
++	argc = 4;
++	work = comments;
++	while (work && work->next) {
++		if (work->data)
++			argc += 2;
++		work = work->next;
++		work = work->next;
++	}
++	if ((argv = g_malloc(argc * sizeof(argv[0]))) == NULL)
++		{
++		printf("Failed to allocate memory to run %s\n",
++		    OGG123_BINARY_COMMENT);
++		return FALSE;
++		}
++
++	argc = 0;
++	argv[argc++] = OGG123_BINARY_COMMENT;
++	argv[argc++] = "-w";
++	argv[argc++] = (char *)path;
+ 
+ 	work = comments;
+ 	while (work && work->next)
+@@ -272,26 +352,21 @@ gint ogg123_comment_set(const gchar *pat
+ 
+ 		if (key && strlen(key) > 0 && value && strlen(value) > 0)
+ 			{
+-			tmp = g_strdup_printf("%s -t \"%s=%s\"", command, key, value);
+-			g_free(command);
+-			command = tmp;
++			argv[argc++] = "-t";
++			argv[argc++] = g_strdup_printf("%s=%s", key, value);
+ 			}
+ 
+ 		work = work->next;
+ 		work = work->next;
+ 		}
+-	tmp = g_strdup_printf("%s 2>&1", command);
+-	g_free(command);
+-	command = tmp;
++	argv[argc++] = NULL;
+ 
+-	f = popen(command, "r");
+-	if (!f)
++	if (ogg123_pipe_open(argv, &child_pid, child_pipe) == FALSE
++	    || (f = fdopen(child_pipe[0], "r")) == NULL)
+ 		{
+-		printf("Failed to run \"%s\"\n", command);
+-		g_free(command);
++		printf("Failed to run \"%s\"\n", argv[0]);
+ 		return FALSE;
+ 		}
+-	g_free(command);
+ 
+ 	errlist = NULL;
+ 	while (fgets(buf, sizeof(buf), f) != NULL)
+@@ -302,7 +377,8 @@ gint ogg123_comment_set(const gchar *pat
+ 			}
+ 		}
+ 
+-	pclose(f);
++	close(child_pipe[0]);
++	g_free(argv);
+ 
+ 	if (errlist)
+ 		{
+@@ -472,30 +548,24 @@ static gint parse_time(const gchar *text
+ 	return (m * 60 + s);
+ }
+ 
+-static void parse_bitrate(const gchar *text)
++static gint parse_bitrate(const gchar *text)
+ {
+ 	static time_t old_t = 0;
+ 	time_t new_t;
+-	const gchar *ptr;
+ 	gint force = FALSE;
++	int new_rate;
+ 
+-	ptr = strstr(text, "Bitrate: ");
+-	if (ptr)
++	if (sscanf(text, "(%d.%*d kbps)", &new_rate) != 1)
++		return FALSE;
++	if (input_bitrate != 0)
+ 		{
+-		gint new_rate;
+-
+-		ptr += 9;
+-		new_rate = (gint)strtol(ptr, NULL, 10);
+-		if (input_bitrate != 0)
+-			{
+-			/* show a trend, ugly but it makes the rate change more smoothly */
+-			input_bitrate = ((input_bitrate * 4) + new_rate) / 5;
+-			}
+-		else
+-			{
+-			input_bitrate = new_rate;
+-			force = TRUE;
+-			}
++		/* show a trend, ugly but it makes the rate change more smoothly */
++		input_bitrate = ((input_bitrate * 4) + (gint)new_rate) / 5;
++		}
++	else
++		{
++		input_bitrate = (gint)new_rate;
++		force = TRUE;
+ 		}
+ 
+ 	/* we only update once per second */
+@@ -505,12 +575,14 @@ static void parse_bitrate(const gchar *t
+ 		module_playback_data_changed();
+ 		old_t = new_t;
+ 		}
++	return TRUE;
+ }
+ 
+ static gint ogg123_input_parse(const gchar *buffer)
+ {
+ 	if (debug_mode > 1) printf("ogg123 output:\"%s\"\n", buffer);
+ 
++/* Time: 00:03.92 [04:48.17] of 04:52.09  (140.9 kbps)  Output Buffer 75.0%  */
+ 	if (strncmp(buffer, "Time: ", 6) == 0)
+ 		{
+ 		const gchar *ptr;
+@@ -527,7 +599,9 @@ static gint ogg123_input_parse(const gch
+ 		if (strlen(ptr) < 8) return FALSE;
+ 		seconds_remaining = parse_time(ptr);
+ 		frames_remaining = seconds_remaining;
+-		parse_bitrate(ptr);
++		ptr = strchr(ptr, '(');
++		if (!ptr) return FALSE;
++		if (parse_bitrate(ptr) == FALSE) return FALSE;
+ 		}
+ 	else if (strncmp(buffer, "Bitstream is", 12) == 0)
+ 		{
+@@ -648,7 +722,6 @@ static void ogg123_input_read_reset(void
+ 
+ static gint ogg123_child_run(SongData *sd, gint position)
+ {
+-	pid_t frk_pid;
+ 	char cmd_arguments[OGG123_MAX_COMMANDS][512];
+ 	char *cmd_ptr[OGG123_MAX_COMMANDS];
+ 	int cmd_cnt = 0;
+@@ -720,48 +793,11 @@ static gint ogg123_child_run(SongData *s
+ 	cmd_ptr[cmd_cnt] = NULL;
+ 	cmd_cnt++;
+ 
+-	/* Create the pipe. */
+-	if (pipe(ogg123_pipe))
+-                {
+-                fprintf (stderr, _("Pipe failed.\n"));
+-                return FALSE;
+-                }
+-
+-        if (debug_mode) printf("opening: %s\n", sd->path);
+-
+-	/* Create the child process. */
+-	frk_pid = fork ();
+-	if (frk_pid == (pid_t) 0)
+-		{
+-		/* This is the child process. */
+-		dup2(ogg123_pipe[1], 2);
+-		close(ogg123_pipe[0]);
+-
+-		execvp(exec_bin, cmd_ptr);
+-		printf(_("unable to run %s (in the path?)\n"), exec_bin);
+-		_exit(1);
+-		}
+-	else if (frk_pid < (pid_t) 0)
+-		{
+-		/* The fork failed. */
+-		fprintf (stderr, _("Fork failed.\n"));
+-		close(ogg123_pipe[0]);
+-		close(ogg123_pipe[1]);
+-		pid = 0;
+-		ogg123_child_pid = -1;
++	pid = 0;
++	if (ogg123_pipe_open(cmd_ptr, &ogg123_child_pid, ogg123_pipe) == FALSE)
+ 		return FALSE;
+-		}
+-	else
+-		{
+-		/* This is the parent process. */
+-		ogg123_child_pid = (int) frk_pid;
+-		pid = ogg123_child_pid;
+ 
+-		close(ogg123_pipe[1]);
+-		ogg123_pipe[1] = -1;
+-		}
+-
+-	if (debug_mode) printf("ogg123 pid = %d\n", ogg123_child_pid);
++	pid = ogg123_child_pid;
+ 
+ 	ogg123_input_read_reset();
+ 	ogg123_control_read_id = gdk_input_add (ogg123_pipe[0], GDK_INPUT_READ, ogg123_input_read_cb, NULL);
+@@ -769,6 +805,7 @@ static gint ogg123_child_run(SongData *s
+ 	return TRUE;
+ }
+ 
++
+ /*
+  *----------------------------------------------------------------------------
+  * module callback funcs
+@@ -793,7 +830,7 @@ static gint ogg123_data_set(SongData *sd
+ 		if (info)
+ 			{
+ 			sd->length = info->length;
+-			sd->bit_rate = info->bitrate_nominal;
++			sd->bit_rate = info->bitrate_average / 1000;
+ 			sd->channels = info->channels;
+ 			sd->bit_depth = 16;	/* these two correct ? */
+ 			sd->khz_rate = 44;
