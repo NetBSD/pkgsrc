@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.98 2003/12/17 16:48:27 taca Exp $
+# $NetBSD: Makefile,v 1.99 2003/12/25 16:28:14 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE4
 PKGNAME=	squid-2.5.4
-PKGREVISION=	5
+PKGREVISION=	6
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -34,7 +34,15 @@ PATCHFILES=	squid-2.5.STABLE4-reconfigure_message.patch \
 		squid-2.5.STABLE4-pconn-load.patch \
 		squid-2.5.STABLE4-icon_urls.patch \
 		squid-2.5.STABLE4-redirector_access.patch \
-		squid-2.5.STABLE4-pconn-lifo.patch
+		squid-2.5.STABLE4-pconn-lifo.patch \
+		squid-2.5.STABLE4-cache_peer_maxconn.patch \
+		squid-2.5.STABLE4-pid_filename_none.patch \
+		squid-2.5.STABLE4-dns_namelength.patch \
+		squid-2.5.STABLE4-urllogin_acl.patch \
+		squid-2.5.STABLE4-russian.patch \
+		squid-2.5.STABLE4-redirlog.patch \
+		squid-2.5.STABLE4-pinger.patch \
+		squid-2.5.STABLE4-partial_reload.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -71,8 +79,7 @@ CONF_FILES+=		${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
 CONF_FILES+=		${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
 
 # Configuration options which can be overwritten by the user.
-SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
-			--enable-auth=basic,digest,ntlm \
+SQUID_CONFIGURE_ARGS?=	--enable-auth=basic,digest,ntlm \
 			--enable-cachemgr-hostname=localhost \
 			--enable-delay-pools \
 			--enable-removal-policies=lru,heap \
