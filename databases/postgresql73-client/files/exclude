@@ -1,0 +1,7 @@
+# $NetBSD: exclude,v 1.1.1.1 2004/07/24 22:15:51 recht Exp $
+#
+man1/ecpg.1
+man1/pgtclsh.1
+man1/pgtksh.1
+man1/postgres.1
+man1/postmaster.1
