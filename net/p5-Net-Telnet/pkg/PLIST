@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2000/05/11 15:05:01 he Exp $
+lib/perl5/site_perl/Net/Telnet.pm
+lib/perl5/man/man3/Net::Telnet.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net/Telnet/.packlist
+@dirrm lib/perl5/site_perl/Net
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net/Telnet
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net
