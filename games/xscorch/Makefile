@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2001/10/24 12:38:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/10 23:43:55 abs Exp $
 #
 
-DISTNAME=	xscorch-0.1.13a
+DISTNAME=	xscorch-0.1.14
 CATEGORIES=	games
 MASTER_SITES=	http://chaos2.org/xscorch/
 
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://chaos2.org/xscorch/
 COMMENT=	Multiplayer tank shoot-em-up
-
-WRKSRC=		${WRKDIR}/xscorch-0.1.13
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
