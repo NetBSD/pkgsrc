@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 1998/06/02 22:33:16 tron Exp $
+bin/nc
+bin/nedit
+man/man1/nc.1
+man/man1/nedit.1
+share/doc/nedit/README
+@dirrm share/doc/nedit
