@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:39 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/16 21:09:47 drochner Exp $
 #
 
 DISTNAME=	soaplib-0.8-20000621
@@ -14,7 +14,6 @@ COMMENT=	implementation of the SOAP 1.1 protocol
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
-USE_PYTHON=	yes
 PY_PATCHPLIST=	yes
 
 do-install:
@@ -22,4 +21,5 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/${PYSITELIB}; \
 	done
 
+.include "../../lang/python/extension.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
