@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/10 15:48:02 rh Exp $
+bin/snort
+share/doc/snort/README
+share/doc/snort/NEWS
+share/doc/snort/RULES.SAMPLE
+share/doc/snort/USAGE
+@dirrm share/doc/snort
