@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.116 2002/12/23 00:05:32 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.117 2002/12/23 14:10:00 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1016,34 +1016,34 @@ MPLAYER_USE_REALMEDIA?= NO
 # Default: NO
 
 #MOTIF_TYPE?=	openmotif
-# Used by motif.buildlink.mk to choose which Motif-2.0-compatible
+# Used by motif.buildlink2.mk to choose which Motif-2.0-compatible
 # installation to use.  This value is also automatically set by
-# motif.buildlink.mk to whichever Motif-2.0 installation represented by
+# motif.buildlink2.mk to whichever Motif-2.0 installation represented by
 # the possible values below is already installed, but defaults to
 # ${MOTIF_TYPE_DEFAULT}.  This value is ignored if MOTIFBASE is
 # explicitly set.
-# Possible: openmotif, lesstif, dt (for Solaris only)
+# Possible: openmotif, lesstif, dt (Irix and Solaris only)
 # Default: ${MOTIF_TYPE_DEFAULT}
 
 #MOTIF_TYPE_DEFAULT?=	openmotif
-# Used by motif.buildlink.mk as the final default value for MOTIF_TYPE.
-# Possible:  openmotif, lesstif, dt (for Solaris only)
-# Default: openmotif, or dt (for Solaris only)
+# Used by motif.buildlink2.mk as the final default value for MOTIF_TYPE.
+# Possible:  openmotif, lesstif, dt (Irix and Solaris only)
+# Default: openmotif, or dt (Irix and Solaris only)
 
 #MOTIF12_TYPE?=	lesstif12
-# Used by motif.buildlink.mk to choose which Motif-1.2-compatible
+# Used by motif.buildlink2.mk to choose which Motif-1.2-compatible
 # installation to use.  This value is also automatically set by
-# motif.buildlink.mk to whichever Motif-1.2 installation represented by
+# motif.buildlink2.mk to whichever Motif-1.2 installation represented by
 # the possible values below is already installed, but defaults to
 # ${MOTIF12_TYPE_DEFAULT}.  This value is ignored if MOTIF12BASE is
 # explicitly set.
-# Possible: lesstif12, dt (for Solaris only)
+# Possible: lesstif12, dt (Irix and Solaris only)
 # Default: ${MOTIF12_TYPE_DEFAULT}
 
 #MOTIF12_TYPE_DEFAULT?=	lesstif12
-# Used by motif.buildlink.mk as the final default value for MOTIF12_TYPE.
-# Possible:  lesstif12, dt (for Solaris only)
-# Default: lesstif12, or dt (for Solaris only)
+# Used by motif.buildlink2.mk as the final default value for MOTIF12_TYPE.
+# Possible:  lesstif12, dt (Irix and Solaris only)
+# Default: lesstif12, or dt (Irix and Solaris only)
 
 #MPG123_ARM_FIXED64=YES
 # Used by mpg123 and mpg123-esound to enable ARM to use 64bit fixedpoint
