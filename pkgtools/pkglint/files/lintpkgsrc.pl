@@ -1,14 +1,14 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.75 2003/01/24 15:00:41 atatat Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.76 2003/03/27 05:16:12 atatat Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
 # Caveats:
-#	The 'Makefile parsing' algorithym used to obtain package versions
-#	and DEPENDS information is geared towards speed rather than perfection,
-#	though it has got somewhat better over time, it only parses the
-#	simplest Makefile conditionals. (a == b, no && etc).
+#	The 'Makefile parsing' algorithm used to obtain package versions and
+#	DEPENDS information is geared towards speed rather than perfection,
+#	though it has gotten somewhat better over time, it only parses the
+#	simpler Makefile conditionals.
 #
 # TODO: Handle fun DEPENDS like avifile-devel with
 #			{qt2-designer>=2.2.4,qt2-designer-kde>=2.3.1nb1} 
@@ -424,6 +424,10 @@ sub get_default_makefile_vars
 	{ $default_vars->{PKGSRCDIR} = $opt{P}; }
     else
 	{ $default_vars->{PKGSRCDIR} = '/usr/pkgsrc'; }
+
+    $default_vars->{DESTDIR} = '';
+    $default_vars->{LOCALBASE} = '/usr/pkg';
+    $default_vars->{X11BASE} = '/usr/X11R6';
 
     my($vars);
     if (-f '/etc/mk.conf' && ($vars = parse_makefile_vars('/etc/mk.conf')))
@@ -852,7 +856,10 @@ sub parse_makefile_vars
 	if (m#^\.include\s+"([^"]+)"#)
 	    {
 	    $_ = $1;
-	    if (! m#/mk/bsd#)
+	    debug("$file: .include \"$_\"\n");
+	    if (m#/mk/bsd#)
+		{ debug("$file: .include skipped\n"); }
+	    else
 		{
 		my($incfile) = ($_);
 
@@ -885,12 +892,26 @@ sub parse_makefile_vars
 	    $key = $1;
 	    $plus = $2;
 	    $value = $3;
+	    debug("assignment: $key$plus=[$value]\n");
 	    if ($plus eq ':')
 		{ $vars{$key} = parse_expand_vars($value, \%vars); }
 	    elsif ($plus eq '+' && defined $vars{$key} )
 		{ $vars{$key} .= " $value"; }
 	    elsif ($plus ne '?' || !defined $vars{$key} )
 		{ $vars{$key} = $value; }
+
+	    # Give python a little hand (XXX - do we wanna consider actually
+	    # implementing make .for loops, etc?
+	    #
+	    if ($key eq "PYTHON_VERSIONS_ACCEPTED")
+		{
+		my($pv);
+		foreach $pv (split(/\s+/, $vars{PYTHON_VERSIONS_ACCEPTED}))
+		    {
+		    $vars{"_PYTHON_VERSION_FIRSTACCEPTED"} ||= $pv;
+		    $vars{"_PYTHON_VERSION_${pv}_OK"} = "yes";
+		    }
+		}
 	    } 
 	}
 
@@ -939,6 +960,7 @@ sub parse_makefile_vars
 		    if ($how eq 'S') # Limited substitution - keep ^ and $
 			{ $from =~ s/([?.{}\]\[*+])/\\$1/g; }
 		    $to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+		    $to =~ s/\&/\$&/g; # Change & to $1
 
 		    my($notfirst);
 		    if ($global =~ s/1//)
@@ -1009,13 +1031,13 @@ sub parse_eval_make_false
 	    { $_ = 0; }
 	$test =~ s/$1\s*\([^()]+\)/$_/;
 	}
-    while ( $test =~ /([^\s()]+)\s+(!=|==)\s+([^\s()]+)/ )
+    while ( $test =~ /([^\s()\|\&]+)\s+(!=|==)\s+([^\s()]+)/ )
 	{
 	if ($2 eq '==')
 	    { $_ = ($1 eq $3) ?1 :0; }
 	else
 	    { $_ = ($1 ne $3) ?1 :0; }
-	$test =~ s/[^\s()]+\s+(!=|==)\s+[^\s()]+/$_/;
+	$test =~ s/[^\s()\|\&]+\s+(!=|==)\s+[^\s()]+/$_/;
 	}
     if ($test !~ /[^<>\d()\s&|.]/ )
 	{
