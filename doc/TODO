@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1374 2004/02/13 14:46:08 minskim Exp $
+$NetBSD: TODO,v 1.1375 2004/02/13 14:51:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -142,7 +142,7 @@ Suggested package updates
 	o centericq-4.9.10
 	o cervisia-2.1
 	o clisp-2.32
-	o clusterit-2.2
+	o cocoon-2.1.4
 	o conserver-8.1.1
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.44.2
@@ -160,6 +160,7 @@ Suggested package updates
 	o dctc-0.85.9
 	o ddd-3.3.8
 	o dnetc-2.9004-482 [pkg/22390]
+	o doxygen-1.3.6
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
@@ -199,6 +200,7 @@ Suggested package updates
 	o gnomeicu-0.99
 	o gnuchess-5.06
 	o gnumeric-1.2.5
+	o gnutls-1.0.6
 	o gphoto2-2.1.4
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.14
@@ -224,7 +226,7 @@ Suggested package updates
 	o libesmtp-1.0.2
 	o libgphoto2-2.1.4
 	o libidn-0.3.7
-	o libmpeg3-1.5.3
+	o libmpeg3-1.5.4
 	o libole2-2.2.8
 	o libsndfile-1.0.6
 	o licq-1.2.7
