@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.20 2005/03/30 04:20:44 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.21 2005/03/30 06:29:23 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -41,3 +41,5 @@ Pullup ticket 398 - requested by Min Sik KIm
 portability fix for ish
 Pullup ticket 400 - requested by Thomas Klausner
 security fix for putty
+Pullup ticket 399 - requested by Dan McMahill
+portability fix for gdb
