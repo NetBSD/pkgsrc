@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/06/29 19:43:58 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/07/13 13:32:30 wiz Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.iconv?=	libiconv>=1.8
+BUILDLINK_DEPENDS.iconv?=	libiconv>=1.9.1
 BUILDLINK_PKGSRCDIR.iconv?=	../../converters/libiconv
 
 .if defined(USE_GNU_ICONV)
