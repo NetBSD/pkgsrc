@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/05/14 20:09:12 salo Exp $
+# $NetBSD: Makefile,v 1.20 2003/05/15 09:18:07 salo Exp $
 #
 
 DISTNAME=	ircii-pana-1.0c19
@@ -13,20 +13,16 @@ MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.bitchx.org/
 COMMENT=	IRC client based on ircII
 
-USE_BUILDLINK2=		yes
-USE_PKGINSTALL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ssl
+USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
+GNU_CONFIGURE=	YES
 
-post-patch:
-	@${MV} ${WRKSRC}/doc/BitchX.1 ${WRKSRC}/doc/BitchX.1.orig
-	@${SED} ${FILES_SUBST_SED} \
-		${WRKSRC}/doc/BitchX.1.orig > ${WRKSRC}/doc/BitchX.1
+CONFIGURE_ARGS=	--with-ssl
 
-.if defined(BITCHX_WITH_GTK)
+.if defined(BITCHX_WITH_GTK) && !empty(BITCHX_WITH_GTK:M[Yy][Ee][Ss])
+.include "../../graphics/imlib/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-.include "../../graphics/imlib/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-gtk
 CFLAGS+=		-I${PREFIX}/include/gnome-1.0
 PLIST_SUBST+=		GTK="gtk"
@@ -35,6 +31,11 @@ PLIST_SUBST+=		NOT_GTK="@comment "
 PLIST_SUBST+=		GTK=
 PLIST_SUBST+=		NOT_GTK=
 .endif
+
+post-patch:
+	@${MV} ${WRKSRC}/doc/BitchX.1 ${WRKSRC}/doc/BitchX.1.orig
+	@${SED} ${FILES_SUBST_SED} \
+		${WRKSRC}/doc/BitchX.1.orig > ${WRKSRC}/doc/BitchX.1
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
