@@ -1,0 +1,19 @@
+$NetBSD: patch-ap,v 1.1 1999/05/30 18:18:32 tron Exp $
+
+--- masterlib/Makefile.orig	Sun May 30 18:49:13 1999
++++ masterlib/Makefile	Sun May 30 18:49:13 1999
+@@ -0,0 +1,14 @@
++#	$NetBSD: patch-ap,v 1.1 1999/05/30 18:18:32 tron Exp $
++
++.PATH: ${.CURDIR}/../master
++LIB=	master
++SRCS	= single_server.c multi_server.c trigger_server.c master_proto.c
++
++MKLINT=		no
++MKPIC=		no
++MKPROFILE=	no
++
++# only needed during build
++libinstall::
++
++.include <bsd.lib.mk>
