@@ -1,7 +1,15 @@
-$NetBSD: patch-aa,v 1.1 1998/08/23 09:55:27 garbled Exp $
---- Makefile.orig	Thu Mar  5 15:06:19 1998
-+++ Makefile	Sun Aug 23 02:42:30 1998
-@@ -27,6 +27,6 @@
+$NetBSD: patch-aa,v 1.2 2001/12/05 04:29:32 jlam Exp $
+
+--- Makefile.orig	Thu Mar  5 17:06:19 1998
++++ Makefile
+@@ -21,30 +21,34 @@
+ ### GENERAL OPTIONS ###
+ 
+   # Compiler to use (C++ compiler _please_)
+-  CC = g++
++  #CC = g++
+ 
+   # Directory for XNibbles specific data
    # This must be set correctly at compile time
 -  DATADIR = /usr/local/games/xnibbles
 +  DATADIR = $(PREFIX)/share/xnibbles
@@ -10,14 +18,22 @@ $NetBSD: patch-aa,v 1.1 1998/08/23 09:55:27 garbled Exp $
 -  PREFIX  = /usr/local
 +#  PREFIX  = $(PREFIX)
  
-@@ -36,4 +36,4 @@
+   # Install program
+   INSTALL = /usr/bin/install
++  INSTALL_PROGRAM = $(INSTALL) -c -g $(GROUP) -m 755 -o $(USER)
++  INSTALL_MAN = $(INSTALL) -c -g $(GROUP) -m 644 -o $(USER)
++  INSTALL_DATA = $(INSTALL) -c -g $(GROUP) -m 644 -o $(USER)
++  INSTALL_DIR = $(INSTALL) -d -g $(GROUP) -m 755 -o $(USER)
+ 
    # User to own the program
 -  USER = 0
 -  GROUP = 0
 +  USER = root
 +  GROUP = wheel
  
-@@ -43,6 +43,6 @@
+ ### LINUX ONLY OPTIONS ###
+ 
+   # Requires kernel sound support, change from 0 to 1 if you want it
    SOUND = 1
 -  SOUNDDEV = /dev/dsp
 +  SOUNDDEV = /dev/audio
@@ -26,29 +42,48 @@ $NetBSD: patch-aa,v 1.1 1998/08/23 09:55:27 garbled Exp $
 -  JOYSTICK = 1
 +  JOYSTICK = 0
    JOYSTICK0DEV = /dev/js0
-@@ -68,2 +68,3 @@
+   JOYSTICK1DEV = /dev/js1
+ 
+@@ -66,6 +70,7 @@
+ 	@echo ""
+ 	@echo "make linux               Linux on ix86"
  	@echo "make irix                Irix 5.3 (6.x?)"
 +	@echo "make netbsd              NetBSD 1.3 or higher"
  	@echo ""
-@@ -81,2 +82,11 @@
+ 	@echo "Check the README file for help."
+ 	@echo ""
+@@ -79,6 +84,15 @@
+ 	-DDATADIR=\"$(DATADIR)\"' \
+ 	all
  
 +netbsd:
 +	$(MAKE) OBJECTS='$(OBJECTS)' \
-+	CC=$(CC) LDFLAGS='-Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib' \
++	CC="$(CC)" LDFLAGS="$(LDFLAGS)" \
 +	CFLAGS='-Wall -O2 $(SDEV) \
-+	-I$(X11BASE)/include -fwritable-strings \
++	$(CFLAGS) -fwritable-strings \
 +	$(JDEV) \
 +	-DDATADIR=\"$(DATADIR)\"' \
 +	all
 +
  irix:
-@@ -92,3 +102,3 @@
+ 	$(MAKE) OBJECTS= \
+ 	CC=$(CC) LDFLAGS='-L/usr/X11/lib' \
+@@ -90,7 +104,7 @@
+ 	$(CC) $(CFLAGS) $(LDFLAGS) \
+ 	bodyPart.o boni.o bonus.o levels.o people.o statusBar.o ticker.o \
  	timer.o walls.o worm.o xnibbles.o xpms.o $(OBJECTS) deadWorm.o counter.o \
 -	-o xnibbles -lm -lXpm -lX11
-+	-o xnibbles -lm -lXpm -lX11 -lossaudio
++	-o xnibbles -lm -lXpm -lX11 ${LIBOSSAUDIO}
  
-@@ -120,12 +130,12 @@
- 	$(INSTALL) -d $(DATADIR)/sounds -g $(GROUP) -m 755 -o $(USER)
+ xnleditor: xnleditor/level.o xnleditor/newWalls.o xnleditor/sideBar.o xnleditor/walls.o xnleditor/xnleditor.o xnleditor/xpms.o xnleditor/numericDisplay.o
+ 	$(CC) $(CFLAGS) $(LDFLAGS) \
+@@ -115,19 +129,19 @@
+ 	(cd ..; tar -cvzf xnibbles.tgz xnibbles/ ; chmod 644 xnibbles.tgz)
+ 
+ install:
+-	$(INSTALL) -d $(DATADIR) -g $(GROUP) -m 755 -o $(USER)
+-	$(INSTALL) -d $(DATADIR)/levels -g $(GROUP) -m 755 -o $(USER)
+-	$(INSTALL) -d $(DATADIR)/sounds -g $(GROUP) -m 755 -o $(USER)
 -	$(INSTALL) -d $(PREFIX) -g $(GROUP) -m 755 -o $(USER)
 -	$(INSTALL) -d $(PREFIX)/bin -g $(GROUP) -m 755 -o $(USER)
 -	$(INSTALL) -d $(PREFIX)/man -g $(GROUP) -m 755 -o $(USER)
@@ -59,14 +94,19 @@ $NetBSD: patch-aa,v 1.1 1998/08/23 09:55:27 garbled Exp $
 -	$(INSTALL) -g $(GROUP) -m 755 -o $(USER) xnibbles $(PREFIX)/bin
 -	$(INSTALL) -g $(GROUP) -m 755 -o $(USER) xnleditor/xnleditor $(PREFIX)/bin
 -	$(INSTALL) -g $(GROUP) -m 644 -o $(USER) xnibbles.6 $(PREFIX)/man/man6
-+#	$(INSTALL) -d $(PREFIX) -g $(GROUP) -m 755 -o $(USER)
-+#	$(INSTALL) -d $(PREFIX)/bin -g $(GROUP) -m 755 -o $(USER)
-+#	$(INSTALL) -d $(PREFIX)/man -g $(GROUP) -m 755 -o $(USER)
-+#	$(INSTALL) -d $(PREFIX)/man/man6 -g $(GROUP) -m 755 -o $(USER)
-+	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) levels/*.xnl $(DATADIR)/levels
-+	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) levels/README $(DATADIR)/levels
-+	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) sounds/*.ub $(DATADIR)/sounds
-+	$(INSTALL) -c -s -g $(GROUP) -m 755 -o $(USER) xnibbles $(PREFIX)/bin
-+	$(INSTALL) -c -s -g $(GROUP) -m 755 -o $(USER) xnleditor/xnleditor $(PREFIX)/bin
-+	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) xnibbles.6 $(PREFIX)/man/man6
++	$(INSTALL_DIR) $(DATADIR)
++	$(INSTALL_DIR) $(DATADIR)/levels
++	$(INSTALL_DIR) $(DATADIR)/sounds
++#	$(INSTALL_DIR) $(PREFIX)
++#	$(INSTALL_DIR) $(PREFIX)/bin
++#	$(INSTALL_DIR) $(PREFIX)/man
++#	$(INSTALL_DIR) $(PREFIX)/man/man6
++	$(INSTALL_DATA) levels/*.xnl $(DATADIR)/levels
++	$(INSTALL_DATA) levels/README $(DATADIR)/levels
++	$(INSTALL_DATA) sounds/*.ub $(DATADIR)/sounds
++	$(INSTALL_PROGRAM) xnibbles $(PREFIX)/bin
++	$(INSTALL_PROGRAM) xnleditor/xnleditor $(PREFIX)/bin
++	$(INSTALL_MAN) xnibbles.6 $(PREFIX)/man/man6
  	./make-LEVELS $(DATADIR) OOGA
+ 
+ bodyPart.o:	common.h bodyPart.h
