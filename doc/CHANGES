@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1910 2003/04/11 20:53:28 grant Exp $
+$NetBSD: CHANGES,v 1.1911 2003/04/11 21:37:01 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1560,3 +1560,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libao-arts-0.8.3 [jmmv 2003-04-11]
 	Added libao-esound-0.8.3 [jmmv 2003-04-11]
 	Updated pkg_install to 20030411 [grant 2003-04-11]
+	Updated teTeX2-bin to 2.0.2nb1 [jschauma 2003-04-11]
