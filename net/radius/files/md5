@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.1.1.1 1999/03/22 03:15:09 kim Exp $
+$NetBSD: md5,v 1.2 1999/04/24 22:39:53 tron Exp $
 
 MD5 (radius/radius.3.6B.basic.tar.gz) = 13dcc8f99cf4fa3cc421c47aaf48172b
-MD5 (radius/radius.3.6B-skey.tar.gz) = ed6b2e786e0597521e393377a383cf8d
+MD5 (radius/radius.3.6B-skey.tar.gz) = a498b75205c66a19334ea87106ccb4c2
 MD5 (radius/radius.3.6B-ftp.tar) = 76b8069c7a0ec8df10c5ade7109de73d
 MD5 (radius/radius.3.6B-simultd.tar) = 0b521c76f16d5a8558a7e555f795b6b1
