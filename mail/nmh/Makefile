@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2000/01/09 01:29:06 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2000/03/02 00:23:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
-DISTNAME=	nmh-1.0
+DISTNAME=	nmh-1.0.3
 CATEGORIES=	mail
-MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/nmh/
+MASTER_SITES=   ftp://ftp.mhost.com/pub/nmh/
 
 MAINTAINER=     kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.math.gatech.edu/nmh/
