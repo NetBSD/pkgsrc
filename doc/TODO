@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2013 2004/08/09 08:34:38 cjep Exp $
+$NetBSD: TODO,v 1.2014 2004/08/09 11:51:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -161,7 +161,6 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o ImageMagick-6.0.4
 	o ImageViewer-0.6.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
