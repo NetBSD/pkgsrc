@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/10/25 22:56:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/25 22:38:54 wiz Exp $
 
 DISTNAME=	festival-1.4.0
 WRKSRC=		${WRKDIR}
@@ -9,7 +9,6 @@ DISTFILES=	${DISTNAME}.tar.gz \
 		speech_tools-1.2.0.tar.gz \
 		OGIresLPC-2.0.3.tar.gz \
 		OGIfestpatch-1.4.0.tar.gz
- 
 # note that OGIfestpatch above file must be extracted last. it is, however
 # this behavior not defined in pkgsrc at the time of writing
 
@@ -27,10 +26,10 @@ FHOME=		${PREFIX}/share/festival
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) echo gcc26;;\
-                                          *2.7.*) echo gcc27;;\
-                                          *2.8.*) echo gcc28;;\
-                                          *egcs*) echo egcs;;\
+PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) ${ECHO} gcc26;;\
+                                          *2.7.*) ${ECHO} gcc27;;\
+                                          *2.8.*) ${ECHO} gcc28;;\
+                                          *egcs*) ${ECHO} egcs;;\
                                        esac
 
 MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS} \
@@ -65,7 +64,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
 	${CHMOD} -R u+w,a+r,og-w ${FESTIVAL}/lib
 	find ${FESTIVAL}/lib -type d -print0| xargs -0 ${CHMOD} 755
-	cd ${FESTIVAL} && pax -r -w lib examples ${FHOME}
+	cd ${FESTIVAL} && ${PAX} -r -w lib examples ${FHOME}
 	${RM} -f ${FHOME}/lib/etc/NetBSD/audsp
 	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/NetBSD/audsp ${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival ${PREFIX}/libexec/festival.naked

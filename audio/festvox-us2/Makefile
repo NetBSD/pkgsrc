@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/11 16:44:40 proff Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/25 22:39:02 wiz Exp $
 
 DISTNAME=	festvox_us2
 PKGNAME=	festvox-us2-1.4.0
@@ -23,11 +23,11 @@ FHOME=		${PREFIX}/share/festival
 MBROLA=		${FHOME}/lib/voices/english/us2_mbrola
 
 post-extract:
-	@ chmod -R a+r ${WRKSRC}
-	@ find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+	@ ${CHMOD} -R a+r ${WRKSRC}
+	@ find ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
 
 do-install:
-	cd ${WRKSRC} && pax -r -w * ${FHOME}
+	cd ${WRKSRC} && ${PAX} -r -w * ${FHOME}
 #ugh
 	ln -fs ../../../../../mbrola/voices/us2 ${MBROLA}
 	ln -fs ../../../../../mbrola/voices/us2/us2mrpa ${MBROLA}
