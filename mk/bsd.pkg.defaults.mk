@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.207 2004/01/18 18:55:24 epg Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.208 2004/01/22 10:19:58 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2197,7 +2197,8 @@ XCHAT_USE_SSL?=	YES
 # France
 #
 #MASTER_SITE_SUSE=	\
-#	ftp://fr2.rpmfind.net/linux/SuSE-Linux/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
+#	ftp://fr.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
+#	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/
 
 # Greece
 #
