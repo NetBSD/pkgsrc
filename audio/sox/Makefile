@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:19 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/18 16:15:11 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/02/04 10:32:34 max Exp 
 #
 
@@ -11,7 +11,6 @@ MAINTAINER=	packages@netbsd.org
 
 NO_WRKSUBDIR=	yes
 MAKEFILE=	Makefile.unx
-MAN1=		sox.1
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/sox ${PREFIX}/bin
