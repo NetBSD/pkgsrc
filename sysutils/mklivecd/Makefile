@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/03/03 16:26:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/26 17:28:58 xtraeme Exp $
 
-DISTNAME=	mklivecd-0.3
+DISTNAME=	mklivecd-0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	xtraeme@NetBSD.org
 COMMENT=	Build a NetBSD i386 Live CD via command line
 
-DEPENDS+=	cdrecord-[0-9]*:../../sysutils/cdrecord
+#DEPENDS+=	cdrecord-[0-9]*:../../sysutils/cdrecord
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -20,16 +20,15 @@ NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 NO_BUILDLINK=	YES
 NO_BUILD=	YES
-USE_LANGUAGES=	# empty
 
 INSTALLATION_DIRS=	share/mklivecd sbin
 
-FILES=	    bootkern.mk Makefile.bootfloppy \
-	    KERN-LIVECD mfs_rcd personal_config
+FILES=	    KERN-LIVECD mfs_rcd personal_config
 
 do-install:
-	@${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/mklivecd.sh > \
-	    ${WRKDIR}/mklivecd
+	@${SED} -e "s,@PREFIX@,${PREFIX},g" \
+		-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
+		${FILESDIR}/mklivecd.sh > ${WRKDIR}/mklivecd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mklivecd
 	${INSTALL_SCRIPT} ${WRKDIR}/mklivecd ${PREFIX}/sbin
 	${INSTALL_MAN} ${FILESDIR}/mklivecd.8 ${PREFIX}/man/man8

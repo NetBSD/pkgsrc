@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.5 2004/03/04 12:29:40 wiz Exp $
+.\" $NetBSD: mklivecd.8,v 1.6 2004/04/26 17:28:58 xtraeme Exp $
 .\"
 .\" mklivecd - Build a NetBSD Live CD for i386 machines
 .\" Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd March 3, 2004
+.Dd April 26, 2004
 .Dt MKLIVECD 8
 .Os
 .Sh NAME
@@ -137,6 +137,13 @@ If set to
 then X11 sets and configuration files will be unpacked automatically.
 Defaults to
 .Sy no .
+.It MKISOFS_ARGS
+Arguments passed to
+.Xr mkisofs 1
+when creating the
+.Nx ISO image.
+Defaults to
+.Sy -nobak -J -R -v .
 .It CDRECORD_ARGS
 Arguments passed to
 .Xr cdrecord 1

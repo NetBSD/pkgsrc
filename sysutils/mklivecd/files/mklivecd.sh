@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.6 2004/03/03 16:56:45 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.7 2004/04/26 17:28:58 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -42,6 +42,11 @@ mntstat="$config_dir/mount.stat"
 
 MKISOFS="@PREFIX@/bin/mkisofs"
 CDRECORD="@PREFIX@/bin/cdrecord"
+#
+# Don't modify it! they are needed for booting grub
+MKISOFS_FIXED_ARGS="-no-emul-boot -boot-load-size 30 -boot-info-table"
+BOOTIMAGE="grub/stage2_eltorito"
+GRUB_FILES="stage2_eltorito iso9660_stage1_5"
 
 trap "echo; showmsg \"Process cancelled!\"; bye 127" INT QUIT
 
@@ -108,6 +113,7 @@ do_conf()
 
 	# Miscellaneous options
 	: ${ENABLE_X11:=no}
+	: ${MKISOFS_ARGS:=-J -R -nobak -v}
 	: ${CDRECORD_ARGS:=-v}
 	: ${BLANK_BEFORE_BURN:=no}
 	: ${CDROM_DEVICE:=15,1,0}
@@ -220,11 +226,6 @@ do_cdlive()
 		showmsg "Kernel name: $KERNEL_NAME"
 		echo
 		sleep 2
-		sed -e "s,@KERNEL_NAME@,${KERNEL_NAME}," \
-		    $SHAREDIR/bootkern.mk > $WORKDIR/Makefile
-		sed -e "s,@ISODIR@,${ISODIR},g" $SHAREDIR/Makefile.bootfloppy \
-			> $WORKDIR/Makefile.bootfloppy
-
 		# if there's a kernel in ~/.mklivecd, use it, otherwise
 		# use the default one located in SHAREDIR.
 		if [ -s $config_dir/$BOOTKERN ]; then
@@ -240,13 +241,17 @@ do_cdlive()
 		cd $KERNEL_NAME
 		make depend
 		make COPTS="-Os"	    # Don't use additional flags
-		cd $WORKDIR
-		make USETOOLS=no COPTS=    # Don't use tools/copts
 		if [ $? -eq 0 ]; then
-		    [ ! -d $ISODIR/stand ] && mkdir -p $ISODIR/stand
-		    cp cdlive-boot1.fs $ISODIR/stand/cdlive-boot.fs
-		    cp netbsd $ISODIR
-		    make clean
+		    [ ! -d $ISODIR/grub ] && mkdir -p $ISODIR/grub
+		    for f in $GRUB_FILES
+		    do
+			    cp @PREFIX@/share/grub/@MACHINE_ARCH@-/$f $ISODIR/grub
+			    if [ "$verbose_mode" = "on" ]; then
+				showmsg "Copying $f into $ISODIR/grub."
+			    fi
+		    done
+		    cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR
+		    make clean >/dev/null 2>&1
 		    rm -rf $KERNEL_NAME
 		    echo
 		    showmsg "Build successful"
@@ -263,7 +268,7 @@ do_cdlive()
 		fi
 	;;
 	base)
-		chown root:wheel $ISODIR/netbsd $ISODIR/stand/*
+		chown root:wheel $ISODIR/netbsd $ISODIR/grub/*
 
 		for F in ${BASE_SETS}
 		do
@@ -336,7 +341,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.6 2004/03/03 16:56:45 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.7 2004/04/26 17:28:58 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -494,7 +499,7 @@ _EOF_
 		    if [ "$cnt" -gt 1 ]; then
 			cnt=$(($cnt - 1))
 			echo $cnt > $mntstat
-			showmsg "pkgsrc Still in use by mklivecd."
+			showmsg "pkgsrc still in use by mklivecd."
 		    else
 			showmsg "Unmounting pkgsrc."
 			umount -R $ISODIR/usr/pkgsrc
@@ -522,7 +527,7 @@ _EOF_
 			rm -rf $ISODIR/$F
 		    fi
 		done
-		showmsg "Done"
+		showmsg "Done."
 	;;
 	iso)
 		if [ ! -f $ISODIR/netbsd ]; then
@@ -554,8 +559,8 @@ _EOF_
 		if [ ! -f $BASEDIR/$IMAGE_NAME.iso ]; then
 		    echo
 		    showmsg "Creating ISO CD9660 image"
-		    $MKISOFS -nobak -b stand/cdlive-boot.fs \
-			-o $BASEDIR/$IMAGE_NAME.iso -J -R $ISODIR
+		    $MKISOFS $MKISOFS_FIXED_ARGS $MKISOFS_ARGS -b $BOOTIMAGE \
+			-o $BASEDIR/$IMAGE_NAME.iso $ISODIR
 		fi
 
 	;;
