@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/23 06:51:00 jdolecek Exp $
+
+SHA1 (gnotime-2.2.0.tar.gz) = 895a516a52b0cc7745183c0c8c909896dbda60ab
+Size (gnotime-2.2.0.tar.gz) = 1197945 bytes
+SHA1 (patch-aa) = e54c704d3089587e4dd6a6f474088b22c809ffe4
