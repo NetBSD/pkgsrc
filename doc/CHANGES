@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9203 2005/02/19 11:23:05 wiz Exp $
+$NetBSD: CHANGES,v 1.9204 2005/02/19 11:30:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -949,3 +949,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated grub to 0.96 [wiz 2005-02-19]
 	Updated p5-Module-Signature to 0.44 [wiz 2005-02-19]
 	Updated p5-Class-MethodMaker to 2.05 [wiz 2005-02-19]
+	Updated p5-Text-Kakasi to 1.05 [wiz 2005-02-19]
