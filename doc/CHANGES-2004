@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.7 2005/03/27 17:11:31 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.8 2005/03/27 17:23:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4041,6 +4041,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated scons to 0.96.1 [recht 2004-08-24]
 	Updated tla to 1.2.1nb1 [recht 2004-08-24]
 	Added xmlstarlet-0.9.3 [drochner 2004-08-24]
+	Added libmatheval-0.1.1 [drochner 2004-08-24]
 	Updated xmame to 0.85nb1 [wiz 2004-08-25]
 	Added digikam-0.6.2 [seb 2004-08-25]
 	Updated imapfilter to 1.0.1 [seb 2004-08-25]
