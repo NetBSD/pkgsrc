@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/05 23:07:50 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/21 19:07:25 wiz Exp $
 bin/gnapster
+share/pixmaps/gnapster.png
+share/gnome/apps/Applications/gnapster.desktop
