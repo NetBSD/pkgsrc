@@ -1,19 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/23 13:51:42 kent Exp $
 
---- src/main.cpp.orig	Wed May  9 06:43:01 2001
-+++ src/main.cpp	Thu Jun 14 23:25:55 2001
-@@ -78,6 +78,10 @@
- 	return NULL;
+--- program/cheesetracker.cpp.orig	Thu Apr 11 23:24:16 2002
++++ program/cheesetracker.cpp
+@@ -186,12 +186,19 @@
+ 
  }
  
 +gint pth_nbschedule(gint no_need_this) {
 +	pthread_yield_np();
 +	return 1;
 +}
++
  
- void initialize_objects () {
- 
-@@ -145,7 +149,9 @@
+ int main(int argc, char *argv[]) {
  
  
  	pthread_attr_t thread_attr;
@@ -23,7 +22,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
  
  	int tmperror,counter=0;
  	char * filename;
-@@ -182,9 +188,18 @@
+@@ -238,9 +245,19 @@
  	quit_player=false;
  
  	pthread_attr_init(&thread_attr);
@@ -39,6 +38,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
 +		0);
 +	Gtk::Connection conn = Gtk::Main::timeout.connect(my_slot, 150);
 +#endif
++
  
- 	begin_threads=true;
+ 
  
