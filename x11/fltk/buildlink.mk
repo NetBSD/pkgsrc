@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/26 07:14:01 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/05 22:15:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use FLTK.
 #
@@ -20,13 +20,8 @@ FLTK_REQD?=		1.0.9
 
 .include "../../graphics/Mesa/buildlink.mk"
 
-# We double-list because we're not sure if the files are in ${X11BASE}
-# or in ${LOCALBASE}.
-
-FLTK_HEADERS=		${X11BASE}/include/FL/*
-FLTK_HEADERS+=		${LOCALBASE}/include/FL/*
-FLTK_LIBS=		${X11BASE}/lib/libfltk.*
-FLTK_LIBS+=		${LOCALBASE}/lib/libfltk.*
+FLTK_HEADERS=		${X11PREFIX}/include/FL/*
+FLTK_LIBS=		${X11PREFIX}/lib/libfltk.*
 DEPENDS+=		fltk>=${FLTK_REQD}:../../x11/fltk
 
 BUILDLINK_INCDIR?=	${WRKDIR}/include
