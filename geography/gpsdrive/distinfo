@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/26 23:33:35 wiz Exp $
+
+SHA1 (gpsdrive-1.31.tar.gz) = 296a06d264c5fbb077c91f3529b4e6f122423f05
+Size (gpsdrive-1.31.tar.gz) = 784379 bytes
+SHA1 (patch-aa) = cc5dd44020ffc5f22dc958c938b9f98ff6e01810
+SHA1 (patch-ab) = 240901fe52e41db1a41299f66ac61c06898f1881
+SHA1 (patch-ac) = 86f67ad04378f14a95e5b9fc806b2054ef4be127
