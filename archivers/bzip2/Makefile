@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/18 13:33:40 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/29 01:18:41 tv Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
@@ -17,15 +17,15 @@ MAKE_ENV+=		REALCC="${CC}"
 
 .include "../../mk/compiler.mk"
 
+CFLAGS+=		${CPPFLAGS}
 .if !empty(CC_VERSION:Mgcc*)
-BZIP_CFLAGS=           -Wall -Winline -fomit-frame-pointer -fno-strength-reduce
+CFLAGS+=		-Wall -Winline -fomit-frame-pointer -fno-strength-reduce
 .endif
 
-MAKE_ENV+=		BZIP_CFLAGS="${BZIP_CFLAGS}"
 INSTALLATION_DIRS=	bin include lib man/man1
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/libbz2.la ${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_SCRIPT} ${WRKSRC}/libbz2.la ${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bzip2 ${PREFIX}/bin
 	${LN} -f ${PREFIX}/bin/bzip2 ${PREFIX}/bin/bunzip2
 	${LN} -f ${PREFIX}/bin/bzip2 ${PREFIX}/bin/bzcat
