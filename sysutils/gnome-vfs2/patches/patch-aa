@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.6 2003/12/28 23:35:46 jmmv Exp $
+
+--- configure.orig	2003-10-12 13:05:53.000000000 +0200
++++ configure
+@@ -25226,6 +25226,7 @@ LIBGNOMEVFS_LIBS="$LIBGNOMEVFS_LIBS $OPE
+ 
+ FAM_MISSING_WARNING="Gnome-vfs depends on FAM to provide notification when files are altered (either through filesystem polling, or a kernel notification mechanism). If Gnome-vfs is built without FAM support, directories viewed with Nautilus or other applications will not remain in synch with the actual filesystem when they are altered by external processes. Particularly if you are a distributor please compile Nautilus with FAM support. FAM is available from http://oss.sgi.com/projects/fam/. A patch to add Linux Kernel 2.4 directory notify support to FAM (highly desirable) is available from http://people.redhat.com/alexl/files/"
+ FAM_LIBS=
++if false; then
+ echo "$as_me:$LINENO: checking for FAMOpen in -lfam" >&5
+ echo $ECHO_N "checking for FAMOpen in -lfam... $ECHO_C" >&6
+ if test "${ac_cv_lib_fam_FAMOpen+set}" = set; then
+@@ -25434,6 +25435,7 @@ else
+   { echo "$as_me:$LINENO: WARNING: *** FAM support will not be built (FAM library not found) $FAM_MISSING_WARNING ***" >&5
+ echo "$as_me: WARNING: *** FAM support will not be built (FAM library not found) $FAM_MISSING_WARNING ***" >&2;}
+ fi
++fi
+ 
+ 
+ 
