@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/03 10:58:57 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/04 13:17:17 agc Exp $
 sbin/bdf
 sbin/grave-robber
 sbin/icat
@@ -17,4 +17,41 @@ share/doc/tct/design-notes
 share/doc/tct/grave-robber.README
 share/doc/tct/lazarus.README
 share/doc/tct/mac.README
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/body_init.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/bsd.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/chk_binaries.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/command.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/crunch.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/date.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/datez.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/dig-sig.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/file_mode.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/getopts.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/hostname.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/is_able.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/linux.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/logger.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/maj_min_walk.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/major_minor.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/misc.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/ostype.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/pass.cache.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/print_table.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/proc.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/process_dirs.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/ps_spy.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/rawdev.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/realpath.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/save_the_files.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/savecore.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/solaris.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/stat.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/suck_free_inodes.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/suck_table.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/sunos.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/system_stubs.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/tm_misc.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/tree.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/trust.pl
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/vault_cp.pl
 @dirrm share/doc/tct
