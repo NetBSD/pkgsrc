@@ -1,13 +1,18 @@
-$NetBSD: patch-aa,v 1.1 1998/02/01 01:48:52 tron Exp $
-
-(This is the re.1.txt patch from www.python.org)
-
---- Lib/re.py	1997/12/31 21:40:43
-+++ Lib/re.py	1997/12/31 21:55:49
-@@ -203,6 +203,7 @@
- 		if type(g)==type( "" ): g = [g]
- 		results[len(results):] = list(g)
- 	    pos = lastmatch = j
-+	    n = n + 1
- 	results.append(source[lastmatch:])
- 	return results
+Index: Tools/freeze/freeze.py
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/Tools/freeze/freeze.py,v
+retrieving revision 1.25
+retrieving revision 1.26
+diff -c -r1.25 -r1.26
+*** freeze.py	1998/03/20 17:37:18	1.25
+--- freeze.py	1998/04/20 17:53:19	1.26
+***************
+*** 72,78 ****
+  import os
+  import string
+  import sys
+- import addpack
+  
+  
+  # Import the freeze-private modules
+--- 72,77 ----

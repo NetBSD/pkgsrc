@@ -86,7 +86,6 @@ PYTHONPATH=$(COREPYTHONPATH)
 # Some modules that are normally always on:
 
 regex regexmodule.c regexpr.c	# Regular expressions, GNU Emacs style
-reop reopmodule.c		# Additional RE support (for re1.py)
 pcre pcremodule.c pypcre.c	# Regular expressions, Perl style (for re.py)
 posix posixmodule.c		# posix (UNIX) system calls
 signal signalmodule.c		# signal(2)
@@ -147,7 +146,7 @@ errno errnomodule.c	# posix (UNIX) errno values
 
 # The crypt module is now disabled by default because it breaks builds
 # on many systems (where -lcrypt is needed), e.g. Linux (I believe).
-crypt cryptmodule.c -lcrypt	# crypt(3); needs -lcrypt on some systems
+crypt cryptmodule.c # -lcrypt	# crypt(3); needs -lcrypt on some systems
 
 
 # Some more UNIX dependent modules -- off by default, since these
@@ -165,6 +164,7 @@ resource resource.c	# Jeremy Hylton's rlimit interface
 @NO64BIT@audioop audioop.c	# Operations on audio samples
 @NO64BIT@imageop imageop.c	# Operations on images
 @NO64BIT@rgbimg rgbimgmodule.c   # Read SGI RGB image files (but coded portably)
+
 
 # The stdwin module provides a simple, portable (between X11 and Mac)
 # windowing interface.  You need to ftp the STDWIN library, e.g. from
@@ -291,6 +291,8 @@ TKPATH=:lib-tk
 #	-L/usr/openwin/lib \
 # *** Uncomment these for TOGL extension only:
 #	-lGL -lGLU -lXext -lXmu \
+# *** Uncomment for AIX:
+#	-lld \
 # *** Always uncomment this; X11 libraries to link with:
 #	-lX11
 
@@ -355,7 +357,7 @@ bsddb bsddbmodule.c # -I$(DBPORT)/include -I$(DBPORT) $(DBPORT)/libdb.a
 
 
 
-# David Wayne Williams' soundex module
+# David Wayne Williams' soundex module (obsolete -- this will disappear!)
 soundex soundex.c
 
 # Helper module for various ascii-encoders
@@ -388,7 +390,8 @@ cPickle cPickle.c
 
 # Andrew Kuchling's zlib module.
 # This require zlib 1.0.4 (or later).  See http://quest.jpl.nasa.gov/zlib/
-zlib zlibmodule.c -lz #-I$(prefix)/include -L$(exec_prefix)/lib -lz
+# See http://www.cdrom.com/pub/infozip/zlib/
+zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz
 
 
 # Example -- included for reference only:

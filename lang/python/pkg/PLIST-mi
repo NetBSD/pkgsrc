@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.1 1998/02/01 01:48:55 tron Exp $
+@comment $NetBSD: PLIST-mi,v 1.2 1998/05/04 19:29:23 tron Exp $
 bin/python
 bin/python1.5
 include/python1.5/Python.h
@@ -59,6 +59,7 @@ include/python1.5/thread.h
 include/python1.5/token.h
 include/python1.5/traceback.h
 include/python1.5/tupleobject.h
+@dirrm include/python1.5
 lib/python1.5/BaseHTTPServer.py
 lib/python1.5/BaseHTTPServer.pyc
 lib/python1.5/BaseHTTPServer.pyo
@@ -74,9 +75,6 @@ lib/python1.5/ConfigParser.pyo
 lib/python1.5/MimeWriter.py
 lib/python1.5/MimeWriter.pyc
 lib/python1.5/MimeWriter.pyo
-lib/python1.5/Para.py
-lib/python1.5/Para.pyc
-lib/python1.5/Para.pyo
 lib/python1.5/Queue.py
 lib/python1.5/Queue.pyc
 lib/python1.5/Queue.pyo
@@ -95,9 +93,6 @@ lib/python1.5/UserDict.pyo
 lib/python1.5/UserList.py
 lib/python1.5/UserList.pyc
 lib/python1.5/UserList.pyo
-lib/python1.5/addpack.py
-lib/python1.5/addpack.pyc
-lib/python1.5/addpack.pyo
 lib/python1.5/aifc.py
 lib/python1.5/aifc.pyc
 lib/python1.5/aifc.pyo
@@ -137,9 +132,6 @@ lib/python1.5/cmpcache.pyo
 lib/python1.5/code.py
 lib/python1.5/code.pyc
 lib/python1.5/code.pyo
-lib/python1.5/codehack.py
-lib/python1.5/codehack.pyc
-lib/python1.5/codehack.pyo
 lib/python1.5/colorsys.py
 lib/python1.5/colorsys.pyc
 lib/python1.5/colorsys.pyo
@@ -160,6 +152,7 @@ lib/python1.5/config/install-sh
 lib/python1.5/config/libpython1.5.a
 lib/python1.5/config/makesetup
 lib/python1.5/config/python.o
+@comment dirrm lib/python1.5/config
 lib/python1.5/copy.py
 lib/python1.5/copy.pyc
 lib/python1.5/copy.pyo
@@ -196,9 +189,6 @@ lib/python1.5/fileinput.pyo
 lib/python1.5/find.py
 lib/python1.5/find.pyc
 lib/python1.5/find.pyo
-lib/python1.5/fmt.py
-lib/python1.5/fmt.pyc
-lib/python1.5/fmt.pyo
 lib/python1.5/fnmatch.py
 lib/python1.5/fnmatch.pyc
 lib/python1.5/fnmatch.pyo
@@ -214,6 +204,9 @@ lib/python1.5/ftplib.pyo
 lib/python1.5/getopt.py
 lib/python1.5/getopt.pyc
 lib/python1.5/getopt.pyo
+lib/python1.5/getpass.py
+lib/python1.5/getpass.pyc
+lib/python1.5/getpass.pyo
 lib/python1.5/glob.py
 lib/python1.5/glob.pyc
 lib/python1.5/glob.pyo
@@ -238,6 +231,9 @@ lib/python1.5/httplib.pyo
 lib/python1.5/ihooks.py
 lib/python1.5/ihooks.pyc
 lib/python1.5/ihooks.pyo
+lib/python1.5/imaplib.py
+lib/python1.5/imaplib.pyc
+lib/python1.5/imaplib.pyo
 lib/python1.5/imghdr.py
 lib/python1.5/imghdr.pyc
 lib/python1.5/imghdr.pyo
@@ -349,6 +345,7 @@ lib/python1.5/lib-stdwin/wdbframewin.pyo
 lib/python1.5/lib-stdwin/wdbsrcwin.py
 lib/python1.5/lib-stdwin/wdbsrcwin.pyc
 lib/python1.5/lib-stdwin/wdbsrcwin.pyo
+@comment dirrm lib/python1.5/lib-stdwin
 lib/python1.5/lib-tk/Canvas.py
 lib/python1.5/lib-tk/Canvas.pyc
 lib/python1.5/lib-tk/Canvas.pyo
@@ -367,6 +364,9 @@ lib/python1.5/lib-tk/SimpleDialog.pyo
 lib/python1.5/lib-tk/Tkconstants.py
 lib/python1.5/lib-tk/Tkconstants.pyc
 lib/python1.5/lib-tk/Tkconstants.pyo
+lib/python1.5/lib-tk/Tkdnd.py
+lib/python1.5/lib-tk/Tkdnd.pyc
+lib/python1.5/lib-tk/Tkdnd.pyo
 lib/python1.5/lib-tk/Tkinter.py
 lib/python1.5/lib-tk/Tkinter.pyc
 lib/python1.5/lib-tk/Tkinter.pyo
@@ -385,15 +385,13 @@ lib/python1.5/lib-tk/tkMessageBox.pyo
 lib/python1.5/lib-tk/tkSimpleDialog.py
 lib/python1.5/lib-tk/tkSimpleDialog.pyc
 lib/python1.5/lib-tk/tkSimpleDialog.pyo
+@comment dirrm lib/python1.5/lib-tk
 lib/python1.5/linecache.py
 lib/python1.5/linecache.pyc
 lib/python1.5/linecache.pyo
 lib/python1.5/locale.py
 lib/python1.5/locale.pyc
 lib/python1.5/locale.pyo
-lib/python1.5/lockfile.py
-lib/python1.5/lockfile.pyc
-lib/python1.5/lockfile.pyo
 lib/python1.5/macpath.py
 lib/python1.5/macpath.pyc
 lib/python1.5/macpath.pyo
@@ -424,12 +422,6 @@ lib/python1.5/multifile.pyo
 lib/python1.5/mutex.py
 lib/python1.5/mutex.pyc
 lib/python1.5/mutex.pyo
-lib/python1.5/newdir.py
-lib/python1.5/newdir.pyc
-lib/python1.5/newdir.pyo
-lib/python1.5/ni1.py
-lib/python1.5/ni1.pyc
-lib/python1.5/ni1.pyo
 lib/python1.5/nntplib.py
 lib/python1.5/nntplib.pyc
 lib/python1.5/nntplib.pyo
@@ -468,12 +460,16 @@ lib/python1.5/plat-netbsd1/TERMIOS.py
 lib/python1.5/plat-netbsd1/TERMIOS.pyc
 lib/python1.5/plat-netbsd1/TERMIOS.pyo
 lib/python1.5/plat-netbsd1/regen
+@comment dirrm lib/python1.5/plat-netbsd1
 lib/python1.5/poly.py
 lib/python1.5/poly.pyc
 lib/python1.5/poly.pyo
 lib/python1.5/popen2.py
 lib/python1.5/popen2.pyc
 lib/python1.5/popen2.pyo
+lib/python1.5/poplib.py
+lib/python1.5/poplib.pyc
+lib/python1.5/poplib.pyo
 lib/python1.5/posixfile.py
 lib/python1.5/posixfile.pyc
 lib/python1.5/posixfile.pyo
@@ -502,18 +498,12 @@ lib/python1.5/pyclbr.pyo
 lib/python1.5/quopri.py
 lib/python1.5/quopri.pyc
 lib/python1.5/quopri.pyo
-lib/python1.5/rand.py
-lib/python1.5/rand.pyc
-lib/python1.5/rand.pyo
 lib/python1.5/random.py
 lib/python1.5/random.pyc
 lib/python1.5/random.pyo
 lib/python1.5/re.py
 lib/python1.5/re.pyc
 lib/python1.5/re.pyo
-lib/python1.5/re1.py
-lib/python1.5/re1.pyc
-lib/python1.5/re1.pyo
 lib/python1.5/reconvert.py
 lib/python1.5/reconvert.pyc
 lib/python1.5/reconvert.pyo
@@ -550,6 +540,9 @@ lib/python1.5/shutil.pyo
 lib/python1.5/site.py
 lib/python1.5/site.pyc
 lib/python1.5/site.pyo
+lib/python1.5/smtplib.py
+lib/python1.5/smtplib.pyc
+lib/python1.5/smtplib.pyo
 lib/python1.5/sndhdr.py
 lib/python1.5/sndhdr.pyc
 lib/python1.5/sndhdr.pyo
@@ -571,9 +564,6 @@ lib/python1.5/sunaudio.pyo
 lib/python1.5/symbol.py
 lib/python1.5/symbol.pyc
 lib/python1.5/symbol.pyo
-lib/python1.5/tb.py
-lib/python1.5/tb.pyc
-lib/python1.5/tb.pyo
 lib/python1.5/telnetlib.py
 lib/python1.5/telnetlib.pyc
 lib/python1.5/telnetlib.pyo
@@ -636,6 +626,7 @@ lib/python1.5/test/output/test_timing
 lib/python1.5/test/output/test_tokenize
 lib/python1.5/test/output/test_types
 lib/python1.5/test/output/test_unpack
+lib/python1.5/test/output/test_xmllib
 lib/python1.5/test/output/test_zlib
 lib/python1.5/test/pystone.py
 lib/python1.5/test/pystone.pyc
@@ -802,6 +793,9 @@ lib/python1.5/test/test_types.pyo
 lib/python1.5/test/test_unpack.py
 lib/python1.5/test/test_unpack.pyc
 lib/python1.5/test/test_unpack.pyo
+lib/python1.5/test/test_xmllib.py
+lib/python1.5/test/test_xmllib.pyc
+lib/python1.5/test/test_xmllib.pyo
 lib/python1.5/test/test_zlib.py
 lib/python1.5/test/test_zlib.pyc
 lib/python1.5/test/test_zlib.pyo
@@ -814,6 +808,12 @@ lib/python1.5/test/testrgb.uue
 lib/python1.5/test/tokenize_tests.py
 lib/python1.5/test/tokenize_tests.pyc
 lib/python1.5/test/tokenize_tests.pyo
+lib/python1.5/threading.py
+lib/python1.5/threading.pyc
+lib/python1.5/threading.pyo
+lib/python1.5/threading_api.py
+lib/python1.5/threading_api.pyc
+lib/python1.5/threading_api.pyo
 lib/python1.5/toaiff.py
 lib/python1.5/toaiff.pyc
 lib/python1.5/toaiff.pyo
@@ -872,4 +872,3 @@ lib/python1.5/zmod.py
 lib/python1.5/zmod.pyc
 lib/python1.5/zmod.pyo
 man/man1/python.1
-@dirrm include/python1.5
