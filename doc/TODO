@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.284 2003/02/20 23:20:26 salo Exp $
+$NetBSD: TODO,v 1.285 2003/02/21 08:33:35 salo Exp $
 
 Suggested new packages
 ======================
@@ -191,6 +191,7 @@ Suggested package updates
 	o maildrop-1.5.2
 	o mcrypt-2.6.3
 	o memtest86-3.0
+	o mergeant-0.10.0 [replaces BROKEN gnome-db]
 	o mhonarc-2.5.13 [pkg/19366]
 	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
