@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3037 2005/02/18 14:09:15 wiz Exp $
+$NetBSD: TODO,v 1.3038 2005/02/18 14:43:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,6 @@ Suggested package updates
 	o benchfft-3.1
 	o bind-9.3.1
 	o bioperl-1.4
-	o bison-2.0
 	o blender-2.36
 	o blitz++-0.8
 	o boaconstructor-0.3.1
