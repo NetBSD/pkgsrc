@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 1999/10/23 11:08:56 tron Exp $
-#
+# $NetBSD: Makefile,v 1.11 1999/11/07 20:25:34 tron Exp $
 
-DISTNAME=		ee-0.3.8
+DISTNAME=		ee-0.3.11
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0/sources/ee/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
