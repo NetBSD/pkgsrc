@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/11/01 10:49:33 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2003/03/10 13:07:25 skrll Exp $
 
---- tool/Jamfile.orig	Wed Aug 14 11:09:02 2002
+--- tool/Jamfile.orig	2002-11-06 12:28:31.000000000 +0000
 +++ tool/Jamfile
-@@ -32,7 +32,6 @@ SubInclude WONKA_TOP tool appletviewer ;
+@@ -31,7 +31,6 @@ SubDir WONKA_TOP tools ;
  SubInclude WONKA_TOP tool crestab ;
  SubInclude WONKA_TOP tool credtab ;
  SubInclude WONKA_TOP tool files2c ;
 -SubInclude WONKA_TOP tool doclet ;
+ if $(TESTS) = true {
  SubInclude WONKA_TOP tool mauve ;
- SubInclude WONKA_TOP tool make_module ;
- SubInclude WONKA_TOP tool visualtest ;
+ }
