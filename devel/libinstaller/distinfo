@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/09 05:44:18 xtraeme Exp $
+
+SHA1 (libinstaller-4.0.tar.gz) = caeadbd8c6d31266c78b3f2ce0669336cb2dd0ce
+Size (libinstaller-4.0.tar.gz) = 20889 bytes
+SHA1 (patch-aa) = 7d0117d988b04c6af288858b0130d86a2937a468
