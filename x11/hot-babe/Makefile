@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:18:34 tv Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/28 23:18:17 reed Exp $
 
 DISTNAME=	hot-babe-0.1.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://dindinx.net/hotbabe/downloads/
 

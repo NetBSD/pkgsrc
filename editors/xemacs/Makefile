@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2004/10/03 00:14:39 tv Exp $
+# $NetBSD: Makefile,v 1.73 2004/12/28 23:18:19 reed Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 .include "../../editors/xemacs/Makefile.common"
 

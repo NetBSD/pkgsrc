@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/08 13:19:26 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/12/28 23:18:18 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PSICONV_BUILDLINK3_MK:=	${PSICONV_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	psiconv
 
 .if !empty(PSICONV_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.psiconv+=	psiconv>=0.8.3nb1
-BUILDLINK_RECOMMENDED.psiconv+=	psiconv>=0.8.3nb2
+BUILDLINK_RECOMMENDED.psiconv+=	psiconv>=0.9.6nb1
 BUILDLINK_PKGSRCDIR.psiconv?=	../../converters/psiconv
 .endif	# PSICONV_BUILDLINK3_MK
 
