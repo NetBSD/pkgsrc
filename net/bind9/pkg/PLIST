@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/08/23 06:50:46 rh Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/11/13 04:43:24 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -166,10 +166,10 @@ include/omapi/result.h
 include/omapi/types.h
 lib/libdns.a
 lib/libdns.la
-lib/libdns.so.1.0
+lib/libdns.so.2.0
 lib/libisc.a
 lib/libisc.la
-lib/libisc.so.1.0
+lib/libisc.so.2.0
 lib/liblwres.a
 lib/liblwres.la
 lib/liblwres.so.1.0
@@ -184,19 +184,20 @@ sbin/lwresd
 sbin/named
 sbin/rndc
 share/doc/bind9/README
-share/doc/bind9/arm/Bv9ARM.1.html
-share/doc/bind9/arm/Bv9ARM.2.html
-share/doc/bind9/arm/Bv9ARM.3.html
-share/doc/bind9/arm/Bv9ARM.4.html
-share/doc/bind9/arm/Bv9ARM.5.html
-share/doc/bind9/arm/Bv9ARM.6.html
-share/doc/bind9/arm/Bv9ARM.7.html
-share/doc/bind9/arm/Bv9ARM.8.html
-share/doc/bind9/arm/Bv9ARM.9.html
-share/doc/bind9/arm/Bv9ARM.css
+share/doc/bind9/arm/Bv9ARM-book.xml
+share/doc/bind9/arm/Bv9ARM.ch01.html
+share/doc/bind9/arm/Bv9ARM.ch02.html
+share/doc/bind9/arm/Bv9ARM.ch03.html
+share/doc/bind9/arm/Bv9ARM.ch04.html
+share/doc/bind9/arm/Bv9ARM.ch05.html
+share/doc/bind9/arm/Bv9ARM.ch06.html
+share/doc/bind9/arm/Bv9ARM.ch07.html
+share/doc/bind9/arm/Bv9ARM.ch08.html
+share/doc/bind9/arm/Bv9ARM.ch09.html
 share/doc/bind9/arm/Bv9ARM.html
-share/doc/bind9/arm/Bv9ARM.txt
+share/doc/bind9/arm/README-SGML
 share/doc/bind9/arm/isc.color.gif
+share/doc/bind9/arm/nominum-docbook-html.dsl
 share/doc/bind9/draft/draft-costanzo-dns-gl-03.txt
 share/doc/bind9/draft/draft-ietf-dhc-dhcp-dns-12.txt
 share/doc/bind9/draft/draft-ietf-dnsext-apl-rr-01.txt
