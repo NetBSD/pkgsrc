@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/08/03 14:10:30 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/11 03:36:54 minskim Exp $
 
 DISTNAME=	teixsl-html
-PKGNAME=	${DISTNAME}-3.1
-PKGREVISION=	2
+PKGNAME=	${DISTNAME}-3.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.tei-c.org/Stylesheets/P4/
 EXTRACT_SUFX=	.zip

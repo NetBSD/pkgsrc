@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7136 2004/09/10 20:24:22 wiz Exp $
+$NetBSD: CHANGES,v 1.7137 2004/09/11 03:36:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4232,3 +4232,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated re2c to 0.9.3 [wiz 2004-09-10]
 	Updated tvision to 0.8 [wiz 2004-09-10]
 	Updated dqs to 3.3.2nb2 [wiz 2004-09-10]
+	Updated teixsl-html to 3.3 [minskim 2004-09-11]
+	Updated teixsl-fo to 3.3 [minskim 2004-09-11]
