@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/08/02 00:27:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/30 00:03:10 wiz Exp $
 #
 
-DISTNAME=	easytag-0.9.5
+DISTNAME=	easytag-0.11
 CATEGORIES=	audio
 MASTER_SITES=	ftp://easytag.sourceforge.net/pub/easytag/devel/
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://easytag.sourceforge.net/
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 
 USE_GMAKE=	yes
+USE_LIBINTL=	yes
 USE_X11BASE=	yes
 
 .include "../../mk/bsd.pkg.mk"
