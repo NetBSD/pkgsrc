@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2004/03/07 01:16:01 itojun Exp $
+$NetBSD: distinfo,v 1.19 2004/05/02 17:25:15 xtraeme Exp $
 
-SHA1 (cue-snap-20040301.tar.gz) = 3150db01cf511457f0594279fb415df79a96fbc8
-Size (cue-snap-20040301.tar.gz) = 171794 bytes
+SHA1 (cue-snap-20040329.tar.gz) = 1a54fbe138454e7d4be38a53d66ff58a31d64a9c
+Size (cue-snap-20040329.tar.gz) = 168256 bytes
