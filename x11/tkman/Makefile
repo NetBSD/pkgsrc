@@ -3,12 +3,12 @@
 # Date created:         27 Dec 1994
 # Whom:                 thomas Gellekum <tg@freebsd.org>
 #
-# $Id: Makefile,v 1.2 1997/11/23 16:59:05 hubertf Exp $
+# $Id: Makefile,v 1.3 1997/11/27 13:49:35 explorer Exp $
 #
 
 DISTNAME=	tkman-2.0.3
 CATEGORIES=	misc tk80
-MASTER_SITES=	ftp://ftp.cs.berkeley.edu/ucb/people/phelps/tcltk
+MASTER_SITES=	ftp://ftp.cs.berkeley.edu/ucb/people/phelps/tcltk/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tg@freebsd.org
