@@ -1,24 +1,13 @@
-$NetBSD: patch-ac,v 1.7 2000/04/06 22:38:19 jlam Exp $
+$NetBSD: patch-ac,v 1.8 2000/06/04 00:30:35 wiz Exp $
 
---- aclocal.m4.orig	Fri Mar 31 06:37:09 2000
-+++ aclocal.m4	Sun Apr  2 11:59:58 2000
-@@ -366,7 +366,10 @@
+--- wrlib/Makefile.am.orig	Fri Mar 24 02:16:03 2000
++++ wrlib/Makefile.am	Sun Jun  4 01:22:53 2000
+@@ -4,7 +4,7 @@
  
- # serial 40 AC_PROG_LIBTOOL
- AC_DEFUN(AC_PROG_LIBTOOL,
--[AC_REQUIRE([AC_LIBTOOL_SETUP])dnl
-+[
-+dnl Always use NetBSD's libtool
-+if false; then
-+AC_REQUIRE([AC_LIBTOOL_SETUP])dnl
+ lib_LTLIBRARIES = libwraster.la
  
- # Save cache, so that ltconfig can load it
- AC_CACHE_SAVE
-@@ -393,6 +396,7 @@
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
-+fi
- ])
+-libwraster_la_LDFLAGS = -version-info 2:0:0
++libwraster_la_LDFLAGS = @LIBRARY_SEARCH_PATH@ @GFXLIBS@ @XLIBS@ -lm -version-info 2:0:0
  
- AC_DEFUN(AC_LIBTOOL_SETUP,
+ bin_SCRIPTS = get-wraster-flags
+ 
