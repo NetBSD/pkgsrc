@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/05/23 20:17:22 rh Exp $
+$NetBSD: patch-ae,v 1.2 2002/10/27 06:47:45 rh Exp $
 
---- crossfade.c.orig	Fri Apr 20 01:29:25 2001
+--- crossfade.c.orig	Fri Jun  8 04:09:28 2001
 +++ crossfade.c
-@@ -1655,6 +1655,10 @@
+@@ -1671,6 +1671,10 @@ xfade_output_time()
  {
    gint time;
  
-+#ifdef __NetBSD__
++#ifdef _PTH_PTHREAD_H_
 +  pthread_yield_np();
 +#endif
 +
