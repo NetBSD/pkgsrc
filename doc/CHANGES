@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1201 2003/01/23 07:37:32 martti Exp $
+$NetBSD: CHANGES,v 1.1202 2003/01/23 13:49:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated docbook-xsl to 1.59.2 [jmmv 2003-01-22]
 	Updated imap-uw to 2002.2 [martti 2003-01-23]
 	Updated pine to 4.53 [martti 2003-01-23]
+	Updated buildtool to 0.9 [jmmv 2003-01-23]
