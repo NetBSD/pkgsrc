@@ -1,15 +1,29 @@
-$NetBSD: patch-ae,v 1.4 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-ae,v 1.5 2005/03/25 17:40:25 wennmach Exp $
 
-Remove unneeded include file, else it won't compile under NetBSD-1.6.x
+Conditionaly remove unneeded include file, else it won't compile under
+NetBSD-1.6.x.
+
+Include <krb5/kafs.h> instead of <kafs.h> in order to get the right prototype
+for kafs_settoken_rxkad.
 
 --- appl/lib/ka-procs.c.orig	Mon Mar 14 19:33:24 2005
 +++ appl/lib/ka-procs.c	Mon Mar 14 19:33:38 2005
-@@ -53,7 +53,7 @@
+@@ -53,7 +53,9 @@
  
  #ifdef HAVE_OPENSSL
  #include <openssl/des.h>
--#include <openssl/ui.h>
-+/* #include <openssl/ui.h> */
++#if __NetBSD_Version__ >= 200000000
+ #include <openssl/ui.h>
++#endif
  #include <openssl/opensslv.h>
  #endif
  
+@@ -80,7 +82,7 @@
+ #include <ka.h>
+ #include <ka.cs.h>
+ 
+-#include <kafs.h>
++#include <krb5/kafs.h>
+ 
+ typedef struct {
+     char dat[MAXKTCTICKETLEN];

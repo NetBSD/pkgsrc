@@ -1,0 +1,14 @@
+$NetBSD: patch-bd,v 1.4 2005/03/25 17:40:25 wennmach Exp $
+
+Define LIB_com_err.
+
+--- lib/sl/Makefile.in.orig	2005-03-22 14:38:21.000000000 +0100
++++ lib/sl/Makefile.in	2005-03-22 14:39:59.000000000 +0100
+@@ -297,6 +297,7 @@
+ LIB_NDBM = @LIB_NDBM@
+ LIB_bswap16 = @LIB_bswap16@
+ LIB_bswap32 = @LIB_bswap32@
++LIB_com_err = @LIB_com_err@
+ LIB_crypt = @LIB_crypt@
+ LIB_db_create = @LIB_db_create@
+ LIB_dbm_firstkey = @LIB_dbm_firstkey@
