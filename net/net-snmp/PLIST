@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/05/14 13:30:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/08/13 11:28:49 adam Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -204,32 +204,32 @@ lib/libnetsnmp.a
 lib/libnetsnmp.la
 lib/libnetsnmp.so
 lib/libnetsnmp.so.6
-lib/libnetsnmp.so.6.1
+lib/libnetsnmp.so.6.2
 lib/libnetsnmpagent.a
 lib/libnetsnmpagent.la
 lib/libnetsnmpagent.so
 lib/libnetsnmpagent.so.6
-lib/libnetsnmpagent.so.6.1
+lib/libnetsnmpagent.so.6.2
 lib/libnetsnmphelpers.a
 lib/libnetsnmphelpers.la
 lib/libnetsnmphelpers.so
 lib/libnetsnmphelpers.so.6
-lib/libnetsnmphelpers.so.6.1
+lib/libnetsnmphelpers.so.6.2
 lib/libnetsnmpmibs.a
 lib/libnetsnmpmibs.la
 lib/libnetsnmpmibs.so
 lib/libnetsnmpmibs.so.6
-lib/libnetsnmpmibs.so.6.1
+lib/libnetsnmpmibs.so.6.2
 lib/libsnmp.a
 lib/libsnmp.la
 lib/libsnmp.so
 lib/libsnmp.so.6
-lib/libsnmp.so.6.1
+lib/libsnmp.so.6.2
 lib/libnetsnmptrapd.a
 lib/libnetsnmptrapd.la
 lib/libnetsnmptrapd.so
 lib/libnetsnmptrapd.so.6
-lib/libnetsnmptrapd.so.6.1
+lib/libnetsnmptrapd.so.6.2
 man/man1/mib2c.1
 man/man1/snmpbulkget.1
 man/man1/snmpbulkwalk.1
@@ -259,12 +259,12 @@ man/man3/init_mib_internals.3
 man/man3/mib_api.3
 man/man3/netsnmp_Container_iterator.3
 man/man3/netsnmp_agent.3
+man/man3/netsnmp_asn1_packet_parse.3
 man/man3/netsnmp_baby_steps.3
 man/man3/netsnmp_bulk_to_next.3
 man/man3/netsnmp_cache_handler.3
 man/man3/netsnmp_container.3
 man/man3/netsnmp_debug.3
-man/man3/netsnmp_deprecated.3
 man/man3/netsnmp_example_scalar_int.3
 man/man3/netsnmp_handler.3
 man/man3/netsnmp_instance.3
@@ -287,7 +287,6 @@ man/man3/netsnmp_table_array.3
 man/man3/netsnmp_table_data.3
 man/man3/netsnmp_table_dataset.3
 man/man3/netsnmp_table_iterator.3
-man/man3/netsnmp_todo.3
 man/man3/netsnmp_utilities.3
 man/man3/netsnmp_watcher.3
 man/man3/print_description.3
@@ -391,6 +390,7 @@ share/snmp/mibs/SNMP-NOTIFICATION-MIB.txt
 share/snmp/mibs/SNMP-PROXY-MIB.txt
 share/snmp/mibs/SNMP-TARGET-MIB.txt
 share/snmp/mibs/SNMP-USER-BASED-SM-MIB.txt
+share/snmp/mibs/SNMP-USM-AES-MIB.txt
 share/snmp/mibs/SNMP-VIEW-BASED-ACM-MIB.txt
 share/snmp/mibs/SNMPv2-CONF.txt
 share/snmp/mibs/SNMPv2-MIB.txt
