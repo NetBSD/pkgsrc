@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.46 2004/06/06 04:29:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.47 2004/08/10 20:40:01 heinz Exp $
 
 DISTNAME=	Mail-SpamAssassin-${SPAMASSASSIN_VERSION}
 PKGNAME=	spamassassin-${SPAMASSASSIN_VERSION}
-PKGREVISION=	2
+PKGREVISION=	#
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}			\
-		http://www.spamassassin.org/released/		\
-		http://eu.spamassassin.org/released/
+		http://old.spamassassin.org/released/
 
 MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://www.spamassassin.org/
@@ -15,7 +14,7 @@ COMMENT=	Mail filter to identify spam
 
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
-SPAMASSASSIN_VERSION=	2.63
+SPAMASSASSIN_VERSION=	2.64
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -85,9 +84,11 @@ RCD_SCRIPTS=		spamd
 RCD_SCRIPT_SRC.spamd=	${WRKSRC}/spamd/netbsd-rc-script.sh
 
 EGDIR=			${PREFIX}/share/examples/spamassassin
+EG_SUBDIR=		${EGDIR:S,^${PREFIX}/,,}
 DOCDIR=			${PREFIX}/share/doc/spamassassin
 DOC_SUBDIR=		${DOCDIR:S,^${PREFIX}/,,}
 HTMLDIR=		${PREFIX}/share/doc/html/spamassassin
+HTML_SUBDIR=		${HTMLDIR:S,^${PREFIX}/,,}
 RULESDIR=		${PREFIX}/share/spamassassin
 RULE_SUBDIR=		${RULESDIR:S,^${PREFIX}/,,}
 
@@ -98,7 +99,8 @@ SUPPORT_FILES_PERMS+=	${EGDIR}/netbsd_lists.cf			\
 			${PKG_SYSCONFDIR}/netbsd_lists.cf ${SHAREOWN}	\
 			${SHAREGRP} ${SHAREMODE}
 
-OWN_DIRS+=		${EGDIR} ${DOCDIR} ${DOCDIR}/spamd ${HTMLDIR}
+INSTALLATION_DIRS+=	${EG_SUBDIR} ${DOC_SUBDIR} ${DOC_SUBDIR}/spamd	\
+			${HTML_SUBDIR}
 
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
@@ -202,6 +204,9 @@ post-install:
 	@${CHOWN} ${SHAREOWN} ${RULESDIR}/*
 	@${CHGRP} ${SHAREGRP} ${RULESDIR}/*
 	@${CHMOD} a=r ${RULESDIR}/*
+	@{ for d in ${INSTALLATION_DIRS}; do			\
+		${ECHO} "@dirrm $$d";			\
+	done; } | ${SORT} -r >> ${PLIST_ADD};
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
