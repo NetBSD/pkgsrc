@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/16 01:51:21 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/28 23:02:10 minskim Exp $
 
 --- frontend/main.c.orig	2004-05-16 03:43:03.000000000 +0200
 +++ frontend/main.c	2004-05-16 03:44:22.000000000 +0200
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/16 01:51:21 xtraeme Exp $
  #endif
  
 -#if defined(__unix__) || defined(__APPLE__)
-+#if defined(BSD) || defined(__APPLE__)
++#if defined(__unix__) || defined(BSD) || defined(__APPLE__)
 +#ifdef __NetBSD__
 +#include <time.h>
 +#else
