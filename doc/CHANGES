@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9471 2005/03/08 17:28:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.9472 2005/03/10 09:57:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1343,3 +1343,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sr to 2.3.3nb2 [is 2005-03-08]
 	Removed giflib [adam 2005-03-08]
 	Updated bluefish to 1.0nb1 [jmmv 2005-03-08]
+	Updated ethereal to 0.10.9nb1 [tron 2005-03-10]
