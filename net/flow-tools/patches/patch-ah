@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 2003/02/16 23:50:21 seb Exp $
+
+--- src/flow-capture.c.orig	Thu Dec 12 00:15:39 2002
++++ src/flow-capture.c
+@@ -443,8 +443,9 @@ char **argv;
+       exit (0); /* parent */
+     }
+ 
+-    umask(0022);
+-    setsid();
++    /* umask(0022); */
++    if (setsid() == -1)
++      fterr_err(1, "setsid()");
+     for (n = 0; n < 16; ++n)
+       close (n);
+ 

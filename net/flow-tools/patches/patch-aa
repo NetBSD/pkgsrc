@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 2003/02/16 23:50:19 seb Exp $
+
+--- Makefile.am.orig	Thu Aug  8 07:32:32 2002
++++ Makefile.am
+@@ -1,4 +1,4 @@
+-SUBDIRS = lib src docs configs bin
++SUBDIRS = lib src docs
+ 
+ EXTRA_DIST = bin/flow-mirror bin/flow-rsync bin/flow-search utils/* \
+  SECURITY contrib/* configs/*
