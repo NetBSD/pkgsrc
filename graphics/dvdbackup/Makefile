@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/28 14:39:36 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/29 02:37:26 snj Exp $
 
 DISTNAME=	dvdbackup-0.1.1
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://dvd-create.sourceforge.net/
 COMMENT=	DVD backup utility
 
 WRKSRC=		${WRKDIR}/dvdbackup/src
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 do-build:
 	cd ${WRKSRC}; \
@@ -20,5 +20,5 @@ do-install:
 	cd ${WRKSRC}; \
 	${INSTALL_PROGRAM} dvdbackup ${LOCALBASE}/bin;
 
-.include "../../multimedia/libdvdread/buildlink2.mk"
+.include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
