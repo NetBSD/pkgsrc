@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1998/11/04 22:00:59 mycroft Exp $
+# $NetBSD: Makefile,v 1.27 1998/11/08 11:04:50 frueauf Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -57,6 +57,8 @@ PAPERSIZE_DEF=	-DA4
 
 .if defined(BATCH)
 SCRIPT_SUFFIX=	.batch
+.else
+BUILD_DEPENDS+=	${PREFIX}/bin/dialog:../../misc/dialog
 .endif
 
 post-extract:
@@ -65,7 +67,7 @@ post-extract:
 	${CP} ${DISTDIR}/${PDF_SEC} ${WRKSRC}
 
 do-configure:
-	@${SETENV} WRKSRC=${WRKSRC} \
+	@${SETENV} WRKSRC=${WRKSRC} PREFIX=${PREFIX} \
 		${SH} ${SCRIPTDIR}/configure${SCRIPT_SUFFIX}
 
 do-build:
