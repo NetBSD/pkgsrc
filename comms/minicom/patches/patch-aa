@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1999/04/22 20:39:18 mycroft Exp $
+$NetBSD: patch-aa,v 1.6 1999/04/23 19:55:56 mycroft Exp $
 
 --- Makefile.orig	Sat Jul 25 21:05:46 1998
 +++ Makefile	Wed Apr 14 22:34:08 1999
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.5 1999/04/22 20:39:18 mycroft Exp $
 +PROGS	= minicom runscript ascii-xfr
 +LFLAGS	= -s
 +INTL	= -Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib -lintl
-+LIBS	= $(INTL) -lcurses
++LIBS	= $(INTL) -lcurses -ltermcap
 +CC	= cc
 +
  # Nothing should have to change beneath this line
