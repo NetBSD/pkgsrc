@@ -1,20 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2001/10/16 13:23:56 tron Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/10 00:52:18 rh Exp $
 
-DISTNAME=       sane-frontends-1.0.5
-CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/sane-1.0.5/ \
-		ftp://ftp.mostang.com/pub/sane/old-versions/sane-1.0.5/ \
-		ftp://gd.tuwien.ac.at/hci/sane/sane-1.0.5/ \
-		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/sane-1.0.5/
+.include "../../graphics/sane-backends/Makefile.common"
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.mostang.com/sane/
+DISTNAME=       sane-frontends-${SANE_VERSION}
+
 COMMENT=	Frontends for access to scanners, digitals camera, frame grabbers etc
 
 DEPENDS+=	gimp>=1.0.4:../../graphics/gimp
-DEPENDS+=	sane-backends>=1.0.4:../../graphics/sane-backends
-
-CONFLICTS+=	sane<=1.0.3
+BUILDLINK_DEPENDS.sane=	sane-backends-${SANE_VERSION}
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -27,5 +20,6 @@ CFLAGS=		-O
 # to find gimp includes
 CPPFLAGS=	-I${LOCALBASE}/include
 
+.include "../../graphics/sane-backends/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
