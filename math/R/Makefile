@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2004/11/18 12:31:29 markd Exp $
 
-DISTNAME=		R-1.9.1
-PKGREVISION=	1
+DISTNAME=		R-2.0.1
 CATEGORIES=		math
-MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
-EXTRACT_SUFX=		.tgz
+MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.R-project.org/
@@ -23,7 +21,7 @@ USE_PERL5=		# defined
 USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	# uses callback interface
 USE_MAKEINFO=		# defined
-TEXINFO_REQD=		4.0
+TEXINFO_REQD=		4.5
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-R-shlib
