@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2000/06/19 13:54:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/26 08:46:23 rh Exp $
 #
 
-DISTNAME=	bind-9.0.0b4
+DISTNAME=	bind-${BIND_VERSION}
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/9.0.0b4/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
+
+DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
@@ -15,10 +17,9 @@ BUILD_DEFS+=	USE_INET6
 # Sync these with devel/unproven-pthreads:
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 
-DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
-
 # No need to set USE_INET6, will auto-detect.
-DIST_SUBDIR=	bind/9.0.0b4
+BIND_VERSION=	9.0.0rc1
+DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mit-pthreads \
 		--with-libtool=yes \
@@ -38,7 +39,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/draft/* ${PREFIX}/share/doc/bind9/draft
 	${INSTALL_DATA} ${WRKSRC}/doc/misc/* ${PREFIX}/share/doc/bind9/misc
 	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${PREFIX}/share/doc/bind9/rfc
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/rndc/rndc ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/lwresd/lwresd ${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
