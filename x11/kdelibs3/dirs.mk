@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.3 2005/03/23 21:37:48 markd Exp $
+# $NetBSD: dirs.mk,v 1.4 2005/03/26 03:49:03 markd Exp $
 #
 
 .if !defined(DIRS_KDE3_MK)
@@ -83,6 +83,7 @@ KDE3_DIRS+=	share/kde/apps/kturtle/examples
 KDE3_DIRS+=	share/kde/apps/kturtle/data
 KDE3_DIRS+=	share/kde/apps/kwin
 KDE3_DIRS+=	share/kde/apps/profiles
+KDE3_DIRS+=	share/kde/apps/remoteview
 KDE3_DIRS+=	share/kde/apps/zeroconf
 KDE3_DIRS+=	share/kde/autostart
 KDE3_DIRS+=	share/kde/config
