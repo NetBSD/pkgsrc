@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2001/01/22 13:30:36 martin Exp $
+$NetBSD: patch-aa,v 1.8 2001/08/10 14:41:19 martin Exp $
 
---- Makefile.in.orig	Tue Dec 19 19:42:46 2000
-+++ Makefile.in	Mon Jan 22 13:59:59 2001
+--- Makefile.in.orig	Mon Aug  6 18:41:24 2001
++++ Makefile.in	Fri Aug 10 16:26:56 2001
 @@ -9,7 +9,7 @@
  sbindir=@sbindir@
  libdir=@libdir@
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.7 2001/01/22 13:30:36 martin Exp $
 @@ -20,7 +20,7 @@
  CFLAGS=@CFLAGS@ @DEFS@ -Dlibdir=\"$(libdir)\" -DPIDDIR=\"$(piddir)\"
  LIBS=@LIBS@
- OBJS=stunnel.o ssl.o protocol.o sthreads.o pty.o log.o
+ OBJS=stunnel.o ssl.o protocol.o sthreads.o pty.o log.o options.o
 -DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8  $(PEM_DIR)/stunnel.pem
 +DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8
  
