@@ -1,12 +1,16 @@
-# $NetBSD: Makefile.common,v 1.2 2000/05/20 19:32:18 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2000/05/24 09:11:24 rh Exp $
 
 DISTNAME=		postgresql-${PG_VERS}
 PG_VERS=		7.0
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		databases
-MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
+MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/v7.0/ \
+			ftp://ftp.de.postgresql.org/v7.0/ \
+			ftp://ch.postgresql.org/mirror/postgresql/pub/v7.0/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/v7.0/ \
+			ftp://looking-glass.usask.ca/pub/postgresql/v7.0/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/v7.0/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/v7.0/
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.PostgreSQL.ORG/
