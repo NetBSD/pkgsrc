@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:04 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/26 19:39:21 jlam Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -11,12 +11,15 @@ MAINTAINER=	salo@Xtrmntr.org
 HOMEPAGE=	http://aa-project.sourceforge.net/aview/
 COMMENT=	ASCII Art image viewer with X11 support
 
+CONFLICTS+=	aview-[0-9]*
+
 WRKSRC=		${WRKDIR}/aview-1.3.0
 PLIST_SRC=	${WRKDIR}/PLIST
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	yes
-USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=	# defined
+USE_LIBTOOL=	# defined
+USE_BUILDLINK2=	# defined
+USE_X11=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,8 +47,8 @@ post-install:
 	@${ECHO} bin/aaflip >>${PLIST_SRC}
 .endif
 
-.include "../../graphics/aalib-x11/buildlink.mk"
-.include "../../graphics/netpbm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/aalib-x11/buildlink2.mk"
+.include "../../graphics/netpbm/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
