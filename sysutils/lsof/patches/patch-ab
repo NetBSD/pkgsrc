@@ -1,18 +1,8 @@
-$NetBSD: patch-ab,v 1.6 1999/03/28 17:29:53 christos Exp $
+$NetBSD: patch-ab,v 1.7 1999/05/05 17:40:37 bad Exp $
 
---- dialects/n+obsd/dlsof.h.orig	Sat Feb 27 15:10:54 1999
-+++ dialects/n+obsd/dlsof.h	Sun Mar 28 12:17:22 1999
-@@ -141,9 +141,6 @@
- #include <nfs/nfsnode.h>
- #include <sys/proc.h>
- #include <kvm.h>
--#undef	TRUE
--#undef	FALSE
--#include <sys/sysctl.h>
- #define	P_ADDR		kp_eproc.e_paddr
- #define	P_COMM		kp_proc.p_comm
- #define	P_FD		kp_proc.p_fd
-@@ -178,16 +175,28 @@
+--- dialects/n+obsd/dlsof.h.orig	Mon Mar 29 14:15:29 1999
++++ dialects/n+obsd/dlsof.h	Wed May  5 19:20:17 1999
+@@ -176,16 +176,28 @@
  #undef	KERNEL
  #undef	_KERNEL
  
