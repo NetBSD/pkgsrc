@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/04/14 14:06:54 pooka Exp $
+#
+
+case $2 in
+	DEINSTALL) cat << EOF
+
+=============================================================
+The records, log and savegames were not wiped out by this
+deletion process. If you don't want them around, please
+remove @PREFIX@/share/nethackdir.
+=============================================================
+
+EOF
+	;;
+esac
