@@ -1,22 +1,45 @@
-$NetBSD: patch-aa,v 1.1 1998/09/04 13:13:17 agc Exp $
+$NetBSD: patch-aa,v 1.2 1998/12/21 16:50:01 tron Exp $
 
-Use NetBSD's libtool
-
---- configure.orig	Tue Sep  1 16:50:33 1998
-+++ configure	Tue Sep  1 16:51:04 1998
-@@ -1209,6 +1209,7 @@
- fi
+--- configure.orig	Wed Dec 16 04:14:28 1998
++++ configure	Mon Dec 21 16:58:20 1998
+@@ -1174,6 +1174,7 @@
+ 
  
  # Always use our own libtool.
 +if false; then
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- # Check for any special flags to pass to ltconfig.
+ 
 @@ -1253,6 +1254,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
- # Extract the first word of "ranlib", so it can be a program name with args.
- set dummy ranlib; ac_word=$2
+ 
+ echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
+@@ -4234,24 +4236,6 @@
+ else
+   echo "configure: warning: *** Native PNG support will not be built (PNG header file not found) ***" 1>&2
+ fi
+-
+-echo $ac_n "checking for libpng version other than 1.0.2""... $ac_c" 1>&6
+-echo "configure:4240: checking for libpng version other than 1.0.2" >&5
+-cat > conftest.$ac_ext <<EOF
+-#line 4242 "configure"
+-#include "confdefs.h"
+-#include <png.h>
+-PNG_LIBPNG_VER_STRING
+-EOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  egrep ""1.0.2"" >/dev/null 2>&1; then
+-  rm -rf conftest*
+-  echo "********* WARNING *********** Your libpng version is 1.0.2. Build will not continue until you revert to 1.0.1 or a newer version.";exit
+-else
+-  rm -rf conftest*
+-  png_ok=yes
+-fi
+-rm -f conftest*
+ 
+ echo "$ac_t""$png_ok" 1>&6
+ 
