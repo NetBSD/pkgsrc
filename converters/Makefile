@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2003/12/14 01:17:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.63 2004/01/10 22:43:06 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -20,7 +20,6 @@ SUBDIR+=	fribidi
 SUBDIR+=	hztty
 SUBDIR+=	ish
 SUBDIR+=	ja-dvi2tty
-SUBDIR+=	kdesupport
 SUBDIR+=	latex2rtf
 SUBDIR+=	libiconv
 SUBDIR+=	macfork

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:14 agc Exp $
-
-SHA1 (kdeutils-1.1.2.tar.bz2) = 5ce9147c5fdab768acacf2d5809a3f4e1ee18fd2
-Size (kdeutils-1.1.2.tar.bz2) = 1603520 bytes
-SHA1 (patch-aa) = e174a2883b2dfc97675e40513bb4b58ca61aafe6

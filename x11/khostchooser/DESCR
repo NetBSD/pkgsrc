@@ -1,5 +1,0 @@
-khostchooser is a drop-in replacement for the ugly "chooser" that is
-X11--Standard.
-
-khostchooser is derived from X--Consortium Source, so it is under
-the X--Consortium License. (see chooser.c).

@@ -1,8 +1,0 @@
-/* $NetBSD: Imakefile,v 1.2 2000/08/07 08:08:50 tron Exp $ */
-
-hasxdmauth:
-#ifdef HasXdmAuth
-#if HasXdmAuth == YES
-	@echo "#define HASXDMAUTH 1"
-#endif
-#endif

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:47:13 agc Exp $
-
-SHA1 (kworldwatch-0.6.tgz) = d84bd7333c5893a171b245cc95d5b9c2b4516aac
-Size (kworldwatch-0.6.tgz) = 187611 bytes
-SHA1 (patch-aa) = ad02ba72caf4c64bf62598200570f510152faac7
-SHA1 (patch-ab) = afc95b5b1c6758e0f731385812c8193605c62ffd
