@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 1999/09/21 18:18:50 tron Exp $
+# $NetBSD: Makefile,v 1.15 1999/10/07 17:41:55 tron Exp $
 
 DISTNAME=	WMMail.app-0.63a
 PKGNAME=	wmmail-0.63a
 CATEGORIES=	mail x11
 MASTER_SITES=	http://www.eecg.utoronto.ca/~chanb/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.eecg.utoronto.ca/~chanb/wmmail.html
 
 DEPENDS+=	windowmaker-*:../../x11/windowmaker

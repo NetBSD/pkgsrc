@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/09/30 17:35:21 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/10/07 17:41:57 tron Exp $
 
 DISTNAME=		inn-2.2
 CATEGORIES=		news
@@ -6,7 +6,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.isc.org/inn.html
 
 CONFLICTS+=		nntpclnt-*

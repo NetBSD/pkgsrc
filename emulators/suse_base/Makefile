@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 1999/09/19 23:58:36 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/10/07 17:41:49 tron Exp $
 
 DISTNAME=		suse_base-6.1p1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/}
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
 BUILD_DEPENDS+=		${RPMLIB}:../../misc/rpm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/04/27 16:28:08 tron Exp $
+# $NetBSD: Makefile,v 1.21 1999/10/07 17:41:54 tron Exp $
 
 DISTNAME=	tiff-v3.4beta037
 PKGNAME=	tiff-3.4
@@ -8,7 +8,7 @@ MASTER_SITES=   ftp://ftp.sgi.com/graphics/tiff/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/tiff/
 EXTRACT_SUFX=	-tar.gz
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://home.earthlink.net/~ritter/tiff/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg

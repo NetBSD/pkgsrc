@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1999/04/19 21:19:00 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/07 17:41:48 tron Exp $
 
 DISTNAME=	db-2.7.3
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.terra.net/pub/sleepycat/ \
 		ftp://ftp.cs.tu-berlin.de/pub/misc/berkeley-db/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 
 USE_LIBTOOL=		yes

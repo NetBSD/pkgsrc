@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/09/28 20:40:05 soren Exp $
+# $NetBSD: Makefile,v 1.18 1999/10/07 17:41:59 tron Exp $
 
 DISTNAME=	squid-2.2.STABLE4-src
 PKGNAME=	squid-2.2s4
@@ -10,7 +10,7 @@ MASTER_SITES=  \
 	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/ \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/STABLE/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://squid.nlanr.net/Squid/
 
 BUILD_DEPENDS=    ${LOCALBASE}/bin/perl:../../lang/perl5

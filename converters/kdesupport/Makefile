@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/09/15 18:44:14 tron Exp $
+# $NetBSD: Makefile,v 1.26 1999/10/07 17:41:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic
 		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
 USE_LIBTOOL=	yes

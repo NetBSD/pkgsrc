@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 1999/09/03 20:02:51 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/10/07 17:41:58 tron Exp $
 
 DISTNAME=	mc-4.5.38
 PKGNAME=	gmc-4.5.38
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mc/}
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
 
 DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
