@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/10 11:08:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/10 22:16:20 wiz Exp $
 
 DISTNAME=	ffcall-1.8d
 PKGNAME=	ffcall-1.8.4
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnustep.org/pub/gnustep/libs/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://clisp.cons.org/~haible/packages-ffcall.html
+HOMEPAGE=	http://www.haible.de/bruno/packages-ffcall.html.
 COMMENT=	foreign function call libraries
 
 # the file ${WRKDIR}/ffcall-1.8/avcall/avcall-${MACHINE_ARCH}.c needs to
