@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/07/14 16:04:27 agc Exp $
+# $NetBSD: Makefile,v 1.19 2000/07/15 20:39:26 agc Exp $
 
 DISTNAME=		gtkglarea-1.2.1
 CATEGORIES=		x11 graphics
@@ -15,7 +15,8 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-gtk-prefix="`${SHOW_PREFIX1} gtk+ ${SHOW_PREFIX2}`"
+EVAL_PREFIX+=		GTKDIR=gtk+
+CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
 CONFIGURE_ARGS+=	--with-GL-prefix=${X11BASE}
 CONFIGURE_ARGS+=	--with-lib-MesaGL
 

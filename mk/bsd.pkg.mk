@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.505 2000/07/14 18:37:05 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.506 2000/07/15 20:39:21 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1182,8 +1182,13 @@ show-downlevel:
 .endif
 .endif
 
-SHOW_PREFIX1=	${PKG_INFO} -qp 
-SHOW_PREFIX2=	2>/dev/null | ${AWK} 'BEGIN { p="${X11PREFIX}" } { p = $$2 } END { printf("%s\n", p) }'
+.if defined(EVAL_PREFIX)
+.for def in ${EVAL_PREFIX}
+.if !defined(${def:C/=.*//})
+${def:C/=.*//} != (${ECHO} -n "${X11PREFIX} "; ${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) | ${AWK} '{ print $$NF }'
+.endif
+.endfor
+.endif
 
 .if !target(show-pkgsrc-dir)
 show-pkgsrc-dir:

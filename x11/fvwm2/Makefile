@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/07/14 16:04:26 agc Exp $
+# $NetBSD: Makefile,v 1.26 2000/07/15 20:39:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -22,10 +22,12 @@ CONFLICTS=	fvwm-2.*
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
+
+EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--enable-extras
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
-CONFIGURE_ARGS+=	--with-xpm-includes=`${SHOW_PREFIX1} xpm ${SHOW_PREFIX2}`/include
+CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR}/include
 CONFIGURE_ARGS+=	--with-readline-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-rplay-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11ROOT}/include/bitmaps:${X11ROOT}/include/pixmaps

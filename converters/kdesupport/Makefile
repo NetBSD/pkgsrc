@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/07/14 16:04:20 agc Exp $
+# $NetBSD: Makefile,v 1.32 2000/07/15 20:39:16 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -13,12 +13,14 @@ HOMEPAGE=	http://www.kde.org/
 
 USE_PKGLIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--without-gnu-ld" \
 		"--without-libjpeg" \
 		"--without-libgif" \
 		"--without-libgdbm" \
 		"--without-libuulib" \
 		"--without-sprite-field" \
-		"--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1" 
+		"--with-qt-dir=${QT1DIR}/qt1" 
 
 .include "../../mk/bsd.pkg.mk"
