@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2004/07/24 22:17:56 recht Exp $
+
+case ${STAGE} in
+VIEW-INSTALL)
+	${RM} -f ${PKG_PREFIX}/include/pgsql
+	${LN} -fs postgresql ${PKG_PREFIX}/include/pgsql
+	;;
+
+VIEW-DEINSTALL)
+	${RM} -f ${PKG_PREFIX}/include/pgsql
+	;;
+esac
