@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/06 07:42:27 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/11 04:28:51 grant Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-3.2.1
@@ -8,45 +8,40 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
 
-# XXX Solaris not tested
-ONLY_FOR_PLATFORM=	NetBSD-*
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+CONFLICTS+=		pgcc-[0-9]*
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 HAS_CONFIGURE=		YES
-CONFIGURE_SCRIPT=	${WRKSRC}/configure
 CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
-CONFIGURE_ARGS+=	--enable-shared
 
+FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
-PLIST_SUBST+=		GCC_VERSION=${PKGVERSION}
+PLIST_SUBST+=		PKGNAME=${PKGNAME}
 
 INFO_FILES=		cpp.info g77.info gcc.info gcj.info
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if ${OPSYS} == "SunOS"
-#CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
-#.  if ${CC} != "gcc"
-#ALL_TARGET=		bootstrap
-#.  endif
-#GCC_PREFIX=		${PREFIX}
-#PLIST_SRC=		${PKGDIR}/PLIST.SunOS
-#MESSAGE_SRC=		${PKGDIR}/MESSAGE.SunOS
-#.else
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--enable-shared
+.else
+CONFIGURE_ARGS+=	--disable-shared
+.  if ${CC:M*gcc*} != ""
+ALL_TARGET=		bootstrap
+.  endif
+.endif
+
 GCC_PREFIX=		${PREFIX}/${PKGNAME}
-CONFIGURE_ARGS+=	--with-gnu-as
-CONFIGURE_ARGS+=	--with-gnu-ld
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-PLIST_SRC=              ${WRKDIR}/PLIST_DYNAMIC
-#.endif
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
-FILES_SUBST+=	GCC_PREFIX=${GCC_PREFIX}
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
