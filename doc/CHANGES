@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9595 2005/03/24 08:10:15 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9596 2005/03/24 08:53:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1696,3 +1696,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pcb-current to 20050315 [dmcmahill 2005-03-23]
 	Removed speakfreely [jlam 2005-03-24]
 	Updated clamsmtp to 1.4 [xtraeme 2005-03-24]
+	Updated firefox-gtk2-bin to 1.0.2 [tron 2005-03-24]
