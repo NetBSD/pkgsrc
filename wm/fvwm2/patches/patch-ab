@@ -1,31 +1,13 @@
-$NetBSD: patch-ab,v 1.13 2002/09/16 09:31:48 martti Exp $
+$NetBSD: patch-ab,v 1.14 2002/09/21 08:27:15 martti Exp $
 
---- configure.orig	Sun Sep 15 22:06:39 2002
-+++ configure	Mon Sep 16 10:53:32 2002
-@@ -672,7 +672,7 @@
- # It thinks the first close brace ends the variable substitution.
- test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
- 
--test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
-+test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM:S/-s//g}'
- 
- test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
- 
-@@ -761,7 +761,7 @@
+--- configure.orig	Fri Sep 20 11:07:02 2002
++++ configure	Sat Sep 21 09:26:44 2002
+@@ -1486,7 +1486,7 @@
  fi
  
+ # Define the identity of the package.
+- PACKAGE=fvwm
++ PACKAGE=fvwm2
+  VERSION=2.4.11
  
--PACKAGE=fvwm
-+PACKAGE=fvwm2
- 
- VERSION=2.4.10
- 
-@@ -3911,7 +3911,7 @@
- # It thinks the first close brace ends the variable substitution.
- test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
- 
--test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
-+test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM:S/-s//g}'
- 
- test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
  
