@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/14 13:59:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.1.6.1 2005/02/19 21:47:14 snj Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 P5_TK_BUILDLINK3_MK:=	${P5_TK_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	p5-Tk
 
 .if !empty(P5_TK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.p5-Tk+=	p5-Tk>=804.027
+BUILDLINK_RECOMMENDED.p5-Tk+=	p5-Tk>=804.027nb2
 BUILDLINK_PKGSRCDIR.p5-Tk?=	../../x11/p5-Tk
 BUILDLINK_CONTENTS_FILTER.p5-Tk= \
         ${EGREP} '(include.*/|\.def$$|\.m$$|\.t$$|\.h$$|\.idl$$|\.pc$$|/lib[^/]*\.[^/]*$$)'
