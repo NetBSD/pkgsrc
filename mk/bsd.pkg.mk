@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1426 2004/03/22 04:07:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1427 2004/03/27 08:06:24 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -58,8 +58,9 @@ build-defs-message: ${WRKDIR}
 .        endif
 .      endfor
 	@${ECHO} ""
-	@${ECHO} "You may want to abort the process now with CTRL+C and change their value"
-	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after the changes."
+	@${ECHO} "You may want to abort the process now with CTRL-C and change their value"
+	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after"
+	@${ECHO} "the changes."
 	@${ECHO} "=========================================================================="
 	@${TOUCH} ${WRKDIR}/.bdm_done
 .    endif
