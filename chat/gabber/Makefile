@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/16 11:56:45 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/09 03:01:24 dmcmahill Exp $
 
 DISTNAME=	gabber-0.8.7
 CATEGORIES=	chat
@@ -16,6 +16,12 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-xmms
+
+GCC_VERSION!=           gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs)
+# "egcs" cannot be used, as this package tickles c++ compiler bugs
+.include "../../lang/gcc/Makefile.gcc"
+.endif
 
 .include "../../textproc/scrollkeeper/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
