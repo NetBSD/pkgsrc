@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/11/11 17:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 17:06:27 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkmm/} \
 
 MAINTAINER=		bsieker@freenet.de
 HOMEPAGE=		http://gtkmm.sourceforge.net/
+COMMENT=		C++ wrapper for the gimp toolkit (gtk++)
 
 BUILD_DEPENDS+=		gm4:../../devel/m4
 DEPENDS+=		gtk+>=1.2.7:../../x11/gtk

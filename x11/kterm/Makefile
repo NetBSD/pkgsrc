@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/11/07 05:40:24 itojun Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:06:34 wiz Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -10,6 +10,7 @@ PATCHFILES+=	kterm-620-0213-20001107.diff.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	sakamoto@netbsd.org
+COMMENT=	Multi-lingual terminal emulator for X
 
 USE_IMAKE=	YES
 USE_XAW=	YES

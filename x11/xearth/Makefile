@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/11/10 18:41:45 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:07:05 wiz Exp $
 #
 
 DISTNAME=	xearth-1.1
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://cag.lcs.mit.edu/pub/tuna/ \
 
 MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.cs.colorado.edu/~tuna/xearth/index.html
+COMMENT=	Rotating map of the Earth in X11 root window
 
 USE_IMAKE=	yes
 

@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2000/12/11 23:03:31 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:06:43 wiz Exp $
 #
 USE_MESA=	yes
 
 .include "../qt2-libs/Makefile.common"
 
 PKGNAME=	qt2-libs-${QTVERSION}
+
+COMMENT=	C++ X GUI toolkit
 
 DEPENDS+=	png-*:../../graphics/png
 DEPENDS+=	jpeg-*:../../graphics/jpeg

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/09/04 15:49:36 kim Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:07:08 wiz Exp $
 #
 
 DISTNAME=		xfstt-1.1
@@ -6,6 +6,7 @@ CATEGORIES=		x11 net
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=X11/fonts/}
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		TrueType font server for X11
 
 USE_X11BASE=		YES
 

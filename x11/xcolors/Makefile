@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 13:21:03 agc Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 17:07:01 wiz Exp $
 # FreeBSD: Makefile,v 1.9 1998/01/22 00:41:36 fenner Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tut.ac.jp/X11/X11R6/contrib/programs/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Display all (ok, most of) the colors in the universe
 
 WRKSRC=		${WRKDIR}/xcolors
 USE_IMAKE=	yes

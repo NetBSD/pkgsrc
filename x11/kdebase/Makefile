@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2000/12/13 11:46:37 tron Exp $
+# $NetBSD: Makefile,v 1.76 2001/02/17 17:06:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -11,6 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
+COMMENT=	Base modules for the KDE integrated X11 desktop
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs

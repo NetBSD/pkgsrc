@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/12 17:29:51 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 17:07:06 wiz Exp $
 
 DISTNAME=	xephem-3.4
 CATEGORIES=	x11
@@ -11,6 +11,7 @@ MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
+COMMENT=	Interactive astronomical ephemeris program
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 LIBSRC=		${WRKDIR}/${DISTNAME}/libastro

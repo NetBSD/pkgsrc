@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/17 02:17:18 mjl Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:07:04 wiz Exp $
 
 DISTNAME=		Xdialog-1.4.6
 PKGNAME=		xdialog-1.4.6
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://xdialog.free.fr/
+COMMENT=		X11 drop-in replacement for the curses dialog program
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
