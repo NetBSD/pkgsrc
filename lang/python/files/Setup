@@ -146,7 +146,7 @@ errno errnomodule.c	# posix (UNIX) errno values
 
 # The crypt module is now disabled by default because it breaks builds
 # on many systems (where -lcrypt is needed), e.g. Linux (I believe).
-crypt cryptmodule.c # -lcrypt	# crypt(3); needs -lcrypt on some systems
+crypt cryptmodule.c -lcrypt	# crypt(3); needs -lcrypt on some systems
 
 
 # Some more UNIX dependent modules -- off by default, since these
