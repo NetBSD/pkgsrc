@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/07/22 16:25:28 simonb Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/14 13:21:14 simonb Exp $
 
 DISTNAME=		mpd-${PKGVERSION}
-PKGNAME=		musicpd-0.11.3
+PKGNAME=		musicpd-0.11.4
 
 CATEGORIES=		audio
 MASTER_SITES=		http://mercury.chem.pitt.edu/~shank/
