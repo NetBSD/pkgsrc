@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/12/06 05:09:46 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/03/09 04:55:33 yyamano Exp $
 
 DISTNAME=       lha-114i
 PKGNAME=	lha-114.9
@@ -12,7 +12,13 @@ COMMENT=	Archive files using LZW compression (.lzh files)
 USE_BUILDLINK_ONLY=	# defined
 
 MAKE_FLAGS=	CC="${CC}" MAKE="${MAKE_PROGRAM}"
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+MAKE_FLAGS+=	MACHINE="-DSYSTIME_HAS_NO_TM -DMKTIME -DUSESTRCASECMP -DSYSV_SYSTEM_DIR -DHAVE_NO_LCHOWN"
+.else
 MAKE_FLAGS+=	MACHINE="-DSYSTIME_HAS_NO_TM -DTIMELOCAL -DUSESTRCASECMP -DSYSV_SYSTEM_DIR"
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${PREFIX}/bin/
