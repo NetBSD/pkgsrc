@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/07 14:48:09 minskim Exp $
+
+SHA1 (wdic_wob_v3.0.tar.gz) = 63621be8f7fa12b24d6f318e7bb8fcbac82d38da
+RMD160 (wdic_wob_v3.0.tar.gz) = aba08a48dda7cf08902fe7e4820731d0caf406db
+Size (wdic_wob_v3.0.tar.gz) = 2885 bytes
+SHA1 (patch-aa) = 08f66e30af85a117673e7076a8e1cebc2048f489
+SHA1 (patch-ab) = 6f6653536441cb6f43635f81fcd74b1b6a1597e5
