@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/03/28 07:43:49 jmc Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/03/28 09:42:32 jmc Exp $
 
 # Latest is:		5.0
 # Default is:		5.0
@@ -14,7 +14,7 @@ HOMEPAGE?=		http://www.mesa3d.org/
 
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-static
