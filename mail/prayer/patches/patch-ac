@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2004/02/28 23:50:59 heinz Exp $
+$NetBSD: patch-ac,v 1.5 2005/01/09 00:07:47 schmonz Exp $
 
---- files/Makefile.orig	Sun May 11 16:59:12 2003
+--- files/Makefile.orig	2003-05-11 10:59:12.000000000 -0400
 +++ files/Makefile
 @@ -14,10 +14,10 @@ endif
  all:	./etc/prayer.cf ./init.d/prayer
