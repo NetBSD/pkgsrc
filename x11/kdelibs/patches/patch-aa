@@ -1,21 +1,24 @@
-$NetBSD: patch-aa,v 1.5 1998/08/07 11:18:08 agc Exp $
+$NetBSD: patch-aa,v 1.6 1998/08/20 07:38:03 thorpej Exp $
 
---- configure.orig	Sun Jul 19 18:35:14 1998
-+++ configure	Sun Jul 19 18:35:48 1998
-@@ -1688,6 +1688,8 @@
+--- configure.orig	Wed Aug 19 23:03:27 1998
++++ configure	Wed Aug 19 23:07:02 1998
+@@ -1688,6 +1688,11 @@
  ac_save_cflags="$CFLAGS"
  CC=$CXX
  CFLAGS="$CXXFLAGS"
 +
-+if false; then
++if true; then
++# NetBSD: always use NetBSD's libtool!
++LIBTOOL='$(LOCALBASE)/bin/libtool'
++else
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
-@@ -1733,6 +1735,8 @@
+@@ -1733,6 +1738,8 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
++fi	# NetBSD libtool check
 +
   CC=$ac_save_cc
  CFLAGS="$ac_save_cflags"
