@@ -13,7 +13,8 @@ do
    rm -f ${FILE}.patch
   fi
  else
-  echo >${FILE} "Synchronous DNS Lookup=1"
+  echo >${FILE} "[Performance]"
+  echo >>${FILE} "Synchronous DNS Lookup=1"
  fi
 done
 
