@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/08/31 08:12:20 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 1998/09/22 06:11:37 garbled Exp $
 #
 
 DISTNAME=		unix02b4
@@ -6,6 +6,8 @@ PKGNAME=		xmess-0.2b4.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://internetter.com/titan/mess/
 EXTRACT_SUFX=		.tgz
+
+NOT_FOR_ARCHS=		alpha	#gcc lossage
 
 MAINTAINER=		mycroft@NetBSD.ORG
 HOMEPAGE=		http://internetter.com/titan/mess/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1998/08/20 15:17:10 tsarna Exp $
+# $NetBSD: Makefile,v 1.23 1998/09/22 06:11:38 garbled Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -6,6 +6,8 @@ DISTNAME=       pine4.02
 PKGNAME=        pine-4.02
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
+
+NOT_FOR_ARCHS=	alpha	#LP64 problems
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
