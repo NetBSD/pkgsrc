@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2000/07/20 13:31:00 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/26 02:09:20 wiz Exp $
 #
 
-DISTNAME=	compupic-5.0.1033-i386-netbsd
-PKGNAME=	CompuPic-5.0.1033
+DISTNAME=	compupic-5.1.1063-i386-netbsd
+PKGNAME=	CompuPic-5.1.1063
 CATEGORIES=	graphics
-MASTER_SITES=	http://unix.compupic.com/files/
+MASTER_SITES=	http://www.photodex.com/files/unix/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://unix.compupic.com/
+HOMEPAGE=	http://beta.compupic.com/
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
@@ -24,8 +24,12 @@ EXTRACT_CMD=	# empty
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/compupic
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/compupic
 	${GTAR} plzxCf ${PREFIX}/libexec/ ${_DISTDIR}/${DISTFILES}
 	${MV} ${PREFIX}/libexec/compupic/compupic.1 ${PREFIX}/man/man1
+	${MV} ${PREFIX}/libexec/compupic/LICENSE ${PREFIX}/share/doc/compupic
+	${MV} ${PREFIX}/libexec/compupic/README ${PREFIX}/share/doc/compupic
+	${MV} ${PREFIX}/libexec/compupic/order.txt ${PREFIX}/share/doc/compupic
 # simulate symlink -- relative symlink (to which it `ln -s' automatically
 # gets fixed) -- doesn't work, since compupic doesn't find its support files
 	${ECHO} "#!/bin/sh" > ${PREFIX}/bin/compupic
