@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2835 2005/01/05 08:06:47 martti Exp $
+$NetBSD: TODO,v 1.2836 2005/01/05 08:30:26 minskim Exp $
 
 Suggested new packages
 ======================
@@ -330,7 +330,7 @@ Suggested package updates
 	o balsa-1.4.4
 	o bbsload-0.2.8
 	o bchunk-1.2.0
-	o bdb-xml-2.0.9 [requires db4>=4.3.25 and xerces-c>=2.6.0]
+	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
 	o bibtex2html-1.74 [requires ocaml>=3.07]
 	o bins-1.1.27
