@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 1999/08/29 21:42:04 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2000/07/15 02:31:40 jlam Exp $
 
---- guile-readline/Makefile.in.orig	Wed Aug 25 11:36:20 1999
-+++ guile-readline/Makefile.in	Sun Aug 29 15:43:37 1999
-@@ -153,8 +153,8 @@
+--- guile-readline/Makefile.in.orig	Tue Jun 20 18:20:21 2000
++++ guile-readline/Makefile.in	Fri Jul 14 21:48:45 2000
+@@ -156,8 +156,8 @@
  	$(mkinstalldirs) $(DESTDIR)$(libdir)
  	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
  	  if test -f $$p; then \
