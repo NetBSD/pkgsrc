@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2004/02/14 03:16:59 jlam Exp $
+$NetBSD: patch-af,v 1.6 2004/03/29 05:47:31 jlam Exp $
 
---- plugins/cram.c.orig	Mon Nov  3 10:25:24 2003
+--- plugins/cram.c.orig	Mon Dec 15 15:04:22 2003
 +++ plugins/cram.c
-@@ -531,7 +531,8 @@ static int crammd5_client_mech_step(void
+@@ -538,7 +538,8 @@ static int crammd5_client_mech_step(void
  	
  	if ((auth_result != SASL_OK) && (auth_result != SASL_INTERACT))
  	    return auth_result;

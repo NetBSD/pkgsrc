@@ -1,29 +1,15 @@
-$NetBSD: patch-aa,v 1.6 2004/02/14 07:45:36 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2004/03/29 05:47:31 jlam Exp $
 
---- configure.in.orig	Fri Nov 28 10:37:10 2003
+--- configure.in.orig	Tue Mar  9 11:54:13 2004
 +++ configure.in
-@@ -104,6 +104,13 @@ target=$save_target
- 
- dnl ltconfig might not have found support for shared libs
- dnl just do static libs if so.
-+
-+_build_libtool_libs=`${CONFIG_SHELL-/bin/sh} $srcdir/libtool --config | grep '^build_libtool_libs='`
-+case "x$_build_libtool_libs" in
-+       x*=yes) ac_cv_can_build_shared=yes;;
-+       x*) ac_cv_can_build_shared=no;;
-+esac
-+
- if test "$ac_cv_can_build_shared" = no; then
- 	enable_shared=no
- 	enable_static=yes
-@@ -477,10 +484,6 @@ fi
- SASL_KERBEROS_V4_CHK
+@@ -483,10 +483,6 @@ SASL_KERBEROS_V4_CHK
  SASL_GSSAPI_CHK
  SASL_PLAIN_CHK
--
+ 
 -if test "$gssapi" != "no"; then
 -  AC_DEFINE(STATIC_GSSAPIV2,[],[Link GSSAPI Staticly])
 -fi
- 
+-
  dnl ANONYMOUS
  AC_ARG_ENABLE(anon, [  --enable-anon           enable ANONYMOUS authentication [yes] ],
+   anon=$enableval,
