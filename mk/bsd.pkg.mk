@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.979 2002/05/18 21:33:32 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.980 2002/05/19 03:42:14 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -209,7 +209,12 @@ PKG_FC?=		f2c-f77
 # it is anticipated that once /usr/bin/f77 is more stable that the following
 # default will be changed to f77.  However, in the case where there is no
 # /usr/bin/f77, the default will remain as f2c-f77.
-PKG_FC?=		f2c-f77
+.for __tmp__ in 1.[5-9]* [2-9].*
+.  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-*} != ""
+PKG_FC?=		f77
+.  endif    # MACHINE_PLATFORM
+.endfor     # __tmp__
+PKG_FC?=	f2c-f77
 .  if  (${PKG_FC} == "f2c-f77")
 # this is a DEPENDS not BUILD_DEPENDS because of the
 # shared Fortran libs
