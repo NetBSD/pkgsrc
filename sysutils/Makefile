@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2000/10/19 12:06:52 abs Exp $
+# $NetBSD: Makefile,v 1.75 2000/10/19 12:08:08 abs Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -60,6 +60,7 @@
     SUBDIR += toshutils
     SUBDIR += usbutil
     SUBDIR += user
+    SUBDIR += vidc-tools
     SUBDIR += whowatch
     SUBDIR += xbatt
     SUBDIR += xdu
