@@ -3,17 +3,17 @@
 # Date created:         27 Dec 1994
 # Whom:                 thomas Gellekum <tg@freebsd.org>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:55:04 hubertf Exp $
+# $Id: Makefile,v 1.2 1997/11/23 16:59:05 hubertf Exp $
 #
 
-DISTNAME=	tkman-1.8
-CATEGORIES=	misc tk41
-MASTER_SITES=	ftp://ftp.cs.berkeley.edu/ucb/people/phelps/tcltk/old/
+DISTNAME=	tkman-2.0.3
+CATEGORIES=	misc tk80
+MASTER_SITES=	ftp://ftp.cs.berkeley.edu/ucb/people/phelps/tcltk
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tg@freebsd.org
 
-LIB_DEPENDS=	tk41\\.1\\.:${PORTSDIR}/x11/tk41
+LIB_DEPENDS=	tk80\\.1\\.:${PORTSDIR}/x11/tk80
 RUN_DEPENDS=	rman:${PORTSDIR}/textproc/rman \
 		glimpse:${PORTSDIR}/textproc/glimpse
 
