@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/05/05 18:37:59 itojun Exp $
+$NetBSD: md5,v 1.4 2000/05/29 02:38:28 itojun Exp $
 
-MD5 (smtpfeed-1.06.tar.gz) = 5828fd5b9525d4d2014b27bc852b03eb
+MD5 (smtpfeed-1.07.tar.gz) = 10a7bae906f5997735d4e4321f80a66c
