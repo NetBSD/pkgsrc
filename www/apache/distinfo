@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2002/02/28 05:45:33 jlam Exp $
+$NetBSD: distinfo,v 1.14 2002/03/28 17:17:08 thorpej Exp $
 
 SHA1 (apache_1.3.23.tar.gz) = 20aa246303be1948f240cd7c5c3cf50d97d06868
 Size (apache_1.3.23.tar.gz) = 2210130 bytes
@@ -18,3 +18,4 @@ SHA1 (patch-ai) = 46d9a97fbc248a2bea97943b9f3b2f9f693f3695
 SHA1 (patch-aj) = 1cdd2f010d381ec9c13f59b31caab7d1f6f63100
 SHA1 (patch-ak) = 8f790a692ed9b2dd6943be43fa1cf7629c673955
 SHA1 (patch-al) = a27b9676998621229dc3a1d920ea44b8e622feb2
+SHA1 (patch-am) = d05f7c30b73c0e90daf17d9d1c4838be7fd73b02
