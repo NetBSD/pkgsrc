@@ -1,0 +1,213 @@
+$NetBSD: patch-ah,v 1.3 2001/12/07 14:07:27 skrll Exp $
+
+--- kfloppy/floppy.cpp.orig	Thu Jan 18 11:50:53 2001
++++ kfloppy/floppy.cpp
+@@ -176,7 +176,9 @@
+ 	addDensity(i18n("HD"));	
+ 	addDensity(i18n("DD"));	
+ 	addFileSystem(i18n("Dos"));
++#ifndef __NetBSD__
+ 	addFileSystem(i18n("ext2fs"));
++#endif
+ 
+ 	readSettings();
+ 	setWidgets();
+@@ -226,72 +228,120 @@
+ {
+   if( deviceComboBox->currentText() == FLOPPYA3 ){
+     if( densityComboBox->currentText() == i18n( "HD")){
++#ifdef __NetBSD__
++      device = "/dev/rfd0b";
++      tracks = 160;
++#else
+       device = "/dev/fd0H1440";
+-      blocks = 1440;
+       tracks = 80;
++#endif
++      blocks = 1440;
+       //mdev = "/dev/fd0";
++#ifndef __NetBSD__
+       if( access(QFile::encodeName(device),W_OK) < 0){
+ 	device = "/dev/fd0u1440";
+       }
++#endif
+     }
+     else{
++#ifdef __NetBSD__
++      device = "/dev/rfd0f";
++      tracks = 160;
++#else
+       device = "/dev/fd0D720";
+-      blocks = 720;
+       tracks = 80;
++#endif
++      blocks = 720;
+       //mdev = "/dev/fd0";
++#ifndef __NetBSD__
+       if( access(QFile::encodeName(device),W_OK) < 0){
+ 	device = "/dev/fd0u720";
+       }
++#endif
+     }
+   }
+ 
+   if( deviceComboBox->currentText() == FLOPPYA5){
+     if( densityComboBox->currentText() == i18n( "HD")){
++#ifdef __NetBSD__
++      device = "/dev/rfd0c";
++      tracks = 160;
++#else
+       device = "/dev/fd0h1200";
+-      blocks = 1200;
+       tracks = 80;
++#endif
++      blocks = 1200;
+       //mdev = "/dev/fd0";
+     }
+     else{
++#ifdef __NetBSD__
++      device = "/dev/rfd0g";
++      tracks = 160;
++#else
+       device = "/dev/fd0h360";
+-      blocks = 720;
+       tracks = 40;
++#endif
++      blocks = 720;
+       //mdev = "/dev/fd0";
+     }
+   }
+ 
+   if( deviceComboBox->currentText() == FLOPPYB3){
+     if( densityComboBox->currentText() == i18n( "HD")){
++#ifdef __NetBSD__
++      device = "/dev/rfd1b";
++      tracks = 160;
++#else
+       device = "/dev/fd1H1440";
+-      blocks = 1400;
+       tracks = 80;
++#endif
++      blocks = 1400;
+       //mdev = "/dev/fd1";
++#ifndef __NetBSD__
+       if(access(QFile::encodeName(device),W_OK) < 0){
+ 	device = "/dev/fd1u1440";
+       }
++#endif
+     }
+     else{
++#ifdef __NetBSD__
++      device = "/dev/rfd1f";
++      tracks = 160;
++#else
+       device = "/dev/fd1D720";
+-      blocks = 720;
+       tracks = 80;
++#endif
++      blocks = 720;
+       //mdev = "/dev/fd1";
++#ifndef __NetBSD__
+       if( access(QFile::encodeName(device),W_OK) < 0){
+ 	device = "/dev/fd1u720";
+     }
++#endif
+     }
+   }
+ 
+   if( deviceComboBox->currentText() == FLOPPYB5){
+     if( densityComboBox->currentText() == i18n( "HD")){
++#ifdef __NetBSD__
++      device = "/dev/rfd1c";
++      tracks = 160;
++#else
+       device = "/dev/fd1h1200";
+-      blocks = 1200;
+       tracks = 80;
++#endif
++      blocks = 1200;
+       //mdev = "/dev/fd1";
+     }
+     else{
++#ifdef __NetBSD__
++      device = "/dev/rfd1g";
++      tracks = 160;
++#else
+       device = "/dev/fd1h720";
+-      blocks = 720;
+       tracks = 80;
++#endif
++      blocks = 720;
+       //mdev = "/dev/fd1";
+     }
+   }
+@@ -318,16 +368,22 @@
+   path.append(":/usr/sbin:/sbin");
+  
+   fdformat = KGlobal::dirs()->findExe("fdformat", path);
++#ifndef __NetBSD__
+   mke2fs = KGlobal::dirs()->findExe("mke2fs", path);
+   mkdosfs = KGlobal::dirs()->findExe("mkdosfs", path);
++#else
++  mkdosfs = KGlobal::dirs()->findExe("newfs_msdos", path);
++#endif
+   QString str = "";
+   if (fdformat.isEmpty()) {
+     str = i18n("Cannot find fdformat.");
+   }
+ 
++#ifndef __NetBSD__
+   if (mke2fs.isEmpty()) {
+     str = i18n("Cannot find mke2fs");
+   }
++#endif
+ 
+   if (mkdosfs.isEmpty()) {
+     str = i18n("Cannot find mkdosfs");
+@@ -406,6 +462,9 @@
+   if (!verifylabel->isChecked()) {
+     *proc << "-n";
+   }
++#ifdef __NetBSD__
++  *proc << "-f";
++#endif
+   *proc << device;
+ 
+   connect(proc, SIGNAL(processExited(KProcess *)),this, SLOT(formatdone(KProcess*)));
+@@ -423,6 +482,10 @@
+     KMessageBox::error(this, str);
+     reset();
+   }
++
++#ifdef __NetBSD__
++  proc->writeStdin("y\n", 2);
++#endif
+ }
+ 
+ void FloppyData::formatdone(KProcess*){
+@@ -728,12 +791,17 @@
+ 
+         *proc << mkdosfs;
+ 	if(labellabel->isChecked())
++#ifdef __NetBSD__
++	  *proc << "-L" <<lineedit->text();
++#else
+ 	  *proc << "-n" <<lineedit->text();
+         if (verifylabel->isChecked()) {
+           *proc << "-c";
+         }
++#endif
+ 	*proc << device;
+   }
++#ifndef __NetBSD__
+   else{
+ 
+     *proc << mke2fs;
+@@ -745,6 +813,7 @@
+     }
+     *proc << device;
+   }
++#endif
+ 
+ 
+ 
