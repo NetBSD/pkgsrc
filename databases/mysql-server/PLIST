@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/28 01:08:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/11/09 06:44:32 xtraeme Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -10,6 +10,7 @@ bin/myisampack
 bin/mysql.server
 bin/mysql_install
 bin/mysql_install_db
+bin/mysql_secure_installation
 bin/mysql_waitpid
 bin/mysqld_safe
 bin/pack_isam

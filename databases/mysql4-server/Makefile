@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/08 18:19:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/09 06:44:32 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		1
@@ -52,5 +52,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld_multi.1 ${PREFIX}/man/man1
 	#${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_secure_installation.sh \
+		${PREFIX}/bin/mysql_secure_installation
 
 .include "../../mk/bsd.pkg.mk"
