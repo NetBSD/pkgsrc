@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.877 2003/09/17 20:24:05 jmmv Exp $
+$NetBSD: TODO,v 1.878 2003/09/18 05:39:58 markd Exp $
 
 Suggested new packages
 ======================
@@ -202,7 +202,6 @@ Suggested package updates
 	o nmap-3.45
 	o ns-flash-6.0.79
 	o openh323-1.11.2
-	o openldap-2.1.22 [recht|pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.7l
