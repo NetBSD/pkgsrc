@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/31 19:30:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/31 21:07:14 jdolecek Exp $
 
 MODNAME=		openssl
 CATEGORIES+=		security
@@ -6,6 +6,8 @@ PKGREVISION=		# empty
 COMMENT=		PHP extension for the OpenSSL library
 
 USE_BUILDLINK3=		YES
+
+.include "../../lang/php/ext.mk"
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.openssl}
 
@@ -16,6 +18,5 @@ CONFIGURE_ENV+=		ac_cv_lib_ssl_SSL_CTX_set_ssl_version=yes
 post-extract:
 	cd ${WRKSRC} && ln -s config0.m4 config.m4
 
-.include "../../lang/php/ext.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
