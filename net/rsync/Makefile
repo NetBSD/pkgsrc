@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/04/08 10:27:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 1999/04/13 15:31:06 agc Exp $
 #
 
 DISTNAME=	rsync-2.3.1
@@ -13,13 +13,9 @@ HOMEPAGE=	http://samba.anu.edu.au/rsync/
 
 GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
 post-install:
 	@strip ${PREFIX}/bin/rsync
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/rsync
 	${INSTALL_DATA} ${WRKSRC}/tech_report.tex ${PREFIX}/share/doc/rsync
-.endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/05 15:48:51 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/13 15:31:06 agc Exp $
 #
 
 DISTNAME=	dt-1.1.6
@@ -19,9 +19,7 @@ ALL_TARGET=	depend all
 DTDOCSDIR=	${PREFIX}/share/doc/dt
 
 post-install:
-.if !defined(NOPORTDOCS)
 	${INSTALL_DATA_DIR} ${DTDOCSDIR}
 	(cd ${WRKSRC}; ${INSTALL_DATA} README dt.html example.dtrc ${DTDOCSDIR})
-.endif
 
 .include "../../mk/bsd.pkg.mk"

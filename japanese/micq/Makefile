@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/30 07:56:03 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/13 15:31:06 agc Exp $
 
 DISTNAME=	micq
 PKGNAME=	ja-micq-0.3.3
@@ -19,11 +19,9 @@ WRKSRC=		${WRKDIR}/micq981218
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/micq ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
 		${MKDIR} ${PREFIX}/share/doc/micq
 .for file in README TODO WISHLIST commands.txt
 		${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/micq
 .endfor
-.endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/04 23:34:46 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/13 15:31:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -35,7 +35,6 @@ CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 post-install:
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/amanda
 	${MKDIR} ${PREFIX}/share/examples/amanda
 	for i in ${WRKDIR}/${DISTNAME}/docs/* ; do \
@@ -53,6 +52,5 @@ post-install:
 	    ${WRKDIR}/${DISTNAME}/example/disklist; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/examples/amanda; \
 	done
-.endif
 
 .include "../../mk/bsd.pkg.mk"
