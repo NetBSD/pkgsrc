@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2003/12/21 09:49:25 jmmv Exp $
+$NetBSD: distinfo,v 1.11 2004/01/16 07:09:28 xtraeme Exp $
 
-SHA1 (distcc-2.12.tar.bz2) = 99765c64ecc428abb4be282406ce940bd1d8c6df
-Size (distcc-2.12.tar.bz2) = 323723 bytes
+SHA1 (distcc-2.12.1.tar.bz2) = 6db2ab8376814792bbf08aec7012282c1c3520b5
+Size (distcc-2.12.1.tar.bz2) = 325428 bytes
 SHA1 (patch-aa) = c61ca877191a1dec433f87dfd22c692416634578
 SHA1 (patch-ab) = babdfcddddebfecc1b5feb4da2128dc8efe82d98
 SHA1 (patch-ac) = 872bc0442bd10f4d79f5d55a5733cbd0dc59f297
