@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/07 15:23:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/07 15:40:23 wiz Exp $
 bin/tuxpaint-config
-man/man1/tuxpaint-config.1.gz
+man/man1/tuxpaint-config.1
 share/doc/tuxpaint-config/AUTHORS.txt
 share/doc/tuxpaint-config/CHANGES.txt
 share/doc/tuxpaint-config/COPYING.txt
