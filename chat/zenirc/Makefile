@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/14 02:19:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/27 16:10:01 seb Exp $
 #
 
 DISTNAME=	zenirc-2.112
@@ -18,5 +18,4 @@ MAKE_FLAGS+=	EMACS=xemacs
 .endif
 MAKE_FLAGS+=	elispdir=${EMACS_LISPPREFIX}/zenirc
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
