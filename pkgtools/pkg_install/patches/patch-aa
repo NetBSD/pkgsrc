@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2002/08/01 09:31:15 martti Exp $
+$NetBSD: patch-aa,v 1.8 2002/08/03 18:29:53 seb Exp $
 
 --- Makefile.inc.orig	Thu Aug  1 10:46:30 2002
-+++ Makefile.inc	Thu Aug  1 10:56:14 2002
++++ Makefile.inc
 @@ -3,6 +3,9 @@
  
  .include <bsd.own.mk>
@@ -12,7 +12,16 @@ $NetBSD: patch-aa,v 1.7 2002/08/01 09:31:15 martti Exp $
  LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
  CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
  
-@@ -36,9 +39,27 @@
+@@ -24,7 +27,7 @@ WARNS=2
+ .elif ${OPSYS} == "SunOS"
+ LOCALBASE?= /usr/pkg
+ TAR_CMD?= tar
+-FTP_CMD?= tar
++FTP_CMD?= ftp
+ ZOULARISBASE?=	${LOCALBASE}/bsd
+ TAR_FULLPATHNAME?= ${ZOULARISBASE}/bin/${TAR_CMD}
+ FTP_FULLPATHNAME?= ${ZOULARISBASE}/bin/${FTP_CMD}
+@@ -36,9 +39,27 @@ CHOWN?= /usr/bin/chown
  CHGRP?= /usr/bin/chgrp
  WARNS=0
  .elif ${OPSYS} == "Linux"
