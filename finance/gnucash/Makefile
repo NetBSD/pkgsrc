@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/12/17 22:29:04 mjl Exp $
+# $NetBSD: Makefile,v 1.19 2002/01/23 20:15:35 tron Exp $
 
 DISTNAME=		gnucash-1.6.5
 CATEGORIES=		finance
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5}
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CPPFLAGS+=		-I${LOCALBASE}/include
+LIBS+=			-L${LOCALBASE}/lib/python${PYVERSSUFFIX}/config
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,4 +49,5 @@ post-extract:
 .endif
 .endif
 
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
