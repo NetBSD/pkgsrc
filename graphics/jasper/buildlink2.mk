@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:50 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/11/11 21:28:27 wiz Exp $
 
 .if !defined(JASPER_BUILDLINK2_MK)
 JASPER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		jasper
-BUILDLINK_DEPENDS.jasper?=	jasper-1.500.0
+BUILDLINK_DEPENDS.jasper?=	jasper>=1.500.0
 BUILDLINK_PKGSRCDIR.jasper?=	../../graphics/jasper
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.jasper=jasper
