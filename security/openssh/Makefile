@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/09/05 09:33:16 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2000/09/05 09:43:02 jlam Exp $
 #
 
 DISTNAME=		openssh-2.2.0p1
@@ -66,11 +66,15 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${SSH_CONF_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 
-# The ssh-askpass program (security/ssh-askpass) is in ${X11BASE}/bin or
-# ${LOCALBASE}/bin depending on if xpkgwedge is installed.  Do the safe thing
-# and assume it's in ${X11PREFIX}/bin.
+# The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
+# on if it's part of the X11 distribution, or if it's installed from pkgsrc
+# (security/ssh-askpass).
 #
+.if exists(${X11BASE}/bin/ssh-askpass)
+MAKE_ENV+=		ASKPASS_LOCATION=${X11BASE}/bin
+.else
 MAKE_ENV+=		ASKPASS_LOCATION=${X11PREFIX}/bin
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
