@@ -4,8 +4,13 @@
 # Date created:		03 September 1994
 # Whom:			mr
 #
-# $NetBSD: Makefile,v 1.8 1998/03/07 21:24:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/03/19 02:32:29 cjs Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
+#
+# Note: If you want to have pine's default behaviour of not allowing
+# modifications of the From: line, remove the file patch/patch-send
+# before you compile. (Keep in mind there are lots and lots of other
+# very easy ways of forging that From: line, though.)
 #
 
 DISTNAME=       pine3.96
