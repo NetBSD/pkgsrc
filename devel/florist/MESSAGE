@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2004/06/30 11:23:43 shannonjr Exp $
+
+To compile against the Florist packages,
+add:
+
+ ${PREFIX}/lib/florist
+
+to your ADA_INCLUDE_PATH.
+
+===========================================================================
