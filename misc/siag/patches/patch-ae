@@ -1,0 +1,11 @@
+--- common/Makefile.in.BAK	Sat Apr 10 01:35:23 1999
++++ common/Makefile.in	Sat Apr 10 01:35:38 1999
+@@ -94,7 +94,7 @@
+ 
+ INCLUDES = -DLIBEXECDIR=\"$(libexecdir)/siag\" \
+ 	-DDATADIR=\"$(datadir)/siag\" \
+-	-DDOCDIR=\"$(prefix)/doc/siag\" \
++	-DDOCDIR=\"$(prefix)/share/doc/siag\" \
+ 	-DVERSION_NO=\"@VERSION@\" \
+ 	$(DEBUG)
+ 
