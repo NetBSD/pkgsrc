@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 12:38:45 is Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/10 08:50:52 wiz Exp $
 #
 
 DISTNAME=	mad-0.14.2b
@@ -13,7 +13,7 @@ COMMENT=	High-quality MPEG audio decoder
 
 BUILD_USES_MSGFMT=	YES
 
-CONFLICTS=	madplay-[0-9]*
+CONFLICTS=	madplay-[0-9]* libid3tag-[0-9]* libmad-[0-9]*
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
