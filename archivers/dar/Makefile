@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/16 16:37:02 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/29 18:07:38 minskim Exp $
 #
 
 DISTNAME=	dar-2.0.2
@@ -22,10 +22,5 @@ CONFIGURE_ARGS+=	--disable-upx
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-
-post-patch:
-	${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		< ${WRKSRC}/doc/Makefile.in > ${WRKSRC}/doc/Makefile.in.tmp
-	${MV} ${WRKSRC}/doc/Makefile.in.tmp ${WRKSRC}/doc/Makefile.in
 
 .include "../../mk/bsd.pkg.mk"
