@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2004/10/12 00:11:10 heinz Exp $
+$NetBSD: patch-ab,v 1.9 2005/01/15 21:44:55 schmonz Exp $
 
---- Makefile.PL.orig	Fri Aug 27 18:37:35 2004
+--- Makefile.PL.orig	2004-10-22 11:21:08.000000000 -0400
 +++ Makefile.PL
 @@ -64,6 +64,8 @@ my @ATT_KEYS = (
    'ENABLE_SSL',       # Set to 'yes' to build spamc with SSL support.
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.8 2004/10/12 00:11:10 heinz Exp $
          'spamc/spamc$(EXE_EXT)', # must next to last one
          'spamd/spamd',	# must be the last one
      ],
-@@ -357,14 +362,16 @@ else {
+@@ -365,14 +370,16 @@ else {
  $makefile{'macro'}{'RUN_NET_TESTS'} = yesno($opt{'run_net_tests'});
  
  if (HAS_DBI) {
@@ -54,7 +54,7 @@ $NetBSD: patch-ab,v 1.8 2004/10/12 00:11:10 heinz Exp $
  if ($opt{'run_awl_sql_tests'}) {
    my $user_awl_dsn = prompt("SQL AWL DSN (user_awl_dsn): ", "dbi:mysql:spamassassin:localhost");
    my $user_awl_sql_username = prompt("SQL AWL DB username (user_awl_sql_username): ", "");
-@@ -387,14 +394,16 @@ else {
+@@ -395,14 +402,16 @@ else {
  }
  
  if (HAS_DBI) {
@@ -77,7 +77,7 @@ $NetBSD: patch-ab,v 1.8 2004/10/12 00:11:10 heinz Exp $
  if ($opt{'run_bayes_sql_tests'}) {
    my $bayes_sql_dsn = prompt("Bayes SQL DSN (bayes_sql_dsn): ", "dbi:mysql:spamassassin:localhost");
    my $bayes_sql_username = prompt("Bayes SQL DB username (bayes_sql_username): ", "");
-@@ -1121,17 +1130,18 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
+@@ -1144,17 +1153,18 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
  
  
  conf__install:
