@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2004/01/16 00:59:18 kristerw Exp $
+
+--- script/nhc98.inst.orig	2003-03-07 16:48:45.000000000 +0000
++++ script/nhc98.inst	2003-12-16 16:30:11.000000000 +0000
+@@ -543,6 +543,7 @@
+           echo $CPPAS $ENDIAN $CPPASFLAGS $CINCDIRS $TMPCPPASFILE -o $TMPASFILE
+ 	fi
+ 	$CPPAS $ENDIAN $CPPASFLAGS $CINCDIRS $TMPCPPASFILE -o - | \
++                sed -e '/.p2align 5/s/5/2/' |\
+ 		sed -e '/.align 32/s/32/4/' >$TMPASFILE		# evil mangler!
+ 	if test $CSRC -eq 0
+         then
