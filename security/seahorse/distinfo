@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2004/11/07 13:19:24 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2004/12/30 17:41:57 wiz Exp $
 
 SHA1 (seahorse-0.7.5.tar.bz2) = e7535125c524d264594f7d82943d27e4472ae6d3
 Size (seahorse-0.7.5.tar.bz2) = 937238 bytes
 SHA1 (patch-aa) = 5e1448b0de81f36b135d4952ea4d9141d5ff4326
+SHA1 (patch-ab) = 43d6b53d07e970a817d58cda70428b44c0236356
