@@ -1,4 +1,4 @@
-$NetSBD$
+$NetBSD: patch-ad,v 1.4 2002/05/20 18:16:01 cjep Exp $
 
 --- share/sh/help-links.sh.orig	Wed May 23 02:46:18 2001
 +++ share/sh/help-links.sh
