@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/07/17 11:23:09 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/19 08:09:32 markd Exp $
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/JavaSim.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/arrays.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/assignment.html
@@ -1029,6 +1029,8 @@ share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/thumb.gif
 share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/utah.gif
 share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/whiteball.gif
 share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/yellowball.gif
+share/kde/apps/kdevdoctreeview/tocs/c_reference.toc
+share/kde/apps/kdevdoctreeview/tocs/c++_reference.toc
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
 @dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
