@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.208 2004/01/22 10:19:58 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.209 2004/01/24 09:23:22 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2009,6 +2009,11 @@ USE_WNN4?= YES
 # (pkgsrc/mail/face)
 # Possible: not defined, YES
 # Default: not defined
+
+USE_PKGSRC_XFREE86?=	NO
+# Used in the XFree86 packages to install them automatically.
+# Possible: YES, or NO.
+# Default: NO.
 
 USERPPP_GROUP?=	network
 # Used in the userppp package to specify the default group.
