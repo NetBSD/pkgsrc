@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2004/01/09 14:25:51 adam Exp $
+# $NetBSD: Makefile,v 1.48 2004/01/20 14:32:58 adam Exp $
 #
 
-DISTNAME=       gd-2.0.20
+DISTNAME=	gd-2.0.21
 CATEGORIES=	graphics
-MASTER_SITES=   http://www.boutell.com/gd/http/
+MASTER_SITES=	http://www.boutell.com/gd/http/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.boutell.com/gd/
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		YES
 REPLACE_PERL=		bdftogd
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LIBS+=			-lpthread
+
+BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
