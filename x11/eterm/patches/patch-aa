@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/03/30 04:48:43 garbled Exp $
---- themes/Makefile.in.orig	Mon Mar 29 12:19:26 1999
-+++ themes/Makefile.in	Mon Mar 29 12:19:41 1999
-@@ -198,16 +198,12 @@
- 	done
- 	$(mkinstalldirs) $(pkgdatadir)/themes
- 	-@for i in $(THEMES) ; do \
--	  if test ! -d $(pkgdatadir)/themes/$$i ; then \
- 	    echo "Installing $$i theme in $(pkgdatadir)/themes" ; \
- 	    $(mkinstalldirs) $(pkgdatadir)/themes/$$i ; \
- 	    $(CP) $$i/???* $(pkgdatadir)/themes/$$i ; \
- 	    $(CHMOD) 755 $(pkgdatadir)/themes/$$i ; \
- 	    $(CHMOD) 644 $(pkgdatadir)/themes/$$i/???* ; \
- 	    rm -f $(pkgdatadir)/themes/$$i/MAIN.in ; \
--	  else \
--	    echo "ALERT!  Not overwriting theme $$i in $(pkgdatadir)/themes.  You will need to update this theme manually." ; \
--	  fi ; \
- 	done
- 	@if test ! -f $(HOME)/.active.tags ; then $(CP) active.tags $(HOME)/.active.tags ; \
- 	   else echo "Not installing $(HOME)/.active.tags -- File exists." ; fi
+$NetBSD: patch-aa,v 1.2 1999/10/28 00:31:59 jlam Exp $
+
+--- configure.orig	Mon Apr 19 19:47:32 1999
++++ configure	Mon Oct 25 16:28:54 1999
+@@ -1858,6 +1858,7 @@
+ fi
+ 
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -2158,6 +2159,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ 
+ echo $ac_n "checking for distribution root""... $ac_c" 1>&6
