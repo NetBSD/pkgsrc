@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/10/21 18:41:16 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/10/22 13:45:18 agc Exp $
 bin/xvile
 lib/vile/vile-c-filt
 lib/vile/vile-crypt
@@ -68,7 +68,14 @@ share/vile/perl/shell.pl
 share/vile/perl/syntax.pl
 share/vile/perl/tailf.pl
 share/vile/perl/visit.pl
+share/examples/xvile/spell.rc
+share/examples/xvile/filters.rc
+share/examples/xvile/digraphs.rc
+share/examples/xvile/pictmode.rc
+share/examples/xvile/manpage.rc
+share/examples/xvile/visvile.rc
 @dirrm lib/vile
+@dirrm share/examples/xvile
 @dirrm share/xvile/perl
 @dirrm share/xvile
 @dirrm share/vile/perl
