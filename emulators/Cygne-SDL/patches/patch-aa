@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/23 19:01:40 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/02 02:22:22 dillo Exp $
 
 --- Makefiles/Makefile.unix.orig	2002-03-26 17:50:55.000000000 +0100
 +++ Makefiles/Makefile.unix
 @@ -1,5 +1,4 @@
 -CC = gcc
 -LD = gcc 
-+LD = g++
++#LD = g++
  NASM = nasm
  
  ### Include and lib stuff ####
@@ -18,10 +18,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/23 19:01:40 wiz Exp $
 -         -fschedule-insns2 -fstrength-reduce -malign-double -mfancy-math-387 -ffast-math -fforce-addr \
 -         -fforce-mem `sdl-config --cflags` \
 -         -L$(STDLIB) -L$(SDLLIB) -I$(STDINCLUDE) -I$(SDLINCLUDE)
-+CFLAGS = -DUNIX -DTARGET_UNIX -DGCC -DUSES_16BIT_ONLY -D__SDL__ `sdl-config --cflags`
++CFLAGS += -DUNIX -DTARGET_UNIX -DGCC -DUSES_16BIT_ONLY -D__SDL__
  
 -LDFLAGS = $(CFLAGS)
-+LDFLAGS = $(CFLAGS) `sdl-config --libs`
++LDFLAGS += `sdl-config --libs`
  
  TARGET = cygne
  
@@ -30,15 +30,33 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/23 19:01:40 wiz Exp $
  
  LIBS = `sdl-config --libs` -lz
  
-@@ -37,7 +32,10 @@ THECC = $(CC) $(CFLAGS) $(INCS)
- %.o: %.cpp
- 	$(THECC) -c $< -o $@
+@@ -28,17 +23,22 @@ INCS = -I. `sdl-config --cflags`
+ 
+ THECC = $(CC) $(CFLAGS) $(INCS)
+ 
+-%.o: %.asm
++.SUFFIXES: .asm
++
++.asm.o:
+ 	$(NASM) -f elf -o $@ $<
+ 
+-%.o: %.c
+-	$(THECC) -c $< -o $@
++.c.o:
++	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
++
++.cpp.o:
++	$(CXX) $(CFLAGS) $(INCS) -c $< -o $@
+ 
+-%.o: %.cpp
+-	$(THECC) -c $< -o $@
++unzip.o:
++	$(CC) $(CFLAGS) $(INCS) -c zlib/unzip.c -o $@
  
 -cygne: $(OBJ) Makefile
-+unzip.o:
-+	$(THECC) -c zlib/unzip.c -o $@
-+
+-	$(LD) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
 +cygne: $(OBJ)
- 	$(LD) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
++	$(CXX) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
  	 
  clean:
+ 	rm -f cygne *.o zlib/*.o
