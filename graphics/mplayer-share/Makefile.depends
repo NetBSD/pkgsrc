@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.depends,v 1.9 2002/12/06 14:21:46 wiz Exp $
+# $NetBSD: Makefile.depends,v 1.10 2003/01/20 07:10:41 fredb Exp $
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
 
@@ -15,6 +15,7 @@ DEPENDS+=	realplayer>=8:../../audio/realplayer
 
 USE_X11=	# defined
 
+.include "../../audio/cdparanoia/buildlink2.mk"
 .include "../../audio/mad/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../audio/faad2/buildlink2.mk"
