@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.68 2002/07/02 15:26:18 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.69 2002/09/12 17:03:04 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -137,7 +137,10 @@ if ($extrafile) {
 		next if ($i =~ /Makefile$/);
 		$i =~ s/^\Q$portdir\E\///;
 		next if (defined $checker{$i});
-		if ($i =~ /PLIST/) {
+		if ($i =~ /MESSAGE/) {
+			unshift(@checker, $i);
+			$checker{$i} = 'checkmessage';
+		} elsif ($i =~ /PLIST/) {
 		        unshift(@checker, $i);
 			$checker{$i} = 'checkplist';
 		} else {
@@ -325,6 +328,47 @@ sub checkdistinfo {
 	}
 
 	return 1;
+}
+
+#
+# MESSAGE
+#
+sub checkmessage {
+	local($file) = @_;
+	local(%maxchars) = ('MESSAGE', 80);
+	local($longlines, $lastline, $tmp) = (0, "", "");
+
+	$shortname = basename($file);
+	open(IN, "< $portdir/$file") || return 0;
+
+	$_ = <IN>;
+	if (! /^={75}$/) {
+		&perror("WARN: $file should begin with a 75-character ".
+			"double-dashed line.");
+	}
+	$_ = <IN>;
+	if (! /^\$NetBSD(:.*|)\$$/) {
+		&perror("FATAL: missing RCS Id in MESSAGE file: $file");
+	}
+	while (<IN>) {
+		$longlines++ if ($maxchars{$shortname} < length($_));
+		$lastline = $_;
+		$tmp .= $_;
+	}
+	if ($lastline !~ /^={75}$/) {
+		&perror("WARN: $file should end with a 75-character ".
+			"double-dashed line.");
+	}
+	if ($longlines > 0) {
+		&perror("WARN: $file includes lines that exceed ".
+			"$maxchars{$shortname} characters.");
+	}
+	if ($tmp =~ /[\033\200-\377]/) {
+		&perror("WARN: $file includes iso-8859-1, or ".
+			"other local characters.  $file should be ".
+			"plain ascii file.");
+	}
+	close(IN);
 }
 
 #
