@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/06 02:58:49 jun Exp $
+
+--- Makefile.orig	Fri Dec 22 16:44:43 2000
++++ Makefile
+@@ -22,7 +22,7 @@
+ ## EDIT THE FOLLOWINGS
+ ##
+ 
+-prefix=/usr/local
++prefix=${PREFIX}
+ infodir=$(prefix)/info
+ 
+ ##
+@@ -96,7 +96,7 @@
+ 
+ ################################################################
+ 
+-all: $(OBJS)
++all: $(OBJS) bin info
+ 	@echo 'Compiling EL files of Mew ... '
+ 	@echo 'PLEASE IGNORE WARNINGS IF DISPLAYED. TAKE IT EASY!'
+ 	$(EMACS) -batch -q -no-site-file -l ./$(TEMPFILE) -f mew-compile
+@@ -112,7 +112,7 @@
+ 
+ ################################################################
+ 
+-install: $(OBJS)
++install: $(OBJS) install-bin install-info install-etc
+ 	-@if [ ! -d $(elispdir) ]; then \
+ 		$(MKDIR) $(elispdir); \
+ 	fi
