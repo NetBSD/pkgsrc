@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7802 2004/11/10 00:49:57 epg Exp $
+$NetBSD: CHANGES,v 1.7803 2004/11/10 08:23:49 martin Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5203,3 +5203,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ipsec-tools-0.5.pre20041109 [manu 2004-11-09]
 	Added mkcmd-8.14 [epg 2004-11-10]
 	Added xapply-3.4 [epg 2004-11-10]
+	Added open2300 [martin 2004-11-10]
+	Added open2300-mysql [martin 2004-11-10]
+
