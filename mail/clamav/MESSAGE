@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/08/01 04:35:33 jlam Exp $
+
+You should update the virus databases to the latest ones available
+before using ClamAV.  This can be done by running the following command
+as `${ROOT_USER}' or `${CLAMAV_USER}':
+
+	${PREFIX}/bin/freshclam
+
+It is recommended that the virus database be updated hourly by adding the
+appropriate cron job.
+
+===========================================================================

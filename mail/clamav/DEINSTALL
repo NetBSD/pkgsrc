@@ -1,0 +1,11 @@
+# $NetBSD: DEINSTALL,v 1.1 2004/08/01 04:35:33 jlam Exp $
+
+VIRUSDBDIR="@VIRUSDBDIR@"
+
+case ${STAGE} in
+DEINSTALL)
+	# Unconditionally remove the virus databases when deinstalling.
+	${RM} -f ${VIRUSDBDIR}/daily.cvd
+	${RM} -f ${VIRUSDBDIR}/main.cvd
+	;;
+esac

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: clamd.sh,v 1.2 2004/03/30 00:32:29 xtraeme Exp $
+# $NetBSD: clamd.sh,v 1.3 2004/08/01 04:35:33 jlam Exp $
 #
 # clamd does anti-virus checking.
 #
@@ -12,42 +12,70 @@
 # KEYWORD: shutdown
 ##
 
-PATH=/sbin:/bin:/usr/sbin:/usr/bin:@PREFIX@/sbin:@PREFIX@/bin
-export PATH
-
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
 name="clamd"
 rcvar=$name
-required_files="@PKG_SYSCONFDIR@/clamav.conf"
 command="@PREFIX@/sbin/${name}"
-pidfile=$(@AWK@ '/^#/ {next}; /PidFile/ {print $2}' ${required_files})
-socket=$(@AWK@ '/^#/ {next}; /LocalSocket/ {print $2}' ${required_files})
-clamd_user=$(@AWK@ '/^#/ {next}; /User/ {print $2}' ${required_files})
-
+scan_command="@PREFIX@/bin/clamdscan"
+required_files="@PKG_SYSCONFDIR@/clamav.conf"
 start_precmd="clamd_precmd"
-stop_postcmd="clamd_postcmd"
+stop_cmd="clamd_stopcmd"
+
+if [ -f "${required_files}" ]; then
+	pidfile_=`@AWK@ '/^#/ {next}; /^PidFile[ 	]/ {r = $2};
+			END {print r}' ${required_files}`
+	if [ -n "${pidfile_}" ]; then
+		pidfile=${pidfile_}
+	fi
+	logfile=`@AWK@ 'BEGIN {r = "/tmp/clamd.log"};
+			/^#/ {next}; /^LogFile[ 	]/ {r = $2};
+			END {print r}' ${required_files}`
+	socket=`@AWK@ 'BEGIN {r = "/tmp/clamd"};
+			/^#/ {next}; /^LocalSocket[ 	]/ {r = $2};
+			END {print r}' ${required_files}`
+	clamd_user=`@AWK@ 'BEGIN {r = "@CLAMAV_USER@"};
+			/^#/ {next}; /^User[ 	]/ {r = $2};
+			END {print r}' ${required_files}`
+fi
 
 clamd_precmd()
 {
-    @RM@ -f ${socket}
-    @TOUCH@ ${pidfile}
-    @CHOWN@ ${clamd_user} ${pidfile}
+	@RM@ -f ${socket}
+	if [ -n "${logfile}" ]; then
+    		@TOUCH@ ${logfile}
+    		@CHOWN@ ${clamd_user} ${logfile}
+	fi
+	if [ -n "${pidfile}" ]; then
+    		@TOUCH@ ${pidfile}
+    		@CHOWN@ ${clamd_user} ${pidfile}
+	fi
 }
 
-clamd_postcmd()
+clamd_stopcmd()
 {
-    if [ -f "${pidfile}" ]; then
-        @RM@ -f ${pidfile}
-    fi
-    
-    if [ -e "${socket}" ]; then
-        @RM@ -f ${socket}
-    fi
+	# Workaround bug when clamd is built against pth by send TERM to
+	# clamd, then forcing it to start a worker thread that exits.
+	# This forces the main thread to awaken and realize that it's
+	# supposed to shutdown.
+	#
+        @ECHO@ "Stopping ${name}."
+        doit="@SU@ -m ${clamd_user} -c \"kill -TERM $rc_pid\""
+        if ! eval $doit && [ -z "$rc_force" ]; then
+                return 1
+        fi
+        ${scan_command} --quiet ${scan_command} 2>/dev/null
+        wait_for_pids $rc_pid
 }
-                                                                                     
-load_rc_config $name
-run_rc_command "$1"
+
+if [ -f /etc/rc.subr -a -f /etc/rc.conf \
+     -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	@ECHO@ -n " ${name}"
+	eval ${start_precmd}
+	${command} ${clamd_flags} ${command_args}
+fi
