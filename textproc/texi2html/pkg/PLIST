@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 1998/05/14 23:49:30 tv Exp $
+bin/texi2html
+man/man1/texi2html.1.gz
+share/texi2html/invisible.xbm
+@dirrm share/texi2html
