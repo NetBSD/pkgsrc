@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.805 2003/08/31 00:30:37 xtraeme Exp $
+$NetBSD: TODO,v 1.806 2003/08/31 09:41:06 cjep Exp $
 
 Suggested new packages
 ======================
@@ -269,6 +269,7 @@ Suggested package updates
 	o tcl/tk-8.4.4
 	o tcl-tclcl-1.0b13 [pkg/22632]
 	o tcpreplay-1.4.5
+	o tct-1.12
 	o teapop-0.3.6
 	o tightvnc-1.2.9
 	o tin-1.6.1
