@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/03/31 10:38:16 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/07/31 03:42:52 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		3
@@ -23,12 +23,6 @@ USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 .include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		CYRUS_USE_INET6
-.if defined(CYRUS_USE_INET6) && !empty(CYRUS_USE_INET6:M[yY][eE][sS])
-PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=		${DISTNAME}-ipv6-20030819.diff.gz
-.endif
 
 # CYRUS_USER		username of the Cyrus administrator
 # CYRUS_GROUP		group of the Cyrus administrator
@@ -55,19 +49,6 @@ CONFIGURE_ARGS+=	--without-notify
 CONFIGURE_ARGS+=	--without-ucdsnmp
 CONFIGURE_ARGS+=	--without-zephyr
 
-# Follow the recommended methods for database types to use.  I'm not
-# 100% ready to override the defaults till I've checked any side effects
-# - chris@nb.org
-#
-BUILD_DEFS+=		CYRUS_DB_RECOMMENDED
-.if defined(CYRUS_DB_RECOMMENDED)
-CONFIGURE_ARGS+=	--with-duplicate-db=db3_nosync
-CONFIGURE_ARGS+=	--with-mboxlist-db=skiplist
-CONFIGURE_ARGS+=	--with-seen-db=skiplist
-CONFIGURE_ARGS+=	--with-subs-db=flat
-CONFIGURE_ARGS+=	--with-tls-db=db3_nosync
-.endif
-
 # Ensure that we use the db3 library, even if the db4 one gets pulled in
 # as an indirect dependency.
 #
@@ -78,13 +59,62 @@ CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ENV+=		ac_cv_lib_${_var_}_db_create=no
 .endfor
 
-.if defined(KERBEROS)
-.  if (${KERBEROS} == 4) && exists(/usr/include/kerberosIV/krb.h)
-PKG_USE_KERBEROS=	yes
+# Global and legacy options
+.if defined(CYRUS_USE_INET6) || defined(CYRUS_DB_RECOMMENDED) || \
+    defined(KERBEROS)
+.  if !defined(PKG_OPTIONS.cyrus-imapd)
+.    if defined(CYRUS_USE_INET6)
+PKG_OPTIONS.cyrus-imapd+=	inet6
+.    endif
+.    if defined(CYRUS_DB_RECOMMENDED)
+PKG_OPTIONS.cyrus-imapd+=	recommended-db
+.    endif
+.    if defined(KERBEROS)
+.      if ${KERBEROS} == "4"
+PKG_OPTIONS.cyrus-imapd+=	kerberos4
+.      else
+PKG_OPTIONS.cyrus-imapd+=	kerberos
+.      endif
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
+PKG_SUPPORTED_OPTIONS=	gssapi inet6 kerberos kerberos4 recommended-db
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+PATCH_SITES=	http://www.imasy.or.jp/~ume/ipv6/
+PATCHFILES=	${DISTNAME}-ipv6-20030819.diff.gz
+.endif
+
+.if !empty(PKG_OPTIONS:Mrecommended-db)
+#
+# Follow the recommended methods for database types to use.  I'm not
+# 100% ready to override the defaults till I've checked any side effects
+# - chris@nb.org
+#
+CONFIGURE_ARGS+=	--with-duplicate-db=db3_nosync
+CONFIGURE_ARGS+=	--with-mboxlist-db=skiplist
+CONFIGURE_ARGS+=	--with-seen-db=skiplist
+CONFIGURE_ARGS+=	--with-subs-db=flat
+CONFIGURE_ARGS+=	--with-tls-db=db3_nosync
+.endif
+
+.if !empty(PKG_OPTIONS:Mkerberos)
+.  if empty(PKG_OPTIONS:Mgssapi)
+PKG_OPTIONS+=	gssapi
+.  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mkerberos4)
+.  if exists(/usr/include/kerberosIV/krb.h)
+CRYPTO+=		uses Kerberos encryption code
 CONFIGURE_ARGS+=	--with-auth=krb
 CONFIGURE_ARGS+=	--with-krb=/usr
-.  else
-.    include "../../mk/krb5.buildlink3.mk"
+.  endif
+.elif !empty(PKG_OPTIONS:Mgssapi)
+.  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
@@ -92,7 +122,6 @@ GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
 CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
 COMERRBASE=		${KRB5BASE}
-.  endif
 .else
 CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--without-krb
