@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/03/15 17:15:36 kleink Exp $
+# $NetBSD: Makefile,v 1.35 2004/04/25 08:28:09 snj Exp $
 #
 
 DISTNAME=		jwhois-3.2.2
@@ -10,7 +10,7 @@ MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.gnu.org/software/jwhois/
 COMMENT=		Configurable WHOIS client
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -32,5 +32,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/example/jwhois.conf	\
 		${EGDIR}/jwhois.conf.default
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
