@@ -1,0 +1,40 @@
+# $NetBSD: Makefile.apps,v 1.1.1.1 1999/11/17 18:32:29 drochner Exp $
+#
+#	Makefile rules for Qwt examples
+#	===============================
+#	
+
+PREFIX?= /usr/X11R6
+include $(QWTDIR)/Makefile.common
+
+#
+# GENERAL SETTINGS
+#
+CC	=	gcc
+CFLAGS	=	-O2
+INCLUDES =	-I$(QWTINC) -I$(QTINC)
+LD	=	$(CC)
+LDFLAGS	=	
+LIBS	=	-L$(QTLIB) -W,l -R$(QTLIB) -lqt -lXext -lX11 -lqwt -lm
+
+#
+# IMPLICIT RULES
+#
+%.o: %.cpp
+	$(CC) -c $(CFLAGS) $(INCLUDES) -o $@ $<
+
+moc_%.cpp: %.h
+	$(MOC) -o $@ $<
+
+
+#
+# BUILD RULES
+#
+all: $(APPNAME)
+
+$(APPNAME): $(OBJECTS)
+	$(LD) $(LDFLAGS) -o $(APPNAME) $(OBJECTS) $(LIBS)
+
+clean:
+	-rm -f $(OBJECTS) $(APPNAME)
+
