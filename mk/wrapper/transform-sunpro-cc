@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: transform-sunpro-cc,v 1.2 2004/11/10 16:20:40 sketch Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,8 +63,14 @@ case $arg in
 	addtocache=yes
 	;;
 ######################################################################
-# SunPro compilers don't even understand any -W* arguments, so just
-# silently ignore them all.
+# SunPro compiler accepts -Wl,* so just pass it on through.
+######################################################################
+-Wl,*)
+	addtocache=yes
+	;;
+######################################################################
+# SunPro compilers don't understand any other -W* arguments, so just
+# silently ignore the rest.
 ######################################################################
 -W*)
 	arg=
