@@ -1,13 +1,0 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
-
---- lib/avifile/File64.h.orig	Sun Nov 26 18:43:55 2000
-+++ lib/avifile/File64.h
-@@ -3,7 +3,7 @@
- 
- typedef long long __int64;
- //typedef int HANDLE;
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
- #define lseek64 lseek
- //#else
- //extern "C" __int64 lseek64(int fd, __int64 offset, int);
