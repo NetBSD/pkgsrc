@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:32 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/25 13:00:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
-#    SUBDIR += Scilab
 #    SUBDIR += apc
 #    SUBDIR += blas
 #    SUBDIR += calc
@@ -24,6 +23,7 @@
 #    SUBDIR += pari
 #    SUBDIR += plplot
     SUBDIR += py-Numeric
+    SUBDIR += scilab
 #    SUBDIR += siag
 #    SUBDIR += simpack
 #    SUBDIR += ss
