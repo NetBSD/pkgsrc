@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.78 1998/04/25 22:42:16 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.79 1998/05/06 13:41:13 tron Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -731,6 +731,7 @@ PATCH_SITES:=	${PATCH_SITES:S/%SUBDIR%/${PATCH_SITE_SUBDIR}/}
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
+	ftp://sup.owl.de/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
 	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/
 
 # If the user has this set, go to the FreeBSD repository for everything.
