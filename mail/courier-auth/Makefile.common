@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/01/22 22:00:22 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/01/24 16:02:21 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -49,6 +49,8 @@ CONFIGURE_ARGS+=	--without-authcustom
 CONFIGURE_ARGS+=	--without-authldap
 CONFIGURE_ARGS+=	--without-authmysql
 CONFIGURE_ARGS+=	--without-authpgsql
+
+CONFIGURE_ENV+=		EXPECT="${LOCALBASE}/bin/expect"
 
 .if ${OPSYS} == "SunOS"
 .include "../../databases/db/buildlink.mk"
