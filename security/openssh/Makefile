@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2004/04/27 21:39:39 markd Exp $
+# $NetBSD: Makefile,v 1.132 2004/04/28 03:54:08 jlam Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
@@ -88,23 +88,22 @@ CONFIGURE_ARGS+=	--without-skey
 .endif
 
 .if defined(KERBEROS)
-PKG_USE_KERBEROS=	yes
-.include "../../mk/krb5.buildlink3.mk"
+.  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-kerberos5=${KRB5BASE}
 CPPFLAGS+=		-I${KRB5BASE}/include/krb5
-.if ${OPSYS} != "SunOS"
+.  if (${KRB5_TYPE} == "heimdal") && exists(/usr/include/kerberosIV/krb.h)
 CONFIGURE_ARGS+=	--with-kerberos4=/usr
 CPPFLAGS+=		-I/usr/include/kerberosIV
 # kerberos 5 dependencies are detected correctly.
 LDFLAGS+=		-lkrb -lcom_err -lroken -ldes -lcrypto
-.endif
+.  endif
 .endif
 
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/utmpx.h)
+.if (${OPSYS} == "NetBSD") && exists(/usr/include/utmpx.h)
 # if we have utmpx et al do not try to use login()
 CONFIGURE_ARGS+=	--disable-libutil
 .endif
-.if ${OPSYS} == "SunOS" && (${OS_VERSION} == "5.8" || ${OS_VERSION} == "5.9")
+.if (${OPSYS} == "SunOS") && (${OS_VERSION} == "5.8" || ${OS_VERSION} == "5.9")
 CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp
 .endif
 
@@ -151,6 +150,10 @@ MESSAGE_SUBST+=		OPENSSH_GROUP=${OPENSSH_GROUP}
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
@@ -159,9 +162,5 @@ post-install:
 #.if defined(USE_PAM)
 #	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
 #.endif
-
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
