@@ -1,0 +1,16 @@
+#	$NetBSD: rc.conf.example,v 1.1.1.1 2003/06/19 16:07:12 grant Exp $
+#
+# see rc.conf(5) for more information.
+#
+# Use program=YES to enable program, NO to disable it. program_flags are
+# passed to the program on the command line.
+#
+
+# Load the defaults in from /etc/defaults/rc.conf (if it's readable).
+# These can be overridden below.
+#
+if [ -r /etc/defaults/rc.conf ]; then
+	. /etc/defaults/rc.conf
+fi
+
+rc_configured=YES
