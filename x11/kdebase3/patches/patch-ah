@@ -1,19 +1,10 @@
-$NetBSD: patch-ah,v 1.4 2004/04/30 01:42:11 xtraeme Exp $
+$NetBSD: patch-ah,v 1.5 2004/05/01 07:32:15 tron Exp $
 
 Fixes build with Freetype-2.1.8, see:
 http://webcvs.kde.org/cgi-bin/cvsweb.cgi/kdebase/kcontrol/kfontinst/lib/FontEngine.cpp
 
 --- kcontrol/kfontinst/lib/FontEngine.cpp	2004/03/30 21:17:35	1.12.2.2
 +++ kcontrol/kfontinst/lib/FontEngine.cpp	2004/04/27 20:30:25	1.12.2.3
-@@ -4,7 +4,7 @@
- // Author        : Craig Drummond
- // Project       : K Font Installer
- // Creation Date : 29/04/2001
--// Version       : $Revision: 1.4 $ $Date: 2004/04/30 01:42:11 $
-+// Version       : $Revision: 1.4 $ $Date: 2004/04/30 01:42:11 $
- //
- ////////////////////////////////////////////////////////////////////////////////
- //
 @@ -522,14 +522,33 @@ void CFontEngine::createPreview(int widt
  
      FT_Face        face;
