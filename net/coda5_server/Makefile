@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2002/06/20 19:28:35 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2002/09/10 11:02:17 jlam Exp $
 
 PKGNAME=	coda-server-${DIST_VERS}
 COMMENT=	server programs for a replicated high-performance network file system
-
-USE_BUILDLINK_ONLY=	yes
 
 .include "Makefile.common"
 
