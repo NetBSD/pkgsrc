@@ -73,11 +73,15 @@ if ($cmd eq irq)
 	while (<CMDOUT>)
 	{
 		chop $_;
-		if (m|^(\w+)[\t\s]+(\d+)|)
+		if (m|^(\w+)[\t\s]+(-?\d+)|)
 		{
+			$val = $2;
+			if ($val < 0) {
+				$val = 0;
+			}
 			if ($1 eq $irqname)
 			{
-				print "$2\n";
+				print "$val\n";
 			}
 		}
 	}
