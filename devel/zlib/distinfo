@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/03/12 03:00:24 tv Exp $
+$NetBSD: distinfo,v 1.7 2004/05/08 01:06:26 tv Exp $
 
 SHA1 (zlib-1.2.1.tar.gz) = a3d51efc98b87b9ebd1a528d726007b0cb08a612
 Size (zlib-1.2.1.tar.gz) = 345833 bytes
-SHA1 (patch-aa) = f10e22c7f4e06b1c1ddef0341b78f3b81dc2d3f5
+SHA1 (patch-aa) = e7ed32531a8002792dd62eac4d8522dbf7d224a5
