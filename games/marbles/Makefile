@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/26 12:40:27 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2004/03/07 06:16:46 snj Exp $
 
 DISTNAME=	marbles-1.0.2
 PKGREVISION=	3
@@ -10,10 +9,10 @@ MAINTAINER=	xs@nitric.net
 HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	Atomix-like puzzle
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-profile-path=${LOCALBASE}/share/games/
 
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
