@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2841 2005/01/05 12:06:25 adam Exp $
+$NetBSD: TODO,v 1.2842 2005/01/05 12:13:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -269,7 +269,6 @@ Suggested package updates
 	o ORBit-0.5.17
 	o PAM-0.78
 	o SDL_gfx-2.0.13
-	o SDL_image-1.2.4
 	o SDL_ttf-2.0.7
 	o TeXmacs-1.0.4-R3
 	o Xaw3d-1.5E
