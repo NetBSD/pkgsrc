@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/11/14 00:55:44 hubertf Exp $
+
+SHA1 (icb.tar.gz) = 6d2ddd234403fe33426ece3fd4de4104cf1a6257
+Size (icb.tar.gz) = 73607 bytes
+SHA1 (patch-aa) = ede7c2087324f0a79cfb4146926661fecc6af550
+SHA1 (patch-ab) = 358b366c16290d6d2326e72c281f977e49a8a98b
+SHA1 (patch-ac) = fb88b9e3fe894feab0bbc8ead48e46572598d17a
+SHA1 (patch-ad) = 609b2e5cf6118fbc36818a392866bc7fafc59abc
+SHA1 (patch-ae) = 0f8765883c2b7e77394556405ee7fee7a054ad56
+SHA1 (patch-af) = ba355bdbee708ae6de0583b4e8330dc0c1946670
+SHA1 (patch-ag) = e2bf71557fa486371e0d26ff8d5716ae0924a498
