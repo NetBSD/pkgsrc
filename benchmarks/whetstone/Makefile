@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/06 21:11:24 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/24 09:19:10 agc Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -18,5 +18,8 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/whetstone ${PREFIX}/bin
+
+benchmark:
+	@${WRKSRC}/whetstone
 
 .include "../../mk/bsd.pkg.mk"
