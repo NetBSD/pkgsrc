@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/04/25 06:00:26 rh Exp $
+$NetBSD: distinfo,v 1.3 2003/12/14 22:53:59 xtraeme Exp $
 
-SHA1 (glade-2.0.0.tar.bz2) = ac81c6b196537ec88ec24798cb922d10bc31216f
-Size (glade-2.0.0.tar.bz2) = 1723210 bytes
+SHA1 (glade-2.0.1.tar.bz2) = 5b0819e386f181a04ff541e12a7848d9340120e3
+Size (glade-2.0.1.tar.bz2) = 1912213 bytes
