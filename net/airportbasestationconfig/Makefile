@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/02/08 19:24:21 tron Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/29 15:41:46 tron Exp $
 
-DISTNAME=	configurator
-PKGNAME=	${BINNAME}-1.2.2
+DISTNAME=	configurator_152
+PKGNAME=	${BINNAME}-1.5.2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
@@ -12,12 +12,11 @@ COMMENT=	Configuration program for Apple's Airport Base Station
 
 USE_JAVA=	YES
 
-DIST_SUBDIR=	${PKGNAME}
-PLIST_SUBST+=	BINNAME=${BINNAME}
-WRKSRC=		${WRKDIR}
+PLIST_SUBST+=	BINNAME=${BINNAME} JARNAME=${JARNAME}
 
 BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
+JARNAME=	AirportBaseStationConfig.jar
 LIBDIR=		${PREFIX}/lib/${BINNAME}
 
 .include "../../mk/bsd.prefs.mk"
@@ -44,17 +43,17 @@ do-build:
 .if defined(CLASSPATH)
 	${ECHO} "CLASSPATH=${CLASSPATH}:\$${CLASSPATH}; export CLASSPATH" >>${WRKSRC}/${BINNAME}
 .endif
-	${ECHO} "exec java ${JVM_OPTS} ${LIBDIR}/${BINNAME}.jar" >>${WRKSRC}/${BINNAME}
+	${ECHO} "exec java ${JVM_OPTS} ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
 	cd ${WRKSRC} && \
 	${INSTALL_SCRIPT} ${BINNAME} ${PREFIX}/bin && \
-	${INSTALL_DATA} ${BINNAME}.jar ${LIBDIR} && \
-	${INSTALL_DATA} authors ${DOCDIR}/AUTHORS && \
-	${INSTALL_DATA} copying ${DOCDIR}/COPYING
-	cd ${WRKSRC}/helpdocs && \
-	${INSTALL_DATA} readme.txt ${DOCDIR}/README && \
+	${INSTALL_DATA} ${JARNAME} ${LIBDIR} && \
+	${INSTALL_DATA} AUTHORS ${DOCDIR} && \
+	${INSTALL_DATA} COPYING ${DOCDIR} && \
+	cd helpdocs && \
+	${INSTALL_DATA} ReadMe.txt ${DOCDIR}/README && \
 	${INSTALL_DATA} mainscreen.jpg manual.html ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
