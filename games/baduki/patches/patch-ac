@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/01/31 22:03:43 bad Exp $
+
+--- po/Makefile.in.in.orig	Sat Oct  3 02:07:54 1998
++++ po/Makefile.in.in	Wed Jan 27 21:11:25 1999
+@@ -19,8 +19,8 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
+ gnulocaledir = $(prefix)/share/locale
++localedir = $(gnulocaledir)
+ gettextsrcdir = $(prefix)/share/gettext/po
+ subdir = po
+ 

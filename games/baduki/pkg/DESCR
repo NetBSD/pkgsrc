@@ -1,0 +1,7 @@
+Baduki is a computer Baduk(Go) program based on xamigo.
+
+Features:
+	Play Baduk(Go) with Computer or Human.
+	Load/Save/Analyze SGF file.
+	Suport GMP(go modem protocol)
+	Easy to debug.
