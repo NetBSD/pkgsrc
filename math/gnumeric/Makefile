@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/01/25 01:39:53 rh Exp $
+# $NetBSD: Makefile,v 1.43 2002/01/28 09:35:03 drochner Exp $
 #
 
 DISTNAME=		gnumeric-1.0.2
@@ -12,7 +12,8 @@ COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
 # wctype.h is found on NetBSD 1.5R and later
 ONLY_FOR_PLATFORM=	NetBSD-1.5[R-Z]-* NetBSD-1.5Z[A-Z]-*
 
-BUILD_DEPENDS+=		python>=2.0:../../lang/python
+# for Python support a shared libpython is required but not provided yet
+#BUILD_DEPENDS+=		python>=2.0:../../lang/python
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -25,6 +26,7 @@ LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
+CONFIGURE_ARGS+=	--without-python
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
