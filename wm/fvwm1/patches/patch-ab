@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/10/14 13:47:18 tron Exp $
 
 --- Imakefile.orig	Fri Dec  2 20:04:20 1994
-+++ Imakefile	Wed Mar 25 00:36:03 1998
++++ Imakefile	Sun Oct 14 15:37:57 2001
 @@ -28,7 +28,7 @@
            modules/FvwmWinList
  
@@ -11,3 +11,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
  #endif
  
  SUBDIRS = $(ALLSUBDIRS) $(XPMSUBDIRS) $(SHAPESUBDIRS)
+@@ -43,3 +43,4 @@
+ 
+ 
+ 
++depend:
