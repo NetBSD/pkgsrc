@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/01/07 12:29:02 markd Exp $
+# $NetBSD: Makefile,v 1.37 2005/01/16 20:00:05 markd Exp $
 
 DISTNAME=	netatalk-2.0.2
 CATEGORIES=	net print
@@ -29,6 +29,10 @@ CONF_FILES=	${EG_DIR}/AppleVolumes.default ${PKG_SYSCONFDIR}/AppleVolumes.defaul
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 RCD_SCRIPTS=	atalkd afpd papd timelord
+RCD_SCRIPT_SRC.atalkd=		# empty
+RCD_SCRIPT_SRC.afpd=		# empty
+RCD_SCRIPT_SRC.papd=		# empty
+RCD_SCRIPT_SRC.timelord=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
