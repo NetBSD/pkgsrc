@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.40.4.2 2003/07/29 20:34:17 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.40.4.3 2003/08/01 19:00:27 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -25,6 +25,11 @@ INSTALL_FILE=		${WRKDIR}/.INSTALL
 # install/deinstall logic.
 #
 _HEADER_TMPL?=		${.CURDIR}/../../mk/install/header
+.if !defined(HEADER_EXTRA_TMPL) && exists(${.CURDIR}/HEADER)
+HEADER_EXTRA_TMPL?=	${.CURDIR}/HEADER
+.else
+HEADER_EXTRA_TMPL?=	# empty
+.endif
 .if !defined(DEINSTALL_EXTRA_TMPL) && exists(${.CURDIR}/DEINSTALL)
 DEINSTALL_EXTRA_TMPL?=	${.CURDIR}/DEINSTALL
 .else
@@ -43,10 +48,12 @@ _FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
 #	files that are concatenated to form the DEINSTALL/INSTALL scripts.
 #
 DEINSTALL_TEMPLATES=	${_HEADER_TMPL}
+DEINSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
 DEINSTALL_TEMPLATES+=	${DEINSTALL_EXTRA_TMPL}
 DEINSTALL_TEMPLATES+=	${DEINSTALL_TMPL}
 DEINSTALL_TEMPLATES+=	${_FOOTER_TMPL}
 INSTALL_TEMPLATES=	${_HEADER_TMPL}
+INSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_EXTRA_TMPL}
 INSTALL_TEMPLATES+=	${_FOOTER_TMPL}
@@ -321,26 +328,27 @@ install-rcd-scripts:	# do nothing
 
 .for _script_ in ${RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${_script_}?=	${FILESDIR}/${_script_}.sh
+RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/${_script_}
 
 .  if !empty(RCD_SCRIPT_SRC.${_script_})
 .    if exists(${RCD_SCRIPT_SRC.${_script_}})
-generate-rcd-scripts: ${WRKDIR}/${_script_}
-${WRKDIR}/${_script_}: ${RCD_SCRIPT_SRC.${_script_}}
+generate-rcd-scripts: ${RCD_SCRIPT_WRK.${_script_}}
+${RCD_SCRIPT_WRK.${_script_}}: ${RCD_SCRIPT_SRC.${_script_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
 		${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 
 install-rcd-scripts: install-rcd-${_script_}
-install-rcd-${_script_}: ${WRKDIR}/${_script_}
+install-rcd-${_script_}: ${RCD_SCRIPT_WRK.${_script_}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -d ${RCD_SCRIPTS_EXAMPLEDIR} ]; then			\
 		${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} \
 			-m 0755	${RCD_SCRIPTS_EXAMPLEDIR};		\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${WRKDIR}/${_script_} ]; then				\
-		${INSTALL_SCRIPT} ${WRKDIR}/${_script_}			\
-			${RCD_SCRIPTS_EXAMPLEDIR};			\
+	if [ -f ${RCD_SCRIPT_WRK.${_script_}} ]; then			\
+		${INSTALL_SCRIPT} ${RCD_SCRIPT_WRK.${_script_}}		\
+			${RCD_SCRIPTS_EXAMPLEDIR}/${_script_};		\
 	fi
 .    endif
 .  endif

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.45 2003/07/11 23:54:32 grant Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.1 2003/08/01 19:00:36 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -126,8 +126,8 @@ bulk-cache:
 	@${ECHO_MSG} "BULK> Sorting build order."
 	tsort ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
-	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat -u ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
-	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat -d ${DEPENDSTREEFILE} > ${DEPENDSFILE}
+	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
+	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
 	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
 	@${ECHO_MSG} "      (this may take a while)."
 	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
