@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/05/07 21:41:43 reed Exp $
+$NetBSD: distinfo,v 1.4 2004/10/12 18:28:28 tv Exp $
 
 SHA1 (gzip-1.2.4a.shar) = 1e1e513f48be32ecfe24c06b609329963d5a5288
 Size (gzip-1.2.4a.shar) = 832431 bytes
 SHA1 (patch-aa) = 449d3eb975b9ddc634ba0b3a245381f3f3e1f5e1
+SHA1 (patch-ab) = e198a1d9a90a8b626b178ef7b5beabc729c6367d
