@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8585 2005/01/04 00:14:54 simonb Exp $
+$NetBSD: CHANGES,v 1.8586 2005/01/04 00:39:32 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated epiphany to 1.4.7 [jmmv 2005-01-03]
 	Updated epiphany-extension to 1.4.4 [jmmv 2005-01-03]
 	Updated adzap to 20041124 [simonb 2005-01-03]
+	Updated nicotine to 1.0.8 [hubertf 2005-01-04]

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/02/16 19:40:39 hubertf Exp $
+$NetBSD: distinfo,v 1.4 2005/01/04 00:39:43 hubertf Exp $
 
-SHA1 (nicotine-1.0.7.tar.bz2) = 414c4130630e1538eca9051b92e46ba74e237dde
-Size (nicotine-1.0.7.tar.bz2) = 305268 bytes
+SHA1 (nicotine-1.0.8.tar.bz2) = 8549172106c8f59da5a244382cbc5951dfbbc3fa
+Size (nicotine-1.0.8.tar.bz2) = 305645 bytes
