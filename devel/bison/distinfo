@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2001/07/15 16:34:57 jlam Exp $
+$NetBSD: distinfo,v 1.5 2002/01/31 13:43:57 mjl Exp $
 
-SHA1 (bison-1.28.tar.gz) = d11dc896f4642ff432345a5b037505ab0b8791e8
-Size (bison-1.28.tar.gz) = 420341 bytes
-SHA1 (patch-aa) = aecc589ead50fef86dab2d16bae7fd3cf91b21c5
-SHA1 (patch-ab) = 069b0d0db61255b53cac1cdb8ca6dee7d883231c
-SHA1 (patch-ae) = 3df6fff1b06e813d1b5e39152e301d253c837484
-SHA1 (patch-af) = 874d359014fe72aa922e840b20db6736a09fbe0e
-SHA1 (patch-ag) = 558dcc5e5b63a80b497a799f881003118c3691b1
+SHA1 (bison-1.32.tar.gz) = 381cac43289aabefedc3dd04f724431b5485bdc9
+Size (bison-1.32.tar.gz) = 721047 bytes
+SHA1 (patch-ae) = 38fec3b66833750f58633a5ea1aa9a62d7d4a3b1
