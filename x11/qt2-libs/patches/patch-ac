@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/10/19 07:41:15 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2000/12/05 18:32:05 drochner Exp $
 
---- configs/solaris-g++-static.orig	Wed Oct  4 10:55:31 2000
-+++ configs/solaris-g++-static
+--- configs/solaris-g++-static.orig	Wed Nov  8 18:06:39 2000
++++ configs/solaris-g++-static	Thu Nov 30 13:09:00 2000
 @@ -2,6 +2,7 @@
  INTERFACE_DECL_PATH 	= .
  SYSCONF_CXX		= g++
  SYSCONF_CC		= gcc
 +SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile g++
+ DASHCROSS		= 
  
  # Compiling with support libraries
- SYSCONF_CXXFLAGS_X11	= -I/usr/openwin/include
