@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/02/20 14:33:40 tron Exp $
+# $NetBSD: Makefile,v 1.16 1998/03/05 09:11:23 mellon Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -82,6 +82,6 @@
 #    SUBDIR += yale-tftpd
 #    SUBDIR += ytalk
 #    SUBDIR += zircon
-#    SUBDIR += zephyr
+    SUBDIR += zephyr
 
 .include <bsd.port.subdir.mk>
