@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Player/main.c.orig	Thu Jun  8 08:56:11 2000
++++ Player/main.c
+@@ -559,7 +559,11 @@
+ 
+         FlashGraphicInitX11(flashHandle, dpy, movie, onRoot);
+ 
++#ifdef __NetBSD__
++	FlashSoundInit(flashHandle, "/dev/sound");
++#else
+ 	FlashSoundInit(flashHandle, "/dev/dsp");
++#endif
+ 
+ 	FlashSetGetUrlMethod(flashHandle, showUrl, 0);
+ 

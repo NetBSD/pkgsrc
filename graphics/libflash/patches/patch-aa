@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Makefile.orig	Fri Aug 25 16:58:32 2000
++++ Makefile
+@@ -1,4 +1,4 @@
+-SUBDIRS= Jpeg Zlib Lib Player Plugin Kflash
++SUBDIRS?= Lib Player Plugin # Kflash
+ 
+ all:
+ 	for subdir in $(SUBDIRS); do (cd $$subdir; $(MAKE)); done

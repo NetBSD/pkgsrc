@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Player/Makefile.orig	Wed Jun  7 20:19:50 2000
++++ Player/Makefile
+@@ -1,7 +1,9 @@
+-FLASH=../Lib
+-CPPFLAGS=-I$(FLASH)
++FLASH=${LOCALBASE}/lib
++CPPFLAGS=-I${LOCALBASE}/include/flash -I${LOCALBASE}include -I${X11BASE}/include
+ CFLAGS=-O3
+-LIBS = $(FLASH)/libflash.a ../Zlib/libz.a ../Jpeg/libjpeg.a -L/usr/X11R6/lib -lX11 -lXext -lm
++LIBS = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lflash\
++	-ljpeg -lz -lossaudio -Wl,-R${X11BASE}/lib -L${X11BASE}/lib \
++	-lX11 -lXext -lm
+ CC=gcc
+ LDFLAGS=
+ 

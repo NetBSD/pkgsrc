@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Plugin/Makefile.orig	Fri Aug 25 17:12:47 2000
++++ Plugin/Makefile	Fri Aug 25 17:15:15 2000
+@@ -31,12 +31,12 @@
+ # Solaris (Sun compiler/linker)
+ #SHARED=-G
+ # FreeBSD
+-#SHARED=-Bshareable
++SHARED=-Bshareable
+ # Linux
+-SHARED=-shared
++#SHARED=-shared
+ 
+-CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include
+-LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) ../Jpeg/libjpeg.a ../Zlib/libz.a
++CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I${X11BASE}/include
++LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) -L${LOCALBASE}/lib -R${LOCALBASE}/lib  -ljpeg -lz
+ 
+ SRC= plugin.c npunix.c
+ OBJ= plugin.o npunix.o
