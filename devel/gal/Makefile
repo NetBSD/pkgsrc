@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/12/17 08:54:00 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/31 09:35:24 rh Exp $
 #
 
-DISTNAME=	gal-0.2.2
+DISTNAME=	gal-0.4.1
 CATEGORIES=	gnome devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/gal/}
 
@@ -13,6 +13,7 @@ DEPENDS+=	gnome-print>=0.25:../../print/gnome-print
 DEPENDS+=	gnome-vfs-*:../../sysutils/gnome-vfs
 DEPENDS+=	libglade>=0.14:../../devel/libglade
 DEPENDS+=	libunicode>=0.4:../../textproc/libunicode
+DEPENDS+=	bonobo>=0.26:../../devel/bonobo
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
