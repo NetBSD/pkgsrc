@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/04/08 08:41:26 rh Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/26 17:15:06 veego Exp $
 #
 
 DISTNAME=	wmakerconf-2.6.1
@@ -14,7 +14,7 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	windowmaker-*:../../x11/windowmaker
 
 USE_X11BASE=	yes
-USE_PERL=	yes
+USE_PERL5=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
