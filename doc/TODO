@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.70 2002/12/16 14:27:18 wiz Exp $
+$NetBSD: TODO,v 1.71 2002/12/16 18:08:00 tron Exp $
 
 Suggested new packages
 ======================
@@ -213,8 +213,6 @@ Suggested package updates
 	o rrdtool-1.0.39
 	o rt-2.1.15
 	o rxvt-2.7.9
-	o sane-1.0.9
-	o sane-frontends-1.0.9
 	o sawfish-1.2
 	o scmxx-0.6.3.1
 	o scribus-0.8
