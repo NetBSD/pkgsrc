@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.52 2002/11/20 22:24:58 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.53 2002/11/20 22:34:35 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -852,6 +852,10 @@ buildlink-check:
 		${GREP} ${_BLNK_CHECK_PATTERNS} ${_BLNK_WRAP_LOG} || ${TRUE}; \
 	fi
 
+# Create shell scripts in ${BUILDLINK_DIR} that simply return an error
+# status for each of the GNU auto* tools, which should cause GNU configure
+# scripts to think that they can't be found.
+#
 AUTOMAKE_OVERRIDE?=	NO
 _HIDE_PROGS.autoconf=	bin/autoconf	bin/autoconf-2.13		\
 			bin/autoheader	bin/autoheader-2.13		\
@@ -872,16 +876,18 @@ _HIDE_PROGS.automake=	bin/aclocal	bin/aclocal-1.4			\
 do-buildlink: hide-autotools
 hide-autotools:	# empty
 
+${BUILDLINK_DIR}/bin/.gnu_missing:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "#!${SH}" > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "exit 1" >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+
 .for _autotool_ in autoconf automake
 hide-autotools: hide-${_autotool_}
-hide-${_autotool_}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
 .  for _prog_ in ${_HIDE_PROGS.${_autotool_}}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/${_prog_:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	( ${ECHO} "#!${SH}";						\
-	  ${ECHO} "exit 1";						\
-	) > ${BUILDLINK_DIR}/${_prog_}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${BUILDLINK_DIR}/${_prog_}
+hide-${_autotool_}: ${BUILDLINK_DIR}/${_prog_}
+${BUILDLINK_DIR}/${_prog_}: ${BUILDLINK_DIR}/bin/.gnu_missing
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${LN} ${.ALLSRC} ${.TARGET}
 .  endfor
 .endfor
