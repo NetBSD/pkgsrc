@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/03 22:41:43 snj Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -11,7 +11,7 @@ HOMEPAGE=		http://wwwhome.cs.utwente.nl/~tcm/index.html
 COMMENT=		TCM - Toolkit for Conceptual Modeling
 
 WRKSRC=			${WRKDIR}/tcm-2.01/src
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 
@@ -91,7 +91,7 @@ do-install:
 	${INSTALL_DATA} ${TCM_SRC}/doc/wishlist/* 			\
 		${PREFIX}/share/doc/html/tcm/wishlist/
 
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if defined(MOTIF_TYPE) && (${MOTIF_TYPE} == "lesstif")
