@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/10/08 09:09:12 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/04/10 13:13:28 grant Exp $
 
 .if !defined(GCC_BUILDLINK2_MK)
 GCC_BUILDLINK2_MK=	# defined
@@ -34,7 +34,7 @@ _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 
 BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,-R${_GCC_ARCHDIR}
 
-_GCC_VERSION!=		( gcc --version ) 2>/dev/null || ${ECHO} 0
+_GCC_VERSION!=		( gcc -dumpversion ) 2>/dev/null || ${ECHO} 0
 #
 # GCC_VERSION is the version number of the gcc detected above.  EGCS gcc is
 # considered to be "gcc-2.8.1" so that it will match "gcc>=2.8.0".
