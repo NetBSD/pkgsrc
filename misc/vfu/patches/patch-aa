@@ -1,24 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2000/05/22 00:49:53 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 2000/06/15 20:56:03 hubertf Exp $
 
---- build.netbsd.orig	Mon May 22 01:48:50 2000
-+++ build.netbsd	Mon May 22 01:58:16 2000
-@@ -4,7 +4,7 @@
+--- build.netbsd.orig	Thu Jun 15 22:36:43 2000
++++ build.netbsd	Thu Jun 15 22:37:03 2000
+@@ -15,7 +15,7 @@
  
- echo Compiling VSLIB...
- cd vslib
--make CCDEF="-I${LOCALBASE}/include"
-+make CCDEF="-I${LOCALBASE}/include" LDDEF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib"
- if [ -e libvslib.a ]; then
-   echo VSLIB compiled ok.
+ echo Compiling VFU...
+ cd vfu
+-make CCDEF="-I${LOCALBASE}/include -DFILENAME_CONF_GLOBAL0=\"${PREFIX}/etc/\" -DFILENAME_CONF_GLOBAL1=\"${PREFIX}/\" " LDDEF="-L${LOCALBASE}/lib"
++make CCDEF="-I${LOCALBASE}/include -DFILENAME_CONF_GLOBAL0=\\\"${PREFIX}/etc/\\\" -DFILENAME_CONF_GLOBAL1=\\\"${PREFIX}/\\\" " LDDEF="-L${LOCALBASE}/lib"
+ if [ -e vfu ]; then
+   echo VFU compiled ok.
  else
-@@ -26,10 +26,10 @@
- 
- echo Compiling ftparc...
- cd ftparc
--make
-+make CCDEF="-I${LOCALBASE}/include -D__unix__" LDDEF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib"
- if [ -e ftparc ]; then
-   echo ftparc compiled ok.
- else
-   echo ftparc compilation failed...
- fi
