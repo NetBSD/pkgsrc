@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/31 21:19:50 agc Exp $
+$NetBSD: patch-aa,v 1.2 2000/01/11 11:31:19 agc Exp $
 
 Add support for NetBSD and Solaris
+Make sure the program is being run by effective uid 0
 
 --- app.cpp	1999/12/17 17:39:52	1.1
 +++ app.cpp	1999/12/17 17:41:47
@@ -25,3 +26,17 @@ Add support for NetBSD and Solaris
  #else
  	// not supported
  	#error ! ! compiler/platform not supported ! !
+@@ -519,6 +533,13 @@
+ 		Help();
+ 		CLEANUP_RETURN( FALSE );
+ 	}
++#if defined(__NetBSD__)
++	if (geteuid() != 0) {
++		ERRORSTR("You need to be root to run this program,\n");
++		ERRORSTR("because access is made to the parallel port directly.\n");
++		CLEANUP_RETURN(FALSE);
++	}
++#endif
+ 	for( int iA=1; iA<iCountArg; ++iA )
+ 	{
+ 		// check for display directory request
