@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.40 2003/06/08 12:44:10 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.41 2003/07/10 11:52:03 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -74,10 +74,10 @@ case $hw_machine_arch in
     esac ;;
 
     m68k) case $hw_model in				   # Examples
-	*\(68020*)		FLAGS='-m68020'		;; # Untested
-	*\(68030*)		FLAGS='-m68030'		;; # Mac LC III
-	*\(68040*)		FLAGS='-m68040'		;; # Untested
-	*\(68060*)		FLAGS='-m68060'		;; # Upgr amiga 3000
+	*\(68020*|*\ MC68020\ *) FLAGS='-m68020'	;; # Untested
+	*\(68030*|*\ MC68030\ *) FLAGS='-m68030'	;; # Mac LC III
+	*\(68040*|*\ MC68040\ *) FLAGS='-m68040'	;; # Untested
+	*\(68060*|*\ MC68060\ *) FLAGS='-m68060'	;; # Upgr amiga 3000
     esac
     case "`egrep '^fpu0 ' /var/run/dmesg.boot`" in
 	*\(emulator\)*)		FLAGS="$FLAGS -msoft-float" ;; 
