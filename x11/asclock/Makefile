@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 1997/11/09 23:43:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/11 13:49:23 hubertf Exp $
 
-DISTNAME=	asclock7
-PKGNAME=	asclock-7
-WRKSRC=		${WRKDIR}/asclock
+DISTNAME=	asclock
+PKGNAME=	asclock-10
 CATEGORIES=	x11
 
-MASTER_SITES=	http://apollo.gmi.edu/~kram1968/afterstep/
-# asclock7.tgz
+MASTER_SITES=	ftp://sunsite.unc.edu/pub/Linux/X11/clocks/
 EXTRACT_SUFX=	.tgz
 
 LIB_DEPENDS=	Xpm\\.4:${PORTSDIR}/graphics/xpm
@@ -19,6 +17,13 @@ MAINTAINER=	hubertf@netbsd.org
 # 3) portuguese
 # 4) dutch
 # 5) norwegian
+# 6) italian
+# 7) swedish
+# 8) spanish
+# 9) hungarian
+# 0) breton
+# a) french
+# b) czech
 LANG=1
 
 # Choose paneltype from:
