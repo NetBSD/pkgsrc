@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1 1999/06/29 23:13:39 tron Exp $
+
+--- configure.orig	Wed May 12 16:29:01 1999
++++ configure	Tue Jun 29 21:44:35 1999
+@@ -1007,6 +1007,7 @@
+ machine='' opsys=''
+ 
+ case "$canonical" in
++  arm*-*-*	   ) machine=arm ;;
+   sparc-*-*        ) machine=sparc ;;
+   alpha*-*-*       ) machine=alpha ;;
+   vax-*-*          ) machine=vax ;;
+@@ -1075,9 +1076,10 @@
+     case "$canonical" in
+       i[3-9]86-*-netbsd*) machine=intel386 ;;
+       hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
+-                                            machine=hp9000s300 ;;
++                                            machine=m68k ;;
+       pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
+       pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
++      alpha-*-netbsd* ) machine=alpha ;;
+     esac
+   ;;
+ 
+@@ -2527,7 +2529,7 @@
+     decosf* | linux* | irix*) dash_r="-rpath " ;;
+     *)
+       dash_r=""
+-      for try_dash_r in "-R" "-R " "-rpath "; do
++      for try_dash_r in "-Wl,-R" "-R" "-R " "-rpath "; do
+         xe_check_libs="${try_dash_r}/no/such/file-or-directory"
+         
+ if test "$GCC" = "yes"; then
