@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2004/04/27 19:08:36 jlam Exp $
+# $NetBSD: Makefile,v 1.131 2004/04/27 21:39:39 markd Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
@@ -97,6 +97,7 @@ CONFIGURE_ARGS+=	--with-kerberos4=/usr
 CPPFLAGS+=		-I/usr/include/kerberosIV
 # kerberos 5 dependencies are detected correctly.
 LDFLAGS+=		-lkrb -lcom_err -lroken -ldes -lcrypto
+.endif
 .endif
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/utmpx.h)
