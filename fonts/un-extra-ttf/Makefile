@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/16 06:19:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/28 14:38:03 wiz Exp $
 
 DISTNAME=	un-fonts-extra-${UN_EXTRA_VER}
 PKGNAME=	un-extra-ttf-${UN_EXTRA_VER}
+PKGREVISION=	1
 CATEGORIES=	fonts korean
 MASTER_SITES=	http://kldp.net/download.php/1435/
 
