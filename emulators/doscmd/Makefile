@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/16 15:54:56 agc Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/16 16:05:29 agc Exp $
 #
 
 DISTNAME=		doscmd-19960502-2
@@ -9,9 +9,8 @@ MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/arch/i386/doscmd/
 MAINTAINER=		packages@netbsd.org
 COMMENT=		MS-DOS emulator (NetBSD/i386 only)
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
-
-BROKEN=			mmap() portability (No MAP_FIXED), and objcopy problems
+# mmap() portability (no MAP_FIXED), and objcopy problems on NetBSD-1.6-i386 and later
+ONLY_FOR_PLATFORM=	NetBSD-1.[345]*-i386
 
 WRKSRC=			${WRKDIR}/doscmd
 
