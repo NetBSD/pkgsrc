@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/02/28 15:17:54 hwr Exp $
+$NetBSD: patch-ab,v 1.2 1999/03/01 20:33:01 hwr Exp $
 
 --- pdf.h.orig	Wed Jul  8 15:32:59 1998
 +++ pdf.h	Sun Feb 28 15:29:53 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/02/28 15:17:54 hwr Exp $
  /* default path to font and AFM directory */
  #ifndef PDF_DEFAULT_FONT_PATH
 -#define PDF_DEFAULT_FONT_PATH	"./fonts"
-+#define PDF_DEFAULT_FONT_PATH	"/usr/pkg/pdf-afm"
++#define PDF_DEFAULT_FONT_PATH	"@PREFIX@/share/afm"
  #endif
  
  /* Data types and defines */
