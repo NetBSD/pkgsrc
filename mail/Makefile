@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/04/30 16:55:39 tv Exp $
+ $NetBSD: Makefile,v 1.25 1999/05/25 15:32:52 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
@@ -42,6 +42,7 @@
 #    SUBDIR += xfaces
     SUBDIR += xfmail
 #    SUBDIR += xlbiff
+    SUBDIR += xmailbox
 #    SUBDIR += youbin
 
 .include "../mk/bsd.pkg.subdir.mk"
