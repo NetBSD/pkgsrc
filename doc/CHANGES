@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8796 2005/01/18 00:07:35 hubertf Exp $
+$NetBSD: CHANGES,v 1.8797 2005/01/18 00:31:43 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -398,3 +398,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sun-jre15 to 5.0.1nb1 [jmmv 2005-01-17]
 	Updated bugzilla to 2.18 [adrianp 2005-01-17]
 	Updated tex-musixtex to 112 [hubertf 2005-01-18]
+	Updates tex-bagpipetex to 3.01nb2 [hubertf 2005-01-18]
