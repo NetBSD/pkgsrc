@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/08/20 10:36:12 tron Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/08/20 11:48:46 tron Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -30,7 +30,20 @@ BUILD_DEFS+=	ZSH_STATIC
 .if defined(ZSH_STATIC) && !empty(ZSH_STATIC:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=--disable-dynamic
 
-.  if !(${OPSYS} == "NetBSD" && exists(/libexec/ld.elf_so))
+NETBSD_SHLINKER=	/libexec/ld.elf_so
+
+.  if ${OPSYS} == "NetBSD" && \
+      defined(MKDYNAMICROOT) && !empty(MKDYNAMICROOT:M[Yy][Ee][Ss]) && \
+      ${OBJECT_FMT} == "ELF" && exists(${NETBSD_SHLINKER})
+#
+# Built a dynamically linked "zsh" binary on NetBSD systems which use
+# dynamically linked binaries on the root filesystem. The binary will
+# only depend on the run-time link-editor and shared libraries on the
+# root filesystem. We use "-rpath" below by purpose because the
+# buildlink 3 framework won't filter it out.
+#
+LDFLAGS+=	-Wl,-dynamic-linker=${NETBSD_SHLINKER} -rpath=/lib
+.  else
 LDFLAGS+=	-static
 .  endif
 .else
