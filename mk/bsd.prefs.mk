@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.142 2004/01/23 17:55:17 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.143 2004/01/25 18:42:53 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -400,12 +400,6 @@ PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} ${_NULL_SUFFIX} lsbest
 .ifndef PKGTOOLS_VERSION
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
-.endif
-
-.if ${PKGTOOLS_VERSION} >= 20030918
-_NULL_SUFFIX=		-S
-.else
-_NULL_SUFFIX=		-s ""
 .endif
 
 USE_BUILDLINK2?=	no	# default to not using buildlink2
