@@ -1,4 +1,6 @@
+#	$NetBSD: cross.mk,v 1.5 2001/03/02 09:38:06 minoura Exp $
 #	$PEACE: cross.mk,v 1.1 2001/01/16 15:20:26 kent Exp $
+#	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
 # Shared definitions for building a cross-compile environment.
