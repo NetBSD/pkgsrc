@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 07:42:32 garbled Exp $
---- clanbomber/Resources.cpp.orig	Fri Dec 15 00:10:49 2000
-+++ clanbomber/Resources.cpp	Fri Dec 15 00:13:12 2000
+$NetBSD: patch-aa,v 1.2 2001/01/04 01:08:58 wiz Exp $
+
+--- clanbomber/Resources.cpp.orig	Tue Mar 28 17:04:30 2000
++++ clanbomber/Resources.cpp
 @@ -24,6 +24,7 @@
  #include <ClanLib/Core/Sound/soundbuffer.h>
  
@@ -19,3 +20,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/15 07:42:32 garbled Exp $
  		}
  		catch (CL_Error err)
  		{
+@@ -149,7 +149,7 @@
+ {
+ 	if (!sur_titlescreen)
+ 	{
+-		if (rand()%2)
++		if (random()%2)
+ 		{
+ 			sur_titlescreen = CL_Surface::load("Titlescreen/andi", res);
+ 		}
