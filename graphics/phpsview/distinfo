@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/11 14:01:53 hamajima Exp $
+$NetBSD: distinfo,v 1.2 2003/12/31 14:29:18 hamajima Exp $
 
-SHA1 (pwc-8.11.tar.gz) = 980faec796d67e63ed1ccbcdc14c8dfa63053764
-Size (pwc-8.11.tar.gz) = 80280 bytes
-SHA1 (pwc-8.11-bsd-1.patch.gz) = fac8a09298168e4b29ab088e686bb408d63597ab
-Size (pwc-8.11-bsd-1.patch.gz) = 18108 bytes
+SHA1 (pwc-8.12.tar.gz) = ca245b8b0ad5e2cba9599770f0eee1ae517c16e5
+Size (pwc-8.12.tar.gz) = 84359 bytes
+SHA1 (pwc-8.12-bsd-0.02.patch.gz) = 610264be9640e3f40e5807d68950f067008478da
+Size (pwc-8.12-bsd-0.02.patch.gz) = 18309 bytes

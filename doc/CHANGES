@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4303 2003/12/31 13:31:00 cube Exp $
+$NetBSD: CHANGES,v 1.4304 2003/12/31 14:29:18 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5496,3 +5496,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bitlbee to 0.83 [xtraeme 2003-12-31]
 	Added ap2-auth-mysql [cube 2003-12-31]
 	Added newsx [cube 2003-12-31]
+	Updated phpsview to 1.02 [hamajima 2003-12-31]
