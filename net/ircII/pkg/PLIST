@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 1999/08/24 01:19:24 mrg Exp $
+@comment $NetBSD: PLIST,v 1.18 1999/08/24 07:27:21 tron Exp $
 bin/irc-4.4L
 bin/ircbug
 bin/irc
@@ -599,4 +599,4 @@ share/irc/help/icb@.GZ@
 @dirrm share/irc/help
 @dirrm share/irc/script
 @dirrm share/irc/translation
-@dirrm share/irc
+@unexec rmdir %D/share/irc 2>/dev/null || true
