@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/13 16:17:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/12/01 02:00:13 salo Exp $
 #
 
 DISTNAME=	gnome-breakout-0.5.2
@@ -10,9 +10,10 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.senet.com.au/~alcaron/software.html
 COMMENT=	Gnome version of the classic breakout game
 
-GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
-USE_X11BASE=	YES
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11BASE=		YES
 
 post-install:
 	${TOUCH} /var/games/gnome-breakout.scores
