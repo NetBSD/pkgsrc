@@ -1,14 +1,26 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/11 08:51:09 uebayasi Exp $
 ${LISPDIR}/dframe.el
 ${LISPDIR}/dframe.elc
+${LISPDIR}/sb-box-minus.xpm
+${LISPDIR}/sb-box-plus.xpm
+${LISPDIR}/sb-box.xpm
+${LISPDIR}/sb-chk.xpm
 ${LISPDIR}/sb-dir-minus.xpm
 ${LISPDIR}/sb-dir-plus.xpm
 ${LISPDIR}/sb-dir.xpm
+${LISPDIR}/sb-doc-minus.xpm
+${LISPDIR}/sb-doc-plus.xpm
+${LISPDIR}/sb-doc.xpm
 ${LISPDIR}/sb-image.el
+${LISPDIR}/sb-info.xpm
+${LISPDIR}/sb-label.xpm
 ${LISPDIR}/sb-mail.xpm
+${LISPDIR}/sb-obj.xpm
+${LISPDIR}/sb-objod.xpm
 ${LISPDIR}/sb-pg-minus.xpm
 ${LISPDIR}/sb-pg-plus.xpm
 ${LISPDIR}/sb-pg.xpm
+${LISPDIR}/sb-ro.xpm
 ${LISPDIR}/sb-tag-gt.xpm
 ${LISPDIR}/sb-tag-minus.xpm
 ${LISPDIR}/sb-tag-plus.xpm
