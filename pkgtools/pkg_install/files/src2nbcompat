@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.3 2003/09/02 08:07:16 jlam Exp $
+#	$NetBSD: src2nbcompat,v 1.4 2003/09/02 08:26:35 jlam Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -108,17 +108,36 @@ for f in $files; do
 				next;					\
 			}						\
 			{ print }					\
-		' $newf > $dest/$newf
+		' $newf > $dest/$newf.tmp
+		if [ -f $dest/$newf ] &&				\
+		   diff -q -I "\$NetBSD.*\$" $dest/$newf $dest/$newf.tmp >/dev/null; then
+			rm -f $dest/$newf.tmp
+		else
+			rm -f $dest/$newf
+			mv $dest/$newf.tmp $dest/$newf
+		fi
 		;;
 	*.[1-9])
 		# Copy the manpage over, and generate the catpage.
-		cp $newf $dest/$newf
-		catf=`echo $newf | sed 's,\.\([1-9]\),.cat\1,'`
-		nroff -mandoc $newf > $dest/$catf
+		cp $newf $dest/$newf.tmp
+		if [ -f $dest/$newf ] &&				\
+		   diff -q -I "\$NetBSD.*\$" $dest/$newf $dest/$newf.tmp >/dev/null; then
+			rm -f $dest/$newf.tmp
+		else
+			mv -f $dest/$newf.tmp $dest/$newf
+			catf=`echo $newf | sed 's,\.\([1-9]\),.cat\1,'`
+			nroff -mandoc $newf > $dest/$catf
+		fi
 		;;
 	*)
 		# Everything else just gets copied verbatim.
-		cp $newf $dest/$newf
+		cp $newf $dest/$newf.tmp
+		if [ -f $dest/$newf ] &&				\
+		   diff -q -I "\$NetBSD.*\$" $dest/$newf $dest/$newf.tmp >/dev/null; then
+			rm -f $dest/$newf.tmp
+		else
+			mv -f $dest/$newf.tmp $dest/$newf
+		fi
 		;;
 	esac
 done
