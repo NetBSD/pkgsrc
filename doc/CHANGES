@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3464 2003/09/20 12:54:44 itojun Exp $
+$NetBSD: CHANGES,v 1.3465 2003/09/20 14:17:34 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3856,3 +3856,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmess to 0.74.1 [kristerw 2003-09-20]
 	Updated clamav to 0.60 [chris 2003-09-20]
 	Updated bind9 to 9.2.2p2 [itojun 2003-09-20]
+	Updated nmap to 3.45 [salo 2003-09-20]
+	Updated nmapfe to 0.9.5nb9 [salo 2003-09-20]
