@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.5 2003/12/19 13:46:00 adam Exp $
+$NetBSD: patch-ab,v 1.6 2004/04/27 14:59:50 adam Exp $
 
---- builds/unix/configure.orig	2003-07-26 08:08:14.000000000 +0200
+--- builds/unix/configure.orig	2004-04-14 08:49:09.000000000 +0000
 +++ builds/unix/configure
-@@ -9388,6 +9388,7 @@ s,@ac_ct_STRIP@,$ac_ct_STRIP,;t t
- s,@LIBTOOL@,$LIBTOOL,;t t
+@@ -21749,6 +21749,7 @@ s,@hardcode_libdir_flag_spec@,$hardcode_
+ s,@wl@,$wl,;t t
  s,@LIBOBJS@,$LIBOBJS,;t t
  s,@LTLIBOBJS@,$LTLIBOBJS,;t t
 +s,@RPATH_FLAG@,$RPATH_FLAG,;t t

@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.30 2004/03/29 10:17:49 recht Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/27 14:59:49 adam Exp $
 #
 
-DISTNAME=	freetype-2.1.5
-PKGNAME=	freetype2-2.1.5
+DISTNAME=	freetype-2.1.8
+PKGNAME=	freetype2-2.1.8
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.freetype.org/freetype/freetype2/		\
-		ftp://ftp.ntua.gr/mirror/freetype/freetype2/		\
-		ftp://ring.aist.go.jp/pub/graphics/freetype/freetype2/	\
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/} \
+		ftp://ftp.freetype.org/freetype/freetype2/ \
+		ftp://ftp.ntua.gr/mirror/freetype/freetype2/ \
+		ftp://ring.aist.go.jp/pub/graphics/freetype/freetype2/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/freetype/freetype2/ \
 		http://gd.tuwien.ac.at/publishing/freetype/freetype2/
-# comment out sf: contains different 2.1.4 tarball with same contents
-# ${MASTER_SITE_SOURCEFORGE:=freetype/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@NetBSD.org
