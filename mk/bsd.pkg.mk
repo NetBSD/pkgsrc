@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.966 2002/04/18 20:54:51 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.967 2002/04/19 17:14:44 jwise Exp $
 #
 # This file is in the public domain.
 #
@@ -89,15 +89,15 @@ JAVA_HOME?=		${LOCALBASE}/kaffe
 .  endif
 .  if exists(${JAVA_HOME}/lib/classes.zip)
 CLASSPATH?=		${JAVA_HOME}/lib/classes.zip:.
-
-MAKE_ENV+=		CLASSPATH=${CLASSPATH}
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
 .  endif
 PATH:=			${PATH}:${JAVA_HOME}/bin
 MAKE_ENV+=		JAVA_HOME=${JAVA_HOME}
 CONFIGURE_ENV+=		JAVA_HOME=${JAVA_HOME}
 SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
+
+MAKE_ENV+=		CLASSPATH=${CLASSPATH}
+CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
+SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
 .endif
 
 # Set X11PREFIX to reflect the install directory of X11 packages.
