@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2004/05/09 02:26:14 snj Exp $
 
 DISTNAME=		smalltalk-2.1.4
 CATEGORIES=		lang
@@ -10,7 +10,7 @@ COMMENT=		GNU Smalltalk: A smalltalk-80 implementation
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
@@ -29,12 +29,12 @@ CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 
 TEST_TARGET=		check
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/libtool/buildlink2.mk"
-.include "../../devel/gmp/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
-.include "../../databases/gdbm/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
+.include "../../x11/tk83/buildlink3.mk"
+.include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
