@@ -1,0 +1,14 @@
+$NetBSD: patch-ax,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+
+LIB_crypt needs to be defined.
+
+--- tools/release-tools/Makefile.in.orig	2005-03-11 13:28:25.000000000 +0100
++++ tools/release-tools/Makefile.in	2005-03-11 13:31:26.000000000 +0100
+@@ -46,6 +46,7 @@
+ KAFS_LIBS	= @AIX_EXTRA_KAFS@ @KAFS_LIBS@
+ LIB_tgetent     = @LIB_tgetent@
+ LIB_readline	= @LIB_readline@
++LIB_crypt	= @LIB_crypt@
+ LIBS		= @LIB_roken@  @LIBS@
+ 
+ LIBDEPENDS	= 

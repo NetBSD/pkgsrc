@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.1 2000/10/13 17:31:12 wennmach Exp $
+$NetBSD: patch-as,v 1.2 2005/03/15 15:58:52 wennmach Exp $
 
 Make arla compile on pmax. 
 
---- configure.orig	Sat Aug 19 22:54:10 2000
-+++ configure	Fri Oct 13 15:49:09 2000
-@@ -2998,9 +2998,18 @@
+--- configure.orig	2004-11-15 11:13:02.000000000 -0500
++++ configure	2004-12-22 20:35:37.000000000 -0500
+@@ -6558,10 +6558,19 @@
    then
  	flags="$flags${flags:+ }-mno-fp-regs"
    fi
@@ -13,6 +13,7 @@ Make arla compile on pmax.
 +	KERNEL_CFLAGS="${KERNEL_CFLAGS} -G 0 -mno-abicalls -mno-half-pic"
 +	KERNEL_LDFLAGS="${KERNEL_LDFLAGS} -G 0 -Ttext 0x80030000 -T ${SYS}/arch/mips/conf/kern.ldscript"
 +  fi
+   KERNEL_CPPFLAGS="${KERNEL_CPPFLAGS} -D_LKM"
    KERNEL_CPPFLAGS="${KERNEL_CPPFLAGS} $defs${defs:+ }$flags${flags:+ }$incl"
 -  test_KERNEL_CFLAGS="${KERNEL_CFLAGS}"
    KERNEL_LD='ld'
@@ -21,6 +22,6 @@ Make arla compile on pmax.
 +  then
 +      ac_kernel_ld='${KERNEL_LD} ${KERNEL_LDFLAGS} -o conftest $LDFLAGS -R $KERNEL conftest.o -e _foo 1>&5'
 +  fi
-   XFS_SRCS='xfs_wrap-bsd.c xfs_common-bsd.c xfs_dev-common.c xfs_dev-bsd.c xfs_syscalls-common.c xfs_syscalls-wrap-bsd.c xfs_node-bsd.c xfs_vfsops-common.c xfs_vfsops-bsd.c xfs_vfsops-netbsd.c xfs_vnodeops-common.c xfs_vnodeops-bsd.c'
-   XFS_SUBDIR=bsd
-   KERNEL=/netbsd
+   NNPFS_SRCS='nnpfs_wrap-bsd.c nnpfs_common-bsd.c nnpfs_dev-common.c nnpfs_dev-bsd.c nnpfs_syscalls-common.c nnpfs_syscalls-wrap-bsd.c nnpfs_node-bsd.c nnpfs_vfsops-common.c nnpfs_vfsops-bsd.c nnpfs_vfsops-openbsd.c nnpfs_vnodeops-common.c nnpfs_vnodeops-bsd.c'
+   NNPFS_SUBDIR=bsd
+   KERNEL=/bsd

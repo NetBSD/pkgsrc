@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+
+Define $(LIB_crypt)
+
+--- lwp/Makefile.in.orig	2005-03-09 16:18:26.000000000 +0100
++++ lwp/Makefile.in	2005-03-09 16:19:36.000000000 +0100
+@@ -50,6 +50,7 @@
+ REALCFLAGS	= $(INCLUDES) @DEFS@ @CFLAGS@ -DFD_SPEED_HACK -DDEBUG \
+ 		  $(CFLAGS) @PLWP_INC_FLAGS@
+ 
++LIB_crypt	= @LIB_crypt@
+ LIB		= liblwp.a
+ 
+ include_HEADERS = lock.h preempt.h timer.h

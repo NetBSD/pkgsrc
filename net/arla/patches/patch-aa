@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2005/03/15 15:58:52 wennmach Exp $
+
+from christos
+
+--- nnpfs/bsd/nnpfs_vfsops-common.c.orig	2004-07-22 10:02:16.000000000 -0400
++++ nnpfs/bsd/nnpfs_vfsops-common.c	2004-12-22 21:28:22.000000000 -0500
+@@ -260,7 +260,7 @@
+ 	msg.cred.pag = nnpfs_get_pag(cred);
+ 	error = nnpfs_message_rpc(nnpfsp->fd, &msg.header, sizeof(msg), proc);
+ 	if (error == 0)
+-	    error = ((struct nnpfs_message_wakeup *) & msg)->error;
++	    error = ((struct nnpfs_message_wakeup *)(void *)& msg)->error;
+     } while (error == 0);
+     /*
+      * Failed to get message through, need to pretend that all went well
