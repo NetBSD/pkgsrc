@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2004/12/26 18:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.236 2005/01/03 14:27:55 wiz Exp $
 #
 
 COMMENT=	Games
@@ -230,6 +230,7 @@ SUBDIR+=	xracer
 SUBDIR+=	xrick
 SUBDIR+=	xroach
 SUBDIR+=	xroads
+SUBDIR+=	xsc
 SUBDIR+=	xscavenger
 SUBDIR+=	xscorch
 SUBDIR+=	xscrabble
