@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $NetBSD: SERVERS,v 1.1.1.1 2003/06/19 16:07:12 grant Exp $
+#
+
+# PROVIDE: SERVERS
+# REQUIRE: mountcritremote
+
+#	This is a dummy dependency, for early-start servers relying on
+#	some basic configuration.
