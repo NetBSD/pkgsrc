@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/24 20:43:55 tv Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/19 04:48:36 jlam Exp $
 #
 
 DISTNAME=	ifcico-3.0.cm.alpha-4.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.cosy.sbg.ac.at/~cmeer/files/
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.cosy.sbg.ac.at/~cmeer/ifcico/
 COMMENT=	FidoNet transport program using FTS protocols via dial or TCP
+
+USE_BUILDLINK_ONLY=	# defined
 
 post-build:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' ${WRKSRC}/misc/config >${WRKDIR}/config.dist
