@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.142 2003/04/30 03:05:06 atatat Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.143 2003/05/05 06:06:56 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -522,6 +522,12 @@ ATERM_USE_GREEK?= NO
 #BATTLEBALL_USE_MESA=
 # Used in battleball to build in support for OpenGL/Mesa. Will use
 # Mesa-glx (rather than Mesa) if Mesa-glx is already installed.
+# Possible: not defined, YES
+# Default: not defined
+
+#BITCHX_WITH_GTK=
+# Used in bitchx to determine whether to include support for GTK,
+# for a GUI client.
 # Possible: not defined, YES
 # Default: not defined
 
