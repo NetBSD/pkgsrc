@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/03 22:14:46 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/26 04:24:43 snj Exp $
 #
 
 DISTNAME=       aide-0.6
@@ -14,6 +14,6 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 GNU_CONFIGURE=	yes
 #don't set YACC so configure can correctly find bison
 YACC=
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.pkg.mk"
