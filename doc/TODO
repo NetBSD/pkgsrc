@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.668 2003/06/30 10:10:14 wiz Exp $
+$NetBSD: TODO,v 1.669 2003/06/30 10:20:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -124,7 +124,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gimageview-0.2.22 [pkg/21851]
 	o gimageview-0.2.23
-	o gopher-3.0.5 [pkg/22013]
 	o gkrellm-2.1.12 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o gliblib-1.2.3 [pkg/21776]
