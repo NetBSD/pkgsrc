@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/01 10:24:42 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2003/12/28 12:31:42 jmmv Exp $
 
-SHA1 (GeoIP-1.1.9.tar.gz) = 0041455ba3a330d25e221973041636c3f302ceae
-Size (GeoIP-1.1.9.tar.gz) = 489713 bytes
+SHA1 (GeoIP-1.3.1.tar.gz) = 5c5d0ab6852a645703c05393ac6a9c32d4181921
+Size (GeoIP-1.3.1.tar.gz) = 526429 bytes
 SHA1 (patch-aa) = 5cf4eed4243162480e05bc472537150e783e15e4
