@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/06/06 08:02:49 agc Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/06/06 19:48:38 schmonz Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -22,7 +22,7 @@ BUILDLINK_PACKAGES+=	libopendaap
 
 .if !empty(LIBOPENDAAP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.2.1
-BUILDLINK_PKGSRCDIR.libopendaap?=	../../local/libopendaap
+BUILDLINK_PKGSRCDIR.libopendaap?=	../../audio/libopendaap
 .endif	# LIBOPENDAAP_BUILDLINK3_MK
 
 
