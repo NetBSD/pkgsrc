@@ -1,24 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2001/12/10 12:43:21 martti Exp $
+$NetBSD: patch-aa,v 1.5 2002/09/07 07:37:39 jlam Exp $
 
---- configure.in.orig	Fri Jul 21 04:35:01 2000
-+++ configure.in	Mon Dec 10 13:26:32 2001
-@@ -65,9 +65,12 @@
+--- configure.in.orig	Fri Mar 23 17:47:27 2001
++++ configure.in
+@@ -69,6 +69,12 @@ dnl let's just link against local.  othe
+ CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
+ CMU_ADD_LIBPATH("/usr/local/lib")
  
- dnl check for -R, etc. switch
- CMU_GUESS_RUNPATH_SWITCH
--dnl let's just link against local.  otherwise we never find anything useful.
--CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
--CMU_ADD_LIBPATH("/usr/local/lib")
-+
 +AC_PATH_PROG(SED, sed, no)
 +if test "$SED" = "no"; then
 +  AC_ERROR([sed is required to build sasl-config])
 +fi
 +AC_SUBST(SED)
- 
++
  AM_DISABLE_STATIC
  
-@@ -352,8 +355,11 @@
+ CMU_PROG_LIBTOOL
+@@ -364,8 +370,11 @@ if test "$with_des" != no; then
      CPPFLAGS="$CPPFLAGS -I${with_des}/include"
      LDFLAGS="$LDFLAGS -L${with_des}/lib"
    fi
@@ -32,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2001/12/10 12:43:21 martti Exp $
  
    if test "$with_des" = no; then
      dnl if openssl is around, we might be able to use that for des
-@@ -464,7 +470,7 @@
+@@ -476,7 +485,7 @@ AC_ARG_ENABLE(gssapi, [  --enable-gssapi
  
  if test "$gssapi" != no; then
    if test -d ${gssapi}; then
@@ -41,7 +38,7 @@ $NetBSD: patch-aa,v 1.4 2001/12/10 12:43:21 martti Exp $
       LDFLAGS="$LDFLAGS -L$gssapi/lib"
    fi
    AC_CHECK_HEADER(gssapi.h, AC_DEFINE(HAVE_GSSAPI_H),
-@@ -694,6 +700,9 @@
+@@ -661,6 +670,9 @@ AC_SUBST(SNPRINTFOBJS)
  
  LTLIBOBJS=`echo "$LIBOBJS" | sed 's/\.o/.lo/g'`
  AC_SUBST(LTLIBOBJS)
