@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 1998/08/15 10:58:41 frueauf Exp $
+
+--- audio_sun.c.orig	Mon Jan  5 12:41:31 1998
++++ audio_sun.c	Sat Aug 15 12:15:25 1998
+@@ -17,6 +17,8 @@
+ 
+ #include "mpg123.h"
+ 
++extern int outburst;
++
+ #include <sys/filio.h>
+ #ifdef SUNOS
+ #include <sun/audioio.h>
+@@ -74,6 +76,13 @@
+   }
+ 
+ #ifndef NETBSD
++  AUDIO_INITINFO(&ainfo);
++  if(ioctl(ai->fn, AUDIO_GETINFO, &ainfo) == -1)
++    return -1;
++  outburst = ainfo.blocksize;
++  if(outburst > MAXOUTBURST)
++    outburst = MAXOUTBURST;
++
+   AUDIO_INITINFO(&ainfo);
+ 
+   switch(ai->output) {
