@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.14 2004/12/03 15:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/22 16:10:03 adam Exp $
 
-DISTNAME=	dictd-1.8.0
-PKGNAME=	dict-server-1.8.0
-PKGREVISION=	3
+DISTNAME=	dictd-1.9.15
+PKGNAME=	dict-server-1.9.15
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.dict.org/pub/dict/
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=/dict}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
+		ftp://ftp.dict.org/pub/dict/
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol server
 
-USE_BUILDLINK3=	yes
-USE_GNU_TOOLS+=	make
-USE_PKGINSTALL=	yes
-GNU_CONFIGURE=	# defined
-CONFIGURE_ARGS+=--with-etcdir=${PKG_SYSCONFDIR}
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-cflags="${CFLAGS}"
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 
 BUILD_TARGET=	dictd dictzip
 INSTALL_TARGET=	install.dictd install.dictzip install.dictfmt
@@ -29,10 +29,8 @@ post-patch:
 	${GREP} -lr T_USER ${WRKSRC} | \
 	while read f; do \
 		${MV} $$f $${f}.orig; \
-		${SED} \
-		    -e 's/T_USER/T_XUSER/g' \
-		    -e 's/DICT_XUSER/DICT_USER/g' \
-		    $${f}.orig >$$f; \
+		${SED}	-e 's/T_USER/T_XUSER/g' \
+			-e 's/DICT_XUSER/DICT_USER/g' $${f}.orig >$$f; \
 	done
 
 post-install:
@@ -42,4 +40,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dictd
 
 .include "../../devel/libltdl/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

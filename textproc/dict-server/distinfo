@@ -1,15 +1,11 @@
-$NetBSD: distinfo,v 1.10 2004/06/01 08:55:34 shannonjr Exp $
+$NetBSD: distinfo,v 1.11 2005/02/22 16:10:03 adam Exp $
 
-SHA1 (dictd-1.8.0.tar.gz) = c8318ae83a540d336405db126ff04bfc60b60ffc
-Size (dictd-1.8.0.tar.gz) = 574796 bytes
-SHA1 (patch-ab) = ad9343e6fad32d9c8f6ccc221ff1fe035ace4551
-SHA1 (patch-ac) = 4239819d518ccbe4b279376f7a8b2f52028b18b9
+SHA1 (dictd-1.9.15.tar.gz) = 081ea97a4a6a936855af30d9c2a31f5733985822
+Size (dictd-1.9.15.tar.gz) = 741597 bytes
 SHA1 (patch-ad) = 75d08ce1778898edcd52b4b94c974aba54f769a7
 SHA1 (patch-ae) = 1b161f8c52a6029f0af2ddb824fc23ee5f867cff
 SHA1 (patch-ag) = 4473d472bddc34c5d5be2d6be6a0cee015717a79
 SHA1 (patch-ah) = d3453553e15858054bce4943a0316d485938806a
 SHA1 (patch-ai) = 21b2c9ace814e005139c64c4b6890e8b7e249f29
 SHA1 (patch-aj) = 76527be1d4ff89aeec72606d9575a99e6a8e2d3b
-SHA1 (patch-ak) = 4167c9007ed7b31ff9a29b368d82154bc95893cf
-SHA1 (patch-al) = 4a959c6a363941a38256f5eb984a79eec98ab44f
-SHA1 (patch-am) = 5221f23eb9299202d77da2bcb041b438ee6a468e
+SHA1 (patch-ak) = 53b62d44db6247116261916d1131269313c3a572
