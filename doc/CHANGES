@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6592 2004/07/18 21:41:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.6593 2004/07/18 23:40:36 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3435,3 +3435,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sylpheed-claws to 0.9.12 [recht 2004-07-18]
 	Updated opera7 to 7.52 [heinz 2004-07-18]
 	Updated ggv2 to 2.6.2 [jmmv 2004-07-18]
+	Updated xmame to 0.84.1 [kristerw 2004-07-18]
+	Updated xmess to 0.84.1 [kristerw 2004-07-18]
