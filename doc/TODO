@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.949 2003/10/14 17:40:47 jmmv Exp $
+$NetBSD: TODO,v 1.950 2003/10/15 02:25:38 taca Exp $
 
 Suggested new packages
 ======================
@@ -252,6 +252,7 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nxtvepg-2.6.0
 	o openh323-1.11.2
+	o openldap-2.1.23
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8a
