@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2003/05/21 19:43:04 seb Exp $
+$NetBSD: patch-ad,v 1.2 2004/09/05 18:31:59 seb Exp $
 
---- testsuites/makefile.in.orig	2003-03-11 21:53:33.000000000 +0000
+--- testsuites/makefile.in.orig	2004-06-27 23:25:12.000000000 +0200
 +++ testsuites/makefile.in
 @@ -1,5 +1,9 @@
  # makefile for Chicken test-suite
@@ -22,10 +22,10 @@ $NetBSD: patch-ad,v 1.1 2003/05/21 19:43:04 seb Exp $
  CHICKENFLAGS = -hygienic -include-path .. -optimize-level 1
  LIBDIR = ..
  CCOPTS = `../chicken-config -cflags | sed s%-I@prefix@/include%%g`
- LIBS = `../chicken-config -extra-libs -libs | sed s%-L@prefix@/lib%%g | sed "s%@prefix@/lib/\(lib[-A-Za-z0-9_]*\.a\)%$(LIBDIR)/\1%g"`
+ LIBS = `../chicken-config -libs | sed s%-L@prefix@/lib%%g | sed "s%@prefix@/lib/\(lib[-A-Za-z0-9_]*\.a\)%$(LIBDIR)/\1%g"`
  
-+CC= @CC@
-+LIBTOOL= @LIBTOOL@
++CC = @CC@
++LIBTOOL = @LIBTOOL@
 +
  all : $(TESTCASES)
  
@@ -34,24 +34,24 @@ $NetBSD: patch-ad,v 1.1 2003/05/21 19:43:04 seb Exp $
 -	  $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@ && \
 -	  ./$@
 +	$(CHICKEN) $@.scm $(CHICKENFLAGS) -output-file $@.c
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@
-+	$(LIBTOOL) --mode=execute ./$@
++	  $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@
++	  $(LIBTOOL) --mode=execute ./$@
  
  test-r5rs :
 -	$(CHICKEN) $@.scm $(CHICKENFLAGS) -output-file $@.c && \
 -	  $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@ && \
 -	  ./$@
 +	$(CHICKEN) $@.scm $(CHICKENFLAGS) -output-file $@.c
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@
-+	$(LIBTOOL) --mode=execute ./$@
++	  $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@
++	  $(LIBTOOL) --mode=execute ./$@
  
  test-test-infrastructure :
 -	$(CHICKEN) $@.scm $(CHICKENFLAGS) -output-file $@.c && \
 -	  $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@ && \
 -	  ./$@
 +	$(CHICKEN) $@.scm $(CHICKENFLAGS) -output-file $@.c
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@
-+	$(LIBTOOL) --mode=execute ./$@
++	  $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(CCOPTS) $@.c -L$(LIBDIR) -I$(INCDIR) $(LIBS) -o $@
++	  $(LIBTOOL) --mode=execute ./$@
  
  clean:
  	rm -f *.c $(TESTCASES)
