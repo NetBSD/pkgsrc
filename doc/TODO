@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.576 2003/05/23 08:18:20 grant Exp $
+$NetBSD: TODO,v 1.577 2003/05/23 09:40:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -284,7 +284,6 @@ Suggested package updates
 	o xplanet-1.0.0
 	o xps-4.2
 	o xpuyopuyo-0.9.5
-	o xscreensaver-4.10
 	o xsidplay-1.6.5pre20
 	o yacas-1.0.55
 	o ysm-2.9.0
