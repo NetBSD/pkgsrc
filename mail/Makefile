@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2001/07/07 09:42:48 zuntum Exp $
+# $NetBSD: Makefile,v 1.92 2001/07/16 19:09:39 ad Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -16,6 +16,7 @@ SUBDIR+=	elm
 SUBDIR+=	etach
 SUBDIR+=	evolution
 SUBDIR+=	exim
+SUBDIR+=	exim-html
 SUBDIR+=	exmh
 SUBDIR+=	faces
 SUBDIR+=	fetchmail
