@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3431 2003/09/17 19:39:34 cube Exp $
+$NetBSD: CHANGES,v 1.3432 2003/09/17 21:04:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3753,3 +3753,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed nasm-devel [jmmv 2003-09-17]
 	Updated pnm2ppa to 1.12 [jmmv 2003-09-17]
 	Updated poptop to 1.1.3.20030409 [cube 2003-09-17]
+	Updated mysql-server to 3.23.49nb5 [wiz 2003-09-17]
