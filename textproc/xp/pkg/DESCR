@@ -1,0 +1,4 @@
+XP is an XML 1.0 parser written in Java. It is fully conforming: it detects
+all non well-formed documents. It is currently not a validating XML
+processor. However it can parse all external entities: external DTD
+subsets, external parameter entities and external general entities.
