@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/30 04:17:52 tv Exp $
+
+MD5 (dejagnu-1.4.1.tar.gz) = 1045a98e87f67eaa415b518ace043f6e
+Size (dejagnu-1.4.1.tar.gz) = 1330595 bytes
+MD5 (patch-aa) = 3a741dd7bf28f84cdb79679413b2f7b9
