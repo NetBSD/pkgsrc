@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/05/10 12:16:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/05/14 15:57:55 wiz Exp $
 #
 
 DISTNAME=		libiconv-1.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		converters
 MASTER_SITES=		ftp://ftp.ilog.fr/pub/Users/haible/gnu/
 
