@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 22:55:31 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/22 04:14:21 martti Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://xml.apache.org/dist/cocoon/cocoon1/
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/cocoon/
-COMMENT=	the Apache Project's XML/XSL based web publishing system
+COMMENT=	The Apache Project's XML/XSL based web publishing system
 
 # These are exact version requirements intentionally, and will need to remain
 # so until the interfaces stabilize more.  Until then, new versions of these

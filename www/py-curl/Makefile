@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:56:00 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/22 04:14:35 martti Exp $
 
 DISTNAME=	pycurl-7.10.1
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pycurl.sourceforge.net/download/
 
 MAINTAINER=	shell@NetBSD.org
 HOMEPAGE=	http://pycurl.sf.net/
-COMMENT=	python module interface to the cURL library
+COMMENT=	Python module interface to the cURL library
 
 PYDISTUTILSPKG=	# defined
 PYBINMODULE=	# defined

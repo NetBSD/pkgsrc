@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:18 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:47 martti Exp $
 
 DISTNAME=	colorz10b2
 PKGREVISION=	1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/maxm/productList/colorz
-COMMENT=	color management tool
+COMMENT=	Color management tool
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 PRODNAMES=	colorz10b2
