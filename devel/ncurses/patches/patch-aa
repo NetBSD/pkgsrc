@@ -11,7 +11,7 @@
  
  # Default library, for linking applications
 -LIB_CURSES = ../lib/libncurses@DFT_DEP_SUFFIX@
-+LIB_CURSES = ../lib/libncurses@DFT_DEP_SUFFIX@@nc_cv_abi_version@
++LIB_CURSES = -L../lib -lncurses
  
  ################################################################################
  all:	$(AUTO_SRC) $(PROGS) 
