@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/14 17:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/15 21:41:04 salo Exp $
 #
 
 DISTNAME=		lftp-2.6.12
@@ -11,7 +11,9 @@ MAINTAINER=		michal@pasternak.w.lub.pl
 HOMEPAGE=		http://lftp.yar.ru/
 COMMENT=		Powerful command line ftp client
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
@@ -33,8 +35,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/lftp.conf ${EGDIR}/lftp.conf.default
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
