@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2004/05/24 16:09:35 kristerw Exp $
+
+--- lib/rfsvfactory.cc.orig	2004-05-24 17:47:30.000000000 +0200
++++ lib/rfsvfactory.cc	2004-05-24 17:48:20.000000000 +0200
+@@ -74,7 +74,7 @@
+ 			return NULL;
+ 		}
+ 		// Invalid protocol version
+-		cerr << "rfsvfactory::create received odd protocol version from
++		cerr << "rfsvfactory::create received odd protocol version from \
+ ncpd! (" << a << ")" << endl;
+ 	} else {
+ 		cerr << "rfsvfactory::create sent, response not 1" << endl;
