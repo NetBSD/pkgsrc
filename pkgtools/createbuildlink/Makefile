@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2004/07/06 23:18:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2004/09/26 23:48:09 rh Exp $
 
-DISTNAME=	createbuildlink-3.5
+DISTNAME=	createbuildlink-3.6
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
 DISTFILES=	# Nothing
 
 MAINTAINER=	rh@NetBSD.org
-COMMENT=	shell script to help creating buildlink[23].mk files
+COMMENT=	shell script to help creating buildlink3.mk files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -19,18 +19,19 @@ NO_BUILD=	yes
 EXTRACT_CMD=	${ECHO}
 
 SCRIPT=		${DISTNAME:C/-.*$//}
+SCRIPTS=	${SCRIPT} substplistbasedirs
 
 INSTALLATION_DIRS=	bin man/man8
 
 do-configure:
-.for scr in ${SCRIPT}
+.for scr in ${SCRIPTS}
 	${SED}	-e 's|@PKGVERSION@|${PKGVERSION}|'		\
 		-e 's|@MAKE@|${MAKE}|'				\
 		< ${FILESDIR}/${scr} > ${WRKSRC}/${scr}
 .endfor
 
 do-install:
-.for scr in ${SCRIPT}
+.for scr in ${SCRIPTS}
 	${INSTALL_SCRIPT} ${WRKSRC}/${scr} ${PREFIX}/bin/${scr}
 .endfor
 	${INSTALL_MAN} ${FILESDIR}/${SCRIPT}.8 ${PREFIX}/man/man8
