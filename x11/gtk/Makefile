@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 1998/10/04 23:27:39 tron Exp $
+# $NetBSD: Makefile,v 1.20 1998/11/21 22:15:15 tron Exp $
 
-DISTNAME=	gtk+-1.1.2
+DISTNAME=	gtk+-1.1.3
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.1/ \
 		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.1/ \
@@ -9,12 +9,13 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.1/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gtk.org/
 
-DEPENDS+=	glib-1.1.3:../../devel/glib
+DEPENDS+=	glib-1.1.4:../../devel/glib
 
-CONFLICTS=	gtk+-1.0.0 gtk+-1.0.4 gtk+-1.1.1
+CONFLICTS=	gtk+-1.0.0 gtk+-1.0.4 gtk+-1.1.1 gtk+-1.1.2
 
 USE_LIBTOOL=	yes
 USE_X11=	yes
+USE_GMAKE=	yes
 
 GNU_CONFIGURE=  yes
 CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
