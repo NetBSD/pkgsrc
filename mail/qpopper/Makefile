@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/09/07 17:58:00 bad Exp $
+# $NetBSD: Makefile,v 1.20 2000/01/09 01:28:34 wiz Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \
 CONFIGURE_ARGS+=--enable-kerberos
 RESTRICTED=     uses Kerberos encryption code
 .endif
-
 
 BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
 
