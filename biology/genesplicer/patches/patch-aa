@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/30 01:57:09 jschauma Exp $
+
+--- makefile.orig	2003-09-29 21:39:36.000000000 -0400
++++ makefile	2003-09-29 21:40:57.000000000 -0400
+@@ -1,12 +1,12 @@
+-CC=g++
++#CC=g++
+ 
+ all: genesplicer
+ 
+ genesplicer: genesplicer.o sites.o
+-	$(CC) -o genesplicer genesplicer.o sites.o -lm
++	$(CXX) ${CXXFLAGS} -o genesplicer genesplicer.o sites.o ${LDFLAGS} -lm
+ 
+ genesplicer.o: genesplicer.cpp
+-	$(CC) -c genesplicer.cpp
++	$(CXX) ${CXXFLAGS} -c genesplicer.cpp
+ 
+ sites.o: sites.c
+-	$(CC) -c sites.c
++	$(CXX) ${CXXFLAGS} -c sites.c
