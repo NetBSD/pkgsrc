@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2001/03/28 09:27:51 skrll Exp $
+# $NetBSD: Makefile.common,v 1.10 2001/04/02 19:24:49 wiz Exp $
 #
 
 DISTNAME=		qt-x11-${QTVERSION}
@@ -30,7 +30,6 @@ FILESDIR=		${PKGSRCDIR}/x11/qt2-libs/files
 PATCHDIR=		${PKGSRCDIR}/x11/qt2-libs/patches
 
 .include "../../mk/bsd.prefs.mk"
-
 
 .if ${OPSYS} == "SunOS"
 BUILD_DEPENDS+=	egcs-1.1.2:../../lang/egcs
