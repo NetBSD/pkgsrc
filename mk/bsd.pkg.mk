@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.847 2001/11/14 12:38:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.848 2001/11/14 21:04:43 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -581,8 +581,9 @@ DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
 DEINSTALL_FILE=		${.CURDIR}/DEINSTALL
 .endif
 
-# Set MESSAGE_SRC to be the name of any MESSAGE file, if ${MESSAGE}
-# hasn't be defined
+# If MESSAGE hasn't been defined, then set MESSAGE_SRC to be a space-separated
+# list of files to be concatenated together to generate the MESSAGE file.
+#
 .if !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${PKGDIR}/MESSAGE)
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
 .elif !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${.CURDIR}/MESSAGE)
@@ -598,6 +599,8 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 		LOCALBASE=${LOCALBASE}					\
 		X11PREFIX=${X11PREFIX}					\
 		X11BASE=${X11BASE}
+
+MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
 
 PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
@@ -3452,8 +3455,9 @@ ${MESSAGE}: ${MESSAGE_SRC}
 		${ECHO} "${MESSAGE_SRC} not found.";			\
 		${ECHO} "Please set MESSAGE_SRC correctly.";		\
 	else								\
-		${SED} ${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
-			${MESSAGE_SRC} > ${MESSAGE};			\
+		${CAT} ${MESSAGE_SRC} |					\
+			${SED} ${MESSAGE_SUBST_SED}			\
+			> ${MESSAGE};					\
 	fi
 .endif
 
