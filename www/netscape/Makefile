@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:53 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/05 11:56:28 tron Exp $
 #
 
 COMMENT=	Open new communicator, navigator, or mozilla window
@@ -39,4 +39,4 @@ do-install:
 .endif
 .endif
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
