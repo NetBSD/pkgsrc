@@ -1,0 +1,16 @@
+# $NetBSD: install.tmpl,v 1.1 2003/02/18 14:39:03 jmmv Exp $
+
+SCROLLKEEPER_DATADIR="@SCROLLKEEPER_DATADIR@"
+SCROLLKEEPER_REBUILDDB="@SCROLLKEEPER_REBUILDDB@"
+SCROLLKEEPER_UPDATEDB="@SCROLLKEEPER_UPDATEDB@"
+
+case ${STAGE} in
+POST-INSTALL)
+	${ECHO} "===> Adding ${PKGNAME} to scrollkeeper's database"
+	${SCROLLKEEPER_UPDATEDB} -q -p ${SCROLLKEEPER_DATADIR}/db > /dev/null 2>&1
+	;;
+DEINSTALL)
+	${ECHO} "===> Removing ${PKGNAME} from scrollkeeper's database"
+	${SCROLLKEEPER_UPDATEDB} -q -p ${SCROLLKEEPER_DATADIR}/db > /dev/null 2>&1
+	;;
+esac
