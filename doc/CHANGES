@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5049 2004/03/01 15:58:56 adam Exp $
+$NetBSD: CHANGES,v 1.5050 2004/03/01 20:29:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1105,3 +1105,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libmad to 0.15.1b [adam 2004-03-01]
 	Updated libid3tag to 0.15.1b [adam 2004-03-01]
 	Updated madplay to 0.15.2b [adam 2004-03-01]
+	Updated libtasn1 to 0.2.7 [jmmv 2004-03-01]
+	Updated gnutls to 1.0.8 [jmmv 2004-03-01]
