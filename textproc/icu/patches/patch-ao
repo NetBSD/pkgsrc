@@ -1,0 +1,30 @@
+$NetBSD: patch-ao,v 1.1.1.1 2000/12/20 18:28:02 skrll Exp $
+
+--- tools/genrb/Makefile.in.orig	Tue Aug 15 03:41:58 2000
++++ tools/genrb/Makefile.in
+@@ -40,6 +40,7 @@
+ ## Build directory information
+ top_builddir = ../..
+ subdir = tools/genrb
++BUILD_LPATH=$(top_builddir)/common
+ 
+ ## Extra files to remove for 'make clean'
+ CLEANFILES = *~
+@@ -121,7 +122,7 @@
+ 
+ @DATABUILDDIR@/../source/test/testdata/%.res : $(top_srcdir)/test/testdata/%.txt
+ 	@echo "Creating testdata resource file for $<"
+-	ICU_DATA=@DATABUILDDIR@ ./genrb -s $(top_srcdir)/test/testdata/ -d @DATABUILDDIR@../source/test/testdata/ $(<F)
++	$(TOOL) ICU_DATA=@DATABUILDDIR@ ./genrb -s $(top_srcdir)/test/testdata/ -d @DATABUILDDIR@../source/test/testdata/ $(<F)
+ 
+ #@DATABUILDDIR@/translit/%.res : $(top_srcdir)/../data/translit/%.txt
+ #	@echo "Creating translit resource file for $<"
+@@ -129,7 +130,7 @@
+ 
+ @DATABUILDDIR@/%.res : $(top_srcdir)/../data/%.txt
+ 	@echo "Creating compiled resource file for $<"
+-	@ICU_DATA=@DATABUILDDIR@ ./genrb -s $(top_srcdir)/../data/ -d @DATABUILDDIR@/ $(<F)
++	@$(TOOL) ICU_DATA=@DATABUILDDIR@ ./genrb -s $(top_srcdir)/../data/ -d @DATABUILDDIR@/ $(<F)
+ 
+ 
+ # the 'mv' will always fail if you are building in the source dir

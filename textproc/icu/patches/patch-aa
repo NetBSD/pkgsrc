@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/20 18:28:02 skrll Exp $
+
+--- common/Makefile.in.orig	Wed Dec 20 17:43:36 2000
++++ common/Makefile.in
+@@ -109,8 +109,8 @@
+ install-headers:
+ 	$(mkinstalldirs) $(DESTDIR)$(includedir)/unicode
+ 	@for file in $(HEADERS); do \
+-	 echo "$(INSTALL_DATA) $$file $(DESTDIR)$(includedir)/unicode"; \
+-	 $(INSTALL_DATA) $$file $(DESTDIR)$(includedir)/unicode || exit; \
++	 echo "$(INSTALL_DATA) -p $$file $(DESTDIR)$(includedir)/unicode"; \
++	 $(INSTALL_DATA) -p $$file $(DESTDIR)$(includedir)/unicode || exit; \
+ 	done
+ 
+ dist-local:
