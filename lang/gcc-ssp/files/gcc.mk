@@ -1,8 +1,8 @@
 # make configuration file for @@PKGBASENAME@@
 
-CC=	@@PREFIX@@/@@PKGBASENAME@@/bin/cc -fstack-protector
+CC=	@@PREFIX@@/@@PKGBASENAME@@/bin/cc
 CPP=	@@PREFIX@@/@@PKGBASENAME@@/bin/cpp
-CXX=	@@PREFIX@@/@@PKGBASENAME@@/bin/c++ -fstack-protector
+CXX=	@@PREFIX@@/@@PKGBASENAME@@/bin/c++
 
 .if exists(/etc/mk.conf)
 .include "/etc/mk.conf"

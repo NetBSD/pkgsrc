@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/06/30 16:16:11 kent Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/04 02:31:44 kent Exp $
 
 DISTNAME=		gcc-2.95.2
 GCC_VERSION=		2.95.2
-PKGNAME=		gcc-ssp-2.95.2nb2
+PKGNAME=		gcc-ssp-2.95.2nb3
 PKGBASENAME=		gcc-ssp
 CATEGORIES=		lang security
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
@@ -59,9 +59,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.NetBSD-sparc
 PLIST_SRC+=		${PKGDIR}/PLIST
 .endif
 .else
-.if (${CC} != gcc)
 ALL_TARGET=		bootstrap
-.endif
 GCC_PREFIX=		${LOCALBASE}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 MESSAGE=		${PKGDIR}/MESSAGE.SunOS
@@ -77,6 +75,7 @@ post-patch:
 	cd ${WRKDIR} && /usr/bin/tar zxf ${_DISTDIR}/${SSP_PATCH}
 	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKDIR}/${DISTNAME}/gcc/
 	${PATCH} -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
+	${PATCH} -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protectonly.dif
 
 .if (${OPSYS} != SunOS)
 post-build:
@@ -86,7 +85,7 @@ post-build:
 		 -e 's#@@PREFIX@@#${PREFIX}#g' \
 	   <$$FILE >${WRKDIR}/`basename $$FILE`; \
 	done
-	${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ -O2 -fstack-protector -o ${WRKDIR}/buffer ${FILESDIR}/buffer.c
+	${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ -O2 -o ${WRKDIR}/buffer ${FILESDIR}/buffer.c
 	ulimit -c 0 && ${WRKDIR}/buffer abcdefghijklmnopqrstuvwxyz  2> ${WRKDIR}/output || true
 	@if [ x"`cat ${WRKDIR}/output`" = "x: stack smashing attack in function main" ]; then \
 	    echo "---- Stack protection succeeded."; \
