@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2004/10/08 03:35:25 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2004/11/15 11:15:55 hira Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/XFree86
 ${X11ROOT_PREFIX}/bin/Xnest
@@ -958,13 +958,13 @@ ${X11ROOT_PREFIX}/lib/modules/drivers/cyrix_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/dummy_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/glint_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/i128_drv.o
-${X11ROOT_PREFIX}/lib/modules/drivers/i740_drv.o
-${X11ROOT_PREFIX}/lib/modules/drivers/i810_drv.o
-${X11ROOT_PREFIX}/lib/modules/drivers/imstt_drv.o
+${NOT_X86_64}${X11ROOT_PREFIX}/lib/modules/drivers/i740_drv.o
+${NOT_X86_64}${X11ROOT_PREFIX}/lib/modules/drivers/i810_drv.o
+${NOT_X86_64}${X11ROOT_PREFIX}/lib/modules/drivers/imstt_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/mga_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/neomagic_drv.o
-${X11ROOT_PREFIX}/lib/modules/drivers/newport_drv.o
-${X11ROOT_PREFIX}/lib/modules/drivers/nsc_drv.o
+${NOT_X86_64}${X11ROOT_PREFIX}/lib/modules/drivers/newport_drv.o
+${NOT_X86_64}${X11ROOT_PREFIX}/lib/modules/drivers/nsc_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/nv_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/r128_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/radeon_drv.o
@@ -981,8 +981,8 @@ ${X11ROOT_PREFIX}/lib/modules/drivers/trident_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/tseng_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/vesa_drv.o
 ${X11ROOT_PREFIX}/lib/modules/drivers/vga_drv.o
-${X11ROOT_PREFIX}/lib/modules/drivers/via_drv.o
-${X11ROOT_PREFIX}/lib/modules/drivers/vmware_drv.o
+${NOT_X86_64}${X11ROOT_PREFIX}/lib/modules/drivers/via_drv.o
+${NOT_X86_64}${X11ROOT_PREFIX}/lib/modules/drivers/vmware_drv.o
 ${X11ROOT_PREFIX}/lib/modules/extensions/libGLcore.a
 ${X11ROOT_PREFIX}/lib/modules/extensions/libdbe.a
 ${X11ROOT_PREFIX}/lib/modules/extensions/libextmod.a
@@ -1088,9 +1088,9 @@ ${X11ROOT_PREFIX}/${KERNMAN_DIR}/fbdevhw.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/fpit.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/glint.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/i128.${KERNMAN_SUFFIX}
-${X11ROOT_PREFIX}/${KERNMAN_DIR}/i740.${KERNMAN_SUFFIX}
-${X11ROOT_PREFIX}/${KERNMAN_DIR}/i810.${KERNMAN_SUFFIX}
-${X11ROOT_PREFIX}/${KERNMAN_DIR}/imstt.${KERNMAN_SUFFIX}
+${NOT_X86_64}${X11ROOT_PREFIX}/${KERNMAN_DIR}/i740.${KERNMAN_SUFFIX}
+${NOT_X86_64}${X11ROOT_PREFIX}/${KERNMAN_DIR}/i810.${KERNMAN_SUFFIX}
+${NOT_X86_64}${X11ROOT_PREFIX}/${KERNMAN_DIR}/imstt.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/js_x.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/kbd.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/keyboard.${KERNMAN_SUFFIX}
@@ -1099,8 +1099,8 @@ ${X11ROOT_PREFIX}/${KERNMAN_DIR}/microtouch.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/mouse.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/mutouch.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/neomagic.${KERNMAN_SUFFIX}
-${X11ROOT_PREFIX}/${KERNMAN_DIR}/newport.${KERNMAN_SUFFIX}
-${X11ROOT_PREFIX}/${KERNMAN_DIR}/nsc.${KERNMAN_SUFFIX}
+${NOT_X86_64}${X11ROOT_PREFIX}/${KERNMAN_DIR}/newport.${KERNMAN_SUFFIX}
+${NOT_X86_64}${X11ROOT_PREFIX}/${KERNMAN_DIR}/nsc.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/nv.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/palmax.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/penmount.${KERNMAN_SUFFIX}
@@ -1117,8 +1117,8 @@ ${X11ROOT_PREFIX}/${KERNMAN_DIR}/trident.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/tseng.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/vesa.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/vga.${KERNMAN_SUFFIX}
-${X11ROOT_PREFIX}/${KERNMAN_DIR}/via.${KERNMAN_SUFFIX}
-${X11ROOT_PREFIX}/${KERNMAN_DIR}/vmware.${KERNMAN_SUFFIX}
+${NOT_X86_64}${X11ROOT_PREFIX}/${KERNMAN_DIR}/via.${KERNMAN_SUFFIX}
+${NOT_X86_64}${X11ROOT_PREFIX}/${KERNMAN_DIR}/vmware.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/void.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/wacom.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${FILEMAN_DIR}/getconfig.${FILEMAN_SUFFIX}
