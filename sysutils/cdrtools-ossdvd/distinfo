@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/17 16:09:07 wiz Exp $
+
+SHA1 (cdrtools-2.01a18.tar.gz) = 2638f8d825ac03e45fd30aa2578dc7b83ad83849
+Size (cdrtools-2.01a18.tar.gz) = 1648542 bytes
+SHA1 (cdrtools-2.01a18-ossdvd.patch.bz2) = 0f052c327b13274fe9ad0585f2b78ecd5078f343
+Size (cdrtools-2.01a18-ossdvd.patch.bz2) = 7611 bytes
+SHA1 (patch-ac) = 0d9217924ed353b1c23bac1ffd8b2ee69eda8f47
+SHA1 (patch-ah) = 34ecab01125bcac2a28e295b198edce0de8b8777
+SHA1 (patch-ai) = 38f6bc8a9deee6861d5589dcf65dcd4968614457
+SHA1 (patch-aj) = e606fbd4fba068b96cc784d3a0f0ee0d7cf7a84a
+SHA1 (patch-ba) = 635f7584d125517309ae00919f5a7808b28ba127
+SHA1 (patch-bb) = 653956259faeb46106e243e543eb17eb25d5a371
+SHA1 (patch-ca) = 5dbc3d3f248781627b6d6100808c70db60e83bd4
+SHA1 (patch-cb) = c7060bce4ef117e55169a39eb0850a0b57de56c2
+SHA1 (patch-cc) = a14098dd14e0b58d3fed1167341a22167eea7c19
