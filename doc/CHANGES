@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5133 2004/03/07 11:51:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.5134 2004/03/07 14:40:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1219,3 +1219,5 @@ Changes to the packages collection and infrastructure in 2004:
         Updated mimedefang to 2.40 [markd 2004-03-07]
         Updated pure-ftpd to 1.0.18 [recht 2004-03-07]
         Updated scrollkeeper to 0.3.14nb2 [jmmv 2004-03-07]
+	Updated ruby-racc to 1.4.4 [taca 2004-03-07]
+	Deleted ruby-racc-runtime [taca 2004-03-07]
