@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/02 22:59:16 xtraeme Exp $
+
+--- src/jmixer.cpp.orig	2004-05-03 00:53:39.000000000 +0200
++++ src/jmixer.cpp	2004-05-03 00:53:50.000000000 +0200
+@@ -98,7 +98,7 @@
+     error("error initializing POSIX thread mutex");
+   if(pthread_cond_init (&_cond, NULL) == -1)
+     error("error initializing POSIX thread condtition"); 
+-  unlock();
++  //unlock();
+ }
+ 
+ Stream_mixer::~Stream_mixer() {
