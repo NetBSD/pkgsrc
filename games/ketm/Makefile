@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/06 21:06:12 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/17 20:47:57 zuntum Exp $
 #
 
 DISTNAME=	ketm-0.0.6
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://home.t-online.de/home/haslbeck/ketm/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://home.t-online.de/home/haslbeck/ketm/
 COMMENT=	Old-school 2d-scrolling shooter
 
