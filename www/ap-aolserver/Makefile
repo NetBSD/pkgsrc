@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/05 04:46:31 jmc Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/05 05:36:29 jmc Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -36,4 +36,5 @@ post-install:
 		${WRKSRC}/tcl_modules/nsd.ini.sample \
 		${PREFIX}/share/examples/mod_aolserver
 
+.include "../../www/apache/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
