@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/02/16 19:58:30 bad Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/16 22:56:54 jdolecek Exp $
 
-DISTNAME=	vmware-netbsd-3.2.0
-PKGNAME=	vmware-module-3.2.0
+DISTNAME=	vmware-netbsd-3.2.1
+PKGNAME=	vmware-module-3.2.1
 CATEGORIES=	emulators
 MASTER_SITES=   ftp://ftp.netbsd.org/pub/NetBSD/misc/vmware/
 EXTRACT_SUFX=	.tgz
