@@ -1,0 +1,42 @@
+--- setup.c.orig	Thu Apr  2 21:52:57 1998
++++ setup.c	Sun Jul 26 06:47:23 1998
+@@ -198,3 +198,3 @@
+   
+-  fi = fopen("final.news", "r");
++  fi = fopen(DATA "/final.news", "r");
+   
+@@ -799,3 +799,3 @@
+   
+-  sprintf(fname, "sprites/obj/%c.obj", i + 'a');
++  sprintf(fname, SPRITES "/obj/%c.obj", i + 'a');
+   
+@@ -812,3 +812,3 @@
+     {
+-      sprintf(fname, "sprites/obj/%c.obj", j + 'a');
++      sprintf(fname, SPRITES "/obj/%c.obj", j + 'a');
+       
+@@ -937,3 +937,3 @@
+ 			   CopyFromParent, black[i], TITLE_EVENT_MASK, VISUAL);
+-  XReadBitmapFile(display[i], titlewin[i], "sprites/title.xbm", &titlew,
++  XReadBitmapFile(display[i], titlewin[i], SPRITES "/title.xbm", &titlew,
+ 		  &titleh, &titlebitmap[i], &xhot, &yhot);
+@@ -982,3 +982,3 @@
+   
+-  fi = objopen("sprites/obj/asteroids.obj", 16);
++  fi = objopen(SPRITES "/obj/asteroids.obj", 16);
+   
+@@ -1005,3 +1005,3 @@
+   
+-  fi = objopen("sprites/obj/drone.obj", 1);
++  fi = objopen(SPRITES "/obj/drone.obj", 1);
+   
+@@ -1033,3 +1033,3 @@
+     {
+-      sprintf(str, "sprites/obj/upgrade_%c.obj", i + 'a');
++      sprintf(str, SPRITES "/obj/upgrade_%c.obj", i + 'a');
+       
+@@ -1060,3 +1060,3 @@
+     {
+-      sprintf(str, "sprites/obj/weapon_%c.obj", i + 'a');
++      sprintf(str, SPRITES "/obj/weapon_%c.obj", i + 'a');
+       

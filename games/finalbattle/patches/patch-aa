@@ -1,0 +1,146 @@
+--- makefile.orig	Thu Apr  2 21:55:07 1998
++++ makefile	Sun Jul 26 06:51:44 1998
+@@ -11,7 +11,9 @@
+ 
+-POSTPROCESS=strip
+ CC=gcc
+-#XLIB=-L/usr/openwin/lib -lX11
+-XLIB=-L/usr/X11/lib -lX11
+-
++XLIB= $(RPATH) -L$(PREFIX)/lib -lX11
++INSTALLROOT=$(PREFIX)
++DATA=$(PREFIX)/share/finalbattle
++SPRITES=$(PREFIX)/share/finalbattle/sprites
++DEFS=-DSPRITES=\"$(SPRITES)\" -DDATA=\"$(DATA)\"
++CFLAGS+= -I$(PREFIX)/include $(DEFS)
+ 
+@@ -27,2 +29,18 @@
+ 
++install: final
++	install -s -o bin -g bin -m 0755 final $(INSTALLROOT)/bin
++	mkdir -p $(SPRITES)/asteroids
++	mkdir -p $(SPRITES)/obj
++	mkdir -p $(SPRITES)/ships
++	mkdir -p $(SPRITES)/upgrade
++	mkdir -p $(SPRITES)/weapon
++	install -o bin -g bin -m 0644 sprites/asteroids/* $(SPRITES)/asteroids
++	install -o bin -g bin -m 0644 sprites/obj/* $(SPRITES)/obj
++	install -o bin -g bin -m 0644 sprites/ships/* $(SPRITES)/ships
++	install -o bin -g bin -m 0644 sprites/upgrade/* $(SPRITES)/upgrade
++	install -o bin -g bin -m 0644 sprites/weapon/* $(SPRITES)/weapon
++	@rm -r sprites/*/
++	install -o bin -g bin -m 0644 sprites/* $(SPRITES)
++	install -o bin -g bin -m 0644 final.news $(DATA)
++	install -o bin -g bin -m 0644 README.txt $(DATA)
+ 
+@@ -30,12 +48,9 @@
+ 
+-final:		final.o lib/connect.o lib/gc.o lib/hints.o lib/window.o \
+-		lib/text.o setup.o graphics.o radarwin.o math.o lib/rndm.o \
+-		event.o movement.o actionwin.o commwin.o weapons.o misc.o \
+-		weaponwin.o damagewin.o upgradewin.o lib/color.o lib/visual.o
+-	$(CC) final.o lib/connect.o lib/gc.o lib/hints.o lib/window.o \
+-		lib/text.o setup.o graphics.o radarwin.o math.o lib/rndm.o \
++OBJS=		final.o connect.o gc.o hints.o window.o \
++		text.o setup.o graphics.o radarwin.o math.o rndm.o \
+ 		event.o movement.o actionwin.o commwin.o weapons.o misc.o \
+-		weaponwin.o damagewin.o upgradewin.o lib/color.o lib/visual.o \
+-		-o final $(XLIB) -lm
+-	$(POSTPROCESS) final
++		weaponwin.o damagewin.o upgradewin.o color.o visual.o
++
++final: $(OBJS)
++	$(CC) $(OBJS) -o $@ $(XLIB) -lm
+ 	chmod 755 final
+@@ -44,3 +59,2 @@
+ 	$(CC)	convert.c -o convert
+-	$(POSTPROCESS) convert
+ 	chmod 755 convert
+@@ -55,79 +69,28 @@
+ 		lib/color.h lib/visual.h
+-	$(CC) final.c -c
+-
+ convert.o:	convert.c
+-	gcc	convert.c -c
+-
+-
+-# The main executable's library object files:
+-
+ setup.o:	setup.c setup.h const.h glovar.h types.h misc.h lib/gc.h \
+ 		lib/connect.h lib/rndm.h lib/text.h lib/color.h lib/visual.h
+-	$(CC) setup.c -c
+-
+ misc.o:		misc.c misc.h const.h glovar.h
+-	$(CC) misc.c -c
+-
+ graphics.o:	graphics.c graphics.h const.h glovar.h types.h
+-	$(CC) graphics.c -c
+-
+ radarwin.o:	radarwin.c radarwin.h const.h glovar.h types.h
+-	$(CC) radarwin.c -c
+-
+ weaponwin.o:	weaponwin.c weaponwin.h const.h glovar.h types.h graphics.h
+-	$(CC) weaponwin.c -c
+-
+ event.o:	event.c event.h const.h glovar.h types.h radarwin.h \
+ 		weaponwin.h lib/rndm.h lib/connect.h
+-	$(CC) event.c -c
+-
+ math.o:		math.c math.h
+-	$(CC) math.c -c
+-
+ movement.o:	movement.c movement.h const.h glovar.h types.h weaponwin.h \
+ 		misc.h weapons.h event.h upgradewin.h
+-	$(CC) movement.c -c
+-
+ actionwin.o:	actionwin.c actionwin.h const.h glovar.h types.h
+-	$(CC) actionwin.c -c
+-
+ damagewin.o:	damagewin.c damagewin.h const.h glovar.h types.h graphics.h \
+ 		lib/text.h
+-	$(CC) damagewin.c -c
+-
+ upgradewin.o:	upgradewin.c damagewin.h const.h glovar.h types.h graphics.h \
+ 		lib/text.h
+-	$(CC) upgradewin.c -c
+-
+ commwin.o:	commwin.c commwin.h const.h glovar.h types.h lib/text.h
+-	$(CC) commwin.c -c
+-
+ weapons.o:	weapons.c weapons.h movement.h const.h glovar.h
+-	$(CC) weapons.c -c
+-
+-
+-# Other library object files:
+-
+-lib/color.o:	lib/color.c lib/color.h
+-	$(CC) lib/color.c -c -o lib/color.o
+-
+-lib/visual.o:	lib/visual.c lib/visual.h
+-	$(CC) lib/visual.c -c -o lib/visual.o
+-
+-lib/rndm.o:	lib/rndm.c lib/rndm.h
+-	$(CC) lib/rndm.c -c -o lib/rndm.o
+-
+-lib/connect.o:	lib/connect.c lib/connect.h
+-	$(CC) lib/connect.c -c -o lib/connect.o
+-
+-lib/text.o:	lib/text.c lib/text.h
+-	$(CC) lib/text.c -c -o lib/text.o
+-
+-lib/gc.o:	lib/gc.c lib/gc.h
+-	$(CC) lib/gc.c -c -o lib/gc.o
+-
+-lib/hints.o:	lib/hints.c lib/hints.h
+-	$(CC) lib/hints.c -c -o lib/hints.o
+-
+-lib/window.o:	lib/window.c lib/window.h
+-	$(CC) lib/window.c -c -o lib/window.o
++color.o:	lib/color.c lib/color.h
++visual.o:	lib/visual.c lib/visual.h
++rndm.o:		lib/rndm.c lib/rndm.h
++connect.o:	lib/connect.c lib/connect.h
++text.o:		lib/text.c lib/text.h
++gc.o:		lib/gc.c lib/gc.h
++hints.o:	lib/hints.c lib/hints.h
++window.o:	lib/window.c lib/window.h
