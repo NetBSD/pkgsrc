@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.3 2003/03/04 00:21:31 seb Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/03/04 11:39:56 seb Exp $
 #
 # Makefile fragment shared with libmilter
 #
 
 DISTNAME=	sendmail.${DIST_VERS}
 CATEGORIES=	mail
+PKGREVISION=	1
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
@@ -33,6 +34,21 @@ DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 USE_BUILDLINK2=	YES
 
 .include "../../mk/bsd.prefs.mk"
+
+_NEED_GNU_M4=	NO
+_NEED_GNU_M4_PLATFORM=	NetBSD-0.*-* NetBSD-1.[01234]*-*
+_NEED_GNU_M4_PLATFORM=	NetBSD-1.5.*-* NetBSD-1.5[A-Y]-*
+.for __tmp__ in ${_NEED_GNU_M4_PLATFORM}
+.   if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+_NEED_GNU_M4=	YES
+.   endif
+.endfor
+
+.if ${_NEED_GNU_M4} == "YES"
+BUILD_DEPENDS+=	m4-*:../../devel/m4
+EVAL_PREFIX+=	M4_PREFIX=m4
+MAKE_ENV+=	M4=${M4_PREFIX}/bin/${GNU_PROGRAM_PREFIX}m4
+.endif
 
 make-sendmail-siteconfig:
 	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
