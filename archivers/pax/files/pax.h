@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.h,v 1.6 2004/04/12 12:34:16 heinz Exp $	*/
+/*	$NetBSD: pax.h,v 1.7 2004/06/20 10:11:02 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -120,6 +120,7 @@ typedef struct {
 	int ln_nlen;			/* link name length */
 	char ln_name[PAXPATHLEN+1];	/* name to link to (if any) */
 	char *org_name;			/* orig name in file system */
+	char *tmp_name;			/* tmp name used to restore */
 	PATTERN *pat;			/* ptr to pattern match (if any) */
 	struct stat sb;			/* stat buffer see stat(2) */
 	off_t pad;			/* bytes of padding after file xfer */
@@ -154,7 +155,7 @@ typedef struct {
  * dependent routines pass pointers to ARCHD structure (described below).
  */
 typedef struct {
-	char *name;		/* name of format, this is the name the user */
+	const char *name;	/* name of format, this is the name the user */
 				/* gives to -x option to select it. */
 	int bsz;		/* default block size. used when the user */
 				/* does not specify a blocksize for writing */
