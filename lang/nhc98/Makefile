@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/12/26 20:52:11 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/24 13:36:19 wiz Exp $
 
 DISTNAME=		nhc98src-1.14a
 PKGNAME=		nhc98-1.14a
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64
 USE_BUILDLINK2=		YES
 BUILDLINK_SETENV.CC=	CC=gcc
 
-USE_NCURSES=		KEY_RESIZE
+USE_NCURSES=		# KEY_RESIZE
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/23 16:14:38 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/24 13:36:18 wiz Exp $
 #
 
 DISTNAME=	naim-0.11.4.9
@@ -14,8 +14,7 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-# newpad, keyname, wattr_get, wattr_set, pnoutrefresh, use_default_colors
-USE_NCURSES=		YES
+USE_NCURSES=		# keyname, wattr_get, wattr_set
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
