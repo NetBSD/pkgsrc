@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2003/07/24 21:25:26 jwise Exp $
+# $NetBSD: Makefile,v 1.106 2003/07/30 18:35:53 grant Exp $
 
 DISTNAME=		openssh-3.6.1p2
 PKGNAME=		openssh-3.6.1.2
@@ -72,7 +72,7 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 #.endif
 
-.if (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 .  include "../../security/skey/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 .elif ${OPSYS} == "NetBSD"
