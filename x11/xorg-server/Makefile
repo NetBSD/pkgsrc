@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2004/08/11 15:36:36 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/21 17:38:53 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-server-${XORG_VER}
-PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG}
-DISTFILES=		X11R6.7.0-src1.tar.gz X11R6.7.0-src3.tar.gz		
+DISTFILES=		X11R${XORG_VER}-src1.tar.gz \
+			X11R${XORG_VER}-src2.tar.gz \
+			X11R${XORG_VER}-src3.tar.gz		
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.x.org/
@@ -19,8 +20,8 @@ PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 XBUILD_DIRS=		lib/font lib/lbxutil lib/Xdmcp lib/Xau \
 			programs/Xserver
 XINCLUDE_DIRS=		lib/xkbfile lib/xtrans
-XINSTALL_DIRS=		lib/font/FreeType lib/font/X-TrueType \
-			lib/font/Speedo lib/font/Type1 \
+XINSTALL_DIRS=		lib/font/FreeType \
+			lib/font/Type1 \
 			lib/font/bitmap programs/Xserver
 XINSTALL_MAN_DIRS=	programs/Xserver
 
@@ -49,6 +50,10 @@ USE_PERL5=	build # Yeah, we need this :-)
 
 post-install:
 	${CHMOD} a+r ${X11ROOT}/bin/Xorg
+
+.if ${OPSYS} == "Linux"
+.  include "../../x11/Xrender/buildlink3.mk"
+.endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
