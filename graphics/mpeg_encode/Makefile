@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/02/12 23:26:28 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/09 18:58:49 wiz Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
@@ -11,12 +11,13 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://bmrc.berkeley.edu/frame/research/mpeg/mpeg_encode.html
 COMMENT=	The Parallel Berkeley MPEG Encoder
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 WRKSRC=		${WRKDIR}/mpeg_encode
 
 post-build:
-	${MAKE} do-build WRKSRC=${WRKSRC}/convert
+	@cd ${WRKSRC}/convert && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mpeg_encode ${LOCALBASE}/bin
@@ -34,5 +35,5 @@ do-install:
 	done
 	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${LOCALBASE}/man/man1
 
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
