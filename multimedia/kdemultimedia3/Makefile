@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/09 00:53:48 chris Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/15 12:18:51 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 PKGREVISION=	1
@@ -37,8 +37,10 @@ UNLIMIT_RESOURCES+=	datasize
 
 .if !exists(${X11BASE}/lib/libXv.so)
 PLIST_SUBST+=		XV_WORKAROUND="@comment "
+PLIST_SUBST+=		XV_SUFFIX="a"
 .else
 PLIST_SUBST+=		XV_WORKAROUND=""
+PLIST_SUBST+=		XV_SUFFIX="so"
 .endif
 
 .include "../../audio/musicbrainz/buildlink2.mk"
