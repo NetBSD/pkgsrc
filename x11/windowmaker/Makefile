@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/04/15 19:16:48 mycroft Exp $
+# $NetBSD: Makefile,v 1.48 2000/04/15 20:19:18 mycroft Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -68,9 +68,5 @@ post-install:
 		README README.GNOME README.KDE README.definable-cursor \
 		FAQ FAQ.I18N \
 		${PREFIX}/share/doc/WindowMaker
-	for f in geticonset getstyle seticons setstyle wdwrite wmaker wmsetbg \
-		 wsetfont wxcopy wxpaste; do \
-		${MV} ${PREFIX}/man/man1/$$f.1x ${PREFIX}/man/man1/$$f.1; \
-	done
 
 .include "../../mk/bsd.pkg.mk"
