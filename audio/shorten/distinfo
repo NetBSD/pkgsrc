@@ -1,8 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/07/21 19:53:49 wiz Exp $
+$NetBSD: distinfo,v 1.4 2002/12/23 21:20:47 wiz Exp $
 
-SHA1 (shorten-3.1.tar.gz) = 4f5b939614bc8a6c756f92a95909a39a499932f5
-Size (shorten-3.1.tar.gz) = 162942 bytes
-SHA1 (patch-aa) = eeb637249df8eb5a28018ada92a7e270c8c40ba7
-SHA1 (patch-ab) = ed8ce4a276bf6250600cb6e5559400295d14ed7e
-SHA1 (patch-ac) = c82529b4c1824a1be80834d018782b70dfa17f0d
-SHA1 (patch-ad) = a7adfbfd24c4f214739e2a07f7df8f03ab026c2a
+SHA1 (shorten-3.5.0.tar.gz) = 3f85c0d8144e009ea9dd760a561a97d2075edccd
+Size (shorten-3.5.0.tar.gz) = 575027 bytes
