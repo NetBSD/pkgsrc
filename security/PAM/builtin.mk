@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2004/08/19 20:21:56 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2005/01/12 02:27:48 xtraeme Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,8 +27,12 @@ CHECK_BUILTIN.pam?=	no
 .if !empty(CHECK_BUILTIN.pam:M[nN][oO])
 
 .if !empty(USE_BUILTIN.pam:M[yY][eE][sS])
+.  if exists(${_SECURITY_PAM_APPL_H})
 BUILDLINK_TRANSFORM.pam+=	-e "s|/include/pam/|/include/security/|"
+BUILDLINK_FILES.pam+=		include/security/*.h
+.  else
 BUILDLINK_FILES.pam+=		include/pam/*.h
+.  endif
 .endif
 
 .endif	# CHECK_BUILTIN.pam
