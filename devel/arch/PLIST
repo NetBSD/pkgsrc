@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/07 23:51:58 jonb Exp $
-bin/arch
-bin/arch--release-arch--1.0--patch-6-cfg
+@comment $NetBSD: PLIST,v 1.3 2002/02/14 17:56:05 jonb Exp $
+bin/arch--release-arch--1.0--patch-7-cfg
 bin/arch--release-arch-cfg
 bin/arch-cfg
 bin/as-daemon
@@ -9,9 +8,9 @@ bin/dangerous-rename
 bin/file-metadata
 bin/file-tag
 bin/ftp-push
+bin/larch
 bin/need-args
-bin/readlink
-bin/sb
+bin/read-link
 bin/set-file-metadata
 bin/unfold
 bin/wftp-cd
@@ -159,6 +158,7 @@ lib/libhackerlab.a
 libexec/arch/arch/add
 libexec/arch/arch/add-log
 libexec/arch/arch/add-pristine
+libexec/arch/arch/arch
 libexec/arch/arch/arch-rmrf
 libexec/arch/arch/archive-cache-revision
 libexec/arch/arch/archive-cached-revisions
@@ -200,7 +200,6 @@ libexec/arch/arch/file-diffs
 libexec/arch/arch/file-history
 libexec/arch/arch/file-list
 libexec/arch/arch/file-syntax-filter
-libexec/arch/arch/file-tag
 libexec/arch/arch/find-in-cache
 libexec/arch/arch/finish-branch
 libexec/arch/arch/get
@@ -211,7 +210,7 @@ libexec/arch/arch/import
 libexec/arch/arch/indicated-revision
 libexec/arch/arch/init-tree
 libexec/arch/arch/inventory
-libexec/arch/arch/join
+libexec/arch/arch/join-branch
 libexec/arch/arch/library-add
 libexec/arch/arch/library-archives
 libexec/arch/arch/library-branches
@@ -259,6 +258,7 @@ libexec/arch/arch/notify-browser
 libexec/arch/arch/notify-library
 libexec/arch/arch/old-file
 libexec/arch/arch/parse-package-name
+libexec/arch/arch/patch
 libexec/arch/arch/patch-add-log
 libexec/arch/arch/patch-details
 libexec/arch/arch/patch-level-lt
@@ -287,6 +287,7 @@ libexec/arch/arch/tag
 libexec/arch/arch/tagging-method
 libexec/arch/arch/take-from-cache
 libexec/arch/arch/top
+libexec/arch/arch/touched-files-prereqs
 libexec/arch/arch/tree-lint
 libexec/arch/arch/tree-repair
 libexec/arch/arch/tree-root
@@ -357,7 +358,7 @@ libexec/arch/branching-and-merging/Help.category_title
 libexec/arch/branching-and-merging/Help.list
 libexec/arch/branching-and-merging/delta-patch
 libexec/arch/branching-and-merging/finish-branch
-libexec/arch/branching-and-merging/join
+libexec/arch/branching-and-merging/join-branch
 libexec/arch/branching-and-merging/prepare-branch
 libexec/arch/branching-and-merging/reconcile
 libexec/arch/branching-and-merging/replay
@@ -385,7 +386,6 @@ libexec/arch/inventory/add
 libexec/arch/inventory/check-manifest
 libexec/arch/inventory/delete
 libexec/arch/inventory/explicit-default
-libexec/arch/inventory/file-tag
 libexec/arch/inventory/inventory
 libexec/arch/inventory/manifest
 libexec/arch/inventory/missing-tags
@@ -411,6 +411,7 @@ libexec/arch/library/library-remove
 libexec/arch/library/library-revisions
 libexec/arch/library/library-versions
 libexec/arch/library/my-revision-library
+libexec/arch/library/touched-files-prereqs
 libexec/arch/local-cache/Help.category
 libexec/arch/local-cache/Help.category_title
 libexec/arch/local-cache/Help.list
@@ -581,6 +582,7 @@ share/doc/html/arch/web-site.html
 share/examples/arch/README.000.first-steps
 share/examples/arch/README.010.first-archive
 share/examples/arch/README.020.branching-arch
+share/examples/arch/README.025.branching-advice
 share/examples/arch/README.030.importing-arch-releases
 share/examples/arch/README.040.importing-other-releases
 share/examples/arch/browser/=browser
