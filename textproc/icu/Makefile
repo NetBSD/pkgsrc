@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2003/12/02 23:11:30 recht Exp $
+# $NetBSD: Makefile,v 1.24 2003/12/03 16:52:48 recht Exp $
 #
 
-DISTNAME=	icu-2.6
+DISTNAME=	icu-2.6.1
 WRKSRC=		${WRKDIR}/${PKGBASE}/source
 CATEGORIES=	textproc
+EXTRACT_SUFX=	.tgz
+
 #
 # The IBM site has long delays that can cause ftp to timeout.  Use the
 # backup FTP repositories in preference to the IBM one.
@@ -23,7 +25,6 @@ TEST_TARGET=		check
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-static
-CONFIGURE_ARGS+=	--disable-threads
 
 # ICU's configure script will automatically append "/icu" to the sysconfdir.
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
@@ -32,13 +33,19 @@ PKG_SYSCONFSUBDIR=	icu
 SUPPORT_FILES+=		${PREFIX}/share/examples/icu/convrtrs.txt \
 			${PKG_SYSCONFDIR}/convrtrs.txt
 
+.include "../../mk/pthread.buildlink2.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
+CONFIGURE_ARGS+=	--disable-threads
+.endif
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(CC_VERSION:Mgcc-3*)
 CXXFLAGS:=		${CXXFLAGS:C/-O[0-9]*/-O/g}
-CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O/g}
-CXXFLAGS:=		${CXXFLAGS:C/-Os/-O/g}
 CFLAGS:=		${CFLAGS:C/-Os/-O/g}
+CXXFLAGS:=		${CXXFLAGS:C/-Os/-O/g}
+CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O/g}
 CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 CONFIGURE_ENV+=		CFLAGS="${CFLAGS}"
 .endif

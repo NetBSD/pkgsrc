@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/23 07:49:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/03 16:52:48 recht Exp $
 bin/derb
 bin/genbrk
 bin/gencnval
@@ -124,31 +124,31 @@ lib/icu/current
 lib/libicudata.a
 lib/libicudata.so
 lib/libicudata.so.26
-lib/libicudata.so.26.0
+lib/libicudata.so.26.1
 lib/libicui18n.a
 lib/libicui18n.so
 lib/libicui18n.so.26
-lib/libicui18n.so.26.0
+lib/libicui18n.so.26.1
 lib/libicuio.a
 lib/libicuio.so
 lib/libicuio.so.26
-lib/libicuio.so.26.0
+lib/libicuio.so.26.1
 lib/libicule.a
 lib/libicule.so
 lib/libicule.so.26
-lib/libicule.so.26.0
+lib/libicule.so.26.1
 lib/libiculx.a
 lib/libiculx.so
 lib/libiculx.so.26
-lib/libiculx.so.26.0
+lib/libiculx.so.26.1
 lib/libicutoolutil.a
 lib/libicutoolutil.so
 lib/libicutoolutil.so.26
-lib/libicutoolutil.so.26.0
+lib/libicutoolutil.so.26.1
 lib/libicuuc.a
 lib/libicuuc.so
 lib/libicuuc.so.26
-lib/libicuuc.so.26.0
+lib/libicuuc.so.26.1
 man/man1/gencnval.1
 man/man1/genrb.1
 man/man1/icu-config.1
@@ -178,6 +178,7 @@ sbin/genuca
 share/examples/icu/convrtrs.txt
 share/icu/${PKGVERSION}/README
 share/icu/${PKGVERSION}/config/mh-bsd-gcc
+share/icu/${PKGVERSION}/license.html
 share/icu/${PKGVERSION}/mkinstalldirs
 @dirrm share/icu/${PKGVERSION}/config
 @dirrm share/icu/${PKGVERSION}
