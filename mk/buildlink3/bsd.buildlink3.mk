@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.70 2004/02/04 22:27:41 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.71 2004/02/04 22:31:54 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -205,7 +205,7 @@ BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
 # If we're using the built-in package, then provide sensible defaults.
 #
 .  if !empty(BUILDLINK_USE_BUILTIN.${_pkg_}:M[yY][eE][sS])
-_BLNK_PKG_DBDIR.${_pkg_}?=	not_found
+_BLNK_PKG_DBDIR.${_pkg_}?=	_BLNK_PKG_DBDIR.${_pkg_}_not_found
 _BLNK_PKG_INFO.${_pkg_}?=	${TRUE}
 BUILDLINK_PKGNAME.${_pkg_}?=	${_pkg_}
 BUILDLINK_IS_DEPOT.${_pkg_}?=	no
@@ -218,14 +218,14 @@ BUILDLINK_PREFIX.${_pkg_}?=	/usr
 .  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
 _BLNK_PKG_DBDIR.${_pkg_}?=	# empty
 .    for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
-.      if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
+.      if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
 _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	dir="";								\
 	if [ -d ${_PKG_DBDIR} ]; then					\
 		dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -S lsbest "${_depend_}" || ${TRUE}`; \
 	fi;								\
 	case "$$dir" in							\
-	"")	dir="not_found" ;;					\
+	"")	dir="_BLNK_PKG_DBDIR.${_pkg_}_not_found" ;;		\
 	*)	if [ -f $$dir/+DEPOT ]; then				\
 			dir=`${HEAD} -1 $$dir/+DEPOT`;			\
 		fi ;;							\
@@ -233,12 +233,12 @@ _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	${ECHO} $$dir
 .      endif
 .    endfor
-.    if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
+.    if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
 MAKEFLAGS+=	_BLNK_PKG_DBDIR.${_pkg_}=${_BLNK_PKG_DBDIR.${_pkg_}}
 .    endif
 .  endif
 
-.  if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
+.  if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
 _BLNK_PKG_INFO.${_pkg_}?=	${PKG_INFO_CMD} -K ${_BLNK_PKG_DBDIR.${_pkg_}:H}
 .  else
 _BLNK_PKG_INFO.${_pkg_}?=	${PKG_INFO_CMD} -K ${_PKG_DBDIR}
@@ -257,14 +257,14 @@ BUILDLINK_IS_DEPOT.${_pkg_}?=	no
 .    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 BUILDLINK_PREFIX.${_pkg_}=	${_BLNK_PKG_DBDIR.${_pkg_}}
 .    else
-.      if empty(BUILDLINK_PKGNAME.${_pkg_}:Mnot_found)
+.      if empty(BUILDLINK_PKGNAME.${_pkg_}:M*not_found)
 BUILDLINK_PREFIX.${_pkg_}!=	\
 	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,;q"
 .      else
-BUILDLINK_PREFIX.${_pkg_}=	not_found
+BUILDLINK_PREFIX.${_pkg_}=	BUILDLINK_PREFIX.${_pkg_}_not_found
 .      endif
 .    endif
-.    if empty(BUILDLINK_PREFIX.${_pkg_}:Mnot_found)
+.    if empty(BUILDLINK_PREFIX.${_pkg_}:M*not_found)
 MAKEFLAGS+=	BUILDLINK_PREFIX.${_pkg_}=${BUILDLINK_PREFIX.${_pkg_}}
 .    endif
 .  endif
