@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1011 2002/07/22 22:00:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1012 2002/07/23 19:10:27 cjep Exp $
 #
 # This file is in the public domain.
 #
@@ -2609,7 +2609,7 @@ _SU_TARGET=								\
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to $$action ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
+		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
 
 do-su-install: 
