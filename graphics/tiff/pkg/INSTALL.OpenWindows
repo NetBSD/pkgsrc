@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL.OpenWindows,v 1.1 2001/07/08 13:01:44 tron Exp $
+# $NetBSD: INSTALL.OpenWindows,v 1.2 2001/07/08 20:20:23 tron Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -8,9 +8,14 @@ STAGE=$2
 case ${STAGE} in
 PRE-INSTALL)
 	cd @X11BASE@/lib
+.	if [ -f libtiff.so ]
+	then
+		@MV@ libtiff.so libtiff.so.openwin
+		@LN@ -s @PREFIX@/lib/libtiff.so 
+	fi
 	if [ -f libtiff.so.3 ]
 	then
-		@MV@ libtiff.so.3 libtiff.so.3.ow
+		@MV@ libtiff.so.3 libtiff.so.3.openwin
 		@LN@ -s @PREFIX@/lib/libtiff.so.3 
 	fi
 	;;
@@ -23,9 +28,13 @@ DEINSTALL)
 	
 POST-DEINSTALL)
 	cd @X11BASE@/lib
-	if [ -f libtiff.so.3.ow ]
+	if [ -f libtiff.so.3.openwin ]
 	then
-		@MV@ libtiff.so.3.ow libtiff.so.3
+		@MV@ libtiff.so.3.openwin libtiff.so.3
+	fi
+	if [ -f libtiff.so.openwin ]
+	then
+		@MV@ libtiff.so.openwin libtiff.so
 	fi
 	;;
 
