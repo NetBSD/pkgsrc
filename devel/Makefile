@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2004/12/03 15:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.583 2004/12/03 16:51:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -125,6 +125,7 @@ SUBDIR+=	florist
 SUBDIR+=	fortran-utils
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
+SUBDIR+=	g-wrap1
 SUBDIR+=	gail
 SUBDIR+=	gal
 SUBDIR+=	gal2
@@ -170,6 +171,7 @@ SUBDIR+=	gtl0
 SUBDIR+=	gtoolkit-examples
 SUBDIR+=	guile-fcgi
 SUBDIR+=	guile-gtk
+SUBDIR+=	guile-lib
 SUBDIR+=	guile-oops
 SUBDIR+=	guile-slib
 SUBDIR+=	guile-www
