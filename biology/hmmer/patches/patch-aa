@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/08/16 02:47:49 ben Exp $
+$NetBSD: patch-aa,v 1.3 2004/08/23 14:37:04 ben Exp $
 
 --- Makefile.in.orig	Fri Jun 13 14:05:13 2003
 +++ Makefile.in
@@ -22,8 +22,8 @@ $NetBSD: patch-aa,v 1.2 2004/08/16 02:47:49 ben Exp $
  install: 
 -	mkdir -p ${BINDIR}
 -	-mkdir -p ${MANDIR}/man${MANSUFFIX}
-+	${MKDIR} -p ${BINDIR}
-+	-${MKDIR} -p ${MANDIR}/man${MANSUFFIX}
++	${MKDIR} ${BINDIR}
++	-${MKDIR} ${MANDIR}/man${MANSUFFIX}
  	for file in $(PROGS) $(PVMPROGS); do\
 -	   cp src/$$file $(BINDIR)/;\
 +	   $(INSTBIN) src/$$file $(BINDIR)/;\
@@ -53,7 +53,7 @@ $NetBSD: patch-aa,v 1.2 2004/08/16 02:47:49 ben Exp $
  #
  ftpdist:
 -	mkdir -p ${FTPDIR}
-+	${MKDIR} -p ${FTPDIR}
++	${MKDIR} ${FTPDIR}
  	cp -f hmmer-$(RELEASE)/00README         ${FTPDIR}
  	cp -f hmmer-$(RELEASE)/COPYRIGHT        ${FTPDIR}
  	cp -f hmmer-$(RELEASE)/INSTALL          ${FTPDIR}
