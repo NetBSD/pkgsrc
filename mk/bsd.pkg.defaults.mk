@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.43 2002/03/07 09:00:14 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.44 2002/03/18 17:11:04 fredb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -465,14 +465,6 @@ ARLA_CACHE?=	${LOCALBASE}/cache
 # Possible: category/pkg
 # Default: not defined
 
-CCLIENT_MBOX_FMT?=	unix
-# Used in imap-uw to set the default format used by c-client programs for new
-# mailbox creation.  Check the UW IMAP documentation for more details
-# regarding the pros and cons of the various mailbox formats.
-#
-# Possible: mbox, mbx, mh, mmdf, mtx, mx, news, phile, tenex, unix
-# Default: unix
-
 CUPS_GROUP?=	sys
 # Used in the cups package to specify the group to run CUPS commands as.
 # Possible: any group name
@@ -566,6 +558,21 @@ FOX_USE_XUNICODE?=	YES
 # Can be enabled to disable russian ID3 tag support
 # Possible: yes, no, not defined
 # Default: not defined (-> Russian support enabled)
+
+IMAP_UW_CCLIENT_MBOX_FMT?=	unix
+# Used in imap-uw to set the default format used by c-client programs for
+# new mailbox creation.  Check the UW IMAP documentation for more details
+# regarding the pros and cons of the various mailbox formats.
+#
+# Possible: mbox, mbx, mh, mmdf, mtx, mx, news, phile, tenex, unix
+# Default: unix
+
+#IMAP_UW_NO_CLEARTEXT?=	YES
+# Used in imap-uw to disallow plaintext passwords except when SSL or TLS
+# is used. This effectively disallows cleartext passwords.
+#
+# Possible: not defined, YES
+# Default: not defined
 
 INN_DATA_DIR?= /var/news
 # Used by inn to specify the data directory.

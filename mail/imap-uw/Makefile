@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/12/15 08:30:26 martti Exp $
+# $NetBSD: Makefile,v 1.38 2002/03/18 17:11:05 fredb Exp $
 
 DISTNAME=       imap-2001a
 PKGNAME=        imap-uw-2001.1
@@ -27,15 +27,6 @@ ALL_TARGET=	gso
 ALL_TARGET=	neb
 .endif
 
-# CCLIENT_MBOX_FMT is the default format used by c-client programs for new
-# mailbox creation.  Check the UW IMAP documentation for more details
-# regarding the pros and cons of the various mailbox formats.
-#
-# Possible values: mbox, mbx, mh, mmdf, mtx, mx, news, phile, tenex, unix
-# Default: unix
-#
-CCLIENT_MBOX_FMT?=	unix
-
 CCLIENT_INCS=	c-client.h env.h env_unix.h flstring.h fs.h ftl.h	\
 		imap4r1.h linkage.c linkage.h mail.h misc.h netmsg.h	\
 		newsrc.h nl.h nntp.h osdep.h pop3.h rfc822.h smtp.h	\
@@ -58,13 +49,17 @@ MAKE_ENV+=	SSLDIR="${SSLBASE}"
 MAKE_ENV+=	SSLCERTS="${SSLCERTS}"
 MAKE_ENV+=	CCLIENT_MAJOR="${CCLIENT_MAJOR}"
 MAKE_ENV+=	CCLIENT_MINOR="${CCLIENT_MINOR}"
-MAKE_ENV+=	CREATEPROTO=${CCLIENT_MBOX_FMT}proto
+MAKE_ENV+=	CREATEPROTO=${UMAP_IW_CCLIENT_MBOX_FMT}proto
 
 ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
 ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
 ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
+.if defined(IMAP_UW_NO_CLEARTEXT) && ${IMAP_UW_NO_CLEARTEXT} == "YES"
+ALL_TARGET+=	SSLTYPE="nopwd"
+.else
 ALL_TARGET+=	SPECIALAUTHENTICATORS="ssl"
 ALL_TARGET+=	SSLTYPE="unix"
+.endif
 
 post-extract:
 	#
