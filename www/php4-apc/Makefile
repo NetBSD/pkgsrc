@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/31 19:56:08 jdolecek Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/19 13:19:34 wiz Exp $
 
 DISTNAME=	apc-1.1.0pl1
 PKGNAME=	php-apc-1.1.0.1
@@ -14,7 +14,7 @@ COMMENT=	Alternative PHP Cache for PHP4
 EXTRACT_ELEMENTS=	# empty
 
 USE_BUILDLINK2=		YES
-DISTINFO_FILE=		${PKGDIR}/distinfo
+DISTINFO_FILE=		${.CURDIR}/distinfo
 
 .include "../../www/php4/Makefile.module"
 
