@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/25 16:26:47 uebayasi Exp $
+bin/cmddump
+bin/hex2cmd
+bin/mkdisk
+bin/xtrs
+lib/xtrs/romimage.m4p
+man/man1/cassette.1
+man/man1/cmddump.1
+man/man1/hex2cmd.1
+man/man1/mkdisk.1
+man/man1/xtrs.1
+share/doc/xtrs/xtrsrom4p.README
+@dirrm share/doc/xtrs
+@dirrm lib/xtrs
