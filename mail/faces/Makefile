@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/07/08 12:47:02 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/07/11 09:53:10 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -22,6 +22,7 @@ post-configure:
 	          scripts/mkfacesindex; do \
 		${MV} $$f $$f.in;					\
 		${SED} -e 's|@localbase@|'${LOCALBASE}'|g' 		\
+			-e 's|@x11prefix@|'${X11PREFIX}'|g'		\
 			-e 's|@x11base@|'${X11BASE}'|g' < $$f.in > $$f;	\
 	done
 
@@ -31,7 +32,7 @@ post-install:
 	${LN} -f ${PREFIX}/man/man1/compface.1 ${PREFIX}/man/man1/uncompface.1
 	${LN} -f ${PREFIX}/man/man3/compface.3 ${PREFIX}/man/man3/uncompface.3
 	@${SED} -e 's|@localbase@|'${LOCALBASE}'|g' \
-		-e 's|@x11base@|'${X11BASE}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
+		-e 's|@x11prefix@|'${X11PREFIX}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"
 
