@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/20 11:09:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/20 15:21:04 jmmv Exp $
 bin/tunesbrowser
 man/man1/tunesbrowser.1
-share/comp.blue.png
-share/comp.red.png
-share/sound1.png
-share/sound2.png
-share/tunesbrowser.glade
+share/tunesbrowser/comp.blue.png
+share/tunesbrowser/comp.red.png
+share/tunesbrowser/sound1.png
+share/tunesbrowser/sound2.png
+share/tunesbrowser/tunesbrowser.glade
+@dirrm share/tunesbrowser
