@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6250 2004/06/20 21:27:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.6251 2004/06/20 21:40:49 martin Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2983,3 +2983,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated grub to 0.95 [xtraeme 2004-06-20]
 	Updated msmtp to 1.0.0 [xtraeme 2004-06-20]
 	Updated gdm to 2.6.0.3 [jmmv 2004-06-20]
+	Updated cdrecord to 2.00.3nb1 [martin 2004-06-20]
