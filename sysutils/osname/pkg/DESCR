@@ -1,0 +1,3 @@
+Osname prints the canonical name of the current operating system:
+lowercase, no special characters (e.g. hyphens).  This is useful
+for scripts.  Solaris is differentiated from SunOS.
