@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/06 19:52:44 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/09 09:12:52 recht Exp $
 #
 
 DISTNAME=		ZODB3-3.2
@@ -14,7 +14,7 @@ USE_BUILDLINK2=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	23pth 23 22pth 22
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
