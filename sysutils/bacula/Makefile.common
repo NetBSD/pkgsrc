@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/11/06 16:17:38 mjl Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/12/14 14:51:07 xtraeme Exp $
 #
 
 DISTNAME=		bacula-1.36.0
@@ -17,11 +17,8 @@ USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR?=	bacula
-BACULA_PIDDIR?=		/var/run/bacula
-BACULA_WORKINGDIR?=	/var/spool/bacula
-BACULA_GROUP?=		bacula
-BACULA_DIR_USER?=	bacula-dir
-BACULA_SD_USER?=	bacula-sd
+BACULA_PIDDIR?=		${VARBASE}/run/bacula
+BACULA_WORKINGDIR?=	${VARBASE}/spool/bacula
 
 OWN_DIRS_PERMS=		${BACULA_PIDDIR} root ${BACULA_GROUP} 770
 OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} root ${BACULA_GROUP} 770
@@ -40,11 +37,11 @@ CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
 CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER} --with-dir-group=${BACULA_GROUP}
 CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER} --with-sd-group=${BACULA_GROUP}
 .if !empty(PKG_OPTIONS:Mcatalog-sqlite)
-CONFIGURE_ARGS+=	--with-sqlite=${PREFIX}
+CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite}
 BACULA_DB=		sqlite
 .endif
 .if !empty(PKG_OPTIONS:Mcatalog-pgsql)
-CONFIGURE_ARGS+=	-with-postgresql=${PREFIX}
+CONFIGURE_ARGS+=	-with-postgresql=${BUILDLINK_PREFIX.postgresql-lib}
 BACULA_DB=		postgresql
 .endif
 
@@ -76,7 +73,7 @@ pre-install:
 .include "../../databases/sqlite/buildlink3.mk"
 .endif
 .if !empty(PKG_OPTIONS:Mcatalog-pgsql)
-.include "../../databases/postgresql74-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
