@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2001/09/27 23:18:36 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/11/26 10:13:20 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.go.dlr.de:8081/pdinfo_dv/psutils.html
 COMMENT=	Utilities for manipulating PostScript documents
 
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
@@ -22,6 +24,9 @@ PAPERSIZE?=	A4
 MAKE_ENV+=	CC="${CC}" PERL5="${PERL5}"
 MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
 MAKEFILE=	Makefile.unix
+
+EGDIR=		${PREFIX}/share/examples/psutils
+CONF_FILES=	${EGDIR}/psutils.cfg ${PKG_SYSCONFDIR}/psutils.cfg
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
@@ -48,9 +53,9 @@ post-install:
 	for f in epsffit psbook psnup psresize psselect pstops; do	\
 		strip ${PREFIX}/bin/$$f;				\
 	done
+	${INSTALL_DATA_DIR} ${EGDIR}
 	low=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`;		\
-	if [ ! -f ${PREFIX}/etc/psutils.cfg ]; then			\
-		${ECHO} "PAPERSIZE=$$low" > ${PREFIX}/etc/psutils.cfg;	\
-	fi
+	${ECHO} "PAPERSIZE=$$low" > ${EGDIR}/psutils.cfg;
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
