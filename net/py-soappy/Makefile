@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/05/05 08:11:07 recht Exp $
+# $NetBSD: Makefile,v 1.14 2004/06/27 23:00:24 recht Exp $
 #
 
-DISTNAME=	SOAPpy-0.11.3
+DISTNAME=	SOAPpy-0.11.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	net
