@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2002/08/25 18:39:17 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/30 23:53:48 wiz Exp $
 
-DISTNAME=	libmng-1.0.3
+DISTNAME=	libmng-1.0.4
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.3-t.com/libmng/download/ \
@@ -14,7 +14,7 @@ COMMENT=	Multiple-image Network Graphics (MNG) reference library
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-lcms=${BUILDLINK_PREFIX.lcms}
