@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- contrib/fdpass/fdpass.c.orig	Mon Nov 23 10:19:55 1998
++++ contrib/fdpass/fdpass.c	Mon Nov 23 10:20:10 1998
+@@ -9,7 +9,7 @@
+ #include "session.h" /* session.h from fddev220.arj */
+ 
+ 
+-void main (int argc,char *argv[]) 
++int main (int argc,char *argv[]) 
+ {
+ 	int fd;
+ 	_PSW koko;
+@@ -55,4 +55,5 @@
+ 		}
+ 	}
+ 	close (fd);
++	return 0;
+ }

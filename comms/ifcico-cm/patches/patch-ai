@@ -1,0 +1,19 @@
+$NetBSD: patch-ai,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- ifcico/Makefile.orig	Sun Nov 22 16:45:24 1998
++++ ifcico/Makefile	Sun Nov 22 17:05:29 1998
+@@ -76,13 +76,7 @@
+ flaglex.o:	flaglex.c flagexp.c
+ 
+ install: all
+-	${INSTALL} -o ${OWNER} -g ${GROUP} -m ${SMODE} ifcico ${BINDIR}/ifcico
+-	${INSTALL} -o ${OWNER} -g ${GROUP} -m ${SMODE} ifindex ${BINDIR}/ifindex
+-	${INSTALL} -o ${OWNER} -g ${GROUP} -m ${SMODE} ifinfo ${BINDIR}/ifinfo
+-	${INSTALL} -o ${OWNER} -g ${GROUP} -m ${SMODE} ifreq ${BINDIR}/ifreq
+-	${INSTALL} -o ${OWNER} -g ${GROUP} -m ${SMODE} ifroute ${BINDIR}/ifroute
+-	${INSTALL} -o ${OWNER} -g ${GROUP} -m ${SMODE} ifstat ${BINDIR}/ifstat
+-	${INSTALL} -o ${OWNER} -g ${GROUP} -m ${SMODE} nlpatch ${BINDIR}/nlpatch
++	${BSD_INSTALL_PROGRAM} ifcico ifindex ifinfo ifreq ifroute ifstat nlpatch ${BINDIR}
+ 
+ lc:
+ 	wc -l ${SRCS} ${HDRS} ${OTHER}

@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- ifcico/ftsc.c.orig	Sun Nov 22 16:32:03 1998
++++ ifcico/ftsc.c	Sun Nov 22 16:32:09 1998
+@@ -22,7 +22,6 @@
+ extern int sendbark(void);
+ extern int recvbark(void);
+ extern void rdoptions(node*);
+-extern int setproctitle(char*);
+ 
+ static int rxftsc(void);
+ static int txftsc(void);

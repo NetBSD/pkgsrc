@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- ifcico/yoohoo.c.orig	Sun Nov 22 16:32:42 1998
++++ ifcico/yoohoo.c	Sun Nov 22 16:32:48 1998
+@@ -51,7 +51,6 @@
+ extern int txdietifna(void);
+ extern void rdoptions(node*);
+ extern int nodelock(faddr*);
+-extern void setproctitle(char*);
+ 
+ static int rxyoohoo(void);
+ static int txyoohoo(void);
