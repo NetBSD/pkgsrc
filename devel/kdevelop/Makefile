@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/03/01 13:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2001/03/04 12:03:52 tron Exp $
 
 DISTNAME=	kdevelop-1.3
 CATEGORIES=	devel kde
@@ -15,7 +15,6 @@ DEPENDS+=       autoconf-*:../../devel/autoconf
 DEPENDS+=       automake-*:../../devel/automake
 DEPENDS+=       a2ps-*:../../print/a2ps
 DEPENDS+=       kdebase-1.*:../../x11/kdebase
-DEPENDS+=       kdbg>=1.0:../../devel/kdbg
 DEPENDS+=       kdoc-2*:../../textproc/kdoc
 DEPENDS+=       htdig>=3.1.5:../../www/htdig
 DEPENDS+=       a2ps>=4.12:../../print/a2ps
