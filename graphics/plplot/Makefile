@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2001/03/27 03:20:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/30 20:26:22 jtb Exp $
 
-DISTNAME=	plplot-5.0.2
+DISTNAME=	plplot-5.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=plplot/}
 
@@ -10,8 +10,8 @@ COMMENT=	Scientific plotting package
 
 DEPENDS+=	tcl>=8.3.0:../../lang/tcl
 DEPENDS+= 	tk>=8.3.0:../../x11/tk
-BUILD_DEPENDS+=	m4-1.4:../../devel/m4
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	m4>=1.4:../../devel/m4
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=	perl-5.*:../../lang/perl5
 
 GNU_CONFIGURE=	#defined
@@ -49,12 +49,20 @@ CONFIGURE_ARGS+="--disable-itcl"
 CONFIGURE_ARGS+="--disable-dp"
 
 post-patch:
-	for f in ${WRKSRC}/src/plctrl.c ; do		\
-	${SED} -e 's:@PREFIX@:'${PREFIX}':g'		\
-	< $$f > $$f.tmp && ${MV} $$f.tmp $$f ; done
+	for f in ${WRKSRC}/src/plctrl.c; do				\
+		${SED} -e 's:@PREFIX@:'${PREFIX}':g'			\
+		$$f > $$f.tmp && ${MV} $$f.tmp $$f;			\
+	done
 
 pre-configure:
 	(cd ${WRKSRC}/cf && ${LOCALBASE}/bin/autoconf)
 	${CP} ${WRKSRC}/cf/configure ${WRKSRC}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-0.4.1.dvi 		\
+	${PREFIX}/share/doc/plplot
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/plplot
+	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-html-0.4.1/*.html	\
+	${PREFIX}/share/doc/html/plplot
 
 .include "../../mk/bsd.pkg.mk"
