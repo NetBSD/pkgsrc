@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.59 2005/02/03 23:12:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.60 2005/02/03 23:31:47 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -127,3 +127,5 @@ Pullup ticket 263 - requested by Julio M. Merino Vidal
 security fix for gpdf
 Pullup ticket 265 - requested by Kimmo Suominen
 security fix for p5-DBI
+Pullup ticket 266 - requested by Adrian Portelli
+security fix for dillo
