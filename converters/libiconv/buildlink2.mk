@@ -1,14 +1,36 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:26 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.4 2002/08/22 19:12:25 jlam Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
 
-BUILDLINK_PACKAGES+=		iconv
 BUILDLINK_DEPENDS.iconv?=	libiconv>=1.5
 BUILDLINK_PKGSRCDIR.iconv?=	../../converters/libiconv
 
-EVAL_PREFIX+=	BUILDLINK_PREFIX.iconv=libiconv
-BUILDLINK_PREFIX.iconv_DEFAULT=		${LOCALBASE}
+.if defined(USE_GNU_ICONV)
+_NEED_ICONV=		YES
+.else
+.  if exists(/usr/include/iconv.h)
+_NEED_ICONV=		NO
+.  else
+_NEED_ICONV=		YES
+.  endif
+_INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
+INCOMPAT_ICONV?=	# empty
+.  for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
+.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+_NEED_ICONV=		YES
+.    endif
+.  endfor
+.endif
+
+.if ${_NEED_ICONV} == "YES"
+BUILDLINK_PACKAGES+=		iconv
+EVAL_PREFIX+=			BUILDLINK_PREFIX.iconv=libiconv
+BUILDLINK_PREFIX.iconv_DEFAULT=	${LOCALBASE}
+.else
+BUILDLINK_PREFIX.iconv=		/usr
+.endif
+
 BUILDLINK_FILES.iconv=		include/iconv.h
 BUILDLINK_FILES.iconv+=		include/libcharset.h
 BUILDLINK_FILES.iconv+=		lib/libcharset.*
