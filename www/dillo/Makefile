@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/12/24 14:35:32 dillo Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/12 20:06:34 reinoud Exp $
 #
 
-DISTNAME=	dillo-0.6.3
+DISTNAME=	dillo-0.6.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dillo/}
 
