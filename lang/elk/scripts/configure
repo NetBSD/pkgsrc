@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: configure,v 1.4 1998/08/07 11:08:56 agc Exp $
+#
 
 mach=`uname -m`
 

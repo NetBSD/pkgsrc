@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/08/07 11:09:59 agc Exp $
+
 --- /tmp/newsdr/src/sip_common.c	Tue Apr 29 23:48:25 1997
 +++ src/sip_common.c	Wed Jun 17 16:53:24 1998
 @@ -211,7 +211,7 @@

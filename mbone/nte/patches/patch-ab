@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:09:56 agc Exp $
+
 --- src/Makefile.template.orig	Thu Oct 31 14:35:42 1996
 +++ src/Makefile.template	Thu Oct 31 14:36:23 1996
 @@ -168,13 +168,13 @@

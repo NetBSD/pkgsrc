@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.3 1998/08/07 11:14:28 agc Exp $
+
 --- scripts/RunCache.in.orig	Thu Oct 31 08:28:58 1996
 +++ scripts/RunCache.in	Sun May 24 21:53:01 1998
 @@ -16,9 +16,9 @@

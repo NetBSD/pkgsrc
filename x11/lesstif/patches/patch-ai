@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.3 1998/08/07 11:18:10 agc Exp $
+
 --- doc/lessdox/widgets/Makefile.in.orig	Fri May 22 21:20:30 1998
 +++ doc/lessdox/widgets/Makefile.in	Sat May 23 14:26:46 1998
 @@ -98,10 +98,10 @@

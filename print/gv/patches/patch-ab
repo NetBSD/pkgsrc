@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:11:25 agc Exp $
+
 --- doc/Imakefile.orig	Fri Jun  6 15:00:00 1997
 +++ doc/Imakefile	Mon Jun  9 14:36:59 1997
 @@ -27,7 +27,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 1998/08/07 11:09:47 agc Exp $
+
 --- pine/osdep/err_desc.orig	Sat Jul 18 22:22:47 1998
 +++ pine/osdep/err_desc	Sat Jul 18 22:23:08 1998
 @@ -11,10 +11,7 @@

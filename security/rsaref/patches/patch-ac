@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:13:47 agc Exp $
+
 --- ../source/md2.h.orig	Fri Mar 25 14:01:49 1994
 +++ ../source/md2.h	Tue Jul 14 13:20:11 1998
 @@ -22,6 +22,8 @@

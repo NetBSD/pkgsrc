@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/08/07 11:11:04 agc Exp $
+
 *** src/pathnames.h.orig	Mon Dec 22 00:25:08 1997
 --- src/pathnames.h	Mon Mar  2 19:13:35 1998
 ***************

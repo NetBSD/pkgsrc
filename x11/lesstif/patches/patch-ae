@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.5 1998/08/07 11:18:09 agc Exp $
+
 --- doc/lessdox/clients/Makefile.in.orig	Fri May 22 21:20:30 1998
 +++ doc/lessdox/clients/Makefile.in	Sat May 23 15:10:41 1998
 @@ -98,10 +98,10 @@

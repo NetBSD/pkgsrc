@@ -1,3 +1,8 @@
+#! /bin/sh
+#
+# $NetBSD: configure,v 1.3 1998/08/07 11:10:02 agc Exp $
+#
+
 mkdir ${WRKSRC}/netbsd
 cat ${FILESDIR}/Makefile.netbsd ${WRKSRC}/src/Makefile.template > ${WRKSRC}/netbsd/Makefile
 cp ${FILESDIR}/Makefile.work ${WRKSRC}/Makefile

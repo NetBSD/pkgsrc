@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:08:58 agc Exp $
+
 --- fc.orig	Tue May 16 17:37:49 1995
 +++ fc	Thu Jul  9 08:36:49 1998
 @@ -1,4 +1,4 @@

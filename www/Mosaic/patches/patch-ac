@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:14:16 agc Exp $
+
 *** src/gui-dialogs.c.orig	Mon Aug  7 18:23:34 1995
 --- src/gui-dialogs.c	Mon Aug  7 18:23:46 1995
 ***************

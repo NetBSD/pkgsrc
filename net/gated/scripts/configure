@@ -1,5 +1,7 @@
 #!/bin/sh
 #
+# $NetBSD: configure,v 1.2 1998/08/07 11:10:40 agc Exp $
+#
 # Configure gated
 #
 cd $WRKSRC

@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: plist,v 1.2 1998/08/07 11:14:31 agc Exp $
+#
 PREFIX=$1
 RELPATH=
 while [ $PREFIX != / ]

@@ -1,4 +1,6 @@
 # 
+# $NetBSD: MESSAGE,v 1.2 1998/08/07 11:11:03 agc Exp $
+#
 # You may want to install the x11/p5-Tk and net/p5-SNMP packages to
 # use the tkmib application!
 #

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:33 agc Exp $
+
 --- doc/screen.texinfo.orig	Tue Nov 21 03:03:15 1995
 +++ doc/screen.texinfo	Mon Jun 16 15:16:36 1997
 @@ -2,6 +2,9 @@

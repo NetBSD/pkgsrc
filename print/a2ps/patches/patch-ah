@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:11:21 agc Exp $
+
 --- contrib/emacs/Makefile.in.orig	Thu Jun 25 16:25:34 1998
 +++ contrib/emacs/Makefile.in	Wed Jul  1 22:14:38 1998
 @@ -74,7 +74,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:03 agc Exp $
+
 --- modules/FvwmForm/FvwmForm.c.orig	Sat Feb  1 14:02:05 1997
 +++ modules/FvwmForm/FvwmForm.c	Sat Feb  1 14:03:13 1997
 @@ -16,7 +16,13 @@

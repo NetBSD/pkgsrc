@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:10:15 agc Exp $
+
 --- textbox.c.orig	Fri Jan 23 17:37:13 1998
 +++ textbox.c	Fri Jan 23 17:37:12 1998
 @@ -45,6 +45,11 @@

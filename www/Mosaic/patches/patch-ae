@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:14:17 agc Exp $
+
 *** src/comment.h.bak	Fri Jun  7 00:01:43 1996
 --- src/comment.h	Sat Aug  3 13:58:11 1996
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:14:15 agc Exp $
+
 *** libwww2/HTTCP.c.orig	Mon Aug  7 17:12:22 1995
 --- libwww2/HTTCP.c	Mon Aug  7 17:12:28 1995
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:09:55 agc Exp $
+
 --- ui/umail.h.orig	Fri Jun 26 03:19:23 1998
 +++ ui/umail.h	Fri Jun 26 03:19:35 1998
 @@ -52,3 +52,3 @@

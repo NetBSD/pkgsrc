@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.3 1998/08/07 11:13:46 agc Exp $
+
 --- ../source/des.h.orig	Fri Mar 25 14:01:48 1994
 +++ ../source/des.h	Tue Jul 14 13:20:11 1998
 @@ -4,6 +4,8 @@

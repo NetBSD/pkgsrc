@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.3 1998/08/07 11:18:35 agc Exp $
+
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c ./lib/libxview/attr/attr_copy.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c	Tue Jun 29 01:14:35 1993
 --- ./lib/libxview/attr/attr_copy.c	Sun Nov 20 13:39:00 1994

@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.2 1998/08/07 11:11:26 agc Exp $
+#
 if [ "$2" != "POST-INSTALL" ]; then
   exit 0
 fi

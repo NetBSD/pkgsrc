@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:04 agc Exp $
+
 --- src/lib/DepotDB/DepotDB_Write.c.orig	Tue Feb 10 18:54:48 1998
 +++ src/lib/DepotDB/DepotDB_Write.c	Tue Feb 10 18:55:52 1998
 @@ -45,6 +45,12 @@

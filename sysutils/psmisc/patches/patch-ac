@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:14:07 agc Exp $
+
 --- killall.c.orig	Tue Feb 17 20:05:21 1998
 +++ killall.c	Sun Jul 19 16:18:26 1998
 @@ -2,6 +2,13 @@

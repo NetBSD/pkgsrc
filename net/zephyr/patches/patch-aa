@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:11:07 agc Exp $
+
 *** h/zephyr/zephyr.h.in.orig	1996/06/12 04:42:56
 --- h/zephyr/zephyr.h.in	1996/11/22 22:04:51
 ***************

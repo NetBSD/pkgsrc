@@ -1,3 +1,5 @@
+$NetBSD: patch-az,v 1.2 1998/08/07 11:09:10 agc Exp $
+
 --- src/iconc/ccode.c.orig	Fri Jun 19 02:25:13 1998
 +++ src/iconc/ccode.c	Fri Jun 19 02:26:35 1998
 @@ -3428,5 +3428,6 @@

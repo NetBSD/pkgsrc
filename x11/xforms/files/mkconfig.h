@@ -1,5 +1,5 @@
 #
-# NetBSD
+# $NetBSD: mkconfig.h,v 1.2 1998/08/07 11:18:23 agc Exp $
 #
 
 SHLIB_MAJOR=	0

@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:10:04 agc Exp $
+
 --- configure.in.freebsd	Thu Nov 20 13:27:04 1997
 +++ configure.in	Tue Nov 25 17:24:32 1997
 @@ -35,10 +35,10 @@

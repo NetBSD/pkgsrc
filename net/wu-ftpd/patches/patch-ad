@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:11:05 agc Exp $
+
 *** doc/examples/ftpusers.orig	Fri Apr  1 21:03:23 1994
 --- doc/examples/ftpusers	Mon Mar  2 19:03:10 1998
 ***************

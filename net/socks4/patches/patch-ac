@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:58 agc Exp $
+
 --- libident/ident.h	1998/06/11 13:09:45	1.1
 +++ libident/ident.h	1998/06/11 13:11:24
 @@ -22,13 +22,13 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:14:27 agc Exp $
+
 --- src/icmp.c.dist	Wed Mar 26 15:29:44 1997
 +++ src/icmp.c	Sun Jul  6 01:02:25 1997
 @@ -297,7 +297,7 @@

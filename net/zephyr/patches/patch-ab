@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:11:07 agc Exp $
+
 *** server/zserver.h.~1~	Tue Jun 18 15:43:02 1996
 --- server/zserver.h	Thu Apr  9 13:26:04 1998
 ***************

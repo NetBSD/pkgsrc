@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:35 agc Exp $
+
 diff -c -N ../faces/scripts/Makefile ./scripts/Makefile
 *** ../faces/scripts/Makefile	Tue May  7 00:55:26 1991
 --- ./scripts/Makefile	Wed Dec 11 09:30:23 1996

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/08/07 11:10:25 agc Exp $
+
 *** configure.orig	Tue Jun 17 09:51:22 1997
 --- configure	Fri Jun 20 00:03:50 1997
 *************** ac_configure=$ac_aux_dir/configure # Thi

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:58 agc Exp $
+
 --- include/socks.h	1998/06/11 13:02:06	1.1
 +++ include/socks.h	1998/06/11 13:04:33
 @@ -6,7 +6,7 @@

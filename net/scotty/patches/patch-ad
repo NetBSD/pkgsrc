@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:10:55 agc Exp $
+
 --- ../tkined/apps/ip_discover.tcl	Thu Sep 12 22:01:03 1996
 +++ ../tkined/apps/ip_discover.tcl	Thu Mar  6 17:11:38 1997
 @@ -21,6 +21,17 @@

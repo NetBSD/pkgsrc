@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:14:06 agc Exp $
+
 --- defaults.h.orig	Wed Apr  9 23:31:53 1997
 +++ defaults.h	Sat Jul  4 04:04:10 1998
 @@ -39,6 +39,10 @@

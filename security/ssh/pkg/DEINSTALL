@@ -1,4 +1,7 @@
 #! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.2 1998/08/07 11:13:50 agc Exp $
+#
 
 case "$2" in
 	DEINSTALL) cat <<EOF

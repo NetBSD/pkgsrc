@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:13:47 agc Exp $
+
 --- ../source/global.h.orig	Fri Mar 25 14:01:46 1994
 +++ ../source/global.h	Tue Jul 14 13:20:11 1998
 @@ -7,23 +7,17 @@

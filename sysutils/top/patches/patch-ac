@@ -1,4 +1,4 @@
-]2;feyrer@yui:/usr/pkgsrc/sysutils/top/work/top-3.5beta7 ]1;yui--- Makefile.X.orig	Wed Nov 20 03:19:24 1996
+--- Makefile.X.orig	Wed Nov 20 03:19:24 1996
 +++ Makefile.X	Fri Feb 20 08:11:35 1998
 @@ -55,6 +55,12 @@
  TERMCAP = %termcap%

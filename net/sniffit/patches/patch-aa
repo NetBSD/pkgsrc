@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:57 agc Exp $
+
 *** sn_defines.h	Fri Apr 18 11:33:58 1997
 --- sn_defines.h	Thu Jul 24 16:02:16 1997
 ***************

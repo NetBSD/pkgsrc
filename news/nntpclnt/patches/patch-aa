@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:11:12 agc Exp $
+
 *** uname.c.orig	Wed Mar 25 11:12:00 1998
 --- uname.c	Wed Mar 25 13:51:09 1998
 ***************

@@ -1,9 +1,11 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:53 agc Exp $
+
 *** popauth.8	Wed Nov 19 13:20:38 1997
 --- popauth.8	Thu Feb 12 18:03:21 1998
 ***************
 *** 3,25 ****
   .\"	@(MHWARNING)
-  .\" @(#)$Id: patch-ae,v 1.1 1998/02/13 02:26:31 mellon Exp $
+  .\" @(#)$Id: patch-ae,v 1.2 1998/08/07 11:09:53 agc Exp $
 ! .TH POPAUTH 8
   .SH NAME
 ! popauth - manipulate POP authorization DB
@@ -27,7 +29,7 @@
   It then updates the POP authorization DB accordingly.
 --- 3,25 ----
   .\"	@(MHWARNING)
-  .\" @(#)$Id: patch-ae,v 1.1 1998/02/13 02:26:31 mellon Exp $
+  .\" @(#)$Id: patch-ae,v 1.2 1998/08/07 11:09:53 agc Exp $
 ! .TH QPOPAUTH 8
   .SH NAME
 ! qpopauth - manipulate POP authorization DB

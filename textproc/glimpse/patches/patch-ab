@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:14:12 agc Exp $
+
 *** libtemplate/include/autoconf.h.in.orig	Thu Aug 22 07:51:39 1996
 --- libtemplate/include/autoconf.h.in	Thu Aug 22 07:51:57 1996
 ***************

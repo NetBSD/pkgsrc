@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:32 agc Exp $
+
 diff -rc ../old/xview3.2p1-X11R6/config/XView.cf XView.cf
 *** ../old/xview3.2p1-X11R6/config/XView.cf	Sun Jun 26 22:09:19 1994
 --- XView.cf	Sun Nov 20 13:38:58 1994

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:42 agc Exp $
+
 --- lib/error.c.old	Sun Apr  5 00:38:04 1998
 +++ lib/error.c	Fri Jun 26 14:16:52 1998
 @@ -143,7 +143,7 @@

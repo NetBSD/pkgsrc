@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.5 1998/08/07 11:18:07 agc Exp $
+
 --- kvt/command.c.orig	Tue Mar 24 01:42:51 1998
 +++ kvt/command.c	Wed Mar 25 11:06:38 1998
 @@ -160,8 +160,6 @@

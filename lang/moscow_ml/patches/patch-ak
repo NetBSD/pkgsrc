@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1998/08/07 11:09:22 agc Exp $
+
 --- runtime/sys.c.orig	Sun Jul 27 15:36:44 1997
 +++ runtime/sys.c	Mon Feb 16 21:41:26 1998
 @@ -1,5 +1,13 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:18:10 agc Exp $
+
 --- doc/www.lesstif.org/images/Makefile.in-orig	Sat Mar 14 16:50:02 1998
 +++ doc/www.lesstif.org/images/Makefile.in	Mon Mar 23 12:48:24 1998
 @@ -102,7 +102,7 @@

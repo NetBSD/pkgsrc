@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:39 agc Exp $
+
 --- src/task.c.orig	Fri Jul 18 06:45:02 1997
 +++ src/task.c	Wed Oct  1 21:40:45 1997
 @@ -5868,12 +5868,20 @@

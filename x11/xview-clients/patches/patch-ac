@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:18:31 agc Exp $
+
 --- cmdtool/Imakefile.orig	Tue Jun 29 07:12:08 1993
 +++ cmdtool/Imakefile	Sat Jul  4 15:25:02 1998
 @@ -4,6 +4,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:38 agc Exp $
+
 --- dip.h.orig	Fri Jun 30 19:41:05 1995
 +++ dip.h	Tue Apr 14 18:56:26 1998
 @@ -50,10 +50,23 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:36 agc Exp $
+
 --- arpwatch.h.orig	Mon Apr 27 19:41:46 1998
 +++ arpwatch.h	Mon Apr 27 19:42:16 1998
 @@ -3,7 +3,9 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
+
 --- team.c-orig	Fri May 22 15:35:25 1998
 +++ team.c	Fri May 22 15:35:59 1998
 @@ -58,8 +58,8 @@

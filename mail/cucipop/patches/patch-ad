@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:31 agc Exp $
+
 *** Makefile.orig	Tue May 12 22:09:14 1998
 --- Makefile	Tue Jul 21 11:16:26 1998
 ***************

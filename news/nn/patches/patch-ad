@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:11:11 agc Exp $
+
 --- inst.sh.orig	Mon Sep 13 19:42:25 1993
 +++ inst.sh	Wed May 20 00:14:13 1998
 @@ -1,8 +1,8 @@

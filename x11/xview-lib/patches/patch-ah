@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:18:37 agc Exp $
+
 --- misc/support/Imakefile.orig	Tue Jun 29 07:14:23 1993
 +++ misc/support/Imakefile	Sat Jul  4 16:18:58 1998
 @@ -5,8 +5,7 @@

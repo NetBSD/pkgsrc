@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:25 agc Exp $
+
 --- xneko.c.orig	Tue Jun  1 03:46:10 1993
 +++ xneko.c	Wed Feb 18 00:34:58 1998
 @@ -139,6 +139,9 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 11:14:18 agc Exp $
+
 --- ./src/gui.c.org	Tue Apr  9 21:47:32 1996
 +++ ./src/gui.c	Tue Apr  9 22:01:26 1996
 @@ -3623,7 +3623,7 @@

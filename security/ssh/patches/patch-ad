@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:13:49 agc Exp $
+
 --- make-ssh-known-hosts.pl.in.orig	Tue Mar 17 21:37:38 1998
 +++ make-ssh-known-hosts.pl.in	Tue Mar 17 21:44:18 1998
 @@ -1,5 +1,7 @@

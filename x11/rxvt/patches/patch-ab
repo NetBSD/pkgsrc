@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:14 agc Exp $
+
 --- ./src/utmp.c.org	Thu Jan 23 10:46:02 1997
 +++ ./src/utmp.c	Thu Apr 24 15:20:49 1997
 @@ -80,6 +80,8 @@

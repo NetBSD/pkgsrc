@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:09:24 agc Exp $
+
 --- hints/netbsd.sh.orig	Tue Mar 24 12:24:25 1998
 +++ hints/netbsd.sh	Tue Mar 24 12:28:19 1998
 @@ -49,13 +49,16 @@

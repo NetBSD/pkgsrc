@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:24 agc Exp $
+
 *** ../work/xless-1.7/xless.h	Mon Dec 23 15:57:37 1996
 --- xless.h	Mon Dec 23 16:11:53 1996
 ***************

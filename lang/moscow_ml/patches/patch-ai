@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/08/07 11:09:22 agc Exp $
+
 --- runtime/fail.c.orig	Fri Jul  4 08:52:34 1997
 +++ runtime/fail.c	Mon Feb 16 21:31:37 1998
 @@ -1,7 +1,14 @@

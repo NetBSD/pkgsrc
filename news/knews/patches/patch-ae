@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 11:11:09 agc Exp $
+
 --- knews.tmpl.orig	Fri Jan  9 18:16:12 1998
 +++ knews.tmpl	Thu Apr 23 01:07:29 1998
 @@ -23,11 +23,10 @@

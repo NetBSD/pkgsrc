@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: configure,v 1.2 1998/08/07 11:14:14 agc Exp $
+#
 
 if [ "`echo a|sed -e P`" = "aa" ]; then
   echo You need a newer version of sed. Use sed from -current or gnu sed

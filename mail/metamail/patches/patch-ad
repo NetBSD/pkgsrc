@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:40 agc Exp $
+
 *** fonts/Makefile.orig	Mon May 31 22:49:27 1993
 --- fonts/Makefile	Thu May 18 21:55:42 1995
 ***************

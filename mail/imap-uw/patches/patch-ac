@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:37 agc Exp $
+
 --- src/ipopd/Makefile.orig	Sun Jul 19 10:53:35 1998
 +++ src/ipopd/Makefile	Sun Jul 19 10:53:43 1998
 @@ -32,7 +32,7 @@

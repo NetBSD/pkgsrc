@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 11:10:27 agc Exp $
+
 *** Makefile.in.orig	Tue Jun 24 01:26:06 1997
 --- Makefile.in	Tue Jun 24 01:26:22 1997
 *************** config.h.in: configure.in acconfig.h

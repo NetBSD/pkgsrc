@@ -1,3 +1,5 @@
+$NetBSD: patch-al,v 1.2 1998/08/07 11:14:20 agc Exp $
+
 --- libwww2/Makefile.in.orig	Sat Jul 11 21:41:11 1998
 +++ libwww2/Makefile.in	Sat Jul 11 21:41:30 1998
 @@ -7,6 +7,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 11:11:13 agc Exp $
+
 --- nntpclnt.c.orig	Thu Aug 11 23:37:51 1994
 +++ nntpclnt.c	Fri May 22 10:20:49 1998
 @@ -199,7 +199,7 @@
