@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.17 2002/11/14 01:06:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2002/12/21 19:49:52 wiz Exp $
 
-MPLAYER_DIST_VERSION=	0.90pre10
+MPLAYER_DIST_VERSION=	0.90rc1
 #PKGREVISION=		1
 
 # There is no need to change anything below here.
