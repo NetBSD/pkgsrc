@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.789 2001/07/18 22:43:32 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.790 2001/07/25 07:36:40 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1343,9 +1343,14 @@ show-downlevel:
 ${def:C/=.*//}_DEFAULT=	${X11PREFIX}
 .    endif
 .    if !defined(${def:C/=.*//})
-_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null; ${ECHO} " @cwd ${${def:C/=.*//}_DEFAULT}") | ${AWK} '{ print $$2; exit }'
+_depend_${def:C/=.*//} != ${PKG_INFO} -e ${def:C/.*=//} 2>/dev/null; ${ECHO}
+.      if (${_depend_${def:C/=.*//}} == "")
+${def:C/=.*//}=${${def:C/=.*//}_DEFAULT}
+.      else
+_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) | ${AWK} '{ print $$2; exit }'
 ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
+.      endif
 .    endif
 .  endfor
 .endif
