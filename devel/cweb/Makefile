@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/21 14:26:55 jtb Exp $
 
 DISTNAME=	cweb-3.63
 CATEGORIES=	devel lang
@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}
 EVAL_PREFIX+=	PREFIX=teTeX
 
 post-patch:
-	@for f in ${WRKSRC}/cweb.1 ; do \
-	${SED} -e 's:@PREFIX@:'${PREFIX}':g' < $$f > $$f.tmp \
+	@for f in ${WRKSRC}/cweb.1 ; do				\
+	${SED} -e 's:@PREFIX@:'${PREFIX}':g' < $$f > $$f.tmp	\
 	&& ${MV} $$f.tmp $$f ; done
 
 do-install:
@@ -42,6 +42,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cweb.el ${PREFIX}/share/emacs/site-lisp
 
 post-install:
-	mktexlsr
+	${PREFIX}/bin/mktexlsr
 
 .include "../../mk/bsd.pkg.mk"
