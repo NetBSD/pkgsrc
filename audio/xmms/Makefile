@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/03/12 20:36:26 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/12 21:05:36 tron Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -13,6 +13,8 @@ MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.0/ \
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.xmms.org/
+
+BROKEN=		\"gthread\" library needs to be fixed first.
 
 DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
