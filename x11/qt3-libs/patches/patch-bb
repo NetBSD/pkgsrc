@@ -1,0 +1,24 @@
+$NetBSD: patch-bb,v 1.1 2002/10/28 10:46:07 drochner Exp $
+
+--- src/sql/drivers/psql/qsql_psql.cpp.orig	Sun Oct 27 22:25:40 2002
++++ src/sql/drivers/psql/qsql_psql.cpp	Sun Oct 27 22:26:34 2002
+@@ -41,8 +41,8 @@
+ #include <qdatetime.h>
+ #include <qpointarray.h>
+ #undef DEBUG // the PostgreSQL headers redefines this
+-#include <postgres.h>
+-#include <libpq/libpq-fs.h>
++#include <pgsql/server/postgres.h>
++#include <pgsql/libpq/libpq-fs.h>
+ #if defined(Q_CC_MSVC)
+ #pragma warning(disable: 4273) // '_errno' : inconsistent dll linkage.  dllexport assumed
+ #endif
+@@ -51,7 +51,7 @@
+ #if defined(errno)
+ #undef errno
+ #endif
+-#include <catalog/pg_type.h>
++#include <pgsql/server/catalog/pg_type.h>
+ #if defined(Q_CC_MSVC)
+ #pragma warning(default: 4273)
+ #endif
