@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/04/21 22:08:14 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/08/24 10:12:22 agc Exp $
 bin/vim-ctags
 bin/vim-etags
 bin/ex
@@ -48,7 +48,6 @@ share/vim/doc/message.txt
 share/vim/doc/motion.txt
 share/vim/doc/options.txt
 share/vim/doc/os_amiga.txt
-share/vim/doc/os_archi.txt
 share/vim/doc/os_beos.txt
 share/vim/doc/os_dos.txt
 share/vim/doc/os_mac.txt
@@ -77,6 +76,12 @@ share/vim/doc/vi_diff.txt
 share/vim/doc/visual.txt
 share/vim/doc/windows.txt
 share/vim/doc/tags
+share/vim/doc/if_cscope.txt
+share/vim/doc/if_tcl.txt
+share/vim/doc/os_riscos.txt
+share/vim/doc/os_vms.txt
+share/vim/doc/quotes.txt
+share/vim/doc/todo.txt
 share/vim/syntax/2html.vim
 share/vim/syntax/ada.vim
 share/vim/syntax/amiga.vim
@@ -167,12 +172,40 @@ share/vim/syntax/skill.vim
 share/vim/syntax/slrnrc.vim
 share/vim/syntax/slrnsc.vim
 share/vim/syntax/tags.vim
+share/vim/syntax/asmselect.vim
+share/vim/syntax/clipper.vim
+share/vim/syntax/dcl.vim
+share/vim/syntax/fvwm.vim
+share/vim/syntax/jgraph.vim
+share/vim/syntax/lilo.vim
+share/vim/syntax/lite.vim
+share/vim/syntax/lotos.vim
+share/vim/syntax/man.vim
+share/vim/syntax/mf.vim
+share/vim/syntax/mp.vim
+share/vim/syntax/msql.vim
+share/vim/syntax/nasm.vim
+share/vim/syntax/nroff.vim
+share/vim/syntax/php3.vim
+share/vim/syntax/phtml.vim
+share/vim/syntax/po.vim
+share/vim/syntax/purifylog.vim
+share/vim/syntax/scheme.vim
+share/vim/syntax/sgml.vim
+share/vim/syntax/sicad.vim
+share/vim/syntax/spec.vim
+share/vim/syntax/tf.vim
+share/vim/syntax/whitespace.vim
+share/vim/syntax/xdefaults.vim
+share/vim/syntax/xml.vim
+share/vim/syntax/xpm.vim
 share/vim/macros/README.txt
 share/vim/macros/dvorak
 share/vim/macros/hanoi/poster
 share/vim/macros/hanoi/click.me
 share/vim/macros/hanoi/hanoi.mac
 share/vim/macros/html
+share/vim/macros/justify.vim
 share/vim/macros/life/click.me
 share/vim/macros/life/life.mac
 share/vim/macros/maze/README.txt
