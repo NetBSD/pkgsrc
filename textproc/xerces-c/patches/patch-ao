@@ -1,0 +1,14 @@
+$NetBSD: patch-ao,v 1.1.1.1 2001/01/13 16:38:22 skrll Exp $
+
+--- util/XercesDefs.hpp.orig	Sat Sep 30 18:37:34 2000
++++ util/XercesDefs.hpp
+@@ -214,6 +214,9 @@
+ #include	<util/Platforms/Tru64/Tru64Defs.hpp>
+ #endif
+ 
++#if defined(XML_NETBSD)
++#include	<util/Platforms/NetBSD/NetBSDDefs.hpp>
++#endif
+ 
+ // ---------------------------------------------------------------------------
+ //  And now we subinclude a header according to the development environment

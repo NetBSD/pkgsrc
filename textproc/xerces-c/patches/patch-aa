@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/13 16:38:22 skrll Exp $
+
+--- Makefile.incl.orig	Sat Sep 30 18:37:28 2000
++++ Makefile.incl
+@@ -369,6 +369,19 @@
+ SHLIBSUFFIX=.so
+ endif
+ 
++#=============== NETBSD SPECIFIC OPTIONS ========================
++ifeq (${PLATFORM}, NETBSD)
++  PLATFORM_COMPILE_OPTIONS = -fPIC -instances=static -D${PLATFORM}
++  MAKE_SHARED = ${CXX} -D${PLATFORM} -shared
++  MAKE_SHARED_C = ${CC} -D${PLATFORM} -shared
++  ifeq (${TRANSCODER}, ICU)
++      ALLLIBS = ${LIBS} -L${LOCALBASE} -licuuc -licudata -lm
++  else
++      ALLLIBS = ${LIBS} -L${LOCALBASE} -lm
++  endif
++  SHLIBSUFFIX=.so
++endif
++
+ ###################### STANDARD TOOLS #############################
+ ifeq (${PLATFORM}, OS400)
+ CP = -cp -fph
