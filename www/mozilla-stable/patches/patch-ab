@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.2 2002/11/26 22:02:44 cjep Exp $
-diff -ru ../Orig/mozilla/configure.in ./configure.in
---- ../Orig/mozilla/configure.in	Tue Jul  2 02:52:59 2002
-+++ ./configure.in	Wed Sep 11 23:47:37 2002
-@@ -1014,6 +1014,13 @@
+$NetBSD: patch-ab,v 1.2.4.1 2003/12/05 19:15:10 agc Exp $
+
+--- configure.in.orig	7 Mar 2003 21:25:31 -0000
++++ configure.in	15 Apr 2003 14:53:02 -0000
+@@ -859,6 +859,9 @@
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -1134,6 +1137,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -16,7 +26,16 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;;
  
  *-nto*) 
-@@ -1853,9 +1860,6 @@
+@@ -1493,7 +1503,7 @@
+                  [siginfo_t* info;],
+                  [ac_cv_siginfo_t=true],
+                  [ac_cv_siginfo_t=false])])
+-if test "$ac_cv_siginfo_t" = true ; then
++if test "$OS_TARGET" != "NetBSD" -a "$ac_cv_siginfo_t" = true ; then
+   AC_DEFINE(HAVE_SIGINFO_T)
+   AC_MSG_RESULT(yes)
+ else
+@@ -2037,9 +2047,6 @@
  				CXXFLAGS="$CXXFLAGS -mt" 
  			fi
  			;;
