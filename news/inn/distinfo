@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.6 2003/03/23 11:07:16 tron Exp $
+$NetBSD: distinfo,v 1.7 2003/05/13 11:56:44 tron Exp $
 
-SHA1 (inn-2.3.4.tar.gz) = a1db5d61e37e1aaffd50652beb6b2fbedfb71a49
-Size (inn-2.3.4.tar.gz) = 1429957 bytes
-SHA1 (inn-2.3.4-v6-20030201.diff.gz) = be284e51cd0716f7c3ce2ca62b720a59b4379984
-Size (inn-2.3.4-v6-20030201.diff.gz) = 53812 bytes
-SHA1 (patch-aa) = 8d7bc0e2fef8ef473bbb19c075e7037621199d1e
+SHA1 (inn-2.3.5.tar.gz) = 9fff9ce731f8f62d768eaa4a742bb8d91960b59d
+Size (inn-2.3.5.tar.gz) = 1421702 bytes
+SHA1 (inn-2.3.5-v6-20030327.diff.gz) = b3fb3cd02d94e5cdb3a3b4ab05a689d32a6ddb03
+Size (inn-2.3.5-v6-20030327.diff.gz) = 53828 bytes
+SHA1 (patch-aa) = 39fcd03440ece2246503197d217e04e4724bbb8d
 SHA1 (patch-ab) = c3360248137c07c0e1750860de79aa1f372a6352
 SHA1 (patch-ac) = dafbd4918eb771cf0bb49b9d2503125812fe6852
 SHA1 (patch-ad) = 9c23ed46cd3bde1c9ac3797e166bc69a2218ef42

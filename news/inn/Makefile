@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2003/03/23 11:07:15 tron Exp $
+# $NetBSD: Makefile,v 1.42 2003/05/13 11:56:44 tron Exp $
 
-DISTNAME=		inn-2.3.4
+DISTNAME=		inn-${INN_VERSION}
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
@@ -13,9 +13,10 @@ COMMENT=		the public release of InterNet News (INN)
 CONFLICTS+=		nntpclnt-[0-9]*
 
 PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
-PATCHFILES=		inn-2.3.4-v6-20030201.diff.gz
+PATCHFILES=		inn-${INN_VERSION}-v6-20030327.diff.gz
 PATCH_DIST_STRIP=	-p1
 
+INN_VERSION=		2.3.5
 INN_DATA_DIR?=		/var/news
 INN_SPOOL?=		${INN_DATA_DIR}/spool
 BUILD_DEFS+=		INN_DATA_DIR
