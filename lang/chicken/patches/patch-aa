@@ -1,25 +1,26 @@
-$NetBSD: patch-aa,v 1.5 2004/02/15 08:02:23 itojun Exp $
+$NetBSD: patch-aa,v 1.6 2004/06/02 06:56:07 itojun Exp $
 
---- Makefile.am.orig	2004-01-26 02:37:09.000000000 +0900
-+++ Makefile.am	2004-02-15 16:38:20.000000000 +0900
-@@ -263,10 +263,10 @@
+--- Makefile.am.orig	2004-05-21 06:20:58.000000000 +0900
++++ Makefile.am	2004-06-02 15:29:24.000000000 +0900
+@@ -294,9 +294,9 @@
  
  # Install docs and sources.
- install-data-local : doc-html
+ install-data-local : chicken.html
 -	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/doc
--	-for file in $(DOCFILES); do cp $(srcdir)/doc/$$file $(DESTDIR)$(pkgdatadir)/doc; done
--	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/doc/manual
--	-cp $(srcdir)/doc/manual/* $(DESTDIR)$(pkgdatadir)/doc/manual
+-	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(pkgdatadir)/doc; done
+-	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
-+	-for file in $(DOCFILES); do cp $(srcdir)/doc/chicken/$$file $(DESTDIR)$(prefix)/share/doc; done
-+	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken/manual
-+	-cp $(srcdir)/doc/manual/* $(DESTDIR)$(prefix)/share/doc/chicken/manual
- 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
- 	./chicken-setup
++	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
  
-@@ -493,4 +493,4 @@
+ chicken.html: chicken.texi
+ 	$(MAKEINFO) --no-split --html chicken.texi
+@@ -514,7 +514,7 @@
  .PHONY : test
  
  test :
 -	cd testsuites; $(MAKE) CC="$(CC)" CHICKEN="../chicken" LIBDIR=../.libs CFLAGS="$(CFLAGS)"; cd ..
 +	cd testsuites; $(MAKE) CHICKEN="../chicken" LIBDIR=../.libs; cd ..
+ 
+ 
+ # Benchmarks:
