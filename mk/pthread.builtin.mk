@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.1 2004/11/12 05:20:02 jlam Exp $
+# $NetBSD: pthread.builtin.mk,v 1.2 2004/11/20 05:19:12 grant Exp $
 
 .if !defined(_BLNK_LIBPTHREAD_FOUND)
 _BLNK_LIBPTHREAD_FOUND!=	\
@@ -55,6 +55,12 @@ BUILDLINK_CFLAGS.pthread+=	-pthread
 BUILDLINK_LDFLAGS.pthread+=	-pthread
 .  else
 BUILDLINK_CPPFLAGS.pthread+=	-D_REENTRANT
+.  endif
+
+.  if ${OPSYS} == "OSF1"
+BUILDLINK_CFLAGS.pthread+=	-pthread
+BUILDLINK_LDFLAGS.pthread+=	-lpthread -lrt
+BUILDLINK_CPPFLAGS.pthread+=	-pthread
 .  endif
 
 # Handle systems which have pthreads functions in libc_r such as
