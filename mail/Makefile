@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2003/02/22 01:05:56 rh Exp $
+# $NetBSD: Makefile,v 1.160 2003/03/04 14:12:55 seb Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -114,7 +114,6 @@ SUBDIR+=	rmail-mime
 SUBDIR+=	ruby-tmail
 SUBDIR+=	sendmail
 SUBDIR+=	sendmail811
-SUBDIR+=	sendmail88
 SUBDIR+=	smtpfeed
 SUBDIR+=	solid-pop3d
 SUBDIR+=	spamassassin
