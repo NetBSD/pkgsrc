@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/10/07 17:41:58 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/10/15 23:59:18 mjl Exp $
 
 DISTNAME=	mc-4.5.38
 PKGNAME=	gmc-4.5.38
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
 
 DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
-DEPENDS+=	libslang-1.3.8:../../devel/libslang
+DEPENDS+=	libslang-1.3.9:../../devel/libslang
 
 CONFLICTS+=	mc-*
 
