@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2003/01/27 12:31:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2003/02/05 05:06:32 jlam Exp $
 #
 
 DISTNAME=		gqmpeg-0.19.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://gqmpeg.sourceforge.net/
 COMMENT=		GTK+ front end to mpg123
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 DEPENDS+=		mpg123>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
@@ -38,6 +39,5 @@ pre-install:
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2003/01/27 12:54:55 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.12 2003/02/05 05:06:33 jlam Exp $
 #
 
 DISTNAME=	gaim-0.59.8
@@ -16,6 +16,8 @@ FILESDIR=	${.CURDIR}/../gaim/files
 PATCHDIR=	${.CURDIR}/../gaim/patches
 PKGDIR=		${.CURDIR}/../gaim
 PLIST_SRC=      ${.CURDIR}/../gaim/PLIST.common
+
+DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 USE_GMAKE=		YES
 USE_X11BASE=		YES
@@ -47,4 +49,3 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libc=yes
 
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"

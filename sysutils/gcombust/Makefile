@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/01/29 12:31:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2003/02/05 05:06:36 jlam Exp $
 #
 
 DISTNAME=		gcombust-0.1.53
@@ -12,6 +12,7 @@ COMMENT=		Graphical frontend for CD mastering (mkisofs, cdrecord, ...)
 
 DEPENDS+=		cdrecord>=1.10:../../sysutils/cdrecord
 DEPENDS+=		cdlabelgen-[0-9]*:../../graphics/cdlabelgen
+DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 DEPENDS+=		gv-[0-9]*:../../print/gv
 
 USE_BUILDLINK2=		YES
@@ -19,6 +20,5 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

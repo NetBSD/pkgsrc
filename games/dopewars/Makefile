@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/27 23:45:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/02/05 05:06:34 jlam Exp $
 
 DISTNAME=		dopewars-1.5.8
 PKGREVISION=		1
@@ -10,6 +10,8 @@ MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/
 COMMENT=		Make a fortune dealing drugs on the streets of New York
+
+DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
@@ -27,5 +29,4 @@ CONFIGURE_ARGS+=	--localstatedir=/var/games
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

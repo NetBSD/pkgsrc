@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2003/01/30 11:14:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.85 2003/02/05 05:06:37 jlam Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -11,6 +11,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Base component of GNU Network Object Management Environment
 
+DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
 BUILD_DEPENDS+=		gtk-doc>=0.9:../../textproc/gtk-doc
 BUILD_USES_MSGFMT=	YES
@@ -48,7 +49,6 @@ post-install:
 .include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
 .include "../../graphics/gnome-pixmaps/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
 .include "../../www/gtkhtml/buildlink2.mk"
 .include "../../www/libghttp/buildlink2.mk"
