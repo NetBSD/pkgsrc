@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1450 2003/02/21 12:04:32 mycroft Exp $
+$NetBSD: CHANGES,v 1.1451 2003/02/21 12:27:17 mycroft Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -783,3 +783,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed gnome-db [salo 2003-02-21]
 	Added mergeant-0.10.0 [salo 2003-02-21]
 	Updated guile to 1.6.3 [mycroft 2003-02-21]
+	Updated gmp to 4.1.2 [mycroft 2003-02-21]
