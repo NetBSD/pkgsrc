@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/11 08:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/11 08:54:36 itojun Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.2
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.monkey.org/~dugsong/dsniff/
 # These libraries are static, thus they aren't necessary at run-time,
 # only at compile-time.
 #
-BUILD_DEPENDS+=	libnet-*:../../net/libnet
-BUILD_DEPENDS+=	libnids-*:../../net/libnids
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libnet.a:../../net/libnet
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libnids.a:../../net/libnids
 
 GNU_CONFIGURE=	yes
 USE_X11=	yes
