@@ -1,0 +1,15 @@
+$NetBSD*
+
+Needed for 1.3
+
+--- tar.c.BAK	Fri Apr 23 15:27:46 1999
++++ tar.c	Fri Apr 23 15:31:40 1999
+@@ -63,6 +63,8 @@
+ #include "extern.h"
+ #include "tar.h"
+ 
++#include "pwcache.c"
++
+ /*
+  * Routines for reading, writing and header identify of various versions of tar
+  */
