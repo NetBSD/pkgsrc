@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2002/11/04 23:08:25 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2002/11/05 10:57:53 tron Exp $
 
 --- Makefile.in.orig	Sun Oct 27 14:30:02 2002
 +++ Makefile.in
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.4 2002/11/04 23:08:25 hubertf Exp $
 -		install -m 755 ipv6logconv/ipv6logconv $(root)/usr/bin/
 +		mkdir -p $(root)/bin
 +		${BSD_INSTALL_PROGRAM} ipv6calc/ipv6calc $(root)/bin/
-+		mkdir -p $(root)/usr/bin
-+		${BSD_INSTALL_PROGRAM} ipv6logconv/ipv6logconv $(root)/usr/bin/
++		mkdir -p $(root)/bin
++		${BSD_INSTALL_PROGRAM} ipv6logconv/ipv6logconv $(root)/bin/
  
  getopt-make:
  		cd getopt/ && make
