@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/12 02:33:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/31 09:51:00 grant Exp $
 sbin/pkg_add
 sbin/pkg_admin
 sbin/pkg_create
@@ -9,9 +9,9 @@ share/man/cat1/pkg_admin.0
 share/man/cat1/pkg_create.0
 share/man/cat1/pkg_delete.0
 share/man/cat1/pkg_info.0
-@comment share/man/man1/pkg_add.1
-@comment share/man/man1/pkg_admin.1
-@comment share/man/man1/pkg_create.1
-@comment share/man/man1/pkg_delete.1
-@comment share/man/man1/pkg_info.1
+share/man/man1/pkg_add.1
+share/man/man1/pkg_admin.1
+share/man/man1/pkg_create.1
+share/man/man1/pkg_delete.1
+share/man/man1/pkg_info.1
 @exec [ -f ${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ] || pkg_admin rebuild
