@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/31 16:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/09/02 00:15:40 seb Exp $
 #
 
 DISTNAME=	centericq-4.9.6
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE}
 LIBS=			${LDFLAGS}
 
 USE_PERL5=		run
-REPLACE_PERL=		${WRKSRC}/misc/cicqconv
+REPLACE_PERL=		misc/cicqconv
 
 INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
 INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
