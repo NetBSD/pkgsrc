@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/05/31 16:40:56 agc Exp $
+$NetBSD: patch-ad,v 1.2 2002/03/19 12:21:07 wiz Exp $
 
---- sequencer/src/Filter.c@	Sat Oct 25 13:50:42 1997
-+++ sequencer/src/Filter.c	Thu May 17 16:15:12 2001
-@@ -345,7 +345,7 @@
+--- sequencer/src/Filter.c.orig	Mon Jul  2 08:59:48 2001
++++ sequencer/src/Filter.c
+@@ -347,7 +347,7 @@
      char path[3000];
      fprintf(stderr, "Rosegarden: Environment variable TCLLIBPATH is not set; "
  	    "guessing!\n");

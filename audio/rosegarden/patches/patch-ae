@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/05/31 16:40:56 agc Exp $
+$NetBSD: patch-ae,v 1.2 2002/03/19 12:21:07 wiz Exp $
 
---- sequencer/src/Resources.h@	Fri Oct 10 06:21:47 1997
-+++ sequencer/src/Resources.h	Thu May 17 16:16:03 2001
+--- sequencer/src/Resources.h.orig	Fri Oct 10 06:21:47 1997
++++ sequencer/src/Resources.h
 @@ -135,7 +135,7 @@
  		sizeof(String),
  		XtOffset(AppDataPtr, midiFmPatchFile),
