@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5020 2004/02/27 15:28:48 wiz Exp $
+$NetBSD: CHANGES,v 1.5021 2004/02/27 15:38:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1073,3 +1073,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 5.5.7.11nb2 [grant 2004-02-27]
 	Added rar-linux-3.3.0 [wiz 2004-02-27]
 	Updated unrar to 3.3.6 [wiz 2004-02-27]
+	Added uips-1.0 [wiz 2004-02-27]
