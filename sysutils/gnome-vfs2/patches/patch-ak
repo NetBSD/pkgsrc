@@ -1,0 +1,26 @@
+$NetBSD: patch-ak,v 1.5 2004/04/24 21:00:07 danw Exp $
+
+--- libgnomevfs/gnome-vfs-cdrom.c.orig	Sun Apr 11 09:43:13 2004
++++ libgnomevfs/gnome-vfs-cdrom.c
+@@ -87,8 +87,9 @@ _gnome_vfs_get_cdrom_type (const char *v
+ 	}
+ 
+ 	return type;
+-#elif defined(HAVE_SYS_MNTCTL_H)
+-	return CDS_NO_INFO;
++#elif defined(__linux__)
++	*fd = open (vol_dev_path, O_RDONLY|O_NONBLOCK);
++	return ioctl (*fd, CDROM_DISC_STATUS, CDSL_CURRENT);
+ #elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ 	struct ioc_toc_header header;
+ #if defined(__FreeBSD__)
+@@ -143,8 +144,7 @@ _gnome_vfs_get_cdrom_type (const char *v
+ #endif /* defined(__FreeBSD__) */
+ 	return type;
+ #else
+-	*fd = open (vol_dev_path, O_RDONLY|O_NONBLOCK);
+-	return ioctl (*fd, CDROM_DISC_STATUS, CDSL_CURRENT);
++	return CDS_NO_INFO;
+ #endif
+ }
+ 
