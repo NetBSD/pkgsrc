@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5446 2004/04/05 09:59:09 darcy Exp $
+$NetBSD: CHANGES,v 1.5447 2004/04/05 11:47:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1782,3 +1782,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gftp-gtk1 to 2.0.17 [xtraeme 2004-04-05]
 	Added allegro-4.1.13 [xtraeme 2004-04-05]
 	Added raine-0.40.0 [xtraeme 2004-04-05]
+	Added ubs-0.17 [xtraeme 2004-04-05]
