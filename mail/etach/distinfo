@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:33:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:09:56 agc Exp $
 
-MD5 (etach-1.1.6.tar.gz) = 8f5536c1cab222c2bcb4271fc83725c4
+SHA1 (etach-1.1.6.tar.gz) = e47fa7b256eca5dd5931f3cc879c3f4fd2d284ce
+Size (etach-1.1.6.tar.gz) = 30733 bytes
