@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/23 16:01:36 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/12/03 01:27:05 hubertf Exp $
 
 DISTNAME=		byte
 PKGNAME=		bytebench-3.6
@@ -19,6 +19,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/run-byte ${PREFIX}/bin
 
 benchmark:
+	@if [ `id -u` != 0 ]; then echo "This benchmark must be run as root!" ; exit 1 ; fi
 	@${WRKSRC}/run-byte
 
 .include "../../mk/bsd.pkg.mk"
