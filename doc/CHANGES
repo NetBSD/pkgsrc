@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9120 2005/02/12 11:00:31 rillig Exp $
+$NetBSD: CHANGES,v 1.9121 2005/02/12 17:34:14 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -855,3 +855,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkglint to 4.01 [rillig 2005-02-11]
 	Updated gnetman to 20041222 [dmcmahill 2005-02-11]
 	Updated pkglint to 4.02 [rillig 2005-02-12]
+	Updated roundup to 0.7.11 [recht 2005-02-12]
