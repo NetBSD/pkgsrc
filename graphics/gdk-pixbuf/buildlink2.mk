@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/11 10:15:33 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 09:22:15 jlam Exp $
 
 .if !defined(GDK_PIXBUF_BUILDLINK2_MK)
 GDK_PIXBUF_BUILDLINK2_MK=	# defined
@@ -28,7 +28,9 @@ BUILDLINK_FILES.gdk-pixbuf+=	lib/libgdk_pixbuf.*
 BUILDLINK_FILES.gdk-pixbuf+=	lib/libgdk_pixbuf_xlib.*
 
 # The gdk-pixbuf headers should be found at the usual location.
-BUILDLINK_TRANSFORM.gdk-pixbuf=	-e "s|/include/gdk-pixbuf-1.0/|/include/|g"
+BUILDLINK_CPPFLAGS.gdk-pixbuf= \
+	-I${BUILDLINK_PREFIX.gdk-pixbuf}/include/gdk-pixbuf-1.0
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.gdk-pixbuf}
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"

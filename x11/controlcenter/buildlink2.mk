@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/11 12:16:23 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 09:22:15 jlam Exp $
 
 .if !defined(CONTROLCENTER_BUILDLINK2_MK)
 CONTROLCENTER_BUILDLINK2_MK=	# defined
@@ -13,8 +13,9 @@ BUILDLINK_PREFIX.controlcenter_DEFAULTS=	${X11PREFIX}
 BUILDLINK_FILES.controlcenter=	include/libcapplet1/*
 BUILDLINK_FILES.controlcenter+=	lib/libcapplet.*
 
-BUILDLINK_TRANSFORM.controlcenter= \
-	-e "s|/include/libcapplet1/|/include/|g"
+BUILDLINK_CPPFLAGS.controlcenter= \
+	-I${BUILDLINK_PREFIX.controlcenter}/include/libcapplet1
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.controlcenter}
 
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
