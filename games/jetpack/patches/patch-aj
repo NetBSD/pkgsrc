@@ -1,0 +1,37 @@
+$NetBSD: patch-aj,v 1.1 1998/08/23 11:24:54 garbled Exp $
+*** main.c~	Sun Feb 12 17:34:09 1995
+--- main.c	Sun Feb 12 17:34:29 1995
+***************
+*** 90,96 ****
+  				begin_timer();
+  				while(paused) {
+  					while(XPending(display) && !event_filter());
+! 					usleep(USECDELAY);
+  				}
+  				while(XPending(display) && !event_filter());
+  				update();
+--- 90,96 ----
+  				begin_timer();
+  				while(paused) {
+  					while(XPending(display) && !event_filter());
+! 					usleep(usecdelay);
+  				}
+  				while(XPending(display) && !event_filter());
+  				update();
+***************
+*** 111,117 ****
+  					busy, and you shouldn't be playing anyway.
+  				*/
+  				timer = get_timer();
+! 				if(timer < USECDELAY) usleep(USECDELAY - timer);
+  			}
+  		}
+  	}
+--- 111,117 ----
+  					busy, and you shouldn't be playing anyway.
+  				*/
+  				timer = get_timer();
+! 				if(timer < usecdelay) usleep(usecdelay - timer);
+  			}
+  		}
+  	}

@@ -1,0 +1,50 @@
+$NetBSD: patch-ai,v 1.1 1998/08/23 11:24:54 garbled Exp $
+*** events.c~	Mon Nov  8 15:16:07 1993
+--- events.c	Sun Feb 12 17:34:55 1995
+***************
+*** 4,9 ****
+--- 4,11 ----
+  #include "copyright.h"
+  #include "defs.h"
+  
++ int usecdelay = USECDELAY;
++ 
+  /*	event_filter handles game events
+  */
+  int	event_filter()
+***************
+*** 86,91 ****
+--- 88,100 ----
+  	
+  	XLookupString(event, &buf, 1, &key, &i);
+  	switch(key) {
++                 case 't':
++                 case 'T':
++                        if (usecdelay == USECDELAY)
++                            usecdelay = USECDELAY/1.5;
++                        else
++                            usecdelay = USECDELAY;
++                        break;
+  		case XK_KP_4:
+  		case 'a':
+  		case 'A':
+***************
+*** 115,120 ****
+--- 124,130 ----
+  			}
+  			break;
+  		case 'Q':
++ 	        case 'q':
+  			if(dead) break;
+  			dead = 1;
+  			deadtimer = 50;
+***************
+*** 124,129 ****
+--- 134,140 ----
+  			dumb_message(MQUIT);
+  			break;
+  		case 'p':
++ 		case 'P':
+  			if(paused) {
+  				paused = 0;
+  				bigmessagetime = 0;
