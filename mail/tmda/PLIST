@@ -1,0 +1,69 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/14 13:00:25 drochner Exp $
+bin/tmda-address
+bin/tmda-check-address
+bin/tmda-clean
+bin/tmda-filter
+bin/tmda-inject
+bin/tmda-keygen
+bin/tmda-rfilter
+bin/tmda-sendmail
+${PYSITELIB}/TMDA/Cookie.py
+${PYSITELIB}/TMDA/Cookie.pyc
+${PYSITELIB}/TMDA/Defaults.py
+${PYSITELIB}/TMDA/Defaults.pyc
+${PYSITELIB}/TMDA/Errors.py
+${PYSITELIB}/TMDA/Errors.pyc
+${PYSITELIB}/TMDA/FilterParser.py
+${PYSITELIB}/TMDA/FilterParser.pyc
+${PYSITELIB}/TMDA/HMAC.py
+${PYSITELIB}/TMDA/HMAC.pyc
+${PYSITELIB}/TMDA/MTA.py
+${PYSITELIB}/TMDA/MTA.pyc
+${PYSITELIB}/TMDA/Util.py
+${PYSITELIB}/TMDA/Util.pyc
+${PYSITELIB}/TMDA/Version.py
+${PYSITELIB}/TMDA/Version.pyc
+${PYSITELIB}/TMDA/__init__.py
+${PYSITELIB}/TMDA/__init__.pyc
+${HTMLDIR}/bugs.html
+${HTMLDIR}/config-client.html
+${HTMLDIR}/config-filter.html
+${HTMLDIR}/config-pre.html
+${HTMLDIR}/config-server.html
+${HTMLDIR}/config.html
+${HTMLDIR}/download.html
+${HTMLDIR}/faq.html
+${HTMLDIR}/features.html
+${HTMLDIR}/history.html
+${HTMLDIR}/index.html
+${HTMLDIR}/install.html
+${HTMLDIR}/inuse.html
+${HTMLDIR}/requirements.html
+${HTMLDIR}/resources.html
+${HTMLDIR}/results.html
+${HTMLDIR}/trouble.html
+${DOCDIR}/COPYRIGHT
+${DOCDIR}/CRYPTO
+${DOCDIR}/ChangeLog
+${DOCDIR}/INSTALL
+${DOCDIR}/README
+${DOCDIR}/THANKS
+${DOCDIR}/UPGRADE
+${CONTRIBDIR}/ChangeLog
+${CONTRIBDIR}/README.RELAY
+${CONTRIBDIR}/list2cdb
+${CONTRIBDIR}/list2dbm
+${CONTRIBDIR}/printcdb
+${CONTRIBDIR}/printdbm
+${CONTRIBDIR}/qmail-smtpd_auth.patch
+${CONTRIBDIR}/sample.tmdarc
+${CONTRIBDIR}/setup.py
+${CONTRIBDIR}/setup.pyc
+${CONTRIBDIR}/tmda.spec
+${SHAREDIR}/confirm_accept.txt
+${SHAREDIR}/confirm_request.txt
+@dirrm ${SHAREDIR}
+@dirrm ${CONTRIBDIR}
+@dirrm ${DOCDIR}
+@dirrm ${HTMLDIR}
+@dirrm ${PYSITELIB}/TMDA
