@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/20 17:22:16 agc Exp $
+
+SHA1 (RDB-2.6d.tar.gz) = d7c01391eb8035236630357d77c580fcdd2ed3dd
+Size (RDB-2.6d.tar.gz) = 214540 bytes
+SHA1 (patch-aa) = 94b60d15ceb2eceb084a7d1d6d29f7379f3dac01
