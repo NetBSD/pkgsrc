@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/01 18:35:00 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/19 14:36:42 jmmv Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -74,6 +74,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gtksourceview-1.0.mo
