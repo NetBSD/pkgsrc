@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4434 2004/01/12 14:29:56 martti Exp $
+$NetBSD: CHANGES,v 1.4435 2004/01/12 15:31:16 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -189,3 +189,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mserv-devel-0.39 [kim 2004-01-12]
 	Updated PAM to 0.77nb1 [jlam 2004-01-12]
 	Updated dvdrip to 0.50.16 [martti 2004-01-12]
+	Updated magicpoint to 1.10anb2 [wennmach 2004-01-12]
