@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.19 2003/01/29 19:47:29 jlam Exp $
+# $NetBSD: install,v 1.20 2003/06/25 08:26:51 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -119,10 +119,10 @@ PRE-INSTALL)
 				if [ ! -d "${dir}" ]; then
 					${MKDIR} "${dir}"
 					${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
+					${CHOWN} -R "${owner}" "${dir}"
+					${CHGRP} -R "${group}" "${dir}"
+					${CHMOD} -R "${mode}" "${dir}"
 				fi
-				${CHOWN} -R "${owner}" "${dir}"
-				${CHGRP} -R "${group}" "${dir}"
-				${CHMOD} -R "${mode}" "${dir}"
 			fi
 		done
 	fi
