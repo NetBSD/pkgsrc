@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2004/02/02 23:47:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.60 2004/02/08 01:00:13 kleink Exp $
 
 DISTNAME=	gnupg-1.2.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/gnupg/ \
@@ -70,6 +71,10 @@ SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
 SUBST_SED.fixme=    -e "s,ALIGN (3),ALIGN (4),g"
 
 .endif
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/DETAILS \
+	    ${PREFIX}/share/gnupg
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
