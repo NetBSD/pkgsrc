@@ -1,0 +1,3 @@
+pkg_filecheck compares the file system contents with the list of
+files recorded in the package database, and reports any files that
+are in the file system, but not in the database.
