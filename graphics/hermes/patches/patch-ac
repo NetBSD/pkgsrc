@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/08 17:16:40 garbled Exp $
+--- src/Makefile.in.orig	Thu Jul  8 09:25:45 1999
++++ src/Makefile.in	Thu Jul  8 09:31:06 1999
+@@ -399,7 +399,7 @@
+ 
+ 
+ install-data-local:
+-	$(INSTALL) -m 0755 -d $(includedir)/Hermes
++	$(INSTALL_PROGRAM_DIR) -m 0755 $(includedir)/Hermes
+ 	for incfile in $(publicheaders); do \
+ 	  $(INSTALL) -m 0644 $$incfile $(includedir)/Hermes; \
+ 	done
