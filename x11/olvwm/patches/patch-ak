@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2000/06/16 14:18:57 pooka Exp $
+$NetBSD: patch-ak,v 1.2 2000/09/13 22:50:36 jlam Exp $
 
 --- usermenu.c.orig	Thu Mar  2 22:41:31 2000
 +++ usermenu.c	Tue Jun  6 19:24:12 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2000/06/16 14:18:57 pooka Exp $
   
  	if ((owHome = getenv("OPENWINHOME")) == NULL)
 -		owHome = "/usr/openwin";
-+		owHome = X11BASE;
++		owHome = PREFIX;
   
  	menuSearchPath = (char **)MemAlloc(NUM_SEARCH_PATH*sizeof(char *));
   
