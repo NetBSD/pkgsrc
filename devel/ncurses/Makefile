@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/07/02 11:37:57 grant Exp $
+# $NetBSD: Makefile,v 1.46 2003/07/09 16:51:55 grant Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.3
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--with-manpage-tbl
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	NOT_SUNOS="@comment "
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
 TERMINFODIR=	share/lib/terminfo
@@ -54,7 +54,7 @@ post-configure:
 	for f in *.3x; do					\
 		${MV} -f $${f} `basename $${f} .3x`.3; 	\
 	done
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == "SunOS"
 	${MV} ${TERMINFO_SRC} ${TERMINFO_SRC}.old
 	${SED} -e "/^screen|/,/^$$/d"  -e "/^screen-w|/,/^$$/d" \
 	    -e "/^screen.teraterm|/,/^$$/d" \
