@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2003/05/06 15:48:24 tron Exp $
+# $NetBSD: Makefile,v 1.45 2003/05/06 15:57:03 tron Exp $
 
 DISTNAME=	gnupg-1.2.2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/gnupg/ \
-		ftp://ftp.ring.gr.jp/pub/pgp/ \
 		ftp://gd.tuwien.ac.at/privacy/gnupg/gnupg/ \
 		ftp://ftp.jyu.fi/pub/crypt/gcrypt/gnupg/ \
-		ftp://ftp.cert.dfn.de/pub/tools/crypt/gcrypt/ \
-		ftp://hal.csd.auth.gr/mirrors/gnupg/
+		ftp://ftp.freenet.de/pub/ftp.gnupg.org/gcrypt/gnupg/
 EXTRACT_SUFX=	.tar.bz2
 # don't remove this -- we may add idea.c.gz to it below
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
