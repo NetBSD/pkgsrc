@@ -1,4 +1,4 @@
-/*	$NetBSD: unvis.c,v 1.9 2004/12/03 13:12:55 grant Exp $	*/
+/*	$NetBSD: unvis.c,v 1.10 2004/12/03 13:19:09 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -35,7 +35,7 @@
 #if 0
 static char sccsid[] = "@(#)unvis.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: unvis.c,v 1.9 2004/12/03 13:12:55 grant Exp $");
+__RCSID("$NetBSD: unvis.c,v 1.10 2004/12/03 13:19:09 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -96,7 +96,7 @@ unvis(cp, c, astate, flag)
  * unvis - decode characters previously encoded by vis
  */
 int
-__nbcompat_unvis13(cp, c, astate, flag)
+__unvis13(cp, c, astate, flag)
 	char *cp;
 	int c;
 	int *astate, flag;
