@@ -1,0 +1,20 @@
+  libgdgeda is a special version of gd 1.6, specifically created for
+gEDA.  The changes from the original gd library are:
+
+    - gdImageArc arcs rotate counterclockwise (as opposed to the 
+      original clockwise rotation).
+    - mtables.c is now build like any other C file (ie it's not
+      #included).  Created mtables.h which contain the prototypes
+      for the math lookup tables.
+    - Created libgdgeda-config, which is a sh script.  This script
+      is used in gEDA to determine the various build parameters of
+      libgdgeda (cflags and ldflags). 
+    - index.html was moved into the doc directory
+    - Updated source from gd 1.6 which removes support for gifs and
+      adds support for pngs.  Now requires libpng.
+    - Updated source from gd 1.6.3
+    - Updated to libtool 1.3.3
+
+  It is recommended that people wanting to use gd in their own
+programs use the original gd (unless you happen to need some of the
+modifications that were made).
