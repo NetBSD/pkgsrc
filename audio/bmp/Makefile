@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2004/12/25 15:22:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/16 21:27:00 jmmv Exp $
 #
 
 .include "Makefile.common"
+
+PKGREVISION=		1
+
+DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-mp3/--enable-mp3/}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-oss/--enable-oss/}
