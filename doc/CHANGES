@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4088 2003/12/14 04:19:48 grant Exp $
+$NetBSD: CHANGES,v 1.4089 2003/12/14 10:18:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated echoping to 5.1.0 [xtraeme 2003-12-14]
 	Updated centericq to 4.9.9 [xtraeme 2003-12-14]
 	Added compat16-1.6.0 [grant 2003-12-14]
+	Updated vim to 6.2.0nb2 [cjs 2003-12-14]
