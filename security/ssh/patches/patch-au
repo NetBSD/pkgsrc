@@ -1,0 +1,58 @@
+$NetBSD: patch-au,v 1.1 1998/09/10 16:36:12 kim Exp $
+
+--- login.c.orig	Tue Jan 20 07:24:05 1998
++++ login.c	Tue Feb 24 09:43:51 1998
+@@ -227,6 +227,19 @@
+   struct utmp u, u2;
+   off_t offset;
+   const char *utmp, *wtmp;
++#if defined(HAVE_HOST_IN_UTMP) || defined(HAVE_LASTLOG_H) || defined(HAVE_LASTLOG)
++  char myname[MAXHOSTNAMELEN];
++  char shost[MAXHOSTNAMELEN];
++  char *p = NULL, *q = NULL;
++
++  memset(shost, 0, sizeof(shost));
++  gethostname(myname, MAXHOSTNAMELEN);
++  if (((p = memchr(myname, '.', MAXHOSTNAMELEN)) != NULL)
++    && ((q = strchr(host, '.')) != NULL)
++    && (strncmp(p, q, MAXHOSTNAMELEN - (p - myname)) == 0)) {
++    strncpy(shost, host, q - host);
++  }
++#endif
+ 
+   /* Construct an utmp/wtmp entry. */
+   memset(&u, 0, sizeof(u));
+@@ -257,12 +270,14 @@
+   strncpy(u.ut_user, user, sizeof(u.ut_user));
+ #endif /* HAVE_NAME_IN_UTMP */
+ #ifdef HAVE_HOST_IN_UTMP
+-  strncpy(u.ut_host, host, sizeof(u.ut_host));
+-#ifdef __FreeBSD__
+-  if (strlen(host) > sizeof(u.ut_host)) {
++  if ((*shost != '\0') && (strlen(shost) <= sizeof(u.ut_host)))
++    strncpy(u.ut_host, shost, sizeof(u.ut_host));
++#ifndef HAVE_ADDR_IN_UTMP
++  else if (strlen(host) > sizeof(u.ut_host))
+     strncpy(u.ut_host, get_remote_ipaddr(), sizeof(u.ut_host));
+-  }
+-#endif /* __FreeBSD__ */
++#endif /* HAVE_ADDR_IN_UTMP */
++  else
++    strncpy(u.ut_host, host, sizeof(u.ut_host));
+ #endif /* HAVE_HOST_IN_UTMP */
+ #ifdef HAVE_ADDR_IN_UTMP
+   if (addr)
+@@ -431,7 +446,12 @@
+       /* Update lastlog. */
+       ll.ll_time = time(NULL);
+       strncpy(ll.ll_line, ttyname + 5, sizeof(ll.ll_line));
+-      strncpy(ll.ll_host, host, sizeof(ll.ll_host));
++      if ((*shost != '\0') && (strlen(shost) <= sizeof(ll.ll_host)))
++        strncpy(ll.ll_host, shost, sizeof(ll.ll_host));
++      else if (strlen(host) > sizeof(ll.ll_host))
++        strncpy(ll.ll_host, get_remote_ipaddr(), sizeof(ll.ll_host));
++      else
++        strncpy(ll.ll_host, host, sizeof(ll.ll_host));
+ #ifdef LASTLOG_IS_DIR
+       sprintf(lastlogfile, "%.100s/%.100s", lastlog, user);
+       fd = open(lastlogfile, O_WRONLY | O_CREAT, 0644);

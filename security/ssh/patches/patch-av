@@ -1,0 +1,13 @@
+$NetBSD: patch-av,v 1.1 1998/09/10 16:36:12 kim Exp $
+
+--- serverloop.c.orig	Wed Jul  8 12:40:38 1998
++++ serverloop.c	Thu Sep 10 12:13:33 1998
+@@ -441,7 +441,7 @@
+       if (ret == 0)		/* Nothing read, timeout expired */
+ 	{
+ 	  /* Check if idle_timeout expired ? */
+-	  if (idle_timeout != 0 && !child_terminated &&
++	  if (idle_timeout != 0 && !child_terminated && idle_time_last &&
+ 	      time(NULL) - idle_time_last > idle_timeout)
+ 	    {
+ 	      /* Yes, kill the child */
