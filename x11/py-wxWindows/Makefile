@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/05/02 11:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/09 11:46:43 drochner Exp $
 #
 
-DISTNAME=	wxPython-2.2.2
-PKGNAME=	${PYPKGPREFIX}-wxWindows-2.2.2
-PKGREVISION=	2
+DISTNAME=	wxPythonSrc-2.4.0.7
+PKGNAME=	${PYPKGPREFIX}-wxWindows-2.4.0.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
@@ -11,25 +10,23 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	wxPython: Python bindings for wxWindows
 
-PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
+WRKSRC=	${WRKDIR}/wxPythonSrc-2.4.0.7/wxPython
 
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	20 # distutils problem with 21 and 22
-PYDISTUTILSPKG=	yes
-PYSETUPBUILDARGS=	BUILD_GLCANVAS=0
-PYBINMODULE=	yes
+# we depend on glib which pulls in threads
+PYTHON_VERSIONS_ACCEPTED=	22pth 21pth
+BUILDLINK_DEPENDS.python21-pth=	python21-pth>=2.1.3nb3
+BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
-post-install:
-	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}/${PYSITELIB}/wxPython; \
-	${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py . ; \
-	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py . )
-	(cd ${PREFIX}; ${FIND} ${PYSITELIB}/wxPython \
-		-type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/wxPython \
-		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
+PYDISTUTILSPKG=	yes
+# no GL to limit dependencies
+# OGL doesn't build with egcs-1.1.2
+# no scripts to avoid conflicts
+PYSETUPBUILDARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
+PYSETUPINSTALLARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
+PYBINMODULE=	yes
 
 .include "../../x11/wxGTK/buildlink2.mk"
 .include "../../lang/python/extension.mk"
