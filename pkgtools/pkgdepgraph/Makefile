@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/01/31 12:18:33 abs Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/06 21:13:13 atatat Exp $
 #
 
-DISTNAME=	pkgdepgraph-1.2
+DISTNAME=	pkgdepgraph-2.0
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,8 +19,6 @@ EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
-
-MAKE_ENV=	PKG_DBDIR=${PKG_DBDIR:Q}
 
 DISTVER=	${DISTNAME:S/pkgdepgraph-//}
 
@@ -42,12 +40,14 @@ do-build:
 .for FILE in pkgdepgraph
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
+		-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		< ${WRKSRC}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
 .for FILE in pkgdepgraph
 	${SED} -e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
+		-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'	\
 		< ${WRKSRC}/${FILE}.1.in		\
 		> ${WRKSRC}/${FILE}.1
 	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
