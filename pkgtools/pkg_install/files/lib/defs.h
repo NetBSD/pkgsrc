@@ -1,4 +1,4 @@
-/* $NetBSD: defs.h,v 1.2 2003/09/01 16:27:14 jlam Exp $ */
+/* $NetBSD: defs.h,v 1.3 2003/09/02 08:28:31 jlam Exp $ */
 
 /*
  * Copyright (c) 1999-2000 Alistair G. Crooks.  All rights reserved.
@@ -33,10 +33,10 @@
 #ifndef DEFS_H_
 #define DEFS_H_
 
-#include <nbcompat.h>
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#include <nbcompat.h>
 #if HAVE_ERR_H
 #include <err.h>
 #endif
