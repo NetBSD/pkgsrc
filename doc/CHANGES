@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9205 2005/02/19 12:19:43 wiz Exp $
+$NetBSD: CHANGES,v 1.9206 2005/02/19 12:32:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Class-MethodMaker to 2.05 [wiz 2005-02-19]
 	Updated p5-Text-Kakasi to 1.05 [wiz 2005-02-19]
 	Added p5-Devel-Cycle-1.03 [wiz 2005-02-19]
+	Updated p5-YAML to 0.36 [wiz 2005-02-19]
