@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/07 23:00:00 rh Exp $
+# $NetBSD: Makefile,v 1.17 2002/09/23 18:08:36 wiz Exp $
 
 DISTNAME=	gnome-media-1.2.3
 PKGREVISION=	3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Set of audio/multimedia applications for GNOME
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=--localstatedir=${X11PREFIX}/var/lib
 
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
 
-.include "../../www/libghttp/buildlink.mk"
-.include "../../x11/gnome-libs/buildlink.mk"
-.include "../../textproc/scrollkeeper/buildlink.mk"
+.include "../../www/libghttp/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
