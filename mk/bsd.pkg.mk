@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1398 2004/02/14 02:28:19 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1399 2004/02/14 03:26:09 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -481,8 +481,8 @@ MAKE_ENV+=		CPP="${CPP}"
 MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
 MAKE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
 
-.if exists(${ZOULARISBASE}/bin/ftp)			# Zoularis
-FETCH_CMD?=		${ZOULARISBASE}/bin/ftp
+.if exists(${LOCALBASE}/bin/ftp)
+FETCH_CMD?=		${LOCALBASE}/bin/ftp
 .else
 FETCH_CMD?=		/usr/bin/ftp
 .endif
@@ -783,12 +783,8 @@ PKGTOOLS_REQD=		20030918
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
-.PHONY: uptodate-pkgtools uptodate-zoularis
-.if defined(ZOULARIS_VERSION)
-uptodate-pkgtools: uptodate-zoularis
-.else
+.PHONY: uptodate-pkgtools
 uptodate-pkgtools:
-.endif
 .	if !defined(NO_PKGTOOLS_REQD_CHECK)
 .		if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
 PKG_FAIL_REASON+='Error: The package tools installed on this system are out of date.'
@@ -798,18 +794,6 @@ PKG_FAIL_REASON+=''
 PKG_FAIL_REASON+='	cd ${_PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
 .		endif
 .	endif
-
-# Latest version of Zoularis required for this file.
-ZOULARIS_REQD=		20010323
-
-# Check that we are using up-to-date Zoularis.
-.if defined(ZOULARIS_VERSION)
-uptodate-zoularis:
-.	if ${ZOULARIS_VERSION} < ${ZOULARIS_REQD}
-PKG_FAIL_REASON+='Your Zoularis needs to be updated to the ${ZOULARIS_REQD:C|(....)(..)(..)|\1/\2/\3|} version.'
-PKG_FAIL_REASON+='The installed Zoularis was last updated on ${ZOULARIS_VERSION:C|(....)(..)(..)|\1/\2/\3|}.'
-.	endif
-.endif
 
 # Files to create for versioning and build information
 BUILD_VERSION_FILE=	${WRKDIR}/.build_version
