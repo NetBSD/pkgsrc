@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9099 2005/02/10 03:22:27 jlam Exp $
+$NetBSD: CHANGES,v 1.9100 2005/02/10 08:46:28 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -830,3 +830,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ganglia-webfrontend to 3.0.0 [jschauma 2005-02-09]
 	Updated openpam to 20050201 [jlam 2005-02-10]
 	Added courier-authlib-0.53 [jlam 2005-02-10]
+	Updated cue to 20050131 [itojun 2005-02-10]
