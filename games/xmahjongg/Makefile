@@ -1,29 +1,16 @@
-# $NetBSD: Makefile,v 1.14 2003/03/29 12:41:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/04/10 17:58:07 salo Exp $
+#
 
-DISTNAME=	xmahjongg
-PKGNAME=	xmahjongg-1.0
-PKGREVISION=	2
-WRKSRC=		${WRKDIR}/xmahjongg
-CATEGORIES=	games
-# Most Usenet archive sites don't store it as a .tar.gz, but Slackware
-# and its mirrors do.
-MASTER_SITES=	ftp://wcarchive.cdrom.com/pub/linux/slackware/source/xap/xgames/
+DISTNAME=	xmahjongg-3.6.1
+CATEGORIES=	games x11
+MASTER_SITES=	http://www.lcdf.org/~eddietwo/xmahjongg/
 
-MAINTAINER=	packages@netbsd.org
-COMMENT=	The Chinese game of Mahjongg for X11
+MAINTAINER=	salo@netbsd.org
+HOMEPAGE=	http://www.lcdf.org/~eddietwo/xmahjongg/
+COMMENT=	The Chinese game of Mah Jongg for X11
 
-USE_IMAKE=	yes
-
-RESTRICTED=	"Restrictive copyright"
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-PLIST_SUBST+=	X11BASE="${X11BASE}"
-
-post-extract:
-	@${CP} ${WRKSRC}/xmahjongg.6 ${WRKSRC}/xmahjongg.man
-
-post-install:
-	${GZIP_CMD} ${X11PREFIX}/lib/X11/fonts/misc/xmahjongg.bdf
-	${X11BASE}/bin/mkfontdir ${X11PREFIX}/lib/X11/fonts/misc
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"
