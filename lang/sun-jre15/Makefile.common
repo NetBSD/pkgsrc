@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2004/10/09 04:19:10 tv Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/03/25 18:30:28 tv Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	tv@duh.org
 HOMEPAGE=	http://java.sun.com/
 DOWNLOAD=	http://java.sun.com/j2se/1.5.0/download.html
 ARCHIVE=	http://java.sun.com/products/archive/index.html
