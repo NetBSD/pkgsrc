@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/05 11:27:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/11 00:03:10 rh Exp $
 share/GNUstep/Local/Applications/GNUMail.app/GNUMail
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_add.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_bcc.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_cc.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_delete.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_to.tiff
+share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressBook_32.tiff
+share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressManager_32.tiff
+share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_left.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Entries
 share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Repository
 share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Root
@@ -120,6 +121,9 @@ share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Fonts
 share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Resources/Info-gnustep.plist
 share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Resources/fonts.tiff
 share/GNUstep/Local/Library/GNUMail/Fonts.prefs/stamp.make
+share/GNUstep/Local/Library/GNUMail/Import.bundle/Import
+share/GNUstep/Local/Library/GNUMail/Import.bundle/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/GNUMail/Import.bundle/stamp.make
 share/GNUstep/Local/Library/GNUMail/MIME.prefs/MIME
 share/GNUstep/Local/Library/GNUMail/MIME.prefs/Resources/Info-gnustep.plist
 share/GNUstep/Local/Library/GNUMail/MIME.prefs/Resources/mime.tiff
@@ -146,6 +150,8 @@ share/GNUstep/Local/Library/Libraries/libGNUMail.so.1.0.0
 @dirrm share/GNUstep/Local/Library/GNUMail/Receiving.prefs
 @dirrm share/GNUstep/Local/Library/GNUMail/MIME.prefs/Resources
 @dirrm share/GNUstep/Local/Library/GNUMail/MIME.prefs
+@dirrm share/GNUstep/Local/Library/GNUMail/Import.bundle/Resources
+@dirrm share/GNUstep/Local/Library/GNUMail/Import.bundle
 @dirrm share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Resources
 @dirrm share/GNUstep/Local/Library/GNUMail/Fonts.prefs
 @dirrm share/GNUstep/Local/Library/GNUMail/Filtering.prefs/Resources
