@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2002/10/21 15:18:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/03/09 19:23:09 jschauma Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
+PKGREVISION=	1
 CATEGORIES=	net x11
 MASTER_SITES=	http://www.dtek.chalmers.se/~d3august/xt/dl/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -31,7 +32,8 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../x11/gtkglarea/buildlink2.mk"
 

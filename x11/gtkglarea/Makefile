@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2002/10/20 13:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/03/09 19:28:16 jschauma Exp $
 
 DISTNAME=		gtkglarea-1.2.2
+PKGREVISION=		1
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://www.student.oulu.fi/~jlof/gtkglarea/download/
 
@@ -15,7 +16,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
-CONFIGURE_ARGS+=	--with-GL-prefix="${BUILDLINK_PREFIX.Mesa}"
+CONFIGURE_ARGS+=	--with-GL-prefix="${BUILDLINK_PREFIX.MesaLib}"
 CONFIGURE_ARGS+=	--with-lib-MesaGL
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
@@ -30,6 +31,8 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/gtkgl.m4 \
 		${LOCALBASE}/share/aclocal/gtkgl.m4
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
