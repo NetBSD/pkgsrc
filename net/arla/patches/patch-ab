@@ -1,16 +1,31 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+$NetBSD: patch-ab,v 1.2 2000/10/18 16:32:58 wennmach Exp $
 
 Do not add a path to the library search path (-L) to find libsl.a. This will
 find kth-krb4's sl library, which is the wrong one. 
 
---- appl/vos/Makefile.in.orig	Mon May 29 19:16:56 2000
-+++ appl/vos/Makefile.in	Mon May 29 19:17:40 2000
-@@ -55,7 +55,7 @@
- 		  -L../../rx -lrx \
- 		  -L../../lwp -llwp @PLWP_LIB_FLAGS@ \
- 		  -L../../lib/ko -lko -L../../util -lutil \
+
+--- appl/vos/Makefile.in.orig	Wed Oct 11 21:20:05 2000
++++ appl/vos/Makefile.in	Wed Oct 18 16:18:43 2000
+@@ -50,14 +50,15 @@
+ READLINE_lib	= @LIB_readline@
+ KAFS_LIBS	= @AIX_EXTRA_KAFS@ @KAFS_LIBS@
+ LIB_tgetent     = @LIB_tgetent@
+-LIBS		= -L../lib -larlalib \
+-		  -L../../rxdef -lrxdefclient \
+-		  -L../../rx -lrx \
+-		  -L../../lwp -llwp @PLWP_LIB_FLAGS@ \
+-		  -L../../lib/ko -lko -L../../util -lutil \
 -		  -L../../lib/sl -lsl \
++LIBS		= ../lib/libarlalib.a \
++		  ../../rxdef/librxdefclient.a \
++		  ../../rx/librx.a \
++		  ../../lwp/liblwp.a @PLWP_LIB_FLAGS@ \
++		  ../../lib/ko/libko.a \
++		  ../../util/libutil.a \
 +		  ../../lib/sl/libsl.a \
- 		  -L../../lib/roken \
  		  $(READLINE_lib) \
+-		  -L../../lib/roken -lroken \
++		  ../../lib/roken/libroken.a \
+ 		  $(RXKAD_LIBS) \
+ 		  $(KAFS_LIBS) \
  		  $(RXKAD_LIBS) \

@@ -1,0 +1,24 @@
+$NetBSD: patch-at,v 1.1 2000/10/18 16:32:59 wennmach Exp $
+
+Set up proper path to the LKM for startarla.
+
+--- xfs/bsd/bin/Makefile.in.orig	Wed Oct 18 16:50:31 2000
++++ xfs/bsd/bin/Makefile.in	Wed Oct 18 16:53:41 2000
+@@ -19,6 +19,7 @@
+ libdir 		= @libdir@
+ libexecdir 	= @libexecdir@
+ bindir 		= @bindir@
++lkmdir		= @prefix@/lkm
+ transform	= @program_transform_name@
+ ARLACACHEDIR	= @ARLACACHEDIR@
+ 
+@@ -52,7 +53,9 @@
+ 	$(RM) -f $(PROGRAMS) startarla *.o *~
+ 
+ startarla: startarla.in
+-	sed -e ' s!%bindir%!$(bindir)! ; s!%ARLACACHEDIR%!$(ARLACACHEDIR)!'  $(srcdir)/startarla.in > $@.new
++	sed -e 's!%bindir%!$(bindir)!' \
++	    -e 's!%ARLACACHEDIR%!$(ARLACACHEDIR)!' \
++	    -e 's!%lkmdir%!$(lkmdir)!'  startarla.in > $@.new
+ 	mv $@.new $@
+ 	chmod +x $@
