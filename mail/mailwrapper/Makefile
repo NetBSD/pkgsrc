@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/07/24 09:19:15 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/08/10 21:46:34 jlam Exp $
 
 DISTNAME=	mailwrapper-19990412
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.2 2004/07/24 09:19:14 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.3 2004/08/10 21:46:34 jlam Exp $
 
 MAILWRAPPEES="@MAILWRAPPEES@"
 MAILWRAPPER="${PKG_PREFIX}/sbin/mailwrapper"
@@ -11,7 +11,7 @@ ALL_FILES="${ALL_FILES} ${MAILER_CONF_SAMPLE} ${MAILER_CONF}"
 case ${STAGE} in
 DEINSTALL)
 	for file in ${MAILWRAPPEES}; do
-		if [ -f ${file}.mailwrappee ]; then
+		if [ -f ${file}${MW_BACKUP_SFX} ]; then
 			${ECHO} "Restoring ${file}${MW_BACKUP_SFX} to ${file}."
 			${RM} -f ${file}
 			${MV} -f ${file}${MW_BACKUP_SFX} ${file}
