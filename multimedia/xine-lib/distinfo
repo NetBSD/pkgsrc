@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2004/03/28 20:14:22 mycroft Exp $
+$NetBSD: distinfo,v 1.4 2004/04/16 14:55:30 mycroft Exp $
 
-SHA1 (xine-lib-1-rc3b.tar.gz) = 0ab8e26526f81480d028cafcf7d83aa48cc5151c
-Size (xine-lib-1-rc3b.tar.gz) = 6422089 bytes
-SHA1 (patch-aa) = b8493cabd3f9d9eb57d414265ea1eac4db71fa08
+SHA1 (xine-lib-1-rc3c.tar.gz) = 48a0812e8bb478e809dc01347710301fb17fac12
+Size (xine-lib-1-rc3c.tar.gz) = 6463319 bytes
+SHA1 (patch-aa) = beb7617b8361c06cf5224f0027731f025f7dc519
 SHA1 (patch-ab) = a5205d23d02dff84b0e8a9f850f3833cacc28c5a
 SHA1 (patch-ac) = 7959d6d3599c9debe79b1b4a5749b6af714588a0
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
