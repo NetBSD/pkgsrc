@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2850 2005/01/06 11:56:50 adam Exp $
+$NetBSD: TODO,v 1.2851 2005/01/06 12:12:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -246,6 +246,10 @@ Suggested new packages
 	http://www.webwareforpython.org/
 	Suite of software components for developing object-oriented,
 	web-based applications.
+
+	Acrobat Reader 7
+	http://www.adobe.com/products/acrobat/readstep2.html
+	Version 7 of the acroread
 
 
 Suggested package updates
