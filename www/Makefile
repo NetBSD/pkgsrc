@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2000/01/12 22:22:35 jwise Exp $
+# $NetBSD: Makefile,v 1.63 2000/01/14 17:27:00 jwise Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -36,6 +36,7 @@
     SUBDIR += hypermail
 #    SUBDIR += http-analyze
     SUBDIR += jakarta-tomcat
+#    SUBDIR += jsdk20
     SUBDIR += libghttp
 #    SUBDIR += libpics
     SUBDIR += libwww
