@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/18 02:52:20 hubertf Exp $
+
+--- Makefile.orig	Fri Mar 23 23:36:18 2001
++++ Makefile
+@@ -1,31 +1,34 @@
+ # Change paths & OPT if necessary
+ 
+-CC = gcc
+-OPT = -m486 -O2
++#CC = gcc
++#OPT = -m486 -O2
+ #OPT = -mpentium -O6
+ #OPT = -mcpu=k6 -march=k6 -O6
+-CFLAGS = $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
+-LFLAGS = -shared -fPIC -L/usr/local/lib
+-OBJ = vismsa.o
+-INSTALL-DIR=`xmms-config --visualization-plugin-dir`
+-XMMS_DATADIR=`xmms-config --data-dir`
++CFLAGS+= $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
++#LFLAGS = -shared -fPIC -L/usr/local/lib
++OBJ = vismsa.lo
++INSTALL-DIR=`$(XMMS_CONFIG) --visualization-plugin-dir`
++XMMS_DATADIR=`$(XMMS_CONFIG) --data-dir`
+ #INSTALL-DIR=$(HOME)/.xmms/Plugins
+ #XMMS_DATADIR=$(HOME)/.xmms
+ #XMMS_DATADIR_FLAGS=-DTHEMEDIR=\"$(XMMS_DATADIR)/$(THEME_SUBDIR)/\"
+ 
+-all: libvismsa.so
++all: libvismsa.la
+ 
+-libvismsa.so: $(OBJ)
+-	$(CC) -o libvismsa.so $(OBJ) $(LFLAGS)
++.SUFFIXES: .lo .c
+ 
+-.c.o:
+-	$(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
++libvismsa.la: $(OBJ)
++	${LIBTOOL} $(CC) -o libvismsa.la $(OBJ) $(LFLAGS) -rpath ${INSTALL-DIR}
++
++.c.lo:
++	${LIBTOOL} $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
+ 
+ clean:
+-	rm -f *.o core *.so* 
++	rm -f *.o core *.so*  *.la *.so
++	rm -fr .libs
+ 
+ distclean:
+ 	rm -f *.o core *~
+ 
+ install:
+-	install libvismsa.so $(INSTALL-DIR)
++	${LIBTOOL} ${INSTALL} libvismsa.la $(INSTALL-DIR)
