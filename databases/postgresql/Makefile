@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/11/12 16:24:39 agc Exp $
+# $NetBSD: Makefile,v 1.20 1998/11/16 21:13:01 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.3.2
@@ -33,7 +33,7 @@ CONFIGURE_ARGS= --prefix=${PREFIX}/${PGUSER} \
 		--with-tcl \
 		--with-includes=${PREFIX}/include \
 		--with-libs=${PREFIX}/lib \
-		--with-template=`uname -s | ${TR} '[A-Z]' '[a-z]'`
+		--with-template=`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`
 
 .include "../../mk/bsd.prefs.mk"
 
