@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.4 2004/08/13 18:08:02 jlam Exp $
+
+--- lib/Makefile.in.orig	Fri Aug 13 13:53:00 2004
++++ lib/Makefile.in
+@@ -121,7 +121,7 @@ JAVA_TRUE = @JAVA_TRUE@
+ LDFLAGS = @LDFLAGS@
+ LIBOBJS = @LIBOBJS@
+ LIBS = @LIBS@
+-LIBTOOL = @LIBTOOL@
++LIBTOOL = $(SHLIBTOOL)
+ LIB_CRYPT = @LIB_CRYPT@
+ LIB_DES = @LIB_DES@
+ LIB_DOOR = @LIB_DOOR@
