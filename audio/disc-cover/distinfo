@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.8 2003/07/25 16:42:23 drochner Exp $
+$NetBSD: distinfo,v 1.9 2003/08/22 18:33:05 drochner Exp $
 
 SHA1 (disc-cover-1.5.2.tar.gz) = b1fcc7e5bf1751202729db623f37c78be05356fc
 Size (disc-cover-1.5.2.tar.gz) = 44834 bytes
+SHA1 (patch-aa) = 8dcbf92c90782cd9625ce45048a018f9fcd41ad7
