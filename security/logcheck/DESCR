@@ -7,8 +7,3 @@ various Abacus Project tools, system daemons, Wietse Venema's TCP Wrapper
 and Log Daemon packages, and the Firewall Toolkit(c) by Trusted Information 
 Systems Inc.(TIS). Logcheck also works very well at reporting on other 
 common operating system security violations and strange events.
-
-WWW: http://www.psionic.com/
-
-- Dan Langille
-dan@freebsddiary.org
