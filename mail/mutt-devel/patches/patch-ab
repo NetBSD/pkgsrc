@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.4 2004/07/21 22:37:10 jlam Exp $
+
+--- Makefile.in.orig	Wed Jul 21 17:56:30 2004
++++ Makefile.in
+@@ -113,11 +113,11 @@ EXTRA_PROGRAMS = mutt_dotlock pgpring ma
+ 
+ SUBDIRS = m4 po intl doc contrib $(IMAP_SUBDIR)
+ 
+-bin_SCRIPTS = muttbug flea
++bin_SCRIPTS = muttbug flea @SMIMEAUX_TARGET@
+ 
+ BUILT_SOURCES = keymap_defs.h patchlist.c
+ 
+-bin_PROGRAMS = mutt @DOTLOCK_TARGET@ @PGPAUX_TARGET@ @SMIMEAUX_TARGET@
++bin_PROGRAMS = mutt @DOTLOCK_TARGET@ @PGPAUX_TARGET@
+ mutt_SOURCES = $(BUILT_SOURCES) 	addrbook.c alias.c attach.c base64.c browser.c buffy.c color.c         crypt.c cryptglue.c 	commands.c complete.c compose.c copy.c curs_lib.c curs_main.c date.c 	edit.c enter.c flags.c init.c filter.c from.c getdomain.c 	handler.c hash.c hdrline.c headers.c help.c hook.c keymap.c 	main.c mbox.c menu.c mh.c mx.c pager.c parse.c pattern.c 	postpone.c query.c recvattach.c recvcmd.c 	rfc822.c rfc1524.c rfc2047.c rfc2231.c 	score.c send.c sendlib.c signal.c sort.c 	status.c system.c thread.c charset.c history.c lib.c 	muttlib.c editmsg.c utf8.c mbyte.c wcwidth.c 	url.c ascii.c mutt_idna.c
+ 
+ 
