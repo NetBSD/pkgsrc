@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/08 17:55:15 agc Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 05:02:23 snj Exp $
 # FreeBSD Id: ports/security/fragroute/Makefile,v 1.10 2003/09/24 08:37:38 edwin Exp
 
 DISTNAME=	fragroute-1.2
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.monkey.org/~dugsong/fragroute/
 COMMENT=        Tool for intercepting, modifying and rewriting egress traffic
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libdnet=${PREFIX}
@@ -26,7 +26,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/scripts/${FILE} ${PREFIX}/share/fragroute
 .endfor
 
-.include "../../net/libpcap/buildlink2.mk"
-.include "../../net/libdnet/buildlink2.mk"
-.include "../../devel/libevent/buildlink2.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../net/libdnet/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
