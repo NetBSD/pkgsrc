@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/04/10 23:57:23 rh Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/09/24 01:56:54 rh Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ADDRESSES_BUILDLINK3_MK:=	${ADDRESSES_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	Addresses
 
 .if !empty(ADDRESSES_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.Addresses+=	Addresses>=0.4.5
+BUILDLINK_RECOMMENDED.Addresses+=	Addresses>=0.4.5nb2
 BUILDLINK_PKGSRCDIR.Addresses?=	../../misc/Addresses
 
 .include "../../devel/gnustep-make/gnustep.mk"

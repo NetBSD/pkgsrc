@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/05/05 03:36:25 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/24 01:56:54 rh Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/3DKit/RenderKit/}
-PKGREVISION=	5
+PKGREVISION=	6
 
 COMMENT=	Objective-C API for core scene rendering
 
