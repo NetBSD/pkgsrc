@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2003/07/13 13:52:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/16 22:24:14 wiz Exp $
 #
 
-DISTNAME=	gtm-0.4.11
-PKGREVISION=	4
+DISTNAME=	gtm-0.4.12
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtm/}
 
@@ -13,12 +12,10 @@ COMMENT=	Gnome Transfer Manager
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_BUILDLINK2=		YES
-USE_X11BASE=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-
-#post-install:
-#	${RMDIR} ${PREFIX}/share/gnome/help/gtm/C/images
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"

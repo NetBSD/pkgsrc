@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/04/29 17:05:06 magick Exp $
+$NetBSD: distinfo,v 1.5 2003/09/16 22:24:14 wiz Exp $
 
-SHA1 (gtm-0.4.11.tar.gz) = 912d507e43a39e4240afe7e1b764f39c98cc5f34
-Size (gtm-0.4.11.tar.gz) = 575067 bytes
+SHA1 (gtm-0.4.12.tar.gz) = b0249328a36e1176091eee474cadf82b108f2b0c
+Size (gtm-0.4.12.tar.gz) = 499796 bytes
+SHA1 (patch-aa) = b8b354491cd9d14b4feefd469ad88f46ac7739a0
