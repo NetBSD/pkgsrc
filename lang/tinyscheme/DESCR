@@ -5,10 +5,10 @@ interpreter for other programs.  As such, it does not offer IDEs or
 extensive toolkits although it does sport a small top-level loop,
 included conditionally.  A lot of functionality in TinyScheme is
 included conditionally, to allow developers freedom in balancing
-features and footprint. 
+features and footprint.
 
 As an embedded interpreter, it allows multiple interpreter states to
-coexist in the same program, without any interference between them. 
+coexist in the same program, without any interference between them.
 Programmatically, foreign functions in C can be added and values can
 be defined in the Scheme environment.  Being quite a small program, it
-is easy to comprehend, get to grips with, and use. 
+is easy to comprehend, get to grips with, and use.

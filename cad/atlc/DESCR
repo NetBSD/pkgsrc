@@ -1,11 +1,11 @@
 Atlc is a finite difference programme that is used to calculate the
 properties of a two-conductor electrical transmission line of
 arbitrary cross section. It is used whenever there are no analytical
-formula known, yet you still require an answer. It can calculate: 
+formula known, yet you still require an answer. It can calculate:
 
-  The impedance Zo (in Ohms) 
-  The capacitance per unit length (pF/m) 
-  The inductance per unit length (nF/m) 
+  The impedance Zo (in Ohms)
+  The capacitance per unit length (pF/m)
+  The inductance per unit length (nF/m)
   The velocity of propogation v (m/s)
   The velocity factor, v/c, which is dimensionless.
 

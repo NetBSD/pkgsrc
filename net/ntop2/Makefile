@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/05 16:59:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/06 17:42:14 jmmv Exp $
 
 DISTNAME=		ntop-2.1.54
 PKGNAME=		ntop2-2.1.54
@@ -18,7 +18,7 @@ USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=          yes
 USE_GNU_READLINE=	yes
-# --enable-micro-ntop causes compile to fail 
+# --enable-micro-ntop causes compile to fail
 CONFIGURE_ARGS+=	--enable-automake171
 CONFIGURE_ARGS+=	--with-pcap-root=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-gdbm-root=${BUILDLINK_PREFIX.gdbm}

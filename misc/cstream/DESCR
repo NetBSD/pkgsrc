@@ -1,6 +1,6 @@
    cstream is a general-purpose stream-handling tool like UNIX' dd,
    usually used in commandline-constructed pipes.
-   
+  
    Featues:
      Sane commandline switch syntax.
      Exact throughput limiting, on the incoming side. Timing variance in

@@ -2,4 +2,4 @@ xipdump - displays ip packets using X window.
 
 xipdump is a protocol analyzer and tester. It's a kind of graphical
 tcpdump(8) with possibility of changing packet values and resending them.
-It could be also designed by term "human ip stack". 
+It could be also designed by term "human ip stack".

@@ -5,7 +5,7 @@ under NetBSD, Linux, and Aix.  Basic functions are:
 
   * macro language a la Visual Basic
       Programming language with the same syntax as Microsoft Visual Basic.
-  
+ 
   * XY, pie and bar charts
 
   * Printing of selected areas to files
@@ -13,10 +13,10 @@ under NetBSD, Linux, and Aix.  Basic functions are:
       This file format can be send to printer throught the fig2dev
       and gs programs or edited and printed with the Xfig drawing tool.
 
-  * multi-documents management 
-      20 documents open simultaneously. 
+  * multi-documents management
+      20 documents open simultaneously.
       Copy, Cut and Paste between documents
 
-  * Excel exportable file format through VBA macro file. 
+  * Excel exportable file format through VBA macro file.
       The file format used to save abs worksheets is directly importable
       to Excel with the Excel macro editor.

@@ -5,4 +5,4 @@ o A cache manager (arlad) that works both in user-level mode and with
 
 o Some simple programs (amon, fs, klog, tokens, vos, udebug, and pts).
 
-o An experimental AFS server called milko.  
+o An experimental AFS server called milko. 

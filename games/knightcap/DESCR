@@ -1,9 +1,9 @@
 KnightCap is a chess program written for the Fujitsu AP1000+ parallel
-computer (running AP/Linux). 
+computer (running AP/Linux).
 
 The principal differences between KnightCap and other chess programs
 are:
- - KnightCap has an optional fully rendered 3D interface, giving a feel 
+ - KnightCap has an optional fully rendered 3D interface, giving a feel
    much more like an "over the board" game.
  - KnightCap was developed to run on a parallel distributed memory
    machine, although it also runs on normal unix boxes.
@@ -14,7 +14,7 @@ are:
  - KnightCap learns the parameters of its evaluation function as it
    plays. The most dramatic example of how this helps is an experiment
    we conducted on FICS in which KnightCap learnt from a 1650 player
-   to a 2100 player in just 300 games. 
+   to a 2100 player in just 300 games.
 
 KnightCap now beats gnuchess consistently and is within "coo-ee" of
 crafty, although I think it needs deeper search or some more dramatic

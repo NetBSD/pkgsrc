@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/03/01 02:01:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.36 2003/05/06 17:41:55 jmmv Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -57,7 +57,7 @@ pre-fetch:
 		${ECHO} "Without fixing this problem ${PKGNAME} will not work." ; ${FALSE} ; fi
 .endif
 
-# delete some .orig files that got created by patching 
+# delete some .orig files that got created by patching
 post-install:
 	${RM} -f ${PREFIX}/lib/${PKGNAME}/config/Makeso.incl.in.orig
 	${RM} -f ${PREFIX}/lib/${PKGNAME}/macros/util/scipad.sci.orig

@@ -12,8 +12,8 @@ C++.  It currently supports:
 
 + Arm 6 based core.  Currently able to handle data processing
 instructions, word/byte load and stores, load/store multiple,
-branches, 32 bit multiplication, and SWIs. 
+branches, 32 bit multiplication, and SWIs.
 + Support for plugging in different caches - be they unified or
 separate I & D caches.  Currently only a direct mapped cache is
-implemented. 
-+ Compile for SWARM using ARM targeted gcc. 
+implemented.
++ Compile for SWARM using ARM targeted gcc.

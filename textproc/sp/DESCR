@@ -1,5 +1,5 @@
-  A free, object-oriented toolkit for SGML parsing and entity management  
-  
+  A free, object-oriented toolkit for SGML parsing and entity management 
+ 
   * Provides access to all information about SGML document
       + Access to DTD and SGML declaration as well as document instance
       + Access to markup as well as abstract document
@@ -12,7 +12,7 @@
       + Only DATATAG and CONCUR not supported
   * Sophisticated entity manager
       + Supports ISO/IEC 10744 Formal System Identifiers
-      + Supports SGML Open catalogs  
+      + Supports SGML Open catalogs 
       + Supports WWW
       + Can be used independently of parser
   * Supports multi-byte character sets
