@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2005/02/13 01:16:44 grant Exp $
+# $NetBSD: Makefile.common,v 1.26 2005/02/17 06:26:51 grant Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -37,6 +37,10 @@ OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 # XXX: The following will be handled by buildlink3 at some point.
 CFLAGS+=		${_STRIPFLAG_CC}
 
+# BDB_TYPE gets set to "db1" if USE_DB185=="yes"
+USE_DB185?=		no
+BDB_ACCEPTED?=		db1 db2 db3 db4
+
 .if defined(EXIM_DB) && ${EXIM_DB} == "gdbm"
 .  include "../../databases/gdbm/buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_GDBM=yes
@@ -45,8 +49,20 @@ EXIM_INCLUDE=		-I${PREFIX}/include
 .else # use native or Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
 .  include "../../mk/bdb.buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
-EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${BDBBASE}/${BUILDLINK_LIBDIRS.${BDB_TYPE}} -L${BDBBASE}/${BUILDLINK_LIBDIRS.${BDB_TYPE}} ${BDB_LIBS}
-EXIM_INCLUDE=		-I${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
+.  if ${BDB_TYPE} == "db4"
+EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db4} ${BDB_LIBS}
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db4}
+.  elif ${BDB_TYPE} == "db3"
+EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db3} ${BDB_LIBS}
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
+.  elif ${BDB_TYPE} == "db2"
+EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db2} ${BDB_LIBS}
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
+.  else # using native
+EXIM_DBMLIB=		# empty so use defaults
+EXIM_USE_DB_CONFIG=	# empty so use defaults
+EXIM_INCLUDE=		-I/usr/${BUILDLINK_INCDIRS.db-native}
+.  endif
 .endif
 
 pre-patch:
@@ -90,7 +106,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${PREFIX}/man/man8/exim.8
 
 .if defined(EXIM_USE_LOOKUP_WHOSON) && ${EXIM_USE_LOOKUP_WHOSON} == "YES"
-.include "../../net/whoson/buildlink3.mk"
+.  include "../../net/whoson/buildlink3.mk"
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
