@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3992 2003/12/06 00:31:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3993 2003/12/06 00:53:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4988,4 +4988,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libtasn1 to 0.2.6 [xtraeme 2003-12-05]
 	Added libgpg-error-0.6 [xtraeme 2003-12-05]
 	Updated libgcrypt to 1.1.90 [xtraeme 2003-12-05]
-	Updated opencdk to 0.5.3 [xtraeme 2003-12-05] 
+	Updated opencdk to 0.5.3 [xtraeme 2003-12-05]
+	Updated gnutls to 1.0.0 [xtraeme 2003-12-05] 
