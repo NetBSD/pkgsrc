@@ -1,15 +1,11 @@
-$NetBSD: patch-aa,v 1.7 2003/10/05 12:03:12 martti Exp $
+$NetBSD: patch-aa,v 1.8 2004/07/07 11:43:58 martti Exp $
 
---- src/mon-text.c.orig	Tue Sep 23 07:07:02 2003
-+++ src/mon-text.c	Sun Oct  5 14:17:08 2003
-@@ -111,8 +111,8 @@
- 
-         printf("\n");
+--- src/mon-text.c.orig	2004-07-06 12:39:38.000000000 +0000
++++ src/mon-text.c	2004-07-07 14:35:58.000000000 +0000
+@@ -108,4 +108,4 @@
  
 -        /* XXX: usleep() is probably not very portable */
 -        usleep(delay * 1000000);
 +        sleep(delay);
 +        usleep((delay - (int)delay) * 1000000);
      } while (delay);
-     
-     return 0;
