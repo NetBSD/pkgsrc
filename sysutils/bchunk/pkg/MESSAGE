@@ -1,0 +1,8 @@
+=========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/02/21 16:45:32 pooka Exp $
+
+It is advisable that you edit the .cue file to either MODE2/2352/2048 or
+MODE2/2352/2324 depending on wether you want an ISO filesystem or a VCD,
+respectively. The format itself does not contain this feature and in an
+ambiguous case it can only guess.
+=========================================================================
