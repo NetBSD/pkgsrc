@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.application,v 1.13 2004/11/05 13:46:39 wiz Exp $
+# $NetBSD: Makefile.application,v 1.14 2005/01/15 12:41:33 jdolecek Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -12,17 +12,12 @@ _LINUX_SYSCTL_OSRELEASE?=      	emul.linux.kern.osrelease
 	(${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"))
 LINUX_KERNEL_OSRELEASE!=	(/sbin/sysctl -n ${_LINUX_SYSCTL_OSRELEASE} 2>/dev/null; ${ECHO} 2.0.38) | ${HEAD} -1
 
-.  if ${LINUX_KERNEL_OSRELEASE} == "2.0.38"
-SUSE_DIR_PREFIX=		suse64
-SUSE_VERSION=			6.4
-.  else
-.    if !empty(SUSE_PREFER:M9.1)
+.  if !empty(SUSE_PREFER:M9.1)
 SUSE_DIR_PREFIX=		suse91
 SUSE_VERSION=			9.1
-.    else
+.  else
 SUSE_DIR_PREFIX=		suse
 SUSE_VERSION=			7.3
-.    endif
 .  endif
 
 .  if defined(RPMFILES)
