@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2005/04/02 20:09:29 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.11 2005/04/02 20:15:41 jdolecek Exp $
 
 SUSE_VERSION=		9.1
 
@@ -14,7 +14,9 @@ MASTER_SITE_SUSE91?=	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR} \
 			ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR} \
 			ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
 			ftp://mirror.mcs.anl.gov/pub/${_SUSE_FTP_SUBDIR} \
-			ftp://mirror.mcs.anl.gov/pub/${_SUSE_FTP_SUBDIR_UPD}
+			ftp://mirror.mcs.anl.gov/pub/${_SUSE_FTP_SUBDIR_UPD} \
+			ftp://ftp.sh.cvut.cz/MIRRORS/${_SUSE_FTP_SUBDIR:C/^suse/suse\/pub/} \
+			ftp://ftp.sh.cvut.cz/MIRRORS/${_SUSE_FTP_SUBDIR_UPD:C/^suse/suse\/pub/}
 
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}/${SUSE_ARCH}
 
