@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/11/02 14:43:17 agc Exp $
+$NetBSD: patch-ac,v 1.2 1998/11/02 21:18:14 agc Exp $
 
 We install the sfio header files into their own directory, to protect
 any casual compilation which includes the standard include/ directory,
@@ -6,39 +6,20 @@ and so update the documentation to reflect this.
 
 --- man/man3/sfio.3	1998/11/02 14:29:31	1.1
 +++ man/man3/sfio.3	1998/11/02 14:29:57
-@@ -15,7 +15,7 @@
- .ta 1.0i 2.0i 3.0i 4.0i 5.0i
+@@ -16,6 +16,7 @@
  .nf
  .ft 5
--#include   <sfio.h>
-+#include   <sfio/sfio.h>
+ #include   <sfio.h>
++cc -I@prefix@/include/sfio ... -L@prefix@/lib -lsfio
  .ft 1
  .fi
  .Ss "DATA TYPES"
-@@ -175,7 +175,7 @@
- .Ss "FULL STRUCTURE SFIO_T"
+@@ -198,7 +199,7 @@
  .nf
  .ft 5
--#include   <sfio_t.h>
-+#include   <sfio/sfio_t.h>
- #define    SFNEW(buf,size,file,flags,disc)
+ #include   <stdio.h>
+-cc ... -lstdio -lsfio
++cc -I@prefix@/include/sfio ... -L@prefix@/lib -lstdio -lsfio
  .ft 1
  .fi
-@@ -197,7 +197,7 @@
- .Ss "STDIO-COMPATIBILITY"
- .nf
- .ft 5
--#include   <stdio.h>
-+#include   <sfio/stdio.h>
- cc ... -lstdio -lsfio
- .ft 1
- .fi
-@@ -1642,7 +1642,7 @@
- .PP
- .Ss "FULL STRUCTURE SFIO_T"
- .PP
--.Ss "  #include <sfio_t.h>"
-+.Ss "  #include <sfio/sfio_t.h>"
- Most applications based on \fISfio\fP only need to include
- the header file \f5sfio.h\fP which defines an abbreviated \f5Sfio_t\fP
- structure without certain fields private to \fISfio\fP.
+ .SH DESCRIPTION

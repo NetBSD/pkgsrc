@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/02 14:43:17 agc Exp $
+$NetBSD: patch-aa,v 1.2 1998/11/02 21:18:14 agc Exp $
+
+Make sure we get iffe from its correct location.
 
 --- src/lib/sfio/Makefile	1998/10/27 17:01:58	1.1
 +++ src/lib/sfio/Makefile	1998/10/27 17:03:57

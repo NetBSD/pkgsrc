@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1 1998/11/02 21:18:14 agc Exp $
+
+NetBSD included Makefile for line disciplines
+
+--- /dev/null	Mon Nov  2 17:57:38 1998
++++ src/lib/sfio/Sfio_dc/Makefile.inc	Mon Nov  2 17:23:17 1998
+@@ -0,0 +1,4 @@
++.PATH: ${.CURDIR}/Sfio_dc
++
++SRCS+=	sfdcdio.c sfdcdos.c sfdcfilter.c sfdclzw.c sfdcseekable.c sfdcslow.c \
++	sfdcsubstream.c sfdctee.c sfdcunion.c

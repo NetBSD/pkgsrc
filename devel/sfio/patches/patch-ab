@@ -1,20 +1,32 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/11/02 14:43:17 agc Exp $
+$NetBSD: patch-ab,v 1.2 1998/11/02 21:18:14 agc Exp $
 
-Installation commands, mainly.
+Build and installation commands.
 
 --- /dev/null	Tue Oct 27 17:12:04 1998
 +++ Makefile	Tue Oct 27 17:16:13 1998
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,25 @@
 +all:
-+	cd src/lib/sfio; make
++	cd src/lib/sfio; make -f sfio.mk
++	cd src/lib/sfio/Stdio_b; make -f stdio.mk
 +
 +install:
-+	${INSTALL} -c -m 0644 lib/libsfio.a ${PREFIX}/lib
++	${INSTALL} -c -m 0644 src/lib/sfio/libsfio.a ${PREFIX}/lib
++	${INSTALL} -c -m 0644 src/lib/sfio/libsfio_p.a ${PREFIX}/lib
++	${INSTALL} -c -m 0644 src/lib/sfio/libsfio_pic.a ${PREFIX}/lib
++	${INSTALL} -c -m 0644 src/lib/sfio/libsfio.so.1.0 ${PREFIX}/lib
 +	${RANLIB} ${PREFIX}/lib/libsfio.a
-+	${INSTALL} -c -m 0644 lib/libstdio.a ${PREFIX}/lib
++	${RANLIB} ${PREFIX}/lib/libsfio_p.a
++	${RANLIB} ${PREFIX}/lib/libsfio_pic.a
++	${INSTALL} -c -m 0644 src/lib/sfio/Stdio_b/libstdio.a ${PREFIX}/lib
++	${INSTALL} -c -m 0644 src/lib/sfio/Stdio_b/libstdio_p.a ${PREFIX}/lib
++	${INSTALL} -c -m 0644 src/lib/sfio/Stdio_b/libstdio_pic.a ${PREFIX}/lib
++	${INSTALL} -c -m 0644 src/lib/sfio/Stdio_b/libstdio.so.1.0 ${PREFIX}/lib
 +	${RANLIB} ${PREFIX}/lib/libstdio.a
++	${RANLIB} ${PREFIX}/lib/libstdio_p.a
++	${RANLIB} ${PREFIX}/lib/libstdio_pic.a
 +	${INSTALL} -c -m 0644 man/man3/sfio.3 ${PREFIX}/man/man3
-+	-mkdir ${PREFIX}/include/sfio
-+	for f in ast_common.h sfio.h sfio_t.h stdio.h; do \
-+		${INSTALL} -c -m 0644 include/$$f ${PREFIX}/include/sfio; \
++	-/bin/mkdir ${PREFIX}/include/sfio
++	for f in ast_common.h sfio.h sfio_t.h; do \
++		${INSTALL} -c -m 0644 src/lib/sfio/$$f ${PREFIX}/include/sfio/$$f; \
 +	done
++	${INSTALL} -c -m 0644 src/lib/sfio/Stdio_s/stdio.h ${PREFIX}/include/sfio/stdio.h
