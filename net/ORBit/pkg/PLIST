@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1999/10/22 23:35:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2000/05/30 19:13:19 drochner Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -11,19 +11,21 @@ lib/libIDL-0.6.so.0.0
 lib/libIDL.la
 lib/libIDL.a
 lib/libIDLConf.sh
-lib/libORBitCosNaming.so.4.0
+lib/libORBitCosNaming.so.5.1
 lib/libORBitCosNaming.la
 lib/libORBitCosNaming.a
-lib/libORBitutil.so.4.0
+lib/libORBitutil.so.5.1
 lib/libORBitutil.la
 lib/libORBitutil.a
-lib/libIIOP.so.4.0
+lib/libIIOP.so.5.1
 lib/libIIOP.la
 lib/libIIOP.a
-lib/libORBit.so.4.0
+lib/libORBit.so.5.1
 lib/libORBit.la
 lib/libORBit.a
 lib/liborbit-c-backend.a
+lib/libpopt.a
+lib/libpopt.so.0.0
 lib/libname-server.a
 include/libIDL/IDL.h
 include/ORBitservices/CosNaming.h
@@ -36,6 +38,8 @@ include/ORBitservices/CosTypedEventComm.idl
 include/ORBitservices/CosTypedEventChannel.idl
 include/ORBitutil/basic_types.h
 include/ORBitutil/compat.h
+include/ORBitutil/orbit-os-config.h
+include/ORBitutil/os-feature-alloca.h
 include/ORBitutil/os-specifics.h
 include/ORBitutil/thread-safety.h
 include/ORBitutil/trace.h
@@ -52,6 +56,7 @@ include/orb/interface_repository.h
 include/orb/allocator-defs.h
 include/orb/allocators.h
 include/orb/cdr.h
+include/orb/corba_context.h
 include/orb/dii.h
 include/orb/dynany.h
 include/orb/env.h
@@ -88,6 +93,7 @@ include/orbit-idl2.h
 @unexec install-info --delete %D/info/libIDL.info %D/info/dir
 info/libIDL.info
 @exec install-info %D/info/libIDL.info %D/info/dir
+share/aclocal/ORBit.m4
 share/aclocal/libIDL.m4
 @dirrm include/libIDL
 @dirrm include/ORBitutil
