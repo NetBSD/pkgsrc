@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2002/03/01 02:34:51 abs Exp $
+# $NetBSD: Makefile,v 1.268 2002/03/07 12:20:20 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -163,6 +163,7 @@ SUBDIR+=	p5-Date-Calc
 SUBDIR+=	p5-Date-Manip
 SUBDIR+=	p5-Devel-SmallProf
 SUBDIR+=	p5-Devel-Symdump
+SUBDIR+=	p5-Error
 SUBDIR+=	p5-Event
 SUBDIR+=	p5-Expect
 SUBDIR+=	p5-ExtUtils-F77
@@ -190,6 +191,7 @@ SUBDIR+=	p5-Term-ReadLine
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Harness
 SUBDIR+=	p5-Test-Simple
+SUBDIR+=	p5-Test-Unit
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Time-HiRes
 SUBDIR+=	p5-TimeDate
