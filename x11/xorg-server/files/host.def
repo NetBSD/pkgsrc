@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.9 2005/03/01 19:00:11 xtraeme Exp $ */
+/* $NetBSD: host.def,v 1.10 2005/03/22 14:01:20 adam Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -9,7 +9,7 @@
 #define MakeCmd @MAKE@
 
 #ifndef LinuxArchitecture
-#define HasGnuMake      NO
+#define HasGnuMake NO
 #endif
 
 #define ImakeCmd @IMAKE@
@@ -25,11 +25,17 @@
 #define BuildServer YES
 #define LibInstallBuild YES
 #define ModInstall YES
-#define XF86Server YES
 #define BuildServersOnly YES
 #define BuildGLXLibrary YES
-#define BuildXFree86ConfigTools YES
 #define UseInstalledPrograms YES
+
+#ifdef DarwinArchitecture
+#define XDarwinServer YES
+#else
+#define XF86Server YES
+#define BuildXFree86ConfigTools YES
+#define XF86CardDrivers @CARDDRIVERS@
+#endif
 
 #ifndef LinuxArchitecture
 #define HasNcurses		NO
@@ -62,5 +68,3 @@
 #define MiscManSuffix @MISCMAN_SUFFIX@
 #define MiscManDir @PREFIX@/@MISCMAN_DIR@
 #define DriverManDir @PREFIX@/@KERNMAN_DIR@
-
-#define	XF86CardDrivers	@CARDDRIVERS@
