@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/10 04:31:18 jlam Exp $
+
+--- src/Makefile.in.orig	Tue Mar  7 04:14:07 2000
++++ src/Makefile.in	Tue May  9 11:46:57 2000
+@@ -92,7 +92,7 @@
+ libGTL_la_SOURCES =          gml_scanner.cpp            gml_parser.cpp             edge.cpp                   graph.cpp                  node.cpp           	dfs.cpp 	   	biconnectivity.cpp 	bfs.cpp            	topsort.cpp        	st_number.cpp      	embedding.cpp	   	pq_node.cpp	   	pq_tree.cpp	   	planarity.cpp 	   	maxflow_ff.cpp     	maxflow_pp.cpp     	debug.cpp          	components.cpp     	fm_partition.cpp   	ratio_cut_partition.cpp 
+ 
+ 
+-libGTL_la_LDFLAGS = -version-info $(MINOR_VERSION):$(MINI_VERSION):0
++libGTL_la_LDFLAGS = -version-info $(GTL_VERS)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
+ LTLIBRARIES =  $(lib_LTLIBRARIES)
+@@ -112,7 +112,7 @@
+ CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ CXXLD = $(CXX)
+-CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
++CXXLINK = $(LIBTOOL) --mode=link --cplusplus $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
