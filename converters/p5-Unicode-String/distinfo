@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/02 22:50:27 seb Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 16:12:34 agc Exp $
 
 SHA1 (Unicode-String-2.07.tar.gz) = c694e14a29dca88c7dac234e18fdcb81d8cb5429
+RMD160 (Unicode-String-2.07.tar.gz) = f290850394f3fc7599b3f302f5d87ef6e6b74c24
 Size (Unicode-String-2.07.tar.gz) = 61102 bytes
