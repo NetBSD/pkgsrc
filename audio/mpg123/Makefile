@@ -1,18 +1,24 @@
+# $NetBSD: Makefile,v 1.2 1997/10/28 23:59:56 augustss Exp $
 # New ports collection makefile for:	mpg123
-# Version required:		0.59k
-# Date created:			25 June 1997
-# Whom:				Carey Jones <mcj@acquiesce.org>
-#
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:18:38 augustss Exp $
+# Version required:     mpg123-0.59k
+# Date created:		97-10-25
+# Whom:			augustss@cs.chalmers.se
 #
 
-DISTNAME=	mpg123-0.59k
+DISTNAME=       mpg123-0.59k
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.tu-clausthal.de/pub/unix/audio/mpg123/
+MASTER_SITES=   http://ftp.tu-clausthal.de/pub/unix/audio/mpg123/
 
-MAINTAINER=	mcj@acquiesce.org
+MAINTAINER=	augustss@cs.chalmers.se
 
-ALL_TARGET=	freebsd
 MAN1=		mpg123.1
+
+.if (${MACHINE_ARCH} == "i386")
+ALL_TARGET=	netbsd-i386
+.else
+ALL_TARGET=	netbsd
+.endif
+
+MAKE_FLAGS+=	PREFIX="${PREFIX}"
 
 .include <bsd.port.mk>
