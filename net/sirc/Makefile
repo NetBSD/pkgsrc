@@ -1,37 +1,44 @@
-# $NetBSD: Makefile,v 1.3 1997/11/11 10:30:40 hubertf Exp $
+# New ports collection makefile for:    sirc
+# Version required:     2.21
+# Date created:         1997/11/11
+# Whom:                 hubertf@netbsd.org
+#
+# $NetBSD: Makefile,v 1.4 1998/01/24 21:42:30 hubertf Exp $
 
 DISTNAME=	sirc-2.21
-
-MASTER_SITES=	http://www.eleves.ens.fr:8080/home/espel/sirc/
-MAINTAINER=	hubertf@netbsd.org
 CATEGORIES=	net
+MASTER_SITES=	http://www.eleves.ens.fr:8080/home/espel/sirc/
+
+MAINTAINER=	hubertf@netbsd.org
+
 RUN_DEPENDS=    ${PREFIX}/bin/perl:${PORTSDIR}/lang/perl5
+
+MAN1=		ssfe.1 sirc.1
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 ### Enter Default IRC-Server here
-SERVER=		us.undernet.org
+IRC_SERVER=	us.undernet.org
 
 do-install:
 	cd ${WRKSRC} ; ( \
-		echo "y" ; \
-		echo "" ; \
-		echo "" ; \
-		echo "" ; \
-		echo "" ; \
-		echo "" ; \
-		echo "${PREFIX}/bin/perl" ; \
-		echo "${PREFIX}/bin" ; \
-		echo "y" ; \
-		echo "${PREFIX}/lib/sirc" ; \
-		echo "y" ; \
-		echo "y" ; \
-		echo "n" ; \
-		echo "${PREFIX}/man/man1" ; \
-		echo "${SERVER}" ; \
-		echo "" ; \
+		${ECHO} "y" ; \
+		${ECHO} "" ; \
+		${ECHO} "" ; \
+		${ECHO} "" ; \
+		${ECHO} "" ; \
+		${ECHO} "" ; \
+		${ECHO} "${PREFIX}/bin/perl" ; \
+		${ECHO} "${PREFIX}/bin" ; \
+		${ECHO} "y" ; \
+		${ECHO} "${PREFIX}/lib/sirc" ; \
+		${ECHO} "y" ; \
+		${ECHO} "y" ; \
+		${ECHO} "n" ; \
+		${ECHO} "${PREFIX}/man/man1" ; \
+		${ECHO} "${IRC_SERVER}" ; \
+		${ECHO} "" ; \
 	) | ./install
-
 
 .include <bsd.port.mk>
