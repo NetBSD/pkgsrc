@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/03 18:49:33 reed Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/11 18:19:08 xtraeme Exp $
 
 DISTNAME=	aumix-2.8
 PKGREVISION=	4
@@ -16,14 +16,14 @@ COMMENT=	Set mix levels
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-own-labels
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--without-gtk1
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
