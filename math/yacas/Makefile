@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:22:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/05 23:54:47 jtb Exp $
 #
 
 DISTNAME=	yacas-latest
@@ -21,5 +21,7 @@ post-patch:
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/yacas.sh ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
+	${INSTALL_DATA} ${WRKSRC}/yacas.el ${PREFIX}/share/emacs/site-lisp
 
 .include "../../mk/bsd.pkg.mk"
