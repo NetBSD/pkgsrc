@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.820 2003/09/02 01:19:47 minoura Exp $
+$NetBSD: TODO,v 1.821 2003/09/02 11:46:10 abs Exp $
 
 Suggested new packages
 ======================
@@ -108,8 +108,6 @@ Suggested package updates
 	o ettercap-0.6.b
 	o evilwm-0.99.15 [pkg/22239]
 	o evolution-1.4.4
-	o exim-4.12 [pkg/19850|ad]
-	o exim-4.22
 	o festival-1.4.3
 	o fetchmail-6.2.4 [pkg/22650|frueauf]
 	o filerunner-2.5.1 [pkg/22412]
