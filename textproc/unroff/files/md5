@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.2 1998/08/07 13:27:40 agc Exp $
+
 MD5 (unroff/unroff-1.0.tar.gz) = 918e9c065cb7486c4b885da7809f37e7
 MD5 (unroff/me-misc-patch) = e0cfe9a5012f573cf774115562f4462e
 MD5 (unroff/misc-patch-2) = ebedbf1a8dccfeb5ef3f996ba15374b2

@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.8 1998/08/07 13:27:35 agc Exp $
+
 MD5 (ghostscript-5.10.tar.gz) = 47fbc4f6402c98374c61bf3e64e59e9a
 MD5 (ghostscript-5.10gnu.tar.gz) = 6706117129a5f63dff3a5a2bf4258630
 MD5 (ghostscript-fonts-std-4.0.tar.gz) = 1e0fe2149affd80deaaae144227049b9
