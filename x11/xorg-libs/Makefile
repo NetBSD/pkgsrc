@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/10/09 09:32:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/22 06:31:42 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG}
 DISTFILES=		X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
@@ -12,10 +12,6 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.x.org/
 COMMENT=		X.org Libraries
 
-CONFLICTS+=		xextensions-[0-9]*
-CONFLICTS+=		libX11-[0-9]*
-CONFLICTS+=		libXau-[0-9]*
-
 BUILD_DEPENDS=		xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,6 +20,9 @@ BUILD_DEPENDS=		xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 
 .if ${X11ROOT} == ${LOCALBASE}
 CONFLICTS+=		MesaLib-[0-9]* glu-[0-9]*
+CONFLICTS+=		xextensions-[0-9]*
+CONFLICTS+=		libX11-[0-9]*
+CONFLICTS+=		libXau-[0-9]*
 .endif
 
 USE_BUILDLINK3=			yes
