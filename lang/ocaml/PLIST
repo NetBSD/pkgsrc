@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/02/04 21:35:51 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/03/24 11:32:50 adam Exp $
 bin/camlp4
 bin/camlp4o
 bin/camlp4r
@@ -42,8 +42,8 @@ lib/ocaml/callback.mli
 lib/ocaml/caml/alloc.h
 lib/ocaml/caml/bigarray.h
 lib/ocaml/caml/callback.h
-lib/ocaml/caml/config.h
 lib/ocaml/caml/compatibility.h
+lib/ocaml/caml/config.h
 lib/ocaml/caml/custom.h
 lib/ocaml/caml/fail.h
 lib/ocaml/caml/intext.h
@@ -57,6 +57,8 @@ lib/ocaml/camlheader_ur
 lib/ocaml/camlinternalOO.cmi
 lib/ocaml/camlinternalOO.ml
 lib/ocaml/camlinternalOO.mli
+lib/ocaml/camlp4/argl.cmi
+lib/ocaml/camlp4/argl.cmo
 lib/ocaml/camlp4/ast2pt.cmi
 lib/ocaml/camlp4/ast2pt.mli
 lib/ocaml/camlp4/camlp4.cma
@@ -341,9 +343,9 @@ lib/ocaml/vmthreads/mutex.mli
 lib/ocaml/vmthreads/stdlib.cma
 lib/ocaml/vmthreads/thread.cmi
 lib/ocaml/vmthreads/thread.mli
-lib/ocaml/vmthreads/threads.cma
 lib/ocaml/vmthreads/threadUnix.cmi
 lib/ocaml/vmthreads/threadUnix.mli
+lib/ocaml/vmthreads/threads.cma
 lib/ocaml/vmthreads/unix.cma
 lib/ocaml/weak.cmi
 lib/ocaml/weak.ml

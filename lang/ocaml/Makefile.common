@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2005/03/18 18:17:07 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/03/24 11:32:50 adam Exp $
 
-DISTNAME=	ocaml-3.08.2
+DISTNAME=	ocaml-3.08.3
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/cristal/ocaml/ocaml-3.08/
+MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-3.08/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
