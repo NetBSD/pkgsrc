@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/02 15:05:39 kei Exp $
+$NetBSD: distinfo,v 1.2 2003/09/26 20:04:15 recht Exp $
 
-SHA1 (Aiksaurus-0.15.tar.gz) = aea92ef0820fbf4b999c76ce14c60d8a7754fe6a
-Size (Aiksaurus-0.15.tar.gz) = 504649 bytes
+SHA1 (aiksaurus-1.0.1.tar.gz) = a057c598c6f9b0cb4c13ff76e40ec41d7964e7b9
+Size (aiksaurus-1.0.1.tar.gz) = 929270 bytes
