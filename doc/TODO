@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1273 2004/01/04 17:17:00 wiz Exp $
+$NetBSD: TODO,v 1.1274 2004/01/04 17:27:27 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -319,7 +319,6 @@ Suggested package updates
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xboard-4.2.7
-	o xchat-2.0.7
 	o xdaliclock-2.20
 	o xephem-3.5.2
 	o xerces-c-2.3.0 [pkg/23861|heinz?]
