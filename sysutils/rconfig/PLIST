@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/31 11:45:35 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/10 10:19:24 abs Exp $
+libexec/rconfig_probe
 sbin/rconfig
 man/man8/rconfig.8
