@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/06 20:16:47 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/06/15 13:11:03 grant Exp $
 #
 
 DISTNAME=	newvox-1.0
@@ -13,6 +13,8 @@ COMMENT=	Voxel-style landscape rendering fly-by
 USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
+
+LIBS.SunOS+=	-lm
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
