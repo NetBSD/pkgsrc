@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.3 2002/09/16 19:06:41 jlam Exp $
+# $NetBSD: libtool.sh,v 1.4 2002/09/23 01:11:39 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -9,6 +9,7 @@ pre_cache="@_BLNK_WRAP_PRE_CACHE@"
 cache="@_BLNK_WRAP_CACHE@"
 post_cache="@_BLNK_WRAP_POST_CACHE@"
 logic="@_BLNK_WRAP_LOGIC@"
+specificlogic="@_BLNK_WRAP_SPECIFIC_LOGIC@"
 libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
 wrapperlog="@_BLNK_WRAP_LOG@"
 updatecache=${BUILDLINK_UPDATE_CACHE-yes}
@@ -63,6 +64,7 @@ while [ $# -gt 0 ]; do
 		esac
 		;;
 	esac
+	. $specificlogic
 	args="$args $arg"
 done
 cmd="$cmd $args"

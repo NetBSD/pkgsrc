@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.2 2002/08/22 08:21:28 jlam Exp $
+$NetBSD: README,v 1.3 2002/09/23 01:11:39 jlam Exp $
 
  0 buildlink2 Wrapper Script System
  ==================================
@@ -8,8 +8,8 @@ compiler tool with scripts that tranlate any arguments into their buildlink
 equivalents, then invoke the actual compiler tools with the translated
 arguments.  The pkgsrc/mk/buildlink2 directory contains bits of the wrapper
 script system for the buildlink2 framework.  The wrapper script system is
-composed of three parts: the main wrapper script, the "cache", and the
-"logic" script generated from the cache.
+composed of four parts: the main wrapper script, the "cache", the "logic"
+script generated from the cache, and a wrapper-specific "logic" script.
 
  0.1 Main wrapper script
  =======================
@@ -36,3 +36,10 @@ described above.  The pre- and post-cache files simply complete the "case"
 statement.  The post-cache also contains the final case that performs the
 actual argument translation and, as an optimization, saves the result into
 the cache.
+
+ 0.4 Wrapper-specifc logic script
+ ================================
+
+The wrapper-specific logic script contains extra shell commands that
+typically perform an extra uncached translation of an argument after the
+main translation has been performed by the logic script.
