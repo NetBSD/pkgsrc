@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1857 2003/04/06 18:29:17 magick Exp $
+$NetBSD: CHANGES,v 1.1858 2003/04/07 09:34:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added dbh-1.0.14 [hubertf 2003-04-06]
 	Added chktex-1.6.1 [wiz 2003-04-06]
 	Updated nxtvepg to 2.5.0 [magick 2003-04-06]
+	Updated exctags to 5.5 [seb 2003-04-07]
