@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/02/22 03:00:15 tv Exp $
+$NetBSD: patch-aa,v 1.5 2002/07/06 20:15:52 tv Exp $
 
---- config.make.orig	Tue Apr 11 08:02:25 2000
-+++ config.make	Wed Feb 21 20:03:27 2001
+--- config.make.orig	Mon Aug 20 01:23:53 2001
++++ config.make	Sat Jul  6 15:19:41 2002
 @@ -56,13 +56,13 @@
  #
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.4 2001/02/22 03:00:15 tv Exp $
 -DEFAULT_V_VARDIR	= /var/lib/fidogate
 -DEFAULT_V_LOCKDIR	= /var/lock/fidogate
 -DEFAULT_V_SPOOLDIR	= /var/spool/fidogate
-+DEFAULT_V_CONFIGDIR	= @PREFIX@/etc/fidogate
++DEFAULT_V_CONFIGDIR	= @PKG_SYSCONFDIR@/fidogate
 +DEFAULT_V_LIBDIR	= @PREFIX@/lib/fidogate
 +DEFAULT_V_BINDIR	= @PREFIX@/lib/fidogate/bin
 +DEFAULT_V_LOGDIR	= /var/log/fido
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.4 2001/02/22 03:00:15 tv Exp $
  
  # old-style config
  #DEFAULT_F_CONFIG_GATE	= %C/gate.conf
-@@ -146,15 +146,15 @@
+@@ -146,18 +146,15 @@
  
  
  # The perl interpreter used by subst.pl
@@ -54,7 +54,10 @@ $NetBSD: patch-aa,v 1.4 2001/02/22 03:00:15 tv Exp $
 +PERL			= @PREFIX@/bin/perl
  
  # Directory with sendmail m4 configuration files
--SENDMAIL_CF_DIR		= /usr/lib/sendmail-cf
+-# RedHat 6.x
+-#SENDMAIL_CF_DIR		= /usr/lib/sendmail-cf
+-# RedHat 7.x
+-SENDMAIL_CF_DIR		= /usr/share/sendmail-cf
 +SENDMAIL_CF_DIR		= /usr/share/sendmail
  
  # Directories for installing documentation, not used by subst.pl
@@ -67,7 +70,7 @@ $NetBSD: patch-aa,v 1.4 2001/02/22 03:00:15 tv Exp $
  
  # RedHat RPM related dirs
  RPMBASEDIR	= /usr/src/redhat
-@@ -194,20 +194,17 @@
+@@ -197,20 +194,17 @@
  # install permissions
  PERM_PROG	= 755
  PERM_DATA	= 644
@@ -90,7 +93,7 @@ $NetBSD: patch-aa,v 1.4 2001/02/22 03:00:15 tv Exp $
  
  INCLUDE		= -I$(TOPDIR) -I$(TOPDIR)/src/include
  
-@@ -236,10 +233,10 @@
+@@ -239,10 +233,10 @@
  # MSDOS, OS2, WIN32
  # EXE		= .exe
  EXE		=
