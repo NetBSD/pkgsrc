@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.63 2002/05/25 07:34:43 veego Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.64 2002/05/25 07:40:36 veego Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -894,10 +894,10 @@ MAJORDOMO_USER?= majordom
 # Possible: any
 # Default: majordom
 
-MPLAYER_FONT?= "iso-8859-1/arial-18"
+MPLAYER_FONT?= iso-8859-1/arial-18
 # Used by the mplayer-share package to display subtitles and the timer
 # Possible: any font directory which contains the mplayer font.desc
-# Default: "iso-8859-1/arial-18"
+# Default: iso-8859-1/arial-18
 
 #MOTIF_TYPE?=	openmotif
 # Used by motif.buildlink.mk to choose which Motif-2.0-compatible
