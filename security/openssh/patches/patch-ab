@@ -1,8 +1,26 @@
-$NetBSD: patch-ab,v 1.12 2002/08/28 04:55:18 jlam Exp $
+$NetBSD: patch-ab,v 1.13 2002/09/09 20:16:26 jlam Exp $
 
 --- configure.ac.orig	Tue Jun 25 15:35:16 2002
 +++ configure.ac
-@@ -167,6 +167,7 @@ mips-sony-bsd|mips-sony-newsos4)
+@@ -93,7 +93,16 @@ case "$host" in
+ 	AC_DEFINE(IP_TOS_IS_BROKEN)
+ 	;;
+ *-*-darwin*)
+-	AC_DEFINE(BROKEN_GETADDRINFO)
++	AC_MSG_CHECKING(if we have working getaddrinfo)
++	AC_TRY_RUN([#include <mach-o/dyld.h>
++main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
++		exit(0);
++	else
++		exit(1);
++}], [AC_MSG_RESULT(working)],
++	[AC_MSG_RESULT(buggy)
++	AC_DEFINE(BROKEN_GETADDRINFO)],
++	[AC_MSG_RESULT(assume it is working)])
+ 	;;
+ *-*-hpux10.26)
+ 	if test -z "$GCC"; then
+@@ -167,6 +176,7 @@ mips-sony-bsd|mips-sony-newsos4)
  	SONY=1
  	;;
  *-*-netbsd*)
@@ -10,7 +28,7 @@ $NetBSD: patch-ab,v 1.12 2002/08/28 04:55:18 jlam Exp $
  	need_dash_r=1
  	;;
  *-*-freebsd*)
-@@ -185,8 +186,6 @@ mips-sony-bsd|mips-sony-newsos4)
+@@ -185,8 +195,6 @@ mips-sony-bsd|mips-sony-newsos4)
  	CFLAGS="$CFLAGS"
  	;;
  *-*-solaris*)
@@ -19,7 +37,7 @@ $NetBSD: patch-ab,v 1.12 2002/08/28 04:55:18 jlam Exp $
  	need_dash_r=1
  	AC_DEFINE(PAM_SUN_CODEBASE)
  	AC_DEFINE(LOGIN_NEEDS_UTMPX)
-@@ -312,6 +311,9 @@ mips-sony-bsd|mips-sony-newsos4)
+@@ -312,6 +320,9 @@ mips-sony-bsd|mips-sony-newsos4)
  	;;
  esac
  
@@ -29,7 +47,7 @@ $NetBSD: patch-ab,v 1.12 2002/08/28 04:55:18 jlam Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -545,6 +547,10 @@ AC_ARG_WITH(tcp-wrappers,
+@@ -545,6 +556,10 @@ AC_ARG_WITH(tcp-wrappers,
  			AC_MSG_CHECKING(for libwrap)
  			AC_TRY_LINK(
  				[
@@ -40,7 +58,7 @@ $NetBSD: patch-ab,v 1.12 2002/08/28 04:55:18 jlam Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				],
-@@ -723,6 +729,12 @@ if test "x$PAM_MSG" = "xyes" ; then
+@@ -723,6 +738,12 @@ if test "x$PAM_MSG" = "xyes" ; then
  	)
  fi
  
@@ -53,7 +71,7 @@ $NetBSD: patch-ab,v 1.12 2002/08/28 04:55:18 jlam Exp $
  # Search for OpenSSL
  saved_CPPFLAGS="$CPPFLAGS"
  saved_LDFLAGS="$LDFLAGS"
-@@ -2385,7 +2397,7 @@ echo "OpenSSH has been configured with t
+@@ -2385,7 +2406,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
