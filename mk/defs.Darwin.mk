@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.69 2004/04/07 14:26:51 tv Exp $
+# $NetBSD: defs.Darwin.mk,v 1.70 2004/04/13 22:04:15 heinz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -145,7 +145,3 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
-.if exists(${LOCALBASE}/sbin/pkg_info)
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-.endif
-PKG_TOOLS_BIN?=		${LOCALBASE}/bin
