@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6122 2004/06/04 12:06:20 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6123 2004/06/04 12:29:57 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2719,8 +2719,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libsoup-devel to 2.1.10 [recht 2004-06-01]
 	Updated evolution-data-server to 0.0.93 [recht 2004-06-01]
 	Updated sylpheed-gtk2 to 0.9.9nb3 [recht 2004-06-01]
-	Added gccAda-3.4 [shannonjr 2004-06-01]
-	Added gcc-3.4 [shannonjr 2004-06-01]
 	Added gdb6 [shannonjr 2004-06-01]
 	Updated gaim to 0.78 [jmmv 2004-06-01]
 	Removed m68k-netbsd [kristerw 2004-06-01]
@@ -2761,7 +2759,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squirrelmail to 1.4.3nb1 [bouyer 2004-06-02]
 	Updated aterm to 0.4.2b5 [recht 2004-06-02]
 	Updated ngrep to 1.42nb1 [recht 2004-06-02]
-	Added florist [shannonjr 2004-06-03]
 	Added jdbc-postgresql74 [abs 2004-06-03]
 	Added gdbada [shannonjr 2004-06-03]
 	Updated joe to 3.1 [adam 2004-06-03]
@@ -2769,9 +2766,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libstroke to 0.5.1 [minskim 2004-06-03]
 	Updated gaim to 0.78nb1 [minskim 2004-06-03]
 	Updated rconfig to 0.32 [abs 2004-06-03]
-	Removed gccAda-3.4 [shannonjr 2004-06-03]
-	Removed gcc-3.4 [shannonjr 2004-06-03]
-	Removed florist [shannonjr 2004-06-03]
 	Updated bitlbee to 0.90 [xtraeme 2004-06-03]
 	Updated allegro to 4.1.14 [xtraeme 2004-06-03]
 	Updated acpi-iasl to 20040311p1 [uebayasi 2004-06-04]
