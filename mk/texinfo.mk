@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.5 2002/03/14 10:35:23 seb Exp $
+# $NetBSD: texinfo.mk,v 1.6 2002/11/14 04:04:13 wiz Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -23,7 +23,7 @@ TEXINFO_REQD?= 3.12
 
 # Sort out if we need the version provided by devel/gtexinfo.
 .if defined(INSTALL_INFO_VERSION)
-.  if ${INSTALL_INFO_VERSION} < ${TEXINFO_REQD} 
+.  if ${INSTALL_INFO_VERSION} < ${TEXINFO_REQD}
 _NEED_TEXINFO=         # defined
 .  endif
 .else
