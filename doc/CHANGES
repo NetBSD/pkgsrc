@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3206 2003/09/02 12:16:52 abs Exp $
+$NetBSD: CHANGES,v 1.3207 2003/09/02 12:20:35 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3476,4 +3476,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added exim-exiscan-4.22-10 [abs 2003-09-02]
 	Updated exim-exiscan to 4.22-11 [abs 2003-09-02]
 	Updated exim-html to 4.20 [abs 2003-09-02]
+	Updated exim to 4.22nb1 [abs 2003-09-02]
+	Updated exim-exiscan to 4.22-11nb1 [abs 2003-09-02]
 
