@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/03/28 06:35:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2004/05/08 07:37:40 snj Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -13,7 +13,7 @@ COMMENT=	Network Time Protocol Version 4
 
 GNU_CONFIGURE=	YES
 USE_PERL5=	build
-#USE_BUILDLINK2=YES ***FIXME: Causes lots of "missing prototype" warnings.***
+USE_BUILDLINK3= YES
 USE_PKGINSTALL=	YES
 
 CONFIGURE_ENV+=	PATH_PERL="${PERL5}" ac_cv_header_sys_soundcard_h=no
@@ -53,5 +53,5 @@ LOWER_OPSYS_VERSUFFIX=	2
 CONFIGURE_ENV+=	ac_cv_lib_md5_MD5Init=no
 .endif
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
