@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2000/10/17 17:16:27 rh Exp $
+# $NetBSD: Makefile,v 1.145 2000/10/21 19:35:45 wiz Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -22,7 +22,6 @@
     SUBDIR += cmdline
     SUBDIR += cscope
     SUBDIR += cvs
-    SUBDIR += cvs-current
     SUBDIR += cvs2cl
     SUBDIR += cvslock
     SUBDIR += cxref
