@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
+$NetBSD: patch-ae,v 1.2 2003/02/14 21:05:28 jmmv Exp $
 
---- gnome-panel/Makefile.in.orig	Mon Oct 14 11:21:55 2002
+--- gnome-panel/Makefile.in.orig	2003-02-04 00:29:51.000000000 +0100
 +++ gnome-panel/Makefile.in
-@@ -152,7 +152,7 @@ AUTOMAKE_OPTIONS = 1.3
+@@ -156,7 +156,7 @@ AUTOMAKE_OPTIONS = 1.3
  
  NULL = 
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
  
  
  # FIXME:
-@@ -168,7 +168,7 @@ DISABLE_DEPRECATED_CFLAGS =  	-DG_DISABL
+@@ -172,7 +172,7 @@ DISABLE_DEPRECATED_CFLAGS =  	-DG_DISABL
  STANDARD_PROPERTIES_CFLAGS =  	-DPREFIX=\""$(prefix)"\"					-DSYSCONFDIR=\""$(sysconfdir)"\"				-DLIBDIR=\""$(libdir)"\"					-DDATADIR=\""$(datadir)"\"					$(NULL)
  
  
@@ -20,8 +20,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
  
  
  CORBA_SRCLIST =  	GNOME_Panel-stubs.c		GNOME_Panel-skels.c		GNOME_Panel-common.c		GNOME_Panel.h			$(NULL)
-@@ -219,7 +219,7 @@ gnome_panel_screenshot_LDFLAGS = -export
- gnome_panel_screenshot_LDADD =  	$(X_LIBS)			$(PANELCONFIG_LIBS)		$(PNG_LIBS)
+@@ -232,7 +232,7 @@ gnome_panel_screenshot_LDFLAGS = -export
+ gnome_panel_screenshot_LDADD =  	$(XSHAPE_LIBS)			$(X_LIBS)			$(PANELCONFIG_LIBS)		$(PNG_LIBS)
  
  
 -gladedir = $(datadir)/gnome/panel
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
  glade_DATA =  	gnome-panel-preferences.glade			gnome-panel-screenshot.glade
  
  
-@@ -254,7 +254,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
+@@ -270,7 +270,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
  CONFIG_HEADER = ../config.h
  CONFIG_CLEAN_FILES = 
  bin_PROGRAMS =  gnome-panel$(EXEEXT) gnome-panel-preferences$(EXEEXT) \
@@ -38,14 +38,12 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
  PROGRAMS =  $(bin_PROGRAMS)
  
  
-@@ -396,8 +396,8 @@ gnome-panel-preferences$(EXEEXT): $(gnom
+@@ -418,7 +418,7 @@ gnome-panel-preferences$(EXEEXT): $(gnom
  	@rm -f gnome-panel-preferences$(EXEEXT)
  	$(LINK) $(gnome_panel_preferences_LDFLAGS) $(gnome_panel_preferences_OBJECTS) $(gnome_panel_preferences_LDADD) $(LIBS)
  
 -gnome-panel-screenshot$(EXEEXT): $(gnome_panel_screenshot_OBJECTS) $(gnome_panel_screenshot_DEPENDENCIES)
--	@rm -f gnome-panel-screenshot$(EXEEXT)
 +gnome2-panel-screenshot$(EXEEXT): $(gnome_panel_screenshot_OBJECTS) $(gnome_panel_screenshot_DEPENDENCIES)
-+	@rm -f gnome2-panel-screenshot$(EXEEXT)
+ 	@rm -f gnome-panel-screenshot$(EXEEXT)
  	$(LINK) $(gnome_panel_screenshot_LDFLAGS) $(gnome_panel_screenshot_OBJECTS) $(gnome_panel_screenshot_LDADD) $(LIBS)
  
- gnome-desktop-item-edit$(EXEEXT): $(gnome_desktop_item_edit_OBJECTS) $(gnome_desktop_item_edit_DEPENDENCIES)
