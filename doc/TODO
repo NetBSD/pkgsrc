@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1494 2004/03/10 18:38:36 wiz Exp $
+$NetBSD: TODO,v 1.1495 2004/03/10 18:39:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -338,7 +338,7 @@ Suggested package updates
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o w3m-0.4.2
-	o wavesurfer-1.5.3 [requires tk-8.4.2]
+	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wwwoffle-2.8a
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
