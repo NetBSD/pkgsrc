@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/02/19 00:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/02/25 15:23:24 wiz Exp $
 
 DISTNAME=	gnutls-1.2.0
 CATEGORIES=	security devel
@@ -28,6 +28,7 @@ BUILDLINK_DEPENDS.opencdk=	opencdk>=0.5.5
 BUILDLINK_DEPENDS.libtasn1=	libtasn1>=0.2.11
 
 MAKE_ENV+=		RM="${RM}"
+MAKE_ENV+=		TZ=UTC
 
 DOCDIR=		${PREFIX}/share/doc/gnutls
 EGDIR=		${PREFIX}/share/examples/gnutls
