@@ -1,0 +1,19 @@
+*** config/NetBSD.mk.orig	Sun May 10 13:18:31 1998
+--- config/NetBSD.mk	Sun May 10 13:18:41 1998
+***************
+*** 92,98 ****
+  #
+  # For NetBSD > 1.3, this can all be -shared.
+  #
+! DSO_CFLAGS		= -fpic
+  DSO_LDFLAGS		=
+  DSO_LDOPTS		= -Bshareable
+  ifeq ($(OS_TEST),alpha)
+--- 92,98 ----
+  #
+  # For NetBSD > 1.3, this can all be -shared.
+  #
+! DSO_CFLAGS		= -fPIC
+  DSO_LDFLAGS		=
+  DSO_LDOPTS		= -Bshareable
+  ifeq ($(OS_TEST),alpha)
