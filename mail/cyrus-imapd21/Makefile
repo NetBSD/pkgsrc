@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/31 10:05:14 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/31 10:23:04 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		3
@@ -70,19 +70,37 @@ CONFIGURE_ARGS+=	--with-subs-db=flat
 CONFIGURE_ARGS+=	--with-tls-db=db3_nosync
 .endif
 
-.if exists(/usr/include/krb5/com_err.h)
-CPPFLAGS+=		-I/usr/include/krb5
-CONFIGURE_ARGS+=	--with-com_err=
-.else
-CONFIGURE_ARGS+=	--with-com_err=yes
-.endif
-
-.if defined(KERBEROS) && ${KERBEROS} == 4
-PKG_USE_KERBEROS=	# defined
+.if defined(KERBEROS)
+.  if (${KERBEROS} == 4) && exists(/usr/include/kerberosIV/krb.h)
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-auth=krb
+CONFIGURE_ARGS+=	--with-krb=/usr
+.  else
+.    include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-auth=unix
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
+GSSIMPL.heimdal=	heimdal
+GSSIMPL.mit-krb5=	mit
+CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
+COMERRBASE=		${KRB5BASE}
+.  endif
 .else
 CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--without-krb
+CONFIGURE_ARGS+=	--disable-gssapi
+.endif
+
+.if exists(/usr/bin/compile_et)
+COMERRBASE?=		/usr
+.endif
+.if defined(COMERRBASE)
+.  if exists(${COMERRBASE}/include/krb5/com_err.h)
+CPPFLAGS+=		-I${COMERRBASE}/include/krb5
+.  endif
+CONFIGURE_ENV+=		COMPILE_ET=${COMERRBASE}/bin/compile_et
+.else
+CONFIGURE_ARGS+=	--with-com-err=yes
 .endif
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
