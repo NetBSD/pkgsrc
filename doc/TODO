@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.307 2003/02/22 13:36:21 salo Exp $
+$NetBSD: TODO,v 1.308 2003/02/23 03:22:28 salo Exp $
 
 Suggested new packages
 ======================
@@ -280,7 +280,6 @@ Suggested package updates
 	o xpaint-2.6.9
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
-	o yudit-2.7.2
 
 
 Suggested pkgsrc enhancements
