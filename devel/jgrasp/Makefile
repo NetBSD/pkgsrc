@@ -1,0 +1,44 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/01/09 19:13:03 jschauma Exp $
+#
+
+DISTNAME=		jgrasp164
+PKGNAME=		jgrasp-1.6.4
+CATEGORIES=		devel
+MASTER_SITES=		ftp://ftp.eng.auburn.edu/pub/grasp/jgrasp/
+EXTRACT_SUFX=		.zip
+
+MAINTAINER=		jschauma@NetBSD.org
+HOMEPAGE=		http://www.jgrasp.org/
+COMMENT=		IDE with support for Software Visualizations
+
+WRKSRC=			${WRKDIR}/jgrasp
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14
+
+do-configure:
+	${MKDIR} ${WRKSRC}/bin/${LOWER_OPSYS}
+
+do-build:
+	${CC} ${CFLAGS} -lutil -o ${WRKSRC}/jbin/${LOWER_OPSYS}_run 	\
+		${WRKSRC}/src/linux_run.c
+	${CC} ${CFLAGS} -I${X11PREFIX}/include -L${X11PREFIX}/lib -lX11 \
+		-o ${WRKSRC}/bin/${LOWER_OPSYS}/jgrasp 			\
+		${WRKSRC}/src/linux_exec.c
+
+do-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME}
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME}/bin
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME}/bin/${LOWER_OPSYS}
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME}/jbin
+	cd ${WRKSRC} && ${PAX} -s ,^./.*bin/.*,, 			\
+		-rw . ${PREFIX}/${PKGNAME}/
+	${INSTALL_DATA} ${WRKSRC}/jbin/JGRASP__829J_6h.class		\
+		${PREFIX}/${PKGNAME}/jbin/
+	${INSTALL_PROGRAM} ${WRKSRC}/jbin/${LOWER_OPSYS}_run		\
+		${PREFIX}/${PKGNAME}/jbin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${LOWER_OPSYS}/jgrasp 		\
+		${PREFIX}/${PKGNAME}/bin/${LOWER_OPSYS}/
+	${LN} -s ${PREFIX}/${PKGNAME}/bin/${LOWER_OPSYS}/jgrasp		\
+		${PREFIX}/bin/jgrasp
+
+.include "../../mk/java-vm.mk"
+.include "../../mk/bsd.pkg.mk"
