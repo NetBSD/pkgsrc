@@ -1,11 +1,11 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.1 2002/07/27 21:54:30 jschauma Exp $
+$NetBSD: MESSAGE,v 1.2 2002/07/28 14:53:26 schmonz Exp $
 
-You may want to read ${JDK_HOME}/README for details about
-running this jdk. In a nutshell you may want to set the following in
-your shell environment:
+You may want to read ${JDK_HOME}/README for details about running
+this jdk. In a nutshell you may want to set the following in your
+shell environment:
 
-        JAVA_HOME to ${JDK_HOME}
+	JAVA_HOME to ${JDK_HOME}
 	${PATH} to include ${JDK_HOME}/bin
 
 ======================================================================
