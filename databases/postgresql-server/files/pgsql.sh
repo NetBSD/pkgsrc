@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.9 2002/04/05 16:23:23 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.10 2002/07/18 01:40:07 cjs Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -17,8 +17,6 @@
 # "pgsql_flags" contains options for the PostgreSQL postmaster.  See
 # postmaster(1) for possible options.
 
-PGHOME="@PGHOME@"
-
 if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
@@ -29,6 +27,8 @@ rcd_dir=`@DIRNAME@ $0`
 name="pgsql"
 rcvar=$name
 pgsql_user="@PGUSER@"
+eval PGHOME="~$pgsql_user"
+
 command="@PREFIX@/bin/postmaster"
 ctl_command="@PREFIX@/bin/pg_ctl"
 pidfile="${PGHOME}/data/postmaster.pid"
