@@ -1,39 +1,35 @@
-$NetBSD: patch-ab,v 1.4 2003/12/06 16:10:48 tron Exp $
+$NetBSD: patch-ab,v 1.5 2004/08/27 10:10:22 tron Exp $
 
---- wmbiff/wmbiff.c.orig	Sun Nov  9 00:43:50 2003
-+++ wmbiff/wmbiff.c	Sat Dec  6 17:04:32 2003
-@@ -25,6 +25,14 @@
- #include <errno.h>
- #include <string.h>
+--- wmbiff/ShellClient.c.orig	2004-06-18 23:28:16.000000000 +0200
++++ wmbiff/ShellClient.c	2004-08-27 12:03:23.000000000 +0200
+@@ -152,6 +152,21 @@
+ 	return (strdup_ordie(bigbuffer));
+ }
  
-+#if defined(FreeBSD) || defined(__NetBSD__) || defined(__OpenBSD__)
-+#include <paths.h>
-+#endif
++static char *mystrcasestr(const char *big, const char *little)
++{
++	int blen, llen;
 +
-+#ifndef _PATH_MAILDIR
-+#define _PATH_MAILDIR "/var/mail"
-+#endif
++	blen = strlen(big);
++	llen = strlen(little);
++	while (blen >= llen) {
++		if (strncasecmp(big, little, llen) == 0)
++			return (char *)big;
++		big++;
++		blen--;
++	}
++	return NULL;
++}
 +
- #include "../wmgeneral/wmgeneral.h"
- #include "../wmgeneral/misc.h"
- 
-@@ -370,7 +378,7 @@
- 			" Message: %s\n"
- 			" libgcrypt version: %s\n"
- 			" recovering: will fail later if using CRAM-MD5 or APOP authentication.\n",
--			zok, gcry_strerror(gcry_errno()), gcry_check_version(NULL));
-+			zok, gcry_strerror(zok), gcry_check_version(NULL));
- 	};
- #endif
- 
-@@ -384,8 +392,8 @@
- 			strcpy(mbox[0].path, m);
- 		} else if ((m = getenv("USER")) != NULL) {
- 			/* we are using MAIL environment var. type mbox */
--			DMA(DEBUG_INFO, "Using /var/mail/%s.\n", m);
--			strcpy(mbox[0].path, "/var/mail/");
-+			DMA(DEBUG_INFO, "Using " _PATH_MAILDIR "/%s.\n", m);
-+			strcpy(mbox[0].path, _PATH_MAILDIR);
- 			strcat(mbox[0].path, m);
- 		} else {
- 			DMA(DEBUG_ERROR, "Cannot open config file '%s' nor use the "
+ int shellCmdCheck(Pop3 pc)
+ {
+ 	int count_status = 0;
+@@ -189,7 +204,7 @@
+ 			pc->UnreadMsgs = 0;
+ 			pc->TotalMsgs = count_status;
+ 		}
+-	} else if (strcasestr(commandOutput, "unable")) {
++	} else if (mystrcasestr(commandOutput, "unable") != NULL) {
+ 		return -1;
+ 	} else if (sscanf(commandOutput, "%9s\n", pc->TextStatus) == 1) {
+ 		/* validate the string input */
