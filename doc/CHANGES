@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6056 2004/05/29 01:19:32 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6057 2004/05/29 01:46:02 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2679,3 +2679,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xvidcap-1.1.3 [xtraeme 2004-05-29]
 	Added d2x-0.2.5 [xtraeme 2004-05-29]
 	Updated p5-XML-DOM to 1.43 [xtraeme 2004-05-29]
+	Added p5-XML-LibXML-Iterator-1.00 [xtraeme 2004-05-29]
+	Added p5-XML-NodeFilter-0.01 [xtraeme 2004-05-29]
