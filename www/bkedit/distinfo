@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/24 20:14:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2003/12/06 18:48:54 wiz Exp $
 
-SHA1 (bk_edit-0.6.21.tar.gz) = 38637c05b2080c3e08a0af076e60913b5ba7a5c7
-Size (bk_edit-0.6.21.tar.gz) = 113090 bytes
+SHA1 (bk_edit-0.6.22.tar.gz) = 6bb0eb652d2730b04306d21e75c10b27a5189814
+Size (bk_edit-0.6.22.tar.gz) = 113311 bytes
