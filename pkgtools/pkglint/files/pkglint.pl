@@ -3,16 +3,15 @@
 # pkglint - lint for package directory
 #
 # implemented by:
-#	Jun-ichiro itojun Itoh <itojun@itojun.org>
+#	Jun-ichiro itojun Hagino <itojun@itojun.org>
 #	Yoshishige Arai <ryo2@on.rim.or.jp>
-# visit ftp://ftp.foretune.co.jp/pub/tools/portlint/ for latest version.
 #
-# Copyright(c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
+# Copyright(c) 1997 by Jun-ichiro Hagino <itojun@itojun.org>.
 # All rights reserved.
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.81 2003/01/28 22:44:01 abs Exp $
+# $NetBSD: pkglint.pl,v 1.82 2003/02/01 13:37:33 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
