@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/10/28 22:37:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/11/14 14:20:04 wiz Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -508,7 +508,6 @@ share/xscreensaver/xscreensaver-demo.glade2
 share/xscreensaver/xscreensaver.xpm
 @dirrm share/xscreensaver
 @dirrm share/control-center/screensavers
-@dirrm share/control-center/capplets
 @dirrm share/control-center-2.0/capplets
 @unexec ${RMDIR} %D/share/control-center-2.0 2>/dev/null || ${TRUE}
 @dirrm libexec/xscreensaver
