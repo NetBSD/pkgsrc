@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2001/11/28 13:44:52 kleink Exp $
+$NetBSD: patch-aa,v 1.6 2002/04/02 21:34:09 rh Exp $
 
---- snort.c.orig	Fri Nov  2 07:18:29 2001
-+++ snort.c	Wed Nov 28 14:04:21 2001
+--- snort.c.orig	Sun Mar 24 23:32:03 2002
++++ snort.c	Sun Mar 24 23:36:09 2002
 @@ -43,6 +43,9 @@
  
  /*  I N C L U D E S  **********************************************************/
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.5 2001/11/28 13:44:52 kleink Exp $
  
  
  /*  G L O B A L S  ************************************************************/
-@@ -1413,6 +1416,19 @@
+@@ -1487,6 +1490,19 @@
  
              break;
  
@@ -23,10 +23,10 @@ $NetBSD: patch-aa,v 1.5 2001/11/28 13:44:52 kleink Exp $
 +        case DLT_PPP_ETHER:          /* PPP over Ethernet */
 +
 +#    else
-+	/* no DLT_PPP_* on <1.5 */
++       /* no DLT_PPP_* on <1.5 */
 +#    endif /* >= NetBSD 1.5 */
 +#  else
-+	/* no __NetBSD_Version__ on <1.4 */
++       /* no __NetBSD_Version__ on <1.4 */
 +#  endif /* __NetBSD_Version__ */
 +#endif /* NetBSD */
          case DLT_PPP:                /* point-to-point protocol */
