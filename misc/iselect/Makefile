@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/14 12:54:31 dillo Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/25 17:53:43 wiz Exp $
 #
 
 DISTNAME=		iselect-1.2.0
@@ -9,11 +9,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.engelschall.com/sw/iselect/
 COMMENT=		Curses based Interactive Selection Tool
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 
 post-configure:
 	touch ${WRKSRC}/config_ac.h.in
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
