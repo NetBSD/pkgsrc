@@ -1,4 +1,4 @@
-# $NetBSD: transform-libtool,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: transform-libtool,v 1.2 2004/10/03 21:39:07 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -92,7 +92,7 @@ case $arg in
 			msg_log $wrapperlog "*** [buildlink3] Warning: libtool replaced $arg with $la"
 			$echo "*** [buildlink3] Warning: libtool replaced $arg with $la" 1>&2
 			arg="$la"
-			addtocache=yes
+			addtocache=no
 			break
 		fi
 	done
