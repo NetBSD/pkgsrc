@@ -1,12 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2003/02/06 10:54:18 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/05 09:16:33 adam Exp $
 
-work around the fact that some systems like i386 report either
-netbsd (a.out) or netbsdelf (elf) while others like alpha report
-netbsd (elf).  This was making alpha be set incorrectly to a.out
-
---- target.make.orig	Fri Nov 15 15:14:59 2002
-+++ target.make	Thu Feb  6 05:45:23 2003
-@@ -720,7 +720,7 @@
+--- target.make.orig	2003-09-26 04:30:39.000000000 +0200
++++ target.make
+@@ -594,9 +594,9 @@ endif
+ 
  ####################################################
  #
 -# NetBSD
@@ -16,10 +13,13 @@ netbsd (elf).  This was making alpha be set incorrectly to a.out
 +ifeq (@object_fmt@,netbsd-a.out)
  # This is disabled temporarily, because I don't know exactly how
  # to link shared libs. Everything seems to link correctly now but
-@@ -754,5 +754,5 @@
+ # constructor functions in the shared lib failed to get called
+@@ -628,7 +628,7 @@ endif
+ #
  # NetBSD ELF
  #
 -ifeq ($(findstring netbsdelf, $(GNUSTEP_TARGET_OS)), netbsdelf)
 +ifeq (@object_fmt@,netbsd-ELF)
  HAVE_SHARED_LIBS    = yes
  SHARED_LD_POSTFLAGS = -Wl,-R/usr/pkg/lib -L/usr/pkg/lib
+ SHARED_LIB_LINK_CMD = \
