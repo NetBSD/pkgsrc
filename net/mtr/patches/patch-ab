@@ -1,8 +1,25 @@
-$NetBSD: patch-ab,v 1.5 2004/10/27 16:18:31 wiz Exp $
-
---- dns.c.orig	2004-10-27 11:47:06.000000000 -0400
-+++ dns.c	2004-10-27 11:47:52.000000000 -0400
-@@ -814,9 +814,9 @@
+--- dns.c.orig	Thu Aug 26 00:56:53 2004
++++ dns.c	Sun Jan  9 16:06:08 2005
+@@ -32,9 +32,18 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
++
++#ifdef __APPLE__
++#include <arpa/nameser8_compat.h>
++#else
+ #include <arpa/nameser.h>
++#endif
+ #include <netdb.h>
++#ifdef __APPLE__
++#include <resolv8_compat.h>
++#else
+ #include <resolv.h>
++#endif
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <ctype.h>
+@@ -814,9 +823,9 @@
  {
    packetheader *hp;
    int r,i;
