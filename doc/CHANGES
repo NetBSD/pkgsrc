@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5247 2004/03/12 22:18:56 wiz Exp $
+$NetBSD: CHANGES,v 1.5248 2004/03/12 22:36:27 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postgresql_autodoc to 1.21 [recht 2004-03-12]
 	Updated tcl-fbsql to 1.05nb1 [minskim 2004-03-12]
 	Updated crimsonfields to 0.4.1 [wiz 2004-03-12]
+	Updated covered-current to 20040211 [dmcmahill 2004-03-12]
