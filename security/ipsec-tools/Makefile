@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2005/02/20 01:03:30 manu Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/23 16:49:39 manu Exp $
 #
 
-DISTNAME=		ipsec-tools-0.5
+DISTNAME=		ipsec-tools-0.6b1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipsec-tools/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		manu@NetBSD.org
 HOMEPAGE=		http://ipsec-tools.sourceforge.net/
@@ -28,6 +28,7 @@ LIBS+=			${BUILDLINK_LDADD.libradius}
 .endif
 
 CONFIGURE_ARGS+=	--enable-frag --enable-hybrid
+CONFIGURE_ARGS+=	--enable-adminport --enable-dpd
 CONFIGURE_ARGS+=	--enable-natt=kernel
 
 PKG_SYSCONFSUBDIR=	racoon
@@ -37,8 +38,8 @@ SAMPLE_DIR=	${WRKSRC}/src/racoon/samples
 EXAMPLE_DIR=	${PREFIX}/share/examples/ipsec-tools
 
 pre-configure:
-	${RM} ${WRKSRC}/src/racoon/cfparse.c
-	${RM} ${WRKSRC}/src/racoon/cftoken.c
+	${RM} -f ${WRKSRC}/src/racoon/cfparse.c
+	${RM} -f ${WRKSRC}/src/racoon/cftoken.c
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}
