@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/04/10 14:25:48 uebayasi Exp $
+# $NetBSD: Makefile,v 1.17 2002/04/14 14:04:43 jlam Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5.2
@@ -21,6 +21,7 @@ DISTINFO_FILE=	${.CURDIR}/../../japanese/canna-lib/distinfo
 PATCHDIR=	${.CURDIR}/../../japanese/canna-lib/patches
 
 BUILD_DEFS+=	USE_INET6
+USE_X11BASE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .if 0	# ${USE_INET6} == "YES"
