@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/05/27 21:21:41 lukem Exp $
+# $NetBSD: Makefile,v 1.21 2004/05/30 02:19:16 snj Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	http://download.gale.org/
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gale.org/
 COMMENT=	Secure instant messaging system
 
