@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.10 2001/11/20 16:19:20 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.11 2001/11/21 12:42:24 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -55,9 +55,10 @@ TYPE?=		type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs -r
 
-USERADD?=	/usr/sbin/useradd
+DEF_UMASK?=	022
 GROUPADD?=	/usr/sbin/groupadd
 NOLOGIN?=	${FALSE}
+USERADD?=	/usr/sbin/useradd
 
 ROOT_USER?=	root
 ROOT_GROUP?=	wheel
