@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.12 2002/11/25 21:20:06 jlam Exp $
+$NetBSD: patch-ac,v 1.13 2003/12/16 11:22:31 sketch Exp $
 
---- configure.orig	Wed Mar 20 06:45:48 2002
-+++ configure
-@@ -8628,6 +8628,7 @@ rm -f conftest.$ac_objext conftest.$ac_e
+--- configure.orig	2002-03-20 14:45:48.000000000 +0000
++++ configure	2003-12-15 17:52:22.568422320 +0000
+@@ -7715,7 +7715,7 @@
+ fi
+ done
+ 
+-for ac_header in stddef.h wchar.h wcstr.h wctype.h machine/types.h tcpd.h
++for ac_header in alloca.h stddef.h wchar.h wcstr.h wctype.h machine/types.h tcpd.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ echo "$as_me:7721: checking for $ac_header" >&5
+@@ -8628,6 +8628,7 @@
  
  echo "$as_me:8629: checking \"whether to use TCP wrappers\"" >&5
  echo $ECHO_N "checking \"whether to use TCP wrappers\"... $ECHO_C" >&6
@@ -10,7 +19,7 @@ $NetBSD: patch-ac,v 1.12 2002/11/25 21:20:06 jlam Exp $
  LIBWRAP_PATH=""
  LIB_WRAP=""
  for I in $LDFLAGS $LIBS -L/usr/lib; do
-@@ -8639,6 +8640,10 @@ for I in $LDFLAGS $LIBS -L/usr/lib; do
+@@ -8639,6 +8640,10 @@
  		LIB_WRAP=-lwrap
  		echo "Found $THEFILE/libwrap.so" 1>&5
  		break
@@ -21,7 +30,7 @@ $NetBSD: patch-ac,v 1.12 2002/11/25 21:20:06 jlam Exp $
  	else
  		echo "From $I, checking in dir $THEFILE for libwrap.a" 1>&5
  		if test -f $THEFILE/libwrap.a; then
-@@ -8649,6 +8654,7 @@ for I in $LDFLAGS $LIBS -L/usr/lib; do
+@@ -8649,6 +8654,7 @@
  	fi
  	esac
  done
