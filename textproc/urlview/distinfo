@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:12 skrll Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:48:50 agc Exp $
 
 SHA1 (urlview-0.9.tar.gz) = e366312a7dd04eb38909a36f854c502fbe81f4be
+RMD160 (urlview-0.9.tar.gz) = eafefdc7f1fe06f3f45a3f2a694c42dd833a178e
 Size (urlview-0.9.tar.gz) = 46685 bytes
