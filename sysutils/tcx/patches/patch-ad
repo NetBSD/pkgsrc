@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/06/23 13:55:24 agc Exp $
+$NetBSD: patch-ad,v 1.2 2003/09/23 08:46:46 wiz Exp $
 
 Minor security audit
 
---- tcx.c	2003/06/20 10:44:29	1.1
-+++ tcx.c	2003/06/20 10:45:54
+--- tcx.c.orig	Mon Dec 27 03:25:17 1993
++++ tcx.c	Tue Sep 23 09:24:12 2003
 @@ -120,16 +120,16 @@
  	/* If cannot, warn user and quit */
  
@@ -34,3 +34,15 @@ Minor security audit
  	if(write(outfd, header, strlen(header)) < 0) { (void)perror("write"); exit(-1); }
  
  	c = 0;	if((write(outfd, &c, 1)) < 0) { (void)perror("write"); exit(-1); }
+@@ -291,7 +291,11 @@
+ doencode(int infd, int outfd)
+ {
+ int	pid;
++#if defined(sun)
++int	status;
++#else
+ union	wait	status;
++#endif
+ 
+ 	pid = fork();
+ 	if(pid < 0) return -1;
