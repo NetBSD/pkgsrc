@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2002/06/08 23:41:56 veego Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/28 07:00:46 jlam Exp $
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
 PKGNAME=	mencoder-${MPLAYER_PKG_VERSION}
 COMMENT=	Simple movie encoder for MPlayer-playable movies
 
-CONFIGURE_ARGS+= --disable-nas
+USE_BUILDLINK2=		# defined
+CONFIGURE_ARGS+=	--disable-nas
 
 ALL_TARGET=	mencoder
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mencoder ${PREFIX}/bin
-	${LN} -s ${PREFIX}/man/man1/mplayer.1   ${PREFIX}/man/man1/mencoder.1
+	${LN} -s ${PREFIX}/man/man1/mplayer.1 ${PREFIX}/man/man1/mencoder.1
 
-.include "../../audio/lame/buildlink.mk"
 .include "../../graphics/mplayer-share/Makefile.depends"
+
+.include "../../audio/lame/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
