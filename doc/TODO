@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2803 2004/12/29 20:27:39 kristerw Exp $
+$NetBSD: TODO,v 1.2804 2004/12/29 21:54:18 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -444,8 +444,7 @@ Suggested package updates
 	o esh-0.8.5
 	o etach-1.4.0
 	o eterm-0.9.3
-	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
-	o ettercap-0.7.2
+	o ettercap-0.7.2 [wip/ettercap-NG|adrianp]
 	o eukleides-1.0.1 [pkg/28746]
 	o everybuddy-0.4.3
 	o everybuddy-gnome-0.4.3
