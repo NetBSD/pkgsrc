@@ -1,0 +1,51 @@
+--- load_xm.c.orig	Sun Aug  4 06:02:57 1996
++++ load_xm.c	Wed Mar 11 11:07:41 1998
+@@ -404,6 +404,11 @@
+ /*		printf("numrows: %d\n",ph.numrows); */
+ /*		printf("packsize:%d\n",ph.packsize); */
+ 
++		if(feof(modfp)){
++			myerr = ERROR_LOADING_PATTERN;
++			return 0;
++		}
++
+                 of.pattrows[t]=ph.numrows;
+ 
+ 		/*
+@@ -448,6 +453,12 @@
+ 		printf("Samples:%d\n",ih.numsmp);
+ 		printf("sampleheadersize:%ld\n",ih.ssize);
+ */
++
++		if(feof(modfp)){
++			myerr = ERROR_LOADING_SAMPLEINFO;
++			return 0;
++		}
++
+ 		d->insname=DupStr(ih.name,22);
+ 		d->numsmp=ih.numsmp;
+ 
+@@ -477,6 +488,11 @@
+ 			pth.volfade		=_mm_read_I_UWORD(modfp);
+ 			_mm_read_I_UWORDS(pth.reserved, 11, modfp);
+ 
++			if(feof(modfp)){
++				myerr = ERROR_LOADING_SAMPLEINFO;
++				return 0;
++			}
++
+ 			memcpy(d->samplenumber,pth.what,96);
+ 
+ 			d->volfade=pth.volfade;
+@@ -573,6 +589,11 @@
+ 				_mm_read_str(wh.samplename, 22, modfp);
+ 
+               /*printf("wav %d:%22.22s\n",u,wh.samplename);*/
++
++				if(feof(modfp)){
++					myerr = ERROR_LOADING_SAMPLEINFO;
++					return 0;
++				}
+ 
+ 				q->samplename   =DupStr(wh.samplename,22);
+ 				q->length       =wh.length;
