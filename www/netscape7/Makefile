@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/09/22 01:29:00 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/29 22:58:43 jschauma Exp $
 #
 
-DISTNAME=		netscape-i686-pc-linux-gnu-installer
+DISTNAME=		netscape-i686-pc-linux-gnu-sea
 PKGNAME=		netscape${VERS_MAJ}-${VERS_MIN}
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://sunsite.utk.edu/pub/netscape/netscape7/${SUB}/ \
@@ -25,9 +26,19 @@ INTERACTIVE_STAGE=	build
 
 VERS_MAJ=		7
 VERS_MIN=		0
-SUB=			english/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}
+PKG_LANG?=		english
+SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
 DIST_SUBDIR=		netscape7
 WRKSRC=			${WRKDIR}/netscape-installer
+
+.if ${PKG_LANG} != english
+DISTINFO_FILE=		${FILESDIR}/distinfo.${PKG_LANG}
+.endif
+
+PLIST_SRC=		${FILESDIR}/PLIST.${PKG_LANG} PLIST
+
+pre-fetch:
+	@${CAT} ${FILESDIR}/fetch-message
 
 pre-build:
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/netscape.sh > 	\

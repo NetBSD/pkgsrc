@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/29 22:58:44 jschauma Exp $
 bin/netscape7
 lib/netscape/netscape7/Cool/CoolBos.so
 lib/netscape/netscape7/Cool/CoolBos.so.1
@@ -16,16 +16,11 @@ lib/netscape/netscape7/Cool/CoolSos.so
 lib/netscape/netscape7/Cool/CoolSos.so.1
 lib/netscape/netscape7/Cool/CoolTih.so
 lib/netscape/netscape7/Cool/CoolTih.so.1
-lib/netscape/netscape7/chrome/US.jar
 lib/netscape/netscape7/chrome/aim.jar
 lib/netscape/netscape7/chrome/chrome.rdf
 lib/netscape/netscape7/chrome/classic.jar
 lib/netscape/netscape7/chrome/comm.jar
 lib/netscape/netscape7/chrome/content-packs.jar
-lib/netscape/netscape7/chrome/en-US.jar
-lib/netscape/netscape7/chrome/en-mac.jar
-lib/netscape/netscape7/chrome/en-unix.jar
-lib/netscape/netscape7/chrome/en-win.jar
 lib/netscape/netscape7/chrome/forms.jar
 lib/netscape/netscape7/chrome/help.jar
 lib/netscape/netscape7/chrome/installed-chrome.txt
@@ -175,15 +170,9 @@ lib/netscape/netscape7/components/talkback/master.ini
 lib/netscape/netscape7/components/talkback/talkback
 lib/netscape/netscape7/components/talkback/talkback.so
 lib/netscape/netscape7/components/xpti.dat
-lib/netscape/netscape7/component.reg
 lib/netscape/netscape7/defaults/autoconfig/prefcalls.js
-lib/netscape/netscape7/defaults/isp/US/aol.rdf
-lib/netscape/netscape7/defaults/isp/US/nswebmail.rdf
 lib/netscape/netscape7/defaults/isp/aol.rdf
 lib/netscape/netscape7/defaults/isp/nswebmail.rdf
-lib/netscape/netscape7/defaults/messenger/Templates
-lib/netscape/netscape7/defaults/messenger/US/Templates
-lib/netscape/netscape7/defaults/messenger/US/webMailSignature.html
 lib/netscape/netscape7/defaults/messenger/webMailSignature.html
 lib/netscape/netscape7/defaults/pref/aim.js
 lib/netscape/netscape7/defaults/pref/all-ns.js
@@ -199,17 +188,6 @@ lib/netscape/netscape7/defaults/pref/security-prefs.js
 lib/netscape/netscape7/defaults/pref/smime.js
 lib/netscape/netscape7/defaults/pref/unix.js
 lib/netscape/netscape7/defaults/pref/xpinstall.js
-lib/netscape/netscape7/defaults/profile/US/bookmarks.html
-lib/netscape/netscape7/defaults/profile/US/chrome/userChrome-example.css
-lib/netscape/netscape7/defaults/profile/US/chrome/userContent-example.css
-lib/netscape/netscape7/defaults/profile/US/default-connections.rdf
-lib/netscape/netscape7/defaults/profile/US/default-invite.rdf
-lib/netscape/netscape7/defaults/profile/US/default-messages-icq.rdf
-lib/netscape/netscape7/defaults/profile/US/default-messages.rdf
-lib/netscape/netscape7/defaults/profile/US/localstore.rdf
-lib/netscape/netscape7/defaults/profile/US/mimeTypes.rdf
-lib/netscape/netscape7/defaults/profile/US/panels.rdf
-lib/netscape/netscape7/defaults/profile/US/search.rdf
 lib/netscape/netscape7/defaults/profile/bookmarks.html
 lib/netscape/netscape7/defaults/profile/default-connections.rdf
 lib/netscape/netscape7/defaults/profile/default-invite.rdf
@@ -383,16 +361,6 @@ lib/netscape/netscape7/res/ua.css
 lib/netscape/netscape7/res/unixcharset.properties
 lib/netscape/netscape7/res/viewsource.css
 lib/netscape/netscape7/run-mozilla.sh
-lib/netscape/netscape7/searchplugins/SBMus_01.gif
-lib/netscape/netscape7/searchplugins/SBMus_01.src
-lib/netscape/netscape7/searchplugins/SBWeb_01.gif
-lib/netscape/netscape7/searchplugins/SBWeb_01.src
-lib/netscape/netscape7/searchplugins/SBWeb_02.gif
-lib/netscape/netscape7/searchplugins/SBWeb_02.src
-lib/netscape/netscape7/searchplugins/SBWeb_04.gif
-lib/netscape/netscape7/searchplugins/SBWeb_04.src
-lib/netscape/netscape7/searchplugins/SBWeb_06.gif
-lib/netscape/netscape7/searchplugins/SBWeb_06.src
 lib/netscape/netscape7/systemSignature.jar
 lib/netscape/netscape7/xpicleanup
 @dirrm lib/netscape/netscape7/searchplugins
@@ -408,18 +376,14 @@ lib/netscape/netscape7/xpicleanup
 @dirrm lib/netscape/netscape7/plugins
 @dirrm lib/netscape/netscape7/icons
 @dirrm lib/netscape/netscape7/defaults/wallet
-@dirrm lib/netscape/netscape7/defaults/profile/US/chrome
-@dirrm lib/netscape/netscape7/defaults/profile/US
 @dirrm lib/netscape/netscape7/defaults/profile
 @dirrm lib/netscape/netscape7/defaults/pref
-@dirrm lib/netscape/netscape7/defaults/messenger/US
 @dirrm lib/netscape/netscape7/defaults/messenger
-@dirrm lib/netscape/netscape7/defaults/isp/US
 @dirrm lib/netscape/netscape7/defaults/isp
 @dirrm lib/netscape/netscape7/defaults/autoconfig
 @dirrm lib/netscape/netscape7/defaults
-@dirrm lib/netscape/netscape7/components/talkback
 @dirrm lib/netscape/netscape7/components/spellchecker
+@dirrm lib/netscape/netscape7/components/talkback
 @dirrm lib/netscape/netscape7/components
 @dirrm lib/netscape/netscape7/chrome/overlayinfo/navigator/skin
 @dirrm lib/netscape/netscape7/chrome/overlayinfo/navigator/content

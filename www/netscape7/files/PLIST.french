@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST.french,v 1.1 2002/09/29 22:58:45 jschauma Exp $
+lib/netscape/netscape7/chrome/FR.jar
+lib/netscape/netscape7/chrome/fr-FR.jar
+lib/netscape/netscape7/chrome/fr-mac.jar
+lib/netscape/netscape7/chrome/fr-unix.jar
+lib/netscape/netscape7/chrome/fr-win.jar
+lib/netscape/netscape7/component.reg
+lib/netscape/netscape7/components/spellchecker/pfr2s331.dat
+lib/netscape/netscape7/defaults/isp/FR/aol.rdf
+lib/netscape/netscape7/defaults/isp/FR/nswebmail.rdf
+lib/netscape/netscape7/defaults/messenger/Templates
+lib/netscape/netscape7/defaults/messenger/FR/Templates
+lib/netscape/netscape7/defaults/messenger/FR/webMailSignature.html
+lib/netscape/netscape7/defaults/profile/FR/bookmarks.html
+lib/netscape/netscape7/defaults/profile/FR/chrome/userChrome-example.css
+lib/netscape/netscape7/defaults/profile/FR/chrome/userContent-example.css
+lib/netscape/netscape7/defaults/profile/FR/default-connections.rdf
+lib/netscape/netscape7/defaults/profile/FR/default-invite.rdf
+lib/netscape/netscape7/defaults/profile/FR/default-messages-icq.rdf
+lib/netscape/netscape7/defaults/profile/FR/default-messages.rdf
+lib/netscape/netscape7/defaults/profile/FR/localstore.rdf
+lib/netscape/netscape7/defaults/profile/FR/mimeTypes.rdf
+lib/netscape/netscape7/defaults/profile/FR/panels.rdf
+lib/netscape/netscape7/defaults/profile/FR/search.rdf
+lib/netscape/netscape7/license.txt
+lib/netscape/netscape7/readme.txt
+lib/netscape/netscape7/searchplugins/Netscape_France.gif
+lib/netscape/netscape7/searchplugins/Netscape_France.src
+@dirrm lib/netscape/netscape7/defaults/profile/FR/chrome
+@dirrm lib/netscape/netscape7/defaults/profile/FR
+@dirrm lib/netscape/netscape7/defaults/messenger/FR
+@dirrm lib/netscape/netscape7/defaults/isp/FR

@@ -1,9 +1,8 @@
 ===========================================================================
-$NetBSD: extract_instructions,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
+$NetBSD: extract_instructions,v 1.2 2002/09/29 22:58:47 jschauma Exp $
 
     Now running the Netscape 7 installation program.  Note that the
-    installation requires a working internet connection and the DISPLAY
-    environment variable to be set.
+    installation requires the DISPLAY environment variable to be set.
 
     1) Choose 'Next' on the first screen
 
@@ -26,7 +25,6 @@ $NetBSD: extract_instructions,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
     7) Netscape7 will now start and try to convince you to register with
        Netscape.  It's up to you to do so, but it's not required.  Exit
        Netscape to continue the package installation.
-
 
 ===========================================================================
 
