@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2001/03/26 13:46:19 bad Exp $
+# $NetBSD: Makefile,v 1.19 2001/03/26 22:37:33 bad Exp $
 #
 
 DISTNAME=		mysql-3.23.35
-PKGNAME=		${DISTNAME:S/-/-server-/}
+PKGNAME=		${DISTNAME:S/-/-server-/}nb1
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.mysql.com/MySQL-3.23/ \
 			http://www.mysql.com/Downloads/MySQL-3.23/ \
@@ -28,6 +28,11 @@ CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR} \
 			--with-named-curses-libs="-lcurses -ltermcap" \
 			--without-perl --without-debug --without-bench \
 			--without-docs --with-low-memory
+
+# hardwire use of included mit-pthreads on NetBSD
+.if (${OPSYS} == "NetBSD")
+CONFIGURE_ARGS+=	--with-mit-threads
+.endif
 
 CFLAGS+=		-Dunix
 
