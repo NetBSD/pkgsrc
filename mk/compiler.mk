@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.38.2.2 2004/11/30 15:06:34 tv Exp $
+# $NetBSD: compiler.mk,v 1.38.2.3 2004/11/30 15:10:47 tv Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -125,7 +125,11 @@ _COMPILER_STRIP_VARS=	# empty
 # the PATH to use the correct executable.
 #
 .for _var_ in ${_COMPILER_STRIP_VARS}
+.  if empty(${_var_}:C/^/_asdf_/1:N_asdf_*)
+${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T}
+.  else
 ${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_var_}:C/^/_asdf_/1:N_asdf_*}
+.  endif
 .endfor
 
 .if defined(ABI) && !empty(ABI)
