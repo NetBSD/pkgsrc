@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/15 00:44:42 hubertf Exp $
+
+--- Makefile.orig	Sat Jan 20 06:19:26 2001
++++ Makefile
+@@ -1,12 +1,12 @@
+ # Change paths & OPT if necessary
+ 
+-CC = gcc
+-OPT = -m486 -O2
++#CC = gcc
++OPT = -O2
+ #OPT = -mpentium -O6
+ #OPT = -mcpu=k6 -march=k6 -O6
+-CFLAGS = $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
+-LFLAGS = -shared -fPIC -L/usr/local/lib
+-OBJ = dspectral.o
++CFLAGS+= $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
++#LFLAGS = -shared -fPIC -L/usr/local/lib
++OBJ = dspectral.lo
+ INSTALL-DIR=`xmms-config --visualization-plugin-dir`
+ XMMS_DATADIR=`xmms-config --data-dir`
+ #INSTALL-DIR=$(HOME)/.xmms/Plugins
+@@ -14,21 +14,24 @@ XMMS_DATADIR=`xmms-config --data-dir`
+ THEME_SUBDIR=dspectral_themes
+ XMMS_DATADIR_FLAGS=-DTHEMEDIR=\"$(XMMS_DATADIR)/$(THEME_SUBDIR)/\"
+ 
+-all: libdspectral.so
++.SUFFIXES: .c .lo
+ 
+-libdspectral.so: $(OBJ) 
+-	$(CC) -o libdspectral.so $(OBJ) $(LFLAGS)
++all: libdspectral.la
+ 
+-.c.o:
+-	$(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
++libdspectral.la: $(OBJ) 
++	${LIBTOOL} $(CC) -o libdspectral.la $(OBJ) $(LFLAGS) -module -avoid-version -rpath $(INSTALL-DIR)
++
++.c.lo:
++	${LIBTOOL} $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
+ 
+ clean:
+-	rm -f *.o core *.so* 
++	rm -f *.o core *.so*  *.lo *.la
++	rm -fr .libs
+ 
+ distclean:
+ 	rm -f *.o core *~
+ 
+ install:
+-	install libdspectral.so $(INSTALL-DIR) 
+-	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
+-	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
++	${LIBTOOL} ${INSTALL} libdspectral.la $(INSTALL-DIR) 
++	${BSD_INSTALL_DATA_DIR} $(XMMS_DATADIR)/$(THEME_SUBDIR)
++	${BSD_INSTALL_DATA} bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
