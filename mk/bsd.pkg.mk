@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1098 2002/12/03 19:24:26 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1099 2002/12/03 20:53:39 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -87,7 +87,7 @@ DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
 UNLIMIT_RESOURCES+=	datasize
 .  elif ${PKG_JVM} == "sun-jdk13"
 _JAVA_PKGBASE=		sun-jdk13
-.    if ${OPSYS} == "Darwin"
+.    if ${_OPSYS_HAS_JAVA} == "yes"
 _JAVA_HOME_DEFAULT=	/usr
 .    else
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
@@ -106,7 +106,7 @@ DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i[3456]86} != ""
 _JAVA_PKGBASE=		sun-jdk1[34]*
-.    if ${OPSYS} == "Darwin"
+.    if ${_OPSYS_HAS_JAVA} == "yes"
 _JAVA_HOME_DEFAULT=	/usr
 .    else
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
