@@ -1,0 +1,5 @@
+lib/perl5/man/man3/Search::Base.3.gz
+lib/perl5/site_perl/Search/Base.pm
+lib/perl5/site_perl/Search/Glimpse.pm
+lib/perl5/site_perl/Search/TextSearch.pm
+@dirrm lib/perl5/site_perl/Search
