@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.890 2003/09/22 09:04:07 wiz Exp $
+$NetBSD: TODO,v 1.891 2003/09/22 09:41:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -254,7 +254,6 @@ Suggested package updates
 	o tin-1.6.1
 	o tkman-2.2
 	o top-3.5b12.7
-	o totd-1.4 [pkg/22882]
 	o transcode-0.6.10
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.12
