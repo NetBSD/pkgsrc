@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2000/08/28 22:29:34 mjl Exp $
+
+--- src/ptlib/unix/oss.cxx.orig	Mon Aug 28 23:30:16 2000
++++ src/ptlib/unix/oss.cxx	Mon Aug 28 23:30:52 2000
+@@ -287,7 +287,7 @@
+ 
+ PString PSoundChannel::GetDefaultDevice(Directions /*dir*/)
+ {
+-  return "/dev/dsp";
++  return "/dev/audio";
+ }
+ 
+ 
