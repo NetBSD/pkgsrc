@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 1998/03/17 07:07:58 cjs Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/03/25 18:32:01 tron Exp $
 bin/fvwm
-bin/xpmroot
 lib/X11/fvwm/FvwmPager
 lib/X11/fvwm/system.fvwmrc
 lib/X11/fvwm/GoodStuff
@@ -65,22 +64,8 @@ lib/X11/fvwm/pixmaps/xterm-sgi.xpm
 lib/X11/fvwm/pixmaps/xterm-sol.xpm
 lib/X11/fvwm/pixmaps/xterm-sun.xpm
 lib/X11/fvwm/pixmaps/xterm.xpm
-man/cat1/xpmroot.0
-man/cat1/FvwmAudio.0
-man/cat1/FvwmAuto.0
-man/cat1/FvwmBacker.0
-man/cat1/FvwmBanner.0
-man/cat1/FvwmIconBox.0
-man/cat1/FvwmIdent.0
-man/cat1/FvwmPager.0
-man/cat1/FvwmSave.0
-man/cat1/FvwmSaveDesk.0
-man/cat1/FvwmScroll.0
-man/cat1/FvwmWinList.0
-man/cat1/fvwm.0
 man/cat1/GoodStuff.0
-man/cat1/FvwmDebug.0
-man/cat1/FvwmClean.0
+man/cat1/fvwm.0
 @dirrm lib/X11/fvwm/pixmaps
 @dirrm lib/X11/fvwm/bitmaps
 @dirrm lib/X11/fvwm
