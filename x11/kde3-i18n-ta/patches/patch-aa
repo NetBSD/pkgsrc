@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2004/06/10 13:31:37 markd Exp $
+
+--- messages/kdeutils/kgpg.po.orig	2004-06-01 05:03:01.000000000 +1200
++++ messages/kdeutils/kgpg.po
+@@ -3189,6 +3189,7 @@ msgstr ""
+ "பொது விசையை பதவியிறக்கு. "
+ "முடிவில், மறைவிடக்க "
+ "செய்தியை அனுப்பு, Kgpg  "
++"\n"
+ 
+ #: tips.cpp:24
+ msgid ""
