@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 14:17:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/23 12:32:47 wiz Exp $
 #
 
 DISTNAME=	rrdtool-1.0.28
@@ -12,6 +12,9 @@ COMMENT=	Data analysis tool generating graphical representations
 DEPENDS+=	cgilib-0.5:../../www/cgilib
 DEPENDS+=	gd>=1.7.3:../../graphics/gd
 DEPENDS+=	jpeg-6*:../../graphics/jpeg
+
+# IEEE math not good enough on alpha
+NOT_FOR_PLATFORM=	NetBSD-*-alpha
 
 USE_LIBTOOL=	# defined
 USE_GMAKE=	# defined
