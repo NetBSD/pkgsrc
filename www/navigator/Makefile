@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/06/27 00:23:21 abs Exp $
+# $NetBSD: Makefile,v 1.14 1999/06/27 00:33:53 abs Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -37,7 +37,8 @@ CATEGORIES=	www
 SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/navigator_standalone
 MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${SUB}/ \
 		ftp://sunsite.utk.edu/pub/netscape/communicator/${SUB}/ \
-		ftp://ftp-uk.netscape.com/pub/communicator/${SUB}/
+		ftp://ftp-uk.netscape.com/pub/communicator/${SUB}/ \
+		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/${SUB}/
 ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
 
 MAINTAINER=	packages@netbsd.org
@@ -81,7 +82,7 @@ do-install:
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${PKGNAME}
-	${LN} -sf ${PKGNAME} ${PREFIX}/bin/navigator
+	${LN} -sf ${PKGNAME} ${PREFIX}/bin/${BINNAME}
 
 .if (${MACHINE_ARCH} == "sparc")
 	# Bizarre magic to handle the NIS and DNS versions. Make DNS default.
