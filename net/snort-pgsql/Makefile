@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/01 17:10:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/24 22:45:15 recht Exp $
 
 .include "../../net/snort/Makefile.common"
 
@@ -14,8 +14,7 @@ FILESDIR=	${PKGDIR}/files
 PATCHDIR=	${PKGDIR}/patches
 DISTINFO_FILE=	${PKGDIR}/distinfo
 
-CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_PREFIX.postgresql-lib}
+CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
-
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

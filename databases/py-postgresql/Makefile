@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/07/22 09:16:01 recht Exp $
+# $NetBSD: Makefile,v 1.34 2004/07/24 22:45:15 recht Exp $
 
 PKGNAME=	${PYPKGPREFIX}-postgresql-3.3
 PKGREVISION=	3
@@ -32,8 +32,8 @@ post-install:
 		${INSTALL_DATA} $${file} ${DOCDIR}/tutorial;		\
 	done
 
-.include "../postgresql-lib/buildlink3.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/08 19:48:27 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/24 22:45:16 recht Exp $
 
 DISTNAME=	mod_auth_pgsql-0.9.12
 PKGNAME=	ap-auth-pgsql-0.9.12
@@ -15,7 +15,7 @@ USE_BUILDLINK3=	YES
 
 APACHE_MODULE_NAME=	mod_auth_pgsql.so
 
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
+CPPFLAGS+=	-I${PGSQL_PREFIX}/include/postgresql
 LDFLAGS+=	-lpq -lcrypt
 
 post-install:
@@ -26,5 +26,5 @@ post-install:
 
 .include "../../www/apache/module.mk"
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

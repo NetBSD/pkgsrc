@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/07/10 03:08:32 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/24 22:45:15 recht Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	2
@@ -59,11 +59,11 @@ MAKE_ENV+=		LOOKUP_MYSQL=YES
 .  include "../../databases/mysql-client/buildlink3.mk"
 .endif
 .if defined(EXIM_DB.pgsql) && ${EXIM_DB.pgsql} == "YES"
-LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
-LOOKUP_LIBS+=		-L${BUILDLINK_PREFIX.postgresql-lib}/lib
-LOOKUP_LIBS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq
+LOOKUP_INCLUDE+=	-I${PGSQL_PREFIX}/include/postgresql
+LOOKUP_LIBS+=		-L${PGSQL_PREFIX}/lib
+LOOKUP_LIBS+=		-Wl,${RPATH_FLAG}${PGSQL_PREFIX}/lib -lpq
 MAKE_ENV+=		LOOKUP_PGSQL=YES
-.  include "../../databases/postgresql-lib/buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 # buildlink3 decides which libdb to use on this platform.

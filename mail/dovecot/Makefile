@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/07/14 18:09:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2004/07/24 22:45:15 recht Exp $
 
 DISTNAME=		dovecot-0.99.10.7
 CATEGORIES=		mail
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--with-mysql
 .if !empty(DOVECOT_USE_PGSQL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-pgsql
 CPPFLAGS=		-I${BUILDLINK_DIR}/include/pgsql
-.  include "../../databases/postgresql-lib/buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
