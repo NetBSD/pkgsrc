@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.1 2000/06/12 14:42:21 wulf Exp $
+@comment $NetBSD: PLIST.opt,v 1.2 2000/07/04 01:40:33 wiz Exp $
 bin/ocamlc.opt
 bin/ocamlopt.opt
 lib/ocaml/arg.cmx
@@ -107,3 +107,5 @@ lib/ocaml/labltk/labltk.a
 lib/ocaml/labltk/labltk.cmxa
 lib/ocaml/labltk/libjpf.a
 lib/ocaml/labltk/libjpf.cmxa
+man/man1/ocamlc.opt.1
+man/man1/ocamlopt.opt.1
