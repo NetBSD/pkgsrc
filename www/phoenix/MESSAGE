@@ -1,0 +1,4 @@
+PLEASE NOTE: You MUST create a new profile for Phoenix 0.4.
+
+To create new profile, simply remove ~/.phoenix and run phoenix.
+Or run phoenix -ProfileManager and click on the "Create Profile" button.

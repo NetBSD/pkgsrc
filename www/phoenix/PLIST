@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2002/10/19 15:38:36 taya Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/30 15:24:53 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -653,7 +653,6 @@ include/${MOZILLA}/content/nsITextAreaElement.h
 include/${MOZILLA}/content/nsITextContent.h
 include/${MOZILLA}/content/nsITextControlElement.h
 include/${MOZILLA}/content/nsITransformMediator.h
-include/${MOZILLA}/content/nsITransformObserver.h
 include/${MOZILLA}/content/nsIWyciwygChannel.h
 include/${MOZILLA}/content/nsIXBLBinding.h
 include/${MOZILLA}/content/nsIXBLBindingAttachedHandler.h
@@ -665,6 +664,9 @@ include/${MOZILLA}/content/nsIXBLService.h
 include/${MOZILLA}/content/nsIXMLContent.h
 include/${MOZILLA}/content/nsIXMLContentSink.h
 include/${MOZILLA}/content/nsIXMLDocument.h
+include/${MOZILLA}/content/nsIXSLTException.h
+include/${MOZILLA}/content/nsIXSLTProcessor.h
+include/${MOZILLA}/content/nsIXSLTProcessorObsolete.h
 include/${MOZILLA}/content/nsImageMapUtils.h
 include/${MOZILLA}/content/nsLayoutAtomList.h
 include/${MOZILLA}/content/nsLayoutAtoms.h
@@ -1064,6 +1066,7 @@ include/${MOZILLA}/inspector/inIScreenCapturer.h
 include/${MOZILLA}/inspector/inISearchObserver.h
 include/${MOZILLA}/inspector/inISearchProcess.h
 include/${MOZILLA}/intl/nsIStringBundle.h
+include/${MOZILLA}/intl/nsIStringBundleOverride.h
 include/${MOZILLA}/jar/nsIJAR.h
 include/${MOZILLA}/jar/nsIZipReader.h
 include/${MOZILLA}/jar/zipfile.h
@@ -1913,6 +1916,7 @@ include/${MOZILLA}/xpcom/nsDirectoryService.h
 include/${MOZILLA}/xpcom/nsDirectoryServiceDefs.h
 include/${MOZILLA}/xpcom/nsDirectoryServiceUtils.h
 include/${MOZILLA}/xpcom/nsDoubleHashtable.h
+include/${MOZILLA}/xpcom/nsEmbedString.h
 include/${MOZILLA}/xpcom/nsEnumeratorUtils.h
 include/${MOZILLA}/xpcom/nsError.h
 include/${MOZILLA}/xpcom/nsEscape.h
@@ -2073,6 +2077,7 @@ include/${MOZILLA}/xpcom/xptcall.h
 include/${MOZILLA}/xpcom/xptcstubsdecl.inc
 include/${MOZILLA}/xpcom/xptcstubsdef.inc
 include/${MOZILLA}/xpcom/xptinfo.h
+include/${MOZILLA}/xpconnect/XPCIDispatch.h
 include/${MOZILLA}/xpconnect/mozIJSSubScriptLoader.h
 include/${MOZILLA}/xpconnect/nsIJSContextStack.h
 include/${MOZILLA}/xpconnect/nsIJSRuntimeService.h

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.2 2002/10/19 15:38:31 taya Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/30 15:24:52 taya Exp $
 
 MOZILLA=	phoenix
 MOZILLA_BIN=	phoenix-bin
-MOZ_VER=	0.3
-EXTRACT_SUFX=	.tar.gz
+MOZ_VER=	0.4
+EXTRACT_SUFX=	.tar.bz2
 DISTNAME=       mozilla-phoenix-${MOZ_VER}
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
