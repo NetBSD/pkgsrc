@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.876 2002/12/22 21:35:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.877 2002/12/22 22:28:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4061,3 +4061,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ytalk to 3.1.1nb1 [jmmv 2002-12-22]
 	Updated lsof to 4.66 [atatat 2002-12-22]
 	Updated ion to 20010523nb1 [jmmv 2002-12-22]
+	Updated cdbkup to 1.0nb1 [jmmv 2002-12-22]
+	Updated qterm to 1.0nb1 [jmmv 2002-12-22]
