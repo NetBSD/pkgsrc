@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2002/11/07 15:07:46 fredb Exp $
+# $NetBSD: Makefile,v 1.23 2003/02/15 09:33:03 salo Exp $
 #
 
-DISTNAME=	gkrellm-1.2.11
-PKGREVISION=	2
+DISTNAME=	gkrellm-1.2.13
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,11 +16,13 @@ OSVERSION_SPECIFIC=	YES
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
+USE_PKGLOCALEDIR=	YES
 
 ALL_TARGET=		netbsd
 INSTALL_TARGET=		install_netbsd
 
 MAKE_ENV+=	PTHREAD_INC="-I${LOCALBASE}/include"
+MAKE_ENV+=	EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm
