@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2004/06/06 21:29:33 minskim Exp $
+
+--- mkdir.c.orig	2001-12-05 22:54:41.000000000 -0600
++++ mkdir.c
+@@ -51,8 +51,8 @@ extern int errno;
+ 
+ int
+ mkdir (dpath, dmode)
+-     char *dpath;
+-     int dmode;
++     const char *dpath;
++     unsigned int dmode;
+ {
+   int cpid, status;
+   struct stat statbuf;

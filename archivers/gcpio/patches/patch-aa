@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/03/16 00:17:24 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2004/06/06 21:29:33 minskim Exp $
 
 --- Makefile.in.orig	Wed Dec 20 11:28:30 1995
 +++ Makefile.in
@@ -14,6 +14,15 @@ $NetBSD: patch-aa,v 1.4 2003/03/16 00:17:24 wiz Exp $
  
  
  # Where to install the cpio and mt executables.
+@@ -101,7 +101,7 @@
+ SRCS = copyin.c copyout.c copypass.c defer.c dstring.c global.c \
+ main.c tar.c util.c error.c getopt.c getopt1.c filemode.c version.c \
+ rtapelib.c dirname.c idcache.c makepath.c xmalloc.c stripslash.c \
+-userspec.c xstrdup.c bcopy.c fnmatch.c mkdir.c strdup.c
++userspec.c xstrdup.c bcopy.c fnmatch.c mkdir.c
+ OBJS = copyin.o copyout.o copypass.o defer.o dstring.o global.o \
+ main.o tar.o util.o error.o getopt.o getopt1.o filemode.o version.o \
+ $(RTAPELIB) dirname.o idcache.o makepath.o xmalloc.o stripslash.o \
 @@ -117,17 +117,14 @@
  configure configure.in mkinstalldirs install-sh $(MT_SRCS) rmt.c tcexparg.c \
  alloca.c cpio.texi cpio.info texinfo.tex

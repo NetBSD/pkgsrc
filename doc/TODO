@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1816 2004/06/06 09:41:50 recht Exp $
+$NetBSD: TODO,v 1.1817 2004/06/06 21:29:33 minskim Exp $
 
 Suggested new packages
 ======================
@@ -231,7 +231,6 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gauche-0.8
 	o gcc-3.4.0 [pkgsrc-wip]
-	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdb-6.1 [pkgsrc-wip]
 	o generator-0.35
