@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26 2002/12/04 16:23:19 wiz Exp $
+$NetBSD: TODO,v 1.27 2002/12/04 17:36:19 salo Exp $
 
 Suggested new packages
 ======================
@@ -214,7 +214,6 @@ Suggested package updates
 	o sendfile-20010424
 	o shorten-3.5.0
 	o siag-office-3.5.3
-	o silc-{client,server}-0.9.9.1
 	o smalltalk-2.0.8
 	o snes9x-1.39a
 	o sodipodi-0.28
