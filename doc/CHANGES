@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4948 2004/02/22 01:43:50 schmonz Exp $
+$NetBSD: CHANGES,v 1.4949 2004/02/22 01:59:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -966,3 +966,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Text-Reform-1.11 [minskim 2004-02-22]
 	Added p5-DBI-Shell-11.9 [minskim 2004-02-22]
 	Added libtcpa-1.1b [schmonz 2004-02-22]
+	Added p5-Perl-Tidy-20021130 [minskim 2004-02-22]
