@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/16 14:38:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/27 08:48:14 tron Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
@@ -11,9 +11,12 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
 
-CONFIGURE_ARGS=	--program-prefix="g"
-GNU_CONFIGURE=	yes
-USE_GTEXINFO=	yes
+USE_GTEXINFO=	YES
+GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+=--program-prefix="g"
+CONFIGURE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+
+MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 post-extract:
 	${MV} ${WRKSRC}/make.texinfo ${WRKSRC}/make.texinfo.orig
