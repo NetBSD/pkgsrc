@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/09/19 13:37:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.38 2000/10/21 22:45:28 wiz Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -22,7 +22,7 @@ MAKE_ENV+=	LT=${LIBTOOL}
 pre-patch:
 	# Make sure the imap lib that comes with pine4.21 isn't
 	# used (see http://www.securityfocus.com/advisories/2646)
-	rm -fr ${WRKSRC}/imap
+	${RM} -fr ${WRKSRC}/imap
 
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
