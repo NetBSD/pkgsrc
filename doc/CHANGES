@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6452 2004/07/05 12:43:44 recht Exp $
+$NetBSD: CHANGES,v 1.6453 2004/07/05 14:29:33 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3257,3 +3257,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gkrellm to 2.2.1nb2 [cube 2004-07-05]
 	Updated gkrellm-server to 2.2.1nb2 [cube 2004-07-05]
 	Added ArX-1.0.20 [recht 2004-07-05]
+	Updated mozilla to 1.7nb1 [taya 2004-07-05]
+	Updated mozilla-gtk2 to 1.7nb1 [taya 2004-07-05]
+	Updated firefox to 0.9.1nb1 [taya 2004-07-05]
+	Updated firefox-gtk2 to 0.9.1nb1 [taya 2004-07-05]
