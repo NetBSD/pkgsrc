@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/05 19:25:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/03/18 09:12:12 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PNG_BUILDLINK3_MK:=	${PNG_BUILDLINK3_MK}+
@@ -13,9 +13,8 @@ BUILDLINK_PACKAGES+=	png
 .if !empty(PNG_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.png+=		png>=1.2.4
 BUILDLINK_PKGSRCDIR.png?=	../../graphics/png
+.endif	# PNG_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
-
-.endif	# PNG_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:17 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VTE_BUILDLINK3_MK:=	${VTE_BUILDLINK3_MK}+
@@ -24,10 +24,9 @@ BUILDLINK_FILES.vte+=	lib/vte/utf8echo
 BUILDLINK_FILES.vte+=	lib/vte/utf8mode
 BUILDLINK_FILES.vte+=	lib/vte/vterdb
 BUILDLINK_FILES.vte+=	lib/vte/window
+.endif	# VTE_BUILDLINK3_MK
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
-
-.endif	# VTE_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

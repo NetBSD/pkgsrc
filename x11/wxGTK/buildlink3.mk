@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:17 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WXGTK_BUILDLINK3_MK:=	${WXGTK_BUILDLINK3_MK}+
@@ -15,6 +15,7 @@ BUILDLINK_PACKAGES+=	wxGTK
 .if !empty(WXGTK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.wxGTK+=	wxGTK>=2.4.2
 BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK
+.endif	# WXGTK_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -27,7 +28,5 @@ BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK
 .else
 .  include "../../x11/gtk2/buildlink3.mk"
 .endif
-
-.endif	# WXGTK_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

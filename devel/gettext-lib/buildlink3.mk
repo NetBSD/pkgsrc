@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2004/03/16 18:23:27 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2004/03/18 09:12:10 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -14,10 +14,9 @@ BUILDLINK_PACKAGES+=	gettext
 BUILDLINK_PKGBASE.gettext?=	gettext-lib
 BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.10.35nb1
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
+.endif	# GETTEXT_BUILDLINK3_MK
 
 # libiconv/buildlink3.mk is included by gettext-lib/builtin.mk
 #.include "../../converters/libiconv/buildlink3.mk"
-
-.endif	# GETTEXT_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/11 17:26:02 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/18 09:12:13 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XINE_LIB_BUILDLINK3_MK:=	${XINE_LIB_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	xine-lib
 .if !empty(XINE_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xine-lib+=	xine-lib>=1rc3a
 BUILDLINK_PKGSRCDIR.xine-lib?=	../../multimedia/xine-lib
+.endif	# XINE_LIB_BUILDLINK3_MK
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -25,7 +26,5 @@ BUILDLINK_PKGSRCDIR.xine-lib?=	../../multimedia/xine-lib
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
-
-.endif	# XINE_LIB_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
