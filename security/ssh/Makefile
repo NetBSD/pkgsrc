@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2000/02/05 06:03:25 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2000/03/02 21:05:13 wiz Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -162,7 +162,7 @@ fetch-depends:
 
 post-patch:
 	@# Make sure that "automake" is never run.
-	@find ${WRKSRC} -name Makefile.in -print | xargs ${TOUCH} ${TOUCH_FLAGS}
+	@${FIND} ${WRKSRC} -name Makefile.in -print | xargs ${TOUCH} ${TOUCH_FLAGS}
 
 post-build:
 	@cd ${PKGDIR}; \
