@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.2 1999/11/21 23:03:37 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/15 14:48:48 abs Exp $
 
-DISTNAME=	thttpd-2.05
+DISTNAME=	thttpd-2.09
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		sitedrivenby.gif
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.acme.com/software/thttpd/
 
+EXTRACT_ONLY=	${DISTFILES:N*.gif}
 GNU_CONFIGURE=	yes
 
 pre-build:
@@ -20,6 +23,10 @@ pre-install:
 	${MKDIR} ${PREFIX}/libexec/cgi-bin ${PREFIX}/share/www
 	${SED} -e "s/htpasswd/thtpasswd/g" \
 	  <${WRKSRC}/extras/htpasswd.1 >${WRKSRC}/extras/thtpasswd.1
-	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/www
+	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/www/index.html
+
+post-install:
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif \
+	  ${PREFIX}/share/www
 
 .include "../../mk/bsd.pkg.mk"
