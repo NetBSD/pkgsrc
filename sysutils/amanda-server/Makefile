@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/05/29 16:19:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/14 21:54:36 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -13,7 +13,6 @@ COMMENT=		Server part of Amanda, a network backup system
 
 DEPENDS+=		amanda-common-2.4.2:../../sysutils/amanda-common
 
-USE_X11=		yes
 USE_PERL5=		yes
 USE_GMAKE=		yes
 
@@ -30,8 +29,6 @@ CONFIGURE_ENV+=         ac_cv_lib_curses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_readline_readline=no
-
-BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
 # post-install:
 # 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amanda

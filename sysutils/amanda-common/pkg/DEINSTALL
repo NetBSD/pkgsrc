@@ -1,26 +1,62 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2000/08/17 02:26:30 wiz Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/06/14 21:54:36 jlam Exp $
 #
 
 PKGNAME=$1
 STAGE=$2
 
 USER=@AMUSER@
+AMVAR=@AMVAR@
+
+CAT="@CAT@"
+RMDIR="@RMDIR@"
+TRUE="@TRUE@"
 
 case ${STAGE} in
 DEINSTALL)
 	;;
+
 POST-DEINSTALL)
-	cat << EOF
+	${RMDIR} ${AMVAR}/gnutar-lists 2>/dev/null || ${TRUE}
+	${RMDIR} ${AMVAR} 2>/dev/null || ${TRUE}
+
+	existing_dirs=''
+	for dir in ${AMVAR}/gnutar-lists ${AMVAR}
+	do
+		if [ -d ${dir} ]
+		then
+			existing_dirs="${existing_dirs} ${dir}"
+		fi
+	done
+
+	${CAT} << EOF
 ===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to
-remove the \`${USER}' user.
+If you won't be using ${PKGNAME} any longer, you may want to remove:
+
+  * the \`${USER}' user
+EOF
+
+	if [ -n "${existing_dirs}" ]
+	then
+		${CAT} << EOF
+
+  * the following directories:
+
+EOF
+		for dir in ${existing_dirs}
+		do
+			echo "  ${dir}"
+		done
+	fi
+
+	${CAT} << EOF
 ===========================================================================
 EOF
 	;;
+
 *)
-	echo "Unexpected argument: $2"
+	echo "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
