@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1650 2003/03/15 20:20:39 kei Exp $
+$NetBSD: CHANGES,v 1.1651 2003/03/15 20:33:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1142,3 +1142,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ja-ptex-share-2.1 [kei 2003-03-15]
 	Added ja-jsclasses-0.0.0.20021127 [kei 2003-03-15]
 	Added ja-ptex-1.0 [kei 2003-03-15]
+	Updated gtkmm to 2.2.1 [jmmv 2003-03-15]
