@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.916 2002/12/25 15:59:31 jmmv Exp $
+$NetBSD: CHANGES,v 1.917 2002/12/25 16:05:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tiff to 3.5.7nb1 [wiz 2002-12-25]
 	Updated gnome-mime-data to 2.0.1nb1 [jmmv 2002-12-25]
 	Updated libgda to 0.8.199nb1 [jmmv 2002-12-25]
+	Updated bsdpak to 0.52 [jmmv 2002-12-25]
