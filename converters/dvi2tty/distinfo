@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/26 13:04:32 fredb Exp $
+
+SHA1 (dvi2tty.tar.gz) = be9fa4e525f0fda5c8de63d58ff8868f6d008b85
+Size (dvi2tty.tar.gz) = 30720 bytes
+SHA1 (patch-aa) = c6452a3ea322b507b3f7a3c5dc654c0a2b4bfea6
