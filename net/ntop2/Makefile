@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/05 06:54:13 veego Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/07 20:04:41 wiz Exp $
 
 DISTNAME=		ntop-2.1
 PKGNAME=		ntop2-2.1
@@ -15,6 +15,7 @@ BROKEN=			"PR 13058 needs to be closed first"
 
 WRKSRC=                 ${WRKDIR}/ntop
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=          yes
 USE_GNU_READLINE=	yes
@@ -26,11 +27,11 @@ USE_BUILDLINK_ONLY=	yes
 
 PTHREAD_OPTS+=		require
 
-.include "../../net/libpcap/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../databases/gdbm/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../graphics/gdchart/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../net/libpcap/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../databases/gdbm/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../graphics/gdchart/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
