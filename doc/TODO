@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.400 2003/03/22 03:05:51 wiz Exp $
+$NetBSD: TODO,v 1.401 2003/03/22 03:12:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -255,7 +255,6 @@ Suggested package updates
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
-	o webalizer-2.01-10 [pkg/20445]
 	o wine-20030318
 	o wwwoffle-2.7h
 	o wxGTK-2.4.0 [pkg/20640]
