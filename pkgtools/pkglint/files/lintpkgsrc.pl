@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.95 2005/02/04 15:46:58 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.96 2005/02/05 15:39:44 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -562,7 +562,15 @@ sub list_installed_packages
 
     open(PKG_INFO, 'pkg_info -a|') || fail("Unable to run pkg_info: $!");
     while ( <PKG_INFO> )
-	{ push(@pkgs, (split)[0]); }
+	{
+	my ($pkg);
+	$pkg = (split)[0];
+	# XXX: hack for python and ruby prefix support
+	$pkg =~ s/^py..pth-/py-/;
+	$pkg =~ s/^py..-/py-/;
+	$pkg =~ s/^ruby..-/ruby-/;
+	push(@pkgs, $pkg);
+	}
     close(PKG_INFO);
 
     # pkg_install is not in the pkg_info -a output, add it manually
