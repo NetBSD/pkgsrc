@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/20 19:46:47 wiz Exp $
+
+--- unix/makefile.orig	Wed Jul  1 10:29:10 1998
++++ unix/makefile	Thu Jul 20 20:27:59 2000
+@@ -16,7 +16,7 @@
+ #CFLAGS = -Wall -O3 -s #-DNDEBUG
+ #CFLAGS = -g -Wall -DMDEBUG
+ #CFLAGS = -O3 -fno-strength-reduce -fomit-frame-pointer # These are for Linux
+-CFLAGS = -O -g -Wall -dLO_HI_BYTE_ORDER
++CFLAGS += -g -Wall
+ CHALLOC = challoc.o
+ CHALLOC =
+ CHNEW = chnew.o challoc.o
+@@ -36,6 +36,7 @@
+ # not all systems require the math library
+ #LIBS = -lm
+ 
++all: unace
+ 
+ unace$(EXEEXT): $(OBJ) $(CHALLOC)
+ 	gcc $(CFLAGS) -o $@ $^ $(LIBS)

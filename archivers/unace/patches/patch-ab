@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/20 19:46:47 wiz Exp $
+
+--- os.h.orig	Wed Jul  1 10:29:10 1998
++++ os.h	Thu Jul 20 20:28:19 2000
+@@ -21,4 +21,13 @@
+   #define DIRSEP '/'
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <machine/endian.h>
++#if BYTE_ORDER == BIG_ENDIAN
++#define HI_LO_BYTE_ORDER
++#else
++#define LO_HI_BYTE_ORDER
++#endif
++#endif
++
+ #endif /* __os_h */
