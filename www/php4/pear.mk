@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.1 2003/12/17 19:02:07 jdolecek Exp $
+# $NetBSD: pear.mk,v 1.2 2004/03/17 16:32:43 danw Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -31,7 +31,8 @@ MASTER_SITES+=	${MASTER_SITE_PEAR_PACKAGE}
 PEAR_CMD=	${PREFIX}/bin/pear
 PEAR_LIB=	lib/php
 
-_PEAR_PKG=	${DISTNAME:C/-.*//:tl}
+# Changed to not use :tl modifier since that's currently NetBSD 1.6-only
+_PEAR_PKG!=	${ECHO} ${DISTNAME:C/-.*//} | ${TR} '[A-Z]' '[a-z]'
 
 # Dynamic PLIST
 # The package.xml 'parsing' is a bit crude, but enough for now. Eventually
