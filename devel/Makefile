@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 1999/09/08 08:02:10 sakamoto Exp $
+# $NetBSD: Makefile,v 1.76 1999/09/15 18:56:58 jlam Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -44,6 +44,7 @@
     SUBDIR += gtexinfo
     SUBDIR += id-utils
 #    SUBDIR += ilu
+    SUBDIR += isect
 #    SUBDIR += lclint
     SUBDIR += ldapsdk
 #    SUBDIR += libdlmalloc
