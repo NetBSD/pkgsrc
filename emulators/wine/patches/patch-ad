@@ -1,0 +1,17 @@
+--- multimedia/audio.c.orig	Sun May 31 18:14:49 1998
++++ multimedia/audio.c	Tue Jun 16 23:58:24 1998
+@@ -28,11 +28,14 @@
+ 
+ #ifdef HAVE_OSS
+ 
++#ifdef __NetBSD__
++#include <soundcard.h>
+ #ifdef HAVE_MACHINE_SOUNDCARD_H
+ # include <machine/soundcard.h>
+ #endif
+ #ifdef HAVE_SYS_SOUNDCARD_H
+ # include <sys/soundcard.h>
++#endif
+ #endif
+ 
+ #define SOUND_DEV "/dev/dsp"
