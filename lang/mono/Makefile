@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2004/05/12 09:59:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/06/26 20:19:16 recht Exp $
 #
 
-DISTNAME=	mono-0.91
+DISTNAME=	mono-0.97
 CATEGORIES=	lang
-MASTER_SITES=	http://www.go-mono.com/archive/beta1/
+MASTER_SITES=	http://www.go-mono.com/archive/rc/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.go-mono.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 
-BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+#BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CONFLICTS=	pnet-[0-9]*
 
@@ -18,7 +18,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-5]*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6-* NetBSD-1.6.*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 # boehm-gc doesn't build on amd64/x86_64
-NOT_FOR_PLATFORM+=	*-*-amd64 *-*-x86_64
+NOT_FOR_PLATFORM+=	FreeBSD-*-amd64 FreeBSD-*-x86_64
 
 USE_GNU_TOOLS+=		make yacc
 USE_BUILDLINK3=		yes
@@ -29,7 +29,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gc=included
 CONFIGURE_ARGS+=	--with-ikvm-jni=no
 CONFIGURE_ARGS+=	--with-jdk=no
-CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+MAKE_FLAGS+=		PERL=${PERL5}
 
 PKGCONFIG_OVERRIDE=	mint.pc.in
 PKGCONFIG_OVERRIDE=	mono.pc.in
@@ -38,7 +40,9 @@ PKG_SYSCONFSUBDIR=	mono
 USE_PERL5=	build
 REPLACE_PERL=	mono/cil/make-opcodes-def.pl
 REPLACE_PERL+=	mono/metadata/make-bundle.pl
+REPLACE_PERL+=	mono/mini/build_relations_propagation_table.pl
 REPLACE_PERL+=	mono/benchmark/test-driver
+REPLACE_PERL+=	mono/tests/test-driver
 
 EGDIR=		${PREFIX}/share/examples/mono
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/config
@@ -47,7 +51,7 @@ CONF_FILES+=	${EGDIR}/machine.config ${PKG_SYSCONFDIR}/machine.config
 CONF_FILES+=	${EGDIR}/DefaultWsdlHelpGenerator.aspx \
 		${PKG_SYSCONFDIR}/DefaultWsdlHelpGenerator.aspx
 
-DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
+#DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -83,8 +87,8 @@ CONFIGURE_ARGS+=	--with-sigaltstack=no
 .endif
 
 # Global Assembly Cache files are handled during (de)installation.
-PRINT_PLIST_AWK+=	/^lib\/mono\/gac\// { next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/mono\/gac\// { next; }
+#PRINT_PLIST_AWK+=	/^lib\/mono\/gac\// { next; }
+#PRINT_PLIST_AWK+=	/^@dirrm lib\/mono\/gac\// { next; }
 
 # GC files are only installed if GC was enabled.
 PRINT_PLIST_AWK+=	/^include\/mono\/private\/libgc/ \

@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2004/06/26 20:19:16 recht Exp $
+
+--- mono/cil/Makefile.in.orig	2004-06-26 14:04:26.000000000 +0200
++++ mono/cil/Makefile.in	2004-06-26 14:04:33.000000000 +0200
+@@ -299,7 +299,7 @@
+ 
+ 
+ opcode.def: make-opcodes-def.pl cil-opcodes.xml
+-	perl make-opcodes-def.pl < $(srcdir)/cil-opcodes.xml > opcode.def
++#	$(PERL) make-opcodes-def.pl < $(srcdir)/cil-opcodes.xml > opcode.def
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
