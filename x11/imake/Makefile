@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 09:12:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/31 14:38:15 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -11,12 +11,20 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Imake and other utilities from XFree86
 
 USE_BUILDLINK2=	YES
-
 INSTALL_TARGET=	install install.man
 
 NO_XFREE86_TARGETS=	# defined
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_SUBST+=	IMAKE_MAN_DIR=${IMAKE_MAN_DIR}
+PLIST_SUBST+=	IMAKE_MAN_SUFFIX=${IMAKE_MAN_SUFFIX}
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=	AVAILABLE=
+.else
+PLIST_SUBST+=	AVAILABLE="@comment "
+.endif
 
 .if ${OPSYS} == "Linux"
 DEPENDS+=	bison-[0-9]*:../../devel/bison

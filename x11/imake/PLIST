@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2004/01/24 08:43:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.1 2004/01/31 14:38:15 xtraeme Exp $
 bin/ccmakedep
 bin/cleanlinks
 bin/gccmakedep
@@ -119,4 +119,19 @@ lib/X11/config/xf86.rules
 lib/X11/config/xf86.tmpl
 lib/X11/config/xf86site.def
 lib/X11/config/xfree86.cf
+${AVAILABLE}${IMAKE_MAN_DIR}/ccmakedep.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/cleanlinks.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/gccmakedep.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/imake.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/lndir.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/makedepend.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/makeg.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/makestrs.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/mergelib.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/mkdirhier.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/mkhtmlindex.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/pswrap.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/revpath.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/rman.${IMAKE_MAN_SUFFIX}
+${AVAILABLE}${IMAKE_MAN_DIR}/xmkmf.${IMAKE_MAN_SUFFIX}
 @dirrm lib/X11/config
