@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/07 04:10:03 gson Exp $
+
+--- check_optional_modules.orig	2003-06-06 10:22:46.000000000 -0700
++++ check_optional_modules
+@@ -17,16 +17,16 @@ if( $] >=  5.0060)
+       { warn "weaken is available\n"; }
+   }
+ 
+-unless( eval 'require Text::Iconv')
+-  { my $version= `iconv -V` || '';
+-    if($version)
+-      { warn "The iconv library was found on your system ",
+-             "but the Text::Iconv module is not installed. ",
+-             "Installing Text::Iconv would make character ",
+-             "encoding translations fast and efficient.\n";
+-      }
+-    else
+-      { warn "Did not find iconv\n"; }
+-  }
+-else
+-  { warn "Text::Iconv is installed\n"; }
++#unless( eval 'require Text::Iconv')
++#  { my $version= `iconv -V` || '';
++#    if($version)
++#      { warn "The iconv library was found on your system ",
++#             "but the Text::Iconv module is not installed. ",
++#             "Installing Text::Iconv would make character ",
++#             "encoding translations fast and efficient.\n";
++#      }
++#    else
++#      { warn "Did not find iconv\n"; }
++#  }
++#else
++#  { warn "Text::Iconv is installed\n"; }

@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/07 04:10:03 gson Exp $
+
+--- Makefile.PL.orig	2003-06-06 10:22:46.000000000 -0700
++++ Makefile.PL
+@@ -8,13 +8,14 @@ my @programs;
+ for (split "\n", <<'QUERIES') {
+ xml_pp|y|XML pretty printer
+ xml_grep|y|XML grep - grep XML files using XML::Twig's subset of expat
+-xml_spellcheck|y|spellcheck XML files skipping tags
+ QUERIES
++#xml_spellcheck|y|spellcheck XML files skipping tags
++
+     my ($program, $default, $description) = split /\|/, $_;
+-    if (prompt("Do you want to install '$program' ($description)?", 
+-               $default) =~ /^y/) {
++#    if (prompt("Do you want to install '$program' ($description)?", 
++#               $default) =~ /^y/) {
+ 	push(@programs, $program);
+-    }
++#    }
+ }
+ 
+ WriteMakefile(
