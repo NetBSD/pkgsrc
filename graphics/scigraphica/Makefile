@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/05/09 20:19:44 snj Exp $
+# $NetBSD: Makefile,v 1.25 2004/09/21 15:10:26 jlam Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -22,8 +22,6 @@ CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN}
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-BUILDLINK_TRANSFORM+=	L:-L:
 
 PY_PATCHPLIST=		YES
 
