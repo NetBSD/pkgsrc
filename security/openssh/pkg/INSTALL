@@ -1,12 +1,26 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/07/22 08:22:59 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2000/12/08 08:52:36 wiz Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 case ${STAGE} in
 PRE-INSTALL)
+	if ! dd if=/dev/urandom of=/dev/null bs=1 count=1 2>/dev/null >/dev/null
+	then
+		cat << EOF
+===========================================================================
+You need a working /dev/urandom for ${PKGNAME} to work.
+
+Please make sure you have a kernel compiled from a config file
+containing the line:
+
+	pseudo-device	rnd
+===========================================================================
+EOF
+		exit 1
+	fi
 	;;
 POST-INSTALL)
 	SSH_CONF_DIR=@SSH_CONF_DIR@
