@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+
+--- oafd/client.c.orig	Tue May 30 12:29:28 2000
++++ oafd/client.c	Sun Jul 16 20:33:37 2000
+@@ -4,7 +4,7 @@
+ #include "liboaf/liboaf-private.h"
+ #include "oafd.h"
+ #include <stdio.h>
+-#include <popt.h>
++#include <popt-gnome.h>
+ 
+ static char *acior = NULL, *specs = NULL;
+ static int do_query;

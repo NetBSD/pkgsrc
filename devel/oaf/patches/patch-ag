@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+
+--- configure.orig	Mon Jul  3 23:59:03 2000
++++ configure	Sun Jul 16 20:33:37 2000
+@@ -3347,8 +3347,7 @@
+ 	-Wall -Wno-uninitialized \
+ 	-Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes \
+ 	-Wnested-externs -Wpointer-arith \
+-	-Wno-sign-compare -Wsign-promo \
+-	-Werror"
++	-Wno-sign-compare -Wsign-promo"
+ fi
+ 
+ trap '' 1 2 15
