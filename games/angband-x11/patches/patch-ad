@@ -1,0 +1,49 @@
+$NetBSD: patch-ad,v 1.1 2002/03/18 15:30:17 wiz Exp $
+
+--- main-gcu.c.orig	Fri Feb  6 10:10:31 1998
++++ main-gcu.c
+@@ -458,6 +458,14 @@
+ 		/* Flush the curses buffer */
+ 		(void)refresh();
+ 
++#ifdef __NetBSD__
++		{
++		        int cury, curx;
++
++			getyx(curscr, cury, curx);
++			mvcur(cury, curx, LINES - 1, 0);
++		}
++#else
+ #ifdef SPECIAL_BSD
+ 		/* this moves curses to bottom right corner */
+ 		mvcur(curscr->cury, curscr->curx, LINES - 1, 0);
+@@ -465,6 +473,7 @@
+ 		/* this moves curses to bottom right corner */
+ 		mvcur(curscr->_cury, curscr->_curx, LINES - 1, 0);
+ #endif
++#endif
+ 
+ 		/* Exit curses */
+ 		endwin();
+@@ -529,12 +538,21 @@
+ 	/* Hack -- make sure the cursor is visible */
+ 	Term_xtra(TERM_XTRA_SHAPE, 1);
+ 
++#ifdef __NetBSD__
++	{
++	        int cury, curx;
++
++		getyx(curscr, cury, curx);
++		mvcur(cury, curx, LINES - 1, 0);
++	}
++#else
+ #ifdef SPECIAL_BSD
+ 	/* This moves curses to bottom right corner */
+ 	mvcur(curscr->cury, curscr->curx, LINES - 1, 0);
+ #else
+ 	/* This moves curses to bottom right corner */
+ 	mvcur(curscr->_cury, curscr->_curx, LINES - 1, 0);
++#endif
+ #endif
+ 
+ 	/* Flush the curses buffer */

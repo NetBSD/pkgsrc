@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2002/03/18 15:30:16 wiz Exp $
+
+--- h-config.h.orig	Fri Feb  6 10:10:31 1998
++++ h-config.h
+@@ -177,7 +177,7 @@
+  * The only such platform that angband is ported to is currently
+  * DEC Alpha AXP running OSF/1 (OpenVMS uses 32-bit longs).
+  */
+-#if defined(__alpha) && defined(__osf__)
++#if defined(__alpha) && (defined(__osf__) || defined(__NetBSD__))
+ # define L64
+ #endif
+ 

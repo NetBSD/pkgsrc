@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2002/03/18 15:30:16 wiz Exp $
+
+--- config.h.orig	Wed Feb 11 12:30:28 1998
++++ config.h
+@@ -46,7 +46,7 @@
+  * OPTION: define "SPECIAL_BSD" for using certain versions of UNIX
+  * that use the 4.4BSD Lite version of Curses in "main-gcu.c"
+  */
+-/* #define SPECIAL_BSD */
++#define SPECIAL_BSD
+ 
+ 
+ /*
+@@ -229,7 +229,7 @@
+  * about 15K of code in "save-old.c" to parse the old savefile format.
+  * Angband 2.8.0 will ignore a lot of info from pre-2.7.0 savefiles.
+  */
+-#define ALLOW_OLD_SAVEFILES
++/* #define ALLOW_OLD_SAVEFILES */
+ 
+ 
+ /*
