@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1998/05/15 06:10:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/05/15 15:02:57 tv Exp $
 #
 
 DISTNAME=		texi2html
 PKGNAME=		texi2html-1.52
-CATEGORIES=		textproc www
+CATEGORIES=		textproc
 MASTER_SITES=		http://wwwcn1.cern.ch/dci/texi2html/
 EXTRACT_SUFX=		.shar.Z
 
