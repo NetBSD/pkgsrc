@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/23 11:18:22 seb Exp $
 #
 
 DISTNAME=	avl-1.4.0
@@ -11,6 +11,12 @@ HOMEPAGE=	http://www.msu.edu/user/pfaffben/avl/
 COMMENT=	library for manipulation of balanced binary trees
 
 GNU_CONFIGURE=	YES
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	avl.info
 
-.include "../../mk/texinfo.mk"
+# This text file documentation is not installed so just touch it
+# and makeinfo is not needed at build time.
+pre-build:
+	${TOUCH} ${WRKSRC}/avl.text
+
 .include "../../mk/bsd.pkg.mk"
