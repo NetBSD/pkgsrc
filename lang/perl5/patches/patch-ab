@@ -1,17 +1,25 @@
-$NetBSD: patch-ab,v 1.11 2002/01/30 22:35:58 jlam Exp $
+$NetBSD: patch-ab,v 1.12 2003/06/23 07:45:02 jlam Exp $
 
---- hints/netbsd.sh.orig	Thu Feb 22 21:57:55 2001
-+++ hints/netbsd.sh	Wed Jan 30 17:02:39 2002
-@@ -21,16 +21,24 @@
+--- hints/netbsd.sh.orig	Thu Feb 22 18:57:55 2001
++++ hints/netbsd.sh	Fri Jun 20 17:59:50 2003
+@@ -21,16 +21,32 @@
  	if [ -f /usr/libexec/ld.elf_so ]; then
  		d_dlopen=$define
  		d_dlerror=$define
 -		ccdlflags="-Wl,-E -Wl,-R${PREFIX}/lib $ccdlflags"
-+		# Include the whole libgcc.a, required for Xerces-P, which
-+		# needs __eh_alloc, __pure_virtual, and others.
-+		# XXX This should be obsoleted by gcc-3.0.
-+		ccdlflags="-Wl,-whole-archive -lgcc -Wl,-no-whole-archive \
-+			-Wl,-E -Wl,-R$prefix/lib $ccdlflags"
++		case "$osvers" in
++		1.[0-5]|1.[0-5].*)
++			# Include the whole libgcc.a, required for Xerces-P,
++			# which needs __eh_alloc, __pure_virtual, and others.
++			# XXX This should be obsoleted by gcc-3.0.
++			ccdlflags="-Wl,-whole-archive -lgcc \
++				-Wl,-no-whole-archive -Wl,-E \
++				-Wl,-R$prefix/lib $ccdlflags"
++			;;
++		*)
++			ccdlflags="-Wl,-E -Wl,-R$prefix/lib $ccdlflags"
++			;;
++		esac
  		cccdlflags="-DPIC -fPIC $cccdlflags"
  		lddlflags="--whole-archive -shared $lddlflags"
  	elif [ "`uname -m`" = "pmax" ]; then
@@ -30,7 +38,7 @@ $NetBSD: patch-ab,v 1.11 2002/01/30 22:35:58 jlam Exp $
  # we use -fPIC here because -fpic is *NOT* enough for some of the
  # extensions like Tk on some netbsd platforms (the sparc is one)
  		cccdlflags="-DPIC -fPIC $cccdlflags"
-@@ -59,12 +67,13 @@
+@@ -59,12 +75,13 @@
  d_setruid="$undef"
  
  # there's no problem with vfork.
