@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2004/03/07 12:09:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/01 19:05:26 jmmv Exp $
 #
 
-DISTNAME=	zenity-1.8
-PKGREVISION=	1
+DISTNAME=	zenity-2.6.0
 CATEGORIES=	x11 gnome2
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/1.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
 
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
