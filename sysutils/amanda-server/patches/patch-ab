@@ -1,29 +1,22 @@
-$NetBSD: patch-ab,v 1.5 2001/06/26 03:14:12 christos Exp $
+$NetBSD: patch-ab,v 1.6 2004/05/12 18:45:26 bouyer Exp $
 
---- Makefile.in.orig	Tue Apr  3 15:55:47 2001
-+++ Makefile.in	Mon Jun 25 22:42:55 2001
-@@ -34,7 +34,7 @@
- 
- DESTDIR =
- 
+--- Makefile.in.orig	2004-01-08 10:21:29.000000000 -0800
++++ Makefile.in	2004-02-23 16:03:55.000000000 -0800
+@@ -33,7 +33,7 @@
+ mandir = @mandir@
+ includedir = @includedir@
+ oldincludedir = /usr/include
 -pkgdatadir = $(datadir)/@PACKAGE@
 +pkgdatadir = $(datadir)/doc/@PACKAGE@
  pkglibdir = $(libdir)/@PACKAGE@
  pkgincludedir = $(includedir)/@PACKAGE@
+ top_builddir = .
+@@ -506,7 +506,7 @@
+ uninstall: uninstall-recursive
  
-@@ -151,13 +151,13 @@
- ACINCLUDE_M4_DEPS = $(ACINCLUDE_M4I) $(LIBTOOL_M4I)
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
  
- @WANT_CLIENT_TRUE@CLIENT_SUBDIRS = client-src
--@WANT_TAPE_TRUE@TAPE_SUBDIRS = tape-src
-+#TAPE_SUBDIRS = tape-src
- @WANT_SERVER_TRUE@SERVER_SUBDIRS = server-src changer-src
- @WANT_RESTORE_TRUE@RESTORE_SUBDIRS =  restore-src
- @WANT_RECOVER_TRUE@RECOVER_SUBDIRS =  recover-src
- @WANT_AMPLOT_TRUE@PLOT_SUBDIRS =  amplot
- # order is significant, don't change it arbitrarily
--SUBDIRS =  	config 	common-src 	$(CLIENT_SUBDIRS) 	$(TAPE_SUBDIRS) 	$(SERVER_SUBDIRS) 	$(RESTORE_SUBDIRS) 	$(RECOVER_SUBDIRS) 	$(PLOT_SUBDIRS) 	man docs example
-+SUBDIRS =  	config 		$(CLIENT_SUBDIRS) 	$(TAPE_SUBDIRS) 	$(SERVER_SUBDIRS) 	$(RESTORE_SUBDIRS) 	$(RECOVER_SUBDIRS) 	$(PLOT_SUBDIRS) 	man docs example
- 
- 
- pkgdata_DATA =  	COPYRIGHT				COPYRIGHT-APACHE			COPYRIGHT-REGEX
+ installcheck: installcheck-recursive
+ install-strip:
