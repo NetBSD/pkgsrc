@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.78 2003/01/11 04:42:57 rh Exp $
+# $NetBSD: pkglint.pl,v 1.79 2003/01/15 23:41:32 rh Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -459,6 +459,18 @@ sub checkplist {
 				"$file. use install-info to add/remove ".
 				"an entry.");
 			$infooverwrite++;
+		}
+
+		if ($_ =~ /^lib\/locale/) {
+			&perror("FATAL: \"lib/locale\" should not be listed ".
+				"in $file. Use \${PKGLOCALEDIR}/locale and ".
+				"set USE_PKGLOCALEDIR instead.");
+		}
+
+		if ($_ =~ /^share\/locale/) {
+			&perror("WARN: use of \"share/locale\" in $file is ".
+				"deprecated.  Use \${PKGLOCALEDIR}/locale and ".
+				"set USE_PKGLOCALEDIR instead.");
 		}
 
 		if ($_ =~ /\${PKGLOCALEDIR}/ && $seen_USE_BUILDLINK2 && ! $seen_USE_PKGLOCALEDIR) {
