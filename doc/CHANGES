@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7631 2004/10/31 14:42:10 seb Exp $
+$NetBSD: CHANGES,v 1.7632 2004/10/31 16:10:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.12 [recht 2004-10-31] 
 	Updated ethereal to 0.10.7 [adrianp 2004-10-31]
 	Added p5-Test-Builder-Tester-1.01 [seb 2004-10-31]
+	Added p5-Test-Pod-1.20 [seb 2004-10-31]
