@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 19:43:36 bad Exp $
+etc/rc.conf.d/linuxrtc
+etc/rc.conf.d/vmmon
+etc/rc.conf.d/vmnet
+etc/rc.conf.d/vmnetif
+etc/rc.conf.d/vmware
+etc/rc.d/linuxrtc
+etc/rc.d/vmmon
+etc/rc.d/vmnet
+etc/rc.d/vmnetif
+lkm/vmnet.o
+lkm/vmnet_post.sh
+lkm/linuxrtc.o
+lkm/linuxrtc_post.sh
+lkm/vmmon.o
+lkm/vmmon_post.sh
+@dirrm etc/rc.conf.d
+@unexec ${RM} -f %D/lkm/vmnet 2>/dev/null || ${TRUE}
+@unexec ${RM} -f %D/lkm/linuxrtc 2>/dev/null || ${TRUE}
+@unexec ${RM} -f %D/lkm/vmmon 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lkm 2>/dev/null || ${TRUE}
