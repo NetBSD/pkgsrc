@@ -1,0 +1,17 @@
+$NetBSD: patch-ap,v 1.1 2000/03/15 07:17:41 bouyer Exp $
+
+--- sdr/solaris/Makefile.solaris.orig	Mon Mar 13 16:11:46 2000
++++ sdr/solaris/Makefile.solaris	Mon Mar 13 16:13:20 2000
+@@ -1,7 +1,8 @@
+ CC          = gcc 
+-INCLUDES    = -I/usr/openwin/include -I../../tcl-8.0/generic -I../../tk-8.0/generic -I../../common
+-LIBS        = ../../tk-8.0/unix/libtk8.0.a ../../tcl-8.0/unix/libtcl8.0.a ../../common/libcommon.a \
+-             -L/usr/openwin/lib -lX11 -lm -lnsl -ldl -lsocket -lresolv 
++INCLUDES    = -I${X11BASE}/include -I${LOCALBASE}/include/tk8.0/generic -I${LOCALBASE}/include/tcl8.0/generic -I../../common
++LIBS        = -L${LOCALBASE}/lib -ltk80 -ltcl80 ../../common/libcommon.a \
++		-lm -L${X11BASE}/lib -lX11 -lz  -lnsl -ldl -lsocket -lresolv \
++		-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib
+-CFLAGS      = -g -O -Wall -Wno-implicit-int $(INCLUDES) -DSOLARIS -DCANT_MCAST_BIND -DNORANDPROTO -DAUTH -DSYSV -DSolaris
++CFLAGS      = -g -O -Wall -Wno-implicit-int $(INCLUDES) -DSOLARIS -DCANT_MCAST_BIND -DNORANDPROTO -DAUTH -DSYSV -DSolaris -DHAVE_ZLIB
+ 
+ all::	sdr 
