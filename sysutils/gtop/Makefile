@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2001/03/27 03:20:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/04/02 18:47:30 wiz Exp $
 
 DISTNAME=		gtop-1.0.9
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gtop/}
 
 MAINTAINER=		tron@netbsd.org
-COMMENT=		GNOME system monitor - top like, memory graphs, processes detailed view
+COMMENT=		GNOME system monitor - top like, memory graphs, process viewer
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=		libgtop>=1.0.9:../../devel/libgtop
 
