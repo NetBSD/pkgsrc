@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2002/06/17 11:53:59 grant Exp $
+# $NetBSD: Makefile,v 1.307 2002/06/17 12:51:02 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -20,7 +20,6 @@ SUBDIR+=	batchftp
 SUBDIR+=	bind4
 SUBDIR+=	bind8
 SUBDIR+=	bind9
-SUBDIR+=	bind9-current
 SUBDIR+=	bing
 SUBDIR+=	bounce
 SUBDIR+=	bpalogin
