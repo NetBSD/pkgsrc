@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.4 2004/10/28 01:08:15 xtraeme Exp $
+$NetBSD: patch-as,v 1.5 2005/01/20 14:17:15 xtraeme Exp $
 
---- support-files/Makefile.in.orig	2004-10-22 02:39:03.000000000 +0200
-+++ support-files/Makefile.in	2004-10-22 02:39:24.000000000 +0200
-@@ -289,16 +289,7 @@
+--- support-files/Makefile.in.orig	2005-01-20 15:00:21.000000000 +0100
++++ support-files/Makefile.in	2005-01-20 15:00:43.000000000 +0100
+@@ -315,16 +315,7 @@
+ 			MySQL-shared-compat.spec.sh
  
  SUBDIRS = MacOSX
- 
 -pkgdata_DATA = my-small.cnf \
 -			my-medium.cnf \
 -			my-large.cnf \
@@ -17,6 +17,6 @@ $NetBSD: patch-as,v 1.4 2004/10/28 01:08:15 xtraeme Exp $
 -			MySQL-shared-compat.spec
 -
 +pkgdata_DATA =
- 
  pkgdata_SCRIPTS = mysql.server
- 
+ CLEANFILES = my-small.cnf \
+ 			my-medium.cnf \

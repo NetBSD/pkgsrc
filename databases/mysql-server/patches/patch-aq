@@ -1,11 +1,11 @@
-$NetBSD: patch-aq,v 1.3 2004/10/28 01:08:15 xtraeme Exp $
+$NetBSD: patch-aq,v 1.4 2005/01/20 14:17:15 xtraeme Exp $
 
---- include/Makefile.in.orig	Tue Feb 10 20:16:49 2004
-+++ include/Makefile.in	Sun Mar  7 20:21:23 2004
-@@ -272,13 +272,8 @@
+--- include/Makefile.in.orig	2005-01-20 14:58:40.000000000 +0100
++++ include/Makefile.in	2005-01-20 14:59:00.000000000 +0100
+@@ -294,13 +294,8 @@
+ uname_prog = @uname_prog@
  vio_dir = @vio_dir@
  vio_libs = @vio_libs@
- 
 -BUILT_SOURCES = mysql_version.h m_ctype.h my_config.h
 -pkginclude_HEADERS = my_dbug.h m_string.h my_sys.h my_list.h \
 -			mysql.h mysql_com.h mysqld_error.h mysql_embed.h \
@@ -13,8 +13,8 @@ $NetBSD: patch-aq,v 1.3 2004/10/28 01:08:15 xtraeme Exp $
 -			errmsg.h my_global.h my_net.h my_alloc.h \
 -			my_getopt.h sslopt-longopts.h my_dir.h \
 -			sslopt-vars.h sslopt-case.h $(BUILT_SOURCES)
-+BUILT_SOURCES = 
-+pkginclude_HEADERS = $(BUILT_SOURCES)
++BUILT_SOURCES =
++pkginclude_HEADERS =
  
  noinst_HEADERS = config-win.h config-os2.h config-netware.h \
  			nisam.h heap.h merge.h my_bitmap.h\
