@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1328 2004/01/22 15:53:55 xtraeme Exp $
+$NetBSD: TODO,v 1.1329 2004/01/23 20:15:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -113,6 +113,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abcde-2.1.12
+	o adns-1.1 [pkg/24177]
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
 	o asc-1.13.9
@@ -120,6 +121,7 @@ Suggested package updates
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
+	o balsa2-2.0.16
 	o blib-1.1.5
 	o blinkensim-2.5
 	o blinkentools-2.5
@@ -142,6 +144,7 @@ Suggested package updates
 	o crimsonfields-0.3.8
 	o crossfire-1.5.0
 	o cssc-0.16alpha.pl0
+	o curl-7.11.0
 	o cvs-1.12.3
 	o cxref-1.5e
 	o cxunzip-0.98 [pkg/23404]
@@ -157,13 +160,13 @@ Suggested package updates
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
 	o efax-gtk-2.2.4
+	o elinks-0.9.1
 	o elk-3.99.6
 	o elm-me-2.4pl110a
 	o enchant-1.1.2
 	o exim-4.24
 	o festival-1.4.3
 	o ffmpeg-0.4.8
-	o fileroller-2.4.3 [pkg/24160]
 	o findutils-4.1.20
 	o firewalk-5.0
 	o firewalk-gtk-5.0
@@ -173,6 +176,7 @@ Suggested package updates
 	o freeciv-1.14.1
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
+	o galeon-1.3.12
 	o gauche-0.7.3 [kei]
 	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
@@ -191,8 +195,10 @@ Suggested package updates
 	o gnomeicu-0.99
 	o gnuchess-5.06
 	o gnumeric-1.2.5
+	o gphoto2-2.1.4
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.14
+	o gsasl-0.0.14
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
 	o gtk-gnutella-0.93
@@ -211,13 +217,13 @@ Suggested package updates
 	o jwhois-3.2.2 [pkg/22741]
 	o kaffe-1.1.3 [pkg/24148]
 	o kbiff-3.7
-	o kmplayer-0.8.2rc5 [pkg/24142]
 	o koffice-1.2.95 [pkg/24143]
 	o lavaps-2.4
 	o lcms-1.0.9
 	o libcaca-0.8
 	o libesmtp-1.0.2
-	o libidn-0.3.6
+	o libgphoto2-2.1.4
+	o libidn-0.3.7
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
@@ -297,6 +303,7 @@ Suggested package updates
 	o sml-nj-110.44
 	o snd-7.1
 	o snes9x-1.42
+	o snownews-1.4.4
 	o sqlite-2.8.9
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
