@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2001/12/10 19:52:42 veego Exp $
+# $NetBSD: Makefile,v 1.120 2001/12/22 17:32:44 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -108,6 +108,7 @@ SUBDIR+=	rio
 SUBDIR+=	rio500
 SUBDIR+=	rosegarden
 SUBDIR+=	rplay
+SUBDIR+=	rsynth
 SUBDIR+=	shorten
 SUBDIR+=	sidplay
 SUBDIR+=	snd
