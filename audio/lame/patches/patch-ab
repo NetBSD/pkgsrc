@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2000/02/15 18:12:17 garbled Exp $
+$NetBSD: patch-ab,v 1.2 2000/07/04 21:08:26 pooka Exp $
 
---- Makefile.orig	Mon Feb 14 17:18:19 2000
-+++ Makefile	Mon Feb 14 17:16:38 2000
-@@ -50,6 +50,17 @@
+--- Makefile.orig	Tue Jul  4 23:29:58 2000
++++ Makefile	Tue Jul  4 23:30:05 2000
+@@ -64,6 +64,17 @@
  #GTK = -DHAVEGTK `gtk-config --cflags`
  #GTKLIBS = `gtk-config --libs` 
  
