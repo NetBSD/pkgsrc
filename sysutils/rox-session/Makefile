@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/16 06:56:55 minskim Exp $
 #
 
 DISTNAME=	ROX-Session-0.1.14
@@ -21,6 +21,10 @@ USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+
 post-build:
 	${MV} ${WRKSRC} ${WRKDIR}/${DISTNAME}/src
 
@@ -36,6 +40,4 @@ do-install:
 		< ${WRKDIR}/${DISTNAME}/ROX-Session/AppRun		\
 			> ${PREFIX}/share/rox/ROX-Session/AppRun
 
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
