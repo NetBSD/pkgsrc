@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/23 00:51:09 schmonz Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -16,16 +16,9 @@ CONFLICTS+=		postfix-[0-9]* sendmail-[0-9]*
 
 USE_BUILDLINK3=		yes
 
-BUILD_TARGET=		it install instcheck
-INSTALL_TARGET=		setup check
+DJB_BUILD_TARGETS=	install instcheck
 
-RESTRICTED=		"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
+DJB_RESTRICTED=		YES
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
-
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

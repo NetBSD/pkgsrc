@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/13 03:25:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/23 00:51:09 schmonz Exp $
 
 DISTNAME=	cdb-0.75
 CATEGORIES=	databases
@@ -8,26 +8,17 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/cdb.html
 COMMENT=	Creates and reads constant databases
 
-RESTRICTED=	"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+DJB_RESTRICTED=	YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 
-BUILD_TARGET=	it
-INSTALL_TARGET=	setup check
-
 INSTALLATION_DIRS=	bin include lib
-
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/cdb.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/cdb.a ${PREFIX}/lib/libcdb.a
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
