@@ -1,0 +1,11 @@
+This packages includes several test programs to test various features
+of the FreeType library:
+
+	fttimer		performance timer for the engine
+	ftzoom		glyph viewer
+	ftlint		hint each glyph of a font file at a given size
+	ftview		display all glyphs in a given font
+	ftdump		TrueType font or collection dumper
+	ftstring	display a given message on the screen
+	ftstrpnm	convert a rendered text string into the PGM or PBM
+	fterror		tests gettext() for internationalized messages
