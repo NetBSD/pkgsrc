@@ -1,58 +1,101 @@
-# $NetBSD: Makefile,v 1.46 2004/12/20 15:58:27 wiz Exp $
-# FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
-#
+# $NetBSD: Makefile,v 1.47 2005/01/15 21:14:27 wiz Exp $
 
-DISTNAME=		mc-4.5.51
-PKGREVISION=		5
-CATEGORIES=		sysutils
-MASTER_SITES+=		${MASTER_SITE_GNOME:=stable/sources/mc/}
+DISTNAME=	mc-4.6.1-pre2b
+PKGNAME=	mc-4.6.1rc2
+CATEGORIES=	sysutils
+MASTER_SITES=	http://pavelsh.pp.ru/mc/
+#MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
+#		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.ibiblio.org/mc/
-COMMENT=		Midnight Commander, a free Norton Commander Clone
-
-BUILD_USES_MSGFMT=	YES
-
-CONFLICTS+=		gmc-[0-9]*
-
-USE_BUILDLINK3=		YES
-USE_PKGLOCALEDIR=	YES
-USE_GNU_TOOLS+=		make
-
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ARGS+=	--with-netrc --with-included-slang
-CONFIGURE_ARGS+=	--with-samba
-CONFIGURE_ARGS+=	--without-gnome
-CONFIGURE_ARGS+=	--without-tk
-CONFIGURE_ARGS+=	--without-tm-x-support
-CONFIGURE_ARGS+=	--without-x
-
-# Don't pick up readline if it's installed in the build environment.
-#
-CONFIGURE_ENV+=		ac_cv_header_history_h=no
-CONFIGURE_ENV+=		ac_cv_header_readline_h=no
-CONFIGURE_ENV+=		ac_cv_header_readline_history_h=no
-CONFIGURE_ENV+=		ac_cv_header_readline_readline_h=no
-
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
-
-LIBS+=			-lm -ltermcap		# -lslang
-CPPFLAGS+=		-Dunix
+MAINTAINER=	pavel.arnost@clnet.cz
+HOMEPAGE=	http://www.ibiblio.org/mc/
+COMMENT=	User-friendly file manager and visual shell
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-CFLAGS+= -DSunOS
+USE_BUILDLINK3=		YES
+GNU_CONFIGURE=		YES
+USE_GNU_TOOLS+=		make
+USE_PKGLOCALEDIR=	YES
+
+.if ${OPSYS} == "Linux"
+PLIST_SRC+=	${PKGDIR}/PLIST.cons.saver
 .endif
 
-# Remove unwanted directories in a non-GNOME installation.
-#
+# remove dir if no extensions were installed there
 post-install:
-	${RMDIR} -p ${PREFIX}/share/idl 2>/dev/null || ${TRUE}
-	${RMDIR} -p ${PREFIX}/share/pixmaps/mc 2>/dev/null || ${TRUE}
+	@${RMDIR} ${PREFIX}/lib/mc 2>/dev/null || ${TRUE}
 
+# we need working e2fsprogs and gpm packages first
+CONFIGURE_ARGS+=	--without-ext2undel
+CONFIGURE_ARGS+=	--without-gpm-mouse
+
+MC_FEATURES=		edit charset largefile samba subshell vfs x11
+MC_DISABLE_FEATURES=	x11 samba
+
+MC_SCREEN_LIBRARY= slang
+
+.for feature in ${MC_FEATURES}
+
+__feature:=${feature}
+
+.	if empty(MC_DISABLE_FEATURES:M${feature})
+
+.		if ${__feature} == edit
+CONFIGURE_ARGS+=	--with-edit
+PLIST_SRC+=		${PKGDIR}/PLIST.mcedit
+.		elif ${__feature} == charset
+CONFIGURE_ARGS+=	--enable-charset
+.include "../../converters/libiconv/buildlink3.mk"
+PLIST_SRC+=		${PKGDIR}/PLIST.charset
+.		elif ${__feature} == largefile
+CONFIGURE_ARGS+=	--enable-largefile
+.		elif ${__feature} == samba
+CONFIGURE_ARGS+=	--with-samba
+.		elif ${__feature} == subshell
+CONFIGURE_ARGS+=	--with-subshell
+.		elif ${__feature} == vfs
+CONFIGURE_ARGS+=	--with-vfs
+PLIST_SRC+=		${PKGDIR}/PLIST.vfs
+.		elif ${__feature} == x11
+USE_X11=		YES
+CONFIGURE_ARGS+=	--with-x
+.		endif
+
+.	else
+
+.		if ${__feature} == edit
+CONFIGURE_ARGS+=	--without-edit
+.		elif ${__feature} == charset
+CONFIGURE_ARGS+=	--disable-charset
+.		elif ${__feature} == largefile
+CONFIGURE_ARGS+=	--disable-largefile
+.		elif ${__feature} == samba
+CONFIGURE_ARGS+=	--without-samba
+.		elif ${__feature} == subshell
+CONFIGURE_ARGS+=	--without-subshell
+.		elif ${__feature} == vfs
+CONFIGURE_ARGS+=	--without-vfs
+.		elif ${__feature} == x11
+CONFIGURE_ARGS+=	--without-x
+.		endif
+
+.	endif
+
+.endfor
+
+PLIST_SRC+=  	${PKGDIR}/PLIST
+
+.if ${MC_SCREEN_LIBRARY} == "slang"
+CONFIGURE_ARGS+=	--with-screen=slang
+.include "../../devel/libslang/buildlink3.mk"
+.elif ${MC_SCREEN_LIBRARY} == "ncurses"
+CONFIGURE_ARGS+=	--with-screen=ncurses
+.include "../../devel/ncurses/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-screen=mcslang
+.endif
+
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
