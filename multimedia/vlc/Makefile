@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/14 12:11:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/19 18:15:00 drochner Exp $
 #
 
 DISTNAME=		vlc-0.7.1
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/0.7.1/
 EXTRACT_SUFX=		.tar.bz2
@@ -32,7 +33,9 @@ SUBST_FILES.oss+=	modules/gui/wxwindows/v4l.cpp
 # XXX FIXME
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=        --disable-vcd
+CONFIGURE_ARGS+=	--disable-skins2
 .endif
+BUILDLINK_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--enable-dvb
@@ -83,6 +86,7 @@ PLIST_SUBST+=	DVDCSS="@comment "
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
+.include "../../sysutils/vcdimager-devel/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"
