@@ -3,7 +3,7 @@
 # Date created:         2 Oct 1994
 # Whom:                 swallace
 #
-# $NetBSD: Makefile,v 1.5 1998/01/22 10:26:37 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/01 03:27:29 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
@@ -15,7 +15,8 @@ EXTRACT_SUFX=   .tgz
 # FreeBSD maintainer
 MAINTAINER=     ache@FreeBSD.ORG
 
-EXEC_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 RESTRICTED=     "Non-redistributable beta"
 MIRROR_DISTFILE=	no
