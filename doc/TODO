@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1952 2004/07/20 13:20:16 adam Exp $
+$NetBSD: TODO,v 1.1953 2004/07/20 14:38:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -183,7 +183,7 @@ Suggested package updates
 	o cdrtools-ossdvd-2.01.1.27
 	o centericq-4.10.0
 	o cervisia-2.1.2
-	o checkbot-1.74
+	o checkbot-1.75 [pkg/26371]
 	o clamav-0.74
 	o clanlib-0.7.8
 	o classpath-0.10
@@ -191,6 +191,7 @@ Suggested package updates
 	o cocoon-2.1.5
 	o conserver-8.1.8
 	o crafty-19.5
+	o crimsonfields-0.4.3
 	o crossfire-1.5.0
 	o cscope-15.5
 	o cvs2cl-2.55
@@ -255,7 +256,7 @@ Suggested package updates
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.6
 	o gtkmm-2.4.4
-	o gtksee-0.5.5.1
+	o gtksee-0.5.6 [pkg/26372]
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
 	o guile-gtk-0.40.90 [in wip]
@@ -266,7 +267,7 @@ Suggested package updates
 	o idesk-0.5.6
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
-	o iozone-3.218
+	o iozone-3.221
 	o ivtools-1.2.1
 	o jakarta-tomcat-3.3.1a
 	o john-1.6.37
@@ -319,7 +320,7 @@ Suggested package updates
 	o nsd-2.1.1
 	o nslint-2.1a3
 	o nulib2-2.0.2
-	o nut-9.17
+	o nut-9.18
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
@@ -327,7 +328,7 @@ Suggested package updates
 	o openh323-1.12.2
 	o openoffice-1.1.2
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
-	o opera-7.52
+	o opera-7.53
 	o oss-3.99.1c
 	o p0f-2.0.4
 	o p5-CGI-3.05
@@ -405,6 +406,7 @@ Suggested package updates
 	o xanim-2.92.0 [pkg/19934]
 	o xbeeb-0.4.1
 	o xboard-4.2.7
+	o xchm-0.9.3
 	o xdaliclock-2.20
 	o xdx-1.2
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
