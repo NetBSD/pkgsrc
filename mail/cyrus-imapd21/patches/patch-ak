@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.2 2003/01/08 21:26:35 chris Exp $
+$NetBSD: patch-ak,v 1.3 2003/08/16 09:23:59 recht Exp $
 
---- imap/ctl_cyrusdb.c.orig	Wed May 29 12:49:14 2002
-+++ imap/ctl_cyrusdb.c	Tue Jan  7 13:03:45 2003
+--- imap/ctl_cyrusdb.c.orig	2003-05-02 17:23:05.000000000 +0200
++++ imap/ctl_cyrusdb.c	2003-07-26 14:21:45.000000000 +0200
 @@ -231,9 +231,9 @@
  
      /* create the names of the backup directories */
@@ -14,15 +14,6 @@ $NetBSD: patch-ak,v 1.2 2003/01/08 21:26:35 chris Exp $
  
      syslog(LOG_NOTICE, "%s", msg);
  
-@@ -274,7 +274,7 @@
- 	    r2 = (dblist[i].env)->sync();
- 	    if (r2) {
- 		syslog(LOG_ERR, "DBERROR: sync %s: %s", dirname,
--		       cyrusdb_strerror(r));
-+		       cyrusdb_strerror(r2));
- 		fprintf(stderr, 
- 			"ctl_cyrusdb: unable to sync environment\n");
- 	    }
 @@ -289,6 +289,7 @@
  		struct dirent *dirent;
  
@@ -40,21 +31,3 @@ $NetBSD: patch-ak,v 1.2 2003/01/08 21:26:35 chris Exp $
  		r2 = rmdir(backup2);
  
  		/* move db.backup1 to db.backup2 */
-@@ -323,7 +324,7 @@
- 
- 	    if (r2) {
- 		syslog(LOG_ERR, "DBERROR: archive %s: %s", dirname,
--		       cyrusdb_strerror(r));
-+		       cyrusdb_strerror(r2));
- 		fprintf(stderr, 
- 			"ctl_cyrusdb: unable to archive environment\n");
- 	    }
-@@ -342,7 +343,7 @@
- 
- 	r2 = (dblist[i].env)->done();
- 	if (r2) {
--	    syslog(LOG_ERR, "DBERROR: done: %s", cyrusdb_strerror(r));
-+	    syslog(LOG_ERR, "DBERROR: done: %s", cyrusdb_strerror(r2));
- 	}
-     }
- 
