@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2004/12/08 16:28:50 gson Exp $
+
+--- lib/gpsformat.c.orig	2004-12-04 15:53:31.000000000 +0200
++++ lib/gpsformat.c
+@@ -153,7 +153,7 @@ wpt_common(int *datalen, int state, char
+ 
+ 	/* byte 1-6: waypoint name */
+ 	for (ix = 0; ix < 6; ix += 1) {
+-		data[len++] = toupper(name[ix]);
++		data[len++] = toupper((unsigned char)(name[ix]));
+ 	}
+ 
+ 	/* byte 7-10: latitude */
+@@ -584,7 +584,7 @@ waypoints(gps_handle gps, u_char *buf, i
+ 			len = end - beg - 2;
+ 		if (len > GPS_STRING_MAX)
+ 			len = GPS_STRING_MAX;
+-		switch (toupper(beg[-1])) {
++		switch (toupper((unsigned char)(beg[-1]))) {
+ 		case 'A':
+ 			/* altitude ignored */
+ 			break;
