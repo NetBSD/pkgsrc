@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.245 2002/05/19 08:52:17 zuntum Exp $
+# $NetBSD: Packages.txt,v 1.246 2002/05/22 23:30:21 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -2288,6 +2288,69 @@ www/ap-aolserver, www/openacs. Try to be consistent with them.
 In order to use pkgsrc on a non-NetBSD operating system, you must first
 bootstrap the necessary utilities (BSD make, pkg_*, ...). See 
 http://www.zoularis.org/ for information on boostrapping.
+
+
+ 10.27 Configuration files handling and placement
+ ================================================
+
+The global variable PKG_SYSCONFBASE (and some others) can be set by the
+system administrator in /etc/mk.conf to define the place where
+configuration files get installed. Therefore, packages must be adapted to
+support this feature. Keep in mind that you should only install files that
+are strictly necessary in the configuration directory, files that can
+go to $PREFIX/share should go there.
+
+We will take a look at available variables first (bsd.pkg.mk contains more
+information). PKG_SYSCONFDIR is where the configuration files for a package
+may be found (that is, the full path, e.g. /etc or /usr/pkg/etc). This
+value may be customized in various ways:
+
+ 1) PKG_SYSCONFBASE is the main config directory under which all package
+    configuration files are to be found. Users will typically want to set
+    it to /etc, or accept the default location of $PREFIX/etc.
+
+ 2) PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which
+    the configuration files for a particular package may be found. Defaults
+    to $SYSCONFBASE
+
+ 3) PKG_SYSCONFVAR is the special suffix used to distinguish any overriding
+    values for a particular package (see next item). It defaults to
+    ${PKGBASE}, but for a collection of related packages that should all
+    have the same PKG_SYSCONFDIR value, it can be set in each of the
+    package Makefiles to a common value.
+
+ 4) PKG_SYSCONFDIR.${PKG_SYSCONFVAR} overrides the value of
+    ${PKG_SYSCONFDIR} for packages with the same value for PKG_SYSCONFVAR.
+
+    As an example, all the various KDE packages may want to set
+    PKG_SYSCONFVAR to "kde" so admins can set ${PKG_SYSCONFDIR.kde} in
+    /etc/mk.conf to define where to install KDE config files.
+
+Programs' configuration directory should be defined during the configure
+stage. Packages that use GNU autoconf can usually do this by using the
+--sysconfdir parameter, but this brings some problems as we will see now.
+When you change this pathname in packages, you should not allow them to
+install files in that directory directly. Instead they need to install
+those files under share/examples/${PKGNAME} so PLIST can register them.
+
+Once you have the required configuration files in place (under the
+share/examples directory) the variable CONF_FILES should be set to copy
+them into PKG_SYSCONFDIR. The contents of this variable is formed by pairs
+of filenames; the first element of the pair specifies the file inside the
+examples directory (registered by PLIST) and the second element specifies
+the target file. This is done this way to allow binary packages to place
+files in the right directory (using INSTALL/DEINSTALL scripts which are
+created automatically).
+
+Here is an example, taken from mail/mutt/Makefile:
+
+	EGDIR=	${PREFIX}/share/doc/mutt/samples
+	CONF_FILES=	${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+
+As you can see, this package installs configuration files inside EGDIR,
+which are registered by PLIST. After that, the variable CONF_FILES lists
+the installed file first and then the target file. Users will also get an
+automatic message when files are installed using this method.
 
 
  11 Submitting & Committing
