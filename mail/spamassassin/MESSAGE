@@ -1,16 +1,25 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/10/08 00:49:18 heinz Exp $
+$NetBSD: MESSAGE,v 1.4 2003/04/15 00:02:24 heinz Exp $
 
 ***IMPORTANT***
 
-  Starting with version 2.40 SpamAssassin does NOT deliver mail anymore.
-  If you relied on spamassassin to write the mail into your mail folder,
-  you'll have to change your setup to use some local mail delivery agent,
-  e.g. pkgsrc/mail/procmail.
+  Version 2.53 changes the default tagging behavior. SpamAssassin will now
+  create a new report message and attach the original spam message as a
+  MIME part (use the "report_safe" option to change this).
 
-More information can be found in 
+  Some configuration options were changed (see Mail::SpamAssassin::Conf).
+  Please check that your existing mail configuration still works.
+
+  On NetBSD, the name of the auto-whitelist database file has changed and
+  the auto-whitelist will be created from scratch.
+
+  SpamAssassin does NOT deliver mail anymore. You _must_ use some local
+  mail delivery agent, eg pkgsrc/mail/procmail.
+
+More information can be found in the man pages for 'spamassassin',
+'sa-learn', 'spamc' and 'spamd', with 'perldoc Mail::SpamAssassin::Conf'
+and in
+
   ${PREFIX}/share/doc/spamassassin/
-
-and via 'man spamassassin' and 'perldoc Mail::SpamAssassin::Conf'
 
 ===========================================================================
