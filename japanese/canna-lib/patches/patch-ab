@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2002/04/02 16:29:23 uebayasi Exp $
+$NetBSD: patch-ab,v 1.3 2002/04/04 16:03:18 uebayasi Exp $
 
 --- Imakefile.orig	Wed Apr  3 01:19:05 2002
 +++ Imakefile
@@ -20,20 +20,3 @@ $NetBSD: patch-ab,v 1.2 2002/04/02 16:29:23 uebayasi Exp $
  
  install:: mkbindir mklibdir mkdicdir mkerrdir
  instserver:: mkdicdir mkerrdir
-@@ -39,7 +39,15 @@
- MakeDirectoriesLong(mkerrdir, $(ErrDir), $(cannaOwner), $(cannaGroup))
- #endif
- 
--LinkFileList(includes,cannaconf.h,$(CANNAROOT)/include,..)
-+/* XXX The definition of LinkFileList macro changes in XFree86 4.2.0,
-+       which leads a ciritical compilation error.  So we expand the macro
-+       with the prior definition. */
-+/* LinkFileList(includes,cannaconf.h,$(CANNAROOT)/include,..) */
-+includes:: cannaconf.h
-+	@for flag in ${MAKEFLAGS} ''; do \
-+	case "$$flag" in *=*) ;; *[i]*) set +e;; esac; done; \
-+	echo "  cd" $(CANNAROOT)/include; cd $(CANNAROOT)/include && \
-+	for i in cannaconf.h; do (set -x; $(RM) $$i; $(LN) ../$$i .); done
- 
- canna:: 
- 	@echo ""

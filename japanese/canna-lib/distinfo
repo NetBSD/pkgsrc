@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/04/02 16:29:23 uebayasi Exp $
+$NetBSD: distinfo,v 1.4 2002/04/04 16:03:16 uebayasi Exp $
 
 SHA1 (Canna35b2.tar.gz) = 66742205272cbc6bd91f272596381f761feac0a2
 Size (Canna35b2.tar.gz) = 1333329 bytes
@@ -9,7 +9,8 @@ Size (Canna35b2-unoff2.patch.gz) = 11375 bytes
 SHA1 (Canna35b2-hack1.patch.gz) = 24ab2baf104ef9748f92bd5315d4100a7ee961ab
 Size (Canna35b2-hack1.patch.gz) = 8384 bytes
 SHA1 (patch-aa) = d74119cb2c37a3db1c5d5417c1e35362b1eac655
-SHA1 (patch-ab) = b224a611de298a1c029350e1f734571f7bf657d1
+SHA1 (patch-ab) = 45470a70c3fd313a24eae6ed7705fc3b37141e0c
 SHA1 (patch-ac) = 8f910e59d71ef09434a40abde698d730ed7fc1c5
 SHA1 (patch-ad) = dd2eb94e75dc4789e298aa1601280d32fbe5ec96
 SHA1 (patch-ae) = e44c60ddf1e042ab5df1457b6723071c38baae02
+SHA1 (patch-af) = 2700fc8395895176c16562af66ea5bf0b13d4e10
