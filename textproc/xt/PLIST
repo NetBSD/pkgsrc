@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/18 21:43:09 jlam Exp $
 lib/java/xt.jar
 lib/java/sax.jar
 share/doc/java/xt/copying.txt
@@ -20,3 +20,4 @@ share/examples/java/xt/textfile.xml
 share/examples/java/xt/DOMDemo.java
 @dirrm share/examples/java/xt
 @dirrm share/doc/java/xt
+@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
