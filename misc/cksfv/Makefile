@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:01:13 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/22 09:11:31 wiz Exp $
 #
 
 DISTNAME=	cksfv-1.3
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.fodder.org/cksfv/
 
