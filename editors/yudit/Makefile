@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/15 16:45:45 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/28 11:46:18 martti Exp $
 #
 
-DISTNAME=	yudit-2.4
+DISTNAME=	yudit-2.4.8
 CATEGORIES=	editor
 MASTER_SITES=	http://yudit.org/download/
 
@@ -9,17 +9,13 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://yudit.org/
 COMMENT=	Unicode Text Editor
 
-DEPENDS+=	freetype-1.3.1:../../graphics/freetype
+USE_BUILDLINK_ONLY=	yes
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-x \
-		--with-freetype-includes=${LOCALBASE}/include \
-		--with-freetype-libraries=${LOCALBASE}/lib
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-
+CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
+.include "../../graphics/freetype-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
