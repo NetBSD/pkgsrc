@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/01/24 19:48:11 recht Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/24 20:53:54 recht Exp $
 #
 
 DISTNAME=	Python-2.3.3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 
 USE_DB185=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT="${CFLAGS}"
@@ -59,7 +59,7 @@ PLIST_SUBST+=  X86_ONLY=${X86_SUBST}
 PLIST_SUBST+=  OSSAUDIODEV=${OSSAUDIODEV_SUBST}
 
 # ensure that the bsddb185 module is built on all platforms
-.include "../../databases/db/buildlink2.mk"
+.include "../../databases/db/buildlink3.mk"
 
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	"Fixing paths for db 1.85."
@@ -97,8 +97,8 @@ INSTALL_TARGET=	altinstall
 post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
