@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2003/02/19 22:06:19 jtb Exp $
+$NetBSD: distinfo,v 1.10 2003/04/29 21:34:02 jtb Exp $
 
-SHA1 (vm-7.08.tar.gz) = 34215e16410456b969c8ad82f15f0fd68c71ffee
-Size (vm-7.08.tar.gz) = 368282 bytes
+SHA1 (vm-7.14.tar.gz) = caeb575e679b7cb79a7d7275b6c1a2d6891ec8df
+Size (vm-7.14.tar.gz) = 373474 bytes
 SHA1 (patch-aa) = 7b8e9b8bcc1c03604fc0d2a81683754b823dc7a6
 SHA1 (patch-ab) = 51ea93e4b4066fbab7e75d03bea2cffd20c85440
