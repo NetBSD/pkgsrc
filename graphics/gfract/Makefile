@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/12 22:07:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/23 19:45:42 jlam Exp $
 #
 
 DISTNAME=	gfract-0.21
@@ -17,6 +17,16 @@ ALL_TARGET=	gfract
 
 post-extract:
 	${MV} ${WRKDIR}/monk2\'.map ${WRKDIR}/monk2.map
+	files="main.c";							\
+	cd ${WRKSRC}; for file in $${files}; do				\
+		${MV} $${file} $${file}.fixme;				\
+		${SED} -e "s|/usr/local/|${PREFIX}/|g"			\
+			$${file}.fixme > $${file};			\
+		if [ -x $${file}.fixme ]; then				\
+			${CHMOD} +x $${file};				\
+		fi;							\
+		${RM} $${file}.fixme;					\
+	done
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gfract
