@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.5 2003/03/15 12:33:34 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.6 2003/03/15 13:06:12 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -258,3 +258,14 @@ graphics/aqsis/patches/patch-af			1.1 (new)
 use a time_t * as the argument to time(3) to let this compile on 64 bit systems.
 Fixes recently noted compile problems on alpha.
 	[dmcmahill, ticket #1216]
+
+www/mozilla/Makefile				1.115
+www/mozilla/files/moz-install			1.6
+
+moz-install treated element between @comment begin DIRS & @comment end DIRS in
+PLIST.
+if @exec ${MKDIR} -p %D/lib/${MOZILLA}/plugins in such a section,
+directory '@exec', '${MKDIR}', '-p', '%D/lib/${MOZILLA}/plugins' are created.
+
+this commit fixes this problem.
+	[taya, ticket #1208]
