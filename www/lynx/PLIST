@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/27 14:57:57 cjep Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/28 13:52:13 grant Exp $
 bin/lynx
 man/man1/lynx.1
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/lynx.mo
@@ -14,6 +14,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/lynx.mo
 share/lynx/lynx.cfg
 share/lynx/lynx.lss
 share/lynx/lynx_doc/CHANGES
+share/lynx/lynx_doc/CHANGES.orig_dist
 share/lynx/lynx_doc/COPYHEADER
 share/lynx/lynx_doc/COPYING
 share/lynx/lynx_doc/PROBLEMS
