@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/01/19 04:08:26 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/29 15:51:05 jmmv Exp $
 
 DISTNAME=		sawfish-themes-0.2
+PKGREVISION=		1
 CATEGORIES=		x11 wm
 DYNAMIC_MASTER_SITES=	yes
 DISTFILES=		${SAWFISH_THEMES}
@@ -18,6 +19,7 @@ PLIST_SRC=		${WRKDIR}/PLIST
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 NO_PATCH=		yes
+USE_X11BASE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
