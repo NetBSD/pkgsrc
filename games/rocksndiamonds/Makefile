@@ -1,68 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/09/09 15:05:30 adam Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/15 15:20:44 adam Exp $
 #
 
-DISTNAME=	rocksndiamonds-3.0.3
-CATEGORIES=	games x11
-MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
+.include "Makefile.common"
 
-MAINTAINER=	heinz-rnd@NetBSD.org
-HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
-COMMENT=	Game like Boulderdash, Emerald Mine, or Sokoban
+COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban (X11 build)
 
-CONFLICTS?=	rocksndiamonds-sdl-[1-9]*
-
-USE_GMAKE=	YES
-USE_BUILDLINK2=	YES
-USE_X11=	YES
-ALL_TARGET?=	x11
-# leave the relative path for rocksndiamonds-sdl
-PLIST_SRC=	${WRKDIR}/PLIST ../rocksndiamonds/PLIST
-PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH}
-PLIST_SUBST+=	ROCK_INSTALL_DIR="${INSTALL} -d -o games -g games -m 775"
-
-.if ( ${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
-      ${MACHINE} == "shark" )
-MAKE_ENV+=HAVE_JOYSTICK=1
-.endif
-
-SCORE_PATH=		/var/games/rocksndiamonds
-
-pre-configure:
-	@${SED} -e "s,@SCORE_PATH@,${SCORE_PATH},g" \
-	        ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.fixed && \
-	  ${MV} ${WRKSRC}/Makefile.fixed ${WRKSRC}/Makefile
-
-do-install:
-	${INSTALL_PROGRAM} -o games -g games -m 2755 \
-		${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 ${PREFIX}/man/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rocksndiamonds
-	cd ${WRKSRC} && ${PAX} -rw sounds graphics levels music \
-		${PREFIX}/share/rocksndiamonds/
-	${CHOWN} -R games:games ${PREFIX}/share/rocksndiamonds
-	${CHMOD} -R a-w ${PREFIX}/share/rocksndiamonds
-	${INSTALL_DATA_DIR} ${SCORE_PATH}/scores
-	${CHMOD} 755 ${SCORE_PATH}
-	${CHMOD} 775 ${SCORE_PATH}/scores
-	# extract basenames of level subdirectories, levelinfo.conf is a file
-	LEVELDIRS=`${LS} -d ${WRKSRC}/levels/*/* | \
-		${SED} -e 's@^.*/\([^/]*\)$$@\1@' -e '/levelinfo\.conf/d'` && \
-	  for directory in $${LEVELDIRS}; do \
-	    ${INSTALL_DATA_DIR} ${SCORE_PATH}/scores/$${directory}; \
-	    ${CHMOD} 775 ${SCORE_PATH}/scores/$${directory}; \
-	  done
-	${CHOWN} -R games:games ${SCORE_PATH}
-	# auto-generated PLIST
-	${RM} -f ${WRKDIR}/PLIST
-.for levdir in Boulderdash Classic_Games Contributions_1995-2000 \
-	Contributions_2001 Contributions_2002 Contributions_2003 Examples \
-	Tutorials
-	cd ${PREFIX} && \
-	${FIND} share/rocksndiamonds/levels/${levdir} -type f >>${WRKDIR}/PLIST
-.endfor
-.for directory in graphics music sounds
-	cd ${PREFIX} && \
-	${FIND} share/rocksndiamonds/${directory} -type f >>${WRKDIR}/PLIST
-.endfor
-
-.include "../../mk/bsd.pkg.mk"
+ALL_TARGET=	x11
+CONFLICTS=	rocksndiamonds-sdl-[1-9]*
