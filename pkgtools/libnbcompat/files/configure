@@ -8194,7 +8194,7 @@ fi
 
 	if test $can_printf_longlong = yes; then
 		cat >>confdefs.h <<\_ACEOF
-#define HAVE_QUAD_SUPPORT 1
+#define HAVE_WORKING_LONG_LONG 1
 _ACEOF
 
 

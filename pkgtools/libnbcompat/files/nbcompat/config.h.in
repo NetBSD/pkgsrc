@@ -198,9 +198,6 @@
 /* Define to 1 if you have the <pwd.h> header file. */
 #undef HAVE_PWD_H
 
-/* Define to 1 if `long long' is supported and sizeof(off_t) >= 8. */
-#undef HAVE_QUAD_SUPPORT
-
 /* Define to 1 if you have the <rmd160.h> header file. */
 #undef HAVE_RMD160_H
 
@@ -410,6 +407,9 @@
 
 /* Define to 1 if you have the `vprintf' function. */
 #undef HAVE_VPRINTF
+
+/* Define to 1 if `long long' is supported and sizeof(off_t) >= 8. */
+#undef HAVE_WORKING_LONG_LONG
 
 /* define if your compiler has __attribute__ */
 #undef HAVE___ATTRIBUTE__
