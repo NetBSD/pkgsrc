@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/04 09:01:25 rh Exp $
+bin/gdkxft_sysinstall
+lib/libgdkxft.a
+lib/libgdkxft.la
+lib/libgdkxft.so
+lib/libgdkxft.so.0
+lib/libgdkxft.so.0.0
+share/doc/gdkxft/AUTHORS
+share/doc/gdkxft/COPYING
+share/doc/gdkxft/ChangeLog
+share/doc/gdkxft/INSTALL
+share/doc/gdkxft/NEWS
+share/doc/gdkxft/README
+share/gdkxft.conf
+@dirrm share/doc/gdkxft
