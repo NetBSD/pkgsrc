@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2000/02/25 01:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2000/03/10 10:29:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
+    SUBDIR += aide
     SUBDIR += crack
     SUBDIR += ddos-scan
     SUBDIR += fortify
