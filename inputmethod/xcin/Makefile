@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/10 01:28:19 grant Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -27,7 +27,7 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcin
-	cd ${WRKSRC}/doc; ${PAX} -rw * ${PREFIX}/share/doc/xcin
+	cd ${WRKSRC}/doc && ${PAX} -rw * ${PREFIX}/share/doc/xcin
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../databases/db3/buildlink2.mk"

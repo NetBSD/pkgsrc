@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/04/10 01:28:26 grant Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xalan-J,
 # because although Xalan runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -25,9 +25,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/xalan.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/bsf.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/xalan
-	cd ${WRKSRC}/docs && ${PAX} -rwpp . ${PREFIX}/share/doc/java/xalan
+	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${PREFIX}/share/doc/java/xalan
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/xalan
-	cd ${WRKSRC}/samples && ${PAX} -rwpp . ${PREFIX}/share/examples/java/xalan
+	cd ${WRKSRC}/samples && ${PAX} -rw -pp . ${PREFIX}/share/examples/java/xalan
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/04/10 01:28:15 grant Exp $
 #
 
 # pkgsrc/mail/sendmail (as of 8.11.0) specifically wants 1999, not 2000.
@@ -21,7 +21,7 @@ COMMENT=	Safe and Fast IO library
 
 do-extract:
 	@${MKDIR} ${WRKDIR}
-	cd ${WRKDIR} ; ${PAX} -r < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${WRKDIR} && ${PAX} -rf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 post-patch:
 	${MV} ${WRKSRC}/man/man3/sfio.3 ${WRKSRC}/man/man3/sfio.3.in

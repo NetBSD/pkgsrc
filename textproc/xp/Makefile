@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/03/28 21:14:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/04/10 01:28:27 grant Exp $
 #
 
 DISTNAME=	xp
@@ -25,7 +25,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKDIR}/xp.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/xp
-	cd ${WRKDIR}/docs && ${PAX} -rwpp . ${PREFIX}/share/doc/java/xp
+	cd ${WRKDIR}/docs && ${PAX} -rw -pp . ${PREFIX}/share/doc/java/xp
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/02/17 21:01:08 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/04/10 01:28:28 grant Exp $
 #
 
 DISTNAME=	mod_layout-3.2
@@ -21,7 +21,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${LAYOUT_DIR}
 	${INSTALL_DATA} ${WRKSRC}/faq.html ${LAYOUT_DIR}
 	${INSTALL_DATA_DIR} ${LAYOUT_DIR}/directives
-	cd ${WRKSRC}/directives; ${PAX} -rw . ${LAYOUT_DIR}/directives
+	cd ${WRKSRC}/directives && ${PAX} -rw . ${LAYOUT_DIR}/directives
 
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"

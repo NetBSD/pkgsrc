@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/03/29 12:43:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/04/10 01:28:32 grant Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -50,7 +50,7 @@ pre-install:
 
 post-install:
 	${CHMOD} -R ugo-w ${WRKDIR}/man
-	cd ${WRKDIR}; ${PAX} -rw man ${PREFIX}
+	cd ${WRKDIR} && ${PAX} -rw man ${PREFIX}
 	${CHMOD} -R ug+rw ${WRKDIR}/man
 	${RM} -f ${PREFIX}/bin/wish
 	cd ${PREFIX}/bin && ${LN} -s wish8.3 wish

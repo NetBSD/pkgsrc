@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/09/21 23:47:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/10 01:28:31 grant Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -25,21 +25,21 @@ PYTHON_VERSIONS_ACCEPTED= 20 # XXX for now
 do-configure:
 	${SED} -e "s,@PREFIX@,${PREFIX}," \
 		<${FILESDIR}/Makefile.in > ${WRKSRC}/Makefile
-	(cd ${WRKSRC}/lib; ${RM} -rf Components/zlib \
+	cd ${WRKSRC}/lib && ${RM} -rf Components/zlib \
 		Components/ExtensionClass python/DocumentTemplate \
-		python/StructuredText)
-	(cd ${WRKSRC}; make configure)
+		python/StructuredText
+	cd ${WRKSRC} && make configure
 
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${ZOPEDIR}
-	(cd ${WRKSRC}; ${PAX} -r -w -s'/.*\.[cho]$$//' . ${ZOPEDIR})
+	cd ${WRKSRC} && ${PAX} -rw -s'/.*\.[cho]$$//' . ${ZOPEDIR}
 	${PYTHONBIN} \
 		${PREFIX}/lib/python2.0/compileall.py ${ZOPEDIR}
 	${CHMOD} -R a+rX ${ZOPEDIR}
-	(cd ${PREFIX}; ${FIND} lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d lib/zope -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
+	cd ${PREFIX} && ${FIND} lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC}
+	cd ${PREFIX} && ${FIND} -d lib/zope -type d -print | \
+	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 	${SED} -e "s,/usr/pkg,${PREFIX}," \
 		<${FILESDIR}/zope-install.py >${PREFIX}/sbin/zope-install
 	${SED} -e "s,/usr/pkg,${PREFIX}," \

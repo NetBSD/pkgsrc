@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/10 01:28:15 grant Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -27,7 +27,7 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/jdeps
 	${CP} ${WRKSRC}/jdeps.jar ${PREFIX}/share/jdeps/jdeps.jar
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/doc/jdeps
-	cd ${WRKSRC}/doc; ${PAX} -rwpe . ${PREFIX}/share/doc/jdeps
+	cd ${WRKSRC}/doc && ${PAX} -rw -pe . ${PREFIX}/share/doc/jdeps
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/jdeps ${PREFIX}/share/doc/jdeps
 
 .include "../../mk/java-vm.mk"

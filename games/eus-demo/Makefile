@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/10 01:28:16 grant Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
@@ -50,7 +50,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${BINTYPE}/${DISTBINNAME} ${LIBDIR}/${BINNAME}
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} ; ${PAX} -rw [Eai-p]* sounds ${LIBDIR}
+	cd ${WRKSRC} && ${PAX} -rw [Eai-p]* sounds ${LIBDIR}
 
 .include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

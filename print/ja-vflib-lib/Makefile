@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/11 08:54:46 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/04/10 01:28:23 grant Exp $
 
 .include "Makefile.common"
 
@@ -22,9 +22,9 @@ post-install:
 	${MV} ${PREFIX}/share/VFlib/${VFLIB_VERSION}/VF.h ${PREFIX}/include
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/VFlib/${VFLIB_VERSION}
-	cd ${WRKSRC}; ${INSTALL_DATA} COPYING COPYING.LIB README.txt.JP_EUC \
+	cd ${WRKSRC} && ${INSTALL_DATA} COPYING COPYING.LIB README.txt.JP_EUC \
 		${PREFIX}/share/VFlib/${VFLIB_VERSION}
-	cd ${WRKSRC}; ${PAX} -rw jTeX ${PREFIX}/share/VFlib/${VFLIB_VERSION}
+	cd ${WRKSRC} && ${PAX} -rw jTeX ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	${CHMOD} -R a-w ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 
 .include "../../mk/bsd.pkg.mk"

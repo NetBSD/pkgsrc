@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/10 01:28:16 grant Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -41,6 +41,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTBINNAME} ${LIBDIR}/${BINNAME}
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-QuickStart.txt
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} ; ${PAX} -rw base gl_drivers icon.xpm ref_glx.so ${LIBDIR}
+	cd ${WRKSRC} && ${PAX} -rw base gl_drivers icon.xpm ref_glx.so ${LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"

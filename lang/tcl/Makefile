@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/29 12:41:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/10 01:28:20 grant Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -64,7 +64,7 @@ pre-install:
 
 post-install:
 	${CHMOD} -R ugo-w ${WRKDIR}/man
-	cd ${WRKDIR}; ${PAX} -rw man ${PREFIX}
+	cd ${WRKDIR} && ${PAX} -rw man ${PREFIX}
 	${CHMOD} -R ug+rw ${WRKDIR}/man
 	cd ${PREFIX}/bin && ${LN} -s tclsh8.3 tclsh
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl

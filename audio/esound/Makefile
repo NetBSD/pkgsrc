@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/03/15 08:58:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2003/04/10 01:28:03 grant Exp $
 
 DISTNAME=		esound-0.2.29
 PKGREVISION=		1
@@ -25,7 +25,7 @@ CONF_FILES=		${EGDIR}/esd.conf ${PKG_SYSCONFDIR}/esd.conf
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/esound
 	cd ${WRKSRC}/docs/html && \
-		${PAX} -rwpppm . ${PREFIX}/share/doc/html/esound
+		${PAX} -rw -pp -pm . ${PREFIX}/share/doc/html/esound
 
 .include "../../audio/libaudiofile/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"

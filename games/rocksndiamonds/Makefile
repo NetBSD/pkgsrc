@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/29 19:07:53 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/10 01:28:18 grant Exp $
 #
 
 DISTNAME=		rocksndiamonds-2.1.1
@@ -34,7 +34,7 @@ do-install:
 		${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 ${PREFIX}/man/man1/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rocksndiamonds
-	cd ${WRKSRC} && ${PAX} -r -w sounds graphics levels music \
+	cd ${WRKSRC} && ${PAX} -rw sounds graphics levels music \
 		${PREFIX}/share/rocksndiamonds/
 	${CHOWN} -R games:games ${PREFIX}/share/rocksndiamonds
 	${CHMOD} -R a-w ${PREFIX}/share/rocksndiamonds

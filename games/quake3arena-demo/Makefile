@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:41:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/04/10 01:28:18 grant Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGNAME=	quake3arena-demo-1.11.6
@@ -51,8 +51,8 @@ do-install:
 	${LN} -s ${LIBDIR}/libMesaVoodooGL.so.3.2 \
 		${LIBDIR}/libMesaVoodooGL.so
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} ; ${PAX} -rw demoq3 icon.bmp icon.xpm ${LIBDIR}
-	cd ${WRKSRC} ; ${PAX} -rw Help ${SHAREDIR}
+	cd ${WRKSRC} && ${PAX} -rw demoq3 icon.bmp icon.xpm ${LIBDIR}
+	cd ${WRKSRC} && ${PAX} -rw Help ${SHAREDIR}
 	${MV} ${SHAREDIR}/Help ${SHAREDIR}/quake3arena-Help
 
 .include "../../emulators/suse_linux/Makefile.application"

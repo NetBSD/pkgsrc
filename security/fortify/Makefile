@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:49:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/10 01:28:23 grant Exp $
 #
 
 DISTNAME=	Fortify-1.4.6-unix-src
@@ -66,7 +66,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/cmdline/fortify ${PREFIX}/libexec
 	${INSTALL_DATA_DIR} ${PREFIX}/share/fortify
 .for DIR in ${FORTIFY_DIRS}
-	cd ${WRKSRC}; ${PAX} -rw ${DIR} ${PREFIX}/share/fortify
+	cd ${WRKSRC} && ${PAX} -rw ${DIR} ${PREFIX}/share/fortify
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/Index ${PREFIX}/share/fortify
 	${LN} -sf languages/English ${PREFIX}/share/fortify/Messages
@@ -74,7 +74,7 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/fortify
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fortify
 	${INSTALL_DATA} ${WRKSRC}/README.html ${PREFIX}/share/doc/fortify
-	cd ${WRKSRC}; ${PAX} -rw images ${PREFIX}/share/doc/fortify
+	cd ${WRKSRC} && ${PAX} -rw images ${PREFIX}/share/doc/fortify
 	${CHMOD} -R go-w ${PREFIX}/share/doc/fortify
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/fortify
 

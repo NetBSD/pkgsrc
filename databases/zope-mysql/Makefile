@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/03/29 12:40:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/04/10 01:28:14 grant Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -33,7 +33,7 @@ do-build:
 
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${WRKDIR}; ${PAX} -r -w lib ${ZOPEDIR})
+	cd ${WRKDIR} && ${PAX} -rw lib ${ZOPEDIR}
 	${CHMOD} -R a+rX ${ZOPEDIR}/${DAPATH}
 	(cd ${PREFIX}; ${FIND} lib/zope/${DAPATH} -type f -print >>${PLIST_SRC})
 	${ECHO} "@dirrm lib/zope/${DAPATH}" >> ${PLIST_SRC}
