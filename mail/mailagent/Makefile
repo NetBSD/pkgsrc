@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/08 00:24:55 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/26 14:10:01 agc Exp $
 # FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
 #
 
@@ -32,6 +32,9 @@ pre-extract:
 	@if [ `id -u` = 0 ]; then \
 	  ${ECHO} "Do not build mailagent as root or it won't pass the sanity tests."; \
 	  ${FALSE}; fi
+
+pre-configure:
+	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-configure
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailagent
