@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/14 13:29:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/03 11:58:48 dmcmahill Exp $
 #
 
 DISTNAME=	octave-forge-2004.07.07
@@ -38,6 +38,11 @@ PLIST_SUBST+=	OCT_VERSION=${OCT_VERSION}
 MESSAGE_SUBST+=	OCT_LOCALVERFCNFILEDIR=${OCT_LOCALVERFCNFILEDIR}
 MESSAGE_SUBST+=	OCT_LOCALVEROCTFILEDIR=${OCT_LOCALVEROCTFILEDIR}
 MESSAGE_SUBST+=	OCT_LOCALVERARCHLIBDIR=${OCT_LOCALVERARCHLIBDIR}
+
+# the 'fixed' module has problems with recent gcc.  Perhaps
+# someone with a c++ clue can fix it.
+post-extract:
+	${TOUCH} ${WRKSRC}/main/fixed/NOINSTALL
 
 post-patch:
 	${MKDIR} ${WRKSRC}/extra/pdb/scripts

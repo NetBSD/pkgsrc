@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/03 11:58:48 dmcmahill Exp $
 bin/mex
 man/man1/mex.1
 share/octave/${OCT_VERSION}/site/octave-forge-alternatives/m/graceplot/PKG_ADD
@@ -136,7 +136,6 @@ ${OCT_LOCALVEROCTFILEDIR}/octave-forge/debye_4.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/deref.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/dispatch.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/dispatch_help.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/display_fixed_operations.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/dlmread.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/ellint_Ecomp.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/ellint_Kcomp.oct
@@ -156,40 +155,12 @@ ${OCT_LOCALVEROCTFILEDIR}/octave-forge/expm1.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/exprel.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/exprel_2.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/exprel_n.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fabs.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fangle.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/farg.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fatan2.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fceil.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fconj.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fcos.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fcosh.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fcumprod.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fcumsum.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fdiag.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/fermi_dirac_3half.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/fermi_dirac_half.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/fermi_dirac_inc_0.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/fermi_dirac_int.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/fermi_dirac_mhalf.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fexp.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/ffloor.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fimag.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/finitedifference.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fixed.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/flog.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/flog10.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fprod.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/freal.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/freshape.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fround.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fsin.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fsinh.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fsqrt.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fsum.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/fsumsq.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/ftan.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/ftanh.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/full.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gamma_gsl.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/gamma_inc.oct
@@ -224,7 +195,6 @@ ${OCT_LOCALVEROCTFILEDIR}/octave-forge/hzeta.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/is_complex_sparse.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/is_real_sparse.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/is_sparse.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/isfixed.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/isgalois.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/isprimitive.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/jpgread.oct
@@ -274,7 +244,6 @@ ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rande.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/randn.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/regexp.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/remez.oct
-${OCT_LOCALVEROCTFILEDIR}/octave-forge/reset_fixed_operations.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rotate_scale.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rsdec.oct
 ${OCT_LOCALVEROCTFILEDIR}/octave-forge/rsenc.oct
@@ -375,14 +344,6 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm/symerr.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm/vec2mat.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm/wgn.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/control/feedback.m
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/PKG_ADD
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/concat.m
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/create_lookup_table.m
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/fixed.info
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/fixedpoint.m
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/float.m
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/fsort.m
-${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed/lookup_table.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/bitcmp.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/bitget.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general/bitset.m
@@ -935,7 +896,6 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_transfo.m
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/graceplot
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/geometry
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/fixed
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/control
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm
 @dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/civil
