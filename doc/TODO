@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2861 2005/01/08 07:48:09 schmonz Exp $
+$NetBSD: TODO,v 1.2862 2005/01/08 19:59:02 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,6 @@ Suggested package updates
 	o docbook-4.3
 	o docbook-website-2.5.0
 	o docsis-0.9.1
-	o dovecot-0.99.13
 	o dpkg-1.10.25
 	o dropbear-0.44
 	o drscheme-208
