@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2003/07/17 21:36:25 grant Exp $
+# $NetBSD: Makefile,v 1.48 2003/07/19 22:44:56 wiz Exp $
 
 DISTNAME=		Wine-20030709
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/W/w/}
 WRKSRC= 		${WRKDIR}/${DISTNAME:tl}
 CATEGORIES=		emulators
@@ -24,6 +25,8 @@ CONFIGURE_ARGS+=	--without-curses
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=no
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 
+REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
+
 # The Wine configure script has problems locating the libraries in the
 # buildlink directory, so prepend all of the LDFLAGS necessary to link
 # against the libraries.
@@ -46,7 +49,8 @@ post-install:
 	cd ${WRKSRC}/documentation/samples &&				\
 	${INSTALL_DATA} config ${EGDIR}/wine.conf &&			\
 	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd &&		\
-	${INSTALL_DATA} system.ini ${EGDIR}/system.ini
+	${INSTALL_DATA} system.ini ${EGDIR}/system.ini &&		\
+	${INSTALL_DATA} win.ini ${EGDIR}/win.ini
 	${RMDIR} ${PREFIX}/man/man3w
 
 .include "../../graphics/MesaLib/buildlink2.mk"
