@@ -1,29 +1,15 @@
---- src/s/freebsd.h.orig	Mon Jun 10 04:14:32 1996
-+++ src/s/freebsd.h	Mon May 26 21:21:55 1997
-@@ -33,9 +33,16 @@
- 
+--- src/s/netbsd.h.orig Sat Oct 11 04:29:49 1997
++++ src/s/netbsd.h      Sat Oct 11 04:30:46 1997
+@@ -33,7 +33,12 @@
  #define LIBS_DEBUG
- #define LIBS_SYSTEM -lutil
--#define LIBS_TERMCAP -ltermcap
- #define LIB_GCC -lgcc
- 
+ /* -lutil is not needed for NetBSD >0.9.  */
+ /* #define LIBS_SYSTEM -lutil */
 +#ifdef HAVE_LIBNCURSES
 +#define TERMINFO
 +#define LIBS_TERMCAP -lncurses
 +#else
-+#define LIBS_TERMCAP -ltermcap
+ #define LIBS_TERMCAP -ltermcap
 +#endif
-+
-+
+ 
+ #define NEED_ERRNO
  #define SYSV_SYSTEM_DIR
- 
- /* freebsd has POSIX-style pgrp behavior. */
-@@ -80,6 +87,8 @@
- #define BSD 199103
- #elif __FreeBSD__ == 2
- #define BSD 199306
-+#elif __FreeBSD__ == 3
-+#define BSD 199506
- #endif
- 
- #define WAITTYPE int

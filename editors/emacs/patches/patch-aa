@@ -1,3 +1,30 @@
+--- ./man/widget.texi.orig    Sat Oct 11 04:47:03 1997
++++ ./man/widget.texi Sat Oct 11 04:46:38 1997
+@@ -3,6 +3,10 @@
+ @c %**start of header
+ @setfilename ../info/widget
+ @settitle The Emacs Widget Library
++@dircategory The Emacs editor and associated tools
++@direntry
++* Widget: (Widget).            Emacs Widget Library
++@end direntry
+ @iftex
+ @afourpaper
+ @headings double
+--- ./man/message.texi.orig   Sat Oct 11 04:45:08 1997
++++ ./man/message.texi        Sat Oct 11 04:45:11 1997
+@@ -2,6 +2,11 @@
+ 
+ @setfilename ../info/message
+ @settitle Message 5.5 Manual
++@dircategory The Emacs editor and associated tools
++@direntry
++* Message: (message).		Emacs message composition mode.
++@end direntry
++
+ @synindex fn cp
+ @synindex vr cp
+ @synindex pg cp
 --- ./man/vip.texi.org	Fri Jun 16 15:31:11 1995
 +++ ./man/vip.texi	Tue May 20 01:28:33 1997
 @@ -2,6 +2,10 @@
@@ -13,7 +40,7 @@
  @finalout
 --- ./man/emacs.texi.org	Mon Aug 19 21:15:12 1996
 +++ ./man/emacs.texi	Tue May 20 01:20:11 1997
-@@ -49,6 +49,11 @@
+@@ -50,6 +50,10 @@
  @settitle GNU Emacs Manual
  @setfilename ../info/emacs
  @synindex pg cp
@@ -21,8 +48,7 @@
 +@direntry
 +* Emacs: (emacs).		The extensible self-documenting text editor.
 +@end direntry
-+
- @c
+
  @c in general, keep the following line commented out, unless doing a
  @c copy of this manual that will be published.  the manual should go
 --- ./man/viper.texi.org	Wed Aug  7 10:59:45 1996
@@ -158,8 +184,8 @@
  # Subdirectories to make recursively.  `lisp' is not included
  # because the compiled lisp files are part of the distribution
  # and you cannot remake them without installing Emacs first.
--SUBDIR = lib-src src
-+SUBDIR = lib-src src man
+-SUBDIR = lib-src src leim
++SUBDIR = lib-src src leim man
  
  # The makefiles of the directories in $SUBDIR.
  SUBDIR_MAKEFILES = lib-src/Makefile man/Makefile src/Makefile oldXMenu/Makefile lwlib/Makefile
@@ -197,9 +223,9 @@
 -	       ../info/ediff ../info/forms ../info/gnus ../info/info \
 +	       ../info/ediff ../info/forms ../info/gnus \
  	       ../info/mh-e ../info/sc ../info/vip ../info/viper \
- 	       ../info/message
+ 	       ../info/message ../info/custom ../info/widget
  DVI_TARGETS = emacs.dvi cc-mode.dvi cl.dvi dired-x.dvi ediff.dvi forms.dvi \
-@@ -66,6 +66,7 @@
+@@ -67,6 +67,7 @@
  	${srcdir}/gnu1.texi \
  	${srcdir}/glossary.texi
  
@@ -207,16 +233,28 @@
  info: $(INFO_TARGETS)
  
  dvi: $(DVI_TARGETS)
-@@ -74,12 +75,6 @@
- # in srcdir.  There is no provision for Info files
+@@ -76,12 +77,6 @@
  # to exist in the build directory.
  # In a distribution of Emacs, the Info files should be up to date.
--
+ 
 -../info/info: ${INFOSOURCES}
 -	cd $(srcdir); $(MAKEINFO) --no-split info.texi
 -
 -info.dvi: ${INFOSOURCES}
 -	TEXINPUTS="$(srcdir) $(TEXINPUTS)"; $(TEXI2DVI) ${srcdir}/info.texi
- 
+-
  ../info/emacs: ${EMACSSOURCES}
  	cd $(srcdir); $(MAKEINFO) emacs.texi
+ 
+@@ -151,9 +146,9 @@
+ ../etc/GNU: gnu1.texi gnu.texi
+ 	makeinfo --no-headers -o ../etc/GNU gnu1.texi
+ 
+-../info/viper: viper.texi viper-cmd.texi
++../info/viper: viper.texi
+ 	cd $(srcdir); $(MAKEINFO) viper.texi
+-viper.dvi: viper.texi viper-cmd.texi
++viper.dvi: viper.texi
+ 	TEXINPUTS="$(srcdir) $(TEXINPUTS)"; $(TEXI2DVI) ${srcdir}/viper.texi
+ 
+ mostlyclean:
