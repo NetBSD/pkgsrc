@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/25 15:30:34 bouyer Exp $
+bin/xmailbox
+lib/X11/app-defaults/XMailbox
+share/xmailbox/0xmail1.xpm
+share/xmailbox/1xmail1.xpm
+share/xmailbox/2xmail1.xpm
+share/xmailbox/3xmail1.xpm
+share/xmailbox/4xmail1.xpm
+share/xmailbox/5xmail1.xpm
+share/xmailbox/xmail1.xpm
+share/xmailbox/xnomail1.xpm
+man/cat1/xmailbox.0
+@exec mkdir -p %D/share/xmailbox
+@unexec rm -rf %D/share/xmailbox
