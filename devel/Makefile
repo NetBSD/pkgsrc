@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2000/08/25 16:13:56 mjl Exp $
+# $NetBSD: Makefile,v 1.134 2000/08/25 16:16:50 jlam Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -18,6 +18,7 @@
     SUBDIR += cervisia
     SUBDIR += cfitsio
     SUBDIR += chkpt
+    SUBDIR += cmdline
     SUBDIR += cscope
     SUBDIR += cvs
     SUBDIR += cvs-current
