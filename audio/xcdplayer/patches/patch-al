@@ -1,7 +1,7 @@
-$NetBSD
+$NetBSD: patch-al,v 1.3 1999/09/06 16:37:43 tron Exp $
 
 --- shuffle.c.orig	Tue Jan 12 19:59:38 1993
-+++ shuffle.c	Mon Sep  6 18:22:07 1999
++++ shuffle.c	Mon Sep  6 18:37:05 1999
 @@ -18,6 +18,9 @@
  
  # include "debug.h"
