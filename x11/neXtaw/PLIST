@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/02 20:10:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/05 13:04:55 wiz Exp $
 include/X11/neXtaw/AllWidgets.h
 include/X11/neXtaw/AsciiSink.h
 include/X11/neXtaw/AsciiSinkP.h
@@ -80,8 +80,8 @@ include/X11/neXtaw/laygram.h
 lib/libneXtaw.a
 lib/libneXtaw.la
 lib/libneXtaw.so
-lib/libneXtaw.so.0
-lib/libneXtaw.so.0.2
+lib/libneXtaw.so.14
+lib/libneXtaw.so.14.0
 share/doc/neXtaw/FAQ
 share/doc/neXtaw/README
 share/doc/neXtaw/README.XAW3D
