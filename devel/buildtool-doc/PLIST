@@ -1,27 +1,27 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/04 17:14:19 jmmv Exp $
-share/doc/${PKGNAME}/CHANGES
-share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/PEOPLE
-share/doc/${PKGNAME}/README
-share/doc/html/buildtool/bt_config.html
-share/doc/html/buildtool/bt_dist.html
-share/doc/html/buildtool/bt_doc.html
-share/doc/html/buildtool/bt_lint.html
-share/doc/html/buildtool/bt_logic.html
-share/doc/html/buildtool/bt_pkgflags.html
-share/doc/html/buildtool/bt_swcgen.html
-share/doc/html/buildtool/bt_wizard.html
-share/doc/html/buildtool/buildtool.html
-share/doc/html/buildtool/config.html
-share/doc/html/buildtool/defs.html
-share/doc/html/buildtool/devtut.html
-share/doc/html/buildtool/docs.html
-share/doc/html/buildtool/index.html
-share/doc/html/buildtool/intro.html
-share/doc/html/buildtool/logic.html
-share/doc/html/buildtool/pt01.html
-share/doc/html/buildtool/pt02.html
-share/doc/html/buildtool/scripts.html
-share/doc/html/buildtool/style.css
-@dirrm share/doc/html/buildtool
-@dirrm share/doc/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.5 2004/07/04 22:19:31 jmmv Exp $
+share/doc/buildtool-doc/CHANGES
+share/doc/buildtool-doc/COPYING
+share/doc/buildtool-doc/PEOPLE
+share/doc/buildtool-doc/README
+share/doc/buildtool-doc/html/bt_config.html
+share/doc/buildtool-doc/html/bt_dist.html
+share/doc/buildtool-doc/html/bt_doc.html
+share/doc/buildtool-doc/html/bt_lint.html
+share/doc/buildtool-doc/html/bt_logic.html
+share/doc/buildtool-doc/html/bt_pkgflags.html
+share/doc/buildtool-doc/html/bt_swcgen.html
+share/doc/buildtool-doc/html/bt_wizard.html
+share/doc/buildtool-doc/html/buildtool.html
+share/doc/buildtool-doc/html/config.html
+share/doc/buildtool-doc/html/defs.html
+share/doc/buildtool-doc/html/devtut.html
+share/doc/buildtool-doc/html/docs.html
+share/doc/buildtool-doc/html/index.html
+share/doc/buildtool-doc/html/intro.html
+share/doc/buildtool-doc/html/logic.html
+share/doc/buildtool-doc/html/pt01.html
+share/doc/buildtool-doc/html/pt02.html
+share/doc/buildtool-doc/html/scripts.html
+share/doc/buildtool-doc/html/style.css
+@dirrm share/doc/buildtool-doc/html
+@dirrm share/doc/buildtool-doc
