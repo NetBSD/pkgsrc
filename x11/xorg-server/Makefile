@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/30 04:39:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/30 08:31:23 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-server-${XORG_VER}
@@ -12,7 +12,6 @@ COMMENT=		X.org X server and related programs
 
 USE_X11=		yes
 USE_BUILDLINK3=		yes
-CHECK_X11_TYPE=		# defined
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 
