@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/01 21:15:20 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/01 21:31:04 tron Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -16,16 +16,19 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
-WRKSRC=		${WRKDIR}/${PKGNAME}
 OBJDIR!=	echo obj.`uname -srm | tr \  .`
+WRKSRC=		${WRKDIR}/${PKGNAME}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_DB2) && ${USE_DB2} == YES
+USE_DB2?=	NO
+
+.if ${USE_DB2} == YES
 DEPENDS+=	db-2.7.7:../../databases/db
 
 MAKE_ENV+=	DB_ENVDEF="-I${LOCALBASE}/include/db2" \
 		DB_LIBS="-L${LOCALBASE}/lib -ldb2"
+PLIST_SRC=	${WRKDIR}/PLIST
 .else
 MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
 .endif
@@ -36,6 +39,11 @@ post-build:
 	  <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
 	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
+.if ${USE_DB2} == YES
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
+	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
+.endif
 
 pre-install:
 	${MKDIR} ${PREFIX}/libexec/sendmail
