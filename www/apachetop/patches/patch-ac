@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/08 16:28:39 sketch Exp $
+
+--- src/apachetop.h.orig	Fri Dec  5 09:49:21 2003
++++ src/apachetop.h	Fri Dec  5 09:49:39 2003
+@@ -221,7 +221,7 @@
+ #define DEBUG_OUTPUT "/tmp/atop.debug"
+ 
+ #ifndef DEFAULT_LOGFILE
+-# define DEFAULT_LOGFILE "/var/httpd/apache_log"
++# define DEFAULT_LOGFILE "/var/log/httpd/access_log"
+ #endif
+ #define DEFAULT_CIRCLE_SIZE 30
+ #define DEFAULT_CIRCLE_MODE TIMED_CIRCLE
