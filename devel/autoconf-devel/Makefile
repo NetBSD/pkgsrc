@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/05/08 11:03:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/08 11:34:36 wiz Exp $
 
 DISTNAME=		autoconf-2.53
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
@@ -15,6 +16,7 @@ CONFLICTS=		autoconf-devel-[0-9]*
 USE_BUILDLINK_ONLY=	YES
 
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--without-lispdir
 CONFIGURE_ENV+=		AWK="${AWK}"
 M4=			${PREFIX}/bin/gm4
 
