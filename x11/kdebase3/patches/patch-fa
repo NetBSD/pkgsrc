@@ -1,8 +1,8 @@
-$NetBSD: patch-fa,v 1.1 2003/06/05 21:29:33 drochner Exp $
+$NetBSD: patch-fa,v 1.2 2004/02/04 14:25:59 markd Exp $
 
---- ksysguard/ksysguardd/modules.h.orig	2003-06-05 19:26:03.000000000 +0200
-+++ ksysguard/ksysguardd/modules.h	2003-06-05 19:37:21.000000000 +0200
-@@ -55,6 +55,19 @@
+--- ksysguard/ksysguardd/modules.h.orig	2003-03-13 01:26:04.000000000 +1300
++++ ksysguard/ksysguardd/modules.h
+@@ -56,6 +56,19 @@
  #include "netdev.h"
  #endif /* OSTYPE_FreeBSD */
  
@@ -22,23 +22,23 @@ $NetBSD: patch-fa,v 1.1 2003/06/05 21:29:33 drochner Exp $
  #ifdef OSTYPE_Solaris
  #include "LoadAvg.h"
  #include "Memory.h"
-@@ -114,6 +127,19 @@
- 	{ "NetDev", initNetDev, exitNetDev, updateNetDev, checkNetDev, 0, NULLTIME },
+@@ -120,6 +133,19 @@ struct SensorModul SensorModulList[] = {
+   { "NetDev", initNetDev, exitNetDev, updateNetDev, checkNetDev, 0, NULLTIME },
  #endif /* OSTYPE_FreeBSD */
  
 +#ifdef OSTYPE_NetBSD
-+        { "CpuInfo", initCpuInfo, exitCpuInfo, updateCpuInfo, NULLVVFUNC, 0, NULLTIME },
-+        { "Memory", initMemory, exitMemory, updateMemory, NULLVVFUNC, 0, NULLTIME },
-+        { "ProcessList", initProcessList, exitProcessList, updateProcessList, NULLVVFUNC, 0, NULLTIME },
++  { "CpuInfo", initCpuInfo, exitCpuInfo, updateCpuInfo, NULLVVFUNC, 0, NULLTIME },
++  { "Memory", initMemory, exitMemory, updateMemory, NULLVVFUNC, 0, NULLTIME },
++  { "ProcessList", initProcessList, exitProcessList, updateProcessList, NULLVVFUNC, 0, NULLTIME },
 +#ifdef __i386__
-+        { "Apm", initApm, exitApm, updateApm, NULLVVFUNC, 0, NULLTIME },
++  { "Apm", initApm, exitApm, updateApm, NULLVVFUNC, 0, NULLTIME },
 +#endif
-+        { "DiskStat", initDiskStat, exitDiskStat, updateDiskStat, checkDiskStat, 0, NULLTIME },
-+        { "LoadAvg", initLoadAvg, exitLoadAvg, updateLoadAvg, NULLVVFUNC, 0, NULLTIME },
-+        { "LogFile", initLogFile, exitLogFile, NULLIVFUNC, NULLVVFUNC, 0, NULLTIME },
-+        { "NetDev", initNetDev, exitNetDev, updateNetDev, checkNetDev, 0, NULLTIME },
++  { "DiskStat", initDiskStat, exitDiskStat, updateDiskStat, checkDiskStat, 0, NULLTIME },
++  { "LoadAvg", initLoadAvg, exitLoadAvg, updateLoadAvg, NULLVVFUNC, 0, NULLTIME },
++  { "LogFile", initLogFile, exitLogFile, NULLIVFUNC, NULLVVFUNC, 0, NULLTIME },
++  { "NetDev", initNetDev, exitNetDev, updateNetDev, checkNetDev, 0, NULLTIME },
 +#endif /* OSTYPE_NetBSD */
 +
  #ifdef OSTYPE_Solaris
- 	{ "LoadAvg", initLoadAvg, exitLoadAvg, updateLoadAvg, NULLVVFUNC, 0, NULLTIME },
- 	{ "Memory", initMemory, exitMemory, updateMemory, NULLVVFUNC, 0, NULLTIME },
+   { "LoadAvg", initLoadAvg, exitLoadAvg, updateLoadAvg, NULLVVFUNC, 0, NULLTIME },
+   { "Memory", initMemory, exitMemory, updateMemory, NULLVVFUNC, 0, NULLTIME },
