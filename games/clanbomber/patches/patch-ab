@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 07:42:32 garbled Exp $
+--- clanbomber/ClanBomber.cpp.orig	Fri Dec 15 00:27:16 2000
++++ clanbomber/ClanBomber.cpp	Fri Dec 15 00:27:46 2000
+@@ -95,7 +95,7 @@
+ 		show_fps = false;
+ 		key_F1 = false;
+ #ifndef WIN32
+-		map_path = "maps";
++		map_path = BOMBERMAPS;
+ 		if (!opendir(map_path))
+ 		{
+ 			map_path = "/usr/local/share/clanbomber/maps";
