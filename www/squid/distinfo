@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2002/03/23 17:16:48 kim Exp $
+$NetBSD: distinfo,v 1.16 2002/07/04 06:11:44 tron Exp $
 
-SHA1 (squid-2.4.STABLE6-src.tar.gz) = 0028030b420818922757b10260ae430955c0e617
-Size (squid-2.4.STABLE6-src.tar.gz) = 1081327 bytes
+SHA1 (squid-2.4.STABLE7-src.tar.gz) = 91d05fbfd07545c7f11a997e988f8412b259a902
+Size (squid-2.4.STABLE7-src.tar.gz) = 1087532 bytes
 SHA1 (patch-aa) = f78e4aa062ff3df0ba3c66b5b6d98db8733ba5c3
 SHA1 (patch-ab) = afb0c443c708d03fc7ab39120ae9a3c68d9e9b88
 SHA1 (patch-ac) = b962e05bcaccd0d9a0969b2f1419fd73456440cd
