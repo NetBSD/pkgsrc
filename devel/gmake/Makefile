@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 1999/11/11 13:29:59 fredb Exp $
+# $NetBSD: Makefile,v 1.20 1999/12/21 19:50:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
-DISTNAME=       make-3.77
-PKGNAME=        gmake-3.77
+DISTNAME=       make-3.78.1
+PKGNAME=        gmake-3.78.1
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=make/}
 
