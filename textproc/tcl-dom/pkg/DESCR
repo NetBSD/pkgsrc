@@ -1,0 +1,4 @@
+TclDOM is a Tcl package implementing the TclDOM specification. This release
+is still incomplete with respect to the DOM Recommendation from the W3C,
+but only the Extended Interfaces are left to finish - all of the necessary
+core interfaces are done. 
