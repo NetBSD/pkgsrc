@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/26 12:04:15 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/07/03 11:09:26 wiz Exp $
 
-SHA1 (rp8codecs.tar.bz2) = 9532ccb510b8a60d5b37fec083c4e5986f6b8433
-Size (rp8codecs.tar.bz2) = 388979 bytes
-SHA1 (rp8codecs-alpha.tar.bz2) = 9b9c4c29450b7f0f2c68e71c6eb2858a3610b661
-Size (rp8codecs-alpha.tar.bz2) = 532365 bytes
-SHA1 (rp8codecs-ppc.tar.bz2) = ff77e88142a3c46a31e76b89ee7affdbb846f00c
-Size (rp8codecs-ppc.tar.bz2) = 536461 bytes
+SHA1 (rp8codecs-20040626.tar.bz2) = 5fe332e68d482b1cea8e52fee3491cab429fbe39
+Size (rp8codecs-20040626.tar.bz2) = 388962 bytes
+SHA1 (rp8codecs-ppc-20040626.tar.bz2) = 61c64b6f9f91cce65b2b266bbb0681681c4104ff
+Size (rp8codecs-ppc-20040626.tar.bz2) = 536444 bytes
+SHA1 (rp8codecs-alpha-20040626.tar.bz2) = 69168b10f9df1d0467c0cdf9bef666f1f27f5ce2
+Size (rp8codecs-alpha-20040626.tar.bz2) = 532349 bytes
