@@ -1,0 +1,9 @@
+  Gsymcheck is a symbol checker.  Give it a symbol file and it will
+go through and verify that all the proper attributes exist and
+contain the correct values.  Gsymcheck is a part of gEDA.
+
+  gEDA is a collection of tools which are used to make electrical
+circuit design, simulation and prototyping/production easier/doable.
+gEDA is a project, which was started because of the lack of free EDA
+tools for UNIX.  All of the tools in gEDA are released under the GNU
+Public License version 2 (GPL).
