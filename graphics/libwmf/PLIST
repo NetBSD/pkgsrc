@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/09/19 17:19:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/09/21 21:47:11 wiz Exp $
 bin/libwmf-config
 bin/libwmf-fontmap
 bin/wmf2eps
@@ -306,5 +306,4 @@ share/libwmf/fonts/s050000l.pfb
 @dirrm share/doc/html/libwmf/caolan/pics
 @dirrm share/doc/html/libwmf/caolan
 @dirrm share/doc/html/libwmf
-@dirrm include/libwmf/gd
 @dirrm include/libwmf

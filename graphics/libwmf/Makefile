@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/09/19 17:19:21 adam Exp $
+# $NetBSD: Makefile,v 1.42 2003/09/21 21:47:11 wiz Exp $
 #
 
 DISTNAME=	libwmf-0.2.8
@@ -17,6 +17,9 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--disable-gd
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/libwmf
+
+post-install:
+	${RMDIR} ${PREFIX}/include/libwmf/gd
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
