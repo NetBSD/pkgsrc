@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/26 13:34:45 jmmv Exp $
+#
+
+DISTNAME=	flash-0.4.10
+CATEGORIES=	multimedia
+MASTER_SITES=	http://www.swift-tools.com/Flash/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	hubertf@NetBSD.org
+HOMEPAGE=	http://www.swift-tools.com/Flash/
+
+USE_X11=	yes
+
+DISTINFO_FILE=	${.CURDIR}/../libflash/distinfo
+PATCHDIR=	${.CURDIR}/../libflash/patches
+
+post-extract: remove-subpackages
+
+remove-subpackages:
+	${RM} -rf ${WRKSRC}/Jpeg ${WRKSRC}/Zlib
+
+.include "../../mk/ossaudio.buildlink2.mk"
