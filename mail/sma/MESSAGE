@@ -1,6 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/09/24 09:25:46 tron Exp $
+$NetBSD: MESSAGE,v 1.2 2003/09/24 13:21:10 tron Exp $
 
 
-Sample configration file has been copied to ${PREFIX}/share/doc/sma
+Sample configration file has been copied to ${PREFIX}/share/examples/sma
 ===========================================================================
