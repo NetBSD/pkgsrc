@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2004/02/09 12:54:31 wennmach Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/09 17:36:37 wennmach Exp $
 #
 
 DISTNAME=		krb4-1.2.1
 PKGNAME=		kth-krb4-1.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
@@ -27,10 +27,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/kerberosIV
 
 .include "../../mk/bsd.prefs.mk"
-KRB4_PREFIX_CMDS?=	no
+KERBEROS_PREFIX_CMDS?=	no
+KRB4_PREFIX_CMDS?=	${KERBEROS_PREFIX_CMDS}
 BUILD_DEFS+=		KRB4_PREFIX_CMDS
 .if !empty(KRB4_PREFIX_CMDS:M[yY][eE][sS])
-MIT_KRB4_TRANSFORM=	s/^ftp/k4&/;\
+KTH_KRB4_TRANSFORM=	s/^ftp/k4&/;\
 			s/^rcp/k4&/;\
 			s/^rlogin/k4&/;\
 			s/^rsh/k4&/;\
@@ -38,10 +39,10 @@ MIT_KRB4_TRANSFORM=	s/^ftp/k4&/;\
 			s/^telnet/k4&/
 PLIST_SUBST+=		KRB4_PREFIX=k4
 .else
-MIT_KRB4_TRANSFORM=	s/^ftp$$/k4&/	# always k4ftp
+KTH_KRB4_TRANSFORM=	s/^ftp$$/k4&/	# always k4ftp
 PLIST_SUBST+=		KRB4_PREFIX=
 .endif
-CONFIGURE_ARGS+=	--program-transform="${MIT_KRB4_TRANSFORM}"
+CONFIGURE_ARGS+=	--program-transform="${KTH_KRB4_TRANSFORM}"
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
