@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2003/03/22 16:08:48 grant Exp $
+# $NetBSD: Makefile,v 1.29 2003/05/22 07:25:09 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
 
+#SUBDIR+=	COMMON	# not a real package
 SUBDIR+=	bfd-crunchide
 SUBDIR+=	bfd-mdsetimage
 SUBDIR+=	binutils
