@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/20 16:00:42 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/07 19:42:55 martti Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
 bin/my_print_defaults
+bin/myisam_ftdump
 bin/myisamchk
 bin/myisamlog
 bin/myisampack
@@ -29,7 +30,7 @@ lib/mysql/libvio.a
 libexec/mysqld
 man/man1/mysqld.1
 man/man1/mysqld_multi.1
-man/man1/mysqld_safe.1
+@comment man/man1/mysqld_safe.1
 share/mysql/charsets/Index
 share/mysql/charsets/README
 share/mysql/charsets/cp1251.conf
