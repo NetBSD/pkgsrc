@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 22:52:10 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/12/16 00:11:48 dillo Exp $
 #
 
-DISTNAME=	tin-1.4.6
+DISTNAME=	tin-1.6.1
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/current/ \
@@ -21,6 +21,7 @@ RESTRICTED=	"Profit from use, sale, trade, or reproduction disallowed"
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
+USE_PKGLOCALEDIR=yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,7 +52,6 @@ CONFIGURE_ARGS+= --with-inews-dir=${PREFIX}/inn/bin \
 CONFIGURE_ARGS+= --enable-nntp-only
 .endif
 
-MAKEFILE=	makefile
 ALL_TARGET=	build
 
 post-patch:
@@ -62,5 +62,9 @@ post-patch:
 post-configure:
 	${ECHO} '#define NNTP_SERVER_FILE "${PREFIX}/etc/nntp/server"' >>${WRKSRC}/include/autoconf.h
 	${ECHO} '#define SMTP_SERVER_FILE "${PREFIX}/etc/smtpserver"' >>${WRKSRC}/include/autoconf.h
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tin
+	${INSTALL_DATA} ${WRKSRC}/doc/WHATSNEW ${PREFIX}/share/doc/tin
 
 .include "../../mk/bsd.pkg.mk"
