@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/10/16 18:45:14 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2001/10/25 16:13:06 jlam Exp $
 #
 
 DISTNAME=	mtr-0.42
@@ -18,7 +18,11 @@ USE_GMAKE=		yes
 USE_BUILDLINK_ONLY=	yes
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC};							\
+	${LOCALBASE}/bin/aclocal;					\
+	${LOCALBASE}/bin/automake -a --foreign -i;			\
+	${LOCALBASE}/bin/autoreconf --force;				\
+	${LOCALBASE}/bin/autoheader
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
