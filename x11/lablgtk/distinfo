@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/10/16 16:40:25 dillo Exp $
+
+SHA1 (lablgtk-1.2.5.tar.gz) = 3ae950864d2772c60cc1d4962e52cb22c2abac97
+Size (lablgtk-1.2.5.tar.gz) = 463565 bytes
+SHA1 (patch-aa) = e44b58cd1993583ac2857353b0f26e8764023120
