@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/02/26 10:09:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/04/07 17:30:15 magick Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -44,6 +44,7 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/casetab.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/charset.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/chartab.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/cm.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/coding-system-slots.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/commands.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/config.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/conslots.h
@@ -231,7 +232,9 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/opaque.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/paths.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/process.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/process-slots.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/procimpl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/profile.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/rangetab.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/redisplay.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/regex.h
@@ -259,6 +262,7 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos3.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos4.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cxux.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cxux7.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cygwin.sc
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cygwin32.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/darwin.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf1-2.h
@@ -542,9 +546,13 @@ lib/${EMACSVER}/etc/photos/dv.png
 lib/${EMACSVER}/etc/photos/dvm.png
 lib/${EMACSVER}/etc/photos/fabrice.png
 lib/${EMACSVER}/etc/photos/fabricem.png
+lib/${EMACSVER}/etc/photos/golubev.png
+lib/${EMACSVER}/etc/photos/golubevm.png
 lib/${EMACSVER}/etc/photos/hniksic.png
 lib/${EMACSVER}/etc/photos/hniksicm.png
 lib/${EMACSVER}/etc/photos/jan.png
+lib/${EMACSVER}/etc/photos/james.png
+lib/${EMACSVER}/etc/photos/jamesm.png
 lib/${EMACSVER}/etc/photos/jareth.png
 lib/${EMACSVER}/etc/photos/jarethm.png
 lib/${EMACSVER}/etc/photos/jason.png
@@ -1003,6 +1011,7 @@ lib/${EMACSVER}/info/xemacs.info-6
 lib/${EMACSVER}/info/xemacs.info-7
 lib/${EMACSVER}/info/xemacs.info-8
 lib/${EMACSVER}/info/xemacs.info-9
+lib/${EMACSVER}/lisp/.cvsignore
 lib/${EMACSVER}/lisp/ChangeLog
 lib/${EMACSVER}/lisp/ChangeLog.GTK
 lib/${EMACSVER}/lisp/README
@@ -1274,6 +1283,7 @@ lib/${EMACSVER}/lisp/msw-mouse.el
 lib/${EMACSVER}/lisp/msw-mouse.elc
 lib/${EMACSVER}/lisp/msw-select.el
 lib/${EMACSVER}/lisp/msw-select.elc
+lib/${EMACSVER}/lisp/mule/.cvsignore
 lib/${EMACSVER}/lisp/mule/arabic.el
 lib/${EMACSVER}/lisp/mule/arabic.elc
 lib/${EMACSVER}/lisp/mule/auto-autoloads.el
@@ -1396,6 +1406,8 @@ lib/${EMACSVER}/lisp/printer.el
 lib/${EMACSVER}/lisp/printer.elc
 lib/${EMACSVER}/lisp/process.el
 lib/${EMACSVER}/lisp/process.elc
+lib/${EMACSVER}/lisp/raw-process.el
+lib/${EMACSVER}/lisp/raw-process.elc
 lib/${EMACSVER}/lisp/rect.el
 lib/${EMACSVER}/lisp/rect.elc
 lib/${EMACSVER}/lisp/register.el
@@ -1575,6 +1587,7 @@ man/man1/xemacs.1
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}
+@dirrm lib/${EMACSVER}
 @dirrm lib/xemacs/site-modules
 @dirrm lib/xemacs/site-lisp
 @dirrm lib/xemacs
