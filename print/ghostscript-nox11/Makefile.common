@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2002/09/18 22:16:53 jlam Exp $
+# $NetBSD: Makefile.common,v 1.39 2002/09/20 23:56:30 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -152,9 +152,7 @@ GS_DISPLAY_DEVICE?=	# empty
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		LDFLAGS="${LDFLAGS}"
 MAKE_FLAGS+=		GS_DISPLAY_DEVICE="${GS_DISPLAY_DEVICE}"
-MAKE_FLAGS+=		XINCLUDE=		# x11.buildlink.mk will handle
-MAKE_FLAGS+=		XLIBDIRS=		# these two automatically
-MAKE_FLAGS+=		XLIBS="${XLIBS}"
+MAKE_FLAGS+=		XINCLUDE= XLIBDIRS= XLIBS="${XLIBS}"
 
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,-R${LOCALBASE}/bsd/lib
