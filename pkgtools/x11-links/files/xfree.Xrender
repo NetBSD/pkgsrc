@@ -1,4 +1,4 @@
-# $NetBSD: xfree.Xrender,v 1.1 2003/09/02 07:14:48 jlam Exp $
+# $NetBSD: xfree.Xrender,v 1.2 2003/09/07 21:53:03 jlam Exp $
 #
 include/X11/extensions/Xrender.h
 include/X11/extensions/render.h
@@ -7,3 +7,6 @@ lib/libXrender.a
 lib/libXrender.so
 lib/libXrender.so.1
 lib/libXrender.so.1.1
+lib/libXrender.dylib
+lib/libXrender.1.dylib
+lib/libXrender.1.1.dylib
