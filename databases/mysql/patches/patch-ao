@@ -1,0 +1,18 @@
+$NetBSD: patch-ao,v 1.1 1998/10/28 18:18:08 bad Exp $
+
+--- mit-pthreads/machdep/syscall-template-alpha-netbsd-1.3.S.orig	Mon Mar  9 11:30:59 1998
++++ mit-pthreads/machdep/syscall-template-alpha-netbsd-1.3.S	Mon Oct 19 21:24:36 1998
+@@ -3,6 +3,13 @@
+ #include <sys/syscall.h>
+ #define CHMK()		call_pal 0x83
+ 
++#ifdef SYS___sigsuspend14
++#define SYS_sigsuspend SYS___sigsuspend14
++#endif
++#ifdef SYS___sigprocmask14
++#define SYS_sigprocmask SYS___sigprocmask14
++#endif
++
+ #undef SYSCALL
+ 
+ /* Kernel syscall interface:

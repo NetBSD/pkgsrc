@@ -1,0 +1,18 @@
+$NetBSD: patch-av,v 1.1 1998/10/28 18:18:09 bad Exp $
+
+--- mit-pthreads/machdep/syscall-template-i386-netbsd-1.3.S.orig	Mon Mar  2 19:44:34 1998
++++ mit-pthreads/machdep/syscall-template-i386-netbsd-1.3.S	Mon Oct 19 00:10:09 1998
+@@ -1,6 +1,13 @@
+ #include <machine/asm.h>
+ #include <sys/syscall.h>
+ 
++#ifdef SYS___sigsuspend14
++#define SYS_sigsuspend SYS___sigsuspend14
++#endif
++#ifdef SYS___sigprocmask14
++#define SYS_sigprocmask SYS___sigprocmask14
++#endif
++
+ #ifdef __STDC__
+ 
+ #define	SYSCALL(x)					\

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1998/08/07 13:17:05 agc Exp $
+$NetBSD: md5,v 1.5 1998/10/28 18:18:08 bad Exp $
 
-MD5 (mysql-3.21.33.tar.gz) = 64672bebf05fa95f9772303d3b86e40b
+MD5 (mysql-3.21.33b.tar.gz) = 6a54652a36831a0e75d4056c69ba1303

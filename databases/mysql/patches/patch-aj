@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 1998/10/28 18:18:08 bad Exp $
+
+--- mit-pthreads/pthreads/fd.c.orig	Tue Jan 13 14:28:04 1998
++++ mit-pthreads/pthreads/fd.c	Sat Oct 24 22:24:28 1998
+@@ -702,7 +702,7 @@
+  */
+ off_t lseek(int fd, off_t offset, int whence)
+ {
+-	int ret;
++	off_t ret;
+ 
+ 	 if ((ret = fd_lock(fd, FD_RDWR, NULL)) == OK) {
+      	ret = fd_table[fd]->ops->seek(fd_table[fd]->fd,
