@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/30 08:23:15 wiz Exp $
+
+SHA1 (gentle-97.tar.gz) = 1cbf70aa6c470346630c407f89878a5f3c0c4406
+Size (gentle-97.tar.gz) = 453860 bytes
+SHA1 (patch-aa) = 4b76e24c516ea96214e749758ff4093c0f464ecc
+SHA1 (patch-ab) = aea90f9fb1c4fbb00d8595bc5f345d816c023e1a
