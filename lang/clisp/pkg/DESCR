@@ -1,0 +1,40 @@
+                        Common Lisp CLISP
+
+Common Lisp is
+  * a convential programming language and an AI language
+  * interactive
+  * a Lisp for professional use
+
+Common Lisp programs are
+  * easy to test (interactive)
+  * easy to maintain (depending on programming style)
+  * portable (there is a standard for the language and the library functions)
+
+Our Common Lisp CLISP
+  * needs only 2 MB of memory
+  * implements 99% of the CLtL1 standard, as well as some extensions
+  * can call your preferred editor
+  * is freely distributable
+
+Common Lisp provides
+  * clear syntax, carefully designed semantics
+  * several data types: numbers, strings, arrays, lists, characters, symbols,
+    structures, streams etc.
+  * runtime typing: the programmer needn't bother about type declarations,
+    but he gets notified on type violations.
+  * many generic functions:
+    88 arithmetic functions for all kinds of numbers (integers, ratios,
+    floating point numbers, complex numbers),
+    44 search/filter/sort functions for lists, arrays and strings
+  * automatic memory management (garbage collection)
+  * packaging of programs into modules
+  * an object system, generic functions with powerful method combination
+  * macros: every programmer can make his own language extensions
+
+Our Common Lisp CLISP provides
+  * an interpreter
+  * a compiler which makes execution of programs 5 times faster
+  * all data types with unlimited size (the size need never be declared,
+    the size of lists and arrays may be changed dynamically)
+  * integers of arbitrary length, unlimited floating point number precision
+  * 594 library functions, 542 of them written in C
