@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2002/11/19 15:54:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.175 2002/11/20 08:46:18 tron Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -26,6 +26,7 @@ SUBDIR+=	docbook-xml
 SUBDIR+=	dsssl-docbook-modular
 SUBDIR+=	eb
 SUBDIR+=	eblook
+SUBDIR+=	emacs-dict-client
 SUBDIR+=	eperl
 SUBDIR+=	expat
 SUBDIR+=	fop
