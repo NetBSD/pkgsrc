@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- etc/afpd/Makefile	1998/10/26 14:01:39	1.1
++++ etc/afpd/Makefile	1998/10/26 14:01:59
+@@ -32,7 +32,7 @@
+ 	    AFSDEFS="-DAFS"; \
+ 	fi; \
+ 	${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
+-	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" \
++	    OPTOPTS="${OPTOPTS}" ATALK_DESTDIR="${ATALK_DESTDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    KRBLIBS="$${KRBLIBS}" KRBLIBDIRS="$${KRBLIBDIRS}" \

@@ -1,0 +1,9 @@
+$NetBSD: patch-ah,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- /dev/null	Mon Oct 26 13:21:23 1998
++++ libatalk/atp/Makefile.inc	Mon Oct 26 13:20:53 1998
+@@ -0,0 +1,4 @@
++.PATH: ${.CURDIR}/atp
++
++SRCS+= atp_bprint.c atp_bufs.c atp_close.c atp_open.c atp_packet.c
++SRCS+= atp_rreq.c atp_rresp.c atp_rsel.c atp_sreq.c atp_sresp.c

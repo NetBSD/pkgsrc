@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+Pass ATALK_DESTDIR down, rather than DESTDIR, so we don't trigger DESTDIR
+rules in <bsd.sys.mk> governing nostdinc and idirafter
+
+--- sys/netbsd/Makefile.orig	Thu Oct  1 18:46:49 1998
++++ sys/netbsd/Makefile	Sat Sep 26 10:50:25 1998
+@@ -1,6 +1,5 @@
+ # NetBSD specific defines, passed to subdirectories.
+ DEFS=	-DBSD4_4
+-OPTOPTS=	-O2
+ CC=	gcc -Werror -I../../sys/netbsd/
+ INSTALL=	install
+ ADDLIBS=	-lcrypt
+@@ -16,12 +15,13 @@
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+-	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" all
++	    ATALK_DESTDIR="${ATALK_DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" all
+ 
+ FRC:
+ 
+ install :
+-	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR} ${LIBDIR}
++	-mkdir ${ATALK_DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR}
++	-mkdir ${LIBDIR} ${LIBEXECDIR} ${RESDIR}
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+@@ -31,7 +31,7 @@
+ 		INSTALL="${INSTALL}" $@); \
+ 	done
+ 	rm -f ${ETCDIR}/rc.atalk
+-	sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
++	sed -e s@:DESTDIR:@${ATALK_DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
