@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/05/11 10:43:32 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/05/25 21:19:55 frueauf Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -215,7 +215,6 @@ share/lesstif/doc/widgets/XmPrimitive.html
 share/lesstif/doc/widgets/XmProtocol.html
 share/lesstif/doc/widgets/XmPushButton.html
 share/lesstif/doc/widgets/XmPushButtonGCacheObj.html
-share/lesstif/doc/widgets/XmPushButtonGadget.html
 share/lesstif/doc/widgets/XmPushButtonGadget.html
 share/lesstif/doc/widgets/XmRowColumn.html
 share/lesstif/doc/widgets/XmSash.html
