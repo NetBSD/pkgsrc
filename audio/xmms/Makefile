@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/08/23 14:16:25 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/08/23 14:26:41 jlam Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.5
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 CONFIGURE_ARGS+=	--without-gnome
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+REPLACE_BUILDLINK+=	xmms-config
 
 .include "../../mk/bsd.prefs.mk"
 
