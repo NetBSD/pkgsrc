@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1102 2002/12/07 02:37:56 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1103 2002/12/07 16:03:12 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -557,17 +557,19 @@ DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
 # list of files to be concatenated together to generate the MESSAGE file.
 #
 .if !defined(MESSAGE_SRC) && !defined(MESSAGE)
-.  if exists(${PKGDIR}/MESSAGE.common)
-MESSAGE_SRC=		${PKGDIR}/MESSAGE.common
-.  endif
-.  if exists(${PKGDIR}/MESSAGE.${OPSYS})
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
-.  endif
-.  if exists(${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.  endif
-.elif exists(${PKGDIR}/MESSAGE)
+.  if exists(${PKGDIR}/MESSAGE)
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
+.  else
+.    if exists(${PKGDIR}/MESSAGE.common)
+MESSAGE_SRC=		${PKGDIR}/MESSAGE.common
+.    endif
+.    if exists(${PKGDIR}/MESSAGE.${OPSYS})
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
+.    endif
+.    if exists(${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.    endif
+.  endif
 .endif
 
 .if defined(MESSAGE_SRC)
