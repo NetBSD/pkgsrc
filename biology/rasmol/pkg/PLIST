@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/13 04:41:59 wiz Exp $
+bin/rasmol
+share/doc/rasmol/rasmol.hlp
+share/doc/rasmol/NOTICE
+share/doc/rasmol/manualA4.pdf.gz
+share/doc/rasmol/manualA4.ps.gz
+share/doc/rasmol/manualA4.rtf.gz
+share/doc/rasmol/manualUS.pdf.gz
+share/doc/rasmol/manualUS.ps.gz
+share/doc/rasmol/manualUS.rtf.gz
+share/doc/rasmol/refcardA4.pdf.gz
+share/doc/rasmol/refcardA4.ps.gz
+share/doc/rasmol/refcardA4.rtf.gz
+share/doc/rasmol/refcardUS.pdf.gz
+share/doc/rasmol/refcardUS.ps.gz
+share/doc/rasmol/refcardUS.rtf.gz
+@dirrm share/doc/rasmol
+share/examples/rasmol/1crn.pdb
+share/examples/rasmol/1gpd.pdb.gz
+share/examples/rasmol/1ldb.pdb.gz
+share/examples/rasmol/1ldm.pdb.gz
+share/examples/rasmol/3cro.pdb
+share/examples/rasmol/4hir.ent.gz
+share/examples/rasmol/4ins.CIF
+share/examples/rasmol/7lyz.pdb
+share/examples/rasmol/IUCR9800028.cif
+share/examples/rasmol/asprin.alc
+share/examples/rasmol/pdb2mcg.ent
+@dirrm share/examples/rasmol
+man/cat1/rasmol.0
