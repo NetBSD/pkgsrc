@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 1999/11/26 14:26:09 minoura Exp $
+# $NetBSD: Makefile,v 1.133 1999/12/23 03:24:58 itohy Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -109,6 +109,7 @@
     SUBDIR += tkman
     SUBDIR += tvtwm
     SUBDIR += unclutter
+    SUBDIR += uwm
 #    SUBDIR += viewfax
     SUBDIR += windowmaker
     SUBDIR += wmakerconf
