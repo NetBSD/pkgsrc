@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/09 11:06:06 markd Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/25 22:16:23 markd Exp $
 
 DISTNAME=		kile-1.6.1
 CATEGORIES=		editors kde
@@ -10,6 +10,7 @@ COMMENT=		LaTeX source editor - TeX shell - Gnuplot front end
 
 USE_BUILDLINK2=		yes
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 .include "../../graphics/kdegraphics3/buildlink2.mk"
