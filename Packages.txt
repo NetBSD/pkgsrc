@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.359 2004/09/19 20:13:26 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.360 2004/09/29 11:33:38 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -80,7 +80,7 @@ is a description of all the terminology used within this document:
    file so it can be installed on machines of the same machine architecture
    without the need to recompile. Packages are generated in
    /usr/pkgsrc/packages by the NetBSD package system; there is also an
-   archive on ftp.netbsd.org.
+   archive on ftp.NetBSD.org.
 
    Sometimes, this is referred to by the term "package" too,
    especially in the context of precompiled packages.
@@ -124,7 +124,7 @@ binary package that someone else already prepared for your type of machine.
  1.1 Where to get
  ================
 
-Precompiled packages are stored on ftp.netbsd.org and its mirrors in the
+Precompiled packages are stored on ftp.NetBSD.org and its mirrors in the
 directory /pub/NetBSD/packages for anon FTP access. Please pick the right
 subdirectory there as indicated by "uname -p". In that directory, there
 is a subdirectory for each category plus a subdirectory "All" which includes
@@ -149,7 +149,7 @@ If you have FTP access and you don't want to download the packages via FTP
 prior to installation, you can do this automatically by giving pkg_add an
 ftp-URL:
 
-	# pkg_add ftp://ftp.netbsd.org/pub/NetBSD/packages/<OS Ver>/<arch>/All/package.tgz
+	# pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OS Ver>/<arch>/All/package.tgz
 
 If there is any doubt, the uname utility can be used to determine the
 <OS Ver>, and <arch> by running "uname -rp".
@@ -194,7 +194,7 @@ There are three ways to get pkgsrc. Either as a tar file, via SUP, or
 via CVS. All three ways are described here.
 
 To get the package source going, you need to get the pkgsrc.tar.gz file
-from ftp://ftp.netbsd.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz and
+from ftp://ftp.NetBSD.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz and
 unpack it into /usr.
 
 As an alternative, you can get pkgsrc via the Software Update Protocol,
@@ -204,10 +204,10 @@ directory /usr/pkgsrc does exist. Then, simply start "sup -v
 /path/to/your/supfile".
 
 To get pkgsrc via CVS, make sure you have cvs installed. If not present on
-your system, it can be found as precompiled binary on ftp.netbsd.org.
+your system, it can be found as precompiled binary on ftp.NetBSD.org.
 To do an initial (full) checkout of pkgsrc, do the following steps:
 
-	% setenv CVSROOT anoncvs@anoncvs.netbsd.org:/cvsroot
+	% setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot
 	% setenv CVS_RSH ssh
 	% cd /usr
 	% cvs checkout -P pkgsrc
@@ -322,7 +322,7 @@ that's located on a remote FTP server, you can use the the "bin-install"
 target. This target will install a binary package - if available - via
 pkg_add, and do a "make package" else. The list of remote FTP sites
 searched is kept in the variable BINPKG_SITE, which defaults to
-ftp.netbsd.org. Any flags that should be added to pkg_add(8) can be put
+ftp.NetBSD.org. Any flags that should be added to pkg_add(8) can be put
 into BIN_INSTALL_FLAGS. See pkgsrc/mk/bsd.pkg.defaults.mk for more details.
 
 A final word of warning: If you setup a system that has a non-standard
@@ -552,7 +552,7 @@ The first step to do so is setting up a chroot sandbox, e.g. /usr/sandbox.
 Extract all sets from a NetBSD installation or doing a "make distribution
 DESTDIR=/usr/sandbox" in src/etc, also don't forget to install X - if you
 are a developer and want to upload the resulting binary packages to
-ftp.netbsd.org, make sure you are using the default X version for your
+ftp.NetBSD.org, make sure you are using the default X version for your
 architecture and release (up to 1.6, that is 3.3.6 for all architectures).
 Then, make sure the following items are present and properly configured:
 
@@ -575,7 +575,7 @@ Then, make sure the following items are present and properly configured:
  * create /usr/pkg (not part of default install)
    mkdir /usr/sandbox/usr/pkg
  * checkout pkgsrc from cvs, into /usr/sandbox/usr/pkgsrc
-   cvs -d cvs.netbsd.org:/cvsroot co pkgsrc
+   cvs -d cvs.NetBSD.org:/cvsroot co pkgsrc
    Do not mount/link this to the copy of your pkgsrc tree you do
    development in, as this will likely cause problems! 
  * /usr/pkgsrc/packages & .../distfiles (point outside of sandbox)
@@ -1090,27 +1090,6 @@ the three locations in which perl5 modules may be installed, and may be
 used by perl5 packages that don't have a packlist.  These three variables
 are also substituted for in the PLIST.
 
- 5.5 User Interaction
- ====================
-
-Occasionally, packages require interaction from the user, and this can be
-in a number of ways:
-
-+ help in fetching the distfiles
-+ help to configure the package before it is built
-+ help during the build process
-+ help during the installation of a package
-
-The INTERACTIVE_STAGE definition is provided, to notify the pkgsrc mechanism
-of an interactive stage which will be needed, and this should be set in the
-package's Makefile. e.g.
-
-INTERACTIVE_STAGE= build
-
-Multiple interactive stages can be specified:
-
-INTERACTIVE_STAGE= configure install
-
 
  6 Notes on fixes for packages
  =============================
@@ -1351,7 +1330,29 @@ PKG_SYSCONFDIR.${PKG_SYSCONFVAR}.  Users will typically want to set
 PKG_SYSCONFBASE to /etc, or to accept the default location of ${PREFIX}/etc.
 
 
- 6.6 Feedback to the author
+ 6.6 User Interaction
+ ====================
+
+Occasionally, packages require interaction from the user, and this can be
+in a number of ways:
+
++ help in fetching the distfiles
++ help to configure the package before it is built
++ help during the build process
++ help during the installation of a package
+
+The INTERACTIVE_STAGE definition is provided, to notify the pkgsrc mechanism
+of an interactive stage which will be needed, and this should be set in the
+package's Makefile. e.g.
+
+INTERACTIVE_STAGE= build
+
+Multiple interactive stages can be specified:
+
+INTERACTIVE_STAGE= configure install
+
+
+ 6.7 Feedback to the author
  ==========================
 
 If you have found any bugs in the package you make available, if you had to
@@ -1499,9 +1500,9 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    details.
   
    By default patch is given special args to make it fail if the
-   patches with some lines of fuzz. Please fix (regen) the patches
+   patches apply with some lines of fuzz. Please fix (regen) the patches
    so that they apply cleanly. The rationale behind this is that
-   patches that apply cleanly may end up being applied in the wrong
+   patches that don't apply cleanly may end up being applied in the wrong
    place, and cause severe harm there.
 
  * configure:
@@ -2362,7 +2363,7 @@ tcl and tk packages:
 
 You would like to download all the distfiles in a single batch from work or
 university, where you can't run a "make fetch". But there's no archive of
-the distfiles on ftp.netbsd.org and the one on ftp.freebsd.org contains
+the distfiles on ftp.NetBSD.org and the one on ftp.freebsd.org contains
 many distfiles for which there are no ports (yet).
 
 The answer here is to do a "make fetch-list" in /usr/pkgsrc, carry the
@@ -2452,7 +2453,7 @@ current CPU.
 Yes. We are using tech-pkg@NetBSD.org for discussing package related
 issues. To subscribe do:
 
-	% echo subscribe tech-pkg | mail majordomo@netbsd.org
+	% echo subscribe tech-pkg | mail majordomo@NetBSD.org
 
 
  11.11 How do i tell "make fetch" to do passive FTP?
@@ -2541,7 +2542,7 @@ In addition to the above DEPENDS line, this denotes that while a package will
 build against tiff>=3.5.4, at least version 3.6.1 is recommended.  RECOMMENDED
 entries will be turned into dependencies unless explicitly ignored (in which
 case a warning will be printed).  Packages that are built with recommendations
-ignored may not be uploaded to ftp.netbsd.org by developers and should not be
+ignored may not be uploaded to ftp.NetBSD.org by developers and should not be
 used across different systems that may have different versions of binary
 packages installed.
 
@@ -2626,7 +2627,7 @@ package's version number. If a package is already in pkgsrc at that time,
 the md5 checksum will no longer match. The correct way to work around this
 is to update the package's md5 checksum to match the package on the master
 site (beware, any mirrors may not be up to date yet!), and to remove the
-old distfile from ftp.netbsd.org's /pub/NetBSD/packages/distfiles directory.
+old distfile from ftp.NetBSD.org's /pub/NetBSD/packages/distfiles directory.
 Furthermore, a mail to the package's author seems appropriate making sure
 the distfile was really updated on purpose, and that no trojan horse or so
 crept in.
@@ -2747,7 +2748,7 @@ pkgsrc/security/audit-packages package.  It has two components:
      the NetBSD security officer and the NetBSD packages team, and is
      distributed from the NetBSD ftp server:
 
-	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities
+	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities
 
  (2) audit-packages, an easy way to audit the current machine, checking
      each vulnerability which is known. If a vulnerable package is
@@ -2784,7 +2785,7 @@ Note to package developers: When a vulnerability is found, this should
 be noted in localsrc/security/advisories/pkg-vulnerabilities, and after
 the commit of that file, it should be copied to both
 /pub/NetBSD/packages/distfiles/pkg-vulnerabilities and vulnerabilities
-on ftp.netbsd.org by localsrc/security/advisories/Makefile.  In addition,
+on ftp.NetBSD.org by localsrc/security/advisories/Makefile.  In addition,
 if a buildlink3.mk file exists for an affected package, bumping PKGREVISION
 and creating a corresponding BUILDLINK_RECOMMENDED.<pkg> entry should
 be considered. See section 8 for more information about writing
@@ -2903,7 +2904,7 @@ www/ap-aolserver, www/openacs. Try to be consistent with them.
 
 In order to use pkgsrc on a non-NetBSD operating system, you must first
 bootstrap the necessary utilities (BSD make, pkg_*, ...). See
-http://www.netbsd.org/Documentation/software/packages.html#bootstrap
+http://www.NetBSD.org/Documentation/software/packages.html#bootstrap
 for information on boostrapping.  Binary bootstrap-kits are available from that
 URL as well.  If your Operating System is not yet supported, we encourage you to
 port the bootstrap-kit and submit your changes.
@@ -3045,6 +3046,7 @@ will be carried into any binary package that is made from this pkgsrc
 entry. A "preserved" package will not be deleted using pkg_delete(1),
 unless the "-f" option is used.
 
+
  11.33 Packages containing perl scripts
  ======================================
 
@@ -3119,7 +3121,7 @@ Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
 
 If you want to use pkgsrc as non-root user, you can set some variables
 to make pkgsrc work under these conditions. Please see 
-http://mail-index.netbsd.org/tech-pkg/2003/09/27/0023.html
+http://mail-index.NetBSD.org/tech-pkg/2003/09/27/0023.html
 for more details.
 
 
@@ -3453,7 +3455,7 @@ is/does.
 Please note all package updates/additions in pkgsrc/doc/CHANGES! It's very
 important to keep this file up to date and conforming to the existing
 format, because it will be used by scripts to automatically update pages on
-www.netbsd.org and other sites. Additionally, check the pkgsrc/doc/TODO
+www.NetBSD.org and other sites. Additionally, check the pkgsrc/doc/TODO
 file and remove the entry for the package you updated, in case it was
 mentioned there.
 
@@ -3495,7 +3497,7 @@ stability is to be preferred above new and possibly untested features.
  1. Make a copy of the directory somewhere else.
  2. Remove all CVS dirs.
     Alternatively to the first two steps you can also do:
-	  cvs -d user@cvs.netbsd.org:/cvsroot export -D today pkgsrc/category/package
+	  cvs -d user@cvs.NetBSD.org:/cvsroot export -D today pkgsrc/category/package
     and use that for further work.
  3. Fix CATEGORIES and any DEPENDS paths that just did ../package
     instead of ../../category/package.
@@ -3801,7 +3803,7 @@ Appendix A: build logs
 Appendix B: Layout of the FTP server's package archive
 ======================================================
 
-Layout for precompiled binary packages on ftp.netbsd.org:
+Layout for precompiled binary packages on ftp.NetBSD.org:
 
 /pub/NetBSD/packages/
                 distfiles/
@@ -3864,7 +3866,7 @@ Layout for precompiled binary packages on ftp.netbsd.org:
 To create:
  - Run bulk build, see #3.2
  - Upload /usr/pkgsrc/packages to
-   ftp://ftp.netbsd.org/pub/NetBSD/packages/\
+   ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
 	pkgsrc-2004Q1/\				# pkgsrc-branch
 	`uname -s`-`uname -r`/			# OS & version
 	`uname -p`				# architecture
