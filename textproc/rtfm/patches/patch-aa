@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/17 23:35:42 hubertf Exp $
+
+--- rtfm.c.orig	Tue Jan 18 06:16:45 2000
++++ rtfm.c
+@@ -51,25 +51,24 @@
+ 
+ static int cflag, dflag, iflag, mflag, tflag, wflag;
+ 
+-/* From /usr/src/contrib/texinfo/info/filesys.h */
++/* From /usr/src/gnu/dist/texinfo/info/filesys.h */
+ const char *info_paths[] = {
+-	"/usr/local/info",
+-	"/usr/info",
+-	"/usr/local/lib/info",
++	"/usr/pkg/info",
++	"/usr/pkg/lib/info",
+ 	"/usr/lib/info",
+-	"/usr/local/gnu/info",
+-	"/usr/local/gnu/lib/info",
++	"/usr/pkg/gnu/info",
++	"/usr/pkg/gnu/lib/info",
+ 	"/usr/gnu/info",
+ 	"/usr/gnu/lib/info",
+ 	"/opt/gnu/info",
+ 	"/usr/share/info",
+ 	"/usr/share/lib/info",
+-	"/usr/local/share/info",
+-	"/usr/local/share/lib/info",
++	"/usr/pkg/share/info",
++	"/usr/pkg/share/lib/info",
+ 	"/usr/gnu/lib/emacs/info",
+-	"/usr/local/gnu/lib/emacs/info",
+-	"/usr/local/lib/emacs/info",
+-	"/usr/local/emacs/info",
++	"/usr/pkg/gnu/lib/emacs/info",
++	"/usr/pkg/lib/emacs/info",
++	"/usr/pkg/emacs/info",
+ 	".",
+ 	NULL
+ };

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/17 23:35:42 hubertf Exp $
+
+--- rtfm.1.orig	Tue Jan 18 06:17:36 2000
++++ rtfm.1
+@@ -37,7 +37,7 @@
+ .Nm
+ searches for
+ .Va keyword
+-in the FreeBSD manual pages and the GNU Texinfo pages.
++in the NetBSD manual pages and the GNU Texinfo pages.
+ .Pp
+ The following options are availible:
+ .Bl -tag -width indent
