@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2000/04/11 06:54:46 itohy Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/05/09 23:33:41 itohy Exp $
 bin/${PKGNAME}
 bin/gforth
 bin/gforthmi-0.4.0
 bin/gforthmi
-@unexec install-info --delete
+@unexec install-info --delete %D/info/gforth.info %D/info/dir
 info/gforth.info
 info/gforth.info-1
 info/gforth.info-2
@@ -13,9 +13,11 @@ info/gforth.info-5
 info/gforth.info-6
 info/gforth.info-7
 info/gforth.info-8
-@exec install-info
+@exec install-info %D/info/gforth.info %D/info/dir
 lib/gforth/0.4.0/gforth.fi
 man/man1/gforth.1
+share/emacs/site-lisp/gforth.el
+@unexec cd %D/share && rmdir -p emacs/site-lisp; :
 share/gforth/0.4.0/hash.fs
 share/gforth/0.4.0/kernel/aliases0.fs
 share/gforth/0.4.0/kernel/aliases.fs
@@ -153,9 +155,9 @@ share/gforth/0.4.0/moof-exm.fs
 share/gforth/0.4.0/@KERNEL_FI@
 share/gforth/0.4.0/TAGS
 share/gforth/site-forth/siteinit.fs
-@dirrm lib/gforth
 @dirrm lib/gforth/site-forth
 @dirrm lib/gforth/0.4.0
+@dirrm lib/gforth
 @dirrm share/gforth/site-forth
 @dirrm share/gforth/0.4.0/compat
 @dirrm share/gforth/0.4.0/test
