@@ -1,10 +1,15 @@
---- configure.BAK	Sun Oct 26 02:19:26 1997
-+++ configure	Sun Oct 26 02:20:57 1997
-@@ -1934,6 +1934,7 @@
+--- configure.orig	Wed Jul 15 10:03:01 1998
++++ configure	Wed Jul 15 10:06:03 1998
+@@ -2361,11 +2361,7 @@
+ # the other directories may have a better chance of containing a more recent
  # version.
  
- JD_Search_Dirs="$JD_Search_Dirs \
-+		$prefix/include,${prefix}/lib \
-                 /usr/local/include,/usr/local/lib \
- 		/usr/include,/usr/lib \
- 		/usr/include/slang,/usr/lib \
+-JD_Search_Dirs="$JD_Search_Dirs \
+-                /usr/local/include,/usr/local/lib \
+-		/usr/include,/usr/lib \
+-		/usr/include/slang,/usr/lib \
+-		/usr/include/slang,/usr/lib/slang"
++JD_Search_Dirs="$prefix/include,$prefix/lib"
+ 
+ echo looking for the SLANG library
+ 
