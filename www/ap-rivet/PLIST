@@ -1,0 +1,121 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/27 23:49:49 minskim Exp $
+lib/httpd/mod_rivet.so
+lib/rivet/.OLDEntries
+lib/rivet/CVS/Entries
+lib/rivet/CVS/Repository
+lib/rivet/CVS/Root
+lib/rivet/README
+lib/rivet/init.tcl
+lib/rivet/packages/.OLDEntries
+lib/rivet/packages/CVS/Entries
+lib/rivet/packages/CVS/Repository
+lib/rivet/packages/CVS/Root
+lib/rivet/packages/README
+lib/rivet/packages/commserver/.OLDEntries
+lib/rivet/packages/commserver/CVS/Entries
+lib/rivet/packages/commserver/CVS/Repository
+lib/rivet/packages/commserver/CVS/Root
+lib/rivet/packages/commserver/commserver.tcl
+lib/rivet/packages/commserver/server.tcl
+lib/rivet/packages/dio/.OLDEntries
+lib/rivet/packages/dio/CVS/Entries
+lib/rivet/packages/dio/CVS/Repository
+lib/rivet/packages/dio/CVS/Root
+lib/rivet/packages/dio/dio.tcl
+lib/rivet/packages/dio/dio_Mysql.tcl
+lib/rivet/packages/dio/dio_Postgresql.tcl
+lib/rivet/packages/dio/dio_Sqlite.tcl
+lib/rivet/packages/dio/diodisplay.tcl
+lib/rivet/packages/dio/pkgIndex.tcl
+lib/rivet/packages/dtcl/.OLDEntries
+lib/rivet/packages/dtcl/CVS/Entries
+lib/rivet/packages/dtcl/CVS/Repository
+lib/rivet/packages/dtcl/CVS/Root
+lib/rivet/packages/dtcl/dtcl.tcl
+lib/rivet/packages/dtcl/pkgIndex.tcl
+lib/rivet/packages/form/.OLDEntries
+lib/rivet/packages/form/CVS/Entries
+lib/rivet/packages/form/CVS/Repository
+lib/rivet/packages/form/CVS/Root
+lib/rivet/packages/form/form.tcl
+lib/rivet/packages/form/pkgIndex.tcl
+lib/rivet/packages/rivet/.OLDEntries
+lib/rivet/packages/rivet/CVS/Entries
+lib/rivet/packages/rivet/CVS/Repository
+lib/rivet/packages/rivet/CVS/Root
+lib/rivet/packages/rivet/librivet.so
+lib/rivet/packages/rivet/librivetparser.so
+lib/rivet/packages/rivet/pkgIndex.tcl
+lib/rivet/packages/session/.OLDEntries
+lib/rivet/packages/session/CVS/Entries
+lib/rivet/packages/session/CVS/Repository
+lib/rivet/packages/session/CVS/Root
+lib/rivet/packages/session/README.txt
+lib/rivet/packages/session/pkgIndex.tcl
+lib/rivet/packages/session/session-class.tcl
+lib/rivet/packages/session/session-create.sql
+lib/rivet/packages/session/session-demo.rvt
+lib/rivet/packages/session/session-drop.sql
+lib/rivet/packages/session/session-httpd.conf
+lib/rivet/packages/simpledb/.OLDEntries
+lib/rivet/packages/simpledb/CVS/Entries
+lib/rivet/packages/simpledb/CVS/Repository
+lib/rivet/packages/simpledb/CVS/Root
+lib/rivet/packages/simpledb/pkgIndex.tcl
+lib/rivet/packages/simpledb/simpledb.tcl
+lib/rivet/packages/simpledb/simpledb.test
+lib/rivet/packages/tclrivet/.OLDEntries
+lib/rivet/packages/tclrivet/CVS/Entries
+lib/rivet/packages/tclrivet/CVS/Repository
+lib/rivet/packages/tclrivet/CVS/Root
+lib/rivet/packages/tclrivet/README
+lib/rivet/packages/tclrivet/parse.tcl
+lib/rivet/packages/tclrivet/pkgIndex.tcl
+lib/rivet/packages/tclrivet/tclrivet.tcl
+lib/rivet/packages/tclrivet/tclrivetparser.tcl
+lib/rivet/pkgIndex.tcl
+lib/rivet/rivet-tcl/.OLDEntries
+lib/rivet/rivet-tcl/CVS/Entries
+lib/rivet/rivet-tcl/CVS/Repository
+lib/rivet/rivet-tcl/CVS/Root
+lib/rivet/rivet-tcl/README
+lib/rivet/rivet-tcl/cookie.tcl
+lib/rivet/rivet-tcl/debug.tcl
+lib/rivet/rivet-tcl/html.tcl
+lib/rivet/rivet-tcl/import_keyvalue_pairs.tcl
+lib/rivet/rivet-tcl/import_switch_args.tcl
+lib/rivet/rivet-tcl/incr0.tcl
+lib/rivet/rivet-tcl/lassign.tcl
+lib/rivet/rivet-tcl/lempty.tcl
+lib/rivet/rivet-tcl/lmatch.tcl
+lib/rivet/rivet-tcl/load_cookies.tcl
+lib/rivet/rivet-tcl/load_response.tcl
+lib/rivet/rivet-tcl/parray.tcl
+lib/rivet/rivet-tcl/random.tcl
+lib/rivet/rivet-tcl/read_file.tcl
+lib/rivet/rivet-tcl/rivet_command_document.tcl
+lib/rivet/rivet-tcl/tclIndex
+lib/rivet/rivet-tcl/wrap.tcl
+@dirrm lib/rivet/rivet-tcl/CVS
+@dirrm lib/rivet/rivet-tcl
+@dirrm lib/rivet/packages/tclrivet/CVS
+@dirrm lib/rivet/packages/tclrivet
+@dirrm lib/rivet/packages/simpledb/CVS
+@dirrm lib/rivet/packages/simpledb
+@dirrm lib/rivet/packages/session/CVS
+@dirrm lib/rivet/packages/session
+@dirrm lib/rivet/packages/rivet/CVS
+@dirrm lib/rivet/packages/rivet
+@dirrm lib/rivet/packages/form/CVS
+@dirrm lib/rivet/packages/form
+@dirrm lib/rivet/packages/dtcl/CVS
+@dirrm lib/rivet/packages/dtcl
+@dirrm lib/rivet/packages/dio/CVS
+@dirrm lib/rivet/packages/dio
+@dirrm lib/rivet/packages/commserver/CVS
+@dirrm lib/rivet/packages/commserver
+@dirrm lib/rivet/packages/CVS
+@dirrm lib/rivet/packages
+@dirrm lib/rivet/CVS
+@dirrm lib/rivet
+@comment in www/apache: @dirrm lib/httpd
