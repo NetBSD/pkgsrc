@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/09/20 11:33:47 itojun Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/09/29 15:42:25 seb Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -10,15 +10,17 @@ lib/libcurl.a
 lib/libcurl.la
 lib/libcurl.so
 lib/libcurl.so.2
-lib/libcurl.so.2.1
+lib/libcurl.so.2.2
 man/man1/curl.1
 man/man1/curl-config.1
 man/man3/curl_easy_cleanup.3
+man/man3/curl_easy_duphandle.3
 man/man3/curl_easy_getinfo.3
 man/man3/curl_easy_init.3
 man/man3/curl_easy_perform.3
 man/man3/curl_easy_setopt.3
 man/man3/curl_escape.3
+man/man3/curl_formadd.3
 man/man3/curl_formfree.3
 man/man3/curl_formparse.3
 man/man3/curl_getdate.3
