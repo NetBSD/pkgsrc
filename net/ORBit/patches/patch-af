@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2002/04/04 08:08:27 itohy Exp $
+$NetBSD: patch-af,v 1.8 2003/07/11 23:38:46 grant Exp $
 
 --- src/IIOP/Makefile.in.orig	Mon Jan  7 18:23:54 2002
 +++ src/IIOP/Makefile.in	Thu Apr  4 12:30:24 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.7 2002/04/04 08:08:27 itohy Exp $
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
 -LIBS = @LIBS@
-+LIBS = @LIBS@ -lpthread
++LIBS = @LIBS@ $(PTHREAD_LDFLAGS)
  @HAVE_HOSTS_ACCESS_TRUE@libIIOP_la_DEPENDENCIES =  $(addsuffix .lo, \
  @HAVE_HOSTS_ACCESS_TRUE@$(basename $(filter %.o, $(shell ar t \
  @HAVE_HOSTS_ACCESS_TRUE@$(LIBWRAP_PATH)))))
