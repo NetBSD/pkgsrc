@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/04/29 16:01:17 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/06/17 14:32:28 jtb Exp $
 bin/${SWIPL}
 bin/plld
 bin/plrc
@@ -53,6 +53,7 @@ lib/${SWILIBDIR}/library/oset.pl
 lib/${SWILIBDIR}/library/qsave.pl
 lib/${SWILIBDIR}/library/quintus.pl
 lib/${SWILIBDIR}/library/readln.pl
+lib/${SWILIBDIR}/library/readutil.pl
 lib/${SWILIBDIR}/library/shell.pl
 lib/${SWILIBDIR}/library/shlib.pl
 lib/${SWILIBDIR}/library/statistics.pl

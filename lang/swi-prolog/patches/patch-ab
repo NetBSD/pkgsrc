@@ -1,13 +1,156 @@
-$NetBSD: patch-ab,v 1.4 2001/05/22 01:21:17 jtb Exp $
+$NetBSD: patch-ab,v 1.5 2001/06/17 14:32:28 jtb Exp $
 
---- src/configure.orig	Tue May 22 01:17:01 2001
+--- src/configure.orig	Wed May 23 12:55:57 2001
 +++ src/configure
-@@ -563,7 +563,7 @@
+@@ -564,7 +564,7 @@
  
  EXTRAOBJ=""
  INSTALLTARGET=dv-install
 -PL=pl
 +#PL=pl
+ PLLIB=libpl.a
  RT=""
  PLVERSION=`cat ../VERSION`
+@@ -761,40 +761,6 @@
+   GCC=
+ fi
  
+-ac_test_CFLAGS="${CFLAGS+set}"
+-ac_save_CFLAGS="$CFLAGS"
+-CFLAGS=
+-echo $ac_n "checking whether ${CC-cc} accepts -g""... $ac_c" 1>&6
+-echo "configure:769: checking whether ${CC-cc} accepts -g" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_cc_g'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  echo 'void f(){}' > conftest.c
+-if test -z "`${CC-cc} -g -c conftest.c 2>&1`"; then
+-  ac_cv_prog_cc_g=yes
+-else
+-  ac_cv_prog_cc_g=no
+-fi
+-rm -f conftest*
+-
+-fi
+-
+-echo "$ac_t""$ac_cv_prog_cc_g" 1>&6
+-if test "$ac_test_CFLAGS" = set; then
+-  CFLAGS="$ac_save_CFLAGS"
+-elif test $ac_cv_prog_cc_g = yes; then
+-  if test "$GCC" = yes; then
+-    CFLAGS="-g -O2"
+-  else
+-    CFLAGS="-g"
+-  fi
+-else
+-  if test "$GCC" = yes; then
+-    CFLAGS="-O2"
+-  else
+-    CFLAGS=
+-  fi
+-fi
+ 
+ # Extract the first word of "ranlib", so it can be a program name with args.
+ set dummy ranlib; ac_word=$2
+@@ -2223,14 +2189,14 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-echo $ac_n "checking for main in -lncurses""... $ac_c" 1>&6
+-echo "configure:2228: checking for main in -lncurses" >&5
+-ac_lib_var=`echo ncurses'_'main | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for main in -lcurses""... $ac_c" 1>&6
++echo "configure:2228: checking for main in -lcurses" >&5
++ac_lib_var=`echo curses'_'main | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lncurses  $LIBS"
++LIBS="-lcurses  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 2236 "configure"
+ #include "confdefs.h"
+@@ -2254,19 +2220,19 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-    ac_tr_lib=HAVE_LIB`echo ncurses | sed -e 's/[^a-zA-Z0-9_]/_/g' \
++    ac_tr_lib=HAVE_LIB`echo curses | sed -e 's/[^a-zA-Z0-9_]/_/g' \
+     -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
+   cat >> confdefs.h <<EOF
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lncurses $LIBS"
++  LIBS="-lcurses $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-if test ! "$ac_cv_lib_ncurses_main" = "yes"; then
++if test ! "$ac_cv_lib_curses_main" = "yes"; then
+   echo $ac_n "checking for main in -lcurses""... $ac_c" 1>&6
+ echo "configure:2272: checking for main in -lcurses" >&5
+ ac_lib_var=`echo curses'_'main | sed 'y%./+-%__p_%'`
+@@ -2311,7 +2277,7 @@
+ fi
+ 
+ fi
+-if test ! "$ac_cv_lib_ncurses_main" = "yes" -a \
++if test ! "$ac_cv_lib_curses_main" = "yes" -a \
+         ! "$ac_cv_lib_curses_main" = "yes"; then
+   echo $ac_n "checking for main in -ltermcap""... $ac_c" 1>&6
+ echo "configure:2318: checking for main in -ltermcap" >&5
+@@ -2479,14 +2445,14 @@
+ fi
+ 
+   if test ! "$ac_cv_lib_readline_main" = "yes"; then
+-    echo $ac_n "checking for main in -lncurses""... $ac_c" 1>&6
+-echo "configure:2484: checking for main in -lncurses" >&5
+-ac_lib_var=`echo ncurses'_'main | sed 'y%./+-%__p_%'`
++    echo $ac_n "checking for main in -lcurses""... $ac_c" 1>&6
++echo "configure:2484: checking for main in -lcurses" >&5
++ac_lib_var=`echo curses'_'main | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lncurses  $LIBS"
++LIBS="-lcurses  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 2492 "configure"
+ #include "confdefs.h"
+@@ -2510,19 +2476,19 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-    ac_tr_lib=HAVE_LIB`echo ncurses | sed -e 's/[^a-zA-Z0-9_]/_/g' \
++    ac_tr_lib=HAVE_LIB`echo curses | sed -e 's/[^a-zA-Z0-9_]/_/g' \
+     -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
+   cat >> confdefs.h <<EOF
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lncurses $LIBS"
++  LIBS="-lcurses $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-    if test ! "$ac_cv_lib_ncurses_main" = "yes"; then
++    if test ! "$ac_cv_lib_curses_main" = "yes"; then
+       echo $ac_n "checking for main in -lcurses""... $ac_c" 1>&6
+ echo "configure:2528: checking for main in -lcurses" >&5
+ ac_lib_var=`echo curses'_'main | sed 'y%./+-%__p_%'`
+@@ -2567,7 +2533,7 @@
+ fi
+ 
+     fi
+-    if test "$ac_cv_lib_ncurses_main" = "yes" || test "$ac_cv_lib_curses_main" = "yes"; then
++    if test "$ac_cv_lib_curses_main" = "yes" || test "$ac_cv_lib_curses_main" = "yes"; then
+       echo "Found curses library.  See if -lreadline works now"
+       unset ac_cv_lib_readline_main
+       echo $ac_n "checking for main in -lreadline""... $ac_c" 1>&6
