@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2003/02/17 14:34:00 taya Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/02/18 14:56:02 jmmv Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -334,6 +334,7 @@ share/sounds/galeon/clicked.wav
 @exec env GCONF_CONFIG_SOURCE=xml::${X11PREFIX}/etc/gconf/gconf.xml.defaults gconftool-1 --makefile-install-rule ${X11PREFIX}/etc/gconf/schemas/galeon.schemas
 @dirrm share/sounds/galeon
 @dirrm share/omf/galeon
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/galeon-manual/C/stylesheet-images
 @dirrm share/gnome/help/galeon-manual/C/figures
 @dirrm share/gnome/help/galeon-manual/C
