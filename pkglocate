@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-#	$NetBSD: pkglocate,v 1.6 2001/04/03 09:28:32 agc Exp $
+#	$NetBSD: pkglocate,v 1.7 2001/11/07 22:11:13 agc Exp $
 #
 #-
 # Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -58,11 +58,11 @@ esac
 approx=""
 igncase=""
 verbose=no
-files='*/pkg/DESCR'
+files='*/DESCR'
 while [ $# -gt 1 ]; do
 	case $1 in
 	-i)	igncase="-i" ;;
-	-f)	files='*/pkg/PLIST*' ;;
+	-f)	files='*/PLIST*' ;;
 	-p)	if [ "$grepname" = "agrep" ]; then approx="-p"; fi ;;
 	-v)	verbose=yes ;;
 	*)	break ;;
