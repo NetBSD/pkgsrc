@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/16 20:23:59 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 09:07:57 abs Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-c++-3.3
+PKGREVISION=		1
 COMMENT=		GNU Compiler Collection, c++ Compiler
 
 .include "../gcc3-c/buildaddon.mk"
