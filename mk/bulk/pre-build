@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.27.2.4 2003/08/31 06:37:16 jlam Exp $
+# $NetBSD: pre-build,v 1.27.2.5 2003/08/31 06:39:36 jlam Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -79,18 +79,21 @@ if [ -d ${PKG_DBDIR} ]; then
 	do
 		case "${DEPOTBASE}" in
 		"${PKG_DBDIR}")
+			if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+				echo pkg_delete -r $pkg
+				pkg_delete -K ${PKG_DBDIR} -r $pkg
+			fi
 			;;
 		*)
 			if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
 				echo pkg_delete -r $pkg
 				pkg_delete -K ${DEPOTBASE} -r $pkg
+			elif `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+				echo pkg_delete -r $pkg
+				pkg_delete -K ${PKG_DBDIR} -r $pkg
 			fi
 			;;
 		esac
-		if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
-			echo pkg_delete -r $pkg
-			pkg_delete -K ${PKG_DBDIR} -r $pkg
-		fi
 	done
 	# this should have removed everything.  Now force any broken pkgs
 	# to deinstall
@@ -98,18 +101,21 @@ if [ -d ${PKG_DBDIR} ]; then
 	do
 		case "${DEPOTBASE}" in
 		"${PKG_DBDIR}")
+			if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+				echo pkg_delete -f $pkg
+				pkg_delete -K ${PKG_DBDIR} -f $pkg
+			fi
 			;;
 		*)
 			if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
 				echo pkg_delete -f $pkg
 				pkg_delete -K ${DEPOTBASE} -f $pkg
+			elif `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+				echo pkg_delete -f $pkg
+				pkg_delete -K ${PKG_DBDIR} -f $pkg
 			fi
 			;;
 		esac
-		if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
-			echo pkg_delete -f $pkg
-			pkg_delete -K ${PKG_DBDIR} -f $pkg
-		fi
 	done
 	
 	# We've tried our best to get rid of the pkgs, now do it the hard way
