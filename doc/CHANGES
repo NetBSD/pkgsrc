@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4936 2004/02/21 07:24:28 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4937 2004/02/21 07:44:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Downgraded jabberd to 1.4.2 [xtraeme 2004-02-21]
 	Added py-biggles-1.6.3 [minskim 2004-02-21]
 	Added quake3server-osp-1.03a [xtraeme 2004-02-21]
+	Added rtcw-1.33 [xtraeme 2004-02-21]
