@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2003/03/24 00:57:47 grant Exp $
+# $NetBSD: Makefile.common,v 1.15 2003/06/23 14:23:20 jschauma Exp $
 
 DISTNAME=		mysql-3.23.49
 CATEGORIES=		databases
@@ -6,7 +6,7 @@ MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-3.23/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-3.23/ \
 			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-3.23/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
 
 EXTRACT_USING_PAX=	# defined

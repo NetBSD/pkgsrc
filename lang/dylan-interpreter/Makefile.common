@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/05/05 16:36:35 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/06/23 14:23:17 jschauma Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -13,7 +13,7 @@ MASTER_SITES=		ftp://berlin.ccc.de/pub/gd/src/	\
 			ftp://ftp.kddlabs.co.jp/lang/dylan/gwydion/src/ \
 			ftp://gd.tuwien.ac.at/languages/gwydiondylan/src/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.gwydiondylan.org/
 COMMENT=		functional language
 
