@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/07/06 01:33:43 taya Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/10 19:14:14 wiz Exp $
 
 DISTNAME=	skipstone-0.8.3
 CATEGORIES=	www
@@ -8,17 +8,23 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.muhri.net/skipstone/
 COMMENT=	GTK+ web browser that embeds Mozilla's renderer
 
-DEPENDS+=	mozilla>=1.0:../../www/mozilla
+BROKEN=		Does not compile. No new version currently available.
 
-EVAL_PREFIX+=	MOZ_DIR=mozilla
-MOZ_INCDIR=     ${MOZ_DIR}/include/mozilla
-MOZ_LIBDIR=     ${MOZ_DIR}/lib/mozilla
+USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--with-mozilla-includes=${MOZ_INCDIR} \
-		--with-mozilla-libs=${MOZ_LIBDIR}
-LDFLAGS+= -Wl,-R${MOZ_LIBDIR}
+		--with-mozilla-includes=${BUILDLINK_PREFIX.mozilla}/include/mozilla \
+		--with-mozilla-libs=${BUILDLINK_PREFIX.mozilla}/lib/mozilla
+LDFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.mozilla}/lib/mozilla
 
+# for mozilla-stable (1.0 series)
+#CONFIGURE_ARGS=	--prefix=${PREFIX} \
+#		--with-mozilla-includes=${BUILDLINK_PREFIX.mozilla-stable}/include/mozilla-stable \
+#		--with-mozilla-libs=${BUILDLINK_PREFIX.mozilla-stable}/lib/mozilla-stable
+#LDFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.mozilla-stable}/lib/mozilla-stable
+
+#.include "../../www/mozilla-stable/buildlink2.mk"
+.include "../../www/mozilla/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
