@@ -1,0 +1,50 @@
+$NetBSD: patch-ah,v 1.1 1998/09/04 18:33:48 christos Exp $
+
+*** old/config.h-dist	Fri Sep  4 11:21:28 1998
+--- config.h-dist	Fri Sep  4 11:21:28 1998
+***************
+*** 3,15 ****
+  /* Default names and locations for files */
+  #define MAILRC		".mushrc"
+  #define ALTERNATE_RC	".mailrc"
+! #define DEFAULT_RC	"/usr/lib/Mushrc"
+! #define ALT_DEF_RC	"/usr/lib/Mail.rc"
+  #define SIGNATURE	".signature"
+  #define FORTUNE		"/usr/games/fortune"
+! #define COMMAND_HELP	"/usr/lib/cmd_help"
+  #ifdef SUNTOOL
+! #    define TOOL_HELP	"/usr/lib/tool_help"
+  #endif /* SUNTOOL */
+  #define ALTERNATE_HOME	"/tmp"       /* Path must be read/write to EVERYONE */
+  #define EDFILE  	".edXXXXXX"  /* file/pathname added to user's "home" */
+--- 3,15 ----
+  /* Default names and locations for files */
+  #define MAILRC		".mushrc"
+  #define ALTERNATE_RC	".mailrc"
+! #define DEFAULT_RC	"__PREFIX/etc/Mushrc"
+! #define ALT_DEF_RC	"/etc/Mail.rc"
+  #define SIGNATURE	".signature"
+  #define FORTUNE		"/usr/games/fortune"
+! #define COMMAND_HELP	"__PREFIX/share/misc/cmd_help"
+  #ifdef SUNTOOL
+! #    define TOOL_HELP	"__PREFIX/share/misc/tool_help"
+  #endif /* SUNTOOL */
+  #define ALTERNATE_HOME	"/tmp"       /* Path must be read/write to EVERYONE */
+  #define EDFILE  	".edXXXXXX"  /* file/pathname added to user's "home" */
+***************
+*** 112,118 ****
+  /*
+   * If you are not using MMDF, check these definitions.
+   */
+! #ifdef __FreeBSD__
+  #define MAIL_DELIVERY	"/usr/sbin/sendmail -i" /* "-i" works like "-oi" */
+  #else
+  #define MAIL_DELIVERY	"/usr/lib/sendmail -i" /* "-i" works like "-oi" */
+--- 113,119 ----
+  /*
+   * If you are not using MMDF, check these definitions.
+   */
+! #ifdef BSD44
+  #define MAIL_DELIVERY	"/usr/sbin/sendmail -i" /* "-i" works like "-oi" */
+  #else
+  #define MAIL_DELIVERY	"/usr/lib/sendmail -i" /* "-i" works like "-oi" */
