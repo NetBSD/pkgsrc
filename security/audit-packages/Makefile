@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/02/09 03:56:34 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2004/04/09 15:30:57 jschauma Exp $
 
 DISTNAME=	audit-packages-1.29
 CATEGORIES=	security pkgtools
@@ -46,7 +46,11 @@ do-build:
 			-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'	\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
+.if ${OPSYS} == "IRIX"
+	${CP} ${FILESDIR}/audit-packages.0 ${WRKSRC}/audit-packages.0
+.else
 	${NROFF} ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
+.endif
 
 do-install:
 	@for f in audit-packages download-vulnerability-list; do	\
