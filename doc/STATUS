@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.27 2004/03/19 01:50:04 danw Exp $
+$NetBSD: STATUS,v 1.28 2004/04/15 02:19:17 xtraeme Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -67,8 +67,9 @@ print/xpdf                 Y                        Y
 security/openssh           Y                 Y      Y                  Y
 security/openssl           Y                 Y      Y        N         Y
 shells/tcsh                Y        Y        Y      Y        Y         Y
-wm/blackbox                Y                 Y      Y
+wm/blackbox                Y        Y        Y      Y
 www/apache                 Y        Y        Y      Y        Y         Y
+www/firefox-gtk2		    Y	
 www/links                  Y        Y        Y      Y                  Y
 www/lynx                   Y        Y        N*     Y                  Y
 ---------------------------------------------------------------------------
@@ -97,7 +98,7 @@ lang/sun-j*                                         Y
 lang/wonka
 math/gnumeric
 misc/openoffice
-www/mozilla                                         Y                  Y
+www/mozilla 			    Y               Y                  Y
 www/opera
 ---------------------------------------------------------------------------
 'fully supported'
