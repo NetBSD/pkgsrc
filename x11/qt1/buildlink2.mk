@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/20 14:00:41 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/14 19:38:06 jlam Exp $
 
 .if !defined(QT1_BUILDLINK2_MK)
 QT1_BUILDLINK2_MK=	# defined
@@ -15,13 +15,14 @@ BUILDLINK_FILES.qt1+=		qt1/lib/libqt.*
 QTDIR=		${BUILDLINK_PREFIX.qt1}/qt1
 
 BUILDLINK_CPPFLAGS.qt1=		-I${QTDIR}/include
-BUILDLINK_LDFLAGS.qt1=		-L${QTDIR}/lib -Wl,-R${QTDIR}/lib
+BUILDLINK_LDFLAGS.qt1=		-L${QTDIR}/lib -Wl,${RPATH_FLAG}${QTDIR}/lib
+FIX_RPATH+=			BUILDLINK_LDFLAGS.qt1
 
 CONFIGURE_ENV+=		QTDIR="${QTDIR}"
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
 MAKE_ENV+=		QTDIR="${QTDIR}"
 MAKE_ENV+=		MOC="${QTDIR}/bin/moc"
-LDFLAGS+=		-Wl,-R${QTDIR}/lib
+LDFLAGS+=		-Wl,${RPATH_FLAG}${QTDIR}/lib
 
 BUILDLINK_TARGETS+=	qt1-buildlink
 

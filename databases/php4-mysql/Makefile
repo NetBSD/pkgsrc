@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/02 23:35:43 lukem Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/14 19:37:35 jlam Exp $
 
 MODNAME=		mysql
 CATEGORIES+=		databases
@@ -11,7 +11,7 @@ USE_BUILDLINK2=		# defined
 
 EVAL_PREFIX+=		MYSQLDIR=mysql-client
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${MYSQLDIR}
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib/mysql
+LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib/mysql
 
 .include "../../databases/mysql-client/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

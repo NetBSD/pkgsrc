@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/10/20 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2003/03/14 19:38:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -26,7 +26,10 @@ CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
+		all_libraries="${KDE_LDFLAGS}"
+
+FIX_RPATH+=	KDE_LDFLAGS
+KDE_LDFLAGS=	-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/21 15:29:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/14 19:37:58 jlam Exp $
 #
 
 DISTNAME=	kworldwatch-0.6
@@ -24,7 +24,10 @@ CONFIGURE_ARGS+=--datadir=${BUILDLINK_PREFIX.kdebase}/share/kde \
 		--enable-path-check
 CONFIGURE_ENV=	KDEDIR=${BUILDLINK_PREFIX.kdebase} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
+		all_libraries="${KDE_LDFLAGS}"
+
+FIX_RPATH+=	KDE_LDFLAGS
+KDE_LDFLAGS=	-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/kdebase/buildlink2.mk"

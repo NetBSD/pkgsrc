@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/12/08 02:17:45 salo Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/14 19:37:32 jlam Exp $
 #
 
 DISTNAME=	fugu-1.0
@@ -15,7 +15,7 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE= 	YES
 CONFIGURE_ENV+=	vi_cv_path_python=${PYTHONBIN}
 LDFLAGS+=	-L${BUILDLINK_PREFIX.py-Pmw}/lib \
-		-Wl,-R${BUILDLINK_PREFIX.py-Pmw}/lib
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.py-Pmw}/lib
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.py-Pmw}/include \
 		-I${BUILDLINK_PREFIX.rsaref}/include/rsaref \
 		-I${BUILDLINK_PREFIX.rsaref}/include

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/03/12 21:02:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.49 2003/03/14 19:37:50 jlam Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -23,7 +23,10 @@ CONFIGURE_ARGS=	"--with-qt-dir=${QT1DIR}/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${KDEBASEDIR} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
+		all_libraries="${KDE_LDFLAGS}"
+
+FIX_RPATH+=	KDE_LDFLAGS
+KDE_LDFLAGS=	-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
 .include "../../mk/bsd.prefs.mk"
 

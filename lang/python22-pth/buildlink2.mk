@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/10/25 10:48:47 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/14 19:37:45 jlam Exp $
 
 .if !defined(PYTHON22_BUILDLINK2_MK)
 PYTHON22_BUILDLINK2_MK=	# defined
@@ -25,7 +25,8 @@ BUILDLINK_CPPFLAGS.python22-pth+= \
 	-I${BUILDLINK_PREFIX.python22-pth}/include/python2p2
 BUILDLINK_LDFLAGS.python22-pth+= \
 	-L${BUILDLINK_PREFIX.python22-pth}/lib/python2p2/config		\
-	-Wl,-R${BUILDLINK_PREFIX.python22-pth}/lib/python2p2/config
+	-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.python22-pth}/lib/python2p2/config
+FIX_RPATH+=	BUILDLINK_LDFLAGS.python22-pth
 
 BUILDLINK_TARGETS+=	python22-pth-buildlink
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/30 00:08:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/14 19:37:37 jlam Exp $
 
 DISTNAME=	TeXmacs-1.0.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -19,7 +19,7 @@ USE_GMAKE=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-LDFLAGS+=	-Wl,-R${PREFIX}/libexec/${PKGNAME}/lib
+LDFLAGS+=	-Wl,${RPATH_FLAG}${PREFIX}/libexec/${PKGNAME}/lib
 
 PKG_DOCDIR=	${PREFIX}/share/doc/TeXmacs
 PKG_CXXFLAGS=	-DPKG_DOCDIR=\"\\\"${PKG_DOCDIR}\\\"\"

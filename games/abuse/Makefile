@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/11/29 01:12:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/14 19:37:37 jlam Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -13,7 +13,7 @@ COMMENT=		Full color 320x200 arcade quality platform shooter
 
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${X11BASE}/lib"
+CONFIGURE_ENV+=		LDFLAGS="${X11_LDFLAGS}"
 USE_GMAKE=		yes
 
 NOT_FOR_PLATFORM=	NetBSD-*-arm32

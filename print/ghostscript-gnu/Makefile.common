@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2002/09/18 22:17:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/03/14 19:37:54 jlam Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.05
@@ -51,7 +51,7 @@ MAKE_FLAGS+=		XCFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		XLDFLAGS="${LDFLAGS}"
 
 .if ${OPSYS} == "SunOS"
-LDFLAGS+=		-L${ZOULARISBASE}/lib -Wl,-R${ZOULARISBASE}/lib
+LDFLAGS+=		-L${ZOULARISBASE}/lib -Wl,${RPATH_FLAG}${ZOULARISBASE}/lib
 .endif
 
 REPLACE_PERL=		lib/fixmswrd.pl

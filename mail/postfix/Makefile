@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2003/03/07 03:08:33 taca Exp $
+# $NetBSD: Makefile,v 1.86 2003/03/14 19:37:47 jlam Exp $
 
 DISTNAME=	postfix-2.0.6
 CATEGORIES=	mail
@@ -26,6 +26,8 @@ CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 
 .include "../../mk/bsd.prefs.mk"
 
+FIX_RPATH+=	AUXLIBS
+
 #.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
 #PATCHFILES+=		tls+ipv6-1.13-pf-2.0.6.patch.gz
 #PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.13/
@@ -34,7 +36,7 @@ CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 #
 #CCARGS+=		-DHAS_SSL
 #AUXLIBS+=		-L${BUILDLINK_PREFIX.openssl}/lib	\
-#			-Wl,-R${BUILDLINK_PREFIX.openssl}/lib	\
+#			-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib \
 #			-lssl -lcrypto
 #BUILD_DEFS+=		POSTFIX_USE_TLS
 #
@@ -46,7 +48,7 @@ CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 .include "../../devel/pcre/buildlink2.mk"
 CCARGS+=	-DHAS_PCRE
 AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib		\
-		-Wl,-R${BUILDLINK_PREFIX.pcre}/lib	\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib	\
 		-lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
 .else
@@ -57,7 +59,7 @@ CCARGS+=	-DNO_PCRE
 .include "../../databases/openldap/buildlink2.mk"
 CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib	\
-		-Wl,-R${BUILDLINK_PREFIX.openldap}/lib	\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
 BUILD_DEFS+=	POSTFIX_USE_LDAP
 .endif
@@ -66,7 +68,7 @@ BUILD_DEFS+=	POSTFIX_USE_LDAP
 .include "../../databases/mysql-client/buildlink2.mk"
 CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
-		-Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
 		-lmysqlclient -lz -lm
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
@@ -79,7 +81,7 @@ BUILD_DEFS+=	POSTFIX_USE_MYSQL
 #
 #CCARGS+=	-DHAS_SSL
 #AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib	\
-#		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib	\
+#		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
 #		-lssl -lcrypto
 #BUILD_DEFS+=	POSTFIX_USE_TLS
 #
@@ -91,7 +93,7 @@ BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .include "../../security/cyrus-sasl/buildlink2.mk"
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
-		-Wl,-R${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl
 BUILD_DEFS+=	USE_SASL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/27 21:24:58 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/14 19:37:58 jlam Exp $
 #
 
 DISTNAME=		xtu-1.1
@@ -12,7 +12,7 @@ COMMENT=		Small configurable X11 analog clock
 USE_X11=		yes
 
 do-build:
-	cd ${WRKSRC} && ${CC} *.c -o xtu -I${X11BASE}/include -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 -lXext
+	cd ${WRKSRC} && ${CC} *.c -o xtu -I${X11BASE}/include ${X11_LDFLAGS} -lX11 -lXext
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xtu ${PREFIX}/bin/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/07 18:21:48 salo Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/14 19:37:53 jlam Exp $
 #
 
 DISTNAME=	pure-ftpd-1.0.14
@@ -27,7 +27,7 @@ DEPENDS+=	mysql-client>=3.23:../../databases/mysql-client
 CONFIGURE_ARGS+=--with-mysql=${LOCALBASE}	\
 		--with-quotas
 CCPFLAGS+=	-I${LOCALBASE}/include/mysql
-LDFLAGS+=	-L${LOCALBASE}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
+LDFLAGS+=	-L${LOCALBASE}/lib/mysql -Wl,${RPATH_FLAG}${LOCALBASE}/lib/mysql
 BUILD_DEFS+=	PURE_FTPD_USE_MYSQL
 .endif
 

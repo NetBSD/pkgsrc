@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2003/03/12 21:02:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.62 2003/03/14 19:37:53 jlam Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -27,7 +27,10 @@ CONFIGURE_ARGS=		"--datadir=${KDEBASEDIR}/share/kde" \
 			"--with-qt-dir=${QT1DIR}/qt1"
 CONFIGURE_ENV=  	KDEDIR=${KDEBASEDIR} \
 			CXXFLAGS="${CFLAGS}" \
-			all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
+			all_libraries="${KDE_LDFLAGS}"
+
+FIX_RPATH+=		KDE_LDFLAGS
+KDE_LDFLAGS=		-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
 GCC_VERSION!=   	gcc --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs)

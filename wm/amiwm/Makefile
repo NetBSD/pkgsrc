@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/25 21:51:27 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/14 19:37:59 jlam Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -19,7 +19,10 @@ USE_BUILDLINK2=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CFLAGS="-DHAVE_X11_EXTENSIONS_SHAPE_H=1 -O" \
-		X_PRE_LIBS="-Wl,-R${X11BASE}/lib" \
+		X_PRE_LIBS="${X_PRE_LIBS}" \
 		X_EXTRA_LIBS="-lXt"
+
+X_PRE_LIBS=	-Wl,${RPATH_FLAG}${X11BASE}/lib
+FIX_RPATH+=	X_PRE_LIBS
 
 .include "../../mk/bsd.pkg.mk"

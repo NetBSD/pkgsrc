@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/02/13 16:31:24 fredb Exp $
+# $NetBSD: Makefile,v 1.31 2003/03/14 19:37:39 jlam Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -53,9 +53,10 @@ AVIFILE_USE_QT?=	NO
 PLIST_SRC=		${PKGDIR}/PLIST.qt
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-CXXFLAGS+=		-Wl,-R${QTDIR}/lib
-CXXFLAGS+=		-Wl,-R${LOCALBASE}/lib
-CXXFLAGS+=		-Wl,-R${X11BASE}/lib
+CXXFLAGS+=		-Wl,${RPATH_FLAG}${QTDIR}/lib
+CXXFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
+CXXFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
+FIX_RPATH+=		CXXFLAGS
 
 CONFIGURE_ARGS+=	--enable-qt
 CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
