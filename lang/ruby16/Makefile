@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/06 16:56:55 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/10 06:20:18 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -26,7 +26,7 @@ NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
 do-install:
-	@${ECHO_MSG} This os only a meta package.
+	@${ECHO_MSG} This is only a meta package.
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/Makefile.common"
