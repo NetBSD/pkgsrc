@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2001/02/16 15:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2001/02/19 07:40:25 jun Exp $
 #
 
 COMMENT=	Editors
 
 SUBDIR+=	abiword
+SUBDIR+=	apel
 SUBDIR+=	beav
 SUBDIR+=	biew
 SUBDIR+=	bvi
