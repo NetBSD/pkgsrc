@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/01/07 14:44:18 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/01/07 14:58:26 tron Exp $
 
 DISTNAME=	plex86-20010106
 PKGNAME=	${DISTNAME:S/-/-0./}
@@ -60,19 +60,19 @@ do-install-dirs:
 		${PREFIX}/share/examples/plex86
 
 do-install-binaries:
-	${INSTALL_PROGRAM} ${WRKSRC}/user/plex86 ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/user/plex86 ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/user/resetmod ${PREFIX}/bin/plex86_reset
-	${INSTALL_DATA} ${WRKSRC}/user/plugins/bochs/plugin-bochs.so ${PREFIX}/lib/plex86/
-	${INSTALL_DATA} ${WRKSRC}/kernel/plex86.o ${PREFIX}/lkm/
-	${INSTALL_SCRIPT} ${WRKSRC}/misc/netbsd_post.sh ${PREFIX}/lib/plex86/
+	${INSTALL_DATA} ${WRKSRC}/user/plugins/bochs/plugin-bochs.so ${PREFIX}/lib/plex86
+	${INSTALL_DATA} ${WRKSRC}/kernel/plex86.o ${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKSRC}/misc/netbsd_post.sh ${PREFIX}/lib/plex86
 
 do-install-bios:
-	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-plex86-2000_0817a \
+	${INSTALL_DATA} ${WRKSRC}/bios/BIOS* \
 		${WRKSRC}/bios/VGABIOS-elpin-2.40 \
-		${PREFIX}/lib/plex86/bios/
+		${PREFIX}/lib/plex86/bios
 
 do-install-font:
-	${INSTALL_DATA} ${WRKSRC}/misc/vga.pcf.gz ${PREFIX}/lib/X11/fonts/local/
+	${INSTALL_DATA} ${WRKSRC}/misc/vga.pcf.gz ${PREFIX}/lib/X11/fonts/local
 	${X11BASE}/bin/mkfontdir ${PREFIX}/lib/X11/fonts/local
 
 do-install-conf:
