@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/10 23:23:35 frueauf Exp $
-bin/xcdrgtk
+@comment $NetBSD: PLIST,v 1.2 2001/08/07 11:27:36 drochner Exp $
+bin/xcdroast
 lib/xcdroast-0.98/bin/wavplay
 lib/xcdroast-0.98/bin/rmtool
 lib/xcdroast-0.98/bin/vrfytool
 lib/xcdroast-0.98/bin/cddbtool
+lib/xcdroast-0.98/bin/xcdrwrap
 lib/xcdroast-0.98/icons/burnproof.gif
 lib/xcdroast-0.98/icons/cddblogo.gif
 lib/xcdroast-0.98/icons/dialog_default.png
