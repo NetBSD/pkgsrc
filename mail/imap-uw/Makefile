@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/12/17 17:07:56 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/12/17 18:25:43 jlam Exp $
 
 DISTNAME=       imap-2000a
 PKGNAME=        imap-uw-2000a
@@ -27,7 +27,13 @@ ALL_TARGET=	neb
 .endif
 
 NO_CONFIGURE=	# defined
-MAKE_ENV+=	EXTRACFLAGS="${CFLAGS}"
+
+USE_SSL=	# defined
+MAKE_ENV+=	SSLBASE="${SSLBASE}"
+MAKE_ENV+=	SSLCERTS="/etc/openssl/certs"
+ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
+ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
+ALL_TARGET+=	SPECIALAUTHENTICATORS="ssl"
 
 post-build:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
