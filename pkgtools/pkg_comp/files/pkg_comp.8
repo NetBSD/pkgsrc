@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.22 2004/06/04 16:17:13 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.23 2004/12/29 22:16:22 snj Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -108,7 +108,7 @@ Schedule builds of package sets for several different machines.
 .El
 .Sh CONTROL DIRECTORY
 .Nm
-needs to store several information when it is running.
+needs to store several pieces of information when it is running.
 Instead of using normal system trees, it uses a special directory inside the
 chroot to avoid polluting the system.
 It stores there scripts, object files, built packages, etc.
