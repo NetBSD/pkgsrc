@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 18:04:39 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/14 18:26:29 jmmv Exp $
 #
 
 DISTNAME=		gtkspell-2.0.5
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gtkspell-2.0.pc.in
+PKGCONFIG_OVERRIDE=	gtkspell-2.0.pc.in
 
 SUBST_CLASSES+=		subdir
 SUBST_MESSAGE.subdir=	"Excluding unnecessary subdirs."

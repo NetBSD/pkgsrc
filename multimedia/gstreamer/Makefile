@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=		gstreamer-0.6.4
@@ -22,9 +22,9 @@ USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--disable-plugin-builddir
 
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libs/ext/cothreads/cothreads.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer-control.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer.pc.in
+PKGCONFIG_OVERRIDE+=	libs/ext/cothreads/cothreads.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
 
