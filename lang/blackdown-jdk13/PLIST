@@ -1,38 +1,38 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/27 22:45:08 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/09/08 10:00:19 schmonz Exp $
 java/blackdown-${RELVERSION}/README.html
 java/blackdown-${RELVERSION}/bin/HtmlConverter
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/appletviewer
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/extcheck
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/idlj
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/jar
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/jarsigner
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/javac
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/javadoc
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/javah
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/javap
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/jdb
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/native2ascii
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/oldjava
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/oldjavac
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/oldjdb
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/rmic
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/serialver
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/appletviewer
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/extcheck
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/idlj
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/jar
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/jarsigner
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/javac
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/javadoc
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/javah
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/javap
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/jdb
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/native2ascii
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/oldjava
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/oldjavac
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/oldjdb
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/rmic
-java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/serialver
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/appletviewer
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/extcheck
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/idlj
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/jar
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/jarsigner
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/javac
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/javadoc
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/javah
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/javap
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/jdb
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/native2ascii
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/oldjava
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/oldjavac
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/oldjdb
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/rmic
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads/serialver
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/appletviewer
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/extcheck
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/idlj
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/jar
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/jarsigner
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/javac
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/javadoc
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/javah
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/javap
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/jdb
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/native2ascii
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/oldjava
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/oldjavac
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/oldjdb
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/rmic
+java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads/serialver
 java/blackdown-${RELVERSION}/bin/appletviewer
 java/blackdown-${RELVERSION}/bin/extcheck
 java/blackdown-${RELVERSION}/bin/idlj
@@ -783,8 +783,8 @@ java/blackdown-${RELVERSION}/include/linux/jawt_md.h
 java/blackdown-${RELVERSION}/include/linux/jni_md.h
 java/blackdown-${RELVERSION}/lib/dt.jar
 java/blackdown-${RELVERSION}/lib/htmlconverter.jar
-java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libdt_socket.so
-java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libjdwp.so
+java/blackdown-${RELVERSION}/lib/${BLACKDOWN_ARCH}/libdt_socket.so
+java/blackdown-${RELVERSION}/lib/${BLACKDOWN_ARCH}/libjdwp.so
 java/blackdown-${RELVERSION}/lib/ir.idl
 java/blackdown-${RELVERSION}/lib/orb.idl
 java/blackdown-${RELVERSION}/lib/tools.jar
@@ -817,7 +817,7 @@ java/blackdown-${RELVERSION}/src.jar
 @unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/man/ja/man1 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/man/ja 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/man/ 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH} 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/lib/${BLACKDOWN_ARCH} 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/lib 2>/dev/null || ${TRUE}
 @dirrm java/blackdown-${RELVERSION}/include/linux
 @dirrm java/blackdown-${RELVERSION}/include-old/linux
@@ -935,8 +935,8 @@ java/blackdown-${RELVERSION}/src.jar
 @dirrm java/blackdown-${RELVERSION}/demo/applets/Animator
 @dirrm java/blackdown-${RELVERSION}/demo/applets
 @dirrm java/blackdown-${RELVERSION}/demo
-@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH} 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/native_threads 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH}/green_threads 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/bin/${BLACKDOWN_ARCH} 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/java/blackdown-${RELVERSION}/bin 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/java/blackdown-${RELVERSION} 2>/dev/null || ${TRUE}
