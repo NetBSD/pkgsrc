@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/18 18:55:14 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/31 00:01:04 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s3
@@ -63,26 +63,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 CONF_FILES+=		${EGDIR}/roster.xml ${PKG_SYSCONFDIR}/roster.xml
 .undef f
 
-.if !empty(JABBERD_METHOD:Mdb)
-# # Directory to store the database files
-JABBERD_DBDIR?=         ${VARBASE}/db/jabberd
-BUILD_DEFS+=		JABBERD_DBDIR
-CONFIGURE_ARGS+=	--enable-db
-.  include "../../databases/db4/buildlink3.mk"
-.elif !empty(JABBERD_METHOD:Mmysql)
-CONFIGURE_ARGS+=	--enable-mysql
-CPPFLAGS+=		-I${LOCALBASE}/include/mysql
-.  include "../../databases/mysql4-client/buildlink3.mk"
-.elif !empty(JABBERD_METHOD:Mpgsql)
-CONFIGURE_ARGS+=	--enable-pgsql
-.  include "../../databases/postgresql74-lib/buildlink3.mk"
-.elif !empty(JABBERD_METHOD:Mldap)
-CONFIGURE_ARGS+=	--enable-ldap
-.  include "../../databases/openldap/buildlink3.mk"
-.elif !empty(JABBERD_METHOD:Mpam)
-CONFIGURE_ARGS+=	--enable-pam
-.  include "../../security/PAM/buildlink3.mk"
-.endif
+.include "Makefile.options"
 
 .for f in ${JABBERD_LOGDIR} ${JABBERD_DBDIR} ${JABBERD_PIDDIR}
 OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 770
