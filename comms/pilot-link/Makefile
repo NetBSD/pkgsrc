@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/09/10 16:06:36 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2002/09/21 07:12:32 jlam Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -9,22 +9,23 @@ COMMENT=		Tools to talk to the 3Com Pilot PDA
 
 BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
 USE_GNU_READLINE=	# defined
 
 CONFIGURE_ARGS+=	--with-perl5=${PERL5}
 CONFIGURE_ARGS+=	--with-readline21
-CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
+CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
 
 LIBS+=			-lpisock -liconv
 
 INSTALL_TARGET=		install-execs install-man
 
-.include "../../comms/pilot-link-libs/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
-.include "../../lang/tcl/buildlink.mk"
-.include "../../x11/tk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../comms/pilot-link-libs/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
