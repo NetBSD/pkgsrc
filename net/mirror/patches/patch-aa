@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2000/04/19 16:16:52 kim Exp $
+$NetBSD: patch-aa,v 1.6 2004/01/27 14:06:46 grant Exp $
 
---- makefile.orig	Mon Jun  1 21:28:47 1998
-+++ makefile	Wed Apr 19 19:06:30 2000
-@@ -41,7 +41,7 @@
+--- makefile.orig	1998-06-02 04:28:47.000000000 +1000
++++ makefile
+@@ -41,7 +41,7 @@ FILES=	README.txt \
  	$(WEBFILES)
  
  all:
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2000/04/19 16:16:52 kim Exp $
  
  mirror.tar: $(FILES)
  	rev=`./mirror.pl -v | perl -ane 'print "$$F[2]\n";'`; echo $rev; \
-@@ -65,25 +65,26 @@
+@@ -65,25 +65,26 @@ PLMODE = 644
  # mode to install executables
  EXMODE = 755
  # group to own all the files
@@ -38,17 +38,17 @@ $NetBSD: patch-aa,v 1.5 2000/04/19 16:16:52 kim Exp $
 -	install -m $(EXMODE) -g $(GRP) mm.pl $(BINDIR)/mirror-master
 -	install -m $(PLMODE) -g $(GRP) mirror.man $(MANDIR)/mirror.1
 -	install -m $(PLMODE) -g $(GRP) mm.man $(MANDIR)/mirror-master.1
-+	install -c -m $(PLMODE) -g $(GRP) lchat.pl $(PLDIR)
-+	install -c -m $(PLMODE) -g $(GRP) dateconv.pl $(PLDIR)
-+	install -c -m $(PLMODE) -g $(GRP) ftp.pl $(PLDIR)
-+	install -c -m $(PLMODE) -g $(GRP) lsparse.pl $(PLDIR)
-+	install -c -m $(EXMODE) -g $(GRP) mirror.pl $(BINDIR)/mirror
-+	install -c -m $(EXMODE) -g $(GRP) do_unlinks.pl $(BINDIR)/do_unlinks
-+	install -c -m $(EXMODE) -g $(GRP) pkgs_to_mmin.pl $(BINDIR)/pkgs_to_mmin
-+	install -c -m $(EXMODE) -g $(GRP) mm.pl $(BINDIR)/mirrormaster
-+	install -c -m $(PLMODE) -g $(GRP) mirror.man $(MANDIR)/mirror.1
-+	install -c -m $(PLMODE) -g $(GRP) mm.man $(MANDIR)/mirrormaster.1
-+	install -c -m $(PLMODE) -g $(GRP) mirror.defaults $(PLDIR)/mirror.defaults.dist
++	${BSD_INSTALL} -c -m $(PLMODE) -g $(GRP) lchat.pl $(PLDIR)
++	${BSD_INSTALL} -c -m $(PLMODE) -g $(GRP) dateconv.pl $(PLDIR)
++	${BSD_INSTALL} -c -m $(PLMODE) -g $(GRP) ftp.pl $(PLDIR)
++	${BSD_INSTALL} -c -m $(PLMODE) -g $(GRP) lsparse.pl $(PLDIR)
++	${BSD_INSTALL} -c -m $(EXMODE) -g $(GRP) mirror.pl $(BINDIR)/mirror
++	${BSD_INSTALL} -c -m $(EXMODE) -g $(GRP) do_unlinks.pl $(BINDIR)/do_unlinks
++	${BSD_INSTALL} -c -m $(EXMODE) -g $(GRP) pkgs_to_mmin.pl $(BINDIR)/pkgs_to_mmin
++	${BSD_INSTALL} -c -m $(EXMODE) -g $(GRP) mm.pl $(BINDIR)/mirrormaster
++	${BSD_INSTALL} -c -m $(PLMODE) -g $(GRP) mirror.man $(MANDIR)/mirror.1
++	${BSD_INSTALL} -c -m $(PLMODE) -g $(GRP) mm.man $(MANDIR)/mirrormaster.1
++	${BSD_INSTALL} -c -m $(PLMODE) -g $(GRP) mirror.defaults $(PLDIR)/mirror.defaults.dist
  
  # directory to install .pl (perl library) files for rperl
  RPLDIR = /usr/local/rperl5/lib/perl5
