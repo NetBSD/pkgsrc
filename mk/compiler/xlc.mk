@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.7 2004/11/30 14:50:37 jlam Exp $
+# $NetBSD: xlc.mk,v 1.8 2005/01/12 15:32:01 jlam Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -77,5 +77,15 @@ ${_XLC_${_var_}}:
 .    endfor
 .  endif
 .endfor
+
+# Force the use of f2c-f77 for compiling Fortran.
+_XLC_USE_F2C=	no
+FCPATH=		/nonexistent
+.if !exists(${FCPATH})
+_XLC_USE_F2C=	yes
+.endif
+.if !empty(_XLC_USE_F2C:M[yY][eE][sS])
+.  include "../../mk/compiler/f2c.mk"
+.endif
 
 .endif	# COMPILER_XLC_MK

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:13 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/12 15:31:58 jlam Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -20,7 +20,6 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++ fortran
-USE_FORTRAN=	YES
 
 post-patch:
 	${MV} ${WRKSRC}/tnt ${WRKSRC}/tnt-mmtl

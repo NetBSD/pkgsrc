@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2004/12/03 15:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/01/12 15:32:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/12/12 22:27:21 jseger Exp
 #
 
 DISTNAME=		xmgr-4.1.2
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/ \
 			ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/old/ \
@@ -20,7 +20,7 @@ BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
 USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
-USE_FORTRAN=		YES
+USE_LANGUAGES=		fortran
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-acegr-home="${PREFIX}"
 
