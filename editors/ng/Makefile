@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/06 23:14:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/04 16:09:52 uebayasi Exp $
 
 DISTNAME=	ng-1.4.3
 CATEGORIES=     editors japanese
@@ -15,7 +15,7 @@ USE_CANNA=	YES
 .endif
 
 .if ${USE_CANNA} == "YES"
-DEPENDS=	Canna-lib-3.5b2:../../japanese/canna-lib
+DEPENDS=	Canna-lib>=3.5b2:../../japanese/canna-lib
 .endif
 
 WRKSRC=         ${WRKDIR}/ng

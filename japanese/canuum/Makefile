@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/11 16:19:46 tron Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/04 16:09:54 uebayasi Exp $
 #
 
 DISTNAME=	canuum-1.0
@@ -11,7 +11,7 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 COMMENT=	Japanese input tty frontend for Canna using uum
 
-DEPENDS=	Canna-lib-3.5b2:../../japanese/canna-lib
+DEPENDS=	Canna-lib>=3.5b2:../../japanese/canna-lib
 
 MANLANG=	ja
 MAN1=		canuum.1
