@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/08/25 01:07:30 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	cat << EOF
+===========================================================================
+Please read carefully through the End User License Agreement for Corel(R)
+WordPerfect(R) for Linux at
+
+	${PKG_PREFIX}/@WPDIR@/wpbin/README.lic
+
+By installing this package, you have agreed to the terms of the license.
+---------------------------------------------------------------------------
+You need to register your license for WordPerfect(R) for Linux at:
+
+	http://venus.corel.com/nasapps/wp8linuxreg/register.html
+
+After you have registered, you will receive a product registration key
+to be entered into WordPerfect that will allow WordPerfect to function.
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
