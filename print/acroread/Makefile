@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/03/14 03:14:46 lukem Exp $
-# FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
+# $NetBSD: Makefile,v 1.29 2002/04/04 12:29:49 tron Exp $
 
 PKGNAME=	acroread-4.05
 CATEGORIES=	print
@@ -25,7 +24,7 @@ SHLIB_HANDLING=	NO
 
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_x11>=6.1:../../emulators/suse_x11
+DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTNAME=	linux-ar-405
 PLATFORM=	intellinux
 WRKSRC=		${WRKDIR}/ILINXR.install
@@ -92,4 +91,4 @@ post-install:
 	done
 .endif
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
