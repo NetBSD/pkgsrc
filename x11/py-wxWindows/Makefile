@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/10 14:25:42 recht Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/10 20:56:32 recht Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
@@ -21,12 +21,18 @@ BUILDLINK_DEPENDS.python21-pth=	python21-pth>=2.1.3nb3
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 BUILDLINK_DEPENDS.wxGTK=	wxGTK>=2.4.1nb1
 
+.include "../../mk/bsd.prefs.mk"
+
+.if empty(WXGTK_USE_GTK1:M[Yy][Ee][Ss])
+WXARG=	WXPORT=gtk2
+.endif
+
 PYDISTUTILSPKG=	yes
 # no GL to limit dependencies
 # OGL doesn't build with egcs-1.1.2
 # no scripts to avoid conflicts
-PYSETUPBUILDARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
-PYSETUPINSTALLARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
+PYSETUPBUILDARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1 ${WXARG}
+PYSETUPINSTALLARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
 .include "../../x11/wxGTK/buildlink2.mk"
