@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/15 00:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/31 19:16:36 tron Exp $
 
 DISTNAME=	micq-0.4.3
 PKGNAME=	ja-${DISTNAME}
@@ -14,6 +14,9 @@ PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	eric@fox.phoenix.az.us
 HOMEPAGE=	http://micq.maesoft.net/
+
+BROKEN=		${PKGNAME} requires fixes for remote buffer overflow\
+		vulnerability.
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/micq ${PREFIX}/bin/jmicq
