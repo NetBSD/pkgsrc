@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.24 2003/08/27 12:54:03 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.25 2003/08/27 20:43:15 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -32,7 +32,7 @@
 # BUILDLINK_*	public buildlink-related variables usable in other Makefiles
 # _BLNK_*	private buildlink-related variables to this Makefile
 
-ECHO_BUILDLINK_MSG=	${TRUE}
+ECHO_BUILDLINK_MSG?=	${TRUE}
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
 BUILDLINK_SHELL?=	${SH}
 BUILDLINK_OPSYS?=	${OPSYS}
@@ -115,10 +115,18 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 # BUILDLINK_IS_DEPOT.<pkg>	"yes" or "no" for whether <pkg> is a
 #				depoted package.
 #
+# BUILDLINK_CPPFLAGS.<pkg>,
+# BUILDLINK_LDFLAGS.<pkg>	contain extra -D..., -I... and -L.../-Wl,-R
+#				options to be passed to the compiler/linker
+#				so that building against <pkg> will work.
+#
 # BUILDLINK_INCDIRS.<pkg>,
 # BUILDLINK_LIBDIRS.<pkg>	subdirectories of BUILDLINK_PREFIX.<pkg>
 #				that should be added to the
-#				compiler/linker search paths.
+#				compiler/linker search paths; these
+#				directories are checked to see if they
+#				exist before they're added to the search
+#				paths.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 .  if !defined(BUILDLINK_PKG_DBDIR.${_pkg_})
@@ -144,6 +152,8 @@ BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
 .  else
 BUILDLINK_IS_DEPOT.${_pkg_}?=	no
 .  endif
+BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
+BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
 BUILDLINK_LIBDIRS.${_pkg_}?=	lib
 .endfor
@@ -157,6 +167,16 @@ BUILDLINK_CPPFLAGS=	# empty
 BUILDLINK_LDFLAGS=	# empty
 
 .for _pkg_ in ${BUILDLINK_PACKAGES}
+.  for _flag_ in ${BUILDLINK_CPPFLAGS.${_pkg_}}
+.    if empty(BUILDLINK_CPPFLAGS:M${_flag_})
+BUILDLINK_CPPFLAGS+=	${_flag_}
+.    endif
+.  endfor
+.  for _flag_ in ${BUILDLINK_LDFLAGS.${_pkg_}}
+.    if empty(BUILDLINK_LDFLAGS:M${_flag_})
+BUILDLINK_LDFLAGS+=	${_flag_}
+.    endif
+.  endfor
 .  if !empty(BUILDLINK_INCDIRS.${_pkg_})
 .    for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
 .      if exists(${_dir_})
@@ -297,9 +317,13 @@ ${_BLNK_COOKIE.${_pkg_}}:
 		${SED}	-e "s,^[^/]*,,"					\
 			-e "s,^${BUILDLINK_PREFIX.${_pkg_}},,"		\
 			-e "s,^/,,"					\
-	`/;								\
+	`;								\
+	case "$$pkg_prefix" in						\
+	"")	;;							\
+	*)	pkg_prefix="$${pkg_prefix}/" ;;				\
+	esac;								\
 	files=`${BUILDLINK_FILES_CMD.${_pkg_}}`;			\
-	files="$files ${BUILDLINK_FILES.${_pkg_}}";			\
+	files="$$files ${BUILDLINK_FILES.${_pkg_}}";			\
 	case "$$files" in						\
 	"")	;;							\
 	*)	for file in $$files; do					\
@@ -780,7 +804,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 		${_BLNK_WRAP_LOGIC.${_wrappee_}}			\
 		${_BLNK_WRAP_POST_LOGIC.${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
-		"Creating wrapper: ${.TARGET}"
+		"=> Creating wrapper: ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	wrappee="${${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}";	\
 	case $${wrappee} in						\
@@ -823,7 +847,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 buildlink-wrappers: ${_alias_}
 ${_alias_}: ${BUILDLINK_${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
-		"Linking wrapper: ${.TARGET}"
+		"=> Linking wrapper: ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -f ${BUILDLINK_${_wrappee_}} ${.TARGET}
 .    endif
@@ -853,7 +877,7 @@ buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 	if [ -x "${${_wrappee_}.${_BLNK_OPSYS}}" ]; then		\
 		wrapper="${BUILDLINK_DIR}/bin/${${_wrappee_}.${_BLNK_OPSYS}:T}"; \
 		${ECHO_BUILDLINK_MSG}					\
-			"Creating ${_BLNK_OPSYS} wrapper: $${wrapper}";	\
+			"=> Creating ${_BLNK_OPSYS} wrapper: $${wrapper}"; \
 		${RM} -f $${wrapper};					\
 		${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}} |		\
 		${SED}	${_BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}}	\
