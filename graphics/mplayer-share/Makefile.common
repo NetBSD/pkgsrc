@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2002/10/25 18:20:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2002/11/01 10:19:17 jlam Exp $
 
 MPLAYER_DIST_VERSION=	0.90pre9
 #PKGREVISION=		1
@@ -30,6 +30,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 #	no source on the ftp server because of the css source code in it
 NO_SRC_ON_FTP=		${RESTRICTED}
 
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
 
@@ -40,8 +41,8 @@ CONFIGURE_ARGS+=	--with-extraincdir="${LOCALBASE}/include"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 #CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--disable-mpdvdkit
-CONFIGURE_ARGS+=	--disable-ossaudio
 CONFIGURE_ARGS+=	--enable-faad
+CONFIGURE_ARGS+=	--disable-arts
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
@@ -49,6 +50,12 @@ CONFIGURE_ARGS+=	--enable-faad
 CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_OSS)
+CONFIGURE_ARGS+=	--enable-ossaudio
+.else
+CONFIGURE_ARGS+=	--disable-ossaudio
+.endif
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
