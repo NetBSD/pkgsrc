@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 1998/10/28 05:43:20 garbled Exp $
+--- tosha.1.orig	Tue Oct 27 22:38:26 1998
++++ tosha.1	Tue Oct 27 22:40:02 1998
+@@ -152,7 +152,10 @@
+ (raw), 44.1 kHz, signed 16 bit stereo.  If you need a
+ different format, use
+ .BR sox (1)
+-to convert it.
++to convert it.  Output data is in little-endian format,
++regardless of the endianess of the machine you are running
++.BR tosha
++on.
+ .P
+ Not all SCSI drives work with
+ .BR tosha ,
