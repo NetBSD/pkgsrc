@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.13 2003/04/29 01:36:08 rh Exp $
+#	$NetBSD: createbuildlink,v 1.14 2003/09/18 14:15:01 jmmv Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink2.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.13 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.14 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -164,7 +164,8 @@ echo ""
 ## buildlinked dependencies
 ##
 for i in $makefile $commons ; do
-	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink2.mk\"' $i
+	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink2.mk\"' $i |
+		grep -v devel/pkgconfig | grep -v textproc/intltool
 done
 grep -l '^.include.*\.\.\/.*\/.*/buildlink2.mk\"' $makefile $commons \
 	>/dev/null 2>&1 && echo ""	# Be careful not to print duplicate \n
