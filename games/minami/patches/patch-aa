@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/22 07:53:00 kei Exp $
+
+--- Makefile.orig	Sat Mar 31 14:27:11 2001
++++ Makefile	Sat Mar 31 14:30:06 2001
+@@ -49,7 +49,7 @@
+ 
+ minami:	$(OBJS) $(GENOBJS)
+ 	(cd action; make)
+-	cc $(OBJS) $(GENOBJS) action/libaction.a `./minflag -l` -o minami
++	cc $(OBJS) $(GENOBJS) action/libaction.a -L${PREFIX}/lib -Wl,-R${PREFIX}/lib `./minflag -l` -o minami
+ 
+ minami.o: minami.h scene.h item.h version.h genscn.h
+ 	$(CC) $(CFLAGS) -c minami.c -o minami.o
