@@ -1,5 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
-/* $Id: config.h.in,v 1.5 2003/06/10 05:59:16 grant Exp $ */
+/* $Id: config.h.in,v 1.6 2003/06/23 11:33:08 grant Exp $ */
 
 /* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
 #undef HAVE_PRINTF_QD
@@ -321,6 +321,9 @@
 
 /* Define to 1 if you have the `timegm' function. */
 #undef HAVE_TIMEGM
+
+/* Define to 1 if you have the <tzfile.h> header file. */
+#undef HAVE_TZFILE_H
 
 /* Define to 1 if you have the `uid_from_user' function. */
 #undef HAVE_UID_FROM_USER
