@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.25 2003/08/21 04:07:37 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.26 2003/08/22 07:15:43 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -707,7 +707,7 @@ uptodate-digest:
 .if defined(_OPSYS_PKGTOOLS_REQD)
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
 .else
-PKGTOOLS_REQD=		20030819
+PKGTOOLS_REQD=		20030820
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
@@ -4595,7 +4595,7 @@ real-su-build-views:
 		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
 		esac;							\
 		${ECHO} "=> Performing package view clash check for ${PKGNAME} in $$viewname view"; \
-		pkg=`${SETENV} PKG_DBDIR=$$dbdir ${PKG_INFO_CMD} -e ${PKGBASE} || ${TRUE}`; \
+		pkg=`${PKG_INFO_CMD} -K $$dbdir -e ${PKGBASE} || ${TRUE}`; \
 		case "$$pkg" in						\
 		"")	;;						\
 		*)	${ECHO} "*** ${PKGBASE} exists in $$viewname view - package $$pkg ***"; \
