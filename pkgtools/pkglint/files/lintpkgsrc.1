@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.13 2000/11/14 17:11:43 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.14 2000/11/17 12:45:31 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,12 +10,12 @@
 .Nd a verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl BLRdhilmor
-.Op Fl D Ar paths
+.Op Fl BDLRSVdhilmopru
 .Op Fl K Ar PACKAGES
-.Op Fl M Ar distdir
+.Op Fl M Ar DISTDIR
 .Op Fl P Ar PKGSRCDIR
-.Op Fl S Ar pkgsrcmap
+.Op Fl g Ar pkgsrcmap
+.Op Pa makefile ...
 .Sh DESCRIPTION
 .Nm
 tries to verify the entire contents of the pkgsrc tree.
@@ -34,10 +34,27 @@ Parse Makefiles and output contents (Useful for debugging).
 Override binary packages base directory, normally set from
 .Pa /etc/mk.conf
 or defaulted to PKGSRCDIR/packages.
+.Pp
+Note: lintpkgsrc treats
+.Em PACKAGES
+slightly differently to the pkgsrc build system. -p, -R and -V check for
+binary packages in any depth of PACKAGES subdirs - this allows packages for all
+architectures/OS versions to be checked simultaneously with an
+.Pa /etc/mk.conf
+construct of the form:
+.Bd -literal
+\&.ifdef LINTPKGSRC
+PACKAGES=${PKGSRCDIR}/packages
+\&.else
+PACKAGES=${PKGSRCDIR}/packages/${OS_VERSION}/${MACHINE_ARCH}
+\&.endif
+.Pp
+Which would be an alternative to -K.
+.Ed
 .It Fl L
 List the filenames of Makefiles as they are parsed (for debugging).
-.It Fl M Ar distdir
-Set directory for distfiles, otherwise PKGSRCDIR/distfiles is used.
+.It Fl M Ar DISTDIR
+Set directory for distfiles, defaults to PKGSRCDIR/distfiles.
 .It Fl P Ar PKGSRCDIR
 Set base of pkgsrc tree, normally set from
 .Pa /etc/mk.conf
@@ -51,8 +68,10 @@ for whom the source Makefile lists
 or
 .Em RESTRICTED .
 This is intended to help those making binary packages available for ftp.
-.It Fl S Ar pkgsrcmap
-Output map of 'pkgname pkgdir pkgver'
+.It Fl S
+List packages missing from category
+.Em SUBDIR
+lists.
 .It Fl V
 List any prebuilt packages in any subdirs of
 .Em PACKAGES
@@ -62,6 +81,9 @@ PKGSRCDIR/distfiles/vulnerabilities .
 Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
 verify the version specified in each DEPEND correctly matches a current
 pkgsrc package.
+.It Fl g Ar pkgsrcmap
+Generate pkgsrcmap file containing an entry for each package of
+'pkgname pkgdir pkgver'.
 .It Fl h
 Basic help and usage.
 .It Fl i
@@ -83,6 +105,11 @@ Remove distfiles which are not referenced from any package's md5 file,
 or have an incorrect checksum (usually due to an interrupted download),
 and any old binary packages. To remove any given type, additionally
 specify the -o, -m, or -p flags respectively.
+.It Fl u
+For each package current installed, run 'make fetch-list | sh' to ensure
+all the distfiles needed for the latest version are present.
+.Pp
+Warning: The behaviour of this command may change in a later version.
 .El
 .Sh AUTHOR
 David Brownlee <abs@netbsd.org>
@@ -106,7 +133,7 @@ or set conditionally in
 based on the value of
 .Em LINTPKGSRC .
 .Sh BUGS
-The 'Makefile parsing' algorithym used to obtain package versions
+The 'Makefile parsing' algorithm used to obtain package versions
 and DEPENDS information is geared towards speed rather than
 perfection, though it has got somewhat better over time, it only
 parses the simplest Makefile conditionals. (a == b, no && etc).
