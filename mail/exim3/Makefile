@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/08 00:14:05 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/10 03:08:32 grant Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	2
@@ -68,17 +68,10 @@ MAKE_ENV+=		LOOKUP_PGSQL=YES
 
 # buildlink3 decides which libdb to use on this platform.
 .include "../../mk/bdb.buildlink3.mk"
-.if ${BDB_TYPE} == "db3"
-DBMLIB+=		-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db3}
-DBMLIB+=		-L${LOCALBASE}/${BUILDLINK_LIBDIRS.db3} -ldb3
-DBMLIB+=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
-.elif ${BDB_TYPE} == "db2"
-DBMLIB+=		-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db2}
-DBMLIB+=		-L${LOCALBASE}/${BUILDLINK_LIBDIRS.db2} -ldb2
-DBMLIB+=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
-.  else # using native
-DBMLIB+=		"-I/usr/${BUILDLINK_INCDIRS.db-native}"
-.endif
+DBMLIB+=		${BUILDLINK_CPPFLAGS.bdb}
+DBMLIB+=		${BUILDLINK_LDFLAGS.bdb}
+DBMLIB+=		${BUILDLINK_LIBS.bdb}
+
 MAKE_ENV+=		DBMLIB=${DBMLIB:Q}
 MAKE_ENV+=		LOOKUP_INCLUDE="${LOOKUP_INCLUDE}"
 MAKE_ENV+=		LOOKUP_LIBS="${LOOKUP_LIBS}"
