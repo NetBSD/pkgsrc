@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1997/12/01 00:01:51 hubertf Exp $
 # New ports collection makefile for:	tiff
 # Version required:	3.4 beta 037
 # Date created:		27 November 1997
 # Whom:			tron
 #
+# $NetBSD: Makefile,v 1.4 1998/01/24 05:29:15 hubertf Exp $
 
 DISTNAME=	tiff-v3.4beta037
 PKGNAME=	tiff-3.4
@@ -11,11 +11,9 @@ CATEGORIES=	graphics
 MASTER_SITES=   ftp://ftp.sgi.com/graphics/tiff/ \
 		ftp://ftp.gwdg.de/pub/grafik/sgi/tiff/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/tiff/
+EXTRACT_SUFX=	-tar.gz
 
-# "-tar.gz" instead of ".tar.gz"
-EXTRACT_SUFX=		-tar.gz
-EXTRACT_CMD=		/usr/bin/tar
-EXTRACT_BEFORE_ARGS=	-xzf
+MAINTAINER=	packages@netbsd.org
 
 LIB_DEPENDS=	jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg
 
@@ -51,9 +49,9 @@ MAN3=	TIFFCheckTile.3 TIFFClose.3 TIFFComputeStrip.3 TIFFComputeTile.3 \
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--noninteractive --site ${FILESDIR}
-CONFIGURE_ENV+=		PREFIX=$(PREFIX)
+CONFIGURE_ENV+=		PREFIX=${PREFIX}
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || true
+	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
 
 .include <bsd.port.mk>
