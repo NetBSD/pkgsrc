@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2002/03/19 17:54:36 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2002/03/25 22:16:40 skrll Exp $
 
---- configure.orig	Fri Feb 15 09:12:23 2002
-+++ configure	Fri Mar  8 12:34:37 2002
-@@ -732,7 +732,7 @@
-     # we may write in the source tree, let's take advantage of this
-     # to test that QTDIR is correctly set to be the source tree
-     touch .test.qt.
--    if [ '!' -f ${QTDIR}/.test.qt. ]
-+    if [ '!' -f .test.qt. ]
-     then
- 	rm -f .test.qt.
- 	echo
+--- configure.orig	Sun Mar 10 10:59:59 2002
++++ configure
+@@ -685,7 +685,7 @@
+ # we may write in the build tree, let's take advantage of this
+ # to test that QTDIR is correctly set to be the build tree
+ touch .test.qt.
+-if [ '!' -f ${QTDIR}/.test.qt. ]
++if [ '!' -f .test.qt. ]
+ then
+     rm -f .test.qt.
+     echo
