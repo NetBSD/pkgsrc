@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/18 14:05:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/08 14:41:38 wiz Exp $
 #
 
 DISTNAME=		mp3splt-1.9-src
 PKGNAME=		${DISTNAME:S/-src//}
+PKGREVISION=				1
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mp3splt/}
