@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/25 07:45:37 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/11 08:25:48 minskim Exp $
 #
 
 DISTNAME=	bftpd-1.0.24
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	YES
 CFLAGS+=	-DPATH_BFTPD_CONF=\"\\\"${PKG_SYSCONFDIR}/bftpd.conf\\\"\"
 CONF_FILES=	${PREFIX}/share/examples/bftpd/bftpd.conf \
 		${PKG_SYSCONFDIR}/bftpd.conf
+MAKE_ENV+=	VARBASE=${VARBASE:Q}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bftpd
