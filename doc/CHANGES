@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2645 2003/07/01 09:04:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.2646 2003/07/01 09:46:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2637,3 +2637,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vmware-module3 to 3.2.1.2 [jdolecek 2003-06-30]
 	Updated gcc3 to gcc3-3.3nb2 [abs 2003-06-30]
 	Updated xchat2 to 2.0.3 [jmmv 2003-07-01]
+	Updated libxml2 to 2.5.7nb1 [wiz 2003-07-01]
