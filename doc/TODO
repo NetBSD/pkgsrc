@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2533 2004/11/27 17:58:32 jschauma Exp $
+$NetBSD: TODO,v 1.2534 2004/11/27 18:00:31 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -780,7 +780,6 @@ Suggested package updates
 	o neverball-1.4.0
 	o newfile-1.0.9
 	o newmail-1.0.2
-	o newmat-11
 	o newscache-1.1.92
 	o ng-1.4.4
 	o ng-spice-15c
