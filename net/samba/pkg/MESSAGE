@@ -1,3 +1,5 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/07/20 12:13:48 wiz Exp $
 
                     *===* Security Notes *===*
 
@@ -11,3 +13,4 @@ pkg_delete can be used for upgrading this package.  If you won't use
 this package anymore, I strongly recommend that you remove the
 smbpasswd file manually.
 
+===========================================================================
