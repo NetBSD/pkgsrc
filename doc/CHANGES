@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7151 2004/09/14 17:18:06 jlam Exp $
+$NetBSD: CHANGES,v 1.7152 2004/09/15 08:11:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4249,3 +4249,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thttpd to 2.25bnb1 [wiz 2004-09-14]
 	Updated heimdal to 0.6.3 [jlam 2004-09-14]
 	Updated samba to 3.0.7 [jlam 2004-09-14]
+	Updated kanjidic2 to 2004.2.1 [wiz 2004-09-15]
