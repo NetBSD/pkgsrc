@@ -1,4 +1,59 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/25 13:56:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/23 14:57:52 wiz Exp $
 bin/7z
+bin/7za
+${DYNAMIC_7Z}lib/7z/7z
+${DYNAMIC_7Z}lib/7z/Codecs/7zAES.dll
+${DYNAMIC_7Z}lib/7z/Codecs/AES.dll
+${DYNAMIC_7Z}lib/7z/Codecs/BZip2.dll
+${DYNAMIC_7Z}lib/7z/Codecs/Branch.dll
+${DYNAMIC_7Z}lib/7z/Codecs/Copy.dll
+${DYNAMIC_7Z}lib/7z/Codecs/Deflate.dll
+${DYNAMIC_7Z}lib/7z/Codecs/Implode.dll
+${DYNAMIC_7Z}lib/7z/Codecs/LZMA.dll
+${DYNAMIC_7Z}lib/7z/Codecs/PPMD.dll
+${DYNAMIC_7Z}lib/7z/Codecs/Swap.dll
+${DYNAMIC_7Z}lib/7z/Formats/7z.dll
+${DYNAMIC_7Z}lib/7z/Formats/Rar.dll
+${DYNAMIC_7Z}lib/7z/Formats/Tar.dll
+${DYNAMIC_7Z}lib/7z/Formats/Zip.dll
+${DYNAMIC_7Z}lib/7z/Formats/arj.dll
+${DYNAMIC_7Z}lib/7z/Formats/bz2.dll
+${DYNAMIC_7Z}lib/7z/Formats/cab.dll
+${DYNAMIC_7Z}lib/7z/Formats/cpio.dll
+${DYNAMIC_7Z}lib/7z/Formats/deb.dll
+${DYNAMIC_7Z}lib/7z/Formats/gz.dll
+${DYNAMIC_7Z}lib/7z/Formats/rpm.dll
+${DYNAMIC_7Z}lib/7z/Formats/split.dll
 share/doc/p7zip/README
+share/doc/p7zip/commands/extract_full.htm
+share/doc/p7zip/commands/style.css
+share/doc/p7zip/commands/update.htm
+share/doc/p7zip/commands/extract.htm
+share/doc/p7zip/commands/index.htm
+share/doc/p7zip/commands/add.htm
+share/doc/p7zip/commands/delete.htm
+share/doc/p7zip/commands/list.htm
+share/doc/p7zip/commands/test.htm
+share/doc/p7zip/style.css
+share/doc/p7zip/syntax.htm
+share/doc/p7zip/index.htm
+share/doc/p7zip/switches/output_dir.htm
+share/doc/p7zip/switches/style.css
+share/doc/p7zip/switches/include.htm
+share/doc/p7zip/switches/update.htm
+share/doc/p7zip/switches/index.htm
+share/doc/p7zip/switches/yes.htm
+share/doc/p7zip/switches/overwrite.htm
+share/doc/p7zip/switches/method.htm
+share/doc/p7zip/switches/sfx.htm
+share/doc/p7zip/switches/working_dir.htm
+share/doc/p7zip/switches/password.htm
+share/doc/p7zip/switches/exclude.htm
+share/doc/p7zip/switches/type.htm
+share/doc/p7zip/switches/recurse.htm
+@dirrm share/doc/p7zip/switches
+@dirrm share/doc/p7zip/commands
 @dirrm share/doc/p7zip
+${DYNAMIC_7Z}@dirrm lib/7z/Formats
+${DYNAMIC_7Z}@dirrm lib/7z/Codecs
+${DYNAMIC_7Z}@dirrm lib/7z
