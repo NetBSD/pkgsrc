@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/11 17:31:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/12 23:15:01 salo Exp $
 #
 
 DISTNAME=		mp3splt-1.9-src
@@ -17,6 +17,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 .include "../../audio/libmad/buildlink3.mk"
-.include "../../audio/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/12 23:15:01 salo Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	tremor-tools-1.0.0.8
@@ -33,11 +33,12 @@ pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
 
 .include "../../mk/automake.mk"
-.include "../../audio/tremor/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/libao/buildlink3.mk"
-.include "../../audio/libogg/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 
+.include "../../audio/libao/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/tremor/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

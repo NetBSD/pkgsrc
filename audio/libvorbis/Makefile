@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/22 22:35:40 snj Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/12 23:15:01 salo Exp $
 
 DISTNAME=	libvorbis-1.0.1
 CATEGORIES=	devel audio
@@ -21,5 +21,6 @@ PKGCONFIG_OVERRIDE+=	vorbis.pc.in
 PKGCONFIG_OVERRIDE+=	vorbisenc.pc.in
 PKGCONFIG_OVERRIDE+=	vorbisfile.pc.in
 
-.include "../../audio/libogg/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
