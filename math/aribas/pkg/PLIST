@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/25 19:56:25 jtb Exp $
+bin/aribas
+share/doc/aribas/aribas.doc
+share/doc/aribas/aribas.tut
+share/emacs/site-lisp/aribas.el
+share/examples/aribas/README
+share/examples/aribas/factor.ari
+share/examples/aribas/pi.ari
+share/examples/aribas/queens.ari
+@unexec rmdir share/emacs/site-lisp 2>/dev/null || true
+@dirrm share/examples/aribas
+@dirrm share/doc/aribas

@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 19:56:25 jtb Exp $
+
+--- Makefile.orig	Sun May  2 21:42:31 1999
++++ Makefile
+@@ -4,15 +4,15 @@
+ # date: 99-04-30
+ #############################################################
+ 
+-CC = cc
+-CFLAGS = -DUNiX -O
++#CC = cc
++#CFLAGS = -DUNiX -O
+ # for some compilers it might be necessary to remove the -O flag
+ # If you have the GNU gcc compiler on your system, you may wish
+ # to use gcc. Then outcomment the first two lines and activate 
+ # the next two lines.
+ 
+ #CC = gcc
+-#CFLAGS = -DUNiX -DPROTO -O -v
++CFLAGS = -DUNiX -DPROTO -O
+ 
+ #MEMFLAG = -DMEM=4
+ # MEM may be set to any integer value from 1 to 16.
