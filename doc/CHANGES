@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.786 2002/12/14 15:20:38 kristerw Exp $
+$NetBSD: CHANGES,v 1.787 2002/12/14 17:31:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3953,3 +3953,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pine to 4.51 [tron 2002-12-14]
 	Updated xmame to 0.62.1nb3 [kristerw 2002-12-14]
 	Updated xmess to 0.62.1 [kristerw 2002-12-14]
+	Updated libsndfile to 1.0.3 [jmmv 2002-12-14]
