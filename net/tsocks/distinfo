@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:14:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/27 22:06:10 jschauma Exp $
 
 SHA1 (tsocks-1.7.tar.gz) = b375215b63d93f4f317973f21cbcf4f9bd34720e
 RMD160 (tsocks-1.7.tar.gz) = e174c002ab2aa231b7c3a1aa98c5e6b7cdce34e6
 Size (tsocks-1.7.tar.gz) = 70992 bytes
-SHA1 (patch-aa) = 3037e70481db197831f85fde0095629d5cfcc538
-SHA1 (patch-ab) = dbb8df3763f3176af0f58d7d63644183b33f51eb
+SHA1 (patch-aa) = c520bff0b0fad4629c5d1cc295f68fa0b4c29096
+SHA1 (patch-ab) = 17e169a25f5a8d53870251463e14538cccbd1473
