@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:31:32 martti Exp $
+bin/xfprint-manager
+bin/xfprint4
+lib/libxfprint.a
+lib/libxfprint.la
+lib/libxfprint.so
+lib/libxfprint.so.0
+lib/libxfprint.so.0.0
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfprint.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfprint.mo
