@@ -1,0 +1,19 @@
+--- po/Makefile.in.orig	Wed May 27 16:49:42 1998
++++ po/Makefile.in	Wed Jul 29 12:46:56 1998
+@@ -1,7 +1,7 @@
+ srcdir = @srcdir@
+ VPATH = $(srcdir)
+ 
+-include ../Makefile.inc
++.include "../Makefile.inc"
+ 
+ INSTALL= @INSTALL@
+ INSTALL_PROGRAM= @INSTALL_PROGRAM@
+@@ -67,5 +67,6 @@
+ 	    $(INSTALL) -m 644 $$n $(installprefix)/$(RPMNLSDIR)/$$l/LC_MESSAGES/rpm.mo; \
+ 	done
+ 
+-%.mo: %.po
++.SUFFIXES: po mo
++.po.mo:
+ 	msgfmt -o $@ $<
