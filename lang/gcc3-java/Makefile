@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/01 14:05:47 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/10 19:33:11 jlam Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
@@ -7,7 +7,8 @@ INFO_FILES=	gcj.info
 
 .include "../gcc3-c/language.mk"
 
-BUILD_DEPENDS+=		gcc3${GCC3_PKGMODIF}-c++>=3.3.2:../../lang/gcc3-c++
+BUILD_DEPENDS+=	gcc3${GCC3_PKGMODIF}-c++>=${GCC_VERSION}:../../lang/gcc3-c++
+
 CONFIGURE_ARGS+=	--enable-languages="java"
 CONFIGURE_ARGS+=	--with-system-zlib
 
