@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/11 22:36:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/12 16:19:51 drochner Exp $
 include/gnome--.h
 include/gnome--/about.h
 include/gnome--/affinetrans.h
@@ -118,8 +118,8 @@ include/gnome--/stock.h
 include/gnome--/types.h
 lib/gnomemmConf.sh
 lib/libgnomemm-1.2.so
-lib/libgnomemm-1.2.so.9
-lib/libgnomemm-1.2.so.9.3
+lib/libgnomemm-1.2.so.10
+lib/libgnomemm-1.2.so.10.4
 lib/libgnomemm.a
 lib/libgnomemm.la
 lib/libgnomemm.so
