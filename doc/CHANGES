@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9254 2005/02/21 23:02:44 recht Exp $
+$NetBSD: CHANGES,v 1.9255 2005/02/21 23:27:25 bad Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1016,3 +1016,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed courier-authpgsql [jlam 2005-02-21]
 	Updated cyrus-saslauthd to 2.1.20 [adam 2005-02-21]
 	Updated roundup to 0.8.1 [recht 2005-02-21]
+	Updated openvpn to 1.6.0 [bad 2005-02-22]
