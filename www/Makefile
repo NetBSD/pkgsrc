@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2000/05/11 20:04:23 christos Exp $
+# $NetBSD: Makefile,v 1.80 2000/05/14 11:40:02 wulf Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -20,6 +20,7 @@
     SUBDIR += apache6
     SUBDIR += arena
     SUBDIR += asp2php
+    SUBDIR += bluefish
     SUBDIR += bozohttpd
     SUBDIR += cgilib
     SUBDIR += checkbot
