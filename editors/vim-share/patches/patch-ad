@@ -1,15 +1,13 @@
-$NetBSD: patch-ad,v 1.5 2003/06/02 07:27:26 martti Exp $
+$NetBSD: patch-ad,v 1.6 2004/06/21 08:23:48 martti Exp $
 
---- src/Makefile.orig	Sun Jun  1 16:18:29 2003
-+++ src/Makefile	Mon Jun  2 09:54:45 2003
-@@ -1045,26 +1045,31 @@
- ### Athena GUI
- ### Use Xaw3d to make the menus look a little bit nicer
+--- src/Makefile.orig	2004-05-16 13:52:54.000000000 +0000
++++ src/Makefile	2004-06-11 21:40:33.000000000 +0000
+@@ -1076,3 +1076,3 @@
  #XAW_LIB = -lXaw3d
 -XAW_LIB = -lXaw
 +#XAW_LIB = -lXaw
  
- ### When using Xaw3d, uncomment/comment the following lines to also get the
+@@ -1080,8 +1080,11 @@
  ### scrollbars from Xaw3d.
 -#ATHENA_SRC	= gui.c gui_athena.c gui_x11.c pty.c gui_beval.c gui_at_fs.c
 -#ATHENA_OBJ	= objects/gui.o objects/gui_athena.o objects/gui_x11.o \
@@ -27,18 +25,13 @@ $NetBSD: patch-ad,v 1.5 2003/06/02 07:27:26 martti Exp $
 +		    -Dvim_XawScrollbarSetThumb=XawScrollbarSetThumb
 +.else
  ATHENA_SRC	= gui.c gui_athena.c gui_x11.c pty.c gui_beval.c \
- 			gui_at_sb.c gui_at_fs.c
- ATHENA_OBJ	= objects/gui.o objects/gui_athena.o objects/gui_x11.o \
- 			objects/pty.o objects/gui_beval.o \
- 			objects/gui_at_sb.o objects/gui_at_fs.o
+@@ -1092,2 +1095,4 @@
  ATHENA_DEFS	= -DFEAT_GUI_ATHENA $(NARROW_PROTO)
 +.endif # Xaw
 +.endif # defined(XAW_LIB)
  
- ATHENA_IPATH	= $(GUI_INC_LOC)
+@@ -1095,3 +1100,3 @@
  ATHENA_LIBS_DIR = $(GUI_LIB_LOC)
 -ATHENA_LIBS1	= $(XAW_LIB)
 +ATHENA_LIBS1	= $(LIBXAW)
  ATHENA_LIBS2	= -lXt
- ATHENA_TARGETS	=  installglinks
- ATHENA_MAN_TARGETS = installghelplinks
