@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/10 03:46:12 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/12 23:34:20 sakamoto Exp $
 
 DISTNAME=	nkf-1.7
 CATEGORIES=	japanese converters
-MASTER_SITES=	ftp://ftp.win.ne.jp/pub/misc/
+MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/nkf/
 
 PATCH_SITES=	http://www.rs.civil.tohoku.ac.jp/~ito/ws/
 PATCHFILES=	nkf.patch.txt
