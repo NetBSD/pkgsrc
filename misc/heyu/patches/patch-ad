@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/07/15 06:50:36 rh Exp $
+
+--- xread.c.orig	Thu Jul  6 23:02:14 2000
++++ xread.c	Thu Jul  6 23:02:23 2000
+@@ -29,6 +29,9 @@
+ #include <signal.h>
+ #include <setjmp.h>
+ #include <sys/errno.h>
++#ifdef NETBSD
++  #include <errno.h>
++#endif
+ #include <syslog.h>
+ #include <unistd.h>
+ #include "x10.h"
