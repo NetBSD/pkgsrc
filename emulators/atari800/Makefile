@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/23 05:17:04 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/21 07:45:47 garbled Exp $
 
-DISTNAME=	Atari800-0.9.8
-PKGNAME=	atari800-0.9.8
+DISTNAME=	Atari800-0.9.9a
+PKGNAME=	atari800-0.9.9a
 CATEGORIES=	emulators
 MASTER_SITES=	http://cas3.zlin.vutbr.cz/~stehlik/a800/ \
 		http://www.signus.demon.co.uk/Software/Portable/Atari800e/
-DISTFILES=	a800s098.zip xf25.zip
+DISTFILES=	a800s099a.zip xf25.zip
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cas3.zlin.vutbr.cz/~stehlik/a800.htm
@@ -22,7 +22,7 @@ MAKE_FLAGS=	LDFLAGS="${LDFLAGS} -L${X11BASE}/lib" OBJ="atari_x11.o" \
 
 post-extract:
 	@find ${WRKDIR} -type f -print | xargs ${CHMOD} 0644
-	@${MV} ${WRKDIR}/atari800-0.9.8/* ${WRKSRC}/
+	@${MV} ${WRKDIR}/Atari800-0.9.9a/* ${WRKSRC}/
 
 do-build:
 	@printf 'n\nn\ny\n' | (cd ${WRKSRC} && \
