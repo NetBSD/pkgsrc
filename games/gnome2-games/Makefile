@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/06 18:44:46 jmmv Exp $
 
-DISTNAME=		gnome-games-2.4.1.1
-PKGREVISION=		2
+DISTNAME=		gnome-games-2.4.2
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 USE_CONFIG_WRAPPER=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
