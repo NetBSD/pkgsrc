@@ -1,0 +1,2 @@
+gnome1-dirs installs a set of shared directories used by many GTK1/GNOME1
+applications.  It is useful to simplify PLIST handling in other packages.
