@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2003/07/17 21:42:46 grant Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/25 17:02:46 drochner Exp $
 #
 
-DISTNAME=	sketch-0.6.14
+DISTNAME=	sketch-0.6.15
 CATEGORIES=	graphics
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=sketch/}
 
@@ -33,8 +33,8 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${SKETCHDIR}
 .for dir in Filter Pax Plugins Resources Script Sketch
-	cd ${WRKSRC}; ${GTAR} -c -f - --exclude-from=${FILESDIR}/excludelist ${dir} | \
-	    (cd ${SKETCHDIR}/; ${GTAR} xf -)
+	cd ${WRKSRC}; gtar -c -f - --exclude-from=${FILESDIR}/excludelist ${dir} | \
+	    (cd ${SKETCHDIR}/; gtar xf -)
 .endfor
 	cd ${WRKSRC}; ${INSTALL_SCRIPT} finishinst.py sk2ps.py sketch.py ${SKETCHDIR}
 	${INSTALL_DATA_DIR} ${SKETCHDOCDIR}

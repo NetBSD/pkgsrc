@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2002/10/24 20:47:23 drochner Exp $
+$NetBSD: distinfo,v 1.7 2003/07/25 17:02:47 drochner Exp $
 
-SHA1 (sketch-0.6.14.tar.gz) = 08990871bba5abe5af7042a4b53bdae61b48e2a4
-Size (sketch-0.6.14.tar.gz) = 977851 bytes
+SHA1 (sketch-0.6.15.tar.gz) = ef0b52ec3ac8c64b5be03e9abdf34c875a2dfc56
+Size (sketch-0.6.15.tar.gz) = 1007980 bytes
 SHA1 (patch-aa) = 4ad34c6f0807dedb3e3c7e2e4ad713613dffe706
