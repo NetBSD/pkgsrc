@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/14 15:36:19 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/14 15:37:44 minskim Exp $
 
 DISTNAME=	bibtex2html-1.74
 CATEGORIES=	converters
@@ -14,8 +14,6 @@ DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 NO_BUILDLINK=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5=	run
-
-CONFIGURE_ENV+=	PERL=${PERL5}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/aux2bib ${PREFIX}/bin
