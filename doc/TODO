@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.98 2002/12/22 22:16:04 wiz Exp $
+$NetBSD: TODO,v 1.99 2002/12/22 23:53:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -137,6 +137,7 @@ Suggested package updates
 	o gnustep-gui-0.8.3
 	o gphoto-2.1.1
 	o grub-0.93
+	o gtk2+-2.2.0
 	o gtkmm-2.1.0
 	o guile-1.6.1
 	o htmldoc-1.8.23
