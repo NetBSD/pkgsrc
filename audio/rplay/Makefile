@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/30 09:32:48 zuntum Exp $
+# $NetBSD: Makefile,v 1.29 2001/08/27 14:35:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://rplay.doit.org/
 COMMENT=	Network audio player
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=	# defined
