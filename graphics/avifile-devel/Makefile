@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2001/08/29 22:41:15 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/09/15 13:47:49 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
 PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	graphics
-MASTER_SITES=	http://zuntum.netbsd.pl/distfiles/
+MASTER_SITES=	http://zuntum.utech.lublin.pl/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zuntum@netbsd.org
