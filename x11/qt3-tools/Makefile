@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2002/08/01 05:48:25 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/04 16:41:44 jdolecek Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-tools-${QTVERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		QT GUI (WYSIWYG) builder and other tools
 
 CONFIGURE_ARGS+=	-I${BUILDLINK_QTDIR}/include \
@@ -13,6 +13,11 @@ CONFIGURE_ARGS+=	-I${BUILDLINK_QTDIR}/include \
 MAKE_ENV+=              LIBQT="-lqt-mt"
 
 USE_BUILDLINK_ONLY=		yes
+REPLACE_BUILDLINK_PATTERNS=	qmake.conf
+REPLACE_BUILDLINK_SED=	-e 's/\(QMAKE_INCDIR[ 	]*=\) .*$$/\1/' \
+			-e 's/\(QMAKE_LIBDIR[ 	]*=\) .*$$/\1/' \
+			-e 's^\(QMAKE_INCDIR_OPENGL[ 	]*=\) .*$$^\1^' \
+			-e 's^\(QMAKE_LIBDIR_OPENGL[ 	]*=\) .*$$^\1^'
 
 PTHREAD_OPTS+=		require
 
@@ -34,6 +39,9 @@ do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/linguist ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qm2ts ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qtconfig ${QTPREFIX}/bin
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qmake ${QTPREFIX}/bin/qmake
+	${INSTALL_DATA_DIR} ${QTPREFIX}/mkspecs
+	${CP} -R ${WRKSRC}/mkspecs ${QTPREFIX}
 
 .include "../../x11/qt3-libs/buildlink.mk"
 .include "../../mk/pthread.buildlink.mk"
