@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.154 2001/04/28 14:28:26 dmcmahill Exp $
+# $NetBSD: Packages.txt,v 1.155 2001/05/01 16:06:27 dmcmahill Exp $
 ###########################################################################
 
 			==========================
@@ -478,6 +478,38 @@ other machines.  The package pkgtools/cdpack provides a simple tool for
 creating the ISO 9660 images.  `cdpack' arranges the packages on the CD-ROM's
 in a way that keeps all the dependencies for given package on the same
 CD as that package.
+
+ 3.3.1 Example of cdpack
+ =============================
+
+Complete documentation for cdpack is found in cdpack(1).  The following
+short example assumes that the binary packages are left in
+/usr/pkgsrc/packages/All and that sufficient disk space exists in /u2
+to hold the ISO 9660 images.
+
+  mkdir /u2/images
+  pkg_add /usr/pkgsrc/packages/All/cdpack
+  rehash
+  cdpack /usr/pkgsrc/packages/All /u2/images
+
+If you wish to include a common set of files (COPYRIGHT, README, etc)
+on each CD in the collection, then you need to create a directory which
+contains these files.  For example
+
+  mkdir /tmp/common
+  echo "This is a README" > /tmp/commmon/README
+  echo "Another file" > /tmp/common/COPYING
+  mkdir /tmp/common/bin
+  echo "#!/bin/sh" > /tmp/common/bin/myscript
+  echo "echo Hello world" >> /tmp/common/bin/myscript
+  chmod 755 /tmp/common/bin/myscript
+
+Now create the images with
+
+  cdpack -x /tmp/common /usr/pkgsrc/packages/All /u2/images
+
+and each image will contain "README", "COPYING", and "bin/myscript"
+in their root directories.
 
 ====================================
 Part II: Package Constructor's Guide
