@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2003/05/08 09:34:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2003/07/01 09:45:54 wiz Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -51,10 +51,6 @@ man/man1/xmlcatalog.1
 man/man1/xmllint.1
 man/man3/libxml.3
 share/aclocal/libxml.m4
-share/doc/examples/libxml2/testHTML.c
-share/doc/examples/libxml2/testSAX.c
-share/doc/examples/libxml2/testXPath.c
-share/doc/examples/libxml2/xmllint.c
 share/doc/html/libxml2/DOM.gif
 share/doc/html/libxml2/FAQ.html
 share/doc/html/libxml2/Libxml2-Logo-180x168.gif
@@ -150,12 +146,15 @@ share/doc/html/libxml2/tutorial/xmltutorial.pdf
 share/doc/html/libxml2/w3c.png
 share/doc/html/libxml2/xml.html
 share/doc/libxml2/Copyright
+share/examples/libxml2/testHTML.c
+share/examples/libxml2/testSAX.c
+share/examples/libxml2/testXPath.c
+share/examples/libxml2/xmllint.c
 @dirrm share/doc/libxml2
 @dirrm share/doc/html/libxml2/tutorial/images/callouts
 @dirrm share/doc/html/libxml2/tutorial/images
 @dirrm share/doc/html/libxml2/tutorial
 @dirrm share/doc/html/libxml2
-@dirrm share/doc/examples/libxml2
-@dirrm share/doc/examples
+@dirrm share/examples/libxml2
 @dirrm include/libxml2/libxml
 @dirrm include/libxml2
