@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/26 09:16:10 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/03 15:30:53 grant Exp $
 #
 
 DISTNAME=		Magnetic22Src
@@ -15,6 +15,12 @@ USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 ALL_TARGET=		gtkmagnetic
 WRKSRC=			${WRKDIR}/Gtk
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:MSun)
+LIBS.SunOS+=		-lCrun
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gtkmagnetic ${PREFIX}/bin
