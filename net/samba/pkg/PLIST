@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2001/08/22 15:42:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.26 2001/10/15 08:50:52 martti Exp $
 bin/make_printerdef
 bin/make_smbcodepage
 bin/make_unicodemap
@@ -63,15 +63,6 @@ share/doc/html/samba/sambafaq-3.html
 share/doc/html/samba/sambafaq-4.html
 share/doc/html/samba/sambafaq-5.html
 share/doc/html/samba/sambafaq.html
-share/doc/samba/NT4-Locking.reg
-share/doc/samba/NT4_PlainPassword.reg
-share/doc/samba/Win2000_PlainPassword.reg
-share/doc/samba/Win95_PlainPassword.reg
-share/doc/samba/Win98_PlainPassword.reg
-share/doc/samba/Win9X-CacheHandling.reg
-share/doc/samba/WinME_PlainPassword.reg
-share/doc/samba/WindowsTerminalServer.reg
-share/doc/samba/announce
 share/doc/samba/Application_Serving.txt
 share/doc/samba/BROWSING-Config.txt
 share/doc/samba/BROWSING.txt
@@ -85,6 +76,8 @@ share/doc/samba/HINTS.txt
 share/doc/samba/INSTALL.sambatar
 share/doc/samba/Imprints.txt
 share/doc/samba/Macintosh_Clients.txt
+share/doc/samba/NT4-Locking.reg
+share/doc/samba/NT4_PlainPassword.reg
 share/doc/samba/NetBIOS.txt
 share/doc/samba/PROFILES.txt
 share/doc/samba/Passwords.txt
@@ -96,14 +89,22 @@ share/doc/samba/Recent-FAQs.txt
 share/doc/samba/RoutedNetworks.txt
 share/doc/samba/SCO.txt
 share/doc/samba/SMBTAR.notes
-share/doc/samba/SSLeay.txt
+share/doc/samba/Samba-OpenSSL.txt
 share/doc/samba/Speed.txt
 share/doc/samba/Speed2.txt
 share/doc/samba/Tracing.txt
 share/doc/samba/UNIX-SMB.txt
 share/doc/samba/UNIX_SECURITY.txt
+share/doc/samba/Win2000_PlainPassword.reg
 share/doc/samba/Win95.txt
+share/doc/samba/Win95_PlainPassword.reg
+share/doc/samba/Win98_PlainPassword.reg
+share/doc/samba/Win9X-CacheHandling.reg
+share/doc/samba/WinME_PlainPassword.reg
 share/doc/samba/WinNT.txt
+share/doc/samba/WinXP_SignOrSeal.reg
+share/doc/samba/WindowsTerminalServer.reg
+share/doc/samba/announce
 share/doc/samba/cifsntdomain.txt
 share/doc/samba/kurs.pdf
 share/doc/samba/kurs.tex
@@ -413,30 +414,30 @@ share/samba/swat/using_samba/index.html
 share/samba/swat/using_samba/inx.html
 share/samba/swat/using_samba/licenseinfo.html
 share/samba/swat/using_samba/this_edition.html
-@dirrm share/samba/swat/using_samba/gifs
-@dirrm share/samba/swat/using_samba/figs
-@dirrm share/samba/swat/using_samba
-@dirrm share/samba/swat/include
-@dirrm share/samba/swat/images
-@dirrm share/samba/swat/help
-@dirrm share/samba/swat
-@dirrm share/samba/codepages
-@dirrm share/samba
-@dirrm share/examples/samba/validchars
-@dirrm share/examples/samba/tridge
-@dirrm share/examples/samba/thoralf
-@dirrm share/examples/samba/svr4-startup
-@dirrm share/examples/samba/simple
-@dirrm share/examples/samba/printing
-@dirrm share/examples/samba/printer-accounting
-@dirrm share/examples/samba/misc
-@dirrm share/examples/samba/libsmbclient
-@dirrm share/examples/samba/dce-dfs
-@dirrm share/examples/samba/autofs
-@dirrm share/examples/samba/appliance
+@dirrm share/doc/html/samba
+@dirrm share/doc/samba
+@dirrm share/examples/samba/LDAP
 @dirrm share/examples/samba/VFS/block
 @dirrm share/examples/samba/VFS
-@dirrm share/examples/samba/LDAP
+@dirrm share/examples/samba/appliance
+@dirrm share/examples/samba/autofs
+@dirrm share/examples/samba/dce-dfs
+@dirrm share/examples/samba/libsmbclient
+@dirrm share/examples/samba/misc
+@dirrm share/examples/samba/printer-accounting
+@dirrm share/examples/samba/printing
+@dirrm share/examples/samba/simple
+@dirrm share/examples/samba/svr4-startup
+@dirrm share/examples/samba/thoralf
+@dirrm share/examples/samba/tridge
+@dirrm share/examples/samba/validchars
 @dirrm share/examples/samba
-@dirrm share/doc/samba
-@dirrm share/doc/html/samba
+@dirrm share/samba/codepages
+@dirrm share/samba/swat/help
+@dirrm share/samba/swat/images
+@dirrm share/samba/swat/include
+@dirrm share/samba/swat/using_samba/figs
+@dirrm share/samba/swat/using_samba/gifs
+@dirrm share/samba/swat/using_samba
+@dirrm share/samba/swat
+@dirrm share/samba

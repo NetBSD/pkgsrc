@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2001/08/22 15:42:17 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/10/15 08:50:51 martti Exp $
 
-DISTNAME=		samba-2.2.1a
+DISTNAME=		samba-2.2.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
@@ -106,7 +106,8 @@ post-install:
 	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
 	cd ${WRKDIR}/${DISTNAME}/docs;					\
-		${INSTALL_DATA} announce *.reg textdocs/* ${DOCDIR};	\
+		${INSTALL_DATA} announce textdocs/* ${DOCDIR};		\
+		${INSTALL_DATA} Registry/*.reg ${DOCDIR};		\
 		${INSTALL_DATA} faq/*.html ${HTMLDIR}
 
 	# Install Samba examples.
