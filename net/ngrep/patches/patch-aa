@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2001/09/14 23:05:43 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2004/01/30 14:36:09 adam Exp $
 
---- configure.orig	Tue Feb 27 07:08:56 2001
+--- configure.orig	2003-08-10 02:12:55.000000000 +0000
 +++ configure
-@@ -1551,16 +1551,8 @@
- for dir in $possible_dirs ; do 
+@@ -1566,16 +1566,8 @@ pcap_dir=""
+ for dir in $PCAP_DIR ; do 
      if test -d $dir -a -r "$dir/pcap.h" -a \
                         -r "$dir/net/bpf.h" ; then 
 -       if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 2001/09/14 23:05:43 wiz Exp $
      fi
  done
  
-@@ -1835,7 +1827,12 @@
+@@ -1968,7 +1960,12 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
@@ -33,5 +33,5 @@ $NetBSD: patch-aa,v 1.4 2001/09/14 23:05:43 wiz Exp $
 +	LIBS="-lpcap  $LIBS" ;;
 +esac
  cat > conftest.$ac_ext <<EOF
- #line 1841 "configure"
+ #line 1974 "configure"
  #include "confdefs.h"
