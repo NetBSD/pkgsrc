@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/25 18:47:02 zuntum Exp $
+bin/ip6_int
