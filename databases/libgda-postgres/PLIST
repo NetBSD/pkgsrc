@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/06 11:17:26 jmmv Exp $
+lib/libgda/providers/libgda-postgres.a
+lib/libgda/providers/libgda-postgres.la
+lib/libgda/providers/libgda-postgres.so
+@comment in libgda: @dirrm lib/libgda/providers
