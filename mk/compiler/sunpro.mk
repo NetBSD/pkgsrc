@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.4 2004/02/02 11:04:17 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.5 2004/02/03 20:38:39 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -12,7 +12,7 @@ SUNWSPROBASE?=	/opt/SUNWspro
 LANGUAGES.sunpro=	c c++
 _LANGUAGES.sunpro=	# empty
 .for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.sunpro=	${LANGUAGES.sunpro:M${_lang_}}
+_LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
 .endfor
 
 .if !empty(_LANGUAGES.sunpro)

@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.5 2004/02/02 11:04:17 jlam Exp $
+# $NetBSD: ccache.mk,v 1.6 2004/02/03 20:38:39 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -19,7 +19,7 @@ _USE_CCACHE=	NO
 LANGUAGES.ccache=	c c++
 _LANGUAGES.ccache=	# empty
 .for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.ccache=	${LANGUAGES.ccache:M${_lang_}}
+_LANGUAGES.ccache+=	${LANGUAGES.ccache:M${_lang_}}
 .endfor
 .if empty(_LANGUAGES.ccache)
 _USE_CCACHE=	NO
