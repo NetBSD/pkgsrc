@@ -1,1 +1,11 @@
-Color QUICK CAM frame grabber
+cqcam is a free Color QuickCam (PC/Parallel) control program for
+various PC Unixes, written by Patrick Reynolds. It is independent
+of Scott Laird's qcam package and those derived from it and has
+several features that they do not. cqcam has been tested on Linux,
+QNX, FreeBSD, BSDI, and LynxOS, and could probably be ported easily
+to (almost) any other PC Unix out there. 
+
+cqcam supports the Color Quickcam and Color Quickcam 2. It does not
+support b&w Quickcams. It will support parallel VC Quickcams when
+Connectix gets around to posting low-level programming specifications.
+USB VC Quickcams may be supported in the more distant future. 
