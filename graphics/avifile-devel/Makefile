@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/08/14 19:59:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/19 06:11:43 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -13,9 +13,7 @@ COMMENT=	MPEG-4 (DivX) video player library
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
 DEPENDS+=	automake-*:../../devel/automake
 
-WITH_QT?=	NO
-
-.if defined (WITH_QT) && ${WITH_QT} == YES
+.if defined (WITH_QT)
 PLIST_SUBST+=	QT=''
 .else
 PLIST_SUBST+=	QT='@comment '
@@ -39,7 +37,7 @@ CONFIGURE_ARGS+=	--with-win32-path=${LOCALBASE}/lib/win32
 CONFIGURE_ARGS+=	--disable-dpms
 CONFIGURE_ARGS+=	--disable-ffmpeg
 
-.if defined (WITH_QT) && ${WITH_QT} == YES
+.if defined (WITH_QT)
 .include "../../x11/qt2-designer/buildlink.mk"
 CXXFLAGS+=		-Wl,-R${QTDIR}/lib
 CXXFLAGS+=		-Wl,-R${LOCALBASE}/lib
