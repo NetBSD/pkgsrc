@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/02 12:23:48 lukem Exp $
+# $NetBSD: Makefile,v 1.13 2002/03/05 17:38:49 skrll Exp $
 
 DISTNAME=	libao-0.8.2
 CATEGORIES=	devel
@@ -6,8 +6,6 @@ MASTER_SITES=	http://www.vorbis.com/files/rc3/unix/
 
 MAINTAINER=	lukem@netbsd.org
 COMMENT=	cross-platform audio library
-
-BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 
 PLIST_SUBST+=	VERSION="${DISTNAME}"
 
