@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2002/06/06 13:48:32 martti Exp $
+# $NetBSD: Makefile,v 1.65 2002/06/17 19:42:08 tron Exp $
 
 DISTNAME=	postfix-1.1.11
 CATEGORIES=	mail
@@ -57,6 +57,7 @@ BUILD_DEFS+=	USE_SASL
 
 PLIST_SRC+=	${PKGDIR}/PLIST
 ALL_TARGET=	#empty
+MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
 
 pre-configure:
 	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
