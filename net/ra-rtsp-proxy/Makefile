@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/02/04 16:58:57 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/04 17:46:07 tron Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
-PKGNAME=	ra-rtsp-proxy-1.0.0.0
+PKGNAME=	ra-rtsp-proxy-1.0.0.0nb1
 CATEGORIES=	net
 MASTER_SITES=	# empty
 
