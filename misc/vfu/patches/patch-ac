@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/01/26 23:31:53 hubertf Exp $
+
+--- vfu/makefile.orig	Sun Jan 17 00:01:01 1999
++++ vfu/makefile	Tue Jan 26 22:53:56 1999
+@@ -3,9 +3,9 @@
+ CC      = gcc
+ LD      = gcc
+ AR      = ar rvs
+-CFLAGS  =  -I../vslib -I/usr/include/ncurses -O2
+-CCFLAGS =  -I../vslib -I/usr/include/ncurses -O2
+-LDFLAGS =  -L../vslib -lvslib -lncurses 
++CFLAGS  =  -I../vslib -I${LOCALBASE}/include -O2 -DPREFIX=\"${PREFIX}\"
++CCFLAGS =  -I../vslib -I${LOCALBASE}/include -O2 -DPREFIX=\"${PREFIX}\"
++LDFLAGS =  -L../vslib -lvslib -L${LOCALBASE}/lib -lncurses 
+ ARFLAGS = 
+ TARGET  = vfu
+ 

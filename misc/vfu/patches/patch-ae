@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/01/26 23:31:53 hubertf Exp $
+
+I do not know if this will wotk on LP64 (Alpha, UltraSparc) too... - HF
+
+
+--- vfu/vfucopy.cpp.BAK	Tue Jan 26 21:15:28 1999
++++ vfu/vfucopy.cpp	Tue Jan 26 21:18:49 1999
+@@ -13,7 +13,12 @@
+ #include "vfuview.h"
+ #include "vfusys.h"
+ #include "vfucopy.h"
+-#include <sys/vfs.h>
++#ifdef __Linux__
++#  include <sys/vfs.h>
++#else
++#  include <sys/param.h>
++#  include <sys/mount.h>
++#endif
+ 
+ // #define CopyBuffSize 64000
+ #define CopyBuffSize  512*1024 // it's a 1/2 meg -- not too much :)
+@@ -137,11 +142,11 @@
+     char s_t = (OptTime(stat_src) == OptTime(stat_dst))?'*':' '; // same time
+     char s_s = (stat_src.st_size == stat_dst.st_size)?'*':' '; // same size
+ 
+-    TimeStr(OptTime(stat_src), sttime); str = stat_src.st_size; StrComma(str);
++    TimeStr(OptTime(stat_src), sttime); str = (long int)stat_src.st_size; StrComma(str);
+     sp(sss, "SRC: %s%c %11s%c %s", sttime, s_t, str.asis(), s_s, _fr );
+     say1(sss);
+ 
+-    TimeStr(OptTime(stat_dst), sttime); str = stat_dst.st_size; StrComma(str);
++    TimeStr(OptTime(stat_dst), sttime); str = (long int)stat_dst.st_size; StrComma(str);
+     sp(sss, "DST: %s%c %11s%c %s", sttime, s_t, str.asis(), s_s, _to );
+     say2(sss);
+ 

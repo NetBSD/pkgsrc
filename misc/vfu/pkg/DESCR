@@ -1,0 +1,19 @@
+VFU is small, handy, easy-to-use file manager for UNIX/Linux.
+Main features are:
+
+   * Console/Text mode!
+   * Copy/Move/Erase of selected files/single file/single file while
+     selection exists.
+   * Overwrite prompt when copy/move (Yes/No/Always/Never/...).
+   * Fast One-Key Commands.
+   * Filename completion (incl. extended completion: `*some[az].zip' )
+   * Powerfull ChangeDir function (w. History, Preset favourite dirs...)
+   * Directory(ies) size calculation (single dir/all dirs).
+   * Run-Time dirs' sizes calculation! (with dir sizes cache as option)
+   * Extensive user-defined external support/utils!
+   * Interactive/octal chmod and chown (for selected files/single/...)
+   * File-type colorization (user defined).
+   * Incremental search/masking in all file lists.
+   * Archives support (storage/directory) incl. view/browse/extract:
+     TAR TGZ ZIP UC2 ARJ JAR RAR LIM LHA HA
+   * +++more...

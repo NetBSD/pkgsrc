@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/01/26 23:31:53 hubertf Exp $
+
+--- vfu/vfuopt.cpp.BAK	Tue Jan 26 22:50:19 1999
++++ vfu/vfuopt.cpp	Tue Jan 26 22:51:01 1999
+@@ -103,8 +103,8 @@
+ void SetupFiles()
+ {
+   #ifdef _TARGET_LINUX_
+-  if (access("/usr/local/lib/vfurc", R_OK) == 0) RCFile = "/usr/local/lib/vfurc"; else
+-  if (access("/usr/local/vfurc", R_OK) == 0) RCFile = "/usr/local/vfurc"; else
++  if (access(PREFIX "/etc/vfurc", R_OK) == 0) RCFile = PREFIX "/etc/vfurc"; else
++  if (access(PREFIX "/vfurc", R_OK) == 0) RCFile = PREFIX "/vfurc"; else
+   sprintf( MAX_PATH, RCFile,"%s.vfurc", HOME);
+   sprintf( MAX_PATH, OPTFile,"%s.vfu.opt", HOME);
+   #endif
