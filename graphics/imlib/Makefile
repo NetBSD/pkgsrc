@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/06/20 01:40:16 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.38 2000/06/27 01:13:47 wiz Exp $
 #
 
 DISTNAME=		imlib-1.9.8.1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/imlib/}
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.labs.redhat.com/imlib/
 
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
@@ -21,6 +23,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+USE_GMAKE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +38,9 @@ PLIST_SRC=	${PKGDIR}/PLIST.mi
 .else
 PLIST_SRC=	${PKGDIR}/PLIST.mi ${PKGDIR}/PLIST.elf
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && autoconf && automake
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib
