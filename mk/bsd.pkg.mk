@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.989 2002/06/10 13:28:23 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.990 2002/06/15 11:28:12 cjep Exp $
 #
 # This file is in the public domain.
 #
@@ -1570,7 +1570,7 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 .endif
 .if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
-BUILD_DEPENDS+=		lha-[0-9]*:../../archivers/lha  
+BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha  
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
