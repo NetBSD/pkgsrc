@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1998/08/15 00:12:10 tv Exp $
+
+--- configure.orig	Fri Aug 14 19:35:25 1998
++++ configure	Fri Aug 14 19:35:33 1998
+@@ -4509,7 +4509,7 @@
+ 		 USE_INCLUDED_LIBINTL=yes
+ 		 CATOBJEXT=.cat
+ 		 INSTOBJEXT=.cat
+-		 DATADIRNAME=lib
++		 DATADIRNAME=share
+ 		 INTLDEPS="../intl/libintl.a"
+ 		 INTLLIBS=$INTLDEPS
+ 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
