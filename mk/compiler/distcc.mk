@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.8 2004/02/02 12:47:19 jlam Exp $
+# $NetBSD: distcc.mk,v 1.9 2004/02/03 20:38:39 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -19,7 +19,7 @@ _USE_DISTCC=	NO
 LANGUAGES.distcc=	c c++
 _LANGUAGES.distcc=	# empty
 .for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.distcc=	${LANGUAGES.distcc:M${_lang_}}
+_LANGUAGES.distcc+=	${LANGUAGES.distcc:M${_lang_}}
 .endfor
 .if empty(_LANGUAGES.distcc)
 _USE_DISTCC=	NO
