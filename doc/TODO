@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2716 2004/12/15 19:05:57 snj Exp $
+$NetBSD: TODO,v 1.2717 2004/12/15 21:46:32 reed Exp $
 
 Suggested new packages
 ======================
@@ -338,7 +338,7 @@ Suggested package updates
 	o bioperl-1.4
 	o blender-2.35
 	o blitz++-0.8
-	o bmp-0.9.7
+	o bmp-0.9.7 [pkg/28672]
 	o boaconstructor-0.3.1
 	o bomberclone-0.11.4
 	o bonobo-1.0.22
