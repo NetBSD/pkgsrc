@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:47 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:34 agc Exp $
 
 SHA1 (swig1.1p5.tar.gz) = 29f3bea5f7209b742a5c468e11a3ffd2b986d1b6
+RMD160 (swig1.1p5.tar.gz) = 529daa90434cdffb307411c71dd7a216be288dc5
 Size (swig1.1p5.tar.gz) = 2058282 bytes

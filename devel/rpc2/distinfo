@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/01/25 13:19:18 blymn Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 22:24:32 agc Exp $
 
 SHA1 (rpc2-1.26.tar.gz) = 0860277e69968ea5d65c20f9ac4ac1beadf3f1dc
+RMD160 (rpc2-1.26.tar.gz) = febaaf57741fe95f34773d461b416f7c2e3298da
 Size (rpc2-1.26.tar.gz) = 560518 bytes
