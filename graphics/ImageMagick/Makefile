@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1997/12/14 01:39:37 agc Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/23 17:08:31 agc Exp $
 # New ports collection Makefile for: ImageMagick
 # Version required:	3.9.3
 # Date created:         11th December 1997
@@ -20,6 +20,8 @@ USE_IMAKE=	yes
 USE_X11=	yes
 WRKSRC=		${WRKDIR}/ImageMagick
 MAKE_ENV=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
+
+NO_CHECKSUM=	yes
 
 CAT1=		display.0 montage.0 import.0 animate.0 convert.0 identify.0 \
 		mogrify.0 combine.0 ImageMagick.0 quantize.0 miff.0 xtp.0
