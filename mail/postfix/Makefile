@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2004/07/19 03:25:11 jlam Exp $
+# $NetBSD: Makefile,v 1.138 2004/07/19 04:51:52 jlam Exp $
 
 DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
@@ -22,9 +22,9 @@ USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 
 PKG_SYSCONFSUBDIR=	postfix
-POSTFIX_SPOOL=		/var/spool/postfix
+POSTFIX_QUEUE_DIR=	/var/spool/postfix
 
-OWN_DIRS=	${POSTFIX_SPOOL}
+OWN_DIRS=	${POSTFIX_QUEUE_DIR}
 
 CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
 CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
@@ -32,6 +32,7 @@ CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
 CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
 CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
 CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
+CCARGS+=	-DDEF_QUEUE_DIR=\"${POSTFIX_QUEUE_DIR}\"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -148,11 +149,9 @@ POSTFIX_CONF_FILES+=	src/global/mail_params.h
 
 FILES_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
-PLIST_SUBST+=	POSTFIX_SPOOL=${POSTFIX_SPOOL}
-FILES_SUBST+=	POSTFIX_SPOOL=${POSTFIX_SPOOL}
 
 PKG_GROUPS?=	postfix maildrop
-PKG_USERS?=	postfix:postfix::Postfix\\ User:${POSTFIX_SPOOL}
+PKG_USERS?=	postfix:postfix::Postfix\\ User:${POSTFIX_QUEUE_DIR}
 
 LIBEXECDIR=	${PREFIX}/libexec/${PKGBASE}
 EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
