@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 1999/02/18 11:52:54 bouyer Exp $
+# $NetBSD: Makefile,v 1.55 1999/02/22 14:05:32 rh Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -34,6 +34,7 @@
     SUBDIR += gaim
 #    SUBDIR += gnu-finger
 #    SUBDIR += gopher
+    SUBDIR += gtksamba
     SUBDIR += icb
 #    SUBDIR += icmpinfo
 #    SUBDIR += irc
@@ -102,6 +103,7 @@
 #    SUBDIR += wide-dhcp
     SUBDIR += wget
     SUBDIR += wu-ftpd
+    SUBDIR += wu-ftpd-vr
     SUBDIR += xarchie
 #    SUBDIR += xipmsg
     SUBDIR += xtraceroute
