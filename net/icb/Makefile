@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 1999/11/26 22:12:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1999/11/26 22:16:21 hubertf Exp $
 #
 
-DISTNAME=		icb-5.0.9pl1
+DISTNAME=		icb-5.0.9
+PKGNAME=		icb-5.0.9pl1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
