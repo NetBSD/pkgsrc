@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2004/01/08 15:24:42 adam Exp $
+$NetBSD: patch-ab,v 1.5 2005/01/05 11:00:26 adam Exp $
 
---- rt-config.c.orig	2003-12-12 00:24:16.000000000 +0000
+--- rt-config.c.orig	2004-11-26 18:10:29.000000000 +0000
 +++ rt-config.c
-@@ -79,7 +79,7 @@ int stereo_enabled;
+@@ -81,7 +81,7 @@ int stereo_enabled;
  #endif
  
  #ifndef SYSTEM_WIDE_CFG_FILE
