@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/21 06:33:00 snj Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/11 03:04:33 snj Exp $
 
 DISTNAME=		benchfft-2.0
 CATEGORIES=		benchmarks math
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.fftw.org/benchfft/
 COMMENT=		Benchmark your machine with a number of FFT algorithms
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_FORTRAN=		yes
 USE_LIBTOOL=		yes
