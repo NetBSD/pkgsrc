@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.3 2002/06/07 10:38:45 cjep Exp $
+$NetBSD: patch-ad,v 1.4 2002/06/15 21:27:25 wiz Exp $
 
---- main.c.orig	Fri Jun  7 11:27:57 2002
+--- main.c.orig	Sat Nov  4 23:48:33 1995
 +++ main.c
-@@ -99,29 +99,29 @@
+@@ -5,7 +5,6 @@
+ #include <stdlib.h>
+ #include <termios.h>
+ #include <signal.h>
+-#include <asm/io.h>
+ #include <config.h>
+ float freq_to_change_to;
+ char flag_data_return[5];
+@@ -100,29 +99,29 @@
      if (argc == 2) {
         switch(argv[1][0]) {
               case '0':
