@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/30 17:53:27 xtraeme Exp $
+bin/festival-synthesis-driver
+bin/test-speech
+include/gnome-speech-1.0/gnome-speech/GNOME_Speech.h
+include/gnome-speech-1.0/gnome-speech/gnome-speech.h
+include/gnome-speech-1.0/gnome-speech/speaker.h
+lib/bonobo/servers/GNOME_Speech_SynthesisDriver_Festival.server
+lib/libgnomespeech.a
+lib/libgnomespeech.la
+lib/libgnomespeech.so
+lib/libgnomespeech.so.6
+lib/libgnomespeech.so.6.0
+lib/orbit-2.0/GNOME_Speech_module.a
+lib/orbit-2.0/GNOME_Speech_module.la
+lib/orbit-2.0/GNOME_Speech_module.so
+lib/pkgconfig/gnome-speech-1.0.pc
+share/idl/gnome-speech-1.0/GNOME_Speech.idl
+share/idl/gnome-speech-1.0/GNOME_Speech_Speaker.idl
+share/idl/gnome-speech-1.0/GNOME_Speech_SpeechCallback.idl
+share/idl/gnome-speech-1.0/GNOME_Speech_SynthesisDriver.idl
+@dirrm share/idl/gnome-speech-1.0
+@dirrm include/gnome-speech-1.0/gnome-speech
