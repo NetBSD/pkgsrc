@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2004/03/30 18:32:33 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/01 14:35:17 abs Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
 # of ant was 3.1.  Do NOT use dependency patterns such as >=1.3 which could pick
 # up this version by mistake.
 
-DISTNAME=	apache-ant-1.5.4
-PKGREVISION=	1
+DISTNAME=	apache-ant-1.6.1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,7 +36,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${PREFIX}/lib/java/ant
-	${INSTALL_DATA} ${WRKSRC}/lib/optional.jar ${PREFIX}/lib/java/ant
+	${INSTALL_DATA} ${WRKSRC}/lib/ant-nodeps.jar ${PREFIX}/lib/java/ant
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/ant
 	cd ${WRKSRC}/docs && ${PAX} -rw -pmp * ${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/ant
