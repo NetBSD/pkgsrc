@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2001/08/11 19:26:36 rh Exp $
-#
+# $NetBSD: Makefile,v 1.10 2001/09/24 20:59:26 tron Exp $
 
-DISTNAME=		gtkhtml-0.11.1
+DISTNAME=		gtkhtml-0.12.0
 CATEGORIES=		www gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gtkhtml/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
