@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/08 01:47:40 garbled Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/08 21:47:21 veego Exp $
 
 DISTNAME=	gphoto-2.0beta1
+PKGNAME=	gphoto-2.0beta1nb1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.gphoto.net/dist/
 
