@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2000/01/20 11:48:04 agc Exp $
+$NetBSD: patch-aa,v 1.6 2001/12/25 14:48:38 wiz Exp $
 
---- util/Makefile.in	1998/02/13 13:13:54	1.1
-+++ util/Makefile.in	1998/02/13 13:14:34
-@@ -46,7 +46,7 @@
+--- util/Makefile.in.orig	Tue Sep 28 21:40:56 1999
++++ util/Makefile.in
+@@ -48,7 +48,7 @@
  INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
  INSTALL_DATA = @INSTALL_DATA@
 -INSTALL_SCRIPT = @INSTALL_SCRIPT@
 +INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
  transform = @program_transform_name@
  
  NORMAL_INSTALL = :
-@@ -270,7 +270,7 @@
- all: Makefile $(PROGRAMS) $(SCRIPTS)
- 
- install-strip:
--	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
-+	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
- installdirs:
- 	$(mkinstalldirs)  $(bindir) $(bindir)
- 

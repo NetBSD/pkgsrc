@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2001/06/18 22:09:17 jlam Exp $
+$NetBSD: patch-ag,v 1.6 2001/12/25 14:48:39 wiz Exp $
 
---- configure.orig	Tue Mar  3 13:30:18 1998
-+++ configure	Sun Oct  4 15:53:12 1998
-@@ -3443,7 +3443,7 @@
+--- configure.orig	Tue Sep 28 21:39:56 1999
++++ configure
+@@ -4019,7 +4019,7 @@
  		 USE_INCLUDED_LIBINTL=yes
  		 CATOBJEXT=.cat
  		 INSTOBJEXT=.cat

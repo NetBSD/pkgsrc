@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.solaris,v 1.1 2001/11/01 01:31:18 zuntum Exp $
-lib/locale/de/LC_MESSAGES/texinfo.mo
-lib/locale/fr/LC_MESSAGES/texinfo.mo

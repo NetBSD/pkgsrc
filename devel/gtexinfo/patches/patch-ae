@@ -1,58 +1,42 @@
-$NetBSD: patch-ae,v 1.5 1998/08/07 10:40:25 agc Exp $
+$NetBSD: patch-ae,v 1.6 2001/12/25 14:48:39 wiz Exp $
 
-*** info/terminal.c.orig	Tue Jul 29 17:42:05 1997
---- info/terminal.c	Sat Nov 15 17:07:42 1997
-***************
-*** 31,43 ****
-  #ifdef HAVE_NCURSES_TERMCAP_H
-  #include <ncurses/termcap.h>
-  #else
-! #ifdef HAVE_TERMCAP_H
-  #include <termcap.h>
-  #else
-  /* On Solaris2, sys/types.h #includes sys/reg.h, which #defines PC.
-     Unfortunately, PC is a global variable used by the termcap library. */
-  #undef PC
-  
-  /* Termcap requires these variables, whether we access them or not. */
-  char *BC, *UP;
-  char PC;      /* Pad character */
---- 31,47 ----
-  #ifdef HAVE_NCURSES_TERMCAP_H
-  #include <ncurses/termcap.h>
-  #else
-! #if defined(HAVE_TERMCAP_H) && !defined(__NetBSD__)
-  #include <termcap.h>
-  #else
-  /* On Solaris2, sys/types.h #includes sys/reg.h, which #defines PC.
-     Unfortunately, PC is a global variable used by the termcap library. */
-  #undef PC
-  
-+ #if defined(__NetBSD__)
-+ #include <termcap.h>
-+ #endif
-+ 
-  /* Termcap requires these variables, whether we access them or not. */
-  char *BC, *UP;
-  char PC;      /* Pad character */
-***************
-*** 114,125 ****
---- 118,135 ----
-  /* Although I can't find any documentation that says this is supposed to
-     return its argument, all the code I've looked at (termutils, less)
-     does so, so fine.  */
-+ #ifdef __NetBSD__
-+ void
-+ #else
-  static int
-+ #endif
-  output_character_function (c)
-       int c;
-  {
-    putc (c, stdout);
-+ #ifndef __NetBSD__
-    return c;
-+ #endif
-  }
-  
-  /* Macro to send STRING to the terminal. */
+--- info/terminal.c.orig	Mon Sep 20 14:28:54 1999
++++ info/terminal.c
+@@ -32,13 +32,17 @@
+ #ifdef HAVE_NCURSES_TERMCAP_H
+ #include <ncurses/termcap.h>
+ #else
+-#ifdef HAVE_TERMCAP_H
++#if defined(HAVE_TERMCAP_H) && !defined(__NetBSD__)
+ #include <termcap.h>
+ #else
+ /* On Solaris2, sys/types.h #includes sys/reg.h, which #defines PC.
+    Unfortunately, PC is a global variable used by the termcap library. */
+ #undef PC
+ 
++#if defined(__NetBSD__)
++#include <termcap.h>
++#endif
++
+ /* Termcap requires these variables, whether we access them or not. */
+ char *BC, *UP;
+ char PC;      /* Pad character */
+@@ -116,12 +120,18 @@
+ /* Although I can't find any documentation that says this is supposed to
+    return its argument, all the code I've looked at (termutils, less)
+    does so, so fine.  */
++#ifdef __NetBSD__
++void
++#else
+ static int
++#endif
+ output_character_function (c)
+      int c;
+ {
+   putc (c, stdout);
++#ifndef __NetBSD__
+   return c;
++#endif
+ }
+ 
+ /* Macro to send STRING to the terminal. */
