@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.43 2001/06/16 08:45:41 veego Exp $
+# $NetBSD: bsd.prefs.mk,v 1.44 2001/06/20 19:36:03 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -130,6 +130,11 @@ USE_INET6?=		NO
 .include "${.CURDIR}/../mk/defs.NetBSD.mk"
 .else exists(${.CURDIR}/mk/defs.NetBSD.mk)
 .include "${.CURDIR}/mk/defs.NetBSD.mk"
+.endif
+
+# Set default type of libXaw used during package builds.
+.if defined(USE_XAW)
+XAW_TYPE?=		standard
 .endif
 
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
