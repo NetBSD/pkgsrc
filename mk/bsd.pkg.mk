@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.397 2000/01/17 17:11:49 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.398 2000/02/01 16:30:07 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -668,6 +668,25 @@ MASTER_SITE_GNU+=	\
 MASTER_SITE_PERL_CPAN+=	\
 	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/ \
 	ftp://ftp.cdrom.com/pub/perl/CPAN/modules/by-module/
+
+MASTER_SITE_R_CRAN+=	\
+	http://cran.r-project.org/src/ \
+	ftp://cran.r-project.org/pub/R/src/ \
+	http://cran.at.r-project.org/src/ \
+	ftp://cran.at.r-project.org/pub/R/src/ \
+	http://cran.dk.r-project.org/src/ \
+	http://cran.ch.r-project.org/src/ \
+	http://cran.uk.r-project.org/src/ \
+	http://cran.us.r-project.org/src/ \
+	http://lib.stat.cmu.edu/R/CRAN/src/ \
+	ftp://ftp.biostat.washington.edu/mirrors/R/CRAN/src/ \
+	http://cran.stat.wisc.edu/src/ \
+	http://SunSITE.auc.dk/R/src/ \
+	http://www.stat.unipg.it/pub/stat/statlib/R/CRAN/src/ \
+	ftp://ftp.u-aizu.ac.jp/pub/lang/R/CRAN/src/ \
+	ftp://dola.snu.ac.kr/pub/R/CRAN/src/ \
+	http://stat.ethz.ch/CRAN/src/ \
+	http://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+=  \
 	ftp://ftp.cdrom.com/pub/tex/ctan/  \
@@ -1735,47 +1754,55 @@ update:
 RESUMEUPDATE?=	NO
 
 update:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${DDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} deinstall DEINSTALLDEPENDS=ALL
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} ${DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${MAKE} ${.MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
 .endif
 .if ${REINSTALL} == "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${DEPENDS_TARGET} KEEP_WRKDIR=YES
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} reinstall
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} reinstall
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -s ${DDIR} ] ; then					\
-		for dep in `${CAT} ${DDIR}` ; do			\
-			${ECHO_MSG} "===>  Installing in $${dep}" ;	\
-			(cd "../../$${dep}" && 				\
+	[ -s ${DDIR} ] && for dep in `${CAT} ${DDIR}` ; do		\
+		(if cd "../../$${dep}" ; then				\
+			${ECHO_MSG} "===>  Installing in $${dep}" &&	\
 			if [ "${RESUMEUPDATE}" = "NO" ] ; then		\
-			  ${MAKE} deinstall ;				\
+				${MAKE} ${.MAKEFLAGS} deinstall;	\
 			fi &&						\
 			if [ "${REINSTALL}" = "NO" ] ; then		\
-				${MAKE} ${DEPENDS_TARGET} ;		\
+				${MAKE} ${.MAKEFLAGS} ${DEPENDS_TARGET};\
 			else						\
-				${MAKE} reinstall ;			\
-			fi) ;						\
-		done ;							\
-	fi
+				${MAKE} ${.MAKEFLAGS} reinstall;	\
+			fi ;						\
+		else							\
+			${ECHO_MSG} "===>  Skipping removed directory $${dep}";\
+		fi) ;							\
+	done
 .if ${NOCLEAN} == "NO"
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean-update CLEAR_DIRLIST=YES
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${MAKE} ${.MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
 .endif
 
 
 clean-update:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} ${DDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${DDIR} ] ; then					\
 		for dep in `${CAT} ${DDIR}` ; do			\
-			(cd "../../$${dep}" && ${MAKE} clean) ;		\
+			(if cd "../../$${dep}" ; then			\
+				${MAKE} ${.MAKEFLAGS} clean ;		\
+			else						\
+				${ECHO_MSG} "===>  Skipping removed directory $${dep}";\
+			fi) ;						\
 		done ;							\
 	fi
 .ifdef CLEAR_DIRLIST
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} clean
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean update-dirlist		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${MAKE} ${.MAKEFLAGS} clean update-dirlist		\
 		DIRLIST="`${CAT} ${DDIR}`" PKGLIST="`${CAT} ${DLIST}`"
 .endif
 
