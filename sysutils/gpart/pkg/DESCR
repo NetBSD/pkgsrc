@@ -1,0 +1,3 @@
+Gpart is a small tool which tries to guess what partitions
+are on a PC type harddisk in case the primary partition table
+was damaged.
