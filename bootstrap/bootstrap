@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.15 2004/04/23 02:03:18 tv Exp $
+# $NetBSD: bootstrap,v 1.16 2004/04/24 19:17:09 danw Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -183,6 +183,10 @@ copy_src()
 build_start=`date`
 echo_msg "bootstrap command: $0 $@"
 echo_msg "bootstrap started: $build_start"
+
+if [ "x${PRESERVE_PATH}" != "xyes" ]; then
+	PATH="${PATH}:/sbin:/usr/sbin"
+fi
 
 overpath=""
 root_user=root
