@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/05/09 16:34:50 itojun Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/05/09 17:16:18 itojun Exp $
 @comment lib/X11/fonts/intlfonts/TrueType/lt1-b-omega-serif.ttf
 @comment lib/X11/fonts/intlfonts/TrueType/lt1-bi-omega-serif.ttf
 @comment lib/X11/fonts/intlfonts/TrueType/lt1-i-omega-serif.ttf
@@ -102,29 +102,20 @@ lib/X11/fonts/intlfonts/arab24-0-etl.pcf.gz
 lib/X11/fonts/intlfonts/arab24-1-etl.pcf.gz
 lib/X11/fonts/intlfonts/arab24-2-etl.pcf.gz
 lib/X11/fonts/intlfonts/bmp16-etl.pcf.gz
-lib/X11/fonts/intlfonts/cc40s.pcf.gz
-lib/X11/fonts/intlfonts/cc48s.pcf.gz
 lib/X11/fonts/intlfonts/cns1-16.pcf.gz
 lib/X11/fonts/intlfonts/cns1-24.pcf.gz
-lib/X11/fonts/intlfonts/cns1-40.pcf.gz
 lib/X11/fonts/intlfonts/cns2-16.pcf.gz
 lib/X11/fonts/intlfonts/cns2-24.pcf.gz
-lib/X11/fonts/intlfonts/cns2-40.pcf.gz
 lib/X11/fonts/intlfonts/cns3-16.pcf.gz
 lib/X11/fonts/intlfonts/cns3-24.pcf.gz
-lib/X11/fonts/intlfonts/cns3-40.pcf.gz
 lib/X11/fonts/intlfonts/cns4-16.pcf.gz
 lib/X11/fonts/intlfonts/cns4-24.pcf.gz
-lib/X11/fonts/intlfonts/cns4-40.pcf.gz
 lib/X11/fonts/intlfonts/cns5-16.pcf.gz
 lib/X11/fonts/intlfonts/cns5-24.pcf.gz
-lib/X11/fonts/intlfonts/cns5-40.pcf.gz
 lib/X11/fonts/intlfonts/cns6-16.pcf.gz
 lib/X11/fonts/intlfonts/cns6-24.pcf.gz
-lib/X11/fonts/intlfonts/cns6-40.pcf.gz
 lib/X11/fonts/intlfonts/cns7-16.pcf.gz
 lib/X11/fonts/intlfonts/cns7-24.pcf.gz
-lib/X11/fonts/intlfonts/cns7-40.pcf.gz
 lib/X11/fonts/intlfonts/cyr14-etl.pcf.gz
 lib/X11/fonts/intlfonts/cyr16-etl.pcf.gz
 lib/X11/fonts/intlfonts/cyr24-etl.pcf.gz
@@ -154,12 +145,9 @@ lib/X11/fonts/intlfonts/j78-16.pcf.gz
 lib/X11/fonts/intlfonts/j83-18.pcf.gz
 lib/X11/fonts/intlfonts/j83-18b.pcf.gz
 lib/X11/fonts/intlfonts/j83-18i.pcf.gz
-lib/X11/fonts/intlfonts/j83-32.pcf.gz
-lib/X11/fonts/intlfonts/j83-48.pcf.gz
 lib/X11/fonts/intlfonts/j90-16.pcf.gz
 lib/X11/fonts/intlfonts/jksp16.pcf.gz
 lib/X11/fonts/intlfonts/jksp24.pcf.gz
-lib/X11/fonts/intlfonts/jksp40.pcf.gz
 lib/X11/fonts/intlfonts/koi14-etl.pcf.gz
 lib/X11/fonts/intlfonts/koi16-etl.pcf.gz
 lib/X11/fonts/intlfonts/koi24-etl.pcf.gz
@@ -183,7 +171,6 @@ lib/X11/fonts/intlfonts/lt1-24-etl.pcf.gz
 lib/X11/fonts/intlfonts/lt1-24b-etl.pcf.gz
 lib/X11/fonts/intlfonts/lt1-24bi-etl.pcf.gz
 lib/X11/fonts/intlfonts/lt1-24i-etl.pcf.gz
-lib/X11/fonts/intlfonts/lt1-40-etl.pcf.gz
 lib/X11/fonts/intlfonts/lt2-14-etl.pcf.gz
 lib/X11/fonts/intlfonts/lt2-16-etl.pcf.gz
 lib/X11/fonts/intlfonts/lt2-24-etl.pcf.gz
