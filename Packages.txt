@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.277 2003/01/04 14:31:57 grant Exp $
+# $NetBSD: Packages.txt,v 1.278 2003/01/04 16:04:06 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -410,7 +410,7 @@ In pkgsrc/mk/bulk, copy ``build.conf-example'' to ``build.conf'' and
 edit it, following the comments in that file. This is the config
 file that determines where log files are generated after the build,
 where to mail the build report, where your pkgsrc is located and
-which user to su(8) to do a 'cvs update'.
+which user to su(8) to to do a 'cvs update'.
 
  3.2.1.3 pre-build.local
  =======================
