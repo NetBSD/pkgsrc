@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.3 2003/02/18 17:51:08 jmmv Exp $
+# $NetBSD: fonts.mk,v 1.3.6.1 2003/12/30 16:08:04 agc Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # fonts (most of them in the fonts category).  It takes care of updating the
@@ -25,8 +25,7 @@ FONTS_X11_DIRS?=
 .if !empty(FONTS_TTF_DIRS) || !empty(FONTS_TYPE1_DIRS) || !empty(FONTS_X11_DIRS)
 
 USE_PKGINSTALL=		YES
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/fonts
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/fonts
+HEADER_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/fonts
 
 .if !empty(FONTS_TTF_DIRS)
 EVAL_PREFIX+=			TTMKFDIR_PREFIX=ttmkfdir
