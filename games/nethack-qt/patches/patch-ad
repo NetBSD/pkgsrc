@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2000/04/14 17:31:27 pooka Exp $
+$NetBSD: patch-ad,v 1.2 2000/08/10 17:50:14 pooka Exp $
 
---- win/Qt/qt_win.cpp.orig	Sat Dec 11 07:21:09 1999
-+++ win/Qt/qt_win.cpp	Fri Apr 14 17:16:15 2000
-@@ -3410,7 +3410,7 @@
+--- win/Qt/qt_win.cpp.orig	Sat Jul 22 03:59:19 2000
++++ win/Qt/qt_win.cpp	Thu Aug 10 19:59:49 2000
+@@ -3448,7 +3448,7 @@
  
  NetHackQtGlyphs::NetHackQtGlyphs()
  {
