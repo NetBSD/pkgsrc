@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/01 01:43:28 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/11 05:02:25 snj Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -19,7 +19,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/fasthenry-3.0
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		default
@@ -30,7 +30,7 @@ CONFIGURE_ARGS=		default
 #
 # optimized libffm (free fast math library)
 #>
-.  include "../../math/libffm/buildlink2.mk"
+.  include "../../math/libffm/buildlink3.mk"
 DEPENDS+=	libffm-[0-9]*:../../math/libffm
 LIBS=		-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -lffm -lm
 MAKE_ENV+=	LIBS="${LIBS}"
