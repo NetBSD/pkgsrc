@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/29 05:00:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/29 06:36:33 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-fontserver-${XORG_VER}
@@ -10,8 +10,6 @@ DISTFILES=	X11R6.7.0-src1.tar.gz X11R6.7.0-src2.tar.gz \
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org font server
-
-CONFLICTS=	XFree86-fontserver-[0-9]*
 
 USE_X11=		yes
 USE_BUILDLINK3=		yes
