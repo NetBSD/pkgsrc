@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1 2000/05/30 09:16:11 rh Exp $
+
+--- plugins/sylk/Makefile.in.orig	Wed May 10 04:58:55 2000
++++ plugins/sylk/Makefile.in	Fri May 19 23:49:37 2000
+@@ -156,7 +156,7 @@
+ INCLUDES =      -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		    -I$(includedir)	-I$(top_srcdir)/src		    $(GNOME_INCLUDEDIR)
+ 
+ 
+-gnumeric_plugin_LTLIBRARIES = gnum_sylk.la
++gnumeric_plugin_LTLIBRARIES = gnum_sylk.a
+ gnum_sylk_la_LDFLAGS = -module -avoid-version
+ gnum_sylk_la_SOURCES = sylk.c
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -257,7 +257,9 @@
+ 
+ maintainer-clean-libtool:
+ 
+-gnum_sylk.la: $(gnum_sylk_la_OBJECTS) $(gnum_sylk_la_DEPENDENCIES)
++gnum_sylk.la: gnum_sylk.a
++
++gnum_sylk.a: $(gnum_sylk_la_OBJECTS) $(gnum_sylk_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(gnumeric_plugindir) $(gnum_sylk_la_LDFLAGS) $(gnum_sylk_la_OBJECTS) $(gnum_sylk_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS
