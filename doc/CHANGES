@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7670 2004/11/03 13:30:38 adam Exp $
+$NetBSD: CHANGES,v 1.7671 2004/11/03 13:44:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5039,3 +5039,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tuxpaint to 0.9.14nb1 [grant 2004-11-03]
 	Updated gd to 2.0.32 [adam 2004-11-03]
 	Updated gimp to 2.0.6 [adam 2004-11-03]
+	Updated gg2 to 2.2.1 [adam 2004-11-03]

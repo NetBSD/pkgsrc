@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2296 2004/11/03 13:30:38 adam Exp $
+$NetBSD: TODO,v 1.2297 2004/11/03 13:44:24 adam Exp $
 
 Suggested new packages
 ======================
@@ -350,7 +350,6 @@ Suggested package updates
 	o generator-0.35
 	o gentoo-0.11.52
 	o gettext-0.14.1
-	o gg2-2.2.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gkrellm-volume-2.1.13
