@@ -1,0 +1,18 @@
+--- src/plugins/mountd_overflow/mountd_overflow.c.BAK	Thu Feb  4 15:58:15 1999
++++ src/plugins/mountd_overflow/mountd_overflow.c	Thu Feb  4 15:58:41 1999
+@@ -31,6 +31,7 @@
+ #define NFS_PROG       ((unsigned long)(100003))
+ #define NFS_VERS ((unsigned long)(2))
+ 
++#ifndef __NetBSD__
+ bool_t xdr_fhstatus(XDR *xdrs, fhstatus *objp)
+ {
+  if (!xdr_u_int(xdrs, &objp->fhs_status))return (FALSE);
+@@ -38,6 +39,7 @@
+  !xdr_fhandle(xdrs, objp->fhstatus_u.fhs_fhandle))return (FALSE);
+  else return (TRUE);
+ }
++#endif
+ 
+ 
+ /*
