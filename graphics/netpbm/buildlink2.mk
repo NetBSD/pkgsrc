@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:18 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 23:08:08 jlam Exp $
 
 .if !defined(NETPBM_BUILDLINK2_MK)
 NETPBM_BUILDLINK2_MK=	# defined
@@ -26,7 +26,7 @@ BUILDLINK_FILES.netpbm+=	lib/libpgm.*
 BUILDLINK_FILES.netpbm+=	lib/libpnm.*
 BUILDLINK_FILES.netpbm+=	lib/libppm.*
 
-BUILDLINK_TARGETSS=	netpbm-buildlink
+BUILDLINK_TARGETS+=	netpbm-buildlink
 
 netpbm-buildlink: _BUILDLINK_USE
 
