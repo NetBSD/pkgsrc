@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/13 13:50:25 wiz Exp $
 #
 
 DISTNAME=	juke-0.7
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://johan.nocrew.org/nav10/unix/juke/archive/
 

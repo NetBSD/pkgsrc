@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:57:08 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:54:04 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gtkmm.
 #
@@ -9,7 +9,7 @@
 GTKMM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtkmm
-BUILDLINK_DEPENDS.gtkmm?=		gtkmm>=2.2.1nb1
+BUILDLINK_DEPENDS.gtkmm?=		gtkmm>=2.2.1nb2
 BUILDLINK_PKGSRCDIR.gtkmm?=		../../x11/gtkmm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtkmm=gtkmm

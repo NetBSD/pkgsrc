@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/05/03 22:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/13 13:51:40 wiz Exp $
 
 DISTNAME=	gkrellstock-0.2
 PKGNAME=	gkrellm-stock-0.2
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/gkrellStock-0.2
 CATEGORIES=	finance
 MASTER_SITES=	http://www.geocities.com/m_muthukumar/

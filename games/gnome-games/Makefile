@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2003/05/30 16:19:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.53 2003/07/13 13:51:47 wiz Exp $
 
 DISTNAME=		gnome-games-1.4.0.4
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/1.4/}\
 			${MASTER_SITE_LOCAL}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/10/30 15:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/13 13:53:35 wiz Exp $
 
 MODNAME=		xslt
+PKGREVISION=		1
 CATEGORIES+=		textproc
 COMMENT=		PHP4 extension for XSLT functions (Sablotron backend)
 

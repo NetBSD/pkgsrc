@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/05/30 03:38:44 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/13 13:53:51 wiz Exp $
 
 MOZILLA=	phoenix
 MOZILLA_BIN=	MozillaFirebird-bin
-PKGREVISION=	1
+PKGREVISION=	2
 MOZ_VER=	0.6
 EXTRACT_SUFX=	.tar.bz2
 DISTNAME=       mozilla-phoenix-${MOZ_VER}

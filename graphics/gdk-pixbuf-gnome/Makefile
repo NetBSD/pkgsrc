@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2003/01/16 00:35:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/13 13:52:01 wiz Exp $
 
 .include "../gdk-pixbuf/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/gdk-pixbuf-/gdk-pixbuf-gnome-/}
+PKGREVISION=	1
 COMMENT=	the GNOME image loading library GNOME canvas support add-on
 
 CONFLICTS+=	gdk-pixbuf<0.10.1

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2003/06/05 05:01:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.35 2003/07/13 13:52:46 wiz Exp $
 #
 
 DISTNAME=       siag-3.5.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     misc textproc math
 MASTER_SITES=   ftp://siag.nu/pub/siag/
 
