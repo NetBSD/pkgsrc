@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.344 2004/07/30 07:48:56 xtraeme Exp $
+# $NetBSD: Packages.txt,v 1.345 2004/07/30 20:52:44 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1262,7 +1262,7 @@ SHLIBTOOL_OVERRIDE instead.
 
 If your package makes use of the platform independent library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should
-include the libtool buildlink2.mk (and set USE_BUILDLINK2 to YES).
+include the libtool buildlink3.mk (and set USE_BUILDLINK3 to "yes").
 
 Some packages use libtool incorrectly so that the package may not work or
 build in some circumstances. Some common errors are
@@ -1760,10 +1760,10 @@ perform the equivalent of:
       it was built
 
 
- 8 buildlink2 methodology
+ 8 buildlink3 methodology
  ========================
 
-"buildlink2" is a pkgsrc framework that controls what headers and libraries
+"buildlink3" is a pkgsrc framework that controls what headers and libraries
 are seen by a package's configure and build processes.  This is implemented
 in a two step process:
 
@@ -1772,118 +1772,334 @@ in a two step process:
 
  (2) Create wrapper scripts that are used in place of the normal compiler
      tools that translate -I${LOCALBASE}/include and -L${LOCALBASE}/lib
-     into references into ${BUILDLINK_DIR}.
+     into references into ${BUILDLINK_DIR}.  The wrapper scripts also make
+     native compiler on some operating systems look like GCC, so that
+     packages that expect GCC won't require modifications to build with
+     those native compilers.
 
 This normalizes the environment in which a package is built so that the
 package may be built consistently despite what may other software may
-installed.  Please refer to pkgsrc/mk/buildlink2/buildlink2.txt for some
-FAQs and answers regarding buildlink2, and to pkgsrc/mk/buildlink2/README
-for a description of how buildlink2 is implemented in pkgsrc.
+installed.
 
 
- 8.1 Converting packages to use buildlink2
+ 8.1 Converting packages to use buildlink3
  =========================================
 
-The process of converting packages to use the buildlink2 framework is
-fairly straightforward.  The package Makefile must define USE_BUILDLINK2.
-If a dependency on a particular package, e.g.  foo, is required for its
-libraries and headers, then we replace:
+The process of "bl3ifying" a package, or converting a package to use
+the buildlink3 framework, is surprisingly easy.  The things to keep in
+mind are:
+
+  (1) Set USE_BUILDLINK3 to "yes".
+
+  (2) Ensure that the build always calls the wrapper scripts instead of
+      the actual toolchain.  Some packages are tricky, and the only way to
+      know for sure is the check ${WRKDIR}/.work.log to see if the
+      wrappers are being invoked.
+
+  (3) Don't override PREFIX from within the package Makefile, e.g.
+      Java VMs, standalone shells, etc., because the code to symlink
+      files into ${BUILDLINK_DIR} looks for files relative to
+      "pkg_info -qp <pkgname>".
+
+  (4) Remember that _only_ the buildlink3.mk files that you list in a
+      package's Makefile are added as dependencies for that package.
+
+If a dependency on a particular package is required for its libraries and
+headers, then we replace:
 
 	DEPENDS+=	foo>=1.1.0:../../category/foo
 with
-	.include "../../category/foo/buildlink2.mk"
+	.include "../../category/foo/buildlink3.mk"
 
-There are several buildlink2.mk files in pkgsrc/mk that handle special
+There are several buildlink3.mk files in pkgsrc/mk that handle special
 package issues:
 
- * motif.buildlink2.mk checks for a system-provided Motif installation
+ * bdb.buildlink3.mk chooses either the native or a pkgsrc Berkeley DB
+   implementation based on the values of BDB_ACCEPTED and BDB_DEFAULT.
+
+ * krb5.buildlink3.mk uses the value of KRB5_ACCEPTED to choose between
+   adding a dependency on Heimdal or MIT-krb5 for packages that require
+   a Kerberos 5 implementation.
+
+ * motif.buildlink3.mk checks for a system-provided Motif installation
    or adds a dependency on x11/lesstif or x11/openmotif;
 
- * ossaudio.buildlink2.mk defines several variables that may be used by
+ * ossaudio.buildlink3.mk defines several variables that may be used by
    packages that use the Open Sound System (OSS) API;
 
- * pthread.buildlink2.mk uses the value of PTHREAD_OPTS and checks for
+ * pthread.buildlink3.mk uses the value of PTHREAD_OPTS and checks for
    native pthreads or adds a dependency on devel/pth as needed;
 
- * xaw.buildlink2.mk uses the value of XAW_TYPE to choose a particular
+ * xaw.buildlink3.mk uses the value of XAW_TYPE to choose a particular
    Athena widgets library.
 
-The comments in those buildlink2.mk files provide a more complete
+The comments in those *.buildlink3.mk files provide a more complete
 description of how to use them properly.
 
 
- 8.2 Writing buildlink2.mk files
+ 8.2 Writing buildlink3.mk files
  ===============================
 
-A simple example of a buildlink2.mk file for a mythical package foo
-follows:
+A package's buildlink3.mk file is included by Makefiles to indicate the
+need to compile and link against header files and libraries provided by
+the package.  A buildlink3.mk file should always provide enough information
+to add the correct type of dependency relationship and include any other
+buildlink3.mk files that it needs to find headers and libraries that it
+needs in turn.
 
-	BUILDLINK_PACKAGES+=          foo
-	BUILDLINK_PKGBASE.foo=        foo
-	BUILDLINK_DEPENDS.foo?=       foo>=1.0
-	BUILDLINK_PKGSRCDIR.foo?=     ../../category/foo
+To generate an initial buildlink3.mk file for further editing, Rene Hexel's
+pkgtools/createbuildlink package is highly recommended.  For most packages,
+the following command will generate a good starting point for buildlink3.mk
+files:
 
-	EVAL_PREFIX+=                 BUILDLINK_PREFIX.foo=foo
-	BUILDLINK_PREFIX.foo_DEFAULT= ${LOCALBASE}
-	BUILDLINK_FILES.foo=          include/foo.h
-	BUILDLINK_FILES.foo+=         include/bar.h
-	BUILDLINK_FILES.foo+=         lib/libfoo.*
+    cd pkgsrc/category/pkgdir; createbuildlink -3 > buildlink3.mk
 
-	BUILDLINK_TARGETS+=           foo-buildlink
 
-	foo-buildlink: _BUILDLINK_USE
+ 8.3.1 Anatomy of a buildlink3.mk file
+ =====================================
 
-The first section controls how the dependency on foo is added.  The
-dependency is constructed from four parts:
+The following real-life example buildlink3.mk is taken from graphics/tiff:
 
- (1) BUILDLINK_PACKAGES is the global list of packages for which
-     dependencies will be added by buildlink2;
+------------8<------------8<------------8<------------8<------------
+# <$>NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp <$>
 
- (2) BUILDLINK_DEPENDS.foo is the actual dependency recorded in the
-     installed package;
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+TIFF_BUILDLINK3_MK:=	${TIFF_BUILDLINK3_MK}+
 
- (3) BUILDLINK_PKGSRCDIR.foo is the location of the foo pkgsrc
-     directory;
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	tiff
+.endif
 
- (4) BUILDLINK_DEPMETHOD.foo (not shown above) controls whether we use
-     BUILD_DEPENDS or DEPENDS to add the foo dependency, where the
-     full dependency is added if BUILDLINK_DEPMETHOD.foo contains "full".
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntiff}
+BUILDLINK_PACKAGES+=	tiff
 
-The second section controls which files are linked into ${BUILDLINK_DIR}:
+.if !empty(TIFF_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.tiff+=	tiff>=3.6.1
+BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
+.endif	# TIFF_BUILDLINK3_MK
 
- (1) BUILDLINK_PREFIX.foo is the installation prefix of the package which
-     we derive by using EVAL_PREFIX;
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 
- (2) BUILDLINK_FILES.foo is a list of files (shell globs allowed) relative
-     to the BUILDLINK_PREFIX.foo directory and will be symlinked into
-     ${BUILDLINK_DIR};
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+------------8<------------8<------------8<------------8<------------
 
- (3) BUILDLINK_FILES_CMD.foo (not shown above) is a shell pipeline that
-     outputs a list of files relative to the BUILDLINK_PREFIX.foo
-     directory and will be symlinked into ${BUILDLINK_DIR}.
+The header and footer manipulate BUILDLINK_DEPTH, which is common across
+all buildlink3.mk files and is used to track at what depth we are including
+buildlink3.mk files.
 
-The remaining parts create the foo-buildlink target that actually performs
-the symlinking and adds the foo-buildlink target to BUILDLINK_TARGETS,
-which is the global list of targets to execute at do-buildlink time.
+The first section controls if the dependency on <pkg> is added.
+BUILDLINK_DEPENDS is the global list of packages for which dependencies
+are added by buildlink3.
 
-When updating a package be sure to check if the sonames (library
-versions) change and adjust the BUILDLINK_DEPENDS.foo to at least
-the new package version. For example, if the installed library
-changed from libfoo.so.4 to libfoo.so.5 then the BUILDLINK_DEPENDS.foo
-needs to be changed so binary packages (made using it) will require
-the correct package. It is also important to update the
-BUILDLINK_DEPENDS.foo when the API or interface to the included
-files change.  In some cases, the packages that depend on this new
-version may need their PKGREVISIONs increased and, if they have
-buildlink?.mk files, their BUILDLINK_DEPENDS.bar adjusted too. This
-is so binary packages will require correct versions (so a new
-package built against old library won't be installed with a new
-library, for example). Please take careful consideration before
-adjusting the BUILDLINK_DEPENDS so it doesn't cause unneeded package
-deletions and rebuilds. (In many cases, new versions of packages
-work just fine with older dependencies.) See section 10 for more
-information about dependencies on other packages, including the
-BUILDLINK_RECOMMENDED and RECOMMENDED definitions.
+The second section advises pkgsrc that the buildlink3.mk file for <pkg>
+has been included at some point.  BUILDLINK_PACKAGES is the global list
+of packages for which buildlink3.mk files have been included.  It must
+_always_ be appended to within a buildlink3.mk file.
+
+The third section is protected from multiple inclusion and controls how
+the dependency on <pkg> is added.  Several important variables are set in
+the section:
+
+  (1) BUILDLINK_DEPENDS.<pkg> is the actual dependency recorded in the
+      installed package; this should always be set using += to ensure that
+      we're appending to any pre-existing list of values.  This variable
+      should be set to the first version of the package that had the last
+      change in the major number of a shared library or that had a major
+      API change.
+
+  (2) BUILDLINK_PKGSRCDIR.<pkg> is the location of the <pkg> pkgsrc
+      directory;
+
+  (3) BUILDLINK_DEPMETHOD.<pkg> (not shown above) controls whether we use
+      BUILD_DEPENDS or DEPENDS to add the dependency on <pkg>.  The build
+      dependency is selected by setting BUILDLINK_DEPMETHOD.<pkg> to
+      "build".  By default, the full dependency is used.
+
+  (4) BUILDLINK_INCDIRS.<pkg> and BUILDLINK_LIBDIRS.<pkg> (not shown above)
+      are lists of subdirectories of ${BUILDLINK_PREFIX.<pkg>} to add the
+      header and library search paths.  These default to "include" and
+      "lib" respectively.
+
+  (5) BUILDLINK_CPPFLAGS.<pkg> (not shown above) is the list of
+      preprocessor flags to add to CPPFLAGS, which are passed on to the
+      configure and build phases.  The "-I" option should be avoided and
+      instead be handled using BUILDLINK_INCDIRS.<pkg> as above.
+
+The following variables are all optionally defined within this second
+section (protected against multiple inclusion) and control which package
+files are symlinked into ${BUILDLINK_DIR} and how their names are
+transformed during the symlinking:
+
+  (6) BUILDLINK_FILES.<pkg> (not shown above) is a shell glob pattern
+      relative to ${BUILDLINK_PREFIX.<pkg>} to be symlinked into
+      ${BUILDLINK_DIR}, e.g. include/*.h
+
+  (7) BUILDLINK_FILES_CMD.<pkg> (not shown above) is a shell pipeline that
+      outputs to stdout a list of files relative to
+      ${BUILDLINK_PREFIX.<pkg>}.  The resulting files are to be symlinked
+      into ${BUILDLINK_DIR}.  By default, this takes the +CONTENTS of a
+      <pkg> and filters it through ${BUILDLINK_CONTENTS_FILTER.<pkg>}.
+
+  (8) BUILDLINK_CONTENTS_FILTER.<pkg> (not shown above) is a filter command
+      that filters +CONTENTS input into a list of files relative to
+      ${BUILDLINK_PREFIX.<pkg>} on stdout.  By default for overwrite
+      packages, BUILDLINK_CONTENTS_FILTER.<pkg> outputs the contents of
+      the include and lib directories in the package +CONTENTS, and for
+      pkgviews packages, it outputs any libtool archives in lib
+      directories.
+
+  (9) BUILDLINK_TRANSFORM.<pkg> (not shown above) is a list of sed
+      arguments used to transform the name of the source filename into a
+      destination filename, e.g. -e "s|/curses.h|/ncurses.h|g"
+
+The last section includes any buildlink3.mk needed for <pkg>'s library
+dependencies.  Including these buildlink3.mk files means that the headers
+and libraries for these dependencies are also symlinked into
+${BUILDLINK_DIR} whenever the <pkg> buildlink3.mk file is included.
+
+
+ 8.3.2 Updating BUILDLINK_DEPENDS.<pkg> in buildlink3.mk files
+ =============================================================
+
+There are two situations that require increasing the dependency listed
+in BUILDLINK_DEPENDS.<pkg> after a package update:
+
+  (1) if the sonames (major number of the library version) of any installed
+      shared libraries change;
+
+  (2) if the API or interface to the header files change.
+
+In these cases, BUILDLINK_DEPENDS.<pkg> should be adjusted to require at
+least the new package version.  In some cases, the packages that depend
+on this new version may need their PKGREVISIONs increased and, if they
+have buildlink3.mk files, their BUILDLINK_DEPENDS.<pkg> adjusted, too.
+This is needed so that binary packages made using it will require the
+correct package dependency and not settle for an older one which will not
+contain the necessary shared libraries.
+
+Please take careful consideration before adjusting BUILDLINK_DEPENDS.<pkg>
+as we don't want to cause unneeded package deletions and rebuilds.  In
+many cases, new versions of packages work just fine with older
+dependencies.  See section 10 for more information about dependencies on
+other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
+definitions.
+
+
+ 8.4 Writing builtin.mk files
+ ============================
+
+Some packages in pkgsrc install headers and libraries that coincide with
+headers and libraries present in the base system.  Aside from a
+buildlink3.mk file, these packages should also include a builtin.mk file
+that includes the necessary checks to decide whether using the built-in
+software or the pkgsrc software is appropriate.
+
+The only requirements of a builtin.mk file for <pkg> are:
+
+  (1) It should set USE_BUILTIN.<pkg> to either "yes" or "no" after it
+      is included.
+
+  (2) It should *not* override any USE_BUILTIN.<pkg> which is already
+      set before the builtin.mk file is included.
+
+  (3) It should be written to allow multiple inclusion.  This is _very_
+      important and takes careful attention to Makefile coding.
+
+
+ 8.4.1 Anatomy of a builtin.mk file
+ ==================================
+
+The following is the recommended template for builtin.mk files:
+
+-------------8<-------------8<-------------8<-------------8<-------------
+.if !defined(IS_BUILTIN.foo)
+#
+# IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
+# genuinely exists in the system or not.
+#
+IS_BUILTIN.foo?=	no
+
+# BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
+# version can be determined.
+#
+.  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
+BUILTIN_PKG.foo?=	foo-1.0
+.  endif
+.endif  # IS_BUILTIN.foo
+
+.if !defined(USE_BUILTIN.foo)
+USE_BUILTIN.foo?=	${IS_BUILTIN.foo}
+.  if defined(BUILTIN_PKG.foo)
+.    for _depend_ in ${BUILDLINK_DEPENDS.foo}
+.      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
+USE_BUILTIN.foo!=							\
+      if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then	\
+              ${ECHO} "yes";						\
+      else								\
+              ${ECHO} "no";						\
+      fi
+.      endif
+.    endfor
+.  endif
+.endif	# USE_BUILTIN.foo
+
+CHECK_BUILTIN.foo?=	no
+.if !empty(CHECK_BUILTIN.foo:M[nN][oO])
+#
+# Here we place code that depends on whether USE_BUILTIN.foo is set to
+# "yes" or "no".
+#
+.endif  # CHECK_BUILTIN.foo
+-------------8<-------------8<-------------8<-------------8<-------------
+
+The first section sets IS_BUILTIN.<pkg> depending on if <pkg> really exists
+in the base system.  This should not be a base system software with similar
+functionality to <pkg>; it should only be "yes" if the actual package
+included as part of the base system.  This variable is only used internally
+within the builtin.mk file.
+
+The second section sets BUILTIN_PKG.<pkg> to the version of <pkg> in the
+base system if it exists (if IS_BUILTIN.<pkg> is "yes").  This variable
+is only used internally within the builtin.mk file.
+
+The third section sets USE_BUILTIN.<pkg> and is _required_ in all
+builtin.mk files.  The code in this section must make the determination
+whether the built-in software is adequate to satisfy the dependencies
+listed in BUILDLINK_DEPENDS.<pkg>.  This is typically done by comparing
+BUILTIN_PKG.<pkg> against each of the dependencies in
+BUILDLINK_DEPENDS.<pkg>.  USE_BUILTIN.<pkg> _must_ be set to the correct
+value by the end of the builtin.mk file.
+
+The last section is guarded by CHECK_BUILTIN.<pkg>, and includes code that
+uses the value of USE_BUILTIN.<pkg> set in the previous section.  This
+typically includes, e.g., adding additional dependency restrictions and
+listing additional files to symlink into ${BUILDLINK_DIR} (via
+BUILDLINK_FILES.<pkg>).
+
+
+ 8.4.2 Global preferences for native or pkgsrc software
+ ======================================================
+
+When building packages, it's possible to choose whether to set a global
+preference for using either the built-in (native) version or the pkgsrc
+version of software to satisfy a dependency.  This is controlled by setting
+PREFER_PKGSRC and PREFER_NATIVE.  These variables take values of either
+"yes", "no", or a list of packages.  PREFER_PKGSRC tells pkgsrc to use
+the pkgsrc versions of software, while PREFER_NATIVE tells pkgsrc to use
+the built-in versions.  Preferences are determined by the most specific
+instance of the package in either PREFER_PKGSRC or PREFER_NATIVE.  If a
+package is specified in neither or in both variables, then PREFER_PKGSRC
+has precedence over PREFER_NATIVE.  For example, to require using pkgsrc
+versions of software for all but the most basic bits on a NetBSD system,
+you can set:
+
+	PREFER_PKGSRC=	yes
+	PREFER_NATIVE=	getopt skey tcp_wrappers
+
+A package _must_ have a builtin.mk file to be listed in PREFER_NATIVE,
+otherwise it is simply ignored in that list.
+
 
  9 Debugging
  ===========
@@ -2144,7 +2360,7 @@ active transfers.
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. NetBSD supports the
 BUILD_DEPENDS and DEPENDS definitions, as well as dependencies via
-buildlink2.mk (see section 8).
+buildlink3.mk (see section 8).
 
 The basic difference between the two definitions is as follows: The
 DEPENDS definition registers that pre-requisite in the binary package,
@@ -2382,11 +2598,13 @@ unconditionally prevent users from generating binary packages!
 Some packages need curses functionality that wasn't present in NetBSD's own
 curses prior to 1.4Y.
 
-If ../../devel/ncurses/buildlink2.mk is included in a package's Makefile,
+If ../../devel/ncurses/buildlink3.mk is included in a package's Makefile,
 then a curses library and headers with ncurses functionality are linked
 into ${BUILDLINK_DIR} at pre-configure time.  If ncurses is actually
 required, then define USE_NCURSES in the package's Makefile:
+
 	USE_NCURSES=	# KEY_RESIZE
+
 The comment should indicate which functions are missing.
 
 
@@ -2440,15 +2658,15 @@ installation procedure:
         ======================================================================
 
 
-Note to package developers: When a vulnerability is found, this should be
-noted in localsrc/security/advisories/pkg-vulnerabilities, and after the
-commit of that file, it should be copied to both
-/pub/NetBSD/packages/distfiles/pkg-vulnerabilities and vulnerabilities 
-on ftp.netbsd.org by localsrc/security/advisories/Makefile.  In addition, if
-a buildlink2.mk or buildlink3.mk file exists for an affected package, bumping
-PKGREVISION and creating a corresponding BUILDLINK_RECOMMENDED.<pkg> entry
-should be considered. See section 8 for more information about
-writing buildlink?.mk files and BUILDLINK_* definitions.
+Note to package developers: When a vulnerability is found, this should
+be noted in localsrc/security/advisories/pkg-vulnerabilities, and after
+the commit of that file, it should be copied to both
+/pub/NetBSD/packages/distfiles/pkg-vulnerabilities and vulnerabilities
+on ftp.netbsd.org by localsrc/security/advisories/Makefile.  In addition,
+if a buildlink3.mk file exists for an affected package, bumping PKGREVISION
+and creating a corresponding BUILDLINK_RECOMMENDED.<pkg> entry should
+be considered. See section 8 for more information about writing
+buildlink3.mk files and BUILDLINK_* definitions.
 
 
  10.22 What's the proper way to create an account from a package?
@@ -2658,9 +2876,9 @@ deinstall step by the DEINSTALL script.
 
 If the package provides its own locale catalogues, the variable
 USE_PKGLOCALEDIR should be defined.  It will ensure that the package's
-Makefile template files are fixed and point to the correct locale directories
-(which may vary, depending on OS), if necessary.  See also section 5.1 for
-details about ${PKGLOCALEDIR}.  This functionality is buildlink2-only.
+Makefile template files are fixed and point to the correct locale
+directories (which may vary, depending on OS), if necessary.  See also
+section 5.1 for details about ${PKGLOCALEDIR}.
 
 
  10.30 Using 'sudo' with pkgsrc
