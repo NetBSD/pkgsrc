@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1624 2004/04/16 21:19:25 minskim Exp $
+$NetBSD: TODO,v 1.1625 2004/04/16 21:29:16 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -361,9 +361,7 @@ Suggested package updates
 	o xfce-4.0.5
 	o xine-1rc3c
 	o xisp-2.7 [pkg/19566]
-	o xmame-0.81.1
 	o xmcd-3.3.0
-	o xmess-0.81.1
 	o xmms-1.2.10
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.4
