@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:38:58 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/21 16:49:53 martti Exp $
 #
 
 DISTNAME=	lbreakout-010315
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://lgames.sourceforge.net/
-COMMENT=	breakout-style arcade game
+COMMENT=	Breakout-style arcade game
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
