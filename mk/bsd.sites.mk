@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.21 2004/11/24 15:36:34 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.22 2004/11/29 02:00:30 tv Exp $
 #
 # Default MASTER_SITES
 
@@ -293,7 +293,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://www.fs.tum.de/~mrauch/OpenOffice/download/
 
 MASTER_SITE_CYGWIN+= \
-	http://mirror.mcs.anl.gov/cygwin/ \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
 	http://mirrors.rcn.net/pub/sourceware/cygwin/ \
 	http://mirrors.xmission.com/cygwin/ \
