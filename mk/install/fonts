@@ -1,4 +1,4 @@
-# $NetBSD: fonts,v 1.1 2003/02/16 12:14:32 jmmv Exp $
+# $NetBSD: fonts,v 1.1.6.1 2003/12/30 16:04:35 agc Exp $
 #
 # Handle font databases; used by fonts.mk.
 #
@@ -18,9 +18,9 @@ POST-INSTALL|POST-DEINSTALL)
 	${ECHO} "===> Updating font databases"
 	if [ "${FONTS_TTF}" = "YES" ]; then
 		for d in ${FONTS_TTF_DIRS}; do
-			if [ -z "`cd $d ; ls | grep -v ^fonts | grep -v ^Fontmap`" ]; then
-				rm -f $d/fonts* $d/Fontmap*
-				rmdir $d >/dev/null 2>&1
+			if [ -z "`cd $d ; ${LS} | ${GREP} -v ^fonts | ${GREP} -v ^Fontmap`" ]; then
+				${RM} -f $d/fonts* $d/Fontmap*
+				${RMDIR} $d >/dev/null 2>&1
 			else
 				( cd $d && ${TTMKFDIR} >fonts.dir 2>/dev/null )
 			fi
@@ -28,9 +28,9 @@ POST-INSTALL|POST-DEINSTALL)
 	fi
 	if [ "${FONTS_TYPE1}" = "YES" ]; then
 		for d in ${FONTS_TYPE1_DIRS}; do
-			if [ -z "`cd $d ; ls | grep -v ^fonts | grep -v ^Fontmap`" ]; then
-				rm -f $d/fonts* $d/Fontmap*
-				rmdir $d >/dev/null 2>&1
+			if [ -z "`cd $d ; ${LS} | ${GREP} -v ^fonts | ${GREP} -v ^Fontmap`" ]; then
+				${RM} -f $d/fonts* $d/Fontmap*
+				${RMDIR} $d >/dev/null 2>&1
 			else
 				( cd $d && ${TYPE1INST} >/dev/null 2>&1 )
 			fi
@@ -38,9 +38,9 @@ POST-INSTALL|POST-DEINSTALL)
 	fi
 	if [ "${FONTS_X11}" = "YES" ]; then
 		for d in ${FONTS_X11_DIRS}; do
-			if [ -z "`cd $d ; ls | grep -v ^fonts | grep -v ^Fontmap`" ]; then
-				rm -f $d/fonts* $d/Fontmap*
-				rmdir $d >/dev/null 2>&1
+			if [ -z "`cd $d ; ${LS} | ${GREP} -v ^fonts | ${GREP} -v ^Fontmap`" ]; then
+				${RM} -f $d/fonts* $d/Fontmap*
+				${RMDIR} $d >/dev/null 2>&1
 			else
 				( cd $d && ${MKFONTDIR} >/dev/null 2>&1 )
 			fi
