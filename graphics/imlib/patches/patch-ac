@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.7 2000/06/27 01:13:49 wiz Exp $
+
+--- gdk_imlib/Makefile.am.orig	Sat May 20 08:24:11 2000
++++ gdk_imlib/Makefile.am	Tue Jun 27 00:54:21 2000
+@@ -82,7 +82,7 @@
+ 
+ 
+ libgdk_imlib_la_LDFLAGS = -version-info 10:8:9
+-libgdk_imlib_la_LIBADD = $(GMODULE_LIBS)
++libgdk_imlib_la_LIBADD = $(GMODULE_LIBS) $(SUPPORT_LIBS)
+ 
+ 
+ include_HEADERS = gdk_imlib.h gdk_imlib_private.h gdk_imlib_types.h
