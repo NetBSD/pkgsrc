@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/12/10 09:45:32 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/10 19:33:03 jlam Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
 PKGNAME=		${DISTNAME}nb1
@@ -60,6 +60,9 @@ INSTALL_FILE=		${WKRDIR}/INSTALL
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
+
+post-extract:
+	cd ${WRKSRC}/man; ${MV} imapd.8 cyrus-imapd.8
 
 pre-install:
 	${SED}	-e "s,@AWK@,${AWK},g" \
