@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.494 2000/07/03 14:47:11 agc Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.495 2000/07/04 03:52:17 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2801,7 +2801,10 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 print-PLIST:
 	@${ECHO} '@comment $$'NetBSD'$$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
-	 | ${SED} s@${PREFIX}/./@@ 				\
+	 | ${SED}						\
+		-e  s@${PREFIX}/./@@ 				\
+		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
+		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 	\
 	 | sort							\
 	 | ${AWK} '						\
 		{ 						\
@@ -2813,7 +2816,13 @@ print-PLIST:
 		    print $$1;					\
 		  }						\
 		}'
-	@for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d | ${SED} -e s@${PREFIX}/./@@ -e '/^${PREFIX:S/\//\\\//g}\/.$$/d' | sort -r | ${SED} ${COMMON_DIRS}` ; \
+	@for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
+			| ${SED}				\
+				-e s@${PREFIX}/./@@		\
+				-e  s@${LOWER_OPSYS}@$${LOWER_OPSYS}@ 	\
+				-e  s@${MACHINE_ARCH}@$${MACHINE_ARCH}@ \
+				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
+			| sort -r | ${SED} ${COMMON_DIRS}` ;\
 	do \
 		if [ `ls -la ${PREFIX}/$$i | wc -l` = 3 ]; then \
 			${ECHO} @exec /bin/mkdir -p ${PREFIX}/$$i ; \
