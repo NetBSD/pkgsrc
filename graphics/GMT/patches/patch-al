@@ -1,0 +1,48 @@
+$NetBSD: patch-al,v 1.1 2001/01/27 08:16:01 jtb Exp $
+
+--- src/mgg/makefile.orig	Wed Oct 18 03:01:19 2000
++++ src/mgg/makefile
+@@ -45,7 +45,7 @@
+ 
+ install:	all
+ 		for i in $(MGG); do \
+-			$(INSTALL) $$i$(EXE) $(bindir); \
++			$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
+ 		done
+ 
+ uninstall:
+@@ -54,21 +54,20 @@
+ 		done
+ 
+ clean:
+-		rm -f *.o
++		rm -f *.o *.lo
+ 		for i in $(MGG); do \
+ 			rm -f $$i$(EXE); \
+ 		done
+ 
+ spotless:	clean
+-		rm -f *.a
++		rm -fr .libs *.la 
+ 
+ #-------------------------------------------------------------------------------
+ #	library
+ #-------------------------------------------------------------------------------
+ 
+ libgmt_mgg.a:	gmt_mgg.o
+-		$(AR) cvr libgmt_mgg.a $?
+-		$(RANLIB) libgmt_mgg.a
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ gmt_mgg.lo
+ 
+ gmt_mgg.o:	$(MGG_H)
+ 
+@@ -77,7 +76,7 @@
+ #-------------------------------------------------------------------------------
+ 
+ $(MGG):		libgmt_mgg.a $(MGG_O)
+-		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L. -lgmt_mgg -L.. -lpsl -lgmt $(CDF) $(LIBS) -o $@
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $@.o -L. -lgmt_mgg ../libpsl.la ../libgmt.la $(CDF) $(LIBS) -o $@
+ 
+ .c.o:
+-		$(CC) -c $(CFLAGS) $<
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/11/26 22:48:16 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2001/01/27 08:16:01 jtb Exp $
 
 --- configure.in.orig	Wed Oct 18 02:59:42 2000
 +++ configure.in
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/11/26 22:48:16 jtb Exp $
  AC_CHECK_PROG(CSH, csh, csh, bash, )
  AC_CHECK_PROG(LD, ld, ld, :)
  AC_CHECK_PROG(AS, as, as, :)
-+AC_CHECK_PROG(LIBTOOL, libtool, libtool, :)
++AC_SUBST(LIBTOOL)
  AC_PROG_INSTALL
 +AC_SUBST(INSTALL_PROGRAM)
 +AC_SUBST(INSTALL_SCRIPT)

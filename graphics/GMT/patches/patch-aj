@@ -1,12 +1,12 @@
-$NetBSD: patch-aj,v 1.1.1.1 2000/11/26 22:48:17 jtb Exp $
+$NetBSD: patch-aj,v 1.2 2001/01/27 08:16:01 jtb Exp $
 
---- src/gmt.h.orig	Tue Nov 14 02:03:49 2000
-+++ src/gmt.h
-@@ -53,6 +53,7 @@
-  *			SYSTEM HEADER FILES
-  *--------------------------------------------------------------------*/
+--- src/meca/pspolar.c.orig	Sat Jan 27 04:08:41 2001
++++ src/meca/pspolar.c
+@@ -19,6 +19,7 @@
+  *
+  */
  
 +#include <sys/types.h>
- #include <ctype.h>
- #include <float.h>
- #include <math.h>
+ #include <string.h>
+ #include "gmt.h"          /* to have gmt environment */
+ 
