@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/22 19:26:57 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/23 02:02:09 cjep Exp $
 #
 
 DISTNAME=	xgap4r16
@@ -11,14 +11,11 @@ MAINTAINER=	cjep@netbsd.org
 HOMEPAGE=	http://www.gap-system.org/Share/xgap.html
 COMMENT=	GUI for GAP
 
-BUILD_DEPENDS+=	zoo:../../archivers/zoo
-
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 ALL_TARGET=	default
 
-EXTRACT_CMD=    ${LOCALBASE}/bin/zoo -extract ${DOWNLOADED_DISTFILE}
 WRKSRC=         ${WRKDIR}/${GAP_PKG_NAME}
 CONFIGURE_ENV+=	GAP_DIRECTORY=${GAP_DIRECTORY}
 
