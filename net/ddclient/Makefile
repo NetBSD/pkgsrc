@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/31 01:40:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2004/07/26 07:40:04 agc Exp $
 
 DISTNAME=	ddclient-3.6.2
 CATEGORIES=	net
@@ -39,7 +39,8 @@ do-build:	# empty
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ddclient ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
