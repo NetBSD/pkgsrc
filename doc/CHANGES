@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9553 2005/03/22 14:54:15 adam Exp $
+$NetBSD: CHANGES,v 1.9554 2005/03/22 15:04:46 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1462,3 +1462,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fontconfig to 2.3.1 [wiz 2005-03-22]
 	Updated p5-Net-DNS to 0.48 [wiz 2005-03-22]
 	Updated wine to 20050310 [adam 2005-03-22]
+	Updated gkrellm to 2.2.5 [cube 2005-03-22]
+	Updated gkrellm-server to 2.2.5 [cube 2005-03-22]
+	Updated gkrellm-share to 2.2.5 [cube 2005-03-22]
+	Updated gkrellm-volume to 2.1.13 [cube 2005-03-22]
