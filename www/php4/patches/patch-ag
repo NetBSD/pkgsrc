@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2001/02/12 04:14:29 jlam Exp $
+
+--- ext/imap/Makefile.in.orig	Tue May 23 19:36:44 2000
++++ ext/imap/Makefile.in
+@@ -2,6 +2,6 @@
+ LTLIBRARY_NAME    = libimap.la
+ LTLIBRARY_SOURCES = php_imap.c
+ LTLIBRARY_SHARED_NAME = imap.la
+-LTLIBRARY_SHARED_LIBADD = $(IMAP_SHARED_LIBADD)
++LTLIBRARY_SHARED_LIBADD =
+ 
+ include $(top_srcdir)/build/dynlib.mk
