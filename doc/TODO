@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.528 2003/05/08 09:46:24 wiz Exp $
+$NetBSD: TODO,v 1.529 2003/05/08 09:47:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -211,7 +211,6 @@ Suggested package updates
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12
 	o povray-3.5
-	o pth-2.0 [skrll]
 	o py-mysqldb-0.9.2 [pkg/19056]
 	o py-wxWindows-2.4.0.2
 	o pygtk-0.6.11
