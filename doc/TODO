@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1538 2004/03/28 21:14:10 snj Exp $
+$NetBSD: TODO,v 1.1539 2004/03/28 21:32:59 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -250,7 +250,6 @@ Suggested package updates
 	o libnet-1.1.1
 	o libole2-2.2.8
 	o libsndfile-1.0.8
-	o libxml2-2.6.8 [jmmv]
 	o libxslt-1.1.5
 	o licq-1.2.7
 	o lilypond-2.0.3
