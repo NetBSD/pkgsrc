@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/06 07:46:55 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/27 10:37:03 jlam Exp $
 #
 
 DISTNAME=       ApacheDBI-0.87
@@ -11,9 +11,10 @@ MAINTAINER=	packages@netbsd.org
 DEPENDS+=	ap-perl-*:../../www/ap-perl
 DEPENDS+=	apache-1.3.*:../../www/apache
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Apache/DBI/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
