@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/06/18 02:42:09 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2004/07/28 02:47:35 minskim Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -16,6 +16,8 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 NOT_FOR_PLATFORM+= Interix-*-* # needs porting
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
@@ -39,6 +41,8 @@ MAKE_FLAGS=	CFLAGS="${CFLAGS} -DSYSV"
 .else
 MAKE_FLAGS=	CFLAGS="${CFLAGS} -DDIRENT" LFLAGS2="-lcompat"
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	@${CP} ${PKGDIR}/PLIST.pre ${PLIST_SRC}

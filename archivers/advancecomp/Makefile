@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/28 02:45:06 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/28 02:47:34 minskim Exp $
 #
 
 DISTNAME=	advancecomp-1.10
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=advancemame/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://advancemame.sourceforge.net/
 COMMENT=	Recompression utilities for .zip, .png, .mng and .gz files
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
