@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/11 18:22:48 snj Exp $
+bin/liferea
+share/liferea/pixmaps/available.xpm
+share/liferea/pixmaps/directory.xpm
+share/liferea/pixmaps/ocs.xpm
+share/liferea/pixmaps/read.xpm
+share/liferea/pixmaps/unavailable.xpm
+share/liferea/pixmaps/unread.xpm
+@dirrm share/liferea/pixmaps
+@dirrm share/liferea
