@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/05/05 16:27:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/24 13:30:56 grant Exp $
 
 DISTNAME=		Pacman-0.3-CVS-00-11-17
 PKGNAME=		Pacman-0.3
@@ -12,7 +12,7 @@ COMMENT=		Pacman, a small demonstration game for ClanLib
 
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
 # needs a valid X display to compile its datafiles

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/24 13:30:57 grant Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
@@ -13,7 +13,7 @@ COMMENT=	Educational math arcade game
 
 WRKSRC=		${WRKDIR}/tuxmath
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 NO_CONFIGURE=	# defined
 
 pre-install:

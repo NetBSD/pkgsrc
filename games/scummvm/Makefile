@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/12/08 14:41:40 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/24 13:30:56 grant Exp $
 
 DISTNAME=	scummvm-0.5.1
 PKGREVISION=	2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://scummvm.sourceforge.net/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11=	yes
 HAS_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/28 09:13:57 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:56 grant Exp $
 #
 
 DISTNAME=	pag-0.91
@@ -10,7 +10,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://pancake.host.sk/
 COMMENT=	Platform Arcade Game
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	yes
 USE_NCURSES=	yes # missing function stdscr
 

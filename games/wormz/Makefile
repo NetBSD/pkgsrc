@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 13:30:57 grant Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -13,7 +13,7 @@ COMMENT=		Networked game for X11
 WRKSRC=			${WRKDIR}/Wormz
 USE_BUILDLINK2=		yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 post-extract:
 	${MKDIR} ${WRKSRC}/NetBSD
