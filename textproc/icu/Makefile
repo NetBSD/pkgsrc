@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/03/21 23:44:05 salo Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:42:37 jmmv Exp $
 #
 
 DISTNAME=	icu-2.4
+WRKSRC=		${WRKDIR}/${PKGBASE}/source
 CATEGORIES=	textproc
 MASTER_SITES=	http://oss.software.ibm.com/icu/download/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
@@ -10,7 +11,6 @@ MAINTAINER=	skrll@netbsd.org
 HOMEPAGE=	http://oss.software.ibm.com/icu
 COMMENT=	Robust and full-featured unicode support
 
-WRKSRC=		${WRKDIR}/${PKGBASE}/source
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_BUILDLINK2=	YES

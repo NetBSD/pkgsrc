@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2002/07/24 22:59:28 jonb Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:30 jmmv Exp $
 #
 
 DISTNAME=	arch-1.0pre16
 PKGNAME=	arch-1.0.0.16
+WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
 CATEGORIES=	devel
 MASTER_SITES=	ftp://regexps.com/pub/src/arch/ \
 		ftp://regexps.com/pub/src/arch/old/
@@ -17,7 +18,6 @@ HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
 HTMLDIR=	${PREFIX}/share/doc/html/arch
 EXAMPLESDIR=	${PREFIX}/share/examples/arch
 LOCALDIR=	${PREFIX}/libexec/arch/local

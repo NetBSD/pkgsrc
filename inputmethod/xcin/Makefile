@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2002/12/01 14:38:17 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:23 jmmv Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/xcin
 CATEGORIES=	chinese x11
 MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/
 
@@ -20,8 +21,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib
 CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db3}/include/db3
-
-WRKSRC=		${WRKDIR}/xcin
 
 post-extract:
 	${MV} ${WRKSRC}/doc/man ${WRKSRC}

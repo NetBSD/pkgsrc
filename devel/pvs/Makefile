@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/01/04 22:00:08 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:38 jmmv Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}
 CATEGORIES=		devel lang
 MASTER_SITES=		ftp://pvs.csl.sri.com/pub/pvs/pvs${VERSION}/ \
 			ftp://ftp.cs.york.ac.uk/pub/pvs/pvs${VERSION}/ \
@@ -20,7 +21,6 @@ COMMENT=		The PVS Specification and Verification System
 DEPENDS+=		teTeX>=1.0.7:../../print/teTeX
 
 VERSION=		3.0
-WRKSRC=			${WRKDIR}
 NO_BUILD=		# defined
 CHECK_SHLIBS=		NO
 SHLIB_HANDLING=		NO

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/08/12 12:06:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:49 jmmv Exp $
 #
 
 DISTNAME=	x10_heyu
 PKGNAME=	x10_heyu-1.33
+WRKSRC=		${WRKDIR}/heyu.dir
 CATEGORIES=	misc
 MASTER_SITES=	http://heyu.tanj.com/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +15,6 @@ COMMENT=	Home Automation Software for the X10 CM11A
 DIST_SUBDIR=	${PKGNAME}
 
 CONFIGURE_SCRIPT=	./Configure
-WRKSRC=		${WRKDIR}/heyu.dir
 MAKE_ENV+=	DEFAULT_SERIAL_DEVICE=${DEFAULT_SERIAL_DEVICE}
 
 pre-install:

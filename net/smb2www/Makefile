@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/11/21 17:25:13 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:04 jmmv Exp $
 #
 
 DISTNAME=	smb2www-980804
+WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://us1.samba.org/samba/smb2www/ \
 		http://www.samba.org/samba/smb2www/
@@ -13,8 +14,6 @@ COMMENT=	Gateway to Windows networking
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=	samba<2.2.0:../../net/samba
 DEPENDS+=	apache{,6}-[0-9]*:../../www/apache
-
-WRKSRC=		${WRKDIR}
 
 SMB2WWW_MASTER_BROWSER_SERVER?=		# set for non-empty
 APACHE_USER?=	nobody

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/03/26 18:12:02 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:42:51 jmmv Exp $
 #
 
 DISTNAME=		mozilla-i686-pc-linux-gnu-1.3
 PKGNAME=		mozilla-linux-1.3
+WRKSRC=			${WRKDIR}/mozilla
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_MOZILLA:=mozilla1.3/}
 
@@ -12,7 +13,6 @@ COMMENT=		Open-source version of the Netscape browser (binary pkg)
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
-WRKSRC=			${WRKDIR}/mozilla
 NO_CONFIGURE=		# defined
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC

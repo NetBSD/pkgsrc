@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/18 16:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:57 jmmv Exp $
 
 DISTNAME=      kcfonts-1.05
+WRKSRC=        ${WRKDIR}
 CATEGORIES=    fonts
 MASTER_SITES=  ftp://freebsd.sinica.edu.tw/pub/distfiles/
 
@@ -8,7 +9,5 @@ MAINTAINER=    kevlo@midassol.com
 COMMENT=       Kuo Chauo Chinese Fonts collection
 
 USE_X11BASE=   yes
-
-WRKSRC=        ${WRKDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/01 07:04:28 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:47 jmmv Exp $
 
 .include "../iasp/Makefile.common"
 
 PKGNAME=	ap-iasp-${IASP_VERSION}
+WRKSRC=		${WRKDIR}/${IASP_SRCDIR}
 COMMENT=	Apache connector for accessing a iASP proxy server
 
 DEPENDS+=	{iasp-${IASP_VERSION},iasp-${IASP_VERSION}nb*}:../../www/iasp
 
 IASP_SRCDIR=	${IASP_DIR}/bin/apache/source/1.3
-WRKSRC=		${WRKDIR}/${IASP_SRCDIR}
 
 USE_BUILDLINK2=	# defined
 APACHE_MODULE=	# defined

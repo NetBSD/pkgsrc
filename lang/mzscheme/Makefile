@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/09/11 18:46:31 joda Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:41:27 jmmv Exp $
 
 DISTNAME=		mzscheme.src.unix
 PKGNAME=		mzscheme-200
+WRKSRC=			${WRKDIR}/plt/src/mzscheme
 CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/200/mzscheme/
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -17,8 +18,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
-
-WRKSRC=			${WRKDIR}/plt/src/mzscheme
 
 post-patch:
 	@for patchee in ${WRKDIR}/plt/man/man1/mzscheme.1 \

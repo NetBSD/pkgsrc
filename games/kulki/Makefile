@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/09/20 21:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:06 jmmv Exp $
 #
 
 DISTNAME=	kulki-1.01
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/kulki
 CATEGORIES=	games
 MASTER_SITES=	http://www.cs.put.poznan.pl/adanilecki/
 EXTRACT_SUFX=	.tgz
@@ -10,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.cs.put.poznan.pl/adanilecki/
 COMMENT=	Simple logic game - "balls"
-
-WRKSRC=		${WRKDIR}/kulki
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES

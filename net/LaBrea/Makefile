@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2002/11/05 06:20:27 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:53 jmmv Exp $
 #
 
 DISTNAME=	LaBrea2_3
 PKGNAME=	LaBrea-2.3
+WRKSRC=		${WRKDIR}/LaBrea
 CATEGORIES=	net security
 MASTER_SITES=	http://www.hackbusters.net/LaBrea/
 EXTRACT_SUFX=	.tgz
@@ -12,8 +13,6 @@ HOMEPAGE=	http://www.hackbusters.net/LaBrea/
 COMMENT=	builds tarpits/honeypots for scanners
 
 USE_BUILDLINK2=	YES
-
-WRKSRC=		${WRKDIR}/LaBrea
 
 post-extract:
 	cd ${WRKSRC};							\

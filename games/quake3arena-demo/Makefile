@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/03/26 04:05:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/29 12:41:07 jmmv Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGNAME=	quake3arena-demo-1.11.6
+WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	http://download1.activision.com/activision/quake3/demo/ \
 		http://download2.activision.com/activision/quake3/demo/
@@ -17,7 +18,6 @@ DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 CONFLICTS=	quake3arena-[0-9]*
 
 NO_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
 

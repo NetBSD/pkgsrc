@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2002/12/26 20:52:11 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:27 jmmv Exp $
 #
 
 DISTNAME=		jini-${SUN_VERSION}-src
 PKGNAME=		jini-${VERSION}
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}/jini${SUN_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.zip
@@ -39,7 +40,6 @@ MESSAGE_SUBST+=		JINI_HOME=${JINI_HOME}
 NO_BUILD=		yes
 
 DOWNLOAD=		http://wwws.sun.com/software/communitysource/jini/download.html
-WRKSRC=			${WRKDIR}/jini${SUN_VERSION}
 
 _FETCH_MESSAGE=	\
 	${ECHO} "======================================================================"; \

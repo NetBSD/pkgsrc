@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/14 18:36:21 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:57 jmmv Exp $
 #
 
 DISTNAME=	zopeedit-src-0.6
 PKGNAME=	zopeedit-0.6
+WRKSRC=		${WRKDIR}/zopeedit
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/
 EXTRACT_SUFX=	.tgz
@@ -11,7 +12,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.zope.org/Members/Caseman/ExternalEditor
 COMMENT=	helper client application for Zope's ExternalEditor
 
-WRKSRC=		${WRKDIR}/zopeedit
 USE_BUILDLINK2=	YES
 PYTHON_VERSIONS_ACCEPTED= 22
 PYTHON_PATCH_SCRIPTS= zopeedit.py

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2003/03/22 10:31:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/29 12:42:36 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
 DISTNAME=	docbook-4.2
 PKGREVISION=	3
+WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	\
 		http://www.oasis-open.org/docbook/sgml/4.2/ \
@@ -26,7 +27,6 @@ NO_MTREE=       yes
 USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
-WRKSRC=		${WRKDIR}
 
 INSTDIR=	${PREFIX}/share/sgml/docbook
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog

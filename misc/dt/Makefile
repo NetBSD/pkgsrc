@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2003/02/03 15:26:27 kei Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/29 12:41:49 jmmv Exp $
 #
 
 DISTNAME=	dt-1.1.7
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}/dt
 CATEGORIES=	misc
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
 
@@ -16,7 +17,6 @@ ALL_TARGET=	depend all
 CPPFLAGS+=	-D${DT_LAYOUT}_LAYOUT
 
 DTDOCSDIR=	${PREFIX}/share/doc/dt
-WRKSRC=		${WRKDIR}/dt
 
 post-install:
 	${INSTALL_DATA_DIR} ${DTDOCSDIR}

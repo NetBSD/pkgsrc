@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2003/03/03 04:17:38 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/29 12:43:12 jmmv Exp $
 
 DISTNAME=	xephem-3.5.2
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
@@ -16,7 +17,6 @@ USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
 PERL_SCRIPTS=	astorb2edb.pl mpcorb2edb.pl
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 LIBSRC1=	${WRKDIR}/${DISTNAME}/libastro
 LIBSRC2=	${WRKDIR}/${DISTNAME}/libip
 ALL_TARGET=	# empty

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:04 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:41:01 jmmv Exp $
 
 DISTNAME=		enormous
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
+WRKSRC=			${WRKDIR}
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/common/${DISTNAME}/
 EXTRACT_SUFX=		.zip
@@ -24,7 +25,6 @@ NO_SRC_ON_FTP=		${REASON}
 
 CHESS_ENGINE=		crafty
 DIST_SUBDIR=		chessbooks
-WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		# defined
 
 PLIST_SUBST+=		CHESS_ENGINE=${CHESS_ENGINE}

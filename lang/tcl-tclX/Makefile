@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/02/17 15:28:01 dillo Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:32 jmmv Exp $
 #
 
 DISTNAME=	tclX8.2.0
 PKGNAME=	tcl-tclX-8.2.0
+WRKSRC=		${WRKDIR}/tclX8.2.0/unix
 CATEGORIES=	lang tcl
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
 
@@ -24,8 +25,6 @@ CONFIGURE_ENV+=		\
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
 			SHAREGRP=${SHAREGRP}
-
-WRKSRC=			${WRKDIR}/tclX8.2.0/unix
 
 post-extract:
 	@${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n

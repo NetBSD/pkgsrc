@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2003/03/14 19:37:44 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:41:31 jmmv Exp $
 #
 
 DISTNAME=	Python-2.0.1
 PKGNAME=	python20-2.0.1
 PKGREVISION=	3
+WRKSRC=		${WRKDIR}/Python-2.0.1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 EXTRACT_SUFX=	.tgz
@@ -19,7 +20,6 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 DIST_SUBDIR=	python
 
 USE_BUILDLINK2=	yes
-WRKSRC=		${WRKDIR}/Python-2.0.1
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-threads
 INSTALL_TARGET=	altinstall

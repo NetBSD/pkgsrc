@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/03/02 19:47:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:18 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/10/05 03:13:32 steve Exp
 #
 
 DISTNAME=	mpeg_play-2.4-patched
 PKGNAME=	mpeg_play-2.4patched
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/mpeg_play
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/play/
 EXTRACT_SUFX=	-src.tar.gz
@@ -13,7 +14,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://bmrc.berkeley.edu/projects/mpeg/mpeg_play.html
 COMMENT=	Program to play mpeg movies on X displays
 
-WRKSRC=		${WRKDIR}/mpeg_play
 USE_IMAKE=	yes
 
 pre-configure:

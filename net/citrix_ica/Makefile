@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/26 04:05:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/29 12:41:55 jmmv Exp $
 #
 
 # A default so lintpkgsrc is happy
@@ -13,6 +13,7 @@ DISTNAME=       solaris
 PKGNAME=        citrix_ica-6.30.1061
 EXTRACT_SUFX=   .tar.Z
 .endif
+WRKSRC=         ${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://download2.citrix.com/files/en/products/client/ica/current/
 
@@ -39,7 +40,6 @@ PLIST_SRC=	${PKGDIR}/PLIST.pre \
 		${PKGDIR}/PLIST.post
 
 DIST_SUBDIR=    ${PKGNAME}
-WRKSRC=         ${WRKDIR}
 
 CDIR=           ${PREFIX}/lib/ICAClient
 BINDIR=         ${PREFIX}/bin

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/09/21 11:29:11 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:40:48 jmmv Exp $
 #
 
 DISTNAME=	arcem0.50
 PKGNAME=	arcem-0.50
+WRKSRC=		${WRKDIR}/armul-arc
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.arm.uk.linux.org/pub/linux/arcem/
 EXTRACT_SUFX=	.tgz
@@ -13,8 +14,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	cjep@netbsd.org
 HOMEPAGE=	ftp://ftp.arm.uk.linux.org/pub/linux/arcem/Index
 COMMENT=	Dave Gilbert's Acorn Archimedes emulator
-
-WRKSRC=		${WRKDIR}/armul-arc
 
 USE_BUILDLINK2=	# defined
 USE_X11=	# defined

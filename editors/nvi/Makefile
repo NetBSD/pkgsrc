@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/10/10 12:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:45 jmmv Exp $
 #
 
 DISTNAME=	nvi-1.81.5
+WRKSRC=		${WRKDIR}/${DISTNAME}/build.unix
 CATEGORIES=	editors
 MASTER_SITES=	http://www.kotnet.org/~skimo/nvi/devel/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,8 +19,6 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_BUILDLINK2=		YES
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/build.unix
 
 .include "../../databases/db3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:59 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:58 jmmv Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
 PKGNAME=	egtk-0.3.4
+WRKSRC=		${WRKDIR}/eGTK
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netlabs.net/hp/richieb/downloads/
 
@@ -14,8 +15,6 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	smalleiffel-[0-9]*:../../lang/smalleiffel
 
 USE_X11=	yes
-
-WRKSRC=		${WRKDIR}/eGTK
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -name "CVS" -print | ${XARGS} ${RM} -rf

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2003/03/18 12:13:43 tron Exp $
+# $NetBSD: Makefile,v 1.26 2003/03/29 12:41:21 jmmv Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.cs.utah.edu/pub/dept/OLD/pub/
 DISTFILES=	urt-3.1b.tar.Z urt-doc.tar urt-img.tar
@@ -19,7 +20,6 @@ EXTRACT_ONLY=	urt-3.1b.tar.Z
 USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
-WRKSRC=		${WRKDIR}
 CONFIGURE_SCRIPT=./Configure
 CONFIGURE_ARGS=	config/urt
 HAS_CONFIGURE=	yes

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2001/04/22 16:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:41:25 jmmv Exp $
 # FreeBSD Id: ports/lang/ghc/Makefile,v 1.1.1.1 1999/11/10 17:25:28 nectar Exp
 
 DISTNAME=	ghc-4.04
+WRKSRC=		${WRKDIR}/fptools
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/4.04/
 DISTFILES=	ghc-4.04-src.tar.gz ghc-4.04-x86-hc.tar.gz
@@ -19,7 +20,6 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+= --enable-hc-boot --libdir=${PREFIX}/lib/ghc
 CONFIGURE_ENV+=	HASKELL_OBJ_FMT=${OBJECT_FMT}
-WRKSRC=		${WRKDIR}/fptools
 
 # a number of non-i386 platforms, including solaris/sparc, osf/alpha
 # etc are supported natively by ghc. pkg support for those platforms

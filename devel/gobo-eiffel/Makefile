@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:19 agc Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:33 jmmv Exp $
 #
 
 DISTNAME=	gobo15
 PKGNAME=	gobo-eiffel-1.5
+WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.gobosoft.com/download/ \
 		http://www.eiffel-forum.org/archive/bezault/ \
@@ -15,7 +16,6 @@ COMMENT=	portable Eiffel structure libraries and tools
 
 BUILD_DEPENDS+=	smalleiffel-0.77:../../lang/smalleiffel
 
-WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${LOCALBASE}/bin/unzip -uLa \
 			${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 

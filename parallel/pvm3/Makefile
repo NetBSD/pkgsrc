@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2002/11/09 15:24:25 is Exp $
+# $NetBSD: Makefile,v 1.26 2003/03/29 12:42:09 jmmv Exp $
 
 DISTNAME=		pvm3.4.4
 PKGNAME=		pvm-3.4.4
+WRKSRC=			${WRKDIR}/pvm3
 CATEGORIES=		parallel
 MASTER_SITES=		http://www.netlib.org/pvm3/
 EXTRACT_SUFX=		.tgz
@@ -21,7 +22,6 @@ USE_BUILDLINK2=		yes
 USE_FORTRAN=		yes
 USE_X11=		yes
 
-WRKSRC=			${WRKDIR}/pvm3
 PVM_ROOT=		${WRKSRC}
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 MAKE_ENV+=		PVM_ARCH=

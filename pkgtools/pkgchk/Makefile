@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2002/10/08 15:44:13 abs Exp $
+# $NetBSD: Makefile,v 1.37 2003/03/29 12:42:11 jmmv Exp $
 
 DISTNAME=	pkgchk-1.34
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +12,6 @@ COMMENT=	Check installed package versions against pkgsrc
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
-WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/03/09 19:46:52 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:00 jmmv Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/battleball-2.1-src
 CATEGORIES=	games x11
 MASTER_SITES=	http://linuxberg.prover.com.br/files/x11/entertain/
 
@@ -12,7 +13,6 @@ COMMENT=	3d game of soccer, with tanks
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES
-WRKSRC=		${WRKDIR}/battleball-2.1-src
 
 SED_CMDS=	-e '/^INCS/s|$$|${CPPFLAGS}|' -e '/^LIBS/s|$$|${LDFLAGS}|'
 

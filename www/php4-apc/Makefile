@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/10/25 16:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:53 jmmv Exp $
 
 DISTNAME=	apc-1.1.0pl1
 PKGNAME=	php-apc-1.1.0.1
 MODNAME=	${DISTNAME:C/-[^-]*$//}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES+=	www
 MASTER_SITES=	http://apc.communityconnect.com/sources/
 
@@ -11,7 +12,6 @@ HOMEPAGE=	http://apc.communityconnect.com/
 COMMENT=	Alternative PHP Cache for PHP4
 
 EXTRACT_ELEMENTS=	# empty
-WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_BUILDLINK2=		YES
 

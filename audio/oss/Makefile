@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/01/28 22:03:03 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/29 12:40:08 jmmv Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
+WRKSRC=		${WRKDIR}
 CATEGORIES=	audio sysutils
 MASTER_SITES=	ftp://ftp.opensound.com/pub/oss/netbsd/
 
@@ -40,7 +41,6 @@ MODSTAT=		${TRUE}
 .endif
 
 CHROOT?=		/usr/sbin/chroot
-WRKSRC=			${WRKDIR}
 OSSLIBDIR=		${PREFIX}/lib/oss
 FILES_SUBST+=		OSSLIBDIR=${OSSLIBDIR}
 FILES_SUBST+=		MODSTAT=${MODSTAT}

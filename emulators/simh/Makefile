@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2003/03/22 11:58:16 cjep Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/29 12:40:51 jmmv Exp $
 #
 
 DISTNAME=	simhv210-0b2
 PKGNAME=	simh-2.10.0b2
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
@@ -13,8 +14,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supnik's historical computer simulator
-
-WRKSRC=		${WRKDIR}
 
 EXTRACT_CMD=	unzip -aoq ${DOWNLOADED_DISTFILE}
 

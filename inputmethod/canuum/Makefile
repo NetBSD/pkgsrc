@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/10/25 17:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:23 jmmv Exp $
 #
 
 DISTNAME=	canuum-1.0
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/Canna35b2/canuum
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/Canna35/
 DISTFILES=	Uum4.109.tar.gz Canna35b2.tar.gz
@@ -16,7 +17,6 @@ USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
 USE_X11=	YES
 MAKE_ARGS=	PREFIX=${PREFIX}
-WRKSRC=		${WRKDIR}/Canna35b2/canuum
 
 MAKE_ENV+=	CCOPTIONS="${CPPFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}"
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/03/26 04:05:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:41:51 jmmv Exp $
 
 DISTNAME=		OOo_1.0.2_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.2
 PKGREVISION=		3
+WRKSRC=			${WRKDIR}/install
 CATEGORIES=		misc
 MASTER_SITES=		http://sf1.mirror.openoffice.org/stable/1.0.2/	\
 			http://www.fs.tum.de/~mrauch/OpenOffice/download/
@@ -12,7 +13,6 @@ HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
 
 NO_CONFIGURE=           yes
-WRKSRC=			${WRKDIR}/install
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*

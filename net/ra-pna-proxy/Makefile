@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2001/05/12 11:52:54 tron Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:03 jmmv Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
+WRKSRC=		${WRKDIR}/raproxy
 CATEGORIES=	net
 MASTER_SITES=	http://docs.real.com/proxykit/
 
@@ -18,7 +19,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ALL_TARGET=	raproxy
 PROGNAME=	${PKGNAME:C/-[1-9].*//}
-WRKSRC=		${WRKDIR}/raproxy
 
 post-build:
 	cd ${WRKSRC}; \

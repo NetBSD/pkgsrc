@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/22 02:18:39 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/29 12:40:33 jmmv Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -7,6 +7,7 @@
 
 DISTNAME=	${PKGNAME}-src
 PKGNAME=	jakarta-ant-1.4.1
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	devel
 MASTER_SITES=	http://ant.apache.org/old-releases/v1.4.1/src/
 EXTRACT_SUFX=	.zip
@@ -20,8 +21,6 @@ DEPENDS+=	crimson>=1.1.3:../../textproc/crimson
 USE_BUILDLINK2=	# defined
 
 EXTRACT_CMD.zip=	${LOCALBASE}/bin/unzip -Caq $${extract_file}
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 post-extract:
 	@${RM} ${WRKSRC}/lib/*.jar

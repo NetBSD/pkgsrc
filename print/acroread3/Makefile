@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2003/03/26 04:05:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/29 12:42:13 jmmv Exp $
 
 PKGNAME=	acroread3-3.01
+WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/3.x/
 
@@ -56,7 +57,6 @@ DISTNAME=	${PKGNAME}
 LDD?=		${TRUE}
 .endif
 
-WRKSRC=		${WRKDIR}
 PLIST_SRC=	${PKGDIR}/PLIST.pre \
 		${PKGDIR}/PLIST.${LOWER_OPSYS}-${MACHINE_ARCH} \
 		${PKGDIR}/PLIST.post

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2002/08/25 21:49:10 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/29 12:40:01 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/08/10 22:31:19 fenner Exp 
 #
 
 DISTNAME=       ha0999
 PKGNAME=        ha-0.999b
+WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=   .tgz
@@ -13,7 +14,6 @@ COMMENT=	The HA archiver using the HSC compression method
 
 USE_BUILDLINK2=	yes
 
-WRKSRC=		${WRKDIR}
 MAKEFILE=       makefile.nix
 MAKE_FLAGS=     CC="${CC}"
 ALL_TARGET=     ha

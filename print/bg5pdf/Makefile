@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/10/08 19:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:14 jmmv Exp $
 #
 
 DISTNAME=	bg5pdf-1.0.0
+WRKSRC=		${WRKDIR}/bg5pdf
 CATEGORIES=	print chinese
 MASTER_SITES=	http://students.washington.edu/cschin/bg5ps/bg5pdf/
 
@@ -16,8 +17,6 @@ PY_PATCHPLIST=			yes
 PYTHON_PATCH_SCRIPTS=		bg5pdf
 
 MAKE_ENV+=	PYINC=${PYINC} PYSITELIB=${PYSITELIB}
-
-WRKSRC=		${WRKDIR}/bg5pdf
 
 post-extract:
 	${RM} -f ${WRKSRC}/bg5pdflib.so

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/01/13 04:14:21 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:39 jmmv Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}mode-${RUBY_VERSION}
+WRKSRC=		${RUBY_WRKSRC}/misc
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -11,7 +12,6 @@ HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
 COMMENT=	Ruby editing mode for Emacs
 
 DIST_SUBDIR=	ruby
-WRKSRC=		${RUBY_WRKSRC}/misc
 
 .include "../../mk/bsd.prefs.mk"
 RUBY_VER=	1.6		# always use 1.6 base

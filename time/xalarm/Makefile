@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/03/03 03:23:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:42:45 jmmv Exp $
 
 DISTNAME=	xalarm-3.03
 PKGNAME=	xalarm-3.05
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/xalarm
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=R5contrib-fixes/xalarm/}
 EXTRACT_SUFX=	.tar.Z
@@ -15,8 +16,6 @@ MAINTAINER=	seb@pbox.org
 COMMENT=	X11 interactive alarm clock
 
 DEPENDS+=	skill>=4.0:../../sysutils/skill
-
-WRKSRC=		${WRKDIR}/xalarm
 
 USE_IMAKE=	yes
 

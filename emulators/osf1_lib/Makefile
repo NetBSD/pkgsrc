@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/03/28 21:14:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:50 jmmv Exp $
 
 DISTNAME=	netscape-4.7-3.alpha
 PKGNAME=	osf1_lib-1.1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.support.compaq.com/private/alpha-tools-software/netscape/
 EXTRACT_SUFX=	.rpm
@@ -27,8 +28,6 @@ EMULDIR=		${PREFIX}/${EMULSUBDIR}
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-
-WRKSRC=		${WRKDIR}
 
 RPMARGS=	-i usr/lib -i usr/bin ${DISTDIR}/${DISTFILES}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/12/30 16:24:58 taca Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:43:09 jmmv Exp $
 # FreeBSD: ports/lang/ruby-tcltklib/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}tcltklib-${RUBY_VERSION}
+WRKSRC=		${RUBY_WRKSRC}/ext/tcltklib
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -15,7 +16,6 @@ DEPENDS+=	tk>=8.3:../../x11/tk
 
 DIST_SUBDIR=	ruby
 DISTINFO_FILE=	${RUBY_DISTINFO}
-WRKSRC=		${RUBY_WRKSRC}/ext/tcltklib
 
 EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/ext/tcltklib
 USE_RUBY_EXTCONF= yes

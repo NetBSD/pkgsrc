@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2001/04/28 23:59:21 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:44 jmmv Exp $
 
 DISTNAME=	slatec_src
 PKGNAME=	slatec-4.1
+WRKSRC=		${WRKDIR}/src
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.netlib.org/slatec/ \
 		ftp://netlib.bell-labs.com/netlib/slatec/ \
@@ -13,7 +14,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Library of mathematical and statistical Fortran 77 subroutines
 
-WRKSRC=		${WRKDIR}/src
 USE_FORTRAN=	YES
 
 post-extract:

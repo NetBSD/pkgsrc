@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:37 jmmv Exp $
 #
 
 DISTNAME=		helpdc21
 PKGNAME=		helpdeco-21
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SIMTEL:=win95/winhelp/}
 EXTRACT_SUFX=		.zip
@@ -11,8 +12,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.simtel.net/pub/pd/23694.shtml
 COMMENT=		windows .hlp to .rtf converter
-
-WRKSRC=			${WRKDIR}
 
 LICENSE=		no-commercial-use
 

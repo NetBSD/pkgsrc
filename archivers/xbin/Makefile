@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2002/08/25 21:49:27 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:04 jmmv Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
+WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://sunsite.unc.edu/pub/packages/TeX/tools/xbin/
 DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
@@ -15,7 +16,6 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 USE_BUILDLINK2=	# defined
-WRKSRC=		${WRKDIR}
 
 PRGNAME=	xbin
 EXTRACT_ONLY=	# empty

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/08/25 21:51:26 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:44 jmmv Exp $
 #
 
 DISTNAME=	wmCalClock-1.25
+WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 CATEGORIES=	x11 time
 MASTER_SITES=	http://nis-www.lanl.gov/~mgh/WindowMaker/
 
@@ -12,8 +13,6 @@ COMMENT=	another WindowMaker calendar/clock dockapp
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2002/09/21 01:02:04 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2003/03/29 12:40:09 jmmv Exp $
 #
 
 DISTNAME=		snd
 PKGNAME=		snd-19980212
+WRKSRC=			${WRKDIR}
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -15,7 +16,6 @@ NO_SRC_ON_FTP=		Already on MASTER_SITE_LOCAL
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 
-WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile.netbsd
 ALL_TARGET=		snd
 

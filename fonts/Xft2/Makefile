@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2003/03/09 13:26:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:53 jmmv Exp $
 #
 
 DISTNAME=	fcpackage.2_1
 PKGNAME=	Xft2-2.1
 PKGREVISION=	4
+WRKSRC=		${WRKDIR}/${DISTNAME}/Xft
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://fontconfig.org/release/
 
@@ -19,8 +20,6 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11=	YES
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/Xft
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../fonts/fontconfig/buildlink2.mk"

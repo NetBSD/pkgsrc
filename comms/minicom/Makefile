@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2003/01/28 22:03:10 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2003/03/29 12:40:20 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
 DISTNAME=	${PKGNAME}.src
 PKGNAME=	minicom-1.83.1
+WRKSRC=		${WRKDIR}/${PKGNAME}/src
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
 		http://www.pp.clinet.fi/~walker/
@@ -21,7 +22,6 @@ USE_PKGINSTALL=		yes
 USE_GMAKE=		yes
 NO_CONFIGURE=		yes
 
-WRKSRC=			${WRKDIR}/${PKGNAME}/src
 PKG_SYSCONFSUBDIR=	minicom
 EGDIR=			${PREFIX}/share/examples/minicom
 

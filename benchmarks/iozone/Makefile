@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/03/11 12:42:04 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/29 12:40:11 jmmv Exp $
 
 DISTNAME=		iozone3_163
 PKGNAME=		iozone-3.163
+WRKSRC=			${WRKDIR}/src/current
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.iozone.org/src/current/
 EXTRACT_SUFX=		.tar
@@ -12,7 +13,6 @@ COMMENT=		Benchmark for file read and write speed
 
 RESTRICTED=		"Publication of derivative works not allowed"
 
-WRKSRC=			${WRKDIR}/src/current
 MAKEFILE=		makefile
 
 .include "../../mk/bsd.prefs.mk"

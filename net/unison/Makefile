@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/09/16 14:38:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:42:06 jmmv Exp $
 #
 
 DISTNAME=	src
 PKGNAME=	unison-2.9.1
+WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/stable/latest/
 
@@ -16,7 +17,6 @@ BUILD_DEPENDS+=	bash>=2.05:../../shells/bash2
 DIST_SUBDIR=	${PKGNAME}
 
 # docs: unison-manual.pdf/html/ps/dvi
-WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_GMAKE=	yes
 MAKE_FLAGS+=	CFLAGS="" UISTYLE=text
 MAKE_ENV+=	HOME=${WRKDIR}

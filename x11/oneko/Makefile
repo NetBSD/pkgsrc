@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/03/03 04:17:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:43:08 jmmv Exp $
 
 DISTNAME=		oneko-1.1b
 PKGNAME=		oneko-1.2
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}/oneko
 CATEGORIES=		x11 games
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:S/contrib/R5contrib/}
 
@@ -14,6 +15,5 @@ MAINTAINER=		johnam@mail.kemper.org
 COMMENT=		Like xneko except on the desktop and with other animals
 
 USE_IMAKE=		yes
-WRKSRC=			${WRKDIR}/oneko
 
 .include "../../mk/bsd.pkg.mk"

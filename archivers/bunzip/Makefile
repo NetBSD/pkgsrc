@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/08/25 21:48:59 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:01 jmmv Exp $
 
 DISTNAME=	bunzip021.c
 PKGNAME=	bunzip-0.21
+WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.gz
@@ -11,7 +12,6 @@ HOMEPAGE=	http://www.muraroa.demon.co.uk/
 COMMENT=	Decompressor for bzip .bz files
 
 USE_BUILDLINK2=		# defined
-WRKSRC=			${WRKDIR}
 
 do-build:
 	cd ${WRKSRC} && ${BUILDLINK_CC} ${CFLAGS} -o bunzip ${DISTNAME}

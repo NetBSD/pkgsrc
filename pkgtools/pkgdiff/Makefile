@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2003/03/28 21:14:28 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2003/03/29 12:42:11 jmmv Exp $
 #
 
 DISTNAME=	pkgdiff-0.107
+WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +14,6 @@ COMMENT=	Tools to ease creating and maintaining patches for pkgsrc
 PERL5_REQD=	5.6.0
 
 EXTRACT_ONLY=	# empty
-WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 

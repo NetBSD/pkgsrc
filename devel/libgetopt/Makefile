@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2002/12/07 02:38:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/29 12:40:34 jmmv Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
+WRKSRC=		${WRKDIR}/libgetopt
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/ \
@@ -18,7 +19,6 @@ PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 VERS=		1.3
-WRKSRC=		${WRKDIR}/libgetopt
 # I have NFC why the mkdir in pre-extract doesn't work, so do it here:
 EXTRACT_CMD=	${MKDIR} ${WRKSRC} && ${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 MANCOMPRESSED_IF_MANZ=  yes

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/12/31 15:44:30 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:50 jmmv Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
+WRKSRC=		${WRKDIR}/ApacheJSSI-1.1.2/src/java
 CATEGORIES=	www
 MASTER_SITES=	http://java.apache.org/jservssi/dist/
 
@@ -16,7 +17,6 @@ DEPENDS+=	jsdk-2.0:../../www/jsdk20
 
 USE_GMAKE=
 NO_CONFIGURE=
-WRKSRC=		${WRKDIR}/ApacheJSSI-1.1.2/src/java
 MAKE_ENV+=	CLASSPATH=${CLASSPATH}
 
 post-build:

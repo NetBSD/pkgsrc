@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.17 2003/03/28 20:29:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2003/03/29 12:42:56 jmmv Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
+WRKSRC=		${WRKDIR}/w3m-${W3M_VERS}
 CATEGORIES=	www
 MASTER_SITES=	http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/
 
@@ -16,7 +17,6 @@ W3M_M17N_VERS=	20030224
 
 # w3m source with m17n patch applied.
 W3M_SRC=	${DISTNAME}${EXTRACT_SUFX}
-WRKSRC=		${WRKDIR}/w3m-${W3M_VERS}
 DISTFILES+=	${W3M_SRC}
 EXTRACT_ONLY=	${W3M_SRC}
 

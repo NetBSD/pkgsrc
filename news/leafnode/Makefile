@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/02/26 14:00:36 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:08 jmmv Exp $
 
 DISTNAME=		leafnode-1.9.36.rel
 PKGNAME=		leafnode-1.9.36
+WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
 
@@ -10,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		cjep@netbsd.org
 HOMEPAGE=		http://www.leafnode.org/
 COMMENT=		NNTP server for small (dialup) sites
-
-WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_BUILDLINK2=		yes
 

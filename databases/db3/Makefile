@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2002/08/28 16:10:28 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/29 12:40:25 jmmv Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
+WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
@@ -23,8 +24,6 @@ CONFIGURE_ARGS+=	--program-transform-name=s,db_,db3_,
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db3
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--enable-shared
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 
 post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/db3

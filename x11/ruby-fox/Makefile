@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/01/10 17:57:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:43:09 jmmv Exp $
 
 DISTNAME=	FXRuby-0.99.174
 PKGNAME=	${RUBY_PKGNAMEPREFIX}fox-0.99.174
 PKGREVISION=	1
+WRKSRC=		${WRKDIST}/ext/fox
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fxruby/}
 
@@ -16,7 +17,6 @@ DEPENDS+=	ruby-opengl-[0-9]*:../../graphics/ruby-opengl
 BUILDLINK_DEPENDS.fox=fox-0.99.174nb1
 
 WRKDIST=	${WRKDIR}/${DISTNAME}
-WRKSRC=		${WRKDIST}/ext/fox
 
 USE_BUILDLINK2=	yes
 DIST_SUBDIR=	ruby

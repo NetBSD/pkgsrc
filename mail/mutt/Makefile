@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2003/03/20 04:38:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.94 2003/03/29 12:41:36 jmmv Exp $
 
 DISTNAME=		mutt-1.4.1i
 PKGNAME=                ${DISTNAME:C/i$//}
+WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -24,7 +25,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--enable-pop --enable-imap
 
 LDFLAGS+=		${_STRIPFLAG_CC}
-WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 
 .include "../../mk/bsd.prefs.mk"
 

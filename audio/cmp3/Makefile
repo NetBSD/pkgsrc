@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/01/24 13:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:05 jmmv Exp $
 #
 
 DISTNAME=	cmp3-2.0pre5
 PKGNAME=	cmp3-2.0.p5
+WRKSRC=		${WRKDIR}/cmp3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.personal.psu.edu/users/n/k/nkk104/cmp3/
 
@@ -11,8 +12,6 @@ HOMEPAGE=	http://www.personal.psu.edu/nkk104/cmp3/
 COMMENT=	curses based frontend to mpg123
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
-
-WRKSRC=		${WRKDIR}/cmp3
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES

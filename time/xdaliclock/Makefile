@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:42:45 jmmv Exp $
 #
 
 DISTNAME=		xdaliclock-2.18
+WRKSRC=			${WRKDIR}/${DISTNAME}/X11
 CATEGORIES=		x11 time
 MASTER_SITES=		http://www.jwz.org/xdaliclock/ \
 			${MASTER_SITE_XCONTRIB:=applications/}
@@ -12,6 +13,5 @@ COMMENT=		Animated digital clock
 
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-WRKSRC=			${WRKDIR}/${DISTNAME}/X11
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/07 16:17:49 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:28 jmmv Exp $
 
 DISTNAME=		fbsql.c
 PKGNAME=		tcl-fbsql-1.05
+WRKSRC=			${WRKDIR}/src
 CATEGORIES=		database
 MASTER_SITES=		http://www.fastbase.co.nz/fbsql/
 EXTRACT_SUFX=
@@ -12,8 +13,6 @@ COMMENT=		Tcl interface to MySQL
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-
-WRKSRC=			${WRKDIR}/src
 
 do-extract:
 	${MKDIR} ${WRKSRC}

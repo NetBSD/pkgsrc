@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/03/01 05:22:22 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:17 jmmv Exp $
 #
 
 DISTNAME=	ircu2.10.11.04
 PKGNAME=	ircu-2.10.11.04
+WRKSRC=		${WRKDIR}/ircu2.10
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=undernet-ircu/}
 
@@ -23,7 +24,6 @@ CONFIGURE_ARGS+=	--with-user=0
 CONFIGURE_ARGS+=	--with-group=0
 CONFIGURE_ARGS+=	--with-symlink=no
 
-WRKSRC=			${WRKDIR}/ircu2.10
 PKG_SYSCONFSUBDIR=	ircd
 
 IRCD_USER?=		ircd

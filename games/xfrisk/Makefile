@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2002/02/28 17:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:41:11 jmmv Exp $
 #
 
 DISTNAME=	xfrisk-1.2
+WRKSRC=		${WRKDIR}/XFrisk
 CATEGORIES=	games
 MASTER_SITES=	http://morphy.iki.fi/xfrisk/files/
 
 MAINTAINER=	sketch@rd.bbc.co.uk
 HOMEPAGE=	http://morphy.iki.fi/xfrisk/
 COMMENT=	X11 version of the classic Risk board game
-
-WRKSRC=		${WRKDIR}/XFrisk
 
 USE_GMAKE=	yes
 USE_X11=	yes

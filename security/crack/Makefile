@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/08/09 13:03:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:42:22 jmmv Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
+WRKSRC=		${WRKDIR}/c50a
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.task.gda.pl/mirror/ftp.cert.org/pub/tools/crack/ \
 		ftp://ftp.cs.umn.edu/mirror00/ftp.win.tue.nl/pub/security/ \
@@ -11,8 +12,6 @@ MASTER_SITES=	ftp://ftp.task.gda.pl/mirror/ftp.cert.org/pub/tools/crack/ \
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.users.dircon.co.uk/~crypto/
 COMMENT=	The "Sensible" Unix Password Cracker
-
-WRKSRC=		${WRKDIR}/c50a
 
 pre-configure:
 	@${ECHO} "XLIB+= -lcrypt" >> ${WRKSRC}/src/util/Makefile

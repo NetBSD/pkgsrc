@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2001/04/25 23:35:30 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:43 jmmv Exp $
 
 DISTNAME=	otter-3.0.6
+WRKSRC=		${WRKDIR}/${PKGNAME}/source
 CATEGORIES=	math
 MASTER_SITES=	ftp://info.mcs.anl.gov/pub/Otter/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mcs.anl.gov/AR/otter/
 COMMENT=	Automated Deduction System
-
-WRKSRC=		${WRKDIR}/${PKGNAME}/source
 
 ALL_TARGET=	otter
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/10/13 12:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:06 jmmv Exp $
 #
 
 DISTNAME=	gtkmserv-0.5.2
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	audio
 MASTER_SITES=	http://projects.ubertechnique.com/downloads/
 
@@ -9,7 +10,6 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://projects.ubertechnique.com/index.html
 COMMENT=	gtk-based GUI client for the audio/mserv package
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 

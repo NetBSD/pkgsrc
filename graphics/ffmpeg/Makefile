@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/12/23 01:42:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:15 jmmv Exp $
 
 DISTNAME=	ffmpeg-0.4.5
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}/ffmpeg
 CATEGORIES=	graphics net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
 
@@ -20,7 +21,6 @@ MAKE_ENV+=	EXTRA_LIBS="${LIBGETOPT}" \
 		LOCALBASE="${LOCALBASE}"
 
 CONFIGURE_ARGS=	--cc=${CC} --disable-grab --disable-mmx --prefix=${PREFIX}
-WRKSRC=		${WRKDIR}/ffmpeg
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/libav

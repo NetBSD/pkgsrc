@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2002/09/13 06:53:36 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:14 jmmv Exp $
 
 DISTNAME=	cupsomatic
 PKGNAME=	${DISTNAME}-2.2
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
 
@@ -31,7 +32,6 @@ DEPENDS+=	foomatic-gswrapper>=1.2:../../print/foomatic-gswrapper
 DEPENDS+=	mpage-[0-9]*:../../print/mpage
 
 USE_PERL5=	yes
-WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 
 FILTERDIR=	${PREFIX}/libexec/cups/filter

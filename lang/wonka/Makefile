@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/03/10 13:55:59 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:34 jmmv Exp $
 #
 
 DISTNAME=	wonka-src-0.9.5-release
 PKGNAME=	wonka-0.9.5
+WRKSRC=		${WRKDIR}/open-wonka
 CATEGORIES=	lang
 MASTER_SITES=	http://wonka.acunia.com/
 
@@ -23,8 +24,6 @@ USE_X11=	# defined
 
 JVM_HOME=	${LOCALBASE}/java/${PKGBASE}
 NO_MTREE=	# defined, since we change PREFIX below
-
-WRKSRC=		${WRKDIR}/open-wonka
 
 SEDFILES=	\
 	${WRKSRC}/tool/mauve/java/gnu/testlet/wonka/lang/ClassLoader/AcuniaClassLoaderTest.java \

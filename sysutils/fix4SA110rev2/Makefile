@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:47 agc Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:28 jmmv Exp $
 #
 
 DISTNAME=	fix4SA110rev2-1.0
+WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/arch/arm32/misc/
 DISTFILES=	fix4SA110rev2.c fix4SA110rev2.README
@@ -12,8 +13,6 @@ COMMENT=	Modify arm32 binaries to work around SA rev2 problems
 
 ONLY_FOR_PLATFORM= NetBSD-*-arm32
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
-
-WRKSRC=		${WRKDIR}
 
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/fix4SA110rev2 ${WRKSRC}/fix4SA110rev2.c

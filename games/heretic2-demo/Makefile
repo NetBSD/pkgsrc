@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2002/02/07 11:39:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:05 jmmv Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
 PKGNAME=	heretic2-demo-2.0
+WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/heretic2/ \
 		ftp://download.linuxlords.com/pub/demos/heretic2/ \
@@ -14,7 +15,6 @@ HOMEPAGE=	http://www.lokigames.com/products/heretic2/demo.php3
 COMMENT=	Heretic2 - first person Quake 3D engine based (linux demo)
 
 NO_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
 

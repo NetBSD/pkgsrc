@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/01/28 22:03:57 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:42:06 jmmv Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
+WRKSRC=			${WRKDIR}/${DISTNAME:S/.src//}
 CATEGORIES=		net
 MASTER_SITES=		http://www.netbsd.org/~ad/
 
@@ -12,7 +13,6 @@ COMMENT=		User-PPP package as found in FreeBSD and OpenBSD
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 MANCOMPRESSED_IF_MANZ=	YES
-WRKSRC=			${WRKDIR}/${DISTNAME:S/.src//}
 
 post-patch:
 	(cd ${WRKSRC};							\

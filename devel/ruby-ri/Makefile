@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 14:41:20 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:40:39 jmmv Exp $
 #
 
 DISTNAME=	ri-0.7a
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+WRKSRC=		${WRKDIR}/ri
 CATEGORIES=	devel
 MASTER_SITES=	http://www.pragmaticprogrammer.com/ruby/downloads/files/
 EXTRACT_SUFX=	.tgz
@@ -13,7 +14,6 @@ COMMENT=	ri -- Ruby Interactive reference
 
 RUBY_REQD=	1.6.2
 DIST_SUBDIR=	ruby
-WRKSRC=		${WRKDIR}/ri
 USE_RUBY=	yes
 NO_BUILD=	# empty
 

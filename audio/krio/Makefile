@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:36:37 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:40:07 jmmv Exp $
 
 DISTNAME=	Krio-19990721
 PKGNAME=	krio-19990721
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/Krio
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.13th-floor.org/pub/krio/
 
@@ -21,8 +22,6 @@ DEPENDS+=	kdelibs-1.1.2nb1:../../x11/kdelibs
 DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	qt1-1.44:../../x11/qt1
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-
-WRKSRC=		${WRKDIR}/Krio
 
 EVAL_PREFIX=	QT1DIR=qt1 KDEDIR=kdelibs
 MAKE_ENV+=	QT1DIR=${QT1DIR} KDEDIR=${KDEDIR}

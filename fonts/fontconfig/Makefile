@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2003/03/09 13:26:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:56 jmmv Exp $
 #
 
 DISTNAME=	fcpackage.2_1
 PKGNAME=	fontconfig-2.1
 PKGREVISION=	4
+WRKSRC=		${WRKDIR}/${DISTNAME}/fontconfig
 CATEGORIES=	fonts gnome
 MASTER_SITES=	http://fontconfig.org/release/
 
@@ -34,8 +35,6 @@ CONFIGURE_ARGS+=	--with-x
 EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
 CONF_FILES+=	${EGDIR}/fonts.dtd ${PKG_SYSCONFDIR}/fonts.dtd
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/fontconfig
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/src/fontconfig.man \

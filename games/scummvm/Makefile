@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/12/10 12:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:08 jmmv Exp $
 
 DISTNAME=	scummvm_0.3.0b-src
 PKGNAME=	scummvm-0.3.0
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +14,6 @@ COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=	yes
 
 do-install:

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/03/25 14:28:22 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:42:20 jmmv Exp $
 #
 
 DISTNAME=	xpdf-chinese-traditional
 PKGNAME=	${DISTNAME}-20020414
+WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -15,7 +16,6 @@ DEPENDS+=	xpdf>=2.02:../../print/xpdf
 USE_PKGINSTALL=	yes
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

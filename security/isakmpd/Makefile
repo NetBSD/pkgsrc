@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2003/01/28 22:04:05 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2003/03/29 12:42:22 jmmv Exp $
 #
 
 DISTNAME=		isakmpd-20021118
+WRKSRC=			${WRKDIR}/isakmpd
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
@@ -16,8 +17,6 @@ PKG_FAIL_REASON+=	"${PKGNAME} requires ipsec-ready ${OPSYS}"
 ALL_TARGET=		depend all
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-
-WRKSRC=			${WRKDIR}/isakmpd
 
 MAKE_ENV+=		BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/man
 

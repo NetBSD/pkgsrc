@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/03/24 14:49:37 taca Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:31 jmmv Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}base-${RUBY_VERSION}
+WRKSRC=		${RUBY_WRKSRC}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -17,7 +18,6 @@ RUBY_BUILD_DEPENDS= no
 DIST_SUBDIR=	ruby
 
 GNU_CONFIGURE=	yes
-WRKSRC=		${RUBY_WRKSRC}
 CONFIGURE_ARGS=	--enable-shared
 MLINKS=		ruby${_RUBY_SUFFIX}.1 ruby.1
 TEST_TARGET=	test

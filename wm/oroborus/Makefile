@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/15 07:00:24 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:46 jmmv Exp $
 #
 
 DISTNAME=	oroborus_2.0.11-1
 PKGNAME=	oroborus-2.0.11
+WRKSRC=         ${WRKDIR}/oroborus
 CATEGORIES=	wm
 MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/
 
@@ -14,7 +15,5 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 USE_XPM=	YES
 USE_X11=	YES
-
-WRKSRC=         ${WRKDIR}/oroborus
 
 .include "../../mk/bsd.pkg.mk"

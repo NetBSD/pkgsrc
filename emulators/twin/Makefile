@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/03/08 03:15:49 jmc Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:51 jmmv Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
 PKGNAME=		twin-3.1.14
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}/twin
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.willows.com/pub/twin/
 
@@ -14,7 +15,6 @@ COMMENT=		cross-platform implementation of the win32 api
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
-WRKSRC=			${WRKDIR}/twin
 ALL_TARGET=		depend world
 AUTOCONF_REQD=		2.13
 CONFIGURE_ARGS=		--enable-debugger

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/15 13:23:08 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:29 jmmv Exp $
 #
 
 DISTNAME=	Archive-0.1.2
 PKGNAME=	rox-archive-0.1.2
+WRKSRC=		${WRKDIR}/Archive
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -19,8 +20,6 @@ USE_PERL5=	yes
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-
-WRKSRC=		${WRKDIR}/Archive
 
 APPDIR=		${PREFIX}/share/rox
 

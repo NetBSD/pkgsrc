@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/03/19 13:12:22 tron Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:13 jmmv Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}
 CATEGORIES=	benchmarks net
 MASTER_SITES=	http://www.ccci.com/tools/ttcp/
 EXTRACT_SUFX=	.tar.Z
@@ -14,7 +15,6 @@ COMMENT=	TCP testing and performance measuring tool
 .include "../../mk/bsd.prefs.mk"
 
 MANCOMPRESSED_IF_MANZ=	YES
-WRKSRC=			${WRKDIR}
 
 .if (${OPSYS} == Darwin)
 MAKE_FLAGS=	CFLAGS="-Din_addr_t=\"unsigned long\""

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/03/19 08:58:36 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:43 jmmv Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}/emacs-20.7/leim
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 DISTFILES=	emacs-${VERSION}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
@@ -16,7 +17,6 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
 VERSION=	20.7
-WRKSRC=		${WRKDIR}/emacs-20.7/leim
 
 post-extract:
 	@${ECHO} '#!/bin/sh' >${WRKSRC}/configure

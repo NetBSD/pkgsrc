@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/15 15:46:33 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:32 jmmv Exp $
 #
 
 DISTNAME=	setquota-0.1
+WRKSRC=		${WRKDIR}/setquota/
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.jurai.net/users/winter/
 
@@ -11,7 +12,5 @@ COMMENT=	Command line quota tools
 
 # BSD oriented, haven't checked on other environment now
 ONLY_FOR_PLATFORM=	NetBSD-*-*
-
-WRKSRC=		${WRKDIR}/setquota/
 
 .include "../../mk/bsd.pkg.mk"

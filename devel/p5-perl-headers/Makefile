@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/03/28 21:14:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:37 jmmv Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
 SVR4_PKGNAME=		p5plh
+WRKSRC=			${WRKDIR}
 CATEGORIES=		devel perl5
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -15,7 +16,6 @@ USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/.packlist.h2ph
 
 EXTRACT_ONLY=		# empty
-WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		# defined
 
 # Since this package will be named, for instance, p5-perl-headers-1.5.1,

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/12/31 15:44:28 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:25 jmmv Exp $
 
 DISTNAME=	db-4.0.14
 PKGNAME=	db4-4.0.14
+WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
@@ -26,8 +27,6 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-java
 .  include "../../mk/java-vm.mk"
 .endif
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 
 post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/db4

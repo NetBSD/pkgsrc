@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.10 2003/02/11 09:16:42 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/03/29 12:41:23 jmmv Exp $
 #
 
 RELVERSION=	1.3.1
 BLACKDOWN_REL=	FCS-02b
 RELNAME=	${RELVERSION}-02b-FCS-linux
 EXTNAME=	${BASENAME}-${RELNAME}
+WRKSRC=		${WRKDIR}/${BASENAME}${RELVERSION}
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
 
@@ -43,8 +44,6 @@ CHECK_SHLIBS=	NO	# This would use NetBSD ldd on Linux shlibs.
 .include "../../mk/bsd.prefs.mk"
 
 JVM_HOME=	${LOCALBASE}/java/blackdown-${RELVERSION}
-
-WRKSRC=		${WRKDIR}/${BASENAME}${RELVERSION}
 
 USE_BUILDLINK2=	yes
 NO_MTREE=	yes	# since we change PREFIX

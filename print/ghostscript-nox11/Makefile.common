@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.43 2003/03/14 19:37:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.44 2003/03/29 12:42:15 jmmv Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
+WRKSRC=			${WRKDIR}/gs${GS_VERS}
 CATEGORIES=		print
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/aladdin/gs${GS_VERS:S/.//}/
@@ -23,7 +24,6 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
 GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
-WRKSRC=			${WRKDIR}/gs${GS_VERS}
 DISTFILES+=		${GS_SRCS}
 EXTRACT_ONLY=		${GS_SRCS}
 

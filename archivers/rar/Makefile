@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2002/08/25 21:49:20 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2003/03/29 12:40:02 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
 DISTNAME=		rarbsd
 PKGNAME=		rar-2.02
+WRKSRC=			${WRKDIR}
 CATEGORIES=		archivers
 MASTER_SITES=		ftp://rarsoft.ti.sk/pub/rar/ \
 			ftp://ftp.elf.stuba.sk/pub/pc/pack/
@@ -19,7 +20,6 @@ RESTRICTED=		Only unmodified original package can be distributed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${DOWNLOADED_DISTFILE} >/dev/null
 USE_BUILDLINK2=		# defined
 
