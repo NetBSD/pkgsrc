@@ -28,9 +28,9 @@
 /*
  * pancake@phreaker.net ** changes 2004/09/14
  * 
- * '-i' ignore case senseitive
+ * -i ignore case
  * -x exact match
- * -q quite (drop COMMENT on search)
+ * -q quiet (drop COMMENT on search)
  * -C comments
  *
  * [TODO]
@@ -64,7 +64,7 @@ static int		checkskip(const struct dirent *);
 static int		subcasestr(const char *, const char *);
 static void		usage(void);
 
-static int		quite = 0;
+static int		quiet = 0;
 static int		cases = 0;
 static int		exact = 0;
 static int		comme = 0;
@@ -75,19 +75,19 @@ main(int argc, char *argv[])
 	const char *path;
 	int ch;
 
-	while ((ch = getopt(argc, argv, "xcqC")) != -1) {
+	while ((ch = getopt(argc, argv, "Ccqx")) != -1) {
 		switch (ch) {
-		case 'x':	/* exact match */
-			exact = 1;
+		case 'C':	/* comment search */
+			comme = 1;
 			break;
 		case 'c':	/* case sensitive */
 			cases = 1;
 			break;
-		case 'q':	/* quite */
-			quite = 1;
+		case 'q':	/* quiet */
+			quiet = 1;
 			break;
-		case 'C':	/* comment search */
-			comme = 1;
+		case 'x':	/* exact match */
+			exact = 1;
 			break;
 		default:
 			usage();
@@ -166,7 +166,7 @@ showpkg(const char *path, const char *cat, const char *pkg)
 {
 	char *mk, *comment = NULL;
 
-	if (!quite) {
+	if (!quiet) {
 		(void)asprintf(&mk, "%s/%s/%s/Makefile", path, cat, pkg);
 		if (mk == NULL)
 			err(EXIT_FAILURE, "asprintf");
@@ -262,6 +262,6 @@ usage(void)
 {
 	extern char *__progname;
 
-	(void)fprintf(stderr, "Usage: %s [-cqxC] keyword [...]\n", __progname);
+	(void)fprintf(stderr, "Usage: %s [-Ccqx] keyword [...]\n", __progname);
 	exit(EXIT_FAILURE);
 }
