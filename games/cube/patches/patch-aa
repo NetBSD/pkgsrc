@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/18 17:48:53 peter Exp $
+
+--- source/src/Makefile.orig	2003-12-20 16:47:58.000000000 +0100
++++ source/src/Makefile	2004-06-10 01:27:22.000000000 +0200
+@@ -1,6 +1,6 @@
+ CXX=g++
+-CXXOPTFLAGS=-Wall -O3 -fsigned-char -fomit-frame-pointer
+-CXXFLAGS=$(CXXOPTFLAGS) -I../enet/include `sdl-config --cflags`
++CXXOPTFLAGS=-Wall -O3 -fsigned-char -fomit-frame-pointer -Wno-deprecated
++CXXFLAGS=$(CXXOPTFLAGS) -I../enet/include `sdl-config --cflags` -I/usr/X11R6/include
+ 
+ CLIENT_LIBS=-L../enet -lenet `sdl-config --libs` -lSDL_image -lSDL_mixer -lz -lGL -lGLU 
+ CLIENT_OBJS= \
+@@ -49,11 +49,11 @@
+ all: enet client server
+ 
+ enet:
+-	-make -C ../enet all
++	-${MAKE} -C ../enet all
+ 
+ clean:
+ 	-rm -f $(SERVER_OBJS) $(CLIENT_OBJS) cube_server cube_client
+-	-make -C ../enet/ clean
++	-${MAKE} -C ../enet/ clean
+ 
+ standalone.o:
+ 	$(CXX) $(CXXFLAGS) -DSTANDALONE -o standalone.o -c serverutil.cpp

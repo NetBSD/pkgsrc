@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/18 17:48:52 peter Exp $
+
+SHA1 (cube_2004_05_22.tar.gz) = 029d574149a781e0c39742c12a67fd0f118540e1
+Size (cube_2004_05_22.tar.gz) = 22566432 bytes
+SHA1 (patch-aa) = 562ca8051d7b7eb0fe90e67f4fb8f4773032f119
+SHA1 (patch-ab) = d69e2fdae3ea28971720a0a3b3c0059ff35c51ec
+SHA1 (patch-ac) = 44bad545c1fdaf03198cc11cf3b2a3d0fe4b619d
+SHA1 (patch-ad) = 69f351a5bbce6f4050137d733d31c270df4ecdf7

@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/18 17:48:53 peter Exp $
+
+--- source/src/main.cpp.orig	2004-05-22 18:00:26.000000000 +0200
++++ source/src/main.cpp	2004-06-10 01:28:17.000000000 +0200
+@@ -1,6 +1,7 @@
+ // main.cpp: initialisation & main loop
+ 
+ #include "cube.h"
++#include <unistd.h>
+ 
+ void cleanup(char *msg)         // single program exit point;
+ {
+@@ -104,6 +105,8 @@
+     #define log(s) puts("init: " s)
+     log("sdl");
+     
++    ::chdir(DATADIR);
++
+     for(int i = 1; i<argc; i++)
+     {
+         char *a = &argv[i][2];
