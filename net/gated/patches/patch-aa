@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.3 1999/07/06 06:35:47 christos Exp $
+
+--- src/configs/netbsd.orig	Tue Jul  6 01:34:41 1999
++++ src/configs/netbsd	Tue Jul  6 01:35:20 1999
+@@ -11,8 +11,8 @@
+ 
+ cc      cc
+ #cflags -g
+-cwflags -W -Wreturn-type -Wcast-qual -Wpointer-arith -Wwrite-strings -Wswitch -Wshadow
+-cflags  -O -g
++#cwflags -W -Wreturn-type -Wcast-qual -Wpointer-arith -Wwrite-strings -Wswitch -Wshadow
++cflags  -O -g -DUSE_MMAP
+ 
+ ldflags -lkvm
+ 
+@@ -40,4 +40,4 @@
+ path_version    /var/run/%s.version
+ path_unix	/netbsd
+ 
+-protocols	bgp egp hello icmp rip ospf iso slsp isis rdisc
++protocols	bgp egp icmp rip ospf iso slsp isis rdisc
