@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2003/05/28 15:51:39 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/31 18:40:58 jschauma Exp $
 bin/blender
-bin/keyloader
