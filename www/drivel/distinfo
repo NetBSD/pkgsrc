@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/12/04 17:35:28 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2005/01/26 23:51:42 jmmv Exp $
 
-SHA1 (drivel-1.2.3.tar.bz2) = af9ded3c237866a907b8f943cd4f59aeb06e422f
-Size (drivel-1.2.3.tar.bz2) = 524188 bytes
+SHA1 (drivel-1.2.4.tar.bz2) = cb415353ac1b6c3dc183086ed5a754e688d1cca4
+Size (drivel-1.2.4.tar.bz2) = 539234 bytes
