@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2000/05/13 06:21:02 rh Exp $
+$NetBSD: patch-ai,v 1.2 2000/06/21 05:38:23 jlam Exp $
 
 --- lib/g-wrap/configure.orig	Fri Mar 31 04:55:10 2000
 +++ lib/g-wrap/configure	Thu May  4 11:04:27 2000
@@ -20,12 +20,3 @@ $NetBSD: patch-ai,v 1.1 2000/05/13 06:21:02 rh Exp $
        break
      fi
    done
-@@ -1552,7 +1552,7 @@
- LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
- 
- # Always use our own libtool.
--LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.

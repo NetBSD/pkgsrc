@@ -1,40 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2000/05/30 07:38:54 tron Exp $
+$NetBSD: patch-ac,v 1.9 2000/06/21 05:31:46 jlam Exp $
 
---- configure.orig	Mon May 15 02:49:27 2000
-+++ configure	Tue May 30 09:14:23 2000
-@@ -2151,6 +2151,7 @@
- fi
- 
- 
-+if false; then
- # Check for any special flags to pass to ltconfig.
- libtool_flags="--cache-file=$cache_file"
- test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -2321,6 +2322,7 @@
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
-+fi
- 
- 
- if (aclocal --print-ac-dir) </dev/null >/dev/null 2>&1 && test -w `aclocal --print-ac-dir`; then
-@@ -2905,6 +2907,7 @@
- echo "$ac_t""$debug_flag $conversions_flag $verbose_flag $production_flag" 1>&6
- 
- 
-+if false; then
- if ${CONFIG_SHELL-/bin/sh} ./libtool --features | grep "enable shared" > /dev/null 2>&1; then
- 	lt_libtool_shared="yes"
- fi
-@@ -2932,6 +2935,7 @@
-   LibtoolStatic_TRUE='#'
-   LibtoolStatic_FALSE=
- fi
-+fi
- 
- 
- # Extract the first word of "ar", so it can be a program name with args.
-@@ -6252,10 +6256,12 @@
+--- configure.orig	Sun May 14 20:49:27 2000
++++ configure	Wed Jun 21 00:37:20 2000
+@@ -6252,10 +6252,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
@@ -47,7 +15,7 @@ $NetBSD: patch-ac,v 1.8 2000/05/30 07:38:54 tron Exp $
  
    echo creating "$ac_file"
    rm -f "$ac_file"
-@@ -6476,10 +6482,12 @@
+@@ -6476,10 +6478,12 @@
        *) # Relative path.
          ac_sub_cache_file="$ac_dots$cache_file" ;;
        esac
