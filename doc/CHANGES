@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4307 2003/12/31 18:40:56 lha Exp $
+$NetBSD: CHANGES,v 1.4308 2003/12/31 18:42:59 lha Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5501,4 +5501,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort-mysql to 2.1.0 [salo 2003-12-31]
 	Updated snort-pgsql to 2.1.0 [salo 2003-12-31]
 	Updated ucl to 1.02 [cjep 2003-12-31]
-	Updated gnus-5.10.3 [lha 2003-12-31]
+	Updated gnus to 5.10.3 [lha 2003-12-31]
