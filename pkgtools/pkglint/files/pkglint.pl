@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.125 2004/12/02 16:40:10 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.126 2004/12/27 18:19:48 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -238,7 +238,6 @@ my $opt_contblank	= 1;
 my $opt_packagedir	= ".";
 my (%options) = (
 	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
-	"-d"		=> "check items useful for package developers",
 	"-I"		=> "dump the Makefile after parsing",
 	"-N"		=> "assume a new (still uncommitted) package",
 	"-B#"		=> "allow # contiguous blank lines in Makefiles",
